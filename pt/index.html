@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Planejador Semanal de Refeições</title>
+
+  <!-- alternate language versions -->
+  <link rel="alternate" hreflang="ro" href="https://<username>.github.io/weekly-meal-planner/" />
+  <link rel="alternate" hreflang="en" href="https://<username>.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es" href="https://<username>.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr" href="https://<username>.github.io/weekly-meal-planner/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://<username>.github.io/weekly-meal-planner/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://<username>.github.io/weekly-meal-planner/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://<username>.github.io/weekly-meal-planner/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://<username>.github.io/weekly-meal-planner/pt/" />
+  <link rel="alternate" hreflang="de" href="https://<username>.github.io/weekly-meal-planner/de/" />
+  <link rel="alternate" hreflang="ar" href="https://<username>.github.io/weekly-meal-planner/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://<username>.github.io/weekly-meal-planner/hi/" />
+  <link rel="alternate" hreflang="x-default" href="https://<username>.github.io/weekly-meal-planner/" />
+
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <style>
+    body { background: #f8f9fa; font-family: sans-serif; }
+    .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .planner-row:nth-child(odd) { background: #f1f3f5; }
+    .pdf-span {
+      display: inline-block;
+      width: 100%;
+      padding: .375rem .75rem;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+    }
+    /* Evita cortes dentro de linhas em PDF */
+    .planner-row, .planner-row td, #shopping-list li, .card-body {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    /* Repete cabeçalho da tabela em cada página */
+    table { width: 100%; border-collapse: collapse; }
+    thead { display: table-header-group; }
+    tbody { display: table-row-group; }
+  </style>
+</head>
+<body>
+  <div class="container py-5" id="pdf-content">
+
+    <!-- Seletor de idioma -->
+    <div class="text-end mb-3 no-print">
+      <select id="lang-switcher" class="form-select w-auto">
+        <option value="ro">Română</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="ru">Русский</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="pt" selected>Português</option>
+        <option value="de">Deutsch</option>
+        <option value="ar">العربية</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+
+    <!-- Cabeçalho -->
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white text-center">
+        <h2 class="mb-0">Planejador Semanal de Refeições &amp; Lista de Compras</h2>
+      </div>
+    </div>
+
+    <!-- Tabela do planejador -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th>Dia</th>
+              <th>Almoço (ingredientes)</th>
+              <th>Jantar (ingredientes)</th>
+            </tr>
+          </thead>
+          <tbody id="plan-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Lista de compras -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5>Lista de Compras</h5>
+        <ul id="shopping-list" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="text-center mb-4 no-print">
+      <button id="generate-btn" class="btn btn-success me-2">
+        <i class="bi bi-file-earmark-pdf-fill"></i> Gerar PDF
+      </button>
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i> Pagar &amp; Baixar
+      </button>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    const days = ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'];
+    const tbody = document.getElementById('plan-table');
+
+    // Gerar linhas da tabela
+    days.forEach((day,i) => {
+      const tr = document.createElement('tr');
+      tr.className = 'planner-row';
+      tr.innerHTML = `
+        <td><strong>${day}</strong></td>
+        <td><input id="d${i+1}l" class="form-control" placeholder="ex: batata, cebola"></td>
+        <td><input id="d${i+1}c" class="form-control" placeholder="ex: frango, arroz"></td>
+      `;
+      tbody.append(tr);
+    });
+
+    // Coletar refeições
+    function collectMeals() {
+      return days.map((day,i) => ({
+        day,
+        lunch: document.getElementById(`d${i+1}l`).value.trim(),
+        dinner: document.getElementById(`d${i+1}c`).value.trim()
+      }));
+    }
+
+    // Renderizar lista de compras
+    function renderShoppingList(meals) {
+      const ul = document.getElementById('shopping-list');
+      ul.innerHTML = '';
+      meals.forEach(m => {
+        if (m.lunch || m.dinner) {
+          ul.insertAdjacentHTML('beforeend', `<li class="list-group-item"><strong>${m.day}</strong></li>`);
+          if (m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">Almoço: ${m.lunch}</li>`);
+          if (m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">Jantar: ${m.dinner}</li>`);
+        }
+      });
+    }
+
+    // Gerar PDF
+    document.getElementById('generate-btn').addEventListener('click', () => {
+      const meals = collectMeals();
+      renderShoppingList(meals);
+
+      const clone = document.getElementById('pdf-content').cloneNode(true);
+      clone.querySelectorAll('.no-print').forEach(el => el.remove());
+      clone.querySelectorAll('input').forEach(input => {
+        const s = document.createElement('span');
+        s.textContent = input.value;
+        s.className = 'pdf-span';
+        input.parentNode.replaceChild(s, input);
+      });
+
+      html2pdf().set({
+        margin: [10,10,10,10],
+        filename: 'meal-planner.pdf',
+        jsPDF: { unit:'mm', format:'a4' }
+      }).from(clone).save();
+    });
+
+    // Pagar & baixar
+    document.getElementById('pay-btn').addEventListener('click', () => {
+      window.location.href = 'https://buy.stripe.com/test_xyz';
+    });
+
+    // Trocar idioma → redirecionar
+    document.getElementById('lang-switcher').addEventListener('change', e => {
+      const lang = e.target.value;
+      if (lang === 'pt') return;
+      window.location.href = `../${lang}/`;
+    });
+  })();
+  </script>
+</body>
+</html>
