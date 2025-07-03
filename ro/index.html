@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Planificator mese săptămânal gratuit – meal-planner.ro</title>
+  <title data-i18n="title">Planificator Mese Săptămânal</title>
   <meta name="description" content="Generează lista de cumpărături și PDF-ul săptămânal cu planul tău de mese, gratuit, direct din browser.">
+  <link rel="canonical" href="https://meal-planner.ro/ro/">
 
+  <!-- hreflang către domeniul tău -->
+  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/">
+  <link rel="alternate" hreflang="ro"      href="https://meal-planner.ro/ro/">
+  <link rel="alternate" hreflang="en"      href="https://meal-planner.ro/en/">
+  <link rel="alternate" hreflang="es"      href="https://meal-planner.ro/es/">
+  <link rel="alternate" hreflang="fr"      href="https://meal-planner.ro/fr/">
+  <link rel="alternate" hreflang="ru"      href="https://meal-planner.ro/ru/">
+  <link rel="alternate" hreflang="zh"      href="https://meal-planner.ro/zh/">
+  <link rel="alternate" hreflang="ja"      href="https://meal-planner.ro/ja/">
+  <link rel="alternate" hreflang="pt"      href="https://meal-planner.ro/pt/">
+  <link rel="alternate" hreflang="de"      href="https://meal-planner.ro/de/">
+  <link rel="alternate" hreflang="ar"      href="https://meal-planner.ro/ar/">
+  <link rel="alternate" hreflang="hi"      href="https://meal-planner.ro/hi/">
 
   <!-- Bootstrap CSS + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,19 +27,7 @@
 
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-<link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
 
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
   <style>
     body { background: #f8f9fa; font-family: sans-serif; }
     .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
@@ -35,7 +37,6 @@
       border:1px solid #ced4da; border-radius:.25rem;
       box-sizing:border-box; white-space:pre-wrap;
     }
-    /* PDF page-break rules */
     .planner-row, .planner-row td, #shopping-list li, .card-body {
       page-break-inside: avoid; break-inside: avoid;
     }
@@ -44,10 +45,11 @@
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <!-- limbă -->
+
+    <!-- selector limbă -->
     <div class="text-end mb-3 no-print">
       <select id="lang-switcher" class="form-select w-auto">
-        <option value="ro">Română</option>
+        <option value="ro" selected>Română</option>
         <option value="en">English</option>
         <option value="es">Español</option>
         <option value="fr">Français</option>
@@ -61,7 +63,7 @@
       </select>
     </div>
 
-    <!-- header -->
+    <!-- antet -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
         <h2 class="mb-0" data-i18n="header">Planificator Mese &amp; Lista de Cumpărături</h2>
@@ -98,10 +100,13 @@
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">Generează PDF</span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-  <i class="bi bi-cart-check-fill"></i>
-  <span data-i18n="btn.pay">Plătește & Descarcă</span>
-</a>
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Plătește &amp; Descarcă</span>
+      </a>
     </div>
   </div>
 
@@ -254,13 +259,13 @@
       }
     };
 
-    // 2) Elemente
+    // Elemente
     const langSwitcher = document.getElementById('lang-switcher');
     const tbody         = document.getElementById('plan-table');
     let   lang          = navigator.language.slice(0,2);
     if (!i18n[lang]) lang = 'ro';
 
-    // 3) Reconstruiește tabela
+    // Reconstruiește tabela + texte
     function renderTable(lang) {
       tbody.innerHTML = '';
       i18n[lang].weekdays.forEach((day, idx) => {
@@ -275,28 +280,25 @@
         `);
       });
     }
-
-    // 4) Aplică traduceri statice + tabela
     function applyTranslations(lang) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        el.textContent = i18n[lang][key] || key;
+        el.textContent = i18n[lang][key];
       });
       document.title = i18n[lang].title;
       renderTable(lang);
     }
 
-    // 5) Inițializare
+    // Init + schimbare limbă
     langSwitcher.value = lang;
     applyTranslations(lang);
-
-    // 6) Când utilizatorul schimbă limba
     langSwitcher.addEventListener('change', e => {
       lang = e.target.value;
       applyTranslations(lang);
+      if (lang !== 'ro') window.location.href = `../${lang}/`;
     });
 
-    // 7) Colectăm mesele
+    // Colectăm mese
     function collectMeals(){
       return i18n[lang].weekdays.map((_,i)=>({
         day:    document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`).textContent,
@@ -304,64 +306,68 @@
         dinner: document.getElementById(`d${i+1}c`).value.trim()
       }));
     }
-
-    // 8) Afișăm lista de cumpărături
+    // Afișăm lista de cumpărături
     function renderShoppingList(meals){
-      const ul=document.getElementById('shopping-list'); ul.innerHTML='';
+      const ul = document.getElementById('shopping-list');
+      ul.innerHTML = '';
       meals.forEach(m=>{
         if(m.lunch||m.dinner){
-          ul.insertAdjacentHTML('beforeend', `<li class="list-group-item"><strong>${m.day}</strong></li>`);
-          if(m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">${i18n[lang]["col.lunch"].split(' ')[0]}: ${m.lunch}</li>`);
-          if(m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">${i18n[lang]["col.dinner"].split(' ')[0]}: ${m.dinner}</li>`);
+          ul.insertAdjacentHTML('beforeend',
+            `<li class="list-group-item"><strong>${m.day}</strong></li>`);
+          if(m.lunch)
+            ul.insertAdjacentHTML('beforeend',
+              `<li class="list-group-item ps-4">${i18n[lang]["col.lunch"].split(' ')[0]}: ${m.lunch}</li>`);
+          if(m.dinner)
+            ul.insertAdjacentHTML('beforeend',
+              `<li class="list-group-item ps-4">${i18n[lang]["col.dinner"].split(' ')[0]}: ${m.dinner}</li>`);
         }
       });
     }
 
-  // Eveniment click pe butonul de generare PDF
-document.getElementById('generate-btn').addEventListener('click', function() {
-  // Citește numărul de PDF-uri generate până acum din localStorage
-  let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+    // Generare PDF limitat la 3
+    document.getElementById('generate-btn').addEventListener('click', function(){
+      let pdfCount = parseInt(localStorage.getItem('pdfCount')||'0',10);
+      if(pdfCount>=3){
+        alert("Ai atins limita maximă de 3 PDF-uri generate pe acest dispozitiv. Pentru mai multe, te rugăm să ne contactezi.");
+        const btn = this;
+        btn.disabled = true;
+        btn.classList.replace('btn-success','btn-secondary');
+        btn.textContent = "Limită atinsă";
+        return;
+      }
+      const meals = collectMeals();
+      renderShoppingList(meals);
+      const clone = document.getElementById('pdf-content').cloneNode(true);
+      clone.querySelectorAll('.no-print').forEach(el=>el.remove());
+      clone.querySelectorAll('input').forEach(input=>{
+        const s = document.createElement('span');
+        s.className='pdf-span'; s.textContent = input.value;
+        input.parentNode.replaceChild(s,input);
+      });
+      html2pdf().set({
+        margin:[10,10,10,10],
+        filename:'meal-planner.pdf',
+        jsPDF:{unit:'mm',format:'a4'}
+      }).from(clone).save();
+      localStorage.setItem('pdfCount', pdfCount+1);
+      if(pdfCount+1>=3){
+        const btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.replace('btn-success','btn-secondary');
+        btn.textContent = "Limită atinsă";
+      }
+    });
 
-  if (pdfCount >= 3) {
-    alert("Ai atins limita maximă de 3 PDF-uri generate de pe acest dispozitiv.\nDacă ai nevoie de mai multe, te rugăm să ne contactezi.");
-    // Dezactivează butonul și schimbă textul
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "Limită atinsă";
-    return; // Nu mai generează PDF-ul
-  }
-
-  // ---- CODUL TĂU DE GENERARE PDF ----
-  const meals=collectMeals();
-  renderShoppingList(meals);
-  const clone=document.getElementById('pdf-content').cloneNode(true);
-  clone.querySelectorAll('.no-print').forEach(el=>el.remove());
-  clone.querySelectorAll('input').forEach(input=>{
-    const s=document.createElement('span');
-    s.textContent=input.value; s.className='pdf-span';
-    input.parentNode.replaceChild(s,input);
-  });
-  html2pdf().set({
-    margin:[10,10,10,10],
-    filename:'meal-planner.pdf',
-    jsPDF:{unit:'mm',format:'a4'}
-  }).from(clone).save();
-
-  // După generare, crește contorul
-  localStorage.setItem('pdfCount', pdfCount + 1);
-
-   // Dacă tocmai ai ajuns la 3, dezactivează și butonul
-  if (pdfCount + 1 >= 3) {
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "Limită atinsă";
-  }
-});
-
+    // Verificare la load
+    window.addEventListener('DOMContentLoaded', ()=>{
+      let pdfCount = parseInt(localStorage.getItem('pdfCount')||'0',10);
+      if(pdfCount>=3){
+        const btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.replace('btn-success','btn-secondary');
+        btn.textContent = "Limită atinsă";
+      }
+    });
 
   })();
   </script>
