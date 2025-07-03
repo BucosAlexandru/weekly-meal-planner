@@ -4,29 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>साप्ताहिक भोजन योजना</title>
-
   <!-- alternate language versions -->
-<link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
-
+  <!-- ... (link rel alternate ca la tine) ... -->
   <!-- Bootstrap CSS + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-
   <style>
     body { background: #f8f9fa; font-family: sans-serif; }
     .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
@@ -55,17 +39,9 @@
     <!-- भाषा चयन -->
     <div class="text-end mb-3 no-print">
       <select id="lang-switcher" class="form-select w-auto">
-        <option value="ro">Română</option>
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="ru">Русский</option>
-        <option value="zh">中文</option>
-        <option value="ja">日本語</option>
-        <option value="pt">Português</option>
-        <option value="de">Deutsch</option>
-        <option value="ar">العربية</option>
+        <!-- aici toate limbile tale cu selected="selected" pentru pagina curentă -->
         <option value="hi" selected>हिन्दी</option>
+        <!-- restul limbilor -->
       </select>
     </div>
 
@@ -105,9 +81,9 @@
       <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i> PDF बनाएँ
       </button>
-      <button id="pay-btn" class="btn btn-warning">
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
         <i class="bi bi-cart-check-fill"></i> भुगतान और डाउनलोड
-      </button>
+      </a>
     </div>
   </div>
 
@@ -147,7 +123,20 @@
       });
     }
 
-    document.getElementById('generate-btn').addEventListener('click', () => {
+    // Limita 3 PDF-uri
+    document.getElementById('generate-btn').addEventListener('click', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+
+      if (pdfCount >= 3) {
+        alert("आपने इस डिवाइस से 3 PDF बनाने की सीमा पूरी कर ली है। यदि आपको अधिक आवश्यकता है, कृपया हमसे संपर्क करें।");
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "सीमा पूरी हुई";
+        return;
+      }
+
       const meals = collectMeals();
       renderShoppingList(meals);
 
@@ -165,12 +154,31 @@
         filename: 'meal-planner.pdf',
         jsPDF: { unit:'mm', format:'a4' }
       }).from(clone).save();
+
+      localStorage.setItem('pdfCount', pdfCount + 1);
+
+      if (pdfCount + 1 >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "सीमा पूरी हुई";
+      }
     });
 
-    document.getElementById('pay-btn').addEventListener('click', () => {
-      window.location.href = 'https://buy.stripe.com/test_xyz';
+    // Deja atins limita la incarcarea paginii
+    window.addEventListener('DOMContentLoaded', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+      if (pdfCount >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "सीमा पूरी हुई";
+      }
     });
 
+    // Schimbare limba
     document.getElementById('lang-switcher').addEventListener('change', e => {
       const lang = e.target.value;
       if (lang === 'hi') return;
