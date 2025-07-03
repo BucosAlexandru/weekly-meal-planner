@@ -15,10 +15,11 @@ Un mic web-tool static care te ajută să îți planifici mesele pentru o săpt�
 
 ## 🚀 Demo Live
 
-https://<username>.github.io/weekly-meal-planner/
+https://BucosAlexandru.github.io/weekly-meal-planner/
+
 
 ## 🛠️ Cum se folosește
 
 1. Clonează acest repo:
    ```bash
-   git clone https://github.com/<username>/weekly-meal-planner.git
+   git clone https://github.com/BucosAlexandru/weekly-meal-planner.git
