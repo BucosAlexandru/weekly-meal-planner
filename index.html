@@ -84,17 +84,12 @@ f<!DOCTYPE html>
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">Generează PDF</span>
       </button>
-      <button id="pay-btn" class="btn btn-warning">
-        <i class="bi bi-cart-check-fill"></i>
-        <span data-i18n="btn.pay">Plătește &amp; Descarcă</span>
-      </button>
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
+  <i class="bi bi-cart-check-fill"></i>
+  <span data-i18n="btn.pay">Plătește & Descarcă</span>
+</a>
     </div>
   </div>
-  <script>
-document.getElementById('pay-btn').onclick = function() {
-  window.open('https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00', '_blank');
-}
-</script>
 
   <script>
   (function(){
@@ -324,11 +319,6 @@ document.getElementById('pay-btn').onclick = function() {
         filename:'meal-planner.pdf',
         jsPDF:{unit:'mm',format:'a4'}
       }).from(clone).save();
-    });
-
-    // 10) Checkout Stripe
-    document.getElementById('pay-btn').addEventListener('click',()=>{
-      window.location.href='https://buy.stripe.com/test_xyz';
     });
 
   })();
