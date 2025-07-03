@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificator Mese Săptămânal & Lista de Cumpărături</title>
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Optional: include jsPDF autoTable plugin if you want tables -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script> -->
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 0 10px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: center; }
+    input[type="text"] { width: 100%; box-sizing: border-box; }
+    button { padding: 10px 20px; margin-right: 10px; cursor: pointer; }
+    #list { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Planificator Mese Săptămânal & Lista de Cumpărături</h1>
+  <form id="planner-form">
+    <table>
+      <thead>
+        <tr>
+          <th>Zi</th>
+          <th>Prânz<br><small>(ingrediente, separate prin virgule)</small></th>
+          <th>Cină<br><small>(ingrediente, separate prin virgule)</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Luni</td><td><input type="text" id="d1l"></td><td><input type="text" id="d1c"></td></tr>
+        <tr><td>Marți</td><td><input type="text" id="d2l"></td><td><input type="text" id="d2c"></td></tr>
+        <tr><td>Miercuri</td><td><input type="text" id="d3l"></td><td><input type="text" id="d3c"></td></tr>
+        <tr><td>Joi</td><td><input type="text" id="d4l"></td><td><input type="text" id="d4c"></td></tr>
+        <tr><td>Vineri</td><td><input type="text" id="d5l"></td><td><input type="text" id="d5c"></td></tr>
+        <tr><td>Sâmbătă</td><td><input type="text" id="d6l"></td><td><input type="text" id="d6c"></td></tr>
+        <tr><td>Duminică</td><td><input type="text" id="d7l"></td><td><input type="text" id="d7c"></td></tr>
+      </tbody>
+    </table>
+    <button type="button" id="generate-btn">Generează PDF</button>
+    <button type="button" id="pay-btn">Plătește & Descarcă</button>
+  </form>
+  <script>
+    // Funcție pentru a colecta datele și genera PDF
+    (function(){
+      const { jsPDF } = window.jspdf;
+      function collectMeals() {
+        const days = ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'];
+        return days.map((day,i) => ({
+          day,
+          lunch: document.getElementById('d'+(i+1)+'l').value || '-',
+          dinner: document.getElementById('d'+(i+1)+'c').value || '-'
+        }));
+      }
+      function buildShoppingList(meals) {
+        const list = {};
+        meals.forEach(m => {
+          ['lunch','dinner'].forEach(key => {
+            m[key].split(',').map(s => s.trim()).filter(Boolean).forEach(item => {
+              list[item] = (list[item]||0) + 1;
+            });
+          });
+        });
+        return list;
+      }
+      function generatePDF() {
+        const meals = collectMeals();
+        const shop = buildShoppingList(meals);
+        const doc = new jsPDF();
+        doc.setFontSize(16);
+        doc.text('Planificator Mese Săptămânal', 10, 20);
+        doc.setFontSize(12);
+        let y = 30;
+        meals.forEach(m => {
+          doc.text(`${m.day}: Prânz: ${m.lunch}`, 10, y); y += 7;
+          doc.text(`      Cină: ${m.dinner}`, 10, y); y += 10;
+        });
+        doc.text('Lista de cumpărături:', 10, y); y += 7;
+        Object.entries(shop).forEach(([item,qty]) => {
+          doc.text(`${qty} × ${item}`, 10, y);
+          y += 7;
+        });
+        doc.save('meal-planner.pdf');
+      }
+      // Evenimente butoane
+      document.getElementById('generate-btn').addEventListener('click', generatePDF);
+      document.getElementById('pay-btn').addEventListener('click', () => {
+        // Înlocuiește cu propriul link Stripe Checkout
+        const checkoutUrl = 'https://buy.stripe.com/test_xyz';
+        window.location.href = checkoutUrl;
+      });
+    })();
+  </script>
+</body>
+</html>
