@@ -7,18 +7,17 @@
 
   <!-- SEO: alternate language versions -->
 <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+<link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
+<link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
+<link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
+<link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
+<link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
+<link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
+<link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
+<link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
+<link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+<link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+<link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
 
   <!-- Bootstrap CSS + Icons -->
   <link
@@ -46,7 +45,6 @@
       box-sizing: border-box;
       white-space: pre-wrap;
     }
-    /* Prevent splitting elements across PDF pages */
     .planner-row,
     .planner-row td,
     #shopping-list li,
@@ -54,7 +52,6 @@
       page-break-inside: avoid;
       break-inside: avoid;
     }
-    /* Repeat table header on each page */
     table { width: 100%; border-collapse: collapse; }
     thead { display: table-header-group; }
     tbody { display: table-row-group; }
@@ -91,9 +88,7 @@
               <th>Dinner (ingredients)</th>
             </tr>
           </thead>
-          <tbody id="plan-table">
-            <!-- rows will be injected by JS -->
-          </tbody>
+          <tbody id="plan-table"></tbody>
         </table>
       </div>
     </div>
@@ -111,9 +106,9 @@
       <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i> Generate PDF
       </button>
-      <button id="pay-btn" class="btn btn-warning">
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
         <i class="bi bi-cart-check-fill"></i> Pay &amp; Download
-      </button>
+      </a>
     </div>
   </div>
 
@@ -122,7 +117,7 @@
     const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
     const tbody = document.getElementById('plan-table');
 
-    // 1) Build the table rows
+    // Build the table rows
     days.forEach((day,i) => {
       const tr = document.createElement('tr');
       tr.className = 'planner-row';
@@ -134,7 +129,7 @@
       tbody.append(tr);
     });
 
-    // 2) Collect meals into an array
+    // Collect meals into an array
     function collectMeals() {
       return days.map((day,i) => ({
         day,
@@ -143,7 +138,7 @@
       }));
     }
 
-    // 3) Render the shopping list grouped by day/meal
+    // Render the shopping list grouped by day/meal
     function renderShoppingList(meals) {
       const ul = document.getElementById('shopping-list');
       ul.innerHTML = '';
@@ -169,14 +164,25 @@
       });
     }
 
-    // 4) Generate PDF
-    document.getElementById('generate-btn').addEventListener('click', () => {
+    // Generate PDF (limit 3)
+    document.getElementById('generate-btn').addEventListener('click', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+
+      if (pdfCount >= 3) {
+        alert("You have reached the maximum of 3 free PDF downloads on this device. If you need more, please contact us.");
+        // Disable button and change text
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "Limit reached";
+        return;
+      }
+
       const meals = collectMeals();
       renderShoppingList(meals);
 
-      // Clone, remove buttons, replace inputs with spans
-      const original = document.getElementById('pdf-content');
-      const clone = original.cloneNode(true);
+      const clone = document.getElementById('pdf-content').cloneNode(true);
       clone.querySelectorAll('.no-print').forEach(el => el.remove());
       clone.querySelectorAll('input').forEach(input => {
         const s = document.createElement('span');
@@ -193,14 +199,31 @@
         })
         .from(clone)
         .save();
+
+      localStorage.setItem('pdfCount', pdfCount + 1);
+
+      if (pdfCount + 1 >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "Limit reached";
+      }
     });
 
-    // 5) Checkout redirect
-    document.getElementById('pay-btn').addEventListener('click', () => {
-      window.location.href = 'https://buy.stripe.com/test_xyz';
+    // On page load, check if button should be disabled
+    window.addEventListener('DOMContentLoaded', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+      if (pdfCount >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "Limit reached";
+      }
     });
 
-    // 6) Language switcher (simple redirect)
+    // Language switcher (simple redirect)
     document.getElementById('lang-switcher').addEventListener('change', e => {
       const lang = e.target.value;
       if (lang === 'en') return;  // already here
