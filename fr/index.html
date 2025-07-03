@@ -6,28 +6,21 @@
   <title>Planificateur de Repas Hebdomadaire</title>
 
   <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+  <link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
+  <link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
+  <link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+  <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
   
   <!-- Bootstrap CSS + Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
@@ -45,7 +38,6 @@
       box-sizing: border-box;
       white-space: pre-wrap;
     }
-    /* Empêche les coupures à l’intérieur des lignes de tableau */
     .planner-row, 
     .planner-row td, 
     #shopping-list li, 
@@ -53,7 +45,6 @@
       page-break-inside: avoid;
       break-inside: avoid;
     }
-    /* Répète l’entête de tableau sur chaque page PDF */
     table { width: 100%; border-collapse: collapse; }
     thead { display: table-header-group; }
     tbody { display: table-row-group; }
@@ -97,9 +88,7 @@
               <th>Dîner (ingrédients)</th>
             </tr>
           </thead>
-          <tbody id="plan-table">
-            <!-- Peuplement via JS -->
-          </tbody>
+          <tbody id="plan-table"></tbody>
         </table>
       </div>
     </div>
@@ -117,19 +106,19 @@
       <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i> Générer PDF
       </button>
-      <button id="pay-btn" class="btn btn-warning">
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
         <i class="bi bi-cart-check-fill"></i> Payer &amp; Télécharger
-      </button>
+      </a>
     </div>
   </div>
 
   <script>
   (function(){
-    // 1) Jours de la semaine en français
+    // Jours de la semaine en français
     const days = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
     const tbody = document.getElementById('plan-table');
 
-    // 2) Génère les lignes de tableau avec placeholders FR
+    // Génère les lignes du tableau avec placeholders FR
     days.forEach((day,i) => {
       const tr = document.createElement('tr');
       tr.className = 'planner-row';
@@ -141,7 +130,7 @@
       tbody.append(tr);
     });
 
-    // 3) Lecture des valeurs
+    // Collecte les valeurs
     function collectMeals() {
       return days.map((day,i) => ({
         day,
@@ -150,7 +139,7 @@
       }));
     }
 
-    // 4) Affiche la liste de courses par jour et repas
+    // Affiche la liste de courses par jour/repas
     function renderShoppingList(meals) {
       const ul = document.getElementById('shopping-list');
       ul.innerHTML = '';
@@ -177,17 +166,25 @@
       });
     }
 
-    // 5) Génération du PDF
-    document.getElementById('generate-btn').addEventListener('click', () => {
+    // Génération PDF - limité à 3
+    document.getElementById('generate-btn').addEventListener('click', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+
+      if (pdfCount >= 3) {
+        alert("Vous avez atteint la limite maximale de 3 PDF générés depuis cet appareil. Si vous avez besoin de plus, veuillez nous contacter.");
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "Limite atteinte";
+        return;
+      }
+
       const meals = collectMeals();
       renderShoppingList(meals);
 
-      // clone et supprime les boutons
-      const original = document.getElementById('pdf-content');
-      const clone = original.cloneNode(true);
+      const clone = document.getElementById('pdf-content').cloneNode(true);
       clone.querySelectorAll('.no-print').forEach(el => el.remove());
-
-      // remplace inputs par spans
       clone.querySelectorAll('input').forEach(input => {
         const s = document.createElement('span');
         s.textContent = input.value;
@@ -200,18 +197,35 @@
         filename: 'meal-planner.pdf',
         jsPDF: { unit:'mm', format:'a4' }
       }).from(clone).save();
+
+      localStorage.setItem('pdfCount', pdfCount + 1);
+
+      if (pdfCount + 1 >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "Limite atteinte";
+      }
     });
 
-    // 6) Redirection paiement
-    document.getElementById('pay-btn').addEventListener('click', () => {
-      window.location.href = 'https://buy.stripe.com/test_xyz';
+    // Au chargement, vérifie la limite PDF
+    window.addEventListener('DOMContentLoaded', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+      if (pdfCount >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "Limite atteinte";
+      }
     });
 
-    // 7) Changement de langue → redirection dossier
+    // Changement de langue
     document.getElementById('lang-switcher')
       .addEventListener('change', e => {
         const lang = e.target.value;
-        if (lang === 'fr') return;   // déjà en FR
+        if (lang === 'fr') return;
         window.location.href = `../${lang}/`;
       });
 
