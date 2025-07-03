@@ -6,51 +6,33 @@
   <title>每周用餐计划器</title>
 
   <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
+  <link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
+  <link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
+  <link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+  <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
 
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
-  
-  <!-- Bootstrap CSS + Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
-  >
-
-  <!-- html2pdf.js -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-
   <style>
     body { background: #f8f9fa; font-family: sans-serif; }
     .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .planner-row:nth-child(odd) { background: #f1f3f5; }
     .pdf-span {
-      display: inline-block;
-      width: 100%;
-      padding: .375rem .75rem;
-      border: 1px solid #ced4da;
-      border-radius: .25rem;
-      box-sizing: border-box;
-      white-space: pre-wrap;
+      display: inline-block; width: 100%; padding: .375rem .75rem;
+      border: 1px solid #ced4da; border-radius: .25rem;
+      box-sizing: border-box; white-space: pre-wrap;
     }
-    /* 防止 PDF 中换页拆行 */
     .planner-row, .planner-row td, #shopping-list li, .card-body {
-      page-break-inside: avoid;
-      break-inside: avoid;
+      page-break-inside: avoid; break-inside: avoid;
     }
-    /* 在每页重复表头 */
     table { width: 100%; border-collapse: collapse; }
     thead { display: table-header-group; }
     tbody { display: table-row-group; }
@@ -58,7 +40,6 @@
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-
     <!-- 语言切换 -->
     <div class="text-end mb-3 no-print">
       <select id="lang-switcher" class="form-select w-auto">
@@ -94,9 +75,7 @@
               <th>晚餐（食材）</th>
             </tr>
           </thead>
-          <tbody id="plan-table">
-            <!-- JS 动态插入 -->
-          </tbody>
+          <tbody id="plan-table"></tbody>
         </table>
       </div>
     </div>
@@ -114,16 +93,14 @@
       <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i> 生成 PDF
       </button>
-      <button id="pay-btn" class="btn btn-warning">
+      <a href="https://buy.stripe.com/test_xyz" target="_blank" class="btn btn-warning" id="pay-btn">
         <i class="bi bi-cart-check-fill"></i> 支付并下载
-      </button>
+      </a>
     </div>
-
   </div>
 
   <script>
   (function(){
-    // 星期列表（中文）
     const days = ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
     const tbody = document.getElementById('plan-table');
 
@@ -139,7 +116,6 @@
       tbody.append(tr);
     });
 
-    // 收集输入数据
     function collectMeals() {
       return days.map((day,i) => ({
         day,
@@ -148,39 +124,36 @@
       }));
     }
 
-    // 渲染购物列表
     function renderShoppingList(meals) {
       const ul = document.getElementById('shopping-list');
       ul.innerHTML = '';
       meals.forEach(m => {
         if (m.lunch || m.dinner) {
-          const dayLi = document.createElement('li');
-          dayLi.className = 'list-group-item';
-          dayLi.innerHTML = `<strong>${m.day}</strong>`;
-          ul.append(dayLi);
-          if (m.lunch) {
-            const li = document.createElement('li');
-            li.className = 'list-group-item ps-4';
-            li.textContent = `午餐: ${m.lunch}`;
-            ul.append(li);
-          }
-          if (m.dinner) {
-            const li = document.createElement('li');
-            li.className = 'list-group-item ps-4';
-            li.textContent = `晚餐: ${m.dinner}`;
-            ul.append(li);
-          }
+          ul.insertAdjacentHTML('beforeend', `<li class="list-group-item"><strong>${m.day}</strong></li>`);
+          if (m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">午餐: ${m.lunch}</li>`);
+          if (m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">晚餐: ${m.dinner}</li>`);
         }
       });
     }
 
-    // 生成 PDF
-    document.getElementById('generate-btn').addEventListener('click', () => {
+    // 限制：最多 3 份 PDF
+    document.getElementById('generate-btn').addEventListener('click', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+
+      if (pdfCount >= 3) {
+        alert("已达到PDF生成上限 (3份)。如需更多份数，请联系我们。");
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "已达上限";
+        return;
+      }
+
       const meals = collectMeals();
       renderShoppingList(meals);
 
-      const original = document.getElementById('pdf-content');
-      const clone = original.cloneNode(true);
+      const clone = document.getElementById('pdf-content').cloneNode(true);
       clone.querySelectorAll('.no-print').forEach(el => el.remove());
       clone.querySelectorAll('input').forEach(input => {
         const s = document.createElement('span');
@@ -194,14 +167,31 @@
         filename: 'meal-planner.pdf',
         jsPDF: { unit:'mm', format:'a4' }
       }).from(clone).save();
+
+      localStorage.setItem('pdfCount', pdfCount + 1);
+
+      if (pdfCount + 1 >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "已达上限";
+      }
     });
 
-    // 支付跳转
-    document.getElementById('pay-btn').addEventListener('click', () => {
-      window.location.href = 'https://buy.stripe.com/test_xyz';
+    // 检查页面加载时是否超过上限
+    window.addEventListener('DOMContentLoaded', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+      if (pdfCount >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "已达上限";
+      }
     });
 
-    // 语言切换（简单跳转）
+    // 语言切换
     document.getElementById('lang-switcher')
       .addEventListener('change', e => {
         const lang = e.target.value;
