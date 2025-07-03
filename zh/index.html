@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>每周用餐计划器</title>
+
+  <!-- Bootstrap CSS + Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <style>
+    body { background: #f8f9fa; font-family: sans-serif; }
+    .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .planner-row:nth-child(odd) { background: #f1f3f5; }
+    .pdf-span {
+      display: inline-block;
+      width: 100%;
+      padding: .375rem .75rem;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+    }
+    /* 防止 PDF 中换页拆行 */
+    .planner-row, .planner-row td, #shopping-list li, .card-body {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    /* 在每页重复表头 */
+    table { width: 100%; border-collapse: collapse; }
+    thead { display: table-header-group; }
+    tbody { display: table-row-group; }
+  </style>
+</head>
+<body>
+  <div class="container py-5" id="pdf-content">
+
+    <!-- 语言切换 -->
+    <div class="text-end mb-3 no-print">
+      <select id="lang-switcher" class="form-select w-auto">
+        <option value="ro">Română</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="ru">Русский</option>
+        <option value="zh" selected>中文</option>
+        <option value="ja">日本語</option>
+        <option value="pt">Português</option>
+        <option value="de">Deutsch</option>
+        <option value="ar">العربية</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+
+    <!-- 标题 -->
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white text-center">
+        <h2 class="mb-0">用餐计划器 &amp; 购物清单</h2>
+      </div>
+    </div>
+
+    <!-- 计划表 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>午餐（食材）</th>
+              <th>晚餐（食材）</th>
+            </tr>
+          </thead>
+          <tbody id="plan-table">
+            <!-- JS 动态插入 -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 购物清单 -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5>购物清单</h5>
+        <ul id="shopping-list" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <!-- 按钮 -->
+    <div class="text-center mb-4 no-print">
+      <button id="generate-btn" class="btn btn-success me-2">
+        <i class="bi bi-file-earmark-pdf-fill"></i> 生成 PDF
+      </button>
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i> 支付并下载
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+  (function(){
+    // 星期列表（中文）
+    const days = ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
+    const tbody = document.getElementById('plan-table');
+
+    // 生成表格行
+    days.forEach((day,i) => {
+      const tr = document.createElement('tr');
+      tr.className = 'planner-row';
+      tr.innerHTML = `
+        <td><strong>${day}</strong></td>
+        <td><input id="d${i+1}l" class="form-control" placeholder="例如：土豆，洋葱"></td>
+        <td><input id="d${i+1}c" class="form-control" placeholder="例如：鸡肉，米饭"></td>
+      `;
+      tbody.append(tr);
+    });
+
+    // 收集输入数据
+    function collectMeals() {
+      return days.map((day,i) => ({
+        day,
+        lunch: document.getElementById(`d${i+1}l`).value.trim(),
+        dinner: document.getElementById(`d${i+1}c`).value.trim()
+      }));
+    }
+
+    // 渲染购物列表
+    function renderShoppingList(meals) {
+      const ul = document.getElementById('shopping-list');
+      ul.innerHTML = '';
+      meals.forEach(m => {
+        if (m.lunch || m.dinner) {
+          const dayLi = document.createElement('li');
+          dayLi.className = 'list-group-item';
+          dayLi.innerHTML = `<strong>${m.day}</strong>`;
+          ul.append(dayLi);
+          if (m.lunch) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item ps-4';
+            li.textContent = `午餐: ${m.lunch}`;
+            ul.append(li);
+          }
+          if (m.dinner) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item ps-4';
+            li.textContent = `晚餐: ${m.dinner}`;
+            ul.append(li);
+          }
+        }
+      });
+    }
+
+    // 生成 PDF
+    document.getElementById('generate-btn').addEventListener('click', () => {
+      const meals = collectMeals();
+      renderShoppingList(meals);
+
+      const original = document.getElementById('pdf-content');
+      const clone = original.cloneNode(true);
+      clone.querySelectorAll('.no-print').forEach(el => el.remove());
+      clone.querySelectorAll('input').forEach(input => {
+        const s = document.createElement('span');
+        s.textContent = input.value;
+        s.className = 'pdf-span';
+        input.parentNode.replaceChild(s, input);
+      });
+
+      html2pdf().set({
+        margin: [10,10,10,10],
+        filename: 'meal-planner.pdf',
+        jsPDF: { unit:'mm', format:'a4' }
+      }).from(clone).save();
+    });
+
+    // 支付跳转
+    document.getElementById('pay-btn').addEventListener('click', () => {
+      window.location.href = 'https://buy.stripe.com/test_xyz';
+    });
+
+    // 语言切换（简单跳转）
+    document.getElementById('lang-switcher')
+      .addEventListener('change', e => {
+        const lang = e.target.value;
+        if (lang === 'zh') return;
+        window.location.href = `../${lang}/`;
+      });
+
+  })();
+  </script>
+</body>
+</html>
