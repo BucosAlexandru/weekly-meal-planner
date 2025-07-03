@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Weekly Meal Planner</title>
+
+  <!-- SEO: alternate language versions -->
+  <link rel="alternate" hreflang="ro" href="https://<username>.github.io/weekly-meal-planner/" />
+  <link rel="alternate" hreflang="en" href="https://<username>.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es" href="https://<username>.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr" href="https://<username>.github.io/weekly-meal-planner/fr/" />
+  <!-- add more as needed -->
+
+  <!-- Bootstrap CSS + Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <style>
+    body { background: #f8f9fa; font-family: sans-serif; }
+    .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .planner-row:nth-child(odd) { background: #f1f3f5; }
+    .pdf-span {
+      display: inline-block;
+      width: 100%;
+      padding: .375rem .75rem;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+    }
+    /* Prevent splitting elements across PDF pages */
+    .planner-row,
+    .planner-row td,
+    #shopping-list li,
+    .card-body {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    /* Repeat table header on each page */
+    table { width: 100%; border-collapse: collapse; }
+    thead { display: table-header-group; }
+    tbody { display: table-row-group; }
+  </style>
+</head>
+<body>
+  <div class="container py-5" id="pdf-content">
+    <!-- Language switcher (no-print) -->
+    <div class="text-end mb-3 no-print">
+      <select id="lang-switcher" class="form-select w-auto">
+        <option value="ro">Română</option>
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <!-- add your other locales here -->
+      </select>
+    </div>
+
+    <!-- Header -->
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white text-center">
+        <h2 class="mb-0">Weekly Meal Planner &amp; Shopping List</h2>
+      </div>
+    </div>
+
+    <!-- Planner table -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Lunch (ingredients)</th>
+              <th>Dinner (ingredients)</th>
+            </tr>
+          </thead>
+          <tbody id="plan-table">
+            <!-- rows will be injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Shopping list -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5>Shopping List</h5>
+        <ul id="shopping-list" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="text-center mb-4 no-print">
+      <button id="generate-btn" class="btn btn-success me-2">
+        <i class="bi bi-file-earmark-pdf-fill"></i> Generate PDF
+      </button>
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i> Pay &amp; Download
+      </button>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+    const tbody = document.getElementById('plan-table');
+
+    // 1) Build the table rows
+    days.forEach((day,i) => {
+      const tr = document.createElement('tr');
+      tr.className = 'planner-row';
+      tr.innerHTML = `
+        <td><strong>${day}</strong></td>
+        <td><input id="d${i+1}l" class="form-control" placeholder="e.g. potatoes, onion"></td>
+        <td><input id="d${i+1}c" class="form-control" placeholder="e.g. chicken, rice"></td>
+      `;
+      tbody.append(tr);
+    });
+
+    // 2) Collect meals into an array
+    function collectMeals() {
+      return days.map((day,i) => ({
+        day,
+        lunch: document.getElementById(`d${i+1}l`).value.trim(),
+        dinner: document.getElementById(`d${i+1}c`).value.trim()
+      }));
+    }
+
+    // 3) Render the shopping list grouped by day/meal
+    function renderShoppingList(meals) {
+      const ul = document.getElementById('shopping-list');
+      ul.innerHTML = '';
+      meals.forEach(m => {
+        if (m.lunch || m.dinner) {
+          const dayLi = document.createElement('li');
+          dayLi.className = 'list-group-item';
+          dayLi.innerHTML = `<strong>${m.day}</strong>`;
+          ul.append(dayLi);
+          if (m.lunch) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item ps-4';
+            li.textContent = `Lunch: ${m.lunch}`;
+            ul.append(li);
+          }
+          if (m.dinner) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item ps-4';
+            li.textContent = `Dinner: ${m.dinner}`;
+            ul.append(li);
+          }
+        }
+      });
+    }
+
+    // 4) Generate PDF
+    document.getElementById('generate-btn').addEventListener('click', () => {
+      const meals = collectMeals();
+      renderShoppingList(meals);
+
+      // Clone, remove buttons, replace inputs with spans
+      const original = document.getElementById('pdf-content');
+      const clone = original.cloneNode(true);
+      clone.querySelectorAll('.no-print').forEach(el => el.remove());
+      clone.querySelectorAll('input').forEach(input => {
+        const s = document.createElement('span');
+        s.textContent = input.value;
+        s.className = 'pdf-span';
+        input.parentNode.replaceChild(s, input);
+      });
+
+      html2pdf()
+        .set({
+          margin: [10,10,10,10],
+          filename:'meal-planner.pdf',
+          jsPDF:{unit:'mm', format:'a4'}
+        })
+        .from(clone)
+        .save();
+    });
+
+    // 5) Checkout redirect
+    document.getElementById('pay-btn').addEventListener('click', () => {
+      window.location.href = 'https://buy.stripe.com/test_xyz';
+    });
+
+    // 6) Language switcher (simple redirect)
+    document.getElementById('lang-switcher').addEventListener('change', e => {
+      const lang = e.target.value;
+      if (lang === 'en') return;  // already here
+      window.location.href = `../${lang}/`;
+    });
+  })();
+  </script>
+</body>
+</html>
