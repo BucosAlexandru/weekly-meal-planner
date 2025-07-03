@@ -303,13 +303,19 @@ f<!DOCTYPE html>
       });
     }
 
-    // 9) Generare PDF
-   document.getElementById('generate-btn').addEventListener('click', function() {
+  // Eveniment click pe butonul de generare PDF
+document.getElementById('generate-btn').addEventListener('click', function() {
   // Citește numărul de PDF-uri generate până acum din localStorage
   let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
 
   if (pdfCount >= 3) {
     alert("Ai atins limita maximă de 3 PDF-uri generate de pe acest dispozitiv.\nDacă ai nevoie de mai multe, te rugăm să ne contactezi.");
+    // Dezactivează butonul și schimbă textul
+    let btn = document.getElementById('generate-btn');
+    btn.disabled = true;
+    btn.classList.add('btn-secondary');
+    btn.classList.remove('btn-success');
+    btn.innerHTML = "Limită atinsă";
     return; // Nu mai generează PDF-ul
   }
 
@@ -331,6 +337,15 @@ f<!DOCTYPE html>
 
   // După generare, crește contorul
   localStorage.setItem('pdfCount', pdfCount + 1);
+
+   // Dacă tocmai ai ajuns la 3, dezactivează și butonul
+  if (pdfCount + 1 >= 3) {
+    let btn = document.getElementById('generate-btn');
+    btn.disabled = true;
+    btn.classList.add('btn-secondary');
+    btn.classList.remove('btn-success');
+    btn.innerHTML = "Limită atinsă";
+  }
 });
 
 
