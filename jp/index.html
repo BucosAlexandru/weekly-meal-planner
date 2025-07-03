@@ -6,19 +6,18 @@
   <title>週間ミールプランナー</title>
 
   <!-- alternate language versions -->
-<link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+  <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
+  <link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
+  <link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
+  <link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
+  <link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
+  <link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
+  <link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
+  <link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+  <link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+  <link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
 
   <!-- Bootstrap CSS + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -105,11 +104,10 @@
       <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i> PDFを生成
       </button>
-      <button id="pay-btn" class="btn btn-warning">
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
         <i class="bi bi-cart-check-fill"></i> 支払ってダウンロード
-      </button>
+      </a>
     </div>
-
   </div>
 
   <script>
@@ -149,7 +147,20 @@
       });
     }
 
-    document.getElementById('generate-btn').addEventListener('click', () => {
+    // PDF生成制限（3回まで）
+    document.getElementById('generate-btn').addEventListener('click', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+
+      if (pdfCount >= 3) {
+        alert("この端末では最大3回までPDFを生成できます。さらに必要な場合はご連絡ください。");
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "制限に達しました";
+        return;
+      }
+
       const meals = collectMeals();
       renderShoppingList(meals);
 
@@ -167,12 +178,31 @@
         filename: 'meal-planner.pdf',
         jsPDF: { unit:'mm', format:'a4' }
       }).from(clone).save();
+
+      localStorage.setItem('pdfCount', pdfCount + 1);
+
+      if (pdfCount + 1 >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "制限に達しました";
+      }
     });
 
-    document.getElementById('pay-btn').addEventListener('click', () => {
-      window.location.href = 'https://buy.stripe.com/test_xyz';
+    // ページ読み込み時にボタン状態を確認
+    window.addEventListener('DOMContentLoaded', function() {
+      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+      if (pdfCount >= 3) {
+        let btn = document.getElementById('generate-btn');
+        btn.disabled = true;
+        btn.classList.add('btn-secondary');
+        btn.classList.remove('btn-success');
+        btn.innerHTML = "制限に達しました";
+      }
     });
 
+    // 言語切替
     document.getElementById('lang-switcher').addEventListener('change', e => {
       const lang = e.target.value;
       if (lang === 'ja') return;
