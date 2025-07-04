@@ -226,6 +226,10 @@
         </tr>`);
     });
   }
+  function setHtmlLangDir(language) {
+  document.documentElement.lang = language;
+  document.documentElement.dir = (language === 'ar') ? 'rtl' : 'ltr';
+}
 
   // 4) Aplică traduceri pentru toate elementele marcate
   function applyTranslations(l) {
@@ -238,14 +242,16 @@
   }
 
   // inițializează în arabă
-  langSwitcher.value = lang;
-  applyTranslations(lang);
+langSwitcher.value = lang;
+setHtmlLangDir(lang);      // <--- Asta setează corect și la încărcare!
+applyTranslations(lang);
 
-  // 5) la schimbarea limbii
-  langSwitcher.addEventListener('change', e => {
-    lang = e.target.value;
-    applyTranslations(lang);
-  });
+langSwitcher.addEventListener('change', e => {
+  lang = e.target.value;
+  setHtmlLangDir(lang);    // <--- Asta setează corect de fiecare dată!
+  applyTranslations(lang);
+});
+
 
   // --- restul codului (collectMeals, renderShoppingList, PDF-limită, pay-btn) rămâne neschimbat ---
   function collectMeals() {
