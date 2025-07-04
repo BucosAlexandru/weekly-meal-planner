@@ -13,7 +13,7 @@
   <link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
   <link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
   <link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-  <link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/jp/" />
+  <link rel="alternate" hreflang="jp"      href="https://BucosAlexandru.github.io/weekly-meal-planner/jp/" />
   <link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
   <link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
   <link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
@@ -60,7 +60,7 @@
         <option value="fr">Français</option>
         <option value="ru">Русский</option>
         <option value="zh">中文</option>
-        <option value="ja" selected>日本語</option>
+        <option value="jp" selected>日本語</option>
         <option value="pt">Português</option>
         <option value="de">Deutsch</option>
         <option value="ar">العربية</option>
@@ -205,7 +205,7 @@
     // 言語切替
     document.getElementById('lang-switcher').addEventListener('change', e => {
       const lang = e.target.value;
-      if (lang === 'ja') return;
+      if (lang === 'jp') return;
       window.location.href = `../${lang}/`;
     });
   })();
