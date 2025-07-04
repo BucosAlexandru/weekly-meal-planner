@@ -3,32 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>مخطط وجبات أسبوعي</title>
+  <title data-i18n="title">مخطط وجبات أسبوعي</title>
+  <meta name="description" content="قم بإنشاء خطة وجبات أسبوعية مع قائمة التسوق وتنزيل PDF مجاناً.">
 
   <!-- alternate language versions -->
-<link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-
-<link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-<link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-<link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-<link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-<link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-<link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-<link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-<link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-<link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-<link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-<link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+  <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
+  <link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
+  <link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
+  <link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+  <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
 
   <!-- Bootstrap CSS + Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
@@ -38,14 +32,13 @@
     .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .planner-row:nth-child(odd) { background: #f1f3f5; }
     .pdf-span {
-      display: block; /* full width for RTL */
+      display: block;
       padding: .375rem .75rem;
       border: 1px solid #ced4da;
       border-radius: .25rem;
-      box-sizing: border-box;
       white-space: pre-wrap;
+      box-sizing: border-box;
     }
-    /* Prevent PDF breaks */
     .planner-row, .planner-row td, #shopping-list li, .card-body {
       page-break-inside: avoid;
       break-inside: avoid;
@@ -78,19 +71,19 @@
     <!-- العنوان -->
     <div class="card mb-4 text-end">
       <div class="card-header bg-success text-white">
-        <h2 class="mb-0">مخطط الوجبات وقائمة التسوق</h2>
+        <h2 class="mb-0" data-i18n="header">مخطط الوجبات وقائمة التسوق</h2>
       </div>
     </div>
 
     <!-- جدول التخطيط -->
     <div class="card mb-4">
-      <div class="card-body">
-        <table class="table mb-0 text-end">
+      <div class="card-body text-end">
+        <table class="table mb-0">
           <thead>
             <tr>
-              <th>اليوم</th>
-              <th>الغداء (المكونات)</th>
-              <th>العشاء (المكونات)</th>
+              <th data-i18n="col.day">اليوم</th>
+              <th data-i18n="col.lunch">الغداء (المكونات)</th>
+              <th data-i18n="col.dinner">العشاء (المكونات)</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -101,127 +94,194 @@
     <!-- قائمة التسوق -->
     <div class="card mb-4">
       <div class="card-body text-end">
-        <h5>قائمة التسوق</h5>
+        <h5 data-i18n="shoppingList">قائمة التسوق</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
     <!-- الأزرار -->
-   <div class="text-center mb-4 no-print">
-  <button id="generate-btn" class="btn btn-success me-2">
-    <i class="bi bi-file-earmark-pdf-fill"></i> إنشاء PDF
-  </button>
-  <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-    <i class="bi bi-cart-check-fill"></i> ادفع وحمّل
-  </a>
-</div>
-
+    <div class="text-center mb-4 no-print">
+      <button id="generate-btn" class="btn btn-success me-2">
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">إنشاء PDF</span>
+      </button>
+      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">ادفع وحمّل</span>
+      </a>
+    </div>
   </div>
 
   <script>
   (function(){
-    // أيام الأسبوع بالعربية
-    const days = ['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'];
-    const tbody = document.getElementById('plan-table');
+    const i18n = {
+      ro: {
+        weekdays:['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
+        title:"Planificator Mese Săptămânal",
+        header:"Planificator Mese & Lista de Cumpărături",
+        "col.day":"Ziua","col.lunch":"Prânz (ingrediente)","col.dinner":"Cină (ingrediente)",
+        shoppingList:"Lista de cumpărături","btn.generate":"Generează PDF","btn.pay":"Plătește & Descarcă",
+        placeholderL:"ex: cartofi, ceapă", placeholderD:"ex: pui, orez"
+      },
+      en: {
+        weekdays:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+        title:"Weekly Meal Planner",
+        header:"Weekly Meal Planner & Shopping List",
+        "col.day":"Day","col.lunch":"Lunch (ingredients)","col.dinner":"Dinner (ingredients)",
+        shoppingList:"Shopping List","btn.generate":"Generate PDF","btn.pay":"Pay & Download",
+        placeholderL:"e.g. potatoes, onion", placeholderD:"e.g. chicken, rice"
+      },
+      es: {
+        weekdays:['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
+        title:"Planificador Semanal de Comidas",
+        header:"Planificador de Comidas y Lista de Compras",
+        "col.day":"Día","col.lunch":"Almuerzo (ingredientes)","col.dinner":"Cena (ingredientes)",
+        shoppingList:"Lista de Compras","btn.generate":"Generar PDF","btn.pay":"Pagar y Descargar",
+        placeholderL:"ej: papas, cebolla", placeholderD:"ej: pollo, arroz"
+      },
+      fr: {
+        weekdays:['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
+        title:"Planificateur de Repas Hebdomadaire",
+        header:"Planificateur de Repas & Liste de Courses",
+        "col.day":"Jour","col.lunch":"Déjeuner (ingrédients)","col.dinner":"Dîner (ingrédients)",
+        shoppingList:"Liste de Courses","btn.generate":"Générer PDF","btn.pay":"Payer & Télécharger",
+        placeholderL:"ex : pommes de terre, oignon", placeholderD:"ex : poulet, riz"
+      },
+      ru: {
+        weekdays:['Понедельник','Вторник','Среда','Четверг','Пятница','Субота','Воскресенье'],
+        title:"Еженедельный планировщик питания",
+        header:"Планировщик питания & Список покупок",
+        "col.day":"День","col.lunch":"Обед (ингредиенты)","col.dinner":"Ужин (ингредиенты)",
+        shoppingList:"Список покупок","btn.generate":"Создать PDF","btn.pay":"Оплатить & Скачать",
+        placeholderL:"напр.: картофель, лук", placeholderD:"напр.: курица, рис"
+      },
+      zh: {
+        weekdays:['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],
+        title:"每周用餐计划器",
+        header:"用餐计划器 & 购物清单",
+        "col.day":"日期","col.lunch":"午餐（食材）","col.dinner":"晚餐（食材）",
+        shoppingList:"购物清单","btn.generate":"生成 PDF","btn.pay":"支付并下载",
+        placeholderL:"例如：土豆，洋葱", placeholderD:"例如：鸡肉，米饭"
+      },
+      ja: {
+        weekdays:['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
+        title:"週間ミールプランナー",
+        header:"ミールプランナー＆買い物リスト",
+        "col.day":"日付","col.lunch":"昼食（材料）","col.dinner":"夕食（材料）",
+        shoppingList:"買い物リスト","btn.generate":"PDFを作成","btn.pay":"支払ってダウンロード",
+        placeholderL:"例：ジャガイモ、玉ねぎ", placeholderD:"例：鶏肉、ご飯"
+      },
+      pt: {
+        weekdays:['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'],
+        title:"Planejador Semanal de Refeições",
+        header:"Planejador de Refeições & Lista de Compras",
+        "col.day":"Dia","col.lunch":"Almoço (ingredientes)","col.dinner":"Jantar (ingredientes)",
+        shoppingList:"Lista de Compras","btn.generate":"Gerar PDF","btn.pay":"Pagar & Baixar",
+        placeholderL:"ex: batata, cebola", placeholderD:"ex: frango, arroz"
+      },
+      de: {
+        weekdays:['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
+        title:"Wöchentlicher Essensplaner",
+        header:"Essensplaner & Einkaufsliste",
+        "col.day":"Tag","col.lunch":"Mittagessen (Zutaten)","col.dinner":"Abendessen (Zutaten)",
+        shoppingList:"Einkaufsliste","btn.generate":"PDF erstellen","btn.pay":"Bezahlen & Herunterladen",
+        placeholderL:"z.B.: Kartoffeln, Zwiebeln", placeholderD:"z.B.: Hähnchen, Reis"
+      },
+      ar: {
+        weekdays:['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
+        title:"مخطط وجبات أسبوعي",
+        header:"مخطط الوجبات وقائمة التسوق",
+        "col.day":"اليوم","col.lunch":"الغداء (المكونات)","col.dinner":"العشاء (المكونات)",
+        shoppingList:"قائمة التسوق","btn.generate":"إنشاء PDF","btn.pay":"ادفع وحمّل",
+        placeholderL:"مثال: بطاطس، بصل", placeholderD:"مثال: دجاج، أرز"
+      },
+      hi: {
+        weekdays:['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
+        title:"साप्ताहिक भोजन योजना",
+        header:"भोजन योजनाकार और खरीदारी सूची",
+        "col.day":"दिन","col.lunch":"दोपहर का भोजन (सामग्री)","col.dinner":"रात का खाना (सामग्री)",
+        shoppingList:"खरीदारी की सूची","btn.generate":"PDF बनाएँ","btn.pay":"भुगतान और डाउनलोड",
+        placeholderL:"उदा: आलू, प्याज", placeholderD:"उदा: चिकन, चावल"
+      }
+    };
 
-    // 1) إنشاء صفوف الجدول
-    days.forEach((day,i) => {
-      const tr = document.createElement('tr');
-      tr.className = 'planner-row';
-      tr.innerHTML = `
-        <td><strong>${day}</strong></td>
-        <td><input id="d${i+1}l" class="form-control" placeholder="مثال: بطاطس، بصل"></td>
-        <td><input id="d${i+1}c" class="form-control" placeholder="مثال: دجاج، أرز"></td>
-      `;
-      tbody.append(tr);
+    const langSwitcher = document.getElementById('lang-switcher');
+    const tbody = document.getElementById('plan-table');
+    let lang = 'ar';
+
+    function renderTable(l) {
+      tbody.innerHTML = '';
+      i18n[l].weekdays.forEach((day,i) => {
+        tbody.insertAdjacentHTML('beforeend', `
+          <tr class="planner-row">
+            <td><strong>${day}</strong></td>
+            <td><input id="d${i+1}l" class="form-control" placeholder="${i18n[l].placeholderL}"></td>
+            <td><input id="d${i+1}c" class="form-control" placeholder="${i18n[l].placeholderD}"></td>
+          </tr>`);
+      });
+    }
+
+    function applyTranslations(l) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = i18n[l][key] || key;
+      });
+      document.title = i18n[l].title;
+      renderTable(l);
+    }
+
+    applyTranslations(lang);
+    langSwitcher.value = lang;
+    langSwitcher.addEventListener('change', e => {
+      const nl = e.target.value;
+      if (nl !== lang) window.location.href = `../${nl}/`;
     });
 
-    // 2) جمع البيانات
     function collectMeals() {
-      return days.map((day,i) => ({
-        day,
-        lunch:  document.getElementById(`d${i+1}l`).value.trim(),
+      return i18n[lang].weekdays.map((_,i)=>({
+        day: document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`).textContent,
+        lunch: document.getElementById(`d${i+1}l`).value.trim(),
         dinner: document.getElementById(`d${i+1}c`).value.trim()
       }));
     }
-
-    // 3) عرض قائمة التسوق
     function renderShoppingList(meals) {
       const ul = document.getElementById('shopping-list');
       ul.innerHTML = '';
       meals.forEach(m => {
-        if (m.lunch || m.dinner) {
-          ul.insertAdjacentHTML('beforeend',
-            `<li class="list-group-item text-end"><strong>${m.day}</strong></li>`);
-          if (m.lunch)
-            ul.insertAdjacentHTML('beforeend',
-              `<li class="list-group-item ps-4 text-end">الغداء: ${m.lunch}</li>`);
-          if (m.dinner)
-            ul.insertAdjacentHTML('beforeend',
-              `<li class="list-group-item ps-4 text-end">العشاء: ${m.dinner}</li>`);
+        if (m.lunch||m.dinner) {
+          ul.insertAdjacentHTML('beforeend', `<li class="list-group-item text-end"><strong>${m.day}</strong></li>`);
+          if (m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4 text-end">${i18n[lang]["col.lunch"].split(' ')[0]}: ${m.lunch}</li>`);
+          if (m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4 text-end">${i18n[lang]["col.dinner"].split(' ')[0]}: ${m.dinner}</li>`);
         }
       });
     }
 
-    // 4) إنشاء PDF
-// Eveniment click pe butonul de generare PDF (limitat la 3)
-document.getElementById('generate-btn').addEventListener('click', function() {
-  let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-
-  if (pdfCount >= 3) {
-    alert("لقد وصلت إلى الحد الأقصى المسموح به (3 ملفات PDF) لهذا الجهاز. إذا كنت بحاجة إلى المزيد، يرجى التواصل معنا.");
-    // Dezactivează butonul și schimbă textul
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "تم الوصول إلى الحد الأقصى";
-    return;
-  }
-
-  // ---- CODUL DE GENERARE PDF ----
-  const meals = collectMeals();
-  renderShoppingList(meals);
-
-  const clone = document.getElementById('pdf-content').cloneNode(true);
-  clone.querySelectorAll('.no-print').forEach(el => el.remove());
-  clone.querySelectorAll('input').forEach(input => {
-    const s = document.createElement('span');
-    s.textContent = input.value;
-    s.className = 'pdf-span';
-    input.parentNode.replaceChild(s, input);
-  });
-
-  html2pdf().set({
-    margin: [10,10,10,10],
-    filename: 'meal-planner.pdf',
-    jsPDF: { unit:'mm', format:'a4' }
-  }).from(clone).save();
-
-  localStorage.setItem('pdfCount', pdfCount + 1);
-
-  // Dacă tocmai ai ajuns la 3, dezactivează și butonul
-  if (pdfCount + 1 >= 3) {
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "تم الوصول إلى الحد الأقصى";
-  }
-});
-
-// La încărcarea paginii, verifică și dezactivează dacă e cazul
-window.addEventListener('DOMContentLoaded', function() {
-  let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-  if (pdfCount >= 3) {
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "تم الوصول إلى الحد الأقصى";
-  }
-});
-
+    document.getElementById('generate-btn').addEventListener('click', function(){
+      let c = parseInt(localStorage.getItem('pdfCount')||'0',10);
+      if (c>=3) {
+        alert("لقد وصلت إلى الحد الأقصى المسموح به (3 ملفات PDF).");
+        this.disabled = true; return;
+      }
+      const meals = collectMeals();
+      renderShoppingList(meals);
+      const clone = document.getElementById('pdf-content').cloneNode(true);
+      clone.querySelectorAll('.no-print').forEach(el=>el.remove());
+      clone.querySelectorAll('input').forEach(input=>{
+        const s = document.createElement('span');
+        s.textContent = input.value; s.className='pdf-span';
+        input.parentNode.replaceChild(s,input);
+      });
+      html2pdf().set({margin:[10,10,10,10],filename:'meal-planner.pdf',jsPDF:{unit:'mm',format:'a4'}}).from(clone).save();
+      localStorage.setItem('pdfCount', c+1);
+      if (c+1>=3) this.disabled=true;
+    });
+    window.addEventListener('DOMContentLoaded', ()=> {
+      if (parseInt(localStorage.getItem('pdfCount')||'0',10)>=3)
+        document.getElementById('generate-btn').disabled=true;
+    });
   })();
   </script>
 </body>
