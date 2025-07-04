@@ -222,9 +222,10 @@
   applyTranslations(lang);
 
   langSwitcher.addEventListener('change', e => {
-    lang = e.target.value;
-    applyTranslations(lang);
-  });
+  const nl = e.target.value;
+  if (nl === 'zh') return; // deja pe chineză
+  window.location.href = `../${nl}/`;
+});
 
   function collectMeals() {
     return i18n[lang].weekdays.map((_,i)=>({
