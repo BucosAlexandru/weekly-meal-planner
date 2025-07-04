@@ -228,8 +228,13 @@
   }
   function setHtmlLangDir(language) {
   document.documentElement.lang = language;
-  document.documentElement.dir = (language === 'ar') ? 'rtl' : 'ltr';
+  if (language === 'ar') {
+    document.documentElement.dir = 'rtl';
+  } else {
+    document.documentElement.dir = 'ltr';
+  }
 }
+
 
   // 4) Aplică traduceri pentru toate elementele marcate
   function applyTranslations(l) {
