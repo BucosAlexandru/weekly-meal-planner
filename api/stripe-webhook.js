@@ -1,6 +1,11 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const Database = require('better-sqlite3');
-const db = new Database('tokens.db'); // Ai grijă să pui calea corectă
+const { createClient } = require('@supabase/supabase-js');
+
+// Initialize Supabase client
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
@@ -8,12 +13,10 @@ module.exports = async (req, res) => {
     return;
   }
 
-  // Stripe trimite datele ca buffer/raw, nu JSON!
+  // Stripe sends raw buffer, not JSON!
   let rawBody = '';
   await new Promise((resolve) => {
-    req.on('data', (chunk) => {
-      rawBody += chunk;
-    });
+    req.on('data', (chunk) => { rawBody += chunk; });
     req.on('end', resolve);
   });
 
@@ -32,23 +35,33 @@ module.exports = async (req, res) => {
 
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object;
-    // 1. Generezi un token random (exemplu simplu):
+
+    // 1. Generate a random token
     const token = Math.random().toString(36).substring(2) + Date.now().toString(36);
-    // 2. Extragi emailul userului din sesiune (dacă ai adăugat collect email la Stripe Checkout)
+
+    // 2. Extract user email (if you have collect email enabled in Stripe Checkout)
     const email = session.customer_details?.email || null;
-    // 3. Calculezi data de expirare (timpul curent + 30 zile)
+
+    // 3. Calculate expiration time (now + 30 days)
     const expires_at = Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60;
 
-    // 4. Inserezi în baza de date:
+    // 4. Insert into Supabase database
     try {
-      db.prepare(`INSERT INTO tokens (token, email, expires_at) VALUES (?, ?, ?)`)
-        .run(token, email, expires_at);
-      // (opțional) Trimite tokenul pe email către client sau afișează-l după plată
-      console.log('Token inserat:', token);
+      const { error } = await supabase
+        .from('tokens')
+        .insert([
+          { token, email, expires_at }
+        ]);
+      if (error) {
+        console.error('Error inserting token into Supabase:', error);
+      } else {
+        console.log('Token successfully inserted into Supabase:', token);
+      }
     } catch (err) {
-      console.error('Eroare la inserarea tokenului:', err);
+      console.error('Error communicating with Supabase:', err);
     }
   }
 
   res.json({ received: true });
 };
+
