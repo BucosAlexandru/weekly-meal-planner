@@ -1,0 +1,13 @@
+# Ignoră baza de date cu token-uri
+tokens.db
+
+# Ignoră modulele Node.js
+node_modules/
+
+# Ignoră fișierele de configurare și loguri
+.env
+*.log
+
+# MacOS file
+.DS_Store
+
