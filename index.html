@@ -2,87 +2,34 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Planificator mese săptămânal gratuit – meal-planner.ro</title>
   <meta name="description" content="Creează rapid planul tău de mese săptămânal. Generează PDF, listă de cumpărături și folosește aplicația în orice limbă. Gratuit, online, rapid!">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://meal-planner.ro/" />
-
-  <!-- hreflang alternate language versions -->
-  <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-  <link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-  <link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-  <link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-  <link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-  <link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-  <link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-  <link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-  <link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-  <link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-  <link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-  <link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
-
-  <!-- Open Graph (recomandat) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Planificator mese săptămânal gratuit – meal-planner.ro">
-  <meta property="og:description" content="Creează rapid planul tău de mese, generează PDF și lista de cumpărături, totul gratuit și online!">
-  <meta property="og:url" content="https://meal-planner.ro/" />
-  <meta property="og:image" content="https://meal-planner.ro/cover.jpg"><!-- dacă ai imagine reprezentativă -->
-
-  <!-- Twitter Card (opțional) -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Planificator mese săptămânal gratuit – meal-planner.ro">
-  <meta name="twitter:description" content="Creează rapid planul tău de mese și lista de cumpărături PDF, gratuit, direct din browser.">
-  <meta name="twitter:url" content="https://meal-planner.ro/">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png">
-
-  <!-- Bootstrap CSS + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
   <style>
     body { background: #f8f9fa; font-family: sans-serif; }
     .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .planner-row:nth-child(odd) { background: #f1f3f5; }
-    .pdf-span {
-      display: inline-block; width:100%; padding:.375rem .75rem;
-      border:1px solid #ced4da; border-radius:.25rem;
-      box-sizing:border-box; white-space:pre-wrap;
-    }
-    /* PDF page-break rules */
-    .planner-row, .planner-row td, #shopping-list li, .card-body {
-      page-break-inside: avoid; break-inside: avoid;
-    }
+    .pdf-span { display: inline-block; width:100%; padding:.375rem .75rem; border:1px solid #ced4da; border-radius:.25rem; box-sizing:border-box; white-space:pre-wrap; }
     thead { display: table-header-group; }
   </style>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <!-- limbă -->
+
+    <!-- Limbi -->
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-        <option value="ro">Română</option>
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="ru">Русский</option>
-        <option value="zh">中文</option>
-        <option value="ja">日本語</option>
-        <option value="pt">Português</option>
-        <option value="de">Deutsch</option>
-        <option value="ar">العربية</option>
-        <option value="hi">हिन्दी</option>
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
     <!-- header -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0" data-i18n="header">Planificator Mese &amp; Lista de Cumpărături</h2>
+        <h2 class="mb-0" data-i18n="header"></h2>
       </div>
     </div>
 
@@ -92,9 +39,9 @@
         <table class="table mb-0">
           <thead>
             <tr>
-              <th data-i18n="col.day">Ziua</th>
-              <th data-i18n="col.lunch">Prânz (ingrediente)</th>
-              <th data-i18n="col.dinner">Cină (ingrediente)</th>
+              <th data-i18n="col.day"></th>
+              <th data-i18n="col.lunch"></th>
+              <th data-i18n="col.dinner"></th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -105,27 +52,30 @@
     <!-- lista de cumpărături -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">Lista de cumpărături</h5>
+        <h5 data-i18n="shoppingList"></h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- butoane -->
-    <div class="text-center mb-4 no-print">
-      <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i>
-        <span data-i18n="btn.generate">Generează PDF</span>
+    <!-- Stripe Payment -->
+    <form id="payment-form" class="mb-3">
+      <div id="card-element"></div>
+      <button class="btn btn-warning mt-3" id="pay-btn" type="submit">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay"></span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-  <i class="bi bi-cart-check-fill"></i>
-  <span data-i18n="btn.pay">Plătește & Descarcă</span>
-</a>
-    </div>
+    </form>
+    <div id="payment-status" class="mt-2"></div>
+
+    <!-- Buton PDF, ascuns inițial -->
+    <button class="btn btn-success mt-3" id="generate-btn" style="display:none;">
+      <i class="bi bi-file-earmark-pdf"></i>
+      <span data-i18n="btn.generate"></span>
+    </button>
   </div>
 
   <script>
-  (function(){
-    // 1) Dicționar traduceri
+    // Dicționar traduceri
     const i18n = {
       ro: {
         weekdays:   ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
@@ -272,29 +222,35 @@
       }
     };
 
-    // 2) Elemente
+    // Populate dropdown limbi
+    const langCodes = Object.keys(i18n);
+    const langNames = {
+      ro: "Română", en: "English", es: "Español", fr: "Français", ru: "Русский", zh: "中文", ja: "日本語", pt: "Português", de: "Deutsch", ar: "العربية", hi: "हिन्दी"
+    };
     const langSwitcher = document.getElementById('lang-switcher');
-    const tbody         = document.getElementById('plan-table');
-    let   lang          = navigator.language.slice(0,2);
+    langCodes.forEach(l => {
+      const opt = document.createElement("option");
+      opt.value = l; opt.textContent = langNames[l];
+      langSwitcher.appendChild(opt);
+    });
+
+    let lang = navigator.language.slice(0,2);
     if (!i18n[lang]) lang = 'ro';
 
-    // 3) Reconstruiește tabela
+    // Reconstruiește tabela și etichetele
     function renderTable(lang) {
+      const tbody = document.getElementById('plan-table');
       tbody.innerHTML = '';
       i18n[lang].weekdays.forEach((day, idx) => {
         tbody.insertAdjacentHTML('beforeend', `
           <tr class="planner-row">
             <td><strong>${day}</strong></td>
-            <td><input id="d${idx+1}l" class="form-control"
-                       placeholder="${i18n[lang].placeholderL}"></td>
-            <td><input id="d${idx+1}c" class="form-control"
-                       placeholder="${i18n[lang].placeholderD}"></td>
+            <td><input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}"></td>
+            <td><input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}"></td>
           </tr>
         `);
       });
     }
-
-    // 4) Aplică traduceri statice + tabela
     function applyTranslations(lang) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -303,18 +259,14 @@
       document.title = i18n[lang].title;
       renderTable(lang);
     }
-
-    // 5) Inițializare
     langSwitcher.value = lang;
     applyTranslations(lang);
-
-    // 6) Când utilizatorul schimbă limba
     langSwitcher.addEventListener('change', e => {
       lang = e.target.value;
       applyTranslations(lang);
     });
 
-    // 7) Colectăm mesele
+    // Colectăm mesele
     function collectMeals(){
       return i18n[lang].weekdays.map((_,i)=>({
         day:    document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`).textContent,
@@ -322,8 +274,6 @@
         dinner: document.getElementById(`d${i+1}c`).value.trim()
       }));
     }
-
-    // 8) Afișăm lista de cumpărături
     function renderShoppingList(meals){
       const ul=document.getElementById('shopping-list'); ul.innerHTML='';
       meals.forEach(m=>{
@@ -335,53 +285,55 @@
       });
     }
 
-  // Eveniment click pe butonul de generare PDF
-document.getElementById('generate-btn').addEventListener('click', function() {
-  // Citește numărul de PDF-uri generate până acum din localStorage
-  let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
+    // PDF button
+    document.getElementById('generate-btn').addEventListener('click', function() {
+      const meals=collectMeals();
+      renderShoppingList(meals);
+      const clone=document.getElementById('pdf-content').cloneNode(true);
+      clone.querySelectorAll('input').forEach(input=>{
+        const s=document.createElement('span');
+        s.textContent=input.value; s.className='pdf-span';
+        input.parentNode.replaceChild(s,input);
+      });
+      clone.querySelectorAll('#card-element,form,#payment-status,#generate-btn').forEach(el=>el.remove());
+      html2pdf().set({
+        margin:[10,10,10,10],
+        filename:'meal-planner.pdf',
+        jsPDF:{unit:'mm',format:'a4'}
+      }).from(clone).save();
+    });
 
-  if (pdfCount >= 3) {
-    alert("Ai atins limita maximă de 3 PDF-uri generate de pe acest dispozitiv.\nDacă ai nevoie de mai multe, te rugăm să ne contactezi.");
-    // Dezactivează butonul și schimbă textul
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "Limită atinsă";
-    return; // Nu mai generează PDF-ul
-  }
+    // Stripe
+    const stripe = Stripe("pk_live_51RgnToH2AzHMl4LgCiF0aRsraaZBoDMJT7Kq6sJHEyk0DDLXACeJAI4SDQyYkzlmzhv5Ej903tKICWZOjO44auoy00xIedUhIr");
+    const elements = stripe.elements();
+    const cardElement = elements.create("card");
+    cardElement.mount("#card-element");
 
-  // ---- CODUL TĂU DE GENERARE PDF ----
-  const meals=collectMeals();
-  renderShoppingList(meals);
-  const clone=document.getElementById('pdf-content').cloneNode(true);
-  clone.querySelectorAll('.no-print').forEach(el=>el.remove());
-  clone.querySelectorAll('input').forEach(input=>{
-    const s=document.createElement('span');
-    s.textContent=input.value; s.className='pdf-span';
-    input.parentNode.replaceChild(s,input);
-  });
-  html2pdf().set({
-    margin:[10,10,10,10],
-    filename:'meal-planner.pdf',
-    jsPDF:{unit:'mm',format:'a4'}
-  }).from(clone).save();
+    document.getElementById("payment-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      document.getElementById("payment-status").textContent = i18n[lang]["processing"] || "Se procesează plata...";
 
-  // După generare, crește contorul
-  localStorage.setItem('pdfCount', pdfCount + 1);
+      const res = await fetch("https://hwbzbidorkwtyvirozho.functions.supabase.co/create-payment-intent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: 1000, currency: "ron" })
+      });
+      const data = await res.json();
 
-   // Dacă tocmai ai ajuns la 3, dezactivează și butonul
-  if (pdfCount + 1 >= 3) {
-    let btn = document.getElementById('generate-btn');
-    btn.disabled = true;
-    btn.classList.add('btn-secondary');
-    btn.classList.remove('btn-success');
-    btn.innerHTML = "Limită atinsă";
-  }
-});
+      const result = await stripe.confirmCardPayment(data.clientSecret, {
+        payment_method: {
+          card: cardElement,
+          billing_details: { name: "Clientul Meal Planner" }
+        }
+      });
 
-
-  })();
+      if (result.error) {
+        document.getElementById("payment-status").textContent = "Eroare la plată: " + result.error.message;
+      } else if (result.paymentIntent && result.paymentIntent.status === "succeeded") {
+        document.getElementById("payment-status").textContent = "Plata a fost realizată cu succes!";
+        document.getElementById("generate-btn").style.display = "inline-block";
+      }
+    });
   </script>
 </body>
 </html>
