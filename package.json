@@ -1,0 +1,24 @@
+{
+  "name": "weekly-meal-planner",
+  "version": "1.0.0",
+  "description": "Un mic web-tool static care te ajută să îți planifici mesele pentru o săptămână și să generezi automat lista de cumpărături, totul din browser – fără backend și fără instalare!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BucosAlexandru/weekly-meal-planner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BucosAlexandru/weekly-meal-planner/issues"
+  },
+  "homepage": "https://github.com/BucosAlexandru/weekly-meal-planner#readme",
+  "dependencies": {
+    "stripe": "^18.3.0"
+  }
+}
