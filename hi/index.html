@@ -9,17 +9,17 @@
 
   <!-- hreflang alternate pentru toate limbile -->
   <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-  <link rel="alternate" hreflang="ro"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-  <link rel="alternate" hreflang="en"      href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-  <link rel="alternate" hreflang="es"      href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-  <link rel="alternate" hreflang="fr"      href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-  <link rel="alternate" hreflang="ru"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-  <link rel="alternate" hreflang="zh"      href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-  <link rel="alternate" hreflang="ja"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-  <link rel="alternate" hreflang="pt"      href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-  <link rel="alternate" hreflang="de"      href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-  <link rel="alternate" hreflang="ar"      href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-  <link rel="alternate" hreflang="hi"      href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+  <link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
+  <link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
+  <link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
+  <link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
+  <link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+  <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -39,29 +39,12 @@
   <!-- Bootstrap CSS + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <style>
-    body { background: #f8f9fa; font-family: sans-serif; }
-    .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .planner-row:nth-child(odd) { background: #f1f3f5; }
-    .pdf-span {
-      display: inline-block;
-      width: 100%;
-      padding: .375rem .75rem;
-      border: 1px solid #ced4da;
-      border-radius: .25rem;
-      box-sizing: border-box;
-      white-space: pre-wrap;
-    }
-    .planner-row, .planner-row td, #shopping-list li, .card-body {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-    table { width: 100%; border-collapse: collapse; }
-    thead { display: table-header-group; }
-    tbody { display: table-row-group; }
-  </style>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
@@ -125,104 +108,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    const days = ['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'];
-    const tbody = document.getElementById('plan-table');
-
-    days.forEach((day,i) => {
-      const tr = document.createElement('tr');
-      tr.className = 'planner-row';
-      tr.innerHTML = `
-        <td><strong>${day}</strong></td>
-        <td><input id="d${i+1}l" class="form-control" placeholder="उदा: आलू, प्याज"></td>
-        <td><input id="d${i+1}c" class="form-control" placeholder="उदा: चिकन, चावल"></td>
-      `;
-      tbody.append(tr);
-    });
-
-    function collectMeals() {
-      return days.map((day,i) => ({
-        day,
-        lunch: document.getElementById(`d${i+1}l`).value.trim(),
-        dinner: document.getElementById(`d${i+1}c`).value.trim()
-      }));
-    }
-
-    function renderShoppingList(meals) {
-      const ul = document.getElementById('shopping-list');
-      ul.innerHTML = '';
-      meals.forEach(m => {
-        if (m.lunch || m.dinner) {
-          ul.insertAdjacentHTML('beforeend', `<li class="list-group-item"><strong>${m.day}</strong></li>`);
-          if (m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">दोपहर: ${m.lunch}</li>`);
-          if (m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">रात: ${m.dinner}</li>`);
-        }
-      });
-    }
-
-    // Limita 3 PDF-uri
-    document.getElementById('generate-btn').addEventListener('click', function() {
-      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-
-      if (pdfCount >= 3) {
-        alert("आपने इस डिवाइस से 3 PDF बनाने की सीमा पूरी कर ली है। यदि आपको अधिक आवश्यकता है, कृपया हमसे संपर्क करें।");
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "सीमा पूरी हुई";
-        return;
-      }
-
-      const meals = collectMeals();
-      renderShoppingList(meals);
-
-      const clone = document.getElementById('pdf-content').cloneNode(true);
-      clone.querySelectorAll('.no-print').forEach(el => el.remove());
-      clone.querySelectorAll('input').forEach(input => {
-        const s = document.createElement('span');
-        s.textContent = input.value;
-        s.className = 'pdf-span';
-        input.parentNode.replaceChild(s, input);
-      });
-
-      html2pdf().set({
-        margin: [10,10,10,10],
-        filename: 'meal-planner.pdf',
-        jsPDF: { unit:'mm', format:'a4' }
-      }).from(clone).save();
-
-      localStorage.setItem('pdfCount', pdfCount + 1);
-
-      if (pdfCount + 1 >= 3) {
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "सीमा पूरी हुई";
-      }
-    });
-
-    // Deja atins limita la incarcarea paginii
-    window.addEventListener('DOMContentLoaded', function() {
-      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-      if (pdfCount >= 3) {
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "सीमा पूरी हुई";
-      }
-    });
-
-    // Schimbare limba
-    document.getElementById('lang-switcher').addEventListener('change', e => {
-      const lang = e.target.value;
-      if (lang === 'hi') return;
-      window.location.href = `../${lang}/`;
-    });
-  })();
-  </script>
+  <!-- Application JS -->
+  <script src="/js/app.js"></script>
 </body>
 </html>

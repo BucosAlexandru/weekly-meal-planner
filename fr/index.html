@@ -43,30 +43,8 @@
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
-  <style>
-    body { background: #f8f9fa; font-family: sans-serif; }
-    .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .planner-row:nth-child(odd) { background: #f1f3f5; }
-    .pdf-span {
-      display: inline-block;
-      width: 100%;
-      padding: .375rem .75rem;
-      border: 1px solid #ced4da;
-      border-radius: .25rem;
-      box-sizing: border-box;
-      white-space: pre-wrap;
-    }
-    .planner-row, 
-    .planner-row td, 
-    #shopping-list li, 
-    .card-body {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-    table { width: 100%; border-collapse: collapse; }
-    thead { display: table-header-group; }
-    tbody { display: table-row-group; }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
@@ -130,124 +108,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    // Jours de la semaine en français
-    const days = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
-    const tbody = document.getElementById('plan-table');
-
-    // Génère les lignes du tableau avec placeholders FR
-    days.forEach((day,i) => {
-      const tr = document.createElement('tr');
-      tr.className = 'planner-row';
-      tr.innerHTML = `
-        <td><strong>${day}</strong></td>
-        <td><input id="d${i+1}l" class="form-control" placeholder="ex : pommes de terre, oignon"></td>
-        <td><input id="d${i+1}c" class="form-control" placeholder="ex : poulet, riz"></td>
-      `;
-      tbody.append(tr);
-    });
-
-    // Collecte les valeurs
-    function collectMeals() {
-      return days.map((day,i) => ({
-        day,
-        lunch: document.getElementById(`d${i+1}l`).value.trim(),
-        dinner: document.getElementById(`d${i+1}c`).value.trim()
-      }));
-    }
-
-    // Affiche la liste de courses par jour/repas
-    function renderShoppingList(meals) {
-      const ul = document.getElementById('shopping-list');
-      ul.innerHTML = '';
-      meals.forEach(m => {
-        if (m.lunch || m.dinner) {
-          const dayLi = document.createElement('li');
-          dayLi.className = 'list-group-item';
-          dayLi.innerHTML = `<strong>${m.day}</strong>`;
-          ul.append(dayLi);
-
-          if (m.lunch) {
-            const li = document.createElement('li');
-            li.className = 'list-group-item ps-4';
-            li.textContent = `Déjeuner : ${m.lunch}`;
-            ul.append(li);
-          }
-          if (m.dinner) {
-            const li = document.createElement('li');
-            li.className = 'list-group-item ps-4';
-            li.textContent = `Dîner : ${m.dinner}`;
-            ul.append(li);
-          }
-        }
-      });
-    }
-
-    // Génération PDF - limité à 3
-    document.getElementById('generate-btn').addEventListener('click', function() {
-      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-
-      if (pdfCount >= 3) {
-        alert("Vous avez atteint la limite maximale de 3 PDF générés depuis cet appareil. Si vous avez besoin de plus, veuillez nous contacter.");
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "Limite atteinte";
-        return;
-      }
-
-      const meals = collectMeals();
-      renderShoppingList(meals);
-
-      const clone = document.getElementById('pdf-content').cloneNode(true);
-      clone.querySelectorAll('.no-print').forEach(el => el.remove());
-      clone.querySelectorAll('input').forEach(input => {
-        const s = document.createElement('span');
-        s.textContent = input.value;
-        s.className = 'pdf-span';
-        input.parentNode.replaceChild(s, input);
-      });
-
-      html2pdf().set({
-        margin: [10,10,10,10],
-        filename: 'meal-planner.pdf',
-        jsPDF: { unit:'mm', format:'a4' }
-      }).from(clone).save();
-
-      localStorage.setItem('pdfCount', pdfCount + 1);
-
-      if (pdfCount + 1 >= 3) {
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "Limite atteinte";
-      }
-    });
-
-    // Au chargement, vérifie la limite PDF
-    window.addEventListener('DOMContentLoaded', function() {
-      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-      if (pdfCount >= 3) {
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "Limite atteinte";
-      }
-    });
-
-    // Changement de langue
-    document.getElementById('lang-switcher')
-      .addEventListener('change', e => {
-        const lang = e.target.value;
-        if (lang === 'fr') return;
-        window.location.href = `../${lang}/`;
-      });
-
-  })();
-  </script>
+  <!-- Application JS -->
+  <script src="/js/app.js"></script>
 </body>
 </html>

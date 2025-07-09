@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wöchentlicher Essensplaner</title>
-  <meta name="description" content="Wöchentlicher Essensplaner: Erstellen Sie Ihren Wochenplan, generieren Sie Ihre Einkaufsliste und laden Sie alles als PDF kostenlos und einfach herunter – direkt im Browser.">
+  <meta name="description" content="Wöchentlicher Essensplaner: Erstellen Sie Ihren Wochenplan, generieren Sie Ihre Einkaufsliste und laden Sie alles als PDF kostenlos herunter." />
+
   <link rel="canonical" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
 
   <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
@@ -20,52 +21,34 @@
   <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
   <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Wöchentlicher Essensplaner">
-  <meta property="og:description" content="Planen Sie Ihre Mahlzeiten für die Woche, erstellen Sie Ihre Einkaufsliste und laden Sie einen kostenlosen PDF-Plan herunter.">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wöchentlicher Essensplaner" />
+  <meta property="og:description" content="Planen Sie Ihre Mahlzeiten für die Woche, erstellen Sie Ihre Einkaufsliste und laden Sie Ihren Plan als PDF herunter." />
   <meta property="og:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-  <meta property="og:image" content="https://BucosAlexandru.github.io/weekly-meal-planner/cover.jpg">
+  <meta property="og:image" content="https://BucosAlexandru.github.io/weekly-meal-planner/cover.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Wöchentlicher Essensplaner">
-  <meta name="twitter:description" content="Wochenplan, Einkaufsliste und PDF-Export – alles kostenlos und auf Deutsch!">
-  <meta name="twitter:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/de/">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Wöchentlicher Essensplaner" />
+  <meta name="twitter:description" content="Wochenplan, Einkaufsliste und PDF-Export – alles kostenlos!" />
+  <meta name="twitter:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
 
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <!-- Bootstrap CSS + Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-
-  <style>
-    body { background: #f8f9fa; font-family: sans-serif; }
-    .card { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .planner-row:nth-child(odd) { background: #f1f3f5; }
-    .pdf-span {
-      display: inline-block;
-      width: 100%;
-      padding: .375rem .75rem;
-      border: 1px solid #ced4da;
-      border-radius: .25rem;
-      box-sizing: border-box;
-      white-space: pre-wrap;
-    }
-    .planner-row, .planner-row td, #shopping-list li, .card-body {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-    table { width: 100%; border-collapse: collapse; }
-    thead { display: table-header-group; }
-    tbody { display: table-row-group; }
-  </style>
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-
-    <!-- Sprachumschalter -->
     <div class="text-end mb-3 no-print">
       <select id="lang-switcher" class="form-select w-auto">
         <option value="ro">Română</option>
@@ -82,22 +65,20 @@
       </select>
     </div>
 
-    <!-- Kopfzeile -->
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0">Essensplaner &amp; Einkaufsliste</h2>
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0" data-i18n="header">Essensplaner & Einkaufsliste</h2>
       </div>
     </div>
 
-    <!-- Planungstabelle -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
           <thead>
             <tr>
-              <th>Wochentag</th>
-              <th>Mittagessen (Zutaten)</th>
-              <th>Abendessen (Zutaten)</th>
+              <th data-i18n="col.day">Wochentag</th>
+              <th data-i18n="col.lunch">Mittagessen (Zutaten)</th>
+              <th data-i18n="col.dinner">Abendessen (Zutaten)</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -105,129 +86,30 @@
       </div>
     </div>
 
-    <!-- Einkaufsliste -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5>Einkaufsliste</h5>
+        <h5 data-i18n="shoppingList">Einkaufsliste</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- Buttons -->
-    <div class="text-center mb-4 no-print">
+    <div class="text-center mb-4 no-print btn-bar">
       <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i> PDF erstellen
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">PDF erstellen</span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-        <i class="bi bi-cart-check-fill"></i> Bezahlen &amp; Herunterladen
-      </a>
+
+      <stripe-buy-button
+        id="stripe-buy-btn"
+        buy-button-id="buy_btn_1RisYyH2AzHMl4LgLfu5ZYSD"
+        publishable-key="pk_live_51RgnToH2AzHMl4LgCiF0aRsraaZBoDMJT7Kq6sJHEyk0DDLXACeJAI4SDQyYkzlmzhv5Ej903tKICWZOjO44auoy00xIedUhIr"
+        style="display:none"
+      ></stripe-buy-button>
+
+      <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
 
-  <script>
-  (function(){
-    // Wochentage auf Deutsch
-    const days = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'];
-    const tbody = document.getElementById('plan-table');
-
-    // Tabelle mit Inputs erzeugen
-    days.forEach((day, i) => {
-      const tr = document.createElement('tr');
-      tr.className = 'planner-row';
-      tr.innerHTML = `
-        <td><strong>${day}</strong></td>
-        <td><input id="d${i+1}l" class="form-control" placeholder="z.B.: Kartoffeln, Zwiebeln"></td>
-        <td><input id="d${i+1}c" class="form-control" placeholder="z.B.: Hähnchen, Reis"></td>
-      `;
-      tbody.append(tr);
-    });
-
-    // Daten sammeln
-    function collectMeals() {
-      return days.map((day, i) => ({
-        day,
-        lunch: document.getElementById(`d${i+1}l`).value.trim(),
-        dinner: document.getElementById(`d${i+1}c`).value.trim()
-      }));
-    }
-
-    // Einkaufsliste rendern
-    function renderShoppingList(meals) {
-      const ul = document.getElementById('shopping-list');
-      ul.innerHTML = '';
-      meals.forEach(m => {
-        if (m.lunch || m.dinner) {
-          ul.insertAdjacentHTML('beforeend', `<li class="list-group-item"><strong>${m.day}</strong></li>`);
-          if (m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">Mittagessen: ${m.lunch}</li>`);
-          if (m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">Abendessen: ${m.dinner}</li>`);
-        }
-      });
-    }
-
-    // PDF generieren (limitiert auf 3)
-    document.getElementById('generate-btn').addEventListener('click', function() {
-      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-
-      if (pdfCount >= 3) {
-        alert("Du hast das Maximum von 3 PDF-Downloads für dieses Gerät erreicht.\nWenn du mehr benötigst, kontaktiere uns bitte.");
-        // Button deaktivieren und Text ändern
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "Limit erreicht";
-        return;
-      }
-
-      const meals = collectMeals();
-      renderShoppingList(meals);
-
-      const clone = document.getElementById('pdf-content').cloneNode(true);
-      clone.querySelectorAll('.no-print').forEach(el => el.remove());
-      clone.querySelectorAll('input').forEach(input => {
-        const span = document.createElement('span');
-        span.textContent = input.value;
-        span.className = 'pdf-span';
-        input.parentNode.replaceChild(span, input);
-      });
-
-      html2pdf().set({
-        margin: [10,10,10,10],
-        filename: 'meal-planner.pdf',
-        jsPDF: { unit: 'mm', format: 'a4' }
-      }).from(clone).save();
-
-      localStorage.setItem('pdfCount', pdfCount + 1);
-
-      // Direkt nach dem 3. Mal blockieren
-      if (pdfCount + 1 >= 3) {
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "Limit erreicht";
-      }
-    });
-
-    // Beim Laden der Seite prüfen, ob Button gesperrt werden muss
-    window.addEventListener('DOMContentLoaded', function() {
-      let pdfCount = parseInt(localStorage.getItem('pdfCount') || '0', 10);
-      if (pdfCount >= 3) {
-        let btn = document.getElementById('generate-btn');
-        btn.disabled = true;
-        btn.classList.add('btn-secondary');
-        btn.classList.remove('btn-success');
-        btn.innerHTML = "Limit erreicht";
-      }
-    });
-
-    // Sprachwechsel → Redirect
-    document.getElementById('lang-switcher').addEventListener('change', e => {
-      const lang = e.target.value;
-      if (lang === 'de') return;
-      window.location.href = `../${lang}/`;
-    });
-  })();
-  </script>
+  <script src="/js/app.js"></script>
 </body>
 </html>

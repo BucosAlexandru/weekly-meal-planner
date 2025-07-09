@@ -1,62 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ─── 0) Ascunde butonul de PDF la încărcare ───
   const generateBtn = document.getElementById('generate-btn');
-  const buyBtn      = document.getElementById('stripe-buy-btn');
-  const statusEl    = document.getElementById('payment-status');
+  if (generateBtn) generateBtn.style.display = 'none';
 
-  // date & count pentru reset zilnic
-  function getUsage() {
-    const raw = localStorage.getItem('mealPlannerUsage');
-    if (!raw) return { date: '', count: 0, paid: false };
-    return JSON.parse(raw);
-  }
-  function saveUsage(u) {
-    localStorage.setItem('mealPlannerUsage', JSON.stringify(u));
-  }
-
-  // reset dacă e nouă zi
-  let usage = getUsage();
-  const today = new Date().toISOString().slice(0,10);
-  if (usage.date !== today) {
-    usage = { date: today, count: 0, paid: usage.paid };
-    saveUsage(usage);
-  }
-
-  // detectează redirect Stripe cu success=true
+  // ─── 1) Reset după Stripe Checkout success ───
   const params = new URLSearchParams(window.location.search);
   if (params.get('success') === 'true') {
-    usage.paid = true;
-    saveUsage(usage);
-    statusEl.innerHTML = '✅ Plata a fost realizată cu succes! Poți genera PDF nelimitat acum.';
-    window.history.replaceState({}, '', window.location.origin + window.location.pathname);
+    // resetează contorul de PDF-uri
+    localStorage.setItem('pdfCount', '0');
+    // mesaj de confirmare
+    const status = document.getElementById('payment-status');
+    if (status) {
+      status.innerHTML = '✅ Plata a fost realizată cu succes! Poți genera PDF nelimitat acum.';
+    }
+    // afișează butonul de PDF
+    if (generateBtn) generateBtn.style.display = 'inline-block';
+    // curăță flag-ul din URL
+    window.history.replaceState({}, '', window.location.pathname);
   }
 
-  // i18n dictionary (exemplu pentru RO/EN; extinde după nevoie)
+  // ─── 2) i18n dictionary ───
   const i18n = {
     ro: {
-      weekdays:   ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
-      title:      "Planificator Mese Săptămânal",
-      header:     "Planificator Mese & Lista de Cumpărături",
-      "col.day":  "Ziua",
-      "col.lunch":"Prânz (ingrediente)",
-      "col.dinner":"Cină (ingrediente)",
-      shoppingList:"Lista de cumpărături",
-      "btn.generate":"Generează PDF",
-      maxed:      "Ai atins limita de 3 PDF-uri gratuite pe zi.<br>Abonează-te pentru nelimitat!",
-      placeholderL:"ex: cartofi, ceapă",
-      placeholderD:"ex: pui, orez"
+      weekdays: ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
+      title: "Planificator Mese Săptămânal",
+      header: "Planificator Mese & Lista de Cumpărături",
+      "col.day": "Ziua",
+      "col.lunch": "Prânz (ingrediente)",
+      "col.dinner": "Cină (ingrediente)",
+      shoppingList: "Lista de cumpărături",
+      "btn.generate": "Generează PDF",
+      processing: "Se procesează plata...",
+      maxed: "Ai atins limita maximă de PDF-uri gratuite.<br>Plătește pentru a debloca descărcarea nelimitată!",
+      placeholderL: "ex: cartofi, ceapă",
+      placeholderD: "ex: pui, orez"
     },
     en: {
-      weekdays:   ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-      title:      "Weekly Meal Planner",
-      header:     "Weekly Meal Planner & Shopping List",
-      "col.day":  "Day",
-      "col.lunch":"Lunch (ingredients)",
-      "col.dinner":"Dinner (ingredients)",
-      shoppingList:"Shopping List",
-      "btn.generate":"Generate PDF",
-      maxed:      "You’ve reached 3 free PDFs today.<br>Subscribe for unlimited!",
-      placeholderL:"e.g. potatoes, onion",
-      placeholderD:"e.g. chicken, rice"
+      weekdays: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+      title: "Weekly Meal Planner",
+      header: "Weekly Meal Planner & Shopping List",
+      "col.day": "Day",
+      "col.lunch": "Lunch (ingredients)",
+      "col.dinner": "Dinner (ingredients)",
+      shoppingList: "Shopping List",
+      "btn.generate": "Generate PDF",
+      processing: "Processing payment...",
+      maxed: "You have reached the maximum number of free PDFs.<br>Pay to unlock unlimited downloads!",
+      placeholderL: "e.g. potatoes, onion",
+      placeholderD: "e.g. chicken, rice"
     },
       es: {
         weekdays:   ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
@@ -177,34 +168,41 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   };
 
-  // populează selectorul de limbi
+ 
+  // ─── 3) Populate language switcher ───
+  const langNames = {
+    ro: "Română", en: "English", es: "Español", fr: "Français",
+    ru: "Русский", zh: "中文", ja: "日本語", pt: "Português",
+    de: "Deutsch", ar: "العربية", hi: "हिन्दी"
+  };
   const langSwitcher = document.getElementById('lang-switcher');
   Object.keys(i18n).forEach(code => {
     const opt = document.createElement('option');
     opt.value = code;
-    opt.textContent = code.toUpperCase();
+    opt.textContent = langNames[code];
     langSwitcher.append(opt);
   });
 
-  // inițializează limba
+  // ─── 4) Initialize language ───
   let lang = navigator.language.slice(0,2);
   if (!i18n[lang]) lang = 'ro';
-  langSwitcher.value = lang;
 
+  // ─── 5) Render table ───
   function renderTable() {
     const tbody = document.getElementById('plan-table');
     tbody.innerHTML = '';
-    i18n[lang].weekdays.forEach((day, i) => {
+    i18n[lang].weekdays.forEach((day, idx) => {
       tbody.insertAdjacentHTML('beforeend', `
         <tr class="planner-row">
           <td><strong>${day}</strong></td>
-          <td><input id="d${i+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}"></td>
-          <td><input id="d${i+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}"></td>
+          <td><input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}"></td>
+          <td><input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}"></td>
         </tr>
       `);
     });
   }
 
+  // ─── 6) Apply translations ───
   function applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -213,17 +211,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.title = i18n[lang].title;
     renderTable();
   }
+  langSwitcher.value = lang;
   applyTranslations();
-  langSwitcher.addEventListener('change', () => {
-    lang = langSwitcher.value;
+  langSwitcher.addEventListener('change', e => {
+    lang = e.target.value;
     applyTranslations();
-    updateButtons();
+    updateButtonState();
   });
 
+  // ─── 7) Meal collection & shopping list ───
   function collectMeals() {
     return i18n[lang].weekdays.map((_, i) => ({
-      day:    document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`).textContent,
-      lunch:  document.getElementById(`d${i+1}l`).value.trim(),
+      day: document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`).textContent,
+      lunch: document.getElementById(`d${i+1}l`).value.trim(),
       dinner: document.getElementById(`d${i+1}c`).value.trim()
     }));
   }
@@ -233,61 +233,58 @@ document.addEventListener('DOMContentLoaded', () => {
     meals.forEach(m => {
       if (m.lunch || m.dinner) {
         ul.insertAdjacentHTML('beforeend', `<li class="list-group-item"><strong>${m.day}</strong></li>`);
-        if (m.lunch)  ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">${m.lunch}</li>`);
-        if (m.dinner) ul.insertAdjacentHTML('beforeend', `<li class="list-group-item ps-4">${m.dinner}</li>`);
+        if (m.lunch)
+          ul.insertAdjacentHTML('beforeend',
+            `<li class="list-group-item ps-4">${i18n[lang]["col.lunch"]}: ${m.lunch}</li>`
+          );
+        if (m.dinner)
+          ul.insertAdjacentHTML('beforeend',
+            `<li class="list-group-item ps-4">${i18n[lang]["col.dinner"]}: ${m.dinner}</li>`
+          );
       }
     });
   }
 
-  // updatează apariția butoanelor
-  function updateButtons() {
-    // dacă ai plătit: buton PDF mereu, fără subscribe
-    if (usage.paid) {
+  // ─── 8) PDF & Stripe Buy Button logic ───
+  let pdfCount = +localStorage.getItem('pdfCount') || 0;
+  const buyBtn = document.getElementById('stripe-buy-btn');
+  const statusEl = document.getElementById('payment-status');
+
+  function updateButtonState() {
+    if (pdfCount < 3) {
       generateBtn.style.display = 'inline-block';
-      buyBtn.style.display      = 'none';
-      statusEl.innerHTML        = '';
-      return;
-    }
-    // altfel: 3 gratuite/zi
-    if (usage.count < 3) {
-      generateBtn.style.display = 'inline-block';
-      buyBtn.style.display      = 'none';
-      statusEl.innerHTML        = '';
+      buyBtn.style.display = 'none';
+      statusEl.innerHTML = '';
     } else {
       generateBtn.style.display = 'none';
-      buyBtn.style.display      = 'inline-block';
-      statusEl.innerHTML        = i18n[lang].maxed;
+      buyBtn.style.display = 'inline-block';
+      statusEl.innerHTML = i18n[lang].maxed;
     }
   }
-  updateButtons();
+  updateButtonState();
 
-  // click Generează PDF
   generateBtn.addEventListener('click', () => {
     const meals = collectMeals();
     renderShoppingList(meals);
 
-    // clonăm conținutul pentru html2pdf
     const clone = document.getElementById('pdf-content').cloneNode(true);
     clone.querySelectorAll('input').forEach(inp => {
       const span = document.createElement('span');
-      span.className   = 'pdf-span';
+      span.className = 'pdf-span';
       span.textContent = inp.value;
       inp.replaceWith(span);
     });
-    clone.querySelectorAll('stripe-payment-link,#generate-btn,#payment-status')
-         .forEach(el => el.remove());
+    clone.querySelectorAll('stripe-buy-button,#generate-btn,#payment-status')
+      .forEach(el => el.remove());
 
     html2pdf().set({
-      margin:   [10,10,10,10],
+      margin: [10,10,10,10],
       filename: 'meal-planner.pdf',
-      jsPDF:    { unit:'mm', format:'a4' }
+      jsPDF: { unit:'mm', format:'a4' }
     }).from(clone).save();
 
-    // increment count dacă nu e deja plătit
-    if (!usage.paid) {
-      usage.count++;
-      saveUsage(usage);
-      updateButtons();
-    }
+    pdfCount++;
+    localStorage.setItem('pdfCount', pdfCount);
+    updateButtonState();
   });
 });
