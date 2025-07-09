@@ -61,10 +61,13 @@
 
     <!-- Bara butoane + mesaj status, centrate unul sub celălalt -->
     <div class="btn-bar mb-3 no-print">
+      <!-- buton Generează PDF (este ascuns până după plată) -->
       <button class="btn btn-success" id="generate-btn">
         <i class="bi bi-file-earmark-pdf"></i>
         <span data-i18n="btn.generate"></span>
       </button>
+
+      <!-- Stripe Buy Button (vizibil doar după atingerea limitei) -->
       <stripe-buy-button
         id="stripe-buy-btn"
         buy-button-id="buy_btn_1RisYyH2AzHMl4LgLfu5ZYSD"
@@ -72,7 +75,7 @@
         style="display:none"
       ></stripe-buy-button>
 
-      <!-- mut mesajul aici, fără text-end -->
+      <!-- mesaj de status după plată -->
       <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
