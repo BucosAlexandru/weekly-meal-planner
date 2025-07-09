@@ -1,0 +1,38 @@
+/* css/styles.css */
+
+body {
+  background: #f8f9fa;
+  font-family: sans-serif;
+}
+.card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.planner-row:nth-child(odd) {
+  background: #f1f3f5;
+}
+.pdf-span {
+  display: inline-block;
+  width: 100%;
+  padding: .375rem .75rem;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+.btn-bar {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .btn-bar {
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: flex-start;
+  }
+}
+.no-print { }
+@media print {
+  .no-print { display: none !important; }
+}

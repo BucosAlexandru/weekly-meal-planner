@@ -1,15 +1,18 @@
-# Ignoră baza de date cu token-uri
-tokens.db
-
-# Ignoră modulele Node.js
+# Node dependencies
 node_modules/
 
-# Ignoră fișierele de configurare și loguri
+# Environment
 .env
-*.log
-
-# MacOS file
-.DS_Store
-
 .env.local
-supabase/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
