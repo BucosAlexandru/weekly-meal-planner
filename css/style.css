@@ -1,5 +1,10 @@
 /* css/styles.css */
 
+/* ascunde butonul implicit până după plată */
+#generate-btn {
+  display: none;
+}
+
 body {
   background: #f8f9fa;
   font-family: sans-serif;
