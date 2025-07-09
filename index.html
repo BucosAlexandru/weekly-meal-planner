@@ -18,8 +18,8 @@
   <!-- html2pdf -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
-  <!-- Stripe Buy Button -->
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <!-- Stripe Payment Links embed -->
+  <script async src="https://js.stripe.com/v3/payment-links.js"></script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
@@ -61,19 +61,18 @@
 
     <!-- Bara butoane + mesaj status, centrate unul sub celălalt -->
     <div class="btn-bar mb-3 no-print">
-      <!-- buton Generează PDF (este ascuns până după plată) -->
+      <!-- buton Generează PDF (ascuns până după plată) -->
       <button class="btn btn-success" id="generate-btn">
         <i class="bi bi-file-earmark-pdf"></i>
         <span data-i18n="btn.generate"></span>
       </button>
 
-      <!-- Stripe Buy Button (vizibil doar după atingerea limitei) -->
-      <stripe-buy-button
+      <!-- Stripe Payment Link embed -->
+      <stripe-payment-link
         id="stripe-buy-btn"
-        buy-button-id="buy_btn_1RisYyH2AzHMl4LgLfu5ZYSD"
-        publishable-key="pk_live_51RgnToH2AzHMl4LgCiF0aRsraaZBoDMJT7Kq6sJHEyk0DDLXACeJAI4SDQyYkzlmzhv5Ej903tKICWZOjO44auoy00xIedUhIr"
-        style="display:none"
-      ></stripe-buy-button>
+        payment-link-url="https://buy.stripe.com/28EaEXeDj3f444nb7U3Ru05"
+        style="display:none;"
+      ></stripe-payment-link>
 
       <!-- mesaj de status după plată -->
       <div id="payment-status" class="mt-2"></div>
