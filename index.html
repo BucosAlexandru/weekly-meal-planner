@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Planificator mese săptămânal gratuit – meal-planner.ro</title>
-  <meta name="description"
-        content="Creează rapid planul tău de mese săptămânal. Generează PDF, listă de cumpărături și folosește aplicația în orice limbă. Gratuit, online, rapid!">
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planificator mese săptămânal – meal-planner.ro</title>
+  <meta
+    name="description"
+    content="Planifică-ți mesele săptămânal, generează PDF și liste de cumpărături. 3 PDF-uri gratuite/zi, nelimitat după plată."
+  />
+  <link rel="icon" href="/favicon.png" />
 
   <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- html2pdf -->
+  <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
-  <!-- Stripe Payment Links embed -->
+  <!-- Stripe Payment Links JS -->
   <script async src="https://js.stripe.com/v3/payment-links.js"></script>
 </head>
 <body>
@@ -59,23 +67,24 @@
       </div>
     </div>
 
-    <!-- Bara butoane + mesaj status, centrate unul sub celălalt -->
+    <!-- Bara butoane + mesaj status -->
     <div class="btn-bar mb-3 no-print">
-      <!-- buton Generează PDF (ascuns până după plată) -->
+      <!-- 3 PDF-uri gratuite/zi -->
       <button class="btn btn-success" id="generate-btn">
         <i class="bi bi-file-earmark-pdf"></i>
         <span data-i18n="btn.generate"></span>
       </button>
 
-      <!-- Stripe Payment Link embed -->
+      <!-- Subscribe după 3 PDF-uri -->
       <stripe-payment-link
         id="stripe-buy-btn"
-        payment-link-url="https://buy.stripe.com/28EaEXeDj3f444nb7U3Ru05"
-        style="display:none;"
+        payment-link-id="28EaEXeDj3f444nb7U3Ru05"
+        publishable-key="pk_live_51RgnToH2AzHMl4LgCiF0aRsraaZBoDMJT7Kq6sJHEyk0DDLXACeJAI4SDQyYkzlmzhv5Ej903tKICWZOjO44auoy00xIedUhIr"
+        style="display:none"
       ></stripe-payment-link>
 
-      <!-- mesaj de status după plată -->
-      <div id="payment-status" class="mt-2"></div>
+      <!-- Mesaj de status -->
+      <div id="payment-status" class="mt-2 text-center"></div>
     </div>
   </div>
 

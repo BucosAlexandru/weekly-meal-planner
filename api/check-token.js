@@ -1,13 +1,26 @@
 // api/check-token.js
-const Database = require('better-sqlite3');
-module.exports = (req, res) => {
-  const { token } = req.query;
-  const db = new Database('tokens.db');
-  const row = db.prepare('SELECT * FROM tokens WHERE token=?').get(token);
+const { createClient } = require('@supabase/supabase-js');
 
-  if (row && row.expires_at > Date.now()) {
-    res.status(200).json({ valid: true });
-  } else {
-    res.status(200).json({ valid: false });
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+);
+
+module.exports = async (req, res) => {
+  const token = req.query.token;
+  if (!token) {
+    return res.status(400).json({ valid: false, error: 'Token missing' });
   }
+
+  const { data, error } = await supabase
+    .from('tokens')
+    .select('expires_at')
+    .eq('token', token)
+    .single();
+
+  if (error || !data) {
+    return res.json({ valid: false });
+  }
+  const valid = data.expires_at * 1000 >= Date.now();
+  res.json({ valid });
 };
