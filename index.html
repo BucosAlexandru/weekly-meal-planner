@@ -59,22 +59,22 @@
       </div>
     </div>
 
-    <!-- Bara butoane -->
+    <!-- Bara butoane + mesaj status, centrate unul sub celălalt -->
     <div class="btn-bar mb-3 no-print">
       <button class="btn btn-success" id="generate-btn">
         <i class="bi bi-file-earmark-pdf"></i>
         <span data-i18n="btn.generate"></span>
       </button>
-
       <stripe-buy-button
         id="stripe-buy-btn"
         buy-button-id="buy_btn_1RisYyH2AzHMl4LgLfu5ZYSD"
         publishable-key="pk_live_51RgnToH2AzHMl4LgCiF0aRsraaZBoDMJT7Kq6sJHEyk0DDLXACeJAI4SDQyYkzlmzhv5Ej903tKICWZOjO44auoy00xIedUhIr"
         style="display:none"
       ></stripe-buy-button>
-    </div>
 
-    <div id="payment-status" class="mt-2 text-end no-print"></div>
+      <!-- mut mesajul aici, fără text-end -->
+      <div id="payment-status" class="mt-2"></div>
+    </div>
   </div>
 
   <!-- Application JS -->

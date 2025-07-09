@@ -9,12 +9,15 @@ body {
   background: #f8f9fa;
   font-family: sans-serif;
 }
+
 .card {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 .planner-row:nth-child(odd) {
   background: #f1f3f5;
 }
+
 .pdf-span {
   display: inline-block;
   width: 100%;
@@ -24,19 +27,35 @@ body {
   box-sizing: border-box;
   white-space: pre-wrap;
 }
+
+/* ─── buton + mesaj centrate ─── */
 .btn-bar {
   display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;    /* buton + mesaj pe verticală */
+  align-items: center;       /* centru orizontal */
+  gap: 0.5rem;               /* spaţiu între elemente */
+  margin-bottom: 1rem;
 }
+
+/* dacă vrei ca butonul să aibă o lăţime fixă sau 100%, ajustează aici */
+.btn-bar button,
+.btn-bar stripe-buy-button {
+  width: auto;               /* sau 100% pentru full-width */
+}
+
+#payment-status {
+  text-align: center;
+  color: #333;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 576px) {
   .btn-bar {
-    flex-direction: column;
-    gap: .5rem;
-    justify-content: flex-start;
+    /* deja pe verticală, doar ajustează gap dacă vrei */
+    gap: .75rem;
   }
 }
+
 .no-print { }
 @media print {
   .no-print { display: none !important; }
