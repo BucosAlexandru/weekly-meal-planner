@@ -8,6 +8,12 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SER
 export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
+  // *** AICI SE FACE VERIFICAREA METODEI ***
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).send('Method Not Allowed');
+  }
+
   const sig = req.headers['stripe-signature'];
   const buf = await buffer(req);
   let event;
@@ -23,9 +29,12 @@ export default async function handler(req, res) {
     const email = session.customer_email;
     const expiresAt = Date.now() + 30*24*60*60*1000; // 30 zile
 
-    await supabase
-      .from('tokens')
-      .upsert([{ email, token: generateToken(), expires_at: expiresAt }]);
+    // Dacă nu ai email, nu face nimic (Stripe poate trimite null dacă nu e setat)
+    if (email) {
+      await supabase
+        .from('tokens')
+        .upsert([{ email, token: generateToken(), expires_at: expiresAt }]);
+    }
   }
 
   res.status(200).json({ received: true });
