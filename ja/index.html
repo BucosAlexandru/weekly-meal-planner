@@ -49,29 +49,27 @@
 <body>
   <div class="container py-5" id="pdf-content">
 
-    <!-- 言語切替 -->
+    <!-- 言語切替 (Language Switcher) -->
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-        
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
-    <!-- ヘッダー -->
+    <!-- ヘッダー (Header) -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0">週間ミールプランナー &amp; 買い物リスト</h2>
+        <h2 class="mb-0" data-i18n="main.title">週間ミールプランナー &amp; 買い物リスト</h2>
       </div>
     </div>
 
-    <!-- プランニングテーブル -->
+    <!-- プランニングテーブル (Planner Table) -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
           <thead>
             <tr>
-              <th>曜日</th>
-              <th>昼食（材料）</th>
-              <th>夕食（材料）</th>
+              <th data-i18n="main.day">曜日</th>
+              <th data-i18n="main.lunch">昼食（材料）</th>
+              <th data-i18n="main.dinner">夕食（材料）</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -79,22 +77,28 @@
       </div>
     </div>
 
-    <!-- 買い物リスト -->
+    <!-- 買い物リスト (Shopping List) -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5>買い物リスト</h5>
+        <h5 data-i18n="main.shopping">買い物リスト</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- ボタン -->
-    <div class="text-center mb-4 no-print">
+    <!-- ボタン (Buttons) -->
+    <div class="text-center mb-4 no-print btn-bar">
       <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i> PDFを生成
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">PDFを生成</span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-        <i class="bi bi-cart-check-fill"></i> 支払ってダウンロード
+      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">支払ってダウンロード</span>
       </a>
+      <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
 

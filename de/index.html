@@ -45,14 +45,11 @@
 
   <link rel="stylesheet" href="/css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-       
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
     <div class="card mb-4 text-center">
@@ -88,14 +85,13 @@
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">PDF erstellen</span>
       </button>
-
-      <stripe-buy-button
-        id="stripe-buy-btn"
-        buy-button-id="buy_btn_1RisYyH2AzHMl4LgLfu5ZYSD"
-        publishable-key="pk_live_51RgnToH2AzHMl4LgCiF0aRsraaZBoDMJT7Kq6sJHEyk0DDLXACeJAI4SDQyYkzlmzhv5Ej903tKICWZOjO44auoy00xIedUhIr"
-        style="display:none"
-      ></stripe-buy-button>
-
+      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Bezahlen & Herunterladen</span>
+      </a>
       <div id="payment-status" class="mt-2"></div>
     </div>
   </div>

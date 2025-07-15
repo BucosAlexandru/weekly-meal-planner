@@ -51,16 +51,14 @@
 
     <!-- 语言切换 -->
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-        
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
-    <!-- Header -->
+    <!-- 标题 -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0">用餐计划器 &amp; 购物清单</h2>
-      </code></div>
+        <h2 class="mb-0" data-i18n="main.title">用餐计划器 &amp; 购物清单</h2>
+      </div>
     </div>
 
     <!-- 计划表格 -->
@@ -69,9 +67,9 @@
         <table class="table mb-0">
           <thead>
             <tr>
-              <th>日期</th>
-              <th>午餐（食材）</th>
-              <th>晚餐（食材）</th>
+              <th data-i18n="main.day">日期</th>
+              <th data-i18n="main.lunch">午餐（食材）</th>
+              <th data-i18n="main.dinner">晚餐（食材）</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -82,19 +80,25 @@
     <!-- 购物清单 -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5>购物清单</h5>
+        <h5 data-i18n="main.shopping">购物清单</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
     <!-- 按钮 -->
-    <div class="text-center mb-4 no-print">
+    <div class="text-center mb-4 no-print btn-bar">
       <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i> 生成 PDF
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">生成 PDF</span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-        <i class="bi bi-cart-check-fill"></i> 支付并下载
+      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">支付并下载</span>
       </a>
+      <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
 

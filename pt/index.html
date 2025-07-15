@@ -49,28 +49,27 @@
 <body>
   <div class="container py-5" id="pdf-content">
 
-    <!-- Language switcher (no-print) -->
+    <!-- Troca de idioma -->
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
-    <!-- Header -->
+    <!-- Cabeçalho -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0">Planejador Semanal de Refeições &amp; Lista de Compras</h2>
+        <h2 class="mb-0" data-i18n="main.title">Planejador Semanal de Refeições &amp; Lista de Compras</h2>
       </div>
     </div>
 
-    <!-- Planner table -->
+    <!-- Tabela do planejador -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
           <thead>
             <tr>
-              <th>Dia</th>
-              <th>Almoço (ingredientes)</th>
-              <th>Jantar (ingredientes)</th>
+              <th data-i18n="main.day">Dia</th>
+              <th data-i18n="main.lunch">Almoço (ingredientes)</th>
+              <th data-i18n="main.dinner">Jantar (ingredientes)</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -78,22 +77,28 @@
       </div>
     </div>
 
-    <!-- Shopping list -->
+    <!-- Lista de compras -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5>Lista de Compras</h5>
+        <h5 data-i18n="main.shopping">Lista de Compras</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- Buttons -->
-    <div class="text-center mb-4 no-print">
+    <!-- Botões -->
+    <div class="text-center mb-4 no-print btn-bar">
       <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i> Gerar PDF
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">Gerar PDF</span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-        <i class="bi bi-cart-check-fill"></i> Pagar &amp; Baixar
+      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Pagar &amp; Baixar</span>
       </a>
+      <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
 

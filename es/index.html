@@ -37,14 +37,8 @@
   <link rel="icon" type="image/png" href="/favicon.png">
 
   <!-- Bootstrap CSS + Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
-  >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
@@ -56,15 +50,13 @@
   <div class="container py-5" id="pdf-content">
     <!-- Language switcher (no-print) -->
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-        
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
     <!-- Header -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0">Planificador de comidas semanal &amp; lista de la compra</h2>
+        <h2 class="mb-0" data-i18n="main.title">Planificador de comidas semanal &amp; lista de la compra</h2>
       </div>
     </div>
 
@@ -74,9 +66,9 @@
         <table class="table mb-0">
           <thead>
             <tr>
-              <th>Día</th>
-              <th>Almuerzo (ingredientes)</th>
-              <th>Cena (ingredientes)</th>
+              <th data-i18n="main.day">Día</th>
+              <th data-i18n="main.lunch">Almuerzo (ingredientes)</th>
+              <th data-i18n="main.dinner">Cena (ingredientes)</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -87,21 +79,27 @@
     <!-- Shopping list -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5>Lista de la compra</h5>
+        <h5 data-i18n="main.shopping">Lista de la compra</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- Buttons -->
-    <div class="text-center mb-4 no-print">
-      <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i> Generar PDF
-      </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00" target="_blank" class="btn btn-warning" id="pay-btn">
-        <i class="bi bi-cart-check-fill"></i> Pagar y descargar
-      </a>
-    </div>
-  </div>
+    <!-- Buttons (consistent bar) -->
+  <div class="text-center mb-4 no-print btn-bar">
+  <button id="generate-btn" class="btn btn-success me-2">
+    <i class="bi bi-file-earmark-pdf-fill"></i>
+    <span data-i18n="btn.generate">Generar PDF</span>
+  </button>
+  <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+     target="_blank"
+     class="btn btn-warning"
+     id="pay-btn">
+    <i class="bi bi-cart-check-fill"></i>
+    <span data-i18n="btn.pay">Pagar y descargar</span>
+  </a>
+  <div id="payment-status" class="mt-2"></div>
+</div>
+
 
   <!-- External JS -->
   <script src="/js/app.js"></script>

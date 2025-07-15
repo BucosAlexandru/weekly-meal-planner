@@ -51,15 +51,13 @@
 
     <!-- selector limbă -->
     <div class="text-end mb-3 no-print">
-      <select id="lang-switcher" class="form-select w-auto">
-        
-      </select>
+      <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
     <!-- antet -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0" data-i18n="header">Planificator Mese &amp; Lista de Cumpărături</h2>
+        <h2 class="mb-0" data-i18n="main.title">Planificator Mese &amp; Lista de Cumpărături</h2>
       </div>
     </div>
 
@@ -69,9 +67,9 @@
         <table class="table mb-0">
           <thead>
             <tr>
-              <th data-i18n="col.day">Ziua</th>
-              <th data-i18n="col.lunch">Prânz (ingrediente)</th>
-              <th data-i18n="col.dinner">Cină (ingrediente)</th>
+              <th data-i18n="main.day">Ziua</th>
+              <th data-i18n="main.lunch">Prânz (ingrediente)</th>
+              <th data-i18n="main.dinner">Cină (ingrediente)</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -82,24 +80,25 @@
     <!-- lista de cumpărături -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">Lista de cumpărături</h5>
+        <h5 data-i18n="main.shopping">Lista de cumpărături</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
     <!-- butoane -->
-    <div class="text-center mb-4 no-print">
+    <div class="text-center mb-4 no-print btn-bar">
       <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">Generează PDF</span>
       </button>
-      <a href="https://buy.stripe.com/test_14AeVf2M29OaeHQdbJejK00"
+      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
          target="_blank"
          class="btn btn-warning"
          id="pay-btn">
         <i class="bi bi-cart-check-fill"></i>
         <span data-i18n="btn.pay">Plătește &amp; Descarcă</span>
       </a>
+      <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
 
