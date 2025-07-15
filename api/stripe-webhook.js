@@ -9,10 +9,10 @@ export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
   // *** AICI SE FACE VERIFICAREA METODEI ***
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).send('Method Not Allowed');
-  }
+  if (req.method !== 'POST') {         // Doar dacă NU e POST, trimite 405!
+  res.setHeader('Allow', 'POST');
+  return res.status(405).send('Method Not Allowed');
+}
 
   const sig = req.headers['stripe-signature'];
   const buf = await buffer(req);
