@@ -3,37 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>مخطط وجبات أسبوعي مجاني</title>
+  <title data-i18n="title">مخطط وجبات أسبوعي مجاني</title>
   <meta name="description" content="أنشئ خطة وجبات للأسبوع، احصل على قائمة التسوق وحمّلها PDF مجاناً، كل ذلك عبر الإنترنت وبالعربية." />
+  <link rel="canonical" href="https://meal-planner.ro/ar/" />
 
-  <link rel="canonical" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-
-  <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-  <link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-  <link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-  <link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-  <link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-  <link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-  <link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-  <link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-  <link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-  <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-  <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
+  <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
+  <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
+  <link rel="alternate" hreflang="es" href="https://meal-planner.ro/es/" />
+  <link rel="alternate" hreflang="fr" href="https://meal-planner.ro/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://meal-planner.ro/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://meal-planner.ro/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://meal-planner.ro/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://meal-planner.ro/pt/" />
+  <link rel="alternate" hreflang="de" href="https://meal-planner.ro/de/" />
+  <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="مخطط وجبات أسبوعي مجاني" />
   <meta property="og:description" content="أنشئ خطة وجبات للأسبوع، احصل على قائمة التسوق وحمّلها PDF مجاناً." />
-  <meta property="og:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-  <meta property="og:image" content="https://BucosAlexandru.github.io/weekly-meal-planner/cover.jpg" />
+  <meta property="og:url" content="https://meal-planner.ro/ar/" />
+  <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="مخطط وجبات أسبوعي مجاني" />
   <meta name="twitter:description" content="أنشئ خطة وجبات الأسبوع وحمّلها PDF مجاناً." />
-  <meta name="twitter:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
+  <meta name="twitter:url" content="https://meal-planner.ro/ar/" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -41,7 +40,7 @@
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <div class="text-start mb-3 no-print">
+    <div class="text-start mb-3 no-print" id="lang-bar">
       <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
@@ -74,14 +73,14 @@
     </div>
 
     <div class="text-center mb-4 no-print btn-bar">
-      <button id="generate-btn" class="btn btn-success">
+      <button id="generate-btn" class="btn btn-success me-2">
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">إنشاء PDF</span>
       </button>
-      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+      <a id="pay-btn"
+         href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
          target="_blank"
-         class="btn btn-warning"
-         id="pay-btn">
+         class="btn btn-warning">
         <i class="bi bi-cart-check-fill"></i>
         <span data-i18n="btn.pay">ادفع وحمّل</span>
       </a>

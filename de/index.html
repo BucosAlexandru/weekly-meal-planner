@@ -3,57 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wöchentlicher Essensplaner</title>
-  <meta name="description" content="Wöchentlicher Essensplaner: Erstellen Sie Ihren Wochenplan, generieren Sie Ihre Einkaufsliste und laden Sie alles als PDF kostenlos herunter." />
-
-  <link rel="canonical" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-
-  <link rel="alternate" hreflang="x-default" href="https://BucosAlexandru.github.io/weekly-meal-planner/" />
-  <link rel="alternate" hreflang="ro" href="https://BucosAlexandru.github.io/weekly-meal-planner/ro/" />
-  <link rel="alternate" hreflang="en" href="https://BucosAlexandru.github.io/weekly-meal-planner/en/" />
-  <link rel="alternate" hreflang="es" href="https://BucosAlexandru.github.io/weekly-meal-planner/es/" />
-  <link rel="alternate" hreflang="fr" href="https://BucosAlexandru.github.io/weekly-meal-planner/fr/" />
-  <link rel="alternate" hreflang="ru" href="https://BucosAlexandru.github.io/weekly-meal-planner/ru/" />
-  <link rel="alternate" hreflang="zh" href="https://BucosAlexandru.github.io/weekly-meal-planner/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://BucosAlexandru.github.io/weekly-meal-planner/ja/" />
-  <link rel="alternate" hreflang="pt" href="https://BucosAlexandru.github.io/weekly-meal-planner/pt/" />
-  <link rel="alternate" hreflang="de" href="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-  <link rel="alternate" hreflang="ar" href="https://BucosAlexandru.github.io/weekly-meal-planner/ar/" />
-  <link rel="alternate" hreflang="hi" href="https://BucosAlexandru.github.io/weekly-meal-planner/hi/" />
+  <title data-i18n="title">Wöchentlicher Essensplaner</title>
+  <meta name="description" content="Wöchentlicher Essensplaner auf Deutsch. Erstelle deinen Wochenplan und lade die Einkaufsliste als PDF herunter – kostenlos, direkt im Browser." />
+  <link rel="canonical" href="https://meal-planner.ro/de/" />
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
+  <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
+  <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
+  <link rel="alternate" hreflang="es" href="https://meal-planner.ro/es/" />
+  <link rel="alternate" hreflang="fr" href="https://meal-planner.ro/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://meal-planner.ro/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://meal-planner.ro/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://meal-planner.ro/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://meal-planner.ro/pt/" />
+  <link rel="alternate" hreflang="de" href="https://meal-planner.ro/de/" />
+  <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Wöchentlicher Essensplaner" />
-  <meta property="og:description" content="Planen Sie Ihre Mahlzeiten für die Woche, erstellen Sie Ihre Einkaufsliste und laden Sie Ihren Plan als PDF herunter." />
-  <meta property="og:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
-  <meta property="og:image" content="https://BucosAlexandru.github.io/weekly-meal-planner/cover.jpg" />
+  <meta property="og:description" content="Erstelle deinen Wochenplan und lade die Einkaufsliste als PDF herunter, kostenlos, auf Deutsch." />
+  <meta property="og:url" content="https://meal-planner.ro/de/" />
+  <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Wöchentlicher Essensplaner" />
-  <meta name="twitter:description" content="Wochenplan, Einkaufsliste und PDF-Export – alles kostenlos!" />
-  <meta name="twitter:url" content="https://BucosAlexandru.github.io/weekly-meal-planner/de/" />
+  <meta name="twitter:description" content="Schnell Essensplan erstellen & PDF kostenlos herunterladen." />
+  <meta name="twitter:url" content="https://meal-planner.ro/de/" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <div class="text-end mb-3 no-print">
+    <div class="text-end mb-3 no-print" id="lang-bar">
       <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
-    <div class="card mb-4 text-center">
-      <div class="card-header bg-success text-white">
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white text-center">
         <h2 class="mb-0" data-i18n="header">Essensplaner & Einkaufsliste</h2>
       </div>
     </div>
@@ -63,7 +54,7 @@
         <table class="table mb-0">
           <thead>
             <tr>
-              <th data-i18n="col.day">Wochentag</th>
+              <th data-i18n="col.day">Tag</th>
               <th data-i18n="col.lunch">Mittagessen (Zutaten)</th>
               <th data-i18n="col.dinner">Abendessen (Zutaten)</th>
             </tr>
@@ -85,17 +76,16 @@
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">PDF erstellen</span>
       </button>
-      <a href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
+      <a id="pay-btn"
+         href="https://buy.stripe.com/28EaEXeDj3f44nb7U3RUkS"
          target="_blank"
-         class="btn btn-warning"
-         id="pay-btn">
+         class="btn btn-warning">
         <i class="bi bi-cart-check-fill"></i>
         <span data-i18n="btn.pay">Bezahlen & Herunterladen</span>
       </a>
       <div id="payment-status" class="mt-2"></div>
     </div>
   </div>
-
   <script src="/js/app.js"></script>
 </body>
 </html>
