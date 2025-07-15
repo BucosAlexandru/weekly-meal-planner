@@ -1,57 +1,36 @@
-// api/stripeWebhook.js
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const { createClient } = require('@supabase/supabase-js');
+import { buffer } from 'micro';
+import Stripe from 'stripe';
+import { createClient } from '@supabase/supabase-js';
 
-// Foloseşte Service Role Key ca să poţi upserta fără restricţii RLS
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
-module.exports = async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).end(); // Method Not Allowed
-  }
+export const config = { api: { bodyParser: false } };
 
-  // Stripe trimite payload-ul raw, nu JSON
-  let buf = '';
-  await new Promise((r) => {
-    req.on('data', (c) => (buf += c.toString()));
-    req.on('end', r);
-  });
-
+export default async function handler(req, res) {
   const sig = req.headers['stripe-signature'];
+  const buf = await buffer(req);
   let event;
+
   try {
-    event = stripe.webhooks.constructEvent(
-      buf,
-      sig,
-      process.env.STRIPE_WEBHOOK_SECRET
-    );
+    event = stripe.webhooks.constructEvent(buf, sig, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
-    console.error('⚠️  Webhook signature verification failed.', err.message);
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
-  // Când Checkout Session e completată, inserăm token-ul
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object;
-    const email = session.customer_details.email;
-    // token random
-    const token = Math.random().toString(36).substring(2) + Date.now().toString(36);
-    // expiră peste 30 zile (în secunde UNIX)
-    const expires_at = Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60;
+    const email = session.customer_email;
+    const expiresAt = Date.now() + 30*24*60*60*1000; // 30 zile
 
-    const { error } = await supabase
+    await supabase
       .from('tokens')
-      .insert([{ token, email, expires_at }]);
-
-    if (error) {
-      console.error('Error upserting token in Supabase:', error);
-    } else {
-      console.log('✅ Token saved for', email, '->', token);
-    }
+      .upsert([{ email, token: generateToken(), expires_at: expiresAt }]);
   }
 
-  res.json({ received: true });
-};
+  res.status(200).json({ received: true });
+}
+
+function generateToken() {
+  return Math.random().toString(36).substr(2, 12);
+}
