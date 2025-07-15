@@ -1,25 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ──────────────── INITIALIZARE ELEMENTE ────────────────
+  // 1. Elemente de bază
   const generateBtn = document.getElementById('generate-btn');
   const buyBtn = document.getElementById('pay-btn');
   const statusEl = document.getElementById('payment-status');
   const langSwitcher = document.getElementById('lang-switcher');
 
-  // Ascunde butoanele la pornire (se afișează ulterior)
   if (generateBtn) generateBtn.style.display = 'none';
   if (buyBtn) buyBtn.style.display = 'none';
 
-  // ─────────── RESETEAZĂ după checkout Stripe cu success ───────────
+  // 2. Reset la succes Stripe (nelimitat după plată)
   const params = new URLSearchParams(window.location.search);
   if (params.get('success') === 'true') {
     localStorage.setItem('pdfCount', '0');
+    localStorage.setItem('pdfFirst', Date.now());
     if (statusEl)
       statusEl.innerHTML = '✅ Plata a fost realizată cu succes! Poți genera PDF nelimitat acum.';
     if (generateBtn) generateBtn.style.display = 'inline-block';
     window.history.replaceState({}, '', window.location.pathname);
   }
 
-  // ─────────────── DICȚIONAR i18n ───────────────
+  // 3. Dicționar i18n (limbile)
   const i18n = {
     ro: {
       weekdays: ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Lista de cumpărături",
       "btn.generate": "Generează PDF",
       "btn.pay": "Plătește & Descarcă",
-      processing: "Se procesează plata...",
       maxed: "Ai atins limita maximă de PDF-uri gratuite.<br>Plătește pentru a debloca descărcarea nelimitată!",
       placeholderL: "ex: cartofi, ceapă",
       placeholderD: "ex: pui, orez"
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Shopping List",
       "btn.generate": "Generate PDF",
       "btn.pay": "Pay & Download",
-      processing: "Processing payment...",
       maxed: "You have reached the maximum number of free PDFs.<br>Pay to unlock unlimited downloads!",
       placeholderL: "e.g. potatoes, onion",
       placeholderD: "e.g. chicken, rice"
@@ -61,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Lista de Compras",
       "btn.generate": "Generar PDF",
       "btn.pay": "Pagar y Descargar",
+      maxed: "¡Has alcanzado el máximo de PDFs gratuitos!<br>¡Paga para descargas ilimitadas!",
       placeholderL: "ej: papas, cebolla",
       placeholderD: "ej: pollo, arroz"
     },
@@ -74,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Liste de Courses",
       "btn.generate": "Générer PDF",
       "btn.pay": "Payer & Télécharger",
+      maxed: "Vous avez atteint la limite de PDFs gratuits.<br>Payer pour débloquer les téléchargements illimités !",
       placeholderL: "ex : pommes de terre, oignon",
       placeholderD: "ex : poulet, riz"
     },
@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Список покупок",
       "btn.generate": "Создать PDF",
       "btn.pay": "Оплатить & Скачать",
+      maxed: "Достигнут лимит бесплатных PDF.<br>Оплатите, чтобы разблокировать неограниченные загрузки!",
       placeholderL: "напр.: картофель, лук",
       placeholderD: "напр.: курица, рис"
     },
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "购物清单",
       "btn.generate": "生成 PDF",
       "btn.pay": "支付并下载",
+      maxed: "已达到免费PDF上限。<br>付费可无限下载！",
       placeholderL: "例如：土豆，洋葱",
       placeholderD: "例如：鸡肉，米饭"
     },
@@ -113,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "買い物リスト",
       "btn.generate": "PDFを作成",
       "btn.pay": "支払ってダウンロード",
+      maxed: "無料PDFの上限に達しました。<br>無制限ダウンロードは有料！",
       placeholderL: "例：ジャガイモ、玉ねぎ",
       placeholderD: "例：鶏肉、ご飯"
     },
@@ -126,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Lista de Compras",
       "btn.generate": "Gerar PDF",
       "btn.pay": "Pagar & Baixar",
+      maxed: "Você atingiu o limite de PDFs gratuitos.<br>Pague para desbloquear downloads ilimitados!",
       placeholderL: "ex: batata, cebola",
       placeholderD: "ex: frango, arroz"
     },
@@ -139,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "Einkaufsliste",
       "btn.generate": "PDF erstellen",
       "btn.pay": "Bezahlen & Herunterladen",
+      maxed: "Du hast das Limit kostenloser PDFs erreicht.<br>Zahle für unbegrenzte Downloads!",
       placeholderL: "z.B.: Kartoffeln, Zwiebeln",
       placeholderD: "z.B.: Hähnchen, Reis"
     },
@@ -152,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "قائمة التسوق",
       "btn.generate": "إنشاء PDF",
       "btn.pay": "ادفع وحمّل",
+      maxed: "لقد وصلت إلى الحد الأقصى من ملفات PDF المجانية.<br>ادفع لتحميل غير محدود!",
       placeholderL: "مثال: بطاطس، بصل",
       placeholderD: "مثال: دجاج، أرز"
     },
@@ -165,12 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
       shoppingList: "खरीदारी की सूची",
       "btn.generate": "PDF बनाएँ",
       "btn.pay": "भुगतान और डाउनलोड",
+      maxed: "आपने मुफ्त PDF की अधिकतम सीमा तक पहुँच गए हैं।<br>अनलिमिटेड डाउनलोड के लिए भुगतान करें!",
       placeholderL: "उदा: आलू, प्याज",
       placeholderD: "उदा: चिकन, चावल"
     }
   };
 
-  // ─────────────── POPULARE LANGUAGE SWITCHER ───────────────
+  // 4. Populează selectul de limbă
   const langNames = {
     ro: "Română", en: "English", es: "Español", fr: "Français",
     ru: "Русский", zh: "中文", ja: "日本語", pt: "Português",
@@ -183,11 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
     langSwitcher.append(opt);
   });
 
-  // ─────────────── LIMBA DEFAULT ───────────────
-  let lang = navigator.language.slice(0,2);
+  // 5. Limba implicită (păstrează și la refresh)
+  let lang = localStorage.getItem('lastLang') || navigator.language.slice(0,2);
   if (!i18n[lang]) lang = 'ro';
 
-  // ─────────────── RENDER TABEL PLANNER ───────────────
+  langSwitcher.value = lang;
+
+  // 6. Tabelul planner și traduceri
   function renderTable() {
     const tbody = document.getElementById('plan-table');
     tbody.innerHTML = '';
@@ -201,8 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `);
     });
   }
-
-  // ─────────────── TRADUCERI & SYNC HEADER ───────────────
   function applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -210,19 +217,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.title = i18n[lang].title;
     renderTable();
-    // Update text pe butoane
     if (generateBtn) generateBtn.querySelector('span').textContent = i18n[lang]["btn.generate"];
     if (buyBtn) buyBtn.querySelector('span').textContent = i18n[lang]["btn.pay"];
   }
-  langSwitcher.value = lang;
   applyTranslations();
+
   langSwitcher.addEventListener('change', e => {
     lang = e.target.value;
+    localStorage.setItem('lastLang', lang);
     applyTranslations();
     updateButtonState();
   });
 
-  // ─────────────── COLECTARE MESE & SHOPPING LIST ───────────────
+  // 7. Limita PDF-urilor la 3 / 24h
+  let pdfCount = +localStorage.getItem('pdfCount') || 0;
+  let pdfFirst = +localStorage.getItem('pdfFirst') || 0;
+
+  function resetPdfQuotaIfNeeded() {
+    const now = Date.now();
+    if (!pdfFirst || (now - pdfFirst > 86400000)) {
+      pdfCount = 0;
+      pdfFirst = now;
+      localStorage.setItem('pdfCount', pdfCount);
+      localStorage.setItem('pdfFirst', pdfFirst);
+    }
+  }
+  resetPdfQuotaIfNeeded();
+
+  // 8. State butoane
+  function updateButtonState() {
+    resetPdfQuotaIfNeeded();
+    if (!generateBtn || !buyBtn || !statusEl) return;
+    if (pdfCount < 3) {
+      generateBtn.style.display = 'inline-block';
+      buyBtn.style.display = 'none';
+      statusEl.innerHTML = '';
+    } else {
+      generateBtn.style.display = 'none';
+      buyBtn.style.display = 'inline-block';
+      statusEl.innerHTML = i18n[lang].maxed;
+    }
+  }
+  updateButtonState();
+
+  // 9. Colectează mese + shopping list
   function collectMeals() {
     return i18n[lang].weekdays.map((_, i) => ({
       day: document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`).textContent,
@@ -248,25 +286,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─────────────── LIMITĂ PDF-uri & BUTOANE ───────────────
-  let pdfCount = +localStorage.getItem('pdfCount') || 0;
-  function updateButtonState() {
-    if (!generateBtn || !buyBtn || !statusEl) return;
-    if (pdfCount < 3) {
-      generateBtn.style.display = 'inline-block';
-      buyBtn.style.display = 'none';
-      statusEl.innerHTML = '';
-    } else {
-      generateBtn.style.display = 'none';
-      buyBtn.style.display = 'inline-block';
-      statusEl.innerHTML = i18n[lang].maxed;
-    }
-  }
-  updateButtonState();
-
-  // ─────────────── GENERARE PDF ───────────────
+  // 10. Generare PDF
   if (generateBtn) {
     generateBtn.addEventListener('click', () => {
+      resetPdfQuotaIfNeeded();
+      if (pdfCount >= 3) {
+        updateButtonState();
+        return;
+      }
       const meals = collectMeals();
       renderShoppingList(meals);
 
@@ -286,8 +313,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }).from(clone).save();
 
       pdfCount++;
+      if (pdfCount === 1) pdfFirst = Date.now();
       localStorage.setItem('pdfCount', pdfCount);
+      localStorage.setItem('pdfFirst', pdfFirst);
       updateButtonState();
     });
   }
+
 });
