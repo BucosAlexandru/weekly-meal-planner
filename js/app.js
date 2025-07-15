@@ -218,6 +218,19 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTranslations();
     updateButtonState();
   });
+  function updateLangBarAlignment() {
+  const langBar = document.getElementById('lang-bar');
+  if (!langBar) return;
+  if (langSwitcher.value === 'ar') {
+    langBar.classList.remove('text-end');
+    langBar.classList.add('text-start');
+  } else {
+    langBar.classList.remove('text-start');
+    langBar.classList.add('text-end');
+  }
+}
+langSwitcher.addEventListener('change', updateLangBarAlignment);
+updateLangBarAlignment(); // apel la load, să fie corect la început
 
   // ─── 7) Meal collection & shopping list ───
   function collectMeals() {
