@@ -1,4 +1,3 @@
-import { buffer } from 'micro';
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 
@@ -11,14 +10,19 @@ const supabase = createClient(
 export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
-  // Acceptă doar POST!
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
 
+  // Citește bufferul direct din request
+  const buffers = [];
+  for await (const chunk of req) {
+    buffers.push(chunk);
+  }
+  const buf = Buffer.concat(buffers);
+
   const sig = req.headers['stripe-signature'];
-  const buf = await buffer(req);
   let event;
 
   try {
