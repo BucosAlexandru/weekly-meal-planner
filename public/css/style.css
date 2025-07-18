@@ -140,6 +140,9 @@ input.form-control:focus {
   padding: 5px 0 5px 0.7em;
   font-size: 1rem;
 }
+#shopping-list .list-group-item strong {
+  color: #24712A;
+}
 
 /* 8) Small & mobile screens */
 @media (max-width: 576px) {
@@ -193,6 +196,8 @@ input.form-control:focus {
     border-radius: 0 !important;
     padding: 4px 0 !important;
     border-bottom: 2px solid #24712A !important;
+    text-align: center !important;
+    letter-spacing: 0.03em !important;
   }
   .table {
     border: 1.2px solid #bbb !important;
@@ -229,6 +234,10 @@ input.form-control:focus {
     background: #fff !important;
     color: #222 !important;
   }
+  #shopping-list .list-group-item strong {
+    color: #24712A !important;
+    font-weight: 600 !important;
+  }
   .btn, select, input, #stripe-buy-btn, #payment-status {
     display: none !important;
   }
@@ -236,4 +245,8 @@ input.form-control:focus {
     display: none !important;
   }
 }
-
+@media print {
+  #shopping-list {
+    margin-bottom: 12px !important;
+  }
+}
