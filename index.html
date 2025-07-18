@@ -140,17 +140,17 @@ document.getElementById('verifyBtn').onclick = async function() {
   }
 
   // Dacă găsește acces
-  if (data && (!data.expires_at || data.expires_at > Date.now())) {
-    resultDiv.innerHTML = `
-      <span class="text-success mb-2 d-block">✅ Ai acces! Poți descărca PDF-ul nelimitat:</span>
-      <a href="/downloads/weekly-meal-planner-unlimited.pdf" download class="btn btn-primary">Descarcă PDF</a>
-    `;
-    // Ascunde butonul de plată și formularul după succes
-    document.getElementById('pay-btn').style.display = 'none';
-    document.getElementById('access-card').style.display = 'none';
-  } else {
-    resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
-  }
+if (data && (!data.expires_at || data.expires_at > Date.now())) {
+  resultDiv.innerHTML = `
+    <span class="text-success mb-2 d-block">✅ Ai acces! Poți descărca PDF-ul nelimitat:</span>
+    <a href="/downloads/weekly-meal-planner-unlimited.pdf" download class="btn btn-primary">Descarcă PDF</a>
+  `;
+  document.getElementById('pay-btn').style.display = 'none';
+  // NU mai ascunde 'access-card'
+  // document.getElementById('access-card').style.display = 'none';
+} else {
+  resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
+}
 }
 </script>
 
