@@ -111,45 +111,48 @@
 
   <!-- Script for email verification with Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script>
-    // --- CONFIG --- (folosește ANON public, e ok în frontend)
-    const supabase = window.supabase.createClient(
-      'https://hwbzbidorkwtyvirozho.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
-    );
+ <script>
+const supabase = window.supabase.createClient(
+  'https://hwbzbidorkwtyvirozho.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
+);
 
-    document.getElementById('verifyBtn').onclick = async function() {
-      const email = document.getElementById('emailInput').value.trim();
-      const resultDiv = document.getElementById('result');
-      resultDiv.innerText = 'Checking...';
+document.getElementById('verifyBtn').onclick = async function() {
+  const email = document.getElementById('emailInput').value.trim();
+  const resultDiv = document.getElementById('result');
+  resultDiv.innerText = 'Checking...';
 
-      if (!email) {
-        resultDiv.innerHTML = `<span class="text-danger">Please enter your email!</span>`;
-        return;
-      }
+  if (!email) {
+    resultDiv.innerHTML = `<span class="text-danger">Introduceți adresa de email!</span>`;
+    return;
+  }
 
-      // Caută în tabela "tokens" dacă există și tokenul nu e expirat
-      const { data, error } = await supabase
-        .from('tokens')
-        .select('*')
-        .eq('email', email)
-        .maybeSingle();
+  // Caută în tabela "tokens"
+  const { data, error } = await supabase
+    .from('tokens')
+    .select('*')
+    .eq('email', email)
+    .maybeSingle();
 
-      if (error) {
-        resultDiv.innerHTML = `<span class="text-danger">Server error. Please try again later.</span>`;
-        return;
-      }
+  if (error) {
+    resultDiv.innerHTML = `<span class="text-danger">Eroare server. Încercați din nou.</span>`;
+    return;
+  }
 
-      // Validează dacă tokenul există și nu e expirat (sau nu ai expires_at)
-      if (data && (!data.expires_at || data.expires_at > Date.now())) {
-        resultDiv.innerHTML = `
-          <span class="text-success mb-2 d-block">✅ Access granted! You can now download the unlimited PDF:</span>
-          <a href="/downloads/weekly-meal-planner-unlimited.pdf" download class="btn btn-primary">Download PDF</a>
-        `;
-      } else {
-        resultDiv.innerHTML = `<span class="text-danger">No access found for this email. Please pay first or check your email address.</span>`;
-      }
-    }
-  </script>
+  // Dacă găsește acces
+  if (data && (!data.expires_at || data.expires_at > Date.now())) {
+    resultDiv.innerHTML = `
+      <span class="text-success mb-2 d-block">✅ Ai acces! Poți descărca PDF-ul nelimitat:</span>
+      <a href="/downloads/weekly-meal-planner-unlimited.pdf" download class="btn btn-primary">Descarcă PDF</a>
+    `;
+    // Ascunde butonul de plată și formularul după succes
+    document.getElementById('pay-btn').style.display = 'none';
+    document.getElementById('access-card').style.display = 'none';
+  } else {
+    resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
+  }
+}
+</script>
+
 </body>
 </html>
