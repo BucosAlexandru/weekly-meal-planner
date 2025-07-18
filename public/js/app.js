@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 10. Generare PDF
+   // 10. Generare PDF (funcția definită deja)
   function generatePDF() {
     const meals = collectMeals();
     renderShoppingList(meals);
@@ -307,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }).from(clone).save();
   }
 
+  // Atașează funcția la butonul verde „Generate PDF”
   if (generateBtn) {
     generateBtn.addEventListener('click', () => {
       resetPdfQuotaIfNeeded();
@@ -323,17 +324,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ATAȘARE EVENIMENT PE BUTONUL DINAMIC
-  // Observator pentru când apare butonul plătitorilor (Descarcă PDF)
+  // **Aici e corect pentru butonul albastru „Descarcă PDF” creat DINAMIC**
   const resultDiv = document.getElementById('result');
-  const observer = new MutationObserver(() => {
-    const paidBtn = document.getElementById('paid-generate-pdf');
-    if (paidBtn) {
-      paidBtn.onclick = generatePDF;
-    }
-  });
   if (resultDiv) {
+    // Observator pentru când apare butonul „paid-generate-pdf”
+    const observer = new MutationObserver(() => {
+      const paidBtn = document.getElementById('paid-generate-pdf');
+      if (paidBtn && !paidBtn.dataset.attached) {
+        paidBtn.onclick = generatePDF;
+        paidBtn.dataset.attached = "1"; // ca să nu atașeze de 10x
+      }
+    });
     observer.observe(resultDiv, { childList: true, subtree: true });
   }
-
 });
