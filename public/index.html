@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Weekly Meal Planner & Shopping List – Free PDF</title>
-  <meta name="description" content="Create your weekly meal plan, generate your shopping list, and download it as a PDF for free, all online and in English.">
+  <meta name="description" content="Creează planul tău de mese săptămânal, lista de cumpărături, și descarcă totul ca PDF – rapid, online, gratuit, în orice limbă!">
 
   <!-- canonical & alternate versions -->
   <link rel="canonical" href="https://meal-planner.ro/" />
@@ -21,17 +21,15 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
-  <!-- Open Graph -->
+  <!-- OG & Twitter for sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Weekly Meal Planner & Shopping List – Free PDF" />
-  <meta property="og:description" content="Create your weekly meal plan, generate your shopping list, and download it as a PDF for free, all online and in English." />
+  <meta property="og:description" content="Creează planul tău de mese săptămânal, lista de cumpărături și descarcă PDF-ul!" />
   <meta property="og:url" content="https://meal-planner.ro/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Weekly Meal Planner & Shopping List – Free PDF" />
-  <meta name="twitter:description" content="Create your weekly meal plan, generate your shopping list, and download it as a PDF for free, all online and in English." />
+  <meta name="twitter:description" content="Creează planul tău de mese săptămânal, lista de cumpărături și descarcă PDF-ul!" />
   <meta name="twitter:url" content="https://meal-planner.ro/" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
@@ -42,7 +40,7 @@
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <!-- Language switcher -->
+    <!-- Language Switcher -->
     <div class="mb-3 no-print text-end" id="lang-bar">
       <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
@@ -50,19 +48,19 @@
     <!-- Header -->
     <div class="card mb-4 text-center">
       <div class="card-header bg-success text-white">
-        <h2 class="mb-0">Weekly Meal Planner & Shopping List</h2>
+        <h2 class="mb-0" data-i18n="header">Weekly Meal Planner & Shopping List</h2>
       </div>
     </div>
 
-    <!-- Planner table -->
+    <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
           <thead>
             <tr>
-              <th>Day</th>
-              <th>Lunch (ingredients)</th>
-              <th>Dinner (ingredients)</th>
+              <th data-i18n="col.day">Day</th>
+              <th data-i18n="col.lunch">Lunch (ingredients)</th>
+              <th data-i18n="col.dinner">Dinner (ingredients)</th>
             </tr>
           </thead>
           <tbody id="plan-table"></tbody>
@@ -70,26 +68,26 @@
       </div>
     </div>
 
-    <!-- Shopping list -->
+    <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5>Shopping List</h5>
+        <h5 data-i18n="shoppingList">Shopping List</h5>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
     <!-- Buttons -->
     <div class="text-center mb-4 no-print btn-bar">
-      <button id="generate-btn" class="btn btn-success me-2">
+      <button id="generate-btn" class="btn btn-success me-2" type="button">
         <i class="bi bi-file-earmark-pdf-fill"></i>
-        Generate PDF
+        Generează PDF
       </button>
       <a href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
          target="_blank"
          class="btn btn-warning"
          id="pay-btn">
         <i class="bi bi-cart-check-fill"></i>
-        Pay & Download
+        Plătește & Descarcă
       </a>
       <div id="payment-status" class="mt-2"></div>
     </div>
@@ -97,7 +95,7 @@
     <!-- Email verification for PDF unlimited access -->
     <div class="card mb-4 text-center" id="access-card">
       <div class="card-header bg-primary text-white">
-        Already paid? Unlock unlimited PDF downloads
+        <span data-i18n="unlock">Already paid? Unlock unlimited PDF downloads</span>
       </div>
       <div class="card-body">
         <input type="email" id="emailInput" class="form-control mb-2" placeholder="Enter your payment email">
@@ -105,72 +103,69 @@
         <div id="result" class="mt-3"></div>
       </div>
     </div>
-
   </div>
+
+  <!-- App Logic -->
   <script src="/js/app.js"></script>
 
-  <!-- Script for email verification with Supabase -->
+  <!-- Supabase Email Verification Script -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script>
-const supabase = window.supabase.createClient(
-  'https://hwbzbidorkwtyvirozho.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
-);
+  <script>
+    const supabase = window.supabase.createClient(
+      'https://hwbzbidorkwtyvirozho.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
+    );
 
-document.getElementById('verifyBtn').onclick = async function() {
-  const email = document.getElementById('emailInput').value.trim();
-  const resultDiv = document.getElementById('result');
-  resultDiv.innerText = 'Checking...';
+    document.getElementById('verifyBtn').onclick = async function() {
+      const email = document.getElementById('emailInput').value.trim();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerText = 'Checking...';
 
-  if (!email) {
-    resultDiv.innerHTML = `<span class="text-danger">Introduceți adresa de email!</span>`;
-    return;
-  }
+      if (!email) {
+        resultDiv.innerHTML = `<span class="text-danger">Introduceți adresa de email!</span>`;
+        return;
+      }
 
-  // Selectează TOATE tokenurile pentru emailul dat
-  const { data, error } = await supabase
-    .from('tokens')
-    .select('*')
-    .eq('email', email);
+      // Selectează TOATE tokenurile pentru emailul dat
+      const { data, error } = await supabase
+        .from('tokens')
+        .select('*')
+        .eq('email', email);
 
-  if (error) {
-    resultDiv.innerHTML = `<span class="text-danger">Eroare server. Încercați din nou.</span>`;
-    return;
-  }
+      if (error) {
+        resultDiv.innerHTML = `<span class="text-danger">Eroare server. Încercați din nou.</span>`;
+        return;
+      }
 
-  // Verifică dacă există vreun token valid (ne-expirat)
-  if (data && data.length > 0) {
-    const now = Date.now();
-    const valid = data.some(token => !token.expires_at || token.expires_at > now);
+      // Verifică dacă există vreun token valid (ne-expirat)
+      if (data && data.length > 0) {
+        const now = Date.now();
+        const valid = data.some(token => !token.expires_at || token.expires_at > now);
 
-    if (valid) {
-      resultDiv.innerHTML = `
-        <span class="text-success mb-2 d-block">✅ Ai acces! Poți descărca PDF-ul nelimitat:</span>
-        <button id="paid-generate-pdf" class="btn btn-primary">Descarcă PDF</button>
-      `;
-      document.getElementById('pay-btn').style.display = 'none';
+        if (valid) {
+          resultDiv.innerHTML = `
+            <span class="text-success mb-2 d-block">✅ Ai acces! Poți descărca PDF-ul nelimitat:</span>
+            <button id="paid-generate-pdf" class="btn btn-primary">Descarcă PDF</button>
+          `;
+          document.getElementById('pay-btn').style.display = 'none';
 
-      // Aici atașezi handlerul pentru butonul generat dinamic!
-      setTimeout(() => {
-        const generateBtn = document.getElementById('generate-btn');
-        const paidBtn = document.getElementById('paid-generate-pdf');
-        if (paidBtn && generateBtn) {
-          paidBtn.addEventListener('click', function() {
-            generateBtn.click();
-          });
+          setTimeout(() => {
+            const generateBtn = document.getElementById('generate-btn');
+            const paidBtn = document.getElementById('paid-generate-pdf');
+            if (paidBtn && generateBtn) {
+              paidBtn.addEventListener('click', function() {
+                generateBtn.click();
+              });
+            }
+          }, 0);
+
+        } else {
+          resultDiv.innerHTML = `<span class="text-danger">Nu există acces valid pentru acest email.</span>`;
         }
-      }, 0);
-
-    } else {
-      resultDiv.innerHTML = `<span class="text-danger">Nu există acces valid pentru acest email.</span>`;
+      } else {
+        resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
+      }
     }
-  } else {
-    resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
-  }
-}
-</script>
-
-
-
+  </script>
 </body>
 </html>
