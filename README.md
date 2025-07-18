@@ -23,3 +23,4 @@ https://BucosAlexandru.github.io/weekly-meal-planner/
 1. Clonează acest repo:
    ```bash
    git clone https://github.com/BucosAlexandru/weekly-meal-planner.git
+
