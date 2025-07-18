@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButtonState();
   });
 
-  // 7. Limita PDF-urilor la 3 / 24h
+   // 7. Limita PDF-urilor la 3 / 24h
   let pdfCount = +localStorage.getItem('pdfCount') || 0;
   let pdfFirst = +localStorage.getItem('pdfFirst') || 0;
 
@@ -287,6 +287,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 10. Generare PDF
+  function generatePDF() {
+    const meals = collectMeals();
+    renderShoppingList(meals);
+
+    const clone = document.getElementById('pdf-content').cloneNode(true);
+    clone.querySelectorAll('input').forEach(inp => {
+      const span = document.createElement('span');
+      span.className = 'pdf-span';
+      span.textContent = inp.value;
+      inp.replaceWith(span);
+    });
+    clone.querySelectorAll('#pay-btn,#generate-btn,#payment-status').forEach(el => el && el.remove());
+
+    html2pdf().set({
+      margin: [10,10,10,10],
+      filename: 'meal-planner.pdf',
+      jsPDF: { unit:'mm', format:'a4' }
+    }).from(clone).save();
+  }
+
   if (generateBtn) {
     generateBtn.addEventListener('click', () => {
       resetPdfQuotaIfNeeded();
@@ -294,30 +314,26 @@ document.addEventListener('DOMContentLoaded', () => {
         updateButtonState();
         return;
       }
-      const meals = collectMeals();
-      renderShoppingList(meals);
-
-      const clone = document.getElementById('pdf-content').cloneNode(true);
-      clone.querySelectorAll('input').forEach(inp => {
-        const span = document.createElement('span');
-        span.className = 'pdf-span';
-        span.textContent = inp.value;
-        inp.replaceWith(span);
-      });
-      clone.querySelectorAll('#pay-btn,#generate-btn,#payment-status').forEach(el => el && el.remove());
-
-      html2pdf().set({
-        margin: [10,10,10,10],
-        filename: 'meal-planner.pdf',
-        jsPDF: { unit:'mm', format:'a4' }
-      }).from(clone).save();
-
+      generatePDF();
       pdfCount++;
       if (pdfCount === 1) pdfFirst = Date.now();
       localStorage.setItem('pdfCount', pdfCount);
       localStorage.setItem('pdfFirst', pdfFirst);
       updateButtonState();
     });
+  }
+
+  // ATAȘARE EVENIMENT PE BUTONUL DINAMIC
+  // Observator pentru când apare butonul plătitorilor (Descarcă PDF)
+  const resultDiv = document.getElementById('result');
+  const observer = new MutationObserver(() => {
+    const paidBtn = document.getElementById('paid-generate-pdf');
+    if (paidBtn) {
+      paidBtn.onclick = generatePDF;
+    }
+  });
+  if (resultDiv) {
+    observer.observe(resultDiv, { childList: true, subtree: true });
   }
 
 });

@@ -146,9 +146,21 @@ document.getElementById('verifyBtn').onclick = async function() {
     if (valid) {
       resultDiv.innerHTML = `
         <span class="text-success mb-2 d-block">✅ Ai acces! Poți descărca PDF-ul nelimitat:</span>
-        <a href="/downloads/weekly-meal-planner-unlimited.pdf" download class="btn btn-primary">Descarcă PDF</a>
+        <button id="paid-generate-pdf" class="btn btn-primary">Descarcă PDF</button>
       `;
       document.getElementById('pay-btn').style.display = 'none';
+
+      // Aici atașezi handlerul pentru butonul generat dinamic!
+      setTimeout(() => {
+        const generateBtn = document.getElementById('generate-btn');
+        const paidBtn = document.getElementById('paid-generate-pdf');
+        if (paidBtn && generateBtn) {
+          paidBtn.addEventListener('click', function() {
+            generateBtn.click();
+          });
+        }
+      }, 0);
+
     } else {
       resultDiv.innerHTML = `<span class="text-danger">Nu există acces valid pentru acest email.</span>`;
     }
@@ -157,6 +169,7 @@ document.getElementById('verifyBtn').onclick = async function() {
   }
 }
 </script>
+
 
 
 </body>
