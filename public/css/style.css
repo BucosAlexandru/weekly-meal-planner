@@ -288,3 +288,18 @@ html[dir="rtl"] #pdf-list ul {
   direction: rtl;
   text-align: right;
 }
+@media print {
+  /* Evită să se rupă blocurile de carduri și listele între pagini */
+  .card,
+  .card-body,
+  ul,
+  ol,
+  li,
+  .planner-row,
+  table,
+  tr,
+  td {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
