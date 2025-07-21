@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="title">Planejador Semanal de Refeições</title>
+  <meta name="description" content="Planeje suas refeições da semana facilmente! Gere sua lista de compras, faça download em PDF e organize sua alimentação de forma gratuita, direto do navegador." />
+  <link rel="canonical" href="https://meal-planner.ro/pt/" />
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
+  <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
+  <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
+  <link rel="alternate" hreflang="es" href="https://meal-planner.ro/es/" />
+  <link rel="alternate" hreflang="fr" href="https://meal-planner.ro/fr/" />
+  <link rel="alternate" hreflang="ru" href="https://meal-planner.ro/ru/" />
+  <link rel="alternate" hreflang="zh" href="https://meal-planner.ro/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://meal-planner.ro/ja/" />
+  <link rel="alternate" hreflang="pt" href="https://meal-planner.ro/pt/" />
+  <link rel="alternate" hreflang="de" href="https://meal-planner.ro/de/" />
+  <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Planejador Semanal de Refeições" />
+  <meta property="og:description" content="Organize suas refeições, gere lista de compras e PDF grátis em português." />
+  <meta property="og:url" content="https://meal-planner.ro/pt/" />
+  <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Planejador Semanal de Refeições" />
+  <meta name="twitter:description" content="Planeje suas refeições, gere lista de compras em PDF grátis, direto do navegador!" />
+  <meta name="twitter:url" content="https://meal-planner.ro/pt/" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container py-5" id="pdf-content">
+    <div class="text-end mb-3 no-print" id="lang-bar">
+      <select id="lang-switcher" class="form-select w-auto"></select>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white text-center">
+        <h2 class="mb-0" data-i18n="header">Planejador de Refeições &amp; Lista de Compras</h2>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th data-i18n="col.day">Dia</th>
+              <th data-i18n="col.lunch">Almoço (ingredientes)</th>
+              <th data-i18n="col.dinner">Jantar (ingredientes)</th>
+            </tr>
+          </thead>
+          <tbody id="plan-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 data-i18n="shoppingList">Lista de Compras</h5>
+        <ul id="shopping-list" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <!-- Botões PDF/Stripe -->
+    <div class="text-center mb-4 no-print btn-bar">
+      <button id="generate-btn" class="btn btn-success me-2" type="button">
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">Gerar PDF</span>
+      </button>
+      <a href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
+         target="_blank"
+         class="btn btn-warning"
+         id="pay-btn">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Pagar &amp; Baixar</span>
+      </a>
+      <div id="payment-status" class="mt-2"></div>
+    </div>
+
+    <!-- Verificação Email para acesso ilimitado -->
+    <div class="card mb-4 text-center" id="access-card">
+      <div class="card-header bg-primary text-white">
+        <span data-i18n="unlock">Já pagou? Desbloqueie o download ilimitado de PDFs</span>
+      </div>
+      <div class="card-body">
+        <input type="email" id="emailInput" class="form-control mb-2" placeholder="Digite o e-mail do pagamento">
+        <button id="verifyBtn" class="btn btn-success">Verificar E-mail</button>
+        <div id="result" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Logic -->
+  <script src="/js/app.js"></script>
+
+  <!-- Supabase Email Verification Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script>
+    const supabase = window.supabase.createClient(
+      'https://hwbzbidorkwtyvirozho.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
+    );
+
+    document.getElementById('verifyBtn').onclick = async function() {
+      const email = document.getElementById('emailInput').value.trim();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerText = 'Verificando...';
+
+      if (!email) {
+        resultDiv.innerHTML = `<span class="text-danger">Digite seu e-mail!</span>`;
+        return;
+      }
+
+      // Seleciona TODOS os tokens para o e-mail fornecido
+      const { data, error } = await supabase
+        .from('tokens')
+        .select('*')
+        .eq('email', email);
+
+      if (error) {
+        resultDiv.innerHTML = `<span class="text-danger">Erro no servidor. Tente novamente.</span>`;
+        return;
+      }
+
+      // Verifica se existe algum token válido (não expirado)
+      if (data && data.length > 0) {
+        const now = Date.now();
+        const valid = data.some(token => !token.expires_at || token.expires_at > now);
+
+        if (valid) {
+          resultDiv.innerHTML = `
+            <span class="text-success mb-2 d-block">✅ Acesso liberado! Agora você pode gerar PDFs ilimitados:</span>
+            <button id="paid-generate-pdf" class="btn btn-primary">Baixar PDF</button>
+          `;
+          document.getElementById('pay-btn').style.display = 'none';
+
+          setTimeout(() => {
+            const generateBtn = document.getElementById('generate-btn');
+            const paidBtn = document.getElementById('paid-generate-pdf');
+            if (paidBtn && generateBtn) {
+              paidBtn.addEventListener('click', function() {
+                generateBtn.click();
+              });
+            }
+          }, 0);
+
+        } else {
+          resultDiv.innerHTML = `<span class="text-danger">Não há acesso válido para este e-mail.</span>`;
+        }
+      } else {
+        resultDiv.innerHTML = `<span class="text-danger">Nenhum acesso para este e-mail. Faça o pagamento ou verifique o endereço.</span>`;
+      }
+    }
+  </script>
+</body>
+</html>
