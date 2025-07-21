@@ -303,3 +303,10 @@ html[dir="rtl"] #pdf-list ul {
     page-break-inside: avoid !important;
   }
 }
+@media print {
+  .planner-row {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
