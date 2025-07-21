@@ -295,23 +295,8 @@ html[dir="rtl"] #pdf-list ul {
   text-align: right;
 }
 @media print {
-  .card,
-  .card-body,
-  ul,
-  ol,
-  li,
-  .planner-row,
-  table,
-  tr,
-  td {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-}
-@media print {
   .planner-row {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 }
-
