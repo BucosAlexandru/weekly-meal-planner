@@ -295,7 +295,11 @@ html[dir="rtl"] #pdf-list ul {
   text-align: right;
 }
 @media print {
-  .planner-row {
+  tr.planner-row, tr.planner-row > td, tr.planner-row > th {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  table {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
