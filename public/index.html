@@ -117,6 +117,7 @@
 
   <!-- Supabase Email Verification Script -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
   <script>
     const supabase = window.supabase.createClient(
       'https://hwbzbidorkwtyvirozho.supabase.co',
@@ -173,6 +174,12 @@
         resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault(); // Previne submit-ul implicit dacă e într-un form
+    document.getElementById('verifyBtn').click();
+  }
+});
   </script>
 </body>
 </html>
