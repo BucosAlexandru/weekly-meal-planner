@@ -295,12 +295,22 @@ html[dir="rtl"] #pdf-list ul {
   text-align: right;
 }
 @media print {
-  tr.planner-row, tr.planner-row > td, tr.planner-row > th {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-  table {
+  tr, .planner-row, tbody, ul, ol, li {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 }
+#pdf-impact-area,
+#pdf-impact-area * {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  font-size: 14px !important;
+}
+
+#pdf-list ul,
+#pdf-list li {
+  max-width: 520px;
+  box-sizing: border-box;
+}
+

@@ -378,3 +378,5 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(resultDiv, { childList: true, subtree: true });
   }
 });
+
+
