@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">Planejador Semanal de Refeições</title>
+  <title>Planejador Semanal de Refeições & Lista de Compras – PDF Grátis</title>
   <meta name="description" content="Planeje suas refeições da semana facilmente! Gere sua lista de compras, faça download em PDF e organize sua alimentação de forma gratuita, direto do navegador." />
   <meta name="keywords" content="planejador de refeições, lista de compras, menu semanal, refeições familiares, refeições saudáveis, planejador grátis, planner de refeições PDF, meal planner português" />
+
+  <!-- canonical & alternate versions -->
   <link rel="canonical" href="https://meal-planner.ro/pt/" />
-  <!-- hreflang -->
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
@@ -21,18 +22,24 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+  <!-- OG & Twitter for sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Planejador Semanal de Refeições" />
+  <meta property="og:title" content="Planejador Semanal de Refeições & Lista de Compras – PDF Grátis" />
   <meta property="og:description" content="Organize suas refeições, gere lista de compras e PDF grátis em português." />
   <meta property="og:url" content="https://meal-planner.ro/pt/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Planejador Semanal de Refeições" />
+  <meta name="twitter:title" content="Planejador Semanal de Refeições & Lista de Compras – PDF Grátis" />
   <meta name="twitter:description" content="Planeje suas refeições, gere lista de compras em PDF grátis, direto do navegador!" />
   <meta name="twitter:url" content="https://meal-planner.ro/pt/" />
 
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <!-- Favicon standard -->
+  <link rel="icon" type="image/png" href="/images/MP-favicon.png" />
+  <!-- Apple touch icon pentru iOS -->
+  <link rel="apple-touch-icon" href="/images/MP-favicon.png">
+  <!-- Favicon pentru Windows Tile (Edge/IE) -->
+  <meta name="msapplication-TileImage" content="/images/MP-favicon.png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -40,27 +47,30 @@
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <div class="text-end mb-3 no-print" id="lang-bar">
+    <!-- Language Switcher -->
+    <div class="mb-3 no-print text-end" id="lang-bar">
       <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0" data-i18n="header">Planejador de Refeições &amp; Lista de Compras</h2>
+    <!-- Header -->
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0" data-i18n="header">Planejador de Refeições & Lista de Compras</h2>
       </div>
     </div>
     <div class="seo-paragraph" id="seo-paragraph">
-  <p>
-    <strong>Planejador semanal de refeições online</strong> – Monte o cardápio da semana inteira, economize tempo e dinheiro, e aproveite refeições saudáveis com a família. Nosso aplicativo gratuito permite anotar o que você vai cozinhar, gerar a lista de compras automaticamente e baixar tudo em PDF.
-  </p>
-  <p>
-    Seja para organizar as refeições das crianças, seguir uma dieta equilibrada ou controlar melhor o orçamento, este planejador ajuda você a seguir o plano e evitar desperdício de alimentos. Tudo é rápido, online e disponível em qualquer idioma!
-  </p>
-  <p>
-    Experimente o planejador semanal de refeições grátis – simples, útil e sem cadastro!
-  </p>
-</div>
+      <p>
+        <strong>Planejador semanal de refeições online</strong> – Monte o cardápio da semana inteira, economize tempo e dinheiro, e aproveite refeições saudáveis com a família. Nosso aplicativo gratuito permite anotar o que você vai cozinhar, gerar a lista de compras automaticamente e baixar tudo em PDF.
+      </p>
+      <p>
+        Seja para organizar as refeições das crianças, seguir uma dieta equilibrada ou controlar melhor o orçamento, este planejador ajuda você a seguir o plano e evitar desperdício de alimentos. Tudo é rápido, online e disponível em qualquer idioma!
+      </p>
+      <p>
+        Experimente o planejador semanal de refeições grátis – simples, útil e sem cadastro!
+      </p>
+    </div>
 
+    <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
@@ -76,13 +86,14 @@
       </div>
     </div>
     <!-- IMPACTO PARA PDF - oculto por padrão -->
-<div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-  <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
-    Cuide da sua saúde e da sua família! Cozinhe com carinho e aproveite cada refeição juntos.
-  </h2>
-  <div id="pdf-list" style="margin-top:30px;"></div>
-</div>
+    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
+      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
+        Cuide da sua saúde e da sua família! Cozinhe com carinho e aproveite cada refeição juntos.
+      </h2>
+      <div id="pdf-list" style="margin-top:30px;"></div>
+    </div>
 
+    <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
         <h5 data-i18n="shoppingList">Lista de Compras</h5>
@@ -101,7 +112,7 @@
          class="btn btn-warning"
          id="pay-btn">
         <i class="bi bi-cart-check-fill"></i>
-        <span data-i18n="btn.pay">Pagar &amp; Baixar</span>
+        <span data-i18n="btn.pay">Pagar & Baixar</span>
       </a>
       <div id="payment-status" class="mt-2"></div>
     </div>
@@ -117,10 +128,9 @@
         <div id="result" class="mt-3"></div>
       </div>
     </div>
-  </div>
 
-  <!-- App Logic -->
-  <script src="/js/app.js"></script>
+    <!-- App Logic -->
+    <script src="/js/app.js"></script>
 
   <!-- Supabase Email Verification Script -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>

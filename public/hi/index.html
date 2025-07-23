@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">साप्ताहिक भोजन योजना</title>
-  <meta name="description" content="हिंदी में साप्ताहिक भोजन योजना: अपने सप्ताह के खाने का प्लान बनाएं, खरीदारी सूची तैयार करें और PDF में डाउनलोड करें, मुफ्त और ऑनलाइन।" />
+  <title>साप्ताहिक भोजन योजना और खरीदारी सूची – मुफ्त PDF</title>
+  <meta name="description" content="हिंदी में साप्ताहिक भोजन योजना: अपने सप्ताह के खाने का प्लान बनाएं, खरीदारी सूची तैयार करें और PDF में डाउनलोड करें, मुफ्त और ऑनलाइन।">
   <meta name="keywords" content="भोजन योजना, खरीदारी सूची, साप्ताहिक भोजन योजना, परिवार भोजन योजना, स्वस्थ भोजन, मुफ्त भोजन योजना, भोजन योजना पीडीएफ, meal planner hindi" />
+
+  <!-- canonical & alternate versions -->
   <link rel="canonical" href="https://meal-planner.ro/hi/" />
-  <!-- hreflang -->
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
@@ -21,18 +22,24 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+  <!-- OG & Twitter for sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="साप्ताहिक भोजन योजना" />
+  <meta property="og:title" content="साप्ताहिक भोजन योजना और खरीदारी सूची – मुफ्त PDF" />
   <meta property="og:description" content="सप्ताहभर के भोजन और खरीदारी सूची को हिंदी में बनाएं, PDF में डाउनलोड करें - 100% मुफ़्त!" />
   <meta property="og:url" content="https://meal-planner.ro/hi/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="साप्ताहिक भोजन योजना" />
+  <meta name="twitter:title" content="साप्ताहिक भोजन योजना और खरीदारी सूची – मुफ्त PDF" />
   <meta name="twitter:description" content="ऑनलाइन, मुफ़्त, हिंदी में साप्ताहिक भोजन योजना बनाएं और PDF डाउनलोड करें।" />
   <meta name="twitter:url" content="https://meal-planner.ro/hi/" />
 
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <!-- Favicon standard -->
+  <link rel="icon" type="image/png" href="/images/MP-favicon.png" />
+  <!-- Apple touch icon pentru iOS -->
+  <link rel="apple-touch-icon" href="/images/MP-favicon.png">
+  <!-- Favicon pentru Windows Tile (Edge/IE) -->
+  <meta name="msapplication-TileImage" content="/images/MP-favicon.png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -40,27 +47,29 @@
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
-    <div class="text-end mb-3 no-print" id="lang-bar">
+    <!-- Language Switcher -->
+    <div class="mb-3 no-print text-end" id="lang-bar">
       <select id="lang-switcher" class="form-select w-auto"></select>
     </div>
 
-    <div class="card mb-4">
-      <div class="card-header bg-success text-white text-center">
+    <!-- Header -->
+    <div class="card mb-4 text-center">
+      <div class="card-header bg-success text-white">
         <h2 class="mb-0" data-i18n="header">भोजन योजनाकार और खरीदारी सूची</h2>
       </div>
     </div>
     <div class="seo-paragraph" id="seo-paragraph">
-  <p>
-    <strong>साप्ताहिक भोजन योजना ऑनलाइन</strong> – पूरे सप्ताह का मेनू बनाएं, समय और पैसे बचाएं और परिवार के साथ सेहतमंद भोजन का आनंद लें। हमारी फ्री ऐप से आप रोज़ाना का भोजन प्लान कर सकते हैं, शॉपिंग लिस्ट अपने आप बना सकते हैं और सब कुछ PDF में डाउनलोड कर सकते हैं।
-  </p>
-  <p>
-    चाहे आप बच्चों के लिए भोजन प्लान करना चाहते हों, संतुलित डाइट फॉलो करना चाहते हों या बजट को बेहतर बनाना चाहते हों – यह प्लानर आपको संगठित रहने और भोजन की बर्बादी रोकने में मदद करेगा। सब कुछ तेज़, ऑनलाइन और किसी भी भाषा में उपलब्ध!
-  </p>
-  <p>
-    मुफ्त साप्ताहिक भोजन योजना आज़माएँ – आसान, उपयोगी और बिना रजिस्ट्रेशन!
-  </p>
-</div>
-
+      <p>
+        <strong>साप्ताहिक भोजन योजना ऑनलाइन</strong> – पूरे सप्ताह का मेनू बनाएं, समय और पैसे बचाएं और परिवार के साथ सेहतमंद भोजन का आनंद लें। हमारी फ्री ऐप से आप रोज़ाना का भोजन प्लान कर सकते हैं, शॉपिंग लिस्ट अपने आप बना सकते हैं और सब कुछ PDF में डाउनलोड कर सकते हैं।
+      </p>
+      <p>
+        चाहे आप बच्चों के लिए भोजन प्लान करना चाहते हों, संतुलित डाइट फॉलो करना चाहते हों या बजट को बेहतर बनाना चाहते हों – यह प्लानर आपको संगठित रहने और भोजन की बर्बादी रोकने में मदद करेगा। सब कुछ तेज़, ऑनलाइन और किसी भी भाषा में उपलब्ध!
+      </p>
+      <p>
+        मुफ्त साप्ताहिक भोजन योजना आज़माएँ – आसान, उपयोगी और बिना रजिस्ट्रेशन!
+      </p>
+    </div>
+    <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
@@ -76,13 +85,14 @@
       </div>
     </div>
     <!-- IMPACT MESSAGE & LIST FOR PDF - hidden by default -->
-<div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-  <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
-    अपनी और अपने परिवार की सेहत का ध्यान रखें! प्यार से पकाएं और हर भोजन का आनंद लें।
-  </h2>
-  <div id="pdf-list" style="margin-top:30px;"></div>
-</div>
+    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
+      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
+        अपनी और अपने परिवार की सेहत का ध्यान रखें! प्यार से पकाएं और हर भोजन का आनंद लें।
+      </h2>
+      <div id="pdf-list" style="margin-top:30px;"></div>
+    </div>
 
+    <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
         <h5 data-i18n="shoppingList">खरीदारी की सूची</h5>
@@ -109,18 +119,17 @@
     <!-- ईमेल सत्यापन (अनलिमिटेड PDF) -->
     <div class="card mb-4 text-center" id="access-card">
       <div class="card-header bg-primary text-white">
-        <span data-i18n="unlock">पहले ही भुगतान किया? असीमित PDF डाउनलोड अनलॉक करें</span>
+        <span data-i18n="banner.unlock">पहले ही भुगतान किया? असीमित PDF डाउनलोड अनलॉक करें</span>
       </div>
       <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" placeholder="अपना भुगतान ईमेल दर्ज करें">
-        <button id="verifyBtn" class="btn btn-success">ईमेल सत्यापित करें</button>
+        <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email" placeholder="अपना भुगतान ईमेल दर्ज करें">
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">ईमेल सत्यापित करें</button>
         <div id="result" class="mt-3"></div>
       </div>
     </div>
-  </div>
 
-  <!-- App Logic -->
-  <script src="/js/app.js"></script>
+    <!-- App Logic -->
+    <script src="/js/app.js"></script>
 
   <!-- Supabase Email Verification Script -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>

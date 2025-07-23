@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">Weekly Meal Planner – Shopping List & Free PDF</title>
-  <meta name="description" content="Weekly Meal Planner in English. Easily create your meal plan, generate a shopping list and download as PDF, all for free – simple and online." />
-  <meta name="keywords" content="meal planner, shopping list, weekly meal planner, menu organizer, family meal plan, free meal planner, meal prep, weekly menu PDF" />
-  <link rel="canonical" href="https://meal-planner.ro/en/" />
-  
+  <title>Weekly Meal Planner & Shopping List – Free PDF</title>
+  <meta name="description" content="Create your weekly meal plan, shopping list, and download everything as PDF – fast, online, free, in any language!">
+  <meta name="keywords" content="meal planner, shopping list, weekly menu, pdf meal planner, meal plan kids, menu organizer, meal planner free" />
 
-  <!-- hreflang -->
+  <!-- canonical & alternate versions -->
+  <link rel="canonical" href="https://meal-planner.ro/en/" />
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
@@ -23,18 +22,22 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+  <!-- OG & Twitter for sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Weekly Meal Planner" />
-  <meta property="og:description" content="Create your weekly meal plan and shopping list, download your plan as PDF. 100% free, no registration!" />
+  <meta property="og:title" content="Weekly Meal Planner & Shopping List – Free PDF" />
+  <meta property="og:description" content="Create your weekly meal plan, shopping list and download as PDF!" />
   <meta property="og:url" content="https://meal-planner.ro/en/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Weekly Meal Planner" />
-  <meta name="twitter:description" content="Easily create your meal plan and shopping list, PDF download free and online." />
+  <meta name="twitter:title" content="Weekly Meal Planner & Shopping List – Free PDF" />
+  <meta name="twitter:description" content="Create your weekly meal plan, shopping list and download as PDF!" />
   <meta name="twitter:url" content="https://meal-planner.ro/en/" />
 
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <!-- Favicon & Touch icons -->
+  <link rel="icon" type="image/png" href="/images/MP-favicon.png" />
+  <link rel="apple-touch-icon" href="/images/MP-favicon.png">
+  <meta name="msapplication-TileImage" content="/images/MP-favicon.png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -54,16 +57,16 @@
       </div>
     </div>
     <div class="seo-paragraph" id="seo-paragraph">
-  <p>
-    <strong>Weekly Meal Planner Online</strong> – Plan your entire week's menu, save time and money, and enjoy healthy meals with your family. Our free app lets you organize daily recipes, automatically generate a shopping list, and download everything as a PDF.
-  </p>
-  <p>
-    Whether you want to meal prep for your kids, follow a balanced diet, or just be more efficient with your budget, this planner helps you stay organized and avoid food waste. Fast, online, and available in any language you choose!
-  </p>
-  <p>
-    Try our free weekly meal planner – simple, useful, and no registration needed!
-  </p>
-</div>
+      <p>
+        <strong>Online Weekly Meal Planner</strong> – Create your menu for the whole week, save time and money, and enjoy healthy family meals. Our free app lets you write down what you cook daily, automatically generates the shopping list and lets you download everything as PDF.
+      </p>
+      <p>
+        Whether you want to plan meals for kids, follow a balanced diet, or just manage your budget better, this planner helps you stick to the plan and avoid food waste. Everything is fast, online, and you can use the app in any language!
+      </p>
+      <p>
+        Try the free weekly meal planner – simple, useful, and no account needed!
+      </p>
+    </div>
 
     <!-- Planner Table -->
     <div class="card mb-4">
@@ -80,13 +83,14 @@
         </table>
       </div>
     </div>
-    <!-- IMPACT MESSAGE & PDF LIST SECTION - hidden by default -->
-<div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-  <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
-    Take care of your health and your loved ones. Cook with joy and enjoy every meal together!
-  </h2>
-  <div id="pdf-list" style="margin-top:30px;"></div>
-</div>
+
+    <!-- MESAJ IMPACT ȘI LISTA PENTRU PDF - hidden by default -->
+    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
+      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
+        Take care of your health and your family’s! Cook with love and enjoy every meal!
+      </h2>
+      <div id="pdf-list" style="margin-top:30px;"></div>
+    </div>
 
     <!-- Shopping List -->
     <div class="card mb-4">
@@ -102,10 +106,10 @@
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">Generate PDF</span>
       </button>
-      <a href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
+      <a id="pay-btn"
+         href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
          target="_blank"
-         class="btn btn-warning"
-         id="pay-btn">
+         class="btn btn-warning">
         <i class="bi bi-cart-check-fill"></i>
         <span data-i18n="btn.pay">Pay & Download</span>
       </a>
@@ -115,16 +119,15 @@
     <!-- Email verification for PDF unlimited access -->
     <div class="card mb-4 text-center" id="access-card">
       <div class="card-header bg-primary text-white">
-        <span data-i18n="unlock">Already paid? Unlock unlimited PDF downloads</span>
+        <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
       </div>
       <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" placeholder="Enter your payment email">
-        <button id="verifyBtn" class="btn btn-success">Verify Email</button>
+        <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email" placeholder="Enter your payment email">
+        <button id="verifyBtn" class="btn btn-success"><span data-i18n="btn.verify">Verify Email</span></button>
         <div id="result" class="mt-3"></div>
       </div>
     </div>
   </div>
-
   <!-- App Logic -->
   <script src="/js/app.js"></script>
 
