@@ -385,6 +385,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!i18n[lang]) lang = 'ro';
   langSwitcher.value = lang;
 
+  langSwitcher.addEventListener('change', function() {
+  lang = langSwitcher.value;
+  localStorage.setItem('lastLang', lang);
+  applyTranslations();
+});
+
   // 7. Tabelul planner și traduceri
   function renderTable() {
     const tbody = document.getElementById('plan-table');
