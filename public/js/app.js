@@ -229,10 +229,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.title = i18n[lang].title;
     renderTable();
-    if (generateBtn)
-      generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + i18n[lang]["btn.generate"];
-    if (buyBtn)
-      buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + i18n[lang]["btn.pay"];
+   // 4. Butoane
+  if (generateBtn)
+    generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + i18n[lang]["btn.generate"];
+  if (buyBtn)
+    buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + i18n[lang]["btn.pay"];
+
+  // 5. Paragraful SEO (acesta e nou!)
+  const seoContainer = document.getElementById('seo-paragraph');
+  if (seoContainer && seoParagraphs[lang]) {
+    seoContainer.innerHTML = seoParagraphs[lang];
+  }
   }
   applyTranslations();
 
@@ -242,6 +249,129 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTranslations();
     updateButtonState();
   });
+  const seoParagraphs = {
+  ro: `
+    <p>
+      <strong>Aplică organizarea meselor zilnice cu planificatorul nostru săptămânal!</strong> Planifică meniul fiecărei zile, adaugă rețete și ingrediente, iar la final obții automat lista de cumpărături pentru întreaga săptămână, gata de tipărit sau salvat PDF.
+    </p>
+    <p>
+      Instrumentul online este ideal pentru familii ocupate, persoane care țin dietă, sau oricine dorește să economisească timp și să reducă risipa alimentară. Gătești mai eficient, faci cumpărături mai rapid și controlezi mai ușor bugetul casei.
+    </p>
+    <p>
+      Folosește plannerul gratuit, în limba română – nu necesită cont, fără reclame, direct din browser!
+    </p>
+  `,
+  ar: `
+    <p>
+      <strong>مخطط وجبات أسبوعي عبر الإنترنت</strong> – أنشئ خطة وجباتك للأسبوع بالكامل، ووفر الوقت والمال، واستمتع بوجبات صحية مع عائلتك. تطبيقنا المجاني يتيح لك تسجيل وجباتك اليومية، وإنشاء قائمة تسوق تلقائياً، وتحميل كل ذلك بصيغة PDF.
+    </p>
+    <p>
+      سواء كنت ترغب في تنظيم وجبات الأطفال، أو اتباع نظام غذائي متوازن، أو فقط ترغب في إدارة ميزانيتك بشكل أفضل، هذا المخطط يساعدك على الالتزام بالخطة وتجنب هدر الطعام. كل شيء سريع وسهل الاستخدام عبر الإنترنت، ويمكنك استخدام التطبيق بأي لغة تريدها!
+    </p>
+    <p>
+      جرب مخطط الوجبات الأسبوعي المجاني – بسيط، مفيد، ولا حاجة لحساب!
+    </p>
+  `,
+  de: `
+    <p>
+      <strong>Wöchentlicher Essensplaner online</strong> – Erstelle deinen Menüplan für die ganze Woche, spare Zeit und Geld und genieße gesunde Mahlzeiten mit der Familie. Unsere kostenlose App hilft dir dabei, deine täglichen Gerichte festzuhalten, automatisch eine Einkaufsliste zu generieren und alles als PDF herunterzuladen.
+    </p>
+    <p>
+      Egal ob du die Mahlzeiten für Kinder organisieren möchtest, einer ausgewogenen Ernährung folgen willst oder einfach effizienter mit deinem Budget umgehen möchtest – dieser Planer hilft dir, am Plan zu bleiben und Lebensmittelverschwendung zu vermeiden. Alles ist schnell, online und du kannst die App in jeder gewünschten Sprache nutzen!
+    </p>
+    <p>
+      Probiere den kostenlosen wöchentlichen Essensplaner aus – einfach, praktisch und ohne Anmeldung!
+    </p>
+  `,
+  en: `
+    <p>
+      <strong>Weekly Meal Planner Online</strong> – Plan your entire week's menu, save time and money, and enjoy healthy meals with your family. Our free app lets you organize daily recipes, automatically generate a shopping list, and download everything as a PDF.
+    </p>
+    <p>
+      Whether you want to meal prep for your kids, follow a balanced diet, or just be more efficient with your budget, this planner helps you stay organized and avoid food waste. Fast, online, and available in any language you choose!
+    </p>
+    <p>
+      Try our free weekly meal planner – simple, useful, and no registration needed!
+    </p>
+  `,
+  es: `
+    <p>
+      <strong>Planificador semanal de comidas online</strong> – Organiza el menú de toda la semana, ahorra tiempo y dinero, y disfruta de comidas saludables en familia. Nuestra aplicación gratuita te permite anotar lo que cocinas cada día, generar automáticamente la lista de la compra y descargar todo en PDF.
+    </p>
+    <p>
+      Ya sea que quieras planificar comidas para los niños, seguir una dieta equilibrada o simplemente gestionar mejor tu presupuesto, este planificador te ayuda a cumplir tu plan y evitar el desperdicio de alimentos. ¡Todo es rápido, online y puedes usar la app en cualquier idioma que desees!
+    </p>
+    <p>
+      ¡Prueba el planificador semanal de comidas gratis – sencillo, útil y sin registro!
+    </p>
+  `,
+  fr: `
+    <p>
+      <strong>Planificateur de repas hebdomadaire en ligne</strong> – Créez votre menu pour toute la semaine, gagnez du temps et de l’argent, et profitez de repas sains en famille. Notre application gratuite vous permet de noter vos plats chaque jour, de générer automatiquement la liste de courses et de tout télécharger au format PDF.
+    </p>
+    <p>
+      Que vous souhaitiez organiser les repas pour les enfants, suivre un régime équilibré ou simplement gérer votre budget plus efficacement, ce planificateur vous aide à respecter votre planning et à éviter le gaspillage alimentaire. Tout est rapide, en ligne, et vous pouvez utiliser l’application dans la langue de votre choix !
+    </p>
+    <p>
+      Essayez le planificateur de repas hebdomadaire gratuit – simple, utile et sans inscription !
+    </p>
+  `,
+  hi: `
+    <p>
+      <strong>साप्ताहिक भोजन योजना ऑनलाइन</strong> – पूरे सप्ताह का मेनू बनाएं, समय और पैसे बचाएं और परिवार के साथ सेहतमंद भोजन का आनंद लें। हमारी फ्री ऐप से आप रोज़ाना का भोजन प्लान कर सकते हैं, शॉपिंग लिस्ट अपने आप बना सकते हैं और सब कुछ PDF में डाउनलोड कर सकते हैं।
+    </p>
+    <p>
+      चाहे आप बच्चों के लिए भोजन प्लान करना चाहते हों, संतुलित डाइट फॉलो करना चाहते हों या बजट को बेहतर बनाना चाहते हों – यह प्लानर आपको संगठित रहने और भोजन की बर्बादी रोकने में मदद करेगा। सब कुछ तेज़, ऑनलाइन और किसी भी भाषा में उपलब्ध!
+    </p>
+    <p>
+      मुफ्त साप्ताहिक भोजन योजना आज़माएँ – आसान, उपयोगी और बिना रजिस्ट्रेशन!
+    </p>
+  `,
+  ja: `
+    <p>
+      <strong>週間ミールプランナー（オンライン）</strong> – 1週間分のメニューを計画し、時間とお金を節約しながら家族で健康的な食事を楽しみましょう。無料アプリで毎日の料理を記録し、自動的に買い物リストを作成して、すべてをPDFでダウンロードできます。
+    </p>
+    <p>
+      子どものための食事管理、バランスの良い食事、または予算管理をしたい方にも、このプランナーがあれば計画的に進められ、食品ロスも防げます。高速・オンラインで、好きな言語で使えます！
+    </p>
+    <p>
+      無料の週間ミールプランナーをぜひお試しください – シンプルで便利、登録不要です！
+    </p>
+  `,
+  pt: `
+    <p>
+      <strong>Planejador semanal de refeições online</strong> – Monte o cardápio da semana inteira, economize tempo e dinheiro, e aproveite refeições saudáveis com a família. Nosso aplicativo gratuito permite anotar o que você vai cozinhar, gerar a lista de compras automaticamente e baixar tudo em PDF.
+    </p>
+    <p>
+      Seja para organizar as refeições das crianças, seguir uma dieta equilibrada ou controlar melhor o orçamento, este planejador ajuda você a seguir o plano e evitar desperdício de alimentos. Tudo é rápido, online e disponível em qualquer idioma!
+    </p>
+    <p>
+      Experimente o planejador semanal de refeições grátis – simples, útil e sem cadastro!
+    </p>
+  `,
+  ru: `
+    <p>
+      <strong>Еженедельный планировщик питания онлайн</strong> – Составляйте меню на всю неделю, экономьте время и деньги, наслаждайтесь полезными семейными обедами и ужинами. Наше бесплатное приложение позволит вам записывать блюда на каждый день, автоматически создавать список покупок и скачивать всё в PDF.
+    </p>
+    <p>
+      Хотите планировать питание для детей, придерживаться сбалансированной диеты или просто эффективно расходовать бюджет – этот планировщик поможет вам следовать плану и избежать пищевых отходов. Всё быстро, онлайн, и вы можете выбрать любой язык!
+    </p>
+    <p>
+      Попробуйте бесплатный еженедельный планировщик питания – просто, удобно и без регистрации!
+    </p>
+  `,
+  zh: `
+    <p>
+      <strong>每周膳食计划在线工具</strong> – 制定一整周的菜单，节省时间和金钱，与家人一起享受健康美味的餐食。我们的免费应用让你记录每天的食谱，自动生成购物清单，并支持一键下载PDF。
+    </p>
+    <p>
+      无论是为孩子安排饮食、坚持均衡营养，还是提升家庭预算效率，这款计划工具都能帮你更好地坚持计划，减少食物浪费。一切都很快捷、在线，并可支持多种语言！
+    </p>
+    <p>
+      立即体验免费的每周膳食计划工具 – 简单、实用、无需注册！
+    </p>
+  `
+};
 
   // 8. Limita PDF-urilor la 3 / 24h
   let pdfCount = +localStorage.getItem('pdfCount') || 0;
