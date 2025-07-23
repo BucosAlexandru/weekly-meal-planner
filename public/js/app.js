@@ -389,6 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
   lang = langSwitcher.value;
   localStorage.setItem('lastLang', lang);
   applyTranslations();
+  updateButtonState();
 });
 
   // 7. Tabelul planner și traduceri
