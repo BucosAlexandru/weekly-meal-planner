@@ -17,162 +17,217 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Dicționar i18n (limbile)
-  const i18n = {
-    ro: {
-      weekdays: ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
-      title: "Planificator Mese Săptămânal",
-      header: "Planificator Mese & Lista de Cumpărături",
-      "col.day": "Ziua",
-      "col.lunch": "Prânz (ingrediente)",
-      "col.dinner": "Cină (ingrediente)",
-      shoppingList: "Lista de cumpărături",
-      "btn.generate": "Generează PDF",
-      "btn.pay": "Plătește & Descarcă",
-      maxed: "Ai atins limita maximă de PDF-uri gratuite.<br>Plătește pentru a debloca descărcarea nelimitată!",
-      placeholderL: "ex: cartofi, ceapă",
-      placeholderD: "ex: pui, orez"
-    },
-    en: {
-      weekdays: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-      title: "Weekly Meal Planner",
-      header: "Weekly Meal Planner & Shopping List",
-      "col.day": "Day",
-      "col.lunch": "Lunch (ingredients)",
-      "col.dinner": "Dinner (ingredients)",
-      shoppingList: "Shopping List",
-      "btn.generate": "Generate PDF",
-      "btn.pay": "Pay & Download",
-      maxed: "You have reached the maximum number of free PDFs.<br>Pay to unlock unlimited downloads!",
-      placeholderL: "e.g. potatoes, onion",
-      placeholderD: "e.g. chicken, rice"
-    },
-    es: {
-      weekdays: ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
-      title: "Planificador Semanal de Comidas",
-      header: "Planificador de Comidas y Lista de Compras",
-      "col.day": "Día",
-      "col.lunch": "Almuerzo (ingredientes)",
-      "col.dinner": "Cena (ingredientes)",
-      shoppingList: "Lista de Compras",
-      "btn.generate": "Generar PDF",
-      "btn.pay": "Pagar y Descargar",
-      maxed: "¡Has alcanzado el máximo de PDFs gratuitos!<br>¡Paga para descargas ilimitadas!",
-      placeholderL: "ej: papas, cebolla",
-      placeholderD: "ej: pollo, arroz"
-    },
-    fr: {
-      weekdays: ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
-      title: "Planificateur de Repas Hebdomadaire",
-      header: "Planificateur de Repas & Liste de Courses",
-      "col.day": "Jour",
-      "col.lunch": "Déjeuner (ingrédients)",
-      "col.dinner": "Dîner (ingrédients)",
-      shoppingList: "Liste de Courses",
-      "btn.generate": "Générer PDF",
-      "btn.pay": "Payer & Télécharger",
-      maxed: "Vous avez atteint la limite de PDFs gratuits.<br>Payer pour débloquer les téléchargements illimités !",
-      placeholderL: "ex : pommes de terre, oignon",
-      placeholderD: "ex : poulet, riz"
-    },
-    ru: {
-      weekdays: ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
-      title: "Еженедельный планировщик питания",
-      header: "Планировщик питания & Список покупок",
-      "col.day": "День",
-      "col.lunch": "Обед (ингредиенты)",
-      "col.dinner": "Ужин (ингредиенты)",
-      shoppingList: "Список покупок",
-      "btn.generate": "Создать PDF",
-      "btn.pay": "Оплатить & Скачать",
-      maxed: "Достигнут лимит бесплатных PDF.<br>Оплатите, чтобы разблокировать неограниченные загрузки!",
-      placeholderL: "напр.: картофель, лук",
-      placeholderD: "напр.: курица, рис"
-    },
-    zh: {
-      weekdays: ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],
-      title: "每周用餐计划器",
-      header: "用餐计划器 & 购物清单",
-      "col.day": "日期",
-      "col.lunch": "午餐（食材）",
-      "col.dinner": "晚餐（食材）",
-      shoppingList: "购物清单",
-      "btn.generate": "生成 PDF",
-      "btn.pay": "支付并下载",
-      maxed: "已达到免费PDF上限。<br>付费可无限下载！",
-      placeholderL: "例如：土豆，洋葱",
-      placeholderD: "例如：鸡肉，米饭"
-    },
-    ja: {
-      weekdays: ['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
-      title: "週間ミールプランナー",
-      header: "ミールプランナー＆買い物リスト",
-      "col.day": "日付",
-      "col.lunch": "昼食（材料）",
-      "col.dinner": "夕食（材料）",
-      shoppingList: "買い物リスト",
-      "btn.generate": "PDFを作成",
-      "btn.pay": "支払ってダウンロード",
-      maxed: "無料PDFの上限に達しました。<br>無制限ダウンロードは有料！",
-      placeholderL: "例：ジャガイモ、玉ねぎ",
-      placeholderD: "例：鶏肉、ご飯"
-    },
-    pt: {
-      weekdays: ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'],
-      title: "Planejador Semanal de Refeições",
-      header: "Planejador de Refeições & Lista de Compras",
-      "col.day": "Dia",
-      "col.lunch": "Almoço (ingredientes)",
-      "col.dinner": "Jantar (ingredientes)",
-      shoppingList: "Lista de Compras",
-      "btn.generate": "Gerar PDF",
-      "btn.pay": "Pagar & Baixar",
-      maxed: "Você atingiu o limite de PDFs gratuitos.<br>Pague para desbloquear downloads ilimitados!",
-      placeholderL: "ex: batata, cebola",
-      placeholderD: "ex: frango, arroz"
-    },
-    de: {
-      weekdays: ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
-      title: "Wöchentlicher Essensplaner",
-      header: "Essensplaner & Einkaufsliste",
-      "col.day": "Tag",
-      "col.lunch": "Mittagessen (Zutaten)",
-      "col.dinner": "Abendessen (Zutaten)",
-      shoppingList: "Einkaufsliste",
-      "btn.generate": "PDF erstellen",
-      "btn.pay": "Bezahlen & Herunterladen",
-      maxed: "Du hast das Limit kostenloser PDFs erreicht.<br>Zahle für unbegrenzte Downloads!",
-      placeholderL: "z.B.: Kartoffeln, Zwiebeln",
-      placeholderD: "z.B.: Hähnchen, Reis"
-    },
-    ar: {
-      weekdays: ['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
-      title: "مخطط وجبات أسبوعي",
-      header: "مخطط الوجبات وقائمة التسوق",
-      "col.day": "اليوم",
-      "col.lunch": "الغداء (المكونات)",
-      "col.dinner": "العشاء (المكونات)",
-      shoppingList: "قائمة التسوق",
-      "btn.generate": "إنشاء PDF",
-      "btn.pay": "ادفع وحمّل",
-      maxed: "لقد وصلت إلى الحد الأقصى من ملفات PDF المجانية.<br>ادفع لتحميل غير محدود!",
-      placeholderL: "مثال: بطاطس، بصل",
-      placeholderD: "مثال: دجاج، أرز"
-    },
-    hi: {
-      weekdays: ['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
-      title: "साप्ताहिक भोजन योजना",
-      header: "भोजन योजनाकार और खरीदारी सूची",
-      "col.day": "दिन",
-      "col.lunch": "दोपहर का भोजन (सामग्री)",
-      "col.dinner": "रात का खाना (सामग्री)",
-      shoppingList: "खरीदारी की सूची",
-      "btn.generate": "PDF बनाएँ",
-      "btn.pay": "भुगतान और डाउनलोड",
-      maxed: "आपने मुफ्त PDF की अधिकतम सीमा तक पहुँच गए हैं।<br>अनलिमिटेड डाउनलोड के लिए भुगतान करें!",
-      placeholderL: "उदा: आलू, प्याज",
-      placeholderD: "उदा: चिकन, चावल"
-    }
-  };
+ const i18n = {
+  ro: {
+    weekdays: ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
+    title: "Planificator Mese Săptămânal",
+    header: "Planificator Mese & Lista de Cumpărături",
+    "col.day": "Ziua",
+    "col.lunch": "Prânz (ingrediente)",
+    "col.dinner": "Cină (ingrediente)",
+    shoppingList: "Lista de cumpărături",
+    "btn.generate": "Generează PDF",
+    "btn.pay": "Plătește & Descarcă",
+    maxed: "Ai atins limita maximă de PDF-uri gratuite.<br>Plătește pentru a debloca descărcarea nelimitată!",
+    placeholderL: "ex: cartofi, ceapă",
+    placeholderD: "ex: pui, orez",
+    "banner.unlock": "Ai plătit deja? Deblochează descărcări nelimitate PDF",
+    "input.email": "Introdu emailul de plată",
+    "btn.verify": "Verifică Email",
+    "btn.download": "Descarcă PDF",
+    "access.granted": "✅ Ai acces! Poți descărca PDF-ul nelimitat:"
+  },
+  en: {
+    weekdays: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    title: "Weekly Meal Planner",
+    header: "Weekly Meal Planner & Shopping List",
+    "col.day": "Day",
+    "col.lunch": "Lunch (ingredients)",
+    "col.dinner": "Dinner (ingredients)",
+    shoppingList: "Shopping List",
+    "btn.generate": "Generate PDF",
+    "btn.pay": "Pay & Download",
+    maxed: "You have reached the maximum number of free PDFs.<br>Pay to unlock unlimited downloads!",
+    placeholderL: "e.g. potatoes, onion",
+    placeholderD: "e.g. chicken, rice",
+    "banner.unlock": "Already paid? Unlock unlimited PDF downloads",
+    "input.email": "Enter your payment email",
+    "btn.verify": "Verify Email",
+    "btn.download": "Download PDF",
+    "access.granted": "✅ Access granted! You can download unlimited PDFs:"
+  },
+  es: {
+    weekdays: ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
+    title: "Planificador Semanal de Comidas",
+    header: "Planificador de Comidas y Lista de Compras",
+    "col.day": "Día",
+    "col.lunch": "Almuerzo (ingredientes)",
+    "col.dinner": "Cena (ingredientes)",
+    shoppingList: "Lista de Compras",
+    "btn.generate": "Generar PDF",
+    "btn.pay": "Pagar y Descargar",
+    maxed: "¡Has alcanzado el máximo de PDFs gratuitos!<br>¡Paga para descargas ilimitadas!",
+    placeholderL: "ej: papas, cebolla",
+    placeholderD: "ej: pollo, arroz",
+    "banner.unlock": "¿Ya pagaste? ¡Desbloquea descargas ilimitadas de PDF!",
+    "input.email": "Ingresa tu email de pago",
+    "btn.verify": "Verificar Email",
+    "btn.download": "Descargar PDF",
+    "access.granted": "✅ ¡Acceso concedido! Puedes descargar PDFs ilimitados:"
+  },
+  fr: {
+    weekdays: ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
+    title: "Planificateur de Repas Hebdomadaire",
+    header: "Planificateur de Repas & Liste de Courses",
+    "col.day": "Jour",
+    "col.lunch": "Déjeuner (ingrédients)",
+    "col.dinner": "Dîner (ingrédients)",
+    shoppingList: "Liste de Courses",
+    "btn.generate": "Générer PDF",
+    "btn.pay": "Payer & Télécharger",
+    maxed: "Vous avez atteint la limite de PDFs gratuits.<br>Payer pour débloquer les téléchargements illimités !",
+    placeholderL: "ex : pommes de terre, oignon",
+    placeholderD: "ex : poulet, riz",
+    "banner.unlock": "Déjà payé ? Débloquez les téléchargements PDF illimités",
+    "input.email": "Entrez votre email de paiement",
+    "btn.verify": "Vérifier l'email",
+    "btn.download": "Télécharger le PDF",
+    "access.granted": "✅ Accès accordé ! Vous pouvez télécharger des PDF illimités :"
+  },
+  ru: {
+    weekdays: ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
+    title: "Еженедельный планировщик питания",
+    header: "Планировщик питания & Список покупок",
+    "col.day": "День",
+    "col.lunch": "Обед (ингредиенты)",
+    "col.dinner": "Ужин (ингредиенты)",
+    shoppingList: "Список покупок",
+    "btn.generate": "Создать PDF",
+    "btn.pay": "Оплатить & Скачать",
+    maxed: "Достигнут лимит бесплатных PDF.<br>Оплатите, чтобы разблокировать неограниченные загрузки!",
+    placeholderL: "напр.: картофель, лук",
+    placeholderD: "напр.: курица, рис",
+    "banner.unlock": "Уже оплатили? Откройте неограниченные загрузки PDF",
+    "input.email": "Введите ваш платежный email",
+    "btn.verify": "Проверить Email",
+    "btn.download": "Скачать PDF",
+    "access.granted": "✅ Доступ предоставлен! Вы можете скачивать неограниченно PDF:"
+  },
+  zh: {
+    weekdays: ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],
+    title: "每周用餐计划器",
+    header: "用餐计划器 & 购物清单",
+    "col.day": "日期",
+    "col.lunch": "午餐（食材）",
+    "col.dinner": "晚餐（食材）",
+    shoppingList: "购物清单",
+    "btn.generate": "生成 PDF",
+    "btn.pay": "支付并下载",
+    maxed: "已达到免费PDF上限。<br>付费可无限下载！",
+    placeholderL: "例如：土豆，洋葱",
+    placeholderD: "例如：鸡肉，米饭",
+    "banner.unlock": "已经付款？解锁无限PDF下载",
+    "input.email": "请输入您的付款邮箱",
+    "btn.verify": "验证邮箱",
+    "btn.download": "下载 PDF",
+    "access.granted": "✅ 已授权！你可以无限下载PDF："
+  },
+  ja: {
+    weekdays: ['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
+    title: "週間ミールプランナー",
+    header: "ミールプランナー＆買い物リスト",
+    "col.day": "日付",
+    "col.lunch": "昼食（材料）",
+    "col.dinner": "夕食（材料）",
+    shoppingList: "買い物リスト",
+    "btn.generate": "PDFを作成",
+    "btn.pay": "支払ってダウンロード",
+    maxed: "無料PDFの上限に達しました。<br>無制限ダウンロードは有料！",
+    placeholderL: "例：ジャガイモ、玉ねぎ",
+    placeholderD: "例：鶏肉、ご飯",
+    "banner.unlock": "すでに支払いましたか？無制限PDFダウンロードを解除",
+    "input.email": "支払いメールを入力してください",
+    "btn.verify": "メールを確認する",
+    "btn.download": "PDFをダウンロード",
+    "access.granted": "✅ アクセス許可！無制限にPDFをダウンロードできます："
+  },
+  pt: {
+    weekdays: ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'],
+    title: "Planejador Semanal de Refeições",
+    header: "Planejador de Refeições & Lista de Compras",
+    "col.day": "Dia",
+    "col.lunch": "Almoço (ingredientes)",
+    "col.dinner": "Jantar (ingredientes)",
+    shoppingList: "Lista de Compras",
+    "btn.generate": "Gerar PDF",
+    "btn.pay": "Pagar & Baixar",
+    maxed: "Você atingiu o limite de PDFs gratuitos.<br>Pague para desbloquear downloads ilimitados!",
+    placeholderL: "ex: batata, cebola",
+    placeholderD: "ex: frango, arroz",
+    "banner.unlock": "Já pagou? Desbloqueie downloads ilimitados de PDF",
+    "input.email": "Digite seu e-mail de pagamento",
+    "btn.verify": "Verificar Email",
+    "btn.download": "Baixar PDF",
+    "access.granted": "✅ Acesso concedido! Você pode baixar PDFs ilimitados:"
+  },
+  de: {
+    weekdays: ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
+    title: "Wöchentlicher Essensplaner",
+    header: "Essensplaner & Einkaufsliste",
+    "col.day": "Tag",
+    "col.lunch": "Mittagessen (Zutaten)",
+    "col.dinner": "Abendessen (Zutaten)",
+    shoppingList: "Einkaufsliste",
+    "btn.generate": "PDF erstellen",
+    "btn.pay": "Bezahlen & Herunterladen",
+    maxed: "Du hast das Limit kostenloser PDFs erreicht.<br>Zahle für unbegrenzte Downloads!",
+    placeholderL: "z.B.: Kartoffeln, Zwiebeln",
+    placeholderD: "z.B.: Hähnchen, Reis",
+    "banner.unlock": "Schon bezahlt? Entsperre unbegrenzte PDF-Downloads",
+    "input.email": "Geben Sie Ihre Zahlungs-E-Mail ein",
+    "btn.verify": "E-Mail überprüfen",
+    "btn.download": "PDF herunterladen",
+    "access.granted": "✅ Zugang gewährt! Sie können unbegrenzt PDFs herunterladen:"
+  },
+  ar: {
+    weekdays: ['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
+    title: "مخطط وجبات أسبوعي",
+    header: "مخطط الوجبات وقائمة التسوق",
+    "col.day": "اليوم",
+    "col.lunch": "الغداء (المكونات)",
+    "col.dinner": "العشاء (المكونات)",
+    shoppingList: "قائمة التسوق",
+    "btn.generate": "إنشاء PDF",
+    "btn.pay": "ادفع وحمّل",
+    maxed: "لقد وصلت إلى الحد الأقصى من ملفات PDF المجانية.<br>ادفع لتحميل غير محدود!",
+    placeholderL: "مثال: بطاطس، بصل",
+    placeholderD: "مثال: دجاج، أرز",
+    "banner.unlock": "هل دفعت بالفعل؟ افتح تنزيلات PDF غير المحدودة",
+    "input.email": "أدخل بريدك الإلكتروني للدفع",
+    "btn.verify": "تحقق من البريد الإلكتروني",
+    "btn.download": "تحميل PDF",
+    "access.granted": "✅ لديك حق الوصول! يمكنك تحميل PDF بلا حدود:"
+  },
+  hi: {
+    weekdays: ['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
+    title: "साप्ताहिक भोजन योजना",
+    header: "भोजन योजनाकार और खरीदारी सूची",
+    "col.day": "दिन",
+    "col.lunch": "दोपहर का भोजन (सामग्री)",
+    "col.dinner": "रात का खाना (सामग्री)",
+    shoppingList: "खरीदारी की सूची",
+    "btn.generate": "PDF बनाएँ",
+    "btn.pay": "भुगतान और डाउनलोड",
+    maxed: "आपने मुफ्त PDF की अधिकतम सीमा तक पहुँच गए हैं।<br>अनलिमिटेड डाउनलोड के लिए भुगतान करें!",
+    placeholderL: "उदा: आलू, प्याज",
+    placeholderD: "उदा: चिकन, चावल",
+    "banner.unlock": "क्या आपने भुगतान कर दिया है? असीमित PDF डाउनलोड अनलॉक करें",
+    "input.email": "अपना भुगतान ईमेल दर्ज करें",
+    "btn.verify": "ईमेल सत्यापित करें",
+    "btn.download": "PDF डाउनलोड करें",
+    "access.granted": "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:"
+  }
+};
 
   // 4. Mesaj impact pentru PDF (personalizabil pe limbă)
   const pdfMessages = {
@@ -345,33 +400,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function applyTranslations() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      el.innerHTML = i18n[lang][key] || el.innerHTML;
-    });
-    document.title = i18n[lang].title;
-    renderTable();
-   // 4. Butoane
+ function applyTranslations() {
+  // 1. Texte cu data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
+  });
+
+  // 2. Placeholder pentru inputuri cu data-i18n-placeholder
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (i18n[lang][key]) el.placeholder = i18n[lang][key];
+  });
+
+  // 3. Buton „Descarcă PDF” după plată (dinamic)
+  const paidBtn = document.getElementById('paid-generate-pdf');
+  if (paidBtn) paidBtn.innerHTML = i18n[lang]["btn.download"] || "Descarcă PDF";
+
+  // 4. Titlul paginii
+  document.title = i18n[lang].title;
+
+  // 5. Tabelul planner
+  renderTable();
+
+  // 6. Butoane generate & pay
   if (generateBtn)
     generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + i18n[lang]["btn.generate"];
   if (buyBtn)
     buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + i18n[lang]["btn.pay"];
 
-  // 5. Paragraful SEO (acesta e nou!)
+  // 7. Paragraful SEO (acesta e nou!)
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
     seoContainer.innerHTML = seoParagraphs[lang];
   }
-  }
-  applyTranslations();
+}
 
-  langSwitcher.addEventListener('change', e => {
-    lang = e.target.value;
-    localStorage.setItem('lastLang', lang);
-    applyTranslations();
-    updateButtonState();
-  });
   
 
   // 8. Limita PDF-urilor la 3 / 24h
