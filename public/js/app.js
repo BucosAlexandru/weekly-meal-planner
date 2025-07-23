@@ -195,60 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ru: "Русский", zh: "中文", ja: "日本語", pt: "Português",
     de: "Deutsch", ar: "العربية", hi: "हिन्दी"
   };
-  Object.keys(i18n).forEach(code => {
-    const opt = document.createElement('option');
-    opt.value = code;
-    opt.textContent = langNames[code];
-    langSwitcher.append(opt);
-  });
-
-  // 6. Limba implicită (păstrează și la refresh)
-  let lang = localStorage.getItem('lastLang') || navigator.language.slice(0,2);
-  if (!i18n[lang]) lang = 'ro';
-  langSwitcher.value = lang;
-
-  // 7. Tabelul planner și traduceri
-  function renderTable() {
-    const tbody = document.getElementById('plan-table');
-    tbody.innerHTML = '';
-    i18n[lang].weekdays.forEach((day, idx) => {
-      tbody.insertAdjacentHTML('beforeend', `
-        <tr class="planner-row">
-          <td><strong>${day}</strong></td>
-          <td><input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}"></td>
-          <td><input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}"></td>
-        </tr>
-      `);
-    });
-  }
-
-  function applyTranslations() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      el.innerHTML = i18n[lang][key] || el.innerHTML;
-    });
-    document.title = i18n[lang].title;
-    renderTable();
-   // 4. Butoane
-  if (generateBtn)
-    generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + i18n[lang]["btn.generate"];
-  if (buyBtn)
-    buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + i18n[lang]["btn.pay"];
-
-  // 5. Paragraful SEO (acesta e nou!)
-  const seoContainer = document.getElementById('seo-paragraph');
-  if (seoContainer && seoParagraphs[lang]) {
-    seoContainer.innerHTML = seoParagraphs[lang];
-  }
-  }
-  applyTranslations();
-
-  langSwitcher.addEventListener('change', e => {
-    lang = e.target.value;
-    localStorage.setItem('lastLang', lang);
-    applyTranslations();
-    updateButtonState();
-  });
   const seoParagraphs = {
   ro: `
     <p>
@@ -372,6 +318,61 @@ document.addEventListener('DOMContentLoaded', () => {
     </p>
   `
 };
+  Object.keys(i18n).forEach(code => {
+    const opt = document.createElement('option');
+    opt.value = code;
+    opt.textContent = langNames[code];
+    langSwitcher.append(opt);
+  });
+
+  // 6. Limba implicită (păstrează și la refresh)
+  let lang = localStorage.getItem('lastLang') || navigator.language.slice(0,2);
+  if (!i18n[lang]) lang = 'ro';
+  langSwitcher.value = lang;
+
+  // 7. Tabelul planner și traduceri
+  function renderTable() {
+    const tbody = document.getElementById('plan-table');
+    tbody.innerHTML = '';
+    i18n[lang].weekdays.forEach((day, idx) => {
+      tbody.insertAdjacentHTML('beforeend', `
+        <tr class="planner-row">
+          <td><strong>${day}</strong></td>
+          <td><input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}"></td>
+          <td><input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}"></td>
+        </tr>
+      `);
+    });
+  }
+
+  function applyTranslations() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      el.innerHTML = i18n[lang][key] || el.innerHTML;
+    });
+    document.title = i18n[lang].title;
+    renderTable();
+   // 4. Butoane
+  if (generateBtn)
+    generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + i18n[lang]["btn.generate"];
+  if (buyBtn)
+    buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + i18n[lang]["btn.pay"];
+
+  // 5. Paragraful SEO (acesta e nou!)
+  const seoContainer = document.getElementById('seo-paragraph');
+  if (seoContainer && seoParagraphs[lang]) {
+    seoContainer.innerHTML = seoParagraphs[lang];
+  }
+  }
+  applyTranslations();
+
+  langSwitcher.addEventListener('change', e => {
+    lang = e.target.value;
+    localStorage.setItem('lastLang', lang);
+    applyTranslations();
+    updateButtonState();
+  });
+  
 
   // 8. Limita PDF-urilor la 3 / 24h
   let pdfCount = +localStorage.getItem('pdfCount') || 0;
