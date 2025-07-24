@@ -183,6 +183,13 @@
         resultDiv.innerHTML = `<span class="text-danger">未找到访问权限。请先支付或检查邮箱。</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
+
   </script>
 </body>
 </html>

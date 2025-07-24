@@ -191,6 +191,13 @@
         resultDiv.innerHTML = `<span class="text-danger">Aucun accès pour cet email. Veuillez payer ou vérifier l'adresse.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
+
   </script>
 </body>
 </html>

@@ -189,6 +189,13 @@
         resultDiv.innerHTML = `<span class="text-danger">アクセスがありません。まずお支払いください、またはメールアドレスを確認してください。</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
+
   </script>
 </body>
 </html>

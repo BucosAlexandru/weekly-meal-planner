@@ -190,6 +190,12 @@
         resultDiv.innerHTML = `<span class="text-danger">لا يوجد وصول لهذا البريد. ادفع أولاً أو تحقق من البريد.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
   </script>
 </body>
 </html>

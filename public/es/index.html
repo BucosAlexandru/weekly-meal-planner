@@ -186,6 +186,12 @@
         resultDiv.innerHTML = `<span class="text-danger">No se encontró acceso para este correo. Paga primero o revisa tu dirección.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
   </script>
 </body>
 </html>

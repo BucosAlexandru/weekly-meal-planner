@@ -190,6 +190,13 @@
         resultDiv.innerHTML = `<span class="text-danger">Nenhum acesso para este e-mail. Faça o pagamento ou verifique o endereço.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
+
   </script>
 </body>
 </html>

@@ -189,6 +189,13 @@
         resultDiv.innerHTML = `<span class="text-danger">इस ईमेल के लिए कोई एक्सेस नहीं है। पहले भुगतान करें या पता जांचें।</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
+
   </script>
 </body>
 </html>

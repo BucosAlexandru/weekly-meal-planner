@@ -184,6 +184,13 @@
         resultDiv.innerHTML = `<span class="text-danger">Нет доступа для этого email. Сначала оплатите или проверьте адрес.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
+
   </script>
 </body>
 </html>

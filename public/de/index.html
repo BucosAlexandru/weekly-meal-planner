@@ -188,6 +188,12 @@
         resultDiv.innerHTML = `<span class="text-danger">Kein Zugang für diese E-Mail. Bitte bezahle zuerst oder prüfe die Adresse.</span>`;
       }
     }
+    document.getElementById('emailInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('verifyBtn').click();
+  }
+});
   </script>
 </body>
 </html>
