@@ -113,16 +113,16 @@
 
     <!-- Email verification for PDF unlimited access -->
     <div class="card mb-4 text-center" id="access-card">
-      <div class="card-header bg-primary text-white">
-        <span data-i18n="unlock">已付款？解锁无限 PDF 下载</span>
-      </div>
-      <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" placeholder="输入您的支付邮箱">
-        <button id="verifyBtn" class="btn btn-success">验证邮箱</button>
-        <div id="result" class="mt-3"></div>
-      </div>
-    </div>
+  <div class="card-header bg-primary text-white">
+    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
   </div>
+  <div class="card-body">
+    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
+    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
+    <div id="result" class="mt-3"></div>
+  </div>
+</div>
+
   <script src="/js/app.js"></script>
 
   <!-- Supabase Email Verification Script -->

@@ -113,17 +113,17 @@
     </div>
 
     <!-- Email verification for PDF unlimited access -->
-    <div class="card mb-4 text-center" id="access-card">
-      <div class="card-header bg-primary text-white">
-        <span data-i18n="unlock">Уже оплатили? Откройте неограниченные загрузки PDF</span>
-      </div>
-      <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" placeholder="Введите email для оплаты">
-        <button id="verifyBtn" class="btn btn-success">Проверить Email</button>
-        <div id="result" class="mt-3"></div>
-      </div>
-    </div>
+   <div class="card mb-4 text-center" id="access-card">
+  <div class="card-header bg-primary text-white">
+    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
   </div>
+  <div class="card-body">
+    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
+    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
+    <div id="result" class="mt-3"></div>
+  </div>
+</div>
+
   <script src="/js/app.js"></script>
 
   <!-- Supabase Email Verification Script -->

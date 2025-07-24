@@ -119,15 +119,16 @@
 
     <!-- Verificação Email para acesso ilimitado -->
     <div class="card mb-4 text-center" id="access-card">
-      <div class="card-header bg-primary text-white">
-        <span data-i18n="unlock">Já pagou? Desbloqueie o download ilimitado de PDFs</span>
-      </div>
-      <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" placeholder="Digite o e-mail do pagamento">
-        <button id="verifyBtn" class="btn btn-success">Verificar E-mail</button>
-        <div id="result" class="mt-3"></div>
-      </div>
-    </div>
+  <div class="card-header bg-primary text-white">
+    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
+  </div>
+  <div class="card-body">
+    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
+    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
+    <div id="result" class="mt-3"></div>
+  </div>
+</div>
+
 
     <!-- App Logic -->
     <script src="/js/app.js"></script>
