@@ -349,4 +349,6 @@ html[dir="rtl"] #pdf-list ul {
     box-shadow: none !important;
   }
 }
-
+body {
+  background: linear-gradient(120deg, #fff6f7 0%, #ffe9ee 100%);
+}
