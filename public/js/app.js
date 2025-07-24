@@ -329,16 +329,16 @@ document.addEventListener('DOMContentLoaded', () => {
     </p>
   `,
   ja: `
-    <p>
-      <strong>週間ミールプランナー（オンライン）</strong> – 1週間分のメニューを計画し、時間とお金を節約しながら家族で健康的な食事を楽しみましょう。無料アプリで毎日の料理を記録し、自動的に買い物リストを作成して、すべてをPDFでダウンロードできます。
-    </p>
-    <p>
-      子どものための食事管理、バランスの良い食事、または予算管理をしたい方にも、このプランナーがあれば計画的に進められ、食品ロスも防げます。高速・オンラインで、好きな言語で使えます！
-    </p>
-    <p>
-      無料の週間ミールプランナーをぜひお試しください – シンプルで便利、登録不要です！
-    </p>
-  `,
+  <p>
+    <strong>週間ミールプランナー（日本版）</strong> – 忙しい毎日でも、家族の健康を守りながら、手軽に1週間分の食事を計画できます。無料アプリで日々の献立や買い物リストを簡単に管理、PDFでダウンロードも可能です。
+  </p>
+  <p>
+    弁当作りや栄養バランス、予算管理など、日本のご家庭のニーズにぴったり対応。和食から洋食まで幅広いメニューに対応し、食品ロス削減にも貢献します。
+  </p>
+  <p>
+    今すぐ無料で使ってみましょう！レシピ例や家族のためのヒントも掲載中。日本語で安心してご利用いただけます。
+  </p>
+`,
   pt: `
     <p>
       <strong>Planejador semanal de refeições online</strong> – Monte o cardápio da semana inteira, economize tempo e dinheiro, e aproveite refeições saudáveis com a família. Nosso aplicativo gratuito permite anotar o que você vai cozinhar, gerar a lista de compras automaticamente e baixar tudo em PDF.
