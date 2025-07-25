@@ -35,7 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Introdu emailul de plată",
     "btn.verify": "Verifică Email",
     "btn.download": "Descarcă PDF",
-    "access.granted": "✅ Ai acces! Poți descărca PDF-ul nelimitat:"
+    "access.granted": "✅ Ai acces! Poți descărca PDF-ul nelimitat:",
+    "feedback.header": "Trimite feedback rapid",
+    "feedback.placeholder": "Scrie aici sugestii, probleme sau păreri...",
+    "feedback.button": "Trimite feedback",
+    "feedback.thanks": "Mulțumim pentru feedback! Emailul se va deschide pentru trimitere.",
+    "feedback.error": "Te rugăm să scrii un mesaj.",
+    "feedback.note": "Feedbackul ajunge direct la dezvoltator."
   },
   en: {
     weekdays: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
@@ -54,7 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Enter your payment email",
     "btn.verify": "Verify Email",
     "btn.download": "Download PDF",
-    "access.granted": "✅ Access granted! You can download unlimited PDFs:"
+    "access.granted": "✅ Access granted! You can download unlimited PDFs:",
+    "feedback.header": "Send quick feedback",
+    "feedback.placeholder": "Write suggestions, problems, or feedback here...",
+    "feedback.button": "Send feedback",
+    "feedback.thanks": "Thank you for your feedback! Your email will open for sending.",
+    "feedback.error": "Please write a feedback message.",
+    "feedback.note": "Your feedback goes directly to the developer."
   },
   es: {
     weekdays: ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
@@ -73,7 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Ingresa tu email de pago",
     "btn.verify": "Verificar Email",
     "btn.download": "Descargar PDF",
-    "access.granted": "✅ ¡Acceso concedido! Puedes descargar PDFs ilimitados:"
+    "access.granted": "✅ ¡Acceso concedido! Puedes descargar PDFs ilimitados:",
+    
+    "feedback.header": "Enviar feedback rápido",
+    "feedback.placeholder": "Escribe aquí sugerencias, problemas o comentarios...",
+    "feedback.button": "Enviar feedback",
+    "feedback.thanks": "¡Gracias por tu feedback! Se abrirá el correo para enviarlo.",
+    "feedback.error": "Por favor, escribe un mensaje.",
+    "feedback.note": "El feedback va directamente al desarrollador."
   },
   fr: {
     weekdays: ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
@@ -92,7 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Entrez votre email de paiement",
     "btn.verify": "Vérifier l'email",
     "btn.download": "Télécharger le PDF",
-    "access.granted": "✅ Accès accordé ! Vous pouvez télécharger des PDF illimités :"
+    "access.granted": "✅ Accès accordé ! Vous pouvez télécharger des PDF illimités :",
+    "feedback.header": "Envoyer un retour rapide",
+    "feedback.placeholder": "Écrivez ici vos suggestions, problèmes ou avis...",
+    "feedback.button": "Envoyer le feedback",
+    "feedback.thanks": "Merci pour votre retour ! L’email va s’ouvrir pour l’envoi.",
+    "feedback.error": "Veuillez écrire un message.",
+    "feedback.note": "Le feedback va directement au développeur."
   },
   ru: {
     weekdays: ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
@@ -111,7 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Введите ваш платежный email",
     "btn.verify": "Проверить Email",
     "btn.download": "Скачать PDF",
-    "access.granted": "✅ Доступ предоставлен! Вы можете скачивать неограниченно PDF:"
+    "access.granted": "✅ Доступ предоставлен! Вы можете скачивать неограниченно PDF:",
+    "feedback.header": "Отправить отзыв",
+    "feedback.placeholder": "Напишите здесь предложения, проблемы или замечания...",
+    "feedback.button": "Отправить отзыв",
+    "feedback.thanks": "Спасибо за ваш отзыв! Откроется окно электронной почты.",
+    "feedback.error": "Пожалуйста, напишите сообщение.",
+    "feedback.note": "Отзыв поступает напрямую разработчику."
   },
   zh: {
     weekdays: ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],
@@ -130,7 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "请输入您的付款邮箱",
     "btn.verify": "验证邮箱",
     "btn.download": "下载 PDF",
-    "access.granted": "✅ 已授权！你可以无限下载PDF："
+    "access.granted": "✅ 已授权！你可以无限下载PDF：",
+    "feedback.header": "快速反馈",
+    "feedback.placeholder": "在这里写下建议、问题或反馈...",
+    "feedback.button": "发送反馈",
+    "feedback.thanks": "感谢您的反馈！将打开您的邮件发送。",
+    "feedback.error": "请填写反馈信息。",
+    "feedback.note": "反馈将直接发送给开发者。"
   },
   ja: {
     weekdays: ['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
@@ -149,7 +186,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "支払いメールを入力してください",
     "btn.verify": "メールを確認する",
     "btn.download": "PDFをダウンロード",
-    "access.granted": "✅ アクセス許可！無制限にPDFをダウンロードできます："
+    "access.granted": "✅ アクセス許可！無制限にPDFをダウンロードできます：",
+    "feedback.header": "フィードバックを送信",
+    "feedback.placeholder": "ここにご意見や問題点などをご記入ください...",
+    "feedback.button": "フィードバック送信",
+    "feedback.thanks": "ご意見ありがとうございます！メールが開きます。",
+    "feedback.error": "メッセージを入力してください。",
+    "feedback.note": "フィードバックは開発者に直接届きます。"
   },
   pt: {
     weekdays: ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'],
@@ -168,7 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Digite seu e-mail de pagamento",
     "btn.verify": "Verificar Email",
     "btn.download": "Baixar PDF",
-    "access.granted": "✅ Acesso concedido! Você pode baixar PDFs ilimitados:"
+    "access.granted": "✅ Acesso concedido! Você pode baixar PDFs ilimitados:",
+    "feedback.header": "Enviar feedback rápido",
+    "feedback.placeholder": "Escreva sugestões, problemas ou comentários aqui...",
+    "feedback.button": "Enviar feedback",
+    "feedback.thanks": "Obrigado pelo feedback! Seu e-mail será aberto para envio.",
+    "feedback.error": "Por favor, escreva uma mensagem.",
+    "feedback.note": "O feedback vai diretamente para o desenvolvedor."
   },
   de: {
     weekdays: ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
@@ -187,7 +236,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "Geben Sie Ihre Zahlungs-E-Mail ein",
     "btn.verify": "E-Mail überprüfen",
     "btn.download": "PDF herunterladen",
-    "access.granted": "✅ Zugang gewährt! Sie können unbegrenzt PDFs herunterladen:"
+    "access.granted": "✅ Zugang gewährt! Sie können unbegrenzt PDFs herunterladen:",
+    "feedback.header": "Schnelles Feedback senden",
+    "feedback.placeholder": "Schreiben Sie hier Ihre Vorschläge, Probleme oder Meinungen...",
+    "feedback.button": "Feedback senden",
+    "feedback.thanks": "Danke für Ihr Feedback! Ihr E-Mail-Programm öffnet sich.",
+    "feedback.error": "Bitte geben Sie eine Nachricht ein.",
+    "feedback.note": "Ihr Feedback geht direkt an den Entwickler."
   },
   ar: {
     weekdays: ['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
@@ -206,7 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "أدخل بريدك الإلكتروني للدفع",
     "btn.verify": "تحقق من البريد الإلكتروني",
     "btn.download": "تحميل PDF",
-    "access.granted": "✅ لديك حق الوصول! يمكنك تحميل PDF بلا حدود:"
+    "access.granted": "✅ لديك حق الوصول! يمكنك تحميل PDF بلا حدود:",
+    "feedback.header": "أرسل ملاحظات سريعة",
+    "feedback.placeholder": "اكتب هنا اقتراحاتك أو مشاكلك أو رأيك...",
+    "feedback.button": "إرسال الملاحظات",
+    "feedback.thanks": "شكرًا لملاحظاتك! سيتم فتح البريد الإلكتروني للإرسال.",
+    "feedback.error": "يرجى كتابة رسالة.",
+    "feedback.note": "الملاحظات تصل مباشرة إلى المطور."
   },
   hi: {
     weekdays: ['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
@@ -225,9 +286,16 @@ document.addEventListener('DOMContentLoaded', () => {
     "input.email": "अपना भुगतान ईमेल दर्ज करें",
     "btn.verify": "ईमेल सत्यापित करें",
     "btn.download": "PDF डाउनलोड करें",
-    "access.granted": "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:"
+    "access.granted": "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:",
+    "feedback.header": "त्वरित प्रतिक्रिया भेजें",
+    "feedback.placeholder": "यहां सुझाव, समस्या या प्रतिक्रिया लिखें...",
+    "feedback.button": "प्रतिक्रिया भेजें",
+    "feedback.thanks": "आपकी प्रतिक्रिया के लिए धन्यवाद! ईमेल खुल जाएगा।",
+    "feedback.error": "कृपया संदेश लिखें।",
+    "feedback.note": "आपकी प्रतिक्रिया सीधे डेवलपर को जाएगी।"
   }
 };
+
 
   // 4. Mesaj impact pentru PDF (personalizabil pe limbă)
   const pdfMessages = {
@@ -394,18 +462,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Tabelul planner și traduceri
   function renderTable() {
-    const tbody = document.getElementById('plan-table');
-    tbody.innerHTML = '';
-    i18n[lang].weekdays.forEach((day, idx) => {
-      tbody.insertAdjacentHTML('beforeend', `
-        <tr class="planner-row">
-          <td><strong>${day}</strong></td>
-          <td><input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}"></td>
-          <td><input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}"></td>
-        </tr>
-      `);
-    });
+  const tbody = document.getElementById('plan-table');
+  tbody.innerHTML = '';
+  i18n[lang].weekdays.forEach((day, idx) => {
+    tbody.insertAdjacentHTML('beforeend', `
+      <tr class="planner-row">
+        <td><strong>${day}</strong></td>
+        <td>
+          <div class="input-group input-group-sm">
+            <input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}">
+            <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}l')" tabindex="-1">
+              <i class="bi bi-mic-fill"></i>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div class="input-group input-group-sm">
+            <input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}">
+            <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}c')" tabindex="-1">
+              <i class="bi bi-mic-fill"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    `);
+  });
+}
+
+// Pune acest cod în app.js (de preferat spre finalul fișierului sau după funcția renderTable)
+// ==============================
+
+function startDictation(inputId) {
+  if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+    alert('Dictarea nu este suportată de browserul tău!');
+    return;
   }
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+
+  // Harta limbilor disponibile în app
+  const langMap = {
+    ro: 'ro-RO',
+    en: 'en-US',
+    es: 'es-ES',
+    fr: 'fr-FR',
+    ru: 'ru-RU',
+    zh: 'zh-CN',
+    ja: 'ja-JP',
+    pt: 'pt-PT',
+    de: 'de-DE',
+    ar: 'ar-SA',
+    hi: 'hi-IN'
+  };
+
+  // Ia limba curentă din aplicație
+  let currentLang = typeof lang !== 'undefined' ? lang : 'ro'; // lang = variabilă globală deja definită în app.js
+  recognition.lang = langMap[currentLang] || 'en-US';
+
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onresult = function(event) {
+    const input = document.getElementById(inputId);
+    if (input) {
+      input.value = event.results[0][0].transcript;
+      input.focus();
+    }
+  };
+
+  recognition.onerror = function(event) {
+    alert('Eroare la dictare: ' + event.error);
+  };
+
+  recognition.start();
+}
+
 
  function applyTranslations() {
   // 1. Texte cu data-i18n
@@ -580,6 +712,83 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(resultDiv, { childList: true, subtree: true });
   }
   applyTranslations();
+  // ...după applyTranslations() sau la finalul DOMContentLoaded
+const feedbackForm = document.getElementById('feedbackForm');
+const feedbackMsg = document.getElementById('feedbackMsg');
+const feedbackStatus = document.getElementById('feedback-status');
+
+if (feedbackForm) {
+  feedbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const msg = feedbackMsg.value.trim();
+    if (!msg) {
+      feedbackStatus.innerHTML = `<span class="text-danger">${i18n[lang]["feedback.error"]}</span>`;
+      return;
+    }
+    // Deschide mailto (merge din browser și mobil)
+    const email = "bucosalexandrubogdan@gmail.com"; // sau ce vrei tu
+    const subject = encodeURIComponent('Meal Planner Feedback');
+    const body = encodeURIComponent(msg + '\n\nLang: ' + lang);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    feedbackStatus.innerHTML = `<span class="text-success">${i18n[lang]["feedback.thanks"]}</span>`;
+    feedbackMsg.value = '';
+    setTimeout(() => feedbackStatus.innerHTML = '', 5000); // dispare după 5 secunde
+  });
+}
+
+  /// Recunoaștere vocală – dictare în input pentru toate limbile
+window.startDictation = function(inputId) {
+  // Verifică suportul pentru API
+  if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+    alert('Dictarea nu este suportată de browserul tău!');
+    return;
+  }
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+
+  // Harta limbilor suportate
+  const langMap = {
+    ro: 'ro-RO',
+    en: 'en-US',
+    es: 'es-ES',
+    fr: 'fr-FR',
+    ru: 'ru-RU',
+    zh: 'zh-CN',
+    ja: 'ja-JP',
+    pt: 'pt-PT',
+    de: 'de-DE',
+    ar: 'ar-SA',
+    hi: 'hi-IN'
+  };
+  recognition.lang = langMap[lang] || 'en-US';
+
+  // Găsește butonul asociat inputului (mic trick cu selectorul de sus)
+  const micBtn = document.querySelector(`[onclick="startDictation('${inputId}')"]`);
+  if (micBtn) micBtn.classList.add('mic-active');
+
+  recognition.onend = function() {
+    if (micBtn) micBtn.classList.remove('mic-active');
+  };
+
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onresult = function(event) {
+    const input = document.getElementById(inputId);
+    if (input) {
+      input.value = event.results[0][0].transcript;
+      input.focus();
+    }
+  };
+
+  recognition.onerror = function(event) {
+    alert('Eroare la dictare: ' + event.error);
+    if (micBtn) micBtn.classList.remove('mic-active');
+  };
+
+  recognition.start();
+}
+
 });
 
 

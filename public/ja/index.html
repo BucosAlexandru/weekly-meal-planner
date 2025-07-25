@@ -204,5 +204,24 @@
 });
 
   </script>
+    <!-- Feedback Section -->
+<div class="card mb-4" id="feedback-section">
+  <div class="card-header bg-info text-white text-center">
+    <i class="bi bi-chat-dots"></i>
+    <span data-i18n="feedback.header">Trimite feedback rapid</span>
+  </div>
+  <div class="card-body">
+    <form id="feedbackForm">
+      <textarea class="form-control mb-2" id="feedbackMsg"
+        rows="3"
+        data-i18n-placeholder="feedback.placeholder"></textarea>
+      <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
+      <div id="feedback-status" class="mt-2"></div>
+    </form>
+    <small class="text-muted d-block mt-2" data-i18n="feedback.note">
+      Feedbackul ajunge direct la dezvoltator.
+    </small>
+  </div>
+</div>
 </body>
 </html>

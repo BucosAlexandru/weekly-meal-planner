@@ -352,3 +352,29 @@ html[dir="rtl"] #pdf-list ul {
 body {
   background: linear-gradient(120deg, #fff6f7 0%, #ffe9ee 100%);
 }
+/* Stil de bază pentru butonul microfon */
+.input-group .btn-outline-secondary {
+  border: none;
+  background: transparent;
+  padding: 0 8px;
+  color: #198754; /* verdele Bootstrap pentru microfon */
+  transition: color 0.2s, background 0.2s;
+  outline: none;
+  box-shadow: none;
+}
+
+.input-group .btn-outline-secondary:hover, 
+.input-group .btn-outline-secondary:focus {
+  color: #fff;
+  background: #198754;
+}
+
+/* Iconița mai mare */
+.input-group .bi-mic-fill {
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+.input-group .btn-outline-secondary.mic-active {
+  color: #fff;
+  background: #dc3545; /* roșu Bootstrap */
+}
