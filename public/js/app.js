@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusEl     = document.getElementById('payment-status');
   const langSwitcher = document.getElementById('lang-switcher');
   const resultDiv    = document.getElementById('result');
+  const currencySelUI = document.getElementById('currency-select');
 
   // ---------- FUNCȚII UI / LOGIC ----------
 
@@ -536,7 +537,10 @@ function paginateCleanNode(root){
     if (freeBtn && !freeBtn.dataset.attached) {
       freeBtn.onclick = () => {
         resetPdfQuotaIfNeeded();
-        if (pdfCount >= 3) { updateButtonState(); return; }
+        if (pdfCount >= 1) { // LIMITĂ: 1/zi
+          updateButtonState();
+          return;
+        }
         exportShoppingListToPDF();
         pdfCount++;
         if (pdfCount === 1) pdfFirst = Date.now();
@@ -562,20 +566,16 @@ function paginateCleanNode(root){
   }
 
   function updateButtonState() {
-    resetPdfQuotaIfNeeded();
-    const generateBtn = document.getElementById('generate-btn');
-    if (!generateBtn || !buyBtn || !statusEl) return;
+  resetPdfQuotaIfNeeded();
+  const generateBtn = document.getElementById('generate-btn');
+  if (!generateBtn || !buyBtn || !statusEl) return;
+  const showPay = pdfCount >= 1;
+  generateBtn.style.display = showPay ? 'none' : 'inline-block';
+  buyBtn.style.display = showPay ? 'inline-block' : 'none';
+  if (currencySelUI) currencySelUI.style.display = showPay ? 'inline-block' : 'none';
+  statusEl.innerHTML = showPay ? (i18n[lang].maxed || '') : '';
+}
 
-    if (pdfCount < 3) {
-      generateBtn.style.display = 'inline-block';
-      buyBtn.style.display = 'none';
-      statusEl.innerHTML = '';
-    } else {
-      generateBtn.style.display = 'none';
-      buyBtn.style.display = 'inline-block';
-      statusEl.innerHTML = i18n[lang].maxed;
-    }
-  }
 
  function applyTranslations() {
   // 1) Texte statice cu data-i18n
@@ -634,6 +634,7 @@ function paginateCleanNode(root){
     const generateBtn = document.getElementById('generate-btn');
     if (statusEl) statusEl.innerHTML = i18n[lang]["payment.success"] || '✅ Plata a fost realizată cu succes!';
     if (generateBtn) generateBtn.style.display = 'inline-block';
+    updateButtonState(); // ← adăugare, ca să ascundă galbenul + selectorul
     window.history.replaceState({}, '', window.location.pathname);
   }
 
@@ -712,6 +713,7 @@ if (verifyBtn && emailInput && resultDiv) {
       `;
 
       if (buyBtn) buyBtn.style.display = 'none';
+      if (currencySelUI) currencySelUI.style.display = 'none'; // ← adăugare
       attachPdfListeners();
 
       if (manageBtn) {
