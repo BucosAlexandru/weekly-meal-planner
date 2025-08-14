@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/BucosAlexandru/weekly-meal-planner/issues"
   },
@@ -22,5 +22,8 @@
     "@supabase/supabase-js": "^2.52.0",
     "micro": "^10.0.1",
     "stripe": "^18.3.0"
+  },
+  "devDependencies": {
+    "vercel": "^44.7.3"
   }
 }
