@@ -24,3 +24,5 @@ yarn-error.log*
 # Local helper files (do not commit)
 /public/js/find-duplicates.js
 /public/scripts/
+check-ssl-expiry.cjs
+check-ssl-expiry.js
