@@ -442,16 +442,16 @@ const i18n = {
   };
   const seoParagraphs = {
   ro: `
-    <p>
-      <strong>Aplică organizarea meselor zilnice cu planificatorul nostru săptămânal!</strong> Planifică meniul fiecărei zile, adaugă rețete și ingrediente, iar la final obții automat lista de cumpărături pentru întreaga săptămână, gata de tipărit sau salvat PDF.
-    </p>
-    <p>
-      Instrumentul online este ideal pentru familii ocupate, persoane care țin dietă, sau oricine dorește să economisească timp și să reducă risipa alimentară. Gătești mai eficient, faci cumpărături mai rapid și controlezi mai ușor bugetul casei.
-    </p>
-    <p>
-      Folosește plannerul gratuit, în limba română – nu necesită cont, fără reclame, direct din browser!
-    </p>
-  `,
+  <p>
+    <strong>Aplică organizarea meselor zilnice cu planificatorul nostru săptămânal!</strong> Descoperă rețete tradiționale și moderne din toate colțurile lumii – de la preparate românești și italiene, până la mâncăruri asiatice și deserturi americane. Planifică meniul fiecărei zile, adaugă rețete și ingrediente, iar la final obții automat lista de cumpărături pentru întreaga săptămână, gata de tipărit sau salvat PDF.
+  </p>
+  <p>
+    Instrumentul online este ideal pentru familii ocupate, persoane care țin dietă, sau oricine dorește să economisească timp și să reducă risipa alimentară. Gătești mai eficient, faci cumpărături mai rapid și controlezi mai ușor bugetul casei.
+  </p>
+  <p>
+    Folosește plannerul gratuit, în limba română – nu necesită cont, fără reclame, direct din browser!
+  </p>
+`,
   ar: `
     <p>
       <strong>مخطط وجبات أسبوعي عبر الإنترنت</strong> – أنشئ خطة وجباتك للأسبوع بالكامل، ووفر الوقت والمال، واستمتع بوجبات صحية مع عائلتك. تطبيقنا المجاني يتيح لك تسجيل وجباتك اليومية، وإنشاء قائمة تسوق تلقائياً، وتحميل كل ذلك بصيغة PDF.

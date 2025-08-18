@@ -133,3 +133,4 @@ export default async function handler(req, res) {
     return res.status(500).send('Internal webhook handler error');
   }
 }
+export const config = { api: { bodyParser: false } };
