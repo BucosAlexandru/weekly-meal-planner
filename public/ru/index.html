@@ -22,16 +22,18 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+   <!-- OG & Twitter for sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Еженедельный планировщик питания" />
-  <meta property="og:description" content="Планируйте свои приемы пищи на неделю, создавайте список покупок и скачивайте PDF-план за несколько кликов." />
+  <meta property="og:title" content="Еженедельный планировщик питания & Список покупок – PDF бесплатно" />
+  <meta property="og:description" content="Планируйте своё недельное меню, создавайте список покупок и скачивайте PDF за несколько кликов!" />
   <meta property="og:url" content="https://meal-planner.ro/ru/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Еженедельный планировщик питания" />
-  <meta name="twitter:description" content="Легко планируйте меню на неделю, генерируйте PDF-список покупок, бесплатно и онлайн." />
+  <meta name="twitter:title" content="Еженедельный планировщик питания & Список покупок – PDF бесплатно" />
+  <meta name="twitter:description" content="Планируйте своё недельное меню, создавайте список покупок и скачивайте PDF за несколько кликов!" />
   <meta name="twitter:url" content="https://meal-planner.ro/ru/" />
+
 
 <!-- Favicon modern SVG -->
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
@@ -105,19 +107,28 @@
     </div>
 
     <div class="text-center mb-4 no-print btn-bar">
-      <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i>
-        <span data-i18n="btn.generate">Создать PDF</span>
-      </button>
-      <a id="pay-btn"
-         href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
-         target="_blank"
-         class="btn btn-warning">
-        <i class="bi bi-cart-check-fill"></i>
-        <span data-i18n="btn.pay">Оплатить &amp; Скачать</span>
-      </a>
-      <div id="payment-status" class="mt-2"></div>
-    </div>
+  <select id="currency-select" class="form-select d-inline-block w-auto me-2">
+    <option value="RON">RON (lei)</option>
+    <option value="EUR" selected>EUR (€)</option>
+  </select>
+
+  <button id="pay-btn" class="btn btn-warning">
+    <i class="bi bi-cart-check-fill"></i>
+    <span data-i18n="btn.pay">Оплатить & Скачать</span>
+  </button>
+
+  <button id="generate-btn" class="btn btn-success ms-2" type="button">
+    <i class="bi bi-file-earmark-pdf-fill"></i>
+    <span data-i18n="btn.generate">Создать PDF</span>
+  </button>
+
+  <div id="payment-status" class="mt-2"></div>
+  <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
+  Manage subscription
+</button>
+
+</div>
+
 
     <!-- Email verification for PDF unlimited access -->
    <div class="card mb-4 text-center" id="access-card">
@@ -131,74 +142,13 @@
   </div>
 </div>
 
-  <script type="module" src="/js/app.js"></script>
-  <script src="/js/checkout.js"></script>
-    <!-- Supabase Email Verification Script -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script>
-    const supabase = window.supabase.createClient(
-      'https://hwbzbidorkwtyvirozho.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
-    );
+  <!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<!-- App (module) -->
+<script type="module" src="/js/app.js"></script>
+<script src="/js/checkout.js"></script>
+<script type="module" src="/js/portal.js"></script>
 
-    document.getElementById('verifyBtn').onclick = async function() {
-      const email = document.getElementById('emailInput').value.trim();
-      const resultDiv = document.getElementById('result');
-      resultDiv.innerText = 'Проверка...';
-
-      if (!email) {
-        resultDiv.innerHTML = `<span class="text-danger">Введите email!</span>`;
-        return;
-      }
-
-      // Selectează TOATE tokenurile pentru emailul dat
-      const { data, error } = await supabase
-        .from('tokens')
-        .select('*')
-        .eq('email', email);
-
-      if (error) {
-        resultDiv.innerHTML = `<span class="text-danger">Ошибка сервера. Попробуйте еще раз.</span>`;
-        return;
-      }
-
-      // Verifică dacă există vreun token valid (ne-expirat)
-      if (data && data.length > 0) {
-        const now = Date.now();
-        const valid = data.some(token => !token.expires_at || token.expires_at > now);
-
-        if (valid) {
-          resultDiv.innerHTML = `
-            <span class="text-success mb-2 d-block">✅ У вас есть доступ! Можно скачивать PDF неограниченно:</span>
-            <button id="paid-generate-pdf" class="btn btn-primary">Скачать PDF</button>
-          `;
-          document.getElementById('pay-btn').style.display = 'none';
-
-          setTimeout(() => {
-            const generateBtn = document.getElementById('generate-btn');
-            const paidBtn = document.getElementById('paid-generate-pdf');
-            if (paidBtn && generateBtn) {
-              paidBtn.addEventListener('click', function() {
-                generateBtn.click();
-              });
-            }
-          }, 0);
-
-        } else {
-          resultDiv.innerHTML = `<span class="text-danger">Нет действующего доступа для этого email.</span>`;
-        }
-      } else {
-        resultDiv.innerHTML = `<span class="text-danger">Нет доступа для этого email. Сначала оплатите или проверьте адрес.</span>`;
-      }
-    }
-    document.getElementById('emailInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    document.getElementById('verifyBtn').click();
-  }
-});
-
-  </script>
     <!-- Feedback Section -->
 <div class="card mb-4" id="feedback-section">
   <div class="card-header bg-info text-white text-center">

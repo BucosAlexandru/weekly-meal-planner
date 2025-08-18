@@ -103,23 +103,28 @@
       </div>
     </div>
 
-    <div class="text-center mb-4 no-print btn-bar">
-      <button id="generate-btn" class="btn btn-success me-2">
-        <i class="bi bi-file-earmark-pdf-fill"></i>
-        <span data-i18n="btn.generate">生成 PDF</span>
-      </button>
-      <a id="pay-btn"
-         href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
-         target="_blank"
-         class="btn btn-warning">
-        <i class="bi bi-cart-check-fill"></i>
-        <span data-i18n="btn.pay">支付并下载</span>
-      </a>
-      <div id="payment-status" class="mt-2"></div>
-    </div>
+    <!-- Buttons -->
+<div class="text-center mb-4 no-print btn-bar">
+  <select id="currency-select" class="form-select d-inline-block w-auto me-2">
+    <option value="RON">RON (列伊)</option>
+    <option value="EUR" selected>EUR (€)</option>
+  </select>
 
-    <!-- Email verification for PDF unlimited access -->
-    <div class="card mb-4 text-center" id="access-card">
+  <button id="pay-btn" class="btn btn-warning">
+    <i class="bi bi-cart-check-fill"></i>
+    <span data-i18n="btn.pay">支付并下载</span>
+  </button>
+
+  <button id="generate-btn" class="btn btn-success ms-2" type="button">
+    <i class="bi bi-file-earmark-pdf-fill"></i>
+    <span data-i18n="btn.generate">生成 PDF</span>
+  </button>
+
+  <div id="payment-status" class="mt-2"></div>
+</div>
+
+<!-- Email verification for PDF unlimited access -->
+<div class="card mb-4 text-center" id="access-card">
   <div class="card-header bg-primary text-white">
     <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
   </div>
@@ -127,78 +132,19 @@
     <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
     <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
     <div id="result" class="mt-3"></div>
+    <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
+      Manage subscription
+    </button>
   </div>
 </div>
 
-  <script type="module" src="/js/app.js"></script>
-  <script src="/js/checkout.js"></script>
-  
-  <!-- Supabase Email Verification Script -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script>
-    const supabase = window.supabase.createClient(
-      'https://hwbzbidorkwtyvirozho.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
-    );
+  <!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<!-- App (module) -->
+<script type="module" src="/js/app.js"></script>
+<script src="/js/checkout.js"></script>
+<script type="module" src="/js/portal.js"></script>
 
-    document.getElementById('verifyBtn').onclick = async function() {
-      const email = document.getElementById('emailInput').value.trim();
-      const resultDiv = document.getElementById('result');
-      resultDiv.innerText = '验证中...';
-
-      if (!email) {
-        resultDiv.innerHTML = `<span class="text-danger">请输入邮箱！</span>`;
-        return;
-      }
-
-      // Selectează TOATE tokenurile pentru emailul dat
-      const { data, error } = await supabase
-        .from('tokens')
-        .select('*')
-        .eq('email', email);
-
-      if (error) {
-        resultDiv.innerHTML = `<span class="text-danger">服务器错误，请重试。</span>`;
-        return;
-      }
-
-      // Verifică dacă există vreun token valid (ne-expirat)
-      if (data && data.length > 0) {
-        const now = Date.now();
-        const valid = data.some(token => !token.expires_at || token.expires_at > now);
-
-        if (valid) {
-          resultDiv.innerHTML = `
-            <span class="text-success mb-2 d-block">✅ 已解锁！可以无限下载 PDF：</span>
-            <button id="paid-generate-pdf" class="btn btn-primary">下载 PDF</button>
-          `;
-          document.getElementById('pay-btn').style.display = 'none';
-
-          setTimeout(() => {
-            const generateBtn = document.getElementById('generate-btn');
-            const paidBtn = document.getElementById('paid-generate-pdf');
-            if (paidBtn && generateBtn) {
-              paidBtn.addEventListener('click', function() {
-                generateBtn.click();
-              });
-            }
-          }, 0);
-
-        } else {
-          resultDiv.innerHTML = `<span class="text-danger">此邮箱暂无有效访问权限。</span>`;
-        }
-      } else {
-        resultDiv.innerHTML = `<span class="text-danger">未找到访问权限。请先支付或检查邮箱。</span>`;
-      }
-    }
-    document.getElementById('emailInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    document.getElementById('verifyBtn').click();
-  }
-});
-
-  </script>
     <!-- Feedback Section -->
 <div class="card mb-4" id="feedback-section">
   <div class="card-header bg-info text-white text-center">

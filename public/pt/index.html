@@ -107,111 +107,48 @@
       </div>
     </div>
 
-    <!-- Botões PDF/Stripe -->
-    <div class="text-center mb-4 no-print btn-bar">
-      <button id="generate-btn" class="btn btn-success me-2" type="button">
+    <!-- Buttons (managed by app.js/checkout.js) -->
+    <div class="text-center mb-4 no-print btn-bar" id="payment-bar" style="display:none">
+      <select id="currency-select" class="form-select d-inline-block w-auto me-2">
+        <option value="RON">RON (lei)</option>
+        <option value="EUR" selected>EUR (€)</option>
+      </select>
+
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Pagar & Baixar</span>
+      </button>
+
+      <button id="generate-btn" class="btn btn-success ms-2" type="button">
         <i class="bi bi-file-earmark-pdf-fill"></i>
         <span data-i18n="btn.generate">Gerar PDF</span>
       </button>
-      <a href="https://buy.stripe.com/00w6oHeDjcPEasLcbY3Ru07"
-         target="_blank"
-         class="btn btn-warning"
-         id="pay-btn">
-        <i class="bi bi-cart-check-fill"></i>
-        <span data-i18n="btn.pay">Pagar & Baixar</span>
-      </a>
+
       <div id="payment-status" class="mt-2"></div>
     </div>
 
-    <!-- Verificação Email para acesso ilimitado -->
+    <!-- Email verification + Manage subscription -->
     <div class="card mb-4 text-center" id="access-card">
-  <div class="card-header bg-primary text-white">
-    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
-  </div>
-  <div class="card-body">
-    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
-    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
-    <div id="result" class="mt-3"></div>
-  </div>
-</div>
+      <div class="card-header bg-primary text-white">
+        <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
+      </div>
+      <div class="card-body">
+        <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email" placeholder="Digite o e-mail usado no pagamento">
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
+        <div id="result" class="mt-3"></div>
+        <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
+          Manage subscription
+        </button>
+      </div>
+    </div>
 
+  </div><!-- /container -->
 
-    <!-- App Logic -->
-    <script type="module" src="/js/app.js"></script>
-    <script src="/js/checkout.js"></script>
-      <!-- Supabase Email Verification Script -->
+  <!-- Scripts (same order as pe main) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script>
-    const supabase = window.supabase.createClient(
-      'https://hwbzbidorkwtyvirozho.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
-    );
-
-    document.getElementById('verifyBtn').onclick = async function() {
-      const email = document.getElementById('emailInput').value.trim();
-      const resultDiv = document.getElementById('result');
-      resultDiv.innerText = 'Verificando...';
-
-      if (!email) {
-        resultDiv.innerHTML = `<span class="text-danger">Digite seu e-mail!</span>`;
-        return;
-      }
-
-      // Seleciona TODOS os tokens para o e-mail fornecido
-      const { data, error } = await supabase
-        .from('tokens')
-        .select('*')
-        .eq('email', email);
-
-      if (error) {
-        resultDiv.innerHTML = `<span class="text-danger">Erro no servidor. Tente novamente.</span>`;
-        return;
-      }
-
-      // Verifica se existe algum token válido (não expirado)
-      if (data && data.length > 0) {
-        const now = Date.now();
-        const valid = data.some(token => !token.expires_at || token.expires_at > now);
-
-        if (valid) {
-          resultDiv.innerHTML = `
-            <span class="text-success mb-2 d-block">✅ Acesso liberado! Agora você pode gerar PDFs ilimitados:</span>
-            <button id="paid-generate-pdf" class="btn btn-primary">Baixar PDF</button>
-          `;
-          document.getElementById('pay-btn').style.display = 'none';
-
-          setTimeout(() => {
-            const generateBtn = document.getElementById('generate-btn');
-            const paidBtn = document.getElementById('paid-generate-pdf');
-            if (paidBtn && generateBtn) {
-              paidBtn.addEventListener('click', function() {
-                generateBtn.click();
-              });
-            }
-          }, 0);
-
-        } else {
-          resultDiv.innerHTML = `<span class="text-danger">Não há acesso válido para este e-mail.</span>`;
-        }
-      } else {
-        resultDiv.innerHTML = `<span class="text-danger">Nenhum acesso para este e-mail. Faça o pagamento ou verifique o endereço.</span>`;
-      }
-    }
-    document.getElementById('emailInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    document.getElementById('verifyBtn').click();
-  }
-});
-<div id="pdf-preview-section" style="margin:32px auto 18px auto; max-width:720px; display:none;">
-  <div id="pdf-preview-content"></div>
-  <div class="text-center" style="margin:15px 0 8px 0;">
-    <button id="export-pdf-btn" class="btn btn-primary">Generează PDF</button>
-    <button id="print-btn" class="btn btn-secondary" style="margin-left:8px;">Printează</button>
-  </div>
-</div>
-
-  </script>
+  <script type="module" src="/js/app.js"></script>
+  <script src="/js/checkout.js"></script>
+  <script type="module" src="/js/portal.js"></script>
     <!-- Feedback Section -->
 <div class="card mb-4" id="feedback-section">
   <div class="card-header bg-info text-white text-center">
