@@ -22,6 +22,7 @@ if (!i18n[lang]) lang = 'ro';
 // ===== Quota PDF
 let pdfCount = +localStorage.getItem('pdfCount') || 0;
 let pdfFirst = +localStorage.getItem('pdfFirst') || 0;
+
 function resetPdfQuotaIfNeeded() {
   const now = Date.now();
   if (!pdfFirst || (now - pdfFirst > 86400000)) {
@@ -329,7 +330,7 @@ html2pdf().set({
   jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
   pagebreak: {
   mode: ['css'],
-  avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.MOTIV']
+  avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.motiv']
 }
 })
 .from(cleanNode)
@@ -520,17 +521,25 @@ function paginateCleanNode(root){
   }
 }
 
-  function attachAutoMenuBtn() {
-    let autoBtn = document.getElementById('auto-menu-btn');
-    if (!autoBtn) {
-      autoBtn = document.createElement('button');
-      autoBtn.id = 'auto-menu-btn';
-      autoBtn.className = 'btn btn-success my-2';
-      document.getElementById('auto-menu-bar')?.appendChild(autoBtn);
-    }
-    autoBtn.textContent = i18n[lang]["btn.autoMenu"] || 'Generează meniu aleator';
-    autoBtn.onclick = generateRandomMenu;
+ function attachAutoMenuBtn() {
+  const bar = document.getElementById('auto-menu-bar');
+  if (!bar) return; // nu crea butonul dacă nu există containerul
+
+  let autoBtn = document.getElementById('auto-menu-btn');
+  if (!autoBtn) {
+    autoBtn = document.createElement('button');
+    autoBtn.id = 'auto-menu-btn';
+    autoBtn.type = 'button';
+    autoBtn.className = 'btn btn-success my-2';
+    autoBtn.setAttribute('data-i18n', 'btn.autoMenu');
+    bar.appendChild(autoBtn);
   }
+
+  // setăm și textul acum (în caz că data-i18n nu e procesat încă)
+  autoBtn.textContent = i18n[lang]["btn.autoMenu"] || 'Generează meniu aleator';
+  autoBtn.onclick = generateRandomMenu;
+}
+
 
   function attachPdfListeners() {
     const freeBtn = document.getElementById('generate-btn');
@@ -566,16 +575,18 @@ function paginateCleanNode(root){
   }
 
   function updateButtonState() {
-  resetPdfQuotaIfNeeded();
+  resetPdfQuotaIfNeeded?.();
   const generateBtn = document.getElementById('generate-btn');
   if (!generateBtn || !buyBtn || !statusEl) return;
-  const showPay = pdfCount >= 1;
+
+  // dacă vrei ca plata să NU apară pentru nelimitați:
+  const showPay = (pdfCount >= 1) && !window.hasUnlimited;
+
   generateBtn.style.display = showPay ? 'none' : 'inline-block';
   buyBtn.style.display = showPay ? 'inline-block' : 'none';
   if (currencySelUI) currencySelUI.style.display = showPay ? 'inline-block' : 'none';
   statusEl.innerHTML = showPay ? (i18n[lang].maxed || '') : '';
 }
-
 
  function applyTranslations() {
   // 1) Texte statice cu data-i18n
@@ -629,6 +640,7 @@ function paginateCleanNode(root){
   // ---------- Stripe success (după ce avem DOM) ----------
   const params = new URLSearchParams(window.location.search);
   if (params.get('success') === 'true') {
+    window.hasUnlimited = true; // <— adaugă
     localStorage.setItem('pdfCount', '0');
     localStorage.setItem('pdfFirst', Date.now());
     const generateBtn = document.getElementById('generate-btn');
@@ -657,97 +669,113 @@ function paginateCleanNode(root){
     });
   }
 
-  // ---------- Supabase (verificare email) ----------
+// ---------- Supabase (verificare email) ----------
 const supabase = window.supabase.createClient(
   'https://hwbzbidorkwtyvirozho.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
 );
+window.hasUnlimited = false;
 
-const verifyBtn   = document.getElementById('verifyBtn');
-const emailInput  = document.getElementById('emailInput');
-const manageBtn   = document.getElementById('manage-subscription');
+const verifyBtn  = document.getElementById('verifyBtn');
+const emailInput = document.getElementById('emailInput');
+const manageBtn  = document.getElementById('manage-subscription');
 
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
-  const email = emailInput.value.trim();
-  resultDiv.innerText = 'Checking...';
+    const email = emailInput.value.trim();
 
-  if (manageBtn) manageBtn.style.display = 'none';
+    resultDiv.innerText = (i18n[lang]?.msg?.checking) || 'Checking...';
+    if (manageBtn) manageBtn.style.display = 'none';
 
-  if (!email) {
-    resultDiv.innerHTML = `<span class="text-danger">Introduceți adresa de email!</span>`;
-    return;
-  }
+    if (!email) {
+      window.hasUnlimited = false;
+      resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.empty || 'Introduceți adresa de email!'}</span>`;
+      if (typeof updateButtonState === 'function') updateButtonState();
+      return;
+    }
 
-  const { data, error } = await supabase.from('tokens').select('*').eq('email', email);
+    const { data, error } = await supabase
+      .from('tokens')
+      .select('*')
+      .eq('email', email);
 
-  if (error) {
-    resultDiv.innerHTML = `<span class="text-danger">Eroare server. Încercați din nou.</span>`;
-    return;
-  }
+    if (error) {
+      window.hasUnlimited = false;
+      resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.server_error || 'Eroare server. Încercați din nou.'}</span>`;
+      if (typeof updateButtonState === 'function') updateButtonState();
+      return;
+    }
 
-  if (data && data.length > 0) {
-    const now = Date.now();
-    const valid = data.some(t => !t.expires_at || parseExpiryToMs(t.expires_at) > now);
+    if (data && data.length > 0) {
+      const now = Date.now();
+      const valid = data.some(t => !t.expires_at || parseExpiryToMs(t.expires_at) > now);
 
-    if (valid) {
-      // calculează expirarea maximă
-      const expiriesMs = data
-        .map(t => parseExpiryToMs(t.expires_at))
-        .filter(ms => ms !== null);
-      const maxExpiryMs = expiriesMs.length ? Math.max(...expiriesMs) : null;
+      if (valid) {
+        window.hasUnlimited = true;
 
-      const expiryText = maxExpiryMs
-        ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
-            new Date(maxExpiryMs).toLocaleDateString(lang, { day:'2-digit', month:'short', year:'numeric' })
-          }`
-        : (access[lang]?.lifetime || 'nelimitat');
+        // calculează expirarea maximă
+        const expiriesMs = data
+          .map(t => parseExpiryToMs(t.expires_at))
+          .filter(ms => ms !== null);
+        const maxExpiryMs = expiriesMs.length ? Math.max(...expiriesMs) : null;
 
-      resultDiv.innerHTML = `
-        <span class="text-success mb-2 d-block">
-          ${i18n[lang]["msg.valid"]} (${expiryText})
-        </span>
-        <button id="paid-generate-pdf" class="btn btn-primary">
-          ${i18n[lang]["btn.download"]}
-        </button>
-      `;
+        const expiryText = maxExpiryMs
+          ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
+              new Date(maxExpiryMs).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' })
+            }`
+          : (access[lang]?.lifetime || 'nelimitat');
 
-      if (buyBtn) buyBtn.style.display = 'none';
-      if (currencySelUI) currencySelUI.style.display = 'none'; // ← adăugare
-      attachPdfListeners();
+        resultDiv.innerHTML = `
+          <span class="text-success mb-2 d-block">
+            ${i18n[lang]["msg.valid"]} (${expiryText})
+          </span>
+          <button id="paid-generate-pdf" class="btn btn-primary">
+            ${i18n[lang]["btn.download"]}
+          </button>
+        `;
 
-      if (manageBtn) {
-        manageBtn.style.display = 'inline-block';
-        // (opțional) fă-l mai vizibil:
-        // manageBtn.className = 'btn btn-outline-primary mt-2';
+        // Dacă vrei să ascunzi plata pt. nelimitați, decomentează:
+        // if (buyBtn) buyBtn.style.display = 'none';
+        // if (currencySelUI) currencySelUI.style.display = 'none';
 
-        manageBtn.onclick = async () => {
-          try {
-            const r = await fetch('/api/create-portal-session', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email,
-              returnUrl: window.location.origin + window.location.pathname
-            })
-          })
-            const { url, error } = await r.json();
-            if (error || !url) { alert(error || 'Nu s-a putut deschide portalul Stripe.'); return; }
-            window.location.href = url;
-          } catch (e) {
-            alert('Eroare: ' + e.message);
-          }
-        };
+        attachPdfListeners();
+
+        if (manageBtn) {
+          manageBtn.style.display = 'inline-block';
+          manageBtn.onclick = async () => {
+            try {
+              const r = await fetch('/api/create-portal-session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  email,
+                  returnUrl: window.location.origin + window.location.pathname
+                })
+              });
+              const { url, error } = await r.json();
+              if (error || !url) { alert(error || 'Nu s-a putut deschide portalul Stripe.'); return; }
+              window.location.href = url;
+            } catch (e) {
+              alert('Eroare: ' + e.message);
+            }
+          };
+        }
+
+        if (typeof updateButtonState === 'function') updateButtonState();
+
+      } else {
+        window.hasUnlimited = false;
+        resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.invalid || 'Nu există acces valid pentru acest email.'}</span>`;
+        if (manageBtn) manageBtn.style.display = 'none';
+        if (typeof updateButtonState === 'function') updateButtonState();
       }
     } else {
-      resultDiv.innerHTML = `<span class="text-danger">Nu există acces valid pentru acest email.</span>`;
+      window.hasUnlimited = false;
+      resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.not_found || 'Nu există acces pentru acest email. Plătește întâi sau verifică adresa.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
+      if (typeof updateButtonState === 'function') updateButtonState();
     }
-  } else {
-    resultDiv.innerHTML = `<span class="text-danger">Nu există acces pentru acest email. Plătește întâi sau verifică adresa.</span>`;
-    if (manageBtn) manageBtn.style.display = 'none';
-  }
-};
+  };
 
   // Enter submit
   emailInput.addEventListener('keydown', function (e) {
@@ -757,6 +785,8 @@ if (verifyBtn && emailInput && resultDiv) {
     }
   });
 }
+
+
 
   // ---------- Feedback form ----------
   const feedbackForm   = document.getElementById('feedbackForm');
