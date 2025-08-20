@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">Еженедельный планировщик питания</title>
-  <meta name="description" content="Еженедельный планировщик питания: легко создавайте меню на неделю, генерируйте список покупок и скачивайте всё в PDF — бесплатно и онлайн." />
-  <meta name="keywords" content="планировщик питания, список покупок, недельное меню, семейное питание, здоровое питание, бесплатный планировщик, меню PDF, meal planner russian" />
+
+  <title data-i18n="title">Еженедельный планировщик питания — Список покупок & PDF бесплатно</title>
+  <meta name="description" content="Создавайте меню на неделю, автоматически формируйте список покупок и скачивайте всё в PDF — бесплатно (1 PDF/день), без регистрации. Для безлимитных загрузок после оплаты требуется подтверждение e-mail." />
+  <meta name="keywords" content="планировщик питания, список покупок, недельное меню, семейное питание, здоровое питание, бесплатный планировщик, меню PDF, план питания, meal planner russian" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://meal-planner.ro/ru/" />
 
   <!-- hreflang -->
@@ -22,65 +24,124 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
-   <!-- OG & Twitter for sharing -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Еженедельный планировщик питания & Список покупок – PDF бесплатно" />
-  <meta property="og:description" content="Планируйте своё недельное меню, создавайте список покупок и скачивайте PDF за несколько кликов!" />
+  <meta property="og:title" content="Еженедельный планировщик питания — PDF бесплатно" />
+  <meta property="og:description" content="Планируйте меню на неделю, формируйте список покупок и скачивайте PDF — бесплатно и без регистрации." />
   <meta property="og:url" content="https://meal-planner.ro/ru/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Еженедельный планировщик питания & Список покупок – PDF бесплатно" />
-  <meta name="twitter:description" content="Планируйте своё недельное меню, создавайте список покупок и скачивайте PDF за несколько кликов!" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Еженедельный планировщик питания — PDF бесплатно" />
+  <meta name="twitter:description" content="Создайте меню, сформируйте список покупок и скачайте PDF." />
   <meta name="twitter:url" content="https://meal-planner.ro/ru/" />
+  <meta name="theme-color" content="#198754" />
 
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/images/site.webmanifest">
 
-<!-- Favicon modern SVG -->
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<!-- Favicon PNG fallback -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
-<!-- Favicon clasic pentru browsere vechi -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<!-- Manifest PWA -->
-<link rel="manifest" href="/images/site.webmanifest">
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <!-- JSON-LD: веб-приложение, бесплатно (1/день) + подписка; без регистрации, e-mail после оплаты -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Еженедельный планировщик питания",
+    "operatingSystem": "Web",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "ru",
+    "isAccessibleForFree": true,
+    "url": "https://meal-planner.ro/ru/",
+    "image": "https://meal-planner.ro/cover.jpg",
+    "description": "Создавайте недельный план питания, автоматически формируйте список покупок и скачивайте PDF — бесплатно (1 PDF/день). Регистрация не требуется; для безлимитных загрузок подтвердите e-mail после оформления подписки.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "3",
+      "priceCurrency": "EUR",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Бесплатный план",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Бесплатно, ограничение — 1 PDF в день."
+        },
+        {
+          "@type": "Offer",
+          "name": "Ежемесячная подписка (RON)",
+          "price": "10",
+          "priceCurrency": "RON",
+          "description": "Безлимитные загрузки PDF. После покупки требуется подтверждение e-mail.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        },
+        {
+          "@type": "Offer",
+          "name": "Ежемесячная подписка (EUR)",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "description": "Безлимитные загрузки PDF. После покупки требуется подтверждение e-mail.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        }
+      ]
+    },
+    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+  }
+  </script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
+
+    <!-- Language Switcher -->
     <div class="text-end mb-3 no-print" id="lang-bar">
-      <select id="lang-switcher" class="form-select w-auto"></select>
+      <label id="label-language" for="lang-switcher" class="visually-hidden" data-i18n="label.language">Выберите язык</label>
+      <select id="lang-switcher" class="form-select w-auto" aria-labelledby="label-language"></select>
     </div>
 
+    <!-- Header -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0" data-i18n="header">Планировщик питания &amp; Список покупок</h2>
+        <h1 class="mb-0" data-i18n="header">Планировщик питания & Список покупок</h1>
       </div>
     </div>
+
+    <!-- SEO paragraph -->
     <div class="seo-paragraph" id="seo-paragraph">
       <p>
-        <strong>Еженедельный планировщик питания онлайн</strong> – Составляйте меню на всю неделю, экономьте время и деньги, наслаждайтесь полезными семейными обедами и ужинами. Наше бесплатное приложение позволит вам записывать блюда на каждый день, автоматически создавать список покупок и скачивать всё в PDF.
+        <strong>Еженедельный планировщик питания онлайн</strong> — составляйте меню на всю неделю, экономьте время и деньги, наслаждайтесь здоровыми семейными приемами пищи. Приложение бесплатно и не требует регистрации: записывайте блюда на каждый день, автоматически формируйте список покупок и скачивайте всё в PDF.
       </p>
       <p>
-        Хотите планировать питание для детей, придерживаться сбалансированной диеты или просто эффективно расходовать бюджет – этот планировщик поможет вам следовать плану и избежать пищевых отходов. Всё быстро, онлайн, и вы можете выбрать любой язык!
+        Планируете питание для детей, придерживаетесь сбалансированного рациона или хотите лучше контролировать бюджет — наш планировщик поможет следовать плану и сократить пищевые отходы. Приложение быстрое, работает прямо в браузере и доступно на многих языках.
       </p>
       <p>
-        Попробуйте бесплатный еженедельный планировщик питания – просто, удобно и без регистрации!
+        Бесплатно доступно 1 PDF в день; после оформления подписки подтвердите e-mail и получите безлимитные скачивания.
       </p>
     </div>
+
+    <!-- Auto menu -->
     <div id="auto-menu-bar" class="text-center mb-3">
-  <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
-    Generează meniu aleator
-  </button>
-</div>
+      <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
+        Сгенерировать случайное меню
+      </button>
+    </div>
+
+    <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
@@ -91,86 +152,91 @@
               <th data-i18n="col.dinner">Ужин (ингредиенты)</th>
             </tr>
           </thead>
-          <tbody id="plan-table"></tbody>
+          <tbody id="plan-table" data-show-origin="true"></tbody>
         </table>
       </div>
     </div>
-    <!-- БЛОК МОТИВАЦИИ ДЛЯ PDF (скрыт по умолчанию) -->
-    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
-        Заботьтесь о здоровье своей семьи! Готовьте с любовью и наслаждайтесь каждым приёмом пищи!
+
+    <!-- PDF impact/message area -->
+    <div id="pdf-impact-area" class="no-print text-center">
+      <div id="pdf-title"></div>
+      <h2 id="pdf-impact-message" class="pdf-impact-title" data-i18n="pdf.message">
+        Заботьтесь о своём здоровье и здоровье семьи. Готовьте с любовью и наслаждайтесь каждой трапезой!
       </h2>
-      <div id="pdf-list" style="margin-top:30px;"></div>
+      <div id="pdf-list"></div>
     </div>
 
+    <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">Список покупок</h5>
+        <h2 class="h5" data-i18n="shoppingList">Список покупок</h2>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <div class="text-center mb-4 no-print btn-bar">
-  <select id="currency-select" class="form-select d-inline-block w-auto me-2">
-    <option value="RON">RON (lei)</option>
-    <option value="EUR" selected>EUR (€)</option>
-  </select>
+    <!-- Buttons / Payment bar -->
+    <div class="text-center mb-4 no-print btn-bar" id="payment-bar">
+      <label for="currency-select" class="visually-hidden" data-i18n="label.currency">Валюта</label>
+      <select id="currency-select" class="form-select d-inline-block w-auto me-2">
+        <option value="RON">RON (lei)</option>
+        <option value="EUR" selected>EUR (€)</option>
+      </select>
 
-  <button id="pay-btn" class="btn btn-warning">
-    <i class="bi bi-cart-check-fill"></i>
-    <span data-i18n="btn.pay">Оплатить & Скачать</span>
-  </button>
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Оплатить и скачать</span>
+      </button>
 
-  <button id="generate-btn" class="btn btn-success ms-2" type="button">
-    <i class="bi bi-file-earmark-pdf-fill"></i>
-    <span data-i18n="btn.generate">Создать PDF</span>
-  </button>
+      <button id="generate-btn" class="btn btn-success ms-2" type="button">
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">Создать PDF</span>
+      </button>
 
-  <div id="payment-status" class="mt-2"></div>
-  <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
-  Manage subscription
-</button>
+      <div id="payment-status" class="mt-2" role="status" aria-live="polite"></div>
+    </div>
 
-</div>
-
-
-    <!-- Email verification for PDF unlimited access -->
-   <div class="card mb-4 text-center" id="access-card">
-  <div class="card-header bg-primary text-white">
-    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
-  </div>
-  <div class="card-body">
-    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
-    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
-    <div id="result" class="mt-3"></div>
-  </div>
-</div>
-
-  <!-- Supabase -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<!-- App (module) -->
-<script src="/js/app.min.js" defer></script>
-<script src="/js/checkout.min.js" defer></script>
-<script src="/js/portal.min.js" defer></script>
+    <!-- Email verification / Manage subscription -->
+    <div class="card mb-4 text-center" id="access-card">
+      <div class="card-header bg-info text-dark">
+        <span data-i18n="banner.unlock">Уже оплатили? Разблокируйте безлимитные загрузки PDF</span>
+      </div>
+      <div class="card-body">
+        <input type="email" id="emailInput" class="form-control mb-2"
+               data-i18n-placeholder="input.email" placeholder="Введите e-mail, использованный при оплате"
+               autocomplete="email" inputmode="email">
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Проверить e-mail</button>
+        <div id="result" class="mt-3" role="status" aria-live="polite"></div>
+        <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
+          Управлять подпиской
+        </button>
+      </div>
+    </div>
 
     <!-- Feedback Section -->
-<div class="card mb-4" id="feedback-section">
-  <div class="card-header bg-info text-white text-center">
-    <i class="bi bi-chat-dots"></i>
-    <span data-i18n="feedback.header">Trimite feedback rapid</span>
-  </div>
-  <div class="card-body">
-    <form id="feedbackForm">
-      <textarea class="form-control mb-2" id="feedbackMsg"
-        rows="3"
-        data-i18n-placeholder="feedback.placeholder"></textarea>
-      <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
-      <div id="feedback-status" class="mt-2"></div>
-    </form>
-    <small class="text-muted d-block mt-2" data-i18n="feedback.note">
-      Feedbackul ajunge direct la dezvoltator.
-    </small>
-  </div>
-</div>
+    <div class="card mb-4" id="feedback-section">
+      <div class="card-header bg-info text-dark text-center">
+        <i class="bi bi-chat-dots"></i>
+        <span data-i18n="feedback.header">Отправить быстрый отзыв</span>
+      </div>
+      <div class="card-body">
+        <form id="feedbackForm">
+          <textarea class="form-control mb-2" id="feedbackMsg" rows="3"
+                    data-i18n-placeholder="feedback.placeholder" placeholder="Напишите свой отзыв здесь…"></textarea>
+          <button type="submit" class="btn btn-info" data-i18n="feedback.button">Отправить отзыв</button>
+          <div id="feedback-status" class="mt-2" role="status" aria-live="polite"></div>
+        </form>
+        <small class="text-muted d-block mt-2" data-i18n="feedback.note">
+          Отзывы отправляются напрямую разработчику.
+        </small>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Supabase + app scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="/js/app.min.js" defer></script>
+  <script src="/js/checkout.min.js" defer></script>
+  <script src="/js/portal.min.js" defer></script>
 </body>
 </html>

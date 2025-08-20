@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">Planificator Mese Săptămânal – Lista de cumpărături & PDF gratuit</title>
-  <meta name="description" content="Planificator Mese Săptămânal în limba română. Creează rapid meniul pe zile, generează PDF cu lista de cumpărături și organizează-ți mesele gratuit, direct din browser." />
-  <meta name="keywords" content="planificator de mese săptămânal, planificare meniuri, listă de cumpărături organizată, plan de mese familie, meniu zilnic, aplicație planificare mese, meniu echilibrat, planificator pentru copii, plan alimentar PDF" />
+
+  <title>Planificator Mese Săptămânal & Lista de Cumpărături – PDF Gratuit</title>
+  <meta name="description" content="Creează-ți planul de mese pe o săptămână, generează automat lista de cumpărături și descarcă totul în PDF — gratuit (1 PDF/zi), fără cont. După abonare, validezi e-mailul și deblochezi descărcări nelimitate." />
+  <meta name="keywords" content="planificator de mese săptămânal, planificare meniuri, listă de cumpărături, meniu săptămânal, plan de mese familie, masă sănătoasă, planner mese gratuit, planner PDF, meal planner română" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://meal-planner.ro/ro/" />
 
-  <!-- hreflang pentru toate limbile -->
+  <!-- hreflang -->
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
@@ -22,63 +24,124 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Planificator Mese Săptămânal" />
-  <meta property="og:description" content="Creează planul tău de mese pe zile și generează PDF cu lista de cumpărături, gratuit, în limba română." />
+  <meta property="og:title" content="Planificator Mese Săptămânal – PDF Gratuit" />
+  <meta property="og:description" content="Planifică meniul săptămânii și lista de cumpărături, descarcă PDF — gratuit, fără cont." />
   <meta property="og:url" content="https://meal-planner.ro/ro/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Planificator Mese Săptămânal" />
-  <meta name="twitter:description" content="Generează rapid planul tău de mese și lista de cumpărături PDF. Gratuit!" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Planificator Mese Săptămânal – PDF Gratuit" />
+  <meta name="twitter:description" content="Creează-ți planul de mese, generează lista și descarcă PDF." />
   <meta name="twitter:url" content="https://meal-planner.ro/ro/" />
+  <meta name="theme-color" content="#198754" />
 
- <!-- Favicon modern SVG -->
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<!-- Favicon PNG fallback -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
-<!-- Favicon clasic pentru browsere vechi -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<!-- Manifest PWA -->
-<link rel="manifest" href="/images/site.webmanifest">
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/images/site.webmanifest">
 
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <!-- JSON-LD: aplicație web, gratuit (1/zi) + abonamente; fără înregistrare -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Planificator Mese Săptămânal",
+    "operatingSystem": "Web",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "ro",
+    "isAccessibleForFree": true,
+    "url": "https://meal-planner.ro/ro/",
+    "image": "https://meal-planner.ro/cover.jpg",
+    "description": "Creează planul săptămânal, generează lista de cumpărături și descarcă în PDF — gratuit (1 PDF/zi). Nu necesită cont; pentru descărcări nelimitate, validează e-mailul după abonare.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "3",
+      "priceCurrency": "EUR",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Plan gratuit",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Utilizare gratuită, limitat la 1 PDF pe zi."
+        },
+        {
+          "@type": "Offer",
+          "name": "Abonament lunar (RON)",
+          "price": "10",
+          "priceCurrency": "RON",
+          "description": "Descărcări PDF nelimitate. Este necesară validarea e-mailului după achiziție.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        },
+        {
+          "@type": "Offer",
+          "name": "Abonament lunar (EUR)",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "description": "Descărcări PDF nelimitate. Este necesară validarea e-mailului după achiziție.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        }
+      ]
+    },
+    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+  }
+  </script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
+
+    <!-- Language Switcher -->
     <div class="mb-3 no-print text-end" id="lang-bar">
-      <select id="lang-switcher" class="form-select w-auto"></select>
+      <label id="label-language" for="lang-switcher" class="visually-hidden" data-i18n="label.language">Selectează limba</label>
+      <select id="lang-switcher" class="form-select w-auto" aria-labelledby="label-language"></select>
     </div>
 
+    <!-- Header -->
     <div class="card mb-4 text-center">
       <div class="card-header bg-success text-white">
-        <h2 class="mb-0" data-i18n="header">Planificator Mese &amp; Lista de Cumpărături</h2>
+        <h1 class="mb-0" data-i18n="header">Planificator Mese & Lista de Cumpărături</h1>
       </div>
     </div>
+
+    <!-- SEO paragraph -->
     <div class="seo-paragraph" id="seo-paragraph">
       <p>
-        <strong>Aplică organizarea meselor zilnice cu planificatorul nostru săptămânal!</strong> Planifică meniul fiecărei zile, adaugă rețete și ingrediente, iar la final obții automat lista de cumpărături pentru întreaga săptămână, gata de tipărit sau salvat PDF.
+        <strong>Planificator de mese săptămânal online</strong> — planifică meniul pentru toată săptămâna, economisește timp și bani și bucură-te de mese sănătoase în familie. Aplicația noastră gratuită îți permite să notezi zilnic preparatele, să generezi automat lista de cumpărături și să descarci totul în format PDF.
       </p>
       <p>
-        Instrumentul online este ideal pentru familii ocupate, persoane care țin dietă, sau oricine dorește să economisească timp și să reducă risipa alimentară. Gătești mai eficient, faci cumpărături mai rapid și controlezi mai ușor bugetul casei.
+        Fie că vrei să organizezi mesele pentru copii, să urmezi o alimentație echilibrată sau doar să gestionezi mai bine bugetul, acest planner te ajută să rămâi pe drum și să reduci risipa alimentară. Totul este rapid, online și disponibil în orice limbă!
       </p>
       <p>
-        Folosește plannerul gratuit, în limba română – nu necesită cont, fără reclame, direct din browser!
+        Încearcă planificatorul de mese săptămânal — simplu, util și fără cont!
       </p>
     </div>
+
+    <!-- Auto menu -->
     <div id="auto-menu-bar" class="text-center mb-3">
-  <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
-    Generează meniu aleator
-  </button>
-</div>
+      <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
+        Generează meniu aleator
+      </button>
+    </div>
+
+    <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
@@ -89,85 +152,90 @@
               <th data-i18n="col.dinner">Cină (ingrediente)</th>
             </tr>
           </thead>
-          <tbody id="plan-table"></tbody>
+          <tbody id="plan-table" data-show-origin="true"></tbody>
         </table>
       </div>
     </div>
-    <!-- MESAJ IMPACT ȘI LISTĂ PENTRU PDF - ascuns by default -->
-    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
-        Ai grijă de sănătatea ta și a familiei tale! Gătește cu drag și bucură-te de fiecare masă!
+
+    <!-- PDF impact/message area -->
+    <div id="pdf-impact-area" class="no-print text-center">
+      <div id="pdf-title"></div>
+      <h2 id="pdf-impact-message" class="pdf-impact-title" data-i18n="pdf.message">
+        Ai grijă de sănătatea ta și a familiei tale. Gătește cu drag și bucură-te de fiecare masă!
       </h2>
-      <div id="pdf-list" style="margin-top:30px;"></div>
+      <div id="pdf-list"></div>
     </div>
 
+    <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">Lista de cumpărături</h5>
+        <h2 class="h5" data-i18n="shoppingList">Lista de cumpărături</h2>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-  <!-- Buttons -->
-   <div class="text-center mb-4 no-print btn-bar">
+    <!-- Buttons / Payment bar -->
+    <div class="text-center mb-4 no-print btn-bar" id="payment-bar">
+      <label for="currency-select" class="visually-hidden" data-i18n="label.currency">Monedă</label>
       <select id="currency-select" class="form-select d-inline-block w-auto me-2">
         <option value="RON">RON (lei)</option>
         <option value="EUR" selected>EUR (€)</option>
       </select>
-    
+
       <button id="pay-btn" class="btn btn-warning">
         <i class="bi bi-cart-check-fill"></i>
-        Plătește & Descarcă
+        <span data-i18n="btn.pay">Plătește & Descarcă</span>
       </button>
-    
+
       <button id="generate-btn" class="btn btn-success ms-2" type="button">
         <i class="bi bi-file-earmark-pdf-fill"></i>
-        Generează PDF
+        <span data-i18n="btn.generate">Generează PDF</span>
       </button>
-    
-      <div id="payment-status" class="mt-2"></div>
+
+      <div id="payment-status" class="mt-2" role="status" aria-live="polite"></div>
     </div>
 
-
-      <!-- Email verification for PDF unlimited access -->
+    <!-- Email verification -->
     <div class="card mb-4 text-center" id="access-card">
-      <div class="card-header bg-primary text-white">
-        <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
+      <div class="card-header bg-info text-dark">
+        <span data-i18n="banner.unlock">Ai plătit deja? Deblochează descărcările PDF nelimitate</span>
       </div>
       <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
-        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
-        <div id="result" class="mt-3"></div>
+        <input type="email" id="emailInput" class="form-control mb-2"
+               data-i18n-placeholder="input.email" placeholder="Introdu e-mailul folosit la plată" autocomplete="email" inputmode="email">
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verifică e-mailul</button>
+        <div id="result" class="mt-3" role="status" aria-live="polite"></div>
         <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
-          Manage subscription
+          Administrează abonamentul
         </button>
       </div>
     </div>
 
-  <!-- Supabase -->
+    <!-- Feedback Section -->
+    <div class="card mb-4" id="feedback-section">
+      <div class="card-header bg-info text-dark text-center">
+        <i class="bi bi-chat-dots"></i>
+        <span data-i18n="feedback.header">Trimite feedback rapid</span>
+      </div>
+      <div class="card-body">
+        <form id="feedbackForm">
+          <textarea class="form-control mb-2" id="feedbackMsg" rows="3"
+                    data-i18n-placeholder="feedback.placeholder" placeholder="Scrie feedback-ul aici…"></textarea>
+          <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
+          <div id="feedback-status" class="mt-2" role="status" aria-live="polite"></div>
+        </form>
+        <small class="text-muted d-block mt-2" data-i18n="feedback.note">
+          Feedbackul ajunge direct la dezvoltator.
+        </small>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Supabase + app scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <!-- App (module) -->
   <script src="/js/app.min.js" defer></script>
   <script src="/js/checkout.min.js" defer></script>
-   <script src="/js/portal.min.js" defer></script>
-    <!-- Feedback Section -->
-<div class="card mb-4" id="feedback-section">
-  <div class="card-header bg-info text-white text-center">
-    <i class="bi bi-chat-dots"></i>
-    <span data-i18n="feedback.header">Trimite feedback rapid</span>
-  </div>
-  <div class="card-body">
-    <form id="feedbackForm">
-      <textarea class="form-control mb-2" id="feedbackMsg"
-        rows="3"
-        data-i18n-placeholder="feedback.placeholder"></textarea>
-      <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
-      <div id="feedback-status" class="mt-2"></div>
-    </form>
-    <small class="text-muted d-block mt-2" data-i18n="feedback.note">
-      Feedbackul ajunge direct la dezvoltator.
-    </small>
-  </div>
-</div>
+  <script src="/js/portal.min.js" defer></script>
 </body>
 </html>

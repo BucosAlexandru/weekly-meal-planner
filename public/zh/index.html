@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="title">每周用餐计划器</title>
-  <meta name="description" content="每周用餐计划器：轻松创建每周菜单，生成购物清单，并免费下载 PDF —— 免费、简单、在线。" />
-  <meta name="keywords" content="每周餐饮计划, 购物清单, 每周菜单, 家庭餐饮, 健康饮食, 免费餐饮计划, 餐饮计划PDF, meal planner chinese" />
+
+  <title data-i18n="title">每周用餐计划器 — 购物清单 & 免费 PDF</title>
+  <meta name="description" content="创建每周菜单并自动生成购物清单，免费下载 PDF（每天 1 个），无需注册。完成订阅后通过邮箱验证可解锁无限次下载。" />
+  <meta name="keywords" content="每周餐饮计划, 购物清单, 每周菜单, 家庭餐饮, 健康饮食, 免费计划器, PDF 菜单, 用餐计划工具, meal planner chinese" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://meal-planner.ro/zh/" />
 
-  <!-- hreflang pentru toate limbile -->
+  <!-- hreflang -->
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
@@ -22,63 +24,122 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="每周用餐计划器" />
-  <meta property="og:description" content="创建您的每周用餐计划和购物清单，然后免费下载 PDF。100% 免费，无需注册！" />
+  <meta property="og:title" content="每周用餐计划器 — 免费 PDF" />
+  <meta property="og:description" content="创建你的每周用餐计划与购物清单，免费下载 PDF（1/天），无需注册。" />
   <meta property="og:url" content="https://meal-planner.ro/zh/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="每周用餐计划器" />
-  <meta name="twitter:description" content="轻松计划每周用餐，生成 PDF 购物清单，一切免费在线完成。" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="每周用餐计划器 — 免费 PDF" />
+  <meta name="twitter:description" content="在线快速创建菜单与购物清单，下载 PDF。" />
   <meta name="twitter:url" content="https://meal-planner.ro/zh/" />
+  <meta name="theme-color" content="#198754" />
 
-<!-- Favicon modern SVG -->
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<!-- Favicon PNG fallback -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
-<!-- Favicon clasic pentru browsere vechi -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<!-- Manifest PWA -->
-<link rel="manifest" href="/images/site.webmanifest">
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/images/site.webmanifest">
 
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <!-- JSON-LD: 免费(1/天)+订阅；无需注册，订阅后邮箱验证 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "每周用餐计划器",
+    "operatingSystem": "Web",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "zh",
+    "isAccessibleForFree": true,
+    "url": "https://meal-planner.ro/zh/",
+    "image": "https://meal-planner.ro/cover.jpg",
+    "description": "创建每周菜单并自动生成购物清单，免费下载 PDF（每天 1 个）。无需注册；完成订阅后通过邮箱验证即可无限次下载。",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "3",
+      "priceCurrency": "EUR",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "免费方案",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "免费使用，每天限 1 个 PDF。"
+        },
+        {
+          "@type": "Offer",
+          "name": "月度订阅（RON）",
+          "price": "10",
+          "priceCurrency": "RON",
+          "description": "PDF 无限下载；购买后需邮箱验证。",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        },
+        {
+          "@type": "Offer",
+          "name": "月度订阅（EUR）",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "description": "PDF 无限下载；购买后需邮箱验证。",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        }
+      ]
+    },
+    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+  }
+  </script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
+
+    <!-- Language Switcher -->
     <div class="text-end mb-3 no-print" id="lang-bar">
-      <select id="lang-switcher" class="form-select w-auto"></select>
+      <label id="label-language" for="lang-switcher" class="visually-hidden" data-i18n="label.language">选择语言</label>
+      <select id="lang-switcher" class="form-select w-auto" aria-labelledby="label-language"></select>
     </div>
 
+    <!-- Header -->
     <div class="card mb-4">
       <div class="card-header bg-success text-white text-center">
-        <h2 class="mb-0" data-i18n="header">用餐计划器 &amp; 购物清单</h2>
+        <h1 class="mb-0" data-i18n="header">用餐计划器 & 购物清单</h1>
       </div>
     </div>
+
+    <!-- SEO paragraph -->
     <div class="seo-paragraph" id="seo-paragraph">
       <p>
-        <strong>每周膳食计划在线工具</strong> – 制定一整周的菜单，节省时间和金钱，与家人一起享受健康美味的餐食。我们的免费应用让你记录每天的食谱，自动生成购物清单，并支持一键下载PDF。
+        <strong>每周膳食计划在线工具</strong> — 制定整周菜单，节省时间与预算，享受更健康的家庭饮食。应用免费、无需注册：记录每日菜品，自动生成购物清单，并一键下载 PDF。
       </p>
       <p>
-        无论是为孩子安排饮食、坚持均衡营养，还是提升家庭预算效率，这款计划工具都能帮你更好地坚持计划，减少食物浪费。一切都很快捷、在线，并可支持多种语言！
+        无论是为孩子安排饮食、坚持均衡营养，还是提升家庭预算效率，这款计划工具都能帮助你坚持计划，减少食物浪费。支持多语言，直接在浏览器中使用。
       </p>
       <p>
-        立即体验免费的每周膳食计划工具 – 简单、实用、无需注册！
+        免费方案每天可下载 1 个 PDF；订阅后验证邮箱即可解锁无限次下载。
       </p>
     </div>
+
+    <!-- Auto menu -->
     <div id="auto-menu-bar" class="text-center mb-3">
-  <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
-    Generează meniu aleator
-  </button>
-</div>
+      <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">随机生成菜单</button>
+    </div>
+
+    <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
         <table class="table mb-0">
@@ -89,84 +150,91 @@
               <th data-i18n="col.dinner">晚餐（食材）</th>
             </tr>
           </thead>
-          <tbody id="plan-table"></tbody>
+          <tbody id="plan-table" data-show-origin="true"></tbody>
         </table>
       </div>
     </div>
-    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
-        关爱自己和家人的健康！用心烹饪，享受每一餐！
+
+    <!-- PDF impact/message area (JS 填充) -->
+    <div id="pdf-impact-area" class="no-print text-center">
+      <div id="pdf-title"></div>
+      <h2 id="pdf-impact-message" class="pdf-impact-title" data-i18n="pdf.message">
+        关爱自己与家人的健康。用心烹饪，享受每一餐！
       </h2>
-      <div id="pdf-list" style="margin-top:30px;"></div>
+      <div id="pdf-list"></div>
     </div>
 
+    <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">购物清单</h5>
+        <h2 class="h5" data-i18n="shoppingList">购物清单</h2>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- Buttons -->
-<div class="text-center mb-4 no-print btn-bar">
-  <select id="currency-select" class="form-select d-inline-block w-auto me-2">
-    <option value="RON">RON (列伊)</option>
-    <option value="EUR" selected>EUR (€)</option>
-  </select>
+    <!-- Buttons / Payment bar -->
+    <div class="text-center mb-4 no-print btn-bar" id="payment-bar">
+      <label for="currency-select" class="visually-hidden" data-i18n="label.currency">货币</label>
+      <select id="currency-select" class="form-select d-inline-block w-auto me-2">
+        <option value="RON">RON (列伊)</option>
+        <option value="EUR" selected>EUR (€)</option>
+      </select>
 
-  <button id="pay-btn" class="btn btn-warning">
-    <i class="bi bi-cart-check-fill"></i>
-    <span data-i18n="btn.pay">支付并下载</span>
-  </button>
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">支付并下载</span>
+      </button>
 
-  <button id="generate-btn" class="btn btn-success ms-2" type="button">
-    <i class="bi bi-file-earmark-pdf-fill"></i>
-    <span data-i18n="btn.generate">生成 PDF</span>
-  </button>
+      <button id="generate-btn" class="btn btn-success ms-2" type="button">
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">生成 PDF</span>
+      </button>
 
-  <div id="payment-status" class="mt-2"></div>
-</div>
+      <div id="payment-status" class="mt-2" role="status" aria-live="polite"></div>
+    </div>
 
-<!-- Email verification for PDF unlimited access -->
-<div class="card mb-4 text-center" id="access-card">
-  <div class="card-header bg-primary text-white">
-    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
-  </div>
-  <div class="card-body">
-    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
-    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
-    <div id="result" class="mt-3"></div>
-    <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
-      Manage subscription
-    </button>
-  </div>
-</div>
-
-  <!-- Supabase -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<!-- App (module) -->
-<script src="/js/app.min.js" defer></script>
-<script src="/js/checkout.min.js" defer></script>
-<script src="/js/portal.min.js" defer></script>
+    <!-- Email verification / Manage subscription -->
+    <div class="card mb-4 text-center" id="access-card">
+      <div class="card-header bg-info text-dark">
+        <span data-i18n="banner.unlock">已付款？解锁无限次 PDF 下载</span>
+      </div>
+      <div class="card-body">
+        <input type="email" id="emailInput" class="form-control mb-2"
+               data-i18n-placeholder="input.email" placeholder="输入用于支付的邮箱"
+               autocomplete="email" inputmode="email">
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">验证邮箱</button>
+        <div id="result" class="mt-3" role="status" aria-live="polite"></div>
+        <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
+          管理订阅
+        </button>
+      </div>
+    </div>
 
     <!-- Feedback Section -->
-<div class="card mb-4" id="feedback-section">
-  <div class="card-header bg-info text-white text-center">
-    <i class="bi bi-chat-dots"></i>
-    <span data-i18n="feedback.header">Trimite feedback rapid</span>
-  </div>
-  <div class="card-body">
-    <form id="feedbackForm">
-      <textarea class="form-control mb-2" id="feedbackMsg"
-        rows="3"
-        data-i18n-placeholder="feedback.placeholder"></textarea>
-      <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
-      <div id="feedback-status" class="mt-2"></div>
-    </form>
-    <small class="text-muted d-block mt-2" data-i18n="feedback.note">
-      Feedbackul ajunge direct la dezvoltator.
-    </small>
-  </div>
-</div>
+    <div class="card mb-4" id="feedback-section">
+      <div class="card-header bg-info text-dark text-center">
+        <i class="bi bi-chat-dots"></i>
+        <span data-i18n="feedback.header">快速反馈</span>
+      </div>
+      <div class="card-body">
+        <form id="feedbackForm">
+          <textarea class="form-control mb-2" id="feedbackMsg" rows="3"
+                    data-i18n-placeholder="feedback.placeholder" placeholder="在此输入你的反馈…"></textarea>
+          <button type="submit" class="btn btn-info" data-i18n="feedback.button">发送反馈</button>
+          <div id="feedback-status" class="mt-2" role="status" aria-live="polite"></div>
+        </form>
+        <small class="text-muted d-block mt-2" data-i18n="feedback.note">
+          反馈将直接发送给开发者。
+        </small>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Supabase + app scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="/js/app.min.js" defer></script>
+  <script src="/js/checkout.min.js" defer></script>
+  <script src="/js/portal.min.js" defer></script>
 </body>
 </html>

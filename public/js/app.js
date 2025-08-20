@@ -15,6 +15,67 @@ function pickMotiv(langCode) {
   const arr = MOTIV[langCode] || MOTIV.ro;
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+// --- A11Y: aria-label pentru butoanele de dictare ---
+(function () {
+  function addDictationAriaLabels(root = document) {
+    const headerCells = root.querySelectorAll('table thead th');
+    const mealLabels = [
+      headerCells[1]?.textContent.trim() || 'Lunch',
+      headerCells[2]?.textContent.trim() || 'Dinner'
+    ];
+
+    root.querySelectorAll('button[onclick^="startDictation"]').forEach((btn) => {
+      if (btn.hasAttribute('aria-label')) return;
+
+      // Încearcă să derivezi ziua/coloana din tabel
+      const td = btn.closest('td');
+      const row = btn.closest('tr');
+      const dayCell = row?.querySelector('th, td');
+      const dayText = dayCell ? dayCell.textContent.trim() : '';
+
+      // Indicele mesei (col 1 = lunch, col 2 = dinner)
+      let mealIndex = 0;
+      if (td && typeof td.cellIndex === 'number') {
+        mealIndex = Math.max(0, td.cellIndex - 1);
+      }
+      const mealText = mealLabels[mealIndex] || '';
+
+      // Eticheta accesibilă (localizată indirect din antet + zi)
+      const label = (mealText && dayText) ? `${mealText} — ${dayText}` : 'Voice input';
+
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
+
+      // Ascunde emoji-ul de la screen reader, păstrând un text vizibil doar pentru SR
+      if (!btn.querySelector('.visually-hidden')) {
+        const sr = document.createElement('span');
+        sr.className = 'visually-hidden';
+        sr.textContent = label;
+        btn.appendChild(sr);
+        const icon = btn.querySelector('i.bi');
+        if (icon && !icon.hasAttribute('aria-hidden')) {
+          icon.setAttribute('aria-hidden', 'true');
+        }
+      }
+      // Dacă butonul are doar emoji, marchează-l aria-hidden
+      btn.querySelectorAll('*').forEach((n) => {
+        if (n.textContent && n.textContent.trim() === '🎤') n.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
+
+  // Rulează după ce se construiește planul
+  document.addEventListener('DOMContentLoaded', () => {
+    addDictationAriaLabels(document);
+
+    // Dacă planul e re-rendat după acțiuni (schimbare limbă, meniu aleator etc.), prinde modificările
+    const target = document.getElementById('pdf-content') || document.body;
+    const mo = new MutationObserver(() => addDictationAriaLabels(document));
+    mo.observe(target, { childList: true, subtree: true });
+  });
+})();
+
 // ===== Limba globală
 let lang = localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
 if (!i18n[lang]) lang = 'ro';
@@ -68,17 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
           <td>
             <div class="input-group input-group-sm">
               <input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}">
-              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}l')" tabindex="-1">
-                <i class="bi bi-mic-fill"></i>
-              </button>
+              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}l')">
+            <i class="bi bi-mic-fill" aria-hidden="true"></i>
+             </button>
             </div>
           </td>
           <td>
             <div class="input-group input-group-sm">
               <input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}">
-              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}c')" tabindex="-1">
-                <i class="bi bi-mic-fill"></i>
-              </button>
+               <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}c')">
+                  <i class="bi bi-mic-fill" aria-hidden="true"></i>
+                </button>
             </div>
           </td>
         </tr>
@@ -540,39 +601,56 @@ function paginateCleanNode(root){
   autoBtn.onclick = generateRandomMenu;
 }
 
+// --- Lazy-load pentru html2pdf.js (varianta sigură pe CDN)
+async function ensureHtml2pdfLoaded() {
+  if (window.html2pdf) return;
+  await new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+    s.onload = resolve;
+    s.onerror = () => reject(new Error('Nu s-a putut încărca html2pdf'));
+    document.head.appendChild(s);
+  });
+}
+
 
   function attachPdfListeners() {
-    const freeBtn = document.getElementById('generate-btn');
-    if (freeBtn && !freeBtn.dataset.attached) {
-      freeBtn.onclick = () => {
-        resetPdfQuotaIfNeeded();
-        if (pdfCount >= 1) { // LIMITĂ: 1/zi
-          updateButtonState();
-          return;
-        }
-        exportShoppingListToPDF();
-        pdfCount++;
-        if (pdfCount === 1) pdfFirst = Date.now();
-        localStorage.setItem('pdfCount', pdfCount);
-        localStorage.setItem('pdfFirst', pdfFirst);
+  const freeBtn = document.getElementById('generate-btn');
+  if (freeBtn && !freeBtn.dataset.attached) {
+    freeBtn.onclick = async () => {
+      await ensureHtml2pdfLoaded();              // <- adăugat
+      resetPdfQuotaIfNeeded();
+      if (pdfCount >= 1) {                       // LIMITĂ: 1/zi
         updateButtonState();
-      };
-      freeBtn.dataset.attached = '1';
-    }
-
-    // butonul plătit apare dinamic
-    if (resultDiv && !resultDiv.dataset.observing) {
-      const obs = new MutationObserver(() => {
-        const paidBtn = document.getElementById('paid-generate-pdf');
-        if (paidBtn && !paidBtn.dataset.attached) {
-          paidBtn.onclick = () => exportShoppingListToPDF();
-          paidBtn.dataset.attached = '1';
-        }
-      });
-      obs.observe(resultDiv, { childList: true, subtree: true });
-      resultDiv.dataset.observing = '1';
-    }
+        return;
+      }
+      exportShoppingListToPDF();
+      pdfCount++;
+      if (pdfCount === 1) pdfFirst = Date.now();
+      localStorage.setItem('pdfCount', pdfCount);
+      localStorage.setItem('pdfFirst', pdfFirst);
+      updateButtonState();
+    };
+    freeBtn.dataset.attached = '1';
   }
+
+  // butonul plătit apare dinamic
+  if (resultDiv && !resultDiv.dataset.observing) {
+    const obs = new MutationObserver(() => {
+      const paidBtn = document.getElementById('paid-generate-pdf');
+      if (paidBtn && !paidBtn.dataset.attached) {
+        paidBtn.onclick = async () => {          // <- async + lazy load
+          await ensureHtml2pdfLoaded();
+          exportShoppingListToPDF();
+        };
+        paidBtn.dataset.attached = '1';
+      }
+    });
+    obs.observe(resultDiv, { childList: true, subtree: true });
+    resultDiv.dataset.observing = '1';
+  }
+}
+
 
   function updateButtonState() {
   resetPdfQuotaIfNeeded?.();

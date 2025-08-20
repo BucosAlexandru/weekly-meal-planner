@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planejador Semanal de Refeições & Lista de Compras – PDF Grátis</title>
-  <meta name="description" content="Planeje suas refeições da semana facilmente! Gere sua lista de compras, faça download em PDF e organize sua alimentação de forma gratuita, direto do navegador." />
-  <meta name="keywords" content="planejador de refeições, lista de compras, menu semanal, refeições familiares, refeições saudáveis, planejador grátis, planner de refeições PDF, meal planner português" />
 
-  <!-- canonical & alternate versions -->
+  <title>Planejador Semanal de Refeições & Lista de Compras – PDF Grátis</title>
+  <meta name="description" content="Monte seu cardápio semanal, gere automaticamente a lista de compras e baixe tudo em PDF — grátis (1 PDF/dia), sem cadastro. Após a assinatura, valide o e-mail para desbloquear downloads ilimitados." />
+  <meta name="keywords" content="planejador de refeições, lista de compras, menu semanal, refeições familiares, refeições saudáveis, planejador grátis, planner de refeições PDF, meal planner português" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://meal-planner.ro/pt/" />
+
+  <!-- hreflang -->
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/" />
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/" />
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/" />
@@ -22,65 +24,123 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
-  <!-- OG & Twitter for sharing -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Planejador Semanal de Refeições & Lista de Compras – PDF Grátis" />
-  <meta property="og:description" content="Organize suas refeições, gere lista de compras e PDF grátis em português." />
+  <meta property="og:title" content="Planejador Semanal de Refeições – PDF Grátis" />
+  <meta property="og:description" content="Planeje suas refeições, gere a lista de compras e baixe em PDF — grátis e sem cadastro." />
   <meta property="og:url" content="https://meal-planner.ro/pt/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Planejador Semanal de Refeições & Lista de Compras – PDF Grátis" />
-  <meta name="twitter:description" content="Planeje suas refeições, gere lista de compras em PDF grátis, direto do navegador!" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Planejador Semanal de Refeições – PDF Grátis" />
+  <meta name="twitter:description" content="Organize seu cardápio, gere a lista e baixe o PDF." />
   <meta name="twitter:url" content="https://meal-planner.ro/pt/" />
+  <meta name="theme-color" content="#198754" />
 
-  <!-- Favicon modern SVG -->
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<!-- Favicon PNG fallback -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
-<!-- Favicon clasic pentru browsere vechi -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<!-- Manifest PWA -->
-<link rel="manifest" href="/images/site.webmanifest">
+  <!-- Favicons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/images/site.webmanifest">
 
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <!-- JSON-LD: app web, grátis (1/dia) + assinatura; sem cadastro -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Planejador Semanal de Refeições",
+    "operatingSystem": "Web",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "pt",
+    "isAccessibleForFree": true,
+    "url": "https://meal-planner.ro/pt/",
+    "image": "https://meal-planner.ro/cover.jpg",
+    "description": "Crie seu plano semanal, gere a lista de compras e baixe tudo em PDF — grátis (1 PDF/dia). Não é necessário cadastro; para downloads ilimitados, valide seu e-mail após a assinatura.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "3",
+      "priceCurrency": "EUR",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Plano gratuito",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Uso gratuito, limitado a 1 PDF por dia."
+        },
+        {
+          "@type": "Offer",
+          "name": "Assinatura mensal (RON)",
+          "price": "10",
+          "priceCurrency": "RON",
+          "description": "Downloads de PDF ilimitados. Validação de e-mail após a compra.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        },
+        {
+          "@type": "Offer",
+          "name": "Assinatura mensal (EUR)",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "description": "Downloads de PDF ilimitados. Validação de e-mail após a compra.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        }
+      ]
+    },
+    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+  }
+  </script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
+
     <!-- Language Switcher -->
     <div class="mb-3 no-print text-end" id="lang-bar">
-      <select id="lang-switcher" class="form-select w-auto"></select>
+      <label id="label-language" for="lang-switcher" class="visually-hidden" data-i18n="label.language">Selecionar idioma</label>
+      <select id="lang-switcher" class="form-select w-auto" aria-labelledby="label-language"></select>
     </div>
 
     <!-- Header -->
     <div class="card mb-4 text-center">
       <div class="card-header bg-success text-white">
-        <h2 class="mb-0" data-i18n="header">Planejador de Refeições & Lista de Compras</h2>
+        <h1 class="mb-0" data-i18n="header">Planejador de Refeições & Lista de Compras</h1>
       </div>
     </div>
+
+    <!-- SEO paragraph -->
     <div class="seo-paragraph" id="seo-paragraph">
       <p>
-        <strong>Planejador semanal de refeições online</strong> – Monte o cardápio da semana inteira, economize tempo e dinheiro, e aproveite refeições saudáveis com a família. Nosso aplicativo gratuito permite anotar o que você vai cozinhar, gerar a lista de compras automaticamente e baixar tudo em PDF.
+        <strong>Planejador semanal de refeições online</strong> — Monte o cardápio da semana inteira, economize tempo e dinheiro e aproveite refeições saudáveis com a família. Nosso aplicativo gratuito permite anotar o que cozinhar, gerar automaticamente a lista de compras e baixar tudo em PDF.
       </p>
       <p>
-        Seja para organizar as refeições das crianças, seguir uma dieta equilibrada ou controlar melhor o orçamento, este planejador ajuda você a seguir o plano e evitar desperdício de alimentos. Tudo é rápido, online e disponível em qualquer idioma!
+        Para organizar as refeições das crianças, seguir uma dieta equilibrada ou controlar melhor o orçamento, este planejador ajuda você a manter a rotina e evitar desperdício de alimentos. Tudo é rápido, online e disponível em qualquer idioma!
       </p>
       <p>
-        Experimente o planejador semanal de refeições grátis – simples, útil e sem cadastro!
+        Experimente o planejador semanal grátis — simples, útil e sem cadastro!
       </p>
     </div>
+
+    <!-- Auto menu -->
     <div id="auto-menu-bar" class="text-center mb-3">
-  <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
-    Generează meniu aleator
-  </button>
-</div>
+      <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
+        Gerar menu aleatório
+      </button>
+    </div>
+
     <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
@@ -92,27 +152,31 @@
               <th data-i18n="col.dinner">Jantar (ingredientes)</th>
             </tr>
           </thead>
-          <tbody id="plan-table"></tbody>
+          <tbody id="plan-table" data-show-origin="true"></tbody>
         </table>
       </div>
     </div>
-    <!-- IMPACTO PARA PDF - oculto por padrão -->
-<div id="pdf-impact-area" style="display:none; margin:0; padding:0; background:#fff;">
-  <h2 id="pdf-title" style="margin-top:0; margin-bottom:7px; text-align:center; color:#218739; font-size:1.27em;"></h2>
-  <div id="pdf-impact-message"></div>
-  <div id="pdf-list"></div>
-</div>
+
+    <!-- PDF impact/message area -->
+    <div id="pdf-impact-area" class="no-print text-center">
+      <div id="pdf-title"></div>
+      <h2 id="pdf-impact-message" class="pdf-impact-title" data-i18n="pdf.message">
+        Cuide da sua saúde e da sua família. Cozinhe com carinho e aproveite cada refeição!
+      </h2>
+      <div id="pdf-list"></div>
+    </div>
 
     <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">Lista de Compras</h5>
+        <h2 class="h5" data-i18n="shoppingList">Lista de Compras</h2>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- Buttons (managed by app.js/checkout.js) -->
-    <div class="text-center mb-4 no-print btn-bar" id="payment-bar" style="display:none">
+    <!-- Buttons / Payment bar -->
+    <div class="text-center mb-4 no-print btn-bar" id="payment-bar">
+      <label for="currency-select" class="visually-hidden" data-i18n="label.currency">Moeda</label>
       <select id="currency-select" class="form-select d-inline-block w-auto me-2">
         <option value="RON">RON (lei)</option>
         <option value="EUR" selected>EUR (€)</option>
@@ -128,49 +192,50 @@
         <span data-i18n="btn.generate">Gerar PDF</span>
       </button>
 
-      <div id="payment-status" class="mt-2"></div>
+      <div id="payment-status" class="mt-2" role="status" aria-live="polite"></div>
     </div>
 
     <!-- Email verification + Manage subscription -->
     <div class="card mb-4 text-center" id="access-card">
-      <div class="card-header bg-primary text-white">
-        <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
+      <div class="card-header bg-info text-dark">
+        <span data-i18n="banner.unlock">Já pagou? Desbloqueie downloads ilimitados de PDF</span>
       </div>
       <div class="card-body">
-        <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email" placeholder="Digite o e-mail usado no pagamento">
-        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
-        <div id="result" class="mt-3"></div>
+        <input type="email" id="emailInput" class="form-control mb-2"
+               data-i18n-placeholder="input.email" placeholder="Digite o e-mail usado no pagamento" autocomplete="email" inputmode="email">
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verificar e-mail</button>
+        <div id="result" class="mt-3" role="status" aria-live="polite"></div>
         <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
-          Manage subscription
+          Gerenciar assinatura
         </button>
       </div>
     </div>
 
   </div><!-- /container -->
 
-  <!-- Scripts (same order as pe main) -->
+  <!-- Supabase + app scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="/js/app.min.js" defer></script>
   <script src="/js/checkout.min.js" defer></script>
   <script src="/js/portal.min.js" defer></script>
-    <!-- Feedback Section -->
-<div class="card mb-4" id="feedback-section">
-  <div class="card-header bg-info text-white text-center">
-    <i class="bi bi-chat-dots"></i>
-    <span data-i18n="feedback.header">Trimite feedback rapid</span>
+
+  <!-- Feedback Section -->
+  <div class="card mb-4" id="feedback-section">
+    <div class="card-header bg-info text-dark text-center">
+      <i class="bi bi-chat-dots"></i>
+      <span data-i18n="feedback.header">Enviar feedback rápido</span>
+    </div>
+    <div class="card-body">
+      <form id="feedbackForm">
+        <textarea class="form-control mb-2" id="feedbackMsg" rows="3"
+                  data-i18n-placeholder="feedback.placeholder" placeholder="Escreva seu feedback aqui..."></textarea>
+        <button type="submit" class="btn btn-info" data-i18n="feedback.button">Enviar feedback</button>
+        <div id="feedback-status" class="mt-2" role="status" aria-live="polite"></div>
+      </form>
+      <small class="text-muted d-block mt-2" data-i18n="feedback.note">
+        O feedback vai diretamente para o desenvolvedor.
+      </small>
+    </div>
   </div>
-  <div class="card-body">
-    <form id="feedbackForm">
-      <textarea class="form-control mb-2" id="feedbackMsg"
-        rows="3"
-        data-i18n-placeholder="feedback.placeholder"></textarea>
-      <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
-      <div id="feedback-status" class="mt-2"></div>
-    </form>
-    <small class="text-muted d-block mt-2" data-i18n="feedback.note">
-      Feedbackul ajunge direct la dezvoltator.
-    </small>
-  </div>
-</div>
 </body>
 </html>

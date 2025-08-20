@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title data-i18n="title">Wöchentlicher Essensplaner – Einkaufsliste & PDF kostenlos</title>
   <meta name="description" content="Wöchentlicher Essensplaner auf Deutsch. Erstelle deinen Wochenplan und lade die Einkaufsliste als PDF herunter – kostenlos, direkt im Browser." />
   <meta name="keywords" content="Essensplaner, Einkaufslisten, Wochenplaner, Menüplaner, Mahlzeitenplan, Familienmenü, Mahlzeitenplan kostenlos, Mahlzeitenplan PDF, meal planner deutsch" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://meal-planner.ro/de/" />
 
   <!-- hreflang -->
@@ -22,65 +24,122 @@
   <link rel="alternate" hreflang="ar" href="https://meal-planner.ro/ar/" />
   <link rel="alternate" hreflang="hi" href="https://meal-planner.ro/hi/" />
 
+  <!-- OG & Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Wöchentlicher Essensplaner" />
   <meta property="og:description" content="Erstelle deinen Wochenplan und lade die Einkaufsliste als PDF herunter, kostenlos, auf Deutsch." />
   <meta property="og:url" content="https://meal-planner.ro/de/" />
   <meta property="og:image" content="https://meal-planner.ro/cover.jpg" />
-
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Wöchentlicher Essensplaner" />
   <meta name="twitter:description" content="Schnell Essensplan erstellen & PDF kostenlos herunterladen." />
   <meta name="twitter:url" content="https://meal-planner.ro/de/" />
 
- <!-- Favicon modern SVG -->
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<!-- Favicon PNG fallback -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png">
-<!-- Favicon clasic pentru browsere vechi -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<!-- Manifest PWA -->
-<link rel="manifest" href="/images/site.webmanifest">
+  <!-- PWA / Favicons -->
+  <meta name="theme-color" content="#198754" />
+  <link rel="manifest" href="/images/site.webmanifest" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/web-app-manifest-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/web-app-manifest-512x512.png" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/style.min.css" />
+
+  <!-- JSON-LD: App web, free limit + abonamente, fără înregistrare -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Wöchentlicher Essensplaner",
+    "operatingSystem": "Web",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "de",
+    "isAccessibleForFree": true,
+    "url": "https://meal-planner.ro/de/",
+    "image": "https://meal-planner.ro/cover.jpg",
+    "description": "Erstelle deinen Wochenplan, generiere automatisch die Einkaufsliste und lade alles als PDF herunter – kostenlos (1 PDF/Tag). Keine Registrierung erforderlich; für unbegrenzte Downloads ist eine E‑Mail‑Validierung nach dem Abo nötig.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "3",
+      "priceCurrency": "EUR",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Gratis",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Kostenlos, auf 1 PDF pro Tag begrenzt."
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium (RON)",
+          "price": "10",
+          "priceCurrency": "RON",
+          "description": "Unbegrenzte PDF-Downloads. E-Mail-Validierung nach Kauf erforderlich.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium (EUR)",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "description": "Unbegrenzte PDF-Downloads. E-Mail-Validierung nach Kauf erforderlich.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        }
+      ]
+    },
+    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+  }
+  </script>
 </head>
 <body>
   <div class="container py-5" id="pdf-content">
     <!-- Language Switcher -->
     <div class="mb-3 no-print text-end" id="lang-bar">
-      <select id="lang-switcher" class="form-select w-auto"></select>
+      <label id="label-language" for="lang-switcher" class="visually-hidden" data-i18n="label.language">Sprache auswählen</label>
+      <select id="lang-switcher" class="form-select w-auto" aria-labelledby="label-language"></select>
     </div>
 
     <!-- Header -->
     <div class="card mb-4 text-center">
       <div class="card-header bg-success text-white">
-        <h2 class="mb-0" data-i18n="header">Essensplaner & Einkaufsliste</h2>
+        <h1 class="mb-0" data-i18n="header">Essensplaner & Einkaufsliste</h1>
       </div>
     </div>
+
+    <!-- SEO paragraph -->
     <div class="seo-paragraph" id="seo-paragraph">
       <p>
-        <strong>Wöchentlicher Essensplaner online</strong> – Erstelle deinen Menüplan für die ganze Woche, spare Zeit und Geld und genieße gesunde Mahlzeiten mit der Familie. Unsere kostenlose App hilft dir dabei, deine täglichen Gerichte festzuhalten, automatisch eine Einkaufsliste zu generieren und alles als PDF herunterzuladen.
+        <strong>Wöchentlicher Essensplaner online</strong> – Erstelle deinen Menüplan für die ganze Woche, spare Zeit und Geld und genieße gesunde Mahlzeiten mit der Familie. Unsere kostenlose App hilft dir, deine täglichen Gerichte festzuhalten, automatisch eine Einkaufsliste zu generieren und alles als PDF herunterzuladen.
       </p>
       <p>
-        Egal ob du die Mahlzeiten für Kinder organisieren möchtest, einer ausgewogenen Ernährung folgen willst oder einfach effizienter mit deinem Budget umgehen möchtest – dieser Planer hilft dir, am Plan zu bleiben und Lebensmittelverschwendung zu vermeiden. Alles ist schnell, online und du kannst die App in jeder gewünschten Sprache nutzen!
+        Egal ob du die Mahlzeiten für Kinder organisieren möchtest, einer ausgewogenen Ernährung folgen willst oder einfach effizienter mit deinem Budget umgehen möchtest – dieser Planer hilft dir, am Plan zu bleiben und Lebensmittelverschwendung zu vermeiden. Alles ist schnell, online, und du kannst die App in jeder gewünschten Sprache nutzen!
       </p>
       <p>
         Probiere den kostenlosen wöchentlichen Essensplaner aus – einfach, praktisch und ohne Anmeldung!
       </p>
     </div>
+
+    <!-- Auto menu -->
     <div id="auto-menu-bar" class="text-center mb-3">
-  <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
-    Generează meniu aleator
-  </button>
-</div>
+      <button id="auto-menu-btn" class="btn btn-success" data-i18n="btn.autoMenu">
+        Zufälliges Menü generieren
+      </button>
+    </div>
+
     <!-- Planner Table -->
     <div class="card mb-4">
       <div class="card-body">
@@ -92,86 +151,83 @@
               <th data-i18n="col.dinner">Abendessen (Zutaten)</th>
             </tr>
           </thead>
-          <tbody id="plan-table"></tbody>
+          <tbody id="plan-table" data-show-origin="true"></tbody>
         </table>
       </div>
     </div>
-    <!-- MESAJ IMPACT UND LISTE FÜR PDF - standardmäßig versteckt -->
-    <div id="pdf-impact-area" style="display: none; text-align:center; margin-bottom:30px;">
-      <h2 id="pdf-impact-message" style="color: #198754; font-size: 2rem;">
+
+    <!-- PDF impact/message area -->
+    <div id="pdf-impact-area" class="no-print text-center">
+      <div id="pdf-title"></div>
+      <h2 id="pdf-impact-message" class="pdf-impact-title" data-i18n="pdf.message">
         Achte auf deine Gesundheit und die deiner Familie. Koche mit Freude und genieße jede Mahlzeit!
       </h2>
-      <div id="pdf-list" style="margin-top:30px;"></div>
+      <div id="pdf-list"></div>
     </div>
 
     <!-- Shopping List -->
     <div class="card mb-4">
       <div class="card-body">
-        <h5 data-i18n="shoppingList">Einkaufsliste</h5>
+        <h2 class="h5" data-i18n="shoppingList">Einkaufsliste</h2>
         <ul id="shopping-list" class="list-group list-group-flush"></ul>
       </div>
     </div>
 
-    <!-- Buttons -->
-<div class="text-center mb-4 no-print btn-bar" id="payment-bar" style="display:none">
-  <select id="currency-select" class="form-select d-inline-block w-auto me-2">
-    <option value="RON">RON (lei)</option>
-    <option value="EUR" selected>EUR (€)</option>
-  </select>
+    <!-- Buttons / Payment bar -->
+    <div class="text-center mb-4 no-print btn-bar" id="payment-bar">
+      <label for="currency-select" class="visually-hidden" data-i18n="label.currency">Währung</label>
+      <select id="currency-select" class="form-select d-inline-block w-auto me-2">
+        <option value="RON">RON (lei)</option>
+        <option value="EUR" selected>EUR (€)</option>
+      </select>
 
-  <button id="pay-btn" class="btn btn-warning">
-    <i class="bi bi-cart-check-fill"></i>
-    <span data-i18n="btn.pay">Plătește & Descarcă</span>
-  </button>
+      <button id="pay-btn" class="btn btn-warning">
+        <i class="bi bi-cart-check-fill"></i>
+        <span data-i18n="btn.pay">Bezahlen & Herunterladen</span>
+      </button>
 
-  <button id="generate-btn" class="btn btn-success ms-2" type="button">
-    <i class="bi bi-file-earmark-pdf-fill"></i>
-    <span data-i18n="btn.generate">Generează PDF</span>
-  </button>
+      <button id="generate-btn" class="btn btn-success ms-2" type="button">
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span data-i18n="btn.generate">PDF generieren</span>
+      </button>
 
-  <div id="payment-status" class="mt-2"></div>
-</div>
+      <div id="payment-status" class="mt-2" role="status" aria-live="polite"></div>
+    </div>
 
-<!-- Email verification for PDF unlimited access -->
-<div class="card mb-4 text-center" id="access-card">
-  <div class="card-header bg-primary text-white">
-    <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
-  </div>
-  <div class="card-body">
-    <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email">
-    <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">Verify Email</button>
-    <div id="result" class="mt-3"></div>
-    <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">
-      Manage subscription
-    </button>
-  </div>
-</div>
-
-  <!-- Supabase -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<!-- App (module) -->
-<script src="/js/app.min.js" defer></script>
-<script src="/js/checkout.min.js" defer></script>
-<script src="/js/portal.min.js" defer></script>
+    <!-- Email verification -->
+    <div class="card mb-4 text-center" id="access-card">
+      <div class="card-header bg-info text-dark">
+        <span data-i18n="banner.unlock">Bereits bezahlt? Unbegrenzte PDF-Downloads freischalten</span>
+      </div>
+      <div class="card-body">
+        <input type="email" id="emailInput" class="form-control mb-2" data-i18n-placeholder="input.email" autocomplete="email" inputmode="email" />
+        <button id="verifyBtn" class="btn btn-success" data-i18n="btn.verify">E-Mail prüfen</button>
+        <div id="result" class="mt-3" role="status" aria-live="polite"></div>
+        <button id="manage-subscription" class="btn btn-outline-secondary mt-2" style="display:none" data-i18n="btn.manage">Abo verwalten</button>
+      </div>
+    </div>
 
     <!-- Feedback Section -->
-<div class="card mb-4" id="feedback-section">
-  <div class="card-header bg-info text-white text-center">
-    <i class="bi bi-chat-dots"></i>
-    <span data-i18n="feedback.header">Trimite feedback rapid</span>
+    <div class="card mb-4" id="feedback-section">
+      <div class="card-header bg-info text-dark text-center">
+        <i class="bi bi-chat-dots"></i>
+        <span data-i18n="feedback.header">Schnelles Feedback senden</span>
+      </div>
+      <div class="card-body">
+        <form id="feedbackForm">
+          <textarea class="form-control mb-2" id="feedbackMsg" rows="3" data-i18n-placeholder="feedback.placeholder"></textarea>
+          <button type="submit" class="btn btn-info" data-i18n="feedback.button">Feedback senden</button>
+          <div id="feedback-status" class="mt-2" role="status" aria-live="polite"></div>
+        </form>
+        <small class="text-muted d-block mt-2" data-i18n="feedback.note">Das Feedback geht direkt an den Entwickler.</small>
+      </div>
+    </div>
   </div>
-  <div class="card-body">
-    <form id="feedbackForm">
-      <textarea class="form-control mb-2" id="feedbackMsg"
-        rows="3"
-        data-i18n-placeholder="feedback.placeholder"></textarea>
-      <button type="submit" class="btn btn-info" data-i18n="feedback.button">Trimite feedback</button>
-      <div id="feedback-status" class="mt-2"></div>
-    </form>
-    <small class="text-muted d-block mt-2" data-i18n="feedback.note">
-      Feedbackul ajunge direct la dezvoltator.
-    </small>
-  </div>
-</div>
+
+  <!-- Supabase + app scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="/js/app.min.js" defer></script>
+  <script src="/js/checkout.min.js" defer></script>
+  <script src="/js/portal.min.js" defer></script>
 </body>
 </html>
