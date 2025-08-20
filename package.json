@@ -4,7 +4,11 @@
   "description": "Un mic web-tool static care te ajută să îți planifici mesele pentru o săptămână și să generezi automat lista de cumpărături, totul din browser – fără backend și fără instalare!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sitemap": "node scripts/generate-sitemap.cjs",
+    "build:js": "esbuild public/js/app.js --bundle --minify --outfile=public/js/app.min.js && esbuild public/js/checkout.js --bundle --minify --outfile=public/js/checkout.min.js && esbuild public/js/portal.js --bundle --minify --outfile=public/js/portal.min.js",
+    "build:css": "esbuild public/css/style.css --minify --outfile=public/css/style.min.css",
+    "build": "npm run build:js && npm run build:css && npm run sitemap"
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,7 @@
     "stripe": "^18.3.0"
   },
   "devDependencies": {
+    "esbuild": "^0.23.1",
     "vercel": "^44.7.3"
   }
 }
