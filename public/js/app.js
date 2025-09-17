@@ -407,6 +407,7 @@ function buildCleanPdfNode() {
   const src = document.getElementById('pdf-impact-area');
   const node = src.cloneNode(true);
 
+  // curățăm toate stilurile inline, ca să nu încurce layoutul pentru PDF
   if (node.hasAttribute('style')) node.removeAttribute('style');
   node.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
 
@@ -415,73 +416,119 @@ function buildCleanPdfNode() {
   styleEl.textContent = `
 /* ===== Canvas A4 pentru PDF (html2pdf) ===== */
 html, body {
-  margin:0; padding:0; background:#fff;
+  margin: 0;
+  padding: 0;
+  background: #fff;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 :root{
   --brand:#218739; --brand-soft:#e9f7ee; --ink:#222; --muted:#666; --line:#ddd; --section-line:#6379ff;
 }
-/* Container A4: 210mm - 2*10mm = 190mm util, padding top/bottom pt. paginate */
+
+/* Container A4: 210mm - 2*10mm = 190mm util */
 #pdf-impact-area{
-  width:190mm;
-  padding:12mm 10mm 14mm;
-  margin:0 auto;
-  background:#fff;
+  width: 190mm;
+  padding: 12mm 10mm 14mm;
+  margin: 0 auto;
+  background: #fff;
   font-family: Segoe UI, Arial, sans-serif;
-  color:var(--ink);
-  font-size:11pt; line-height:1.36; letter-spacing:.1px;
-  box-sizing:border-box;
+  color: var(--ink);
+  font-size: 11pt;
+  line-height: 1.36;
+  letter-spacing: .1px;
+  box-sizing: border-box;
 }
-#pdf-impact-area > :first-child { margin-top:0; }
+#pdf-impact-area > :first-child { margin-top: 0; }
 
 /* Titlu + mesaj impact (doar prima pagină) */
 #pdf-title{
-  text-align:center; font-weight:700; font-size:12pt; margin:0 0 3mm;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12pt;
+  margin: 0 0 3mm;
 }
 #pdf-title::after{
-  content:""; display:block; width:52mm; height:1.5px; margin:2.4mm auto 0;
-  background:var(--brand); opacity:.35;
+  content: "";
+  display: block;
+  width: 52mm;
+  height: 1.5px;
+  margin: 2.4mm auto 0;
+  background: var(--brand);
+  opacity: .35;
 }
 #pdf-impact-message{
-  margin:0 0 6mm; padding:9mm; border:1px solid var(--line); border-radius:6px;
-  background:var(--brand-soft); color:var(--ink);
-  page-break-inside: avoid; break-inside: avoid;
+  margin: 0 0 6mm;
+  padding: 9mm;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--brand-soft);
+  color: var(--ink);
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 #pdf-impact-message > div{
-  margin:0; font-weight:700; color:var(--brand);
-  text-align:center; font-size:16pt; line-height:1.22;
+  margin: 0;
+  font-weight: 700;
+  color: var(--brand);
+  text-align: center;
+  font-size: 16pt;
+  line-height: 1.22;
 }
 
 /* Fiecare zi */
 .recipe-section{
-  border:1px solid var(--line);
-  border-top:4px solid var(--section-line);
-  border-radius:6px;
-  padding:3.5mm; margin:2.5mm 0;
-  background:#f8f9fa;
-  page-break-inside: avoid; break-inside: avoid;
-  box-sizing:border-box;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--section-line);
+  border-radius: 6px;
+  padding: 3.5mm;
+  margin: 2.5mm 0;
+  background: #f8f9fa;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  box-sizing: border-box;
 }
-.recipe-day{ font-size:12pt; font-weight:800; margin:0 0 2mm; letter-spacing:.2px; }
+.recipe-day{
+  font-size: 12pt;
+  font-weight: 800;
+  margin: 0 0 2mm;
+  letter-spacing: .2px;
+}
 
-/* Badge‑uri */
-.recipe-lunch,.recipe-dinner{
-  display:inline-block; padding:2px 7px; border-radius:999px; font-weight:700; font-size:11pt; line-height:1; margin:0 0 2mm;
+/* Badge-uri */
+.recipe-lunch,
+.recipe-dinner{
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1;
+  margin: 0 0 2mm;
 }
-.recipe-lunch{  background:var(--brand-soft); color:var(--brand); }
-.recipe-dinner{ background:#eaf1ff; color:#1f4fbf; }
+.recipe-lunch{  background: var(--brand-soft); color: var(--brand); }
+.recipe-dinner{ background: #eaf1ff; color: #1f4fbf; }
 
 /* Texte/liste */
-.origin{ color:var(--muted); }
-.how-title{ font-weight:800; }
-ul{ margin:2mm 0 0 6mm; padding:0; font-size:12pt; }
-ul li{ margin:0 0 1mm; } ul li::marker{ color:var(--brand); }
+.origin{ color: var(--muted); }
+.how-title{ font-weight: 800; }
+ul{
+  margin: 2mm 0 0 6mm;
+  padding: 0;
+  font-size: 12pt;
+}
+ul li{ margin: 0 0 1mm; }
+ul li::marker{ color: var(--brand); }
 
 /* Bonus */
 #bonus-section .callout{
-  margin:3mm 0 0; padding:3mm; border-radius:6px; border:1px solid var(--line);
-  background:#fff; page-break-inside: avoid; break-inside: avoid;
+  margin: 3mm 0 0;
+  padding: 3mm;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 #bonus-section .snack{  background:#f1fff5; border-left:4px solid #43b581; }
 #bonus-section .dessert{background:#fffbe7; border-left:4px solid #ff7f50; }
@@ -489,29 +536,42 @@ ul li{ margin:0 0 1mm; } ul li::marker{ color:var(--brand); }
 
 /* Footer */
 .doc-footer{
-  margin-top:6mm; padding-top:3mm; border-top:1px solid var(--line);
-  font-size:9.5pt; color:var(--muted); text-align:center;
+  margin-top: 6mm;
+  padding-top: 3mm;
+  border-top: 1px solid var(--line);
+  font-size: 9.5pt;
+  color: var(--muted);
+  text-align: center;
 }
 
-/* Forțări de pagină adăugate din JS */
-.page-break{ break-before:page; page-break-before:always; height:0; margin:0; padding:0; border:0; }
-  /* ... restul CSS ... */
-  .motiv{
-    page-break-inside: avoid;
-    break-inside: avoid;
-    margin-top: 14px;
-    padding: 8px;
-    background: #e9f7ee;
-    border-left: 4px solid #218739;
-    border-radius: 4px;
-    font-size: 11.5pt;
-    color: #222;
-    text-align: center;
-  }
-  /* ... restul CSS ... */
+/* Mesajul motivațional */
+.motiv{
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin-top: 14px;
+  padding: 8px;
+  background: #e9f7ee;
+  border-left: 4px solid #218739;
+  border-radius: 4px;
+  font-size: 11.5pt;
+  color: #222;
+  text-align: center;
+}
+
+/* Forțări de pagină din JS */
+.page-break{
+  break-before: page;
+  page-break-before: always;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 `;
+
   return { node, styleEl };
 }
+
 function maybeCompactToTwoPages(root){
   const MM_TO_PX = 96 / 25.4;
   const usable = (297 - 12 - 14) * MM_TO_PX; 
