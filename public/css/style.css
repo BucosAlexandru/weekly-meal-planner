@@ -135,6 +135,7 @@ body:not(.pdf-exporting) {
 /* ====== PRINT/PDF MODE (for html2pdf) ====== */
 @media print {
   @page {
+    size: A4;
     margin-top: 2.5cm;
     margin-bottom: 1.5cm;
     margin-left: 1.2cm;
@@ -327,3 +328,114 @@ body.pdf-exporting {
 #pdf-impact-area { box-sizing: border-box; }
 .recipe-section { box-sizing: border-box; }
 .recipe-section::before{ top:0; }
+
+/* ================================
+   OPTIMIZARE PDF (html2pdf.js / Safari / iPhone)
+   ================================ */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0.8cm;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    background: #fff !important;
+    color: #222 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 12.5px !important;
+    margin: 0 auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Evită tăierea rețetelor la mijloc */
+  .recipe-section,
+  #pdf-impact-area,
+  #pdf-impact-message,
+  .container,
+  .card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Două coloane pentru pagini mai compacte */
+  .pdf-two-columns {
+    column-count: 2;
+    column-gap: 22px;
+  }
+
+  /* Header mic și curat */
+  .pdf-header {
+    background: #d8f3dc;
+    padding: 6px 10px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer mic */
+  footer {
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+    margin-top: 5mm;
+  }
+
+  /* Font general mai mic pentru a încăpea în 2-3 pagini */
+  body {
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+
+  /* Elimină umbre, backgrounduri și butoane */
+  .container, .card, .card-header, .card-body {
+    background: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .btn, select, input, #stripe-buy-btn, #payment-status,
+  #lang-bar, #lang-switcher {
+    display: none !important;
+  }
+
+  /* Culori tabel și aliniere corectă */
+  .table {
+    border: 1px solid #bbb !important;
+    width: 100% !important;
+    margin-bottom: 14px !important;
+  }
+
+  .table th, .table td {
+    border: 1px solid #bbb !important;
+    padding: 6px 5px !important;
+    background: #fff !important;
+    color: #222 !important;
+    font-size: 12px !important;
+    word-break: break-word !important;
+    vertical-align: top !important;
+  }
+
+  .planner-row:nth-child(odd) td { background: #f8f8f8 !important; }
+  .planner-row:nth-child(even) td { background: #fff !important; }
+
+  h2, h5 {
+    color: #24712A !important;
+    margin: 0 0 8px 0 !important;
+    font-weight: bold !important;
+    page-break-after: avoid !important;
+  }
+}
+
+/* ================================
+   În timpul generării PDF
+   ================================ */
+body.pdf-exporting {
+  overflow: auto !important;
+  pointer-events: none !important;
+  background: #fff !important;
+}
