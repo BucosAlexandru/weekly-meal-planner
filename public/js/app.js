@@ -359,14 +359,17 @@ listEl.innerHTML = `
 }
 
  
-  function exportShoppingListToPDF() {
+  async function exportShoppingListToPDF() {
   const pdfArea = document.getElementById('pdf-impact-area');
   if (!pdfArea) return;
 
-  document.body.classList.add('pdf-exporting');
-  generatePDFimpact();
+ document.body.classList.add('pdf-exporting');
+generatePDFimpact();
 
-  if (window.html2canvas) window.html2canvas.logging = true;
+window.scrollTo(0, 0);
+await new Promise(resolve => setTimeout(resolve, 80));
+
+if (window.html2canvas) window.html2canvas.logging = true;
 
 const { node: cleanNode, styleEl } = buildCleanPdfNode();
 document.head.appendChild(styleEl);
@@ -374,33 +377,37 @@ cleanNode.style.position = 'absolute';
 cleanNode.style.left = '-9999px';
 document.body.appendChild(cleanNode);
 
-maybeCompactToTwoPages(cleanNode);  
+maybeCompactToTwoPages(cleanNode);
 paginateCleanNode(cleanNode);
 
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+const html2canvasScale = isIOS ? 1.36 : 2;
+
 html2pdf().set({
-  margin: [0,0,0,0],
+  margin: [0, 0, 0, 0],
   filename: 'meal-planner.pdf',
   image: { type: 'jpeg', quality: 0.98 },
   html2canvas: {
     scale: 2,
     useCORS: true,
     backgroundColor: '#ffffff',
-    scrollX: 0,          
-    scrollY: 0          
+    scrollX: 0,
+    scrollY: 0
   },
   jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
   pagebreak: {
-  mode: ['css'],
-  avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.motiv']
-}
+    mode: ['css'],
+    avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.motiv']
+  }
 })
 .from(cleanNode)
 .save()
-  .finally(() => {
-    styleEl.remove();
-    cleanNode.remove();
-    document.body.classList.remove('pdf-exporting');
-  });
+.finally(() => {
+  styleEl.remove();
+  cleanNode.remove();
+  document.body.classList.remove('pdf-exporting');
+});
+
 }
 
 function buildCleanPdfNode() {
