@@ -439,3 +439,71 @@ body.pdf-exporting {
   pointer-events: none !important;
   background: #fff !important;
 }
+
+
+/* ==========================
+   HOLIDAY / WINTER THEME
+   ========================== */
+
+body.theme-winter:not(.pdf-exporting) {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* glow subtle pe header */
+body.theme-winter .card-header {
+  position: relative;
+  box-shadow: 0 8px 30px rgba(36,113,42,0.25);
+}
+
+/* strat “aurora” discret */
+body.theme-winter:not(.pdf-exporting)::before {
+  content: "";
+  position: fixed;
+  inset: -20vh -20vw;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(closest-side at 20% 10%, rgba(255,255,255,0.22), transparent 60%),
+    radial-gradient(closest-side at 80% 20%, rgba(255,255,255,0.16), transparent 62%),
+    radial-gradient(closest-side at 50% 0%, rgba(255,255,255,0.10), transparent 65%);
+  filter: blur(2px);
+  opacity: 0.9;
+}
+
+/* ninsoare: 3 straturi cu viteze diferite */
+body.theme-winter:not(.pdf-exporting)::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.85) 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(255,255,255,0.65) 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1.6px);
+  background-size: 120px 120px, 170px 170px, 240px 240px;
+  background-position: 0 0, 40px 60px, 80px 20px;
+  animation: snowFall 14s linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes snowFall {
+  0%   { transform: translateY(-12vh); }
+  100% { transform: translateY(110vh); }
+}
+
+/* ridicăm conținutul peste overlay */
+body.theme-winter #pdf-content,
+body.theme-winter .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* dezactivare completă pentru print/PDF */
+@media print {
+  body.theme-winter::before,
+  body.theme-winter::after { display: none !important; }
+}
+body.pdf-exporting.theme-winter::before,
+body.pdf-exporting.theme-winter::after { display: none !important; }

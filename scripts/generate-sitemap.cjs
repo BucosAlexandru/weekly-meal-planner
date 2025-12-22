@@ -1,6 +1,6 @@
 const fs = require('fs');
 const BASE = 'https://meal-planner.ro';
-const langs = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi']; // ajustează lista ta
+const langs = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi','tr','it','ko']; // ajustează lista ta
 
 const urls = [
   `${BASE}/`,

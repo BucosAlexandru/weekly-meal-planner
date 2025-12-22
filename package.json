@@ -24,12 +24,14 @@
   "homepage": "https://github.com/BucosAlexandru/weekly-meal-planner#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.52.0",
+    "dotenv": "^17.2.2",
     "micro": "^10.0.1",
     "nodemailer": "^7.0.5",
+    "openai": "^5.20.3",
     "stripe": "^18.3.0"
   },
   "devDependencies": {
     "esbuild": "^0.23.1",
-    "vercel": "^44.7.3"
+    "vercel": "^48.10.2"
   }
 }

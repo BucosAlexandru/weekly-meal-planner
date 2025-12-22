@@ -77,8 +77,22 @@ function pickMotiv(langCode) {
 })();
 
 // ===== Limba globală
-let lang = localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
+// --- Detect limbă din URL (ex: /ro/, /en/, /tr/, /it/, /ko/). Are prioritate peste localStorage.
+function getLangFromPath() {
+  const seg = (window.location.pathname || '/').split('/').filter(Boolean)[0];
+  return (seg && i18n[seg]) ? seg : null;
+}
+
+const pathLang = getLangFromPath();
+let lang = pathLang || localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
+
+// fallback final
 if (!i18n[lang]) lang = 'ro';
+
+// dacă URL-ul impune limba, sincronizăm și localStorage
+if (pathLang) localStorage.setItem('lastLang', lang);
+// let lang = localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
+// if (!i18n[lang]) lang = 'ro';
 
 // ===== Quota PDF
 let pdfCount = +localStorage.getItem('pdfCount') || 0;
@@ -154,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
-    const langMap = { ro:'ro-RO', en:'en-US', es:'es-ES', fr:'fr-FR', ru:'ru-RU', zh:'zh-CN', ja:'ja-JP', pt:'pt-PT', de:'de-DE', ar:'ar-SA', hi:'hi-IN' };
+    const langMap = { ro:'ro-RO', en:'en-US', es:'es-ES', fr:'fr-FR', ru:'ru-RU', zh:'zh-CN', ja:'ja-JP', pt:'pt-PT', de:'de-DE', ar:'ar-SA', hi:'hi-IN',tr: 'tr-TR',it: 'it-IT',ko: 'ko-KR'};
     recognition.lang = langMap[lang] || 'en-US';
 
     const micBtn = document.querySelector(`[onclick="startDictation('${inputId}')"]`);
@@ -179,44 +193,63 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getRecipeText(recipe, langCode) {
-    if (!recipe) return '';
-    const ingr = recipe.ingredients?.[langCode] || recipe.ingredients?.ro || [];
-    const origin = recipe.origin?.[langCode] || recipe.origin?.ro || '';
-    if (Array.isArray(ingr) && ingr.length > 0) {
-      return `${recipe.name[langCode] || recipe.name.ro} (${ingr.join(', ')}) este o rețetă tradițională din ${origin}.`;
-    }
-    return `${recipe.name[langCode] || recipe.name.ro} este o rețetă tradițională din ${origin}.`;
-  }
+  if (!recipe) return '';
+
+  const name   = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
+  const ingr   = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
+  const origin = recipe.origin?.[langCode] || recipe.origin?.en || recipe.origin?.ro || '';
+
+  const templates = {
+    ro: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) este o rețetă tradițională din ${o}.` : `${n} este o rețetă tradițională din ${o}.`,
+    en: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) is a traditional recipe from ${o}.` : `${n} is a traditional recipe from ${o}.`,
+    es: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) es una receta tradicional de ${o}.` : `${n} es una receta tradicional de ${o}.`,
+    fr: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) est une recette traditionnelle de ${o}.` : `${n} est une recette traditionnelle de ${o}.`,
+    de: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) ist ein traditionelles Rezept aus ${o}.` : `${n} ist ein traditionelles Rezept aus ${o}.`,
+    pt: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) é uma receita tradicional de ${o}.` : `${n} é uma receita tradicional de ${o}.`,
+    ru: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) — традиционное блюдо из ${o}.` : `${n} — традиционное блюдо из ${o}.`,
+    ar: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) هي وصفة تقليدية من ${o}.` : `${n} هي وصفة تقليدية من ${o}.`,
+    zh: (n, o, list) => list?.length ? `${n}（${list.join('，')}）是一道来自${o}的传统菜肴。` : `${n}是一道来自${o}的传统菜肴。`,
+    ja: (n, o, list) => list?.length ? `${n}（${list.join('、')}）は${o}の伝統料理です。` : `${n}は${o}の伝統料理です。`,
+    hi: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) ${o} की पारंपरिक रेसिपी है।` : `${n} ${o} की पारंपरिक रेसिपी है।`,
+    tr: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) ${o} kökenli geleneksel bir tariftir.` : `${n} ${o} kökenli geleneksel bir tariftir.`,
+    it: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) è una ricetta tradizionale di ${o}.` : `${n} è una ricetta tradizionale di ${o}.`,
+    ko: (n, o, list) => list?.length ? `${n} (${list.join(', ')})는(은) ${o}의 전통 요리입니다.` : `${n}는(은) ${o}의 전통 요리입니다.`,
+  };
+
+  const t = templates[langCode] || templates.en;
+  return t(name, origin, Array.isArray(ingr) ? ingr : []);
+}
+
 
   function generateRandomMenu() {
-    const labels = {
-      ro:{ lunch:'Prânz', dinner:'Cină' }, en:{ lunch:'Lunch', dinner:'Dinner' },
-      fr:{ lunch:'Déjeuner', dinner:'Dîner' }, de:{ lunch:'Mittagessen', dinner:'Abendessen' },
-      es:{ lunch:'Almuerzo', dinner:'Cena' }, pt:{ lunch:'Almoço', dinner:'Jantar' },
-      ru:{ lunch:'Обед', dinner:'Ужин' }, ar:{ lunch:'غداء', dinner:'عشاء' },
-      zh:{ lunch:'午餐', dinner:'晚餐' }, ja:{ lunch:'ランチ', dinner:'ディナー' },
-      hi:{ lunch:'दोपहर का भोजन', dinner:'रात का खाना' }
-    };
-    const lunchLabel  = labels[lang]?.lunch  || 'Lunch';
-    const dinnerLabel = labels[lang]?.dinner || 'Dinner';
-    const exclude = [
-      (lang === 'ro' ? 'Desert' : 'Dessert'),
-      (lang === 'ro' ? 'Gustare' : 'Snack'),
-      (lang === 'ro' ? 'Aperitiv' : 'Appetizer')
-    ];
-    const lunches = recipes.filter(r => r.category[lang] === lunchLabel  && !exclude.includes(r.category[lang]))
-                           .sort(() => 0.5 - Math.random()).slice(0, 7);
-    const dinners = recipes.filter(r => r.category[lang] === dinnerLabel && !exclude.includes(r.category[lang]))
-                           .sort(() => 0.5 - Math.random()).slice(0, 7);
+  // categorii stabile: ne uităm la EN (sau RO ca fallback)
+  const catStable = (r) => (r?.category?.en || r?.category?.ro || '').toLowerCase().trim();
 
-    for (let i = 0; i < 7; i++) {
-      const lunchInput  = document.getElementById(`d${i+1}l`);
-      const dinnerInput = document.getElementById(`d${i+1}c`);
-      if (!lunchInput || !dinnerInput) continue;
-      lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
-      dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
-    }
+  const isExcluded = (r) => {
+    const c = catStable(r);
+    return ['dessert', 'snack', 'appetizer', 'desert', 'gustare', 'aperitiv'].includes(c);
+  };
+
+  const lunchPool  = recipes.filter(r => (catStable(r) === 'lunch'  || catStable(r) === 'prânz') && !isExcluded(r));
+  const dinnerPool = recipes.filter(r => (catStable(r) === 'dinner' || catStable(r) === 'cină')  && !isExcluded(r));
+
+  if (!lunchPool.length || !dinnerPool.length) {
+    console.warn('Random menu: empty pool', { lang, lunch: lunchPool.length, dinner: dinnerPool.length });
+    return;
   }
+
+  const lunches = lunchPool.sort(() => 0.5 - Math.random()).slice(0, 7);
+  const dinners = dinnerPool.sort(() => 0.5 - Math.random()).slice(0, 7);
+
+  for (let i = 0; i < 7; i++) {
+    const lunchInput  = document.getElementById(`d${i+1}l`);
+    const dinnerInput = document.getElementById(`d${i+1}c`);
+    if (!lunchInput || !dinnerInput) continue;
+
+    lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
+    dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
+  }
+}
 
   function collectMeals() {
     return i18n[lang].weekdays.map((_, i) => ({
@@ -733,6 +766,13 @@ async function ensureHtml2pdfLoaded() {
   statusEl.innerHTML = showPay ? (i18n[lang].maxed || '') : '';
 }
 
+(function setSeasonTheme(){
+  const now = new Date();
+  const m = now.getMonth(); // 0..11
+  const isWinter = (m === 11 || m === 0); // Decembrie sau Ianuarie
+  document.body.classList.toggle('theme-winter', isWinter);
+})();
+
  function applyTranslations() {
   // 1) Texte statice cu data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -880,8 +920,8 @@ if (verifyBtn && emailInput && resultDiv) {
         `;
 
         // Dacă vrei să ascunzi plata pt. nelimitați, decomentează:
-        // if (buyBtn) buyBtn.style.display = 'none';
-        // if (currencySelUI) currencySelUI.style.display = 'none';
+        if (buyBtn) buyBtn.style.display = 'none';
+        if (currencySelUI) currencySelUI.style.display = 'none';
 
         attachPdfListeners();
 

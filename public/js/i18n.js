@@ -416,7 +416,121 @@ const i18n = {
     "feedback.error": "कृपया संदेश लिखें।",
     "feedback.note": "आपकी प्रतिक्रिया सीधे डेवलपर को जाएगी।",
     "msg.valid": "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:"
-  }
+  },
+  tr: {
+  title: "Haftalık Yemek Planlayıcı",
+  header: "Yemek Planlayıcı & Alışveriş Listesi",
+  weekdays: ['Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi','Pazar'],
+  msg: {
+    checking: "Kontrol ediliyor...",
+    empty: "Lütfen e-postanızı girin!",
+    server_error: "Sunucu hatası. Lütfen tekrar deneyin.",
+    invalid: "Bu e-posta için geçerli erişim bulunamadı.",
+    not_found: "Erişim bulunamadı. Lütfen önce ödeme yapın veya e-postayı kontrol edin.",
+    valid: "✅ Erişim onaylandı! Sınırsız PDF indirebilirsiniz:"
+  },
+  "btn.generate": "PDF Oluştur",
+  "btn.pay": "Öde & İndir",
+  "btn.autoMenu": "Rastgele menü oluştur",
+  "btn.verify": "E-postayı Doğrula",
+  "btn.download": "PDF İndir",
+  "col.day": "Gün",
+  "col.lunch": "Öğle yemeği (malzemeler)",
+  "col.dinner": "Akşam yemeği (malzemeler)",
+  "col.origin": "Ülke",
+  "col.ingredients": "Malzemeler",
+  "howIsMade": "Nasıl yapılır:",
+  shoppingList: "Alışveriş Listesi",
+  maxed: "Ücretsiz PDF limitine ulaştınız.<br>Sınırsız indirme için ödeme yapın!",
+  placeholderL: "örn: patates, soğan",
+  placeholderD: "örn: tavuk, pilav",
+  "banner.unlock": "Daha önce ödeme yaptınız mı? Sınırsız PDF indirmeyi açın",
+  "input.email": "Ödeme e-postanızı girin",
+  "access.granted": "✅ Erişim onaylandı! Sınırsız PDF indirebilirsiniz:",
+  "feedback.header": "Hızlı geri bildirim gönder",
+  "feedback.placeholder": "Önerilerinizi, sorunları veya görüşleri buraya yazın...",
+  "feedback.button": "Gönder",
+  "feedback.thanks": "Teşekkürler! E-posta gönderimi için açılacaktır.",
+  "feedback.error": "Lütfen bir mesaj yazın.",
+  "feedback.note": "Geri bildiriminiz doğrudan geliştiriciye ulaşır.",
+  "msg.valid": "✅ Erişim onaylandı! Sınırsız PDF indirebilirsiniz:"
+},
+it: {
+  title: "Pianificatore Settimanale dei Pasti",
+  header: "Pianificatore dei Pasti & Lista della Spesa",
+  weekdays: ['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica'],
+  msg: {
+    checking: "Verifica in corso...",
+    empty: "Inserisci la tua email!",
+    server_error: "Errore del server. Riprova.",
+    invalid: "Nessun accesso valido trovato per questa email.",
+    not_found: "Accesso non trovato. Effettua il pagamento o controlla l’email.",
+    valid: "✅ Accesso confermato! Puoi scaricare PDF illimitati:"
+  },
+  "btn.generate": "Genera PDF",
+  "btn.pay": "Paga & Scarica",
+  "btn.autoMenu": "Genera menu casuale",
+  "btn.verify": "Verifica Email",
+  "btn.download": "Scarica PDF",
+  "col.day": "Giorno",
+  "col.lunch": "Pranzo (ingredienti)",
+  "col.dinner": "Cena (ingredienti)",
+  "col.origin": "Paese",
+  "col.ingredients": "Ingredienti",
+  "howIsMade": "Preparazione:",
+  shoppingList: "Lista della Spesa",
+  maxed: "Hai raggiunto il limite di PDF gratuiti.<br>Paga per sbloccare download illimitati!",
+  placeholderL: "es: patate, cipolla",
+  placeholderD: "es: pollo, riso",
+  "banner.unlock": "Hai già pagato? Sblocca i download PDF illimitati",
+  "input.email": "Inserisci l’email di pagamento",
+  "access.granted": "✅ Accesso confermato! Puoi scaricare PDF illimitati:",
+  "feedback.header": "Invia un feedback rapido",
+  "feedback.placeholder": "Scrivi qui suggerimenti, problemi o opinioni...",
+  "feedback.button": "Invia",
+  "feedback.thanks": "Grazie! Si aprirà l’email per l’invio.",
+  "feedback.error": "Scrivi un messaggio.",
+  "feedback.note": "Il tuo feedback arriva direttamente allo sviluppatore.",
+  "msg.valid": "✅ Accesso confermato! Puoi scaricare PDF illimitati:"
+},
+ko: {
+  title: "주간 식단 플래너",
+  header: "식단 플래너 & 장보기 리스트",
+  weekdays: ['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
+  msg: {
+    checking: "확인 중...",
+    empty: "이메일을 입력하세요!",
+    server_error: "서버 오류입니다. 다시 시도해주세요.",
+    invalid: "해당 이메일로 유효한 접근 권한을 찾을 수 없습니다.",
+    not_found: "접근 권한이 없습니다. 먼저 결제하거나 이메일을 확인하세요.",
+    valid: "✅ 접근 허가됨! 무제한 PDF 다운로드가 가능합니다:"
+  },
+  "btn.generate": "PDF 생성",
+  "btn.pay": "결제 & 다운로드",
+  "btn.autoMenu": "랜덤 메뉴 생성",
+  "btn.verify": "이메일 확인",
+  "btn.download": "PDF 다운로드",
+  "col.day": "요일",
+  "col.lunch": "점심 (재료)",
+  "col.dinner": "저녁 (재료)",
+  "col.origin": "국가",
+  "col.ingredients": "재료",
+  "howIsMade": "만드는 방법:",
+  shoppingList: "장보기 리스트",
+  maxed: "무료 PDF 한도에 도달했습니다.<br>무제한 다운로드를 위해 결제하세요!",
+  placeholderL: "예: 감자, 양파",
+  placeholderD: "예: 치킨, 밥",
+  "banner.unlock": "이미 결제하셨나요? PDF 무제한 다운로드 활성화",
+  "input.email": "결제 이메일 입력",
+  "access.granted": "✅ 접근 허가됨! 무제한 PDF 다운로드 가능:",
+  "feedback.header": "빠른 피드백 보내기",
+  "feedback.placeholder": "여기에 의견, 문제 또는 제안을 적어주세요...",
+  "feedback.button": "보내기",
+  "feedback.thanks": "감사합니다! 이메일이 열립니다.",
+  "feedback.error": "메시지를 입력하세요.",
+  "feedback.note": "피드백은 개발자에게 직접 전달됩니다.",
+  "msg.valid": "✅ 접근 허가됨! 무제한 PDF 다운로드 가능:"
+}
 };
 
   // 4. Mesaj impact pentru PDF (personalizabil pe limbă)
@@ -431,14 +545,18 @@ const i18n = {
     pt: "Cuide da sua saúde e da sua família! Cozinhe com amor e aproveite cada refeição!",
     de: "Achte auf deine Gesundheit und die deiner Familie! Koche mit Liebe und genieße jede Mahlzeit!",
     ar: "اعتنِ بصحتك وصحة عائلتك! اطبخ بحب واستمتع بكل وجبة!",
-    hi: "अपनी और अपने परिवार की सेहत का ख्याल रखें! प्यार से पकाएं और हर भोजन का आनंद लें!"
+    hi: "अपनी और अपने परिवार की सेहत का ख्याल रखें! प्यार से पकाएं और हर भोजन का आनंद लें!",
+    tr: "Sağlığınıza ve ailenize önem verin! Sevgiyle pişirin ve her öğünün tadını çıkarın!",
+    it: "Abbi cura della tua salute e della tua famiglia! Cucina con amore e goditi ogni pasto!",
+    ko: "당신과 가족의 건강을 소중히 하세요! 사랑을 담아 요리하고 매 순간을 즐기세요!"
   };
 
   // 5. Populează selectul de limbă
   const langNames = {
     ro: "Română", en: "English", es: "Español", fr: "Français",
     ru: "Русский", zh: "中文", ja: "日本語", pt: "Português",
-    de: "Deutsch", ar: "العربية", hi: "हिन्दी"
+    de: "Deutsch", ar: "العربية", hi: "हिन्दी",tr: "Türkçe",
+    it: "Italiano", ko: "한국어"
   };
   const seoParagraphs = {
   ro: `
@@ -561,7 +679,44 @@ const i18n = {
     <p>
       立即体验免费的每周膳食计划工具 – 简单、实用、无需注册！
     </p>
-  `
+  `,
+  tr: `
+  <p>
+    <strong>Haftalık yemek planlayıcımız ile haftanın tüm öğünlerini düzenleyin!</strong> 
+    Dünya mutfaklarından sağlıklı ve pratik tarifleri keşfedin. Aileniz için haftalık menü oluşturun, malzemeleri kaydedin ve otomatik alışveriş listesi oluşturun.
+  </p>
+  <p>
+    Yoğun aileler, diyet yapanlar veya bütçesini daha iyi yönetmek isteyen herkes için idealdir. 
+    Daha az israf, daha fazla tasarruf ve daha fazla zaman kazanın.
+  </p>
+  <p>
+    Ücretsiz ve çevrimiçi planlayıcımızı Türkçe kullanabilir, PDF olarak kaydedebilirsiniz!
+  </p>
+`,
+it: `
+  <p>
+    <strong>Organizza i pasti della tua settimana con il nostro pianificatore!</strong> 
+    Scopri ricette semplici e gustose provenienti da tutto il mondo. Pianifica ogni giorno, gestisci gli ingredienti e genera automaticamente la lista della spesa.
+  </p>
+  <p>
+    Perfetto per famiglie impegnate, chi segue una dieta o chi vuole risparmiare tempo e denaro evitando sprechi alimentari.
+  </p>
+  <p>
+    Usa il pianificatore gratuitamente, completamente in italiano, senza registrazione!
+  </p>
+`,
+ko: `
+  <p>
+    <strong>주간 식단 플래너로 일주일의 식단을 쉽게 관리하세요!</strong>
+    전 세계 다양한 요리 레시피를 확인하고 하루 식단을 미리 계획해 보세요. 재료를 정리하면 자동으로 장보기 리스트가 생성됩니다.
+  </p>
+  <p>
+    바쁜 가족, 다이어트 중인 사람들, 식비를 절약하고 싶은 모든 사람에게 완벽한 도구입니다.
+  </p>
+  <p>
+    회원가입 없이 무료로 사용할 수 있으며, 한국어 PDF 다운로드도 가능합니다!
+  </p>
+`
 };
 // ===== Mesaje motivaționale (random, multi-limbă)
 const MOTIV = {
@@ -696,7 +851,44 @@ const MOTIV = {
     "आपने इरादों को कार्य में बदला। इसे जारी रखें!",
     "आपकी योजना आपके और आपके प्रियजनों के लिए आपकी प्रतिबद्धता दिखाती है।",
     "अच्छी योजना एक नक्शे की तरह है—जो आपको सीधे आपके लक्ष्य तक ले जाती है।"
-  ]
+  ],
+  tr: [
+  "Tebrikler! Bu hafta tüm öğünlerini planladın! 💪 Disiplin, başarının anahtarıdır.",
+  "Harika iş! Bugünün net planı, yarının daha az stresli olmasını sağlar.",
+  "Adım adım, iyi alışkanlıklar oluşur. Bugünkü planın gerçekten önemli!",
+  "Planlama başarının ilk adımıdır. Bugün bunu başardın!",
+  "Her planlanan öğün, daha dengeli bir hayata doğru bir adımdır.",
+  "Kendine iyi bak — iyi planlama uzun vadeli sağlık demektir.",
+  "Bugünün disiplini, yarının özgürlüğüdür. Aferin!",
+  "Niyetlerini eyleme dönüştürdün. Böyle devam et!",
+  "Planların senin kararlılığını ve sevdiklerine olan özenini gösteriyor.",
+  "İyi bir plan harita gibidir — seni tam olarak gitmek istediğin yere götürür."
+],
+it: [
+  "Complimenti! Hai pianificato tutti i pasti della settimana! 💪 La costanza è la tua forza.",
+  "Ottimo lavoro! Un piano chiaro oggi significa meno stress domani.",
+  "Passo dopo passo, le buone abitudini si consolidano. Il tuo piano conta!",
+  "La pianificazione è il primo passo verso il successo. Oggi ce l’hai fatta!",
+  "Ogni pasto pianificato è un passo verso una vita più equilibrata.",
+  "Abbi cura di te — una buona pianificazione significa salute a lungo termine.",
+  "La disciplina di oggi è la libertà di domani. Ben fatto!",
+  "Hai trasformato le intenzioni in azioni. Continua così!",
+  "La tua pianificazione mostra determinazione e cura per te e i tuoi cari.",
+  "Un buon piano è come una mappa — ti porta esattamente dove vuoi arrivare."
+],
+ko: [
+  "멋져요! 이번 주 모든 식단을 계획했어요! 💪 꾸준함은 가장 강력한 힘입니다.",
+  "좋아요! 오늘의 명확한 계획은 내일의 스트레스를 줄여줍니다.",
+  "한 걸음씩 좋은 습관이 만들어집니다. 오늘의 계획은 정말 중요해요!",
+  "계획은 성공의 첫 번째 단계입니다. 오늘 해냈어요!",
+  "계획된 식사는 균형 잡힌 삶으로 가는 한 걸음입니다.",
+  "스스로를 아끼세요 — 좋은 계획은 장기적인 건강으로 이어집니다.",
+  "오늘의 규율은 내일의 자유입니다. 정말 잘했어요!",
+  "당신은 의도를 행동으로 옮겼어요. 계속하세요!",
+  "당신의 계획은 당신과 가족에 대한 배려와 결의를 보여줍니다.",
+  "좋은 계획은 지도와 같습니다 — 원하는 곳으로 정확히 이끌어 줍니다."
+],
+
 }
 
 const access = {
@@ -743,9 +935,19 @@ const access = {
   hi: {
     validUntil: "तक मान्य",
     lifetime: "असीमित"
-  }
+  },tr: {
+  validUntil: "Geçerlilik süresi",
+  lifetime: "sınırsız"
+},
+it: {
+  validUntil: "Valido fino al",
+  lifetime: "illimitato"
+},
+ko: {
+  validUntil: "유효 기간",
+  lifetime: "무제한"
+}
 };
-
 
 export { i18n, langNames, seoParagraphs, pdfMessages, MOTIV,access };
 
