@@ -88,7 +88,7 @@ export const recipes = [
       zh: "培根意大利面 是来自意大利的传统食谱。",
       ja: "スパゲッティ・カルボナーラ はイタリアの伝統的なレシピです。",
       tr: "Spaghetti Carbonara İtalya kökenli geleneksel bir tariftir.",
-      it: "Spaghetti Carbonara è una ricetta tradizionale di Italia.",
+      it: "Spaghetti Carbonara è una risotta tradizionale di Italia.",
       ko: "Spaghetti Carbonara는(은) 이탈리아의 전통 요리입니다."
     }
   },
@@ -150,9 +150,9 @@ export const recipes = [
       ar: ["كرشة بقري", "كريمة حامضة", "بيض", "جزر", "كرفس", "ثوم", "خل"],
       zh: ["牛肚", "酸奶油", "鸡蛋", "胡萝卜", "芹菜", "大蒜", "醋"],
       ja: ["牛の胃袋", "サワークリーム", "卵", "人参", "セロリ", "ニンニク", "酢"],
-      tr: ["dana eti tripe", "sour krema", "yumurta", "havuçs", "celery", "sarımsak", "sirke"],
-      it: ["manzo tripe", "sour panna", "uova", "carotas", "celery", "aglio", "aceto"],
-      ko: ["소고기 tripe", "sour 크림", "계란", "당근s", "celery", "마늘", "식초"]
+      tr: ["dana eti işkembe", "ekşi krema", "yumurta", "havuçs", "kereviz", "sarımsak", "sirke"],
+      it: ["manzo trippa", "acidulo panna", "uova", "carotas", "sedano", "aglio", "aceto"],
+      ko: ["소고기 내장", "새콤한 크림", "계란", "당근s", "셀러리", "마늘", "식초"]
     },
     howIsMade: {
       ro: "Fierbe burta de vită cu legume, adaugă usturoi și oțet pentru gust, apoi drege cu smântână și ouă pentru o ciorbă cremoasă.",
@@ -165,9 +165,9 @@ export const recipes = [
       ar: "اسلق كرشة البقر مع الخضار، أضف الثوم والخل للطعم، ثم أضف الكريمة الحامضة والبيض لتحصل على شوربة كريمية.",
       zh: "将牛肚与蔬菜一起煮，加入大蒜和醋调味，最后用酸奶油和鸡蛋勾芡，制成奶油汤。",
       ja: "牛の胃袋を野菜と一緒に煮て、ニンニクと酢で味を整え、最後にサワークリームと卵でクリーミーなスープに仕上げます。",
-      tr: "Haşla dana eti tripe ile vegetables, Ekle sarımsak ve sirke for flavor, sonra finish ile sour krema ve yumurta for a kremay soup.",
-      it: "Cuoci manzo tripe con vegetables, Aggiungi aglio e aceto for flavor, poi finish con sour panna e uova for a pannay soup.",
-      ko: "삶고 소고기 tripe와 vegetables, 넣고 마늘그리고 식초 for flavor, 그다음 finish와 sour 크림그리고 계란 for a 크림y soup하세요."
+      tr: "Haşla dana eti işkembe ile sebzeler, Ekle sarımsak ve sirke için lezzet, sonra 마무리 ile ekşi krema ve yumurta için a kremay çorba.",
+      it: "Cuoci manzo trippa con verdure, Aggiungi aglio e aceto per sapore, poi termina con acidulo panna e uova per a pannay zuppa.",
+      ko: "삶고 소고기 내장와 채소, 넣고 마늘그리고 식초 을 위해 풍미, 그다음 마무리합니다와 새콤한 크림그리고 계란 을 위해 a 크림y 수프하세요."
     },
     originText: {
       ro: "Ciorbă de burtă este o rețetă tradițională din România.",
@@ -180,9 +180,9 @@ export const recipes = [
       ar: "شوربة الكرشة هي وصفة تقليدية من رومانيا.",
       zh: "牛肚汤 是来自罗马尼亚的传统食谱。",
       ja: "トライプスープ はルーマニアの伝統的なレシピです。",
-      tr: "Tripe Soup Romanya kökenli geleneksel bir tariftir.",
-      it: "Tripe Soup è una ricetta tradizionale di Romania.",
-      ko: "Tripe Soup는(은) 루마니아의 전통 요리입니다."
+      tr: "işkembe çorba Romanya kökenli geleneksel bir tariftir.",
+      it: "trippa zuppa è una risotta tradizionale di Romania.",
+      ko: "내장 수프는(은) 루마니아의 전통 요리입니다."
     }
   },
   {
@@ -243,9 +243,9 @@ export const recipes = [
       ar: ["عجينة", "بيض", "كريمة", "لحم خنزير", "جبن"],
       zh: ["面团", "鸡蛋", "奶油", "火腿", "奶酪"],
       ja: ["生地", "卵", "クリーム", "ハム", "チーズ"],
-      tr: ["pastry", "yumurta", "krema", "ham", "peynir"],
-      it: ["pastry", "uova", "panna", "ham", "formaggio"],
-      ko: ["pastry", "계란", "크림", "ham", "치즈"]
+      tr: ["hamur", "yumurta", "krema", "jambon", "peynir"],
+      it: ["pasta", "uova", "panna", "prosciutto", "formaggio"],
+      ko: ["파이지", "계란", "크림", "햄", "치즈"]
     },
     howIsMade: {
       ro: "Întinde aluatul într-o tavă, adaugă șunca și cașcavalul, apoi toarnă deasupra ouăle bătute cu smântână. Coace până devine aurie.",
@@ -258,9 +258,9 @@ export const recipes = [
       ar: "افرد العجينة في صينية، أضف اللحم والجبن، ثم اسكب خليط البيض المخفوق مع الكريمة فوقها. اخبزها حتى تصبح ذهبية.",
       zh: "将面团铺在烤盘上，加入火腿和奶酪，再倒入与奶油混合的打散鸡蛋。烤至金黄。",
       ja: "生地を型に敷き、ハムとチーズをのせ、クリームと混ぜた卵を流し入れます。黄金色になるまで焼きます。",
-      tr: "Spread pastry in a tray, Ekle ham ve peynir, sonra pour over beaten yumurta mixed ile krema. Bake until golden.",
-      it: "Spread pastry in a tray, Aggiungi ham e formaggio, poi pour over beaten uova mixed con panna. Bake until golden.",
-      ko: "Spread pastry in a tray, 넣고 ham그리고 치즈, 그다음 pour over beaten 계란 mixed와 크림. Bake until golden하세요."
+      tr: "yayın hamur tepsi, Ekle jambon ve peynir, sonra dökün üzerine çırpılmış yumurta karıştırıned ile krema. fırında pişirin altın rengi.",
+      it: "stendi pasta teglia, Aggiungi prosciutto e formaggio, poi versa sopra sbattuto uova mescolaed con panna. cuoci in forno dorato.",
+      ko: "펼칩니다 파이지 에서 a 트레이, 넣고 햄그리고 치즈, 그다음 붓습니다 위에 푼 계란 섞습니다와 크림. 오븐에서 굽습니다 노릇하게하세요."
     },
     originText: {
       ro: "Quiche Lorraine este o rețetă tradițională din Franța.",
@@ -274,7 +274,7 @@ export const recipes = [
       zh: "洛林咸派 是来自法国的传统食谱。",
       ja: "キッシュ・ロレーヌ はフランスの伝統的なレシピです。",
       tr: "Quiche Lorraine Fransa kökenli geleneksel bir tariftir.",
-      it: "Quiche Lorraine è una ricetta tradizionale di Francia.",
+      it: "Quiche Lorraine è una risotta tradizionale di Francia.",
       ko: "Quiche Lorraine는(은) 프랑스의 전통 요리입니다."
     }
   },
@@ -351,9 +351,9 @@ export const recipes = [
       ar: "اخلط جميع الخضروات مع الثوم وزيت الزيتون والخبز، ثم ضع الحساء في الثلاجة وقدمه بارداً.",
       zh: "将所有蔬菜与大蒜、橄榄油和面包一起搅拌，然后将汤冷藏，冷食。",
       ja: "すべての野菜をニンニク、オリーブオイル、パンと一緒にミキサーで混ぜ、冷蔵庫で冷やして冷たいまま提供します。",
-      tr: "Blend all vegetables ile sarımsak, zeytinyağı, ve ekmek, sonra chill soup in fridge ve serve cold.",
-      it: "Blend all vegetables con aglio, olio d'oliva, e pane, poi chill soup in fridge e serve cold.",
-      ko: "Blend all vegetables와 마늘, 올리브오일, 그리고 빵, 그다음 chill soup in fridge그리고 serve cold하세요."
+      tr: "blenderdan geçirin tüm sebzeler ile sarımsak, zeytinyağı, ve ekmek, sonra çorbayı buzdolabında soğutun ve soğuk servis edin.",
+      it: "frulla tutto verdure con aglio, olio d'oliva, e pane, poi lascia raffreddare la zuppa in frigorifero e servila fredda.",
+      ko: "블렌더에 갈아줍니다 모든 채소와 마늘, 올리브오일, 그리고 빵, 그다음 수프를 냉장고에서 식힌 후그리고 차갑게 제공합니다하세요."
     },
     originText: {
       ro: "Gazpacho este o rețetă tradițională din Spania.",
@@ -367,7 +367,7 @@ export const recipes = [
       zh: "西班牙冷汤 是来自西班牙的传统食谱。",
       ja: "ガスパチョ はスペインの伝統的なレシピです。",
       tr: "Gazpacho İspanya kökenli geleneksel bir tariftir.",
-      it: "Gazpacho è una ricetta tradizionale di Spagna.",
+      it: "Gazpacho è una risotta tradizionale di Spagna.",
       ko: "Gazpacho는(은) 스페인의 전통 요리입니다."
     }
   },
@@ -429,9 +429,9 @@ export const recipes = [
       ar: ["أرز", "سمك نيء", "أعشاب نوري البحرية", "خل الأرز"],
       zh: ["米饭", "生鱼片", "紫菜", "米醋"],
       ja: ["ご飯", "生魚", "海苔", "米酢"],
-      tr: ["pirinç", "raw balık", "nori seaweed", "pirinç sirke"],
-      it: ["riso", "raw pesce", "nori seaweed", "riso aceto"],
-      ko: ["쌀", "raw 생선", "nori seaweed", "쌀 식초"]
+      tr: ["pirinç", "çiğ balık", "nori deniz yosunu", "pirinç sirke"],
+      it: ["riso", "crudo pesce", "nori alga", "riso aceto"],
+      ko: ["쌀", "생 생선", "김 김", "쌀 식초"]
     },
     howIsMade: {
       ro: "Fierbe orezul cu oțet, apoi rulează-l cu pește crud și alge nori. Taie rulourile și servește-le proaspete.",
@@ -444,9 +444,9 @@ export const recipes = [
       ar: "اطبخ الأرز مع الخل، ثم لفه مع السمك النيء وأعشاب النوري. قطّع اللفائف وقدّمها طازجة.",
       zh: "将米饭与米醋煮好，再与生鱼片和紫菜卷在一起。切片后新鲜食用。",
       ja: "ご飯を酢で炊き、生魚と海苔で巻きます。ロールを切り分けて新鮮なまま提供します。",
-      tr: "Pişir pirinç ile sirke, sonra roll it ile raw balık ve nori seaweed. Slice rolls ve serve fresh.",
-      it: "Cuoci riso con aceto, poi roll it con raw pesce e nori seaweed. Slice rolls e serve fresh.",
-      ko: "조리하고 쌀와 식초, 그다음 roll it와 raw 생선그리고 nori seaweed. Slice rolls그리고 serve fresh하세요."
+      tr: "Pişir pirinç ile sirke, sonra rulo yapın o ile çiğ balık ve nori deniz yosunu. Slice rulolar ve servis edin taze.",
+      it: "Cuoci riso con aceto, poi arrotola esso con crudo pesce e nori alga. Slice involtini e servi fresco.",
+      ko: "조리하고 쌀와 식초, 그다음 말아줍니다 그것와 생 생선그리고 김 김. Slice 롤그리고 제공합니다 신선한하세요."
     },
     originText: {
       ro: "Sushi este o rețetă tradițională din Japonia.",
@@ -460,7 +460,7 @@ export const recipes = [
       zh: "寿司 是来自日本的传统食谱。",
       ja: "寿司 は日本の伝統的なレシピです。",
       tr: "Sushi Japonya kökenli geleneksel bir tariftir.",
-      it: "Sushi è una ricetta tradizionale di Giappone.",
+      it: "Sushi è una risotta tradizionale di Giappone.",
       ko: "Sushi는(은) 일본의 전통 요리입니다."
     }
   },
@@ -522,9 +522,9 @@ export const recipes = [
       ar: ["باذنجان", "بطاطس", "لحم مفروم", "طماطم", "بصل", "صلصة بشاميل"],
       zh: ["茄子", "土豆", "碎肉", "番茄", "洋葱", "奶油酱"],
       ja: ["ナス", "ジャガイモ", "ひき肉", "トマト", "玉ねぎ", "ベシャメルソース"],
-      tr: ["yumurtaplants", "patates", "minced meat", "domates", "soğan", "bechamel sauce"],
-      it: ["uovoplants", "patate", "minced meat", "pomodori", "cipolla", "bechamel sauce"],
-      ko: ["계란plants", "감자", "minced meat", "토마토", "양파", "bechamel sauce"]
+      tr: ["yumurtaplants", "patates", "kıyılmış et", "domates", "soğbir", "beşamel sos"],
+      it: ["uovoplants", "patate", "tritato carne", "pomodori", "cipolla", "besciamella salsa"],
+      ko: ["계란식물", "감자", "다진 고기", "토마토", "양파", "베샤멜 소스"]
     },
     howIsMade: {
       ro: "Stratifică vinetele, cartofii și carnea tocată gătită cu roșii și ceapă într-o tavă, acoperă cu sos bechamel și coace până se rumenește.",
@@ -537,9 +537,9 @@ export const recipes = [
       ar: "رتب طبقات من الباذنجان والبطاطس واللحم المفروم المطبوخ مع الطماطم والبصل في صينية، غطِّها بصلصة البشاميل واخبزها حتى تصبح ذهبية.",
       zh: "将茄子、土豆和与番茄、洋葱炒熟的碎肉分层放入烤盘，淋上奶油酱，烤至表面金黄。",
       ja: "ナス、ジャガイモ、トマトと玉ねぎで炒めたひき肉を重ねて型に入れ、ベシャメルソースをかけて焼き色がつくまで焼きます。",
-      tr: "Layer yumurtaplants, patates, ve cooked minced meat ile domates ve soğan in a tray, cover ile bechamel sos, ve Fırında pişir until golden.",
-      it: "Layer uovoplants, patate, e cooked minced meat con pomodori e cipolla in a tray, cover con bechamel salsa, e Cuoci al forno until golden.",
-      ko: "Layer 계란plants, 감자, 그리고 cooked minced meat와 토마토그리고 양파 in a tray, cover와 bechamel 소스, 그리고 오븐에 구워 until golden하세요."
+      tr: "katman yumurtaplants, patates, ve pişirined kıyılmış et ile domates ve soğbir tepsi, örtün ile beşamel sos, ve Fırında pişir altın rengi.",
+      it: "strato uovoplants, patate, e cuocied tritato carne con pomodori e cipolla teglia, copri con besciamella salsa, e Cuoci al forno dorato.",
+      ko: "층 계란식물, 감자, 그리고 조리합니다 다진 고기와 토마토그리고 양파 에서 a 트레이, 덮습니다와 베샤멜 소스, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Musaca grecească este o rețetă tradițională din Grecia.",
@@ -552,9 +552,9 @@ export const recipes = [
       ar: "مسقعة يونانية هي وصفة تقليدية من اليونان.",
       zh: "希腊千层蔬菜 是来自希腊的传统食谱。",
       ja: "ギリシャのムサカ はギリシャの伝統的なレシピです。",
-      tr: "Greek Moussaka Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Greek Moussaka è una ricetta tradizionale di Grecia.",
-      ko: "Greek Moussaka는(은) 그리스의 전통 요리입니다."
+      tr: "yunan Moussaka Yunanistan kökenli geleneksel bir tariftir.",
+      it: "greco Moussaka è una risotta tradizionale di Grecia.",
+      ko: "그리스 Moussaka는(은) 그리스의 전통 요리입니다."
     }
   },
   {
@@ -615,9 +615,9 @@ export const recipes = [
       ar: ["لحم بقري", "خبز برجر", "جبن", "طماطم", "خس", "بصل"],
       zh: ["牛肉", "面包", "奶酪", "西红柿", "生菜", "洋葱"],
       ja: ["牛肉", "バンズ", "チーズ", "トマト", "レタス", "玉ねぎ"],
-      tr: ["dana eti", "bun", "peynir", "domates", "marul", "soğan"],
-      it: ["manzo", "bun", "formaggio", "pomodori", "lattuga", "cipolla"],
-      ko: ["소고기", "bun", "치즈", "토마토", "상추", "양파"]
+      tr: ["dana eti", "ekmek", "peynir", "domates", "marul", "soğbir"],
+      it: ["manzo", "panino", "formaggio", "pomodori", "lattuga", "cipolla"],
+      ko: ["소고기", "번", "치즈", "토마토", "상추", "양파"]
     },
     howIsMade: {
       ro: "Prăjește carnea de vită, pune-o în chiflă cu cașcaval, roșii, salată și ceapă, apoi servește burgerul cald.",
@@ -630,9 +630,9 @@ export const recipes = [
       ar: "اشوِ لحم البقر، وضعه في خبز البرجر مع الجبن والطماطم والخس والبصل، ثم قدّم البرجر ساخناً.",
       zh: "将牛肉煎熟，与奶酪、西红柿、生菜和洋葱一起夹入面包中，热食。",
       ja: "牛肉を焼き、チーズ、トマト、レタス、玉ねぎと一緒にバンズに挟み、温かいうちに提供します。",
-      tr: "Izgara yap dana eti, place it in a bun ile peynir, domates, marul, ve soğan, sonra Servis et burger hot.",
-      it: "Griglia manzo, place it in a bun con formaggio, pomodori, lattuga, e cipolla, poi Servi burger hot.",
-      ko: "구워 소고기, place it in a bun와 치즈, 토마토, 상추, 그리고 양파, 그다음 담아 내세요 burger hot하세요."
+      tr: "Izgara yap dana eti, yerleştirin o ekmek ile peynir, domates, marul, ve soğbir, sonra Servis et burger sıcak.",
+      it: "Griglia manzo, metti esso panino con formaggio, pomodori, lattuga, e cipolla, poi Servi burger caldo.",
+      ko: "구워 소고기, 놓습니다 그것 에서 a 번와 치즈, 토마토, 상추, 그리고 양파, 그다음 담아 내세요 버거 뜨거운하세요."
     },
     originText: {
       ro: "Cheeseburger este o rețetă tradițională din SUA.",
@@ -646,7 +646,7 @@ export const recipes = [
       zh: "芝士汉堡 是来自美国的传统食谱。",
       ja: "チーズバーガー はアメリカの伝統的なレシピです。",
       tr: "Cheeseburger ABD kökenli geleneksel bir tariftir.",
-      it: "Cheeseburger è una ricetta tradizionale di USA.",
+      it: "Cheeseburger è una risotta tradizionale di USA.",
       ko: "Cheeseburger는(은) 미국의 전통 요리입니다."
     }
   },
@@ -708,9 +708,9 @@ export const recipes = [
       ar: ["تورتيلا", "لحم بقري", "طماطم", "خس", "جبن", "صلصة سالسا"],
       zh: ["玉米饼", "牛肉", "西红柿", "生菜", "奶酪", "莎莎酱"],
       ja: ["トルティーヤ", "牛肉", "トマト", "レタス", "チーズ", "サルサソース"],
-      tr: ["tortilla", "dana eti", "domates", "marul", "peynir", "salsa sauce"],
-      it: ["tortilla", "manzo", "pomodori", "lattuga", "formaggio", "salsa sauce"],
-      ko: ["tortilla", "소고기", "토마토", "상추", "치즈", "salsa sauce"]
+      tr: ["tortilla", "dana eti", "domates", "marul", "peynir", "salsa sos"],
+      it: ["tortilla", "manzo", "pomodori", "lattuga", "formaggio", "salsa salsa"],
+      ko: ["토르티야", "소고기", "토마토", "상추", "치즈", "살사 소스"]
     },
     howIsMade: {
       ro: "Umple tortilla cu carne de vită gătită, roșii, salată, brânză și sos salsa. Împachetează și servește imediat.",
@@ -723,9 +723,9 @@ export const recipes = [
       ar: "احشِ التورتيلا بلحم بقري مطبوخ، طماطم، خس، جبن وصلصة سالسا. اطوِها وقدّمها فوراً.",
       zh: "将煮熟的牛肉、西红柿、生菜、奶酪和莎莎酱夹入玉米饼，包好后立即享用。",
       ja: "トルティーヤに調理した牛肉、トマト、レタス、チーズ、サルサソースを詰め、包んですぐに提供します。",
-      tr: "Fill tortilla ile cooked dana eti, domates, marul, peynir, ve salsa sos. Fold ve serve immediately.",
-      it: "Fill tortilla con cooked manzo, pomodori, lattuga, formaggio, e salsa salsa. Fold e serve immediately.",
-      ko: "Fill tortilla와 cooked 소고기, 토마토, 상추, 치즈, 그리고 salsa 소스. Fold그리고 serve immediately하세요."
+      tr: "doldurun tortilla ile pişirined dana eti, domates, marul, peynir, ve salsa sos. katlayın ve servis edin hemen.",
+      it: "farcisci tortilla con cuocied manzo, pomodori, lattuga, formaggio, e salsa salsa. incorpora delicatamente e servi subito.",
+      ko: "채웁니다 토르티야와 조리합니다 소고기, 토마토, 상추, 치즈, 그리고 살사 소스. 접어 섞습니다그리고 제공합니다 즉시하세요."
     },
     originText: {
       ro: "Tacos este o rețetă tradițională din Mexic.",
@@ -739,7 +739,7 @@ export const recipes = [
       zh: "玉米卷 是来自墨西哥的传统食谱。",
       ja: "タコス はメキシコの伝統的なレシピです。",
       tr: "Tacos Meksika kökenli geleneksel bir tariftir.",
-      it: "Tacos è una ricetta tradizionale di Messico.",
+      it: "Tacos è una risotta tradizionale di Messico.",
       ko: "Tacos는(은) 멕시코의 전통 요리입니다."
     }
   },
@@ -801,9 +801,9 @@ export const recipes = [
       ar: ["دجاج", "بصل", "طماطم", "ثوم", "زنجبيل", "كاري", "زيت"],
       zh: ["鸡肉", "洋葱", "番茄", "大蒜", "生姜", "咖喱", "油"],
       ja: ["鶏肉", "玉ねぎ", "トマト", "ニンニク", "ショウガ", "カレー", "油"],
-      tr: ["tavuk", "soğan", "domates", "sarımsak", "zencefil", "curry", "oil"],
-      it: ["pollo", "cipolla", "pomodori", "aglio", "zenzero", "curry", "oil"],
-      ko: ["닭고기", "양파", "토마토", "마늘", "생강", "curry", "oil"]
+      tr: ["tavuk", "soğbir", "domates", "sarımsak", "zencefil", "köri", "yağ"],
+      it: ["pollo", "cipolla", "pomodori", "aglio", "zenzero", "curry", "olio"],
+      ko: ["닭고기", "양파", "토마토", "마늘", "생강", "카레", "기름"]
     },
     howIsMade: {
       ro: "Călește ceapa, usturoiul și ghimbirul, adaugă puiul și roșiile, presară curry și gătește totul până când puiul este fraged și aromat.",
@@ -816,9 +816,9 @@ export const recipes = [
       ar: "اقلِ البصل والثوم والزنجبيل، أضف الدجاج والطماطم، رش الكاري واطبخ حتى ينضج الدجاج ويصبح مليئاً بالنكهات.",
       zh: "炒香洋葱、大蒜和生姜，加入鸡肉和番茄，撒上咖喱粉，煮至鸡肉鲜嫩入味。",
       ja: "玉ねぎ、ニンニク、ショウガを炒め、鶏肉とトマトを加え、カレーをふりかけて、鶏肉が柔らかく風味豊かになるまで煮込みます。",
-      tr: "Sauté soğan, sarımsak, ve zencefil, Ekle tavuk ve domates, sprinkle curry, ve Pişir everything until tavuk is tender ve flavorful.",
-      it: "Sauté cipolla, aglio, e zenzero, Aggiungi pollo e pomodori, sprinkle curry, e Cuoci everything until pollo is tender e flavorful.",
-      ko: "Sauté 양파, 마늘, 그리고 생강, 넣고 닭고기그리고 토마토, sprinkle curry, 그리고 조리하고 everything until 닭고기 is tender그리고 flavorful하세요."
+      tr: "soteleyiné soğbir, sarımsak, ve zencefil, Ekle tavuk ve domates, serpiştirin köri, ve Pişir her şeyi tavuk  yumuşak ve lezzetli.",
+      it: "soffriggié cipolla, aglio, e zenzero, Aggiungi pollo e pomodori, spolvera curry, e Cuoci tutto pollo  tenero e sapori intensi.",
+      ko: "볶습니다é 양파, 마늘, 그리고 생강, 넣고 닭고기그리고 토마토, 뿌립니다 카레, 그리고 조리하고 모든 것 닭고기 입니다 부드럽게그리고 풍미가 좋은하세요."
     },
     originText: {
       ro: "Curry de pui este o rețetă tradițională din India.",
@@ -831,9 +831,9 @@ export const recipes = [
       ar: "دجاج بالكاري هي وصفة تقليدية من الهند.",
       zh: "鸡肉咖喱 是来自印度的传统食谱。",
       ja: "チキンカレー はインドの伝統的なレシピです。",
-      tr: "Chicken Curry Hindistan kökenli geleneksel bir tariftir.",
-      it: "Chicken Curry è una ricetta tradizionale di India.",
-      ko: "Chicken Curry는(은) 인도의 전통 요리입니다."
+      tr: "tavuk köri Hindistan kökenli geleneksel bir tariftir.",
+      it: "pollo curry è una risotta tradizionale di India.",
+      ko: "닭고기 카레는(은) 인도의 전통 요리입니다."
     }
   },
   {
@@ -894,9 +894,9 @@ export const recipes = [
       ar: ["باذنجان", "كوسة", "فلفل", "طماطم", "بصل", "ثوم", "زيت زيتون"],
       zh: ["茄子", "西葫芦", "辣椒", "番茄", "洋葱", "大蒜", "橄榄油"],
       ja: ["ナス", "ズッキーニ", "ピーマン", "トマト", "玉ねぎ", "ニンニク", "オリーブオイル"],
-      tr: ["yumurtaplants", "zucchini", "bibers", "domates", "soğan", "sarımsak", "zeytinyağı"],
-      it: ["uovoplants", "zucchini", "peperones", "pomodori", "cipolla", "aglio", "olio d'oliva"],
-      ko: ["계란plants", "zucchini", "고추s", "토마토", "양파", "마늘", "올리브오일"]
+      tr: ["yumurtaplants", "kabak", "bibers", "domates", "soğbir", "sarımsak", "zeytinyağı"],
+      it: ["uovoplants", "zucchina", "peperones", "pomodori", "cipolla", "aglio", "olio d'oliva"],
+      ko: ["계란식물", "주키니", "고추s", "토마토", "양파", "마늘", "올리브오일"]
     },
     howIsMade: {
       ro: "Taie legumele cuburi, călește-le pe rând în ulei de măsline, apoi gătește-le împreună până se înmoaie și aromele se amestecă.",
@@ -909,9 +909,9 @@ export const recipes = [
       ar: "قطّع الخضار إلى مكعبات، واقلها كل نوع على حدة بزيت الزيتون، ثم اطبخها معاً حتى تلين وتمتزج النكهات.",
       zh: "将蔬菜切丁，分别用橄榄油炒香，然后一起炖至软烂，味道融合。",
       ja: "野菜を角切りにし、オリーブオイルでそれぞれ炒めてから、全てを一緒に柔らかくなるまで煮込み、風味をなじませます。",
-      tr: "Cut vegetables into cubes, sauté them one by one in zeytinyağı, sonra Pişir them together until soft ve flavors blend.",
-      it: "Cut vegetables into cubes, sauté them one by one in olio d'oliva, poi Cuoci them together until soft e flavors blend.",
-      ko: "Cut vegetables into cubes, sauté them one by one in 올리브오일, 그다음 조리하고 them together until soft그리고 flavors blend하세요."
+      tr: "kesin sebzeler içine küp, soteleyiné onları bir ile bir in zeytinyağı, sonra Pişir onları birlikte yumuşak ve lezzetler blenderdan geçirin.",
+      it: "taglia verdure dentro cubetti, soffriggié li uno da uno in olio d'oliva, poi Cuoci li insieme morbido e sapori frulla.",
+      ko: "자릅니다 채소 안에 깍둑썰기, 볶습니다é 그것들을 하나 로 하나 에서 올리브오일, 그다음 조리하고 그것들을 함께 부드러운그리고 맛 블렌더에 갈아줍니다하세요."
     },
     originText: {
       ro: "Ratatouille este o rețetă tradițională din Franța.",
@@ -925,7 +925,7 @@ export const recipes = [
       zh: "普罗旺斯杂烩 是来自法国的传统食谱。",
       ja: "ラタトゥイユ はフランスの伝統的なレシピです。",
       tr: "Ratatouille Fransa kökenli geleneksel bir tariftir.",
-      it: "Ratatouille è una ricetta tradizionale di Francia.",
+      it: "Ratatouille è una risotta tradizionale di Francia.",
       ko: "Ratatouille는(은) 프랑스의 전통 요리입니다."
     }
   },
@@ -1002,9 +1002,9 @@ export const recipes = [
       ar: "تُتبل قطع لحم الخنزير بزيت الزيتون والليمون والثوم والأوريجانو، ثم تُشوى على الأسياخ حتى تكتسب اللون الذهبي.",
       zh: "将猪肉块用橄榄油、柠檬、大蒜和牛至腌制，然后串在签子上烧烤至金黄。",
       ja: "豚肉をオリーブオイル、レモン、ニンニク、オレガノでマリネし、串に刺してこんがり焼きます。",
-      tr: "Marinate domuz eti pieces in zeytinyağı, limon, sarımsak, ve kekik, sonra skewer ve grill them until golden.",
-      it: "Marinate maiale pieces in olio d'oliva, limone, aglio, e origano, poi skewer e grill them until golden.",
-      ko: "Marinate 돼지고기 pieces in 올리브오일, 레몬, 마늘, 그리고 오레가노, 그다음 skewer그리고 grill them until golden하세요."
+      tr: "marine edin domuz eti parçalar in zeytinyağı, limon, sarımsak, ve kekik, sonra şiş ve ızgara yapın onları altın rengi.",
+      it: "marina maiale pezzi in olio d'oliva, limone, aglio, e origano, poi spiedo e griglia li dorato.",
+      ko: "재웁니다 돼지고기 조각 에서 올리브오일, 레몬, 마늘, 그리고 오레가노, 그다음 꼬치그리고 굽습니다 그것들을 노릇하게하세요."
     },
     originText: {
       ro: "Souvlaki este o rețetă tradițională din Grecia.",
@@ -1018,7 +1018,7 @@ export const recipes = [
       zh: "希腊烤肉串 是来自希腊的传统食谱。",
       ja: "スブラキ はギリシャの伝統的なレシピです。",
       tr: "Souvlaki Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Souvlaki è una ricetta tradizionale di Grecia.",
+      it: "Souvlaki è una risotta tradizionale di Grecia.",
       ko: "Souvlaki는(은) 그리스의 전통 요리입니다."
     }
   },
@@ -1080,9 +1080,9 @@ export const recipes = [
       ar: ["عدس", "بصل", "طماطم", "ثوم", "زنجبيل", "كركم", "كمون", "كزبرة"],
       zh: ["扁豆", "洋葱", "番茄", "大蒜", "生姜", "姜黄", "孜然", "香菜"],
       ja: ["レンズ豆", "玉ねぎ", "トマト", "ニンニク", "ショウガ", "ターメリック", "クミン", "コリアンダー"],
-      tr: ["mercimek", "soğan", "domates", "sarımsak", "zencefil", "turmeric", "kimyon", "coriander"],
-      it: ["lenticchie", "cipolla", "pomodori", "aglio", "zenzero", "turmeric", "cumino", "coriander"],
-      ko: ["렌틸콩", "양파", "토마토", "마늘", "생강", "turmeric", "쿠민", "coriander"]
+      tr: ["mercimek", "soğbir", "domates", "sarımsak", "zencefil", "zerdeçal", "kimyon", "kişniş"],
+      it: ["lenticchie", "cipolla", "pomodori", "aglio", "zenzero", "curcuma", "cumino", "coriandolo"],
+      ko: ["렌틸콩", "양파", "토마토", "마늘", "생강", "강황", "쿠민", "고수"]
     },
     howIsMade: {
       ro: "Fierbe lintea cu ceapă, roșii, usturoi și ghimbir, adaugă condimentele și gătește până devine cremoasă și aromată.",
@@ -1095,9 +1095,9 @@ export const recipes = [
       ar: "اسلق العدس مع البصل والطماطم والثوم والزنجبيل، أضف التوابل واطبخ حتى يصبح الدال كريميًا وغني النكهة.",
       zh: "将扁豆与洋葱、番茄、大蒜和生姜一起煮，加入香料，炖至浓稠香浓。",
       ja: "レンズ豆を玉ねぎ、トマト、ニンニク、ショウガと一緒に煮て、スパイスを加え、クリーミーで風味豊かになるまで調理します。",
-      tr: "Haşla mercimek ile soğan, domates, sarımsak, ve zencefil, Ekle spices, ve Pişir until kremay ve flavorful.",
-      it: "Cuoci lenticchie con cipolla, pomodori, aglio, e zenzero, Aggiungi spices, e Cuoci until pannay e flavorful.",
-      ko: "삶고 렌틸콩와 양파, 토마토, 마늘, 그리고 생강, 넣고 spices, 그리고 조리하고 until 크림y그리고 flavorful하세요."
+      tr: "Haşla mercimek ile soğbir, domates, sarımsak, ve zencefil, Ekle baharatlar, ve Pişir kremay ve lezzetli.",
+      it: "Cuoci lenticchie con cipolla, pomodori, aglio, e zenzero, Aggiungi spezie, e Cuoci pannay e sapori intensi.",
+      ko: "삶고 렌틸콩와 양파, 토마토, 마늘, 그리고 생강, 넣고 향신료, 그리고 조리하고 크림y그리고 풍미가 좋은하세요."
     },
     originText: {
       ro: "Dhal este o rețetă tradițională din India.",
@@ -1111,7 +1111,7 @@ export const recipes = [
       zh: "印度扁豆汤 是来自印度的传统食谱。",
       ja: "ダール はインドの伝統的なレシピです。",
       tr: "Dhal Hindistan kökenli geleneksel bir tariftir.",
-      it: "Dhal è una ricetta tradizionale di India.",
+      it: "Dhal è una risotta tradizionale di India.",
       ko: "Dhal는(은) 인도의 전통 요리입니다."
     }
   },
@@ -1173,9 +1173,9 @@ export const recipes = [
       ar: ["أفوكادو", "بصل", "طماطم", "ليمون", "كزبرة", "ملح", "فلفل حار"],
       zh: ["牛油果", "洋葱", "番茄", "青柠", "香菜", "盐", "辣椒"],
       ja: ["アボカド", "玉ねぎ", "トマト", "ライム", "コリアンダー", "塩", "チリペッパー"],
-      tr: ["avocado", "soğan", "domates", "yeşil limon", "coriander", "tuz", "chili biber"],
-      it: ["avocado", "cipolla", "pomodori", "lime", "coriander", "sale", "chili peperone"],
-      ko: ["avocado", "양파", "토마토", "라임", "coriander", "소금", "chili 고추"]
+      tr: ["avokado", "soğbir", "domates", "yeşil limon", "kişniş", "tuz", "acı biber biber"],
+      it: ["avocado", "cipolla", "pomodori", "lime", "coriandolo", "sale", "peperoncino peperone"],
+      ko: ["아보카도", "양파", "토마토", "라임", "고수", "소금", "고추 고추"]
     },
     howIsMade: {
       ro: "Pisează avocado și amestecă-l cu ceapă, roșii, lime, coriandru, sare și ardei iute pentru o pastă cremoasă.",
@@ -1188,9 +1188,9 @@ export const recipes = [
       ar: "اهرس الأفوكادو وامزجه مع البصل والطماطم والليمون والكزبرة والملح والفلفل الحار حتى تحصل على معجون كريمي.",
       zh: "捣碎牛油果，与洋葱、番茄、青柠、香菜、盐和辣椒混合，制成奶油状蘸酱。",
       ja: "アボカドを潰し、玉ねぎ、トマト、ライム、コリアンダー、塩、チリペッパーと混ぜてクリーミーなディップにします。",
-      tr: "Mash avocado ve mix it ile soğan, domates, yeşil limon, coriander, tuz, ve chili biber for a kremay dip.",
-      it: "Mash avocado e mix it con cipolla, pomodori, lime, coriander, sale, e chili peperone for a pannay dip.",
-      ko: "Mash avocado그리고 mix it와 양파, 토마토, 라임, coriander, 소금, 그리고 chili 고추 for a 크림y dip하세요."
+      tr: "ezin avokado ve karıştırın o ile soğbir, domates, yeşil limon, kişniş, tuz, ve acı biber biber için a kremay banın.",
+      it: "schiaccia avocado e mescola esso con cipolla, pomodori, lime, coriandolo, sale, e peperoncino peperone per a pannay intingi.",
+      ko: "으깨세요 아보카도그리고 섞습니다 그것와 양파, 토마토, 라임, 고수, 소금, 그리고 고추 고추 을 위해 a 크림y 찍어 먹습니다하세요."
     },
     originText: {
       ro: "Guacamole este o rețetă tradițională din Mexic.",
@@ -1204,7 +1204,7 @@ export const recipes = [
       zh: "鳄梨酱 是来自墨西哥的传统食谱。",
       ja: "ワカモレ はメキシコの伝統的なレシピです。",
       tr: "Guacamole Meksika kökenli geleneksel bir tariftir.",
-      it: "Guacamole è una ricetta tradizionale di Messico.",
+      it: "Guacamole è una risotta tradizionale di Messico.",
       ko: "Guacamole는(은) 멕시코의 전통 요리입니다."
     }
   },
@@ -1266,9 +1266,9 @@ export const recipes = [
       ar: ["شمندر", "ملفوف", "بطاطس", "جزر", "بصل", "ثوم", "مرق"],
       zh: ["甜菜根", "卷心菜", "土豆", "胡萝卜", "洋葱", "大蒜", "高汤"],
       ja: ["ビートルート", "キャベツ", "ジャガイモ", "ニンジン", "玉ねぎ", "ニンニク", "ブイヨン"],
-      tr: ["beetroot", "cabbage", "patates", "havuçs", "soğan", "sarımsak", "et suyu"],
-      it: ["beetroot", "cabbage", "patate", "carotas", "cipolla", "aglio", "brodo"],
-      ko: ["beetroot", "cabbage", "감자", "당근s", "양파", "마늘", "육수"]
+      tr: ["pancar", "lahana", "patates", "havuçs", "soğbir", "sarımsak", "et suyu"],
+      it: ["barbabietola", "cavolo", "patate", "carotas", "cipolla", "aglio", "brodo"],
+      ko: ["비트", "양배추", "감자", "당근s", "양파", "마늘", "육수"]
     },
     howIsMade: {
       ro: "Fierbe sfecla, varza, cartofii, morcovii și ceapa în bulion, adaugă usturoiul și gătește până legumele sunt moi. Servește supa caldă.",
@@ -1281,9 +1281,9 @@ export const recipes = [
       ar: "اسلق الشمندر، الملفوف، البطاطس، الجزر والبصل في المرق، أضف الثوم واطبخ حتى تنضج الخضار. قدّم الحساء ساخناً.",
       zh: "将甜菜根、卷心菜、土豆、胡萝卜和洋葱放入高汤中煮沸，加入大蒜，炖至蔬菜变软。热食此汤。",
       ja: "ビートルート、キャベツ、ジャガイモ、ニンジン、玉ねぎをブイヨンで煮込み、ニンニクを加えて野菜が柔らかくなるまで調理します。温かいスープとして提供します。",
-      tr: "Haşla beetroot, cabbage, patates, havuçs, ve soğan in et suyu, Ekle sarımsak, ve Pişir until vegetables are tender. Serve soup hot.",
-      it: "Cuoci beetroot, cabbage, patate, carotas, e cipolla in brodo, Aggiungi aglio, e Cuoci until vegetables are tender. Serve soup hot.",
-      ko: "삶고 beetroot, cabbage, 감자, 당근s, 그리고 양파 in 육수, 넣고 마늘, 그리고 조리하고 until vegetables are tender. Serve soup hot하세요."
+      tr: "Haşla pancar, lahana, patates, havuçs, ve soğbir in et suyu, Ekle sarımsak, ve Pişir sebzeler  yumuşak. servis edin çorba sıcak.",
+      it: "Cuoci barbabietola, cavolo, patate, carotas, e cipolla in brodo, Aggiungi aglio, e Cuoci verdure  tenero. servi zuppa caldo.",
+      ko: "삶고 비트, 양배추, 감자, 당근s, 그리고 양파 에서 육수, 넣고 마늘, 그리고 조리하고 채소  부드럽게. 제공합니다 수프 뜨거운하세요."
     },
     originText: {
       ro: "Bors este o rețetă tradițională din Rusia.",
@@ -1296,9 +1296,9 @@ export const recipes = [
       ar: "بورشت هي وصفة تقليدية من روسيا.",
       zh: "罗宋汤 是来自俄罗斯的传统食谱。",
       ja: "ボルシチ はロシアの伝統的なレシピです。",
-      tr: "Borscht Rusya kökenli geleneksel bir tariftir.",
-      it: "Borscht è una ricetta tradizionale di Russia.",
-      ko: "Borscht는(은) 러시아의 전통 요리입니다."
+      tr: "borş Rusya kökenli geleneksel bir tariftir.",
+      it: "borsch è una risotta tradizionale di Russia.",
+      ko: "보르시는(은) 러시아의 전통 요리입니다."
     }
   },
   {
@@ -1359,9 +1359,9 @@ export const recipes = [
       ar: ["دقيق", "حليب", "بيض", "سكر", "بيكنج بودر", "زبدة"],
       zh: ["面粉", "牛奶", "鸡蛋", "糖", "泡打粉", "黄油"],
       ja: ["小麦粉", "牛乳", "卵", "砂糖", "ベーキングパウダー", "バター"],
-      tr: ["un", "süt", "yumurta", "şeker", "baking powder", "tereyağı"],
-      it: ["farina", "latte", "uova", "zucchero", "baking powder", "burro"],
-      ko: ["밀가루", "우유", "계란", "설탕", "baking powder", "버터"]
+      tr: ["un", "süt", "yumurta", "şeker", "pişirme tozu", "tereyağı"],
+      it: ["farina", "latte", "uova", "zucchero", "cottura in polvere", "burro"],
+      ko: ["밀가루", "우유", "계란", "설탕", "굽기 가루", "버터"]
     },
     howIsMade: {
       ro: "Amestecă făina, laptele, ouăle, zahărul și praful de copt, apoi prăjește compoziția în tigaie cu unt până obții clătite pufoase.",
@@ -1374,9 +1374,9 @@ export const recipes = [
       ar: "اخلط الدقيق مع الحليب والبيض والسكر والبيكنج بودر، ثم اقلي الخليط في مقلاة مع الزبدة حتى تحصل على فطائر هشة.",
       zh: "将面粉、牛奶、鸡蛋、糖和泡打粉混合，用黄油在平底锅中煎至松软。",
       ja: "小麦粉、牛乳、卵、砂糖、ベーキングパウダーを混ぜ、バターを使ってフライパンでふんわり焼き上げます。",
-      tr: "Karıştır un, süt, yumurta, şeker, ve baking powder, sonra Kızart batter in a pan ile tereyağı yapmak için fluffy pancakes.",
-      it: "Mescola farina, latte, uova, zucchero, e baking powder, poi Friggi batter in a pan con burro per fare fluffy pancakes.",
-      ko: "섞고 밀가루, 우유, 계란, 설탕, 그리고 baking powder, 그다음 볶거나 튀기고 batter in a pan와 버터 만들기 위해 fluffy pancakes하세요."
+      tr: "Karıştır un, süt, yumurta, şeker, ve pişirme tozu, sonra Kızart hamur tava ile tereyağı yapmak için kabarmış krep.",
+      it: "Mescola farina, latte, uova, zucchero, e cottura in polvere, poi Friggi pastella padella con burro per fare soffice pancake.",
+      ko: "섞고 밀가루, 우유, 계란, 설탕, 그리고 굽기 가루, 그다음 볶거나 튀기고 반죽 에서 a 팬와 버터 만들기 위해 폭신한 팬케이크하세요."
     },
     originText: {
       ro: "Clătite americane este o rețetă tradițională din SUA.",
@@ -1389,9 +1389,9 @@ export const recipes = [
       ar: "فطائر أمريكية هي وصفة تقليدية من الولايات المتحدة.",
       zh: "煎饼 是来自美国的传统食谱。",
       ja: "パンケーキ はアメリカの伝統的なレシピです。",
-      tr: "Pancakes ABD kökenli geleneksel bir tariftir.",
-      it: "Pancakes è una ricetta tradizionale di USA.",
-      ko: "Pancakes는(은) 미국의 전통 요리입니다."
+      tr: "krep ABD kökenli geleneksel bir tariftir.",
+      it: "pancake è una risotta tradizionale di USA.",
+      ko: "팬케이크는(은) 미국의 전통 요리입니다."
     }
   },
   {
@@ -1452,9 +1452,9 @@ export const recipes = [
       ar: ["نودلز الأرز", "جمبري", "بيض", "براعم فول الصويا", "فول سوداني", "ليمون أخضر"],
       zh: ["米粉", "虾", "鸡蛋", "豆芽", "花生", "青柠"],
       ja: ["ライスヌードル", "エビ", "卵", "もやし", "ピーナッツ", "ライム"],
-      tr: ["pirinç noodles", "karides", "yumurta", "bean sprouts", "peanuts", "yeşil limon"],
-      it: ["riso noodles", "gamberetti", "uova", "bean sprouts", "peanuts", "lime"],
-      ko: ["쌀 noodles", "새우", "계란", "bean sprouts", "peanuts", "라임"]
+      tr: ["pirinç erişte", "karides", "yumurta", "fasulye filiz", "yer fıstığı", "yeşil limon"],
+      it: ["riso spaghetti", "gamberetti", "uova", "fagiolo germogli", "arachidi", "lime"],
+      ko: ["쌀 면", "새우", "계란", "콩 새싹", "땅콩", "라임"]
     },
     howIsMade: {
       ro: "Prăjește tăițeii de orez cu creveți, ouă, păstăi de fasole și alune, asezonează cu lime și servește imediat.",
@@ -1467,9 +1467,9 @@ export const recipes = [
       ar: "قلّب نودلز الأرز مع الجمبري والبيض وبراعم فول الصويا والفول السوداني، وتبّلها بالليمون الأخضر وقدّمها فوراً.",
       zh: "将米粉与虾、鸡蛋、豆芽、花生一起翻炒，挤上青柠汁，趁热食用。",
       ja: "ライスヌードルをエビ、卵、もやし、ピーナッツと一緒に炒め、ライムで味付けし、すぐに提供します。",
-      tr: "Stir-fry pirinç noodles ile karides, yumurta, bean sprouts, ve peanuts, Baharatlandır ile yeşil limon, ve Servis et immediately.",
-      it: "Stir-fry riso noodles con gamberetti, uova, bean sprouts, e peanuts, Condisci con lime, e Servi immediately.",
-      ko: "Stir-볶거나 튀겨 쌀 noodles와 새우, 계란, bean sprouts, 그리고 peanuts, 간을 맞추고와 라임, 그리고 담아 내세요 immediately하세요."
+      tr: "karıştırın-kavurun pirinç erişte ile karides, yumurta, fasulye filiz, ve yer fıstığı, Baharatlandır ile yeşil limon, ve Servis et hemen.",
+      it: "mescola-rosola riso spaghetti con gamberetti, uova, fagiolo germogli, e arachidi, Condisci con lime, e Servi subito.",
+      ko: "저어줍니다-볶거나 튀겨 쌀 면와 새우, 계란, 콩 새싹, 그리고 땅콩, 간을 맞추고와 라임, 그리고 담아 내세요 즉시하세요."
     },
     originText: {
       ro: "Pad Thai este o rețetă tradițională din Thailanda.",
@@ -1483,7 +1483,7 @@ export const recipes = [
       zh: "泰式炒河粉 是来自泰国的传统食谱。",
       ja: "パッタイ はタイの伝統的なレシピです。",
       tr: "Pad Thai Tayland kökenli geleneksel bir tariftir.",
-      it: "Pad Thai è una ricetta tradizionale di Thailandia.",
+      it: "Pad Thai è una risotta tradizionale di Thailandia.",
       ko: "Pad Thai는(은) 태국의 전통 요리입니다."
     }
   },
@@ -1545,9 +1545,9 @@ export const recipes = [
       ar: ["شريحة لحم خنزير", "بيض", "دقيق", "بقسماط", "زيت", "ليمون"],
       zh: ["猪排", "鸡蛋", "面粉", "面包屑", "油", "柠檬"],
       ja: ["豚肉のカツレツ", "卵", "小麦粉", "パン粉", "油", "レモン"],
-      tr: ["domuz eti chop", "yumurta", "un", "ekmekcrumbs", "oil", "limon"],
-      it: ["maiale chop", "uova", "farina", "panecrumbs", "oil", "limone"],
-      ko: ["돼지고기 chop", "계란", "밀가루", "빵crumbs", "oil", "레몬"]
+      tr: ["domuz eti doğrayın", "yumurta", "un", "ekmekcrumbs", "yağ", "limon"],
+      it: ["maiale trita", "uova", "farina", "panecrumbs", "olio", "limone"],
+      ko: ["돼지고기 다집니다", "계란", "밀가루", "빵빵가루", "기름", "레몬"]
     },
     howIsMade: {
       ro: "Bate cotletul de porc, trece-l prin făină, ou și pesmet, apoi prăjește-l în ulei până devine auriu. Servește cu felii de lămâie.",
@@ -1560,9 +1560,9 @@ export const recipes = [
       ar: "اقطع شريحة لحم الخنزير، ثم غطها بالدقيق والبيض والبقسماط، واقلها في الزيت حتى تصبح ذهبية. قدّمها مع شرائح الليمون.",
       zh: "将猪排拍松，裹上面粉、鸡蛋和面包屑，在油中炸至金黄。配柠檬片食用。",
       ja: "豚肉のカツレツをたたいて小麦粉、卵、パン粉の順にまぶし、油で黄金色になるまで揚げます。レモンのスライスを添えて提供します。",
-      tr: "Pound domuz eti chop, coat it in un, yumurta, ve ekmekcrumbs, sonra Kızart in oil until golden. Serve ile limon slices.",
-      it: "Pound maiale chop, coat it in farina, uovo, e panecrumbs, poi Friggi in oil until golden. Serve con limone slices.",
-      ko: "Pound 돼지고기 chop, coat it in 밀가루, 계란, 그리고 빵crumbs, 그다음 볶거나 튀기고 in oil until golden. Serve와 레몬 slices하세요."
+      tr: "dövün domuz eti doğrayın, kaplayın o in un, yumurta, ve ekmekcrumbs, sonra Kızart in yağ altın rengi. servis edin ile limon dilimler.",
+      it: "batti maiale trita, ricopri esso in farina, uovo, e panecrumbs, poi Friggi in olio dorato. servi con limone fette.",
+      ko: "두드립니다 돼지고기 다집니다, 입힙니다 그것 에서 밀가루, 계란, 그리고 빵빵가루, 그다음 볶거나 튀기고 에서 기름 노릇하게. 제공합니다와 레몬 조각하세요."
     },
     originText: {
       ro: "Schnitzel este o rețetă tradițională din Germania.",
@@ -1576,7 +1576,7 @@ export const recipes = [
       zh: "炸肉排 是来自德国的传统食谱。",
       ja: "シュニッツェル はドイツの伝統的なレシピです。",
       tr: "Schnitzel Almanya kökenli geleneksel bir tariftir.",
-      it: "Schnitzel è una ricetta tradizionale di Germania.",
+      it: "Schnitzel è una risotta tradizionale di Germania.",
       ko: "Schnitzel는(은) 독일의 전통 요리입니다."
     }
   },
@@ -1638,9 +1638,9 @@ export const recipes = [
       ar: ["فاصولياء سوداء", "لحم خنزير", "نقانق", "بصل", "ثوم", "أرز"],
       zh: ["黑豆", "猪肉", "香肠", "洋葱", "大蒜", "米饭"],
       ja: ["黒豆", "豚肉", "ソーセージ", "玉ねぎ", "ニンニク", "ご飯"],
-      tr: ["black fasulye", "domuz eti", "sausages", "soğan", "sarımsak", "pirinç"],
-      it: ["black fagioli", "maiale", "sausages", "cipolla", "aglio", "riso"],
-      ko: ["black 콩", "돼지고기", "sausages", "양파", "마늘", "쌀"]
+      tr: ["siyah fasulye", "domuz eti", "sosis", "soğbir", "sarımsak", "pirinç"],
+      it: ["nero fagioli", "maiale", "salsicce", "cipolla", "aglio", "riso"],
+      ko: ["검은 콩", "돼지고기", "소시지", "양파", "마늘", "쌀"]
     },
     howIsMade: {
       ro: "Fierbe fasolea cu carne afumată, cârnați și legume, lasă la foc mic până aromele se combină. Se servește cu orez.",
@@ -1653,9 +1653,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا مع اللحم المدخن والنقانق والخضار على نار هادئة حتى تتداخل النكهات. قدّمها مع الأرز.",
       zh: "将豆类与烟熏肉、香肠和蔬菜一起煮炖至入味。配米饭食用。",
       ja: "豆と燻製肉、ソーセージ、野菜を煮込み、味がなじむまで弱火で煮る。ご飯と一緒に提供。",
-      tr: "Haşla fasulye ile smoked meat, sausages, ve vegetables; simmer until flavors combine. Serve ile pirinç.",
-      it: "Cuoci fagioli con smoked meat, sausages, e vegetables; simmer until flavors unisci. Serve con riso.",
-      ko: "삶고 콩와 smoked meat, sausages, 그리고 vegetables; simmer until flavors 섞어. Serve와 쌀하세요."
+      tr: "Haşla fasulye ile isli et, sosis, ve sebzeler; kısık ateşte pişirin lezzetler combine. servis edin ile pirinç.",
+      it: "Cuoci fagioli con affumicato carne, salsicce, e verdure; lascia sobbollire sapori unisci. servi con riso.",
+      ko: "삶고 콩와 훈제 고기, 소시지, 그리고 채소; 약불에서 끓입니다 맛 섞어. 제공합니다와 쌀하세요."
     },
     originText: {
       ro: "Feijoada este o rețetă tradițională din Brazilia.",
@@ -1669,7 +1669,7 @@ export const recipes = [
       zh: "巴西杂烩 是来自巴西的传统食谱。",
       ja: "フェイジョアーダ はブラジルの伝統的なレシピです。",
       tr: "Feijoada Brezilya kökenli geleneksel bir tariftir.",
-      it: "Feijoada è una ricetta tradizionale di Brasile.",
+      it: "Feijoada è una risotta tradizionale di Brasile.",
       ko: "Feijoada는(은) 브라질의 전통 요리입니다."
     }
   },
@@ -1731,9 +1731,9 @@ export const recipes = [
       ar: ["صدر دجاج", "فول سوداني", "فلفل حار", "بصل أخضر", "صلصة صويا", "زنجبيل"],
       zh: ["鸡胸肉", "花生", "辣椒", "葱", "酱油", "姜"],
       ja: ["鶏胸肉", "ピーナッツ", "唐辛子", "青ねぎ", "醤油", "ショウガ"],
-      tr: ["tavuk göğsü", "peanuts", "chili biber", "green soğan", "soya sosu", "zencefil"],
-      it: ["petto di pollo", "peanuts", "chili peperone", "green cipolla", "salsa di soia", "zenzero"],
-      ko: ["닭가슴살", "peanuts", "chili 고추", "green 양파", "간장", "생강"]
+      tr: ["tavuk göğsü", "yer fıstığı", "acı biber biber", "yeşil soğbir", "soya sosu", "zencefil"],
+      it: ["petto di pollo", "arachidi", "peperoncino peperone", "verde cipolla", "salsa di soia", "zenzero"],
+      ko: ["닭가슴살", "땅콩", "고추 고추", "초록 양파", "간장", "생강"]
     },
     howIsMade: {
       ro: "Prăjește bucățile de pui cu ardei iute, arahide, ceapă și usturoi. Adaugă sosul specific și gătește rapid la foc mare.",
@@ -1746,9 +1746,9 @@ export const recipes = [
       ar: "اقلي قطع الدجاج مع الفلفل الحار والفول السوداني والبصل والثوم. أضف الصوص واطبخ بسرعة على نار عالية.",
       zh: "将鸡肉块与辣椒、花生、洋葱和大蒜翻炒，加入特制酱汁，大火快炒。",
       ja: "鶏肉、唐辛子、ピーナッツ、玉ねぎ、ニンニクを炒め、特製ソースを加えて強火でさっと調理。",
-      tr: "Stir-fry tavuk pieces ile chili bibers, peanuts, soğan, ve sarımsak. Add special sos ve cook hızlıca over high heat.",
-      it: "Stir-fry pollo pieces con chili peperones, peanuts, cipolla, e aglio. Add special salsa e cook rapidamente over high heat.",
-      ko: "Stir-볶거나 튀겨 닭고기 pieces와 chili 고추s, peanuts, 양파, 그리고 마늘. Add special 소스그리고 cook 빠르게 over high heat하세요."
+      tr: "karıştırın-kavurun tavuk parçalar ile acı biber bibers, yer fıstığı, soğbir, ve sarımsak. ekleyin özel sos ve pişirin hızlıca üzerine yüksek ısıtın.",
+      it: "mescola-rosola pollo pezzi con peperoncino peperones, arachidi, cipolla, e aglio. aggiungi speciale salsa e cuoci rapidamente sopra alto scalda.",
+      ko: "저어줍니다-볶거나 튀겨 닭고기 조각와 고추 고추s, 땅콩, 양파, 그리고 마늘. 넣습니다 특별한 소스그리고 조리합니다 빠르게 위에 높은 가열합니다하세요."
     },
     originText: {
       ro: "Pui Gong Bao este o rețetă tradițională din China.",
@@ -1761,9 +1761,9 @@ export const recipes = [
       ar: "دجاج كونغ باو هي وصفة تقليدية من الصين.",
       zh: "宫保鸡丁 是来自中国的传统食谱。",
       ja: "宮保鶏丁 は中国の伝統的なレシピです。",
-      tr: "Kung Pao Chicken Çin kökenli geleneksel bir tariftir.",
-      it: "Kung Pao Chicken è una ricetta tradizionale di Cina.",
-      ko: "Kung Pao Chicken는(은) 중국의 전통 요리입니다."
+      tr: "Kung Pao tavuk Çin kökenli geleneksel bir tariftir.",
+      it: "Kung Pao pollo è una risotta tradizionale di Cina.",
+      ko: "Kung Pao 닭고기는(은) 중국의 전통 요리입니다."
     }
   },
   {
@@ -1824,9 +1824,9 @@ export const recipes = [
       ar: ["سمك أبيض", "بطاطس", "دقيق", "بيض", "زيت", "ملح"],
       zh: ["白鱼", "土豆", "面粉", "鸡蛋", "油", "盐"],
       ja: ["白身魚", "ジャガイモ", "小麦粉", "卵", "油", "塩"],
-      tr: ["white balık", "patates", "un", "yumurta", "oil", "tuz"],
-      it: ["white pesce", "patate", "farina", "uova", "oil", "sale"],
-      ko: ["white 생선", "감자", "밀가루", "계란", "oil", "소금"]
+      tr: ["beyaz balık", "patates", "un", "yumurta", "yağ", "tuz"],
+      it: ["bianco pesce", "patate", "farina", "uova", "olio", "sale"],
+      ko: ["흰 생선", "감자", "밀가루", "계란", "기름", "소금"]
     },
     howIsMade: {
       ro: "Trece fileurile de pește prin aluat și prăjește-le în ulei până devin aurii. Servește cu cartofi prăjiți crocanți.",
@@ -1839,9 +1839,9 @@ export const recipes = [
       ar: "اغمس شرائح السمك في العجين واقلها حتى تصبح ذهبية. قدّمها مع البطاطا المقلية المقرمشة.",
       zh: "鱼柳裹糊油炸至金黄，搭配酥脆薯条一起食用。",
       ja: "魚の切り身を衣につけて揚げ、カリカリのフライドポテトと一緒に提供。",
-      tr: "Dip balık fillets in batter ve deep-fry until golden. Serve ile crispy fries.",
-      it: "Dip pesce fillets in batter e deep-fry until golden. Serve con crispy fries.",
-      ko: "Dip 생선 fillets in batter그리고 deep-볶거나 튀겨 until golden. Serve와 crispy fries하세요."
+      tr: "banın balık fileto in hamur ve derin-kavurun altın rengi. servis edin ile çıtır patates kızartması.",
+      it: "intingi pesce filetti in pastella e profondo-rosola dorato. servi con croccante patatine fritte.",
+      ko: "찍어 먹습니다 생선 필레 에서 반죽그리고 깊은-볶거나 튀겨 노릇하게. 제공합니다와 바삭한 감자튀김하세요."
     },
     originText: {
       ro: "Fish and Chips este o rețetă tradițională din Marea Britanie.",
@@ -1854,9 +1854,9 @@ export const recipes = [
       ar: "سمك وبطاطا هي وصفة تقليدية من المملكة المتحدة.",
       zh: "炸鱼薯条 是来自英国的传统食谱。",
       ja: "フィッシュ・アンド・チップス はイギリスの伝統的なレシピです。",
-      tr: "Fish and Chips Birleşik Krallık kökenli geleneksel bir tariftir.",
-      it: "Fish and Chips è una ricetta tradizionale di Regno Unito.",
-      ko: "Fish and Chips는(은) 영국의 전통 요리입니다."
+      tr: "balık ve Chips Birleşik Krallık kökenli geleneksel bir tariftir.",
+      it: "pesce e Chips è una risotta tradizionale di Regno Unito.",
+      ko: "생선 그리고 Chips는(은) 영국의 전통 요리입니다."
     }
   },
   {
@@ -1917,9 +1917,9 @@ export const recipes = [
       ar: ["نودلز الأرز", "لحم بقري", "بصل", "زنجبيل", "قرفة", "يانسون نجمي", "كزبرة"],
       zh: ["米粉", "牛肉", "洋葱", "生姜", "肉桂", "八角", "香菜"],
       ja: ["ライスヌードル", "牛肉", "玉ねぎ", "ショウガ", "シナモン", "スターアニス", "コリアンダー"],
-      tr: ["pirinç noodles", "dana eti", "soğan", "zencefil", "cinnamon", "star anise", "coriander"],
-      it: ["riso noodles", "manzo", "cipolla", "zenzero", "cinnamon", "star anise", "coriander"],
-      ko: ["쌀 noodles", "소고기", "양파", "생강", "cinnamon", "star anise", "coriander"]
+      tr: ["pirinç erişte", "dana eti", "soğbir", "zencefil", "tarçın", "yıldız anason", "kişniş"],
+      it: ["riso spaghetti", "manzo", "cipolla", "zenzero", "cannella", "stella anice", "coriandolo"],
+      ko: ["쌀 면", "소고기", "양파", "생강", "계피", "별 아니스", "고수"]
     },
     howIsMade: {
       ro: "Fierbe oasele de vită cu condimente până obții o supă clară. Adaugă tăiței, carne feliată și verdeață proaspătă.",
@@ -1932,9 +1932,9 @@ export const recipes = [
       ar: "اسلق عظام البقر مع التوابل حتى تحصل على مرق صافٍ. أضف النودلز واللحم المقطع والأعشاب الطازجة.",
       zh: "牛骨与香料炖煮成清汤，加入米粉、切片牛肉和新鲜香草。",
       ja: "牛骨とスパイスで澄んだスープを作り、麺と薄切りの肉、ハーブを加える。",
-      tr: "Haşla dana eti bones ile spices yapmak için a clear et suyu. Add noodles, sliced meat, ve fresh herbs.",
-      it: "Cuoci manzo bones con spices per fare a clear brodo. Add noodles, sliced meat, e fresh herbs.",
-      ko: "삶고 소고기 bones와 spices 만들기 위해 a clear 육수. Add noodles, sliced meat, 그리고 fresh herbs하세요."
+      tr: "Haşla dana eti kemikler ile baharatlar yapmak için a berrak et suyu. ekleyin erişte, dilimlenmiş et, ve taze otlar.",
+      it: "Cuoci manzo ossa con spezie per fare a chiaro brodo. aggiungi spaghetti, affettato carne, e fresco erbe aromatiche.",
+      ko: "삶고 소고기 뼈와 향신료 만들기 위해 a 맑게 육수. 넣습니다 면, 썬 고기, 그리고 신선한 허브하세요."
     },
     originText: {
       ro: "Pho este o rețetă tradițională din Vietnam.",
@@ -1948,7 +1948,7 @@ export const recipes = [
       zh: "越南河粉 是来自越南的传统食谱。",
       ja: "フォー はベトナムの伝統的なレシピです。",
       tr: "Pho Vietnam kökenli geleneksel bir tariftir.",
-      it: "Pho è una ricetta tradizionale di Vietnam.",
+      it: "Pho è una risotta tradizionale di Vietnam.",
       ko: "Pho는(은) 베트남의 전통 요리입니다."
     }
   },
@@ -2010,9 +2010,9 @@ export const recipes = [
       ar: ["أرز", "مأكولات بحرية", "دجاج", "بازلاء", "فلفل", "زعفران"],
       zh: ["米饭", "海鲜", "鸡肉", "豌豆", "辣椒", "藏红花"],
       ja: ["米", "シーフード", "鶏肉", "グリーンピース", "ピーマン", "サフラン"],
-      tr: ["pirinç", "seafood", "tavuk", "peas", "biber", "saffron"],
-      it: ["riso", "seafood", "pollo", "peas", "peperone", "saffron"],
-      ko: ["쌀", "seafood", "닭고기", "peas", "고추", "saffron"]
+      tr: ["pirinç", "deniz ürünleri", "tavuk", "bezelye", "biber", "safran"],
+      it: ["riso", "frutti di mare", "pollo", "piselli", "peperone", "zafferano"],
+      ko: ["쌀", "해산물", "닭고기", "완두콩", "고추", "사프란"]
     },
     howIsMade: {
       ro: "Prăjește ceapa, usturoiul și ardeiul, adaugă orezul, sofranul și bulionul. Completează cu fructe de mare, carne sau legume și gătește până orezul e fraged.",
@@ -2025,9 +2025,9 @@ export const recipes = [
       ar: "اقلي البصل والثوم والفلفل، أضف الأرز والزعفران والمرق. أضف المأكولات البحرية أو اللحم أو الخضار واطبخ حتى ينضج الأرز.",
       zh: "炒洋葱、大蒜和辣椒，加入米饭、藏红花和高汤，再加上海鲜、肉类或蔬菜，炖至米饭熟透。",
       ja: "玉ねぎ・ニンニク・ピーマンを炒め、米とサフラン、ブイヨンを加え、魚介・肉・野菜を加えて米が柔らかくなるまで煮る。",
-      tr: "Sauté soğan, sarımsak, ve biber, Ekle pirinç, saffron, ve et suyu. Add seafood, meat, or vegetables, ve Pişir until pirinç is tender.",
-      it: "Sauté cipolla, aglio, e peperone, Aggiungi riso, saffron, e brodo. Add seafood, meat, or vegetables, e Cuoci until riso is tender.",
-      ko: "Sauté 양파, 마늘, 그리고 고추, 넣고 쌀, saffron, 그리고 육수. Add seafood, meat, or vegetables, 그리고 조리하고 until 쌀 is tender하세요."
+      tr: "soteleyiné soğbir, sarımsak, ve biber, Ekle pirinç, safran, ve et suyu. ekleyin deniz ürünleri, et, veya sebzeler, ve Pişir pirinç  yumuşak.",
+      it: "soffriggié cipolla, aglio, e peperone, Aggiungi riso, zafferano, e brodo. aggiungi frutti di mare, carne, o verdure, e Cuoci riso  tenero.",
+      ko: "볶습니다é 양파, 마늘, 그리고 고추, 넣고 쌀, 사프란, 그리고 육수. 넣습니다 해산물, 고기, 또는 채소, 그리고 조리하고 쌀 입니다 부드럽게하세요."
     },
     originText: {
       ro: "Paella este o rețetă tradițională din Spania.",
@@ -2041,7 +2041,7 @@ export const recipes = [
       zh: "西班牙海鲜饭 是来自西班牙的传统食谱。",
       ja: "パエリア はスペインの伝統的なレシピです。",
       tr: "Paella İspanya kökenli geleneksel bir tariftir.",
-      it: "Paella è una ricetta tradizionale di Spagna.",
+      it: "Paella è una risotta tradizionale di Spagna.",
       ko: "Paella는(은) 스페인의 전통 요리입니다."
     }
   },
@@ -2103,9 +2103,9 @@ export const recipes = [
       ar: ["أرز", "خضار", "بيض", "لحم بقري", "زيت السمسم", "معجون الفلفل الحار"],
       zh: ["米饭", "蔬菜", "鸡蛋", "牛肉", "芝麻油", "辣椒酱"],
       ja: ["ご飯", "野菜", "卵", "牛肉", "ごま油", "コチュジャン"],
-      tr: ["pirinç", "vegetables", "yumurta", "dana eti", "sesame oil", "chili paste"],
-      it: ["riso", "vegetables", "uovo", "manzo", "sesame oil", "chili paste"],
-      ko: ["쌀", "vegetables", "계란", "소고기", "sesame oil", "chili paste"]
+      tr: ["pirinç", "sebzeler", "yumurta", "dana eti", "susam yağ", "acı biber salça"],
+      it: ["riso", "verdure", "uovo", "manzo", "sesamo olio", "peperoncino concentrato"],
+      ko: ["쌀", "채소", "계란", "소고기", "참깨 기름", "고추 페이스트"]
     },
     howIsMade: {
       ro: "Așază orez fiert într-un bol, adaugă legume sotate, carne de vită, ou prăjit și pastă de ardei iute. Amestecă înainte de servire.",
@@ -2118,9 +2118,9 @@ export const recipes = [
       ar: "ضع الأرز المطبوخ في وعاء، أضف الخضار المقلية، لحم البقر، بيضة مقلية ومعجون الفلفل الحار. امزج قبل الأكل.",
       zh: "将米饭放入碗中，加炒蔬菜、牛肉、煎蛋和辣椒酱。吃前搅拌。",
       ja: "ご飯を器に盛り、炒め野菜・牛肉・目玉焼き・コチュジャンをのせ、食べる前に混ぜる。",
-      tr: "Place cooked pirinç in a bowl, Ekle sautéed vegetables, dana eti, fried yumurta, ve chili paste. Mix before eating.",
-      it: "Place cooked riso in a bowl, Aggiungi sautéed vegetables, manzo, fried uovo, e chili paste. Mix before eating.",
-      ko: "Place cooked 쌀 in a bowl, 넣고 sautéed vegetables, 소고기, fried 계란, 그리고 chili paste. Mix before eating하세요."
+      tr: "yerleştirin pişirined pirinç kase, Ekle soteleyiné sebzeler, dana eti, kızarmış yumurta, ve acı biber salça. karıştırın önce yemek.",
+      it: "metti cuocied riso ciotola, Aggiungi soffriggié verdure, manzo, fritto uovo, e peperoncino concentrato. mescola prima mangiare.",
+      ko: "놓습니다 조리합니다 쌀 에서 a 볼, 넣고 볶습니다é 채소, 소고기, 튀긴 계란, 그리고 고추 페이스트. 섞습니다 전에 먹기하세요."
     },
     originText: {
       ro: "Bibimbap este o rețetă tradițională din Coreea de Sud.",
@@ -2134,7 +2134,7 @@ export const recipes = [
       zh: "拌饭 是来自韩国的传统食谱。",
       ja: "ビビンバ は韓国の伝統的なレシピです。",
       tr: "Bibimbap Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Bibimbap è una ricetta tradizionale di Corea del Sud.",
+      it: "Bibimbap è una risotta tradizionale di Corea del Sud.",
       ko: "Bibimbap는(은) 대한민국의 전통 요리입니다."
     }
   },
@@ -2196,9 +2196,9 @@ export const recipes = [
       ar: ["حمص", "طحينة", "زيت زيتون", "ليمون", "ثوم", "ملح"],
       zh: ["鹰嘴豆", "芝麻酱", "橄榄油", "柠檬", "大蒜", "盐"],
       ja: ["ひよこ豆", "タヒニ", "オリーブオイル", "レモン", "ニンニク", "塩"],
-      tr: ["nohut", "tahini", "zeytinyağı", "limon", "sarımsak", "tuz"],
-      it: ["ceci", "tahini", "olio d'oliva", "limone", "aglio", "sale"],
-      ko: ["병아리콩", "tahini", "올리브오일", "레몬", "마늘", "소금"]
+      tr: ["nohut", "tahin", "zeytinyağı", "limon", "sarımsak", "tuz"],
+      it: ["ceci", "tahina", "olio d'oliva", "limone", "aglio", "sale"],
+      ko: ["병아리콩", "타히니", "올리브오일", "레몬", "마늘", "소금"]
     },
     howIsMade: {
       ro: "Mixează năutul fiert cu pastă de susan, usturoi, suc de lămâie, ulei de măsline și sare până devine o cremă fină.",
@@ -2211,9 +2211,9 @@ export const recipes = [
       ar: "اخلط الحمص المسلوق مع الطحينة والثوم وعصير الليمون وزيت الزيتون والملح حتى يصبح ناعماً.",
       zh: "将煮熟的鹰嘴豆与芝麻酱、大蒜、柠檬汁、橄榄油和盐搅拌至细腻。",
       ja: "茹でたひよこ豆にタヒニ・ニンニク・レモン汁・オリーブオイル・塩を加えて滑らかにする。",
-      tr: "Blend cooked nohut ile tahini, sarımsak, limon juice, zeytinyağı, ve tuz until smooth.",
-      it: "Blend cooked ceci con tahini, aglio, limone juice, olio d'oliva, e sale until smooth.",
-      ko: "Blend cooked 병아리콩와 tahini, 마늘, 레몬 juice, 올리브오일, 그리고 소금 until smooth하세요."
+      tr: "blenderdan geçirin pişirined nohut ile tahin, sarımsak, limon suyu, zeytinyağı, ve tuz pürüzsüz.",
+      it: "frulla cuocied ceci con tahina, aglio, limone succo, olio d'oliva, e sale liscio.",
+      ko: "블렌더에 갈아줍니다 조리합니다 병아리콩와 타히니, 마늘, 레몬 주스, 올리브오일, 그리고 소금 부드럽게하세요."
     },
     originText: {
       ro: "Hummus este o rețetă tradițională din Siria.",
@@ -2227,7 +2227,7 @@ export const recipes = [
       zh: "鹰嘴豆泥 是来自叙利亚的传统食谱。",
       ja: "フムス はシリアの伝統的なレシピです。",
       tr: "Hummus Syria kökenli geleneksel bir tariftir.",
-      it: "Hummus è una ricetta tradizionale di Syria.",
+      it: "Hummus è una risotta tradizionale di Syria.",
       ko: "Hummus는(은) Syria의 전통 요리입니다."
     }
   },
@@ -2289,9 +2289,9 @@ export const recipes = [
       ar: ["بقدونس", "طماطم", "بصل", "برغل", "نعناع", "ليمون", "زيت زيتون"],
       zh: ["欧芹", "番茄", "洋葱", "小麦碎", "薄荷", "柠檬", "橄榄油"],
       ja: ["パセリ", "トマト", "玉ねぎ", "ブルグル", "ミント", "レモン", "オリーブオイル"],
-      tr: ["maydanoz", "domates", "soğan", "bulgur", "mint", "limon", "zeytinyağı"],
-      it: ["prezzemolo", "pomodori", "cipolla", "bulgur", "mint", "limone", "olio d'oliva"],
-      ko: ["파슬리", "토마토", "양파", "bulgur", "mint", "레몬", "올리브오일"]
+      tr: ["maydanoz", "domates", "soğbir", "bulgur", "nane", "limon", "zeytinyağı"],
+      it: ["prezzemolo", "pomodori", "cipolla", "bulgur", "menta", "limone", "olio d'oliva"],
+      ko: ["파슬리", "토마토", "양파", "불구르", "민트", "레몬", "올리브오일"]
     },
     howIsMade: {
       ro: "Amestecă pătrunjel tocat, roșii, bulgur hidratat, ceapă, mentă, suc de lămâie, ulei de măsline și sare.",
@@ -2304,9 +2304,9 @@ export const recipes = [
       ar: "اخلط البقدونس المفروم مع الطماطم والبرغل المنقوع والبصل والنعناع وعصير الليمون وزيت الزيتون والملح.",
       zh: "将切碎的欧芹、番茄、泡发的粗麦、洋葱、薄荷、柠檬汁、橄榄油和盐拌匀。",
       ja: "刻んだパセリ・トマト・水で戻したブルグル・玉ねぎ・ミント・レモン汁・オリーブオイル・塩を混ぜる。",
-      tr: "Karıştır chopped maydanoz, domates, soaked bulgur, soğan, mint, limon juice, zeytinyağı, ve tuz.",
-      it: "Mescola chopped prezzemolo, pomodori, soaked bulgur, cipolla, mint, limone juice, olio d'oliva, e sale.",
-      ko: "섞고 chopped 파슬리, 토마토, soaked bulgur, 양파, mint, 레몬 juice, 올리브오일, 그리고 소금하세요."
+      tr: "Karıştır doğranmış maydanoz, domates, ıslatılmış bulgur, soğbir, nane, limon suyu, zeytinyağı, ve tuz.",
+      it: "Mescola tritato prezzemolo, pomodori, ammollato bulgur, cipolla, menta, limone succo, olio d'oliva, e sale.",
+      ko: "섞고 다진 파슬리, 토마토, 불린 불구르, 양파, 민트, 레몬 주스, 올리브오일, 그리고 소금하세요."
     },
     originText: {
       ro: "Tabbouleh este o rețetă tradițională din Liban.",
@@ -2320,7 +2320,7 @@ export const recipes = [
       zh: "塔布勒色拉 是来自黎巴嫩的传统食谱。",
       ja: "タブーレ はレバノンの伝統的なレシピです。",
       tr: "Tabbouleh Lübnan kökenli geleneksel bir tariftir.",
-      it: "Tabbouleh è una ricetta tradizionale di Libano.",
+      it: "Tabbouleh è una risotta tradizionale di Libano.",
       ko: "Tabbouleh는(은) 레바논의 전통 요리입니다."
     }
   },
@@ -2382,9 +2382,9 @@ export const recipes = [
       ar: ["أرز أربوريو", "بصل", "زبدة", "نبيذ أبيض", "جبن بارميزان", "مرق"],
       zh: ["阿博里奥米", "洋葱", "黄油", "白葡萄酒", "帕尔马奶酪", "高汤"],
       ja: ["アルボリオ米", "玉ねぎ", "バター", "白ワイン", "パルメザンチーズ", "ブイヨン"],
-      tr: ["arborio pirinç", "soğan", "tereyağı", "white wine", "parmesan", "et suyu"],
-      it: ["arborio riso", "cipolla", "burro", "white wine", "parmigiano", "brodo"],
-      ko: ["arborio 쌀", "양파", "버터", "white wine", "파르메산", "육수"]
+      tr: ["arborio pirinç", "soğbir", "tereyağı", "beyaz şarap", "parmesan", "et suyu"],
+      it: ["arborio riso", "cipolla", "burro", "bianco vino", "parmigiano", "brodo"],
+      ko: ["아르보리오 쌀", "양파", "버터", "흰 와인", "파르메산", "육수"]
     },
     howIsMade: {
       ro: "Călește orezul în unt cu ceapă, adaugă supă treptat, amestecând continuu până devine cremos. La final, adaugă parmezan.",
@@ -2397,9 +2397,9 @@ export const recipes = [
       ar: "حمّص الأرز بالزبدة مع البصل، أضف المرق تدريجياً مع التحريك حتى يصبح كريميًا. أضف جبن البارميزان في النهاية.",
       zh: "米饭用黄油和洋葱炒香，分次加入高汤不断搅拌至浓稠。最后加入帕尔马干酪。",
       ja: "米をバターと玉ねぎで炒め、少しずつブイヨンを加えて混ぜながらクリーミーに仕上げる。最後にパルメザンチーズを加える。",
-      tr: "Sauté pirinç in tereyağı ile soğan, Ekle et suyu gradually, stirring constantly until kremay. Add parmesan at end.",
-      it: "Sauté riso in burro con cipolla, Aggiungi brodo gradually, stirring constantly until pannay. Add parmigiano at end.",
-      ko: "Sauté 쌀 in 버터와 양파, 넣고 육수 gradually, stirring constantly until 크림y. Add 파르메산 at end하세요."
+      tr: "soteleyiné pirinç in tereyağı ile soğbir, Ekle et suyu yavaş yavaş, karıştırarak sürekli kremay. ekleyin parmesan  sonunda.",
+      it: "soffriggié riso in burro con cipolla, Aggiungi brodo gradualmente, mescolando costantemente pannay. aggiungi parmigiano  alla fine.",
+      ko: "볶습니다é 쌀 에서 버터와 양파, 넣고 육수 점차, 저으면서 계속 크림y. 넣습니다 파르메산 에서 마지막에하세요."
     },
     originText: {
       ro: "Risotto este o rețetă tradițională din Italia.",
@@ -2413,7 +2413,7 @@ export const recipes = [
       zh: "烩饭 是来自意大利的传统食谱。",
       ja: "リゾット はイタリアの伝統的なレシピです。",
       tr: "Risotto İtalya kökenli geleneksel bir tariftir.",
-      it: "Risotto è una ricetta tradizionale di Italia.",
+      it: "Risotto è una risotta tradizionale di Italia.",
       ko: "Risotto는(은) 이탈리아의 전통 요리입니다."
     }
   },
@@ -2475,9 +2475,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بصل", "خبز", "حليب", "بيض", "كريمة", "فلفل"],
       zh: ["碎肉", "洋葱", "面包", "牛奶", "鸡蛋", "奶油", "胡椒"],
       ja: ["ひき肉", "玉ねぎ", "パン", "牛乳", "卵", "クリーム", "コショウ"],
-      tr: ["ground meat", "soğan", "ekmek", "süt", "yumurta", "krema", "biber"],
-      it: ["ground meat", "cipolla", "pane", "latte", "uova", "panna", "peperone"],
-      ko: ["ground meat", "양파", "빵", "우유", "계란", "크림", "고추"]
+      tr: ["öğütülmüş et", "soğbir", "ekmek", "süt", "yumurta", "krema", "biber"],
+      it: ["macinato carne", "cipolla", "pane", "latte", "uova", "panna", "peperone"],
+      ko: ["간 고기", "양파", "빵", "우유", "계란", "크림", "고추"]
     },
     howIsMade: {
       ro: "Amestecă carnea tocată cu condimente și pâine înmuiată, formează biluțe, prăjește-le și servește cu sos cremos.",
@@ -2490,9 +2490,9 @@ export const recipes = [
       ar: "اخلط اللحم المفروم مع التوابل والخبز المنقوع، شكّل كرات واقلها وقدّمها مع صوص كريمي.",
       zh: "将肉末与香料和浸泡的面包混合，搓成丸子油煎，配奶油酱食用。",
       ja: "ひき肉にスパイスと水に浸したパンを混ぜ、団子状にして揚げ、クリームソースと一緒に提供。",
-      tr: "Karıştır minced meat ile spices ve soaked ekmek, form balls, Kızart them, ve Servis et ile kremay sos.",
-      it: "Mescola minced meat con spices e soaked pane, form balls, Friggi them, e Servi con pannay salsa.",
-      ko: "섞고 minced meat와 spices그리고 soaked 빵, form balls, 볶거나 튀기고 them, 그리고 담아 내세요와 크림y 소스하세요."
+      tr: "Karıştır kıyılmış et ile baharatlar ve ıslatılmış ekmek, şekil verin toplar, Kızart onları, ve Servis et ile kremay sos.",
+      it: "Mescola tritato carne con spezie e ammollato pane, forma polpette, Friggi li, e Servi con pannay salsa.",
+      ko: "섞고 다진 고기와 향신료그리고 불린 빵, 모양을 만듭니다 볼, 볶거나 튀기고 그것들을, 그리고 담아 내세요와 크림y 소스하세요."
     },
     originText: {
       ro: "Chifteluțe suedeze este o rețetă tradițională din Suedia.",
@@ -2506,7 +2506,7 @@ export const recipes = [
       zh: "瑞典肉丸 是来自瑞典的传统食谱。",
       ja: "スウェーデン風ミートボール はスウェーデンの伝統的なレシピです。",
       tr: "Swedish Meatballs İsveç kökenli geleneksel bir tariftir.",
-      it: "Swedish Meatballs è una ricetta tradizionale di Svezia.",
+      it: "Swedish Meatballs è una risotta tradizionale di Svezia.",
       ko: "Swedish Meatballs는(은) 스웨덴의 전통 요리입니다."
     }
   },
@@ -2568,9 +2568,9 @@ export const recipes = [
       ar: ["نودلز", "مرق دجاج", "صلصة صويا", "بيض مسلوق", "بصل أخضر", "لحم خنزير"],
       zh: ["面条", "鸡汤", "酱油", "煮鸡蛋", "葱", "猪肉"],
       ja: ["麺", "鶏ガラスープ", "醤油", "ゆで卵", "青ねぎ", "豚肉"],
-      tr: ["noodles", "tavuk suyu", "soya sosu", "boiled yumurta", "green soğan", "domuz eti"],
-      it: ["noodles", "brodo di pollo", "salsa di soia", "boiled uovo", "green cipolla", "maiale"],
-      ko: ["noodles", "치킨 육수", "간장", "boiled 계란", "green 양파", "돼지고기"]
+      tr: ["erişte", "tavuk suyu", "soya sosu", "byağ yumurta", "yeşil soğbir", "domuz eti"],
+      it: ["spaghetti", "brodo di pollo", "salsa di soia", "bolioed uovo", "verde cipolla", "maiale"],
+      ko: ["면", "치킨 육수", "간장", "b기름 계란", "초록 양파", "돼지고기"]
     },
     howIsMade: {
       ro: "Pregătește un supă intens aromată, fierbe tăițeii separat, apoi adaugă-i în bol cu carne, ou fiert, alge și legume.",
@@ -2583,9 +2583,9 @@ export const recipes = [
       ar: "حضّر مرقًا غنيًا، اسلق النودلز على حدة ثم قدمها في وعاء مع اللحم والبيض المسلوق والأعشاب البحرية والخضار.",
       zh: "熬制浓郁的高汤，面条另煮，盛碗中配肉类、水煮蛋、海苔和蔬菜。",
       ja: "風味豊かなスープを用意し、麺を別に茹でて、肉・ゆで卵・海苔・野菜と一緒に盛り付ける。",
-      tr: "Prepare a rich, flavorful et suyu, Pişir noodles separately, sonra Servis et them in a bowl ile meat, boiled yumurta, seaweed, ve vegetables.",
-      it: "Prepare a rich, flavorful brodo, Cuoci noodles separately, poi Servi them in a bowl con meat, boiled uovo, seaweed, e vegetables.",
-      ko: "Prepare a rich, flavorful 육수, 조리하고 noodles separately, 그다음 담아 내세요 them in a bowl와 meat, boiled 계란, seaweed, 그리고 vegetables하세요."
+      tr: "hazırlayın a zengin, lezzetli et suyu, Pişir erişte ayrı ayrı, sonra Servis et onları kase ile et, byağ yumurta, deniz yosunu, ve sebzeler.",
+      it: "prepara a ricco, sapori intensi brodo, Cuoci spaghetti separatamente, poi Servi li ciotola con carne, bolioed uovo, alga, e verdure.",
+      ko: "준비합니다 a 진한, 풍미가 좋은 육수, 조리하고 면 따로, 그다음 담아 내세요 그것들을 에서 a 볼와 고기, b기름 계란, 김, 그리고 채소하세요."
     },
     originText: {
       ro: "Ramen este o rețetă tradițională din Japonia.",
@@ -2599,7 +2599,7 @@ export const recipes = [
       zh: "拉面 是来自日本的传统食谱。",
       ja: "ラーメン は日本の伝統的なレシピです。",
       tr: "Ramen Japonya kökenli geleneksel bir tariftir.",
-      it: "Ramen è una ricetta tradizionale di Giappone.",
+      it: "Ramen è una risotta tradizionale di Giappone.",
       ko: "Ramen는(은) 일본의 전통 요리입니다."
     }
   },
@@ -2661,9 +2661,9 @@ export const recipes = [
       ar: ["عجينة", "لحم مفروم", "بصل", "بيض", "زيتون", "بهارات"],
       zh: ["面团", "肉末", "洋葱", "鸡蛋", "橄榄", "香料"],
       ja: ["生地", "ひき肉", "玉ねぎ", "卵", "オリーブ", "スパイス"],
-      tr: ["dough", "minced meat", "soğan", "yumurta", "olives", "spices"],
-      it: ["dough", "minced meat", "cipolla", "uovo", "olives", "spices"],
-      ko: ["dough", "minced meat", "양파", "계란", "olives", "spices"]
+      tr: ["hamur", "kıyılmış et", "soğbir", "yumurta", "zeytin", "baharatlar"],
+      it: ["impasto", "tritato carne", "cipolla", "uovo", "olive", "spezie"],
+      ko: ["반죽", "다진 고기", "양파", "계란", "올리브", "향신료"]
     },
     howIsMade: {
       ro: "Prepară aluatul, umple-l cu carne, legume sau brânză, împăturește, sigilează marginile și coace sau prăjește până devin aurii.",
@@ -2676,9 +2676,9 @@ export const recipes = [
       ar: "حضّر العجين، احشِه باللحم أو الخضار أو الجبن، أغلق الحواف واخبز أو اقلي حتى يصبح ذهبيًا.",
       zh: "制作面团，包入肉、蔬菜或奶酪，捏紧边缘，烘烤或油炸至金黄。",
       ja: "生地を作り、肉・野菜・チーズなどを包み、端を閉じて焼くか揚げる。",
-      tr: "Make dough, fill ile meat, vegetables, or peynir, fold ve seal edges, sonra Fırında pişir or fry until golden.",
-      it: "Make dough, fill con meat, vegetables, or formaggio, fold e seal edges, poi Cuoci al forno or fry until golden.",
-      ko: "Make dough, fill와 meat, vegetables, or 치즈, fold그리고 seal edges, 그다음 오븐에 구워 or 볶거나 튀겨 until golden하세요."
+      tr: "yapın hamur, doldurun ile et, sebzeler, veya peynir, katlayın ve kapatın kenarlar, sonra Fırında pişir veya kavurun altın rengi.",
+      it: "fai impasto, farcisci con carne, verdure, o formaggio, incorpora delicatamente e sigilla bordi, poi Cuoci al forno o rosola dorato.",
+      ko: "만듭니다 반죽, 채웁니다와 고기, 채소, 또는 치즈, 접어 섞습니다그리고 봉합니다 가장자리, 그다음 오븐에 구워 또는 볶거나 튀겨 노릇하게하세요."
     },
     originText: {
       ro: "Empanadas este o rețetă tradițională din Argentina.",
@@ -2692,7 +2692,7 @@ export const recipes = [
       zh: "馅饼 是来自阿根廷的传统食谱。",
       ja: "エンパナーダ はアルゼンチンの伝統的なレシピです。",
       tr: "Empanadas Arjantin kökenli geleneksel bir tariftir.",
-      it: "Empanadas è una ricetta tradizionale di Argentina.",
+      it: "Empanadas è una risotta tradizionale di Argentina.",
       ko: "Empanadas는(은) 아르헨티나의 전통 요리입니다."
     }
   },
@@ -2754,9 +2754,9 @@ export const recipes = [
       ar: ["زبادي يوناني", "خيار", "ثوم", "زيت زيتون", "شبت", "ملح"],
       zh: ["希腊酸奶", "黄瓜", "大蒜", "橄榄油", "莳萝", "盐"],
       ja: ["ギリシャヨーグルト", "キュウリ", "ニンニク", "オリーブオイル", "ディル", "塩"],
-      tr: ["greek yoğurt", "salatalık", "sarımsak", "zeytinyağı", "dill", "tuz"],
-      it: ["greek yogurt", "cetriolo", "aglio", "olio d'oliva", "dill", "sale"],
-      ko: ["greek 요거트", "오이", "마늘", "올리브오일", "dill", "소금"]
+      tr: ["yunan yoğurt", "salatalık", "sarımsak", "zeytinyağı", "dereotu", "tuz"],
+      it: ["greco yogurt", "cetriolo", "aglio", "olio d'oliva", "aneto", "sale"],
+      ko: ["그리스 요거트", "오이", "마늘", "올리브오일", "딜", "소금"]
     },
     howIsMade: {
       ro: "Amestecă iaurt grecesc cu castravete ras, usturoi zdrobit, ulei de măsline, oțet și mărar. Servește rece.",
@@ -2769,9 +2769,9 @@ export const recipes = [
       ar: "اخلط الزبادي اليوناني مع الخيار المبشور والثوم وزيت الزيتون والخل والشبت. قدّمه بارداً.",
       zh: "将希腊酸奶、黄瓜丝、大蒜、橄榄油、醋和莳萝混合。冷食。",
       ja: "ギリシャヨーグルトにきゅうり・ニンニク・オリーブオイル・酢・ディルを混ぜ、冷やして提供。",
-      tr: "Karıştır Greek yoğurt ile grated salatalık, crushed sarımsak, zeytinyağı, sirke, ve dill. Serve chilled.",
-      it: "Mescola Greek yogurt con grated cetriolo, crushed aglio, olio d'oliva, aceto, e dill. Serve chilled.",
-      ko: "섞고 Greek 요거트와 grated 오이, crushed 마늘, 올리브오일, 식초, 그리고 dill. Serve chilled하세요."
+      tr: "Karıştır yunan yoğurt ile rendelenmiş salatalık, ezilmiş sarımsak, zeytinyağı, sirke, ve dereotu. servis edin soğutulmuş.",
+      it: "Mescola greco yogurt con grattugiato cetriolo, schiacciato aglio, olio d'oliva, aceto, e aneto. servi raffreddato.",
+      ko: "섞고 그리스 요거트와 간 오이, 으깬 마늘, 올리브오일, 식초, 그리고 딜. 제공합니다 차갑게 식힌하세요."
     },
     originText: {
       ro: "Tzatziki este o rețetă tradițională din Grecia.",
@@ -2785,7 +2785,7 @@ export const recipes = [
       zh: "黄瓜酸奶酱 是来自希腊的传统食谱。",
       ja: "ザジキ はギリシャの伝統的なレシピです。",
       tr: "Tzatziki Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Tzatziki è una ricetta tradizionale di Grecia.",
+      it: "Tzatziki è una risotta tradizionale di Grecia.",
       ko: "Tzatziki는(은) 그리스의 전통 요리입니다."
     }
   },
@@ -2847,9 +2847,9 @@ export const recipes = [
       ar: ["بصل", "زبدة", "دقيق", "مرق لحم بقري", "باجيت", "جبن"],
       zh: ["洋葱", "黄油", "面粉", "牛肉汤", "法棍", "奶酪"],
       ja: ["玉ねぎ", "バター", "小麦粉", "ビーフブロス", "バゲット", "チーズ"],
-      tr: ["soğan", "tereyağı", "un", "dana eti et suyu", "baguette", "peynir"],
+      tr: ["soğbir", "tereyağı", "un", "dana eti et suyu", "baget", "peynir"],
       it: ["cipolla", "burro", "farina", "manzo brodo", "baguette", "formaggio"],
-      ko: ["양파", "버터", "밀가루", "소고기 육수", "baguette", "치즈"]
+      ko: ["양파", "버터", "밀가루", "소고기 육수", "바게트", "치즈"]
     },
     howIsMade: {
       ro: "Călește ceapă în unt până caramelizează, adaugă supă de vită și lasă la fiert. Servește cu pâine prăjită și cașcaval gratinat.",
@@ -2862,9 +2862,9 @@ export const recipes = [
       ar: "اقلي البصل في الزبدة حتى يتكرمل، أضف مرق اللحم واتركه يغلي. قدّمه مع خبز محمص وجبن مذاب.",
       zh: "用黄油炒洋葱至焦糖色，加入牛肉高汤炖煮。配烤面包和烤奶酪。",
       ja: "玉ねぎをバターで炒めて飴色にし、牛肉のスープを加えて煮込む。トーストとチーズを添えて提供。",
-      tr: "Sauté soğans in tereyağı until caramelized, Ekle dana eti et suyu ve simmer. Serve ile toasted ekmek ve melted peynir.",
-      it: "Sauté cipollas in burro until caramelized, Aggiungi manzo brodo e simmer. Serve con toasted pane e melted formaggio.",
-      ko: "Sauté 양파s in 버터 until caramelized, 넣고 소고기 육수그리고 simmer. Serve와 toasted 빵그리고 melted 치즈하세요."
+      tr: "soteleyiné soğans in tereyağı karamelize, Ekle dana eti et suyu ve kısık ateşte pişirin. servis edin ile kavrulmuş ekmek ve eritilmiş peynir.",
+      it: "soffriggié cipollas in burro caramellato, Aggiungi manzo brodo e lascia sobbollire. servi con tostato pane e fuso formaggio.",
+      ko: "볶습니다é 양파s 에서 버터 카라멜라이즈, 넣고 소고기 육수그리고 약불에서 끓입니다. 제공합니다와 구운 빵그리고 녹인 치즈하세요."
     },
     originText: {
       ro: "Soupe à l’oignon este o rețetă tradițională din Franța.",
@@ -2877,9 +2877,9 @@ export const recipes = [
       ar: "حساء البصل الفرنسي هي وصفة تقليدية من فرنسا.",
       zh: "法式洋葱汤 是来自法国的传统食谱。",
       ja: "フレンチオニオンスープ はフランスの伝統的なレシピです。",
-      tr: "French Onion Soup Fransa kökenli geleneksel bir tariftir.",
-      it: "French Onion Soup è una ricetta tradizionale di Francia.",
-      ko: "French Onion Soup는(은) 프랑스의 전통 요리입니다."
+      tr: "fransız soğbir çorba Fransa kökenli geleneksel bir tariftir.",
+      it: "francese cipolla zuppa è una risotta tradizionale di Francia.",
+      ko: "프랑스식 양파 수프는(은) 프랑스의 전통 요리입니다."
     }
   },
   {
@@ -2940,7 +2940,7 @@ export const recipes = [
       ar: ["لحم بقري", "بصل", "بابريكا", "بطاطس", "فلفل", "طماطم"],
       zh: ["牛肉", "洋葱", "红辣椒粉", "土豆", "辣椒", "番茄"],
       ja: ["牛肉", "玉ねぎ", "パプリカ", "ジャガイモ", "ピーマン", "トマト"],
-      tr: ["dana eti", "soğan", "toz biber", "patates", "biber", "domates"],
+      tr: ["dana eti", "soğbir", "toz biber", "patates", "biber", "domates"],
       it: ["manzo", "cipolla", "paprika", "patate", "peperone", "pomodori"],
       ko: ["소고기", "양파", "파프리카 가루", "감자", "고추", "토마토"]
     },
@@ -2955,9 +2955,9 @@ export const recipes = [
       ar: "اقلي البصل واللحم مع البابريكا، أضف الخضار والماء أو المرق واطبخ ببطء حتى ينضج اللحم. قدّمه مع الخبز.",
       zh: "洋葱和肉与红椒粉炒香，加入蔬菜和水或高汤，小火慢炖至肉烂。配面包食用。",
       ja: "玉ねぎと肉をパプリカで炒め、野菜と水またはスープを加えてじっくり煮込む。パンと一緒に。",
-      tr: "Kızart soğans ve meat ile toz biber, Ekle vegetables ve su or et suyu, Kısık ateşte pişir slowly until meat is tender. Serve ile ekmek.",
-      it: "Friggi cipollas e meat con paprika, Aggiungi vegetables e acqua or brodo, Fai sobbollire slowly until meat is tender. Serve con pane.",
-      ko: "볶거나 튀기고 양파s그리고 meat와 파프리카 가루, 넣고 vegetables그리고 물 or 육수, 약불로 끓여 slowly until meat is tender. Serve와 빵하세요."
+      tr: "Kızart soğans ve et ile toz biber, Ekle sebzeler ve su veya et suyu, Kısık ateşte pişir yavaşça et  yumuşak. servis edin ile ekmek.",
+      it: "Friggi cipollas e carne con paprika, Aggiungi verdure e acqua o brodo, Fai sobbollire lentamente carne  tenero. servi con pane.",
+      ko: "볶거나 튀기고 양파s그리고 고기와 파프리카 가루, 넣고 채소그리고 물 또는 육수, 약불로 끓여 천천히 고기 입니다 부드럽게. 제공합니다와 빵하세요."
     },
     originText: {
       ro: "Gulaș este o rețetă tradițională din Ungaria.",
@@ -2971,7 +2971,7 @@ export const recipes = [
       zh: "古拉什 是来自匈牙利的传统食谱。",
       ja: "グヤーシュ はハンガリーの伝統的なレシピです。",
       tr: "Goulash Macaristan kökenli geleneksel bir tariftir.",
-      it: "Goulash è una ricetta tradizionale di Ungheria.",
+      it: "Goulash è una risotta tradizionale di Ungheria.",
       ko: "Goulash는(은) 헝가리의 전통 요리입니다."
     }
   },
@@ -3033,9 +3033,9 @@ export const recipes = [
       ar: ["أرز", "عدس", "مكرونة", "بصل", "صلصة طماطم", "حمص"],
       zh: ["米饭", "扁豆", "意大利面", "洋葱", "番茄酱", "鹰嘴豆"],
       ja: ["ご飯", "レンズ豆", "パスタ", "玉ねぎ", "トマトソース", "ひよこ豆"],
-      tr: ["pirinç", "mercimek", "makarna", "soğan", "domates sauce", "nohut"],
-      it: ["riso", "lenticchie", "pasta", "cipolla", "pomodoro sauce", "ceci"],
-      ko: ["쌀", "렌틸콩", "파스타", "양파", "토마토 sauce", "병아리콩"]
+      tr: ["pirinç", "mercimek", "makarna", "soğbir", "domates sos", "nohut"],
+      it: ["riso", "lenticchie", "pasta", "cipolla", "pomodoro salsa", "ceci"],
+      ko: ["쌀", "렌틸콩", "파스타", "양파", "토마토 소스", "병아리콩"]
     },
     howIsMade: {
       ro: "Fierbe separat orez, paste și linte. Amestecă-le cu năut, sos de roșii și ceapă prăjită. Servește în straturi.",
@@ -3048,9 +3048,9 @@ export const recipes = [
       ar: "اسلق الأرز والمكرونة والعدس كل على حدة. اخلطهم مع الحمص وصلصة الطماطم والبصل المقلي. قدّمهم بطبقات.",
       zh: "米饭、意面和扁豆分别煮熟，与鹰嘴豆、番茄酱和炸洋葱混合分层装盘。",
       ja: "ご飯・パスタ・レンズ豆を別々に茹で、ひよこ豆・トマトソース・揚げ玉ねぎと重ねて盛り付ける。",
-      tr: "Haşla pirinç, makarna, ve mercimek separately. Mix them ile nohut, domates sos, ve fried soğans. Serve in layers.",
-      it: "Cuoci riso, pasta, e lenticchie separately. Mix them con ceci, pomodoro salsa, e fried cipollas. Serve in layers.",
-      ko: "삶고 쌀, 파스타, 그리고 렌틸콩 separately. Mix them와 병아리콩, 토마토 소스, 그리고 fried 양파s. Serve in layers하세요."
+      tr: "Haşla pirinç, makarna, ve mercimek ayrı ayrı. karıştırın onları ile nohut, domates sos, ve kızarmış soğans. servis edin in katmanlar.",
+      it: "Cuoci riso, pasta, e lenticchie separatamente. mescola li con ceci, pomodoro salsa, e fritto cipollas. servi in strati.",
+      ko: "삶고 쌀, 파스타, 그리고 렌틸콩 따로. 섞습니다 그것들을와 병아리콩, 토마토 소스, 그리고 튀긴 양파s. 제공합니다 에서 층하세요."
     },
     originText: {
       ro: "Koshari este o rețetă tradițională din Egipt.",
@@ -3064,7 +3064,7 @@ export const recipes = [
       zh: "埃及什锦饭 是来自埃及的传统食谱。",
       ja: "コシャリ はエジプトの伝統的なレシピです。",
       tr: "Koshari Mısır kökenli geleneksel bir tariftir.",
-      it: "Koshari è una ricetta tradizionale di Egitto.",
+      it: "Koshari è una risotta tradizionale di Egitto.",
       ko: "Koshari는(은) 이집트의 전통 요리입니다."
     }
   },
@@ -3126,9 +3126,9 @@ export const recipes = [
       ar: ["لحم ضأن", "خضروات", "مشمش مجفف", "لوز", "توابل مغربية"],
       zh: ["羊肉", "蔬菜", "干杏", "杏仁", "摩洛哥香料"],
       ja: ["ラム肉", "野菜", "ドライアプリコット", "アーモンド", "モロッコスパイス"],
-      tr: ["lamb", "vegetables", "dried apricots", "almonds", "moroccan spices"],
-      it: ["lamb", "vegetables", "dried apricots", "almonds", "moroccan spices"],
-      ko: ["lamb", "vegetables", "dried apricots", "almonds", "moroccan spices"]
+      tr: ["kuzu", "sebzeler", "kuru kayısı", "badem", "fas baharatları"],
+      it: ["agnello", "verdure", "albicocche secche", "mandorle", "spezie marocchine"],
+      ko: ["양고기", "채소", "말린 살구", "아몬드", "모로코 향신료"]
     },
     howIsMade: {
       ro: "Călește carne și legume cu condimente într-un vas special (tajine), gătește lent acoperit până când totul devine fraged și aromat.",
@@ -3141,9 +3141,9 @@ export const recipes = [
       ar: "حمّر اللحم والخضار مع التوابل في قدر خاص (طاجين)، ثم اطبخ ببطء حتى ينضج وينبعث منه العطر.",
       zh: "用tajine锅将肉和蔬菜与香料炒香，盖盖子慢炖至酥烂入味。",
       ja: "タジン鍋で肉と野菜・スパイスを炒め、蓋をしてじっくり煮込む。",
-      tr: "Brown meat ve vegetables ile spices in a special pot (tajine), sonra Pişir slowly, covered, until tender ve flavorful.",
-      it: "Brown meat e vegetables con spices in a special pot (tajine), poi Cuoci slowly, covered, until tender e flavorful.",
-      ko: "Brown meat그리고 vegetables와 spices in a special pot (tajine), 그다음 조리하고 slowly, covered, until tender그리고 flavorful하세요."
+      tr: "kahverengi et ve sebzeler ile baharatlar özel tencere (tajin), sonra Pişir yavaşça, kapalı, yumuşayana kadar ve lezzetli.",
+      it: "marrone carne e verdure con spezie speciale pentola (tajine), poi Cuoci lentamente, coperto, finché sarà tenero e sapori intensi.",
+      ko: "갈색 고기그리고 채소와 향신료 에서 a 특별한 냄비 (타진), 그다음 조리하고 천천히, 덮인, 부드러워질 때까지그리고 풍미가 좋은하세요."
     },
     originText: {
       ro: "Tajine este o rețetă tradițională din Maroc.",
@@ -3156,9 +3156,9 @@ export const recipes = [
       ar: "طاجين هي وصفة تقليدية من المغرب.",
       zh: "塔吉锅炖菜 是来自摩洛哥的传统食谱。",
       ja: "タジン鍋 はモロッコの伝統的なレシピです。",
-      tr: "Tagine Fas kökenli geleneksel bir tariftir.",
-      it: "Tagine è una ricetta tradizionale di Marocco.",
-      ko: "Tagine는(은) 모로코의 전통 요리입니다."
+      tr: "tajin Fas kökenli geleneksel bir tariftir.",
+      it: "tajine è una risotta tradizionale di Marocco.",
+      ko: "타진는(은) 모로코의 전통 요리입니다."
     }
   },
   {
@@ -3219,9 +3219,9 @@ export const recipes = [
       ar: ["عجينة فيلو", "جوز", "فستق", "عسل", "سكر", "زبدة"],
       zh: ["千层酥皮", "核桃", "开心果", "蜂蜜", "糖", "黄油"],
       ja: ["フィロ生地", "クルミ", "ピスタチオ", "はちみつ", "砂糖", "バター"],
-      tr: ["phyllo pastry", "walnuts", "pistachios", "bal", "şeker", "tereyağı"],
-      it: ["phyllo pastry", "walnuts", "pistachios", "miele", "zucchero", "burro"],
-      ko: ["phyllo pastry", "walnuts", "pistachios", "꿀", "설탕", "버터"]
+      tr: ["yufka hamur", "ceviz", "antep fıstığı", "bal", "şeker", "tereyağı"],
+      it: ["pasta fillo pasta", "noci", "pistacchi", "miele", "zucchero", "burro"],
+      ko: ["필로 반죽 파이지", "호두", "피스타치오", "꿀", "설탕", "버터"]
     },
     howIsMade: {
       ro: "Așază straturi de foi subțiri de plăcintă unse cu unt, presară nuci mărunțite între ele. Coace și toarnă sirop dulce peste prăjitură fierbinte.",
@@ -3234,9 +3234,9 @@ export const recipes = [
       ar: "ضع طبقات من العجين الرقيق والزبدة والمكسرات المفرومة. اخبزها واسكب عليها القطر الحلو وهي ساخنة.",
       zh: "将黄油涂在薄面皮之间夹入碎坚果，烤熟后趁热浇上糖浆。",
       ja: "薄い生地にバターと刻みナッツを重ねて焼き、熱いうちにシロップをかける。",
-      tr: "Layer thin pastry sheets ile melted tereyağı ve chopped nuts. Bake ve pour sweet syrup over hot pastry.",
-      it: "Layer thin pastry sheets con melted burro e chopped nuts. Bake e pour sweet syrup over hot pastry.",
-      ko: "Layer thin pastry sheets와 melted 버터그리고 chopped nuts. Bake그리고 pour sweet syrup over hot pastry하세요."
+      tr: "katman ince hamur yufka ile eritilmiş tereyağı ve doğranmış kuruyemiş. fırında pişirin ve dökün tatlı şurup üzerine sıcak hamur.",
+      it: "strato sottile pasta sfoglie con fuso burro e tritato frutta secca. cuoci in forno e versa dolce sciroppo sopra caldo pasta.",
+      ko: "층 얇게 파이지 시트와 녹인 버터그리고 다진 견과류. 오븐에서 굽습니다그리고 붓습니다 달콤한 시럽 위에 뜨거운 파이지하세요."
     },
     originText: {
       ro: "Baklava este o rețetă tradițională din Turcia.",
@@ -3250,7 +3250,7 @@ export const recipes = [
       zh: "果仁蜜饼 是来自土耳其的传统食谱。",
       ja: "バクラヴァ はトルコの伝統的なレシピです。",
       tr: "Baklava Türkiye kökenli geleneksel bir tariftir.",
-      it: "Baklava è una ricetta tradizionale di Turchia.",
+      it: "Baklava è una risotta tradizionale di Turchia.",
       ko: "Baklava는(은) 터키의 전통 요리입니다."
     }
   },
@@ -3312,9 +3312,9 @@ export const recipes = [
       ar: ["لحم بقري", "فاصوليا", "طماطم", "بصل", "فلفل حار", "ثوم", "توابل"],
       zh: ["牛肉", "豆子", "番茄", "洋葱", "辣椒", "大蒜", "香料"],
       ja: ["牛肉", "豆", "トマト", "玉ねぎ", "唐辛子", "ニンニク", "スパイス"],
-      tr: ["dana eti", "fasulye", "domates", "soğan", "chili biber", "sarımsak", "spices"],
-      it: ["manzo", "fagioli", "pomodori", "cipolla", "chili peperone", "aglio", "spices"],
-      ko: ["소고기", "콩", "토마토", "양파", "chili 고추", "마늘", "spices"]
+      tr: ["dana eti", "fasulye", "domates", "soğbir", "acı biber biber", "sarımsak", "baharatlar"],
+      it: ["manzo", "fagioli", "pomodori", "cipolla", "peperoncino peperone", "aglio", "spezie"],
+      ko: ["소고기", "콩", "토마토", "양파", "고추 고추", "마늘", "향신료"]
     },
     howIsMade: {
       ro: "Călește ceapa și usturoiul, adaugă carnea tocată, fasolea, roșiile și condimentele. Fierbe la foc mic până se îngroașă.",
@@ -3327,9 +3327,9 @@ export const recipes = [
       ar: "اقلي البصل والثوم، أضف اللحم المفروم والفاصوليا والطماطم والتوابل. اطبخ حتى يتكاثف.",
       zh: "炒洋葱和大蒜，加入肉末、豆类、番茄和香料，小火炖至浓稠。",
       ja: "玉ねぎ・ニンニクを炒め、ひき肉・豆・トマト・スパイスを加え、煮込んでとろみをつける。",
-      tr: "Sauté soğan ve sarımsak, Ekle minced meat, fasulye, domates, ve spices. Simmer until thickened.",
-      it: "Sauté cipolla e aglio, Aggiungi minced meat, fagioli, pomodori, e spices. Simmer until thickened.",
-      ko: "Sauté 양파그리고 마늘, 넣고 minced meat, 콩, 토마토, 그리고 spices. Simmer until thickened하세요."
+      tr: "soteleyiné soğbir ve sarımsak, Ekle kıyılmış et, fasulye, domates, ve baharatlar. kısık ateşte pişirin koyulaşmış.",
+      it: "soffriggié cipolla e aglio, Aggiungi tritato carne, fagioli, pomodori, e spezie. lascia sobbollire addensato.",
+      ko: "볶습니다é 양파그리고 마늘, 넣고 다진 고기, 콩, 토마토, 그리고 향신료. 약불에서 끓입니다 걸쭉해진하세요."
     },
     originText: {
       ro: "Chili con carne este o rețetă tradițională din Mexic.",
@@ -3342,9 +3342,9 @@ export const recipes = [
       ar: "تشيلي كون كارني هي وصفة تقليدية من المكسيك.",
       zh: "辣味牛肉 是来自墨西哥的传统食谱。",
       ja: "チリコンカーン はメキシコの伝統的なレシピです。",
-      tr: "Chili con carne Meksika kökenli geleneksel bir tariftir.",
-      it: "Chili con carne è una ricetta tradizionale di Messico.",
-      ko: "Chili con carne는(은) 멕시코의 전통 요리입니다."
+      tr: "acı biber ile et Meksika kökenli geleneksel bir tariftir.",
+      it: "peperoncino con carne è una risotta tradizionale di Messico.",
+      ko: "고추 와 고기는(은) 멕시코의 전통 요리입니다."
     }
   },
   {
@@ -3405,9 +3405,9 @@ export const recipes = [
       ar: ["صدر دجاج", "فلفل", "أناناس", "بصل", "صلصة صويا", "سكر", "خل"],
       zh: ["鸡胸肉", "辣椒", "菠萝", "洋葱", "酱油", "糖", "醋"],
       ja: ["鶏胸肉", "ピーマン", "パイナップル", "玉ねぎ", "醤油", "砂糖", "酢"],
-      tr: ["tavuk göğsü", "biber", "pineapple", "soğan", "soya sosu", "şeker", "sirke"],
-      it: ["petto di pollo", "peperone", "pineapple", "cipolla", "salsa di soia", "zucchero", "aceto"],
-      ko: ["닭가슴살", "고추", "pineapple", "양파", "간장", "설탕", "식초"]
+      tr: ["tavuk göğsü", "biber", "ananas", "soğbir", "soya sosu", "şeker", "sirke"],
+      it: ["petto di pollo", "peperone", "ananas", "cipolla", "salsa di soia", "zucchero", "aceto"],
+      ko: ["닭가슴살", "고추", "파인애플", "양파", "간장", "설탕", "식초"]
     },
     howIsMade: {
       ro: "Prăjește bucățile de pui pane, apoi gătește-le într-un sos dulce-acrișor cu ananas, ardei și ceapă.",
@@ -3420,9 +3420,9 @@ export const recipes = [
       ar: "اقلي قطع الدجاج المغلفة، ثم اطبخها في صلصة حلوة وحامضة مع الأناناس والفلفل والبصل.",
       zh: "炸鸡块后，用菠萝、彩椒和洋葱一起炒入糖醋酱中。",
       ja: "衣をつけた鶏肉を揚げて、パイナップル・ピーマン・玉ねぎと甘酢ソースで炒める。",
-      tr: "Kızart ekmeked tavuk pieces, sonra Pişir them in sweet ve sour sos ile pineapple, kapya biber, ve soğan.",
-      it: "Friggi paneed pollo pieces, poi Cuoci them in sweet e sour salsa con pineapple, peperone, e cipolla.",
-      ko: "볶거나 튀기고 빵ed 닭고기 pieces, 그다음 조리하고 them in sweet그리고 sour 소스와 pineapple, 파프리카, 그리고 양파하세요."
+      tr: "Kızart ekmeked tavuk parçalar, sonra Pişir onları in tatlı ve ekşi sos ile ananas, kapya biber, ve soğbir.",
+      it: "Friggi paneed pollo pezzi, poi Cuoci li in dolce e acidulo salsa con ananas, peperone, e cipolla.",
+      ko: "볶거나 튀기고 빵 닭고기 조각, 그다음 조리하고 그것들을 에서 달콤한그리고 새콤한 소스와 파인애플, 파프리카, 그리고 양파하세요."
     },
     originText: {
       ro: "Pui dulce-acrișor este o rețetă tradițională din China.",
@@ -3435,9 +3435,9 @@ export const recipes = [
       ar: "دجاج حلو وحامض هي وصفة تقليدية من الصين.",
       zh: "糖醋鸡 是来自中国的传统食谱。",
       ja: "酢豚風鶏肉 は中国の伝統的なレシピです。",
-      tr: "Sweet and Sour Chicken Çin kökenli geleneksel bir tariftir.",
-      it: "Sweet and Sour Chicken è una ricetta tradizionale di Cina.",
-      ko: "Sweet and Sour Chicken는(은) 중국의 전통 요리입니다."
+      tr: "tatlı ve ekşi tavuk Çin kökenli geleneksel bir tariftir.",
+      it: "dolce e acidulo pollo è una risotta tradizionale di Cina.",
+      ko: "달콤한 그리고 새콤한 닭고기는(은) 중국의 전통 요리입니다."
     }
   },
   {
@@ -3498,9 +3498,9 @@ export const recipes = [
       ar: ["بياض بيض", "سكر", "نشا", "خل", "كريمة مخفوقة", "فواكه"],
       zh: ["蛋清", "糖", "淀粉", "醋", "奶油", "水果"],
       ja: ["卵白", "砂糖", "コーンスターチ", "酢", "ホイップクリーム", "フルーツ"],
-      tr: ["yumurta whites", "şeker", "mısırstarch", "sirke", "whipped krema", "fruits"],
-      it: ["uovo whites", "zucchero", "maisstarch", "aceto", "whipped panna", "fruits"],
-      ko: ["계란 whites", "설탕", "옥수수starch", "식초", "whipped 크림", "fruits"]
+      tr: ["yumurta beyazlar", "şeker", "mısırstarch", "sirke", "çırpılmış krema", "meyveler"],
+      it: ["uovo albumi", "zucchero", "maisstarch", "aceto", "montato panna", "frutta"],
+      ko: ["계란 흰자", "설탕", "옥수수전분", "식초", "휘핑한 크림", "과일"]
     },
     howIsMade: {
       ro: "Bate albușurile cu zahăr până devin bezea, coace-le la temperatură mică, apoi decorează cu frișcă și fructe proaspete.",
@@ -3513,9 +3513,9 @@ export const recipes = [
       ar: "اخفق بياض البيض مع السكر لصنع المرينغ، اخبزه على حرارة منخفضة وزينه بالكريمة المخفوقة والفواكه الطازجة.",
       zh: "蛋清加糖打发成蛋白霜，低温烘烤，冷却后加鲜奶油和水果装饰。",
       ja: "卵白を砂糖と泡立ててメレンゲを作り、低温で焼いて冷ましてから生クリームと果物を飾る。",
-      tr: "Çırp yumurta whites ile şeker yapmak için meringue, Fırında pişir at low temperature, sonra top ile whipped krema ve fresh fruits.",
-      it: "Sbatti uovo whites con zucchero per fare meringue, Cuoci al forno at low temperature, poi top con whipped panna e fresh fruits.",
-      ko: "휘저어 섞고 계란 whites와 설탕 만들기 위해 meringue, 오븐에 구워 at low temperature, 그다음 top와 whipped 크림그리고 fresh fruits하세요."
+      tr: "Çırp yumurta beyazlar ile şeker yapmak için mereng, Fırında pişir  kısık sıcaklık, sonra üstüne ile çırpılmış krema ve taze meyveler.",
+      it: "Sbatti uovo albumi con zucchero per fare meringa, Cuoci al forno  basso temperatura, poi sopra con montato panna e fresco frutta.",
+      ko: "휘저어 섞고 계란 흰자와 설탕 만들기 위해 머랭, 오븐에 구워 에서 약한 온도, 그다음 위에와 휘핑한 크림그리고 신선한 과일하세요."
     },
     originText: {
       ro: "Pavlova este o rețetă tradițională din Australia.",
@@ -3529,7 +3529,7 @@ export const recipes = [
       zh: "帕夫洛娃蛋糕 是来自澳大利亚的传统食谱。",
       ja: "パブロバ はオーストラリアの伝統的なレシピです。",
       tr: "Pavlova Avustralya kökenli geleneksel bir tariftir.",
-      it: "Pavlova è una ricetta tradizionale di Australia.",
+      it: "Pavlova è una risotta tradizionale di Australia.",
       ko: "Pavlova는(은) 호주의 전통 요리입니다."
     }
   },
@@ -3591,9 +3591,9 @@ export const recipes = [
       ar: ["بطاطا مقلية", "جبن", "صلصة اللحم"],
       zh: ["薯条", "奶酪", "肉汁酱"],
       ja: ["フライドポテト", "チーズ", "グレイビーソース"],
-      tr: ["french fries", "peynir", "gravy sauce"],
-      it: ["french fries", "formaggio", "gravy sauce"],
-      ko: ["french fries", "치즈", "gravy sauce"]
+      tr: ["fransız patates kızartması", "peynir", "sos sos"],
+      it: ["francese patatine fritte", "formaggio", "sugo salsa"],
+      ko: ["프랑스식 감자튀김", "치즈", "그레이비 소스"]
     },
     howIsMade: {
       ro: "Prăjește cartofii, așază-i pe farfurie, presară brânză proaspătă și toarnă deasupra sos brun fierbinte.",
@@ -3606,9 +3606,9 @@ export const recipes = [
       ar: "اقلي البطاطا، ضعها في طبق، رش جبن طازج واسكب فوقها صلصة بنية ساخنة.",
       zh: "炸薯条盛盘，撒上鲜奶酪，再淋上热褐色肉汁。",
       ja: "フライドポテトを皿に盛り、チーズカードをのせ、熱いグレイビーソースをかける。",
-      tr: "Kızart patates, place them on a plate, sprinkle fresh peynir curds ve pour hot brown gravy over.",
-      it: "Friggi patate, place them on a plate, sprinkle fresh formaggio curds e pour hot brown gravy over.",
-      ko: "볶거나 튀기고 감자, place them on a plate, sprinkle fresh 치즈 curds그리고 pour hot brown gravy over하세요."
+      tr: "Kızart patates, yerleştirin onları üstüne a tabak, serpiştirin taze peynir lor ve dökün sıcak kahverengi sos üzerine.",
+      it: "Friggi patate, metti li su a piatto, spolvera fresco formaggio cagliata e versa caldo marrone sugo sopra.",
+      ko: "볶거나 튀기고 감자, 놓습니다 그것들을 위에 a 접시, 뿌립니다 신선한 치즈 커드그리고 붓습니다 뜨거운 갈색 그레이비 위에하세요."
     },
     originText: {
       ro: "Poutine este o rețetă tradițională din Canada.",
@@ -3622,7 +3622,7 @@ export const recipes = [
       zh: "肉汁芝士薯条 是来自加拿大的传统食谱。",
       ja: "プーティン はカナダの伝統的なレシピです。",
       tr: "Poutine Kanada kökenli geleneksel bir tariftir.",
-      it: "Poutine è una ricetta tradizionale di Canada.",
+      it: "Poutine è una risotta tradizionale di Canada.",
       ko: "Poutine는(은) 캐나다의 전통 요리입니다."
     }
   },
@@ -3684,7 +3684,7 @@ export const recipes = [
       ar: ["دقيق", "بيض", "بطاطس", "جبن", "بصل", "ملح"],
       zh: ["面粉", "鸡蛋", "土豆", "奶酪", "洋葱", "盐"],
       ja: ["小麦粉", "卵", "ジャガイモ", "チーズ", "玉ねぎ", "塩"],
-      tr: ["un", "yumurta", "patates", "peynir", "soğan", "tuz"],
+      tr: ["un", "yumurta", "patates", "peynir", "soğbir", "tuz"],
       it: ["farina", "uova", "patate", "formaggio", "cipolla", "sale"],
       ko: ["밀가루", "계란", "감자", "치즈", "양파", "소금"]
     },
@@ -3699,9 +3699,9 @@ export const recipes = [
       ar: "احشِ العجين بالبطاطا أو الجبن أو اللحم، شكّل أنصاف أقمار، اسلقها ثم اقليها قليلاً أو قدّمها مع القشطة.",
       zh: "面团包入土豆、奶酪或肉，捏成半月形，煮熟后可略煎或配酸奶油食用。",
       ja: "生地にじゃがいも・チーズ・肉などを包み、半月型にし、茹でてから軽く焼くかサワークリームで提供。",
-      tr: "Fill dough ile patates, peynir, or meat, shape into half-moons, Haşla them, sonra lightly fry or serve ile sour krema.",
-      it: "Fill dough con patate, formaggio, or meat, shape into half-moons, Cuoci them, poi lightly fry or serve con sour panna.",
-      ko: "Fill dough와 감자, 치즈, or meat, shape into half-moons, 삶고 them, 그다음 lightly 볶거나 튀겨 or serve와 sour 크림하세요."
+      tr: "doldurun hamur ile patates, peynir, veya et, şekil verin içine yarım-yarım ay, Haşla onları, sonra hafifçe kavurun veya servis edin ile ekşi krema.",
+      it: "farcisci impasto con patate, formaggio, o carne, dai forma dentro metà-mezzelune, Cuoci li, poi leggermente rosola o servi con acidulo panna.",
+      ko: "채웁니다 반죽와 감자, 치즈, 또는 고기, 모양을 만듭니다 안에 절반-반달, 삶고 그것들을, 그다음 가볍게 볶거나 튀겨 또는 제공합니다와 새콤한 크림하세요."
     },
     originText: {
       ro: "Pierogi este o rețetă tradițională din Polonia.",
@@ -3715,7 +3715,7 @@ export const recipes = [
       zh: "波兰饺子 是来自波兰的传统食谱。",
       ja: "ピエロギ はポーランドの伝統的なレシピです。",
       tr: "Pierogi Polonya kökenli geleneksel bir tariftir.",
-      it: "Pierogi è una ricetta tradizionale di Polonia.",
+      it: "Pierogi è una risotta tradizionale di Polonia.",
       ko: "Pierogi는(은) 폴란드의 전통 요리입니다."
     }
   },
@@ -3777,9 +3777,9 @@ export const recipes = [
       ar: ["أرز", "بيض", "دجاج", "بصل", "ثوم", "صلصة الصويا", "خضروات"],
       zh: ["米饭", "鸡蛋", "鸡肉", "洋葱", "大蒜", "酱油", "蔬菜"],
       ja: ["ご飯", "卵", "鶏肉", "玉ねぎ", "ニンニク", "醤油", "野菜"],
-      tr: ["pirinç", "yumurta", "tavuk", "soğan", "sarımsak", "soya sosu", "vegetables"],
-      it: ["riso", "uovo", "pollo", "cipolla", "aglio", "salsa di soia", "vegetables"],
-      ko: ["쌀", "계란", "닭고기", "양파", "마늘", "간장", "vegetables"]
+      tr: ["pirinç", "yumurta", "tavuk", "soğbir", "sarımsak", "soya sosu", "sebzeler"],
+      it: ["riso", "uovo", "pollo", "cipolla", "aglio", "salsa di soia", "verdure"],
+      ko: ["쌀", "계란", "닭고기", "양파", "마늘", "간장", "채소"]
     },
     howIsMade: {
       ro: "Prăjește orezul fiert cu usturoi, ceapă, sos de soia, legume și carne sau creveți. Servește cu ou prăjit deasupra.",
@@ -3792,9 +3792,9 @@ export const recipes = [
       ar: "اقلِ الأرز المطبوخ مع الثوم والبصل وصلصة الصويا والخضار واللحم أو الروبيان. قدّمه مع بيضة مقلية فوقه.",
       zh: "炒熟米饭配大蒜、洋葱、酱油、蔬菜和肉类或虾，顶上加煎蛋。",
       ja: "炊いたご飯をニンニク・玉ねぎ・醤油・野菜・肉やエビと炒め、目玉焼きをのせて提供。",
-      tr: "Kızart cooked pirinç ile sarımsak, soğan, soya sosu, vegetables, ve meat or karides. Top ile a fried yumurta.",
-      it: "Friggi cooked riso con aglio, cipolla, salsa di soia, vegetables, e meat or gamberetti. Top con a fried uovo.",
-      ko: "볶거나 튀기고 cooked 쌀와 마늘, 양파, 간장, vegetables, 그리고 meat or 새우. Top와 a fried 계란하세요."
+      tr: "Kızart pişirined pirinç ile sarımsak, soğbir, soya sosu, sebzeler, ve et veya karides. üstüne ile a kızarmış yumurta.",
+      it: "Friggi cuocied riso con aglio, cipolla, salsa di soia, verdure, e carne o gamberetti. sopra con a fritto uovo.",
+      ko: "볶거나 튀기고 조리합니다 쌀와 마늘, 양파, 간장, 채소, 그리고 고기 또는 새우. 위에와 a 튀긴 계란하세요."
     },
     originText: {
       ro: "Nasi Goreng este o rețetă tradițională din Indonezia.",
@@ -3808,7 +3808,7 @@ export const recipes = [
       zh: "印尼炒饭 是来自印度尼西亚的传统食谱。",
       ja: "ナシゴレン はインドネシアの伝統的なレシピです。",
       tr: "Nasi Goreng Endonezya kökenli geleneksel bir tariftir.",
-      it: "Nasi Goreng è una ricetta tradizionale di Indonesia.",
+      it: "Nasi Goreng è una risotta tradizionale di Indonesia.",
       ko: "Nasi Goreng는(은) 인도네시아의 전통 요리입니다."
     }
   },
@@ -3870,9 +3870,9 @@ export const recipes = [
       ar: ["جبن", "نبيذ أبيض", "ثوم", "خبز", "نشا"],
       zh: ["奶酪", "白葡萄酒", "大蒜", "面包", "淀粉"],
       ja: ["チーズ", "白ワイン", "ニンニク", "パン", "でんぷん"],
-      tr: ["peynir", "white wine", "sarımsak", "ekmek", "starch"],
-      it: ["formaggio", "white wine", "aglio", "pane", "starch"],
-      ko: ["치즈", "white wine", "마늘", "빵", "starch"]
+      tr: ["peynir", "beyaz şarap", "sarımsak", "ekmek", "nişasta"],
+      it: ["formaggio", "bianco vino", "aglio", "pane", "amido"],
+      ko: ["치즈", "흰 와인", "마늘", "빵", "전분"]
     },
     howIsMade: {
       ro: "Topește brânza cu vin alb într-un vas special, adaugă usturoi și condimente, iar bucățile de pâine se înmoaie în brânză topită.",
@@ -3885,9 +3885,9 @@ export const recipes = [
       ar: "أذب الجبن مع النبيذ الأبيض في وعاء خاص، أضف الثوم والتوابل. اغمس قطع الخبز في الجبن الذائب.",
       zh: "将奶酪和白葡萄酒在特制锅中加热至融化，加入大蒜和调料。用面包蘸融化奶酪食用。",
       ja: "専用鍋でチーズと白ワインを溶かし、ニンニクとスパイスを加える。パンをチーズに浸して食べる。",
-      tr: "Melt peynir ile white wine in a special pot, Ekle sarımsak ve spices. Dip pieces of ekmek into melted peynir.",
-      it: "Melt formaggio con white wine in a special pot, Aggiungi aglio e spices. Dip pieces of pane into melted formaggio.",
-      ko: "Melt 치즈와 white wine in a special pot, 넣고 마늘그리고 spices. Dip pieces of 빵 into melted 치즈하세요."
+      tr: "Melt peynir ile beyaz şarap özel tencere, Ekle sarımsak ve baharatlar. banın parçalar  ekmek içine eritilmiş peynir.",
+      it: "Melt formaggio con bianco vino speciale pentola, Aggiungi aglio e spezie. intingi pezzi  pane dentro fuso formaggio.",
+      ko: "Melt 치즈와 흰 와인 에서 a 특별한 냄비, 넣고 마늘그리고 향신료. 찍어 먹습니다 조각 의 빵 안에 녹인 치즈하세요."
     },
     originText: {
       ro: "Fondue este o rețetă tradițională din Elveția.",
@@ -3901,7 +3901,7 @@ export const recipes = [
       zh: "奶酪火锅 是来自瑞士的传统食谱。",
       ja: "フォンデュ はスイスの伝統的なレシピです。",
       tr: "Fondue İsviçre kökenli geleneksel bir tariftir.",
-      it: "Fondue è una ricetta tradizionale di Svizzera.",
+      it: "Fondue è una risotta tradizionale di Svizzera.",
       ko: "Fondue는(은) 스위스의 전통 요리입니다."
     }
   },
@@ -3963,9 +3963,9 @@ export const recipes = [
       ar: ["سمك", "ليمون", "طماطم", "زيت", "ملح"],
       zh: ["鱼", "柠檬", "番茄", "油", "盐"],
       ja: ["魚", "レモン", "トマト", "油", "塩"],
-      tr: ["balık", "limon", "domates", "oil", "tuz"],
-      it: ["pesce", "limone", "pomodori", "oil", "sale"],
-      ko: ["생선", "레몬", "토마토", "oil", "소금"]
+      tr: ["balık", "limon", "domates", "yağ", "tuz"],
+      it: ["pesce", "limone", "pomodori", "olio", "sale"],
+      ko: ["생선", "레몬", "토마토", "기름", "소금"]
     },
     howIsMade: {
       ro: "Taie peștele pe lungime, condimentează-l și frige-l încet pe grătar cu lemn de foc, ungându-l des cu sos de roșii și lămâie.",
@@ -3978,9 +3978,9 @@ export const recipes = [
       ar: "اقطع السمكة بالطول وتبّلها واشوها ببطء على الحطب، وادهنها باستمرار بصلصة الطماطم والليمون.",
       zh: "将鱼纵向剖开，调味，用柴火慢烤，不时刷上番茄柠檬酱。",
       ja: "魚を縦に開き、味付けし、薪の火でゆっくり焼き、トマトとレモンのソースを塗りながら仕上げる。",
-      tr: "Split balık lengthwise, Baharatlandır it, ve Izgara yap slowly over wood fire, basting frequently ile domates ve limon sos.",
-      it: "Split pesce lengthwise, Condisci it, e Griglia slowly over wood fire, basting frequently con pomodoro e limone salsa.",
-      ko: "Split 생선 lengthwise, 간을 맞추고 it, 그리고 구워 slowly over wood fire, basting frequently와 토마토그리고 레몬 소스하세요."
+      tr: "Split balık boylamasına, Baharatlandır o, ve Izgara yap yavaşça üzerine odun 불, üzerine sürme sık sık ile domates ve limon sos.",
+      it: "Split pesce per il lungo, Condisci esso, e Griglia lentamente sopra legno fuoco, spennellando spesso con pomodoro e limone salsa.",
+      ko: "Split 생선 세로로, 간을 맞추고 그것, 그리고 구워 천천히 위에 나무 불, 바르면서 자주와 토마토그리고 레몬 소스하세요."
     },
     originText: {
       ro: "Masgouf este o rețetă tradițională din Irak.",
@@ -3994,7 +3994,7 @@ export const recipes = [
       zh: "烤鱼 是来自伊拉克的传统食谱。",
       ja: "マスグーフ はイラクの伝統的なレシピです。",
       tr: "Masgouf Irak kökenli geleneksel bir tariftir.",
-      it: "Masgouf è una ricetta tradizionale di Iraq.",
+      it: "Masgouf è una risotta tradizionale di Iraq.",
       ko: "Masgouf는(은) 이라크의 전통 요리입니다."
     }
   },
@@ -4056,9 +4056,9 @@ export const recipes = [
       ar: ["بيض", "طماطم", "فلفل", "بصل", "ثوم", "توابل"],
       zh: ["鸡蛋", "番茄", "辣椒", "洋葱", "大蒜", "香料"],
       ja: ["卵", "トマト", "ピーマン", "玉ねぎ", "ニンニク", "スパイス"],
-      tr: ["yumurta", "domates", "bibers", "soğan", "sarımsak", "spices"],
-      it: ["uova", "pomodori", "peperones", "cipolla", "aglio", "spices"],
-      ko: ["계란", "토마토", "고추s", "양파", "마늘", "spices"]
+      tr: ["yumurta", "domates", "bibers", "soğbir", "sarımsak", "baharatlar"],
+      it: ["uova", "pomodori", "peperones", "cipolla", "aglio", "spezie"],
+      ko: ["계란", "토마토", "고추s", "양파", "마늘", "향신료"]
     },
     howIsMade: {
       ro: "Călește ceapă, ardei și usturoi, adaugă roșii și condimente. Sparge ouăle deasupra și gătește până sunt făcute.",
@@ -4071,9 +4071,9 @@ export const recipes = [
       ar: "اقلي البصل والفلفل والثوم، أضف الطماطم والتوابل، ثم اكسر البيض فوقها واطبخ حتى ينضج.",
       zh: "炒洋葱、辣椒和大蒜，加入番茄和香料，打入鸡蛋，煮至蛋熟。",
       ja: "玉ねぎ・ピーマン・ニンニクを炒め、トマトとスパイスを加え、上に卵を割り入れて固まるまで火を通す。",
-      tr: "Sauté soğan, bibers, ve sarımsak, Ekle domates ve spices. Crack yumurta on top ve cook until set.",
-      it: "Sauté cipolla, peperones, e aglio, Aggiungi pomodori e spices. Crack uova on top e cook until set.",
-      ko: "Sauté 양파, 고추s, 그리고 마늘, 넣고 토마토그리고 spices. Crack 계란 on top그리고 cook until set하세요."
+      tr: "soteleyiné soğbir, bibers, ve sarımsak, Ekle domates ve baharatlar. kırın yumurta üstüne üstüne ve pişirin koyun.",
+      it: "soffriggié cipolla, peperones, e aglio, Aggiungi pomodori e spezie. rompi uova su sopra e cuoci metti.",
+      ko: "볶습니다é 양파, 고추s, 그리고 마늘, 넣고 토마토그리고 향신료. 깨뜨립니다 계란 위에 위에그리고 조리합니다 두세요하세요."
     },
     originText: {
       ro: "Shakshuka este o rețetă tradițională din Israel.",
@@ -4087,7 +4087,7 @@ export const recipes = [
       zh: "莎克舒卡 是来自以色列的传统食谱。",
       ja: "シャクシュカ はイスラエルの伝統的なレシピです。",
       tr: "Shakshuka İsrail kökenli geleneksel bir tariftir.",
-      it: "Shakshuka è una ricetta tradizionale di Israele.",
+      it: "Shakshuka è una risotta tradizionale di Israele.",
       ko: "Shakshuka는(은) 이스라엘의 전통 요리입니다."
     }
   },
@@ -4149,9 +4149,9 @@ export const recipes = [
       ar: ["سلمون", "بطاطس", "بصل", "جزر", "كريمة", "شبت"],
       zh: ["三文鱼", "土豆", "洋葱", "胡萝卜", "奶油", "莳萝"],
       ja: ["サーモン", "ジャガイモ", "玉ねぎ", "ニンジン", "クリーム", "ディル"],
-      tr: ["somon", "patates", "soğan", "havuç", "krema", "dill"],
-      it: ["salmone", "patate", "cipolla", "carota", "panna", "dill"],
-      ko: ["연어", "감자", "양파", "당근", "크림", "dill"]
+      tr: ["somon", "patates", "soğbir", "havuç", "krema", "dereotu"],
+      it: ["salmone", "patate", "cipolla", "carota", "panna", "aneto"],
+      ko: ["연어", "감자", "양파", "당근", "크림", "딜"]
     },
     howIsMade: {
       ro: "Fierbe cartofii și morcovii, adaugă somon și ceapă. Completează cu smântână și mărar, fierbe scurt și servește cald.",
@@ -4164,9 +4164,9 @@ export const recipes = [
       ar: "اسلق البطاطا والجزر، أضف السلمون والبصل. أضف الكريمة والشبت، اطبخ قليلاً وقدّمه ساخناً.",
       zh: "煮土豆和胡萝卜，加入三文鱼和洋葱，再倒入奶油和莳萝，略煮即可热食。",
       ja: "じゃがいもとにんじんを煮て、サーモンと玉ねぎを加え、クリームとディルを入れてさっと煮て温かく提供。",
-      tr: "Haşla patates ve havuçs, Ekle somon ve soğan. Stir in krema ve dill, Kısık ateşte pişir briefly ve serve hot.",
-      it: "Cuoci patate e carotas, Aggiungi salmone e cipolla. Stir in panna e dill, Fai sobbollire briefly e serve hot.",
-      ko: "삶고 감자그리고 당근s, 넣고 연어그리고 양파. Stir in 크림그리고 dill, 약불로 끓여 briefly그리고 serve hot하세요."
+      tr: "Haşla patates ve havuçs, Ekle somon ve soğbir. karıştırın in krema ve dereotu, Kısık ateşte pişir kısaca ve servis edin sıcak.",
+      it: "Cuoci patate e carotas, Aggiungi salmone e cipolla. mescola in panna e aneto, Fai sobbollire brevemente e servi caldo.",
+      ko: "삶고 감자그리고 당근s, 넣고 연어그리고 양파. 저어줍니다 에서 크림그리고 딜, 약불로 끓여 잠깐그리고 제공합니다 뜨거운하세요."
     },
     originText: {
       ro: "Lohikeitto este o rețetă tradițională din Finlanda.",
@@ -4179,9 +4179,9 @@ export const recipes = [
       ar: "حساء السلمون هي وصفة تقليدية من فنلندا.",
       zh: "三文鱼汤 是来自芬兰的传统食谱。",
       ja: "サーモンスープ はフィンランドの伝統的なレシピです。",
-      tr: "Salmon Soup Finlandiya kökenli geleneksel bir tariftir.",
-      it: "Salmon Soup è una ricetta tradizionale di Finlandia.",
-      ko: "Salmon Soup는(은) 핀란드의 전통 요리입니다."
+      tr: "Salmon çorba Finlandiya kökenli geleneksel bir tariftir.",
+      it: "Salmon zuppa è una risotta tradizionale di Finlandia.",
+      ko: "Salmon 수프는(은) 핀란드의 전통 요리입니다."
     }
   },
   {
@@ -4242,9 +4242,9 @@ export const recipes = [
       ar: ["لحم بقري", "فاصوليا", "أعشاب", "ليمون مجفف", "بصل", "زيت", "بهارات فارسية"],
       zh: ["牛肉", "豆类", "香草", "干青柠", "洋葱", "油", "波斯香料"],
       ja: ["牛肉", "豆", "ハーブ", "ドライライム", "玉ねぎ", "油", "ペルシャのスパイス"],
-      tr: ["dana eti", "fasulye", "herbs", "dried yeşil limon", "soğan", "oil", "persian spices"],
-      it: ["manzo", "fagioli", "herbs", "dried lime", "cipolla", "oil", "persian spices"],
-      ko: ["소고기", "콩", "herbs", "dried 라임", "양파", "oil", "persian spices"]
+      tr: ["dana eti", "fasulye", "otlar", "kurutulmuş yeşil limon", "soğbir", "yağ", "fars baharatlar"],
+      it: ["manzo", "fagioli", "erbe aromatiche", "secco lime", "cipolla", "olio", "persiano spezie"],
+      ko: ["소고기", "콩", "허브", "말린 라임", "양파", "기름", "페르시아 향신료"]
     },
     howIsMade: {
       ro: "Prăjește verdețurile tocate, adaugă carne de vită, fasole și lămâi uscate. Fierbe încet până carnea este fragedă.",
@@ -4257,9 +4257,9 @@ export const recipes = [
       ar: "اقلي الأعشاب المفرومة، أضف اللحم والفول والليمون المجفف. اطبخ ببطء حتى ينضج اللحم.",
       zh: "炒香香草，加入牛肉、豆类和干柠檬，小火慢炖至肉烂。",
       ja: "刻んだハーブを炒め、牛肉・豆・干しライムを加えて、肉が柔らかくなるまで煮込む。",
-      tr: "Kızart chopped herbs, Ekle dana eti, fasulye, ve dried yeşil limons. Simmer slowly until meat is tender.",
-      it: "Friggi chopped herbs, Aggiungi manzo, fagioli, e dried limes. Simmer slowly until meat is tender.",
-      ko: "볶거나 튀기고 chopped herbs, 넣고 소고기, 콩, 그리고 dried 라임s. Simmer slowly until meat is tender하세요."
+      tr: "Kızart doğranmış otlar, Ekle dana eti, fasulye, ve kurutulmuş yeşil limons. kısık ateşte pişirin yavaşça et  yumuşak.",
+      it: "Friggi tritato erbe aromatiche, Aggiungi manzo, fagioli, e secco limes. lascia sobbollire lentamente carne  tenero.",
+      ko: "볶거나 튀기고 다진 허브, 넣고 소고기, 콩, 그리고 말린 라임s. 약불에서 끓입니다 천천히 고기 입니다 부드럽게하세요."
     },
     originText: {
       ro: "Ghormeh Sabzi este o rețetă tradițională din Iran.",
@@ -4273,7 +4273,7 @@ export const recipes = [
       zh: "波斯香草炖牛肉 是来自伊朗的传统食谱。",
       ja: "ゴルメサブジ はイランの伝統的なレシピです。",
       tr: "Ghormeh Sabzi İran kökenli geleneksel bir tariftir.",
-      it: "Ghormeh Sabzi è una ricetta tradizionale di Iran.",
+      it: "Ghormeh Sabzi è una risotta tradizionale di Iran.",
       ko: "Ghormeh Sabzi는(은) 이란의 전통 요리입니다."
     }
   },
@@ -4335,9 +4335,9 @@ export const recipes = [
       ar: ["سمك القد", "بطاطس", "بيض", "بصل", "زيت زيتون", "بقدونس", "زيتون"],
       zh: ["鳕鱼", "土豆", "鸡蛋", "洋葱", "橄榄油", "欧芹", "橄榄"],
       ja: ["タラ", "ジャガイモ", "卵", "玉ねぎ", "オリーブオイル", "パセリ", "オリーブ"],
-      tr: ["cod", "patates", "yumurta", "soğan", "zeytinyağı", "maydanoz", "olives"],
-      it: ["cod", "patate", "uova", "cipolla", "olio d'oliva", "prezzemolo", "olives"],
-      ko: ["cod", "감자", "계란", "양파", "올리브오일", "파슬리", "olives"]
+      tr: ["morina", "patates", "yumurta", "soğbir", "zeytinyağı", "maydanoz", "zeytin"],
+      it: ["baccalà", "patate", "uova", "cipolla", "olio d'oliva", "prezzemolo", "olive"],
+      ko: ["대구", "감자", "계란", "양파", "올리브오일", "파슬리", "올리브"]
     },
     howIsMade: {
       ro: "Călește ceapa, adaugă bacalhau (cod) desărat și mărunțit, apoi cartofi pai și ouă bătute. Gătește ușor și servește cu măsline.",
@@ -4350,9 +4350,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف سمك القد المملح والمفتت، ثم البطاطا المقلية الرفيعة والبيض المخفوق. اطبخ بلطف وقدّم مع الزيتون.",
       zh: "炒洋葱，加入泡发撕碎的鳕鱼，再加薯条和蛋液，慢火煮熟，配橄榄食用。",
       ja: "玉ねぎを炒め、塩抜きした鱈のほぐし身を加え、細切りポテトと溶き卵を入れてやさしく炒め、オリーブを添える。",
-      tr: "Sauté soğans, Ekle shredded ve soaked tuzed cod, sonra thin fries ve beaten yumurta. Cook gently ve serve ile olives.",
-      it: "Sauté cipollas, Aggiungi shredded e soaked saleed cod, poi thin fries e beaten uova. Cook gently e serve con olives.",
-      ko: "Sauté 양파s, 넣고 shredded그리고 soaked 소금ed cod, 그다음 thin fries그리고 beaten 계란. Cook gently그리고 serve와 olives하세요."
+      tr: "soteleyiné soğans, Ekle didiklenmiş ve ıslatılmış tuzed morina, sonra ince patates kızartması ve çırpılmış yumurta. pişirin nazikçe ve servis edin ile zeytin.",
+      it: "soffriggié cipollas, Aggiungi sfilacciato e ammollato saleed baccalà, poi sottile patatine fritte e sbattuto uova. cuoci delicatamente e servi con olive.",
+      ko: "볶습니다é 양파s, 넣고 찢은그리고 불린 소금 대구, 그다음 얇게 감자튀김그리고 푼 계란. 조리합니다 부드럽게그리고 제공합니다와 올리브하세요."
     },
     originText: {
       ro: "Bacalhau à Brás este o rețetă tradițională din Portugalia.",
@@ -4366,7 +4366,7 @@ export const recipes = [
       zh: "布拉什鳕鱼 是来自葡萄牙的传统食谱。",
       ja: "バカリャウ・ア・ブラス はポルトガルの伝統的なレシピです。",
       tr: "Bacalhau à Brás Portekiz kökenli geleneksel bir tariftir.",
-      it: "Bacalhau à Brás è una ricetta tradizionale di Portogallo.",
+      it: "Bacalhau à Brás è una risotta tradizionale di Portogallo.",
       ko: "Bacalhau à Brás는(은) 포르투갈의 전통 요리입니다."
     }
   },
@@ -4428,9 +4428,9 @@ export const recipes = [
       ar: ["لحم خنزير أو دجاج", "ثوم", "صلصة صويا", "خل", "ورق غار", "فلفل"],
       zh: ["猪肉或鸡肉", "大蒜", "酱油", "醋", "月桂叶", "胡椒"],
       ja: ["豚肉または鶏肉", "ニンニク", "醤油", "酢", "ローリエ", "コショウ"],
-      tr: ["domuz eti or tavuk", "sarımsak", "soya sosu", "sirke", "bay leaves", "biber"],
-      it: ["maiale or pollo", "aglio", "salsa di soia", "aceto", "bay leaves", "peperone"],
-      ko: ["돼지고기 or 닭고기", "마늘", "간장", "식초", "bay leaves", "고추"]
+      tr: ["domuz eti veya tavuk", "sarımsak", "soya sosu", "sirke", "defne yaprak", "biber"],
+      it: ["maiale o pollo", "aglio", "salsa di soia", "aceto", "alloro foglie", "peperone"],
+      ko: ["돼지고기 또는 닭고기", "마늘", "간장", "식초", "월계수 잎", "고추"]
     },
     howIsMade: {
       ro: "Marinează carnea în oțet, sos de soia, usturoi și condimente. Gătește la foc mic până devine fragedă și sosul se îngroașă.",
@@ -4443,9 +4443,9 @@ export const recipes = [
       ar: "انقع اللحم في الخل وصلصة الصويا والثوم والتوابل. اطبخ على نار هادئة حتى ينضج ويتكاثف الصوص.",
       zh: "将肉用醋、酱油、大蒜和香料腌制，慢炖至软烂、汤汁浓稠。",
       ja: "肉を酢・醤油・ニンニク・スパイスで漬け込み、弱火で煮込んで柔らかくし、ソースを煮詰める。",
-      tr: "Marinate meat in sirke, soya sosu, sarımsak, ve spices. Simmer gently until tender ve sos thickens.",
-      it: "Marinate meat in aceto, salsa di soia, aglio, e spices. Simmer gently until tender e salsa thickens.",
-      ko: "Marinate meat in 식초, 간장, 마늘, 그리고 spices. Simmer gently until tender그리고 소스 thickens하세요."
+      tr: "marine edin et in sirke, soya sosu, sarımsak, ve baharatlar. kısık ateşte pişirin nazikçe yumuşayana kadar ve sos koyulaşır.",
+      it: "marina carne in aceto, salsa di soia, aglio, e spezie. lascia sobbollire delicatamente finché sarà tenero e salsa si addensa.",
+      ko: "재웁니다 고기 에서 식초, 간장, 마늘, 그리고 향신료. 약불에서 끓입니다 부드럽게 부드러워질 때까지그리고 소스 걸쭉해집니다하세요."
     },
     originText: {
       ro: "Adobo este o rețetă tradițională din Filipine.",
@@ -4459,7 +4459,7 @@ export const recipes = [
       zh: "阿多波炖肉 是来自菲律宾的传统食谱。",
       ja: "アドボ はフィリピンの伝統的なレシピです。",
       tr: "Adobo Filipinler kökenli geleneksel bir tariftir.",
-      it: "Adobo è una ricetta tradizionale di Filippine.",
+      it: "Adobo è una risotta tradizionale di Filippine.",
       ko: "Adobo는(은) 필리핀의 전통 요리입니다."
     }
   },
@@ -4521,9 +4521,9 @@ export const recipes = [
       ar: ["دجاج", "بصل أخضر", "فلفل حار", "ثوم", "زنجبيل", "بهارات جيرك", "ليمون أخضر"],
       zh: ["鸡肉", "葱", "辣椒", "大蒜", "生姜", "牙买加香料", "青柠"],
       ja: ["鶏肉", "青ねぎ", "唐辛子", "ニンニク", "ショウガ", "ジャークスパイス", "ライム"],
-      tr: ["tavuk", "green soğan", "chili biber", "sarımsak", "zencefil", "jerk spices", "yeşil limon"],
-      it: ["pollo", "green cipolla", "chili peperone", "aglio", "zenzero", "jerk spices", "lime"],
-      ko: ["닭고기", "green 양파", "chili 고추", "마늘", "생강", "jerk spices", "라임"]
+      tr: ["tavuk", "yeşil soğbir", "acı biber biber", "sarımsak", "zencefil", "저크 baharatlar", "yeşil limon"],
+      it: ["pollo", "verde cipolla", "peperoncino peperone", "aglio", "zenzero", "jerk spezie", "lime"],
+      ko: ["닭고기", "초록 양파", "고추 고추", "마늘", "생강", "저크 향신료", "라임"]
     },
     howIsMade: {
       ro: "Marinează bucățile de pui cu amestec de condimente jerk, gătește pe grătar sau la cuptor până devin crocante și aromate.",
@@ -4536,9 +4536,9 @@ export const recipes = [
       ar: "تبل الدجاج بتوابل جيرك، واشوه أو اخبزه حتى يصبح مقرمشًا وعطريًا.",
       zh: "用杰克香料腌制鸡肉，烧烤或烘烤至外皮酥脆有香气。",
       ja: "ジャークスパイスで鶏肉をマリネし、グリルやオーブンでカリッと焼く。",
-      tr: "Marinate tavuk pieces ile jerk spice mix, Izgara yap or roast until crispy ve flavorful.",
-      it: "Marinate pollo pieces con jerk spice mix, Griglia or roast until crispy e flavorful.",
-      ko: "Marinate 닭고기 pieces와 jerk spice mix, 구워 or roast until crispy그리고 flavorful하세요."
+      tr: "marine edin tavuk parçalar ile 저크 baharat karıştırın, Izgara yap veya fırınlayın çıtır ve lezzetli.",
+      it: "marina pollo pezzi con jerk spezia mescola, Griglia o arrosto croccante e sapori intensi.",
+      ko: "재웁니다 닭고기 조각와 저크 향신료 섞습니다, 구워 또는 굽습니다 바삭한그리고 풍미가 좋은하세요."
     },
     originText: {
       ro: "Jerk Chicken este o rețetă tradițională din Jamaica.",
@@ -4551,9 +4551,9 @@ export const recipes = [
       ar: "دجاج جيرك هي وصفة تقليدية من جامايكا.",
       zh: "牙买加辣鸡 是来自牙买加的传统食谱。",
       ja: "ジャークチキン はジャマイカの伝統的なレシピです。",
-      tr: "Jerk Chicken Jamaica kökenli geleneksel bir tariftir.",
-      it: "Jerk Chicken è una ricetta tradizionale di Jamaica.",
-      ko: "Jerk Chicken는(은) Jamaica의 전통 요리입니다."
+      tr: "저크 tavuk Jamaica kökenli geleneksel bir tariftir.",
+      it: "jerk pollo è una risotta tradizionale di Jamaica.",
+      ko: "저크 닭고기는(은) Jamaica의 전통 요리입니다."
     }
   },
   {
@@ -4614,9 +4614,9 @@ export const recipes = [
       ar: ["دجاج", "بصل", "ثوم", "زنجبيل", "زبدة مصفاة", "بيض مسلوق", "بهارات بربري"],
       zh: ["鸡肉", "洋葱", "大蒜", "生姜", "澄清黄油", "水煮蛋", "伯贝雷香料"],
       ja: ["鶏肉", "玉ねぎ", "ニンニク", "ショウガ", "澄ましバター", "ゆで卵", "ベルベルスパイス"],
-      tr: ["tavuk", "soğan", "sarımsak", "zencefil", "clarified tereyağı", "boiled yumurta", "berbere spice"],
-      it: ["pollo", "cipolla", "aglio", "zenzero", "clarified burro", "boiled uova", "berbere spice"],
-      ko: ["닭고기", "양파", "마늘", "생강", "clarified 버터", "boiled 계란", "berbere spice"]
+      tr: ["tavuk", "soğbir", "sarımsak", "zencefil", "arıtılmış tereyağı", "byağ yumurta", "berbere baharat"],
+      it: ["pollo", "cipolla", "aglio", "zenzero", "chiarificato burro", "bolioed uova", "berbere spezia"],
+      ko: ["닭고기", "양파", "마늘", "생강", "정제한 버터", "b기름 계란", "베르베레 향신료"]
     },
     howIsMade: {
       ro: "Gătește puiul cu ceapă, unt clarifiat și amestec de condimente berbere. Fierbe încet și adaugă ouă fierte spre final.",
@@ -4629,9 +4629,9 @@ export const recipes = [
       ar: "اطبخ الدجاج مع البصل والزبدة المصفاة وتوابل البربري، واطبخه ببطء وأضف البيض المسلوق في النهاية.",
       zh: "鸡肉与洋葱、酥油和埃塞俄比亚香料炖煮，最后加入水煮蛋。",
       ja: "鶏肉を玉ねぎ・澄ましバター・ベルベルスパイスと煮込み、仕上げにゆで卵を加える。",
-      tr: "Pişir tavuk ile soğan, clarified tereyağı, ve berbere spice blend. Simmer gently ve add boiled yumurta at end.",
-      it: "Cuoci pollo con cipolla, clarified burro, e berbere spice blend. Simmer gently e add boiled uova at end.",
-      ko: "조리하고 닭고기와 양파, clarified 버터, 그리고 berbere spice blend. Simmer gently그리고 add boiled 계란 at end하세요."
+      tr: "Pişir tavuk ile soğbir, arıtılmış tereyağı, ve berbere baharat blenderdan geçirin. kısık ateşte pişirin nazikçe ve ekleyin byağ yumurta  sonunda.",
+      it: "Cuoci pollo con cipolla, chiarificato burro, e berbere spezia frulla. lascia sobbollire delicatamente e aggiungi bolioed uova  alla fine.",
+      ko: "조리하고 닭고기와 양파, 정제한 버터, 그리고 베르베레 향신료 블렌더에 갈아줍니다. 약불에서 끓입니다 부드럽게그리고 넣습니다 b기름 계란 에서 마지막에하세요."
     },
     originText: {
       ro: "Doro Wat este o rețetă tradițională din Etiopia.",
@@ -4645,7 +4645,7 @@ export const recipes = [
       zh: "埃塞俄比亚辣鸡 是来自埃塞俄比亚的传统食谱。",
       ja: "ドロワット はエチオピアの伝統的なレシピです。",
       tr: "Doro Wat Ethiopia kökenli geleneksel bir tariftir.",
-      it: "Doro Wat è una ricetta tradizionale di Ethiopia.",
+      it: "Doro Wat è una risotta tradizionale di Ethiopia.",
       ko: "Doro Wat는(은) Ethiopia의 전통 요리입니다."
     }
   },
@@ -4707,9 +4707,9 @@ export const recipes = [
       ar: ["لحم مفروم", "برغل", "بصل", "جوز", "توابل", "زيت"],
       zh: ["碎肉", "小麦碎", "洋葱", "坚果", "香料", "油"],
       ja: ["ひき肉", "ブルグル", "玉ねぎ", "ナッツ", "スパイス", "油"],
-      tr: ["minced meat", "bulgur", "soğan", "nuts", "spices", "oil"],
-      it: ["minced meat", "bulgur", "cipolla", "nuts", "spices", "oil"],
-      ko: ["minced meat", "bulgur", "양파", "nuts", "spices", "oil"]
+      tr: ["kıyılmış et", "bulgur", "soğbir", "kuruyemiş", "baharatlar", "yağ"],
+      it: ["tritato carne", "bulgur", "cipolla", "frutta secca", "spezie", "olio"],
+      ko: ["다진 고기", "불구르", "양파", "견과류", "향신료", "기름"]
     },
     howIsMade: {
       ro: "Amestecă bulgur cu carne tocată și condimente, modelează bile sau discuri, umple cu carne și prăjește până devin aurii.",
@@ -4722,9 +4722,9 @@ export const recipes = [
       ar: "اخلط البرغل مع اللحم المفروم والتوابل، شكّل كرات أو أقراص، احشها باللحم واقلها حتى تصبح ذهبية.",
       zh: "将小麦碴与肉末和香料混合，做成球或饼，包入肉馅炸至金黄。",
       ja: "ブルグルと挽肉・スパイスを混ぜて団子か円盤型にし、中に肉を入れて揚げる。",
-      tr: "Karıştır bulgur ile minced meat ve spices, shape into balls or discs, fill ile meat, ve Kızart until golden.",
-      it: "Mescola bulgur con minced meat e spices, shape into balls or discs, fill con meat, e Friggi until golden.",
-      ko: "섞고 bulgur와 minced meat그리고 spices, shape into balls or discs, fill와 meat, 그리고 볶거나 튀기고 until golden하세요."
+      tr: "Karıştır bulgur ile kıyılmış et ve baharatlar, şekil verin içine toplar veya diskler, doldurun ile et, ve Kızart altın rengi.",
+      it: "Mescola bulgur con tritato carne e spezie, dai forma dentro polpette o dischi, farcisci con carne, e Friggi dorato.",
+      ko: "섞고 불구르와 다진 고기그리고 향신료, 모양을 만듭니다 안에 볼 또는 원반, 채웁니다와 고기, 그리고 볶거나 튀기고 노릇하게하세요."
     },
     originText: {
       ro: "Kibbeh este o rețetă tradițională din Siria.",
@@ -4738,7 +4738,7 @@ export const recipes = [
       zh: "碎肉小麦球 是来自叙利亚的传统食谱。",
       ja: "キッベ はシリアの伝統的なレシピです。",
       tr: "Kibbeh Syria kökenli geleneksel bir tariftir.",
-      it: "Kibbeh è una ricetta tradizionale di Syria.",
+      it: "Kibbeh è una risotta tradizionale di Syria.",
       ko: "Kibbeh는(은) Syria의 전통 요리입니다."
     }
   },
@@ -4800,9 +4800,9 @@ export const recipes = [
       ar: ["بطاطس", "ملفوف", "جزر", "نقانق", "زبدة", "ملح"],
       zh: ["土豆", "卷心菜", "胡萝卜", "香肠", "黄油", "盐"],
       ja: ["ジャガイモ", "キャベツ", "ニンジン", "ソーセージ", "バター", "塩"],
-      tr: ["patates", "cabbage", "havuçs", "sausages", "tereyağı", "tuz"],
-      it: ["patate", "cabbage", "carotas", "sausages", "burro", "sale"],
-      ko: ["감자", "cabbage", "당근s", "sausages", "버터", "소금"]
+      tr: ["patates", "lahana", "havuçs", "sosis", "tereyağı", "tuz"],
+      it: ["patate", "cavolo", "carotas", "salsicce", "burro", "sale"],
+      ko: ["감자", "양배추", "당근s", "소시지", "버터", "소금"]
     },
     howIsMade: {
       ro: "Fierbe cartofi și legume, pasează-le împreună, adaugă unt și servește cu cârnați sau carne afumată.",
@@ -4815,9 +4815,9 @@ export const recipes = [
       ar: "اسلق البطاطا والخضار، اهرسها معًا، أضف الزبدة وقدّمها مع النقانق أو اللحم المدخن.",
       zh: "土豆和蔬菜煮熟捣碎，加黄油，配香肠或熏肉食用。",
       ja: "ジャガイモと野菜を茹でて潰し、バターを加えてソーセージや燻製肉とともに。",
-      tr: "Haşla patates ve vegetables, mash them together, Ekle tereyağı, ve Servis et ile sausage or smoked meat.",
-      it: "Cuoci patate e vegetables, mash them together, Aggiungi burro, e Servi con sausage or smoked meat.",
-      ko: "삶고 감자그리고 vegetables, mash them together, 넣고 버터, 그리고 담아 내세요와 sausage or smoked meat하세요."
+      tr: "Haşla patates ve sebzeler, ezin onları birlikte, Ekle tereyağı, ve Servis et ile sosis veya isli et.",
+      it: "Cuoci patate e verdure, schiaccia li insieme, Aggiungi burro, e Servi con salsiccia o affumicato carne.",
+      ko: "삶고 감자그리고 채소, 으깨세요 그것들을 함께, 넣고 버터, 그리고 담아 내세요와 소시지 또는 훈제 고기하세요."
     },
     originText: {
       ro: "Stamppot este o rețetă tradițională din Olanda.",
@@ -4831,7 +4831,7 @@ export const recipes = [
       zh: "荷兰杂烩土豆泥 是来自荷兰的传统食谱。",
       ja: "スタンポット はオランダの伝統的なレシピです。",
       tr: "Stamppot Hollanda kökenli geleneksel bir tariftir.",
-      it: "Stamppot è una ricetta tradizionale di Paesi Bassi.",
+      it: "Stamppot è una risotta tradizionale di Paesi Bassi.",
       ko: "Stamppot는(은) 네덜란드의 전통 요리입니다."
     }
   },
@@ -4893,9 +4893,9 @@ export const recipes = [
       ar: ["لحم ضأن", "دجاج", "بطاطس", "يقطين", "خضروات", "ملح"],
       zh: ["羊肉", "鸡肉", "土豆", "南瓜", "蔬菜", "盐"],
       ja: ["ラム肉", "鶏肉", "ジャガイモ", "カボチャ", "野菜", "塩"],
-      tr: ["lamb", "tavuk", "patates", "pumpkin", "vegetables", "tuz"],
-      it: ["lamb", "pollo", "patate", "pumpkin", "vegetables", "sale"],
-      ko: ["lamb", "닭고기", "감자", "pumpkin", "vegetables", "소금"]
+      tr: ["kuzu", "tavuk", "patates", "kabak", "sebzeler", "tuz"],
+      it: ["agnello", "pollo", "patate", "zucca", "verdure", "sale"],
+      ko: ["양고기", "닭고기", "감자", "호박", "채소", "소금"]
     },
     howIsMade: {
       ro: "Îngroapă carnea și legumele în pământ, peste pietre încinse, acoperă cu frunze umede și pământ, apoi gătește-le lent la aburul din groapă.",
@@ -4908,9 +4908,9 @@ export const recipes = [
       ar: "ادفن اللحم والخضار فوق الحجارة الساخنة تحت الأرض، غطها بأوراق رطبة وتراب واطبخها على البخار ببطء.",
       zh: "将肉和蔬菜埋在烧热的石头上，用湿树叶和土覆盖，利用地热慢慢蒸熟。",
       ja: "加熱した石の上に肉と野菜を置き、濡れた葉と土で覆い、地中の蒸気でゆっくり調理。",
-      tr: "Bury meat ve vegetables in ground over hot stones, cover ile wet leaves ve earth, ve steam-cook slowly in underground oven.",
-      it: "Bury meat e vegetables in ground over hot stones, cover con wet leaves e earth, e steam-cook slowly in underground oven.",
-      ko: "Bury meat그리고 vegetables in ground over hot stones, cover와 wet leaves그리고 earth, 그리고 steam-cook slowly in underground oven하세요."
+      tr: "Bury et ve sebzeler in öğütülmüş üzerine sıcak çekirdekler, örtün ile ıslak yaprak ve toprak, ve buharda pişirin-pişirin yavaşça in yeraltı fırın.",
+      it: "Bury carne e verdure in macinato sopra caldo noccioli, copri con bagnato foglie e terra, e cuoci a vapore-cuoci lentamente in sottoterra forno.",
+      ko: "Bury 고기그리고 채소 에서 간 위에 뜨거운 씨, 덮습니다와 젖은 잎그리고 흙, 그리고 찝니다-조리합니다 천천히 에서 지하 오븐하세요."
     },
     originText: {
       ro: "Hangi este o rețetă tradițională din Noua Zeelandă.",
@@ -4924,7 +4924,7 @@ export const recipes = [
       zh: "新西兰地窖烹饪 是来自新西兰的传统食谱。",
       ja: "ハンギ はニュージーランドの伝統的なレシピです。",
       tr: "Hangi New Zealand kökenli geleneksel bir tariftir.",
-      it: "Hangi è una ricetta tradizionale di New Zealand.",
+      it: "Hangi è una risotta tradizionale di New Zealand.",
       ko: "Hangi는(은) New Zealand의 전통 요리입니다."
     }
   },
@@ -4986,9 +4986,9 @@ export const recipes = [
       ar: ["بلح البحر", "بطاطس", "زبدة", "ثوم", "نبيذ أبيض", "بقدونس"],
       zh: ["贻贝", "土豆", "黄油", "大蒜", "白葡萄酒", "欧芹"],
       ja: ["ムール貝", "ジャガイモ", "バター", "ニンニク", "白ワイン", "パセリ"],
-      tr: ["mussels", "patates", "tereyağı", "sarımsak", "white wine", "maydanoz"],
-      it: ["mussels", "patate", "burro", "aglio", "white wine", "prezzemolo"],
-      ko: ["mussels", "감자", "버터", "마늘", "white wine", "파슬리"]
+      tr: ["midye", "patates", "tereyağı", "sarımsak", "beyaz şarap", "maydanoz"],
+      it: ["cozze", "patate", "burro", "aglio", "bianco vino", "prezzemolo"],
+      ko: ["홍합", "감자", "버터", "마늘", "흰 와인", "파슬리"]
     },
     howIsMade: {
       ro: "Fierbe midiile cu vin alb, ceapă și usturoi până se deschid, servește-le cu cartofi prăjiți crocanți.",
@@ -5001,9 +5001,9 @@ export const recipes = [
       ar: "اطبخ بلح البحر على البخار مع النبيذ الأبيض والبصل والثوم حتى يفتح. قدّمه مع البطاطا المقلية المقرمشة.",
       zh: "贻贝加白葡萄酒、洋葱和大蒜蒸煮至壳开，与脆薯条同食。",
       ja: "ムール貝を白ワイン・玉ねぎ・ニンニクで蒸し、殻が開いたらカリカリのフライドポテトと一緒に提供。",
-      tr: "Steam mussels ile white wine, soğan, ve sarımsak until they open, sonra Servis et ile crispy fries.",
-      it: "Steam mussels con white wine, cipolla, e aglio until they open, poi Servi con crispy fries.",
-      ko: "Steam mussels와 white wine, 양파, 그리고 마늘 until they open, 그다음 담아 내세요와 crispy fries하세요."
+      tr: "buharda pişirin midye ile beyaz şarap, soğbir, ve sarımsak onlar açın, sonra Servis et ile çıtır patates kızartması.",
+      it: "cuoci a vapore cozze con bianco vino, cipolla, e aglio loro apri, poi Servi con croccante patatine fritte.",
+      ko: "찝니다 홍합와 흰 와인, 양파, 그리고 마늘 그들은 엽니다, 그다음 담아 내세요와 바삭한 감자튀김하세요."
     },
     originText: {
       ro: "Moules-frites este o rețetă tradițională din Belgia.",
@@ -5016,9 +5016,9 @@ export const recipes = [
       ar: "بلح البحر مع البطاطس المقلية هي وصفة تقليدية من بلجيكا.",
       zh: "贻贝薯条 是来自比利时的传统食谱。",
       ja: "ムール貝とフライドポテト はベルギーの伝統的なレシピです。",
-      tr: "Moules-frites Belçika kökenli geleneksel bir tariftir.",
-      it: "Moules-frites è una ricetta tradizionale di Belgio.",
-      ko: "Moules-frites는(은) 벨기에의 전통 요리입니다."
+      tr: "Moules-patates kızartması Belçika kökenli geleneksel bir tariftir.",
+      it: "Moules-patatine fritte è una risotta tradizionale di Belgio.",
+      ko: "Moules-감자튀김는(은) 벨기에의 전통 요리입니다."
     }
   },
   {
@@ -5079,9 +5079,9 @@ export const recipes = [
       ar: ["باذنجان", "بطاطس", "لحم مفروم", "طماطم", "بصل", "ثوم", "صلصة بشاميل"],
       zh: ["茄子", "土豆", "肉末", "番茄", "洋葱", "大蒜", "奶油酱"],
       ja: ["ナス", "ジャガイモ", "ひき肉", "トマト", "玉ねぎ", "ニンニク", "ベシャメルソース"],
-      tr: ["yumurtaplant", "patates", "minced meat", "domates", "soğan", "sarımsak", "bechamel sauce"],
-      it: ["uovoplant", "patate", "minced meat", "pomodori", "cipolla", "aglio", "bechamel sauce"],
-      ko: ["계란plant", "감자", "minced meat", "토마토", "양파", "마늘", "bechamel sauce"]
+      tr: ["yumurtaplant", "patates", "kıyılmış et", "domates", "soğbir", "sarımsak", "beşamel sos"],
+      it: ["uovoplant", "patate", "tritato carne", "pomodori", "cipolla", "aglio", "besciamella salsa"],
+      ko: ["계란식물", "감자", "다진 고기", "토마토", "양파", "마늘", "베샤멜 소스"]
     },
     howIsMade: {
       ro: "Așază straturi de vinete prăjite, carne tocată și sos de roșii, acoperă cu sos bechamel și coace până devine aurie.",
@@ -5094,9 +5094,9 @@ export const recipes = [
       ar: "ضع طبقات من الباذنجان المقلي واللحم المفروم وصلصة الطماطم، غطها بالبشاميل واخبزها حتى تتحمر.",
       zh: "铺层炸茄子、肉末和番茄酱，上面覆以白酱，烤至金黄。",
       ja: "揚げナス・ひき肉・トマトソースを重ね、ベシャメルソースをかけて焼き色がつくまでオーブンで焼く。",
-      tr: "Layer fried yumurtaplant, minced meat, ve domates sos, top ile béchamel sos, ve Fırında pişir until golden.",
-      it: "Layer fried uovoplant, minced meat, e pomodoro salsa, top con béchamel salsa, e Cuoci al forno until golden.",
-      ko: "Layer fried 계란plant, minced meat, 그리고 토마토 소스, top와 béchamel 소스, 그리고 오븐에 구워 until golden하세요."
+      tr: "katman kızarmış yumurtaplant, kıyılmış et, ve domates sos, üstüne ile bébeşamel sos, ve Fırında pişir altın rengi.",
+      it: "strato fritto uovoplant, tritato carne, e pomodoro salsa, sopra con bébesciamella salsa, e Cuoci al forno dorato.",
+      ko: "층 튀긴 계란식물, 다진 고기, 그리고 토마토 소스, 위에와 bé베샤멜 소스, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Moussaka este o rețetă tradițională din Grecia.",
@@ -5110,7 +5110,7 @@ export const recipes = [
       zh: "慕萨卡 是来自希腊的传统食谱。",
       ja: "ムサカ はギリシャの伝統的なレシピです。",
       tr: "Moussaka Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Moussaka è una ricetta tradizionale di Grecia.",
+      it: "Moussaka è una risotta tradizionale di Grecia.",
       ko: "Moussaka는(은) 그리스의 전통 요리입니다."
     }
   },
@@ -5172,9 +5172,9 @@ export const recipes = [
       ar: ["لحم بقري", "كريمة", "خضار", "ورق غار", "ليمون", "سكر", "خل"],
       zh: ["牛里脊", "奶油", "蔬菜", "月桂叶", "柠檬", "糖", "醋"],
       ja: ["牛ヒレ肉", "クリーム", "野菜", "ローリエ", "レモン", "砂糖", "酢"],
-      tr: ["dana eti sirloin", "krema", "vegetables", "bay leaf", "limon", "şeker", "sirke"],
-      it: ["manzo sirloin", "panna", "vegetables", "bay leaf", "limone", "zucchero", "aceto"],
-      ko: ["소고기 sirloin", "크림", "vegetables", "bay leaf", "레몬", "설탕", "식초"]
+      tr: ["dana eti kontrfile", "krema", "sebzeler", "defne yaprak", "limon", "şeker", "sirke"],
+      it: ["manzo controfiletto", "panna", "verdure", "alloro foglia", "limone", "zucchero", "aceto"],
+      ko: ["소고기 등심", "크림", "채소", "월계수 잎", "레몬", "설탕", "식초"]
     },
     howIsMade: {
       ro: "Marinează carnea de vită, frige-o, apoi fierbe-o în sos cremos de legume, smântână și condimente. Servește cu găluște.",
@@ -5187,9 +5187,9 @@ export const recipes = [
       ar: "تبل لحم البقر واشوه ثم اطبخه ببطء في صلصة كريمية بالخضار والكريمة والتوابل. قدّمه مع الزلابية.",
       zh: "牛肉腌制后烤制，再炖入蔬菜奶油酱与香料，配面团球食用。",
       ja: "牛肉をマリネして焼き、野菜と生クリームのソースで煮込み、クネドリーキ（団子）と一緒に提供。",
-      tr: "Marinate dana eti, Fırınla it, sonra Kısık ateşte pişir in a kremay vegetable sos ile krema ve spices. Serve ile dumplings.",
-      it: "Marinate manzo, Arrostisci it, poi Fai sobbollire in a pannay vegetable salsa con panna e spices. Serve con dumplings.",
-      ko: "Marinate 소고기, 구워 it, 그다음 약불로 끓여 in a 크림y vegetable 소스와 크림그리고 spices. Serve와 dumplings하세요."
+      tr: "marine edin dana eti, Fırınla o, sonra Kısık ateşte pişir kremay sebze sos ile krema ve baharatlar. servis edin ile mantı.",
+      it: "marina manzo, Arrostisci esso, poi Fai sobbollire pannay verdura salsa con panna e spezie. servi con ravioli.",
+      ko: "재웁니다 소고기, 구워 그것, 그다음 약불로 끓여 에서 a 크림y 채소 소스와 크림그리고 향신료. 제공합니다와 만두하세요."
     },
     originText: {
       ro: "Svíčková este o rețetă tradițională din Republica Cehă.",
@@ -5203,7 +5203,7 @@ export const recipes = [
       zh: "捷克奶油炖牛肉 是来自捷克的传统食谱。",
       ja: "スヴィチュコヴァー はチェコの伝統的なレシピです。",
       tr: "Svíčková Czech Republic kökenli geleneksel bir tariftir.",
-      it: "Svíčková è una ricetta tradizionale di Czech Republic.",
+      it: "Svíčková è una risotta tradizionale di Czech Republic.",
       ko: "Svíčková는(은) Czech Republic의 전통 요리입니다."
     }
   },
@@ -5265,9 +5265,9 @@ export const recipes = [
       ar: ["لحم ضأن", "ملفوف", "فلفل أسود", "ماء", "ملح"],
       zh: ["羊肉", "卷心菜", "黑胡椒", "水", "盐"],
       ja: ["ラム肉", "キャベツ", "黒コショウ", "水", "塩"],
-      tr: ["lamb", "cabbage", "karabiber", "su", "tuz"],
-      it: ["lamb", "cabbage", "pepe nero", "acqua", "sale"],
-      ko: ["lamb", "cabbage", "후추", "물", "소금"]
+      tr: ["kuzu", "lahana", "karabiber", "su", "tuz"],
+      it: ["agnello", "cavolo", "pepe nero", "acqua", "sale"],
+      ko: ["양고기", "양배추", "후추", "물", "소금"]
     },
     howIsMade: {
       ro: "Așază straturi de carne de miel și varză într-o oală, presară boabe de piper, adaugă apă și fierbe încet până totul e fraged.",
@@ -5280,9 +5280,9 @@ export const recipes = [
       ar: "ضع طبقات من لحم الغنم والملفوف في قدر، أضف حبات الفلفل والماء واطبخ ببطء حتى ينضج.",
       zh: "将羊肉和卷心菜分层放入锅中，加胡椒和水，小火慢炖至软烂。",
       ja: "鍋にラム肉とキャベツを重ねて入れ、黒胡椒と水を加え、じっくり煮込む。",
-      tr: "Layer lamb ve cabbage in a pot, sprinkle ile bibermısırs, Ekle su, ve Kısık ateşte pişir slowly until tender.",
-      it: "Layer lamb e cabbage in a pot, sprinkle con peperonemaiss, Aggiungi acqua, e Fai sobbollire slowly until tender.",
-      ko: "Layer lamb그리고 cabbage in a pot, sprinkle와 고추옥수수s, 넣고 물, 그리고 약불로 끓여 slowly until tender하세요."
+      tr: "katman kuzu ve lahana tencere, serpiştirin ile bibermısırs, Ekle su, ve Kısık ateşte pişir yavaşça yumuşayana kadar.",
+      it: "strato agnello e cavolo pentola, spolvera con peperonemaiss, Aggiungi acqua, e Fai sobbollire lentamente finché sarà tenero.",
+      ko: "층 양고기그리고 양배추 에서 a 냄비, 뿌립니다와 고추옥수수s, 넣고 물, 그리고 약불로 끓여 천천히 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Fårikål este o rețetă tradițională din Norvegia.",
@@ -5296,7 +5296,7 @@ export const recipes = [
       zh: "挪威羊肉炖菜 是来自挪威的传统食谱。",
       ja: "フォリコール はノルウェーの伝統的なレシピです。",
       tr: "Fårikål Norveç kökenli geleneksel bir tariftir.",
-      it: "Fårikål è una ricetta tradizionale di Norvegia.",
+      it: "Fårikål è una risotta tradizionale di Norvegia.",
       ko: "Fårikål는(은) 노르웨이의 전통 요리입니다."
     }
   },
@@ -5358,9 +5358,9 @@ export const recipes = [
       ar: ["فول", "ليمون", "زيت زيتون", "بصل", "طماطم", "توابل"],
       zh: ["蚕豆", "柠檬", "橄榄油", "洋葱", "番茄", "香料"],
       ja: ["そら豆", "レモン", "オリーブオイル", "玉ねぎ", "トマト", "スパイス"],
-      tr: ["fava fasulye", "limon", "zeytinyağı", "soğan", "domates", "spices"],
-      it: ["fava fagioli", "limone", "olio d'oliva", "cipolla", "pomodori", "spices"],
-      ko: ["fava 콩", "레몬", "올리브오일", "양파", "토마토", "spices"]
+      tr: ["bakla fasulye", "limon", "zeytinyağı", "soğbir", "domates", "baharatlar"],
+      it: ["fava fagioli", "limone", "olio d'oliva", "cipolla", "pomodori", "spezie"],
+      ko: ["잠두 콩", "레몬", "올리브오일", "양파", "토마토", "향신료"]
     },
     howIsMade: {
       ro: "Fierbe bobul de fasole fava până devine fraged, apoi pasează-le grosier cu usturoi, lămâie, ulei de măsline și condimente.",
@@ -5373,9 +5373,9 @@ export const recipes = [
       ar: "اسلق الفول حتى يلين، ثم اهرسه خشناً مع الثوم والليمون وزيت الزيتون والتوابل.",
       zh: "将蚕豆煮烂，用大蒜、柠檬、橄榄油和香料粗略捣碎混合。",
       ja: "そら豆を柔らかく茹でて、ニンニク・レモン・オリーブオイル・スパイスと一緒に粗く潰す。",
-      tr: "Haşla fava fasulye until tender, sonra roughly mash them ile sarımsak, limon, zeytinyağı, ve spices.",
-      it: "Cuoci fava fagioli until tender, poi roughly mash them con aglio, limone, olio d'oliva, e spices.",
-      ko: "삶고 fava 콩 until tender, 그다음 roughly mash them와 마늘, 레몬, 올리브오일, 그리고 spices하세요."
+      tr: "Haşla bakla fasulye yumuşayana kadar, sonra kabaca ezin onları ile sarımsak, limon, zeytinyağı, ve baharatlar.",
+      it: "Cuoci fava fagioli finché sarà tenero, poi grossolanamente schiaccia li con aglio, limone, olio d'oliva, e spezie.",
+      ko: "삶고 잠두 콩 부드러워질 때까지, 그다음 대략 으깨세요 그것들을와 마늘, 레몬, 올리브오일, 그리고 향신료하세요."
     },
     originText: {
       ro: "Ful Medames este o rețetă tradițională din Sudan.",
@@ -5389,7 +5389,7 @@ export const recipes = [
       zh: "炖蚕豆 是来自苏丹的传统食谱。",
       ja: "フール・メダメス はスーダンの伝統的なレシピです。",
       tr: "Ful Medames Sudan kökenli geleneksel bir tariftir.",
-      it: "Ful Medames è una ricetta tradizionale di Sudan.",
+      it: "Ful Medames è una risotta tradizionale di Sudan.",
       ko: "Ful Medames는(은) Sudan의 전통 요리입니다."
     }
   },
@@ -5451,9 +5451,9 @@ export const recipes = [
       ar: ["لحم بقري", "نبيذ أحمر", "بصل", "ثوم", "طماطم", "جزر", "فلفل"],
       zh: ["牛肉", "红葡萄酒", "洋葱", "大蒜", "番茄", "胡萝卜", "胡椒"],
       ja: ["牛肉", "赤ワイン", "玉ねぎ", "ニンニク", "トマト", "ニンジン", "コショウ"],
-      tr: ["dana eti", "red wine", "soğan", "sarımsak", "domates", "havuçs", "biber"],
-      it: ["manzo", "red wine", "cipolla", "aglio", "pomodori", "carotas", "peperone"],
-      ko: ["소고기", "red wine", "양파", "마늘", "토마토", "당근s", "고추"]
+      tr: ["dana eti", "kırmızı şarap", "soğbir", "sarımsak", "domates", "havuçs", "biber"],
+      it: ["manzo", "rosso vino", "cipolla", "aglio", "pomodori", "carotas", "peperone"],
+      ko: ["소고기", "빨간 와인", "양파", "마늘", "토마토", "당근s", "고추"]
     },
     howIsMade: {
       ro: "Marinează carnea de vită în oțet, condimente și legume. Fierbe-o lent cu vin roșu și prune uscate până devine fragedă.",
@@ -5466,9 +5466,9 @@ export const recipes = [
       ar: "انقع لحم البقر في الخل والتوابل والخضار، واطبخه ببطء مع النبيذ الأحمر والبرقوق المجفف حتى ينضج.",
       zh: "牛肉用醋、香料和蔬菜腌制后，和红酒、干李子一起慢炖至软烂。",
       ja: "牛肉を酢・スパイス・野菜でマリネし、赤ワインとプルーンでじっくり煮込む。",
-      tr: "Marinate dana eti in sirke, spices, ve vegetables. Slowly cook ile red wine ve dried plums until tender.",
-      it: "Marinate manzo in aceto, spices, e vegetables. Slowly cook con red wine e dried plums until tender.",
-      ko: "Marinate 소고기 in 식초, spices, 그리고 vegetables. Slowly cook와 red wine그리고 dried plums until tender하세요."
+      tr: "marine edin dana eti in sirke, baharatlar, ve sebzeler. yavaşça pişirin ile kırmızı şarap ve kurutulmuş erik yumuşayana kadar.",
+      it: "marina manzo in aceto, spezie, e verdure. lentamente cuoci con rosso vino e secco prugne finché sarà tenero.",
+      ko: "재웁니다 소고기 에서 식초, 향신료, 그리고 채소. 천천히 조리합니다와 빨간 와인그리고 말린 자두 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Pasticada este o rețetă tradițională din Croația.",
@@ -5482,7 +5482,7 @@ export const recipes = [
       zh: "牛肉炖菜 是来自克罗地亚的传统食谱。",
       ja: "パスティカーダ はクロアチアの伝統的なレシピです。",
       tr: "Pasticada Croatia kökenli geleneksel bir tariftir.",
-      it: "Pasticada è una ricetta tradizionale di Croatia.",
+      it: "Pasticada è una risotta tradizionale di Croatia.",
       ko: "Pasticada는(은) Croatia의 전통 요리입니다."
     }
   },
@@ -5544,9 +5544,9 @@ export const recipes = [
       ar: ["دقيق", "لحم ضأن", "بصل", "ثوم", "ملح", "فلفل"],
       zh: ["面粉", "羊肉", "洋葱", "大蒜", "盐", "胡椒"],
       ja: ["小麦粉", "ラム肉", "玉ねぎ", "ニンニク", "塩", "コショウ"],
-      tr: ["un", "lamb", "soğan", "sarımsak", "tuz", "biber"],
-      it: ["farina", "lamb", "cipolla", "aglio", "sale", "peperone"],
-      ko: ["밀가루", "lamb", "양파", "마늘", "소금", "고추"]
+      tr: ["un", "kuzu", "soğbir", "sarımsak", "tuz", "biber"],
+      it: ["farina", "agnello", "cipolla", "aglio", "sale", "peperone"],
+      ko: ["밀가루", "양고기", "양파", "마늘", "소금", "고추"]
     },
     howIsMade: {
       ro: "Umple aluatul cu carne tocată, formează găluște rotunde și gătește-le la abur până devin moi și suculente.",
@@ -5559,9 +5559,9 @@ export const recipes = [
       ar: "احشِ العجين باللحم المفروم، شكّل كرات واطبخها على البخار حتى تصبح طرية وعصيرية.",
       zh: "面团包入肉馅，搓成圆形包子，蒸至松软多汁。",
       ja: "挽肉を包んだ生地を丸く成形し、蒸して柔らかくジューシーに仕上げる。",
-      tr: "Fill dough ile minced meat, shape into round dumplings, ve steam until soft ve juicy.",
-      it: "Fill dough con minced meat, shape into round dumplings, e steam until soft e juicy.",
-      ko: "Fill dough와 minced meat, shape into round dumplings, 그리고 steam until soft그리고 juicy하세요."
+      tr: "doldurun hamur ile kıyılmış et, şekil verin içine yuvarlak mantı, ve buharda pişirin yumuşak ve sulu.",
+      it: "farcisci impasto con tritato carne, dai forma dentro rotondo ravioli, e cuoci a vapore morbido e succoso.",
+      ko: "채웁니다 반죽와 다진 고기, 모양을 만듭니다 안에 둥근 만두, 그리고 찝니다 부드러운그리고 육즙이 있는하세요."
     },
     originText: {
       ro: "Buuz este o rețetă tradițională din Mongolia.",
@@ -5575,7 +5575,7 @@ export const recipes = [
       zh: "蒙古包子 是来自蒙古的传统食谱。",
       ja: "ボーズ はモンゴルの伝統的なレシピです。",
       tr: "Buuz Mongolia kökenli geleneksel bir tariftir.",
-      it: "Buuz è una ricetta tradizionale di Mongolia.",
+      it: "Buuz è una risotta tradizionale di Mongolia.",
       ko: "Buuz는(은) Mongolia의 전통 요리입니다."
     }
   },
@@ -5637,9 +5637,9 @@ export const recipes = [
       ar: ["أرز بسمتي", "دجاج أو لحم ضأن", "لبن زبادي", "بصل", "بهارات برياني", "طماطم", "زيت"],
       zh: ["巴斯马蒂米", "鸡肉或羊肉", "酸奶", "洋葱", "香料", "番茄", "油"],
       ja: ["バスマティライス", "鶏肉またはラム肉", "ヨーグルト", "玉ねぎ", "ビリヤニスパイス", "トマト", "油"],
-      tr: ["basmati pirinç", "tavuk or lamb", "yoğurt", "soğan", "biryani spices", "domates", "oil"],
-      it: ["basmati riso", "pollo or lamb", "yogurt", "cipolla", "biryani spices", "pomodori", "oil"],
-      ko: ["basmati 쌀", "닭고기 or lamb", "요거트", "양파", "biryani spices", "토마토", "oil"]
+      tr: ["basmati pirinç", "tavuk veya kuzu", "yoğurt", "soğbir", "biryani baharatlar", "domates", "yağ"],
+      it: ["basmati riso", "pollo o agnello", "yogurt", "cipolla", "biryani spezie", "pomodori", "olio"],
+      ko: ["바스마티 쌀", "닭고기 또는 양고기", "요거트", "양파", "비리야니 향신료", "토마토", "기름"]
     },
     howIsMade: {
       ro: "Gătește orezul separat, prepară carnea cu condimente, apoi așază-le în straturi și fierbe-le împreună la foc mic.",
@@ -5652,9 +5652,9 @@ export const recipes = [
       ar: "اطبخ الأرز بشكل منفصل، جهز اللحم بالتوابل ثم رتب الأرز واللحم بطبقات واطبخها معاً على نار هادئة.",
       zh: "米饭单独煮好，肉类加香料炒香，层层叠放后小火焖煮。",
       ja: "ご飯を別に炊き、スパイスで肉を調理し、層にして弱火で一緒に蒸し煮する。",
-      tr: "Pişir pirinç separately, prepare meat ile spices, sonra layer pirinç ve meat ve cook together on low heat.",
-      it: "Cuoci riso separately, prepare meat con spices, poi layer riso e meat e cook together on low heat.",
-      ko: "조리하고 쌀 separately, prepare meat와 spices, 그다음 layer 쌀그리고 meat그리고 cook together on low heat하세요."
+      tr: "Pişir pirinç ayrı ayrı, hazırlayın et ile baharatlar, sonra katman pirinç ve et ve pişirin birlikte üstüne kısık ısıtın.",
+      it: "Cuoci riso separatamente, prepara carne con spezie, poi strato riso e carne e cuoci insieme su basso scalda.",
+      ko: "조리하고 쌀 따로, 준비합니다 고기와 향신료, 그다음 층 쌀그리고 고기그리고 조리합니다 함께 위에 약한 가열합니다하세요."
     },
     originText: {
       ro: "Biryani este o rețetă tradițională din Pakistan.",
@@ -5667,9 +5667,9 @@ export const recipes = [
       ar: "برياني هي وصفة تقليدية من باكستان.",
       zh: "印度香饭 是来自巴基斯坦的传统食谱。",
       ja: "ビリヤニ はパキスタンの伝統的なレシピです。",
-      tr: "Biryani Pakistan kökenli geleneksel bir tariftir.",
-      it: "Biryani è una ricetta tradizionale di Pakistan.",
-      ko: "Biryani는(은) Pakistan의 전통 요리입니다."
+      tr: "biryani Pakistan kökenli geleneksel bir tariftir.",
+      it: "biryani è una risotta tradizionale di Pakistan.",
+      ko: "비리야니는(은) Pakistan의 전통 요리입니다."
     }
   },
   {
@@ -5730,9 +5730,9 @@ export const recipes = [
       ar: ["عجينة بريك", "بيض", "تونة", "بقدونس", "بصل", "كبر", "زيت"],
       zh: ["薄饼皮", "鸡蛋", "金枪鱼", "欧芹", "洋葱", "刺山柑", "油"],
       ja: ["ブリック生地", "卵", "ツナ", "パセリ", "玉ねぎ", "ケーパー", "油"],
-      tr: ["brik pastry", "yumurta", "ton balığı", "maydanoz", "soğan", "capers", "oil"],
-      it: ["brik pastry", "uova", "tonno", "prezzemolo", "cipolla", "capers", "oil"],
-      ko: ["brik pastry", "계란", "참치", "파슬리", "양파", "capers", "oil"]
+      tr: ["brik hamur", "yumurta", "ton balığı", "maydanoz", "soğbir", "kapari", "yağ"],
+      it: ["brik pasta", "uova", "tonno", "prezzemolo", "cipolla", "capperi", "olio"],
+      ko: ["브릭 파이지", "계란", "참치", "파슬리", "양파", "케이퍼", "기름"]
     },
     howIsMade: {
       ro: "Umple foile subțiri cu ou, ton sau carne, pliază și prăjește rapid în ulei până devin crocante.",
@@ -5745,9 +5745,9 @@ export const recipes = [
       ar: "احشِ رقائق العجين الرقيقة بالبيض أو التونة أو اللحم، اطوِها واقلها بسرعة حتى تصبح مقرمشة.",
       zh: "薄面皮包入鸡蛋、金枪鱼或肉，折叠后快速油炸至酥脆。",
       ja: "薄い生地に卵・ツナ・肉などを包み、折りたたんで油でカリッと揚げる。",
-      tr: "Fill thin pastry sheets ile yumurta, ton balığı, or meat, fold ve fry hızlıca in oil until crispy.",
-      it: "Fill thin pastry sheets con uovo, tonno, or meat, fold e fry rapidamente in oil until crispy.",
-      ko: "Fill thin pastry sheets와 계란, 참치, or meat, fold그리고 볶거나 튀겨 빠르게 in oil until crispy하세요."
+      tr: "doldurun ince hamur yufka ile yumurta, ton balığı, veya et, katlayın ve kavurun hızlıca in yağ çıtır.",
+      it: "farcisci sottile pasta sfoglie con uovo, tonno, o carne, incorpora delicatamente e rosola rapidamente in olio croccante.",
+      ko: "채웁니다 얇게 파이지 시트와 계란, 참치, 또는 고기, 접어 섞습니다그리고 볶거나 튀겨 빠르게 에서 기름 바삭한하세요."
     },
     originText: {
       ro: "Brik este o rețetă tradițională din Tunisia.",
@@ -5760,9 +5760,9 @@ export const recipes = [
       ar: "بريك هي وصفة تقليدية من تونس.",
       zh: "突尼斯蛋饼 是来自突尼斯的传统食谱。",
       ja: "ブリック はチュニジアの伝統的なレシピです。",
-      tr: "Brik Tunisia kökenli geleneksel bir tariftir.",
-      it: "Brik è una ricetta tradizionale di Tunisia.",
-      ko: "Brik는(은) Tunisia의 전통 요리입니다."
+      tr: "brik Tunisia kökenli geleneksel bir tariftir.",
+      it: "brik è una risotta tradizionale di Tunisia.",
+      ko: "브릭는(은) Tunisia의 전통 요리입니다."
     }
   },
   {
@@ -5823,9 +5823,9 @@ export const recipes = [
       ar: ["عجينة", "جبن", "بيض", "زبدة", "ملح"],
       zh: ["面团", "奶酪", "鸡蛋", "黄油", "盐"],
       ja: ["生地", "チーズ", "卵", "バター", "塩"],
-      tr: ["dough", "peynir", "yumurta", "tereyağı", "tuz"],
-      it: ["dough", "formaggio", "uova", "burro", "sale"],
-      ko: ["dough", "치즈", "계란", "버터", "소금"]
+      tr: ["hamur", "peynir", "yumurta", "tereyağı", "tuz"],
+      it: ["impasto", "formaggio", "uova", "burro", "sale"],
+      ko: ["반죽", "치즈", "계란", "버터", "소금"]
     },
     howIsMade: {
       ro: "Prepară un aluat dospit, modelează-l sub formă de barcă, umple cu brânză și coace. Sparge un ou deasupra spre final și mai coace puțin.",
@@ -5838,9 +5838,9 @@ export const recipes = [
       ar: "حضّر عجينة مخمرة، شكّلها كقارب، احشِها بالجبن واخبزها. أضف بيضة فوقها في النهاية وأكمل الخبز.",
       zh: "发酵面团做成船形，填入奶酪烘烤，快好时在上面打个鸡蛋再烤片刻。",
       ja: "発酵生地を舟形に成形しチーズを詰めて焼き、仕上げに卵を割り入れてさらに焼く。",
-      tr: "Prepare a leavened dough, shape it like a boat, fill ile peynir ve bake. Crack an yumurta on top near end ve bake a bit more.",
-      it: "Prepare a leavened dough, shape it like a boat, fill con formaggio e bake. Crack an uovo on top near end e bake a bit more.",
-      ko: "Prepare a leavened dough, shape it like a boat, fill와 치즈그리고 bake. Crack an 계란 on top near end그리고 bake a bit more하세요."
+      tr: "hazırlayın a mayalanmış hamur, şekil verin o gibi a kayık, doldurun ile peynir ve fırında pişirin. kırın bir yumurta üstüne üstüne yakın sonunda ve fırında pişirin a biraz daha.",
+      it: "prepara a lievitato impasto, dai forma esso come a barca, farcisci con formaggio e cuoci in forno. rompi un uovo su sopra vicino alla fine e cuoci in forno a un po' più.",
+      ko: "준비합니다 a 발효된 반죽, 모양을 만듭니다 그것 처럼 a 배, 채웁니다와 치즈그리고 오븐에서 굽습니다. 깨뜨립니다 하나의 계란 위에 위에 가까이 마지막에그리고 오븐에서 굽습니다 a 조금 더하세요."
     },
     originText: {
       ro: "Khachapuri este o rețetă tradițională din Georgia.",
@@ -5854,7 +5854,7 @@ export const recipes = [
       zh: "乔治亚奶酪面包 是来自格鲁吉亚的传统食谱。",
       ja: "ハチャプリ はジョージアの伝統的なレシピです。",
       tr: "Khachapuri Georgia kökenli geleneksel bir tariftir.",
-      it: "Khachapuri è una ricetta tradizionale di Georgia.",
+      it: "Khachapuri è una risotta tradizionale di Georgia.",
       ko: "Khachapuri는(은) Georgia의 전통 요리입니다."
     }
   },
@@ -5916,9 +5916,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بصل", "حليب", "بيض", "خبز", "تمر", "كاري"],
       zh: ["肉末", "洋葱", "牛奶", "鸡蛋", "面包", "枣子", "咖喱"],
       ja: ["ひき肉", "玉ねぎ", "牛乳", "卵", "パン", "デーツ", "カレー"],
-      tr: ["minced meat", "soğan", "süt", "yumurta", "ekmek", "dates", "curry"],
-      it: ["minced meat", "cipolla", "latte", "uova", "pane", "dates", "curry"],
-      ko: ["minced meat", "양파", "우유", "계란", "빵", "dates", "curry"]
+      tr: ["kıyılmış et", "soğbir", "süt", "yumurta", "ekmek", "hurma", "köri"],
+      it: ["tritato carne", "cipolla", "latte", "uova", "pane", "datteri", "curry"],
+      ko: ["다진 고기", "양파", "우유", "계란", "빵", "대추야자", "카레"]
     },
     howIsMade: {
       ro: "Rumenește carnea tocată cu ceapă, condimente și fructe uscate, pune amestecul într-un vas și acoperă cu un strat de ou bătut cu lapte, apoi coace.",
@@ -5931,9 +5931,9 @@ export const recipes = [
       ar: "حمّر اللحم المفروم مع البصل والتوابل والفواكه المجففة، ضعه في طبق، غطه بالبيض المخفوق مع الحليب واخبزه.",
       zh: "肉末与洋葱、香料、干果炒香，放入烤盘，倒入蛋奶液，烘烤至熟。",
       ja: "ひき肉・玉ねぎ・スパイス・ドライフルーツを炒め、耐熱皿に入れ、卵と牛乳の液をかけて焼く。",
-      tr: "Brown minced meat ile soğan, spices, ve dried fruits, place in a baking dish, top ile beaten yumurta ve süt mixture, sonra Fırında pişir.",
-      it: "Brown minced meat con cipolla, spices, e dried fruits, place in a baking dish, top con beaten uovo e latte mixture, poi Cuoci al forno.",
-      ko: "Brown minced meat와 양파, spices, 그리고 dried fruits, place in a baking dish, top와 beaten 계란그리고 우유 mixture, 그다음 오븐에 구워하세요."
+      tr: "kahverengi kıyılmış et ile soğbir, baharatlar, ve kuru meyveler, yerleştirin pişirme yemek, üstüne ile çırpılmış yumurta ve süt karıştırınture, sonra Fırında pişir.",
+      it: "marrone tritato carne con cipolla, spezie, e frutta secca, metti cottura piatto, sopra con sbattuto uovo e latte mescolature, poi Cuoci al forno.",
+      ko: "갈색 다진 고기와 양파, 향신료, 그리고 말린 과일, 놓습니다 에서 a 굽기 요리, 위에와 푼 계란그리고 우유 섞습니다, 그다음 오븐에 구워하세요."
     },
     originText: {
       ro: "Bobotie este o rețetă tradițională din Africa de Sud.",
@@ -5947,7 +5947,7 @@ export const recipes = [
       zh: "博博提肉饼 是来自南非的传统食谱。",
       ja: "ボボティ は南アフリカの伝統的なレシピです。",
       tr: "Bobotie South Africa kökenli geleneksel bir tariftir.",
-      it: "Bobotie è una ricetta tradizionale di South Africa.",
+      it: "Bobotie è una risotta tradizionale di South Africa.",
       ko: "Bobotie는(은) South Africa의 전통 요리입니다."
     }
   },
@@ -6009,9 +6009,9 @@ export const recipes = [
       ar: ["سمك نيء", "ليمون أخضر", "بصل أحمر", "فلفل حار", "كزبرة", "ملح"],
       zh: ["生鱼", "青柠", "红洋葱", "辣椒", "香菜", "盐"],
       ja: ["生魚", "ライム", "赤玉ねぎ", "唐辛子", "コリアンダー", "塩"],
-      tr: ["raw balık", "yeşil limon", "red soğan", "chili biber", "coriander", "tuz"],
-      it: ["raw pesce", "lime", "red cipolla", "chili peperone", "coriander", "sale"],
-      ko: ["raw 생선", "라임", "red 양파", "chili 고추", "coriander", "소금"]
+      tr: ["çiğ balık", "yeşil limon", "kırmızı soğbir", "acı biber biber", "kişniş", "tuz"],
+      it: ["crudo pesce", "lime", "rosso cipolla", "peperoncino peperone", "coriandolo", "sale"],
+      ko: ["생 생선", "라임", "빨간 양파", "고추 고추", "고수", "소금"]
     },
     howIsMade: {
       ro: "Taie peștele crud cubulețe și marinează-l în suc de lămâie cu ceapă, ardei, coriandru și sare până devine opac.",
@@ -6024,9 +6024,9 @@ export const recipes = [
       ar: "قطّع السمك النيء لمكعبات وانقعه في عصير الليمون مع البصل والفلفل والكزبرة والملح حتى يتغير لونه.",
       zh: "生鱼切丁，拌入柠檬汁、洋葱、辣椒、香菜和盐腌至变色。",
       ja: "生魚を角切りにし、ライムジュース・玉ねぎ・唐辛子・コリアンダー・塩で漬け、色が変わるまでマリネする。",
-      tr: "Cut raw balık into cubes ve marinate in yeşil limon juice ile soğan, bibers, coriander, ve tuz until opaque.",
-      it: "Cut raw pesce into cubes e marinate in lime juice con cipolla, peperones, coriander, e sale until opaque.",
-      ko: "Cut raw 생선 into cubes그리고 marinate in 라임 juice와 양파, 고추s, coriander, 그리고 소금 until opaque하세요."
+      tr: "kesin çiğ balık içine küp ve marine edin in yeşil limon suyu ile soğbir, bibers, kişniş, ve tuz opak.",
+      it: "taglia crudo pesce dentro cubetti e marina in lime succo con cipolla, peperones, coriandolo, e sale opaco.",
+      ko: "자릅니다 생 생선 안에 깍둑썰기그리고 재웁니다 에서 라임 주스와 양파, 고추s, 고수, 그리고 소금 불투명한하세요."
     },
     originText: {
       ro: "Ceviche este o rețetă tradițională din Peru.",
@@ -6040,7 +6040,7 @@ export const recipes = [
       zh: "酸橘汁腌鱼 是来自秘鲁的传统食谱。",
       ja: "セビーチェ はペルーの伝統的なレシピです。",
       tr: "Ceviche Peru kökenli geleneksel bir tariftir.",
-      it: "Ceviche è una ricetta tradizionale di Perù.",
+      it: "Ceviche è una risotta tradizionale di Perù.",
       ko: "Ceviche는(은) 페루의 전통 요리입니다."
     }
   },
@@ -6102,9 +6102,9 @@ export const recipes = [
       ar: ["ملفوف", "فلفل حار", "ثوم", "زنجبيل", "بصل أخضر", "ملح", "صلصة سمك"],
       zh: ["白菜", "辣椒", "大蒜", "生姜", "葱", "盐", "鱼露"],
       ja: ["白菜", "唐辛子", "ニンニク", "ショウガ", "青ねぎ", "塩", "魚醤"],
-      tr: ["cabbage", "chili biber", "sarımsak", "zencefil", "green soğan", "tuz", "balık sauce"],
-      it: ["cabbage", "chili peperone", "aglio", "zenzero", "green cipolla", "sale", "pesce sauce"],
-      ko: ["cabbage", "chili 고추", "마늘", "생강", "green 양파", "소금", "생선 sauce"]
+      tr: ["lahana", "acı biber biber", "sarımsak", "zencefil", "yeşil soğbir", "tuz", "balık sos"],
+      it: ["cavolo", "peperoncino peperone", "aglio", "zenzero", "verde cipolla", "sale", "pesce salsa"],
+      ko: ["양배추", "고추 고추", "마늘", "생강", "초록 양파", "소금", "생선 소스"]
     },
     howIsMade: {
       ro: "Sărează varza chinezească, clătește și amestec-o cu pastă de ardei iute, usturoi, ghimbir și ceapă verde. Lasă la fermentat câteva zile.",
@@ -6117,9 +6117,9 @@ export const recipes = [
       ar: "ملّح الكرنب الصيني، اغسله واخلطه بمعجون الفلفل الحار والثوم والزنجبيل والبصل الأخضر. اتركه ليتخمر عدة أيام.",
       zh: "大白菜加盐腌制后冲洗，与辣椒酱、大蒜、姜和葱拌匀，发酵数天。",
       ja: "白菜を塩漬けして洗い、唐辛子ペースト・ニンニク・生姜・青ねぎと和えて数日発酵させる。",
-      tr: "tuz Chinese cabbage, rinse, ve Karıştır ile chili paste, sarımsak, zencefil, ve green soğans. Let ferment for several days.",
-      it: "sale Chinese cabbage, rinse, e Mescola con chili paste, aglio, zenzero, e green cipollas. Let ferment for several days.",
-      ko: "소금 Chinese cabbage, rinse, 그리고 섞고와 chili paste, 마늘, 생강, 그리고 green 양파s. Let ferment for several days하세요."
+      tr: "tuz Chinese lahana, durulayın, ve Karıştır ile acı biber salça, sarımsak, zencefil, ve yeşil soğans. Let fermente edin için birkaç gün.",
+      it: "sale Chinese cavolo, sciacqua, e Mescola con peperoncino concentrato, aglio, zenzero, e verde cipollas. Let fermenta per diversi giorni.",
+      ko: "소금 Chinese 양배추, 헹굽니다, 그리고 섞고와 고추 페이스트, 마늘, 생강, 그리고 초록 양파s. Let 발효시킵니다 을 위해 몇 일하세요."
     },
     originText: {
       ro: "Kimchi este o rețetă tradițională din Coreea de Sud.",
@@ -6132,9 +6132,9 @@ export const recipes = [
       ar: "كيمتشي هي وصفة تقليدية من كوريا الجنوبية.",
       zh: "泡菜 是来自韩国的传统食谱。",
       ja: "キムチ は韓国の伝統的なレシピです。",
-      tr: "Kimchi Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Kimchi è una ricetta tradizionale di Corea del Sud.",
-      ko: "Kimchi는(은) 대한민국의 전통 요리입니다."
+      tr: "kimchi Güney Kore kökenli geleneksel bir tariftir.",
+      it: "kimchi è una risotta tradizionale di Corea del Sud.",
+      ko: "김치는(은) 대한민국의 전통 요리입니다."
     }
   },
   {
@@ -6195,9 +6195,9 @@ export const recipes = [
       ar: ["باجيت", "لحم خنزير", "جزر مخلل", "خيار", "باتيه", "كزبرة", "مايونيز"],
       zh: ["法棍", "猪肉", "腌胡萝卜", "黄瓜", "肉酱", "香菜", "蛋黄酱"],
       ja: ["バゲット", "豚肉", "なます", "キュウリ", "パテ", "パクチー", "マヨネーズ"],
-      tr: ["baguette", "domuz eti", "pickled havuçs", "salatalık", "pâté", "coriander", "mayonnaise"],
-      it: ["baguette", "maiale", "pickled carotas", "cetriolo", "pâté", "coriander", "mayonnaise"],
-      ko: ["baguette", "돼지고기", "pickled 당근s", "오이", "pâté", "coriander", "mayonnaise"]
+      tr: ["baget", "domuz eti", "turşu havuçs", "salatalık", "pâté", "kişniş", "mayonez"],
+      it: ["baguette", "maiale", "in salamoia carotas", "cetriolo", "pâté", "coriandolo", "maionese"],
+      ko: ["바게트", "돼지고기", "절인 당근s", "오이", "pâté", "고수", "마요네즈"]
     },
     howIsMade: {
       ro: "Taie bagheta, unge cu pate și maioneză, adaugă carne la grătar, legume murate, castravete, coriandru și ardei iute.",
@@ -6210,9 +6210,9 @@ export const recipes = [
       ar: "افتح الرغيف وادهنه بالباتيه والمايونيز، أضف اللحم المشوي والخضار المخللة والخيار والكزبرة والفلفل الحار.",
       zh: "法棍切开，抹上猪肝酱和蛋黄酱，夹入烤肉、腌菜、黄瓜、香菜和辣椒。",
       ja: "バゲットを開き、パテとマヨネーズを塗り、焼き肉・なます・きゅうり・パクチー・唐辛子を挟む。",
-      tr: "Dilimle baguette, spread ile pâté ve mayonnaise, Ekle grilled meat, pickled vegetables, salatalık, coriander, ve chili.",
-      it: "Affetta baguette, spread con pâté e mayonnaise, Aggiungi grilled meat, pickled vegetables, cetriolo, coriander, e chili.",
-      ko: "썰어 baguette, spread와 pâté그리고 mayonnaise, 넣고 grilled meat, pickled vegetables, 오이, coriander, 그리고 chili하세요."
+      tr: "Dilimle baget, yayın ile pâté ve mayonez, Ekle ızgara et, turşu sebzeler, salatalık, kişniş, ve acı biber.",
+      it: "Affetta baguette, stendi con pâté e maionese, Aggiungi grigliato carne, in salamoia verdure, cetriolo, coriandolo, e peperoncino.",
+      ko: "썰어 바게트, 펼칩니다와 pâté그리고 마요네즈, 넣고 구운 고기, 절인 채소, 오이, 고수, 그리고 고추하세요."
     },
     originText: {
       ro: "Banh Mi este o rețetă tradițională din Vietnam.",
@@ -6226,7 +6226,7 @@ export const recipes = [
       zh: "越南三明治 是来自越南的传统食谱。",
       ja: "バインミー はベトナムの伝統的なレシピです。",
       tr: "Banh Mi Vietnam kökenli geleneksel bir tariftir.",
-      it: "Banh Mi è una ricetta tradizionale di Vietnam.",
+      it: "Banh Mi è una risotta tradizionale di Vietnam.",
       ko: "Banh Mi는(은) 베트남의 전통 요리입니다."
     }
   },
@@ -6288,9 +6288,9 @@ export const recipes = [
       ar: ["دجاج", "صلصة الفول السوداني", "أسياخ", "بصل", "توابل", "سكر بني"],
       zh: ["鸡肉", "花生酱", "串", "洋葱", "香料", "红糖"],
       ja: ["鶏肉", "ピーナッツソース", "串", "玉ねぎ", "スパイス", "黒砂糖"],
-      tr: ["tavuk", "peanut sauce", "skewers", "soğan", "spices", "brown şeker"],
-      it: ["pollo", "peanut sauce", "skewers", "cipolla", "spices", "brown zucchero"],
-      ko: ["닭고기", "peanut sauce", "skewers", "양파", "spices", "brown 설탕"]
+      tr: ["tavuk", "yer fıstığı sos", "şişler", "soğbir", "baharatlar", "kahverengi şeker"],
+      it: ["pollo", "arachide salsa", "spiedini", "cipolla", "spezie", "marrone zucchero"],
+      ko: ["닭고기", "땅콩 소스", "꼬치", "양파", "향신료", "갈색 설탕"]
     },
     howIsMade: {
       ro: "Taie carnea fâșii, marineaz-o în sos cu condimente, pune-o pe bețe și frige-o la grătar. Servește cu sos de arahide.",
@@ -6303,9 +6303,9 @@ export const recipes = [
       ar: "قطّع اللحم شرائح، انقعه في صلصة متبلة، اغزه في أعواد واشوه. قدّمه مع صلصة الفول السوداني.",
       zh: "肉切条，用香料腌制后串在签子上烧烤，配花生酱食用。",
       ja: "肉を細長く切り、スパイスソースに漬けて串に刺し、焼き、ピーナッツソースを添えて提供。",
-      tr: "Cut meat into strips, marinate in a spiced sos, skewer ve grill. Serve ile peanut sos.",
-      it: "Cut meat into strips, marinate in a spiced salsa, skewer e grill. Serve con peanut salsa.",
-      ko: "Cut meat into strips, marinate in a spiced 소스, skewer그리고 grill. Serve와 peanut 소스하세요."
+      tr: "kesin et içine şeritler, marine edin baharatlı sos, şiş ve ızgara yapın. servis edin ile yer fıstığı sos.",
+      it: "taglia carne dentro strisce, marina speziato salsa, spiedo e griglia. servi con arachide salsa.",
+      ko: "자릅니다 고기 안에 조각, 재웁니다 에서 a 향신료를 넣은 소스, 꼬치그리고 굽습니다. 제공합니다와 땅콩 소스하세요."
     },
     originText: {
       ro: "Satay este o rețetă tradițională din Indonezia.",
@@ -6319,7 +6319,7 @@ export const recipes = [
       zh: "沙嗲串 是来自印度尼西亚的传统食谱。",
       ja: "サテ はインドネシアの伝統的なレシピです。",
       tr: "Satay Endonezya kökenli geleneksel bir tariftir.",
-      it: "Satay è una ricetta tradizionale di Indonesia.",
+      it: "Satay è una risotta tradizionale di Indonesia.",
       ko: "Satay는(은) 인도네시아의 전통 요리입니다."
     }
   },
@@ -6381,9 +6381,9 @@ export const recipes = [
       ar: ["نودلز الأرز", "حليب جوز الهند", "معجون كاري", "روبيان", "بيض مسلوق", "فاصوليا خضراء", "بصل أخضر", "ليمون"],
       zh: ["米粉", "椰奶", "咖喱酱", "虾", "煮鸡蛋", "四季豆", "葱", "酸柑"],
       ja: ["米麺", "ココナッツミルク", "カレーペースト", "エビ", "ゆで卵", "インゲン豆", "青ねぎ", "ライム"],
-      tr: ["pirinç noodles", "coconut süt", "curry paste", "karides", "boiled yumurta", "green fasulye", "spring soğan", "yeşil limon"],
-      it: ["riso noodles", "coconut latte", "curry paste", "gamberetti", "boiled uovo", "green fagioli", "spring cipolla", "lime"],
-      ko: ["쌀 noodles", "coconut 우유", "curry paste", "새우", "boiled 계란", "green 콩", "spring 양파", "라임"]
+      tr: ["pirinç erişte", "hindistancevizi süt", "köri salça", "karides", "byağ yumurta", "yeşil fasulye", "bahar soğbir", "yeşil limon"],
+      it: ["riso spaghetti", "cocco latte", "curry concentrato", "gamberetti", "bolioed uovo", "verde fagioli", "primavera cipolla", "lime"],
+      ko: ["쌀 면", "코코넛 우유", "카레 페이스트", "새우", "b기름 계란", "초록 콩", "봄 양파", "라임"]
     },
     howIsMade: {
       ro: "Fierbe tăițeii, pregătește supa cu lapte de cocos și pastă de curry, adaugă creveți și legume, servește cu ou fiert și limetă.",
@@ -6396,9 +6396,9 @@ export const recipes = [
       ar: "اسلق النودلز، حضر الحساء بحليب جوز الهند ومعجون الكاري، أضف الروبيان والخضار، قدمه مع البيض المسلوق والليمون.",
       zh: "煮米粉，用椰奶和咖喱酱做汤底，加入虾和蔬菜，配煮鸡蛋和酸柑。",
       ja: "麺を茹で、ココナッツミルクとカレーペーストでスープを作り、エビと野菜を加え、ゆで卵とライムを添えて提供。",
-      tr: "Haşla noodles, prepare soup ile coconut süt ve curry paste, Ekle karides ve vegetables, Servis et ile boiled yumurta ve yeşil limon.",
-      it: "Cuoci noodles, prepare soup con coconut latte e curry paste, Aggiungi gamberetti e vegetables, Servi con boiled uovo e lime.",
-      ko: "삶고 noodles, prepare soup와 coconut 우유그리고 curry paste, 넣고 새우그리고 vegetables, 담아 내세요와 boiled 계란그리고 라임하세요."
+      tr: "Haşla erişte, hazırlayın çorba ile hindistancevizi süt ve köri salça, Ekle karides ve sebzeler, Servis et ile byağ yumurta ve yeşil limon.",
+      it: "Cuoci spaghetti, prepara zuppa con cocco latte e curry concentrato, Aggiungi gamberetti e verdure, Servi con bolioed uovo e lime.",
+      ko: "삶고 면, 준비합니다 수프와 코코넛 우유그리고 카레 페이스트, 넣고 새우그리고 채소, 담아 내세요와 b기름 계란그리고 라임하세요."
     },
     originText: {
       ro: "Laksa este o rețetă tradițională din Malaysia.",
@@ -6412,7 +6412,7 @@ export const recipes = [
       zh: "叻沙 是来自马来西亚的传统食谱。",
       ja: "ラクサ はマレーシアの伝統的なレシピです。",
       tr: "Laksa Malezya kökenli geleneksel bir tariftir.",
-      it: "Laksa è una ricetta tradizionale di Malesia.",
+      it: "Laksa è una risotta tradizionale di Malesia.",
       ko: "Laksa는(은) 말레이시아의 전통 요리입니다."
     }
   },
@@ -6474,9 +6474,9 @@ export const recipes = [
       ar: ["دقيق الذرة", "جبن", "فاصوليا", "لحم خنزير", "زيت"],
       zh: ["玉米粉", "奶酪", "豆类", "猪肉", "油"],
       ja: ["トウモロコシ粉", "チーズ", "豆", "豚肉", "油"],
-      tr: ["mısır un", "peynir", "fasulye", "domuz eti", "oil"],
-      it: ["mais farina", "formaggio", "fagioli", "maiale", "oil"],
-      ko: ["옥수수 밀가루", "치즈", "콩", "돼지고기", "oil"]
+      tr: ["mısır un", "peynir", "fasulye", "domuz eti", "yağ"],
+      it: ["mais farina", "formaggio", "fagioli", "maiale", "olio"],
+      ko: ["옥수수 밀가루", "치즈", "콩", "돼지고기", "기름"]
     },
     howIsMade: {
       ro: "Fă aluat din făină de porumb, umple-l cu brânză, carne sau fasole, formează discuri și coace-le pe plită.",
@@ -6489,9 +6489,9 @@ export const recipes = [
       ar: "حضّر عجينة الذرة، احشِها بالجبن أو اللحم أو الفاصوليا، شكّلها أقراصاً واطبخها على الصاج.",
       zh: "用玉米粉和面，包入奶酪、肉或豆，压成饼，在铁板上烤熟。",
       ja: "トウモロコシ粉で生地を作り、チーズ・肉・豆を詰めて円形に成形し、鉄板で焼く。",
-      tr: "Make mısır dough, fill ile peynir, meat, or fasulye, shape into discs ve cook on a griddle.",
-      it: "Make mais dough, fill con formaggio, meat, or fagioli, shape into discs e cook on a griddle.",
-      ko: "Make 옥수수 dough, fill와 치즈, meat, or 콩, shape into discs그리고 cook on a griddle하세요."
+      tr: "yapın mısır hamur, doldurun ile peynir, et, veya fasulye, şekil verin içine diskler ve pişirin üstüne a ızgara tava.",
+      it: "fai mais impasto, farcisci con formaggio, carne, o fagioli, dai forma dentro dischi e cuoci su a piastra.",
+      ko: "만듭니다 옥수수 반죽, 채웁니다와 치즈, 고기, 또는 콩, 모양을 만듭니다 안에 원반그리고 조리합니다 위에 a 그릴 팬하세요."
     },
     originText: {
       ro: "Pupusa este o rețetă tradițională din El Salvador.",
@@ -6505,7 +6505,7 @@ export const recipes = [
       zh: "玉米饼 是来自萨尔瓦多的传统食谱。",
       ja: "ププサ はエルサルバドルの伝統的なレシピです。",
       tr: "Pupusa El Salvador kökenli geleneksel bir tariftir.",
-      it: "Pupusa è una ricetta tradizionale di El Salvador.",
+      it: "Pupusa è una risotta tradizionale di El Salvador.",
       ko: "Pupusa는(은) El Salvador의 전통 요리입니다."
     }
   },
@@ -6567,9 +6567,9 @@ export const recipes = [
       ar: ["لحم مفروم", "ثوم", "بصل", "فلفل", "ملح"],
       zh: ["碎肉", "大蒜", "洋葱", "胡椒", "盐"],
       ja: ["ひき肉", "ニンニク", "玉ねぎ", "コショウ", "塩"],
-      tr: ["minced meat", "sarımsak", "soğan", "biber", "tuz"],
-      it: ["minced meat", "aglio", "cipolla", "peperone", "sale"],
-      ko: ["minced meat", "마늘", "양파", "고추", "소금"]
+      tr: ["kıyılmış et", "sarımsak", "soğbir", "biber", "tuz"],
+      it: ["tritato carne", "aglio", "cipolla", "peperone", "sale"],
+      ko: ["다진 고기", "마늘", "양파", "고추", "소금"]
     },
     howIsMade: {
       ro: "Modelează amestec de carne tocată cu condimente sub formă de mici cârnați, prăjește-i pe grătar și servește cu pâine și ceapă.",
@@ -6582,9 +6582,9 @@ export const recipes = [
       ar: "شكّل اللحم المفروم المتبل أصابع صغيرة واشوه، وقدّمه مع الخبز والبصل.",
       zh: "将调味肉末搓成小肠状，在烤架上烤熟，配面包和洋葱食用。",
       ja: "スパイス入りの挽肉を小さなソーセージ状にし、グリルで焼いてパンと玉ねぎを添える。",
-      tr: "Shape spiced minced meat into small sausages, Izgara yap ve serve ile ekmek ve soğans.",
-      it: "Shape spiced minced meat into small sausages, Griglia e serve con pane e cipollas.",
-      ko: "Shape spiced minced meat into small sausages, 구워그리고 serve와 빵그리고 양파s하세요."
+      tr: "şekil verin baharatlı kıyılmış et içine küçük sosis, Izgara yap ve servis edin ile ekmek ve soğans.",
+      it: "dai forma speziato tritato carne dentro piccolo salsicce, Griglia e servi con pane e cipollas.",
+      ko: "모양을 만듭니다 향신료를 넣은 다진 고기 안에 작게 소시지, 구워그리고 제공합니다와 빵그리고 양파s하세요."
     },
     originText: {
       ro: "Ćevapi este o rețetă tradițională din Serbia.",
@@ -6598,7 +6598,7 @@ export const recipes = [
       zh: "塞尔维亚烤肠 是来自塞尔维亚的传统食谱。",
       ja: "チェヴァピ はセルビアの伝統的なレシピです。",
       tr: "Ćevapi Serbia kökenli geleneksel bir tariftir.",
-      it: "Ćevapi è una ricetta tradizionale di Serbia.",
+      it: "Ćevapi è una risotta tradizionale di Serbia.",
       ko: "Ćevapi는(은) Serbia의 전통 요리입니다."
     }
   },
@@ -6660,9 +6660,9 @@ export const recipes = [
       ar: ["سمك", "حليب جوز الهند", "بيض", "أوراق الموز", "بهارات خمر", "بصل"],
       zh: ["鱼", "椰奶", "鸡蛋", "香蕉叶", "高棉香料", "洋葱"],
       ja: ["魚", "ココナッツミルク", "卵", "バナナの葉", "クメールスパイス", "玉ねぎ"],
-      tr: ["balık", "coconut süt", "yumurta", "banana leaves", "khmer spices", "soğan"],
-      it: ["pesce", "coconut latte", "uova", "banana leaves", "khmer spices", "cipolla"],
-      ko: ["생선", "coconut 우유", "계란", "banana leaves", "khmer spices", "양파"]
+      tr: ["balık", "hindistancevizi süt", "yumurta", "muz yaprak", "khmer baharatlar", "soğbir"],
+      it: ["pesce", "cocco latte", "uova", "banana foglie", "khmer spezie", "cipolla"],
+      ko: ["생선", "코코넛 우유", "계란", "바나나 잎", "크메르 향신료", "양파"]
     },
     howIsMade: {
       ro: "Amestecă peștele cu lapte de cocos, pastă de curry și ou, toarnă în frunze de banană și gătește la aburi.",
@@ -6675,9 +6675,9 @@ export const recipes = [
       ar: "اخلط السمك مع حليب جوز الهند ومعجون الكاري والبيض، وضعه في أوراق الموز واطبخه على البخار.",
       zh: "鱼肉与椰奶、咖喱酱和鸡蛋拌匀，倒入香蕉叶中蒸熟。",
       ja: "魚・ココナッツミルク・カレーペースト・卵を混ぜ、バナナの葉に入れて蒸し上げる。",
-      tr: "Karıştır balık ile coconut süt, curry paste, ve yumurta, pour into banana leaves ve steam.",
-      it: "Mescola pesce con coconut latte, curry paste, e uovo, pour into banana leaves e steam.",
-      ko: "섞고 생선와 coconut 우유, curry paste, 그리고 계란, pour into banana leaves그리고 steam하세요."
+      tr: "Karıştır balık ile hindistancevizi süt, köri salça, ve yumurta, dökün içine muz yaprak ve buharda pişirin.",
+      it: "Mescola pesce con cocco latte, curry concentrato, e uovo, versa dentro banana foglie e cuoci a vapore.",
+      ko: "섞고 생선와 코코넛 우유, 카레 페이스트, 그리고 계란, 붓습니다 안에 바나나 잎그리고 찝니다하세요."
     },
     originText: {
       ro: "Amok este o rețetă tradițională din Cambodgia.",
@@ -6691,7 +6691,7 @@ export const recipes = [
       zh: "阿莫克咖喱鱼 是来自柬埔寨的传统食谱。",
       ja: "アモック はカンボジアの伝統的なレシピです。",
       tr: "Amok Cambodia kökenli geleneksel bir tariftir.",
-      it: "Amok è una ricetta tradizionale di Cambodia.",
+      it: "Amok è una risotta tradizionale di Cambodia.",
       ko: "Amok는(은) Cambodia의 전통 요리입니다."
     }
   },
@@ -6753,9 +6753,9 @@ export const recipes = [
       ar: ["دقيق", "لحم مفروم", "بصل", "ثوم", "زنجبيل", "توابل", "صلصة حارة"],
       zh: ["面粉", "肉末", "洋葱", "大蒜", "生姜", "香料", "辣酱"],
       ja: ["小麦粉", "ひき肉", "玉ねぎ", "ニンニク", "ショウガ", "スパイス", "ホットソース"],
-      tr: ["un", "minced meat", "soğan", "sarımsak", "zencefil", "spices", "hot sauce"],
-      it: ["farina", "minced meat", "cipolla", "aglio", "zenzero", "spices", "hot sauce"],
-      ko: ["밀가루", "minced meat", "양파", "마늘", "생강", "spices", "hot sauce"]
+      tr: ["un", "kıyılmış et", "soğbir", "sarımsak", "zencefil", "baharatlar", "sıcak sos"],
+      it: ["farina", "tritato carne", "cipolla", "aglio", "zenzero", "spezie", "caldo salsa"],
+      ko: ["밀가루", "다진 고기", "양파", "마늘", "생강", "향신료", "뜨거운 소스"]
     },
     howIsMade: {
       ro: "Umple aluatul cu carne sau legume, formează mici pachețele rotunde și gătește-le la abur până devin moi.",
@@ -6768,9 +6768,9 @@ export const recipes = [
       ar: "احشِ العجين باللحم أو الخضار، شكّل كرات صغيرة واطبخها على البخار حتى تصبح طرية.",
       zh: "面团包入肉或蔬菜，搓成圆形小包子，蒸至松软。",
       ja: "生地に肉や野菜を詰めて丸い団子型にし、蒸して柔らかく仕上げる。",
-      tr: "Fill dough ile meat or vegetables, shape into small round dumplings ve steam until tender.",
-      it: "Fill dough con meat or vegetables, shape into small round dumplings e steam until tender.",
-      ko: "Fill dough와 meat or vegetables, shape into small round dumplings그리고 steam until tender하세요."
+      tr: "doldurun hamur ile et veya sebzeler, şekil verin içine küçük yuvarlak mantı ve buharda pişirin yumuşayana kadar.",
+      it: "farcisci impasto con carne o verdure, dai forma dentro piccolo rotondo ravioli e cuoci a vapore finché sarà tenero.",
+      ko: "채웁니다 반죽와 고기 또는 채소, 모양을 만듭니다 안에 작게 둥근 만두그리고 찝니다 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Momo este o rețetă tradițională din Nepal.",
@@ -6784,7 +6784,7 @@ export const recipes = [
       zh: "尼泊尔饺子 是来自尼泊尔的传统食谱。",
       ja: "モモ はネパールの伝統的なレシピです。",
       tr: "Momo Nepal kökenli geleneksel bir tariftir.",
-      it: "Momo è una ricetta tradizionale di Nepal.",
+      it: "Momo è una risotta tradizionale di Nepal.",
       ko: "Momo는(은) Nepal의 전통 요리입니다."
     }
   },
@@ -6846,9 +6846,9 @@ export const recipes = [
       ar: ["سمك", "بصل أحمر", "يوكا", "طماطم", "كزبرة", "ليمون", "فلفل حار"],
       zh: ["鱼", "红洋葱", "木薯", "番茄", "香菜", "柠檬", "辣椒"],
       ja: ["魚", "赤玉ねぎ", "ユカ芋", "トマト", "コリアンダー", "レモン", "唐辛子"],
-      tr: ["balık", "red soğan", "yuca", "domates", "coriander", "limon", "chili"],
-      it: ["pesce", "red cipolla", "yuca", "pomodori", "coriander", "limone", "chili"],
-      ko: ["생선", "red 양파", "yuca", "토마토", "coriander", "레몬", "chili"]
+      tr: ["balık", "kırmızı soğbir", "manyok", "domates", "kişniş", "limon", "acı biber"],
+      it: ["pesce", "rosso cipolla", "yuca", "pomodori", "coriandolo", "limone", "peperoncino"],
+      ko: ["생선", "빨간 양파", "유카", "토마토", "고수", "레몬", "고추"]
     },
     howIsMade: {
       ro: "Fierbe peștele cu ceapă, roșii și condimente, adaugă manioc fiert și servește cu ceapă crudă deasupra.",
@@ -6861,9 +6861,9 @@ export const recipes = [
       ar: "اسلق السمك مع البصل والطماطم والتوابل، أضف الكسافا المطبوخة وقدّمها مع بصل نيء على الوجه.",
       zh: "鱼与洋葱、番茄和香料煮熟，加入煮熟的木薯，上面撒生洋葱食用。",
       ja: "魚を玉ねぎ・トマト・スパイスと煮て、茹でたキャッサバを加え、生玉ねぎをのせて提供。",
-      tr: "Haşla balık ile soğan, domates, ve spices, Ekle cooked cassava ve serve topped ile raw soğan.",
-      it: "Cuoci pesce con cipolla, pomodori, e spices, Aggiungi cooked cassava e serve topped con raw cipolla.",
-      ko: "삶고 생선와 양파, 토마토, 그리고 spices, 넣고 cooked cassava그리고 serve topped와 raw 양파하세요."
+      tr: "Haşla balık ile soğbir, domates, ve baharatlar, Ekle pişirined manyok ve servis edin üzerine ile çiğ soğbir.",
+      it: "Cuoci pesce con cipolla, pomodori, e spezie, Aggiungi cuocied manioca e servi guarnito con crudo cipolla.",
+      ko: "삶고 생선와 양파, 토마토, 그리고 향신료, 넣고 조리합니다 카사바그리고 제공합니다 올린와 생 양파하세요."
     },
     originText: {
       ro: "Encebollado este o rețetă tradițională din Ecuador.",
@@ -6877,7 +6877,7 @@ export const recipes = [
       zh: "洋葱炖鱼汤 是来自厄瓜多尔的传统食谱。",
       ja: "エンセボジャード はエクアドルの伝統的なレシピです。",
       tr: "Encebollado Ecuador kökenli geleneksel bir tariftir.",
-      it: "Encebollado è una ricetta tradizionale di Ecuador.",
+      it: "Encebollado è una risotta tradizionale di Ecuador.",
       ko: "Encebollado는(은) Ecuador의 전통 요리입니다."
     }
   },
@@ -6939,9 +6939,9 @@ export const recipes = [
       ar: ["حمص", "عدس", "لحم ضأن", "طماطم", "بصل", "كرفس", "توابل مغربية"],
       zh: ["鹰嘴豆", "扁豆", "羊肉", "番茄", "洋葱", "芹菜", "摩洛哥香料"],
       ja: ["ひよこ豆", "レンズ豆", "ラム肉", "トマト", "玉ねぎ", "セロリ", "モロッコのスパイス"],
-      tr: ["nohut", "mercimek", "lamb", "domates", "soğan", "celery", "moroccan spices"],
-      it: ["ceci", "lenticchie", "lamb", "pomodori", "cipolla", "celery", "moroccan spices"],
-      ko: ["병아리콩", "렌틸콩", "lamb", "토마토", "양파", "celery", "moroccan spices"]
+      tr: ["nohut", "mercimek", "kuzu", "domates", "soğbir", "kereviz", "fas baharatları"],
+      it: ["ceci", "lenticchie", "agnello", "pomodori", "cipolla", "sedano", "spezie marocchine"],
+      ko: ["병아리콩", "렌틸콩", "양고기", "토마토", "양파", "셀러리", "모로코 향신료"]
     },
     howIsMade: {
       ro: "Fierbe carnea cu năut, linte, roșii și condimente, adaugă tăiței sau orez și verdeață la final.",
@@ -6954,9 +6954,9 @@ export const recipes = [
       ar: "اطبخ اللحم مع الحمص والعدس والطماطم والتوابل، أضف المعكرونة أو الأرز والخضار في النهاية.",
       zh: "肉与鹰嘴豆、扁豆、番茄和香料一起煮，最后加入面条或米饭和香草。",
       ja: "肉・ひよこ豆・レンズ豆・トマト・スパイスで煮込み、最後に麺またはご飯・ハーブを加える。",
-      tr: "Haşla meat ile nohut, mercimek, domates, ve spices; add noodles or pirinç ve herbs at end.",
-      it: "Cuoci meat con ceci, lenticchie, pomodori, e spices; add noodles or riso e herbs at end.",
-      ko: "삶고 meat와 병아리콩, 렌틸콩, 토마토, 그리고 spices; add noodles or 쌀그리고 herbs at end하세요."
+      tr: "Haşla et ile nohut, mercimek, domates, ve baharatlar; ekleyin erişte veya pirinç ve otlar  sonunda.",
+      it: "Cuoci carne con ceci, lenticchie, pomodori, e spezie; aggiungi spaghetti o riso e erbe aromatiche  alla fine.",
+      ko: "삶고 고기와 병아리콩, 렌틸콩, 토마토, 그리고 향신료; 넣습니다 면 또는 쌀그리고 허브 에서 마지막에하세요."
     },
     originText: {
       ro: "Harira este o rețetă tradițională din Maroc.",
@@ -6970,7 +6970,7 @@ export const recipes = [
       zh: "摩洛哥汤 是来自摩洛哥的传统食谱。",
       ja: "ハリラ はモロッコの伝統的なレシピです。",
       tr: "Harira Fas kökenli geleneksel bir tariftir.",
-      it: "Harira è una ricetta tradizionale di Marocco.",
+      it: "Harira è una risotta tradizionale di Marocco.",
       ko: "Harira는(은) 모로코의 전통 요리입니다."
     }
   },
@@ -7032,9 +7032,9 @@ export const recipes = [
       ar: ["فاصوليا حمراء", "بصل", "جوز", "ثوم", "كزبرة", "رمان", "زيت"],
       zh: ["红豆", "洋葱", "核桃", "大蒜", "香菜", "石榴", "油"],
       ja: ["赤いんげん豆", "玉ねぎ", "クルミ", "ニンニク", "パクチー", "ザクロ", "油"],
-      tr: ["red fasulye", "soğan", "walnuts", "sarımsak", "coriander", "pomegranate", "oil"],
-      it: ["red fagioli", "cipolla", "walnuts", "aglio", "coriander", "pomegranate", "oil"],
-      ko: ["red 콩", "양파", "walnuts", "마늘", "coriander", "pomegranate", "oil"]
+      tr: ["kırmızı fasulye", "soğbir", "ceviz", "sarımsak", "kişniş", "nar", "yağ"],
+      it: ["rosso fagioli", "cipolla", "noci", "aglio", "coriandolo", "melograno", "olio"],
+      ko: ["빨간 콩", "양파", "호두", "마늘", "고수", "석류", "기름"]
     },
     howIsMade: {
       ro: "Fierbe fasolea roșie, călește-o cu ceapă, usturoi, nuci și condimente. Servește cu verdețuri proaspete.",
@@ -7047,9 +7047,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا الحمراء، اقليها مع البصل والثوم والجوز والتوابل. قدّمها مع الخضار الطازجة.",
       zh: "红豆煮熟后与洋葱、大蒜、核桃和香料炒香，配新鲜香草食用。",
       ja: "赤いんげん豆を茹で、玉ねぎ・ニンニク・クルミ・スパイスと炒めてハーブを添える。",
-      tr: "Haşla red fasulye, sauté ile soğan, sarımsak, walnuts, ve spices. Serve ile fresh herbs.",
-      it: "Cuoci red fagioli, sauté con cipolla, aglio, walnuts, e spices. Serve con fresh herbs.",
-      ko: "삶고 red 콩, sauté와 양파, 마늘, walnuts, 그리고 spices. Serve와 fresh herbs하세요."
+      tr: "Haşla kırmızı fasulye, soteleyiné ile soğbir, sarımsak, ceviz, ve baharatlar. servis edin ile taze otlar.",
+      it: "Cuoci rosso fagioli, soffriggié con cipolla, aglio, noci, e spezie. servi con fresco erbe aromatiche.",
+      ko: "삶고 빨간 콩, 볶습니다é와 양파, 마늘, 호두, 그리고 향신료. 제공합니다와 신선한 허브하세요."
     },
     originText: {
       ro: "Lobio este o rețetă tradițională din Georgia.",
@@ -7063,7 +7063,7 @@ export const recipes = [
       zh: "格鲁吉亚豆炖菜 是来自格鲁吉亚的传统食谱。",
       ja: "ロビオ はジョージアの伝統的なレシピです。",
       tr: "Lobio Georgia kökenli geleneksel bir tariftir.",
-      it: "Lobio è una ricetta tradizionale di Georgia.",
+      it: "Lobio è una risotta tradizionale di Georgia.",
       ko: "Lobio는(은) Georgia의 전통 요리입니다."
     }
   },
@@ -7121,9 +7121,9 @@ export const recipes = [
       ar: ["لحم غنم أو بقر", "خبز مسطح أو معكرونة مكسرة", "طماطم", "بصل", "حمص", "بهارات", "زيت", "ملح", "فلفل"],
       zh: ["羊肉或牛肉", "扁面包或碎面条", "番茄", "洋葱", "鹰嘴豆", "香料", "油", "盐", "胡椒"],
       ja: ["ラム肉または牛肉", "フラットブレッドまたは割れたヌードル", "トマト", "玉ねぎ", "ひよこ豆", "スパイス", "油", "塩", "コショウ"],
-      tr: ["lamb or dana eti", "flatekmek or broken noodles", "domates", "soğan", "nohut", "spices", "oil", "tuz", "biber"],
-      it: ["lamb or manzo", "flatpane or broken noodles", "pomodori", "cipolla", "ceci", "spices", "oil", "sale", "peperone"],
-      ko: ["lamb or 소고기", "flat빵 or broken noodles", "토마토", "양파", "병아리콩", "spices", "oil", "소금", "고추"]
+      tr: ["kuzu veya dana eti", "flatekmek veya kırılmış erişte", "domates", "soğbir", "nohut", "baharatlar", "yağ", "tuz", "biber"],
+      it: ["agnello o manzo", "flatpane o spezzato spaghetti", "pomodori", "cipolla", "ceci", "spezie", "olio", "sale", "peperone"],
+      ko: ["양고기 또는 소고기", "납작한빵 또는 부순 면", "토마토", "양파", "병아리콩", "향신료", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Gătește carnea cu condimente și legume, apoi servește cu lipia sfărâmată sau tăiței peste sos.",
@@ -7135,9 +7135,9 @@ export const recipes = [
       ar: "اطبخ اللحم مع التوابل والخضار، ثم قدمه مع الخبز أو المعكرونة فوق الصلصة.",
       zh: "将肉类与香料和蔬菜一起烹煮，最后与碎面包或面条一起上桌。",
       ja: "肉をスパイスと野菜で煮て、パンまたは麺をソースの上にのせて提供。",
-      tr: "Pişir meat ile spices ve vegetables, sonra Servis et ile broken flatekmek or noodles on top of sos.",
-      it: "Cuoci meat con spices e vegetables, poi Servi con broken flatpane or noodles on top of salsa.",
-      ko: "조리하고 meat와 spices그리고 vegetables, 그다음 담아 내세요와 broken flat빵 or noodles on top of 소스하세요."
+      tr: "Pişir et ile baharatlar ve sebzeler, sonra Servis et ile kırılmış flatekmek veya erişte üstüne üstüne  sos.",
+      it: "Cuoci carne con spezie e verdure, poi Servi con spezzato flatpane o spaghetti su sopra  salsa.",
+      ko: "조리하고 고기와 향신료그리고 채소, 그다음 담아 내세요와 부순 납작한빵 또는 면 위에 위에 의 소스하세요."
     },
     originText: {
       ro: "Chakhchoukha este o rețetă tradițională din Algeria.",
@@ -7151,7 +7151,7 @@ export const recipes = [
       zh: "阿尔及利亚炖肉饼 是来自阿尔及利亚的传统食谱。",
       ja: "シャクシュカ はアルジェリアの伝統的なレシピです。",
       tr: "Chakhchoukha Algeria kökenli geleneksel bir tariftir.",
-      it: "Chakhchoukha è una ricetta tradizionale di Algeria.",
+      it: "Chakhchoukha è una risotta tradizionale di Algeria.",
       ko: "Chakhchoukha는(은) Algeria의 전통 요리입니다."
     }
   },
@@ -7213,9 +7213,9 @@ export const recipes = [
       ar: ["لحم بقري", "حليب جوز الهند", "معجون الفلفل الحار", "زنجبيل", "ثوم", "بصل", "أوراق الليمون"],
       zh: ["牛肉", "椰奶", "辣椒酱", "生姜", "大蒜", "洋葱", "青柠叶"],
       ja: ["牛肉", "ココナッツミルク", "チリペースト", "ショウガ", "ニンニク", "玉ねぎ", "ライムリーフ"],
-      tr: ["dana eti", "coconut süt", "chili paste", "zencefil", "sarımsak", "soğan", "yeşil limon leaves"],
-      it: ["manzo", "coconut latte", "chili paste", "zenzero", "aglio", "cipolla", "lime leaves"],
-      ko: ["소고기", "coconut 우유", "chili paste", "생강", "마늘", "양파", "라임 leaves"]
+      tr: ["dana eti", "hindistancevizi süt", "acı biber salça", "zencefil", "sarımsak", "soğbir", "yeşil limon yaprak"],
+      it: ["manzo", "cocco latte", "peperoncino concentrato", "zenzero", "aglio", "cipolla", "lime foglie"],
+      ko: ["소고기", "코코넛 우유", "고추 페이스트", "생강", "마늘", "양파", "라임 잎"]
     },
     howIsMade: {
       ro: "Gătește carnea încet în lapte de cocos cu pastă de condimente până devine foarte fragedă și sosul scade complet.",
@@ -7228,9 +7228,9 @@ export const recipes = [
       ar: "اطبخ اللحم ببطء في حليب جوز الهند ومعجون التوابل حتى يطرى ويتكاثف الصوص.",
       zh: "将肉在椰奶和香料酱中慢炖至极其软烂，汤汁收干。",
       ja: "肉をココナッツミルクとスパイスペーストでじっくり煮込み、柔らかくなりソースが煮詰まるまで調理。",
-      tr: "Slow-cook meat in coconut süt ile spice paste until very tender ve sos is reduced.",
-      it: "Slow-cook meat in coconut latte con spice paste until very tender e salsa is reduced.",
-      ko: "Slow-cook meat in coconut 우유와 spice paste until very tender그리고 소스 is reduced하세요."
+      tr: "kısık ateşte yavaşça pişirin et in hindistancevizi süt ile baharat salça çok yumuşak ve sos  azaltılmış.",
+      it: "cuoci lentamente carne in cocco latte con spezia concentrato molto tenero e salsa  ridotto.",
+      ko: "약한 불로 천천히 조리합니다 고기 에서 코코넛 우유와 향신료 페이스트 매우 부드럽게그리고 소스 입니다 졸인하세요."
     },
     originText: {
       ro: "Rendang este o rețetă tradițională din Indonezia.",
@@ -7244,7 +7244,7 @@ export const recipes = [
       zh: "仁当牛肉 是来自印度尼西亚的传统食谱。",
       ja: "ルンダン はインドネシアの伝統的なレシピです。",
       tr: "Rendang Endonezya kökenli geleneksel bir tariftir.",
-      it: "Rendang è una ricetta tradizionale di Indonesia.",
+      it: "Rendang è una risotta tradizionale di Indonesia.",
       ko: "Rendang는(은) 인도네시아의 전통 요리입니다."
     }
   },
@@ -7306,9 +7306,9 @@ export const recipes = [
       ar: ["سلمون", "ملح", "سكر", "شبت", "فلفل", "ليمون"],
       zh: ["三文鱼", "盐", "糖", "莳萝", "胡椒", "柠檬"],
       ja: ["サーモン", "塩", "砂糖", "ディル", "コショウ", "レモン"],
-      tr: ["somon", "tuz", "şeker", "dill", "biber", "limon"],
-      it: ["salmone", "sale", "zucchero", "dill", "peperone", "limone"],
-      ko: ["연어", "소금", "설탕", "dill", "고추", "레몬"]
+      tr: ["somon", "tuz", "şeker", "dereotu", "biber", "limon"],
+      it: ["salmone", "sale", "zucchero", "aneto", "peperone", "limone"],
+      ko: ["연어", "소금", "설탕", "딜", "고추", "레몬"]
     },
     howIsMade: {
       ro: "Freacă fileul de somon cu sare, zahăr și mărar, lasă-l la rece câteva zile până se marinează, apoi feliază subțire.",
@@ -7321,9 +7321,9 @@ export const recipes = [
       ar: "افرك شرائح السلمون بالملح والسكر والشبت، ضعها في الثلاجة عدة أيام حتى تتخلل، ثم قطّعها شرائح رقيقة.",
       zh: "三文鱼用盐、糖和莳萝腌制，冷藏几天后切成薄片。",
       ja: "サーモンに塩・砂糖・ディルを擦り込み、数日冷蔵で漬け込み、薄くスライスする。",
-      tr: "Rub somon fillet ile tuz, şeker, ve dill, refrigerate for several days to cure, sonra Dilimle thinly.",
-      it: "Rub salmone fillet con sale, zucchero, e dill, refrigerate for several days to cure, poi Affetta thinly.",
-      ko: "Rub 연어 fillet와 소금, 설탕, 그리고 dill, refrigerate for several days to cure, 그다음 썰어 thinly하세요."
+      tr: "Rub somon fileto ile tuz, şeker, ve dereotu, buzdolabında bekletin için birkaç gün  tuzlayın, sonra Dilimle ince ince.",
+      it: "Rub salmone filetto con sale, zucchero, e aneto, metti in frigorifero per diversi giorni  stagiona, poi Affetta sottilmente.",
+      ko: "Rub 연어 필레와 소금, 설탕, 그리고 딜, 냉장 보관합니다 을 위해 몇 일  절입니다, 그다음 썰어 얇게하세요."
     },
     originText: {
       ro: "Gravlax este o rețetă tradițională din Suedia.",
@@ -7337,7 +7337,7 @@ export const recipes = [
       zh: "腌三文鱼 是来自瑞典的传统食谱。",
       ja: "グラブラックス はスウェーデンの伝統的なレシピです。",
       tr: "Gravlax İsveç kökenli geleneksel bir tariftir.",
-      it: "Gravlax è una ricetta tradizionale di Svezia.",
+      it: "Gravlax è una risotta tradizionale di Svezia.",
       ko: "Gravlax는(은) 스웨덴의 전통 요리입니다."
     }
   },
@@ -7399,9 +7399,9 @@ export const recipes = [
       ar: ["لحم بقري", "بيرة داكنة", "بصل", "خردل", "خبز", "زيت", "توابل"],
       zh: ["牛肉", "黑啤酒", "洋葱", "芥末", "面包", "油", "香料"],
       ja: ["牛肉", "黒ビール", "玉ねぎ", "マスタード", "パン", "油", "スパイス"],
-      tr: ["dana eti", "dark beer", "soğan", "mustard", "ekmek", "oil", "spices"],
-      it: ["manzo", "dark beer", "cipolla", "mustard", "pane", "oil", "spices"],
-      ko: ["소고기", "dark beer", "양파", "mustard", "빵", "oil", "spices"]
+      tr: ["dana eti", "koyu bira", "soğbir", "hardal", "ekmek", "yağ", "baharatlar"],
+      it: ["manzo", "scuro birra", "cipolla", "senape", "pane", "olio", "spezie"],
+      ko: ["소고기", "진한 맥주", "양파", "머스터드", "빵", "기름", "향신료"]
     },
     howIsMade: {
       ro: "Rumenește carnea de vită, adaugă ceapă, bere neagră și condimente, apoi fierbe lent până devine foarte fragedă.",
@@ -7414,9 +7414,9 @@ export const recipes = [
       ar: "حمّر لحم البقر، أضف البصل والبيرة الداكنة والتوابل واطبخ ببطء حتى ينضج.",
       zh: "牛肉煎至变色，加入洋葱、黑啤酒和香料，小火慢炖至酥烂。",
       ja: "牛肉を焼き、玉ねぎ・黒ビール・スパイスを加えてとろ火でじっくり煮込む。",
-      tr: "Brown dana eti, Ekle soğan, dark beer, ve spices, sonra Kısık ateşte pişir slowly until meat is very tender.",
-      it: "Brown manzo, Aggiungi cipolla, dark beer, e spices, poi Fai sobbollire slowly until meat is very tender.",
-      ko: "Brown 소고기, 넣고 양파, dark beer, 그리고 spices, 그다음 약불로 끓여 slowly until meat is very tender하세요."
+      tr: "kahverengi dana eti, Ekle soğbir, koyu bira, ve baharatlar, sonra Kısık ateşte pişir yavaşça et  çok yumuşak.",
+      it: "marrone manzo, Aggiungi cipolla, scuro birra, e spezie, poi Fai sobbollire lentamente carne  molto tenero.",
+      ko: "갈색 소고기, 넣고 양파, 진한 맥주, 그리고 향신료, 그다음 약불로 끓여 천천히 고기 입니다 매우 부드럽게하세요."
     },
     originText: {
       ro: "Stoofvlees este o rețetă tradițională din Belgia.",
@@ -7430,7 +7430,7 @@ export const recipes = [
       zh: "比利时啤酒炖牛肉 是来自比利时的传统食谱。",
       ja: "ストーフフレス はベルギーの伝統的なレシピです。",
       tr: "Stoofvlees Belçika kökenli geleneksel bir tariftir.",
-      it: "Stoofvlees è una ricetta tradizionale di Belgio.",
+      it: "Stoofvlees è una risotta tradizionale di Belgio.",
       ko: "Stoofvlees는(은) 벨기에의 전통 요리입니다."
     }
   },
@@ -7492,9 +7492,9 @@ export const recipes = [
       ar: ["دجاج", "شعيرية منزلية", "بصل", "جزر", "كرفس", "بورشت", "لوفيج"],
       zh: ["鸡肉", "自制面条", "洋葱", "胡萝卜", "芹菜", "红菜汤", "香芹"],
       ja: ["鶏肉", "自家製麺", "玉ねぎ", "ニンジン", "セロリ", "ボルシチ", "ラヴェージ"],
-      tr: ["tavuk", "homemade noodles", "soğan", "havuç", "celery", "borscht", "lovage"],
-      it: ["pollo", "homemade noodles", "cipolla", "carota", "celery", "borscht", "lovage"],
-      ko: ["닭고기", "homemade noodles", "양파", "당근", "celery", "borscht", "lovage"]
+      tr: ["tavuk", "ev yapımı erişte", "soğbir", "havuç", "kereviz", "borş", "kereviz otu"],
+      it: ["pollo", "fatto in casa spaghetti", "cipolla", "carota", "sedano", "borsch", "levistico"],
+      ko: ["닭고기", "수제 면", "양파", "당근", "셀러리", "보르시", "러비지"]
     },
     howIsMade: {
       ro: "Fierbe carnea de pui cu legume, adaugă tăiței de casă și verdețuri. Acrit cu borș sau zeamă de lămâie.",
@@ -7507,9 +7507,9 @@ export const recipes = [
       ar: "اسلق الدجاج مع الخضار، أضف المعكرونة المنزلية والأعشاب. أضف البورش أو عصير الليمون للحموضة.",
       zh: "鸡肉与蔬菜煮开，加入自制面条和香草，用酸汤或柠檬汁调味。",
       ja: "鶏肉と野菜を煮て、自家製麺とハーブを加え、ボルシチやレモン汁で酸味を加える。",
-      tr: "Haşla tavuk ile vegetables, Ekle homemade noodles ve herbs. Sour ile borscht or limon juice.",
-      it: "Cuoci pollo con vegetables, Aggiungi homemade noodles e herbs. Sour con borscht or limone juice.",
-      ko: "삶고 닭고기와 vegetables, 넣고 homemade noodles그리고 herbs. Sour와 borscht or 레몬 juice하세요."
+      tr: "Haşla tavuk ile sebzeler, Ekle ev yapımı erişte ve otlar. ekşi ile borş veya limon suyu.",
+      it: "Cuoci pollo con verdure, Aggiungi fatto in casa spaghetti e erbe aromatiche. acidulo con borsch o limone succo.",
+      ko: "삶고 닭고기와 채소, 넣고 수제 면그리고 허브. 새콤한와 보르시 또는 레몬 주스하세요."
     },
     originText: {
       ro: "Zeamă este o rețetă tradițională din Moldova.",
@@ -7523,7 +7523,7 @@ export const recipes = [
       zh: "摩尔多瓦鸡汤 是来自摩尔多瓦的传统食谱。",
       ja: "ゼアマ はモルドバの伝統的なレシピです。",
       tr: "Zeama Moldova kökenli geleneksel bir tariftir.",
-      it: "Zeama è una ricetta tradizionale di Moldova.",
+      it: "Zeama è una risotta tradizionale di Moldova.",
       ko: "Zeama는(은) Moldova의 전통 요리입니다."
     }
   },
@@ -7585,9 +7585,9 @@ export const recipes = [
       ar: ["عجينة", "لحم مفروم", "بصل", "بازلاء", "صلصة", "توابل"],
       zh: ["酥皮", "肉末", "洋葱", "豌豆", "肉汁", "香料"],
       ja: ["パイ生地", "ひき肉", "玉ねぎ", "グリーンピース", "グレイビーソース", "スパイス"],
-      tr: ["pastry", "minced meat", "soğan", "peas", "gravy", "spices"],
-      it: ["pastry", "minced meat", "cipolla", "peas", "gravy", "spices"],
-      ko: ["pastry", "minced meat", "양파", "peas", "gravy", "spices"]
+      tr: ["hamur", "kıyılmış et", "soğbir", "bezelye", "sos", "baharatlar"],
+      it: ["pasta", "tritato carne", "cipolla", "piselli", "sugo", "spezie"],
+      ko: ["파이지", "다진 고기", "양파", "완두콩", "그레이비", "향신료"]
     },
     howIsMade: {
       ro: "Prepară un aluat fraged, umple-l cu carne tocată și legume sotate, apoi coace-l până devine auriu.",
@@ -7600,9 +7600,9 @@ export const recipes = [
       ar: "حضّر عجينة هشة، احشها باللحم المفروم والخضار المقلية واخبزها حتى تحمر.",
       zh: "做酥皮，包入炒香的肉末和蔬菜，烤至金黄。",
       ja: "タルト生地を作り、挽肉と炒めた野菜を詰め、焼き色がつくまでオーブンで焼く。",
-      tr: "Make shortcrust pastry, fill ile minced meat ve sautéed vegetables, sonra Fırında pişir until golden.",
-      it: "Make shortcrust pastry, fill con minced meat e sautéed vegetables, poi Cuoci al forno until golden.",
-      ko: "Make shortcrust pastry, fill와 minced meat그리고 sautéed vegetables, 그다음 오븐에 구워 until golden하세요."
+      tr: "yapın kısa hamur hamur, doldurun ile kıyılmış et ve soteleyiné sebzeler, sonra Fırında pişir altın rengi.",
+      it: "fai pasta brisée pasta, farcisci con tritato carne e soffriggié verdure, poi Cuoci al forno dorato.",
+      ko: "만듭니다 쇼트크러스트 파이지, 채웁니다와 다진 고기그리고 볶습니다é 채소, 그다음 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Meat Pie este o rețetă tradițională din Australia.",
@@ -7615,9 +7615,9 @@ export const recipes = [
       ar: "فطيرة اللحم هي وصفة تقليدية من أستراليا.",
       zh: "肉馅饼 是来自澳大利亚的传统食谱。",
       ja: "ミートパイ はオーストラリアの伝統的なレシピです。",
-      tr: "Meat Pie Avustralya kökenli geleneksel bir tariftir.",
-      it: "Meat Pie è una ricetta tradizionale di Australia.",
-      ko: "Meat Pie는(은) 호주의 전통 요리입니다."
+      tr: "et Pie Avustralya kökenli geleneksel bir tariftir.",
+      it: "carne Pie è una risotta tradizionale di Australia.",
+      ko: "고기 Pie는(은) 호주의 전통 요리입니다."
     }
   },
   {
@@ -7678,9 +7678,9 @@ export const recipes = [
       ar: ["خبز محمص", "حمص", "لبن زبادي", "ثوم", "زبدة", "مكسرات", "توابل"],
       zh: ["烤面包", "鹰嘴豆", "酸奶", "大蒜", "黄油", "坚果", "香料"],
       ja: ["トースト", "ひよこ豆", "ヨーグルト", "ニンニク", "バター", "ナッツ", "スパイス"],
-      tr: ["toasted ekmek", "nohut", "yoğurt", "sarımsak", "tereyağı", "nuts", "spices"],
-      it: ["toasted pane", "ceci", "yogurt", "aglio", "burro", "nuts", "spices"],
-      ko: ["toasted 빵", "병아리콩", "요거트", "마늘", "버터", "nuts", "spices"]
+      tr: ["kavrulmuş ekmek", "nohut", "yoğurt", "sarımsak", "tereyağı", "kuruyemiş", "baharatlar"],
+      it: ["tostato pane", "ceci", "yogurt", "aglio", "burro", "frutta secca", "spezie"],
+      ko: ["구운 빵", "병아리콩", "요거트", "마늘", "버터", "견과류", "향신료"]
     },
     howIsMade: {
       ro: "Pune pâine prăjită la bază, acoperă cu iaurt, năut fiert și unt topit cu condimente. Presară nuci sau semințe de pin.",
@@ -7693,9 +7693,9 @@ export const recipes = [
       ar: "ضع الخبز المحمص في الأسفل، غطّه باللبن والحمص المسلوق والزبدة المذابة مع البهارات، وزيّنه بالمكسرات أو الصنوبر.",
       zh: "底层铺烤面包块，淋上酸奶、煮熟的鹰嘴豆和香料黄油，上面撒坚果或松子。",
       ja: "トーストしたパンを敷き、ヨーグルト・ゆでヒヨコ豆・スパイス入りバターをかけ、ナッツや松の実を散らす。",
-      tr: "Place toasted ekmek at base, cover ile yoğurt, boiled nohut, ve melted tereyağı ile spices. Top ile nuts or pine nuts.",
-      it: "Place toasted pane at base, cover con yogurt, boiled ceci, e melted burro con spices. Top con nuts or pine nuts.",
-      ko: "Place toasted 빵 at base, cover와 요거트, boiled 병아리콩, 그리고 melted 버터와 spices. Top와 nuts or pine nuts하세요."
+      tr: "yerleştirin kavrulmuş ekmek  taban, örtün ile yoğurt, byağ nohut, ve eritilmiş tereyağı ile baharatlar. üstüne ile kuruyemiş veya çam kuruyemiş.",
+      it: "metti tostato pane  base, copri con yogurt, bolioed ceci, e fuso burro con spezie. sopra con frutta secca o pino frutta secca.",
+      ko: "놓습니다 구운 빵 에서 바닥, 덮습니다와 요거트, b기름 병아리콩, 그리고 녹인 버터와 향신료. 위에와 견과류 또는 소나무 견과류하세요."
     },
     originText: {
       ro: "Fatteh este o rețetă tradițională din Siria.",
@@ -7709,7 +7709,7 @@ export const recipes = [
       zh: "法塔 是来自叙利亚的传统食谱。",
       ja: "ファッテ はシリアの伝統的なレシピです。",
       tr: "Fatteh Syria kökenli geleneksel bir tariftir.",
-      it: "Fatteh è una ricetta tradizionale di Syria.",
+      it: "Fatteh è una risotta tradizionale di Syria.",
       ko: "Fatteh는(은) Syria의 전통 요리입니다."
     }
   },
@@ -7771,9 +7771,9 @@ export const recipes = [
       ar: ["خبز الجاودار", "رنجة", "بيض", "بصل", "فجل", "زبدة"],
       zh: ["黑麦面包", "鲱鱼", "鸡蛋", "洋葱", "萝卜", "黄油"],
       ja: ["ライ麦パン", "ニシン", "卵", "玉ねぎ", "ラディッシュ", "バター"],
-      tr: ["rye ekmek", "herring", "yumurta", "soğan", "radish", "tereyağı"],
-      it: ["rye pane", "herring", "uova", "cipolla", "radish", "burro"],
-      ko: ["rye 빵", "herring", "계란", "양파", "radish", "버터"]
+      tr: ["çavdar ekmek", "ringa balığı", "yumurta", "soğbir", "turp", "tereyağı"],
+      it: ["segale pane", "aringa", "uova", "cipolla", "ravanello", "burro"],
+      ko: ["호밀 빵", "청어", "계란", "양파", "무", "버터"]
     },
     howIsMade: {
       ro: "Unge pâinea de secară cu unt, așază deasupra carne, pește, brânzeturi sau legume, decorează cu verdețuri și ou fiert.",
@@ -7786,9 +7786,9 @@ export const recipes = [
       ar: "ادهن خبز الجاودار بالزبدة، ضع عليه اللحم أو السمك أو الجبن أو الخضار، وزينه بالأعشاب والبيض المسلوق.",
       zh: "黑麦面包抹黄油，上面放肉类、鱼、奶酪或蔬菜，再用香草和煮蛋装饰。",
       ja: "ライ麦パンにバターを塗り、肉・魚・チーズ・野菜などをのせ、ハーブとゆで卵で飾る。",
-      tr: "Spread tereyağı on rye ekmek, top ile meat, balık, peynir or vegetables, garnish ile herbs ve boiled yumurta.",
-      it: "Spread burro on rye pane, top con meat, pesce, formaggio or vegetables, garnish con herbs e boiled uovo.",
-      ko: "Spread 버터 on rye 빵, top와 meat, 생선, 치즈 or vegetables, garnish와 herbs그리고 boiled 계란하세요."
+      tr: "yayın tereyağı üstüne çavdar ekmek, üstüne ile et, balık, peynir veya sebzeler, süsleyin ile otlar ve byağ yumurta.",
+      it: "stendi burro su segale pane, sopra con carne, pesce, formaggio o verdure, guarnisci con erbe aromatiche e bolioed uovo.",
+      ko: "펼칩니다 버터 위에 호밀 빵, 위에와 고기, 생선, 치즈 또는 채소, 고명으로 올립니다와 허브그리고 b기름 계란하세요."
     },
     originText: {
       ro: "Smørrebrød este o rețetă tradițională din Danemarca.",
@@ -7802,7 +7802,7 @@ export const recipes = [
       zh: "丹麦开放式三明治 是来自丹麦的传统食谱。",
       ja: "スモーブロー はデンマークの伝統的なレシピです。",
       tr: "Smørrebrød Danimarka kökenli geleneksel bir tariftir.",
-      it: "Smørrebrød è una ricetta tradizionale di Danimarca.",
+      it: "Smørrebrød è una risotta tradizionale di Danimarca.",
       ko: "Smørrebrød는(은) 덴마크의 전통 요리입니다."
     }
   },
@@ -7864,9 +7864,9 @@ export const recipes = [
       ar: ["نودلز الحنطة السوداء", "لحم بقري", "خيار", "بيض مسلوق", "كيمتشي", "ثلج", "خل"],
       zh: ["荞麦面", "牛肉", "黄瓜", "水煮蛋", "泡菜", "冰块", "醋"],
       ja: ["そば粉の麺", "牛肉", "キュウリ", "ゆで卵", "キムチ", "氷", "酢"],
-      tr: ["buckwheat noodles", "dana eti", "salatalık", "boiled yumurta", "kimchi", "ice", "sirke"],
-      it: ["buckwheat noodles", "manzo", "cetriolo", "boiled uovo", "kimchi", "ice", "aceto"],
-      ko: ["buckwheat noodles", "소고기", "오이", "boiled 계란", "kimchi", "ice", "식초"]
+      tr: ["karabuğday erişte", "dana eti", "salatalık", "byağ yumurta", "kimchi", "buz", "sirke"],
+      it: ["grano saraceno spaghetti", "manzo", "cetriolo", "bolioed uovo", "kimchi", "ghiaccio", "aceto"],
+      ko: ["메밀 면", "소고기", "오이", "b기름 계란", "김치", "얼음", "식초"]
     },
     howIsMade: {
       ro: "Fierbe tăițeii din hrișcă, clătește-i cu apă rece, servește-i în supă rece cu felii de castravete, ou fiert și carne de vită.",
@@ -7879,9 +7879,9 @@ export const recipes = [
       ar: "اسلق نودلز الحنطة السوداء، اغسلها بماء بارد، وقدّمها في مرق بارد مع خيار وبيض ولحم بقري.",
       zh: "荞麦面煮熟后冷水冲洗，放入冷汤中，加黄瓜片、煮鸡蛋和牛肉一起吃。",
       ja: "そば粉の麺を茹でて冷水で締め、冷たいスープにきゅうり・ゆで卵・牛肉を添えて提供。",
-      tr: "Haşla buckwheat noodles, rinse ile cold su, Servis et in cold et suyu ile salatalık slices, boiled yumurta, ve dana eti.",
-      it: "Cuoci buckwheat noodles, rinse con cold acqua, Servi in cold brodo con cetriolo slices, boiled uovo, e manzo.",
-      ko: "삶고 buckwheat noodles, rinse와 cold 물, 담아 내세요 in cold 육수와 오이 slices, boiled 계란, 그리고 소고기하세요."
+      tr: "Haşla karabuğday erişte, durulayın ile soğuk su, Servis et in soğuk et suyu ile salatalık dilimler, byağ yumurta, ve dana eti.",
+      it: "Cuoci grano saraceno spaghetti, sciacqua con freddo acqua, Servi in freddo brodo con cetriolo fette, bolioed uovo, e manzo.",
+      ko: "삶고 메밀 면, 헹굽니다와 차가운 물, 담아 내세요 에서 차가운 육수와 오이 조각, b기름 계란, 그리고 소고기하세요."
     },
     originText: {
       ro: "Naengmyeon este o rețetă tradițională din Coreea de Nord.",
@@ -7895,7 +7895,7 @@ export const recipes = [
       zh: "冷面 是来自朝鲜的传统食谱。",
       ja: "ネンミョン は北朝鮮の伝統的なレシピです。",
       tr: "Naengmyeon North Korea kökenli geleneksel bir tariftir.",
-      it: "Naengmyeon è una ricetta tradizionale di North Korea.",
+      it: "Naengmyeon è una risotta tradizionale di North Korea.",
       ko: "Naengmyeon는(은) North Korea의 전통 요리입니다."
     }
   },
@@ -7957,9 +7957,9 @@ export const recipes = [
       ar: ["لحم بقري", "نخاع العظم", "زنجبيل", "ثوم", "توابل", "دقيق", "زيت"],
       zh: ["牛肉", "骨髓", "生姜", "大蒜", "香料", "面粉", "油"],
       ja: ["牛肉", "骨髄", "ショウガ", "ニンニク", "スパイス", "小麦粉", "油"],
-      tr: ["dana eti", "bone marrow", "zencefil", "sarımsak", "spices", "un", "oil"],
-      it: ["manzo", "bone marrow", "zenzero", "aglio", "spices", "farina", "oil"],
-      ko: ["소고기", "bone marrow", "생강", "마늘", "spices", "밀가루", "oil"]
+      tr: ["dana eti", "kemik ilik", "zencefil", "sarımsak", "baharatlar", "un", "yağ"],
+      it: ["manzo", "osso midollo", "zenzero", "aglio", "spezie", "farina", "olio"],
+      ko: ["소고기", "뼈 골수", "생강", "마늘", "향신료", "밀가루", "기름"]
     },
     howIsMade: {
       ro: "Gătește carnea de vită sau miel la foc mic în sos cu condimente, ceapă, ghimbir și usturoi, până devine foarte fragedă.",
@@ -7972,9 +7972,9 @@ export const recipes = [
       ar: "اطبخ لحم البقر أو الضأن على نار هادئة مع الصوص المتبل والبصل والزنجبيل والثوم حتى ينضج.",
       zh: "牛肉或羊肉用洋葱、姜、蒜和香料慢炖至软烂。",
       ja: "牛肉またはラム肉をスパイス・玉ねぎ・生姜・ニンニク入りのソースでじっくり煮込む。",
-      tr: "Slow-cook dana eti or lamb in a spiced sos ile soğan, zencefil, ve sarımsak until very tender.",
-      it: "Slow-cook manzo or lamb in a spiced salsa con cipolla, zenzero, e aglio until very tender.",
-      ko: "Slow-cook 소고기 or lamb in a spiced 소스와 양파, 생강, 그리고 마늘 until very tender하세요."
+      tr: "kısık ateşte yavaşça pişirin dana eti veya kuzu baharatlı sos ile soğbir, zencefil, ve sarımsak çok yumuşak.",
+      it: "cuoci lentamente manzo o agnello speziato salsa con cipolla, zenzero, e aglio molto tenero.",
+      ko: "약한 불로 천천히 조리합니다 소고기 또는 양고기 에서 a 향신료를 넣은 소스와 양파, 생강, 그리고 마늘 매우 부드럽게하세요."
     },
     originText: {
       ro: "Nihari este o rețetă tradițională din Pakistan.",
@@ -7988,7 +7988,7 @@ export const recipes = [
       zh: "尼哈里炖肉 是来自巴基斯坦的传统食谱。",
       ja: "ニハリ はパキスタンの伝統的なレシピです。",
       tr: "Nihari Pakistan kökenli geleneksel bir tariftir.",
-      it: "Nihari è una ricetta tradizionale di Pakistan.",
+      it: "Nihari è una risotta tradizionale di Pakistan.",
       ko: "Nihari는(은) Pakistan의 전통 요리입니다."
     }
   },
@@ -8050,9 +8050,9 @@ export const recipes = [
       ar: ["نودلز الأرز", "لحم بقري", "كوارع خنزير", "عشب الليمون", "معجون الروبيان", "فلفل حار", "بصل"],
       zh: ["米粉", "牛肉", "猪蹄", "香茅", "虾酱", "辣椒", "洋葱"],
       ja: ["ライスヌードル", "牛肉", "豚足", "レモングラス", "エビペースト", "唐辛子", "玉ねぎ"],
-      tr: ["pirinç noodles", "dana eti", "domuz eti hock", "limongrass", "karides paste", "chili", "soğan"],
-      it: ["riso noodles", "manzo", "maiale hock", "limonegrass", "gamberetti paste", "chili", "cipolla"],
-      ko: ["쌀 noodles", "소고기", "돼지고기 hock", "레몬grass", "새우 paste", "chili", "양파"]
+      tr: ["pirinç erişte", "dana eti", "domuz eti incik", "limongrass", "karides salça", "acı biber", "soğbir"],
+      it: ["riso spaghetti", "manzo", "maiale stinco", "limonegrass", "gamberetti concentrato", "peperoncino", "cipolla"],
+      ko: ["쌀 면", "소고기", "돼지고기 족발", "레몬풀", "새우 페이스트", "고추", "양파"]
     },
     howIsMade: {
       ro: "Fierbe oasele de vită cu lămongrass și condimente, adaugă carne de vită și tăiței de orez. Servește cu ierburi și ardei iute.",
@@ -8065,9 +8065,9 @@ export const recipes = [
       ar: "اسلق عظام البقر مع الليمون العطري والتوابل، أضف لحم البقر ونودلز الأرز. قدّمها مع الأعشاب والفلفل الحار.",
       zh: "牛骨加香茅和香料煮汤，加入牛肉和米粉，配香草和辣椒食用。",
       ja: "牛骨をレモングラス・スパイスと一緒に煮て、牛肉・米麺を加え、ハーブや唐辛子とともに提供。",
-      tr: "Haşla dana eti bones ile limongrass ve spices, Ekle dana eti ve pirinç noodles. Serve ile herbs ve chili.",
-      it: "Cuoci manzo bones con limonegrass e spices, Aggiungi manzo e riso noodles. Serve con herbs e chili.",
-      ko: "삶고 소고기 bones와 레몬grass그리고 spices, 넣고 소고기그리고 쌀 noodles. Serve와 herbs그리고 chili하세요."
+      tr: "Haşla dana eti kemikler ile limongrass ve baharatlar, Ekle dana eti ve pirinç erişte. servis edin ile otlar ve acı biber.",
+      it: "Cuoci manzo ossa con limonegrass e spezie, Aggiungi manzo e riso spaghetti. servi con erbe aromatiche e peperoncino.",
+      ko: "삶고 소고기 뼈와 레몬풀그리고 향신료, 넣고 소고기그리고 쌀 면. 제공합니다와 허브그리고 고추하세요."
     },
     originText: {
       ro: "Bún bò Huế este o rețetă tradițională din Vietnam.",
@@ -8081,7 +8081,7 @@ export const recipes = [
       zh: "顺化牛肉粉 是来自越南的传统食谱。",
       ja: "ブンボーフエ はベトナムの伝統的なレシピです。",
       tr: "Bún bò Huế Vietnam kökenli geleneksel bir tariftir.",
-      it: "Bún bò Huế è una ricetta tradizionale di Vietnam.",
+      it: "Bún bò Huế è una risotta tradizionale di Vietnam.",
       ko: "Bún bò Huế는(은) 베트남의 전통 요리입니다."
     }
   },
@@ -8143,9 +8143,9 @@ export const recipes = [
       ar: ["سمك", "حليب جوز الهند", "فلفل رومي", "طماطم", "بصل", "زيت النخيل", "كزبرة"],
       zh: ["鱼", "椰奶", "灯笼椒", "番茄", "洋葱", "棕榈油", "香菜"],
       ja: ["魚", "ココナッツミルク", "パプリカ", "トマト", "玉ねぎ", "パーム油", "コリアンダー"],
-      tr: ["balık", "coconut süt", "kapya biber", "domates", "soğan", "palm oil", "coriander"],
-      it: ["pesce", "coconut latte", "peperone", "pomodori", "cipolla", "palm oil", "coriander"],
-      ko: ["생선", "coconut 우유", "파프리카", "토마토", "양파", "palm oil", "coriander"]
+      tr: ["balık", "hindistancevizi süt", "kapya biber", "domates", "soğbir", "palmiye yağ", "kişniş"],
+      it: ["pesce", "cocco latte", "peperone", "pomodori", "cipolla", "palma olio", "coriandolo"],
+      ko: ["생선", "코코넛 우유", "파프리카", "토마토", "양파", "야자 기름", "고수"]
     },
     howIsMade: {
       ro: "Gătește peștele cu roșii, ceapă, ardei și usturoi în lapte de cocos, adaugă ulei de palmier și verdețuri la final.",
@@ -8158,9 +8158,9 @@ export const recipes = [
       ar: "اطبخ السمك مع الطماطم والبصل والفلفل والثوم في حليب جوز الهند، وأضف زيت النخيل والأعشاب في النهاية.",
       zh: "鱼与番茄、洋葱、辣椒和大蒜在椰奶中炖煮，最后加入棕榈油和香草。",
       ja: "魚をトマト・玉ねぎ・ピーマン・ニンニクとココナッツミルクで煮込み、仕上げにパームオイルとハーブを加える。",
-      tr: "Pişir balık ile domates, soğan, bibers, ve sarımsak in coconut süt, Ekle palm oil ve herbs at end.",
-      it: "Cuoci pesce con pomodori, cipolla, peperones, e aglio in coconut latte, Aggiungi palm oil e herbs at end.",
-      ko: "조리하고 생선와 토마토, 양파, 고추s, 그리고 마늘 in coconut 우유, 넣고 palm oil그리고 herbs at end하세요."
+      tr: "Pişir balık ile domates, soğbir, bibers, ve sarımsak in hindistancevizi süt, Ekle palmiye yağ ve otlar  sonunda.",
+      it: "Cuoci pesce con pomodori, cipolla, peperones, e aglio in cocco latte, Aggiungi palma olio e erbe aromatiche  alla fine.",
+      ko: "조리하고 생선와 토마토, 양파, 고추s, 그리고 마늘 에서 코코넛 우유, 넣고 야자 기름그리고 허브 에서 마지막에하세요."
     },
     originText: {
       ro: "Moqueca este o rețetă tradițională din Brazilia.",
@@ -8174,7 +8174,7 @@ export const recipes = [
       zh: "巴西鱼炖菜 是来自巴西的传统食谱。",
       ja: "ムケッカ はブラジルの伝統的なレシピです。",
       tr: "Moqueca Brezilya kökenli geleneksel bir tariftir.",
-      it: "Moqueca è una ricetta tradizionale di Brasile.",
+      it: "Moqueca è una risotta tradizionale di Brasile.",
       ko: "Moqueca는(은) 브라질의 전통 요리입니다."
     }
   },
@@ -8236,9 +8236,9 @@ export const recipes = [
       ar: ["خبز بيتا", "باذنجان", "بيض مسلوق", "بطاطس", "سلطة", "طحينة", "أمبا"],
       zh: ["皮塔饼", "茄子", "煮鸡蛋", "土豆", "沙拉", "芝麻酱", "阿姆巴酱"],
       ja: ["ピタパン", "ナス", "ゆで卵", "ジャガイモ", "サラダ", "タヒニ", "アンバ"],
-      tr: ["pita ekmek", "yumurtaplant", "boiled yumurta", "patates", "salad", "tahini", "amba"],
-      it: ["pita pane", "uovoplant", "boiled uova", "patate", "salad", "tahini", "amba"],
-      ko: ["pita 빵", "계란plant", "boiled 계란", "감자", "salad", "tahini", "amba"]
+      tr: ["pita ekmek", "yumurtaplant", "byağ yumurta", "patates", "salata", "tahin", "amba"],
+      it: ["pita pane", "uovoplant", "bolioed uova", "patate", "insalata", "tahina", "amba"],
+      ko: ["피타 빵", "계란식물", "b기름 계란", "감자", "샐러드", "타히니", "amba"]
     },
     howIsMade: {
       ro: "Umple pita cu vinete prăjite, ou fiert, salată, tahini și legume murate. Servește cu sos amba.",
@@ -8251,9 +8251,9 @@ export const recipes = [
       ar: "احشِ الخبز البيتا بالباذنجان المقلي والبيض المسلوق والسلطة والطحينة والمخللات. قدّمه مع صوص عمبة.",
       zh: "皮塔饼夹入炸茄子、煮鸡蛋、沙拉、芝麻酱和腌菜，配安巴酱食用。",
       ja: "ピタパンに揚げナス・ゆで卵・サラダ・タヒニ・ピクルスを挟み、アンバソースを添える。",
-      tr: "Fill pita ekmek ile fried yumurtaplant, boiled yumurta, salad, tahini, ve pickled vegetables. Serve ile amba sos.",
-      it: "Fill pita pane con fried uovoplant, boiled uovo, salad, tahini, e pickled vegetables. Serve con amba salsa.",
-      ko: "Fill pita 빵와 fried 계란plant, boiled 계란, salad, tahini, 그리고 pickled vegetables. Serve와 amba 소스하세요."
+      tr: "doldurun pita ekmek ile kızarmış yumurtaplant, byağ yumurta, salata, tahin, ve turşu sebzeler. servis edin ile amba sos.",
+      it: "farcisci pita pane con fritto uovoplant, bolioed uovo, insalata, tahina, e in salamoia verdure. servi con amba salsa.",
+      ko: "채웁니다 피타 빵와 튀긴 계란식물, b기름 계란, 샐러드, 타히니, 그리고 절인 채소. 제공합니다와 amba 소스하세요."
     },
     originText: {
       ro: "Sabich este o rețetă tradițională din Israel.",
@@ -8267,7 +8267,7 @@ export const recipes = [
       zh: "萨比奇三明治 是来自以色列的传统食谱。",
       ja: "サビッチ はイスラエルの伝統的なレシピです。",
       tr: "Sabich İsrail kökenli geleneksel bir tariftir.",
-      it: "Sabich è una ricetta tradizionale di Israele.",
+      it: "Sabich è una risotta tradizionale di Israele.",
       ko: "Sabich는(은) 이스라엘의 전통 요리입니다."
     }
   },
@@ -8329,9 +8329,9 @@ export const recipes = [
       ar: ["لحم بقري", "فلفل رومي", "بصل", "طماطم", "ثوم", "زيت", "توابل"],
       zh: ["牛肉", "灯笼椒", "洋葱", "番茄", "大蒜", "油", "香料"],
       ja: ["牛肉", "パプリカ", "玉ねぎ", "トマト", "ニンニク", "油", "スパイス"],
-      tr: ["dana eti", "kapya biber", "soğan", "domates", "sarımsak", "oil", "spices"],
-      it: ["manzo", "peperone", "cipolla", "pomodori", "aglio", "oil", "spices"],
-      ko: ["소고기", "파프리카", "양파", "토마토", "마늘", "oil", "spices"]
+      tr: ["dana eti", "kapya biber", "soğbir", "domates", "sarımsak", "yağ", "baharatlar"],
+      it: ["manzo", "peperone", "cipolla", "pomodori", "aglio", "olio", "spezie"],
+      ko: ["소고기", "파프리카", "양파", "토마토", "마늘", "기름", "향신료"]
     },
     howIsMade: {
       ro: "Fierbe carnea de vită până devine foarte fragedă, mărunțește-o, apoi gătește-o cu roșii, ardei, ceapă și condimente.",
@@ -8344,9 +8344,9 @@ export const recipes = [
       ar: "اسلق لحم البقر حتى يصبح طريًا جدًا، قطعه، ثم اطبخه مع الطماطم والفلفل والبصل والتوابل.",
       zh: "牛肉煮至酥烂撕成丝，再与番茄、辣椒、洋葱和香料一起炖煮。",
       ja: "牛肉を柔らかくなるまで煮てほぐし、トマト・ピーマン・玉ねぎ・スパイスと炒める。",
-      tr: "Haşla dana eti until very tender, shred it, sonra Pişir ile domates, bibers, soğans, ve spices.",
-      it: "Cuoci manzo until very tender, shred it, poi Cuoci con pomodori, peperones, cipollas, e spices.",
-      ko: "삶고 소고기 until very tender, shred it, 그다음 조리하고와 토마토, 고추s, 양파s, 그리고 spices하세요."
+      tr: "Haşla dana eti çok yumuşak, didikleyin o, sonra Pişir ile domates, bibers, soğans, ve baharatlar.",
+      it: "Cuoci manzo molto tenero, sfilaccia esso, poi Cuoci con pomodori, peperones, cipollas, e spezie.",
+      ko: "삶고 소고기 매우 부드럽게, 찢습니다 그것, 그다음 조리하고와 토마토, 고추s, 양파s, 그리고 향신료하세요."
     },
     originText: {
       ro: "Ropa Vieja este o rețetă tradițională din Cuba.",
@@ -8360,7 +8360,7 @@ export const recipes = [
       zh: "古巴牛肉丝 是来自古巴的传统食谱。",
       ja: "ロパ・ビエハ はキューバの伝統的なレシピです。",
       tr: "Ropa Vieja Cuba kökenli geleneksel bir tariftir.",
-      it: "Ropa Vieja è una ricetta tradizionale di Cuba.",
+      it: "Ropa Vieja è una risotta tradizionale di Cuba.",
       ko: "Ropa Vieja는(은) Cuba의 전통 요리입니다."
     }
   },
@@ -8422,9 +8422,9 @@ export const recipes = [
       ar: ["سمك مدخن", "بطاطس", "بصل", "حليب", "زبدة", "فلفل", "ملح"],
       zh: ["熏鱼", "土豆", "洋葱", "牛奶", "黄油", "胡椒", "盐"],
       ja: ["燻製魚", "ジャガイモ", "玉ねぎ", "牛乳", "バター", "コショウ", "塩"],
-      tr: ["smoked balık", "patates", "soğan", "süt", "tereyağı", "biber", "tuz"],
-      it: ["smoked pesce", "patate", "cipolla", "latte", "burro", "peperone", "sale"],
-      ko: ["smoked 생선", "감자", "양파", "우유", "버터", "고추", "소금"]
+      tr: ["isli balık", "patates", "soğbir", "süt", "tereyağı", "biber", "tuz"],
+      it: ["affumicato pesce", "patate", "cipolla", "latte", "burro", "peperone", "sale"],
+      ko: ["훈제 생선", "감자", "양파", "우유", "버터", "고추", "소금"]
     },
     howIsMade: {
       ro: "Fierbe cartofii și ceapa în lapte, adaugă peștele afumat și untul, asezonează după gust.",
@@ -8437,9 +8437,9 @@ export const recipes = [
       ar: "اسلق البطاطس والبصل في الحليب، أضف السمك المدخن والزبدة، تبّل حسب الرغبة.",
       zh: "用牛奶煮土豆和洋葱，加入熏鱼和黄油，调味。",
       ja: "ジャガイモと玉ねぎを牛乳で煮て、燻製魚とバターを加え、味を調える。",
-      tr: "Haşla patates ve soğan in süt, Ekle smoked balık ve tereyağı, Baharatlandır to taste.",
-      it: "Cuoci patate e cipolla in latte, Aggiungi smoked pesce e burro, Condisci to taste.",
-      ko: "삶고 감자그리고 양파 in 우유, 넣고 smoked 생선그리고 버터, 간을 맞추고 to taste하세요."
+      tr: "Haşla patates ve soğbir in süt, Ekle isli balık ve tereyağı, Baharatlandır  tadına.",
+      it: "Cuoci patate e cipolla in latte, Aggiungi affumicato pesce e burro, Condisci  a piacere.",
+      ko: "삶고 감자그리고 양파 에서 우유, 넣고 훈제 생선그리고 버터, 간을 맞추고  기호에 맞게하세요."
     },
     originText: {
       ro: "Cullen Skink este o rețetă tradițională din Scoția.",
@@ -8453,7 +8453,7 @@ export const recipes = [
       zh: "卡伦鱼汤 是来自苏格兰的传统食谱。",
       ja: "カレンスキンク はスコットランドの伝統的なレシピです。",
       tr: "Cullen Skink Scotland kökenli geleneksel bir tariftir.",
-      it: "Cullen Skink è una ricetta tradizionale di Scotland.",
+      it: "Cullen Skink è una risotta tradizionale di Scotland.",
       ko: "Cullen Skink는(은) Scotland의 전통 요리입니다."
     }
   },
@@ -8515,9 +8515,9 @@ export const recipes = [
       ar: ["خضار", "بيض مسلوق", "توفو", "بطاطس", "فول سوداني", "صلصة الفول السوداني", "كرنب", "كروتون"],
       zh: ["蔬菜", "水煮蛋", "豆腐", "土豆", "花生", "花生酱", "卷心菜", "面包丁"],
       ja: ["野菜", "ゆで卵", "豆腐", "じゃがいも", "ピーナッツ", "ピーナッツソース", "キャベツ", "クルトン"],
-      tr: ["vegetables", "boiled yumurta", "tofu", "patates", "peanuts", "peanut sauce", "cabbage", "croutons"],
-      it: ["vegetables", "boiled uovo", "tofu", "patate", "peanuts", "peanut sauce", "cabbage", "croutons"],
-      ko: ["vegetables", "boiled 계란", "tofu", "감자", "peanuts", "peanut sauce", "cabbage", "croutons"]
+      tr: ["sebzeler", "byağ yumurta", "tofu", "patates", "yer fıstığı", "yer fıstığı sos", "lahana", "kruton"],
+      it: ["verdure", "bolioed uovo", "tofu", "patate", "arachidi", "arachide salsa", "cavolo", "crostini"],
+      ko: ["채소", "b기름 계란", "두부", "감자", "땅콩", "땅콩 소스", "양배추", "크루통"]
     },
     howIsMade: {
       ro: "Fierbe legumele, taie-le, așază-le pe farfurie alături de ou, tofu și sos de arahide. Presară crutoane.",
@@ -8530,9 +8530,9 @@ export const recipes = [
       ar: "اسلق الخضار وقطعها، قدمها مع البيض والتوفو وصلصة الفول السوداني. رش الكروتون في الأعلى.",
       zh: "煮熟蔬菜，切块，与鸡蛋、豆腐和花生酱一起装盘，撒上面包丁。",
       ja: "野菜を茹でて切り、卵、豆腐、ピーナッツソースとともに皿に盛り、クルトンを振りかける。",
-      tr: "Haşla vegetables, cut them, Servis et ile yumurta, tofu, ve peanut sos. Sprinkle croutons on top.",
-      it: "Cuoci vegetables, cut them, Servi con uovo, tofu, e peanut salsa. Sprinkle croutons on top.",
-      ko: "삶고 vegetables, cut them, 담아 내세요와 계란, tofu, 그리고 peanut 소스. Sprinkle croutons on top하세요."
+      tr: "Haşla sebzeler, kesin onları, Servis et ile yumurta, tofu, ve yer fıstığı sos. serpiştirin kruton üstüne üstüne.",
+      it: "Cuoci verdure, taglia li, Servi con uovo, tofu, e arachide salsa. spolvera crostini su sopra.",
+      ko: "삶고 채소, 자릅니다 그것들을, 담아 내세요와 계란, 두부, 그리고 땅콩 소스. 뿌립니다 크루통 위에 위에하세요."
     },
     originText: {
       ro: "Gado-Gado este o rețetă tradițională din Indonezia.",
@@ -8546,7 +8546,7 @@ export const recipes = [
       zh: "印尼什锦蔬菜沙拉 是来自印度尼西亚的传统食谱。",
       ja: "ガドガド はインドネシアの伝統的なレシピです。",
       tr: "Gado-Gado Endonezya kökenli geleneksel bir tariftir.",
-      it: "Gado-Gado è una ricetta tradizionale di Indonesia.",
+      it: "Gado-Gado è una risotta tradizionale di Indonesia.",
       ko: "Gado-Gado는(은) 인도네시아의 전통 요리입니다."
     }
   },
@@ -8604,9 +8604,9 @@ export const recipes = [
       ar: ["دقيق", "حليب", "خميرة", "سكر", "بيض", "زبدة", "قرفة"],
       zh: ["面粉", "牛奶", "酵母", "糖", "鸡蛋", "黄油", "肉桂"],
       ja: ["小麦粉", "牛乳", "イースト", "砂糖", "卵", "バター", "シナモン"],
-      tr: ["un", "süt", "yeast", "şeker", "yumurta", "tereyağı", "cinnamon"],
-      it: ["farina", "latte", "yeast", "zucchero", "uova", "burro", "cinnamon"],
-      ko: ["밀가루", "우유", "yeast", "설탕", "계란", "버터", "cinnamon"]
+      tr: ["un", "süt", "maya", "şeker", "yumurta", "tereyağı", "tarçın"],
+      it: ["farina", "latte", "lievito", "zucchero", "uova", "burro", "cannella"],
+      ko: ["밀가루", "우유", "이스트", "설탕", "계란", "버터", "계피"]
     },
     howIsMade: {
       ro: "Prepară un aluat, umple-l cu scorțișoară și zahăr, rulează-l, taie și coace la cuptor până devin aurii.",
@@ -8618,9 +8618,9 @@ export const recipes = [
       ar: "حضّر عجينة، املأها بالقرفة والسكر، لفّها، قطّعها، واخبزها حتى تصبح ذهبية.",
       zh: "做面团，包上肉桂和糖，卷起来切块，烤至金黄。",
       ja: "生地を作り、シナモンと砂糖を巻き込み、切って焼き色がつくまで焼く。",
-      tr: "Prepare a dough, fill ile cinnamon ve şeker, roll, cut, ve Fırında pişir until golden.",
-      it: "Prepare a dough, fill con cinnamon e zucchero, roll, cut, e Cuoci al forno until golden.",
-      ko: "Prepare a dough, fill와 cinnamon그리고 설탕, roll, cut, 그리고 오븐에 구워 until golden하세요."
+      tr: "hazırlayın a hamur, doldurun ile tarçın ve şeker, rulo yapın, kesin, ve Fırında pişir altın rengi.",
+      it: "prepara a impasto, farcisci con cannella e zucchero, arrotola, taglia, e Cuoci al forno dorato.",
+      ko: "준비합니다 a 반죽, 채웁니다와 계피그리고 설탕, 말아줍니다, 자릅니다, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Kanelbulle este o rețetă tradițională din Suedia.",
@@ -8633,9 +8633,9 @@ export const recipes = [
       ar: "لفائف القرفة هي وصفة تقليدية من السويد.",
       zh: "肉桂卷 是来自瑞典的传统食谱。",
       ja: "シナモンロール はスウェーデンの伝統的なレシピです。",
-      tr: "Cinnamon Bun İsveç kökenli geleneksel bir tariftir.",
-      it: "Cinnamon Bun è una ricetta tradizionale di Svezia.",
-      ko: "Cinnamon Bun는(은) 스웨덴의 전통 요리입니다."
+      tr: "tarçın ekmek İsveç kökenli geleneksel bir tariftir.",
+      it: "cannella panino è una risotta tradizionale di Svezia.",
+      ko: "계피 번는(은) 스웨덴의 전통 요리입니다."
     }
   },
   {
@@ -8696,9 +8696,9 @@ export const recipes = [
       ar: ["فلفل رومي", "لحم مفروم", "فاكهة", "جوز", "كريمة", "رمان", "توابل"],
       zh: ["灯笼椒", "肉末", "水果", "核桃", "奶油", "石榴", "香料"],
       ja: ["パプリカ", "ひき肉", "果物", "クルミ", "クリーム", "ザクロ", "スパイス"],
-      tr: ["kapya biber", "minced meat", "fruit", "walnuts", "krema", "pomegranate", "spices"],
-      it: ["peperone", "minced meat", "fruit", "walnuts", "panna", "pomegranate", "spices"],
-      ko: ["파프리카", "minced meat", "fruit", "walnuts", "크림", "pomegranate", "spices"]
+      tr: ["kapya biber", "kıyılmış et", "meyve", "ceviz", "krema", "nar", "baharatlar"],
+      it: ["peperone", "tritato carne", "frutta", "noci", "panna", "melograno", "spezie"],
+      ko: ["파프리카", "다진 고기", "과일", "호두", "크림", "석류", "향신료"]
     },
     howIsMade: {
       ro: "Umple ardeii copți cu carne tocată, fructe uscate și condimente, acoperă cu sos de nucă și presară rodie deasupra.",
@@ -8711,9 +8711,9 @@ export const recipes = [
       ar: "احشِ الفلفل المشوي باللحم المفروم والفواكه المجففة والتوابل، غطه بصلصة الجوز وزيّنه بالرمان.",
       zh: "烤辣椒内塞肉末、干果和香料，浇上核桃酱，撒上石榴籽。",
       ja: "焼きピーマンにひき肉・ドライフルーツ・スパイスを詰め、クルミソースとザクロをかける。",
-      tr: "Stuff roasted bibers ile minced meat, dried fruits, ve spices, cover ile walnut sos, ve sprinkle pomegranate on top.",
-      it: "Stuff roasted peperones con minced meat, dried fruits, e spices, cover con walnut salsa, e sprinkle pomegranate on top.",
-      ko: "Stuff roasted 고추s와 minced meat, dried fruits, 그리고 spices, cover와 walnut 소스, 그리고 sprinkle pomegranate on top하세요."
+      tr: "Stuff kavrulmuş bibers ile kıyılmış et, kuru meyveler, ve baharatlar, örtün ile ceviz sos, ve serpiştirin nar üstüne üstüne.",
+      it: "Stuff arrostito peperones con tritato carne, frutta secca, e spezie, copri con noce salsa, e spolvera melograno su sopra.",
+      ko: "Stuff 구운 고추s와 다진 고기, 말린 과일, 그리고 향신료, 덮습니다와 호두 소스, 그리고 뿌립니다 석류 위에 위에하세요."
     },
     originText: {
       ro: "Chiles en nogada este o rețetă tradițională din Mexic.",
@@ -8727,7 +8727,7 @@ export const recipes = [
       zh: "胡桃辣椒酱 是来自墨西哥的传统食谱。",
       ja: "チレス・エン・ノガダ はメキシコの伝統的なレシピです。",
       tr: "Chiles en nogada Meksika kökenli geleneksel bir tariftir.",
-      it: "Chiles en nogada è una ricetta tradizionale di Messico.",
+      it: "Chiles en nogada è una risotta tradizionale di Messico.",
       ko: "Chiles en nogada는(은) 멕시코의 전통 요리입니다."
     }
   },
@@ -8789,9 +8789,9 @@ export const recipes = [
       ar: ["عدس", "بصل", "جزر", "كرفس", "ثوم", "زيت زيتون", "ماء", "بهارات"],
       zh: ["扁豆", "洋葱", "胡萝卜", "芹菜", "大蒜", "橄榄油", "水", "香料"],
       ja: ["レンズ豆", "玉ねぎ", "にんじん", "セロリ", "にんにく", "オリーブオイル", "水", "スパイス"],
-      tr: ["mercimek", "soğan", "havuç", "celery", "sarımsak", "zeytinyağı", "su", "spices"],
-      it: ["lenticchie", "cipolla", "carota", "celery", "aglio", "olio d'oliva", "acqua", "spices"],
-      ko: ["렌틸콩", "양파", "당근", "celery", "마늘", "올리브오일", "물", "spices"]
+      tr: ["mercimek", "soğbir", "havuç", "kereviz", "sarımsak", "zeytinyağı", "su", "baharatlar"],
+      it: ["lenticchie", "cipolla", "carota", "sedano", "aglio", "olio d'oliva", "acqua", "spezie"],
+      ko: ["렌틸콩", "양파", "당근", "셀러리", "마늘", "올리브오일", "물", "향신료"]
     },
     howIsMade: {
       ro: "Se călesc legumele, se adaugă lintea și apa, se fierbe până se înmoaie totul și se condimentează după gust.",
@@ -8804,9 +8804,9 @@ export const recipes = [
       ar: "اقلي الخضار، أضف العدس والماء، اطبخ حتى ينضج كل شيء وتبّل حسب الذوق.",
       zh: "炒蔬菜，加入扁豆和水，煮至变软，按口味调味。",
       ja: "野菜を炒め、レンズ豆と水を加え、柔らかくなるまで煮て味付けする。",
-      tr: "Sauté vegetables, Ekle mercimek ve su, Kısık ateşte pişir until everything is tender, Baharatlandır to taste.",
-      it: "Sauté vegetables, Aggiungi lenticchie e acqua, Fai sobbollire until everything is tender, Condisci to taste.",
-      ko: "Sauté vegetables, 넣고 렌틸콩그리고 물, 약불로 끓여 until everything is tender, 간을 맞추고 to taste하세요."
+      tr: "soteleyiné sebzeler, Ekle mercimek ve su, Kısık ateşte pişir her şeyi  yumuşak, Baharatlandır  tadına.",
+      it: "soffriggié verdure, Aggiungi lenticchie e acqua, Fai sobbollire tutto  tenero, Condisci  a piacere.",
+      ko: "볶습니다é 채소, 넣고 렌틸콩그리고 물, 약불로 끓여 모든 것 입니다 부드럽게, 간을 맞추고  기호에 맞게하세요."
     },
     originText: {
       ro: "Supă de linte este o rețetă tradițională din Orientul Mijlociu.",
@@ -8819,9 +8819,9 @@ export const recipes = [
       ar: "حساء العدس هي وصفة تقليدية من الشرق الأوسط.",
       zh: "扁豆汤 是来自中东的传统食谱。",
       ja: "レンズ豆のスープ は中東の伝統的なレシピです。",
-      tr: "Lentil Soup Middle East kökenli geleneksel bir tariftir.",
-      it: "Lentil Soup è una ricetta tradizionale di Middle East.",
-      ko: "Lentil Soup는(은) Middle East의 전통 요리입니다."
+      tr: "Lentil çorba Middle East kökenli geleneksel bir tariftir.",
+      it: "Lentil zuppa è una risotta tradizionale di Middle East.",
+      ko: "Lentil 수프는(은) Middle East의 전통 요리입니다."
     }
   },
   {
@@ -8882,9 +8882,9 @@ export const recipes = [
       ar: ["عجينة الفيلو", "سبانخ", "جبنة فيتا", "بصل", "بيض", "زيت زيتون", "توابل"],
       zh: ["千层酥皮", "菠菜", "菲达奶酪", "洋葱", "鸡蛋", "橄榄油", "香料"],
       ja: ["フィロ生地", "ほうれん草", "フェタチーズ", "玉ねぎ", "卵", "オリーブオイル", "スパイス"],
-      tr: ["phyllo pastry", "ıspanak", "feta peynir", "soğan", "yumurta", "zeytinyağı", "spices"],
-      it: ["phyllo pastry", "spinaci", "feta formaggio", "cipolla", "uova", "olio d'oliva", "spices"],
-      ko: ["phyllo pastry", "시금치", "feta 치즈", "양파", "계란", "올리브오일", "spices"]
+      tr: ["yufka hamur", "ıspanak", "feta peyniri peynir", "soğbir", "yumurta", "zeytinyağı", "baharatlar"],
+      it: ["pasta fillo pasta", "spinaci", "feta formaggio", "cipolla", "uova", "olio d'oliva", "spezie"],
+      ko: ["필로 반죽 파이지", "시금치", "페타 치즈 치즈", "양파", "계란", "올리브오일", "향신료"]
     },
     howIsMade: {
       ro: "Umple foile subțiri cu amestec de spanac și brânză, rulează sau pune în tavă, unge cu ou și coace până devine aurie.",
@@ -8897,9 +8897,9 @@ export const recipes = [
       ar: "احشِ عجينة الفيلو بخليط السبانخ والجبن، لفها أو ضعها في صينية، ادهنها بالبيض واخبزها حتى تحمر.",
       zh: "千层酥皮包入菠菜和奶酪，卷起或铺在烤盘里，刷蛋液，烤至金黄。",
       ja: "フィロ生地にほうれん草とチーズを包み、巻くか重ねて卵を塗り、焼き色がつくまで焼く。",
-      tr: "Fill phyllo pastry ile ıspanak ve peynir mixture, roll or layer in a tray, brush ile yumurta, ve Fırında pişir until golden.",
-      it: "Fill phyllo pastry con spinaci e formaggio mixture, roll or layer in a tray, brush con uovo, e Cuoci al forno until golden.",
-      ko: "Fill phyllo pastry와 시금치그리고 치즈 mixture, roll or layer in a tray, brush와 계란, 그리고 오븐에 구워 until golden하세요."
+      tr: "doldurun yufka hamur ile ıspanak ve peynir karıştırınture, rulo yapın veya katman tepsi, fırçalayın ile yumurta, ve Fırında pişir altın rengi.",
+      it: "farcisci pasta fillo pasta con spinaci e formaggio mescolature, arrotola o strato teglia, spennella con uovo, e Cuoci al forno dorato.",
+      ko: "채웁니다 필로 반죽 파이지와 시금치그리고 치즈 섞습니다, 말아줍니다 또는 층 에서 a 트레이, 바릅니다와 계란, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Spanakopita este o rețetă tradițională din Grecia.",
@@ -8913,7 +8913,7 @@ export const recipes = [
       zh: "希腊菠菜馅饼 是来自希腊的传统食谱。",
       ja: "スパナコピタ はギリシャの伝統的なレシピです。",
       tr: "Spanakopita Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Spanakopita è una ricetta tradizionale di Grecia.",
+      it: "Spanakopita è una risotta tradizionale di Grecia.",
       ko: "Spanakopita는(은) 그리스의 전통 요리입니다."
     }
   },
@@ -8975,9 +8975,9 @@ export const recipes = [
       ar: ["أرز", "طماطم", "بصل", "فلفل رومي", "توابل", "زيت", "دجاج (اختياري)"],
       zh: ["米饭", "番茄", "洋葱", "灯笼椒", "香料", "油", "鸡肉（可选）"],
       ja: ["ご飯", "トマト", "玉ねぎ", "パプリカ", "スパイス", "油", "鶏肉（オプション）"],
-      tr: ["pirinç", "domates", "soğan", "kapya biber", "spices", "oil", "tavuk (optional)"],
-      it: ["riso", "pomodori", "cipolla", "peperone", "spices", "oil", "pollo (optional)"],
-      ko: ["쌀", "토마토", "양파", "파프리카", "spices", "oil", "닭고기 (optional)"]
+      tr: ["pirinç", "domates", "soğbir", "kapya biber", "baharatlar", "yağ", "tavuk (isteğe bağlı)"],
+      it: ["riso", "pomodori", "cipolla", "peperone", "spezie", "olio", "pollo (facoltativo)"],
+      ko: ["쌀", "토마토", "양파", "파프리카", "향신료", "기름", "닭고기 (선택)"]
     },
     howIsMade: {
       ro: "Călește orezul cu roșii, ardei, ceapă și condimente, apoi fierbe-l cu supă până absoarbe lichidul și devine colorat.",
@@ -8990,9 +8990,9 @@ export const recipes = [
       ar: "قلّب الأرز مع الطماطم والفلفل والبصل والتوابل، ثم اطبخه بالمرق حتى يمتص السائل ويصبح ملونًا.",
       zh: "米饭与番茄、辣椒、洋葱和香料一起炒香，加入高汤炖煮至汤汁吸收、米饭上色。",
       ja: "米をトマト・ピーマン・玉ねぎ・スパイスと炒め、ブイヨンで炊き上げて色がつくまで煮る。",
-      tr: "Sauté pirinç ile domates, bibers, soğans, ve spices, sonra Kısık ateşte pişir ile stock until liquid is absorbed ve pirinç is colored.",
-      it: "Sauté riso con pomodori, peperones, cipollas, e spices, poi Fai sobbollire con stock until liquid is absorbed e riso is colored.",
-      ko: "Sauté 쌀와 토마토, 고추s, 양파s, 그리고 spices, 그다음 약불로 끓여와 stock until liquid is absorbed그리고 쌀 is colored하세요."
+      tr: "soteleyiné pirinç ile domates, bibers, soğans, ve baharatlar, sonra Kısık ateşte pişir ile 육수 sıvı  çekilene kadar ve pirinç  renkli.",
+      it: "soffriggié riso con pomodori, peperones, cipollas, e spezie, poi Fai sobbollire con brodo liquido  assorbito e riso  colorato.",
+      ko: "볶습니다é 쌀와 토마토, 고추s, 양파s, 그리고 향신료, 그다음 약불로 끓여와 육수 액체 입니다 흡수될 때까지그리고 쌀 입니다 색이하세요."
     },
     originText: {
       ro: "Jollof Rice este o rețetă tradițională din Nigeria.",
@@ -9005,9 +9005,9 @@ export const recipes = [
       ar: "أرز جولوف هي وصفة تقليدية من نيجيريا.",
       zh: "尼日利亚炒饭 是来自尼日利亚的传统食谱。",
       ja: "ジョロフライス はナイジェリアの伝統的なレシピです。",
-      tr: "Jollof Rice Nigeria kökenli geleneksel bir tariftir.",
-      it: "Jollof Rice è una ricetta tradizionale di Nigeria.",
-      ko: "Jollof Rice는(은) Nigeria의 전통 요리입니다."
+      tr: "Jollof pirinç Nigeria kökenli geleneksel bir tariftir.",
+      it: "Jollof riso è una risotta tradizionale di Nigeria.",
+      ko: "Jollof 쌀는(은) Nigeria의 전통 요리입니다."
     }
   },
   {
@@ -9068,9 +9068,9 @@ export const recipes = [
       ar: ["سمك نيء", "حليب جوز الهند", "خيار", "بصل", "طماطم", "ليمون أخضر", "ملح"],
       zh: ["生鱼", "椰奶", "黄瓜", "洋葱", "番茄", "青柠", "盐"],
       ja: ["生魚", "ココナッツミルク", "キュウリ", "玉ねぎ", "トマト", "ライム", "塩"],
-      tr: ["raw balık", "coconut süt", "salatalık", "soğan", "domates", "yeşil limon", "tuz"],
-      it: ["raw pesce", "coconut latte", "cetriolo", "cipolla", "pomodori", "lime", "sale"],
-      ko: ["raw 생선", "coconut 우유", "오이", "양파", "토마토", "라임", "소금"]
+      tr: ["çiğ balık", "hindistancevizi süt", "salatalık", "soğbir", "domates", "yeşil limon", "tuz"],
+      it: ["crudo pesce", "cocco latte", "cetriolo", "cipolla", "pomodori", "lime", "sale"],
+      ko: ["생 생선", "코코넛 우유", "오이", "양파", "토마토", "라임", "소금"]
     },
     howIsMade: {
       ro: "Taie peștele crud cubulețe, amestecă-l cu lapte de cocos, ceapă, roșii, castravete și sare. Servește rece.",
@@ -9083,9 +9083,9 @@ export const recipes = [
       ar: "قطّع السمك النيء إلى مكعبات، اخلطه مع حليب جوز الهند والبصل والطماطم والخيار والملح. قدّمه باردًا.",
       zh: "生鱼切块，与椰奶、洋葱、番茄、黄瓜和盐拌匀，冷食。",
       ja: "生魚を角切りにし、ココナッツミルク・玉ねぎ・トマト・きゅうり・塩と和えて冷やして提供。",
-      tr: "Cut raw balık into cubes, Karıştır ile coconut süt, soğan, domates, salatalık, ve tuz. Serve chilled.",
-      it: "Cut raw pesce into cubes, Mescola con coconut latte, cipolla, pomodoro, cetriolo, e sale. Serve chilled.",
-      ko: "Cut raw 생선 into cubes, 섞고와 coconut 우유, 양파, 토마토, 오이, 그리고 소금. Serve chilled하세요."
+      tr: "kesin çiğ balık içine küp, Karıştır ile hindistancevizi süt, soğbir, domates, salatalık, ve tuz. servis edin soğutulmuş.",
+      it: "taglia crudo pesce dentro cubetti, Mescola con cocco latte, cipolla, pomodoro, cetriolo, e sale. servi raffreddato.",
+      ko: "자릅니다 생 생선 안에 깍둑썰기, 섞고와 코코넛 우유, 양파, 토마토, 오이, 그리고 소금. 제공합니다 차갑게 식힌하세요."
     },
     originText: {
       ro: "Oka i'a este o rețetă tradițională din Samoa.",
@@ -9099,7 +9099,7 @@ export const recipes = [
       zh: "萨摩亚鱼沙拉 是来自萨摩亚的传统食谱。",
       ja: "オカ・イア はサモアの伝統的なレシピです。",
       tr: "Oka i'a Samoa kökenli geleneksel bir tariftir.",
-      it: "Oka i'a è una ricetta tradizionale di Samoa.",
+      it: "Oka i'a è una risotta tradizionale di Samoa.",
       ko: "Oka i'a는(은) Samoa의 전통 요리입니다."
     }
   },
@@ -9161,9 +9161,9 @@ export const recipes = [
       ar: ["لحم خنزير أو بقري", "فلفل رومي", "بصل", "طماطم", "باذنجان", "توابل"],
       zh: ["猪肉或牛肉", "灯笼椒", "洋葱", "番茄", "茄子", "香料"],
       ja: ["豚肉または牛肉", "パプリカ", "玉ねぎ", "トマト", "ナス", "スパイス"],
-      tr: ["domuz eti or dana eti", "kapya biber", "soğan", "domates", "yumurtaplant", "spices"],
-      it: ["maiale or manzo", "peperone", "cipolla", "pomodori", "uovoplant", "spices"],
-      ko: ["돼지고기 or 소고기", "파프리카", "양파", "토마토", "계란plant", "spices"]
+      tr: ["domuz eti veya dana eti", "kapya biber", "soğbir", "domates", "yumurtaplant", "baharatlar"],
+      it: ["maiale o manzo", "peperone", "cipolla", "pomodori", "uovoplant", "spezie"],
+      ko: ["돼지고기 또는 소고기", "파프리카", "양파", "토마토", "계란식물", "향신료"]
     },
     howIsMade: {
       ro: "Marinează bucățile de carne cu ceapă, condimente și ulei, înfige-le pe frigărui și frige-le pe grătar până devin fragede.",
@@ -9176,9 +9176,9 @@ export const recipes = [
       ar: "انقع قطع اللحم بالبصل والتوابل والزيت، ضعها في أسياخ واشوها حتى تنضج.",
       zh: "肉块用洋葱、香料和油腌制，串在签子上烧烤至软嫩。",
       ja: "肉を玉ねぎ・スパイス・油でマリネし、串に刺して柔らかくなるまでグリルする。",
-      tr: "Marinate pieces of meat ile soğan, spices, ve oil, skewer ve grill until tender.",
-      it: "Marinate pieces of meat con cipolla, spices, e oil, skewer e grill until tender.",
-      ko: "Marinate pieces of meat와 양파, spices, 그리고 oil, skewer그리고 grill until tender하세요."
+      tr: "marine edin parçalar  et ile soğbir, baharatlar, ve yağ, şiş ve ızgara yapın yumuşayana kadar.",
+      it: "marina pezzi  carne con cipolla, spezie, e olio, spiedo e griglia finché sarà tenero.",
+      ko: "재웁니다 조각 의 고기와 양파, 향신료, 그리고 기름, 꼬치그리고 굽습니다 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Khorovats este o rețetă tradițională din Armenia.",
@@ -9192,7 +9192,7 @@ export const recipes = [
       zh: "亚美尼亚烤肉 是来自亚美尼亚的传统食谱。",
       ja: "ホロヴァッツ はアルメニアの伝統的なレシピです。",
       tr: "Khorovats Armenia kökenli geleneksel bir tariftir.",
-      it: "Khorovats è una ricetta tradizionale di Armenia.",
+      it: "Khorovats è una risotta tradizionale di Armenia.",
       ko: "Khorovats는(은) Armenia의 전통 요리입니다."
     }
   },
@@ -9254,9 +9254,9 @@ export const recipes = [
       ar: ["نقانق الدم", "شعير", "بصل", "دهن", "ملح", "فلفل"],
       zh: ["血肠", "大麦", "洋葱", "脂肪", "盐", "胡椒"],
       ja: ["ブラッドソーセージ", "大麦", "玉ねぎ", "脂肪", "塩", "コショウ"],
-      tr: ["blood sausage", "barley", "soğan", "fat", "tuz", "biber"],
-      it: ["blood sausage", "barley", "cipolla", "fat", "sale", "peperone"],
-      ko: ["blood sausage", "barley", "양파", "fat", "소금", "고추"]
+      tr: ["kan sosis", "arpa", "soğbir", "yağ", "tuz", "biber"],
+      it: ["sangue salsiccia", "orzo", "cipolla", "grasso", "sale", "peperone"],
+      ko: ["피 소시지", "보리", "양파", "지방", "소금", "고추"]
     },
     howIsMade: {
       ro: "Umple intestinele cu un amestec de sânge de porc, orz, ceapă și condimente, leagă-le și fierbe-le sau prăjește-le.",
@@ -9269,9 +9269,9 @@ export const recipes = [
       ar: "احشِ أمعاء الخنزير بخليط من الدم والشعير والبصل والتوابل، اربطها واغلها أو اقليها.",
       zh: "猪肠内填入猪血、大麦、洋葱和香料混合物，扎紧后煮或炸。",
       ja: "豚の腸に豚の血・大麦・玉ねぎ・スパイスを詰め、縛って茹でるか揚げる。",
-      tr: "Stuff domuz eti intestines ile a mixture of pig's blood, barley, soğan, ve spices, tie off ve boil or fry.",
-      it: "Stuff maiale intestines con a mixture of pig's blood, barley, cipolla, e spices, tie off e boil or fry.",
-      ko: "Stuff 돼지고기 intestines와 a mixture of pig's blood, barley, 양파, 그리고 spices, tie off그리고 삶아 or fry하세요."
+      tr: "Stuff domuz eti bağırsaklar ile a karıştırınture  domuz kan, arpa, soğbir, ve baharatlar, bağlayın  ve byağ veya kavurun.",
+      it: "Stuff maiale intestini con a mescolature  di maiale sangue, orzo, cipolla, e spezie, lega  e bolio o rosola.",
+      ko: "Stuff 돼지고기 창자와 a 섞습니다 의 돼지 피, 보리, 양파, 그리고 향신료, 묶습니다 그리고 삶아 또는 볶습니다하세요."
     },
     originText: {
       ro: "Verivorst este o rețetă tradițională din Estonia.",
@@ -9285,7 +9285,7 @@ export const recipes = [
       zh: "爱沙尼亚血肠 是来自爱沙尼亚的传统食谱。",
       ja: "ヴェリヴォルスト はエストニアの伝統的なレシピです。",
       tr: "Verivorst Estonia kökenli geleneksel bir tariftir.",
-      it: "Verivorst è una ricetta tradizionale di Estonia.",
+      it: "Verivorst è una risotta tradizionale di Estonia.",
       ko: "Verivorst는(은) Estonia의 전통 요리입니다."
     }
   },
@@ -9347,9 +9347,9 @@ export const recipes = [
       ar: ["لحم مفروم (بقر/خنزير)", "بصل", "ثوم", "توابل بلقانية", "زيت", "ملح", "فلفل"],
       zh: ["牛肉/猪肉末", "洋葱", "大蒜", "巴尔干香料", "油", "盐", "胡椒"],
       ja: ["ひき肉（牛/豚）", "玉ねぎ", "にんにく", "バルカンのスパイス", "油", "塩", "コショウ"],
-      tr: ["minced meat (dana eti/domuz eti)", "soğan", "sarımsak", "Balkan spices", "oil", "tuz", "biber"],
-      it: ["minced meat (manzo/maiale)", "cipolla", "aglio", "Balkan spices", "oil", "sale", "peperone"],
-      ko: ["minced meat (소고기/돼지고기)", "양파", "마늘", "Balkan spices", "oil", "소금", "고추"]
+      tr: ["kıyılmış et (dana eti/domuz eti)", "soğbir", "sarımsak", "Balkan baharatlar", "yağ", "tuz", "biber"],
+      it: ["tritato carne (manzo/maiale)", "cipolla", "aglio", "Balkan spezie", "olio", "sale", "peperone"],
+      ko: ["다진 고기 (소고기/돼지고기)", "양파", "마늘", "Balkan 향신료", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Amestecă ingredientele, modelează bastonașe mici și prăjește-le sau gătește-le pe grătar.",
@@ -9362,9 +9362,9 @@ export const recipes = [
       ar: "اخلط المكونات، وشكلها على شكل أصابع صغيرة واطبخها على الشواية أو المقلاة.",
       zh: "将原料混合，搓成小棒状，煎或烤熟。",
       ja: "材料を混ぜ、小さなロール状にしてグリルまたはフライパンで焼く。",
-      tr: "Karıştır ingredients, shape into small rolls, ve Izgara yap or fry them.",
-      it: "Mescola ingredients, shape into small rolls, e Griglia or fry them.",
-      ko: "섞고 ingredients, shape into small rolls, 그리고 구워 or 볶거나 튀겨 them하세요."
+      tr: "Karıştır malzemeler, şekil verin içine küçük rulolar, ve Izgara yap veya kavurun onları.",
+      it: "Mescola ingredienti, dai forma dentro piccolo involtini, e Griglia o rosola li.",
+      ko: "섞고 재료, 모양을 만듭니다 안에 작게 롤, 그리고 구워 또는 볶거나 튀겨 그것들을하세요."
     },
     originText: {
       ro: "Cevapcici este o rețetă tradițională din Balcani.",
@@ -9378,7 +9378,7 @@ export const recipes = [
       zh: "巴尔干烤肉卷 是来自巴尔干的传统食谱。",
       ja: "チェヴァプチチ はバルカンの伝統的なレシピです。",
       tr: "Cevapcici Balkans kökenli geleneksel bir tariftir.",
-      it: "Cevapcici è una ricetta tradizionale di Balkans.",
+      it: "Cevapcici è una risotta tradizionale di Balkans.",
       ko: "Cevapcici는(은) Balkans의 전통 요리입니다."
     }
   },
@@ -9440,9 +9440,9 @@ export const recipes = [
       ar: ["كعك الأرز", "معجون الفلفل الحار", "كعكة السمك", "بيض مسلوق", "بصل أخضر", "سكر", "صلصة الصويا"],
       zh: ["年糕", "辣椒酱", "鱼糕", "水煮蛋", "葱", "糖", "酱油"],
       ja: ["トック", "コチュジャン", "オムク", "ゆで卵", "青ねぎ", "砂糖", "醤油"],
-      tr: ["pirinç cakes", "chili paste", "balık cake", "boiled yumurta", "green soğan", "şeker", "soya sosu"],
-      it: ["riso cakes", "chili paste", "pesce cake", "boiled uova", "green cipolla", "zucchero", "salsa di soia"],
-      ko: ["쌀 cakes", "chili paste", "생선 cake", "boiled 계란", "green 양파", "설탕", "간장"]
+      tr: ["pirinç kek", "acı biber salça", "balık kek", "byağ yumurta", "yeşil soğbir", "şeker", "soya sosu"],
+      it: ["riso torte", "peperoncino concentrato", "pesce torta", "bolioed uova", "verde cipolla", "zucchero", "salsa di soia"],
+      ko: ["쌀 케이크", "고추 페이스트", "생선 케이크", "b기름 계란", "초록 양파", "설탕", "간장"]
     },
     howIsMade: {
       ro: "Gătește tteok (prăjiturele de orez) în sos picant de gochujang cu pește, ou fiert și ceapă verde.",
@@ -9455,9 +9455,9 @@ export const recipes = [
       ar: "اطبخ كعكات الأرز في صوص كوجوجانج الحار مع كعكة السمك والبيض المسلوق والبصل الأخضر.",
       zh: "年糕用辣椒酱与鱼饼、煮蛋和葱一起煮制。",
       ja: "トッポッキ（餅）をコチュジャンの辛いソースで、かまぼこ・ゆで卵・ねぎと一緒に煮る。",
-      tr: "Pişir tteok (pirinç cakes) in spicy gochujang sos ile balık cake, boiled yumurta, ve green soğan.",
-      it: "Cuoci tteok (riso cakes) in spicy gochujang salsa con pesce cake, boiled uovo, e green cipolla.",
-      ko: "조리하고 tteok (쌀 cakes) in spicy gochujang 소스와 생선 cake, boiled 계란, 그리고 green 양파하세요."
+      tr: "Pişir tteok (pirinç kek) in acı gochujang sos ile balık kek, byağ yumurta, ve yeşil soğbir.",
+      it: "Cuoci tteok (riso torte) in piccante gochujang salsa con pesce torta, bolioed uovo, e verde cipolla.",
+      ko: "조리하고 tteok (쌀 케이크) 에서 매운 gochujang 소스와 생선 케이크, b기름 계란, 그리고 초록 양파하세요."
     },
     originText: {
       ro: "Tteokbokki este o rețetă tradițională din Coreea de Sud.",
@@ -9471,7 +9471,7 @@ export const recipes = [
       zh: "辣炒年糕 是来自韩国的传统食谱。",
       ja: "トッポッキ は韓国の伝統的なレシピです。",
       tr: "Tteokbokki Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Tteokbokki è una ricetta tradizionale di Corea del Sud.",
+      it: "Tteokbokki è una risotta tradizionale di Corea del Sud.",
       ko: "Tteokbokki는(은) 대한민국의 전통 요리입니다."
     }
   },
@@ -9533,9 +9533,9 @@ export const recipes = [
       ar: ["روبيان", "ليمون أخضر", "بصل أحمر", "طماطم", "كزبرة", "فلفل حار", "زيت"],
       zh: ["虾", "青柠", "红洋葱", "番茄", "香菜", "辣椒", "油"],
       ja: ["エビ", "ライム", "赤玉ねぎ", "トマト", "パクチー", "唐辛子", "油"],
-      tr: ["karides", "yeşil limon", "red soğan", "domates", "coriander", "chili biber", "oil"],
-      it: ["gamberetti", "lime", "red cipolla", "pomodori", "coriander", "chili peperone", "oil"],
-      ko: ["새우", "라임", "red 양파", "토마토", "coriander", "chili 고추", "oil"]
+      tr: ["karides", "yeşil limon", "kırmızı soğbir", "domates", "kişniş", "acı biber biber", "yağ"],
+      it: ["gamberetti", "lime", "rosso cipolla", "pomodori", "coriandolo", "peperoncino peperone", "olio"],
+      ko: ["새우", "라임", "빨간 양파", "토마토", "고수", "고추 고추", "기름"]
     },
     howIsMade: {
       ro: "Marinează creveții fierți în suc de lămâie cu roșii, ceapă, ardei, coriandru și sare. Servește rece.",
@@ -9548,9 +9548,9 @@ export const recipes = [
       ar: "انقع الروبيان المطبوخ في عصير الليمون مع الطماطم والبصل والفلفل والكزبرة والملح. قدّمه بارداً.",
       zh: "煮熟的虾用柠檬汁、番茄、洋葱、辣椒、香菜和盐腌制，冷食。",
       ja: "茹でたエビをライムジュース・トマト・玉ねぎ・唐辛子・コリアンダー・塩でマリネして冷やして提供。",
-      tr: "Marinate cooked karides in yeşil limon juice ile domates, soğan, bibers, coriander, ve tuz. Serve chilled.",
-      it: "Marinate cooked gamberetti in lime juice con pomodori, cipolla, peperones, coriander, e sale. Serve chilled.",
-      ko: "Marinate cooked 새우 in 라임 juice와 토마토, 양파, 고추s, coriander, 그리고 소금. Serve chilled하세요."
+      tr: "marine edin pişirined karides in yeşil limon suyu ile domates, soğbir, bibers, kişniş, ve tuz. servis edin soğutulmuş.",
+      it: "marina cuocied gamberetti in lime succo con pomodori, cipolla, peperones, coriandolo, e sale. servi raffreddato.",
+      ko: "재웁니다 조리합니다 새우 에서 라임 주스와 토마토, 양파, 고추s, 고수, 그리고 소금. 제공합니다 차갑게 식힌하세요."
     },
     originText: {
       ro: "Ceviche de camarón este o rețetă tradițională din Ecuador.",
@@ -9563,9 +9563,9 @@ export const recipes = [
       ar: "سيفيتشي الروبيان هي وصفة تقليدية من الإكوادور.",
       zh: "厄瓜多尔虾酸橘汁腌 是来自厄瓜多尔的传统食谱。",
       ja: "エビのセビーチェ はエクアドルの伝統的なレシピです。",
-      tr: "Shrimp Ceviche Ecuador kökenli geleneksel bir tariftir.",
-      it: "Shrimp Ceviche è una ricetta tradizionale di Ecuador.",
-      ko: "Shrimp Ceviche는(은) Ecuador의 전통 요리입니다."
+      tr: "karides Ceviche Ecuador kökenli geleneksel bir tariftir.",
+      it: "gamberi Ceviche è una risotta tradizionale di Ecuador.",
+      ko: "새우 Ceviche는(은) Ecuador의 전통 요리입니다."
     }
   },
   {
@@ -9626,9 +9626,9 @@ export const recipes = [
       ar: ["أرز", "فاصوليا", "لحم بقري", "موز الجنة", "سلطة", "زيت", "توابل"],
       zh: ["米饭", "豆类", "牛肉", "大蕉", "沙拉", "油", "香料"],
       ja: ["ご飯", "豆", "牛肉", "プランテン", "サラダ", "油", "スパイス"],
-      tr: ["pirinç", "fasulye", "dana eti", "plantain", "salad", "oil", "spices"],
-      it: ["riso", "fagioli", "manzo", "plantain", "salad", "oil", "spices"],
-      ko: ["쌀", "콩", "소고기", "plantain", "salad", "oil", "spices"]
+      tr: ["pirinç", "fasulye", "dana eti", "muz (plantain)", "salata", "yağ", "baharatlar"],
+      it: ["riso", "fagioli", "manzo", "platano", "insalata", "olio", "spezie"],
+      ko: ["쌀", "콩", "소고기", "플랜틴", "샐러드", "기름", "향신료"]
     },
     howIsMade: {
       ro: "Gătește orez, fasole roșie și carne (de obicei vită sau pui) separat, apoi servește-le împreună cu salată și banană prăjită.",
@@ -9641,9 +9641,9 @@ export const recipes = [
       ar: "اطبخ الأرز والفاصوليا الحمراء واللحم (عادة لحم بقري أو دجاج) كل على حدة، ثم قدمها مع سلطة وموز مقلي.",
       zh: "米饭、红豆和肉（通常是牛肉或鸡肉）分别煮熟，与沙拉和炸香蕉一起食用。",
       ja: "ご飯・赤インゲン豆・肉（牛肉または鶏肉）を別々に調理し、サラダやフライドバナナと一緒に盛り付ける。",
-      tr: "Pişir pirinç, red fasulye, ve meat (usually dana eti or tavuk) separately, sonra Servis et together ile salad ve fried plantain.",
-      it: "Cuoci riso, red fagioli, e meat (usually manzo or pollo) separately, poi Servi together con salad e fried plantain.",
-      ko: "조리하고 쌀, red 콩, 그리고 meat (usually 소고기 or 닭고기) separately, 그다음 담아 내세요 together와 salad그리고 fried plantain하세요."
+      tr: "Pişir pirinç, kırmızı fasulye, ve et (genellikle dana eti veya tavuk) ayrı ayrı, sonra Servis et birlikte ile salata ve kızarmış muz (plantain).",
+      it: "Cuoci riso, rosso fagioli, e carne (di solito manzo o pollo) separatamente, poi Servi insieme con insalata e fritto platano.",
+      ko: "조리하고 쌀, 빨간 콩, 그리고 고기 (보통 소고기 또는 닭고기) 따로, 그다음 담아 내세요 함께와 샐러드그리고 튀긴 플랜틴하세요."
     },
     originText: {
       ro: "La Bandera este o rețetă tradițională din Republica Dominicană.",
@@ -9657,7 +9657,7 @@ export const recipes = [
       zh: "多米尼加国旗餐 是来自多米尼加的传统食谱。",
       ja: "ラ・バンデラ はドミニカ共和国の伝統的なレシピです。",
       tr: "La Bandera Dominican Republic kökenli geleneksel bir tariftir.",
-      it: "La Bandera è una ricetta tradizionale di Dominican Republic.",
+      it: "La Bandera è una risotta tradizionale di Dominican Republic.",
       ko: "La Bandera는(은) Dominican Republic의 전통 요리입니다."
     }
   },
@@ -9719,9 +9719,9 @@ export const recipes = [
       ar: ["دجاج", "جوز", "دبس الرمان", "بصل", "توابل", "زيت"],
       zh: ["鸡肉", "核桃", "石榴糖浆", "洋葱", "香料", "油"],
       ja: ["鶏肉", "クルミ", "ザクロシロップ", "玉ねぎ", "スパイス", "油"],
-      tr: ["tavuk", "walnuts", "pomegranate molasses", "soğan", "spices", "oil"],
-      it: ["pollo", "walnuts", "pomegranate molasses", "cipolla", "spices", "oil"],
-      ko: ["닭고기", "walnuts", "pomegranate molasses", "양파", "spices", "oil"]
+      tr: ["tavuk", "ceviz", "nar pekmez", "soğbir", "baharatlar", "yağ"],
+      it: ["pollo", "noci", "melograno melassa", "cipolla", "spezie", "olio"],
+      ko: ["닭고기", "호두", "석류 당밀", "양파", "향신료", "기름"]
     },
     howIsMade: {
       ro: "Rumenește bucățile de carne (de obicei pui sau rață), apoi gătește-le încet în sos de nuci măcinate și melasă de rodie până devin fragede.",
@@ -9734,9 +9734,9 @@ export const recipes = [
       ar: "حمّر قطع اللحم (عادة الدجاج أو البط)، واطبخها ببطء في صوص الجوز المطحون ودبس الرمان حتى تصبح طرية.",
       zh: "肉块（通常为鸡肉或鸭肉）先煎香，再用核桃和石榴糖浆做的酱汁慢慢炖至酥烂。",
       ja: "鶏肉や鴨肉などを焼いて、クルミとザクロシロップのソースで柔らかくなるまで煮込む。",
-      tr: "Brown pieces of meat (usually tavuk or duck), sonra slowly cook them in a sos of ground walnuts ve pomegranate molasses until tender.",
-      it: "Brown pieces of meat (usually pollo or duck), poi slowly cook them in a salsa of ground walnuts e pomegranate molasses until tender.",
-      ko: "Brown pieces of meat (usually 닭고기 or duck), 그다음 slowly cook them in a 소스 of ground walnuts그리고 pomegranate molasses until tender하세요."
+      tr: "kahverengi parçalar  et (genellikle tavuk veya ördek), sonra yavaşça pişirin onları sos  öğütülmüş ceviz ve nar pekmez yumuşayana kadar.",
+      it: "marrone pezzi  carne (di solito pollo o anatra), poi lentamente cuoci li salsa  macinato noci e melograno melassa finché sarà tenero.",
+      ko: "갈색 조각 의 고기 (보통 닭고기 또는 오리), 그다음 천천히 조리합니다 그것들을 에서 a 소스 의 간 호두그리고 석류 당밀 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Fesenjan este o rețetă tradițională din Iran.",
@@ -9750,7 +9750,7 @@ export const recipes = [
       zh: "伊朗核桃石榴炖鸡 是来自伊朗的传统食谱。",
       ja: "フェセンジャン はイランの伝統的なレシピです。",
       tr: "Fesenjan İran kökenli geleneksel bir tariftir.",
-      it: "Fesenjan è una ricetta tradizionale di Iran.",
+      it: "Fesenjan è una risotta tradizionale di Iran.",
       ko: "Fesenjan는(은) 이란의 전통 요리입니다."
     }
   },
@@ -9812,9 +9812,9 @@ export const recipes = [
       ar: ["ذيل الثور", "زبدة الفول السوداني", "معجون الروبيان", "باذنجان", "فاصوليا خضراء", "بوك تشوي", "ثوم"],
       zh: ["牛尾", "花生酱", "虾酱", "茄子", "四季豆", "小白菜", "大蒜"],
       ja: ["牛テール", "ピーナッツバター", "エビペースト", "ナス", "インゲン", "チンゲンサイ", "ニンニク"],
-      tr: ["oxtail", "peanut tereyağı", "karides paste", "yumurtaplant", "green fasulye", "bok choy", "sarımsak"],
-      it: ["oxtail", "peanut burro", "gamberetti paste", "uovoplant", "green fagioli", "bok choy", "aglio"],
-      ko: ["oxtail", "peanut 버터", "새우 paste", "계란plant", "green 콩", "bok choy", "마늘"]
+      tr: ["öküz kuyruğu", "yer fıstığı tereyağı", "karides salça", "yumurtaplant", "yeşil fasulye", "bok choy", "sarımsak"],
+      it: ["coda di bue", "arachide burro", "gamberetti concentrato", "uovoplant", "verde fagioli", "bok choy", "aglio"],
+      ko: ["소꼬리", "땅콩 버터", "새우 페이스트", "계란식물", "초록 콩", "청경채 청경채", "마늘"]
     },
     howIsMade: {
       ro: "Fierbe carnea (de obicei coadă de vită sau picioare de porc) cu legume, apoi gătește-le într-un sos gros de arahide și servește cu pastă de creveți.",
@@ -9827,9 +9827,9 @@ export const recipes = [
       ar: "اسلق اللحم (عادة ذيل بقري أو رجل خنزير) مع الخضار، ثم اطبخه في صوص الفول السوداني الكثيف وقدمه مع معجون الروبيان.",
       zh: "牛尾或猪蹄和蔬菜煮熟后，用浓稠花生酱烹调，搭配虾酱食用。",
       ja: "テールや豚足を野菜と煮て、濃厚なピーナッツソースで調理し、シュリンプペーストを添えて提供。",
-      tr: "Haşla meat (usually oxtail or domuz eti hock) ile vegetables, sonra Pişir in a thick peanut sos ve serve ile karides paste.",
-      it: "Cuoci meat (usually oxtail or maiale hock) con vegetables, poi Cuoci in a thick peanut salsa e serve con gamberetti paste.",
-      ko: "삶고 meat (usually oxtail or 돼지고기 hock)와 vegetables, 그다음 조리하고 in a thick peanut 소스그리고 serve와 새우 paste하세요."
+      tr: "Haşla et (genellikle öküz kuyruğu veya domuz eti incik) ile sebzeler, sonra Pişir koyu yer fıstığı sos ve servis edin ile karides salça.",
+      it: "Cuoci carne (di solito coda di bue o maiale stinco) con verdure, poi Cuoci denso arachide salsa e servi con gamberetti concentrato.",
+      ko: "삶고 고기 (보통 소꼬리 또는 돼지고기 족발)와 채소, 그다음 조리하고 에서 a 걸쭉한 땅콩 소스그리고 제공합니다와 새우 페이스트하세요."
     },
     originText: {
       ro: "Kare-Kare este o rețetă tradițională din Filipine.",
@@ -9843,7 +9843,7 @@ export const recipes = [
       zh: "菲式花生炖牛肉 是来自菲律宾的传统食谱。",
       ja: "カレカレ はフィリピンの伝統的なレシピです。",
       tr: "Kare-Kare Filipinler kökenli geleneksel bir tariftir.",
-      it: "Kare-Kare è una ricetta tradizionale di Filippine.",
+      it: "Kare-Kare è una risotta tradizionale di Filippine.",
       ko: "Kare-Kare는(은) 필리핀의 전통 요리입니다."
     }
   },
@@ -9905,9 +9905,9 @@ export const recipes = [
       ar: ["خبز", "لحم خنزير", "نقانق", "شريحة لحم", "جبنة", "صلصة طماطم", "بيرة"],
       zh: ["面包", "火腿", "香肠", "牛排", "奶酪", "番茄酱", "啤酒"],
       ja: ["パン", "ハム", "ソーセージ", "ステーキ", "チーズ", "トマトソース", "ビール"],
-      tr: ["ekmek", "ham", "sausages", "steak", "peynir", "domates sauce", "beer"],
-      it: ["pane", "ham", "sausages", "steak", "formaggio", "pomodoro sauce", "beer"],
-      ko: ["빵", "ham", "sausages", "steak", "치즈", "토마토 sauce", "beer"]
+      tr: ["ekmek", "jambon", "sosis", "biftek", "peynir", "domates sos", "bira"],
+      it: ["pane", "prosciutto", "salsicce", "bistecca", "formaggio", "pomodoro salsa", "birra"],
+      ko: ["빵", "햄", "소시지", "스테이크", "치즈", "토마토 소스", "맥주"]
     },
     howIsMade: {
       ro: "Asamblează sandvișul cu pâine, șuncă, cârnați și carne de vită, acoperă cu brânză topită și toarnă sos picant de roșii. Coace la cuptor până devine aurie.",
@@ -9920,9 +9920,9 @@ export const recipes = [
       ar: "ركب الساندويتش بالخبز واللحم والنقانق ولحم البقر، غطّه بالجبن الذائب واسكب صوص الطماطم الحار فوقه. اخبزه حتى يحمر.",
       zh: "面包、火腿、香肠和牛肉叠成三明治，撒上奶酪并浇上辣味番茄酱，烤至金黄。",
       ja: "パン・ハム・ソーセージ・牛肉でサンドイッチを作り、チーズをのせてピリ辛トマトソースをかけ、焼き色がつくまで焼く。",
-      tr: "Assemble sandwich ile ekmek, ham, sausage, ve dana eti, cover ile melted peynir ve pour spicy domates sos over. Bake until golden.",
-      it: "Assemble sandwich con pane, ham, sausage, e manzo, cover con melted formaggio e pour spicy pomodoro salsa over. Bake until golden.",
-      ko: "Assemble sandwich와 빵, ham, sausage, 그리고 소고기, cover와 melted 치즈그리고 pour spicy 토마토 소스 over. Bake until golden하세요."
+      tr: "Assemble sandviç ile ekmek, jambon, sosis, ve dana eti, örtün ile eritilmiş peynir ve dökün acı domates sos üzerine. fırında pişirin altın rengi.",
+      it: "Assemble panino con pane, prosciutto, salsiccia, e manzo, copri con fuso formaggio e versa piccante pomodoro salsa sopra. cuoci in forno dorato.",
+      ko: "Assemble 샌드위치와 빵, 햄, 소시지, 그리고 소고기, 덮습니다와 녹인 치즈그리고 붓습니다 매운 토마토 소스 위에. 오븐에서 굽습니다 노릇하게하세요."
     },
     originText: {
       ro: "Francesinha este o rețetă tradițională din Portugalia.",
@@ -9936,7 +9936,7 @@ export const recipes = [
       zh: "葡式法兰西三明治 是来自葡萄牙的传统食谱。",
       ja: "フランセジーニャ はポルトガルの伝統的なレシピです。",
       tr: "Francesinha Portekiz kökenli geleneksel bir tariftir.",
-      it: "Francesinha è una ricetta tradizionale di Portogallo.",
+      it: "Francesinha è una risotta tradizionale di Portogallo.",
       ko: "Francesinha는(은) 포르투갈의 전통 요리입니다."
     }
   },
@@ -9998,9 +9998,9 @@ export const recipes = [
       ar: ["دجاج", "طماطم", "فلفل", "قرع", "سمسم", "توابل", "بطاطس"],
       zh: ["鸡肉", "番茄", "辣椒", "南瓜", "芝麻", "香料", "土豆"],
       ja: ["鶏肉", "トマト", "ピーマン", "カボチャ", "ゴマ", "スパイス", "ジャガイモ"],
-      tr: ["tavuk", "domates", "biber", "squash", "sesame seeds", "spices", "patates"],
-      it: ["pollo", "pomodori", "peperone", "squash", "sesame seeds", "spices", "patate"],
-      ko: ["닭고기", "토마토", "고추", "squash", "sesame seeds", "spices", "감자"]
+      tr: ["tavuk", "domates", "biber", "kabak", "susam tohum", "baharatlar", "patates"],
+      it: ["pollo", "pomodori", "peperone", "zucca", "sesamo semi", "spezie", "patate"],
+      ko: ["닭고기", "토마토", "고추", "호박", "참깨 씨앗", "향신료", "감자"]
     },
     howIsMade: {
       ro: "Fierbe carnea cu legume, apoi gătește-le într-un sos de semințe prăjite, ardei, roșii și condimente. Servește cu orez.",
@@ -10013,9 +10013,9 @@ export const recipes = [
       ar: "اسلق اللحم مع الخضار، واطبخه في صوص من البذور المحمصة والفلفل والطماطم والتوابل. قدّمه مع الأرز.",
       zh: "肉和蔬菜煮熟后，用烤熟的种子、辣椒、西红柿和香料做成的酱汁炖煮，配米饭食用。",
       ja: "肉と野菜を茹でて、炒った種・唐辛子・トマト・スパイスのソースで煮て、ご飯と共に提供。",
-      tr: "Haşla meat ile vegetables, sonra Pişir them in a sos of toasted seeds, bibers, domates, ve spices. Serve ile pirinç.",
-      it: "Cuoci meat con vegetables, poi Cuoci them in a salsa of toasted seeds, peperones, pomodori, e spices. Serve con riso.",
-      ko: "삶고 meat와 vegetables, 그다음 조리하고 them in a 소스 of toasted seeds, 고추s, 토마토, 그리고 spices. Serve와 쌀하세요."
+      tr: "Haşla et ile sebzeler, sonra Pişir onları sos  kavrulmuş tohum, bibers, domates, ve baharatlar. servis edin ile pirinç.",
+      it: "Cuoci carne con verdure, poi Cuoci li salsa  tostato semi, peperones, pomodori, e spezie. servi con riso.",
+      ko: "삶고 고기와 채소, 그다음 조리하고 그것들을 에서 a 소스 의 구운 씨앗, 고추s, 토마토, 그리고 향신료. 제공합니다와 쌀하세요."
     },
     originText: {
       ro: "Pepián este o rețetă tradițională din Guatemala.",
@@ -10029,7 +10029,7 @@ export const recipes = [
       zh: "瓜地马拉炖鸡 是来自危地马拉的传统食谱。",
       ja: "ペピアン はグアテマラの伝統的なレシピです。",
       tr: "Pepián Guatemala kökenli geleneksel bir tariftir.",
-      it: "Pepián è una ricetta tradizionale di Guatemala.",
+      it: "Pepián è una risotta tradizionale di Guatemala.",
       ko: "Pepián는(은) Guatemala의 전통 요리입니다."
     }
   },
@@ -10087,9 +10087,9 @@ export const recipes = [
       ar: ["أرز", "بيض", "دجاج أو لحم", "بصل أخضر", "فلفل", "صلصة الصويا", "ثوم", "زيت"],
       zh: ["米饭", "鸡蛋", "鸡肉或牛肉", "葱", "辣椒", "酱油", "大蒜", "油"],
       ja: ["ご飯", "卵", "鶏肉または牛肉", "青ねぎ", "ピーマン", "醤油", "ニンニク", "油"],
-      tr: ["pirinç", "yumurta", "tavuk or dana eti", "green soğans", "kapya biber", "soya sosu", "sarımsak", "oil"],
-      it: ["riso", "uova", "pollo or manzo", "green cipollas", "peperone", "salsa di soia", "aglio", "oil"],
-      ko: ["쌀", "계란", "닭고기 or 소고기", "green 양파s", "파프리카", "간장", "마늘", "oil"]
+      tr: ["pirinç", "yumurta", "tavuk veya dana eti", "yeşil soğans", "kapya biber", "soya sosu", "sarımsak", "yağ"],
+      it: ["riso", "uova", "pollo o manzo", "verde cipollas", "peperone", "salsa di soia", "aglio", "olio"],
+      ko: ["쌀", "계란", "닭고기 또는 소고기", "초록 양파s", "파프리카", "간장", "마늘", "기름"]
     },
     howIsMade: {
       ro: "Prăjește ouăle și legumele în ulei, adaugă carnea și apoi orezul fiert. Amestecă cu sos de soia și servește fierbinte.",
@@ -10101,9 +10101,9 @@ export const recipes = [
       ar: "اقلي البيض والخضروات في الزيت، أضف اللحم ثم الأرز المطبوخ. امزج مع صلصة الصويا وقدمه ساخناً.",
       zh: "用油炒鸡蛋和蔬菜，加入肉类，然后放入煮熟的米饭。加入酱油拌匀，趁热食用。",
       ja: "油で卵と野菜を炒め、肉と炊いたご飯を加える。醤油で味付けし、熱いうちに提供する。",
-      tr: "Kızart yumurta ve vegetables in oil, Ekle meat ve sonra cooked pirinç. Mix ile soya sosu ve serve hot.",
-      it: "Friggi uova e vegetables in oil, Aggiungi meat e poi cooked riso. Mix con salsa di soia e serve hot.",
-      ko: "볶거나 튀기고 계란그리고 vegetables in oil, 넣고 meat그리고 그다음 cooked 쌀. Mix와 간장그리고 serve hot하세요."
+      tr: "Kızart yumurta ve sebzeler in yağ, Ekle et ve sonra pişirined pirinç. karıştırın ile soya sosu ve servis edin sıcak.",
+      it: "Friggi uova e verdure in olio, Aggiungi carne e poi cuocied riso. mescola con salsa di soia e servi caldo.",
+      ko: "볶거나 튀기고 계란그리고 채소 에서 기름, 넣고 고기그리고 그다음 조리합니다 쌀. 섞습니다와 간장그리고 제공합니다 뜨거운하세요."
     },
     originText: {
       ro: "Arroz Chaufa este o rețetă tradițională din Peru.",
@@ -10117,7 +10117,7 @@ export const recipes = [
       zh: "秘鲁炒饭 是来自秘鲁的传统食谱。",
       ja: "チャウファご飯 はペルーの伝統的なレシピです。",
       tr: "Arroz Chaufa Peru kökenli geleneksel bir tariftir.",
-      it: "Arroz Chaufa è una ricetta tradizionale di Perù.",
+      it: "Arroz Chaufa è una risotta tradizionale di Perù.",
       ko: "Arroz Chaufa는(은) 페루의 전통 요리입니다."
     }
   },
@@ -10179,9 +10179,9 @@ export const recipes = [
       ar: ["سلطعون", "صلصة الطماطم", "صلصة الفلفل الحار", "ثوم", "زنجبيل", "بصل أخضر", "بيض"],
       zh: ["螃蟹", "番茄酱", "辣椒酱", "大蒜", "生姜", "葱", "鸡蛋"],
       ja: ["カニ", "トマトソース", "チリソース", "ニンニク", "ショウガ", "青ねぎ", "卵"],
-      tr: ["crab", "domates sauce", "chili sauce", "sarımsak", "zencefil", "green soğan", "yumurta"],
-      it: ["crab", "pomodoro sauce", "chili sauce", "aglio", "zenzero", "green cipolla", "uova"],
-      ko: ["crab", "토마토 sauce", "chili sauce", "마늘", "생강", "green 양파", "계란"]
+      tr: ["yengeç", "domates sos", "acı biber sos", "sarımsak", "zencefil", "yeşil soğbir", "yumurta"],
+      it: ["granchio", "pomodoro salsa", "peperoncino salsa", "aglio", "zenzero", "verde cipolla", "uova"],
+      ko: ["게", "토마토 소스", "고추 소스", "마늘", "생강", "초록 양파", "계란"]
     },
     howIsMade: {
       ro: "Gătește crabul în sos de roșii picant cu usturoi, ghimbir și ardei iute, până carnea devine fragedă și sosul se îngroașă.",
@@ -10194,9 +10194,9 @@ export const recipes = [
       ar: "اطبخ السلطعون في صوص الطماطم الحار مع الثوم والزنجبيل والفلفل الحار حتى ينضج اللحم ويتكاثف الصوص.",
       zh: "螃蟹与番茄辣酱、蒜、姜、辣椒一起烹煮，至肉质变嫩、酱汁浓稠。",
       ja: "カニをトマトのピリ辛ソース・ニンニク・生姜・唐辛子と一緒に煮込み、身が柔らかくなりソースが煮詰まるまで調理。",
-      tr: "Pişir crab in spicy domates sos ile sarımsak, zencefil, ve chili until meat is tender ve sos thickens.",
-      it: "Cuoci crab in spicy pomodoro salsa con aglio, zenzero, e chili until meat is tender e salsa thickens.",
-      ko: "조리하고 crab in spicy 토마토 소스와 마늘, 생강, 그리고 chili until meat is tender그리고 소스 thickens하세요."
+      tr: "Pişir yengeç in acı domates sos ile sarımsak, zencefil, ve acı biber et  yumuşak ve sos koyulaşır.",
+      it: "Cuoci granchio in piccante pomodoro salsa con aglio, zenzero, e peperoncino carne  tenero e salsa si addensa.",
+      ko: "조리하고 게 에서 매운 토마토 소스와 마늘, 생강, 그리고 고추 고기 입니다 부드럽게그리고 소스 걸쭉해집니다하세요."
     },
     originText: {
       ro: "Chili Crab este o rețetă tradițională din Singapore.",
@@ -10209,9 +10209,9 @@ export const recipes = [
       ar: "سلطعون الفلفل الحار هي وصفة تقليدية من سنغافورة.",
       zh: "辣椒蟹 是来自新加坡的传统食谱。",
       ja: "チリクラブ はシンガポールの伝統的なレシピです。",
-      tr: "Chili Crab Singapur kökenli geleneksel bir tariftir.",
-      it: "Chili Crab è una ricetta tradizionale di Singapore.",
-      ko: "Chili Crab는(은) 싱가포르의 전통 요리입니다."
+      tr: "acı biber yengeç Singapur kökenli geleneksel bir tariftir.",
+      it: "peperoncino granchio è una risotta tradizionale di Singapore.",
+      ko: "고추 게는(은) 싱가포르의 전통 요리입니다."
     }
   },
   {
@@ -10272,9 +10272,9 @@ export const recipes = [
       ar: ["دقيق الذرة", "دهن", "ماء", "حشوة لحم أو خضار", "أوراق الذرة"],
       zh: ["玉米粉", "猪油", "水", "肉或蔬菜馅", "玉米叶"],
       ja: ["トウモロコシ粉", "ラード", "水", "肉または野菜の具", "とうもろこしの皮"],
-      tr: ["mısırmeal", "lard", "su", "meat or vegetable filling", "mısır husks"],
-      it: ["maismeal", "lard", "acqua", "meat or vegetable filling", "mais husks"],
-      ko: ["옥수수meal", "lard", "물", "meat or vegetable filling", "옥수수 husks"]
+      tr: ["mısırmeal", "domuz yağı", "su", "et veya sebze iç harç", "mısır kabuk"],
+      it: ["maismeal", "strutto", "acqua", "carne o verdura ripieno", "mais bucce"],
+      ko: ["옥수수식사", "라드", "물", "고기 또는 채소 속재료", "옥수수 껍질"]
     },
     howIsMade: {
       ro: "Amestecă mălaiul cu untură și apă, pune umplutura pe foi de porumb, rulează și fierbe la abur până se întăresc.",
@@ -10287,9 +10287,9 @@ export const recipes = [
       ar: "اخلط دقيق الذرة مع الدهن والماء، ضع الحشوة على أوراق الذرة، لفها واطبخها على البخار.",
       zh: "玉米粉与猪油和水混合，包入馅料，用玉米叶包好，蒸至定型。",
       ja: "トウモロコシ粉をラードと水で混ぜ、具をとうもろこしの皮に乗せて巻き、蒸して固める。",
-      tr: "Karıştır mısırmeal ile lard ve su, place filling on mısır husks, roll up ve steam until set.",
-      it: "Mescola maismeal con lard e acqua, place filling on mais husks, roll up e steam until set.",
-      ko: "섞고 옥수수meal와 lard그리고 물, place filling on 옥수수 husks, roll up그리고 steam until set하세요."
+      tr: "Karıştır mısırmeal ile domuz yağı ve su, yerleştirin iç harç üstüne mısır kabuk, rulo yapın  ve buharda pişirin koyun.",
+      it: "Mescola maismeal con strutto e acqua, metti ripieno su mais bucce, arrotola  e cuoci a vapore metti.",
+      ko: "섞고 옥수수식사와 라드그리고 물, 놓습니다 속재료 위에 옥수수 껍질, 말아줍니다 그리고 찝니다 두세요하세요."
     },
     originText: {
       ro: "Tamale este o rețetă tradițională din Mexic.",
@@ -10303,7 +10303,7 @@ export const recipes = [
       zh: "玉米粽 是来自墨西哥的传统食谱。",
       ja: "タマーレ はメキシコの伝統的なレシピです。",
       tr: "Tamale Meksika kökenli geleneksel bir tariftir.",
-      it: "Tamale è una ricetta tradizionale di Messico.",
+      it: "Tamale è una risotta tradizionale di Messico.",
       ko: "Tamale는(은) 멕시코의 전통 요리입니다."
     }
   },
@@ -10365,9 +10365,9 @@ export const recipes = [
       ar: ["جمبري", "عشب الليمون", "خولنجان", "أوراق الليمون", "فلفل حار", "فطر", "صلصة السمك"],
       zh: ["虾", "香茅", "南姜", "青柠叶", "辣椒", "蘑菇", "鱼露"],
       ja: ["エビ", "レモングラス", "ガランガル", "ライムリーフ", "唐辛子", "きのこ", "ナンプラー"],
-      tr: ["karides", "limongrass", "galangal", "yeşil limon leaves", "chili", "mantar", "balık sauce"],
-      it: ["gamberetti", "limonegrass", "galangal", "lime leaves", "chili", "funghi", "pesce sauce"],
-      ko: ["새우", "레몬grass", "galangal", "라임 leaves", "chili", "버섯", "생선 sauce"]
+      tr: ["karides", "limongrass", "galangal", "yeşil limon yaprak", "acı biber", "mantar", "balık sos"],
+      it: ["gamberetti", "limonegrass", "galanga", "lime foglie", "peperoncino", "funghi", "pesce salsa"],
+      ko: ["새우", "레몬풀", "갈랑갈", "라임 잎", "고추", "버섯", "생선 소스"]
     },
     howIsMade: {
       ro: "Fierbe supă cu creveți, ciuperci, lemongrass, lime, chili și frunze de kaffir. Asezonează cu sos de pește și suc de lime.",
@@ -10380,9 +10380,9 @@ export const recipes = [
       ar: "اغلِ المرق مع الجمبري والفطر وعشب الليمون والليمون والفلفل الحار وأوراق الكافير. تبلها بصلصة السمك وعصير الليمون.",
       zh: "用虾、蘑菇、香茅、青柠、辣椒和卡菲尔酸橙叶煮汤，以鱼露和青柠汁调味。",
       ja: "エビ・きのこ・レモングラス・ライム・唐辛子・コブミカンの葉でスープを煮て、ナンプラーとライム果汁で味付け。",
-      tr: "Haşla et suyu ile karides, mantar, limongrass, yeşil limon, chili, ve kaffir yeşil limon leaves. Season ile balık sos ve yeşil limon juice.",
-      it: "Cuoci brodo con gamberetti, funghi, limonegrass, lime, chili, e kaffir lime leaves. Season con pesce salsa e lime juice.",
-      ko: "삶고 육수와 새우, 버섯, 레몬grass, 라임, chili, 그리고 kaffir 라임 leaves. Season와 생선 소스그리고 라임 juice하세요."
+      tr: "Haşla et suyu ile karides, mantar, limongrass, yeşil limon, acı biber, ve kaffir yeşil limon yaprak. Season ile balık sos ve yeşil limon suyu.",
+      it: "Cuoci brodo con gamberetti, funghi, limonegrass, lime, peperoncino, e kaffir lime foglie. Season con pesce salsa e lime succo.",
+      ko: "삶고 육수와 새우, 버섯, 레몬풀, 라임, 고추, 그리고 카피르 라임 잎. Season와 생선 소스그리고 라임 주스하세요."
     },
     originText: {
       ro: "Tom Yum este o rețetă tradițională din Thailanda.",
@@ -10396,7 +10396,7 @@ export const recipes = [
       zh: "冬阴功汤 是来自泰国的传统食谱。",
       ja: "トムヤム はタイの伝統的なレシピです。",
       tr: "Tom Yum Tayland kökenli geleneksel bir tariftir.",
-      it: "Tom Yum è una ricetta tradizionale di Thailandia.",
+      it: "Tom Yum è una risotta tradizionale di Thailandia.",
       ko: "Tom Yum는(은) 태국의 전통 요리입니다."
     }
   },
@@ -10458,9 +10458,9 @@ export const recipes = [
       ar: ["لحم بقري", "بيض", "فتات الخبز", "دقيق", "زيت", "توابل", "ليمون"],
       zh: ["牛肉", "鸡蛋", "面包屑", "面粉", "油", "香料", "柠檬"],
       ja: ["牛肉", "卵", "パン粉", "小麦粉", "油", "スパイス", "レモン"],
-      tr: ["dana eti", "yumurta", "ekmekcrumbs", "un", "oil", "spices", "limon"],
-      it: ["manzo", "uova", "panecrumbs", "farina", "oil", "spices", "limone"],
-      ko: ["소고기", "계란", "빵crumbs", "밀가루", "oil", "spices", "레몬"]
+      tr: ["dana eti", "yumurta", "ekmekcrumbs", "un", "yağ", "baharatlar", "limon"],
+      it: ["manzo", "uova", "panecrumbs", "farina", "olio", "spezie", "limone"],
+      ko: ["소고기", "계란", "빵빵가루", "밀가루", "기름", "향신료", "레몬"]
     },
     howIsMade: {
       ro: "Bate bucăți subțiri de carne, trece-le prin făină, ou și pesmet, apoi prăjește-le până devin aurii.",
@@ -10473,9 +10473,9 @@ export const recipes = [
       ar: "افرد شرائح اللحم وغطها بالدقيق ثم البيض ثم البقسماط واقلها حتى تحمر.",
       zh: "将肉片拍薄，依次裹上面粉、蛋液和面包糠，煎至金黄。",
       ja: "薄切り肉を叩き、粉・卵・パン粉をまぶしてきつね色になるまで揚げる。",
-      tr: "Pound thin slices of meat, dredge in un, yumurta, ve ekmekcrumbs, sonra Kızart until golden.",
-      it: "Pound thin slices of meat, dredge in farina, uovo, e panecrumbs, poi Friggi until golden.",
-      ko: "Pound thin slices of meat, dredge in 밀가루, 계란, 그리고 빵crumbs, 그다음 볶거나 튀기고 until golden하세요."
+      tr: "dövün ince dilimler  et, una bulayın in un, yumurta, ve ekmekcrumbs, sonra Kızart altın rengi.",
+      it: "batti sottile fette  carne, infarina in farina, uovo, e panecrumbs, poi Friggi dorato.",
+      ko: "두드립니다 얇게 조각 의 고기, 가루를 묻힙니다 에서 밀가루, 계란, 그리고 빵빵가루, 그다음 볶거나 튀기고 노릇하게하세요."
     },
     originText: {
       ro: "Milanesa este o rețetă tradițională din Argentina.",
@@ -10489,7 +10489,7 @@ export const recipes = [
       zh: "阿根廷炸牛排 是来自阿根廷的传统食谱。",
       ja: "ミラネサ はアルゼンチンの伝統的なレシピです。",
       tr: "Milanesa Arjantin kökenli geleneksel bir tariftir.",
-      it: "Milanesa è una ricetta tradizionale di Argentina.",
+      it: "Milanesa è una risotta tradizionale di Argentina.",
       ko: "Milanesa는(은) 아르헨티나의 전통 요리입니다."
     }
   },
@@ -10551,9 +10551,9 @@ export const recipes = [
       ar: ["لحم بقري", "صلصة المحار", "بصل", "طماطم", "خس", "فلفل أسود", "بيض"],
       zh: ["牛肉", "蚝油", "洋葱", "番茄", "生菜", "黑胡椒", "鸡蛋"],
       ja: ["牛肉", "オイスターソース", "玉ねぎ", "トマト", "レタス", "黒コショウ", "卵"],
-      tr: ["dana eti", "oyster sauce", "soğan", "domates", "marul", "karabiber", "yumurta"],
-      it: ["manzo", "oyster sauce", "cipolla", "pomodori", "lattuga", "pepe nero", "uova"],
-      ko: ["소고기", "oyster sauce", "양파", "토마토", "상추", "후추", "계란"]
+      tr: ["dana eti", "istiridye sos", "soğbir", "domates", "marul", "karabiber", "yumurta"],
+      it: ["manzo", "ostrica salsa", "cipolla", "pomodori", "lattuga", "pepe nero", "uova"],
+      ko: ["소고기", "굴 소스", "양파", "토마토", "상추", "후추", "계란"]
     },
     howIsMade: {
       ro: "Sotează cuburi de carne de vită cu usturoi, sos de stridii și piper negru, servește-le pe un pat de salată cu orez și ou prăjit.",
@@ -10566,9 +10566,9 @@ export const recipes = [
       ar: "قلّب مكعبات اللحم مع الثوم وصلصة المحار والفلفل الأسود، وقدّمها فوق سلطة مع أرز وبيض مقلي.",
       zh: "牛肉块与蒜、蚝油、黑胡椒炒香，配生菜、米饭和煎蛋。",
       ja: "牛肉をニンニク・オイスターソース・黒コショウで炒め、サラダ・ご飯・目玉焼きと一緒に提供。",
-      tr: "Sauté dana eti cubes ile sarımsak, oyster sos, ve karabiber, Servis et on a bed of salad ile pirinç ve fried yumurta.",
-      it: "Sauté manzo cubes con aglio, oyster salsa, e pepe nero, Servi on a bed of salad con riso e fried uovo.",
-      ko: "Sauté 소고기 cubes와 마늘, oyster 소스, 그리고 후추, 담아 내세요 on a bed of salad와 쌀그리고 fried 계란하세요."
+      tr: "soteleyiné dana eti küp ile sarımsak, istiridye sos, ve karabiber, Servis et üstüne a yatak  salata ile pirinç ve kızarmış yumurta.",
+      it: "soffriggié manzo cubetti con aglio, ostrica salsa, e pepe nero, Servi su a letto  insalata con riso e fritto uovo.",
+      ko: "볶습니다é 소고기 깍둑썰기와 마늘, 굴 소스, 그리고 후추, 담아 내세요 위에 a 바닥 의 샐러드와 쌀그리고 튀긴 계란하세요."
     },
     originText: {
       ro: "Lok Lak este o rețetă tradițională din Cambodgia.",
@@ -10582,7 +10582,7 @@ export const recipes = [
       zh: "柬埔寨牛肉 是来自柬埔寨的传统食谱。",
       ja: "ロックラック はカンボジアの伝統的なレシピです。",
       tr: "Lok Lak Cambodia kökenli geleneksel bir tariftir.",
-      it: "Lok Lak è una ricetta tradizionale di Cambodia.",
+      it: "Lok Lak è una risotta tradizionale di Cambodia.",
       ko: "Lok Lak는(은) Cambodia의 전통 요리입니다."
     }
   },
@@ -10644,9 +10644,9 @@ export const recipes = [
       ar: ["دقيق", "ماء", "ملح", "لحم بقري", "بصل", "زبدة", "بهارات"],
       zh: ["面粉", "水", "盐", "牛肉", "洋葱", "黄油", "香料"],
       ja: ["小麦粉", "水", "塩", "牛肉", "玉ねぎ", "バター", "スパイス"],
-      tr: ["un", "su", "tuz", "dana eti", "soğan", "tereyağı", "spices"],
-      it: ["farina", "acqua", "sale", "manzo", "cipolla", "burro", "spices"],
-      ko: ["밀가루", "물", "소금", "소고기", "양파", "버터", "spices"]
+      tr: ["un", "su", "tuz", "dana eti", "soğbir", "tereyağı", "baharatlar"],
+      it: ["farina", "acqua", "sale", "manzo", "cipolla", "burro", "spezie"],
+      ko: ["밀가루", "물", "소금", "소고기", "양파", "버터", "향신료"]
     },
     howIsMade: {
       ro: "Prepară un aluat din făină, apă și sare. Umple cu amestec de carne tocată și ceapă, condimentează, formează pachețele și gătește la aburi. Servește cu unt topit sau iaurt.",
@@ -10659,9 +10659,9 @@ export const recipes = [
       ar: "حضّر عجينة من الدقيق والماء والملح. احشها بخليط اللحم المفروم والبصل، تبّلها، شكّلها واطبخها على البخار. قدّمها مع الزبدة الذائبة أو اللبن.",
       zh: "用面粉、水和盐做面团。包入牛肉洋葱馅，调味，做成饺子蒸熟。可配黄油或酸奶食用。",
       ja: "小麦粉と水、塩で生地を作る。牛ひき肉と玉ねぎの具を包み、調味し、蒸し器で蒸す。溶かしバターやヨーグルトで提供。",
-      tr: "Make a dough from un, su ve tuz. Fill ile minced dana eti ve soğan mixture, Baharatlandır, shape dumplings ve steam. Serve ile melted tereyağı or yoğurt.",
-      it: "Make a dough from farina, acqua e sale. Fill con minced manzo e cipolla mixture, Condisci, shape dumplings e steam. Serve con melted burro or yogurt.",
-      ko: "Make a dough from 밀가루, 물그리고 소금. Fill와 minced 소고기그리고 양파 mixture, 간을 맞추고, shape dumplings그리고 steam. Serve와 melted 버터 or 요거트하세요."
+      tr: "yapın a hamur -den un, su ve tuz. doldurun ile kıyılmış dana eti ve soğbir karıştırınture, Baharatlandır, şekil verin mantı ve buharda pişirin. servis edin ile eritilmiş tereyağı veya yoğurt.",
+      it: "fai a impasto da farina, acqua e sale. farcisci con tritato manzo e cipolla mescolature, Condisci, dai forma ravioli e cuoci a vapore. servi con fuso burro o yogurt.",
+      ko: "만듭니다 a 반죽 에서 밀가루, 물그리고 소금. 채웁니다와 다진 소고기그리고 양파 섞습니다, 간을 맞추고, 모양을 만듭니다 만두그리고 찝니다. 제공합니다와 녹인 버터 또는 요거트하세요."
     },
     originText: {
       ro: "Manti este o rețetă tradițională din Uzbekistan.",
@@ -10675,7 +10675,7 @@ export const recipes = [
       zh: "乌兹别克馄饨 是来自乌兹别克斯坦的传统食谱。",
       ja: "マンティ はウズベキスタンの伝統的なレシピです。",
       tr: "Manti Uzbekistan kökenli geleneksel bir tariftir.",
-      it: "Manti è una ricetta tradizionale di Uzbekistan.",
+      it: "Manti è una risotta tradizionale di Uzbekistan.",
       ko: "Manti는(은) Uzbekistan의 전통 요리입니다."
     }
   },
@@ -10733,9 +10733,9 @@ export const recipes = [
       ar: ["دجاج", "بصل", "طماطم", "فلفل", "ثوم", "بقدونس", "زيت", "ملح", "فلفل", "كزبرة"],
       zh: ["鸡肉", "洋葱", "番茄", "辣椒", "大蒜", "香菜", "油", "盐", "胡椒", "香菜粉"],
       ja: ["鶏肉", "玉ねぎ", "トマト", "ピーマン", "ニンニク", "パセリ", "油", "塩", "コショウ", "コリアンダー"],
-      tr: ["tavuk", "soğan", "domates", "kapya biber", "sarımsak", "maydanoz", "oil", "tuz", "biber", "coriander"],
-      it: ["pollo", "cipolla", "pomodori", "peperone", "aglio", "prezzemolo", "oil", "sale", "peperone", "coriander"],
-      ko: ["닭고기", "양파", "토마토", "파프리카", "마늘", "파슬리", "oil", "소금", "고추", "coriander"]
+      tr: ["tavuk", "soğbir", "domates", "kapya biber", "sarımsak", "maydanoz", "yağ", "tuz", "biber", "kişniş"],
+      it: ["pollo", "cipolla", "pomodori", "peperone", "aglio", "prezzemolo", "olio", "sale", "peperone", "coriandolo"],
+      ko: ["닭고기", "양파", "토마토", "파프리카", "마늘", "파슬리", "기름", "소금", "고추", "고수"]
     },
     howIsMade: {
       ro: "Prăjește ceapa și puiul, adaugă ardei și roșii, gătește încet cu condimente și verdeață. Servește cald, eventual cu pâine.",
@@ -10747,9 +10747,9 @@ export const recipes = [
       ar: "اقلي البصل والدجاج، أضف الفلفل والطماطم، اطبخ ببطء مع البهارات والأعشاب. قدّمها ساخنة مع الخبز إذا رغبت.",
       zh: "炒洋葱和鸡肉，加入辣椒和番茄，慢火炖煮，加香料和香草。热食，可配面包。",
       ja: "玉ねぎと鶏肉を炒め、ピーマンとトマトを加えて、スパイスとハーブでじっくり煮込む。温かいうちに、パンと一緒にどうぞ。",
-      tr: "Kızart soğan ve tavuk, Ekle kapya biber ve domates, Pişir slowly ile spices ve herbs. Serve warm, optionally ile ekmek.",
-      it: "Friggi cipolla e pollo, Aggiungi peperone e pomodori, Cuoci slowly con spices e herbs. Serve warm, optionally con pane.",
-      ko: "볶거나 튀기고 양파그리고 닭고기, 넣고 파프리카그리고 토마토, 조리하고 slowly와 spices그리고 herbs. Serve warm, optionally와 빵하세요."
+      tr: "Kızart soğbir ve tavuk, Ekle kapya biber ve domates, Pişir yavaşça ile baharatlar ve otlar. servis edin ılık, isteğe bağlı olarak ile ekmek.",
+      it: "Friggi cipolla e pollo, Aggiungi peperone e pomodori, Cuoci lentamente con spezie e erbe aromatiche. servi tiepido, facoltativamente con pane.",
+      ko: "볶거나 튀기고 양파그리고 닭고기, 넣고 파프리카그리고 토마토, 조리하고 천천히와 향신료그리고 허브. 제공합니다 따뜻한, 선택으로와 빵하세요."
     },
     originText: {
       ro: "Chakhokhbili este o rețetă tradițională din Georgia.",
@@ -10763,7 +10763,7 @@ export const recipes = [
       zh: "格鲁吉亚炖鸡 是来自格鲁吉亚的传统食谱。",
       ja: "チャホフビリ はジョージアの伝統的なレシピです。",
       tr: "Chakhokhbili Georgia kökenli geleneksel bir tariftir.",
-      it: "Chakhokhbili è una ricetta tradizionale di Georgia.",
+      it: "Chakhokhbili è una risotta tradizionale di Georgia.",
       ko: "Chakhokhbili는(은) Georgia의 전통 요리입니다."
     }
   },
@@ -10825,7 +10825,7 @@ export const recipes = [
       ar: ["لحم بقري", "بطاطس", "طماطم", "بصل", "فلفل رومي", "صلصة الصويا", "أرز"],
       zh: ["牛肉", "土豆", "番茄", "洋葱", "灯笼椒", "酱油", "米饭"],
       ja: ["牛肉", "ジャガイモ", "トマト", "玉ねぎ", "パプリカ", "醤油", "ご飯"],
-      tr: ["dana eti", "patates", "domates", "soğan", "kapya biber", "soya sosu", "pirinç"],
+      tr: ["dana eti", "patates", "domates", "soğbir", "kapya biber", "soya sosu", "pirinç"],
       it: ["manzo", "patate", "pomodori", "cipolla", "peperone", "salsa di soia", "riso"],
       ko: ["소고기", "감자", "토마토", "양파", "파프리카", "간장", "쌀"]
     },
@@ -10840,9 +10840,9 @@ export const recipes = [
       ar: "قلّب شرائح اللحم مع البصل والطماطم والفلفل، أضف صوص الصويا، وقدّمها مع البطاطس المقلية والأرز.",
       zh: "牛肉条与洋葱、番茄、辣椒炒香，加酱油，配薯条和米饭。",
       ja: "牛肉・玉ねぎ・トマト・ピーマンを炒めて醤油を加え、フライドポテトとご飯と共に提供。",
-      tr: "Sauté strips of dana eti ile soğan, domates, ve biber, Ekle soya sosu, ve Servis et ile fries ve pirinç.",
-      it: "Sauté strips of manzo con cipolla, pomodoro, e peperone, Aggiungi salsa di soia, e Servi con fries e riso.",
-      ko: "Sauté strips of 소고기와 양파, 토마토, 그리고 고추, 넣고 간장, 그리고 담아 내세요와 fries그리고 쌀하세요."
+      tr: "soteleyiné şeritler  dana eti ile soğbir, domates, ve biber, Ekle soya sosu, ve Servis et ile patates kızartması ve pirinç.",
+      it: "soffriggié strisce  manzo con cipolla, pomodoro, e peperone, Aggiungi salsa di soia, e Servi con patatine fritte e riso.",
+      ko: "볶습니다é 조각 의 소고기와 양파, 토마토, 그리고 고추, 넣고 간장, 그리고 담아 내세요와 감자튀김그리고 쌀하세요."
     },
     originText: {
       ro: "Lomo Saltado este o rețetă tradițională din Peru.",
@@ -10856,7 +10856,7 @@ export const recipes = [
       zh: "秘鲁牛肉炒薯条 是来自秘鲁的传统食谱。",
       ja: "ロモ・サルタード はペルーの伝統的なレシピです。",
       tr: "Lomo Saltado Peru kökenli geleneksel bir tariftir.",
-      it: "Lomo Saltado è una ricetta tradizionale di Perù.",
+      it: "Lomo Saltado è una risotta tradizionale di Perù.",
       ko: "Lomo Saltado는(은) 페루의 전통 요리입니다."
     }
   },
@@ -10918,9 +10918,9 @@ export const recipes = [
       ar: ["لحم ضأن", "حمص", "مشمش مجفف", "بصل", "جزر", "قرفة", "توابل"],
       zh: ["羊肉", "鹰嘴豆", "干杏", "洋葱", "胡萝卜", "肉桂", "香料"],
       ja: ["ラム肉", "ひよこ豆", "ドライアプリコット", "玉ねぎ", "ニンジン", "シナモン", "スパイス"],
-      tr: ["lamb", "nohut", "dried apricots", "soğan", "havuçs", "cinnamon", "spices"],
-      it: ["lamb", "ceci", "dried apricots", "cipolla", "carotas", "cinnamon", "spices"],
-      ko: ["lamb", "병아리콩", "dried apricots", "양파", "당근s", "cinnamon", "spices"]
+      tr: ["kuzu", "nohut", "kuru kayısı", "soğbir", "havuçs", "tarçın", "baharatlar"],
+      it: ["agnello", "ceci", "albicocche secche", "cipolla", "carotas", "cannella", "spezie"],
+      ko: ["양고기", "병아리콩", "말린 살구", "양파", "당근s", "계피", "향신료"]
     },
     howIsMade: {
       ro: "Gătește carnea (de obicei miel sau pui) încet cu legume, fructe uscate, condimente și puțină apă, în vas tagine cu capac.",
@@ -10933,9 +10933,9 @@ export const recipes = [
       ar: "اطبخ اللحم (غالباً لحم الضأن أو الدجاج) مع الخضار والفواكه المجففة والتوابل وقليل من الماء في طاجين مغطى.",
       zh: "羊肉或鸡肉与蔬菜、干果、香料和少量水在盖着的塔吉锅中慢炖。",
       ja: "ラム肉や鶏肉・野菜・ドライフルーツ・スパイス・少量の水をタジン鍋でじっくり煮込む。",
-      tr: "Slow-cook meat (usually lamb or tavuk) ile vegetables, dried fruits, spices, ve a bit of su in a covered tagine pot.",
-      it: "Slow-cook meat (usually lamb or pollo) con vegetables, dried fruits, spices, e a bit of acqua in a covered tagine pot.",
-      ko: "Slow-cook meat (usually lamb or 닭고기)와 vegetables, dried fruits, spices, 그리고 a bit of 물 in a covered tagine pot하세요."
+      tr: "kısık ateşte yavaşça pişirin et (genellikle kuzu veya tavuk) ile sebzeler, kuru meyveler, baharatlar, ve a biraz  su kapalı tajin tenceresi.",
+      it: "cuoci lentamente carne (di solito agnello o pollo) con verdure, frutta secca, spezie, e a un po'  acqua coperto tajine.",
+      ko: "약한 불로 천천히 조리합니다 고기 (보통 양고기 또는 닭고기)와 채소, 말린 과일, 향신료, 그리고 a 조금 의 물 에서 a 덮인 타진 냄비하세요."
     },
     originText: {
       ro: "Tagine este o rețetă tradițională din Maroc.",
@@ -10948,9 +10948,9 @@ export const recipes = [
       ar: "طاجين هي وصفة تقليدية من المغرب.",
       zh: "摩洛哥塔吉锅 是来自摩洛哥的传统食谱。",
       ja: "タジン はモロッコの伝統的なレシピです。",
-      tr: "Tagine Fas kökenli geleneksel bir tariftir.",
-      it: "Tagine è una ricetta tradizionale di Marocco.",
-      ko: "Tagine는(은) 모로코의 전통 요리입니다."
+      tr: "tajin Fas kökenli geleneksel bir tariftir.",
+      it: "tajine è una risotta tradizionale di Marocco.",
+      ko: "타진는(은) 모로코의 전통 요리입니다."
     }
   },
   {
@@ -11011,9 +11011,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بيض", "فتات الخبز", "بصل", "كريمة", "فلفل", "ملح"],
       zh: ["肉末", "鸡蛋", "面包屑", "洋葱", "奶油", "胡椒", "盐"],
       ja: ["ひき肉", "卵", "パン粉", "玉ねぎ", "クリーム", "コショウ", "塩"],
-      tr: ["minced meat", "yumurta", "ekmekcrumbs", "soğan", "krema", "biber", "tuz"],
-      it: ["minced meat", "uova", "panecrumbs", "cipolla", "panna", "peperone", "sale"],
-      ko: ["minced meat", "계란", "빵crumbs", "양파", "크림", "고추", "소금"]
+      tr: ["kıyılmış et", "yumurta", "ekmekcrumbs", "soğbir", "krema", "biber", "tuz"],
+      it: ["tritato carne", "uova", "panecrumbs", "cipolla", "panna", "peperone", "sale"],
+      ko: ["다진 고기", "계란", "빵빵가루", "양파", "크림", "고추", "소금"]
     },
     howIsMade: {
       ro: "Amestecă carnea tocată cu ceapă, pesmet și ou, formează biluțe, prăjește-le, apoi servește-le cu sos cremos și piure.",
@@ -11026,9 +11026,9 @@ export const recipes = [
       ar: "اخلط اللحم المفروم مع البصل والبقسماط والبيض، شكّل كرات واقلها ثم قدّمها مع صوص كريمي وبطاطس مهروسة.",
       zh: "将肉末与洋葱、面包屑和鸡蛋混合搓成小球，煎熟后配奶油酱和土豆泥食用。",
       ja: "ひき肉・玉ねぎ・パン粉・卵を混ぜて丸めて焼き、クリームソースとマッシュポテトと一緒に提供。",
-      tr: "Karıştır minced meat ile soğan, ekmekcrumbs, ve yumurta, shape into balls, Kızart them, sonra Servis et ile kremay sos ve mashed patates.",
-      it: "Mescola minced meat con cipolla, panecrumbs, e uovo, shape into balls, Friggi them, poi Servi con pannay salsa e mashed patate.",
-      ko: "섞고 minced meat와 양파, 빵crumbs, 그리고 계란, shape into balls, 볶거나 튀기고 them, 그다음 담아 내세요와 크림y 소스그리고 mashed 감자하세요."
+      tr: "Karıştır kıyılmış et ile soğbir, ekmekcrumbs, ve yumurta, şekil verin içine toplar, Kızart onları, sonra Servis et ile kremay sos ve ezilmiş patates.",
+      it: "Mescola tritato carne con cipolla, panecrumbs, e uovo, dai forma dentro polpette, Friggi li, poi Servi con pannay salsa e schiacciato patate.",
+      ko: "섞고 다진 고기와 양파, 빵빵가루, 그리고 계란, 모양을 만듭니다 안에 볼, 볶거나 튀기고 그것들을, 그다음 담아 내세요와 크림y 소스그리고 으깬 감자하세요."
     },
     originText: {
       ro: "Köttbullar este o rețetă tradițională din Suedia.",
@@ -11042,7 +11042,7 @@ export const recipes = [
       zh: "瑞典肉丸 是来自瑞典的传统食谱。",
       ja: "スウェーデン風ミートボール はスウェーデンの伝統的なレシピです。",
       tr: "Swedish Meatballs İsveç kökenli geleneksel bir tariftir.",
-      it: "Swedish Meatballs è una ricetta tradizionale di Svezia.",
+      it: "Swedish Meatballs è una risotta tradizionale di Svezia.",
       ko: "Swedish Meatballs는(은) 스웨덴의 전통 요리입니다."
     }
   },
@@ -11104,9 +11104,9 @@ export const recipes = [
       ar: ["دقيق الذرة", "ماء", "ملح", "زيت", "حشوة حسب الرغبة"],
       zh: ["玉米粉", "水", "盐", "油", "任意馅料"],
       ja: ["トウモロコシ粉", "水", "塩", "油", "お好みの具材"],
-      tr: ["mısır un", "su", "tuz", "oil", "filling of choice"],
-      it: ["mais farina", "acqua", "sale", "oil", "filling of choice"],
-      ko: ["옥수수 밀가루", "물", "소금", "oil", "filling of choice"]
+      tr: ["mısır un", "su", "tuz", "yağ", "iç harç  seçim"],
+      it: ["mais farina", "acqua", "sale", "olio", "ripieno  scelta"],
+      ko: ["옥수수 밀가루", "물", "소금", "기름", "속재료 의 선택"]
     },
     howIsMade: {
       ro: "Frământă făină de porumb cu apă și sare, formează turte plate și coace-le pe plită sau la cuptor, apoi umple-le după preferință.",
@@ -11119,9 +11119,9 @@ export const recipes = [
       ar: "اعجن دقيق الذرة مع الماء والملح، شكّل أقراصاً مسطحة واطبخها على الصاج أو في الفرن، ثم احشها كما ترغب.",
       zh: "玉米粉加水和盐和成面团，做成小饼，在铁板上烤或烘烤，按喜好夹馅。",
       ja: "トウモロコシ粉・水・塩を混ぜてこね、平らな円盤状にして鉄板やオーブンで焼き、好みの具材を挟む。",
-      tr: "Knead mısır un ile su ve tuz, shape into flat cakes, Pişir on a griddle or bake, sonra fill as desired.",
-      it: "Knead mais farina con acqua e sale, shape into flat cakes, Cuoci on a griddle or bake, poi fill as desired.",
-      ko: "Knead 옥수수 밀가루와 물그리고 소금, shape into flat cakes, 조리하고 on a griddle or bake, 그다음 fill as desired하세요."
+      tr: "Knead mısır un ile su ve tuz, şekil verin içine düz kek, Pişir üstüne a ızgara tava veya fırında pişirin, sonra doldurun  istenen.",
+      it: "Knead mais farina con acqua e sale, dai forma dentro piatto torte, Cuoci su a piastra o cuoci in forno, poi farcisci  desiderato.",
+      ko: "Knead 옥수수 밀가루와 물그리고 소금, 모양을 만듭니다 안에 납작한 케이크, 조리하고 위에 a 그릴 팬 또는 오븐에서 굽습니다, 그다음 채웁니다  원하는하세요."
     },
     originText: {
       ro: "Arepa este o rețetă tradițională din Venezuela.",
@@ -11134,9 +11134,9 @@ export const recipes = [
       ar: "أريبا هي وصفة تقليدية من فنزويلا.",
       zh: "委内瑞拉玉米饼 是来自委内瑞拉的传统食谱。",
       ja: "アレパ はベネズエラの伝統的なレシピです。",
-      tr: "Arepa Venezuela kökenli geleneksel bir tariftir.",
-      it: "Arepa è una ricetta tradizionale di Venezuela.",
-      ko: "Arepa는(은) Venezuela의 전통 요리입니다."
+      tr: "arepa Venezuela kökenli geleneksel bir tariftir.",
+      it: "arepa è una risotta tradizionale di Venezuela.",
+      ko: "아레파는(은) Venezuela의 전통 요리입니다."
     }
   },
   {
@@ -11197,9 +11197,9 @@ export const recipes = [
       ar: ["دقيق الجاودار", "أرز", "حليب", "زبدة", "ملح", "بيض"],
       zh: ["黑麦面粉", "米饭", "牛奶", "黄油", "盐", "鸡蛋"],
       ja: ["ライ麦粉", "ご飯", "牛乳", "バター", "塩", "卵"],
-      tr: ["rye un", "pirinç", "süt", "tereyağı", "tuz", "yumurta"],
-      it: ["rye farina", "riso", "latte", "burro", "sale", "uova"],
-      ko: ["rye 밀가루", "쌀", "우유", "버터", "소금", "계란"]
+      tr: ["çavdar un", "pirinç", "süt", "tereyağı", "tuz", "yumurta"],
+      it: ["segale farina", "riso", "latte", "burro", "sale", "uova"],
+      ko: ["호밀 밀가루", "쌀", "우유", "버터", "소금", "계란"]
     },
     howIsMade: {
       ro: "Prepară un aluat subțire din secară, umple-l cu terci de orez sau cartofi, modelează tărtăcuțe ovale și coace-le la cuptor.",
@@ -11212,9 +11212,9 @@ export const recipes = [
       ar: "حضّر عجينة رفيعة من الجاودار، احشها بعصيدة الأرز أو البطاطس، شكّلها بيضاوية واخبزها في الفرن.",
       zh: "用黑麦面做成薄皮，包入米粥或土豆泥，做成椭圆形派，烤熟。",
       ja: "ライ麦の薄い生地でご飯またはじゃがいも粥を包み、楕円形に成形して焼く。",
-      tr: "Make thin rye dough, fill ile pirinç or patates porridge, shape into oval pies ve bake in oven.",
-      it: "Make thin rye dough, fill con riso or patata porridge, shape into oval pies e bake in oven.",
-      ko: "Make thin rye dough, fill와 쌀 or 감자 porridge, shape into oval pies그리고 bake in oven하세요."
+      tr: "yapın ince çavdar hamur, doldurun ile pirinç veya patates lapa, şekil verin içine oval turtalar ve fırında pişirin in fırın.",
+      it: "fai sottile segale impasto, farcisci con riso o patata porridge, dai forma dentro ovale torte salate e cuoci in forno in forno.",
+      ko: "만듭니다 얇게 호밀 반죽, 채웁니다와 쌀 또는 감자 죽, 모양을 만듭니다 안에 타원형 파이그리고 오븐에서 굽습니다 에서 오븐하세요."
     },
     originText: {
       ro: "Karjalanpiirakka este o rețetă tradițională din Finlanda.",
@@ -11228,7 +11228,7 @@ export const recipes = [
       zh: "卡累利阿馅饼 是来自芬兰的传统食谱。",
       ja: "カレリアンピーラッカ はフィンランドの伝統的なレシピです。",
       tr: "Karelian Pie Finlandiya kökenli geleneksel bir tariftir.",
-      it: "Karelian Pie è una ricetta tradizionale di Finlandia.",
+      it: "Karelian Pie è una risotta tradizionale di Finlandia.",
       ko: "Karelian Pie는(은) 핀란드의 전통 요리입니다."
     }
   },
@@ -11290,9 +11290,9 @@ export const recipes = [
       ar: ["أرز", "مكرونة", "عدس", "بصل مقلي", "طماطم", "حمص", "ثوم", "زيت", "بهارات"],
       zh: ["米饭", "意面", "扁豆", "炸洋葱", "番茄", "鹰嘴豆", "大蒜", "油", "香料"],
       ja: ["ご飯", "パスタ", "レンズ豆", "フライドオニオン", "トマト", "ひよこ豆", "にんにく", "油", "スパイス"],
-      tr: ["pirinç", "makarna", "mercimek", "fried soğans", "domates", "nohut", "sarımsak", "oil", "spices"],
-      it: ["riso", "pasta", "lenticchie", "fried cipollas", "pomodori", "ceci", "aglio", "oil", "spices"],
-      ko: ["쌀", "파스타", "렌틸콩", "fried 양파s", "토마토", "병아리콩", "마늘", "oil", "spices"]
+      tr: ["pirinç", "makarna", "mercimek", "kızarmış soğans", "domates", "nohut", "sarımsak", "yağ", "baharatlar"],
+      it: ["riso", "pasta", "lenticchie", "fritto cipollas", "pomodori", "ceci", "aglio", "olio", "spezie"],
+      ko: ["쌀", "파스타", "렌틸콩", "튀긴 양파s", "토마토", "병아리콩", "마늘", "기름", "향신료"]
     },
     howIsMade: {
       ro: "Fierbe separat orezul, pastele și lintea. Amestecă-le și servește cu sos de roșii, ceapă prăjită și năut.",
@@ -11305,9 +11305,9 @@ export const recipes = [
       ar: "اسلق الأرز والمكرونة والعدس بشكل منفصل. اخلطهم وقدمهم مع صلصة الطماطم والبصل المقلي والحمص.",
       zh: "米饭、意面和扁豆分别煮熟，混合后搭配番茄酱、炸洋葱和鹰嘴豆一起食用。",
       ja: "ご飯、パスタ、レンズ豆を別々に茹でて混ぜ、トマトソースやフライドオニオン、ひよこ豆と一緒に提供。",
-      tr: "Haşla pirinç, makarna, ve mercimek separately. Mix ve serve ile domates sos, fried soğans, ve nohut.",
-      it: "Cuoci riso, pasta, e lenticchie separately. Mix e serve con pomodoro salsa, fried cipollas, e ceci.",
-      ko: "삶고 쌀, 파스타, 그리고 렌틸콩 separately. Mix그리고 serve와 토마토 소스, fried 양파s, 그리고 병아리콩하세요."
+      tr: "Haşla pirinç, makarna, ve mercimek ayrı ayrı. karıştırın ve servis edin ile domates sos, kızarmış soğans, ve nohut.",
+      it: "Cuoci riso, pasta, e lenticchie separatamente. mescola e servi con pomodoro salsa, fritto cipollas, e ceci.",
+      ko: "삶고 쌀, 파스타, 그리고 렌틸콩 따로. 섞습니다그리고 제공합니다와 토마토 소스, 튀긴 양파s, 그리고 병아리콩하세요."
     },
     originText: {
       ro: "Koshary este o rețetă tradițională din Egipt.",
@@ -11321,7 +11321,7 @@ export const recipes = [
       zh: "考沙里 是来自埃及的传统食谱。",
       ja: "コシャリ はエジプトの伝統的なレシピです。",
       tr: "Koshary Mısır kökenli geleneksel bir tariftir.",
-      it: "Koshary è una ricetta tradizionale di Egitto.",
+      it: "Koshary è una risotta tradizionale di Egitto.",
       ko: "Koshary는(은) 이집트의 전통 요리입니다."
     }
   },
@@ -11383,9 +11383,9 @@ export const recipes = [
       ar: ["معكرونة قصيرة", "فاصوليا", "طماطم", "بصل", "ثوم", "جزر", "كرفس", "زيت زيتون", "ملح", "فلفل", "أعشاب"],
       zh: ["短意面", "豆类", "番茄", "洋葱", "大蒜", "胡萝卜", "芹菜", "橄榄油", "盐", "胡椒", "香草"],
       ja: ["ショートパスタ", "豆", "トマト", "玉ねぎ", "ニンニク", "にんじん", "セロリ", "オリーブオイル", "塩", "コショウ", "ハーブ"],
-      tr: ["short makarna", "fasulye", "domates", "soğan", "sarımsak", "havuç", "celery", "zeytinyağı", "tuz", "biber", "herbs"],
-      it: ["short pasta", "fagioli", "pomodori", "cipolla", "aglio", "carota", "celery", "olio d'oliva", "sale", "peperone", "herbs"],
-      ko: ["short 파스타", "콩", "토마토", "양파", "마늘", "당근", "celery", "올리브오일", "소금", "고추", "herbs"]
+      tr: ["kısa makarna", "fasulye", "domates", "soğbir", "sarımsak", "havuç", "kereviz", "zeytinyağı", "tuz", "biber", "otlar"],
+      it: ["breve pasta", "fagioli", "pomodori", "cipolla", "aglio", "carota", "sedano", "olio d'oliva", "sale", "peperone", "erbe aromatiche"],
+      ko: ["짧게 파스타", "콩", "토마토", "양파", "마늘", "당근", "셀러리", "올리브오일", "소금", "고추", "허브"]
     },
     howIsMade: {
       ro: "Călește ceapa, morcovul și țelina, adaugă fasolea, roșiile și pastele. Fierbe totul până când pastele sunt gata.",
@@ -11398,9 +11398,9 @@ export const recipes = [
       ar: "اقلِ البصل والجزر والكرفس، أضف الفاصوليا والطماطم والمعكرونة. اطبخ حتى تنضج المعكرونة.",
       zh: "炒洋葱、胡萝卜和芹菜，加入豆类、番茄和意面。煮至意面熟。",
       ja: "玉ねぎ、にんじん、セロリを炒め、豆、トマト、パスタを加えて、パスタが柔らかくなるまで煮る。",
-      tr: "Sauté soğan, havuç, ve celery, Ekle fasulye, domates, ve makarna. Simmer until makarna is cooked.",
-      it: "Sauté cipolla, carota, e celery, Aggiungi fagioli, pomodori, e pasta. Simmer until pasta is cooked.",
-      ko: "Sauté 양파, 당근, 그리고 celery, 넣고 콩, 토마토, 그리고 파스타. Simmer until 파스타 is cooked하세요."
+      tr: "soteleyiné soğbir, havuç, ve kereviz, Ekle fasulye, domates, ve makarna. kısık ateşte pişirin makarna  pişirined.",
+      it: "soffriggié cipolla, carota, e sedano, Aggiungi fagioli, pomodori, e pasta. lascia sobbollire pasta  cuocied.",
+      ko: "볶습니다é 양파, 당근, 그리고 셀러리, 넣고 콩, 토마토, 그리고 파스타. 약불에서 끓입니다 파스타 입니다 조리합니다하세요."
     },
     originText: {
       ro: "Pasta e fagioli este o rețetă tradițională din Italia.",
@@ -11413,8 +11413,8 @@ export const recipes = [
       ar: "باستا إي فاجيولي هي وصفة تقليدية من إيطاليا.",
       zh: "意式豆子面 是来自意大利的传统食谱。",
       ja: "パスタ・エ・ファジョーリ はイタリアの伝統的なレシピです。",
-      tr: "Pasta e fagioli İtalya kökenli geleneksel bir tariftir.",
-      it: "Pasta e fagioli è una ricetta tradizionale di Italia.",
+      tr: "makarna e fagioli İtalya kökenli geleneksel bir tariftir.",
+      it: "Pasta e fagioli è una risotta tradizionale di Italia.",
       ko: "Pasta e fagioli는(은) 이탈리아의 전통 요리입니다."
     }
   },
@@ -11476,9 +11476,9 @@ export const recipes = [
       ar: ["خبز روتي", "بيض", "دجاج", "خضار", "توابل", "بصل", "صلصة كاري"],
       zh: ["烤饼", "鸡蛋", "鸡肉", "蔬菜", "香料", "洋葱", "咖喱酱"],
       ja: ["ロティパン", "卵", "鶏肉", "野菜", "スパイス", "玉ねぎ", "カレーソース"],
-      tr: ["roti ekmek", "yumurta", "tavuk", "vegetables", "spices", "soğan", "curry sauce"],
-      it: ["roti pane", "uova", "pollo", "vegetables", "spices", "cipolla", "curry sauce"],
-      ko: ["roti 빵", "계란", "닭고기", "vegetables", "spices", "양파", "curry sauce"]
+      tr: ["roti ekmek", "yumurta", "tavuk", "sebzeler", "baharatlar", "soğbir", "köri sos"],
+      it: ["roti pane", "uova", "pollo", "verdure", "spezie", "cipolla", "curry salsa"],
+      ko: ["roti 빵", "계란", "닭고기", "채소", "향신료", "양파", "카레 소스"]
     },
     howIsMade: {
       ro: "Toacă paratha sau pâine rotis, prăjește-le cu legume, ou și carne sau pește la alegere, asezonează cu condimente.",
@@ -11491,9 +11491,9 @@ export const recipes = [
       ar: "قطّع خبز الباراتا أو الروتي، واقليه مع الخضار والبيض واللحم أو السمك حسب الرغبة وتبّلها.",
       zh: "把帕拉塔饼或烙饼切碎，与蔬菜、鸡蛋和喜欢的肉类或鱼一起炒，加香料调味。",
       ja: "パラータやロティを刻み、野菜・卵・肉や魚と炒めてスパイスで味付け。",
-      tr: "Doğra paratha or roti, stir-fry ile vegetables, yumurta, ve your choice of meat or balık, Baharatlandır ile spices.",
-      it: "Trita paratha or roti, stir-fry con vegetables, uovo, e your choice of meat or pesce, Condisci con spices.",
-      ko: "다져 paratha or roti, stir-fry와 vegetables, 계란, 그리고 your choice of meat or 생선, 간을 맞추고와 spices하세요."
+      tr: "Doğra paratha veya roti, karıştırın-kavurun ile sebzeler, yumurta, ve  seçim  et veya balık, Baharatlandır ile baharatlar.",
+      it: "Trita paratha o roti, mescola-rosola con verdure, uovo, e  scelta  carne o pesce, Condisci con spezie.",
+      ko: "다져 paratha 또는 roti, 저어줍니다-볶습니다와 채소, 계란, 그리고  선택 의 고기 또는 생선, 간을 맞추고와 향신료하세요."
     },
     originText: {
       ro: "Kottu este o rețetă tradițională din Sri Lanka.",
@@ -11507,7 +11507,7 @@ export const recipes = [
       zh: "斯里兰卡炒饼 是来自斯里兰卡的传统食谱。",
       ja: "コットゥ はスリランカの伝統的なレシピです。",
       tr: "Kottu Sri Lanka kökenli geleneksel bir tariftir.",
-      it: "Kottu è una ricetta tradizionale di Sri Lanka.",
+      it: "Kottu è una risotta tradizionale di Sri Lanka.",
       ko: "Kottu는(은) Sri Lanka의 전통 요리입니다."
     }
   },
@@ -11569,9 +11569,9 @@ export const recipes = [
       ar: ["عجينة", "لحم مقدد", "بصل", "بيض", "حليب", "ملح", "فلفل"],
       zh: ["面团", "培根", "洋葱", "鸡蛋", "牛奶", "盐", "胡椒"],
       ja: ["生地", "ベーコン", "玉ねぎ", "卵", "牛乳", "塩", "コショウ"],
-      tr: ["dough", "pastırma", "soğan", "yumurta", "süt", "tuz", "biber"],
-      it: ["dough", "pancetta", "cipolla", "uova", "latte", "sale", "peperone"],
-      ko: ["dough", "베이컨", "양파", "계란", "우유", "소금", "고추"]
+      tr: ["hamur", "pastırma", "soğbir", "yumurta", "süt", "tuz", "biber"],
+      it: ["impasto", "pancetta", "cipolla", "uova", "latte", "sale", "peperone"],
+      ko: ["반죽", "베이컨", "양파", "계란", "우유", "소금", "고추"]
     },
     howIsMade: {
       ro: "Umple aluatul dospit cu șuncă sau bacon, rulează și coace la cuptor până devin rumeni.",
@@ -11584,9 +11584,9 @@ export const recipes = [
       ar: "احشِ العجين المخمر باللحم أو البيكون، لفها واخبزها حتى تحمر.",
       zh: "发酵面团包入火腿或培根，卷起烤至金黄。",
       ja: "発酵生地にハムやベーコンを詰めて巻き、焼き色がつくまで焼く。",
-      tr: "Fill leavened dough ile ham or pastırma, roll up, ve Fırında pişir until golden.",
-      it: "Fill leavened dough con ham or pancetta, roll up, e Cuoci al forno until golden.",
-      ko: "Fill leavened dough와 ham or 베이컨, roll up, 그리고 오븐에 구워 until golden하세요."
+      tr: "doldurun mayalanmış hamur ile jambon veya pastırma, rulo yapın , ve Fırında pişir altın rengi.",
+      it: "farcisci lievitato impasto con prosciutto o pancetta, arrotola , e Cuoci al forno dorato.",
+      ko: "채웁니다 발효된 반죽와 햄 또는 베이컨, 말아줍니다 , 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Piragi este o rețetă tradițională din Letonia.",
@@ -11600,7 +11600,7 @@ export const recipes = [
       zh: "拉脱维亚肉馅面包 是来自拉脱维亚的传统食谱。",
       ja: "ピラギ はラトビアの伝統的なレシピです。",
       tr: "Piragi Latvia kökenli geleneksel bir tariftir.",
-      it: "Piragi è una ricetta tradizionale di Latvia.",
+      it: "Piragi è una risotta tradizionale di Latvia.",
       ko: "Piragi는(은) Latvia의 전통 요리입니다."
     }
   },
@@ -11662,9 +11662,9 @@ export const recipes = [
       ar: ["دقيق الأرز", "حليب جوز الهند", "جمبري", "لحم خنزير", "بصل أخضر", "براعم فول الصويا"],
       zh: ["米粉", "椰奶", "虾", "猪肉", "葱", "豆芽"],
       ja: ["米粉", "ココナッツミルク", "エビ", "豚肉", "青ねぎ", "もやし"],
-      tr: ["pirinç un", "coconut süt", "karides", "domuz eti", "green soğan", "bean sprouts"],
-      it: ["riso farina", "coconut latte", "gamberetti", "maiale", "green cipolla", "bean sprouts"],
-      ko: ["쌀 밀가루", "coconut 우유", "새우", "돼지고기", "green 양파", "bean sprouts"]
+      tr: ["pirinç un", "hindistancevizi süt", "karides", "domuz eti", "yeşil soğbir", "fasulye filiz"],
+      it: ["riso farina", "cocco latte", "gamberetti", "maiale", "verde cipolla", "fagiolo germogli"],
+      ko: ["쌀 밀가루", "코코넛 우유", "새우", "돼지고기", "초록 양파", "콩 새싹"]
     },
     howIsMade: {
       ro: "Prepară un aluat din făină de orez, turmeric și apă, toarnă-l subțire în tigaie, adaugă carne, creveți și legume, apoi prăjește până devine crocant.",
@@ -11677,9 +11677,9 @@ export const recipes = [
       ar: "حضّر عجين الأرز والكركم والماء، اسكبه رقيقًا في المقلاة، أضف اللحم والجمبري والخضار، واقليه حتى يصبح مقرمشًا.",
       zh: "用米粉、姜黄和水调糊，薄薄倒入锅中，加肉、虾和蔬菜，煎至酥脆。",
       ja: "米粉・ターメリック・水で生地を作り、薄くフライパンに広げて肉・エビ・野菜をのせ、カリカリに焼く。",
-      tr: "Make a batter from pirinç un, turmeric, ve su, pour thinly into a pan, Ekle meat, karides, ve vegetables, sonra Kızart until crispy.",
-      it: "Make a batter from riso farina, turmeric, e acqua, pour thinly into a pan, Aggiungi meat, gamberetti, e vegetables, poi Friggi until crispy.",
-      ko: "Make a batter from 쌀 밀가루, turmeric, 그리고 물, pour thinly into a pan, 넣고 meat, 새우, 그리고 vegetables, 그다음 볶거나 튀기고 until crispy하세요."
+      tr: "yapın a hamur -den pirinç un, zerdeçal, ve su, dökün ince ince içine a tava, Ekle et, karides, ve sebzeler, sonra Kızart çıtır.",
+      it: "fai a pastella da riso farina, curcuma, e acqua, versa sottilmente dentro a padella, Aggiungi carne, gamberetti, e verdure, poi Friggi croccante.",
+      ko: "만듭니다 a 반죽 에서 쌀 밀가루, 강황, 그리고 물, 붓습니다 얇게 안에 a 팬, 넣고 고기, 새우, 그리고 채소, 그다음 볶거나 튀기고 바삭한하세요."
     },
     originText: {
       ro: "Bánh xèo este o rețetă tradițională din Vietnam.",
@@ -11693,7 +11693,7 @@ export const recipes = [
       zh: "越南煎饼 是来自越南的传统食谱。",
       ja: "バインセオ はベトナムの伝統的なレシピです。",
       tr: "Banh Xeo Vietnam kökenli geleneksel bir tariftir.",
-      it: "Banh Xeo è una ricetta tradizionale di Vietnam.",
+      it: "Banh Xeo è una risotta tradizionale di Vietnam.",
       ko: "Banh Xeo는(은) 베트남의 전통 요리입니다."
     }
   },
@@ -11755,9 +11755,9 @@ export const recipes = [
       ar: ["بطاطس", "ليمون", "مايونيز", "أفوكادو", "تونة أو دجاج", "فلفل حار", "ملح", "فلفل"],
       zh: ["土豆", "柠檬", "蛋黄酱", "牛油果", "金枪鱼或鸡肉", "辣椒", "盐", "胡椒"],
       ja: ["ジャガイモ", "レモン", "マヨネーズ", "アボカド", "ツナまたは鶏肉", "唐辛子", "塩", "コショウ"],
-      tr: ["patates", "limon", "mayonnaise", "avocado", "ton balığı or tavuk", "chili biber", "tuz", "biber"],
-      it: ["patate", "limone", "mayonnaise", "avocado", "tonno or pollo", "chili peperone", "sale", "peperone"],
-      ko: ["감자", "레몬", "mayonnaise", "avocado", "참치 or 닭고기", "chili 고추", "소금", "고추"]
+      tr: ["patates", "limon", "mayonez", "avokado", "ton balığı veya tavuk", "acı biber biber", "tuz", "biber"],
+      it: ["patate", "limone", "maionese", "avocado", "tonno o pollo", "peperoncino peperone", "sale", "peperone"],
+      ko: ["감자", "레몬", "마요네즈", "아보카도", "참치 또는 닭고기", "고추 고추", "소금", "고추"]
     },
     howIsMade: {
       ro: "Fierbe cartofii, amestecă cu lămâie, stratifică cu maioneză, avocado și ton/pui, servește rece.",
@@ -11770,9 +11770,9 @@ export const recipes = [
       ar: "اسلق البطاطس وامزجها بالليمون، ضع طبقات من المايونيز والأفوكادو والتونة/الدجاج وقدمها باردة.",
       zh: "煮土豆，加柠檬拌匀，与蛋黄酱、牛油果和金枪鱼/鸡肉分层，冷食。",
       ja: "ジャガイモを茹でてレモンと混ぜ、マヨネーズ、アボカド、ツナまたは鶏肉で層にし、冷やして提供。",
-      tr: "Haşla patates, Karıştır ile limon, layer ile mayo, avocado, ve ton balığı/tavuk, Servis et cold.",
-      it: "Cuoci patate, Mescola con limone, layer con mayo, avocado, e tonno/pollo, Servi cold.",
-      ko: "삶고 감자, 섞고와 레몬, layer와 mayo, avocado, 그리고 참치/닭고기, 담아 내세요 cold하세요."
+      tr: "Haşla patates, Karıştır ile limon, katman ile mayonez, avokado, ve ton balığı/tavuk, Servis et soğuk.",
+      it: "Cuoci patate, Mescola con limone, strato con maionese, avocado, e tonno/pollo, Servi freddo.",
+      ko: "삶고 감자, 섞고와 레몬, 층와 마요네즈, 아보카도, 그리고 참치/닭고기, 담아 내세요 차가운하세요."
     },
     originText: {
       ro: "Causa Limeña este o rețetă tradițională din Peru.",
@@ -11785,9 +11785,9 @@ export const recipes = [
       ar: "كاوسا ليمنيا هي وصفة تقليدية من بيرو.",
       zh: "土豆鸡肉沙拉 是来自秘鲁的传统食谱。",
       ja: "カウサ・リメーニャ はペルーの伝統的なレシピです。",
-      tr: "Causa Limeña Peru kökenli geleneksel bir tariftir.",
-      it: "Causa Limeña è una ricetta tradizionale di Perù.",
-      ko: "Causa Limeña는(은) 페루의 전통 요리입니다."
+      tr: "Causa misket limonuña Peru kökenli geleneksel bir tariftir.",
+      it: "Causa limeña è una risotta tradizionale di Perù.",
+      ko: "Causa 라임ña는(은) 페루의 전통 요리입니다."
     }
   },
   {
@@ -11848,9 +11848,9 @@ export const recipes = [
       ar: ["دقيق الذرة المطبوخ مسبقًا", "ماء", "ملح", "زيت", "حشوة (جبن، لحم، فاصوليا)"],
       zh: ["预煮玉米粉", "水", "盐", "油", "馅料（奶酪、肉、豆类）"],
       ja: ["プレクックコーンミール", "水", "塩", "油", "具（チーズ、肉、豆）"],
-      tr: ["pre-cooked mısırmeal", "su", "tuz", "oil", "filling (peynir, meat, fasulye)"],
-      it: ["pre-cooked maismeal", "acqua", "sale", "oil", "filling (formaggio, meat, fagioli)"],
-      ko: ["pre-cooked 옥수수meal", "물", "소금", "oil", "filling (치즈, meat, 콩)"]
+      tr: ["önceden-pişirined mısırmeal", "su", "tuz", "yağ", "iç harç (peynir, et, fasulye)"],
+      it: ["pre-cuocied maismeal", "acqua", "sale", "olio", "ripieno (formaggio, carne, fagioli)"],
+      ko: ["미리-조리합니다 옥수수식사", "물", "소금", "기름", "속재료 (치즈, 고기, 콩)"]
     },
     howIsMade: {
       ro: "Amestecă făina de porumb cu apă și sare, formează discuri și prăjește-le sau coace-le. Taie și umple cu ce vrei.",
@@ -11863,9 +11863,9 @@ export const recipes = [
       ar: "اخلط دقيق الذرة بالماء والملح، شكّل أقراصًا واقلها أو اخبزها. احشِ بما تريد.",
       zh: "将玉米粉与水和盐混合，做成圆饼，煎或烤。可加入喜欢的馅料。",
       ja: "コーンミールを水と塩で混ぜ、ディスク型にして焼くか揚げる。好きな具を挟んで完成。",
-      tr: "Karıştır mısırmeal ile su ve tuz, form discs, ve Kızart or bake them. Fill as desired.",
-      it: "Mescola maismeal con acqua e sale, form discs, e Friggi or bake them. Fill as desired.",
-      ko: "섞고 옥수수meal와 물그리고 소금, form discs, 그리고 볶거나 튀기고 or bake them. Fill as desired하세요."
+      tr: "Karıştır mısırmeal ile su ve tuz, şekil verin diskler, ve Kızart veya fırında pişirin onları. doldurun  istenen.",
+      it: "Mescola maismeal con acqua e sale, forma dischi, e Friggi o cuoci in forno li. farcisci  desiderato.",
+      ko: "섞고 옥수수식사와 물그리고 소금, 모양을 만듭니다 원반, 그리고 볶거나 튀기고 또는 오븐에서 굽습니다 그것들을. 채웁니다  원하는하세요."
     },
     originText: {
       ro: "Arepas este o rețetă tradițională din Venezuela.",
@@ -11879,7 +11879,7 @@ export const recipes = [
       zh: "阿雷帕饼 是来自委内瑞拉的传统食谱。",
       ja: "アレパ はベネズエラの伝統的なレシピです。",
       tr: "Arepas Venezuela kökenli geleneksel bir tariftir.",
-      it: "Arepas è una ricetta tradizionale di Venezuela.",
+      it: "Arepas è una risotta tradizionale di Venezuela.",
       ko: "Arepas는(은) Venezuela의 전통 요리입니다."
     }
   },
@@ -11941,9 +11941,9 @@ export const recipes = [
       ar: ["لحم ضأن", "نودلز", "بصل", "ملح", "فلفل", "مرق"],
       zh: ["羊肉", "面条", "洋葱", "盐", "胡椒", "高汤"],
       ja: ["ラム肉", "麺", "玉ねぎ", "塩", "コショウ", "スープ"],
-      tr: ["lamb", "noodles", "soğan", "tuz", "biber", "et suyu"],
-      it: ["lamb", "noodles", "cipolla", "sale", "peperone", "brodo"],
-      ko: ["lamb", "noodles", "양파", "소금", "고추", "육수"]
+      tr: ["kuzu", "erişte", "soğbir", "tuz", "biber", "et suyu"],
+      it: ["agnello", "spaghetti", "cipolla", "sale", "peperone", "brodo"],
+      ko: ["양고기", "면", "양파", "소금", "고추", "육수"]
     },
     howIsMade: {
       ro: "Fierbe carnea (de obicei miel sau vită) până devine fragedă, servește-o cu tăiței lați de casă și ceapă sotată.",
@@ -11956,9 +11956,9 @@ export const recipes = [
       ar: "اسلق اللحم (عادة ضأن أو بقر) حتى يطرى، وقدمه مع نودلز عريضة منزلية وبصل مقلي.",
       zh: "羊肉或牛肉煮至酥烂，配自制宽面和炒洋葱一起食用。",
       ja: "ラム肉や牛肉を柔らかく茹で、手作りの幅広麺と炒めた玉ねぎとともに盛り付ける。",
-      tr: "Haşla meat (usually lamb or dana eti) until tender, Servis et over homemade wide noodles ile sautéed soğan.",
-      it: "Cuoci meat (usually lamb or manzo) until tender, Servi over homemade wide noodles con sautéed cipolla.",
-      ko: "삶고 meat (usually lamb or 소고기) until tender, 담아 내세요 over homemade wide noodles와 sautéed 양파하세요."
+      tr: "Haşla et (genellikle kuzu veya dana eti) yumuşayana kadar, Servis et üzerine ev yapımı geniş erişte ile soteleyiné soğbir.",
+      it: "Cuoci carne (di solito agnello o manzo) finché sarà tenero, Servi sopra fatto in casa ampio spaghetti con soffriggié cipolla.",
+      ko: "삶고 고기 (보통 양고기 또는 소고기) 부드러워질 때까지, 담아 내세요 위에 수제 넓게 면와 볶습니다é 양파하세요."
     },
     originText: {
       ro: "Beshbarmak este o rețetă tradițională din Kârgâzstan.",
@@ -11972,7 +11972,7 @@ export const recipes = [
       zh: "吉尔吉斯拌面 是来自吉尔吉斯斯坦的传统食谱。",
       ja: "ベシュバルマク はキルギスの伝統的なレシピです。",
       tr: "Beshbarmak Kyrgyzstan kökenli geleneksel bir tariftir.",
-      it: "Beshbarmak è una ricetta tradizionale di Kyrgyzstan.",
+      it: "Beshbarmak è una risotta tradizionale di Kyrgyzstan.",
       ko: "Beshbarmak는(은) Kyrgyzstan의 전통 요리입니다."
     }
   },
@@ -12034,9 +12034,9 @@ export const recipes = [
       ar: ["أرز", "حليب جوز الهند", "ماء", "ملح"],
       zh: ["米饭", "椰奶", "水", "盐"],
       ja: ["ご飯", "ココナッツミルク", "水", "塩"],
-      tr: ["pirinç", "coconut süt", "su", "tuz"],
-      it: ["riso", "coconut latte", "acqua", "sale"],
-      ko: ["쌀", "coconut 우유", "물", "소금"]
+      tr: ["pirinç", "hindistancevizi süt", "su", "tuz"],
+      it: ["riso", "cocco latte", "acqua", "sale"],
+      ko: ["쌀", "코코넛 우유", "물", "소금"]
     },
     howIsMade: {
       ro: "Fierbe orezul în lapte de cocos cu apă și sare până devine cremos.",
@@ -12049,9 +12049,9 @@ export const recipes = [
       ar: "اطبخ الأرز في حليب جوز الهند مع الماء والملح حتى يصبح كريميًا.",
       zh: "用椰奶、水和盐煮米饭，直到变得粘稠。",
       ja: "ご飯をココナッツミルクと水、塩でクリーミーになるまで炊く。",
-      tr: "Haşla pirinç in coconut süt ile su ve tuz until kremay.",
-      it: "Cuoci riso in coconut latte con acqua e sale until pannay.",
-      ko: "삶고 쌀 in coconut 우유와 물그리고 소금 until 크림y하세요."
+      tr: "Haşla pirinç in hindistancevizi süt ile su ve tuz kremay.",
+      it: "Cuoci riso in cocco latte con acqua e sale pannay.",
+      ko: "삶고 쌀 에서 코코넛 우유와 물그리고 소금 크림y하세요."
     },
     originText: {
       ro: "Orez cu lapte de cocos este o rețetă tradițională din Asia.",
@@ -12064,9 +12064,9 @@ export const recipes = [
       ar: "أرز بجوز الهند هي وصفة تقليدية من آسيا.",
       zh: "椰浆饭 是来自亚洲的传统食谱。",
       ja: "ココナッツライス はアジアの伝統的なレシピです。",
-      tr: "Coconut Rice Asia kökenli geleneksel bir tariftir.",
-      it: "Coconut Rice è una ricetta tradizionale di Asia.",
-      ko: "Coconut Rice는(은) Asia의 전통 요리입니다."
+      tr: "hindistancevizi pirinç Asia kökenli geleneksel bir tariftir.",
+      it: "cocco riso è una risotta tradizionale di Asia.",
+      ko: "코코넛 쌀는(은) Asia의 전통 요리입니다."
     }
   },
   {
@@ -12127,9 +12127,9 @@ export const recipes = [
       ar: ["أرز بحليب جوز الهند", "أنشوجة مالحة", "فول سوداني", "بيض مسلوق", "خيار", "سامبال", "لحم (اختياري)"],
       zh: ["椰浆饭", "咸凤尾鱼", "花生", "水煮蛋", "黄瓜", "叁巴酱", "肉类（可选）"],
       ja: ["ココナッツミルクご飯", "塩漬けアンチョビ", "ピーナッツ", "ゆで卵", "キュウリ", "サンバル", "肉（お好みで）"],
-      tr: ["coconut süt pirinç", "tuzed anchovies", "peanuts", "boiled yumurta", "salatalık", "sambal", "meat (optional)"],
-      it: ["coconut latte riso", "saleed anchovies", "peanuts", "boiled uova", "cetriolo", "sambal", "meat (optional)"],
-      ko: ["coconut 우유 쌀", "소금ed anchovies", "peanuts", "boiled 계란", "오이", "sambal", "meat (optional)"]
+      tr: ["hindistancevizi süt pirinç", "tuzed hamsi", "yer fıstığı", "byağ yumurta", "salatalık", "sambal", "et (isteğe bağlı)"],
+      it: ["cocco latte riso", "saleed acciughe", "arachidi", "bolioed uova", "cetriolo", "sambal", "carne (facoltativo)"],
+      ko: ["코코넛 우유 쌀", "소금 멸치", "땅콩", "b기름 계란", "오이", "sambal", "고기 (선택)"]
     },
     howIsMade: {
       ro: "Fierbe orezul în lapte de cocos cu frunze de pandan, servește cu ou fiert, anșoa prăjiți, arahide, castraveți și sos sambal.",
@@ -12142,9 +12142,9 @@ export const recipes = [
       ar: "اطبخ الأرز في حليب جوز الهند وأوراق الباندان، وقدمه مع بيض مسلوق وأنشوجة مقلية وفول سوداني وخيار وصلصة سامبال.",
       zh: "米饭用椰奶和香兰叶煮熟，配煮蛋、炸小鱼、花生、黄瓜和叁巴酱。",
       ja: "ご飯をココナッツミルクとパンダンリーフで炊き、ゆで卵・揚げ小魚・ピーナッツ・きゅうり・サンバルと一緒に提供。",
-      tr: "Haşla pirinç in coconut süt ile pandan leaves, Servis et ile boiled yumurta, fried anchovies, peanuts, salatalık, ve sambal sos.",
-      it: "Cuoci riso in coconut latte con pandan leaves, Servi con boiled uovo, fried anchovies, peanuts, cetriolo, e sambal salsa.",
-      ko: "삶고 쌀 in coconut 우유와 pandan leaves, 담아 내세요와 boiled 계란, fried anchovies, peanuts, 오이, 그리고 sambal 소스하세요."
+      tr: "Haşla pirinç in hindistancevizi süt ile pandan yaprak, Servis et ile byağ yumurta, kızarmış hamsi, yer fıstığı, salatalık, ve sambal sos.",
+      it: "Cuoci riso in cocco latte con pandan foglie, Servi con bolioed uovo, fritto acciughe, arachidi, cetriolo, e sambal salsa.",
+      ko: "삶고 쌀 에서 코코넛 우유와 pandan 잎, 담아 내세요와 b기름 계란, 튀긴 멸치, 땅콩, 오이, 그리고 sambal 소스하세요."
     },
     originText: {
       ro: "Nasi lemak este o rețetă tradițională din Malaezia.",
@@ -12158,7 +12158,7 @@ export const recipes = [
       zh: "椰浆饭 是来自马来西亚的传统食谱。",
       ja: "ナシレマッ はマレーシアの伝統的なレシピです。",
       tr: "Nasi lemak Malezya kökenli geleneksel bir tariftir.",
-      it: "Nasi lemak è una ricetta tradizionale di Malesia.",
+      it: "Nasi lemak è una risotta tradizionale di Malesia.",
       ko: "Nasi lemak는(은) 말레이시아의 전통 요리입니다."
     }
   },
@@ -12220,9 +12220,9 @@ export const recipes = [
       ar: ["بطاطس", "زبدة", "ملح", "فلفل", "زيت"],
       zh: ["土豆", "黄油", "盐", "胡椒", "油"],
       ja: ["ジャガイモ", "バター", "塩", "コショウ", "油"],
-      tr: ["patates", "tereyağı", "tuz", "biber", "oil"],
-      it: ["patate", "burro", "sale", "peperone", "oil"],
-      ko: ["감자", "버터", "소금", "고추", "oil"]
+      tr: ["patates", "tereyağı", "tuz", "biber", "yağ"],
+      it: ["patate", "burro", "sale", "peperone", "olio"],
+      ko: ["감자", "버터", "소금", "고추", "기름"]
     },
     howIsMade: {
       ro: "Rade cartofii, stoarce lichidul, formează plăcinte plate și prăjește-le pe ambele părți până devin aurii și crocante.",
@@ -12235,9 +12235,9 @@ export const recipes = [
       ar: "ابشر البطاطس واعصر السائل، شكّل أقراصاً واقلها حتى تحمر من الجهتين.",
       zh: "土豆擦丝去水，压成饼，两面煎至金黄酥脆。",
       ja: "じゃがいもをすりおろして水分を絞り、平たく成形し両面をこんがり焼く。",
-      tr: "Grate patates, squeeze out liquid, shape into flat patties, ve Kızart on both sides until golden ve crisp.",
-      it: "Grate patate, squeeze out liquid, shape into flat patties, e Friggi on both sides until golden e crisp.",
-      ko: "Grate 감자, squeeze out liquid, shape into flat patties, 그리고 볶거나 튀기고 on both sides until golden그리고 crisp하세요."
+      tr: "Grate patates, sıkın  sıvı, şekil verin içine düz köfteler, ve Kızart üstüne her iki taraf altın rengi ve çıtır.",
+      it: "Grate patate, spremi  liquido, dai forma dentro piatto polpette, e Friggi su entrambi lati dorato e croccante.",
+      ko: "Grate 감자, 짜줍니다  액체, 모양을 만듭니다 안에 납작한 패티, 그리고 볶거나 튀기고 위에 양쪽 면 노릇하게그리고 바삭하게하세요."
     },
     originText: {
       ro: "Rösti este o rețetă tradițională din Elveția.",
@@ -12251,7 +12251,7 @@ export const recipes = [
       zh: "瑞士土豆饼 是来自瑞士的传统食谱。",
       ja: "ロスティ はスイスの伝統的なレシピです。",
       tr: "Rösti İsviçre kökenli geleneksel bir tariftir.",
-      it: "Rösti è una ricetta tradizionale di Svizzera.",
+      it: "Rösti è una risotta tradizionale di Svizzera.",
       ko: "Rösti는(은) 스위스의 전통 요리입니다."
     }
   },
@@ -12309,9 +12309,9 @@ export const recipes = [
       ar: ["فاصوليا", "نقانق مدخنة", "بصل", "جزر", "معجون طماطم", "زيت", "ملح", "فلفل", "ورق غار"],
       zh: ["豆子", "熏肠", "洋葱", "胡萝卜", "番茄酱", "油", "盐", "胡椒", "月桂叶"],
       ja: ["豆", "スモークソーセージ", "玉ねぎ", "にんじん", "トマトペースト", "油", "塩", "コショウ", "ローリエ"],
-      tr: ["fasulye", "smoked sausages", "soğan", "havuçs", "domates paste", "oil", "tuz", "biber", "bay leaves"],
-      it: ["fagioli", "smoked sausages", "cipolla", "carotas", "pomodoro paste", "oil", "sale", "peperone", "bay leaves"],
-      ko: ["콩", "smoked sausages", "양파", "당근s", "토마토 paste", "oil", "소금", "고추", "bay leaves"]
+      tr: ["fasulye", "isli sosis", "soğbir", "havuçs", "domates salça", "yağ", "tuz", "biber", "defne yaprak"],
+      it: ["fagioli", "affumicato salsicce", "cipolla", "carotas", "pomodoro concentrato", "olio", "sale", "peperone", "alloro foglie"],
+      ko: ["콩", "훈제 소시지", "양파", "당근s", "토마토 페이스트", "기름", "소금", "고추", "월계수 잎"]
     },
     howIsMade: {
       ro: "Fierbe fasolea, călește legumele, adaugă cârnații, bulionul și condimentele, apoi fierbe totul împreună.",
@@ -12323,9 +12323,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا، اقلي الخضار، أضف النقانق ومعجون الطماطم والتوابل، واطبخ الجميع معاً.",
       zh: "煮豆子，炒蔬菜，加入香肠、番茄酱和调味料，一起炖煮。",
       ja: "豆を茹で、野菜を炒め、ソーセージ、トマトペースト、スパイスを加えて一緒に煮込む。",
-      tr: "Haşla fasulye, sauté vegetables, Ekle sausages, domates paste ve spices, sonra Kısık ateşte pişir all together.",
-      it: "Cuoci fagioli, sauté vegetables, Aggiungi sausages, pomodoro paste e spices, poi Fai sobbollire all together.",
-      ko: "삶고 콩, sauté vegetables, 넣고 sausages, 토마토 paste그리고 spices, 그다음 약불로 끓여 all together하세요."
+      tr: "Haşla fasulye, soteleyiné sebzeler, Ekle sosis, domates salça ve baharatlar, sonra Kısık ateşte pişir tüm birlikte.",
+      it: "Cuoci fagioli, soffriggié verdure, Aggiungi salsicce, pomodoro concentrato e spezie, poi Fai sobbollire tutto insieme.",
+      ko: "삶고 콩, 볶습니다é 채소, 넣고 소시지, 토마토 페이스트그리고 향신료, 그다음 약불로 끓여 모든 함께하세요."
     },
     originText: {
       ro: "Fasole cu cârnați este o rețetă tradițională din România.",
@@ -12338,9 +12338,9 @@ export const recipes = [
       ar: "فاصوليا مع النقانق هي وصفة تقليدية من رومانيا.",
       zh: "香肠炖豆 是来自罗马尼亚的传统食谱。",
       ja: "ソーセージと豆の煮込み はルーマニアの伝統的なレシピです。",
-      tr: "Beans with Sausages Romanya kökenli geleneksel bir tariftir.",
-      it: "Beans with Sausages è una ricetta tradizionale di Romania.",
-      ko: "Beans with Sausages는(은) 루마니아의 전통 요리입니다."
+      tr: "fasulye ile sosis Romanya kökenli geleneksel bir tariftir.",
+      it: "fagioli con salsicce è una risotta tradizionale di Romania.",
+      ko: "콩와 소시지는(은) 루마니아의 전통 요리입니다."
     }
   },
   {
@@ -12401,9 +12401,9 @@ export const recipes = [
       ar: ["دجاج", "بصل", "بابريكا", "كريمة حامضة", "زيت", "ملح", "فلفل"],
       zh: ["鸡肉", "洋葱", "红椒粉", "酸奶油", "油", "盐", "胡椒"],
       ja: ["鶏肉", "玉ねぎ", "パプリカ", "サワークリーム", "油", "塩", "コショウ"],
-      tr: ["tavuk", "soğan", "toz biber", "sour krema", "oil", "tuz", "biber"],
-      it: ["pollo", "cipolla", "paprika", "sour panna", "oil", "sale", "peperone"],
-      ko: ["닭고기", "양파", "파프리카 가루", "sour 크림", "oil", "소금", "고추"]
+      tr: ["tavuk", "soğbir", "toz biber", "ekşi krema", "yağ", "tuz", "biber"],
+      it: ["pollo", "cipolla", "paprika", "acidulo panna", "olio", "sale", "peperone"],
+      ko: ["닭고기", "양파", "파프리카 가루", "새콤한 크림", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Prăjește ceapa, adaugă puiul, presară paprika, gătește cu smântână și condimente până la sos cremos.",
@@ -12416,9 +12416,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف الدجاج، رش البابريكا، اطبخه مع الكريمة الحامضة والتوابل حتى يصبح كريميًا.",
       zh: "炒洋葱，加入鸡肉，撒上红椒粉，用酸奶油和香料煮至浓稠。",
       ja: "玉ねぎを炒め、鶏肉を加え、パプリカを振りかけ、サワークリームとスパイスで煮てクリーミーにする。",
-      tr: "Kızart soğans, Ekle tavuk, sprinkle toz biber, Pişir ile sour krema ve spices until kremay.",
-      it: "Friggi cipollas, Aggiungi pollo, sprinkle paprika, Cuoci con sour panna e spices until pannay.",
-      ko: "볶거나 튀기고 양파s, 넣고 닭고기, sprinkle 파프리카 가루, 조리하고와 sour 크림그리고 spices until 크림y하세요."
+      tr: "Kızart soğans, Ekle tavuk, serpiştirin toz biber, Pişir ile ekşi krema ve baharatlar kremay.",
+      it: "Friggi cipollas, Aggiungi pollo, spolvera paprika, Cuoci con acidulo panna e spezie pannay.",
+      ko: "볶거나 튀기고 양파s, 넣고 닭고기, 뿌립니다 파프리카 가루, 조리하고와 새콤한 크림그리고 향신료 크림y하세요."
     },
     originText: {
       ro: "Chicken Paprikash este o rețetă tradițională din Ungaria.",
@@ -12431,9 +12431,9 @@ export const recipes = [
       ar: "دجاج بابريكا هي وصفة تقليدية من المجر.",
       zh: "红椒鸡 是来自匈牙利的传统食谱。",
       ja: "チキン・パプリカシュ はハンガリーの伝統的なレシピです。",
-      tr: "Chicken Paprikash Macaristan kökenli geleneksel bir tariftir.",
-      it: "Chicken Paprikash è una ricetta tradizionale di Ungheria.",
-      ko: "Chicken Paprikash는(은) 헝가리의 전통 요리입니다."
+      tr: "tavuk Paprikash Macaristan kökenli geleneksel bir tariftir.",
+      it: "pollo Paprikash è una risotta tradizionale di Ungheria.",
+      ko: "닭고기 Paprikash는(은) 헝가리의 전통 요리입니다."
     }
   },
   {
@@ -12495,8 +12495,8 @@ export const recipes = [
       zh: ["意大利面", "茄子", "西红柿", "大蒜", "橄榄油", "盐渍里考塔奶酪", "罗勒", "盐", "胡椒"],
       ja: ["パスタ", "ナス", "トマト", "ニンニク", "オリーブオイル", "リコッタサラータ", "バジル", "塩", "コショウ"],
       tr: ["makarna", "yumurtaplant", "domates", "sarımsak", "zeytinyağı", "ricotta salata", "fesleğen", "tuz", "biber"],
-      it: ["pasta", "uovoplant", "pomodori", "aglio", "olio d'oliva", "ricotta salata", "basilico", "sale", "peperone"],
-      ko: ["파스타", "계란plant", "토마토", "마늘", "올리브오일", "ricotta salata", "바질", "소금", "고추"]
+      it: ["pasta", "uovoplant", "pomodori", "aglio", "olio d'oliva", "ricotta insalata", "basilico", "sale", "peperone"],
+      ko: ["파스타", "계란식물", "토마토", "마늘", "올리브오일", "리코타 샐러드", "바질", "소금", "고추"]
     },
     howIsMade: {
       ro: "Prăjește vinetele, fierbe pastele, prepară sosul de roșii și combină-le cu ricotta și busuioc.",
@@ -12509,9 +12509,9 @@ export const recipes = [
       ar: "اقلي الباذنجان، اسلق المعكرونة، حضّر صلصة الطماطم وامزجها مع الريكوتا والريحان.",
       zh: "煎茄子，煮意大利面，做番茄酱，与奶酪和罗勒混合。",
       ja: "ナスを炒め、パスタを茹で、トマトソースを作り、リコッタとバジルと合わせる。",
-      tr: "Kızart yumurtaplants, Pişir makarna, make domates sos, Birleştir ile ricotta ve fesleğen.",
-      it: "Friggi uovoplants, Cuoci pasta, make pomodoro salsa, Unisci con ricotta e basilico.",
-      ko: "볶거나 튀기고 계란plants, 조리하고 파스타, make 토마토 소스, 섞어와 ricotta그리고 바질하세요."
+      tr: "Kızart yumurtaplants, Pişir makarna, yapın domates sos, Birleştir ile ricotta ve fesleğen.",
+      it: "Friggi uovoplants, Cuoci pasta, fai pomodoro salsa, Unisci con ricotta e basilico.",
+      ko: "볶거나 튀기고 계란식물, 조리하고 파스타, 만듭니다 토마토 소스, 섞어와 리코타그리고 바질하세요."
     },
     originText: {
       ro: "Pasta alla Norma este o rețetă tradițională din Italia.",
@@ -12524,8 +12524,8 @@ export const recipes = [
       ar: "باستا ألا نورما هي وصفة تقليدية من إيطاليا.",
       zh: "诺尔玛意大利面 是来自意大利的传统食谱。",
       ja: "パスタ・アッラ・ノルマ はイタリアの伝統的なレシピです。",
-      tr: "Pasta alla Norma İtalya kökenli geleneksel bir tariftir.",
-      it: "Pasta alla Norma è una ricetta tradizionale di Italia.",
+      tr: "makarna alla Norma İtalya kökenli geleneksel bir tariftir.",
+      it: "Pasta alla Norma è una risotta tradizionale di Italia.",
       ko: "Pasta alla Norma는(은) 이탈리아의 전통 요리입니다."
     }
   },
@@ -12587,9 +12587,9 @@ export const recipes = [
       ar: ["لحم بقري", "بصل", "بيرة داكنة", "خردل", "سكر بني", "خبز", "توابل"],
       zh: ["牛肉", "洋葱", "黑啤酒", "芥末", "红糖", "面包", "香料"],
       ja: ["牛肉", "玉ねぎ", "黒ビール", "マスタード", "ブラウンシュガー", "パン", "スパイス"],
-      tr: ["dana eti", "soğan", "brown beer", "mustard", "brown şeker", "ekmek", "spices"],
-      it: ["manzo", "cipolla", "brown beer", "mustard", "brown zucchero", "pane", "spices"],
-      ko: ["소고기", "양파", "brown beer", "mustard", "brown 설탕", "빵", "spices"]
+      tr: ["dana eti", "soğbir", "kahverengi bira", "hardal", "kahverengi şeker", "ekmek", "baharatlar"],
+      it: ["manzo", "cipolla", "marrone birra", "senape", "marrone zucchero", "pane", "spezie"],
+      ko: ["소고기", "양파", "갈색 맥주", "머스터드", "갈색 설탕", "빵", "향신료"]
     },
     howIsMade: {
       ro: "Rumenește carnea de vită, gătește-o încet cu ceapă și bere brună, adaugă condimente și servește cu cartofi prăjiți.",
@@ -12602,9 +12602,9 @@ export const recipes = [
       ar: "حمّر لحم البقر واطبخه ببطء مع البصل والبيرة الداكنة، أضف التوابل وقدمه مع البطاطس المقلية.",
       zh: "牛肉煎至上色，和洋葱、黑啤酒慢炖，加香料，配薯条食用。",
       ja: "牛肉を焼き、玉ねぎ・黒ビールとじっくり煮て、スパイスを加えフライドポテトと共に提供。",
-      tr: "Brown dana eti, slow-cook it ile soğan ve dark beer, Ekle spices, ve Servis et ile fries.",
-      it: "Brown manzo, slow-cook it con cipolla e dark beer, Aggiungi spices, e Servi con fries.",
-      ko: "Brown 소고기, slow-cook it와 양파그리고 dark beer, 넣고 spices, 그리고 담아 내세요와 fries하세요."
+      tr: "kahverengi dana eti, kısık ateşte yavaşça pişirin o ile soğbir ve koyu bira, Ekle baharatlar, ve Servis et ile patates kızartması.",
+      it: "marrone manzo, cuoci lentamente esso con cipolla e scuro birra, Aggiungi spezie, e Servi con patatine fritte.",
+      ko: "갈색 소고기, 약한 불로 천천히 조리합니다 그것와 양파그리고 진한 맥주, 넣고 향신료, 그리고 담아 내세요와 감자튀김하세요."
     },
     originText: {
       ro: "Carbonade flamande este o rețetă tradițională din Belgia.",
@@ -12618,7 +12618,7 @@ export const recipes = [
       zh: "比利时炖牛肉 是来自比利时的传统食谱。",
       ja: "フラマン風シチュー はベルギーの伝統的なレシピです。",
       tr: "Flemish Stew Belçika kökenli geleneksel bir tariftir.",
-      it: "Flemish Stew è una ricetta tradizionale di Belgio.",
+      it: "Flemish Stew è una risotta tradizionale di Belgio.",
       ko: "Flemish Stew는(은) 벨기에의 전통 요리입니다."
     }
   },
@@ -12680,9 +12680,9 @@ export const recipes = [
       ar: ["عجينة", "لحم ضأن", "بصل", "بطاطس", "توابل", "زيت"],
       zh: ["面团", "羊肉", "洋葱", "土豆", "香料", "油"],
       ja: ["生地", "ラム肉", "玉ねぎ", "ジャガイモ", "スパイス", "油"],
-      tr: ["dough", "lamb", "soğan", "patates", "spices", "oil"],
-      it: ["dough", "lamb", "cipolla", "patate", "spices", "oil"],
-      ko: ["dough", "lamb", "양파", "감자", "spices", "oil"]
+      tr: ["hamur", "kuzu", "soğbir", "patates", "baharatlar", "yağ"],
+      it: ["impasto", "agnello", "cipolla", "patate", "spezie", "olio"],
+      ko: ["반죽", "양고기", "양파", "감자", "향신료", "기름"]
     },
     howIsMade: {
       ro: "Întinde un aluat simplu, umple-l cu carne tocată și ceapă, acoperă cu altă foaie și coace-l la cuptor până se rumenește.",
@@ -12695,9 +12695,9 @@ export const recipes = [
       ar: "افرد عجينة بسيطة، احشها باللحم المفروم والبصل، غطها بعجينة أخرى واخبزها حتى تحمر.",
       zh: "擀开面团，包入肉末和洋葱，盖上另一层面，烤至金黄。",
       ja: "シンプルな生地を伸ばし、ひき肉と玉ねぎを包み、もう一枚の生地で覆い、焼き色がつくまで焼く。",
-      tr: "Roll out simple dough, fill ile minced meat ve soğan, cover ile another sheet, ve Fırında pişir until golden.",
-      it: "Roll out simple dough, fill con minced meat e cipolla, cover con another sheet, e Cuoci al forno until golden.",
-      ko: "Roll out simple dough, fill와 minced meat그리고 양파, cover와 another sheet, 그리고 오븐에 구워 until golden하세요."
+      tr: "rulo yapın  basit hamur, doldurun ile kıyılmış et ve soğbir, örtün ile başka yufka, ve Fırında pişir altın rengi.",
+      it: "arrotola  semplice impasto, farcisci con tritato carne e cipolla, copri con un altro foglio, e Cuoci al forno dorato.",
+      ko: "말아줍니다  간단한 반죽, 채웁니다와 다진 고기그리고 양파, 덮습니다와 다른 시트, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Ichlekli este o rețetă tradițională din Turkmenistan.",
@@ -12711,7 +12711,7 @@ export const recipes = [
       zh: "土库曼馅饼 是来自土库曼斯坦的传统食谱。",
       ja: "イチレクリ はトルクメニスタンの伝統的なレシピです。",
       tr: "Ichlekli Turkmenistan kökenli geleneksel bir tariftir.",
-      it: "Ichlekli è una ricetta tradizionale di Turkmenistan.",
+      it: "Ichlekli è una risotta tradizionale di Turkmenistan.",
       ko: "Ichlekli는(은) Turkmenistan의 전통 요리입니다."
     }
   },
@@ -12773,9 +12773,9 @@ export const recipes = [
       ar: ["صدر دجاج", "زبدة", "ثوم", "بقدونس", "بيض", "بقسماط", "دقيق", "زيت", "ملح", "فلفل"],
       zh: ["鸡胸肉", "黄油", "大蒜", "香菜", "鸡蛋", "面包屑", "面粉", "油", "盐", "胡椒"],
       ja: ["鶏むね肉", "バター", "ニンニク", "パセリ", "卵", "パン粉", "小麦粉", "油", "塩", "コショウ"],
-      tr: ["tavuk göğsü", "tereyağı", "sarımsak", "maydanoz", "yumurta", "ekmekcrumbs", "un", "oil", "tuz", "biber"],
-      it: ["petto di pollo", "burro", "aglio", "prezzemolo", "uovo", "panecrumbs", "farina", "oil", "sale", "peperone"],
-      ko: ["닭가슴살", "버터", "마늘", "파슬리", "계란", "빵crumbs", "밀가루", "oil", "소금", "고추"]
+      tr: ["tavuk göğsü", "tereyağı", "sarımsak", "maydanoz", "yumurta", "ekmekcrumbs", "un", "yağ", "tuz", "biber"],
+      it: ["petto di pollo", "burro", "aglio", "prezzemolo", "uovo", "panecrumbs", "farina", "olio", "sale", "peperone"],
+      ko: ["닭가슴살", "버터", "마늘", "파슬리", "계란", "빵빵가루", "밀가루", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Umple pieptul de pui cu unt, usturoi și pătrunjel, rulează-l, dă-l prin făină, ou și pesmet, apoi prăjește-l până devine auriu.",
@@ -12788,9 +12788,9 @@ export const recipes = [
       ar: "احشِ صدور الدجاج بالزبدة والثوم والبقدونس، لُفّها، غطِّها بالدقيق ثم البيض والبقسماط، واقلها حتى تكتسب لونًا ذهبيًا.",
       zh: "将黄油、大蒜和香菜包入鸡胸肉，卷起，蘸面粉、蛋液和面包屑，炸至金黄。",
       ja: "鶏むね肉にバター、ニンニク、パセリを包み、巻いて小麦粉・卵・パン粉をつけて揚げる。",
-      tr: "Fill tavuk göğsü ile tereyağı, sarımsak ve maydanoz, roll it up, coat ile un, yumurta ve ekmekcrumbs, sonra Kızart until golden.",
-      it: "Fill petto di pollo con burro, aglio e prezzemolo, roll it up, coat con farina, uovo e panecrumbs, poi Friggi until golden.",
-      ko: "Fill 닭가슴살와 버터, 마늘그리고 파슬리, roll it up, coat와 밀가루, 계란그리고 빵crumbs, 그다음 볶거나 튀기고 until golden하세요."
+      tr: "doldurun tavuk göğsü ile tereyağı, sarımsak ve maydanoz, rulo yapın o , kaplayın ile un, yumurta ve ekmekcrumbs, sonra Kızart altın rengi.",
+      it: "farcisci petto di pollo con burro, aglio e prezzemolo, arrotola esso , ricopri con farina, uovo e panecrumbs, poi Friggi dorato.",
+      ko: "채웁니다 닭가슴살와 버터, 마늘그리고 파슬리, 말아줍니다 그것 , 입힙니다와 밀가루, 계란그리고 빵빵가루, 그다음 볶거나 튀기고 노릇하게하세요."
     },
     originText: {
       ro: "Pui Kiev este o rețetă tradițională din Ucraina.",
@@ -12803,9 +12803,9 @@ export const recipes = [
       ar: "دجاج كييف هي وصفة تقليدية من أوكرانيا.",
       zh: "基辅鸡排 是来自乌克兰的传统食谱。",
       ja: "キエフ風チキン はウクライナの伝統的なレシピです。",
-      tr: "Chicken Kiev Ukrayna kökenli geleneksel bir tariftir.",
-      it: "Chicken Kiev è una ricetta tradizionale di Ucraina.",
-      ko: "Chicken Kiev는(은) 우크라이나의 전통 요리입니다."
+      tr: "tavuk Kiev Ukrayna kökenli geleneksel bir tariftir.",
+      it: "pollo Kiev è una risotta tradizionale di Ucraina.",
+      ko: "닭고기 Kiev는(은) 우크라이나의 전통 요리입니다."
     }
   },
   {
@@ -12866,9 +12866,9 @@ export const recipes = [
       ar: ["بطاطس", "لحم مفروم", "بصل", "كريمة حامضة", "لحم مقدد", "ملح", "فلفل"],
       zh: ["土豆", "肉末", "洋葱", "酸奶油", "培根", "盐", "胡椒"],
       ja: ["ジャガイモ", "ひき肉", "玉ねぎ", "サワークリーム", "ベーコン", "塩", "コショウ"],
-      tr: ["patates", "minced meat", "soğan", "sour krema", "pastırma", "tuz", "biber"],
-      it: ["patate", "minced meat", "cipolla", "sour panna", "pancetta", "sale", "peperone"],
-      ko: ["감자", "minced meat", "양파", "sour 크림", "베이컨", "소금", "고추"]
+      tr: ["patates", "kıyılmış et", "soğbir", "ekşi krema", "pastırma", "tuz", "biber"],
+      it: ["patate", "tritato carne", "cipolla", "acidulo panna", "pancetta", "sale", "peperone"],
+      ko: ["감자", "다진 고기", "양파", "새콤한 크림", "베이컨", "소금", "고추"]
     },
     howIsMade: {
       ro: "Rade cartofii, amestecă cu făină și umple cu carne tocată, formează găluște mari și fierbe-le până devin moi. Servește cu smântână.",
@@ -12881,9 +12881,9 @@ export const recipes = [
       ar: "ابشر البطاطس وامزجها بالدقيق واحشها باللحم المفروم، شكّل كرات كبيرة واسلقها حتى تنضج. قدمها مع القشدة الحامضة.",
       zh: "土豆擦丝加面粉，包入肉末做成大团，煮熟后配酸奶油食用。",
       ja: "じゃがいもをすりおろし小麦粉と混ぜ、ひき肉を包み大きな団子にして茹で、サワークリームを添える。",
-      tr: "Grate patates, Karıştır ile un ve fill ile minced meat, form large dumplings ve boil until soft. Serve ile sour krema.",
-      it: "Grate patate, Mescola con farina e fill con minced meat, form large dumplings e boil until soft. Serve con sour panna.",
-      ko: "Grate 감자, 섞고와 밀가루그리고 fill와 minced meat, form large dumplings그리고 삶아 until soft. Serve와 sour 크림하세요."
+      tr: "Grate patates, Karıştır ile un ve doldurun ile kıyılmış et, şekil verin büyük mantı ve byağ yumuşak. servis edin ile ekşi krema.",
+      it: "Grate patate, Mescola con farina e farcisci con tritato carne, forma grande ravioli e bolio morbido. servi con acidulo panna.",
+      ko: "Grate 감자, 섞고와 밀가루그리고 채웁니다와 다진 고기, 모양을 만듭니다 큰 만두그리고 삶아 부드러운. 제공합니다와 새콤한 크림하세요."
     },
     originText: {
       ro: "Cepelinai este o rețetă tradițională din Lituania.",
@@ -12897,7 +12897,7 @@ export const recipes = [
       zh: "立陶宛土豆团 是来自立陶宛的传统食谱。",
       ja: "ツェペリナイ はリトアニアの伝統的なレシピです。",
       tr: "Cepelinai Lithuania kökenli geleneksel bir tariftir.",
-      it: "Cepelinai è una ricetta tradizionale di Lithuania.",
+      it: "Cepelinai è una risotta tradizionale di Lithuania.",
       ko: "Cepelinai는(은) Lithuania의 전통 요리입니다."
     }
   },
@@ -12955,9 +12955,9 @@ export const recipes = [
       ar: ["دجاج", "بصل", "جزر", "فطر", "كريمة", "نبيذ أبيض", "زبدة", "دقيق", "ملح", "فلفل"],
       zh: ["鸡肉", "洋葱", "胡萝卜", "蘑菇", "奶油", "白葡萄酒", "黄油", "面粉", "盐", "胡椒"],
       ja: ["鶏肉", "玉ねぎ", "にんじん", "きのこ", "クリーム", "白ワイン", "バター", "小麦粉", "塩", "コショウ"],
-      tr: ["tavuk", "soğan", "havuçs", "mantar", "krema", "white wine", "tereyağı", "un", "tuz", "biber"],
-      it: ["pollo", "cipolla", "carotas", "funghi", "panna", "white wine", "burro", "farina", "sale", "peperone"],
-      ko: ["닭고기", "양파", "당근s", "버섯", "크림", "white wine", "버터", "밀가루", "소금", "고추"]
+      tr: ["tavuk", "soğbir", "havuçs", "mantar", "krema", "beyaz şarap", "tereyağı", "un", "tuz", "biber"],
+      it: ["pollo", "cipolla", "carotas", "funghi", "panna", "bianco vino", "burro", "farina", "sale", "peperone"],
+      ko: ["닭고기", "양파", "당근s", "버섯", "크림", "흰 와인", "버터", "밀가루", "소금", "고추"]
     },
     howIsMade: {
       ro: "Rumenește bucățile de pui în unt, adaugă legumele, presară făina, stinge cu vin și apă, fierbe încet. Adaugă smântâna la final.",
@@ -12969,9 +12969,9 @@ export const recipes = [
       ar: "حمّر الدجاج بالزبدة، أضف الخضار، رش الدقيق، أضف النبيذ والماء واطبخ ببطء. أضف الكريمة في النهاية.",
       zh: "鸡肉用黄油煎至金黄，加入蔬菜，撒面粉，加酒和水炖煮，最后加入奶油。",
       ja: "バターで鶏肉を焼き、野菜を加え、小麦粉を振りかけて白ワインと水で煮込む。最後にクリームを加える。",
-      tr: "Brown tavuk pieces in tereyağı, Ekle vegetables, sprinkle ile un, deglaze ile wine ve su, Kısık ateşte pişir. Stir in krema at end.",
-      it: "Brown pollo pieces in burro, Aggiungi vegetables, sprinkle con farina, deglaze con wine e acqua, Fai sobbollire. Stir in panna at end.",
-      ko: "Brown 닭고기 pieces in 버터, 넣고 vegetables, sprinkle와 밀가루, deglaze와 wine그리고 물, 약불로 끓여. Stir in 크림 at end하세요."
+      tr: "kahverengi tavuk parçalar in tereyağı, Ekle sebzeler, serpiştirin ile un, tavayı çözdürün ile şarap ve su, Kısık ateşte pişir. karıştırın in krema  sonunda.",
+      it: "marrone pollo pezzi in burro, Aggiungi verdure, spolvera con farina, sfuma con vino e acqua, Fai sobbollire. mescola in panna  alla fine.",
+      ko: "갈색 닭고기 조각 에서 버터, 넣고 채소, 뿌립니다와 밀가루, 팬을 디글레이즈합니다와 와인그리고 물, 약불로 끓여. 저어줍니다 에서 크림 에서 마지막에하세요."
     },
     originText: {
       ro: "Fricassée de Poulet este o rețetă tradițională din Franța.",
@@ -12984,9 +12984,9 @@ export const recipes = [
       ar: "دجاج فريكاسيه هي وصفة تقليدية من فرنسا.",
       zh: "法式炖鸡 是来自法国的传统食谱。",
       ja: "鶏のフリカッセ はフランスの伝統的なレシピです。",
-      tr: "Chicken Fricassée Fransa kökenli geleneksel bir tariftir.",
-      it: "Chicken Fricassée è una ricetta tradizionale di Francia.",
-      ko: "Chicken Fricassée는(은) 프랑스의 전통 요리입니다."
+      tr: "tavuk Fricassée Fransa kökenli geleneksel bir tariftir.",
+      it: "pollo Fricassée è una risotta tradizionale di Francia.",
+      ko: "닭고기 Fricassée는(은) 프랑스의 전통 요리입니다."
     }
   },
   {
@@ -13047,9 +13047,9 @@ export const recipes = [
       ar: ["أرز", "لحم ضأن أو دجاج", "بصل", "طماطم", "ثوم", "هيل", "قرفة", "قرنفل"],
       zh: ["米饭", "羊肉或鸡肉", "洋葱", "番茄", "大蒜", "小豆蔻", "肉桂", "丁香"],
       ja: ["ご飯", "ラム肉または鶏肉", "玉ねぎ", "トマト", "ニンニク", "カルダモン", "シナモン", "クローブ"],
-      tr: ["pirinç", "lamb or tavuk", "soğan", "domates", "sarımsak", "cardamom", "cinnamon", "cloves"],
-      it: ["riso", "lamb or pollo", "cipolla", "pomodori", "aglio", "cardamom", "cinnamon", "cloves"],
-      ko: ["쌀", "lamb or 닭고기", "양파", "토마토", "마늘", "cardamom", "cinnamon", "cloves"]
+      tr: ["pirinç", "kuzu veya tavuk", "soğbir", "domates", "sarımsak", "kakule", "tarçın", "karanfil"],
+      it: ["riso", "agnello o pollo", "cipolla", "pomodori", "aglio", "cardamomo", "cannella", "chiodi di garofano"],
+      ko: ["쌀", "양고기 또는 닭고기", "양파", "토마토", "마늘", "카다멈", "계피", "정향"]
     },
     howIsMade: {
       ro: "Prăjește carnea cu ceapă și condimente, adaugă roșii și orez, apoi fierbe totul împreună până ce orezul este gătit și aromat.",
@@ -13062,9 +13062,9 @@ export const recipes = [
       ar: "اقلِ اللحم مع البصل والتوابل، أضف الطماطم والأرز، واطبخ كل شيء حتى ينضج الأرز.",
       zh: "肉和洋葱、香料炒香，加番茄和米饭炖至米饭熟透入味。",
       ja: "肉を玉ねぎ・スパイスと炒め、トマトと米を加え、一緒に煮てご飯が炊き上がるまで煮る。",
-      tr: "Kızart meat ile soğan ve spices, Ekle domates ve pirinç, sonra Kısık ateşte pişir everything together until pirinç is cooked ve flavorful.",
-      it: "Friggi meat con cipolla e spices, Aggiungi pomodori e riso, poi Fai sobbollire everything together until riso is cooked e flavorful.",
-      ko: "볶거나 튀기고 meat와 양파그리고 spices, 넣고 토마토그리고 쌀, 그다음 약불로 끓여 everything together until 쌀 is cooked그리고 flavorful하세요."
+      tr: "Kızart et ile soğbir ve baharatlar, Ekle domates ve pirinç, sonra Kısık ateşte pişir her şeyi birlikte pirinç  pişirined ve lezzetli.",
+      it: "Friggi carne con cipolla e spezie, Aggiungi pomodori e riso, poi Fai sobbollire tutto insieme riso  cuocied e sapori intensi.",
+      ko: "볶거나 튀기고 고기와 양파그리고 향신료, 넣고 토마토그리고 쌀, 그다음 약불로 끓여 모든 것 함께 쌀 입니다 조리합니다그리고 풍미가 좋은하세요."
     },
     originText: {
       ro: "Machboos este o rețetă tradițională din Kuweit.",
@@ -13078,7 +13078,7 @@ export const recipes = [
       zh: "科威特香料饭 是来自科威特的传统食谱。",
       ja: "マチブース はクウェートの伝統的なレシピです。",
       tr: "Machboos Kuwait kökenli geleneksel bir tariftir.",
-      it: "Machboos è una ricetta tradizionale di Kuwait.",
+      it: "Machboos è una risotta tradizionale di Kuwait.",
       ko: "Machboos는(은) Kuwait의 전통 요리입니다."
     }
   },
@@ -13140,9 +13140,9 @@ export const recipes = [
       ar: ["دجاج", "زبدة الفول السوداني", "طماطم", "بصل", "ثوم", "زيت النخيل", "ورق الغار", "فلفل حار", "ملح", "فلفل"],
       zh: ["鸡肉", "花生酱", "番茄", "洋葱", "大蒜", "棕榈油", "月桂叶", "辣椒", "盐", "胡椒"],
       ja: ["鶏肉", "ピーナッツバター", "トマト", "玉ねぎ", "ニンニク", "パーム油", "ローリエ", "唐辛子", "塩", "コショウ"],
-      tr: ["tavuk", "peanut tereyağı", "domates", "soğan", "sarımsak", "palm oil", "bay leaves", "chili biber", "tuz", "biber"],
-      it: ["pollo", "peanut burro", "pomodori", "cipolla", "aglio", "palm oil", "bay leaves", "chili peperone", "sale", "peperone"],
-      ko: ["닭고기", "peanut 버터", "토마토", "양파", "마늘", "palm oil", "bay leaves", "chili 고추", "소금", "고추"]
+      tr: ["tavuk", "yer fıstığı tereyağı", "domates", "soğbir", "sarımsak", "palmiye yağ", "defne yaprak", "acı biber biber", "tuz", "biber"],
+      it: ["pollo", "arachide burro", "pomodori", "cipolla", "aglio", "palma olio", "alloro foglie", "peperoncino peperone", "sale", "peperone"],
+      ko: ["닭고기", "땅콩 버터", "토마토", "양파", "마늘", "야자 기름", "월계수 잎", "고추 고추", "소금", "고추"]
     },
     howIsMade: {
       ro: "Prăjește puiul, apoi adaugă legumele și condimentele, gătește cu unt de arahide până sosul devine cremos.",
@@ -13155,9 +13155,9 @@ export const recipes = [
       ar: "اقلي الدجاج، ثم أضف الخضار والتوابل واطبخ بزبدة الفول السوداني حتى يصبح الصوص كريميًا.",
       zh: "先煎鸡肉，再加蔬菜和调料，加入花生酱炖至浓稠。",
       ja: "鶏肉を炒め、野菜やスパイスを加え、ピーナッツバターでクリーミーなソースに仕上げる。",
-      tr: "Kızart tavuk, Ekle vegetables ve spices, Pişir ile peanut tereyağı until sos is kremay.",
-      it: "Friggi pollo, Aggiungi vegetables e spices, Cuoci con peanut burro until salsa is pannay.",
-      ko: "볶거나 튀기고 닭고기, 넣고 vegetables그리고 spices, 조리하고와 peanut 버터 until 소스 is 크림y하세요."
+      tr: "Kızart tavuk, Ekle sebzeler ve baharatlar, Pişir ile yer fıstığı tereyağı sos  kremay.",
+      it: "Friggi pollo, Aggiungi verdure e spezie, Cuoci con arachide burro salsa  pannay.",
+      ko: "볶거나 튀기고 닭고기, 넣고 채소그리고 향신료, 조리하고와 땅콩 버터 소스 입니다 크림y하세요."
     },
     originText: {
       ro: "Pui Moambe este o rețetă tradițională din Republica Congo.",
@@ -13170,9 +13170,9 @@ export const recipes = [
       ar: "دجاج موامبي هي وصفة تقليدية من جمهورية الكونغو.",
       zh: "花生酱炖鸡 是来自刚果共和国的传统食谱。",
       ja: "ムアンベチキン はコンゴ共和国の伝統的なレシピです。",
-      tr: "Moambe chicken Republic of the Congo kökenli geleneksel bir tariftir.",
-      it: "Moambe chicken è una ricetta tradizionale di Republic of the Congo.",
-      ko: "Moambe chicken는(은) Republic of the Congo의 전통 요리입니다."
+      tr: "Moambe tavuk Republic   Congo kökenli geleneksel bir tariftir.",
+      it: "Moambe pollo è una risotta tradizionale di Republic   Congo.",
+      ko: "Moambe 닭고기는(은) Republic 의  Congo의 전통 요리입니다."
     }
   },
   {
@@ -13233,9 +13233,9 @@ export const recipes = [
       ar: ["فاصوليا بيضاء", "نقانق", "لحم خنزير", "بط أو إوز", "بصل", "ثوم", "طماطم", "أعشاب", "زيت", "ملح", "فلفل"],
       zh: ["白芸豆", "香肠", "猪肉", "鸭或鹅", "洋葱", "大蒜", "番茄", "香草", "油", "盐", "胡椒"],
       ja: ["白インゲン豆", "ソーセージ", "豚肉", "鴨またはガチョウ", "玉ねぎ", "ニンニク", "トマト", "ハーブ", "油", "塩", "コショウ"],
-      tr: ["white fasulye", "sausages", "domuz eti", "duck or goose", "soğan", "sarımsak", "domates", "herbs", "oil", "tuz", "biber"],
-      it: ["white fagioli", "sausages", "maiale", "duck or goose", "cipolla", "aglio", "pomodori", "herbs", "oil", "sale", "peperone"],
-      ko: ["white 콩", "sausages", "돼지고기", "duck or goose", "양파", "마늘", "토마토", "herbs", "oil", "소금", "고추"]
+      tr: ["beyaz fasulye", "sosis", "domuz eti", "ördek veya kaz", "soğbir", "sarımsak", "domates", "otlar", "yağ", "tuz", "biber"],
+      it: ["bianco fagioli", "salsicce", "maiale", "anatra o oca", "cipolla", "aglio", "pomodori", "erbe aromatiche", "olio", "sale", "peperone"],
+      ko: ["흰 콩", "소시지", "돼지고기", "오리 또는 거위", "양파", "마늘", "토마토", "허브", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Fierbe fasolea, apoi adaugă carnea și cârnații rumeniți, legumele și ierburile. Gătește lent la cuptor până se leagă totul.",
@@ -13248,9 +13248,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا، ثم أضف اللحوم والنقانق المحمرة والخضار والأعشاب. اطبخ ببطء في الفرن.",
       zh: "先煮豆子，再加入炒香的肉类、香肠、蔬菜和香草，放入烤箱慢炖入味。",
       ja: "豆を茹で、炒めた肉やソーセージ、野菜、ハーブを加え、オーブンでゆっくり煮込む。",
-      tr: "Haşla fasulye, sonra Ekle browned meats, sausages, vegetables ve herbs. Slow-cook in oven until everything melds.",
-      it: "Cuoci fagioli, poi Aggiungi browned meats, sausages, vegetables e herbs. Slow-cook in oven until everything melds.",
-      ko: "삶고 콩, 그다음 넣고 browned meats, sausages, vegetables그리고 herbs. Slow-cook in oven until everything melds하세요."
+      tr: "Haşla fasulye, sonra Ekle kahverengileşene kadar etler, sosis, sebzeler ve otlar. kısık ateşte yavaşça pişirin in fırın her şeyi birleşir.",
+      it: "Cuoci fagioli, poi Aggiungi dorato carni, salsicce, verdure e erbe aromatiche. cuoci lentamente in forno tutto si uniscono.",
+      ko: "삶고 콩, 그다음 넣고 노릇해질 때까지 고기, 소시지, 채소그리고 허브. 약한 불로 천천히 조리합니다 에서 오븐 모든 것 어우러집니다하세요."
     },
     originText: {
       ro: "Cassoulet este o rețetă tradițională din Franța.",
@@ -13264,7 +13264,7 @@ export const recipes = [
       zh: "法式砂锅炖菜 是来自法国的传统食谱。",
       ja: "カスレ はフランスの伝統的なレシピです。",
       tr: "Cassoulet Fransa kökenli geleneksel bir tariftir.",
-      it: "Cassoulet è una ricetta tradizionale di Francia.",
+      it: "Cassoulet è una risotta tradizionale di Francia.",
       ko: "Cassoulet는(은) 프랑스의 전통 요리입니다."
     }
   },
@@ -13326,9 +13326,9 @@ export const recipes = [
       ar: ["لحم بقري", "نبيذ أحمر", "جزر", "بصل", "طماطم", "ثوم", "برقوق مجفف", "توابل"],
       zh: ["牛肉", "红葡萄酒", "胡萝卜", "洋葱", "番茄", "大蒜", "梅干", "香料"],
       ja: ["牛肉", "赤ワイン", "ニンジン", "玉ねぎ", "トマト", "ニンニク", "干しプラム", "スパイス"],
-      tr: ["dana eti", "red wine", "havuçs", "soğan", "domates", "sarımsak", "dried plums", "spices"],
-      it: ["manzo", "red wine", "carotas", "cipolla", "pomodori", "aglio", "dried plums", "spices"],
-      ko: ["소고기", "red wine", "당근s", "양파", "토마토", "마늘", "dried plums", "spices"]
+      tr: ["dana eti", "kırmızı şarap", "havuçs", "soğbir", "domates", "sarımsak", "kurutulmuş erik", "baharatlar"],
+      it: ["manzo", "rosso vino", "carotas", "cipolla", "pomodori", "aglio", "secco prugne", "spezie"],
+      ko: ["소고기", "빨간 와인", "당근s", "양파", "토마토", "마늘", "말린 자두", "향신료"]
     },
     howIsMade: {
       ro: "Marinează carnea de vită cu oțet, usturoi și condimente, gătește-o încet cu legume, vin roșu și sos de roșii până devine fragedă.",
@@ -13341,9 +13341,9 @@ export const recipes = [
       ar: "انقع لحم البقر بالخل والثوم والتوابل، واطبخه ببطء مع الخضار والنبيذ الأحمر وصلصة الطماطم حتى ينضج.",
       zh: "牛肉用醋、大蒜和香料腌制，与蔬菜、红酒和番茄酱慢炖至酥烂。",
       ja: "牛肉を酢・ニンニク・スパイスでマリネし、野菜・赤ワイン・トマトソースと一緒にじっくり煮込む。",
-      tr: "Marinate dana eti ile sirke, sarımsak, ve spices, slow-cook it ile vegetables, red wine, ve domates sos until tender.",
-      it: "Marinate manzo con aceto, aglio, e spices, slow-cook it con vegetables, red wine, e pomodoro salsa until tender.",
-      ko: "Marinate 소고기와 식초, 마늘, 그리고 spices, slow-cook it와 vegetables, red wine, 그리고 토마토 소스 until tender하세요."
+      tr: "marine edin dana eti ile sirke, sarımsak, ve baharatlar, kısık ateşte yavaşça pişirin o ile sebzeler, kırmızı şarap, ve domates sos yumuşayana kadar.",
+      it: "marina manzo con aceto, aglio, e spezie, cuoci lentamente esso con verdure, rosso vino, e pomodoro salsa finché sarà tenero.",
+      ko: "재웁니다 소고기와 식초, 마늘, 그리고 향신료, 약한 불로 천천히 조리합니다 그것와 채소, 빨간 와인, 그리고 토마토 소스 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Pašticada este o rețetă tradițională din Croația.",
@@ -13357,7 +13357,7 @@ export const recipes = [
       zh: "克罗地亚炖牛肉 是来自克罗地亚的传统食谱。",
       ja: "パスティチャーダ はクロアチアの伝統的なレシピです。",
       tr: "Pasticada Croatia kökenli geleneksel bir tariftir.",
-      it: "Pasticada è una ricetta tradizionale di Croatia.",
+      it: "Pasticada è una risotta tradizionale di Croatia.",
       ko: "Pasticada는(은) Croatia의 전통 요리입니다."
     }
   },
@@ -13419,9 +13419,9 @@ export const recipes = [
       ar: ["لحم خنزير ولحم بقر مفروم", "بصل", "بقدونس", "توابل", "غشاء لحم الخنزير", "ملح", "فلفل"],
       zh: ["猪牛肉末", "洋葱", "欧芹", "香料", "猪网油", "盐", "胡椒"],
       ja: ["豚肉と牛肉のひき肉", "玉ねぎ", "パセリ", "スパイス", "豚の網脂", "塩", "コショウ"],
-      tr: ["minced domuz eti and dana eti", "soğan", "maydanoz", "spices", "caul fat", "tuz", "biber"],
-      it: ["minced maiale and manzo", "cipolla", "prezzemolo", "spices", "caul fat", "sale", "peperone"],
-      ko: ["minced 돼지고기 and 소고기", "양파", "파슬리", "spices", "caul fat", "소금", "고추"]
+      tr: ["kıyılmış domuz eti ve dana eti", "soğbir", "maydanoz", "baharatlar", "gömlek yağı yağ", "tuz", "biber"],
+      it: ["tritato maiale e manzo", "cipolla", "prezzemolo", "spezie", "rete di grasso grasso", "sale", "peperone"],
+      ko: ["다진 돼지고기 그리고 소고기", "양파", "파슬리", "향신료", "내장지방막 지방", "소금", "고추"]
     },
     howIsMade: {
       ro: "Amestecă carne tocată de porc și miel cu condimente, formează cârnați mici și învelește-i în prapure. Frige-i pe grătar până devin rumeni.",
@@ -13434,9 +13434,9 @@ export const recipes = [
       ar: "اخلط لحم الخنزير ولحم الضأن المفروم مع التوابل، شكّل سجقًا صغيرًا، ولفه بشحم الخروف واشوه.",
       zh: "猪肉和羊肉末加香料拌匀，做成小香肠，用网油包裹，烤至金黄。",
       ja: "豚肉と羊肉のひき肉にスパイスを混ぜて小さなソーセージ状にし、網脂で包み、グリルで焼く。",
-      tr: "Karıştır minced domuz eti ve lamb ile spices, shape into small sausages, wrap in caul fat, ve Izgara yap until browned.",
-      it: "Mescola minced maiale e lamb con spices, shape into small sausages, wrap in caul fat, e Griglia until browned.",
-      ko: "섞고 minced 돼지고기그리고 lamb와 spices, shape into small sausages, wrap in caul fat, 그리고 구워 until browned하세요."
+      tr: "Karıştır kıyılmış domuz eti ve kuzu ile baharatlar, şekil verin içine küçük sosis, sarın in gömlek yağı yağ, ve Izgara yap kahverengileşene kadar.",
+      it: "Mescola tritato maiale e agnello con spezie, dai forma dentro piccolo salsicce, avvolgi in rete di grasso grasso, e Griglia dorato.",
+      ko: "섞고 다진 돼지고기그리고 양고기와 향신료, 모양을 만듭니다 안에 작게 소시지, 감싸줍니다 에서 내장지방막 지방, 그리고 구워 노릇해질 때까지하세요."
     },
     originText: {
       ro: "Sheftalia este o rețetă tradițională din Cipru.",
@@ -13450,7 +13450,7 @@ export const recipes = [
       zh: "塞浦路斯烤肉卷 是来自塞浦路斯的传统食谱。",
       ja: "シェフタリア はキプロスの伝統的なレシピです。",
       tr: "Sheftalia Cyprus kökenli geleneksel bir tariftir.",
-      it: "Sheftalia è una ricetta tradizionale di Cyprus.",
+      it: "Sheftalia è una risotta tradizionale di Cyprus.",
       ko: "Sheftalia는(은) Cyprus의 전통 요리입니다."
     }
   },
@@ -13512,9 +13512,9 @@ export const recipes = [
       ar: ["لحم مفروم", "ثوم", "بصل", "ملح", "فلفل", "زيت"],
       zh: ["碎肉", "大蒜", "洋葱", "盐", "胡椒", "油"],
       ja: ["挽肉", "ニンニク", "玉ねぎ", "塩", "コショウ", "油"],
-      tr: ["minced meat", "sarımsak", "soğan", "tuz", "biber", "oil"],
-      it: ["minced meat", "aglio", "cipolla", "sale", "peperone", "oil"],
-      ko: ["minced meat", "마늘", "양파", "소금", "고추", "oil"]
+      tr: ["kıyılmış et", "sarımsak", "soğbir", "tuz", "biber", "yağ"],
+      it: ["tritato carne", "aglio", "cipolla", "sale", "peperone", "olio"],
+      ko: ["다진 고기", "마늘", "양파", "소금", "고추", "기름"]
     },
     howIsMade: {
       ro: "Amestecă ingredientele, formează cârnați mici, frige pe grătar și servește cu lipie și ceapă.",
@@ -13527,9 +13527,9 @@ export const recipes = [
       ar: "اخلط المكونات، شكّل نقانق صغيرة، اشوها وقدّمها مع خبز مسطح وبصل.",
       zh: "混合原料，做成小香肠，烤熟后搭配饼和洋葱食用。",
       ja: "材料を混ぜて小さなソーセージ型にし、グリルで焼き、フラットブレッドと玉ねぎと一緒に提供。",
-      tr: "Karıştır ingredients, form small sausages, Izgara yap them ve serve ile flatekmek ve soğan.",
-      it: "Mescola ingredients, form small sausages, Griglia them e serve con flatpane e cipolla.",
-      ko: "섞고 ingredients, form small sausages, 구워 them그리고 serve와 flat빵그리고 양파하세요."
+      tr: "Karıştır malzemeler, şekil verin küçük sosis, Izgara yap onları ve servis edin ile flatekmek ve soğbir.",
+      it: "Mescola ingredienti, forma piccolo salsicce, Griglia li e servi con flatpane e cipolla.",
+      ko: "섞고 재료, 모양을 만듭니다 작게 소시지, 구워 그것들을그리고 제공합니다와 납작한빵그리고 양파하세요."
     },
     originText: {
       ro: "Cevapi este o rețetă tradițională din Bosnia și Herțegovina.",
@@ -13542,9 +13542,9 @@ export const recipes = [
       ar: "تشيفابي هي وصفة تقليدية من البوسنة والهرسك.",
       zh: "烤肉卷 是来自波斯尼亚和黑塞哥维那的传统食谱。",
       ja: "チェバピ はボスニア・ヘルツェゴビナの伝統的なレシピです。",
-      tr: "Cevapi Bosnia and Herzegovina kökenli geleneksel bir tariftir.",
-      it: "Cevapi è una ricetta tradizionale di Bosnia and Herzegovina.",
-      ko: "Cevapi는(은) Bosnia and Herzegovina의 전통 요리입니다."
+      tr: "Cevapi Bosnia ve Herzegovina kökenli geleneksel bir tariftir.",
+      it: "Cevapi è una risotta tradizionale di Bosnia e Herzegovina.",
+      ko: "Cevapi는(은) Bosnia 그리고 Herzegovina의 전통 요리입니다."
     }
   },
   {
@@ -13605,9 +13605,9 @@ export const recipes = [
       ar: ["كسافا", "موز الجنة", "ماء"],
       zh: ["木薯", "大蕉", "水"],
       ja: ["キャッサバ", "プランテンバナナ", "水"],
-      tr: ["cassava", "plantain", "su"],
-      it: ["cassava", "plantain", "acqua"],
-      ko: ["cassava", "plantain", "물"]
+      tr: ["manyok", "muz (plantain)", "su"],
+      it: ["manioca", "platano", "acqua"],
+      ko: ["카사바", "플랜틴", "물"]
     },
     howIsMade: {
       ro: "Se fierb maniocul și bananele, apoi se pisează împreună până se obține o pastă elastică.",
@@ -13620,9 +13620,9 @@ export const recipes = [
       ar: "اسلق الكسافا وموز الجنة، ثم اهرسهم معًا حتى يصبح المزيج مرنًا.",
       zh: "将木薯和大蕉煮熟，然后捣成光滑有弹性的糊状。",
       ja: "キャッサバとプランテンバナナを茹で、滑らかで弾力が出るまで一緒に潰す。",
-      tr: "Haşla cassava ve plantain, sonra pound together until smooth ve elastic.",
-      it: "Cuoci cassava e plantain, poi pound together until smooth e elastic.",
-      ko: "삶고 cassava그리고 plantain, 그다음 pound together until smooth그리고 elastic하세요."
+      tr: "Haşla manyok ve muz (plantain), sonra dövün birlikte pürüzsüz ve esnek.",
+      it: "Cuoci manioca e platano, poi batti insieme liscio e elastico.",
+      ko: "삶고 카사바그리고 플랜틴, 그다음 두드립니다 함께 부드럽게그리고 탄력 있는하세요."
     },
     originText: {
       ro: "Fufu este o rețetă tradițională din Ghana.",
@@ -13636,7 +13636,7 @@ export const recipes = [
       zh: "富富 是来自加纳的传统食谱。",
       ja: "フフ はガーナの伝統的なレシピです。",
       tr: "Fufu Ghana kökenli geleneksel bir tariftir.",
-      it: "Fufu è una ricetta tradizionale di Ghana.",
+      it: "Fufu è una risotta tradizionale di Ghana.",
       ko: "Fufu는(은) Ghana의 전통 요리입니다."
     }
   },
@@ -13698,9 +13698,9 @@ export const recipes = [
       ar: ["دقيق", "ماء", "لحم مفروم (بقر وخنزير)", "بصل", "فلفل", "ملح", "أعشاب"],
       zh: ["面粉", "水", "牛肉猪肉馅", "洋葱", "胡椒", "盐", "香草"],
       ja: ["小麦粉", "水", "ひき肉（牛と豚）", "玉ねぎ", "コショウ", "塩", "ハーブ"],
-      tr: ["un", "su", "minced meat (dana eti and domuz eti)", "soğan", "biber", "tuz", "herbs"],
-      it: ["farina", "acqua", "minced meat (manzo and maiale)", "cipolla", "peperone", "sale", "herbs"],
-      ko: ["밀가루", "물", "minced meat (소고기 and 돼지고기)", "양파", "고추", "소금", "herbs"]
+      tr: ["un", "su", "kıyılmış et (dana eti ve domuz eti)", "soğbir", "biber", "tuz", "otlar"],
+      it: ["farina", "acqua", "tritato carne (manzo e maiale)", "cipolla", "peperone", "sale", "erbe aromatiche"],
+      ko: ["밀가루", "물", "다진 고기 (소고기 그리고 돼지고기)", "양파", "고추", "소금", "허브"]
     },
     howIsMade: {
       ro: "Prepară un aluat, umple cu carne condimentată și verdeață, formează punguțe și fierbe-le în apă.",
@@ -13713,9 +13713,9 @@ export const recipes = [
       ar: "حضّر العجين، احشوه باللحم المتبل والأعشاب، شكّل كرات واطبخها في الماء.",
       zh: "和面，包入调味肉馅和香草，捏成饺子，下水煮熟。",
       ja: "生地を作り、味付けした肉とハーブを包み、団子状にして茹でる。",
-      tr: "Make a dough, fill ile seasoned meat ve herbs, shape into dumplings, ve Haşla.",
-      it: "Make a dough, fill con seasoned meat e herbs, shape into dumplings, e Cuoci.",
-      ko: "Make a dough, fill와 seasoned meat그리고 herbs, shape into dumplings, 그리고 삶고하세요."
+      tr: "yapın a hamur, doldurun ile baharatlanmış et ve otlar, şekil verin içine mantı, ve Haşla.",
+      it: "fai a impasto, farcisci con condito carne e erbe aromatiche, dai forma dentro ravioli, e Cuoci.",
+      ko: "만듭니다 a 반죽, 채웁니다와 간한 고기그리고 허브, 모양을 만듭니다 안에 만두, 그리고 삶고하세요."
     },
     originText: {
       ro: "Khinkali este o rețetă tradițională din Georgia.",
@@ -13729,7 +13729,7 @@ export const recipes = [
       zh: "格鲁吉亚饺子 是来自格鲁吉亚的传统食谱。",
       ja: "ヒンカリ はジョージアの伝統的なレシピです。",
       tr: "Khinkali Georgia kökenli geleneksel bir tariftir.",
-      it: "Khinkali è una ricetta tradizionale di Georgia.",
+      it: "Khinkali è una risotta tradizionale di Georgia.",
       ko: "Khinkali는(은) Georgia의 전통 요리입니다."
     }
   },
@@ -13791,9 +13791,9 @@ export const recipes = [
       ar: ["ذرة هوميني", "لحم خنزير", "ثوم", "بصل", "فلفل حار", "كرنب", "فجل", "ليم"],
       zh: ["玉米（hominy）", "猪肉", "大蒜", "洋葱", "辣椒", "卷心菜", "萝卜", "青柠"],
       ja: ["ホミニーコーン", "豚肉", "ニンニク", "玉ねぎ", "唐辛子", "キャベツ", "ラディッシュ", "ライム"],
-      tr: ["hominy mısır", "domuz eti", "sarımsak", "soğan", "chili biber", "cabbage", "radish", "yeşil limon"],
-      it: ["hominy mais", "maiale", "aglio", "cipolla", "chili peperone", "cabbage", "radish", "lime"],
-      ko: ["hominy 옥수수", "돼지고기", "마늘", "양파", "chili 고추", "cabbage", "radish", "라임"]
+      tr: ["옥수수 알갷 mısır", "domuz eti", "sarımsak", "soğbir", "acı biber biber", "lahana", "turp", "yeşil limon"],
+      it: ["hominy mais", "maiale", "aglio", "cipolla", "peperoncino peperone", "cavolo", "ravanello", "lime"],
+      ko: ["호미니 옥수수", "돼지고기", "마늘", "양파", "고추 고추", "양배추", "무", "라임"]
     },
     howIsMade: {
       ro: "Fierbe carnea cu porumbul hominy, ceapă și usturoi. Adaugă ardei iute, apoi servește cu varză, ridichi și lime.",
@@ -13806,9 +13806,9 @@ export const recipes = [
       ar: "اسلق لحم الخنزير مع ذرة الهوميني والبصل والثوم. أضف الفلفل الحار، وقدمه مع الكرنب والفجل والليم.",
       zh: "把猪肉、玉米、洋葱和大蒜煮熟。加入辣椒，配卷心菜、萝卜和青柠食用。",
       ja: "豚肉、ホミニーコーン、玉ねぎ、ニンニクを煮る。唐辛子を加え、キャベツ、ラディッシュ、ライムと一緒に提供。",
-      tr: "Haşla domuz eti ile hominy mısır, soğan ve sarımsak. Add chili biber, sonra Servis et ile cabbage, radish, ve yeşil limon.",
-      it: "Cuoci maiale con hominy mais, cipolla e aglio. Add chili peperone, poi Servi con cabbage, radish, e lime.",
-      ko: "삶고 돼지고기와 hominy 옥수수, 양파그리고 마늘. Add chili 고추, 그다음 담아 내세요와 cabbage, radish, 그리고 라임하세요."
+      tr: "Haşla domuz eti ile 옥수수 알갷 mısır, soğbir ve sarımsak. ekleyin acı biber biber, sonra Servis et ile lahana, turp, ve yeşil limon.",
+      it: "Cuoci maiale con hominy mais, cipolla e aglio. aggiungi peperoncino peperone, poi Servi con cavolo, ravanello, e lime.",
+      ko: "삶고 돼지고기와 호미니 옥수수, 양파그리고 마늘. 넣습니다 고추 고추, 그다음 담아 내세요와 양배추, 무, 그리고 라임하세요."
     },
     originText: {
       ro: "Pozole este o rețetă tradițională din Mexic.",
@@ -13822,7 +13822,7 @@ export const recipes = [
       zh: "波佐列汤 是来自墨西哥的传统食谱。",
       ja: "ポソレ はメキシコの伝統的なレシピです。",
       tr: "Pozole Meksika kökenli geleneksel bir tariftir.",
-      it: "Pozole è una ricetta tradizionale di Messico.",
+      it: "Pozole è una risotta tradizionale di Messico.",
       ko: "Pozole는(은) 멕시코의 전통 요리입니다."
     }
   },
@@ -13884,9 +13884,9 @@ export const recipes = [
       ar: ["دجاج", "طماطم", "فلفل", "قرع", "بطاطس", "سمسم", "بذور اليقطين", "توابل"],
       zh: ["鸡肉", "番茄", "辣椒", "南瓜", "土豆", "芝麻", "南瓜籽", "香料"],
       ja: ["鶏肉", "トマト", "ピーマン", "カボチャ", "ジャガイモ", "ゴマ", "カボチャの種", "スパイス"],
-      tr: ["tavuk", "domates", "bibers", "squash", "patates", "sesame seeds", "pumpkin seeds", "spices"],
-      it: ["pollo", "pomodori", "peperones", "squash", "patate", "sesame seeds", "pumpkin seeds", "spices"],
-      ko: ["닭고기", "토마토", "고추s", "squash", "감자", "sesame seeds", "pumpkin seeds", "spices"]
+      tr: ["tavuk", "domates", "bibers", "kabak", "patates", "susam tohum", "kabak tohum", "baharatlar"],
+      it: ["pollo", "pomodori", "peperones", "zucca", "patate", "sesamo semi", "zucca semi", "spezie"],
+      ko: ["닭고기", "토마토", "고추s", "호박", "감자", "참깨 씨앗", "호박 씨앗", "향신료"]
     },
     howIsMade: {
       ro: "Gătește carnea cu legume, semințe prăjite, ardei, roșii și condimente până se formează un sos gros. Servește cu orez.",
@@ -13899,9 +13899,9 @@ export const recipes = [
       ar: "اطبخ اللحم مع الخضار والبذور المحمصة والفلفل والطماطم والتوابل حتى يصبح الصوص كثيفاً. قدّمه مع الأرز.",
       zh: "肉和蔬菜与烤熟的种子、辣椒、西红柿和香料炖煮至酱汁浓稠。配米饭食用。",
       ja: "肉と野菜・炒った種・唐辛子・トマト・スパイスを煮て濃厚なソースを作り、ご飯と一緒に提供。",
-      tr: "Pişir meat ile vegetables, toasted seeds, bibers, domates, ve spices until a thick sos forms. Serve ile pirinç.",
-      it: "Cuoci meat con vegetables, toasted seeds, peperones, pomodori, e spices until a thick salsa forms. Serve con riso.",
-      ko: "조리하고 meat와 vegetables, toasted seeds, 고추s, 토마토, 그리고 spices until a thick 소스 forms. Serve와 쌀하세요."
+      tr: "Pişir et ile sebzeler, kavrulmuş tohum, bibers, domates, ve baharatlar a koyu sos oluşturur. servis edin ile pirinç.",
+      it: "Cuoci carne con verdure, tostato semi, peperones, pomodori, e spezie a denso salsa forma. servi con riso.",
+      ko: "조리하고 고기와 채소, 구운 씨앗, 고추s, 토마토, 그리고 향신료 a 걸쭉한 소스 형성됩니다. 제공합니다와 쌀하세요."
     },
     originText: {
       ro: "Pepian este o rețetă tradițională din Guatemala.",
@@ -13915,7 +13915,7 @@ export const recipes = [
       zh: "瓜地马拉炖肉 是来自危地马拉的传统食谱。",
       ja: "ペピアン はグアテマラの伝統的なレシピです。",
       tr: "Pepian Guatemala kökenli geleneksel bir tariftir.",
-      it: "Pepian è una ricetta tradizionale di Guatemala.",
+      it: "Pepian è una risotta tradizionale di Guatemala.",
       ko: "Pepian는(은) Guatemala의 전통 요리입니다."
     }
   },
@@ -13977,9 +13977,9 @@ export const recipes = [
       ar: ["كفير (أو كفاس)", "خيار", "بطاطس", "بيض مسلوق", "بصل أخضر", "شبت", "نقانق"],
       zh: ["克非尔（或克瓦斯）", "黄瓜", "土豆", "煮鸡蛋", "葱", "莳萝", "香肠"],
       ja: ["ケフィール（またはクワス）", "キュウリ", "ジャガイモ", "ゆで卵", "青ねぎ", "ディル", "ソーセージ"],
-      tr: ["kefir (or kvass)", "salatalıks", "patates", "boiled yumurta", "spring soğans", "dill", "sausages"],
-      it: ["kefir (or kvass)", "cetriolos", "patate", "boiled uova", "spring cipollas", "dill", "sausages"],
-      ko: ["kefir (or kvass)", "오이s", "감자", "boiled 계란", "spring 양파s", "dill", "sausages"]
+      tr: ["kefir (veya kvas)", "salatalıks", "patates", "byağ yumurta", "bahar soğans", "dereotu", "sosis"],
+      it: ["kefir (o kvas)", "cetriolos", "patate", "bolioed uova", "primavera cipollas", "aneto", "salsicce"],
+      ko: ["케피르 (또는 크바스)", "오이s", "감자", "b기름 계란", "봄 양파s", "딜", "소시지"]
     },
     howIsMade: {
       ro: "Taie toate ingredientele cuburi, amestecă-le și toarnă chefir sau kvass deasupra. Servește rece.",
@@ -13992,9 +13992,9 @@ export const recipes = [
       ar: "قطّع جميع المكونات إلى مكعبات، واخلطها واسكب الكفير أو الكفاس فوقها. قدّمها باردة.",
       zh: "所有食材切丁，混合后倒入克非尔或克瓦斯，冷食。",
       ja: "すべての材料をさいの目に切り、混ぜてケフィールまたはクワスをかけて冷やして提供。",
-      tr: "Dice tüm malzemeleri, Karıştır, ve pour kefir or kvass over. Serve cold.",
-      it: "Dice tutti gli ingredienti, Mescola, e pour kefir or kvass over. Serve cold.",
-      ko: "Dice 모든 재료, 섞고, 그리고 pour kefir or kvass over. Serve cold하세요."
+      tr: "Dice tüm malzemeleri, Karıştır, ve dökün kefir veya kvas üzerine. soğuk servis edin.",
+      it: "Dice tutti gli ingredienti, Mescola, e versa kefir o kvas sopra. servila fredda.",
+      ko: "Dice 모든 재료, 섞고, 그리고 붓습니다 케피르 또는 크바스 위에. 차갑게 제공합니다하세요."
     },
     originText: {
       ro: "Okroshka este o rețetă tradițională din Rusia.",
@@ -14008,7 +14008,7 @@ export const recipes = [
       zh: "俄式冷汤 是来自俄罗斯的传统食谱。",
       ja: "オクロシカ はロシアの伝統的なレシピです。",
       tr: "Okroshka Rusya kökenli geleneksel bir tariftir.",
-      it: "Okroshka è una ricetta tradizionale di Russia.",
+      it: "Okroshka è una risotta tradizionale di Russia.",
       ko: "Okroshka는(은) 러시아의 전통 요리입니다."
     }
   },
@@ -14066,9 +14066,9 @@ export const recipes = [
       ar: ["أرز", "لحم الضأن أو البقر", "جزر", "بصل", "زيت", "ثوم", "بهارات"],
       zh: ["米饭", "羊肉或牛肉", "胡萝卜", "洋葱", "油", "大蒜", "香料"],
       ja: ["ご飯", "羊肉または牛肉", "にんじん", "玉ねぎ", "油", "にんにく", "スパイス"],
-      tr: ["pirinç", "lamb or dana eti", "havuçs", "soğan", "oil", "sarımsak", "spices"],
-      it: ["riso", "lamb or manzo", "carotas", "cipolla", "oil", "aglio", "spices"],
-      ko: ["쌀", "lamb or 소고기", "당근s", "양파", "oil", "마늘", "spices"]
+      tr: ["pirinç", "kuzu veya dana eti", "havuçs", "soğbir", "yağ", "sarımsak", "baharatlar"],
+      it: ["riso", "agnello o manzo", "carotas", "cipolla", "olio", "aglio", "spezie"],
+      ko: ["쌀", "양고기 또는 소고기", "당근s", "양파", "기름", "마늘", "향신료"]
     },
     howIsMade: {
       ro: "Prăjește carnea și legumele, apoi fierbe totul cu orezul și condimentele până se absoarbe apa.",
@@ -14080,9 +14080,9 @@ export const recipes = [
       ar: "اقلي اللحم والخضار، ثم اطبخ كل شيء مع الأرز والتوابل حتى تمتص الماء.",
       zh: "先炒肉和蔬菜，然后与米饭和香料一起煮至水分被吸收。",
       ja: "肉と野菜を炒め、ご飯とスパイスと一緒に水分がなくなるまで煮込む。",
-      tr: "Kızart meat ve vegetables, sonra Pişir everything ile pirinç ve spices until su is absorbed.",
-      it: "Friggi meat e vegetables, poi Cuoci everything con riso e spices until acqua is absorbed.",
-      ko: "볶거나 튀기고 meat그리고 vegetables, 그다음 조리하고 everything와 쌀그리고 spices until 물 is absorbed하세요."
+      tr: "Kızart et ve sebzeler, sonra Pişir her şeyi ile pirinç ve baharatlar su  çekilene kadar.",
+      it: "Friggi carne e verdure, poi Cuoci tutto con riso e spezie acqua  assorbito.",
+      ko: "볶거나 튀기고 고기그리고 채소, 그다음 조리하고 모든 것와 쌀그리고 향신료 물 입니다 흡수될 때까지하세요."
     },
     originText: {
       ro: "Plov este o rețetă tradițională din Uzbekistan.",
@@ -14096,7 +14096,7 @@ export const recipes = [
       zh: "抓饭 是来自乌兹别克斯坦的传统食谱。",
       ja: "プロフ はウズベキスタンの伝統的なレシピです。",
       tr: "Plov Uzbekistan kökenli geleneksel bir tariftir.",
-      it: "Plov è una ricetta tradizionale di Uzbekistan.",
+      it: "Plov è una risotta tradizionale di Uzbekistan.",
       ko: "Plov는(은) Uzbekistan의 전통 요리입니다."
     }
   },
@@ -14158,9 +14158,9 @@ export const recipes = [
       ar: ["عجينة", "جوز", "عسل", "بيض", "سكر", "زبدة", "حليب"],
       zh: ["面团", "核桃", "蜂蜜", "鸡蛋", "糖", "黄油", "牛奶"],
       ja: ["生地", "クルミ", "ハチミツ", "卵", "砂糖", "バター", "牛乳"],
-      tr: ["dough", "walnuts", "bal", "yumurta", "şeker", "tereyağı", "süt"],
-      it: ["dough", "walnuts", "miele", "uova", "zucchero", "burro", "latte"],
-      ko: ["dough", "walnuts", "꿀", "계란", "설탕", "버터", "우유"]
+      tr: ["hamur", "ceviz", "bal", "yumurta", "şeker", "tereyağı", "süt"],
+      it: ["impasto", "noci", "miele", "uova", "zucchero", "burro", "latte"],
+      ko: ["반죽", "호두", "꿀", "계란", "설탕", "버터", "우유"]
     },
     howIsMade: {
       ro: "Prepară aluatul, întinde-l, adaugă umplutura de nuci, miere și unt, rulează și coace la cuptor până devine auriu.",
@@ -14173,9 +14173,9 @@ export const recipes = [
       ar: "حضّر العجينة، افردها، أضف حشوة الجوز والعسل والزبدة، لفها واخبزها حتى تصبح ذهبية.",
       zh: "制作面团，擀开，加入核桃、蜂蜜和黄油馅，卷起后烘烤至金黄。",
       ja: "生地を作って伸ばし、クルミ・ハチミツ・バターのフィリングをのせて巻き、黄金色になるまで焼く。",
-      tr: "Prepare dough, roll it out, Ekle walnut, bal, ve tereyağı filling, roll up ve bake until golden.",
-      it: "Prepare dough, roll it out, Aggiungi walnut, miele, e burro filling, roll up e bake until golden.",
-      ko: "Prepare dough, roll it out, 넣고 walnut, 꿀, 그리고 버터 filling, roll up그리고 bake until golden하세요."
+      tr: "hazırlayın hamur, rulo yapın o , Ekle ceviz, bal, ve tereyağı iç harç, rulo yapın  ve fırında pişirin altın rengi.",
+      it: "prepara impasto, arrotola esso , Aggiungi noce, miele, e burro ripieno, arrotola  e cuoci in forno dorato.",
+      ko: "준비합니다 반죽, 말아줍니다 그것 , 넣고 호두, 꿀, 그리고 버터 속재료, 말아줍니다 그리고 오븐에서 굽습니다 노릇하게하세요."
     },
     originText: {
       ro: "Potica este o rețetă tradițională din Slovenia.",
@@ -14189,7 +14189,7 @@ export const recipes = [
       zh: "斯洛文尼亚核桃卷 是来自斯洛文尼亚的传统食谱。",
       ja: "ポティツァ はスロベニアの伝統的なレシピです。",
       tr: "Potica Slovenia kökenli geleneksel bir tariftir.",
-      it: "Potica è una ricetta tradizionale di Slovenia.",
+      it: "Potica è una risotta tradizionale di Slovenia.",
       ko: "Potica는(은) Slovenia의 전통 요리입니다."
     }
   },
@@ -14251,9 +14251,9 @@ export const recipes = [
       ar: ["بذور إيجوسي", "لحم (بقر أو دجاج)", "سبانخ أو أوراق اليقطين", "زيت النخيل", "بصل", "فلفل حار", "طماطم", "ملح", "بهارات"],
       zh: ["埃古西籽", "肉（牛肉或鸡肉）", "菠菜或南瓜叶", "棕榈油", "洋葱", "辣椒", "番茄", "盐", "香料"],
       ja: ["エグシの種", "肉（牛肉または鶏肉）", "ほうれん草またはカボチャの葉", "パーム油", "玉ねぎ", "唐辛子", "トマト", "塩", "スパイス"],
-      tr: ["egusi seeds (melon seeds)", "meat (dana eti or tavuk)", "ıspanak or pumpkin leaves", "palm oil", "soğan", "chili biber", "domates", "tuz", "spices"],
-      it: ["egusi seeds (melon seeds)", "meat (manzo or pollo)", "spinaci or pumpkin leaves", "palm oil", "cipolla", "chili peperone", "pomodori", "sale", "spices"],
-      ko: ["egusi seeds (melon seeds)", "meat (소고기 or 닭고기)", "시금치 or pumpkin leaves", "palm oil", "양파", "chili 고추", "토마토", "소금", "spices"]
+      tr: ["egusi tohum (kavun tohum)", "et (dana eti veya tavuk)", "ıspanak veya kabak yaprak", "palmiye yağ", "soğbir", "acı biber biber", "domates", "tuz", "baharatlar"],
+      it: ["egusi semi (melone semi)", "carne (manzo o pollo)", "spinaci o zucca foglie", "palma olio", "cipolla", "peperoncino peperone", "pomodori", "sale", "spezie"],
+      ko: ["에구시 씨앗 (멜론 씨앗)", "고기 (소고기 또는 닭고기)", "시금치 또는 호박 잎", "야자 기름", "양파", "고추 고추", "토마토", "소금", "향신료"]
     },
     howIsMade: {
       ro: "Prăjește semințele de egusi măcinate în ulei, adaugă carnea fiartă și legumele, fierbe totul până se leagă.",
@@ -14266,9 +14266,9 @@ export const recipes = [
       ar: "اقلي بذور الإيجوسي المطحونة بالزيت، أضف اللحم المسلوق والخضار، واطبخ حتى يتماسك.",
       zh: "将磨碎的埃古西籽在油中炒香，加入煮熟的肉和蔬菜，炖至浓稠。",
       ja: "砕いたエグシの種を油で炒め、茹でた肉と野菜を加えてとろみがつくまで煮込む。",
-      tr: "Kızart ground egusi seeds in oil, Ekle boiled meat ve vegetables, Kısık ateşte pişir until thickened.",
-      it: "Friggi ground egusi seeds in oil, Aggiungi boiled meat e vegetables, Fai sobbollire until thickened.",
-      ko: "볶거나 튀기고 ground egusi seeds in oil, 넣고 boiled meat그리고 vegetables, 약불로 끓여 until thickened하세요."
+      tr: "Kızart öğütülmüş egusi tohum in yağ, Ekle byağ et ve sebzeler, Kısık ateşte pişir koyulaşmış.",
+      it: "Friggi macinato egusi semi in olio, Aggiungi bolioed carne e verdure, Fai sobbollire addensato.",
+      ko: "볶거나 튀기고 간 에구시 씨앗 에서 기름, 넣고 b기름 고기그리고 채소, 약불로 끓여 걸쭉해진하세요."
     },
     originText: {
       ro: "Egusi soup este o rețetă tradițională din Nigeria.",
@@ -14281,9 +14281,9 @@ export const recipes = [
       ar: "حساء إيجوسي هي وصفة تقليدية من نيجيريا.",
       zh: "埃古西汤 是来自尼日利亚的传统食谱。",
       ja: "エグシスープ はナイジェリアの伝統的なレシピです。",
-      tr: "Egusi soup Nigeria kökenli geleneksel bir tariftir.",
-      it: "Egusi soup è una ricetta tradizionale di Nigeria.",
-      ko: "Egusi soup는(은) Nigeria의 전통 요리입니다."
+      tr: "egusi çorba Nigeria kökenli geleneksel bir tariftir.",
+      it: "egusi zuppa è una risotta tradizionale di Nigeria.",
+      ko: "에구시 수프는(은) Nigeria의 전통 요리입니다."
     }
   },
   {
@@ -14344,9 +14344,9 @@ export const recipes = [
       ar: ["شريحة لحم خنزير", "دقيق", "بيض", "بقسماط", "زيت", "ملح", "فلفل"],
       zh: ["猪排", "面粉", "鸡蛋", "面包糠", "油", "盐", "胡椒"],
       ja: ["豚肉カツ", "小麦粉", "卵", "パン粉", "油", "塩", "コショウ"],
-      tr: ["domuz eti chop", "un", "yumurta", "ekmekcrumbs", "oil", "tuz", "biber"],
-      it: ["maiale chop", "farina", "uova", "panecrumbs", "oil", "sale", "peperone"],
-      ko: ["돼지고기 chop", "밀가루", "계란", "빵crumbs", "oil", "소금", "고추"]
+      tr: ["domuz eti doğrayın", "un", "yumurta", "ekmekcrumbs", "yağ", "tuz", "biber"],
+      it: ["maiale trita", "farina", "uova", "panecrumbs", "olio", "sale", "peperone"],
+      ko: ["돼지고기 다집니다", "밀가루", "계란", "빵빵가루", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Trece cotletul prin făină, ou și pesmet, apoi prăjește în ulei până devine auriu.",
@@ -14359,9 +14359,9 @@ export const recipes = [
       ar: "غلف شريحة لحم الخنزير بالدقيق والبيض والبقسماط واقلِ حتى يصبح ذهبيًا.",
       zh: "猪排裹上面粉、鸡蛋和面包糠，油炸至金黄。",
       ja: "豚肉を小麦粉・卵・パン粉で衣をつけ、油で黄金色になるまで揚げる。",
-      tr: "Coat domuz eti chop in un, yumurta ve ekmekcrumbs, sonra Kızart in oil until golden.",
-      it: "Coat maiale chop in farina, uovo e panecrumbs, poi Friggi in oil until golden.",
-      ko: "Coat 돼지고기 chop in 밀가루, 계란그리고 빵crumbs, 그다음 볶거나 튀기고 in oil until golden하세요."
+      tr: "kaplayın domuz eti doğrayın in un, yumurta ve ekmekcrumbs, sonra Kızart in yağ altın rengi.",
+      it: "ricopri maiale trita in farina, uovo e panecrumbs, poi Friggi in olio dorato.",
+      ko: "입힙니다 돼지고기 다집니다 에서 밀가루, 계란그리고 빵빵가루, 그다음 볶거나 튀기고 에서 기름 노릇하게하세요."
     },
     originText: {
       ro: "Kotlet schabowy este o rețetă tradițională din Polonia.",
@@ -14374,9 +14374,9 @@ export const recipes = [
       ar: "شطيرة لحم الخنزير هي وصفة تقليدية من بولندا.",
       zh: "炸猪排 是来自波兰的传统食谱。",
       ja: "ポークシュニッツェル はポーランドの伝統的なレシピです。",
-      tr: "Pork schnitzel Polonya kökenli geleneksel bir tariftir.",
-      it: "Pork schnitzel è una ricetta tradizionale di Polonia.",
-      ko: "Pork schnitzel는(은) 폴란드의 전통 요리입니다."
+      tr: "domuz schnitzel Polonya kökenli geleneksel bir tariftir.",
+      it: "maiale schnitzel è una risotta tradizionale di Polonia.",
+      ko: "돼지고기 schnitzel는(은) 폴란드의 전통 요리입니다."
     }
   },
   {
@@ -14437,9 +14437,9 @@ export const recipes = [
       ar: ["أرز", "أوراق أعشاب بحرية", "بيض", "خضار", "لحم خنزير", "خيار", "جزر", "زيت السمسم"],
       zh: ["米饭", "紫菜", "鸡蛋", "蔬菜", "火腿", "黄瓜", "胡萝卜", "芝麻油"],
       ja: ["ご飯", "海苔", "卵", "野菜", "ハム", "きゅうり", "にんじん", "ごま油"],
-      tr: ["pirinç", "seaweed sheets", "yumurta", "vegetables", "ham", "salatalık", "havuç", "sesame oil"],
-      it: ["riso", "seaweed sheets", "uovo", "vegetables", "ham", "cetriolo", "carota", "sesame oil"],
-      ko: ["쌀", "seaweed sheets", "계란", "vegetables", "ham", "오이", "당근", "sesame oil"]
+      tr: ["pirinç", "deniz yosunu yufka", "yumurta", "sebzeler", "jambon", "salatalık", "havuç", "susam yağ"],
+      it: ["riso", "alga sfoglie", "uovo", "verdure", "prosciutto", "cetriolo", "carota", "sesamo olio"],
+      ko: ["쌀", "김 시트", "계란", "채소", "햄", "오이", "당근", "참깨 기름"]
     },
     howIsMade: {
       ro: "Întinde orezul pe foi de alge, adaugă ouă, legume, șuncă și rulează strâns. Taie rulourile și servește cu sos de soia.",
@@ -14452,9 +14452,9 @@ export const recipes = [
       ar: "انشر الأرز على أوراق الأعشاب البحرية، أضف البيض والخضار واللحم، ولف بإحكام. قطّع وقدم مع صلصة الصويا.",
       zh: "把米饭铺在紫菜上，加入鸡蛋、蔬菜和火腿，卷起切片，用酱油蘸食。",
       ja: "ご飯を海苔に広げ、卵、野菜、ハムをのせて巻き、切って醤油で食べる。",
-      tr: "Spread pirinç on seaweed sheets, Ekle yumurta, vegetables, ve ham, roll tightly. Slice rolls ve serve ile soya sosu.",
-      it: "Spread riso on seaweed sheets, Aggiungi uovo, vegetables, e ham, roll tightly. Slice rolls e serve con salsa di soia.",
-      ko: "Spread 쌀 on seaweed sheets, 넣고 계란, vegetables, 그리고 ham, roll tightly. Slice rolls그리고 serve와 간장하세요."
+      tr: "yayın pirinç üstüne deniz yosunu yufka, Ekle yumurta, sebzeler, ve jambon, rulo yapın sıkıca. Slice rulolar ve servis edin ile soya sosu.",
+      it: "stendi riso su alga sfoglie, Aggiungi uovo, verdure, e prosciutto, arrotola strettamente. Slice involtini e servi con salsa di soia.",
+      ko: "펼칩니다 쌀 위에 김 시트, 넣고 계란, 채소, 그리고 햄, 말아줍니다 단단히. Slice 롤그리고 제공합니다와 간장하세요."
     },
     originText: {
       ro: "Kimbap este o rețetă tradițională din Coreea de Sud.",
@@ -14468,7 +14468,7 @@ export const recipes = [
       zh: "紫菜包饭 是来自韩国的传统食谱。",
       ja: "キンパ は韓国の伝統的なレシピです。",
       tr: "Kimbap Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Kimbap è una ricetta tradizionale di Corea del Sud.",
+      it: "Kimbap è una risotta tradizionale di Corea del Sud.",
       ko: "Kimbap는(은) 대한민국의 전통 요리입니다."
     }
   },
@@ -14530,9 +14530,9 @@ export const recipes = [
       ar: ["ذرة", "لحم مفروم", "بصل", "بيض", "زيتون", "زبيب", "حليب", "زبدة", "بهارات"],
       zh: ["玉米", "碎肉", "洋葱", "鸡蛋", "橄榄", "葡萄干", "牛奶", "黄油", "香料"],
       ja: ["トウモロコシ", "ひき肉", "玉ねぎ", "卵", "オリーブ", "レーズン", "牛乳", "バター", "スパイス"],
-      tr: ["mısır", "ground meat", "soğan", "yumurta", "olives", "raisins", "süt", "tereyağı", "spices"],
-      it: ["mais", "ground meat", "cipolla", "uova", "olives", "raisins", "latte", "burro", "spices"],
-      ko: ["옥수수", "ground meat", "양파", "계란", "olives", "raisins", "우유", "버터", "spices"]
+      tr: ["mısır", "öğütülmüş et", "soğbir", "yumurta", "zeytin", "kuru üzüm", "süt", "tereyağı", "baharatlar"],
+      it: ["mais", "macinato carne", "cipolla", "uova", "olive", "uvetta", "latte", "burro", "spezie"],
+      ko: ["옥수수", "간 고기", "양파", "계란", "올리브", "건포도", "우유", "버터", "향신료"]
     },
     howIsMade: {
       ro: "Prăjește ceapa și carnea, adaugă condimente, pune într-un vas, acoperă cu piure de porumb, coace la cuptor.",
@@ -14545,9 +14545,9 @@ export const recipes = [
       ar: "اقلي البصل واللحم، أضف التوابل، ضع في طبق، غطِّيه بهريس الذرة واخبزه.",
       zh: "炒洋葱和肉，加入香料，放入烤盘，用玉米泥覆盖，入烤箱烘烤。",
       ja: "玉ねぎと肉を炒めてスパイスを加え、耐熱皿に入れてコーンピューレで覆い、オーブンで焼く。",
-      tr: "Kızart soğan ve meat, Ekle spices, place in a dish, cover ile mısır purée, Fırında pişir in oven.",
-      it: "Friggi cipolla e meat, Aggiungi spices, place in a dish, cover con mais purée, Cuoci al forno in oven.",
-      ko: "볶거나 튀기고 양파그리고 meat, 넣고 spices, place in a dish, cover와 옥수수 purée, 오븐에 구워 in oven하세요."
+      tr: "Kızart soğbir ve et, Ekle baharatlar, yerleştirin yemek, örtün ile mısır püreée, Fırında pişir in fırın.",
+      it: "Friggi cipolla e carne, Aggiungi spezie, metti piatto, copri con mais pureaée, Cuoci al forno in forno.",
+      ko: "볶거나 튀기고 양파그리고 고기, 넣고 향신료, 놓습니다 에서 a 요리, 덮습니다와 옥수수 퓨레ée, 오븐에 구워 에서 오븐하세요."
     },
     originText: {
       ro: "Pastel de Choclo este o rețetă tradițională din Chile.",
@@ -14561,7 +14561,7 @@ export const recipes = [
       zh: "智利玉米饼 是来自智利的传统食谱。",
       ja: "パステル・デ・チョクロ はチリの伝統的なレシピです。",
       tr: "Pastel de Choclo Chile kökenli geleneksel bir tariftir.",
-      it: "Pastel de Choclo è una ricetta tradizionale di Chile.",
+      it: "Pastel de Choclo è una risotta tradizionale di Chile.",
       ko: "Pastel de Choclo는(은) Chile의 전통 요리입니다."
     }
   },
@@ -14623,9 +14623,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بصل", "ثوم", "بابريكا", "فلفل", "ملح", "زيت"],
       zh: ["碎肉", "洋葱", "大蒜", "红椒粉", "胡椒", "盐", "油"],
       ja: ["挽肉", "玉ねぎ", "ニンニク", "パプリカ", "コショウ", "塩", "油"],
-      tr: ["minced meat", "soğan", "sarımsak", "toz biber", "biber", "tuz", "oil"],
-      it: ["minced meat", "cipolla", "aglio", "paprika", "peperone", "sale", "oil"],
-      ko: ["minced meat", "양파", "마늘", "파프리카 가루", "고추", "소금", "oil"]
+      tr: ["kıyılmış et", "soğbir", "sarımsak", "toz biber", "biber", "tuz", "yağ"],
+      it: ["tritato carne", "cipolla", "aglio", "paprika", "peperone", "sale", "olio"],
+      ko: ["다진 고기", "양파", "마늘", "파프리카 가루", "고추", "소금", "기름"]
     },
     howIsMade: {
       ro: "Amestecă ingredientele, formează burgeri mari, prăjește sau frige pe grătar și servește cu salată sau chiflă.",
@@ -14638,9 +14638,9 @@ export const recipes = [
       ar: "اخلط المكونات، شكّل برجر كبير، اقلي أو اشوِ وقدّمه مع سلطة أو خبز.",
       zh: "混合原料，做成大肉饼，煎或烤，配沙拉或面包食用。",
       ja: "材料を混ぜて大きなパティを作り、焼くかグリルし、サラダやパンと一緒に提供。",
-      tr: "Karıştır ingredients, form large patties, Kızart or grill ve serve ile salad or bun.",
-      it: "Mescola ingredients, form large patties, Friggi or grill e serve con salad or bun.",
-      ko: "섞고 ingredients, form large patties, 볶거나 튀기고 or grill그리고 serve와 salad or bun하세요."
+      tr: "Karıştır malzemeler, şekil verin büyük köfteler, Kızart veya ızgara yapın ve servis edin ile salata veya ekmek.",
+      it: "Mescola ingredienti, forma grande polpette, Friggi o griglia e servi con insalata o panino.",
+      ko: "섞고 재료, 모양을 만듭니다 큰 패티, 볶거나 튀기고 또는 굽습니다그리고 제공합니다와 샐러드 또는 번하세요."
     },
     originText: {
       ro: "Pljeskavica este o rețetă tradițională din Serbia.",
@@ -14654,7 +14654,7 @@ export const recipes = [
       zh: "塞尔维亚烤肉饼 是来自塞尔维亚的传统食谱。",
       ja: "プリェスカヴィツァ はセルビアの伝統的なレシピです。",
       tr: "Pljeskavica Serbia kökenli geleneksel bir tariftir.",
-      it: "Pljeskavica è una ricetta tradizionale di Serbia.",
+      it: "Pljeskavica è una risotta tradizionale di Serbia.",
       ko: "Pljeskavica는(은) Serbia의 전통 요리입니다."
     }
   },
@@ -14716,9 +14716,9 @@ export const recipes = [
       ar: ["دقيق", "حليب", "بيض", "خميرة", "سكر", "زبدة", "ملح"],
       zh: ["面粉", "牛奶", "鸡蛋", "酵母", "糖", "黄油", "盐"],
       ja: ["小麦粉", "牛乳", "卵", "イースト", "砂糖", "バター", "塩"],
-      tr: ["un", "süt", "yumurta", "yeast", "şeker", "tereyağı", "tuz"],
-      it: ["farina", "latte", "uova", "yeast", "zucchero", "burro", "sale"],
-      ko: ["밀가루", "우유", "계란", "yeast", "설탕", "버터", "소금"]
+      tr: ["un", "süt", "yumurta", "maya", "şeker", "tereyağı", "tuz"],
+      it: ["farina", "latte", "uova", "lievito", "zucchero", "burro", "sale"],
+      ko: ["밀가루", "우유", "계란", "이스트", "설탕", "버터", "소금"]
     },
     howIsMade: {
       ro: "Amestecă ingredientele, lasă la dospit, coace-le în forme speciale și servește-le cu unt și zahăr pudră.",
@@ -14731,9 +14731,9 @@ export const recipes = [
       ar: "اخلط المكونات، دعها تتخمر، اطبخها في قوالب خاصة وقدمها مع الزبدة والسكر البودرة.",
       zh: "混合原料，发酵后在特制锅中煎熟，搭配黄油和糖粉食用。",
       ja: "材料を混ぜて発酵させ、専用の型で焼き、バターと粉砂糖を添えて。",
-      tr: "Karıştır ingredients, Beklet rise, Pişir in special pans, Servis et ile tereyağı ve powdered şeker.",
-      it: "Mescola ingredients, Lascia rise, Cuoci in special pans, Servi con burro e powdered zucchero.",
-      ko: "섞고 ingredients, 두세요 rise, 조리하고 in special pans, 담아 내세요와 버터그리고 powdered 설탕하세요."
+      tr: "Karıştır malzemeler, Beklet mayalanın, Pişir in özel tavalar, Servis et ile tereyağı ve toz şeker.",
+      it: "Mescola ingredienti, Lascia lievita, Cuoci in speciale teglie, Servi con burro e in polvere zucchero.",
+      ko: "섞고 재료, 두세요 발효합니다, 조리하고 에서 특별한 팬, 담아 내세요와 버터그리고 가루 설탕하세요."
     },
     originText: {
       ro: "Poffertjes este o rețetă tradițională din Olanda.",
@@ -14747,7 +14747,7 @@ export const recipes = [
       zh: "荷兰小松饼 是来自荷兰的传统食谱。",
       ja: "ポッフェルチェス はオランダの伝統的なレシピです。",
       tr: "Poffertjes Hollanda kökenli geleneksel bir tariftir.",
-      it: "Poffertjes è una ricetta tradizionale di Paesi Bassi.",
+      it: "Poffertjes è una risotta tradizionale di Paesi Bassi.",
       ko: "Poffertjes는(은) 네덜란드의 전통 요리입니다."
     }
   },
@@ -14805,9 +14805,9 @@ export const recipes = [
       ar: ["أرز", "بطاطس", "جزر", "بصل", "لحم (عادة لحم بقري أو دجاج)", "معجون كاري ياباني", "ماء", "زيت"],
       zh: ["米饭", "土豆", "胡萝卜", "洋葱", "肉类（通常是牛肉或鸡肉）", "日式咖喱酱", "水", "油"],
       ja: ["ご飯", "じゃがいも", "にんじん", "玉ねぎ", "肉（通常は牛肉か鶏肉）", "カレールウ", "水", "油"],
-      tr: ["pirinç", "patates", "havuçs", "soğan", "meat (usually dana eti or tavuk)", "Japanese curry paste", "su", "oil"],
-      it: ["riso", "patate", "carotas", "cipolla", "meat (usually manzo or pollo)", "Japanese curry paste", "acqua", "oil"],
-      ko: ["쌀", "감자", "당근s", "양파", "meat (usually 소고기 or 닭고기)", "Japanese curry paste", "물", "oil"]
+      tr: ["pirinç", "patates", "havuçs", "soğbir", "et (genellikle dana eti veya tavuk)", "Japanese köri salça", "su", "yağ"],
+      it: ["riso", "patate", "carotas", "cipolla", "carne (di solito manzo o pollo)", "Japanese curry concentrato", "acqua", "olio"],
+      ko: ["쌀", "감자", "당근s", "양파", "고기 (보통 소고기 또는 닭고기)", "Japanese 카레 페이스트", "물", "기름"]
     },
     howIsMade: {
       ro: "Călește ceapa, adaugă carnea, apoi legumele. Adaugă apă și pastă de curry, fierbe până toate sunt fragede și servește cu orez.",
@@ -14819,9 +14819,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف اللحم ثم الخضار. أضف الماء ومعجون الكاري، اطبخ حتى ينضج كل شيء وقدم مع الأرز.",
       zh: "炒洋葱，加肉，再加蔬菜。加水和咖喱酱，小火煮至熟烂，配米饭食用。",
       ja: "玉ねぎを炒め、肉と野菜を加える。水とカレールウを加えて煮込み、ご飯と一緒に提供。",
-      tr: "Sauté soğans, Ekle meat, sonra vegetables. Add su ve curry paste, Kısık ateşte pişir until tender, Servis et ile pirinç.",
-      it: "Sauté cipollas, Aggiungi meat, poi vegetables. Add acqua e curry paste, Fai sobbollire until tender, Servi con riso.",
-      ko: "Sauté 양파s, 넣고 meat, 그다음 vegetables. Add 물그리고 curry paste, 약불로 끓여 until tender, 담아 내세요와 쌀하세요."
+      tr: "soteleyiné soğans, Ekle et, sonra sebzeler. ekleyin su ve köri salça, Kısık ateşte pişir yumuşayana kadar, Servis et ile pirinç.",
+      it: "soffriggié cipollas, Aggiungi carne, poi verdure. aggiungi acqua e curry concentrato, Fai sobbollire finché sarà tenero, Servi con riso.",
+      ko: "볶습니다é 양파s, 넣고 고기, 그다음 채소. 넣습니다 물그리고 카레 페이스트, 약불로 끓여 부드러워질 때까지, 담아 내세요와 쌀하세요."
     },
     originText: {
       ro: "Curry japonez este o rețetă tradițională din Japonia.",
@@ -14834,9 +14834,9 @@ export const recipes = [
       ar: "كاري ياباني هي وصفة تقليدية من اليابان.",
       zh: "日式咖喱饭 是来自日本的传统食谱。",
       ja: "カレーライス は日本の伝統的なレシピです。",
-      tr: "Japanese Curry Rice Japonya kökenli geleneksel bir tariftir.",
-      it: "Japanese Curry Rice è una ricetta tradizionale di Giappone.",
-      ko: "Japanese Curry Rice는(은) 일본의 전통 요리입니다."
+      tr: "Japanese köri pirinç Japonya kökenli geleneksel bir tariftir.",
+      it: "Japanese curry riso è una risotta tradizionale di Giappone.",
+      ko: "Japanese 카레 쌀는(은) 일본의 전통 요리입니다."
     }
   },
   {
@@ -14893,9 +14893,9 @@ export const recipes = [
       ar: ["فاصوليا بيضاء", "جزر", "كرفس", "بصل", "طماطم", "زيت زيتون", "ملح", "فلفل"],
       zh: ["白豆", "胡萝卜", "芹菜", "洋葱", "番茄", "橄榄油", "盐", "胡椒"],
       ja: ["白いんげん豆", "にんじん", "セロリ", "玉ねぎ", "トマト", "オリーブオイル", "塩", "コショウ"],
-      tr: ["white fasulye", "havuçs", "celery", "soğan", "domates", "zeytinyağı", "tuz", "biber"],
-      it: ["white fagioli", "carotas", "celery", "cipolla", "pomodori", "olio d'oliva", "sale", "peperone"],
-      ko: ["white 콩", "당근s", "celery", "양파", "토마토", "올리브오일", "소금", "고추"]
+      tr: ["beyaz fasulye", "havuçs", "kereviz", "soğbir", "domates", "zeytinyağı", "tuz", "biber"],
+      it: ["bianco fagioli", "carotas", "sedano", "cipolla", "pomodori", "olio d'oliva", "sale", "peperone"],
+      ko: ["흰 콩", "당근s", "셀러리", "양파", "토마토", "올리브오일", "소금", "고추"]
     },
     howIsMade: {
       ro: "Fierbe fasolea, adaugă legumele tăiate și fierbe până când totul este fraged. Asezonează cu ulei de măsline și servește cald.",
@@ -14907,9 +14907,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا، أضف الخضار المفرومة واطبخ حتى تصبح طرية. تبّل بزيت الزيتون وقدّمها دافئة.",
       zh: "煮白豆，加入切碎的蔬菜煮至软烂。加入橄榄油调味，热食。",
       ja: "白いんげん豆を煮て、野菜を加え、すべてが柔らかくなるまで調理。オリーブオイルで味付けして温かく提供。",
-      tr: "Haşla fasulye, Ekle chopped vegetables ve cook until everything is tender. Season ile zeytinyağı ve serve warm.",
-      it: "Cuoci fagioli, Aggiungi chopped vegetables e cook until everything is tender. Season con olio d'oliva e serve warm.",
-      ko: "삶고 콩, 넣고 chopped vegetables그리고 cook until everything is tender. Season와 올리브오일그리고 serve warm하세요."
+      tr: "Haşla fasulye, Ekle doğranmış sebzeler ve pişirin her şeyi  yumuşak. Season ile zeytinyağı ve servis edin ılık.",
+      it: "Cuoci fagioli, Aggiungi tritato verdure e cuoci tutto  tenero. Season con olio d'oliva e servi tiepido.",
+      ko: "삶고 콩, 넣고 다진 채소그리고 조리합니다 모든 것 입니다 부드럽게. Season와 올리브오일그리고 제공합니다 따뜻한하세요."
     },
     originText: {
       ro: "Fasolada este o rețetă tradițională din Grecia.",
@@ -14923,7 +14923,7 @@ export const recipes = [
       zh: "希腊炖豆汤 是来自希腊的传统食谱。",
       ja: "ファソラーダ はギリシャの伝統的なレシピです。",
       tr: "Fasolada Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Fasolada è una ricetta tradizionale di Grecia.",
+      it: "Fasolada è una risotta tradizionale di Grecia.",
       ko: "Fasolada는(은) 그리스의 전통 요리입니다."
     }
   },
@@ -14985,9 +14985,9 @@ export const recipes = [
       ar: ["تورتيلا كبيرة", "فول مقلي", "جبن واهاكا", "لحم (عادة لحم بقري أو دجاج أو تشوريزو)", "خس", "أفوكادو", "طماطم", "بصل", "صلصة"],
       zh: ["大玉米饼", "炒豆泥", "瓦哈卡奶酪", "肉类（通常为牛肉、鸡肉或墨西哥香肠）", "生菜", "牛油果", "番茄", "洋葱", "辣酱"],
       ja: ["大きなトルティーヤ", "リフライドビーンズ", "オアハカチーズ", "肉（牛肉・鶏肉・チョリソ）", "レタス", "アボカド", "トマト", "玉ねぎ", "サルサ"],
-      tr: ["large tortilla", "refried fasulye", "Oaxaca peynir", "meat (usually dana eti, tavuk, or chorizo)", "marul", "avocado", "domates", "soğan", "salsa"],
-      it: ["large tortilla", "refried fagioli", "Oaxaca formaggio", "meat (usually manzo, pollo, or chorizo)", "lattuga", "avocado", "pomodori", "cipolla", "salsa"],
-      ko: ["large tortilla", "refried 콩", "Oaxaca 치즈", "meat (usually 소고기, 닭고기, or chorizo)", "상추", "avocado", "토마토", "양파", "salsa"]
+      tr: ["büyük tortilla", "yeniden kızartılmış fasulye", "Oaxaca peynir", "et (genellikle dana eti, tavuk, veya chorizo)", "marul", "avokado", "domates", "soğbir", "salsa"],
+      it: ["grande tortilla", "rifritto fagioli", "Oaxaca formaggio", "carne (di solito manzo, pollo, o chorizo)", "lattuga", "avocado", "pomodori", "cipolla", "salsa"],
+      ko: ["큰 토르티야", "볶은 콩", "Oaxaca 치즈", "고기 (보통 소고기, 닭고기, 또는 초리소)", "상추", "아보카도", "토마토", "양파", "살사"]
     },
     howIsMade: {
       ro: "Întinde fasolea pe tortilla, adaugă carne, brânză și legume. Coace sau prăjește până devine crocantă.",
@@ -15000,9 +15000,9 @@ export const recipes = [
       ar: "افرد الفول على التورتيلا، أضف اللحم والجبن والخضار. اخبزها أو اشوِها حتى تصبح مقرمشة.",
       zh: "将豆泥抹在玉米饼上，加入肉、奶酪和蔬菜，烤或煎至酥脆。",
       ja: "トルティーヤに豆を塗り、肉・チーズ・野菜をのせて焼くかグリルしてカリッとさせる。",
-      tr: "Spread fasulye on tortilla, Ekle meat, peynir ve vegetables. Bake or grill until crispy.",
-      it: "Spread fagioli on tortilla, Aggiungi meat, formaggio e vegetables. Bake or grill until crispy.",
-      ko: "Spread 콩 on tortilla, 넣고 meat, 치즈그리고 vegetables. Bake or grill until crispy하세요."
+      tr: "yayın fasulye üstüne tortilla, Ekle et, peynir ve sebzeler. fırında pişirin veya ızgara yapın çıtır.",
+      it: "stendi fagioli su tortilla, Aggiungi carne, formaggio e verdure. cuoci in forno o griglia croccante.",
+      ko: "펼칩니다 콩 위에 토르티야, 넣고 고기, 치즈그리고 채소. 오븐에서 굽습니다 또는 굽습니다 바삭한하세요."
     },
     originText: {
       ro: "Tlayudas este o rețetă tradițională din Mexic.",
@@ -15016,7 +15016,7 @@ export const recipes = [
       zh: "墨西哥大玉米饼 是来自墨西哥的传统食谱。",
       ja: "トラユーダス はメキシコの伝統的なレシピです。",
       tr: "Tlayudas Meksika kökenli geleneksel bir tariftir.",
-      it: "Tlayudas è una ricetta tradizionale di Messico.",
+      it: "Tlayudas è una risotta tradizionale di Messico.",
       ko: "Tlayudas는(은) 멕시코의 전통 요리입니다."
     }
   },
@@ -15074,9 +15074,9 @@ export const recipes = [
       ar: ["أرز", "فاصوليا", "لحم بقر", "بيض", "موز بلانتاين", "أفوكادو", "لحم خنزير", "تشوريزو", "أريبا"],
       zh: ["米饭", "豆类", "牛肉", "鸡蛋", "蕉", "鳄梨", "猪肉", "辣香肠", "阿雷帕玉米饼"],
       ja: ["ご飯", "豆", "牛肉", "卵", "プランテンバナナ", "アボカド", "豚肉", "チョリソ", "アレパ"],
-      tr: ["pirinç", "fasulye", "dana eti", "yumurta", "plantain", "avocado", "domuz eti", "chorizo", "arepa"],
-      it: ["riso", "fagioli", "manzo", "uovo", "plantain", "avocado", "maiale", "chorizo", "arepa"],
-      ko: ["쌀", "콩", "소고기", "계란", "plantain", "avocado", "돼지고기", "chorizo", "arepa"]
+      tr: ["pirinç", "fasulye", "dana eti", "yumurta", "muz (plantain)", "avokado", "domuz eti", "chorizo", "arepa"],
+      it: ["riso", "fagioli", "manzo", "uovo", "platano", "avocado", "maiale", "chorizo", "arepa"],
+      ko: ["쌀", "콩", "소고기", "계란", "플랜틴", "아보카도", "돼지고기", "초리소", "아레파"]
     },
     howIsMade: {
       ro: "Gătește separat carnea, fasolea și orezul. Servește totul împreună pe o farfurie mare cu banană prăjită, ou, avocado, chorizo și arepa.",
@@ -15088,9 +15088,9 @@ export const recipes = [
       ar: "اطبخ اللحم والفاصوليا والأرز بشكل منفصل. قدّم كل شيء معًا في طبق كبير مع موز مقلي، بيض، أفوكادو، تشوريزو وأريبا.",
       zh: "牛肉、豆类、米饭分开煮。一起放大盘子上，配上煎蕉、鸡蛋、鳄梨、辣香肠和玉米饼。",
       ja: "肉、豆、ご飯を別々に調理し、大きなお皿に揚げたプランテン、卵、アボカド、チョリソ、アレパと一緒に盛り付ける。",
-      tr: "Pişir meat, fasulye, ve pirinç separately. Serve all together on a large plate ile fried plantain, yumurta, avocado, chorizo, ve arepa.",
-      it: "Cuoci meat, fagioli, e riso separately. Serve all together on a large plate con fried plantain, uovo, avocado, chorizo, e arepa.",
-      ko: "조리하고 meat, 콩, 그리고 쌀 separately. Serve all together on a large plate와 fried plantain, 계란, avocado, chorizo, 그리고 arepa하세요."
+      tr: "Pişir et, fasulye, ve pirinç ayrı ayrı. servis edin tüm birlikte üstüne a büyük tabak ile kızarmış muz (plantain), yumurta, avokado, chorizo, ve arepa.",
+      it: "Cuoci carne, fagioli, e riso separatamente. servi tutto insieme su a grande piatto con fritto platano, uovo, avocado, chorizo, e arepa.",
+      ko: "조리하고 고기, 콩, 그리고 쌀 따로. 제공합니다 모든 함께 위에 a 큰 접시와 튀긴 플랜틴, 계란, 아보카도, 초리소, 그리고 아레파하세요."
     },
     originText: {
       ro: "Bandeja Paisa este o rețetă tradițională din Columbia.",
@@ -15104,7 +15104,7 @@ export const recipes = [
       zh: "哥伦比亚拼盘饭 是来自哥伦比亚的传统食谱。",
       ja: "バンデハ・パイサ はコロンビアの伝統的なレシピです。",
       tr: "Bandeja Paisa Kolombiya kökenli geleneksel bir tariftir.",
-      it: "Bandeja Paisa è una ricetta tradizionale di Colombia.",
+      it: "Bandeja Paisa è una risotta tradizionale di Colombia.",
       ko: "Bandeja Paisa는(은) 콜롬비아의 전통 요리입니다."
     }
   },
@@ -15166,9 +15166,9 @@ export const recipes = [
       ar: ["دقيق", "خميرة", "ماء", "ملح", "زيت", "كريمة حامضة", "جبن", "ثوم"],
       zh: ["面粉", "酵母", "水", "盐", "油", "酸奶油", "奶酪", "大蒜"],
       ja: ["小麦粉", "イースト", "水", "塩", "油", "サワークリーム", "チーズ", "ニンニク"],
-      tr: ["un", "yeast", "su", "tuz", "oil", "sour krema", "peynir", "sarımsak"],
-      it: ["farina", "yeast", "acqua", "sale", "oil", "sour panna", "formaggio", "aglio"],
-      ko: ["밀가루", "yeast", "물", "소금", "oil", "sour 크림", "치즈", "마늘"]
+      tr: ["un", "maya", "su", "tuz", "yağ", "ekşi krema", "peynir", "sarımsak"],
+      it: ["farina", "lievito", "acqua", "sale", "olio", "acidulo panna", "formaggio", "aglio"],
+      ko: ["밀가루", "이스트", "물", "소금", "기름", "새콤한 크림", "치즈", "마늘"]
     },
     howIsMade: {
       ro: "Prepară un aluat dospit, întinde-l și prăjește-l în ulei încins până devine pufos și auriu. Servește cu smântână și brânză.",
@@ -15181,9 +15181,9 @@ export const recipes = [
       ar: "حضّر عجين مخمر، افرده واقله في الزيت الساخن حتى ينتفخ ويحمر. قدّمه مع القشدة الحامضة والجبن.",
       zh: "发酵面团擀开，放入热油中炸至蓬松金黄，配酸奶油和奶酪食用。",
       ja: "発酵生地を伸ばして熱い油で揚げ、サワークリームとチーズを添えて提供。",
-      tr: "Prepare leavened dough, roll it out, ve deep-fry in hot oil until fluffy ve golden. Serve ile sour krema ve peynir.",
-      it: "Prepare leavened dough, roll it out, e deep-fry in hot oil until fluffy e golden. Serve con sour panna e formaggio.",
-      ko: "Prepare leavened dough, roll it out, 그리고 deep-볶거나 튀겨 in hot oil until fluffy그리고 golden. Serve와 sour 크림그리고 치즈하세요."
+      tr: "hazırlayın mayalanmış hamur, rulo yapın o , ve derin-kavurun in sıcak yağ kabarmış ve altın rengi. servis edin ile ekşi krema ve peynir.",
+      it: "prepara lievitato impasto, arrotola esso , e profondo-rosola in caldo olio soffice e dorato. servi con acidulo panna e formaggio.",
+      ko: "준비합니다 발효된 반죽, 말아줍니다 그것 , 그리고 깊은-볶거나 튀겨 에서 뜨거운 기름 폭신한그리고 노릇하게. 제공합니다와 새콤한 크림그리고 치즈하세요."
     },
     originText: {
       ro: "Lángos este o rețetă tradițională din Ungaria.",
@@ -15197,7 +15197,7 @@ export const recipes = [
       zh: "匈牙利油饼 是来自匈牙利的传统食谱。",
       ja: "ラーンゴシュ はハンガリーの伝統的なレシピです。",
       tr: "Lángos Macaristan kökenli geleneksel bir tariftir.",
-      it: "Lángos è una ricetta tradizionale di Ungheria.",
+      it: "Lángos è una risotta tradizionale di Ungheria.",
       ko: "Lángos는(은) 헝가리의 전통 요리입니다."
     }
   },
@@ -15259,9 +15259,9 @@ export const recipes = [
       ar: ["فاصوليا حمراء", "بصل", "طماطم", "ثوم", "زنجبيل", "بهارات هندية", "زيت", "أرز"],
       zh: ["红豆", "洋葱", "番茄", "大蒜", "姜", "印度香料", "油", "米饭"],
       ja: ["赤いんげん豆", "玉ねぎ", "トマト", "ニンニク", "ショウガ", "インドのスパイス", "油", "ご飯"],
-      tr: ["kidney fasulye", "soğan", "domates", "sarımsak", "zencefil", "Indian spices", "oil", "pirinç"],
-      it: ["kidney fagioli", "cipolla", "pomodori", "aglio", "zenzero", "Indian spices", "oil", "riso"],
-      ko: ["kidney 콩", "양파", "토마토", "마늘", "생강", "Indian spices", "oil", "쌀"]
+      tr: ["kırmızı fasulye", "soğbir", "domates", "sarımsak", "zencefil", "hint baharatları", "yağ", "pirinç"],
+      it: ["rossi fagioli", "cipolla", "pomodori", "aglio", "zenzero", "spezie indiane", "olio", "riso"],
+      ko: ["강낭 콩", "양파", "토마토", "마늘", "생강", "인도 향신료", "기름", "쌀"]
     },
     howIsMade: {
       ro: "Fierbe fasolea roșie, apoi gătește-o într-un sos aromat de roșii, ceapă, usturoi, ghimbir și condimente. Servește cu orez.",
@@ -15274,9 +15274,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا الحمراء، واطبخها في صوص الطماطم والبصل والثوم والزنجبيل والتوابل. قدّمها مع الأرز.",
       zh: "红芸豆煮熟后，用番茄、洋葱、大蒜、生姜和香料做成的酱汁炖煮，配米饭食用。",
       ja: "赤いんげん豆を茹でて、トマト・玉ねぎ・にんにく・しょうが・スパイスのソースで煮込み、ご飯と一緒に提供。",
-      tr: "Haşla kidney fasulye, sonra Pişir in a spiced domates, soğan, sarımsak, ve zencefil sos. Serve ile pirinç.",
-      it: "Cuoci kidney fagioli, poi Cuoci in a spiced pomodoro, cipolla, aglio, e zenzero salsa. Serve con riso.",
-      ko: "삶고 kidney 콩, 그다음 조리하고 in a spiced 토마토, 양파, 마늘, 그리고 생강 소스. Serve와 쌀하세요."
+      tr: "Haşla kırmızı fasulye, sonra Pişir baharatlı domates, soğbir, sarımsak, ve zencefil sos. servis edin ile pirinç.",
+      it: "Cuoci rossi fagioli, poi Cuoci speziato pomodoro, cipolla, aglio, e zenzero salsa. servi con riso.",
+      ko: "삶고 강낭 콩, 그다음 조리하고 에서 a 향신료를 넣은 토마토, 양파, 마늘, 그리고 생강 소스. 제공합니다와 쌀하세요."
     },
     originText: {
       ro: "Rajma este o rețetă tradițională din India.",
@@ -15290,7 +15290,7 @@ export const recipes = [
       zh: "红豆咖喱 是来自印度的传统食谱。",
       ja: "ラジマ はインドの伝統的なレシピです。",
       tr: "Rajma Hindistan kökenli geleneksel bir tariftir.",
-      it: "Rajma è una ricetta tradizionale di India.",
+      it: "Rajma è una risotta tradizionale di India.",
       ko: "Rajma는(은) 인도의 전통 요리입니다."
     }
   },
@@ -15352,9 +15352,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بصل", "ثوم", "طماطم", "فلفل", "بازلاء", "زيتون", "زبيب", "زيت", "ملح", "فلفل"],
       zh: ["牛肉末", "洋葱", "大蒜", "番茄", "辣椒", "豌豆", "橄榄", "葡萄干", "油", "盐", "胡椒"],
       ja: ["牛ひき肉", "玉ねぎ", "ニンニク", "トマト", "ピーマン", "グリーンピース", "オリーブ", "レーズン", "油", "塩", "コショウ"],
-      tr: ["ground dana eti", "soğan", "sarımsak", "domates", "biber", "peas", "olives", "raisins", "oil", "tuz", "biber"],
-      it: ["ground manzo", "cipolla", "aglio", "pomodori", "peperone", "peas", "olives", "raisins", "oil", "sale", "peperone"],
-      ko: ["ground 소고기", "양파", "마늘", "토마토", "고추", "peas", "olives", "raisins", "oil", "소금", "고추"]
+      tr: ["öğütülmüş dana eti", "soğbir", "sarımsak", "domates", "biber", "bezelye", "zeytin", "kuru üzüm", "yağ", "tuz", "biber"],
+      it: ["macinato manzo", "cipolla", "aglio", "pomodori", "peperone", "piselli", "olive", "uvetta", "olio", "sale", "peperone"],
+      ko: ["간 소고기", "양파", "마늘", "토마토", "고추", "완두콩", "올리브", "건포도", "기름", "소금", "고추"]
     },
     howIsMade: {
       ro: "Prăjește carnea cu ceapă și usturoi, adaugă legumele, măslinele și stafidele. Fierbe totul până se combină aromele.",
@@ -15367,9 +15367,9 @@ export const recipes = [
       ar: "اقلي اللحم مع البصل والثوم، أضف الخضار والزيتون والزبيب. اطبخ حتى تختلط النكهات.",
       zh: "将牛肉末与洋葱和大蒜炒香，加入蔬菜、橄榄和葡萄干，炖至入味。",
       ja: "牛ひき肉を玉ねぎとニンニクで炒め、野菜・オリーブ・レーズンを加えて煮込む。",
-      tr: "Kızart dana eti ile soğan ve sarımsak, Ekle vegetables, olives, ve raisins. Simmer until flavors blend.",
-      it: "Friggi manzo con cipolla e aglio, Aggiungi vegetables, olives, e raisins. Simmer until flavors blend.",
-      ko: "볶거나 튀기고 소고기와 양파그리고 마늘, 넣고 vegetables, olives, 그리고 raisins. Simmer until flavors blend하세요."
+      tr: "Kızart dana eti ile soğbir ve sarımsak, Ekle sebzeler, zeytin, ve kuru üzüm. kısık ateşte pişirin lezzetler blenderdan geçirin.",
+      it: "Friggi manzo con cipolla e aglio, Aggiungi verdure, olive, e uvetta. lascia sobbollire sapori frulla.",
+      ko: "볶거나 튀기고 소고기와 양파그리고 마늘, 넣고 채소, 올리브, 그리고 건포도. 약불에서 끓입니다 맛 블렌더에 갈아줍니다하세요."
     },
     originText: {
       ro: "Picadillo este o rețetă tradițională din Cuba.",
@@ -15383,7 +15383,7 @@ export const recipes = [
       zh: "古巴炖碎牛肉 是来自古巴的传统食谱。",
       ja: "ピカディージョ はキューバの伝統的なレシピです。",
       tr: "Picadillo Cuba kökenli geleneksel bir tariftir.",
-      it: "Picadillo è una ricetta tradizionale di Cuba.",
+      it: "Picadillo è una risotta tradizionale di Cuba.",
       ko: "Picadillo는(은) Cuba의 전통 요리입니다."
     }
   },
@@ -15445,9 +15445,9 @@ export const recipes = [
       ar: ["لحم ضأن", "بصل", "ثوم", "طماطم", "مشمش مجفف", "لوز", "بهارات مغربية", "زيت زيتون"],
       zh: ["羊肉", "洋葱", "大蒜", "西红柿", "杏干", "杏仁", "摩洛哥香料", "橄榄油"],
       ja: ["ラム肉", "玉ねぎ", "ニンニク", "トマト", "ドライアプリコット", "アーモンド", "モロッコスパイス", "オリーブオイル"],
-      tr: ["lamb", "soğan", "sarımsak", "domates", "dried apricots", "almonds", "Moroccan spices", "zeytinyağı"],
-      it: ["lamb", "cipolla", "aglio", "pomodori", "dried apricots", "almonds", "Moroccan spices", "olio d'oliva"],
-      ko: ["lamb", "양파", "마늘", "토마토", "dried apricots", "almonds", "Moroccan spices", "올리브오일"]
+      tr: ["kuzu", "soğbir", "sarımsak", "domates", "kuru kayısı", "badem", "fas baharatları", "zeytinyağı"],
+      it: ["agnello", "cipolla", "aglio", "pomodori", "albicocche secche", "mandorle", "spezie marocchine", "olio d'oliva"],
+      ko: ["양고기", "양파", "마늘", "토마토", "말린 살구", "아몬드", "모로코 향신료", "올리브오일"]
     },
     howIsMade: {
       ro: "Gătește încet carnea de miel cu legume, fructe uscate și condimente într-un vas tagine cu puțină apă, până devine fragedă.",
@@ -15460,9 +15460,9 @@ export const recipes = [
       ar: "اطبخ لحم الضأن مع الخضار والفواكه المجففة والتوابل في طاجين مع قليل من الماء حتى ينضج.",
       zh: "羊肉与蔬菜、干果和香料，加少许水在塔吉锅中慢炖至酥烂。",
       ja: "ラム肉・野菜・ドライフルーツ・スパイスをタジン鍋で少量の水とともにじっくり煮込む。",
-      tr: "Slow-cook lamb ile vegetables, dried fruits, ve spices in a tagine pot ile some su until tender.",
-      it: "Slow-cook lamb con vegetables, dried fruits, e spices in a tagine pot con some acqua until tender.",
-      ko: "Slow-cook lamb와 vegetables, dried fruits, 그리고 spices in a tagine pot와 some 물 until tender하세요."
+      tr: "kısık ateşte yavaşça pişirin kuzu ile sebzeler, kuru meyveler, ve baharatlar tajin tenceresi ile biraz su yumuşayana kadar.",
+      it: "cuoci lentamente agnello con verdure, frutta secca, e spezie tajine con un po' acqua finché sarà tenero.",
+      ko: "약한 불로 천천히 조리합니다 양고기와 채소, 말린 과일, 그리고 향신료 에서 a 타진 냄비와 약간 물 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Tagine cu miel este o rețetă tradițională din Maroc.",
@@ -15475,9 +15475,9 @@ export const recipes = [
       ar: "طاجين لحم الضأن هي وصفة تقليدية من المغرب.",
       zh: "羊肉塔吉锅 是来自摩洛哥的传统食谱。",
       ja: "ラムのタジン はモロッコの伝統的なレシピです。",
-      tr: "Lamb Tagine Fas kökenli geleneksel bir tariftir.",
-      it: "Lamb Tagine è una ricetta tradizionale di Marocco.",
-      ko: "Lamb Tagine는(은) 모로코의 전통 요리입니다."
+      tr: "kuzu tajin Fas kökenli geleneksel bir tariftir.",
+      it: "agnello tajine è una risotta tradizionale di Marocco.",
+      ko: "양고기 타진는(은) 모로코의 전통 요리입니다."
     }
   },
   {
@@ -15538,9 +15538,9 @@ export const recipes = [
       ar: ["لحم غنم مفروم", "بطاطا", "جزر", "بازلاء", "بصل", "زبدة", "حليب"],
       zh: ["羊肉末", "土豆", "胡萝卜", "豌豆", "洋葱", "黄油", "牛奶"],
       ja: ["ひき肉（羊）", "じゃがいも", "にんじん", "グリーンピース", "玉ねぎ", "バター", "牛乳"],
-      tr: ["minced lamb", "patates", "havuçs", "peas", "soğan", "tereyağı", "süt"],
-      it: ["minced lamb", "patate", "carotas", "peas", "cipolla", "burro", "latte"],
-      ko: ["minced lamb", "감자", "당근s", "peas", "양파", "버터", "우유"]
+      tr: ["kıyılmış kuzu", "patates", "havuçs", "bezelye", "soğbir", "tereyağı", "süt"],
+      it: ["tritato agnello", "patate", "carotas", "piselli", "cipolla", "burro", "latte"],
+      ko: ["다진 양고기", "감자", "당근s", "완두콩", "양파", "버터", "우유"]
     },
     howIsMade: {
       ro: "Carnea se călește cu legumele, se pune într-un vas, se acoperă cu piure de cartofi și se coace până se rumenește.",
@@ -15553,9 +15553,9 @@ export const recipes = [
       ar: "اطبخ لحم الغنم مع الخضار، ضعهم في طبق، غطهم بالبطاطا المهروسة واخبز حتى يتحمر.",
       zh: "将羊肉和蔬菜炒熟，放入盘中，盖上土豆泥，烤至金黄。",
       ja: "羊肉と野菜を炒め、耐熱皿に入れ、マッシュポテトで覆い、焼き色がつくまで焼く。",
-      tr: "Pişir lamb ile vegetables, place in a dish, top ile mashed patates, ve Fırında pişir until golden.",
-      it: "Cuoci lamb con vegetables, place in a dish, top con mashed patate, e Cuoci al forno until golden.",
-      ko: "조리하고 lamb와 vegetables, place in a dish, top와 mashed 감자, 그리고 오븐에 구워 until golden하세요."
+      tr: "Pişir kuzu ile sebzeler, yerleştirin yemek, üstüne ile ezilmiş patates, ve Fırında pişir altın rengi.",
+      it: "Cuoci agnello con verdure, metti piatto, sopra con schiacciato patate, e Cuoci al forno dorato.",
+      ko: "조리하고 양고기와 채소, 놓습니다 에서 a 요리, 위에와 으깬 감자, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
       ro: "Plăcintă a ciobanului este o rețetă tradițională din Marea Britanie.",
@@ -15569,7 +15569,7 @@ export const recipes = [
       zh: "牧羊人派 是来自英国的传统食谱。",
       ja: "シェパーズパイ はイギリスの伝統的なレシピです。",
       tr: "Shepherd’s Pie Birleşik Krallık kökenli geleneksel bir tariftir.",
-      it: "Shepherd’s Pie è una ricetta tradizionale di Regno Unito.",
+      it: "Shepherd’s Pie è una risotta tradizionale di Regno Unito.",
       ko: "Shepherd’s Pie는(은) 영국의 전통 요리입니다."
     }
   },
@@ -15631,9 +15631,9 @@ export const recipes = [
       ar: ["توفو", "لحم خنزير مفروم", "معجون الفاصوليا المخمرة", "بصل أخضر", "زنجبيل", "ثوم", "زيت السمسم", "فلفل حار", "صلصة الصويا"],
       zh: ["豆腐", "猪肉末", "豆瓣酱", "葱", "姜", "大蒜", "芝麻油", "辣椒", "酱油"],
       ja: ["豆腐", "豚ひき肉", "豆板醤", "青ねぎ", "ショウガ", "ニンニク", "ごま油", "唐辛子", "醤油"],
-      tr: ["tofu", "minced domuz eti", "fermented bean paste", "spring soğan", "zencefil", "sarımsak", "sesame oil", "chili biber", "soya sosu"],
-      it: ["tofu", "minced maiale", "fermented bean paste", "spring cipolla", "zenzero", "aglio", "sesame oil", "chili peperone", "salsa di soia"],
-      ko: ["tofu", "minced 돼지고기", "fermented bean paste", "spring 양파", "생강", "마늘", "sesame oil", "chili 고추", "간장"]
+      tr: ["tofu", "kıyılmış domuz eti", "fermente fasulye salça", "bahar soğbir", "zencefil", "sarımsak", "susam yağ", "acı biber biber", "soya sosu"],
+      it: ["tofu", "tritato maiale", "fermentato fagiolo concentrato", "primavera cipolla", "zenzero", "aglio", "sesamo olio", "peperoncino peperone", "salsa di soia"],
+      ko: ["두부", "다진 돼지고기", "발효된 콩 페이스트", "봄 양파", "생강", "마늘", "참깨 기름", "고추 고추", "간장"]
     },
     howIsMade: {
       ro: "Prăjește carnea tocată cu usturoi și ghimbir, adaugă tofu cuburi, pastă de fasole picantă, sos de soia și ardei iute, apoi gătește totul împreună.",
@@ -15646,9 +15646,9 @@ export const recipes = [
       ar: "اقلِ اللحم المفروم مع الثوم والزنجبيل، أضف التوفو والصلصة الحارة وصلصة الصويا والفلفل الحار واطبخ الجميع.",
       zh: "肉末与蒜、姜炒香，加入豆腐块、辣豆瓣酱、酱油和辣椒，一起烧煮。",
       ja: "ひき肉をニンニクとショウガと炒め、豆腐・辛味噌・しょうゆ・唐辛子を加えて一緒に煮る。",
-      tr: "Kızart minced meat ile sarımsak ve zencefil, Ekle cubed tofu, spicy bean paste, soya sosu, ve chili, sonra Pişir everything together.",
-      it: "Friggi minced meat con aglio e zenzero, Aggiungi cubed tofu, spicy bean paste, salsa di soia, e chili, poi Cuoci everything together.",
-      ko: "볶거나 튀기고 minced meat와 마늘그리고 생강, 넣고 cubed tofu, spicy bean paste, 간장, 그리고 chili, 그다음 조리하고 everything together하세요."
+      tr: "Kızart kıyılmış et ile sarımsak ve zencefil, Ekle küp doğranmış tofu, acı fasulye salça, soya sosu, ve acı biber, sonra Pişir her şeyi birlikte.",
+      it: "Friggi tritato carne con aglio e zenzero, Aggiungi a cubetti tofu, piccante fagiolo concentrato, salsa di soia, e peperoncino, poi Cuoci tutto insieme.",
+      ko: "볶거나 튀기고 다진 고기와 마늘그리고 생강, 넣고 깍둑썰기한 두부, 매운 콩 페이스트, 간장, 그리고 고추, 그다음 조리하고 모든 것 함께하세요."
     },
     originText: {
       ro: "Mapo Tofu este o rețetă tradițională din China.",
@@ -15661,9 +15661,9 @@ export const recipes = [
       ar: "مابو توفو هي وصفة تقليدية من الصين.",
       zh: "麻婆豆腐 是来自中国的传统食谱。",
       ja: "麻婆豆腐 は中国の伝統的なレシピです。",
-      tr: "Mapo Tofu Çin kökenli geleneksel bir tariftir.",
-      it: "Mapo Tofu è una ricetta tradizionale di Cina.",
-      ko: "Mapo Tofu는(은) 중국의 전통 요리입니다."
+      tr: "Mapo tofu Çin kökenli geleneksel bir tariftir.",
+      it: "Mapo tofu è una risotta tradizionale di Cina.",
+      ko: "Mapo 두부는(은) 중국의 전통 요리입니다."
     }
   },
   {
@@ -15724,9 +15724,9 @@ export const recipes = [
       ar: ["بيض", "فلفل رومي", "طماطم", "بصل", "زيت زيتون", "توابل", "بقدونس"],
       zh: ["鸡蛋", "彩椒", "番茄", "洋葱", "橄榄油", "香料", "欧芹"],
       ja: ["卵", "ピーマン", "トマト", "玉ねぎ", "オリーブオイル", "スパイス", "パセリ"],
-      tr: ["yumurta", "kapya biber", "domates", "soğan", "zeytinyağı", "spices", "maydanoz"],
-      it: ["uova", "peperone", "pomodori", "cipolla", "olio d'oliva", "spices", "prezzemolo"],
-      ko: ["계란", "파프리카", "토마토", "양파", "올리브오일", "spices", "파슬리"]
+      tr: ["yumurta", "kapya biber", "domates", "soğbir", "zeytinyağı", "baharatlar", "maydanoz"],
+      it: ["uova", "peperone", "pomodori", "cipolla", "olio d'oliva", "spezie", "prezzemolo"],
+      ko: ["계란", "파프리카", "토마토", "양파", "올리브오일", "향신료", "파슬리"]
     },
     howIsMade: {
       ro: "Prăjește ceapa și ardeiul în ulei de măsline, adaugă roșii tocate și gătește, apoi sparge ouăle deasupra și gătește-le ușor amestecând.",
@@ -15739,9 +15739,9 @@ export const recipes = [
       ar: "اقلِ البصل والفلفل في زيت الزيتون، أضف الطماطم المفرومة، ثم اكسر البيض فوقها واطبخه مع التحريك.",
       zh: "洋葱和辣椒用橄榄油炒香，加番茄丁煮软，打入鸡蛋轻轻搅拌至熟。",
       ja: "玉ねぎとピーマンをオリーブオイルで炒め、刻んだトマトを加えて煮て、卵を割り入れ優しく混ぜながら火を通す。",
-      tr: "Kızart soğan ve biber in zeytinyağı, Ekle chopped domates ve cook, sonra crack yumurta on top ve cook gently while stirring.",
-      it: "Friggi cipolla e peperone in olio d'oliva, Aggiungi chopped pomodori e cook, poi crack uova on top e cook gently while stirring.",
-      ko: "볶거나 튀기고 양파그리고 고추 in 올리브오일, 넣고 chopped 토마토그리고 cook, 그다음 crack 계란 on top그리고 cook gently while stirring하세요."
+      tr: "Kızart soğbir ve biber in zeytinyağı, Ekle doğranmış domates ve pişirin, sonra kırın yumurta üstüne üstüne ve pişirin nazikçe -ken karıştırarak.",
+      it: "Friggi cipolla e peperone in olio d'oliva, Aggiungi tritato pomodori e cuoci, poi rompi uova su sopra e cuoci delicatamente mentre mescolando.",
+      ko: "볶거나 튀기고 양파그리고 고추 에서 올리브오일, 넣고 다진 토마토그리고 조리합니다, 그다음 깨뜨립니다 계란 위에 위에그리고 조리합니다 부드럽게 동안 저으면서하세요."
     },
     originText: {
       ro: "Menemen este o rețetă tradițională din Turcia.",
@@ -15755,7 +15755,7 @@ export const recipes = [
       zh: "土耳其蛋炒番茄 是来自土耳其的传统食谱。",
       ja: "メネメン はトルコの伝統的なレシピです。",
       tr: "Menemen Türkiye kökenli geleneksel bir tariftir.",
-      it: "Menemen è una ricetta tradizionale di Turchia.",
+      it: "Menemen è una risotta tradizionale di Turchia.",
       ko: "Menemen는(은) 터키의 전통 요리입니다."
     }
   },
@@ -15817,9 +15817,9 @@ export const recipes = [
       ar: ["لحم بقري", "نقانق", "مخللات", "بصل", "طماطم", "قشدة حامضة", "ليمون"],
       zh: ["牛肉", "香肠", "腌黄瓜", "洋葱", "番茄", "酸奶油", "柠檬"],
       ja: ["牛肉", "ソーセージ", "ピクルス", "玉ねぎ", "トマト", "サワークリーム", "レモン"],
-      tr: ["dana eti", "sausages", "pickles", "soğan", "domates", "sour krema", "limon"],
-      it: ["manzo", "sausages", "pickles", "cipolla", "pomodori", "sour panna", "limone"],
-      ko: ["소고기", "sausages", "pickles", "양파", "토마토", "sour 크림", "레몬"]
+      tr: ["dana eti", "sosis", "turşu", "soğbir", "domates", "ekşi krema", "limon"],
+      it: ["manzo", "salsicce", "sottaceti", "cipolla", "pomodori", "acidulo panna", "limone"],
+      ko: ["소고기", "소시지", "피클", "양파", "토마토", "새콤한 크림", "레몬"]
     },
     howIsMade: {
       ro: "Fierbe carnea, adaugă cârnații și legumele, condimentează, servește cu smântână și lămâie.",
@@ -15832,9 +15832,9 @@ export const recipes = [
       ar: "اغلي اللحم، أضف النقانق والخضار، تبّل، قدم مع القشدة الحامضة والليمون.",
       zh: "煮牛肉，加入香肠和蔬菜调味，配酸奶油和柠檬食用。",
       ja: "牛肉を茹で、ソーセージと野菜を加えて味付けし、サワークリームとレモンを添えて提供。",
-      tr: "Haşla dana eti, Ekle sausages ve vegetables, Baharatlandır, Servis et ile sour krema ve limon.",
-      it: "Cuoci manzo, Aggiungi sausages e vegetables, Condisci, Servi con sour panna e limone.",
-      ko: "삶고 소고기, 넣고 sausages그리고 vegetables, 간을 맞추고, 담아 내세요와 sour 크림그리고 레몬하세요."
+      tr: "Haşla dana eti, Ekle sosis ve sebzeler, Baharatlandır, Servis et ile ekşi krema ve limon.",
+      it: "Cuoci manzo, Aggiungi salsicce e verdure, Condisci, Servi con acidulo panna e limone.",
+      ko: "삶고 소고기, 넣고 소시지그리고 채소, 간을 맞추고, 담아 내세요와 새콤한 크림그리고 레몬하세요."
     },
     originText: {
       ro: "Solyanka este o rețetă tradițională din Rusia.",
@@ -15848,7 +15848,7 @@ export const recipes = [
       zh: "罗宋汤 是来自俄罗斯的传统食谱。",
       ja: "ソリャンカ はロシアの伝統的なレシピです。",
       tr: "Solyanka Rusya kökenli geleneksel bir tariftir.",
-      it: "Solyanka è una ricetta tradizionale di Russia.",
+      it: "Solyanka è una risotta tradizionale di Russia.",
       ko: "Solyanka는(은) 러시아의 전통 요리입니다."
     }
   },
@@ -15910,9 +15910,9 @@ export const recipes = [
       ar: ["محار", "بطاطس", "بصل", "حليب", "كريمة", "زبدة", "لحم مقدد", "دقيق", "ملح", "فلفل"],
       zh: ["蛤蜊", "土豆", "洋葱", "牛奶", "奶油", "黄油", "培根", "面粉", "盐", "胡椒"],
       ja: ["アサリ", "ジャガイモ", "玉ねぎ", "牛乳", "クリーム", "バター", "ベーコン", "小麦粉", "塩", "コショウ"],
-      tr: ["clams", "patates", "soğan", "süt", "krema", "tereyağı", "pastırma", "un", "tuz", "biber"],
-      it: ["clams", "patate", "cipolla", "latte", "panna", "burro", "pancetta", "farina", "sale", "peperone"],
-      ko: ["clams", "감자", "양파", "우유", "크림", "버터", "베이컨", "밀가루", "소금", "고추"]
+      tr: ["midye", "patates", "soğbir", "süt", "krema", "tereyağı", "pastırma", "un", "tuz", "biber"],
+      it: ["vongole", "patate", "cipolla", "latte", "panna", "burro", "pancetta", "farina", "sale", "peperone"],
+      ko: ["조개", "감자", "양파", "우유", "크림", "버터", "베이컨", "밀가루", "소금", "고추"]
     },
     howIsMade: {
       ro: "Călește ceapa și baconul, adaugă făina, cartofii și laptele, fierbe totul, apoi adaugă scoicile la final.",
@@ -15925,9 +15925,9 @@ export const recipes = [
       ar: "حمّر البصل واللحم المقدد، أضف الدقيق، البطاطس والحليب، اطبخ ثم أضف المحار في النهاية.",
       zh: "炒洋葱和培根，加入面粉、土豆和牛奶，煮沸后最后加蛤蜊。",
       ja: "玉ねぎとベーコンを炒め、小麦粉・ジャガイモ・牛乳を加え煮込み、最後にアサリを入れる。",
-      tr: "Sauté soğan ve pastırma, Ekle un, patates, ve süt, Kısık ateşte pişir, sonra Ekle clams at end.",
-      it: "Sauté cipolla e pancetta, Aggiungi farina, patate, e latte, Fai sobbollire, poi Aggiungi clams at end.",
-      ko: "Sauté 양파그리고 베이컨, 넣고 밀가루, 감자, 그리고 우유, 약불로 끓여, 그다음 넣고 clams at end하세요."
+      tr: "soteleyiné soğbir ve pastırma, Ekle un, patates, ve süt, Kısık ateşte pişir, sonra Ekle midye  sonunda.",
+      it: "soffriggié cipolla e pancetta, Aggiungi farina, patate, e latte, Fai sobbollire, poi Aggiungi vongole  alla fine.",
+      ko: "볶습니다é 양파그리고 베이컨, 넣고 밀가루, 감자, 그리고 우유, 약불로 끓여, 그다음 넣고 조개 에서 마지막에하세요."
     },
     originText: {
       ro: "Clam Chowder este o rețetă tradițională din SUA.",
@@ -15941,7 +15941,7 @@ export const recipes = [
       zh: "蛤蜊浓汤 是来自美国的传统食谱。",
       ja: "クラムチャウダー はアメリカの伝統的なレシピです。",
       tr: "Clam Chowder ABD kökenli geleneksel bir tariftir.",
-      it: "Clam Chowder è una ricetta tradizionale di USA.",
+      it: "Clam Chowder è una risotta tradizionale di USA.",
       ko: "Clam Chowder는(은) 미국의 전통 요리입니다."
     }
   },
@@ -16003,9 +16003,9 @@ export const recipes = [
       ar: ["نقانق", "كاتشب", "مسحوق كاري", "بطاطس مقلية (اختياري)"],
       zh: ["香肠", "番茄酱", "咖喱粉", "薯条（可选）"],
       ja: ["ソーセージ", "ケチャップ", "カレー粉", "フライドポテト（オプション）"],
-      tr: ["sausages", "ketchup", "curry powder", "french fries (optional)"],
-      it: ["sausages", "ketchup", "curry powder", "french fries (optional)"],
-      ko: ["sausages", "ketchup", "curry powder", "french fries (optional)"]
+      tr: ["sosis", "ketçap", "köri tozu", "fransız patates kızartması (isteğe bağlı)"],
+      it: ["salsicce", "ketchup", "curry in polvere", "francese patatine fritte (facoltativo)"],
+      ko: ["소시지", "케첩", "카레 가루", "프랑스식 감자튀김 (선택)"]
     },
     howIsMade: {
       ro: "Prăjește cârnații, taie-i felii și servește-i cu un sos de roșii amestecat cu pudră de curry.",
@@ -16018,9 +16018,9 @@ export const recipes = [
       ar: "اقلِ النقانق، اقطعها شرائح وقدمها مع صلصة الطماطم والكاري.",
       zh: "香肠煎熟切片，配以咖喱番茄酱。",
       ja: "ソーセージを焼いてスライスし、カレー風味のトマトソースと一緒に提供。",
-      tr: "Kızart sausages, Dilimle them, ve Servis et ile a domates sos mixed ile curry powder.",
-      it: "Friggi sausages, Affetta them, e Servi con a pomodoro salsa mixed con curry powder.",
-      ko: "볶거나 튀기고 sausages, 썰어 them, 그리고 담아 내세요와 a 토마토 소스 mixed와 curry powder하세요."
+      tr: "Kızart sosis, Dilimle onları, ve Servis et ile a domates sos karıştırıned ile köri tozu.",
+      it: "Friggi salsicce, Affetta li, e Servi con a pomodoro salsa mescolaed con curry in polvere.",
+      ko: "볶거나 튀기고 소시지, 썰어 그것들을, 그리고 담아 내세요와 a 토마토 소스 섞습니다와 카레 가루하세요."
     },
     originText: {
       ro: "Currywurst este o rețetă tradițională din Germania.",
@@ -16034,7 +16034,7 @@ export const recipes = [
       zh: "咖喱香肠 是来自德国的传统食谱。",
       ja: "カリーヴルスト はドイツの伝統的なレシピです。",
       tr: "Currywurst Almanya kökenli geleneksel bir tariftir.",
-      it: "Currywurst è una ricetta tradizionale di Germania.",
+      it: "Currywurst è una risotta tradizionale di Germania.",
       ko: "Currywurst는(은) 독일의 전통 요리입니다."
     }
   },
@@ -16096,9 +16096,9 @@ export const recipes = [
       ar: ["صدر دجاج", "حليب جوز الهند", "عشب الليمون", "غالانغال", "أوراق الليمون", "فلفل حار", "فطر", "صلصة السمك", "ليمون"],
       zh: ["鸡胸肉", "椰奶", "香茅", "高良姜", "青柠叶", "辣椒", "蘑菇", "鱼露", "青柠"],
       ja: ["鶏むね肉", "ココナッツミルク", "レモングラス", "ガランガル", "ライムリーフ", "唐辛子", "きのこ", "ナンプラー", "ライム"],
-      tr: ["tavuk göğsü", "coconut süt", "limongrass", "galangal", "yeşil limon leaves", "chili", "mantar", "balık sauce", "yeşil limon"],
-      it: ["petto di pollo", "coconut latte", "limonegrass", "galangal", "lime leaves", "chili", "funghi", "pesce sauce", "lime"],
-      ko: ["닭가슴살", "coconut 우유", "레몬grass", "galangal", "라임 leaves", "chili", "버섯", "생선 sauce", "라임"]
+      tr: ["tavuk göğsü", "hindistancevizi süt", "limongrass", "galangal", "yeşil limon yaprak", "acı biber", "mantar", "balık sos", "yeşil limon"],
+      it: ["petto di pollo", "cocco latte", "limonegrass", "galanga", "lime foglie", "peperoncino", "funghi", "pesce salsa", "lime"],
+      ko: ["닭가슴살", "코코넛 우유", "레몬풀", "갈랑갈", "라임 잎", "고추", "버섯", "생선 소스", "라임"]
     },
     howIsMade: {
       ro: "Fierbe piept de pui cu lapte de cocos, lemongrass, galangal, frunze de lime și ciuperci. Asezonează cu sos de pește și lime.",
@@ -16111,9 +16111,9 @@ export const recipes = [
       ar: "اغلِ صدور الدجاج مع حليب جوز الهند، عشب الليمون، الجلانجال، أوراق الليمون والفطر. تبلها بصلصة السمك والليمون.",
       zh: "鸡胸肉与椰奶、香茅、南姜、青柠叶、蘑菇一起煮，用鱼露和青柠汁调味。",
       ja: "鶏胸肉をココナッツミルク・レモングラス・ガランガル・コブミカンの葉・きのこと一緒に煮て、ナンプラーとライムで味付け。",
-      tr: "Haşla tavuk göğsü ile coconut süt, limongrass, galangal, kaffir yeşil limon leaves, ve mantar. Season ile balık sos ve yeşil limon.",
-      it: "Cuoci petto di pollo con coconut latte, limonegrass, galangal, kaffir lime leaves, e funghi. Season con pesce salsa e lime.",
-      ko: "삶고 닭가슴살와 coconut 우유, 레몬grass, galangal, kaffir 라임 leaves, 그리고 버섯. Season와 생선 소스그리고 라임하세요."
+      tr: "Haşla tavuk göğsü ile hindistancevizi süt, limongrass, galangal, kaffir yeşil limon yaprak, ve mantar. Season ile balık sos ve yeşil limon.",
+      it: "Cuoci petto di pollo con cocco latte, limonegrass, galanga, kaffir lime foglie, e funghi. Season con pesce salsa e lime.",
+      ko: "삶고 닭가슴살와 코코넛 우유, 레몬풀, 갈랑갈, 카피르 라임 잎, 그리고 버섯. Season와 생선 소스그리고 라임하세요."
     },
     originText: {
       ro: "Tom Kha Gai este o rețetă tradițională din Thailanda.",
@@ -16127,7 +16127,7 @@ export const recipes = [
       zh: "冬阴椰鸡汤 是来自泰国的传统食谱。",
       ja: "トムカーガイ はタイの伝統的なレシピです。",
       tr: "Tom Kha Gai Tayland kökenli geleneksel bir tariftir.",
-      it: "Tom Kha Gai è una ricetta tradizionale di Thailandia.",
+      it: "Tom Kha Gai è una risotta tradizionale di Thailandia.",
       ko: "Tom Kha Gai는(은) 태국의 전통 요리입니다."
     }
   },
@@ -16189,9 +16189,9 @@ export const recipes = [
       ar: ["ذرة", "فاصوليا", "كرنب", "بطاطس", "يقطين", "لحم خنزير", "نقانق", "بصل", "ثوم", "طماطم", "زيت", "ملح"],
       zh: ["玉米", "豆类", "卷心菜", "土豆", "南瓜", "猪肉", "香肠", "洋葱", "大蒜", "番茄", "油", "盐"],
       ja: ["トウモロコシ", "豆類", "キャベツ", "ジャガイモ", "カボチャ", "豚肉", "ソーセージ", "玉ねぎ", "ニンニク", "トマト", "油", "塩"],
-      tr: ["mısır", "fasulye", "cabbage", "patates", "pumpkin", "domuz eti", "sausages", "soğan", "sarımsak", "domates", "oil", "tuz"],
-      it: ["mais", "fagioli", "cabbage", "patate", "pumpkin", "maiale", "sausages", "cipolla", "aglio", "pomodori", "oil", "sale"],
-      ko: ["옥수수", "콩", "cabbage", "감자", "pumpkin", "돼지고기", "sausages", "양파", "마늘", "토마토", "oil", "소금"]
+      tr: ["mısır", "fasulye", "lahana", "patates", "kabak", "domuz eti", "sosis", "soğbir", "sarımsak", "domates", "yağ", "tuz"],
+      it: ["mais", "fagioli", "cavolo", "patate", "zucca", "maiale", "salsicce", "cipolla", "aglio", "pomodori", "olio", "sale"],
+      ko: ["옥수수", "콩", "양배추", "감자", "호박", "돼지고기", "소시지", "양파", "마늘", "토마토", "기름", "소금"]
     },
     howIsMade: {
       ro: "Fierbe porumbul și fasolea, apoi adaugă legumele și carnea. Lasă la fiert îndelung până devine consistent.",
@@ -16204,9 +16204,9 @@ export const recipes = [
       ar: "اسلق الذرة والفاصوليا، ثم أضف الخضار واللحم واطبخ طويلًا حتى يصبح كثيفًا.",
       zh: "先煮玉米和豆类，再加蔬菜和肉，慢炖至浓稠。",
       ja: "トウモロコシと豆を煮て、野菜や肉を加え、長時間煮込む。",
-      tr: "Haşla mısır ve fasulye, Ekle vegetables ve meat, Kısık ateşte pişir for a long time until thick.",
-      it: "Cuoci mais e fagioli, Aggiungi vegetables e meat, Fai sobbollire for a long time until thick.",
-      ko: "삶고 옥수수그리고 콩, 넣고 vegetables그리고 meat, 약불로 끓여 for a long time until thick하세요."
+      tr: "Haşla mısır ve fasulye, Ekle sebzeler ve et, Kısık ateşte pişir için a uzun süre koyu.",
+      it: "Cuoci mais e fagioli, Aggiungi verdure e carne, Fai sobbollire per a lungo tempo denso.",
+      ko: "삶고 옥수수그리고 콩, 넣고 채소그리고 고기, 약불로 끓여 을 위해 a 긴 시간 걸쭉한하세요."
     },
     originText: {
       ro: "Cachupa este o rețetă tradițională din Capul Verde.",
@@ -16220,7 +16220,7 @@ export const recipes = [
       zh: "卡丘帕炖菜 是来自佛得角的传统食谱。",
       ja: "カチュパ はカーボベルデの伝統的なレシピです。",
       tr: "Cachupa Cape Verde kökenli geleneksel bir tariftir.",
-      it: "Cachupa è una ricetta tradizionale di Cape Verde.",
+      it: "Cachupa è una risotta tradizionale di Cape Verde.",
       ko: "Cachupa는(은) Cape Verde의 전통 요리입니다."
     }
   },
@@ -16282,9 +16282,9 @@ export const recipes = [
       ar: ["بطاطس", "قرنبيط", "بازلاء", "فلفل", "طماطم", "بصل", "زبدة", "توابل هندية", "خبز باف"],
       zh: ["土豆", "花椰菜", "豌豆", "甜椒", "番茄", "洋葱", "黄油", "印度香料", "帕夫面包"],
       ja: ["ジャガイモ", "カリフラワー", "グリーンピース", "ピーマン", "トマト", "玉ねぎ", "バター", "インドのスパイス", "パブパン"],
-      tr: ["patates", "cauliflower", "peas", "kapya biber", "domates", "soğan", "tereyağı", "Indian spices", "pav buns"],
-      it: ["patate", "cauliflower", "peas", "peperone", "pomodori", "cipolla", "burro", "Indian spices", "pav buns"],
-      ko: ["감자", "cauliflower", "peas", "파프리카", "토마토", "양파", "버터", "Indian spices", "pav buns"]
+      tr: ["patates", "karnabahar", "bezelye", "kapya biber", "domates", "soğbir", "tereyağı", "hint baharatları", "pav ekmek"],
+      it: ["patate", "cavolfiore", "piselli", "peperone", "pomodori", "cipolla", "burro", "spezie indiane", "pav panini"],
+      ko: ["감자", "콜리플라워", "완두콩", "파프리카", "토마토", "양파", "버터", "인도 향신료", "파브 번"]
     },
     howIsMade: {
       ro: "Fierbe legumele, pasează-le și gătește-le cu unt și condimente. Servește cu chifle prăjite în unt.",
@@ -16297,9 +16297,9 @@ export const recipes = [
       ar: "اسلق الخضار، اهرسها واطبخها مع الزبدة والتوابل. قدّمها مع خبز باف المحمّص بالزبدة.",
       zh: "将蔬菜煮熟捣碎，用黄油和香料翻炒。搭配用黄油烤过的面包一起食用。",
       ja: "野菜を茹でてつぶし、バターとスパイスで炒める。バターで焼いたパンと一緒に提供。",
-      tr: "Haşla vegetables, mash ve cook ile tereyağı ve spices. Serve ile tereyağı-toasted buns.",
-      it: "Cuoci vegetables, mash e cook con burro e spices. Serve con burro-toasted buns.",
-      ko: "삶고 vegetables, mash그리고 cook와 버터그리고 spices. Serve와 버터-toasted buns하세요."
+      tr: "Haşla sebzeler, ezin ve pişirin ile tereyağı ve baharatlar. servis edin ile tereyağı-kavrulmuş ekmek.",
+      it: "Cuoci verdure, schiaccia e cuoci con burro e spezie. servi con burro-tostato panini.",
+      ko: "삶고 채소, 으깨세요그리고 조리합니다와 버터그리고 향신료. 제공합니다와 버터-구운 번하세요."
     },
     originText: {
       ro: "Pav Bhaji este o rețetă tradițională din India.",
@@ -16312,9 +16312,9 @@ export const recipes = [
       ar: "باف بهاجي هي وصفة تقليدية من الهند.",
       zh: "帕夫巴吉 是来自印度的传统食谱。",
       ja: "パブバジ はインドの伝統的なレシピです。",
-      tr: "Pav Bhaji Hindistan kökenli geleneksel bir tariftir.",
-      it: "Pav Bhaji è una ricetta tradizionale di India.",
-      ko: "Pav Bhaji는(은) 인도의 전통 요리입니다."
+      tr: "pav Bhaji Hindistan kökenli geleneksel bir tariftir.",
+      it: "pav Bhaji è una risotta tradizionale di India.",
+      ko: "파브 Bhaji는(은) 인도의 전통 요리입니다."
     }
   },
   {
@@ -16375,9 +16375,9 @@ export const recipes = [
       ar: ["لحم بقر", "لحم خنزير", "لحم ضأن", "بصل", "جزر", "فلفل", "ملح", "ماء"],
       zh: ["牛肉", "猪肉", "羊肉", "洋葱", "胡萝卜", "胡椒", "盐", "水"],
       ja: ["牛肉", "豚肉", "羊肉", "玉ねぎ", "にんじん", "コショウ", "塩", "水"],
-      tr: ["dana eti", "domuz eti", "lamb", "soğan", "havuç", "biber", "tuz", "su"],
-      it: ["manzo", "maiale", "lamb", "cipolla", "carota", "peperone", "sale", "acqua"],
-      ko: ["소고기", "돼지고기", "lamb", "양파", "당근", "고추", "소금", "물"]
+      tr: ["dana eti", "domuz eti", "kuzu", "soğbir", "havuç", "biber", "tuz", "su"],
+      it: ["manzo", "maiale", "agnello", "cipolla", "carota", "peperone", "sale", "acqua"],
+      ko: ["소고기", "돼지고기", "양고기", "양파", "당근", "고추", "소금", "물"]
     },
     howIsMade: {
       ro: "Taie carnea și legumele cuburi, pune-le în oală, adaugă apă, sare, piper. Fierbe lent la cuptor până totul este fraged.",
@@ -16390,9 +16390,9 @@ export const recipes = [
       ar: "قطّع اللحم والخضار، ضعهم في وعاء، أضف ماء وملح وفلفل. اطبخ ببطء في الفرن حتى تنضج.",
       zh: "将肉和蔬菜切块放锅中，加水、盐、胡椒，慢炖至酥烂。",
       ja: "肉と野菜を角切りし、鍋に入れ、水・塩・コショウを加えてオーブンでゆっくり煮込む。",
-      tr: "Cut meat ve vegetables into cubes, put in a pot, Ekle su, tuz, biber. Slow cook in oven until tender.",
-      it: "Cut meat e vegetables into cubes, put in a pot, Aggiungi acqua, sale, peperone. Slow cook in oven until tender.",
-      ko: "Cut meat그리고 vegetables into cubes, put in a pot, 넣고 물, 소금, 고추. Slow cook in oven until tender하세요."
+      tr: "kesin et ve sebzeler içine küp, koyun tencere, Ekle su, tuz, biber. kısık ateşte yavaşça pişirin in fırın yumuşayana kadar.",
+      it: "taglia carne e verdure dentro cubetti, metti pentola, Aggiungi acqua, sale, peperone. cuoci lentamente in forno finché sarà tenero.",
+      ko: "자릅니다 고기그리고 채소 안에 깍둑썰기, 넣습니다 에서 a 냄비, 넣고 물, 소금, 고추. 약한 불로 천천히 조리합니다 에서 오븐 부드러워질 때까지하세요."
     },
     originText: {
       ro: "Karjalanpaisti este o rețetă tradițională din Finlanda.",
@@ -16406,7 +16406,7 @@ export const recipes = [
       zh: "卡累利阿炖肉 是来自芬兰的传统食谱。",
       ja: "カレリアンシチュー はフィンランドの伝統的なレシピです。",
       tr: "Karelian stew Finlandiya kökenli geleneksel bir tariftir.",
-      it: "Karelian stew è una ricetta tradizionale di Finlandia.",
+      it: "Karelian stew è una risotta tradizionale di Finlandia.",
       ko: "Karelian stew는(은) 핀란드의 전통 요리입니다."
     }
   },
@@ -16468,9 +16468,9 @@ export const recipes = [
       ar: ["لحم بقر", "نبيذ أحمر", "جزر", "بصل", "ثوم", "فطر", "لحم مقدد", "بقدونس", "زيت", "دقيق", "ملح", "فلفل"],
       zh: ["牛肉", "红葡萄酒", "胡萝卜", "洋葱", "大蒜", "蘑菇", "培根", "香菜", "油", "面粉", "盐", "胡椒"],
       ja: ["牛肉", "赤ワイン", "人参", "玉ねぎ", "にんにく", "マッシュルーム", "ベーコン", "パセリ", "油", "小麦粉", "塩", "コショウ"],
-      tr: ["dana eti", "red wine", "havuçs", "soğan", "sarımsak", "mantar", "pastırma", "maydanoz", "oil", "un", "tuz", "biber"],
-      it: ["manzo", "red wine", "carotas", "cipolla", "aglio", "funghi", "pancetta", "prezzemolo", "oil", "farina", "sale", "peperone"],
-      ko: ["소고기", "red wine", "당근s", "양파", "마늘", "버섯", "베이컨", "파슬리", "oil", "밀가루", "소금", "고추"]
+      tr: ["dana eti", "kırmızı şarap", "havuçs", "soğbir", "sarımsak", "mantar", "pastırma", "maydanoz", "yağ", "un", "tuz", "biber"],
+      it: ["manzo", "rosso vino", "carotas", "cipolla", "aglio", "funghi", "pancetta", "prezzemolo", "olio", "farina", "sale", "peperone"],
+      ko: ["소고기", "빨간 와인", "당근s", "양파", "마늘", "버섯", "베이컨", "파슬리", "기름", "밀가루", "소금", "고추"]
     },
     howIsMade: {
       ro: "Prăjește carnea, adaugă legumele, vinul și fierbe încet ore întregi până totul devine fraged și gustos.",
@@ -16483,9 +16483,9 @@ export const recipes = [
       ar: "حمّر اللحم، أضف الخضار والنبيذ واطبخ ببطء لساعات.",
       zh: "将牛肉煎至上色，加入蔬菜和葡萄酒，小火慢炖数小时。",
       ja: "牛肉を焼き色がつくまで炒め、野菜とワインを加え、数時間煮込む。",
-      tr: "Brown dana eti, Ekle vegetables ve wine, sonra slow-cook for hours until everything is tender ve flavorful.",
-      it: "Brown manzo, Aggiungi vegetables e wine, poi slow-cook for hours until everything is tender e flavorful.",
-      ko: "Brown 소고기, 넣고 vegetables그리고 wine, 그다음 slow-cook for hours until everything is tender그리고 flavorful하세요."
+      tr: "kahverengi dana eti, Ekle sebzeler ve şarap, sonra kısık ateşte yavaşça pişirin için saat her şeyi  yumuşak ve lezzetli.",
+      it: "marrone manzo, Aggiungi verdure e vino, poi cuoci lentamente per ore tutto  tenero e sapori intensi.",
+      ko: "갈색 소고기, 넣고 채소그리고 와인, 그다음 약한 불로 천천히 조리합니다 을 위해 시간 모든 것 입니다 부드럽게그리고 풍미가 좋은하세요."
     },
     originText: {
       ro: "Boeuf Bourguignon este o rețetă tradițională din Franța.",
@@ -16499,7 +16499,7 @@ export const recipes = [
       zh: "红酒炖牛肉 是来自法国的传统食谱。",
       ja: "ブッフ・ブルギニヨン はフランスの伝統的なレシピです。",
       tr: "Boeuf Bourguignon Fransa kökenli geleneksel bir tariftir.",
-      it: "Boeuf Bourguignon è una ricetta tradizionale di Francia.",
+      it: "Boeuf Bourguignon è una risotta tradizionale di Francia.",
       ko: "Boeuf Bourguignon는(은) 프랑스의 전통 요리입니다."
     }
   },
@@ -16561,7 +16561,7 @@ export const recipes = [
       ar: ["بيض", "طماطم", "فلفل", "بصل", "ثوم", "زيت زيتون", "بابريكا", "كمون", "ملح", "فلفل"],
       zh: ["鸡蛋", "番茄", "辣椒", "洋葱", "大蒜", "橄榄油", "红椒粉", "孜然", "盐", "胡椒"],
       ja: ["卵", "トマト", "ピーマン", "玉ねぎ", "ニンニク", "オリーブオイル", "パプリカ", "クミン", "塩", "コショウ"],
-      tr: ["yumurta", "domates", "bibers", "soğan", "sarımsak", "zeytinyağı", "toz biber", "kimyon", "tuz", "biber"],
+      tr: ["yumurta", "domates", "bibers", "soğbir", "sarımsak", "zeytinyağı", "toz biber", "kimyon", "tuz", "biber"],
       it: ["uova", "pomodori", "peperones", "cipolla", "aglio", "olio d'oliva", "paprika", "cumino", "sale", "peperone"],
       ko: ["계란", "토마토", "고추s", "양파", "마늘", "올리브오일", "파프리카 가루", "쿠민", "소금", "고추"]
     },
@@ -16576,9 +16576,9 @@ export const recipes = [
       ar: "اقلي البصل والفلفل والثوم، أضف الطماطم والتوابل، ثم اكسر البيض فوقها واطبخ حتى ينضج.",
       zh: "炒洋葱、辣椒和大蒜，加入番茄和香料，打入鸡蛋，煮至蛋熟。",
       ja: "玉ねぎ・ピーマン・ニンニクを炒め、トマトとスパイスを加え、上に卵を割り入れて固まるまで火を通す。",
-      tr: "Sauté soğan, bibers ve sarımsak, Ekle domates ve spices, sonra crack yumurta on top ve cook until set.",
-      it: "Sauté cipolla, peperones e aglio, Aggiungi pomodori e spices, poi crack uova on top e cook until set.",
-      ko: "Sauté 양파, 고추s그리고 마늘, 넣고 토마토그리고 spices, 그다음 crack 계란 on top그리고 cook until set하세요."
+      tr: "soteleyiné soğbir, bibers ve sarımsak, Ekle domates ve baharatlar, sonra kırın yumurta üstüne üstüne ve pişirin koyun.",
+      it: "soffriggié cipolla, peperones e aglio, Aggiungi pomodori e spezie, poi rompi uova su sopra e cuoci metti.",
+      ko: "볶습니다é 양파, 고추s그리고 마늘, 넣고 토마토그리고 향신료, 그다음 깨뜨립니다 계란 위에 위에그리고 조리합니다 두세요하세요."
     },
     originText: {
       ro: "Chakchouka este o rețetă tradițională din Tunisia.",
@@ -16592,7 +16592,7 @@ export const recipes = [
       zh: "突尼斯炒蛋 是来自突尼斯的传统食谱。",
       ja: "シャクシュカ はチュニジアの伝統的なレシピです。",
       tr: "Chakchouka Tunisia kökenli geleneksel bir tariftir.",
-      it: "Chakchouka è una ricetta tradizionale di Tunisia.",
+      it: "Chakchouka è una risotta tradizionale di Tunisia.",
       ko: "Chakchouka는(은) Tunisia의 전통 요리입니다."
     }
   },
@@ -16654,9 +16654,9 @@ export const recipes = [
       ar: ["دقيق", "كرنب", "بيض", "ماء", "لحم أو مأكولات بحرية", "صلصة أوكونومياكي", "مايونيز", "بصل أخضر"],
       zh: ["面粉", "卷心菜", "鸡蛋", "水", "肉类或海鲜", "御好烧酱", "蛋黄酱", "葱"],
       ja: ["小麦粉", "キャベツ", "卵", "水", "肉またはシーフード", "お好み焼きソース", "マヨネーズ", "青ねぎ"],
-      tr: ["un", "cabbage", "yumurta", "su", "meat or seafood", "okonomiyaki sauce", "mayonnaise", "spring soğan"],
-      it: ["farina", "cabbage", "uova", "acqua", "meat or seafood", "okonomiyaki sauce", "mayonnaise", "spring cipolla"],
-      ko: ["밀가루", "cabbage", "계란", "물", "meat or seafood", "okonomiyaki sauce", "mayonnaise", "spring 양파"]
+      tr: ["un", "lahana", "yumurta", "su", "et veya deniz ürünleri", "okonomiyaki sos", "mayonez", "bahar soğbir"],
+      it: ["farina", "cavolo", "uova", "acqua", "carne o frutti di mare", "okonomiyaki salsa", "maionese", "primavera cipolla"],
+      ko: ["밀가루", "양배추", "계란", "물", "고기 또는 해산물", "오코노미야키 소스", "마요네즈", "봄 양파"]
     },
     howIsMade: {
       ro: "Amestecă făină, ouă, varză și alte ingrediente la alegere, prăjește ca o clătită groasă, apoi servește cu sos okonomiyaki și maioneză.",
@@ -16669,9 +16669,9 @@ export const recipes = [
       ar: "اخلط الدقيق والبيض والكرنب ومكونات أخرى حسب الرغبة، واقلها كفطيرة سميكة، ثم قدمها مع صوص الأكونومياكي والمايونيز.",
       zh: "将面粉、鸡蛋、卷心菜和喜欢的配料混合，煎成厚煎饼，配以大阪烧酱和蛋黄酱。",
       ja: "小麦粉・卵・キャベツなど好きな具材を混ぜ、厚めのパンケーキ状に焼き、オコノミヤキソースとマヨネーズで提供。",
-      tr: "Karıştır un, yumurta, cabbage, ve optional ingredients, Kızart as a thick pancake, sonra Servis et ile okonomiyaki sos ve mayonnaise.",
-      it: "Mescola farina, uova, cabbage, e optional ingredients, Friggi as a thick pancake, poi Servi con okonomiyaki salsa e mayonnaise.",
-      ko: "섞고 밀가루, 계란, cabbage, 그리고 optional ingredients, 볶거나 튀기고 as a thick pancake, 그다음 담아 내세요와 okonomiyaki 소스그리고 mayonnaise하세요."
+      tr: "Karıştır un, yumurta, lahana, ve isteğe bağlı malzemeler, Kızart  a koyu krep, sonra Servis et ile okonomiyaki sos ve mayonez.",
+      it: "Mescola farina, uova, cavolo, e facoltativo ingredienti, Friggi  a denso pancake, poi Servi con okonomiyaki salsa e maionese.",
+      ko: "섞고 밀가루, 계란, 양배추, 그리고 선택 재료, 볶거나 튀기고  a 걸쭉한 팬케이크, 그다음 담아 내세요와 오코노미야키 소스그리고 마요네즈하세요."
     },
     originText: {
       ro: "Okonomiyaki este o rețetă tradițională din Japonia.",
