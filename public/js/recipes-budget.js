@@ -59968,14 +59968,67 @@ const BUDGET_RECIPES = [
     }
   }
 ];
+/* ── Convert raw budget format → format expected by app.js ──
+   Raw:  { title:{ro,en,...}, country:string, ingredients:[{name:{ro,en,...}, qty:{...}},...], steps:{ro:[],en:[],...} }
+   Need: { name:{ro,en,...}, origin:{ro,en,...}, ingredients:{ro:[str],en:[str],...}, howIsMade:{ro:str,en:str,...}, category:{ro,en} }
+*/
+const LANGS = ["ro","en","es","fr","de","pt","ru","ar","zh","ja","hi","tr","it","ko"];
+
+const BUDGET_RECIPES_MAPPED = BUDGET_RECIPES.map((r, idx) => {
+  const name = {};
+  const origin = {};
+  const ingredients = {};
+  const howIsMade = {};
+
+  LANGS.forEach(lg => {
+    // name: title is per-language object
+    name[lg] = (r.title && typeof r.title === 'object' ? r.title[lg] : null)
+               || r.title?.ro || r.title?.en
+               || `Budget ${idx + 1}`;
+
+    // origin: country is a plain string
+    origin[lg] = r.country || r.origin || 'World';
+
+    // ingredients: array of { name:{ro,en,...}, qty:{number, unit:{ro,en,...}} }
+    ingredients[lg] = Array.isArray(r.ingredients)
+      ? r.ingredients.map(x => {
+          if (typeof x === 'string') return x;
+          const n = x.name && typeof x.name === 'object' ? (x.name[lg] || x.name.ro || x.name.en || '') : (x.name || x.item || '');
+          if (!n) return '';
+          const qty = x.qty;
+          if (!qty) return n;
+          const num = qty.number ? String(qty.number) : '';
+          const unit = qty.unit && typeof qty.unit === 'object' ? (qty.unit[lg] || qty.unit.ro || qty.unit.en || '') : (qty.unit || '');
+          return [num, unit, n].filter(Boolean).join(' ').trim();
+        }).filter(Boolean)
+      : [];
+
+    // howIsMade: steps is per-language array of strings
+    const stepsArr = r.steps && typeof r.steps === 'object' && !Array.isArray(r.steps)
+      ? (r.steps[lg] || r.steps.ro || r.steps.en || [])
+      : [];
+    howIsMade[lg] = Array.isArray(stepsArr) ? stepsArr.join('. ') : (stepsArr || '');
+  });
+
+  return {
+    id: r.id || `budget_${idx + 1}`,
+    name,
+    origin,
+    category: { ro: 'Buget', en: 'Budget', es: 'Económico', fr: 'Budget', de: 'Budget', pt: 'Económico', ru: 'Бюджет', ar: 'اقتصادي', zh: '经济', ja: '節約', hi: 'बजट', tr: 'Bütçe', it: 'Economico', ko: '절약' },
+    ingredients,
+    howIsMade,
+    tags: r.tags || []
+  };
+});
+
 if (typeof window !== 'undefined') {
-  window.BUDGET_RECIPES = BUDGET_RECIPES;
+  window.BUDGET_RECIPES_RAW = BUDGET_RECIPES;
+  window.BUDGET_RECIPES = BUDGET_RECIPES_MAPPED;
 }
 
-/* EXPORTURI CORECTE PENTRU app.js */
-export const recipes = BUDGET_RECIPES;
-export default BUDGET_RECIPES;
-export { BUDGET_RECIPES };
+export const recipes = BUDGET_RECIPES_MAPPED;
+export default BUDGET_RECIPES_MAPPED;
+export { BUDGET_RECIPES_MAPPED as BUDGET_RECIPES };
 
 
 // =============================

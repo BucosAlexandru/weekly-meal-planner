@@ -5,7 +5,6 @@ import { createClient } from '@supabase/supabase-js';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
-// Citiți RAW body fără niciun parser
 function readRawBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
@@ -15,113 +14,217 @@ function readRawBody(req) {
   });
 }
 
+// Converts a Unix timestamp (seconds) to milliseconds for expires_at column
+function toMs(unixSeconds) {
+  if (!unixSeconds) return null;
+  return unixSeconds * 1000;
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
 
-  // --- DIAGNOSTIC: vezi dacă ai semnătura + secret încărcat + content-type ---
-  console.log('hdr stripe-signature?', !!req.headers['stripe-signature']);
-  console.log('env whsec present?', !!process.env.STRIPE_WEBHOOK_SECRET);
-  console.log('content-type:', req.headers['content-type']);
-
-  const sig = req.headers['stripe-signature'];
+  const sig   = req.headers['stripe-signature'];
   const whsec = process.env.STRIPE_WEBHOOK_SECRET;
-  if (!sig || !whsec) {
-    return res.status(400).send('Missing signature or secret');
-  }
+  if (!sig || !whsec) return res.status(400).send('Missing signature or secret');
 
   let event;
   try {
     const raw = await readRawBody(req);
-    console.log('raw length =', raw.length); // <— important
     event = stripe.webhooks.constructEvent(raw, sig, whsec);
   } catch (err) {
-    console.error('❌ Signature verify failed:', err?.message);
+    console.error('❌ Webhook signature failed:', err?.message);
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
+  console.log('✅ Stripe event:', event.type);
+
   try {
-    console.log('✅ Event:', event.type);
-
     switch (event.type) {
+
+      // ─────────────────────────────────────────────────────────────
+      // 1. Checkout completed → insert/update row with customer info
+      //    Then fetch subscription to get the real expiry date
+      // ─────────────────────────────────────────────────────────────
       case 'checkout.session.completed': {
-  const session = event.data.object;
-  const customerId = session.customer || null;
+        const session    = event.data.object;
+        const customerId = session.customer || null;
 
-  let email =
-    session.customer_email ||
-    session?.customer_details?.email ||
-    null;
+        let email =
+          session.customer_email ||
+          session?.customer_details?.email ||
+          null;
 
-  // încearcă să citești emailul de pe customer dacă nu a venit în sesiune
-  if (!email && customerId) {
-    try {
-      const c = await stripe.customers.retrieve(customerId);
-      if (!c.deleted) email = c.email || null;
-    } catch {}
-  }
+        if (!email && customerId) {
+          try {
+            const c = await stripe.customers.retrieve(customerId);
+            if (!c.deleted) email = c.email || null;
+          } catch {}
+        }
 
-  if (customerId) {
-    // 👉 upsert pe stripe_customer_id (nu pe email)
-    const { error } = await supabase
-      .from('tokens')
-      .upsert(
-        {
-          stripe_customer_id: customerId,
-          email: email || null,
-          stripe_subscription_id: session.subscription || null,
-        },
-        { onConflict: 'stripe_customer_id' }
-      );
+        // Fetch the subscription right away to get current_period_end
+        let expiresAt = null;
+        let subId     = session.subscription || null;
+        if (subId) {
+          try {
+            const sub = await stripe.subscriptions.retrieve(subId);
+            expiresAt = toMs(sub.current_period_end); // milliseconds
+          } catch (e) {
+            console.warn('Could not fetch subscription:', e.message);
+          }
+        }
 
-    if (error) console.error('SUPABASE upsert error:', error);
-  } else {
-    console.warn('Missing customerId in session');
-  }
-  break;
-}
+        if (customerId) {
+          // First try to update an existing row that already has this customer id
+          const { data: existing } = await supabase
+            .from('tokens')
+            .update({
+              email,
+              stripe_subscription_id: subId,
+              subscription_status: 'active',
+              expires_at: expiresAt,
+            })
+            .eq('stripe_customer_id', customerId)
+            .select('id');
 
+          if (!existing?.length) {
+            // No row for this customer yet — check if a row exists for the email
+            // (could be a manually created legacy row)
+            let merged = false;
+            if (email) {
+              const { data: byEmail } = await supabase
+                .from('tokens')
+                .update({
+                  stripe_customer_id: customerId,
+                  stripe_subscription_id: subId,
+                  subscription_status: 'active',
+                  expires_at: expiresAt,
+                })
+                .eq('email', email)
+                .is('stripe_customer_id', null) // only merge unlinked rows
+                .select('id');
+              merged = !!(byEmail?.length);
+            }
+
+            if (!merged) {
+              // Brand new customer — insert fresh row
+              await supabase.from('tokens').insert({
+                email,
+                stripe_customer_id: customerId,
+                stripe_subscription_id: subId,
+                subscription_status: 'active',
+                expires_at: expiresAt,
+              });
+            }
+          }
+
+          console.log(`checkout.session.completed → email=${email}, expires_at=${expiresAt}`);
+        } else {
+          console.warn('checkout.session.completed: missing customerId');
+        }
+        break;
+      }
+
+      // ─────────────────────────────────────────────────────────────
+      // 2. Subscription created / updated → sync expiry date
+      //    This fires on every renewal too, keeping expires_at fresh
+      // ─────────────────────────────────────────────────────────────
       case 'customer.subscription.created':
-      case 'customer.subscription.updated':
-      case 'customer.subscription.deleted': {
-        const sub = event.data.object;
+      case 'customer.subscription.updated': {
+        const sub  = event.data.object;
         const item = sub.items?.data?.[0] || null;
+
         const payload = {
           stripe_subscription_id: sub.id,
-          subscription_status: sub.status,
-          current_period_start: sub.current_period_start ? new Date(sub.current_period_start * 1000).toISOString() : null,
-          current_period_end:   sub.current_period_end   ? new Date(sub.current_period_end   * 1000).toISOString() : null,
-          cancel_at_period_end: !!sub.cancel_at_period_end,
-          canceled_at:          sub.canceled_at ? new Date(sub.canceled_at * 1000).toISOString() : null,
-          price_id:   item?.price?.id || null,
-          product_id: item?.price?.product || null,
-          quantity:   item?.quantity ?? 1,
-          trial_end:  sub.trial_end ? new Date(sub.trial_end * 1000).toISOString() : null,
+          subscription_status:    sub.status,
+          // expires_at = end of current billing period (ms)
+          expires_at:             toMs(sub.current_period_end),
+          current_period_start:   sub.current_period_start ? new Date(sub.current_period_start * 1000).toISOString() : null,
+          current_period_end:     sub.current_period_end   ? new Date(sub.current_period_end   * 1000).toISOString() : null,
+          cancel_at_period_end:   !!sub.cancel_at_period_end,
+          canceled_at:            sub.canceled_at ? new Date(sub.canceled_at * 1000).toISOString() : null,
+          price_id:               item?.price?.id   || null,
+          product_id:             item?.price?.product || null,
         };
 
-            let { data: updated } = await supabase
-        .from('tokens')
-        .update(payload)
-        .eq('stripe_customer_id', sub.customer)
-        .select('email');
-          
-      // ⬇️ AICI pui fallback-ul:
-      if (!updated?.length) {
-        try {
-          const c = await stripe.customers.retrieve(sub.customer);
-          if (!c.deleted) {
-            await supabase.from('tokens').upsert(
-              { email: c.email || null, stripe_customer_id: sub.customer, ...payload },
-              { onConflict: 'stripe_customer_id' } // <- păstrează aceeași cheie
-            );
-          }
-        } catch {}
+        const { data: updated } = await supabase
+          .from('tokens')
+          .update(payload)
+          .eq('stripe_customer_id', sub.customer)
+          .select('id');
+
+        // Fallback: row might not exist yet (subscription event arrived before checkout event)
+        if (!updated?.length) {
+          try {
+            const c = await stripe.customers.retrieve(sub.customer);
+            if (!c.deleted) {
+              await supabase.from('tokens').upsert(
+                { email: c.email || null, stripe_customer_id: sub.customer, ...payload },
+                { onConflict: 'stripe_customer_id' }
+              );
+            }
+          } catch {}
+        }
+
+        console.log(`${event.type} → expires_at=${payload.expires_at}, status=${payload.subscription_status}`);
+        break;
       }
-    
-      break;
-    }
+
+      // ─────────────────────────────────────────────────────────────
+      // 3. Subscription deleted (cancelled and period ended)
+      //    Set expires_at to now so access is immediately revoked
+      // ─────────────────────────────────────────────────────────────
+      case 'customer.subscription.deleted': {
+        const sub = event.data.object;
+
+        // If cancel_at_period_end was true, current_period_end is the correct cutoff.
+        // Otherwise revoke now.
+        const expiresAt = sub.current_period_end
+          ? toMs(sub.current_period_end)
+          : Date.now();
+
+        await supabase
+          .from('tokens')
+          .update({
+            subscription_status: 'canceled',
+            expires_at: expiresAt,
+            canceled_at: new Date().toISOString(),
+          })
+          .eq('stripe_customer_id', sub.customer);
+
+        console.log(`subscription.deleted → expires_at=${expiresAt}`);
+        break;
+      }
+
+      // ─────────────────────────────────────────────────────────────
+      // 4. Invoice paid → renewal: refresh expires_at for next period
+      // ─────────────────────────────────────────────────────────────
+      case 'invoice.payment_succeeded': {
+        const invoice = event.data.object;
+        if (invoice.billing_reason !== 'subscription_cycle') break;
+
+        const subId = invoice.subscription;
+        if (!subId) break;
+
+        try {
+          const sub = await stripe.subscriptions.retrieve(subId);
+          await supabase
+            .from('tokens')
+            .update({
+              expires_at:           toMs(sub.current_period_end),
+              current_period_end:   new Date(sub.current_period_end * 1000).toISOString(),
+              subscription_status:  sub.status,
+            })
+            .eq('stripe_customer_id', invoice.customer);
+
+          console.log(`invoice.payment_succeeded (renewal) → new expires_at=${toMs(sub.current_period_end)}`);
+        } catch (e) {
+          console.warn('invoice renewal update failed:', e.message);
+        }
+        break;
+      }
 
       default:
         break;
@@ -129,8 +232,9 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ received: true });
   } catch (e) {
-    console.error('❌ Handler exception:', e);
+    console.error('❌ Webhook handler error:', e);
     return res.status(500).send('Internal webhook handler error');
   }
 }
+
 export const config = { api: { bodyParser: false } };

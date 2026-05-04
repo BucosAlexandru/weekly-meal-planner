@@ -258,7 +258,7 @@ return t(name, origin, list);
     // --- LUNCH ---
     if (m.lunch) {
       const titleL = extractRecipeName(m.lunch);
-      const recipeLunch = recipes.find(r => r.name[lang]?.toLowerCase() === titleL.toLowerCase());
+      const recipeLunch = (window.recipes || []).find(r => r.name?.[lang]?.toLowerCase() === titleL.toLowerCase());
       const stepsLunch = (recipeLunch?.howIsMade?.[lang] || recipeLunch?.howIsMade?.ro || '')
         .split('.').map(x => x.trim()).filter(Boolean);
       const howIsMadeHTMLLunch = stepsLunch.length > 1
@@ -280,7 +280,7 @@ return t(name, origin, list);
     // --- DINNER ---
     if (m.dinner) {
       const titleC = extractRecipeName(m.dinner);
-      const recipeDinner = recipes.find(r => r.name[lang]?.toLowerCase() === titleC.toLowerCase());
+      const recipeDinner = (window.recipes || []).find(r => r.name?.[lang]?.toLowerCase() === titleC.toLowerCase());
       const stepsDinner = (recipeDinner?.howIsMade?.[lang] || recipeDinner?.howIsMade?.ro || '')
         .split('.').map(x => x.trim()).filter(Boolean);
       const howIsMadeHTMLDinner = stepsDinner.length > 1
@@ -310,8 +310,8 @@ return t(name, origin, list);
     msgEl.innerHTML = `<div style="margin-top:0; margin-bottom:12px; font-weight:600; color:#169d55; text-align:center; font-size:2.09em;">${pdfMessages[lang] || pdfMessages.ro}</div>`;
   }
   // --- BONUSURI ---
-  const desserts = recipes.filter(r => ["Desert","Dessert"].includes(r.category[lang] || r.category.ro));
-  const snacks   = recipes.filter(r => ["Gustare","Snack","Aperitiv","Appetizer"].includes(r.category[lang] || r.category.ro));
+  const desserts = (window.recipes || []).filter(r => ["Desert","Dessert"].includes(r.category?.[lang] || r.category?.ro));
+  const snacks   = (window.recipes || []).filter(r => ["Gustare","Snack","Aperitiv","Appetizer"].includes(r.category?.[lang] || r.category?.ro));
   const randomDessert = desserts.length ? desserts[Math.floor(Math.random()*desserts.length)] : null;
   const randomSnack   = snacks.length ? snacks[Math.floor(Math.random()*snacks.length)] : null;
   let bonusSection = "";
@@ -319,18 +319,18 @@ return t(name, origin, list);
     bonusSection += `
       <div class="callout snack">
         <b>${i18n[lang].bonusSnack || "Snack suggestion:"}</b>
-        <strong>${randomSnack.name[lang] || randomSnack.name.ro}</strong>
-        <div>${randomSnack.ingredients[lang]?.join(", ") || ""}</div>
-        <div>${randomSnack.howIsMade[lang] || randomSnack.howIsMade.ro || ""}</div>
+        <strong>${randomSnack.name?.[lang] || randomSnack.name?.ro || ''}</strong>
+        <div>${randomSnack.ingredients?.[lang]?.join(", ") || ""}</div>
+        <div>${randomSnack.howIsMade?.[lang] || randomSnack.howIsMade?.ro || ""}</div>
       </div>`;
   }
   if (randomDessert) {
     bonusSection += `
       <div class="callout dessert">
         <b>${i18n[lang].bonusDessert || "Bonus Dessert:"}</b>
-        <strong>${randomDessert.name[lang] || randomDessert.name.ro}</strong>
-        <div>${randomDessert.ingredients[lang]?.join(", ") || ""}</div>
-        <div>${randomDessert.howIsMade[lang] || randomDessert.howIsMade.ro || ""}</div>
+        <strong>${randomDessert.name?.[lang] || randomDessert.name?.ro || ''}</strong>
+        <div>${randomDessert.ingredients?.[lang]?.join(", ") || ""}</div>
+        <div>${randomDessert.howIsMade?.[lang] || randomDessert.howIsMade?.ro || ""}</div>
       </div>`;
   }
   bonusSection = bonusSection
@@ -366,44 +366,48 @@ listEl.innerHTML = `
   async function exportShoppingListToPDF() {
   const pdfArea = document.getElementById('pdf-impact-area');
   if (!pdfArea) return;
- document.body.classList.add('pdf-exporting');
-generatePDFimpact();
-window.scrollTo(0, 0);
-await new Promise(resolve => setTimeout(resolve, 80));
-if (window.html2canvas) window.html2canvas.logging = true;
-const { node: cleanNode, styleEl } = buildCleanPdfNode();
-document.head.appendChild(styleEl);
-cleanNode.style.position = 'absolute';
-cleanNode.style.left = '-9999px';
-document.body.appendChild(cleanNode);
-maybeCompactToTwoPages(cleanNode);
-paginateCleanNode(cleanNode);
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-const html2canvasScale = isIOS ? 1.36 : 2;
-html2pdf().set({
-  margin: [0, 0, 0, 0],
-  filename: 'meal-planner.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
-  html2canvas: {
-    scale: 2,
-    useCORS: true,
-    backgroundColor: '#ffffff',
-    scrollX: 0,
-    scrollY: 0
-  },
-  jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-  pagebreak: {
-    mode: ['css'],
-    avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.motiv']
+  let cleanNode = null, styleEl = null;
+  document.body.classList.add('pdf-exporting');
+  try {
+    generatePDFimpact();
+    window.scrollTo(0, 0);
+    await new Promise(resolve => setTimeout(resolve, 80));
+    const built = buildCleanPdfNode();
+    cleanNode = built.node;
+    styleEl = built.styleEl;
+    document.head.appendChild(styleEl);
+    cleanNode.style.position = 'absolute';
+    cleanNode.style.left = '-9999px';
+    document.body.appendChild(cleanNode);
+    maybeCompactToTwoPages(cleanNode);
+    paginateCleanNode(cleanNode);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    await html2pdf().set({
+      margin: [0, 0, 0, 0],
+      filename: 'meal-planner.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: isIOS ? 1.36 : 2,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        scrollX: 0,
+        scrollY: 0
+      },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: {
+        mode: ['css'],
+        avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.motiv']
+      }
+    })
+    .from(cleanNode)
+    .save();
+  } catch (err) {
+    console.error('❌ PDF generation error:', err);
+  } finally {
+    if (styleEl) styleEl.remove();
+    if (cleanNode) cleanNode.remove();
+    document.body.classList.remove('pdf-exporting');
   }
-})
-.from(cleanNode)
-.save()
-.finally(() => {
-  styleEl.remove();
-  cleanNode.remove();
-  document.body.classList.remove('pdf-exporting');
-});
 }
 function buildCleanPdfNode() {
   const src = document.getElementById('pdf-impact-area');
