@@ -1,7 +1,23 @@
-// ===== Imports
-import { recipes } from './recipes.js';
-window.recipes = recipes;
+// ===== Imports (TOATE sus)
+import { recipes as recipesMain } from './recipes.js';
+import { recipes as recipesBudget } from './recipes-budget.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
+
+// ===== Global / debug (după imports)
+window.isBudgetMenu = window.isBudgetMenu ?? false;
+
+// opțional: ca să le vezi în consolă ușor
+window.recipesMain = recipesMain;
+window.recipesBudget = recipesBudget;
+
+// dacă vrei toate rețetele la un loc (pentru console / alte funcții)
+window.recipes = [...recipesMain, ...recipesBudget];
+
+// helper pentru checkbox
+function isBudgetMenuEnabled() {
+  const cb = document.getElementById('budget-menu-toggle');
+  return !!(cb && cb.checked);
+}
 
 // ===== Helpers mici
 function extractRecipeName(text) {
@@ -10,12 +26,10 @@ function extractRecipeName(text) {
     .replace(/(este o rețetă|es una receta|is a traditional|est une recette|ist ein traditionelles|é uma receita|является традиционным|هي وصفة تقليدية|は伝統的な料理|は伝統料理です)[^.]*\.*$/, '')
     .trim();
 }
-
 function pickMotiv(langCode) {
   const arr = MOTIV[langCode] || MOTIV.ro;
   return arr[Math.floor(Math.random() * arr.length)];
 }
-
 // --- A11Y: aria-label pentru butoanele de dictare ---
 (function () {
   function addDictationAriaLabels(root = document) {
@@ -24,29 +38,23 @@ function pickMotiv(langCode) {
       headerCells[1]?.textContent.trim() || 'Lunch',
       headerCells[2]?.textContent.trim() || 'Dinner'
     ];
-
     root.querySelectorAll('button[onclick^="startDictation"]').forEach((btn) => {
       if (btn.hasAttribute('aria-label')) return;
-
       // Încearcă să derivezi ziua/coloana din tabel
       const td = btn.closest('td');
       const row = btn.closest('tr');
       const dayCell = row?.querySelector('th, td');
       const dayText = dayCell ? dayCell.textContent.trim() : '';
-
       // Indicele mesei (col 1 = lunch, col 2 = dinner)
       let mealIndex = 0;
       if (td && typeof td.cellIndex === 'number') {
         mealIndex = Math.max(0, td.cellIndex - 1);
       }
       const mealText = mealLabels[mealIndex] || '';
-
       // Eticheta accesibilă (localizată indirect din antet + zi)
       const label = (mealText && dayText) ? `${mealText} — ${dayText}` : 'Voice input';
-
       btn.setAttribute('aria-label', label);
       btn.setAttribute('title', label);
-
       // Ascunde emoji-ul de la screen reader, păstrând un text vizibil doar pentru SR
       if (!btn.querySelector('.visually-hidden')) {
         const sr = document.createElement('span');
@@ -64,40 +72,32 @@ function pickMotiv(langCode) {
       });
     });
   }
-
   // Rulează după ce se construiește planul
   document.addEventListener('DOMContentLoaded', () => {
     addDictationAriaLabels(document);
-
     // Dacă planul e re-rendat după acțiuni (schimbare limbă, meniu aleator etc.), prinde modificările
     const target = document.getElementById('pdf-content') || document.body;
     const mo = new MutationObserver(() => addDictationAriaLabels(document));
     mo.observe(target, { childList: true, subtree: true });
   });
 })();
-
 // ===== Limba globală
 // --- Detect limbă din URL (ex: /ro/, /en/, /tr/, /it/, /ko/). Are prioritate peste localStorage.
 function getLangFromPath() {
   const seg = (window.location.pathname || '/').split('/').filter(Boolean)[0];
   return (seg && i18n[seg]) ? seg : null;
 }
-
 const pathLang = getLangFromPath();
 let lang = pathLang || localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
-
 // fallback final
 if (!i18n[lang]) lang = 'ro';
-
 // dacă URL-ul impune limba, sincronizăm și localStorage
 if (pathLang) localStorage.setItem('lastLang', lang);
 // let lang = localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
 // if (!i18n[lang]) lang = 'ro';
-
 // ===== Quota PDF
 let pdfCount = +localStorage.getItem('pdfCount') || 0;
 let pdfFirst = +localStorage.getItem('pdfFirst') || 0;
-
 function resetPdfQuotaIfNeeded() {
   const now = Date.now();
   if (!pdfFirst || (now - pdfFirst > 86400000)) {
@@ -109,18 +109,14 @@ function resetPdfQuotaIfNeeded() {
 }
 function parseExpiryToMs(expires_at) {
   if (expires_at === null || expires_at === undefined || expires_at === '') return null;
-
   const s = String(expires_at).trim();
   if (/^\d+$/.test(s)) {
     const n = Number(s);
     return n < 1e12 ? n * 1000 : n;
   }
-
   const t = Date.parse(s);
   return isNaN(t) ? null : t;
 }
-
-
 // ===== Toate după ce DOM-ul e gata
 document.addEventListener('DOMContentLoaded', () => {
   // --- Elemente din DOM (vizibile doar aici)
@@ -129,9 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const langSwitcher = document.getElementById('lang-switcher');
   const resultDiv    = document.getElementById('result');
   const currencySelUI = document.getElementById('currency-select');
-
   // ---------- FUNCȚII UI / LOGIC ----------
-
   function renderTable() {
     const tbody = document.getElementById('plan-table');
     if (!tbody) return;
@@ -160,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `);
     });
   }
-
   function startDictation(inputId) {
     if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
       alert('Dictarea nu este suportată de browserul tău!');
@@ -170,14 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const recognition = new SpeechRecognition();
     const langMap = { ro:'ro-RO', en:'en-US', es:'es-ES', fr:'fr-FR', ru:'ru-RU', zh:'zh-CN', ja:'ja-JP', pt:'pt-PT', de:'de-DE', ar:'ar-SA', hi:'hi-IN',tr: 'tr-TR',it: 'it-IT',ko: 'ko-KR'};
     recognition.lang = langMap[lang] || 'en-US';
-
     const micBtn = document.querySelector(`[onclick="startDictation('${inputId}')"]`);
     if (micBtn) micBtn.classList.add('mic-active');
-
     recognition.onend = () => { if (micBtn) micBtn.classList.remove('mic-active'); };
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
-
     recognition.onresult = (event) => {
       const input = document.getElementById(inputId);
       if (input) {
@@ -191,14 +181,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     recognition.start();
   }
-
   function getRecipeText(recipe, langCode) {
   if (!recipe) return '';
-
   const name   = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
   const ingr   = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
   const origin = recipe.origin?.[langCode] || recipe.origin?.en || recipe.origin?.ro || '';
-
   const templates = {
     ro: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) este o rețetă tradițională din ${o}.` : `${n} este o rețetă tradițională din ${o}.`,
     en: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) is a traditional recipe from ${o}.` : `${n} is a traditional recipe from ${o}.`,
@@ -215,31 +202,32 @@ document.addEventListener('DOMContentLoaded', () => {
     it: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) è una ricetta tradizionale di ${o}.` : `${n} è una ricetta tradizionale di ${o}.`,
     ko: (n, o, list) => list?.length ? `${n} (${list.join(', ')})는(은) ${o}의 전통 요리입니다.` : `${n}는(은) ${o}의 전통 요리입니다.`,
   };
-
   const t = templates[langCode] || templates.en;
-  return t(name, origin, Array.isArray(ingr) ? ingr : []);
+const list = Array.isArray(ingr) ? ingr : [];
+// FIX: dacă nu ai ingrediente, nu genera propoziția "tradițională din ..."
+if (!list.length) {
+  if (name && origin) return `${name} (${origin})`; // opțional, mai curat
+  return name || '';
 }
-
-
+return t(name, origin, list);
+}
   function generateRandomMenu() {
-  // categorii stabile: ne uităm la EN (sau RO ca fallback)
-  const catStable = (r) => (r?.category?.en || r?.category?.ro || '').toLowerCase().trim();
+  const sourceRecipes = window.isBudgetMenu ? recipesBudget : recipesMain;
 
-  const isExcluded = (r) => {
-    const c = catStable(r);
-    return ['dessert', 'snack', 'appetizer', 'desert', 'gustare', 'aperitiv'].includes(c);
-  };
-
-  const lunchPool  = recipes.filter(r => (catStable(r) === 'lunch'  || catStable(r) === 'prânz') && !isExcluded(r));
-  const dinnerPool = recipes.filter(r => (catStable(r) === 'dinner' || catStable(r) === 'cină')  && !isExcluded(r));
-
-  if (!lunchPool.length || !dinnerPool.length) {
-    console.warn('Random menu: empty pool', { lang, lunch: lunchPool.length, dinner: dinnerPool.length });
+  if (!Array.isArray(sourceRecipes) || sourceRecipes.length < 7) {
+    console.warn("Random menu: sourceRecipes invalid/too small", sourceRecipes?.length);
     return;
   }
 
-  const lunches = lunchPool.sort(() => 0.5 - Math.random()).slice(0, 7);
-  const dinners = dinnerPool.sort(() => 0.5 - Math.random()).slice(0, 7);
+  // pool generic (nu te mai blochezi pe category lunch/dinner)
+  const pool = sourceRecipes;
+
+  // amestecare
+  const shuffled = [...pool].sort(() => 0.5 - Math.random());
+
+  // 7 pentru prânz + 7 pentru cină
+  const lunches = shuffled.slice(0, 7);
+  const dinners = shuffled.slice(7, 14);
 
   for (let i = 0; i < 7; i++) {
     const lunchInput  = document.getElementById(`d${i+1}l`);
@@ -258,20 +246,15 @@ document.addEventListener('DOMContentLoaded', () => {
       dinner: document.getElementById(`d${i+1}c`)?.value.trim() || ''
     }));
   }
-
   function generatePDFimpact() {
   if (window.html2canvas) {
     window.html2canvas.logging = true; // activare debug
   }
-
   const meals = collectMeals();
-
   let shoppingHTML = `<div>`;
   meals.forEach((m, idx) => {
     if (!m.lunch && !m.dinner) return;
-
     shoppingHTML += `<div class="recipe-section"><div class="recipe-day">${m.day}</div>`;
-
     // --- LUNCH ---
     if (m.lunch) {
       const titleL = extractRecipeName(m.lunch);
@@ -294,7 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     }
-
     // --- DINNER ---
     if (m.dinner) {
       const titleC = extractRecipeName(m.dinner);
@@ -317,11 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     }
-
     shoppingHTML += `</div>`;
   });
   shoppingHTML += `</div>`;
-
   // --- TITLU + MESAJ IMPACT ---
   const titleEl = document.getElementById('pdf-title');
   const msgEl   = document.getElementById('pdf-impact-message');
@@ -329,13 +309,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (msgEl) {
     msgEl.innerHTML = `<div style="margin-top:0; margin-bottom:12px; font-weight:600; color:#169d55; text-align:center; font-size:2.09em;">${pdfMessages[lang] || pdfMessages.ro}</div>`;
   }
-
   // --- BONUSURI ---
   const desserts = recipes.filter(r => ["Desert","Dessert"].includes(r.category[lang] || r.category.ro));
   const snacks   = recipes.filter(r => ["Gustare","Snack","Aperitiv","Appetizer"].includes(r.category[lang] || r.category.ro));
   const randomDessert = desserts.length ? desserts[Math.floor(Math.random()*desserts.length)] : null;
   const randomSnack   = snacks.length ? snacks[Math.floor(Math.random()*snacks.length)] : null;
-
   let bonusSection = "";
   if (randomSnack) {
     bonusSection += `
@@ -358,18 +336,15 @@ document.addEventListener('DOMContentLoaded', () => {
   bonusSection = bonusSection
   ? `<div id="bonus-section">${bonusSection}</div>`
   : "";
-
   const listEl = document.getElementById('pdf-list');
 if (listEl) {
   const today = new Date().toLocaleDateString(lang, { day: '2-digit', month: '2-digit', year: 'numeric' });
-  
   listEl.style.fontSize = "12px";
   const motivationalMessage = `
   <div class="motiv" style="margin-top:14px; padding:8px; background:#e9f7ee; border-left:4px solid #218739; border-radius:4px; font-size:11.5pt; color:#222; text-align:center;">
     ${pickMotiv(lang)}
   </div>
 `;
-
 listEl.innerHTML = `
   <h3 style="margin-bottom:10px; margin-top:0; text-align:left; padding-left:3.5mm; font-size:1.28em; color:#218739;">
     ${i18n[lang].shoppingList}
@@ -382,40 +357,29 @@ listEl.innerHTML = `
     Generat cu Meal-Planner.ro • ${today}
   </div>
 `;
-
 }
-
   document.querySelectorAll('.recipe-section').forEach(div => {
     div.style.fontSize = "12px";
     div.style.lineHeight = "1.35";
   });
 }
-
- 
   async function exportShoppingListToPDF() {
   const pdfArea = document.getElementById('pdf-impact-area');
   if (!pdfArea) return;
-
  document.body.classList.add('pdf-exporting');
 generatePDFimpact();
-
 window.scrollTo(0, 0);
 await new Promise(resolve => setTimeout(resolve, 80));
-
 if (window.html2canvas) window.html2canvas.logging = true;
-
 const { node: cleanNode, styleEl } = buildCleanPdfNode();
 document.head.appendChild(styleEl);
 cleanNode.style.position = 'absolute';
 cleanNode.style.left = '-9999px';
 document.body.appendChild(cleanNode);
-
 maybeCompactToTwoPages(cleanNode);
 paginateCleanNode(cleanNode);
-
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 const html2canvasScale = isIOS ? 1.36 : 2;
-
 html2pdf().set({
   margin: [0, 0, 0, 0],
   filename: 'meal-planner.pdf',
@@ -440,9 +404,7 @@ html2pdf().set({
   cleanNode.remove();
   document.body.classList.remove('pdf-exporting');
 });
-
 }
-
 function buildCleanPdfNode() {
   const src = document.getElementById('pdf-impact-area');
   const node = src.cloneNode(true);
@@ -450,7 +412,6 @@ function buildCleanPdfNode() {
   // curățăm toate stilurile inline, ca să nu încurce layoutul pentru PDF
   if (node.hasAttribute('style')) node.removeAttribute('style');
   node.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
-
   const styleEl = document.createElement('style');
   styleEl.id = 'pdf-safe-style';
   styleEl.textContent = `
@@ -465,7 +426,6 @@ html, body {
 :root{
   --brand:#218739; --brand-soft:#e9f7ee; --ink:#222; --muted:#666; --line:#ddd; --section-line:#6379ff;
 }
-
 /* Container A4: 210mm - 2*10mm = 190mm util */
 #pdf-impact-area{
   width: 190mm;
@@ -480,7 +440,6 @@ html, body {
   box-sizing: border-box;
 }
 #pdf-impact-area > :first-child { margin-top: 0; }
-
 /* Titlu + mesaj impact (doar prima pagină) */
 #pdf-title{
   text-align: center;
@@ -515,7 +474,6 @@ html, body {
   font-size: 16pt;
   line-height: 1.22;
 }
-
 /* Fiecare zi */
 .recipe-section{
   border: 1px solid var(--line);
@@ -534,7 +492,6 @@ html, body {
   margin: 0 0 2mm;
   letter-spacing: .2px;
 }
-
 /* Badge-uri */
 .recipe-lunch,
 .recipe-dinner{
@@ -548,7 +505,6 @@ html, body {
 }
 .recipe-lunch{  background: var(--brand-soft); color: var(--brand); }
 .recipe-dinner{ background: #eaf1ff; color: #1f4fbf; }
-
 /* Texte/liste */
 .origin{ color: var(--muted); }
 .how-title{ font-weight: 800; }
@@ -559,7 +515,6 @@ ul{
 }
 ul li{ margin: 0 0 1mm; }
 ul li::marker{ color: var(--brand); }
-
 /* Bonus */
 #bonus-section .callout{
   margin: 3mm 0 0;
@@ -573,7 +528,6 @@ ul li::marker{ color: var(--brand); }
 #bonus-section .snack{  background:#f1fff5; border-left:4px solid #43b581; }
 #bonus-section .dessert{background:#fffbe7; border-left:4px solid #ff7f50; }
 #bonus-section b{ display:block; margin-bottom:1mm; }
-
 /* Footer */
 .doc-footer{
   margin-top: 6mm;
@@ -583,7 +537,6 @@ ul li::marker{ color: var(--brand); }
   color: var(--muted);
   text-align: center;
 }
-
 /* Mesajul motivațional */
 .motiv{
   page-break-inside: avoid;
@@ -597,7 +550,6 @@ ul li::marker{ color: var(--brand); }
   color: #222;
   text-align: center;
 }
-
 /* Forțări de pagină din JS */
 .page-break{
   break-before: page;
@@ -608,15 +560,12 @@ ul li::marker{ color: var(--brand); }
   border: 0;
 }
 `;
-
   return { node, styleEl };
 }
-
 function maybeCompactToTwoPages(root){
   const MM_TO_PX = 96 / 25.4;
   const usable = (297 - 12 - 14) * MM_TO_PX; 
   const pagesNeeded = Math.ceil(root.scrollHeight / usable);
-
   if (pagesNeeded > 2) {  // <- schimbă în > 1 dacă vrei 2 pagini max
     root.style.fontSize = '11pt';        // era 11.5pt
     root.style.lineHeight = '1.25';      // era 1.28
@@ -629,44 +578,34 @@ function maybeCompactToTwoPages(root){
     });
   }
 }
-
 function paginateCleanNode(root){
   const MM_TO_PX = 96 / 25.4;
-
-
   const usable = (297 - 12 - 14) * MM_TO_PX; // mm → px
-
   const csRoot = getComputedStyle(root);
   const padTop    = parseFloat(csRoot.paddingTop)    || 0;
   const padBottom = parseFloat(csRoot.paddingBottom) || 0;
-
   const blocks = root.querySelectorAll(
     '#pdf-title, #pdf-impact-message, .recipe-section, #bonus-section, .doc-footer'
   );
-
   const SAFE = 24; 
   let page = 1;
   let y = padTop; 
-
   blocks.forEach(el => {
     const s  = getComputedStyle(el);
     const mt = parseFloat(s.marginTop)    || 0;
     const mb = parseFloat(s.marginBottom) || 0;
     const rectH = el.getBoundingClientRect().height; 
     const outerH = mt + rectH + mb;
-
     if (y + outerH > (usable * page) - SAFE) {
       const br = document.createElement('div');
       br.className = 'page-break';
       el.parentNode.insertBefore(br, el);
-
       page += 1;
       y = padTop + outerH; 
     } else {
       y += outerH;
     }
   });
-
   const footer = root.querySelector('.doc-footer');
   if (footer) {
     const sF  = getComputedStyle(footer);
@@ -681,11 +620,9 @@ function paginateCleanNode(root){
     }
   }
 }
-
  function attachAutoMenuBtn() {
   const bar = document.getElementById('auto-menu-bar');
   if (!bar) return; // nu crea butonul dacă nu există containerul
-
   let autoBtn = document.getElementById('auto-menu-btn');
   if (!autoBtn) {
     autoBtn = document.createElement('button');
@@ -695,12 +632,45 @@ function paginateCleanNode(root){
     autoBtn.setAttribute('data-i18n', 'btn.autoMenu');
     bar.appendChild(autoBtn);
   }
-
+// --- Budget checkbox (doar pentru meniul aleator) ---
+let budgetWrap = document.getElementById('budget-menu-wrap');
+let cb, lbl;
+if (!budgetWrap) {
+  budgetWrap = document.createElement('div');
+  budgetWrap.id = 'budget-menu-wrap';
+  budgetWrap.style.display = 'flex';
+  budgetWrap.style.alignItems = 'center';
+  budgetWrap.style.gap = '8px';
+  budgetWrap.style.marginTop = '6px';
+  cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.id = 'budget-menu-toggle';
+  lbl = document.createElement('label');
+  lbl.setAttribute('for', 'budget-menu-toggle');
+  lbl.style.margin = '0';
+  lbl.style.fontSize = '0.95rem';
+  cb.addEventListener('change', () => {
+    window.isBudgetMenu = cb.checked;
+  });
+  budgetWrap.appendChild(cb);
+  budgetWrap.appendChild(lbl);
+  bar.appendChild(budgetWrap);
+} else {
+  cb = document.getElementById('budget-menu-toggle');
+  lbl = budgetWrap.querySelector('label[for="budget-menu-toggle"]');
+}
+// IMPORTANT: setăm textul DE FIECARE DATĂ (ca să se schimbe la limbă)
+if (lbl) {
+  lbl.textContent = (i18n[lang] && i18n[lang]["budget.toggle"]) || "Meniu de buget (criză financiară)";
+}
+// IMPORTANT: păstrăm bifa dacă ai schimbat limba / rerender
+if (cb) {
+  cb.checked = !!window.isBudgetMenu;
+}
   // setăm și textul acum (în caz că data-i18n nu e procesat încă)
-  autoBtn.textContent = i18n[lang]["btn.autoMenu"] || 'Generează meniu aleator';
+  autoBtn.textContent = (i18n[lang] && i18n[lang]["btn.autoMenu"]) || 'Generează meniu aleator';
   autoBtn.onclick = generateRandomMenu;
 }
-
 // --- Lazy-load pentru html2pdf.js (varianta sigură pe CDN)
 async function ensureHtml2pdfLoaded() {
   if (window.html2pdf) return;
@@ -712,8 +682,6 @@ async function ensureHtml2pdfLoaded() {
     document.head.appendChild(s);
   });
 }
-
-
   function attachPdfListeners() {
   const freeBtn = document.getElementById('generate-btn');
   if (freeBtn && !freeBtn.dataset.attached) {
@@ -733,7 +701,6 @@ async function ensureHtml2pdfLoaded() {
     };
     freeBtn.dataset.attached = '1';
   }
-
   // butonul plătit apare dinamic
   if (resultDiv && !resultDiv.dataset.observing) {
     const obs = new MutationObserver(() => {
@@ -750,48 +717,39 @@ async function ensureHtml2pdfLoaded() {
     resultDiv.dataset.observing = '1';
   }
 }
-
-
   function updateButtonState() {
   resetPdfQuotaIfNeeded?.();
   const generateBtn = document.getElementById('generate-btn');
   if (!generateBtn || !buyBtn || !statusEl) return;
-
   // dacă vrei ca plata să NU apară pentru nelimitați:
   const showPay = (pdfCount >= 1) && !window.hasUnlimited;
-
   generateBtn.style.display = showPay ? 'none' : 'inline-block';
   buyBtn.style.display = showPay ? 'inline-block' : 'none';
   if (currencySelUI) currencySelUI.style.display = showPay ? 'inline-block' : 'none';
   statusEl.innerHTML = showPay ? (i18n[lang].maxed || '') : '';
 }
-
 (function setSeasonTheme(){
   const now = new Date();
   const m = now.getMonth(); // 0..11
   const isWinter = (m === 11 || m === 0); // Decembrie sau Ianuarie
   document.body.classList.toggle('theme-winter', isWinter);
 })();
-
  function applyTranslations() {
   // 1) Texte statice cu data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
   });
-
   // 2) Placeholderele
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
     if (i18n[lang][key]) el.placeholder = i18n[lang][key];
   });
-
   // 3) Butoanele principale
   const generateBtn = document.getElementById('generate-btn');
   const paidBtn     = document.getElementById('paid-generate-pdf'); // apare dinamic în #result
   const manageBtn   = document.getElementById('manage-subscription'); // butonul nou
   // buyBtn este definit sus în DOMContentLoaded (const buyBtn = ...)
-
   if (paidBtn) {
     paidBtn.innerHTML = i18n[lang]["btn.download"] || "Descarcă PDF";
   }
@@ -804,24 +762,20 @@ async function ensureHtml2pdfLoaded() {
   if (manageBtn) {
     manageBtn.textContent = i18n[lang]["btn.manage"] || "Manage subscription";
   }
-
   // 4) Titlul paginii
   if (i18n[lang].title) {
     document.title = i18n[lang].title;
   }
-
   // 5) Re-randări dependente de limbă
   renderTable();       
   attachPdfListeners();
   attachAutoMenuBtn(); 
-
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
     seoContainer.innerHTML = seoParagraphs[lang];
   }
 }
-
   // ---------- Stripe success (după ce avem DOM) ----------
   const params = new URLSearchParams(window.location.search);
   if (params.get('success') === 'true') {
@@ -834,7 +788,6 @@ async function ensureHtml2pdfLoaded() {
     updateButtonState(); // ← adăugare, ca să ascundă galbenul + selectorul
     window.history.replaceState({}, '', window.location.pathname);
   }
-
   // ---------- Populare selector de limbă ----------
   if (langSwitcher) {
     langSwitcher.innerHTML = '';
@@ -851,34 +804,29 @@ async function ensureHtml2pdfLoaded() {
       applyTranslations();
       updateButtonState();
       attachPdfListeners();
+      attachAutoMenuBtn();
     });
   }
-
 // ---------- Supabase (verificare email) ----------
 const supabase = window.supabase.createClient(
   'https://hwbzbidorkwtyvirozho.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
 );
 window.hasUnlimited = false;
-
 const verifyBtn  = document.getElementById('verifyBtn');
 const emailInput = document.getElementById('emailInput');
 const manageBtn  = document.getElementById('manage-subscription');
-
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
     const email = emailInput.value.trim();
-
     resultDiv.innerText = (i18n[lang]?.msg?.checking) || 'Checking...';
     if (manageBtn) manageBtn.style.display = 'none';
-
     if (!email) {
       window.hasUnlimited = false;
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.empty || 'Introduceți adresa de email!'}</span>`;
       if (typeof updateButtonState === 'function') updateButtonState();
       return;
     }
-
     const { data, error } = await supabase
       .from('tokens')
       .select('*')
@@ -890,26 +838,22 @@ if (verifyBtn && emailInput && resultDiv) {
       if (typeof updateButtonState === 'function') updateButtonState();
       return;
     }
-
     if (data && data.length > 0) {
       const now = Date.now();
       const valid = data.some(t => !t.expires_at || parseExpiryToMs(t.expires_at) > now);
 
       if (valid) {
         window.hasUnlimited = true;
-
         // calculează expirarea maximă
         const expiriesMs = data
           .map(t => parseExpiryToMs(t.expires_at))
           .filter(ms => ms !== null);
         const maxExpiryMs = expiriesMs.length ? Math.max(...expiriesMs) : null;
-
         const expiryText = maxExpiryMs
           ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
               new Date(maxExpiryMs).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' })
             }`
           : (access[lang]?.lifetime || 'nelimitat');
-
         resultDiv.innerHTML = `
           <span class="text-success mb-2 d-block">
             ${i18n[lang]["msg.valid"]} (${expiryText})
@@ -918,13 +862,10 @@ if (verifyBtn && emailInput && resultDiv) {
             ${i18n[lang]["btn.download"]}
           </button>
         `;
-
         // Dacă vrei să ascunzi plata pt. nelimitați, decomentează:
         if (buyBtn) buyBtn.style.display = 'none';
         if (currencySelUI) currencySelUI.style.display = 'none';
-
         attachPdfListeners();
-
         if (manageBtn) {
           manageBtn.style.display = 'inline-block';
           manageBtn.onclick = async () => {
@@ -945,9 +886,7 @@ if (verifyBtn && emailInput && resultDiv) {
             }
           };
         }
-
         if (typeof updateButtonState === 'function') updateButtonState();
-
       } else {
         window.hasUnlimited = false;
         resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.invalid || 'Nu există acces valid pentru acest email.'}</span>`;
@@ -961,7 +900,6 @@ if (verifyBtn && emailInput && resultDiv) {
       if (typeof updateButtonState === 'function') updateButtonState();
     }
   };
-
   // Enter submit
   emailInput.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
@@ -970,9 +908,6 @@ if (verifyBtn && emailInput && resultDiv) {
     }
   });
 }
-
-
-
   // ---------- Feedback form ----------
   const feedbackForm   = document.getElementById('feedbackForm');
   const feedbackMsg    = document.getElementById('feedbackMsg');
@@ -994,12 +929,10 @@ if (verifyBtn && emailInput && resultDiv) {
       setTimeout(() => feedbackStatus.innerHTML = '', 5000);
     });
   }
-
   // ---------- Expunere funcții pe window (pt. onclick inline) ----------
   window.startDictation = startDictation;
   window.generatePDFimpact = generatePDFimpact;
   window.exportShoppingListToPDF = exportShoppingListToPDF;
-
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();

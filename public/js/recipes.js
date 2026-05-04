@@ -15558,7 +15558,7 @@ export const recipes = [
       ko: "조리하고 양고기와 채소, 놓습니다 에서 a 요리, 위에와 으깬 감자, 그리고 오븐에 구워 노릇하게하세요."
     },
     originText: {
-      ro: "Plăcintă a ciobanului este o rețetă tradițională din Marea Britanie.",
+      ro: "Plăcinta ciobanului este o rețetă tradițională din Marea Britanie.",
       en: "Shepherd’s Pie is a traditional recipe from United Kingdom.",
       es: "Pastel de pastor es una receta tradicional de Reino Unido.",
       fr: "Hachis parmentier est une recette traditionnelle de Royaume-Uni.",
