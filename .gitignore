@@ -25,4 +25,4 @@ yarn-error.log*
 /public/js/find-duplicates.js
 /public/scripts/
 check-ssl-expiry.cjs
-check-ssl-expiry.js
+check-ssl-expiry.js.claude/
