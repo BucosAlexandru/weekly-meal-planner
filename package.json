@@ -8,7 +8,8 @@
     "sitemap": "node scripts/generate-sitemap.cjs",
     "build:js": "esbuild public/js/app.js --bundle --minify --outfile=public/js/app.min.js && esbuild public/js/checkout.js --bundle --minify --outfile=public/js/checkout.min.js && esbuild public/js/portal.js --bundle --minify --outfile=public/js/portal.min.js",
     "build:css": "esbuild public/css/style.css --minify --outfile=public/css/style.min.css",
-    "build": "npm run build:js && npm run build:css && npm run sitemap"
+    "content": "node scripts/generate-content.mjs",
+    "build": "npm run build:js && npm run build:css && npm run content"
   },
   "repository": {
     "type": "git",

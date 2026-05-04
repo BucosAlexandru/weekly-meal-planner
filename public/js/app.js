@@ -212,28 +212,32 @@ if (!list.length) {
 return t(name, origin, list);
 }
   function generateRandomMenu() {
-  const sourceRecipes = window.isBudgetMenu ? recipesBudget : recipesMain;
+  let pool;
+  if (window.isBudgetMenu) {
+    pool = recipesBudget;
+  } else {
+    // Apply active filter
+    const filterDef = typeof FILTER_DEFS !== 'undefined'
+      ? FILTER_DEFS.find(f => f.id === (window._activeFilter || 'all'))
+      : null;
+    const test = filterDef && filterDef.id !== 'all' ? filterDef.test : () => true;
+    pool = recipesMain.filter(test);
+    if (pool.length < 14) pool = recipesMain; // fallback to all
+  }
 
-  if (!Array.isArray(sourceRecipes) || sourceRecipes.length < 7) {
-    console.warn("Random menu: sourceRecipes invalid/too small", sourceRecipes?.length);
+  if (!Array.isArray(pool) || pool.length < 7) {
+    console.warn("Random menu: pool too small", pool?.length);
     return;
   }
 
-  // pool generic (nu te mai blochezi pe category lunch/dinner)
-  const pool = sourceRecipes;
-
-  // amestecare
   const shuffled = [...pool].sort(() => 0.5 - Math.random());
-
-  // 7 pentru prânz + 7 pentru cină
-  const lunches = shuffled.slice(0, 7);
-  const dinners = shuffled.slice(7, 14);
+  const lunches  = shuffled.slice(0, 7);
+  const dinners  = shuffled.slice(7, 14);
 
   for (let i = 0; i < 7; i++) {
     const lunchInput  = document.getElementById(`d${i+1}l`);
     const dinnerInput = document.getElementById(`d${i+1}c`);
     if (!lunchInput || !dinnerInput) continue;
-
     lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
     dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
   }
@@ -624,57 +628,169 @@ function paginateCleanNode(root){
     }
   }
 }
- function attachAutoMenuBtn() {
-  const bar = document.getElementById('auto-menu-bar');
-  if (!bar) return; // nu crea butonul dacă nu există containerul
-  let autoBtn = document.getElementById('auto-menu-btn');
-  if (!autoBtn) {
-    autoBtn = document.createElement('button');
-    autoBtn.id = 'auto-menu-btn';
-    autoBtn.type = 'button';
-    autoBtn.className = 'btn btn-success my-2';
-    autoBtn.setAttribute('data-i18n', 'btn.autoMenu');
-    bar.appendChild(autoBtn);
+  // ── Filter definitions ────────────────────────────────────────
+  const FILTER_DEFS = [
+    { id: 'all',       labelKey: 'filter.all',  emoji: '🌍',
+      test: () => true },
+    { id: 'med',       labelKey: 'filter.med',  emoji: '🫒',
+      test: r => ['Italia','Grecia','Franța','Spania','Turcia','Maroc','Portugalia'].includes(r.origin?.ro) },
+    { id: 'asian',     labelKey: 'filter.asian', emoji: '🍜',
+      test: r => ['Japonia','Coreea de Sud','China','Vietnam','Thailanda','India','Indonezia'].includes(r.origin?.ro) },
+    { id: 'vegetarian',labelKey: 'filter.veg',   emoji: '🌱',
+      test: r => {
+        const ingr = (r.ingredients?.ro || r.ingredients?.en || []).join(' ').toLowerCase();
+        return !/(pui|porc|vită|carne|pește|somon|ton|creveți|miel|beef|chicken|pork|fish|shrimp|lamb|bacon|prosciutto)/.test(ingr);
+      }
+    },
+    { id: 'budget',    labelKey: 'filter.budget', emoji: '💰',
+      test: () => false, isBudget: true },
+    { id: 'quick',     labelKey: 'filter.quick',  emoji: '⚡',
+      test: r => {
+        const ingr = (r.ingredients?.ro||r.ingredients?.en||[]).length;
+        return ingr <= 6;
+      }
+    },
+  ];
+
+  const FILTER_LABELS = {
+    ro: { 'filter.all':'Toate','filter.med':'Mediteranean','filter.asian':'Asian',
+          'filter.veg':'Vegetarian','filter.budget':'Buget','filter.quick':'Rapid' },
+    en: { 'filter.all':'All','filter.med':'Mediterranean','filter.asian':'Asian',
+          'filter.veg':'Vegetarian','filter.budget':'Budget','filter.quick':'Quick' },
+    default: { 'filter.all':'All','filter.med':'Mediterranean','filter.asian':'Asian',
+               'filter.veg':'Vegetarian','filter.budget':'Budget','filter.quick':'Quick' },
+  };
+  window._activeFilter = window._activeFilter || 'all';
+
+  // ── Live shopping list renderer ───────────────────────────────
+  function updateShoppingList() {
+    const listEl = document.getElementById('shopping-list');
+    if (!listEl) return;
+    const meals   = collectMeals();
+    const allIngr = new Map();
+    meals.forEach(m => {
+      [m.lunch, m.dinner].forEach(mealText => {
+        if (!mealText) return;
+        const recipeName = extractRecipeName(mealText);
+        const rec = (window.recipes || []).find(r =>
+          r.name?.[lang]?.toLowerCase() === recipeName.toLowerCase() ||
+          r.name?.ro?.toLowerCase()     === recipeName.toLowerCase()
+        );
+        const ingr = rec?.ingredients?.[lang] || rec?.ingredients?.ro || rec?.ingredients?.en || [];
+        ingr.forEach(i => {
+          const key = i.toLowerCase().replace(/\s*\(.*?\)/g,'').trim();
+          if (key && !allIngr.has(key)) allIngr.set(key, i);
+        });
+      });
+    });
+    if (allIngr.size === 0) {
+      listEl.innerHTML = '';
+      listEl.setAttribute('data-empty', 'true');
+      return;
+    }
+    listEl.removeAttribute('data-empty');
+    const sorted = [...allIngr.values()].sort((a,b)=>a.localeCompare(b));
+    listEl.innerHTML = sorted.map(i =>
+      `<li class="shopping-item">
+         <label class="shopping-label">
+           <input type="checkbox" class="shopping-check">
+           <span>${i[0].toUpperCase() + i.slice(1)}</span>
+         </label>
+       </li>`
+    ).join('');
   }
-// --- Budget checkbox (doar pentru meniul aleator) ---
-let budgetWrap = document.getElementById('budget-menu-wrap');
-let cb, lbl;
-if (!budgetWrap) {
-  budgetWrap = document.createElement('div');
-  budgetWrap.id = 'budget-menu-wrap';
-  budgetWrap.style.display = 'flex';
-  budgetWrap.style.alignItems = 'center';
-  budgetWrap.style.gap = '8px';
-  budgetWrap.style.marginTop = '6px';
-  cb = document.createElement('input');
-  cb.type = 'checkbox';
-  cb.id = 'budget-menu-toggle';
-  lbl = document.createElement('label');
-  lbl.setAttribute('for', 'budget-menu-toggle');
-  lbl.style.margin = '0';
-  lbl.style.fontSize = '0.95rem';
-  cb.addEventListener('change', () => {
-    window.isBudgetMenu = cb.checked;
-  });
-  budgetWrap.appendChild(cb);
-  budgetWrap.appendChild(lbl);
-  bar.appendChild(budgetWrap);
-} else {
-  cb = document.getElementById('budget-menu-toggle');
-  lbl = budgetWrap.querySelector('label[for="budget-menu-toggle"]');
-}
-// IMPORTANT: setăm textul DE FIECARE DATĂ (ca să se schimbe la limbă)
-if (lbl) {
-  lbl.textContent = (i18n[lang] && i18n[lang]["budget.toggle"]) || "Meniu de buget (criză financiară)";
-}
-// IMPORTANT: păstrăm bifa dacă ai schimbat limba / rerender
-if (cb) {
-  cb.checked = !!window.isBudgetMenu;
-}
-  // setăm și textul acum (în caz că data-i18n nu e procesat încă)
-  autoBtn.textContent = (i18n[lang] && i18n[lang]["btn.autoMenu"]) || 'Generează meniu aleator';
-  autoBtn.onclick = generateRandomMenu;
-}
+
+  // ── Cost estimate display ─────────────────────────────────────
+  const COST_RON = { all:200, med:240, asian:250, budget:130, vegetarian:170, quick:180, latin:220, eastern:190, worldtour:210 };
+  function showCostEstimate(filterId) {
+    let costBar = document.getElementById('cost-estimate-bar');
+    if (!costBar) {
+      costBar = document.createElement('div');
+      costBar.id = 'cost-estimate-bar';
+      costBar.className = 'cost-estimate-bar';
+      const bar = document.getElementById('auto-menu-bar');
+      if (bar) bar.appendChild(costBar);
+    }
+    const ron = COST_RON[filterId] || 200;
+    const eur = Math.round(ron / 4.8);
+    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${i18n[lang]?.costEstimate || 'Cost estimat'}: ~${ron} RON (~€${eur})</strong> / ${i18n[lang]?.perWeek || 'săptămână · 2 persoane'}`;
+    costBar.style.display = 'flex';
+  }
+
+  function attachAutoMenuBtn() {
+    const bar = document.getElementById('auto-menu-bar');
+    if (!bar) return;
+
+    // ── Filter chips ──────────────────────────────────────────
+    let chipRow = document.getElementById('filter-chip-row');
+    if (!chipRow) {
+      chipRow = document.createElement('div');
+      chipRow.id = 'filter-chip-row';
+      chipRow.className = 'filter-chip-row';
+      bar.insertBefore(chipRow, bar.firstChild);
+    }
+    const labels = FILTER_LABELS[lang] || FILTER_LABELS.default;
+    chipRow.innerHTML = FILTER_DEFS.map(f =>
+      `<button class="filter-chip${window._activeFilter===f.id?' active':''}" data-filter="${f.id}" type="button" aria-pressed="${window._activeFilter===f.id}">
+         ${f.emoji} ${labels[f.labelKey] || f.id}
+       </button>`
+    ).join('');
+    chipRow.querySelectorAll('.filter-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window._activeFilter = btn.dataset.filter;
+        const isBudget = FILTER_DEFS.find(f => f.id === window._activeFilter)?.isBudget || false;
+        window.isBudgetMenu = isBudget;
+        const cbEl = document.getElementById('budget-menu-toggle');
+        if (cbEl) cbEl.checked = isBudget;
+        chipRow.querySelectorAll('.filter-chip').forEach(b => {
+          b.classList.toggle('active', b.dataset.filter === window._activeFilter);
+          b.setAttribute('aria-pressed', b.dataset.filter === window._activeFilter);
+        });
+        showCostEstimate(window._activeFilter);
+      });
+    });
+
+    // ── Generate button ───────────────────────────────────────
+    let autoBtn = document.getElementById('auto-menu-btn');
+    if (!autoBtn) {
+      autoBtn = document.createElement('button');
+      autoBtn.id = 'auto-menu-btn';
+      autoBtn.type = 'button';
+      autoBtn.className = 'btn btn-autofill';
+      autoBtn.setAttribute('data-i18n', 'btn.autoMenu');
+      bar.appendChild(autoBtn);
+    }
+    autoBtn.innerHTML = `<i class="bi bi-shuffle" aria-hidden="true"></i> ${(i18n[lang] && i18n[lang]['btn.autoMenu']) || 'Generează meniu aleator'}`;
+    autoBtn.onclick = () => {
+      generateRandomMenu();
+      updateShoppingList();
+      showCostEstimate(window._activeFilter);
+    };
+
+    // ── Budget checkbox (hidden, kept for compatibility) ──────
+    let budgetWrap = document.getElementById('budget-menu-wrap');
+    if (!budgetWrap) {
+      budgetWrap = document.createElement('div');
+      budgetWrap.id = 'budget-menu-wrap';
+      budgetWrap.style.display = 'none'; // hidden — filter chips replace it
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.id = 'budget-menu-toggle';
+      cb.addEventListener('change', () => { window.isBudgetMenu = cb.checked; });
+      budgetWrap.appendChild(cb);
+      bar.appendChild(budgetWrap);
+    }
+    const cbEl = document.getElementById('budget-menu-toggle');
+    if (cbEl) cbEl.checked = !!window.isBudgetMenu;
+
+    // ── Wire up input change → live shopping list ─────────────
+    document.querySelectorAll('#plan-table input').forEach(inp => {
+      if (!inp.dataset.shopListener) {
+        inp.addEventListener('input', updateShoppingList);
+        inp.dataset.shopListener = '1';
+      }
+    });
+  }
 // --- Lazy-load pentru html2pdf.js (varianta sigură pe CDN)
 async function ensureHtml2pdfLoaded() {
   if (window.html2pdf) return;
@@ -937,9 +1053,94 @@ if (verifyBtn && emailInput && resultDiv) {
   window.startDictation = startDictation;
   window.generatePDFimpact = generatePDFimpact;
   window.exportShoppingListToPDF = exportShoppingListToPDF;
+  window.updateShoppingList = updateShoppingList;
+
+  // ---------- Wire plan-table inputs → live shopping list ----------
+  function wireInputsToShoppingList() {
+    document.querySelectorAll('#plan-table input').forEach(inp => {
+      if (!inp.dataset.shopWired) {
+        inp.addEventListener('input', updateShoppingList);
+        inp.dataset.shopWired = '1';
+      }
+    });
+  }
+  // Also observe table rebuilds (lang switch, etc.)
+  const planTableObserver = new MutationObserver(() => {
+    wireInputsToShoppingList();
+    updateShoppingList();
+  });
+  const planTableEl = document.getElementById('plan-table');
+  if (planTableEl) planTableObserver.observe(planTableEl, { childList: true, subtree: true });
+
+  // ---------- ?autoplan= deep link (from SEO pages) ----------
+  const autoplanParam = new URLSearchParams(window.location.search).get('autoplan');
+  if (autoplanParam) {
+    // Map of plan ID → { lunches[], dinners[], isBudget? }
+    const PLAN_DATA = {
+      mediteranean: {
+        lunches: ['Spaghete Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
+        dinners: ['Musaca grecească','Ratatouille','Souvlaki','Tajine','Boeuf Bourguignon','Spanakopita','Harira']
+      },
+      asia: {
+        lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
+        dinners: ['Sushi','Curry de pui','Ramen','Pui Gong Bao','Nasi Goreng','Rendang','Tom Kha Gai']
+      },
+      buget: { isBudget: true },
+      'est-european': {
+        lunches: ['Ciorbă de burtă','Bors','Fasole cu cârnați','Gulaș','Pierogi','Lobio','Chakhokhbili'],
+        dinners: ['Pui Kiev','Khinkali','Chicken Paprikash','Kotlet schabowy','Zeamă','Okroshka','Solyanka']
+      },
+      'tur-mondial': {
+        lunches: ['Schnitzel','Tabbouleh','Hummus','Koshari','Shakshuka','Smørrebrød','Chakchouka'],
+        dinners: ['Cheeseburger','Fish and Chips','Chifteluțe suedeze','Jerk Chicken','Jollof Rice','Biryani','Bobotie']
+      },
+      latin: {
+        lunches: ['Tamale','Arroz Chaufa','Lomo Saltado','Picadillo','Pozole','Pupusa','Arepa'],
+        dinners: ['Tacos','Feijoada','Chili con carne','Moqueca','Ropa Vieja','Bandeja Paisa','Chiles en nogada']
+      },
+      vegetarian: {
+        lunches: ['Gazpacho','Tabbouleh','Ratatouille','Dhal','Shakshuka','Fasolada','Pasta alla Norma'],
+        dinners: ['Musaca grecească','Pad Thai','Rajma','Hummus','Bibimbap','Spanakopita','Mapo Tofu']
+      },
+      rapid: {
+        lunches: ['Spaghete Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
+        dinners: ['Pui Gong Bao','Pho','Tom Yum','Curry de pui','Nasi Goreng','Cheeseburger','Fish and Chips']
+      }
+    };
+    const plan = PLAN_DATA[autoplanParam];
+    if (plan) {
+      setTimeout(() => { // wait for renderTable
+        if (plan.isBudget) {
+          window.isBudgetMenu = true;
+          generateRandomMenu();
+        } else {
+          const allSrc = [...recipesMain, ...recipesBudget];
+          plan.lunches.forEach((name, i) => {
+            const inp = document.getElementById(`d${i+1}l`);
+            if (!inp) return;
+            const rec = allSrc.find(r => r.name?.ro === name || r.name?.en === name);
+            inp.value = rec ? getRecipeText(rec, lang) : name;
+          });
+          plan.dinners.forEach((name, i) => {
+            const inp = document.getElementById(`d${i+1}c`);
+            if (!inp) return;
+            const rec = allSrc.find(r => r.name?.ro === name || r.name?.en === name);
+            inp.value = rec ? getRecipeText(rec, lang) : name;
+          });
+        }
+        updateShoppingList();
+        // clean up URL
+        window.history.replaceState({}, '', window.location.pathname);
+        // scroll to planner
+        document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior:'smooth', block:'start' });
+      }, 200);
+    }
+  }
+
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();
   attachPdfListeners();
   updateButtonState();
+  wireInputsToShoppingList();
 });

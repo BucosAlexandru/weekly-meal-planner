@@ -247,6 +247,56 @@ body {
   margin-bottom: 22px;
 }
 
+/* ── Filter chips ── */
+.filter-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.filter-chip {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink-2);
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.filter-chip:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+  background: var(--color-brand-light);
+}
+.filter-chip.active {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--color-brand-glow);
+}
+
+/* ── Cost estimate bar ── */
+.cost-estimate-bar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(90deg, #fffbea, #fff8e1);
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: #92400e;
+  margin-top: 10px;
+}
+
 /* ================================================
    APP SECTIONS  (white cards)
    ================================================ */
@@ -372,8 +422,39 @@ input.form-control:focus {
   padding: 12px 20px 18px;
   margin: 0;
   min-height: 52px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 2px 8px;
 }
 
+/* Live shopping items with checkbox */
+.shopping-item {
+  list-style: none;
+  padding: 3px 0;
+}
+.shopping-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-size: 0.87rem;
+  color: var(--ink-2);
+  transition: color 0.12s;
+}
+.shopping-label:hover { color: var(--ink); }
+.shopping-check {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-brand);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.shopping-check:checked + span {
+  text-decoration: line-through;
+  color: var(--ink-4);
+}
+
+/* Old .list-group-item support */
 .shopping-list .list-group-item {
   border: none;
   border-bottom: 1px solid var(--line);
@@ -395,13 +476,15 @@ input.form-control:focus {
 }
 .shopping-list .list-group-item strong { color: var(--color-brand); font-weight: 600; }
 
-#shopping-list:empty::after {
+#shopping-list[data-empty='true']::after,
+#shopping-list:not(:has(li))::after {
   content: attr(data-empty-msg);
   display: block;
   padding: 10px 0;
   color: var(--ink-4);
   font-size: 0.85rem;
   font-style: italic;
+  grid-column: 1 / -1;
 }
 
 /* ================================================
