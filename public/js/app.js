@@ -1,19 +1,46 @@
 // ===== Imports (TOATE sus)
 import { recipes as recipesMain } from './recipes.js';
-import { recipes as recipesBudget } from './recipes-budget.js';
+import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
 
-// ===== Global / debug (după imports)
+// ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
+let recipesBudget = [];
+let _budgetLoadPromise = null;
+async function ensureBudgetRecipes() {
+  if (recipesBudget.length > 0) return;
+  if (_budgetLoadPromise) return _budgetLoadPromise;
+  _budgetLoadPromise = import('./recipes-budget.js').then(mod => {
+    recipesBudget = mod.recipes || mod.default || [];
+    // Auto-assign metadata for budget recipes
+    recipesBudget.forEach((r, idx) => {
+      if (!r.time) r.time = Math.max(20, Math.min(40, (r.ingredients?.ro?.length || 5) * 4));
+      if (!r.costRon) r.costRon = 12;
+      if (!r.tags) r.tags = ['budget'];
+      else if (!r.tags.includes('budget')) r.tags.push('budget');
+    });
+    window.recipesBudget = recipesBudget;
+    window.recipes = [...recipesMain, ...recipesBudget];
+  }).catch(err => console.error('Budget recipes load failed:', err));
+  return _budgetLoadPromise;
+}
+
+// ===== Apply metadata to main recipes =========================================
+recipesMain.forEach(r => {
+  const meta = recipesMeta[r.id];
+  if (!meta) return;
+  r.time    = meta.time;
+  r.costRon = meta.costRon;
+  r.tags    = meta.tags || [];
+  if (meta.desc) r.desc = meta.desc;
+});
+
+// ===== Global / debug =========================================================
 window.isBudgetMenu = window.isBudgetMenu ?? false;
-
-// opțional: ca să le vezi în consolă ușor
-window.recipesMain = recipesMain;
+window.recipesMain  = recipesMain;
 window.recipesBudget = recipesBudget;
+window.recipes = [...recipesMain];   // budget appended after lazy load
 
-// dacă vrei toate rețetele la un loc (pentru console / alte funcții)
-window.recipes = [...recipesMain, ...recipesBudget];
-
-// helper pentru checkbox
+// helper
 function isBudgetMenuEnabled() {
   const cb = document.getElementById('budget-menu-toggle');
   return !!(cb && cb.checked);
@@ -211,9 +238,10 @@ if (!list.length) {
 }
 return t(name, origin, list);
 }
-  function generateRandomMenu() {
+  async function generateRandomMenu() {
   let pool;
   if (window.isBudgetMenu) {
+    await ensureBudgetRecipes();
     pool = recipesBudget;
   } else {
     // Apply active filter
@@ -241,6 +269,8 @@ return t(name, origin, list);
     lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
     dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
   }
+  // Refresh recipe meta chips after filling
+  setTimeout(() => updateAllRecipeMeta(), 50);
 }
 
   function collectMeals() {
@@ -269,9 +299,15 @@ return t(name, origin, list);
         ? `<ul>${stepsLunch.map(s => `<li>${s}.</li>`).join('')}</ul>`
         : `<span class="howis">${stepsLunch[0] || ''}</span>`;
 
+      const lunchMetaBadges = recipeLunch ? [
+        recipeLunch.time    ? `⏱️ ${recipeLunch.time} min` : '',
+        recipeLunch.costRon ? `💰 ~${recipeLunch.costRon} RON` : '',
+        ...(recipeLunch.tags || []).slice(0,2).map(t => (TAG_LABELS[t]||{})[lang]||(TAG_LABELS[t]||{}).en||t),
+      ].filter(Boolean).join('  ·  ') : '';
       shoppingHTML += `
         <div>
           <span class="recipe-lunch">🍲 ${i18n[lang]["col.lunch"]}: ${titleL}</span><br>
+          ${lunchMetaBadges ? `<span class="pdf-meta-badges">${lunchMetaBadges}</span><br>` : ''}
           ${recipeLunch?.origin?.[lang] ? `<em class="origin">(${i18n[lang]["col.origin"] || 'Țara'}: ${recipeLunch.origin[lang]})</em><br>` : ''}
           ${recipeLunch?.ingredients?.[lang]?.length ? `<span class="ingredients">${i18n[lang]["col.ingredients"]}: ${recipeLunch.ingredients[lang].join(', ')}</span>` : ''}
           ${(recipeLunch?.howIsMade?.[lang] || recipeLunch?.howIsMade?.ro) ? `
@@ -291,9 +327,15 @@ return t(name, origin, list);
         ? `<ul>${stepsDinner.map(s => `<li>${s}.</li>`).join('')}</ul>`
         : `<span class="howis">${stepsDinner[0] || ''}</span>`;
 
+      const dinnerMetaBadges = recipeDinner ? [
+        recipeDinner.time    ? `⏱️ ${recipeDinner.time} min` : '',
+        recipeDinner.costRon ? `💰 ~${recipeDinner.costRon} RON` : '',
+        ...(recipeDinner.tags || []).slice(0,2).map(t => (TAG_LABELS[t]||{})[lang]||(TAG_LABELS[t]||{}).en||t),
+      ].filter(Boolean).join('  ·  ') : '';
       shoppingHTML += `
         <div>
           <span class="recipe-dinner">🌙 ${i18n[lang]["col.dinner"]}: ${titleC}</span><br>
+          ${dinnerMetaBadges ? `<span class="pdf-meta-badges">${dinnerMetaBadges}</span><br>` : ''}
           ${recipeDinner?.origin?.[lang] ? `<em class="origin">(${i18n[lang]["col.origin"] || 'Țara'}: ${recipeDinner.origin[lang]})</em><br>` : ''}
           ${recipeDinner?.ingredients?.[lang]?.length ? `<span class="ingredients">${i18n[lang]["col.ingredients"]}: ${recipeDinner.ingredients[lang].join(', ')}</span>` : ''}
           ${(recipeDinner?.howIsMade?.[lang] || recipeDinner?.howIsMade?.ro) ? `
@@ -668,6 +710,9 @@ function paginateCleanNode(root){
     if (!listEl) return;
     const meals   = collectMeals();
     const allIngr = new Map();
+    let   totalCost = 0;
+    let   matchedRecipes = 0;
+
     meals.forEach(m => {
       [m.lunch, m.dinner].forEach(mealText => {
         if (!mealText) return;
@@ -676,6 +721,10 @@ function paginateCleanNode(root){
           r.name?.[lang]?.toLowerCase() === recipeName.toLowerCase() ||
           r.name?.ro?.toLowerCase()     === recipeName.toLowerCase()
         );
+        if (rec) {
+          matchedRecipes++;
+          if (rec.costRon) totalCost += rec.costRon;
+        }
         const ingr = rec?.ingredients?.[lang] || rec?.ingredients?.ro || rec?.ingredients?.en || [];
         ingr.forEach(i => {
           const key = i.toLowerCase().replace(/\s*\(.*?\)/g,'').trim();
@@ -683,6 +732,27 @@ function paginateCleanNode(root){
         });
       });
     });
+
+    // Show/hide cost summary bar
+    let costSummary = document.getElementById('shopping-cost-summary');
+    if (totalCost > 0) {
+      if (!costSummary) {
+        costSummary = document.createElement('div');
+        costSummary.id = 'shopping-cost-summary';
+        costSummary.className = 'shopping-cost-summary';
+        listEl.parentElement?.insertBefore(costSummary, listEl);
+      }
+      const eur = (totalCost / 4.97).toFixed(0);
+      const lbl = i18n[lang];
+      costSummary.innerHTML =
+        `<span class="cost-icon">💰</span>
+         <span>${lbl?.estWeeklyCost || 'Cost estimat săptămână'}: <strong>~${totalCost} RON</strong> (~€${eur})</span>
+         <span class="cost-sub">${matchedRecipes} ${lbl?.mealsFound || 'mese găsite'}</span>`;
+      costSummary.style.display = 'flex';
+    } else if (costSummary) {
+      costSummary.style.display = 'none';
+    }
+
     if (allIngr.size === 0) {
       listEl.innerHTML = '';
       listEl.setAttribute('data-empty', 'true');
@@ -698,6 +768,65 @@ function paginateCleanNode(root){
          </label>
        </li>`
     ).join('');
+  }
+
+  // ── Recipe meta chips (time / cost / tags) under each meal input ──────────
+  function getRecipeByInput(inputVal) {
+    if (!inputVal) return null;
+    const name = extractRecipeName(inputVal).toLowerCase();
+    return (window.recipes || []).find(r =>
+      r.name?.[lang]?.toLowerCase() === name || r.name?.ro?.toLowerCase() === name
+    ) || null;
+  }
+
+  function renderRecipeMeta(rec) {
+    if (!rec) return '';
+    const parts = [];
+    if (rec.time) parts.push(`<span class="rmeta-chip rmeta-time">⏱️ ${rec.time} min</span>`);
+    if (rec.costRon) parts.push(`<span class="rmeta-chip rmeta-cost">💰 ~${rec.costRon} RON</span>`);
+    if (rec.tags?.length) {
+      const shownTags = rec.tags.slice(0, 2);
+      shownTags.forEach(tagId => {
+        const label = (TAG_LABELS[tagId] || {})[lang] || (TAG_LABELS[tagId] || {}).en || tagId;
+        const emoji = { quick:'⚡', budget:'💲', vegetarian:'🌱', vegan:'🌿',
+                        'high-protein':'💪', family:'👨‍👩‍👧', healthy:'🥗',
+                        spicy:'🌶️', 'one-pot':'🍲' }[tagId] || '';
+        parts.push(`<span class="rmeta-chip rmeta-tag">${emoji} ${label}</span>`);
+      });
+    }
+    if (!parts.length) return '';
+    // description (first sentence of howIsMade if no custom desc)
+    let descTxt = rec.desc?.[lang] || rec.desc?.en || '';
+    if (!descTxt && rec.howIsMade) {
+      const raw = rec.howIsMade[lang] || rec.howIsMade.ro || rec.howIsMade.en || '';
+      descTxt = raw.split(/[.!?]/)[0].trim();
+      if (descTxt && rec.time) descTxt += `. ${(READY_IN[lang] || READY_IN.en)(rec.time)}.`;
+    }
+    return `<div class="recipe-meta-row">${parts.join('')}${descTxt ? `<span class="rmeta-desc">${descTxt}</span>` : ''}</div>`;
+  }
+
+  function updateAllRecipeMeta() {
+    for (let day = 1; day <= 7; day++) {
+      ['l','c'].forEach(type => {
+        const input = document.getElementById(`d${day}${type}`);
+        if (!input) return;
+        const metaId = `rmeta-d${day}${type}`;
+        let metaEl = document.getElementById(metaId);
+        const rec = getRecipeByInput(input.value);
+        const html = renderRecipeMeta(rec);
+        if (html) {
+          if (!metaEl) {
+            metaEl = document.createElement('div');
+            metaEl.id = metaId;
+            input.parentElement?.appendChild(metaEl);
+          }
+          metaEl.innerHTML = html;
+          metaEl.style.display = '';
+        } else if (metaEl) {
+          metaEl.style.display = 'none';
+        }
+      });
+    }
   }
 
   // ── Cost estimate display ─────────────────────────────────────
@@ -783,13 +912,18 @@ function paginateCleanNode(root){
     const cbEl = document.getElementById('budget-menu-toggle');
     if (cbEl) cbEl.checked = !!window.isBudgetMenu;
 
-    // ── Wire up input change → live shopping list ─────────────
+    // ── Wire up input change → live shopping list + recipe meta ──
     document.querySelectorAll('#plan-table input').forEach(inp => {
       if (!inp.dataset.shopListener) {
-        inp.addEventListener('input', updateShoppingList);
+        inp.addEventListener('input', () => {
+          updateShoppingList();
+          updateAllRecipeMeta();
+        });
         inp.dataset.shopListener = '1';
       }
     });
+    // Initial render if inputs already have values (e.g. after generateRandomMenu)
+    updateAllRecipeMeta();
   }
 // --- Lazy-load pentru html2pdf.js (varianta sigură pe CDN)
 async function ensureHtml2pdfLoaded() {
@@ -1055,11 +1189,14 @@ if (verifyBtn && emailInput && resultDiv) {
   window.exportShoppingListToPDF = exportShoppingListToPDF;
   window.updateShoppingList = updateShoppingList;
 
-  // ---------- Wire plan-table inputs → live shopping list ----------
+  // ---------- Wire plan-table inputs → live shopping list + meta ----------
   function wireInputsToShoppingList() {
     document.querySelectorAll('#plan-table input').forEach(inp => {
       if (!inp.dataset.shopWired) {
-        inp.addEventListener('input', updateShoppingList);
+        inp.addEventListener('input', () => {
+          updateShoppingList();
+          updateAllRecipeMeta();
+        });
         inp.dataset.shopWired = '1';
       }
     });
@@ -1068,6 +1205,7 @@ if (verifyBtn && emailInput && resultDiv) {
   const planTableObserver = new MutationObserver(() => {
     wireInputsToShoppingList();
     updateShoppingList();
+    updateAllRecipeMeta();
   });
   const planTableEl = document.getElementById('plan-table');
   if (planTableEl) planTableObserver.observe(planTableEl, { childList: true, subtree: true });

@@ -472,6 +472,73 @@ input.form-control:focus {
   color: var(--ink-4);
 }
 
+/* ── Weekly cost summary bar (above shopping list) ── */
+.shopping-cost-summary {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #fff9e6 0%, #fffbef 100%);
+  border: 1px solid #f5d96a;
+  border-radius: 10px;
+  padding: .6rem 1rem;
+  margin-bottom: .75rem;
+  font-size: .88rem;
+  color: var(--ink, #111827);
+}
+.shopping-cost-summary .cost-icon { font-size: 1.1rem; }
+.shopping-cost-summary strong { color: #b45309; }
+.shopping-cost-summary .cost-sub {
+  margin-left: auto;
+  font-size: .8rem;
+  color: var(--ink-3, #6b7280);
+}
+
+/* ── Recipe meta chips (time / cost / tags under each meal input) ── */
+.recipe-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .45rem;
+  align-items: center;
+  margin-top: .25rem;
+  margin-bottom: .15rem;
+  min-height: 0;
+  animation: fadeIn .2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.rmeta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+  font-size: .74rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .15rem .55rem;
+  white-space: nowrap;
+}
+.rmeta-time  { background: #e0f2fe; color: #0369a1; }
+.rmeta-cost  { background: #fef9c3; color: #854d0e; }
+.rmeta-tag   { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+.rmeta-desc  {
+  width: 100%;
+  font-size: .77rem;
+  color: var(--ink-3, #6b7280);
+  font-style: italic;
+  margin-top: .1rem;
+  line-height: 1.4;
+}
+
+/* ── PDF meta badges (inside PDF output) ── */
+.pdf-meta-badges {
+  display: inline-block;
+  font-size: 10px;
+  color: #555;
+  background: #f0f9f0;
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin: 2px 0;
+}
+
 /* Old .list-group-item support */
 .shopping-list .list-group-item {
   border: none;
