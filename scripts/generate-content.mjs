@@ -741,22 +741,8 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr') => `<!DOCTYPE ht
 </head>
 <body>`;
 
-const RECIPES_NAV = {
-  ro: { href:'/ro/retete/',   label:'🍽️ Rețete' },
-  en: { href:'/en/recipes/',  label:'🍽️ Recipes' },
-  es: { href:'/en/recipes/',  label:'🍽️ Recetas' },
-  fr: { href:'/en/recipes/',  label:'🍽️ Recettes' },
-  de: { href:'/en/recipes/',  label:'🍽️ Rezepte' },
-  pt: { href:'/en/recipes/',  label:'🍽️ Receitas' },
-  ru: { href:'/en/recipes/',  label:'🍽️ Рецепты' },
-  ar: { href:'/en/recipes/',  label:'🍽️ وصفات' },
-  zh: { href:'/en/recipes/',  label:'🍽️ 食谱' },
-  ja: { href:'/en/recipes/',  label:'🍽️ レシピ' },
-  hi: { href:'/en/recipes/',  label:'🍽️ व्यंजन' },
-  tr: { href:'/en/recipes/',  label:'🍽️ Tarifler' },
-  it: { href:'/en/recipes/',  label:'🍽️ Ricette' },
-  ko: { href:'/en/recipes/',  label:'🍽️ 레시피' },
-};
+// Will be populated after RECIPE_LANG is defined (see below)
+let RECIPES_NAV = {};
 
 const appHref = (lc) => lc.appDir && lc.appDir !== '/' ? `${lc.appDir}/` : '/';
 
@@ -988,171 +974,282 @@ ${makeFooter(lc)}
 }
 
 /* ════════════════════════════════════════════════════════════════
-   RECIPE PAGES — Romanian + English only (detailed pages)
+   RECIPE CONFIGS — all 14 languages
    ════════════════════════════════════════════════════════════════ */
-const NAV_RO = makeNav(LANG_CONFIGS.ro);
-const NAV_EN = makeNav(LANG_CONFIGS.en);
-const FOOTER_RO = makeFooter(LANG_CONFIGS.ro);
-const FOOTER_EN = makeFooter(LANG_CONFIGS.en);
+const RECIPE_LANG = {
+  ro: { dir:'/ro/retete',    indexTitle:'Rețete din Toată Lumea | MealPlanner.ro',
+        indexH1:'Rețete din <span class="accent">Toată Lumea</span>',
+        indexDesc: n=>`${n} rețete cu ingrediente și mod de preparare.`,
+        breadHome:'Acasă', breadLabel:'Rețete',
+        ingredientsH:'🛒 Ingrediente', howToH:'👨‍🍳 Mod de preparare',
+        addBtn: n=>`Adaugă în planul meu`, relatedH: o=>`Alte rețete din ${esc(o)}`,
+        seoP: n=>`Adaugă <strong>${esc(n)}</strong> în planul tău săptămânal cu <a href="/ro/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`Rețetă ${esc(n)} – Ingrediente și Mod de Preparare | MealPlanner.ro`,
+        pageDesc: (n,o)=>`Rețeta de ${n}: ingrediente, mod de preparare pas cu pas. Adaugă în planificator gratuit.`,
+        heroDesc: o=>`Rețetă din <strong>${esc(o)}</strong>. Ingrediente proaspete, preparare simplă.`,
+        appDir:'/ro', lc: null },
+  en: { dir:'/en/recipes',   indexTitle:`Recipes from Around the World | MealPlanner.ro`,
+        indexH1:'Recipes from <span class="accent">Around the World</span>',
+        indexDesc: n=>`${n} recipes with ingredients and instructions.`,
+        breadHome:'Home', breadLabel:'Recipes',
+        ingredientsH:'🛒 Ingredients', howToH:'👨‍🍳 How to make it',
+        addBtn: n=>`Add to my meal plan`, relatedH: o=>`More recipes from ${esc(o)}`,
+        seoP: n=>`Add <strong>${esc(n)}</strong> to your weekly plan with the <a href="/en/">free MealPlanner.ro app</a>.`,
+        pageTitle: n=>`${esc(n)} Recipe – Ingredients & How to Make | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${n} recipe: ingredients, step-by-step instructions. Add to your free meal planner.`,
+        heroDesc: o=>`Traditional recipe from <strong>${esc(o)}</strong>.`,
+        appDir:'/en', lc: null },
+  es: { dir:'/es/recetas',   indexTitle:`Recetas del Mundo | MealPlanner.ro`,
+        indexH1:'Recetas del <span class="accent">Mundo</span>',
+        indexDesc: n=>`${n} recetas con ingredientes e instrucciones.`,
+        breadHome:'Inicio', breadLabel:'Recetas',
+        ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Cómo prepararlo',
+        addBtn: n=>`Añadir a mi plan`, relatedH: o=>`Más recetas de ${esc(o)}`,
+        seoP: n=>`Añade <strong>${esc(n)}</strong> a tu plan semanal con <a href="/es/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`Receta de ${esc(n)} – Ingredientes y Preparación | MealPlanner.ro`,
+        pageDesc: (n,o)=>`Receta de ${n} de ${o}: ingredientes e instrucciones paso a paso.`,
+        heroDesc: o=>`Receta tradicional de <strong>${esc(o)}</strong>.`,
+        appDir:'', lc: null },
+  fr: { dir:'/fr/recettes',  indexTitle:`Recettes du Monde | MealPlanner.ro`,
+        indexH1:'Recettes du <span class="accent">Monde</span>',
+        indexDesc: n=>`${n} recettes avec ingrédients et instructions.`,
+        breadHome:'Accueil', breadLabel:'Recettes',
+        ingredientsH:'🛒 Ingrédients', howToH:'👨‍🍳 Comment préparer',
+        addBtn: n=>`Ajouter à mon plan`, relatedH: o=>`Plus de recettes de ${esc(o)}`,
+        seoP: n=>`Ajoutez <strong>${esc(n)}</strong> à votre plan hebdomadaire avec <a href="/fr/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`Recette ${esc(n)} – Ingrédients et Préparation | MealPlanner.ro`,
+        pageDesc: (n,o)=>`Recette de ${n} de ${o}: ingrédients et instructions étape par étape.`,
+        heroDesc: o=>`Recette traditionnelle de <strong>${esc(o)}</strong>.`,
+        appDir:'', lc: null },
+  de: { dir:'/de/rezepte',   indexTitle:`Rezepte aus aller Welt | MealPlanner.ro`,
+        indexH1:'Rezepte aus <span class="accent">aller Welt</span>',
+        indexDesc: n=>`${n} Rezepte mit Zutaten und Anleitung.`,
+        breadHome:'Startseite', breadLabel:'Rezepte',
+        ingredientsH:'🛒 Zutaten', howToH:'👨‍🍳 Zubereitung',
+        addBtn: n=>`Zu meinem Plan hinzufügen`, relatedH: o=>`Weitere Rezepte aus ${esc(o)}`,
+        seoP: n=>`Füge <strong>${esc(n)}</strong> zu deinem Wochenplan mit <a href="/de/">MealPlanner.ro</a> hinzu.`,
+        pageTitle: n=>`${esc(n)} Rezept – Zutaten & Zubereitung | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${n} Rezept aus ${o}: Zutaten und Schritt-für-Schritt-Anleitung.`,
+        heroDesc: o=>`Traditionelles Rezept aus <strong>${esc(o)}</strong>.`,
+        appDir:'', lc: null },
+  pt: { dir:'/pt/receitas',  indexTitle:`Receitas do Mundo | MealPlanner.ro`,
+        indexH1:'Receitas do <span class="accent">Mundo</span>',
+        indexDesc: n=>`${n} receitas com ingredientes e instruções.`,
+        breadHome:'Início', breadLabel:'Receitas',
+        ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Como preparar',
+        addBtn: n=>`Adicionar ao meu plano`, relatedH: o=>`Mais receitas de ${esc(o)}`,
+        seoP: n=>`Adicione <strong>${esc(n)}</strong> ao seu plano semanal com <a href="/pt/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`Receita de ${esc(n)} – Ingredientes e Preparo | MealPlanner.ro`,
+        pageDesc: (n,o)=>`Receita de ${n} de ${o}: ingredientes e instruções passo a passo.`,
+        heroDesc: o=>`Receita tradicional de <strong>${esc(o)}</strong>.`,
+        appDir:'', lc: null },
+  ru: { dir:'/ru/retsepty',  indexTitle:`Рецепты со всего мира | MealPlanner.ro`,
+        indexH1:'Рецепты со <span class="accent">всего мира</span>',
+        indexDesc: n=>`${n} рецептов с ингредиентами и инструкциями.`,
+        breadHome:'Главная', breadLabel:'Рецепты',
+        ingredientsH:'🛒 Ингредиенты', howToH:'👨‍🍳 Как приготовить',
+        addBtn: n=>`Добавить в мой план`, relatedH: o=>`Ещё рецепты из ${esc(o)}`,
+        seoP: n=>`Добавьте <strong>${esc(n)}</strong> в свой план на неделю с <a href="/ru/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`Рецепт ${esc(n)} – Ингредиенты и приготовление | MealPlanner.ro`,
+        pageDesc: (n,o)=>`Рецепт ${n} из ${o}: ингредиенты и пошаговые инструкции.`,
+        heroDesc: o=>`Традиционный рецепт из <strong>${esc(o)}</strong>.`,
+        appDir:'', lc: null },
+  ar: { dir:'/ar/wasafat',   indexTitle:`وصفات من حول العالم | MealPlanner.ro`,
+        indexH1:'وصفات من <span class="accent">حول العالم</span>',
+        indexDesc: n=>`${n} وصفة مع المكونات والتعليمات.`,
+        breadHome:'الرئيسية', breadLabel:'وصفات',
+        ingredientsH:'🛒 المكونات', howToH:'👨‍🍳 طريقة التحضير',
+        addBtn: n=>`أضف إلى خطتي`, relatedH: o=>`المزيد من وصفات ${esc(o)}`,
+        seoP: n=>`أضف <strong>${esc(n)}</strong> إلى خطتك الأسبوعية مع <a href="/ar/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`وصفة ${esc(n)} – المكونات وطريقة التحضير | MealPlanner.ro`,
+        pageDesc: (n,o)=>`وصفة ${n} من ${o}: مكونات وتعليمات خطوة بخطوة.`,
+        heroDesc: o=>`وصفة تقليدية من <strong>${esc(o)}</strong>.`,
+        appDir:'', dir_attr:'rtl', lc: null },
+  zh: { dir:'/zh/shipu',     indexTitle:`世界各地食谱 | MealPlanner.ro`,
+        indexH1:'<span class="accent">世界各地</span>食谱',
+        indexDesc: n=>`${n}个食谱，含食材和制作方法。`,
+        breadHome:'首页', breadLabel:'食谱',
+        ingredientsH:'🛒 食材', howToH:'👨‍🍳 做法',
+        addBtn: n=>`加入我的计划`, relatedH: o=>`更多来自${esc(o)}的食谱`,
+        seoP: n=>`将<strong>${esc(n)}</strong>添加到您的每周计划 <a href="/zh/">MealPlanner.ro</a>。`,
+        pageTitle: n=>`${esc(n)}食谱 – 食材和做法 | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${n}食谱来自${o}：食材和步骤说明。`,
+        heroDesc: o=>`来自<strong>${esc(o)}</strong>的传统食谱。`,
+        appDir:'', lc: null },
+  ja: { dir:'/ja/reshipi',   indexTitle:`世界の料理レシピ | MealPlanner.ro`,
+        indexH1:'<span class="accent">世界の</span>料理レシピ',
+        indexDesc: n=>`${n}のレシピ、材料と作り方付き。`,
+        breadHome:'ホーム', breadLabel:'レシピ',
+        ingredientsH:'🛒 材料', howToH:'👨‍🍳 作り方',
+        addBtn: n=>`プランに追加`, relatedH: o=>`${esc(o)}のその他のレシピ`,
+        seoP: n=>`<strong>${esc(n)}</strong>を<a href="/ja/">MealPlanner.ro</a>の週間プランに追加しましょう。`,
+        pageTitle: n=>`${esc(n)}のレシピ – 材料と作り方 | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${o}の${n}レシピ：材料とステップごとの作り方。`,
+        heroDesc: o=>`<strong>${esc(o)}</strong>の伝統的なレシピ。`,
+        appDir:'', lc: null },
+  hi: { dir:'/hi/recipes',   indexTitle:`दुनिया भर की रेसिपी | MealPlanner.ro`,
+        indexH1:'<span class="accent">दुनिया भर</span> की रेसिपी',
+        indexDesc: n=>`${n} रेसिपी सामग्री और निर्देशों के साथ।`,
+        breadHome:'होम', breadLabel:'रेसिपी',
+        ingredientsH:'🛒 सामग्री', howToH:'👨‍🍳 बनाने का तरीका',
+        addBtn: n=>`मेरी योजना में जोड़ें`, relatedH: o=>`${esc(o)} की और रेसिपी`,
+        seoP: n=>`<strong>${esc(n)}</strong> को <a href="/hi/">MealPlanner.ro</a> के साथ अपनी साप्ताहिक योजना में जोड़ें।`,
+        pageTitle: n=>`${esc(n)} रेसिपी – सामग्री और बनाने का तरीका | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${o} से ${n} रेसिपी: सामग्री और चरण-दर-चरण निर्देश।`,
+        heroDesc: o=>`<strong>${esc(o)}</strong> की पारंपरिक रेसिपी।`,
+        appDir:'', lc: null },
+  tr: { dir:'/tr/tarifler',  indexTitle:`Dünyadan Tarifler | MealPlanner.ro`,
+        indexH1:'<span class="accent">Dünyadan</span> Tarifler',
+        indexDesc: n=>`${n} tarif, malzemeler ve talimatlarla.`,
+        breadHome:'Ana Sayfa', breadLabel:'Tarifler',
+        ingredientsH:'🛒 Malzemeler', howToH:'👨‍🍳 Nasıl yapılır',
+        addBtn: n=>`Planıma ekle`, relatedH: o=>`${esc(o)} tarihinden daha fazla tarif`,
+        seoP: n=>`<strong>${esc(n)}</strong>'ı <a href="/tr/">MealPlanner.ro</a> ile haftalık planınıza ekleyin.`,
+        pageTitle: n=>`${esc(n)} Tarifi – Malzemeler ve Yapılışı | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${o}'dan ${n} tarifi: malzemeler ve adım adım talimatlar.`,
+        heroDesc: o=>`<strong>${esc(o)}</strong>'dan geleneksel tarif.`,
+        appDir:'', lc: null },
+  it: { dir:'/it/ricette',   indexTitle:`Ricette dal Mondo | MealPlanner.ro`,
+        indexH1:'Ricette dal <span class="accent">Mondo</span>',
+        indexDesc: n=>`${n} ricette con ingredienti e istruzioni.`,
+        breadHome:'Home', breadLabel:'Ricette',
+        ingredientsH:'🛒 Ingredienti', howToH:'👨‍🍳 Come preparare',
+        addBtn: n=>`Aggiungi al mio piano`, relatedH: o=>`Altre ricette da ${esc(o)}`,
+        seoP: n=>`Aggiungi <strong>${esc(n)}</strong> al tuo piano settimanale con <a href="/it/">MealPlanner.ro</a>.`,
+        pageTitle: n=>`Ricetta ${esc(n)} – Ingredienti e Preparazione | MealPlanner.ro`,
+        pageDesc: (n,o)=>`Ricetta di ${n} da ${o}: ingredienti e istruzioni passo dopo passo.`,
+        heroDesc: o=>`Ricetta tradizionale da <strong>${esc(o)}</strong>.`,
+        appDir:'', lc: null },
+  ko: { dir:'/ko/recipes',   indexTitle:`세계 요리 레시피 | MealPlanner.ro`,
+        indexH1:'<span class="accent">세계</span> 요리 레시피',
+        indexDesc: n=>`재료와 만드는 법이 있는 ${n}가지 레시피.`,
+        breadHome:'홈', breadLabel:'레시피',
+        ingredientsH:'🛒 재료', howToH:'👨‍🍳 만드는 법',
+        addBtn: n=>`내 플랜에 추가`, relatedH: o=>`${esc(o)}의 더 많은 레시피`,
+        seoP: n=>`<strong>${esc(n)}</strong>을(를) <a href="/ko/">MealPlanner.ro</a>의 주간 플랜에 추가하세요.`,
+        pageTitle: n=>`${esc(n)} 레시피 – 재료 및 만드는 법 | MealPlanner.ro`,
+        pageDesc: (n,o)=>`${o}의 ${n} 레시피: 재료와 단계별 지침.`,
+        heroDesc: o=>`<strong>${esc(o)}</strong>의 전통 레시피.`,
+        appDir:'', lc: null },
+};
+// Attach lc nav/footer builders + populate RECIPES_NAV
+Object.entries(RECIPE_LANG).forEach(([code, rl]) => {
+  rl.lc = LANG_CONFIGS[code];
+  const label = {ro:'🍽️ Rețete',en:'🍽️ Recipes',es:'🍽️ Recetas',fr:'🍽️ Recettes',
+    de:'🍽️ Rezepte',pt:'🍽️ Receitas',ru:'🍽️ Рецепты',ar:'🍽️ وصفات',
+    zh:'🍽️ 食谱',ja:'🍽️ レシピ',hi:'🍽️ व्यंजन',tr:'🍽️ Tarifler',it:'🍽️ Ricette',ko:'🍽️ 레시피'}[code] || '🍽️ Recipes';
+  RECIPES_NAV[code] = { href: `${rl.dir}/`, label };
+});
 
-function recipePageRO(recipe) {
-  const n     = recipe.name?.ro || recipe.name?.en || '';
-  const o     = recipe.origin?.ro || '';
-  const ingr  = recipe.ingredients?.ro || recipe.ingredients?.en || [];
-  const how   = recipe.howIsMade?.ro || recipe.howIsMade?.en || '';
-  const cat   = recipe.category?.ro || '';
+/* ════════════════════════════════════════════════════════════════
+   GENERIC recipe page + index — works for ALL 14 languages
+   ════════════════════════════════════════════════════════════════ */
+function recipePage(recipe, rl) {
+  const lc   = rl.lc;
+  const code = lc.code;
+  const n    = recipe.name?.[code]    || recipe.name?.en    || recipe.name?.ro    || '';
+  const o    = recipe.origin?.[code]  || recipe.origin?.en  || recipe.origin?.ro  || '';
+  const ingr = recipe.ingredients?.[code] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
+  const how  = recipe.howIsMade?.[code]   || recipe.howIsMade?.en   || recipe.howIsMade?.ro   || '';
+  const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
   const steps = how.split(/\.\s+/).filter(Boolean);
+  // Use English slug for all languages (ASCII-safe, consistent)
+  const enName = recipe.name?.en || recipe.name?.ro || '';
+  const rslug  = slug(enName);
+  const url    = `https://meal-planner.ro${rl.dir}/${rslug}/`;
+  const appUrl = rl.appDir ? `${rl.appDir}/` : '/';
+
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
-    "description":`Rețeta de ${n} din ${o}.`,
+    "description":rl.pageDesc(n,o),
     "recipeIngredient":ingr,
     "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
     "recipeCategory":cat,
     "author":{"@type":"Organization","name":"MealPlanner.ro"},
-    "url":`https://meal-planner.ro/ro/retete/${slug(n)}/`
+    "url": url
   });
-  const others = recipes.filter(r => r.origin?.ro === o && r.name?.ro !== n).slice(0,3)
-    .map(r=>`<a href="/ro/retete/${slug(r.name.ro)}/" class="recipe-rel-link">🍽️ ${esc(r.name.ro)}</a>`).join('');
 
-  return `${HEAD(`Rețetă ${esc(n)} – Ingrediente și Mod de Preparare | MealPlanner.ro`,
-    `Rețeta de ${n}: ingrediente, mod de preparare pas cu pas. Adaugă în planificator gratuit.`,
-    `/ro/retete/${slug(n)}/`)}
+  const others = recipes
+    .filter(r => (r.origin?.[code]||r.origin?.en) === o && (r.name?.[code]||r.name?.en) !== n)
+    .slice(0,3)
+    .map(r => {
+      const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
+      const rs = slug(r.name?.en || r.name?.ro || rn);
+      return `<a href="${rl.dir}/${rs}/" class="recipe-rel-link">🍽️ ${esc(rn)}</a>`;
+    }).join('');
+
+  const dir_attr = rl.dir_attr || 'ltr';
+  return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
-${NAV_RO}
+${makeNav(lc)}
 <main class="content-main">
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>${esc(n)}</span>
+        <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(n)}</span>
       </nav>
       <div class="content-hero-badge">🍽️ ${esc(cat)} · ${esc(o)}</div>
       <h1>${esc(n)}</h1>
-      <p class="content-hero-desc">Rețetă din <strong>${esc(o)}</strong>. Ingrediente proaspete, preparare simplă.</p>
-      <a href="/ro/?meal=${encodeURIComponent(n)}" class="btn btn-generate">
-        <i class="bi bi-plus-circle-fill"></i> Adaugă în planul meu
+      <p class="content-hero-desc">${rl.heroDesc(o)}</p>
+      <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn btn-generate">
+        <i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}
       </a>
     </div>
   </section>
   <section class="content-section">
     <div class="content-section-inner recipe-layout">
       <div class="recipe-ingredients-box">
-        <h2><span class="section-emoji">🛒</span> Ingrediente</h2>
+        <h2><span class="section-emoji">🛒</span> ${rl.ingredientsH.replace('🛒 ','')}</h2>
         <ul class="recipe-ingr-list">
           ${ingr.map(i=>`<li><i class="bi bi-dot"></i> ${esc(capFirst(i))}</li>`).join('\n          ')}
         </ul>
       </div>
       <div class="recipe-steps-box">
-        <h2><span class="section-emoji">👨‍🍳</span> Mod de preparare</h2>
+        <h2><span class="section-emoji">👨‍🍳</span> ${rl.howToH.replace('👨‍🍳 ','')}</h2>
         ${steps.length>1
           ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('')}</ol>`
           : `<p class="recipe-how">${esc(how)}</p>`}
-        ${others?`<div class="recipe-related"><h3>Alte rețete din ${esc(o)}</h3>${others}</div>`:''}
+        ${others?`<div class="recipe-related"><h3>${rl.relatedH(o)}</h3>${others}</div>`:''}
       </div>
     </div>
   </section>
   <section class="content-section content-seo"><div class="content-section-inner">
-    <p>Adaugă <strong>${esc(n)}</strong> în planul tău săptămânal cu <a href="/ro/">MealPlanner.ro</a>.</p>
+    <p>${rl.seoP(n)}</p>
   </div></section>
-</main>${FOOTER_RO}</body></html>`;
+</main>${makeFooter(lc)}</body></html>`;
 }
 
-function recipePageEN(recipe) {
-  const n     = recipe.name?.en || recipe.name?.ro || '';
-  const o     = recipe.origin?.en || recipe.origin?.ro || '';
-  const ingr  = recipe.ingredients?.en || recipe.ingredients?.ro || [];
-  const how   = recipe.howIsMade?.en || recipe.howIsMade?.ro || '';
-  const cat   = recipe.category?.en || recipe.category?.ro || '';
-  const steps = how.split(/\.\s+/).filter(Boolean);
-  const others = recipes.filter(r => (r.origin?.en===o||r.origin?.ro===recipe.origin?.ro) && r.name?.en!==n).slice(0,3)
-    .map(r=>`<a href="/en/recipes/${slug(r.name.en||r.name.ro)}/" class="recipe-rel-link">🍽️ ${esc(r.name.en||r.name.ro)}</a>`).join('');
-
-  return `${HEAD(`${esc(n)} Recipe – Ingredients & How to Make | MealPlanner.ro`,
-    `${n} recipe: ingredients, step-by-step instructions. Add to your free meal planner.`,
-    `/en/recipes/${slug(n)}/`,'en')}
-${NAV_EN}
-<main class="content-main">
-  <section class="content-hero content-hero--short">
-    <div class="content-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>${esc(n)}</span>
-      </nav>
-      <div class="content-hero-badge">🍽️ ${esc(cat)} · ${esc(o)}</div>
-      <h1>${esc(n)}</h1>
-      <p class="content-hero-desc">Traditional recipe from <strong>${esc(o)}</strong>.</p>
-      <a href="/en/?meal=${encodeURIComponent(n)}" class="btn btn-generate">
-        <i class="bi bi-plus-circle-fill"></i> Add to my meal plan
-      </a>
-    </div>
-  </section>
-  <section class="content-section">
-    <div class="content-section-inner recipe-layout">
-      <div class="recipe-ingredients-box">
-        <h2><span class="section-emoji">🛒</span> Ingredients</h2>
-        <ul class="recipe-ingr-list">
-          ${ingr.map(i=>`<li><i class="bi bi-dot"></i> ${esc(capFirst(i))}</li>`).join('\n          ')}
-        </ul>
-      </div>
-      <div class="recipe-steps-box">
-        <h2><span class="section-emoji">👨‍🍳</span> How to make it</h2>
-        ${steps.length>1
-          ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('')}</ol>`
-          : `<p class="recipe-how">${esc(how)}</p>`}
-        ${others?`<div class="recipe-related"><h3>More recipes from ${esc(o)}</h3>${others}</div>`:''}
-      </div>
-    </div>
-  </section>
-  <section class="content-section content-seo"><div class="content-section-inner">
-    <p>Add <strong>${esc(n)}</strong> to your weekly plan with the <a href="/en/">free MealPlanner.ro app</a>.</p>
-  </div></section>
-</main>${FOOTER_EN}</body></html>`;
-}
-
-function recipeIndexRO() {
+function recipeIndex(rl) {
+  const lc   = rl.lc;
+  const code = lc.code;
   const byOrigin = {};
-  recipes.forEach(r => { const o = r.origin?.ro||'Altele'; (byOrigin[o]||(byOrigin[o]=[])).push(r); });
+  recipes.forEach(r => {
+    const o = r.origin?.[code] || r.origin?.en || 'Other';
+    (byOrigin[o] || (byOrigin[o] = [])).push(r);
+  });
   const groups = Object.entries(byOrigin).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
   <div class="recipe-origin-group">
     <h3 class="origin-title">🌍 ${esc(o)} <span class="recipe-count">(${recs.length})</span></h3>
     <ul class="recipe-origin-list">
-      ${recs.map(r=>`<li><a href="/ro/retete/${slug(r.name.ro||r.name.en)}/">${esc(r.name.ro||r.name.en)}</a></li>`).join('')}
+      ${recs.map(r => {
+        const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
+        const rs = slug(r.name?.en || r.name?.ro || rn);
+        return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
+      }).join('')}
     </ul>
   </div>`).join('');
-  return `${HEAD('Rețete din Toată Lumea | MealPlanner.ro',
-    `${recipes.length} rețete cu ingrediente și mod de preparare.`,'/ro/retete/')}
-${NAV_RO}<main class="content-main">
+  const dir_attr = rl.dir_attr || 'ltr';
+  return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
+${makeNav(lc)}<main class="content-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
-    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">Acasă</a> › <span>Rețete</span></nav>
-    <h1>Rețete din <span class="accent">Toată Lumea</span></h1>
-    <p class="content-hero-desc">${recipes.length} rețete cu ingrediente și mod de preparare.</p>
+    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
+    <h1>${rl.indexH1}</h1>
+    <p class="content-hero-desc">${rl.indexDesc(recipes.length)}</p>
   </div></section>
   <section class="content-section"><div class="content-section-inner">
     <div class="recipe-groups-grid">${groups}</div>
   </div></section>
-</main>${FOOTER_RO}</body></html>`;
-}
-
-function recipeIndexEN() {
-  const byOrigin = {};
-  recipes.forEach(r => { const o = r.origin?.en||r.origin?.ro||'Other'; (byOrigin[o]||(byOrigin[o]=[])).push(r); });
-  const groups = Object.entries(byOrigin).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
-  <div class="recipe-origin-group">
-    <h3 class="origin-title">🌍 ${esc(o)} <span class="recipe-count">(${recs.length})</span></h3>
-    <ul class="recipe-origin-list">
-      ${recs.map(r=>`<li><a href="/en/recipes/${slug(r.name.en||r.name.ro)}/">${esc(r.name.en||r.name.ro)}</a></li>`).join('')}
-    </ul>
-  </div>`).join('');
-  return `${HEAD(`${recipes.length} Recipes from Around the World | MealPlanner.ro`,
-    `${recipes.length} recipes with ingredients and instructions.`,'/en/recipes/','en')}
-${NAV_EN}<main class="content-main">
-  <section class="content-hero content-hero--short"><div class="content-hero-inner">
-    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">Home</a> › <span>Recipes</span></nav>
-    <h1>Recipes from <span class="accent">Around the World</span></h1>
-    <p class="content-hero-desc">${recipes.length} recipes with ingredients and instructions.</p>
-  </div></section>
-  <section class="content-section"><div class="content-section-inner">
-    <div class="recipe-groups-grid">${groups}</div>
-  </div></section>
-</main>${FOOTER_EN}</body></html>`;
+</main>${makeFooter(lc)}</body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -1174,20 +1271,19 @@ for (const [code, lc] of Object.entries(LANG_CONFIGS)) {
   console.log(`   ✅ ${PLANS.length} plan pages → ${lc.dir}/`);
 }
 
-// ── Recipe pages: RO + EN ─────────────────────────────────────────
-write(path.join(PUBLIC,'ro','retete','index.html'), recipeIndexRO());
-recipes.forEach(r => {
-  const n = r.name?.ro || r.name?.en;
-  if (n) { write(path.join(PUBLIC,'ro','retete',slug(n),'index.html'), recipePageRO(r)); count++; }
-});
-console.log(`\n✅ ${recipes.length} recipe pages → /ro/retete/`);
-
-write(path.join(PUBLIC,'en','recipes','index.html'), recipeIndexEN());
-recipes.forEach(r => {
-  const n = r.name?.en || r.name?.ro;
-  if (n) { write(path.join(PUBLIC,'en','recipes',slug(n),'index.html'), recipePageEN(r)); count++; }
-});
-console.log(`✅ ${recipes.length} recipe pages → /en/recipes/`);
+// ── Recipe pages: ALL 14 languages ───────────────────────────────
+for (const [code, rl] of Object.entries(RECIPE_LANG)) {
+  const dirParts = rl.dir.split('/').filter(Boolean); // e.g. ['ro','retete']
+  write(path.join(PUBLIC, ...dirParts, 'index.html'), recipeIndex(rl));
+  recipes.forEach(r => {
+    const enName = r.name?.en || r.name?.ro;
+    if (!enName) return;
+    const rslug = slug(enName);
+    write(path.join(PUBLIC, ...dirParts, rslug, 'index.html'), recipePage(r, rl));
+    count++;
+  });
+  console.log(`✅ ${recipes.length} recipe pages → ${rl.dir}/`);
+}
 
 console.log(`\n🎉 Done! Generated ${count} pages total.`);
 
@@ -1205,13 +1301,14 @@ for (const [code, lc] of Object.entries(LANG_CONFIGS)) {
   PLANS.forEach(p => sitemapUrls.push(`https://meal-planner.ro${lc.dir}/${lc.planIdFn(p)}/`));
 }
 
-// Recipe pages RO + EN
-sitemapUrls.push('https://meal-planner.ro/ro/retete/');
-sitemapUrls.push('https://meal-planner.ro/en/recipes/');
-recipes.forEach(r => {
-  const ro = r.name?.ro||r.name?.en; if(ro) sitemapUrls.push(`https://meal-planner.ro/ro/retete/${slug(ro)}/`);
-  const en = r.name?.en||r.name?.ro; if(en) sitemapUrls.push(`https://meal-planner.ro/en/recipes/${slug(en)}/`);
-});
+// Recipe pages ALL 14 languages
+for (const rl of Object.values(RECIPE_LANG)) {
+  sitemapUrls.push(`https://meal-planner.ro${rl.dir}/`);
+  recipes.forEach(r => {
+    const enName = r.name?.en || r.name?.ro;
+    if (enName) sitemapUrls.push(`https://meal-planner.ro${rl.dir}/${slug(enName)}/`);
+  });
+}
 
 const today = new Date().toISOString().slice(0,10);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
