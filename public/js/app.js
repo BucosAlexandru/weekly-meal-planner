@@ -122,6 +122,34 @@ if (!i18n[lang]) lang = 'ro';
 if (pathLang) localStorage.setItem('lastLang', lang);
 // let lang = localStorage.getItem('lastLang') || navigator.language.slice(0, 2);
 // if (!i18n[lang]) lang = 'ro';
+// ===== Content nav links (dynamic per language) =================================
+const NAV_CONTENT_LINKS = {
+  ro: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Meniuri' },      recipes: { href: '/ro/retete/',               label: '🍽️ Rețete' } },
+  en: { plans: { href: '/en/weekly-meal-plan/', label: '📅 Meal Plans' },   recipes: { href: '/en/recipes/',              label: '🍽️ Recipes' } },
+  es: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Menús' },        recipes: { href: '/ro/retete/',               label: '🍽️ Recetas' } },
+  fr: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Menus' },        recipes: { href: '/ro/retete/',               label: '🍽️ Recettes' } },
+  de: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Menüs' },        recipes: { href: '/ro/retete/',               label: '🍽️ Rezepte' } },
+  pt: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Cardápios' },    recipes: { href: '/ro/retete/',               label: '🍽️ Receitas' } },
+  ru: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Меню' },         recipes: { href: '/ro/retete/',               label: '🍽️ Рецепты' } },
+  ar: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 القوائم' },      recipes: { href: '/ro/retete/',               label: '🍽️ وصفات' } },
+  zh: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 菜单' },          recipes: { href: '/ro/retete/',               label: '🍽️ 食谱' } },
+  ja: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 メニュー' },      recipes: { href: '/ro/retete/',               label: '🍽️ レシピ' } },
+  tr: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Menüler' },      recipes: { href: '/ro/retete/',               label: '🍽️ Tarifler' } },
+  it: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 Menù' },         recipes: { href: '/ro/retete/',               label: '🍽️ Ricette' } },
+  ko: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 메뉴' },          recipes: { href: '/ro/retete/',               label: '🍽️ 레시피' } },
+  hi: { plans: { href: '/ro/meniu-saptamanal/', label: '📅 मेनू' },         recipes: { href: '/ro/retete/',               label: '🍽️ व्यंजन' } },
+};
+function updateContentNav(currentLang) {
+  const navPlans   = document.getElementById('nav-plans');
+  const navRecipes = document.getElementById('nav-recipes');
+  if (!navPlans || !navRecipes) return;
+  const cfg = NAV_CONTENT_LINKS[currentLang] || NAV_CONTENT_LINKS.ro;
+  navPlans.href        = cfg.plans.href;
+  navPlans.textContent = cfg.plans.label;
+  navRecipes.href        = cfg.recipes.href;
+  navRecipes.textContent = cfg.recipes.label;
+}
+
 // ===== Quota PDF
 let pdfCount = +localStorage.getItem('pdfCount') || 0;
 let pdfFirst = +localStorage.getItem('pdfFirst') || 0;
@@ -917,13 +945,14 @@ function paginateCleanNode(root){
       if (!inp.dataset.shopListener) {
         inp.addEventListener('input', () => {
           updateShoppingList();
-          updateAllRecipeMeta();
+          clearTimeout(inp._metaTimer);
+          inp._metaTimer = setTimeout(updateAllRecipeMeta, 120);
         });
         inp.dataset.shopListener = '1';
       }
     });
-    // Initial render if inputs already have values (e.g. after generateRandomMenu)
-    updateAllRecipeMeta();
+    // Initial meta render (deferred so DOM is stable)
+    setTimeout(updateAllRecipeMeta, 150);
   }
 // --- Lazy-load pentru html2pdf.js (varianta sigură pe CDN)
 async function ensureHtml2pdfLoaded() {
@@ -1021,9 +1050,10 @@ async function ensureHtml2pdfLoaded() {
     document.title = i18n[lang].title;
   }
   // 5) Re-randări dependente de limbă
-  renderTable();       
+  renderTable();
   attachPdfListeners();
-  attachAutoMenuBtn(); 
+  attachAutoMenuBtn();
+  updateContentNav(lang);
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
@@ -1059,6 +1089,7 @@ async function ensureHtml2pdfLoaded() {
       updateButtonState();
       attachPdfListeners();
       attachAutoMenuBtn();
+      updateContentNav(lang);
     });
   }
 // ---------- Supabase (verificare email) ----------
@@ -1195,20 +1226,27 @@ if (verifyBtn && emailInput && resultDiv) {
       if (!inp.dataset.shopWired) {
         inp.addEventListener('input', () => {
           updateShoppingList();
-          updateAllRecipeMeta();
+          // debounce meta update to avoid excessive DOM work while typing
+          clearTimeout(inp._metaTimer);
+          inp._metaTimer = setTimeout(updateAllRecipeMeta, 120);
         });
         inp.dataset.shopWired = '1';
       }
     });
   }
-  // Also observe table rebuilds (lang switch, etc.)
+  // Observe ONLY direct children of plan-table for lang/rebuild events
+  // (subtree:false prevents triggering on our own meta-chip insertions)
+  let _observerBusy = false;
   const planTableObserver = new MutationObserver(() => {
+    if (_observerBusy) return;
+    _observerBusy = true;
     wireInputsToShoppingList();
     updateShoppingList();
-    updateAllRecipeMeta();
+    // Schedule meta update outside current mutation batch
+    setTimeout(() => { updateAllRecipeMeta(); _observerBusy = false; }, 0);
   });
   const planTableEl = document.getElementById('plan-table');
-  if (planTableEl) planTableObserver.observe(planTableEl, { childList: true, subtree: true });
+  if (planTableEl) planTableObserver.observe(planTableEl, { childList: true, subtree: false });
 
   // ---------- ?autoplan= deep link (from SEO pages) ----------
   const autoplanParam = new URLSearchParams(window.location.search).get('autoplan');
