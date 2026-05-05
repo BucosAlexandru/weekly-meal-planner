@@ -741,6 +741,25 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr') => `<!DOCTYPE ht
 </head>
 <body>`;
 
+const RECIPES_NAV = {
+  ro: { href:'/ro/retete/',   label:'🍽️ Rețete' },
+  en: { href:'/en/recipes/',  label:'🍽️ Recipes' },
+  es: { href:'/en/recipes/',  label:'🍽️ Recetas' },
+  fr: { href:'/en/recipes/',  label:'🍽️ Recettes' },
+  de: { href:'/en/recipes/',  label:'🍽️ Rezepte' },
+  pt: { href:'/en/recipes/',  label:'🍽️ Receitas' },
+  ru: { href:'/en/recipes/',  label:'🍽️ Рецепты' },
+  ar: { href:'/en/recipes/',  label:'🍽️ وصفات' },
+  zh: { href:'/en/recipes/',  label:'🍽️ 食谱' },
+  ja: { href:'/en/recipes/',  label:'🍽️ レシピ' },
+  hi: { href:'/en/recipes/',  label:'🍽️ व्यंजन' },
+  tr: { href:'/en/recipes/',  label:'🍽️ Tarifler' },
+  it: { href:'/en/recipes/',  label:'🍽️ Ricette' },
+  ko: { href:'/en/recipes/',  label:'🍽️ 레시피' },
+};
+
+const appHref = (lc) => lc.appDir && lc.appDir !== '/' ? `${lc.appDir}/` : '/';
+
 const makeNav = (lc) => `
 <header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="Main navigation">
@@ -750,8 +769,8 @@ const makeNav = (lc) => `
     </a>
     <div class="nav-links">
       <a href="${lc.dir}/" class="nav-link">${lc.sectionLabel}</a>
-      ${lc.code==='ro' ? '<a href="/ro/retete/" class="nav-link">Rețete</a>' : lc.code==='en' ? '<a href="/en/recipes/" class="nav-link">Recipes</a>' : ''}
-      <a href="${lc.appDir}/" class="nav-link">${lc.appLabel}</a>
+      <a href="${RECIPES_NAV[lc.code].href}" class="nav-link">${RECIPES_NAV[lc.code].label}</a>
+      <a href="${appHref(lc)}" class="nav-link">${lc.appLabel}</a>
     </div>
   </nav>
 </header>`;
@@ -763,7 +782,7 @@ const makeFooter = (lc) => `
     <span class="footer-sep">·</span>
     <a href="${lc.dir}/">${lc.sectionLabel}</a>
     <span class="footer-sep">·</span>
-    <a href="${lc.appDir}/">${lc.appLabel}</a>
+    <a href="${appHref(lc)}">${lc.appLabel}</a>
     <span class="footer-sep">·</span>
     <span>© 2025</span>
   </div>
