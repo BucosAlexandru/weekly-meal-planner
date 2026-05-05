@@ -1,15 +1,16 @@
 /**
- * generate-content.mjs
- * Generates SEO-optimised static pages:
- *   – 8 weekly meal-plan pages for /ro/meniu-saptamanal/ and /en/weekly-meal-plan/
- *   – Index hub pages for those directories
- *   – Individual recipe pages for /ro/retete/ and /en/recipes/
+ * generate-content.mjs — SEO static page generator
+ *
+ * Generates weekly meal-plan pages + recipe pages in all 14 app languages.
+ * Weekly plans: all 14 languages (ro, en, es, fr, de, pt, ru, ar, zh, ja, hi, tr, it, ko)
+ * Recipe pages: ro + en only (detailed ingredient/method pages)
+ *
  * Run: node scripts/generate-content.mjs
  */
 
-import { recipes }      from '../public/js/recipes.js';
-import { recipes as budgetRecipes } from '../public/js/recipes-budget.js';
-import { i18n }          from '../public/js/i18n.js';
+import { recipes }                    from '../public/js/recipes.js';
+import { recipes as budgetRecipes }   from '../public/js/recipes-budget.js';
+import { i18n }                       from '../public/js/i18n.js';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -18,190 +19,701 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT      = path.resolve(__dirname, '..');
 const PUBLIC    = path.join(ROOT, 'public');
 
-/* ── helpers ─────────────────────────────────────────────────── */
-function mkdir(p){ fs.mkdirSync(p, { recursive: true }); }
-function write(p, html){ mkdir(path.dirname(p)); fs.writeFileSync(p, html, 'utf8'); }
-function slug(name){ return name.toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g,''); }
-function byName(name){ return recipes.find(r => r.name?.ro === name || r.name?.en === name); }
-function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function capFirst(s){ return s ? s[0].toUpperCase() + s.slice(1) : ''; }
+/* ── helpers ──────────────────────────────────────────────────── */
+const mkdir  = p => fs.mkdirSync(p, { recursive: true });
+const write  = (p, html) => { mkdir(path.dirname(p)); fs.writeFileSync(p, html, 'utf8'); };
+const slug   = name => name.toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g,'');
+const esc    = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const capFirst = s => s ? s[0].toUpperCase() + s.slice(1) : '';
 
-/* ── 8 themed plans ──────────────────────────────────────────── */
+/* ════════════════════════════════════════════════════════════════
+   PLANS — 8 themed weekly plans with translations in 14 languages
+   ════════════════════════════════════════════════════════════════ */
 const PLANS = [
   {
-    id: 'mediteranean',
-    idEn: 'mediterranean',
-    emoji: '🫒',
-    theme: { ro:'Mediteranean', en:'Mediterranean' },
-    desc: {
-      ro: 'O săptămână de mese inspirate din bucătăriile Italiei, Greciei, Franței, Spaniei și Marocului. Ingrediente proaspete, ulei de măsline și savori autentice.',
-      en: 'A week inspired by Italian, Greek, French, Spanish and Moroccan cuisines. Fresh ingredients, olive oil and authentic Mediterranean flavours.'
+    id: 'mediteranean', idEn: 'mediterranean', emoji: '🫒',
+    costRON: '200–260', costEUR: '40–55',
+    theme: {
+      ro:'Mediteranean', en:'Mediterranean', es:'Mediterráneo', fr:'Méditerranéen',
+      de:'Mediterran', pt:'Mediterrâneo', ru:'Средиземноморский', ar:'البحر المتوسط',
+      zh:'地中海风味', ja:'地中海料理', hi:'भूमध्यसागरीय', tr:'Akdeniz', it:'Mediterraneo', ko:'지중해'
     },
-    costRON: '200–260',
-    costEUR: '40–55',
+    desc: {
+      ro:'O săptămână de mese inspirate din bucătăriile Italiei, Greciei, Franței, Spaniei și Marocului. Ingrediente proaspete, ulei de măsline și savori autentice.',
+      en:'A week inspired by Italian, Greek, French, Spanish and Moroccan cuisines. Fresh ingredients, olive oil and authentic Mediterranean flavours.',
+      es:'Una semana inspirada en las cocinas italiana, griega, francesa, española y marroquí. Ingredientes frescos, aceite de oliva y sabores auténticos.',
+      fr:'Une semaine inspirée des cuisines italienne, grecque, française, espagnole et marocaine. Ingrédients frais, huile d\'olive et saveurs authentiques.',
+      de:'Eine Woche inspiriert von italienischer, griechischer, französischer, spanischer und marokkanischer Küche. Frische Zutaten und Olivenöl.',
+      pt:'Uma semana inspirada nas cozinhas italiana, grega, francesa, espanhola e marroquina. Ingredientes frescos e azeite de oliva.',
+      ru:'Неделя блюд итальянской, греческой, французской, испанской и марокканской кухни. Свежие продукты и оливковое масло.',
+      ar:'أسبوع مستوحى من المطابخ الإيطالية واليونانية والفرنسية والإسبانية والمغربية. مكونات طازجة وزيت زيتون.',
+      zh:'一周意大利、希腊、法国、西班牙和摩洛哥风味美食。新鲜食材，橄榄油，地中海正宗风味。',
+      ja:'イタリア、ギリシャ、フランス、スペイン、モロッコの料理で彩る1週間。新鮮な食材とオリーブオイル。',
+      hi:'इतालवी, ग्रीक, फ्रेंच, स्पेनिश और मोरक्कन व्यंजनों से प्रेरित एक सप्ताह। ताज़ी सामग्री और जैतून का तेल।',
+      tr:'İtalyan, Yunan, Fransız, İspanyol ve Fas mutfaklarından ilham alan bir hafta. Taze malzemeler ve zeytinyağı.',
+      it:'Una settimana ispirata alle cucine italiana, greca, francese, spagnola e marocchina. Ingredienti freschi e olio d\'oliva.',
+      ko:'이탈리아, 그리스, 프랑스, 스페인, 모로코 요리에서 영감을 받은 한 주. 신선한 재료와 올리브 오일.'
+    },
     lunches: ['Spaghete Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
     dinners: ['Musaca grecească','Ratatouille','Souvlaki','Tajine','Boeuf Bourguignon','Spanakopita','Harira'],
   },
   {
-    id: 'asia',
-    idEn: 'asian-fusion',
-    emoji: '🍜',
-    theme: { ro:'Asia – Tur Culinar', en:'Asian Food Tour' },
-    desc: {
-      ro: 'Japonia, Korea, Vietnam, Thailanda, India și Indonezia pe farfuria ta. Șapte zile de arome, mirodenii și tehnici culinare asiatice.',
-      en: 'Japan, Korea, Vietnam, Thailand, India and Indonesia on your plate. Seven days of Asian flavours, spices and cooking techniques.'
+    id: 'asia', idEn: 'asian-fusion', emoji: '🍜',
+    costRON: '240–300', costEUR: '50–65',
+    theme: {
+      ro:'Asia – Tur Culinar', en:'Asian Food Tour', es:'Asia – Tour Culinario', fr:'Asie – Tour Gastronomique',
+      de:'Asien – Kulinarische Tour', pt:'Ásia – Tour Culinário', ru:'Азия – Кулинарный Тур', ar:'آسيا – جولة طهوية',
+      zh:'亚洲美食之旅', ja:'アジア料理ツアー', hi:'एशिया – पाककला यात्रा', tr:'Asya – Mutfak Turu', it:'Asia – Tour Culinario', ko:'아시아 푸드 투어'
     },
-    costRON: '240–300',
-    costEUR: '50–65',
+    desc: {
+      ro:'Japonia, Korea, Vietnam, Thailanda, India și Indonezia pe farfuria ta. Șapte zile de arome, mirodenii și tehnici culinare asiatice.',
+      en:'Japan, Korea, Vietnam, Thailand, India and Indonesia on your plate. Seven days of Asian flavours, spices and cooking techniques.',
+      es:'Japón, Corea, Vietnam, Tailandia, India e Indonesia en tu plato. Siete días de sabores asiáticos.',
+      fr:'Japon, Corée, Vietnam, Thaïlande, Inde et Indonésie dans votre assiette. Sept jours de saveurs asiatiques.',
+      de:'Japan, Korea, Vietnam, Thailand, Indien und Indonesien auf dem Teller. Sieben Tage asiatische Küche.',
+      pt:'Japão, Coreia, Vietnã, Tailândia, Índia e Indonésia no seu prato. Sete dias de sabores asiáticos.',
+      ru:'Япония, Корея, Вьетнам, Таиланд, Индия и Индонезия на тарелке. Семь дней азиатской кухни.',
+      ar:'اليابان وكوريا وفيتنام وتايلاند والهند وإندونيسيا على طبقك. سبعة أيام من النكهات الآسيوية.',
+      zh:'日本、韩国、越南、泰国、印度和印度尼西亚美食轮番登场。七天亚洲风味大赏。',
+      ja:'日本、韓国、ベトナム、タイ、インド、インドネシアの料理を巡る7日間。',
+      hi:'जापान, कोरिया, वियतनाम, थाईलैंड, भारत और इंडोनेशिया के व्यंजनों का सप्ताह।',
+      tr:'Japonya, Kore, Vietnam, Tayland, Hindistan ve Endonezya\'nın tatlarıyla geçen yedi gün.',
+      it:'Giappone, Corea, Vietnam, Tailandia, India e Indonesia nel tuo piatto. Sette giorni di sapori asiatici.',
+      ko:'일본, 한국, 베트남, 태국, 인도, 인도네시아 요리를 맛보는 7일간의 여행.'
+    },
     lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
     dinners: ['Sushi','Curry de pui','Ramen','Pui Gong Bao','Nasi Goreng','Rendang','Tom Kha Gai'],
   },
   {
-    id: 'buget',
-    idEn: 'budget',
-    emoji: '💰',
-    theme: { ro:'Meniu de Buget – sub 150 RON', en:'Budget Week – under €30' },
-    desc: {
-      ro: 'Mese sănătoase și gustoase pentru 2 persoane cu un buget de maxim 150 RON pe săptămână. Ingrediente simple, preparare rapidă.',
-      en: 'Healthy and tasty meals for 2 people on a budget of under €30 per week. Simple ingredients, quick preparation.'
+    id: 'buget', idEn: 'budget', emoji: '💰',
+    costRON: '100–150', costEUR: '20–30',
+    theme: {
+      ro:'Meniu de Buget – sub 150 RON', en:'Budget Week – under €30', es:'Semana Económica – menos de €30',
+      fr:'Semaine Économique – moins de €30', de:'Günstige Woche – unter €30', pt:'Semana Econômica – menos de €30',
+      ru:'Бюджетная Неделя – до €30', ar:'أسبوع اقتصادي – أقل من €30',
+      zh:'省钱一周 – €30以内', ja:'節約ウィーク – €30以内', hi:'बजट सप्ताह – €30 से कम',
+      tr:'Ekonomik Hafta – €30\'dan az', it:'Settimana Economica – meno di €30', ko:'절약 한 주 – €30 미만'
     },
-    costRON: '100–150',
-    costEUR: '20–30',
-    lunches: budgetRecipes.slice(0,7).map(r=>r.name?.ro || r.name?.en),
-    dinners: budgetRecipes.slice(7,14).map(r=>r.name?.ro || r.name?.en),
-    isBudget: true
+    desc: {
+      ro:'Mese sănătoase și gustoase pentru 2 persoane cu un buget de maxim 150 RON pe săptămână. Ingrediente simple, preparare rapidă.',
+      en:'Healthy and tasty meals for 2 people on a budget of under €30 per week. Simple ingredients, quick preparation.',
+      es:'Comidas saludables y sabrosas para 2 personas con un presupuesto de menos de €30 por semana.',
+      fr:'Des repas sains et savoureux pour 2 personnes avec un budget de moins de €30 par semaine.',
+      de:'Gesunde und leckere Mahlzeiten für 2 Personen mit einem Budget von unter €30 pro Woche.',
+      pt:'Refeições saudáveis e saborosas para 2 pessoas com orçamento de menos de €30 por semana.',
+      ru:'Здоровые и вкусные блюда для 2 человек с бюджетом до €30 в неделю.',
+      ar:'وجبات صحية ولذيذة لشخصين بميزانية أقل من €30 في الأسبوع.',
+      zh:'两人份健康美味的一周饮食，预算€30以内，食材简单，制作快捷。',
+      ja:'2人分、週€30以内の予算で健康的で美味しい料理を楽しむ1週間。',
+      hi:'2 लोगों के लिए €30 से कम बजट में स्वस्थ और स्वादिष्ट भोजन।',
+      tr:'2 kişi için haftalık €30\'dan az bütçeyle sağlıklı ve lezzetli yemekler.',
+      it:'Pasti sani e gustosi per 2 persone con un budget inferiore a €30 a settimana.',
+      ko:'주 €30 미만 예산으로 2인 건강하고 맛있는 식사를 즐기는 한 주.'
+    },
+    isBudget: true,
+    lunches: budgetRecipes.slice(0,7).map(r=>r.name?.ro||r.name?.en),
+    dinners: budgetRecipes.slice(7,14).map(r=>r.name?.ro||r.name?.en),
   },
   {
-    id: 'est-european',
-    idEn: 'eastern-european',
-    emoji: '🥟',
-    theme: { ro:'Est-European – Gusturi de Acasă', en:'Eastern European Comfort Food' },
-    desc: {
-      ro: 'Ciorbele, tocanele și preparatele tradiționale din România, Georgia, Ungaria și Polonia. Bucătărie de suflet, autentică și hrănitoare.',
-      en: 'Stews, soups and traditional dishes from Romania, Georgia, Hungary and Poland. Soul food, authentic and nourishing.'
+    id: 'est-european', idEn: 'eastern-european', emoji: '🥟',
+    costRON: '160–210', costEUR: '33–45',
+    theme: {
+      ro:'Est-European – Gusturi de Acasă', en:'Eastern European Comfort Food', es:'Europa del Este – Sabores del Hogar',
+      fr:'Europe de l\'Est – Saveurs du Foyer', de:'Osteuropa – Heimische Küche', pt:'Europa Oriental – Sabores Caseiros',
+      ru:'Восточная Европа – Домашняя Кухня', ar:'أوروبا الشرقية – مذاق المنزل',
+      zh:'东欧家常美食', ja:'東欧のホームフード', hi:'पूर्वी यूरोप – घर के स्वाद',
+      tr:'Doğu Avrupa – Ev Yemekleri', it:'Europa dell\'Est – Sapori di Casa', ko:'동유럽 가정 요리'
     },
-    costRON: '160–210',
-    costEUR: '33–45',
+    desc: {
+      ro:'Ciorbele, tocanele și preparatele tradiționale din România, Georgia, Ungaria și Polonia. Bucătărie de suflet, autentică și hrănitoare.',
+      en:'Stews, soups and traditional dishes from Romania, Georgia, Hungary and Poland. Soul food, authentic and nourishing.',
+      es:'Guisos, sopas y platos tradicionales de Rumanía, Georgia, Hungría y Polonia. Comida reconfortante y nutritiva.',
+      fr:'Ragoûts, soupes et plats traditionnels de Roumanie, Géorgie, Hongrie et Pologne. Cuisine réconfortante et nourrissante.',
+      de:'Eintöpfe, Suppen und traditionelle Gerichte aus Rumänien, Georgien, Ungarn und Polen. Herzhafte Hausmannskost.',
+      pt:'Guisados, sopas e pratos tradicionais da Romênia, Geórgia, Hungria e Polônia. Culinária reconfortante.',
+      ru:'Супы, рагу и традиционные блюда из Румынии, Грузии, Венгрии и Польши. Домашняя кухня.',
+      ar:'يخنات وشوربات وأطباق تقليدية من رومانيا وجورجيا والمجر وبولندا.',
+      zh:'来自罗马尼亚、格鲁吉亚、匈牙利和波兰的炖菜、汤品和传统菜肴。',
+      ja:'ルーマニア、グルジア、ハンガリー、ポーランドの伝統料理。心温まるホームフード。',
+      hi:'रोमानिया, जॉर्जिया, हंगरी और पोलैंड के पारंपरिक व्यंजन।',
+      tr:'Romanya, Gürcistan, Macaristan ve Polonya\'nın geleneksel yemekleri.',
+      it:'Stufati, zuppe e piatti tradizionali di Romania, Georgia, Ungheria e Polonia.',
+      ko:'루마니아, 조지아, 헝가리, 폴란드의 전통 요리. 따뜻한 가정식.'
+    },
     lunches: ['Ciorbă de burtă','Bors','Fasole cu cârnați','Gulaș','Pierogi','Lobio','Chakhokhbili'],
     dinners: ['Pui Kiev','Khinkali','Chicken Paprikash','Kotlet schabowy','Zeamă','Okroshka','Solyanka'],
   },
   {
-    id: 'tur-mondial',
-    idEn: 'world-tour',
-    emoji: '🌍',
-    theme: { ro:'Tur Mondial – 7 Țări în 7 Zile', en:'World Tour – 7 Countries in 7 Days' },
-    desc: {
-      ro: 'O masă pe zi din alt colț al lumii: SUA, Anglia, Germania, Jamaica, Nigeria, India și Israel. Diversitate culinară maximă.',
-      en: 'One meal a day from a different corner of the world: USA, UK, Germany, Jamaica, Nigeria, India and Israel.'
+    id: 'tur-mondial', idEn: 'world-tour', emoji: '🌍',
+    costRON: '190–250', costEUR: '40–53',
+    theme: {
+      ro:'Tur Mondial – 7 Țări în 7 Zile', en:'World Tour – 7 Countries in 7 Days',
+      es:'Vuelta al Mundo – 7 Países en 7 Días', fr:'Tour du Monde – 7 Pays en 7 Jours',
+      de:'Weltreise – 7 Länder in 7 Tagen', pt:'Volta ao Mundo – 7 Países em 7 Dias',
+      ru:'Тур по Миру – 7 Стран за 7 Дней', ar:'جولة عالمية – 7 دول في 7 أيام',
+      zh:'环球美食 – 7天7国', ja:'世界一周 – 7カ国7日間', hi:'विश्व भ्रमण – 7 देश 7 दिन',
+      tr:'Dünya Turu – 7 Günde 7 Ülke', it:'Giro del Mondo – 7 Paesi in 7 Giorni', ko:'세계 일주 – 7일 7개국'
     },
-    costRON: '190–250',
-    costEUR: '40–53',
+    desc: {
+      ro:'O masă pe zi din alt colț al lumii: SUA, Anglia, Germania, Jamaica, Nigeria, India și Israel. Diversitate culinară maximă.',
+      en:'One meal a day from a different corner of the world: USA, UK, Germany, Jamaica, Nigeria, India and Israel.',
+      es:'Una comida al día de un rincón diferente del mundo: EE.UU., Reino Unido, Alemania, Jamaica, Nigeria, India e Israel.',
+      fr:'Un repas par jour d\'un coin différent du monde: USA, Angleterre, Allemagne, Jamaïque, Nigeria, Inde et Israël.',
+      de:'Eine Mahlzeit täglich aus einem anderen Winkel der Welt: USA, England, Deutschland, Jamaika, Nigeria, Indien, Israel.',
+      pt:'Uma refeição por dia de um canto diferente do mundo: EUA, Inglaterra, Alemanha, Jamaica, Nigéria, Índia e Israel.',
+      ru:'Блюдо дня из разных уголков мира: США, Англия, Германия, Ямайка, Нигерия, Индия и Израиль.',
+      ar:'وجبة يومية من زاوية مختلفة من العالم: الولايات المتحدة وإنجلترا وألمانيا وجامايكا ونيجيريا والهند وإسرائيل.',
+      zh:'每天一道来自世界不同角落的美食：美国、英国、德国、牙买加、尼日利亚、印度和以色列。',
+      ja:'毎日世界の別の地域の料理を: アメリカ、イギリス、ドイツ、ジャマイカ、ナイジェリア、インド、イスラエル。',
+      hi:'हर दिन दुनिया के एक अलग कोने का भोजन: यूएसए, इंग्लैंड, जर्मनी, जमैका, नाइजीरिया, भारत और इजरायल।',
+      tr:'Her gün dünyanın farklı bir köşesinden bir yemek: ABD, İngiltere, Almanya, Jamaika, Nijerya, Hindistan ve İsrail.',
+      it:'Un pasto al giorno da un angolo diverso del mondo: USA, Inghilterra, Germania, Giamaica, Nigeria, India e Israele.',
+      ko:'매일 세계 각지의 요리를 즐기는 일주일: 미국, 영국, 독일, 자메이카, 나이지리아, 인도, 이스라엘.'
+    },
     lunches: ['Schnitzel','Tabbouleh','Hummus','Koshari','Shakshuka','Smørrebrød','Chakchouka'],
     dinners: ['Cheeseburger','Fish and Chips','Chifteluțe suedeze','Jerk Chicken','Jollof Rice','Biryani','Bobotie'],
   },
   {
-    id: 'latin',
-    idEn: 'latin-american',
-    emoji: '🌶️',
-    theme: { ro:'America Latină – Picant & Colorat', en:'Latin America – Spicy & Vibrant' },
-    desc: {
-      ro: 'Mexic, Peru, Brazilia și Cuba pe farfuria ta. Fasole neagră, porumb, avocado, carne condimentată și culori vii.',
-      en: 'Mexico, Peru, Brazil and Cuba on your plate. Black beans, corn, avocado, spiced meats and vibrant colours.'
+    id: 'latin', idEn: 'latin-american', emoji: '🌶️',
+    costRON: '200–260', costEUR: '42–55',
+    theme: {
+      ro:'America Latină – Picant & Colorat', en:'Latin America – Spicy & Vibrant',
+      es:'América Latina – Picante y Colorido', fr:'Amérique Latine – Épicé et Vibrant',
+      de:'Lateinamerika – Würzig & Bunt', pt:'América Latina – Picante & Colorido',
+      ru:'Латинская Америка – Острое & Красочное', ar:'أمريكا اللاتينية – حار وملون',
+      zh:'拉丁美洲 – 辛辣多彩', ja:'ラテンアメリカ – スパイシー＆カラフル',
+      hi:'लैटिन अमेरिका – मसालेदार और रंगीन', tr:'Latin Amerika – Baharatlı ve Renkli',
+      it:'America Latina – Piccante e Colorato', ko:'라틴 아메리카 – 매콤하고 화려한'
     },
-    costRON: '200–260',
-    costEUR: '42–55',
+    desc: {
+      ro:'Mexic, Peru, Brazilia și Cuba pe farfuria ta. Fasole neagră, porumb, avocado, carne condimentată și culori vii.',
+      en:'Mexico, Peru, Brazil and Cuba on your plate. Black beans, corn, avocado, spiced meats and vibrant colours.',
+      es:'México, Perú, Brasil y Cuba en tu plato. Frijoles negros, maíz, aguacate y carnes especiadas.',
+      fr:'Mexique, Pérou, Brésil et Cuba dans votre assiette. Haricots noirs, maïs, avocat et viandes épicées.',
+      de:'Mexiko, Peru, Brasilien und Kuba auf dem Teller. Schwarze Bohnen, Mais, Avocado und gewürztes Fleisch.',
+      pt:'México, Peru, Brasil e Cuba no seu prato. Feijão preto, milho, abacate e carnes temperadas.',
+      ru:'Мексика, Перу, Бразилия и Куба на тарелке. Чёрные бобы, кукуруза, авокадо и пряное мясо.',
+      ar:'المكسيك والبيرو والبرازيل وكوبا على طبقك. الفاصوليا السوداء والذرة والأفوكادو واللحم المتبل.',
+      zh:'墨西哥、秘鲁、巴西和古巴美食齐聚一盘。黑豆、玉米、牛油果和香辣肉类。',
+      ja:'メキシコ、ペルー、ブラジル、キューバの料理が一皿に。ブラックビーンズ、コーン、アボカド。',
+      hi:'मेक्सिको, पेरू, ब्राज़ील और क्यूबा के व्यंजन। काली फलियाँ, मक्का, एवोकाडो।',
+      tr:'Meksika, Peru, Brezilya ve Küba\'nın tatları. Siyah fasulye, mısır, avokado ve baharatlı etler.',
+      it:'Messico, Perù, Brasile e Cuba nel tuo piatto. Fagioli neri, mais, avocado e carni speziate.',
+      ko:'멕시코, 페루, 브라질, 쿠바 요리의 향연. 검은콩, 옥수수, 아보카도, 매콤한 고기.'
+    },
     lunches: ['Tamale','Arroz Chaufa','Lomo Saltado','Picadillo','Pozole','Pupusa','Arepa'],
     dinners: ['Tacos','Feijoada','Chili con carne','Moqueca','Ropa Vieja','Bandeja Paisa','Chiles en nogada'],
   },
   {
-    id: 'vegetarian',
-    idEn: 'vegetarian',
-    emoji: '🌱',
-    theme: { ro:'Vegetarian – Colorat & Sănătos', en:'Vegetarian – Colourful & Healthy' },
-    desc: {
-      ro: 'O săptămână fără carne, bogată în proteine vegetale, legume proaspete și savori din toată lumea. Perfect pentru a reduce consumul de carne.',
-      en: 'A meat-free week rich in plant proteins, fresh vegetables and global flavours. Perfect for reducing meat consumption.'
+    id: 'vegetarian', idEn: 'vegetarian', emoji: '🌱',
+    costRON: '150–200', costEUR: '31–42',
+    theme: {
+      ro:'Vegetarian – Colorat & Sănătos', en:'Vegetarian – Colourful & Healthy',
+      es:'Vegetariano – Colorido y Saludable', fr:'Végétarien – Coloré & Sain',
+      de:'Vegetarisch – Bunt & Gesund', pt:'Vegetariano – Colorido e Saudável',
+      ru:'Вегетарианский – Красочный и Полезный', ar:'نباتي – ملون وصحي',
+      zh:'素食 – 多彩健康', ja:'ベジタリアン – カラフル＆ヘルシー',
+      hi:'शाकाहारी – रंगीन और स्वस्थ', tr:'Vejetaryen – Renkli ve Sağlıklı',
+      it:'Vegetariano – Colorato e Sano', ko:'채식 – 다채롭고 건강한'
     },
-    costRON: '150–200',
-    costEUR: '31–42',
+    desc: {
+      ro:'O săptămână fără carne, bogată în proteine vegetale, legume proaspete și savori din toată lumea. Perfect pentru a reduce consumul de carne.',
+      en:'A meat-free week rich in plant proteins, fresh vegetables and global flavours. Perfect for reducing meat consumption.',
+      es:'Una semana sin carne, rica en proteínas vegetales y verduras frescas. Perfecta para reducir el consumo de carne.',
+      fr:'Une semaine sans viande, riche en protéines végétales et légumes frais. Idéal pour réduire la consommation de viande.',
+      de:'Eine fleischfreie Woche mit Pflanzeneiweiß, frischem Gemüse und weltweiten Aromen.',
+      pt:'Uma semana sem carne, rica em proteínas vegetais e legumes frescos. Perfeita para reduzir o consumo de carne.',
+      ru:'Неделя без мяса, богатая растительными белками и свежими овощами со всего мира.',
+      ar:'أسبوع بدون لحوم، غني بالبروتينات النباتية والخضروات الطازجة.',
+      zh:'无肉的一周，富含植物蛋白、新鲜蔬菜，汇聚世界各地的素食风味。',
+      ja:'肉なしの1週間。植物性タンパク質と新鮮な野菜、世界各地の風味。',
+      hi:'मांस रहित सप्ताह, पौधे-आधारित प्रोटीन और ताज़ी सब्जियों से भरपूर।',
+      tr:'Etsiz bir hafta, bitkisel proteinler ve taze sebzelerle dolu.',
+      it:'Una settimana senza carne, ricca di proteine vegetali e verdure fresche.',
+      ko:'고기 없는 한 주, 식물성 단백질과 신선한 채소로 가득한 건강한 식사.'
+    },
     lunches: ['Gazpacho','Tabbouleh','Ratatouille','Dhal','Shakshuka','Fasolada','Pasta alla Norma'],
     dinners: ['Musaca grecească','Pad Thai','Rajma','Hummus','Bibimbap','Spanakopita','Mapo Tofu'],
   },
   {
-    id: 'rapid',
-    idEn: 'quick-easy',
-    emoji: '⚡',
-    theme: { ro:'Rapid & Simplu – max. 30 min', en:'Quick & Easy – max 30 min' },
-    desc: {
-      ro: 'Mese delicioase în cel mult 30 de minute. Perfecte pentru zilele aglomerate când vrei să mănânci bine fără să petreci ore în bucătărie.',
-      en: 'Delicious meals ready in 30 minutes or less. Perfect for busy days when you want to eat well without spending hours in the kitchen.'
+    id: 'rapid', idEn: 'quick-easy', emoji: '⚡',
+    costRON: '170–220', costEUR: '35–47',
+    theme: {
+      ro:'Rapid & Simplu – max. 30 min', en:'Quick & Easy – max 30 min',
+      es:'Rápido y Fácil – máx. 30 min', fr:'Rapide et Facile – max. 30 min',
+      de:'Schnell & Einfach – max. 30 Min.', pt:'Rápido e Fácil – máx. 30 min',
+      ru:'Быстро и Просто – до 30 мин', ar:'سريع وسهل – 30 دقيقة',
+      zh:'快手美食 – 30分钟搞定', ja:'クイック＆イージー – 最大30分',
+      hi:'त्वरित और आसान – 30 मिनट', tr:'Hızlı ve Kolay – maks. 30 dk',
+      it:'Veloce e Facile – max. 30 min', ko:'빠르고 쉬운 – 최대 30분'
     },
-    costRON: '170–220',
-    costEUR: '35–47',
-    lunches: ['Spaghete Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Omelete Americane','Schnitzel'],
+    desc: {
+      ro:'Mese delicioase în cel mult 30 de minute. Perfecte pentru zilele aglomerate când vrei să mănânci bine fără să petreci ore în bucătărie.',
+      en:'Delicious meals ready in 30 minutes or less. Perfect for busy days when you want to eat well without spending hours in the kitchen.',
+      es:'Comidas deliciosas listas en 30 minutos o menos. Perfectas para días ocupados.',
+      fr:'Des repas délicieux prêts en 30 minutes ou moins. Parfaits pour les journées chargées.',
+      de:'Leckere Mahlzeiten in 30 Minuten oder weniger. Für geschäftige Tage.',
+      pt:'Refeições deliciosas prontas em 30 minutos ou menos. Perfeitas para dias agitados.',
+      ru:'Вкусные блюда за 30 минут или меньше. Для занятых дней.',
+      ar:'وجبات لذيذة جاهزة في 30 دقيقة أو أقل. مثالية للأيام المزدحمة.',
+      zh:'30分钟或更短时间内完成的美味料理。忙碌日子的完美选择。',
+      ja:'30分以内で完成する美味しい料理。忙しい日にぴったり。',
+      hi:'30 मिनट या उससे कम में तैयार स्वादिष्ट भोजन। व्यस्त दिनों के लिए।',
+      tr:'30 dakika veya daha kısa sürede hazır lezzetli yemekler. Yoğun günler için.',
+      it:'Pasti deliziosi pronti in 30 minuti o meno. Perfetti per le giornate impegnate.',
+      ko:'30분 이내로 완성되는 맛있는 요리. 바쁜 날을 위한 완벽한 선택.'
+    },
+    lunches: ['Spaghete Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
     dinners: ['Pui Gong Bao','Pho','Tom Yum','Curry de pui','Nasi Goreng','Cheeseburger','Fish and Chips'],
   },
 ];
 
-/* ── shared HTML parts ───────────────────────────────────────── */
-const NAV = `
-<header class="app-header no-print" role="banner">
-  <nav class="app-nav" aria-label="Main navigation">
-    <a class="nav-brand" href="/" aria-label="MealPlanner.ro – home">
-      <span class="nav-icon" aria-hidden="true">🥗</span>
-      <span class="nav-title">MealPlanner<span class="nav-tld">.ro</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="/ro/meniu-saptamanal/" class="nav-link">Meniuri săptămânale</a>
-      <a href="/ro/retete/" class="nav-link">Rețete</a>
-      <a href="/ro/" class="nav-link">Aplicație</a>
-    </div>
-  </nav>
-</header>`;
+/* ════════════════════════════════════════════════════════════════
+   LANGUAGE CONFIGS — UI strings + URL structure for all 14 langs
+   ════════════════════════════════════════════════════════════════ */
+const LANG_CONFIGS = {
+  ro: {
+    code:'ro', dir:'/ro/meniu-saptamanal', appDir:'/ro',
+    homeLabel:'Acasă', sectionLabel:'Meniuri Săptămânale', appLabel:'Aplicație',
+    planBadge:'Meniu săptămânal', planHeading:'Planul complet al săptămânii',
+    dayTh:'Ziua', lunchTh:'Prânz', dinnerTh:'Cină',
+    persons:'2 persoane', weeks:'7 zile',
+    costUnit:'RON / săpt.', costValue: p=>p.costRON,
+    ingredientsLabel: n=>`${n} ingrediente`,
+    openAppLabel:'Deschide în aplicație &amp; editează',
+    shoppingAnchor:'lista-cumparaturi',
+    shoppingLabel:'Vezi lista de cumpărături',
+    shoppingHeading:'Lista completă de cumpărături',
+    shoppingIntro: (plan,n)=>`Toate ingredientele necesare, sortate alfabetic. Estimat <strong>~${plan.costRON} RON</strong> pentru 2 persoane.`,
+    openPlanLabel:'Deschide planul în aplicație',
+    openPlanSub:'Personalizează și descarcă PDF gratuit',
+    otherPlansHeading:'Alte meniuri săptămânale',
+    seeAll:'Vezi toate cele 8 meniuri →',
+    seoHeading:'De ce să planifici mesele în avans?',
+    seoBullets:['Reduci risipa alimentară cu până la <strong>30%</strong>','Economisești <strong>timp și bani</strong> — o singură tură','Mănânci mai <strong>sănătos</strong>','Elimini stresul zilnic al întrebării „ce gătesc azi?"'],
+    indexTitle:'Meniuri Săptămânale cu Liste de Cumpărături – 8 Planuri | MealPlanner.ro',
+    indexDesc:'8 meniuri săptămânale complete cu liste de cumpărături și costuri estimate. Mediteranean, Asian, Buget, Vegetarian și altele.',
+    indexH1:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
+    indexH1raw:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
+    indexSubdesc:'8 planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat.',
+    indexViewPlan:'Vezi planul',
+    indexSeoH:'De ce să folosești un planificator săptămânal?',
+    indexSeoP:'Planificarea meselor este una din cele mai eficiente metode de a mânca sănătos și de a economisi bani.',
+    metaTitle: (theme)=>`Meniu Săptămânal ${theme} – Listă Cumpărături | MealPlanner.ro`,
+    days:['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.id,
+  },
+  en: {
+    code:'en', dir:'/en/weekly-meal-plan', appDir:'/en',
+    homeLabel:'Home', sectionLabel:'Weekly Meal Plans', appLabel:'App',
+    planBadge:'Weekly meal plan', planHeading:'Full weekly plan',
+    dayTh:'Day', lunchTh:'Lunch', dinnerTh:'Dinner',
+    persons:'2 people', weeks:'7 days',
+    costUnit:'/ week', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} ingredients`,
+    openAppLabel:'Open in app &amp; customise',
+    shoppingAnchor:'shopping-list-section',
+    shoppingLabel:'See shopping list',
+    shoppingHeading:'Complete shopping list',
+    shoppingIntro: (plan,n)=>`All ingredients for the week, sorted alphabetically. Estimated <strong>~€${plan.costEUR}</strong> for 2 people.`,
+    openPlanLabel:'Open plan in app',
+    openPlanSub:'Customise recipes and download free PDF',
+    otherPlansHeading:'More weekly plans',
+    seeAll:'See all 8 plans →',
+    seoHeading:'Why plan meals in advance?',
+    seoBullets:['Reduce food waste by up to <strong>30%</strong>','Save <strong>time and money</strong> — one shopping trip','Eat <strong>healthier</strong>','Eliminate the daily "what should I cook?" stress'],
+    indexTitle:'Free Weekly Meal Plans with Shopping Lists – 8 Themes | MealPlanner.ro',
+    indexDesc:'8 complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.',
+    indexH1raw:'Free Weekly Meal Plans with <span class="accent">Shopping Lists</span>',
+    indexSubdesc:'8 complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost.',
+    indexViewPlan:'View plan',
+    indexSeoH:'Why use a weekly meal planner?',
+    indexSeoP:'Planning meals in advance is one of the most effective ways to eat healthier and save money.',
+    metaTitle: (theme)=>`Weekly Meal Plan – ${theme} | MealPlanner.ro`,
+    days:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    recipeBase:'/en/recipes/',
+    planIdFn: p=>p.idEn,
+  },
+  es: {
+    code:'es', dir:'/es/plan-semanal', appDir:'/',
+    homeLabel:'Inicio', sectionLabel:'Planes Semanales', appLabel:'App',
+    planBadge:'Plan de comidas semanal', planHeading:'Plan semanal completo',
+    dayTh:'Día', lunchTh:'Almuerzo', dinnerTh:'Cena',
+    persons:'2 personas', weeks:'7 días',
+    costUnit:'/ semana', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} ingredientes`,
+    openAppLabel:'Abrir en la app &amp; personalizar',
+    shoppingAnchor:'lista-compras',
+    shoppingLabel:'Ver lista de compras',
+    shoppingHeading:'Lista de compras completa',
+    shoppingIntro: (plan,n)=>`Todos los ingredientes de la semana. Estimado <strong>~€${plan.costEUR}</strong> para 2 personas.`,
+    openPlanLabel:'Abrir plan en la app',
+    openPlanSub:'Personaliza recetas y descarga PDF gratis',
+    otherPlansHeading:'Más planes semanales',
+    seeAll:'Ver los 8 planes →',
+    seoHeading:'¿Por qué planificar las comidas?',
+    seoBullets:['Reduce el desperdicio de alimentos hasta un <strong>30%</strong>','Ahorra <strong>tiempo y dinero</strong>','Come de forma más <strong>saludable</strong>','Elimina el estrés diario de "¿qué cocino hoy?"'],
+    indexTitle:'Planes de Comida Semanales con Listas de Compra – 8 Temas | MealPlanner.ro',
+    indexDesc:'8 planes de comida semanales completos con listas de compra y costes estimados.',
+    indexH1raw:'Planes Semanales con <span class="accent">Listas de Compra</span>',
+    indexSubdesc:'8 planes completos, cada uno con 14 recetas, lista de compra ordenada y coste estimado.',
+    indexViewPlan:'Ver plan',
+    indexSeoH:'¿Por qué usar un planificador semanal?',
+    indexSeoP:'Planificar las comidas es una de las formas más eficaces de comer más sano y ahorrar dinero.',
+    metaTitle: (theme)=>`Plan Semanal – ${theme} | MealPlanner.ro`,
+    days:['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  fr: {
+    code:'fr', dir:'/fr/plan-semaine', appDir:'/',
+    homeLabel:'Accueil', sectionLabel:'Plans de la Semaine', appLabel:'Application',
+    planBadge:'Plan repas hebdomadaire', planHeading:'Plan complet de la semaine',
+    dayTh:'Jour', lunchTh:'Déjeuner', dinnerTh:'Dîner',
+    persons:'2 personnes', weeks:'7 jours',
+    costUnit:'/ semaine', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} ingrédients`,
+    openAppLabel:'Ouvrir dans l\'app &amp; personnaliser',
+    shoppingAnchor:'liste-courses',
+    shoppingLabel:'Voir la liste de courses',
+    shoppingHeading:'Liste de courses complète',
+    shoppingIntro: (plan,n)=>`Tous les ingrédients de la semaine. Estimé <strong>~€${plan.costEUR}</strong> pour 2 personnes.`,
+    openPlanLabel:'Ouvrir le plan dans l\'app',
+    openPlanSub:'Personnalisez et téléchargez le PDF gratuitement',
+    otherPlansHeading:'Autres plans hebdomadaires',
+    seeAll:'Voir les 8 plans →',
+    seoHeading:'Pourquoi planifier les repas ?',
+    seoBullets:['Réduisez le gaspillage alimentaire de <strong>30%</strong>','Économisez <strong>temps et argent</strong>','Mangez plus <strong>sainement</strong>','Éliminez le stress quotidien de "que cuisiner ?"'],
+    indexTitle:'Plans Repas Hebdomadaires avec Listes de Courses – 8 Thèmes | MealPlanner.ro',
+    indexDesc:'8 plans repas hebdomadaires complets avec listes de courses et coûts estimés.',
+    indexH1raw:'Plans Hebdomadaires avec <span class="accent">Listes de Courses</span>',
+    indexSubdesc:'8 plans complets, chacun avec 14 recettes, une liste de courses et un coût estimé.',
+    indexViewPlan:'Voir le plan',
+    indexSeoH:'Pourquoi utiliser un planificateur hebdomadaire ?',
+    indexSeoP:'Planifier les repas à l\'avance est l\'un des moyens les plus efficaces de manger sainement.',
+    metaTitle: (theme)=>`Plan de Repas – ${theme} | MealPlanner.ro`,
+    days:['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  de: {
+    code:'de', dir:'/de/wochenplan', appDir:'/',
+    homeLabel:'Startseite', sectionLabel:'Wochenpläne', appLabel:'App',
+    planBadge:'Wochenspeiseplan', planHeading:'Vollständiger Wochenplan',
+    dayTh:'Tag', lunchTh:'Mittagessen', dinnerTh:'Abendessen',
+    persons:'2 Personen', weeks:'7 Tage',
+    costUnit:'/ Woche', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} Zutaten`,
+    openAppLabel:'In App öffnen &amp; anpassen',
+    shoppingAnchor:'einkaufsliste',
+    shoppingLabel:'Einkaufsliste anzeigen',
+    shoppingHeading:'Vollständige Einkaufsliste',
+    shoppingIntro: (plan,n)=>`Alle Zutaten der Woche. Geschätzt <strong>~€${plan.costEUR}</strong> für 2 Personen.`,
+    openPlanLabel:'Plan in App öffnen',
+    openPlanSub:'Rezepte anpassen und PDF kostenlos herunterladen',
+    otherPlansHeading:'Weitere Wochenpläne',
+    seeAll:'Alle 8 Pläne anzeigen →',
+    seoHeading:'Warum Mahlzeiten im Voraus planen?',
+    seoBullets:['Lebensmittelverschwendung bis zu <strong>30%</strong> reduzieren','<strong>Zeit und Geld</strong> sparen','<strong>Gesünder</strong> essen','Täglichen Stress beim "Was koche ich?" eliminieren'],
+    indexTitle:'Wochenspeisepläne mit Einkaufslisten – 8 Themen | MealPlanner.ro',
+    indexDesc:'8 vollständige Wochenspeisepläne mit Einkaufslisten und Kostenabschätzungen.',
+    indexH1raw:'Wochenpläne mit <span class="accent">Einkaufslisten</span>',
+    indexSubdesc:'8 vollständige Pläne, jeder mit 14 Rezepten, einer sortierten Einkaufsliste und Kostenabschätzung.',
+    indexViewPlan:'Plan ansehen',
+    indexSeoH:'Warum einen Wochenplaner verwenden?',
+    indexSeoP:'Die Mahlzeitenplanung im Voraus ist eine der effektivsten Methoden, gesünder zu essen.',
+    metaTitle: (theme)=>`Wochenplan – ${theme} | MealPlanner.ro`,
+    days:['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  pt: {
+    code:'pt', dir:'/pt/plano-semanal', appDir:'/',
+    homeLabel:'Início', sectionLabel:'Planos Semanais', appLabel:'App',
+    planBadge:'Plano de refeições semanal', planHeading:'Plano semanal completo',
+    dayTh:'Dia', lunchTh:'Almoço', dinnerTh:'Jantar',
+    persons:'2 pessoas', weeks:'7 dias',
+    costUnit:'/ semana', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} ingredientes`,
+    openAppLabel:'Abrir na app &amp; personalizar',
+    shoppingAnchor:'lista-compras',
+    shoppingLabel:'Ver lista de compras',
+    shoppingHeading:'Lista de compras completa',
+    shoppingIntro: (plan,n)=>`Todos os ingredientes da semana. Estimado <strong>~€${plan.costEUR}</strong> para 2 pessoas.`,
+    openPlanLabel:'Abrir plano na app',
+    openPlanSub:'Personalize receitas e baixe PDF grátis',
+    otherPlansHeading:'Mais planos semanais',
+    seeAll:'Ver todos os 8 planos →',
+    seoHeading:'Por que planejar as refeições?',
+    seoBullets:['Reduza o desperdício de alimentos em <strong>30%</strong>','Economize <strong>tempo e dinheiro</strong>','Coma de forma mais <strong>saudável</strong>','Elimine o estresse diário de "o que cozinhar?"'],
+    indexTitle:'Planos de Refeições Semanais com Listas de Compras | MealPlanner.ro',
+    indexDesc:'8 planos semanais completos com listas de compras e custos estimados.',
+    indexH1raw:'Planos Semanais com <span class="accent">Listas de Compras</span>',
+    indexSubdesc:'8 planos completos, cada um com 14 receitas, lista de compras e custo estimado.',
+    indexViewPlan:'Ver plano',
+    indexSeoH:'Por que usar um planejador semanal?',
+    indexSeoP:'Planejar as refeições com antecedência é uma das formas mais eficazes de comer melhor.',
+    metaTitle: (theme)=>`Plano Semanal – ${theme} | MealPlanner.ro`,
+    days:['Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  ru: {
+    code:'ru', dir:'/ru/nedelnoe-menyu', appDir:'/',
+    homeLabel:'Главная', sectionLabel:'Недельные меню', appLabel:'Приложение',
+    planBadge:'Недельный план питания', planHeading:'Полный недельный план',
+    dayTh:'День', lunchTh:'Обед', dinnerTh:'Ужин',
+    persons:'2 человека', weeks:'7 дней',
+    costUnit:'/ неделю', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} ингредиентов`,
+    openAppLabel:'Открыть в приложении',
+    shoppingAnchor:'spisok-pokupok',
+    shoppingLabel:'Список покупок',
+    shoppingHeading:'Полный список покупок',
+    shoppingIntro: (plan,n)=>`Все ингредиенты недели. Примерно <strong>~€${plan.costEUR}</strong> на 2 человека.`,
+    openPlanLabel:'Открыть план',
+    openPlanSub:'Настройте рецепты и скачайте PDF бесплатно',
+    otherPlansHeading:'Другие недельные меню',
+    seeAll:'Все 8 меню →',
+    seoHeading:'Зачем планировать питание?',
+    seoBullets:['Снижает пищевые отходы на <strong>30%</strong>','Экономит <strong>время и деньги</strong>','Помогает питаться <strong>здоровее</strong>','Убирает ежедневный стресс'],
+    indexTitle:'Недельные меню с Cписками покупок | MealPlanner.ro',
+    indexDesc:'8 полных недельных планов питания со списками покупок и оценками стоимости.',
+    indexH1raw:'Недельные меню со <span class="accent">Списками покупок</span>',
+    indexSubdesc:'8 планов с 14 рецептами каждый, отсортированным списком и оценкой стоимости.',
+    indexViewPlan:'Смотреть план',
+    indexSeoH:'Почему стоит планировать питание?',
+    indexSeoP:'Планирование питания — один из эффективных способов питаться здоровее.',
+    metaTitle: (theme)=>`Недельное меню – ${theme} | MealPlanner.ro`,
+    days:['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  ar: {
+    code:'ar', dir:'/ar/khitat-usbuiya', appDir:'/', dir_attr:'rtl',
+    homeLabel:'الرئيسية', sectionLabel:'الخطط الأسبوعية', appLabel:'التطبيق',
+    planBadge:'خطة وجبات أسبوعية', planHeading:'الخطة الأسبوعية الكاملة',
+    dayTh:'اليوم', lunchTh:'الغداء', dinnerTh:'العشاء',
+    persons:'شخصان', weeks:'٧ أيام',
+    costUnit:'/ أسبوع', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} مكونات`,
+    openAppLabel:'فتح في التطبيق',
+    shoppingAnchor:'qaima-tasawuk',
+    shoppingLabel:'عرض قائمة التسوق',
+    shoppingHeading:'قائمة التسوق الكاملة',
+    shoppingIntro: (plan,n)=>`جميع المكونات للأسبوع. تقدير <strong>~€${plan.costEUR}</strong> لشخصين.`,
+    openPlanLabel:'فتح الخطة في التطبيق',
+    openPlanSub:'خصّص الوصفات وحمّل PDF مجاناً',
+    otherPlansHeading:'خطط أسبوعية أخرى',
+    seeAll:'عرض جميع الخطط الـ ٨ →',
+    seoHeading:'لماذا تخطط وجباتك مسبقاً؟',
+    seoBullets:['تقليل هدر الطعام حتى <strong>٣٠٪</strong>','توفير <strong>الوقت والمال</strong>','تناول طعام <strong>أكثر صحة</strong>','إزالة التوتر اليومي'],
+    indexTitle:'خطط وجبات أسبوعية مع قوائم تسوق | MealPlanner.ro',
+    indexDesc:'٨ خطط أسبوعية كاملة مع قوائم تسوق وتقديرات تكلفة.',
+    indexH1raw:'خطط أسبوعية مع <span class="accent">قوائم التسوق</span>',
+    indexSubdesc:'٨ خطط كاملة، كل منها يحتوي على ١٤ وصفة وقائمة تسوق وتقدير التكلفة.',
+    indexViewPlan:'عرض الخطة',
+    indexSeoH:'لماذا تستخدم مخططاً أسبوعياً؟',
+    indexSeoP:'التخطيط المسبق للوجبات من أفضل الطرق لتناول طعام صحي وتوفير المال.',
+    metaTitle: (theme)=>`الخطة الأسبوعية – ${theme} | MealPlanner.ro`,
+    days:['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  zh: {
+    code:'zh', dir:'/zh/zhoujicaidan', appDir:'/',
+    homeLabel:'首页', sectionLabel:'每周食谱计划', appLabel:'应用',
+    planBadge:'每周饮食计划', planHeading:'完整的每周计划',
+    dayTh:'日期', lunchTh:'午餐', dinnerTh:'晚餐',
+    persons:'2人份', weeks:'7天',
+    costUnit:'/ 周', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n}种食材`,
+    openAppLabel:'在应用中打开',
+    shoppingAnchor:'gouwu-qingdan',
+    shoppingLabel:'查看购物清单',
+    shoppingHeading:'完整购物清单',
+    shoppingIntro: (plan,n)=>`本周所需所有食材，按字母排序。2人份预计 <strong>~€${plan.costEUR}</strong>。`,
+    openPlanLabel:'在应用中打开计划',
+    openPlanSub:'自定义食谱并免费下载PDF',
+    otherPlansHeading:'更多每周计划',
+    seeAll:'查看全部8个计划 →',
+    seoHeading:'为什么要提前规划饮食？',
+    seoBullets:['减少食物浪费高达 <strong>30%</strong>','节省<strong>时间和金钱</strong>','饮食更<strong>健康</strong>','消除每天"今天吃什么"的烦恼'],
+    indexTitle:'每周饮食计划与购物清单 | MealPlanner.ro',
+    indexDesc:'8个完整的每周饮食计划，附购物清单和费用估算。',
+    indexH1raw:'每周饮食计划与<span class="accent">购物清单</span>',
+    indexSubdesc:'8个完整计划，每个包含14道食谱、购物清单和费用估算。',
+    indexViewPlan:'查看计划',
+    indexSeoH:'为什么使用每周饮食规划器？',
+    indexSeoP:'提前规划饮食是健康饮食和节省开支的最有效方法之一。',
+    metaTitle: (theme)=>`每周饮食计划 – ${theme} | MealPlanner.ro`,
+    days:['周一','周二','周三','周四','周五','周六','周日'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  ja: {
+    code:'ja', dir:'/ja/weekly-menu', appDir:'/',
+    homeLabel:'ホーム', sectionLabel:'週間献立', appLabel:'アプリ',
+    planBadge:'週間食事プラン', planHeading:'1週間の完全なプラン',
+    dayTh:'曜日', lunchTh:'昼食', dinnerTh:'夕食',
+    persons:'2人分', weeks:'7日間',
+    costUnit:'/ 週', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n}種類の食材`,
+    openAppLabel:'アプリで開く',
+    shoppingAnchor:'kaimono-list',
+    shoppingLabel:'買い物リストを見る',
+    shoppingHeading:'完全な買い物リスト',
+    shoppingIntro: (plan,n)=>`今週必要な食材。2人分 <strong>~€${plan.costEUR}</strong> 程度。`,
+    openPlanLabel:'アプリでプランを開く',
+    openPlanSub:'レシピをカスタマイズして無料PDFをダウンロード',
+    otherPlansHeading:'他の週間プラン',
+    seeAll:'全8プランを見る →',
+    seoHeading:'なぜ食事を計画すべきか？',
+    seoBullets:['食品廃棄を <strong>30%</strong> 削減','<strong>時間とお金</strong> の節約','より<strong>健康的</strong>な食事','毎日の「何を作ろう？」というストレスを解消'],
+    indexTitle:'週間献立プランと買い物リスト | MealPlanner.ro',
+    indexDesc:'8つの完全な週間食事プラン、買い物リスト付き。',
+    indexH1raw:'週間献立と<span class="accent">買い物リスト</span>',
+    indexSubdesc:'8つのプラン、それぞれ14レシピ、買い物リスト、費用概算付き。',
+    indexViewPlan:'プランを見る',
+    indexSeoH:'なぜ週間プランナーを使うのか？',
+    indexSeoP:'食事を事前に計画することは、健康的に食べるための最も効果的な方法の一つです。',
+    metaTitle: (theme)=>`週間プラン – ${theme} | MealPlanner.ro`,
+    days:['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  hi: {
+    code:'hi', dir:'/hi/weekly-plan', appDir:'/',
+    homeLabel:'होम', sectionLabel:'साप्ताहिक भोजन योजना', appLabel:'ऐप',
+    planBadge:'साप्ताहिक भोजन योजना', planHeading:'पूरी साप्ताहिक योजना',
+    dayTh:'दिन', lunchTh:'दोपहर का भोजन', dinnerTh:'रात का खाना',
+    persons:'2 लोग', weeks:'7 दिन',
+    costUnit:'/ सप्ताह', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} सामग्री`,
+    openAppLabel:'ऐप में खोलें',
+    shoppingAnchor:'kharid-suchi',
+    shoppingLabel:'खरीदारी सूची देखें',
+    shoppingHeading:'पूरी खरीदारी सूची',
+    shoppingIntro: (plan,n)=>`सप्ताह की सभी सामग्री। 2 लोगों के लिए अनुमानित <strong>~€${plan.costEUR}</strong>।`,
+    openPlanLabel:'ऐप में योजना खोलें',
+    openPlanSub:'रेसिपी कस्टमाइज़ करें और मुफ्त PDF डाउनलोड करें',
+    otherPlansHeading:'अन्य साप्ताहिक योजनाएं',
+    seeAll:'सभी 8 योजनाएं देखें →',
+    seoHeading:'भोजन की योजना क्यों बनाएं?',
+    seoBullets:['खाद्य अपशिष्ट <strong>30%</strong> तक कम करें','<strong>समय और पैसा</strong> बचाएं','अधिक <strong>स्वस्थ</strong> खाएं','रोज़ "आज क्या पकाएं?" की परेशानी खत्म करें'],
+    indexTitle:'साप्ताहिक भोजन योजनाएं और खरीदारी सूची | MealPlanner.ro',
+    indexDesc:'8 पूर्ण साप्ताहिक भोजन योजनाएं, खरीदारी सूची और लागत अनुमान के साथ।',
+    indexH1raw:'साप्ताहिक योजनाएं और <span class="accent">खरीदारी सूची</span>',
+    indexSubdesc:'8 पूर्ण योजनाएं, प्रत्येक में 14 रेसिपी, खरीदारी सूची और लागत अनुमान।',
+    indexViewPlan:'योजना देखें',
+    indexSeoH:'साप्ताहिक प्लानर क्यों उपयोग करें?',
+    indexSeoP:'पहले से भोजन की योजना बनाना स्वस्थ खाने और पैसे बचाने के सबसे प्रभावी तरीकों में से एक है।',
+    metaTitle: (theme)=>`साप्ताहिक योजना – ${theme} | MealPlanner.ro`,
+    days:['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  tr: {
+    code:'tr', dir:'/tr/haftalik-menu', appDir:'/',
+    homeLabel:'Ana Sayfa', sectionLabel:'Haftalık Yemek Planları', appLabel:'Uygulama',
+    planBadge:'Haftalık yemek planı', planHeading:'Tam haftalık plan',
+    dayTh:'Gün', lunchTh:'Öğle Yemeği', dinnerTh:'Akşam Yemeği',
+    persons:'2 kişi', weeks:'7 gün',
+    costUnit:'/ hafta', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} malzeme`,
+    openAppLabel:'Uygulamada aç',
+    shoppingAnchor:'alisveris-listesi',
+    shoppingLabel:'Alışveriş listesini gör',
+    shoppingHeading:'Tam alışveriş listesi',
+    shoppingIntro: (plan,n)=>`Haftanın tüm malzemeleri. 2 kişi için yaklaşık <strong>~€${plan.costEUR}</strong>.`,
+    openPlanLabel:'Planı uygulamada aç',
+    openPlanSub:'Tarifleri özelleştir ve ücretsiz PDF indir',
+    otherPlansHeading:'Diğer haftalık planlar',
+    seeAll:'Tüm 8 planı gör →',
+    seoHeading:'Yemekleri neden önceden planlayın?',
+    seoBullets:['Gıda israfını <strong>%30</strong> azalt','<strong>Zaman ve para</strong> tasarrufu','Daha <strong>sağlıklı</strong> beslen','Günlük "bugün ne pişirsem?" stresini yok et'],
+    indexTitle:'Haftalık Yemek Planları ve Alışveriş Listeleri | MealPlanner.ro',
+    indexDesc:'8 tam haftalık yemek planı, alışveriş listeleri ve maliyet tahminleriyle.',
+    indexH1raw:'Haftalık Planlar ve <span class="accent">Alışveriş Listeleri</span>',
+    indexSubdesc:'Her biri 14 tarif, alışveriş listesi ve maliyet tahmini içeren 8 tam plan.',
+    indexViewPlan:'Planı gör',
+    indexSeoH:'Haftalık planlayıcı neden kullanılmalı?',
+    indexSeoP:'Yemek planlaması, daha sağlıklı beslenmenin ve para biriktirmenin en etkili yollarından biridir.',
+    metaTitle: (theme)=>`Haftalık Plan – ${theme} | MealPlanner.ro`,
+    days:['Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi','Pazar'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  it: {
+    code:'it', dir:'/it/piano-settimanale', appDir:'/',
+    homeLabel:'Home', sectionLabel:'Piani Settimanali', appLabel:'App',
+    planBadge:'Piano pasti settimanale', planHeading:'Piano settimanale completo',
+    dayTh:'Giorno', lunchTh:'Pranzo', dinnerTh:'Cena',
+    persons:'2 persone', weeks:'7 giorni',
+    costUnit:'/ settimana', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n} ingredienti`,
+    openAppLabel:'Apri nell\'app',
+    shoppingAnchor:'lista-spesa',
+    shoppingLabel:'Vedi lista della spesa',
+    shoppingHeading:'Lista della spesa completa',
+    shoppingIntro: (plan,n)=>`Tutti gli ingredienti della settimana. Stimato <strong>~€${plan.costEUR}</strong> per 2 persone.`,
+    openPlanLabel:'Apri piano nell\'app',
+    openPlanSub:'Personalizza ricette e scarica PDF gratis',
+    otherPlansHeading:'Altri piani settimanali',
+    seeAll:'Vedi tutti gli 8 piani →',
+    seoHeading:'Perché pianificare i pasti?',
+    seoBullets:['Riduci gli sprechi alimentari fino al <strong>30%</strong>','Risparmia <strong>tempo e denaro</strong>','Mangia in modo più <strong>sano</strong>','Elimina lo stress quotidiano'],
+    indexTitle:'Piani Pasti Settimanali con Liste della Spesa | MealPlanner.ro',
+    indexDesc:'8 piani settimanali completi con liste della spesa e stime dei costi.',
+    indexH1raw:'Piani Settimanali con <span class="accent">Liste della Spesa</span>',
+    indexSubdesc:'8 piani completi, ognuno con 14 ricette, lista della spesa e stima dei costi.',
+    indexViewPlan:'Vedi piano',
+    indexSeoH:'Perché usare un pianificatore settimanale?',
+    indexSeoP:'Pianificare i pasti in anticipo è uno dei metodi più efficaci per mangiare in modo più sano.',
+    metaTitle: (theme)=>`Piano Settimanale – ${theme} | MealPlanner.ro`,
+    days:['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+  ko: {
+    code:'ko', dir:'/ko/jugan-menu', appDir:'/',
+    homeLabel:'홈', sectionLabel:'주간 식단 계획', appLabel:'앱',
+    planBadge:'주간 식단 계획', planHeading:'전체 주간 계획',
+    dayTh:'요일', lunchTh:'점심', dinnerTh:'저녁',
+    persons:'2인분', weeks:'7일',
+    costUnit:'/ 주', costValue: p=>`€${p.costEUR}`,
+    ingredientsLabel: n=>`${n}가지 재료`,
+    openAppLabel:'앱에서 열기',
+    shoppingAnchor:'jangbogi-list',
+    shoppingLabel:'장보기 목록 보기',
+    shoppingHeading:'완전한 장보기 목록',
+    shoppingIntro: (plan,n)=>`이번 주 필요한 모든 재료. 2인 기준 <strong>~€${plan.costEUR}</strong> 예상.`,
+    openPlanLabel:'앱에서 계획 열기',
+    openPlanSub:'레시피를 커스터마이즈하고 무료 PDF 다운로드',
+    otherPlansHeading:'다른 주간 계획',
+    seeAll:'전체 8개 계획 보기 →',
+    seoHeading:'왜 식사를 미리 계획해야 할까요?',
+    seoBullets:['식품 낭비를 <strong>30%</strong> 줄이기','<strong>시간과 돈</strong> 절약','더 <strong>건강하게</strong> 먹기','매일 "오늘 뭐 먹지?" 스트레스 해소'],
+    indexTitle:'주간 식단 계획 및 장보기 목록 | MealPlanner.ro',
+    indexDesc:'장보기 목록과 비용 추정이 포함된 8가지 완전한 주간 식단 계획.',
+    indexH1raw:'주간 계획과 <span class="accent">장보기 목록</span>',
+    indexSubdesc:'각각 14가지 레시피, 장보기 목록, 비용 추정이 포함된 8가지 완전한 계획.',
+    indexViewPlan:'계획 보기',
+    indexSeoH:'주간 플래너를 사용하는 이유',
+    indexSeoP:'식사를 미리 계획하는 것은 건강하게 먹고 비용을 절약하는 가장 효과적인 방법 중 하나입니다.',
+    metaTitle: (theme)=>`주간 계획 – ${theme} | MealPlanner.ro`,
+    days:['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
+    recipeBase:'/ro/retete/',
+    planIdFn: p=>p.idEn,
+  },
+};
 
-const NAV_EN = `
-<header class="app-header no-print" role="banner">
-  <nav class="app-nav" aria-label="Main navigation">
-    <a class="nav-brand" href="/" aria-label="MealPlanner.ro – home">
-      <span class="nav-icon" aria-hidden="true">🥗</span>
-      <span class="nav-title">MealPlanner<span class="nav-tld">.ro</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="/en/weekly-meal-plan/" class="nav-link">Weekly plans</a>
-      <a href="/en/recipes/" class="nav-link">Recipes</a>
-      <a href="/en/" class="nav-link">App</a>
-    </div>
-  </nav>
-</header>`;
-
-const FOOTER = `
-<footer class="app-footer" role="contentinfo">
-  <div class="footer-inner">
-    <span class="footer-brand">🥗 MealPlanner.ro</span>
-    <span class="footer-sep">·</span>
-    <a href="/ro/meniu-saptamanal/">Meniuri săptămânale</a>
-    <span class="footer-sep">·</span>
-    <a href="/ro/retete/">Rețete</a>
-    <span class="footer-sep">·</span>
-    <span>© 2025</span>
-  </div>
-</footer>`;
-
-const FOOTER_EN = `
-<footer class="app-footer" role="contentinfo">
-  <div class="footer-inner">
-    <span class="footer-brand">🥗 MealPlanner.ro</span>
-    <span class="footer-sep">·</span>
-    <a href="/en/weekly-meal-plan/">Weekly plans</a>
-    <span class="footer-sep">·</span>
-    <a href="/en/recipes/">Recipes</a>
-    <span class="footer-sep">·</span>
-    <span>© 2025</span>
-  </div>
-</footer>`;
-
-const HEAD = (title, desc, canonical, lang='ro') => `<!DOCTYPE html>
-<html lang="${lang}">
+/* ════════════════════════════════════════════════════════════════
+   SHARED HTML HELPERS
+   ════════════════════════════════════════════════════════════════ */
+const HEAD = (title, desc, canonical, langCode='ro', dir='ltr') => `<!DOCTYPE html>
+<html lang="${langCode}" dir="${dir}">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -229,314 +741,215 @@ const HEAD = (title, desc, canonical, lang='ro') => `<!DOCTYPE html>
 </head>
 <body>`;
 
-/* ── weekly plan page generator ──────────────────────────────── */
-function buildShoppingList(plan, lang){
+const makeNav = (lc) => `
+<header class="app-header no-print" role="banner">
+  <nav class="app-nav" aria-label="Main navigation">
+    <a class="nav-brand" href="/" aria-label="MealPlanner.ro – home">
+      <span class="nav-icon" aria-hidden="true">🥗</span>
+      <span class="nav-title">MealPlanner<span class="nav-tld">.ro</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="${lc.dir}/" class="nav-link">${lc.sectionLabel}</a>
+      ${lc.code==='ro' ? '<a href="/ro/retete/" class="nav-link">Rețete</a>' : lc.code==='en' ? '<a href="/en/recipes/" class="nav-link">Recipes</a>' : ''}
+      <a href="${lc.appDir}/" class="nav-link">${lc.appLabel}</a>
+    </div>
+  </nav>
+</header>`;
+
+const makeFooter = (lc) => `
+<footer class="app-footer" role="contentinfo">
+  <div class="footer-inner">
+    <span class="footer-brand">🥗 MealPlanner.ro</span>
+    <span class="footer-sep">·</span>
+    <a href="${lc.dir}/">${lc.sectionLabel}</a>
+    <span class="footer-sep">·</span>
+    <a href="${lc.appDir}/">${lc.appLabel}</a>
+    <span class="footer-sep">·</span>
+    <span>© 2025</span>
+  </div>
+</footer>`;
+
+/* ════════════════════════════════════════════════════════════════
+   SHOPPING LIST BUILDER
+   ════════════════════════════════════════════════════════════════ */
+function buildShoppingList(plan, langCode) {
+  const src = plan.isBudget ? budgetRecipes : recipes;
   const ingMap = {};
-  const recipeSource = plan.isBudget ? budgetRecipes : recipes;
   [...plan.lunches, ...plan.dinners].forEach(name => {
-    const r = recipeSource.find(re => re.name?.[lang] === name || re.name?.ro === name || re.name?.en === name);
-    if(!r) return;
-    const ingr = r.ingredients?.[lang] || r.ingredients?.ro || r.ingredients?.en || [];
+    const r = src.find(re =>
+      re.name?.[langCode] === name || re.name?.ro === name || re.name?.en === name
+    );
+    if (!r) return;
+    const ingr = r.ingredients?.[langCode] || r.ingredients?.ro || r.ingredients?.en || [];
     ingr.forEach(i => {
       const key = i.toLowerCase().replace(/\s*\(.*?\)/g,'').trim();
-      if(key && !ingMap[key]) ingMap[key] = i;
+      if (key && !ingMap[key]) ingMap[key] = i;
     });
   });
-  return Object.values(ingMap).sort((a,b)=>a.localeCompare(b));
+  return Object.values(ingMap).sort((a,b) => a.localeCompare(b));
 }
 
-const DAYS_RO = ['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'];
-const DAYS_EN = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+/* ════════════════════════════════════════════════════════════════
+   GENERIC planPage — works for ALL 14 languages
+   ════════════════════════════════════════════════════════════════ */
+function planPage(plan, lc) {
+  const src = plan.isBudget ? budgetRecipes : recipes;
+  const lc_code = lc.code;
+  const shopping = buildShoppingList(plan, lc_code);
+  const planId = lc.planIdFn(plan);
+  const theme  = plan.theme[lc_code] || plan.theme.en;
+  const desc   = plan.desc[lc_code]  || plan.desc.en;
+  const canonical = `${lc.dir}/${planId}/`;
 
-function planPageRO(plan){
-  const recipeSource = plan.isBudget ? budgetRecipes : recipes;
-  const shopping = buildShoppingList(plan, 'ro');
-  const jsonLd = {
-    "@context":"https://schema.org",
-    "@type":"MealPlan",
-    "name": `Meniu Săptămânal – ${plan.theme.ro}`,
-    "description": plan.desc.ro,
-    "url": `https://meal-planner.ro/ro/meniu-saptamanal/${plan.id}/`,
-    "publisher":{"@type":"Organization","name":"MealPlanner.ro","url":"https://meal-planner.ro"}
-  };
-
-  const rows = DAYS_RO.map((day, i) => {
+  const rows = lc.days.map((day, i) => {
     const lName = plan.lunches[i] || '';
     const dName = plan.dinners[i] || '';
-    const lRec  = recipeSource.find(r => r.name?.ro === lName || r.name?.en === lName);
-    const dRec  = recipeSource.find(r => r.name?.ro === dName || r.name?.en === dName);
-    const lIngr = lRec?.ingredients?.ro?.slice(0,5).join(', ') || '';
-    const dIngr = dRec?.ingredients?.ro?.slice(0,5).join(', ') || '';
-    const lSlug = lRec ? `/ro/retete/${slug(lRec.name.ro || lRec.name.en)}/` : '#';
-    const dSlug = dRec ? `/ro/retete/${slug(dRec.name.ro || dRec.name.en)}/` : '#';
-    return `
-    <tr>
+    const lRec  = src.find(r => r.name?.ro===lName || r.name?.en===lName);
+    const dRec  = src.find(r => r.name?.ro===dName || r.name?.en===dName);
+    const lDispName = lRec?.name?.[lc_code] || lRec?.name?.en || lName;
+    const dDispName = dRec?.name?.[lc_code] || dRec?.name?.en || dName;
+    const lIngr = (lRec?.ingredients?.[lc_code] || lRec?.ingredients?.ro || []).slice(0,5).join(', ');
+    const dIngr = (dRec?.ingredients?.[lc_code] || dRec?.ingredients?.ro || []).slice(0,5).join(', ');
+    const lSlug = lRec?.name?.ro || lRec?.name?.en ? `${lc.recipeBase}${slug(lRec.name.ro||lRec.name.en)}/` : '#';
+    const dSlug = dRec?.name?.ro || dRec?.name?.en ? `${lc.recipeBase}${slug(dRec.name.ro||dRec.name.en)}/` : '#';
+    return `<tr>
       <td><strong>${day}</strong></td>
-      <td>
-        ${lSlug !== '#' ? `<a href="${lSlug}" class="recipe-link">` : ''}<strong>${esc(lName)}</strong>${lSlug !== '#' ? '</a>' : ''}
-        ${lIngr ? `<br><small class="text-muted">${esc(lIngr)}…</small>` : ''}
+      <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lIngr?`<br><small class="text-muted">${esc(lIngr)}…</small>`:''}
       </td>
-      <td>
-        ${dSlug !== '#' ? `<a href="${dSlug}" class="recipe-link">` : ''}<strong>${esc(dName)}</strong>${dSlug !== '#' ? '</a>' : ''}
-        ${dIngr ? `<br><small class="text-muted">${esc(dIngr)}…</small>` : ''}
+      <td>${dSlug!=='#'?`<a href="${dSlug}" class="recipe-link">`:''}${esc(dDispName)}${dSlug!=='#'?'</a>':''}${dIngr?`<br><small class="text-muted">${esc(dIngr)}…</small>`:''}
       </td>
     </tr>`;
   }).join('');
 
   const shoppingItems = shopping.map(i => `<li><i class="bi bi-check2-square"></i> ${esc(capFirst(i))}</li>`).join('\n');
-  const otherPlans = PLANS.filter(p => p.id !== plan.id).slice(0,4).map(p =>
-    `<a href="/ro/meniu-saptamanal/${p.id}/" class="content-card-mini">
+  const otherPlans = PLANS.filter(p => p.id !== plan.id).slice(0, 4).map(p =>
+    `<a href="${lc.dir}/${lc.planIdFn(p)}/" class="content-card-mini">
       <span class="card-mini-emoji">${p.emoji}</span>
-      <span>${p.theme.ro}</span>
-     </a>`
+      <span>${esc(p.theme[lc_code]||p.theme.en)}</span>
+    </a>`
   ).join('');
 
-  return `${HEAD(`Meniu Săptămânal ${plan.theme.ro} – Listă Cumpărături | MealPlanner.ro`, plan.desc.ro, `/ro/meniu-saptamanal/${plan.id}/`)}
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
-${NAV}
+  const jsonLd = JSON.stringify({
+    "@context":"https://schema.org","@type":"MealPlan",
+    "name":`${theme}`, "description":desc,
+    "url":`https://meal-planner.ro${canonical}`,
+    "publisher":{"@type":"Organization","name":"MealPlanner.ro","url":"https://meal-planner.ro"}
+  });
 
+  const dir_attr = lc.dir_attr || 'ltr';
+  const costDisplay = lc.costValue(plan);
+
+  return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
+<script type="application/ld+json">${jsonLd}</script>
+${makeNav(lc)}
 <main class="content-main">
-  <!-- HERO -->
   <section class="content-hero">
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Acasă</a> › <a href="/ro/meniu-saptamanal/">Meniuri Săptămânale</a> › <span>${plan.theme.ro}</span>
+        <a href="/">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
       </nav>
-      <div class="content-hero-badge">${plan.emoji} Meniu săptămânal</div>
-      <h1>Meniu Săptămânal – <span class="accent">${esc(plan.theme.ro)}</span></h1>
-      <p class="content-hero-desc">${esc(plan.desc.ro)}</p>
+      <div class="content-hero-badge">${plan.emoji} ${lc.planBadge}</div>
+      <h1>${esc(theme)}</h1>
+      <p class="content-hero-desc">${esc(desc)}</p>
       <div class="plan-meta-chips">
-        <span class="plan-chip"><i class="bi bi-people-fill"></i> 2 persoane</span>
-        <span class="plan-chip"><i class="bi bi-calendar-week"></i> 7 zile</span>
-        <span class="plan-chip cost-chip"><i class="bi bi-currency-exchange"></i> ~${plan.costRON} RON / săpt.</span>
-        <span class="plan-chip"><i class="bi bi-bag-check-fill"></i> ${shopping.length} ingrediente</span>
+        <span class="plan-chip"><i class="bi bi-people-fill"></i> ${lc.persons}</span>
+        <span class="plan-chip"><i class="bi bi-calendar-week"></i> ${lc.weeks}</span>
+        <span class="plan-chip cost-chip"><i class="bi bi-currency-exchange"></i> ~${costDisplay} ${lc.costUnit}</span>
+        <span class="plan-chip"><i class="bi bi-bag-check-fill"></i> ${lc.ingredientsLabel(shopping.length)}</span>
       </div>
       <div class="content-cta-group">
-        <a href="/ro/?autoplan=${plan.id}" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> Deschide în aplicație &amp; editează
+        <a href="${lc.appDir}/?autoplan=${plan.id}" class="btn btn-generate btn-lg">
+          <i class="bi bi-pencil-square"></i> ${lc.openAppLabel}
         </a>
-        <a href="#lista-cumparaturi" class="btn btn-outline-light btn-lg">
-          <i class="bi bi-cart3"></i> Vezi lista de cumpărături
+        <a href="#${lc.shoppingAnchor}" class="btn btn-outline-light btn-lg">
+          <i class="bi bi-cart3"></i> ${lc.shoppingLabel}
         </a>
       </div>
     </div>
   </section>
 
-  <!-- PLAN TABLE -->
-  <section class="content-section" aria-labelledby="plan-heading">
+  <section class="content-section" aria-labelledby="plan-h">
     <div class="content-section-inner">
-      <h2 id="plan-heading"><span class="section-emoji">📅</span> Planul complet al săptămânii</h2>
+      <h2 id="plan-h"><span class="section-emoji">📅</span> ${lc.planHeading}</h2>
       <div class="table-wrap">
         <table class="table planner-table content-table">
-          <thead>
-            <tr>
-              <th>Ziua</th>
-              <th><i class="bi bi-sun"></i> Prânz</th>
-              <th><i class="bi bi-moon-stars"></i> Cină</th>
-            </tr>
-          </thead>
+          <thead><tr><th>${lc.dayTh}</th><th><i class="bi bi-sun"></i> ${lc.lunchTh}</th><th><i class="bi bi-moon-stars"></i> ${lc.dinnerTh}</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <!-- SHOPPING LIST -->
-  <section class="content-section content-section--green" id="lista-cumparaturi" aria-labelledby="shopping-heading">
+  <section class="content-section content-section--green" id="${lc.shoppingAnchor}">
     <div class="content-section-inner">
-      <h2 id="shopping-heading"><span class="section-emoji">🛒</span> Lista completă de cumpărături</h2>
-      <p class="section-intro">Toate ingredientele de care ai nevoie pentru această săptămână, sortate alfabetic. Estimat <strong>~${plan.costRON} RON</strong> pentru 2 persoane.</p>
+      <h2><span class="section-emoji">🛒</span> ${lc.shoppingHeading}</h2>
+      <p class="section-intro">${lc.shoppingIntro(plan, shopping.length)}</p>
       <ul class="shopping-grid">${shoppingItems}</ul>
       <div class="shopping-cta">
-        <a href="/ro/?autoplan=${plan.id}" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> Deschide planul în aplicație
+        <a href="${lc.appDir}/?autoplan=${plan.id}" class="btn btn-generate">
+          <i class="bi bi-pencil-square"></i> ${lc.openPlanLabel}
         </a>
-        <small>Personalizează rețetele și descarcă PDF-ul gratuit</small>
+        <small>${lc.openPlanSub}</small>
       </div>
     </div>
   </section>
 
-  <!-- OTHER PLANS -->
-  <section class="content-section" aria-labelledby="other-plans-heading">
+  <section class="content-section">
     <div class="content-section-inner">
-      <h2 id="other-plans-heading"><span class="section-emoji">✨</span> Alte meniuri săptămânale</h2>
+      <h2><span class="section-emoji">✨</span> ${lc.otherPlansHeading}</h2>
       <div class="mini-cards-grid">${otherPlans}</div>
       <div class="text-center mt-4">
-        <a href="/ro/meniu-saptamanal/" class="btn btn-outline-primary">Vezi toate cele 8 meniuri →</a>
+        <a href="${lc.dir}/" class="btn btn-outline-primary">${lc.seeAll}</a>
       </div>
     </div>
   </section>
 
-  <!-- SEO TEXT -->
-  <section class="content-section content-seo" aria-label="Informații despre planul de mese">
+  <section class="content-section content-seo">
     <div class="content-section-inner">
-      <h2>Cum să folosești acest plan de mese</h2>
-      <p>Planul de mese <strong>${esc(plan.theme.ro)}</strong> a fost creat pentru 2 persoane, cu un buget estimat de <strong>${plan.costRON} RON pe săptămână</strong>. Poți ajusta cantitățile pentru mai multe persoane direct în aplicație.</p>
-      <p>Dă clic pe „Deschide în aplicație" pentru a încărca automat toate mesele în planificator. Poți modifica orice rețetă, adăuga sau elimina zile, și descărca lista de cumpărături ca PDF — gratuit (1 PDF/zi) sau nelimitat cu abonament.</p>
-      <h3>De ce să planifici mesele în avans?</h3>
-      <ul>
-        <li>Reduci risipa alimentară cu până la <strong>30%</strong> — cumperi exact ce ai nevoie</li>
-        <li>Economisești <strong>timp și bani</strong> — o singură tură de cumpărături pe săptămână</li>
-        <li>Mănânci mai <strong>sănătos</strong> — alegerile sunt făcute la rece, nu înfometat</li>
-        <li>Elimini <strong>stresul zilnic</strong> al întrebării „ce gătesc azi?"</li>
-      </ul>
+      <h2>${lc.seoHeading}</h2>
+      <ul>${lc.seoBullets.map(b=>`<li>${b}</li>`).join('')}</ul>
     </div>
   </section>
 </main>
-
-${FOOTER}
-</body>
-</html>`;
+${makeFooter(lc)}
+</body></html>`;
 }
 
-function planPageEN(plan){
-  const recipeSource = plan.isBudget ? budgetRecipes : recipes;
-  const shopping = buildShoppingList(plan, 'en');
-  const rows = DAYS_EN.map((day, i) => {
-    const lName = plan.lunches[i] || '';
-    const dName = plan.dinners[i] || '';
-    const lRec  = recipeSource.find(r => r.name?.en === lName || r.name?.ro === lName);
-    const dRec  = recipeSource.find(r => r.name?.en === dName || r.name?.ro === dName);
-    const lIngr = lRec?.ingredients?.en?.slice(0,5).join(', ') || lRec?.ingredients?.ro?.slice(0,5).join(', ') || '';
-    const dIngr = dRec?.ingredients?.en?.slice(0,5).join(', ') || dRec?.ingredients?.ro?.slice(0,5).join(', ') || '';
-    const lNameEn = lRec?.name?.en || lName;
-    const dNameEn = dRec?.name?.en || dName;
-    const lSlug = lRec ? `/en/recipes/${slug(lRec.name.en || lRec.name.ro)}/` : '#';
-    const dSlug = dRec ? `/en/recipes/${slug(dRec.name.en || dRec.name.ro)}/` : '#';
-    return `
-    <tr>
-      <td><strong>${day}</strong></td>
-      <td>
-        ${lSlug !== '#' ? `<a href="${lSlug}" class="recipe-link">` : ''}<strong>${esc(lNameEn)}</strong>${lSlug !== '#' ? '</a>' : ''}
-        ${lIngr ? `<br><small class="text-muted">${esc(lIngr)}…</small>` : ''}
-      </td>
-      <td>
-        ${dSlug !== '#' ? `<a href="${dSlug}" class="recipe-link">` : ''}<strong>${esc(dNameEn)}</strong>${dSlug !== '#' ? '</a>' : ''}
-        ${dIngr ? `<br><small class="text-muted">${esc(dIngr)}…</small>` : ''}
-      </td>
-    </tr>`;
+/* ════════════════════════════════════════════════════════════════
+   GENERIC indexPage — works for ALL 14 languages
+   ════════════════════════════════════════════════════════════════ */
+function indexPage(lc) {
+  const lc_code = lc.code;
+  const cards = PLANS.map(p => {
+    const theme = p.theme[lc_code] || p.theme.en;
+    const desc  = (p.desc[lc_code] || p.desc.en).slice(0, 110) + '…';
+    const planId = lc.planIdFn(p);
+    const costDisplay = lc.costValue(p);
+    return `<a href="${lc.dir}/${planId}/" class="content-card">
+      <div class="content-card-header">
+        <span class="card-emoji">${p.emoji}</span>
+        <h2 class="card-title">${esc(theme)}</h2>
+      </div>
+      <p class="card-desc">${esc(desc)}</p>
+      <div class="card-meta">
+        <span><i class="bi bi-currency-exchange"></i> ${costDisplay} ${lc.costUnit}</span>
+        <span><i class="bi bi-arrow-right-circle-fill"></i> ${lc.indexViewPlan}</span>
+      </div>
+    </a>`;
   }).join('');
 
-  const shoppingItems = shopping.map(i=>`<li><i class="bi bi-check2-square"></i> ${esc(capFirst(i))}</li>`).join('\n');
-  const otherPlans = PLANS.filter(p=>p.id!==plan.id).slice(0,4).map(p=>
-    `<a href="/en/weekly-meal-plan/${p.idEn}/" class="content-card-mini">
-      <span class="card-mini-emoji">${p.emoji}</span>
-      <span>${p.theme.en}</span>
-     </a>`).join('');
+  const dir_attr = lc.dir_attr || 'ltr';
 
-  return `${HEAD(`Weekly Meal Plan – ${plan.theme.en} | MealPlanner.ro`, plan.desc.en, `/en/weekly-meal-plan/${plan.idEn}/`, 'en')}
-${NAV_EN}
-
-<main class="content-main">
-  <section class="content-hero">
-    <div class="content-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Home</a> › <a href="/en/weekly-meal-plan/">Weekly Meal Plans</a> › <span>${plan.theme.en}</span>
-      </nav>
-      <div class="content-hero-badge">${plan.emoji} Weekly meal plan</div>
-      <h1>Weekly Meal Plan – <span class="accent">${esc(plan.theme.en)}</span></h1>
-      <p class="content-hero-desc">${esc(plan.desc.en)}</p>
-      <div class="plan-meta-chips">
-        <span class="plan-chip"><i class="bi bi-people-fill"></i> 2 people</span>
-        <span class="plan-chip"><i class="bi bi-calendar-week"></i> 7 days</span>
-        <span class="plan-chip cost-chip"><i class="bi bi-currency-exchange"></i> ~€${plan.costEUR} / week</span>
-        <span class="plan-chip"><i class="bi bi-bag-check-fill"></i> ${shopping.length} ingredients</span>
-      </div>
-      <div class="content-cta-group">
-        <a href="/en/?autoplan=${plan.id}" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> Open in app &amp; customise
-        </a>
-        <a href="#shopping-list-section" class="btn btn-outline-light btn-lg">
-          <i class="bi bi-cart3"></i> See shopping list
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section" aria-labelledby="plan-heading-en">
-    <div class="content-section-inner">
-      <h2 id="plan-heading-en"><span class="section-emoji">📅</span> Full weekly plan</h2>
-      <div class="table-wrap">
-        <table class="table planner-table content-table">
-          <thead><tr><th>Day</th><th><i class="bi bi-sun"></i> Lunch</th><th><i class="bi bi-moon-stars"></i> Dinner</th></tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section content-section--green" id="shopping-list-section">
-    <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Complete shopping list</h2>
-      <p class="section-intro">All ingredients you need for this week, sorted alphabetically. Estimated <strong>~€${plan.costEUR}</strong> for 2 people.</p>
-      <ul class="shopping-grid">${shoppingItems}</ul>
-      <div class="shopping-cta">
-        <a href="/en/?autoplan=${plan.id}" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> Open plan in app
-        </a>
-        <small>Customise recipes and download a free PDF</small>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section">
-    <div class="content-section-inner">
-      <h2><span class="section-emoji">✨</span> More weekly plans</h2>
-      <div class="mini-cards-grid">${otherPlans}</div>
-      <div class="text-center mt-4">
-        <a href="/en/weekly-meal-plan/" class="btn btn-outline-primary">See all 8 plans →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section content-seo">
-    <div class="content-section-inner">
-      <h2>How to use this meal plan</h2>
-      <p>The <strong>${esc(plan.theme.en)}</strong> meal plan is designed for 2 people, with an estimated budget of <strong>€${plan.costEUR} per week</strong>. You can adjust quantities for more people directly in the app.</p>
-      <p>Click "Open in app" to automatically load all meals into the planner. You can modify any recipe, add or remove days, and download the shopping list as a PDF — free (1 PDF/day) or unlimited with a subscription.</p>
-      <h3>Why plan meals in advance?</h3>
-      <ul>
-        <li>Reduce food waste by up to <strong>30%</strong> — buy only what you need</li>
-        <li>Save <strong>time and money</strong> — one shopping trip per week</li>
-        <li>Eat <strong>healthier</strong> — decisions made calmly, not when hungry</li>
-        <li>Eliminate the daily stress of "what should I cook today?"</li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-${FOOTER_EN}
-</body>
-</html>`;
-}
-
-/* ── index hub pages ─────────────────────────────────────────── */
-function indexPageRO(){
-  const cards = PLANS.map(p => `
-  <a href="/ro/meniu-saptamanal/${p.id}/" class="content-card">
-    <div class="content-card-header">
-      <span class="card-emoji">${p.emoji}</span>
-      <h2 class="card-title">${esc(p.theme.ro)}</h2>
-    </div>
-    <p class="card-desc">${esc(p.desc.ro.slice(0,100))}…</p>
-    <div class="card-meta">
-      <span><i class="bi bi-currency-exchange"></i> ${p.costRON} RON</span>
-      <span><i class="bi bi-arrow-right-circle-fill"></i> Vezi planul</span>
-    </div>
-  </a>`).join('');
-
-  return `${HEAD('Meniuri Săptămânale cu Liste de Cumpărături – 8 Planuri | MealPlanner.ro',
-    '8 meniuri săptămânale complete cu liste de cumpărături și costuri estimate. Mediteranean, Asian, Buget, Vegetarian și altele — toate gratuite.',
-    '/ro/meniu-saptamanal/')}
-${NAV}
+  return `${HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr)}
+${makeNav(lc)}
 <main class="content-main">
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Acasă</a> › <span>Meniuri Săptămânale</span>
+        <a href="/">${lc.homeLabel}</a> › <span>${lc.sectionLabel}</span>
       </nav>
-      <h1>Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span></h1>
-      <p class="content-hero-desc">8 planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat. Alege tema preferată sau deschide orice plan în aplicație pentru a-l personaliza.</p>
+      <h1>${lc.indexH1raw}</h1>
+      <p class="content-hero-desc">${esc(lc.indexSubdesc)}</p>
     </div>
   </section>
   <section class="content-section">
@@ -546,88 +959,47 @@ ${NAV}
   </section>
   <section class="content-section content-seo">
     <div class="content-section-inner">
-      <h2>De ce să folosești un planificator de mese săptămânal?</h2>
-      <p>Planificarea meselor în avans este una din cele mai eficiente metode de a mânca mai sănătos, de a reduce risipa alimentară și de a economisi bani. Fiecare plan de mai sus a fost creat cu rețete reale, ingrediente accesibile și un buget transparent.</p>
-      <p>Toate planurile pot fi <strong>deschise și modificate gratuit</strong> în aplicația MealPlanner.ro. Poți înlocui orice rețetă, adăuga observații și descărca lista de cumpărături ca PDF.</p>
+      <h2>${lc.indexSeoH}</h2>
+      <p>${lc.indexSeoP}</p>
     </div>
   </section>
 </main>
-${FOOTER}
+${makeFooter(lc)}
 </body></html>`;
 }
 
-function indexPageEN(){
-  const cards = PLANS.map(p => `
-  <a href="/en/weekly-meal-plan/${p.idEn}/" class="content-card">
-    <div class="content-card-header">
-      <span class="card-emoji">${p.emoji}</span>
-      <h2 class="card-title">${esc(p.theme.en)}</h2>
-    </div>
-    <p class="card-desc">${esc(p.desc.en.slice(0,100))}…</p>
-    <div class="card-meta">
-      <span><i class="bi bi-currency-exchange"></i> €${p.costEUR}</span>
-      <span><i class="bi bi-arrow-right-circle-fill"></i> View plan</span>
-    </div>
-  </a>`).join('');
+/* ════════════════════════════════════════════════════════════════
+   RECIPE PAGES — Romanian + English only (detailed pages)
+   ════════════════════════════════════════════════════════════════ */
+const NAV_RO = makeNav(LANG_CONFIGS.ro);
+const NAV_EN = makeNav(LANG_CONFIGS.en);
+const FOOTER_RO = makeFooter(LANG_CONFIGS.ro);
+const FOOTER_EN = makeFooter(LANG_CONFIGS.en);
 
-  return `${HEAD('Free Weekly Meal Plans with Shopping Lists – 8 Themes | MealPlanner.ro',
-    '8 complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.',
-    '/en/weekly-meal-plan/', 'en')}
-${NAV_EN}
-<main class="content-main">
-  <section class="content-hero content-hero--short">
-    <div class="content-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Home</a> › <span>Weekly Meal Plans</span>
-      </nav>
-      <h1>Free Weekly Meal Plans with <span class="accent">Shopping Lists</span></h1>
-      <p class="content-hero-desc">8 complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost. Choose your theme or open any plan in the app to customise it.</p>
-    </div>
-  </section>
-  <section class="content-section">
-    <div class="content-section-inner">
-      <div class="content-cards-grid">${cards}</div>
-    </div>
-  </section>
-  <section class="content-section content-seo">
-    <div class="content-section-inner">
-      <h2>Why use a weekly meal planner?</h2>
-      <p>Planning meals in advance is one of the most effective ways to eat healthier, reduce food waste and save money. Each plan above was created with real recipes, accessible ingredients and a transparent budget.</p>
-      <p>All plans can be <strong>opened and edited for free</strong> in the MealPlanner.ro app. You can swap any recipe, add notes and download the shopping list as a PDF.</p>
-    </div>
-  </section>
-</main>
-${FOOTER_EN}
-</body></html>`;
-}
-
-/* ── recipe pages ─────────────────────────────────────────────── */
-function recipePageRO(recipe){
-  const n = recipe.name?.ro || recipe.name?.en || '';
-  const o = recipe.origin?.ro || '';
-  const ingr = recipe.ingredients?.ro || recipe.ingredients?.en || [];
-  const how  = recipe.howIsMade?.ro || recipe.howIsMade?.en || '';
-  const cat  = recipe.category?.ro || '';
+function recipePageRO(recipe) {
+  const n     = recipe.name?.ro || recipe.name?.en || '';
+  const o     = recipe.origin?.ro || '';
+  const ingr  = recipe.ingredients?.ro || recipe.ingredients?.en || [];
+  const how   = recipe.howIsMade?.ro || recipe.howIsMade?.en || '';
+  const cat   = recipe.category?.ro || '';
   const steps = how.split(/\.\s+/).filter(Boolean);
-  const jsonLd = {
-    "@context":"https://schema.org","@type":"Recipe",
-    "name": n, "description": `Rețeta tradițională de ${n} din ${o}. Ingrediente, mod de preparare și sfaturi utile.`,
-    "recipeIngredient": ingr,
-    "recipeInstructions": steps.map(s=>({ "@type":"HowToStep","text":s })),
-    "recipeCategory": cat,
+  const jsonLd = JSON.stringify({
+    "@context":"https://schema.org","@type":"Recipe","name":n,
+    "description":`Rețeta de ${n} din ${o}.`,
+    "recipeIngredient":ingr,
+    "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
+    "recipeCategory":cat,
     "author":{"@type":"Organization","name":"MealPlanner.ro"},
-    "url": `https://meal-planner.ro/ro/retete/${slug(n)}/`
-  };
-  const otherRecipes = recipes.filter(r => r.origin?.ro === o && r.name?.ro !== n).slice(0,3);
-  const otherLinks = otherRecipes.map(r =>
-    `<a href="/ro/retete/${slug(r.name.ro)}/" class="recipe-rel-link">🍽️ ${esc(r.name.ro)}</a>`
-  ).join('');
+    "url":`https://meal-planner.ro/ro/retete/${slug(n)}/`
+  });
+  const others = recipes.filter(r => r.origin?.ro === o && r.name?.ro !== n).slice(0,3)
+    .map(r=>`<a href="/ro/retete/${slug(r.name.ro)}/" class="recipe-rel-link">🍽️ ${esc(r.name.ro)}</a>`).join('');
 
   return `${HEAD(`Rețetă ${esc(n)} – Ingrediente și Mod de Preparare | MealPlanner.ro`,
-    `Rețeta de ${n} din ${o}: ingrediente, mod de preparare pas cu pas și sfaturi. Adaugă în planificatorul tău de mese gratuit.`,
+    `Rețeta de ${n}: ingrediente, mod de preparare pas cu pas. Adaugă în planificator gratuit.`,
     `/ro/retete/${slug(n)}/`)}
-<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
-${NAV}
+<script type="application/ld+json">${jsonLd}</script>
+${NAV_RO}
 <main class="content-main">
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
@@ -636,13 +1008,12 @@ ${NAV}
       </nav>
       <div class="content-hero-badge">🍽️ ${esc(cat)} · ${esc(o)}</div>
       <h1>${esc(n)}</h1>
-      <p class="content-hero-desc">Rețetă tradițională din <strong>${esc(o)}</strong>. Ingrediente proaspete și mod de preparare simplu.</p>
+      <p class="content-hero-desc">Rețetă din <strong>${esc(o)}</strong>. Ingrediente proaspete, preparare simplă.</p>
       <a href="/ro/?meal=${encodeURIComponent(n)}" class="btn btn-generate">
         <i class="bi bi-plus-circle-fill"></i> Adaugă în planul meu
       </a>
     </div>
   </section>
-
   <section class="content-section">
     <div class="content-section-inner recipe-layout">
       <div class="recipe-ingredients-box">
@@ -653,40 +1024,32 @@ ${NAV}
       </div>
       <div class="recipe-steps-box">
         <h2><span class="section-emoji">👨‍🍳</span> Mod de preparare</h2>
-        ${steps.length > 1
-          ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('\n')}</ol>`
+        ${steps.length>1
+          ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('')}</ol>`
           : `<p class="recipe-how">${esc(how)}</p>`}
-        ${otherLinks ? `<div class="recipe-related"><h3>Alte rețete din ${esc(o)}</h3>${otherLinks}</div>` : ''}
+        ${others?`<div class="recipe-related"><h3>Alte rețete din ${esc(o)}</h3>${others}</div>`:''}
       </div>
     </div>
   </section>
-
-  <section class="content-section content-seo">
-    <div class="content-section-inner">
-      <p>Adaugă <strong>${esc(n)}</strong> în planul tău de mese săptămânal și descarcă lista de cumpărături ca PDF. Folosește <a href="/ro/">aplicația gratuită MealPlanner.ro</a> pentru a planifica toate mesele săptămânii.</p>
-    </div>
-  </section>
-</main>
-${FOOTER}
-</body></html>`;
+  <section class="content-section content-seo"><div class="content-section-inner">
+    <p>Adaugă <strong>${esc(n)}</strong> în planul tău săptămânal cu <a href="/ro/">MealPlanner.ro</a>.</p>
+  </div></section>
+</main>${FOOTER_RO}</body></html>`;
 }
 
-function recipePageEN(recipe){
-  const n    = recipe.name?.en || recipe.name?.ro || '';
-  const nRo  = recipe.name?.ro || n;
-  const o    = recipe.origin?.en || recipe.origin?.ro || '';
-  const ingr = recipe.ingredients?.en || recipe.ingredients?.ro || [];
-  const how  = recipe.howIsMade?.en || recipe.howIsMade?.ro || '';
-  const cat  = recipe.category?.en || recipe.category?.ro || '';
+function recipePageEN(recipe) {
+  const n     = recipe.name?.en || recipe.name?.ro || '';
+  const o     = recipe.origin?.en || recipe.origin?.ro || '';
+  const ingr  = recipe.ingredients?.en || recipe.ingredients?.ro || [];
+  const how   = recipe.howIsMade?.en || recipe.howIsMade?.ro || '';
+  const cat   = recipe.category?.en || recipe.category?.ro || '';
   const steps = how.split(/\.\s+/).filter(Boolean);
-  const otherRecipes = recipes.filter(r => (r.origin?.en===o||r.origin?.ro===recipe.origin?.ro) && r.name?.en !== n).slice(0,3);
-  const otherLinks = otherRecipes.map(r =>
-    `<a href="/en/recipes/${slug(r.name.en||r.name.ro)}/" class="recipe-rel-link">🍽️ ${esc(r.name.en||r.name.ro)}</a>`
-  ).join('');
+  const others = recipes.filter(r => (r.origin?.en===o||r.origin?.ro===recipe.origin?.ro) && r.name?.en!==n).slice(0,3)
+    .map(r=>`<a href="/en/recipes/${slug(r.name.en||r.name.ro)}/" class="recipe-rel-link">🍽️ ${esc(r.name.en||r.name.ro)}</a>`).join('');
 
   return `${HEAD(`${esc(n)} Recipe – Ingredients & How to Make | MealPlanner.ro`,
-    `Traditional ${n} recipe from ${o}: ingredients, step-by-step instructions and tips. Add to your free meal planner.`,
-    `/en/recipes/${slug(n)}/`, 'en')}
+    `${n} recipe: ingredients, step-by-step instructions. Add to your free meal planner.`,
+    `/en/recipes/${slug(n)}/`,'en')}
 ${NAV_EN}
 <main class="content-main">
   <section class="content-hero content-hero--short">
@@ -696,13 +1059,12 @@ ${NAV_EN}
       </nav>
       <div class="content-hero-badge">🍽️ ${esc(cat)} · ${esc(o)}</div>
       <h1>${esc(n)}</h1>
-      <p class="content-hero-desc">Traditional recipe from <strong>${esc(o)}</strong>. Fresh ingredients and simple preparation.</p>
+      <p class="content-hero-desc">Traditional recipe from <strong>${esc(o)}</strong>.</p>
       <a href="/en/?meal=${encodeURIComponent(n)}" class="btn btn-generate">
         <i class="bi bi-plus-circle-fill"></i> Add to my meal plan
       </a>
     </div>
   </section>
-
   <section class="content-section">
     <div class="content-section-inner recipe-layout">
       <div class="recipe-ingredients-box">
@@ -713,178 +1075,135 @@ ${NAV_EN}
       </div>
       <div class="recipe-steps-box">
         <h2><span class="section-emoji">👨‍🍳</span> How to make it</h2>
-        ${steps.length > 1
-          ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('\n')}</ol>`
+        ${steps.length>1
+          ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('')}</ol>`
           : `<p class="recipe-how">${esc(how)}</p>`}
-        ${otherLinks ? `<div class="recipe-related"><h3>More recipes from ${esc(o)}</h3>${otherLinks}</div>` : ''}
+        ${others?`<div class="recipe-related"><h3>More recipes from ${esc(o)}</h3>${others}</div>`:''}
       </div>
     </div>
   </section>
-
-  <section class="content-section content-seo">
-    <div class="content-section-inner">
-      <p>Add <strong>${esc(n)}</strong> to your weekly meal plan and download the shopping list as a PDF. Use the <a href="/en/">free MealPlanner.ro app</a> to plan all your weekly meals.</p>
-    </div>
-  </section>
-</main>
-${FOOTER_EN}
-</body></html>`;
+  <section class="content-section content-seo"><div class="content-section-inner">
+    <p>Add <strong>${esc(n)}</strong> to your weekly plan with the <a href="/en/">free MealPlanner.ro app</a>.</p>
+  </div></section>
+</main>${FOOTER_EN}</body></html>`;
 }
 
-/* ── recipe index pages ──────────────────────────────────────── */
-function recipeIndexRO(){
-  const byOriginGroup = {};
-  recipes.forEach(r => {
-    const o = r.origin?.ro || 'Altele';
-    if(!byOriginGroup[o]) byOriginGroup[o] = [];
-    byOriginGroup[o].push(r);
-  });
-  const groups = Object.entries(byOriginGroup).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
+function recipeIndexRO() {
+  const byOrigin = {};
+  recipes.forEach(r => { const o = r.origin?.ro||'Altele'; (byOrigin[o]||(byOrigin[o]=[])).push(r); });
+  const groups = Object.entries(byOrigin).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
   <div class="recipe-origin-group">
     <h3 class="origin-title">🌍 ${esc(o)} <span class="recipe-count">(${recs.length})</span></h3>
     <ul class="recipe-origin-list">
-      ${recs.map(r=>`<li><a href="/ro/retete/${slug(r.name.ro||r.name.en)}/">${esc(r.name.ro||r.name.en)}</a></li>`).join('\n      ')}
+      ${recs.map(r=>`<li><a href="/ro/retete/${slug(r.name.ro||r.name.en)}/">${esc(r.name.ro||r.name.en)}</a></li>`).join('')}
     </ul>
   </div>`).join('');
-
-  return `${HEAD('Rețete din toată lumea – Ingrediente și Mod de Preparare | MealPlanner.ro',
-    `${recipes.length} rețete din toată lumea cu ingrediente, mod de preparare și liste de cumpărături. Adaugă orice rețetă în planul tău de mese.`,
-    '/ro/retete/')}
-${NAV}
-<main class="content-main">
-  <section class="content-hero content-hero--short">
-    <div class="content-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Acasă</a> › <span>Rețete</span>
-      </nav>
-      <h1>Rețete din <span class="accent">Toată Lumea</span></h1>
-      <p class="content-hero-desc">${recipes.length} rețete cu ingrediente și mod de preparare — din Italia, Japonia, Mexic și multe altele. Toate pot fi adăugate gratuit în planificatorul tău de mese.</p>
-    </div>
-  </section>
-  <section class="content-section">
-    <div class="content-section-inner">
-      <div class="recipe-groups-grid">${groups}</div>
-    </div>
-  </section>
-</main>
-${FOOTER}
-</body></html>`;
+  return `${HEAD('Rețete din Toată Lumea | MealPlanner.ro',
+    `${recipes.length} rețete cu ingrediente și mod de preparare.`,'/ro/retete/')}
+${NAV_RO}<main class="content-main">
+  <section class="content-hero content-hero--short"><div class="content-hero-inner">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">Acasă</a> › <span>Rețete</span></nav>
+    <h1>Rețete din <span class="accent">Toată Lumea</span></h1>
+    <p class="content-hero-desc">${recipes.length} rețete cu ingrediente și mod de preparare.</p>
+  </div></section>
+  <section class="content-section"><div class="content-section-inner">
+    <div class="recipe-groups-grid">${groups}</div>
+  </div></section>
+</main>${FOOTER_RO}</body></html>`;
 }
 
-function recipeIndexEN(){
-  const byOriginGroup = {};
-  recipes.forEach(r => {
-    const o = r.origin?.en || r.origin?.ro || 'Other';
-    if(!byOriginGroup[o]) byOriginGroup[o] = [];
-    byOriginGroup[o].push(r);
-  });
-  const groups = Object.entries(byOriginGroup).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
+function recipeIndexEN() {
+  const byOrigin = {};
+  recipes.forEach(r => { const o = r.origin?.en||r.origin?.ro||'Other'; (byOrigin[o]||(byOrigin[o]=[])).push(r); });
+  const groups = Object.entries(byOrigin).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
   <div class="recipe-origin-group">
     <h3 class="origin-title">🌍 ${esc(o)} <span class="recipe-count">(${recs.length})</span></h3>
     <ul class="recipe-origin-list">
-      ${recs.map(r=>`<li><a href="/en/recipes/${slug(r.name.en||r.name.ro)}/">${esc(r.name.en||r.name.ro)}</a></li>`).join('\n      ')}
+      ${recs.map(r=>`<li><a href="/en/recipes/${slug(r.name.en||r.name.ro)}/">${esc(r.name.en||r.name.ro)}</a></li>`).join('')}
     </ul>
   </div>`).join('');
-
-  return `${HEAD(`${recipes.length} Recipes from Around the World – Ingredients & How to Make | MealPlanner.ro`,
-    `${recipes.length} recipes from Italy, Japan, Mexico and more — with ingredients, instructions and shopping lists. Add any recipe to your free meal planner.`,
-    '/en/recipes/', 'en')}
-${NAV_EN}
-<main class="content-main">
-  <section class="content-hero content-hero--short">
-    <div class="content-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">Home</a> › <span>Recipes</span>
-      </nav>
-      <h1>Recipes from <span class="accent">Around the World</span></h1>
-      <p class="content-hero-desc">${recipes.length} recipes with ingredients and instructions — from Italy, Japan, Mexico and many more. All can be added free to your meal planner.</p>
-    </div>
-  </section>
-  <section class="content-section">
-    <div class="content-section-inner">
-      <div class="recipe-groups-grid">${groups}</div>
-    </div>
-  </section>
-</main>
-${FOOTER_EN}
-</body></html>`;
+  return `${HEAD(`${recipes.length} Recipes from Around the World | MealPlanner.ro`,
+    `${recipes.length} recipes with ingredients and instructions.`,'/en/recipes/','en')}
+${NAV_EN}<main class="content-main">
+  <section class="content-hero content-hero--short"><div class="content-hero-inner">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">Home</a> › <span>Recipes</span></nav>
+    <h1>Recipes from <span class="accent">Around the World</span></h1>
+    <p class="content-hero-desc">${recipes.length} recipes with ingredients and instructions.</p>
+  </div></section>
+  <section class="content-section"><div class="content-section-inner">
+    <div class="recipe-groups-grid">${groups}</div>
+  </div></section>
+</main>${FOOTER_EN}</body></html>`;
 }
 
-/* ── write all files ─────────────────────────────────────────── */
+/* ════════════════════════════════════════════════════════════════
+   WRITE ALL FILES
+   ════════════════════════════════════════════════════════════════ */
 console.log('Generating content pages…\n');
 let count = 0;
 
-// RO plan pages
-write(path.join(PUBLIC,'ro','meniu-saptamanal','index.html'), indexPageRO());
-console.log('✅ /ro/meniu-saptamanal/index.html');
-PLANS.forEach(p => {
-  write(path.join(PUBLIC,'ro','meniu-saptamanal',p.id,'index.html'), planPageRO(p));
-  console.log(`✅ /ro/meniu-saptamanal/${p.id}/`);
-  count++;
-});
+// ── Weekly plan pages: ALL 14 languages ──────────────────────────
+for (const [code, lc] of Object.entries(LANG_CONFIGS)) {
+  const dirPath = path.join(PUBLIC, ...lc.dir.split('/').filter(Boolean));
+  write(path.join(dirPath, 'index.html'), indexPage(lc));
+  console.log(`✅ ${lc.dir}/`);
+  PLANS.forEach(p => {
+    const planId = lc.planIdFn(p);
+    write(path.join(dirPath, planId, 'index.html'), planPage(p, lc));
+    count++;
+  });
+  console.log(`   ✅ ${PLANS.length} plan pages → ${lc.dir}/`);
+}
 
-// EN plan pages
-write(path.join(PUBLIC,'en','weekly-meal-plan','index.html'), indexPageEN());
-console.log('\n✅ /en/weekly-meal-plan/index.html');
-PLANS.forEach(p => {
-  write(path.join(PUBLIC,'en','weekly-meal-plan',p.idEn,'index.html'), planPageEN(p));
-  console.log(`✅ /en/weekly-meal-plan/${p.idEn}/`);
-  count++;
-});
-
-// RO recipe pages
+// ── Recipe pages: RO + EN ─────────────────────────────────────────
 write(path.join(PUBLIC,'ro','retete','index.html'), recipeIndexRO());
-console.log('\n✅ /ro/retete/index.html');
 recipes.forEach(r => {
   const n = r.name?.ro || r.name?.en;
-  if(!n) return;
-  write(path.join(PUBLIC,'ro','retete',slug(n),'index.html'), recipePageRO(r));
-  count++;
+  if (n) { write(path.join(PUBLIC,'ro','retete',slug(n),'index.html'), recipePageRO(r)); count++; }
 });
-console.log(`✅ ${recipes.length} recipe pages → /ro/retete/`);
+console.log(`\n✅ ${recipes.length} recipe pages → /ro/retete/`);
 
-// EN recipe pages
 write(path.join(PUBLIC,'en','recipes','index.html'), recipeIndexEN());
-console.log('✅ /en/recipes/index.html');
 recipes.forEach(r => {
   const n = r.name?.en || r.name?.ro;
-  if(!n) return;
-  write(path.join(PUBLIC,'en','recipes',slug(n),'index.html'), recipePageEN(r));
-  count++;
+  if (n) { write(path.join(PUBLIC,'en','recipes',slug(n),'index.html'), recipePageEN(r)); count++; }
 });
 console.log(`✅ ${recipes.length} recipe pages → /en/recipes/`);
 
-console.log(`\n🎉 Done! Generated ${count + 4} pages total.`);
+console.log(`\n🎉 Done! Generated ${count} pages total.`);
 
-/* ── collect all URLs for sitemap ────────────────────────────── */
+/* ════════════════════════════════════════════════════════════════
+   SITEMAP — all URLs
+   ════════════════════════════════════════════════════════════════ */
 const sitemapUrls = [
   'https://meal-planner.ro/',
-  'https://meal-planner.ro/ro/',
-  'https://meal-planner.ro/en/',
-  'https://meal-planner.ro/ro/meniu-saptamanal/',
-  'https://meal-planner.ro/en/weekly-meal-plan/',
-  'https://meal-planner.ro/ro/retete/',
-  'https://meal-planner.ro/en/recipes/',
-  ...PLANS.map(p=>`https://meal-planner.ro/ro/meniu-saptamanal/${p.id}/`),
-  ...PLANS.map(p=>`https://meal-planner.ro/en/weekly-meal-plan/${p.idEn}/`),
-  ...recipes.map(r=>{ const n=r.name?.ro||r.name?.en; return n?`https://meal-planner.ro/ro/retete/${slug(n)}/`:null; }).filter(Boolean),
-  ...recipes.map(r=>{ const n=r.name?.en||r.name?.ro; return n?`https://meal-planner.ro/en/recipes/${slug(n)}/`:null; }).filter(Boolean),
+  ...Object.keys(LANG_CONFIGS).map(c => `https://meal-planner.ro/${c}/`),
 ];
-// also add all existing language pages
-['es','fr','de','pt','ru','ar','zh','ja','hi','tr','it','ko'].forEach(l=>
-  sitemapUrls.push(`https://meal-planner.ro/${l}/`)
-);
+
+// Weekly plan pages for all 14 languages
+for (const [code, lc] of Object.entries(LANG_CONFIGS)) {
+  sitemapUrls.push(`https://meal-planner.ro${lc.dir}/`);
+  PLANS.forEach(p => sitemapUrls.push(`https://meal-planner.ro${lc.dir}/${lc.planIdFn(p)}/`));
+}
+
+// Recipe pages RO + EN
+sitemapUrls.push('https://meal-planner.ro/ro/retete/');
+sitemapUrls.push('https://meal-planner.ro/en/recipes/');
+recipes.forEach(r => {
+  const ro = r.name?.ro||r.name?.en; if(ro) sitemapUrls.push(`https://meal-planner.ro/ro/retete/${slug(ro)}/`);
+  const en = r.name?.en||r.name?.ro; if(en) sitemapUrls.push(`https://meal-planner.ro/en/recipes/${slug(en)}/`);
+});
 
 const today = new Date().toISOString().slice(0,10);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(u=>`  <url>
+${sitemapUrls.map(u => `  <url>
     <loc>${u}</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>${u.includes('/retete/')||u.includes('/recipes/')||u.includes('/meniu-')||u.includes('/weekly-')?'monthly':'weekly'}</changefreq>
-    <priority>${u==='https://meal-planner.ro/'?'1.0':u.includes('/ro/')||u.includes('/en/')?'0.9':'0.7'}</priority>
+    <changefreq>${u.includes('/retete/')||u.includes('/recipes/')?'monthly':u.endsWith('/meniu-saptamanal/')||u.endsWith('/weekly-meal-plan/')||u.includes('/plan-')||u.includes('/wochenplan')||u.includes('/piano-')||u.includes('/nedelnoe')||u.includes('/haftalik')||u.includes('/jugan')||u.includes('/weekly-menu')||u.includes('/zhouji')||u.includes('/khitat')||u.includes('/plano-')||u.includes('/weekly-plan')?'monthly':'weekly'}</changefreq>
+    <priority>${u==='https://meal-planner.ro/'?'1.0':u.match(/meal-planner\.ro\/(ro|en)\/$/)?'0.9':'0.7'}</priority>
   </url>`).join('\n')}
 </urlset>`;
 
-write(path.join(PUBLIC,'sitemap.xml'), sitemap);
-console.log(`\n✅ sitemap.xml updated — ${sitemapUrls.length} URLs`);
+write(path.join(PUBLIC, 'sitemap.xml'), sitemap);
+console.log(`\n✅ sitemap.xml — ${sitemapUrls.length} URLs`);
