@@ -312,9 +312,18 @@ return t(name, origin, list);
   if (window.html2canvas) {
     window.html2canvas.logging = true; // activare debug
   }
-  const meals = collectMeals();
+  const isPremium = !!window.hasUnlimited;
+  const allMeals  = collectMeals();
+  // Free users see only days 1–2; premium users see all 7
+  const freeDays   = 2;
+  const visibleMeals = isPremium ? allMeals : allMeals.slice(0, freeDays);
+  const lockedMeals  = isPremium ? []        : allMeals.slice(freeDays);
+  const hasLocked    = lockedMeals.some(m => m.lunch || m.dinner);
+
+  const t = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || k;
+
   let shoppingHTML = `<div>`;
-  meals.forEach((m, idx) => {
+  visibleMeals.forEach((m, idx) => {
     if (!m.lunch && !m.dinner) return;
     shoppingHTML += `<div class="recipe-section"><div class="recipe-day">${m.day}</div>`;
     // --- LUNCH ---
@@ -375,13 +384,49 @@ return t(name, origin, list);
     }
     shoppingHTML += `</div>`;
   });
+
+  // --- LOCKED SECTION for free users ---
+  if (hasLocked) {
+    // Show a teaser: day names blurred, then upsell box
+    const lockedDayNames = lockedMeals
+      .filter(m => m.lunch || m.dinner)
+      .map(m => m.day)
+      .join(' · ');
+    shoppingHTML += `
+      <div class="pdf-locked-section" style="
+        margin-top:18px; padding:18px 20px; border-radius:10px;
+        background: linear-gradient(135deg, #f0f9f3 0%, #e6f4ec 100%);
+        border: 2px dashed #24712A; text-align:center; page-break-inside:avoid;">
+        <div style="font-size:1.5em; margin-bottom:6px;">🔒</div>
+        <div style="font-size:1.05em; font-weight:700; color:#1a5220; margin-bottom:6px;">
+          ${t('pdf.locked.title')}
+        </div>
+        <div style="font-size:0.82em; color:#555; margin-bottom:10px; filter:blur(2.5px); user-select:none; pointer-events:none;">
+          ${lockedDayNames}
+        </div>
+        <div style="font-size:0.88em; color:#444; margin-bottom:14px; line-height:1.5;">
+          ${t('pdf.locked.sub')}
+        </div>
+        <div style="
+          display:inline-block; padding:9px 22px; border-radius:6px;
+          background:#24712A; color:#fff; font-weight:700; font-size:0.95em;
+          letter-spacing:0.01em;">
+          meal-planner.ro &nbsp;·&nbsp; ${t('pdf.locked.cta')}
+        </div>
+      </div>
+    `;
+  }
+
   shoppingHTML += `</div>`;
   // --- TITLU + MESAJ IMPACT ---
   const titleEl = document.getElementById('pdf-title');
   const msgEl   = document.getElementById('pdf-impact-message');
   if (titleEl) titleEl.textContent = i18n[lang].title || "Planificator de mese";
   if (msgEl) {
-    msgEl.innerHTML = `<div style="margin-top:0; margin-bottom:12px; font-weight:600; color:#169d55; text-align:center; font-size:2.09em;">${pdfMessages[lang] || pdfMessages.ro}</div>`;
+    const freeBadge = !isPremium
+      ? `<div style="font-size:0.68em; font-weight:500; color:#888; letter-spacing:0.03em; margin-top:4px;">${t('pdf.free.label')}</div>`
+      : '';
+    msgEl.innerHTML = `<div style="margin-top:0; margin-bottom:12px; font-weight:600; color:#169d55; text-align:center; font-size:2.09em;">${pdfMessages[lang] || pdfMessages.ro}</div>${freeBadge}`;
   }
   // --- BONUSURI ---
   const desserts = (window.recipes || []).filter(r => ["Desert","Dessert"].includes(r.category?.[lang] || r.category?.ro));
@@ -969,18 +1014,9 @@ async function ensureHtml2pdfLoaded() {
   const freeBtn = document.getElementById('generate-btn');
   if (freeBtn && !freeBtn.dataset.attached) {
     freeBtn.onclick = async () => {
-      await ensureHtml2pdfLoaded();              // <- adăugat
-      resetPdfQuotaIfNeeded();
-      if (pdfCount >= 1) {                       // LIMITĂ: 1/zi
-        updateButtonState();
-        return;
-      }
+      await ensureHtml2pdfLoaded();
+      // Free users always allowed — content is limited to 2 days inside generatePDFimpact()
       exportShoppingListToPDF();
-      pdfCount++;
-      if (pdfCount === 1) pdfFirst = Date.now();
-      localStorage.setItem('pdfCount', pdfCount);
-      localStorage.setItem('pdfFirst', pdfFirst);
-      updateButtonState();
     };
     freeBtn.dataset.attached = '1';
   }
@@ -989,7 +1025,7 @@ async function ensureHtml2pdfLoaded() {
     const obs = new MutationObserver(() => {
       const paidBtn = document.getElementById('paid-generate-pdf');
       if (paidBtn && !paidBtn.dataset.attached) {
-        paidBtn.onclick = async () => {          // <- async + lazy load
+        paidBtn.onclick = async () => {
           await ensureHtml2pdfLoaded();
           exportShoppingListToPDF();
         };
@@ -1001,15 +1037,25 @@ async function ensureHtml2pdfLoaded() {
   }
 }
   function updateButtonState() {
-  resetPdfQuotaIfNeeded?.();
   const generateBtn = document.getElementById('generate-btn');
   if (!generateBtn || !buyBtn || !statusEl) return;
-  // dacă vrei ca plata să NU apară pentru nelimitați:
-  const showPay = (pdfCount >= 1) && !window.hasUnlimited;
-  generateBtn.style.display = showPay ? 'none' : 'inline-block';
-  buyBtn.style.display = showPay ? 'inline-block' : 'none';
-  if (currencySelUI) currencySelUI.style.display = showPay ? 'inline-block' : 'none';
-  statusEl.innerHTML = showPay ? (i18n[lang].maxed || '') : '';
+
+  const isPremium = !!window.hasUnlimited;
+
+  // Free button always visible; label changes based on plan
+  generateBtn.style.display = 'inline-block';
+  if (!isPremium) {
+    const t = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || k;
+    generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + t('btn.generate')
+      + ` <span style="font-size:0.72em; opacity:0.75; font-weight:400;">(${t('pdf.free.label')})</span>`;
+  }
+
+  // Premium upgrade button: show for non-premium users (as secondary CTA alongside free)
+  buyBtn.style.display = isPremium ? 'none' : 'inline-block';
+  if (currencySelUI) currencySelUI.style.display = isPremium ? 'none' : 'inline-block';
+
+  // Clear old "maxed" message — no longer needed since free is always allowed
+  statusEl.innerHTML = '';
 }
 (function setSeasonTheme(){
   const now = new Date();
@@ -1037,7 +1083,12 @@ async function ensureHtml2pdfLoaded() {
     paidBtn.innerHTML = i18n[lang]["btn.download"] || "Descarcă PDF";
   }
   if (generateBtn) {
-    generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + (i18n[lang]["btn.generate"] || "Generează PDF");
+    const isPremium = !!window.hasUnlimited;
+    const baseLabel = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + (i18n[lang]["btn.generate"] || "Generează PDF");
+    const freeBadge = !isPremium
+      ? ` <span style="font-size:0.72em; opacity:0.75; font-weight:400;">(${i18n[lang]["pdf.free.label"] || "2/7 days"})</span>`
+      : '';
+    generateBtn.innerHTML = baseLabel + freeBadge;
   }
   if (typeof buyBtn !== 'undefined' && buyBtn) {
     buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + (i18n[lang]["btn.pay"] || "Plătește & Descarcă");
