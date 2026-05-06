@@ -1161,6 +1161,7 @@ function recipePage(recipe, rl) {
 
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
+    "image": ["https://meal-planner.ro/cover.jpg"],
     "description":rl.pageDesc(n,o),
     "recipeIngredient":ingr,
     "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
