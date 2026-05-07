@@ -420,7 +420,7 @@ return t(name, origin, list);
 
       const lunchMetaBadges = recipeLunch ? [
         recipeLunch.time    ? `⏱️ ${recipeLunch.time} min` : '',
-        recipeLunch.costRon ? `💰 ~${recipeLunch.costRon} RON` : '',
+        recipeLunch.costRon ? `💰 ${formatCost(recipeLunch.costRon)}` : '',
         ...(recipeLunch.tags || []).slice(0,2).map(t => (TAG_LABELS[t]||{})[lang]||(TAG_LABELS[t]||{}).en||t),
       ].filter(Boolean).join('  ·  ') : '';
       shoppingHTML += `
@@ -448,7 +448,7 @@ return t(name, origin, list);
 
       const dinnerMetaBadges = recipeDinner ? [
         recipeDinner.time    ? `⏱️ ${recipeDinner.time} min` : '',
-        recipeDinner.costRon ? `💰 ~${recipeDinner.costRon} RON` : '',
+        recipeDinner.costRon ? `💰 ${formatCost(recipeDinner.costRon)}` : '',
         ...(recipeDinner.tags || []).slice(0,2).map(t => (TAG_LABELS[t]||{})[lang]||(TAG_LABELS[t]||{}).en||t),
       ].filter(Boolean).join('  ·  ') : '';
       shoppingHTML += `
@@ -1096,11 +1096,10 @@ function paginateCleanNode(root){
         costSummary.className = 'shopping-cost-summary';
         listEl.parentElement?.insertBefore(costSummary, listEl);
       }
-      const eur = (totalCost / 4.97).toFixed(0);
       const lbl = i18n[lang];
       costSummary.innerHTML =
         `<span class="cost-icon">💰</span>
-         <span>${lbl?.estWeeklyCost || 'Cost estimat săptămână'}: <strong>~${totalCost} RON</strong> (~€${eur})</span>
+         <span>${lbl?.estWeeklyCost || 'Cost estimat săptămână'}: <strong>${formatCost(totalCost)}</strong></span>
          <span class="cost-sub">${matchedRecipes} ${lbl?.mealsFound || 'mese găsite'}</span>`;
       costSummary.style.display = 'flex';
     } else if (costSummary) {
@@ -1137,7 +1136,7 @@ function paginateCleanNode(root){
     if (!rec) return '';
     const parts = [];
     if (rec.time) parts.push(`<span class="rmeta-chip rmeta-time">⏱️ ${rec.time} min</span>`);
-    if (rec.costRon) parts.push(`<span class="rmeta-chip rmeta-cost">💰 ~${rec.costRon} RON</span>`);
+    if (rec.costRon) parts.push(`<span class="rmeta-chip rmeta-cost">💰 ${formatCost(rec.costRon)}</span>`);
     if (rec.tags?.length) {
       const shownTags = rec.tags.slice(0, 2);
       shownTags.forEach(tagId => {
@@ -1184,7 +1183,15 @@ function paginateCleanNode(root){
   }
 
   // ── Cost estimate display ─────────────────────────────────────
-  const COST_RON = { all:200, med:240, asian:250, budget:130, vegetarian:170, quick:180, latin:220, eastern:190, worldtour:210 };
+  const COST_RON = { all:200, med:240, asian:250, budget:130, vegetarian:170, quick:180, latin:220, eastern:190, worldtour:210,
+                     chicken:210, meat:230, fish:220, pasta:160 };
+
+  // Currency display: RON for Romanian, USD for everyone else
+  function formatCost(ron) {
+    if (lang === 'ro') return `~${ron} RON`;
+    const usd = Math.round(ron / 4.6); // ~1 USD = 4.6 RON
+    return `~$${usd}`;
+  }
   function showCostEstimate(filterId) {
     let costBar = document.getElementById('cost-estimate-bar');
     if (!costBar) {
@@ -1195,8 +1202,7 @@ function paginateCleanNode(root){
       if (bar) bar.appendChild(costBar);
     }
     const ron = COST_RON[filterId] || 200;
-    const eur = Math.round(ron / 4.8);
-    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${i18n[lang]?.costEstimate || 'Cost estimat'}: ~${ron} RON (~€${eur})</strong> / ${i18n[lang]?.perWeek || 'săptămână · 2 persoane'}`;
+    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${i18n[lang]?.costEstimate || 'Cost estimat'}: ${formatCost(ron)}</strong> / ${i18n[lang]?.perWeek || 'săptămână · 2 persoane'}`;
     costBar.style.display = 'flex';
   }
 
