@@ -180,34 +180,103 @@ document.addEventListener('DOMContentLoaded', () => {
   const langSwitcher = document.getElementById('lang-switcher');
   const resultDiv    = document.getElementById('result');
   const currencySelUI = document.getElementById('currency-select');
+  // ---------- PLAN MODE: 'meal' | 'day' | 'week' ----------
+  window._planMode = window._planMode || 'week';
+
+  function t(key) {
+    return (i18n[lang] && i18n[lang][key]) || (i18n['en'] && i18n['en'][key]) || key;
+  }
+
   // ---------- FUNCȚII UI / LOGIC ----------
   function renderTable() {
     const tbody = document.getElementById('plan-table');
     if (!tbody) return;
     tbody.innerHTML = '';
-    i18n[lang].weekdays.forEach((day, idx) => {
+
+    const mode = window._planMode;
+
+    // Update table column headers
+    const thead = tbody.closest('table')?.querySelector('thead tr');
+    if (thead) {
+      if (mode === 'meal') {
+        thead.innerHTML = `<th>${t('today')}</th><th>${t('mode.col.meal')}</th>`;
+      } else if (mode === 'day') {
+        thead.innerHTML = `<th>${t('today')}</th><th>${t('col.lunch') || 'Prânz'}</th><th>${t('col.dinner') || 'Cină'}</th>`;
+      } else {
+        thead.innerHTML = `<th data-i18n="col.day">${t('col.day') || 'Ziua'}</th><th data-i18n="col.lunch">${t('col.lunch') || 'Prânz'}</th><th data-i18n="col.dinner">${t('col.dinner') || 'Cină'}</th>`;
+      }
+    }
+
+    // Update section heading
+    const heading = document.getElementById('planner-heading');
+    if (heading) {
+      heading.textContent = t(`mode.heading.${mode}`);
+    }
+
+    if (mode === 'meal') {
+      // Single row, single meal input
       tbody.insertAdjacentHTML('beforeend', `
         <tr class="planner-row">
-          <td><strong>${day}</strong></td>
+          <td><strong>${t('today')}</strong></td>
           <td>
             <div class="input-group input-group-sm">
-              <input id="d${idx+1}l" class="form-control" placeholder="${i18n[lang].placeholderL}">
-              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}l')">
-            <i class="bi bi-mic-fill" aria-hidden="true"></i>
-             </button>
-            </div>
-          </td>
-          <td>
-            <div class="input-group input-group-sm">
-              <input id="d${idx+1}c" class="form-control" placeholder="${i18n[lang].placeholderD}">
-               <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}c')">
-                  <i class="bi bi-mic-fill" aria-hidden="true"></i>
-                </button>
+              <input id="d1l" class="form-control" placeholder="${t('placeholderL')}">
+              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d1l')">
+                <i class="bi bi-mic-fill" aria-hidden="true"></i>
+              </button>
             </div>
           </td>
         </tr>
       `);
-    });
+    } else if (mode === 'day') {
+      // Single row, lunch + dinner
+      tbody.insertAdjacentHTML('beforeend', `
+        <tr class="planner-row">
+          <td><strong>${t('today')}</strong></td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="d1l" class="form-control" placeholder="${t('placeholderL')}">
+              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d1l')">
+                <i class="bi bi-mic-fill" aria-hidden="true"></i>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="d1c" class="form-control" placeholder="${t('placeholderD')}">
+              <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d1c')">
+                <i class="bi bi-mic-fill" aria-hidden="true"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      `);
+    } else {
+      // Week mode — 7 rows
+      i18n[lang].weekdays.forEach((day, idx) => {
+        tbody.insertAdjacentHTML('beforeend', `
+          <tr class="planner-row">
+            <td><strong>${day}</strong></td>
+            <td>
+              <div class="input-group input-group-sm">
+                <input id="d${idx+1}l" class="form-control" placeholder="${t('placeholderL')}">
+                <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}l')">
+                  <i class="bi bi-mic-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div class="input-group input-group-sm">
+                <input id="d${idx+1}c" class="form-control" placeholder="${t('placeholderD')}">
+                <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}c')">
+                  <i class="bi bi-mic-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `);
+      });
+    }
   }
   function startDictation(inputId) {
     if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
@@ -272,32 +341,45 @@ return t(name, origin, list);
     await ensureBudgetRecipes();
     pool = recipesBudget;
   } else {
-    // Apply active filter
     const filterDef = typeof FILTER_DEFS !== 'undefined'
       ? FILTER_DEFS.find(f => f.id === (window._activeFilter || 'all'))
       : null;
     const test = filterDef && filterDef.id !== 'all' ? filterDef.test : () => true;
     pool = recipesMain.filter(test);
-    if (pool.length < 14) pool = recipesMain; // fallback to all
+    if (pool.length < 2) pool = recipesMain; // fallback
   }
 
-  if (!Array.isArray(pool) || pool.length < 7) {
+  if (!Array.isArray(pool) || pool.length < 1) {
     console.warn("Random menu: pool too small", pool?.length);
     return;
   }
 
+  const mode = window._planMode;
   const shuffled = [...pool].sort(() => 0.5 - Math.random());
-  const lunches  = shuffled.slice(0, 7);
-  const dinners  = shuffled.slice(7, 14);
 
-  for (let i = 0; i < 7; i++) {
-    const lunchInput  = document.getElementById(`d${i+1}l`);
-    const dinnerInput = document.getElementById(`d${i+1}c`);
-    if (!lunchInput || !dinnerInput) continue;
-    lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
-    dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
+  if (mode === 'meal') {
+    // Fill only one input — a single random recipe
+    const input = document.getElementById('d1l');
+    if (input) input.value = shuffled[0] ? getRecipeText(shuffled[0], lang) : '';
+  } else if (mode === 'day') {
+    // Fill lunch + dinner for today
+    const lunchInput  = document.getElementById('d1l');
+    const dinnerInput = document.getElementById('d1c');
+    if (lunchInput)  lunchInput.value  = shuffled[0] ? getRecipeText(shuffled[0], lang) : '';
+    if (dinnerInput) dinnerInput.value = shuffled[1] ? getRecipeText(shuffled[1], lang) : '';
+  } else {
+    // Full week — 7 days × lunch + dinner
+    const lunches = shuffled.slice(0, 7);
+    const dinners = shuffled.slice(7, 14);
+    for (let i = 0; i < 7; i++) {
+      const lunchInput  = document.getElementById(`d${i+1}l`);
+      const dinnerInput = document.getElementById(`d${i+1}c`);
+      if (!lunchInput || !dinnerInput) continue;
+      lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
+      dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
+    }
   }
-  // Refresh recipe meta chips after filling
+
   setTimeout(() => updateAllRecipeMeta(), 50);
 }
 
@@ -1118,9 +1200,46 @@ function paginateCleanNode(root){
     costBar.style.display = 'flex';
   }
 
+  function renderModeToggle(bar) {
+    let modeRow = document.getElementById('plan-mode-row');
+    if (!modeRow) {
+      modeRow = document.createElement('div');
+      modeRow.id = 'plan-mode-row';
+      modeRow.className = 'plan-mode-row';
+      bar.insertBefore(modeRow, bar.firstChild);
+    }
+    const modes = ['meal', 'day', 'week'];
+    modeRow.innerHTML = modes.map(m =>
+      `<button class="mode-btn${window._planMode === m ? ' active' : ''}" data-mode="${m}" type="button">
+        ${t(`mode.${m}`)}
+       </button>`
+    ).join('');
+    modeRow.querySelectorAll('.mode-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window._planMode = btn.dataset.mode;
+        renderModeToggle(bar);
+        renderTable();
+        updateAutoMenuBtn();
+        updateShoppingList();
+      });
+    });
+  }
+
+  function updateAutoMenuBtn() {
+    const autoBtn = document.getElementById('auto-menu-btn');
+    if (autoBtn) {
+      const mode = window._planMode;
+      const icon = mode === 'meal' ? '✨' : '<i class="bi bi-shuffle" aria-hidden="true"></i>';
+      autoBtn.innerHTML = `${icon} ${t(`mode.btn.${mode}`)}`;
+    }
+  }
+
   function attachAutoMenuBtn() {
     const bar = document.getElementById('auto-menu-bar');
     if (!bar) return;
+
+    // ── Mode toggle (O masă / O zi / O săptămână) ─────────────
+    renderModeToggle(bar);
 
     // ── Filter chips ──────────────────────────────────────────
     let chipRow = document.getElementById('filter-chip-row');
@@ -1161,7 +1280,7 @@ function paginateCleanNode(root){
       autoBtn.setAttribute('data-i18n', 'btn.autoMenu');
       bar.appendChild(autoBtn);
     }
-    autoBtn.innerHTML = `<i class="bi bi-shuffle" aria-hidden="true"></i> ${(i18n[lang] && i18n[lang]['btn.autoMenu']) || 'Generează meniu aleator'}`;
+    updateAutoMenuBtn();
     autoBtn.onclick = () => {
       generateRandomMenu();
       updateShoppingList();
