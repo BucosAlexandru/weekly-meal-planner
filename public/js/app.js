@@ -306,35 +306,45 @@ document.addEventListener('DOMContentLoaded', () => {
     recognition.start();
   }
   function getRecipeText(recipe, langCode) {
-  if (!recipe) return '';
-  const name   = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
-  const ingr   = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
-  const origin = recipe.origin?.[langCode] || recipe.origin?.en || recipe.origin?.ro || '';
-  const templates = {
-    ro: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) este o rețetă tradițională din ${o}.` : `${n} este o rețetă tradițională din ${o}.`,
-    en: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) is a traditional recipe from ${o}.` : `${n} is a traditional recipe from ${o}.`,
-    es: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) es una receta tradicional de ${o}.` : `${n} es una receta tradicional de ${o}.`,
-    fr: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) est une recette traditionnelle de ${o}.` : `${n} est une recette traditionnelle de ${o}.`,
-    de: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) ist ein traditionelles Rezept aus ${o}.` : `${n} ist ein traditionelles Rezept aus ${o}.`,
-    pt: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) é uma receita tradicional de ${o}.` : `${n} é uma receita tradicional de ${o}.`,
-    ru: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) — традиционное блюдо из ${o}.` : `${n} — традиционное блюдо из ${o}.`,
-    ar: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) هي وصفة تقليدية من ${o}.` : `${n} هي وصفة تقليدية من ${o}.`,
-    zh: (n, o, list) => list?.length ? `${n}（${list.join('，')}）是一道来自${o}的传统菜肴。` : `${n}是一道来自${o}的传统菜肴。`,
-    ja: (n, o, list) => list?.length ? `${n}（${list.join('、')}）は${o}の伝統料理です。` : `${n}は${o}の伝統料理です。`,
-    hi: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) ${o} की पारंपरिक रेसिपी है।` : `${n} ${o} की पारंपरिक रेसिपी है।`,
-    tr: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) ${o} kökenli geleneksel bir tariftir.` : `${n} ${o} kökenli geleneksel bir tariftir.`,
-    it: (n, o, list) => list?.length ? `${n} (${list.join(', ')}) è una ricetta tradizionale di ${o}.` : `${n} è una ricetta tradizionale di ${o}.`,
-    ko: (n, o, list) => list?.length ? `${n} (${list.join(', ')})는(은) ${o}의 전통 요리입니다.` : `${n}는(은) ${o}의 전통 요리입니다.`,
-  };
-  const t = templates[langCode] || templates.en;
-const list = Array.isArray(ingr) ? ingr : [];
-// FIX: dacă nu ai ingrediente, nu genera propoziția "tradițională din ..."
-if (!list.length) {
-  if (name && origin) return `${name} (${origin})`; // opțional, mai curat
-  return name || '';
-}
-return t(name, origin, list);
-}
+    if (!recipe) return '';
+    const name = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
+    const ingr = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
+    const list = Array.isArray(ingr) ? ingr : [];
+    // Short format for input field: "RecipeName (ingr1, ingr2, ingr3)"
+    // No "traditional from X" sentence — keeps input clean & consistent
+    if (!list.length) return name;
+    // Show max 4 ingredients to keep input readable
+    const shown = list.slice(0, 4);
+    const suffix = list.length > 4 ? ', ...' : '';
+    return `${name} (${shown.join(', ')}${suffix})`;
+  }
+
+  // Full-sentence version used only in PDF output
+  function getRecipeTextLong(recipe, langCode) {
+    if (!recipe) return '';
+    const name   = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
+    const ingr   = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
+    const origin = recipe.origin?.[langCode] || recipe.origin?.en || recipe.origin?.ro || '';
+    const list   = Array.isArray(ingr) ? ingr : [];
+    if (!list.length) return name;
+    const templates = {
+      ro: (n, o, l) => `${n} (${l.join(', ')}) este o rețetă tradițională din ${o}.`,
+      en: (n, o, l) => `${n} (${l.join(', ')}) is a traditional recipe from ${o}.`,
+      es: (n, o, l) => `${n} (${l.join(', ')}) es una receta tradicional de ${o}.`,
+      fr: (n, o, l) => `${n} (${l.join(', ')}) est une recette traditionnelle de ${o}.`,
+      de: (n, o, l) => `${n} (${l.join(', ')}) ist ein traditionelles Rezept aus ${o}.`,
+      pt: (n, o, l) => `${n} (${l.join(', ')}) é uma receita tradicional de ${o}.`,
+      ru: (n, o, l) => `${n} (${l.join(', ')}) — традиционное блюдо из ${o}.`,
+      ar: (n, o, l) => `${n} (${l.join(', ')}) هي وصفة تقليدية من ${o}.`,
+      zh: (n, o, l) => `${n}（${l.join('，')}）是一道来自${o}的传统菜肴。`,
+      ja: (n, o, l) => `${n}（${l.join('、')}）は${o}の伝統料理です。`,
+      hi: (n, o, l) => `${n} (${l.join(', ')}) ${o} की पारंपरिक रेसिपी है।`,
+      tr: (n, o, l) => `${n} (${l.join(', ')}) ${o} kökenli geleneksel bir tariftir.`,
+      it: (n, o, l) => `${n} (${l.join(', ')}) è una ricetta tradizionale di ${o}.`,
+      ko: (n, o, l) => `${n} (${l.join(', ')})는(은) ${o}의 전통 요리입니다.`,
+    };
+    return (templates[langCode] || templates.en)(name, origin, list);
+  }
   async function generateRandomMenu() {
   let pool;
   if (window.isBudgetMenu) {
@@ -1135,11 +1145,11 @@ function paginateCleanNode(root){
   function renderRecipeMeta(rec) {
     if (!rec) return '';
     const parts = [];
-    if (rec.time) parts.push(`<span class="rmeta-chip rmeta-time">⏱️ ${rec.time} min</span>`);
+    if (rec.time)   parts.push(`<span class="rmeta-chip rmeta-time">⏱️ ${rec.time} min</span>`);
     if (rec.costRon) parts.push(`<span class="rmeta-chip rmeta-cost">💰 ${formatCost(rec.costRon)}</span>`);
     if (rec.tags?.length) {
-      const shownTags = rec.tags.slice(0, 2);
-      shownTags.forEach(tagId => {
+      // max 3 tags for consistent layout
+      rec.tags.slice(0, 3).forEach(tagId => {
         const label = (TAG_LABELS[tagId] || {})[lang] || (TAG_LABELS[tagId] || {}).en || tagId;
         const emoji = { quick:'⚡', budget:'💲', vegetarian:'🌱', vegan:'🌿',
                         'high-protein':'💪', family:'👨‍👩‍👧', healthy:'🥗',
@@ -1148,13 +1158,14 @@ function paginateCleanNode(root){
       });
     }
     if (!parts.length) return '';
-    // description (first sentence of howIsMade if no custom desc)
+    // Description: use custom desc or first sentence of howIsMade, capped at 90 chars
     let descTxt = rec.desc?.[lang] || rec.desc?.en || '';
     if (!descTxt && rec.howIsMade) {
       const raw = rec.howIsMade[lang] || rec.howIsMade.ro || rec.howIsMade.en || '';
       descTxt = raw.split(/[.!?]/)[0].trim();
       if (descTxt && rec.time) descTxt += `. ${(READY_IN[lang] || READY_IN.en)(rec.time)}.`;
     }
+    if (descTxt.length > 90) descTxt = descTxt.slice(0, 88) + '…';
     return `<div class="recipe-meta-row">${parts.join('')}${descTxt ? `<span class="rmeta-desc">${descTxt}</span>` : ''}</div>`;
   }
 
