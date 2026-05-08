@@ -379,15 +379,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dinnerInput) dinnerInput.value = shuffled[1] ? getRecipeText(shuffled[1], lang) : '';
   } else {
     // Full week — 7 days × lunch + dinner
-    const lunches = shuffled.slice(0, 7);
-    const dinners = shuffled.slice(7, 14);
+    // Only fill empty slots — preserve any recipes already added manually
+    const emptySlots = [];
     for (let i = 0; i < 7; i++) {
-      const lunchInput  = document.getElementById(`d${i+1}l`);
-      const dinnerInput = document.getElementById(`d${i+1}c`);
-      if (!lunchInput || !dinnerInput) continue;
-      lunchInput.value  = lunches[i] ? getRecipeText(lunches[i], lang) : '';
-      dinnerInput.value = dinners[i] ? getRecipeText(dinners[i], lang) : '';
+      const l = document.getElementById(`d${i+1}l`);
+      const c = document.getElementById(`d${i+1}c`);
+      if (l && !l.value.trim()) emptySlots.push(l);
+      if (c && !c.value.trim()) emptySlots.push(c);
     }
+    emptySlots.forEach((inp, i) => {
+      if (shuffled[i]) inp.value = getRecipeText(shuffled[i], lang);
+    });
   }
 
   setTimeout(() => updateAllRecipeMeta(), 50);
