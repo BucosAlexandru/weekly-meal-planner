@@ -564,6 +564,8 @@ listEl.innerHTML = `
     document.head.appendChild(styleEl);
     cleanNode.style.position = 'absolute';
     cleanNode.style.left = '-9999px';
+    // Force A4 width so paginateCleanNode measures at the same width as the PDF render
+    cleanNode.style.width = '719px'; // 190mm @ 96dpi
     document.body.appendChild(cleanNode);
     maybeCompactToTwoPages(cleanNode);
     paginateCleanNode(cleanNode);
