@@ -248,6 +248,51 @@ body {
 .hero-pill:hover { background: rgba(255,255,255,.22); }
 .hero-pill i { font-size: .88rem; }
 
+/* ── Hero social proof ── */
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px 0 20px;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,.85);
+  font-weight: 500;
+}
+.hero-stars { letter-spacing: 1px; font-size: 0.8rem; }
+
+/* ── Hero CTA button ── */
+.btn-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: var(--color-brand-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 32px;
+  border-radius: var(--r-full);
+  border: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,.15);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  margin-bottom: 22px;
+  letter-spacing: -.01em;
+}
+.btn-hero-cta:hover,
+.btn-hero-cta:focus-visible {
+  background: var(--color-brand-soft);
+  color: var(--color-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.2);
+}
+.btn-hero-cta:active { transform: translateY(0); }
+
+@media (max-width: 600px) {
+  .btn-hero-cta { font-size: 0.95rem; padding: 12px 24px; }
+  .hero-social-proof { font-size: 0.82rem; }
+}
+
 /* ================================================
    APP MAIN LAYOUT
    ================================================ */

@@ -1688,6 +1688,20 @@ if (verifyBtn && emailInput && resultDiv) {
     }
   }
 
+  // ---------- HERO CTA BUTTON ----------
+  const heroCta = document.getElementById('hero-cta-btn');
+  if (heroCta) {
+    heroCta.addEventListener('click', () => {
+      // Trigger random menu generation
+      const autoBtn = document.getElementById('auto-menu-btn');
+      if (autoBtn) autoBtn.click();
+      // Smooth scroll to planner
+      setTimeout(() => {
+        document.querySelector('.app-main')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    });
+  }
+
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();

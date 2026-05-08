@@ -45,7 +45,11 @@ const i18n = {
     "feedback.thanks": "Mulțumim pentru feedback! Emailul se va deschide pentru trimitere.",
     "feedback.error": "Te rugăm să scrii un mesaj.",
     "feedback.note": "Feedbackul ajunge direct la dezvoltator.",
-    "msg.valid": "✅ Ai acces! Poți descărca PDF-ul nelimitat:"
+    "msg.valid": "✅ Ai acces! Poți descărca PDF-ul nelimitat:",
+    "hero.badge": "Gratuit · 14 limbi · 100+ rețete",
+    "hero.sub": "Planifică săptămâna, generează automat lista de cumpărături și descarcă PDF — gratuit, în orice limbă.",
+    "hero.social": "Folosit în 14 limbi în toată lumea 🌍",
+    "hero.cta": "🥗 Generează Planul Meu Gratuit"
   },
   en: {
     title: "Weekly Meal Planner",
@@ -93,7 +97,11 @@ const i18n = {
     "feedback.thanks": "Thank you for your feedback! Your email will open for sending.",
     "feedback.error": "Please write a feedback message.",
     "feedback.note": "Your feedback goes directly to the developer.",
-    "msg.valid": "✅ Access granted! You can now download unlimited PDFs:"
+    "msg.valid": "✅ Access granted! You can now download unlimited PDFs:",
+    "hero.badge": "Free · 14 languages · 100+ recipes",
+    "hero.sub": "Plan your week, auto-generate shopping lists, and download beautiful PDFs — free, in any language.",
+    "hero.social": "Used in 14 languages worldwide 🌍",
+    "hero.cta": "🥗 Generate My Free Meal Plan"
   },
   es: {
     title: "Planificador Semanal de Comidas",
@@ -140,7 +148,11 @@ const i18n = {
     "feedback.thanks": "¡Gracias por tu feedback! Se abrirá el correo para enviarlo.",
     "feedback.error": "Por favor, escribe un mensaje.",
     "feedback.note": "El feedback va directamente al desarrollador.",
-    "msg.valid": "✅ ¡Acceso concedido! Ahora puedes descargar PDFs ilimitados:"
+    "msg.valid": "✅ ¡Acceso concedido! Ahora puedes descargar PDFs ilimitados:",
+    "hero.badge": "Gratis · 14 idiomas · 100+ recetas",
+    "hero.sub": "Planifica tu semana, genera listas de compras automáticamente y descarga PDFs — gratis, en cualquier idioma.",
+    "hero.social": "Usado en 14 idiomas en todo el mundo 🌍",
+    "hero.cta": "🥗 Generar Mi Plan Gratis"
   },
   fr: {
     title: "Planificateur de Repas Hebdomadaire",
@@ -187,7 +199,11 @@ const i18n = {
     "feedback.thanks": "Merci pour votre retour ! L’email va s’ouvrir pour l’envoi.",
     "feedback.error": "Veuillez écrire un message.",
     "feedback.note": "Le feedback va directement au développeur.",
-    "msg.valid": "✅ Accès accordé ! Vous pouvez désormais télécharger des PDF en illimité :"
+    "msg.valid": "✅ Accès accordé ! Vous pouvez désormais télécharger des PDF en illimité :",
+    "hero.badge": "Gratuit · 14 langues · 100+ recettes",
+    "hero.sub": "Planifiez votre semaine, générez des listes de courses automatiquement et téléchargez des PDFs — gratuit, dans toute langue.",
+    "hero.social": "Utilisé dans 14 langues dans le monde entier 🌍",
+    "hero.cta": "🥗 Générer Mon Plan Gratuit"
   },
   ru: {
     title: "Еженедельный планировщик питания",
@@ -234,7 +250,11 @@ const i18n = {
     "feedback.thanks": "Спасибо за ваш отзыв! Откроется окно электронной почты.",
     "feedback.error": "Пожалуйста, напишите сообщение.",
     "feedback.note": "Отзыв поступает напрямую разработчику.",
-    "msg.valid": "✅ Доступ получен! Теперь вы можете скачивать неограниченное количество PDF:"
+    "msg.valid": "✅ Доступ получен! Теперь вы можете скачивать неограниченное количество PDF:",
+    "hero.badge": "Бесплатно · 14 языков · 100+ рецептов",
+    "hero.sub": "Планируйте неделю, автоматически создавайте списки покупок и скачивайте PDF — бесплатно, на любом языке.",
+    "hero.social": "Используется на 14 языках по всему миру 🌍",
+    "hero.cta": "🥗 Создать Мой Бесплатный План"
   },
   zh: {
     title: "每周用餐计划器",
@@ -281,7 +301,11 @@ const i18n = {
     "feedback.thanks": "感谢您的反馈！将打开您的邮件发送。",
     "feedback.error": "请填写反馈信息。",
     "feedback.note": "反馈将直接发送给开发者。",
-    "msg.valid": "✅ 访问已授权！您现在可以无限下载 PDF 文件："
+    "msg.valid": "✅ 访问已授权！您现在可以无限下载 PDF 文件：",
+    "hero.badge": "免费 · 14种语言 · 100+食谱",
+    "hero.sub": "规划您的一周，自动生成购物清单，下载精美PDF——免费，支持任何语言。",
+    "hero.social": "全球14种语言用户使用 🌍",
+    "hero.cta": "🥗 生成我的免费餐饮计划"
   },
   ja: {
     title: "週間ミールプランナー",
@@ -328,7 +352,11 @@ const i18n = {
     "feedback.thanks": "ご意見ありがとうございます！メールが開きます。",
     "feedback.error": "メッセージを入力してください。",
     "feedback.note": "フィードバックは開発者に直接届きます。",
-    "msg.valid": "✅ アクセス許可！無制限にPDFをダウンロードできます："
+    "msg.valid": "✅ アクセス許可！無制限にPDFをダウンロードできます：",
+    "hero.badge": "無料 · 14言語 · 100+レシピ",
+    "hero.sub": "週の計画を立て、買い物リストを自動生成し、PDFをダウンロード — 無料、どの言語でも。",
+    "hero.social": "世界14言語で使用 🌍",
+    "hero.cta": "🥗 無料プランを作成する"
   },
   pt: {
     title: "Planejador Semanal de Refeições",
@@ -375,7 +403,11 @@ const i18n = {
     "feedback.thanks": "Obrigado pelo feedback! Seu e-mail será aberto para envio.",
     "feedback.error": "Por favor, escreva uma mensagem.",
     "feedback.note": "O feedback vai diretamente para o desenvolvedor.",
-    "msg.valid": "✅ Acesso concedido! Agora você pode baixar PDFs ilimitados:"
+    "msg.valid": "✅ Acesso concedido! Agora você pode baixar PDFs ilimitados:",
+    "hero.badge": "Gratuito · 14 idiomas · 100+ receitas",
+    "hero.sub": "Planeje sua semana, gere listas de compras automaticamente e baixe PDFs — grátis, em qualquer idioma.",
+    "hero.social": "Usado em 14 idiomas no mundo todo 🌍",
+    "hero.cta": "🥗 Gerar Meu Plano Grátis"
   },
   de: {
     title: "Wöchentlicher Essensplaner",
@@ -422,7 +454,11 @@ const i18n = {
     "feedback.thanks": "Danke für Ihr Feedback! Ihr E-Mail-Programm öffnet sich.",
     "feedback.error": "Bitte geben Sie eine Nachricht ein.",
     "feedback.note": "Ihr Feedback geht direkt an den Entwickler.",
-    "msg.valid": "✅ Zugriff gewährt! Du kannst nun unbegrenzt PDFs herunterladen:"
+    "msg.valid": "✅ Zugriff gewährt! Du kannst nun unbegrenzt PDFs herunterladen:",
+    "hero.badge": "Kostenlos · 14 Sprachen · 100+ Rezepte",
+    "hero.sub": "Planen Sie Ihre Woche, erstellen Sie automatisch Einkaufslisten und laden Sie PDFs herunter — kostenlos, in jeder Sprache.",
+    "hero.social": "In 14 Sprachen weltweit genutzt 🌍",
+    "hero.cta": "🥗 Meinen kostenlosen Plan erstellen"
   },
   ar: {
     title: "مخطط وجبات أسبوعي",
@@ -469,7 +505,11 @@ const i18n = {
     "feedback.thanks": "شكرًا لملاحظاتك! سيتم فتح البريد الإلكتروني للإرسال.",
     "feedback.error": "يرجى كتابة رسالة.",
     "feedback.note": "الملاحظات تصل مباشرة إلى المطور.",
-    "msg.valid": "✅ تم منح الوصول! يمكنك الآن تنزيل ملفات PDF غير محدودة:"
+    "msg.valid": "✅ تم منح الوصول! يمكنك الآن تنزيل ملفات PDF غير محدودة:",
+    "hero.badge": "مجاني · 14 لغة · أكثر من 100 وصفة",
+    "hero.sub": "خطط لأسبوعك، أنشئ قوائم التسوق تلقائيًا وحمّل ملفات PDF — مجانًا، بأي لغة.",
+    "hero.social": "مستخدم بـ 14 لغة حول العالم 🌍",
+    "hero.cta": "🥗 إنشاء خطتي المجانية"
   },
   hi: {
     title: "साप्ताहिक भोजन योजना",
@@ -516,7 +556,11 @@ const i18n = {
     "feedback.thanks": "आपकी प्रतिक्रिया के लिए धन्यवाद! ईमेल खुल जाएगा।",
     "feedback.error": "कृपया संदेश लिखें।",
     "feedback.note": "आपकी प्रतिक्रिया सीधे डेवलपर को जाएगी।",
-    "msg.valid": "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:"
+    "msg.valid": "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:",
+    "hero.badge": "मुफ्त · 14 भाषाएं · 100+ रेसिपी",
+    "hero.sub": "अपने सप्ताह की योजना बनाएं, शॉपिंग लिस्ट अपने आप बनाएं और PDF डाउनलोड करें — मुफ्त, किसी भी भाषा में।",
+    "hero.social": "दुनिया भर में 14 भाषाओं में उपयोग 🌍",
+    "hero.cta": "🥗 मेरी मुफ्त योजना बनाएं"
   },
   tr: {
   title: "Haftalık Yemek Planlayıcı",
@@ -563,7 +607,11 @@ const i18n = {
   "feedback.thanks": "Teşekkürler! E-posta gönderimi için açılacaktır.",
   "feedback.error": "Lütfen bir mesaj yazın.",
   "feedback.note": "Geri bildiriminiz doğrudan geliştiriciye ulaşır.",
-  "msg.valid": "✅ Erişim onaylandı! Sınırsız PDF indirebilirsiniz:"
+  "msg.valid": "✅ Erişim onaylandı! Sınırsız PDF indirebilirsiniz:",
+  "hero.badge": "Ücretsiz · 14 dil · 100+ tarif",
+  "hero.sub": "Haftanızı planlayın, alışveriş listelerini otomatik oluşturun ve PDF indirin — ücretsiz, her dilde.",
+  "hero.social": "Dünya genelinde 14 dilde kullanılıyor 🌍",
+  "hero.cta": "🥗 Ücretsiz Planımı Oluştur"
 },
 it: {
   title: "Pianificatore Settimanale dei Pasti",
@@ -610,7 +658,11 @@ it: {
   "feedback.thanks": "Grazie! Si aprirà l’email per l’invio.",
   "feedback.error": "Scrivi un messaggio.",
   "feedback.note": "Il tuo feedback arriva direttamente allo sviluppatore.",
-  "msg.valid": "✅ Accesso confermato! Puoi scaricare PDF illimitati:"
+  "msg.valid": "✅ Accesso confermato! Puoi scaricare PDF illimitati:",
+  "hero.badge": "Gratuito · 14 lingue · 100+ ricette",
+  "hero.sub": "Pianifica la tua settimana, genera automaticamente liste della spesa e scarica PDF — gratis, in qualsiasi lingua.",
+  "hero.social": "Usato in 14 lingue in tutto il mondo 🌍",
+  "hero.cta": "🥗 Genera Il Mio Piano Gratuito"
 },
 ko: {
   title: "주간 식단 플래너",
@@ -657,7 +709,11 @@ ko: {
   "feedback.thanks": "감사합니다! 이메일이 열립니다.",
   "feedback.error": "메시지를 입력하세요.",
   "feedback.note": "피드백은 개발자에게 직접 전달됩니다.",
-  "msg.valid": "✅ 접근 허가됨! 무제한 PDF 다운로드 가능:"
+  "msg.valid": "✅ 접근 허가됨! 무제한 PDF 다운로드 가능:",
+  "hero.badge": "무료 · 14개 언어 · 100개+ 레시피",
+  "hero.sub": "한 주를 계획하고, 쇼핑 목록을 자동 생성하고, PDF를 다운로드하세요 — 무료, 모든 언어로.",
+  "hero.social": "전 세계 14개 언어로 사용 🌍",
+  "hero.cta": "🥗 무료 식단 계획 만들기"
 }
 };
 
