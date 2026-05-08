@@ -520,33 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
       : '';
     msgEl.innerHTML = `<div style="margin-top:0; margin-bottom:12px; font-weight:600; color:#169d55; text-align:center; font-size:2.09em;">${pdfMessages[lang] || pdfMessages.ro}</div>${freeBadge}`;
   }
-  // --- BONUSURI ---
-  const desserts = (window.recipes || []).filter(r => ["Desert","Dessert"].includes(r.category?.[lang] || r.category?.ro));
-  const snacks   = (window.recipes || []).filter(r => ["Gustare","Snack","Aperitiv","Appetizer"].includes(r.category?.[lang] || r.category?.ro));
-  const randomDessert = desserts.length ? desserts[Math.floor(Math.random()*desserts.length)] : null;
-  const randomSnack   = snacks.length ? snacks[Math.floor(Math.random()*snacks.length)] : null;
-  let bonusSection = "";
-  if (randomSnack) {
-    bonusSection += `
-      <div class="callout snack">
-        <b>${i18n[lang].bonusSnack || "Snack suggestion:"}</b>
-        <strong>${randomSnack.name?.[lang] || randomSnack.name?.ro || ''}</strong>
-        <div>${randomSnack.ingredients?.[lang]?.join(", ") || ""}</div>
-        <div>${randomSnack.howIsMade?.[lang] || randomSnack.howIsMade?.ro || ""}</div>
-      </div>`;
-  }
-  if (randomDessert) {
-    bonusSection += `
-      <div class="callout dessert">
-        <b>${i18n[lang].bonusDessert || "Bonus Dessert:"}</b>
-        <strong>${randomDessert.name?.[lang] || randomDessert.name?.ro || ''}</strong>
-        <div>${randomDessert.ingredients?.[lang]?.join(", ") || ""}</div>
-        <div>${randomDessert.howIsMade?.[lang] || randomDessert.howIsMade?.ro || ""}</div>
-      </div>`;
-  }
-  bonusSection = bonusSection
-  ? `<div id="bonus-section">${bonusSection}</div>`
-  : "";
+  // Snack suggestion & Bonus Dessert removed — kept PDF focused on the meal plan
   const listEl = document.getElementById('pdf-list');
 if (listEl) {
   const today = new Date().toLocaleDateString(lang, { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -562,7 +536,6 @@ listEl.innerHTML = `
   </h3>
   ${shoppingHTML}
   <div style="margin-top:16px;"></div>
-  ${bonusSection}
   ${motivationalMessage}
   <div class="doc-footer" style="margin-top:10px; font-size:10px; text-align:center; color:#666;">
     Generat cu Meal-Planner.ro • ${today}
@@ -1238,6 +1211,7 @@ function paginateCleanNode(root){
         renderTable();
         updateAutoMenuBtn();
         updateShoppingList();
+        updateExportSectionVisibility();
       });
     });
   }
@@ -1698,6 +1672,15 @@ if (verifyBtn && emailInput && resultDiv) {
       }, 200);
     }
   }
+
+  // ---------- EXPORT SECTION VISIBILITY (week only) ----------
+  function updateExportSectionVisibility() {
+    const exportSection = document.querySelector('.export-section');
+    if (!exportSection) return;
+    const isWeek = (window._planMode || 'week') === 'week';
+    exportSection.style.display = isWeek ? '' : 'none';
+  }
+  updateExportSectionVisibility();
 
   // ---------- HERO CTA BUTTON ----------
   const heroCta = document.getElementById('hero-cta-btn');
