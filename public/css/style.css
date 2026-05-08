@@ -106,7 +106,7 @@ body {
 
 .nav-icon  { font-size: 1.5rem; line-height: 1; }
 .nav-title { color: var(--ink-2); }
-.nav-tld   { color: var(--color-brand); }
+.nav-tld   { display: none; }
 
 .nav-lang  { display: flex; align-items: center; }
 
