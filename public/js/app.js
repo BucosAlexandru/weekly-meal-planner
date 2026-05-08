@@ -1673,6 +1673,31 @@ if (verifyBtn && emailInput && resultDiv) {
     }
   }
 
+  // ---------- ?meal= deep link (from recipe pages "Add to my plan") ----------
+  const mealParam = new URLSearchParams(window.location.search).get('meal');
+  if (mealParam) {
+    setTimeout(() => {
+      const allSrc = [...recipesMain, ...recipesBudget];
+      const rec = allSrc.find(r =>
+        Object.values(r.name || {}).some(n => n.toLowerCase() === mealParam.toLowerCase())
+      );
+      // Find first empty slot (lunch first, then dinner)
+      const slots = ['d1l','d2l','d3l','d4l','d5l','d6l','d7l','d1c','d2c','d3c','d4c','d5c','d6c','d7c'];
+      const firstEmpty = slots.find(id => {
+        const el = document.getElementById(id);
+        return el && !el.value.trim();
+      }) || 'd1l';
+      const inp = document.getElementById(firstEmpty);
+      if (inp) {
+        inp.value = rec ? getRecipeText(rec, lang) : mealParam;
+        inp.dispatchEvent(new Event('input'));
+      }
+      updateShoppingList();
+      window.history.replaceState({}, '', window.location.pathname);
+      document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior:'smooth', block:'start' });
+    }, 300);
+  }
+
   // ---------- EXPORT SECTION VISIBILITY (week only) ----------
   function updateExportSectionVisibility() {
     const exportSection = document.querySelector('.export-section');
