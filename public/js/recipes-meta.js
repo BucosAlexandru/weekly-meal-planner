@@ -365,10 +365,57 @@ export const recipesMeta = {
                 'Pesce bianco in pastella croccante con patatine dorate.',
                 '바삭한 흰살 생선 튀김과 황금빛 감자 튀김 — 영국의 클래식.',
                 'कुरकुरी सफेद मछली और गोल्डन चिप्स — ब्रिटिश क्लासिक।') },
+
+  181: { time: 600, costRon: 35, tags: ['high-protein','family'],
+        desc: d('Supă cremoasă albă din oase de porc, tăiței ramen, chashu și ou marinat — ramen clasic japonez.',
+                'Creamy white pork bone broth with ramen noodles, chashu pork and marinated egg — the ultimate Japanese ramen.',
+                'Caldo cremoso blanco de huesos de cerdo con fideos ramen, chashu y huevo marinado — el ramen japonés por excelencia.',
+                'Bouillon crémeux blanc d\'os de porc avec nouilles ramen, chashu et œuf mariné — le ramen japonais par excellence.',
+                'Cremige weiße Schweineknochenbr ühe mit Ramen-Nudeln, Chashu und mariniertem Ei — das ultimative japanische Ramen.',
+                'Caldo branco cremoso de ossos de porco com macarrão ramen, chashu e ovo marinado — o ramen japonês por excelência.',
+                'Кремовый белый бульон из свиных костей с лапшой рамен, чашу и маринованным яйцом.',
+                'مرق أبيض كريمي من عظام الخنزير مع نودلز رامن وتشاشو وبيضة متبلة — رامن ياباني أصيل.',
+                '浓白猪骨汤配拉面、叉烧和溏心卤蛋 — 正宗日式豚骨拉面。',
+                '豚骨から取った濃厚白スープに麺・チャーシュー・味付け卵 — 本格豚骨ラーメン。',
+                'Domuz kemiğinden kremsi beyaz et suyu, ramen eriştesi, chashu ve marine yumurta ile.',
+                'Brodo bianco cremoso di ossa di maiale con noodle ramen, chashu e uovo marinato.',
+                '진한 백탁 돼지뼈 육수에 라멘 면, 차슈, 마리네이드 달걀 — 정통 일본 라멘.',
+                'मलाईदार सफेद सूअर की हड्डी का शोरबा, रामेन नूडल्स, चाशु और मैरिनेटेड अंडे के साथ।') },
+
+  182: { time: 240, costRon: 28, tags: ['high-protein','family'],
+        desc: d('Supă clară de pui cu sos shoyu, tăiței ramen, chashu, nori și ou marinat — ramen shoyu clasic.',
+                'Clear chicken broth seasoned with shoyu tare, ramen noodles, chashu, nori and a perfect marinated egg.',
+                'Caldo claro de pollo con salsa shoyu, fideos ramen, chashu, nori y huevo marinado — ramen shoyu clásico.',
+                'Bouillon de poulet clair assaisonné de tare shoyu, nouilles ramen, chashu, nori et œuf mariné.',
+                'Klare Hühnerbrühe mit Shoyu-Tare, Ramen-Nudeln, Chashu, Nori und mariniertem Ei.',
+                'Caldo de frango claro temperado com tare shoyu, macarrão ramen, chashu, nori e ovo marinado.',
+                'Прозрачный куриный бульон с таре сёю, лапшой рамен, чашу, нори и маринованным яйцом.',
+                'مرق دجاج صافٍ بصلصة شويو مع نودلز رامن وتشاشو ونوري وبيضة متبلة.',
+                '清澈鸡汤加酱油底汤，配拉面、叉烧、海苔和溏心卤蛋 — 经典酱油拉面。',
+                '鶏がらスープに醤油ダレを合わせ、麺・チャーシュー・海苔・味付け卵をのせた定番醤油ラーメン。',
+                'Açık tavuk suyu shoyu tare ile tatlandırılmış, ramen eriştesi, chashu, nori ve marine yumurta.',
+                'Brodo di pollo chiaro con tare shoyu, noodle ramen, chashu, nori e uovo marinato.',
+                '맑은 닭 육수에 쇼유 타레로 간을 한 라멘 면, 차슈, 노리, 마리네이드 달걀.',
+                'साफ़ चिकन शोरबा शोयु तारे के साथ, रामेन नूडल्स, चाशु, नोरी और मैरिनेटेड अंडे।') },
+
+  183: { time: 60, costRon: 25, tags: ['high-protein','family'],
+        desc: d('Supă bogată de miso cu carne tocată de porc, porumb, unt și tăiței ramen — ramen miso aromat.',
+                'Rich miso broth with ground pork, sweet corn, butter and ramen noodles — a warming umami bowl.',
+                'Caldo rico de miso con carne picada de cerdo, maíz, mantequilla y fideos ramen — un bol umami reconfortante.',
+                'Bouillon de miso riche avec porc haché, maïs, beurre et nouilles ramen — un bol umami réconfortant.',
+                'Reichhaltige Misobrühe mit Schweinehack, Mais, Butter und Ramen-Nudeln — wärmende Umami-Schüssel.',
+                'Caldo rico de missô com carne de porco moída, milho, manteiga e macarrão ramen — um bowl umami.',
+                'Насыщенный мисо-бульон со свиным фаршем, кукурузой, маслом и лапшой рамен.',
+                'مرق ميسو غني مع لحم خنزير مفروم وذرة وزبدة ونودلز رامن — طبق أومامي دافئ.',
+                '浓郁味噌汤底配猪肉末、甜玉米、黄油和拉面 — 暖胃鲜美的味噌拉面。',
+                '豚ひき肉・コーン・バターを加えた濃厚味噌スープのラーメン — 心温まるうまみの一杯。',
+                'Miso ezmeli zengin et suyu, kıyma, mısır, tereyağı ve ramen eriştesi — ısıtıcı umami kasesi.',
+                'Brodo di miso ricco con carne di maiale macinata, mais, burro e noodle ramen — una ciotola umami.',
+                '진한 미소 국물에 돼지 다진 고기, 옥수수, 버터, 라멘 면 — 따뜻한 우마미 라멘.',
+                'समृद्ध मिसो शोरबा कीमा, मक्का, मक्खन और रामेन नूडल्स के साथ — उमामी का कटोरा।') },
 };
 
-// ─── Auto-fill remaining 160 recipes with smart defaults ─────────────────────
-// Heuristics: detect vegetarian, quick, budget, spicy from name/id patterns
+// ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
 (function fillDefaults() {
   const MEAT_KW = /pui|vit[aă]|porc|carne|miel|pe[șs]te|somon|creveți|tun|cârnați|bacon|șunc[aă]|sard[ei]/i;
   const SPICY_IDS = new Set([9,16,19,36,49,50,67,69,75,78,86,87,99,102,110,112,165,166,169,179]);
@@ -376,7 +423,7 @@ export const recipesMeta = {
   const BUDGET_IDS = new Set([12,14,15,24,25,30,33,39,40,44,52,58,70,76,95,97,120,121,122,123,128,130,132,133,147,161,164,165,170,173,179]);
   const VEG_IDS = new Set([4,10,12,13,14,15,24,25,30,33,35,38,39,40,42,44,58,63,66,70,76,83,89,92,93,95,96,97,102,120,121,122,123,127,128,130,131,132,147,153,159,161,164,170,179]);
 
-  for (let id = 1; id <= 180; id++) {
+  for (let id = 1; id <= 183; id++) {
     if (recipesMeta[id]) continue; // already defined above
     const isVeg = VEG_IDS.has(id);
     const isQuick = QUICK_IDS.has(id);

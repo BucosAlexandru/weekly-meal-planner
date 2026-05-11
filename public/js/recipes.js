@@ -16688,5 +16688,197 @@ export const recipes = [
       it: "Okonomiyaki è una ricetta tradizionale di Giappone.",
       ko: "Okonomiyaki는(은) 일본의 전통 요리입니다."
     }
+  },
+  {
+    id: 181,
+    origin: {
+      ro: "Japonia", en: "Japan", es: "Japón", fr: "Japon", de: "Japan",
+      pt: "Japão", ru: "Япония", ar: "اليابان", zh: "日本", ja: "日本",
+      tr: "Japonya", it: "Giappone", ko: "일본"
+    },
+    name: {
+      ro: "Ramen Tonkotsu", en: "Tonkotsu Ramen", es: "Ramen Tonkotsu",
+      fr: "Ramen Tonkotsu", de: "Tonkotsu Ramen", pt: "Ramen Tonkotsu",
+      ru: "Тонкоцу Рамен", ar: "رامن تونكوتسو", zh: "猪骨拉面",
+      ja: "豚骨ラーメン", tr: "Tonkotsu Ramen", it: "Ramen Tonkotsu", ko: "돈코츠 라멘"
+    },
+    category: {
+      ro: "Cină", en: "Dinner", es: "Cena", fr: "Dîner", de: "Abendessen",
+      pt: "Jantar", ru: "Ужин", ar: "عشاء", zh: "晚餐", ja: "ディナー",
+      tr: "Akşam yemeği", it: "Cena", ko: "저녁"
+    },
+    ingredients: {
+      ro: ["oase de porc", "tăiței ramen", "sos de soia", "mirin", "burtă de porc chashu", "ou ramen marinat", "lăstari de bambus", "alge nori", "ceapă verde", "usturoi", "ghimbir", "ulei de susan"],
+      en: ["pork bones", "ramen noodles", "soy sauce", "mirin", "chashu pork belly", "marinated ramen egg", "bamboo shoots", "nori seaweed", "green onion", "garlic", "ginger", "sesame oil"],
+      es: ["huesos de cerdo", "fideos ramen", "salsa de soja", "mirin", "panceta chashu", "huevo marinado ramen", "brotes de bambú", "alga nori", "cebolla verde", "ajo", "jengibre", "aceite de sésamo"],
+      fr: ["os de porc", "nouilles ramen", "sauce soja", "mirin", "poitrine chashu", "œuf mariné ramen", "pousses de bambou", "algue nori", "oignon vert", "ail", "gingembre", "huile de sésame"],
+      de: ["Schweineknochen", "Ramen-Nudeln", "Sojasoße", "Mirin", "Chashu Schweinebauch", "mariniertes Ramen-Ei", "Bambussprossen", "Nori-Algen", "Frühlingszwiebel", "Knoblauch", "Ingwer", "Sesamöl"],
+      pt: ["ossos de porco", "macarrão ramen", "molho de soja", "mirin", "barriga de porco chashu", "ovo marinado ramen", "brotos de bambu", "alga nori", "cebolinha", "alho", "gengibre", "óleo de gergelim"],
+      ru: ["свиные кости", "лапша рамен", "соевый соус", "мирин", "чашу из свиной грудинки", "маринованное яйцо рамен", "побеги бамбука", "водоросли нори", "зелёный лук", "чеснок", "имбирь", "кунжутное масло"],
+      ar: ["عظام الخنزير", "نودلز رامن", "صلصة الصويا", "ميرين", "بطن الخنزير تشاشو", "بيضة رامن متبلة", "براعم الخيزران", "طحلب نوري", "بصل أخضر", "ثوم", "زنجبيل", "زيت السمسم"],
+      zh: ["猪骨", "拉面条", "酱油", "味醂", "叉烧猪腩", "溏心卤蛋", "笋干", "海苔", "葱花", "大蒜", "生姜", "芝麻油"],
+      ja: ["豚骨", "ラーメン麺", "醤油", "みりん", "チャーシュー", "味付け卵", "メンマ", "海苔", "ねぎ", "にんにく", "生姜", "ごま油"],
+      tr: ["domuz kemiği", "ramen eriştesi", "soya sosu", "mirin", "chashu domuz göbeği", "marine edilmiş ramen yumurtası", "bambu filizi", "nori deniz yosunu", "yeşil soğan", "sarımsak", "zencefil", "susam yağı"],
+      it: ["ossa di maiale", "noodle ramen", "salsa di soia", "mirin", "pancetta chashu", "uovo marinato ramen", "germogli di bambù", "alga nori", "cipollotto", "aglio", "zenzero", "olio di sesamo"],
+      ko: ["돼지 뼈", "라멘 면", "간장", "미린", "차슈 삼겹살", "라멘 달걀 마리네이드", "죽순", "노리 해초", "파", "마늘", "생강", "참기름"]
+    },
+    howIsMade: {
+      ro: "Fierbe oasele de porc 8-12 ore pentru un supă cremoasă albă, condimentează cu sos de soia și mirin, prepară chashu prin rularea și fierberea lentă a burtei de porc, fierbe tăițeii separat, apoi asamblează în bol cu toate toppingurile.",
+      en: "Simmer pork bones for 8-12 hours for a creamy white broth, season with soy sauce and mirin, prepare chashu by rolling and slow-braising pork belly, cook noodles separately, then assemble in a bowl with all toppings.",
+      es: "Hierve los huesos de cerdo 8-12 horas para un caldo cremoso blanco, sazona con salsa de soja y mirin, prepara el chashu enrollando y estofando lentamente la panceta, cocina los fideos aparte y monta el bol con todos los ingredientes.",
+      fr: "Faites mijoter les os de porc 8 à 12 heures pour un bouillon crémeux et blanc, assaisonnez avec sauce soja et mirin, préparez le chashu en roulant et braisent lentement la poitrine de porc, cuisez les nouilles à part puis assemblez dans un bol.",
+      de: "Koche Schweineknochen 8-12 Stunden für eine cremige weiße Brühe, würze mit Sojasoße und Mirin, bereite Chashu durch Rollen und langsames Schmoren des Schweinebauchs zu, koche Nudeln getrennt und arrangiere in einer Schüssel.",
+      pt: "Cozinhe os ossos de porco por 8-12 horas para um caldo cremoso e branco, tempere com molho de soja e mirin, prepare o chashu enrolando e cozinhando lentamente a barriga de porco, cozinhe o macarrão separado e monte a tigela.",
+      ru: "Варите свиные кости 8-12 часов до получения кремового белого бульона, заправьте соевым соусом и мирином, приготовьте чашу, скрутив и медленно тушя свиную грудинку, сварите лапшу отдельно и соберите в миске.",
+      ar: "اطبخ عظام الخنزير 8-12 ساعة للحصول على مرق كريمي أبيض، تبله بصلصة الصويا والميرين، جهز التشاشو بلف بطن الخنزير وطهيه ببطء، اطبخ النودلز بشكل منفصل ثم اجمع في وعاء.",
+      zh: "将猪骨熬煮8-12小时制成浓白奶汤，用酱油和味醂调味，将猪腩卷起慢炖制成叉烧，分开煮面，最后在碗中摆上所有配料。",
+      ja: "豚骨を8〜12時間煮込んでクリーミーな白濁スープを作り、醤油とみりんで味付けし、豚バラを巻いてじっくり煮込んでチャーシューを作り、麺は別で茹でてすべてのトッピングと合わせる。",
+      tr: "Domuz kemiklerini 8-12 saat kaynatarak kremsi beyaz bir et suyu elde edin, soya sosu ve mirin ile tatlandırın, domuz göbeğini rulo yapıp yavaşça kavurarak chashu hazırlayın, erişteleri ayrı pişirip kasede toplayın.",
+      it: "Fai sobbollire le ossa di maiale 8-12 ore per un brodo bianco cremoso, condisci con salsa di soia e mirin, prepara il chashu arrotolando e brasando lentamente la pancetta, cuoci i noodle a parte e assembla nella ciotola.",
+      ko: "돼지 뼈를 8-12시간 끓여 크리미한 백탁 육수를 만들고, 간장과 미린으로 간을 맞추고, 삼겹살을 말아 천천히 조려 차슈를 만들고, 면은 따로 삶아 모든 토핑과 함께 그릇에 담습니다."
+    },
+    originText: {
+      ro: "Ramen Tonkotsu este o rețetă tradițională din Japonia.",
+      en: "Tonkotsu Ramen is a traditional recipe from Japan.",
+      es: "Ramen Tonkotsu es una receta tradicional de Japón.",
+      fr: "Ramen Tonkotsu est une recette traditionnelle du Japon.",
+      de: "Tonkotsu Ramen ist ein traditionelles Rezept aus Japan.",
+      pt: "Ramen Tonkotsu é uma receita tradicional do Japão.",
+      ru: "Тонкоцу Рамен — традиционный рецепт из Японии.",
+      ar: "رامن تونكوتسو وصفة تقليدية من اليابان.",
+      zh: "猪骨拉面是来自日本的传统食谱。",
+      ja: "豚骨ラーメンは日本の伝統的なレシピです。",
+      tr: "Tonkotsu Ramen Japonya kökenli geleneksel bir tariftir.",
+      it: "Ramen Tonkotsu è una ricetta tradizionale del Giappone.",
+      ko: "돈코츠 라멘은 일본의 전통 요리입니다."
+    }
+  },
+  {
+    id: 182,
+    origin: {
+      ro: "Japonia", en: "Japan", es: "Japón", fr: "Japon", de: "Japan",
+      pt: "Japão", ru: "Япония", ar: "اليابان", zh: "日本", ja: "日本",
+      tr: "Japonya", it: "Giappone", ko: "일본"
+    },
+    name: {
+      ro: "Ramen Shoyu", en: "Shoyu Ramen", es: "Ramen Shoyu",
+      fr: "Ramen Shoyu", de: "Shoyu Ramen", pt: "Ramen Shoyu",
+      ru: "Сёю Рамен", ar: "رامن شويو", zh: "酱油拉面",
+      ja: "醤油ラーメン", tr: "Shoyu Ramen", it: "Ramen Shoyu", ko: "쇼유 라멘"
+    },
+    category: {
+      ro: "Prânz", en: "Lunch", es: "Almuerzo", fr: "Déjeuner", de: "Mittagessen",
+      pt: "Almoço", ru: "Обед", ar: "غداء", zh: "午餐", ja: "ランチ",
+      tr: "Öğle yemeği", it: "Pranzo", ko: "점심"
+    },
+    ingredients: {
+      ro: ["supă de pui", "tăiței ramen", "sos de soia (shoyu)", "mirin", "sake", "burtă de porc chashu", "ou marinat", "lăstari de bambus", "alge nori", "ceapă verde", "pastă de pește narutomaki", "ulei de susan"],
+      en: ["chicken broth", "ramen noodles", "soy sauce (shoyu)", "mirin", "sake", "chashu pork belly", "marinated egg", "bamboo shoots", "nori", "green onion", "narutomaki fish cake", "sesame oil"],
+      es: ["caldo de pollo", "fideos ramen", "salsa de soja (shoyu)", "mirin", "sake", "panceta chashu", "huevo marinado", "brotes de bambú", "nori", "cebolla verde", "pastel de pescado narutomaki", "aceite de sésamo"],
+      fr: ["bouillon de poulet", "nouilles ramen", "sauce soja (shoyu)", "mirin", "saké", "poitrine chashu", "œuf mariné", "pousses de bambou", "nori", "oignon vert", "gâteau de poisson narutomaki", "huile de sésame"],
+      de: ["Hühnerbrühe", "Ramen-Nudeln", "Sojasoße (Shoyu)", "Mirin", "Sake", "Chashu Schweinebauch", "mariniertes Ei", "Bambussprossen", "Nori", "Frühlingszwiebel", "Narutomaki Fischkuchen", "Sesamöl"],
+      pt: ["caldo de frango", "macarrão ramen", "molho de soja (shoyu)", "mirin", "saquê", "barriga de porco chashu", "ovo marinado", "brotos de bambu", "nori", "cebolinha", "bolinho de peixe narutomaki", "óleo de gergelim"],
+      ru: ["куриный бульон", "лапша рамен", "соевый соус (сёю)", "мирин", "саке", "чашу из свиной грудинки", "маринованное яйцо", "побеги бамбука", "нори", "зелёный лук", "рыбный пирог нарутомаки", "кунжутное масло"],
+      ar: ["مرق الدجاج", "نودلز رامن", "صلصة الصويا (شويو)", "ميرين", "ساكي", "بطن الخنزير تشاشو", "بيضة متبلة", "براعم الخيزران", "نوري", "بصل أخضر", "كعكة السمك ناروتوماكي", "زيت السمسم"],
+      zh: ["鸡汤", "拉面条", "酱油(shoyu)", "味醂", "清酒", "叉烧猪腩", "溏心卤蛋", "笋干", "海苔", "葱花", "鱼饼鸣门卷", "芝麻油"],
+      ja: ["鶏がらスープ", "ラーメン麺", "醤油", "みりん", "日本酒", "チャーシュー", "味付け卵", "メンマ", "海苔", "ねぎ", "なると", "ごま油"],
+      tr: ["tavuk suyu", "ramen eriştesi", "soya sosu (shoyu)", "mirin", "sake", "chashu domuz göbeği", "marine edilmiş yumurta", "bambu filizi", "nori", "yeşil soğan", "narutomaki balık keki", "susam yağı"],
+      it: ["brodo di pollo", "noodle ramen", "salsa di soia (shoyu)", "mirin", "sake", "pancetta chashu", "uovo marinato", "germogli di bambù", "nori", "cipollotto", "torta di pesce narutomaki", "olio di sesamo"],
+      ko: ["닭 육수", "라멘 면", "간장(쇼유)", "미린", "사케", "차슈 삼겹살", "마리네이드 달걀", "죽순", "노리", "파", "나루토마키 어묵", "참기름"]
+    },
+    howIsMade: {
+      ro: "Fierbe supa de pui 3-4 ore cu condimente, prepară tare shoyu din sos de soia, mirin și sake, fierbe lent burtă de porc rulată pentru chashu, marinează ouăle fierte moi în sos de soia, fierbe tăițeii și asamblează bolul cu toate toppingurile.",
+      en: "Simmer chicken broth for 3-4 hours with aromatics, make shoyu tare from soy sauce, mirin and sake, slow-braise rolled pork belly for chashu, marinate soft-boiled eggs in soy sauce, cook noodles and assemble the bowl with all toppings.",
+      es: "Hierve el caldo de pollo 3-4 horas con especias, prepara el tare shoyu con salsa de soja, mirin y sake, estofas lentamente la panceta enrollada para el chashu, marina los huevos cocidos en salsa de soja, cocina los fideos y monta el bol.",
+      fr: "Faites mijoter le bouillon de poulet 3-4 heures avec des aromates, préparez le tare shoyu avec sauce soja, mirin et saké, braisez lentement la poitrine de porc roulée pour le chashu, marinez les œufs mollets dans la sauce soja, cuisez les nouilles et assemblez.",
+      de: "Hühnerbrühe 3-4 Stunden mit Gewürzen köcheln, Shoyu-Tare aus Sojasoße, Mirin und Sake zubereiten, gerollten Schweinebauch für Chashu langsam schmoren, weich gekochte Eier in Sojasoße marinieren, Nudeln kochen und die Schüssel zusammenstellen.",
+      pt: "Cozinhe o caldo de frango por 3-4 horas com temperos, prepare o tare shoyu com molho de soja, mirin e saquê, braise lentamente a barriga de porco enrolada para o chashu, marine ovos cozidos em molho de soja, cozinhe o macarrão e monte a tigela.",
+      ru: "Варите куриный бульон 3-4 часа с ароматическими добавками, приготовьте таре сёю из соевого соуса, мирина и саке, медленно тушите свиную грудинку для чашу, маринуйте яйца всмятку в соевом соусе, сварите лапшу и соберите миску.",
+      ar: "اطبخ مرق الدجاج 3-4 ساعات مع البهارات، اصنع تاري شويو من صلصة الصويا والميرين والساكي، استخدم بطن الخنزير ملفوفاً للتشاشو، انقع البيض المسلوق في صلصة الصويا، اطبخ النودلز واجمع في الوعاء.",
+      zh: "将鸡汤与香料熬煮3-4小时，用酱油、味醂和清酒调制酱油底汤，慢炖卷起的猪腩制成叉烧，将溏心蛋浸泡在酱油中，煮好面条后组装碗。",
+      ja: "鶏がらスープを香味野菜とともに3〜4時間煮込み、醤油・みりん・酒で醤油ダレを作り、豚バラを巻いてじっくり煮込んでチャーシューを作り、半熟卵を醤油に漬け込み、麺を茹でてすべて合わせる。",
+      tr: "Tavuk suyunu baharat ile 3-4 saat kaynatın, soya sosu, mirin ve sakeden shoyu tare yapın, rulo edilmiş domuz göbeğini yavaşça kavurarak chashu hazırlayın, haşlanmış yumurtaları soya sosunda marine edin, erişteleri pişirin ve kasede toplayın.",
+      it: "Fai sobbollire il brodo di pollo 3-4 ore con aromi, prepara il tare shoyu con salsa di soia, mirin e sake, brasa lentamente la pancetta arrotolata per il chashu, marina le uova sode nella salsa di soia, cuoci i noodle e assembla la ciotola.",
+      ko: "닭 육수를 향신료와 함께 3-4시간 끓이고, 간장, 미린, 사케로 쇼유 타레를 만들고, 말은 삼겹살을 천천히 조려 차슈를 만들고, 반숙 달걀을 간장에 재우고, 면을 삶아 그릇에 담습니다."
+    },
+    originText: {
+      ro: "Ramen Shoyu este o rețetă tradițională din Japonia.",
+      en: "Shoyu Ramen is a traditional recipe from Japan.",
+      es: "Ramen Shoyu es una receta tradicional de Japón.",
+      fr: "Ramen Shoyu est une recette traditionnelle du Japon.",
+      de: "Shoyu Ramen ist ein traditionelles Rezept aus Japan.",
+      pt: "Ramen Shoyu é uma receita tradicional do Japão.",
+      ru: "Сёю Рамен — традиционный рецепт из Японии.",
+      ar: "رامن شويو وصفة تقليدية من اليابان.",
+      zh: "酱油拉面是来自日本的传统食谱。",
+      ja: "醤油ラーメンは日本の伝統的なレシピです。",
+      tr: "Shoyu Ramen Japonya kökenli geleneksel bir tariftir.",
+      it: "Ramen Shoyu è una ricetta tradizionale del Giappone.",
+      ko: "쇼유 라멘은 일본의 전통 요리입니다."
+    }
+  },
+  {
+    id: 183,
+    origin: {
+      ro: "Japonia", en: "Japan", es: "Japón", fr: "Japon", de: "Japan",
+      pt: "Japão", ru: "Япония", ar: "اليابان", zh: "日本", ja: "日本",
+      tr: "Japonya", it: "Giappone", ko: "일본"
+    },
+    name: {
+      ro: "Ramen Miso", en: "Miso Ramen", es: "Ramen Miso",
+      fr: "Ramen Miso", de: "Miso Ramen", pt: "Ramen Miso",
+      ru: "Мисо Рамен", ar: "رامن ميسو", zh: "味噌拉面",
+      ja: "味噌ラーメン", tr: "Miso Ramen", it: "Ramen Miso", ko: "미소 라멘"
+    },
+    category: {
+      ro: "Prânz", en: "Lunch", es: "Almuerzo", fr: "Déjeuner", de: "Mittagessen",
+      pt: "Almoço", ru: "Обед", ar: "غداء", zh: "午餐", ja: "ランチ",
+      tr: "Öğle yemeği", it: "Pranzo", ko: "점심"
+    },
+    ingredients: {
+      ro: ["supă de pui sau porc", "pastă miso", "tăiței ramen", "carne tocată de porc", "porumb", "unt", "lăstari de bambus", "ou marinat", "alge nori", "ceapă verde", "semințe de susan", "muguri de fasole"],
+      en: ["chicken or pork broth", "miso paste", "ramen noodles", "ground pork", "corn", "butter", "bamboo shoots", "marinated egg", "nori", "green onion", "sesame seeds", "bean sprouts"],
+      es: ["caldo de pollo o cerdo", "pasta de miso", "fideos ramen", "carne picada de cerdo", "maíz", "mantequilla", "brotes de bambú", "huevo marinado", "nori", "cebolla verde", "semillas de sésamo", "brotes de soja"],
+      fr: ["bouillon de poulet ou porc", "pâte miso", "nouilles ramen", "porc haché", "maïs", "beurre", "pousses de bambou", "œuf mariné", "nori", "oignon vert", "graines de sésame", "germes de soja"],
+      de: ["Hühner- oder Schweinebrühe", "Misopaste", "Ramen-Nudeln", "Schweinehack", "Mais", "Butter", "Bambussprossen", "mariniertes Ei", "Nori", "Frühlingszwiebel", "Sesamkörner", "Sojasprossen"],
+      pt: ["caldo de frango ou porco", "pasta de missô", "macarrão ramen", "carne de porco moída", "milho", "manteiga", "brotos de bambu", "ovo marinado", "nori", "cebolinha", "sementes de gergelim", "brotos de feijão"],
+      ru: ["куриный или свиной бульон", "паста мисо", "лапша рамен", "свиной фарш", "кукуруза", "сливочное масло", "побеги бамбука", "маринованное яйцо", "нори", "зелёный лук", "семена кунжута", "ростки фасоли"],
+      ar: ["مرق الدجاج أو الخنزير", "معجون ميسو", "نودلز رامن", "لحم خنزير مفروم", "ذرة", "زبدة", "براعم الخيزران", "بيضة متبلة", "نوري", "بصل أخضر", "بذور السمسم", "براعم الفاصوليا"],
+      zh: ["鸡汤或猪骨汤", "味噌酱", "拉面条", "猪肉末", "玉米", "黄油", "笋干", "溏心卤蛋", "海苔", "葱花", "芝麻", "豆芽"],
+      ja: ["鶏がらまたは豚骨スープ", "味噌", "ラーメン麺", "豚ひき肉", "コーン", "バター", "メンマ", "味付け卵", "海苔", "ねぎ", "ごま", "もやし"],
+      tr: ["tavuk veya domuz suyu", "miso ezmesi", "ramen eriştesi", "kıyma", "mısır", "tereyağı", "bambu filizi", "marine edilmiş yumurta", "nori", "yeşil soğan", "susam", "fasulye filizi"],
+      it: ["brodo di pollo o maiale", "pasta di miso", "noodle ramen", "carne di maiale macinata", "mais", "burro", "germogli di bambù", "uovo marinato", "nori", "cipollotto", "semi di sesamo", "germogli di soia"],
+      ko: ["닭 또는 돼지 육수", "미소 페이스트", "라멘 면", "돼지 다진 고기", "옥수수", "버터", "죽순", "마리네이드 달걀", "노리", "파", "참깨", "숙주나물"]
+    },
+    howIsMade: {
+      ro: "Călește usturoiul și carnea tocată de porc, adaugă pasta miso și fierbe 2 minute, toarnă supa caldă și adaugă unt pentru cremozitate, fierbe tăițeii separat, apoi pune în bol și garnisește cu porumb, muguri, ou, nori și ceapă verde.",
+      en: "Sauté garlic and ground pork, add miso paste and cook 2 minutes, pour in hot broth and add butter for richness, cook noodles separately, then fill bowls and garnish with corn, bean sprouts, egg, nori and green onion.",
+      es: "Sofríe el ajo y la carne picada de cerdo, añade la pasta de miso y cocina 2 minutos, vierte el caldo caliente y añade mantequilla, cocina los fideos aparte, luego sirve en bol y decora con maíz, brotes, huevo, nori y cebolla.",
+      fr: "Faites revenir l'ail et le porc haché, ajoutez la pâte miso et cuisez 2 minutes, versez le bouillon chaud et ajoutez du beurre, cuisez les nouilles à part, puis remplissez les bols et garnissez de maïs, germes, œuf, nori et oignon vert.",
+      de: "Knoblauch und Schweinehack anbraten, Misopaste zugeben und 2 Minuten kochen, heiße Brühe eingießen und Butter für Cremigkeit hinzufügen, Nudeln getrennt kochen, dann in Schüsseln füllen und mit Mais, Sprossen, Ei, Nori und Frühlingszwiebeln garnieren.",
+      pt: "Refogue alho e carne de porco moída, adicione pasta de missô e cozinhe 2 minutos, despeje o caldo quente e adicione manteiga, cozinhe o macarrão separadamente, depois sirva nas tigelas e enfeite com milho, brotos, ovo, nori e cebolinha.",
+      ru: "Обжарьте чеснок и свиной фарш, добавьте пасту мисо и готовьте 2 минуты, влейте горячий бульон и добавьте сливочное масло, сварите лапшу отдельно, затем разложите по мискам и украсьте кукурузой, ростками, яйцом, нори и луком.",
+      ar: "قلي الثوم ولحم الخنزير المفروم، أضف معجون الميسو واطبخ دقيقتين، صب المرق الساخن وأضف الزبدة، اطبخ النودلز بشكل منفصل، ثم ضعه في الأوعية وزين بالذرة والبراعم والبيض والنوري والبصل الأخضر.",
+      zh: "炒香大蒜和猪肉末，加入味噌酱炒2分钟，倒入热汤并加黄油增加浓郁感，分开煮面，然后盛入碗中，用玉米、豆芽、鸡蛋、海苔和葱花装饰。",
+      ja: "にんにくと豚ひき肉を炒め、味噌を加えて2分炒め、熱いスープを注いでバターを加えてコクを出し、麺は別で茹でてから器に盛り、コーン・もやし・卵・海苔・ねぎをのせる。",
+      tr: "Sarımsak ve kıymayı kavurun, miso ezmesi ekleyip 2 dakika pişirin, sıcak et suyunu dökün ve tereyağı ekleyin, erişteleri ayrı pişirin, sonra kaselere doldurun ve mısır, filiz, yumurta, nori ve yeşil soğanla süsleyin.",
+      it: "Soffriggi aglio e carne di maiale macinata, aggiungi la pasta di miso e cuoci 2 minuti, versa il brodo caldo e aggiungi il burro, cuoci i noodle a parte, poi riempi le ciotole e guarnisci con mais, germogli, uovo, nori e cipollotto.",
+      ko: "마늘과 돼지 다진 고기를 볶고, 미소 페이스트를 넣어 2분간 볶고, 뜨거운 육수를 붓고 버터를 더해 고소함을 내고, 면은 따로 삶아 그릇에 담고, 옥수수·숙주·달걀·노리·파로 장식합니다."
+    },
+    originText: {
+      ro: "Ramen Miso este o rețetă tradițională din Japonia.",
+      en: "Miso Ramen is a traditional recipe from Japan.",
+      es: "Ramen Miso es una receta tradicional de Japón.",
+      fr: "Ramen Miso est une recette traditionnelle du Japon.",
+      de: "Miso Ramen ist ein traditionelles Rezept aus Japan.",
+      pt: "Ramen Miso é uma receita tradicional do Japão.",
+      ru: "Мисо Рамен — традиционный рецепт из Японии.",
+      ar: "رامن ميسو وصفة تقليدية من اليابان.",
+      zh: "味噌拉面是来自日本的传统食谱。",
+      ja: "味噌ラーメンは日本の伝統的なレシピです。",
+      tr: "Miso Ramen Japonya kökenli geleneksel bir tariftir.",
+      it: "Ramen Miso è una ricetta tradizionale del Giappone.",
+      ko: "미소 라멘은 일본의 전통 요리입니다."
+    }
   }
 ];
