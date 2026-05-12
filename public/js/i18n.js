@@ -12,7 +12,7 @@ const i18n = {
       valid: "✅ Ai acces! Poți descărca PDF-ul nelimitat:"
     },
     "btn.generate": "Generează PDF",
-    "btn.pay": "Premium – 10 RON/lună",
+    "btn.pay": "Premium – €3/lună",
     "btn.autoMenu": "Generează meniu aleator",
     "budget.toggle": "Meniu de buget (criză financiară)",
     "btn.verify": "Verifică Email",
