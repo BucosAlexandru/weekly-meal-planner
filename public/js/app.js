@@ -1388,6 +1388,7 @@ async function ensureHtml2pdfLoaded() {
 })();
  function renderHowItWorks() {
   const SECTION_ID = 'how-it-works-section';
+  const t = key => (i18n[lang] && i18n[lang][key]) || (i18n['en'] && i18n['en'][key]) || key;
   const isRtl = lang === 'ar';
 
   const steps = [
