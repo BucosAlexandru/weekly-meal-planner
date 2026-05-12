@@ -1386,7 +1386,45 @@ async function ensureHtml2pdfLoaded() {
   const isWinter = (m === 11 || m === 0); // Decembrie sau Ianuarie
   document.body.classList.toggle('theme-winter', isWinter);
 })();
- function applyTranslations() {
+ function renderHowItWorks() {
+  const SECTION_ID = 'how-it-works-section';
+  const isRtl = lang === 'ar';
+
+  const steps = [
+    { icon: '📋', titleKey: 'how.step1.title', descKey: 'how.step1.desc' },
+    { icon: '🛒', titleKey: 'how.step2.title', descKey: 'how.step2.desc' },
+    { icon: '📥', titleKey: 'how.step3.title', descKey: 'how.step3.desc' },
+  ];
+
+  const stepsHTML = steps.map((s, i) => `
+    <div class="how-step">
+      <div class="how-step-icon">
+        <span class="how-step-num">${i + 1}</span>
+        ${s.icon}
+      </div>
+      <h3 class="how-step-title">${t(s.titleKey)}</h3>
+      <p class="how-step-desc">${t(s.descKey)}</p>
+    </div>
+  `).join('');
+
+  const html = `
+    <section id="${SECTION_ID}" class="how-it-works no-print" aria-label="${t('how.title')}"${isRtl ? ' dir="rtl"' : ''}>
+      <div class="how-inner">
+        <h2 class="how-title">${t('how.title')}</h2>
+        <div class="how-steps">${stepsHTML}</div>
+      </div>
+    </section>`;
+
+  const existing = document.getElementById(SECTION_ID);
+  if (existing) {
+    existing.outerHTML = html;
+  } else {
+    const main = document.querySelector('.app-main');
+    if (main) main.insertAdjacentHTML('beforebegin', html);
+  }
+}
+
+function applyTranslations() {
   // 1) Texte statice cu data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -1429,6 +1467,7 @@ async function ensureHtml2pdfLoaded() {
   attachAutoMenuBtn();
   updateContentNav(lang);
   renderPricingSection();
+  renderHowItWorks();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {

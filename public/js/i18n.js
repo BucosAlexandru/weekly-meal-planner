@@ -52,7 +52,14 @@ const i18n = {
     "hero.badge": "Gratuit · 14 limbi · 100+ rețete",
     "hero.sub": "Planifică săptămâna, generează automat lista de cumpărături și descarcă PDF — gratuit, în orice limbă.",
     "hero.social": "Folosit în 14 limbi în toată lumea 🌍",
-    "hero.cta": "🥗 Generează Planul Meu Gratuit"
+    "hero.cta": "🥗 Generează Planul Meu Gratuit",
+    "how.title": "Cum funcționează",
+    "how.step1.title": "Adaugă sau generează mesele",
+    "how.step1.desc": "Scrie ce vrei să mănânci sau apasă „Generează" pentru a completa automat săptămâna",
+    "how.step2.title": "Lista de cumpărături — automată",
+    "how.step2.desc": "Ingredientele sunt extrase și organizate automat din planul tău",
+    "how.step3.title": "Descarcă planul ca PDF",
+    "how.step3.desc": "Primești un plan frumos de tipărit, gratuit o dată pe zi"
   },
   en: {
     title: "Weekly Meal Planner",
@@ -107,7 +114,14 @@ const i18n = {
     "hero.badge": "Free · 14 languages · 100+ recipes",
     "hero.sub": "Plan your week, auto-generate shopping lists, and download beautiful PDFs — free, in any language.",
     "hero.social": "Used in 14 languages worldwide 🌍",
-    "hero.cta": "🥗 Generate My Free Meal Plan"
+    "hero.cta": "🥗 Generate My Free Meal Plan",
+    "how.title": "How it works",
+    "how.step1.title": "Add or generate meals",
+    "how.step1.desc": "Type your meals or click «Generate» to auto-fill the entire week",
+    "how.step2.title": "Shopping list — automatic",
+    "how.step2.desc": "Ingredients are organized automatically from your plan",
+    "how.step3.title": "Download as PDF",
+    "how.step3.desc": "Get a beautiful printable plan, free once per day"
   },
   es: {
     title: "Planificador Semanal de Comidas",
@@ -161,7 +175,14 @@ const i18n = {
     "hero.badge": "Gratis · 14 idiomas · 100+ recetas",
     "hero.sub": "Planifica tu semana, genera listas de compras automáticamente y descarga PDFs — gratis, en cualquier idioma.",
     "hero.social": "Usado en 14 idiomas en todo el mundo 🌍",
-    "hero.cta": "🥗 Generar Mi Plan Gratis"
+    "hero.cta": "🥗 Generar Mi Plan Gratis",
+    "how.title": "Cómo funciona",
+    "how.step1.title": "Añade o genera tus comidas",
+    "how.step1.desc": "Escribe tus comidas o haz clic en «Generar» para completar la semana automáticamente",
+    "how.step2.title": "Lista de compras — automática",
+    "how.step2.desc": "Los ingredientes se organizan automáticamente desde tu plan",
+    "how.step3.title": "Descarga como PDF",
+    "how.step3.desc": "Obtén un plan imprimible gratuito, una vez al día"
   },
   fr: {
     title: "Planificateur de Repas Hebdomadaire",
@@ -215,7 +236,14 @@ const i18n = {
     "hero.badge": "Gratuit · 14 langues · 100+ recettes",
     "hero.sub": "Planifiez votre semaine, générez des listes de courses automatiquement et téléchargez des PDFs — gratuit, dans toute langue.",
     "hero.social": "Utilisé dans 14 langues dans le monde entier 🌍",
-    "hero.cta": "🥗 Générer Mon Plan Gratuit"
+    "hero.cta": "🥗 Générer Mon Plan Gratuit",
+    "how.title": "Comment ça marche",
+    "how.step1.title": "Ajoutez ou générez vos repas",
+    "how.step1.desc": "Tapez vos repas ou cliquez sur «Générer» pour remplir automatiquement la semaine",
+    "how.step2.title": "Liste de courses — automatique",
+    "how.step2.desc": "Les ingrédients sont organisés automatiquement depuis votre plan",
+    "how.step3.title": "Téléchargez en PDF",
+    "how.step3.desc": "Obtenez un plan imprimible gratuit, une fois par jour"
   },
   ru: {
     title: "Еженедельный планировщик питания",
@@ -269,7 +297,14 @@ const i18n = {
     "hero.badge": "Бесплатно · 14 языков · 100+ рецептов",
     "hero.sub": "Планируйте неделю, автоматически создавайте списки покупок и скачивайте PDF — бесплатно, на любом языке.",
     "hero.social": "Используется на 14 языках по всему миру 🌍",
-    "hero.cta": "🥗 Создать Мой Бесплатный План"
+    "hero.cta": "🥗 Создать Мой Бесплатный План",
+    "how.title": "Как это работает",
+    "how.step1.title": "Добавьте или сгенерируйте блюда",
+    "how.step1.desc": "Введите блюда или нажмите «Создать», чтобы автоматически заполнить неделю",
+    "how.step2.title": "Список покупок — автоматически",
+    "how.step2.desc": "Ингредиенты организуются автоматически из вашего плана",
+    "how.step3.title": "Скачайте в PDF",
+    "how.step3.desc": "Получите красивый план для печати, бесплатно раз в день"
   },
   zh: {
     title: "每周用餐计划器",
@@ -323,7 +358,14 @@ const i18n = {
     "hero.badge": "免费 · 14种语言 · 100+食谱",
     "hero.sub": "规划您的一周，自动生成购物清单，下载精美PDF——免费，支持任何语言。",
     "hero.social": "全球14种语言用户使用 🌍",
-    "hero.cta": "🥗 生成我的免费餐饮计划"
+    "hero.cta": "🥗 生成我的免费餐饮计划",
+    "how.title": "使用方法",
+    "how.step1.title": "添加或生成餐食",
+    "how.step1.desc": "输入您的餐食，或点击「生成」自动填充整周菜单",
+    "how.step2.title": "购物清单 — 自动生成",
+    "how.step2.desc": "食材从您的计划中自动整理",
+    "how.step3.title": "下载为PDF",
+    "how.step3.desc": "获取精美的可打印计划，每天免费一次"
   },
   ja: {
     title: "週間ミールプランナー",
@@ -377,7 +419,14 @@ const i18n = {
     "hero.badge": "無料 · 14言語 · 100+レシピ",
     "hero.sub": "週の計画を立て、買い物リストを自動生成し、PDFをダウンロード — 無料、どの言語でも。",
     "hero.social": "世界14言語で使用 🌍",
-    "hero.cta": "🥗 無料プランを作成する"
+    "hero.cta": "🥗 無料プランを作成する",
+    "how.title": "使い方",
+    "how.step1.title": "食事を追加または自動生成",
+    "how.step1.desc": "食事を入力するか「生成」をクリックして1週間を自動入力",
+    "how.step2.title": "買い物リスト — 自動作成",
+    "how.step2.desc": "食材はプランから自動的に整理されます",
+    "how.step3.title": "PDFでダウンロード",
+    "how.step3.desc": "美しい印刷用プランを1日1回無料で取得"
   },
   pt: {
     title: "Planejador Semanal de Refeições",
@@ -431,7 +480,14 @@ const i18n = {
     "hero.badge": "Gratuito · 14 idiomas · 100+ receitas",
     "hero.sub": "Planeje sua semana, gere listas de compras automaticamente e baixe PDFs — grátis, em qualquer idioma.",
     "hero.social": "Usado em 14 idiomas no mundo todo 🌍",
-    "hero.cta": "🥗 Gerar Meu Plano Grátis"
+    "hero.cta": "🥗 Gerar Meu Plano Grátis",
+    "how.title": "Como funciona",
+    "how.step1.title": "Adicione ou gere suas refeições",
+    "how.step1.desc": "Digite suas refeições ou clique em «Gerar» para preencher a semana automaticamente",
+    "how.step2.title": "Lista de compras — automática",
+    "how.step2.desc": "Os ingredientes são organizados automaticamente a partir do seu plano",
+    "how.step3.title": "Baixe como PDF",
+    "how.step3.desc": "Obtenha um plano imprimível gratuito, uma vez por dia"
   },
   de: {
     title: "Wöchentlicher Essensplaner",
@@ -485,7 +541,14 @@ const i18n = {
     "hero.badge": "Kostenlos · 14 Sprachen · 100+ Rezepte",
     "hero.sub": "Planen Sie Ihre Woche, erstellen Sie automatisch Einkaufslisten und laden Sie PDFs herunter — kostenlos, in jeder Sprache.",
     "hero.social": "In 14 Sprachen weltweit genutzt 🌍",
-    "hero.cta": "🥗 Meinen kostenlosen Plan erstellen"
+    "hero.cta": "🥗 Meinen kostenlosen Plan erstellen",
+    "how.title": "So funktioniert es",
+    "how.step1.title": "Mahlzeiten hinzufügen oder generieren",
+    "how.step1.desc": "Tragen Sie Mahlzeiten ein oder klicken Sie auf «Generieren», um die Woche automatisch auszufüllen",
+    "how.step2.title": "Einkaufsliste — automatisch",
+    "how.step2.desc": "Zutaten werden automatisch aus Ihrem Plan zusammengestellt",
+    "how.step3.title": "Als PDF herunterladen",
+    "how.step3.desc": "Erhalten Sie einen schönen druckbaren Plan, einmal täglich kostenlos"
   },
   ar: {
     title: "مخطط وجبات أسبوعي",
@@ -539,7 +602,14 @@ const i18n = {
     "hero.badge": "مجاني · 14 لغة · أكثر من 100 وصفة",
     "hero.sub": "خطط لأسبوعك، أنشئ قوائم التسوق تلقائيًا وحمّل ملفات PDF — مجانًا، بأي لغة.",
     "hero.social": "مستخدم بـ 14 لغة حول العالم 🌍",
-    "hero.cta": "🥗 إنشاء خطتي المجانية"
+    "hero.cta": "🥗 إنشاء خطتي المجانية",
+    "how.title": "كيف يعمل",
+    "how.step1.title": "أضف أو أنشئ وجباتك",
+    "how.step1.desc": "اكتب وجباتك أو انقر على «توليد» لملء الأسبوع تلقائيًا",
+    "how.step2.title": "قائمة التسوق — تلقائية",
+    "how.step2.desc": "يتم تنظيم المكونات تلقائيًا من خطتك",
+    "how.step3.title": "تحميل كـ PDF",
+    "how.step3.desc": "احصل على خطة جميلة للطباعة، مجانًا مرة واحدة يوميًا"
   },
   hi: {
     title: "साप्ताहिक भोजन योजना",
@@ -593,7 +663,14 @@ const i18n = {
     "hero.badge": "मुफ्त · 14 भाषाएं · 100+ रेसिपी",
     "hero.sub": "अपने सप्ताह की योजना बनाएं, शॉपिंग लिस्ट अपने आप बनाएं और PDF डाउनलोड करें — मुफ्त, किसी भी भाषा में।",
     "hero.social": "दुनिया भर में 14 भाषाओं में उपयोग 🌍",
-    "hero.cta": "🥗 मेरी मुफ्त योजना बनाएं"
+    "hero.cta": "🥗 मेरी मुफ्त योजना बनाएं",
+    "how.title": "यह कैसे काम करता है",
+    "how.step1.title": "भोजन जोड़ें या बनाएं",
+    "how.step1.desc": "अपना भोजन टाइप करें या पूरे सप्ताह को स्वचालित भरने के लिए «बनाएं» क्लिक करें",
+    "how.step2.title": "खरीदारी सूची — स्वचालित",
+    "how.step2.desc": "सामग्री आपके प्लान से स्वचालित रूप से व्यवस्थित की जाती है",
+    "how.step3.title": "PDF के रूप में डाउनलोड करें",
+    "how.step3.desc": "एक सुंदर प्रिंट योग्य प्लान पाएं, दिन में एक बार मुफ्त"
   },
   tr: {
   title: "Haftalık Yemek Planlayıcı",
@@ -647,7 +724,14 @@ const i18n = {
   "hero.badge": "Ücretsiz · 14 dil · 100+ tarif",
   "hero.sub": "Haftanızı planlayın, alışveriş listelerini otomatik oluşturun ve PDF indirin — ücretsiz, her dilde.",
   "hero.social": "Dünya genelinde 14 dilde kullanılıyor 🌍",
-  "hero.cta": "🥗 Ücretsiz Planımı Oluştur"
+  "hero.cta": "🥗 Ücretsiz Planımı Oluştur",
+  "how.title": "Nasıl çalışır",
+  "how.step1.title": "Öğünleri ekleyin veya oluşturun",
+  "how.step1.desc": "Öğünlerinizi yazın veya haftayı otomatik doldurmak için «Oluştur»'a tıklayın",
+  "how.step2.title": "Alışveriş listesi — otomatik",
+  "how.step2.desc": "Malzemeler planınızdan otomatik olarak düzenlenir",
+  "how.step3.title": "PDF olarak indirin",
+  "how.step3.desc": "Günde bir kez ücretsiz güzel bir yazdırılabilir plan alın"
 },
 it: {
   title: "Pianificatore Settimanale dei Pasti",
@@ -701,7 +785,14 @@ it: {
   "hero.badge": "Gratuito · 14 lingue · 100+ ricette",
   "hero.sub": "Pianifica la tua settimana, genera automaticamente liste della spesa e scarica PDF — gratis, in qualsiasi lingua.",
   "hero.social": "Usato in 14 lingue in tutto il mondo 🌍",
-  "hero.cta": "🥗 Genera Il Mio Piano Gratuito"
+  "hero.cta": "🥗 Genera Il Mio Piano Gratuito",
+  "how.title": "Come funziona",
+  "how.step1.title": "Aggiungi o genera i pasti",
+  "how.step1.desc": "Scrivi i tuoi pasti o clicca «Genera» per compilare automaticamente la settimana",
+  "how.step2.title": "Lista della spesa — automatica",
+  "how.step2.desc": "Gli ingredienti vengono organizzati automaticamente dal tuo piano",
+  "how.step3.title": "Scarica come PDF",
+  "how.step3.desc": "Ottieni un bel piano stampabile, gratuito una volta al giorno"
 },
 ko: {
   title: "주간 식단 플래너",
@@ -755,7 +846,14 @@ ko: {
   "hero.badge": "무료 · 14개 언어 · 100개+ 레시피",
   "hero.sub": "한 주를 계획하고, 쇼핑 목록을 자동 생성하고, PDF를 다운로드하세요 — 무료, 모든 언어로.",
   "hero.social": "전 세계 14개 언어로 사용 🌍",
-  "hero.cta": "🥗 무료 식단 계획 만들기"
+  "hero.cta": "🥗 무료 식단 계획 만들기",
+  "how.title": "이용 방법",
+  "how.step1.title": "식사 추가 또는 자동 생성",
+  "how.step1.desc": "식사를 입력하거나 «생성»을 클릭해 한 주를 자동으로 채우세요",
+  "how.step2.title": "장보기 목록 — 자동 생성",
+  "how.step2.desc": "재료가 계획에서 자동으로 정리됩니다",
+  "how.step3.title": "PDF로 다운로드",
+  "how.step3.desc": "아름다운 인쇄용 플랜을 하루 1회 무료로 받으세요"
 }
 };
 
