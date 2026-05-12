@@ -12,7 +12,7 @@ const i18n = {
       valid: "✅ Ai acces! Poți descărca PDF-ul nelimitat:"
     },
     "btn.generate": "Generează PDF",
-    "btn.pay": "Plătește & Descarcă",
+    "btn.pay": "Premium – 10 RON/lună",
     "btn.autoMenu": "Generează meniu aleator",
     "budget.toggle": "Meniu de buget (criză financiară)",
     "btn.verify": "Verifică Email",
@@ -67,7 +67,7 @@ const i18n = {
       valid: "✅ Access granted! You can download unlimited PDFs:"
     },
     "btn.generate": "Generate PDF",
-    "btn.pay": "Pay & Download",
+    "btn.pay": "Premium – €3/month",
     "btn.autoMenu": "Generate random menu",
     "budget.toggle": "Budget menu (crisis mode)",
     "btn.verify": "Verify Email",
@@ -122,7 +122,7 @@ const i18n = {
       valid: "✅ ¡Acceso concedido! Ahora puedes descargar PDFs ilimitados:"
     },
     "btn.generate": "Generar PDF",
-    "btn.pay": "Pagar y Descargar",
+    "btn.pay": "Premium – €3/mes",
     "btn.autoMenu": "Generar menú aleatorio",
     "budget.toggle": "Menú económico (modo crisis)",
     "btn.verify": "Verificar Email",
@@ -176,7 +176,7 @@ const i18n = {
       valid: "✅ Accès accordé ! Vous pouvez désormais télécharger des PDF en illimité :"
     },
     "btn.generate": "Générer PDF",
-    "btn.pay": "Payer & Télécharger",
+    "btn.pay": "Premium – €3/mois",
     "btn.autoMenu": "Générer un menu aléatoire",
     "budget.toggle": "Menu économique (mode crise)",
     "btn.verify": "Vérifier l'email",
@@ -230,7 +230,7 @@ const i18n = {
       valid: "✅ Доступ получен! Теперь вы можете скачивать неограниченное количество PDF:"
     },
     "btn.generate": "Создать PDF",
-    "btn.pay": "Оплатить & Скачать",
+    "btn.pay": "Премиум – €3/мес",
     "btn.autoMenu": "Сгенерировать случайное меню",
     "budget.toggle": "Бюджетное меню (режим кризиса)",
     "btn.verify": "Проверить Email",
@@ -284,7 +284,7 @@ const i18n = {
       valid: "✅ 访问已授权！您现在可以无限下载 PDF 文件："
     },
     "btn.generate": "生成 PDF",
-    "btn.pay": "支付并下载",
+    "btn.pay": "高级版 – €3/月",
     "btn.autoMenu": "生成随机菜单",
     "budget.toggle": "省钱菜单（危机模式）",
     "btn.verify": "验证邮箱",
@@ -338,7 +338,7 @@ const i18n = {
       valid: "✅ アクセス許可！無制限にPDFをダウンロードできます："
     },
     "btn.generate": "PDFを作成",
-    "btn.pay": "支払ってダウンロード",
+    "btn.pay": "プレミアム – €3/月",
     "btn.autoMenu": "ランダムメニューを作成",
     "budget.toggle": "節約メニュー（危機モード）",
     "btn.verify": "メールを確認する",
@@ -392,7 +392,7 @@ const i18n = {
       valid: "✅ Acesso concedido! Agora você pode baixar PDFs ilimitados:"
     },
     "btn.generate": "Gerar PDF",
-    "btn.pay": "Pagar & Baixar",
+    "btn.pay": "Premium – €3/mês",
     "btn.autoMenu": "Gerar menu aleatório",
     "budget.toggle": "Menu econômico (modo crise)",
     "btn.verify": "Verificar Email",
@@ -446,7 +446,7 @@ const i18n = {
       valid: "✅ Zugriff gewährt! Du kannst nun unbegrenzt PDFs herunterladen:"
     },
     "btn.generate": "PDF erstellen",
-    "btn.pay": "Bezahlen & Herunterladen",
+    "btn.pay": "Premium – €3/Monat",
     "btn.autoMenu": "Zufälliges Menü erstellen",
     "budget.toggle": "Budget-Menü (Krisenmodus)",
     "btn.verify": "E-Mail überprüfen",
@@ -500,7 +500,7 @@ const i18n = {
       valid: "✅ تم منح الوصول! يمكنك الآن تنزيل ملفات PDF غير محدودة:"
     },
     "btn.generate": "إنشاء PDF",
-    "btn.pay": "ادفع وحمّل",
+    "btn.pay": "بريميوم – €3/شهر",
     "btn.autoMenu": "إنشاء قائمة عشوائية",
     "budget.toggle": "قائمة اقتصادية (وضع الأزمة)",
     "btn.verify": "تحقق من البريد الإلكتروني",
@@ -554,7 +554,7 @@ const i18n = {
       valid: "✅ पहुँच प्राप्त! आप अनलिमिटेड PDF डाउनलोड कर सकते हैं:"
     },
     "btn.generate": "PDF बनाएँ",
-    "btn.pay": "भुगतान और डाउनलोड",
+    "btn.pay": "प्रीमियम – €3/माह",
     "btn.autoMenu": "रैंडम मेनू बनाएं",
     "budget.toggle": "कम बजट मेनू (क्राइसिस मोड)",
     "btn.verify": "ईमेल सत्यापित करें",
@@ -608,7 +608,7 @@ const i18n = {
     valid: "✅ Erişim onaylandı! Sınırsız PDF indirebilirsiniz:"
   },
   "btn.generate": "PDF Oluştur",
-  "btn.pay": "Öde & İndir",
+  "btn.pay": "Premium – €3/ay",
   "btn.autoMenu": "Rastgele menü oluştur",
   "budget.toggle": "Bütçe menüsü (kriz modu)",
   "btn.verify": "E-postayı Doğrula",
@@ -662,7 +662,7 @@ it: {
     valid: "✅ Accesso confermato! Puoi scaricare PDF illimitati:"
   },
   "btn.generate": "Genera PDF",
-  "btn.pay": "Paga & Scarica",
+  "btn.pay": "Premium – €3/mese",
   "btn.autoMenu": "Genera menu casuale",
   "budget.toggle": "Menu economico (modalità crisi)",
   "btn.verify": "Verifica Email",
@@ -716,7 +716,7 @@ ko: {
     valid: "✅ 접근 허가됨! 무제한 PDF 다운로드가 가능합니다:"
   },
   "btn.generate": "PDF 생성",
-  "btn.pay": "결제 & 다운로드",
+  "btn.pay": "프리미엄 – €3/월",
   "btn.autoMenu": "랜덤 메뉴 생성",
   "budget.toggle": "절약 메뉴(위기 모드)",
   "btn.verify": "이메일 확인",

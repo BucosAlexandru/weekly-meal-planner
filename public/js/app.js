@@ -1492,6 +1492,7 @@ async function ensureHtml2pdfLoaded() {
   attachPdfListeners();
   attachAutoMenuBtn();
   updateContentNav(lang);
+  renderPricingSection();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
@@ -1509,6 +1510,172 @@ async function ensureHtml2pdfLoaded() {
     if (generateBtn) generateBtn.style.display = 'inline-block';
     updateButtonState(); // ← adăugare, ca să ascundă galbenul + selectorul
     window.history.replaceState({}, '', window.location.pathname);
+  }
+
+  // ── Pricing Section ────────────────────────────────────────────────────────
+  function renderPricingSection() {
+    const el = document.getElementById('pricing-section');
+    if (!el) return;
+    if (window.hasUnlimited) { el.style.display = 'none'; return; }
+    el.style.display = '';
+
+    const isRo = lang === 'ro';
+    const P = {
+      ro: { title:'Gratuit vs Premium', freeName:'Gratuit', premName:'⭐ Premium',
+            price:'10 RON/lună', sub:'~€3/lună', popular:'CEL MAI POPULAR',
+            cta:'Obține Premium →', already:'Ai deja abonament? Activează mai jos ↓',
+            freeFeats:['✅ Plan de mese 7 zile','✅ Listă de cumpărături automată',
+                       '✅ 175 rețete din 70+ țări','✅ 1 PDF complet / zi',
+                       '✗ PDF cu toate 7 zilele','✗ Meniu buget ieftin'],
+            premFeats:['✅ Tot ce e gratuit, plus:','✅ PDF cu toate cele 7 zile',
+                       '✅ Meniu buget săptămânal','✅ Acces nelimitat oricând'] },
+      en: { title:'Free vs Premium', freeName:'Free', premName:'⭐ Premium',
+            price:'€3/month', sub:'~10 RON/month', popular:'MOST POPULAR',
+            cta:'Get Premium →', already:'Already subscribed? Activate below ↓',
+            freeFeats:['✅ 7-day meal plan','✅ Auto shopping list',
+                       '✅ 175 recipes from 70+ countries','✅ 1 full PDF / day',
+                       '✗ Full 7-day PDF','✗ Budget menu'],
+            premFeats:['✅ Everything in Free, plus:','✅ Full PDF with all 7 days',
+                       '✅ Weekly budget menu','✅ Unlimited access anytime'] },
+      es: { title:'Gratis vs Premium', freeName:'Gratis', premName:'⭐ Premium',
+            price:'€3/mes', sub:'~10 RON/mes', popular:'MÁS POPULAR',
+            cta:'Obtener Premium →', already:'¿Ya suscrito? Activa abajo ↓',
+            freeFeats:['✅ Plan de comidas 7 días','✅ Lista de compras automática',
+                       '✅ 175 recetas de 70+ países','✅ 1 PDF completo / día',
+                       '✗ PDF con los 7 días','✗ Menú económico'],
+            premFeats:['✅ Todo lo gratis, más:','✅ PDF completo con 7 días',
+                       '✅ Menú económico semanal','✅ Acceso ilimitado siempre'] },
+      fr: { title:'Gratuit vs Premium', freeName:'Gratuit', premName:'⭐ Premium',
+            price:'€3/mois', sub:'~10 RON/mois', popular:'LE PLUS POPULAIRE',
+            cta:'Obtenir Premium →', already:'Déjà abonné ? Activez ci-dessous ↓',
+            freeFeats:['✅ Plan de repas 7 jours','✅ Liste de courses automatique',
+                       '✅ 175 recettes de 70+ pays','✅ 1 PDF complet / jour',
+                       '✗ PDF avec les 7 jours','✗ Menu budget'],
+            premFeats:['✅ Tout le gratuit, plus :','✅ PDF complet sur 7 jours',
+                       '✅ Menu budget hebdomadaire','✅ Accès illimité à tout moment'] },
+      de: { title:'Kostenlos vs Premium', freeName:'Kostenlos', premName:'⭐ Premium',
+            price:'€3/Monat', sub:'~10 RON/Monat', popular:'AM BELIEBTESTEN',
+            cta:'Premium holen →', already:'Bereits abonniert? Unten aktivieren ↓',
+            freeFeats:['✅ 7-Tage-Mahlzeitenplan','✅ Automatische Einkaufsliste',
+                       '✅ 175 Rezepte aus 70+ Ländern','✅ 1 PDF / Tag',
+                       '✗ PDF mit allen 7 Tagen','✗ Budget-Menü'],
+            premFeats:['✅ Alles Kostenlose, plus:','✅ PDF mit allen 7 Tagen',
+                       '✅ Wöchentliches Budget-Menü','✅ Unbegrenzter Zugang'] },
+      pt: { title:'Gratuito vs Premium', freeName:'Gratuito', premName:'⭐ Premium',
+            price:'€3/mês', sub:'~10 RON/mês', popular:'MAIS POPULAR',
+            cta:'Obter Premium →', already:'Já assinante? Ative abaixo ↓',
+            freeFeats:['✅ Plano de refeições 7 dias','✅ Lista de compras automática',
+                       '✅ 175 receitas de 70+ países','✅ 1 PDF completo / dia',
+                       '✗ PDF com todos os 7 dias','✗ Menu económico'],
+            premFeats:['✅ Tudo gratuito, mais:','✅ PDF completo com 7 dias',
+                       '✅ Menu económico semanal','✅ Acesso ilimitado'] },
+      ru: { title:'Бесплатно vs Премиум', freeName:'Бесплатно', premName:'⭐ Премиум',
+            price:'€3/мес', sub:'~10 RON/мес', popular:'САМЫЙ ПОПУЛЯРНЫЙ',
+            cta:'Получить Премиум →', already:'Уже подписаны? Активируйте ниже ↓',
+            freeFeats:['✅ План питания на 7 дней','✅ Автоматический список покупок',
+                       '✅ 175 рецептов из 70+ стран','✅ 1 PDF / день',
+                       '✗ PDF на все 7 дней','✗ Бюджетное меню'],
+            premFeats:['✅ Всё из бесплатного, плюс:','✅ Полный PDF на 7 дней',
+                       '✅ Недельное бюджетное меню','✅ Безлимитный доступ'] },
+      ar: { title:'مجاني vs بريميوم', freeName:'مجاني', premName:'⭐ بريميوم',
+            price:'€3/شهر', sub:'~10 RON/شهر', popular:'الأكثر شعبية',
+            cta:'احصل على بريميوم →', already:'مشترك بالفعل؟ فعّل أدناه ↓',
+            freeFeats:['✅ خطة وجبات 7 أيام','✅ قائمة تسوق تلقائية',
+                       '✅ 175 وصفة من 70+ دولة','✅ PDF واحد / يوم',
+                       '✗ PDF كامل 7 أيام','✗ قائمة الميزانية'],
+            premFeats:['✅ كل المجاني، بالإضافة:','✅ PDF كامل بجميع 7 أيام',
+                       '✅ قائمة ميزانية أسبوعية','✅ وصول غير محدود'] },
+      zh: { title:'免费 vs 高级版', freeName:'免费', premName:'⭐ 高级版',
+            price:'€3/月', sub:'~10 RON/月', popular:'最受欢迎',
+            cta:'获取高级版 →', already:'已订阅？在下方激活 ↓',
+            freeFeats:['✅ 7天餐饮计划','✅ 自动购物清单',
+                       '✅ 70+国175道菜谱','✅ 每天1份PDF',
+                       '✗ 完整7天PDF','✗ 节俭菜单'],
+            premFeats:['✅ 所有免费功能，加上：','✅ 完整7天PDF',
+                       '✅ 每周节俭菜单','✅ 随时无限访问'] },
+      ja: { title:'無料 vs プレミアム', freeName:'無料', premName:'⭐ プレミアム',
+            price:'€3/月', sub:'~10 RON/月', popular:'最人気',
+            cta:'プレミアムを取得 →', already:'すでに購読済み？下でアクティブ化 ↓',
+            freeFeats:['✅ 7日間の食事プラン','✅ 自動買い物リスト',
+                       '✅ 70カ国以上175レシピ','✅ 1日1PDF',
+                       '✗ 7日分フルPDF','✗ 節約メニュー'],
+            premFeats:['✅ 無料のすべて、プラス：','✅ 7日分フルPDF',
+                       '✅ 週間節約メニュー','✅ 無制限アクセス'] },
+      tr: { title:'Ücretsiz vs Premium', freeName:'Ücretsiz', premName:'⭐ Premium',
+            price:'€3/ay', sub:'~10 RON/ay', popular:'EN POPÜLER',
+            cta:'Premium Al →', already:'Zaten abone misiniz? Aşağıdan aktive edin ↓',
+            freeFeats:['✅ 7 günlük yemek planı','✅ Otomatik alışveriş listesi',
+                       '✅ 70+ ülkeden 175 tarif','✅ Günde 1 PDF',
+                       '✗ 7 günlük tam PDF','✗ Bütçe menüsü'],
+            premFeats:['✅ Ücretsizin her şeyi, artı:','✅ 7 günlük tam PDF',
+                       '✅ Haftalık bütçe menüsü','✅ Sınırsız erişim'] },
+      it: { title:'Gratuito vs Premium', freeName:'Gratuito', premName:'⭐ Premium',
+            price:'€3/mese', sub:'~10 RON/mese', popular:'PIÙ POPOLARE',
+            cta:'Ottieni Premium →', already:'Già abbonato? Attiva qui sotto ↓',
+            freeFeats:['✅ Piano pasti 7 giorni','✅ Lista della spesa automatica',
+                       '✅ 175 ricette da 70+ paesi','✅ 1 PDF completo / giorno',
+                       '✗ PDF con tutti i 7 giorni','✗ Menu economico'],
+            premFeats:['✅ Tutto il gratuito, più:','✅ PDF completo 7 giorni',
+                       '✅ Menu economico settimanale','✅ Accesso illimitato'] },
+      ko: { title:'무료 vs 프리미엄', freeName:'무료', premName:'⭐ 프리미엄',
+            price:'€3/월', sub:'~10 RON/월', popular:'가장 인기',
+            cta:'프리미엄 이용 →', already:'이미 구독 중? 아래에서 활성화 ↓',
+            freeFeats:['✅ 7일 식단 계획','✅ 자동 장보기 목록',
+                       '✅ 70개국 175가지 레시피','✅ 하루 1 PDF',
+                       '✗ 7일 전체 PDF','✗ 예산 메뉴'],
+            premFeats:['✅ 무료의 모든 것, 추가로:','✅ 7일 전체 PDF',
+                       '✅ 주간 예산 메뉴','✅ 무제한 접속'] },
+      hi: { title:'मुफ्त vs प्रीमियम', freeName:'मुफ्त', premName:'⭐ प्रीमियम',
+            price:'€3/माह', sub:'~10 RON/माह', popular:'सबसे लोकप्रिय',
+            cta:'प्रीमियम पाएं →', already:'पहले से सदस्य? नीचे सक्रिय करें ↓',
+            freeFeats:['✅ 7 दिन का भोजन योजना','✅ स्वचालित खरीदारी सूची',
+                       '✅ 70+ देशों की 175 रेसिपी','✅ 1 PDF / दिन',
+                       '✗ पूर्ण 7 दिन PDF','✗ बजट मेनू'],
+            premFeats:['✅ सब कुछ मुफ्त में, साथ में:','✅ पूर्ण 7 दिन PDF',
+                       '✅ साप्ताहिक बजट मेनू','✅ असीमित पहुंच'] },
+    };
+
+    const s = P[lang] || P.en;
+    const freeList = s.freeFeats.map(f =>
+      `<li class="${f.startsWith('✗') ? 'feat-no' : ''}">${f}</li>`
+    ).join('');
+    const premList = s.premFeats.map(f => `<li>${f}</li>`).join('');
+
+    el.innerHTML = `
+      <div class="pricing-inner">
+        <h2 class="pricing-title">${s.title}</h2>
+        <div class="pricing-cards-row">
+
+          <div class="pricing-card pricing-card--free">
+            <div class="pcard-name">${s.freeName}</div>
+            <div class="pcard-price-block">
+              <span class="pcard-price">0</span>
+              <span class="pcard-sub">${isRo ? '/lună' : '/month'}</span>
+            </div>
+            <ul class="pcard-features">${freeList}</ul>
+          </div>
+
+          <div class="pricing-card pricing-card--premium">
+            <div class="pcard-popular">${s.popular}</div>
+            <div class="pcard-name">${s.premName}</div>
+            <div class="pcard-price-block">
+              <span class="pcard-price">${s.price}</span>
+            </div>
+            <p class="pcard-sub">${s.sub}</p>
+            <ul class="pcard-features">${premList}</ul>
+            <button class="btn btn-upgrade pcard-cta" id="pricing-upgrade-btn" type="button">
+              ${s.cta}
+            </button>
+            <p class="pcard-already"><a href="#access-card">${s.already}</a></p>
+          </div>
+
+        </div>
+      </div>
+    `;
+
+    document.getElementById('pricing-upgrade-btn')?.addEventListener('click', () => {
+      document.getElementById('pay-btn')?.click();
+    });
   }
   // ---------- Populare selector de limbă ----------
   if (langSwitcher) {
