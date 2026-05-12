@@ -72,9 +72,9 @@ export const recipes = [
       ar: "اسلق السباغيتي، اقلي اللحم المقدد، اخفق البيض مع جبنة البارميزان والفلفل، ثم اخلط جميع المكونات بسرعة لتحضير صلصة كريمية.",
       zh: "煮意大利面，煎培根，将鸡蛋与帕尔马干酪和黑胡椒打匀，然后快速混合所有材料制成奶油酱。",
       ja: "スパゲッティを茹で、ベーコンを炒め、卵をパルメザンチーズと黒胡椒と混ぜ合わせ、すべての材料を素早く合わせてクリーミーなソースを作ります。",
-      tr: "Haşla spagetti, Kızart pastırma, Çırp yumurta ile parmesan ve biber, sonra hızlıca combine tüm malzemeleri yapmak için a kremay sos.",
+      tr: "Haşlayın spagetti, Kızartın pastırma, Çırp yumurta ile parmesan ve biber, sonra hızlıca karıştırın tüm malzemeleri yapmak için kremsi sos.",
       it: "Cuoci spaghetti, Friggi pancetta, Sbatti uova con parmigiano e peperone, poi rapidamente unisci tutti gli ingredienti per fare a pannay salsa.",
-      ko: "삶고 스파게티, 볶거나 튀기고 베이컨, 휘저어 섞고 계란와 파르메산그리고 고추, 그다음 빠르게 섞어 모든 재료 만들기 위해 a 크림y 소스하세요."
+      ko: "스파게티를 삶아주세요. 베이컨을 볶고, 달걀에 파르메산과 후추를 섞어 잘 풀어주세요. 불을 끄고 모든 재료를 빠르게 섞어 크리미한 소스를 만들어주세요."
     },
     originText: {
       ro: "Spaghete Carbonara este o rețetă tradițională din Italia.",
@@ -165,9 +165,9 @@ export const recipes = [
       ar: "اسلق كرشة البقر مع الخضار، أضف الثوم والخل للطعم، ثم أضف الكريمة الحامضة والبيض لتحصل على شوربة كريمية.",
       zh: "将牛肚与蔬菜一起煮，加入大蒜和醋调味，最后用酸奶油和鸡蛋勾芡，制成奶油汤。",
       ja: "牛の胃袋を野菜と一緒に煮て、ニンニクと酢で味を整え、最後にサワークリームと卵でクリーミーなスープに仕上げます。",
-      tr: "Haşla dana eti işkembe ile sebzeler, Ekle sarımsak ve sirke için lezzet, sonra 마무리 ile ekşi krema ve yumurta için a kremay çorba.",
+      tr: "Haşlayın dana eti işkembe ile sebzeler, Ekleyin sarımsak ve sirke için lezzet, sonra ile ekşi krema ve yumurta için a kremsi çorba.",
       it: "Cuoci manzo trippa con verdure, Aggiungi aglio e aceto per sapore, poi termina con acidulo panna e uova per a pannay zuppa.",
-      ko: "삶고 소고기 내장와 채소, 넣고 마늘그리고 식초 을 위해 풍미, 그다음 마무리합니다와 새콤한 크림그리고 계란 을 위해 a 크림y 수프하세요."
+      ko: "소고기 내장을 채소와 함께 삶아주세요. 마늘과 식초를 넣어 풍미를 더하고, 사워크림과 달걀을 넣어 크리미한 수프를 완성해주세요."
     },
     originText: {
       ro: "Ciorbă de burtă este o rețetă tradițională din România.",
@@ -258,7 +258,7 @@ export const recipes = [
       ar: "افرد العجينة في صينية، أضف اللحم والجبن، ثم اسكب خليط البيض المخفوق مع الكريمة فوقها. اخبزها حتى تصبح ذهبية.",
       zh: "将面团铺在烤盘上，加入火腿和奶酪，再倒入与奶油混合的打散鸡蛋。烤至金黄。",
       ja: "生地を型に敷き、ハムとチーズをのせ、クリームと混ぜた卵を流し入れます。黄金色になるまで焼きます。",
-      tr: "yayın hamur tepsi, Ekle jambon ve peynir, sonra dökün üzerine çırpılmış yumurta karıştırıned ile krema. fırında pişirin altın rengi.",
+      tr: "yayın hamur tepsi, Ekleyin jambon ve peynir, sonra dökün üzerine çırpılmış yumurta karıştırıned ile krema. fırında pişirin altın rengi.",
       it: "stendi pasta teglia, Aggiungi prosciutto e formaggio, poi versa sopra sbattuto uova mescolaed con panna. cuoci in forno dorato.",
       ko: "펼칩니다 파이지 에서 a 트레이, 넣고 햄그리고 치즈, 그다음 붓습니다 위에 푼 계란 섞습니다와 크림. 오븐에서 굽습니다 노릇하게하세요."
     },
@@ -444,9 +444,9 @@ export const recipes = [
       ar: "اطبخ الأرز مع الخل، ثم لفه مع السمك النيء وأعشاب النوري. قطّع اللفائف وقدّمها طازجة.",
       zh: "将米饭与米醋煮好，再与生鱼片和紫菜卷在一起。切片后新鲜食用。",
       ja: "ご飯を酢で炊き、生魚と海苔で巻きます。ロールを切り分けて新鮮なまま提供します。",
-      tr: "Pişir pirinç ile sirke, sonra rulo yapın o ile çiğ balık ve nori deniz yosunu. Slice rulolar ve servis edin taze.",
+      tr: "Pişirin pirinç ile sirke, sonra rulo yapın bunu ile çiğ balık ve nori deniz yosunu. Slice rulolar ve servis edin taze.",
       it: "Cuoci riso con aceto, poi arrotola esso con crudo pesce e nori alga. Slice involtini e servi fresco.",
-      ko: "조리하고 쌀와 식초, 그다음 말아줍니다 그것와 생 생선그리고 김 김. Slice 롤그리고 제공합니다 신선한하세요."
+      ko: "밥에 식초를 섞어 스시 밥을 만들어주세요. 생선과 김을 올려 단단하게 말아주세요. 롤을 썰어 신선하게 제공해주세요."
     },
     originText: {
       ro: "Sushi este o rețetă tradițională din Japonia.",
@@ -537,7 +537,7 @@ export const recipes = [
       ar: "اشوِ لحم البقر، وضعه في خبز البرجر مع الجبن والطماطم والخس والبصل، ثم قدّم البرجر ساخناً.",
       zh: "将牛肉煎熟，与奶酪、西红柿、生菜和洋葱一起夹入面包中，热食。",
       ja: "牛肉を焼き、チーズ、トマト、レタス、玉ねぎと一緒にバンズに挟み、温かいうちに提供します。",
-      tr: "Izgara yap dana eti, yerleştirin o ekmek ile peynir, domates, marul, ve soğbir, sonra Servis et burger sıcak.",
+      tr: "Izgarada pişirin dana eti, yerleştirin bunu ekmek ile peynir, domates, marul, ve soğan, sonra Servis edin burger sıcak.",
       it: "Griglia manzo, metti esso panino con formaggio, pomodori, lattuga, e cipolla, poi Servi burger caldo.",
       ko: "구워 소고기, 놓습니다 그것 에서 a 번와 치즈, 토마토, 상추, 그리고 양파, 그다음 담아 내세요 버거 뜨거운하세요."
     },
@@ -630,7 +630,7 @@ export const recipes = [
       ar: "احشِ التورتيلا بلحم بقري مطبوخ، طماطم، خس، جبن وصلصة سالسا. اطوِها وقدّمها فوراً.",
       zh: "将煮熟的牛肉、西红柿、生菜、奶酪和莎莎酱夹入玉米饼，包好后立即享用。",
       ja: "トルティーヤに調理した牛肉、トマト、レタス、チーズ、サルサソースを詰め、包んですぐに提供します。",
-      tr: "doldurun tortilla ile pişirined dana eti, domates, marul, peynir, ve salsa sos. katlayın ve servis edin hemen.",
+      tr: "doldurun tortilla ile pişirilmiş dana eti, domates, marul, peynir, ve salsa sos. katlayın ve servis edin hemen.",
       it: "farcisci tortilla con cuocied manzo, pomodori, lattuga, formaggio, e salsa salsa. incorpora delicatamente e servi subito.",
       ko: "채웁니다 토르티야와 조리합니다 소고기, 토마토, 상추, 치즈, 그리고 살사 소스. 접어 섞습니다그리고 제공합니다 즉시하세요."
     },
@@ -723,7 +723,7 @@ export const recipes = [
       ar: "اقلِ البصل والثوم والزنجبيل، أضف الدجاج والطماطم، رش الكاري واطبخ حتى ينضج الدجاج ويصبح مليئاً بالنكهات.",
       zh: "炒香洋葱、大蒜和生姜，加入鸡肉和番茄，撒上咖喱粉，煮至鸡肉鲜嫩入味。",
       ja: "玉ねぎ、ニンニク、ショウガを炒め、鶏肉とトマトを加え、カレーをふりかけて、鶏肉が柔らかく風味豊かになるまで煮込みます。",
-      tr: "soteleyiné soğbir, sarımsak, ve zencefil, Ekle tavuk ve domates, serpiştirin köri, ve Pişir her şeyi tavuk  yumuşak ve lezzetli.",
+      tr: "soteleyin soğan, sarımsak, ve zencefil, Ekleyin tavuk ve domates, serpiştirin köri, ve Pişirin her şeyi tavuk yumuşak ve lezzetli.",
       it: "soffriggié cipolla, aglio, e zenzero, Aggiungi pollo e pomodori, spolvera curry, e Cuoci tutto pollo  tenero e sapori intensi.",
       ko: "볶습니다é 양파, 마늘, 그리고 생강, 넣고 닭고기그리고 토마토, 뿌립니다 카레, 그리고 조리하고 모든 것 닭고기 입니다 부드럽게그리고 풍미가 좋은하세요."
     },
@@ -816,7 +816,7 @@ export const recipes = [
       ar: "قطّع الخضار إلى مكعبات، واقلها كل نوع على حدة بزيت الزيتون، ثم اطبخها معاً حتى تلين وتمتزج النكهات.",
       zh: "将蔬菜切丁，分别用橄榄油炒香，然后一起炖至软烂，味道融合。",
       ja: "野菜を角切りにし、オリーブオイルでそれぞれ炒めてから、全てを一緒に柔らかくなるまで煮込み、風味をなじませます。",
-      tr: "kesin sebzeler içine küp, soteleyiné onları bir ile bir in zeytinyağı, sonra Pişir onları birlikte yumuşak ve lezzetler blenderdan geçirin.",
+      tr: "kesin sebzeler küp şeklinde doğrayın, soteleyin onları bir ile bir in zeytinyağı, sonra Pişirin onları birlikte yumuşak ve lezzetler blenderdan geçirin.",
       it: "taglia verdure dentro cubetti, soffriggié li uno da uno in olio d'oliva, poi Cuoci li insieme morbido e sapori frulla.",
       ko: "자릅니다 채소 안에 깍둑썰기, 볶습니다é 그것들을 하나 로 하나 에서 올리브오일, 그다음 조리하고 그것들을 함께 부드러운그리고 맛 블렌더에 갈아줍니다하세요."
     },
@@ -1002,9 +1002,9 @@ export const recipes = [
       ar: "اسلق العدس مع البصل والطماطم والثوم والزنجبيل، أضف التوابل واطبخ حتى يصبح الدال كريميًا وغني النكهة.",
       zh: "将扁豆与洋葱、番茄、大蒜和生姜一起煮，加入香料，炖至浓稠香浓。",
       ja: "レンズ豆を玉ねぎ、トマト、ニンニク、ショウガと一緒に煮て、スパイスを加え、クリーミーで風味豊かになるまで調理します。",
-      tr: "Haşla mercimek ile soğbir, domates, sarımsak, ve zencefil, Ekle baharatlar, ve Pişir kremay ve lezzetli.",
+      tr: "Haşlayın mercimek ile soğan, domates, sarımsak, ve zencefil, Ekleyin baharatlar, ve Pişirin kremsi ve lezzetli.",
       it: "Cuoci lenticchie con cipolla, pomodori, aglio, e zenzero, Aggiungi spezie, e Cuoci pannay e sapori intensi.",
-      ko: "삶고 렌틸콩와 양파, 토마토, 마늘, 그리고 생강, 넣고 향신료, 그리고 조리하고 크림y그리고 풍미가 좋은하세요."
+      ko: "렌틸콩을 양파, 토마토, 마늘, 생강과 함께 삶아주세요. 향신료를 넣고 크리미해질 때까지 끓여주세요."
     },
     originText: {
       ro: "Dhal este o rețetă tradițională din India.",
@@ -1095,9 +1095,9 @@ export const recipes = [
       ar: "اهرس الأفوكادو وامزجه مع البصل والطماطم والليمون والكزبرة والملح والفلفل الحار حتى تحصل على معجون كريمي.",
       zh: "捣碎牛油果，与洋葱、番茄、青柠、香菜、盐和辣椒混合，制成奶油状蘸酱。",
       ja: "アボカドを潰し、玉ねぎ、トマト、ライム、コリアンダー、塩、チリペッパーと混ぜてクリーミーなディップにします。",
-      tr: "ezin avokado ve karıştırın o ile soğbir, domates, yeşil limon, kişniş, tuz, ve acı biber biber için a kremay banın.",
+      tr: "ezin avokado ve karıştırın bunu ile soğan, domates, yeşil limon, kişniş, tuz, ve acı biber biber için a kremsi banın.",
       it: "schiaccia avocado e mescola esso con cipolla, pomodori, lime, coriandolo, sale, e peperoncino peperone per a pannay intingi.",
-      ko: "으깨세요 아보카도그리고 섞습니다 그것와 양파, 토마토, 라임, 고수, 소금, 그리고 고추 고추 을 위해 a 크림y 찍어 먹습니다하세요."
+      ko: "아보카도를 으깨고 양파, 토마토, 라임, 고수, 소금, 칠리 페퍼를 넣어 잘 섞어주세요. 크리미한 딥 소스로 제공해주세요."
     },
     originText: {
       ro: "Guacamole este o rețetă tradițională din Mexic.",
@@ -1188,9 +1188,9 @@ export const recipes = [
       ar: "اسلق الشمندر، الملفوف، البطاطس، الجزر والبصل في المرق، أضف الثوم واطبخ حتى تنضج الخضار. قدّم الحساء ساخناً.",
       zh: "将甜菜根、卷心菜、土豆、胡萝卜和洋葱放入高汤中煮沸，加入大蒜，炖至蔬菜变软。热食此汤。",
       ja: "ビートルート、キャベツ、ジャガイモ、ニンジン、玉ねぎをブイヨンで煮込み、ニンニクを加えて野菜が柔らかくなるまで調理します。温かいスープとして提供します。",
-      tr: "Haşla pancar, lahana, patates, havuçs, ve soğbir in et suyu, Ekle sarımsak, ve Pişir sebzeler  yumuşak. servis edin çorba sıcak.",
+      tr: "Haşlayın pancar, lahana, patates, havuç, ve soğan in et suyu, Ekleyin sarımsak, ve Pişirin sebzeler yumuşak. servis edin çorba sıcak.",
       it: "Cuoci barbabietola, cavolo, patate, carotas, e cipolla in brodo, Aggiungi aglio, e Cuoci verdure  tenero. servi zuppa caldo.",
-      ko: "삶고 비트, 양배추, 감자, 당근s, 그리고 양파 에서 육수, 넣고 마늘, 그리고 조리하고 채소  부드럽게. 제공합니다 수프 뜨거운하세요."
+      ko: "비트, 양배추, 감자, 당근, 양파를 육수에 넣고 끓여주세요. 마늘을 추가하고 채소가 부드러워질 때까지 조리해주세요. 뜨겁게 제공해주세요."
     },
     originText: {
       ro: "Bors este o rețetă tradițională din Rusia.",
@@ -1281,7 +1281,7 @@ export const recipes = [
       ar: "اخلط الدقيق مع الحليب والبيض والسكر والبيكنج بودر، ثم اقلي الخليط في مقلاة مع الزبدة حتى تحصل على فطائر هشة.",
       zh: "将面粉、牛奶、鸡蛋、糖和泡打粉混合，用黄油在平底锅中煎至松软。",
       ja: "小麦粉、牛乳、卵、砂糖、ベーキングパウダーを混ぜ、バターを使ってフライパンでふんわり焼き上げます。",
-      tr: "Karıştır un, süt, yumurta, şeker, ve pişirme tozu, sonra Kızart hamur tava ile tereyağı yapmak için kabarmış krep.",
+      tr: "Karıştırın un, süt, yumurta, şeker, ve pişirme tozu, sonra Kızartın hamur tava ile tereyağı yapmak için kabarmış krep.",
       it: "Mescola farina, latte, uova, zucchero, e cottura in polvere, poi Friggi pastella padella con burro per fare soffice pancake.",
       ko: "섞고 밀가루, 우유, 계란, 설탕, 그리고 굽기 가루, 그다음 볶거나 튀기고 반죽 에서 a 팬와 버터 만들기 위해 폭신한 팬케이크하세요."
     },
@@ -1374,7 +1374,7 @@ export const recipes = [
       ar: "قلّب نودلز الأرز مع الجمبري والبيض وبراعم فول الصويا والفول السوداني، وتبّلها بالليمون الأخضر وقدّمها فوراً.",
       zh: "将米粉与虾、鸡蛋、豆芽、花生一起翻炒，挤上青柠汁，趁热食用。",
       ja: "ライスヌードルをエビ、卵、もやし、ピーナッツと一緒に炒め、ライムで味付けし、すぐに提供します。",
-      tr: "karıştırın-kavurun pirinç erişte ile karides, yumurta, fasulye filiz, ve yer fıstığı, Baharatlandır ile yeşil limon, ve Servis et hemen.",
+      tr: "karıştırın-kavurun pirinç erişte ile karides, yumurta, fasulye filiz, ve yer fıstığı, Baharatlandır ile yeşil limon, ve Servis edin hemen.",
       it: "mescola-rosola riso spaghetti con gamberetti, uova, fagiolo germogli, e arachidi, Condisci con lime, e Servi subito.",
       ko: "저어줍니다-볶거나 튀겨 쌀 면와 새우, 계란, 콩 새싹, 그리고 땅콩, 간을 맞추고와 라임, 그리고 담아 내세요 즉시하세요."
     },
@@ -1467,7 +1467,7 @@ export const recipes = [
       ar: "اقطع شريحة لحم الخنزير، ثم غطها بالدقيق والبيض والبقسماط، واقلها في الزيت حتى تصبح ذهبية. قدّمها مع شرائح الليمون.",
       zh: "将猪排拍松，裹上面粉、鸡蛋和面包屑，在油中炸至金黄。配柠檬片食用。",
       ja: "豚肉のカツレツをたたいて小麦粉、卵、パン粉の順にまぶし、油で黄金色になるまで揚げます。レモンのスライスを添えて提供します。",
-      tr: "dövün domuz eti doğrayın, kaplayın o in un, yumurta, ve ekmekcrumbs, sonra Kızart in yağ altın rengi. servis edin ile limon dilimler.",
+      tr: "domuz etini dövün ve doğrayın, kaplayın bunu in un, yumurta, ve galeta unu, sonra Kızartın in yağ altın rengi. servis edin ile limon dilimler.",
       it: "batti maiale trita, ricopri esso in farina, uovo, e panecrumbs, poi Friggi in olio dorato. servi con limone fette.",
       ko: "두드립니다 돼지고기 다집니다, 입힙니다 그것 에서 밀가루, 계란, 그리고 빵빵가루, 그다음 볶거나 튀기고 에서 기름 노릇하게. 제공합니다와 레몬 조각하세요."
     },
@@ -1560,7 +1560,7 @@ export const recipes = [
       ar: "اسلق الفاصوليا مع اللحم المدخن والنقانق والخضار على نار هادئة حتى تتداخل النكهات. قدّمها مع الأرز.",
       zh: "将豆类与烟熏肉、香肠和蔬菜一起煮炖至入味。配米饭食用。",
       ja: "豆と燻製肉、ソーセージ、野菜を煮込み、味がなじむまで弱火で煮る。ご飯と一緒に提供。",
-      tr: "Haşla fasulye ile isli et, sosis, ve sebzeler; kısık ateşte pişirin lezzetler combine. servis edin ile pirinç.",
+      tr: "Haşlayın fasulye ile isli et, sosis, ve sebzeler; kısık ateşte pişirin lezzetler combine. servis edin ile pirinç.",
       it: "Cuoci fagioli con affumicato carne, salsicce, e verdure; lascia sobbollire sapori unisci. servi con riso.",
       ko: "삶고 콩와 훈제 고기, 소시지, 그리고 채소; 약불에서 끓입니다 맛 섞어. 제공합니다와 쌀하세요."
     },
@@ -1653,9 +1653,9 @@ export const recipes = [
       ar: "اقلي قطع الدجاج مع الفلفل الحار والفول السوداني والبصل والثوم. أضف الصوص واطبخ بسرعة على نار عالية.",
       zh: "将鸡肉块与辣椒、花生、洋葱和大蒜翻炒，加入特制酱汁，大火快炒。",
       ja: "鶏肉、唐辛子、ピーナッツ、玉ねぎ、ニンニクを炒め、特製ソースを加えて強火でさっと調理。",
-      tr: "karıştırın-kavurun tavuk parçalar ile acı biber bibers, yer fıstığı, soğbir, ve sarımsak. ekleyin özel sos ve pişirin hızlıca üzerine yüksek ısıtın.",
+      tr: "karıştırın-kavurun tavuk parçalar ile acı biber biber, yer fıstığı, soğan, ve sarımsak. ekleyin özel sos ve pişirin hızlıca üzerine yüksek ısıtın.",
       it: "mescola-rosola pollo pezzi con peperoncino peperones, arachidi, cipolla, e aglio. aggiungi speciale salsa e cuoci rapidamente sopra alto scalda.",
-      ko: "저어줍니다-볶거나 튀겨 닭고기 조각와 고추 고추s, 땅콩, 양파, 그리고 마늘. 넣습니다 특별한 소스그리고 조리합니다 빠르게 위에 높은 가열합니다하세요."
+      ko: "닭고기 조각을 칠리 페퍼, 땅콩, 양파, 마늘과 함께 볶아주세요. 특제 소스를 넣고 강한 불에서 빠르게 조리해주세요."
     },
     originText: {
       ro: "Pui Gong Bao este o rețetă tradițională din China.",
@@ -1839,7 +1839,7 @@ export const recipes = [
       ar: "اسلق عظام البقر مع التوابل حتى تحصل على مرق صافٍ. أضف النودلز واللحم المقطع والأعشاب الطازجة.",
       zh: "牛骨与香料炖煮成清汤，加入米粉、切片牛肉和新鲜香草。",
       ja: "牛骨とスパイスで澄んだスープを作り、麺と薄切りの肉、ハーブを加える。",
-      tr: "Haşla dana eti kemikler ile baharatlar yapmak için a berrak et suyu. ekleyin erişte, dilimlenmiş et, ve taze otlar.",
+      tr: "Haşlayın dana eti kemikler ile baharatlar yapmak için berrak et suyu. ekleyin erişte, dilimlenmiş et, ve taze otlar.",
       it: "Cuoci manzo ossa con spezie per fare a chiaro brodo. aggiungi spaghetti, affettato carne, e fresco erbe aromatiche.",
       ko: "삶고 소고기 뼈와 향신료 만들기 위해 a 맑게 육수. 넣습니다 면, 썬 고기, 그리고 신선한 허브하세요."
     },
@@ -1932,7 +1932,7 @@ export const recipes = [
       ar: "اقلي البصل والثوم والفلفل، أضف الأرز والزعفران والمرق. أضف المأكولات البحرية أو اللحم أو الخضار واطبخ حتى ينضج الأرز.",
       zh: "炒洋葱、大蒜和辣椒，加入米饭、藏红花和高汤，再加上海鲜、肉类或蔬菜，炖至米饭熟透。",
       ja: "玉ねぎ・ニンニク・ピーマンを炒め、米とサフラン、ブイヨンを加え、魚介・肉・野菜を加えて米が柔らかくなるまで煮る。",
-      tr: "soteleyiné soğbir, sarımsak, ve biber, Ekle pirinç, safran, ve et suyu. ekleyin deniz ürünleri, et, veya sebzeler, ve Pişir pirinç  yumuşak.",
+      tr: "soteleyin soğan, sarımsak, ve biber, Ekleyin pirinç, safran, ve et suyu. ekleyin deniz ürünleri, et, veya sebzeler, ve Pişirin pirinç yumuşak.",
       it: "soffriggié cipolla, aglio, e peperone, Aggiungi riso, zafferano, e brodo. aggiungi frutti di mare, carne, o verdure, e Cuoci riso  tenero.",
       ko: "볶습니다é 양파, 마늘, 그리고 고추, 넣고 쌀, 사프란, 그리고 육수. 넣습니다 해산물, 고기, 또는 채소, 그리고 조리하고 쌀 입니다 부드럽게하세요."
     },
@@ -2025,7 +2025,7 @@ export const recipes = [
       ar: "ضع الأرز المطبوخ في وعاء، أضف الخضار المقلية، لحم البقر، بيضة مقلية ومعجون الفلفل الحار. امزج قبل الأكل.",
       zh: "将米饭放入碗中，加炒蔬菜、牛肉、煎蛋和辣椒酱。吃前搅拌。",
       ja: "ご飯を器に盛り、炒め野菜・牛肉・目玉焼き・コチュジャンをのせ、食べる前に混ぜる。",
-      tr: "yerleştirin pişirined pirinç kase, Ekle soteleyiné sebzeler, dana eti, kızarmış yumurta, ve acı biber salça. karıştırın önce yemek.",
+      tr: "yerleştirin pişirilmiş pirinç kase, Ekleyin soteleyin sebzeler, dana eti, kızarmış yumurta, ve acı biber salça. karıştırın önce yemek.",
       it: "metti cuocied riso ciotola, Aggiungi soffriggié verdure, manzo, fritto uovo, e peperoncino concentrato. mescola prima mangiare.",
       ko: "놓습니다 조리합니다 쌀 에서 a 볼, 넣고 볶습니다é 채소, 소고기, 튀긴 계란, 그리고 고추 페이스트. 섞습니다 전에 먹기하세요."
     },
@@ -2118,7 +2118,7 @@ export const recipes = [
       ar: "اخلط الحمص المسلوق مع الطحينة والثوم وعصير الليمون وزيت الزيتون والملح حتى يصبح ناعماً.",
       zh: "将煮熟的鹰嘴豆与芝麻酱、大蒜、柠檬汁、橄榄油和盐搅拌至细腻。",
       ja: "茹でたひよこ豆にタヒニ・ニンニク・レモン汁・オリーブオイル・塩を加えて滑らかにする。",
-      tr: "blenderdan geçirin pişirined nohut ile tahin, sarımsak, limon suyu, zeytinyağı, ve tuz pürüzsüz.",
+      tr: "blenderdan geçirin pişirilmiş nohut ile tahin, sarımsak, limon suyu, zeytinyağı, ve tuz pürüzsüz.",
       it: "frulla cuocied ceci con tahina, aglio, limone succo, olio d'oliva, e sale liscio.",
       ko: "블렌더에 갈아줍니다 조리합니다 병아리콩와 타히니, 마늘, 레몬 주스, 올리브오일, 그리고 소금 부드럽게하세요."
     },
@@ -2211,7 +2211,7 @@ export const recipes = [
       ar: "اخلط البقدونس المفروم مع الطماطم والبرغل المنقوع والبصل والنعناع وعصير الليمون وزيت الزيتون والملح.",
       zh: "将切碎的欧芹、番茄、泡发的粗麦、洋葱、薄荷、柠檬汁、橄榄油和盐拌匀。",
       ja: "刻んだパセリ・トマト・水で戻したブルグル・玉ねぎ・ミント・レモン汁・オリーブオイル・塩を混ぜる。",
-      tr: "Karıştır doğranmış maydanoz, domates, ıslatılmış bulgur, soğbir, nane, limon suyu, zeytinyağı, ve tuz.",
+      tr: "Karıştırın doğranmış maydanoz, domates, ıslatılmış bulgur, soğan, nane, limon suyu, zeytinyağı, ve tuz.",
       it: "Mescola tritato prezzemolo, pomodori, ammollato bulgur, cipolla, menta, limone succo, olio d'oliva, e sale.",
       ko: "섞고 다진 파슬리, 토마토, 불린 불구르, 양파, 민트, 레몬 주스, 올리브오일, 그리고 소금하세요."
     },
@@ -2304,9 +2304,9 @@ export const recipes = [
       ar: "حمّص الأرز بالزبدة مع البصل، أضف المرق تدريجياً مع التحريك حتى يصبح كريميًا. أضف جبن البارميزان في النهاية.",
       zh: "米饭用黄油和洋葱炒香，分次加入高汤不断搅拌至浓稠。最后加入帕尔马干酪。",
       ja: "米をバターと玉ねぎで炒め、少しずつブイヨンを加えて混ぜながらクリーミーに仕上げる。最後にパルメザンチーズを加える。",
-      tr: "soteleyiné pirinç in tereyağı ile soğbir, Ekle et suyu yavaş yavaş, karıştırarak sürekli kremay. ekleyin parmesan  sonunda.",
+      tr: "soteleyin pirinç in tereyağı ile soğan, Ekleyin et suyu yavaş yavaş, karıştırarak sürekli kremsi. ekleyin parmesan sonunda.",
       it: "soffriggié riso in burro con cipolla, Aggiungi brodo gradualmente, mescolando costantemente pannay. aggiungi parmigiano  alla fine.",
-      ko: "볶습니다é 쌀 에서 버터와 양파, 넣고 육수 점차, 저으면서 계속 크림y. 넣습니다 파르메산 에서 마지막에하세요."
+      ko: "버터에 양파와 쌀을 볶아주세요. 육수를 조금씩 넣으면서 계속 저어주세요. 크리미해지면 마지막에 파르메산을 넣어 마무리해주세요."
     },
     originText: {
       ro: "Risotto este o rețetă tradițională din Italia.",
@@ -2397,9 +2397,9 @@ export const recipes = [
       ar: "اخلط اللحم المفروم مع التوابل والخبز المنقوع، شكّل كرات واقلها وقدّمها مع صوص كريمي.",
       zh: "将肉末与香料和浸泡的面包混合，搓成丸子油煎，配奶油酱食用。",
       ja: "ひき肉にスパイスと水に浸したパンを混ぜ、団子状にして揚げ、クリームソースと一緒に提供。",
-      tr: "Karıştır kıyılmış et ile baharatlar ve ıslatılmış ekmek, şekil verin toplar, Kızart onları, ve Servis et ile kremay sos.",
+      tr: "Karıştırın kıyılmış et ile baharatlar ve ıslatılmış ekmek, şekil verin toplar, Kızartın onları, ve Servis edin ile kremsi sos.",
       it: "Mescola tritato carne con spezie e ammollato pane, forma polpette, Friggi li, e Servi con pannay salsa.",
-      ko: "섞고 다진 고기와 향신료그리고 불린 빵, 모양을 만듭니다 볼, 볶거나 튀기고 그것들을, 그리고 담아 내세요와 크림y 소스하세요."
+      ko: "다진 고기에 향신료와 불린 빵을 넣어 잘 섞어주세요. 동그란 모양으로 빚어 볶아주세요. 크리미한 소스와 함께 제공해주세요."
     },
     originText: {
       ro: "Chifteluțe suedeze este o rețetă tradițională din Suedia.",
@@ -2490,9 +2490,9 @@ export const recipes = [
       ar: "حضّر مرقًا غنيًا، اسلق النودلز على حدة ثم قدمها في وعاء مع اللحم والبيض المسلوق والأعشاب البحرية والخضار.",
       zh: "熬制浓郁的高汤，面条另煮，盛碗中配肉类、水煮蛋、海苔和蔬菜。",
       ja: "風味豊かなスープを用意し、麺を別に茹でて、肉・ゆで卵・海苔・野菜と一緒に盛り付ける。",
-      tr: "hazırlayın a zengin, lezzetli et suyu, Pişir erişte ayrı ayrı, sonra Servis et onları kase ile et, byağ yumurta, deniz yosunu, ve sebzeler.",
+      tr: "hazırlayın a zengin, lezzetli et suyu, Pişirin erişte ayrı ayrı, sonra Servis edin onları kase ile et, bağlayın ve yumurta, deniz yosunu, ve sebzeler.",
       it: "prepara a ricco, sapori intensi brodo, Cuoci spaghetti separatamente, poi Servi li ciotola con carne, bolioed uovo, alga, e verdure.",
-      ko: "준비합니다 a 진한, 풍미가 좋은 육수, 조리하고 면 따로, 그다음 담아 내세요 그것들을 에서 a 볼와 고기, b기름 계란, 김, 그리고 채소하세요."
+      ko: "진한 육수를 준비해주세요. 면을 따로 삶아주세요. 그릇에 면을 담고 육수를 부은 후 고기, 삶은 달걀, 김, 채소를 올려주세요."
     },
     originText: {
       ro: "Ramen este o rețetă tradițională din Japonia.",
@@ -2676,7 +2676,7 @@ export const recipes = [
       ar: "اخلط الزبادي اليوناني مع الخيار المبشور والثوم وزيت الزيتون والخل والشبت. قدّمه بارداً.",
       zh: "将希腊酸奶、黄瓜丝、大蒜、橄榄油、醋和莳萝混合。冷食。",
       ja: "ギリシャヨーグルトにきゅうり・ニンニク・オリーブオイル・酢・ディルを混ぜ、冷やして提供。",
-      tr: "Karıştır yunan yoğurt ile rendelenmiş salatalık, ezilmiş sarımsak, zeytinyağı, sirke, ve dereotu. servis edin soğutulmuş.",
+      tr: "Karıştırın yunan yoğurt ile rendelenmiş salatalık, ezilmiş sarımsak, zeytinyağı, sirke, ve dereotu. servis edin soğutulmuş.",
       it: "Mescola greco yogurt con grattugiato cetriolo, schiacciato aglio, olio d'oliva, aceto, e aneto. servi raffreddato.",
       ko: "섞고 그리스 요거트와 간 오이, 으깬 마늘, 올리브오일, 식초, 그리고 딜. 제공합니다 차갑게 식힌하세요."
     },
@@ -2769,9 +2769,9 @@ export const recipes = [
       ar: "اقلي البصل في الزبدة حتى يتكرمل، أضف مرق اللحم واتركه يغلي. قدّمه مع خبز محمص وجبن مذاب.",
       zh: "用黄油炒洋葱至焦糖色，加入牛肉高汤炖煮。配烤面包和烤奶酪。",
       ja: "玉ねぎをバターで炒めて飴色にし、牛肉のスープを加えて煮込む。トーストとチーズを添えて提供。",
-      tr: "soteleyiné soğans in tereyağı karamelize, Ekle dana eti et suyu ve kısık ateşte pişirin. servis edin ile kavrulmuş ekmek ve eritilmiş peynir.",
+      tr: "soteleyin soğan in tereyağı karamelize, Ekleyin dana eti et suyu ve kısık ateşte pişirin. servis edin ile kavrulmuş ekmek ve eritilmiş peynir.",
       it: "soffriggié cipollas in burro caramellato, Aggiungi manzo brodo e lascia sobbollire. servi con tostato pane e fuso formaggio.",
-      ko: "볶습니다é 양파s 에서 버터 카라멜라이즈, 넣고 소고기 육수그리고 약불에서 끓입니다. 제공합니다와 구운 빵그리고 녹인 치즈하세요."
+      ko: "양파를 버터에 캐러멜화될 때까지 볶아주세요. 소고기 육수를 넣고 끓여주세요. 구운 빵 위에 치즈를 녹여 올려 제공해주세요."
     },
     originText: {
       ro: "Soupe à l’oignon este o rețetă tradițională din Franța.",
@@ -2784,7 +2784,7 @@ export const recipes = [
       ar: "حساء البصل الفرنسي هي وصفة تقليدية من فرنسا.",
       zh: "法式洋葱汤 是来自法国的传统食谱。",
       ja: "フレンチオニオンスープ はフランスの伝統的なレシピです。",
-      tr: "fransız soğbir çorba Fransa kökenli geleneksel bir tariftir.",
+      tr: "fransız soğan çorba Fransa kökenli geleneksel bir tariftir.",
       it: "francese cipolla zuppa è una risotta tradizionale di Francia.",
       ko: "프랑스식 양파 수프는(은) 프랑스의 전통 요리입니다."
     }
@@ -2862,9 +2862,9 @@ export const recipes = [
       ar: "اقلي البصل واللحم مع البابريكا، أضف الخضار والماء أو المرق واطبخ ببطء حتى ينضج اللحم. قدّمه مع الخبز.",
       zh: "洋葱和肉与红椒粉炒香，加入蔬菜和水或高汤，小火慢炖至肉烂。配面包食用。",
       ja: "玉ねぎと肉をパプリカで炒め、野菜と水またはスープを加えてじっくり煮込む。パンと一緒に。",
-      tr: "Kızart soğans ve et ile toz biber, Ekle sebzeler ve su veya et suyu, Kısık ateşte pişir yavaşça et  yumuşak. servis edin ile ekmek.",
+      tr: "Kızartın soğan ve et ile toz biber, Ekleyin sebzeler ve su veya et suyu, Kısık ateşte pişir yavaşça et yumuşak. servis edin ile ekmek.",
       it: "Friggi cipollas e carne con paprika, Aggiungi verdure e acqua o brodo, Fai sobbollire lentamente carne  tenero. servi con pane.",
-      ko: "볶거나 튀기고 양파s그리고 고기와 파프리카 가루, 넣고 채소그리고 물 또는 육수, 약불로 끓여 천천히 고기 입니다 부드럽게. 제공합니다와 빵하세요."
+      ko: "양파와 고기를 파프리카와 함께 볶아주세요. 채소와 육수를 넣고 고기가 부드러워질 때까지 천천히 끓여주세요. 빵과 함께 제공해주세요."
     },
     originText: {
       ro: "Gulaș este o rețetă tradițională din Ungaria.",
@@ -2955,9 +2955,9 @@ export const recipes = [
       ar: "اسلق الأرز والمكرونة والعدس كل على حدة. اخلطهم مع الحمص وصلصة الطماطم والبصل المقلي. قدّمهم بطبقات.",
       zh: "米饭、意面和扁豆分别煮熟，与鹰嘴豆、番茄酱和炸洋葱混合分层装盘。",
       ja: "ご飯・パスタ・レンズ豆を別々に茹で、ひよこ豆・トマトソース・揚げ玉ねぎと重ねて盛り付ける。",
-      tr: "Haşla pirinç, makarna, ve mercimek ayrı ayrı. karıştırın onları ile nohut, domates sos, ve kızarmış soğans. servis edin in katmanlar.",
+      tr: "Haşlayın pirinç, makarna, ve mercimek ayrı ayrı. karıştırın onları ile nohut, domates sos, ve kızarmış soğans. servis edin in katmanlar.",
       it: "Cuoci riso, pasta, e lenticchie separatamente. mescola li con ceci, pomodoro salsa, e fritto cipollas. servi in strati.",
-      ko: "삶고 쌀, 파스타, 그리고 렌틸콩 따로. 섞습니다 그것들을와 병아리콩, 토마토 소스, 그리고 튀긴 양파s. 제공합니다 에서 층하세요."
+      ko: "쌀, 파스타, 렌틸콩을 각각 삶아주세요. 병아리콩, 토마토 소스, 튀긴 양파와 섞어주세요. 층층이 담아 제공해주세요."
     },
     originText: {
       ro: "Koshari este o rețetă tradițională din Egipt.",
@@ -3141,7 +3141,7 @@ export const recipes = [
       ar: "اقلي البصل والثوم، أضف اللحم المفروم والفاصوليا والطماطم والتوابل. اطبخ حتى يتكاثف.",
       zh: "炒洋葱和大蒜，加入肉末、豆类、番茄和香料，小火炖至浓稠。",
       ja: "玉ねぎ・ニンニクを炒め、ひき肉・豆・トマト・スパイスを加え、煮込んでとろみをつける。",
-      tr: "soteleyiné soğbir ve sarımsak, Ekle kıyılmış et, fasulye, domates, ve baharatlar. kısık ateşte pişirin koyulaşmış.",
+      tr: "soteleyin soğan ve sarımsak, Ekleyin kıyılmış et, fasulye, domates, ve baharatlar. kısık ateşte pişirin koyulaşmış.",
       it: "soffriggié cipolla e aglio, Aggiungi tritato carne, fagioli, pomodori, e spezie. lascia sobbollire addensato.",
       ko: "볶습니다é 양파그리고 마늘, 넣고 다진 고기, 콩, 토마토, 그리고 향신료. 약불에서 끓입니다 걸쭉해진하세요."
     },
@@ -3234,7 +3234,7 @@ export const recipes = [
       ar: "اقلي قطع الدجاج المغلفة، ثم اطبخها في صلصة حلوة وحامضة مع الأناناس والفلفل والبصل.",
       zh: "炸鸡块后，用菠萝、彩椒和洋葱一起炒入糖醋酱中。",
       ja: "衣をつけた鶏肉を揚げて、パイナップル・ピーマン・玉ねぎと甘酢ソースで炒める。",
-      tr: "Kızart ekmeked tavuk parçalar, sonra Pişir onları in tatlı ve ekşi sos ile ananas, kapya biber, ve soğbir.",
+      tr: "Kızartın ekmeked tavuk parçalar, sonra Pişirin onları in tatlı ve ekşi sos ile ananas, dolmalık biber, ve soğan.",
       it: "Friggi paneed pollo pezzi, poi Cuoci li in dolce e acidulo salsa con ananas, peperone, e cipolla.",
       ko: "볶거나 튀기고 빵 닭고기 조각, 그다음 조리하고 그것들을 에서 달콤한그리고 새콤한 소스와 파인애플, 파프리카, 그리고 양파하세요."
     },
@@ -3327,7 +3327,7 @@ export const recipes = [
       ar: "اخفق بياض البيض مع السكر لصنع المرينغ، اخبزه على حرارة منخفضة وزينه بالكريمة المخفوقة والفواكه الطازجة.",
       zh: "蛋清加糖打发成蛋白霜，低温烘烤，冷却后加鲜奶油和水果装饰。",
       ja: "卵白を砂糖と泡立ててメレンゲを作り、低温で焼いて冷ましてから生クリームと果物を飾る。",
-      tr: "Çırp yumurta beyazlar ile şeker yapmak için mereng, Fırında pişir  kısık sıcaklık, sonra üstüne ile çırpılmış krema ve taze meyveler.",
+      tr: "Çırp yumurta beyazlar ile şeker yapmak için mereng, Fırında pişir kısık sıcaklık, sonra üstüne ile çırpılmış krema ve taze meyveler.",
       it: "Sbatti uovo albumi con zucchero per fare meringa, Cuoci al forno  basso temperatura, poi sopra con montato panna e fresco frutta.",
       ko: "휘저어 섞고 계란 흰자와 설탕 만들기 위해 머랭, 오븐에 구워 에서 약한 온도, 그다음 위에와 휘핑한 크림그리고 신선한 과일하세요."
     },
@@ -3420,7 +3420,7 @@ export const recipes = [
       ar: "اقلي البطاطا، ضعها في طبق، رش جبن طازج واسكب فوقها صلصة بنية ساخنة.",
       zh: "炸薯条盛盘，撒上鲜奶酪，再淋上热褐色肉汁。",
       ja: "フライドポテトを皿に盛り、チーズカードをのせ、熱いグレイビーソースをかける。",
-      tr: "Kızart patates, yerleştirin onları üstüne a tabak, serpiştirin taze peynir lor ve dökün sıcak kahverengi sos üzerine.",
+      tr: "Kızartın patates, yerleştirin onları üstüne a tabak, serpiştirin taze peynir lor ve dökün sıcak kahverengi sos üzerine.",
       it: "Friggi patate, metti li su a piatto, spolvera fresco formaggio cagliata e versa caldo marrone sugo sopra.",
       ko: "볶거나 튀기고 감자, 놓습니다 그것들을 위에 a 접시, 뿌립니다 신선한 치즈 커드그리고 붓습니다 뜨거운 갈색 그레이비 위에하세요."
     },
@@ -3513,7 +3513,7 @@ export const recipes = [
       ar: "احشِ العجين بالبطاطا أو الجبن أو اللحم، شكّل أنصاف أقمار، اسلقها ثم اقليها قليلاً أو قدّمها مع القشطة.",
       zh: "面团包入土豆、奶酪或肉，捏成半月形，煮熟后可略煎或配酸奶油食用。",
       ja: "生地にじゃがいも・チーズ・肉などを包み、半月型にし、茹でてから軽く焼くかサワークリームで提供。",
-      tr: "doldurun hamur ile patates, peynir, veya et, şekil verin içine yarım-yarım ay, Haşla onları, sonra hafifçe kavurun veya servis edin ile ekşi krema.",
+      tr: "doldurun hamur ile patates, peynir, veya et, şekil verin içine yarım-yarım ay, Haşlayın onları, sonra hafifçe kavurun veya servis edin ile ekşi krema.",
       it: "farcisci impasto con patate, formaggio, o carne, dai forma dentro metà-mezzelune, Cuoci li, poi leggermente rosola o servi con acidulo panna.",
       ko: "채웁니다 반죽와 감자, 치즈, 또는 고기, 모양을 만듭니다 안에 절반-반달, 삶고 그것들을, 그다음 가볍게 볶거나 튀겨 또는 제공합니다와 새콤한 크림하세요."
     },
@@ -3606,7 +3606,7 @@ export const recipes = [
       ar: "اقلِ الأرز المطبوخ مع الثوم والبصل وصلصة الصويا والخضار واللحم أو الروبيان. قدّمه مع بيضة مقلية فوقه.",
       zh: "炒熟米饭配大蒜、洋葱、酱油、蔬菜和肉类或虾，顶上加煎蛋。",
       ja: "炊いたご飯をニンニク・玉ねぎ・醤油・野菜・肉やエビと炒め、目玉焼きをのせて提供。",
-      tr: "Kızart pişirined pirinç ile sarımsak, soğbir, soya sosu, sebzeler, ve et veya karides. üstüne ile a kızarmış yumurta.",
+      tr: "Kızartın pişirilmiş pirinç ile sarımsak, soğan, soya sosu, sebzeler, ve et veya karides. üstüne ile a kızarmış yumurta.",
       it: "Friggi cuocied riso con aglio, cipolla, salsa di soia, verdure, e carne o gamberetti. sopra con a fritto uovo.",
       ko: "볶거나 튀기고 조리합니다 쌀와 마늘, 양파, 간장, 채소, 그리고 고기 또는 새우. 위에와 a 튀긴 계란하세요."
     },
@@ -3699,9 +3699,9 @@ export const recipes = [
       ar: "أذب الجبن مع النبيذ الأبيض في وعاء خاص، أضف الثوم والتوابل. اغمس قطع الخبز في الجبن الذائب.",
       zh: "将奶酪和白葡萄酒在特制锅中加热至融化，加入大蒜和调料。用面包蘸融化奶酪食用。",
       ja: "専用鍋でチーズと白ワインを溶かし、ニンニクとスパイスを加える。パンをチーズに浸して食べる。",
-      tr: "Melt peynir ile beyaz şarap özel tencere, Ekle sarımsak ve baharatlar. banın parçalar  ekmek içine eritilmiş peynir.",
+      tr: "Melt peynir ile beyaz şarap özel tencere, Ekleyin sarımsak ve baharatlar. banın parçalar ekmek içine eritilmiş peynir.",
       it: "Melt formaggio con bianco vino speciale pentola, Aggiungi aglio e spezie. intingi pezzi  pane dentro fuso formaggio.",
-      ko: "Melt 치즈와 흰 와인 에서 a 특별한 냄비, 넣고 마늘그리고 향신료. 찍어 먹습니다 조각 의 빵 안에 녹인 치즈하세요."
+      ko: "특별한 냄비에 치즈를 화이트 와인과 함께 녹여주세요. 마늘과 향신료를 넣어주세요. 빵 조각을 녹은 치즈에 찍어 드세요."
     },
     originText: {
       ro: "Fondue este o rețetă tradițională din Elveția.",
@@ -3792,9 +3792,9 @@ export const recipes = [
       ar: "اقطع السمكة بالطول وتبّلها واشوها ببطء على الحطب، وادهنها باستمرار بصلصة الطماطم والليمون.",
       zh: "将鱼纵向剖开，调味，用柴火慢烤，不时刷上番茄柠檬酱。",
       ja: "魚を縦に開き、味付けし、薪の火でゆっくり焼き、トマトとレモンのソースを塗りながら仕上げる。",
-      tr: "Split balık boylamasına, Baharatlandır o, ve Izgara yap yavaşça üzerine odun 불, üzerine sürme sık sık ile domates ve limon sos.",
+      tr: "Split balık boylamasına, Baharatlandır o, ve Izgarada pişirin yavaşça üzerine odun , üzerine sürme sık sık ile domates ve limon sos.",
       it: "Split pesce per il lungo, Condisci esso, e Griglia lentamente sopra legno fuoco, spennellando spesso con pomodoro e limone salsa.",
-      ko: "Split 생선 세로로, 간을 맞추고 그것, 그리고 구워 천천히 위에 나무 불, 바르면서 자주와 토마토그리고 레몬 소스하세요."
+      ko: "생선을 세로로 갈라 양념해주세요. 토마토와 레몬 소스를 자주 발라가며 장작불에서 천천히 구워주세요."
     },
     originText: {
       ro: "Masgouf este o rețetă tradițională din Irak.",
@@ -3885,9 +3885,9 @@ export const recipes = [
       ar: "اقلي البصل والفلفل والثوم، أضف الطماطم والتوابل، ثم اكسر البيض فوقها واطبخ حتى ينضج.",
       zh: "炒洋葱、辣椒和大蒜，加入番茄和香料，打入鸡蛋，煮至蛋熟。",
       ja: "玉ねぎ・ピーマン・ニンニクを炒め、トマトとスパイスを加え、上に卵を割り入れて固まるまで火を通す。",
-      tr: "soteleyiné soğbir, bibers, ve sarımsak, Ekle domates ve baharatlar. kırın yumurta üstüne üstüne ve pişirin koyun.",
+      tr: "soteleyin soğan, biber, ve sarımsak, Ekleyin domates ve baharatlar. kırın yumurta üstüne üstüne ve pişirin koyun.",
       it: "soffriggié cipolla, peperones, e aglio, Aggiungi pomodori e spezie. rompi uova su sopra e cuoci metti.",
-      ko: "볶습니다é 양파, 고추s, 그리고 마늘, 넣고 토마토그리고 향신료. 깨뜨립니다 계란 위에 위에그리고 조리합니다 두세요하세요."
+      ko: "양파, 피망, 마늘을 볶아주세요. 토마토와 향신료를 넣어주세요. 달걀을 위에 올려 익을 때까지 조리해주세요."
     },
     originText: {
       ro: "Shakshuka este o rețetă tradițională din Israel.",
@@ -3978,9 +3978,9 @@ export const recipes = [
       ar: "اسلق البطاطا والجزر، أضف السلمون والبصل. أضف الكريمة والشبت، اطبخ قليلاً وقدّمه ساخناً.",
       zh: "煮土豆和胡萝卜，加入三文鱼和洋葱，再倒入奶油和莳萝，略煮即可热食。",
       ja: "じゃがいもとにんじんを煮て、サーモンと玉ねぎを加え、クリームとディルを入れてさっと煮て温かく提供。",
-      tr: "Haşla patates ve havuçs, Ekle somon ve soğbir. karıştırın in krema ve dereotu, Kısık ateşte pişir kısaca ve servis edin sıcak.",
+      tr: "Haşlayın patates ve havuç, Ekleyin somon ve soğan. karıştırın in krema ve dereotu, Kısık ateşte pişir kısaca ve servis edin sıcak.",
       it: "Cuoci patate e carotas, Aggiungi salmone e cipolla. mescola in panna e aneto, Fai sobbollire brevemente e servi caldo.",
-      ko: "삶고 감자그리고 당근s, 넣고 연어그리고 양파. 저어줍니다 에서 크림그리고 딜, 약불로 끓여 잠깐그리고 제공합니다 뜨거운하세요."
+      ko: "감자와 당근을 삶고 연어와 양파를 넣어주세요. 크림과 딜을 넣고 잠깐 끓인 후 뜨겁게 제공해주세요."
     },
     originText: {
       ro: "Lohikeitto este o rețetă tradițională din Finlanda.",
@@ -4071,9 +4071,9 @@ export const recipes = [
       ar: "اقلي الأعشاب المفرومة، أضف اللحم والفول والليمون المجفف. اطبخ ببطء حتى ينضج اللحم.",
       zh: "炒香香草，加入牛肉、豆类和干柠檬，小火慢炖至肉烂。",
       ja: "刻んだハーブを炒め、牛肉・豆・干しライムを加えて、肉が柔らかくなるまで煮込む。",
-      tr: "Kızart doğranmış otlar, Ekle dana eti, fasulye, ve kurutulmuş yeşil limons. kısık ateşte pişirin yavaşça et  yumuşak.",
+      tr: "Kızartın doğranmış otlar, Ekleyin dana eti, fasulye, ve kurutulmuş yeşil limons. kısık ateşte pişirin yavaşça et yumuşak.",
       it: "Friggi tritato erbe aromatiche, Aggiungi manzo, fagioli, e secco limes. lascia sobbollire lentamente carne  tenero.",
-      ko: "볶거나 튀기고 다진 허브, 넣고 소고기, 콩, 그리고 말린 라임s. 약불에서 끓입니다 천천히 고기 입니다 부드럽게하세요."
+      ko: "허브를 볶다가 소고기, 콩, 건조 라임을 넣어주세요. 고기가 부드러워질 때까지 천천히 끓여주세요."
     },
     originText: {
       ro: "Ghormeh Sabzi este o rețetă tradițională din Iran.",
@@ -4164,9 +4164,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف سمك القد المملح والمفتت، ثم البطاطا المقلية الرفيعة والبيض المخفوق. اطبخ بلطف وقدّم مع الزيتون.",
       zh: "炒洋葱，加入泡发撕碎的鳕鱼，再加薯条和蛋液，慢火煮熟，配橄榄食用。",
       ja: "玉ねぎを炒め、塩抜きした鱈のほぐし身を加え、細切りポテトと溶き卵を入れてやさしく炒め、オリーブを添える。",
-      tr: "soteleyiné soğans, Ekle didiklenmiş ve ıslatılmış tuzed morina, sonra ince patates kızartması ve çırpılmış yumurta. pişirin nazikçe ve servis edin ile zeytin.",
+      tr: "soteleyin soğans, Ekleyin didiklenmiş ve ıslatılmış tuzed morina, sonra ince patates kızartması ve çırpılmış yumurta. pişirin nazikçe ve servis edin ile zeytin.",
       it: "soffriggié cipollas, Aggiungi sfilacciato e ammollato saleed baccalà, poi sottile patatine fritte e sbattuto uova. cuoci delicatamente e servi con olive.",
-      ko: "볶습니다é 양파s, 넣고 찢은그리고 불린 소금 대구, 그다음 얇게 감자튀김그리고 푼 계란. 조리합니다 부드럽게그리고 제공합니다와 올리브하세요."
+      ko: "허브를 다져 볶고 소금에 절인 대구를 불려 넣어주세요. 얇게 썬 감자와 푼 달걀을 넣어 부드럽게 조리해주세요. 올리브와 함께 제공해주세요."
     },
     originText: {
       ro: "Bacalhau à Brás este o rețetă tradițională din Portugalia.",
@@ -4350,7 +4350,7 @@ export const recipes = [
       ar: "تبل الدجاج بتوابل جيرك، واشوه أو اخبزه حتى يصبح مقرمشًا وعطريًا.",
       zh: "用杰克香料腌制鸡肉，烧烤或烘烤至外皮酥脆有香气。",
       ja: "ジャークスパイスで鶏肉をマリネし、グリルやオーブンでカリッと焼く。",
-      tr: "marine edin tavuk parçalar ile 저크 baharat karıştırın, Izgara yap veya fırınlayın çıtır ve lezzetli.",
+      tr: "marine edin tavuk parçalar ile baharat karıştırın, Izgarada pişirin veya fırınlayın çıtır ve lezzetli.",
       it: "marina pollo pezzi con jerk spezia mescola, Griglia o arrosto croccante e sapori intensi.",
       ko: "재웁니다 닭고기 조각와 저크 향신료 섞습니다, 구워 또는 굽습니다 바삭한그리고 풍미가 좋은하세요."
     },
@@ -4365,7 +4365,7 @@ export const recipes = [
       ar: "دجاج جيرك هي وصفة تقليدية من جامايكا.",
       zh: "牙买加辣鸡 是来自牙买加的传统食谱。",
       ja: "ジャークチキン はジャマイカの伝統的なレシピです。",
-      tr: "저크 tavuk Jamaica kökenli geleneksel bir tariftir.",
+      tr: "tavuk Jamaica kökenli geleneksel bir tariftir.",
       it: "jerk pollo è una risotta tradizionale di Jamaica.",
       ko: "저크 닭고기는(은) Jamaica의 전통 요리입니다."
     }
@@ -4443,9 +4443,9 @@ export const recipes = [
       ar: "اطبخ الدجاج مع البصل والزبدة المصفاة وتوابل البربري، واطبخه ببطء وأضف البيض المسلوق في النهاية.",
       zh: "鸡肉与洋葱、酥油和埃塞俄比亚香料炖煮，最后加入水煮蛋。",
       ja: "鶏肉を玉ねぎ・澄ましバター・ベルベルスパイスと煮込み、仕上げにゆで卵を加える。",
-      tr: "Pişir tavuk ile soğbir, arıtılmış tereyağı, ve berbere baharat blenderdan geçirin. kısık ateşte pişirin nazikçe ve ekleyin byağ yumurta  sonunda.",
+      tr: "Pişirin tavuk ile soğan, arıtılmış tereyağı, ve berbere baharat blenderdan geçirin. kısık ateşte pişirin nazikçe ve ekleyin bağlayın ve yumurta sonunda.",
       it: "Cuoci pollo con cipolla, chiarificato burro, e berbere spezia frulla. lascia sobbollire delicatamente e aggiungi bolioed uova  alla fine.",
-      ko: "조리하고 닭고기와 양파, 정제한 버터, 그리고 베르베레 향신료 블렌더에 갈아줍니다. 약불에서 끓입니다 부드럽게그리고 넣습니다 b기름 계란 에서 마지막에하세요."
+      ko: "닭고기를 양파, 버터, 베르베레 향신료와 함께 조리해주세요. 부드럽게 끓이다가 마지막에 삶은 달걀을 넣어주세요."
     },
     originText: {
       ro: "Doro Wat este o rețetă tradițională din Etiopia.",
@@ -4536,7 +4536,7 @@ export const recipes = [
       ar: "اخلط البرغل مع اللحم المفروم والتوابل، شكّل كرات أو أقراص، احشها باللحم واقلها حتى تصبح ذهبية.",
       zh: "将小麦碴与肉末和香料混合，做成球或饼，包入肉馅炸至金黄。",
       ja: "ブルグルと挽肉・スパイスを混ぜて団子か円盤型にし、中に肉を入れて揚げる。",
-      tr: "Karıştır bulgur ile kıyılmış et ve baharatlar, şekil verin içine toplar veya diskler, doldurun ile et, ve Kızart altın rengi.",
+      tr: "Karıştırın bulgur ile kıyılmış et ve baharatlar, şekil verin içine toplar veya diskler, doldurun ile et, ve Kızartın altın rengi.",
       it: "Mescola bulgur con tritato carne e spezie, dai forma dentro polpette o dischi, farcisci con carne, e Friggi dorato.",
       ko: "섞고 불구르와 다진 고기그리고 향신료, 모양을 만듭니다 안에 볼 또는 원반, 채웁니다와 고기, 그리고 볶거나 튀기고 노릇하게하세요."
     },
@@ -4629,7 +4629,7 @@ export const recipes = [
       ar: "اسلق البطاطا والخضار، اهرسها معًا، أضف الزبدة وقدّمها مع النقانق أو اللحم المدخن.",
       zh: "土豆和蔬菜煮熟捣碎，加黄油，配香肠或熏肉食用。",
       ja: "ジャガイモと野菜を茹でて潰し、バターを加えてソーセージや燻製肉とともに。",
-      tr: "Haşla patates ve sebzeler, ezin onları birlikte, Ekle tereyağı, ve Servis et ile sosis veya isli et.",
+      tr: "Haşlayın patates ve sebzeler, ezin onları birlikte, Ekleyin tereyağı, ve Servis edin ile sosis veya isli et.",
       it: "Cuoci patate e verdure, schiaccia li insieme, Aggiungi burro, e Servi con salsiccia o affumicato carne.",
       ko: "삶고 감자그리고 채소, 으깨세요 그것들을 함께, 넣고 버터, 그리고 담아 내세요와 소시지 또는 훈제 고기하세요."
     },
@@ -4724,7 +4724,7 @@ export const recipes = [
       ja: "加熱した石の上に肉と野菜を置き、濡れた葉と土で覆い、地中の蒸気でゆっくり調理。",
       tr: "Bury et ve sebzeler in öğütülmüş üzerine sıcak çekirdekler, örtün ile ıslak yaprak ve toprak, ve buharda pişirin-pişirin yavaşça in yeraltı fırın.",
       it: "Bury carne e verdure in macinato sopra caldo noccioli, copri con bagnato foglie e terra, e cuoci a vapore-cuoci lentamente in sottoterra forno.",
-      ko: "Bury 고기그리고 채소 에서 간 위에 뜨거운 씨, 덮습니다와 젖은 잎그리고 흙, 그리고 찝니다-조리합니다 천천히 에서 지하 오븐하세요."
+      ko: "고기와 채소를 뜨거운 돌 위 땅에 묻어주세요. 젖은 나뭇잎과 흙으로 덮고 땅속에서 천천히 쪄주세요."
     },
     originText: {
       ro: "Hangi este o rețetă tradițională din Noua Zeelandă.",
@@ -4815,7 +4815,7 @@ export const recipes = [
       ar: "اطبخ بلح البحر على البخار مع النبيذ الأبيض والبصل والثوم حتى يفتح. قدّمه مع البطاطا المقلية المقرمشة.",
       zh: "贻贝加白葡萄酒、洋葱和大蒜蒸煮至壳开，与脆薯条同食。",
       ja: "ムール貝を白ワイン・玉ねぎ・ニンニクで蒸し、殻が開いたらカリカリのフライドポテトと一緒に提供。",
-      tr: "buharda pişirin midye ile beyaz şarap, soğbir, ve sarımsak onlar açın, sonra Servis et ile çıtır patates kızartması.",
+      tr: "buharda pişirin midye ile beyaz şarap, soğan, ve sarımsak onlar açın, sonra Servis edin ile çıtır patates kızartması.",
       it: "cuoci a vapore cozze con bianco vino, cipolla, e aglio loro apri, poi Servi con croccante patatine fritte.",
       ko: "찝니다 홍합와 흰 와인, 양파, 그리고 마늘 그들은 엽니다, 그다음 담아 내세요와 바삭한 감자튀김하세요."
     },
@@ -5001,9 +5001,9 @@ export const recipes = [
       ar: "تبل لحم البقر واشوه ثم اطبخه ببطء في صلصة كريمية بالخضار والكريمة والتوابل. قدّمه مع الزلابية.",
       zh: "牛肉腌制后烤制，再炖入蔬菜奶油酱与香料，配面团球食用。",
       ja: "牛肉をマリネして焼き、野菜と生クリームのソースで煮込み、クネドリーキ（団子）と一緒に提供。",
-      tr: "marine edin dana eti, Fırınla o, sonra Kısık ateşte pişir kremay sebze sos ile krema ve baharatlar. servis edin ile mantı.",
+      tr: "marine edin dana eti, Fırında pişirin, sonra Kısık ateşte pişir kremsi sebze sos ile krema ve baharatlar. servis edin ile mantı.",
       it: "marina manzo, Arrostisci esso, poi Fai sobbollire pannay verdura salsa con panna e spezie. servi con ravioli.",
-      ko: "재웁니다 소고기, 구워 그것, 그다음 약불로 끓여 에서 a 크림y 채소 소스와 크림그리고 향신료. 제공합니다와 만두하세요."
+      ko: "소고기를 양념해 구운 후 크리미한 채소 소스와 함께 끓여주세요. 크림과 향신료를 넣어 완성하고 만두와 함께 제공해주세요."
     },
     originText: {
       ro: "Svíčková este o rețetă tradițională din Republica Cehă.",
@@ -5094,9 +5094,9 @@ export const recipes = [
       ar: "ضع طبقات من لحم الغنم والملفوف في قدر، أضف حبات الفلفل والماء واطبخ ببطء حتى ينضج.",
       zh: "将羊肉和卷心菜分层放入锅中，加胡椒和水，小火慢炖至软烂。",
       ja: "鍋にラム肉とキャベツを重ねて入れ、黒胡椒と水を加え、じっくり煮込む。",
-      tr: "katman kuzu ve lahana tencere, serpiştirin ile bibermısırs, Ekle su, ve Kısık ateşte pişir yavaşça yumuşayana kadar.",
+      tr: "katman kuzu ve lahana tencere, serpiştirin ile bibermısırs, Ekleyin su, ve Kısık ateşte pişir yavaşça yumuşayana kadar.",
       it: "strato agnello e cavolo pentola, spolvera con peperonemaiss, Aggiungi acqua, e Fai sobbollire lentamente finché sarà tenero.",
-      ko: "층 양고기그리고 양배추 에서 a 냄비, 뿌립니다와 고추옥수수s, 넣고 물, 그리고 약불로 끓여 천천히 부드러워질 때까지하세요."
+      ko: "냄비에 양고기와 양배추를 층층이 쌓고 통후추를 뿌려주세요. 물을 넣고 부드러워질 때까지 천천히 끓여주세요."
     },
     originText: {
       ro: "Fårikål este o rețetă tradițională din Norvegia.",
@@ -5187,7 +5187,7 @@ export const recipes = [
       ar: "اسلق الفول حتى يلين، ثم اهرسه خشناً مع الثوم والليمون وزيت الزيتون والتوابل.",
       zh: "将蚕豆煮烂，用大蒜、柠檬、橄榄油和香料粗略捣碎混合。",
       ja: "そら豆を柔らかく茹でて、ニンニク・レモン・オリーブオイル・スパイスと一緒に粗く潰す。",
-      tr: "Haşla bakla fasulye yumuşayana kadar, sonra kabaca ezin onları ile sarımsak, limon, zeytinyağı, ve baharatlar.",
+      tr: "Haşlayın bakla fasulye yumuşayana kadar, sonra kabaca ezin onları ile sarımsak, limon, zeytinyağı, ve baharatlar.",
       it: "Cuoci fava fagioli finché sarà tenero, poi grossolanamente schiaccia li con aglio, limone, olio d'oliva, e spezie.",
       ko: "삶고 잠두 콩 부드러워질 때까지, 그다음 대략 으깨세요 그것들을와 마늘, 레몬, 올리브오일, 그리고 향신료하세요."
     },
@@ -5466,7 +5466,7 @@ export const recipes = [
       ar: "اطبخ الأرز بشكل منفصل، جهز اللحم بالتوابل ثم رتب الأرز واللحم بطبقات واطبخها معاً على نار هادئة.",
       zh: "米饭单独煮好，肉类加香料炒香，层层叠放后小火焖煮。",
       ja: "ご飯を別に炊き、スパイスで肉を調理し、層にして弱火で一緒に蒸し煮する。",
-      tr: "Pişir pirinç ayrı ayrı, hazırlayın et ile baharatlar, sonra katman pirinç ve et ve pişirin birlikte üstüne kısık ısıtın.",
+      tr: "Pişirin pirinç ayrı ayrı, hazırlayın et ile baharatlar, sonra katman pirinç ve et ve pişirin birlikte üstüne kısık ısıtın.",
       it: "Cuoci riso separatamente, prepara carne con spezie, poi strato riso e carne e cuoci insieme su basso scalda.",
       ko: "조리하고 쌀 따로, 준비합니다 고기와 향신료, 그다음 층 쌀그리고 고기그리고 조리합니다 함께 위에 약한 가열합니다하세요."
     },
@@ -5652,7 +5652,7 @@ export const recipes = [
       ar: "حضّر عجينة مخمرة، شكّلها كقارب، احشِها بالجبن واخبزها. أضف بيضة فوقها في النهاية وأكمل الخبز.",
       zh: "发酵面团做成船形，填入奶酪烘烤，快好时在上面打个鸡蛋再烤片刻。",
       ja: "発酵生地を舟形に成形しチーズを詰めて焼き、仕上げに卵を割り入れてさらに焼く。",
-      tr: "hazırlayın a mayalanmış hamur, şekil verin o gibi a kayık, doldurun ile peynir ve fırında pişirin. kırın bir yumurta üstüne üstüne yakın sonunda ve fırında pişirin a biraz daha.",
+      tr: "hazırlayın a mayalanmış hamur, şekil verin bunu gibi a kayık, doldurun ile peynir ve fırında pişirin. kırın bir yumurta üstüne üstüne yakın sonunda ve fırında pişirin a biraz daha.",
       it: "prepara a lievitato impasto, dai forma esso come a barca, farcisci con formaggio e cuoci in forno. rompi un uovo su sopra vicino alla fine e cuoci in forno a un po' più.",
       ko: "준비합니다 a 발효된 반죽, 모양을 만듭니다 그것 처럼 a 배, 채웁니다와 치즈그리고 오븐에서 굽습니다. 깨뜨립니다 하나의 계란 위에 위에 가까이 마지막에그리고 오븐에서 굽습니다 a 조금 더하세요."
     },
@@ -5745,7 +5745,7 @@ export const recipes = [
       ar: "حمّر اللحم المفروم مع البصل والتوابل والفواكه المجففة، ضعه في طبق، غطه بالبيض المخفوق مع الحليب واخبزه.",
       zh: "肉末与洋葱、香料、干果炒香，放入烤盘，倒入蛋奶液，烘烤至熟。",
       ja: "ひき肉・玉ねぎ・スパイス・ドライフルーツを炒め、耐熱皿に入れ、卵と牛乳の液をかけて焼く。",
-      tr: "kahverengi kıyılmış et ile soğbir, baharatlar, ve kuru meyveler, yerleştirin pişirme yemek, üstüne ile çırpılmış yumurta ve süt karıştırınture, sonra Fırında pişir.",
+      tr: "kahverengi kıyılmış et ile soğan, baharatlar, ve kuru meyveler, yerleştirin pişirme yemek, üstüne ile çırpılmış yumurta ve süt karıştırınture, sonra Fırında pişir.",
       it: "marrone tritato carne con cipolla, spezie, e frutta secca, metti cottura piatto, sopra con sbattuto uovo e latte mescolature, poi Cuoci al forno.",
       ko: "갈색 다진 고기와 양파, 향신료, 그리고 말린 과일, 놓습니다 에서 a 굽기 요리, 위에와 푼 계란그리고 우유 섞습니다, 그다음 오븐에 구워하세요."
     },
@@ -5838,9 +5838,9 @@ export const recipes = [
       ar: "قطّع السمك النيء لمكعبات وانقعه في عصير الليمون مع البصل والفلفل والكزبرة والملح حتى يتغير لونه.",
       zh: "生鱼切丁，拌入柠檬汁、洋葱、辣椒、香菜和盐腌至变色。",
       ja: "生魚を角切りにし、ライムジュース・玉ねぎ・唐辛子・コリアンダー・塩で漬け、色が変わるまでマリネする。",
-      tr: "kesin çiğ balık içine küp ve marine edin in yeşil limon suyu ile soğbir, bibers, kişniş, ve tuz opak.",
+      tr: "kesin çiğ balık küp şeklinde doğrayın ve marine edin in yeşil limon suyu ile soğan, biber, kişniş, ve tuz opak.",
       it: "taglia crudo pesce dentro cubetti e marina in lime succo con cipolla, peperones, coriandolo, e sale opaco.",
-      ko: "자릅니다 생 생선 안에 깍둑썰기그리고 재웁니다 에서 라임 주스와 양파, 고추s, 고수, 그리고 소금 불투명한하세요."
+      ko: "생선을 깍둑썰기해 양파, 피망, 고수, 소금을 넣고 라임즙에 재워주세요. 불투명해질 때까지 그대로 두었다가 제공해주세요."
     },
     originText: {
       ro: "Ceviche este o rețetă tradițională din Peru.",
@@ -5931,9 +5931,9 @@ export const recipes = [
       ar: "ملّح الكرنب الصيني، اغسله واخلطه بمعجون الفلفل الحار والثوم والزنجبيل والبصل الأخضر. اتركه ليتخمر عدة أيام.",
       zh: "大白菜加盐腌制后冲洗，与辣椒酱、大蒜、姜和葱拌匀，发酵数天。",
       ja: "白菜を塩漬けして洗い、唐辛子ペースト・ニンニク・生姜・青ねぎと和えて数日発酵させる。",
-      tr: "tuz Chinese lahana, durulayın, ve Karıştır ile acı biber salça, sarımsak, zencefil, ve yeşil soğans. Let fermente edin için birkaç gün.",
+      tr: "tuz Chinese lahana, durulayın, ve Karıştırın ile acı biber salça, sarımsak, zencefil, ve yeşil soğans. Let fermente edin için birkaç gün.",
       it: "sale Chinese cavolo, sciacqua, e Mescola con peperoncino concentrato, aglio, zenzero, e verde cipollas. Let fermenta per diversi giorni.",
-      ko: "소금 Chinese 양배추, 헹굽니다, 그리고 섞고와 고추 페이스트, 마늘, 생강, 그리고 초록 양파s. Let 발효시킵니다 을 위해 몇 일하세요."
+      ko: "배추에 소금을 뿌려 절인 후 씻어주세요. 칠리 페이스트, 마늘, 생강, 파와 섞어주세요. 며칠 동안 발효시켜주세요."
     },
     originText: {
       ro: "Kimchi este o rețetă tradițională din Coreea de Sud.",
@@ -6024,7 +6024,7 @@ export const recipes = [
       ar: "افتح الرغيف وادهنه بالباتيه والمايونيز، أضف اللحم المشوي والخضار المخللة والخيار والكزبرة والفلفل الحار.",
       zh: "法棍切开，抹上猪肝酱和蛋黄酱，夹入烤肉、腌菜、黄瓜、香菜和辣椒。",
       ja: "バゲットを開き、パテとマヨネーズを塗り、焼き肉・なます・きゅうり・パクチー・唐辛子を挟む。",
-      tr: "Dilimle baget, yayın ile pâté ve mayonez, Ekle ızgara et, turşu sebzeler, salatalık, kişniş, ve acı biber.",
+      tr: "Dilimle baget, yayın ile pâté ve mayonez, Ekleyin ızgara et, turşu sebzeler, salatalık, kişniş, ve acı biber.",
       it: "Affetta baguette, stendi con pâté e maionese, Aggiungi grigliato carne, in salamoia verdure, cetriolo, coriandolo, e peperoncino.",
       ko: "썰어 바게트, 펼칩니다와 pâté그리고 마요네즈, 넣고 구운 고기, 절인 채소, 오이, 고수, 그리고 고추하세요."
     },
@@ -6210,9 +6210,9 @@ export const recipes = [
       ar: "اسلق النودلز، حضر الحساء بحليب جوز الهند ومعجون الكاري، أضف الروبيان والخضار، قدمه مع البيض المسلوق والليمون.",
       zh: "煮米粉，用椰奶和咖喱酱做汤底，加入虾和蔬菜，配煮鸡蛋和酸柑。",
       ja: "麺を茹で、ココナッツミルクとカレーペーストでスープを作り、エビと野菜を加え、ゆで卵とライムを添えて提供。",
-      tr: "Haşla erişte, hazırlayın çorba ile hindistancevizi süt ve köri salça, Ekle karides ve sebzeler, Servis et ile byağ yumurta ve yeşil limon.",
+      tr: "Haşlayın erişte, hazırlayın çorba ile hindistancevizi süt ve köri salça, Ekleyin karides ve sebzeler, Servis edin ile bağlayın ve yumurta ve yeşil limon.",
       it: "Cuoci spaghetti, prepara zuppa con cocco latte e curry concentrato, Aggiungi gamberetti e verdure, Servi con bolioed uovo e lime.",
-      ko: "삶고 면, 준비합니다 수프와 코코넛 우유그리고 카레 페이스트, 넣고 새우그리고 채소, 담아 내세요와 b기름 계란그리고 라임하세요."
+      ko: "면을 삶아주세요. 코코넛 밀크와 커리 페이스트로 국물을 준비하고 새우와 채소를 넣어주세요. 삶은 달걀과 라임을 곁들여 제공해주세요."
     },
     originText: {
       ro: "Laksa este o rețetă tradițională din Malaysia.",
@@ -6396,7 +6396,7 @@ export const recipes = [
       ar: "اخلط السمك مع حليب جوز الهند ومعجون الكاري والبيض، وضعه في أوراق الموز واطبخه على البخار.",
       zh: "鱼肉与椰奶、咖喱酱和鸡蛋拌匀，倒入香蕉叶中蒸熟。",
       ja: "魚・ココナッツミルク・カレーペースト・卵を混ぜ、バナナの葉に入れて蒸し上げる。",
-      tr: "Karıştır balık ile hindistancevizi süt, köri salça, ve yumurta, dökün içine muz yaprak ve buharda pişirin.",
+      tr: "Karıştırın balık ile hindistancevizi süt, köri salça, ve yumurta, dökün içine muz yaprak ve buharda pişirin.",
       it: "Mescola pesce con cocco latte, curry concentrato, e uovo, versa dentro banana foglie e cuoci a vapore.",
       ko: "섞고 생선와 코코넛 우유, 카레 페이스트, 그리고 계란, 붓습니다 안에 바나나 잎그리고 찝니다하세요."
     },
@@ -6582,7 +6582,7 @@ export const recipes = [
       ar: "اسلق السمك مع البصل والطماطم والتوابل، أضف الكسافا المطبوخة وقدّمها مع بصل نيء على الوجه.",
       zh: "鱼与洋葱、番茄和香料煮熟，加入煮熟的木薯，上面撒生洋葱食用。",
       ja: "魚を玉ねぎ・トマト・スパイスと煮て、茹でたキャッサバを加え、生玉ねぎをのせて提供。",
-      tr: "Haşla balık ile soğbir, domates, ve baharatlar, Ekle pişirined manyok ve servis edin üzerine ile çiğ soğbir.",
+      tr: "Haşlayın balık ile soğan, domates, ve baharatlar, Ekleyin pişirilmiş manyok ve servis edin üzerine ile çiğ soğan.",
       it: "Cuoci pesce con cipolla, pomodori, e spezie, Aggiungi cuocied manioca e servi guarnito con crudo cipolla.",
       ko: "삶고 생선와 양파, 토마토, 그리고 향신료, 넣고 조리합니다 카사바그리고 제공합니다 올린와 생 양파하세요."
     },
@@ -6675,7 +6675,7 @@ export const recipes = [
       ar: "اطبخ اللحم مع الحمص والعدس والطماطم والتوابل، أضف المعكرونة أو الأرز والخضار في النهاية.",
       zh: "肉与鹰嘴豆、扁豆、番茄和香料一起煮，最后加入面条或米饭和香草。",
       ja: "肉・ひよこ豆・レンズ豆・トマト・スパイスで煮込み、最後に麺またはご飯・ハーブを加える。",
-      tr: "Haşla et ile nohut, mercimek, domates, ve baharatlar; ekleyin erişte veya pirinç ve otlar  sonunda.",
+      tr: "Haşlayın et ile nohut, mercimek, domates, ve baharatlar; ekleyin erişte veya pirinç ve otlar sonunda.",
       it: "Cuoci carne con ceci, lenticchie, pomodori, e spezie; aggiungi spaghetti o riso e erbe aromatiche  alla fine.",
       ko: "삶고 고기와 병아리콩, 렌틸콩, 토마토, 그리고 향신료; 넣습니다 면 또는 쌀그리고 허브 에서 마지막에하세요."
     },
@@ -6768,7 +6768,7 @@ export const recipes = [
       ar: "اسلق الفاصوليا الحمراء، اقليها مع البصل والثوم والجوز والتوابل. قدّمها مع الخضار الطازجة.",
       zh: "红豆煮熟后与洋葱、大蒜、核桃和香料炒香，配新鲜香草食用。",
       ja: "赤いんげん豆を茹で、玉ねぎ・ニンニク・クルミ・スパイスと炒めてハーブを添える。",
-      tr: "Haşla kırmızı fasulye, soteleyiné ile soğbir, sarımsak, ceviz, ve baharatlar. servis edin ile taze otlar.",
+      tr: "Haşlayın kırmızı fasulye, soteleyin ile soğan, sarımsak, ceviz, ve baharatlar. servis edin ile taze otlar.",
       it: "Cuoci rosso fagioli, soffriggié con cipolla, aglio, noci, e spezie. servi con fresco erbe aromatiche.",
       ko: "삶고 빨간 콩, 볶습니다é와 양파, 마늘, 호두, 그리고 향신료. 제공합니다와 신선한 허브하세요."
     },
@@ -6856,7 +6856,7 @@ export const recipes = [
       ar: "اطبخ اللحم مع التوابل والخضار، ثم قدمه مع الخبز أو المعكرونة فوق الصلصة.",
       zh: "将肉类与香料和蔬菜一起烹煮，最后与碎面包或面条一起上桌。",
       ja: "肉をスパイスと野菜で煮て、パンまたは麺をソースの上にのせて提供。",
-      tr: "Pişir et ile baharatlar ve sebzeler, sonra Servis et ile kırılmış flatekmek veya erişte üstüne üstüne  sos.",
+      tr: "Pişirin et ile baharatlar ve sebzeler, sonra Servis edin ile kırılmış flatekmek veya erişte üstüne üstüne sos.",
       it: "Cuoci carne con spezie e verdure, poi Servi con spezzato flatpane o spaghetti su sopra  salsa.",
       ko: "조리하고 고기와 향신료그리고 채소, 그다음 담아 내세요와 부순 납작한빵 또는 면 위에 위에 의 소스하세요."
     },
@@ -6949,7 +6949,7 @@ export const recipes = [
       ar: "اطبخ اللحم ببطء في حليب جوز الهند ومعجون التوابل حتى يطرى ويتكاثف الصوص.",
       zh: "将肉在椰奶和香料酱中慢炖至极其软烂，汤汁收干。",
       ja: "肉をココナッツミルクとスパイスペーストでじっくり煮込み、柔らかくなりソースが煮詰まるまで調理。",
-      tr: "kısık ateşte yavaşça pişirin et in hindistancevizi süt ile baharat salça çok yumuşak ve sos  azaltılmış.",
+      tr: "kısık ateşte yavaşça pişirin et in hindistancevizi süt ile baharat salça çok yumuşak ve sos azaltılmış.",
       it: "cuoci lentamente carne in cocco latte con spezia concentrato molto tenero e salsa  ridotto.",
       ko: "약한 불로 천천히 조리합니다 고기 에서 코코넛 우유와 향신료 페이스트 매우 부드럽게그리고 소스 입니다 졸인하세요."
     },
@@ -7042,9 +7042,9 @@ export const recipes = [
       ar: "افرك شرائح السلمون بالملح والسكر والشبت، ضعها في الثلاجة عدة أيام حتى تتخلل، ثم قطّعها شرائح رقيقة.",
       zh: "三文鱼用盐、糖和莳萝腌制，冷藏几天后切成薄片。",
       ja: "サーモンに塩・砂糖・ディルを擦り込み、数日冷蔵で漬け込み、薄くスライスする。",
-      tr: "Rub somon fileto ile tuz, şeker, ve dereotu, buzdolabında bekletin için birkaç gün  tuzlayın, sonra Dilimle ince ince.",
+      tr: "Rub somon fileto ile tuz, şeker, ve dereotu, buzdolabında bekletin için birkaç gün tuzlayın, sonra Dilimle ince ince.",
       it: "Rub salmone filetto con sale, zucchero, e aneto, metti in frigorifero per diversi giorni  stagiona, poi Affetta sottilmente.",
-      ko: "Rub 연어 필레와 소금, 설탕, 그리고 딜, 냉장 보관합니다 을 위해 몇 일  절입니다, 그다음 썰어 얇게하세요."
+      ko: "연어 필레에 소금, 설탕, 딜을 문질러주세요. 며칠 동안 냉장 숙성시켜주세요. 얇게 슬라이스해 제공해주세요."
     },
     originText: {
       ro: "Gravlax este o rețetă tradițională din Suedia.",
@@ -7135,7 +7135,7 @@ export const recipes = [
       ar: "حمّر لحم البقر، أضف البصل والبيرة الداكنة والتوابل واطبخ ببطء حتى ينضج.",
       zh: "牛肉煎至变色，加入洋葱、黑啤酒和香料，小火慢炖至酥烂。",
       ja: "牛肉を焼き、玉ねぎ・黒ビール・スパイスを加えてとろ火でじっくり煮込む。",
-      tr: "kahverengi dana eti, Ekle soğbir, koyu bira, ve baharatlar, sonra Kısık ateşte pişir yavaşça et  çok yumuşak.",
+      tr: "kahverengi dana eti, Ekleyin soğan, koyu bira, ve baharatlar, sonra Kısık ateşte pişir yavaşça et çok yumuşak.",
       it: "marrone manzo, Aggiungi cipolla, scuro birra, e spezie, poi Fai sobbollire lentamente carne  molto tenero.",
       ko: "갈색 소고기, 넣고 양파, 진한 맥주, 그리고 향신료, 그다음 약불로 끓여 천천히 고기 입니다 매우 부드럽게하세요."
     },
@@ -7228,9 +7228,9 @@ export const recipes = [
       ar: "اسلق الدجاج مع الخضار، أضف المعكرونة المنزلية والأعشاب. أضف البورش أو عصير الليمون للحموضة.",
       zh: "鸡肉与蔬菜煮开，加入自制面条和香草，用酸汤或柠檬汁调味。",
       ja: "鶏肉と野菜を煮て、自家製麺とハーブを加え、ボルシチやレモン汁で酸味を加える。",
-      tr: "Haşla tavuk ile sebzeler, Ekle ev yapımı erişte ve otlar. ekşi ile borş veya limon suyu.",
+      tr: "Haşlayın tavuk ile sebzeler, Ekleyin ev yapımı erişte ve otlar. ekşi ile borş veya limon suyu.",
       it: "Cuoci pollo con verdure, Aggiungi fatto in casa spaghetti e erbe aromatiche. acidulo con borsch o limone succo.",
-      ko: "삶고 닭고기와 채소, 넣고 수제 면그리고 허브. 새콤한와 보르시 또는 레몬 주스하세요."
+      ko: "닭고기를 채소와 함께 삶아주세요. 직접 만든 면과 허브를 넣어주세요. 보르시치 또는 레몬즙으로 새콤하게 마무리해주세요."
     },
     originText: {
       ro: "Zeamă este o rețetă tradițională din Moldova.",
@@ -7321,7 +7321,7 @@ export const recipes = [
       ar: "حضّر عجينة هشة، احشها باللحم المفروم والخضار المقلية واخبزها حتى تحمر.",
       zh: "做酥皮，包入炒香的肉末和蔬菜，烤至金黄。",
       ja: "タルト生地を作り、挽肉と炒めた野菜を詰め、焼き色がつくまでオーブンで焼く。",
-      tr: "yapın kısa hamur hamur, doldurun ile kıyılmış et ve soteleyiné sebzeler, sonra Fırında pişir altın rengi.",
+      tr: "yapın kısa hamur hamur, doldurun ile kıyılmış et ve soteleyin sebzeler, sonra Fırında pişir altın rengi.",
       it: "fai pasta brisée pasta, farcisci con tritato carne e soffriggié verdure, poi Cuoci al forno dorato.",
       ko: "만듭니다 쇼트크러스트 파이지, 채웁니다와 다진 고기그리고 볶습니다é 채소, 그다음 오븐에 구워 노릇하게하세요."
     },
@@ -7414,9 +7414,9 @@ export const recipes = [
       ar: "ضع الخبز المحمص في الأسفل، غطّه باللبن والحمص المسلوق والزبدة المذابة مع البهارات، وزيّنه بالمكسرات أو الصنوبر.",
       zh: "底层铺烤面包块，淋上酸奶、煮熟的鹰嘴豆和香料黄油，上面撒坚果或松子。",
       ja: "トーストしたパンを敷き、ヨーグルト・ゆでヒヨコ豆・スパイス入りバターをかけ、ナッツや松の実を散らす。",
-      tr: "yerleştirin kavrulmuş ekmek  taban, örtün ile yoğurt, byağ nohut, ve eritilmiş tereyağı ile baharatlar. üstüne ile kuruyemiş veya çam kuruyemiş.",
+      tr: "yerleştirin kavrulmuş ekmek taban, örtün ile yoğurt, bağlayın ve nohut, ve eritilmiş tereyağı ile baharatlar. üstüne ile kuruyemiş veya çam kuruyemiş.",
       it: "metti tostato pane  base, copri con yogurt, bolioed ceci, e fuso burro con spezie. sopra con frutta secca o pino frutta secca.",
-      ko: "놓습니다 구운 빵 에서 바닥, 덮습니다와 요거트, b기름 병아리콩, 그리고 녹인 버터와 향신료. 위에와 견과류 또는 소나무 견과류하세요."
+      ko: "구운 빵을 바닥에 깔고 요거트, 삶은 병아리콩을 올려주세요. 향신료를 넣은 녹인 버터를 붓고 견과류로 마무리해주세요."
     },
     originText: {
       ro: "Fatteh este o rețetă tradițională din Siria.",
@@ -7507,9 +7507,9 @@ export const recipes = [
       ar: "ادهن خبز الجاودار بالزبدة، ضع عليه اللحم أو السمك أو الجبن أو الخضار، وزينه بالأعشاب والبيض المسلوق.",
       zh: "黑麦面包抹黄油，上面放肉类、鱼、奶酪或蔬菜，再用香草和煮蛋装饰。",
       ja: "ライ麦パンにバターを塗り、肉・魚・チーズ・野菜などをのせ、ハーブとゆで卵で飾る。",
-      tr: "yayın tereyağı üstüne çavdar ekmek, üstüne ile et, balık, peynir veya sebzeler, süsleyin ile otlar ve byağ yumurta.",
+      tr: "yayın tereyağı üstüne çavdar ekmek, üstüne ile et, balık, peynir veya sebzeler, süsleyin ile otlar ve bağlayın ve yumurta.",
       it: "stendi burro su segale pane, sopra con carne, pesce, formaggio o verdure, guarnisci con erbe aromatiche e bolioed uovo.",
-      ko: "펼칩니다 버터 위에 호밀 빵, 위에와 고기, 생선, 치즈 또는 채소, 고명으로 올립니다와 허브그리고 b기름 계란하세요."
+      ko: "호밀빵에 버터를 바르고 고기, 생선, 치즈 또는 채소를 올려주세요. 허브와 삶은 달걀로 장식해 제공해주세요."
     },
     originText: {
       ro: "Smørrebrød este o rețetă tradițională din Danemarca.",
@@ -7600,9 +7600,9 @@ export const recipes = [
       ar: "اسلق نودلز الحنطة السوداء، اغسلها بماء بارد، وقدّمها في مرق بارد مع خيار وبيض ولحم بقري.",
       zh: "荞麦面煮熟后冷水冲洗，放入冷汤中，加黄瓜片、煮鸡蛋和牛肉一起吃。",
       ja: "そば粉の麺を茹でて冷水で締め、冷たいスープにきゅうり・ゆで卵・牛肉を添えて提供。",
-      tr: "Haşla karabuğday erişte, durulayın ile soğuk su, Servis et in soğuk et suyu ile salatalık dilimler, byağ yumurta, ve dana eti.",
+      tr: "Haşlayın karabuğday erişte, durulayın ile soğuk su, Servis edin in soğuk et suyu ile salatalık dilimler, bağlayın ve yumurta, ve dana eti.",
       it: "Cuoci grano saraceno spaghetti, sciacqua con freddo acqua, Servi in freddo brodo con cetriolo fette, bolioed uovo, e manzo.",
-      ko: "삶고 메밀 면, 헹굽니다와 차가운 물, 담아 내세요 에서 차가운 육수와 오이 조각, b기름 계란, 그리고 소고기하세요."
+      ko: "메밀국수를 삶아 찬물에 헹궈주세요. 차가운 육수에 담고 오이 슬라이스, 삶은 달걀, 소고기를 올려 제공해주세요."
     },
     originText: {
       ro: "Naengmyeon este o rețetă tradițională din Coreea de Nord.",
@@ -7693,7 +7693,7 @@ export const recipes = [
       ar: "اطبخ لحم البقر أو الضأن على نار هادئة مع الصوص المتبل والبصل والزنجبيل والثوم حتى ينضج.",
       zh: "牛肉或羊肉用洋葱、姜、蒜和香料慢炖至软烂。",
       ja: "牛肉またはラム肉をスパイス・玉ねぎ・生姜・ニンニク入りのソースでじっくり煮込む。",
-      tr: "kısık ateşte yavaşça pişirin dana eti veya kuzu baharatlı sos ile soğbir, zencefil, ve sarımsak çok yumuşak.",
+      tr: "kısık ateşte yavaşça pişirin dana eti veya kuzu baharatlı sos ile soğan, zencefil, ve sarımsak çok yumuşak.",
       it: "cuoci lentamente manzo o agnello speziato salsa con cipolla, zenzero, e aglio molto tenero.",
       ko: "약한 불로 천천히 조리합니다 소고기 또는 양고기 에서 a 향신료를 넣은 소스와 양파, 생강, 그리고 마늘 매우 부드럽게하세요."
     },
@@ -7786,7 +7786,7 @@ export const recipes = [
       ar: "اسلق عظام البقر مع الليمون العطري والتوابل، أضف لحم البقر ونودلز الأرز. قدّمها مع الأعشاب والفلفل الحار.",
       zh: "牛骨加香茅和香料煮汤，加入牛肉和米粉，配香草和辣椒食用。",
       ja: "牛骨をレモングラス・スパイスと一緒に煮て、牛肉・米麺を加え、ハーブや唐辛子とともに提供。",
-      tr: "Haşla dana eti kemikler ile limongrass ve baharatlar, Ekle dana eti ve pirinç erişte. servis edin ile otlar ve acı biber.",
+      tr: "Haşlayın dana eti kemikler ile limongrass ve baharatlar, Ekleyin dana eti ve pirinç erişte. servis edin ile otlar ve acı biber.",
       it: "Cuoci manzo ossa con limonegrass e spezie, Aggiungi manzo e riso spaghetti. servi con erbe aromatiche e peperoncino.",
       ko: "삶고 소고기 뼈와 레몬풀그리고 향신료, 넣고 소고기그리고 쌀 면. 제공합니다와 허브그리고 고추하세요."
     },
@@ -7879,9 +7879,9 @@ export const recipes = [
       ar: "اطبخ السمك مع الطماطم والبصل والفلفل والثوم في حليب جوز الهند، وأضف زيت النخيل والأعشاب في النهاية.",
       zh: "鱼与番茄、洋葱、辣椒和大蒜在椰奶中炖煮，最后加入棕榈油和香草。",
       ja: "魚をトマト・玉ねぎ・ピーマン・ニンニクとココナッツミルクで煮込み、仕上げにパームオイルとハーブを加える。",
-      tr: "Pişir balık ile domates, soğbir, bibers, ve sarımsak in hindistancevizi süt, Ekle palmiye yağ ve otlar  sonunda.",
+      tr: "Pişirin balık ile domates, soğan, biber, ve sarımsak in hindistancevizi süt, Ekleyin palmiye yağ ve otlar sonunda.",
       it: "Cuoci pesce con pomodori, cipolla, peperones, e aglio in cocco latte, Aggiungi palma olio e erbe aromatiche  alla fine.",
-      ko: "조리하고 생선와 토마토, 양파, 고추s, 그리고 마늘 에서 코코넛 우유, 넣고 야자 기름그리고 허브 에서 마지막에하세요."
+      ko: "생선을 토마토, 양파, 피망, 마늘과 함께 코코넛 밀크에서 조리해주세요. 마지막에 팜 오일과 허브를 넣어주세요."
     },
     originText: {
       ro: "Moqueca este o rețetă tradițională din Brazilia.",
@@ -7972,9 +7972,9 @@ export const recipes = [
       ar: "احشِ الخبز البيتا بالباذنجان المقلي والبيض المسلوق والسلطة والطحينة والمخللات. قدّمه مع صوص عمبة.",
       zh: "皮塔饼夹入炸茄子、煮鸡蛋、沙拉、芝麻酱和腌菜，配安巴酱食用。",
       ja: "ピタパンに揚げナス・ゆで卵・サラダ・タヒニ・ピクルスを挟み、アンバソースを添える。",
-      tr: "doldurun pita ekmek ile kızarmış yumurtaplant, byağ yumurta, salata, tahin, ve turşu sebzeler. servis edin ile amba sos.",
+      tr: "doldurun pita ekmek ile kızarmış yumurtaplant, bağlayın ve yumurta, salata, tahin, ve turşu sebzeler. servis edin ile amba sos.",
       it: "farcisci pita pane con fritto uovoplant, bolioed uovo, insalata, tahina, e in salamoia verdure. servi con amba salsa.",
-      ko: "채웁니다 피타 빵와 튀긴 계란식물, b기름 계란, 샐러드, 타히니, 그리고 절인 채소. 제공합니다와 amba 소스하세요."
+      ko: "피타 빵에 튀긴 가지, 삶은 달걀, 샐러드, 타히니, 절임 채소를 채워주세요. 암바 소스와 함께 제공해주세요."
     },
     originText: {
       ro: "Sabich este o rețetă tradițională din Israel.",
@@ -8065,9 +8065,9 @@ export const recipes = [
       ar: "اسلق لحم البقر حتى يصبح طريًا جدًا، قطعه، ثم اطبخه مع الطماطم والفلفل والبصل والتوابل.",
       zh: "牛肉煮至酥烂撕成丝，再与番茄、辣椒、洋葱和香料一起炖煮。",
       ja: "牛肉を柔らかくなるまで煮てほぐし、トマト・ピーマン・玉ねぎ・スパイスと炒める。",
-      tr: "Haşla dana eti çok yumuşak, didikleyin o, sonra Pişir ile domates, bibers, soğans, ve baharatlar.",
+      tr: "Haşlayın dana eti çok yumuşak, didikleyin o, sonra Pişirin ile domates, biber, soğans, ve baharatlar.",
       it: "Cuoci manzo molto tenero, sfilaccia esso, poi Cuoci con pomodori, peperones, cipollas, e spezie.",
-      ko: "삶고 소고기 매우 부드럽게, 찢습니다 그것, 그다음 조리하고와 토마토, 고추s, 양파s, 그리고 향신료하세요."
+      ko: "소고기가 아주 부드러워질 때까지 삶아주세요. 잘게 찢어서 토마토, 피망, 양파, 향신료와 함께 볶아주세요."
     },
     originText: {
       ro: "Ropa Vieja este o rețetă tradițională din Cuba.",
@@ -8158,7 +8158,7 @@ export const recipes = [
       ar: "اسلق البطاطس والبصل في الحليب، أضف السمك المدخن والزبدة، تبّل حسب الرغبة.",
       zh: "用牛奶煮土豆和洋葱，加入熏鱼和黄油，调味。",
       ja: "ジャガイモと玉ねぎを牛乳で煮て、燻製魚とバターを加え、味を調える。",
-      tr: "Haşla patates ve soğbir in süt, Ekle isli balık ve tereyağı, Baharatlandır  tadına.",
+      tr: "Haşlayın patates ve soğan in süt, Ekleyin isli balık ve tereyağı, Baharatlandır tadına.",
       it: "Cuoci patate e cipolla in latte, Aggiungi affumicato pesce e burro, Condisci  a piacere.",
       ko: "삶고 감자그리고 양파 에서 우유, 넣고 훈제 생선그리고 버터, 간을 맞추고  기호에 맞게하세요."
     },
@@ -8251,7 +8251,7 @@ export const recipes = [
       ar: "اسلق الخضار وقطعها، قدمها مع البيض والتوفو وصلصة الفول السوداني. رش الكروتون في الأعلى.",
       zh: "煮熟蔬菜，切块，与鸡蛋、豆腐和花生酱一起装盘，撒上面包丁。",
       ja: "野菜を茹でて切り、卵、豆腐、ピーナッツソースとともに皿に盛り、クルトンを振りかける。",
-      tr: "Haşla sebzeler, kesin onları, Servis et ile yumurta, tofu, ve yer fıstığı sos. serpiştirin kruton üstüne üstüne.",
+      tr: "Haşlayın sebzeler, kesin onları, Servis edin ile yumurta, tofu, ve yer fıstığı sos. serpiştirin kruton üstüne üstüne.",
       it: "Cuoci verdure, taglia li, Servi con uovo, tofu, e arachide salsa. spolvera crostini su sopra.",
       ko: "삶고 채소, 자릅니다 그것들을, 담아 내세요와 계란, 두부, 그리고 땅콩 소스. 뿌립니다 크루통 위에 위에하세요."
     },
@@ -8432,9 +8432,9 @@ export const recipes = [
       ar: "احشِ الفلفل المشوي باللحم المفروم والفواكه المجففة والتوابل، غطه بصلصة الجوز وزيّنه بالرمان.",
       zh: "烤辣椒内塞肉末、干果和香料，浇上核桃酱，撒上石榴籽。",
       ja: "焼きピーマンにひき肉・ドライフルーツ・スパイスを詰め、クルミソースとザクロをかける。",
-      tr: "Stuff kavrulmuş bibers ile kıyılmış et, kuru meyveler, ve baharatlar, örtün ile ceviz sos, ve serpiştirin nar üstüne üstüne.",
+      tr: "Stuff kavrulmuş biber ile kıyılmış et, kuru meyveler, ve baharatlar, örtün ile ceviz sos, ve serpiştirin nar üstüne üstüne.",
       it: "Stuff arrostito peperones con tritato carne, frutta secca, e spezie, copri con noce salsa, e spolvera melograno su sopra.",
-      ko: "Stuff 구운 고추s와 다진 고기, 말린 과일, 그리고 향신료, 덮습니다와 호두 소스, 그리고 뿌립니다 석류 위에 위에하세요."
+      ko: "구운 피망에 다진 고기, 말린 과일, 향신료를 채워주세요. 호두 소스를 덮고 석류를 뿌려주세요."
     },
     originText: {
       ro: "Chiles en nogada este o rețetă tradițională din Mexic.",
@@ -8525,7 +8525,7 @@ export const recipes = [
       ar: "اقلي الخضار، أضف العدس والماء، اطبخ حتى ينضج كل شيء وتبّل حسب الذوق.",
       zh: "炒蔬菜，加入扁豆和水，煮至变软，按口味调味。",
       ja: "野菜を炒め、レンズ豆と水を加え、柔らかくなるまで煮て味付けする。",
-      tr: "soteleyiné sebzeler, Ekle mercimek ve su, Kısık ateşte pişir her şeyi  yumuşak, Baharatlandır  tadına.",
+      tr: "soteleyin sebzeler, Ekleyin mercimek ve su, Kısık ateşte pişir her şeyi yumuşak, Baharatlandır tadına.",
       it: "soffriggié verdure, Aggiungi lenticchie e acqua, Fai sobbollire tutto  tenero, Condisci  a piacere.",
       ko: "볶습니다é 채소, 넣고 렌틸콩그리고 물, 약불로 끓여 모든 것 입니다 부드럽게, 간을 맞추고  기호에 맞게하세요."
     },
@@ -8711,9 +8711,9 @@ export const recipes = [
       ar: "قلّب الأرز مع الطماطم والفلفل والبصل والتوابل، ثم اطبخه بالمرق حتى يمتص السائل ويصبح ملونًا.",
       zh: "米饭与番茄、辣椒、洋葱和香料一起炒香，加入高汤炖煮至汤汁吸收、米饭上色。",
       ja: "米をトマト・ピーマン・玉ねぎ・スパイスと炒め、ブイヨンで炊き上げて色がつくまで煮る。",
-      tr: "soteleyiné pirinç ile domates, bibers, soğans, ve baharatlar, sonra Kısık ateşte pişir ile 육수 sıvı  çekilene kadar ve pirinç  renkli.",
+      tr: "soteleyin pirinç ile domates, biber, soğans, ve baharatlar, sonra Kısık ateşte pişir ile sıvı çekilene kadar ve pirinç renkli.",
       it: "soffriggié riso con pomodori, peperones, cipollas, e spezie, poi Fai sobbollire con brodo liquido  assorbito e riso  colorato.",
-      ko: "볶습니다é 쌀와 토마토, 고추s, 양파s, 그리고 향신료, 그다음 약불로 끓여와 육수 액체 입니다 흡수될 때까지그리고 쌀 입니다 색이하세요."
+      ko: "쌀을 토마토, 피망, 양파, 향신료와 함께 볶아주세요. 육수를 넣고 물이 흡수되고 밥이 부드러워질 때까지 끓여주세요."
     },
     originText: {
       ro: "Jollof Rice este o rețetă tradițională din Nigeria.",
@@ -8804,7 +8804,7 @@ export const recipes = [
       ar: "قطّع السمك النيء إلى مكعبات، اخلطه مع حليب جوز الهند والبصل والطماطم والخيار والملح. قدّمه باردًا.",
       zh: "生鱼切块，与椰奶、洋葱、番茄、黄瓜和盐拌匀，冷食。",
       ja: "生魚を角切りにし、ココナッツミルク・玉ねぎ・トマト・きゅうり・塩と和えて冷やして提供。",
-      tr: "kesin çiğ balık içine küp, Karıştır ile hindistancevizi süt, soğbir, domates, salatalık, ve tuz. servis edin soğutulmuş.",
+      tr: "kesin çiğ balık küp şeklinde doğrayın, Karıştırın ile hindistancevizi süt, soğan, domates, salatalık, ve tuz. servis edin soğutulmuş.",
       it: "taglia crudo pesce dentro cubetti, Mescola con cocco latte, cipolla, pomodoro, cetriolo, e sale. servi raffreddato.",
       ko: "자릅니다 생 생선 안에 깍둑썰기, 섞고와 코코넛 우유, 양파, 토마토, 오이, 그리고 소금. 제공합니다 차갑게 식힌하세요."
     },
@@ -8897,7 +8897,7 @@ export const recipes = [
       ar: "انقع قطع اللحم بالبصل والتوابل والزيت، ضعها في أسياخ واشوها حتى تنضج.",
       zh: "肉块用洋葱、香料和油腌制，串在签子上烧烤至软嫩。",
       ja: "肉を玉ねぎ・スパイス・油でマリネし、串に刺して柔らかくなるまでグリルする。",
-      tr: "marine edin parçalar  et ile soğbir, baharatlar, ve yağ, şiş ve ızgara yapın yumuşayana kadar.",
+      tr: "marine edin parçalar et ile soğan, baharatlar, ve yağ, şiş ve ızgara yapın yumuşayana kadar.",
       it: "marina pezzi  carne con cipolla, spezie, e olio, spiedo e griglia finché sarà tenero.",
       ko: "재웁니다 조각 의 고기와 양파, 향신료, 그리고 기름, 꼬치그리고 굽습니다 부드러워질 때까지하세요."
     },
@@ -8990,9 +8990,9 @@ export const recipes = [
       ar: "احشِ أمعاء الخنزير بخليط من الدم والشعير والبصل والتوابل، اربطها واغلها أو اقليها.",
       zh: "猪肠内填入猪血、大麦、洋葱和香料混合物，扎紧后煮或炸。",
       ja: "豚の腸に豚の血・大麦・玉ねぎ・スパイスを詰め、縛って茹でるか揚げる。",
-      tr: "Stuff domuz eti bağırsaklar ile a karıştırınture  domuz kan, arpa, soğbir, ve baharatlar, bağlayın  ve byağ veya kavurun.",
+      tr: "Stuff domuz eti bağırsaklar ile a karıştırınture domuz kan, arpa, soğan, ve baharatlar, bağlayın ve bağlayın ve veya kavurun.",
       it: "Stuff maiale intestini con a mescolature  di maiale sangue, orzo, cipolla, e spezie, lega  e bolio o rosola.",
-      ko: "Stuff 돼지고기 창자와 a 섞습니다 의 돼지 피, 보리, 양파, 그리고 향신료, 묶습니다 그리고 삶아 또는 볶습니다하세요."
+      ko: "돼지 피, 보리, 양파, 향신료를 섞어 돼지 창자에 채워주세요. 끝을 묶어 삶거나 볶아주세요."
     },
     originText: {
       ro: "Verivorst este o rețetă tradițională din Estonia.",
@@ -9083,9 +9083,9 @@ export const recipes = [
       ar: "اطبخ كعكات الأرز في صوص كوجوجانج الحار مع كعكة السمك والبيض المسلوق والبصل الأخضر.",
       zh: "年糕用辣椒酱与鱼饼、煮蛋和葱一起煮制。",
       ja: "トッポッキ（餅）をコチュジャンの辛いソースで、かまぼこ・ゆで卵・ねぎと一緒に煮る。",
-      tr: "Pişir tteok (pirinç kek) in acı gochujang sos ile balık kek, byağ yumurta, ve yeşil soğbir.",
+      tr: "Pişirin tteok (pirinç kek) in acı gochujang sos ile balık kek, bağlayın ve yumurta, ve yeşil soğan.",
       it: "Cuoci tteok (riso torte) in piccante gochujang salsa con pesce torta, bolioed uovo, e verde cipolla.",
-      ko: "조리하고 tteok (쌀 케이크) 에서 매운 gochujang 소스와 생선 케이크, b기름 계란, 그리고 초록 양파하세요."
+      ko: "떡을 물에 불려주세요. 고추장, 간장, 설탕으로 소스를 만들어주세요. 떡을 어묵, 삶은 달걀, 파와 함께 소스에 넣고 떡이 부드러워질 때까지 조리해주세요."
     },
     originText: {
       ro: "Tteokbokki este o rețetă tradițională din Coreea de Sud.",
@@ -9176,9 +9176,9 @@ export const recipes = [
       ar: "انقع الروبيان المطبوخ في عصير الليمون مع الطماطم والبصل والفلفل والكزبرة والملح. قدّمه بارداً.",
       zh: "煮熟的虾用柠檬汁、番茄、洋葱、辣椒、香菜和盐腌制，冷食。",
       ja: "茹でたエビをライムジュース・トマト・玉ねぎ・唐辛子・コリアンダー・塩でマリネして冷やして提供。",
-      tr: "marine edin pişirined karides in yeşil limon suyu ile domates, soğbir, bibers, kişniş, ve tuz. servis edin soğutulmuş.",
+      tr: "marine edin pişirilmiş karides in yeşil limon suyu ile domates, soğan, biber, kişniş, ve tuz. servis edin soğutulmuş.",
       it: "marina cuocied gamberetti in lime succo con pomodori, cipolla, peperones, coriandolo, e sale. servi raffreddato.",
-      ko: "재웁니다 조리합니다 새우 에서 라임 주스와 토마토, 양파, 고추s, 고수, 그리고 소금. 제공합니다 차갑게 식힌하세요."
+      ko: "익힌 새우를 라임즙에 토마토, 양파, 피망, 고수, 소금과 함께 재워주세요. 차갑게 제공해주세요."
     },
     originText: {
       ro: "Ceviche de camarón este o rețetă tradițională din Ecuador.",
@@ -9269,7 +9269,7 @@ export const recipes = [
       ar: "اطبخ الأرز والفاصوليا الحمراء واللحم (عادة لحم بقري أو دجاج) كل على حدة، ثم قدمها مع سلطة وموز مقلي.",
       zh: "米饭、红豆和肉（通常是牛肉或鸡肉）分别煮熟，与沙拉和炸香蕉一起食用。",
       ja: "ご飯・赤インゲン豆・肉（牛肉または鶏肉）を別々に調理し、サラダやフライドバナナと一緒に盛り付ける。",
-      tr: "Pişir pirinç, kırmızı fasulye, ve et (genellikle dana eti veya tavuk) ayrı ayrı, sonra Servis et birlikte ile salata ve kızarmış muz (plantain).",
+      tr: "Pişirin pirinç, kırmızı fasulye, ve et (genellikle dana eti veya tavuk) ayrı ayrı, sonra Servis edin birlikte ile salata ve kızarmış muz (plantain).",
       it: "Cuoci riso, rosso fagioli, e carne (di solito manzo o pollo) separatamente, poi Servi insieme con insalata e fritto platano.",
       ko: "조리하고 쌀, 빨간 콩, 그리고 고기 (보통 소고기 또는 닭고기) 따로, 그다음 담아 내세요 함께와 샐러드그리고 튀긴 플랜틴하세요."
     },
@@ -9362,7 +9362,7 @@ export const recipes = [
       ar: "حمّر قطع اللحم (عادة الدجاج أو البط)، واطبخها ببطء في صوص الجوز المطحون ودبس الرمان حتى تصبح طرية.",
       zh: "肉块（通常为鸡肉或鸭肉）先煎香，再用核桃和石榴糖浆做的酱汁慢慢炖至酥烂。",
       ja: "鶏肉や鴨肉などを焼いて、クルミとザクロシロップのソースで柔らかくなるまで煮込む。",
-      tr: "kahverengi parçalar  et (genellikle tavuk veya ördek), sonra yavaşça pişirin onları sos  öğütülmüş ceviz ve nar pekmez yumuşayana kadar.",
+      tr: "kahverengi parçalar et (genellikle tavuk veya ördek), sonra yavaşça pişirin onları sos öğütülmüş ceviz ve nar pekmez yumuşayana kadar.",
       it: "marrone pezzi  carne (di solito pollo o anatra), poi lentamente cuoci li salsa  macinato noci e melograno melassa finché sarà tenero.",
       ko: "갈색 조각 의 고기 (보통 닭고기 또는 오리), 그다음 천천히 조리합니다 그것들을 에서 a 소스 의 간 호두그리고 석류 당밀 부드러워질 때까지하세요."
     },
@@ -9455,7 +9455,7 @@ export const recipes = [
       ar: "اسلق اللحم (عادة ذيل بقري أو رجل خنزير) مع الخضار، ثم اطبخه في صوص الفول السوداني الكثيف وقدمه مع معجون الروبيان.",
       zh: "牛尾或猪蹄和蔬菜煮熟后，用浓稠花生酱烹调，搭配虾酱食用。",
       ja: "テールや豚足を野菜と煮て、濃厚なピーナッツソースで調理し、シュリンプペーストを添えて提供。",
-      tr: "Haşla et (genellikle öküz kuyruğu veya domuz eti incik) ile sebzeler, sonra Pişir koyu yer fıstığı sos ve servis edin ile karides salça.",
+      tr: "Haşlayın et (genellikle öküz kuyruğu veya domuz eti incik) ile sebzeler, sonra Pişirin koyu yer fıstığı sos ve servis edin ile karides salça.",
       it: "Cuoci carne (di solito coda di bue o maiale stinco) con verdure, poi Cuoci denso arachide salsa e servi con gamberetti concentrato.",
       ko: "삶고 고기 (보통 소꼬리 또는 돼지고기 족발)와 채소, 그다음 조리하고 에서 a 걸쭉한 땅콩 소스그리고 제공합니다와 새우 페이스트하세요."
     },
@@ -9550,7 +9550,7 @@ export const recipes = [
       ja: "パン・ハム・ソーセージ・牛肉でサンドイッチを作り、チーズをのせてピリ辛トマトソースをかけ、焼き色がつくまで焼く。",
       tr: "Assemble sandviç ile ekmek, jambon, sosis, ve dana eti, örtün ile eritilmiş peynir ve dökün acı domates sos üzerine. fırında pişirin altın rengi.",
       it: "Assemble panino con pane, prosciutto, salsiccia, e manzo, copri con fuso formaggio e versa piccante pomodoro salsa sopra. cuoci in forno dorato.",
-      ko: "Assemble 샌드위치와 빵, 햄, 소시지, 그리고 소고기, 덮습니다와 녹인 치즈그리고 붓습니다 매운 토마토 소스 위에. 오븐에서 굽습니다 노릇하게하세요."
+      ko: "빵에 햄, 소시지, 소고기를 쌓아 올려주세요. 녹인 치즈를 덮고 매운 토마토 소스를 부어 오븐에 구워주세요."
     },
     originText: {
       ro: "Francesinha este o rețetă tradițională din Portugalia.",
@@ -9636,7 +9636,7 @@ export const recipes = [
       ar: "اقلي البيض والخضروات في الزيت، أضف اللحم ثم الأرز المطبوخ. امزج مع صلصة الصويا وقدمه ساخناً.",
       zh: "用油炒鸡蛋和蔬菜，加入肉类，然后放入煮熟的米饭。加入酱油拌匀，趁热食用。",
       ja: "油で卵と野菜を炒め、肉と炊いたご飯を加える。醤油で味付けし、熱いうちに提供する。",
-      tr: "Kızart yumurta ve sebzeler in yağ, Ekle et ve sonra pişirined pirinç. karıştırın ile soya sosu ve servis edin sıcak.",
+      tr: "Kızartın yumurta ve sebzeler in yağ, Ekleyin et ve sonra pişirilmiş pirinç. karıştırın ile soya sosu ve servis edin sıcak.",
       it: "Friggi uova e verdure in olio, Aggiungi carne e poi cuocied riso. mescola con salsa di soia e servi caldo.",
       ko: "볶거나 튀기고 계란그리고 채소 에서 기름, 넣고 고기그리고 그다음 조리합니다 쌀. 섞습니다와 간장그리고 제공합니다 뜨거운하세요."
     },
@@ -9729,7 +9729,7 @@ export const recipes = [
       ar: "اطبخ السلطعون في صوص الطماطم الحار مع الثوم والزنجبيل والفلفل الحار حتى ينضج اللحم ويتكاثف الصوص.",
       zh: "螃蟹与番茄辣酱、蒜、姜、辣椒一起烹煮，至肉质变嫩、酱汁浓稠。",
       ja: "カニをトマトのピリ辛ソース・ニンニク・生姜・唐辛子と一緒に煮込み、身が柔らかくなりソースが煮詰まるまで調理。",
-      tr: "Pişir yengeç in acı domates sos ile sarımsak, zencefil, ve acı biber et  yumuşak ve sos koyulaşır.",
+      tr: "Pişirin yengeç in acı domates sos ile sarımsak, zencefil, ve acı biber et yumuşak ve sos koyulaşır.",
       it: "Cuoci granchio in piccante pomodoro salsa con aglio, zenzero, e peperoncino carne  tenero e salsa si addensa.",
       ko: "조리하고 게 에서 매운 토마토 소스와 마늘, 생강, 그리고 고추 고기 입니다 부드럽게그리고 소스 걸쭉해집니다하세요."
     },
@@ -9822,7 +9822,7 @@ export const recipes = [
       ar: "اخلط دقيق الذرة مع الدهن والماء، ضع الحشوة على أوراق الذرة، لفها واطبخها على البخار.",
       zh: "玉米粉与猪油和水混合，包入馅料，用玉米叶包好，蒸至定型。",
       ja: "トウモロコシ粉をラードと水で混ぜ、具をとうもろこしの皮に乗せて巻き、蒸して固める。",
-      tr: "Karıştır mısırmeal ile domuz yağı ve su, yerleştirin iç harç üstüne mısır kabuk, rulo yapın  ve buharda pişirin koyun.",
+      tr: "Karıştırın mısırmeal ile domuz yağı ve su, yerleştirin iç harç üstüne mısır kabuk, rulo yapın ve buharda pişirin koyun.",
       it: "Mescola maismeal con strutto e acqua, metti ripieno su mais bucce, arrotola  e cuoci a vapore metti.",
       ko: "섞고 옥수수식사와 라드그리고 물, 놓습니다 속재료 위에 옥수수 껍질, 말아줍니다 그리고 찝니다 두세요하세요."
     },
@@ -9915,9 +9915,9 @@ export const recipes = [
       ar: "اغلِ المرق مع الجمبري والفطر وعشب الليمون والليمون والفلفل الحار وأوراق الكافير. تبلها بصلصة السمك وعصير الليمون.",
       zh: "用虾、蘑菇、香茅、青柠、辣椒和卡菲尔酸橙叶煮汤，以鱼露和青柠汁调味。",
       ja: "エビ・きのこ・レモングラス・ライム・唐辛子・コブミカンの葉でスープを煮て、ナンプラーとライム果汁で味付け。",
-      tr: "Haşla et suyu ile karides, mantar, limongrass, yeşil limon, acı biber, ve kaffir yeşil limon yaprak. Season ile balık sos ve yeşil limon suyu.",
+      tr: "Haşlayın et suyu ile karides, mantar, limongrass, yeşil limon, acı biber, ve kaffir yeşil limon yaprak. Season ile balık sos ve yeşil limon suyu.",
       it: "Cuoci brodo con gamberetti, funghi, limonegrass, lime, peperoncino, e kaffir lime foglie. Season con pesce salsa e lime succo.",
-      ko: "삶고 육수와 새우, 버섯, 레몬풀, 라임, 고추, 그리고 카피르 라임 잎. Season와 생선 소스그리고 라임 주스하세요."
+      ko: "육수에 새우, 버섯, 레몬그라스, 라임, 칠리, 카피르 라임잎을 넣고 끓여주세요. 피시 소스와 라임즙으로 간을 맞춰주세요."
     },
     originText: {
       ro: "Tom Yum este o rețetă tradițională din Thailanda.",
@@ -10008,7 +10008,7 @@ export const recipes = [
       ar: "افرد شرائح اللحم وغطها بالدقيق ثم البيض ثم البقسماط واقلها حتى تحمر.",
       zh: "将肉片拍薄，依次裹上面粉、蛋液和面包糠，煎至金黄。",
       ja: "薄切り肉を叩き、粉・卵・パン粉をまぶしてきつね色になるまで揚げる。",
-      tr: "dövün ince dilimler  et, una bulayın in un, yumurta, ve ekmekcrumbs, sonra Kızart altın rengi.",
+      tr: "eti ince dilimler halinde dövün, una bulayın in un, yumurta, ve galeta unu, sonra Kızartın altın rengi.",
       it: "batti sottile fette  carne, infarina in farina, uovo, e panecrumbs, poi Friggi dorato.",
       ko: "두드립니다 얇게 조각 의 고기, 가루를 묻힙니다 에서 밀가루, 계란, 그리고 빵빵가루, 그다음 볶거나 튀기고 노릇하게하세요."
     },
@@ -10101,7 +10101,7 @@ export const recipes = [
       ar: "قلّب مكعبات اللحم مع الثوم وصلصة المحار والفلفل الأسود، وقدّمها فوق سلطة مع أرز وبيض مقلي.",
       zh: "牛肉块与蒜、蚝油、黑胡椒炒香，配生菜、米饭和煎蛋。",
       ja: "牛肉をニンニク・オイスターソース・黒コショウで炒め、サラダ・ご飯・目玉焼きと一緒に提供。",
-      tr: "soteleyiné dana eti küp ile sarımsak, istiridye sos, ve karabiber, Servis et üstüne a yatak  salata ile pirinç ve kızarmış yumurta.",
+      tr: "soteleyin dana eti küp ile sarımsak, istiridye sos, ve karabiber, Servis edin üstüne a yatak salata ile pirinç ve kızarmış yumurta.",
       it: "soffriggié manzo cubetti con aglio, ostrica salsa, e pepe nero, Servi su a letto  insalata con riso e fritto uovo.",
       ko: "볶습니다é 소고기 깍둑썰기와 마늘, 굴 소스, 그리고 후추, 담아 내세요 위에 a 바닥 의 샐러드와 쌀그리고 튀긴 계란하세요."
     },
@@ -10194,7 +10194,7 @@ export const recipes = [
       ar: "حضّر عجينة من الدقيق والماء والملح. احشها بخليط اللحم المفروم والبصل، تبّلها، شكّلها واطبخها على البخار. قدّمها مع الزبدة الذائبة أو اللبن.",
       zh: "用面粉、水和盐做面团。包入牛肉洋葱馅，调味，做成饺子蒸熟。可配黄油或酸奶食用。",
       ja: "小麦粉と水、塩で生地を作る。牛ひき肉と玉ねぎの具を包み、調味し、蒸し器で蒸す。溶かしバターやヨーグルトで提供。",
-      tr: "yapın a hamur -den un, su ve tuz. doldurun ile kıyılmış dana eti ve soğbir karıştırınture, Baharatlandır, şekil verin mantı ve buharda pişirin. servis edin ile eritilmiş tereyağı veya yoğurt.",
+      tr: "yapın a hamur -den un, su ve tuz. doldurun ile kıyılmış dana eti ve soğan karıştırınture, Baharatlandır, şekil verin mantı ve buharda pişirin. servis edin ile eritilmiş tereyağı veya yoğurt.",
       it: "fai a impasto da farina, acqua e sale. farcisci con tritato manzo e cipolla mescolature, Condisci, dai forma ravioli e cuoci a vapore. servi con fuso burro o yogurt.",
       ko: "만듭니다 a 반죽 에서 밀가루, 물그리고 소금. 채웁니다와 다진 소고기그리고 양파 섞습니다, 간을 맞추고, 모양을 만듭니다 만두그리고 찝니다. 제공합니다와 녹인 버터 또는 요거트하세요."
     },
@@ -10282,7 +10282,7 @@ export const recipes = [
       ar: "اقلي البصل والدجاج، أضف الفلفل والطماطم، اطبخ ببطء مع البهارات والأعشاب. قدّمها ساخنة مع الخبز إذا رغبت.",
       zh: "炒洋葱和鸡肉，加入辣椒和番茄，慢火炖煮，加香料和香草。热食，可配面包。",
       ja: "玉ねぎと鶏肉を炒め、ピーマンとトマトを加えて、スパイスとハーブでじっくり煮込む。温かいうちに、パンと一緒にどうぞ。",
-      tr: "Kızart soğbir ve tavuk, Ekle kapya biber ve domates, Pişir yavaşça ile baharatlar ve otlar. servis edin ılık, isteğe bağlı olarak ile ekmek.",
+      tr: "Kızartın soğan ve tavuk, Ekleyin dolmalık biber ve domates, Pişirin yavaşça ile baharatlar ve otlar. servis edin ılık, isteğe bağlı olarak ile ekmek.",
       it: "Friggi cipolla e pollo, Aggiungi peperone e pomodori, Cuoci lentamente con spezie e erbe aromatiche. servi tiepido, facoltativamente con pane.",
       ko: "볶거나 튀기고 양파그리고 닭고기, 넣고 파프리카그리고 토마토, 조리하고 천천히와 향신료그리고 허브. 제공합니다 따뜻한, 선택으로와 빵하세요."
     },
@@ -10375,7 +10375,7 @@ export const recipes = [
       ar: "قلّب شرائح اللحم مع البصل والطماطم والفلفل، أضف صوص الصويا، وقدّمها مع البطاطس المقلية والأرز.",
       zh: "牛肉条与洋葱、番茄、辣椒炒香，加酱油，配薯条和米饭。",
       ja: "牛肉・玉ねぎ・トマト・ピーマンを炒めて醤油を加え、フライドポテトとご飯と共に提供。",
-      tr: "soteleyiné şeritler  dana eti ile soğbir, domates, ve biber, Ekle soya sosu, ve Servis et ile patates kızartması ve pirinç.",
+      tr: "soteleyin şeritler dana eti ile soğan, domates, ve biber, Ekleyin soya sosu, ve Servis edin ile patates kızartması ve pirinç.",
       it: "soffriggié strisce  manzo con cipolla, pomodoro, e peperone, Aggiungi salsa di soia, e Servi con patatine fritte e riso.",
       ko: "볶습니다é 조각 의 소고기와 양파, 토마토, 그리고 고추, 넣고 간장, 그리고 담아 내세요와 감자튀김그리고 쌀하세요."
     },
@@ -10468,7 +10468,7 @@ export const recipes = [
       ar: "اطبخ اللحم (غالباً لحم الضأن أو الدجاج) مع الخضار والفواكه المجففة والتوابل وقليل من الماء في طاجين مغطى.",
       zh: "羊肉或鸡肉与蔬菜、干果、香料和少量水在盖着的塔吉锅中慢炖。",
       ja: "ラム肉や鶏肉・野菜・ドライフルーツ・スパイス・少量の水をタジン鍋でじっくり煮込む。",
-      tr: "kısık ateşte yavaşça pişirin et (genellikle kuzu veya tavuk) ile sebzeler, kuru meyveler, baharatlar, ve a biraz  su kapalı tajin tenceresi.",
+      tr: "kısık ateşte yavaşça pişirin et (genellikle kuzu veya tavuk) ile sebzeler, kuru meyveler, baharatlar, ve a biraz su kapalı tajin tenceresi.",
       it: "cuoci lentamente carne (di solito agnello o pollo) con verdure, frutta secca, spezie, e a un po'  acqua coperto tajine.",
       ko: "약한 불로 천천히 조리합니다 고기 (보통 양고기 또는 닭고기)와 채소, 말린 과일, 향신료, 그리고 a 조금 의 물 에서 a 덮인 타진 냄비하세요."
     },
@@ -10561,9 +10561,9 @@ export const recipes = [
       ar: "اخلط اللحم المفروم مع البصل والبقسماط والبيض، شكّل كرات واقلها ثم قدّمها مع صوص كريمي وبطاطس مهروسة.",
       zh: "将肉末与洋葱、面包屑和鸡蛋混合搓成小球，煎熟后配奶油酱和土豆泥食用。",
       ja: "ひき肉・玉ねぎ・パン粉・卵を混ぜて丸めて焼き、クリームソースとマッシュポテトと一緒に提供。",
-      tr: "Karıştır kıyılmış et ile soğbir, ekmekcrumbs, ve yumurta, şekil verin içine toplar, Kızart onları, sonra Servis et ile kremay sos ve ezilmiş patates.",
+      tr: "Karıştırın kıyılmış et ile soğan, galeta unu, ve yumurta, şekil verin içine toplar, Kızartın onları, sonra Servis edin ile kremsi sos ve ezilmiş patates.",
       it: "Mescola tritato carne con cipolla, panecrumbs, e uovo, dai forma dentro polpette, Friggi li, poi Servi con pannay salsa e schiacciato patate.",
-      ko: "섞고 다진 고기와 양파, 빵빵가루, 그리고 계란, 모양을 만듭니다 안에 볼, 볶거나 튀기고 그것들을, 그다음 담아 내세요와 크림y 소스그리고 으깬 감자하세요."
+      ko: "다진 고기에 양파, 빵가루, 달걀을 넣어 섞고 동그랗게 빚어주세요. 볶다가 크리미한 소스와 으깬 감자와 함께 제공해주세요."
     },
     originText: {
       ro: "Köttbullar este o rețetă tradițională din Suedia.",
@@ -10654,9 +10654,9 @@ export const recipes = [
       ar: "اعجن دقيق الذرة مع الماء والملح، شكّل أقراصاً مسطحة واطبخها على الصاج أو في الفرن، ثم احشها كما ترغب.",
       zh: "玉米粉加水和盐和成面团，做成小饼，在铁板上烤或烘烤，按喜好夹馅。",
       ja: "トウモロコシ粉・水・塩を混ぜてこね、平らな円盤状にして鉄板やオーブンで焼き、好みの具材を挟む。",
-      tr: "Knead mısır un ile su ve tuz, şekil verin içine düz kek, Pişir üstüne a ızgara tava veya fırında pişirin, sonra doldurun  istenen.",
+      tr: "Knead mısır un ile su ve tuz, şekil verin içine düz kek, Pişirin üstüne a ızgara tava veya fırında pişirin, sonra doldurun istenen.",
       it: "Knead mais farina con acqua e sale, dai forma dentro piatto torte, Cuoci su a piastra o cuoci in forno, poi farcisci  desiderato.",
-      ko: "Knead 옥수수 밀가루와 물그리고 소금, 모양을 만듭니다 안에 납작한 케이크, 조리하고 위에 a 그릴 팬 또는 오븐에서 굽습니다, 그다음 채웁니다  원하는하세요."
+      ko: "옥수수 가루에 물과 소금을 넣고 반죽해주세요. 납작한 모양으로 빚어 그릴 또는 오븐에 구워주세요. 원하는 재료를 채워주세요."
     },
     originText: {
       ro: "Arepa este o rețetă tradițională din Venezuela.",
@@ -10840,7 +10840,7 @@ export const recipes = [
       ar: "اقلِ البصل والجزر والكرفس، أضف الفاصوليا والطماطم والمعكرونة. اطبخ حتى تنضج المعكرونة.",
       zh: "炒洋葱、胡萝卜和芹菜，加入豆类、番茄和意面。煮至意面熟。",
       ja: "玉ねぎ、にんじん、セロリを炒め、豆、トマト、パスタを加えて、パスタが柔らかくなるまで煮る。",
-      tr: "soteleyiné soğbir, havuç, ve kereviz, Ekle fasulye, domates, ve makarna. kısık ateşte pişirin makarna  pişirined.",
+      tr: "soteleyin soğan, havuç, ve kereviz, Ekleyin fasulye, domates, ve makarna. kısık ateşte pişirin makarna pişirilmiş.",
       it: "soffriggié cipolla, carota, e sedano, Aggiungi fagioli, pomodori, e pasta. lascia sobbollire pasta  cuocied.",
       ko: "볶습니다é 양파, 당근, 그리고 셀러리, 넣고 콩, 토마토, 그리고 파스타. 약불에서 끓입니다 파스타 입니다 조리합니다하세요."
     },
@@ -10933,9 +10933,9 @@ export const recipes = [
       ar: "قطّع خبز الباراتا أو الروتي، واقليه مع الخضار والبيض واللحم أو السمك حسب الرغبة وتبّلها.",
       zh: "把帕拉塔饼或烙饼切碎，与蔬菜、鸡蛋和喜欢的肉类或鱼一起炒，加香料调味。",
       ja: "パラータやロティを刻み、野菜・卵・肉や魚と炒めてスパイスで味付け。",
-      tr: "Doğra paratha veya roti, karıştırın-kavurun ile sebzeler, yumurta, ve  seçim  et veya balık, Baharatlandır ile baharatlar.",
+      tr: "Doğra paratha veya roti, karıştırın-kavurun ile sebzeler, yumurta, ve seçim et veya balık, Baharatlandır ile baharatlar.",
       it: "Trita paratha o roti, mescola-rosola con verdure, uovo, e  scelta  carne o pesce, Condisci con spezie.",
-      ko: "다져 paratha 또는 roti, 저어줍니다-볶습니다와 채소, 계란, 그리고  선택 의 고기 또는 생선, 간을 맞추고와 향신료하세요."
+      ko: "파라타 또는 로티를 잘게 썰어 채소, 달걀과 함께 볶아주세요. 고기 또는 생선을 추가하고 향신료로 간을 맞춰주세요."
     },
     originText: {
       ro: "Kottu este o rețetă tradițională din Sri Lanka.",
@@ -11119,7 +11119,7 @@ export const recipes = [
       ar: "حضّر عجين الأرز والكركم والماء، اسكبه رقيقًا في المقلاة، أضف اللحم والجمبري والخضار، واقليه حتى يصبح مقرمشًا.",
       zh: "用米粉、姜黄和水调糊，薄薄倒入锅中，加肉、虾和蔬菜，煎至酥脆。",
       ja: "米粉・ターメリック・水で生地を作り、薄くフライパンに広げて肉・エビ・野菜をのせ、カリカリに焼く。",
-      tr: "yapın a hamur -den pirinç un, zerdeçal, ve su, dökün ince ince içine a tava, Ekle et, karides, ve sebzeler, sonra Kızart çıtır.",
+      tr: "yapın a hamur -den pirinç un, zerdeçal, ve su, dökün ince ince içine a tava, Ekleyin et, karides, ve sebzeler, sonra Kızartın çıtır.",
       it: "fai a pastella da riso farina, curcuma, e acqua, versa sottilmente dentro a padella, Aggiungi carne, gamberetti, e verdure, poi Friggi croccante.",
       ko: "만듭니다 a 반죽 에서 쌀 밀가루, 강황, 그리고 물, 붓습니다 얇게 안에 a 팬, 넣고 고기, 새우, 그리고 채소, 그다음 볶거나 튀기고 바삭한하세요."
     },
@@ -11212,7 +11212,7 @@ export const recipes = [
       ar: "اسلق البطاطس وامزجها بالليمون، ضع طبقات من المايونيز والأفوكادو والتونة/الدجاج وقدمها باردة.",
       zh: "煮土豆，加柠檬拌匀，与蛋黄酱、牛油果和金枪鱼/鸡肉分层，冷食。",
       ja: "ジャガイモを茹でてレモンと混ぜ、マヨネーズ、アボカド、ツナまたは鶏肉で層にし、冷やして提供。",
-      tr: "Haşla patates, Karıştır ile limon, katman ile mayonez, avokado, ve ton balığı/tavuk, Servis et soğuk.",
+      tr: "Haşlayın patates, Karıştırın ile limon, katman ile mayonez, avokado, ve ton balığı/tavuk, Servis edin soğuk.",
       it: "Cuoci patate, Mescola con limone, strato con maionese, avocado, e tonno/pollo, Servi freddo.",
       ko: "삶고 감자, 섞고와 레몬, 층와 마요네즈, 아보카도, 그리고 참치/닭고기, 담아 내세요 차가운하세요."
     },
@@ -11305,7 +11305,7 @@ export const recipes = [
       ar: "اسلق اللحم (عادة ضأن أو بقر) حتى يطرى، وقدمه مع نودلز عريضة منزلية وبصل مقلي.",
       zh: "羊肉或牛肉煮至酥烂，配自制宽面和炒洋葱一起食用。",
       ja: "ラム肉や牛肉を柔らかく茹で、手作りの幅広麺と炒めた玉ねぎとともに盛り付ける。",
-      tr: "Haşla et (genellikle kuzu veya dana eti) yumuşayana kadar, Servis et üzerine ev yapımı geniş erişte ile soteleyiné soğbir.",
+      tr: "Haşlayın et (genellikle kuzu veya dana eti) yumuşayana kadar, Servis edin üzerine ev yapımı geniş erişte ile soteleyin soğan.",
       it: "Cuoci carne (di solito agnello o manzo) finché sarà tenero, Servi sopra fatto in casa ampio spaghetti con soffriggié cipolla.",
       ko: "삶고 고기 (보통 양고기 또는 소고기) 부드러워질 때까지, 담아 내세요 위에 수제 넓게 면와 볶습니다é 양파하세요."
     },
@@ -11398,9 +11398,9 @@ export const recipes = [
       ar: "اطبخ الأرز في حليب جوز الهند مع الماء والملح حتى يصبح كريميًا.",
       zh: "用椰奶、水和盐煮米饭，直到变得粘稠。",
       ja: "ご飯をココナッツミルクと水、塩でクリーミーになるまで炊く。",
-      tr: "Haşla pirinç in hindistancevizi süt ile su ve tuz kremay.",
+      tr: "Haşlayın pirinç in hindistancevizi süt ile su ve tuz kremsi.",
       it: "Cuoci riso in cocco latte con acqua e sale pannay.",
-      ko: "삶고 쌀 에서 코코넛 우유와 물그리고 소금 크림y하세요."
+      ko: "쌀을 씻어주세요. 코코넛 밀크와 물, 소금을 냄비에 넣고 끓여주세요. 약불로 줄여 쌀이 크리미해질 때까지 저으면서 조리해주세요."
     },
     originText: {
       ro: "Orez cu lapte de cocos este o rețetă tradițională din Asia.",
@@ -11491,9 +11491,9 @@ export const recipes = [
       ar: "اطبخ الأرز في حليب جوز الهند وأوراق الباندان، وقدمه مع بيض مسلوق وأنشوجة مقلية وفول سوداني وخيار وصلصة سامبال.",
       zh: "米饭用椰奶和香兰叶煮熟，配煮蛋、炸小鱼、花生、黄瓜和叁巴酱。",
       ja: "ご飯をココナッツミルクとパンダンリーフで炊き、ゆで卵・揚げ小魚・ピーナッツ・きゅうり・サンバルと一緒に提供。",
-      tr: "Haşla pirinç in hindistancevizi süt ile pandan yaprak, Servis et ile byağ yumurta, kızarmış hamsi, yer fıstığı, salatalık, ve sambal sos.",
+      tr: "Haşlayın pirinç in hindistancevizi süt ile pandan yaprak, Servis edin ile bağlayın ve yumurta, kızarmış hamsi, yer fıstığı, salatalık, ve sambal sos.",
       it: "Cuoci riso in cocco latte con pandan foglie, Servi con bolioed uovo, fritto acciughe, arachidi, cetriolo, e sambal salsa.",
-      ko: "삶고 쌀 에서 코코넛 우유와 pandan 잎, 담아 내세요와 b기름 계란, 튀긴 멸치, 땅콩, 오이, 그리고 sambal 소스하세요."
+      ko: "판단잎을 넣어 코코넛 밀크에 쌀을 끓여주세요. 삶은 달걀, 튀긴 멸치, 땅콩, 오이, 삼발 소스와 함께 제공해주세요."
     },
     originText: {
       ro: "Nasi lemak este o rețetă tradițională din Malaezia.",
@@ -11584,9 +11584,9 @@ export const recipes = [
       ar: "ابشر البطاطس واعصر السائل، شكّل أقراصاً واقلها حتى تحمر من الجهتين.",
       zh: "土豆擦丝去水，压成饼，两面煎至金黄酥脆。",
       ja: "じゃがいもをすりおろして水分を絞り、平たく成形し両面をこんがり焼く。",
-      tr: "Grate patates, sıkın  sıvı, şekil verin içine düz köfteler, ve Kızart üstüne her iki taraf altın rengi ve çıtır.",
+      tr: "Grate patates, sıkın sıvı, şekil verin içine düz köfteler, ve Kızartın üstüne her iki taraf altın rengi ve çıtır.",
       it: "Grate patate, spremi  liquido, dai forma dentro piatto polpette, e Friggi su entrambi lati dorato e croccante.",
-      ko: "Grate 감자, 짜줍니다  액체, 모양을 만듭니다 안에 납작한 패티, 그리고 볶거나 튀기고 위에 양쪽 면 노릇하게그리고 바삭하게하세요."
+      ko: "감자를 강판에 갈아 면포로 물기를 꼭 짜주세요. 소금으로 간을 맞추고 납작하게 빚어주세요. 팬에 기름을 두르고 양면이 노릇노릇해질 때까지 볶아주세요."
     },
     originText: {
       ro: "Rösti este o rețetă tradițională din Elveția.",
@@ -11672,7 +11672,7 @@ export const recipes = [
       ar: "اسلق الفاصوليا، اقلي الخضار، أضف النقانق ومعجون الطماطم والتوابل، واطبخ الجميع معاً.",
       zh: "煮豆子，炒蔬菜，加入香肠、番茄酱和调味料，一起炖煮。",
       ja: "豆を茹で、野菜を炒め、ソーセージ、トマトペースト、スパイスを加えて一緒に煮込む。",
-      tr: "Haşla fasulye, soteleyiné sebzeler, Ekle sosis, domates salça ve baharatlar, sonra Kısık ateşte pişir tüm birlikte.",
+      tr: "Haşlayın fasulye, soteleyin sebzeler, Ekleyin sosis, domates salça ve baharatlar, sonra Kısık ateşte pişir tüm birlikte.",
       it: "Cuoci fagioli, soffriggié verdure, Aggiungi salsicce, pomodoro concentrato e spezie, poi Fai sobbollire tutto insieme.",
       ko: "삶고 콩, 볶습니다é 채소, 넣고 소시지, 토마토 페이스트그리고 향신료, 그다음 약불로 끓여 모든 함께하세요."
     },
@@ -11765,9 +11765,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف الدجاج، رش البابريكا، اطبخه مع الكريمة الحامضة والتوابل حتى يصبح كريميًا.",
       zh: "炒洋葱，加入鸡肉，撒上红椒粉，用酸奶油和香料煮至浓稠。",
       ja: "玉ねぎを炒め、鶏肉を加え、パプリカを振りかけ、サワークリームとスパイスで煮てクリーミーにする。",
-      tr: "Kızart soğans, Ekle tavuk, serpiştirin toz biber, Pişir ile ekşi krema ve baharatlar kremay.",
+      tr: "Kızartın soğans, Ekleyin tavuk, serpiştirin toz biber, Pişirin ile ekşi krema ve baharatlar kremsi.",
       it: "Friggi cipollas, Aggiungi pollo, spolvera paprika, Cuoci con acidulo panna e spezie pannay.",
-      ko: "볶거나 튀기고 양파s, 넣고 닭고기, 뿌립니다 파프리카 가루, 조리하고와 새콤한 크림그리고 향신료 크림y하세요."
+      ko: "양파를 볶다가 닭고기를 넣고 파프리카를 뿌려주세요. 사워크림과 향신료를 넣고 크리미해질 때까지 조리해주세요."
     },
     originText: {
       ro: "Chicken Paprikash este o rețetă tradițională din Ungaria.",
@@ -11858,7 +11858,7 @@ export const recipes = [
       ar: "اقلي الباذنجان، اسلق المعكرونة، حضّر صلصة الطماطم وامزجها مع الريكوتا والريحان.",
       zh: "煎茄子，煮意大利面，做番茄酱，与奶酪和罗勒混合。",
       ja: "ナスを炒め、パスタを茹で、トマトソースを作り、リコッタとバジルと合わせる。",
-      tr: "Kızart yumurtaplants, Pişir makarna, yapın domates sos, Birleştir ile ricotta ve fesleğen.",
+      tr: "Kızartın yumurtaplants, Pişirin makarna, yapın domates sos, Birleştir ile ricotta ve fesleğen.",
       it: "Friggi uovoplants, Cuoci pasta, fai pomodoro salsa, Unisci con ricotta e basilico.",
       ko: "볶거나 튀기고 계란식물, 조리하고 파스타, 만듭니다 토마토 소스, 섞어와 리코타그리고 바질하세요."
     },
@@ -11951,7 +11951,7 @@ export const recipes = [
       ar: "افرد عجينة بسيطة، احشها باللحم المفروم والبصل، غطها بعجينة أخرى واخبزها حتى تحمر.",
       zh: "擀开面团，包入肉末和洋葱，盖上另一层面，烤至金黄。",
       ja: "シンプルな生地を伸ばし、ひき肉と玉ねぎを包み、もう一枚の生地で覆い、焼き色がつくまで焼く。",
-      tr: "rulo yapın  basit hamur, doldurun ile kıyılmış et ve soğbir, örtün ile başka yufka, ve Fırında pişir altın rengi.",
+      tr: "rulo yapın basit hamur, doldurun ile kıyılmış et ve soğan, örtün ile başka yufka, ve Fırında pişir altın rengi.",
       it: "arrotola  semplice impasto, farcisci con tritato carne e cipolla, copri con un altro foglio, e Cuoci al forno dorato.",
       ko: "말아줍니다  간단한 반죽, 채웁니다와 다진 고기그리고 양파, 덮습니다와 다른 시트, 그리고 오븐에 구워 노릇하게하세요."
     },
@@ -12044,7 +12044,7 @@ export const recipes = [
       ar: "احشِ صدور الدجاج بالزبدة والثوم والبقدونس، لُفّها، غطِّها بالدقيق ثم البيض والبقسماط، واقلها حتى تكتسب لونًا ذهبيًا.",
       zh: "将黄油、大蒜和香菜包入鸡胸肉，卷起，蘸面粉、蛋液和面包屑，炸至金黄。",
       ja: "鶏むね肉にバター、ニンニク、パセリを包み、巻いて小麦粉・卵・パン粉をつけて揚げる。",
-      tr: "doldurun tavuk göğsü ile tereyağı, sarımsak ve maydanoz, rulo yapın o , kaplayın ile un, yumurta ve ekmekcrumbs, sonra Kızart altın rengi.",
+      tr: "doldurun tavuk göğsü ile tereyağı, sarımsak ve maydanoz, rulo yapın bunu , kaplayın ile un, yumurta ve galeta unu, sonra Kızartın altın rengi.",
       it: "farcisci petto di pollo con burro, aglio e prezzemolo, arrotola esso , ricopri con farina, uovo e panecrumbs, poi Friggi dorato.",
       ko: "채웁니다 닭가슴살와 버터, 마늘그리고 파슬리, 말아줍니다 그것 , 입힙니다와 밀가루, 계란그리고 빵빵가루, 그다음 볶거나 튀기고 노릇하게하세요."
     },
@@ -12137,9 +12137,9 @@ export const recipes = [
       ar: "ابشر البطاطس وامزجها بالدقيق واحشها باللحم المفروم، شكّل كرات كبيرة واسلقها حتى تنضج. قدمها مع القشدة الحامضة.",
       zh: "土豆擦丝加面粉，包入肉末做成大团，煮熟后配酸奶油食用。",
       ja: "じゃがいもをすりおろし小麦粉と混ぜ、ひき肉を包み大きな団子にして茹で、サワークリームを添える。",
-      tr: "Grate patates, Karıştır ile un ve doldurun ile kıyılmış et, şekil verin büyük mantı ve byağ yumuşak. servis edin ile ekşi krema.",
+      tr: "Grate patates, Karıştırın ile un ve doldurun ile kıyılmış et, şekil verin büyük mantı ve bağlayın ve yumuşak. servis edin ile ekşi krema.",
       it: "Grate patate, Mescola con farina e farcisci con tritato carne, forma grande ravioli e bolio morbido. servi con acidulo panna.",
-      ko: "Grate 감자, 섞고와 밀가루그리고 채웁니다와 다진 고기, 모양을 만듭니다 큰 만두그리고 삶아 부드러운. 제공합니다와 새콤한 크림하세요."
+      ko: "감자를 갈아 밀가루와 섞고 다진 고기로 속을 채워주세요. 큰 만두 모양으로 빚어 부드러워질 때까지 삶아주세요. 사워크림과 함께 제공해주세요."
     },
     originText: {
       ro: "Cepelinai este o rețetă tradițională din Lituania.",
@@ -12225,7 +12225,7 @@ export const recipes = [
       ar: "حمّر الدجاج بالزبدة، أضف الخضار، رش الدقيق، أضف النبيذ والماء واطبخ ببطء. أضف الكريمة في النهاية.",
       zh: "鸡肉用黄油煎至金黄，加入蔬菜，撒面粉，加酒和水炖煮，最后加入奶油。",
       ja: "バターで鶏肉を焼き、野菜を加え、小麦粉を振りかけて白ワインと水で煮込む。最後にクリームを加える。",
-      tr: "kahverengi tavuk parçalar in tereyağı, Ekle sebzeler, serpiştirin ile un, tavayı çözdürün ile şarap ve su, Kısık ateşte pişir. karıştırın in krema  sonunda.",
+      tr: "kahverengi tavuk parçalar in tereyağı, Ekleyin sebzeler, serpiştirin ile un, tavayı çözdürün ile şarap ve su, Kısık ateşte pişir. karıştırın in krema sonunda.",
       it: "marrone pollo pezzi in burro, Aggiungi verdure, spolvera con farina, sfuma con vino e acqua, Fai sobbollire. mescola in panna  alla fine.",
       ko: "갈색 닭고기 조각 에서 버터, 넣고 채소, 뿌립니다와 밀가루, 팬을 디글레이즈합니다와 와인그리고 물, 약불로 끓여. 저어줍니다 에서 크림 에서 마지막에하세요."
     },
@@ -12318,7 +12318,7 @@ export const recipes = [
       ar: "اقلِ اللحم مع البصل والتوابل، أضف الطماطم والأرز، واطبخ كل شيء حتى ينضج الأرز.",
       zh: "肉和洋葱、香料炒香，加番茄和米饭炖至米饭熟透入味。",
       ja: "肉を玉ねぎ・スパイスと炒め、トマトと米を加え、一緒に煮てご飯が炊き上がるまで煮る。",
-      tr: "Kızart et ile soğbir ve baharatlar, Ekle domates ve pirinç, sonra Kısık ateşte pişir her şeyi birlikte pirinç  pişirined ve lezzetli.",
+      tr: "Kızartın et ile soğan ve baharatlar, Ekleyin domates ve pirinç, sonra Kısık ateşte pişir her şeyi birlikte pirinç pişirilmiş ve lezzetli.",
       it: "Friggi carne con cipolla e spezie, Aggiungi pomodori e riso, poi Fai sobbollire tutto insieme riso  cuocied e sapori intensi.",
       ko: "볶거나 튀기고 고기와 양파그리고 향신료, 넣고 토마토그리고 쌀, 그다음 약불로 끓여 모든 것 함께 쌀 입니다 조리합니다그리고 풍미가 좋은하세요."
     },
@@ -12411,9 +12411,9 @@ export const recipes = [
       ar: "اقلي الدجاج، ثم أضف الخضار والتوابل واطبخ بزبدة الفول السوداني حتى يصبح الصوص كريميًا.",
       zh: "先煎鸡肉，再加蔬菜和调料，加入花生酱炖至浓稠。",
       ja: "鶏肉を炒め、野菜やスパイスを加え、ピーナッツバターでクリーミーなソースに仕上げる。",
-      tr: "Kızart tavuk, Ekle sebzeler ve baharatlar, Pişir ile yer fıstığı tereyağı sos  kremay.",
+      tr: "Kızartın tavuk, Ekleyin sebzeler ve baharatlar, Pişirin ile yer fıstığı tereyağı sos kremsi.",
       it: "Friggi pollo, Aggiungi verdure e spezie, Cuoci con arachide burro salsa  pannay.",
-      ko: "볶거나 튀기고 닭고기, 넣고 채소그리고 향신료, 조리하고와 땅콩 버터 소스 입니다 크림y하세요."
+      ko: "닭고기를 볶고 채소와 향신료를 넣어주세요. 땅콩 버터를 넣고 소스가 크리미해질 때까지 조리해주세요."
     },
     originText: {
       ro: "Pui Moambe este o rețetă tradițională din Republica Congo.",
@@ -12426,7 +12426,7 @@ export const recipes = [
       ar: "دجاج موامبي هي وصفة تقليدية من جمهورية الكونغو.",
       zh: "花生酱炖鸡 是来自刚果共和国的传统食谱。",
       ja: "ムアンベチキン はコンゴ共和国の伝統的なレシピです。",
-      tr: "Moambe tavuk Republic   Congo kökenli geleneksel bir tariftir.",
+      tr: "Moambe tavuk Republic Congo kökenli geleneksel bir tariftir.",
       it: "Moambe pollo è una risotta tradizionale di Republic   Congo.",
       ko: "Moambe 닭고기는(은) Republic 의  Congo의 전통 요리입니다."
     }
@@ -12504,7 +12504,7 @@ export const recipes = [
       ar: "اسلق الفاصوليا، ثم أضف اللحوم والنقانق المحمرة والخضار والأعشاب. اطبخ ببطء في الفرن.",
       zh: "先煮豆子，再加入炒香的肉类、香肠、蔬菜和香草，放入烤箱慢炖入味。",
       ja: "豆を茹で、炒めた肉やソーセージ、野菜、ハーブを加え、オーブンでゆっくり煮込む。",
-      tr: "Haşla fasulye, sonra Ekle kahverengileşene kadar etler, sosis, sebzeler ve otlar. kısık ateşte yavaşça pişirin in fırın her şeyi birleşir.",
+      tr: "Haşlayın fasulye, sonra Ekleyin kahverengileşene kadar etler, sosis, sebzeler ve otlar. kısık ateşte yavaşça pişirin in fırın her şeyi birleşir.",
       it: "Cuoci fagioli, poi Aggiungi dorato carni, salsicce, verdure e erbe aromatiche. cuoci lentamente in forno tutto si uniscono.",
       ko: "삶고 콩, 그다음 넣고 노릇해질 때까지 고기, 소시지, 채소그리고 허브. 약한 불로 천천히 조리합니다 에서 오븐 모든 것 어우러집니다하세요."
     },
@@ -12597,7 +12597,7 @@ export const recipes = [
       ar: "انقع لحم البقر بالخل والثوم والتوابل، واطبخه ببطء مع الخضار والنبيذ الأحمر وصلصة الطماطم حتى ينضج.",
       zh: "牛肉用醋、大蒜和香料腌制，与蔬菜、红酒和番茄酱慢炖至酥烂。",
       ja: "牛肉を酢・ニンニク・スパイスでマリネし、野菜・赤ワイン・トマトソースと一緒にじっくり煮込む。",
-      tr: "marine edin dana eti ile sirke, sarımsak, ve baharatlar, kısık ateşte yavaşça pişirin o ile sebzeler, kırmızı şarap, ve domates sos yumuşayana kadar.",
+      tr: "marine edin dana eti ile sirke, sarımsak, ve baharatlar, kısık ateşte yavaşça pişirin bunu ile sebzeler, kırmızı şarap, ve domates sos yumuşayana kadar.",
       it: "marina manzo con aceto, aglio, e spezie, cuoci lentamente esso con verdure, rosso vino, e pomodoro salsa finché sarà tenero.",
       ko: "재웁니다 소고기와 식초, 마늘, 그리고 향신료, 약한 불로 천천히 조리합니다 그것와 채소, 빨간 와인, 그리고 토마토 소스 부드러워질 때까지하세요."
     },
@@ -12690,7 +12690,7 @@ export const recipes = [
       ar: "اخلط لحم الخنزير ولحم الضأن المفروم مع التوابل، شكّل سجقًا صغيرًا، ولفه بشحم الخروف واشوه.",
       zh: "猪肉和羊肉末加香料拌匀，做成小香肠，用网油包裹，烤至金黄。",
       ja: "豚肉と羊肉のひき肉にスパイスを混ぜて小さなソーセージ状にし、網脂で包み、グリルで焼く。",
-      tr: "Karıştır kıyılmış domuz eti ve kuzu ile baharatlar, şekil verin içine küçük sosis, sarın in gömlek yağı yağ, ve Izgara yap kahverengileşene kadar.",
+      tr: "Karıştırın kıyılmış domuz eti ve kuzu ile baharatlar, şekil verin içine küçük sosis, sarın in gömlek yağı yağ, ve Izgarada pişirin kahverengileşene kadar.",
       it: "Mescola tritato maiale e agnello con spezie, dai forma dentro piccolo salsicce, avvolgi in rete di grasso grasso, e Griglia dorato.",
       ko: "섞고 다진 돼지고기그리고 양고기와 향신료, 모양을 만듭니다 안에 작게 소시지, 감싸줍니다 에서 내장지방막 지방, 그리고 구워 노릇해질 때까지하세요."
     },
@@ -12783,7 +12783,7 @@ export const recipes = [
       ar: "اخلط المكونات، شكّل نقانق صغيرة، اشوها وقدّمها مع خبز مسطح وبصل.",
       zh: "混合原料，做成小香肠，烤熟后搭配饼和洋葱食用。",
       ja: "材料を混ぜて小さなソーセージ型にし、グリルで焼き、フラットブレッドと玉ねぎと一緒に提供。",
-      tr: "Karıştır malzemeler, şekil verin küçük sosis, Izgara yap onları ve servis edin ile flatekmek ve soğbir.",
+      tr: "Karıştırın malzemeler, şekil verin küçük sosis, Izgarada pişirin onları ve servis edin ile flatekmek ve soğan.",
       it: "Mescola ingredienti, forma piccolo salsicce, Griglia li e servi con flatpane e cipolla.",
       ko: "섞고 재료, 모양을 만듭니다 작게 소시지, 구워 그것들을그리고 제공합니다와 납작한빵그리고 양파하세요."
     },
@@ -12876,9 +12876,9 @@ export const recipes = [
       ar: "اسلق الكسافا وموز الجنة، ثم اهرسهم معًا حتى يصبح المزيج مرنًا.",
       zh: "将木薯和大蕉煮熟，然后捣成光滑有弹性的糊状。",
       ja: "キャッサバとプランテンバナナを茹で、滑らかで弾力が出るまで一緒に潰す。",
-      tr: "Haşla manyok ve muz (plantain), sonra dövün birlikte pürüzsüz ve esnek.",
+      tr: "Haşlayın manyok ve muz (plantain), sonra dövün birlikte pürüzsüz ve esnek.",
       it: "Cuoci manioca e platano, poi batti insieme liscio e elastico.",
-      ko: "삶고 카사바그리고 플랜틴, 그다음 두드립니다 함께 부드럽게그리고 탄력 있는하세요."
+      ko: "카사바와 플랜틴을 껍질을 벗겨 넉넉한 물에 삶아주세요. 물기를 빼고 큰 절구에 넣어 함께 찧어주세요. 부드럽고 탄력 있는 질감이 될 때까지 반죽해주세요."
     },
     originText: {
       ro: "Fufu este o rețetă tradițională din Ghana.",
@@ -13062,7 +13062,7 @@ export const recipes = [
       ar: "اسلق لحم الخنزير مع ذرة الهوميني والبصل والثوم. أضف الفلفل الحار، وقدمه مع الكرنب والفجل والليم.",
       zh: "把猪肉、玉米、洋葱和大蒜煮熟。加入辣椒，配卷心菜、萝卜和青柠食用。",
       ja: "豚肉、ホミニーコーン、玉ねぎ、ニンニクを煮る。唐辛子を加え、キャベツ、ラディッシュ、ライムと一緒に提供。",
-      tr: "Haşla domuz eti ile 옥수수 알갷 mısır, soğbir ve sarımsak. ekleyin acı biber biber, sonra Servis et ile lahana, turp, ve yeşil limon.",
+      tr: "Haşlayın domuz eti ile mısır, soğan ve sarımsak. ekleyin acı biber biber, sonra Servis edin ile lahana, turp, ve yeşil limon.",
       it: "Cuoci maiale con hominy mais, cipolla e aglio. aggiungi peperoncino peperone, poi Servi con cavolo, ravanello, e lime.",
       ko: "삶고 돼지고기와 호미니 옥수수, 양파그리고 마늘. 넣습니다 고추 고추, 그다음 담아 내세요와 양배추, 무, 그리고 라임하세요."
     },
@@ -13155,9 +13155,9 @@ export const recipes = [
       ar: "اطبخ اللحم مع الخضار والبذور المحمصة والفلفل والطماطم والتوابل حتى يصبح الصوص كثيفاً. قدّمه مع الأرز.",
       zh: "肉和蔬菜与烤熟的种子、辣椒、西红柿和香料炖煮至酱汁浓稠。配米饭食用。",
       ja: "肉と野菜・炒った種・唐辛子・トマト・スパイスを煮て濃厚なソースを作り、ご飯と一緒に提供。",
-      tr: "Pişir et ile sebzeler, kavrulmuş tohum, bibers, domates, ve baharatlar a koyu sos oluşturur. servis edin ile pirinç.",
+      tr: "Pişirin et ile sebzeler, kavrulmuş tohum, biber, domates, ve baharatlar a koyu sos oluşturur. servis edin ile pirinç.",
       it: "Cuoci carne con verdure, tostato semi, peperones, pomodori, e spezie a denso salsa forma. servi con riso.",
-      ko: "조리하고 고기와 채소, 구운 씨앗, 고추s, 토마토, 그리고 향신료 a 걸쭉한 소스 형성됩니다. 제공합니다와 쌀하세요."
+      ko: "볶은 씨앗, 피망, 토마토, 향신료와 함께 고기를 조리해주세요. 진한 소스가 형성될 때까지 끓이고 밥과 함께 제공해주세요."
     },
     originText: {
       ro: "Pepian este o rețetă tradițională din Guatemala.",
@@ -13250,7 +13250,7 @@ export const recipes = [
       ja: "すべての材料をさいの目に切り、混ぜてケフィールまたはクワスをかけて冷やして提供。",
       tr: "Dice tüm malzemeleri, Karıştır, ve dökün kefir veya kvas üzerine. soğuk servis edin.",
       it: "Dice tutti gli ingredienti, Mescola, e versa kefir o kvas sopra. servila fredda.",
-      ko: "Dice 모든 재료, 섞고, 그리고 붓습니다 케피르 또는 크바스 위에. 차갑게 제공합니다하세요."
+      ko: "모든 재료를 깍둑썰기해 섞어주세요. 케피르 또는 크바스를 부어주세요. 차갑게 제공해주세요."
     },
     originText: {
       ro: "Okroshka este o rețetă tradițională din Rusia.",
@@ -13336,7 +13336,7 @@ export const recipes = [
       ar: "اقلي اللحم والخضار، ثم اطبخ كل شيء مع الأرز والتوابل حتى تمتص الماء.",
       zh: "先炒肉和蔬菜，然后与米饭和香料一起煮至水分被吸收。",
       ja: "肉と野菜を炒め、ご飯とスパイスと一緒に水分がなくなるまで煮込む。",
-      tr: "Kızart et ve sebzeler, sonra Pişir her şeyi ile pirinç ve baharatlar su  çekilene kadar.",
+      tr: "Kızartın et ve sebzeler, sonra Pişirin her şeyi ile pirinç ve baharatlar su çekilene kadar.",
       it: "Friggi carne e verdure, poi Cuoci tutto con riso e spezie acqua  assorbito.",
       ko: "볶거나 튀기고 고기그리고 채소, 그다음 조리하고 모든 것와 쌀그리고 향신료 물 입니다 흡수될 때까지하세요."
     },
@@ -13429,7 +13429,7 @@ export const recipes = [
       ar: "حضّر العجينة، افردها، أضف حشوة الجوز والعسل والزبدة، لفها واخبزها حتى تصبح ذهبية.",
       zh: "制作面团，擀开，加入核桃、蜂蜜和黄油馅，卷起后烘烤至金黄。",
       ja: "生地を作って伸ばし、クルミ・ハチミツ・バターのフィリングをのせて巻き、黄金色になるまで焼く。",
-      tr: "hazırlayın hamur, rulo yapın o , Ekle ceviz, bal, ve tereyağı iç harç, rulo yapın  ve fırında pişirin altın rengi.",
+      tr: "hazırlayın hamur, rulo yapın bunu , Ekleyin ceviz, bal, ve tereyağı iç harç, rulo yapın ve fırında pişirin altın rengi.",
       it: "prepara impasto, arrotola esso , Aggiungi noce, miele, e burro ripieno, arrotola  e cuoci in forno dorato.",
       ko: "준비합니다 반죽, 말아줍니다 그것 , 넣고 호두, 꿀, 그리고 버터 속재료, 말아줍니다 그리고 오븐에서 굽습니다 노릇하게하세요."
     },
@@ -13522,9 +13522,9 @@ export const recipes = [
       ar: "اقلي بذور الإيجوسي المطحونة بالزيت، أضف اللحم المسلوق والخضار، واطبخ حتى يتماسك.",
       zh: "将磨碎的埃古西籽在油中炒香，加入煮熟的肉和蔬菜，炖至浓稠。",
       ja: "砕いたエグシの種を油で炒め、茹でた肉と野菜を加えてとろみがつくまで煮込む。",
-      tr: "Kızart öğütülmüş egusi tohum in yağ, Ekle byağ et ve sebzeler, Kısık ateşte pişir koyulaşmış.",
+      tr: "Kızartın öğütülmüş egusi tohum in yağ, Ekleyin bağlayın ve et ve sebzeler, Kısık ateşte pişir koyulaşmış.",
       it: "Friggi macinato egusi semi in olio, Aggiungi bolioed carne e verdure, Fai sobbollire addensato.",
-      ko: "볶거나 튀기고 간 에구시 씨앗 에서 기름, 넣고 b기름 고기그리고 채소, 약불로 끓여 걸쭉해진하세요."
+      ko: "에구시 씨를 갈아 기름에 볶아주세요. 삶은 고기와 채소를 넣고 걸쭉해질 때까지 끓여주세요."
     },
     originText: {
       ro: "Egusi soup este o rețetă tradițională din Nigeria.",
@@ -13615,7 +13615,7 @@ export const recipes = [
       ar: "غلف شريحة لحم الخنزير بالدقيق والبيض والبقسماط واقلِ حتى يصبح ذهبيًا.",
       zh: "猪排裹上面粉、鸡蛋和面包糠，油炸至金黄。",
       ja: "豚肉を小麦粉・卵・パン粉で衣をつけ、油で黄金色になるまで揚げる。",
-      tr: "kaplayın domuz eti doğrayın in un, yumurta ve ekmekcrumbs, sonra Kızart in yağ altın rengi.",
+      tr: "kaplayın domuz eti doğrayın in un, yumurta ve galeta unu, sonra Kızartın in yağ altın rengi.",
       it: "ricopri maiale trita in farina, uovo e panecrumbs, poi Friggi in olio dorato.",
       ko: "입힙니다 돼지고기 다집니다 에서 밀가루, 계란그리고 빵빵가루, 그다음 볶거나 튀기고 에서 기름 노릇하게하세요."
     },
@@ -13708,9 +13708,9 @@ export const recipes = [
       ar: "انشر الأرز على أوراق الأعشاب البحرية، أضف البيض والخضار واللحم، ولف بإحكام. قطّع وقدم مع صلصة الصويا.",
       zh: "把米饭铺在紫菜上，加入鸡蛋、蔬菜和火腿，卷起切片，用酱油蘸食。",
       ja: "ご飯を海苔に広げ、卵、野菜、ハムをのせて巻き、切って醤油で食べる。",
-      tr: "yayın pirinç üstüne deniz yosunu yufka, Ekle yumurta, sebzeler, ve jambon, rulo yapın sıkıca. Slice rulolar ve servis edin ile soya sosu.",
+      tr: "yayın pirinç üstüne deniz yosunu yufka, Ekleyin yumurta, sebzeler, ve jambon, rulo yapın sıkıca. Slice rulolar ve servis edin ile soya sosu.",
       it: "stendi riso su alga sfoglie, Aggiungi uovo, verdure, e prosciutto, arrotola strettamente. Slice involtini e servi con salsa di soia.",
-      ko: "펼칩니다 쌀 위에 김 시트, 넣고 계란, 채소, 그리고 햄, 말아줍니다 단단히. Slice 롤그리고 제공합니다와 간장하세요."
+      ko: "김에 밥을 펴고 달걀, 채소, 햄을 올려 단단하게 말아주세요. 롤을 썰어 간장과 함께 제공해주세요."
     },
     originText: {
       ro: "Kimbap este o rețetă tradițională din Coreea de Sud.",
@@ -13801,7 +13801,7 @@ export const recipes = [
       ar: "اقلي البصل واللحم، أضف التوابل، ضع في طبق، غطِّيه بهريس الذرة واخبزه.",
       zh: "炒洋葱和肉，加入香料，放入烤盘，用玉米泥覆盖，入烤箱烘烤。",
       ja: "玉ねぎと肉を炒めてスパイスを加え、耐熱皿に入れてコーンピューレで覆い、オーブンで焼く。",
-      tr: "Kızart soğbir ve et, Ekle baharatlar, yerleştirin yemek, örtün ile mısır püreée, Fırında pişir in fırın.",
+      tr: "Kızartın soğan ve et, Ekleyin baharatlar, yerleştirin yemek, örtün ile mısır püreée, Fırında pişir in fırın.",
       it: "Friggi cipolla e carne, Aggiungi spezie, metti piatto, copri con mais pureaée, Cuoci al forno in forno.",
       ko: "볶거나 튀기고 양파그리고 고기, 넣고 향신료, 놓습니다 에서 a 요리, 덮습니다와 옥수수 퓨레ée, 오븐에 구워 에서 오븐하세요."
     },
@@ -13894,7 +13894,7 @@ export const recipes = [
       ar: "اخلط المكونات، شكّل برجر كبير، اقلي أو اشوِ وقدّمه مع سلطة أو خبز.",
       zh: "混合原料，做成大肉饼，煎或烤，配沙拉或面包食用。",
       ja: "材料を混ぜて大きなパティを作り、焼くかグリルし、サラダやパンと一緒に提供。",
-      tr: "Karıştır malzemeler, şekil verin büyük köfteler, Kızart veya ızgara yapın ve servis edin ile salata veya ekmek.",
+      tr: "Karıştırın malzemeler, şekil verin büyük köfteler, Kızartın veya ızgara yapın ve servis edin ile salata veya ekmek.",
       it: "Mescola ingredienti, forma grande polpette, Friggi o griglia e servi con insalata o panino.",
       ko: "섞고 재료, 모양을 만듭니다 큰 패티, 볶거나 튀기고 또는 굽습니다그리고 제공합니다와 샐러드 또는 번하세요."
     },
@@ -13987,7 +13987,7 @@ export const recipes = [
       ar: "اخلط المكونات، دعها تتخمر، اطبخها في قوالب خاصة وقدمها مع الزبدة والسكر البودرة.",
       zh: "混合原料，发酵后在特制锅中煎熟，搭配黄油和糖粉食用。",
       ja: "材料を混ぜて発酵させ、専用の型で焼き、バターと粉砂糖を添えて。",
-      tr: "Karıştır malzemeler, Beklet mayalanın, Pişir in özel tavalar, Servis et ile tereyağı ve toz şeker.",
+      tr: "Karıştırın malzemeler, Beklet mayalanın, Pişirin in özel tavalar, Servis edin ile tereyağı ve toz şeker.",
       it: "Mescola ingredienti, Lascia lievita, Cuoci in speciale teglie, Servi con burro e in polvere zucchero.",
       ko: "섞고 재료, 두세요 발효합니다, 조리하고 에서 특별한 팬, 담아 내세요와 버터그리고 가루 설탕하세요."
     },
@@ -14075,9 +14075,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف اللحم ثم الخضار. أضف الماء ومعجون الكاري، اطبخ حتى ينضج كل شيء وقدم مع الأرز.",
       zh: "炒洋葱，加肉，再加蔬菜。加水和咖喱酱，小火煮至熟烂，配米饭食用。",
       ja: "玉ねぎを炒め、肉と野菜を加える。水とカレールウを加えて煮込み、ご飯と一緒に提供。",
-      tr: "soteleyiné soğans, Ekle et, sonra sebzeler. ekleyin su ve köri salça, Kısık ateşte pişir yumuşayana kadar, Servis et ile pirinç.",
+      tr: "soteleyin soğans, Ekleyin et, sonra sebzeler. ekleyin su ve köri salça, Kısık ateşte pişir yumuşayana kadar, Servis edin ile pirinç.",
       it: "soffriggié cipollas, Aggiungi carne, poi verdure. aggiungi acqua e curry concentrato, Fai sobbollire finché sarà tenero, Servi con riso.",
-      ko: "볶습니다é 양파s, 넣고 고기, 그다음 채소. 넣습니다 물그리고 카레 페이스트, 약불로 끓여 부드러워질 때까지, 담아 내세요와 쌀하세요."
+      ko: "양파를 볶다가 고기를 넣고 채소를 추가해주세요. 물과 카레 페이스트를 넣고 부드러워질 때까지 끓인 후 밥과 함께 제공해주세요."
     },
     originText: {
       ro: "Curry japonez este o rețetă tradițională din Japonia.",
@@ -14163,9 +14163,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا، أضف الخضار المفرومة واطبخ حتى تصبح طرية. تبّل بزيت الزيتون وقدّمها دافئة.",
       zh: "煮白豆，加入切碎的蔬菜煮至软烂。加入橄榄油调味，热食。",
       ja: "白いんげん豆を煮て、野菜を加え、すべてが柔らかくなるまで調理。オリーブオイルで味付けして温かく提供。",
-      tr: "Haşla fasulye, Ekle doğranmış sebzeler ve pişirin her şeyi  yumuşak. Season ile zeytinyağı ve servis edin ılık.",
+      tr: "Haşlayın fasulye, Ekleyin doğranmış sebzeler ve pişirin her şeyi yumuşak. Season ile zeytinyağı ve servis edin ılık.",
       it: "Cuoci fagioli, Aggiungi tritato verdure e cuoci tutto  tenero. Season con olio d'oliva e servi tiepido.",
-      ko: "삶고 콩, 넣고 다진 채소그리고 조리합니다 모든 것 입니다 부드럽게. Season와 올리브오일그리고 제공합니다 따뜻한하세요."
+      ko: "콩을 삶고 채소를 넣어 모두 부드러워질 때까지 조리해주세요. 올리브 오일로 간을 맞추고 따뜻하게 제공해주세요."
     },
     originText: {
       ro: "Fasolada este o rețetă tradițională din Grecia.",
@@ -14256,7 +14256,7 @@ export const recipes = [
       ar: "افرد الفول على التورتيلا، أضف اللحم والجبن والخضار. اخبزها أو اشوِها حتى تصبح مقرمشة.",
       zh: "将豆泥抹在玉米饼上，加入肉、奶酪和蔬菜，烤或煎至酥脆。",
       ja: "トルティーヤに豆を塗り、肉・チーズ・野菜をのせて焼くかグリルしてカリッとさせる。",
-      tr: "yayın fasulye üstüne tortilla, Ekle et, peynir ve sebzeler. fırında pişirin veya ızgara yapın çıtır.",
+      tr: "yayın fasulye üstüne tortilla, Ekleyin et, peynir ve sebzeler. fırında pişirin veya ızgara yapın çıtır.",
       it: "stendi fagioli su tortilla, Aggiungi carne, formaggio e verdure. cuoci in forno o griglia croccante.",
       ko: "펼칩니다 콩 위에 토르티야, 넣고 고기, 치즈그리고 채소. 오븐에서 굽습니다 또는 굽습니다 바삭한하세요."
     },
@@ -14344,7 +14344,7 @@ export const recipes = [
       ar: "اطبخ اللحم والفاصوليا والأرز بشكل منفصل. قدّم كل شيء معًا في طبق كبير مع موز مقلي، بيض، أفوكادو، تشوريزو وأريبا.",
       zh: "牛肉、豆类、米饭分开煮。一起放大盘子上，配上煎蕉、鸡蛋、鳄梨、辣香肠和玉米饼。",
       ja: "肉、豆、ご飯を別々に調理し、大きなお皿に揚げたプランテン、卵、アボカド、チョリソ、アレパと一緒に盛り付ける。",
-      tr: "Pişir et, fasulye, ve pirinç ayrı ayrı. servis edin tüm birlikte üstüne a büyük tabak ile kızarmış muz (plantain), yumurta, avokado, chorizo, ve arepa.",
+      tr: "Pişirin et, fasulye, ve pirinç ayrı ayrı. servis edin tüm birlikte üstüne a büyük tabak ile kızarmış muz (plantain), yumurta, avokado, chorizo, ve arepa.",
       it: "Cuoci carne, fagioli, e riso separatamente. servi tutto insieme su a grande piatto con fritto platano, uovo, avocado, chorizo, e arepa.",
       ko: "조리하고 고기, 콩, 그리고 쌀 따로. 제공합니다 모든 함께 위에 a 큰 접시와 튀긴 플랜틴, 계란, 아보카도, 초리소, 그리고 아레파하세요."
     },
@@ -14437,7 +14437,7 @@ export const recipes = [
       ar: "حضّر عجين مخمر، افرده واقله في الزيت الساخن حتى ينتفخ ويحمر. قدّمه مع القشدة الحامضة والجبن.",
       zh: "发酵面团擀开，放入热油中炸至蓬松金黄，配酸奶油和奶酪食用。",
       ja: "発酵生地を伸ばして熱い油で揚げ、サワークリームとチーズを添えて提供。",
-      tr: "hazırlayın mayalanmış hamur, rulo yapın o , ve derin-kavurun in sıcak yağ kabarmış ve altın rengi. servis edin ile ekşi krema ve peynir.",
+      tr: "hazırlayın mayalanmış hamur, rulo yapın bunu , ve derin-kavurun in sıcak yağ kabarmış ve altın rengi. servis edin ile ekşi krema ve peynir.",
       it: "prepara lievitato impasto, arrotola esso , e profondo-rosola in caldo olio soffice e dorato. servi con acidulo panna e formaggio.",
       ko: "준비합니다 발효된 반죽, 말아줍니다 그것 , 그리고 깊은-볶거나 튀겨 에서 뜨거운 기름 폭신한그리고 노릇하게. 제공합니다와 새콤한 크림그리고 치즈하세요."
     },
@@ -14530,7 +14530,7 @@ export const recipes = [
       ar: "اسلق الفاصوليا الحمراء، واطبخها في صوص الطماطم والبصل والثوم والزنجبيل والتوابل. قدّمها مع الأرز.",
       zh: "红芸豆煮熟后，用番茄、洋葱、大蒜、生姜和香料做成的酱汁炖煮，配米饭食用。",
       ja: "赤いんげん豆を茹でて、トマト・玉ねぎ・にんにく・しょうが・スパイスのソースで煮込み、ご飯と一緒に提供。",
-      tr: "Haşla kırmızı fasulye, sonra Pişir baharatlı domates, soğbir, sarımsak, ve zencefil sos. servis edin ile pirinç.",
+      tr: "Haşlayın kırmızı fasulye, sonra Pişirin baharatlı domates, soğan, sarımsak, ve zencefil sos. servis edin ile pirinç.",
       it: "Cuoci rossi fagioli, poi Cuoci speziato pomodoro, cipolla, aglio, e zenzero salsa. servi con riso.",
       ko: "삶고 강낭 콩, 그다음 조리하고 에서 a 향신료를 넣은 토마토, 양파, 마늘, 그리고 생강 소스. 제공합니다와 쌀하세요."
     },
@@ -14623,7 +14623,7 @@ export const recipes = [
       ar: "اقلي اللحم مع البصل والثوم، أضف الخضار والزيتون والزبيب. اطبخ حتى تختلط النكهات.",
       zh: "将牛肉末与洋葱和大蒜炒香，加入蔬菜、橄榄和葡萄干，炖至入味。",
       ja: "牛ひき肉を玉ねぎとニンニクで炒め、野菜・オリーブ・レーズンを加えて煮込む。",
-      tr: "Kızart dana eti ile soğbir ve sarımsak, Ekle sebzeler, zeytin, ve kuru üzüm. kısık ateşte pişirin lezzetler blenderdan geçirin.",
+      tr: "Kızartın dana eti ile soğan ve sarımsak, Ekleyin sebzeler, zeytin, ve kuru üzüm. kısık ateşte pişirin lezzetler blenderdan geçirin.",
       it: "Friggi manzo con cipolla e aglio, Aggiungi verdure, olive, e uvetta. lascia sobbollire sapori frulla.",
       ko: "볶거나 튀기고 소고기와 양파그리고 마늘, 넣고 채소, 올리브, 그리고 건포도. 약불에서 끓입니다 맛 블렌더에 갈아줍니다하세요."
     },
@@ -14809,7 +14809,7 @@ export const recipes = [
       ar: "اطبخ لحم الغنم مع الخضار، ضعهم في طبق، غطهم بالبطاطا المهروسة واخبز حتى يتحمر.",
       zh: "将羊肉和蔬菜炒熟，放入盘中，盖上土豆泥，烤至金黄。",
       ja: "羊肉と野菜を炒め、耐熱皿に入れ、マッシュポテトで覆い、焼き色がつくまで焼く。",
-      tr: "Pişir kuzu ile sebzeler, yerleştirin yemek, üstüne ile ezilmiş patates, ve Fırında pişir altın rengi.",
+      tr: "Pişirin kuzu ile sebzeler, yerleştirin yemek, üstüne ile ezilmiş patates, ve Fırında pişir altın rengi.",
       it: "Cuoci agnello con verdure, metti piatto, sopra con schiacciato patate, e Cuoci al forno dorato.",
       ko: "조리하고 양고기와 채소, 놓습니다 에서 a 요리, 위에와 으깬 감자, 그리고 오븐에 구워 노릇하게하세요."
     },
@@ -14902,7 +14902,7 @@ export const recipes = [
       ar: "اقلِ اللحم المفروم مع الثوم والزنجبيل، أضف التوفو والصلصة الحارة وصلصة الصويا والفلفل الحار واطبخ الجميع.",
       zh: "肉末与蒜、姜炒香，加入豆腐块、辣豆瓣酱、酱油和辣椒，一起烧煮。",
       ja: "ひき肉をニンニクとショウガと炒め、豆腐・辛味噌・しょうゆ・唐辛子を加えて一緒に煮る。",
-      tr: "Kızart kıyılmış et ile sarımsak ve zencefil, Ekle küp doğranmış tofu, acı fasulye salça, soya sosu, ve acı biber, sonra Pişir her şeyi birlikte.",
+      tr: "Kızartın kıyılmış et ile sarımsak ve zencefil, Ekleyin küp doğranmış tofu, acı fasulye salça, soya sosu, ve acı biber, sonra Pişirin her şeyi birlikte.",
       it: "Friggi tritato carne con aglio e zenzero, Aggiungi a cubetti tofu, piccante fagiolo concentrato, salsa di soia, e peperoncino, poi Cuoci tutto insieme.",
       ko: "볶거나 튀기고 다진 고기와 마늘그리고 생강, 넣고 깍둑썰기한 두부, 매운 콩 페이스트, 간장, 그리고 고추, 그다음 조리하고 모든 것 함께하세요."
     },
@@ -14995,7 +14995,7 @@ export const recipes = [
       ar: "اقلِ البصل والفلفل في زيت الزيتون، أضف الطماطم المفرومة، ثم اكسر البيض فوقها واطبخه مع التحريك.",
       zh: "洋葱和辣椒用橄榄油炒香，加番茄丁煮软，打入鸡蛋轻轻搅拌至熟。",
       ja: "玉ねぎとピーマンをオリーブオイルで炒め、刻んだトマトを加えて煮て、卵を割り入れ優しく混ぜながら火を通す。",
-      tr: "Kızart soğbir ve biber in zeytinyağı, Ekle doğranmış domates ve pişirin, sonra kırın yumurta üstüne üstüne ve pişirin nazikçe -ken karıştırarak.",
+      tr: "Kızartın soğan ve biber in zeytinyağı, Ekleyin doğranmış domates ve pişirin, sonra kırın yumurta üstüne üstüne ve pişirin nazikçe -ken karıştırarak.",
       it: "Friggi cipolla e peperone in olio d'oliva, Aggiungi tritato pomodori e cuoci, poi rompi uova su sopra e cuoci delicatamente mentre mescolando.",
       ko: "볶거나 튀기고 양파그리고 고추 에서 올리브오일, 넣고 다진 토마토그리고 조리합니다, 그다음 깨뜨립니다 계란 위에 위에그리고 조리합니다 부드럽게 동안 저으면서하세요."
     },
@@ -15088,7 +15088,7 @@ export const recipes = [
       ar: "اغلي اللحم، أضف النقانق والخضار، تبّل، قدم مع القشدة الحامضة والليمون.",
       zh: "煮牛肉，加入香肠和蔬菜调味，配酸奶油和柠檬食用。",
       ja: "牛肉を茹で、ソーセージと野菜を加えて味付けし、サワークリームとレモンを添えて提供。",
-      tr: "Haşla dana eti, Ekle sosis ve sebzeler, Baharatlandır, Servis et ile ekşi krema ve limon.",
+      tr: "Haşlayın dana eti, Ekleyin sosis ve sebzeler, Baharatlandır, Servis edin ile ekşi krema ve limon.",
       it: "Cuoci manzo, Aggiungi salsicce e verdure, Condisci, Servi con acidulo panna e limone.",
       ko: "삶고 소고기, 넣고 소시지그리고 채소, 간을 맞추고, 담아 내세요와 새콤한 크림그리고 레몬하세요."
     },
@@ -15181,7 +15181,7 @@ export const recipes = [
       ar: "حمّر البصل واللحم المقدد، أضف الدقيق، البطاطس والحليب، اطبخ ثم أضف المحار في النهاية.",
       zh: "炒洋葱和培根，加入面粉、土豆和牛奶，煮沸后最后加蛤蜊。",
       ja: "玉ねぎとベーコンを炒め、小麦粉・ジャガイモ・牛乳を加え煮込み、最後にアサリを入れる。",
-      tr: "soteleyiné soğbir ve pastırma, Ekle un, patates, ve süt, Kısık ateşte pişir, sonra Ekle midye  sonunda.",
+      tr: "soteleyin soğan ve pastırma, Ekleyin un, patates, ve süt, Kısık ateşte pişir, sonra Ekleyin midye sonunda.",
       it: "soffriggié cipolla e pancetta, Aggiungi farina, patate, e latte, Fai sobbollire, poi Aggiungi vongole  alla fine.",
       ko: "볶습니다é 양파그리고 베이컨, 넣고 밀가루, 감자, 그리고 우유, 약불로 끓여, 그다음 넣고 조개 에서 마지막에하세요."
     },
@@ -15274,7 +15274,7 @@ export const recipes = [
       ar: "اقلِ النقانق، اقطعها شرائح وقدمها مع صلصة الطماطم والكاري.",
       zh: "香肠煎熟切片，配以咖喱番茄酱。",
       ja: "ソーセージを焼いてスライスし、カレー風味のトマトソースと一緒に提供。",
-      tr: "Kızart sosis, Dilimle onları, ve Servis et ile a domates sos karıştırıned ile köri tozu.",
+      tr: "Kızartın sosis, Dilimle onları, ve Servis edin ile a domates sos karıştırıned ile köri tozu.",
       it: "Friggi salsicce, Affetta li, e Servi con a pomodoro salsa mescolaed con curry in polvere.",
       ko: "볶거나 튀기고 소시지, 썰어 그것들을, 그리고 담아 내세요와 a 토마토 소스 섞습니다와 카레 가루하세요."
     },
@@ -15367,9 +15367,9 @@ export const recipes = [
       ar: "اغلِ صدور الدجاج مع حليب جوز الهند، عشب الليمون، الجلانجال، أوراق الليمون والفطر. تبلها بصلصة السمك والليمون.",
       zh: "鸡胸肉与椰奶、香茅、南姜、青柠叶、蘑菇一起煮，用鱼露和青柠汁调味。",
       ja: "鶏胸肉をココナッツミルク・レモングラス・ガランガル・コブミカンの葉・きのこと一緒に煮て、ナンプラーとライムで味付け。",
-      tr: "Haşla tavuk göğsü ile hindistancevizi süt, limongrass, galangal, kaffir yeşil limon yaprak, ve mantar. Season ile balık sos ve yeşil limon.",
+      tr: "Haşlayın tavuk göğsü ile hindistancevizi süt, limongrass, galangal, kaffir yeşil limon yaprak, ve mantar. Season ile balık sos ve yeşil limon.",
       it: "Cuoci petto di pollo con cocco latte, limonegrass, galanga, kaffir lime foglie, e funghi. Season con pesce salsa e lime.",
-      ko: "삶고 닭가슴살와 코코넛 우유, 레몬풀, 갈랑갈, 카피르 라임 잎, 그리고 버섯. Season와 생선 소스그리고 라임하세요."
+      ko: "코코넛 밀크에 레몬그라스, 갈랑갈, 카피르 라임잎, 버섯을 넣고 닭가슴살을 끓여주세요. 피시 소스와 라임즙으로 간을 맞춰주세요."
     },
     originText: {
       ro: "Tom Kha Gai este o rețetă tradițională din Thailanda.",
@@ -15460,7 +15460,7 @@ export const recipes = [
       ar: "اسلق الذرة والفاصوليا، ثم أضف الخضار واللحم واطبخ طويلًا حتى يصبح كثيفًا.",
       zh: "先煮玉米和豆类，再加蔬菜和肉，慢炖至浓稠。",
       ja: "トウモロコシと豆を煮て、野菜や肉を加え、長時間煮込む。",
-      tr: "Haşla mısır ve fasulye, Ekle sebzeler ve et, Kısık ateşte pişir için a uzun süre koyu.",
+      tr: "Haşlayın mısır ve fasulye, Ekleyin sebzeler ve et, Kısık ateşte pişir için a uzun süre koyu.",
       it: "Cuoci mais e fagioli, Aggiungi verdure e carne, Fai sobbollire per a lungo tempo denso.",
       ko: "삶고 옥수수그리고 콩, 넣고 채소그리고 고기, 약불로 끓여 을 위해 a 긴 시간 걸쭉한하세요."
     },
@@ -15553,7 +15553,7 @@ export const recipes = [
       ar: "اسلق الخضار، اهرسها واطبخها مع الزبدة والتوابل. قدّمها مع خبز باف المحمّص بالزبدة.",
       zh: "将蔬菜煮熟捣碎，用黄油和香料翻炒。搭配用黄油烤过的面包一起食用。",
       ja: "野菜を茹でてつぶし、バターとスパイスで炒める。バターで焼いたパンと一緒に提供。",
-      tr: "Haşla sebzeler, ezin ve pişirin ile tereyağı ve baharatlar. servis edin ile tereyağı-kavrulmuş ekmek.",
+      tr: "Haşlayın sebzeler, ezin ve pişirin ile tereyağı ve baharatlar. servis edin ile tereyağı-kavrulmuş ekmek.",
       it: "Cuoci verdure, schiaccia e cuoci con burro e spezie. servi con burro-tostato panini.",
       ko: "삶고 채소, 으깨세요그리고 조리합니다와 버터그리고 향신료. 제공합니다와 버터-구운 번하세요."
     },
@@ -15646,7 +15646,7 @@ export const recipes = [
       ar: "قطّع اللحم والخضار، ضعهم في وعاء، أضف ماء وملح وفلفل. اطبخ ببطء في الفرن حتى تنضج.",
       zh: "将肉和蔬菜切块放锅中，加水、盐、胡椒，慢炖至酥烂。",
       ja: "肉と野菜を角切りし、鍋に入れ、水・塩・コショウを加えてオーブンでゆっくり煮込む。",
-      tr: "kesin et ve sebzeler içine küp, koyun tencere, Ekle su, tuz, biber. kısık ateşte yavaşça pişirin in fırın yumuşayana kadar.",
+      tr: "kesin et ve sebzeler küp şeklinde doğrayın, koyun tencere, Ekleyin su, tuz, biber. kısık ateşte yavaşça pişirin in fırın yumuşayana kadar.",
       it: "taglia carne e verdure dentro cubetti, metti pentola, Aggiungi acqua, sale, peperone. cuoci lentamente in forno finché sarà tenero.",
       ko: "자릅니다 고기그리고 채소 안에 깍둑썰기, 넣습니다 에서 a 냄비, 넣고 물, 소금, 고추. 약한 불로 천천히 조리합니다 에서 오븐 부드러워질 때까지하세요."
     },
@@ -15739,7 +15739,7 @@ export const recipes = [
       ar: "حمّر اللحم، أضف الخضار والنبيذ واطبخ ببطء لساعات.",
       zh: "将牛肉煎至上色，加入蔬菜和葡萄酒，小火慢炖数小时。",
       ja: "牛肉を焼き色がつくまで炒め、野菜とワインを加え、数時間煮込む。",
-      tr: "kahverengi dana eti, Ekle sebzeler ve şarap, sonra kısık ateşte yavaşça pişirin için saat her şeyi  yumuşak ve lezzetli.",
+      tr: "kahverengi dana eti, Ekleyin sebzeler ve şarap, sonra kısık ateşte yavaşça pişirin için saat her şeyi yumuşak ve lezzetli.",
       it: "marrone manzo, Aggiungi verdure e vino, poi cuoci lentamente per ore tutto  tenero e sapori intensi.",
       ko: "갈색 소고기, 넣고 채소그리고 와인, 그다음 약한 불로 천천히 조리합니다 을 위해 시간 모든 것 입니다 부드럽게그리고 풍미가 좋은하세요."
     },
@@ -15832,9 +15832,9 @@ export const recipes = [
       ar: "اقلي البصل والفلفل والثوم، أضف الطماطم والتوابل، ثم اكسر البيض فوقها واطبخ حتى ينضج.",
       zh: "炒洋葱、辣椒和大蒜，加入番茄和香料，打入鸡蛋，煮至蛋熟。",
       ja: "玉ねぎ・ピーマン・ニンニクを炒め、トマトとスパイスを加え、上に卵を割り入れて固まるまで火を通す。",
-      tr: "soteleyiné soğbir, bibers ve sarımsak, Ekle domates ve baharatlar, sonra kırın yumurta üstüne üstüne ve pişirin koyun.",
+      tr: "soteleyin soğan, biber ve sarımsak, Ekleyin domates ve baharatlar, sonra kırın yumurta üstüne üstüne ve pişirin koyun.",
       it: "soffriggié cipolla, peperones e aglio, Aggiungi pomodori e spezie, poi rompi uova su sopra e cuoci metti.",
-      ko: "볶습니다é 양파, 고추s그리고 마늘, 넣고 토마토그리고 향신료, 그다음 깨뜨립니다 계란 위에 위에그리고 조리합니다 두세요하세요."
+      ko: "양파, 피망, 마늘을 볶아주세요. 토마토와 향신료를 넣어주세요. 달걀을 위에 올려 익을 때까지 조리해주세요."
     },
     originText: {
       ro: "Chakchouka este o rețetă tradițională din Tunisia.",
@@ -15925,7 +15925,7 @@ export const recipes = [
       ar: "اخلط الدقيق والبيض والكرنب ومكونات أخرى حسب الرغبة، واقلها كفطيرة سميكة، ثم قدمها مع صوص الأكونومياكي والمايونيز.",
       zh: "将面粉、鸡蛋、卷心菜和喜欢的配料混合，煎成厚煎饼，配以大阪烧酱和蛋黄酱。",
       ja: "小麦粉・卵・キャベツなど好きな具材を混ぜ、厚めのパンケーキ状に焼き、オコノミヤキソースとマヨネーズで提供。",
-      tr: "Karıştır un, yumurta, lahana, ve isteğe bağlı malzemeler, Kızart  a koyu krep, sonra Servis et ile okonomiyaki sos ve mayonez.",
+      tr: "Karıştırın un, yumurta, lahana, ve isteğe bağlı malzemeler, Kızartın a koyu krep, sonra Servis edin ile okonomiyaki sos ve mayonez.",
       it: "Mescola farina, uova, cavolo, e facoltativo ingredienti, Friggi  a denso pancake, poi Servi con okonomiyaki salsa e maionese.",
       ko: "섞고 밀가루, 계란, 양배추, 그리고 선택 재료, 볶거나 튀기고  a 걸쭉한 팬케이크, 그다음 담아 내세요와 오코노미야키 소스그리고 마요네즈하세요."
     },
