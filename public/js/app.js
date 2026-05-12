@@ -462,151 +462,141 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
   function generatePDFimpact() {
-  if (window.html2canvas) {
-    window.html2canvas.logging = true; // activare debug
-  }
   const isPremium = !!window.hasUnlimited;
   const allMeals  = collectMeals();
-  // Free users see only days 1–2; premium users see all 7
   const freeDays   = 2;
   const visibleMeals = isPremium ? allMeals : allMeals.slice(0, freeDays);
   const lockedMeals  = isPremium ? []        : allMeals.slice(freeDays);
   const hasLocked    = lockedMeals.some(m => m.lunch || m.dinner);
-
   const t = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || k;
 
-  let shoppingHTML = `<div>`;
+  // ── helpers ──────────────────────────────────────────────────
+  function getRecipe(mealText) {
+    if (!mealText) return null;
+    const title = extractRecipeName(mealText);
+    return (window.recipes || []).find(r =>
+      r.name?.[lang]?.toLowerCase() === title.toLowerCase() ||
+      r.name?.en?.toLowerCase()  === title.toLowerCase()
+    ) || null;
+  }
+  function metaHTML(r) {
+    if (!r) return '';
+    const parts = [];
+    if (r.time)    parts.push(`<span class="meta-tag">⏱ ${r.time} min</span>`);
+    if (r.costRon) parts.push(`<span class="meta-tag">💰 ${formatCost(r.costRon)}</span>`);
+    if (r.origin?.[lang]) parts.push(`<span class="meta-tag">🌍 ${r.origin[lang]}</span>`);
+    return parts.length ? `<div class="meal-meta">${parts.join('')}</div>` : '';
+  }
+  function ingrPillsHTML(r) {
+    const items = r?.ingredients?.[lang] || r?.ingredients?.en || [];
+    if (!items.length) return '';
+    return `<div class="meal-ingr">
+      <div class="ingr-label">${t('col.ingredients') || 'Ingrediente'}</div>
+      <div class="ingr-pills">${items.map(i => `<span class="ingr-pill">${i}</span>`).join('')}</div>
+    </div>`;
+  }
+  function stepsOL(r) {
+    const raw = r?.howIsMade?.[lang] || r?.howIsMade?.ro || '';
+    const steps = raw.split('.').map(x => x.trim()).filter(Boolean);
+    if (!steps.length) return '';
+    return `<div class="meal-steps-label">${t('howIsMade') || 'Preparare'}</div>
+    <ol class="meal-steps">${steps.map(s => `<li>${s}.</li>`).join('')}</ol>`;
+  }
+  function mealBlockHTML(mealText, type) {
+    const r    = getRecipe(mealText);
+    const name = mealText ? extractRecipeName(mealText) : '';
+    const icon = type === 'lunch' ? '🍲' : '🌙';
+    const label = type === 'lunch' ? (t('col.lunch') || 'Lunch') : (t('col.dinner') || 'Dinner');
+    return `<div class="meal-block meal-block--${type}">
+      <div class="meal-label">${icon} ${label}</div>
+      <div class="meal-name">${name}</div>
+      ${metaHTML(r)}
+      ${ingrPillsHTML(r)}
+      ${stepsOL(r)}
+    </div>`;
+  }
+
+  // ── collect all ingredients for shopping list ─────────────────
+  const allIngrSet = new Set();
+  visibleMeals.forEach(m => {
+    [m.lunch, m.dinner].filter(Boolean).forEach(meal => {
+      const r = getRecipe(meal);
+      (r?.ingredients?.[lang] || r?.ingredients?.en || []).forEach(i => allIngrSet.add(i));
+    });
+  });
+  const ingrArr = [...allIngrSet];
+  const half = Math.ceil(ingrArr.length / 2);
+  const col1 = ingrArr.slice(0, half);
+  const col2 = ingrArr.slice(half);
+
+  // ── day cards ─────────────────────────────────────────────────
+  let daysHTML = '';
   visibleMeals.forEach((m, idx) => {
     if (!m.lunch && !m.dinner) return;
-    shoppingHTML += `<div class="recipe-section"><div class="recipe-day">${m.day}</div>`;
-    // --- LUNCH ---
-    if (m.lunch) {
-      const titleL = extractRecipeName(m.lunch);
-      const recipeLunch = (window.recipes || []).find(r => r.name?.[lang]?.toLowerCase() === titleL.toLowerCase());
-      const stepsLunch = (recipeLunch?.howIsMade?.[lang] || recipeLunch?.howIsMade?.ro || '')
-        .split('.').map(x => x.trim()).filter(Boolean);
-      const howIsMadeHTMLLunch = stepsLunch.length > 1
-        ? `<ul>${stepsLunch.map(s => `<li>${s}.</li>`).join('')}</ul>`
-        : `<span class="howis">${stepsLunch[0] || ''}</span>`;
-
-      const lunchMetaBadges = recipeLunch ? [
-        recipeLunch.time    ? `⏱️ ${recipeLunch.time} min` : '',
-        recipeLunch.costRon ? `💰 ${formatCost(recipeLunch.costRon)}` : '',
-        ...(recipeLunch.tags || []).slice(0,2).map(t => (TAG_LABELS[t]||{})[lang]||(TAG_LABELS[t]||{}).en||t),
-      ].filter(Boolean).join('  ·  ') : '';
-      shoppingHTML += `
-        <div>
-          <span class="recipe-lunch">🍲 ${i18n[lang]["col.lunch"]}: ${titleL}</span><br>
-          ${lunchMetaBadges ? `<span class="pdf-meta-badges">${lunchMetaBadges}</span><br>` : ''}
-          ${recipeLunch?.origin?.[lang] ? `<em class="origin">(${i18n[lang]["col.origin"] || 'Țara'}: ${recipeLunch.origin[lang]})</em><br>` : ''}
-          ${recipeLunch?.ingredients?.[lang]?.length ? `<span class="ingredients">${i18n[lang]["col.ingredients"]}: ${recipeLunch.ingredients[lang].join(', ')}</span>` : ''}
-          ${(recipeLunch?.howIsMade?.[lang] || recipeLunch?.howIsMade?.ro) ? `
-            <br><strong class="how-title">${i18n[lang]["howIsMade"] || "Cum se face:"}</strong>
-            ${howIsMadeHTMLLunch}
-          ` : ''}
-        </div>
-      `;
-    }
-    // --- DINNER ---
-    if (m.dinner) {
-      const titleC = extractRecipeName(m.dinner);
-      const recipeDinner = (window.recipes || []).find(r => r.name?.[lang]?.toLowerCase() === titleC.toLowerCase());
-      const stepsDinner = (recipeDinner?.howIsMade?.[lang] || recipeDinner?.howIsMade?.ro || '')
-        .split('.').map(x => x.trim()).filter(Boolean);
-      const howIsMadeHTMLDinner = stepsDinner.length > 1
-        ? `<ul>${stepsDinner.map(s => `<li>${s}.</li>`).join('')}</ul>`
-        : `<span class="howis">${stepsDinner[0] || ''}</span>`;
-
-      const dinnerMetaBadges = recipeDinner ? [
-        recipeDinner.time    ? `⏱️ ${recipeDinner.time} min` : '',
-        recipeDinner.costRon ? `💰 ${formatCost(recipeDinner.costRon)}` : '',
-        ...(recipeDinner.tags || []).slice(0,2).map(t => (TAG_LABELS[t]||{})[lang]||(TAG_LABELS[t]||{}).en||t),
-      ].filter(Boolean).join('  ·  ') : '';
-      shoppingHTML += `
-        <div>
-          <span class="recipe-dinner">🌙 ${i18n[lang]["col.dinner"]}: ${titleC}</span><br>
-          ${dinnerMetaBadges ? `<span class="pdf-meta-badges">${dinnerMetaBadges}</span><br>` : ''}
-          ${recipeDinner?.origin?.[lang] ? `<em class="origin">(${i18n[lang]["col.origin"] || 'Țara'}: ${recipeDinner.origin[lang]})</em><br>` : ''}
-          ${recipeDinner?.ingredients?.[lang]?.length ? `<span class="ingredients">${i18n[lang]["col.ingredients"]}: ${recipeDinner.ingredients[lang].join(', ')}</span>` : ''}
-          ${(recipeDinner?.howIsMade?.[lang] || recipeDinner?.howIsMade?.ro) ? `
-            <br><strong class="how-title">${i18n[lang]["howIsMade"] || "Cum se face:"}</strong>
-            ${howIsMadeHTMLDinner}
-          ` : ''}
-        </div>
-      `;
-    }
-    shoppingHTML += `</div>`;
+    daysHTML += `<div class="recipe-section">
+      <div class="recipe-day-header">
+        <span class="day-num">${idx + 1}</span>
+        <span class="day-name">${m.day}</span>
+      </div>
+      ${m.lunch  ? mealBlockHTML(m.lunch,  'lunch')  : ''}
+      ${m.dinner ? mealBlockHTML(m.dinner, 'dinner') : ''}
+    </div>`;
   });
 
-  // --- LOCKED SECTION for free users ---
-  if (hasLocked) {
-    // Show a teaser: day names blurred, then upsell box
-    const lockedDayNames = lockedMeals
-      .filter(m => m.lunch || m.dinner)
-      .map(m => m.day)
-      .join(' · ');
-    shoppingHTML += `
-      <div class="pdf-locked-section" style="
-        margin-top:18px; padding:18px 20px; border-radius:10px;
-        background: linear-gradient(135deg, #f0f9f3 0%, #e6f4ec 100%);
-        border: 2px dashed #24712A; text-align:center; page-break-inside:avoid;">
-        <div style="font-size:1.5em; margin-bottom:6px;">🔒</div>
-        <div style="font-size:1.05em; font-weight:700; color:#1a5220; margin-bottom:6px;">
-          ${t('pdf.locked.title')}
-        </div>
-        <div style="font-size:0.82em; color:#555; margin-bottom:10px; filter:blur(2.5px); user-select:none; pointer-events:none;">
-          ${lockedDayNames}
-        </div>
-        <div style="font-size:0.88em; color:#444; margin-bottom:14px; line-height:1.5;">
-          ${t('pdf.locked.sub')}
-        </div>
-        <div style="
-          display:inline-block; padding:9px 22px; border-radius:6px;
-          background:#24712A; color:#fff; font-weight:700; font-size:0.95em;
-          letter-spacing:0.01em;">
-          meal-planner.ro &nbsp;·&nbsp; ${t('pdf.locked.cta')}
+  // ── shopping list ─────────────────────────────────────────────
+  const shoppingHTML = ingrArr.length ? `
+    <div class="pdf-shopping">
+      <div class="pdf-shopping-header">🛒 ${t('shoppingList') || 'Shopping List'}</div>
+      <div class="pdf-shopping-body">
+        <div class="shopping-grid">
+          <div>${col1.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
+          <div>${col2.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
         </div>
       </div>
-    `;
+    </div>` : '';
+
+  // ── locked upsell ─────────────────────────────────────────────
+  let lockedHTML = '';
+  if (hasLocked) {
+    const lockedDays = lockedMeals.filter(m => m.lunch || m.dinner).map(m => m.day).join(' · ');
+    lockedHTML = `<div class="pdf-locked">
+      <div class="pdf-locked-icon">🔒</div>
+      <div class="pdf-locked-title">${t('pdf.locked.title')}</div>
+      <div class="pdf-locked-days">${lockedDays}</div>
+      <div class="pdf-locked-sub">${t('pdf.locked.sub')}</div>
+      <div class="pdf-locked-cta">meal-planner.ro · ${t('pdf.locked.cta')}</div>
+    </div>`;
   }
 
-  shoppingHTML += `</div>`;
-  // --- TITLU + MESAJ IMPACT ---
+  // ── cover page ────────────────────────────────────────────────
+  const footerDate = new Date().toLocaleDateString(lang, { day: '2-digit', month: '2-digit', year: 'numeric' });
+  const weekLabel  = new Date().toLocaleDateString(lang, { day: 'numeric', month: 'long', year: 'numeric' });
+  const freeBadge  = !isPremium ? `<div class="pdf-free-badge">${t('pdf.free.label')}</div>` : '';
+  const coverHTML  = `<div class="pdf-cover">
+    <div class="pdf-cover-brand">🥗 Meal-Planner.ro</div>
+    <div class="pdf-cover-title">${t('title') || 'Meal Plan'}</div>
+    <div class="pdf-cover-week">${weekLabel}</div>
+    <div class="pdf-cover-divider"></div>
+    <div class="pdf-cover-motiv">${pickMotiv(lang)}</div>
+    ${freeBadge}
+  </div>`;
+
+  // ── clear legacy slots, write everything to #pdf-list ─────────
   const titleEl = document.getElementById('pdf-title');
   const msgEl   = document.getElementById('pdf-impact-message');
-  if (titleEl) titleEl.textContent = i18n[lang].title || "Planificator de mese";
-  if (msgEl) {
-    const freeBadge = !isPremium
-      ? `<div style="font-size:0.68em; font-weight:500; color:#888; letter-spacing:0.03em; margin-top:4px;">${t('pdf.free.label')}</div>`
-      : '';
-    msgEl.innerHTML = `<div style="margin-top:0; margin-bottom:12px; font-weight:600; color:#169d55; text-align:center; font-size:2.09em;">${pdfMessages[lang] || pdfMessages.ro}</div>${freeBadge}`;
-  }
-  // Snack suggestion & Bonus Dessert removed — kept PDF focused on the meal plan
+  if (titleEl) titleEl.innerHTML = '';
+  if (msgEl)   msgEl.innerHTML   = '';
+
   const listEl = document.getElementById('pdf-list');
-if (listEl) {
-  const today = new Date().toLocaleDateString(lang, { day: '2-digit', month: '2-digit', year: 'numeric' });
-  listEl.style.fontSize = "12px";
-  const motivationalMessage = `
-  <div class="motiv" style="margin-top:14px; padding:8px; background:#e9f7ee; border-left:4px solid #218739; border-radius:4px; font-size:11.5pt; color:#222; text-align:center;">
-    ${pickMotiv(lang)}
-  </div>
-`;
-listEl.innerHTML = `
-  <h3 style="margin-bottom:10px; margin-top:0; text-align:left; padding-left:3.5mm; font-size:1.28em; color:#218739;">
-    ${i18n[lang].shoppingList}
-  </h3>
-  ${shoppingHTML}
-  <div style="margin-top:16px;"></div>
-  ${motivationalMessage}
-  <div class="doc-footer" style="margin-top:10px; font-size:10px; text-align:center; color:#666;">
-    Generat cu Meal-Planner.ro • ${today}
-  </div>
-`;
-}
-  document.querySelectorAll('.recipe-section').forEach(div => {
-    div.style.fontSize = "12px";
-    div.style.lineHeight = "1.35";
-  });
+  if (listEl) {
+    listEl.innerHTML = `
+      ${coverHTML}
+      ${daysHTML}
+      ${shoppingHTML}
+      ${lockedHTML}
+      <div class="doc-footer">🥗 Meal-Planner.ro · ${footerDate}</div>
+    `;
+  }
 }
   async function exportShoppingListToPDF() {
   const pdfArea = document.getElementById('pdf-impact-area');
@@ -666,167 +656,113 @@ function buildCleanPdfNode() {
   const styleEl = document.createElement('style');
   styleEl.id = 'pdf-safe-style';
   styleEl.textContent = `
-/* ===== Canvas A4 pentru PDF (html2pdf) ===== */
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
+/* ===== Premium PDF – A4 (html2pdf) ===== */
+html,body{ margin:0; padding:0; background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 :root{
-  --brand:#218739; --brand-soft:#e9f7ee; --ink:#222; --muted:#666; --line:#ddd; --section-line:#6379ff;
+  --brand:#1e7d3a; --brand-dk:#155a2a; --brand-soft:#f0f9f2; --brand-mid:#c8e6c9;
+  --dinner-bg:#eef3ff; --dinner-clr:#2044b4;
+  --ink:#1a1a2e; --muted:#666; --line:#e2e8f0; --r:8px;
 }
-/* Container A4: 210mm - 2*10mm = 190mm util */
+/* ── Container ── */
 #pdf-impact-area{
-  width: 190mm;
-  padding: 12mm 10mm 14mm;
-  margin: 0 auto;
-  background: #fff;
-  font-family: Segoe UI, Arial, sans-serif;
-  color: var(--ink);
-  font-size: 11pt;
-  line-height: 1.36;
-  letter-spacing: .1px;
-  box-sizing: border-box;
+  width:190mm; padding:0; margin:0 auto;
+  background:#fff; font-family:'Segoe UI',Arial,sans-serif;
+  color:var(--ink); font-size:10.5pt; line-height:1.4; box-sizing:border-box;
 }
-#pdf-impact-area > :first-child { margin-top: 0; }
-/* Titlu + mesaj impact (doar prima pagină) */
-#pdf-title{
-  text-align: center;
-  font-weight: 700;
-  font-size: 12pt;
-  margin: 0 0 3mm;
+/* ── Cover ── */
+.pdf-cover{
+  background:linear-gradient(135deg,#1e7d3a 0%,#27a247 55%,#46c16a 100%);
+  color:#fff; padding:13mm 11mm 9mm; margin-bottom:5mm;
+  page-break-inside:avoid; break-inside:avoid;
 }
-#pdf-title::after{
-  content: "";
-  display: block;
-  width: 52mm;
-  height: 1.5px;
-  margin: 2.4mm auto 0;
-  background: var(--brand);
-  opacity: .35;
+.pdf-cover-brand{ font-size:9pt; font-weight:700; opacity:.8; letter-spacing:.08em; text-transform:uppercase; margin-bottom:3mm; }
+.pdf-cover-title{ font-size:20pt; font-weight:800; line-height:1.1; margin-bottom:2mm; }
+.pdf-cover-week{ font-size:10.5pt; opacity:.88; margin-bottom:4mm; }
+.pdf-cover-divider{ width:36mm; height:2px; background:rgba(255,255,255,.35); margin-bottom:4mm; }
+.pdf-cover-motiv{ font-size:9.5pt; font-style:italic; opacity:.85; line-height:1.45; }
+.pdf-free-badge{
+  display:inline-block; margin-top:4mm; padding:2px 10px;
+  background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.4);
+  border-radius:999px; font-size:8pt; font-weight:600; letter-spacing:.03em;
 }
-#pdf-impact-message{
-  margin: 0 0 6mm;
-  padding: 9mm;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--brand-soft);
-  color: var(--ink);
-  page-break-inside: avoid;
-  break-inside: avoid;
-}
-#pdf-impact-message > div{
-  margin: 0;
-  font-weight: 700;
-  color: var(--brand);
-  text-align: center;
-  font-size: 16pt;
-  line-height: 1.22;
-}
-/* Fiecare zi */
+/* ── Day cards ── */
 .recipe-section{
-  border: 1px solid var(--line);
-  border-top: 4px solid var(--section-line);
-  border-radius: 6px;
-  padding: 3.5mm;
-  margin: 2.5mm 0;
-  background: #f8f9fa;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  box-sizing: border-box;
+  border:1px solid var(--line); border-radius:var(--r);
+  margin-bottom:3mm; overflow:hidden;
+  page-break-inside:avoid; break-inside:avoid;
 }
-.recipe-day{
-  font-size: 12pt;
-  font-weight: 800;
-  margin: 0 0 2mm;
-  letter-spacing: .2px;
+.recipe-day-header{
+  background:var(--ink); color:#fff;
+  padding:2.5mm 4mm; display:flex; align-items:center; gap:3mm;
 }
-/* Badge-uri */
-.recipe-lunch,
-.recipe-dinner{
-  display: inline-block;
-  padding: 2px 7px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 11pt;
-  line-height: 1;
-  margin: 0 0 2mm;
+.day-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:5mm; height:5mm; background:var(--brand); border-radius:50%;
+  font-size:7.5pt; font-weight:800; flex-shrink:0;
 }
-.recipe-lunch{  background: var(--brand-soft); color: var(--brand); }
-.recipe-dinner{ background: #eaf1ff; color: #1f4fbf; }
-/* Texte/liste */
-.origin{ color: var(--muted); }
-.how-title{ font-weight: 800; }
-ul{
-  margin: 2mm 0 0 6mm;
-  padding: 0;
-  font-size: 12pt;
+.day-name{ font-size:10.5pt; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+/* ── Meal blocks ── */
+.meal-block{ padding:3mm 4mm; }
+.meal-block--lunch{ border-bottom:1px solid var(--line); background:#fafffe; }
+.meal-block--dinner{ background:#fafaff; }
+.meal-label{ font-size:7.5pt; font-weight:700; letter-spacing:.09em; text-transform:uppercase; margin-bottom:1mm; }
+.meal-block--lunch  .meal-label{ color:var(--brand); }
+.meal-block--dinner .meal-label{ color:var(--dinner-clr); }
+.meal-name{ font-size:11.5pt; font-weight:700; margin-bottom:1.5mm; color:var(--ink); }
+.meal-meta{ margin-bottom:2mm; }
+.meta-tag{
+  display:inline-block; background:var(--brand-soft); color:var(--brand-dk);
+  border-radius:999px; padding:1px 6px; margin-right:1.5mm; font-size:7.5pt; font-weight:600;
 }
-ul li{ margin: 0 0 1mm; }
-ul li::marker{ color: var(--brand); }
-/* Bonus */
-#bonus-section .callout{
-  margin: 3mm 0 0;
-  padding: 3mm;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  background: #fff;
-  page-break-inside: avoid;
-  break-inside: avoid;
+.meal-ingr{ margin-bottom:2mm; }
+.ingr-label{ font-size:7.5pt; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:1mm; }
+.ingr-pills{ display:flex; flex-wrap:wrap; gap:1.5mm; }
+.ingr-pill{
+  display:inline-block; background:var(--brand-mid); color:var(--brand-dk);
+  border-radius:999px; padding:1px 7px; font-size:7.5pt; font-weight:500;
 }
-#bonus-section .snack{  background:#f1fff5; border-left:4px solid #43b581; }
-#bonus-section .dessert{background:#fffbe7; border-left:4px solid #ff7f50; }
-#bonus-section b{ display:block; margin-bottom:1mm; }
-/* Footer */
-.doc-footer{
-  margin-top: 6mm;
-  padding-top: 3mm;
-  border-top: 1px solid var(--line);
-  font-size: 9.5pt;
-  color: var(--muted);
-  text-align: center;
+.meal-steps-label{ font-size:7.5pt; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:1mm; }
+.meal-steps{ margin:0; padding-left:4.5mm; font-size:9.5pt; line-height:1.45; }
+.meal-steps li{ margin-bottom:.7mm; }
+.meal-steps li::marker{ color:var(--brand); font-weight:700; }
+/* ── Shopping list ── */
+.pdf-shopping{ margin-top:4mm; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; page-break-inside:avoid; break-inside:avoid; }
+.pdf-shopping-header{ background:var(--ink); color:#fff; padding:2.5mm 4mm; font-size:10.5pt; font-weight:800; }
+.pdf-shopping-body{ padding:3mm 4mm; background:#fafff9; }
+.shopping-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.5mm 5mm; }
+.shop-item{ font-size:9pt; padding:.8mm 0; border-bottom:1px dotted #dde; color:var(--ink); }
+.shop-item::before{ content:'☐ '; color:var(--brand); font-size:9.5pt; font-weight:700; }
+/* ── Locked upsell ── */
+.pdf-locked{
+  margin-top:4mm; padding:6mm; border:2px dashed var(--brand);
+  border-radius:var(--r); background:var(--brand-soft); text-align:center;
+  page-break-inside:avoid; break-inside:avoid;
 }
-/* Mesajul motivațional */
-.motiv{
-  page-break-inside: avoid;
-  break-inside: avoid;
-  margin-top: 14px;
-  padding: 8px;
-  background: #e9f7ee;
-  border-left: 4px solid #218739;
-  border-radius: 4px;
-  font-size: 11.5pt;
-  color: #222;
-  text-align: center;
+.pdf-locked-icon{ font-size:16pt; margin-bottom:2mm; }
+.pdf-locked-title{ font-size:11pt; font-weight:700; color:var(--brand-dk); margin-bottom:2mm; }
+.pdf-locked-days{ font-size:8.5pt; color:var(--muted); filter:blur(2.5px); margin-bottom:2mm; }
+.pdf-locked-sub{ font-size:9pt; color:#444; margin-bottom:4mm; line-height:1.5; }
+.pdf-locked-cta{
+  display:inline-block; padding:2.5mm 8mm; background:var(--brand); color:#fff;
+  font-weight:700; font-size:9.5pt; border-radius:6px; letter-spacing:.01em;
 }
-/* Forțări de pagină din JS */
-.page-break{
-  break-before: page;
-  page-break-before: always;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+/* ── Footer ── */
+.doc-footer{ margin-top:5mm; padding-top:3mm; border-top:1px solid var(--line); font-size:8.5pt; color:var(--muted); text-align:center; }
+/* ── Page breaks ── */
+.page-break{ break-before:page; page-break-before:always; height:0; margin:0; padding:0; border:0; }
 `;
   return { node, styleEl };
 }
 function maybeCompactToTwoPages(root){
   const MM_TO_PX = 96 / 25.4;
-  const usable = (297 - 12 - 14) * MM_TO_PX; 
+  const usable = (297 - 12 - 14) * MM_TO_PX;
   const pagesNeeded = Math.ceil(root.scrollHeight / usable);
-  if (pagesNeeded > 2) {  // <- schimbă în > 1 dacă vrei 2 pagini max
-    root.style.fontSize = '11pt';        // era 11.5pt
-    root.style.lineHeight = '1.25';      // era 1.28
-    root.querySelectorAll('.recipe-section').forEach(s=>{
-      s.style.padding = '6px';
-      s.style.margin = '5px 0';
-    });
-    root.querySelectorAll('ul').forEach(u=>{
-      u.style.margin = '3px 0 0 12px';
-    });
+  if (pagesNeeded > 3) {
+    root.style.fontSize = '9.5pt';
+    root.style.lineHeight = '1.28';
+    root.querySelectorAll('.meal-block').forEach(s => { s.style.padding = '2mm 3mm'; });
+    root.querySelectorAll('.meal-steps').forEach(u => { u.style.fontSize = '8.5pt'; });
+    root.querySelectorAll('.pdf-cover').forEach(c => { c.style.padding = '8mm 10mm 6mm'; });
   }
 }
 function paginateCleanNode(root){
@@ -836,7 +772,7 @@ function paginateCleanNode(root){
   const padTop    = parseFloat(csRoot.paddingTop)    || 0;
   const padBottom = parseFloat(csRoot.paddingBottom) || 0;
   const blocks = root.querySelectorAll(
-    '#pdf-title, #pdf-impact-message, .recipe-section, #bonus-section, .doc-footer'
+    '.pdf-cover, .recipe-section, .pdf-shopping, .pdf-locked, .doc-footer'
   );
   const SAFE = 24; 
   let page = 1;
