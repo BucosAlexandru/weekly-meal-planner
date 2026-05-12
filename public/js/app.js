@@ -345,6 +345,63 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     return (templates[langCode] || templates.en)(name, origin, list);
   }
+  // ── Smart diversity picker for full-week generation ─────────────────────────
+  // Rules: max 2 recipes from same country, max 3 pasta/rice, max 4 heavy-meat
+  function smartPickWeek(pool, count) {
+    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+    const result = [];
+    const countryCounts = Object.create(null);
+    let pastaCount = 0;
+    let heavyMeatCount = 0;
+
+    const isPasta = r => {
+      const ingr = (r.ingredients?.en || r.ingredients?.ro || []).join(' ').toLowerCase();
+      return /(pasta\b|spaghetti|penne|fettuccin|tagliatell|noodle|risotto|\brice\b|\borez\b|\bpaste\b)/.test(ingr);
+    };
+    const isHeavyMeat = r => {
+      const ingr = (r.ingredients?.en || r.ingredients?.ro || []).join(' ').toLowerCase();
+      return /(beef|pork|lamb|veal|steak|vit[aă]|porc|miel|biftec|cotlet)/.test(ingr);
+    };
+
+    // Pass 1 – strict: max 2 per country, max 3 pasta, max 4 heavy meat
+    for (const r of shuffled) {
+      if (result.length >= count) break;
+      const country = r.origin?.en || r.origin?.ro || '';
+      if ((countryCounts[country] || 0) >= 2) continue;
+      if (isPasta(r) && pastaCount >= 3) continue;
+      if (isHeavyMeat(r) && heavyMeatCount >= 4) continue;
+      result.push(r);
+      countryCounts[country] = (countryCounts[country] || 0) + 1;
+      if (isPasta(r)) pastaCount++;
+      if (isHeavyMeat(r)) heavyMeatCount++;
+    }
+
+    // Pass 2 – relax country limit (keep pasta/meat limits)
+    if (result.length < count) {
+      const used = new Set(result);
+      for (const r of shuffled) {
+        if (result.length >= count) break;
+        if (used.has(r)) continue;
+        if (isPasta(r) && pastaCount >= 3) continue;
+        if (isHeavyMeat(r) && heavyMeatCount >= 4) continue;
+        result.push(r); used.add(r);
+        if (isPasta(r)) pastaCount++;
+        if (isHeavyMeat(r)) heavyMeatCount++;
+      }
+    }
+
+    // Pass 3 – final fallback: any unused recipe
+    if (result.length < count) {
+      const used = new Set(result);
+      for (const r of shuffled) {
+        if (result.length >= count) break;
+        if (!used.has(r)) { result.push(r); used.add(r); }
+      }
+    }
+
+    return result;
+  }
+
   async function generateRandomMenu() {
   let pool;
   if (window.isBudgetMenu) {
@@ -365,18 +422,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const mode = window._planMode;
-  const shuffled = [...pool].sort(() => 0.5 - Math.random());
 
   if (mode === 'meal') {
     // Fill only one input — a single random recipe
     const input = document.getElementById('d1l');
-    if (input) input.value = shuffled[0] ? getRecipeText(shuffled[0], lang) : '';
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    if (input) input.value = pick ? getRecipeText(pick, lang) : '';
   } else if (mode === 'day') {
     // Fill lunch + dinner for today
     const lunchInput  = document.getElementById('d1l');
     const dinnerInput = document.getElementById('d1c');
-    if (lunchInput)  lunchInput.value  = shuffled[0] ? getRecipeText(shuffled[0], lang) : '';
-    if (dinnerInput) dinnerInput.value = shuffled[1] ? getRecipeText(shuffled[1], lang) : '';
+    const picks = smartPickWeek(pool, 2);
+    if (lunchInput)  lunchInput.value  = picks[0] ? getRecipeText(picks[0], lang) : '';
+    if (dinnerInput) dinnerInput.value = picks[1] ? getRecipeText(picks[1], lang) : '';
   } else {
     // Full week — 7 days × lunch + dinner
     // Only fill empty slots — preserve any recipes already added manually
@@ -387,8 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (l && !l.value.trim()) emptySlots.push(l);
       if (c && !c.value.trim()) emptySlots.push(c);
     }
+    const picks = smartPickWeek(pool, emptySlots.length);
     emptySlots.forEach((inp, i) => {
-      if (shuffled[i]) inp.value = getRecipeText(shuffled[i], lang);
+      if (picks[i]) inp.value = getRecipeText(picks[i], lang);
     });
   }
 
@@ -854,10 +913,10 @@ function paginateCleanNode(root){
     { id: 'budget',    labelKey: 'filter.budget', emoji: '💰',
       test: () => false, isBudget: true },
     { id: 'quick',     labelKey: 'filter.quick',  emoji: '⚡',
-      test: r => {
-        const ingr = (r.ingredients?.ro||r.ingredients?.en||[]).length;
-        return ingr <= 6;
-      }
+      test: r => (r.time || 999) <= 30
+    },
+    { id: 'family',    labelKey: 'filter.family', emoji: '👨‍👩‍👧',
+      test: r => r.tags?.includes('family')
     },
   ];
 
@@ -873,6 +932,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetarian',
       'filter.budget':'Buget',
       'filter.quick':'Rapid',
+      'filter.family':'Familie',
     },
     en: {
       'filter.all':'All',
@@ -885,6 +945,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetarian',
       'filter.budget':'Budget',
       'filter.quick':'Quick',
+      'filter.family':'Family',
     },
     es: {
       'filter.all':'Todo',
@@ -897,6 +958,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetariano',
       'filter.budget':'Económico',
       'filter.quick':'Rápido',
+      'filter.family':'Familia',
     },
     fr: {
       'filter.all':'Tout',
@@ -909,6 +971,7 @@ function paginateCleanNode(root){
       'filter.veg':'Végétarien',
       'filter.budget':'Économique',
       'filter.quick':'Rapide',
+      'filter.family':'Famille',
     },
     de: {
       'filter.all':'Alle',
@@ -921,6 +984,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetarisch',
       'filter.budget':'Günstig',
       'filter.quick':'Schnell',
+      'filter.family':'Familie',
     },
     pt: {
       'filter.all':'Tudo',
@@ -933,6 +997,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetariano',
       'filter.budget':'Económico',
       'filter.quick':'Rápido',
+      'filter.family':'Família',
     },
     ru: {
       'filter.all':'Все',
@@ -945,6 +1010,7 @@ function paginateCleanNode(root){
       'filter.veg':'Вегетарианское',
       'filter.budget':'Бюджетное',
       'filter.quick':'Быстро',
+      'filter.family':'Семейное',
     },
     it: {
       'filter.all':'Tutto',
@@ -957,6 +1023,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetariano',
       'filter.budget':'Economico',
       'filter.quick':'Veloce',
+      'filter.family':'Famiglia',
     },
     tr: {
       'filter.all':'Tümü',
@@ -969,6 +1036,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vejetaryen',
       'filter.budget':'Ekonomik',
       'filter.quick':'Hızlı',
+      'filter.family':'Aile',
     },
     zh: {
       'filter.all':'全部',
@@ -981,6 +1049,7 @@ function paginateCleanNode(root){
       'filter.veg':'素食',
       'filter.budget':'省钱',
       'filter.quick':'快手',
+      'filter.family':'家庭',
     },
     ja: {
       'filter.all':'すべて',
@@ -993,6 +1062,7 @@ function paginateCleanNode(root){
       'filter.veg':'ベジタリアン',
       'filter.budget':'節約',
       'filter.quick':'時短',
+      'filter.family':'ファミリー',
     },
     ko: {
       'filter.all':'전체',
@@ -1005,6 +1075,7 @@ function paginateCleanNode(root){
       'filter.veg':'채식',
       'filter.budget':'절약',
       'filter.quick':'빠른',
+      'filter.family':'가족',
     },
     ar: {
       'filter.all':'الكل',
@@ -1017,6 +1088,7 @@ function paginateCleanNode(root){
       'filter.veg':'نباتي',
       'filter.budget':'اقتصادي',
       'filter.quick':'سريع',
+      'filter.family':'عائلي',
     },
     hi: {
       'filter.all':'सभी',
@@ -1029,6 +1101,7 @@ function paginateCleanNode(root){
       'filter.veg':'शाकाहारी',
       'filter.budget':'सस्ता',
       'filter.quick':'जल्दी',
+      'filter.family':'परिवार',
     },
     default: {
       'filter.all':'All',
@@ -1041,6 +1114,7 @@ function paginateCleanNode(root){
       'filter.veg':'Vegetarian',
       'filter.budget':'Budget',
       'filter.quick':'Quick',
+      'filter.family':'Family',
     },
   };
   window._activeFilter = window._activeFilter || 'all';
@@ -1171,7 +1245,7 @@ function paginateCleanNode(root){
   }
 
   // ── Cost estimate display ─────────────────────────────────────
-  const COST_RON = { all:200, med:240, asian:250, budget:130, vegetarian:170, quick:180, latin:220, eastern:190, worldtour:210,
+  const COST_RON = { all:200, med:240, asian:250, budget:130, vegetarian:170, quick:180, family:190, latin:220, eastern:190, worldtour:210,
                      chicken:210, meat:230, fish:220, pasta:160 };
 
   // Currency display: RON for Romanian, USD for everyone else
