@@ -55,7 +55,7 @@ const i18n = {
     "hero.cta": "🥗 Generează Planul Meu Gratuit",
     "how.title": "Cum funcționează",
     "how.step1.title": "Adaugă sau generează mesele",
-    "how.step1.desc": "Scrie ce vrei să mănânci sau apasă „Generează" pentru a completa automat săptămâna",
+    "how.step1.desc": "Scrie ce vrei să mănânci sau apasă «Generează» pentru a completa automat săptămâna",
     "how.step2.title": "Lista de cumpărături — automată",
     "how.step2.desc": "Ingredientele sunt extrase și organizate automat din planul tău",
     "how.step3.title": "Descarcă planul ca PDF",
