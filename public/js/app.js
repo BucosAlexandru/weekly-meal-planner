@@ -1079,7 +1079,9 @@ function paginateCleanNode(root){
         const ingr = rec?.ingredients?.[lang] || rec?.ingredients?.ro || rec?.ingredients?.en || [];
         ingr.forEach(i => {
           const key = i.toLowerCase().replace(/\s*\(.*?\)/g,'').trim();
-          if (key && !allIngr.has(key)) allIngr.set(key, i);
+          // Skip trivial pantry staples everyone has at home
+          const trivial = /^(ap[aă]|water|agua|eau|wasser|água|вода|水|お湯|su|acqua)$|^(sare|salt|sel|salz|sal|соль|塩|tuz)$|^(piper negru|black pepper|poivre noir|schwarzer pfeffer|pimienta negra|pepe nero|черный перец|黒胡椒)$/i;
+          if (key && !trivial.test(key) && !allIngr.has(key)) allIngr.set(key, i);
         });
       });
     });

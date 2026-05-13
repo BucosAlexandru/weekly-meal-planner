@@ -1553,6 +1553,136 @@ const RECIPE_UI = {
   },
 };
 
+/* ── Recipe steps & tips UI strings (all 14 languages) ── */
+const RECIPE_STEPS_UI = {
+  ro:{ prep:'Pregătește toate ingredientele: curăță, spală și taie tot conform rețetei.',
+       serve:'Servește preparatul cald, decorat cu verdeață proaspătă sau ingredientele preferate.',
+       tipLabel:'Sfat',
+       tips:{ soup:'Nu lăsa supa să fiarbă intens după adăugarea smântânii sau ouălor pentru a preveni tăierea.',
+              meat:'Lasă carnea să se odihnească 5 minute după gătire înainte de a o tăia sau servi.',
+              fish:'Peștele este gata când carnea devine opacă și se desprinde ușor de os cu furculița.',
+              pasta:'Adaugă câteva linguri din apa în care a fiert pasta în sos pentru o textură mai cremoasă.',
+              dessert:'Lasă desertul să se răcească complet înainte de servire pentru textură și gust optime.',
+              def:'Gustă preparatul înainte de servire și ajustează condimentele și sarea după gust.' }},
+  en:{ prep:'Prepare all ingredients: wash, peel and cut everything as needed for the recipe.',
+       serve:'Serve warm, garnished with fresh herbs or your favourite toppings.',
+       tipLabel:'Tip',
+       tips:{ soup:'Avoid vigorous boiling after adding cream or eggs to prevent curdling.',
+              meat:'Let the meat rest for 5 minutes after cooking before slicing or serving.',
+              fish:'Fish is ready when the flesh turns opaque and flakes easily with a fork.',
+              pasta:'Add a splash of pasta cooking water to the sauce for a creamier texture.',
+              dessert:'Let the dessert cool completely before serving for the best texture and flavour.',
+              def:'Taste before serving and adjust seasoning and salt to your liking.' }},
+  es:{ prep:'Prepara todos los ingredientes: lava, pela y corta todo según sea necesario.',
+       serve:'Sirve caliente, adornado con hierbas frescas o tus guarniciones favoritas.',
+       tipLabel:'Consejo',
+       tips:{ soup:'Evita hervir vigorosamente tras añadir la nata o los huevos para evitar que se corte.',
+              meat:'Deja reposar la carne 5 minutos tras cocinarla antes de cortarla o servirla.',
+              fish:'El pescado está listo cuando la carne se vuelve opaca y se desmenuza fácilmente.',
+              pasta:'Añade un poco del agua de cocción de la pasta a la salsa para una textura más cremosa.',
+              dessert:'Deja enfriar completamente el postre antes de servir para la mejor textura.',
+              def:'Prueba antes de servir y ajusta la sal y los condimentos a tu gusto.' }},
+  fr:{ prep:'Prépare tous les ingrédients : lave, épluche et coupe tout selon les besoins.',
+       serve:'Servir chaud, garni d\'herbes fraîches ou de tes garnitures préférées.',
+       tipLabel:'Astuce',
+       tips:{ soup:'Évite de faire bouillir vigoureusement après avoir ajouté la crème ou les œufs.',
+              meat:'Laisse reposer la viande 5 minutes après cuisson avant de la couper ou servir.',
+              fish:'Le poisson est cuit quand la chair devient opaque et se détache facilement à la fourchette.',
+              pasta:'Ajoute un peu d\'eau de cuisson des pâtes dans la sauce pour une texture plus crémeuse.',
+              dessert:'Laisse le dessert refroidir complètement avant de servir pour la meilleure texture.',
+              def:'Goûte avant de servir et ajuste le sel et les épices selon ton goût.' }},
+  de:{ prep:'Bereite alle Zutaten vor: waschen, schälen und nach Bedarf schneiden.',
+       serve:'Warm servieren, garniert mit frischen Kräutern oder Lieblingstoppings.',
+       tipLabel:'Tipp',
+       tips:{ soup:'Nicht mehr stark kochen lassen, nachdem Sahne oder Eier hinzugefügt wurden.',
+              meat:'Das Fleisch nach dem Garen 5 Minuten ruhen lassen, bevor es geschnitten wird.',
+              fish:'Der Fisch ist fertig, wenn das Fleisch undurchsichtig wird und leicht von der Gabel fällt.',
+              pasta:'Etwas Nudelkochwasser in die Soße geben, für eine cremigere Konsistenz.',
+              dessert:'Das Dessert vollständig abkühlen lassen, bevor es serviert wird.',
+              def:'Vor dem Servieren abschmecken und Salz und Gewürze nach Geschmack anpassen.' }},
+  pt:{ prep:'Prepare todos os ingredientes: lave, descasque e corte conforme necessário.',
+       serve:'Sirva quente, decorado com ervas frescas ou as suas coberturas favoritas.',
+       tipLabel:'Dica',
+       tips:{ soup:'Evite fervura intensa após adicionar creme ou ovos para evitar talhar.',
+              meat:'Deixe a carne descansar 5 minutos após cozinhar antes de fatiar ou servir.',
+              fish:'O peixe está pronto quando a carne fica opaca e se desfaz facilmente com um garfo.',
+              pasta:'Adicione um pouco da água do cozimento da massa ao molho para uma textura mais cremosa.',
+              dessert:'Deixe a sobremesa esfriar completamente antes de servir para a melhor textura.',
+              def:'Prove antes de servir e ajuste o sal e os temperos a gosto.' }},
+  ru:{ prep:'Подготовьте все ингредиенты: помойте, очистите и нарежьте по необходимости.',
+       serve:'Подавайте тёплым, украсив свежей зеленью или любимыми добавками.',
+       tipLabel:'Совет',
+       tips:{ soup:'Не допускайте сильного кипения после добавления сливок или яиц, чтобы не свернулись.',
+              meat:'Дайте мясу отдохнуть 5 минут после приготовления, прежде чем нарезать.',
+              fish:'Рыба готова, когда мякоть становится непрозрачной и легко отходит от кости.',
+              pasta:'Добавьте немного воды от варки пасты в соус для более кремовой текстуры.',
+              dessert:'Дайте десерту полностью остыть перед подачей для лучшей текстуры.',
+              def:'Попробуйте перед подачей и отрегулируйте соль и специи по вкусу.' }},
+  ar:{ prep:'حضري جميع المكونات: اغسلي وقشري وقطعي كل شيء حسب الحاجة.',
+       serve:'قدمي ساخناً مزيناً بالأعشاب الطازجة أو الإضافات المفضلة لديك.',
+       tipLabel:'نصيحة',
+       tips:{ soup:'تجنبي الغليان الشديد بعد إضافة القشدة أو البيض لمنع التقطع.',
+              meat:'اتركي اللحم يرتاح 5 دقائق بعد الطهي قبل التقطيع أو التقديم.',
+              fish:'السمك جاهز عندما يصبح اللحم معتماً وينفصل بسهولة بالشوكة.',
+              pasta:'أضيفي القليل من ماء طهي المعكرونة إلى الصلصة للحصول على قوام أكثر كرمية.',
+              dessert:'اتركي الحلوى تبرد تماماً قبل التقديم للحصول على أفضل قوام.',
+              def:'تذوقي قبل التقديم واضبطي الملح والبهارات حسب الذوق.' }},
+  zh:{ prep:'准备所有食材：根据需要清洗、去皮和切割。',
+       serve:'趁热上桌，用新鲜香草或您最喜欢的配料装饰。',
+       tipLabel:'小贴士',
+       tips:{ soup:'加入奶油或鸡蛋后避免大火沸腾，以防凝固。',
+              meat:'烹饪后让肉休息5分钟再切片或上桌。',
+              fish:'鱼肉变不透明且用叉子易于剥落时即熟透。',
+              pasta:'在酱汁中加入少量煮面水，口感更顺滑。',
+              dessert:'上桌前让甜点完全冷却，以获得最佳口感。',
+              def:'上桌前尝味，根据喜好调整盐和调料。' }},
+  ja:{ prep:'全ての食材を準備する：必要に応じて洗い、皮をむき、切る。',
+       serve:'新鮮なハーブやお好みのトッピングで飾り、温かいうちに盛り付ける。',
+       tipLabel:'ポイント',
+       tips:{ soup:'クリームや卵を加えた後は強火で煮立てないよう注意。',
+              meat:'調理後、切る前に5分休ませると肉汁が保たれる。',
+              fish:'魚は身が白くなり、フォークで簡単にほぐれたら完成。',
+              pasta:'ゆで汁を少量ソースに加えるとよりクリーミーな仕上がりに。',
+              dessert:'デザートは完全に冷めてから提供するのがベスト。',
+              def:'提供前に味見して、塩と調味料を好みに合わせて調整する。' }},
+  hi:{ prep:'सभी सामग्री तैयार करें: आवश्यकतानुसार धोएं, छीलें और काटें।',
+       serve:'ताजे जड़ी-बूटियों या अपनी पसंदीदा टॉपिंग से सजाकर गरम परोसें।',
+       tipLabel:'टिप',
+       tips:{ soup:'क्रीम या अंडे डालने के बाद तेज उबाल से बचें।',
+              meat:'परोसने से पहले पकी हुई मांस को 5 मिनट आराम दें।',
+              fish:'मछली तब तैयार होती है जब मांस अपारदर्शी हो जाए और आसानी से अलग हो जाए।',
+              pasta:'सॉस में पास्ता का थोड़ा पानी मिलाएं, क्रीमी टेक्सचर के लिए।',
+              dessert:'सर्वोत्तम बनावट के लिए मिठाई को परोसने से पहले पूरी तरह ठंडा होने दें।',
+              def:'परोसने से पहले चखें और नमक व मसाले स्वाद के अनुसार समायोजित करें।' }},
+  tr:{ prep:'Tüm malzemeleri hazırlayın: gerektiğince yıkayın, soyun ve doğrayın.',
+       serve:'Taze otlar veya favori malzemelerinizle süsleyerek sıcak servis yapın.',
+       tipLabel:'İpucu',
+       tips:{ soup:'Krema veya yumurta ekledikten sonra güçlü kaynamaktan kaçının.',
+              meat:'Pişirdikten sonra kesmeden önce eti 5 dakika dinlendirin.',
+              fish:'Balık, eti opaklaşıp çatalla kolayca ayrıldığında hazırdır.',
+              pasta:'Daha kremamsı bir kıvam için makarna suyundan biraz sosa ekleyin.',
+              dessert:'En iyi doku için tatlıyı servis etmeden önce tamamen soğumaya bırakın.',
+              def:'Servis etmeden önce tadın, tuz ve baharatları damağınıza göre ayarlayın.' }},
+  it:{ prep:'Prepara tutti gli ingredienti: lava, sbuccia e taglia tutto come necessario.',
+       serve:'Servire caldo, guarnito con erbe fresche o i tuoi condimenti preferiti.',
+       tipLabel:'Consiglio',
+       tips:{ soup:'Evita di far bollire vigorosamente dopo aver aggiunto panna o uova.',
+              meat:'Lascia riposare la carne 5 minuti dopo la cottura prima di tagliarla o servirla.',
+              fish:'Il pesce è pronto quando la carne diventa opaca e si sfalda facilmente con la forchetta.',
+              pasta:'Aggiungi un po\' dell\'acqua di cottura della pasta al sugo per una consistenza più cremosa.',
+              dessert:'Lascia raffreddare completamente il dessert prima di servirlo per la migliore consistenza.',
+              def:'Assaggia prima di servire e regola sale e spezie secondo il tuo gusto.' }},
+  ko:{ prep:'모든 재료를 준비합니다: 레시피에 따라 씻고, 껍질을 벗기고 자릅니다.',
+       serve:'신선한 허브나 좋아하는 토핑으로 장식하여 따뜻하게 제공합니다.',
+       tipLabel:'팁',
+       tips:{ soup:'크림이나 달걀을 넣은 후 강하게 끓이면 응고될 수 있으니 주의하세요.',
+              meat:'고기를 썰거나 서빙하기 전에 5분 정도 휴지시켜 육즙을 보존하세요.',
+              fish:'생선은 살이 불투명해지고 포크로 쉽게 분리될 때 완성됩니다.',
+              pasta:'소스에 파스타 삶은 물을 조금 넣으면 더 크리미한 질감이 됩니다.',
+              dessert:'최상의 식감을 위해 디저트는 완전히 식힌 후 제공하세요.',
+              def:'제공하기 전에 맛을 보고 소금과 양념을 취향에 맞게 조절하세요.' }},
+};
+
 /* ── Recipe metadata helpers ── */
 function recipeMetadata(ingr, steps, cat, code) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
@@ -1576,17 +1706,22 @@ function recipeMetadata(ingr, steps, cat, code) {
   };
 }
 
-function recipeFeatureCards(ingr, steps, cat, code) {
+function isSoup(cat, n, ingr) {
+  return /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa|çorba/i.test(cat)
+    || /ciorbă|borș|borscht|ramen|pho|solyanka|okroshka|harira|minestrone|bisque|gazpacho|laksa|tom\s*yum|tom\s*kha/i.test(n||'')
+    || /\bbulion\b|\bstock\b|\bbroth\b|\bbouillon\b/i.test(ingr.join(' '));
+}
+
+function recipeFeatureCards(ingr, steps, cat, code, n) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const ingrStr = ingr.join(' ').toLowerCase();
-  const catStr = (cat||'').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
   const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
-  const isSoup = /soup|supă|ciorbă|borș|soup|soupe|suppe|sopa|zuppa|çorba/.test(catStr);
-  const isFreezer = isSoup || steps.length > 5;
+  const soupRecipe = isSoup(cat, n, ingr);
+  const isFreezer = soupRecipe || steps.length > 5;
   const cards = [
     hasFish ? ui.feat[1] : hasMeat ? ui.feat[0] : ui.feat[2],
-    isSoup ? ui.feat[6] : ui.feat[7],
+    soupRecipe ? ui.feat[6] : ui.feat[7],
     ui.feat[3],
     isFreezer ? ui.feat[4] : ui.feat[5],
   ];
@@ -1612,18 +1747,43 @@ function recipeNutrition(ingr, cat) {
   return { cal, prot, carb, fat, fib };
 }
 
-function recipePairings(ingr, cat, code) {
+function recipePairings(ingr, cat, code, n) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const p = ui.pairs;
   const ingrStr = ingr.join(' ').toLowerCase();
-  const catStr = (cat||'').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
   const hasFish = /salmon|trout|cod|tuna|shrimp|pește|somon|ton|păstrăv|creveți/.test(ingrStr);
-  const isSoup = /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa/.test(catStr);
   const hasPasta = /pasta|spaghetti|noodle|linguine|tagliatelle/.test(ingrStr);
   const isVeg = !hasMeat && !hasFish;
-  const chosen = isSoup ? p.soup : hasFish ? p.fish : hasMeat ? p.meat : hasPasta ? p.pasta : isVeg ? p.veg : p.def;
+  const chosen = isSoup(cat,n,ingr) ? p.soup : hasFish ? p.fish : hasMeat ? p.meat : hasPasta ? p.pasta : isVeg ? p.veg : p.def;
   return chosen.map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
+}
+
+function padSteps(steps, code) {
+  if (steps.length >= 4) return steps;
+  const ui = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
+  const result = [...steps];
+  if (result.length < 4) result.unshift(ui.prep);
+  if (result.length < 4) result.push(ui.serve);
+  while (result.length < 4) result.push(ui.serve);
+  return result;
+}
+
+function recipeTip(ingr, cat, code, n) {
+  const ui = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
+  const ingrStr = ingr.join(' ').toLowerCase();
+  const catStr  = (cat || '').toLowerCase();
+  const hasFish   = /salmon|trout|cod|tuna|fish|pește|somon|ton|păstrăv|creveți|shrimp/.test(ingrStr);
+  const hasMeat   = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
+  const hasPasta  = /pasta|spaghetti|noodle|linguine|tagliatelle|tăiței/.test(ingrStr);
+  const isDesert  = /dessert|desert|dolce|postre|tatlı|десерт/i.test(catStr);
+  const t = ui.tips;
+  if (isSoup(cat, n, ingr)) return t.soup;
+  if (hasFish)  return t.fish;
+  if (hasMeat)  return t.meat;
+  if (hasPasta) return t.pasta;
+  if (isDesert) return t.dessert;
+  return t.def;
 }
 
 function recipeCardEmoji(cat) {
@@ -1648,7 +1808,8 @@ function recipePage(recipe, rl) {
   const how  = recipe.howIsMade?.[code]   || recipe.howIsMade?.en   || recipe.howIsMade?.ro   || '';
   const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
   const originTxt = recipe.originText?.[code] || recipe.originText?.en || recipe.originText?.ro || rl.heroDesc(o);
-  const steps = how.split(/\.\s+/).filter(s => s.trim().length > 2);
+  const rawSteps = how.split(/\.\s+/).filter(s => s.trim().length > 2);
+  const steps = padSteps(rawSteps, code);
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
   const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
@@ -1656,6 +1817,12 @@ function recipePage(recipe, rl) {
   const meta    = recipeMetadata(ingr, steps, cat, code);
   const nutri   = recipeNutrition(ingr, cat);
   const emoji   = recipeCardEmoji(cat);
+  const stepsUi = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
+  const tip     = recipeTip(ingr, cat, code);
+  const isSoupRecipe = /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa|çorba/i.test(cat)
+    || /ciorbă|borș|borscht|ramen|pho|solyanka|okroshka|harira|minestrone|bisque|potage|gazpacho|laksa|tom\s*yum|tom\s*kha/i.test(n)
+    || /\bbulion\b|\bstock\b|\bbroth\b|\bbouillon\b/i.test(ingr.join(' '));
+  const nutritionPer = isSoupRecipe ? ui.nutritionPer.replace(/~?\d+\s*g/i,'~350 ml') : ui.nutritionPer.replace(/~?\d+\s*ml/i,'~350 g');
 
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
@@ -1729,7 +1896,7 @@ ${makeNav(lc)}
   </div>
 
   <!-- Feature Cards -->
-  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code)}</div>
+  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code, n)}</div>
 
   <!-- 3-column content -->
   <div class="recipe-content-grid">
@@ -1745,10 +1912,11 @@ ${makeNav(lc)}
       <ol class="recipe-steps-new">
         ${steps.map((s,i)=>`<li><span class="step-num">${i+1}</span><span>${esc(s)}.</span></li>`).join('\n        ')}
       </ol>
+      ${tip ? `<div class="recipe-tip-box"><span class="tip-icon">💡</span><div><strong>${stepsUi.tipLabel}:</strong> ${esc(tip)}</div></div>` : ''}
     </div>
     <div class="recipe-nutrition-col">
       <h2>${ui.nutritionH}</h2>
-      <p class="nutrition-per">${ui.nutritionPer}</p>
+      <p class="nutrition-per">${nutritionPer}</p>
       <div class="nutrition-list">
         <div class="nutrition-row">${ui.cal} <span>${nutri.cal} kcal</span></div>
         <div class="nutrition-row">${ui.prot} <span>${nutri.prot} g</span></div>
@@ -1781,7 +1949,7 @@ ${makeNav(lc)}
   </div>
 
 </div>
-</main>${makeFooter(lc)}</body></html>`;
+</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 function recipeIndex(rl) {
