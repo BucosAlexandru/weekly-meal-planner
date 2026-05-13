@@ -1142,81 +1142,645 @@ Object.entries(RECIPE_LANG).forEach(([code, rl]) => {
 });
 
 /* ════════════════════════════════════════════════════════════════
+   RECIPE UI STRINGS — premium redesign labels for all 14 languages
+   ════════════════════════════════════════════════════════════════ */
+const RECIPE_UI = {
+  ro:{ totalTime:'Timp total', activeTime:'Timp activ', servings:'Porții', difficulty:'Dificultate', cost:'Cost',
+    diffLevels:['Ușoară','Medie','Dificilă'], pdfBtn:'Descarcă PDF',
+    nutritionH:'Informații nutriționale', nutritionPer:'per porție (~400 ml)',
+    cal:'Calorii', prot:'Proteine', carb:'Carbohidrați', fat:'Grăsimi', fib:'Fibre',
+    pairingsH:'Se potrivește perfect cu',
+    seeAll:'Vezi toate rețetele →',
+    ctaTitle:'Planifică-ți mesele pentru întreaga săptămână',
+    ctaDesc:'Generează un plan personalizat cu rețete variate și listă automată de cumpărături.',
+    ctaBtn:'Generează planul meu acum →', addShopping:'Adaugă la lista de cumpărături',
+    servingsLabel:n=>`${n} porții`,
+    feat:[
+      {icon:'❤️',t:'Bogat în proteine',d:'Sățios și nutritiv'},
+      {icon:'🐟',t:'Bogat în omega-3',d:'Ușor și sănătos'},
+      {icon:'🌿',t:'Bogat în vitamine',d:'Proaspăt și sănătos'},
+      {icon:'⭐',t:'Rețetă tradițională',d:'Gust autentic'},
+      {icon:'❄️',t:'Se poate congela',d:'Ideală pentru meal prep'},
+      {icon:'⚡',t:'Rapid de preparat',d:'Gata în sub 30 minute'},
+      {icon:'☕',t:'Perfect pentru iarnă',d:'Reconfortant și cald'},
+      {icon:'👨‍👩‍👧‍👦',t:'Ideal pentru familie',d:'Toți vor adora'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Vin roșu'},{e:'🥗',n:'Salată verde'},{e:'🍞',n:'Pâine de casă'},{e:'🥔',n:'Cartofi noi'}],
+      fish:[{e:'🍋',n:'Lămâie'},{e:'🍷',n:'Vin alb'},{e:'🍚',n:'Orez fiert'},{e:'🌿',n:'Ierburi proaspete'}],
+      soup:[{e:'🍞',n:'Pâine rustică'},{e:'🧄',n:'Usturoi proaspăt'},{e:'🌶️',n:'Ardei iute'},{e:'🧅',n:'Ceapă roșie'}],
+      pasta:[{e:'🧀',n:'Parmezan'},{e:'🍷',n:'Vin alb'},{e:'🥗',n:'Salată'},{e:'🍞',n:'Pâine ciabatta'}],
+      veg:[{e:'🫙',n:'Smântână'},{e:'🍞',n:'Pâine'},{e:'🧄',n:'Usturoi'},{e:'🥗',n:'Salată'}],
+      def:[{e:'🥗',n:'Salată proaspătă'},{e:'🍷',n:'Vin'},{e:'🍞',n:'Pâine'},{e:'🌿',n:'Ierburi aromatice'}],
+    }
+  },
+  en:{ totalTime:'Total time', activeTime:'Active time', servings:'Servings', difficulty:'Difficulty', cost:'Cost',
+    diffLevels:['Easy','Medium','Hard'], pdfBtn:'Download PDF',
+    nutritionH:'Nutritional info', nutritionPer:'per serving (~400 ml)',
+    cal:'Calories', prot:'Protein', carb:'Carbs', fat:'Fat', fib:'Fiber',
+    pairingsH:'Pairs perfectly with',
+    seeAll:'See all recipes →',
+    ctaTitle:'Plan your meals for the entire week',
+    ctaDesc:'Generate a personalized plan with varied recipes and automatic shopping list.',
+    ctaBtn:'Generate my plan now →', addShopping:'Add to shopping list',
+    servingsLabel:n=>`${n} servings`,
+    feat:[
+      {icon:'❤️',t:'Rich in protein',d:'Filling and nutritious'},
+      {icon:'🐟',t:'Rich in omega-3',d:'Light and healthy'},
+      {icon:'🌿',t:'Rich in vitamins',d:'Fresh and healthy'},
+      {icon:'⭐',t:'Traditional recipe',d:'Authentic taste'},
+      {icon:'❄️',t:'Can be frozen',d:'Great for meal prep'},
+      {icon:'⚡',t:'Quick to prepare',d:'Ready in under 30 min'},
+      {icon:'☕',t:'Perfect for winter',d:'Comforting and warm'},
+      {icon:'👨‍👩‍👧‍👦',t:'Great for family',d:'Everyone will love it'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Red wine'},{e:'🥗',n:'Green salad'},{e:'🍞',n:'Fresh bread'},{e:'🥔',n:'Roasted potatoes'}],
+      fish:[{e:'🍋',n:'Lemon'},{e:'🍷',n:'White wine'},{e:'🍚',n:'Steamed rice'},{e:'🌿',n:'Fresh herbs'}],
+      soup:[{e:'🍞',n:'Rustic bread'},{e:'🧄',n:'Fresh garlic'},{e:'🌶️',n:'Chili peppers'},{e:'🧅',n:'Red onion'}],
+      pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'White wine'},{e:'🥗',n:'Arugula salad'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Yogurt'},{e:'🍞',n:'Bread'},{e:'🧄',n:'Garlic'},{e:'🥗',n:'Salad'}],
+      def:[{e:'🥗',n:'Fresh salad'},{e:'🍷',n:'Wine'},{e:'🍞',n:'Bread'},{e:'🌿',n:'Fresh herbs'}],
+    }
+  },
+  es:{ totalTime:'Tiempo total', activeTime:'Tiempo activo', servings:'Raciones', difficulty:'Dificultad', cost:'Coste',
+    diffLevels:['Fácil','Media','Difícil'], pdfBtn:'Descargar PDF',
+    nutritionH:'Información nutricional', nutritionPer:'por ración (~400 ml)',
+    cal:'Calorías', prot:'Proteínas', carb:'Carbohidratos', fat:'Grasas', fib:'Fibra',
+    pairingsH:'Combina perfectamente con',
+    seeAll:'Ver todas las recetas →',
+    ctaTitle:'Planifica tus comidas para toda la semana',
+    ctaDesc:'Genera un plan personalizado con recetas variadas y lista de compras automática.',
+    ctaBtn:'Generar mi plan ahora →', addShopping:'Añadir a la lista de compras',
+    servingsLabel:n=>`${n} raciones`,
+    feat:[
+      {icon:'❤️',t:'Rico en proteínas',d:'Saciante y nutritivo'},
+      {icon:'🐟',t:'Rico en omega-3',d:'Ligero y saludable'},
+      {icon:'🌿',t:'Rico en vitaminas',d:'Fresco y saludable'},
+      {icon:'⭐',t:'Receta tradicional',d:'Sabor auténtico'},
+      {icon:'❄️',t:'Se puede congelar',d:'Ideal para meal prep'},
+      {icon:'⚡',t:'Rápido de preparar',d:'Listo en menos de 30 min'},
+      {icon:'☕',t:'Perfecto para el invierno',d:'Reconfortante y cálido'},
+      {icon:'👨‍👩‍👧‍👦',t:'Ideal para la familia',d:'A todos les encantará'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Vino tinto'},{e:'🥗',n:'Ensalada verde'},{e:'🍞',n:'Pan fresco'},{e:'🥔',n:'Patatas asadas'}],
+      fish:[{e:'🍋',n:'Limón'},{e:'🍷',n:'Vino blanco'},{e:'🍚',n:'Arroz al vapor'},{e:'🌿',n:'Hierbas frescas'}],
+      soup:[{e:'🍞',n:'Pan rústico'},{e:'🧄',n:'Ajo fresco'},{e:'🌶️',n:'Chile'},{e:'🧅',n:'Cebolla roja'}],
+      pasta:[{e:'🧀',n:'Parmesano'},{e:'🍷',n:'Vino blanco'},{e:'🥗',n:'Ensalada'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Yogur'},{e:'🍞',n:'Pan'},{e:'🧄',n:'Ajo'},{e:'🥗',n:'Ensalada'}],
+      def:[{e:'🥗',n:'Ensalada fresca'},{e:'🍷',n:'Vino'},{e:'🍞',n:'Pan'},{e:'🌿',n:'Hierbas'}],
+    }
+  },
+  fr:{ totalTime:'Temps total', activeTime:'Temps actif', servings:'Portions', difficulty:'Difficulté', cost:'Coût',
+    diffLevels:['Facile','Moyen','Difficile'], pdfBtn:'Télécharger PDF',
+    nutritionH:'Informations nutritionnelles', nutritionPer:'par portion (~400 ml)',
+    cal:'Calories', prot:'Protéines', carb:'Glucides', fat:'Lipides', fib:'Fibres',
+    pairingsH:'S\'accompagne parfaitement avec',
+    seeAll:'Voir toutes les recettes →',
+    ctaTitle:'Planifiez vos repas pour toute la semaine',
+    ctaDesc:'Générez un plan personnalisé avec des recettes variées et une liste de courses automatique.',
+    ctaBtn:'Générer mon plan maintenant →', addShopping:'Ajouter à la liste de courses',
+    servingsLabel:n=>`${n} portions`,
+    feat:[
+      {icon:'❤️',t:'Riche en protéines',d:'Rassasiant et nutritif'},
+      {icon:'🐟',t:'Riche en oméga-3',d:'Léger et sain'},
+      {icon:'🌿',t:'Riche en vitamines',d:'Frais et sain'},
+      {icon:'⭐',t:'Recette traditionnelle',d:'Goût authentique'},
+      {icon:'❄️',t:'Se congèle bien',d:'Idéal pour le meal prep'},
+      {icon:'⚡',t:'Rapide à préparer',d:'Prêt en moins de 30 min'},
+      {icon:'☕',t:'Parfait pour l\'hiver',d:'Réconfortant et chaud'},
+      {icon:'👨‍👩‍👧‍👦',t:'Idéal en famille',d:'Tout le monde adorera'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Vin rouge'},{e:'🥗',n:'Salade verte'},{e:'🍞',n:'Pain frais'},{e:'🥔',n:'Pommes de terre'}],
+      fish:[{e:'🍋',n:'Citron'},{e:'🍷',n:'Vin blanc'},{e:'🍚',n:'Riz vapeur'},{e:'🌿',n:'Herbes fraîches'}],
+      soup:[{e:'🍞',n:'Pain rustique'},{e:'🧄',n:'Ail frais'},{e:'🌶️',n:'Piment'},{e:'🧅',n:'Oignon rouge'}],
+      pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'Vin blanc'},{e:'🥗',n:'Salade'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Yaourt'},{e:'🍞',n:'Pain'},{e:'🧄',n:'Ail'},{e:'🥗',n:'Salade'}],
+      def:[{e:'🥗',n:'Salade fraîche'},{e:'🍷',n:'Vin'},{e:'🍞',n:'Pain'},{e:'🌿',n:'Herbes'}],
+    }
+  },
+  de:{ totalTime:'Gesamtzeit', activeTime:'Aktive Zeit', servings:'Portionen', difficulty:'Schwierigkeit', cost:'Kosten',
+    diffLevels:['Einfach','Mittel','Schwer'], pdfBtn:'PDF herunterladen',
+    nutritionH:'Nährwertangaben', nutritionPer:'pro Portion (~400 ml)',
+    cal:'Kalorien', prot:'Protein', carb:'Kohlenhydrate', fat:'Fett', fib:'Ballaststoffe',
+    pairingsH:'Passt perfekt zu',
+    seeAll:'Alle Rezepte ansehen →',
+    ctaTitle:'Plane deine Mahlzeiten für die ganze Woche',
+    ctaDesc:'Erstelle einen persönlichen Plan mit abwechslungsreichen Rezepten und automatischer Einkaufsliste.',
+    ctaBtn:'Meinen Plan jetzt erstellen →', addShopping:'Zur Einkaufsliste hinzufügen',
+    servingsLabel:n=>`${n} Portionen`,
+    feat:[
+      {icon:'❤️',t:'Proteinreich',d:'Sättigend und nahrhaft'},
+      {icon:'🐟',t:'Reich an Omega-3',d:'Leicht und gesund'},
+      {icon:'🌿',t:'Vitaminreich',d:'Frisch und gesund'},
+      {icon:'⭐',t:'Traditionelles Rezept',d:'Authentischer Geschmack'},
+      {icon:'❄️',t:'Einfrierbar',d:'Ideal für Meal Prep'},
+      {icon:'⚡',t:'Schnell zubereitet',d:'In unter 30 Min. fertig'},
+      {icon:'☕',t:'Perfekt für den Winter',d:'Wärmend und wohltuend'},
+      {icon:'👨‍👩‍👧‍👦',t:'Ideal für die Familie',d:'Alle werden es lieben'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Rotwein'},{e:'🥗',n:'Grüner Salat'},{e:'🍞',n:'Frisches Brot'},{e:'🥔',n:'Bratkartoffeln'}],
+      fish:[{e:'🍋',n:'Zitrone'},{e:'🍷',n:'Weißwein'},{e:'🍚',n:'Gedämpfter Reis'},{e:'🌿',n:'Frische Kräuter'}],
+      soup:[{e:'🍞',n:'Rustikales Brot'},{e:'🧄',n:'Frischer Knoblauch'},{e:'🌶️',n:'Chili'},{e:'🧅',n:'Rote Zwiebel'}],
+      pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'Weißwein'},{e:'🥗',n:'Salat'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Joghurt'},{e:'🍞',n:'Brot'},{e:'🧄',n:'Knoblauch'},{e:'🥗',n:'Salat'}],
+      def:[{e:'🥗',n:'Frischer Salat'},{e:'🍷',n:'Wein'},{e:'🍞',n:'Brot'},{e:'🌿',n:'Kräuter'}],
+    }
+  },
+  pt:{ totalTime:'Tempo total', activeTime:'Tempo ativo', servings:'Porções', difficulty:'Dificuldade', cost:'Custo',
+    diffLevels:['Fácil','Média','Difícil'], pdfBtn:'Baixar PDF',
+    nutritionH:'Informação nutricional', nutritionPer:'por porção (~400 ml)',
+    cal:'Calorias', prot:'Proteínas', carb:'Carboidratos', fat:'Gorduras', fib:'Fibras',
+    pairingsH:'Combina perfeitamente com',
+    seeAll:'Ver todas as receitas →',
+    ctaTitle:'Planeje suas refeições para a semana toda',
+    ctaDesc:'Gere um plano personalizado com receitas variadas e lista de compras automática.',
+    ctaBtn:'Gerar meu plano agora →', addShopping:'Adicionar à lista de compras',
+    servingsLabel:n=>`${n} porções`,
+    feat:[
+      {icon:'❤️',t:'Rico em proteínas',d:'Saciante e nutritivo'},
+      {icon:'🐟',t:'Rico em ômega-3',d:'Leve e saudável'},
+      {icon:'🌿',t:'Rico em vitaminas',d:'Fresco e saudável'},
+      {icon:'⭐',t:'Receita tradicional',d:'Sabor autêntico'},
+      {icon:'❄️',t:'Pode ser congelado',d:'Ideal para meal prep'},
+      {icon:'⚡',t:'Rápido de preparar',d:'Pronto em menos de 30 min'},
+      {icon:'☕',t:'Perfeito para o inverno',d:'Reconfortante e quentinho'},
+      {icon:'👨‍👩‍👧‍👦',t:'Ideal para a família',d:'Todos vão adorar'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Vinho tinto'},{e:'🥗',n:'Salada verde'},{e:'🍞',n:'Pão fresco'},{e:'🥔',n:'Batatas assadas'}],
+      fish:[{e:'🍋',n:'Limão'},{e:'🍷',n:'Vinho branco'},{e:'🍚',n:'Arroz no vapor'},{e:'🌿',n:'Ervas frescas'}],
+      soup:[{e:'🍞',n:'Pão rústico'},{e:'🧄',n:'Alho fresco'},{e:'🌶️',n:'Pimenta'},{e:'🧅',n:'Cebola roxa'}],
+      pasta:[{e:'🧀',n:'Parmesão'},{e:'🍷',n:'Vinho branco'},{e:'🥗',n:'Salada'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Iogurte'},{e:'🍞',n:'Pão'},{e:'🧄',n:'Alho'},{e:'🥗',n:'Salada'}],
+      def:[{e:'🥗',n:'Salada fresca'},{e:'🍷',n:'Vinho'},{e:'🍞',n:'Pão'},{e:'🌿',n:'Ervas'}],
+    }
+  },
+  ru:{ totalTime:'Общее время', activeTime:'Активное время', servings:'Порции', difficulty:'Сложность', cost:'Стоимость',
+    diffLevels:['Лёгкий','Средний','Сложный'], pdfBtn:'Скачать PDF',
+    nutritionH:'Пищевая ценность', nutritionPer:'на порцию (~400 мл)',
+    cal:'Калории', prot:'Белки', carb:'Углеводы', fat:'Жиры', fib:'Клетчатка',
+    pairingsH:'Прекрасно сочетается с',
+    seeAll:'Все рецепты →',
+    ctaTitle:'Планируйте питание на всю неделю',
+    ctaDesc:'Создайте персональный план с разнообразными рецептами и автоматическим списком покупок.',
+    ctaBtn:'Создать мой план →', addShopping:'Добавить в список покупок',
+    servingsLabel:n=>`${n} порции`,
+    feat:[
+      {icon:'❤️',t:'Богато белком',d:'Сытно и питательно'},
+      {icon:'🐟',t:'Богато омега-3',d:'Лёгкое и полезное'},
+      {icon:'🌿',t:'Богато витаминами',d:'Свежее и полезное'},
+      {icon:'⭐',t:'Традиционный рецепт',d:'Аутентичный вкус'},
+      {icon:'❄️',t:'Можно заморозить',d:'Идеально для meal prep'},
+      {icon:'⚡',t:'Быстро готовится',d:'Готово менее чем за 30 мин'},
+      {icon:'☕',t:'Идеально зимой',d:'Согревающее и уютное'},
+      {icon:'👨‍👩‍👧‍👦',t:'Для всей семьи',d:'Понравится каждому'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Красное вино'},{e:'🥗',n:'Зелёный салат'},{e:'🍞',n:'Свежий хлеб'},{e:'🥔',n:'Жареный картофель'}],
+      fish:[{e:'🍋',n:'Лимон'},{e:'🍷',n:'Белое вино'},{e:'🍚',n:'Варёный рис'},{e:'🌿',n:'Свежие травы'}],
+      soup:[{e:'🍞',n:'Деревенский хлеб'},{e:'🧄',n:'Свежий чеснок'},{e:'🌶️',n:'Перец чили'},{e:'🧅',n:'Красный лук'}],
+      pasta:[{e:'🧀',n:'Пармезан'},{e:'🍷',n:'Белое вино'},{e:'🥗',n:'Салат'},{e:'🍞',n:'Чиабатта'}],
+      veg:[{e:'🫙',n:'Сметана'},{e:'🍞',n:'Хлеб'},{e:'🧄',n:'Чеснок'},{e:'🥗',n:'Салат'}],
+      def:[{e:'🥗',n:'Свежий салат'},{e:'🍷',n:'Вино'},{e:'🍞',n:'Хлеб'},{e:'🌿',n:'Зелень'}],
+    }
+  },
+  ar:{ totalTime:'الوقت الكلي', activeTime:'الوقت الفعلي', servings:'الحصص', difficulty:'الصعوبة', cost:'التكلفة',
+    diffLevels:['سهل','متوسط','صعب'], pdfBtn:'تحميل PDF',
+    nutritionH:'المعلومات الغذائية', nutritionPer:'لكل حصة (~400 مل)',
+    cal:'السعرات', prot:'البروتين', carb:'الكربوهيدرات', fat:'الدهون', fib:'الألياف',
+    pairingsH:'يتناسب مع',
+    seeAll:'عرض كل الوصفات →',
+    ctaTitle:'خطط لوجباتك لكامل الأسبوع',
+    ctaDesc:'أنشئ خطة مخصصة مع وصفات متنوعة وقائمة تسوق تلقائية.',
+    ctaBtn:'أنشئ خطتي الآن →', addShopping:'أضف إلى قائمة التسوق',
+    servingsLabel:n=>`${n} حصص`,
+    feat:[
+      {icon:'❤️',t:'غني بالبروتين',d:'مشبع ومغذٍ'},
+      {icon:'🐟',t:'غني بأوميغا-3',d:'خفيف وصحي'},
+      {icon:'🌿',t:'غني بالفيتامينات',d:'طازج وصحي'},
+      {icon:'⭐',t:'وصفة تقليدية',d:'طعم أصيل'},
+      {icon:'❄️',t:'يمكن تجميده',d:'مثالي للتحضير المسبق'},
+      {icon:'⚡',t:'سريع التحضير',d:'جاهز في أقل من 30 دقيقة'},
+      {icon:'☕',t:'مثالي للشتاء',d:'دافئ ومريح'},
+      {icon:'👨‍👩‍👧‍👦',t:'مثالي للعائلة',d:'سيحبه الجميع'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'نبيذ أحمر'},{e:'🥗',n:'سلطة خضراء'},{e:'🍞',n:'خبز طازج'},{e:'🥔',n:'بطاطس مشوية'}],
+      fish:[{e:'🍋',n:'ليمون'},{e:'🍷',n:'نبيذ أبيض'},{e:'🍚',n:'أرز مطهو'},{e:'🌿',n:'أعشاب طازجة'}],
+      soup:[{e:'🍞',n:'خبز ريفي'},{e:'🧄',n:'ثوم طازج'},{e:'🌶️',n:'فلفل حار'},{e:'🧅',n:'بصل أحمر'}],
+      pasta:[{e:'🧀',n:'بارميزان'},{e:'🍷',n:'نبيذ أبيض'},{e:'🥗',n:'سلطة'},{e:'🍞',n:'خبز'}],
+      veg:[{e:'🫙',n:'زبادي'},{e:'🍞',n:'خبز'},{e:'🧄',n:'ثوم'},{e:'🥗',n:'سلطة'}],
+      def:[{e:'🥗',n:'سلطة طازجة'},{e:'🍷',n:'نبيذ'},{e:'🍞',n:'خبز'},{e:'🌿',n:'أعشاب'}],
+    }
+  },
+  zh:{ totalTime:'总时间', activeTime:'操作时间', servings:'份数', difficulty:'难度', cost:'费用',
+    diffLevels:['简单','中等','困难'], pdfBtn:'下载PDF',
+    nutritionH:'营养信息', nutritionPer:'每份 (~400 ml)',
+    cal:'卡路里', prot:'蛋白质', carb:'碳水化合物', fat:'脂肪', fib:'膳食纤维',
+    pairingsH:'完美搭配',
+    seeAll:'查看全部食谱 →',
+    ctaTitle:'为整周规划您的餐食',
+    ctaDesc:'生成包含多种食谱和自动购物清单的个性化计划。',
+    ctaBtn:'立即生成我的计划 →', addShopping:'添加到购物清单',
+    servingsLabel:n=>`${n}份`,
+    feat:[
+      {icon:'❤️',t:'富含蛋白质',d:'饱腹又营养'},
+      {icon:'🐟',t:'富含omega-3',d:'清淡健康'},
+      {icon:'🌿',t:'富含维生素',d:'新鲜健康'},
+      {icon:'⭐',t:'传统食谱',d:'正宗口味'},
+      {icon:'❄️',t:'可冷冻保存',d:'非常适合备餐'},
+      {icon:'⚡',t:'快速制作',d:'30分钟内完成'},
+      {icon:'☕',t:'冬季佳品',d:'暖心又舒适'},
+      {icon:'👨‍👩‍👧‍👦',t:'家庭首选',d:'全家都会喜欢'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'红酒'},{e:'🥗',n:'绿色沙拉'},{e:'🍞',n:'新鲜面包'},{e:'🥔',n:'烤土豆'}],
+      fish:[{e:'🍋',n:'柠檬'},{e:'🍷',n:'白葡萄酒'},{e:'🍚',n:'蒸米饭'},{e:'🌿',n:'新鲜香草'}],
+      soup:[{e:'🍞',n:'乡村面包'},{e:'🧄',n:'新鲜大蒜'},{e:'🌶️',n:'辣椒'},{e:'🧅',n:'红洋葱'}],
+      pasta:[{e:'🧀',n:'帕玛森芝士'},{e:'🍷',n:'白葡萄酒'},{e:'🥗',n:'沙拉'},{e:'🍞',n:'拖鞋面包'}],
+      veg:[{e:'🫙',n:'酸奶'},{e:'🍞',n:'面包'},{e:'🧄',n:'大蒜'},{e:'🥗',n:'沙拉'}],
+      def:[{e:'🥗',n:'新鲜沙拉'},{e:'🍷',n:'葡萄酒'},{e:'🍞',n:'面包'},{e:'🌿',n:'香草'}],
+    }
+  },
+  ja:{ totalTime:'合計時間', activeTime:'調理時間', servings:'人数', difficulty:'難易度', cost:'費用',
+    diffLevels:['簡単','普通','難しい'], pdfBtn:'PDFをダウンロード',
+    nutritionH:'栄養情報', nutritionPer:'1人前あたり (~400 ml)',
+    cal:'カロリー', prot:'タンパク質', carb:'炭水化物', fat:'脂質', fib:'食物繊維',
+    pairingsH:'と相性抜群',
+    seeAll:'全レシピを見る →',
+    ctaTitle:'1週間の食事を計画しましょう',
+    ctaDesc:'様々なレシピと自動買い物リスト付きのパーソナライズされたプランを作成します。',
+    ctaBtn:'プランを今すぐ作成 →', addShopping:'買い物リストに追加',
+    servingsLabel:n=>`${n}人前`,
+    feat:[
+      {icon:'❤️',t:'タンパク質豊富',d:'満腹感と栄養満点'},
+      {icon:'🐟',t:'オメガ3豊富',d:'軽くてヘルシー'},
+      {icon:'🌿',t:'ビタミン豊富',d:'新鮮でヘルシー'},
+      {icon:'⭐',t:'伝統的なレシピ',d:'本格的な味'},
+      {icon:'❄️',t:'冷凍保存可',d:'ミールプレップに最適'},
+      {icon:'⚡',t:'素早く調理',d:'30分以内に完成'},
+      {icon:'☕',t:'冬に最適',d:'心も体も温まる'},
+      {icon:'👨‍👩‍👧‍👦',t:'家族向き',d:'みんなが喜ぶ'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'赤ワイン'},{e:'🥗',n:'グリーンサラダ'},{e:'🍞',n:'パン'},{e:'🥔',n:'ローストポテト'}],
+      fish:[{e:'🍋',n:'レモン'},{e:'🍷',n:'白ワイン'},{e:'🍚',n:'蒸しご飯'},{e:'🌿',n:'フレッシュハーブ'}],
+      soup:[{e:'🍞',n:'田舎パン'},{e:'🧄',n:'新鮮ニンニク'},{e:'🌶️',n:'唐辛子'},{e:'🧅',n:'赤玉ねぎ'}],
+      pasta:[{e:'🧀',n:'パルメザン'},{e:'🍷',n:'白ワイン'},{e:'🥗',n:'サラダ'},{e:'🍞',n:'チャバタ'}],
+      veg:[{e:'🫙',n:'ヨーグルト'},{e:'🍞',n:'パン'},{e:'🧄',n:'ニンニク'},{e:'🥗',n:'サラダ'}],
+      def:[{e:'🥗',n:'フレッシュサラダ'},{e:'🍷',n:'ワイン'},{e:'🍞',n:'パン'},{e:'🌿',n:'ハーブ'}],
+    }
+  },
+  hi:{ totalTime:'कुल समय', activeTime:'सक्रिय समय', servings:'सर्विंग्स', difficulty:'कठिनाई', cost:'लागत',
+    diffLevels:['आसान','मध्यम','कठिन'], pdfBtn:'PDF डाउनलोड करें',
+    nutritionH:'पोषण संबंधी जानकारी', nutritionPer:'प्रति सर्विंग (~400 ml)',
+    cal:'कैलोरी', prot:'प्रोटीन', carb:'कार्बोहाइड्रेट', fat:'वसा', fib:'फाइबर',
+    pairingsH:'के साथ बेहतरीन लगता है',
+    seeAll:'सभी रेसिपी देखें →',
+    ctaTitle:'पूरे सप्ताह के लिए अपने भोजन की योजना बनाएं',
+    ctaDesc:'विविध व्यंजनों और स्वचालित खरीदारी सूची के साथ एक व्यक्तिगत योजना बनाएं।',
+    ctaBtn:'अभी मेरी योजना बनाएं →', addShopping:'खरीदारी सूची में जोड़ें',
+    servingsLabel:n=>`${n} सर्विंग्स`,
+    feat:[
+      {icon:'❤️',t:'प्रोटीन से भरपूर',d:'भरपेट और पौष्टिक'},
+      {icon:'🐟',t:'ओमेगा-3 से भरपूर',d:'हल्का और स्वस्थ'},
+      {icon:'🌿',t:'विटामिन से भरपूर',d:'ताजा और स्वस्थ'},
+      {icon:'⭐',t:'पारंपरिक रेसिपी',d:'असली स्वाद'},
+      {icon:'❄️',t:'फ्रीज किया जा सकता है',d:'मील प्रेप के लिए बढ़िया'},
+      {icon:'⚡',t:'जल्दी तैयार होता है',d:'30 मिनट में तैयार'},
+      {icon:'☕',t:'सर्दियों के लिए परफेक्ट',d:'आरामदायक और गर्म'},
+      {icon:'👨‍👩‍👧‍👦',t:'परिवार के लिए आदर्श',d:'सभी को पसंद आएगा'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'रेड वाइन'},{e:'🥗',n:'हरा सलाद'},{e:'🍞',n:'ताजी ब्रेड'},{e:'🥔',n:'भुने आलू'}],
+      fish:[{e:'🍋',n:'नींबू'},{e:'🍷',n:'व्हाइट वाइन'},{e:'🍚',n:'उबला चावल'},{e:'🌿',n:'ताजी जड़ी-बूटियां'}],
+      soup:[{e:'🍞',n:'देहाती ब्रेड'},{e:'🧄',n:'ताजा लहसुन'},{e:'🌶️',n:'मिर्च'},{e:'🧅',n:'लाल प्याज'}],
+      pasta:[{e:'🧀',n:'परमेसन'},{e:'🍷',n:'व्हाइट वाइन'},{e:'🥗',n:'सलाद'},{e:'🍞',n:'ब्रेड'}],
+      veg:[{e:'🫙',n:'दही'},{e:'🍞',n:'रोटी'},{e:'🧄',n:'लहसुन'},{e:'🥗',n:'सलाद'}],
+      def:[{e:'🥗',n:'ताजा सलाद'},{e:'🍷',n:'वाइन'},{e:'🍞',n:'ब्रेड'},{e:'🌿',n:'जड़ी-बूटियां'}],
+    }
+  },
+  tr:{ totalTime:'Toplam süre', activeTime:'Aktif süre', servings:'Porsiyon', difficulty:'Zorluk', cost:'Maliyet',
+    diffLevels:['Kolay','Orta','Zor'], pdfBtn:'PDF İndir',
+    nutritionH:'Besin değerleri', nutritionPer:'porsiyon başına (~400 ml)',
+    cal:'Kalori', prot:'Protein', carb:'Karbonhidrat', fat:'Yağ', fib:'Lif',
+    pairingsH:'Mükemmel uyum sağlar',
+    seeAll:'Tüm tarifleri gör →',
+    ctaTitle:'Tüm hafta için öğünlerinizi planlayın',
+    ctaDesc:'Çeşitli tarifler ve otomatik alışveriş listesiyle kişiselleştirilmiş bir plan oluşturun.',
+    ctaBtn:'Planımı şimdi oluştur →', addShopping:'Alışveriş listesine ekle',
+    servingsLabel:n=>`${n} porsiyon`,
+    feat:[
+      {icon:'❤️',t:'Protein bakımından zengin',d:'Doyurucu ve besleyici'},
+      {icon:'🐟',t:'Omega-3 bakımından zengin',d:'Hafif ve sağlıklı'},
+      {icon:'🌿',t:'Vitamin bakımından zengin',d:'Taze ve sağlıklı'},
+      {icon:'⭐',t:'Geleneksel tarif',d:'Özgün lezzet'},
+      {icon:'❄️',t:'Dondurulabilir',d:'Meal prep için ideal'},
+      {icon:'⚡',t:'Hızlı hazırlık',d:'30 dakikada hazır'},
+      {icon:'☕',t:'Kış için mükemmel',d:'Sıcak ve rahatlatıcı'},
+      {icon:'👨‍👩‍👧‍👦',t:'Aile için ideal',d:'Herkes sevecek'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Kırmızı şarap'},{e:'🥗',n:'Yeşil salata'},{e:'🍞',n:'Taze ekmek'},{e:'🥔',n:'Fırın patates'}],
+      fish:[{e:'🍋',n:'Limon'},{e:'🍷',n:'Beyaz şarap'},{e:'🍚',n:'Buharda pilav'},{e:'🌿',n:'Taze otlar'}],
+      soup:[{e:'🍞',n:'Köy ekmeği'},{e:'🧄',n:'Taze sarımsak'},{e:'🌶️',n:'Biber'},{e:'🧅',n:'Kırmızı soğan'}],
+      pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'Beyaz şarap'},{e:'🥗',n:'Salata'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Yoğurt'},{e:'🍞',n:'Ekmek'},{e:'🧄',n:'Sarımsak'},{e:'🥗',n:'Salata'}],
+      def:[{e:'🥗',n:'Taze salata'},{e:'🍷',n:'Şarap'},{e:'🍞',n:'Ekmek'},{e:'🌿',n:'Otlar'}],
+    }
+  },
+  it:{ totalTime:'Tempo totale', activeTime:'Tempo attivo', servings:'Porzioni', difficulty:'Difficoltà', cost:'Costo',
+    diffLevels:['Facile','Media','Difficile'], pdfBtn:'Scarica PDF',
+    nutritionH:'Informazioni nutrizionali', nutritionPer:'per porzione (~400 ml)',
+    cal:'Calorie', prot:'Proteine', carb:'Carboidrati', fat:'Grassi', fib:'Fibre',
+    pairingsH:'Si abbina perfettamente con',
+    seeAll:'Vedi tutte le ricette →',
+    ctaTitle:'Pianifica i tuoi pasti per tutta la settimana',
+    ctaDesc:'Genera un piano personalizzato con ricette variate e lista della spesa automatica.',
+    ctaBtn:'Genera il mio piano ora →', addShopping:'Aggiungi alla lista della spesa',
+    servingsLabel:n=>`${n} porzioni`,
+    feat:[
+      {icon:'❤️',t:'Ricco di proteine',d:'Saziante e nutriente'},
+      {icon:'🐟',t:'Ricco di omega-3',d:'Leggero e salutare'},
+      {icon:'🌿',t:'Ricco di vitamine',d:'Fresco e salutare'},
+      {icon:'⭐',t:'Ricetta tradizionale',d:'Sapore autentico'},
+      {icon:'❄️',t:'Si può congelare',d:'Ideale per il meal prep'},
+      {icon:'⚡',t:'Veloce da preparare',d:'Pronto in meno di 30 min'},
+      {icon:'☕',t:'Perfetto per l\'inverno',d:'Confortante e caldo'},
+      {icon:'👨‍👩‍👧‍👦',t:'Ideale per la famiglia',d:'Piacerà a tutti'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'Vino rosso'},{e:'🥗',n:'Insalata verde'},{e:'🍞',n:'Pane fresco'},{e:'🥔',n:'Patate al forno'}],
+      fish:[{e:'🍋',n:'Limone'},{e:'🍷',n:'Vino bianco'},{e:'🍚',n:'Riso al vapore'},{e:'🌿',n:'Erbe fresche'}],
+      soup:[{e:'🍞',n:'Pane rustico'},{e:'🧄',n:'Aglio fresco'},{e:'🌶️',n:'Peperoncino'},{e:'🧅',n:'Cipolla rossa'}],
+      pasta:[{e:'🧀',n:'Parmigiano'},{e:'🍷',n:'Vino bianco'},{e:'🥗',n:'Insalata'},{e:'🍞',n:'Ciabatta'}],
+      veg:[{e:'🫙',n:'Yogurt'},{e:'🍞',n:'Pane'},{e:'🧄',n:'Aglio'},{e:'🥗',n:'Insalata'}],
+      def:[{e:'🥗',n:'Insalata fresca'},{e:'🍷',n:'Vino'},{e:'🍞',n:'Pane'},{e:'🌿',n:'Erbe'}],
+    }
+  },
+  ko:{ totalTime:'총 시간', activeTime:'조리 시간', servings:'인분', difficulty:'난이도', cost:'비용',
+    diffLevels:['쉬움','보통','어려움'], pdfBtn:'PDF 다운로드',
+    nutritionH:'영양 정보', nutritionPer:'1인분 기준 (~400 ml)',
+    cal:'칼로리', prot:'단백질', carb:'탄수화물', fat:'지방', fib:'식이섬유',
+    pairingsH:'함께 먹으면 좋아요',
+    seeAll:'모든 레시피 보기 →',
+    ctaTitle:'일주일 식단을 계획해 보세요',
+    ctaDesc:'다양한 레시피와 자동 쇼핑 목록이 포함된 맞춤형 플랜을 만드세요.',
+    ctaBtn:'지금 내 플랜 만들기 →', addShopping:'쇼핑 목록에 추가',
+    servingsLabel:n=>`${n}인분`,
+    feat:[
+      {icon:'❤️',t:'단백질이 풍부해요',d:'든든하고 영양가 높아요'},
+      {icon:'🐟',t:'오메가-3이 풍부해요',d:'가볍고 건강해요'},
+      {icon:'🌿',t:'비타민이 풍부해요',d:'신선하고 건강해요'},
+      {icon:'⭐',t:'전통 레시피',d:'정통의 맛'},
+      {icon:'❄️',t:'냉동 보관 가능',d:'밀프렙에 좋아요'},
+      {icon:'⚡',t:'빠르게 조리해요',d:'30분 이내 완성'},
+      {icon:'☕',t:'겨울에 딱이에요',d:'따뜻하고 편안한'},
+      {icon:'👨‍👩‍👧‍👦',t:'온 가족이 좋아해요',d:'모두가 즐길 수 있어요'},
+    ],
+    pairs:{
+      meat:[{e:'🍷',n:'레드 와인'},{e:'🥗',n:'그린 샐러드'},{e:'🍞',n:'신선한 빵'},{e:'🥔',n:'구운 감자'}],
+      fish:[{e:'🍋',n:'레몬'},{e:'🍷',n:'화이트 와인'},{e:'🍚',n:'찐 밥'},{e:'🌿',n:'신선한 허브'}],
+      soup:[{e:'🍞',n:'시골 빵'},{e:'🧄',n:'신선한 마늘'},{e:'🌶️',n:'고추'},{e:'🧅',n:'적양파'}],
+      pasta:[{e:'🧀',n:'파르메산'},{e:'🍷',n:'화이트 와인'},{e:'🥗',n:'샐러드'},{e:'🍞',n:'치아바타'}],
+      veg:[{e:'🫙',n:'요거트'},{e:'🍞',n:'빵'},{e:'🧄',n:'마늘'},{e:'🥗',n:'샐러드'}],
+      def:[{e:'🥗',n:'신선한 샐러드'},{e:'🍷',n:'와인'},{e:'🍞',n:'빵'},{e:'🌿',n:'허브'}],
+    }
+  },
+};
+
+/* ── Recipe metadata helpers ── */
+function recipeMetadata(ingr, steps, cat, code) {
+  const ui = RECIPE_UI[code] || RECIPE_UI.en;
+  const sc = steps.length;
+  const ic = ingr.length;
+  const activeMins = Math.min(Math.max(sc * 9 + 8, 15), 85);
+  const roundTo5 = m => Math.round(m / 5) * 5;
+  const totalMins = roundTo5(activeMins + (activeMins > 40 ? 30 : 20));
+  const activeMinsR = roundTo5(activeMins);
+  const fmt = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
+  const servings = ic < 5 ? 2 : ic < 9 ? 4 : 6;
+  const diffIdx = sc <= 3 ? 0 : sc <= 5 ? 1 : 2;
+  const ingrStr = ingr.join(' ').toLowerCase();
+  const expensive = /beef|veal|lamb|salmon|shrimp|lobster|crab|truffle|saffron|chocolate|vițel|miel|somon|creveți|caracatiță/.test(ingrStr);
+  return {
+    totalTime: fmt(totalMins),
+    activeTime: fmt(activeMinsR),
+    servings,
+    difficulty: ui.diffLevels[diffIdx],
+    cost: expensive ? '$$' : '$',
+  };
+}
+
+function recipeFeatureCards(ingr, steps, cat, code) {
+  const ui = RECIPE_UI[code] || RECIPE_UI.en;
+  const ingrStr = ingr.join(' ').toLowerCase();
+  const catStr = (cat||'').toLowerCase();
+  const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
+  const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
+  const isSoup = /soup|supă|ciorbă|borș|soup|soupe|suppe|sopa|zuppa|çorba/.test(catStr);
+  const isFreezer = isSoup || steps.length > 5;
+  const cards = [
+    hasFish ? ui.feat[1] : hasMeat ? ui.feat[0] : ui.feat[2],
+    isSoup ? ui.feat[6] : ui.feat[7],
+    ui.feat[3],
+    isFreezer ? ui.feat[4] : ui.feat[5],
+  ];
+  return cards.map(f=>`<div class="recipe-feature-card"><span class="recipe-feature-icon">${f.icon}</span><div><p class="recipe-feature-title">${f.t}</p><p class="recipe-feature-desc">${f.d}</p></div></div>`).join('');
+}
+
+function recipeNutrition(ingr, cat) {
+  const ingrStr = ingr.join(' ').toLowerCase();
+  const catStr = (cat||'').toLowerCase();
+  const hasMeat = /beef|chicken|pork|lamb|duck|turkey|veal|carne|pui|porc|vită|miel/.test(ingrStr);
+  const hasFish = /salmon|trout|cod|tuna|fish|pește|somon|ton|păstrăv/.test(ingrStr);
+  const isSoup = /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa/.test(catStr);
+  const isDesert = /dessert|desert|dolce|postre|tatlı|десерт/.test(catStr);
+  const hasDairy = /cream|cheese|milk|smântână|brânză|lapte|parmezan|fromage|käse/.test(ingrStr);
+  const hasGrain = /pasta|spaghetti|noodle|rice|orez|quinoa|orzo|couscous/.test(ingrStr);
+  let cal=350, prot=18, carb=28, fat=12, fib=4;
+  if (isSoup) { cal=185; prot=10; carb=16; fat=7; fib=3; }
+  else if (isDesert) { cal=375; prot=5; carb=52; fat=14; fib=2; }
+  else if (hasMeat) { cal=420; prot=32; carb=18; fat=20; fib=3; }
+  else if (hasFish) { cal=285; prot=28; carb=12; fat=11; fib=2; }
+  if (hasDairy) cal += 55;
+  if (hasGrain) { carb += 18; cal += 75; }
+  return { cal, prot, carb, fat, fib };
+}
+
+function recipePairings(ingr, cat, code) {
+  const ui = RECIPE_UI[code] || RECIPE_UI.en;
+  const p = ui.pairs;
+  const ingrStr = ingr.join(' ').toLowerCase();
+  const catStr = (cat||'').toLowerCase();
+  const hasMeat = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
+  const hasFish = /salmon|trout|cod|tuna|shrimp|pește|somon|ton|păstrăv|creveți/.test(ingrStr);
+  const isSoup = /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa/.test(catStr);
+  const hasPasta = /pasta|spaghetti|noodle|linguine|tagliatelle/.test(ingrStr);
+  const isVeg = !hasMeat && !hasFish;
+  const chosen = isSoup ? p.soup : hasFish ? p.fish : hasMeat ? p.meat : hasPasta ? p.pasta : isVeg ? p.veg : p.def;
+  return chosen.map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
+}
+
+function recipeCardEmoji(cat) {
+  const c = (cat||'').toLowerCase();
+  if (/soup|supă|ciorbă|borș/.test(c)) return '🍲';
+  if (/dessert|desert|dolce/.test(c)) return '🍰';
+  if (/salad|salată/.test(c)) return '🥗';
+  if (/breakfast|mic dejun/.test(c)) return '🍳';
+  return '🍽️';
+}
+
+/* ════════════════════════════════════════════════════════════════
    GENERIC recipe page + index — works for ALL 14 languages
    ════════════════════════════════════════════════════════════════ */
 function recipePage(recipe, rl) {
   const lc   = rl.lc;
   const code = lc.code;
+  const ui   = RECIPE_UI[code] || RECIPE_UI.en;
   const n    = recipe.name?.[code]    || recipe.name?.en    || recipe.name?.ro    || '';
   const o    = recipe.origin?.[code]  || recipe.origin?.en  || recipe.origin?.ro  || '';
   const ingr = recipe.ingredients?.[code] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
   const how  = recipe.howIsMade?.[code]   || recipe.howIsMade?.en   || recipe.howIsMade?.ro   || '';
   const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
-  const steps = how.split(/\.\s+/).filter(Boolean);
-  // Use English slug for all languages (ASCII-safe, consistent)
+  const originTxt = recipe.originText?.[code] || recipe.originText?.en || recipe.originText?.ro || rl.heroDesc(o);
+  const steps = how.split(/\.\s+/).filter(s => s.trim().length > 2);
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
-  const url    = `https://meal-planner.ro${rl.dir}/${rslug}/`;
-  const appUrl = rl.appDir ? `${rl.appDir}/` : '/';
+  const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
+  const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
+  const meta    = recipeMetadata(ingr, steps, cat, code);
+  const nutri   = recipeNutrition(ingr, cat);
+  const emoji   = recipeCardEmoji(cat);
 
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
-    "image": ["https://meal-planner.ro/cover.jpg"],
+    "image":[`https://meal-planner.ro/images/cover2.jpg`],
     "description":rl.pageDesc(n,o),
     "recipeIngredient":ingr,
     "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
     "recipeCategory":cat,
+    "prepTime":`PT${meta.activeTime}`,
+    "totalTime":`PT${meta.totalTime}`,
+    "recipeYield":`${meta.servings}`,
+    "nutrition":{"@type":"NutritionInformation","calories":`${nutri.cal} kcal`},
     "author":{"@type":"Organization","name":"Meal-Planner.ro"},
-    "url": url
+    "url":pageUrl
   });
 
-  const others = recipes
+  // Related recipes — same origin, different name, up to 5
+  const related = recipes
     .filter(r => (r.origin?.[code]||r.origin?.en) === o && (r.name?.[code]||r.name?.en) !== n)
-    .slice(0,3)
+    .slice(0,5)
     .map(r => {
       const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
       const rs = slug(r.name?.en || r.name?.ro || rn);
-      return `<a href="${rl.dir}/${rs}/" class="recipe-rel-link">🍽️ ${esc(rn)}</a>`;
+      const ri = r.ingredients?.[code] || r.ingredients?.en || [];
+      const rh = r.howIsMade?.[code] || r.howIsMade?.en || '';
+      const rst = rh.split(/\.\s+/).filter(s=>s.trim().length>2);
+      const rcat = r.category?.[code] || r.category?.en || '';
+      const rm = recipeMetadata(ri, rst, rcat, code);
+      const re = recipeCardEmoji(rcat);
+      return `<a href="${rl.dir}/${rs}/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="${rs}">${re}</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">${esc(rn)}</p>
+    <span class="recipe-card-meta">${rm.totalTime} · ${rm.difficulty}</span>
+  </div>
+</a>`;
     }).join('');
 
   const dir_attr = rl.dir_attr || 'ltr';
   return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc)}
-<main class="content-main">
-  <section class="content-hero content-hero--short">
-    <div class="content-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(n)}</span>
-      </nav>
-      <div class="content-hero-badge">🍽️ ${esc(cat)} · ${esc(o)}</div>
+<main class="content-main recipe-main">
+<div class="recipe-page-wrap">
+
+  <nav class="recipe-breadcrumb" aria-label="breadcrumb">
+    <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(n)}</span>
+  </nav>
+
+  <!-- Hero -->
+  <div class="recipe-hero-grid">
+    <div class="recipe-hero-img-col">
+      <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}</div>
+    </div>
+    <div class="recipe-hero-info-col">
+      <div class="recipe-badge">⭐ ${esc(cat)} · ${esc(o)}</div>
       <h1>${esc(n)}</h1>
-      <p class="content-hero-desc">${rl.heroDesc(o)}</p>
-      <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn btn-generate">
-        <i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}
-      </a>
-    </div>
-  </section>
-  <section class="content-section">
-    <div class="content-section-inner recipe-layout">
-      <div class="recipe-ingredients-box">
-        <h2><span class="section-emoji">🛒</span> ${rl.ingredientsH.replace('🛒 ','')}</h2>
-        <ul class="recipe-ingr-list">
-          ${ingr.map(i=>`<li><i class="bi bi-dot"></i> ${esc(capFirst(i))}</li>`).join('\n          ')}
-        </ul>
+      <p class="recipe-tagline">${esc(originTxt)}</p>
+      <div class="recipe-meta-row">
+        <div class="recipe-meta-item"><i class="bi bi-clock"></i><span class="recipe-meta-label">${ui.totalTime}</span><span class="recipe-meta-value">${meta.totalTime}</span></div>
+        <div class="recipe-meta-item"><i class="bi bi-fire"></i><span class="recipe-meta-label">${ui.activeTime}</span><span class="recipe-meta-value">${meta.activeTime}</span></div>
+        <div class="recipe-meta-item"><i class="bi bi-people-fill"></i><span class="recipe-meta-label">${ui.servings}</span><span class="recipe-meta-value">${meta.servings}</span></div>
+        <div class="recipe-meta-item"><i class="bi bi-pencil-fill"></i><span class="recipe-meta-label">${ui.difficulty}</span><span class="recipe-meta-value">${meta.difficulty}</span></div>
+        <div class="recipe-meta-item"><i class="bi bi-currency-dollar"></i><span class="recipe-meta-label">${ui.cost}</span><span class="recipe-meta-value">${meta.cost}</span></div>
       </div>
-      <div class="recipe-steps-box">
-        <h2><span class="section-emoji">👨‍🍳</span> ${rl.howToH.replace('👨‍🍳 ','')}</h2>
-        ${steps.length>1
-          ? `<ol class="recipe-steps">${steps.map(s=>`<li>${esc(s)}.</li>`).join('')}</ol>`
-          : `<p class="recipe-how">${esc(how)}</p>`}
-        ${others?`<div class="recipe-related"><h3>${rl.relatedH(o)}</h3>${others}</div>`:''}
+      <div class="recipe-cta-row">
+        <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
+        <button class="btn-recipe-outline" onclick="window.print()"><i class="bi bi-file-earmark-pdf"></i> ${ui.pdfBtn}</button>
       </div>
     </div>
-  </section>
-  <section class="content-section content-seo"><div class="content-section-inner">
-    <p>${rl.seoP(n)}</p>
-  </div></section>
+  </div>
+
+  <!-- Feature Cards -->
+  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code)}</div>
+
+  <!-- 3-column content -->
+  <div class="recipe-content-grid">
+    <div class="recipe-ingredients-col">
+      <h2>${rl.ingredientsH.replace(/^[🛒\s]+/,'')} <span class="servings-badge">${ui.servingsLabel(meta.servings)}</span></h2>
+      <ul class="recipe-ingr-list-new">
+        ${ingr.map(i=>`<li><span class="recipe-ingr-dot"></span>${esc(capFirst(i))}</li>`).join('\n        ')}
+      </ul>
+      <button class="btn-add-shopping"><i class="bi bi-cart-plus"></i> ${ui.addShopping}</button>
+    </div>
+    <div class="recipe-steps-col">
+      <h2>${rl.howToH.replace(/^[👨‍🍳\s]+/,'')}</h2>
+      <ol class="recipe-steps-new">
+        ${steps.map((s,i)=>`<li><span class="step-num">${i+1}</span><span>${esc(s)}.</span></li>`).join('\n        ')}
+      </ol>
+    </div>
+    <div class="recipe-nutrition-col">
+      <h2>${ui.nutritionH}</h2>
+      <p class="nutrition-per">${ui.nutritionPer}</p>
+      <div class="nutrition-list">
+        <div class="nutrition-row">${ui.cal} <span>${nutri.cal} kcal</span></div>
+        <div class="nutrition-row">${ui.prot} <span>${nutri.prot} g</span></div>
+        <div class="nutrition-row">${ui.carb} <span>${nutri.carb} g</span></div>
+        <div class="nutrition-row">${ui.fat} <span>${nutri.fat} g</span></div>
+        <div class="nutrition-row">${ui.fib} <span>${nutri.fib} g</span></div>
+      </div>
+      <p class="recipe-pairings-h">${ui.pairingsH}</p>
+      <div class="pairings-grid">${recipePairings(ingr, cat, code)}</div>
+    </div>
+  </div>
+
+  <!-- Related recipes -->
+  ${related ? `<div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>${rl.relatedH(o)}</h2>
+      <a href="${rl.dir}/">${ui.seeAll}</a>
+    </div>
+    <div class="recipe-cards-scroll">${related}</div>
+  </div>` : ''}
+
+  <!-- CTA Banner -->
+  <div class="recipe-cta-banner">
+    <span class="cta-banner-icon">🥗</span>
+    <div class="cta-banner-text">
+      <h3>${ui.ctaTitle}</h3>
+      <p>${ui.ctaDesc}</p>
+    </div>
+    <a href="${appUrl}" class="btn-cta-banner">${ui.ctaBtn}</a>
+  </div>
+
+</div>
 </main>${makeFooter(lc)}</body></html>`;
 }
 

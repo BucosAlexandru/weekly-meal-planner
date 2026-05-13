@@ -8,8 +8,6 @@
   if (!h1) return;
   const recipeName = h1.textContent.trim();
   if (!recipeName) return;
-  const heroInner = document.querySelector('.content-hero-inner');
-  if (!heroInner) return;
 
   // ── Static image map (pre-fetched at build time) ──────────────
   const IMG = {
@@ -179,7 +177,45 @@
   "verivorst": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Boudin3.jpg/330px-Boudin3.jpg",
 };
 
-  function injectImage(url) {
+  function injectImage(url, container) {
+    if (!url || !container) return;
+    const img = document.createElement('img');
+    img.src = url; img.alt = recipeName; img.loading = 'lazy'; img.decoding = 'async';
+    img.onerror = () => img.remove();
+    container.innerHTML = '';
+    container.appendChild(img);
+  }
+
+  function injectCardImage(url, container) {
+    if (!url || !container || container.querySelector('img')) return;
+    const img = document.createElement('img');
+    img.src = url; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+    img.onerror = () => img.remove();
+    container.appendChild(img);
+  }
+
+  // ── New premium layout: inject into recipe-photo-container ──────
+  const photoMain = document.getElementById('recipe-photo-main');
+  if (photoMain) {
+    const recipeSlug = photoMain.getAttribute('data-recipe') || '';
+    // Try exact match by slug (replace hyphens with spaces)
+    const slugAsName = recipeSlug.replace(/-/g, ' ');
+    const urlBySlug = IMG[slugAsName] || IMG[recipeName.toLowerCase()];
+    if (urlBySlug) injectImage(urlBySlug, photoMain);
+
+    // Inject images in related recipe cards
+    document.querySelectorAll('.recipe-card-img[data-card-recipe]').forEach(card => {
+      const cs = card.getAttribute('data-card-recipe').replace(/-/g, ' ');
+      const cu = IMG[cs];
+      if (cu) injectCardImage(cu, card);
+    });
+    return; // new layout handled
+  }
+
+  // ── Legacy layout fallback (old recipe pages if any remain) ──────
+  const heroInner = document.querySelector('.content-hero-inner');
+  if (!heroInner) return;
+  function injectLegacy(url) {
     if (!url || document.querySelector('.recipe-hero-photo')) return;
     const fig = document.createElement('figure');
     fig.className = 'recipe-hero-photo';
@@ -190,8 +226,6 @@
     const cta = heroInner.querySelector('.btn');
     cta ? heroInner.insertBefore(fig, cta) : heroInner.appendChild(fig);
   }
-
-  // ── Look up by recipe name (h1 text, lowercased) ──────────────
   const url = IMG[recipeName.toLowerCase()];
-  if (url) { injectImage(url); }
+  if (url) { injectLegacy(url); }
 })();
