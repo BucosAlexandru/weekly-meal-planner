@@ -1438,90 +1438,99 @@ function renderProductPreview() {
   const ID = 'product-preview-section';
   if (document.getElementById(ID)) return;
 
-  const ro  = lang === 'ro';
-  const wds = (i18n[lang] && i18n[lang].weekdays) || ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const ro = lang === 'ro';
+  const menusUrl = (i18n[lang] && i18n[lang].menusUrl) || `/${lang}/meniu-saptamanal/`;
 
-  const meals = ro ? [
-    [wds[0], '🍝 Spaghete carbonara',  '🥗 Salată grecească'],
-    [wds[1], '🍲 Ciorbă de legume',    '🍗 Pui la cuptor'],
-    [wds[2], '🥘 Risotto cu ciuperci', '🐟 Somon cu lămâie'],
-  ] : [
-    [wds[0], '🍝 Spaghetti carbonara', '🥗 Greek salad'],
-    [wds[1], '🍲 Vegetable soup',       '🍗 Roasted chicken'],
-    [wds[2], '🥘 Mushroom risotto',     '🐟 Lemon salmon'],
-  ];
+  // Per-language copy
+  const copy = {
+    ro: {
+      eyebrow: 'Como funcționează',
+      heading: 'Tot ce îți trebuie,\nîn trei pași simpli',
+      sub: 'Fără cont, fără abonament. Totul în browser.',
+      steps: [
+        { icon:'🥗', n:1, title:'Alege mesele',    desc:'Completează manual sau generează automat o săptămână întreagă cu un singur click.' },
+        { icon:'🛒', n:2, title:'Lista apare instant', desc:'Ingredientele se centralizează automat, sortate gata de dus la cumpărături.' },
+        { icon:'📄', n:3, title:'Descarcă PDF',    desc:'Un PDF elegant cu tot planul și lista — gata de printat sau trimis pe telefon.' },
+      ],
+      cta1: '🥗 Planifică acum — gratuit',
+      cta2: '📅 Meniuri săptămânale',
+    },
+    en: {
+      eyebrow: 'How it works',
+      heading: 'Everything you need,\nin three simple steps',
+      sub: 'No account, no subscription. Everything in your browser.',
+      steps: [
+        { icon:'🥗', n:1, title:'Choose your meals',   desc:'Fill in manually or auto-generate a full week in one click. Mix and match as you like.' },
+        { icon:'🛒', n:2, title:'Shopping list ready', desc:'Ingredients are compiled automatically and sorted — ready to take to the store.' },
+        { icon:'📄', n:3, title:'Download PDF',        desc:'A beautifully formatted PDF with your full plan and list — free once per day.' },
+      ],
+      cta1: '🥗 Plan now — free',
+      cta2: '📅 Weekly menus',
+    },
+    es: {
+      eyebrow: 'Cómo funciona',
+      heading: 'Todo lo que necesitas,\nen tres pasos',
+      sub: 'Sin cuenta, sin suscripción. Todo en tu navegador.',
+      steps: [
+        { icon:'🥗', n:1, title:'Elige tus comidas',    desc:'Completa manualmente o genera automáticamente una semana entera con un clic.' },
+        { icon:'🛒', n:2, title:'Lista lista al instante', desc:'Los ingredientes se recopilan automáticamente y se ordenan para ir al mercado.' },
+        { icon:'📄', n:3, title:'Descarga PDF',         desc:'Un PDF elegante con tu plan completo y la lista — gratis una vez al día.' },
+      ],
+      cta1: '🥗 Planificar ahora — gratis',
+      cta2: '📅 Menús semanales',
+    },
+    fr: {
+      eyebrow: 'Comment ça marche',
+      heading: 'Tout ce qu\'il vous faut,\nen trois étapes',
+      sub: 'Sans compte, sans abonnement. Tout dans votre navigateur.',
+      steps: [
+        { icon:'🥗', n:1, title:'Choisissez vos repas',     desc:'Remplissez manuellement ou générez automatiquement une semaine entière en un clic.' },
+        { icon:'🛒', n:2, title:'Liste prête en un instant', desc:'Les ingrédients sont compilés automatiquement et triés pour faire vos courses.' },
+        { icon:'📄', n:3, title:'Téléchargez le PDF',       desc:'Un PDF élégant avec votre plan complet et votre liste — gratuit une fois par jour.' },
+      ],
+      cta1: '🥗 Planifier maintenant',
+      cta2: '📅 Menus hebdomadaires',
+    },
+    de: {
+      eyebrow: 'So funktioniert es',
+      heading: 'Alles was Sie brauchen,\nin drei Schritten',
+      sub: 'Kein Konto, kein Abo. Alles im Browser.',
+      steps: [
+        { icon:'🥗', n:1, title:'Mahlzeiten wählen',     desc:'Manuell ausfüllen oder mit einem Klick automatisch eine ganze Woche generieren.' },
+        { icon:'🛒', n:2, title:'Einkaufsliste sofort', desc:'Zutaten werden automatisch zusammengestellt und sortiert — bereit zum Einkaufen.' },
+        { icon:'📄', n:3, title:'PDF herunterladen',     desc:'Ein elegantes PDF mit Ihrem vollständigen Plan — einmal täglich kostenlos.' },
+      ],
+      cta1: '🥗 Jetzt planen — kostenlos',
+      cta2: '📅 Wochenpläne',
+    },
+  };
 
-  const chips = ro
-    ? ['paste','ouă','parmezan','roșii','feta','ciuperci','orez','lămâie','pui']
-    : ['pasta','eggs','parmesan','tomatoes','feta','mushrooms','rice','lemon','chicken'];
-
-  const colDay   = ro ? 'Ziua'  : 'Day';
-  const colLunch = ro ? 'Prânz' : 'Lunch';
-  const colDin   = ro ? 'Cină'  : 'Dinner';
-  const shTitle  = ro ? '🛒 Listă de cumpărături' : '🛒 Shopping list';
-  const eyebrow  = ro ? '✨ Cum arată planul tău' : '✨ What your plan looks like';
-  const heading  = ro ? 'Planul tău săptămânal,\nfrumos și organizat' : 'Your weekly plan,\nbeautiful and organized';
-  const desc     = ro
-    ? 'Adaugă mesele manual sau generează automat o săptămână întreagă cu un click. Lista de cumpărături apare instant, gata de descărcat ca PDF.'
-    : 'Add meals manually or auto-generate a full week in one click. Shopping list appears instantly, ready to download as PDF.';
-  const checks = ro ? [
-    'Plan de 7 zile cu prânz + cină',
-    'Listă de cumpărături sortată automat',
-    'PDF descărcabil gratuit (1/zi)',
-    'Funcționează offline în browser',
-  ] : [
-    '7-day plan with lunch & dinner',
-    'Shopping list sorted automatically',
-    'Free PDF download (1/day)',
-    'Works offline in the browser',
-  ];
-  const ctaScroll = ro ? '🥗 Planifică acum — gratuit' : '🥗 Plan now — free';
-  const ctaMenus  = ro ? '📅 Meniuri săptămânale' : '📅 Weekly menus';
-  const menusUrl  = (i18n[lang] && i18n[lang].menusUrl) || `/${lang}/meniu-saptamanal/`;
+  const c = copy[lang] || copy.en;
 
   const html = `
     <section id="${ID}" class="product-preview-section no-print">
       <div class="product-preview-inner">
-        <div class="preview-text-col">
-          <div class="preview-eyebrow">${eyebrow}</div>
-          <h2>${heading.replace('\n','<br>')}</h2>
-          <ul class="preview-checklist">
-            ${checks.map(c => `<li>${c}</li>`).join('')}
-          </ul>
-          <div class="preview-cta-group">
-            <button class="btn-preview-primary" id="preview-cta-scroll">${ctaScroll}</button>
-            <a href="${menusUrl}" class="btn-preview-outline">${ctaMenus}</a>
-          </div>
+        <div class="preview-section-eyebrow">${c.eyebrow}</div>
+        <h2 class="preview-section-heading">${c.heading.replace('\n','<br>')}</h2>
+        <p class="preview-section-sub">${c.sub}</p>
+        <div class="steps-grid">
+          ${c.steps.map(s => `
+          <div class="step-item">
+            <div class="step-icon-wrap">
+              <span class="step-num">${s.n}</span>
+              ${s.icon}
+            </div>
+            <h3 class="step-title">${s.title}</h3>
+            <p class="step-desc">${s.desc}</p>
+          </div>`).join('')}
         </div>
-        <div class="preview-mockup-col">
-          <div class="product-mockup">
-            <div class="mockup-bar">
-              <span class="mockup-bar-title">📅 ${colDay}</span>
-              <span class="mockup-pdf-chip">📄 PDF</span>
-            </div>
-            <div class="mockup-table">
-              <div class="mockup-header-row">
-                <span>${colDay}</span><span>${colLunch}</span><span>${colDin}</span>
-              </div>
-              ${meals.map(([d,l,c]) => `
-                <div class="mockup-row">
-                  <span class="mockup-day">${d}</span>
-                  <span class="mockup-meal">${l}</span>
-                  <span class="mockup-meal">${c}</span>
-                </div>`).join('')}
-            </div>
-            <div class="mockup-shopping">
-              <div class="mockup-shopping-header">${shTitle}</div>
-              <div class="mockup-chips">
-                ${chips.map(c => `<span class="mockup-chip">${c}</span>`).join('')}
-              </div>
-            </div>
-          </div>
+        <div class="preview-cta-group">
+          <button class="btn-preview-primary" id="preview-cta-scroll">${c.cta1}</button>
+          <a href="${menusUrl}" class="btn-preview-outline">${c.cta2}</a>
         </div>
       </div>
     </section>`;
 
-  // Inject after hero (no feature-cards section anymore)
   const heroEl = document.querySelector('.hero');
   if (heroEl) heroEl.insertAdjacentHTML('afterend', html);
 
@@ -1652,16 +1661,19 @@ function renderPremiumHero() {
   const copy = {
     ro: {
       badge: 'Gratuit · Fără cont · 14 limbi',
-      line1: 'Mâncă bine',
+      line1: 'Mâncă bine,',
       line2: 'în fiecare',
       line3: 'săptămână.',
-      sub: 'Plan săptămânal · Listă de cumpărături · PDF descărcabil.\nTot ce ai nevoie, complet gratuit.',
+      sub: 'Plan complet în câteva secunde.\nListă de cumpărături automată. PDF gratuit.',
       stat1n:'175+', stat1l:'Rețete',
       stat2n:'14',   stat2l:'Limbi',
-      stat3n:'0€',   stat3l:'Cost',
+      stat3n:'0€',   stat3l:'Mereu gratuit',
       cta: '🥗 Creează Planul Meu',
       ghost: 'Explorează meniuri →',
+      planLabel: 'Planul Săptămânal',
       colDay:'Ziua', colL:'Prânz', colD:'Cină', shLabel:'Listă cumpărături',
+      accentTitle: 'Listă generată automat',
+      accentSub: 'Adaugă la telefon cu un click',
       meals:[
         ['Luni',  '🍝 Spaghete carbonara', '🥗 Salată grecească'],
         ['Marți', '🍲 Ciorbă de legume',   '🍗 Pui la cuptor'],
@@ -1675,13 +1687,16 @@ function renderPremiumHero() {
       line1: 'Eat well,',
       line2: 'every single',
       line3: 'week.',
-      sub: 'Weekly meal plans · Auto shopping list · PDF download.\nEverything you need, completely free.',
+      sub: 'Full plan in seconds.\nAuto shopping list. Free PDF download.',
       stat1n:'175+', stat1l:'Recipes',
       stat2n:'14',   stat2l:'Languages',
       stat3n:'Free', stat3l:'Forever',
       cta: '🥗 Create My Free Plan',
       ghost: 'Explore menus →',
+      planLabel: 'Weekly Plan',
       colDay:'Day', colL:'Lunch', colD:'Dinner', shLabel:'Shopping list',
+      accentTitle: 'Auto-generated list',
+      accentSub: 'Download as PDF in one click',
       meals:[
         ['Monday',  '🍝 Spaghetti carbonara', '🥗 Greek salad'],
         ['Tuesday', '🍲 Vegetable soup',       '🍗 Roasted chicken'],
@@ -1692,16 +1707,19 @@ function renderPremiumHero() {
     },
     es: {
       badge: 'Gratis · Sin cuenta · 14 idiomas',
-      line1: 'Come bien',
+      line1: 'Come bien,',
       line2: 'cada',
       line3: 'semana.',
-      sub: 'Plan semanal · Lista de compras · Descarga PDF.\nTodo lo que necesitas, completamente gratis.',
+      sub: 'Plan completo en segundos.\nLista de compras automática. PDF gratis.',
       stat1n:'175+', stat1l:'Recetas',
       stat2n:'14',   stat2l:'Idiomas',
-      stat3n:'0€',   stat3l:'Gratis',
+      stat3n:'0€',   stat3l:'Siempre gratis',
       cta: '🥗 Crear Mi Plan Gratis',
       ghost: 'Explorar menús →',
+      planLabel: 'Plan Semanal',
       colDay:'Día', colL:'Almuerzo', colD:'Cena', shLabel:'Lista de compras',
+      accentTitle: 'Lista generada automáticamente',
+      accentSub: 'Descarga PDF gratis',
       meals:[
         ['Lunes','🥘 Paella valenciana','🥗 Ensalada mixta'],
         ['Martes','🍲 Gazpacho','🍗 Pollo al horno'],
@@ -1712,16 +1730,19 @@ function renderPremiumHero() {
     },
     fr: {
       badge: 'Gratuit · Sans compte · 14 langues',
-      line1: 'Mangez bien',
+      line1: 'Mangez bien,',
       line2: 'chaque',
       line3: 'semaine.',
-      sub: 'Plan hebdomadaire · Liste de courses · PDF téléchargeable.\nTout ce qu\'il vous faut, entièrement gratuit.',
+      sub: 'Plan complet en quelques secondes.\nListe de courses automatique. PDF gratuit.',
       stat1n:'175+', stat1l:'Recettes',
       stat2n:'14',   stat2l:'Langues',
-      stat3n:'0€',   stat3l:'Gratuit',
+      stat3n:'0€',   stat3l:'Toujours gratuit',
       cta: '🥗 Créer Mon Plan Gratuit',
       ghost: 'Explorer les menus →',
+      planLabel: 'Plan Hebdomadaire',
       colDay:'Jour', colL:'Déjeuner', colD:'Dîner', shLabel:'Liste de courses',
+      accentTitle: 'Liste générée automatiquement',
+      accentSub: 'Télécharger en PDF gratuitement',
       meals:[
         ['Lundi','🥐 Quiche lorraine','🍲 Soupe à l\'oignon'],
         ['Mardi','🐟 Sole meunière','🥗 Salade niçoise'],
@@ -1735,13 +1756,16 @@ function renderPremiumHero() {
       line1: 'Gut essen,',
       line2: 'jede',
       line3: 'Woche.',
-      sub: 'Wochenplan · Automatische Einkaufsliste · PDF herunterladen.\nAlles was Sie brauchen, völlig kostenlos.',
+      sub: 'Vollständiger Plan in Sekunden.\nEinkaufsliste automatisch. PDF kostenlos.',
       stat1n:'175+', stat1l:'Rezepte',
       stat2n:'14',   stat2l:'Sprachen',
-      stat3n:'0€',   stat3l:'Kostenlos',
+      stat3n:'0€',   stat3l:'Immer kostenlos',
       cta: '🥗 Meinen Plan Erstellen',
       ghost: 'Menüs erkunden →',
+      planLabel: 'Wochenplan',
       colDay:'Tag', colL:'Mittagessen', colD:'Abendessen', shLabel:'Einkaufsliste',
+      accentTitle: 'Automatisch generiert',
+      accentSub: 'PDF kostenlos herunterladen',
       meals:[
         ['Montag','🥩 Schnitzel','🥗 Salat'],
         ['Dienstag','🍲 Linsensuppe','🍗 Hähnchen'],
@@ -1791,28 +1815,36 @@ function renderPremiumHero() {
       </div>
 
       <div class="hero-visual-col" aria-hidden="true">
-        <div class="hero-app-card">
-          <div class="hcard-bar">
-            <span class="hcard-bar-title">📅 ${s.colDay}</span>
-            <span class="hcard-bar-dots">
-              <span class="hcard-dot hcard-dot-r"></span>
-              <span class="hcard-dot hcard-dot-y"></span>
-              <span class="hcard-dot hcard-dot-g"></span>
-            </span>
+        <div class="hero-phone-wrap">
+          <div class="hero-phone-frame">
+            <div class="hero-phone-notch"></div>
+            <div class="hero-phone-screen">
+              <div class="phone-app-bar">
+                <span class="phone-app-title">📋 ${s.planLabel}</span>
+                <span class="phone-app-pdf-btn">PDF ↓</span>
+              </div>
+              <div class="phone-meal-header">
+                <span>${s.colDay}</span><span>${s.colL}</span><span>${s.colD}</span>
+              </div>
+              ${meals.map(([d,l,c]) => `
+              <div class="phone-meal-row">
+                <span class="phone-meal-day">${d}</span>
+                <span class="phone-meal-name">${l}</span>
+                <span class="phone-meal-name">${c}</span>
+              </div>`).join('')}
+              <div class="phone-shopping">
+                <div class="phone-shopping-title">🛒 ${s.shLabel}</div>
+                <div class="phone-chips">
+                  ${s.chips.map(c=>`<span class="phone-chip">${c}</span>`).join('')}
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="hcard-head">
-            <span>${s.colDay}</span><span>${s.colL}</span><span>${s.colD}</span>
-          </div>
-          ${meals.map(([d,l,c]) => `
-          <div class="hcard-row">
-            <span class="hcard-day">${d}</span>
-            <span class="hcard-meal">${l}</span>
-            <span class="hcard-meal">${c}</span>
-          </div>`).join('')}
-          <div class="hcard-shop">
-            <div class="hcard-shop-label">🛒 ${s.shLabel}</div>
-            <div class="hcard-chips">
-              ${s.chips.map(c=>`<span class="hcard-chip">${c}</span>`).join('')}
+          <div class="hero-food-accent">
+            <div class="hero-food-accent-icon">✨</div>
+            <div>
+              <div class="hero-food-accent-title">${s.accentTitle}</div>
+              <div class="hero-food-accent-sub">${s.accentSub}</div>
             </div>
           </div>
         </div>
