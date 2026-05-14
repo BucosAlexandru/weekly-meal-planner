@@ -1146,7 +1146,7 @@ Object.entries(RECIPE_LANG).forEach(([code, rl]) => {
    ════════════════════════════════════════════════════════════════ */
 const RECIPE_UI = {
   ro:{ totalTime:'Timp total', activeTime:'Timp activ', servings:'Porții', difficulty:'Dificultate', cost:'Cost',
-    diffLevels:['Ușoară','Medie','Dificilă'], pdfBtn:'Descarcă PDF',
+    diffLevels:['Ușoară','Medie','Dificilă'], pdfBtn:'Previzualizare PDF', pdfTitle:'Salvare PDF: Share (⬆) → Print → Salvează ca PDF (iPhone/iPad)',
     nutritionH:'Informații nutriționale', nutritionPer:'per porție (~400 ml)',
     cal:'Calorii', prot:'Proteine', carb:'Carbohidrați', fat:'Grăsimi', fib:'Fibre',
     pairingsH:'Se potrivește perfect cu',
@@ -1175,7 +1175,7 @@ const RECIPE_UI = {
     }
   },
   en:{ totalTime:'Total time', activeTime:'Active time', servings:'Servings', difficulty:'Difficulty', cost:'Cost',
-    diffLevels:['Easy','Medium','Hard'], pdfBtn:'Download PDF',
+    diffLevels:['Easy','Medium','Hard'], pdfBtn:'Export PDF', pdfTitle:'Save as PDF: Share (⬆) → Print → Save as PDF (iPhone/iPad)',
     nutritionH:'Nutritional info', nutritionPer:'per serving (~400 ml)',
     cal:'Calories', prot:'Protein', carb:'Carbs', fat:'Fat', fib:'Fiber',
     pairingsH:'Pairs perfectly with',
@@ -1204,7 +1204,7 @@ const RECIPE_UI = {
     }
   },
   es:{ totalTime:'Tiempo total', activeTime:'Tiempo activo', servings:'Raciones', difficulty:'Dificultad', cost:'Coste',
-    diffLevels:['Fácil','Media','Difícil'], pdfBtn:'Descargar PDF',
+    diffLevels:['Fácil','Media','Difícil'], pdfBtn:'Exportar PDF', pdfTitle:'Guardar PDF: Compartir (⬆) → Imprimir → Guardar como PDF (iPhone/iPad)',
     nutritionH:'Información nutricional', nutritionPer:'por ración (~400 ml)',
     cal:'Calorías', prot:'Proteínas', carb:'Carbohidratos', fat:'Grasas', fib:'Fibra',
     pairingsH:'Combina perfectamente con',
@@ -1233,7 +1233,7 @@ const RECIPE_UI = {
     }
   },
   fr:{ totalTime:'Temps total', activeTime:'Temps actif', servings:'Portions', difficulty:'Difficulté', cost:'Coût',
-    diffLevels:['Facile','Moyen','Difficile'], pdfBtn:'Télécharger PDF',
+    diffLevels:['Facile','Moyen','Difficile'], pdfBtn:'Exporter PDF', pdfTitle:'Enregistrer PDF : Partager (⬆) → Imprimer → Enregistrer en PDF (iPhone/iPad)',
     nutritionH:'Informations nutritionnelles', nutritionPer:'par portion (~400 ml)',
     cal:'Calories', prot:'Protéines', carb:'Glucides', fat:'Lipides', fib:'Fibres',
     pairingsH:'S\'accompagne parfaitement avec',
@@ -1262,7 +1262,7 @@ const RECIPE_UI = {
     }
   },
   de:{ totalTime:'Gesamtzeit', activeTime:'Aktive Zeit', servings:'Portionen', difficulty:'Schwierigkeit', cost:'Kosten',
-    diffLevels:['Einfach','Mittel','Schwer'], pdfBtn:'PDF herunterladen',
+    diffLevels:['Einfach','Mittel','Schwer'], pdfBtn:'PDF exportieren', pdfTitle:'Als PDF: Teilen (⬆) → Drucken → Als PDF sichern (iPhone/iPad)',
     nutritionH:'Nährwertangaben', nutritionPer:'pro Portion (~400 ml)',
     cal:'Kalorien', prot:'Protein', carb:'Kohlenhydrate', fat:'Fett', fib:'Ballaststoffe',
     pairingsH:'Passt perfekt zu',
@@ -1291,7 +1291,7 @@ const RECIPE_UI = {
     }
   },
   pt:{ totalTime:'Tempo total', activeTime:'Tempo ativo', servings:'Porções', difficulty:'Dificuldade', cost:'Custo',
-    diffLevels:['Fácil','Média','Difícil'], pdfBtn:'Baixar PDF',
+    diffLevels:['Fácil','Média','Difícil'], pdfBtn:'Exportar PDF', pdfTitle:'Salvar PDF: Compartilhar (⬆) → Imprimir → Salvar como PDF (iPhone/iPad)',
     nutritionH:'Informação nutricional', nutritionPer:'por porção (~400 ml)',
     cal:'Calorias', prot:'Proteínas', carb:'Carboidratos', fat:'Gorduras', fib:'Fibras',
     pairingsH:'Combina perfeitamente com',
@@ -1320,7 +1320,7 @@ const RECIPE_UI = {
     }
   },
   ru:{ totalTime:'Общее время', activeTime:'Активное время', servings:'Порции', difficulty:'Сложность', cost:'Стоимость',
-    diffLevels:['Лёгкий','Средний','Сложный'], pdfBtn:'Скачать PDF',
+    diffLevels:['Лёгкий','Средний','Сложный'], pdfBtn:'Экспорт PDF', pdfTitle:'Сохранить PDF: Поделиться (⬆) → Печать → Сохранить как PDF (iPhone/iPad)',
     nutritionH:'Пищевая ценность', nutritionPer:'на порцию (~400 мл)',
     cal:'Калории', prot:'Белки', carb:'Углеводы', fat:'Жиры', fib:'Клетчатка',
     pairingsH:'Прекрасно сочетается с',
@@ -1349,7 +1349,7 @@ const RECIPE_UI = {
     }
   },
   ar:{ totalTime:'الوقت الكلي', activeTime:'الوقت الفعلي', servings:'الحصص', difficulty:'الصعوبة', cost:'التكلفة',
-    diffLevels:['سهل','متوسط','صعب'], pdfBtn:'تحميل PDF',
+    diffLevels:['سهل','متوسط','صعب'], pdfBtn:'تصدير PDF', pdfTitle:'حفظ PDF: مشاركة (⬆) ← طباعة ← حفظ كـ PDF (iPhone/iPad)',
     nutritionH:'المعلومات الغذائية', nutritionPer:'لكل حصة (~400 مل)',
     cal:'السعرات', prot:'البروتين', carb:'الكربوهيدرات', fat:'الدهون', fib:'الألياف',
     pairingsH:'يتناسب مع',
@@ -1378,7 +1378,7 @@ const RECIPE_UI = {
     }
   },
   zh:{ totalTime:'总时间', activeTime:'操作时间', servings:'份数', difficulty:'难度', cost:'费用',
-    diffLevels:['简单','中等','困难'], pdfBtn:'下载PDF',
+    diffLevels:['简单','中等','困难'], pdfBtn:'导出PDF', pdfTitle:'保存PDF：共享(⬆) → 打印 → 存储为PDF (iPhone/iPad)',
     nutritionH:'营养信息', nutritionPer:'每份 (~400 ml)',
     cal:'卡路里', prot:'蛋白质', carb:'碳水化合物', fat:'脂肪', fib:'膳食纤维',
     pairingsH:'完美搭配',
@@ -1407,7 +1407,7 @@ const RECIPE_UI = {
     }
   },
   ja:{ totalTime:'合計時間', activeTime:'調理時間', servings:'人数', difficulty:'難易度', cost:'費用',
-    diffLevels:['簡単','普通','難しい'], pdfBtn:'PDFをダウンロード',
+    diffLevels:['簡単','普通','難しい'], pdfBtn:'PDFエクスポート', pdfTitle:'PDFで保存：共有(⬆) → プリント → PDFを保存 (iPhone/iPad)',
     nutritionH:'栄養情報', nutritionPer:'1人前あたり (~400 ml)',
     cal:'カロリー', prot:'タンパク質', carb:'炭水化物', fat:'脂質', fib:'食物繊維',
     pairingsH:'と相性抜群',
@@ -1436,7 +1436,7 @@ const RECIPE_UI = {
     }
   },
   hi:{ totalTime:'कुल समय', activeTime:'सक्रिय समय', servings:'सर्विंग्स', difficulty:'कठिनाई', cost:'लागत',
-    diffLevels:['आसान','मध्यम','कठिन'], pdfBtn:'PDF डाउनलोड करें',
+    diffLevels:['आसान','मध्यम','कठिन'], pdfBtn:'PDF एक्सपोर्ट', pdfTitle:'PDF सेव: Share (⬆) → Print → Save as PDF (iPhone/iPad)',
     nutritionH:'पोषण संबंधी जानकारी', nutritionPer:'प्रति सर्विंग (~400 ml)',
     cal:'कैलोरी', prot:'प्रोटीन', carb:'कार्बोहाइड्रेट', fat:'वसा', fib:'फाइबर',
     pairingsH:'के साथ बेहतरीन लगता है',
@@ -1465,7 +1465,7 @@ const RECIPE_UI = {
     }
   },
   tr:{ totalTime:'Toplam süre', activeTime:'Aktif süre', servings:'Porsiyon', difficulty:'Zorluk', cost:'Maliyet',
-    diffLevels:['Kolay','Orta','Zor'], pdfBtn:'PDF İndir',
+    diffLevels:['Kolay','Orta','Zor'], pdfBtn:'PDF Dışa Aktar', pdfTitle:'PDF kaydet: Paylaş (⬆) → Yazdır → PDF Olarak Kaydet (iPhone/iPad)',
     nutritionH:'Besin değerleri', nutritionPer:'porsiyon başına (~400 ml)',
     cal:'Kalori', prot:'Protein', carb:'Karbonhidrat', fat:'Yağ', fib:'Lif',
     pairingsH:'Mükemmel uyum sağlar',
@@ -1494,7 +1494,7 @@ const RECIPE_UI = {
     }
   },
   it:{ totalTime:'Tempo totale', activeTime:'Tempo attivo', servings:'Porzioni', difficulty:'Difficoltà', cost:'Costo',
-    diffLevels:['Facile','Media','Difficile'], pdfBtn:'Scarica PDF',
+    diffLevels:['Facile','Media','Difficile'], pdfBtn:'Esporta PDF', pdfTitle:'Salva PDF: Condividi (⬆) → Stampa → Salva come PDF (iPhone/iPad)',
     nutritionH:'Informazioni nutrizionali', nutritionPer:'per porzione (~400 ml)',
     cal:'Calorie', prot:'Proteine', carb:'Carboidrati', fat:'Grassi', fib:'Fibre',
     pairingsH:'Si abbina perfettamente con',
@@ -1523,7 +1523,7 @@ const RECIPE_UI = {
     }
   },
   ko:{ totalTime:'총 시간', activeTime:'조리 시간', servings:'인분', difficulty:'난이도', cost:'비용',
-    diffLevels:['쉬움','보통','어려움'], pdfBtn:'PDF 다운로드',
+    diffLevels:['쉬움','보통','어려움'], pdfBtn:'PDF 내보내기', pdfTitle:'PDF 저장: 공유(⬆) → 프린트 → PDF로 저장 (iPhone/iPad)',
     nutritionH:'영양 정보', nutritionPer:'1인분 기준 (~400 ml)',
     cal:'칼로리', prot:'단백질', carb:'탄수화물', fat:'지방', fib:'식이섬유',
     pairingsH:'함께 먹으면 좋아요',
@@ -1890,7 +1890,7 @@ ${makeNav(lc)}
       </div>
       <div class="recipe-cta-row">
         <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
-        <button class="btn-recipe-outline" onclick="window.print()"><i class="bi bi-file-earmark-pdf"></i> ${ui.pdfBtn}</button>
+        <button class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
       </div>
     </div>
   </div>
