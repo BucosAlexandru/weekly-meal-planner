@@ -2396,8 +2396,9 @@ function applyTranslations() {
       : '';
     generateBtn.innerHTML = baseLabel + freeBadge;
   }
-  if (typeof buyBtn !== 'undefined' && buyBtn) {
-    buyBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + (i18n[lang]["btn.pay"] || "Plătește & Descarcă");
+  const _payBtn = document.getElementById('pay-btn');
+  if (_payBtn) {
+    _payBtn.innerHTML = '<i class="bi bi-cart-check-fill"></i> ' + (i18n[lang]["btn.pay"] || "Plătește & Descarcă");
   }
   if (manageBtn) {
     manageBtn.textContent = i18n[lang]["btn.manage"] || "Manage subscription";
@@ -2420,6 +2421,12 @@ function applyTranslations() {
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
     seoContainer.innerHTML = seoParagraphs[lang];
+  }
+  // 7) Shopping list empty-state message (CSS uses content: attr(data-empty-msg))
+  const shopListEl = document.getElementById('shopping-list');
+  if (shopListEl) {
+    shopListEl.setAttribute('data-empty-msg',
+      i18n[lang]?.['shopping.empty'] ?? i18n['en']?.['shopping.empty'] ?? 'Add meals to generate your shopping list');
   }
 }
   // ---------- Stripe success (după ce avem DOM) ----------
