@@ -1181,6 +1181,29 @@
   .recipe-features-row { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── iOS PDF hint (injected by content.js on iOS/iPadOS only) ── */
+.pdf-ios-hint {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: .45rem;
+  margin-top: .55rem;
+  padding: .5rem .75rem;
+  background: #f0f7f0;
+  border: 1px solid #c5ddc7;
+  border-radius: 8px;
+  font-size: .8rem;
+  color: #2d5f33;
+  line-height: 1.45;
+  max-width: 360px;
+}
+.pdf-ios-hint::before {
+  content: 'ℹ️';
+  flex-shrink: 0;
+  font-size: .85rem;
+  margin-top: .05em;
+}
+.pdf-ios-hint strong { color: #1a5620; font-weight: 600; }
+
 /* ── Print / Save PDF ── */
 @media print {
   /* Hide all chrome */
@@ -1193,24 +1216,29 @@
   .recipe-cta-banner,
   .recipe-tip-box,
   .btn-add-shopping,
+  .pdf-ios-hint,
   .content-hero-badge,
   .plan-meta-chips,
   .breadcrumb-nav { display: none !important; }
 
   /* Page setup */
   @page {
-    margin: 1.8cm 2cm;
+    margin: 1.6cm 2.2cm 2cm;
     size: A4 portrait;
+  }
+  @page :first {
+    margin-top: 1.2cm;
   }
 
   body {
     background: #fff !important;
     color: #111 !important;
-    font-family: Georgia, serif;
-    font-size: 11pt;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
   }
 
-  /* Remove backgrounds and shadows */
+  /* Remove all backgrounds, shadows, borders */
   * {
     background: transparent !important;
     box-shadow: none !important;
@@ -1219,94 +1247,138 @@
     print-color-adjust: exact;
   }
 
-  /* Hero: minimal title block */
+  /* Page wrap */
+  .recipe-page-wrap {
+    padding: 0;
+    max-width: none;
+  }
+
+  /* Watermark / site credit in footer area */
+  .recipe-page-wrap::after {
+    content: 'meal-planner.ro';
+    display: block;
+    text-align: right;
+    font-size: 7.5pt;
+    color: #aaa !important;
+    margin-top: 1.8rem;
+    border-top: .5pt solid #ddd;
+    padding-top: .3rem;
+  }
+
+  /* ── Hero ── */
   .recipe-hero-grid {
     display: block;
     border: none;
     padding: 0;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
   .recipe-hero-img-col { display: none; }
   .recipe-hero-info-col { padding: 0; }
   .recipe-hero-info-col h1 {
-    font-size: 22pt;
+    font-size: 20pt;
+    font-weight: 700;
     color: #1a5620 !important;
-    margin-bottom: .3rem;
+    margin: 0 0 .25rem;
     border-bottom: 2pt solid #1a5620;
     padding-bottom: .3rem;
+    page-break-after: avoid;
+    break-after: avoid;
   }
   .recipe-tagline {
-    color: #444 !important;
-    font-size: 10pt;
-    margin-bottom: .6rem;
+    color: #555 !important;
+    font-size: 9.5pt;
+    margin: .2rem 0 .5rem;
   }
   .recipe-badge { display: none; }
 
-  /* Meta row: show inline */
+  /* ── Meta pills ── */
   .recipe-meta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: .4rem;
-    margin-bottom: .8rem;
+    gap: .3rem .5rem;
+    margin-bottom: .7rem;
   }
   .recipe-meta-item {
-    border: 1pt solid #ccc;
+    border: .75pt solid #bbb;
     border-radius: 4pt;
-    padding: .15rem .4rem;
-    font-size: 8.5pt;
+    padding: .1rem .4rem;
+    font-size: 8pt;
     background: none !important;
+    color: #333 !important;
   }
+  .recipe-meta-label { font-weight: 600; margin-right: .2rem; }
 
-  /* 3-col → stacked */
+  /* ── 3-col → stacked ── */
   .recipe-content-grid {
     display: block;
   }
-  .recipe-ingredients-col,
-  .recipe-steps-col,
-  .recipe-nutrition-col {
+
+  /* Ingredients: avoid breaking across pages */
+  .recipe-ingredients-col {
     page-break-inside: avoid;
     break-inside: avoid;
     margin-bottom: 1rem;
     padding: 0;
     border: none;
-    background: none !important;
+  }
+
+  /* Steps: allow page break between steps, not inside a step */
+  .recipe-steps-col {
+    margin-bottom: 1rem;
+    padding: 0;
+    border: none;
+  }
+
+  /* Nutrition: avoid breaking */
+  .recipe-nutrition-col {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
   }
 
   .recipe-ingredients-col h2,
   .recipe-steps-col h2,
   .recipe-nutrition-col h2 {
-    font-size: 13pt;
+    font-size: 12pt;
+    font-weight: 700;
     color: #1a5620 !important;
     border-bottom: 1pt solid #ccc;
     padding-bottom: .2rem;
     margin-bottom: .5rem;
+    page-break-after: avoid;
+    break-after: avoid;
   }
+  .servings-badge { display: none; }
 
-  /* Ingredient list */
+  /* ── Ingredient list (2 columns) ── */
   .recipe-ingr-list-new {
     columns: 2;
-    column-gap: 1.5rem;
+    column-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    column-fill: balance;
   }
   .recipe-ingr-list-new li {
-    font-size: 10pt;
-    padding: .15rem 0 .15rem .85rem;
+    font-size: 9.5pt;
+    padding: .12rem 0 .12rem .75rem;
     position: relative;
+    break-inside: avoid;
   }
   .recipe-ingr-dot {
     position: absolute;
     left: 0;
-    top: .4em;
-    width: 4pt;
-    height: 4pt;
+    top: .42em;
+    width: 3.5pt;
+    height: 3.5pt;
     border-radius: 50%;
     background: #1a5620 !important;
     display: inline-block;
   }
 
-  /* Steps */
+  /* ── Steps ── */
   .recipe-steps-new {
     padding-left: 0;
     list-style: none;
@@ -1314,48 +1386,48 @@
   }
   .recipe-steps-new li {
     display: flex;
-    gap: .6rem;
-    margin-bottom: .5rem;
-    font-size: 10pt;
+    gap: .55rem;
+    align-items: flex-start;
+    margin-bottom: .55rem;
+    font-size: 9.5pt;
     page-break-inside: avoid;
     break-inside: avoid;
   }
   .step-num {
     flex-shrink: 0;
-    width: 16pt;
-    height: 16pt;
+    width: 15pt;
+    height: 15pt;
     border-radius: 50%;
     background: #1a5620 !important;
     color: #fff !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 8pt;
+    font-size: 7.5pt;
     font-weight: 700;
-    margin-top: .1em;
+    margin-top: .15em;
+    border: none;
   }
 
-  /* Nutrition */
+  /* ── Nutrition ── */
   .nutrition-list { border: none; padding: 0; }
   .nutrition-row {
     display: flex;
     justify-content: space-between;
-    padding: .2rem 0;
-    border-bottom: .5pt solid #eee;
-    font-size: 10pt;
+    padding: .18rem 0;
+    border-bottom: .5pt solid #e8e8e8;
+    font-size: 9.5pt;
+    color: #222 !important;
   }
+  .nutrition-per { font-size: 8.5pt; color: #666 !important; margin-bottom: .3rem; }
   .pairings-grid,
   .recipe-pairings-h { display: none; }
 
-  /* Links: show URL */
-  a[href]::after { content: none; }
+  /* ── Links: never show URLs ── */
+  a[href]::after { content: none !important; }
+  a { color: inherit !important; text-decoration: none !important; }
 
-  /* Page wrap */
-  .recipe-page-wrap {
-    padding: 0;
-    max-width: none;
-  }
-
-  /* Prevent orphaned headings */
+  /* ── Orphan / widow control ── */
   h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+  p { orphans: 3; widows: 3; }
 }

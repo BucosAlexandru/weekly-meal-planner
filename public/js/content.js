@@ -229,3 +229,51 @@
   const url = IMG[recipeName.toLowerCase()];
   if (url) { injectLegacy(url); }
 })();
+
+// ── iOS/iPadOS PDF helper ─────────────────────────────────────────
+(function () {
+  'use strict';
+
+  // Detect iOS / iPadOS (iPadOS 13+ reports as MacIntel with touch)
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+  if (!isIOS) return;
+
+  // Per-language helper text (keyed by <html lang="…">)
+  const HELP = {
+    'en': 'On iPhone/iPad: tap <strong>Share ⬆</strong> → <strong>Print</strong> → <strong>Save as PDF</strong>',
+    'ro': 'Pe iPhone/iPad: apasă <strong>Share ⬆</strong> → <strong>Print</strong> → <strong>Salvează ca PDF</strong>',
+    'es': 'En iPhone/iPad: toca <strong>Compartir ⬆</strong> → <strong>Imprimir</strong> → <strong>Guardar como PDF</strong>',
+    'fr': 'Sur iPhone/iPad : appuyez sur <strong>Partager ⬆</strong> → <strong>Imprimer</strong> → <strong>Enregistrer en PDF</strong>',
+    'de': 'Auf iPhone/iPad: <strong>Teilen ⬆</strong> antippen → <strong>Drucken</strong> → <strong>Als PDF sichern</strong>',
+    'pt': 'No iPhone/iPad: toque em <strong>Compartilhar ⬆</strong> → <strong>Imprimir</strong> → <strong>Salvar como PDF</strong>',
+    'ru': 'На iPhone/iPad: нажмите <strong>Поделиться ⬆</strong> → <strong>Печать</strong> → <strong>Сохранить как PDF</strong>',
+    'ar': 'على iPhone/iPad: اضغط <strong>مشاركة ⬆</strong> ← <strong>طباعة</strong> ← <strong>حفظ كـ PDF</strong>',
+    'zh': '在iPhone/iPad上：点击<strong>共享 ⬆</strong> → <strong>打印</strong> → <strong>存储为PDF</strong>',
+    'ja': 'iPhone/iPadで：<strong>共有 ⬆</strong> をタップ → <strong>プリント</strong> → <strong>PDFを保存</strong>',
+    'ko': 'iPhone/iPad에서: <strong>공유 ⬆</strong> 탭 → <strong>프린트</strong> → <strong>PDF로 저장</strong>',
+    'hi': 'iPhone/iPad पर: <strong>Share ⬆</strong> दबाएं → <strong>Print</strong> → <strong>Save as PDF</strong>',
+    'tr': 'iPhone/iPad\'de: <strong>Paylaş ⬆</strong> → <strong>Yazdır</strong> → <strong>PDF Olarak Kaydet</strong>',
+    'it': 'Su iPhone/iPad: tocca <strong>Condividi ⬆</strong> → <strong>Stampa</strong> → <strong>Salva come PDF</strong>',
+  };
+
+  const lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  const msg  = HELP[lang] || HELP['en'];
+
+  function injectHelper() {
+    const btn = document.querySelector('.btn-print-pdf');
+    if (!btn || btn.parentNode.querySelector('.pdf-ios-hint')) return;
+    const hint = document.createElement('p');
+    hint.className = 'pdf-ios-hint';
+    hint.innerHTML = msg;
+    btn.parentNode.insertBefore(hint, btn.nextSibling);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectHelper);
+  } else {
+    injectHelper();
+  }
+})();
