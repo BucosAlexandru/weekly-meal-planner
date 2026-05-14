@@ -1436,7 +1436,8 @@ function renderLandingFeatures() {
 
 function renderProductPreview() {
   const ID = 'product-preview-section';
-  if (document.getElementById(ID)) return;
+  // Remove existing so language switch re-renders with new language
+  document.getElementById(ID)?.remove();
 
   const ro = lang === 'ro';
   const menusUrl = (i18n[lang] && i18n[lang].menusUrl) || `/${lang}/meniu-saptamanal/`;
@@ -1649,7 +1650,8 @@ function renderProductPreview() {
 
 function renderDiscovery() {
   const ID = 'discovery-section';
-  if (document.getElementById(ID)) return;
+  // Remove existing so language switch re-renders with new language
+  document.getElementById(ID)?.remove();
 
   const ro = lang === 'ro';
   const menusUrl   = `/${lang}/${ro ? 'meniu-saptamanal' : 'weekly-menu'}/`;
@@ -1848,7 +1850,8 @@ function renderDiscovery() {
 
 function renderPlannerAnchor() {
   const ID = 'planner-anchor-section';
-  if (document.getElementById(ID)) return;
+  // Remove existing so language switch re-renders with new language
+  document.getElementById(ID)?.remove();
 
   const anchorCopy = {
     ro: { title: 'Planifică acum — gratuit',          sub: 'Completează mesele sau generează automat o săptămână întreagă' },
@@ -1882,7 +1885,8 @@ function injectHeroSecondaryCta() { /* replaced by renderPremiumHero */ }
 
 function renderPremiumHero() {
   const hero = document.querySelector('.hero');
-  if (!hero || hero.dataset.premium) return;
+  if (!hero) return;
+  // Always re-render on language switch — no guard that blocks re-runs
   hero.dataset.premium = '1';
 
   const menusBase = {
@@ -2301,6 +2305,16 @@ function renderPremiumHero() {
         </div>
       </div>
     </div>`;
+
+  // Re-attach CTA button listener every render (hero innerHTML replaced the element)
+  document.getElementById('hero-cta-btn')?.addEventListener('click', () => {
+    const autoBtn = document.getElementById('auto-menu-btn');
+    if (autoBtn) autoBtn.click();
+    setTimeout(() => {
+      (document.getElementById('planner-anchor-section') || document.querySelector('.app-main'))
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  });
 }
 /* ─── END LANDING PAGE SECTIONS ────────────────────────────── */
  function renderHowItWorks() {
@@ -2343,15 +2357,22 @@ function renderPremiumHero() {
 }
 
 function applyTranslations() {
-  // 1) Texte statice cu data-i18n
+  // 0) Update <html lang> and RTL direction for the active language
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  // 1) Texte statice cu data-i18n (safe: fallback to en if key missing)
+  const t = key => i18n[lang]?.[key] ?? i18n['en']?.[key] ?? '';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
+    const val = t(key);
+    if (val) el.innerHTML = val;
   });
-  // 2) Placeholderele
+  // 2) Placeholderele (safe)
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (i18n[lang][key]) el.placeholder = i18n[lang][key];
+    const val = t(key);
+    if (val) el.placeholder = val;
   });
   // 3) Butoanele principale
   const generateBtn = document.getElementById('generate-btn');
@@ -2848,20 +2869,8 @@ if (verifyBtn && emailInput && resultDiv) {
   }
   updateExportSectionVisibility();
 
-  // ---------- HERO CTA BUTTON ----------
-  const heroCta = document.getElementById('hero-cta-btn');
-  if (heroCta) {
-    heroCta.addEventListener('click', () => {
-      // Trigger random menu generation
-      const autoBtn = document.getElementById('auto-menu-btn');
-      if (autoBtn) autoBtn.click();
-      // Smooth scroll to planner
-      setTimeout(() => {
-        (document.getElementById('planner-anchor-section') || document.querySelector('.app-main'))
-          ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 80);
-    });
-  }
+  // NOTE: hero-cta-btn listener is now attached inside renderPremiumHero()
+  // (hero is rendered by applyTranslations below; the button doesn't exist here yet)
 
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
