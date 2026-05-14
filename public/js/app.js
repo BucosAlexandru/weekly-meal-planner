@@ -1388,6 +1388,269 @@ async function ensureHtml2pdfLoaded() {
   const isWinter = (m === 11 || m === 0); // Decembrie sau Ianuarie
   document.body.classList.toggle('theme-winter', isWinter);
 })();
+
+/* ─── LANDING PAGE SECTIONS ────────────────────────────────── */
+
+function renderLandingFeatures() {
+  const ID = 'landing-features-section';
+  if (document.getElementById(ID)) return;
+
+  const ro = lang === 'ro';
+  const strings = {
+    title: ro ? 'De ce Meal-Planner?' : 'Why Meal-Planner?',
+    sub:   ro ? 'Simplu, rapid și complet gratuit.' : 'Simple, fast, and completely free.',
+    features: ro ? [
+      { icon:'💰', title:'Economisești bani',   desc:'Planifici exact ce cumperi — fără risipă, fără cheltuieli inutile' },
+      { icon:'⏱️', title:'Economisești timp',   desc:'Lista de cumpărături se generează automat în câteva secunde' },
+      { icon:'📄', title:'PDF frumos',           desc:'Descarcă planul tău ca PDF — perfect pentru imprimat sau partajat' },
+      { icon:'🌍', title:'14 limbi',             desc:'Funcționează în română, engleză, spaniolă, franceză și 10 alte limbi' },
+      { icon:'🍽️', title:'175+ rețete',         desc:'Rețete internaționale din 70+ țări cu ingrediente și mod de preparare' },
+    ] : [
+      { icon:'💰', title:'Save money',      desc:'Plan exactly what to buy — no waste, no impulse spending' },
+      { icon:'⏱️', title:'Save time',       desc:'Shopping list generated automatically in seconds' },
+      { icon:'📄', title:'Beautiful PDF',   desc:'Download your plan as a PDF — perfect for printing or sharing' },
+      { icon:'🌍', title:'14 languages',   desc:'Works in English, Spanish, French, Romanian and 10 more' },
+      { icon:'🍽️', title:'175+ recipes',   desc:'International recipes from 70+ countries with full instructions' },
+    ]
+  };
+
+  const html = `
+    <section id="${ID}" class="landing-features no-print">
+      <div class="landing-features-inner">
+        <h2 class="landing-features-title">${strings.title}</h2>
+        <p class="landing-features-sub">${strings.sub}</p>
+        <div class="features-grid">
+          ${strings.features.map(f => `
+            <div class="feature-card">
+              <div class="feature-icon">${f.icon}</div>
+              <div class="feature-title">${f.title}</div>
+              <div class="feature-desc">${f.desc}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </section>`;
+
+  const hiw = document.getElementById('how-it-works-section');
+  if (hiw) hiw.insertAdjacentHTML('afterend', html);
+}
+
+function renderProductPreview() {
+  const ID = 'product-preview-section';
+  if (document.getElementById(ID)) return;
+
+  const ro  = lang === 'ro';
+  const wds = (i18n[lang] && i18n[lang].weekdays) || ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+  const meals = ro ? [
+    [wds[0], '🍝 Spaghete carbonara',  '🥗 Salată grecească'],
+    [wds[1], '🍲 Ciorbă de legume',    '🍗 Pui la cuptor'],
+    [wds[2], '🥘 Risotto cu ciuperci', '🐟 Somon cu lămâie'],
+  ] : [
+    [wds[0], '🍝 Spaghetti carbonara', '🥗 Greek salad'],
+    [wds[1], '🍲 Vegetable soup',       '🍗 Roasted chicken'],
+    [wds[2], '🥘 Mushroom risotto',     '🐟 Lemon salmon'],
+  ];
+
+  const chips = ro
+    ? ['paste','ouă','parmezan','roșii','feta','ciuperci','orez','lămâie','pui']
+    : ['pasta','eggs','parmesan','tomatoes','feta','mushrooms','rice','lemon','chicken'];
+
+  const colDay   = ro ? 'Ziua'  : 'Day';
+  const colLunch = ro ? 'Prânz' : 'Lunch';
+  const colDin   = ro ? 'Cină'  : 'Dinner';
+  const shTitle  = ro ? '🛒 Listă de cumpărături' : '🛒 Shopping list';
+  const eyebrow  = ro ? '✨ Cum arată planul tău' : '✨ What your plan looks like';
+  const heading  = ro ? 'Planul tău săptămânal,\nfrumos și organizat' : 'Your weekly plan,\nbeautiful and organized';
+  const desc     = ro
+    ? 'Adaugă mesele manual sau generează automat o săptămână întreagă cu un click. Lista de cumpărături apare instant, gata de descărcat ca PDF.'
+    : 'Add meals manually or auto-generate a full week in one click. Shopping list appears instantly, ready to download as PDF.';
+  const checks = ro ? [
+    'Plan de 7 zile cu prânz + cină',
+    'Listă de cumpărături sortată automat',
+    'PDF descărcabil gratuit (1/zi)',
+    'Funcționează offline în browser',
+  ] : [
+    '7-day plan with lunch & dinner',
+    'Shopping list sorted automatically',
+    'Free PDF download (1/day)',
+    'Works offline in the browser',
+  ];
+  const ctaScroll = ro ? '🥗 Planifică acum — gratuit' : '🥗 Plan now — free';
+  const ctaMenus  = ro ? '📅 Meniuri săptămânale' : '📅 Weekly menus';
+  const menusUrl  = (i18n[lang] && i18n[lang].menusUrl) || `/${lang}/meniu-saptamanal/`;
+
+  const html = `
+    <section id="${ID}" class="product-preview-section no-print">
+      <div class="product-preview-inner">
+        <div class="preview-text-col">
+          <div class="preview-eyebrow">${eyebrow}</div>
+          <h2>${heading.replace('\n','<br>')}</h2>
+          <ul class="preview-checklist">
+            ${checks.map(c => `<li>${c}</li>`).join('')}
+          </ul>
+          <div class="preview-cta-group">
+            <button class="btn-preview-primary" id="preview-cta-scroll">${ctaScroll}</button>
+            <a href="${menusUrl}" class="btn-preview-outline">${ctaMenus}</a>
+          </div>
+        </div>
+        <div class="preview-mockup-col">
+          <div class="product-mockup">
+            <div class="mockup-bar">
+              <span class="mockup-bar-title">📅 ${colDay}</span>
+              <span class="mockup-pdf-chip">📄 PDF</span>
+            </div>
+            <div class="mockup-table">
+              <div class="mockup-header-row">
+                <span>${colDay}</span><span>${colLunch}</span><span>${colDin}</span>
+              </div>
+              ${meals.map(([d,l,c]) => `
+                <div class="mockup-row">
+                  <span class="mockup-day">${d}</span>
+                  <span class="mockup-meal">${l}</span>
+                  <span class="mockup-meal">${c}</span>
+                </div>`).join('')}
+            </div>
+            <div class="mockup-shopping">
+              <div class="mockup-shopping-header">${shTitle}</div>
+              <div class="mockup-chips">
+                ${chips.map(c => `<span class="mockup-chip">${c}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>`;
+
+  document.getElementById('landing-features-section')?.insertAdjacentHTML('afterend', html);
+
+  document.getElementById('preview-cta-scroll')?.addEventListener('click', () => {
+    document.getElementById('planner-anchor-section')?.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+}
+
+function renderDiscovery() {
+  const ID = 'discovery-section';
+  if (document.getElementById(ID)) return;
+
+  const ro = lang === 'ro';
+  const menusUrl   = `/${lang}/${ro ? 'meniu-saptamanal' : 'weekly-menu'}/`;
+  const recipesUrl = `/${lang}/${ro ? 'retete' : 'recipes'}/`;
+
+  // Correct URL per language
+  const lc = lang;
+  const baseUrls = {
+    ro: { menus:'meniu-saptamanal', recipes:'retete' },
+    en: { menus:'weekly-menu',      recipes:'recipes' },
+    es: { menus:'menu-semanal',     recipes:'recetas' },
+    fr: { menus:'menu-hebdomadaire',recipes:'recettes' },
+    de: { menus:'wochenplan',       recipes:'rezepte' },
+    pt: { menus:'plano-semanal',    recipes:'receitas' },
+    ru: { menus:'nedelnoe-menyu',   recipes:'retsepty' },
+    ar: { menus:'weekly-menu',      recipes:'wasafat' },
+    zh: { menus:'weekly-menu',      recipes:'shpu' },
+    ja: { menus:'weekly-menu',      recipes:'reshipi' },
+    ko: { menus:'weekly-menu',      recipes:'yori-beoب' },
+    hi: { menus:'weekly-menu',      recipes:'recipes' },
+    tr: { menus:'haftalik-menu',    recipes:'tarifler' },
+    it: { menus:'piano-settimanale',recipes:'ricette' },
+  };
+  const urls = baseUrls[lc] || baseUrls.en;
+  const mUrl = `/${lc}/${urls.menus}/`;
+  const rUrl = `/${lc}/${urls.recipes}/`;
+
+  const s = ro ? {
+    title: 'Explorează și inspiră-te',
+    sub:   '8 meniuri complete săptămânale și 175+ rețete internaționale',
+    m_icon: '📅', m_title: 'Meniuri Săptămânale',
+    m_desc: '8 planuri complete — Mediteranean, Asian, Vegetarian, Buget și altele — cu liste de cumpărături incluse.',
+    m_cta:  'Explorează meniurile →',
+    r_icon: '🍽️', r_title: '175+ Rețete Internaționale',
+    r_desc: 'Rețete autentice din 70+ țări cu ingrediente, mod de preparare, valori nutriționale și sfaturi.',
+    r_cta:  'Descoperă rețetele →',
+  } : {
+    title: 'Explore and get inspired',
+    sub:   '8 complete weekly menus and 175+ international recipes',
+    m_icon: '📅', m_title: 'Weekly Menus',
+    m_desc: '8 complete plans — Mediterranean, Asian, Vegetarian, Budget and more — with shopping lists included.',
+    m_cta:  'Explore menus →',
+    r_icon: '🍽️', r_title: '175+ International Recipes',
+    r_desc: 'Authentic recipes from 70+ countries with ingredients, instructions, nutrition info and tips.',
+    r_cta:  'Discover recipes →',
+  };
+
+  const html = `
+    <section id="${ID}" class="discovery-section no-print">
+      <div class="discovery-inner">
+        <h2 class="discovery-title">${s.title}</h2>
+        <p class="discovery-sub">${s.sub}</p>
+        <div class="discovery-cards">
+          <a href="${mUrl}" class="discovery-card">
+            <div class="discovery-card-icon">${s.m_icon}</div>
+            <div class="discovery-card-title">${s.m_title}</div>
+            <div class="discovery-card-desc">${s.m_desc}</div>
+            <div class="discovery-card-cta">${s.m_cta}</div>
+          </a>
+          <a href="${rUrl}" class="discovery-card">
+            <div class="discovery-card-icon">${s.r_icon}</div>
+            <div class="discovery-card-title">${s.r_title}</div>
+            <div class="discovery-card-desc">${s.r_desc}</div>
+            <div class="discovery-card-cta">${s.r_cta}</div>
+          </a>
+        </div>
+      </div>
+    </section>`;
+
+  document.getElementById('product-preview-section')?.insertAdjacentHTML('afterend', html);
+}
+
+function renderPlannerAnchor() {
+  const ID = 'planner-anchor-section';
+  if (document.getElementById(ID)) return;
+
+  const ro = lang === 'ro';
+  const title = ro ? 'Planifică acum — gratuit' : 'Start planning — free';
+  const sub   = ro
+    ? 'Completează mesele sau generează automat o săptămână întreagă'
+    : 'Fill in your meals or auto-generate a full week';
+
+  const html = `
+    <section id="${ID}" class="planner-anchor-section no-print">
+      <div class="planner-anchor-title">${title}</div>
+      <div class="planner-anchor-sub">${sub}</div>
+    </section>`;
+
+  const main = document.querySelector('.app-main');
+  if (main) main.insertAdjacentHTML('beforebegin', html);
+}
+
+function injectHeroSecondaryCta() {
+  if (document.getElementById('hero-secondary-cta')) return;
+  const ro = lang === 'ro';
+  const menusBase = {
+    ro:'meniu-saptamanal', en:'weekly-menu', es:'menu-semanal', fr:'menu-hebdomadaire',
+    de:'wochenplan', pt:'plano-semanal', ru:'nedelnoe-menyu', it:'piano-settimanale',
+    tr:'haftalik-menu', ar:'weekly-menu', zh:'weekly-menu', ja:'weekly-menu',
+    ko:'weekly-menu', hi:'weekly-menu',
+  };
+  const seg  = menusBase[lang] || 'weekly-menu';
+  const text = ro ? '📅 Meniuri Săptămânale' : '📅 Weekly Menus';
+  const btn  = document.getElementById('hero-cta-btn');
+  if (!btn) return;
+
+  // Wrap in a flex row if not already wrapped
+  const row = document.createElement('div');
+  row.className = 'hero-cta-row';
+  btn.parentNode.insertBefore(row, btn);
+  row.appendChild(btn);
+
+  const a = document.createElement('a');
+  a.id   = 'hero-secondary-cta';
+  a.href = `/${lang}/${seg}/`;
+  a.className   = 'hero-secondary-cta no-print';
+  a.textContent = text;
+  row.appendChild(a);
+}
+/* ─── END LANDING PAGE SECTIONS ────────────────────────────── */
  function renderHowItWorks() {
   const SECTION_ID = 'how-it-works-section';
   const t = key => (i18n[lang] && i18n[lang][key]) || (i18n['en'] && i18n['en'][key]) || key;
@@ -1471,6 +1734,11 @@ function applyTranslations() {
   updateContentNav(lang);
   renderPricingSection();
   renderHowItWorks();
+  renderLandingFeatures();
+  renderProductPreview();
+  renderDiscovery();
+  renderPlannerAnchor();
+  injectHeroSecondaryCta();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
@@ -1939,7 +2207,8 @@ if (verifyBtn && emailInput && resultDiv) {
       if (autoBtn) autoBtn.click();
       // Smooth scroll to planner
       setTimeout(() => {
-        document.querySelector('.app-main')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        (document.getElementById('planner-anchor-section') || document.querySelector('.app-main'))
+          ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 80);
     });
   }
