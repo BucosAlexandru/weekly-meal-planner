@@ -522,15 +522,19 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>`;
   }
 
-  // ── collect all ingredients for shopping list ─────────────────
-  const allIngrSet = new Set();
+  // ── collect all ingredients for shopping list (filtered & deduped) ──
+  const allIngrMap = new Map();
   visibleMeals.forEach(m => {
     [m.lunch, m.dinner].filter(Boolean).forEach(meal => {
       const r = getRecipe(meal);
-      (r?.ingredients?.[lang] || r?.ingredients?.en || []).forEach(i => allIngrSet.add(i));
+      (r?.ingredients?.[lang] || r?.ingredients?.en || []).forEach(i => {
+        const key = ingrBaseKey(i);
+        if (!key || PANTRY_WORDS.test(key) || allIngrMap.has(key)) return;
+        allIngrMap.set(key, i[0].toUpperCase() + i.slice(1));
+      });
     });
   });
-  const ingrArr = [...allIngrSet];
+  const ingrArr = [...allIngrMap.values()].sort((a,b) => a.localeCompare(b));
   const half = Math.ceil(ingrArr.length / 2);
   const col1 = ingrArr.slice(0, half);
   const col2 = ingrArr.slice(half);
@@ -1061,6 +1065,18 @@ function paginateCleanNode(root){
   };
   window._activeFilter = window._activeFilter || 'all';
 
+  // ── Ingredient normalization helpers ─────────────────────────
+  function ingrBaseKey(str) {
+    return str
+      .replace(/^[\d,.]+\s*(?:g|kg|ml|l|buc\.?|conserv[aă]|lingurit[aă]e?|lingur[iă]|tbsp|tsp|c[aă]t[ei]i|cloves?|felii|felii?|~)?\s+/i, '')
+      .replace(/^\d+\s+/, '')
+      .replace(/^~\s*/, '')
+      .replace(/\s*\(.*?\)/g, '')
+      .toLowerCase()
+      .trim();
+  }
+  const PANTRY_WORDS = /^(ap[aă]|water|agua|eau|wasser|água|вода|水|su|acqua|물)$|^(sare|salt|sel|salz|sal|соль|塩|tuz|sale|소금)$|^(piper\b.*|pepper\b.*|poivre\b.*|pfeffer\b.*|pimienta\b.*|pepe\b.*|перец\b.*|胡椒.*|karabiber.*)/i;
+
   // ── Live shopping list renderer ───────────────────────────────
   function updateShoppingList() {
     const listEl = document.getElementById('shopping-list');
@@ -1084,10 +1100,9 @@ function paginateCleanNode(root){
         }
         const ingr = rec?.ingredients?.[lang] || rec?.ingredients?.ro || rec?.ingredients?.en || [];
         ingr.forEach(i => {
-          const key = i.toLowerCase().replace(/\s*\(.*?\)/g,'').trim();
-          // Skip trivial pantry staples everyone has at home
-          const trivial = /^(ap[aă]|water|agua|eau|wasser|água|вода|水|お湯|su|acqua)$|^(sare|salt|sel|salz|sal|соль|塩|tuz)$|^(piper negru|black pepper|poivre noir|schwarzer pfeffer|pimienta negra|pepe nero|черный перец|黒胡椒)$/i;
-          if (key && !trivial.test(key) && !allIngr.has(key)) allIngr.set(key, i);
+          const key = ingrBaseKey(i);
+          if (!key || PANTRY_WORDS.test(key) || allIngr.has(key)) return;
+          allIngr.set(key, i);
         });
       });
     });
