@@ -46,6 +46,12 @@ function isBudgetMenuEnabled() {
   return !!(cb && cb.checked);
 }
 
+// ===== Safe translation helper — never render "undefined" or null in UI
+function safeText(value, fallback = '') {
+  if (value === undefined || value === null || value === 'undefined') return fallback;
+  return String(value);
+}
+
 // ===== Helpers mici
 function extractRecipeName(text) {
   if (!text) return '';
@@ -1619,23 +1625,23 @@ function renderProductPreview() {
   const html = `
     <section id="${ID}" class="product-preview-section no-print">
       <div class="product-preview-inner">
-        <div class="preview-section-eyebrow">${c.eyebrow}</div>
-        <h2 class="preview-section-heading">${c.heading.replace('\n','<br>')}</h2>
-        <p class="preview-section-sub">${c.sub}</p>
+        <div class="preview-section-eyebrow">${safeText(c.eyebrow)}</div>
+        <h2 class="preview-section-heading">${safeText(c.heading).replace('\n','<br>')}</h2>
+        <p class="preview-section-sub">${safeText(c.sub)}</p>
         <div class="steps-grid">
-          ${c.steps.map(s => `
+          ${(c.steps || []).map(s => `
           <div class="step-item">
             <div class="step-icon-wrap">
-              <span class="step-num">${s.n}</span>
-              ${s.icon}
+              <span class="step-num">${safeText(s.n)}</span>
+              ${safeText(s.icon, '🍽️')}
             </div>
-            <h3 class="step-title">${s.title}</h3>
-            <p class="step-desc">${s.desc}</p>
+            <h3 class="step-title">${safeText(s.title)}</h3>
+            <p class="step-desc">${safeText(s.desc)}</p>
           </div>`).join('')}
         </div>
         <div class="preview-cta-group">
-          <button class="btn-preview-primary" id="preview-cta-scroll">${c.cta1}</button>
-          <a href="${menusUrl}" class="btn-preview-outline">${c.cta2}</a>
+          <button class="btn-preview-primary" id="preview-cta-scroll">${safeText(c.cta1)}</button>
+          <a href="${menusUrl}" class="btn-preview-outline">${safeText(c.cta2)}</a>
         </div>
       </div>
     </section>`;
@@ -1826,20 +1832,20 @@ function renderDiscovery() {
   const html = `
     <section id="${ID}" class="discovery-section no-print">
       <div class="discovery-inner">
-        <h2 class="discovery-title">${s.title}</h2>
-        <p class="discovery-sub">${s.sub}</p>
+        <h2 class="discovery-title">${safeText(s.title)}</h2>
+        <p class="discovery-sub">${safeText(s.sub)}</p>
         <div class="discovery-cards">
           <a href="${mUrl}" class="discovery-card">
-            <div class="discovery-card-icon">${s.m_icon}</div>
-            <div class="discovery-card-title">${s.m_title}</div>
-            <div class="discovery-card-desc">${s.m_desc}</div>
-            <div class="discovery-card-cta">${s.m_cta}</div>
+            <div class="discovery-card-icon">${safeText(s.m_icon, '📅')}</div>
+            <div class="discovery-card-title">${safeText(s.m_title)}</div>
+            <div class="discovery-card-desc">${safeText(s.m_desc)}</div>
+            <div class="discovery-card-cta">${safeText(s.m_cta)}</div>
           </a>
           <a href="${rUrl}" class="discovery-card">
-            <div class="discovery-card-icon">${s.r_icon}</div>
-            <div class="discovery-card-title">${s.r_title}</div>
-            <div class="discovery-card-desc">${s.r_desc}</div>
-            <div class="discovery-card-cta">${s.r_cta}</div>
+            <div class="discovery-card-icon">${safeText(s.r_icon, '🍽️')}</div>
+            <div class="discovery-card-title">${safeText(s.r_title)}</div>
+            <div class="discovery-card-desc">${safeText(s.r_desc)}</div>
+            <div class="discovery-card-cta">${safeText(s.r_cta)}</div>
           </a>
         </div>
       </div>
@@ -1873,8 +1879,8 @@ function renderPlannerAnchor() {
 
   const html = `
     <section id="${ID}" class="planner-anchor-section no-print">
-      <div class="planner-anchor-title">${a.title}</div>
-      <div class="planner-anchor-sub">${a.sub}</div>
+      <div class="planner-anchor-title">${safeText(a.title)}</div>
+      <div class="planner-anchor-sub">${safeText(a.sub)}</div>
     </section>`;
 
   const main = document.querySelector('.app-main');
@@ -2241,31 +2247,31 @@ function renderPremiumHero() {
       <div class="hero-text-col">
         <div class="hero-badge">
           <span class="badge-pulse" aria-hidden="true"></span>
-          ${s.badge}
+          ${safeText(s.badge)}
         </div>
         <h1 class="hero-premium-title">
-          ${s.line1}<br>${s.line2}<br><em>${s.line3}</em>
+          ${safeText(s.line1)}<br>${safeText(s.line2)}<br><em>${safeText(s.line3)}</em>
         </h1>
-        <p class="hero-premium-sub">${s.sub.replace('\n','<br>')}</p>
+        <p class="hero-premium-sub">${safeText(s.sub).replace('\n','<br>')}</p>
         <div class="hero-stats-row" aria-label="Key stats">
           <div class="hero-stat">
-            <span class="hero-stat-num">${s.stat1n}</span>
-            <span class="hero-stat-label">${s.stat1l}</span>
+            <span class="hero-stat-num">${safeText(s.stat1n)}</span>
+            <span class="hero-stat-label">${safeText(s.stat1l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
           <div class="hero-stat">
-            <span class="hero-stat-num">${s.stat2n}</span>
-            <span class="hero-stat-label">${s.stat2l}</span>
+            <span class="hero-stat-num">${safeText(s.stat2n)}</span>
+            <span class="hero-stat-label">${safeText(s.stat2l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
           <div class="hero-stat">
-            <span class="hero-stat-num">${s.stat3n}</span>
-            <span class="hero-stat-label">${s.stat3l}</span>
+            <span class="hero-stat-num">${safeText(s.stat3n)}</span>
+            <span class="hero-stat-label">${safeText(s.stat3l)}</span>
           </div>
         </div>
         <div class="hero-premium-cta">
-          <button class="btn-hero-cta" id="hero-cta-btn" type="button">${s.cta}</button>
-          <a href="${mUrl}" class="hero-ghost-link">${s.ghost}</a>
+          <button class="btn-hero-cta" id="hero-cta-btn" type="button">${safeText(s.cta)}</button>
+          <a href="${mUrl}" class="hero-ghost-link">${safeText(s.ghost)}</a>
         </div>
       </div>
 
@@ -2275,22 +2281,22 @@ function renderPremiumHero() {
             <div class="hero-phone-notch"></div>
             <div class="hero-phone-screen">
               <div class="phone-app-bar">
-                <span class="phone-app-title">📋 ${s.planLabel}</span>
+                <span class="phone-app-title">📋 ${safeText(s.planLabel)}</span>
                 <span class="phone-app-pdf-btn">PDF ↓</span>
               </div>
               <div class="phone-meal-header">
-                <span>${s.colDay}</span><span>${s.colL}</span><span>${s.colD}</span>
+                <span>${safeText(s.colDay)}</span><span>${safeText(s.colL)}</span><span>${safeText(s.colD)}</span>
               </div>
               ${meals.map(([d,l,c]) => `
               <div class="phone-meal-row">
-                <span class="phone-meal-day">${d}</span>
-                <span class="phone-meal-name">${l}</span>
-                <span class="phone-meal-name">${c}</span>
+                <span class="phone-meal-day">${safeText(d)}</span>
+                <span class="phone-meal-name">${safeText(l)}</span>
+                <span class="phone-meal-name">${safeText(c)}</span>
               </div>`).join('')}
               <div class="phone-shopping">
-                <div class="phone-shopping-title">🛒 ${s.shLabel}</div>
+                <div class="phone-shopping-title">🛒 ${safeText(s.shLabel)}</div>
                 <div class="phone-chips">
-                  ${s.chips.map(c=>`<span class="phone-chip">${c}</span>`).join('')}
+                  ${(s.chips || []).map(c=>`<span class="phone-chip">${safeText(c)}</span>`).join('')}
                 </div>
               </div>
             </div>
@@ -2298,8 +2304,8 @@ function renderPremiumHero() {
           <div class="hero-food-accent">
             <div class="hero-food-accent-icon">✨</div>
             <div>
-              <div class="hero-food-accent-title">${s.accentTitle}</div>
-              <div class="hero-food-accent-sub">${s.accentSub}</div>
+              <div class="hero-food-accent-title">${safeText(s.accentTitle)}</div>
+              <div class="hero-food-accent-sub">${safeText(s.accentSub)}</div>
             </div>
           </div>
         </div>
