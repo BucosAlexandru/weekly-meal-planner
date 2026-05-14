@@ -1521,7 +1521,9 @@ function renderProductPreview() {
       </div>
     </section>`;
 
-  document.getElementById('landing-features-section')?.insertAdjacentHTML('afterend', html);
+  // Inject after hero (no feature-cards section anymore)
+  const heroEl = document.querySelector('.hero');
+  if (heroEl) heroEl.insertAdjacentHTML('afterend', html);
 
   document.getElementById('preview-cta-scroll')?.addEventListener('click', () => {
     document.getElementById('planner-anchor-section')?.scrollIntoView({ behavior:'smooth', block:'start' });
@@ -1623,32 +1625,199 @@ function renderPlannerAnchor() {
   if (main) main.insertAdjacentHTML('beforebegin', html);
 }
 
-function injectHeroSecondaryCta() {
-  if (document.getElementById('hero-secondary-cta')) return;
-  const ro = lang === 'ro';
+function injectHeroSecondaryCta() { /* replaced by renderPremiumHero */ }
+
+function renderPremiumHero() {
+  const hero = document.querySelector('.hero');
+  if (!hero || hero.dataset.premium) return;
+  hero.dataset.premium = '1';
+
   const menusBase = {
     ro:'meniu-saptamanal', en:'weekly-menu', es:'menu-semanal', fr:'menu-hebdomadaire',
     de:'wochenplan', pt:'plano-semanal', ru:'nedelnoe-menyu', it:'piano-settimanale',
     tr:'haftalik-menu', ar:'weekly-menu', zh:'weekly-menu', ja:'weekly-menu',
     ko:'weekly-menu', hi:'weekly-menu',
   };
-  const seg  = menusBase[lang] || 'weekly-menu';
-  const text = ro ? '📅 Meniuri Săptămânale' : '📅 Weekly Menus';
-  const btn  = document.getElementById('hero-cta-btn');
-  if (!btn) return;
+  const recipesBase = {
+    ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
+    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'recipes', ja:'reshipi',
+    ko:'recipes', hi:'recipes', tr:'tarifler', it:'ricette',
+  };
+  const mSeg = menusBase[lang] || 'weekly-menu';
+  const rSeg = recipesBase[lang] || 'recipes';
+  const mUrl = `/${lang}/${mSeg}/`;
+  const rUrl = `/${lang}/${rSeg}/`;
 
-  // Wrap in a flex row if not already wrapped
-  const row = document.createElement('div');
-  row.className = 'hero-cta-row';
-  btn.parentNode.insertBefore(row, btn);
-  row.appendChild(btn);
+  // Per-language strings (ro primary, en fallback for rest)
+  const copy = {
+    ro: {
+      badge: 'Gratuit · Fără cont · 14 limbi',
+      line1: 'Mâncă bine',
+      line2: 'în fiecare',
+      line3: 'săptămână.',
+      sub: 'Plan săptămânal · Listă de cumpărături · PDF descărcabil.\nTot ce ai nevoie, complet gratuit.',
+      stat1n:'175+', stat1l:'Rețete',
+      stat2n:'14',   stat2l:'Limbi',
+      stat3n:'0€',   stat3l:'Cost',
+      cta: '🥗 Creează Planul Meu',
+      ghost: 'Explorează meniuri →',
+      colDay:'Ziua', colL:'Prânz', colD:'Cină', shLabel:'Listă cumpărături',
+      meals:[
+        ['Luni',  '🍝 Spaghete carbonara', '🥗 Salată grecească'],
+        ['Marți', '🍲 Ciorbă de legume',   '🍗 Pui la cuptor'],
+        ['Miercuri','🥘 Risotto ciuperci', '🐟 Somon cu lămâie'],
+        ['Joi',   '🌮 Tacos de vită',      '🥩 Salată cu ton'],
+      ],
+      chips:['paste','ouă','parmezan','roșii','feta','ciuperci','pui','lămâie'],
+    },
+    en: {
+      badge: 'Free · No account · 14 languages',
+      line1: 'Eat well,',
+      line2: 'every single',
+      line3: 'week.',
+      sub: 'Weekly meal plans · Auto shopping list · PDF download.\nEverything you need, completely free.',
+      stat1n:'175+', stat1l:'Recipes',
+      stat2n:'14',   stat2l:'Languages',
+      stat3n:'Free', stat3l:'Forever',
+      cta: '🥗 Create My Free Plan',
+      ghost: 'Explore menus →',
+      colDay:'Day', colL:'Lunch', colD:'Dinner', shLabel:'Shopping list',
+      meals:[
+        ['Monday',  '🍝 Spaghetti carbonara', '🥗 Greek salad'],
+        ['Tuesday', '🍲 Vegetable soup',       '🍗 Roasted chicken'],
+        ['Wednesday','🥘 Mushroom risotto',    '🐟 Lemon salmon'],
+        ['Thursday','🌮 Beef tacos',           '🥩 Tuna salad'],
+      ],
+      chips:['pasta','eggs','parmesan','tomatoes','feta','mushrooms','chicken','lemon'],
+    },
+    es: {
+      badge: 'Gratis · Sin cuenta · 14 idiomas',
+      line1: 'Come bien',
+      line2: 'cada',
+      line3: 'semana.',
+      sub: 'Plan semanal · Lista de compras · Descarga PDF.\nTodo lo que necesitas, completamente gratis.',
+      stat1n:'175+', stat1l:'Recetas',
+      stat2n:'14',   stat2l:'Idiomas',
+      stat3n:'0€',   stat3l:'Gratis',
+      cta: '🥗 Crear Mi Plan Gratis',
+      ghost: 'Explorar menús →',
+      colDay:'Día', colL:'Almuerzo', colD:'Cena', shLabel:'Lista de compras',
+      meals:[
+        ['Lunes','🥘 Paella valenciana','🥗 Ensalada mixta'],
+        ['Martes','🍲 Gazpacho','🍗 Pollo al horno'],
+        ['Miércoles','🌮 Tacos de ternera','🥩 Tortilla española'],
+        ['Jueves','🍝 Pasta boloñesa','🐟 Salmón al limón'],
+      ],
+      chips:['arroz','tomates','pollo','aceite','cebolla','ajo','limón','huevos'],
+    },
+    fr: {
+      badge: 'Gratuit · Sans compte · 14 langues',
+      line1: 'Mangez bien',
+      line2: 'chaque',
+      line3: 'semaine.',
+      sub: 'Plan hebdomadaire · Liste de courses · PDF téléchargeable.\nTout ce qu\'il vous faut, entièrement gratuit.',
+      stat1n:'175+', stat1l:'Recettes',
+      stat2n:'14',   stat2l:'Langues',
+      stat3n:'0€',   stat3l:'Gratuit',
+      cta: '🥗 Créer Mon Plan Gratuit',
+      ghost: 'Explorer les menus →',
+      colDay:'Jour', colL:'Déjeuner', colD:'Dîner', shLabel:'Liste de courses',
+      meals:[
+        ['Lundi','🥐 Quiche lorraine','🍲 Soupe à l\'oignon'],
+        ['Mardi','🐟 Sole meunière','🥗 Salade niçoise'],
+        ['Mercredi','🍝 Pasta bolognaise','🍗 Poulet rôti'],
+        ['Jeudi','🥘 Cassoulet','🧀 Croque-monsieur'],
+      ],
+      chips:['beurre','oeufs','farine','tomates','poulet','ail','herbes','vin'],
+    },
+    de: {
+      badge: 'Kostenlos · Kein Konto · 14 Sprachen',
+      line1: 'Gut essen,',
+      line2: 'jede',
+      line3: 'Woche.',
+      sub: 'Wochenplan · Automatische Einkaufsliste · PDF herunterladen.\nAlles was Sie brauchen, völlig kostenlos.',
+      stat1n:'175+', stat1l:'Rezepte',
+      stat2n:'14',   stat2l:'Sprachen',
+      stat3n:'0€',   stat3l:'Kostenlos',
+      cta: '🥗 Meinen Plan Erstellen',
+      ghost: 'Menüs erkunden →',
+      colDay:'Tag', colL:'Mittagessen', colD:'Abendessen', shLabel:'Einkaufsliste',
+      meals:[
+        ['Montag','🥩 Schnitzel','🥗 Salat'],
+        ['Dienstag','🍲 Linsensuppe','🍗 Hähnchen'],
+        ['Mittwoch','🥘 Eintopf','🐟 Lachs'],
+        ['Donnerstag','🌭 Currywurst','🥙 Döner'],
+      ],
+      chips:['Kartoffeln','Zwiebeln','Hähnchen','Möhren','Mehl','Butter','Eier','Käse'],
+    },
+  };
 
-  const a = document.createElement('a');
-  a.id   = 'hero-secondary-cta';
-  a.href = `/${lang}/${seg}/`;
-  a.className   = 'hero-secondary-cta no-print';
-  a.textContent = text;
-  row.appendChild(a);
+  const s = copy[lang] || copy.en;
+  const wds = (i18n[lang] && i18n[lang].weekdays);
+  // If we have i18n weekdays, use them for the meal day names
+  const meals = s.meals.map((row, i) => [wds ? wds[i] : row[0], row[1], row[2]]);
+
+  hero.innerHTML = `
+    <div class="hero-premium-inner no-print">
+      <div class="hero-text-col">
+        <div class="hero-badge">
+          <span class="badge-pulse" aria-hidden="true"></span>
+          ${s.badge}
+        </div>
+        <h1 class="hero-premium-title">
+          ${s.line1}<br>${s.line2}<br><em>${s.line3}</em>
+        </h1>
+        <p class="hero-premium-sub">${s.sub.replace('\n','<br>')}</p>
+        <div class="hero-stats-row" aria-label="Key stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">${s.stat1n}</span>
+            <span class="hero-stat-label">${s.stat1l}</span>
+          </div>
+          <span class="hero-stat-sep" aria-hidden="true">·</span>
+          <div class="hero-stat">
+            <span class="hero-stat-num">${s.stat2n}</span>
+            <span class="hero-stat-label">${s.stat2l}</span>
+          </div>
+          <span class="hero-stat-sep" aria-hidden="true">·</span>
+          <div class="hero-stat">
+            <span class="hero-stat-num">${s.stat3n}</span>
+            <span class="hero-stat-label">${s.stat3l}</span>
+          </div>
+        </div>
+        <div class="hero-premium-cta">
+          <button class="btn-hero-cta" id="hero-cta-btn" type="button">${s.cta}</button>
+          <a href="${mUrl}" class="hero-ghost-link">${s.ghost}</a>
+        </div>
+      </div>
+
+      <div class="hero-visual-col" aria-hidden="true">
+        <div class="hero-app-card">
+          <div class="hcard-bar">
+            <span class="hcard-bar-title">📅 ${s.colDay}</span>
+            <span class="hcard-bar-dots">
+              <span class="hcard-dot hcard-dot-r"></span>
+              <span class="hcard-dot hcard-dot-y"></span>
+              <span class="hcard-dot hcard-dot-g"></span>
+            </span>
+          </div>
+          <div class="hcard-head">
+            <span>${s.colDay}</span><span>${s.colL}</span><span>${s.colD}</span>
+          </div>
+          ${meals.map(([d,l,c]) => `
+          <div class="hcard-row">
+            <span class="hcard-day">${d}</span>
+            <span class="hcard-meal">${l}</span>
+            <span class="hcard-meal">${c}</span>
+          </div>`).join('')}
+          <div class="hcard-shop">
+            <div class="hcard-shop-label">🛒 ${s.shLabel}</div>
+            <div class="hcard-chips">
+              ${s.chips.map(c=>`<span class="hcard-chip">${c}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
 }
 /* ─── END LANDING PAGE SECTIONS ────────────────────────────── */
  function renderHowItWorks() {
@@ -1733,12 +1902,10 @@ function applyTranslations() {
   attachAutoMenuBtn();
   updateContentNav(lang);
   renderPricingSection();
-  renderHowItWorks();
-  renderLandingFeatures();
+  renderPremiumHero();
   renderProductPreview();
   renderDiscovery();
   renderPlannerAnchor();
-  injectHeroSecondaryCta();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
