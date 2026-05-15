@@ -1172,6 +1172,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmezan'},{e:'🍷',n:'Vin alb'},{e:'🥗',n:'Salată'},{e:'🍞',n:'Pâine ciabatta'}],
       veg:[{e:'🫙',n:'Smântână'},{e:'🍞',n:'Pâine'},{e:'🧄',n:'Usturoi'},{e:'🥗',n:'Salată'}],
       def:[{e:'🥗',n:'Salată proaspătă'},{e:'🍷',n:'Vin'},{e:'🍞',n:'Pâine'},{e:'🌿',n:'Ierburi aromatice'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Supă doenjang'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Ceai de orz'}],
+      japanese:[{e:'🍵',n:'Ceai verde'},{e:'🥢',n:'Supă miso'},{e:'🥒',n:'Murături tsukemono'},{e:'🍶',n:'Sake sau bere japoneză'}],
     }
   },
   en:{ totalTime:'Total time', activeTime:'Active time', servings:'Servings', difficulty:'Difficulty', cost:'Cost',
@@ -1201,6 +1203,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'White wine'},{e:'🥗',n:'Arugula salad'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Yogurt'},{e:'🍞',n:'Bread'},{e:'🧄',n:'Garlic'},{e:'🥗',n:'Salad'}],
       def:[{e:'🥗',n:'Fresh salad'},{e:'🍷',n:'Wine'},{e:'🍞',n:'Bread'},{e:'🌿',n:'Fresh herbs'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Doenjang jjigae'},{e:'🥢',n:'Banchan sides'},{e:'🍵',n:'Barley tea'}],
+      japanese:[{e:'🍵',n:'Green tea'},{e:'🥢',n:'Miso soup'},{e:'🥒',n:'Pickled vegetables (tsukemono)'},{e:'🍶',n:'Sake or Japanese beer'}],
     }
   },
   es:{ totalTime:'Tiempo total', activeTime:'Tiempo activo', servings:'Raciones', difficulty:'Dificultad', cost:'Coste',
@@ -1230,6 +1234,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmesano'},{e:'🍷',n:'Vino blanco'},{e:'🥗',n:'Ensalada'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Yogur'},{e:'🍞',n:'Pan'},{e:'🧄',n:'Ajo'},{e:'🥗',n:'Ensalada'}],
       def:[{e:'🥗',n:'Ensalada fresca'},{e:'🍷',n:'Vino'},{e:'🍞',n:'Pan'},{e:'🌿',n:'Hierbas'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Sopa doenjang'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Té de cebada'}],
+      japanese:[{e:'🍵',n:'Té verde'},{e:'🥢',n:'Sopa miso'},{e:'🥒',n:'Verduras encurtidas (tsukemono)'},{e:'🍶',n:'Sake o cerveza japonesa'}],
     }
   },
   fr:{ totalTime:'Temps total', activeTime:'Temps actif', servings:'Portions', difficulty:'Difficulté', cost:'Coût',
@@ -1259,6 +1265,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'Vin blanc'},{e:'🥗',n:'Salade'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Yaourt'},{e:'🍞',n:'Pain'},{e:'🧄',n:'Ail'},{e:'🥗',n:'Salade'}],
       def:[{e:'🥗',n:'Salade fraîche'},{e:'🍷',n:'Vin'},{e:'🍞',n:'Pain'},{e:'🌿',n:'Herbes'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Soupe doenjang'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Thé d\'orge'}],
+      japanese:[{e:'🍵',n:'Thé vert'},{e:'🥢',n:'Soupe miso'},{e:'🥒',n:'Légumes marinés (tsukemono)'},{e:'🍶',n:'Saké ou bière japonaise'}],
     }
   },
   de:{ totalTime:'Gesamtzeit', activeTime:'Aktive Zeit', servings:'Portionen', difficulty:'Schwierigkeit', cost:'Kosten',
@@ -1288,6 +1296,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'Weißwein'},{e:'🥗',n:'Salat'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Joghurt'},{e:'🍞',n:'Brot'},{e:'🧄',n:'Knoblauch'},{e:'🥗',n:'Salat'}],
       def:[{e:'🥗',n:'Frischer Salat'},{e:'🍷',n:'Wein'},{e:'🍞',n:'Brot'},{e:'🌿',n:'Kräuter'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Doenjang-Suppe'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Gerstentee'}],
+      japanese:[{e:'🍵',n:'Grüner Tee'},{e:'🥢',n:'Miso-Suppe'},{e:'🥒',n:'Eingelegtes Gemüse (Tsukemono)'},{e:'🍶',n:'Sake oder japanisches Bier'}],
     }
   },
   pt:{ totalTime:'Tempo total', activeTime:'Tempo ativo', servings:'Porções', difficulty:'Dificuldade', cost:'Custo',
@@ -1317,6 +1327,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmesão'},{e:'🍷',n:'Vinho branco'},{e:'🥗',n:'Salada'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Iogurte'},{e:'🍞',n:'Pão'},{e:'🧄',n:'Alho'},{e:'🥗',n:'Salada'}],
       def:[{e:'🥗',n:'Salada fresca'},{e:'🍷',n:'Vinho'},{e:'🍞',n:'Pão'},{e:'🌿',n:'Ervas'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Sopa doenjang'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Chá de cevada'}],
+      japanese:[{e:'🍵',n:'Chá verde'},{e:'🥢',n:'Sopa miso'},{e:'🥒',n:'Legumes em conserva (tsukemono)'},{e:'🍶',n:'Saquê ou cerveja japonesa'}],
     }
   },
   ru:{ totalTime:'Общее время', activeTime:'Активное время', servings:'Порции', difficulty:'Сложность', cost:'Стоимость',
@@ -1346,6 +1358,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Пармезан'},{e:'🍷',n:'Белое вино'},{e:'🥗',n:'Салат'},{e:'🍞',n:'Чиабатта'}],
       veg:[{e:'🫙',n:'Сметана'},{e:'🍞',n:'Хлеб'},{e:'🧄',n:'Чеснок'},{e:'🥗',n:'Салат'}],
       def:[{e:'🥗',n:'Свежий салат'},{e:'🍷',n:'Вино'},{e:'🍞',n:'Хлеб'},{e:'🌿',n:'Зелень'}],
+      korean:[{e:'🥬',n:'Кимчи'},{e:'🥣',n:'Суп денджан'},{e:'🥢',n:'Панчан'},{e:'🍵',n:'Ячменный чай'}],
+      japanese:[{e:'🍵',n:'Зелёный чай'},{e:'🥢',n:'Суп мисо'},{e:'🥒',n:'Маринованные овощи (цукэмоно)'},{e:'🍶',n:'Сакэ или японское пиво'}],
     }
   },
   ar:{ totalTime:'الوقت الكلي', activeTime:'الوقت الفعلي', servings:'الحصص', difficulty:'الصعوبة', cost:'التكلفة',
@@ -1375,6 +1389,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'بارميزان'},{e:'🍷',n:'نبيذ أبيض'},{e:'🥗',n:'سلطة'},{e:'🍞',n:'خبز'}],
       veg:[{e:'🫙',n:'زبادي'},{e:'🍞',n:'خبز'},{e:'🧄',n:'ثوم'},{e:'🥗',n:'سلطة'}],
       def:[{e:'🥗',n:'سلطة طازجة'},{e:'🍷',n:'نبيذ'},{e:'🍞',n:'خبز'},{e:'🌿',n:'أعشاب'}],
+      korean:[{e:'🥬',n:'كيمتشي'},{e:'🥣',n:'حساء دوينجانغ'},{e:'🥢',n:'بانتشان'},{e:'🍵',n:'شاي الشعير'}],
+      japanese:[{e:'🍵',n:'شاي أخضر'},{e:'🥢',n:'حساء ميسو'},{e:'🥒',n:'خضار مخللة (تسوكيمونو)'},{e:'🍶',n:'ساكي أو بيرة يابانية'}],
     }
   },
   zh:{ totalTime:'总时间', activeTime:'操作时间', servings:'份数', difficulty:'难度', cost:'费用',
@@ -1404,6 +1420,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'帕玛森芝士'},{e:'🍷',n:'白葡萄酒'},{e:'🥗',n:'沙拉'},{e:'🍞',n:'拖鞋面包'}],
       veg:[{e:'🫙',n:'酸奶'},{e:'🍞',n:'面包'},{e:'🧄',n:'大蒜'},{e:'🥗',n:'沙拉'}],
       def:[{e:'🥗',n:'新鲜沙拉'},{e:'🍷',n:'葡萄酒'},{e:'🍞',n:'面包'},{e:'🌿',n:'香草'}],
+      korean:[{e:'🥬',n:'泡菜'},{e:'🥣',n:'大酱汤'},{e:'🥢',n:'小菜'},{e:'🍵',n:'大麦茶'}],
+      japanese:[{e:'🍵',n:'绿茶'},{e:'🥢',n:'味噌汤'},{e:'🥒',n:'腌菜（漬物）'},{e:'🍶',n:'清酒或日本啤酒'}],
     }
   },
   ja:{ totalTime:'合計時間', activeTime:'調理時間', servings:'人数', difficulty:'難易度', cost:'費用',
@@ -1433,6 +1451,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'パルメザン'},{e:'🍷',n:'白ワイン'},{e:'🥗',n:'サラダ'},{e:'🍞',n:'チャバタ'}],
       veg:[{e:'🫙',n:'ヨーグルト'},{e:'🍞',n:'パン'},{e:'🧄',n:'ニンニク'},{e:'🥗',n:'サラダ'}],
       def:[{e:'🥗',n:'フレッシュサラダ'},{e:'🍷',n:'ワイン'},{e:'🍞',n:'パン'},{e:'🌿',n:'ハーブ'}],
+      korean:[{e:'🥬',n:'キムチ'},{e:'🥣',n:'テンジャンチゲ'},{e:'🥢',n:'バンチャン'},{e:'🍵',n:'麦茶'}],
+      japanese:[{e:'🍵',n:'緑茶'},{e:'🥢',n:'味噌汁'},{e:'🥒',n:'漬物'},{e:'🍶',n:'日本酒またはビール'}],
     }
   },
   hi:{ totalTime:'कुल समय', activeTime:'सक्रिय समय', servings:'सर्विंग्स', difficulty:'कठिनाई', cost:'लागत',
@@ -1462,6 +1482,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'परमेसन'},{e:'🍷',n:'व्हाइट वाइन'},{e:'🥗',n:'सलाद'},{e:'🍞',n:'ब्रेड'}],
       veg:[{e:'🫙',n:'दही'},{e:'🍞',n:'रोटी'},{e:'🧄',n:'लहसुन'},{e:'🥗',n:'सलाद'}],
       def:[{e:'🥗',n:'ताजा सलाद'},{e:'🍷',n:'वाइन'},{e:'🍞',n:'ब्रेड'},{e:'🌿',n:'जड़ी-बूटियां'}],
+      korean:[{e:'🥬',n:'किमची'},{e:'🥣',n:'दोएंजांग जिगे'},{e:'🥢',n:'बैनचान'},{e:'🍵',n:'जौ की चाय'}],
+      japanese:[{e:'🍵',n:'हरी चाय'},{e:'🥢',n:'मिसो सूप'},{e:'🥒',n:'अचार सब्जियां (त्सुकेमोनो)'},{e:'🍶',n:'साके या जापानी बियर'}],
     }
   },
   tr:{ totalTime:'Toplam süre', activeTime:'Aktif süre', servings:'Porsiyon', difficulty:'Zorluk', cost:'Maliyet',
@@ -1491,6 +1513,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmesan'},{e:'🍷',n:'Beyaz şarap'},{e:'🥗',n:'Salata'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Yoğurt'},{e:'🍞',n:'Ekmek'},{e:'🧄',n:'Sarımsak'},{e:'🥗',n:'Salata'}],
       def:[{e:'🥗',n:'Taze salata'},{e:'🍷',n:'Şarap'},{e:'🍞',n:'Ekmek'},{e:'🌿',n:'Otlar'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Doenjang çorbası'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Arpa çayı'}],
+      japanese:[{e:'🍵',n:'Yeşil çay'},{e:'🥢',n:'Miso çorbası'},{e:'🥒',n:'Turşu sebzeler (tsukemono)'},{e:'🍶',n:'Sake veya Japon birası'}],
     }
   },
   it:{ totalTime:'Tempo totale', activeTime:'Tempo attivo', servings:'Porzioni', difficulty:'Difficoltà', cost:'Costo',
@@ -1520,6 +1544,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'Parmigiano'},{e:'🍷',n:'Vino bianco'},{e:'🥗',n:'Insalata'},{e:'🍞',n:'Ciabatta'}],
       veg:[{e:'🫙',n:'Yogurt'},{e:'🍞',n:'Pane'},{e:'🧄',n:'Aglio'},{e:'🥗',n:'Insalata'}],
       def:[{e:'🥗',n:'Insalata fresca'},{e:'🍷',n:'Vino'},{e:'🍞',n:'Pane'},{e:'🌿',n:'Erbe'}],
+      korean:[{e:'🥬',n:'Kimchi'},{e:'🥣',n:'Zuppa doenjang'},{e:'🥢',n:'Banchan'},{e:'🍵',n:'Tè d\'orzo'}],
+      japanese:[{e:'🍵',n:'Tè verde'},{e:'🥢',n:'Zuppa miso'},{e:'🥒',n:'Verdure in salamoia (tsukemono)'},{e:'🍶',n:'Sake o birra giapponese'}],
     }
   },
   ko:{ totalTime:'총 시간', activeTime:'조리 시간', servings:'인분', difficulty:'난이도', cost:'비용',
@@ -1549,6 +1575,8 @@ const RECIPE_UI = {
       pasta:[{e:'🧀',n:'파르메산'},{e:'🍷',n:'화이트 와인'},{e:'🥗',n:'샐러드'},{e:'🍞',n:'치아바타'}],
       veg:[{e:'🫙',n:'요거트'},{e:'🍞',n:'빵'},{e:'🧄',n:'마늘'},{e:'🥗',n:'샐러드'}],
       def:[{e:'🥗',n:'신선한 샐러드'},{e:'🍷',n:'와인'},{e:'🍞',n:'빵'},{e:'🌿',n:'허브'}],
+      korean:[{e:'🥬',n:'김치'},{e:'🥣',n:'된장찌개'},{e:'🥢',n:'반찬'},{e:'🍵',n:'보리차'}],
+      japanese:[{e:'🍵',n:'녹차'},{e:'🥢',n:'미소국'},{e:'🥒',n:'쓰케모노 (일본 절임)'},{e:'🍶',n:'사케 또는 일본 맥주'}],
     }
   },
 };
@@ -1684,7 +1712,7 @@ const RECIPE_STEPS_UI = {
 };
 
 /* ── Recipe metadata helpers ── */
-function recipeMetadata(ingr, steps, cat, code) {
+function recipeMetadata(ingr, steps, cat, code, overrides) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const sc = steps.length;
   const ic = ingr.length;
@@ -1693,7 +1721,7 @@ function recipeMetadata(ingr, steps, cat, code) {
   const totalMins = roundTo5(activeMins + (activeMins > 40 ? 30 : 20));
   const activeMinsR = roundTo5(activeMins);
   const fmt = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
-  const servings = ic < 5 ? 2 : ic < 9 ? 4 : 6;
+  const servings = (overrides && overrides.servings) ? overrides.servings : (ic < 5 ? 2 : ic < 9 ? 4 : 6);
   const diffIdx = sc <= 3 ? 0 : sc <= 5 ? 1 : 2;
   const ingrStr = ingr.join(' ').toLowerCase();
   const expensive = /beef|veal|lamb|salmon|shrimp|lobster|crab|truffle|saffron|chocolate|vițel|miel|somon|creveți|caracatiță/.test(ingrStr);
@@ -1747,9 +1775,12 @@ function recipeNutrition(ingr, cat) {
   return { cal, prot, carb, fat, fib };
 }
 
-function recipePairings(ingr, cat, code, n) {
+function recipePairings(ingr, cat, code, n, overrides) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const p = ui.pairs;
+  if (overrides && overrides.pairingsType && p[overrides.pairingsType]) {
+    return p[overrides.pairingsType].map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
+  }
   const ingrStr = ingr.join(' ').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
   const hasFish = /salmon|trout|cod|tuna|shrimp|pește|somon|ton|păstrăv|creveți/.test(ingrStr);
@@ -1769,15 +1800,16 @@ function padSteps(steps, code) {
   return result;
 }
 
-function recipeTip(ingr, cat, code, n) {
+function recipeTip(ingr, cat, code, n, overrides) {
   const ui = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
+  const t = ui.tips;
+  if (overrides && overrides.tipType && t[overrides.tipType]) return t[overrides.tipType];
   const ingrStr = ingr.join(' ').toLowerCase();
   const catStr  = (cat || '').toLowerCase();
   const hasFish   = /salmon|trout|cod|tuna|fish|pește|somon|ton|păstrăv|creveți|shrimp/.test(ingrStr);
   const hasMeat   = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
   const hasPasta  = /pasta|spaghetti|noodle|linguine|tagliatelle|tăiței/.test(ingrStr);
   const isDesert  = /dessert|desert|dolce|postre|tatlı|десерт/i.test(catStr);
-  const t = ui.tips;
   if (isSoup(cat, n, ingr)) return t.soup;
   if (hasFish)  return t.fish;
   if (hasMeat)  return t.meat;
@@ -1814,11 +1846,12 @@ function recipePage(recipe, rl) {
   const rslug  = slug(enName);
   const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
   const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
-  const meta    = recipeMetadata(ingr, steps, cat, code);
+  const overrides = { servings: recipe.servings, tipType: recipe.tipType, pairingsType: recipe.pairingsType };
+  const meta    = recipeMetadata(ingr, steps, cat, code, overrides);
   const nutri   = recipeNutrition(ingr, cat);
   const emoji   = recipeCardEmoji(cat);
   const stepsUi = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
-  const tip     = recipeTip(ingr, cat, code);
+  const tip     = recipeTip(ingr, cat, code, n, overrides);
   const isSoupRecipe = /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa|çorba/i.test(cat)
     || /ciorbă|borș|borscht|ramen|pho|solyanka|okroshka|harira|minestrone|bisque|potage|gazpacho|laksa|tom\s*yum|tom\s*kha/i.test(n)
     || /\bbulion\b|\bstock\b|\bbroth\b|\bbouillon\b/i.test(ingr.join(' '));
@@ -1925,7 +1958,7 @@ ${makeNav(lc)}
         <div class="nutrition-row">${ui.fib} <span>${nutri.fib} g</span></div>
       </div>
       <p class="recipe-pairings-h">${ui.pairingsH}</p>
-      <div class="pairings-grid">${recipePairings(ingr, cat, code)}</div>
+      <div class="pairings-grid">${recipePairings(ingr, cat, code, n, overrides)}</div>
     </div>
   </div>
 
