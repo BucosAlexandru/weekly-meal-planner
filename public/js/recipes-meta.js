@@ -175,7 +175,7 @@ export const recipesMeta = {
                 '향긋한 카레 소스에 토마토와 인도 향신료를 넣은 치킨.',
                 'सुगंधित करी सॉस में चिकन, टमाटर और भारतीय मसालों के साथ।') },
 
-  10: { time: 45, costRon: 18, tags: ['vegetarian','vegan','healthy','family'],
+  10: { time: 60, costRon: 18, tags: ['vegetarian','vegan','healthy','family'],
         desc: d('Tocăniță provensală de legume colorată cu ulei de măsline și ierburi aromate.',
                 'Provençal vegetable stew with olive oil and aromatic herbs.',
                 'Guiso provenzal de verduras coloridas con aceite de oliva y hierbas.',

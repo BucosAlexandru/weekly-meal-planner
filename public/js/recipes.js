@@ -876,7 +876,7 @@ export const recipes = [
       es: "Ratatouille es una receta tradicional de Francia.",
       fr: "Ratatouille est une recette traditionnelle de France.",
       de: "Ratatouille ist ein traditionelles Rezept aus Frankreich.",
-      pt: "Ratatouille é uma receita tradicional de França.",
+      pt: "Ratatouille é uma receita tradicional da França.",
       ru: "Рататуй — традиционный рецепт из Франции.",
       ar: "راتاتوي وصفة تقليدية من فرنسا.",
       zh: "普罗旺斯杂烩是来自法国的传统食谱。",
