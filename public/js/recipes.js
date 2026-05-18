@@ -1387,6 +1387,9 @@ export const recipes = [
   },
   {
     id: 16,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Thailanda",
       en: "Thailand",
@@ -1415,7 +1418,7 @@ export const recipes = [
       ja: "パッタイ",
       tr: "Pad Thai",
       it: "Pad Thai",
-      ko: "Pad Thai"
+      ko: "팟타이"
     },
     category: {
       ro: "Cină",
@@ -1468,14 +1471,14 @@ export const recipes = [
       es: "Pad Thai es una receta tradicional de Tailandia.",
       fr: "Pad Thaï est une recette traditionnelle de Thaïlande.",
       de: "Pad Thai ist ein traditionelles Rezept aus Thailand.",
-      pt: "Pad Thai é uma receita tradicional de Tailândia.",
-      ru: "Пад Тай — традиционный рецепт из Таиланд.",
+      pt: "Pad Thai é uma receita tradicional da Tailândia.",
+      ru: "Пад Тай — традиционный рецепт из Таиланда.",
       ar: "باد تاي هي وصفة تقليدية من تايلاند.",
       zh: "泰式炒河粉 是来自泰国的传统食谱。",
       ja: "パッタイ はタイの伝統的なレシピです。",
       tr: "Pad Thai Tayland kökenli geleneksel bir tariftir.",
-      it: "Pad Thai è una risotta tradizionale di Thailandia.",
-      ko: "Pad Thai는(은) 태국의 전통 요리입니다."
+      it: "Pad Thai è una ricetta tradizionale della Thailandia.",
+      ko: "팟타이는 태국의 전통 요리입니다."
     }
   },
   {

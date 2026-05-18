@@ -271,7 +271,7 @@ export const recipesMeta = {
                 '버터와 메이플 시럽을 곁들인 폭신폭신한 아메리칸 팬케이크.',
                 'मक्खन और मेपल सिरप के साथ फ्लफी अमेरिकन पैनकेक।') },
 
-  16: { time: 25, costRon: 22, tags: ['quick','high-protein'],
+  16: { time: 40, costRon: 22, tags: ['high-protein'],
         desc: d('Tăiței de orez cu creveți, ouă și sos de arahide — clasic tailandez.',
                 'Rice noodles with shrimp, eggs and peanut sauce — a Thai street-food classic.',
                 'Fideos de arroz con gambas, huevos y salsa de cacahuete — clásico tailandés.',
