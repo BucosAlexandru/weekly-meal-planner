@@ -4566,6 +4566,9 @@ export const recipes = [
   },
   {
     id: 49,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Jamaica",
       en: "Jamaica",
@@ -4577,9 +4580,9 @@ export const recipes = [
       ar: "جامايكا",
       zh: "牙买加",
       ja: "ジャマイカ",
-      tr: "Jamaica",
-      it: "Jamaica",
-      ko: "Jamaica"
+      tr: "Jamaika",
+      it: "Giamaica",
+      ko: "자메이카"
     },
     name: {
       ro: "Jerk Chicken",
@@ -4593,8 +4596,8 @@ export const recipes = [
       zh: "牙买加辣鸡",
       ja: "ジャークチキン",
       tr: "Jerk Tavuk",
-      it: "Jerk Pollo",
-      ko: "Jerk 닭"
+      it: "Pollo Jerk",
+      ko: "저크 치킨"
     },
     category: {
       ro: "Cină",
@@ -4645,16 +4648,16 @@ export const recipes = [
       ro: "Jerk Chicken este o rețetă tradițională din Jamaica.",
       en: "Jerk Chicken is a traditional recipe from Jamaica.",
       es: "Pollo jerk es una receta tradicional de Jamaica.",
-      fr: "Poulet jerk est une recette traditionnelle de Jamaïque.",
+      fr: "Poulet jerk est une recette traditionnelle de la Jamaïque.",
       de: "Jerk Chicken ist ein traditionelles Rezept aus Jamaika.",
-      pt: "Frango jerk é uma receita tradicional de Jamaica.",
-      ru: "Джерк-чикен — традиционный рецепт из Ямайка.",
+      pt: "Frango jerk é uma receita tradicional da Jamaica.",
+      ru: "Джерк-чикен — традиционный рецепт из Ямайки.",
       ar: "دجاج جيرك هي وصفة تقليدية من جامايكا.",
       zh: "牙买加辣鸡 是来自牙买加的传统食谱。",
       ja: "ジャークチキン はジャマイカの伝統的なレシピです。",
-      tr: "tavuk Jamaica kökenli geleneksel bir tariftir.",
-      it: "jerk pollo è una risotta tradizionale di Jamaica.",
-      ko: "저크 닭고기는(은) Jamaica의 전통 요리입니다."
+      tr: "Jerk tavuk Jamaika kökenli geleneksel bir tariftir.",
+      it: "Pollo jerk è una ricetta tradizionale della Giamaica.",
+      ko: "저크 치킨은 자메이카의 전통 요리입니다."
     }
   },
   {
