@@ -10,6 +10,8 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | ID | Recipe | Audit | Impl | Commit | Notes |
 |---|---|---|---|---|---|
 | 1 | Spaghetti Carbonara | ✅ | ✅ | `2c4e9fc6` | 10 fixes: 3 struct fields, 2 name locales, 3 originText grammar, time 20→30, desc 14 langs |
+| 2 | Tripe Soup / Ciorbă de burtă | ✅ | ✅ | `4b239d93` | 6 fixes: 3 name locales (tr/it/ko), 3 originText grammar (ru/tr/it) |
+| 3 | Quiche Lorraine | ✅ | ✅ | `12dbcf41` | 3 fixes: howIsMade.ru critical typo (рюмками→сливками), time 45→75, desc 14 langs (ham→lardons) |
 | — | Tacos | ⬜ | — | — | Pending |
 | — | Pad Thai | ⬜ | — | — | Pending |
 | — | Bibimbap | ⬜ | — | — | Pending |
@@ -63,6 +65,46 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 - `howIsMade` (all 14 languages) — technically correct, no changes needed
 - `name.en` / slug — untouched
 - `category`, `origin`, `costRon`, `tags` — untouched
+
+---
+
+## ID 2 — Tripe Soup / Ciorbă de burtă — Change Log
+
+**Commit:** `4b239d93` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `name.tr` | `"Tripe Çorbası"` | `"İşkembe Çorbası"` |
+| `name.it` | `"Tripe Zuppa"` | `"Zuppa di Trippa"` |
+| `name.ko` | `"Tripe 수프"` | `"내장 수프"` |
+| `originText.ru` | `"из Румыния"` | `"из Румынии"` |
+| `originText.tr` | `"işkembe çorba …"` | `"İşkembe çorbası …"` |
+| `originText.it` | `"trippa zuppa … risotta … di Romania"` | `"Zuppa di trippa … ricetta … della Romania"` |
+
+### `recipes-meta.js` — No changes (time:90 and desc accurate)
+
+### Validation: ✅ build clean · ✅ RO/EN pages · ✅ TR (İşkembe Çorbası) · ✅ IT (Zuppa di Trippa) · ✅ KO (내장 수프) · ✅ RU (из Румынии)
+
+---
+
+## ID 3 — Quiche Lorraine — Change Log
+
+**Commit:** `12dbcf41` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `howIsMade.ru` | `"яйца с рюмками"` (shot glasses) | `"яйца со сливками"` (cream) |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `45` | `75` |
+| `desc` (all 14 langs) | "ham/jambon/Schinken/presunto/ветчина/火腿/etc." | "smoked lardons / lardon afumat / etc." |
+| `desc.ar` | "بالجبنة" (cheese — wrong) | "باللحم المدخن" (smoked meat) |
+
+### Validation: ✅ build clean · ✅ RO (lardon afumat) · ✅ EN (smoked lardons) · ✅ RU (со сливками confirmed, рюмками gone)
 
 ---
 
