@@ -13,7 +13,11 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 2 | Tripe Soup / Ciorbă de burtă | ✅ | ✅ | `4b239d93` | 6 fixes: 3 name locales (tr/it/ko), 3 originText grammar (ru/tr/it) |
 | 3 | Quiche Lorraine | ✅ | ✅ | `12dbcf41` | 3 fixes: howIsMade.ru critical typo (рюмками→сливками), time 45→75, desc 14 langs (ham→lardons) |
 | 4 | Gazpacho | ✅ | ✅ | `4e889857` | 7 fixes: name.ko, 4 originText grammar (fr/ru/it/ko), time 15→135, remove 'quick' tag |
-| — | Tacos | ⬜ | — | — | Pending |
+| 5 | Sushi | ✅ | ✅ | `48205675` | 5 fixes: name.ko, 4 originText grammar (fr/ru/it/ko) |
+| 7 | Cheeseburger | ✅ | — | — | Already Tier A — no changes needed |
+| 8 | Tacos | ✅ | — | — | Already Tier A — no changes needed |
+| 9 | Chicken Curry | ✅ | ✅ | `9fa6ebc2` | 10 fixes: 3 struct fields, 6 originText grammar (fr/pt/ru/tr/it/ko), time 35→60 |
+| — | (id 6 absent) | — | — | — | No recipe with id 6 in file |
 | — | Pad Thai | ⬜ | — | — | Pending |
 | — | Bibimbap | ⬜ | — | — | Pending |
 | — | Butter Chicken | ⬜ | — | — | Not found in recipes.js under this name — needs ID lookup |
@@ -135,6 +139,86 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 - `servings`, `tipType`, `pairingsType` — already present and correct
 
 ### Validation: ✅ build clean · ✅ FR (d'Espagne) · ✅ RU (из Испании tagline) · ✅ IT (ricetta tradizionale della Spagna) · ✅ KO (가스파초) · KO cascade pages updated
+
+---
+
+## ID 4 — Gazpacho — Change Log
+
+**Commit:** `4e889857` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `name.ko` | `"Gazpacho"` | `"가스파초"` |
+| `originText.fr` | `"…de Espagne."` | `"…d'Espagne."` |
+| `originText.ru` | `"…из Испания."` | `"…из Испании."` |
+| `originText.it` | `"…una risotta tradizionale di Spagna."` | `"…una ricetta tradizionale della Spagna."` |
+| `originText.ko` | `"Gazpacho는(은) 스페인의 전통 요리입니다."` | `"가스파초는 스페인의 전통 요리입니다."` |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `15` | `135` |
+| `tags` | `['quick','vegetarian','vegan','healthy']` | `['vegetarian','vegan','healthy']` |
+
+### Validation: ✅ build clean · ✅ FR (d'Espagne) · ✅ RU (из Испании tagline) · ✅ IT (ricetta tradizionale della Spagna) · ✅ KO (가스파초) · KO cascade pages updated
+
+---
+
+## ID 5 — Sushi — Change Log
+
+**Commit:** `48205675` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `name.ko` | `"Sushi"` | `"스시"` |
+| `originText.fr` | `"…de Japon."` | `"…du Japon."` (masculine contraction) |
+| `originText.ru` | `"…из Япония."` | `"…из Японии."` (genitive) |
+| `originText.it` | `"…una risotta tradizionale di Giappone."` | `"…una ricetta tradizionale del Giappone."` |
+| `originText.ko` | `"Sushi는(은) 일본의 전통 요리입니다."` | `"스시는 일본의 전통 요리입니다."` |
+
+### `recipes-meta.js` — No changes (time:45 and desc accurate)
+
+### Validation: ✅ build clean · ✅ FR (du Japon) · ✅ RU (из Японии) · ✅ IT (ricetta tradizionale del Giappone) · ✅ KO (스시) · KO cascade pages updated
+
+---
+
+## ID 7 — Cheeseburger — No changes
+
+Already meets Tier A standard. All originText grammatically correct, all name locales in native script, time 20 min realistic for smash burgers, desc accurate.
+
+---
+
+## ID 8 — Tacos — No changes
+
+Already meets Tier A standard. All originText grammatically correct (RU already "из Мексики", KO already "타코는"), desc accurate, time 25 min realistic.
+
+---
+
+## ID 9 — Chicken Curry — Change Log
+
+**Commit:** `9fa6ebc2` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `servings` | missing | `4` |
+| `tipType` | missing | `'meat'` |
+| `pairingsType` | missing | `'meat'` |
+| `originText.fr` | `"…de Inde."` | `"…d'Inde."` (elision, India feminine in French) |
+| `originText.pt` | `"…de Índia."` | `"…da Índia."` (feminine article contraction) |
+| `originText.ru` | `"…из Индия."` | `"…из Индии."` (genitive) |
+| `originText.tr` | `"tavuk köri …"` | `"Tavuk köri …"` (capitalize sentence start) |
+| `originText.it` | `"pollo curry è una risotta tradizionale di India."` | `"Pollo curry è una ricetta tradizionale dell'India."` |
+| `originText.ko` | `"닭고기 카레는(은) …"` | `"닭 카레는 …"` (consistent with name.ko) |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `35` | `60` |
+
+### Validation: ✅ build clean · ✅ all 14 locale pages updated (servings/tipType/pairingsType cascade) · ✅ FR (d'Inde) · ✅ RU (из Индии) · ✅ IT (ricetta tradizionale dell'India) · ✅ KO (닭 카레는)
 
 ---
 
