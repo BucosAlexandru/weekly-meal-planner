@@ -25,6 +25,15 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 14 | Borscht | ✅ | ✅ | `4e1d6dd2` | 9 fixes: 3 struct fields (soup), name.ko, 5 originText grammar (pt/ru/tr/it/ko) |
 | 15 | Pancakes | ✅ | — | — | Already Tier A — no changes needed |
 | 16 | Pad Thai | ✅ | ✅ | `7ce0f6df` | 8 fixes: 3 struct fields (fish), name.ko, 4 originText grammar (pt/ru/it/ko), time 25→40, remove 'quick' tag |
+| 17 | Schnitzel | ✅ | — | — | Already Tier A — no changes needed |
+| 18 | Feijoada | ✅ | ✅ | `816e7821` | 1 fix: time 90→120 (1h bean simmer + 45-60min second simmer) |
+| 19 | Kung Pao Chicken | ✅ | ✅ | `d4db6206` | 8 fixes: 3 struct fields, name.ko, 5 originText grammar (pt/ru/tr/it/ko) |
+| 20 | Fish and Chips | ✅ | ✅ | `0410a40a` | 12 fixes: 3 struct fields (fish), 3 name locales (tr/it/ko), 6 originText grammar (fr/pt/ru/tr/it/ko) |
+| 21 | Pho | ✅ | ✅ | `b53e7aeb` | 6 fixes: name.ko, 5 originText grammar (fr/pt/ru/it/ko) |
+| 22 | Paella | ✅ | ✅ | `21387273` | 6 fixes: name.ko, 5 originText grammar (fr/pt/ru/it/ko) |
+| 23 | Bibimbap | ✅ | ✅ | `05a76d62` | 5 fixes: name.ko, 4 originText grammar (pt/ru/it/ko) |
+| 24 | Hummus | ✅ | ✅ | `4e1c7976` | 1 fix: add servings:4 |
+| 25 | Tabbouleh | ✅ | ✅ | `4e1c7976` | 1 fix: add servings:4 |
 
 ---
 
