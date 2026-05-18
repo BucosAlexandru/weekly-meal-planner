@@ -34,6 +34,22 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 23 | Bibimbap | ✅ | ✅ | `05a76d62` | 5 fixes: name.ko, 4 originText grammar (pt/ru/it/ko) |
 | 24 | Hummus | ✅ | ✅ | `4e1c7976` | 1 fix: add servings:4 |
 | 25 | Tabbouleh | ✅ | ✅ | `4e1c7976` | 1 fix: add servings:4 |
+| 26 | Risotto | ✅ | — | — | Already Tier A — no changes needed |
+| 27 | Swedish Meatballs | ✅ | — | — | Already Tier A — no changes needed |
+| 28 | Ramen | ✅ | — | — | Already Tier A — no changes needed |
+| 29 | Empanadas | ✅ | — | — | Already Tier A — no changes needed |
+| 30 | Tzatziki | ✅ | ✅ | pending | 1 fix: add servings:4 |
+| 31 | French Onion Soup | ✅ | ✅ | pending | 1 fix: originText.pt "de França"→"da França" |
+| 32 | Goulash | ✅ | — | — | Already Tier A — no changes needed |
+| 33 | Koshari | ✅ | ✅ | pending | 1 fix: add servings:4 |
+| — | (id 34 absent) | — | — | — | No recipe with id 34 in file |
+| 35 | Baklava | ✅ | ✅ | pending | 1 fix: add servings:8 |
+| 36 | Chili con Carne | ✅ | — | — | Already Tier A — no changes needed |
+| 37 | Sweet and Sour Chicken | ✅ | ✅ | pending | 6 fixes: name.de/tr (missing umlauts/Turkish chars), originText.de/tr/pt/it |
+| 38 | Pavlova | ✅ | ✅ | pending | 6 fixes: add servings:8, originText.fr/de/pt/tr/it (stripped diacritics) |
+| 39 | Poutine | ✅ | ✅ | pending | 6 fixes: add servings:4, originText.fr/de/pt/tr/it (stripped diacritics) |
+| 40 | Pierogi | ✅ | ✅ | pending | 4 fixes: add servings:4, originText.fr/pt/tr (stripped diacritics) |
+| 41 | Nasi Goreng | ✅ | ✅ | pending | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe (no ingredient quantities, missing hi lang) |
 
 ---
 

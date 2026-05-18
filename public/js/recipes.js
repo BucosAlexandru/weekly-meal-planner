@@ -2778,6 +2778,7 @@ export const recipes = [
   },
   {
     id: 30,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'veg',
     origin: {
@@ -2968,7 +2969,7 @@ export const recipes = [
       es: "La sopa de cebolla francesa es una receta tradicional de Francia.",
       fr: "La soupe à l'oignon est une recette traditionnelle de France.",
       de: "Die französische Zwiebelsuppe ist ein traditionelles Rezept aus Frankreich.",
-      pt: "A sopa de cebola francesa é uma receita tradicional de França.",
+      pt: "A sopa de cebola francesa é uma receita tradicional da França.",
       ru: "Французский луковый суп — традиционный рецепт из Франции.",
       ar: "حساء البصل الفرنسي هي وصفة تقليدية من فرنسا.",
       zh: "法式洋葱汤是来自法国的传统食谱。",
@@ -3083,6 +3084,7 @@ export const recipes = [
   },
   {
     id: 33,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'veg',
     origin: {
@@ -3184,6 +3186,7 @@ export const recipes = [
   },
   {
     id: 35,
+    servings: 8,
     tipType: 'dessert',
     pairingsType: 'def',
     origin: {
@@ -3411,14 +3414,14 @@ export const recipes = [
       en: "Sweet and Sour Chicken",
       es: "Pollo agridulce",
       fr: "Poulet aigre-doux",
-      de: "Suesssaures Hahnchen",
+      de: "Süßsaures Hähnchen",
       pt: "Frango agridoce",
       ru: "Курица в кисло-сладком соусе",
       ar: "دجاج حلو وحامض",
       zh: "糖醋鸡",
       ja: "甘酢鶏肉",
       hi: "मीठी खट्टी चिकन",
-      tr: "Tatli Eksi Tavuk",
+      tr: "Tatlı Ekşi Tavuk",
       it: "Pollo agrodolce",
       ko: "탕수육 스타일 닭고기"
     },
@@ -3475,20 +3478,21 @@ export const recipes = [
       en: "Sweet and Sour Chicken is a traditional recipe from China.",
       es: "El pollo agridulce es una receta tradicional de China.",
       fr: "Le poulet aigre-doux est une recette traditionnelle de Chine.",
-      de: "Suesssaures Haehnchen ist ein traditionelles Rezept aus China.",
-      pt: "O frango agridoce e uma receita tradicional da China.",
+      de: "Süßsaures Hähnchen ist ein traditionelles Rezept aus China.",
+      pt: "O frango agridoce é uma receita tradicional da China.",
       ru: "Курица в кисло-сладком соусе — традиционный рецепт из Китая.",
       ar: "دجاج حلو وحامض وصفة تقليدية من الصين.",
       zh: "糖醋鸡是来自中国的传统食谱。",
       ja: "甘酢鶏肉は中国の伝統的なレシピです。",
       hi: "मीठी खट्टी चिकन चीन की एक पारंपरिक रेसिपी है।",
-      tr: "Tatli eksi tavuk, Cin'in geleneksel bir tarifidir.",
-      it: "Il pollo agrodolce e una ricetta tradizionale della Cina.",
+      tr: "Tatlı ekşi tavuk, Çin'in geleneksel bir tarifidir.",
+      it: "Il pollo agrodolce è una ricetta tradizionale della Cina.",
       ko: "탕수육 스타일 닭고기는 중국의 전통 요리입니다."
     }
   },
   {
     id: 38,
+    servings: 8,
     tipType: 'dessert',
     pairingsType: 'def',
     origin: {
@@ -3575,21 +3579,22 @@ export const recipes = [
       ro: "Pavlova este un desert iconic australian (si neozeelandez), creat in onoarea balerinei ruse Anna Pavlova in anii 1920. Bezea crocanta la exterior si moale ca bezele la interior, acoperita cu frisca si fructe tropicale.",
       en: "Pavlova is an iconic Australian (and New Zealand) dessert created in honour of Russian ballerina Anna Pavlova in the 1920s. Its defining feature is the contrast between the crisp meringue shell and the soft, marshmallow-like interior.",
       es: "Pavlova es un postre iconico de Australia y Nueva Zelanda, creado en honor a la bailarina rusa Anna Pavlova en los anos 1920. Su rasgo distintivo es el contraste entre la corteza crujiente y el interior blando como malvavisco.",
-      fr: "La Pavlova est un dessert emblematique d'Australie et de Nouvelle-Zelande, cree en l'honneur de la ballerine russe Anna Pavlova dans les annees 1920. Sa caracteristique est le contraste entre la coque croustillante et l'interieur moelleux comme une guimauve.",
-      de: "Pavlova ist ein ikonisches australisches (und neuseelandisches) Dessert, das in den 1920er Jahren zu Ehren der russischen Ballerina Anna Pawlowa kreiert wurde. Sein Markenzeichen ist der Kontrast zwischen der knusprigen Baiserhuelle und dem weichen, marshmallowartigen Inneren.",
-      pt: "Pavlova e uma sobremesa iconica da Australia e da Nova Zelandia, criada em homenagem a bailarina russa Anna Pavlova nos anos 1920. Sua caracteristica distintiva e o contraste entre a casca crocante e o interior macio como marshmallow.",
+      fr: "La Pavlova est un dessert emblématique d'Australie et de Nouvelle-Zélande, créé en l'honneur de la ballerine russe Anna Pavlova dans les années 1920. Sa caractéristique est le contraste entre la coque croustillante et l'intérieur moelleux comme une guimauve.",
+      de: "Pavlova ist ein ikonisches australisches (und neuseeländisches) Dessert, das in den 1920er Jahren zu Ehren der russischen Ballerina Anna Pawlowa kreiert wurde. Sein Markenzeichen ist der Kontrast zwischen der knusprigen Baiserhülle und dem weichen, marshmallowartigen Inneren.",
+      pt: "Pavlova é uma sobremesa icônica da Austrália e da Nova Zelândia, criada em homenagem à bailarina russa Anna Pavlova nos anos 1920. Sua característica distintiva é o contraste entre a casca crocante e o interior macio como marshmallow.",
       ru: "Павлова — культовый австралийский (и новозеландский) десерт, созданный в 1920-х годах в честь русской балерины Анны Павловой. Его отличительная черта — контраст хрустящей внешней оболочки и мягкой, похожей на зефир сердцевины.",
       ar: "البافلوفا حلوى استرالية (ونيوزيلندية) شهيرة، ابتكرت في عشرينيات القرن الماضي تكريما لراقصة الباليه الروسية آنا بافلوفا. ميزتها الفارقة هي التباين بين القشرة المقرمشة والداخل الناعم كالمارشميلو.",
       zh: "帕夫洛娃是澳大利亚（及新西兰）的标志性甜点，创作于1920年代，以俄罗斯芭蕾舞演员安娜·帕夫洛娃命名。其特点是外皮酥脆与内里如棉花糖般柔软的对比。",
       ja: "パブロバは1920年代にロシアのバレリーナ、アンナ・パブロワを称えて生まれたオーストラリア（およびニュージーランド）を代表するデザートです。パリパリのメレンゲの外殻とマシュマロのように柔らかい内部のコントラストが特徴です。",
       hi: "पावलोवा एक प्रतिष्ठित ऑस्ट्रेलियाई (और न्यूजीलैंड) मिठाई है, जो 1920 के दशक में रूसी बैलेरिना अन्ना पावलोवा के सम्मान में बनाई गई थी। इसकी पहचान कुरकुरी मेरिंग्यू की परत और अंदर की मुलायम, मार्शमैलो जैसी बनावट के बीच का विपरीत है।",
-      tr: "Pavlova, 1920'lerde Rus balerin Anna Pavlova'nin onuruna yaratilmis simgesel bir Avustralya (ve Yeni Zelanda) tatlisidir. Belirleyici ozelligi, cirpik baiser kabugu ile icinin marshmallow gibi yumusak olmasi arasindaki zittir.",
-      it: "La Pavlova e un dessert iconico australiano (e neozelandese), creato negli anni '20 in onore della ballerina russa Anna Pavlova. La sua caratteristica distintiva e il contrasto tra il guscio di meringa croccante e l'interno morbido come un marshmallow.",
+      tr: "Pavlova, 1920'lerde Rus balerin Anna Pavlova'nın onuruna yaratılmış simgesel bir Avustralya (ve Yeni Zelanda) tatlısıdır. Belirleyici özelliği, çırpık baiser kabuğu ile içinin marshmallow gibi yumuşak olması arasındaki zıttır.",
+      it: "La Pavlova è un dessert iconico australiano (e neozelandese), creato negli anni '20 in onore della ballerina russa Anna Pavlova. La sua caratteristica distintiva è il contrasto tra il guscio di meringa croccante e l'interno morbido come un marshmallow.",
       ko: "파블로바는 1920년대 러시아 발레리나 안나 파블로바를 기리기 위해 만들어진 호주(및 뉴질랜드)의 대표적인 디저트입니다. 바삭한 머랭 외피와 마시멜로처럼 부드러운 내부의 대비가 특징입니다."
     }
   },
   {
     id: 39,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'def',
     origin: {
@@ -3676,21 +3681,22 @@ export const recipes = [
       ro: "Poutine s-a nascut in Quebec, Canada, la sfarsitul anilor 1950. Clasica combinatie de cartofi prajiti, cas proaspat care scartaie la muscat si sos brun fierbinte este simbolul gastronomiei canadiene.",
       en: "Poutine was born in Quebec, Canada, in the late 1950s. The classic combination of crispy fries, squeaky fresh cheese curds, and hot brown gravy has become a symbol of Canadian cuisine and late-night comfort food.",
       es: "La Poutine nacio en Quebec, Canada, a finales de los anos 1950. La combinacion clasica de papas crocantes, cuajada de queso fresco que rechina y salsa bruna caliente se ha convertido en simbolo de la gastronomia canadiense.",
-      fr: "La Poutine est nee au Quebec, Canada, a la fin des annees 1950. La combinaison classique de frites croustillantes, de grains de fromage frais qui couinent et de sauce brune chaude est devenue un symbole de la cuisine canadienne.",
-      de: "Poutine entstand in Quebec, Kanada, in den spaeten 1950er Jahren. Die klassische Kombination aus knusprigen Pommes, quietschenden frischen Kasequark-Broeckchen und heisser Bratensauce ist zum Symbol der kanadischen Kueche geworden.",
-      pt: "A Poutine nasceu em Quebec, Canada, no final dos anos 1950. A combinacao classica de batatas fritas crocantes, queijo fresco que range ao morder e molho escuro quente tornou-se um simbolo da gastronomia canadense.",
+      fr: "La Poutine est née au Québec, Canada, à la fin des années 1950. La combinaison classique de frites croustillantes, de grains de fromage frais qui couinent et de sauce brune chaude est devenue un symbole de la cuisine canadienne.",
+      de: "Poutine entstand in Québec, Kanada, in den späten 1950er Jahren. Die klassische Kombination aus knusprigen Pommes, quietschenden frischen Käsequark-Brockchen und heißer Bratensauce ist zum Symbol der kanadischen Küche geworden.",
+      pt: "A Poutine nasceu em Québec, Canadá, no final dos anos 1950. A combinação clássica de batatas fritas crocantes, queijo fresco que range ao morder e molho escuro quente tornou-se um símbolo da gastronomia canadense.",
       ru: "Путин (Poutine) появился в Квебеке, Канада, в конце 1950-х годов. Классическое сочетание хрустящего картофеля фри, свежего скрипящего сырного творога и горячего коричневого соуса стало символом канадской кухни.",
       ar: "ولدت البوتين في كيبيك، كندا، في اواخر الخمسينيات. مزيج البطاطا المقرمشة والجبن الطازج المتميز بصوت الطقطقة عند عضه والصلصة البنية الساخنة اصبح رمزا للمطبخ الكندي.",
       zh: "普蒂纳诞生于加拿大魁北克省，时间是1950年代末。酥脆薯条、咬起来嘎吱作响的新鲜奶酪凝块与热腾腾的褐色肉汁的经典组合，已成为加拿大美食的象征。",
       ja: "プーティンは1950年代後半にカナダのケベック州で生まれました。カリカリのフライドポテト、かみ締めるとキュッと鳴るフレッシュチーズカード、熱々のグレイビーソースの組み合わせはカナダ料理の象徴です。",
       hi: "पुटीन का जन्म 1950 के दशक के अंत में कनाडा के क्यूबेक में हुआ था। कुरकुरे आलू, काटने पर चरचराने वाले ताजे पनीर के टुकड़े और गर्म भूरी ग्रेवी का यह क्लासिक संयोजन कनाडाई व्यंजन का प्रतीक बन गया है।",
-      tr: "Poutine, 1950'lerin sonunda Kanada'nin Quebec eyaletinde dogdu. Cirtir patates, isirildigi zaman gicirdayan taze peynir ve sicak kahverengi sogun klasik kombinasyonu Kanada mutfaginin simgesi haline geldi.",
-      it: "La Poutine e nata nel Quebec, Canada, alla fine degli anni '50. La classica combinazione di patatine croccanti, fiocchi di formaggio fresco che scricchiolano e salsa bruna calda e diventata simbolo della cucina canadese.",
+      tr: "Poutine, 1950'lerin sonunda Kanada'nın Québec eyaletinde doğdu. Çıtır patates, ısırıldığında gıcırdayan taze peynir ve sıcak kahverengi sosun klasik kombinasyonu Kanada mutfağının simgesi haline geldi.",
+      it: "La Poutine è nata nel Québec, Canada, alla fine degli anni '50. La classica combinazione di patatine croccanti, fiocchi di formaggio fresco che scricchiolano e salsa bruna calda è diventata simbolo della cucina canadese.",
       ko: "푸틴은 1950년대 말 캐나다 퀘벡에서 탄생했습니다. 바삭한 감자튀김, 씹으면 삐걱거리는 신선한 치즈 커드, 뜨거운 갈색 그레이비의 조합은 캐나다 요리의 상징이 되었습니다."
     }
   },
   {
     id: 40,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'def',
     origin: {
@@ -3777,21 +3783,24 @@ export const recipes = [
       ro: "Pierogii sunt galusca poloneza emblematica — aluat subtire umplut cu piure de cartofi si branza de vaci, fiert si caliti in unt cu ceapa crocanta. Se servesc la orice masa, de la pranz zilnic la sarbatori.",
       en: "Pierogi are Poland's beloved dumplings — thin dough filled with potato and farmer's cheese, boiled then pan-fried in butter with crispy onions. They appear at every table, from everyday lunches to holiday feasts.",
       es: "Los pierogi son las queridas empanadillas polacas — masa fina rellena de patata y queso fresco, hervidas y luego salteadas en mantequilla con cebolla crujiente. Presentes en cada mesa polaca, desde almuerzos cotidianos hasta fiestas.",
-      fr: "Les pierogi sont les raviolis emblematiques de Pologne — fine pate farcie aux pommes de terre et fromage blanc, bouillis puis poeles au beurre avec des oignons croustillants. Ils sont presents a chaque repas, des dejeuners ordinaires aux fetes.",
+      fr: "Les pierogi sont les raviolis emblématiques de Pologne — fine pâte farcie aux pommes de terre et fromage blanc, bouillis puis poêlés au beurre avec des oignons croustillants. Ils sont présents à chaque repas, des déjeuners ordinaires aux fêtes.",
       de: "Pierogi sind Polens geliebte Teigtaschen — dünner Teig gefüllt mit Kartoffeln und Quark, gekocht und dann in Butter mit knusprigen Zwiebeln angebraten. Sie stehen bei jedem polnischen Tisch, von gewöhnlichen Mittagessen bis zu Festmahlen.",
-      pt: "Os pierogi sao os queridos pasteis poloneses — massa fina recheada de batata e queijo fresco, cozidos e depois salteados na manteiga com cebola crocante. Presentes em toda mesa polonesa, do almoco diario as festas.",
+      pt: "Os pierogi são os queridos pastéis poloneses — massa fina recheada de batata e queijo fresco, cozidos e depois salteados na manteiga com cebola crocante. Presentes em toda mesa polonesa, do almoço diário às festas.",
       ru: "Пироги — любимые польские вареники с тонким тестом, начинёнными картофелем и творогом, отваренными и обжаренными в масле с хрустящим луком. Они есть на каждом столе — от повседневного обеда до праздничного застолья.",
       ar: "البيروجي هي الزلابية البولندية المحبوبة — عجينة رفيعة محشوة بالبطاطا والجبن الطازج، مسلوقة ثم مقلية في الزبدة مع البصل المقرمش. تحضر على كل مائدة بولندية من الغداء اليومي حتى المناسبات.",
       zh: "皮埃罗基是波兰深受喜爱的饺子——薄薄的面皮包着土豆和农场奶酪馅，水煮后再用黄油和脆洋葱煎香。无论日常午餐还是节日盛宴，每张波兰餐桌上都少不了它。",
       ja: "ピエロギはポーランドが誇る愛されるダンプリングです。薄い生地にじゃがいもとチーズの具を包み、茹でた後にバターとカリカリの玉ねぎと共に焼きます。日常の昼食から祝宴まで、どのテーブルにも登場します。",
       hi: "पिएरोगी पोलैंड की प्रिय पकौड़ी है — पतले आटे में आलू और पनीर की भरावन, उबालने के बाद मक्खन में कुरकुरी प्याज के साथ तला जाता है। रोज़ाना के दोपहर के खाने से लेकर उत्सव की दावतों तक, हर पोलिश मेज़ पर मिलती है।",
-      tr: "Pierogi, Polonya'nin sevilen mantilaridir — ince hamur icine patates ve peynir doldurulur, haslaniyor, sonra tereyaginda kizarmis soganla tavada kirildiriyor. Her gun ogle yemegindan kutlama sofralarına kadar her sofrada yer alir.",
+      tr: "Pierogi, Polonya'nın sevilen mantılarıdır — ince hamur içine patates ve peynir doldurulur, haşlanır, sonra tereyağında kızarmış soğanla tavada kızartılır. Her gün öğle yemeğinden kutlama sofralarına kadar her sofrada yer alır.",
       it: "I pierogi sono i ravioli amati dalla Polonia — pasta sottile ripiena di patate e formaggio fresco, bollita e poi saltata nel burro con cipolle croccanti. Presenti su ogni tavola polacca, dai pranzi quotidiani alle feste.",
       ko: "피에로기는 폴란드가 사랑하는 만두입니다 — 얇은 반죽에 감자와 파머스 치즈를 넣어 삶은 뒤 버터와 바삭한 양파로 굽습니다. 일상 점심부터 명절 식탁까지 어디서나 등장합니다."
     }
   },
   {
     id: 41,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Indonezia",
       en: "Indonesia",
@@ -3820,7 +3829,7 @@ export const recipes = [
       ja: "ナシゴレン",
       tr: "Nasi Goreng",
       it: "Nasi Goreng",
-      ko: "Nasi Goreng"
+      ko: "나시고렝"
     },
     category: {
       ro: "Cină",
@@ -3871,16 +3880,16 @@ export const recipes = [
       ro: "Nasi Goreng este o rețetă tradițională din Indonezia.",
       en: "Nasi Goreng is a traditional recipe from Indonesia.",
       es: "Nasi Goreng es una receta tradicional de Indonesia.",
-      fr: "Nasi Goreng est une recette traditionnelle de Indonésie.",
+      fr: "Nasi Goreng est une recette traditionnelle d'Indonésie.",
       de: "Nasi Goreng ist ein traditionelles Rezept aus Indonesien.",
-      pt: "Nasi Goreng é uma receita tradicional de Indonésia.",
-      ru: "Наси Горенг — традиционный рецепт из Индонезия.",
+      pt: "Nasi Goreng é uma receita tradicional da Indonésia.",
+      ru: "Наси Горенг — традиционный рецепт из Индонезии.",
       ar: "ناسي جورينج هي وصفة تقليدية من إندونيسيا.",
       zh: "印尼炒饭 是来自印度尼西亚的传统食谱。",
       ja: "ナシゴレン はインドネシアの伝統的なレシピです。",
       tr: "Nasi Goreng Endonezya kökenli geleneksel bir tariftir.",
-      it: "Nasi Goreng è una risotta tradizionale di Indonesia.",
-      ko: "Nasi Goreng는(은) 인도네시아의 전통 요리입니다."
+      it: "Nasi Goreng è una ricetta tradizionale dell'Indonesia.",
+      ko: "나시고렝은 인도네시아의 전통 요리입니다."
     }
   },
   {
