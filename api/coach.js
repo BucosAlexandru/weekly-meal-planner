@@ -1,8 +1,18 @@
 // api/coach.js
 // SECURITY: Premium endpoint — requires { email, mode, lang, messages } in POST body.
-// Unauthenticated requests are rejected with 401 before touching OpenAI or Ollama.
+// Auth:         requirePremium validates active Supabase subscription before any AI call.
+// Rate limit:   10 requests / 60 min per email (soft, per-instance — see rateLimiter.js).
+// Input guard:  mode, messages validated for shape, length, and allowed values.
 import 'dotenv/config';
 import { requirePremium } from './_lib/requirePremium.js';
+import { checkRateLimit } from './_lib/rateLimiter.js';
+
+// Limits (keep in sync with SAAS_PLAN.md)
+const RATE_LIMIT_MAX    = 10;
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 60 minutes in ms
+const ALLOWED_MODES     = ['general', 'recipes', 'fitness'];
+const MAX_MESSAGES      = 20;
+const MAX_CONTENT_CHARS = 2000;
 
 // ---- Config din ENV ----
 const USE_AI_MOCK = process.env.USE_AI_MOCK === '1';
@@ -55,11 +65,39 @@ async function askOpenAI({ mode, lang, messages }) {
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  // Validate premium subscription before any AI call (prevents billing abuse)
+  // ── 1. Premium auth ───────────────────────────────────────────────────
   const email = await requirePremium(req, res);
   if (!email) return; // requirePremium already sent 401/403
 
+  // ── 2. Rate limiting (soft, per-instance) ─────────────────────────────
+  const { allowed, retryAfterSec } = checkRateLimit(email, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW);
+  if (!allowed) {
+    res.setHeader('Retry-After', String(retryAfterSec));
+    return res.status(429).json({
+      error: `Rate limit exceeded. Max ${RATE_LIMIT_MAX} requests per hour. Try again in ${retryAfterSec}s.`
+    });
+  }
+
+  // ── 3. Input validation ───────────────────────────────────────────────
   const { mode = 'general', lang = 'ro', messages = [] } = req.body || {};
+
+  if (!ALLOWED_MODES.includes(mode)) {
+    return res.status(400).json({ error: `Invalid mode. Allowed: ${ALLOWED_MODES.join(', ')}.` });
+  }
+  if (!Array.isArray(messages)) {
+    return res.status(400).json({ error: '`messages` must be an array.' });
+  }
+  if (messages.length > MAX_MESSAGES) {
+    return res.status(400).json({ error: `Too many messages. Max ${MAX_MESSAGES} per request.` });
+  }
+  for (const m of messages) {
+    if (!m || typeof m.role !== 'string' || typeof m.content !== 'string') {
+      return res.status(400).json({ error: 'Each message must have string `role` and `content` fields.' });
+    }
+    if (m.content.length > MAX_CONTENT_CHARS) {
+      return res.status(400).json({ error: `Message content too long. Max ${MAX_CONTENT_CHARS} characters.` });
+    }
+  }
 
   // --- MOCK pentru test UI fără costuri ---
   if (USE_AI_MOCK) {

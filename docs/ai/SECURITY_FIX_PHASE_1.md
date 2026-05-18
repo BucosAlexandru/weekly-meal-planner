@@ -7,7 +7,7 @@ _Owner: Claude Code (Lead Developer)_
 
 ## Scope
 
-Four targeted fixes with zero UI redesign, zero recipe changes, zero Supabase schema changes.
+Seven targeted fixes. Zero UI redesign, zero recipe changes, zero Supabase schema changes.
 
 ---
 
@@ -15,90 +15,163 @@ Four targeted fixes with zero UI redesign, zero recipe changes, zero Supabase sc
 
 | File | Change | Risk |
 |------|--------|------|
-| `api/generate-token.js` | Add `X-Admin-Secret` header guard; convert to ESM; use `crypto.randomUUID()` | Low — endpoint was already broken/unused by frontend |
-| `api/check-access.js` | Replace `.single()` with array query; add `found` field to response | Low — behavioural improvement, no schema change |
-| `api/_lib/requirePremium.js` | New shared helper — validates active premium subscription | Zero risk — new file |
-| `api/chat.js` | Add `requirePremium` guard; add `max_tokens: 500` | Medium — breaks unauthenticated callers (bots) |
-| `api/coach.js` | Add `requirePremium` guard at handler entry | Medium — breaks unauthenticated callers (bots) |
-| `public/js/app.js` | Replace direct Supabase client query with `fetch('/api/check-access')` | Low — same data, different transport |
+| `api/generate-token.js` | Add `X-Admin-Secret` header guard; convert to ESM; use `crypto.randomUUID()` | Low |
+| `api/check-access.js` | Replace `.single()` with array query; add `found`/`until` fields | Low |
+| `api/_lib/requirePremium.js` | New shared helper — validates active premium subscription | Zero |
+| `api/_lib/rateLimiter.js` | New shared helper — in-memory sliding-window rate limiter | Zero |
+| `api/chat.js` | Add `requirePremium`; rate limit 20/hr; input validation; `max_tokens: 500` | Medium |
+| `api/coach.js` | Add `requirePremium`; rate limit 10/hr; input validation on mode + messages | Medium |
+| `public/js/app.js` | Replace direct Supabase query with `fetch('/api/check-access')` | Low |
 
 ---
 
 ## Fix 1 — `api/generate-token.js` (Critical)
 
-**Problem:** Any HTTP client could call `POST /api/generate-token` with any email and receive a premium token. No payment verification. Uses `Math.random()` (not crypto-secure). Uses CommonJS while all other API files use ESM.
+**Problem:** Any HTTP client could call `POST /api/generate-token` with any email and receive a
+30-day premium token. No payment verification. Uses `Math.random()` (not crypto-secure). CommonJS
+while all other API files use ESM.
 
 **Fix:**
-- Require `X-Admin-Secret` header matching `ADMIN_SECRET` env var
+- Require `X-Admin-Secret` header matching `ADMIN_SECRET` env var — returns 401 otherwise
 - Convert to ESM (`import`/`export default`)
 - Replace `Math.random()` with `crypto.randomUUID()`
-- Remove details from error responses
+- Error responses no longer leak database details
 
-**Note:** Add `ADMIN_SECRET` in Vercel Dashboard → Environment Variables. Generate a random 32-char string. Update Stripe webhook handler (`stripe-webhook.js`) to pass this header when calling `generate-token`.
+**Action required:** Add `ADMIN_SECRET` in Vercel Dashboard → Environment Variables (all
+environments). Generate a random 32-char string. Update `api/stripe-webhook.js` to pass this
+header when it calls `generate-token` internally.
 
 ---
 
 ## Fix 2 — `api/check-access.js` (Bug fix)
 
-**Problem:** `.single()` throws PGRST116 if a user has 2+ token rows (e.g. renewed subscription). Valid premium users denied access.
+**Problem:** `.single()` throws PGRST116 if a user has 2+ token rows (e.g. renewed subscription).
+Valid premium users denied access.
 
 **Fix:**
-- Remove `.single()` — query returns array
-- Return `found: false` when no rows (vs. `found: true, active: false` for expired)
-- Return the highest `until` value across all rows
+- Remove `.single()` — query returns array; iterate to find highest expiry
+- New response fields: `found` (account exists) and `until` (max expiry in ms)
+- `found: false` = no account, `found: true, active: false` = expired
 
 ---
 
-## Fix 3 — `api/_lib/requirePremium.js` (New)
+## Fix 3 — `api/_lib/requirePremium.js` (New file)
 
-**What it does:** Shared helper for chat.js and coach.js. Reads `email` from `req.body`, checks Supabase `tokens` table for an active row. Returns email on success or sends 401/403 and returns `null`.
+Shared auth helper for chat and coach. Reads `email` from `req.body`, queries Supabase `tokens`
+table for an active subscription, returns email on success or sends 401/403 and returns `null`.
 
-**Vercel routing:** The `_` prefix in `_lib/` means Vercel does NOT expose this as a route.
-
----
-
-## Fix 4 — `api/chat.js` and `api/coach.js` (High)
-
-**Problem:** Any unauthenticated user (bot, scraper, competitor) can call these endpoints at the owner's OpenAI expense. Zero auth, zero rate limiting.
-
-**Fix:** Import `requirePremium` and call it at the top of each handler. Also adds `max_tokens: 500` to `chat.js` as a cost cap.
-
-**Impact on legitimate users:** Frontend must include `email` in POST body (already collected via verifyBtn flow — stored in app scope).
+Vercel `_lib/` prefix: not exposed as a public route.
 
 ---
 
-## Fix 5 — `public/js/app.js` (Medium)
+## Fix 4 — `api/_lib/rateLimiter.js` (New file)
 
-**Problem:** Browser directly queries Supabase `tokens` table with hardcoded anon key. Any user can open DevTools, call the same query, inspect all tokens, and set `window.hasUnlimited = true` manually.
+**⚠️ Soft protection — per-Vercel-instance only, not global.**
 
-**Fix:** Replace the Supabase client block + direct query with `fetch('/api/check-access?email=...')`. The server does the Supabase lookup. The anon key stays in the codebase (it IS safe for client use per Supabase design) but the auth logic is no longer bypassable via DevTools.
+In-memory sliding-window rate limiter using a `Map<email, timestamp[]>`. Does NOT coordinate
+across Vercel instances and resets on cold starts (~15–30 min inactivity).
 
-**What remains client-side (intentional):** `window.hasUnlimited` flag — this is inherent to any client-side PDF generation. A determined user could still override it in DevTools. Full protection requires server-side PDF generation (Phase 2).
+**What it catches:** sustained bot loops hitting the same warm instance, frontend bugs that
+accidentally loop, casual manual abuse from a single session.
+
+**What it does NOT catch:** distributed abuse across multiple instances, slow drip attacks
+across cold-start boundaries.
+
+**Applied limits:**
+- `/api/chat` — 20 requests / 60 minutes per email → HTTP 429 + `Retry-After` header
+- `/api/coach` — 10 requests / 60 minutes per email → HTTP 429 + `Retry-After` header
+
+**For true global rate limiting (Phase 2):** integrate Upstash Redis or add a Supabase
+`api_requests(email, endpoint, window_key, count)` table.
 
 ---
 
-## What Phase 1 Does NOT Fix (Phase 2)
+## Fix 5 — `api/chat.js` and `api/coach.js` (High priority)
 
-- PDF generation is still client-side — `window.hasUnlimited` can be overridden in DevTools
-- No rate limiting on `/api/check-access` (could be probed)
-- No per-request token validation for chat/coach (email can be shared)
-- `stripe-webhook.js` needs to be updated to pass `X-Admin-Secret` when calling `generate-token`
+**Problem:** Zero auth, zero validation, zero rate limiting. Any bot could consume OpenAI quota.
+
+**Fix — auth:** `requirePremium` checks active subscription before any OpenAI call.
+
+**Fix — rate limiting:** `checkRateLimit(email, limit, windowMs)` applied at handler entry.
+Returns HTTP 429 + `Retry-After: N` header.
+
+**Fix — input validation (chat.js):**
+- `messages` must be an array (400 if not)
+- Max 20 messages per request (400 if exceeded)
+- Each message must have string `role` and `content` (400 if malformed)
+- Each `content` max 2000 characters (400 if exceeded)
+
+**Fix — input validation (coach.js):**
+- `mode` must be one of `general`, `recipes`, `fitness` (400 if invalid)
+- Same `messages` array validation as chat
+
+**Cost cap:** `max_tokens: 500` on the OpenAI call in `chat.js` (was commented out before).
+
+---
+
+## Fix 6 — `public/js/app.js` (Medium)
+
+**Problem:** Browser directly queries Supabase `tokens` table. Any user can mock the response in
+DevTools and set `window.hasUnlimited = true`.
+
+**Fix:** Replace the Supabase client init block and direct `from('tokens').select()` with a call
+to `fetch('/api/check-access?email=...)`. The server performs the lookup; the browser only sees
+`{ active, found, until }`.
+
+**Remaining exposure (inherent):** `window.hasUnlimited` is still set client-side because PDF
+generation is client-side. A DevTools user can still set it manually. This is the Phase 2 problem.
+
+---
+
+## ⛔ What Phase 1 Deliberately Does NOT Fix
+
+### PDF free-tier enforcement — deferred to Phase 2
+
+**Decision (2026-05-18):** Option B chosen. No Supabase schema change at this time.
+
+**Why enforcement is impossible without schema or account system:**
+
+Free users are fully anonymous — no email, no session, no account. The weekly "1 PDF" limit is
+currently enforced only by `localStorage.pdfCount`. This is 100% bypassable (`localStorage.clear()`
+in DevTools).
+
+To enforce server-side, one of the following must exist:
+1. **Free user identity** — email or session cookie linked to a server-side record
+2. **Server-side PDF generation** — the server controls what gets generated
+3. **New Supabase table** — `pdf_downloads(email, week_key, count)` with per-email tracking
+
+None of these exist in the current architecture.
+
+**Current state:** `localStorage` is the real gate (bypassable). `window.hasUnlimited` controls
+whether 2-day or 7-day PDFs are generated. Both remain as-is.
+
+**Comment added in `app.js`:** explains this is UI-only enforcement.
+
+**Phase 2 options (choose one):**
+- Option A: Require email for free download → track in `pdf_downloads` table → enforce server-side
+- Option B: Move PDF generation server-side (Puppeteer/headless on Vercel) → server controls output
+- Option C: Remove the free PDF limit (simplify product, reduce complexity)
+
+### Other known open issues
+
+- No rate limiting on `GET /api/check-access` (probe-able, but read-only)
+- Per-email sharing: a premium email shared between users bypasses per-user limits
+- `api/stripe-webhook.js` must be updated to pass `X-Admin-Secret` when calling `generate-token`
+- Rate limiter is not global — see Fix 4 above
 
 ---
 
 ## Build Verification
 
-After implementing:
 ```bash
-npm run build:js   # minify app.js → app.min.js
-# Check output for syntax errors
-# Verify verifyBtn still works in browser
+npm run build:js   # must exit 0
+npm run build      # must exit 0, produce 2562 pages
 ```
 
 ---
 
-## Env Vars to Add in Vercel
+## Env Vars Required in Vercel
 
-| Variable | Value | Where |
-|----------|-------|-------|
-| `ADMIN_SECRET` | random 32-char string | All environments |
+| Variable | Value | Environments |
+|----------|-------|-------------|
+| `ADMIN_SECRET` | random 32-char string | All |
