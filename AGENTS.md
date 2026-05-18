@@ -181,3 +181,12 @@ Task: [specific batch task here]
 Create a report of changed files when done.
 Follow AGENTS.md.
 ```
+
+---
+
+## Golden Rule
+
+Never optimize prematurely.
+Business value > technical perfection.
+Stability > speed.
+Consistency > quantity.
