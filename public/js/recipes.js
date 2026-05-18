@@ -4662,6 +4662,9 @@ export const recipes = [
   },
   {
     id: 50,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Etiopia",
       en: "Ethiopia",
@@ -4673,9 +4676,9 @@ export const recipes = [
       ar: "إثيوبيا",
       zh: "埃塞俄比亚",
       ja: "エチオピア",
-      tr: "Ethiopia",
-      it: "Ethiopia",
-      ko: "Ethiopia"
+      tr: "Etiyopya",
+      it: "Etiopia",
+      ko: "에티오피아"
     },
     name: {
       ro: "Doro Wat",
@@ -4690,7 +4693,7 @@ export const recipes = [
       ja: "ドロワット",
       tr: "Doro Wat",
       it: "Doro Wat",
-      ko: "Doro Wat"
+      ko: "도로 왓"
     },
     category: {
       ro: "Cină",
@@ -4741,16 +4744,16 @@ export const recipes = [
       ro: "Doro Wat este o rețetă tradițională din Etiopia.",
       en: "Doro Wat is a traditional recipe from Ethiopia.",
       es: "Doro Wat es una receta tradicional de Etiopía.",
-      fr: "Doro Wat est une recette traditionnelle de Éthiopie.",
+      fr: "Doro Wat est une recette traditionnelle d'Éthiopie.",
       de: "Doro Wat ist ein traditionelles Rezept aus Äthiopien.",
-      pt: "Doro Wat é uma receita tradicional de Etiópia.",
-      ru: "Доро Ват — традиционный рецепт из Эфиопия.",
+      pt: "Doro Wat é uma receita tradicional da Etiópia.",
+      ru: "Доро Ват — традиционный рецепт из Эфиопии.",
       ar: "دورو وات هي وصفة تقليدية من إثيوبيا.",
       zh: "埃塞俄比亚辣鸡 是来自埃塞俄比亚的传统食谱。",
       ja: "ドロワット はエチオピアの伝統的なレシピです。",
-      tr: "Doro Wat Ethiopia kökenli geleneksel bir tariftir.",
-      it: "Doro Wat è una risotta tradizionale di Ethiopia.",
-      ko: "Doro Wat는(은) Ethiopia의 전통 요리입니다."
+      tr: "Doro Wat Etiyopya kökenli geleneksel bir tariftir.",
+      it: "Doro Wat è una ricetta tradizionale dell'Etiopia.",
+      ko: "도로 왓은 에티오피아의 전통 요리입니다."
     }
   },
   {
