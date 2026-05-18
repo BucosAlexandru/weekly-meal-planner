@@ -3990,6 +3990,9 @@ export const recipes = [
   },
   {
     id: 43,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Irak",
       en: "Iraq",
@@ -4018,7 +4021,7 @@ export const recipes = [
       ja: "マスグーフ",
       tr: "Masgouf",
       it: "Masgouf",
-      ko: "Masgouf"
+      ko: "마스구프"
     },
     category: {
       ro: "Cină",
@@ -4069,16 +4072,16 @@ export const recipes = [
       ro: "Masgouf este o rețetă tradițională din Irak.",
       en: "Masgouf is a traditional recipe from Iraq.",
       es: "Masgouf es una receta tradicional de Irak.",
-      fr: "Masgouf est une recette traditionnelle de Irak.",
+      fr: "Masgouf est une recette traditionnelle d'Irak.",
       de: "Masgouf ist ein traditionelles Rezept aus Irak.",
-      pt: "Masgouf é uma receita tradicional de Iraque.",
-      ru: "Масгуф — традиционный рецепт из Ирак.",
+      pt: "Masgouf é uma receita tradicional do Iraque.",
+      ru: "Масгуф — традиционный рецепт из Ирака.",
       ar: "مسقوف هي وصفة تقليدية من العراق.",
       zh: "烤鱼 是来自伊拉克的传统食谱。",
       ja: "マスグーフ はイラクの伝統的なレシピです。",
       tr: "Masgouf Irak kökenli geleneksel bir tariftir.",
-      it: "Masgouf è una risotta tradizionale di Iraq.",
-      ko: "Masgouf는(은) 이라크의 전통 요리입니다."
+      it: "Masgouf è una ricetta tradizionale dell'Iraq.",
+      ko: "마스구프는 이라크의 전통 요리입니다."
     }
   },
   {
