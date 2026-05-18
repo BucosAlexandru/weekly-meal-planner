@@ -5,7 +5,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 
 ---
 
-## Phase 1 — Tier A Pilot (10 recipes)
+## Status Table
 
 | ID | Recipe | Audit | Impl | Commit | Notes |
 |---|---|---|---|---|---|
@@ -14,18 +14,17 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 3 | Quiche Lorraine | ✅ | ✅ | `12dbcf41` | 3 fixes: howIsMade.ru critical typo (рюмками→сливками), time 45→75, desc 14 langs (ham→lardons) |
 | 4 | Gazpacho | ✅ | ✅ | `4e889857` | 7 fixes: name.ko, 4 originText grammar (fr/ru/it/ko), time 15→135, remove 'quick' tag |
 | 5 | Sushi | ✅ | ✅ | `48205675` | 5 fixes: name.ko, 4 originText grammar (fr/ru/it/ko) |
+| — | (id 6 absent) | — | — | — | No recipe with id 6 in file |
 | 7 | Cheeseburger | ✅ | — | — | Already Tier A — no changes needed |
 | 8 | Tacos | ✅ | — | — | Already Tier A — no changes needed |
 | 9 | Chicken Curry | ✅ | ✅ | `9fa6ebc2` | 10 fixes: 3 struct fields, 6 originText grammar (fr/pt/ru/tr/it/ko), time 35→60 |
-| — | (id 6 absent) | — | — | — | No recipe with id 6 in file |
-| — | Pad Thai | ⬜ | — | — | Pending |
-| — | Bibimbap | ⬜ | — | — | Pending |
-| — | Butter Chicken | ⬜ | — | — | Not found in recipes.js under this name — needs ID lookup |
-| — | Chili con Carne | ⬜ | — | — | Pending |
-| — | Shakshuka | ⬜ | — | — | Pending |
-| — | Fish and Chips | ⬜ | — | — | Pending |
-| — | Shoyu Ramen | ⬜ | — | — | Pending |
-| — | Mapo Tofu | ⬜ | — | — | Pending |
+| 10 | Ratatouille | ✅ | ✅ | `65dbf968` | 2 fixes: originText.pt "da França", time 45→60 |
+| 11 | Souvlaki | ✅ | ✅ | `c9918778` | 2 fixes: originText.pt "da Grécia", time 30→80 (1h marinade) |
+| 12 | Dhal | ✅ | ✅ | `8f4ca230` | 7 fixes: name.ko, 5 originText grammar (fr/pt/ru/it/ko), time 40→45 |
+| 13 | Guacamole | ✅ | ✅ | `60f45f3d` | 1 fix: add servings:4 |
+| 14 | Borscht | ✅ | ✅ | `4e1d6dd2` | 9 fixes: 3 struct fields (soup), name.ko, 5 originText grammar (pt/ru/tr/it/ko) |
+| 15 | Pancakes | ✅ | — | — | Already Tier A — no changes needed |
+| 16 | Pad Thai | ✅ | ✅ | `7ce0f6df` | 8 fixes: 3 struct fields (fish), name.ko, 4 originText grammar (pt/ru/it/ko), time 25→40, remove 'quick' tag |
 
 ---
 
@@ -64,12 +63,6 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 - `/ko/recipes/spaghetti-carbonara/` ✅ — "스파게티 카르보나라" confirmed
 - `/zh/shipu/spaghetti-carbonara/` ✅ — "意式培根蛋面" confirmed
 - Korean/zh cascade pages ✅ — recipe index and related-recipe cards updated in both locales
-
-### Not changed (confirmed correct)
-- `ingredients` (all 14 languages) — already Tier A quality
-- `howIsMade` (all 14 languages) — technically correct, no changes needed
-- `name.en` / slug — untouched
-- `category`, `origin`, `costRon`, `tags` — untouched
 
 ---
 
@@ -132,36 +125,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | `time` | `15` | `135` |
 | `tags` | `['quick','vegetarian','vegan','healthy']` | `['vegetarian','vegan','healthy']` |
 
-### Not changed (confirmed correct)
-- `ingredients` (all 14 languages) — specific quantities, correct produce
-- `howIsMade` (all 14 languages) — technically correct, mandatory 2h chill already in steps
-- `desc` — correctly describes chilled tomato soup, no ingredient substitution
-- `servings`, `tipType`, `pairingsType` — already present and correct
-
-### Validation: ✅ build clean · ✅ FR (d'Espagne) · ✅ RU (из Испании tagline) · ✅ IT (ricetta tradizionale della Spagna) · ✅ KO (가스파초) · KO cascade pages updated
-
----
-
-## ID 4 — Gazpacho — Change Log
-
-**Commit:** `4e889857` | **Date:** 2026-05-18
-
-### Changes made — `public/js/recipes.js`
-| Field | Before | After |
-|---|---|---|
-| `name.ko` | `"Gazpacho"` | `"가스파초"` |
-| `originText.fr` | `"…de Espagne."` | `"…d'Espagne."` |
-| `originText.ru` | `"…из Испания."` | `"…из Испании."` |
-| `originText.it` | `"…una risotta tradizionale di Spagna."` | `"…una ricetta tradizionale della Spagna."` |
-| `originText.ko` | `"Gazpacho는(은) 스페인의 전통 요리입니다."` | `"가스파초는 스페인의 전통 요리입니다."` |
-
-### Changes made — `public/js/recipes-meta.js`
-| Field | Before | After |
-|---|---|---|
-| `time` | `15` | `135` |
-| `tags` | `['quick','vegetarian','vegan','healthy']` | `['vegetarian','vegan','healthy']` |
-
-### Validation: ✅ build clean · ✅ FR (d'Espagne) · ✅ RU (из Испании tagline) · ✅ IT (ricetta tradizionale della Spagna) · ✅ KO (가스파초) · KO cascade pages updated
+### Validation: ✅ build clean · ✅ FR (d'Espagne) · ✅ RU (из Испании tagline) · ✅ IT (ricetta tradizionale della Spagna) · ✅ KO (가스파초)
 
 ---
 
@@ -180,7 +144,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 
 ### `recipes-meta.js` — No changes (time:45 and desc accurate)
 
-### Validation: ✅ build clean · ✅ FR (du Japon) · ✅ RU (из Японии) · ✅ IT (ricetta tradizionale del Giappone) · ✅ KO (스시) · KO cascade pages updated
+### Validation: ✅ build clean · ✅ FR (du Japon) · ✅ RU (из Японии) · ✅ IT (ricetta tradizionale del Giappone) · ✅ KO (스시)
 
 ---
 
@@ -218,7 +182,136 @@ Already meets Tier A standard. All originText grammatically correct (RU already 
 |---|---|---|
 | `time` | `35` | `60` |
 
-### Validation: ✅ build clean · ✅ all 14 locale pages updated (servings/tipType/pairingsType cascade) · ✅ FR (d'Inde) · ✅ RU (из Индии) · ✅ IT (ricetta tradizionale dell'India) · ✅ KO (닭 카레는)
+### Validation: ✅ build clean · ✅ all 14 locale pages updated · ✅ FR (d'Inde) · ✅ RU (из Индии) · ✅ IT (ricetta tradizionale dell'India) · ✅ KO (닭 카레는)
+
+---
+
+## ID 10 — Ratatouille — Change Log
+
+**Commit:** `65dbf968` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `originText.pt` | `"…de França."` | `"…da França."` (feminine article contraction) |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `45` | `60` (salt-and-drain step + sequential sautéing + simmer) |
+
+### Validation: ✅ build clean · ✅ PT (da França) · ✅ RO/EN pages
+
+---
+
+## ID 11 — Souvlaki — Change Log
+
+**Commit:** `c9918778` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `originText.pt` | `"…de Grécia."` | `"…da Grécia."` (feminine article contraction) |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `30` | `80` (mandatory 1 hour marinade) |
+
+### Validation: ✅ build clean · ✅ PT (da Grécia) · ✅ RO/EN pages
+
+---
+
+## ID 12 — Dhal — Change Log
+
+**Commit:** `8f4ca230` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `name.ko` | `"Dhal"` | `"달"` |
+| `originText.fr` | `"…de Inde."` | `"…d'Inde."` (elision) |
+| `originText.pt` | `"…de Índia."` | `"…da Índia."` (feminine article contraction) |
+| `originText.ru` | `"…из Индия."` | `"…из Индии."` (genitive) |
+| `originText.it` | `"…risotta tradizionale di India."` | `"…ricetta tradizionale dell'India."` |
+| `originText.ko` | `"Dhal는(은) 인도의 전통 요리입니다."` | `"달은 인도의 전통 요리입니다."` |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `40` | `45` (onion caramelization + lentil simmer = ~45 min) |
+
+### Validation: ✅ build clean · ✅ FR (d'Inde) · ✅ RU (из Индии) · ✅ IT (ricetta tradizionale dell'India) · ✅ KO (달은)
+
+---
+
+## ID 13 — Guacamole — Change Log
+
+**Commit:** `60f45f3d` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `servings` | missing | `4` |
+
+### `recipes-meta.js` — No changes (time:15 accurate, desc accurate)
+
+### Validation: ✅ build clean · ✅ RO/EN pages (recipeYield was already 4 via generator default; explicit field added for schema correctness)
+
+---
+
+## ID 14 — Borscht — Change Log
+
+**Commit:** `4e1d6dd2` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `servings` | missing | `4` |
+| `tipType` | missing | `'soup'` |
+| `pairingsType` | missing | `'soup'` |
+| `name.ko` | `"Borscht"` | `"보르시"` |
+| `originText.pt` | `"…de Rússia."` | `"…da Rússia."` (feminine article contraction) |
+| `originText.ru` | `"…из Россия."` | `"…из России."` (genitive) |
+| `originText.tr` | `"borş çorbası …"` | `"Borş çorbası …"` (capitalize sentence start) |
+| `originText.it` | `"…risotta tradizionale di Russia."` | `"…ricetta tradizionale della Russia."` |
+| `originText.ko` | `"Borscht는(은) 러시아의 전통 요리입니다."` | `"보르시는 러시아의 전통 요리입니다."` |
+
+### `recipes-meta.js` — No changes (time:90 accurate for long-simmered beet soup)
+
+### Validation: ✅ build clean · ✅ PT (da Rússia) · ✅ RU (из России) · ✅ IT (ricetta tradizionale della Russia) · ✅ KO (보르시는)
+
+---
+
+## ID 15 — Pancakes — No changes
+
+Already meets Tier A standard. All originText grammatically correct, all name locales in native script, time accurate, desc accurate.
+
+---
+
+## ID 16 — Pad Thai — Change Log
+
+**Commit:** `7ce0f6df` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `servings` | missing | `4` |
+| `tipType` | missing | `'fish'` |
+| `pairingsType` | missing | `'fish'` |
+| `name.ko` | `"Pad Thai"` | `"팟타이"` |
+| `originText.pt` | `"…de Tailândia."` | `"…da Tailândia."` (feminine article contraction) |
+| `originText.ru` | `"…из Таиланд."` | `"…из Таиланда."` (genitive) |
+| `originText.it` | `"…risotta tradizionale di Thailandia."` | `"…ricetta tradizionale della Thailandia."` |
+| `originText.ko` | `"Pad Thai는(은) 태국의 전통 요리입니다."` | `"팟타이는 태국의 전통 요리입니다."` |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `25` | `40` (30 min rice noodle soak is mandatory) |
+| `tags` | `['quick','high-protein']` | `['high-protein']` (remove 'quick' — 40 min is not quick) |
+
+### Validation: ✅ build clean · ✅ PT (da Tailândia) · ✅ RU (из Таиланда) · ✅ IT (ricetta tradizionale della Thailandia) · ✅ KO (팟타이)
 
 ---
 
