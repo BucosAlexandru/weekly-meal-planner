@@ -712,7 +712,7 @@ const LANG_CONFIGS = {
 /* ════════════════════════════════════════════════════════════════
    SHARED HTML HELPERS
    ════════════════════════════════════════════════════════════════ */
-const HEAD = (title, desc, canonical, langCode='ro', dir='ltr') => `<!DOCTYPE html>
+const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website') => `<!DOCTYPE html>
 <html lang="${langCode}" dir="${dir}">
 <head>
   <meta charset="UTF-8"/>
@@ -724,7 +724,7 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr') => `<!DOCTYPE ht
   <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/"/>
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/"/>
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/"/>
-  <meta property="og:type" content="website"/>
+  <meta property="og:type" content="${ogType}"/>
   <meta property="og:title" content="${esc(title)}"/>
   <meta property="og:description" content="${esc(desc)}"/>
   <meta property="og:url" content="https://meal-planner.ro${canonical}"/>
@@ -757,6 +757,7 @@ const makeNav = (lc) => `
       <a href="${lc.dir}/" class="nav-link">${lc.sectionLabel}</a>
       <a href="${RECIPES_NAV[lc.code].href}" class="nav-link">${RECIPES_NAV[lc.code].label}</a>
       <a href="${appHref(lc)}" class="nav-link">${lc.appLabel}</a>
+      <a href="/${lc.code}/${PRICING_SLUGS[lc.code]}/" class="nav-link">⭐ Premium</a>
     </div>
   </nav>
 </header>`;
@@ -770,7 +771,7 @@ const makeFooter = (lc) => `
     <span class="footer-sep">·</span>
     <a href="${appHref(lc)}">${lc.appLabel}</a>
     <span class="footer-sep">·</span>
-    <span>© 2025</span>
+    <span>© 2026</span>
   </div>
 </footer>`;
 
@@ -1723,6 +1724,7 @@ const RECIPE_UI = {
   ro:{ totalTime:'Timp total', activeTime:'Timp activ', servings:'Porții', difficulty:'Dificultate', cost:'Cost',
     diffLevels:['Ușoară','Medie','Dificilă'], pdfBtn:'Previzualizare PDF', pdfTitle:'Salvare PDF: Share (⬆) → Print → Salvează ca PDF (iPhone/iPad)',
     nutritionH:'Informații nutriționale', nutritionPer:'per porție (~400 ml)',
+    nutritionDisc:'Valori nutriționale estimate.',
     cal:'Calorii', prot:'Proteine', carb:'Carbohidrați', fat:'Grăsimi', fib:'Fibre',
     pairingsH:'Se potrivește perfect cu',
     seeAll:'Vezi toate rețetele →',
@@ -1754,6 +1756,7 @@ const RECIPE_UI = {
   en:{ totalTime:'Total time', activeTime:'Active time', servings:'Servings', difficulty:'Difficulty', cost:'Cost',
     diffLevels:['Easy','Medium','Hard'], pdfBtn:'Export PDF', pdfTitle:'Save as PDF: Share (⬆) → Print → Save as PDF (iPhone/iPad)',
     nutritionH:'Nutritional info', nutritionPer:'per serving (~400 ml)',
+    nutritionDisc:'Estimated nutritional values.',
     cal:'Calories', prot:'Protein', carb:'Carbs', fat:'Fat', fib:'Fiber',
     pairingsH:'Pairs perfectly with',
     seeAll:'See all recipes →',
@@ -1785,6 +1788,7 @@ const RECIPE_UI = {
   es:{ totalTime:'Tiempo total', activeTime:'Tiempo activo', servings:'Raciones', difficulty:'Dificultad', cost:'Coste',
     diffLevels:['Fácil','Media','Difícil'], pdfBtn:'Exportar PDF', pdfTitle:'Guardar PDF: Compartir (⬆) → Imprimir → Guardar como PDF (iPhone/iPad)',
     nutritionH:'Información nutricional', nutritionPer:'por ración (~400 ml)',
+    nutritionDisc:'Valores nutricionales estimados.',
     cal:'Calorías', prot:'Proteínas', carb:'Carbohidratos', fat:'Grasas', fib:'Fibra',
     pairingsH:'Combina perfectamente con',
     seeAll:'Ver todas las recetas →',
@@ -1816,6 +1820,7 @@ const RECIPE_UI = {
   fr:{ totalTime:'Temps total', activeTime:'Temps actif', servings:'Portions', difficulty:'Difficulté', cost:'Coût',
     diffLevels:['Facile','Moyen','Difficile'], pdfBtn:'Exporter PDF', pdfTitle:'Enregistrer PDF : Partager (⬆) → Imprimer → Enregistrer en PDF (iPhone/iPad)',
     nutritionH:'Informations nutritionnelles', nutritionPer:'par portion (~400 ml)',
+    nutritionDisc:'Valeurs nutritionnelles estimées.',
     cal:'Calories', prot:'Protéines', carb:'Glucides', fat:'Lipides', fib:'Fibres',
     pairingsH:'S\'accompagne parfaitement avec',
     seeAll:'Voir toutes les recettes →',
@@ -1847,6 +1852,7 @@ const RECIPE_UI = {
   de:{ totalTime:'Gesamtzeit', activeTime:'Aktive Zeit', servings:'Portionen', difficulty:'Schwierigkeit', cost:'Kosten',
     diffLevels:['Einfach','Mittel','Schwer'], pdfBtn:'PDF exportieren', pdfTitle:'Als PDF: Teilen (⬆) → Drucken → Als PDF sichern (iPhone/iPad)',
     nutritionH:'Nährwertangaben', nutritionPer:'pro Portion (~400 ml)',
+    nutritionDisc:'Geschätzte Nährwertangaben.',
     cal:'Kalorien', prot:'Protein', carb:'Kohlenhydrate', fat:'Fett', fib:'Ballaststoffe',
     pairingsH:'Passt perfekt zu',
     seeAll:'Alle Rezepte ansehen →',
@@ -1878,6 +1884,7 @@ const RECIPE_UI = {
   pt:{ totalTime:'Tempo total', activeTime:'Tempo ativo', servings:'Porções', difficulty:'Dificuldade', cost:'Custo',
     diffLevels:['Fácil','Média','Difícil'], pdfBtn:'Exportar PDF', pdfTitle:'Salvar PDF: Compartilhar (⬆) → Imprimir → Salvar como PDF (iPhone/iPad)',
     nutritionH:'Informação nutricional', nutritionPer:'por porção (~400 ml)',
+    nutritionDisc:'Valores nutricionais estimados.',
     cal:'Calorias', prot:'Proteínas', carb:'Carboidratos', fat:'Gorduras', fib:'Fibras',
     pairingsH:'Combina perfeitamente com',
     seeAll:'Ver todas as receitas →',
@@ -1909,6 +1916,7 @@ const RECIPE_UI = {
   ru:{ totalTime:'Общее время', activeTime:'Активное время', servings:'Порции', difficulty:'Сложность', cost:'Стоимость',
     diffLevels:['Лёгкий','Средний','Сложный'], pdfBtn:'Экспорт PDF', pdfTitle:'Сохранить PDF: Поделиться (⬆) → Печать → Сохранить как PDF (iPhone/iPad)',
     nutritionH:'Пищевая ценность', nutritionPer:'на порцию (~400 мл)',
+    nutritionDisc:'Приблизительная пищевая ценность.',
     cal:'Калории', prot:'Белки', carb:'Углеводы', fat:'Жиры', fib:'Клетчатка',
     pairingsH:'Прекрасно сочетается с',
     seeAll:'Все рецепты →',
@@ -1940,6 +1948,7 @@ const RECIPE_UI = {
   ar:{ totalTime:'الوقت الكلي', activeTime:'الوقت الفعلي', servings:'الحصص', difficulty:'الصعوبة', cost:'التكلفة',
     diffLevels:['سهل','متوسط','صعب'], pdfBtn:'تصدير PDF', pdfTitle:'حفظ PDF: مشاركة (⬆) ← طباعة ← حفظ كـ PDF (iPhone/iPad)',
     nutritionH:'المعلومات الغذائية', nutritionPer:'لكل حصة (~400 مل)',
+    nutritionDisc:'قيم غذائية تقريبية.',
     cal:'السعرات', prot:'البروتين', carb:'الكربوهيدرات', fat:'الدهون', fib:'الألياف',
     pairingsH:'يتناسب مع',
     seeAll:'عرض كل الوصفات →',
@@ -1971,6 +1980,7 @@ const RECIPE_UI = {
   zh:{ totalTime:'总时间', activeTime:'操作时间', servings:'份数', difficulty:'难度', cost:'费用',
     diffLevels:['简单','中等','困难'], pdfBtn:'导出PDF', pdfTitle:'保存PDF：共享(⬆) → 打印 → 存储为PDF (iPhone/iPad)',
     nutritionH:'营养信息', nutritionPer:'每份 (~400 ml)',
+    nutritionDisc:'营养数据仅供参考。',
     cal:'卡路里', prot:'蛋白质', carb:'碳水化合物', fat:'脂肪', fib:'膳食纤维',
     pairingsH:'完美搭配',
     seeAll:'查看全部食谱 →',
@@ -2002,6 +2012,7 @@ const RECIPE_UI = {
   ja:{ totalTime:'合計時間', activeTime:'調理時間', servings:'人数', difficulty:'難易度', cost:'費用',
     diffLevels:['簡単','普通','難しい'], pdfBtn:'PDFエクスポート', pdfTitle:'PDFで保存：共有(⬆) → プリント → PDFを保存 (iPhone/iPad)',
     nutritionH:'栄養情報', nutritionPer:'1人前あたり (~400 ml)',
+    nutritionDisc:'栄養価は推定値です。',
     cal:'カロリー', prot:'タンパク質', carb:'炭水化物', fat:'脂質', fib:'食物繊維',
     pairingsH:'と相性抜群',
     seeAll:'全レシピを見る →',
@@ -2033,6 +2044,7 @@ const RECIPE_UI = {
   hi:{ totalTime:'कुल समय', activeTime:'सक्रिय समय', servings:'सर्विंग्स', difficulty:'कठिनाई', cost:'लागत',
     diffLevels:['आसान','मध्यम','कठिन'], pdfBtn:'PDF एक्सपोर्ट', pdfTitle:'PDF सेव: Share (⬆) → Print → Save as PDF (iPhone/iPad)',
     nutritionH:'पोषण संबंधी जानकारी', nutritionPer:'प्रति सर्विंग (~400 ml)',
+    nutritionDisc:'अनुमानित पोषण मूल्य।',
     cal:'कैलोरी', prot:'प्रोटीन', carb:'कार्बोहाइड्रेट', fat:'वसा', fib:'फाइबर',
     pairingsH:'के साथ बेहतरीन लगता है',
     seeAll:'सभी रेसिपी देखें →',
@@ -2064,6 +2076,7 @@ const RECIPE_UI = {
   tr:{ totalTime:'Toplam süre', activeTime:'Aktif süre', servings:'Porsiyon', difficulty:'Zorluk', cost:'Maliyet',
     diffLevels:['Kolay','Orta','Zor'], pdfBtn:'PDF Dışa Aktar', pdfTitle:'PDF kaydet: Paylaş (⬆) → Yazdır → PDF Olarak Kaydet (iPhone/iPad)',
     nutritionH:'Besin değerleri', nutritionPer:'porsiyon başına (~400 ml)',
+    nutritionDisc:'Tahmini besin değerleri.',
     cal:'Kalori', prot:'Protein', carb:'Karbonhidrat', fat:'Yağ', fib:'Lif',
     pairingsH:'Mükemmel uyum sağlar',
     seeAll:'Tüm tarifleri gör →',
@@ -2095,6 +2108,7 @@ const RECIPE_UI = {
   it:{ totalTime:'Tempo totale', activeTime:'Tempo attivo', servings:'Porzioni', difficulty:'Difficoltà', cost:'Costo',
     diffLevels:['Facile','Media','Difficile'], pdfBtn:'Esporta PDF', pdfTitle:'Salva PDF: Condividi (⬆) → Stampa → Salva come PDF (iPhone/iPad)',
     nutritionH:'Informazioni nutrizionali', nutritionPer:'per porzione (~400 ml)',
+    nutritionDisc:'Valori nutrizionali stimati.',
     cal:'Calorie', prot:'Proteine', carb:'Carboidrati', fat:'Grassi', fib:'Fibre',
     pairingsH:'Si abbina perfettamente con',
     seeAll:'Vedi tutte le ricette →',
@@ -2126,6 +2140,7 @@ const RECIPE_UI = {
   ko:{ totalTime:'총 시간', activeTime:'조리 시간', servings:'인분', difficulty:'난이도', cost:'비용',
     diffLevels:['쉬움','보통','어려움'], pdfBtn:'PDF 내보내기', pdfTitle:'PDF 저장: 공유(⬆) → 프린트 → PDF로 저장 (iPhone/iPad)',
     nutritionH:'영양 정보', nutritionPer:'1인분 기준 (~400 ml)',
+    nutritionDisc:'영양 정보는 추정치입니다.',
     cal:'칼로리', prot:'단백질', carb:'탄수화물', fat:'지방', fib:'식이섬유',
     pairingsH:'함께 먹으면 좋아요',
     seeAll:'모든 레시피 보기 →',
@@ -2295,14 +2310,17 @@ function recipeMetadata(ingr, steps, cat, code, overrides) {
   const roundTo5 = m => Math.round(m / 5) * 5;
   const totalMins = roundTo5(activeMins + (activeMins > 40 ? 30 : 20));
   const activeMinsR = roundTo5(activeMins);
-  const fmt = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
+  const fmt    = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
+  const fmtISO = m => m >= 60 ? `PT${Math.floor(m/60)}H${m%60>0?m%60+'M':''}` : `PT${m}M`;
   const servings = (overrides && overrides.servings) ? overrides.servings : (ic < 5 ? 2 : ic < 9 ? 4 : 6);
   const diffIdx = sc <= 3 ? 0 : sc <= 5 ? 1 : 2;
   const ingrStr = ingr.join(' ').toLowerCase();
   const expensive = /beef|veal|lamb|salmon|shrimp|lobster|crab|truffle|saffron|chocolate|vițel|miel|somon|creveți|caracatiță/.test(ingrStr);
   return {
-    totalTime: fmt(totalMins),
-    activeTime: fmt(activeMinsR),
+    totalTime:    fmt(totalMins),
+    activeTime:   fmt(activeMinsR),
+    isoTotalTime: fmtISO(totalMins),
+    isoPrepTime:  fmtISO(activeMinsR),
     servings,
     difficulty: ui.diffLevels[diffIdx],
     cost: expensive ? '$$' : '$',
@@ -2444,8 +2462,8 @@ function recipePage(recipe, rl) {
     "recipeIngredient":ingr,
     "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
     "recipeCategory":cat,
-    "prepTime":`PT${meta.activeTime}`,
-    "totalTime":`PT${meta.totalTime}`,
+    "prepTime":meta.isoPrepTime,
+    "totalTime":meta.isoTotalTime,
     "recipeYield":`${meta.servings}`,
     "nutrition":{"@type":"NutritionInformation","calories":`${nutri.cal} kcal`},
     "author":{"@type":"Organization","name":"Meal-Planner.ro"},
@@ -2475,7 +2493,7 @@ function recipePage(recipe, rl) {
     }).join('');
 
   const dir_attr = rl.dir_attr || 'ltr';
-  return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr)}
+  return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article')}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc)}
 <main class="content-main recipe-main">
@@ -2523,7 +2541,7 @@ ${makeNav(lc)}
     <div class="recipe-steps-col">
       <h2>${rl.howToH.replace(/^[👨‍🍳\s]+/,'')}</h2>
       <ol class="recipe-steps-new">
-        ${steps.map((s,i)=>`<li><span class="step-num">${i+1}</span><span>${esc(s)}.</span></li>`).join('\n        ')}
+        ${steps.map((s,i)=>`<li><span class="step-num">${i+1}</span><span>${esc(s.trimEnd().replace(/\.+$/, ''))}.</span></li>`).join('\n        ')}
       </ol>
       ${tip ? `<div class="recipe-tip-box"><span class="tip-icon">💡</span><div><strong>${stepsUi.tipLabel}:</strong> ${esc(tip)}</div></div>` : ''}
     </div>
@@ -2537,6 +2555,7 @@ ${makeNav(lc)}
         <div class="nutrition-row">${ui.fat} <span>${nutri.fat} g</span></div>
         <div class="nutrition-row">${ui.fib} <span>${nutri.fib} g</span></div>
       </div>
+      <p class="nutrition-disclaimer">${ui.nutritionDisc}</p>
       <p class="recipe-pairings-h">${ui.pairingsH}</p>
       <div class="pairings-grid">${recipePairings(ingr, cat, code, n, overrides)}</div>
     </div>
