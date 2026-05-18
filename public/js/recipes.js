@@ -4854,6 +4854,9 @@ export const recipes = [
   },
   {
     id: 52,
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "Olanda",
       en: "Netherlands",
@@ -4882,7 +4885,7 @@ export const recipes = [
       ja: "スタンポット",
       tr: "Stamppot",
       it: "Stamppot",
-      ko: "Stamppot"
+      ko: "스탐팟"
     },
     category: {
       ro: "Cină",
@@ -4933,16 +4936,16 @@ export const recipes = [
       ro: "Stamppot este o rețetă tradițională din Olanda.",
       en: "Stamppot is a traditional recipe from Netherlands.",
       es: "Stamppot es una receta tradicional de Países Bajos.",
-      fr: "Stamppot est une recette traditionnelle de Pays-Bas.",
-      de: "Stamppot ist ein traditionelles Rezept aus Niederlande.",
-      pt: "Stamppot é uma receita tradicional de Holanda.",
-      ru: "Стамппот — традиционный рецепт из Нидерланды.",
+      fr: "Stamppot est une recette traditionnelle des Pays-Bas.",
+      de: "Stamppot ist ein traditionelles Rezept aus den Niederlanden.",
+      pt: "Stamppot é uma receita tradicional da Holanda.",
+      ru: "Стамппот — традиционный рецепт из Нидерландов.",
       ar: "ستامبوت هي وصفة تقليدية من هولندا.",
       zh: "荷兰杂烩土豆泥 是来自荷兰的传统食谱。",
       ja: "スタンポット はオランダの伝統的なレシピです。",
       tr: "Stamppot Hollanda kökenli geleneksel bir tariftir.",
-      it: "Stamppot è una risotta tradizionale di Paesi Bassi.",
-      ko: "Stamppot는(은) 네덜란드의 전통 요리입니다."
+      it: "Stamppot è una ricetta tradizionale dei Paesi Bassi.",
+      ko: "스탐팟은 네덜란드의 전통 요리입니다."
     }
   },
   {
