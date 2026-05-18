@@ -1,6 +1,9 @@
 export const recipes = [
   {
     id: 1,
+    servings: 4,
+    tipType: 'pasta',
+    pairingsType: 'pasta',
     origin: {
       ro: "Italia",
       en: "Italy",
@@ -25,11 +28,11 @@ export const recipes = [
       pt: "Espaguete à Carbonara",
       ru: "Спагетти Карбонара",
       ar: "سباغيتي كاربونارا",
-      zh: "培根意大利面",
+      zh: "意式培根蛋面",
       ja: "スパゲッティ・カルボナーラ",
       tr: "Spaghetti Carbonara",
       it: "Spaghetti Carbonara",
-      ko: "Spaghetti Carbonara"
+      ko: "스파게티 카르보나라"
     },
     category: {
       ro: "Prânz",
@@ -80,15 +83,15 @@ export const recipes = [
       ro: "Spaghete Carbonara este o rețetă tradițională din Italia.",
       en: "Spaghetti Carbonara is a traditional recipe from Italy.",
       es: "Espaguetis Carbonara es una receta tradicional de Italia.",
-      fr: "Spaghetti Carbonara est une recette traditionnelle de Italie.",
+      fr: "Spaghetti Carbonara est une recette traditionnelle d'Italie.",
       de: "Spaghetti Carbonara ist ein traditionelles Rezept aus Italien.",
       pt: "Espaguete à Carbonara é uma receita tradicional de Itália.",
-      ru: "Спагетти Карбонара — традиционный рецепт из Италия.",
+      ru: "Спагетти Карбонара — традиционный рецепт из Италии.",
       ar: "سباغيتي كاربونارا هي وصفة تقليدية من إيطاليا.",
       zh: "培根意大利面 是来自意大利的传统食谱。",
       ja: "スパゲッティ・カルボナーラ はイタリアの伝統的なレシピです。",
       tr: "Spaghetti Carbonara İtalya kökenli geleneksel bir tariftir.",
-      it: "Spaghetti Carbonara è una risotta tradizionale di Italia.",
+      it: "Spaghetti Carbonara è una ricetta tradizionale italiana.",
       ko: "Spaghetti Carbonara는(은) 이탈리아의 전통 요리입니다."
     }
   },
