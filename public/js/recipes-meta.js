@@ -191,7 +191,7 @@ export const recipesMeta = {
                 '올리브 오일과 허브로 만든 프로방스풍 채소 스튜.',
                 'जैतून के तेल और सुगंधित जड़ी-बूटियों के साथ प्रोवेंसल सब्जी स्टू।') },
 
-  11: { time: 30, costRon: 26, tags: ['high-protein','healthy'],
+  11: { time: 80, costRon: 26, tags: ['high-protein','healthy'],
         desc: d('Frigarui de porc la grătar cu lămâie, usturoi și oregano — gust mediteranean.',
                 'Grilled pork skewers with lemon, garlic and oregano — Mediterranean flavour.',
                 'Pinchos de cerdo a la parrilla con limón, ajo y orégano.',

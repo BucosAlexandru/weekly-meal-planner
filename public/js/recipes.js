@@ -978,7 +978,7 @@ export const recipes = [
       es: "Souvlaki es una receta tradicional de Grecia.",
       fr: "Souvlaki est une recette traditionnelle de Grèce.",
       de: "Souvlaki ist ein traditionelles Rezept aus Griechenland.",
-      pt: "Souvlaki é uma receita tradicional de Grécia.",
+      pt: "Souvlaki é uma receita tradicional da Grécia.",
       ru: "Сувлаки — традиционный рецепт из Греции.",
       ar: "سوفلاكي هي وصفة تقليدية من اليونان.",
       zh: "希腊烤肉串是来自希腊的传统食谱。",
