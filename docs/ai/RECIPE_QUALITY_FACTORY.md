@@ -56,6 +56,9 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 45 | Salmon Soup | ✅ | ✅ | `1fd96fe1` | 12 fixes: 3 struct fields, name.it/ko/tr, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
 | 46 | Ghormeh Sabzi | ✅ | ✅ | `2ca28c8f` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
 | 47 | Bacalhau à Brás | ✅ | ✅ | `8ec94c6f` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko |
+| 48 | Adobo | ✅ | ✅ | `8487adf0` | 11 fixes: 3 struct fields, name.ko, originText.fr/de/pt/ru/it/ko; NOTE: stub recipe |
+| 49 | Jerk Chicken | ✅ | ✅ | `9401ae5e` | 13 fixes: 3 struct fields, origin it/tr/ko, name.it/ko, originText.fr/pt/ru/tr/it/ko |
+| 50 | Doro Wat | ✅ | ✅ | `a0a1b5a5` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
 
 ---
 

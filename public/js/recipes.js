@@ -4758,6 +4758,9 @@ export const recipes = [
   },
   {
     id: 51,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Siria",
       en: "Syria",
@@ -4769,9 +4772,9 @@ export const recipes = [
       ar: "سوريا",
       zh: "叙利亚",
       ja: "シリア",
-      tr: "Syria",
-      it: "Syria",
-      ko: "Syria"
+      tr: "Suriye",
+      it: "Siria",
+      ko: "시리아"
     },
     name: {
       ro: "Kibbeh",
@@ -4786,7 +4789,7 @@ export const recipes = [
       ja: "キッベ",
       tr: "Kibbeh",
       it: "Kibbeh",
-      ko: "Kibbeh"
+      ko: "키베"
     },
     category: {
       ro: "Cină",
@@ -4839,14 +4842,14 @@ export const recipes = [
       es: "Kibbeh es una receta tradicional de Siria.",
       fr: "Kibbeh est une recette traditionnelle de Syrie.",
       de: "Kibbeh ist ein traditionelles Rezept aus Syrien.",
-      pt: "Kibbeh é uma receita tradicional de Síria.",
-      ru: "Киббе — традиционный рецепт из Сирия.",
+      pt: "Kibbeh é uma receita tradicional da Síria.",
+      ru: "Киббе — традиционный рецепт из Сирии.",
       ar: "كبة هي وصفة تقليدية من سوريا.",
       zh: "碎肉小麦球 是来自叙利亚的传统食谱。",
       ja: "キッベ はシリアの伝統的なレシピです。",
-      tr: "Kibbeh Syria kökenli geleneksel bir tariftir.",
-      it: "Kibbeh è una risotta tradizionale di Syria.",
-      ko: "Kibbeh는(은) Syria의 전통 요리입니다."
+      tr: "Kibbeh Suriye kökenli geleneksel bir tariftir.",
+      it: "Kibbeh è una ricetta tradizionale della Siria.",
+      ko: "키베는 시리아의 전통 요리입니다."
     }
   },
   {
