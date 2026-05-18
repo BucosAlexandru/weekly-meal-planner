@@ -4470,6 +4470,9 @@ export const recipes = [
   },
   {
     id: 48,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Filipine",
       en: "Philippines",
@@ -4498,7 +4501,7 @@ export const recipes = [
       ja: "アドボ",
       tr: "Adobo",
       it: "Adobo",
-      ko: "Adobo"
+      ko: "아도보"
     },
     category: {
       ro: "Cină",
@@ -4549,16 +4552,16 @@ export const recipes = [
       ro: "Adobo este o rețetă tradițională din Filipine.",
       en: "Adobo is a traditional recipe from Philippines.",
       es: "Adobo es una receta tradicional de Filipinas.",
-      fr: "Adobo est une recette traditionnelle de Philippines.",
-      de: "Adobo ist ein traditionelles Rezept aus Philippinen.",
-      pt: "Adobo é uma receita tradicional de Filipinas.",
-      ru: "Адобо — традиционный рецепт из Филиппины.",
+      fr: "Adobo est une recette traditionnelle des Philippines.",
+      de: "Adobo ist ein traditionelles Rezept aus den Philippinen.",
+      pt: "Adobo é uma receita tradicional das Filipinas.",
+      ru: "Адобо — традиционный рецепт из Филиппин.",
       ar: "أدوبو هي وصفة تقليدية من الفلبين.",
       zh: "阿多波炖肉 是来自菲律宾的传统食谱。",
       ja: "アドボ はフィリピンの伝統的なレシピです。",
       tr: "Adobo Filipinler kökenli geleneksel bir tariftir.",
-      it: "Adobo è una risotta tradizionale di Filippine.",
-      ko: "Adobo는(은) 필리핀의 전통 요리입니다."
+      it: "Adobo è una ricetta tradizionale delle Filippine.",
+      ko: "아도보는 필리핀의 전통 요리입니다."
     }
   },
   {

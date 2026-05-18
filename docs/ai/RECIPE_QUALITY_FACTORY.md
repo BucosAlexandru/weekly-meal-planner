@@ -51,6 +51,11 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 40 | Pierogi | ✅ | ✅ | `eeb27ad5` | 4 fixes: add servings:4, originText.fr/pt/tr (stripped diacritics) |
 | 41 | Nasi Goreng | ✅ | ✅ | `eeb27ad5` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe (no ingredient quantities, missing hi lang) |
 | 42 | Fondue | ✅ | ✅ | `11c5eb14` | 8 fixes: 3 struct fields, name.ko, originText.de/pt/ru/it/ko; NOTE: stub recipe (no ingredient quantities, missing hi lang) |
+| 43 | Masgouf | ✅ | ✅ | `f8fbcec3` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 44 | Shakshuka | ✅ | ✅ | `b1a7f417` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 45 | Salmon Soup | ✅ | ✅ | `1fd96fe1` | 12 fixes: 3 struct fields, name.it/ko/tr, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 46 | Ghormeh Sabzi | ✅ | ✅ | `2ca28c8f` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 47 | Bacalhau à Brás | ✅ | ✅ | `8ec94c6f` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko |
 
 ---
 
