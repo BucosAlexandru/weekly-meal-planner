@@ -1019,7 +1019,7 @@ export const recipes = [
       ja: "ダール",
       tr: "Dhal",
       it: "Dhal",
-      ko: "Dhal"
+      ko: "달"
     },
     category: {
       ro: "Cină",
@@ -1073,16 +1073,16 @@ export const recipes = [
       ro: "Dhal este o rețetă tradițională din India.",
       en: "Dhal is a traditional recipe from India.",
       es: "Dhal es una receta tradicional de India.",
-      fr: "Dhal est une recette traditionnelle de Inde.",
+      fr: "Dhal est une recette traditionnelle d'Inde.",
       de: "Dhal ist ein traditionelles Rezept aus Indien.",
-      pt: "Dhal é uma receita tradicional de Índia.",
-      ru: "Дал — традиционный рецепт из Индия.",
+      pt: "Dhal é uma receita tradicional da Índia.",
+      ru: "Дал — традиционный рецепт из Индии.",
       ar: "دال هي وصفة تقليدية من الهند.",
       zh: "印度扁豆汤 是来自印度的传统食谱。",
       ja: "ダール はインドの伝統的なレシピです。",
       tr: "Dhal Hindistan kökenli geleneksel bir tariftir.",
-      it: "Dhal è una risotta tradizionale di India.",
-      ko: "Dhal는(은) 인도의 전통 요리입니다."
+      it: "Dhal è una ricetta tradizionale dell'India.",
+      ko: "달은 인도의 전통 요리입니다."
     }
   },
   {

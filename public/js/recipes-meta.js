@@ -207,7 +207,7 @@ export const recipesMeta = {
                 '레몬, 마늘, 오레가노를 곁들인 그릴 돼지고기 꼬치.',
                 'नींबू, लहसुन और ओरेगानो के साथ ग्रिल्ड पोर्क स्केवर्स।') },
 
-  12: { time: 40, costRon: 14, tags: ['vegetarian','vegan','budget','healthy'],
+  12: { time: 45, costRon: 14, tags: ['vegetarian','vegan','budget','healthy'],
         desc: d('Linte cu condimente indiene — cremosă, hrănitoare și ieftină.',
                 'Indian spiced lentils — creamy, nourishing and incredibly affordable.',
                 'Lentejas con especias indias — cremosas, nutritivas e increíblemente asequibles.',
