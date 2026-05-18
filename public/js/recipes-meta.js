@@ -303,7 +303,7 @@ export const recipesMeta = {
                 '황금빛 돼지 커틀릿, 겉은 바삭 속은 부드럽.',
                 'सुनहरी ब्रेडेड पोर्क कटलेट, बाहर से कुरकुरी, अंदर से कोमल।') },
 
-  18: { time: 90, costRon: 22, tags: ['high-protein','family','one-pot'],
+  18: { time: 120, costRon: 22, tags: ['high-protein','family','one-pot'],
         desc: d('Tocăniță braziliană de fasole neagră cu porc și cârnați — consistentă și savuroasă.',
                 'Brazilian black bean stew with pork and sausages — hearty and flavourful.',
                 'Guiso brasileño de frijoles negros con cerdo y salchichas.',
