@@ -4182,6 +4182,9 @@ export const recipes = [
   },
   {
     id: 45,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Finlanda",
       en: "Finland",
@@ -4208,9 +4211,9 @@ export const recipes = [
       ar: "حساء السلمون",
       zh: "三文鱼汤",
       ja: "サーモンスープ",
-      tr: "Salmon Çorbası",
-      it: "Salmon Zuppa",
-      ko: "Salmon 수프"
+      tr: "Somon Çorbası",
+      it: "Zuppa di Salmone",
+      ko: "연어 수프"
     },
     category: {
       ro: "Prânz",
@@ -4263,14 +4266,14 @@ export const recipes = [
       es: "Sopa de salmón es una receta tradicional de Finlandia.",
       fr: "Soupe de saumon est une recette traditionnelle de Finlande.",
       de: "Lachssuppe ist ein traditionelles Rezept aus Finnland.",
-      pt: "Sopa de salmão é uma receita tradicional de Finlândia.",
-      ru: "Лохикейтто — традиционный рецепт из Финляндия.",
+      pt: "Sopa de salmão é uma receita tradicional da Finlândia.",
+      ru: "Лохикейтто — традиционный рецепт из Финляндии.",
       ar: "حساء السلمون هي وصفة تقليدية من فنلندا.",
       zh: "三文鱼汤 是来自芬兰的传统食谱。",
       ja: "サーモンスープ はフィンランドの伝統的なレシピです。",
-      tr: "Salmon çorba Finlandiya kökenli geleneksel bir tariftir.",
-      it: "Salmon zuppa è una risotta tradizionale di Finlandia.",
-      ko: "Salmon 수프는(은) 핀란드의 전통 요리입니다."
+      tr: "Somon çorbası Finlandiya kökenli geleneksel bir tariftir.",
+      it: "Zuppa di salmone è una ricetta tradizionale della Finlandia.",
+      ko: "연어 수프는 핀란드의 전통 요리입니다."
     }
   },
   {
