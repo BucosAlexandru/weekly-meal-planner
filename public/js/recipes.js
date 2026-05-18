@@ -1189,6 +1189,9 @@ export const recipes = [
   },
   {
     id: 14,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Rusia",
       en: "Russia",
@@ -1217,7 +1220,7 @@ export const recipes = [
       ja: "ボルシチ",
       tr: "Borscht",
       it: "Borscht",
-      ko: "Borscht"
+      ko: "보르시"
     },
     category: {
       ro: "Prânz",
@@ -1270,14 +1273,14 @@ export const recipes = [
       es: "Borscht es una receta tradicional de Rusia.",
       fr: "Bortsch est une recette traditionnelle de Russie.",
       de: "Borschtsch ist ein traditionelles Rezept aus Russland.",
-      pt: "Borsch é uma receita tradicional de Rússia.",
-      ru: "Борщ — традиционный рецепт из Россия.",
+      pt: "Borsch é uma receita tradicional da Rússia.",
+      ru: "Борщ — традиционный рецепт из России.",
       ar: "بورشت هي وصفة تقليدية من روسيا.",
       zh: "罗宋汤 是来自俄罗斯的传统食谱。",
       ja: "ボルシチ はロシアの伝統的なレシピです。",
-      tr: "borş Rusya kökenli geleneksel bir tariftir.",
-      it: "borsch è una risotta tradizionale di Russia.",
-      ko: "보르시는(은) 러시아의 전통 요리입니다."
+      tr: "Borş Rusya kökenli geleneksel bir tariftir.",
+      it: "Borscht è una ricetta tradizionale della Russia.",
+      ko: "보르시는 러시아의 전통 요리입니다."
     }
   },
   {
