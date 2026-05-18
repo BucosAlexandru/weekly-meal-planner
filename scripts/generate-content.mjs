@@ -1845,6 +1845,11 @@ function recipePage(recipe, rl) {
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
   const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
+  // Use recipe-specific image if it exists in public/images/, otherwise fall back to cover2.jpg
+  const recipeImgFile = path.join(PUBLIC, 'images', `${rslug}.jpg`);
+  const recipeImgUrl  = fs.existsSync(recipeImgFile)
+    ? `https://meal-planner.ro/images/${rslug}.jpg`
+    : 'https://meal-planner.ro/images/cover2.jpg';
   const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
   const overrides = { servings: recipe.servings, tipType: recipe.tipType, pairingsType: recipe.pairingsType };
   const meta    = recipeMetadata(ingr, steps, cat, code, overrides);
@@ -1859,7 +1864,7 @@ function recipePage(recipe, rl) {
 
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
-    "image":[`https://meal-planner.ro/images/cover2.jpg`],
+    "image":[recipeImgUrl],
     "description":rl.pageDesc(n,o),
     "recipeIngredient":ingr,
     "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
