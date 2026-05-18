@@ -2002,7 +2002,7 @@ export const recipes = [
       ja: "パエリア",
       tr: "Paella",
       it: "Paella",
-      ko: "Paella"
+      ko: "파에야"
     },
     category: {
       ro: "Cină",
@@ -2056,16 +2056,16 @@ export const recipes = [
       ro: "Paella este o rețetă tradițională din Spania.",
       en: "Paella is a traditional recipe from Spain.",
       es: "Paella es una receta tradicional de España.",
-      fr: "Paella est une recette traditionnelle de Espagne.",
+      fr: "Paella est une recette traditionnelle d'Espagne.",
       de: "Paella ist ein traditionelles Rezept aus Spanien.",
-      pt: "Paella é uma receita tradicional de Espanha.",
-      ru: "Паэлья — традиционный рецепт из Испания.",
+      pt: "Paella é uma receita tradicional da Espanha.",
+      ru: "Паэлья — традиционный рецепт из Испании.",
       ar: "باييلا هي وصفة تقليدية من إسبانيا.",
       zh: "西班牙海鲜饭 是来自西班牙的传统食谱。",
       ja: "パエリア はスペインの伝統的なレシピです。",
       tr: "Paella İspanya kökenli geleneksel bir tariftir.",
-      it: "Paella è una risotta tradizionale di Spagna.",
-      ko: "Paella는(은) 스페인의 전통 요리입니다."
+      it: "Paella è una ricetta tradizionale della Spagna.",
+      ko: "파에야는 스페인의 전통 요리입니다."
     }
   },
   {
