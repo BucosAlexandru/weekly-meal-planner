@@ -1,9 +1,8 @@
 name: Build & Quality Check
 
 # Runs on every push to main and on every PR targeting main.
-# A failed check blocks Vercel deployment awareness and surfaces
-# broken builds, missing recipes, curly-quote JS bugs, and bad sitemaps
-# before they reach production.
+# A failed check surfaces broken builds, missing recipes, curly-quote JS bugs,
+# and bad sitemaps before they reach production.
 on:
   push:
     branches: [main]
@@ -16,42 +15,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ── 1. Checkout ────────────────────────────────────────────────────────
+      # 1. Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ── 2. Node setup ──────────────────────────────────────────────────────
+      # 2. Node setup
       - name: Set up Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
-      # ── 3. Install dependencies ────────────────────────────────────────────
+      # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # ── 4. Curly-quote check (MUST run before build) ───────────────────────
-      # U+2018 (') and U+2019 (') in recipes.js break JS parsing silently.
-      # This is a pre-build guard — catching it early avoids a wasted build.
+      # 4. Curly-quote check (MUST run before build)
+      # U+2018 and U+2019 in recipes.js break JS parsing silently.
+      # Uses \u escape sequences so no curly-quote bytes appear in this YAML file.
       - name: Check recipes.js for curly quotes (U+2018 / U+2019)
         run: |
-          python3 - <<'EOF'
+          python3 -c "
           import sys
           src = open('public/js/recipes.js', encoding='utf-8').read()
-          lsq = src.count('‘')
-          rsq = src.count('’')
+          lsq = src.count('\u2018')
+          rsq = src.count('\u2019')
           total = lsq + rsq
           if total > 0:
-              print(f'ERROR: {total} curly quote(s) found in recipes.js')
-              print(f'  U+2018 ‘ (left):  {lsq}')
-              print(f'  U+2019 ’ (right): {rsq}')
-              print('These break JavaScript parsing. Replace with straight apostrophes before committing.')
+              print('ERROR: ' + str(total) + ' curly quote(s) found in recipes.js')
+              print('  U+2018 left  count: ' + str(lsq))
+              print('  U+2019 right count: ' + str(rsq))
+              print('Replace with straight apostrophes before committing.')
               sys.exit(1)
           print('OK: No curly quotes in recipes.js')
-          EOF
+          "
 
-      # ── 5. JavaScript syntax check (API serverless files) ─────────────────
+      # 5. JavaScript syntax check (API serverless files)
       # esbuild (step 6) covers public/js/. API files are NOT bundled,
       # so we check them explicitly with Node's built-in syntax checker.
       - name: Check JavaScript syntax (API files)
@@ -70,13 +69,13 @@ jobs:
             fi
           done
 
-      # ── 6. Full build ──────────────────────────────────────────────────────
+      # 6. Full build
       # Runs: esbuild (JS) + esbuild (CSS) + generate-content.mjs (2562 HTML pages + sitemap)
       # esbuild will abort on any JS syntax error in public/js/ source files.
       - name: Build (JS + CSS + content generation)
         run: npm run build
 
-      # ── 7. Verify minified asset files exist ──────────────────────────────
+      # 7. Verify minified asset files exist
       - name: Verify build artifacts
         run: |
           FAIL=0
@@ -94,47 +93,47 @@ jobs:
           done
           [ "$FAIL" -eq 0 ] || exit 1
 
-      # ── 8. HTML page count ─────────────────────────────────────────────────
-      # Expected: exactly 2562 pages (175 recipes × 14 languages + index pages).
-      # If this number changes, update the threshold here and in AGENTS.md.
-      - name: Verify HTML page count (expected: 2562)
+      # 8. HTML page count
+      # Expected: 2562 pages (175 recipes x 14 languages + index pages).
+      # If this number changes, update the thresholds here and in AGENTS.md.
+      - name: Verify HTML page count (expected 2562)
         run: |
           COUNT=$(find public -name "*.html" | wc -l | tr -d ' ')
           echo "HTML pages found: $COUNT"
           if [ "$COUNT" -lt 2560 ]; then
-            echo "ERROR: Too few pages — expected ~2562, got $COUNT"
+            echo "ERROR: Too few pages. Expected ~2562, got $COUNT"
             echo "Content generation may have failed or recipes were removed."
             exit 1
           fi
           if [ "$COUNT" -gt 2650 ]; then
-            echo "ERROR: Unexpectedly many pages ($COUNT) — check generate-content.mjs for duplicates"
+            echo "ERROR: Too many pages ($COUNT) -- check generate-content.mjs for duplicates"
             exit 1
           fi
           echo "Page count OK: $COUNT"
 
-      # ── 9. Sitemap validation ──────────────────────────────────────────────
+      # 9. Sitemap validation
       # Expected: sitemap.xml at repo root with 2605 <url> entries.
-      - name: Validate sitemap.xml (expected: 2605 URLs)
+      - name: Validate sitemap.xml (expected 2605 URLs)
         run: |
           if [ ! -f "sitemap.xml" ]; then
             echo "ERROR: sitemap.xml not found at repo root"
             exit 1
           fi
           URL_COUNT=$(grep -c "<url>" sitemap.xml)
-          echo "sitemap.xml <url> entries: $URL_COUNT"
+          echo "sitemap.xml url entries: $URL_COUNT"
           if [ "$URL_COUNT" -lt 2600 ]; then
-            echo "ERROR: Expected 2605 URLs, got $URL_COUNT — sitemap may be incomplete"
+            echo "ERROR: Expected 2605 URLs, got $URL_COUNT -- sitemap may be incomplete"
             exit 1
           fi
           if [ "$URL_COUNT" -gt 2700 ]; then
-            echo "ERROR: Too many URLs ($URL_COUNT) — check for sitemap generation bug"
+            echo "ERROR: Too many URLs ($URL_COUNT) -- check for sitemap generation bug"
             exit 1
           fi
           echo "Sitemap OK: $URL_COUNT URLs"
 
-      # ── 10. Secret leak check ──────────────────────────────────────────────
+      # 10. Secret leak check
       # Prevents accidentally committing live Stripe keys or Supabase service keys.
-      # The anon key in app.js is intentionally public — only service/secret keys are dangerous.
+      # The anon key in app.js is intentionally public -- only service/secret keys are dangerous.
       - name: Check for accidentally committed secrets
         run: |
           FAIL=0
