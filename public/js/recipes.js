@@ -123,9 +123,9 @@ export const recipes = [
       ar: "شوربة الكرشة",
       zh: "牛肚汤",
       ja: "トライプスープ",
-      tr: "Tripe Çorbası",
-      it: "Tripe Zuppa",
-      ko: "Tripe 수프"
+      tr: "İşkembe Çorbası",
+      it: "Zuppa di Trippa",
+      ko: "내장 수프"
     },
     category: {
       ro: "Prânz",
@@ -182,12 +182,12 @@ export const recipes = [
       fr: "Soupe de tripes est une recette traditionnelle de Roumanie.",
       de: "Kuttelsuppe ist ein traditionelles Rezept aus Rumänien.",
       pt: "Sopa de tripas é uma receita tradicional de Romênia.",
-      ru: "Суп из рубца — традиционный рецепт из Румыния.",
+      ru: "Суп из рубца — традиционный рецепт из Румынии.",
       ar: "شوربة الكرشة هي وصفة تقليدية من رومانيا.",
       zh: "牛肚汤 是来自罗马尼亚的传统食谱。",
       ja: "トライプスープ はルーマニアの伝統的なレシピです。",
-      tr: "işkembe çorba Romanya kökenli geleneksel bir tariftir.",
-      it: "trippa zuppa è una risotta tradizionale di Romania.",
+      tr: "İşkembe çorbası Romanya kökenli geleneksel bir tariftir.",
+      it: "Zuppa di trippa è una ricetta tradizionale della Romania.",
       ko: "내장 수프는(은) 루마니아의 전통 요리입니다."
     }
   },
