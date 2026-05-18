@@ -4374,6 +4374,9 @@ export const recipes = [
   },
   {
     id: 47,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Portugalia",
       en: "Portugal",
@@ -4402,7 +4405,7 @@ export const recipes = [
       ja: "バカリャウ・ア・ブラス",
       tr: "Bacalhau à Brás",
       it: "Bacalhau à Brás",
-      ko: "Bacalhau à Brás"
+      ko: "바칼랴우 아 브라스"
     },
     category: {
       ro: "Cină",
@@ -4453,16 +4456,16 @@ export const recipes = [
       ro: "Bacalhau à Brás este o rețetă tradițională din Portugalia.",
       en: "Bacalhau à Brás is a traditional recipe from Portugal.",
       es: "Bacalao a Brás es una receta tradicional de Portugal.",
-      fr: "Bacalhau à Brás est une recette traditionnelle de Portugal.",
+      fr: "Bacalhau à Brás est une recette traditionnelle du Portugal.",
       de: "Bacalhau à Brás ist ein traditionelles Rezept aus Portugal.",
-      pt: "Bacalhau à Brás é uma receita tradicional de Portugal.",
-      ru: "Бакальяу а Браш — традиционный рецепт из Португалия.",
+      pt: "Bacalhau à Brás é uma receita tradicional do Portugal.",
+      ru: "Бакальяу а Браш — традиционный рецепт из Португалии.",
       ar: "باكالهاو أ براس هي وصفة تقليدية من البرتغال.",
       zh: "布拉什鳕鱼 是来自葡萄牙的传统食谱。",
       ja: "バカリャウ・ア・ブラス はポルトガルの伝統的なレシピです。",
       tr: "Bacalhau à Brás Portekiz kökenli geleneksel bir tariftir.",
-      it: "Bacalhau à Brás è una risotta tradizionale di Portogallo.",
-      ko: "Bacalhau à Brás는(은) 포르투갈의 전통 요리입니다."
+      it: "Bacalhau à Brás è una ricetta tradizionale del Portogallo.",
+      ko: "바칼랴우 아 브라스는 포르투갈의 전통 요리입니다."
     }
   },
   {
