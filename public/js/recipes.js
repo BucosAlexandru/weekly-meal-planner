@@ -4086,6 +4086,9 @@ export const recipes = [
   },
   {
     id: 44,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Israel",
       en: "Israel",
@@ -4114,7 +4117,7 @@ export const recipes = [
       ja: "シャクシュカ",
       tr: "Shakshuka",
       it: "Shakshuka",
-      ko: "Shakshuka"
+      ko: "샤크슈카"
     },
     category: {
       ro: "Mic dejun",
@@ -4165,16 +4168,16 @@ export const recipes = [
       ro: "Shakshuka este o rețetă tradițională din Israel.",
       en: "Shakshuka is a traditional recipe from Israel.",
       es: "Shakshuka es una receta tradicional de Israel.",
-      fr: "Shakshuka est une recette traditionnelle de Israël.",
+      fr: "Shakshuka est une recette traditionnelle d'Israël.",
       de: "Shakshuka ist ein traditionelles Rezept aus Israel.",
-      pt: "Shakshuka é uma receita tradicional de Israel.",
-      ru: "Шакшука — традиционный рецепт из Израиль.",
+      pt: "Shakshuka é uma receita tradicional do Israel.",
+      ru: "Шакшука — традиционный рецепт из Израиля.",
       ar: "شكشوكة هي وصفة تقليدية من إسرائيل.",
       zh: "莎克舒卡 是来自以色列的传统食谱。",
       ja: "シャクシュカ はイスラエルの伝統的なレシピです。",
       tr: "Shakshuka İsrail kökenli geleneksel bir tariftir.",
-      it: "Shakshuka è una risotta tradizionale di Israele.",
-      ko: "Shakshuka는(은) 이스라엘의 전통 요리입니다."
+      it: "Shakshuka è una ricetta tradizionale di Israele.",
+      ko: "샤크슈카는 이스라엘의 전통 요리입니다."
     }
   },
   {
