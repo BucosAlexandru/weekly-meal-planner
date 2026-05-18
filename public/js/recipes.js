@@ -419,7 +419,7 @@ export const recipes = [
       ja: "寿司",
       tr: "Sushi",
       it: "Sushi",
-      ko: "Sushi"
+      ko: "스시"
     },
     category: {
       ro: "Cină",
@@ -473,16 +473,16 @@ export const recipes = [
       ro: "Sushi este o rețetă tradițională din Japonia.",
       en: "Sushi is a traditional recipe from Japan.",
       es: "Sushi es una receta tradicional de Japón.",
-      fr: "Sushi est une recette traditionnelle de Japon.",
+      fr: "Sushi est une recette traditionnelle du Japon.",
       de: "Sushi ist ein traditionelles Rezept aus Japan.",
       pt: "Sushi é uma receita tradicional de Japão.",
-      ru: "Суши — традиционный рецепт из Япония.",
+      ru: "Суши — традиционный рецепт из Японии.",
       ar: "سوشي هي وصفة تقليدية من اليابان.",
       zh: "寿司 是来自日本的传统食谱。",
       ja: "寿司 は日本の伝統的なレシピです。",
       tr: "Sushi Japonya kökenli geleneksel bir tariftir.",
-      it: "Sushi è una risotta tradizionale di Giappone.",
-      ko: "Sushi는(은) 일본의 전통 요리입니다."
+      it: "Sushi è una ricetta tradizionale del Giappone.",
+      ko: "스시는 일본의 전통 요리입니다."
     }
   },
   {
