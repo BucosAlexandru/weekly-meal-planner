@@ -12,6 +12,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 1 | Spaghetti Carbonara | ✅ | ✅ | `2c4e9fc6` | 10 fixes: 3 struct fields, 2 name locales, 3 originText grammar, time 20→30, desc 14 langs |
 | 2 | Tripe Soup / Ciorbă de burtă | ✅ | ✅ | `4b239d93` | 6 fixes: 3 name locales (tr/it/ko), 3 originText grammar (ru/tr/it) |
 | 3 | Quiche Lorraine | ✅ | ✅ | `12dbcf41` | 3 fixes: howIsMade.ru critical typo (рюмками→сливками), time 45→75, desc 14 langs (ham→lardons) |
+| 4 | Gazpacho | ✅ | ✅ | `4e889857` | 7 fixes: name.ko, 4 originText grammar (fr/ru/it/ko), time 15→135, remove 'quick' tag |
 | — | Tacos | ⬜ | — | — | Pending |
 | — | Pad Thai | ⬜ | — | — | Pending |
 | — | Bibimbap | ⬜ | — | — | Pending |
@@ -105,6 +106,35 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | `desc.ar` | "بالجبنة" (cheese — wrong) | "باللحم المدخن" (smoked meat) |
 
 ### Validation: ✅ build clean · ✅ RO (lardon afumat) · ✅ EN (smoked lardons) · ✅ RU (со сливками confirmed, рюмками gone)
+
+---
+
+## ID 4 — Gazpacho — Change Log
+
+**Commit:** `4e889857` | **Date:** 2026-05-18
+
+### Changes made — `public/js/recipes.js`
+| Field | Before | After |
+|---|---|---|
+| `name.ko` | `"Gazpacho"` | `"가스파초"` |
+| `originText.fr` | `"…de Espagne."` | `"…d'Espagne."` |
+| `originText.ru` | `"…из Испания."` | `"…из Испании."` |
+| `originText.it` | `"…una risotta tradizionale di Spagna."` | `"…una ricetta tradizionale della Spagna."` |
+| `originText.ko` | `"Gazpacho는(은) 스페인의 전통 요리입니다."` | `"가스파초는 스페인의 전통 요리입니다."` |
+
+### Changes made — `public/js/recipes-meta.js`
+| Field | Before | After |
+|---|---|---|
+| `time` | `15` | `135` |
+| `tags` | `['quick','vegetarian','vegan','healthy']` | `['vegetarian','vegan','healthy']` |
+
+### Not changed (confirmed correct)
+- `ingredients` (all 14 languages) — specific quantities, correct produce
+- `howIsMade` (all 14 languages) — technically correct, mandatory 2h chill already in steps
+- `desc` — correctly describes chilled tomato soup, no ingredient substitution
+- `servings`, `tipType`, `pairingsType` — already present and correct
+
+### Validation: ✅ build clean · ✅ FR (d'Espagne) · ✅ RU (из Испании tagline) · ✅ IT (ricetta tradizionale della Spagna) · ✅ KO (가스파초) · KO cascade pages updated
 
 ---
 
