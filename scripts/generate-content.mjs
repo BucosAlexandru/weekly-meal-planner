@@ -775,6 +775,545 @@ const makeFooter = (lc) => `
 </footer>`;
 
 /* ════════════════════════════════════════════════════════════════
+   MULTILINGUAL PRICING PAGES
+   ════════════════════════════════════════════════════════════════ */
+
+const PRICING_SLUGS = {
+  ro:'premium', en:'pricing', es:'precios', fr:'tarifs',
+  de:'preise',  pt:'precos',  ru:'tseny',   ar:'asaar',
+  zh:'jiage',   ja:'pricing', hi:'pricing', tr:'fiyatlar',
+  it:'prezzi',  ko:'pricing'
+};
+
+const PRICING_COPY = {
+  ro: {
+    metaTitle: 'Prețuri – Gratuit vs Premium | Meal-Planner.ro',
+    metaDesc:  'Compară planurile Gratuit și Premium. PDF-uri nelimitate, asistent AI, meniu cu buget — doar €3/lună.',
+    title:     'Prețuri simple și clare',
+    subtitle:  'Începe gratuit. Fă upgrade când ai nevoie de mai mult.',
+    freeName:  'Gratuit',
+    premName:  '⭐ Premium',
+    price:     '€3/lună',
+    popular:   'CEL MAI POPULAR',
+    cta:       'Obține Premium →',
+    backLabel: '← Înapoi la Planificator',
+    alreadyLabel:    'Ai deja un abonament?',
+    alreadyActivate: 'Activează →',
+    freeFeats: ['✅ Planificator 7 zile','✅ Listă de cumpărături automată','✅ 175 rețete din 70+ țări','✅ 14 limbi','✅ 1 PDF complet/zi','✗ PDF complet 7 zile','✗ Meniu cu buget săptămânal','✗ Asistent AI rețete','✗ Coach nutriție AI'],
+    premFeats: ['✅ Tot ce e în Gratuit, plus:','✅ PDF complet 7 zile','✅ Meniu cu buget săptămânal','✅ Asistent AI rețete (chat)','✅ Coach nutriție AI','✅ Acces nelimitat, oricând','✅ Anulezi oricând — fără angajament'],
+    faqTitle:  'Întrebări frecvente',
+    faq: [
+      ['Ce include planul Gratuit?','Acces complet la planificatorul de 7 zile, listă de cumpărături automată, 175 rețete în 14 limbi și 1 PDF pe zi.'],
+      ['Ce adaugă Premium?','Un PDF cu întregul plan de 7 zile, meniu cu buget săptămânal, asistentul AI de rețete și coach-ul de nutriție AI — toate nelimitate.'],
+      ['Cum funcționează facturarea?','€3/lună, facturat prin Stripe. Poți anula oricând din portalul clienților.'],
+      ['Cum activez după plată?','Revino pe pagina principală și introdu emailul în secțiunea „Ai deja abonament?". Statusul tău premium va fi verificat instant.'],
+      ['Este disponibil în limba mea?','Da — în 14 limbi: română, engleză, spaniolă, franceză, germană, portugheză, rusă, arabă, chineză, japoneză, hindi, turcă, italiană și coreeană.']
+    ]
+  },
+  en: {
+    metaTitle: 'Pricing – Free vs Premium | Meal-Planner.ro',
+    metaDesc:  'Compare Free and Premium plans. Unlimited PDFs, AI recipe assistant, weekly budget menu — just €3/month.',
+    title:     'Simple, honest pricing',
+    subtitle:  'Start free. Upgrade when you need more.',
+    freeName:  'Free',
+    premName:  '⭐ Premium',
+    price:     '€3/month',
+    popular:   'MOST POPULAR',
+    cta:       'Get Premium →',
+    backLabel: '← Back to Meal Planner',
+    alreadyLabel:    'Already have a subscription?',
+    alreadyActivate: 'Activate →',
+    freeFeats: ['✅ 7-day meal planner','✅ Auto shopping list','✅ 175 recipes from 70+ countries','✅ 14 languages','✅ 1 full PDF/day','✗ Full 7-day PDF download','✗ Weekly budget menu','✗ AI recipe assistant','✗ AI nutrition coach'],
+    premFeats: ['✅ Everything in Free, plus:','✅ Full 7-day PDF download','✅ Weekly budget menu','✅ AI recipe assistant (chat)','✅ AI nutrition coach','✅ Unlimited access, anytime','✅ Cancel anytime — no commitment'],
+    faqTitle:  'Frequently asked questions',
+    faq: [
+      ['What does Free include?','Full access to the 7-day meal planner, automatic shopping list, 175 recipes in 14 languages, and 1 PDF download per day.'],
+      ['What does Premium add?','A single PDF with your entire 7-day plan, a weekly budget menu, the AI recipe chat assistant, and the AI nutrition coach — all unlimited.'],
+      ['How does billing work?','€3/month, billed via Stripe. You can cancel at any time from the customer portal.'],
+      ['How do I activate after payment?','Return to the homepage and enter your email in the "Already subscribed?" section. Your premium status will be verified instantly.'],
+      ['Is it available in my language?','Yes — in 14 languages: English, Romanian, Spanish, French, German, Portuguese, Russian, Arabic, Chinese, Japanese, Hindi, Turkish, Italian, and Korean.']
+    ]
+  },
+  es: {
+    metaTitle: 'Precios – Gratis vs Premium | Meal-Planner.ro',
+    metaDesc:  'Compara los planes Gratis y Premium. PDFs ilimitados, asistente de recetas IA, menú con presupuesto — solo €3/mes.',
+    title:     'Precios simples y claros',
+    subtitle:  'Comienza gratis. Mejora cuando necesites más.',
+    freeName:  'Gratis',
+    premName:  '⭐ Premium',
+    price:     '€3/mes',
+    popular:   'MÁS POPULAR',
+    cta:       'Obtener Premium →',
+    backLabel: '← Volver al Planificador',
+    alreadyLabel:    '¿Ya tienes suscripción?',
+    alreadyActivate: 'Activar →',
+    freeFeats: ['✅ Planificador de 7 días','✅ Lista de compras automática','✅ 175 recetas de 70+ países','✅ 14 idiomas','✅ 1 PDF completo/día','✗ PDF completo de 7 días','✗ Menú semanal con presupuesto','✗ Asistente de recetas IA','✗ Coach de nutrición IA'],
+    premFeats: ['✅ Todo en Gratis, más:','✅ PDF completo de 7 días','✅ Menú semanal con presupuesto','✅ Asistente de recetas IA (chat)','✅ Coach de nutrición IA','✅ Acceso ilimitado, en cualquier momento','✅ Cancela cuando quieras'],
+    faqTitle:  'Preguntas frecuentes',
+    faq: [
+      ['¿Qué incluye el plan Gratis?','Acceso completo al planificador de 7 días, lista de compras automática, 175 recetas en 14 idiomas y 1 PDF por día.'],
+      ['¿Qué agrega Premium?','Un PDF con tu plan completo de 7 días, menú semanal con presupuesto, asistente de recetas IA y coach de nutrición IA — todo ilimitado.'],
+      ['¿Cómo funciona la facturación?','€3/mes, facturado a través de Stripe. Puedes cancelar en cualquier momento desde el portal de clientes.'],
+      ['¿Cómo activo tras el pago?','Vuelve a la página principal e introduce tu email en la sección "¿Ya suscrito?". Tu estado premium se verificará al instante.'],
+      ['¿Está disponible en mi idioma?','Sí — en 14 idiomas: español, inglés, rumano, francés, alemán, portugués, ruso, árabe, chino, japonés, hindi, turco, italiano y coreano.']
+    ]
+  },
+  fr: {
+    metaTitle: 'Tarifs – Gratuit vs Premium | Meal-Planner.ro',
+    metaDesc:  'Comparez les offres Gratuit et Premium. PDFs illimités, assistant recettes IA, menu budgétaire — seulement €3/mois.',
+    title:     'Tarifs simples et transparents',
+    subtitle:  'Commencez gratuitement. Passez à Premium quand vous en avez besoin.',
+    freeName:  'Gratuit',
+    premName:  '⭐ Premium',
+    price:     '€3/mois',
+    popular:   'LE PLUS POPULAIRE',
+    cta:       'Obtenir Premium →',
+    backLabel: '← Retour au Planificateur',
+    alreadyLabel:    'Vous avez déjà un abonnement ?',
+    alreadyActivate: 'Activer →',
+    freeFeats: ['✅ Planificateur 7 jours','✅ Liste de courses automatique','✅ 175 recettes de 70+ pays','✅ 14 langues','✅ 1 PDF complet/jour','✗ PDF complet 7 jours','✗ Menu hebdomadaire budgétaire','✗ Assistant recettes IA','✗ Coach nutrition IA'],
+    premFeats: ['✅ Tout ce qui est dans Gratuit, plus :','✅ PDF complet 7 jours','✅ Menu hebdomadaire budgétaire','✅ Assistant recettes IA (chat)','✅ Coach nutrition IA','✅ Accès illimité, à tout moment','✅ Annulez quand vous voulez'],
+    faqTitle:  'Questions fréquentes',
+    faq: [
+      ["Qu'inclut le plan Gratuit ?","Accès complet au planificateur 7 jours, liste de courses automatique, 175 recettes en 14 langues et 1 PDF par jour."],
+      ['Que ajoute Premium ?',"Un PDF avec votre plan complet de 7 jours, un menu budgétaire, l'assistant recettes IA et le coach nutrition IA — tout illimité."],
+      ['Comment fonctionne la facturation ?','€3/mois, facturé via Stripe. Vous pouvez annuler à tout moment depuis le portail client.'],
+      ['Comment activer après le paiement ?','Retournez sur la page principale et entrez votre email dans la section "Déjà abonné ?". Votre statut premium sera vérifié instantanément.'],
+      ['Est-il disponible dans ma langue ?','Oui — en 14 langues : français, anglais, roumain, espagnol, allemand, portugais, russe, arabe, chinois, japonais, hindi, turc, italien et coréen.']
+    ]
+  },
+  de: {
+    metaTitle: 'Preise – Kostenlos vs Premium | Meal-Planner.ro',
+    metaDesc:  'Kostenlose und Premium-Pläne vergleichen. Unbegrenzte PDFs, KI-Rezept-Assistent, Wochenbudget-Menü — nur €3/Monat.',
+    title:     'Einfache, transparente Preise',
+    subtitle:  'Kostenlos starten. Upgraden wenn Sie mehr brauchen.',
+    freeName:  'Kostenlos',
+    premName:  '⭐ Premium',
+    price:     '€3/Monat',
+    popular:   'AM BELIEBTESTEN',
+    cta:       'Premium holen →',
+    backLabel: '← Zurück zum Planer',
+    alreadyLabel:    'Haben Sie bereits ein Abonnement?',
+    alreadyActivate: 'Aktivieren →',
+    freeFeats: ['✅ 7-Tage-Mahlzeitenplaner','✅ Automatische Einkaufsliste','✅ 175 Rezepte aus 70+ Ländern','✅ 14 Sprachen','✅ 1 vollständiges PDF/Tag','✗ Vollständiges 7-Tage-PDF','✗ Wöchentliches Budget-Menü','✗ KI-Rezept-Assistent','✗ KI-Ernährungscoach'],
+    premFeats: ['✅ Alles aus Kostenlos, plus:','✅ Vollständiges 7-Tage-PDF','✅ Wöchentliches Budget-Menü','✅ KI-Rezept-Assistent (Chat)','✅ KI-Ernährungscoach','✅ Unbegrenzter Zugang, jederzeit','✅ Jederzeit kündbar — keine Bindung'],
+    faqTitle:  'Häufige Fragen',
+    faq: [
+      ['Was beinhaltet der kostenlose Plan?','Vollzugriff auf den 7-Tage-Planer, automatische Einkaufsliste, 175 Rezepte in 14 Sprachen und 1 PDF pro Tag.'],
+      ['Was bietet Premium zusätzlich?','Ein vollständiges 7-Tage-PDF, ein Wochenbudget-Menü, den KI-Rezept-Assistenten und den KI-Ernährungscoach — alles unbegrenzt.'],
+      ['Wie funktioniert die Abrechnung?','€3/Monat, abgerechnet über Stripe. Sie können jederzeit über das Kundenportal kündigen.'],
+      ['Wie aktiviere ich nach der Zahlung?','Kehren Sie zur Startseite zurück und geben Sie Ihre E-Mail in den Bereich "Bereits abonniert?" ein. Ihr Premium-Status wird sofort überprüft.'],
+      ['Ist es in meiner Sprache verfügbar?','Ja — in 14 Sprachen: Deutsch, Englisch, Rumänisch, Spanisch, Französisch, Portugiesisch, Russisch, Arabisch, Chinesisch, Japanisch, Hindi, Türkisch, Italienisch und Koreanisch.']
+    ]
+  },
+  pt: {
+    metaTitle: 'Preços – Gratuito vs Premium | Meal-Planner.ro',
+    metaDesc:  'Compare os planos Gratuito e Premium. PDFs ilimitados, assistente de receitas IA, menu com orçamento — apenas €3/mês.',
+    title:     'Preços simples e transparentes',
+    subtitle:  'Comece gratuitamente. Faça upgrade quando precisar de mais.',
+    freeName:  'Gratuito',
+    premName:  '⭐ Premium',
+    price:     '€3/mês',
+    popular:   'MAIS POPULAR',
+    cta:       'Obter Premium →',
+    backLabel: '← Voltar ao Planejador',
+    alreadyLabel:    'Já tem uma assinatura?',
+    alreadyActivate: 'Ativar →',
+    freeFeats: ['✅ Planejador de 7 dias','✅ Lista de compras automática','✅ 175 receitas de 70+ países','✅ 14 idiomas','✅ 1 PDF completo/dia','✗ PDF completo de 7 dias','✗ Menu semanal com orçamento','✗ Assistente de receitas IA','✗ Coach de nutrição IA'],
+    premFeats: ['✅ Tudo no Gratuito, mais:','✅ PDF completo de 7 dias','✅ Menu semanal com orçamento','✅ Assistente de receitas IA (chat)','✅ Coach de nutrição IA','✅ Acesso ilimitado, a qualquer momento','✅ Cancele quando quiser'],
+    faqTitle:  'Perguntas frequentes',
+    faq: [
+      ['O que inclui o plano Gratuito?','Acesso completo ao planejador de 7 dias, lista de compras automática, 175 receitas em 14 idiomas e 1 PDF por dia.'],
+      ['O que o Premium adiciona?','Um PDF com o seu plano completo de 7 dias, menu semanal com orçamento, assistente de receitas IA e coach de nutrição IA — tudo ilimitado.'],
+      ['Como funciona a cobrança?','€3/mês, cobrado via Stripe. Você pode cancelar a qualquer momento pelo portal do cliente.'],
+      ['Como ativo após o pagamento?','Volte à página principal e insira seu email na seção "Já assinante?". Seu status premium será verificado instantaneamente.'],
+      ['Está disponível no meu idioma?','Sim — em 14 idiomas: português, inglês, romeno, espanhol, francês, alemão, russo, árabe, chinês, japonês, hindi, turco, italiano e coreano.']
+    ]
+  },
+  ru: {
+    metaTitle: 'Цены – Бесплатно vs Премиум | Meal-Planner.ro',
+    metaDesc:  'Сравните бесплатный и премиум-планы. Неограниченные PDF, ИИ-помощник по рецептам, недельное меню — всего €3/мес.',
+    title:     'Простые и честные цены',
+    subtitle:  'Начните бесплатно. Переходите на Premium, когда нужно больше.',
+    freeName:  'Бесплатно',
+    premName:  '⭐ Премиум',
+    price:     '€3/мес',
+    popular:   'САМЫЙ ПОПУЛЯРНЫЙ',
+    cta:       'Получить Premium →',
+    backLabel: '← Вернуться к планировщику',
+    alreadyLabel:    'Уже есть подписка?',
+    alreadyActivate: 'Активировать →',
+    freeFeats: ['✅ Планировщик на 7 дней','✅ Автоматический список покупок','✅ 175 рецептов из 70+ стран','✅ 14 языков','✅ 1 полный PDF/день','✗ Полный PDF на 7 дней','✗ Недельное бюджетное меню','✗ ИИ-помощник по рецептам','✗ ИИ-тренер по питанию'],
+    premFeats: ['✅ Всё из Бесплатного, плюс:','✅ Полный PDF на 7 дней','✅ Недельное бюджетное меню','✅ ИИ-помощник по рецептам (чат)','✅ ИИ-тренер по питанию','✅ Неограниченный доступ в любое время','✅ Отмена в любой момент'],
+    faqTitle:  'Часто задаваемые вопросы',
+    faq: [
+      ['Что включает бесплатный план?','Полный доступ к 7-дневному планировщику, автоматический список покупок, 175 рецептов на 14 языках и 1 PDF в день.'],
+      ['Что добавляет Premium?','PDF со всем 7-дневным планом, недельное бюджетное меню, ИИ-помощник по рецептам и ИИ-тренер по питанию — всё без ограничений.'],
+      ['Как работает оплата?','€3/мес, оплата через Stripe. Вы можете отменить в любое время в личном кабинете.'],
+      ['Как активировать после оплаты?','Вернитесь на главную страницу и введите email в разделе "Уже подписчик?". Ваш премиум-статус будет проверен мгновенно.'],
+      ['Доступен ли он на моём языке?','Да — на 14 языках: русский, английский, румынский, испанский, французский, португальский, немецкий, арабский, китайский, японский, хинди, турецкий, итальянский и корейский.']
+    ]
+  },
+  ar: {
+    metaTitle: 'الأسعار – مجاني مقابل بريميوم | Meal-Planner.ro',
+    metaDesc:  'قارن بين الخطة المجانية وبريميوم. PDFs غير محدودة، مساعد وصفات بالذكاء الاصطناعي، قائمة طعام أسبوعية — فقط €3/شهر.',
+    title:     'أسعار بسيطة وشفافة',
+    subtitle:  'ابدأ مجاناً. قم بالترقية عندما تحتاج المزيد.',
+    freeName:  'مجاني',
+    premName:  '⭐ بريميوم',
+    price:     '€3/شهر',
+    popular:   'الأكثر شعبية',
+    cta:       'احصل على بريميوم ←',
+    backLabel: 'العودة إلى المخطط ←',
+    alreadyLabel:    'لديك اشتراك بالفعل؟',
+    alreadyActivate: 'تفعيل ←',
+    freeFeats: ['✅ مخطط وجبات لمدة 7 أيام','✅ قائمة تسوق تلقائية','✅ 175 وصفة من 70+ دولة','✅ 14 لغة','✅ ملف PDF واحد كامل/يوم','✗ ملف PDF كامل لمدة 7 أيام','✗ قائمة طعام أسبوعية بالميزانية','✗ مساعد وصفات بالذكاء الاصطناعي','✗ مدرب تغذية بالذكاء الاصطناعي'],
+    premFeats: ['✅ كل ما في المجاني، بالإضافة إلى:','✅ ملف PDF كامل لمدة 7 أيام','✅ قائمة طعام أسبوعية بالميزانية','✅ مساعد وصفات بالذكاء الاصطناعي (دردشة)','✅ مدرب تغذية بالذكاء الاصطناعي','✅ وصول غير محدود في أي وقت','✅ إلغاء في أي وقت'],
+    faqTitle:  'الأسئلة الشائعة',
+    faq: [
+      ['ماذا يتضمن الخطة المجانية؟','وصول كامل إلى مخطط 7 أيام، قائمة تسوق تلقائية، 175 وصفة بـ14 لغة وملف PDF واحد يومياً.'],
+      ['ماذا يضيف بريميوم؟','ملف PDF بخطتك الكاملة لـ7 أيام، قائمة طعام أسبوعية بالميزانية، مساعد الوصفات ومدرب التغذية — كل ذلك بلا حدود.'],
+      ['كيف يعمل الفوترة؟','€3/شهر، مدفوع عبر Stripe. يمكنك الإلغاء في أي وقت من بوابة العملاء.'],
+      ['كيف أُفعّل بعد الدفع؟','ارجع إلى الصفحة الرئيسية وأدخل بريدك الإلكتروني في قسم "مشترك بالفعل؟". سيتم التحقق من حالتك الممتازة فوراً.'],
+      ['هل هو متاح بلغتي؟','نعم — بـ14 لغة: العربية، الإنجليزية، الرومانية، الإسبانية، الفرنسية، البرتغالية، الروسية، الصينية، اليابانية، الهندية، التركية، الإيطالية والكورية.']
+    ]
+  },
+  zh: {
+    metaTitle: '定价 – 免费版 vs 高级版 | Meal-Planner.ro',
+    metaDesc:  '比较免费版和高级版。无限PDF下载、AI食谱助手、每周预算菜单 — 仅需€3/月。',
+    title:     '简单透明的定价',
+    subtitle:  '免费开始，需要更多时升级。',
+    freeName:  '免费版',
+    premName:  '⭐ 高级版',
+    price:     '€3/月',
+    popular:   '最受欢迎',
+    cta:       '获取高级版 →',
+    backLabel: '← 返回饮食计划器',
+    alreadyLabel:    '已有订阅？',
+    alreadyActivate: '激活 →',
+    freeFeats: ['✅ 7天饮食计划器','✅ 自动购物清单','✅ 175道来自70+国家的食谱','✅ 14种语言','✅ 每天1个完整PDF','✗ 完整7天PDF下载','✗ 每周预算菜单','✗ AI食谱助手','✗ AI营养教练'],
+    premFeats: ['✅ 免费版所有功能，另加：','✅ 完整7天PDF下载','✅ 每周预算菜单','✅ AI食谱助手（聊天）','✅ AI营养教练','✅ 随时无限访问','✅ 随时取消，无承诺'],
+    faqTitle:  '常见问题',
+    faq: [
+      ['免费版包含什么？','完整访问7天计划器、自动购物清单、14种语言的175道食谱以及每天1个PDF下载。'],
+      ['高级版增加了什么？','包含您完整7天计划的PDF、每周预算菜单、AI食谱聊天助手和AI营养教练 — 全部无限次使用。'],
+      ['如何计费？','每月€3，通过Stripe付款。您可以随时通过客户门户取消。'],
+      ['付款后如何激活？','返回主页，在"已订阅？"部分输入您的电子邮件。您的高级状态将立即得到验证。'],
+      ['支持我的语言吗？','是的 — 支持14种语言：中文、英语、罗马尼亚语、西班牙语、法语、葡萄牙语、俄语、阿拉伯语、日语、印地语、土耳其语、意大利语和韩语。']
+    ]
+  },
+  ja: {
+    metaTitle: '料金プラン – 無料 vs プレミアム | Meal-Planner.ro',
+    metaDesc:  '無料プランとプレミアムプランを比較。無制限PDF、AIレシピアシスタント、週次予算メニュー — わずか€3/月。',
+    title:     'シンプルで明確な料金',
+    subtitle:  '無料で始めて、必要なときにアップグレード。',
+    freeName:  '無料',
+    premName:  '⭐ プレミアム',
+    price:     '€3/月',
+    popular:   '最も人気',
+    cta:       'プレミアムを取得 →',
+    backLabel: '← ミールプランナーに戻る',
+    alreadyLabel:    'すでにサブスクリプションをお持ちですか？',
+    alreadyActivate: '有効化 →',
+    freeFeats: ['✅ 7日間ミールプランナー','✅ 自動買い物リスト','✅ 70カ国以上の175レシピ','✅ 14言語','✅ 1日1つの完全PDF','✗ 7日間完全PDFダウンロード','✗ 週次予算メニュー','✗ AIレシピアシスタント','✗ AI栄養コーチ'],
+    premFeats: ['✅ 無料版のすべて、さらに：','✅ 7日間完全PDFダウンロード','✅ 週次予算メニュー','✅ AIレシピアシスタント（チャット）','✅ AI栄養コーチ','✅ いつでも無制限アクセス','✅ いつでもキャンセル可能'],
+    faqTitle:  'よくある質問',
+    faq: [
+      ['無料プランには何が含まれますか？','7日間プランナー、自動買い物リスト、14言語の175レシピ、1日1つのPDFダウンロードへの完全アクセス。'],
+      ['プレミアムは何を追加しますか？','7日間完全PDF、週次予算メニュー、AIレシピチャットアシスタント、AI栄養コーチ — すべて無制限。'],
+      ['請求はどのように機能しますか？','月額€3、Stripe経由で請求。カスタマーポータルからいつでもキャンセルできます。'],
+      ['支払い後のアクティベート方法は？','ホームページに戻り、「すでに登録済みですか？」セクションにメールアドレスを入力してください。プレミアムステータスが即時確認されます。'],
+      ['自分の言語で利用できますか？','はい — 14言語対応：日本語、英語、ルーマニア語、スペイン語、フランス語、ドイツ語、ポルトガル語、ロシア語、アラビア語、中国語、ヒンディー語、トルコ語、イタリア語、韓国語。']
+    ]
+  },
+  hi: {
+    metaTitle: 'मूल्य निर्धारण – निःशुल्क बनाम प्रीमियम | Meal-Planner.ro',
+    metaDesc:  'निःशुल्क और प्रीमियम योजनाओं की तुलना करें। असीमित PDF, AI रेसिपी सहायक, साप्ताहिक बजट मेनू — केवल €3/माह।',
+    title:     'सरल और पारदर्शी मूल्य',
+    subtitle:  'निःशुल्क शुरू करें। जब आपको अधिक की आवश्यकता हो तो अपग्रेड करें।',
+    freeName:  'निःशुल्क',
+    premName:  '⭐ प्रीमियम',
+    price:     '€3/माह',
+    popular:   'सबसे लोकप्रिय',
+    cta:       'प्रीमियम पाएं →',
+    backLabel: '← मील प्लानर पर वापस',
+    alreadyLabel:    'पहले से सदस्यता है?',
+    alreadyActivate: 'सक्रिय करें →',
+    freeFeats: ['✅ 7-दिन का मील प्लानर','✅ स्वचालित खरीदारी सूची','✅ 70+ देशों से 175 रेसिपी','✅ 14 भाषाएं','✅ 1 पूर्ण PDF/दिन','✗ 7-दिन का पूर्ण PDF डाउनलोड','✗ साप्ताहिक बजट मेनू','✗ AI रेसिपी सहायक','✗ AI पोषण कोच'],
+    premFeats: ['✅ निःशुल्क में सब कुछ, साथ ही:','✅ 7-दिन का पूर्ण PDF डाउनलोड','✅ साप्ताहिक बजट मेनू','✅ AI रेसिपी सहायक (चैट)','✅ AI पोषण कोच','✅ कभी भी असीमित पहुंच','✅ कभी भी रद्द करें'],
+    faqTitle:  'अक्सर पूछे जाने वाले प्रश्न',
+    faq: [
+      ['निःशुल्क योजना में क्या शामिल है?','7-दिन के प्लानर, स्वचालित खरीदारी सूची, 14 भाषाओं में 175 रेसिपी और प्रतिदिन 1 PDF डाउनलोड तक पूर्ण पहुंच।'],
+      ['प्रीमियम क्या जोड़ता है?','आपके 7-दिन के पूर्ण प्लान के साथ PDF, साप्ताहिक बजट मेनू, AI रेसिपी चैट सहायक और AI पोषण कोच — सभी असीमित।'],
+      ['बिलिंग कैसे काम करती है?','€3/माह, Stripe के माध्यम से बिल किया जाता है। आप ग्राहक पोर्टल से कभी भी रद्द कर सकते हैं।'],
+      ['भुगतान के बाद सक्रिय कैसे करें?','होमपेज पर वापस जाएं और "पहले से सदस्यता है?" अनुभाग में अपना ईमेल दर्ज करें। आपकी प्रीमियम स्थिति तुरंत सत्यापित हो जाएगी।'],
+      ['क्या यह मेरी भाषा में उपलब्ध है?','हां — 14 भाषाओं में: हिंदी, अंग्रेजी, रोमानियाई, स्पेनिश, फ्रेंच, जर्मन, पुर्तगाली, रूसी, अरबी, चीनी, जापानी, तुर्की, इतालवी और कोरियाई।']
+    ]
+  },
+  tr: {
+    metaTitle: 'Fiyatlar – Ücretsiz vs Premium | Meal-Planner.ro',
+    metaDesc:  'Ücretsiz ve Premium planları karşılaştırın. Sınırsız PDF, AI tarif asistanı, haftalık bütçe menüsü — sadece €3/ay.',
+    title:     'Basit ve şeffaf fiyatlar',
+    subtitle:  'Ücretsiz başlayın. Daha fazlasına ihtiyaç duyduğunuzda yükseltin.',
+    freeName:  'Ücretsiz',
+    premName:  '⭐ Premium',
+    price:     '€3/ay',
+    popular:   'EN POPÜLER',
+    cta:       'Premium Edinin →',
+    backLabel: '← Yemek Planlayıcıya Dön',
+    alreadyLabel:    'Zaten aboneliğiniz var mı?',
+    alreadyActivate: 'Etkinleştir →',
+    freeFeats: ['✅ 7 günlük yemek planlayıcı','✅ Otomatik alışveriş listesi','✅ 70+ ülkeden 175 tarif','✅ 14 dil','✅ Günde 1 tam PDF','✗ 7 günlük tam PDF indirme','✗ Haftalık bütçe menüsü','✗ AI tarif asistanı','✗ AI beslenme koçu'],
+    premFeats: ['✅ Ücretsiz\'deki her şey, artı:','✅ 7 günlük tam PDF indirme','✅ Haftalık bütçe menüsü','✅ AI tarif asistanı (sohbet)','✅ AI beslenme koçu','✅ İstediğiniz zaman sınırsız erişim','✅ İstediğiniz zaman iptal edin'],
+    faqTitle:  'Sıkça sorulan sorular',
+    faq: [
+      ['Ücretsiz plan neleri içerir?','7 günlük planlayıcı, otomatik alışveriş listesi, 14 dilde 175 tarif ve günde 1 PDF indirmeye tam erişim.'],
+      ['Premium ne ekler?','7 günlük tam planınızı içeren PDF, haftalık bütçe menüsü, AI tarif sohbet asistanı ve AI beslenme koçu — hepsi sınırsız.'],
+      ['Faturalandırma nasıl çalışır?','Ayda €3, Stripe üzerinden faturalandırılır. Müşteri portalından istediğiniz zaman iptal edebilirsiniz.'],
+      ['Ödemeden sonra nasıl etkinleştiririm?','Ana sayfaya dönün ve "Zaten abone misiniz?" bölümüne e-postanızı girin. Premium durumunuz anında doğrulanacak.'],
+      ['Dilimde mevcut mu?','Evet — 14 dilde: Türkçe, İngilizce, Romence, İspanyolca, Fransızca, Almanca, Portekizce, Rusça, Arapça, Çince, Japonca, Hintçe, İtalyanca ve Korece.']
+    ]
+  },
+  it: {
+    metaTitle: 'Prezzi – Gratuito vs Premium | Meal-Planner.ro',
+    metaDesc:  'Confronta i piani Gratuito e Premium. PDF illimitati, assistente ricette IA, menu settimanale con budget — solo €3/mese.',
+    title:     'Prezzi semplici e trasparenti',
+    subtitle:  'Inizia gratis. Passa a Premium quando ne hai bisogno.',
+    freeName:  'Gratuito',
+    premName:  '⭐ Premium',
+    price:     '€3/mese',
+    popular:   'PIÙ POPOLARE',
+    cta:       'Ottieni Premium →',
+    backLabel: '← Torna al Pianificatore',
+    alreadyLabel:    'Hai già un abbonamento?',
+    alreadyActivate: 'Attiva →',
+    freeFeats: ['✅ Pianificatore 7 giorni','✅ Lista della spesa automatica','✅ 175 ricette da 70+ paesi','✅ 14 lingue','✅ 1 PDF completo/giorno','✗ PDF completo 7 giorni','✗ Menu settimanale con budget','✗ Assistente ricette IA','✗ Coach nutrizione IA'],
+    premFeats: ['✅ Tutto nel Gratuito, più:','✅ PDF completo 7 giorni','✅ Menu settimanale con budget','✅ Assistente ricette IA (chat)','✅ Coach nutrizione IA','✅ Accesso illimitato, in qualsiasi momento','✅ Disdici quando vuoi'],
+    faqTitle:  'Domande frequenti',
+    faq: [
+      ['Cosa include il piano Gratuito?','Accesso completo al pianificatore di 7 giorni, lista della spesa automatica, 175 ricette in 14 lingue e 1 PDF al giorno.'],
+      ['Cosa aggiunge Premium?','Un PDF con il tuo piano completo di 7 giorni, menu settimanale con budget, assistente ricette IA e coach nutrizione IA — tutto illimitato.'],
+      ['Come funziona la fatturazione?','€3/mese, fatturato tramite Stripe. Puoi annullare in qualsiasi momento dal portale clienti.'],
+      ['Come attivo dopo il pagamento?','Torna alla homepage e inserisci la tua email nella sezione "Già abbonato?". Il tuo stato premium verrà verificato istantaneamente.'],
+      ['È disponibile nella mia lingua?','Sì — in 14 lingue: italiano, inglese, rumeno, spagnolo, francese, tedesco, portoghese, russo, arabo, cinese, giapponese, hindi, turco e coreano.']
+    ]
+  },
+  ko: {
+    metaTitle: '요금제 – 무료 vs 프리미엄 | Meal-Planner.ro',
+    metaDesc:  '무료 및 프리미엄 플랜을 비교하세요. 무제한 PDF, AI 레시피 도우미, 주간 예산 메뉴 — 월 €3만으로.',
+    title:     '간단하고 투명한 요금제',
+    subtitle:  '무료로 시작하고, 더 필요할 때 업그레이드하세요.',
+    freeName:  '무료',
+    premName:  '⭐ 프리미엄',
+    price:     '€3/월',
+    popular:   '가장 인기 있는',
+    cta:       '프리미엄 구독 →',
+    backLabel: '← 식단 플래너로 돌아가기',
+    alreadyLabel:    '이미 구독 중이신가요?',
+    alreadyActivate: '활성화 →',
+    freeFeats: ['✅ 7일 식단 플래너','✅ 자동 쇼핑 목록','✅ 70개국 이상 175가지 레시피','✅ 14개 언어','✅ 하루 1개 전체 PDF','✗ 7일 전체 PDF 다운로드','✗ 주간 예산 메뉴','✗ AI 레시피 도우미','✗ AI 영양 코치'],
+    premFeats: ['✅ 무료의 모든 것, 추가로:','✅ 7일 전체 PDF 다운로드','✅ 주간 예산 메뉴','✅ AI 레시피 도우미 (채팅)','✅ AI 영양 코치','✅ 언제든지 무제한 액세스','✅ 언제든지 취소 가능'],
+    faqTitle:  '자주 묻는 질문',
+    faq: [
+      ['무료 플랜에는 무엇이 포함되나요?','7일 플래너, 자동 쇼핑 목록, 14개 언어로 된 175가지 레시피, 하루 1개 PDF 다운로드에 대한 전체 액세스.'],
+      ['프리미엄은 무엇을 추가하나요?','7일 전체 플랜이 담긴 PDF, 주간 예산 메뉴, AI 레시피 채팅 도우미, AI 영양 코치 — 모두 무제한.'],
+      ['청구는 어떻게 되나요?','월 €3, Stripe를 통해 청구됩니다. 고객 포털에서 언제든지 취소할 수 있습니다.'],
+      ['결제 후 어떻게 활성화하나요?','홈페이지로 돌아가서 "이미 구독 중이신가요?" 섹션에 이메일을 입력하세요. 프리미엄 상태가 즉시 확인됩니다.'],
+      ['제 언어로 이용 가능한가요?','네 — 14개 언어: 한국어, 영어, 루마니아어, 스페인어, 프랑스어, 독일어, 포르투갈어, 러시아어, 아랍어, 중국어, 일본어, 힌디어, 터키어, 이탈리아어.']
+    ]
+  }
+};
+
+// Build hreflang block for all pricing pages
+const PRICING_HREFLANGS = Object.entries(PRICING_SLUGS)
+  .map(([lc, sl]) => `  <link rel="alternate" hreflang="${lc}" href="https://meal-planner.ro/${lc}/${sl}/" />`)
+  .join('\n');
+const PRICING_HREFLANGS_FULL = `  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/pricing/" />\n${PRICING_HREFLANGS}`;
+
+function pricingPage(lc_code) {
+  const lc  = LANG_CONFIGS[lc_code];
+  const cp  = PRICING_COPY[lc_code];
+  const sl  = PRICING_SLUGS[lc_code];
+  const dir_attr = lc.dir_attr || 'ltr';
+  const canonical = `https://meal-planner.ro/${lc_code}/${sl}/`;
+
+  const freeRows  = cp.freeFeats.map(f => `            <li class="${f.startsWith('✗') ? 'feat-no' : ''}">${f}</li>`).join('\n');
+  const premRows  = cp.premFeats.map(f => `            <li>${f}</li>`).join('\n');
+  const faqRows   = cp.faq.map(([q, a]) => `        <div class="faq-item">
+          <dt>${q}</dt>
+          <dd>${a}</dd>
+        </div>`).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="${lc_code}" dir="${dir_attr}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${cp.metaTitle}</title>
+  <meta name="description" content="${cp.metaDesc}" />
+  <link rel="canonical" href="${canonical}" />
+${PRICING_HREFLANGS_FULL}
+
+  <!-- OG -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="${cp.metaTitle}" />
+  <meta property="og:description" content="${cp.metaDesc}" />
+  <meta property="og:url"         content="${canonical}" />
+  <meta property="og:image"       content="https://meal-planner.ro/images/cover2.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"  href="/images/favicon.svg">
+  <link rel="icon" type="image/x-icon"  href="/images/favicon.ico">
+  <link rel="apple-touch-icon"          href="/images/apple-touch-icon.png">
+  <link rel="manifest"                  href="/images/site.webmanifest">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="/css/style.min.css">
+
+  <!-- JSON-LD: Product with pricing offers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Meal-Planner.ro Premium",
+    "description": "${cp.metaDesc.replace(/"/g, '\\"')}",
+    "url": "${canonical}",
+    "image": "https://meal-planner.ro/images/cover2.jpg",
+    "brand": { "@type": "Brand", "name": "Meal-Planner.ro" },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "${cp.freeName}",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "${cp.premName}",
+        "price": "3",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .pricing-page-hero { text-align: center; padding: 56px 20px 32px; }
+    .pricing-page-hero h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 12px; color: var(--text-primary, #1a1a2e); }
+    .pricing-page-hero p { font-size: 1.1rem; color: var(--text-secondary, #555); max-width: 480px; margin: 0 auto 8px; }
+    .pricing-page-wrap { max-width: 860px; margin: 0 auto; padding: 0 16px 64px; }
+    .pricing-faq { margin-top: 48px; padding-top: 32px; border-top: 1px solid #eee; }
+    .pricing-faq h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item dt { font-weight: 600; margin-bottom: 4px; }
+    .faq-item dd { margin: 0; color: #555; font-size: 0.95rem; }
+    .pricing-back { text-align: center; margin-top: 36px; font-size: 0.9rem; color: #888; }
+    .pricing-back a { color: var(--accent, #4e8a5e); }
+    .nav-link--active { font-weight: 700; color: var(--accent, #4e8a5e) !important; }
+    .access-mini { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px 24px; margin-top: 32px; text-align: center; }
+    .access-mini p { margin-bottom: 12px; color: #555; font-size: 0.95rem; }
+    .access-mini-form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .access-mini-form input { padding: 8px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 0.95rem; min-width: 220px; }
+  </style>
+</head>
+
+<body>
+
+  ${makeNav(lc)}
+
+  <!-- HERO -->
+  <div class="pricing-page-hero">
+    <h1>${cp.title}</h1>
+    <p>${cp.subtitle}</p>
+  </div>
+
+  <!-- PRICING CARDS -->
+  <div class="pricing-page-wrap">
+    <div class="pricing-inner">
+      <div class="pricing-cards-row">
+
+        <!-- FREE -->
+        <div class="pricing-card pricing-card--free">
+          <div class="pcard-name">${cp.freeName}</div>
+          <div class="pcard-price-block">
+            <span class="pcard-price">0</span>
+            <span class="pcard-sub">/${cp.price.split('/')[1]}</span>
+          </div>
+          <ul class="pcard-features">
+${freeRows}
+          </ul>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="pricing-card pricing-card--premium">
+          <div class="pcard-popular">${cp.popular}</div>
+          <div class="pcard-name">${cp.premName}</div>
+          <div class="pcard-price-block">
+            <span class="pcard-price">${cp.price}</span>
+          </div>
+          <ul class="pcard-features">
+${premRows}
+          </ul>
+          <button class="btn btn-upgrade pcard-cta" id="pay-btn" type="button">${cp.cta}</button>
+          <p class="pcard-already">
+            <a href="/#access-card">${cp.alreadyLabel}</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Already subscribed mini-form -->
+    <div class="access-mini">
+      <p><i class="bi bi-gem"></i> <strong>${cp.alreadyLabel}</strong></p>
+      <div class="access-mini-form">
+        <input type="email" id="emailInput" placeholder="your@email.com" autocomplete="email" aria-label="Email" />
+        <a href="/#access-card" class="btn btn-verify">${cp.alreadyActivate}</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="pricing-faq">
+      <h2>${cp.faqTitle}</h2>
+      <dl>
+${faqRows}
+      </dl>
+    </div>
+
+    <div class="pricing-back">
+      <a href="${appHref(lc)}">${cp.backLabel}</a>
+    </div>
+
+  </div>
+
+  ${makeFooter(lc)}
+
+  <script src="/js/checkout.min.js" defer></script>
+</body>
+</html>`;
+}
+
+/* ════════════════════════════════════════════════════════════════
    SHOPPING LIST BUILDER
    ════════════════════════════════════════════════════════════════ */
 function buildShoppingList(plan, langCode) {
@@ -2056,6 +2595,14 @@ for (const [code, rl] of Object.entries(RECIPE_LANG)) {
   console.log(`✅ ${recipes.length} recipe pages → ${rl.dir}/`);
 }
 
+// Pricing pages — one per language
+for (const [lc_code] of Object.entries(LANG_CONFIGS)) {
+  const sl = PRICING_SLUGS[lc_code];
+  write(path.join(PUBLIC, lc_code, sl, 'index.html'), pricingPage(lc_code));
+  count++;
+}
+console.log(`✅ 14 pricing pages generated → /{lang}/{slug}/`);
+
 console.log(`\n🎉 Done! Generated ${count} pages total.`);
 
 /* ════════════════════════════════════════════════════════════════
@@ -2070,6 +2617,12 @@ const sitemapUrls = [
 for (const [code, lc] of Object.entries(LANG_CONFIGS)) {
   sitemapUrls.push(`https://meal-planner.ro${lc.dir}/`);
   PLANS.forEach(p => sitemapUrls.push(`https://meal-planner.ro${lc.dir}/${lc.planIdFn(p)}/`));
+}
+
+// Pricing pages — /pricing/ (English default) + 14 localised
+sitemapUrls.push('https://meal-planner.ro/pricing/');
+for (const [lc_code, sl] of Object.entries(PRICING_SLUGS)) {
+  sitemapUrls.push(`https://meal-planner.ro/${lc_code}/${sl}/`);
 }
 
 // Recipe pages ALL 14 languages
