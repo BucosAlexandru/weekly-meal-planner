@@ -2101,7 +2101,7 @@ export const recipes = [
       ja: "ビビンバ",
       tr: "Bibimbap",
       it: "Bibimbap",
-      ko: "Bibimbap"
+      ko: "비빔밥"
     },
     category: {
       ro: "Prânz",
@@ -2154,14 +2154,14 @@ export const recipes = [
       es: "Bibimbap es una receta tradicional de Corea del Sur.",
       fr: "Bibimbap est une recette traditionnelle de Corée du Sud.",
       de: "Bibimbap ist ein traditionelles Rezept aus Südkorea.",
-      pt: "Bibimbap é uma receita tradicional de Coreia do Sul.",
-      ru: "Бибимбап — традиционный рецепт из Южная Корея.",
+      pt: "Bibimbap é uma receita tradicional da Coreia do Sul.",
+      ru: "Бибимбап — традиционный рецепт из Южной Кореи.",
       ar: "بيبيمباب هي وصفة تقليدية من كوريا الجنوبية.",
       zh: "拌饭 是来自韩国的传统食谱。",
       ja: "ビビンバ は韓国の伝統的なレシピです。",
       tr: "Bibimbap Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Bibimbap è una risotta tradizionale di Corea del Sud.",
-      ko: "Bibimbap는(은) 대한민국의 전통 요리입니다."
+      it: "Bibimbap è una ricetta tradizionale della Corea del Sud.",
+      ko: "비빔밥은 대한민국의 전통 요리입니다."
     }
   },
   {
