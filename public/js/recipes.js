@@ -1783,6 +1783,9 @@ export const recipes = [
   },
   {
     id: 20,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Marea Britanie",
       en: "UK",
@@ -1809,9 +1812,9 @@ export const recipes = [
       ar: "سمك وبطاطا",
       zh: "炸鱼薯条",
       ja: "フィッシュ・アンド・チップス",
-      tr: "Balık and Chips",
-      it: "Pesce and Chips",
-      ko: "생선 and Chips"
+      tr: "Balık ve Cips",
+      it: "Pesce e Patatine",
+      ko: "피시 앤 칩스"
     },
     category: {
       ro: "Cină",
@@ -1862,16 +1865,16 @@ export const recipes = [
       ro: "Fish and Chips este o rețetă tradițională din Marea Britanie.",
       en: "Fish and Chips is a traditional recipe from UK.",
       es: "Fish and Chips es una receta tradicional de Reino Unido.",
-      fr: "Fish and Chips est une recette traditionnelle de Royaume-Uni.",
+      fr: "Fish and Chips est une recette traditionnelle du Royaume-Uni.",
       de: "Fish and Chips ist ein traditionelles Rezept aus Großbritannien.",
-      pt: "Fish and Chips é uma receita tradicional de Reino Unido.",
-      ru: "Фиш энд чипс — традиционный рецепт из Великобритания.",
+      pt: "Fish and Chips é uma receita tradicional do Reino Unido.",
+      ru: "Фиш энд чипс — традиционный рецепт из Великобритании.",
       ar: "سمك وبطاطا هي وصفة تقليدية من المملكة المتحدة.",
       zh: "炸鱼薯条 是来自英国的传统食谱。",
       ja: "フィッシュ・アンド・チップス はイギリスの伝統的なレシピです。",
-      tr: "balık ve Chips Birleşik Krallık kökenli geleneksel bir tariftir.",
-      it: "pesce e Chips è una risotta tradizionale di Regno Unito.",
-      ko: "생선 그리고 Chips는(은) 영국의 전통 요리입니다."
+      tr: "Balık ve Cips, Birleşik Krallık'ın geleneksel bir tarifidir.",
+      it: "Pesce e Patatine è una ricetta tradizionale del Regno Unito.",
+      ko: "피시 앤 칩스는 영국의 전통 요리입니다."
     }
   },
   {
