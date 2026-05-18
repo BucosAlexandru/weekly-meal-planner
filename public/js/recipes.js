@@ -2166,6 +2166,7 @@ export const recipes = [
   },
   {
     id: 24,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'veg',
     origin: {
@@ -2267,6 +2268,7 @@ export const recipes = [
   },
   {
     id: 25,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'veg',
     origin: {
