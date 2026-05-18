@@ -159,7 +159,7 @@ export const recipesMeta = {
                 '살사와 신선한 토핑이 곁들여진 매콤한 고기 타코.',
                 'मसालेदार मीट टैको, साल्सा और ताज़ी टॉपिंग के साथ।') },
 
-  9:  { time: 35, costRon: 24, tags: ['high-protein','family','spicy'],
+  9:  { time: 60, costRon: 24, tags: ['high-protein','family','spicy'],
         desc: d('Pui în sos de curry aromat cu roșii și condimente indiene.',
                 'Chicken in fragrant curry sauce with tomatoes and Indian spices.',
                 'Pollo en salsa de curry fragante con tomates y especias indias.',

@@ -691,6 +691,9 @@ export const recipes = [
   },
   {
     id: 9,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "India",
       en: "India",
@@ -770,16 +773,16 @@ export const recipes = [
       ro: "Curry de pui este o rețetă tradițională din India.",
       en: "Chicken Curry is a traditional recipe from India.",
       es: "Curry de pollo es una receta tradicional de India.",
-      fr: "Curry de poulet est une recette traditionnelle de Inde.",
+      fr: "Curry de poulet est une recette traditionnelle d'Inde.",
       de: "Hähnchen-Curry ist ein traditionelles Rezept aus Indien.",
-      pt: "Caril de frango é uma receita tradicional de Índia.",
-      ru: "Куриный карри — традиционный рецепт из Индия.",
+      pt: "Caril de frango é uma receita tradicional da Índia.",
+      ru: "Куриный карри — традиционный рецепт из Индии.",
       ar: "دجاج بالكاري هي وصفة تقليدية من الهند.",
       zh: "鸡肉咖喱 是来自印度的传统食谱。",
       ja: "チキンカレー はインドの伝統的なレシピです。",
-      tr: "tavuk köri Hindistan kökenli geleneksel bir tariftir.",
-      it: "pollo curry è una risotta tradizionale di India.",
-      ko: "닭고기 카레는(은) 인도의 전통 요리입니다."
+      tr: "Tavuk köri Hindistan kökenli geleneksel bir tariftir.",
+      it: "Pollo curry è una ricetta tradizionale dell'India.",
+      ko: "닭 카레는 인도의 전통 요리입니다."
     }
   },
   {
