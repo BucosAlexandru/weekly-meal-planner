@@ -1687,6 +1687,9 @@ export const recipes = [
   },
   {
     id: 19,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "China",
       en: "China",
@@ -1715,7 +1718,7 @@ export const recipes = [
       ja: "宮保鶏丁",
       tr: "Kung Pao Tavuk",
       it: "Kung Pao Pollo",
-      ko: "Kung Pao 닭"
+      ko: "쿵파오 치킨"
     },
     category: {
       ro: "Cină",
@@ -1768,14 +1771,14 @@ export const recipes = [
       es: "Pollo Kung Pao es una receta tradicional de China.",
       fr: "Poulet Kung Pao est une recette traditionnelle de Chine.",
       de: "Kung Pao Hähnchen ist ein traditionelles Rezept aus China.",
-      pt: "Frango Kung Pao é uma receita tradicional de China.",
-      ru: "Курица Гунбао — традиционный рецепт из Китай.",
+      pt: "Frango Kung Pao é uma receita tradicional da China.",
+      ru: "Курица Гунбао — традиционный рецепт из Китая.",
       ar: "دجاج كونغ باو هي وصفة تقليدية من الصين.",
       zh: "宫保鸡丁 是来自中国的传统食谱。",
       ja: "宮保鶏丁 は中国の伝統的なレシピです。",
-      tr: "Kung Pao tavuk Çin kökenli geleneksel bir tariftir.",
-      it: "Kung Pao pollo è una risotta tradizionale di Cina.",
-      ko: "Kung Pao 닭고기는(은) 중국의 전통 요리입니다."
+      tr: "Kung Pao Tavuk, Çin'in geleneksel bir tarifidir.",
+      it: "Kung Pao pollo è una ricetta tradizionale della Cina.",
+      ko: "쿵파오 치킨은 중국의 전통 요리입니다."
     }
   },
   {
