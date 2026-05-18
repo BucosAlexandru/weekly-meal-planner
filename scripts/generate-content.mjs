@@ -54,8 +54,8 @@ const PLANS = [
       it:'Una settimana ispirata alle cucine italiana, greca, francese, spagnola e marocchina. Ingredienti freschi e olio d\'oliva.',
       ko:'이탈리아, 그리스, 프랑스, 스페인, 모로코 요리에서 영감을 받은 한 주. 신선한 재료와 올리브 오일.'
     },
-    lunches: ['Spaghete Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
-    dinners: ['Musaca grecească','Ratatouille','Souvlaki','Tajine','Boeuf Bourguignon','Spanakopita','Harira'],
+    lunches: ['Spaghetti Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
+    dinners: ['Moussaka','Ratatouille','Souvlaki','Tagine','Boeuf Bourguignon','Spanakopita','Harira'],
   },
   {
     id: 'asia', idEn: 'asian-fusion', emoji: '🍜',
@@ -82,7 +82,7 @@ const PLANS = [
       ko:'일본, 한국, 베트남, 태국, 인도, 인도네시아 요리를 맛보는 7일간의 여행.'
     },
     lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
-    dinners: ['Sushi','Curry de pui','Ramen','Pui Gong Bao','Nasi Goreng','Rendang','Tom Kha Gai'],
+    dinners: ['Sushi','Chicken Curry','Ramen','Kung Pao Chicken','Nasi Goreng','Rendang','Tom Kha Gai'],
   },
   {
     id: 'buget', idEn: 'budget', emoji: '💰',
@@ -140,8 +140,8 @@ const PLANS = [
       it:'Stufati, zuppe e piatti tradizionali di Romania, Georgia, Ungheria e Polonia.',
       ko:'루마니아, 조지아, 헝가리, 폴란드의 전통 요리. 따뜻한 가정식.'
     },
-    lunches: ['Ciorbă de burtă','Bors','Fasole cu cârnați','Gulaș','Pierogi','Lobio','Chakhokhbili'],
-    dinners: ['Pui Kiev','Khinkali','Chicken Paprikash','Kotlet schabowy','Zeamă','Okroshka','Solyanka'],
+    lunches: ['Tripe Soup','Borscht','Beans with Sausages','Goulash','Pierogi','Lobio','Chakhokhbili'],
+    dinners: ['Chicken Kiev','Khinkali','Chicken Paprikash','Pork schnitzel','Zeama','Okroshka','Solyanka'],
   },
   {
     id: 'tur-mondial', idEn: 'world-tour', emoji: '🌍',
@@ -171,7 +171,7 @@ const PLANS = [
       ko:'매일 세계 각지의 요리를 즐기는 일주일: 미국, 영국, 독일, 자메이카, 나이지리아, 인도, 이스라엘.'
     },
     lunches: ['Schnitzel','Tabbouleh','Hummus','Koshari','Shakshuka','Smørrebrød','Chakchouka'],
-    dinners: ['Cheeseburger','Fish and Chips','Chifteluțe suedeze','Jerk Chicken','Jollof Rice','Biryani','Bobotie'],
+    dinners: ['Cheeseburger','Fish and Chips','Swedish Meatballs','Jerk Chicken','Jollof Rice','Biryani','Bobotie'],
   },
   {
     id: 'latin', idEn: 'latin-american', emoji: '🌶️',
@@ -233,7 +233,7 @@ const PLANS = [
       ko:'고기 없는 한 주, 식물성 단백질과 신선한 채소로 가득한 건강한 식사.'
     },
     lunches: ['Gazpacho','Tabbouleh','Ratatouille','Dhal','Shakshuka','Fasolada','Pasta alla Norma'],
-    dinners: ['Musaca grecească','Pad Thai','Rajma','Hummus','Bibimbap','Spanakopita','Mapo Tofu'],
+    dinners: ['Moussaka','Pad Thai','Rajma','Hummus','Bibimbap','Spanakopita','Mapo Tofu'],
   },
   {
     id: 'rapid', idEn: 'quick-easy', emoji: '⚡',
@@ -263,8 +263,8 @@ const PLANS = [
       it:'Pasti deliziosi pronti in 30 minuti o meno. Perfetti per le giornate impegnate.',
       ko:'30분 이내로 완성되는 맛있는 요리. 바쁜 날을 위한 완벽한 선택.'
     },
-    lunches: ['Spaghete Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
-    dinners: ['Pui Gong Bao','Pho','Tom Yum','Curry de pui','Nasi Goreng','Cheeseburger','Fish and Chips'],
+    lunches: ['Spaghetti Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
+    dinners: ['Kung Pao Chicken','Pho','Tom Yum','Chicken Curry','Nasi Goreng','Cheeseburger','Fish and Chips'],
   },
 ];
 
@@ -1391,8 +1391,8 @@ function planPage(plan, lc) {
     const dDispName = dRec?.name?.[lc_code] || dRec?.name?.en || dName;
     const lIngr = (lRec?.ingredients?.[lc_code] || lRec?.ingredients?.ro || []).slice(0,5).join(', ');
     const dIngr = (dRec?.ingredients?.[lc_code] || dRec?.ingredients?.ro || []).slice(0,5).join(', ');
-    const lSlug = lRec?.name?.ro || lRec?.name?.en ? `${lc.recipeBase}${slug(lRec.name.ro||lRec.name.en)}/` : '#';
-    const dSlug = dRec?.name?.ro || dRec?.name?.en ? `${lc.recipeBase}${slug(dRec.name.ro||dRec.name.en)}/` : '#';
+    const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${lc.recipeBase}${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
+    const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${lc.recipeBase}${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
     return `<tr>
       <td><strong>${day}</strong></td>
       <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lIngr?`<br><small class="text-muted">${esc(lIngr)}…</small>`:''}
