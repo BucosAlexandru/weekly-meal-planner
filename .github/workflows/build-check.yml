@@ -112,14 +112,15 @@ jobs:
           echo "Page count OK: $COUNT"
 
       # 9. Sitemap validation
-      # Expected: sitemap.xml at repo root with 2605 <url> entries.
+      # generate-content.mjs writes the sitemap to public/sitemap.xml (not repo root).
+      # Expected: 2605 <url> entries after build.
       - name: Validate sitemap.xml (expected 2605 URLs)
         run: |
-          if [ ! -f "sitemap.xml" ]; then
-            echo "ERROR: sitemap.xml not found at repo root"
+          if [ ! -f "public/sitemap.xml" ]; then
+            echo "ERROR: public/sitemap.xml not found after build"
             exit 1
           fi
-          URL_COUNT=$(grep -c "<url>" sitemap.xml)
+          URL_COUNT=$(grep -c "<url>" public/sitemap.xml)
           echo "sitemap.xml url entries: $URL_COUNT"
           if [ "$URL_COUNT" -lt 2600 ]; then
             echo "ERROR: Expected 2605 URLs, got $URL_COUNT -- sitemap may be incomplete"
