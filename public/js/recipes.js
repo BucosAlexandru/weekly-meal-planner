@@ -1907,7 +1907,7 @@ export const recipes = [
       ja: "フォー",
       tr: "Pho",
       it: "Pho",
-      ko: "Pho"
+      ko: "퍼"
     },
     category: {
       ro: "Prânz",
@@ -1960,16 +1960,16 @@ export const recipes = [
       ro: "Pho este o rețetă tradițională din Vietnam.",
       en: "Pho is a traditional recipe from Vietnam.",
       es: "Pho es una receta tradicional de Vietnam.",
-      fr: "Pho est une recette traditionnelle de Vietnam.",
+      fr: "Pho est une recette traditionnelle du Vietnam.",
       de: "Pho ist ein traditionelles Rezept aus Vietnam.",
-      pt: "Pho é uma receita tradicional de Vietnã.",
-      ru: "Фо — традиционный рецепт из Вьетнам.",
+      pt: "Pho é uma receita tradicional do Vietnã.",
+      ru: "Фо — традиционный рецепт из Вьетнама.",
       ar: "فو هي وصفة تقليدية من فيتنام.",
       zh: "越南河粉 是来自越南的传统食谱。",
       ja: "フォー はベトナムの伝統的なレシピです。",
       tr: "Pho Vietnam kökenli geleneksel bir tariftir.",
-      it: "Pho è una risotta tradizionale di Vietnam.",
-      ko: "Pho는(은) 베트남의 전통 요리입니다."
+      it: "Pho è una ricetta tradizionale del Vietnam.",
+      ko: "퍼는 베트남의 전통 요리입니다."
     }
   },
   {
