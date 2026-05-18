@@ -5462,7 +5462,7 @@ export const recipes = [
     },
     name: {
       ro: "Pasticada",
-      en: "Pasticada",
+      en: "Dalmatinska Pasticada",
       es: "Pasticada",
       fr: "Pasticada",
       de: "Pasticada",
@@ -10749,7 +10749,7 @@ export const recipes = [
     },
     name: {
       ro: "Köttbullar",
-      en: "Swedish Meatballs",
+      en: "Kottbullar",
       es: "Albóndigas suecas",
       fr: "Boulettes suédoises",
       de: "Schwedische Fleischbällchen",
