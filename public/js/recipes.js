@@ -323,7 +323,7 @@ export const recipes = [
       ja: "ガスパチョ",
       tr: "Gazpacho",
       it: "Gazpacho",
-      ko: "Gazpacho"
+      ko: "가스파초"
     },
     category: {
       ro: "Prânz",
@@ -377,16 +377,16 @@ export const recipes = [
       ro: "Gazpacho este o rețetă tradițională din Spania.",
       en: "Gazpacho is a traditional recipe from Spain.",
       es: "Gazpacho es una receta tradicional de España.",
-      fr: "Gaspacho est une recette traditionnelle de Espagne.",
+      fr: "Gaspacho est une recette traditionnelle d'Espagne.",
       de: "Gazpacho ist ein traditionelles Rezept aus Spanien.",
       pt: "Gaspacho é uma receita tradicional de Espanha.",
-      ru: "Гаспачо — традиционный рецепт из Испания.",
+      ru: "Гаспачо — традиционный рецепт из Испании.",
       ar: "جازباتشو هي وصفة تقليدية من إسبانيا.",
       zh: "西班牙冷汤 是来自西班牙的传统食谱。",
       ja: "ガスパチョ はスペインの伝統的なレシピです。",
       tr: "Gazpacho İspanya kökenli geleneksel bir tariftir.",
-      it: "Gazpacho è una risotta tradizionale di Spagna.",
-      ko: "Gazpacho는(은) 스페인의 전통 요리입니다."
+      it: "Gazpacho è una ricetta tradizionale della Spagna.",
+      ko: "가스파초는 스페인의 전통 요리입니다."
     }
   },
   {

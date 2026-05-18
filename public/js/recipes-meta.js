@@ -94,7 +94,7 @@ export const recipesMeta = {
                 '훈제 라르동, 크림, 달걀로 만든 클래식 프랑스 타르트, 브런치에 완벽.',
                 'स्मोक्ड लार्डन, क्रीम और अंडे के साथ क्लासिक फ्रेंच टार्ट, ब्रंच के लिए परफेक्ट।') },
 
-  4:  { time: 15, costRon: 14, tags: ['quick','vegetarian','vegan','healthy'],
+  4:  { time: 135, costRon: 14, tags: ['vegetarian','vegan','healthy'],
         desc: d('Supă rece spaniola de roșii și legume — fără gătit, servită rece.',
                 'Chilled Spanish tomato soup with fresh vegetables — no cooking needed.',
                 'Sopa fría española de tomate con verduras frescas, sin cocción.',
