@@ -107,8 +107,7 @@
 
 <body>
 
-  
-<header class="app-header no-print" role="banner">
+  <header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="Main navigation">
     <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
       <span class="nav-icon" aria-hidden="true">🥗</span>
@@ -117,7 +116,13 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link">주간 식단 계획</a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link">앱</a>
+      <a href="/ko/pricing/" class="nav-link nav-link--active" aria-current="page">⭐ Premium</a>
+    </div>
+    <div class="nav-lang">
+      <label class="visually-hidden" for="pricing-lang-ko">Select language</label>
+      <select id="pricing-lang-ko" class="lang-select" aria-label="Select language" onchange="location.href=this.value">
+        <option value="/ro/premium/">Română</option><option value="/en/pricing/">English</option><option value="/es/precios/">Español</option><option value="/fr/tarifs/">Français</option><option value="/de/preise/">Deutsch</option><option value="/pt/precos/">Português</option><option value="/ru/tseny/">Русский</option><option value="/ar/asaar/">العربية</option><option value="/zh/jiage/">中文</option><option value="/ja/pricing/">日本語</option><option value="/hi/pricing/">हिन्दी</option><option value="/tr/fiyatlar/">Türkçe</option><option value="/it/prezzi/">Italiano</option><option value="/ko/pricing/" selected>한국어</option>
+      </select>
     </div>
   </nav>
 </header>

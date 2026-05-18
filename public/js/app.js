@@ -145,15 +145,26 @@ const NAV_CONTENT_LINKS = {
   ko: { plans: { href: '/ko/jugan-menu/',        label: '📅 메뉴' },          recipes: { href: '/ko/recipes/',              label: '🍽️ 레시피' } },
   hi: { plans: { href: '/hi/weekly-plan/',       label: '📅 मेनू' },         recipes: { href: '/hi/recipes/',              label: '🍽️ व्यंजन' } },
 };
+const NAV_PRICING_LINKS = {
+  ro:'/ro/premium/', en:'/en/pricing/', es:'/es/precios/', fr:'/fr/tarifs/',
+  de:'/de/preise/', pt:'/pt/precos/', ru:'/ru/tseny/', ar:'/ar/asaar/',
+  zh:'/zh/jiage/', ja:'/ja/pricing/', hi:'/hi/pricing/', tr:'/tr/fiyatlar/',
+  it:'/it/prezzi/', ko:'/ko/pricing/'
+};
 function updateContentNav(currentLang) {
   const navPlans   = document.getElementById('nav-plans');
   const navRecipes = document.getElementById('nav-recipes');
-  if (!navPlans || !navRecipes) return;
-  const cfg = NAV_CONTENT_LINKS[currentLang] || NAV_CONTENT_LINKS.ro;
-  navPlans.href        = cfg.plans.href;
-  navPlans.textContent = cfg.plans.label;
-  navRecipes.href        = cfg.recipes.href;
-  navRecipes.textContent = cfg.recipes.label;
+  const navPricing = document.getElementById('nav-pricing');
+  if (navPlans && navRecipes) {
+    const cfg = NAV_CONTENT_LINKS[currentLang] || NAV_CONTENT_LINKS.ro;
+    navPlans.href        = cfg.plans.href;
+    navPlans.textContent = cfg.plans.label;
+    navRecipes.href        = cfg.recipes.href;
+    navRecipes.textContent = cfg.recipes.label;
+  }
+  if (navPricing) {
+    navPricing.href = NAV_PRICING_LINKS[currentLang] || '/pricing/';
+  }
 }
 
 // ===== Quota PDF

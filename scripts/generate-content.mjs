@@ -1124,6 +1124,42 @@ const PRICING_COPY = {
   }
 };
 
+// Language display names for the pricing page language switcher
+const PRICING_LANG_NAMES = {
+  ro:'Română', en:'English', es:'Español', fr:'Français', de:'Deutsch',
+  pt:'Português', ru:'Русский', ar:'العربية', zh:'中文', ja:'日本語',
+  hi:'हिन्दी', tr:'Türkçe', it:'Italiano', ko:'한국어'
+};
+
+// Pricing-specific nav: extends makeNav with ⭐ Premium active link + language switcher
+function makePricingNav(lc_code) {
+  const lc = LANG_CONFIGS[lc_code];
+  const pricingHref = `/${lc_code}/${PRICING_SLUGS[lc_code]}/`;
+  const options = Object.entries(PRICING_SLUGS)
+    .map(([code, sl]) =>
+      `<option value="/${code}/${sl}/"${code === lc_code ? ' selected' : ''}>${PRICING_LANG_NAMES[code]}</option>`
+    ).join('');
+  return `<header class="app-header no-print" role="banner">
+  <nav class="app-nav" aria-label="Main navigation">
+    <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
+      <span class="nav-icon" aria-hidden="true">🥗</span>
+      <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="${lc.dir}/" class="nav-link">${lc.sectionLabel}</a>
+      <a href="${RECIPES_NAV[lc_code].href}" class="nav-link">${RECIPES_NAV[lc_code].label}</a>
+      <a href="${pricingHref}" class="nav-link nav-link--active" aria-current="page">⭐ Premium</a>
+    </div>
+    <div class="nav-lang">
+      <label class="visually-hidden" for="pricing-lang-${lc_code}">Select language</label>
+      <select id="pricing-lang-${lc_code}" class="lang-select" aria-label="Select language" onchange="location.href=this.value">
+        ${options}
+      </select>
+    </div>
+  </nav>
+</header>`;
+}
+
 // Build hreflang block for all pricing pages
 const PRICING_HREFLANGS = Object.entries(PRICING_SLUGS)
   .map(([lc, sl]) => `  <link rel="alternate" hreflang="${lc}" href="https://meal-planner.ro/${lc}/${sl}/" />`)
@@ -1239,7 +1275,7 @@ ${PRICING_HREFLANGS_FULL}
 
 <body>
 
-  ${makeNav(lc)}
+  ${makePricingNav(lc_code)}
 
   <!-- HERO -->
   <div class="pricing-page-hero">
