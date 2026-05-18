@@ -1087,6 +1087,7 @@ export const recipes = [
   },
   {
     id: 13,
+    servings: 4,
     tipType: 'def',
     pairingsType: 'veg',
     origin: {
