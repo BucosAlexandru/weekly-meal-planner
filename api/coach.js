@@ -1,5 +1,8 @@
 // api/coach.js
+// SECURITY: Premium endpoint — requires { email, mode, lang, messages } in POST body.
+// Unauthenticated requests are rejected with 401 before touching OpenAI or Ollama.
 import 'dotenv/config';
+import { requirePremium } from './_lib/requirePremium.js';
 
 // ---- Config din ENV ----
 const USE_AI_MOCK = process.env.USE_AI_MOCK === '1';
@@ -51,6 +54,11 @@ async function askOpenAI({ mode, lang, messages }) {
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
+
+  // Validate premium subscription before any AI call (prevents billing abuse)
+  const email = await requirePremium(req, res);
+  if (!email) return; // requirePremium already sent 401/403
+
   const { mode = 'general', lang = 'ro', messages = [] } = req.body || {};
 
   // --- MOCK pentru test UI fără costuri ---

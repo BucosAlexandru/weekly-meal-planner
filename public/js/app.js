@@ -2627,11 +2627,14 @@ function applyTranslations() {
       updateContentNav(lang);
     });
   }
-// ---------- Supabase (verificare email) ----------
-const supabase = window.supabase.createClient(
-  'https://hwbzbidorkwtyvirozho.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3YnpiaWRvcmt3dHl2aXJvemhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4OTE0ODUsImV4cCI6MjA2NzQ2NzQ4NX0.4bjszL8tRw0tcnWu8BN-Et8eWyerJFNj6U9tGraEwEA'
-);
+// ---------- Verificare email (server-side) ----------
+// SECURITY: Access check is done server-side via /api/check-access.
+// The browser no longer queries Supabase directly, which prevents
+// a user from bypassing auth by calling Supabase from DevTools.
+//
+// NOTE: window.hasUnlimited is still client-side (required for client-side PDF
+// generation). A determined user can override it in DevTools. Full protection
+// requires server-side PDF generation (Phase 2 — see SECURITY_FIX_PHASE_1.md).
 window.hasUnlimited = false;
 const verifyBtn  = document.getElementById('verifyBtn');
 const emailInput = document.getElementById('emailInput');
@@ -2647,73 +2650,70 @@ if (verifyBtn && emailInput && resultDiv) {
       if (typeof updateButtonState === 'function') updateButtonState();
       return;
     }
-    const { data, error } = await supabase
-      .from('tokens')
-      .select('*')
-      .eq('email', email);
 
-    if (error) {
+    // Server validates subscription — no direct Supabase query from browser
+    let accessData;
+    try {
+      const r = await fetch(`/api/check-access?email=${encodeURIComponent(email)}`);
+      accessData = await r.json();
+    } catch (e) {
       window.hasUnlimited = false;
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.server_error || 'Eroare server. Încercați din nou.'}</span>`;
       if (typeof updateButtonState === 'function') updateButtonState();
       return;
     }
-    if (data && data.length > 0) {
-      const now = Date.now();
-      const valid = data.some(t => !t.expires_at || parseExpiryToMs(t.expires_at) > now);
 
-      if (valid) {
-        window.hasUnlimited = true;
-        // calculează expirarea maximă
-        const expiriesMs = data
-          .map(t => parseExpiryToMs(t.expires_at))
-          .filter(ms => ms !== null);
-        const maxExpiryMs = expiriesMs.length ? Math.max(...expiriesMs) : null;
-        const expiryText = maxExpiryMs
-          ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
-              new Date(maxExpiryMs).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' })
-            }`
-          : (access[lang]?.lifetime || 'nelimitat');
-        resultDiv.innerHTML = `
-          <span class="text-success mb-2 d-block">
-            ${i18n[lang]["msg.valid"]} (${expiryText})
-          </span>
-          <button id="paid-generate-pdf" class="btn btn-primary">
-            ${i18n[lang]["btn.download"]}
-          </button>
-        `;
-        // Dacă vrei să ascunzi plata pt. nelimitați, decomentează:
-        if (buyBtn) buyBtn.style.display = 'none';
-        if (currencySelUI) currencySelUI.style.display = 'none';
-        attachPdfListeners();
-        if (manageBtn) {
-          manageBtn.style.display = 'inline-block';
-          manageBtn.onclick = async () => {
-            try {
-              const r = await fetch('/api/create-portal-session', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  email,
-                  returnUrl: window.location.origin + window.location.pathname
-                })
-              });
-              const { url, error } = await r.json();
-              if (error || !url) { alert(error || 'Nu s-a putut deschide portalul Stripe.'); return; }
-              window.location.href = url;
-            } catch (e) {
-              alert('Eroare: ' + e.message);
-            }
-          };
-        }
-        if (typeof updateButtonState === 'function') updateButtonState();
-      } else {
-        window.hasUnlimited = false;
-        resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.invalid || 'Nu există acces valid pentru acest email.'}</span>`;
-        if (manageBtn) manageBtn.style.display = 'none';
-        if (typeof updateButtonState === 'function') updateButtonState();
+    const { active, found, until } = accessData;
+
+    if (active) {
+      window.hasUnlimited = true;
+      // Store email for AI endpoints (chat/coach require email in POST body)
+      window.verifiedEmail = email;
+      const expiryText = until
+        ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
+            new Date(until).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' })
+          }`
+        : (access[lang]?.lifetime || 'nelimitat');
+      resultDiv.innerHTML = `
+        <span class="text-success mb-2 d-block">
+          ${i18n[lang]["msg.valid"]} (${expiryText})
+        </span>
+        <button id="paid-generate-pdf" class="btn btn-primary">
+          ${i18n[lang]["btn.download"]}
+        </button>
+      `;
+      if (buyBtn) buyBtn.style.display = 'none';
+      if (currencySelUI) currencySelUI.style.display = 'none';
+      attachPdfListeners();
+      if (manageBtn) {
+        manageBtn.style.display = 'inline-block';
+        manageBtn.onclick = async () => {
+          try {
+            const r = await fetch('/api/create-portal-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email,
+                returnUrl: window.location.origin + window.location.pathname
+              })
+            });
+            const { url, error } = await r.json();
+            if (error || !url) { alert(error || 'Nu s-a putut deschide portalul Stripe.'); return; }
+            window.location.href = url;
+          } catch (e) {
+            alert('Eroare: ' + e.message);
+          }
+        };
       }
+      if (typeof updateButtonState === 'function') updateButtonState();
+    } else if (found) {
+      // Account exists but subscription is expired
+      window.hasUnlimited = false;
+      resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.invalid || 'Nu există acces valid pentru acest email.'}</span>`;
+      if (manageBtn) manageBtn.style.display = 'none';
+      if (typeof updateButtonState === 'function') updateButtonState();
     } else {
+      // No account found at all
       window.hasUnlimited = false;
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.not_found || 'Nu există acces pentru acest email. Plătește întâi sau verifică adresa.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
