@@ -3894,6 +3894,9 @@ export const recipes = [
   },
   {
     id: 42,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Elveția",
       en: "Switzerland",
@@ -3922,7 +3925,7 @@ export const recipes = [
       ja: "フォンデュ",
       tr: "Fondue",
       it: "Fondue",
-      ko: "Fondue"
+      ko: "퐁뒤"
     },
     category: {
       ro: "Cină",
@@ -3974,15 +3977,15 @@ export const recipes = [
       en: "Fondue is a traditional recipe from Switzerland.",
       es: "Fondue es una receta tradicional de Suiza.",
       fr: "Fondue est une recette traditionnelle de Suisse.",
-      de: "Fondue ist ein traditionelles Rezept aus Schweiz.",
-      pt: "Fondue é uma receita tradicional de Suíça.",
-      ru: "Фондю — традиционный рецепт из Швейцария.",
+      de: "Fondue ist ein traditionelles Rezept aus der Schweiz.",
+      pt: "Fondue é uma receita tradicional da Suíça.",
+      ru: "Фондю — традиционный рецепт из Швейцарии.",
       ar: "فوندو هي وصفة تقليدية من سويسرا.",
       zh: "奶酪火锅 是来自瑞士的传统食谱。",
       ja: "フォンデュ はスイスの伝統的なレシピです。",
       tr: "Fondue İsviçre kökenli geleneksel bir tariftir.",
-      it: "Fondue è una risotta tradizionale di Svizzera.",
-      ko: "Fondue는(은) 스위스의 전통 요리입니다."
+      it: "Fondue è una ricetta tradizionale della Svizzera.",
+      ko: "퐁뒤는 스위스의 전통 요리입니다."
     }
   },
   {
