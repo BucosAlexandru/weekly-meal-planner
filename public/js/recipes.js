@@ -4278,6 +4278,9 @@ export const recipes = [
   },
   {
     id: 46,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Iran",
       en: "Iran",
@@ -4306,7 +4309,7 @@ export const recipes = [
       ja: "ゴルメサブジ",
       tr: "Ghormeh Sabzi",
       it: "Ghormeh Sabzi",
-      ko: "Ghormeh Sabzi"
+      ko: "고르메 사브지"
     },
     category: {
       ro: "Cină",
@@ -4357,16 +4360,16 @@ export const recipes = [
       ro: "Ghormeh Sabzi este o rețetă tradițională din Iran.",
       en: "Ghormeh Sabzi is a traditional recipe from Iran.",
       es: "Ghormeh Sabzi es una receta tradicional de Irán.",
-      fr: "Ghormeh Sabzi est une recette traditionnelle de Iran.",
+      fr: "Ghormeh Sabzi est une recette traditionnelle d'Iran.",
       de: "Ghormeh Sabzi ist ein traditionelles Rezept aus Iran.",
-      pt: "Ghormeh Sabzi é uma receita tradicional de Irã.",
-      ru: "Гормех сабзи — традиционный рецепт из Иран.",
+      pt: "Ghormeh Sabzi é uma receita tradicional do Irã.",
+      ru: "Гормех сабзи — традиционный рецепт из Ирана.",
       ar: "غورمه سبزي هي وصفة تقليدية من إيران.",
       zh: "波斯香草炖牛肉 是来自伊朗的传统食谱。",
       ja: "ゴルメサブジ はイランの伝統的なレシピです。",
       tr: "Ghormeh Sabzi İran kökenli geleneksel bir tariftir.",
-      it: "Ghormeh Sabzi è una risotta tradizionale di Iran.",
-      ko: "Ghormeh Sabzi는(은) 이란의 전통 요리입니다."
+      it: "Ghormeh Sabzi è una ricetta tradizionale dell'Iran.",
+      ko: "고르메 사브지는 이란의 전통 요리입니다."
     }
   },
   {
