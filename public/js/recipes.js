@@ -16720,6 +16720,9 @@ export const recipes = [
   },
   {
     id: 182,
+    servings: 2,
+    tipType: 'japanese',
+    pairingsType: 'japanese',
     origin: {
       ro: "Japonia", en: "Japan", es: "Japón", fr: "Japon", de: "Japan",
       pt: "Japão", ru: "Япония", ar: "اليابان", zh: "日本", ja: "日本",
@@ -16777,7 +16780,7 @@ export const recipes = [
       ar: "رامن شويو وصفة تقليدية من اليابان.",
       zh: "酱油拉面是来自日本的传统食谱。",
       ja: "醤油ラーメンは日本の伝統的なレシピです。",
-      tr: "Shoyu Ramen Japonya kökenli geleneksel bir tariftir.",
+      tr: "Shoyu Ramen, Japonya kökenli geleneksel bir tariftir.",
       it: "Ramen Shoyu è una ricetta tradizionale del Giappone.",
       ko: "쇼유 라멘은 일본의 전통 요리입니다."
     }
