@@ -16787,6 +16787,9 @@ export const recipes = [
   },
   {
     id: 183,
+    servings: 2,
+    tipType: 'japanese',
+    pairingsType: 'japanese',
     origin: {
       ro: "Japonia", en: "Japan", es: "Japón", fr: "Japon", de: "Japan",
       pt: "Japão", ru: "Япония", ar: "اليابان", zh: "日本", ja: "日本",
@@ -16844,7 +16847,7 @@ export const recipes = [
       ar: "رامن ميسو وصفة تقليدية من اليابان.",
       zh: "味噌拉面是来自日本的传统食谱。",
       ja: "味噌ラーメンは日本の伝統的なレシピです。",
-      tr: "Miso Ramen Japonya kökenli geleneksel bir tariftir.",
+      tr: "Miso Ramen, Japonya kökenli geleneksel bir tariftir.",
       it: "Ramen Miso è una ricetta tradizionale del Giappone.",
       ko: "미소 라멘은 일본의 전통 요리입니다."
     }
