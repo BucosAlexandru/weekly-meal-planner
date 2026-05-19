@@ -6966,6 +6966,9 @@ export const recipes = [
   },
   {
     id: 75,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Maroc",
       en: "Morocco",
@@ -6994,7 +6997,7 @@ export const recipes = [
       ja: "ハリラ",
       tr: "Harira",
       it: "Harira",
-      ko: "Harira"
+      ko: "하리라"
     },
     category: {
       ro: "Prânz",
@@ -7045,16 +7048,16 @@ export const recipes = [
       ro: "Harira este o rețetă tradițională din Maroc.",
       en: "Harira is a traditional recipe from Morocco.",
       es: "Harira es una receta tradicional de Marruecos.",
-      fr: "Harira est une recette traditionnelle de Maroc.",
+      fr: "Harira est une recette traditionnelle du Maroc.",
       de: "Harira ist ein traditionelles Rezept aus Marokko.",
-      pt: "Harira é uma receita tradicional de Marrocos.",
+      pt: "Harira é uma receita tradicional do Marrocos.",
       ru: "Харира — традиционный рецепт из Марокко.",
       ar: "حريرة هي وصفة تقليدية من المغرب.",
       zh: "摩洛哥汤 是来自摩洛哥的传统食谱。",
       ja: "ハリラ はモロッコの伝統的なレシピです。",
       tr: "Harira Fas kökenli geleneksel bir tariftir.",
-      it: "Harira è una risotta tradizionale di Marocco.",
-      ko: "Harira는(은) 모로코의 전통 요리입니다."
+      it: "Harira è una ricetta tradizionale del Marocco.",
+      ko: "하리라는 모로코의 전통 요리입니다."
     }
   },
   {
