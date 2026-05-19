@@ -7538,6 +7538,9 @@ export const recipes = [
   },
   {
     id: 81,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Moldova",
       en: "Moldova",
@@ -7551,7 +7554,7 @@ export const recipes = [
       ja: "モルドバ",
       tr: "Moldova",
       it: "Moldova",
-      ko: "Moldova"
+      ko: "몰도바"
     },
     name: {
       ro: "Zeamă",
@@ -7566,7 +7569,7 @@ export const recipes = [
       ja: "ゼアマ",
       tr: "Zeama",
       it: "Zeama",
-      ko: "Zeama"
+      ko: "제아마"
     },
     category: {
       ro: "Prânz",
@@ -7619,14 +7622,14 @@ export const recipes = [
       es: "Zeama es una receta tradicional de Moldavia.",
       fr: "Zeama est une recette traditionnelle de Moldavie.",
       de: "Zeama ist ein traditionelles Rezept aus Moldawien.",
-      pt: "Zeama é uma receita tradicional de Moldávia.",
-      ru: "Зяма — традиционный рецепт из Молдова.",
+      pt: "Zeama é uma receita tradicional da Moldávia.",
+      ru: "Зяма — традиционный рецепт из Молдовы.",
       ar: "زياما هي وصفة تقليدية من مولدوفا.",
       zh: "摩尔多瓦鸡汤 是来自摩尔多瓦的传统食谱。",
       ja: "ゼアマ はモルドバの伝統的なレシピです。",
       tr: "Zeama Moldova kökenli geleneksel bir tariftir.",
-      it: "Zeama è una risotta tradizionale di Moldova.",
-      ko: "Zeama는(은) Moldova의 전통 요리입니다."
+      it: "Zeama è una ricetta tradizionale della Moldova.",
+      ko: "제아마는 몰도바의 전통 요리입니다."
     }
   },
   {
