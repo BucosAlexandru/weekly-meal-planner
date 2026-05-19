@@ -104,6 +104,12 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 93 | Cinnamon Bun | ✅ | ✅ | `1cb35fbc` | 13 fixes: 3 struct fields, add origin.pt (missing!), name tr/it/ko, originText.pt/ru/tr/it/ko, howIsMade.tr/it/ko |
 | 94 | Chiles en nogada | ✅ | ✅ | `65ccb271` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it |
 | 95 | Lentil Soup | ✅ | ✅ | `4f0399d0` | 18 fixes: 3 struct fields, origin tr/it/ko, name tr/it/ko, originText.en/fr/de/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
+| 96 | Spanakopita | ✅ | ✅ | `d450ed9c` | 9 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko, howIsMade.tr/it/ko |
+| 97 | Jollof Rice | ✅ | ✅ | `5dbb975f` | 13 fixes: 3 struct fields, origin.tr/ko, name.it/ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it |
+| 98 | Oka i'a | ✅ | ✅ | `532191d5` | 10 fixes: 3 struct fields, origin.ko, name.ko, originText.it/ko, howIsMade.tr/it/ko |
+| 99 | Khorovats | ✅ | ✅ | `761e6858` | 13 fixes: 3 struct fields, origin.tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
+| 100 | Verivorst | ✅ | ✅ | `4375692f` | 12 fixes: 3 struct fields, origin.tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it |
+| 102 | Tteokbokki | ✅ | ✅ | `7315b69e` | 5 fixes: name.ko, originText.pt/ru/it/ko (well-formed recipe, no stubs) |
 
 ---
 
