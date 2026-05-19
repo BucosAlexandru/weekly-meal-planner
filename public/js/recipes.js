@@ -6582,6 +6582,9 @@ export const recipes = [
   },
   {
     id: 70,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "El Salvador",
       en: "El Salvador",
@@ -6595,7 +6598,7 @@ export const recipes = [
       ja: "エルサルバドル",
       tr: "El Salvador",
       it: "El Salvador",
-      ko: "El Salvador"
+      ko: "엘살바도르"
     },
     name: {
       ro: "Pupusa",
@@ -6610,7 +6613,7 @@ export const recipes = [
       ja: "ププサ",
       tr: "Pupusa",
       it: "Pupusa",
-      ko: "Pupusa"
+      ko: "푸푸사"
     },
     category: {
       ro: "Gustare",
@@ -6661,16 +6664,16 @@ export const recipes = [
       ro: "Pupusa este o rețetă tradițională din El Salvador.",
       en: "Pupusa is a traditional recipe from El Salvador.",
       es: "Pupusa es una receta tradicional de El Salvador.",
-      fr: "Pupusa est une recette traditionnelle de Salvador.",
+      fr: "Pupusa est une recette traditionnelle du Salvador.",
       de: "Pupusa ist ein traditionelles Rezept aus El Salvador.",
       pt: "Pupusa é uma receita tradicional de El Salvador.",
-      ru: "Пупуса — традиционный рецепт из Сальвадор.",
+      ru: "Пупуса — традиционный рецепт из Сальвадора.",
       ar: "ببوسا هي وصفة تقليدية من السلفادور.",
       zh: "玉米饼 是来自萨尔瓦多的传统食谱。",
       ja: "ププサ はエルサルバドルの伝統的なレシピです。",
       tr: "Pupusa El Salvador kökenli geleneksel bir tariftir.",
-      it: "Pupusa è una risotta tradizionale di El Salvador.",
-      ko: "Pupusa는(은) El Salvador의 전통 요리입니다."
+      it: "Pupusa è una ricetta tradizionale di El Salvador.",
+      ko: "푸푸사는 엘살바도르의 전통 요리입니다."
     }
   },
   {
