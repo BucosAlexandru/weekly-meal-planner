@@ -15405,6 +15405,9 @@ export const recipes = [
   },
   {
     id: 168,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Marea Britanie",
       en: "United Kingdom",
@@ -15431,9 +15434,9 @@ export const recipes = [
       ar: "فطيرة الراعي",
       zh: "牧羊人派",
       ja: "シェパーズパイ",
-      tr: "Shepherd's Pie",
-      it: "Shepherd's Pie",
-      ko: "Shepherd's Pie"
+      tr: "Çoban Turtası",
+      it: "Torta del Pastore",
+      ko: "셰퍼즈 파이"
     },
     category: {
       ro: "Prânz",
@@ -15461,9 +15464,9 @@ export const recipes = [
       ar: ["لحم غنم مفروم", "بطاطا", "جزر", "بازلاء", "بصل", "زبدة", "حليب"],
       zh: ["羊肉末", "土豆", "胡萝卜", "豌豆", "洋葱", "黄油", "牛奶"],
       ja: ["ひき肉（羊）", "じゃがいも", "にんじん", "グリーンピース", "玉ねぎ", "バター", "牛乳"],
-      tr: ["kıyılmış kuzu", "patates", "havuçs", "bezelye", "soğbir", "tereyağı", "süt"],
-      it: ["tritato agnello", "patate", "carotas", "piselli", "cipolla", "burro", "latte"],
-      ko: ["다진 양고기", "감자", "당근s", "완두콩", "양파", "버터", "우유"]
+      tr: ["kıyılmış kuzu", "patates", "havuç", "bezelye", "soğan", "tereyağı", "süt"],
+      it: ["agnello tritato", "patate", "carote", "piselli", "cipolla", "burro", "latte"],
+      ko: ["다진 양고기", "감자", "당근", "완두콩", "양파", "버터", "우유"]
     },
     howIsMade: {
       ro: "Carnea se călește cu legumele, se pune într-un vas, se acoperă cu piure de cartofi și se coace până se rumenește.",
@@ -15476,24 +15479,24 @@ export const recipes = [
       ar: "اطبخ لحم الغنم مع الخضار، ضعهم في طبق، غطهم بالبطاطا المهروسة واخبز حتى يتحمر.",
       zh: "将羊肉和蔬菜炒熟，放入盘中，盖上土豆泥，烤至金黄。",
       ja: "羊肉と野菜を炒め、耐熱皿に入れ、マッシュポテトで覆い、焼き色がつくまで焼く。",
-      tr: "Pişirin kuzu ile sebzeler, yerleştirin yemek, üstüne ile ezilmiş patates, ve Fırında pişir altın rengi.",
-      it: "Cuoci agnello con verdure, metti piatto, sopra con schiacciato patate, e Cuoci al forno dorato.",
-      ko: "조리하고 양고기와 채소, 놓습니다 에서 a 요리, 위에와 으깬 감자, 그리고 오븐에 구워 노릇하게하세요."
+      tr: "Kıyılmış kuzuyu sebzelerle kavurun, bir fırın kabına aktarın, üzerine patates püresi yayın ve altın rengi alana kadar fırında pişirin.",
+      it: "Rosolate l'agnello tritato con le verdure, trasferite in una pirofila, coprite con purè di patate e cuocete in forno fino a doratura.",
+      ko: "다진 양고기와 채소를 볶은 후 오븐 용기에 담고, 위에 으깬 감자를 올려 황금빛이 될 때까지 오븐에서 굽습니다."
     },
     originText: {
       ro: "Plăcinta ciobanului este o rețetă tradițională din Marea Britanie.",
       en: "Shepherd's Pie is a traditional recipe from United Kingdom.",
       es: "Pastel de pastor es una receta tradicional de Reino Unido.",
-      fr: "Hachis parmentier est une recette traditionnelle de Royaume-Uni.",
-      de: "Shepherd's Pie ist ein traditionelles Rezept aus Vereinigtes Königreich.",
-      pt: "Torta do Pastor é uma receita tradicional de Reino Unido.",
-      ru: "Пастуший пирог — традиционный рецепт из Великобритания.",
+      fr: "Hachis parmentier est une recette traditionnelle du Royaume-Uni.",
+      de: "Shepherd's Pie ist ein traditionelles Rezept aus dem Vereinigten Königreich.",
+      pt: "Torta do Pastor é uma receita tradicional do Reino Unido.",
+      ru: "Пастуший пирог — традиционный рецепт из Великобритании.",
       ar: "فطيرة الراعي هي وصفة تقليدية من المملكة المتحدة.",
       zh: "牧羊人派 是来自英国的传统食谱。",
       ja: "シェパーズパイ はイギリスの伝統的なレシピです。",
-      tr: "Shepherd's Pie Birleşik Krallık kökenli geleneksel bir tariftir.",
-      it: "Shepherd's Pie è una risotta tradizionale di Regno Unito.",
-      ko: "Shepherd's Pie는(은) 영국의 전통 요리입니다."
+      tr: "Çoban Turtası, Birleşik Krallık kökenli geleneksel bir tariftir.",
+      it: "Torta del Pastore è una ricetta tradizionale del Regno Unito.",
+      ko: "셰퍼즈 파이는 영국의 전통 요리입니다."
     }
   },
   {
