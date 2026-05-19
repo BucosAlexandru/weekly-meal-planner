@@ -14829,6 +14829,9 @@ export const recipes = [
   },
   {
     id: 162,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Mexic",
       en: "Mexico",
@@ -14857,7 +14860,7 @@ export const recipes = [
       ja: "トラユーダス",
       tr: "Tlayudas",
       it: "Tlayudas",
-      ko: "Tlayudas"
+      ko: "틀라유다스"
     },
     category: {
       ro: "Cină",
@@ -14885,9 +14888,9 @@ export const recipes = [
       ar: ["تورتيلا كبيرة", "فول مقلي", "جبن واهاكا", "لحم (عادة لحم بقري أو دجاج أو تشوريزو)", "خس", "أفوكادو", "طماطم", "بصل", "صلصة"],
       zh: ["大玉米饼", "炒豆泥", "瓦哈卡奶酪", "肉类（通常为牛肉、鸡肉或墨西哥香肠）", "生菜", "牛油果", "番茄", "洋葱", "辣酱"],
       ja: ["大きなトルティーヤ", "リフライドビーンズ", "オアハカチーズ", "肉（牛肉・鶏肉・チョリソ）", "レタス", "アボカド", "トマト", "玉ねぎ", "サルサ"],
-      tr: ["büyük tortilla", "yeniden kızartılmış fasulye", "Oaxaca peynir", "et (genellikle dana eti, tavuk, veya chorizo)", "marul", "avokado", "domates", "soğbir", "salsa"],
-      it: ["grande tortilla", "rifritto fagioli", "Oaxaca formaggio", "carne (di solito manzo, pollo, o chorizo)", "lattuga", "avocado", "pomodori", "cipolla", "salsa"],
-      ko: ["큰 토르티야", "볶은 콩", "Oaxaca 치즈", "고기 (보통 소고기, 닭고기, 또는 초리소)", "상추", "아보카도", "토마토", "양파", "살사"]
+      tr: ["büyük tortilla", "yeniden kızartılmış fasulye", "Oaxaca peyniri", "et (genellikle dana eti, tavuk veya chorizo)", "marul", "avokado", "domates", "soğan", "salsa"],
+      it: ["grande tortilla", "fagioli rifritti", "formaggio Oaxaca", "carne (di solito manzo, pollo o chorizo)", "lattuga", "avocado", "pomodori", "cipolla", "salsa"],
+      ko: ["큰 토르티야", "볶은 콩", "와하카 치즈", "고기 (보통 소고기, 닭고기, 또는 초리소)", "상추", "아보카도", "토마토", "양파", "살사"]
     },
     howIsMade: {
       ro: "Întinde fasolea pe tortilla, adaugă carne, brânză și legume. Coace sau prăjește până devine crocantă.",
@@ -14900,24 +14903,24 @@ export const recipes = [
       ar: "افرد الفول على التورتيلا، أضف اللحم والجبن والخضار. اخبزها أو اشوِها حتى تصبح مقرمشة.",
       zh: "将豆泥抹在玉米饼上，加入肉、奶酪和蔬菜，烤或煎至酥脆。",
       ja: "トルティーヤに豆を塗り、肉・チーズ・野菜をのせて焼くかグリルしてカリッとさせる。",
-      tr: "yayın fasulye üstüne tortilla, Ekleyin et, peynir ve sebzeler. fırında pişirin veya ızgara yapın çıtır.",
-      it: "stendi fagioli su tortilla, Aggiungi carne, formaggio e verdure. cuoci in forno o griglia croccante.",
-      ko: "펼칩니다 콩 위에 토르티야, 넣고 고기, 치즈그리고 채소. 오븐에서 굽습니다 또는 굽습니다 바삭한하세요."
+      tr: "Fasulyeyi tortilla üzerine yayın, et, peynir ve sebzeler ekleyin. Çıtır olana kadar fırında pişirin veya ızgara yapın.",
+      it: "Stendi i fagioli sulla tortilla, aggiungi carne, formaggio e verdure. Cuoci in forno o griglia finché croccante.",
+      ko: "토르티야에 콩을 펴 바르고 고기, 치즈, 채소를 올려 바삭해질 때까지 굽습니다."
     },
     originText: {
       ro: "Tlayudas este o rețetă tradițională din Mexic.",
       en: "Tlayudas is a traditional recipe from Mexico.",
       es: "Tlayudas es una receta tradicional de México.",
-      fr: "Tlayudas est une recette traditionnelle de Mexique.",
+      fr: "Tlayudas est une recette traditionnelle du Mexique.",
       de: "Tlayudas ist ein traditionelles Rezept aus Mexiko.",
-      pt: "Tlayudas é uma receita tradicional de México.",
-      ru: "Тлайудас — традиционный рецепт из Мексика.",
+      pt: "Tlayudas é uma receita tradicional do México.",
+      ru: "Тлайудас — традиционный рецепт из Мексики.",
       ar: "تلايوداس هي وصفة تقليدية من المكسيك.",
       zh: "墨西哥大玉米饼 是来自墨西哥的传统食谱。",
       ja: "トラユーダス はメキシコの伝統的なレシピです。",
       tr: "Tlayudas Meksika kökenli geleneksel bir tariftir.",
-      it: "Tlayudas è una risotta tradizionale di Messico.",
-      ko: "Tlayudas는(은) 멕시코의 전통 요리입니다."
+      it: "Tlayudas è una ricetta tradizionale del Messico.",
+      ko: "틀라유다스는 멕시코의 전통 요리입니다."
     }
   },
   {
