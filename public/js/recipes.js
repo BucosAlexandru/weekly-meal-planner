@@ -12633,9 +12633,9 @@ export const recipes = [
       ar: "ليتوانيا",
       zh: "立陶宛",
       ja: "リトアニア",
-      tr: "Lithuania",
-      it: "Lithuania",
-      ko: "Lithuania"
+      tr: "Litvanya",
+      it: "Lituania",
+      ko: "리투아니아"
     },
     name: {
       ro: "Cepelinai",
@@ -12650,7 +12650,7 @@ export const recipes = [
       ja: "ツェペリナイ",
       tr: "Cepelinai",
       it: "Cepelinai",
-      ko: "Cepelinai"
+      ko: "체펠리나이"
     },
     category: {
       ro: "Prânz",
@@ -12667,6 +12667,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["cartofi", "carne tocată", "ceapă", "smântână", "bacon", "sare", "piper"],
       en: ["potatoes", "minced meat", "onion", "sour cream", "bacon", "salt", "pepper"],
@@ -12678,9 +12681,9 @@ export const recipes = [
       ar: ["بطاطس", "لحم مفروم", "بصل", "كريمة حامضة", "لحم مقدد", "ملح", "فلفل"],
       zh: ["土豆", "肉末", "洋葱", "酸奶油", "培根", "盐", "胡椒"],
       ja: ["ジャガイモ", "ひき肉", "玉ねぎ", "サワークリーム", "ベーコン", "塩", "コショウ"],
-      tr: ["patates", "kıyılmış et", "soğbir", "ekşi krema", "pastırma", "tuz", "biber"],
-      it: ["patate", "tritato carne", "cipolla", "acidulo panna", "pancetta", "sale", "peperone"],
-      ko: ["감자", "다진 고기", "양파", "새콤한 크림", "베이컨", "소금", "고추"]
+      tr: ["patates", "kıyılmış et", "soğan", "ekşi krema", "pastırma", "tuz", "biber"],
+      it: ["patate", "carne tritata", "cipolla", "panna acida", "pancetta", "sale", "pepe"],
+      ko: ["감자", "다진 고기", "양파", "새콤한 크림", "베이컨", "소금", "후추"]
     },
     howIsMade: {
       ro: "Rade cartofii, amestecă cu făină și umple cu carne tocată, formează găluște mari și fierbe-le până devin moi. Servește cu smântână.",
@@ -12693,9 +12696,9 @@ export const recipes = [
       ar: "ابشر البطاطس وامزجها بالدقيق واحشها باللحم المفروم، شكّل كرات كبيرة واسلقها حتى تنضج. قدمها مع القشدة الحامضة.",
       zh: "土豆擦丝加面粉，包入肉末做成大团，煮熟后配酸奶油食用。",
       ja: "じゃがいもをすりおろし小麦粉と混ぜ、ひき肉を包み大きな団子にして茹で、サワークリームを添える。",
-      tr: "Grate patates, Karıştırın ile un ve doldurun ile kıyılmış et, şekil verin büyük mantı ve bağlayın ve yumuşak. servis edin ile ekşi krema.",
-      it: "Grate patate, Mescola con farina e farcisci con tritato carne, forma grande ravioli e bolio morbido. servi con acidulo panna.",
-      ko: "감자를 갈아 밀가루와 섞고 다진 고기로 속을 채워주세요. 큰 만두 모양으로 빚어 부드러워질 때까지 삶아주세요. 사워크림과 함께 제공해주세요."
+      tr: "Patatesler rendeleyin, un ile karıştırın ve kıyma ile doldurun, büyük köfte yapın ve yumuşayana kadar haşlayın. Ekşi krema ile servis yapın.",
+      it: "Grattugiate le patate, mescolatele con farina e riempitele con carne tritata, formate grandi gnocchi e lessateli fino a morbidezza. Servite con panna acida.",
+      ko: "감자를 갈아 밀가루와 섞고 다진 고기로 속을 채웁니다. 큰 만두 모양으로 빚어 부드러워질 때까지 삶습니다. 사워크림과 함께 제공합니다."
     },
     originText: {
       ro: "Cepelinai este o rețetă tradițională din Lituania.",
@@ -12703,14 +12706,14 @@ export const recipes = [
       es: "Cepelinai es una receta tradicional de Lituania.",
       fr: "Cepelinai est une recette traditionnelle de Lituanie.",
       de: "Cepelinai ist ein traditionelles Rezept aus Litauen.",
-      pt: "Cepelinai é uma receita tradicional de Lituânia.",
-      ru: "Цепелинай — традиционный рецепт из Литва.",
+      pt: "Cepelinai é uma receita tradicional da Lituânia.",
+      ru: "Цепелинай — традиционный рецепт из Литвы.",
       ar: "سيبيليناي هي وصفة تقليدية من ليتوانيا.",
       zh: "立陶宛土豆团 是来自立陶宛的传统食谱。",
       ja: "ツェペリナイ はリトアニアの伝統的なレシピです。",
-      tr: "Cepelinai Lithuania kökenli geleneksel bir tariftir.",
-      it: "Cepelinai è una risotta tradizionale di Lithuania.",
-      ko: "Cepelinai는(은) Lithuania의 전통 요리입니다."
+      tr: "Cepelinai Litvanya kökenli geleneksel bir tariftir.",
+      it: "Cepelinai è una ricetta tradizionale della Lituania.",
+      ko: "체펠리나이는 리투아니아의 전통 요리입니다."
     }
   },
   {
