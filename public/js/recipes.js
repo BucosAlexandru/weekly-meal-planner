@@ -8031,7 +8031,7 @@ export const recipes = [
       ja: "パキスタン",
       tr: "Pakistan",
       it: "Pakistan",
-      ko: "Pakistan"
+      ko: "파키스탄"
     },
     name: {
       ro: "Nihari",
@@ -8046,7 +8046,7 @@ export const recipes = [
       ja: "ニハリ",
       tr: "Nihari",
       it: "Nihari",
-      ko: "Nihari"
+      ko: "니하리"
     },
     category: {
       ro: "Cină",
@@ -8063,6 +8063,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de vită", "măduvă osoasă", "ghimbir", "usturoi", "condimente", "făină", "ulei"],
       en: ["beef", "bone marrow", "ginger", "garlic", "spices", "flour", "oil"],
@@ -8089,24 +8092,24 @@ export const recipes = [
       ar: "اطبخ لحم البقر أو الضأن على نار هادئة مع الصوص المتبل والبصل والزنجبيل والثوم حتى ينضج.",
       zh: "牛肉或羊肉用洋葱、姜、蒜和香料慢炖至软烂。",
       ja: "牛肉またはラム肉をスパイス・玉ねぎ・生姜・ニンニク入りのソースでじっくり煮込む。",
-      tr: "kısık ateşte yavaşça pişirin dana eti veya kuzu baharatlı sos ile soğan, zencefil, ve sarımsak çok yumuşak.",
-      it: "cuoci lentamente manzo o agnello speziato salsa con cipolla, zenzero, e aglio molto tenero.",
-      ko: "약한 불로 천천히 조리합니다 소고기 또는 양고기 에서 a 향신료를 넣은 소스와 양파, 생강, 그리고 마늘 매우 부드럽게하세요."
+      tr: "Dana eti veya kuzuyu, soğan, zencefil ve sarımsak ile hazırlanan baharatlı bir sos içinde çok yumuşayana kadar kısık ateşte yavaşça pişirin.",
+      it: "Cuocere lentamente il manzo o l'agnello in una salsa speziata con cipolla, zenzero e aglio finché diventa molto tenero.",
+      ko: "소고기 또는 양고기를 양파, 생강, 마늘을 넣은 향신료 소스에 넣고 매우 부드러워질 때까지 약한 불로 천천히 조리합니다."
     },
     originText: {
       ro: "Nihari este o rețetă tradițională din Pakistan.",
       en: "Nihari is a traditional recipe from Pakistan.",
       es: "Nihari es una receta tradicional de Pakistán.",
-      fr: "Nihari est une recette traditionnelle de Pakistan.",
+      fr: "Nihari est une recette traditionnelle du Pakistan.",
       de: "Nihari ist ein traditionelles Rezept aus Pakistan.",
-      pt: "Nihari é uma receita tradicional de Paquistão.",
-      ru: "Нихари — традиционный рецепт из Пакистан.",
+      pt: "Nihari é uma receita tradicional do Paquistão.",
+      ru: "Нихари — традиционный рецепт из Пакистана.",
       ar: "نهاري هي وصفة تقليدية من باكستان.",
       zh: "尼哈里炖肉 是来自巴基斯坦的传统食谱。",
       ja: "ニハリ はパキスタンの伝統的なレシピです。",
       tr: "Nihari Pakistan kökenli geleneksel bir tariftir.",
-      it: "Nihari è una risotta tradizionale di Pakistan.",
-      ko: "Nihari는(은) Pakistan의 전통 요리입니다."
+      it: "Nihari è una ricetta tradizionale del Pakistan.",
+      ko: "니하리는 파키스탄의 전통 요리입니다."
     }
   },
   {

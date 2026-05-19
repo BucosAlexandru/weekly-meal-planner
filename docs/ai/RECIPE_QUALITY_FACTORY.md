@@ -91,6 +91,9 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 80 | Stoofvlees | ✅ | ✅ | `07267d80` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
 | 81 | Zeamă | ✅ | ✅ | `29c1a485` | 7 fixes: 3 struct fields, origin.ko, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
 | 82 | Meat Pie | ✅ | ✅ | `c57df593` | 8 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 83 | Fatteh | ✅ | ✅ | `a4db3ae9` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 84 | Smørrebrød | ✅ | ✅ | `5aa5026e` | 11 fixes: 3 struct fields, origin it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 85 | Naengmyeon | ✅ | ✅ | `a79eb8f0` | 9 fixes: origin tr/it/ko, name.ko, originText.pt/ru/tr/it/ko; struct fields already present |
 
 ---
 
