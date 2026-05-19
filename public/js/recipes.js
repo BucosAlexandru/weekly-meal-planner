@@ -9770,7 +9770,7 @@ export const recipes = [
       ja: "フェセンジャン",
       tr: "Fesenjan",
       it: "Fesenjan",
-      ko: "Fesenjan"
+      ko: "페센잔"
     },
     category: {
       ro: "Cină",
@@ -9787,6 +9787,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de pui", "nuci", "melasă de rodie", "ceapă", "condimente", "ulei"],
       en: ["chicken", "walnuts", "pomegranate molasses", "onion", "spices", "oil"],
@@ -9798,8 +9801,8 @@ export const recipes = [
       ar: ["دجاج", "جوز", "دبس الرمان", "بصل", "توابل", "زيت"],
       zh: ["鸡肉", "核桃", "石榴糖浆", "洋葱", "香料", "油"],
       ja: ["鶏肉", "クルミ", "ザクロシロップ", "玉ねぎ", "スパイス", "油"],
-      tr: ["tavuk", "ceviz", "nar pekmez", "soğbir", "baharatlar", "yağ"],
-      it: ["pollo", "noci", "melograno melassa", "cipolla", "spezie", "olio"],
+      tr: ["tavuk", "ceviz", "nar pekmezi", "soğan", "baharatlar", "yağ"],
+      it: ["pollo", "noci", "melassa di melograno", "cipolla", "spezie", "olio"],
       ko: ["닭고기", "호두", "석류 당밀", "양파", "향신료", "기름"]
     },
     howIsMade: {
@@ -9813,24 +9816,24 @@ export const recipes = [
       ar: "حمّر قطع اللحم (عادة الدجاج أو البط)، واطبخها ببطء في صوص الجوز المطحون ودبس الرمان حتى تصبح طرية.",
       zh: "肉块（通常为鸡肉或鸭肉）先煎香，再用核桃和石榴糖浆做的酱汁慢慢炖至酥烂。",
       ja: "鶏肉や鴨肉などを焼いて、クルミとザクロシロップのソースで柔らかくなるまで煮込む。",
-      tr: "kahverengi parçalar et (genellikle tavuk veya ördek), sonra yavaşça pişirin onları sos öğütülmüş ceviz ve nar pekmez yumuşayana kadar.",
-      it: "marrone pezzi  carne (di solito pollo o anatra), poi lentamente cuoci li salsa  macinato noci e melograno melassa finché sarà tenero.",
-      ko: "갈색 조각 의 고기 (보통 닭고기 또는 오리), 그다음 천천히 조리합니다 그것들을 에서 a 소스 의 간 호두그리고 석류 당밀 부드러워질 때까지하세요."
+      tr: "Et parçalarını (genellikle tavuk veya ördek) kahverengi renk alana kadar kavurun, ardından öğütülmüş ceviz ve nar pekmezi sosuyla kısık ateşte yumuşayana kadar pişirin.",
+      it: "Rosolare i pezzi di carne (di solito pollo o anatra), poi cuocere lentamente in una salsa di noci tritate e melassa di melograno fino a quando è tenera.",
+      ko: "고기(보통 닭고기나 오리)를 겉면이 노릇해질 때까지 볶은 후, 갈아놓은 호두와 석류 당밀 소스에 부드러워질 때까지 천천히 조리합니다."
     },
     originText: {
       ro: "Fesenjan este o rețetă tradițională din Iran.",
       en: "Fesenjan is a traditional recipe from Iran.",
       es: "Fesenjan es una receta tradicional de Irán.",
-      fr: "Fesenjan est une recette traditionnelle de Iran.",
+      fr: "Fesenjan est une recette traditionnelle d'Iran.",
       de: "Fesenjan ist ein traditionelles Rezept aus Iran.",
-      pt: "Fesenjan é uma receita tradicional de Irã.",
-      ru: "Фесенджан — традиционный рецепт из Иран.",
+      pt: "Fesenjan é uma receita tradicional do Irã.",
+      ru: "Фесенджан — традиционный рецепт из Ирана.",
       ar: "فسنجان هي وصفة تقليدية من إيران.",
       zh: "伊朗核桃石榴炖鸡 是来自伊朗的传统食谱。",
       ja: "フェセンジャン はイランの伝統的なレシピです。",
       tr: "Fesenjan İran kökenli geleneksel bir tariftir.",
-      it: "Fesenjan è una risotta tradizionale di Iran.",
-      ko: "Fesenjan는(은) 이란의 전통 요리입니다."
+      it: "Fesenjan è una ricetta tradizionale dell'Iran.",
+      ko: "페센잔은 이란의 전통 요리입니다."
     }
   },
   {
