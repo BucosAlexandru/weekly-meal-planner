@@ -11978,7 +11978,7 @@ export const recipes = [
       ja: "ナシレマッ",
       tr: "Nasi lemak",
       it: "Nasi lemak",
-      ko: "Nasi lemak"
+      ko: "나시 르막"
     },
     category: {
       ro: "Mic dejun",
@@ -11995,6 +11995,9 @@ export const recipes = [
       it: "Colazione",
       ko: "아침"
     },
+    servings: 2,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["orez cu lapte de cocos", "anșoa sărată", "arahide", "ouă fierte", "castravete", "sambal", "carne (opțional)"],
       en: ["coconut milk rice", "salted anchovies", "peanuts", "boiled eggs", "cucumber", "sambal", "meat (optional)"],
@@ -12006,9 +12009,9 @@ export const recipes = [
       ar: ["أرز بحليب جوز الهند", "أنشوجة مالحة", "فول سوداني", "بيض مسلوق", "خيار", "سامبال", "لحم (اختياري)"],
       zh: ["椰浆饭", "咸凤尾鱼", "花生", "水煮蛋", "黄瓜", "叁巴酱", "肉类（可选）"],
       ja: ["ココナッツミルクご飯", "塩漬けアンチョビ", "ピーナッツ", "ゆで卵", "キュウリ", "サンバル", "肉（お好みで）"],
-      tr: ["hindistancevizi süt pirinç", "tuzed hamsi", "yer fıstığı", "byağ yumurta", "salatalık", "sambal", "et (isteğe bağlı)"],
-      it: ["cocco latte riso", "saleed acciughe", "arachidi", "bolioed uova", "cetriolo", "sambal", "carne (facoltativo)"],
-      ko: ["코코넛 우유 쌀", "소금 멸치", "땅콩", "b기름 계란", "오이", "sambal", "고기 (선택)"]
+      tr: ["hindistan cevizi sütlü pirinç", "tuzlu hamsi", "yer fıstığı", "haşlanmış yumurta", "salatalık", "sambal", "et (isteğe bağlı)"],
+      it: ["riso al latte di cocco", "acciughe salate", "arachidi", "uova sode", "cetriolo", "sambal", "carne (facoltativo)"],
+      ko: ["코코넛 우유 쌀", "소금 멸치", "땅콩", "삶은 달걀", "오이", "삼발", "고기 (선택)"]
     },
     howIsMade: {
       ro: "Fierbe orezul în lapte de cocos cu frunze de pandan, servește cu ou fiert, anșoa prăjiți, arahide, castraveți și sos sambal.",
@@ -12021,9 +12024,9 @@ export const recipes = [
       ar: "اطبخ الأرز في حليب جوز الهند وأوراق الباندان، وقدمه مع بيض مسلوق وأنشوجة مقلية وفول سوداني وخيار وصلصة سامبال.",
       zh: "米饭用椰奶和香兰叶煮熟，配煮蛋、炸小鱼、花生、黄瓜和叁巴酱。",
       ja: "ご飯をココナッツミルクとパンダンリーフで炊き、ゆで卵・揚げ小魚・ピーナッツ・きゅうり・サンバルと一緒に提供。",
-      tr: "Haşlayın pirinç in hindistancevizi süt ile pandan yaprak, Servis edin ile bağlayın ve yumurta, kızarmış hamsi, yer fıstığı, salatalık, ve sambal sos.",
-      it: "Cuoci riso in cocco latte con pandan foglie, Servi con bolioed uovo, fritto acciughe, arachidi, cetriolo, e sambal salsa.",
-      ko: "판단잎을 넣어 코코넛 밀크에 쌀을 끓여주세요. 삶은 달걀, 튀긴 멸치, 땅콩, 오이, 삼발 소스와 함께 제공해주세요."
+      tr: "Pirinci hindistan cevizi sütü ve pandan yaprakları ile pişirin, haşlanmış yumurta, kızarmış hamsi, yer fıstığı, salatalık ve sambal sosuyla servis edin.",
+      it: "Cuocete il riso nel latte di cocco con foglie di pandan, servite con uovo sodo, acciughe fritte, arachidi, cetriolo e salsa sambal.",
+      ko: "쌀을 판단잎과 코코넛 밀크에 넣어 끓인 후, 삶은 달걀, 튀긴 멸치, 땅콩, 오이, 삼발 소스와 함께 제공합니다."
     },
     originText: {
       ro: "Nasi lemak este o rețetă tradițională din Malaezia.",
@@ -12031,14 +12034,14 @@ export const recipes = [
       es: "Nasi lemak es una receta tradicional de Malasia.",
       fr: "Nasi lemak est une recette traditionnelle de Malaisie.",
       de: "Nasi lemak ist ein traditionelles Rezept aus Malaysia.",
-      pt: "Nasi lemak é uma receita tradicional de Malásia.",
-      ru: "Наси-лемак — традиционный рецепт из Малайзия.",
+      pt: "Nasi lemak é uma receita tradicional da Malásia.",
+      ru: "Наси-лемак — традиционный рецепт из Малайзии.",
       ar: "ناسي لماك هي وصفة تقليدية من ماليزيا.",
       zh: "椰浆饭 是来自马来西亚的传统食谱。",
       ja: "ナシレマッ はマレーシアの伝統的なレシピです。",
       tr: "Nasi lemak Malezya kökenli geleneksel bir tariftir.",
-      it: "Nasi lemak è una risotta tradizionale di Malesia.",
-      ko: "Nasi lemak는(은) 말레이시아의 전통 요리입니다."
+      it: "Nasi lemak è una ricetta tradizionale della Malesia.",
+      ko: "나시 르막은 말레이시아의 전통 요리입니다."
     }
   },
   {
