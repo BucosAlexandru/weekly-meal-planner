@@ -6006,6 +6006,9 @@ export const recipes = [
   },
   {
     id: 64,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Africa de Sud",
       en: "South Africa",
@@ -6017,9 +6020,9 @@ export const recipes = [
       ar: "جنوب أفريقيا",
       zh: "南非",
       ja: "南アフリカ",
-      tr: "South Africa",
-      it: "South Africa",
-      ko: "South Africa"
+      tr: "Güney Afrika",
+      it: "Sudafrica",
+      ko: "남아프리카"
     },
     name: {
       ro: "Bobotie",
@@ -6034,7 +6037,7 @@ export const recipes = [
       ja: "ボボティ",
       tr: "Bobotie",
       it: "Bobotie",
-      ko: "Bobotie"
+      ko: "보보티"
     },
     category: {
       ro: "Cină",
@@ -6085,16 +6088,16 @@ export const recipes = [
       ro: "Bobotie este o rețetă tradițională din Africa de Sud.",
       en: "Bobotie is a traditional recipe from South Africa.",
       es: "Bobotie es una receta tradicional de Sudáfrica.",
-      fr: "Bobotie est une recette traditionnelle de Afrique du Sud.",
+      fr: "Bobotie est une recette traditionnelle d'Afrique du Sud.",
       de: "Bobotie ist ein traditionelles Rezept aus Südafrika.",
-      pt: "Bobotie é uma receita tradicional de África do Sul.",
-      ru: "Боботи — традиционный рецепт из Южная Африка.",
+      pt: "Bobotie é uma receita tradicional da África do Sul.",
+      ru: "Боботи — традиционный рецепт из Южной Африки.",
       ar: "بوبوتي هي وصفة تقليدية من جنوب أفريقيا.",
       zh: "博博提肉饼 是来自南非的传统食谱。",
       ja: "ボボティ は南アフリカの伝統的なレシピです。",
-      tr: "Bobotie South Africa kökenli geleneksel bir tariftir.",
-      it: "Bobotie è una risotta tradizionale di South Africa.",
-      ko: "Bobotie는(은) South Africa의 전통 요리입니다."
+      tr: "Bobotie Güney Afrika kökenli geleneksel bir tariftir.",
+      it: "Bobotie è una ricetta tradizionale del Sudafrica.",
+      ko: "보보티는 남아프리카의 전통 요리입니다."
     }
   },
   {
