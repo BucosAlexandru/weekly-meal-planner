@@ -11865,9 +11865,9 @@ export const recipes = [
       ar: "آسيا",
       zh: "亚洲",
       ja: "アジア",
-      tr: "Asia",
+      tr: "Asya",
       it: "Asia",
-      ko: "Asia"
+      ko: "아시아"
     },
     name: {
       ro: "Orez cu lapte de cocos",
@@ -11880,9 +11880,9 @@ export const recipes = [
       ar: "أرز بجوز الهند",
       zh: "椰浆饭",
       ja: "ココナッツライス",
-      tr: "Coconut Pilav",
-      it: "Coconut Riso",
-      ko: "Coconut 밥"
+      tr: "Hindistancevizi Pilavı",
+      it: "Riso al cocco",
+      ko: "코코넛 밥"
     },
     category: {
       ro: "Prânz",
@@ -11899,6 +11899,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["orez", "lapte de cocos", "apă", "sare"],
       en: ["rice", "coconut milk", "water", "salt"],
@@ -11910,8 +11913,8 @@ export const recipes = [
       ar: ["أرز", "حليب جوز الهند", "ماء", "ملح"],
       zh: ["米饭", "椰奶", "水", "盐"],
       ja: ["ご飯", "ココナッツミルク", "水", "塩"],
-      tr: ["pirinç", "hindistancevizi süt", "su", "tuz"],
-      it: ["riso", "cocco latte", "acqua", "sale"],
+      tr: ["pirinç", "hindistan cevizi sütü", "su", "tuz"],
+      it: ["riso", "latte di cocco", "acqua", "sale"],
       ko: ["쌀", "코코넛 우유", "물", "소금"]
     },
     howIsMade: {
@@ -11925,24 +11928,24 @@ export const recipes = [
       ar: "اطبخ الأرز في حليب جوز الهند مع الماء والملح حتى يصبح كريميًا.",
       zh: "用椰奶、水和盐煮米饭，直到变得粘稠。",
       ja: "ご飯をココナッツミルクと水、塩でクリーミーになるまで炊く。",
-      tr: "Haşlayın pirinç in hindistancevizi süt ile su ve tuz kremsi.",
-      it: "Cuoci riso in cocco latte con acqua e sale pannay.",
-      ko: "쌀을 씻어주세요. 코코넛 밀크와 물, 소금을 냄비에 넣고 끓여주세요. 약불로 줄여 쌀이 크리미해질 때까지 저으면서 조리해주세요."
+      tr: "Pirinci hindistan cevizi sütü, su ve tuzla kremsi olana kadar pişirin.",
+      it: "Cuocete il riso nel latte di cocco con acqua e sale fino a renderlo cremoso.",
+      ko: "쌀을 코코넛 밀크, 물, 소금과 함께 냄비에 넣어 약불로 크리미해질 때까지 끓입니다."
     },
     originText: {
       ro: "Orez cu lapte de cocos este o rețetă tradițională din Asia.",
       en: "Coconut Rice is a traditional recipe from Asia.",
       es: "Arroz con coco es una receta tradicional de Asia.",
-      fr: "Riz au lait de coco est une recette traditionnelle de Asie.",
+      fr: "Riz au lait de coco est une recette traditionnelle d'Asie.",
       de: "Kokosreis ist ein traditionelles Rezept aus Asien.",
-      pt: "Arroz de coco é uma receita tradicional de Ásia.",
-      ru: "Кокосовый рис — традиционный рецепт из Азия.",
+      pt: "Arroz de coco é uma receita tradicional da Ásia.",
+      ru: "Кокосовый рис — традиционный рецепт из Азии.",
       ar: "أرز بجوز الهند هي وصفة تقليدية من آسيا.",
       zh: "椰浆饭 是来自亚洲的传统食谱。",
       ja: "ココナッツライス はアジアの伝統的なレシピです。",
-      tr: "hindistancevizi pirinç Asia kökenli geleneksel bir tariftir.",
-      it: "cocco riso è una risotta tradizionale di Asia.",
-      ko: "코코넛 쌀는(은) Asia의 전통 요리입니다."
+      tr: "Hindistancevizi Pilavı Asya kökenli geleneksel bir tariftir.",
+      it: "Riso al cocco è una ricetta tradizionale dell'Asia.",
+      ko: "코코넛 밥은 아시아의 전통 요리입니다."
     }
   },
   {
