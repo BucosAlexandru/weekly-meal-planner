@@ -11769,9 +11769,9 @@ export const recipes = [
       ar: "قيرغيزستان",
       zh: "吉尔吉斯斯坦",
       ja: "キルギス",
-      tr: "Kyrgyzstan",
-      it: "Kyrgyzstan",
-      ko: "Kyrgyzstan"
+      tr: "Kırgızistan",
+      it: "Kirghizistan",
+      ko: "키르기스스탄"
     },
     name: {
       ro: "Beshbarmak",
@@ -11786,7 +11786,7 @@ export const recipes = [
       ja: "ベシュバルマク",
       tr: "Beshbarmak",
       it: "Beshbarmak",
-      ko: "Beshbarmak"
+      ko: "베시바르막"
     },
     category: {
       ro: "Cină",
@@ -11803,6 +11803,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de miel", "tăiței", "ceapă", "sare", "piper", "bulion"],
       en: ["lamb", "noodles", "onion", "salt", "pepper", "broth"],
@@ -11814,9 +11817,9 @@ export const recipes = [
       ar: ["لحم ضأن", "نودلز", "بصل", "ملح", "فلفل", "مرق"],
       zh: ["羊肉", "面条", "洋葱", "盐", "胡椒", "高汤"],
       ja: ["ラム肉", "麺", "玉ねぎ", "塩", "コショウ", "スープ"],
-      tr: ["kuzu", "erişte", "soğbir", "tuz", "biber", "et suyu"],
-      it: ["agnello", "spaghetti", "cipolla", "sale", "peperone", "brodo"],
-      ko: ["양고기", "면", "양파", "소금", "고추", "육수"]
+      tr: ["kuzu", "erişte", "soğan", "tuz", "biber", "et suyu"],
+      it: ["agnello", "pasta larga", "cipolla", "sale", "pepe", "brodo"],
+      ko: ["양고기", "면", "양파", "소금", "후추", "육수"]
     },
     howIsMade: {
       ro: "Fierbe carnea (de obicei miel sau vită) până devine fragedă, servește-o cu tăiței lați de casă și ceapă sotată.",
@@ -11829,24 +11832,24 @@ export const recipes = [
       ar: "اسلق اللحم (عادة ضأن أو بقر) حتى يطرى، وقدمه مع نودلز عريضة منزلية وبصل مقلي.",
       zh: "羊肉或牛肉煮至酥烂，配自制宽面和炒洋葱一起食用。",
       ja: "ラム肉や牛肉を柔らかく茹で、手作りの幅広麺と炒めた玉ねぎとともに盛り付ける。",
-      tr: "Haşlayın et (genellikle kuzu veya dana eti) yumuşayana kadar, Servis edin üzerine ev yapımı geniş erişte ile soteleyin soğan.",
-      it: "Cuoci carne (di solito agnello o manzo) finché sarà tenero, Servi sopra fatto in casa ampio spaghetti con soffriggié cipolla.",
-      ko: "삶고 고기 (보통 양고기 또는 소고기) 부드러워질 때까지, 담아 내세요 위에 수제 넓게 면와 볶습니다é 양파하세요."
+      tr: "Eti (genellikle kuzu veya dana) yumuşayana kadar haşlayın, ev yapımı geniş eriştenin üzerine servis edin ve sotelemiş soğanla tamamlayın.",
+      it: "Cuocete la carne (di solito agnello o manzo) fino a renderla tenera, servite sopra pasta larga fatta in casa con cipolla rosolata.",
+      ko: "고기(양고기 또는 소고기)를 부드러워질 때까지 삶고, 수제 넓은 면 위에 얹어 볶은 양파와 함께 제공합니다."
     },
     originText: {
       ro: "Beshbarmak este o rețetă tradițională din Kârgâzstan.",
       en: "Beshbarmak is a traditional recipe from Kyrgyzstan.",
       es: "Beshbarmak es una receta tradicional de Kirguistán.",
-      fr: "Beshbarmak est une recette traditionnelle de Kirghizistan.",
+      fr: "Beshbarmak est une recette traditionnelle du Kirghizistan.",
       de: "Beshbarmak ist ein traditionelles Rezept aus Kirgisistan.",
-      pt: "Beshbarmak é uma receita tradicional de Quirguistão.",
-      ru: "Бешбармак — традиционный рецепт из Киргизия.",
+      pt: "Beshbarmak é uma receita tradicional do Quirguistão.",
+      ru: "Бешбармак — традиционный рецепт из Киргизии.",
       ar: "بيشبمارك هي وصفة تقليدية من قيرغيزستان.",
       zh: "吉尔吉斯拌面 是来自吉尔吉斯斯坦的传统食谱。",
       ja: "ベシュバルマク はキルギスの伝統的なレシピです。",
-      tr: "Beshbarmak Kyrgyzstan kökenli geleneksel bir tariftir.",
-      it: "Beshbarmak è una risotta tradizionale di Kyrgyzstan.",
-      ko: "Beshbarmak는(은) Kyrgyzstan의 전통 요리입니다."
+      tr: "Beshbarmak Kırgızistan kökenli geleneksel bir tariftir.",
+      it: "Beshbarmak è una ricetta tradizionale del Kirghizistan.",
+      ko: "베시바르막은 키르기스스탄의 전통 요리입니다."
     }
   },
   {
