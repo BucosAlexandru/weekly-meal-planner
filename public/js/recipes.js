@@ -5526,6 +5526,9 @@ export const recipes = [
   },
   {
     id: 59,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Croația",
       en: "Croatia",
@@ -5537,9 +5540,9 @@ export const recipes = [
       ar: "كرواتيا",
       zh: "克罗地亚",
       ja: "クロアチア",
-      tr: "Croatia",
-      it: "Croatia",
-      ko: "Croatia"
+      tr: "Hırvatistan",
+      it: "Croazia",
+      ko: "크로아티아"
     },
     name: {
       ro: "Pasticada",
@@ -5554,7 +5557,7 @@ export const recipes = [
       ja: "パスティカーダ",
       tr: "Pasticada",
       it: "Pasticada",
-      ko: "Pasticada"
+      ko: "파스티카다"
     },
     category: {
       ro: "Cină",
@@ -5607,14 +5610,14 @@ export const recipes = [
       es: "Pasticada es una receta tradicional de Croacia.",
       fr: "Pasticada est une recette traditionnelle de Croatie.",
       de: "Pasticada ist ein traditionelles Rezept aus Kroatien.",
-      pt: "Pasticada é uma receita tradicional de Croácia.",
-      ru: "Пастицяда — традиционный рецепт из Хорватия.",
+      pt: "Pasticada é uma receita tradicional da Croácia.",
+      ru: "Пастицяда — традиционный рецепт из Хорватии.",
       ar: "باستيكادا هي وصفة تقليدية من كرواتيا.",
       zh: "牛肉炖菜 是来自克罗地亚的传统食谱。",
       ja: "パスティカーダ はクロアチアの伝統的なレシピです。",
-      tr: "Pasticada Croatia kökenli geleneksel bir tariftir.",
-      it: "Pasticada è una risotta tradizionale di Croatia.",
-      ko: "Pasticada는(은) Croatia의 전통 요리입니다."
+      tr: "Pasticada Hırvatistan kökenli geleneksel bir tariftir.",
+      it: "Pasticada è una ricetta tradizionale della Croazia.",
+      ko: "파스티카다는 크로아티아의 전통 요리입니다."
     }
   },
   {
