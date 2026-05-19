@@ -12266,7 +12266,7 @@ export const recipes = [
       ja: "チキン・パプリカシュ",
       tr: "Tavuk Paprikash",
       it: "Pollo Paprikash",
-      ko: "닭 Paprikash"
+      ko: "닭 파프리카슈"
     },
     category: {
       ro: "Cină",
@@ -12283,6 +12283,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["pui", "ceapă", "paprika", "smântână", "ulei", "sare", "piper"],
       en: ["chicken", "onion", "paprika", "sour cream", "oil", "salt", "pepper"],
@@ -12294,9 +12297,9 @@ export const recipes = [
       ar: ["دجاج", "بصل", "بابريكا", "كريمة حامضة", "زيت", "ملح", "فلفل"],
       zh: ["鸡肉", "洋葱", "红椒粉", "酸奶油", "油", "盐", "胡椒"],
       ja: ["鶏肉", "玉ねぎ", "パプリカ", "サワークリーム", "油", "塩", "コショウ"],
-      tr: ["tavuk", "soğbir", "toz biber", "ekşi krema", "yağ", "tuz", "biber"],
-      it: ["pollo", "cipolla", "paprika", "acidulo panna", "olio", "sale", "peperone"],
-      ko: ["닭고기", "양파", "파프리카 가루", "새콤한 크림", "기름", "소금", "고추"]
+      tr: ["tavuk", "soğan", "toz biber", "ekşi krema", "yağ", "tuz", "biber"],
+      it: ["pollo", "cipolla", "paprika", "panna acida", "olio", "sale", "pepe"],
+      ko: ["닭고기", "양파", "파프리카 가루", "사워크림", "기름", "소금", "후추"]
     },
     howIsMade: {
       ro: "Prăjește ceapa, adaugă puiul, presară paprika, gătește cu smântână și condimente până la sos cremos.",
@@ -12309,9 +12312,9 @@ export const recipes = [
       ar: "اقلي البصل، أضف الدجاج، رش البابريكا، اطبخه مع الكريمة الحامضة والتوابل حتى يصبح كريميًا.",
       zh: "炒洋葱，加入鸡肉，撒上红椒粉，用酸奶油和香料煮至浓稠。",
       ja: "玉ねぎを炒め、鶏肉を加え、パプリカを振りかけ、サワークリームとスパイスで煮てクリーミーにする。",
-      tr: "Kızartın soğans, Ekleyin tavuk, serpiştirin toz biber, Pişirin ile ekşi krema ve baharatlar kremsi.",
-      it: "Friggi cipollas, Aggiungi pollo, spolvera paprika, Cuoci con acidulo panna e spezie pannay.",
-      ko: "양파를 볶다가 닭고기를 넣고 파프리카를 뿌려주세요. 사워크림과 향신료를 넣고 크리미해질 때까지 조리해주세요."
+      tr: "Soğanı kızartın, tavuğu ekleyin, toz biber serpiştirin, ekşi krema ve baharatlarla kremsi olana kadar pişirin.",
+      it: "Fate soffriggere la cipolla, aggiungete il pollo, cospargete di paprika, cuocete con panna acida e spezie fino a ottenere una salsa cremosa.",
+      ko: "양파를 볶고 닭고기를 넣어 파프리카를 뿌린 후, 사워크림과 향신료를 넣어 크리미해질 때까지 끓입니다."
     },
     originText: {
       ro: "Chicken Paprikash este o rețetă tradițională din Ungaria.",
@@ -12319,14 +12322,14 @@ export const recipes = [
       es: "Pollo Paprikash es una receta tradicional de Hungría.",
       fr: "Poulet au paprika est une recette traditionnelle de Hongrie.",
       de: "Paprikahuhn ist ein traditionelles Rezept aus Ungarn.",
-      pt: "Frango Paprikash é uma receita tradicional de Hungria.",
-      ru: "Паприкаш из курицы — традиционный рецепт из Венгрия.",
+      pt: "Frango Paprikash é uma receita tradicional da Hungria.",
+      ru: "Паприкаш из курицы — традиционный рецепт из Венгрии.",
       ar: "دجاج بابريكا هي وصفة تقليدية من المجر.",
       zh: "红椒鸡 是来自匈牙利的传统食谱。",
       ja: "チキン・パプリカシュ はハンガリーの伝統的なレシピです。",
-      tr: "tavuk Paprikash Macaristan kökenli geleneksel bir tariftir.",
-      it: "pollo Paprikash è una risotta tradizionale di Ungheria.",
-      ko: "닭고기 Paprikash는(은) 헝가리의 전통 요리입니다."
+      tr: "Tavuk Paprikash Macaristan kökenli geleneksel bir tariftir.",
+      it: "Pollo Paprikash è una ricetta tradizionale dell'Ungheria.",
+      ko: "닭 파프리카슈는 헝가리의 전통 요리입니다."
     }
   },
   {
