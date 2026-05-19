@@ -5,191 +5,214 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 
 ---
 
+## Status Key
+
+| Status | Meaning |
+|---|---|
+| **Tier A Complete** | Confirmed: exact quantities in all ingredients, complete multi-step EN howIsMade, all 14 locales aligned, struct fields present, visual QA passed |
+| **Partial Fix Only** | Struct fields / name locales / originText grammar / translation stubs fixed — but EN ingredient quantities and EN cooking steps NOT verified or rewritten |
+| **Stub / Needs Full Rewrite** | Explicitly identified as stub: EN ingredients are single words without quantities; EN howIsMade is 1–2 generic sentences. Surface fixes applied but core content is broken |
+| **Needs Visual QA** | Declared Tier A with no changes but never verified against all 10 criteria |
+
+---
+
 ## Status Table
 
-| ID | Recipe | Audit | Impl | Commit | Notes |
-|---|---|---|---|---|---|
-| 1 | Spaghetti Carbonara | ✅ | ✅ | `2c4e9fc6` | 10 fixes: 3 struct fields, 2 name locales, 3 originText grammar, time 20→30, desc 14 langs |
-| 2 | Tripe Soup / Ciorbă de burtă | ✅ | ✅ | `4b239d93` | 6 fixes: 3 name locales (tr/it/ko), 3 originText grammar (ru/tr/it) |
-| 3 | Quiche Lorraine | ✅ | ✅ | `12dbcf41` | 3 fixes: howIsMade.ru critical typo (рюмками→сливками), time 45→75, desc 14 langs (ham→lardons) |
-| 4 | Gazpacho | ✅ | ✅ | `4e889857` | 7 fixes: name.ko, 4 originText grammar (fr/ru/it/ko), time 15→135, remove 'quick' tag |
-| 5 | Sushi | ✅ | ✅ | `48205675` | 5 fixes: name.ko, 4 originText grammar (fr/ru/it/ko) |
-| — | (id 6 absent) | — | — | — | No recipe with id 6 in file |
-| 7 | Cheeseburger | ✅ | — | — | Already Tier A — no changes needed |
-| 8 | Tacos | ✅ | — | — | Already Tier A — no changes needed |
-| 9 | Chicken Curry | ✅ | ✅ | `9fa6ebc2` | 10 fixes: 3 struct fields, 6 originText grammar (fr/pt/ru/tr/it/ko), time 35→60 |
-| 10 | Ratatouille | ✅ | ✅ | `65dbf968` | 2 fixes: originText.pt "da França", time 45→60 |
-| 11 | Souvlaki | ✅ | ✅ | `c9918778` | 2 fixes: originText.pt "da Grécia", time 30→80 (1h marinade) |
-| 12 | Dhal | ✅ | ✅ | `8f4ca230` | 7 fixes: name.ko, 5 originText grammar (fr/pt/ru/it/ko), time 40→45 |
-| 13 | Guacamole | ✅ | ✅ | `60f45f3d` | 1 fix: add servings:4 |
-| 14 | Borscht | ✅ | ✅ | `4e1d6dd2` | 9 fixes: 3 struct fields (soup), name.ko, 5 originText grammar (pt/ru/tr/it/ko) |
-| 15 | Pancakes | ✅ | — | — | Already Tier A — no changes needed |
-| 16 | Pad Thai | ✅ | ✅ | `7ce0f6df` | 8 fixes: 3 struct fields (fish), name.ko, 4 originText grammar (pt/ru/it/ko), time 25→40, remove 'quick' tag |
-| 17 | Schnitzel | ✅ | — | — | Already Tier A — no changes needed |
-| 18 | Feijoada | ✅ | ✅ | `816e7821` | 1 fix: time 90→120 (1h bean simmer + 45-60min second simmer) |
-| 19 | Kung Pao Chicken | ✅ | ✅ | `d4db6206` | 8 fixes: 3 struct fields, name.ko, 5 originText grammar (pt/ru/tr/it/ko) |
-| 20 | Fish and Chips | ✅ | ✅ | `0410a40a` | 12 fixes: 3 struct fields (fish), 3 name locales (tr/it/ko), 6 originText grammar (fr/pt/ru/tr/it/ko) |
-| 21 | Pho | ✅ | ✅ | `b53e7aeb` | 6 fixes: name.ko, 5 originText grammar (fr/pt/ru/it/ko) |
-| 22 | Paella | ✅ | ✅ | `21387273` | 6 fixes: name.ko, 5 originText grammar (fr/pt/ru/it/ko) |
-| 23 | Bibimbap | ✅ | ✅ | `05a76d62` | 5 fixes: name.ko, 4 originText grammar (pt/ru/it/ko) |
-| 24 | Hummus | ✅ | ✅ | `4e1c7976` | 1 fix: add servings:4 |
-| 25 | Tabbouleh | ✅ | ✅ | `4e1c7976` | 1 fix: add servings:4 |
-| 26 | Risotto | ✅ | — | — | Already Tier A — no changes needed |
-| 27 | Swedish Meatballs | ✅ | — | — | Already Tier A — no changes needed |
-| 28 | Ramen | ✅ | — | — | Already Tier A — no changes needed |
-| 29 | Empanadas | ✅ | — | — | Already Tier A — no changes needed |
-| 30 | Tzatziki | ✅ | ✅ | `eeb27ad5` | 1 fix: add servings:4 |
-| 31 | French Onion Soup | ✅ | ✅ | `eeb27ad5` | 1 fix: originText.pt "de França"→"da França" |
-| 32 | Goulash | ✅ | — | — | Already Tier A — no changes needed |
-| 33 | Koshari | ✅ | ✅ | `eeb27ad5` | 1 fix: add servings:4 |
-| — | (id 34 absent) | — | — | — | No recipe with id 34 in file |
-| 35 | Baklava | ✅ | ✅ | `eeb27ad5` | 1 fix: add servings:8 |
-| 36 | Chili con Carne | ✅ | — | — | Already Tier A — no changes needed |
-| 37 | Sweet and Sour Chicken | ✅ | ✅ | `eeb27ad5` | 6 fixes: name.de/tr (missing umlauts/Turkish chars), originText.de/tr/pt/it |
-| 38 | Pavlova | ✅ | ✅ | `eeb27ad5` | 6 fixes: add servings:8, originText.fr/de/pt/tr/it (stripped diacritics) |
-| 39 | Poutine | ✅ | ✅ | `eeb27ad5` | 6 fixes: add servings:4, originText.fr/de/pt/tr/it (stripped diacritics) |
-| 40 | Pierogi | ✅ | ✅ | `eeb27ad5` | 4 fixes: add servings:4, originText.fr/pt/tr (stripped diacritics) |
-| 41 | Nasi Goreng | ✅ | ✅ | `eeb27ad5` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe (no ingredient quantities, missing hi lang) |
-| 42 | Fondue | ✅ | ✅ | `11c5eb14` | 8 fixes: 3 struct fields, name.ko, originText.de/pt/ru/it/ko; NOTE: stub recipe (no ingredient quantities, missing hi lang) |
-| 43 | Masgouf | ✅ | ✅ | `f8fbcec3` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 44 | Shakshuka | ✅ | ✅ | `b1a7f417` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 45 | Salmon Soup | ✅ | ✅ | `1fd96fe1` | 12 fixes: 3 struct fields, name.it/ko/tr, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 46 | Ghormeh Sabzi | ✅ | ✅ | `2ca28c8f` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 47 | Bacalhau à Brás | ✅ | ✅ | `8ec94c6f` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko |
-| 48 | Adobo | ✅ | ✅ | `8487adf0` | 11 fixes: 3 struct fields, name.ko, originText.fr/de/pt/ru/it/ko; NOTE: stub recipe |
-| 49 | Jerk Chicken | ✅ | ✅ | `9401ae5e` | 13 fixes: 3 struct fields, origin it/tr/ko, name.it/ko, originText.fr/pt/ru/tr/it/ko |
-| 50 | Doro Wat | ✅ | ✅ | `a0a1b5a5` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 51 | Kibbeh | ✅ | ✅ | `22730291` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 52 | Stamppot | ✅ | ✅ | `454512b4` | 11 fixes: 3 struct fields, name.ko, originText.fr/de/pt/ru/it/ko; NOTE: stub recipe |
-| 53 | Hangi | ✅ | ✅ | `09c90a91` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 54 | Moules-frites | ✅ | ✅ | `04ba532e` | 9 fixes: 3 struct fields, name.ko, originText.pt/ru/tr/it/ko |
-| 55 | Moussaka | ✅ | ✅ | `7fb899a0` | 8 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko |
-| 56 | Svíčková | ✅ | ✅ | `96cd3925` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko |
-| 57 | Fårikål | ✅ | ✅ | `f8c93958` | 8 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
-| 58 | Ful Medames | ✅ | ✅ | `186f970a` | 10 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 59 | Pasticada | ✅ | ✅ | `df31196c` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 60 | Buuz | ✅ | ✅ | `6ed83b6e` | 12 fixes: 3 struct fields, origin tr/ko, name.ko, originText.de/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 61 | Biryani | ✅ | ✅ | `7be76e95` | 9 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/tr/it/ko |
-| 62 | Brik | ✅ | ✅ | `80a781c2` | 9 fixes: 3 struct fields, origin tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 63 | Khachapuri | ✅ | ✅ | `0fd228e9` | 9 fixes: 3 struct fields, origin tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 64 | Bobotie | ✅ | ✅ | `1e7156dc` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 65 | Ceviche | ✅ | ✅ | `96b7d091` | 6 fixes: 3 struct fields, name.ko, originText.fr/pt/it/ko; NOTE: stub recipe |
-| 66 | Kimchi | ✅ | ✅ | `b93a114b` | 10 fixes: 3 struct fields, name.ko, category tr/it/ko, originText.pt/ru/tr/it/ko |
-| 67 | Banh Mi | ✅ | ✅ | `6a5ade8b` | 7 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 68 | Satay | ✅ | ✅ | `5322300e` | 7 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 69 | Laksa | ✅ | ✅ | `675b7502` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
-| 70 | Pupusa | ✅ | ✅ | `edcc4a7c` | 7 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/ru/it/ko; NOTE: stub recipe |
-| — | (id 71 absent) | — | — | — | No recipe with id 71 in file |
-| 72 | Amok | ✅ | ✅ | `1adeb0de` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 73 | Momo | ✅ | ✅ | `f63ff84f` | 8 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 74 | Encebollado | ✅ | ✅ | `831fb0e0` | 10 fixes: 3 struct fields, origin tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 75 | Harira | ✅ | ✅ | `226a3dbe` | 6 fixes: 3 struct fields, name.ko, originText.fr/pt/it/ko; NOTE: stub recipe |
-| 76 | Lobio | ✅ | ✅ | `e7265c7a` | 9 fixes: 3 struct fields, origin tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
-| 77 | Chakhchoukha | ✅ | ✅ | `d7dac09d` | 12 fixes: 3 struct fields, origin (add pt)/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe; CRITICAL: added missing origin.pt |
-| 78 | Rendang | ✅ | ✅ | `21801e1c` | 7 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
-| 79 | Gravlax | ✅ | ✅ | `799bd94b` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
-| 80 | Stoofvlees | ✅ | ✅ | `07267d80` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
-| 81 | Zeamă | ✅ | ✅ | `29c1a485` | 7 fixes: 3 struct fields, origin.ko, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
-| 82 | Meat Pie | ✅ | ✅ | `c57df593` | 8 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 83 | Fatteh | ✅ | ✅ | `a4db3ae9` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 84 | Smørrebrød | ✅ | ✅ | `5aa5026e` | 11 fixes: 3 struct fields, origin it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
-| 85 | Naengmyeon | ✅ | ✅ | `a79eb8f0` | 9 fixes: origin tr/it/ko, name.ko, originText.pt/ru/tr/it/ko; struct fields already present |
-| 86 | Nihari | ✅ | ✅ | `b75f2bd9` | 11 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it/ko |
-| 87 | Bún bò Huế | ✅ | ✅ | `d73b3558` | 10 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it/ko |
-| 88 | Moqueca | ✅ | ✅ | `6a3475e8` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it |
-| 89 | Sabich | ✅ | ✅ | `be69c7fe` | 8 fixes: 3 struct fields, name.ko, originText.fr/ru/it/ko, howIsMade.tr/it |
-| 90 | Ropa Vieja | ✅ | ✅ | `433ddd43` | 10 fixes: 3 struct fields, origin tr/ko, name.ko, originText.ru/tr/it/ko, howIsMade.tr/it |
-| 91 | Cullen Skink | ✅ | ✅ | `2bcdb5c6` | 14 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
-| 92 | Gado-Gado | ✅ | ✅ | `d9238b8f` | 13 fixes: 3 struct fields, category tr/it/ko, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it/ko |
-| 93 | Cinnamon Bun | ✅ | ✅ | `1cb35fbc` | 13 fixes: 3 struct fields, add origin.pt (missing!), name tr/it/ko, originText.pt/ru/tr/it/ko, howIsMade.tr/it/ko |
-| 94 | Chiles en nogada | ✅ | ✅ | `65ccb271` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it |
-| 95 | Lentil Soup | ✅ | ✅ | `4f0399d0` | 18 fixes: 3 struct fields, origin tr/it/ko, name tr/it/ko, originText.en/fr/de/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
-| 96 | Spanakopita | ✅ | ✅ | `d450ed9c` | 9 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko, howIsMade.tr/it/ko |
-| 97 | Jollof Rice | ✅ | ✅ | `5dbb975f` | 13 fixes: 3 struct fields, origin.tr/ko, name.it/ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it |
-| 98 | Oka i'a | ✅ | ✅ | `532191d5` | 10 fixes: 3 struct fields, origin.ko, name.ko, originText.it/ko, howIsMade.tr/it/ko |
-| 99 | Khorovats | ✅ | ✅ | `761e6858` | 13 fixes: 3 struct fields, origin.tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
-| 100 | Verivorst | ✅ | ✅ | `4375692f` | 12 fixes: 3 struct fields, origin.tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it |
-| 102 | Tteokbokki | ✅ | ✅ | `7315b69e` | 5 fixes: name.ko, originText.pt/ru/it/ko (well-formed recipe, no stubs) |
-| 103 | Shrimp Ceviche | ✅ | ✅ | `622f21a8` | 17 fixes: 3 struct, origin.tr/ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it, originText.fr/pt/ru/tr/it/ko |
-| 104 | La Bandera | ✅ | ✅ | `c94573ed` | 18 fixes: 3 struct, origin.tr/it/ko, name.ko, howIsMade.tr/it/ko, originText.en/fr/de/pt/ru/tr/it/ko |
-| 105 | Fesenjan | ✅ | ✅ | `7415bb79` | 14 fixes: 3 struct, name.ko, ingredients.tr/it, howIsMade.tr/it/ko, originText.fr/pt/ru/it/ko |
-| 106 | Kare-Kare | ✅ | ✅ | `2e4fa8e0` | 17 fixes: 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.en/fr/de/pt/ru/it/ko |
-| 107 | Francesinha | ✅ | ✅ | `203ee21f` | 11 fixes: 3 struct, name.ko, ingredients.tr/it, howIsMade.tr/it, originText.fr/ru/it/ko |
-| 109 | Arroz Chaufa | ✅ | ✅ | `cae13e12` | 15+ fixes: 3 struct, add missing pt locale (all blocks), name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/it/ko |
-| 110 | Chili Crab | ✅ | ✅ | `240c6bbf` | 13 fixes: 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.ru/tr/it/ko |
-| 111 | Tamale | ✅ | ✅ | `27fdac72` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 112 | Tom Yum | ✅ | ✅ | `989f905e` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 113 | Milanesa | ✅ | ✅ | `ee9d7614` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 114 | Lok Lak | ✅ | ✅ | `0084eba4` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 115 | Manti | ✅ | ✅ | `49990216` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 116 | Chakhokhbili | ✅ | ✅ | `18194785` | 3 struct, add missing pt locale (all blocks), name.ko, ingredients.it (peperone→pepe dup fix), howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 117 | Lomo Saltado | ✅ | ✅ | `58e8d65d` | 3 struct, origin.tr/ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 118 | Tagine | ✅ | ✅ | `1a5d2a2a` | howIsMade.tr/it/ko stubs, originText.fr(du Maroc)/pt(do Marrocos)/tr/it(risotta→ricetta,del Marocco)/ko; earlier commit fixed struct+ingredients |
-| 119 | Köttbullar | ✅ | ✅ | `62653f25` | 3 struct, name.tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.pt/ru/tr/it/ko |
-| 120 | Arepa | ✅ | ✅ | `db8e0a77` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 121 | Karelian Pie | ✅ | ✅ | `0ee03e05` | 3 struct, name.tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.pt/ru/tr/it/ko |
-| — | (id 122 absent) | — | — | — | No recipe with id 122 in file |
-| 123 | Pasta e fagioli | ✅ | ✅ | `a1714809` | 3 struct, name.tr/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 124 | Kottu | ✅ | ✅ | `643ae659` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.ru/it/ko |
-| 125 | Piragi | ✅ | ✅ | `36fac702` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 126 | Bánh xèo | ✅ | ✅ | `8d5a8a17` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 127 | Causa Limeña | ✅ | ✅ | `d6d38bc8` | 3 struct, name/category all locales, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| — | (id 128 absent) | — | — | — | No recipe with id 128 in file |
-| 129 | Beshbarmak | ✅ | ✅ | `89d1d8a0` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 130 | Coconut Rice | ✅ | ✅ | `14fb5723` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 131 | Nasi Lemak | ✅ | ✅ | `a31b5627` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko (garbled fixes), howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 132 | Rösti | ✅ | ✅ | `d1ef86d6` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko; de: aus der Schweiz |
-| 133 | Fasole cu cârnați | ✅ | ✅ | `dca01027` | 3 struct, add missing pt locale (all blocks), name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText all |
-| 134 | Chicken Paprikash | ✅ | ✅ | `29a1f54e` | 3 struct, origin tr/it/ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
-| 135 | Pasta alla Norma | ✅ | ✅ | `0b212474` | name tr/ko, ingredients tr/it/ko (eggplant fix), howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko; struct fields already present |
-| — | (id 136 absent) | — | — | — | No recipe with id 136 in file |
-| 137 | Ichlekli | ✅ | ✅ | `d8a9aad8` | 3 struct, origin tr/ko, name.ko, ingredients.tr (soğan), howIsMade.tr/it/ko stubs, originText.fr/pt/ru/tr/it/ko |
-| 138 | Chicken Kiev | ✅ | ✅ | `4df6f1d6` | 3 struct, name.ko (치킨 키예프), ingredients tr/it/ko, howIsMade.tr/it/ko stubs, originText fr/de/pt/ru/tr/it/ko |
-| 139 | Cepelinai | ✅ | ✅ | `b669095c` | 3 struct, origin tr/it/ko, name.ko (체펠리나이), ingredients tr/it/ko, howIsMade tr/it stubs + ko form, originText.fr/pt/ru/tr/it/ko |
-| 140 | Chicken Fricassée | ✅ | ✅ | `16006f6c` | 3 struct, add missing pt locale (all blocks), name.ko (치킨 프리카세), ingredients tr/it/ko, howIsMade tr/it stubs + pt, originText.fr/pt/ru/tr/it/ko |
-| 141 | Machboos | ✅ | ✅ | `aa13cbcf` | 3 struct, origin tr/ko, name.ko (마흐부스), ingredients.tr (soğan), howIsMade.tr/it/ko stubs, originText.fr/pt/ru/tr/it/ko |
-| 142 | Moambe Chicken | ✅ | ✅ | `ab64de86` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it stubs + ko form, originText fr/de/pt/ru/tr/it/ko |
-| 143 | Cassoulet | ✅ | ✅ | `30ef7ecc` | 3 struct, name.ko (카술레), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 144 | Pasticada | ✅ | ✅ | `cb093913` | 3 struct, origin tr/it/ko, name.ko (파슈티차다), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 145 | Sheftalia | ✅ | ✅ | `d951741f` | 3 struct, origin tr/ko, name.ko (셰프탈리아), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 146 | Cevapi | ✅ | ✅ | `13551f6a` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 147 | Fufu | ✅ | ✅ | `0ff8774e` | 3 struct, origin.ko (가나), name.ko (푸푸), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 148 | Khinkali | ✅ | ✅ | `0d7fd5aa` | 3 struct, origin tr/ko, name.ko (힌칼리), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 149 | Pozole | ✅ | ✅ | `29785503` | 3 struct, name.ko (포솔레), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 150 | Pepian | ✅ | ✅ | `31468100` | 3 struct, origin.ko (과테말라), name.ko (페피안), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 151 | Okroshka | ✅ | ✅ | `1661c74e` | 3 struct, name.ko (오크로시카), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/it/ko |
-| 152 | Plov | ✅ | ✅ | `57d90299` | 3 struct, add missing pt locale (all blocks), origin tr/ko, name.ko (플로프), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 153 | Potica | ✅ | ✅ | `2f68d90d` | 3 struct, origin tr/ko, name.ko (포티차), howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 154 | Egusi soup | ✅ | ✅ | `48369de9` | 3 struct, origin tr/ko, name it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 155 | Kotlet schabowy | ✅ | ✅ | `0a8b637e` | 3 struct, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 156 | Kimbap | ✅ | ✅ | `102177cd` | name.ko (김밥), originText pt/ru/it/ko; struct already present |
-| 157 | Pastel de Choclo | ✅ | ✅ | `7d501223` | 3 struct, origin tr/it/ko, name.ko (파스텔 데 초클로), ingredients tr/it, howIsMade tr/it/ko stubs, originText fr/pt/tr/it/ko |
-| 158 | Pljeskavica | ✅ | ✅ | `c24d3f48` | 3 struct, origin tr/ko, name.ko (플레스카비차), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 159 | Poffertjes | ✅ | ✅ | `9d08033d` | 3 struct, name.ko (포퍼르체스), howIsMade tr/it/ko stubs, originText fr/de/pt/ru/it/ko |
-| 160 | Japanese Curry Rice | ✅ | ✅ | `bc582960` | 3 struct, name.ko (일본식 카레라이스), howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 161 | Fasolada | ✅ | ✅ | `aaafb35a` | 3 struct, pt locale missing (all blocks), name.ko (파솔라다), howIsMade tr/it/ko, originText fr/de/pt/ru/tr/it/ko |
-| 162 | Tlayudas | ✅ | ✅ | `5a4e6759` | 3 struct, origin tr/it/ko, name.ko (틀라유다스), ingredients tr/it/ko, howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
-| 163 | Bandeja Paisa | ✅ | ✅ | `f7ca7062` | 3 struct, pt locale missing (all blocks), origin tr/it/ko, name.ko (반데하 파이사), howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
-| 164 | Lángos | ✅ | ✅ | `8c32b51a` | 3 struct, origin tr/it/ko, name.ko (랑고시), ingredients tr/it, howIsMade tr/it/ko, originText fr/pt/de/ru/tr/it/ko |
-| 165 | Rajma | ✅ | ✅ | `02bcda6b` | 3 struct, origin tr/it/ko, name.ko (라즈마), ingredients tr/it, howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
-| 166 | Picadillo | ✅ | ✅ | `f054a5a2` | 3 struct, origin tr/it/ko, name.ko (피카디요), ingredients tr/it, howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
-| 167 | Lamb Tagine | ✅ | ✅ | `5776c081` | 3 struct, name tr/it/ko, ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/pt/tr/it/ko |
-| 168 | Shepherd's Pie | ✅ | ✅ | `4ae72d0a` | 3 struct, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/de/pt/ru/tr/it/ko |
-| 169 | Mapo Tofu | ✅ | ✅ | `64b4b1a4` | 3 struct, name.ko (마파두부), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 170 | Menemen | ✅ | ✅ | `9d3b3983` | 3 struct, name.ko (메네멘), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText de/pt/ru/tr/it/ko |
-| 171 | Solyanka | ✅ | ✅ | `6179baae` | 3 struct, name.ko (솔랸카), ingredients tr/it, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 172 | Clam Chowder | ✅ | ✅ | `22a630e1` | 3 struct, name.ko (클램 차우더), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/de/pt/tr/it/ko |
-| 173 | Currywurst | ✅ | ✅ | `66ac45d2` | 3 struct, name.ko (카리부어스트), ingredients.it word order, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 174 | Tom Kha Gai | ✅ | ✅ | `556179a0` | 3 struct, name.ko (톰카가이), ingredients tr/it, howIsMade tr/it + ko command forms, originText pt/ru/tr/it/ko |
-| 175 | Cachupa | ✅ | ✅ | `59e220fe` | 3 struct, origin tr/it/ko, name.ko (카추파), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/tr/it/ko |
-| 176 | Pav Bhaji | ✅ | ✅ | `0b370363` | 3 struct, name.ko (파브바지), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
-| 177 | Karelian Stew | ✅ | ✅ | `f662bdb2` | 3 struct, name it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 178 | Boeuf Bourguignon | ✅ | ✅ | `9f6afcbe` | 3 struct, name.ko (뵈프 부르기뇽), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
-| 179 | Chakchouka | ✅ | ✅ | `b32e371f` | 3 struct, origin tr/ko, name.ko (차크추카), ingredients tr/it/ko, howIsMade tr/it + ko cmd forms, originText pt/ru/tr/it/ko |
-| 180 | Okonomiyaki | ✅ | ✅ | `36a91875` | struct present, name.ko (오코노미야키), originText fr/pt/ru/tr/it/ko |
-| 181 | Tonkotsu Ramen | ✅ | ✅ | `159635a3` | 3 struct, originText.tr comma |
-| 182 | Shoyu Ramen | ✅ | ✅ | `0d5d19f1` | 3 struct, originText.tr comma |
-| 183 | Miso Ramen | ✅ | ✅ | `51a3dc18` | 3 struct, originText.tr comma — **FINAL RECIPE** |
+| ID | Recipe | Status | Commit | Notes |
+|---|---|---|---|---|
+| 1 | Spaghetti Carbonara | Partial Fix Only | `2c4e9fc6` | Struct + name/originText/time fixed; EN ingredients+steps not re-verified |
+| 2 | Tripe Soup / Ciorbă de burtă | Partial Fix Only | `4b239d93` | name tr/it/ko + originText ru/tr/it fixed |
+| 3 | Quiche Lorraine | Partial Fix Only | `12dbcf41` | howIsMade.ru typo fixed; time + desc corrected |
+| 4 | Gazpacho | Partial Fix Only | `4e889857` | name.ko + originText fr/ru/it/ko + time corrected |
+| 5 | Sushi | Partial Fix Only | `48205675` | name.ko + originText fr/ru/it/ko fixed |
+| — | (id 6 absent) | — | — | No recipe with id 6 in file |
+| 7 | Cheeseburger | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 8 | Tacos | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 9 | Chicken Curry | Partial Fix Only | `9fa6ebc2` | Struct + originText fr/pt/ru/tr/it/ko + time fixed |
+| 10 | Ratatouille | Partial Fix Only | `65dbf968` | originText.pt + time fixed |
+| 11 | Souvlaki | Partial Fix Only | `c9918778` | originText.pt + time fixed |
+| 12 | Dhal | Partial Fix Only | `8f4ca230` | name.ko + originText fr/pt/ru/it/ko + time fixed |
+| 13 | Guacamole | Partial Fix Only | `60f45f3d` | servings field added |
+| 14 | Borscht | Partial Fix Only | `4e1d6dd2` | Struct + name.ko + originText pt/ru/tr/it/ko fixed |
+| 15 | Pancakes | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 16 | Pad Thai | Partial Fix Only | `7ce0f6df` | Struct + name.ko + originText pt/ru/it/ko + time fixed |
+| 17 | Schnitzel | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 18 | Feijoada | Partial Fix Only | `816e7821` | time corrected |
+| 19 | Kung Pao Chicken | Partial Fix Only | `d4db6206` | Struct + name.ko + originText pt/ru/tr/it/ko fixed |
+| 20 | Fish and Chips | Partial Fix Only | `0410a40a` | Struct + name tr/it/ko + originText fr/pt/ru/tr/it/ko fixed |
+| 21 | Pho | Partial Fix Only | `b53e7aeb` | name.ko + originText fr/pt/ru/it/ko fixed |
+| 22 | Paella | Partial Fix Only | `21387273` | name.ko + originText fr/pt/ru/it/ko fixed |
+| 23 | Bibimbap | Partial Fix Only | `05a76d62` | name.ko + originText pt/ru/it/ko fixed |
+| 24 | Hummus | Partial Fix Only | `4e1c7976` | servings field added |
+| 25 | Tabbouleh | Partial Fix Only | `4e1c7976` | servings field added |
+| 26 | Risotto | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 27 | Swedish Meatballs | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 28 | Ramen | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 29 | Empanadas | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 30 | Tzatziki | Partial Fix Only | `eeb27ad5` | servings field added |
+| 31 | French Onion Soup | Partial Fix Only | `eeb27ad5` | originText.pt fixed |
+| 32 | Goulash | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 33 | Koshari | Partial Fix Only | `eeb27ad5` | servings field added |
+| — | (id 34 absent) | — | — | No recipe with id 34 in file |
+| 35 | Baklava | Partial Fix Only | `eeb27ad5` | servings field added |
+| 36 | Chili con Carne | Needs Visual QA | — | Declared Tier A — never verified against all 10 criteria |
+| 37 | Sweet and Sour Chicken | Partial Fix Only | `eeb27ad5` | name de/tr + originText de/tr/pt/it fixed |
+| 38 | Pavlova | Partial Fix Only | `eeb27ad5` | servings + originText fr/de/pt/tr/it fixed |
+| 39 | Poutine | Partial Fix Only | `eeb27ad5` | servings + originText fr/de/pt/tr/it fixed |
+| 40 | Pierogi | Partial Fix Only | `eeb27ad5` | servings + originText fr/pt/tr fixed |
+| 41 | Nasi Goreng | Stub / Needs Full Rewrite | `eeb27ad5` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 42 | Fondue | Stub / Needs Full Rewrite | `11c5eb14` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 43 | Masgouf | Stub / Needs Full Rewrite | `f8fbcec3` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 44 | Shakshuka | Stub / Needs Full Rewrite | `b1a7f417` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 45 | Salmon Soup | Stub / Needs Full Rewrite | `1fd96fe1` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 46 | Ghormeh Sabzi | Stub / Needs Full Rewrite | `2ca28c8f` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 47 | Bacalhau à Brás | Partial Fix Only | `8ec94c6f` | Struct + name.ko + originText fr/pt/ru/it/ko fixed; no stub note |
+| 48 | Adobo | Stub / Needs Full Rewrite | `8487adf0` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 49 | Jerk Chicken | Partial Fix Only | `9401ae5e` | Struct + origin + name + originText fixed; no stub note |
+| 50 | Doro Wat | Stub / Needs Full Rewrite | `a0a1b5a5` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 51 | Kibbeh | Stub / Needs Full Rewrite | `22730291` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 52 | Stamppot | Stub / Needs Full Rewrite | `454512b4` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 53 | Hangi | Stub / Needs Full Rewrite | `09c90a91` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 54 | Moules-frites | Partial Fix Only | `04ba532e` | Struct + name.ko + originText pt/ru/tr/it/ko fixed; no stub note |
+| 55 | Moussaka | Partial Fix Only | `7fb899a0` | Struct + name.ko + originText pt/ru/it/ko fixed; no stub note |
+| 56 | Svíčková | Partial Fix Only | `96cd3925` | Struct + origin + name.ko + originText fr/pt/ru/tr/it/ko fixed; no stub note |
+| 57 | Fårikål | Stub / Needs Full Rewrite | `f8c93958` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 58 | Ful Medames | Stub / Needs Full Rewrite | `186f970a` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 59 | Pasticada (id 59) | Stub / Needs Full Rewrite | `df31196c` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 60 | Buuz | Stub / Needs Full Rewrite | `6ed83b6e` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 61 | Biryani | Partial Fix Only | `7be76e95` | Struct + origin/name/originText fixed; no stub note |
+| 62 | Brik | Stub / Needs Full Rewrite | `80a781c2` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 63 | Khachapuri | Stub / Needs Full Rewrite | `0fd228e9` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 64 | Bobotie | Stub / Needs Full Rewrite | `1e7156dc` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 65 | Ceviche | Stub / Needs Full Rewrite | `96b7d091` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 66 | Kimchi | Partial Fix Only | `b93a114b` | Struct + name.ko + category + originText pt/ru/tr/it/ko fixed; no stub note |
+| 67 | Banh Mi | Stub / Needs Full Rewrite | `6a5ade8b` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 68 | Satay | Stub / Needs Full Rewrite | `5322300e` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 69 | Laksa | Stub / Needs Full Rewrite | `675b7502` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 70 | Pupusa | Stub / Needs Full Rewrite | `edcc4a7c` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| — | (id 71 absent) | — | — | No recipe with id 71 in file |
+| 72 | Amok | Stub / Needs Full Rewrite | `1adeb0de` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 73 | Momo | Stub / Needs Full Rewrite | `f63ff84f` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 74 | Encebollado | Stub / Needs Full Rewrite | `831fb0e0` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 75 | Harira | Stub / Needs Full Rewrite | `226a3dbe` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 76 | Lobio | Stub / Needs Full Rewrite | `e7265c7a` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 77 | Chakhchoukha | Stub / Needs Full Rewrite | `d7dac09d` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only; origin.pt added |
+| 78 | Rendang | Stub / Needs Full Rewrite | `21801e1c` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 79 | Gravlax | Stub / Needs Full Rewrite | `799bd94b` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 80 | Stoofvlees | Stub / Needs Full Rewrite | `07267d80` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 81 | Zeamă | Stub / Needs Full Rewrite | `29c1a485` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 82 | Meat Pie | Stub / Needs Full Rewrite | `c57df593` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 83 | Fatteh | Stub / Needs Full Rewrite | `a4db3ae9` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 84 | Smørrebrød | Stub / Needs Full Rewrite | `5aa5026e` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 85 | Naengmyeon | Partial Fix Only | `a79eb8f0` | origin/name/originText fixed; struct already present; EN content not verified |
+| 86 | Nihari | Partial Fix Only | `b75f2bd9` | Struct + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 87 | Bún bò Huế | Partial Fix Only | `d73b3558` | Struct + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 88 | Moqueca | Partial Fix Only | `6a3475e8` | Struct + name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 89 | Sabich | Partial Fix Only | `be69c7fe` | Struct + name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 90 | Ropa Vieja | Partial Fix Only | `433ddd43` | Struct + origin/name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 91 | Cullen Skink | Partial Fix Only | `2bcdb5c6` | Struct + origin/name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 92 | Gado-Gado | Partial Fix Only | `d9238b8f` | Struct + category/name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 93 | Cinnamon Bun | Partial Fix Only | `1cb35fbc` | Struct + origin.pt added + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 94 | Chiles en nogada | Partial Fix Only | `65ccb271` | Struct + name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 95 | Lentil Soup | Partial Fix Only | `4f0399d0` | Struct + origin/name/originText (all) + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 96 | Spanakopita | Partial Fix Only | `d450ed9c` | Struct + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 97 | Jollof Rice | Partial Fix Only | `5dbb975f` | Struct + origin/name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 98 | Oka i'a | Partial Fix Only | `532191d5` | Struct + origin/name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 99 | Khorovats | Partial Fix Only | `761e6858` | Struct + origin/name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 100 | Verivorst | Partial Fix Only | `4375692f` | Struct + origin/name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 102 | Tteokbokki | Partial Fix Only | `7315b69e` | name.ko + originText fixed; well-formed recipe base; EN content not fully verified |
+| 103 | Shrimp Ceviche | Partial Fix Only | `622f21a8` | Struct + origin/name/ingredients/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 104 | La Bandera | Partial Fix Only | `c94573ed` | Struct + origin/name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 105 | Fesenjan | Partial Fix Only | `7415bb79` | Struct + name/ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 106 | Kare-Kare | Partial Fix Only | `2e4fa8e0` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 107 | Francesinha | Partial Fix Only | `203ee21f` | Struct + name/ingredients tr/it + howIsMade tr/it + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 109 | Arroz Chaufa | Partial Fix Only | `cae13e12` | Struct + pt locale added + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 110 | Chili Crab | Partial Fix Only | `240c6bbf` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 111 | Tamale | Partial Fix Only | `27fdac72` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 112 | Tom Yum | Partial Fix Only | `989f905e` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 113 | Milanesa | Partial Fix Only | `ee9d7614` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 114 | Lok Lak | Partial Fix Only | `0084eba4` | Struct + origin/name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 115 | Manti | Partial Fix Only | `49990216` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 116 | Chakhokhbili | Partial Fix Only | `18194785` | Struct + pt locale added + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 117 | Lomo Saltado | Partial Fix Only | `58e8d65d` | Struct + origin/name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 118 | Tagine | Partial Fix Only | `1a5d2a2a` | Struct + ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 119 | Köttbullar | Partial Fix Only | `62653f25` | Struct + name tr/it/ko + ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 120 | Arepa | Partial Fix Only | `db8e0a77` | Struct + origin/name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 121 | Karelian Pie | Partial Fix Only | `0ee03e05` | Struct + name tr/it/ko + ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| — | (id 122 absent) | — | — | No recipe with id 122 in file |
+| 123 | Pasta e fagioli | Partial Fix Only | `a1714809` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 124 | Kottu | Partial Fix Only | `643ae659` | Struct + origin/name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 125 | Piragi | Partial Fix Only | `36fac702` | Struct + origin/name tr/it/ko + ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 126 | Bánh xèo | Partial Fix Only | `8d5a8a17` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 127 | Causa Limeña | Partial Fix Only | `d6d38bc8` | Struct + name/category/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| — | (id 128 absent) | — | — | No recipe with id 128 in file |
+| 129 | Beshbarmak | Partial Fix Only | `89d1d8a0` | Struct + origin/name tr/it/ko + ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 130 | Coconut Rice | Partial Fix Only | `14fb5723` | Struct + origin/name tr/it/ko + ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 131 | Nasi Lemak | Partial Fix Only | `a31b5627` | Struct + origin/name + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 132 | Rösti | Partial Fix Only | `d1ef86d6` | Struct + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 133 | Fasole cu cârnați | Partial Fix Only | `dca01027` | Struct + pt locale added + name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 134 | Chicken Paprikash | Partial Fix Only | `29a1f54e` | Struct + origin/name/ingredients/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 135 | Pasta alla Norma | Partial Fix Only | `0b212474` | name tr/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| — | (id 136 absent) | — | — | No recipe with id 136 in file |
+| 137 | Ichlekli | Partial Fix Only | `d8a9aad8` | Struct + origin/name + ingredients.tr + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 138 | Chicken Kiev | Partial Fix Only | `4df6f1d6` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 139 | Cepelinai | Partial Fix Only | `b669095c` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 140 | Chicken Fricassée | Partial Fix Only | `16006f6c` | Struct + pt locale added + name.ko + ingredients tr/it/ko + howIsMade tr/it/pt + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 141 | Machboos | Partial Fix Only | `aa13cbcf` | Struct + origin/name.ko + ingredients.tr + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 142 | Moambe Chicken | Partial Fix Only | `ab64de86` | Struct + origin/name tr/it/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 143 | Cassoulet | Partial Fix Only | `30ef7ecc` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 144 | Pasticada (id 144) | Partial Fix Only | `cb093913` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 145 | Sheftalia | Partial Fix Only | `d951741f` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 146 | Cevapi | Partial Fix Only | `13551f6a` | Struct + origin/name tr/it/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 147 | Fufu | Partial Fix Only | `0ff8774e` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 148 | Khinkali | Partial Fix Only | `0d7fd5aa` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 149 | Pozole | Partial Fix Only | `29785503` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 150 | Pepian | Partial Fix Only | `31468100` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 151 | Okroshka | Partial Fix Only | `1661c74e` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 152 | Plov | Partial Fix Only | `57d90299` | Struct + pt locale added + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 153 | Potica | Partial Fix Only | `2f68d90d` | Struct + origin/name.ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 154 | Egusi soup | Partial Fix Only | `48369de9` | Struct + origin/name it/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 155 | Kotlet schabowy | Partial Fix Only | `0a8b637e` | Struct + name tr/it/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 156 | Kimbap | Partial Fix Only | `102177cd` | name.ko + originText fixed; struct already present; EN content not verified |
+| 157 | Pastel de Choclo | Partial Fix Only | `7d501223` | Struct + origin/name.ko + ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 158 | Pljeskavica | Partial Fix Only | `c24d3f48` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 159 | Poffertjes | Partial Fix Only | `9d08033d` | Struct + name.ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 160 | Japanese Curry Rice | Partial Fix Only | `bc582960` | Struct + name.ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 161 | Fasolada | Partial Fix Only | `aaafb35a` | Struct + pt locale added + name.ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 162 | Tlayudas | Partial Fix Only | `5a4e6759` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 163 | Bandeja Paisa | Partial Fix Only | `f7ca7062` | Struct + pt locale added + origin/name.ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 164 | Lángos | Partial Fix Only | `8c32b51a` | Struct + origin/name.ko + ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 165 | Rajma | Partial Fix Only | `02bcda6b` | Struct + origin/name.ko + ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 166 | Picadillo | Partial Fix Only | `f054a5a2` | Struct + origin/name.ko + ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 167 | Lamb Tagine | Partial Fix Only | `5776c081` | Struct + name tr/it/ko + ingredients.tr + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 168 | Shepherd's Pie | Partial Fix Only | `4ae72d0a` | Struct + name tr/it/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 169 | Mapo Tofu | Partial Fix Only | `64b4b1a4` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 170 | Menemen | Partial Fix Only | `9d3b3983` | Struct + name.ko + ingredients.tr + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 171 | Solyanka | Partial Fix Only | `6179baae` | Struct + name.ko + ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 172 | Clam Chowder | Partial Fix Only | `22a630e1` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 173 | Currywurst | Partial Fix Only | `66ac45d2` | Struct + name.ko + ingredients.it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 174 | Tom Kha Gai | Partial Fix Only | `556179a0` | Struct + name.ko + ingredients tr/it + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 175 | Cachupa | Partial Fix Only | `59e220fe` | Struct + origin/name.ko + ingredients.tr + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 176 | Pav Bhaji | Partial Fix Only | `0b370363` | Struct + name.ko + ingredients.tr + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 177 | Karelian Stew | Partial Fix Only | `f662bdb2` | Struct + name it/ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 178 | Boeuf Bourguignon | Partial Fix Only | `9f6afcbe` | Struct + name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 179 | Chakchouka | Partial Fix Only | `b32e371f` | Struct + origin/name.ko + ingredients tr/it/ko + howIsMade tr/it/ko + originText fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 180 | Okonomiyaki | Tier A Complete | `36a91875` | Confirmed: exact quantities, multi-step instructions, all 14 locales aligned; name.ko + originText fixed |
+| 181 | Tonkotsu Ramen | Tier A Complete | `159635a3` | Confirmed: detailed broth + tare + assembly steps, exact quantities in all locales; struct + originText.tr fixed |
+| 182 | Shoyu Ramen | Tier A Complete | `0d5d19f1` | Confirmed: detailed multi-step recipe, exact quantities; struct + originText.tr fixed |
+| 183 | Miso Ramen | Tier A Complete | `51a3dc18` | Confirmed: detailed multi-step recipe, exact quantities; struct + originText.tr fixed — FINAL RECIPE |
+
+---
+
+## Summary counts
+
+| Status | Count |
+|---|---|
+| Tier A Complete | 4 |
+| Partial Fix Only | 133 |
+| Stub / Needs Full Rewrite | 36 |
+| Needs Visual QA | 10 |
+| **Total recipes** | **183** |
 
 ---
 
@@ -481,6 +504,21 @@ Already meets Tier A standard. All originText grammatically correct, all name lo
 ---
 
 ## Tier A Quality Standard (reference)
+
+A recipe is Tier A **only if ALL 10 criteria are met**:
+
+1. Every ingredient has an exact quantity (no bare nouns, no "some"/"a little" except final seasoning)
+2. Every cooking step has a time or visual doneness cue
+3. No generic filler text ("Cook until done", "Prepare ingredients")
+4. `tipType` matches the recipe category
+5. `pairingsType` matches the recipe category
+6. Feature cards (origin, time, difficulty, servings) are accurate
+7. `recipesMeta.time` is realistic wall-clock time including prep, marination, water boil
+8. `servings` field is present in `recipes.js`
+9. All 14 language locales are aligned (names in native script, originText grammatically correct)
+10. RO + EN + at least one non-Latin locale page has been visually verified in a browser
+
+**Warning:** Fixing originText grammar, name locales, or time values alone does NOT make a recipe Tier A. If the EN ingredients have no quantities and the EN howIsMade has no doneness cues, the recipe is a stub regardless of how many translation fixes were applied.
 
 | Criterion | Requirement |
 |---|---|
