@@ -11690,7 +11690,7 @@ export const recipes = [
       ja: "カウサ・リメーニャ",
       tr: "Causa Limeña",
       it: "Causa Limeña",
-      ko: "Causa Limeña"
+      ko: "카우사 리메냐"
     },
     category: {
       ro: "Aperitiv",
@@ -11703,10 +11703,13 @@ export const recipes = [
       ar: "مقبلات",
       zh: "开胃菜",
       ja: "前菜",
-      tr: "Appetizer",
-      it: "Appetizer",
-      ko: "Appetizer"
+      tr: "Başlangıç",
+      it: "Antipasto",
+      ko: "전채"
     },
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["cartofi", "lămâie", "maioneză", "avocado", "ton sau pui", "ardei iute", "sare", "piper"],
       en: ["potatoes", "lemon", "mayonnaise", "avocado", "tuna or chicken", "chili pepper", "salt", "pepper"],
@@ -11718,9 +11721,9 @@ export const recipes = [
       ar: ["بطاطس", "ليمون", "مايونيز", "أفوكادو", "تونة أو دجاج", "فلفل حار", "ملح", "فلفل"],
       zh: ["土豆", "柠檬", "蛋黄酱", "牛油果", "金枪鱼或鸡肉", "辣椒", "盐", "胡椒"],
       ja: ["ジャガイモ", "レモン", "マヨネーズ", "アボカド", "ツナまたは鶏肉", "唐辛子", "塩", "コショウ"],
-      tr: ["patates", "limon", "mayonez", "avokado", "ton balığı veya tavuk", "acı biber biber", "tuz", "biber"],
-      it: ["patate", "limone", "maionese", "avocado", "tonno o pollo", "peperoncino peperone", "sale", "peperone"],
-      ko: ["감자", "레몬", "마요네즈", "아보카도", "참치 또는 닭고기", "고추 고추", "소금", "고추"]
+      tr: ["patates", "limon", "mayonez", "avokado", "ton balığı veya tavuk", "acı biber", "tuz", "biber"],
+      it: ["patate", "limone", "maionese", "avocado", "tonno o pollo", "peperoncino", "sale", "pepe"],
+      ko: ["감자", "레몬", "마요네즈", "아보카도", "참치 또는 닭고기", "고추", "소금", "후추"]
     },
     howIsMade: {
       ro: "Fierbe cartofii, amestecă cu lămâie, stratifică cu maioneză, avocado și ton/pui, servește rece.",
@@ -11733,24 +11736,24 @@ export const recipes = [
       ar: "اسلق البطاطس وامزجها بالليمون، ضع طبقات من المايونيز والأفوكادو والتونة/الدجاج وقدمها باردة.",
       zh: "煮土豆，加柠檬拌匀，与蛋黄酱、牛油果和金枪鱼/鸡肉分层，冷食。",
       ja: "ジャガイモを茹でてレモンと混ぜ、マヨネーズ、アボカド、ツナまたは鶏肉で層にし、冷やして提供。",
-      tr: "Haşlayın patates, Karıştırın ile limon, katman ile mayonez, avokado, ve ton balığı/tavuk, Servis edin soğuk.",
-      it: "Cuoci patate, Mescola con limone, strato con maionese, avocado, e tonno/pollo, Servi freddo.",
-      ko: "삶고 감자, 섞고와 레몬, 층와 마요네즈, 아보카도, 그리고 참치/닭고기, 담아 내세요 차가운하세요."
+      tr: "Patatesleri haşlayın, limonla karıştırın, mayonez, avokado ve ton balığı veya tavukla katman oluşturun, soğuk servis edin.",
+      it: "Cuocete le patate, mescolate con limone, fate degli strati con maionese, avocado e tonno o pollo, servite freddo.",
+      ko: "감자를 삶아 레몬과 섞고, 마요네즈, 아보카도, 참치 또는 닭고기로 층을 쌓아 차갑게 제공합니다."
     },
     originText: {
       ro: "Causa Limeña este o rețetă tradițională din Peru.",
       en: "Causa Limeña is a traditional recipe from Peru.",
       es: "Causa Limeña es una receta tradicional de Perú.",
-      fr: "Causa Limeña est une recette traditionnelle de Pérou.",
+      fr: "Causa Limeña est une recette traditionnelle du Pérou.",
       de: "Causa Limeña ist ein traditionelles Rezept aus Peru.",
-      pt: "Causa Limeña é uma receita tradicional de Peru.",
+      pt: "Causa Limeña é uma receita tradicional do Peru.",
       ru: "Кауса Лименья — традиционный рецепт из Перу.",
       ar: "كاوسا ليمنيا هي وصفة تقليدية من بيرو.",
       zh: "土豆鸡肉沙拉 是来自秘鲁的传统食谱。",
       ja: "カウサ・リメーニャ はペルーの伝統的なレシピです。",
-      tr: "Causa misket limonuña Peru kökenli geleneksel bir tariftir.",
-      it: "Causa limeña è una risotta tradizionale di Perù.",
-      ko: "Causa 라임ña는(은) 페루의 전통 요리입니다."
+      tr: "Causa Limeña Peru kökenli geleneksel bir tariftir.",
+      it: "Causa Limeña è una ricetta tradizionale del Perù.",
+      ko: "카우사 리메냐는 페루의 전통 요리입니다."
     }
   },
   {
