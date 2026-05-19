@@ -5142,6 +5142,9 @@ export const recipes = [
   },
   {
     id: 55,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Grecia",
       en: "Greece",
@@ -5170,7 +5173,7 @@ export const recipes = [
       ja: "ムサカ",
       tr: "Moussaka",
       it: "Moussaka",
-      ko: "Moussaka"
+      ko: "무사카"
     },
     category: {
       ro: "Cină",
@@ -5223,14 +5226,14 @@ export const recipes = [
       es: "Musaca es una receta tradicional de Grecia.",
       fr: "Moussaka est une recette traditionnelle de Grèce.",
       de: "Moussaka ist ein traditionelles Rezept aus Griechenland.",
-      pt: "Moussaka é uma receita tradicional de Grécia.",
-      ru: "Мусака — традиционный рецепт из Греция.",
+      pt: "Moussaka é uma receita tradicional da Grécia.",
+      ru: "Мусака — традиционный рецепт из Греции.",
       ar: "مسقعة هي وصفة تقليدية من اليونان.",
       zh: "慕萨卡 是来自希腊的传统食谱。",
       ja: "ムサカ はギリシャの伝統的なレシピです。",
       tr: "Moussaka Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Moussaka è una risotta tradizionale di Grecia.",
-      ko: "Moussaka는(은) 그리스의 전통 요리입니다."
+      it: "Moussaka è una ricetta tradizionale della Grecia.",
+      ko: "무사카는 그리스의 전통 요리입니다."
     }
   },
   {
