@@ -11208,9 +11208,9 @@ export const recipes = [
       ar: "فطيرة كاريليا",
       zh: "卡累利阿馅饼",
       ja: "カレリアンピーラッカ",
-      tr: "Karelian Pie",
-      it: "Karelian Pie",
-      ko: "Karelian Pie"
+      tr: "Karelya Turtası",
+      it: "Torta della Carelia",
+      ko: "카렐리야 파이"
     },
     category: {
       ro: "Mic dejun",
@@ -11227,6 +11227,9 @@ export const recipes = [
       it: "Colazione",
       ko: "아침"
     },
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["făină de secară", "orez", "lapte", "unt", "sare", "ouă"],
       en: ["rye flour", "rice", "milk", "butter", "salt", "eggs"],
@@ -11238,9 +11241,9 @@ export const recipes = [
       ar: ["دقيق الجاودار", "أرز", "حليب", "زبدة", "ملح", "بيض"],
       zh: ["黑麦面粉", "米饭", "牛奶", "黄油", "盐", "鸡蛋"],
       ja: ["ライ麦粉", "ご飯", "牛乳", "バター", "塩", "卵"],
-      tr: ["çavdar un", "pirinç", "süt", "tereyağı", "tuz", "yumurta"],
-      it: ["segale farina", "riso", "latte", "burro", "sale", "uova"],
-      ko: ["호밀 밀가루", "쌀", "우유", "버터", "소금", "계란"]
+      tr: ["çavdar unu", "pirinç", "süt", "tereyağı", "tuz", "yumurta"],
+      it: ["farina di segale", "riso", "latte", "burro", "sale", "uova"],
+      ko: ["호밀가루", "쌀", "우유", "버터", "소금", "달걀"]
     },
     howIsMade: {
       ro: "Prepară un aluat subțire din secară, umple-l cu terci de orez sau cartofi, modelează tărtăcuțe ovale și coace-le la cuptor.",
@@ -11253,9 +11256,9 @@ export const recipes = [
       ar: "حضّر عجينة رفيعة من الجاودار، احشها بعصيدة الأرز أو البطاطس، شكّلها بيضاوية واخبزها في الفرن.",
       zh: "用黑麦面做成薄皮，包入米粥或土豆泥，做成椭圆形派，烤熟。",
       ja: "ライ麦の薄い生地でご飯またはじゃがいも粥を包み、楕円形に成形して焼く。",
-      tr: "yapın ince çavdar hamur, doldurun ile pirinç veya patates lapa, şekil verin içine oval turtalar ve fırında pişirin in fırın.",
-      it: "fai sottile segale impasto, farcisci con riso o patata porridge, dai forma dentro ovale torte salate e cuoci in forno in forno.",
-      ko: "만듭니다 얇게 호밀 반죽, 채웁니다와 쌀 또는 감자 죽, 모양을 만듭니다 안에 타원형 파이그리고 오븐에서 굽습니다 에서 오븐하세요."
+      tr: "İnce çavdar hamuru açın, pirinç veya patates lapasıyla doldurun, oval şekil verin ve fırında pişirin.",
+      it: "Preparate un impasto sottile di segale, farcite con porridge di riso o patate, formate dei pasticcini ovali e cuocete in forno.",
+      ko: "얇은 호밀 반죽을 만들고 쌀죽이나 감자죽으로 채워 타원형으로 빚은 후 오븐에서 굽습니다."
     },
     originText: {
       ro: "Karjalanpiirakka este o rețetă tradițională din Finlanda.",
@@ -11263,14 +11266,14 @@ export const recipes = [
       es: "Pastel carelio es una receta tradicional de Finlandia.",
       fr: "Tarte carélienne est une recette traditionnelle de Finlande.",
       de: "Karelische Pirogge ist ein traditionelles Rezept aus Finnland.",
-      pt: "Torta Carélia é uma receita tradicional de Finlândia.",
-      ru: "Карельский пирог — традиционный рецепт из Финляндия.",
+      pt: "Torta Carélia é uma receita tradicional da Finlândia.",
+      ru: "Карельский пирог — традиционный рецепт из Финляндии.",
       ar: "فطيرة كاريليا هي وصفة تقليدية من فنلندا.",
       zh: "卡累利阿馅饼 是来自芬兰的传统食谱。",
       ja: "カレリアンピーラッカ はフィンランドの伝統的なレシピです。",
-      tr: "Karelian Pie Finlandiya kökenli geleneksel bir tariftir.",
-      it: "Karelian Pie è una risotta tradizionale di Finlandia.",
-      ko: "Karelian Pie는(은) 핀란드의 전통 요리입니다."
+      tr: "Karelya Turtası Finlandiya kökenli geleneksel bir tariftir.",
+      it: "Torta della Carelia è una ricetta tradizionale della Finlandia.",
+      ko: "카렐리야 파이는 핀란드의 전통 요리입니다."
     }
   },
   {
