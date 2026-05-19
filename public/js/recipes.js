@@ -7442,6 +7442,9 @@ export const recipes = [
   },
   {
     id: 80,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Belgia",
       en: "Belgium",
@@ -7470,7 +7473,7 @@ export const recipes = [
       ja: "ストーフフレス",
       tr: "Stoofvlees",
       it: "Stoofvlees",
-      ko: "Stoofvlees"
+      ko: "스토프블레스"
     },
     category: {
       ro: "Cină",
@@ -7523,14 +7526,14 @@ export const recipes = [
       es: "Estofado flamenco es una receta tradicional de Bélgica.",
       fr: "Carbonnade flamande est une recette traditionnelle de Belgique.",
       de: "Flemischer Biertopf ist ein traditionelles Rezept aus Belgien.",
-      pt: "Ensopado Flamenco é uma receita tradicional de Bélgica.",
-      ru: "Стувфлес — традиционный рецепт из Бельгия.",
+      pt: "Ensopado Flamenco é uma receita tradicional da Bélgica.",
+      ru: "Стувфлес — традиционный рецепт из Бельгии.",
       ar: "ستوففليس هي وصفة تقليدية من بلجيكا.",
       zh: "比利时啤酒炖牛肉 是来自比利时的传统食谱。",
       ja: "ストーフフレス はベルギーの伝統的なレシピです。",
       tr: "Stoofvlees Belçika kökenli geleneksel bir tariftir.",
-      it: "Stoofvlees è una risotta tradizionale di Belgio.",
-      ko: "Stoofvlees는(은) 벨기에의 전통 요리입니다."
+      it: "Stoofvlees è una ricetta tradizionale del Belgio.",
+      ko: "스토프블레스는 벨기에의 전통 요리입니다."
     }
   },
   {
