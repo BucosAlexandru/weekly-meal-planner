@@ -7826,6 +7826,9 @@ export const recipes = [
   },
   {
     id: 84,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Danemarca",
       en: "Denmark",
@@ -7854,7 +7857,7 @@ export const recipes = [
       ja: "スモーブロー",
       tr: "Smørrebrød",
       it: "Smørrebrød",
-      ko: "Smørrebrød"
+      ko: "스뫼레브뢰드"
     },
     category: {
       ro: "Mic dejun",
@@ -7905,16 +7908,16 @@ export const recipes = [
       ro: "Smørrebrød este o rețetă tradițională din Danemarca.",
       en: "Smørrebrød is a traditional recipe from Denmark.",
       es: "Smørrebrød es una receta tradicional de Dinamarca.",
-      fr: "Smørrebrød est une recette traditionnelle de Danemark.",
+      fr: "Smørrebrød est une recette traditionnelle du Danemark.",
       de: "Smørrebrød ist ein traditionelles Rezept aus Dänemark.",
-      pt: "Smørrebrød é uma receita tradicional de Dinamarca.",
-      ru: "Смёрребрёд — традиционный рецепт из Дания.",
+      pt: "Smørrebrød é uma receita tradicional da Dinamarca.",
+      ru: "Смёрребрёд — традиционный рецепт из Дании.",
       ar: "سموربرود هي وصفة تقليدية من الدنمارك.",
       zh: "丹麦开放式三明治 是来自丹麦的传统食谱。",
       ja: "スモーブロー はデンマークの伝統的なレシピです。",
       tr: "Smørrebrød Danimarka kökenli geleneksel bir tariftir.",
-      it: "Smørrebrød è una risotta tradizionale di Danimarca.",
-      ko: "Smørrebrød는(은) 덴마크의 전통 요리입니다."
+      it: "Smørrebrød è una ricetta tradizionale della Danimarca.",
+      ko: "스뫼레브뢰드는 덴마크의 전통 요리입니다."
     }
   },
   {
