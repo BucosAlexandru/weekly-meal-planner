@@ -9179,7 +9179,7 @@ export const recipes = [
       ja: "サモア",
       tr: "Samoa",
       it: "Samoa",
-      ko: "Samoa"
+      ko: "사모아"
     },
     name: {
       ro: "Oka i'a",
@@ -9194,7 +9194,7 @@ export const recipes = [
       ja: "オカ・イア",
       tr: "Oka i'a",
       it: "Oka i'a",
-      ko: "Oka i'a"
+      ko: "오카 이아"
     },
     category: {
       ro: "Gustare",
@@ -9211,6 +9211,9 @@ export const recipes = [
       it: "Spuntino",
       ko: "간식"
     },
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["pește crud", "lapte de cocos", "castraveți", "ceapă", "roșii", "lime", "sare"],
       en: ["raw fish", "coconut milk", "cucumber", "onion", "tomatoes", "lime", "salt"],
@@ -9237,9 +9240,9 @@ export const recipes = [
       ar: "قطّع السمك النيء إلى مكعبات، اخلطه مع حليب جوز الهند والبصل والطماطم والخيار والملح. قدّمه باردًا.",
       zh: "生鱼切块，与椰奶、洋葱、番茄、黄瓜和盐拌匀，冷食。",
       ja: "生魚を角切りにし、ココナッツミルク・玉ねぎ・トマト・きゅうり・塩と和えて冷やして提供。",
-      tr: "kesin çiğ balık küp şeklinde doğrayın, Karıştırın ile hindistancevizi süt, soğan, domates, salatalık, ve tuz. servis edin soğutulmuş.",
-      it: "taglia crudo pesce dentro cubetti, Mescola con cocco latte, cipolla, pomodoro, cetriolo, e sale. servi raffreddato.",
-      ko: "자릅니다 생 생선 안에 깍둑썰기, 섞고와 코코넛 우유, 양파, 토마토, 오이, 그리고 소금. 제공합니다 차갑게 식힌하세요."
+      tr: "Çiğ balığı küp şeklinde doğrayın, hindistancevizi sütü, soğan, domates, salatalık ve tuzla karıştırın. Soğutulmuş olarak servis edin.",
+      it: "Tagliare il pesce crudo a cubetti, mescolare con latte di cocco, cipolla, pomodoro, cetriolo e sale. Servire freddo.",
+      ko: "생선을 깍둑썰기로 자른 후 코코넛 우유, 양파, 토마토, 오이, 소금과 섞습니다. 차갑게 식혀 제공합니다."
     },
     originText: {
       ro: "Oka i'a este o rețetă tradițională din Samoa.",
@@ -9253,8 +9256,8 @@ export const recipes = [
       zh: "萨摩亚鱼沙拉 是来自萨摩亚的传统食谱。",
       ja: "オカ・イア はサモアの伝統的なレシピです。",
       tr: "Oka i'a Samoa kökenli geleneksel bir tariftir.",
-      it: "Oka i'a è una risotta tradizionale di Samoa.",
-      ko: "Oka i'a는(은) Samoa의 전통 요리입니다."
+      it: "Oka i'a è una ricetta tradizionale di Samoa.",
+      ko: "오카 이아는 사모아의 전통 요리입니다."
     }
   },
   {
