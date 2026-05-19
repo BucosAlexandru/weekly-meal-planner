@@ -12360,9 +12360,9 @@ export const recipes = [
       ar: "باستا ألا نورما",
       zh: "诺尔玛意大利面",
       ja: "パスタ・アッラ・ノルマ",
-      tr: "Makarna alla Norma",
+      tr: "Pasta alla Norma",
       it: "Pasta alla Norma",
-      ko: "파스타 alla Norma"
+      ko: "파스타 알라 노르마"
     },
     category: {
       ro: "Prânz",
@@ -12379,6 +12379,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'pasta',
+    pairingsType: 'pasta',
     ingredients: {
       ro: ["paste", "vinete", "roșii", "usturoi", "ulei de măsline", "ricotta sărată", "busuioc", "sare", "piper"],
       en: ["pasta", "eggplant", "tomatoes", "garlic", "olive oil", "ricotta salata", "basil", "salt", "pepper"],
@@ -12390,9 +12393,9 @@ export const recipes = [
       ar: ["معكرونة", "باذنجان", "طماطم", "ثوم", "زيت زيتون", "ريكوتا سالاتا", "ريحان", "ملح", "فلفل"],
       zh: ["意大利面", "茄子", "西红柿", "大蒜", "橄榄油", "盐渍里考塔奶酪", "罗勒", "盐", "胡椒"],
       ja: ["パスタ", "ナス", "トマト", "ニンニク", "オリーブオイル", "リコッタサラータ", "バジル", "塩", "コショウ"],
-      tr: ["makarna", "yumurtaplant", "domates", "sarımsak", "zeytinyağı", "ricotta salata", "fesleğen", "tuz", "biber"],
-      it: ["pasta", "uovoplant", "pomodori", "aglio", "olio d'oliva", "ricotta insalata", "basilico", "sale", "peperone"],
-      ko: ["파스타", "계란식물", "토마토", "마늘", "올리브오일", "리코타 샐러드", "바질", "소금", "고추"]
+      tr: ["makarna", "patlıcan", "domates", "sarımsak", "zeytinyağı", "ricotta salata", "fesleğen", "tuz", "biber"],
+      it: ["pasta", "melanzana", "pomodori", "aglio", "olio d'oliva", "ricotta salata", "basilico", "sale", "pepe"],
+      ko: ["파스타", "가지", "토마토", "마늘", "올리브오일", "리코타 살라타", "바질", "소금", "후추"]
     },
     howIsMade: {
       ro: "Prăjește vinetele, fierbe pastele, prepară sosul de roșii și combină-le cu ricotta și busuioc.",
@@ -12405,24 +12408,24 @@ export const recipes = [
       ar: "اقلي الباذنجان، اسلق المعكرونة، حضّر صلصة الطماطم وامزجها مع الريكوتا والريحان.",
       zh: "煎茄子，煮意大利面，做番茄酱，与奶酪和罗勒混合。",
       ja: "ナスを炒め、パスタを茹で、トマトソースを作り、リコッタとバジルと合わせる。",
-      tr: "Kızartın yumurtaplants, Pişirin makarna, yapın domates sos, Birleştir ile ricotta ve fesleğen.",
-      it: "Friggi uovoplants, Cuoci pasta, fai pomodoro salsa, Unisci con ricotta e basilico.",
-      ko: "볶거나 튀기고 계란식물, 조리하고 파스타, 만듭니다 토마토 소스, 섞어와 리코타그리고 바질하세요."
+      tr: "Patlıcanları kızartın, makarnayı pişirin, domates sosu hazırlayın, ricotta ve fesleğenle karıştırın.",
+      it: "Friggete le melanzane, cuocete la pasta, preparate il sugo di pomodoro, mescolate con ricotta salata e basilico.",
+      ko: "가지를 튀기고 파스타를 삶아 토마토 소스를 만든 후, 리코타 살라타와 바질을 넣어 완성합니다."
     },
     originText: {
       ro: "Pasta alla Norma este o rețetă tradițională din Italia.",
       en: "Pasta alla Norma is a traditional recipe from Italy.",
       es: "Pasta alla Norma es una receta tradicional de Italia.",
-      fr: "Pâtes alla Norma est une recette traditionnelle de Italie.",
+      fr: "Pâtes alla Norma est une recette traditionnelle d'Italie.",
       de: "Pasta alla Norma ist ein traditionelles Rezept aus Italien.",
-      pt: "Pasta alla Norma é uma receita tradicional de Itália.",
-      ru: "Паста алла Норма — традиционный рецепт из Италия.",
+      pt: "Pasta alla Norma é uma receita tradicional da Itália.",
+      ru: "Паста алла Норма — традиционный рецепт из Италии.",
       ar: "باستا ألا نورما هي وصفة تقليدية من إيطاليا.",
       zh: "诺尔玛意大利面 是来自意大利的传统食谱。",
       ja: "パスタ・アッラ・ノルマ はイタリアの伝統的なレシピです。",
-      tr: "makarna alla Norma İtalya kökenli geleneksel bir tariftir.",
-      it: "Pasta alla Norma è una risotta tradizionale di Italia.",
-      ko: "Pasta alla Norma는(은) 이탈리아의 전통 요리입니다."
+      tr: "Pasta alla Norma İtalya kökenli geleneksel bir tariftir.",
+      it: "Pasta alla Norma è una ricetta tradizionale d'Italia.",
+      ko: "파스타 알라 노르마는 이탈리아의 전통 요리입니다."
     }
   },
   {
