@@ -6774,6 +6774,9 @@ export const recipes = [
   },
   {
     id: 73,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Nepal",
       en: "Nepal",
@@ -6787,7 +6790,7 @@ export const recipes = [
       ja: "ネパール",
       tr: "Nepal",
       it: "Nepal",
-      ko: "Nepal"
+      ko: "네팔"
     },
     name: {
       ro: "Momo",
@@ -6802,7 +6805,7 @@ export const recipes = [
       ja: "モモ",
       tr: "Momo",
       it: "Momo",
-      ko: "Momo"
+      ko: "모모"
     },
     category: {
       ro: "Gustare",
@@ -6853,16 +6856,16 @@ export const recipes = [
       ro: "Momo este o rețetă tradițională din Nepal.",
       en: "Momo is a traditional recipe from Nepal.",
       es: "Momo es una receta tradicional de Nepal.",
-      fr: "Momo est une recette traditionnelle de Népal.",
+      fr: "Momo est une recette traditionnelle du Népal.",
       de: "Momo ist ein traditionelles Rezept aus Nepal.",
-      pt: "Momo é uma receita tradicional de Nepal.",
-      ru: "Момо — традиционный рецепт из Непал.",
+      pt: "Momo é uma receita tradicional do Nepal.",
+      ru: "Момо — традиционный рецепт из Непала.",
       ar: "مومو هي وصفة تقليدية من نيبال.",
       zh: "尼泊尔饺子 是来自尼泊尔的传统食谱。",
       ja: "モモ はネパールの伝統的なレシピです。",
       tr: "Momo Nepal kökenli geleneksel bir tariftir.",
-      it: "Momo è una risotta tradizionale di Nepal.",
-      ko: "Momo는(은) Nepal의 전통 요리입니다."
+      it: "Momo è una ricetta tradizionale del Nepal.",
+      ko: "모모는 네팔의 전통 요리입니다."
     }
   },
   {
