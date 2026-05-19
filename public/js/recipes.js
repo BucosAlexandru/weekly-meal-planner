@@ -9482,7 +9482,7 @@ export const recipes = [
       ja: "トッポッキ",
       tr: "Tteokbokki",
       it: "Tteokbokki",
-      ko: "Tteokbokki"
+      ko: "떡볶이"
     },
     category: {
       ro: "Gustare",
@@ -9538,14 +9538,14 @@ export const recipes = [
       es: "Tteokbokki es una receta tradicional de Corea del Sur.",
       fr: "Tteokbokki est une recette traditionnelle de Corée du Sud.",
       de: "Tteokbokki ist ein traditionelles Rezept aus Südkorea.",
-      pt: "Tteokbokki é uma receita tradicional de Coreia do Sul.",
-      ru: "Ттокпокки — традиционный рецепт из Южная Корея.",
+      pt: "Tteokbokki é uma receita tradicional da Coreia do Sul.",
+      ru: "Ттокпокки — традиционный рецепт из Южной Кореи.",
       ar: "تيوكبوكي هي وصفة تقليدية من كوريا الجنوبية.",
       zh: "辣炒年糕 是来自韩国的传统食谱。",
       ja: "トッポッキ は韓国の伝統的なレシピです。",
       tr: "Tteokbokki Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Tteokbokki è una risotta tradizionale di Corea del Sud.",
-      ko: "Tteokbokki는(은) 대한민국의 전통 요리입니다."
+      it: "Tteokbokki è una ricetta tradizionale della Corea del Sud.",
+      ko: "떡볶이는 대한민국의 전통 요리입니다."
     }
   },
   {
