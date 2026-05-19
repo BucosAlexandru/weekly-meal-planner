@@ -9369,9 +9369,9 @@ export const recipes = [
       ar: "إستونيا",
       zh: "爱沙尼亚",
       ja: "エストニア",
-      tr: "Estonia",
+      tr: "Estonya",
       it: "Estonia",
-      ko: "Estonia"
+      ko: "에스토니아"
     },
     name: {
       ro: "Verivorst",
@@ -9386,7 +9386,7 @@ export const recipes = [
       ja: "ヴェリヴォルスト",
       tr: "Verivorst",
       it: "Verivorst",
-      ko: "Verivorst"
+      ko: "베리보르스트"
     },
     category: {
       ro: "Cină",
@@ -9403,6 +9403,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["cârnați de sânge", "orz", "ceapă", "grăsime", "sare", "piper"],
       en: ["blood sausage", "barley", "onion", "fat", "salt", "pepper"],
@@ -9429,24 +9432,24 @@ export const recipes = [
       ar: "احشِ أمعاء الخنزير بخليط من الدم والشعير والبصل والتوابل، اربطها واغلها أو اقليها.",
       zh: "猪肠内填入猪血、大麦、洋葱和香料混合物，扎紧后煮或炸。",
       ja: "豚の腸に豚の血・大麦・玉ねぎ・スパイスを詰め、縛って茹でるか揚げる。",
-      tr: "Stuff domuz eti bağırsaklar ile a karıştırınture domuz kan, arpa, soğan, ve baharatlar, bağlayın ve bağlayın ve veya kavurun.",
-      it: "Stuff maiale intestini con a mescolature  di maiale sangue, orzo, cipolla, e spezie, lega  e bolio o rosola.",
+      tr: "Domuz bağırsaklarını domuz kanı, arpa, soğan ve baharatlar karışımıyla doldurun, bağlayın ve haşlayın veya kızartın.",
+      it: "Riempire le budella di maiale con un misto di sangue di maiale, orzo, cipolla e spezie, legarle e bollirle oppure rosolarle.",
       ko: "돼지 피, 보리, 양파, 향신료를 섞어 돼지 창자에 채워주세요. 끝을 묶어 삶거나 볶아주세요."
     },
     originText: {
       ro: "Verivorst este o rețetă tradițională din Estonia.",
       en: "Verivorst is a traditional recipe from Estonia.",
       es: "Verivorst es una receta tradicional de Estonia.",
-      fr: "Verivorst est une recette traditionnelle de Estonie.",
+      fr: "Verivorst est une recette traditionnelle d'Estonie.",
       de: "Verivorst ist ein traditionelles Rezept aus Estland.",
-      pt: "Verivorst é uma receita tradicional de Estônia.",
-      ru: "Вериворст — традиционный рецепт из Эстония.",
+      pt: "Verivorst é uma receita tradicional da Estônia.",
+      ru: "Вериворст — традиционный рецепт из Эстонии.",
       ar: "فيريفورست هي وصفة تقليدية من إستونيا.",
       zh: "爱沙尼亚血肠 是来自爱沙尼亚的传统食谱。",
       ja: "ヴェリヴォルスト はエストニアの伝統的なレシピです。",
-      tr: "Verivorst Estonia kökenli geleneksel bir tariftir.",
-      it: "Verivorst è una risotta tradizionale di Estonia.",
-      ko: "Verivorst는(은) Estonia의 전통 요리입니다."
+      tr: "Verivorst Estonya kökenli geleneksel bir tariftir.",
+      it: "Verivorst è una ricetta tradizionale dell'Estonia.",
+      ko: "베리보르스트는 에스토니아의 전통 요리입니다."
     }
   },
   {
