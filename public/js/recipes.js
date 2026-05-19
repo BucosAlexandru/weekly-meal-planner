@@ -8696,6 +8696,7 @@ export const recipes = [
       es: "Suecia",
       fr: "Suède",
       de: "Schweden",
+      pt: "Suécia",
       ru: "Швеция",
       ar: "السويد",
       zh: "瑞典",
@@ -8714,9 +8715,9 @@ export const recipes = [
       ar: "لفائف القرفة",
       zh: "肉桂卷",
       ja: "シナモンロール",
-      tr: "Cinnamon Bun",
-      it: "Cinnamon Bun",
-      ko: "Cinnamon Bun"
+      tr: "Tarçınlı Çörek",
+      it: "Rotolo alla cannella",
+      ko: "시나몬 번"
     },
     category: {
       ro: "Desert",
@@ -8732,6 +8733,9 @@ export const recipes = [
       it: "Dessert",
       ko: "디저트"
     },
+    servings: 12,
+    tipType: 'dessert',
+    pairingsType: 'dessert',
     ingredients: {
       ro: ["făină", "lapte", "drojdie", "zahăr", "ouă", "unt", "scorțișoară"],
       en: ["flour", "milk", "yeast", "sugar", "eggs", "butter", "cinnamon"],
@@ -8756,9 +8760,9 @@ export const recipes = [
       ar: "حضّر عجينة، املأها بالقرفة والسكر، لفّها، قطّعها، واخبزها حتى تصبح ذهبية.",
       zh: "做面团，包上肉桂和糖，卷起来切块，烤至金黄。",
       ja: "生地を作り、シナモンと砂糖を巻き込み、切って焼き色がつくまで焼く。",
-      tr: "hazırlayın a hamur, doldurun ile tarçın ve şeker, rulo yapın, kesin, ve Fırında pişir altın rengi.",
-      it: "prepara a impasto, farcisci con cannella e zucchero, arrotola, taglia, e Cuoci al forno dorato.",
-      ko: "준비합니다 a 반죽, 채웁니다와 계피그리고 설탕, 말아줍니다, 자릅니다, 그리고 오븐에 구워 노릇하게하세요."
+      tr: "Bir hamur hazırlayın, tarçın ve şekerle doldurun, rulo yapın, kesin ve altın rengi olana kadar fırında pişirin.",
+      it: "Preparare un impasto, farcire con cannella e zucchero, arrotolare, tagliare e cuocere in forno fino a doratura.",
+      ko: "반죽을 준비하고 계피와 설탕을 채운 후 돌돌 말아 자릅니다. 노릇해질 때까지 오븐에 굽습니다."
     },
     originText: {
       ro: "Kanelbulle este o rețetă tradițională din Suedia.",
@@ -8766,14 +8770,14 @@ export const recipes = [
       es: "Bollo de Canela es una receta tradicional de Suecia.",
       fr: "Brioche à la cannelle est une recette traditionnelle de Suède.",
       de: "Zimtschnecke ist ein traditionelles Rezept aus Schweden.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Булочка с корицей — традиционный рецепт из Швеция.",
+      pt: "Kanelbulle é uma receita tradicional da Suécia.",
+      ru: "Булочка с корицей — традиционный рецепт из Швеции.",
       ar: "لفائف القرفة هي وصفة تقليدية من السويد.",
       zh: "肉桂卷 是来自瑞典的传统食谱。",
       ja: "シナモンロール はスウェーデンの伝統的なレシピです。",
-      tr: "tarçın ekmek İsveç kökenli geleneksel bir tariftir.",
-      it: "cannella panino è una risotta tradizionale di Svezia.",
-      ko: "계피 번는(은) 스웨덴의 전통 요리입니다."
+      tr: "Tarçınlı Çörek İsveç kökenli geleneksel bir tariftir.",
+      it: "Rotolo alla cannella è una ricetta tradizionale della Svezia.",
+      ko: "시나몬 번은 스웨덴의 전통 요리입니다."
     }
   },
   {
