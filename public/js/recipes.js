@@ -13305,9 +13305,9 @@ export const recipes = [
       ar: "البوسنة والهرسك",
       zh: "波斯尼亚和黑塞哥维那",
       ja: "ボスニア・ヘルツェゴビナ",
-      tr: "Bosnia and Herzegovina",
-      it: "Bosnia and Herzegovina",
-      ko: "Bosnia and Herzegovina"
+      tr: "Bosna-Hersek",
+      it: "Bosnia ed Erzegovina",
+      ko: "보스니아 헤르체고비나"
     },
     name: {
       ro: "Cevapi",
@@ -13322,7 +13322,7 @@ export const recipes = [
       ja: "チェバピ",
       tr: "Cevapi",
       it: "Cevapi",
-      ko: "Cevapi"
+      ko: "체바피"
     },
     category: {
       ro: "Cină",
@@ -13339,6 +13339,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne tocată", "usturoi", "ceapă", "sare", "piper", "ulei"],
       en: ["minced meat", "garlic", "onion", "salt", "pepper", "oil"],
@@ -13350,9 +13353,9 @@ export const recipes = [
       ar: ["لحم مفروم", "ثوم", "بصل", "ملح", "فلفل", "زيت"],
       zh: ["碎肉", "大蒜", "洋葱", "盐", "胡椒", "油"],
       ja: ["挽肉", "ニンニク", "玉ねぎ", "塩", "コショウ", "油"],
-      tr: ["kıyılmış et", "sarımsak", "soğbir", "tuz", "biber", "yağ"],
-      it: ["tritato carne", "aglio", "cipolla", "sale", "peperone", "olio"],
-      ko: ["다진 고기", "마늘", "양파", "소금", "고추", "기름"]
+      tr: ["kıyılmış et", "sarımsak", "soğan", "tuz", "biber", "yağ"],
+      it: ["carne tritata", "aglio", "cipolla", "sale", "pepe", "olio"],
+      ko: ["다진 고기", "마늘", "양파", "소금", "후추", "기름"]
     },
     howIsMade: {
       ro: "Amestecă ingredientele, formează cârnați mici, frige pe grătar și servește cu lipie și ceapă.",
@@ -13365,9 +13368,9 @@ export const recipes = [
       ar: "اخلط المكونات، شكّل نقانق صغيرة، اشوها وقدّمها مع خبز مسطح وبصل.",
       zh: "混合原料，做成小香肠，烤熟后搭配饼和洋葱食用。",
       ja: "材料を混ぜて小さなソーセージ型にし、グリルで焼き、フラットブレッドと玉ねぎと一緒に提供。",
-      tr: "Karıştırın malzemeler, şekil verin küçük sosis, Izgarada pişirin onları ve servis edin ile flatekmek ve soğan.",
-      it: "Mescola ingredienti, forma piccolo salsicce, Griglia li e servi con flatpane e cipolla.",
-      ko: "섞고 재료, 모양을 만듭니다 작게 소시지, 구워 그것들을그리고 제공합니다와 납작한빵그리고 양파하세요."
+      tr: "Malzemeleri karıştırın, küçük sosis şekline getirin, ızgarada pişirin ve yassı ekmek ve soğanla servis yapın.",
+      it: "Mescolate gli ingredienti, formate piccole salsicce, grigliatele e servitele con pane piatto e cipolla.",
+      ko: "재료를 섞어 작은 소시지 모양으로 빚고 구운 뒤 납작한 빵과 양파와 함께 제공합니다."
     },
     originText: {
       ro: "Cevapi este o rețetă tradițională din Bosnia și Herțegovina.",
@@ -13375,14 +13378,14 @@ export const recipes = [
       es: "Cevapi es una receta tradicional de Bosnia y Herzegovina.",
       fr: "Cevapi est une recette traditionnelle de Bosnie-Herzégovine.",
       de: "Cevapi ist ein traditionelles Rezept aus Bosnien und Herzegowina.",
-      pt: "Cevapi é uma receita tradicional de Bósnia e Herzegovina.",
-      ru: "Чевапи — традиционный рецепт из Босния и Герцеговина.",
+      pt: "Cevapi é uma receita tradicional da Bósnia e Herzegovina.",
+      ru: "Чевапи — традиционный рецепт из Боснии и Герцеговины.",
       ar: "تشيفابي هي وصفة تقليدية من البوسنة والهرسك.",
       zh: "烤肉卷 是来自波斯尼亚和黑塞哥维那的传统食谱。",
       ja: "チェバピ はボスニア・ヘルツェゴビナの伝統的なレシピです。",
-      tr: "Cevapi Bosnia ve Herzegovina kökenli geleneksel bir tariftir.",
-      it: "Cevapi è una risotta tradizionale di Bosnia e Herzegovina.",
-      ko: "Cevapi는(은) Bosnia 그리고 Herzegovina의 전통 요리입니다."
+      tr: "Cevapi Bosna-Hersek kökenli geleneksel bir tariftir.",
+      it: "Cevapi è una ricetta tradizionale della Bosnia ed Erzegovina.",
+      ko: "체바피는 보스니아 헤르체고비나의 전통 요리입니다."
     }
   },
   {
