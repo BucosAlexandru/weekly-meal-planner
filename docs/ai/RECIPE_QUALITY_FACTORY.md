@@ -61,7 +61,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 39 | Poutine | Partial Fix Only | `eeb27ad5` | servings + originText fr/de/pt/tr/it fixed |
 | 40 | Pierogi | Partial Fix Only | `eeb27ad5` | servings + originText fr/pt/tr fixed |
 | 41 | Nasi Goreng | Tier A Complete | `eeb27ad5`→`TBD` | Full rewrite: 12 ingredients with exact quantities, 11-step howIsMade with times/doneness cues, all 14 locales |
-| 42 | Fondue | Stub / Needs Full Rewrite | `11c5eb14` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 42 | Fondue | Tier A Complete | `11c5eb14`→`TBD` | Full rewrite: 10 ingredients with exact quantities (Gruyère/Emmental/kirsch), 8-step howIsMade, all 14 locales |
 | 43 | Masgouf | Stub / Needs Full Rewrite | `f8fbcec3` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 44 | Shakshuka | Stub / Needs Full Rewrite | `b1a7f417` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 45 | Salmon Soup | Stub / Needs Full Rewrite | `1fd96fe1` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |

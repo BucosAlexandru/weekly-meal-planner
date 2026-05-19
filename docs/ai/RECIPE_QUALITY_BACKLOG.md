@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 42 | Fondue |
-| 2 | 43 | Masgouf |
-| 3 | 44 | Shakshuka |
-| 4 | 45 | Salmon Soup |
-| 5 | 46 | Ghormeh Sabzi |
-| 6 | 48 | Adobo |
-| 7 | 50 | Doro Wat |
-| 8 | 51 | Kibbeh |
-| 9 | 52 | Stamppot |
-| 10 | 53 | Hangi |
+| 1 | 43 | Masgouf |
+| 2 | 44 | Shakshuka |
+| 3 | 45 | Salmon Soup |
+| 4 | 46 | Ghormeh Sabzi |
+| 5 | 48 | Adobo |
+| 6 | 50 | Doro Wat |
+| 7 | 51 | Kibbeh |
+| 8 | 52 | Stamppot |
+| 9 | 53 | Hangi |
+| 10 | 57 | Fårikål |
 
 ---
 
