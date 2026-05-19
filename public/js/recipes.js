@@ -11099,7 +11099,7 @@ export const recipes = [
       ja: "ベネズエラ",
       tr: "Venezuela",
       it: "Venezuela",
-      ko: "Venezuela"
+      ko: "베네수엘라"
     },
     name: {
       ro: "Arepa",
@@ -11114,7 +11114,7 @@ export const recipes = [
       ja: "アレパ",
       tr: "Arepa",
       it: "Arepa",
-      ko: "Arepa"
+      ko: "아레파"
     },
     category: {
       ro: "Mic dejun",
@@ -11131,6 +11131,9 @@ export const recipes = [
       it: "Colazione",
       ko: "아침"
     },
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["făină de porumb", "apă", "sare", "ulei", "umplutură la alegere"],
       en: ["corn flour", "water", "salt", "oil", "filling of choice"],
@@ -11142,9 +11145,9 @@ export const recipes = [
       ar: ["دقيق الذرة", "ماء", "ملح", "زيت", "حشوة حسب الرغبة"],
       zh: ["玉米粉", "水", "盐", "油", "任意馅料"],
       ja: ["トウモロコシ粉", "水", "塩", "油", "お好みの具材"],
-      tr: ["mısır un", "su", "tuz", "yağ", "iç harç  seçim"],
-      it: ["mais farina", "acqua", "sale", "olio", "ripieno  scelta"],
-      ko: ["옥수수 밀가루", "물", "소금", "기름", "속재료 의 선택"]
+      tr: ["mısır unu", "su", "tuz", "yağ", "iç harç seçimi"],
+      it: ["farina di mais", "acqua", "sale", "olio", "ripieno a scelta"],
+      ko: ["옥수수 가루", "물", "소금", "기름", "원하는 속재료"]
     },
     howIsMade: {
       ro: "Frământă făină de porumb cu apă și sare, formează turte plate și coace-le pe plită sau la cuptor, apoi umple-le după preferință.",
@@ -11157,24 +11160,24 @@ export const recipes = [
       ar: "اعجن دقيق الذرة مع الماء والملح، شكّل أقراصاً مسطحة واطبخها على الصاج أو في الفرن، ثم احشها كما ترغب.",
       zh: "玉米粉加水和盐和成面团，做成小饼，在铁板上烤或烘烤，按喜好夹馅。",
       ja: "トウモロコシ粉・水・塩を混ぜてこね、平らな円盤状にして鉄板やオーブンで焼き、好みの具材を挟む。",
-      tr: "Knead mısır un ile su ve tuz, şekil verin içine düz kek, Pişirin üstüne a ızgara tava veya fırında pişirin, sonra doldurun istenen.",
-      it: "Knead mais farina con acqua e sale, dai forma dentro piatto torte, Cuoci su a piastra o cuoci in forno, poi farcisci  desiderato.",
-      ko: "옥수수 가루에 물과 소금을 넣고 반죽해주세요. 납작한 모양으로 빚어 그릴 또는 오븐에 구워주세요. 원하는 재료를 채워주세요."
+      tr: "Mısır ununu su ve tuzla yoğurun, yassı şekil verin, ızgara tava veya fırında pişirin, ardından istediğiniz malzemeleri doldurun.",
+      it: "Impastate la farina di mais con acqua e sale, formate delle focacce piatte, cuocetele su una piastra o in forno, poi farcite a piacere.",
+      ko: "옥수수 가루에 물과 소금을 넣어 반죽하고 납작하게 빚어 그릴 또는 오븐에 굽습니다. 원하는 속재료를 채워 완성합니다."
     },
     originText: {
       ro: "Arepa este o rețetă tradițională din Venezuela.",
       en: "Arepa is a traditional recipe from Venezuela.",
       es: "Arepa es una receta tradicional de Venezuela.",
-      fr: "Arepa est une recette traditionnelle de Venezuela.",
+      fr: "Arepa est une recette traditionnelle du Venezuela.",
       de: "Arepa ist ein traditionelles Rezept aus Venezuela.",
-      pt: "Arepa é uma receita tradicional de Venezuela.",
-      ru: "Арепа — традиционный рецепт из Венесуэла.",
+      pt: "Arepa é uma receita tradicional da Venezuela.",
+      ru: "Арепа — традиционный рецепт из Венесуэлы.",
       ar: "أريبا هي وصفة تقليدية من فنزويلا.",
       zh: "委内瑞拉玉米饼 是来自委内瑞拉的传统食谱。",
       ja: "アレパ はベネズエラの伝統的なレシピです。",
-      tr: "arepa Venezuela kökenli geleneksel bir tariftir.",
-      it: "arepa è una risotta tradizionale di Venezuela.",
-      ko: "아레파는(은) Venezuela의 전통 요리입니다."
+      tr: "Arepa Venezuela kökenli geleneksel bir tariftir.",
+      it: "Arepa è una ricetta tradizionale del Venezuela.",
+      ko: "아레파는 베네수엘라의 전통 요리입니다."
     }
   },
   {
