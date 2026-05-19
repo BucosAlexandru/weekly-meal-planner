@@ -6870,6 +6870,9 @@ export const recipes = [
   },
   {
     id: 74,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Ecuador",
       en: "Ecuador",
@@ -6881,9 +6884,9 @@ export const recipes = [
       ar: "الإكوادور",
       zh: "厄瓜多尔",
       ja: "エクアドル",
-      tr: "Ecuador",
+      tr: "Ekvador",
       it: "Ecuador",
-      ko: "Ecuador"
+      ko: "에콰도르"
     },
     name: {
       ro: "Encebollado",
@@ -6898,7 +6901,7 @@ export const recipes = [
       ja: "エンセボジャード",
       tr: "Encebollado",
       it: "Encebollado",
-      ko: "Encebollado"
+      ko: "엔세보야도"
     },
     category: {
       ro: "Prânz",
@@ -6949,16 +6952,16 @@ export const recipes = [
       ro: "Encebollado este o rețetă tradițională din Ecuador.",
       en: "Encebollado is a traditional recipe from Ecuador.",
       es: "Encebollado es una receta tradicional de Ecuador.",
-      fr: "Encebollado est une recette traditionnelle de Équateur.",
+      fr: "Encebollado est une recette traditionnelle de l'Équateur.",
       de: "Encebollado ist ein traditionelles Rezept aus Ecuador.",
-      pt: "Encebollado é uma receita tradicional de Equador.",
-      ru: "Энсебольядо — традиционный рецепт из Эквадор.",
+      pt: "Encebollado é uma receita tradicional do Equador.",
+      ru: "Энсебольядо — традиционный рецепт из Эквадора.",
       ar: "إينسيبولادو هي وصفة تقليدية من الإكوادور.",
       zh: "洋葱炖鱼汤 是来自厄瓜多尔的传统食谱。",
       ja: "エンセボジャード はエクアドルの伝統的なレシピです。",
-      tr: "Encebollado Ecuador kökenli geleneksel bir tariftir.",
-      it: "Encebollado è una risotta tradizionale di Ecuador.",
-      ko: "Encebollado는(은) Ecuador의 전통 요리입니다."
+      tr: "Encebollado Ekvador kökenli geleneksel bir tariftir.",
+      it: "Encebollado è una ricetta tradizionale dell'Ecuador.",
+      ko: "엔세보야도는 에콰도르의 전통 요리입니다."
     }
   },
   {
