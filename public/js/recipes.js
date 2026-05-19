@@ -13403,7 +13403,7 @@ export const recipes = [
       ja: "ガーナ",
       tr: "Ghana",
       it: "Ghana",
-      ko: "Ghana"
+      ko: "가나"
     },
     name: {
       ro: "Fufu",
@@ -13418,7 +13418,7 @@ export const recipes = [
       ja: "フフ",
       tr: "Fufu",
       it: "Fufu",
-      ko: "Fufu"
+      ko: "푸푸"
     },
     category: {
       ro: "Prânz",
@@ -13435,6 +13435,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["manioc", "banane plantain", "apă"],
       en: ["cassava", "plantain", "water"],
@@ -13461,24 +13464,24 @@ export const recipes = [
       ar: "اسلق الكسافا وموز الجنة، ثم اهرسهم معًا حتى يصبح المزيج مرنًا.",
       zh: "将木薯和大蕉煮熟，然后捣成光滑有弹性的糊状。",
       ja: "キャッサバとプランテンバナナを茹で、滑らかで弾力が出るまで一緒に潰す。",
-      tr: "Haşlayın manyok ve muz (plantain), sonra dövün birlikte pürüzsüz ve esnek.",
-      it: "Cuoci manioca e platano, poi batti insieme liscio e elastico.",
-      ko: "카사바와 플랜틴을 껍질을 벗겨 넉넉한 물에 삶아주세요. 물기를 빼고 큰 절구에 넣어 함께 찧어주세요. 부드럽고 탄력 있는 질감이 될 때까지 반죽해주세요."
+      tr: "Manyok ve plantenyi haşlayın, ardından pürüzsüz ve esnek bir kıvama gelinceye kadar birlikte dövün.",
+      it: "Cuocete la manioca e il platano, poi pestateli insieme fino ad ottenere un impasto liscio ed elastico.",
+      ko: "카사바와 플랜틴을 껍질을 벗겨 삶습니다. 물기를 빼고 큰 절구에 넣어 함께 찧습니다. 부드럽고 탄력 있는 질감이 될 때까지 반죽합니다."
     },
     originText: {
       ro: "Fufu este o rețetă tradițională din Ghana.",
       en: "Fufu is a traditional recipe from Ghana.",
       es: "Fufu es una receta tradicional de Ghana.",
-      fr: "Fufu est une recette traditionnelle de Ghana.",
+      fr: "Fufu est une recette traditionnelle du Ghana.",
       de: "Fufu ist ein traditionelles Rezept aus Ghana.",
       pt: "Fufu é uma receita tradicional de Gana.",
-      ru: "Фуфу — традиционный рецепт из Гана.",
+      ru: "Фуфу — традиционный рецепт из Ганы.",
       ar: "فوفو هي وصفة تقليدية من غانا.",
       zh: "富富 是来自加纳的传统食谱。",
       ja: "フフ はガーナの伝統的なレシピです。",
       tr: "Fufu Ghana kökenli geleneksel bir tariftir.",
-      it: "Fufu è una risotta tradizionale di Ghana.",
-      ko: "Fufu는(은) Ghana의 전통 요리입니다."
+      it: "Fufu è una ricetta tradizionale del Ghana.",
+      ko: "푸푸는 가나의 전통 요리입니다."
     }
   },
   {
