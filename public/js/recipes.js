@@ -10036,6 +10036,7 @@ export const recipes = [
       es: "Perú",
       fr: "Pérou",
       de: "Peru",
+      pt: "Peru",
       ru: "Перу",
       ar: "بيرو",
       zh: "秘鲁",
@@ -10050,13 +10051,14 @@ export const recipes = [
       es: "Arroz Chaufa",
       fr: "Arroz Chaufa",
       de: "Arroz Chaufa",
+      pt: "Arroz Chaufa",
       ru: "Аррос Чауфа",
       ar: "أرز تشوفا",
       zh: "秘鲁炒饭",
       ja: "チャウファご飯",
       tr: "Arroz Chaufa",
       it: "Arroz Chaufa",
-      ko: "Arroz Chaufa"
+      ko: "아로스 차우파"
     },
     category: {
       ro: "Cină",
@@ -10064,6 +10066,7 @@ export const recipes = [
       es: "Cena",
       fr: "Dîner",
       de: "Abendessen",
+      pt: "Jantar",
       ru: "Ужин",
       ar: "عشاء",
       zh: "晚餐",
@@ -10072,19 +10075,23 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     ingredients: {
       ro: ["orez", "ouă", "pui sau vită", "ceapă verde", "ardei", "soia", "usturoi", "ulei"],
       en: ["rice", "eggs", "chicken or beef", "green onions", "bell pepper", "soy sauce", "garlic", "oil"],
       es: ["arroz", "huevos", "pollo o carne", "cebolla verde", "pimiento", "salsa de soja", "ajo", "aceite"],
       fr: ["riz", "œufs", "poulet ou bœuf", "oignons verts", "poivron", "sauce soja", "ail", "huile"],
       de: ["Reis", "Eier", "Huhn oder Rindfleisch", "Frühlingszwiebeln", "Paprika", "Sojasauce", "Knoblauch", "Öl"],
+      pt: ["arroz", "ovos", "frango ou carne bovina", "cebolinha", "pimentão", "molho de soja", "alho", "óleo"],
       ru: ["рис", "яйца", "курица или говядина", "зеленый лук", "перец", "соевый соус", "чеснок", "масло"],
       ar: ["أرز", "بيض", "دجاج أو لحم", "بصل أخضر", "فلفل", "صلصة الصويا", "ثوم", "زيت"],
       zh: ["米饭", "鸡蛋", "鸡肉或牛肉", "葱", "辣椒", "酱油", "大蒜", "油"],
       ja: ["ご飯", "卵", "鶏肉または牛肉", "青ねぎ", "ピーマン", "醤油", "ニンニク", "油"],
-      tr: ["pirinç", "yumurta", "tavuk veya dana eti", "yeşil soğans", "kapya biber", "soya sosu", "sarımsak", "yağ"],
-      it: ["riso", "uova", "pollo o manzo", "verde cipollas", "peperone", "salsa di soia", "aglio", "olio"],
-      ko: ["쌀", "계란", "닭고기 또는 소고기", "초록 양파s", "파프리카", "간장", "마늘", "기름"]
+      tr: ["pirinç", "yumurta", "tavuk veya dana eti", "yeşil soğan", "kapya biber", "soya sosu", "sarımsak", "yağ"],
+      it: ["riso", "uova", "pollo o manzo", "cipollotti verdi", "peperone", "salsa di soia", "aglio", "olio"],
+      ko: ["쌀", "계란", "닭고기 또는 소고기", "파", "파프리카", "간장", "마늘", "기름"]
     },
     howIsMade: {
       ro: "Prăjește ouăle și legumele în ulei, adaugă carnea și apoi orezul fiert. Amestecă cu sos de soia și servește fierbinte.",
@@ -10092,28 +10099,29 @@ export const recipes = [
       es: "Fríe los huevos y las verduras en aceite, añade la carne y luego el arroz cocido. Mezcla con salsa de soja y sirve caliente.",
       fr: "Faites frire les œufs et les légumes dans l'huile, ajoutez la viande puis le riz cuit. Mélangez avec la sauce soja et servez chaud.",
       de: "Eier und Gemüse im Öl anbraten, Fleisch dazugeben, dann den gekochten Reis. Mit Sojasoße vermengen und heiß servieren.",
+      pt: "Frite ovos e legumes no óleo, adicione a carne e depois o arroz cozido. Misture com molho de soja e sirva quente.",
       ru: "Обжарьте яйца и овощи в масле, добавьте мясо, затем вареный рис. Перемешайте с соевым соусом и подавайте горячим.",
       ar: "اقلي البيض والخضروات في الزيت، أضف اللحم ثم الأرز المطبوخ. امزج مع صلصة الصويا وقدمه ساخناً.",
       zh: "用油炒鸡蛋和蔬菜，加入肉类，然后放入煮熟的米饭。加入酱油拌匀，趁热食用。",
       ja: "油で卵と野菜を炒め、肉と炊いたご飯を加える。醤油で味付けし、熱いうちに提供する。",
-      tr: "Kızartın yumurta ve sebzeler in yağ, Ekleyin et ve sonra pişirilmiş pirinç. karıştırın ile soya sosu ve servis edin sıcak.",
-      it: "Friggi uova e verdure in olio, Aggiungi carne e poi cuocied riso. mescola con salsa di soia e servi caldo.",
-      ko: "볶거나 튀기고 계란그리고 채소 에서 기름, 넣고 고기그리고 그다음 조리합니다 쌀. 섞습니다와 간장그리고 제공합니다 뜨거운하세요."
+      tr: "Yumurta ve sebzeleri yağda kızartın, et ve pişirilmiş pirinci ekleyin. Soya sosuyla karıştırın ve sıcak servis edin.",
+      it: "Friggere le uova e le verdure nell'olio, aggiungere la carne e poi il riso cotto. Mescolare con la salsa di soia e servire caldo.",
+      ko: "기름에 계란과 채소를 볶은 후 고기와 밥을 넣습니다. 간장으로 맛을 내고 뜨겁게 제공합니다."
     },
     originText: {
       ro: "Arroz Chaufa este o rețetă tradițională din Peru.",
       en: "Arroz Chaufa is a traditional recipe from Peru.",
       es: "Arroz Chaufa es una receta tradicional de Perú.",
-      fr: "Arroz Chaufa est une recette traditionnelle de Pérou.",
+      fr: "Arroz Chaufa est une recette traditionnelle du Pérou.",
       de: "Arroz Chaufa ist ein traditionelles Rezept aus Peru.",
-      pt: "undefined é uma receita tradicional de undefined.",
+      pt: "Arroz Chaufa é uma receita tradicional do Peru.",
       ru: "Аррос Чауфа — традиционный рецепт из Перу.",
       ar: "أرز تشوفا هي وصفة تقليدية من بيرو.",
       zh: "秘鲁炒饭 是来自秘鲁的传统食谱。",
       ja: "チャウファご飯 はペルーの伝統的なレシピです。",
       tr: "Arroz Chaufa Peru kökenli geleneksel bir tariftir.",
-      it: "Arroz Chaufa è una risotta tradizionale di Perù.",
-      ko: "Arroz Chaufa는(은) 페루의 전통 요리입니다."
+      it: "Arroz Chaufa è una ricetta tradizionale del Perù.",
+      ko: "아로스 차우파는 페루의 전통 요리입니다."
     }
   },
   {
