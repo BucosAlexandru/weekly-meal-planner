@@ -8509,9 +8509,9 @@ export const recipes = [
       ar: "اسكتلندا",
       zh: "苏格兰",
       ja: "スコットランド",
-      tr: "Scotland",
-      it: "Scotland",
-      ko: "Scotland"
+      tr: "İskoçya",
+      it: "Scozia",
+      ko: "스코틀랜드"
     },
     name: {
       ro: "Cullen Skink",
@@ -8526,7 +8526,7 @@ export const recipes = [
       ja: "カレンスキンク",
       tr: "Cullen Skink",
       it: "Cullen Skink",
-      ko: "Cullen Skink"
+      ko: "컬렌 스킨크"
     },
     category: {
       ro: "Prânz",
@@ -8543,6 +8543,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["pește afumat", "cartofi", "ceapă", "lapte", "unt", "piper", "sare"],
       en: ["smoked fish", "potatoes", "onion", "milk", "butter", "pepper", "salt"],
@@ -8569,24 +8572,24 @@ export const recipes = [
       ar: "اسلق البطاطس والبصل في الحليب، أضف السمك المدخن والزبدة، تبّل حسب الرغبة.",
       zh: "用牛奶煮土豆和洋葱，加入熏鱼和黄油，调味。",
       ja: "ジャガイモと玉ねぎを牛乳で煮て、燻製魚とバターを加え、味を調える。",
-      tr: "Haşlayın patates ve soğan in süt, Ekleyin isli balık ve tereyağı, Baharatlandır tadına.",
-      it: "Cuoci patate e cipolla in latte, Aggiungi affumicato pesce e burro, Condisci  a piacere.",
-      ko: "삶고 감자그리고 양파 에서 우유, 넣고 훈제 생선그리고 버터, 간을 맞추고  기호에 맞게하세요."
+      tr: "Patates ve soğanı sütte haşlayın, ardından tütsülenmiş balık ve tereyağını ekleyin, tadına göre baharatlayın.",
+      it: "Cuocere le patate e la cipolla nel latte, aggiungere il pesce affumicato e il burro, aggiustare di sale e pepe.",
+      ko: "감자와 양파를 우유에 넣고 삶은 후, 훈제 생선과 버터를 넣고 기호에 맞게 간을 합니다."
     },
     originText: {
       ro: "Cullen Skink este o rețetă tradițională din Scoția.",
       en: "Cullen Skink is a traditional recipe from Scotland.",
       es: "Cullen Skink es una receta tradicional de Escocia.",
-      fr: "Cullen Skink est une recette traditionnelle de Écosse.",
+      fr: "Cullen Skink est une recette traditionnelle d'Écosse.",
       de: "Cullen Skink ist ein traditionelles Rezept aus Schottland.",
-      pt: "Cullen Skink é uma receita tradicional de Escócia.",
-      ru: "Каллен Скинк — традиционный рецепт из Шотландия.",
+      pt: "Cullen Skink é uma receita tradicional da Escócia.",
+      ru: "Каллен Скинк — традиционный рецепт из Шотландии.",
       ar: "كالين سكينك هي وصفة تقليدية من اسكتلندا.",
       zh: "卡伦鱼汤 是来自苏格兰的传统食谱。",
       ja: "カレンスキンク はスコットランドの伝統的なレシピです。",
-      tr: "Cullen Skink Scotland kökenli geleneksel bir tariftir.",
-      it: "Cullen Skink è una risotta tradizionale di Scotland.",
-      ko: "Cullen Skink는(은) Scotland의 전통 요리입니다."
+      tr: "Cullen Skink İskoçya kökenli geleneksel bir tariftir.",
+      it: "Cullen Skink è una ricetta tradizionale della Scozia.",
+      ko: "컬렌 스킨크는 스코틀랜드의 전통 요리입니다."
     }
   },
   {
