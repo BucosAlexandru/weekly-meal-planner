@@ -166,6 +166,22 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 157 | Pastel de Choclo | ✅ | ✅ | `7d501223` | 3 struct, origin tr/it/ko, name.ko (파스텔 데 초클로), ingredients tr/it, howIsMade tr/it/ko stubs, originText fr/pt/tr/it/ko |
 | 158 | Pljeskavica | ✅ | ✅ | `c24d3f48` | 3 struct, origin tr/ko, name.ko (플레스카비차), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
 | 159 | Poffertjes | ✅ | ✅ | `9d08033d` | 3 struct, name.ko (포퍼르체스), howIsMade tr/it/ko stubs, originText fr/de/pt/ru/it/ko |
+| 160 | Japanese Curry Rice | ✅ | ✅ | `bc582960` | 3 struct, name.ko (일본식 카레라이스), howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 161 | Fasolada | ✅ | ✅ | `aaafb35a` | 3 struct, pt locale missing (all blocks), name.ko (파솔라다), howIsMade tr/it/ko, originText fr/de/pt/ru/tr/it/ko |
+| 162 | Tlayudas | ✅ | ✅ | `5a4e6759` | 3 struct, origin tr/it/ko, name.ko (틀라유다스), ingredients tr/it/ko, howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
+| 163 | Bandeja Paisa | ✅ | ✅ | `f7ca7062` | 3 struct, pt locale missing (all blocks), origin tr/it/ko, name.ko (반데하 파이사), howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
+| 164 | Lángos | ✅ | ✅ | `8c32b51a` | 3 struct, origin tr/it/ko, name.ko (랑고시), ingredients tr/it, howIsMade tr/it/ko, originText fr/pt/de/ru/tr/it/ko |
+| 165 | Rajma | ✅ | ✅ | `02bcda6b` | 3 struct, origin tr/it/ko, name.ko (라즈마), ingredients tr/it, howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
+| 166 | Picadillo | ✅ | ✅ | `f054a5a2` | 3 struct, origin tr/it/ko, name.ko (피카디요), ingredients tr/it, howIsMade tr/it/ko, originText fr/pt/ru/tr/it/ko |
+| 167 | Lamb Tagine | ✅ | ✅ | `5776c081` | 3 struct, name tr/it/ko, ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/pt/tr/it/ko |
+| 168 | Shepherd's Pie | ✅ | ✅ | `4ae72d0a` | 3 struct, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/de/pt/ru/tr/it/ko |
+| 169 | Mapo Tofu | ✅ | ✅ | `64b4b1a4` | 3 struct, name.ko (마파두부), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 170 | Menemen | ✅ | ✅ | `9d3b3983` | 3 struct, name.ko (메네멘), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText de/pt/ru/tr/it/ko |
+| 171 | Solyanka | ✅ | ✅ | `6179baae` | 3 struct, name.ko (솔랸카), ingredients tr/it, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 172 | Clam Chowder | ✅ | ✅ | `22a630e1` | 3 struct, name.ko (클램 차우더), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/de/pt/tr/it/ko |
+| 173 | Currywurst | ✅ | ✅ | `66ac45d2` | 3 struct, name.ko (카리부어스트), ingredients.it word order, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 174 | Tom Kha Gai | ✅ | ✅ | `556179a0` | 3 struct, name.ko (톰카가이), ingredients tr/it, howIsMade tr/it + ko command forms, originText pt/ru/tr/it/ko |
+| 175 | Cachupa | ✅ | ✅ | `59e220fe` | 3 struct, origin tr/it/ko, name.ko (카추파), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/tr/it/ko |
 
 ---
 
