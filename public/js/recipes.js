@@ -6486,6 +6486,9 @@ export const recipes = [
   },
   {
     id: 69,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Malaysia",
       en: "Malaysia",
@@ -6514,7 +6517,7 @@ export const recipes = [
       ja: "ラクサ",
       tr: "Laksa",
       it: "Laksa",
-      ko: "Laksa"
+      ko: "락사"
     },
     category: {
       ro: "Prânz",
@@ -6567,14 +6570,14 @@ export const recipes = [
       es: "Laksa es una receta tradicional de Malasia.",
       fr: "Laksa est une recette traditionnelle de Malaisie.",
       de: "Laksa ist ein traditionelles Rezept aus Malaysia.",
-      pt: "Laksa é uma receita tradicional de Malásia.",
-      ru: "Лакса — традиционный рецепт из Малайзия.",
+      pt: "Laksa é uma receita tradicional da Malásia.",
+      ru: "Лакса — традиционный рецепт из Малайзии.",
       ar: "لاكسا هي وصفة تقليدية من ماليزيا.",
       zh: "叻沙 是来自马来西亚的传统食谱。",
       ja: "ラクサ はマレーシアの伝統的なレシピです。",
       tr: "Laksa Malezya kökenli geleneksel bir tariftir.",
-      it: "Laksa è una risotta tradizionale di Malesia.",
-      ko: "Laksa는(은) 말레이시아의 전통 요리입니다."
+      it: "Laksa è una ricetta tradizionale della Malesia.",
+      ko: "락사는 말레이시아의 전통 요리입니다."
     }
   },
   {
