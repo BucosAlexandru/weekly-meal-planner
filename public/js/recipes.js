@@ -15021,6 +15021,9 @@ export const recipes = [
   },
   {
     id: 164,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Ungaria",
       en: "Hungary",
@@ -15049,7 +15052,7 @@ export const recipes = [
       ja: "ラーンゴシュ",
       tr: "Lángos",
       it: "Lángos",
-      ko: "Lángos"
+      ko: "랑고시"
     },
     category: {
       ro: "Gustare",
@@ -15078,7 +15081,7 @@ export const recipes = [
       zh: ["面粉", "酵母", "水", "盐", "油", "酸奶油", "奶酪", "大蒜"],
       ja: ["小麦粉", "イースト", "水", "塩", "油", "サワークリーム", "チーズ", "ニンニク"],
       tr: ["un", "maya", "su", "tuz", "yağ", "ekşi krema", "peynir", "sarımsak"],
-      it: ["farina", "lievito", "acqua", "sale", "olio", "acidulo panna", "formaggio", "aglio"],
+      it: ["farina", "lievito", "acqua", "sale", "olio", "panna acida", "formaggio", "aglio"],
       ko: ["밀가루", "이스트", "물", "소금", "기름", "새콤한 크림", "치즈", "마늘"]
     },
     howIsMade: {
@@ -15092,9 +15095,9 @@ export const recipes = [
       ar: "حضّر عجين مخمر، افرده واقله في الزيت الساخن حتى ينتفخ ويحمر. قدّمه مع القشدة الحامضة والجبن.",
       zh: "发酵面团擀开，放入热油中炸至蓬松金黄，配酸奶油和奶酪食用。",
       ja: "発酵生地を伸ばして熱い油で揚げ、サワークリームとチーズを添えて提供。",
-      tr: "hazırlayın mayalanmış hamur, rulo yapın bunu , ve derin-kavurun in sıcak yağ kabarmış ve altın rengi. servis edin ile ekşi krema ve peynir.",
-      it: "prepara lievitato impasto, arrotola esso , e profondo-rosola in caldo olio soffice e dorato. servi con acidulo panna e formaggio.",
-      ko: "준비합니다 발효된 반죽, 말아줍니다 그것 , 그리고 깊은-볶거나 튀겨 에서 뜨거운 기름 폭신한그리고 노릇하게. 제공합니다와 새콤한 크림그리고 치즈하세요."
+      tr: "Mayalı hamuru hazırlayın, açın ve sıcak yağda kabarıp altın rengi olana kadar kızartın. Ekşi krema ve peynirle servis edin.",
+      it: "Prepara un impasto lievitato, stendilo e friggilo in olio caldo fino a quando è soffice e dorato. Servi con panna acida e formaggio.",
+      ko: "발효 반죽을 준비하고 펴서 뜨거운 기름에 폭신하고 노릇해질 때까지 튀깁니다. 사워크림과 치즈를 곁들여 냅니다."
     },
     originText: {
       ro: "Lángos este o rețetă tradițională din Ungaria.",
@@ -15102,14 +15105,14 @@ export const recipes = [
       es: "Lángos es una receta tradicional de Hungría.",
       fr: "Lángos est une recette traditionnelle de Hongrie.",
       de: "Lángos ist ein traditionelles Rezept aus Ungarn.",
-      pt: "Lángos é uma receita tradicional de Hungria.",
-      ru: "Лангош — традиционный рецепт из Венгрия.",
+      pt: "Lángos é uma receita tradicional da Hungria.",
+      ru: "Лангош — традиционный рецепт из Венгрии.",
       ar: "لانغوش هي وصفة تقليدية من المجر.",
       zh: "匈牙利油饼 是来自匈牙利的传统食谱。",
       ja: "ラーンゴシュ はハンガリーの伝統的なレシピです。",
       tr: "Lángos Macaristan kökenli geleneksel bir tariftir.",
-      it: "Lángos è una risotta tradizionale di Ungheria.",
-      ko: "Lángos는(은) 헝가리의 전통 요리입니다."
+      it: "Lángos è una ricetta tradizionale dell'Ungheria.",
+      ko: "랑고시는 헝가리의 전통 요리입니다."
     }
   },
   {
