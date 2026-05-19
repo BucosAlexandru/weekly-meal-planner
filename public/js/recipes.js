@@ -14733,12 +14733,16 @@ export const recipes = [
   },
   {
     id: 161,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'veg',
     origin: {
       ro: "Grecia",
       en: "Greece",
       es: "Grecia",
       fr: "Grèce",
       de: "Griechenland",
+      pt: "Grécia",
       ru: "Греция",
       ar: "اليونان",
       zh: "希腊",
@@ -14753,13 +14757,14 @@ export const recipes = [
       es: "Fasolada",
       fr: "Fasolada",
       de: "Fasolada",
+      pt: "Fasolada",
       ru: "Фасолада",
       ar: "فاسولادا",
       zh: "希腊炖豆汤",
       ja: "ファソラーダ",
       tr: "Fasolada",
       it: "Fasolada",
-      ko: "Fasolada"
+      ko: "파솔라다"
     },
     category: {
       ro: "Prânz",
@@ -14767,6 +14772,7 @@ export const recipes = [
       es: "Almuerzo",
       fr: "Déjeuner",
       de: "Mittagessen",
+      pt: "Almoço",
       ru: "Обед",
       ar: "غداء",
       zh: "午餐",
@@ -14785,9 +14791,10 @@ export const recipes = [
       ar: ["فاصوليا بيضاء", "جزر", "كرفس", "بصل", "طماطم", "زيت زيتون", "ملح", "فلفل"],
       zh: ["白豆", "胡萝卜", "芹菜", "洋葱", "番茄", "橄榄油", "盐", "胡椒"],
       ja: ["白いんげん豆", "にんじん", "セロリ", "玉ねぎ", "トマト", "オリーブオイル", "塩", "コショウ"],
-      tr: ["beyaz fasulye", "havuçs", "kereviz", "soğbir", "domates", "zeytinyağı", "tuz", "biber"],
-      it: ["bianco fagioli", "carotas", "sedano", "cipolla", "pomodori", "olio d'oliva", "sale", "peperone"],
-      ko: ["흰 콩", "당근s", "셀러리", "양파", "토마토", "올리브오일", "소금", "고추"]
+      pt: ["feijão branco", "cenouras", "aipo", "cebola", "tomates", "azeite", "sal", "pimenta"],
+      tr: ["beyaz fasulye", "havuç", "kereviz", "soğan", "domates", "zeytinyağı", "tuz", "biber"],
+      it: ["fagioli bianchi", "carote", "sedano", "cipolla", "pomodori", "olio d'oliva", "sale", "pepe"],
+      ko: ["흰 콩", "당근", "셀러리", "양파", "토마토", "올리브오일", "소금", "후추"]
     },
     howIsMade: {
       ro: "Fierbe fasolea, adaugă legumele tăiate și fierbe până când totul este fraged. Asezonează cu ulei de măsline și servește cald.",
@@ -14799,9 +14806,10 @@ export const recipes = [
       ar: "اسلق الفاصوليا، أضف الخضار المفرومة واطبخ حتى تصبح طرية. تبّل بزيت الزيتون وقدّمها دافئة.",
       zh: "煮白豆，加入切碎的蔬菜煮至软烂。加入橄榄油调味，热食。",
       ja: "白いんげん豆を煮て、野菜を加え、すべてが柔らかくなるまで調理。オリーブオイルで味付けして温かく提供。",
-      tr: "Haşlayın fasulye, Ekleyin doğranmış sebzeler ve pişirin her şeyi yumuşak. Season ile zeytinyağı ve servis edin ılık.",
-      it: "Cuoci fagioli, Aggiungi tritato verdure e cuoci tutto  tenero. Season con olio d'oliva e servi tiepido.",
-      ko: "콩을 삶고 채소를 넣어 모두 부드러워질 때까지 조리해주세요. 올리브 오일로 간을 맞추고 따뜻하게 제공해주세요."
+      pt: "Cozinhe o feijão, adicione os legumes picados e cozinhe até ficar macio. Tempere com azeite e sirva quente.",
+      tr: "Fasulyeyi haşlayın, doğranmış sebzeleri ekleyin ve her şey yumuşayana kadar pişirin. Zeytinyağıyla tatlandırın ve ılık servis edin.",
+      it: "Cuoci i fagioli, aggiungi le verdure tritate e cuoci finché tutto è tenero. Condisci con olio d'oliva e servi tiepido.",
+      ko: "콩을 삶고 채소를 넣어 모두 부드러워질 때까지 익힙니다. 올리브 오일로 간을 맞추고 따뜻하게 냅니다."
     },
     originText: {
       ro: "Fasolada este o rețetă tradițională din Grecia.",
@@ -14809,14 +14817,14 @@ export const recipes = [
       es: "Fasolada es una receta tradicional de Grecia.",
       fr: "Fasolada est une recette traditionnelle de Grèce.",
       de: "Fasolada ist ein traditionelles Rezept aus Griechenland.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Фасолада — традиционный рецепт из Греция.",
+      pt: "Fasolada é uma receita tradicional da Grécia.",
+      ru: "Фасолада — традиционный рецепт из Греции.",
       ar: "فاسولادا هي وصفة تقليدية من اليونان.",
       zh: "希腊炖豆汤 是来自希腊的传统食谱。",
       ja: "ファソラーダ はギリシャの伝統的なレシピです。",
       tr: "Fasolada Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Fasolada è una risotta tradizionale di Grecia.",
-      ko: "Fasolada는(은) 그리스의 전통 요리입니다."
+      it: "Fasolada è una ricetta tradizionale della Grecia.",
+      ko: "파솔라다는 그리스의 전통 요리입니다."
     }
   },
   {
