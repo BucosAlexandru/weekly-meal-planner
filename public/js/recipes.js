@@ -10922,7 +10922,7 @@ export const recipes = [
       ja: "タジン",
       tr: "Tagine",
       it: "Tagine",
-      ko: "Tagine"
+      ko: "타진"
     },
     category: {
       ro: "Cină",
@@ -10939,6 +10939,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de miel", "năut", "caise uscate", "ceapă", "morcovi", "scorțișoară", "condimente"],
       en: ["lamb", "chickpeas", "dried apricots", "onion", "carrots", "cinnamon", "spices"],
@@ -10950,9 +10953,9 @@ export const recipes = [
       ar: ["لحم ضأن", "حمص", "مشمش مجفف", "بصل", "جزر", "قرفة", "توابل"],
       zh: ["羊肉", "鹰嘴豆", "干杏", "洋葱", "胡萝卜", "肉桂", "香料"],
       ja: ["ラム肉", "ひよこ豆", "ドライアプリコット", "玉ねぎ", "ニンジン", "シナモン", "スパイス"],
-      tr: ["kuzu", "nohut", "kuru kayısı", "soğbir", "havuçs", "tarçın", "baharatlar"],
-      it: ["agnello", "ceci", "albicocche secche", "cipolla", "carotas", "cannella", "spezie"],
-      ko: ["양고기", "병아리콩", "말린 살구", "양파", "당근s", "계피", "향신료"]
+      tr: ["kuzu", "nohut", "kuru kayısı", "soğan", "havuç", "tarçın", "baharatlar"],
+      it: ["agnello", "ceci", "albicocche secche", "cipolla", "carote", "cannella", "spezie"],
+      ko: ["양고기", "병아리콩", "말린 살구", "양파", "당근", "계피", "향신료"]
     },
     howIsMade: {
       ro: "Gătește carnea (de obicei miel sau pui) încet cu legume, fructe uscate, condimente și puțină apă, în vas tagine cu capac.",
@@ -10965,24 +10968,24 @@ export const recipes = [
       ar: "اطبخ اللحم (غالباً لحم الضأن أو الدجاج) مع الخضار والفواكه المجففة والتوابل وقليل من الماء في طاجين مغطى.",
       zh: "羊肉或鸡肉与蔬菜、干果、香料和少量水在盖着的塔吉锅中慢炖。",
       ja: "ラム肉や鶏肉・野菜・ドライフルーツ・スパイス・少量の水をタジン鍋でじっくり煮込む。",
-      tr: "kısık ateşte yavaşça pişirin et (genellikle kuzu veya tavuk) ile sebzeler, kuru meyveler, baharatlar, ve a biraz su kapalı tajin tenceresi.",
-      it: "cuoci lentamente carne (di solito agnello o pollo) con verdure, frutta secca, spezie, e a un po'  acqua coperto tajine.",
-      ko: "약한 불로 천천히 조리합니다 고기 (보통 양고기 또는 닭고기)와 채소, 말린 과일, 향신료, 그리고 a 조금 의 물 에서 a 덮인 타진 냄비하세요."
+      tr: "Eti (genellikle kuzu veya tavuk) sebzeler, kuru meyveler, baharatlar ve az su ile kapalı tajin tenceresinde kısık ateşte yavaşça pişirin.",
+      it: "Cuocere lentamente la carne (di solito agnello o pollo) con verdure, frutta secca, spezie e un po' d'acqua in una tajine coperta.",
+      ko: "양고기나 닭고기를 채소, 말린 과일, 향신료, 소량의 물과 함께 뚜껑이 있는 타진 냄비에서 약한 불로 천천히 조리합니다."
     },
     originText: {
       ro: "Tagine este o rețetă tradițională din Maroc.",
       en: "Tagine is a traditional recipe from Morocco.",
       es: "Tajine es una receta tradicional de Marruecos.",
-      fr: "Tajine est une recette traditionnelle de Maroc.",
+      fr: "Tajine est une recette traditionnelle du Maroc.",
       de: "Tajine ist ein traditionelles Rezept aus Marokko.",
-      pt: "Tagine é uma receita tradicional de Marrocos.",
+      pt: "Tagine é uma receita tradicional do Marrocos.",
       ru: "Тажин — традиционный рецепт из Марокко.",
       ar: "طاجين هي وصفة تقليدية من المغرب.",
       zh: "摩洛哥塔吉锅 是来自摩洛哥的传统食谱。",
       ja: "タジン はモロッコの伝統的なレシピです。",
-      tr: "tajin Fas kökenli geleneksel bir tariftir.",
-      it: "tajine è una risotta tradizionale di Marocco.",
-      ko: "타진는(은) 모로코의 전통 요리입니다."
+      tr: "Tagine Fas kökenli geleneksel bir tariftir.",
+      it: "Tagine è una ricetta tradizionale del Marocco.",
+      ko: "타진은 모로코의 전통 요리입니다."
     }
   },
   {
