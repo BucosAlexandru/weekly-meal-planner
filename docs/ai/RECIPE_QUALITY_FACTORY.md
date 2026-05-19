@@ -117,6 +117,20 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 107 | Francesinha | ✅ | ✅ | `203ee21f` | 11 fixes: 3 struct, name.ko, ingredients.tr/it, howIsMade.tr/it, originText.fr/ru/it/ko |
 | 109 | Arroz Chaufa | ✅ | ✅ | `cae13e12` | 15+ fixes: 3 struct, add missing pt locale (all blocks), name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/it/ko |
 | 110 | Chili Crab | ✅ | ✅ | `240c6bbf` | 13 fixes: 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.ru/tr/it/ko |
+| 111 | Tamale | ✅ | ✅ | `27fdac72` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 112 | Tom Yum | ✅ | ✅ | `989f905e` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 113 | Milanesa | ✅ | ✅ | `ee9d7614` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 114 | Lok Lak | ✅ | ✅ | `0084eba4` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 115 | Manti | ✅ | ✅ | `49990216` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 116 | Chakhokhbili | ✅ | ✅ | `18194785` | 3 struct, add missing pt locale (all blocks), name.ko, ingredients.it (peperone→pepe dup fix), howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 117 | Lomo Saltado | ✅ | ✅ | `58e8d65d` | 3 struct, origin.tr/ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 118 | Tagine | ✅ | ✅ | `1a5d2a2a` | howIsMade.tr/it/ko stubs, originText.fr(du Maroc)/pt(do Marrocos)/tr/it(risotta→ricetta,del Marocco)/ko; earlier commit fixed struct+ingredients |
+| 119 | Köttbullar | ✅ | ✅ | `62653f25` | 3 struct, name.tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.pt/ru/tr/it/ko |
+| 120 | Arepa | ✅ | ✅ | `db8e0a77` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 121 | Karelian Pie | ✅ | ✅ | `0ee03e05` | 3 struct, name.tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.pt/ru/tr/it/ko |
+| — | (id 122 absent) | — | — | — | No recipe with id 122 in file |
+| 123 | Pasta e fagioli | ✅ | ✅ | `a1714809` | 3 struct, name.tr/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 124 | Kottu | ✅ | ✅ | `643ae659` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.ru/it/ko |
 
 ---
 
