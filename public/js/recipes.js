@@ -10708,13 +10708,14 @@ export const recipes = [
       es: "Georgia",
       fr: "Géorgie",
       de: "Georgien",
+      pt: "Geórgia",
       ru: "Грузия",
       ar: "جورجيا",
       zh: "格鲁吉亚",
       ja: "ジョージア",
-      tr: "Georgia",
+      tr: "Gürcistan",
       it: "Georgia",
-      ko: "Georgia"
+      ko: "조지아"
     },
     name: {
       ro: "Chakhokhbili",
@@ -10722,13 +10723,14 @@ export const recipes = [
       es: "Chakhokhbili",
       fr: "Chakhokhbili",
       de: "Chakhokhbili",
+      pt: "Chakhokhbili",
       ru: "Чахохбили",
       ar: "تشاخوخبيلي",
       zh: "格鲁吉亚炖鸡",
       ja: "チャホフビリ",
       tr: "Chakhokhbili",
       it: "Chakhokhbili",
-      ko: "Chakhokhbili"
+      ko: "차호흐빌리"
     },
     category: {
       ro: "Cină",
@@ -10736,6 +10738,7 @@ export const recipes = [
       es: "Cena",
       fr: "Dîner",
       de: "Abendessen",
+      pt: "Jantar",
       ru: "Ужин",
       ar: "عشاء",
       zh: "晚餐",
@@ -10744,18 +10747,22 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["pui", "ceapă", "roșii", "ardei gras", "usturoi", "pătrunjel", "ulei", "sare", "piper", "coriandru"],
       en: ["chicken", "onion", "tomatoes", "bell pepper", "garlic", "parsley", "oil", "salt", "pepper", "coriander"],
       es: ["pollo", "cebolla", "tomates", "pimiento", "ajo", "perejil", "aceite", "sal", "pimienta", "cilantro"],
       fr: ["poulet", "oignon", "tomates", "poivron", "ail", "persil", "huile", "sel", "poivre", "coriandre"],
       de: ["Hähnchen", "Zwiebel", "Tomaten", "Paprika", "Knoblauch", "Petersilie", "Öl", "Salz", "Pfeffer", "Koriander"],
+      pt: ["frango", "cebola", "tomates", "pimentão", "alho", "salsa", "óleo", "sal", "pimenta", "coentro"],
       ru: ["курица", "лук", "помидоры", "перец", "чеснок", "петрушка", "масло", "соль", "перец", "кориандр"],
       ar: ["دجاج", "بصل", "طماطم", "فلفل", "ثوم", "بقدونس", "زيت", "ملح", "فلفل", "كزبرة"],
       zh: ["鸡肉", "洋葱", "番茄", "辣椒", "大蒜", "香菜", "油", "盐", "胡椒", "香菜粉"],
       ja: ["鶏肉", "玉ねぎ", "トマト", "ピーマン", "ニンニク", "パセリ", "油", "塩", "コショウ", "コリアンダー"],
-      tr: ["tavuk", "soğbir", "domates", "kapya biber", "sarımsak", "maydanoz", "yağ", "tuz", "biber", "kişniş"],
-      it: ["pollo", "cipolla", "pomodori", "peperone", "aglio", "prezzemolo", "olio", "sale", "peperone", "coriandolo"],
+      tr: ["tavuk", "soğan", "domates", "kapya biber", "sarımsak", "maydanoz", "yağ", "tuz", "biber", "kişniş"],
+      it: ["pollo", "cipolla", "pomodori", "peperone", "aglio", "prezzemolo", "olio", "sale", "pepe", "coriandolo"],
       ko: ["닭고기", "양파", "토마토", "파프리카", "마늘", "파슬리", "기름", "소금", "고추", "고수"]
     },
     howIsMade: {
@@ -10764,13 +10771,14 @@ export const recipes = [
       es: "Fríe la cebolla y el pollo, añade pimiento y tomates, cocina a fuego lento con especias y hierbas. Sirve caliente, con pan si se desea.",
       fr: "Faites revenir l'oignon et le poulet, ajoutez le poivron et les tomates, mijotez avec les épices et les herbes. Servez chaud, avec du pain si désiré.",
       de: "Zwiebel und Hähnchen anbraten, Paprika und Tomaten zugeben, mit Gewürzen und Kräutern langsam garen. Warm servieren, eventuell mit Brot.",
+      pt: "Refogue a cebola e o frango, adicione pimentão e tomates, cozinhe lentamente com temperos e ervas. Sirva quente, opcionalmente com pão.",
       ru: "Обжарьте лук и курицу, добавьте перец и помидоры, тушите с приправами и зеленью. Подавайте горячим, можно с хлебом.",
       ar: "اقلي البصل والدجاج، أضف الفلفل والطماطم، اطبخ ببطء مع البهارات والأعشاب. قدّمها ساخنة مع الخبز إذا رغبت.",
       zh: "炒洋葱和鸡肉，加入辣椒和番茄，慢火炖煮，加香料和香草。热食，可配面包。",
       ja: "玉ねぎと鶏肉を炒め、ピーマンとトマトを加えて、スパイスとハーブでじっくり煮込む。温かいうちに、パンと一緒にどうぞ。",
-      tr: "Kızartın soğan ve tavuk, Ekleyin dolmalık biber ve domates, Pişirin yavaşça ile baharatlar ve otlar. servis edin ılık, isteğe bağlı olarak ile ekmek.",
-      it: "Friggi cipolla e pollo, Aggiungi peperone e pomodori, Cuoci lentamente con spezie e erbe aromatiche. servi tiepido, facoltativamente con pane.",
-      ko: "볶거나 튀기고 양파그리고 닭고기, 넣고 파프리카그리고 토마토, 조리하고 천천히와 향신료그리고 허브. 제공합니다 따뜻한, 선택으로와 빵하세요."
+      tr: "Soğan ve tavuğu kızartın, dolmalık biber ve domates ekleyin, baharatlar ve otlarla yavaşça pişirin. İlık servis edin, isteğe bağlı ekmekle.",
+      it: "Soffriggere la cipolla e il pollo, aggiungere il peperone e i pomodori, cuocere lentamente con spezie ed erbe aromatiche. Servire tiepido, facoltativamente con pane.",
+      ko: "양파와 닭고기를 볶은 후 파프리카와 토마토를 넣고 향신료와 허브를 곁들여 천천히 조리합니다. 따뜻하게 빵과 함께 제공합니다."
     },
     originText: {
       ro: "Chakhokhbili este o rețetă tradițională din Georgia.",
@@ -10778,14 +10786,14 @@ export const recipes = [
       es: "Chakhokhbili es una receta tradicional de Georgia.",
       fr: "Chakhokhbili est une recette traditionnelle de Géorgie.",
       de: "Chakhokhbili ist ein traditionelles Rezept aus Georgien.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Чахохбили — традиционный рецепт из Грузия.",
+      pt: "Chakhokhbili é uma receita tradicional da Geórgia.",
+      ru: "Чахохбили — традиционный рецепт из Грузии.",
       ar: "تشاخوخبيلي هي وصفة تقليدية من جورجيا.",
       zh: "格鲁吉亚炖鸡 是来自格鲁吉亚的传统食谱。",
       ja: "チャホフビリ はジョージアの伝統的なレシピです。",
-      tr: "Chakhokhbili Georgia kökenli geleneksel bir tariftir.",
-      it: "Chakhokhbili è una risotta tradizionale di Georgia.",
-      ko: "Chakhokhbili는(은) Georgia의 전통 요리입니다."
+      tr: "Chakhokhbili Gürcistan kökenli geleneksel bir tariftir.",
+      it: "Chakhokhbili è una ricetta tradizionale della Georgia.",
+      ko: "차호흐빌리는 조지아의 전통 요리입니다."
     }
   },
   {
