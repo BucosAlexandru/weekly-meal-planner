@@ -16585,7 +16585,7 @@ export const recipes = [
       ja: "お好み焼き",
       tr: "Okonomiyaki",
       it: "Okonomiyaki",
-      ko: "Okonomiyaki"
+      ko: "오코노미야키"
     },
     category: {
       ro: "Cină",
@@ -16639,16 +16639,16 @@ export const recipes = [
       ro: "Okonomiyaki este o rețetă tradițională din Japonia.",
       en: "Okonomiyaki is a traditional recipe from Japan.",
       es: "Okonomiyaki es una receta tradicional de Japón.",
-      fr: "Okonomiyaki est une recette traditionnelle de Japon.",
+      fr: "Okonomiyaki est une recette traditionnelle du Japon.",
       de: "Okonomiyaki ist ein traditionelles Rezept aus Japan.",
-      pt: "Okonomiyaki é uma receita tradicional de Japão.",
-      ru: "Окономияки — традиционный рецепт из Япония.",
+      pt: "Okonomiyaki é uma receita tradicional do Japão.",
+      ru: "Окономияки — традиционный рецепт из Японии.",
       ar: "أوكونومياكي هي وصفة تقليدية من اليابان.",
       zh: "御好烧 是来自日本的传统食谱。",
       ja: "お好み焼き は日本の伝統的なレシピです。",
-      tr: "Okonomiyaki Japonya kökenli geleneksel bir tariftir.",
-      it: "Okonomiyaki è una ricetta tradizionale di Giappone.",
-      ko: "Okonomiyaki는(은) 일본의 전통 요리입니다."
+      tr: "Okonomiyaki, Japonya kökenli geleneksel bir tariftir.",
+      it: "Okonomiyaki è una ricetta tradizionale del Giappone.",
+      ko: "오코노미야키는 일본의 전통 요리입니다."
     }
   },
   {
