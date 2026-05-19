@@ -13497,9 +13497,9 @@ export const recipes = [
       ar: "جورجيا",
       zh: "格鲁吉亚",
       ja: "ジョージア",
-      tr: "Georgia",
+      tr: "Gürcistan",
       it: "Georgia",
-      ko: "Georgia"
+      ko: "조지아"
     },
     name: {
       ro: "Khinkali",
@@ -13514,7 +13514,7 @@ export const recipes = [
       ja: "ヒンカリ",
       tr: "Khinkali",
       it: "Khinkali",
-      ko: "Khinkali"
+      ko: "힌칼리"
     },
     category: {
       ro: "Cină",
@@ -13531,6 +13531,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["făină", "apă", "carne tocată (vită și porc)", "ceapă", "piper", "sare", "verdeață"],
       en: ["flour", "water", "minced meat (beef and pork)", "onion", "pepper", "salt", "herbs"],
@@ -13542,9 +13545,9 @@ export const recipes = [
       ar: ["دقيق", "ماء", "لحم مفروم (بقر وخنزير)", "بصل", "فلفل", "ملح", "أعشاب"],
       zh: ["面粉", "水", "牛肉猪肉馅", "洋葱", "胡椒", "盐", "香草"],
       ja: ["小麦粉", "水", "ひき肉（牛と豚）", "玉ねぎ", "コショウ", "塩", "ハーブ"],
-      tr: ["un", "su", "kıyılmış et (dana eti ve domuz eti)", "soğbir", "biber", "tuz", "otlar"],
-      it: ["farina", "acqua", "tritato carne (manzo e maiale)", "cipolla", "peperone", "sale", "erbe aromatiche"],
-      ko: ["밀가루", "물", "다진 고기 (소고기 그리고 돼지고기)", "양파", "고추", "소금", "허브"]
+      tr: ["un", "su", "kıyılmış et (dana eti ve domuz eti)", "soğan", "biber", "tuz", "otlar"],
+      it: ["farina", "acqua", "carne tritata (manzo e maiale)", "cipolla", "pepe", "sale", "erbe aromatiche"],
+      ko: ["밀가루", "물", "다진 고기 (소고기와 돼지고기)", "양파", "후추", "소금", "허브"]
     },
     howIsMade: {
       ro: "Prepară un aluat, umple cu carne condimentată și verdeață, formează punguțe și fierbe-le în apă.",
@@ -13557,9 +13560,9 @@ export const recipes = [
       ar: "حضّر العجين، احشوه باللحم المتبل والأعشاب، شكّل كرات واطبخها في الماء.",
       zh: "和面，包入调味肉馅和香草，捏成饺子，下水煮熟。",
       ja: "生地を作り、味付けした肉とハーブを包み、団子状にして茹でる。",
-      tr: "yapın a hamur, doldurun ile baharatlanmış et ve otlar, şekil verin içine mantı, ve Haşla.",
-      it: "fai a impasto, farcisci con condito carne e erbe aromatiche, dai forma dentro ravioli, e Cuoci.",
-      ko: "만듭니다 a 반죽, 채웁니다와 간한 고기그리고 허브, 모양을 만듭니다 안에 만두, 그리고 삶고하세요."
+      tr: "Hamur yoğurun, baharatlı et ve otlarla doldurun, manti şekline getirin ve haşlayın.",
+      it: "Preparate l'impasto, farcitelo con carne condita e erbe aromatiche, formate dei ravioli e cuoceteli in acqua bollente.",
+      ko: "반죽을 만들어 양념한 고기와 허브로 채우고 만두 모양으로 빚어 끓는 물에 삶습니다."
     },
     originText: {
       ro: "Khinkali este o rețetă tradițională din Georgia.",
@@ -13567,14 +13570,14 @@ export const recipes = [
       es: "Khinkali es una receta tradicional de Georgia.",
       fr: "Khinkali est une recette traditionnelle de Géorgie.",
       de: "Chinkali ist ein traditionelles Rezept aus Georgien.",
-      pt: "Khinkali é uma receita tradicional de Geórgia.",
-      ru: "Хинкали — традиционный рецепт из Грузия.",
+      pt: "Khinkali é uma receita tradicional da Geórgia.",
+      ru: "Хинкали — традиционный рецепт из Грузии.",
       ar: "خينكالي هي وصفة تقليدية من جورجيا.",
       zh: "格鲁吉亚饺子 是来自格鲁吉亚的传统食谱。",
       ja: "ヒンカリ はジョージアの伝統的なレシピです。",
-      tr: "Khinkali Georgia kökenli geleneksel bir tariftir.",
-      it: "Khinkali è una risotta tradizionale di Georgia.",
-      ko: "Khinkali는(은) Georgia의 전통 요리입니다."
+      tr: "Khinkali Gürcistan kökenli geleneksel bir tariftir.",
+      it: "Khinkali è una ricetta tradizionale della Georgia.",
+      ko: "힌칼리는 조지아의 전통 요리입니다."
     }
   },
   {
