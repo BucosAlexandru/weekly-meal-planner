@@ -15117,6 +15117,9 @@ export const recipes = [
   },
   {
     id: 165,
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "India",
       en: "India",
@@ -15145,7 +15148,7 @@ export const recipes = [
       ja: "ラジマ",
       tr: "Rajma",
       it: "Rajma",
-      ko: "Rajma"
+      ko: "라즈마"
     },
     category: {
       ro: "Cină",
@@ -15173,8 +15176,8 @@ export const recipes = [
       ar: ["فاصوليا حمراء", "بصل", "طماطم", "ثوم", "زنجبيل", "بهارات هندية", "زيت", "أرز"],
       zh: ["红豆", "洋葱", "番茄", "大蒜", "姜", "印度香料", "油", "米饭"],
       ja: ["赤いんげん豆", "玉ねぎ", "トマト", "ニンニク", "ショウガ", "インドのスパイス", "油", "ご飯"],
-      tr: ["kırmızı fasulye", "soğbir", "domates", "sarımsak", "zencefil", "hint baharatları", "yağ", "pirinç"],
-      it: ["rossi fagioli", "cipolla", "pomodori", "aglio", "zenzero", "spezie indiane", "olio", "riso"],
+      tr: ["kırmızı fasulye", "soğan", "domates", "sarımsak", "zencefil", "hint baharatları", "yağ", "pirinç"],
+      it: ["fagioli rossi", "cipolla", "pomodori", "aglio", "zenzero", "spezie indiane", "olio", "riso"],
       ko: ["강낭 콩", "양파", "토마토", "마늘", "생강", "인도 향신료", "기름", "쌀"]
     },
     howIsMade: {
@@ -15188,24 +15191,24 @@ export const recipes = [
       ar: "اسلق الفاصوليا الحمراء، واطبخها في صوص الطماطم والبصل والثوم والزنجبيل والتوابل. قدّمها مع الأرز.",
       zh: "红芸豆煮熟后，用番茄、洋葱、大蒜、生姜和香料做成的酱汁炖煮，配米饭食用。",
       ja: "赤いんげん豆を茹でて、トマト・玉ねぎ・にんにく・しょうが・スパイスのソースで煮込み、ご飯と一緒に提供。",
-      tr: "Haşlayın kırmızı fasulye, sonra Pişirin baharatlı domates, soğan, sarımsak, ve zencefil sos. servis edin ile pirinç.",
-      it: "Cuoci rossi fagioli, poi Cuoci speziato pomodoro, cipolla, aglio, e zenzero salsa. servi con riso.",
-      ko: "삶고 강낭 콩, 그다음 조리하고 에서 a 향신료를 넣은 토마토, 양파, 마늘, 그리고 생강 소스. 제공합니다와 쌀하세요."
+      tr: "Kırmızı fasulyeyi haşlayın, ardından baharatlı domates, soğan, sarımsak ve zencefil sosuyla pişirin. Pirinçle servis edin.",
+      it: "Cuoci i fagioli rossi, poi cuocili in un soffritto speziato di pomodoro, cipolla, aglio e zenzero. Servi con riso.",
+      ko: "강낭콩을 삶은 뒤, 향신료를 넣은 토마토·양파·마늘·생강 소스로 조립니다. 밥과 함께 냅니다."
     },
     originText: {
       ro: "Rajma este o rețetă tradițională din India.",
       en: "Rajma is a traditional recipe from India.",
       es: "Rajma es una receta tradicional de India.",
-      fr: "Rajma est une recette traditionnelle de Inde.",
+      fr: "Rajma est une recette traditionnelle d'Inde.",
       de: "Rajma ist ein traditionelles Rezept aus Indien.",
-      pt: "Rajma é uma receita tradicional de Índia.",
-      ru: "Раджма — традиционный рецепт из Индия.",
+      pt: "Rajma é uma receita tradicional da Índia.",
+      ru: "Раджма — традиционный рецепт из Индии.",
       ar: "راجما هي وصفة تقليدية من الهند.",
       zh: "红豆咖喱 是来自印度的传统食谱。",
       ja: "ラジマ はインドの伝統的なレシピです。",
       tr: "Rajma Hindistan kökenli geleneksel bir tariftir.",
-      it: "Rajma è una risotta tradizionale di India.",
-      ko: "Rajma는(은) 인도의 전통 요리입니다."
+      it: "Rajma è una ricetta tradizionale dell'India.",
+      ko: "라즈마는 인도의 전통 요리입니다."
     }
   },
   {
