@@ -5814,6 +5814,9 @@ export const recipes = [
   },
   {
     id: 62,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Tunisia",
       en: "Tunisia",
@@ -5825,9 +5828,9 @@ export const recipes = [
       ar: "تونس",
       zh: "突尼斯",
       ja: "チュニジア",
-      tr: "Tunisia",
+      tr: "Tunus",
       it: "Tunisia",
-      ko: "Tunisia"
+      ko: "튀니지"
     },
     name: {
       ro: "Brik",
@@ -5842,7 +5845,7 @@ export const recipes = [
       ja: "ブリック",
       tr: "Brik",
       it: "Brik",
-      ko: "Brik"
+      ko: "브릭"
     },
     category: {
       ro: "Gustare",
@@ -5895,14 +5898,14 @@ export const recipes = [
       es: "Brik es una receta tradicional de Túnez.",
       fr: "Brik est une recette traditionnelle de Tunisie.",
       de: "Brik ist ein traditionelles Rezept aus Tunesien.",
-      pt: "Brik é uma receita tradicional de Tunísia.",
-      ru: "Брик — традиционный рецепт из Тунис.",
+      pt: "Brik é uma receita tradicional da Tunísia.",
+      ru: "Брик — традиционный рецепт из Туниса.",
       ar: "بريك هي وصفة تقليدية من تونس.",
       zh: "突尼斯蛋饼 是来自突尼斯的传统食谱。",
       ja: "ブリック はチュニジアの伝統的なレシピです。",
-      tr: "brik Tunisia kökenli geleneksel bir tariftir.",
-      it: "brik è una risotta tradizionale di Tunisia.",
-      ko: "브릭는(은) Tunisia의 전통 요리입니다."
+      tr: "Brik Tunus kökenli geleneksel bir tariftir.",
+      it: "Brik è una ricetta tradizionale della Tunisia.",
+      ko: "브릭은 튀니지의 전통 요리입니다."
     }
   },
   {
