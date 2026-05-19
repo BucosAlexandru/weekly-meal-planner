@@ -9962,7 +9962,7 @@ export const recipes = [
       ja: "フランセジーニャ",
       tr: "Francesinha",
       it: "Francesinha",
-      ko: "Francesinha"
+      ko: "프란세지냐"
     },
     category: {
       ro: "Cină",
@@ -9979,6 +9979,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["pâine", "șuncă", "cârnați", "friptură", "brânză", "sos de roșii", "bere"],
       en: ["bread", "ham", "sausages", "steak", "cheese", "tomato sauce", "beer"],
@@ -9990,8 +9993,8 @@ export const recipes = [
       ar: ["خبز", "لحم خنزير", "نقانق", "شريحة لحم", "جبنة", "صلصة طماطم", "بيرة"],
       zh: ["面包", "火腿", "香肠", "牛排", "奶酪", "番茄酱", "啤酒"],
       ja: ["パン", "ハム", "ソーセージ", "ステーキ", "チーズ", "トマトソース", "ビール"],
-      tr: ["ekmek", "jambon", "sosis", "biftek", "peynir", "domates sos", "bira"],
-      it: ["pane", "prosciutto", "salsicce", "bistecca", "formaggio", "pomodoro salsa", "birra"],
+      tr: ["ekmek", "jambon", "sosis", "biftek", "peynir", "domates sosu", "bira"],
+      it: ["pane", "prosciutto", "salsicce", "bistecca", "formaggio", "salsa di pomodoro", "birra"],
       ko: ["빵", "햄", "소시지", "스테이크", "치즈", "토마토 소스", "맥주"]
     },
     howIsMade: {
@@ -10005,24 +10008,24 @@ export const recipes = [
       ar: "ركب الساندويتش بالخبز واللحم والنقانق ولحم البقر، غطّه بالجبن الذائب واسكب صوص الطماطم الحار فوقه. اخبزه حتى يحمر.",
       zh: "面包、火腿、香肠和牛肉叠成三明治，撒上奶酪并浇上辣味番茄酱，烤至金黄。",
       ja: "パン・ハム・ソーセージ・牛肉でサンドイッチを作り、チーズをのせてピリ辛トマトソースをかけ、焼き色がつくまで焼く。",
-      tr: "Assemble sandviç ile ekmek, jambon, sosis, ve dana eti, örtün ile eritilmiş peynir ve dökün acı domates sos üzerine. fırında pişirin altın rengi.",
-      it: "Assemble panino con pane, prosciutto, salsiccia, e manzo, copri con fuso formaggio e versa piccante pomodoro salsa sopra. cuoci in forno dorato.",
+      tr: "Sandviçi ekmek, jambon, sosis ve dana etiyle oluşturun, eritilmiş peynirle kaplayın ve üzerine acı domates sosu dökün. Altın rengi alana kadar fırında pişirin.",
+      it: "Assemblare il panino con pane, prosciutto, salsiccia e manzo, coprire con formaggio fuso e versare la salsa di pomodoro piccante sopra. Cuocere in forno fino a doratura.",
       ko: "빵에 햄, 소시지, 소고기를 쌓아 올려주세요. 녹인 치즈를 덮고 매운 토마토 소스를 부어 오븐에 구워주세요."
     },
     originText: {
       ro: "Francesinha este o rețetă tradițională din Portugalia.",
       en: "Francesinha is a traditional recipe from Portugal.",
       es: "Francesinha es una receta tradicional de Portugal.",
-      fr: "Francesinha est une recette traditionnelle de Portugal.",
+      fr: "Francesinha est une recette traditionnelle du Portugal.",
       de: "Francesinha ist ein traditionelles Rezept aus Portugal.",
       pt: "Francesinha é uma receita tradicional de Portugal.",
-      ru: "Франсезинья — традиционный рецепт из Португалия.",
+      ru: "Франсезинья — традиционный рецепт из Португалии.",
       ar: "فرانسزينها هي وصفة تقليدية من البرتغال.",
       zh: "葡式法兰西三明治 是来自葡萄牙的传统食谱。",
       ja: "フランセジーニャ はポルトガルの伝統的なレシピです。",
       tr: "Francesinha Portekiz kökenli geleneksel bir tariftir.",
-      it: "Francesinha è una risotta tradizionale di Portogallo.",
-      ko: "Francesinha는(은) 포르투갈의 전통 요리입니다."
+      it: "Francesinha è una ricetta tradizionale del Portogallo.",
+      ko: "프란세지냐는 포르투갈의 전통 요리입니다."
     }
   },
   {
