@@ -12441,9 +12441,9 @@ export const recipes = [
       ar: "تركمانستان",
       zh: "土库曼斯坦",
       ja: "トルクメニスタン",
-      tr: "Turkmenistan",
+      tr: "Türkmenistan",
       it: "Turkmenistan",
-      ko: "Turkmenistan"
+      ko: "투르크메니스탄"
     },
     name: {
       ro: "Ichlekli",
@@ -12458,7 +12458,7 @@ export const recipes = [
       ja: "イチレクリ",
       tr: "Ichlekli",
       it: "Ichlekli",
-      ko: "Ichlekli"
+      ko: "이흘레클리"
     },
     category: {
       ro: "Prânz",
@@ -12475,6 +12475,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["aluat", "carne de miel", "ceapă", "cartofi", "condimente", "ulei"],
       en: ["dough", "lamb", "onion", "potatoes", "spices", "oil"],
@@ -12486,7 +12489,7 @@ export const recipes = [
       ar: ["عجينة", "لحم ضأن", "بصل", "بطاطس", "توابل", "زيت"],
       zh: ["面团", "羊肉", "洋葱", "土豆", "香料", "油"],
       ja: ["生地", "ラム肉", "玉ねぎ", "ジャガイモ", "スパイス", "油"],
-      tr: ["hamur", "kuzu", "soğbir", "patates", "baharatlar", "yağ"],
+      tr: ["hamur", "kuzu", "soğan", "patates", "baharatlar", "yağ"],
       it: ["impasto", "agnello", "cipolla", "patate", "spezie", "olio"],
       ko: ["반죽", "양고기", "양파", "감자", "향신료", "기름"]
     },
@@ -12501,24 +12504,24 @@ export const recipes = [
       ar: "افرد عجينة بسيطة، احشها باللحم المفروم والبصل، غطها بعجينة أخرى واخبزها حتى تحمر.",
       zh: "擀开面团，包入肉末和洋葱，盖上另一层面，烤至金黄。",
       ja: "シンプルな生地を伸ばし、ひき肉と玉ねぎを包み、もう一枚の生地で覆い、焼き色がつくまで焼く。",
-      tr: "rulo yapın basit hamur, doldurun ile kıyılmış et ve soğan, örtün ile başka yufka, ve Fırında pişir altın rengi.",
-      it: "arrotola  semplice impasto, farcisci con tritato carne e cipolla, copri con un altro foglio, e Cuoci al forno dorato.",
-      ko: "말아줍니다  간단한 반죽, 채웁니다와 다진 고기그리고 양파, 덮습니다와 다른 시트, 그리고 오븐에 구워 노릇하게하세요."
+      tr: "Hamuru açın, kıyma ve soğanla doldurun, başka bir tabaka ile kapatın ve altın rengi olana kadar fırınlayın.",
+      it: "Stendete l'impasto semplice, farcitelo con carne tritata e cipolla, copritelo con un altro strato e cuocete in forno fino a doratura.",
+      ko: "반죽을 밀어 다진 고기와 양파를 채우고 다른 반죽으로 덮어 노릇해질 때까지 오븐에 굽습니다."
     },
     originText: {
       ro: "Ichlekli este o rețetă tradițională din Turkmenistan.",
       en: "Ichlekli is a traditional recipe from Turkmenistan.",
       es: "Ichlekli es una receta tradicional de Turkmenistán.",
-      fr: "Ichlekli est une recette traditionnelle de Turkménistan.",
+      fr: "Ichlekli est une recette traditionnelle du Turkménistan.",
       de: "Ichlekli ist ein traditionelles Rezept aus Turkmenistan.",
-      pt: "Ichlekli é uma receita tradicional de Turquemenistão.",
-      ru: "Ичлекли — традиционный рецепт из Туркмения.",
+      pt: "Ichlekli é uma receita tradicional do Turquemenistão.",
+      ru: "Ичлекли — традиционный рецепт из Туркмении.",
       ar: "إيشلكلي هي وصفة تقليدية من تركمانستان.",
       zh: "土库曼馅饼 是来自土库曼斯坦的传统食谱。",
       ja: "イチレクリ はトルクメニスタンの伝統的なレシピです。",
-      tr: "Ichlekli Turkmenistan kökenli geleneksel bir tariftir.",
-      it: "Ichlekli è una risotta tradizionale di Turkmenistan.",
-      ko: "Ichlekli는(은) Turkmenistan의 전통 요리입니다."
+      tr: "Ichlekli Türkmenistan kökenli geleneksel bir tariftir.",
+      it: "Ichlekli è una ricetta tradizionale del Turkmenistan.",
+      ko: "이흘레클리는 투르크메니스탄의 전통 요리입니다."
     }
   },
   {
