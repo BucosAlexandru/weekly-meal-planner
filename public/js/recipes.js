@@ -14281,7 +14281,7 @@ export const recipes = [
       ja: "キンパ",
       tr: "Kimbap",
       it: "Kimbap",
-      ko: "Kimbap"
+      ko: "김밥"
     },
     category: {
       ro: "Prânz",
@@ -14337,14 +14337,14 @@ export const recipes = [
       es: "Kimbap es una receta tradicional de Corea del Sur.",
       fr: "Kimbap est une recette traditionnelle de Corée du Sud.",
       de: "Kimbap ist ein traditionelles Rezept aus Südkorea.",
-      pt: "Kimbap é uma receita tradicional de Coreia do Sul.",
-      ru: "Кимбап — традиционный рецепт из Южная Корея.",
+      pt: "Kimbap é uma receita tradicional da Coreia do Sul.",
+      ru: "Кимбап — традиционный рецепт из Южной Кореи.",
       ar: "كيمباب هي وصفة تقليدية من كوريا الجنوبية.",
       zh: "紫菜包饭 是来自韩国的传统食谱。",
       ja: "キンパ は韓国の伝統的なレシピです。",
       tr: "Kimbap Güney Kore kökenli geleneksel bir tariftir.",
-      it: "Kimbap è una risotta tradizionale di Corea del Sud.",
-      ko: "Kimbap는(은) 대한민국의 전통 요리입니다."
+      it: "Kimbap è una ricetta tradizionale della Corea del Sud.",
+      ko: "김밥은 대한민국의 전통 요리입니다."
     }
   },
   {
