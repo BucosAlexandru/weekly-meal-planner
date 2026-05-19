@@ -7346,6 +7346,9 @@ export const recipes = [
   },
   {
     id: 79,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Suedia",
       en: "Sweden",
@@ -7374,7 +7377,7 @@ export const recipes = [
       ja: "グラブラックス",
       tr: "Gravlax",
       it: "Gravlax",
-      ko: "Gravlax"
+      ko: "그라블락스"
     },
     category: {
       ro: "Gustare",
@@ -7427,14 +7430,14 @@ export const recipes = [
       es: "Gravlax es una receta tradicional de Suecia.",
       fr: "Gravlax est une recette traditionnelle de Suède.",
       de: "Gravlax ist ein traditionelles Rezept aus Schweden.",
-      pt: "Gravlax é uma receita tradicional de Suécia.",
-      ru: "Гравлакс — традиционный рецепт из Швеция.",
+      pt: "Gravlax é uma receita tradicional da Suécia.",
+      ru: "Гравлакс — традиционный рецепт из Швеции.",
       ar: "غرافلاكس هي وصفة تقليدية من السويد.",
       zh: "腌三文鱼 是来自瑞典的传统食谱。",
       ja: "グラブラックス はスウェーデンの伝統的なレシピです。",
       tr: "Gravlax İsveç kökenli geleneksel bir tariftir.",
-      it: "Gravlax è una risotta tradizionale di Svezia.",
-      ko: "Gravlax는(은) 스웨덴의 전통 요리입니다."
+      it: "Gravlax è una ricetta tradizionale della Svezia.",
+      ko: "그라블락스는 스웨덴의 전통 요리입니다."
     }
   },
   {
