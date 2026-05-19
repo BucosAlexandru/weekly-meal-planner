@@ -15501,6 +15501,9 @@ export const recipes = [
   },
   {
     id: 169,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "China",
       en: "China",
@@ -15529,7 +15532,7 @@ export const recipes = [
       ja: "麻婆豆腐",
       tr: "Mapo Tofu",
       it: "Mapo Tofu",
-      ko: "Mapo Tofu"
+      ko: "마파두부"
     },
     category: {
       ro: "Cină",
@@ -15557,9 +15560,9 @@ export const recipes = [
       ar: ["توفو", "لحم خنزير مفروم", "معجون الفاصوليا المخمرة", "بصل أخضر", "زنجبيل", "ثوم", "زيت السمسم", "فلفل حار", "صلصة الصويا"],
       zh: ["豆腐", "猪肉末", "豆瓣酱", "葱", "姜", "大蒜", "芝麻油", "辣椒", "酱油"],
       ja: ["豆腐", "豚ひき肉", "豆板醤", "青ねぎ", "ショウガ", "ニンニク", "ごま油", "唐辛子", "醤油"],
-      tr: ["tofu", "kıyılmış domuz eti", "fermente fasulye salça", "bahar soğbir", "zencefil", "sarımsak", "susam yağ", "acı biber biber", "soya sosu"],
-      it: ["tofu", "tritato maiale", "fermentato fagiolo concentrato", "primavera cipolla", "zenzero", "aglio", "sesamo olio", "peperoncino peperone", "salsa di soia"],
-      ko: ["두부", "다진 돼지고기", "발효된 콩 페이스트", "봄 양파", "생강", "마늘", "참깨 기름", "고추 고추", "간장"]
+      tr: ["tofu", "kıyılmış domuz eti", "fermente fasulye ezmesi", "taze soğan", "zencefil", "sarımsak", "susam yağı", "acı biber", "soya sosu"],
+      it: ["tofu", "maiale tritato", "pasta di fagioli fermentati", "cipolla verde", "zenzero", "aglio", "olio di sesamo", "peperoncino", "salsa di soia"],
+      ko: ["두부", "다진 돼지고기", "발효 콩 된장", "쪽파", "생강", "마늘", "참기름", "고추", "간장"]
     },
     howIsMade: {
       ro: "Prăjește carnea tocată cu usturoi și ghimbir, adaugă tofu cuburi, pastă de fasole picantă, sos de soia și ardei iute, apoi gătește totul împreună.",
@@ -15572,9 +15575,9 @@ export const recipes = [
       ar: "اقلِ اللحم المفروم مع الثوم والزنجبيل، أضف التوفو والصلصة الحارة وصلصة الصويا والفلفل الحار واطبخ الجميع.",
       zh: "肉末与蒜、姜炒香，加入豆腐块、辣豆瓣酱、酱油和辣椒，一起烧煮。",
       ja: "ひき肉をニンニクとショウガと炒め、豆腐・辛味噌・しょうゆ・唐辛子を加えて一緒に煮る。",
-      tr: "Kızartın kıyılmış et ile sarımsak ve zencefil, Ekleyin küp doğranmış tofu, acı fasulye salça, soya sosu, ve acı biber, sonra Pişirin her şeyi birlikte.",
-      it: "Friggi tritato carne con aglio e zenzero, Aggiungi a cubetti tofu, piccante fagiolo concentrato, salsa di soia, e peperoncino, poi Cuoci tutto insieme.",
-      ko: "볶거나 튀기고 다진 고기와 마늘그리고 생강, 넣고 깍둑썰기한 두부, 매운 콩 페이스트, 간장, 그리고 고추, 그다음 조리하고 모든 것 함께하세요."
+      tr: "Kıyılmış domuz etini sarımsak ve zencefille kavurun, küp kesilmiş tofu, acı fasulye ezmesi, soya sosu ve acı biberi ekleyerek birlikte pişirin.",
+      it: "Rosolate il maiale tritato con aglio e zenzero, aggiungete il tofu a cubetti, la pasta di fagioli piccante, la salsa di soia e il peperoncino, poi cuocete tutto insieme.",
+      ko: "다진 돼지고기를 마늘과 생강과 함께 볶은 후, 두부 큐브와 두반장, 간장, 고추를 넣고 함께 조리합니다."
     },
     originText: {
       ro: "Mapo Tofu este o rețetă tradițională din China.",
@@ -15582,14 +15585,14 @@ export const recipes = [
       es: "Mapo Tofu es una receta tradicional de China.",
       fr: "Mapo Tofu est une recette traditionnelle de Chine.",
       de: "Mapo Tofu ist ein traditionelles Rezept aus China.",
-      pt: "Mapo Tofu é uma receita tradicional de China.",
-      ru: "Мапо тофу — традиционный рецепт из Китай.",
+      pt: "Mapo Tofu é uma receita tradicional da China.",
+      ru: "Мапо тофу — традиционный рецепт из Китая.",
       ar: "مابو توفو هي وصفة تقليدية من الصين.",
       zh: "麻婆豆腐 是来自中国的传统食谱。",
       ja: "麻婆豆腐 は中国の伝統的なレシピです。",
-      tr: "Mapo tofu Çin kökenli geleneksel bir tariftir.",
-      it: "Mapo tofu è una risotta tradizionale di Cina.",
-      ko: "Mapo 두부는(은) 중국의 전통 요리입니다."
+      tr: "Mapo Tofu, Çin kökenli geleneksel bir tariftir.",
+      it: "Mapo Tofu è una ricetta tradizionale della Cina.",
+      ko: "마파두부는 중국의 전통 요리입니다."
     }
   },
   {
