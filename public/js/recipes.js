@@ -14541,6 +14541,9 @@ export const recipes = [
   },
   {
     id: 159,
+    servings: 4,
+    tipType: 'dessert',
+    pairingsType: 'dessert',
     origin: {
       ro: "Olanda",
       en: "Netherlands",
@@ -14569,7 +14572,7 @@ export const recipes = [
       ja: "ポッフェルチェス",
       tr: "Poffertjes",
       it: "Poffertjes",
-      ko: "Poffertjes"
+      ko: "포퍼르체스"
     },
     category: {
       ro: "Desert",
@@ -14612,24 +14615,24 @@ export const recipes = [
       ar: "اخلط المكونات، دعها تتخمر، اطبخها في قوالب خاصة وقدمها مع الزبدة والسكر البودرة.",
       zh: "混合原料，发酵后在特制锅中煎熟，搭配黄油和糖粉食用。",
       ja: "材料を混ぜて発酵させ、専用の型で焼き、バターと粉砂糖を添えて。",
-      tr: "Karıştırın malzemeler, Beklet mayalanın, Pişirin in özel tavalar, Servis edin ile tereyağı ve toz şeker.",
-      it: "Mescola ingredienti, Lascia lievita, Cuoci in speciale teglie, Servi con burro e in polvere zucchero.",
-      ko: "섞고 재료, 두세요 발효합니다, 조리하고 에서 특별한 팬, 담아 내세요와 버터그리고 가루 설탕하세요."
+      tr: "Malzemeleri karıştırın, mayalanmaya bırakın, özel tavada pişirin ve tereyağı ile toz şekerle servis edin.",
+      it: "Mescola gli ingredienti, lascia lievitare, cuoci in teglie speciali e servi con burro e zucchero a velo.",
+      ko: "재료를 섞어 발효시킨 후, 특수 팬에 구워 버터와 슈거파우더를 뿌려 냅니다."
     },
     originText: {
       ro: "Poffertjes este o rețetă tradițională din Olanda.",
       en: "Poffertjes is a traditional recipe from Netherlands.",
       es: "Poffertjes es una receta tradicional de Países Bajos.",
-      fr: "Poffertjes est une recette traditionnelle de Pays-Bas.",
-      de: "Poffertjes ist ein traditionelles Rezept aus Niederlande.",
-      pt: "Poffertjes é uma receita tradicional de Países Baixos.",
-      ru: "Поффертьес — традиционный рецепт из Нидерланды.",
+      fr: "Poffertjes est une recette traditionnelle des Pays-Bas.",
+      de: "Poffertjes ist ein traditionelles Rezept aus den Niederlanden.",
+      pt: "Poffertjes é uma receita tradicional dos Países Baixos.",
+      ru: "Поффертьес — традиционный рецепт из Нидерландов.",
       ar: "بوفيرتيس هي وصفة تقليدية من هولندا.",
       zh: "荷兰小松饼 是来自荷兰的传统食谱。",
       ja: "ポッフェルチェス はオランダの伝統的なレシピです。",
       tr: "Poffertjes Hollanda kökenli geleneksel bir tariftir.",
-      it: "Poffertjes è una risotta tradizionale di Paesi Bassi.",
-      ko: "Poffertjes는(은) 네덜란드의 전통 요리입니다."
+      it: "Poffertjes è una ricetta tradizionale dei Paesi Bassi.",
+      ko: "포퍼르체스는 네덜란드의 전통 요리입니다."
     }
   },
   {
