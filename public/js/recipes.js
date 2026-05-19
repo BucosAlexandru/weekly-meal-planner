@@ -10521,9 +10521,9 @@ export const recipes = [
       ar: "كمبوديا",
       zh: "柬埔寨",
       ja: "カンボジア",
-      tr: "Cambodia",
-      it: "Cambodia",
-      ko: "Cambodia"
+      tr: "Kamboçya",
+      it: "Cambogia",
+      ko: "캄보디아"
     },
     name: {
       ro: "Lok Lak",
@@ -10538,7 +10538,7 @@ export const recipes = [
       ja: "ロックラック",
       tr: "Lok Lak",
       it: "Lok Lak",
-      ko: "Lok Lak"
+      ko: "로크 락"
     },
     category: {
       ro: "Prânz",
@@ -10555,6 +10555,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de vită", "sos de stridii", "ceapă", "roșii", "salată verde", "piper negru", "ouă"],
       en: ["beef", "oyster sauce", "onion", "tomatoes", "lettuce", "black pepper", "eggs"],
@@ -10566,8 +10569,8 @@ export const recipes = [
       ar: ["لحم بقري", "صلصة المحار", "بصل", "طماطم", "خس", "فلفل أسود", "بيض"],
       zh: ["牛肉", "蚝油", "洋葱", "番茄", "生菜", "黑胡椒", "鸡蛋"],
       ja: ["牛肉", "オイスターソース", "玉ねぎ", "トマト", "レタス", "黒コショウ", "卵"],
-      tr: ["dana eti", "istiridye sos", "soğbir", "domates", "marul", "karabiber", "yumurta"],
-      it: ["manzo", "ostrica salsa", "cipolla", "pomodori", "lattuga", "pepe nero", "uova"],
+      tr: ["dana eti", "istiridye sosu", "soğan", "domates", "marul", "karabiber", "yumurta"],
+      it: ["manzo", "salsa di ostriche", "cipolla", "pomodori", "lattuga", "pepe nero", "uova"],
       ko: ["소고기", "굴 소스", "양파", "토마토", "상추", "후추", "계란"]
     },
     howIsMade: {
@@ -10581,24 +10584,24 @@ export const recipes = [
       ar: "قلّب مكعبات اللحم مع الثوم وصلصة المحار والفلفل الأسود، وقدّمها فوق سلطة مع أرز وبيض مقلي.",
       zh: "牛肉块与蒜、蚝油、黑胡椒炒香，配生菜、米饭和煎蛋。",
       ja: "牛肉をニンニク・オイスターソース・黒コショウで炒め、サラダ・ご飯・目玉焼きと一緒に提供。",
-      tr: "soteleyin dana eti küp ile sarımsak, istiridye sos, ve karabiber, Servis edin üstüne a yatak salata ile pirinç ve kızarmış yumurta.",
-      it: "soffriggié manzo cubetti con aglio, ostrica salsa, e pepe nero, Servi su a letto  insalata con riso e fritto uovo.",
-      ko: "볶습니다é 소고기 깍둑썰기와 마늘, 굴 소스, 그리고 후추, 담아 내세요 위에 a 바닥 의 샐러드와 쌀그리고 튀긴 계란하세요."
+      tr: "Dana eti küplerini sarımsak, istiridye sosu ve karabiberle soteleyin, ardından pilav ve kızarmış yumurtayla birlikte salata üzerinde servis edin.",
+      it: "Saltare i cubetti di manzo con aglio, salsa di ostriche e pepe nero, servire su un letto di lattuga con riso e uovo fritto.",
+      ko: "소고기 깍둑썰기를 마늘, 굴 소스, 후추와 함께 볶은 후 상추 위에 밥과 달걀 프라이를 곁들여 제공합니다."
     },
     originText: {
       ro: "Lok Lak este o rețetă tradițională din Cambodgia.",
       en: "Lok Lak is a traditional recipe from Cambodia.",
       es: "Lok Lak es una receta tradicional de Camboya.",
-      fr: "Lok Lak est une recette traditionnelle de Cambodge.",
+      fr: "Lok Lak est une recette traditionnelle du Cambodge.",
       de: "Lok Lak ist ein traditionelles Rezept aus Kambodscha.",
-      pt: "Lok Lak é uma receita tradicional de Camboja.",
-      ru: "Лок лак — традиционный рецепт из Камбоджа.",
+      pt: "Lok Lak é uma receita tradicional do Camboja.",
+      ru: "Лок лак — традиционный рецепт из Камбоджи.",
       ar: "لوك لاك هي وصفة تقليدية من كمبوديا.",
       zh: "柬埔寨牛肉 是来自柬埔寨的传统食谱。",
       ja: "ロックラック はカンボジアの伝統的なレシピです。",
-      tr: "Lok Lak Cambodia kökenli geleneksel bir tariftir.",
-      it: "Lok Lak è una risotta tradizionale di Cambodia.",
-      ko: "Lok Lak는(은) Cambodia의 전통 요리입니다."
+      tr: "Lok Lak Kamboçya kökenli geleneksel bir tariftir.",
+      it: "Lok Lak è una ricetta tradizionale della Cambogia.",
+      ko: "로크 락은 캄보디아의 전통 요리입니다."
     }
   },
   {
