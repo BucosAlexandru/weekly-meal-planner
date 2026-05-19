@@ -12724,6 +12724,7 @@ export const recipes = [
       es: "Francia",
       fr: "France",
       de: "Frankreich",
+      pt: "França",
       ru: "Франция",
       ar: "فرنسا",
       zh: "法国",
@@ -12738,13 +12739,14 @@ export const recipes = [
       es: "Fricasé de Pollo",
       fr: "Fricassée de Poulet",
       de: "Hähnchenfrikassee",
+      pt: "Fricassée de Frango",
       ru: "Фрикасе из курицы",
       ar: "دجاج فريكاسيه",
       zh: "法式炖鸡",
       ja: "鶏のフリカッセ",
       tr: "Tavuk Fricassée",
       it: "Pollo Fricassée",
-      ko: "닭 Fricassée"
+      ko: "치킨 프리카세"
     },
     category: {
       ro: "Cină",
@@ -12752,6 +12754,7 @@ export const recipes = [
       es: "Cena",
       fr: "Dîner",
       de: "Abendessen",
+      pt: "Jantar",
       ru: "Ужин",
       ar: "عشاء",
       zh: "晚餐",
@@ -12760,19 +12763,23 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["pui", "ceapă", "morcovi", "ciuperci", "smântână", "vin alb", "unt", "făină", "sare", "piper"],
       en: ["chicken", "onion", "carrots", "mushrooms", "cream", "white wine", "butter", "flour", "salt", "pepper"],
       es: ["pollo", "cebolla", "zanahorias", "champiñones", "nata", "vino blanco", "mantequilla", "harina", "sal", "pimienta"],
       fr: ["poulet", "oignon", "carottes", "champignons", "crème", "vin blanc", "beurre", "farine", "sel", "poivre"],
       de: ["Hähnchen", "Zwiebel", "Karotten", "Pilze", "Sahne", "Weißwein", "Butter", "Mehl", "Salz", "Pfeffer"],
+      pt: ["frango", "cebola", "cenouras", "cogumelos", "creme", "vinho branco", "manteiga", "farinha", "sal", "pimenta"],
       ru: ["курица", "лук", "морковь", "грибы", "сливки", "белое вино", "масло", "мука", "соль", "перец"],
       ar: ["دجاج", "بصل", "جزر", "فطر", "كريمة", "نبيذ أبيض", "زبدة", "دقيق", "ملح", "فلفل"],
       zh: ["鸡肉", "洋葱", "胡萝卜", "蘑菇", "奶油", "白葡萄酒", "黄油", "面粉", "盐", "胡椒"],
       ja: ["鶏肉", "玉ねぎ", "にんじん", "きのこ", "クリーム", "白ワイン", "バター", "小麦粉", "塩", "コショウ"],
-      tr: ["tavuk", "soğbir", "havuçs", "mantar", "krema", "beyaz şarap", "tereyağı", "un", "tuz", "biber"],
-      it: ["pollo", "cipolla", "carotas", "funghi", "panna", "bianco vino", "burro", "farina", "sale", "peperone"],
-      ko: ["닭고기", "양파", "당근s", "버섯", "크림", "흰 와인", "버터", "밀가루", "소금", "고추"]
+      tr: ["tavuk", "soğan", "havuç", "mantar", "krema", "beyaz şarap", "tereyağı", "un", "tuz", "biber"],
+      it: ["pollo", "cipolla", "carote", "funghi", "panna", "vino bianco", "burro", "farina", "sale", "pepe"],
+      ko: ["닭고기", "양파", "당근", "버섯", "크림", "흰 와인", "버터", "밀가루", "소금", "후추"]
     },
     howIsMade: {
       ro: "Rumenește bucățile de pui în unt, adaugă legumele, presară făina, stinge cu vin și apă, fierbe încet. Adaugă smântâna la final.",
@@ -12780,13 +12787,14 @@ export const recipes = [
       es: "Dora el pollo en mantequilla, añade verduras, espolvorea harina, desglasa con vino y agua, cocina a fuego lento. Agrega la nata al final.",
       fr: "Faites dorer le poulet dans le beurre, ajoutez les légumes, saupoudrez de farine, déglacez au vin et à l'eau, mijotez. Ajoutez la crème en fin de cuisson.",
       de: "Hähnchen in Butter anbraten, Gemüse zugeben, mit Mehl bestäuben, mit Wein und Wasser ablöschen, köcheln lassen. Am Ende Sahne unterrühren.",
+      pt: "Doure o frango na manteiga, adicione os legumes, polvilhe com farinha, deglaceie com vinho e água, cozinhe em fogo baixo. Adicione o creme no final.",
       ru: "Обжарьте курицу в масле, добавьте овощи, посыпьте мукой, влейте вино и воду, тушите. В конце вмешайте сливки.",
       ar: "حمّر الدجاج بالزبدة، أضف الخضار، رش الدقيق، أضف النبيذ والماء واطبخ ببطء. أضف الكريمة في النهاية.",
       zh: "鸡肉用黄油煎至金黄，加入蔬菜，撒面粉，加酒和水炖煮，最后加入奶油。",
       ja: "バターで鶏肉を焼き、野菜を加え、小麦粉を振りかけて白ワインと水で煮込む。最後にクリームを加える。",
-      tr: "kahverengi tavuk parçalar in tereyağı, Ekleyin sebzeler, serpiştirin ile un, tavayı çözdürün ile şarap ve su, Kısık ateşte pişir. karıştırın in krema sonunda.",
-      it: "marrone pollo pezzi in burro, Aggiungi verdure, spolvera con farina, sfuma con vino e acqua, Fai sobbollire. mescola in panna  alla fine.",
-      ko: "갈색 닭고기 조각 에서 버터, 넣고 채소, 뿌립니다와 밀가루, 팬을 디글레이즈합니다와 와인그리고 물, 약불로 끓여. 저어줍니다 에서 크림 에서 마지막에하세요."
+      tr: "Tavuk parçalarını tereyağında kızartın, sebzeleri ekleyin, un serpin, şarap ve su ile tavayı temizleyin, kısık ateşte pişirin. Sonunda kremayı ekleyin.",
+      it: "Rosolate il pollo nel burro, aggiungete le verdure, spolverizzate di farina, sfumate con vino e acqua, fate sobbollire. Aggiungete la panna alla fine.",
+      ko: "버터에 닭고기를 볶다가 채소를 넣고 밀가루를 뿌린 뒤 와인과 물로 풀어 약불에 끓입니다. 마지막에 크림을 넣어 완성합니다."
     },
     originText: {
       ro: "Fricassée de Poulet este o rețetă tradițională din Franța.",
@@ -12794,14 +12802,14 @@ export const recipes = [
       es: "Fricasé de Pollo es una receta tradicional de Francia.",
       fr: "Fricassée de Poulet est une recette traditionnelle de France.",
       de: "Hähnchenfrikassee ist ein traditionelles Rezept aus Frankreich.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Фрикасе из курицы — традиционный рецепт из Франция.",
+      pt: "Fricassée de Frango é uma receita tradicional da França.",
+      ru: "Фрикасе из курицы — традиционный рецепт из Франции.",
       ar: "دجاج فريكاسيه هي وصفة تقليدية من فرنسا.",
       zh: "法式炖鸡 是来自法国的传统食谱。",
       ja: "鶏のフリカッセ はフランスの伝統的なレシピです。",
-      tr: "tavuk Fricassée Fransa kökenli geleneksel bir tariftir.",
-      it: "pollo Fricassée è una risotta tradizionale di Francia.",
-      ko: "닭고기 Fricassée는(은) 프랑스의 전통 요리입니다."
+      tr: "Tavuk Fricassée Fransa kökenli geleneksel bir tariftir.",
+      it: "Pollo Fricassée è una ricetta tradizionale della Francia.",
+      ko: "치킨 프리카세는 프랑스의 전통 요리입니다."
     }
   },
   {
