@@ -182,6 +182,14 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 173 | Currywurst | ✅ | ✅ | `66ac45d2` | 3 struct, name.ko (카리부어스트), ingredients.it word order, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
 | 174 | Tom Kha Gai | ✅ | ✅ | `556179a0` | 3 struct, name.ko (톰카가이), ingredients tr/it, howIsMade tr/it + ko command forms, originText pt/ru/tr/it/ko |
 | 175 | Cachupa | ✅ | ✅ | `59e220fe` | 3 struct, origin tr/it/ko, name.ko (카추파), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/tr/it/ko |
+| 176 | Pav Bhaji | ✅ | ✅ | `0b370363` | 3 struct, name.ko (파브바지), ingredients.tr soğbir, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 177 | Karelian Stew | ✅ | ✅ | `f662bdb2` | 3 struct, name it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 178 | Boeuf Bourguignon | ✅ | ✅ | `9f6afcbe` | 3 struct, name.ko (뵈프 부르기뇽), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 179 | Chakchouka | ✅ | ✅ | `b32e371f` | 3 struct, origin tr/ko, name.ko (차크추카), ingredients tr/it/ko, howIsMade tr/it + ko cmd forms, originText pt/ru/tr/it/ko |
+| 180 | Okonomiyaki | ✅ | ✅ | `36a91875` | struct present, name.ko (오코노미야키), originText fr/pt/ru/tr/it/ko |
+| 181 | Tonkotsu Ramen | ✅ | ✅ | `159635a3` | 3 struct, originText.tr comma |
+| 182 | Shoyu Ramen | ✅ | ✅ | `0d5d19f1` | 3 struct, originText.tr comma |
+| 183 | Miso Ramen | ✅ | ✅ | `51a3dc18` | 3 struct, originText.tr comma — **FINAL RECIPE** |
 
 ---
 
