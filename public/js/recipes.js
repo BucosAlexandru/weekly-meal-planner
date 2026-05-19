@@ -8622,7 +8622,7 @@ export const recipes = [
       ja: "ガドガド",
       tr: "Gado-Gado",
       it: "Gado-Gado",
-      ko: "Gado-Gado"
+      ko: "가도가도"
     },
     category: {
       ro: "Salată",
@@ -8635,10 +8635,13 @@ export const recipes = [
       ar: "سلطة",
       zh: "沙拉",
       ja: "サラダ",
-      tr: "Salad",
-      it: "Salad",
-      ko: "Salad"
+      tr: "Salata",
+      it: "Insalata",
+      ko: "샐러드"
     },
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["legume", "ou fiert", "tofu", "cartofi", "alune", "sos de arahide", "varză", "crutoane"],
       en: ["vegetables", "boiled egg", "tofu", "potatoes", "peanuts", "peanut sauce", "cabbage", "croutons"],
@@ -8665,24 +8668,24 @@ export const recipes = [
       ar: "اسلق الخضار وقطعها، قدمها مع البيض والتوفو وصلصة الفول السوداني. رش الكروتون في الأعلى.",
       zh: "煮熟蔬菜，切块，与鸡蛋、豆腐和花生酱一起装盘，撒上面包丁。",
       ja: "野菜を茹でて切り、卵、豆腐、ピーナッツソースとともに皿に盛り、クルトンを振りかける。",
-      tr: "Haşlayın sebzeler, kesin onları, Servis edin ile yumurta, tofu, ve yer fıstığı sos. serpiştirin kruton üstüne üstüne.",
-      it: "Cuoci verdure, taglia li, Servi con uovo, tofu, e arachide salsa. spolvera crostini su sopra.",
-      ko: "삶고 채소, 자릅니다 그것들을, 담아 내세요와 계란, 두부, 그리고 땅콩 소스. 뿌립니다 크루통 위에 위에하세요."
+      tr: "Sebzeleri haşlayın ve doğrayın, yumurta, tofu ve yer fıstığı sosuyla servis edin. Üzerine kruton serpin.",
+      it: "Cuocere le verdure, tagliarle e servirle con uovo, tofu e salsa di arachidi. Cospargere con crostini.",
+      ko: "채소를 삶아 자른 후, 달걀, 두부, 땅콩 소스와 함께 담아냅니다. 위에 크루통을 뿌립니다."
     },
     originText: {
       ro: "Gado-Gado este o rețetă tradițională din Indonezia.",
       en: "Gado-Gado is a traditional recipe from Indonesia.",
       es: "Gado-Gado es una receta tradicional de Indonesia.",
-      fr: "Gado-Gado est une recette traditionnelle de Indonésie.",
+      fr: "Gado-Gado est une recette traditionnelle d'Indonésie.",
       de: "Gado-Gado ist ein traditionelles Rezept aus Indonesien.",
-      pt: "Gado-Gado é uma receita tradicional de Indonésia.",
-      ru: "Гадо-Гадо — традиционный рецепт из Индонезия.",
+      pt: "Gado-Gado é uma receita tradicional da Indonésia.",
+      ru: "Гадо-Гадо — традиционный рецепт из Индонезии.",
       ar: "غادو غادو هي وصفة تقليدية من إندونيسيا.",
       zh: "印尼什锦蔬菜沙拉 是来自印度尼西亚的传统食谱。",
       ja: "ガドガド はインドネシアの伝統的なレシピです。",
       tr: "Gado-Gado Endonezya kökenli geleneksel bir tariftir.",
-      it: "Gado-Gado è una risotta tradizionale di Indonesia.",
-      ko: "Gado-Gado는(은) 인도네시아의 전통 요리입니다."
+      it: "Gado-Gado è una ricetta tradizionale dell'Indonesia.",
+      ko: "가도가도는 인도네시아의 전통 요리입니다."
     }
   },
   {
