@@ -5238,6 +5238,9 @@ export const recipes = [
   },
   {
     id: 56,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Republica Cehă",
       en: "Czech Republic",
@@ -5249,9 +5252,9 @@ export const recipes = [
       ar: "جمهورية التشيك",
       zh: "捷克",
       ja: "チェコ",
-      tr: "Czech Republic",
-      it: "Czech Republic",
-      ko: "Czech Republic"
+      tr: "Çek Cumhuriyeti",
+      it: "Repubblica Ceca",
+      ko: "체코"
     },
     name: {
       ro: "Svíčková",
@@ -5266,7 +5269,7 @@ export const recipes = [
       ja: "スヴィチュコヴァー",
       tr: "Svíčková",
       it: "Svíčková",
-      ko: "Svíčková"
+      ko: "스비츠코바"
     },
     category: {
       ro: "Cină",
@@ -5317,16 +5320,16 @@ export const recipes = [
       ro: "Svíčková este o rețetă tradițională din Republica Cehă.",
       en: "Svíčková is a traditional recipe from Czech Republic.",
       es: "Svíčková es una receta tradicional de República Checa.",
-      fr: "Svíčková est une recette traditionnelle de République tchèque.",
+      fr: "Svíčková est une recette traditionnelle de la République tchèque.",
       de: "Svíčková ist ein traditionelles Rezept aus Tschechien.",
-      pt: "Svíčková é uma receita tradicional de República Tcheca.",
-      ru: "Свичкова — традиционный рецепт из Чехия.",
+      pt: "Svíčková é uma receita tradicional da República Tcheca.",
+      ru: "Свичкова — традиционный рецепт из Чехии.",
       ar: "سفيتشكوفا هي وصفة تقليدية من جمهورية التشيك.",
       zh: "捷克奶油炖牛肉 是来自捷克的传统食谱。",
       ja: "スヴィチュコヴァー はチェコの伝統的なレシピです。",
-      tr: "Svíčková Czech Republic kökenli geleneksel bir tariftir.",
-      it: "Svíčková è una risotta tradizionale di Czech Republic.",
-      ko: "Svíčková는(은) Czech Republic의 전통 요리입니다."
+      tr: "Svíčková Çek Cumhuriyeti kökenli geleneksel bir tariftir.",
+      it: "Svíčková è una ricetta tradizionale della Repubblica Ceca.",
+      ko: "스비츠코바는 체코의 전통 요리입니다."
     }
   },
   {
