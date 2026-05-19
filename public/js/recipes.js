@@ -7062,6 +7062,9 @@ export const recipes = [
   },
   {
     id: 76,
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "Georgia",
       en: "Georgia",
@@ -7073,9 +7076,9 @@ export const recipes = [
       ar: "جورجيا",
       zh: "格鲁吉亚",
       ja: "ジョージア",
-      tr: "Georgia",
+      tr: "Gürcistan",
       it: "Georgia",
-      ko: "Georgia"
+      ko: "조지아"
     },
     name: {
       ro: "Lobio",
@@ -7090,7 +7093,7 @@ export const recipes = [
       ja: "ロビオ",
       tr: "Lobio",
       it: "Lobio",
-      ko: "Lobio"
+      ko: "로비오"
     },
     category: {
       ro: "Cină",
@@ -7143,14 +7146,14 @@ export const recipes = [
       es: "Lobio es una receta tradicional de Georgia.",
       fr: "Lobio est une recette traditionnelle de Géorgie.",
       de: "Lobio ist ein traditionelles Rezept aus Georgien.",
-      pt: "Lobio é uma receita tradicional de Geórgia.",
-      ru: "Лобио — традиционный рецепт из Грузия.",
+      pt: "Lobio é uma receita tradicional da Geórgia.",
+      ru: "Лобио — традиционный рецепт из Грузии.",
       ar: "لوبيو هي وصفة تقليدية من جورجيا.",
       zh: "格鲁吉亚豆炖菜 是来自格鲁吉亚的传统食谱。",
       ja: "ロビオ はジョージアの伝統的なレシピです。",
-      tr: "Lobio Georgia kökenli geleneksel bir tariftir.",
-      it: "Lobio è una risotta tradizionale di Georgia.",
-      ko: "Lobio는(은) Georgia의 전통 요리입니다."
+      tr: "Lobio Gürcistan kökenli geleneksel bir tariftir.",
+      it: "Lobio è una ricetta tradizionale della Georgia.",
+      ko: "로비오는 조지아의 전통 요리입니다."
     }
   },
   {
