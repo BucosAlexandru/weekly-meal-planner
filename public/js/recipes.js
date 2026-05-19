@@ -15885,6 +15885,9 @@ export const recipes = [
   },
   {
     id: 173,
+    servings: 2,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Germania",
       en: "Germany",
@@ -15913,7 +15916,7 @@ export const recipes = [
       ja: "カリーヴルスト",
       tr: "Currywurst",
       it: "Currywurst",
-      ko: "Currywurst"
+      ko: "카리부어스트"
     },
     category: {
       ro: "Gustare",
@@ -15942,7 +15945,7 @@ export const recipes = [
       zh: ["香肠", "番茄酱", "咖喱粉", "薯条（可选）"],
       ja: ["ソーセージ", "ケチャップ", "カレー粉", "フライドポテト（オプション）"],
       tr: ["sosis", "ketçap", "köri tozu", "fransız patates kızartması (isteğe bağlı)"],
-      it: ["salsicce", "ketchup", "curry in polvere", "francese patatine fritte (facoltativo)"],
+      it: ["salsicce", "ketchup", "curry in polvere", "patatine fritte francesi (facoltativo)"],
       ko: ["소시지", "케첩", "카레 가루", "프랑스식 감자튀김 (선택)"]
     },
     howIsMade: {
@@ -15956,24 +15959,24 @@ export const recipes = [
       ar: "اقلِ النقانق، اقطعها شرائح وقدمها مع صلصة الطماطم والكاري.",
       zh: "香肠煎熟切片，配以咖喱番茄酱。",
       ja: "ソーセージを焼いてスライスし、カレー風味のトマトソースと一緒に提供。",
-      tr: "Kızartın sosis, Dilimle onları, ve Servis edin ile a domates sos karıştırıned ile köri tozu.",
-      it: "Friggi salsicce, Affetta li, e Servi con a pomodoro salsa mescolaed con curry in polvere.",
-      ko: "볶거나 튀기고 소시지, 썰어 그것들을, 그리고 담아 내세요와 a 토마토 소스 섞습니다와 카레 가루하세요."
+      tr: "Sosisleri kızartın, dilimleyin ve köri tozu ile karıştırılmış domates sosuyla servis edin.",
+      it: "Friggete le salsicce, affettatele e servitele con una salsa di pomodoro mescolata con curry in polvere.",
+      ko: "소시지를 튀긴 후 썰어서 카레 가루를 넣은 토마토 소스와 함께 냅니다."
     },
     originText: {
       ro: "Currywurst este o rețetă tradițională din Germania.",
       en: "Currywurst is a traditional recipe from Germany.",
       es: "Currywurst es una receta tradicional de Alemania.",
-      fr: "Currywurst est une recette traditionnelle de Allemagne.",
+      fr: "Currywurst est une recette traditionnelle d'Allemagne.",
       de: "Currywurst ist ein traditionelles Rezept aus Deutschland.",
-      pt: "Currywurst é uma receita tradicional de Alemanha.",
-      ru: "Карривурст — традиционный рецепт из Германия.",
+      pt: "Currywurst é uma receita tradicional da Alemanha.",
+      ru: "Карривурст — традиционный рецепт из Германии.",
       ar: "كاري فورست هي وصفة تقليدية من ألمانيا.",
       zh: "咖喱香肠 是来自德国的传统食谱。",
       ja: "カリーヴルスト はドイツの伝統的なレシピです。",
-      tr: "Currywurst Almanya kökenli geleneksel bir tariftir.",
-      it: "Currywurst è una risotta tradizionale di Germania.",
-      ko: "Currywurst는(은) 독일의 전통 요리입니다."
+      tr: "Currywurst, Almanya kökenli geleneksel bir tariftir.",
+      it: "Currywurst è una ricetta tradizionale della Germania.",
+      ko: "카리부어스트는 독일의 전통 요리입니다."
     }
   },
   {
