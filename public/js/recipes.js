@@ -14157,6 +14157,9 @@ export const recipes = [
   },
   {
     id: 155,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Polonia",
       en: "Poland",
@@ -14183,9 +14186,9 @@ export const recipes = [
       ar: "شطيرة لحم الخنزير",
       zh: "炸猪排",
       ja: "ポークシュニッツェル",
-      tr: "Domuz schnitzel",
-      it: "Maiale schnitzel",
-      ko: "돼지고기 schnitzel"
+      tr: "Domuz Şnitzeli",
+      it: "Schnitzel di maiale",
+      ko: "돼지고기 슈니첼"
     },
     category: {
       ro: "Cină",
@@ -14213,9 +14216,9 @@ export const recipes = [
       ar: ["شريحة لحم خنزير", "دقيق", "بيض", "بقسماط", "زيت", "ملح", "فلفل"],
       zh: ["猪排", "面粉", "鸡蛋", "面包糠", "油", "盐", "胡椒"],
       ja: ["豚肉カツ", "小麦粉", "卵", "パン粉", "油", "塩", "コショウ"],
-      tr: ["domuz eti doğrayın", "un", "yumurta", "ekmekcrumbs", "yağ", "tuz", "biber"],
-      it: ["maiale trita", "farina", "uova", "panecrumbs", "olio", "sale", "peperone"],
-      ko: ["돼지고기 다집니다", "밀가루", "계란", "빵빵가루", "기름", "소금", "고추"]
+      tr: ["domuz eti", "un", "yumurta", "galeta unu", "yağ", "tuz", "biber"],
+      it: ["cotoletta di maiale", "farina", "uova", "pangrattato", "olio", "sale", "pepe"],
+      ko: ["돼지고기", "밀가루", "계란", "빵가루", "기름", "소금", "후추"]
     },
     howIsMade: {
       ro: "Trece cotletul prin făină, ou și pesmet, apoi prăjește în ulei până devine auriu.",
@@ -14228,9 +14231,9 @@ export const recipes = [
       ar: "غلف شريحة لحم الخنزير بالدقيق والبيض والبقسماط واقلِ حتى يصبح ذهبيًا.",
       zh: "猪排裹上面粉、鸡蛋和面包糠，油炸至金黄。",
       ja: "豚肉を小麦粉・卵・パン粉で衣をつけ、油で黄金色になるまで揚げる。",
-      tr: "kaplayın domuz eti doğrayın in un, yumurta ve galeta unu, sonra Kızartın in yağ altın rengi.",
-      it: "ricopri maiale trita in farina, uovo e panecrumbs, poi Friggi in olio dorato.",
-      ko: "입힙니다 돼지고기 다집니다 에서 밀가루, 계란그리고 빵빵가루, 그다음 볶거나 튀기고 에서 기름 노릇하게하세요."
+      tr: "Domuz etini un, yumurta ve galeta unuyla kaplayın, ardından altın rengi olana kadar yağda kızartın.",
+      it: "Ricopri la cotoletta di maiale con farina, uovo e pangrattato, poi friggi nell'olio fino a doratura.",
+      ko: "돼지고기를 밀가루, 계란, 빵가루 순서로 묻혀서 기름에 노릇하게 튀깁니다."
     },
     originText: {
       ro: "Kotlet schabowy este o rețetă tradițională din Polonia.",
@@ -14238,14 +14241,14 @@ export const recipes = [
       es: "Escalope de cerdo es una receta tradicional de Polonia.",
       fr: "Escalope de porc est une recette traditionnelle de Pologne.",
       de: "Schnitzel ist ein traditionelles Rezept aus Polen.",
-      pt: "Schnitzel de porco é uma receita tradicional de Polónia.",
-      ru: "Свиной шницель — традиционный рецепт из Польша.",
+      pt: "Schnitzel de porco é uma receita tradicional da Polónia.",
+      ru: "Свиной шницель — традиционный рецепт из Польши.",
       ar: "شطيرة لحم الخنزير هي وصفة تقليدية من بولندا.",
       zh: "炸猪排 是来自波兰的传统食谱。",
       ja: "ポークシュニッツェル はポーランドの伝統的なレシピです。",
-      tr: "domuz schnitzel Polonya kökenli geleneksel bir tariftir.",
-      it: "maiale schnitzel è una risotta tradizionale di Polonia.",
-      ko: "돼지고기 schnitzel는(은) 폴란드의 전통 요리입니다."
+      tr: "Domuz Şnitzeli Polonya kökenli geleneksel bir tariftir.",
+      it: "Schnitzel di maiale è una ricetta tradizionale della Polonia.",
+      ko: "돼지고기 슈니첼은 폴란드의 전통 요리입니다."
     }
   },
   {
