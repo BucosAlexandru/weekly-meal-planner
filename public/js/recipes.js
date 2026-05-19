@@ -11016,9 +11016,9 @@ export const recipes = [
       ar: "كرات اللحم السويدية",
       zh: "瑞典肉丸",
       ja: "スウェーデン風ミートボール",
-      tr: "Swedish Meatballs",
-      it: "Swedish Meatballs",
-      ko: "Swedish Meatballs"
+      tr: "İsveç Köftesi",
+      it: "Polpette svedesi",
+      ko: "스웨덴 미트볼"
     },
     category: {
       ro: "Prânz",
@@ -11035,6 +11035,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne tocată", "ouă", "pesmet", "ceapă", "smântână", "piper", "sare"],
       en: ["minced meat", "eggs", "breadcrumbs", "onion", "cream", "pepper", "salt"],
@@ -11046,9 +11049,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بيض", "فتات الخبز", "بصل", "كريمة", "فلفل", "ملح"],
       zh: ["肉末", "鸡蛋", "面包屑", "洋葱", "奶油", "胡椒", "盐"],
       ja: ["ひき肉", "卵", "パン粉", "玉ねぎ", "クリーム", "コショウ", "塩"],
-      tr: ["kıyılmış et", "yumurta", "ekmekcrumbs", "soğbir", "krema", "biber", "tuz"],
-      it: ["tritato carne", "uova", "panecrumbs", "cipolla", "panna", "peperone", "sale"],
-      ko: ["다진 고기", "계란", "빵빵가루", "양파", "크림", "고추", "소금"]
+      tr: ["kıyılmış et", "yumurta", "galeta unu", "soğan", "krema", "biber", "tuz"],
+      it: ["carne tritata", "uova", "pangrattato", "cipolla", "panna", "pepe", "sale"],
+      ko: ["다진 고기", "계란", "빵가루", "양파", "크림", "후추", "소금"]
     },
     howIsMade: {
       ro: "Amestecă carnea tocată cu ceapă, pesmet și ou, formează biluțe, prăjește-le, apoi servește-le cu sos cremos și piure.",
@@ -11061,9 +11064,9 @@ export const recipes = [
       ar: "اخلط اللحم المفروم مع البصل والبقسماط والبيض، شكّل كرات واقلها ثم قدّمها مع صوص كريمي وبطاطس مهروسة.",
       zh: "将肉末与洋葱、面包屑和鸡蛋混合搓成小球，煎熟后配奶油酱和土豆泥食用。",
       ja: "ひき肉・玉ねぎ・パン粉・卵を混ぜて丸めて焼き、クリームソースとマッシュポテトと一緒に提供。",
-      tr: "Karıştırın kıyılmış et ile soğan, galeta unu, ve yumurta, şekil verin içine toplar, Kızartın onları, sonra Servis edin ile kremsi sos ve ezilmiş patates.",
-      it: "Mescola tritato carne con cipolla, panecrumbs, e uovo, dai forma dentro polpette, Friggi li, poi Servi con pannay salsa e schiacciato patate.",
-      ko: "다진 고기에 양파, 빵가루, 달걀을 넣어 섞고 동그랗게 빚어주세요. 볶다가 크리미한 소스와 으깬 감자와 함께 제공해주세요."
+      tr: "Kıyılmış eti soğan, galeta unu ve yumurta ile karıştırın, köfte şekli verin, kızartın, ardından kremsi sos ve patates püresiyle servis edin.",
+      it: "Mescola la carne tritata con cipolla, pangrattato e uovo, forma delle polpette, friggile, poi servi con salsa cremosa e purè di patate.",
+      ko: "다진 고기에 양파, 빵가루, 달걀을 넣어 반죽하고 동그랗게 빚어 팬에 구운 후, 크리미한 소스와 으깬 감자와 함께 제공합니다."
     },
     originText: {
       ro: "Köttbullar este o rețetă tradițională din Suedia.",
@@ -11071,14 +11074,14 @@ export const recipes = [
       es: "Albóndigas suecas es una receta tradicional de Suecia.",
       fr: "Boulettes suédoises est une recette traditionnelle de Suède.",
       de: "Schwedische Fleischbällchen ist ein traditionelles Rezept aus Schweden.",
-      pt: "Almôndegas suecas é uma receita tradicional de Suécia.",
-      ru: "Шведские фрикадельки — традиционный рецепт из Швеция.",
+      pt: "Almôndegas suecas é uma receita tradicional da Suécia.",
+      ru: "Шведские фрикадельки — традиционный рецепт из Швеции.",
       ar: "كرات اللحم السويدية هي وصفة تقليدية من السويد.",
       zh: "瑞典肉丸 是来自瑞典的传统食谱。",
       ja: "スウェーデン風ミートボール はスウェーデンの伝統的なレシピです。",
-      tr: "Swedish Meatballs İsveç kökenli geleneksel bir tariftir.",
-      it: "Swedish Meatballs è una risotta tradizionale di Svezia.",
-      ko: "Swedish Meatballs는(은) 스웨덴의 전통 요리입니다."
+      tr: "İsveç Köftesi İsveç kökenli geleneksel bir tariftir.",
+      it: "Polpette svedesi sono una ricetta tradizionale della Svezia.",
+      ko: "스웨덴 미트볼은 스웨덴의 전통 요리입니다."
     }
   },
   {
