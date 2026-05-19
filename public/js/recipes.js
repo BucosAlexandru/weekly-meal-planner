@@ -9866,7 +9866,7 @@ export const recipes = [
       ja: "カレカレ",
       tr: "Kare-Kare",
       it: "Kare-Kare",
-      ko: "Kare-Kare"
+      ko: "카레카레"
     },
     category: {
       ro: "Cină",
@@ -9883,6 +9883,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["coadă de vită", "unt de arahide", "pasta de creveți", "vinete", "fasole verde", "bok choy", "usturoi"],
       en: ["oxtail", "peanut butter", "shrimp paste", "eggplant", "green beans", "bok choy", "garlic"],
@@ -9894,9 +9897,9 @@ export const recipes = [
       ar: ["ذيل الثور", "زبدة الفول السوداني", "معجون الروبيان", "باذنجان", "فاصوليا خضراء", "بوك تشوي", "ثوم"],
       zh: ["牛尾", "花生酱", "虾酱", "茄子", "四季豆", "小白菜", "大蒜"],
       ja: ["牛テール", "ピーナッツバター", "エビペースト", "ナス", "インゲン", "チンゲンサイ", "ニンニク"],
-      tr: ["öküz kuyruğu", "yer fıstığı tereyağı", "karides salça", "yumurtaplant", "yeşil fasulye", "bok choy", "sarımsak"],
-      it: ["coda di bue", "arachide burro", "gamberetti concentrato", "uovoplant", "verde fagioli", "bok choy", "aglio"],
-      ko: ["소꼬리", "땅콩 버터", "새우 페이스트", "계란식물", "초록 콩", "청경채 청경채", "마늘"]
+      tr: ["öküz kuyruğu", "yer fıstığı ezmesi", "karides ezmesi", "patlıcan", "yeşil fasulye", "bok choy", "sarımsak"],
+      it: ["coda di bue", "burro di arachidi", "pasta di gamberetti", "melanzana", "fagiolini verdi", "bok choy", "aglio"],
+      ko: ["소꼬리", "땅콩 버터", "새우 페이스트", "가지", "강낭콩", "청경채", "마늘"]
     },
     howIsMade: {
       ro: "Fierbe carnea (de obicei coadă de vită sau picioare de porc) cu legume, apoi gătește-le într-un sos gros de arahide și servește cu pastă de creveți.",
@@ -9909,24 +9912,24 @@ export const recipes = [
       ar: "اسلق اللحم (عادة ذيل بقري أو رجل خنزير) مع الخضار، ثم اطبخه في صوص الفول السوداني الكثيف وقدمه مع معجون الروبيان.",
       zh: "牛尾或猪蹄和蔬菜煮熟后，用浓稠花生酱烹调，搭配虾酱食用。",
       ja: "テールや豚足を野菜と煮て、濃厚なピーナッツソースで調理し、シュリンプペーストを添えて提供。",
-      tr: "Haşlayın et (genellikle öküz kuyruğu veya domuz eti incik) ile sebzeler, sonra Pişirin koyu yer fıstığı sos ve servis edin ile karides salça.",
-      it: "Cuoci carne (di solito coda di bue o maiale stinco) con verdure, poi Cuoci denso arachide salsa e servi con gamberetti concentrato.",
-      ko: "삶고 고기 (보통 소꼬리 또는 돼지고기 족발)와 채소, 그다음 조리하고 에서 a 걸쭉한 땅콩 소스그리고 제공합니다와 새우 페이스트하세요."
+      tr: "Et (genellikle öküz kuyruğu veya domuz incik) sebzelerle birlikte haşlayın, ardından koyu yer fıstığı sosunda pişirin ve karides ezmesiyle servis edin.",
+      it: "Cuocere la carne (di solito coda di bue o stinco di maiale) con le verdure, poi cuocere in una salsa densa di arachidi e servire con pasta di gamberetti.",
+      ko: "고기(보통 소꼬리 또는 돼지 족발)를 채소와 함께 삶은 후, 걸쭉한 땅콩 소스에 조리하고 새우 페이스트와 함께 제공합니다."
     },
     originText: {
       ro: "Kare-Kare este o rețetă tradițională din Filipine.",
-      en: "Kare-Kare is a traditional recipe from Philippines.",
+      en: "Kare-Kare is a traditional recipe from the Philippines.",
       es: "Kare-Kare es una receta tradicional de Filipinas.",
-      fr: "Kare-Kare est une recette traditionnelle de Philippines.",
-      de: "Kare-Kare ist ein traditionelles Rezept aus Philippinen.",
-      pt: "Kare-Kare é uma receita tradicional de Filipinas.",
-      ru: "Каре-Каре — традиционный рецепт из Филиппины.",
+      fr: "Kare-Kare est une recette traditionnelle des Philippines.",
+      de: "Kare-Kare ist ein traditionelles Rezept aus den Philippinen.",
+      pt: "Kare-Kare é uma receita tradicional das Filipinas.",
+      ru: "Каре-Каре — традиционный рецепт из Филиппин.",
       ar: "كاري كاري هي وصفة تقليدية من الفلبين.",
       zh: "菲式花生炖牛肉 是来自菲律宾的传统食谱。",
       ja: "カレカレ はフィリピンの伝統的なレシピです。",
       tr: "Kare-Kare Filipinler kökenli geleneksel bir tariftir.",
-      it: "Kare-Kare è una risotta tradizionale di Filippine.",
-      ko: "Kare-Kare는(은) 필리핀의 전통 요리입니다."
+      it: "Kare-Kare è una ricetta tradizionale delle Filippine.",
+      ko: "카레카레는 필리핀의 전통 요리입니다."
     }
   },
   {
