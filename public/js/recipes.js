@@ -6678,6 +6678,9 @@ export const recipes = [
   },
   {
     id: 72,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Cambodgia",
       en: "Cambodia",
@@ -6689,9 +6692,9 @@ export const recipes = [
       ar: "كمبوديا",
       zh: "柬埔寨",
       ja: "カンボジア",
-      tr: "Cambodia",
-      it: "Cambodia",
-      ko: "Cambodia"
+      tr: "Kamboçya",
+      it: "Cambogia",
+      ko: "캄보디아"
     },
     name: {
       ro: "Amok",
@@ -6706,7 +6709,7 @@ export const recipes = [
       ja: "アモック",
       tr: "Amok",
       it: "Amok",
-      ko: "Amok"
+      ko: "아목"
     },
     category: {
       ro: "Cină",
@@ -6757,16 +6760,16 @@ export const recipes = [
       ro: "Amok este o rețetă tradițională din Cambodgia.",
       en: "Amok is a traditional recipe from Cambodia.",
       es: "Amok es una receta tradicional de Camboya.",
-      fr: "Amok est une recette traditionnelle de Cambodge.",
+      fr: "Amok est une recette traditionnelle du Cambodge.",
       de: "Amok ist ein traditionelles Rezept aus Kambodscha.",
-      pt: "Amok é uma receita tradicional de Camboja.",
-      ru: "Амок — традиционный рецепт из Камбоджа.",
+      pt: "Amok é uma receita tradicional do Camboja.",
+      ru: "Амок — традиционный рецепт из Камбоджи.",
       ar: "آموك هي وصفة تقليدية من كمبوديا.",
       zh: "阿莫克咖喱鱼 是来自柬埔寨的传统食谱。",
       ja: "アモック はカンボジアの伝統的なレシピです。",
-      tr: "Amok Cambodia kökenli geleneksel bir tariftir.",
-      it: "Amok è una risotta tradizionale di Cambodia.",
-      ko: "Amok는(은) Cambodia의 전통 요리입니다."
+      tr: "Amok Kamboçya kökenli geleneksel bir tariftir.",
+      it: "Amok è una ricetta tradizionale della Cambogia.",
+      ko: "아목은 캄보디아의 전통 요리입니다."
     }
   },
   {
