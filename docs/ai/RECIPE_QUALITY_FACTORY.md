@@ -94,6 +94,16 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 83 | Fatteh | ✅ | ✅ | `a4db3ae9` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
 | 84 | Smørrebrød | ✅ | ✅ | `5aa5026e` | 11 fixes: 3 struct fields, origin it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
 | 85 | Naengmyeon | ✅ | ✅ | `a79eb8f0` | 9 fixes: origin tr/it/ko, name.ko, originText.pt/ru/tr/it/ko; struct fields already present |
+| 86 | Nihari | ✅ | ✅ | `b75f2bd9` | 11 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it/ko |
+| 87 | Bún bò Huế | ✅ | ✅ | `d73b3558` | 10 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it/ko |
+| 88 | Moqueca | ✅ | ✅ | `6a3475e8` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it |
+| 89 | Sabich | ✅ | ✅ | `be69c7fe` | 8 fixes: 3 struct fields, name.ko, originText.fr/ru/it/ko, howIsMade.tr/it |
+| 90 | Ropa Vieja | ✅ | ✅ | `433ddd43` | 10 fixes: 3 struct fields, origin tr/ko, name.ko, originText.ru/tr/it/ko, howIsMade.tr/it |
+| 91 | Cullen Skink | ✅ | ✅ | `2bcdb5c6` | 14 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
+| 92 | Gado-Gado | ✅ | ✅ | `d9238b8f` | 13 fixes: 3 struct fields, category tr/it/ko, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it/ko |
+| 93 | Cinnamon Bun | ✅ | ✅ | `1cb35fbc` | 13 fixes: 3 struct fields, add origin.pt (missing!), name tr/it/ko, originText.pt/ru/tr/it/ko, howIsMade.tr/it/ko |
+| 94 | Chiles en nogada | ✅ | ✅ | `65ccb271` | 9 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko, howIsMade.tr/it |
+| 95 | Lentil Soup | ✅ | ✅ | `4f0399d0` | 18 fixes: 3 struct fields, origin tr/it/ko, name tr/it/ko, originText.en/fr/de/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
 
 ---
 

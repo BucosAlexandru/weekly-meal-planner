@@ -9002,7 +9002,7 @@ export const recipes = [
       ja: "スパナコピタ",
       tr: "Spanakopita",
       it: "Spanakopita",
-      ko: "Spanakopita"
+      ko: "스파나코피타"
     },
     category: {
       ro: "Gustare",
@@ -9019,6 +9019,9 @@ export const recipes = [
       it: "Spuntino",
       ko: "간식"
     },
+    servings: 6,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["foietaj", "spanac", "brânză feta", "ceapă", "ouă", "ulei de măsline", "condimente"],
       en: ["phyllo pastry", "spinach", "feta cheese", "onion", "eggs", "olive oil", "spices"],
@@ -9045,9 +9048,9 @@ export const recipes = [
       ar: "احشِ عجينة الفيلو بخليط السبانخ والجبن، لفها أو ضعها في صينية، ادهنها بالبيض واخبزها حتى تحمر.",
       zh: "千层酥皮包入菠菜和奶酪，卷起或铺在烤盘里，刷蛋液，烤至金黄。",
       ja: "フィロ生地にほうれん草とチーズを包み、巻くか重ねて卵を塗り、焼き色がつくまで焼く。",
-      tr: "doldurun yufka hamur ile ıspanak ve peynir karıştırınture, rulo yapın veya katman tepsi, fırçalayın ile yumurta, ve Fırında pişir altın rengi.",
-      it: "farcisci pasta fillo pasta con spinaci e formaggio mescolature, arrotola o strato teglia, spennella con uovo, e Cuoci al forno dorato.",
-      ko: "채웁니다 필로 반죽 파이지와 시금치그리고 치즈 섞습니다, 말아줍니다 또는 층 에서 a 트레이, 바릅니다와 계란, 그리고 오븐에 구워 노릇하게하세요."
+      tr: "Yufka hamurunu ıspanak ve peynir karışımıyla doldurun, rulo yapın veya tepside katmanlayın, yumurta sürün ve altın rengi olana kadar fırında pişirin.",
+      it: "Farcire la sfoglia di pasta fillo con il misto di spinaci e formaggio, arrotolare o disporre nella teglia, spennellare con uovo e cuocere in forno fino a doratura.",
+      ko: "필로 반죽에 시금치와 치즈를 섞어 채운 후 돌돌 말거나 트레이에 층층이 쌓습니다. 달걀을 바르고 노릇해질 때까지 오븐에 굽습니다."
     },
     originText: {
       ro: "Spanakopita este o rețetă tradițională din Grecia.",
@@ -9055,14 +9058,14 @@ export const recipes = [
       es: "Spanakopita es una receta tradicional de Grecia.",
       fr: "Spanakopita est une recette traditionnelle de Grèce.",
       de: "Spanakopita ist ein traditionelles Rezept aus Griechenland.",
-      pt: "Spanakopita é uma receita tradicional de Grécia.",
-      ru: "Спанакопита — традиционный рецепт из Греция.",
+      pt: "Spanakopita é uma receita tradicional da Grécia.",
+      ru: "Спанакопита — традиционный рецепт из Греции.",
       ar: "سباناكوبيتا هي وصفة تقليدية من اليونان.",
       zh: "希腊菠菜馅饼 是来自希腊的传统食谱。",
       ja: "スパナコピタ はギリシャの伝統的なレシピです。",
       tr: "Spanakopita Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Spanakopita è una risotta tradizionale di Grecia.",
-      ko: "Spanakopita는(은) 그리스의 전통 요리입니다."
+      it: "Spanakopita è una ricetta tradizionale della Grecia.",
+      ko: "스파나코피타는 그리스의 전통 요리입니다."
     }
   },
   {
