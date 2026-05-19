@@ -10250,7 +10250,7 @@ export const recipes = [
       ja: "タマーレ",
       tr: "Tamale",
       it: "Tamale",
-      ko: "Tamale"
+      ko: "타말레"
     },
     category: {
       ro: "Cină",
@@ -10267,6 +10267,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     ingredients: {
       ro: ["mălai", "untură", "apă", "umplutură de carne sau legume", "frunze de porumb"],
       en: ["cornmeal", "lard", "water", "meat or vegetable filling", "corn husks"],
@@ -10278,9 +10281,9 @@ export const recipes = [
       ar: ["دقيق الذرة", "دهن", "ماء", "حشوة لحم أو خضار", "أوراق الذرة"],
       zh: ["玉米粉", "猪油", "水", "肉或蔬菜馅", "玉米叶"],
       ja: ["トウモロコシ粉", "ラード", "水", "肉または野菜の具", "とうもろこしの皮"],
-      tr: ["mısırmeal", "domuz yağı", "su", "et veya sebze iç harç", "mısır kabuk"],
-      it: ["maismeal", "strutto", "acqua", "carne o verdura ripieno", "mais bucce"],
-      ko: ["옥수수식사", "라드", "물", "고기 또는 채소 속재료", "옥수수 껍질"]
+      tr: ["mısır unu", "domuz yağı", "su", "et veya sebze iç harcı", "mısır yaprağı"],
+      it: ["farina di mais", "strutto", "acqua", "ripieno di carne o verdure", "foglie di mais"],
+      ko: ["옥수숫가루", "라드", "물", "고기 또는 채소 속재료", "옥수수 껍질"]
     },
     howIsMade: {
       ro: "Amestecă mălaiul cu untură și apă, pune umplutura pe foi de porumb, rulează și fierbe la abur până se întăresc.",
@@ -10293,24 +10296,24 @@ export const recipes = [
       ar: "اخلط دقيق الذرة مع الدهن والماء، ضع الحشوة على أوراق الذرة، لفها واطبخها على البخار.",
       zh: "玉米粉与猪油和水混合，包入馅料，用玉米叶包好，蒸至定型。",
       ja: "トウモロコシ粉をラードと水で混ぜ、具をとうもろこしの皮に乗せて巻き、蒸して固める。",
-      tr: "Karıştırın mısırmeal ile domuz yağı ve su, yerleştirin iç harç üstüne mısır kabuk, rulo yapın ve buharda pişirin koyun.",
-      it: "Mescola maismeal con strutto e acqua, metti ripieno su mais bucce, arrotola  e cuoci a vapore metti.",
-      ko: "섞고 옥수수식사와 라드그리고 물, 놓습니다 속재료 위에 옥수수 껍질, 말아줍니다 그리고 찝니다 두세요하세요."
+      tr: "Mısır unu, domuz yağı ve suyu karıştırın, mısır yaprakları üzerine iç harcı koyun, rulo yapın ve pişene kadar buharda pişirin.",
+      it: "Mescolare la farina di mais con lo strutto e l'acqua, mettere il ripieno sulle foglie di mais, arrotolare e cuocere a vapore fino a quando si solidifica.",
+      ko: "옥수숫가루에 라드와 물을 섞어 반죽을 만든 후 옥수수 껍질 위에 속재료를 올리고 돌돌 말아 쪄서 굳힙니다."
     },
     originText: {
       ro: "Tamale este o rețetă tradițională din Mexic.",
       en: "Tamale is a traditional recipe from Mexico.",
       es: "Tamal es una receta tradicional de México.",
-      fr: "Tamale est une recette traditionnelle de Mexique.",
+      fr: "Tamale est une recette traditionnelle du Mexique.",
       de: "Tamale ist ein traditionelles Rezept aus Mexiko.",
-      pt: "Tamale é uma receita tradicional de México.",
-      ru: "Тамале — традиционный рецепт из Мексика.",
+      pt: "Tamale é uma receita tradicional do México.",
+      ru: "Тамале — традиционный рецепт из Мексики.",
       ar: "تامالي هي وصفة تقليدية من المكسيك.",
       zh: "玉米粽 是来自墨西哥的传统食谱。",
       ja: "タマーレ はメキシコの伝統的なレシピです。",
       tr: "Tamale Meksika kökenli geleneksel bir tariftir.",
-      it: "Tamale è una risotta tradizionale di Messico.",
-      ko: "Tamale는(은) 멕시코의 전통 요리입니다."
+      it: "Tamale è una ricetta tradizionale del Messico.",
+      ko: "타말레는 멕시코의 전통 요리입니다."
     }
   },
   {
