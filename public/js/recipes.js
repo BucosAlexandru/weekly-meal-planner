@@ -7158,19 +7158,23 @@ export const recipes = [
   },
   {
     id: 77,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Algeria",
       en: "Algeria",
       es: "Argelia",
       fr: "Algérie",
       de: "Algerien",
+      pt: "Argélia",
       ru: "Алжир",
       ar: "الجزائر",
       zh: "阿尔及利亚",
       ja: "アルジェリア",
-      tr: "Algeria",
+      tr: "Cezayir",
       it: "Algeria",
-      ko: "Algeria"
+      ko: "알제리"
     },
     name: {
       ro: "Chakhchoukha",
@@ -7184,7 +7188,7 @@ export const recipes = [
       ja: "シャクシュカ",
       tr: "Chakhchoukha",
       it: "Chakhchoukha",
-      ko: "Chakhchoukha"
+      ko: "차크추카"
     },
     category: {
       ro: "Prânz",
@@ -7232,16 +7236,16 @@ export const recipes = [
       ro: "Chakhchoukha este o rețetă tradițională din Algeria.",
       en: "Chakhchoukha is a traditional recipe from Algeria.",
       es: "Chakhchoukha es una receta tradicional de Argelia.",
-      fr: "Chakhchoukha est une recette traditionnelle de Algérie.",
+      fr: "Chakhchoukha est une recette traditionnelle d'Algérie.",
       de: "Chakhchoukha ist ein traditionelles Rezept aus Algerien.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Шакшука — традиционный рецепт из Алжир.",
+      pt: "Chakhchoukha é uma receita tradicional da Argélia.",
+      ru: "Шакшука — традиционный рецепт из Алжира.",
       ar: "شخشوخة هي وصفة تقليدية من الجزائر.",
       zh: "阿尔及利亚炖肉饼 是来自阿尔及利亚的传统食谱。",
       ja: "シャクシュカ はアルジェリアの伝統的なレシピです。",
-      tr: "Chakhchoukha Algeria kökenli geleneksel bir tariftir.",
-      it: "Chakhchoukha è una risotta tradizionale di Algeria.",
-      ko: "Chakhchoukha는(은) Algeria의 전통 요리입니다."
+      tr: "Chakhchoukha Cezayir kökenli geleneksel bir tariftir.",
+      it: "Chakhchoukha è una ricetta tradizionale dell'Algeria.",
+      ko: "차크추카는 알제리의 전통 요리입니다."
     }
   },
   {
