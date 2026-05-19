@@ -12148,6 +12148,7 @@ export const recipes = [
       es: "Rumanía",
       fr: "Roumanie",
       de: "Rumänien",
+      pt: "Romênia",
       ru: "Румыния",
       ar: "رومانيا",
       zh: "罗马尼亚",
@@ -12162,13 +12163,14 @@ export const recipes = [
       es: "Alubias con salchichas",
       fr: "Haricots aux saucisses",
       de: "Bohnen mit Würstchen",
+      pt: "Feijão com Linguiça",
       ru: "Фасоль с колбасой",
       ar: "فاصوليا مع النقانق",
       zh: "香肠炖豆",
       ja: "ソーセージと豆の煮込み",
-      tr: "Beans with Sausages",
-      it: "Beans with Sausages",
-      ko: "Beans with Sausages"
+      tr: "Fasulye ve Sosis",
+      it: "Fagioli con Salsicce",
+      ko: "콩과 소시지"
     },
     category: {
       ro: "Prânz",
@@ -12176,6 +12178,7 @@ export const recipes = [
       es: "Almuerzo",
       fr: "Déjeuner",
       de: "Mittagessen",
+      pt: "Almoço",
       ru: "Обед",
       ar: "غداء",
       zh: "午餐",
@@ -12184,19 +12187,23 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["fasole", "cârnați afumați", "ceapă", "morcovi", "bulion", "ulei", "sare", "piper", "foi de dafin"],
       en: ["beans", "smoked sausages", "onion", "carrots", "tomato paste", "oil", "salt", "pepper", "bay leaves"],
       es: ["alubias", "salchichas ahumadas", "cebolla", "zanahorias", "puré de tomate", "aceite", "sal", "pimienta", "hojas de laurel"],
       fr: ["haricots", "saucisses fumées", "oignon", "carottes", "purée de tomates", "huile", "sel", "poivre", "feuilles de laurier"],
       de: ["Bohnen", "geräucherte Würste", "Zwiebel", "Karotten", "Tomatenmark", "Öl", "Salz", "Pfeffer", "Lorbeerblätter"],
+      pt: ["feijão", "linguiças defumadas", "cebola", "cenouras", "extrato de tomate", "óleo", "sal", "pimenta", "folhas de louro"],
       ru: ["фасоль", "копченая колбаса", "лук", "морковь", "томатная паста", "масло", "соль", "перец", "лавровый лист"],
       ar: ["فاصوليا", "نقانق مدخنة", "بصل", "جزر", "معجون طماطم", "زيت", "ملح", "فلفل", "ورق غار"],
       zh: ["豆子", "熏肠", "洋葱", "胡萝卜", "番茄酱", "油", "盐", "胡椒", "月桂叶"],
       ja: ["豆", "スモークソーセージ", "玉ねぎ", "にんじん", "トマトペースト", "油", "塩", "コショウ", "ローリエ"],
-      tr: ["fasulye", "isli sosis", "soğbir", "havuçs", "domates salça", "yağ", "tuz", "biber", "defne yaprak"],
-      it: ["fagioli", "affumicato salsicce", "cipolla", "carotas", "pomodoro concentrato", "olio", "sale", "peperone", "alloro foglie"],
-      ko: ["콩", "훈제 소시지", "양파", "당근s", "토마토 페이스트", "기름", "소금", "고추", "월계수 잎"]
+      tr: ["fasulye", "isli sosis", "soğan", "havuç", "domates salçası", "yağ", "tuz", "biber", "defne yaprağı"],
+      it: ["fagioli", "salsicce affumicate", "cipolla", "carote", "concentrato di pomodoro", "olio", "sale", "pepe", "foglie di alloro"],
+      ko: ["콩", "훈제 소시지", "양파", "당근", "토마토 페이스트", "기름", "소금", "후추", "월계수 잎"]
     },
     howIsMade: {
       ro: "Fierbe fasolea, călește legumele, adaugă cârnații, bulionul și condimentele, apoi fierbe totul împreună.",
@@ -12204,13 +12211,14 @@ export const recipes = [
       es: "Hierve las alubias, sofríe las verduras, añade las salchichas, el puré de tomate y las especias, y cocina todo junto.",
       fr: "Faites bouillir les haricots, faites revenir les légumes, ajoutez les saucisses, la purée de tomates et les épices, puis laissez mijoter.",
       de: "Bohnen kochen, Gemüse anbraten, Würste, Tomatenmark und Gewürze zugeben, alles zusammen köcheln lassen.",
+      pt: "Cozinhe o feijão, refogue os legumes, adicione as linguiças, o extrato de tomate e os temperos, e cozinhe tudo junto em fogo brando.",
       ru: "Сварите фасоль, обжарьте овощи, добавьте колбасу, томатную пасту и специи, тушите все вместе.",
       ar: "اسلق الفاصوليا، اقلي الخضار، أضف النقانق ومعجون الطماطم والتوابل، واطبخ الجميع معاً.",
       zh: "煮豆子，炒蔬菜，加入香肠、番茄酱和调味料，一起炖煮。",
       ja: "豆を茹で、野菜を炒め、ソーセージ、トマトペースト、スパイスを加えて一緒に煮込む。",
-      tr: "Haşlayın fasulye, soteleyin sebzeler, Ekleyin sosis, domates salça ve baharatlar, sonra Kısık ateşte pişir tüm birlikte.",
-      it: "Cuoci fagioli, soffriggié verdure, Aggiungi salsicce, pomodoro concentrato e spezie, poi Fai sobbollire tutto insieme.",
-      ko: "삶고 콩, 볶습니다é 채소, 넣고 소시지, 토마토 페이스트그리고 향신료, 그다음 약불로 끓여 모든 함께하세요."
+      tr: "Fasulyeleri haşlayın, sebzeleri soteleyin, sosis, domates salçası ve baharatları ekleyin, ardından hepsini birlikte kısık ateşte pişirin.",
+      it: "Cuocete i fagioli, soffriggete le verdure, aggiungete le salsicce, il concentrato di pomodoro e le spezie, poi fate sobbollire tutto insieme.",
+      ko: "콩을 삶고 채소를 볶은 후, 소시지, 토마토 페이스트와 향신료를 넣고 모두 함께 약불로 끓입니다."
     },
     originText: {
       ro: "Fasole cu cârnați este o rețetă tradițională din România.",
@@ -12218,14 +12226,14 @@ export const recipes = [
       es: "Alubias con salchichas es una receta tradicional de Rumanía.",
       fr: "Haricots aux saucisses est une recette traditionnelle de Roumanie.",
       de: "Bohnen mit Würstchen ist ein traditionelles Rezept aus Rumänien.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Фасоль с колбасой — традиционный рецепт из Румыния.",
+      pt: "Feijão com Linguiça é uma receita tradicional da Romênia.",
+      ru: "Фасоль с колбасой — традиционный рецепт из Румынии.",
       ar: "فاصوليا مع النقانق هي وصفة تقليدية من رومانيا.",
       zh: "香肠炖豆 是来自罗马尼亚的传统食谱。",
       ja: "ソーセージと豆の煮込み はルーマニアの伝統的なレシピです。",
-      tr: "fasulye ile sosis Romanya kökenli geleneksel bir tariftir.",
-      it: "fagioli con salsicce è una risotta tradizionale di Romania.",
-      ko: "콩와 소시지는(은) 루마니아의 전통 요리입니다."
+      tr: "Fasulye ve Sosis Romanya kökenli geleneksel bir tariftir.",
+      it: "Fagioli con Salsicce è una ricetta tradizionale della Romania.",
+      ko: "콩과 소시지는 루마니아의 전통 요리입니다."
     }
   },
   {
