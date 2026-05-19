@@ -5718,6 +5718,9 @@ export const recipes = [
   },
   {
     id: 61,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Pakistan",
       en: "Pakistan",
@@ -5731,7 +5734,7 @@ export const recipes = [
       ja: "パキスタン",
       tr: "Pakistan",
       it: "Pakistan",
-      ko: "Pakistan"
+      ko: "파키스탄"
     },
     name: {
       ro: "Biryani",
@@ -5746,7 +5749,7 @@ export const recipes = [
       ja: "ビリヤニ",
       tr: "Biryani",
       it: "Biryani",
-      ko: "Biryani"
+      ko: "비리야니"
     },
     category: {
       ro: "Cină",
@@ -5797,16 +5800,16 @@ export const recipes = [
       ro: "Biryani este o rețetă tradițională din Pakistan.",
       en: "Biryani is a traditional recipe from Pakistan.",
       es: "Biryani es una receta tradicional de Pakistán.",
-      fr: "Biryani est une recette traditionnelle de Pakistan.",
+      fr: "Biryani est une recette traditionnelle du Pakistan.",
       de: "Biryani ist ein traditionelles Rezept aus Pakistan.",
-      pt: "Biryani é uma receita tradicional de Paquistão.",
-      ru: "Бирьяни — традиционный рецепт из Пакистан.",
+      pt: "Biryani é uma receita tradicional do Paquistão.",
+      ru: "Бирьяни — традиционный рецепт из Пакистана.",
       ar: "برياني هي وصفة تقليدية من باكستان.",
       zh: "印度香饭 是来自巴基斯坦的传统食谱。",
       ja: "ビリヤニ はパキスタンの伝統的なレシピです。",
-      tr: "biryani Pakistan kökenli geleneksel bir tariftir.",
-      it: "biryani è una risotta tradizionale di Pakistan.",
-      ko: "비리야니는(은) Pakistan의 전통 요리입니다."
+      tr: "Biryani Pakistan kökenli geleneksel bir tariftir.",
+      it: "Biryani è una ricetta tradizionale del Pakistan.",
+      ko: "비리야니는 파키스탄의 전통 요리입니다."
     }
   },
   {

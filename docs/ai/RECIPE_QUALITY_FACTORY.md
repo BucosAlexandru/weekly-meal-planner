@@ -65,6 +65,10 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 54 | Moules-frites | ✅ | ✅ | `04ba532e` | 9 fixes: 3 struct fields, name.ko, originText.pt/ru/tr/it/ko |
 | 55 | Moussaka | ✅ | ✅ | `7fb899a0` | 8 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko |
 | 56 | Svíčková | ✅ | ✅ | `96cd3925` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko |
+| 57 | Fårikål | ✅ | ✅ | `f8c93958` | 8 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
+| 58 | Ful Medames | ✅ | ✅ | `186f970a` | 10 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 59 | Pasticada | ✅ | ✅ | `df31196c` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 60 | Buuz | ✅ | ✅ | `6ed83b6e` | 12 fixes: 3 struct fields, origin tr/ko, name.ko, originText.de/pt/ru/tr/it/ko; NOTE: stub recipe |
 
 ---
 
