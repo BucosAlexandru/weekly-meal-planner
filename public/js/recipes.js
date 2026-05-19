@@ -5430,6 +5430,9 @@ export const recipes = [
   },
   {
     id: 58,
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "Sudan",
       en: "Sudan",
@@ -5443,7 +5446,7 @@ export const recipes = [
       ja: "スーダン",
       tr: "Sudan",
       it: "Sudan",
-      ko: "Sudan"
+      ko: "수단"
     },
     name: {
       ro: "Ful Medames",
@@ -5458,7 +5461,7 @@ export const recipes = [
       ja: "フール・メダメス",
       tr: "Ful Medames",
       it: "Ful Medames",
-      ko: "Ful Medames"
+      ko: "풀 메다메스"
     },
     category: {
       ro: "Mic dejun",
@@ -5509,16 +5512,16 @@ export const recipes = [
       ro: "Ful Medames este o rețetă tradițională din Sudan.",
       en: "Ful Medames is a traditional recipe from Sudan.",
       es: "Ful Medames es una receta tradicional de Sudán.",
-      fr: "Ful Medames est une recette traditionnelle de Soudan.",
+      fr: "Ful Medames est une recette traditionnelle du Soudan.",
       de: "Ful Medames ist ein traditionelles Rezept aus Sudan.",
-      pt: "Ful Medames é uma receita tradicional de Sudão.",
-      ru: "Фуль медамес — традиционный рецепт из Судан.",
+      pt: "Ful Medames é uma receita tradicional do Sudão.",
+      ru: "Фуль медамес — традиционный рецепт из Судана.",
       ar: "فول مدمس هي وصفة تقليدية من السودان.",
       zh: "炖蚕豆 是来自苏丹的传统食谱。",
       ja: "フール・メダメス はスーダンの伝統的なレシピです。",
       tr: "Ful Medames Sudan kökenli geleneksel bir tariftir.",
-      it: "Ful Medames è una risotta tradizionale di Sudan.",
-      ko: "Ful Medames는(은) Sudan의 전통 요리입니다."
+      it: "Ful Medames è una ricetta tradizionale del Sudan.",
+      ko: "풀 메다메스는 수단의 전통 요리입니다."
     }
   },
   {
