@@ -9273,9 +9273,9 @@ export const recipes = [
       ar: "أرمينيا",
       zh: "亚美尼亚",
       ja: "アルメニア",
-      tr: "Armenia",
+      tr: "Ermenistan",
       it: "Armenia",
-      ko: "Armenia"
+      ko: "아르메니아"
     },
     name: {
       ro: "Khorovats",
@@ -9290,7 +9290,7 @@ export const recipes = [
       ja: "ホロヴァッツ",
       tr: "Khorovats",
       it: "Khorovats",
-      ko: "Khorovats"
+      ko: "호로바츠"
     },
     category: {
       ro: "Cină",
@@ -9307,6 +9307,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de porc sau vită", "ardei gras", "ceapă", "roșii", "vinete", "condimente"],
       en: ["pork or beef", "bell pepper", "onion", "tomatoes", "eggplant", "spices"],
@@ -9333,24 +9336,24 @@ export const recipes = [
       ar: "انقع قطع اللحم بالبصل والتوابل والزيت، ضعها في أسياخ واشوها حتى تنضج.",
       zh: "肉块用洋葱、香料和油腌制，串在签子上烧烤至软嫩。",
       ja: "肉を玉ねぎ・スパイス・油でマリネし、串に刺して柔らかくなるまでグリルする。",
-      tr: "marine edin parçalar et ile soğan, baharatlar, ve yağ, şiş ve ızgara yapın yumuşayana kadar.",
-      it: "marina pezzi  carne con cipolla, spezie, e olio, spiedo e griglia finché sarà tenero.",
-      ko: "재웁니다 조각 의 고기와 양파, 향신료, 그리고 기름, 꼬치그리고 굽습니다 부드러워질 때까지하세요."
+      tr: "Et parçalarını soğan, baharatlar ve yağla marine edin, şişe takın ve yumuşayana kadar ızgarada pişirin.",
+      it: "Marinare i pezzi di carne con cipolla, spezie e olio, infilzarli su spiedini e cuocerli alla griglia fino a quando sono teneri.",
+      ko: "고기를 양파, 향신료, 기름에 재운 후 꼬치에 꿰어 부드러워질 때까지 그릴에 굽습니다."
     },
     originText: {
       ro: "Khorovats este o rețetă tradițională din Armenia.",
       en: "Khorovats is a traditional recipe from Armenia.",
       es: "Khorovats es una receta tradicional de Armenia.",
-      fr: "Khorovats est une recette traditionnelle de Arménie.",
+      fr: "Khorovats est une recette traditionnelle d'Arménie.",
       de: "Khorovats ist ein traditionelles Rezept aus Armenien.",
-      pt: "Khorovats é uma receita tradicional de Armênia.",
-      ru: "Хоровац — традиционный рецепт из Армения.",
+      pt: "Khorovats é uma receita tradicional da Armênia.",
+      ru: "Хоровац — традиционный рецепт из Армении.",
       ar: "خوروفاتس هي وصفة تقليدية من أرمينيا.",
       zh: "亚美尼亚烤肉 是来自亚美尼亚的传统食谱。",
       ja: "ホロヴァッツ はアルメニアの伝統的なレシピです。",
-      tr: "Khorovats Armenia kökenli geleneksel bir tariftir.",
-      it: "Khorovats è una risotta tradizionale di Armenia.",
-      ko: "Khorovats는(은) Armenia의 전통 요리입니다."
+      tr: "Khorovats Ermenistan kökenli geleneksel bir tariftir.",
+      it: "Khorovats è una ricetta tradizionale dell'Armenia.",
+      ko: "호로바츠는 아르메니아의 전통 요리입니다."
     }
   },
   {
