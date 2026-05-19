@@ -15309,6 +15309,9 @@ export const recipes = [
   },
   {
     id: 167,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Maroc",
       en: "Morocco",
@@ -15335,9 +15338,9 @@ export const recipes = [
       ar: "طاجين لحم الضأن",
       zh: "羊肉塔吉锅",
       ja: "ラムのタジン",
-      tr: "Lamb Tagine",
-      it: "Lamb Tagine",
-      ko: "Lamb Tagine"
+      tr: "Kuzu Tajini",
+      it: "Tajine di Agnello",
+      ko: "양고기 타진"
     },
     category: {
       ro: "Cină",
@@ -15365,7 +15368,7 @@ export const recipes = [
       ar: ["لحم ضأن", "بصل", "ثوم", "طماطم", "مشمش مجفف", "لوز", "بهارات مغربية", "زيت زيتون"],
       zh: ["羊肉", "洋葱", "大蒜", "西红柿", "杏干", "杏仁", "摩洛哥香料", "橄榄油"],
       ja: ["ラム肉", "玉ねぎ", "ニンニク", "トマト", "ドライアプリコット", "アーモンド", "モロッコスパイス", "オリーブオイル"],
-      tr: ["kuzu", "soğbir", "sarımsak", "domates", "kuru kayısı", "badem", "fas baharatları", "zeytinyağı"],
+      tr: ["kuzu", "soğan", "sarımsak", "domates", "kuru kayısı", "badem", "fas baharatları", "zeytinyağı"],
       it: ["agnello", "cipolla", "aglio", "pomodori", "albicocche secche", "mandorle", "spezie marocchine", "olio d'oliva"],
       ko: ["양고기", "양파", "마늘", "토마토", "말린 살구", "아몬드", "모로코 향신료", "올리브오일"]
     },
@@ -15380,24 +15383,24 @@ export const recipes = [
       ar: "اطبخ لحم الضأن مع الخضار والفواكه المجففة والتوابل في طاجين مع قليل من الماء حتى ينضج.",
       zh: "羊肉与蔬菜、干果和香料，加少许水在塔吉锅中慢炖至酥烂。",
       ja: "ラム肉・野菜・ドライフルーツ・スパイスをタジン鍋で少量の水とともにじっくり煮込む。",
-      tr: "kısık ateşte yavaşça pişirin kuzu ile sebzeler, kuru meyveler, ve baharatlar tajin tenceresi ile biraz su yumuşayana kadar.",
-      it: "cuoci lentamente agnello con verdure, frutta secca, e spezie tajine con un po' acqua finché sarà tenero.",
-      ko: "약한 불로 천천히 조리합니다 양고기와 채소, 말린 과일, 그리고 향신료 에서 a 타진 냄비와 약간 물 부드러워질 때까지하세요."
+      tr: "Kuzu eti, sebzeler, kuru meyveler ve baharatları tajin tenceresine az suyla ekleyip kısık ateşte et yumuşayana kadar yavaşça pişirin.",
+      it: "Cuocete lentamente l'agnello con verdure, frutta secca e spezie nel tajine con un po' d'acqua finché diventa tenero.",
+      ko: "양고기와 채소, 말린 과일, 향신료를 타진 냄비에 물을 조금 넣고 약한 불에서 고기가 부드러워질 때까지 천천히 조리합니다."
     },
     originText: {
       ro: "Tagine cu miel este o rețetă tradițională din Maroc.",
       en: "Lamb Tagine is a traditional recipe from Morocco.",
       es: "Tajín de cordero es una receta tradicional de Marruecos.",
-      fr: "Tajine d'agneau est une recette traditionnelle de Maroc.",
+      fr: "Tajine d'agneau est une recette traditionnelle du Maroc.",
       de: "Lamm-Tagine ist ein traditionelles Rezept aus Marokko.",
-      pt: "Tagine de cordeiro é uma receita tradicional de Marrocos.",
+      pt: "Tagine de cordeiro é uma receita tradicional do Marrocos.",
       ru: "Тажин с ягненком — традиционный рецепт из Марокко.",
       ar: "طاجين لحم الضأن هي وصفة تقليدية من المغرب.",
       zh: "羊肉塔吉锅 是来自摩洛哥的传统食谱。",
       ja: "ラムのタジン はモロッコの伝統的なレシピです。",
-      tr: "kuzu tajin Fas kökenli geleneksel bir tariftir.",
-      it: "agnello tajine è una risotta tradizionale di Marocco.",
-      ko: "양고기 타진는(은) 모로코의 전통 요리입니다."
+      tr: "Kuzu Tajini, Fas kökenli geleneksel bir tariftir.",
+      it: "Tajine di Agnello è una ricetta tradizionale del Marocco.",
+      ko: "양고기 타진은 모로코의 전통 요리입니다."
     }
   },
   {
