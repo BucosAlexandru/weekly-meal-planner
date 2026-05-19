@@ -149,6 +149,23 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 140 | Chicken Fricassée | ✅ | ✅ | `16006f6c` | 3 struct, add missing pt locale (all blocks), name.ko (치킨 프리카세), ingredients tr/it/ko, howIsMade tr/it stubs + pt, originText.fr/pt/ru/tr/it/ko |
 | 141 | Machboos | ✅ | ✅ | `aa13cbcf` | 3 struct, origin tr/ko, name.ko (마흐부스), ingredients.tr (soğan), howIsMade.tr/it/ko stubs, originText.fr/pt/ru/tr/it/ko |
 | 142 | Moambe Chicken | ✅ | ✅ | `ab64de86` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it stubs + ko form, originText fr/de/pt/ru/tr/it/ko |
+| 143 | Cassoulet | ✅ | ✅ | `30ef7ecc` | 3 struct, name.ko (카술레), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 144 | Pasticada | ✅ | ✅ | `cb093913` | 3 struct, origin tr/it/ko, name.ko (파슈티차다), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 145 | Sheftalia | ✅ | ✅ | `d951741f` | 3 struct, origin tr/ko, name.ko (셰프탈리아), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 146 | Cevapi | ✅ | ✅ | `13551f6a` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 147 | Fufu | ✅ | ✅ | `0ff8774e` | 3 struct, origin.ko (가나), name.ko (푸푸), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 148 | Khinkali | ✅ | ✅ | `0d7fd5aa` | 3 struct, origin tr/ko, name.ko (힌칼리), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 149 | Pozole | ✅ | ✅ | `29785503` | 3 struct, name.ko (포솔레), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 150 | Pepian | ✅ | ✅ | `31468100` | 3 struct, origin.ko (과테말라), name.ko (페피안), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 151 | Okroshka | ✅ | ✅ | `1661c74e` | 3 struct, name.ko (오크로시카), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/it/ko |
+| 152 | Plov | ✅ | ✅ | `57d90299` | 3 struct, add missing pt locale (all blocks), origin tr/ko, name.ko (플로프), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko |
+| 153 | Potica | ✅ | ✅ | `2f68d90d` | 3 struct, origin tr/ko, name.ko (포티차), howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 154 | Egusi soup | ✅ | ✅ | `48369de9` | 3 struct, origin tr/ko, name it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 155 | Kotlet schabowy | ✅ | ✅ | `0a8b637e` | 3 struct, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 156 | Kimbap | ✅ | ✅ | `102177cd` | name.ko (김밥), originText pt/ru/it/ko; struct already present |
+| 157 | Pastel de Choclo | ✅ | ✅ | `7d501223` | 3 struct, origin tr/it/ko, name.ko (파스텔 데 초클로), ingredients tr/it, howIsMade tr/it/ko stubs, originText fr/pt/tr/it/ko |
+| 158 | Pljeskavica | ✅ | ✅ | `c24d3f48` | 3 struct, origin tr/ko, name.ko (플레스카비차), ingredients tr/it/ko, howIsMade tr/it/ko stubs, originText pt/ru/tr/it/ko |
+| 159 | Poffertjes | ✅ | ✅ | `9d08033d` | 3 struct, name.ko (포퍼르체스), howIsMade tr/it/ko stubs, originText fr/de/pt/ru/it/ko |
 
 ---
 
