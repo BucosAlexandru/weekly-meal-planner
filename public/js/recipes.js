@@ -10442,7 +10442,7 @@ export const recipes = [
       ja: "ミラネサ",
       tr: "Milanesa",
       it: "Milanesa",
-      ko: "Milanesa"
+      ko: "밀라네사"
     },
     category: {
       ro: "Cină",
@@ -10459,6 +10459,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de vită", "ouă", "pesmet", "făină", "ulei", "condimente", "lămâie"],
       en: ["beef", "eggs", "breadcrumbs", "flour", "oil", "spices", "lemon"],
@@ -10470,9 +10473,9 @@ export const recipes = [
       ar: ["لحم بقري", "بيض", "فتات الخبز", "دقيق", "زيت", "توابل", "ليمون"],
       zh: ["牛肉", "鸡蛋", "面包屑", "面粉", "油", "香料", "柠檬"],
       ja: ["牛肉", "卵", "パン粉", "小麦粉", "油", "スパイス", "レモン"],
-      tr: ["dana eti", "yumurta", "ekmekcrumbs", "un", "yağ", "baharatlar", "limon"],
-      it: ["manzo", "uova", "panecrumbs", "farina", "olio", "spezie", "limone"],
-      ko: ["소고기", "계란", "빵빵가루", "밀가루", "기름", "향신료", "레몬"]
+      tr: ["dana eti", "yumurta", "galeta unu", "un", "yağ", "baharatlar", "limon"],
+      it: ["manzo", "uova", "pangrattato", "farina", "olio", "spezie", "limone"],
+      ko: ["소고기", "계란", "빵가루", "밀가루", "기름", "향신료", "레몬"]
     },
     howIsMade: {
       ro: "Bate bucăți subțiri de carne, trece-le prin făină, ou și pesmet, apoi prăjește-le până devin aurii.",
@@ -10485,24 +10488,24 @@ export const recipes = [
       ar: "افرد شرائح اللحم وغطها بالدقيق ثم البيض ثم البقسماط واقلها حتى تحمر.",
       zh: "将肉片拍薄，依次裹上面粉、蛋液和面包糠，煎至金黄。",
       ja: "薄切り肉を叩き、粉・卵・パン粉をまぶしてきつね色になるまで揚げる。",
-      tr: "eti ince dilimler halinde dövün, una bulayın in un, yumurta, ve galeta unu, sonra Kızartın altın rengi.",
-      it: "batti sottile fette  carne, infarina in farina, uovo, e panecrumbs, poi Friggi dorato.",
-      ko: "두드립니다 얇게 조각 의 고기, 가루를 묻힙니다 에서 밀가루, 계란, 그리고 빵빵가루, 그다음 볶거나 튀기고 노릇하게하세요."
+      tr: "Eti ince dilimler halinde dövün, sırasıyla una, yumurtaya ve galeta ununa bulayın, ardından altın rengi alana kadar kızartın.",
+      it: "Battere le fette di carne in modo che siano sottili, passarle nella farina, poi nell'uovo e infine nel pangrattato, friggerle fino a doratura.",
+      ko: "고기를 얇게 두드린 후 밀가루, 달걀, 빵가루 순서로 입혀 황금빛이 될 때까지 튀깁니다."
     },
     originText: {
       ro: "Milanesa este o rețetă tradițională din Argentina.",
       en: "Milanesa is a traditional recipe from Argentina.",
       es: "Milanesa es una receta tradicional de Argentina.",
-      fr: "Milanesa est une recette traditionnelle de Argentine.",
+      fr: "Milanesa est une recette traditionnelle d'Argentine.",
       de: "Milanesa ist ein traditionelles Rezept aus Argentinien.",
-      pt: "Milanesa é uma receita tradicional de Argentina.",
-      ru: "Миланеса — традиционный рецепт из Аргентина.",
+      pt: "Milanesa é uma receita tradicional da Argentina.",
+      ru: "Миланеса — традиционный рецепт из Аргентины.",
       ar: "ميلانيسا هي وصفة تقليدية من الأرجنتين.",
       zh: "阿根廷炸牛排 是来自阿根廷的传统食谱。",
       ja: "ミラネサ はアルゼンチンの伝統的なレシピです。",
       tr: "Milanesa Arjantin kökenli geleneksel bir tariftir.",
-      it: "Milanesa è una risotta tradizionale di Argentina.",
-      ko: "Milanesa는(은) 아르헨티나의 전통 요리입니다."
+      it: "Milanesa è una ricetta tradizionale dell'Argentina.",
+      ko: "밀라네사는 아르헨티나의 전통 요리입니다."
     }
   },
   {
