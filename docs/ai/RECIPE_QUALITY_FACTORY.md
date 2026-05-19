@@ -131,6 +131,24 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | — | (id 122 absent) | — | — | — | No recipe with id 122 in file |
 | 123 | Pasta e fagioli | ✅ | ✅ | `a1714809` | 3 struct, name.tr/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
 | 124 | Kottu | ✅ | ✅ | `643ae659` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.ru/it/ko |
+| 125 | Piragi | ✅ | ✅ | `36fac702` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 126 | Bánh xèo | ✅ | ✅ | `8d5a8a17` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 127 | Causa Limeña | ✅ | ✅ | `d6d38bc8` | 3 struct, name/category all locales, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| — | (id 128 absent) | — | — | — | No recipe with id 128 in file |
+| 129 | Beshbarmak | ✅ | ✅ | `89d1d8a0` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 130 | Coconut Rice | ✅ | ✅ | `14fb5723` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 131 | Nasi Lemak | ✅ | ✅ | `a31b5627` | 3 struct, origin.ko, name.ko, ingredients.tr/it/ko (garbled fixes), howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 132 | Rösti | ✅ | ✅ | `d1ef86d6` | 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko; de: aus der Schweiz |
+| 133 | Fasole cu cârnați | ✅ | ✅ | `dca01027` | 3 struct, add missing pt locale (all blocks), name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText all |
+| 134 | Chicken Paprikash | ✅ | ✅ | `29a1f54e` | 3 struct, origin tr/it/ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/ru/tr/it/ko |
+| 135 | Pasta alla Norma | ✅ | ✅ | `0b212474` | name tr/ko, ingredients tr/it/ko (eggplant fix), howIsMade tr/it/ko stubs, originText fr/pt/ru/tr/it/ko; struct fields already present |
+| — | (id 136 absent) | — | — | — | No recipe with id 136 in file |
+| 137 | Ichlekli | ✅ | ✅ | `d8a9aad8` | 3 struct, origin tr/ko, name.ko, ingredients.tr (soğan), howIsMade.tr/it/ko stubs, originText.fr/pt/ru/tr/it/ko |
+| 138 | Chicken Kiev | ✅ | ✅ | `4df6f1d6` | 3 struct, name.ko (치킨 키예프), ingredients tr/it/ko, howIsMade.tr/it/ko stubs, originText fr/de/pt/ru/tr/it/ko |
+| 139 | Cepelinai | ✅ | ✅ | `b669095c` | 3 struct, origin tr/it/ko, name.ko (체펠리나이), ingredients tr/it/ko, howIsMade tr/it stubs + ko form, originText.fr/pt/ru/tr/it/ko |
+| 140 | Chicken Fricassée | ✅ | ✅ | `16006f6c` | 3 struct, add missing pt locale (all blocks), name.ko (치킨 프리카세), ingredients tr/it/ko, howIsMade tr/it stubs + pt, originText.fr/pt/ru/tr/it/ko |
+| 141 | Machboos | ✅ | ✅ | `aa13cbcf` | 3 struct, origin tr/ko, name.ko (마흐부스), ingredients.tr (soğan), howIsMade.tr/it/ko stubs, originText.fr/pt/ru/tr/it/ko |
+| 142 | Moambe Chicken | ✅ | ✅ | `ab64de86` | 3 struct, origin tr/it/ko, name tr/it/ko, ingredients tr/it/ko, howIsMade tr/it stubs + ko form, originText fr/de/pt/ru/tr/it/ko |
 
 ---
 
