@@ -5046,6 +5046,9 @@ export const recipes = [
   },
   {
     id: 54,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Belgia",
       en: "Belgium",
@@ -5074,7 +5077,7 @@ export const recipes = [
       ja: "ムール貝とフライドポテト",
       tr: "Moules-frites",
       it: "Moules-frites",
-      ko: "Moules-frites"
+      ko: "홍합 프리트"
     },
     category: {
       ro: "Cină",
@@ -5127,14 +5130,14 @@ export const recipes = [
       es: "Mejillones con papas fritas es una receta tradicional de Bélgica.",
       fr: "Moules-frites est une recette traditionnelle de Belgique.",
       de: "Moules-frites ist ein traditionelles Rezept aus Belgien.",
-      pt: "Mexilhões com batatas fritas é uma receita tradicional de Bélgica.",
-      ru: "Мидии с картошкой фри — традиционный рецепт из Бельгия.",
+      pt: "Mexilhões com batatas fritas é uma receita tradicional da Bélgica.",
+      ru: "Мидии с картошкой фри — традиционный рецепт из Бельгии.",
       ar: "بلح البحر مع البطاطس المقلية هي وصفة تقليدية من بلجيكا.",
       zh: "贻贝薯条 是来自比利时的传统食谱。",
       ja: "ムール貝とフライドポテト はベルギーの伝統的なレシピです。",
-      tr: "Moules-patates kızartması Belçika kökenli geleneksel bir tariftir.",
-      it: "Moules-patatine fritte è una risotta tradizionale di Belgio.",
-      ko: "Moules-감자튀김는(은) 벨기에의 전통 요리입니다."
+      tr: "Moules-frites Belçika kökenli geleneksel bir tariftir.",
+      it: "Moules-frites è una ricetta tradizionale del Belgio.",
+      ko: "홍합 프리트는 벨기에의 전통 요리입니다."
     }
   },
   {
