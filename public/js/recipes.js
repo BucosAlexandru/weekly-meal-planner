@@ -13691,7 +13691,7 @@ export const recipes = [
       ja: "グアテマラ",
       tr: "Guatemala",
       it: "Guatemala",
-      ko: "Guatemala"
+      ko: "과테말라"
     },
     name: {
       ro: "Pepian",
@@ -13706,7 +13706,7 @@ export const recipes = [
       ja: "ペピアン",
       tr: "Pepian",
       it: "Pepian",
-      ko: "Pepian"
+      ko: "페피안"
     },
     category: {
       ro: "Cină",
@@ -13723,6 +13723,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de pui", "roșii", "ardei", "dovleac", "cartofi", "semințe de susan", "semințe de dovleac", "condimente"],
       en: ["chicken", "tomatoes", "peppers", "squash", "potatoes", "sesame seeds", "pumpkin seeds", "spices"],
@@ -13734,9 +13737,9 @@ export const recipes = [
       ar: ["دجاج", "طماطم", "فلفل", "قرع", "بطاطس", "سمسم", "بذور اليقطين", "توابل"],
       zh: ["鸡肉", "番茄", "辣椒", "南瓜", "土豆", "芝麻", "南瓜籽", "香料"],
       ja: ["鶏肉", "トマト", "ピーマン", "カボチャ", "ジャガイモ", "ゴマ", "カボチャの種", "スパイス"],
-      tr: ["tavuk", "domates", "bibers", "kabak", "patates", "susam tohum", "kabak tohum", "baharatlar"],
-      it: ["pollo", "pomodori", "peperones", "zucca", "patate", "sesamo semi", "zucca semi", "spezie"],
-      ko: ["닭고기", "토마토", "고추s", "호박", "감자", "참깨 씨앗", "호박 씨앗", "향신료"]
+      tr: ["tavuk", "domates", "biber", "kabak", "patates", "susam tohumları", "kabak tohumları", "baharatlar"],
+      it: ["pollo", "pomodori", "peperoni", "zucca", "patate", "semi di sesamo", "semi di zucca", "spezie"],
+      ko: ["닭고기", "토마토", "고추", "호박", "감자", "참깨 씨앗", "호박 씨앗", "향신료"]
     },
     howIsMade: {
       ro: "Gătește carnea cu legume, semințe prăjite, ardei, roșii și condimente până se formează un sos gros. Servește cu orez.",
@@ -13749,24 +13752,24 @@ export const recipes = [
       ar: "اطبخ اللحم مع الخضار والبذور المحمصة والفلفل والطماطم والتوابل حتى يصبح الصوص كثيفاً. قدّمه مع الأرز.",
       zh: "肉和蔬菜与烤熟的种子、辣椒、西红柿和香料炖煮至酱汁浓稠。配米饭食用。",
       ja: "肉と野菜・炒った種・唐辛子・トマト・スパイスを煮て濃厚なソースを作り、ご飯と一緒に提供。",
-      tr: "Pişirin et ile sebzeler, kavrulmuş tohum, biber, domates, ve baharatlar a koyu sos oluşturur. servis edin ile pirinç.",
-      it: "Cuoci carne con verdure, tostato semi, peperones, pomodori, e spezie a denso salsa forma. servi con riso.",
-      ko: "볶은 씨앗, 피망, 토마토, 향신료와 함께 고기를 조리해주세요. 진한 소스가 형성될 때까지 끓이고 밥과 함께 제공해주세요."
+      tr: "Eti sebzeler, kavrulmuş tohumlar, biber, domates ve baharatlarla pişirin. Koyu bir sos oluşuncaya kadar kaynatın ve pilavla servis yapın.",
+      it: "Cuocete la carne con le verdure, i semi tostati, i peperoni, i pomodori e le spezie fino a formare una salsa densa. Servite con riso.",
+      ko: "볶은 씨앗, 피망, 토마토, 향신료와 함께 고기를 끓입니다. 진한 소스가 형성될 때까지 조리하고 밥과 함께 제공합니다."
     },
     originText: {
       ro: "Pepian este o rețetă tradițională din Guatemala.",
       en: "Pepian is a traditional recipe from Guatemala.",
       es: "Pepian es una receta tradicional de Guatemala.",
-      fr: "Pepian est une recette traditionnelle de Guatemala.",
+      fr: "Pepian est une recette traditionnelle du Guatemala.",
       de: "Pepian ist ein traditionelles Rezept aus Guatemala.",
-      pt: "Pepian é uma receita tradicional de Guatemala.",
-      ru: "Пепиан — традиционный рецепт из Гватемала.",
+      pt: "Pepian é uma receita tradicional da Guatemala.",
+      ru: "Пепиан — традиционный рецепт из Гватемалы.",
       ar: "بيبيان هي وصفة تقليدية من غواتيمالا.",
       zh: "瓜地马拉炖肉 是来自危地马拉的传统食谱。",
       ja: "ペピアン はグアテマラの伝統的なレシピです。",
       tr: "Pepian Guatemala kökenli geleneksel bir tariftir.",
-      it: "Pepian è una risotta tradizionale di Guatemala.",
-      ko: "Pepian는(은) Guatemala의 전통 요리입니다."
+      it: "Pepian è una ricetta tradizionale del Guatemala.",
+      ko: "페피안은 과테말라의 전통 요리입니다."
     }
   },
   {
