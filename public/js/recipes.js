@@ -6390,6 +6390,9 @@ export const recipes = [
   },
   {
     id: 68,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Indonezia",
       en: "Indonesia",
@@ -6418,7 +6421,7 @@ export const recipes = [
       ja: "サテ",
       tr: "Satay",
       it: "Satay",
-      ko: "Satay"
+      ko: "사테"
     },
     category: {
       ro: "Gustare",
@@ -6469,16 +6472,16 @@ export const recipes = [
       ro: "Satay este o rețetă tradițională din Indonezia.",
       en: "Satay is a traditional recipe from Indonesia.",
       es: "Satay es una receta tradicional de Indonesia.",
-      fr: "Satay est une recette traditionnelle de Indonésie.",
+      fr: "Satay est une recette traditionnelle d'Indonésie.",
       de: "Satay ist ein traditionelles Rezept aus Indonesien.",
-      pt: "Satay é uma receita tradicional de Indonésia.",
-      ru: "Сатай — традиционный рецепт из Индонезия.",
+      pt: "Satay é uma receita tradicional da Indonésia.",
+      ru: "Сатай — традиционный рецепт из Индонезии.",
       ar: "ساتيه هي وصفة تقليدية من إندونيسيا.",
       zh: "沙嗲串 是来自印度尼西亚的传统食谱。",
       ja: "サテ はインドネシアの伝統的なレシピです。",
       tr: "Satay Endonezya kökenli geleneksel bir tariftir.",
-      it: "Satay è una risotta tradizionale di Indonesia.",
-      ko: "Satay는(은) 인도네시아의 전통 요리입니다."
+      it: "Satay è una ricetta tradizionale dell'Indonesia.",
+      ko: "사테는 인도네시아의 전통 요리입니다."
     }
   },
   {
