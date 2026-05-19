@@ -11594,7 +11594,7 @@ export const recipes = [
       ja: "バインセオ",
       tr: "Banh Xeo",
       it: "Banh Xeo",
-      ko: "Banh Xeo"
+      ko: "반쎄오"
     },
     category: {
       ro: "Mic dejun",
@@ -11611,6 +11611,9 @@ export const recipes = [
       it: "Colazione",
       ko: "아침"
     },
+    servings: 2,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["făină de orez", "lapte de cocos", "creveți", "carne de porc", "ceapă verde", "germeni de fasole"],
       en: ["rice flour", "coconut milk", "shrimp", "pork", "green onion", "bean sprouts"],
@@ -11622,9 +11625,9 @@ export const recipes = [
       ar: ["دقيق الأرز", "حليب جوز الهند", "جمبري", "لحم خنزير", "بصل أخضر", "براعم فول الصويا"],
       zh: ["米粉", "椰奶", "虾", "猪肉", "葱", "豆芽"],
       ja: ["米粉", "ココナッツミルク", "エビ", "豚肉", "青ねぎ", "もやし"],
-      tr: ["pirinç un", "hindistancevizi süt", "karides", "domuz eti", "yeşil soğbir", "fasulye filiz"],
-      it: ["riso farina", "cocco latte", "gamberetti", "maiale", "verde cipolla", "fagiolo germogli"],
-      ko: ["쌀 밀가루", "코코넛 우유", "새우", "돼지고기", "초록 양파", "콩 새싹"]
+      tr: ["pirinç unu", "hindistan cevizi sütü", "karides", "domuz eti", "yeşil soğan", "fasulye filizi"],
+      it: ["farina di riso", "latte di cocco", "gamberetti", "maiale", "cipolla verde", "germogli di soia"],
+      ko: ["쌀가루", "코코넛 우유", "새우", "돼지고기", "파", "콩나물"]
     },
     howIsMade: {
       ro: "Prepară un aluat din făină de orez, turmeric și apă, toarnă-l subțire în tigaie, adaugă carne, creveți și legume, apoi prăjește până devine crocant.",
@@ -11637,24 +11640,24 @@ export const recipes = [
       ar: "حضّر عجين الأرز والكركم والماء، اسكبه رقيقًا في المقلاة، أضف اللحم والجمبري والخضار، واقليه حتى يصبح مقرمشًا.",
       zh: "用米粉、姜黄和水调糊，薄薄倒入锅中，加肉、虾和蔬菜，煎至酥脆。",
       ja: "米粉・ターメリック・水で生地を作り、薄くフライパンに広げて肉・エビ・野菜をのせ、カリカリに焼く。",
-      tr: "yapın a hamur -den pirinç un, zerdeçal, ve su, dökün ince ince içine a tava, Ekleyin et, karides, ve sebzeler, sonra Kızartın çıtır.",
-      it: "fai a pastella da riso farina, curcuma, e acqua, versa sottilmente dentro a padella, Aggiungi carne, gamberetti, e verdure, poi Friggi croccante.",
-      ko: "만듭니다 a 반죽 에서 쌀 밀가루, 강황, 그리고 물, 붓습니다 얇게 안에 a 팬, 넣고 고기, 새우, 그리고 채소, 그다음 볶거나 튀기고 바삭한하세요."
+      tr: "Pirinç unu, zerdeçal ve suyu karıştırarak hamur yapın, ince ince tavaya dökün, et, karides ve sebzeleri ekleyin, ardından çıtır olana kadar kızartın.",
+      it: "Preparate una pastella con farina di riso, curcuma e acqua, versatela sottile in padella, aggiungete carne, gamberetti e verdure, poi friggete fino a renderla croccante.",
+      ko: "쌀가루, 강황, 물로 반죽을 만들어 팬에 얇게 붓고 고기, 새우, 채소를 올린 후 바삭하게 구워 완성합니다."
     },
     originText: {
       ro: "Bánh xèo este o rețetă tradițională din Vietnam.",
       en: "Banh Xeo is a traditional recipe from Vietnam.",
       es: "Banh Xeo es una receta tradicional de Vietnam.",
-      fr: "Banh Xeo est une recette traditionnelle de Viêt Nam.",
+      fr: "Banh Xeo est une recette traditionnelle du Viêt Nam.",
       de: "Banh Xeo ist ein traditionelles Rezept aus Vietnam.",
-      pt: "Banh Xeo é uma receita tradicional de Vietnã.",
-      ru: "Бань сео — традиционный рецепт из Вьетнам.",
+      pt: "Banh Xeo é uma receita tradicional do Vietnã.",
+      ru: "Бань сео — традиционный рецепт из Вьетнама.",
       ar: "بان سيو هي وصفة تقليدية من فيتنام.",
       zh: "越南煎饼 是来自越南的传统食谱。",
       ja: "バインセオ はベトナムの伝統的なレシピです。",
       tr: "Banh Xeo Vietnam kökenli geleneksel bir tariftir.",
-      it: "Banh Xeo è una risotta tradizionale di Vietnam.",
-      ko: "Banh Xeo는(은) 베트남의 전통 요리입니다."
+      it: "Banh Xeo è una ricetta tradizionale del Vietnam.",
+      ko: "반쎄오는 베트남의 전통 요리입니다."
     }
   },
   {
