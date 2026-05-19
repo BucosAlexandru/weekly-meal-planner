@@ -7730,6 +7730,9 @@ export const recipes = [
   },
   {
     id: 83,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Siria",
       en: "Syria",
@@ -7741,9 +7744,9 @@ export const recipes = [
       ar: "سوريا",
       zh: "叙利亚",
       ja: "シリア",
-      tr: "Syria",
-      it: "Syria",
-      ko: "Syria"
+      tr: "Suriye",
+      it: "Siria",
+      ko: "시리아"
     },
     name: {
       ro: "Fatteh",
@@ -7758,7 +7761,7 @@ export const recipes = [
       ja: "ファッテ",
       tr: "Fatteh",
       it: "Fatteh",
-      ko: "Fatteh"
+      ko: "파테"
     },
     category: {
       ro: "Mic dejun",
@@ -7811,14 +7814,14 @@ export const recipes = [
       es: "Fatteh es una receta tradicional de Siria.",
       fr: "Fatteh est une recette traditionnelle de Syrie.",
       de: "Fatteh ist ein traditionelles Rezept aus Syrien.",
-      pt: "Fatteh é uma receita tradicional de Síria.",
-      ru: "Фатте — традиционный рецепт из Сирия.",
+      pt: "Fatteh é uma receita tradicional da Síria.",
+      ru: "Фатте — традиционный рецепт из Сирии.",
       ar: "فتة هي وصفة تقليدية من سوريا.",
       zh: "法塔 是来自叙利亚的传统食谱。",
       ja: "ファッテ はシリアの伝統的なレシピです。",
-      tr: "Fatteh Syria kökenli geleneksel bir tariftir.",
-      it: "Fatteh è una risotta tradizionale di Syria.",
-      ko: "Fatteh는(은) Syria의 전통 요리입니다."
+      tr: "Fatteh Suriye kökenli geleneksel bir tariftir.",
+      it: "Fatteh è una ricetta tradizionale della Siria.",
+      ko: "파테는 시리아의 전통 요리입니다."
     }
   },
   {

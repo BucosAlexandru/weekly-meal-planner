@@ -82,6 +82,15 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | — | (id 71 absent) | — | — | — | No recipe with id 71 in file |
 | 72 | Amok | ✅ | ✅ | `1adeb0de` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
 | 73 | Momo | ✅ | ✅ | `f63ff84f` | 8 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 74 | Encebollado | ✅ | ✅ | `831fb0e0` | 10 fixes: 3 struct fields, origin tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 75 | Harira | ✅ | ✅ | `226a3dbe` | 6 fixes: 3 struct fields, name.ko, originText.fr/pt/it/ko; NOTE: stub recipe |
+| 76 | Lobio | ✅ | ✅ | `e7265c7a` | 9 fixes: 3 struct fields, origin tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 77 | Chakhchoukha | ✅ | ✅ | `d7dac09d` | 12 fixes: 3 struct fields, origin (add pt)/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe; CRITICAL: added missing origin.pt |
+| 78 | Rendang | ✅ | ✅ | `21801e1c` | 7 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 79 | Gravlax | ✅ | ✅ | `799bd94b` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
+| 80 | Stoofvlees | ✅ | ✅ | `07267d80` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
+| 81 | Zeamă | ✅ | ✅ | `29c1a485` | 7 fixes: 3 struct fields, origin.ko, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
+| 82 | Meat Pie | ✅ | ✅ | `c57df593` | 8 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
 
 ---
 
