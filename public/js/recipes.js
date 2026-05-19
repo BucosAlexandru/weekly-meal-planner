@@ -10154,7 +10154,7 @@ export const recipes = [
       ja: "チリクラブ",
       tr: "Chili Crab",
       it: "Chili Crab",
-      ko: "Chili Crab"
+      ko: "칠리 크랩"
     },
     category: {
       ro: "Cină",
@@ -10171,6 +10171,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["crab", "sos de roșii", "sos de chili", "usturoi", "ghimbir", "ceapă verde", "ouă"],
       en: ["crab", "tomato sauce", "chili sauce", "garlic", "ginger", "green onion", "eggs"],
@@ -10182,9 +10185,9 @@ export const recipes = [
       ar: ["سلطعون", "صلصة الطماطم", "صلصة الفلفل الحار", "ثوم", "زنجبيل", "بصل أخضر", "بيض"],
       zh: ["螃蟹", "番茄酱", "辣椒酱", "大蒜", "生姜", "葱", "鸡蛋"],
       ja: ["カニ", "トマトソース", "チリソース", "ニンニク", "ショウガ", "青ねぎ", "卵"],
-      tr: ["yengeç", "domates sos", "acı biber sos", "sarımsak", "zencefil", "yeşil soğbir", "yumurta"],
-      it: ["granchio", "pomodoro salsa", "peperoncino salsa", "aglio", "zenzero", "verde cipolla", "uova"],
-      ko: ["게", "토마토 소스", "고추 소스", "마늘", "생강", "초록 양파", "계란"]
+      tr: ["yengeç", "domates sosu", "acı biber sosu", "sarımsak", "zencefil", "yeşil soğan", "yumurta"],
+      it: ["granchio", "salsa di pomodoro", "salsa di peperoncino", "aglio", "zenzero", "cipolla verde", "uova"],
+      ko: ["게", "토마토 소스", "고추 소스", "마늘", "생강", "파", "계란"]
     },
     howIsMade: {
       ro: "Gătește crabul în sos de roșii picant cu usturoi, ghimbir și ardei iute, până carnea devine fragedă și sosul se îngroașă.",
@@ -10197,9 +10200,9 @@ export const recipes = [
       ar: "اطبخ السلطعون في صوص الطماطم الحار مع الثوم والزنجبيل والفلفل الحار حتى ينضج اللحم ويتكاثف الصوص.",
       zh: "螃蟹与番茄辣酱、蒜、姜、辣椒一起烹煮，至肉质变嫩、酱汁浓稠。",
       ja: "カニをトマトのピリ辛ソース・ニンニク・生姜・唐辛子と一緒に煮込み、身が柔らかくなりソースが煮詰まるまで調理。",
-      tr: "Pişirin yengeç in acı domates sos ile sarımsak, zencefil, ve acı biber et yumuşak ve sos koyulaşır.",
-      it: "Cuoci granchio in piccante pomodoro salsa con aglio, zenzero, e peperoncino carne  tenero e salsa si addensa.",
-      ko: "조리하고 게 에서 매운 토마토 소스와 마늘, 생강, 그리고 고추 고기 입니다 부드럽게그리고 소스 걸쭉해집니다하세요."
+      tr: "Yengeci sarımsak, zencefil ve acı biberle birlikte baharatlı domates sosunda pişirin. Et yumuşayana ve sos koyulaşana kadar devam edin.",
+      it: "Cuocere il granchio in una salsa di pomodoro piccante con aglio, zenzero e peperoncino fino a quando la carne è tenera e la salsa si addensa.",
+      ko: "게를 마늘, 생강, 고추와 함께 매운 토마토 소스에 넣고 고기가 부드러워지고 소스가 걸쭉해질 때까지 조리합니다."
     },
     originText: {
       ro: "Chili Crab este o rețetă tradițională din Singapore.",
@@ -10208,13 +10211,13 @@ export const recipes = [
       fr: "Crabe au chili est une recette traditionnelle de Singapour.",
       de: "Chilikrabbe ist ein traditionelles Rezept aus Singapur.",
       pt: "Caranguejo com chili é uma receita tradicional de Singapura.",
-      ru: "Краб чили — традиционный рецепт из Сингапур.",
+      ru: "Краб чили — традиционный рецепт из Сингапура.",
       ar: "سلطعون الفلفل الحار هي وصفة تقليدية من سنغافورة.",
       zh: "辣椒蟹 是来自新加坡的传统食谱。",
       ja: "チリクラブ はシンガポールの伝統的なレシピです。",
-      tr: "acı biber yengeç Singapur kökenli geleneksel bir tariftir.",
-      it: "peperoncino granchio è una risotta tradizionale di Singapore.",
-      ko: "고추 게는(은) 싱가포르의 전통 요리입니다."
+      tr: "Chili Crab Singapur kökenli geleneksel bir tariftir.",
+      it: "Chili Crab è una ricetta tradizionale di Singapore.",
+      ko: "칠리 크랩은 싱가포르의 전통 요리입니다."
     }
   },
   {
