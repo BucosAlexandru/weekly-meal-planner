@@ -9657,9 +9657,9 @@ export const recipes = [
       ar: "جمهورية الدومينيكان",
       zh: "多米尼加",
       ja: "ドミニカ共和国",
-      tr: "Dominican Republic",
-      it: "Dominican Republic",
-      ko: "Dominican Republic"
+      tr: "Dominik Cumhuriyeti",
+      it: "Repubblica Dominicana",
+      ko: "도미니카 공화국"
     },
     name: {
       ro: "La Bandera",
@@ -9674,7 +9674,7 @@ export const recipes = [
       ja: "ラ・バンデラ",
       tr: "La Bandera",
       it: "La Bandera",
-      ko: "La Bandera"
+      ko: "라 반데라"
     },
     category: {
       ro: "Prânz",
@@ -9691,6 +9691,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     ingredients: {
       ro: ["orez", "fasole", "carne de vită", "banane plantain", "salată", "ulei", "condimente"],
       en: ["rice", "beans", "beef", "plantain", "salad", "oil", "spices"],
@@ -9717,24 +9720,24 @@ export const recipes = [
       ar: "اطبخ الأرز والفاصوليا الحمراء واللحم (عادة لحم بقري أو دجاج) كل على حدة، ثم قدمها مع سلطة وموز مقلي.",
       zh: "米饭、红豆和肉（通常是牛肉或鸡肉）分别煮熟，与沙拉和炸香蕉一起食用。",
       ja: "ご飯・赤インゲン豆・肉（牛肉または鶏肉）を別々に調理し、サラダやフライドバナナと一緒に盛り付ける。",
-      tr: "Pişirin pirinç, kırmızı fasulye, ve et (genellikle dana eti veya tavuk) ayrı ayrı, sonra Servis edin birlikte ile salata ve kızarmış muz (plantain).",
-      it: "Cuoci riso, rosso fagioli, e carne (di solito manzo o pollo) separatamente, poi Servi insieme con insalata e fritto platano.",
-      ko: "조리하고 쌀, 빨간 콩, 그리고 고기 (보통 소고기 또는 닭고기) 따로, 그다음 담아 내세요 함께와 샐러드그리고 튀긴 플랜틴하세요."
+      tr: "Pirinç, kırmızı fasulye ve eti (genellikle dana veya tavuk) ayrı ayrı pişirin, ardından salata ve kızarmış muz ile birlikte servis edin.",
+      it: "Cuocere riso, fagioli rossi e carne (di solito manzo o pollo) separatamente, poi servire insieme con insalata e platano fritto.",
+      ko: "쌀, 붉은 콩, 고기(소고기 또는 닭고기)를 각각 따로 조리한 후 샐러드와 튀긴 플랜틴과 함께 담아냅니다."
     },
     originText: {
       ro: "La Bandera este o rețetă tradițională din Republica Dominicană.",
-      en: "La Bandera is a traditional recipe from Dominican Republic.",
+      en: "La Bandera is a traditional recipe from the Dominican Republic.",
       es: "La Bandera es una receta tradicional de República Dominicana.",
-      fr: "La Bandera est une recette traditionnelle de République dominicaine.",
-      de: "La Bandera ist ein traditionelles Rezept aus Dominikanische Republik.",
-      pt: "La Bandera é uma receita tradicional de República Dominicana.",
-      ru: "Ла Бандера — традиционный рецепт из Доминиканская Республика.",
+      fr: "La Bandera est une recette traditionnelle de la République dominicaine.",
+      de: "La Bandera ist ein traditionelles Rezept aus der Dominikanischen Republik.",
+      pt: "La Bandera é uma receita tradicional da República Dominicana.",
+      ru: "Ла Бандера — традиционный рецепт из Доминиканской Республики.",
       ar: "لا باندييرا هي وصفة تقليدية من جمهورية الدومينيكان.",
       zh: "多米尼加国旗餐 是来自多米尼加的传统食谱。",
       ja: "ラ・バンデラ はドミニカ共和国の伝統的なレシピです。",
-      tr: "La Bandera Dominican Republic kökenli geleneksel bir tariftir.",
-      it: "La Bandera è una risotta tradizionale di Dominican Republic.",
-      ko: "La Bandera는(은) Dominican Republic의 전통 요리입니다."
+      tr: "La Bandera Dominik Cumhuriyeti kökenli geleneksel bir tariftir.",
+      it: "La Bandera è una ricetta tradizionale della Repubblica Dominicana.",
+      ko: "라 반데라는 도미니카 공화국의 전통 요리입니다."
     }
   },
   {
