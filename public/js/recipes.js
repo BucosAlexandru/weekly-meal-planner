@@ -8413,9 +8413,9 @@ export const recipes = [
       ar: "كوبا",
       zh: "古巴",
       ja: "キューバ",
-      tr: "Cuba",
+      tr: "Küba",
       it: "Cuba",
-      ko: "Cuba"
+      ko: "쿠바"
     },
     name: {
       ro: "Ropa Vieja",
@@ -8430,7 +8430,7 @@ export const recipes = [
       ja: "ロパ・ビエハ",
       tr: "Ropa Vieja",
       it: "Ropa Vieja",
-      ko: "Ropa Vieja"
+      ko: "로파 비에하"
     },
     category: {
       ro: "Cină",
@@ -8447,6 +8447,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de vită", "ardei gras", "ceapă", "roșii", "usturoi", "ulei", "condimente"],
       en: ["beef", "bell pepper", "onion", "tomatoes", "garlic", "oil", "spices"],
@@ -8473,8 +8476,8 @@ export const recipes = [
       ar: "اسلق لحم البقر حتى يصبح طريًا جدًا، قطعه، ثم اطبخه مع الطماطم والفلفل والبصل والتوابل.",
       zh: "牛肉煮至酥烂撕成丝，再与番茄、辣椒、洋葱和香料一起炖煮。",
       ja: "牛肉を柔らかくなるまで煮てほぐし、トマト・ピーマン・玉ねぎ・スパイスと炒める。",
-      tr: "Haşlayın dana eti çok yumuşak, didikleyin o, sonra Pişirin ile domates, biber, soğans, ve baharatlar.",
-      it: "Cuoci manzo molto tenero, sfilaccia esso, poi Cuoci con pomodori, peperones, cipollas, e spezie.",
+      tr: "Dana etini çok yumuşak olana kadar haşlayın, didikleyin, ardından domates, biber, soğan ve baharatlarla pişirin.",
+      it: "Cuocere il manzo finché molto tenero, sfilacciarlo, poi cuocere con pomodori, peperoni, cipolle e spezie.",
       ko: "소고기가 아주 부드러워질 때까지 삶아주세요. 잘게 찢어서 토마토, 피망, 양파, 향신료와 함께 볶아주세요."
     },
     originText: {
@@ -8484,13 +8487,13 @@ export const recipes = [
       fr: "Ropa Vieja est une recette traditionnelle de Cuba.",
       de: "Ropa Vieja ist ein traditionelles Rezept aus Kuba.",
       pt: "Ropa Vieja é uma receita tradicional de Cuba.",
-      ru: "Ропа Вьеха — традиционный рецепт из Куба.",
+      ru: "Ропа Вьеха — традиционный рецепт из Кубы.",
       ar: "روبا فييخا هي وصفة تقليدية من كوبا.",
       zh: "古巴牛肉丝 是来自古巴的传统食谱。",
       ja: "ロパ・ビエハ はキューバの伝統的なレシピです。",
-      tr: "Ropa Vieja Cuba kökenli geleneksel bir tariftir.",
-      it: "Ropa Vieja è una risotta tradizionale di Cuba.",
-      ko: "Ropa Vieja는(은) Cuba의 전통 요리입니다."
+      tr: "Ropa Vieja Küba kökenli geleneksel bir tariftir.",
+      it: "Ropa Vieja è una ricetta tradizionale di Cuba.",
+      ko: "로파 비에하는 쿠바의 전통 요리입니다."
     }
   },
   {
