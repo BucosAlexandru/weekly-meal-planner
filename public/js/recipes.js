@@ -13610,7 +13610,7 @@ export const recipes = [
       ja: "ポソレ",
       tr: "Pozole",
       it: "Pozole",
-      ko: "Pozole"
+      ko: "포솔레"
     },
     category: {
       ro: "Prânz",
@@ -13627,6 +13627,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 6,
+    tipType: 'soup',
+    pairingsType: 'soup',
     ingredients: {
       ro: ["porumb hominy", "carne de porc", "usturoi", "ceapă", "ardei iute", "varză", "ridichi", "lime"],
       en: ["hominy corn", "pork", "garlic", "onion", "chili pepper", "cabbage", "radish", "lime"],
@@ -13638,9 +13641,9 @@ export const recipes = [
       ar: ["ذرة هوميني", "لحم خنزير", "ثوم", "بصل", "فلفل حار", "كرنب", "فجل", "ليم"],
       zh: ["玉米（hominy）", "猪肉", "大蒜", "洋葱", "辣椒", "卷心菜", "萝卜", "青柠"],
       ja: ["ホミニーコーン", "豚肉", "ニンニク", "玉ねぎ", "唐辛子", "キャベツ", "ラディッシュ", "ライム"],
-      tr: ["옥수수 알갷 mısır", "domuz eti", "sarımsak", "soğbir", "acı biber biber", "lahana", "turp", "yeşil limon"],
-      it: ["hominy mais", "maiale", "aglio", "cipolla", "peperoncino peperone", "cavolo", "ravanello", "lime"],
-      ko: ["호미니 옥수수", "돼지고기", "마늘", "양파", "고추 고추", "양배추", "무", "라임"]
+      tr: ["hominy mısır", "domuz eti", "sarımsak", "soğan", "acı biber", "lahana", "turp", "yeşil limon"],
+      it: ["mais hominy", "maiale", "aglio", "cipolla", "peperoncino", "cavolo", "ravanello", "lime"],
+      ko: ["호미니 옥수수", "돼지고기", "마늘", "양파", "고추", "양배추", "무", "라임"]
     },
     howIsMade: {
       ro: "Fierbe carnea cu porumbul hominy, ceapă și usturoi. Adaugă ardei iute, apoi servește cu varză, ridichi și lime.",
@@ -13653,24 +13656,24 @@ export const recipes = [
       ar: "اسلق لحم الخنزير مع ذرة الهوميني والبصل والثوم. أضف الفلفل الحار، وقدمه مع الكرنب والفجل والليم.",
       zh: "把猪肉、玉米、洋葱和大蒜煮熟。加入辣椒，配卷心菜、萝卜和青柠食用。",
       ja: "豚肉、ホミニーコーン、玉ねぎ、ニンニクを煮る。唐辛子を加え、キャベツ、ラディッシュ、ライムと一緒に提供。",
-      tr: "Haşlayın domuz eti ile mısır, soğan ve sarımsak. ekleyin acı biber biber, sonra Servis edin ile lahana, turp, ve yeşil limon.",
-      it: "Cuoci maiale con hominy mais, cipolla e aglio. aggiungi peperoncino peperone, poi Servi con cavolo, ravanello, e lime.",
-      ko: "삶고 돼지고기와 호미니 옥수수, 양파그리고 마늘. 넣습니다 고추 고추, 그다음 담아 내세요와 양배추, 무, 그리고 라임하세요."
+      tr: "Domuz etini hominy mısır, soğan ve sarımsakla haşlayın. Acı biber ekleyin, ardından lahana, turp ve yeşil limonla servis yapın.",
+      it: "Cuocete il maiale con il mais hominy, la cipolla e l'aglio. Aggiungete il peperoncino, poi servite con cavolo, ravanello e lime.",
+      ko: "돼지고기를 호미니 옥수수, 양파, 마늘과 함께 끓입니다. 고추를 넣고 양배추, 무, 라임과 함께 제공합니다."
     },
     originText: {
       ro: "Pozole este o rețetă tradițională din Mexic.",
       en: "Pozole is a traditional recipe from Mexico.",
       es: "Pozole es una receta tradicional de México.",
-      fr: "Pozole est une recette traditionnelle de Mexique.",
+      fr: "Pozole est une recette traditionnelle du Mexique.",
       de: "Pozole ist ein traditionelles Rezept aus Mexiko.",
-      pt: "Pozole é uma receita tradicional de México.",
-      ru: "Посоле — традиционный рецепт из Мексика.",
+      pt: "Pozole é uma receita tradicional do México.",
+      ru: "Посоле — традиционный рецепт из Мексики.",
       ar: "بوزولي هي وصفة تقليدية من المكسيك.",
       zh: "波佐列汤 是来自墨西哥的传统食谱。",
       ja: "ポソレ はメキシコの伝統的なレシピです。",
       tr: "Pozole Meksika kökenli geleneksel bir tariftir.",
-      it: "Pozole è una risotta tradizionale di Messico.",
-      ko: "Pozole는(은) 멕시코의 전통 요리입니다."
+      it: "Pozole è una ricetta tradizionale del Messico.",
+      ko: "포솔레는 멕시코의 전통 요리입니다."
     }
   },
   {
