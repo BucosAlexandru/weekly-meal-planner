@@ -14349,6 +14349,9 @@ export const recipes = [
   },
   {
     id: 157,
+    servings: 6,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Chile",
       en: "Chile",
@@ -14360,9 +14363,9 @@ export const recipes = [
       ar: "تشيلي",
       zh: "智利",
       ja: "チリ",
-      tr: "Chile",
-      it: "Chile",
-      ko: "Chile"
+      tr: "Şili",
+      it: "Cile",
+      ko: "칠레"
     },
     name: {
       ro: "Pastel de Choclo",
@@ -14377,7 +14380,7 @@ export const recipes = [
       ja: "パステル・デ・チョクロ",
       tr: "Pastel de Choclo",
       it: "Pastel de Choclo",
-      ko: "Pastel de Choclo"
+      ko: "파스텔 데 초클로"
     },
     category: {
       ro: "Cină",
@@ -14405,8 +14408,8 @@ export const recipes = [
       ar: ["ذرة", "لحم مفروم", "بصل", "بيض", "زيتون", "زبيب", "حليب", "زبدة", "بهارات"],
       zh: ["玉米", "碎肉", "洋葱", "鸡蛋", "橄榄", "葡萄干", "牛奶", "黄油", "香料"],
       ja: ["トウモロコシ", "ひき肉", "玉ねぎ", "卵", "オリーブ", "レーズン", "牛乳", "バター", "スパイス"],
-      tr: ["mısır", "öğütülmüş et", "soğbir", "yumurta", "zeytin", "kuru üzüm", "süt", "tereyağı", "baharatlar"],
-      it: ["mais", "macinato carne", "cipolla", "uova", "olive", "uvetta", "latte", "burro", "spezie"],
+      tr: ["mısır", "kıyma", "soğan", "yumurta", "zeytin", "kuru üzüm", "süt", "tereyağı", "baharatlar"],
+      it: ["mais", "carne macinata", "cipolla", "uova", "olive", "uvetta", "latte", "burro", "spezie"],
       ko: ["옥수수", "간 고기", "양파", "계란", "올리브", "건포도", "우유", "버터", "향신료"]
     },
     howIsMade: {
@@ -14420,24 +14423,24 @@ export const recipes = [
       ar: "اقلي البصل واللحم، أضف التوابل، ضع في طبق، غطِّيه بهريس الذرة واخبزه.",
       zh: "炒洋葱和肉，加入香料，放入烤盘，用玉米泥覆盖，入烤箱烘烤。",
       ja: "玉ねぎと肉を炒めてスパイスを加え、耐熱皿に入れてコーンピューレで覆い、オーブンで焼く。",
-      tr: "Kızartın soğan ve et, Ekleyin baharatlar, yerleştirin yemek, örtün ile mısır püreée, Fırında pişir in fırın.",
-      it: "Friggi cipolla e carne, Aggiungi spezie, metti piatto, copri con mais pureaée, Cuoci al forno in forno.",
-      ko: "볶거나 튀기고 양파그리고 고기, 넣고 향신료, 놓습니다 에서 a 요리, 덮습니다와 옥수수 퓨레ée, 오븐에 구워 에서 오븐하세요."
+      tr: "Soğanı ve eti kızartın, baharatları ekleyin, bir kaba yerleştirin, mısır püresiyle örtün ve fırında pişirin.",
+      it: "Rosola la cipolla e la carne, aggiungi le spezie, metti in una teglia, copri con purè di mais e cuoci in forno.",
+      ko: "양파와 고기를 볶고 향신료를 넣어 그릇에 담은 뒤, 옥수수 퓨레를 덮어 오븐에서 굽습니다."
     },
     originText: {
       ro: "Pastel de Choclo este o rețetă tradițională din Chile.",
       en: "Pastel de Choclo is a traditional recipe from Chile.",
       es: "Pastel de Choclo es una receta tradicional de Chile.",
-      fr: "Pastel de Choclo est une recette traditionnelle de Chili.",
+      fr: "Pastel de Choclo est une recette traditionnelle du Chili.",
       de: "Pastel de Choclo ist ein traditionelles Rezept aus Chile.",
-      pt: "Pastel de Choclo é uma receita tradicional de Chile.",
+      pt: "Pastel de Choclo é uma receita tradicional do Chile.",
       ru: "Пастель де Чокло — традиционный рецепт из Чили.",
       ar: "باستيل دي تشوكو هي وصفة تقليدية من تشيلي.",
       zh: "智利玉米饼 是来自智利的传统食谱。",
       ja: "パステル・デ・チョクロ はチリの伝統的なレシピです。",
-      tr: "Pastel de Choclo Chile kökenli geleneksel bir tariftir.",
-      it: "Pastel de Choclo è una risotta tradizionale di Chile.",
-      ko: "Pastel de Choclo는(은) Chile의 전통 요리입니다."
+      tr: "Pastel de Choclo Şili kökenli geleneksel bir tariftir.",
+      it: "Pastel de Choclo è una ricetta tradizionale del Cile.",
+      ko: "파스텔 데 초클로는 칠레의 전통 요리입니다."
     }
   },
   {
