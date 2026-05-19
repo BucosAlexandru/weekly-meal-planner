@@ -16173,6 +16173,9 @@ export const recipes = [
   },
   {
     id: 176,
+    servings: 4,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "India",
       en: "India",
@@ -16201,7 +16204,7 @@ export const recipes = [
       ja: "パブバジ",
       tr: "Pav Bhaji",
       it: "Pav Bhaji",
-      ko: "Pav Bhaji"
+      ko: "파브바지"
     },
     category: {
       ro: "Cină",
@@ -16229,7 +16232,7 @@ export const recipes = [
       ar: ["بطاطس", "قرنبيط", "بازلاء", "فلفل", "طماطم", "بصل", "زبدة", "توابل هندية", "خبز باف"],
       zh: ["土豆", "花椰菜", "豌豆", "甜椒", "番茄", "洋葱", "黄油", "印度香料", "帕夫面包"],
       ja: ["ジャガイモ", "カリフラワー", "グリーンピース", "ピーマン", "トマト", "玉ねぎ", "バター", "インドのスパイス", "パブパン"],
-      tr: ["patates", "karnabahar", "bezelye", "kapya biber", "domates", "soğbir", "tereyağı", "hint baharatları", "pav ekmek"],
+      tr: ["patates", "karnabahar", "bezelye", "kapya biber", "domates", "soğan", "tereyağı", "hint baharatları", "pav ekmek"],
       it: ["patate", "cavolfiore", "piselli", "peperone", "pomodori", "cipolla", "burro", "spezie indiane", "pav panini"],
       ko: ["감자", "콜리플라워", "완두콩", "파프리카", "토마토", "양파", "버터", "인도 향신료", "파브 번"]
     },
@@ -16244,24 +16247,24 @@ export const recipes = [
       ar: "اسلق الخضار، اهرسها واطبخها مع الزبدة والتوابل. قدّمها مع خبز باف المحمّص بالزبدة.",
       zh: "将蔬菜煮熟捣碎，用黄油和香料翻炒。搭配用黄油烤过的面包一起食用。",
       ja: "野菜を茹でてつぶし、バターとスパイスで炒める。バターで焼いたパンと一緒に提供。",
-      tr: "Haşlayın sebzeler, ezin ve pişirin ile tereyağı ve baharatlar. servis edin ile tereyağı-kavrulmuş ekmek.",
-      it: "Cuoci verdure, schiaccia e cuoci con burro e spezie. servi con burro-tostato panini.",
-      ko: "삶고 채소, 으깨세요그리고 조리합니다와 버터그리고 향신료. 제공합니다와 버터-구운 번하세요."
+      tr: "Sebzeleri haşlayın, ezin ve tereyağı ile baharatlarla kavurun. Tereyağında kızartılmış pav ekmeğiyle servis edin.",
+      it: "Cuocete le verdure, schiacciatele e fatele saltare con burro e spezie. Servite con panini tostati al burro.",
+      ko: "채소를 삶아 으깬 후 버터와 향신료로 볶습니다. 버터에 구운 파브 번과 함께 냅니다."
     },
     originText: {
       ro: "Pav Bhaji este o rețetă tradițională din India.",
       en: "Pav Bhaji is a traditional recipe from India.",
       es: "Pav Bhaji es una receta tradicional de India.",
-      fr: "Pav Bhaji est une recette traditionnelle de Inde.",
+      fr: "Pav Bhaji est une recette traditionnelle de l'Inde.",
       de: "Pav Bhaji ist ein traditionelles Rezept aus Indien.",
-      pt: "Pav Bhaji é uma receita tradicional de Índia.",
-      ru: "Пав бхаджи — традиционный рецепт из Индия.",
+      pt: "Pav Bhaji é uma receita tradicional da Índia.",
+      ru: "Пав бхаджи — традиционный рецепт из Индии.",
       ar: "باف بهاجي هي وصفة تقليدية من الهند.",
       zh: "帕夫巴吉 是来自印度的传统食谱。",
       ja: "パブバジ はインドの伝統的なレシピです。",
-      tr: "pav Bhaji Hindistan kökenli geleneksel bir tariftir.",
-      it: "pav Bhaji è una risotta tradizionale di India.",
-      ko: "파브 Bhaji는(은) 인도의 전통 요리입니다."
+      tr: "Pav Bhaji, Hindistan kökenli geleneksel bir tariftir.",
+      it: "Pav Bhaji è una ricetta tradizionale dell'India.",
+      ko: "파브바지는 인도의 전통 요리입니다."
     }
   },
   {
