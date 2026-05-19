@@ -4950,6 +4950,9 @@ export const recipes = [
   },
   {
     id: 53,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Noua Zeelandă",
       en: "New Zealand",
@@ -4961,9 +4964,9 @@ export const recipes = [
       ar: "نيوزيلندا",
       zh: "新西兰",
       ja: "ニュージーランド",
-      tr: "New Zealand",
-      it: "New Zealand",
-      ko: "New Zealand"
+      tr: "Yeni Zelanda",
+      it: "Nuova Zelanda",
+      ko: "뉴질랜드"
     },
     name: {
       ro: "Hangi",
@@ -4978,7 +4981,7 @@ export const recipes = [
       ja: "ハンギ",
       tr: "Hangi",
       it: "Hangi",
-      ko: "Hangi"
+      ko: "항이"
     },
     category: {
       ro: "Cină",
@@ -5031,14 +5034,14 @@ export const recipes = [
       es: "Hangi es una receta tradicional de Nueva Zelanda.",
       fr: "Hangi est une recette traditionnelle de Nouvelle-Zélande.",
       de: "Hangi ist ein traditionelles Rezept aus Neuseeland.",
-      pt: "Hangi é uma receita tradicional de Nova Zelândia.",
-      ru: "Ханги — традиционный рецепт из Новая Зеландия.",
+      pt: "Hangi é uma receita tradicional da Nova Zelândia.",
+      ru: "Ханги — традиционный рецепт из Новой Зеландии.",
       ar: "هانغي هي وصفة تقليدية من نيوزيلندا.",
       zh: "新西兰地窖烹饪 是来自新西兰的传统食谱。",
       ja: "ハンギ はニュージーランドの伝統的なレシピです。",
-      tr: "Hangi New Zealand kökenli geleneksel bir tariftir.",
-      it: "Hangi è una risotta tradizionale di New Zealand.",
-      ko: "Hangi는(은) New Zealand의 전통 요리입니다."
+      tr: "Hangi Yeni Zelanda kökenli geleneksel bir tariftir.",
+      it: "Hangi è una ricetta tradizionale della Nuova Zelanda.",
+      ko: "항이는 뉴질랜드의 전통 요리입니다."
     }
   },
   {
