@@ -110,6 +110,13 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 99 | Khorovats | ✅ | ✅ | `761e6858` | 13 fixes: 3 struct fields, origin.tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it/ko |
 | 100 | Verivorst | ✅ | ✅ | `4375692f` | 12 fixes: 3 struct fields, origin.tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko, howIsMade.tr/it |
 | 102 | Tteokbokki | ✅ | ✅ | `7315b69e` | 5 fixes: name.ko, originText.pt/ru/it/ko (well-formed recipe, no stubs) |
+| 103 | Shrimp Ceviche | ✅ | ✅ | `622f21a8` | 17 fixes: 3 struct, origin.tr/ko, name.ko, ingredients.tr/it/ko, howIsMade.tr/it, originText.fr/pt/ru/tr/it/ko |
+| 104 | La Bandera | ✅ | ✅ | `c94573ed` | 18 fixes: 3 struct, origin.tr/it/ko, name.ko, howIsMade.tr/it/ko, originText.en/fr/de/pt/ru/tr/it/ko |
+| 105 | Fesenjan | ✅ | ✅ | `7415bb79` | 14 fixes: 3 struct, name.ko, ingredients.tr/it, howIsMade.tr/it/ko, originText.fr/pt/ru/it/ko |
+| 106 | Kare-Kare | ✅ | ✅ | `2e4fa8e0` | 17 fixes: 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.en/fr/de/pt/ru/it/ko |
+| 107 | Francesinha | ✅ | ✅ | `203ee21f` | 11 fixes: 3 struct, name.ko, ingredients.tr/it, howIsMade.tr/it, originText.fr/ru/it/ko |
+| 109 | Arroz Chaufa | ✅ | ✅ | `cae13e12` | 15+ fixes: 3 struct, add missing pt locale (all blocks), name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.fr/pt/it/ko |
+| 110 | Chili Crab | ✅ | ✅ | `240c6bbf` | 13 fixes: 3 struct, name.ko, ingredients.tr/it/ko, howIsMade.tr/it/ko, originText.ru/tr/it/ko |
 
 ---
 
