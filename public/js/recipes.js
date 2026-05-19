@@ -7250,6 +7250,9 @@ export const recipes = [
   },
   {
     id: 78,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Indonezia",
       en: "Indonesia",
@@ -7278,7 +7281,7 @@ export const recipes = [
       ja: "ルンダン",
       tr: "Rendang",
       it: "Rendang",
-      ko: "Rendang"
+      ko: "렌당"
     },
     category: {
       ro: "Cină",
@@ -7329,16 +7332,16 @@ export const recipes = [
       ro: "Rendang este o rețetă tradițională din Indonezia.",
       en: "Rendang is a traditional recipe from Indonesia.",
       es: "Rendang es una receta tradicional de Indonesia.",
-      fr: "Rendang est une recette traditionnelle de Indonésie.",
+      fr: "Rendang est une recette traditionnelle d'Indonésie.",
       de: "Rendang ist ein traditionelles Rezept aus Indonesien.",
-      pt: "Rendang é uma receita tradicional de Indonésia.",
-      ru: "Ренданг — традиционный рецепт из Индонезия.",
+      pt: "Rendang é uma receita tradicional da Indonésia.",
+      ru: "Ренданг — традиционный рецепт из Индонезии.",
       ar: "رندنج هي وصفة تقليدية من إندونيسيا.",
       zh: "仁当牛肉 是来自印度尼西亚的传统食谱。",
       ja: "ルンダン はインドネシアの伝統的なレシピです。",
       tr: "Rendang Endonezya kökenli geleneksel bir tariftir.",
-      it: "Rendang è una risotta tradizionale di Indonesia.",
-      ko: "Rendang는(은) 인도네시아의 전통 요리입니다."
+      it: "Rendang è una ricetta tradizionale dell'Indonesia.",
+      ko: "렌당은 인도네시아의 전통 요리입니다."
     }
   },
   {
