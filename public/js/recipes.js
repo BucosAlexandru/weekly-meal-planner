@@ -15213,6 +15213,9 @@ export const recipes = [
   },
   {
     id: 166,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Cuba",
       en: "Cuba",
@@ -15224,9 +15227,9 @@ export const recipes = [
       ar: "كوبا",
       zh: "古巴",
       ja: "キューバ",
-      tr: "Cuba",
+      tr: "Küba",
       it: "Cuba",
-      ko: "Cuba"
+      ko: "쿠바"
     },
     name: {
       ro: "Picadillo",
@@ -15241,7 +15244,7 @@ export const recipes = [
       ja: "ピカディージョ",
       tr: "Picadillo",
       it: "Picadillo",
-      ko: "Picadillo"
+      ko: "피카디요"
     },
     category: {
       ro: "Cină",
@@ -15269,9 +15272,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بصل", "ثوم", "طماطم", "فلفل", "بازلاء", "زيتون", "زبيب", "زيت", "ملح", "فلفل"],
       zh: ["牛肉末", "洋葱", "大蒜", "番茄", "辣椒", "豌豆", "橄榄", "葡萄干", "油", "盐", "胡椒"],
       ja: ["牛ひき肉", "玉ねぎ", "ニンニク", "トマト", "ピーマン", "グリーンピース", "オリーブ", "レーズン", "油", "塩", "コショウ"],
-      tr: ["öğütülmüş dana eti", "soğbir", "sarımsak", "domates", "biber", "bezelye", "zeytin", "kuru üzüm", "yağ", "tuz", "biber"],
-      it: ["macinato manzo", "cipolla", "aglio", "pomodori", "peperone", "piselli", "olive", "uvetta", "olio", "sale", "peperone"],
-      ko: ["간 소고기", "양파", "마늘", "토마토", "고추", "완두콩", "올리브", "건포도", "기름", "소금", "고추"]
+      tr: ["öğütülmüş dana eti", "soğan", "sarımsak", "domates", "biber", "bezelye", "zeytin", "kuru üzüm", "yağ", "tuz", "karabiber"],
+      it: ["manzo macinato", "cipolla", "aglio", "pomodori", "peperone", "piselli", "olive", "uvetta", "olio", "sale", "pepe"],
+      ko: ["간 소고기", "양파", "마늘", "토마토", "고추", "완두콩", "올리브", "건포도", "기름", "소금", "후추"]
     },
     howIsMade: {
       ro: "Prăjește carnea cu ceapă și usturoi, adaugă legumele, măslinele și stafidele. Fierbe totul până se combină aromele.",
@@ -15284,9 +15287,9 @@ export const recipes = [
       ar: "اقلي اللحم مع البصل والثوم، أضف الخضار والزيتون والزبيب. اطبخ حتى تختلط النكهات.",
       zh: "将牛肉末与洋葱和大蒜炒香，加入蔬菜、橄榄和葡萄干，炖至入味。",
       ja: "牛ひき肉を玉ねぎとニンニクで炒め、野菜・オリーブ・レーズンを加えて煮込む。",
-      tr: "Kızartın dana eti ile soğan ve sarımsak, Ekleyin sebzeler, zeytin, ve kuru üzüm. kısık ateşte pişirin lezzetler blenderdan geçirin.",
-      it: "Friggi manzo con cipolla e aglio, Aggiungi verdure, olive, e uvetta. lascia sobbollire sapori frulla.",
-      ko: "볶거나 튀기고 소고기와 양파그리고 마늘, 넣고 채소, 올리브, 그리고 건포도. 약불에서 끓입니다 맛 블렌더에 갈아줍니다하세요."
+      tr: "Dana etini soğan ve sarımsak ile kızartın, sebzeleri, zeytini ve kuru üzümü ekleyin. Tatlar kaynaşana kadar kısık ateşte pişirin.",
+      it: "Rosola il manzo con cipolla e aglio, aggiungi verdure, olive e uvetta. Lascia sobbollire finché i sapori si amalgamano.",
+      ko: "소고기를 양파, 마늘과 볶고, 채소·올리브·건포도를 넣어 맛이 어우러질 때까지 약불에서 끓입니다."
     },
     originText: {
       ro: "Picadillo este o rețetă tradițională din Cuba.",
@@ -15295,13 +15298,13 @@ export const recipes = [
       fr: "Picadillo est une recette traditionnelle de Cuba.",
       de: "Picadillo ist ein traditionelles Rezept aus Kuba.",
       pt: "Picadillo é uma receita tradicional de Cuba.",
-      ru: "Пикадильо — традиционный рецепт из Куба.",
+      ru: "Пикадильо — традиционный рецепт из Кубы.",
       ar: "بيكاديلو هي وصفة تقليدية من كوبا.",
       zh: "古巴炖碎牛肉 是来自古巴的传统食谱。",
       ja: "ピカディージョ はキューバの伝統的なレシピです。",
-      tr: "Picadillo Cuba kökenli geleneksel bir tariftir.",
-      it: "Picadillo è una risotta tradizionale di Cuba.",
-      ko: "Picadillo는(은) Cuba의 전통 요리입니다."
+      tr: "Picadillo Küba kökenli geleneksel bir tariftir.",
+      it: "Picadillo è una ricetta tradizionale di Cuba.",
+      ko: "피카디요는 쿠바의 전통 요리입니다."
     }
   },
   {
