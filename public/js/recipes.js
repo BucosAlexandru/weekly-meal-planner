@@ -8334,7 +8334,7 @@ export const recipes = [
       ja: "サビッチ",
       tr: "Sabich",
       it: "Sabich",
-      ko: "Sabich"
+      ko: "사비크"
     },
     category: {
       ro: "Mic dejun",
@@ -8351,6 +8351,9 @@ export const recipes = [
       it: "Colazione",
       ko: "아침"
     },
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     ingredients: {
       ro: ["pâine pita", "vinete", "ouă fierte", "cartofi", "salată", "tahini", "amba"],
       en: ["pita bread", "eggplant", "boiled eggs", "potatoes", "salad", "tahini", "amba"],
@@ -8377,24 +8380,24 @@ export const recipes = [
       ar: "احشِ الخبز البيتا بالباذنجان المقلي والبيض المسلوق والسلطة والطحينة والمخللات. قدّمه مع صوص عمبة.",
       zh: "皮塔饼夹入炸茄子、煮鸡蛋、沙拉、芝麻酱和腌菜，配安巴酱食用。",
       ja: "ピタパンに揚げナス・ゆで卵・サラダ・タヒニ・ピクルスを挟み、アンバソースを添える。",
-      tr: "doldurun pita ekmek ile kızarmış yumurtaplant, bağlayın ve yumurta, salata, tahin, ve turşu sebzeler. servis edin ile amba sos.",
-      it: "farcisci pita pane con fritto uovoplant, bolioed uovo, insalata, tahina, e in salamoia verdure. servi con amba salsa.",
+      tr: "Pita ekmeğini kızarmış patlıcan, haşlanmış yumurta, salata, tahin ve turşu sebzelerle doldurun. Amba sosla servis edin.",
+      it: "Farcire il pane pita con melanzane fritte, uovo sodo, insalata, tahina e verdure in agrodolce. Servire con salsa amba.",
       ko: "피타 빵에 튀긴 가지, 삶은 달걀, 샐러드, 타히니, 절임 채소를 채워주세요. 암바 소스와 함께 제공해주세요."
     },
     originText: {
       ro: "Sabich este o rețetă tradițională din Israel.",
       en: "Sabich is a traditional recipe from Israel.",
       es: "Sabich es una receta tradicional de Israel.",
-      fr: "Sabich est une recette traditionnelle de Israël.",
+      fr: "Sabich est une recette traditionnelle d'Israël.",
       de: "Sabich ist ein traditionelles Rezept aus Israel.",
       pt: "Sabich é uma receita tradicional de Israel.",
-      ru: "Сабих — традиционный рецепт из Израиль.",
+      ru: "Сабих — традиционный рецепт из Израиля.",
       ar: "سبيخ هي وصفة تقليدية من إسرائيل.",
       zh: "萨比奇三明治 是来自以色列的传统食谱。",
       ja: "サビッチ はイスラエルの伝統的なレシピです。",
       tr: "Sabich İsrail kökenli geleneksel bir tariftir.",
-      it: "Sabich è una risotta tradizionale di Israele.",
-      ko: "Sabich는(은) 이스라엘의 전통 요리입니다."
+      it: "Sabich è una ricetta tradizionale di Israele.",
+      ko: "사비크는 이스라엘의 전통 요리입니다."
     }
   },
   {
