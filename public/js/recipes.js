@@ -14061,6 +14061,9 @@ export const recipes = [
   },
   {
     id: 154,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Nigeria",
       en: "Nigeria",
@@ -14072,9 +14075,9 @@ export const recipes = [
       ar: "نيجيريا",
       zh: "尼日利亚",
       ja: "ナイジェリア",
-      tr: "Nigeria",
+      tr: "Nijerya",
       it: "Nigeria",
-      ko: "Nigeria"
+      ko: "나이지리아"
     },
     name: {
       ro: "Egusi soup",
@@ -14088,8 +14091,8 @@ export const recipes = [
       zh: "埃古西汤",
       ja: "エグシスープ",
       tr: "Egusi Çorbası",
-      it: "Egusi Zuppa",
-      ko: "Egusi 수프"
+      it: "Zuppa di Egusi",
+      ko: "에구시 수프"
     },
     category: {
       ro: "Cină",
@@ -14117,9 +14120,9 @@ export const recipes = [
       ar: ["بذور إيجوسي", "لحم (بقر أو دجاج)", "سبانخ أو أوراق اليقطين", "زيت النخيل", "بصل", "فلفل حار", "طماطم", "ملح", "بهارات"],
       zh: ["埃古西籽", "肉（牛肉或鸡肉）", "菠菜或南瓜叶", "棕榈油", "洋葱", "辣椒", "番茄", "盐", "香料"],
       ja: ["エグシの種", "肉（牛肉または鶏肉）", "ほうれん草またはカボチャの葉", "パーム油", "玉ねぎ", "唐辛子", "トマト", "塩", "スパイス"],
-      tr: ["egusi tohum (kavun tohum)", "et (dana eti veya tavuk)", "ıspanak veya kabak yaprak", "palmiye yağ", "soğbir", "acı biber biber", "domates", "tuz", "baharatlar"],
-      it: ["egusi semi (melone semi)", "carne (manzo o pollo)", "spinaci o zucca foglie", "palma olio", "cipolla", "peperoncino peperone", "pomodori", "sale", "spezie"],
-      ko: ["에구시 씨앗 (멜론 씨앗)", "고기 (소고기 또는 닭고기)", "시금치 또는 호박 잎", "야자 기름", "양파", "고추 고추", "토마토", "소금", "향신료"]
+      tr: ["egusi tohumu (kavun tohumu)", "et (dana eti veya tavuk)", "ıspanak veya kabak yaprağı", "palmiye yağı", "soğan", "acı biber", "domates", "tuz", "baharatlar"],
+      it: ["semi di egusi (semi di melone)", "carne (manzo o pollo)", "spinaci o foglie di zucca", "olio di palma", "cipolla", "peperoncino", "pomodori", "sale", "spezie"],
+      ko: ["에구시 씨앗 (멜론 씨앗)", "고기 (소고기 또는 닭고기)", "시금치 또는 호박 잎", "야자 기름", "양파", "고추", "토마토", "소금", "향신료"]
     },
     howIsMade: {
       ro: "Prăjește semințele de egusi măcinate în ulei, adaugă carnea fiartă și legumele, fierbe totul până se leagă.",
@@ -14132,9 +14135,9 @@ export const recipes = [
       ar: "اقلي بذور الإيجوسي المطحونة بالزيت، أضف اللحم المسلوق والخضار، واطبخ حتى يتماسك.",
       zh: "将磨碎的埃古西籽在油中炒香，加入煮熟的肉和蔬菜，炖至浓稠。",
       ja: "砕いたエグシの種を油で炒め、茹でた肉と野菜を加えてとろみがつくまで煮込む。",
-      tr: "Kızartın öğütülmüş egusi tohum in yağ, Ekleyin bağlayın ve et ve sebzeler, Kısık ateşte pişir koyulaşmış.",
-      it: "Friggi macinato egusi semi in olio, Aggiungi bolioed carne e verdure, Fai sobbollire addensato.",
-      ko: "에구시 씨를 갈아 기름에 볶아주세요. 삶은 고기와 채소를 넣고 걸쭉해질 때까지 끓여주세요."
+      tr: "Öğütülmüş egusi tohumunu yağda kızartın, haşlanmış et ve sebzeleri ekleyin, koyulaşana kadar kısık ateşte pişirin.",
+      it: "Friggi i semi di egusi macinati nell'olio, aggiungi la carne bollita e le verdure, fai sobbollire finché non si addensa.",
+      ko: "에구시 씨앗을 갈아 기름에 볶고, 삶은 고기와 채소를 넣어 걸쭉해질 때까지 끓입니다."
     },
     originText: {
       ro: "Egusi soup este o rețetă tradițională din Nigeria.",
@@ -14142,14 +14145,14 @@ export const recipes = [
       es: "Sopa de egusi es una receta tradicional de Nigeria.",
       fr: "Soupe d'egusi est une recette traditionnelle de Nigéria.",
       de: "Egusi-Suppe ist ein traditionelles Rezept aus Nigeria.",
-      pt: "Sopa de egusi é uma receita tradicional de Nigéria.",
-      ru: "Суп эгуси — традиционный рецепт из Нигерия.",
+      pt: "Sopa de egusi é uma receita tradicional da Nigéria.",
+      ru: "Суп эгуси — традиционный рецепт из Нигерии.",
       ar: "حساء إيجوسي هي وصفة تقليدية من نيجيريا.",
       zh: "埃古西汤 是来自尼日利亚的传统食谱。",
       ja: "エグシスープ はナイジェリアの伝統的なレシピです。",
-      tr: "egusi çorba Nigeria kökenli geleneksel bir tariftir.",
-      it: "egusi zuppa è una risotta tradizionale di Nigeria.",
-      ko: "에구시 수프는(은) Nigeria의 전통 요리입니다."
+      tr: "Egusi Çorbası Nijerya kökenli geleneksel bir tariftir.",
+      it: "Zuppa di egusi è una ricetta tradizionale della Nigeria.",
+      ko: "에구시 수프는 나이지리아의 전통 요리입니다."
     }
   },
   {
