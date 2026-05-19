@@ -11481,9 +11481,9 @@ export const recipes = [
       ar: "لاتفيا",
       zh: "拉脱维亚",
       ja: "ラトビア",
-      tr: "Latvia",
-      it: "Latvia",
-      ko: "Latvia"
+      tr: "Letonya",
+      it: "Lettonia",
+      ko: "라트비아"
     },
     name: {
       ro: "Piragi",
@@ -11498,7 +11498,7 @@ export const recipes = [
       ja: "ピラギ",
       tr: "Piragi",
       it: "Piragi",
-      ko: "Piragi"
+      ko: "피라기"
     },
     category: {
       ro: "Gustare",
@@ -11515,6 +11515,9 @@ export const recipes = [
       it: "Spuntino",
       ko: "간식"
     },
+    servings: 8,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["aluat", "bacon", "ceapă", "ouă", "lapte", "sare", "piper"],
       en: ["dough", "bacon", "onion", "eggs", "milk", "salt", "pepper"],
@@ -11526,9 +11529,9 @@ export const recipes = [
       ar: ["عجينة", "لحم مقدد", "بصل", "بيض", "حليب", "ملح", "فلفل"],
       zh: ["面团", "培根", "洋葱", "鸡蛋", "牛奶", "盐", "胡椒"],
       ja: ["生地", "ベーコン", "玉ねぎ", "卵", "牛乳", "塩", "コショウ"],
-      tr: ["hamur", "pastırma", "soğbir", "yumurta", "süt", "tuz", "biber"],
-      it: ["impasto", "pancetta", "cipolla", "uova", "latte", "sale", "peperone"],
-      ko: ["반죽", "베이컨", "양파", "계란", "우유", "소금", "고추"]
+      tr: ["hamur", "pastırma", "soğan", "yumurta", "süt", "tuz", "biber"],
+      it: ["impasto", "pancetta", "cipolla", "uova", "latte", "sale", "pepe"],
+      ko: ["반죽", "베이컨", "양파", "달걀", "우유", "소금", "후추"]
     },
     howIsMade: {
       ro: "Umple aluatul dospit cu șuncă sau bacon, rulează și coace la cuptor până devin rumeni.",
@@ -11541,9 +11544,9 @@ export const recipes = [
       ar: "احشِ العجين المخمر باللحم أو البيكون، لفها واخبزها حتى تحمر.",
       zh: "发酵面团包入火腿或培根，卷起烤至金黄。",
       ja: "発酵生地にハムやベーコンを詰めて巻き、焼き色がつくまで焼く。",
-      tr: "doldurun mayalanmış hamur ile jambon veya pastırma, rulo yapın , ve Fırında pişir altın rengi.",
-      it: "farcisci lievitato impasto con prosciutto o pancetta, arrotola , e Cuoci al forno dorato.",
-      ko: "채웁니다 발효된 반죽와 햄 또는 베이컨, 말아줍니다 , 그리고 오븐에 구워 노릇하게하세요."
+      tr: "Mayalanmış hamuru jambon veya pastırma ile doldurun, rulo yapın ve altın rengi alana kadar fırında pişirin.",
+      it: "Farcite l'impasto lievitato con prosciutto o pancetta, arrotolate e cuocete in forno fino a doratura.",
+      ko: "발효된 반죽에 햄이나 베이컨을 채워 말아서 노릇하게 구울 때까지 오븐에서 굽습니다."
     },
     originText: {
       ro: "Piragi este o rețetă tradițională din Letonia.",
@@ -11551,14 +11554,14 @@ export const recipes = [
       es: "Piragi es una receta tradicional de Letonia.",
       fr: "Piragi est une recette traditionnelle de Lettonie.",
       de: "Piragi ist ein traditionelles Rezept aus Lettland.",
-      pt: "Piragi é uma receita tradicional de Letônia.",
-      ru: "Пираги — традиционный рецепт из Латвия.",
+      pt: "Piragi é uma receita tradicional da Letônia.",
+      ru: "Пираги — традиционный рецепт из Латвии.",
       ar: "بيراجي هي وصفة تقليدية من لاتفيا.",
       zh: "拉脱维亚肉馅面包 是来自拉脱维亚的传统食谱。",
       ja: "ピラギ はラトビアの伝統的なレシピです。",
-      tr: "Piragi Latvia kökenli geleneksel bir tariftir.",
-      it: "Piragi è una risotta tradizionale di Latvia.",
-      ko: "Piragi는(은) Latvia의 전통 요리입니다."
+      tr: "Piragi Letonya kökenli geleneksel bir tariftir.",
+      it: "Piragi è una ricetta tradizionale della Lettonia.",
+      ko: "피라기는 라트비아의 전통 요리입니다."
     }
   },
   {
