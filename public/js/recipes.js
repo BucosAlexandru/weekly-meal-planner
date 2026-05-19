@@ -13209,9 +13209,9 @@ export const recipes = [
       ar: "قبرص",
       zh: "塞浦路斯",
       ja: "キプロス",
-      tr: "Cyprus",
-      it: "Cyprus",
-      ko: "Cyprus"
+      tr: "Kıbrıs",
+      it: "Cipro",
+      ko: "키프로스"
     },
     name: {
       ro: "Sheftalia",
@@ -13226,7 +13226,7 @@ export const recipes = [
       ja: "シェフタリア",
       tr: "Sheftalia",
       it: "Sheftalia",
-      ko: "Sheftalia"
+      ko: "셰프탈리아"
     },
     category: {
       ro: "Cină",
@@ -13243,6 +13243,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne tocată de porc și vită", "ceapă", "pătrunjel", "condimente", "prapure de porc", "sare", "piper"],
       en: ["minced pork and beef", "onion", "parsley", "spices", "caul fat", "salt", "pepper"],
@@ -13254,9 +13257,9 @@ export const recipes = [
       ar: ["لحم خنزير ولحم بقر مفروم", "بصل", "بقدونس", "توابل", "غشاء لحم الخنزير", "ملح", "فلفل"],
       zh: ["猪牛肉末", "洋葱", "欧芹", "香料", "猪网油", "盐", "胡椒"],
       ja: ["豚肉と牛肉のひき肉", "玉ねぎ", "パセリ", "スパイス", "豚の網脂", "塩", "コショウ"],
-      tr: ["kıyılmış domuz eti ve dana eti", "soğbir", "maydanoz", "baharatlar", "gömlek yağı yağ", "tuz", "biber"],
-      it: ["tritato maiale e manzo", "cipolla", "prezzemolo", "spezie", "rete di grasso grasso", "sale", "peperone"],
-      ko: ["다진 돼지고기 그리고 소고기", "양파", "파슬리", "향신료", "내장지방막 지방", "소금", "고추"]
+      tr: ["kıyılmış domuz eti ve dana eti", "soğan", "maydanoz", "baharatlar", "gömlek yağı", "tuz", "biber"],
+      it: ["maiale e manzo tritati", "cipolla", "prezzemolo", "spezie", "rete di grasso", "sale", "pepe"],
+      ko: ["다진 돼지고기와 소고기", "양파", "파슬리", "향신료", "내장지방막", "소금", "후추"]
     },
     howIsMade: {
       ro: "Amestecă carne tocată de porc și miel cu condimente, formează cârnați mici și învelește-i în prapure. Frige-i pe grătar până devin rumeni.",
@@ -13269,9 +13272,9 @@ export const recipes = [
       ar: "اخلط لحم الخنزير ولحم الضأن المفروم مع التوابل، شكّل سجقًا صغيرًا، ولفه بشحم الخروف واشوه.",
       zh: "猪肉和羊肉末加香料拌匀，做成小香肠，用网油包裹，烤至金黄。",
       ja: "豚肉と羊肉のひき肉にスパイスを混ぜて小さなソーセージ状にし、網脂で包み、グリルで焼く。",
-      tr: "Karıştırın kıyılmış domuz eti ve kuzu ile baharatlar, şekil verin içine küçük sosis, sarın in gömlek yağı yağ, ve Izgarada pişirin kahverengileşene kadar.",
-      it: "Mescola tritato maiale e agnello con spezie, dai forma dentro piccolo salsicce, avvolgi in rete di grasso grasso, e Griglia dorato.",
-      ko: "섞고 다진 돼지고기그리고 양고기와 향신료, 모양을 만듭니다 안에 작게 소시지, 감싸줍니다 에서 내장지방막 지방, 그리고 구워 노릇해질 때까지하세요."
+      tr: "Domuz eti ve kuzu kıymasını baharatlarla karıştırın, küçük sosis şekline getirin, gömlek yağına sarın ve kızarana kadar ızgarada pişirin.",
+      it: "Mescolate il trito di maiale e agnello con le spezie, formate piccole salsicce, avvolgetele nella rete di grasso e grigliatele fino a doratura.",
+      ko: "다진 돼지고기와 양고기에 향신료를 넣어 섞고 소시지 모양으로 빚어 내장지방막으로 감싼 뒤 노릇해질 때까지 굽습니다."
     },
     originText: {
       ro: "Sheftalia este o rețetă tradițională din Cipru.",
@@ -13280,13 +13283,13 @@ export const recipes = [
       fr: "Sheftalia est une recette traditionnelle de Chypre.",
       de: "Sheftalia ist ein traditionelles Rezept aus Zypern.",
       pt: "Sheftalia é uma receita tradicional de Chipre.",
-      ru: "Шефталья — традиционный рецепт из Кипр.",
+      ru: "Шефталья — традиционный рецепт из Кипра.",
       ar: "شيفتاليا هي وصفة تقليدية من قبرص.",
       zh: "塞浦路斯烤肉卷 是来自塞浦路斯的传统食谱。",
       ja: "シェフタリア はキプロスの伝統的なレシピです。",
-      tr: "Sheftalia Cyprus kökenli geleneksel bir tariftir.",
-      it: "Sheftalia è una risotta tradizionale di Cyprus.",
-      ko: "Sheftalia는(은) Cyprus의 전통 요리입니다."
+      tr: "Sheftalia Kıbrıs kökenli geleneksel bir tariftir.",
+      it: "Sheftalia è una ricetta tradizionale di Cipro.",
+      ko: "셰프탈리아는 키프로스의 전통 요리입니다."
     }
   },
   {
