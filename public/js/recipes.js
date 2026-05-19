@@ -11304,9 +11304,9 @@ export const recipes = [
       ar: "باستا إي فاجيولي",
       zh: "意式豆子面",
       ja: "パスタ・エ・ファジョーリ",
-      tr: "Makarna e fagioli",
+      tr: "Pasta e fagioli",
       it: "Pasta e fagioli",
-      ko: "파스타 e fagioli"
+      ko: "파스타 에 파지올리"
     },
     category: {
       ro: "Cină",
@@ -11323,6 +11323,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'pasta',
+    pairingsType: 'pasta',
     ingredients: {
       ro: ["paste scurte", "fasole", "roșii", "ceapă", "usturoi", "morcov", "țelină", "ulei de măsline", "sare", "piper", "ierburi"],
       en: ["short pasta", "beans", "tomatoes", "onion", "garlic", "carrot", "celery", "olive oil", "salt", "pepper", "herbs"],
@@ -11334,9 +11337,9 @@ export const recipes = [
       ar: ["معكرونة قصيرة", "فاصوليا", "طماطم", "بصل", "ثوم", "جزر", "كرفس", "زيت زيتون", "ملح", "فلفل", "أعشاب"],
       zh: ["短意面", "豆类", "番茄", "洋葱", "大蒜", "胡萝卜", "芹菜", "橄榄油", "盐", "胡椒", "香草"],
       ja: ["ショートパスタ", "豆", "トマト", "玉ねぎ", "ニンニク", "にんじん", "セロリ", "オリーブオイル", "塩", "コショウ", "ハーブ"],
-      tr: ["kısa makarna", "fasulye", "domates", "soğbir", "sarımsak", "havuç", "kereviz", "zeytinyağı", "tuz", "biber", "otlar"],
-      it: ["breve pasta", "fagioli", "pomodori", "cipolla", "aglio", "carota", "sedano", "olio d'oliva", "sale", "peperone", "erbe aromatiche"],
-      ko: ["짧게 파스타", "콩", "토마토", "양파", "마늘", "당근", "셀러리", "올리브오일", "소금", "고추", "허브"]
+      tr: ["kısa makarna", "fasulye", "domates", "soğan", "sarımsak", "havuç", "kereviz", "zeytinyağı", "tuz", "biber", "otlar"],
+      it: ["pasta corta", "fagioli", "pomodori", "cipolla", "aglio", "carota", "sedano", "olio d'oliva", "sale", "pepe", "erbe aromatiche"],
+      ko: ["짧은 파스타", "콩", "토마토", "양파", "마늘", "당근", "셀러리", "올리브오일", "소금", "후추", "허브"]
     },
     howIsMade: {
       ro: "Călește ceapa, morcovul și țelina, adaugă fasolea, roșiile și pastele. Fierbe totul până când pastele sunt gata.",
@@ -11349,24 +11352,24 @@ export const recipes = [
       ar: "اقلِ البصل والجزر والكرفس، أضف الفاصوليا والطماطم والمعكرونة. اطبخ حتى تنضج المعكرونة.",
       zh: "炒洋葱、胡萝卜和芹菜，加入豆类、番茄和意面。煮至意面熟。",
       ja: "玉ねぎ、にんじん、セロリを炒め、豆、トマト、パスタを加えて、パスタが柔らかくなるまで煮る。",
-      tr: "soteleyin soğan, havuç, ve kereviz, Ekleyin fasulye, domates, ve makarna. kısık ateşte pişirin makarna pişirilmiş.",
-      it: "soffriggié cipolla, carota, e sedano, Aggiungi fagioli, pomodori, e pasta. lascia sobbollire pasta  cuocied.",
-      ko: "볶습니다é 양파, 당근, 그리고 셀러리, 넣고 콩, 토마토, 그리고 파스타. 약불에서 끓입니다 파스타 입니다 조리합니다하세요."
+      tr: "Soğan, havuç ve kerevizi soteleyin, fasulye, domates ve makarnayı ekleyin, makarna pişene kadar kısık ateşte pişirin.",
+      it: "Soffriggete cipolla, carota e sedano, aggiungete fagioli, pomodori e pasta, e lasciate sobbollire fino a cottura della pasta.",
+      ko: "양파, 당근, 셀러리를 볶은 후 콩, 토마토, 파스타를 넣고 파스타가 익을 때까지 약불에서 끓입니다."
     },
     originText: {
       ro: "Pasta e fagioli este o rețetă tradițională din Italia.",
       en: "Pasta e fagioli is a traditional recipe from Italy.",
       es: "Pasta e fagioli es una receta tradicional de Italia.",
-      fr: "Pasta e fagioli est une recette traditionnelle de Italie.",
+      fr: "Pasta e fagioli est une recette traditionnelle d'Italie.",
       de: "Pasta e fagioli ist ein traditionelles Rezept aus Italien.",
-      pt: "Pasta e fagioli é uma receita tradicional de Itália.",
-      ru: "Паста э фаджоли — традиционный рецепт из Италия.",
+      pt: "Pasta e fagioli é uma receita tradicional da Itália.",
+      ru: "Паста э фаджоли — традиционный рецепт из Италии.",
       ar: "باستا إي فاجيولي هي وصفة تقليدية من إيطاليا.",
       zh: "意式豆子面 是来自意大利的传统食谱。",
       ja: "パスタ・エ・ファジョーリ はイタリアの伝統的なレシピです。",
-      tr: "makarna e fagioli İtalya kökenli geleneksel bir tariftir.",
-      it: "Pasta e fagioli è una risotta tradizionale di Italia.",
-      ko: "Pasta e fagioli는(은) 이탈리아의 전통 요리입니다."
+      tr: "Pasta e fagioli İtalya kökenli geleneksel bir tariftir.",
+      it: "Pasta e fagioli è una ricetta tradizionale d'Italia.",
+      ko: "파스타 에 파지올리는 이탈리아의 전통 요리입니다."
     }
   },
   {
