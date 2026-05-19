@@ -5334,6 +5334,9 @@ export const recipes = [
   },
   {
     id: 57,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Norvegia",
       en: "Norway",
@@ -5362,7 +5365,7 @@ export const recipes = [
       ja: "フォリコール",
       tr: "Fårikål",
       it: "Fårikål",
-      ko: "Fårikål"
+      ko: "포리콜"
     },
     category: {
       ro: "Cină",
@@ -5415,14 +5418,14 @@ export const recipes = [
       es: "Fårikål es una receta tradicional de Noruega.",
       fr: "Fårikål est une recette traditionnelle de Norvège.",
       de: "Fårikål ist ein traditionelles Rezept aus Norwegen.",
-      pt: "Fårikål é uma receita tradicional de Noruega.",
-      ru: "Фарикол — традиционный рецепт из Норвегия.",
+      pt: "Fårikål é uma receita tradicional da Noruega.",
+      ru: "Фарикол — традиционный рецепт из Норвегии.",
       ar: "فاركال هي وصفة تقليدية من النرويج.",
       zh: "挪威羊肉炖菜 是来自挪威的传统食谱。",
       ja: "フォリコール はノルウェーの伝統的なレシピです。",
       tr: "Fårikål Norveç kökenli geleneksel bir tariftir.",
-      it: "Fårikål è una risotta tradizionale di Norvegia.",
-      ko: "Fårikål는(은) 노르웨이의 전통 요리입니다."
+      it: "Fårikål è una ricetta tradizionale della Norvegia.",
+      ko: "포리콜은 노르웨이의 전통 요리입니다."
     }
   },
   {

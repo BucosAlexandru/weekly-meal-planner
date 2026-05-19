@@ -59,6 +59,12 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 48 | Adobo | ✅ | ✅ | `8487adf0` | 11 fixes: 3 struct fields, name.ko, originText.fr/de/pt/ru/it/ko; NOTE: stub recipe |
 | 49 | Jerk Chicken | ✅ | ✅ | `9401ae5e` | 13 fixes: 3 struct fields, origin it/tr/ko, name.it/ko, originText.fr/pt/ru/tr/it/ko |
 | 50 | Doro Wat | ✅ | ✅ | `a0a1b5a5` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 51 | Kibbeh | ✅ | ✅ | `22730291` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 52 | Stamppot | ✅ | ✅ | `454512b4` | 11 fixes: 3 struct fields, name.ko, originText.fr/de/pt/ru/it/ko; NOTE: stub recipe |
+| 53 | Hangi | ✅ | ✅ | `09c90a91` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 54 | Moules-frites | ✅ | ✅ | `04ba532e` | 9 fixes: 3 struct fields, name.ko, originText.pt/ru/tr/it/ko |
+| 55 | Moussaka | ✅ | ✅ | `7fb899a0` | 8 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko |
+| 56 | Svíčková | ✅ | ✅ | `96cd3925` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.fr/pt/ru/tr/it/ko |
 
 ---
 
