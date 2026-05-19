@@ -9561,9 +9561,9 @@ export const recipes = [
       ar: "الإكوادور",
       zh: "厄瓜多尔",
       ja: "エクアドル",
-      tr: "Ecuador",
+      tr: "Ekvador",
       it: "Ecuador",
-      ko: "Ecuador"
+      ko: "에콰도르"
     },
     name: {
       ro: "Ceviche de camarón",
@@ -9578,7 +9578,7 @@ export const recipes = [
       ja: "エビのセビーチェ",
       tr: "Karides Ceviche",
       it: "Gamberi Ceviche",
-      ko: "새우 Ceviche"
+      ko: "새우 세비체"
     },
     category: {
       ro: "Gustare",
@@ -9595,6 +9595,9 @@ export const recipes = [
       it: "Spuntino",
       ko: "간식"
     },
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["creveți", "lime", "ceapă roșie", "roșii", "coriandru", "ardei iute", "ulei"],
       en: ["shrimp", "lime", "red onion", "tomatoes", "coriander", "chili pepper", "oil"],
@@ -9606,9 +9609,9 @@ export const recipes = [
       ar: ["روبيان", "ليمون أخضر", "بصل أحمر", "طماطم", "كزبرة", "فلفل حار", "زيت"],
       zh: ["虾", "青柠", "红洋葱", "番茄", "香菜", "辣椒", "油"],
       ja: ["エビ", "ライム", "赤玉ねぎ", "トマト", "パクチー", "唐辛子", "油"],
-      tr: ["karides", "yeşil limon", "kırmızı soğbir", "domates", "kişniş", "acı biber biber", "yağ"],
-      it: ["gamberetti", "lime", "rosso cipolla", "pomodori", "coriandolo", "peperoncino peperone", "olio"],
-      ko: ["새우", "라임", "빨간 양파", "토마토", "고수", "고추 고추", "기름"]
+      tr: ["karides", "yeşil limon", "kırmızı soğan", "domates", "kişniş", "acı biber", "yağ"],
+      it: ["gamberetti", "lime", "cipolla rossa", "pomodori", "coriandolo", "peperoncino", "olio"],
+      ko: ["새우", "라임", "빨간 양파", "토마토", "고수", "고추", "기름"]
     },
     howIsMade: {
       ro: "Marinează creveții fierți în suc de lămâie cu roșii, ceapă, ardei, coriandru și sare. Servește rece.",
@@ -9621,24 +9624,24 @@ export const recipes = [
       ar: "انقع الروبيان المطبوخ في عصير الليمون مع الطماطم والبصل والفلفل والكزبرة والملح. قدّمه بارداً.",
       zh: "煮熟的虾用柠檬汁、番茄、洋葱、辣椒、香菜和盐腌制，冷食。",
       ja: "茹でたエビをライムジュース・トマト・玉ねぎ・唐辛子・コリアンダー・塩でマリネして冷やして提供。",
-      tr: "marine edin pişirilmiş karides in yeşil limon suyu ile domates, soğan, biber, kişniş, ve tuz. servis edin soğutulmuş.",
-      it: "marina cuocied gamberetti in lime succo con pomodori, cipolla, peperones, coriandolo, e sale. servi raffreddato.",
-      ko: "익힌 새우를 라임즙에 토마토, 양파, 피망, 고수, 소금과 함께 재워주세요. 차갑게 제공해주세요."
+      tr: "Pişirilmiş karidesleri yeşil limon suyu, domates, soğan, acı biber, kişniş ve tuzla marine edin. Soğutulmuş olarak servis edin.",
+      it: "Marinare i gamberetti cotti nel succo di lime con pomodori, cipolla, peperoncino, coriandolo e sale. Servire freddo.",
+      ko: "익힌 새우를 라임즙에 토마토, 양파, 고추, 고수, 소금과 함께 재워주세요. 차갑게 제공해주세요."
     },
     originText: {
       ro: "Ceviche de camarón este o rețetă tradițională din Ecuador.",
       en: "Shrimp Ceviche is a traditional recipe from Ecuador.",
       es: "Ceviche de camarón es una receta tradicional de Ecuador.",
-      fr: "Ceviche de crevettes est une recette traditionnelle de Équateur.",
+      fr: "Ceviche de crevettes est une recette traditionnelle de l'Équateur.",
       de: "Garnelen-Ceviche ist ein traditionelles Rezept aus Ecuador.",
-      pt: "Ceviche de camarão é uma receita tradicional de Equador.",
-      ru: "Севиче из креветок — традиционный рецепт из Эквадор.",
+      pt: "Ceviche de camarão é uma receita tradicional do Equador.",
+      ru: "Севиче из креветок — традиционный рецепт из Эквадора.",
       ar: "سيفيتشي الروبيان هي وصفة تقليدية من الإكوادور.",
       zh: "厄瓜多尔虾酸橘汁腌 是来自厄瓜多尔的传统食谱。",
       ja: "エビのセビーチェ はエクアドルの伝統的なレシピです。",
-      tr: "karides Ceviche Ecuador kökenli geleneksel bir tariftir.",
-      it: "gamberi Ceviche è una risotta tradizionale di Ecuador.",
-      ko: "새우 Ceviche는(은) Ecuador의 전통 요리입니다."
+      tr: "Karides Ceviche Ekvador kökenli geleneksel bir tariftir.",
+      it: "Gamberi Ceviche è una ricetta tradizionale dell'Ecuador.",
+      ko: "새우 세비체는 에콰도르의 전통 요리입니다."
     }
   },
   {
