@@ -12921,9 +12921,9 @@ export const recipes = [
       ar: "جمهورية الكونغو",
       zh: "刚果共和国",
       ja: "コンゴ共和国",
-      tr: "Republic of the Congo",
-      it: "Republic of the Congo",
-      ko: "Republic of the Congo"
+      tr: "Kongo Cumhuriyeti",
+      it: "Repubblica del Congo",
+      ko: "콩고 공화국"
     },
     name: {
       ro: "Pui Moambe",
@@ -12937,8 +12937,8 @@ export const recipes = [
       zh: "花生酱炖鸡",
       ja: "ムアンベチキン",
       tr: "Moambe Tavuk",
-      it: "Moambe Pollo",
-      ko: "Moambe 닭"
+      it: "Pollo Moambe",
+      ko: "무암베 치킨"
     },
     category: {
       ro: "Cină",
@@ -12955,6 +12955,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["pui", "unt de arahide", "roșii", "ceapă", "usturoi", "ulei de palmier", "foi de dafin", "ardei iute", "sare", "piper"],
       en: ["chicken", "peanut butter", "tomatoes", "onion", "garlic", "palm oil", "bay leaves", "chili pepper", "salt", "pepper"],
@@ -12966,9 +12969,9 @@ export const recipes = [
       ar: ["دجاج", "زبدة الفول السوداني", "طماطم", "بصل", "ثوم", "زيت النخيل", "ورق الغار", "فلفل حار", "ملح", "فلفل"],
       zh: ["鸡肉", "花生酱", "番茄", "洋葱", "大蒜", "棕榈油", "月桂叶", "辣椒", "盐", "胡椒"],
       ja: ["鶏肉", "ピーナッツバター", "トマト", "玉ねぎ", "ニンニク", "パーム油", "ローリエ", "唐辛子", "塩", "コショウ"],
-      tr: ["tavuk", "yer fıstığı tereyağı", "domates", "soğbir", "sarımsak", "palmiye yağ", "defne yaprak", "acı biber biber", "tuz", "biber"],
-      it: ["pollo", "arachide burro", "pomodori", "cipolla", "aglio", "palma olio", "alloro foglie", "peperoncino peperone", "sale", "peperone"],
-      ko: ["닭고기", "땅콩 버터", "토마토", "양파", "마늘", "야자 기름", "월계수 잎", "고추 고추", "소금", "고추"]
+      tr: ["tavuk", "yer fıstığı ezmesi", "domates", "soğan", "sarımsak", "palmiye yağı", "defne yaprağı", "acı biber", "tuz", "biber"],
+      it: ["pollo", "burro di arachidi", "pomodori", "cipolla", "aglio", "olio di palma", "foglie di alloro", "peperoncino", "sale", "pepe"],
+      ko: ["닭고기", "땅콩 버터", "토마토", "양파", "마늘", "야자 기름", "월계수 잎", "고추", "소금", "후추"]
     },
     howIsMade: {
       ro: "Prăjește puiul, apoi adaugă legumele și condimentele, gătește cu unt de arahide până sosul devine cremos.",
@@ -12981,24 +12984,24 @@ export const recipes = [
       ar: "اقلي الدجاج، ثم أضف الخضار والتوابل واطبخ بزبدة الفول السوداني حتى يصبح الصوص كريميًا.",
       zh: "先煎鸡肉，再加蔬菜和调料，加入花生酱炖至浓稠。",
       ja: "鶏肉を炒め、野菜やスパイスを加え、ピーナッツバターでクリーミーなソースに仕上げる。",
-      tr: "Kızartın tavuk, Ekleyin sebzeler ve baharatlar, Pişirin ile yer fıstığı tereyağı sos kremsi.",
-      it: "Friggi pollo, Aggiungi verdure e spezie, Cuoci con arachide burro salsa  pannay.",
-      ko: "닭고기를 볶고 채소와 향신료를 넣어주세요. 땅콩 버터를 넣고 소스가 크리미해질 때까지 조리해주세요."
+      tr: "Tavuğu kızartın, sebzeleri ve baharatları ekleyin, sos kremsi bir kıvam alana kadar yer fıstığı ezmesiyle pişirin.",
+      it: "Friggete il pollo, aggiungete le verdure e le spezie, cuocete con burro di arachidi finché la salsa non diventa cremosa.",
+      ko: "닭고기를 볶고 채소와 향신료를 넣어 땅콩 버터를 더한 뒤 소스가 크리미해질 때까지 끓입니다."
     },
     originText: {
       ro: "Pui Moambe este o rețetă tradițională din Republica Congo.",
       en: "Moambe chicken is a traditional recipe from Republic of the Congo.",
       es: "Pollo moambe es una receta tradicional de República del Congo.",
-      fr: "Poulet moambe est une recette traditionnelle de République du Congo.",
-      de: "Moambe-Hähnchen ist ein traditionelles Rezept aus Republik Kongo.",
-      pt: "Frango moambe é uma receita tradicional de República do Congo.",
-      ru: "Курица муамбе — традиционный рецепт из Республика Конго.",
+      fr: "Poulet moambe est une recette traditionnelle de la République du Congo.",
+      de: "Moambe-Hähnchen ist ein traditionelles Rezept aus der Republik Kongo.",
+      pt: "Frango moambe é uma receita tradicional da República do Congo.",
+      ru: "Курица муамбе — традиционный рецепт из Республики Конго.",
       ar: "دجاج موامبي هي وصفة تقليدية من جمهورية الكونغو.",
       zh: "花生酱炖鸡 是来自刚果共和国的传统食谱。",
       ja: "ムアンベチキン はコンゴ共和国の伝統的なレシピです。",
-      tr: "Moambe tavuk Republic Congo kökenli geleneksel bir tariftir.",
-      it: "Moambe pollo è una risotta tradizionale di Republic   Congo.",
-      ko: "Moambe 닭고기는(은) Republic 의  Congo의 전통 요리입니다."
+      tr: "Moambe Tavuk Kongo Cumhuriyeti kökenli geleneksel bir tariftir.",
+      it: "Pollo Moambe è una ricetta tradizionale della Repubblica del Congo.",
+      ko: "무암베 치킨은 콩고 공화국의 전통 요리입니다."
     }
   },
   {
