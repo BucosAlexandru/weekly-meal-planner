@@ -16461,6 +16461,9 @@ export const recipes = [
   },
   {
     id: 179,
+    servings: 2,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "Tunisia",
       en: "Tunisia",
@@ -16472,9 +16475,9 @@ export const recipes = [
       ar: "تونس",
       zh: "突尼斯",
       ja: "チュニジア",
-      tr: "Tunisia",
+      tr: "Tunus",
       it: "Tunisia",
-      ko: "Tunisia"
+      ko: "튀니지"
     },
     name: {
       ro: "Chakchouka",
@@ -16489,7 +16492,7 @@ export const recipes = [
       ja: "シャクシュカ",
       tr: "Chakchouka",
       it: "Chakchouka",
-      ko: "Chakchouka"
+      ko: "차크추카"
     },
     category: {
       ro: "Cină",
@@ -16517,9 +16520,9 @@ export const recipes = [
       ar: ["بيض", "طماطم", "فلفل", "بصل", "ثوم", "زيت زيتون", "بابريكا", "كمون", "ملح", "فلفل"],
       zh: ["鸡蛋", "番茄", "辣椒", "洋葱", "大蒜", "橄榄油", "红椒粉", "孜然", "盐", "胡椒"],
       ja: ["卵", "トマト", "ピーマン", "玉ねぎ", "ニンニク", "オリーブオイル", "パプリカ", "クミン", "塩", "コショウ"],
-      tr: ["yumurta", "domates", "bibers", "soğbir", "sarımsak", "zeytinyağı", "toz biber", "kimyon", "tuz", "biber"],
-      it: ["uova", "pomodori", "peperones", "cipolla", "aglio", "olio d'oliva", "paprika", "cumino", "sale", "peperone"],
-      ko: ["계란", "토마토", "고추s", "양파", "마늘", "올리브오일", "파프리카 가루", "쿠민", "소금", "고추"]
+      tr: ["yumurta", "domates", "biber", "soğan", "sarımsak", "zeytinyağı", "toz biber", "kimyon", "tuz", "karabiber"],
+      it: ["uova", "pomodori", "peperoni", "cipolla", "aglio", "olio d'oliva", "paprika", "cumino", "sale", "pepe"],
+      ko: ["계란", "토마토", "고추", "양파", "마늘", "올리브오일", "파프리카 가루", "쿠민", "소금", "후추"]
     },
     howIsMade: {
       ro: "Călește ceapa, ardeii și usturoiul, adaugă roșiile și condimentele, apoi sparge ouăle deasupra și gătește până se încheagă.",
@@ -16532,9 +16535,9 @@ export const recipes = [
       ar: "اقلي البصل والفلفل والثوم، أضف الطماطم والتوابل، ثم اكسر البيض فوقها واطبخ حتى ينضج.",
       zh: "炒洋葱、辣椒和大蒜，加入番茄和香料，打入鸡蛋，煮至蛋熟。",
       ja: "玉ねぎ・ピーマン・ニンニクを炒め、トマトとスパイスを加え、上に卵を割り入れて固まるまで火を通す。",
-      tr: "soteleyin soğan, biber ve sarımsak, Ekleyin domates ve baharatlar, sonra kırın yumurta üstüne üstüne ve pişirin koyun.",
-      it: "soffriggié cipolla, peperones e aglio, Aggiungi pomodori e spezie, poi rompi uova su sopra e cuoci metti.",
-      ko: "양파, 피망, 마늘을 볶아주세요. 토마토와 향신료를 넣어주세요. 달걀을 위에 올려 익을 때까지 조리해주세요."
+      tr: "Soğan, biber ve sarımsağı soteleyin, domates ve baharatları ekleyin, ardından üzerine yumurtaları kırıp pişene kadar pişirin.",
+      it: "Soffriggete la cipolla, i peperoni e l'aglio, aggiungete i pomodori e le spezie, poi rompete le uova sopra e cuocete fino a presa.",
+      ko: "양파, 피망, 마늘을 볶은 후 토마토와 향신료를 넣습니다. 달걀을 위에 올려 익을 때까지 조리합니다."
     },
     originText: {
       ro: "Chakchouka este o rețetă tradițională din Tunisia.",
@@ -16542,14 +16545,14 @@ export const recipes = [
       es: "Chakchouka es una receta tradicional de Túnez.",
       fr: "Chakchouka est une recette traditionnelle de Tunisie.",
       de: "Chakchouka ist ein traditionelles Rezept aus Tunesien.",
-      pt: "Chakchouka é uma receita tradicional de Tunísia.",
-      ru: "Чакчука — традиционный рецепт из Тунис.",
+      pt: "Chakchouka é uma receita tradicional da Tunísia.",
+      ru: "Чакчука — традиционный рецепт из Туниса.",
       ar: "شكشوكة هي وصفة تقليدية من تونس.",
       zh: "突尼斯炒蛋 是来自突尼斯的传统食谱。",
       ja: "シャクシュカ はチュニジアの伝統的なレシピです。",
-      tr: "Chakchouka Tunisia kökenli geleneksel bir tariftir.",
-      it: "Chakchouka è una risotta tradizionale di Tunisia.",
-      ko: "Chakchouka는(은) Tunisia의 전통 요리입니다."
+      tr: "Chakchouka, Tunus kökenli geleneksel bir tariftir.",
+      it: "Chakchouka è una ricetta tradizionale della Tunisia.",
+      ko: "차크추카는 튀니지의 전통 요리입니다."
     }
   },
   {
