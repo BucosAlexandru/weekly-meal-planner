@@ -7634,6 +7634,9 @@ export const recipes = [
   },
   {
     id: 82,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Australia",
       en: "Australia",
@@ -7662,7 +7665,7 @@ export const recipes = [
       ja: "ミートパイ",
       tr: "Meat Pie",
       it: "Meat Pie",
-      ko: "Meat Pie"
+      ko: "미트 파이"
     },
     category: {
       ro: "Gustare",
@@ -7713,16 +7716,16 @@ export const recipes = [
       ro: "Meat Pie este o rețetă tradițională din Australia.",
       en: "Meat Pie is a traditional recipe from Australia.",
       es: "Pastel de carne es una receta tradicional de Australia.",
-      fr: "Tourte à la viande est une recette traditionnelle de Australie.",
+      fr: "Tourte à la viande est une recette traditionnelle d'Australie.",
       de: "Fleischpastete ist ein traditionelles Rezept aus Australien.",
-      pt: "Empada de carne é uma receita tradicional de Austrália.",
-      ru: "Мясной пирог — традиционный рецепт из Австралия.",
+      pt: "Empada de carne é uma receita tradicional da Austrália.",
+      ru: "Мясной пирог — традиционный рецепт из Австралии.",
       ar: "فطيرة اللحم هي وصفة تقليدية من أستراليا.",
       zh: "肉馅饼 是来自澳大利亚的传统食谱。",
       ja: "ミートパイ はオーストラリアの伝統的なレシピです。",
-      tr: "et Pie Avustralya kökenli geleneksel bir tariftir.",
-      it: "carne Pie è una risotta tradizionale di Australia.",
-      ko: "고기 Pie는(은) 호주의 전통 요리입니다."
+      tr: "Meat Pie Avustralya kökenli geleneksel bir tariftir.",
+      it: "Meat Pie è una ricetta tradizionale dell'Australia.",
+      ko: "미트 파이는 호주의 전통 요리입니다."
     }
   },
   {
