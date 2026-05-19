@@ -8238,7 +8238,7 @@ export const recipes = [
       ja: "ムケッカ",
       tr: "Moqueca",
       it: "Moqueca",
-      ko: "Moqueca"
+      ko: "모케카"
     },
     category: {
       ro: "Cină",
@@ -8255,6 +8255,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     ingredients: {
       ro: ["pește", "lapte de cocos", "ardei gras", "roșii", "ceapă", "ulei de palmier", "coriandru"],
       en: ["fish", "coconut milk", "bell pepper", "tomatoes", "onion", "palm oil", "coriander"],
@@ -8281,24 +8284,24 @@ export const recipes = [
       ar: "اطبخ السمك مع الطماطم والبصل والفلفل والثوم في حليب جوز الهند، وأضف زيت النخيل والأعشاب في النهاية.",
       zh: "鱼与番茄、洋葱、辣椒和大蒜在椰奶中炖煮，最后加入棕榈油和香草。",
       ja: "魚をトマト・玉ねぎ・ピーマン・ニンニクとココナッツミルクで煮込み、仕上げにパームオイルとハーブを加える。",
-      tr: "Pişirin balık ile domates, soğan, biber, ve sarımsak in hindistancevizi süt, Ekleyin palmiye yağ ve otlar sonunda.",
-      it: "Cuoci pesce con pomodori, cipolla, peperones, e aglio in cocco latte, Aggiungi palma olio e erbe aromatiche  alla fine.",
+      tr: "Balığı domates, soğan, biber ve sarımsak ile birlikte hindistancevizi sütünde pişirin, son olarak palmiye yağı ve otları ekleyin.",
+      it: "Cuocere il pesce con pomodori, cipolla, peperoni e aglio nel latte di cocco, aggiungere olio di palma ed erbe aromatiche alla fine.",
       ko: "생선을 토마토, 양파, 피망, 마늘과 함께 코코넛 밀크에서 조리해주세요. 마지막에 팜 오일과 허브를 넣어주세요."
     },
     originText: {
       ro: "Moqueca este o rețetă tradițională din Brazilia.",
       en: "Moqueca is a traditional recipe from Brazil.",
       es: "Moqueca es una receta tradicional de Brasil.",
-      fr: "Moqueca est une recette traditionnelle de Brésil.",
+      fr: "Moqueca est une recette traditionnelle du Brésil.",
       de: "Moqueca ist ein traditionelles Rezept aus Brasilien.",
-      pt: "Moqueca é uma receita tradicional de Brasil.",
-      ru: "Мукека — традиционный рецепт из Бразилия.",
+      pt: "Moqueca é uma receita tradicional do Brasil.",
+      ru: "Мукека — традиционный рецепт из Бразилии.",
       ar: "موكيكا هي وصفة تقليدية من البرازيل.",
       zh: "巴西鱼炖菜 是来自巴西的传统食谱。",
       ja: "ムケッカ はブラジルの伝統的なレシピです。",
       tr: "Moqueca Brezilya kökenli geleneksel bir tariftir.",
-      it: "Moqueca è una risotta tradizionale di Brasile.",
-      ko: "Moqueca는(은) 브라질의 전통 요리입니다."
+      it: "Moqueca è una ricetta tradizionale del Brasile.",
+      ko: "모케카는 브라질의 전통 요리입니다."
     }
   },
   {
