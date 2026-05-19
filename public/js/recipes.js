@@ -8889,9 +8889,9 @@ export const recipes = [
       ar: "الشرق الأوسط",
       zh: "中东",
       ja: "中東",
-      tr: "Middle East",
-      it: "Middle East",
-      ko: "Middle East"
+      tr: "Orta Doğu",
+      it: "Medio Oriente",
+      ko: "중동"
     },
     name: {
       ro: "Supă de linte",
@@ -8904,9 +8904,9 @@ export const recipes = [
       ar: "حساء العدس",
       zh: "扁豆汤",
       ja: "レンズ豆のスープ",
-      tr: "Lentil Çorbası",
-      it: "Lentil Zuppa",
-      ko: "Lentil 수프"
+      tr: "Mercimek Çorbası",
+      it: "Zuppa di lenticchie",
+      ko: "렌틸 수프"
     },
     category: {
       ro: "Prânz",
@@ -8923,6 +8923,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     ingredients: {
       ro: ["linte", "ceapă", "morcov", "țelină", "usturoi", "ulei de măsline", "apă", "condimente"],
       en: ["lentils", "onion", "carrot", "celery", "garlic", "olive oil", "water", "spices"],
@@ -8949,24 +8952,24 @@ export const recipes = [
       ar: "اقلي الخضار، أضف العدس والماء، اطبخ حتى ينضج كل شيء وتبّل حسب الذوق.",
       zh: "炒蔬菜，加入扁豆和水，煮至变软，按口味调味。",
       ja: "野菜を炒め、レンズ豆と水を加え、柔らかくなるまで煮て味付けする。",
-      tr: "soteleyin sebzeler, Ekleyin mercimek ve su, Kısık ateşte pişir her şeyi yumuşak, Baharatlandır tadına.",
-      it: "soffriggié verdure, Aggiungi lenticchie e acqua, Fai sobbollire tutto  tenero, Condisci  a piacere.",
-      ko: "볶습니다é 채소, 넣고 렌틸콩그리고 물, 약불로 끓여 모든 것 입니다 부드럽게, 간을 맞추고  기호에 맞게하세요."
+      tr: "Sebzeleri soteleyin, mercimek ve suyu ekleyin, her şey yumuşayana kadar kısık ateşte pişirin, tadına göre baharatlayın.",
+      it: "Soffriggere le verdure, aggiungere le lenticchie e l'acqua, cuocere a fuoco lento fino a quando tutto è tenero, condire a piacere.",
+      ko: "채소를 볶은 후 렌틸콩과 물을 넣고 모든 것이 부드러워질 때까지 약불로 끓입니다. 기호에 맞게 간을 합니다."
     },
     originText: {
       ro: "Supă de linte este o rețetă tradițională din Orientul Mijlociu.",
-      en: "Lentil Soup is a traditional recipe from Middle East.",
+      en: "Lentil Soup is a traditional recipe from the Middle East.",
       es: "Sopa de lentejas es una receta tradicional de Oriente Medio.",
-      fr: "Soupe de lentilles est une recette traditionnelle de Moyen-Orient.",
-      de: "Linsensuppe ist ein traditionelles Rezept aus Naher Osten.",
-      pt: "Sopa de lentilhas é uma receita tradicional de Oriente Médio.",
-      ru: "Чечевичный суп — традиционный рецепт из Ближний Восток.",
+      fr: "Soupe de lentilles est une recette traditionnelle du Moyen-Orient.",
+      de: "Linsensuppe ist ein traditionelles Rezept aus dem Nahen Osten.",
+      pt: "Sopa de lentilhas é uma receita tradicional do Oriente Médio.",
+      ru: "Чечевичный суп — традиционный рецепт из Ближнего Востока.",
       ar: "حساء العدس هي وصفة تقليدية من الشرق الأوسط.",
       zh: "扁豆汤 是来自中东的传统食谱。",
       ja: "レンズ豆のスープ は中東の伝統的なレシピです。",
-      tr: "Lentil çorba Middle East kökenli geleneksel bir tariftir.",
-      it: "Lentil zuppa è una risotta tradizionale di Middle East.",
-      ko: "Lentil 수프는(은) Middle East의 전통 요리입니다."
+      tr: "Mercimek Çorbası Orta Doğu kökenli geleneksel bir tariftir.",
+      it: "Zuppa di lenticchie è una ricetta tradizionale del Medio Oriente.",
+      ko: "렌틸 수프는 중동의 전통 요리입니다."
     }
   },
   {
