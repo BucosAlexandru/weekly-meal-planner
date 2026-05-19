@@ -6102,6 +6102,9 @@ export const recipes = [
   },
   {
     id: 65,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "Peru",
       en: "Peru",
@@ -6130,7 +6133,7 @@ export const recipes = [
       ja: "セビーチェ",
       tr: "Ceviche",
       it: "Ceviche",
-      ko: "Ceviche"
+      ko: "세비체"
     },
     category: {
       ro: "Gustare",
@@ -6181,16 +6184,16 @@ export const recipes = [
       ro: "Ceviche este o rețetă tradițională din Peru.",
       en: "Ceviche is a traditional recipe from Peru.",
       es: "Ceviche es una receta tradicional de Perú.",
-      fr: "Ceviche est une recette traditionnelle de Pérou.",
+      fr: "Ceviche est une recette traditionnelle du Pérou.",
       de: "Ceviche ist ein traditionelles Rezept aus Peru.",
-      pt: "Ceviche é uma receita tradicional de Peru.",
+      pt: "Ceviche é uma receita tradicional do Peru.",
       ru: "Севиче — традиционный рецепт из Перу.",
       ar: "سيفيتشي هي وصفة تقليدية من بيرو.",
       zh: "酸橘汁腌鱼 是来自秘鲁的传统食谱。",
       ja: "セビーチェ はペルーの伝統的なレシピです。",
       tr: "Ceviche Peru kökenli geleneksel bir tariftir.",
-      it: "Ceviche è una risotta tradizionale di Perù.",
-      ko: "Ceviche는(은) 페루의 전통 요리입니다."
+      it: "Ceviche è una ricetta tradizionale del Perù.",
+      ko: "세비체는 페루의 전통 요리입니다."
     }
   },
   {
