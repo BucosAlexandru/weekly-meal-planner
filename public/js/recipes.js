@@ -7933,9 +7933,9 @@ export const recipes = [
       ar: "كوريا الشمالية",
       zh: "朝鲜",
       ja: "北朝鮮",
-      tr: "North Korea",
-      it: "North Korea",
-      ko: "North Korea"
+      tr: "Kuzey Kore",
+      it: "Corea del Nord",
+      ko: "북한"
     },
     name: {
       ro: "Naengmyeon",
@@ -7950,7 +7950,7 @@ export const recipes = [
       ja: "ネンミョン",
       tr: "Naengmyeon",
       it: "Naengmyeon",
-      ko: "Naengmyeon"
+      ko: "냉면"
     },
     category: {
       ro: "Cină",
@@ -8006,14 +8006,14 @@ export const recipes = [
       es: "Naengmyeon es una receta tradicional de Corea del Norte.",
       fr: "Naengmyeon est une recette traditionnelle de Corée du Nord.",
       de: "Naengmyeon ist ein traditionelles Rezept aus Nordkorea.",
-      pt: "Naengmyeon é uma receita tradicional de Coreia do Norte.",
-      ru: "Нэнмён — традиционный рецепт из Северная Корея.",
+      pt: "Naengmyeon é uma receita tradicional da Coreia do Norte.",
+      ru: "Нэнмён — традиционный рецепт из Северной Кореи.",
       ar: "نِينغميون هي وصفة تقليدية من كوريا الشمالية.",
       zh: "冷面 是来自朝鲜的传统食谱。",
       ja: "ネンミョン は北朝鮮の伝統的なレシピです。",
-      tr: "Naengmyeon North Korea kökenli geleneksel bir tariftir.",
-      it: "Naengmyeon è una risotta tradizionale di North Korea.",
-      ko: "Naengmyeon는(은) North Korea의 전통 요리입니다."
+      tr: "Naengmyeon Kuzey Kore kökenli geleneksel bir tariftir.",
+      it: "Naengmyeon è una ricetta tradizionale della Corea del Nord.",
+      ko: "냉면은 북한의 전통 요리입니다."
     }
   },
   {
