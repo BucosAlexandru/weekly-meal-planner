@@ -10346,7 +10346,7 @@ export const recipes = [
       ja: "トムヤム",
       tr: "Tom Yum",
       it: "Tom Yum",
-      ko: "Tom Yum"
+      ko: "똠얌"
     },
     category: {
       ro: "Prânz",
@@ -10363,6 +10363,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     ingredients: {
       ro: ["1 L supă de pui sau stoc de fructe de mare", "300g creveți cruzi, curățați", "2 tulpini lemongrass, secționate în bucăți de 3 cm și zdrobite", "30g galangal (sau ghimbir), felii subțiri", "6 frunze de kaffir lime", "3–4 ardei iuți roșii thailandezi, tăiați pe jumătate", "200g ciuperci pleurotus sau champignon, feliate", "3 linguri sos de pește", "2 linguri suc proaspăt de lime", "1 lingură zahăr de palmier", "2 linguri pastă tom yum (opțional)", "1 tulpină ceapă verde, pentru servire", "Coriandru proaspăt, pentru servire"],
       en: ["1L chicken or seafood stock", "300g raw prawns, peeled and deveined", "2 stalks lemongrass, cut into 3cm pieces and bruised", "30g galangal (or ginger), thinly sliced", "6 kaffir lime leaves", "3–4 Thai red chillies, halved", "200g oyster or button mushrooms, sliced", "3 tbsp fish sauce", "2 tbsp fresh lime juice", "1 tbsp palm sugar", "2 tbsp tom yum paste (optional)", "1 spring onion stalk, to garnish", "Fresh coriander to serve"],
@@ -10399,14 +10402,14 @@ export const recipes = [
       es: "Tom Yum es una receta tradicional de Tailandia.",
       fr: "Tom Yum est une recette traditionnelle de Thaïlande.",
       de: "Tom Yum ist ein traditionelles Rezept aus Thailand.",
-      pt: "Tom Yum é uma receita tradicional de Tailândia.",
-      ru: "Том-ям — традиционный рецепт из Таиланд.",
+      pt: "Tom Yum é uma receita tradicional da Tailândia.",
+      ru: "Том-ям — традиционный рецепт из Таиланда.",
       ar: "توم يام هي وصفة تقليدية من تايلاند.",
       zh: "冬阴功汤 是来自泰国的传统食谱。",
       ja: "トムヤム はタイの伝統的なレシピです。",
       tr: "Tom Yum Tayland kökenli geleneksel bir tariftir.",
-      it: "Tom Yum è una risotta tradizionale di Thailandia.",
-      ko: "Tom Yum는(은) 태국의 전통 요리입니다."
+      it: "Tom Yum è una ricetta tradizionale della Thailandia.",
+      ko: "똠얌은 태국의 전통 요리입니다."
     }
   },
   {
