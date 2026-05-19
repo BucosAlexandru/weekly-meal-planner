@@ -16269,6 +16269,9 @@ export const recipes = [
   },
   {
     id: 177,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Finlanda",
       en: "Finland",
@@ -16296,8 +16299,8 @@ export const recipes = [
       zh: "卡累利阿炖肉",
       ja: "カレリアンシチュー",
       tr: "Karelian Yahni",
-      it: "Karelian Stufato",
-      ko: "Karelian 스튜"
+      it: "Stufato della Carelia",
+      ko: "카렐리야 스튜"
     },
     category: {
       ro: "Cină",
@@ -16325,9 +16328,9 @@ export const recipes = [
       ar: ["لحم بقر", "لحم خنزير", "لحم ضأن", "بصل", "جزر", "فلفل", "ملح", "ماء"],
       zh: ["牛肉", "猪肉", "羊肉", "洋葱", "胡萝卜", "胡椒", "盐", "水"],
       ja: ["牛肉", "豚肉", "羊肉", "玉ねぎ", "にんじん", "コショウ", "塩", "水"],
-      tr: ["dana eti", "domuz eti", "kuzu", "soğbir", "havuç", "biber", "tuz", "su"],
-      it: ["manzo", "maiale", "agnello", "cipolla", "carota", "peperone", "sale", "acqua"],
-      ko: ["소고기", "돼지고기", "양고기", "양파", "당근", "고추", "소금", "물"]
+      tr: ["dana eti", "domuz eti", "kuzu", "soğan", "havuç", "biber", "tuz", "su"],
+      it: ["manzo", "maiale", "agnello", "cipolla", "carota", "pepe", "sale", "acqua"],
+      ko: ["소고기", "돼지고기", "양고기", "양파", "당근", "후추", "소금", "물"]
     },
     howIsMade: {
       ro: "Taie carnea și legumele cuburi, pune-le în oală, adaugă apă, sare, piper. Fierbe lent la cuptor până totul este fraged.",
@@ -16340,9 +16343,9 @@ export const recipes = [
       ar: "قطّع اللحم والخضار، ضعهم في وعاء، أضف ماء وملح وفلفل. اطبخ ببطء في الفرن حتى تنضج.",
       zh: "将肉和蔬菜切块放锅中，加水、盐、胡椒，慢炖至酥烂。",
       ja: "肉と野菜を角切りし、鍋に入れ、水・塩・コショウを加えてオーブンでゆっくり煮込む。",
-      tr: "kesin et ve sebzeler küp şeklinde doğrayın, koyun tencere, Ekleyin su, tuz, biber. kısık ateşte yavaşça pişirin in fırın yumuşayana kadar.",
-      it: "taglia carne e verdure dentro cubetti, metti pentola, Aggiungi acqua, sale, peperone. cuoci lentamente in forno finché sarà tenero.",
-      ko: "자릅니다 고기그리고 채소 안에 깍둑썰기, 넣습니다 에서 a 냄비, 넣고 물, 소금, 고추. 약한 불로 천천히 조리합니다 에서 오븐 부드러워질 때까지하세요."
+      tr: "Et ve sebzeleri küp küp doğrayın, tencereye koyun, su, tuz ve biber ekleyerek fırında et yumuşayana kadar yavaşça pişirin.",
+      it: "Tagliate la carne e le verdure a cubetti, mettete in pentola, aggiungete acqua, sale e pepe e cuocete lentamente in forno finché diventano tenere.",
+      ko: "고기와 채소를 깍둑썰기한 후 냄비에 넣고 물, 소금, 후추를 넣어 오븐에서 고기가 부드러워질 때까지 천천히 조리합니다."
     },
     originText: {
       ro: "Karjalanpaisti este o rețetă tradițională din Finlanda.",
@@ -16350,14 +16353,14 @@ export const recipes = [
       es: "Estofado carelio es una receta tradicional de Finlandia.",
       fr: "Ragoût carélien est une recette traditionnelle de Finlande.",
       de: "Karelischer Eintopf ist ein traditionelles Rezept aus Finnland.",
-      pt: "Ensopado da Carélia é uma receita tradicional de Finlândia.",
-      ru: "Карельское рагу — традиционный рецепт из Финляндия.",
+      pt: "Ensopado da Carélia é uma receita tradicional da Finlândia.",
+      ru: "Карельское рагу — традиционный рецепт из Финляндии.",
       ar: "يخنة كاريليا هي وصفة تقليدية من فنلندا.",
       zh: "卡累利阿炖肉 是来自芬兰的传统食谱。",
       ja: "カレリアンシチュー はフィンランドの伝統的なレシピです。",
-      tr: "Karelian stew Finlandiya kökenli geleneksel bir tariftir.",
-      it: "Karelian stew è una risotta tradizionale di Finlandia.",
-      ko: "Karelian stew는(은) 핀란드의 전통 요리입니다."
+      tr: "Karelian Yahni, Finlandiya kökenli geleneksel bir tariftir.",
+      it: "Stufato della Carelia è una ricetta tradizionale della Finlandia.",
+      ko: "카렐리야 스튜는 핀란드의 전통 요리입니다."
     }
   },
   {
