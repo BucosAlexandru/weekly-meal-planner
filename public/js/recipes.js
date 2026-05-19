@@ -13034,7 +13034,7 @@ export const recipes = [
       ja: "カスレ",
       tr: "Cassoulet",
       it: "Cassoulet",
-      ko: "Cassoulet"
+      ko: "카술레"
     },
     category: {
       ro: "Cină",
@@ -13051,6 +13051,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 6,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["fasole albă", "cârnați", "carne de porc", "rață sau gâscă", "ceapă", "usturoi", "roșii", "ierburi aromatice", "ulei", "sare", "piper"],
       en: ["white beans", "sausages", "pork", "duck or goose", "onion", "garlic", "tomatoes", "herbs", "oil", "salt", "pepper"],
@@ -13062,9 +13065,9 @@ export const recipes = [
       ar: ["فاصوليا بيضاء", "نقانق", "لحم خنزير", "بط أو إوز", "بصل", "ثوم", "طماطم", "أعشاب", "زيت", "ملح", "فلفل"],
       zh: ["白芸豆", "香肠", "猪肉", "鸭或鹅", "洋葱", "大蒜", "番茄", "香草", "油", "盐", "胡椒"],
       ja: ["白インゲン豆", "ソーセージ", "豚肉", "鴨またはガチョウ", "玉ねぎ", "ニンニク", "トマト", "ハーブ", "油", "塩", "コショウ"],
-      tr: ["beyaz fasulye", "sosis", "domuz eti", "ördek veya kaz", "soğbir", "sarımsak", "domates", "otlar", "yağ", "tuz", "biber"],
-      it: ["bianco fagioli", "salsicce", "maiale", "anatra o oca", "cipolla", "aglio", "pomodori", "erbe aromatiche", "olio", "sale", "peperone"],
-      ko: ["흰 콩", "소시지", "돼지고기", "오리 또는 거위", "양파", "마늘", "토마토", "허브", "기름", "소금", "고추"]
+      tr: ["beyaz fasulye", "sosis", "domuz eti", "ördek veya kaz", "soğan", "sarımsak", "domates", "otlar", "yağ", "tuz", "biber"],
+      it: ["fagioli bianchi", "salsicce", "maiale", "anatra o oca", "cipolla", "aglio", "pomodori", "erbe aromatiche", "olio", "sale", "pepe"],
+      ko: ["흰 콩", "소시지", "돼지고기", "오리 또는 거위", "양파", "마늘", "토마토", "허브", "기름", "소금", "후추"]
     },
     howIsMade: {
       ro: "Fierbe fasolea, apoi adaugă carnea și cârnații rumeniți, legumele și ierburile. Gătește lent la cuptor până se leagă totul.",
@@ -13077,9 +13080,9 @@ export const recipes = [
       ar: "اسلق الفاصوليا، ثم أضف اللحوم والنقانق المحمرة والخضار والأعشاب. اطبخ ببطء في الفرن.",
       zh: "先煮豆子，再加入炒香的肉类、香肠、蔬菜和香草，放入烤箱慢炖入味。",
       ja: "豆を茹で、炒めた肉やソーセージ、野菜、ハーブを加え、オーブンでゆっくり煮込む。",
-      tr: "Haşlayın fasulye, sonra Ekleyin kahverengileşene kadar etler, sosis, sebzeler ve otlar. kısık ateşte yavaşça pişirin in fırın her şeyi birleşir.",
-      it: "Cuoci fagioli, poi Aggiungi dorato carni, salsicce, verdure e erbe aromatiche. cuoci lentamente in forno tutto si uniscono.",
-      ko: "삶고 콩, 그다음 넣고 노릇해질 때까지 고기, 소시지, 채소그리고 허브. 약한 불로 천천히 조리합니다 에서 오븐 모든 것 어우러집니다하세요."
+      tr: "Fasulyeyi haşlayın, ardından kızarmış etleri, sosisleri, sebzeleri ve otları ekleyin. Fırında yavaşça pişirin.",
+      it: "Cuocete i fagioli, poi aggiungete le carni rosolate, le salsicce, le verdure e le erbe aromatiche. Cuocete lentamente in forno.",
+      ko: "콩을 삶은 뒤 볶은 고기, 소시지, 채소, 허브를 넣어 오븐에서 천천히 조리합니다."
     },
     originText: {
       ro: "Cassoulet este o rețetă tradițională din Franța.",
@@ -13087,14 +13090,14 @@ export const recipes = [
       es: "Cassoulet es una receta tradicional de Francia.",
       fr: "Cassoulet est une recette traditionnelle de France.",
       de: "Cassoulet ist ein traditionelles Rezept aus Frankreich.",
-      pt: "Cassoulet é uma receita tradicional de França.",
-      ru: "Кассуле — традиционный рецепт из Франция.",
+      pt: "Cassoulet é uma receita tradicional da França.",
+      ru: "Кассуле — традиционный рецепт из Франции.",
       ar: "كاسوليه هي وصفة تقليدية من فرنسا.",
       zh: "法式砂锅炖菜 是来自法国的传统食谱。",
       ja: "カスレ はフランスの伝統的なレシピです。",
       tr: "Cassoulet Fransa kökenli geleneksel bir tariftir.",
-      it: "Cassoulet è una risotta tradizionale di Francia.",
-      ko: "Cassoulet는(은) 프랑스의 전통 요리입니다."
+      it: "Cassoulet è una ricetta tradizionale della Francia.",
+      ko: "카술레는 프랑스의 전통 요리입니다."
     }
   },
   {
