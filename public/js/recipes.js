@@ -15981,6 +15981,9 @@ export const recipes = [
   },
   {
     id: 174,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Thailanda",
       en: "Thailand",
@@ -16009,7 +16012,7 @@ export const recipes = [
       ja: "トムカーガイ",
       tr: "Tom Kha Gai",
       it: "Tom Kha Gai",
-      ko: "Tom Kha Gai"
+      ko: "톰카가이"
     },
     category: {
       ro: "Prânz",
@@ -16037,8 +16040,8 @@ export const recipes = [
       ar: ["صدر دجاج", "حليب جوز الهند", "عشب الليمون", "غالانغال", "أوراق الليمون", "فلفل حار", "فطر", "صلصة السمك", "ليمون"],
       zh: ["鸡胸肉", "椰奶", "香茅", "高良姜", "青柠叶", "辣椒", "蘑菇", "鱼露", "青柠"],
       ja: ["鶏むね肉", "ココナッツミルク", "レモングラス", "ガランガル", "ライムリーフ", "唐辛子", "きのこ", "ナンプラー", "ライム"],
-      tr: ["tavuk göğsü", "hindistancevizi süt", "limongrass", "galangal", "yeşil limon yaprak", "acı biber", "mantar", "balık sos", "yeşil limon"],
-      it: ["petto di pollo", "cocco latte", "limonegrass", "galanga", "lime foglie", "peperoncino", "funghi", "pesce salsa", "lime"],
+      tr: ["tavuk göğsü", "hindistancevizi sütü", "limongrass", "galangal", "yeşil limon yaprağı", "acı biber", "mantar", "balık sosu", "yeşil limon"],
+      it: ["petto di pollo", "latte di cocco", "limonegrass", "galanga", "foglie di lime", "peperoncino", "funghi", "salsa di pesce", "lime"],
       ko: ["닭가슴살", "코코넛 우유", "레몬풀", "갈랑갈", "라임 잎", "고추", "버섯", "생선 소스", "라임"]
     },
     howIsMade: {
@@ -16052,9 +16055,9 @@ export const recipes = [
       ar: "اغلِ صدور الدجاج مع حليب جوز الهند، عشب الليمون، الجلانجال، أوراق الليمون والفطر. تبلها بصلصة السمك والليمون.",
       zh: "鸡胸肉与椰奶、香茅、南姜、青柠叶、蘑菇一起煮，用鱼露和青柠汁调味。",
       ja: "鶏胸肉をココナッツミルク・レモングラス・ガランガル・コブミカンの葉・きのこと一緒に煮て、ナンプラーとライムで味付け。",
-      tr: "Haşlayın tavuk göğsü ile hindistancevizi süt, limongrass, galangal, kaffir yeşil limon yaprak, ve mantar. Season ile balık sos ve yeşil limon.",
-      it: "Cuoci petto di pollo con cocco latte, limonegrass, galanga, kaffir lime foglie, e funghi. Season con pesce salsa e lime.",
-      ko: "코코넛 밀크에 레몬그라스, 갈랑갈, 카피르 라임잎, 버섯을 넣고 닭가슴살을 끓여주세요. 피시 소스와 라임즙으로 간을 맞춰주세요."
+      tr: "Tavuk göğsünü hindistancevizi sütü, limongrass, galangal, kaffir limon yaprağı ve mantarla birlikte haşlayın. Balık sosu ve yeşil limonla tatlandırın.",
+      it: "Cuocete il petto di pollo con latte di cocco, limonegrass, galanga, foglie di kaffir lime e funghi. Condite con salsa di pesce e lime.",
+      ko: "코코넛 밀크에 레몬그라스, 갈랑갈, 카피르 라임잎, 버섯을 넣고 닭가슴살을 끓입니다. 피시 소스와 라임즙으로 간을 맞춥니다."
     },
     originText: {
       ro: "Tom Kha Gai este o rețetă tradițională din Thailanda.",
@@ -16062,14 +16065,14 @@ export const recipes = [
       es: "Tom Kha Gai es una receta tradicional de Tailandia.",
       fr: "Tom Kha Gai est une recette traditionnelle de Thaïlande.",
       de: "Tom Kha Gai ist ein traditionelles Rezept aus Thailand.",
-      pt: "Tom Kha Gai é uma receita tradicional de Tailândia.",
-      ru: "Том Кха Гай — традиционный рецепт из Таиланд.",
+      pt: "Tom Kha Gai é uma receita tradicional da Tailândia.",
+      ru: "Том Кха Гай — традиционный рецепт из Таиланда.",
       ar: "توم خا غاي هي وصفة تقليدية من تايلاند.",
       zh: "冬阴椰鸡汤 是来自泰国的传统食谱。",
       ja: "トムカーガイ はタイの伝統的なレシピです。",
-      tr: "Tom Kha Gai Tayland kökenli geleneksel bir tariftir.",
-      it: "Tom Kha Gai è una risotta tradizionale di Thailandia.",
-      ko: "Tom Kha Gai는(은) 태국의 전통 요리입니다."
+      tr: "Tom Kha Gai, Tayland kökenli geleneksel bir tariftir.",
+      it: "Tom Kha Gai è una ricetta tradizionale della Thailandia.",
+      ko: "톰카가이는 태국의 전통 요리입니다."
     }
   },
   {
