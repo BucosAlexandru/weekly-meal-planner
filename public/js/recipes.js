@@ -14925,12 +14925,16 @@ export const recipes = [
   },
   {
     id: 163,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Columbia",
       en: "Colombia",
       es: "Colombia",
       fr: "Colombie",
       de: "Kolumbien",
+      pt: "Colômbia",
       ru: "Колумбия",
       ar: "كولومبيا",
       zh: "哥伦比亚",
@@ -14945,13 +14949,14 @@ export const recipes = [
       es: "Bandeja Paisa",
       fr: "Bandeja Paisa",
       de: "Bandeja Paisa",
+      pt: "Bandeja Paisa",
       ru: "Бандеха пайса",
       ar: "بانديخا بايسا",
       zh: "哥伦比亚拼盘饭",
       ja: "バンデハ・パイサ",
       tr: "Bandeja Paisa",
       it: "Bandeja Paisa",
-      ko: "Bandeja Paisa"
+      ko: "반데하 파이사"
     },
     category: {
       ro: "Prânz",
@@ -14959,6 +14964,7 @@ export const recipes = [
       es: "Almuerzo",
       fr: "Déjeuner",
       de: "Mittagessen",
+      pt: "Almoço",
       ru: "Обед",
       ar: "غداء",
       zh: "午餐",
@@ -14977,6 +14983,7 @@ export const recipes = [
       ar: ["أرز", "فاصوليا", "لحم بقر", "بيض", "موز بلانتاين", "أفوكادو", "لحم خنزير", "تشوريزو", "أريبا"],
       zh: ["米饭", "豆类", "牛肉", "鸡蛋", "蕉", "鳄梨", "猪肉", "辣香肠", "阿雷帕玉米饼"],
       ja: ["ご飯", "豆", "牛肉", "卵", "プランテンバナナ", "アボカド", "豚肉", "チョリソ", "アレパ"],
+      pt: ["arroz", "feijão", "carne bovina", "ovo", "banana-da-terra", "abacate", "carne de porco", "chorizo", "arepa"],
       tr: ["pirinç", "fasulye", "dana eti", "yumurta", "muz (plantain)", "avokado", "domuz eti", "chorizo", "arepa"],
       it: ["riso", "fagioli", "manzo", "uovo", "platano", "avocado", "maiale", "chorizo", "arepa"],
       ko: ["쌀", "콩", "소고기", "계란", "플랜틴", "아보카도", "돼지고기", "초리소", "아레파"]
@@ -14991,9 +14998,10 @@ export const recipes = [
       ar: "اطبخ اللحم والفاصوليا والأرز بشكل منفصل. قدّم كل شيء معًا في طبق كبير مع موز مقلي، بيض، أفوكادو، تشوريزو وأريبا.",
       zh: "牛肉、豆类、米饭分开煮。一起放大盘子上，配上煎蕉、鸡蛋、鳄梨、辣香肠和玉米饼。",
       ja: "肉、豆、ご飯を別々に調理し、大きなお皿に揚げたプランテン、卵、アボカド、チョリソ、アレパと一緒に盛り付ける。",
-      tr: "Pişirin et, fasulye, ve pirinç ayrı ayrı. servis edin tüm birlikte üstüne a büyük tabak ile kızarmış muz (plantain), yumurta, avokado, chorizo, ve arepa.",
-      it: "Cuoci carne, fagioli, e riso separatamente. servi tutto insieme su a grande piatto con fritto platano, uovo, avocado, chorizo, e arepa.",
-      ko: "조리하고 고기, 콩, 그리고 쌀 따로. 제공합니다 모든 함께 위에 a 큰 접시와 튀긴 플랜틴, 계란, 아보카도, 초리소, 그리고 아레파하세요."
+      pt: "Cozinhe a carne, o feijão e o arroz separadamente. Sirva tudo junto num prato grande com banana-da-terra frita, ovo, abacate, chorizo e arepa.",
+      tr: "Eti, fasulyeyi ve pirinci ayrı ayrı pişirin. Kızarmış muz, yumurta, avokado, chorizo ve arepa ile birlikte büyük bir tabakta servis edin.",
+      it: "Cuoci carne, fagioli e riso separatamente. Servi tutto insieme su un grande piatto con platano fritto, uovo, avocado, chorizo e arepa.",
+      ko: "고기, 콩, 쌀을 각각 따로 익힙니다. 튀긴 플랜틴, 계란, 아보카도, 초리소, 아레파와 함께 큰 접시에 담아냅니다."
     },
     originText: {
       ro: "Bandeja Paisa este o rețetă tradițională din Columbia.",
@@ -15001,14 +15009,14 @@ export const recipes = [
       es: "Bandeja Paisa es una receta tradicional de Colombia.",
       fr: "Bandeja Paisa est une recette traditionnelle de Colombie.",
       de: "Bandeja Paisa ist ein traditionelles Rezept aus Kolumbien.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Бандеха пайса — традиционный рецепт из Колумбия.",
+      pt: "Bandeja Paisa é uma receita tradicional da Colômbia.",
+      ru: "Бандеха пайса — традиционный рецепт из Колумбии.",
       ar: "بانديخا بايسا هي وصفة تقليدية من كولومبيا.",
       zh: "哥伦比亚拼盘饭 是来自哥伦比亚的传统食谱。",
       ja: "バンデハ・パイサ はコロンビアの伝統的なレシピです。",
       tr: "Bandeja Paisa Kolombiya kökenli geleneksel bir tariftir.",
-      it: "Bandeja Paisa è una risotta tradizionale di Colombia.",
-      ko: "Bandeja Paisa는(은) 콜롬비아의 전통 요리입니다."
+      it: "Bandeja Paisa è una ricetta tradizionale della Colombia.",
+      ko: "반데하 파이사는 콜롬비아의 전통 요리입니다."
     }
   },
   {
