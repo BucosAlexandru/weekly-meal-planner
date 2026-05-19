@@ -16077,6 +16077,9 @@ export const recipes = [
   },
   {
     id: 175,
+    servings: 6,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Capul Verde",
       en: "Cape Verde",
@@ -16088,9 +16091,9 @@ export const recipes = [
       ar: "الرأس الأخضر",
       zh: "佛得角",
       ja: "カーボベルデ",
-      tr: "Cape Verde",
-      it: "Cape Verde",
-      ko: "Cape Verde"
+      tr: "Cabo Verde",
+      it: "Capo Verde",
+      ko: "카보베르데"
     },
     name: {
       ro: "Cachupa",
@@ -16105,7 +16108,7 @@ export const recipes = [
       ja: "カチュパ",
       tr: "Cachupa",
       it: "Cachupa",
-      ko: "Cachupa"
+      ko: "카추파"
     },
     category: {
       ro: "Cină",
@@ -16133,7 +16136,7 @@ export const recipes = [
       ar: ["ذرة", "فاصوليا", "كرنب", "بطاطس", "يقطين", "لحم خنزير", "نقانق", "بصل", "ثوم", "طماطم", "زيت", "ملح"],
       zh: ["玉米", "豆类", "卷心菜", "土豆", "南瓜", "猪肉", "香肠", "洋葱", "大蒜", "番茄", "油", "盐"],
       ja: ["トウモロコシ", "豆類", "キャベツ", "ジャガイモ", "カボチャ", "豚肉", "ソーセージ", "玉ねぎ", "ニンニク", "トマト", "油", "塩"],
-      tr: ["mısır", "fasulye", "lahana", "patates", "kabak", "domuz eti", "sosis", "soğbir", "sarımsak", "domates", "yağ", "tuz"],
+      tr: ["mısır", "fasulye", "lahana", "patates", "kabak", "domuz eti", "sosis", "soğan", "sarımsak", "domates", "yağ", "tuz"],
       it: ["mais", "fagioli", "cavolo", "patate", "zucca", "maiale", "salsicce", "cipolla", "aglio", "pomodori", "olio", "sale"],
       ko: ["옥수수", "콩", "양배추", "감자", "호박", "돼지고기", "소시지", "양파", "마늘", "토마토", "기름", "소금"]
     },
@@ -16148,24 +16151,24 @@ export const recipes = [
       ar: "اسلق الذرة والفاصوليا، ثم أضف الخضار واللحم واطبخ طويلًا حتى يصبح كثيفًا.",
       zh: "先煮玉米和豆类，再加蔬菜和肉，慢炖至浓稠。",
       ja: "トウモロコシと豆を煮て、野菜や肉を加え、長時間煮込む。",
-      tr: "Haşlayın mısır ve fasulye, Ekleyin sebzeler ve et, Kısık ateşte pişir için a uzun süre koyu.",
-      it: "Cuoci mais e fagioli, Aggiungi verdure e carne, Fai sobbollire per a lungo tempo denso.",
-      ko: "삶고 옥수수그리고 콩, 넣고 채소그리고 고기, 약불로 끓여 을 위해 a 긴 시간 걸쭉한하세요."
+      tr: "Mısır ve fasulyeyi haşlayın, sebze ve eti ekleyin, kısık ateşte uzun süre koyulaşana kadar pişirin.",
+      it: "Cuocete il mais e i fagioli, aggiungete le verdure e la carne, fate sobbollire a lungo finché addensa.",
+      ko: "옥수수와 콩을 삶은 후 채소와 고기를 넣고 걸쭉해질 때까지 오래 약불로 조리합니다."
     },
     originText: {
       ro: "Cachupa este o rețetă tradițională din Capul Verde.",
       en: "Cachupa is a traditional recipe from Cape Verde.",
       es: "Cachupa es una receta tradicional de Cabo Verde.",
-      fr: "Cachupa est une recette traditionnelle de Cap-Vert.",
+      fr: "Cachupa est une recette traditionnelle du Cap-Vert.",
       de: "Cachupa ist ein traditionelles Rezept aus Kap Verde.",
       pt: "Cachupa é uma receita tradicional de Cabo Verde.",
       ru: "Качупа — традиционный рецепт из Кабо-Верде.",
       ar: "كاشوبا هي وصفة تقليدية من الرأس الأخضر.",
       zh: "卡丘帕炖菜 是来自佛得角的传统食谱。",
       ja: "カチュパ はカーボベルデの伝統的なレシピです。",
-      tr: "Cachupa Cape Verde kökenli geleneksel bir tariftir.",
-      it: "Cachupa è una risotta tradizionale di Cape Verde.",
-      ko: "Cachupa는(은) Cape Verde의 전통 요리입니다."
+      tr: "Cachupa, Cabo Verde kökenli geleneksel bir tariftir.",
+      it: "Cachupa è una ricetta tradizionale di Capo Verde.",
+      ko: "카추파는 카보베르데의 전통 요리입니다."
     }
   },
   {
