@@ -15693,6 +15693,9 @@ export const recipes = [
   },
   {
     id: 171,
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     origin: {
       ro: "Rusia",
       en: "Russia",
@@ -15721,7 +15724,7 @@ export const recipes = [
       ja: "ソリャンカ",
       tr: "Solyanka",
       it: "Solyanka",
-      ko: "Solyanka"
+      ko: "솔랸카"
     },
     category: {
       ro: "Prânz",
@@ -15749,8 +15752,8 @@ export const recipes = [
       ar: ["لحم بقري", "نقانق", "مخللات", "بصل", "طماطم", "قشدة حامضة", "ليمون"],
       zh: ["牛肉", "香肠", "腌黄瓜", "洋葱", "番茄", "酸奶油", "柠檬"],
       ja: ["牛肉", "ソーセージ", "ピクルス", "玉ねぎ", "トマト", "サワークリーム", "レモン"],
-      tr: ["dana eti", "sosis", "turşu", "soğbir", "domates", "ekşi krema", "limon"],
-      it: ["manzo", "salsicce", "sottaceti", "cipolla", "pomodori", "acidulo panna", "limone"],
+      tr: ["dana eti", "sosis", "turşu", "soğan", "domates", "ekşi krema", "limon"],
+      it: ["manzo", "salsicce", "sottaceti", "cipolla", "pomodori", "panna acida", "limone"],
       ko: ["소고기", "소시지", "피클", "양파", "토마토", "새콤한 크림", "레몬"]
     },
     howIsMade: {
@@ -15764,9 +15767,9 @@ export const recipes = [
       ar: "اغلي اللحم، أضف النقانق والخضار، تبّل، قدم مع القشدة الحامضة والليمون.",
       zh: "煮牛肉，加入香肠和蔬菜调味，配酸奶油和柠檬食用。",
       ja: "牛肉を茹で、ソーセージと野菜を加えて味付けし、サワークリームとレモンを添えて提供。",
-      tr: "Haşlayın dana eti, Ekleyin sosis ve sebzeler, Baharatlandır, Servis edin ile ekşi krema ve limon.",
-      it: "Cuoci manzo, Aggiungi salsicce e verdure, Condisci, Servi con acidulo panna e limone.",
-      ko: "삶고 소고기, 넣고 소시지그리고 채소, 간을 맞추고, 담아 내세요와 새콤한 크림그리고 레몬하세요."
+      tr: "Dana etini haşlayın, sosis ve sebzeleri ekleyip baharatlayın, ekşi krema ve limonla servis edin.",
+      it: "Cuocete il manzo, aggiungete le salsicce e le verdure, condite e servite con panna acida e limone.",
+      ko: "소고기를 삶은 후 소시지와 채소를 넣고 간을 맞춰 새콤한 크림과 레몬을 곁들여 냅니다."
     },
     originText: {
       ro: "Solyanka este o rețetă tradițională din Rusia.",
@@ -15774,14 +15777,14 @@ export const recipes = [
       es: "Solyanka es una receta tradicional de Rusia.",
       fr: "Solyanka est une recette traditionnelle de Russie.",
       de: "Solyanka ist ein traditionelles Rezept aus Russland.",
-      pt: "Solyanka é uma receita tradicional de Rússia.",
-      ru: "Солянка — традиционный рецепт из Россия.",
+      pt: "Solyanka é uma receita tradicional da Rússia.",
+      ru: "Солянка — традиционный рецепт из России.",
       ar: "سوليانكا هي وصفة تقليدية من روسيا.",
       zh: "罗宋汤 是来自俄罗斯的传统食谱。",
       ja: "ソリャンカ はロシアの伝統的なレシピです。",
-      tr: "Solyanka Rusya kökenli geleneksel bir tariftir.",
-      it: "Solyanka è una risotta tradizionale di Russia.",
-      ko: "Solyanka는(은) 러시아의 전통 요리입니다."
+      tr: "Solyanka, Rusya kökenli geleneksel bir tariftir.",
+      it: "Solyanka è una ricetta tradizionale della Russia.",
+      ko: "솔랸카는 러시아의 전통 요리입니다."
     }
   },
   {
