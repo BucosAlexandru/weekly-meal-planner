@@ -69,6 +69,19 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 58 | Ful Medames | ✅ | ✅ | `186f970a` | 10 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
 | 59 | Pasticada | ✅ | ✅ | `df31196c` | 12 fixes: 3 struct fields, origin it/tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
 | 60 | Buuz | ✅ | ✅ | `6ed83b6e` | 12 fixes: 3 struct fields, origin tr/ko, name.ko, originText.de/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 61 | Biryani | ✅ | ✅ | `7be76e95` | 9 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/tr/it/ko |
+| 62 | Brik | ✅ | ✅ | `80a781c2` | 9 fixes: 3 struct fields, origin tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 63 | Khachapuri | ✅ | ✅ | `0fd228e9` | 9 fixes: 3 struct fields, origin tr/ko, name.ko, originText.pt/ru/tr/it/ko; NOTE: stub recipe |
+| 64 | Bobotie | ✅ | ✅ | `1e7156dc` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 65 | Ceviche | ✅ | ✅ | `96b7d091` | 6 fixes: 3 struct fields, name.ko, originText.fr/pt/it/ko; NOTE: stub recipe |
+| 66 | Kimchi | ✅ | ✅ | `b93a114b` | 10 fixes: 3 struct fields, name.ko, category tr/it/ko, originText.pt/ru/tr/it/ko |
+| 67 | Banh Mi | ✅ | ✅ | `6a5ade8b` | 7 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 68 | Satay | ✅ | ✅ | `5322300e` | 7 fixes: 3 struct fields, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
+| 69 | Laksa | ✅ | ✅ | `675b7502` | 6 fixes: 3 struct fields, name.ko, originText.pt/ru/it/ko; NOTE: stub recipe |
+| 70 | Pupusa | ✅ | ✅ | `edcc4a7c` | 7 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/ru/it/ko; NOTE: stub recipe |
+| — | (id 71 absent) | — | — | — | No recipe with id 71 in file |
+| 72 | Amok | ✅ | ✅ | `1adeb0de` | 11 fixes: 3 struct fields, origin tr/it/ko, name.ko, originText.fr/pt/ru/tr/it/ko; NOTE: stub recipe |
+| 73 | Momo | ✅ | ✅ | `f63ff84f` | 8 fixes: 3 struct fields, origin.ko, name.ko, originText.fr/pt/ru/it/ko; NOTE: stub recipe |
 
 ---
 
