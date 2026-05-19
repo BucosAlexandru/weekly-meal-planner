@@ -12825,9 +12825,9 @@ export const recipes = [
       ar: "الكويت",
       zh: "科威特",
       ja: "クウェート",
-      tr: "Kuwait",
+      tr: "Kuveyt",
       it: "Kuwait",
-      ko: "Kuwait"
+      ko: "쿠웨이트"
     },
     name: {
       ro: "Machboos",
@@ -12842,7 +12842,7 @@ export const recipes = [
       ja: "マチブース",
       tr: "Machboos",
       it: "Machboos",
-      ko: "Machboos"
+      ko: "마흐부스"
     },
     category: {
       ro: "Cină",
@@ -12859,6 +12859,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["orez", "carne de miel sau pui", "ceapă", "roșii", "usturoi", "cardamom", "scorțișoară", "cuișoare"],
       en: ["rice", "lamb or chicken", "onion", "tomatoes", "garlic", "cardamom", "cinnamon", "cloves"],
@@ -12870,7 +12873,7 @@ export const recipes = [
       ar: ["أرز", "لحم ضأن أو دجاج", "بصل", "طماطم", "ثوم", "هيل", "قرفة", "قرنفل"],
       zh: ["米饭", "羊肉或鸡肉", "洋葱", "番茄", "大蒜", "小豆蔻", "肉桂", "丁香"],
       ja: ["ご飯", "ラム肉または鶏肉", "玉ねぎ", "トマト", "ニンニク", "カルダモン", "シナモン", "クローブ"],
-      tr: ["pirinç", "kuzu veya tavuk", "soğbir", "domates", "sarımsak", "kakule", "tarçın", "karanfil"],
+      tr: ["pirinç", "kuzu veya tavuk", "soğan", "domates", "sarımsak", "kakule", "tarçın", "karanfil"],
       it: ["riso", "agnello o pollo", "cipolla", "pomodori", "aglio", "cardamomo", "cannella", "chiodi di garofano"],
       ko: ["쌀", "양고기 또는 닭고기", "양파", "토마토", "마늘", "카다멈", "계피", "정향"]
     },
@@ -12885,24 +12888,24 @@ export const recipes = [
       ar: "اقلِ اللحم مع البصل والتوابل، أضف الطماطم والأرز، واطبخ كل شيء حتى ينضج الأرز.",
       zh: "肉和洋葱、香料炒香，加番茄和米饭炖至米饭熟透入味。",
       ja: "肉を玉ねぎ・スパイスと炒め、トマトと米を加え、一緒に煮てご飯が炊き上がるまで煮る。",
-      tr: "Kızartın et ile soğan ve baharatlar, Ekleyin domates ve pirinç, sonra Kısık ateşte pişir her şeyi birlikte pirinç pişirilmiş ve lezzetli.",
-      it: "Friggi carne con cipolla e spezie, Aggiungi pomodori e riso, poi Fai sobbollire tutto insieme riso  cuocied e sapori intensi.",
-      ko: "볶거나 튀기고 고기와 양파그리고 향신료, 넣고 토마토그리고 쌀, 그다음 약불로 끓여 모든 것 함께 쌀 입니다 조리합니다그리고 풍미가 좋은하세요."
+      tr: "Eti soğan ve baharatlarla kızartın, domates ve pirinç ekleyin, ardından pirinç pişene kadar birlikte kısık ateşte pişirin.",
+      it: "Rosolate la carne con cipolla e spezie, aggiungete pomodori e riso, poi fate sobbollire tutto insieme finché il riso non è cotto e saporito.",
+      ko: "고기와 양파, 향신료를 볶고 토마토와 쌀을 넣어 쌀이 익을 때까지 약불에 함께 끓입니다."
     },
     originText: {
       ro: "Machboos este o rețetă tradițională din Kuweit.",
       en: "Machboos is a traditional recipe from Kuwait.",
       es: "Machboos es una receta tradicional de Kuwait.",
-      fr: "Machboos est une recette traditionnelle de Koweït.",
+      fr: "Machboos est une recette traditionnelle du Koweït.",
       de: "Machboos ist ein traditionelles Rezept aus Kuwait.",
       pt: "Machboos é uma receita tradicional de Kuwait.",
-      ru: "Мачбус — традиционный рецепт из Кувейт.",
+      ru: "Мачбус — традиционный рецепт из Кувейта.",
       ar: "مجبوس هي وصفة تقليدية من الكويت.",
       zh: "科威特香料饭 是来自科威特的传统食谱。",
       ja: "マチブース はクウェートの伝統的なレシピです。",
-      tr: "Machboos Kuwait kökenli geleneksel bir tariftir.",
-      it: "Machboos è una risotta tradizionale di Kuwait.",
-      ko: "Machboos는(은) Kuwait의 전통 요리입니다."
+      tr: "Machboos Kuveyt kökenli geleneksel bir tariftir.",
+      it: "Machboos è una ricetta tradizionale del Kuwait.",
+      ko: "마흐부스는 쿠웨이트의 전통 요리입니다."
     }
   },
   {
