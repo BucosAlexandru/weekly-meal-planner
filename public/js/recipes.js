@@ -11387,7 +11387,7 @@ export const recipes = [
       ja: "スリランカ",
       tr: "Sri Lanka",
       it: "Sri Lanka",
-      ko: "Sri Lanka"
+      ko: "스리랑카"
     },
     name: {
       ro: "Kottu",
@@ -11402,7 +11402,7 @@ export const recipes = [
       ja: "コットゥ",
       tr: "Kottu",
       it: "Kottu",
-      ko: "Kottu"
+      ko: "코투"
     },
     category: {
       ro: "Cină",
@@ -11419,6 +11419,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 2,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["roti (lipie)", "ouă", "pui", "legume", "condimente", "ceapă", "sos curry"],
       en: ["roti bread", "eggs", "chicken", "vegetables", "spices", "onion", "curry sauce"],
@@ -11430,9 +11433,9 @@ export const recipes = [
       ar: ["خبز روتي", "بيض", "دجاج", "خضار", "توابل", "بصل", "صلصة كاري"],
       zh: ["烤饼", "鸡蛋", "鸡肉", "蔬菜", "香料", "洋葱", "咖喱酱"],
       ja: ["ロティパン", "卵", "鶏肉", "野菜", "スパイス", "玉ねぎ", "カレーソース"],
-      tr: ["roti ekmek", "yumurta", "tavuk", "sebzeler", "baharatlar", "soğbir", "köri sos"],
-      it: ["roti pane", "uova", "pollo", "verdure", "spezie", "cipolla", "curry salsa"],
-      ko: ["roti 빵", "계란", "닭고기", "채소", "향신료", "양파", "카레 소스"]
+      tr: ["roti ekmek", "yumurta", "tavuk", "sebzeler", "baharatlar", "soğan", "köri sos"],
+      it: ["pane roti", "uova", "pollo", "verdure", "spezie", "cipolla", "salsa al curry"],
+      ko: ["로티 빵", "달걀", "닭고기", "채소", "향신료", "양파", "카레 소스"]
     },
     howIsMade: {
       ro: "Toacă paratha sau pâine rotis, prăjește-le cu legume, ou și carne sau pește la alegere, asezonează cu condimente.",
@@ -11445,9 +11448,9 @@ export const recipes = [
       ar: "قطّع خبز الباراتا أو الروتي، واقليه مع الخضار والبيض واللحم أو السمك حسب الرغبة وتبّلها.",
       zh: "把帕拉塔饼或烙饼切碎，与蔬菜、鸡蛋和喜欢的肉类或鱼一起炒，加香料调味。",
       ja: "パラータやロティを刻み、野菜・卵・肉や魚と炒めてスパイスで味付け。",
-      tr: "Doğra paratha veya roti, karıştırın-kavurun ile sebzeler, yumurta, ve seçim et veya balık, Baharatlandır ile baharatlar.",
-      it: "Trita paratha o roti, mescola-rosola con verdure, uovo, e  scelta  carne o pesce, Condisci con spezie.",
-      ko: "파라타 또는 로티를 잘게 썰어 채소, 달걀과 함께 볶아주세요. 고기 또는 생선을 추가하고 향신료로 간을 맞춰주세요."
+      tr: "Paratha veya rotiyi doğrayın, sebzeler, yumurta ve tercih ettiğiniz et veya balıkla karıştırarak kavurun, baharatlarla tatlandırın.",
+      it: "Tritate il paratha o roti, fate rosolare con verdure, uovo e carne o pesce a scelta, condite con spezie.",
+      ko: "파라타 또는 로티를 잘게 썰어 채소, 달걀과 함께 볶습니다. 고기 또는 생선을 넣고 향신료로 간을 맞춰 완성합니다."
     },
     originText: {
       ro: "Kottu este o rețetă tradițională din Sri Lanka.",
@@ -11456,13 +11459,13 @@ export const recipes = [
       fr: "Kottu est une recette traditionnelle de Sri Lanka.",
       de: "Kottu ist ein traditionelles Rezept aus Sri Lanka.",
       pt: "Kottu é uma receita tradicional de Sri Lanka.",
-      ru: "Котту — традиционный рецепт из Шри-Ланка.",
+      ru: "Котту — традиционный рецепт из Шри-Ланки.",
       ar: "كوتو هي وصفة تقليدية من سريلانكا.",
       zh: "斯里兰卡炒饼 是来自斯里兰卡的传统食谱。",
       ja: "コットゥ はスリランカの伝統的なレシピです。",
       tr: "Kottu Sri Lanka kökenli geleneksel bir tariftir.",
-      it: "Kottu è una risotta tradizionale di Sri Lanka.",
-      ko: "Kottu는(은) Sri Lanka의 전통 요리입니다."
+      it: "Kottu è una ricetta tradizionale di Sri Lanka.",
+      ko: "코투는 스리랑카의 전통 요리입니다."
     }
   },
   {
