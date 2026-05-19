@@ -15789,6 +15789,9 @@ export const recipes = [
   },
   {
     id: 172,
+    servings: 4,
+    tipType: 'fish',
+    pairingsType: 'fish',
     origin: {
       ro: "SUA",
       en: "USA",
@@ -15817,7 +15820,7 @@ export const recipes = [
       ja: "クラムチャウダー",
       tr: "Clam Chowder",
       it: "Clam Chowder",
-      ko: "Clam Chowder"
+      ko: "클램 차우더"
     },
     category: {
       ro: "Cină",
@@ -15845,9 +15848,9 @@ export const recipes = [
       ar: ["محار", "بطاطس", "بصل", "حليب", "كريمة", "زبدة", "لحم مقدد", "دقيق", "ملح", "فلفل"],
       zh: ["蛤蜊", "土豆", "洋葱", "牛奶", "奶油", "黄油", "培根", "面粉", "盐", "胡椒"],
       ja: ["アサリ", "ジャガイモ", "玉ねぎ", "牛乳", "クリーム", "バター", "ベーコン", "小麦粉", "塩", "コショウ"],
-      tr: ["midye", "patates", "soğbir", "süt", "krema", "tereyağı", "pastırma", "un", "tuz", "biber"],
-      it: ["vongole", "patate", "cipolla", "latte", "panna", "burro", "pancetta", "farina", "sale", "peperone"],
-      ko: ["조개", "감자", "양파", "우유", "크림", "버터", "베이컨", "밀가루", "소금", "고추"]
+      tr: ["midye", "patates", "soğan", "süt", "krema", "tereyağı", "pastırma", "un", "tuz", "biber"],
+      it: ["vongole", "patate", "cipolla", "latte", "panna", "burro", "pancetta", "farina", "sale", "pepe"],
+      ko: ["조개", "감자", "양파", "우유", "크림", "버터", "베이컨", "밀가루", "소금", "후추"]
     },
     howIsMade: {
       ro: "Călește ceapa și baconul, adaugă făina, cartofii și laptele, fierbe totul, apoi adaugă scoicile la final.",
@@ -15860,24 +15863,24 @@ export const recipes = [
       ar: "حمّر البصل واللحم المقدد، أضف الدقيق، البطاطس والحليب، اطبخ ثم أضف المحار في النهاية.",
       zh: "炒洋葱和培根，加入面粉、土豆和牛奶，煮沸后最后加蛤蜊。",
       ja: "玉ねぎとベーコンを炒め、小麦粉・ジャガイモ・牛乳を加え煮込み、最後にアサリを入れる。",
-      tr: "soteleyin soğan ve pastırma, Ekleyin un, patates, ve süt, Kısık ateşte pişir, sonra Ekleyin midye sonunda.",
-      it: "soffriggié cipolla e pancetta, Aggiungi farina, patate, e latte, Fai sobbollire, poi Aggiungi vongole  alla fine.",
-      ko: "볶습니다é 양파그리고 베이컨, 넣고 밀가루, 감자, 그리고 우유, 약불로 끓여, 그다음 넣고 조개 에서 마지막에하세요."
+      tr: "Soğan ve pastırmayı soteleyin, un, patates ve sütü ekleyip kısık ateşte pişirin, en sonunda midyeleri ilave edin.",
+      it: "Soffriggete la cipolla e la pancetta, aggiungete la farina, le patate e il latte, fate sobbollire, poi aggiungete le vongole alla fine.",
+      ko: "양파와 베이컨을 볶은 후 밀가루, 감자, 우유를 넣고 약불로 끓인 다음 마지막에 조개를 넣습니다."
     },
     originText: {
       ro: "Clam Chowder este o rețetă tradițională din SUA.",
       en: "Clam Chowder is a traditional recipe from USA.",
       es: "Clam Chowder es una receta tradicional de EE.UU..",
-      fr: "Clam Chowder est une recette traditionnelle de États-Unis.",
-      de: "Clam Chowder ist ein traditionelles Rezept aus USA.",
-      pt: "Clam Chowder é uma receita tradicional de EUA.",
+      fr: "Clam Chowder est une recette traditionnelle des États-Unis.",
+      de: "Clam Chowder ist ein traditionelles Rezept aus den USA.",
+      pt: "Clam Chowder é uma receita tradicional dos EUA.",
       ru: "Клэм чаудер — традиционный рецепт из США.",
       ar: "شوربة البطلينوس هي وصفة تقليدية من الولايات المتحدة.",
       zh: "蛤蜊浓汤 是来自美国的传统食谱。",
       ja: "クラムチャウダー はアメリカの伝統的なレシピです。",
-      tr: "Clam Chowder ABD kökenli geleneksel bir tariftir.",
-      it: "Clam Chowder è una risotta tradizionale di USA.",
-      ko: "Clam Chowder는(은) 미국의 전통 요리입니다."
+      tr: "Clam Chowder, ABD kökenli geleneksel bir tariftir.",
+      it: "Clam Chowder è una ricetta tradizionale degli USA.",
+      ko: "클램 차우더는 미국의 전통 요리입니다."
     }
   },
   {
