@@ -16653,6 +16653,9 @@ export const recipes = [
   },
   {
     id: 181,
+    servings: 2,
+    tipType: 'japanese',
+    pairingsType: 'japanese',
     origin: {
       ro: "Japonia", en: "Japan", es: "Japón", fr: "Japon", de: "Japan",
       pt: "Japão", ru: "Япония", ar: "اليابان", zh: "日本", ja: "日本",
@@ -16710,7 +16713,7 @@ export const recipes = [
       ar: "رامن تونكوتسو وصفة تقليدية من اليابان.",
       zh: "猪骨拉面是来自日本的传统食谱。",
       ja: "豚骨ラーメンは日本の伝統的なレシピです。",
-      tr: "Tonkotsu Ramen Japonya kökenli geleneksel bir tariftir.",
+      tr: "Tonkotsu Ramen, Japonya kökenli geleneksel bir tariftir.",
       it: "Ramen Tonkotsu è una ricetta tradizionale del Giappone.",
       ko: "돈코츠 라멘은 일본의 전통 요리입니다."
     }
