@@ -16365,6 +16365,9 @@ export const recipes = [
   },
   {
     id: 178,
+    servings: 6,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Franța",
       en: "France",
@@ -16393,7 +16396,7 @@ export const recipes = [
       ja: "ブッフ・ブルギニヨン",
       tr: "Boeuf Bourguignon",
       it: "Boeuf Bourguignon",
-      ko: "Boeuf Bourguignon"
+      ko: "뵈프 부르기뇽"
     },
     category: {
       ro: "Cină",
@@ -16421,9 +16424,9 @@ export const recipes = [
       ar: ["لحم بقر", "نبيذ أحمر", "جزر", "بصل", "ثوم", "فطر", "لحم مقدد", "بقدونس", "زيت", "دقيق", "ملح", "فلفل"],
       zh: ["牛肉", "红葡萄酒", "胡萝卜", "洋葱", "大蒜", "蘑菇", "培根", "香菜", "油", "面粉", "盐", "胡椒"],
       ja: ["牛肉", "赤ワイン", "人参", "玉ねぎ", "にんにく", "マッシュルーム", "ベーコン", "パセリ", "油", "小麦粉", "塩", "コショウ"],
-      tr: ["dana eti", "kırmızı şarap", "havuçs", "soğbir", "sarımsak", "mantar", "pastırma", "maydanoz", "yağ", "un", "tuz", "biber"],
-      it: ["manzo", "rosso vino", "carotas", "cipolla", "aglio", "funghi", "pancetta", "prezzemolo", "olio", "farina", "sale", "peperone"],
-      ko: ["소고기", "빨간 와인", "당근s", "양파", "마늘", "버섯", "베이컨", "파슬리", "기름", "밀가루", "소금", "고추"]
+      tr: ["dana eti", "kırmızı şarap", "havuç", "soğan", "sarımsak", "mantar", "pastırma", "maydanoz", "yağ", "un", "tuz", "biber"],
+      it: ["manzo", "vino rosso", "carote", "cipolla", "aglio", "funghi", "pancetta", "prezzemolo", "olio", "farina", "sale", "pepe"],
+      ko: ["소고기", "레드 와인", "당근", "양파", "마늘", "버섯", "베이컨", "파슬리", "기름", "밀가루", "소금", "후추"]
     },
     howIsMade: {
       ro: "Prăjește carnea, adaugă legumele, vinul și fierbe încet ore întregi până totul devine fraged și gustos.",
@@ -16436,9 +16439,9 @@ export const recipes = [
       ar: "حمّر اللحم، أضف الخضار والنبيذ واطبخ ببطء لساعات.",
       zh: "将牛肉煎至上色，加入蔬菜和葡萄酒，小火慢炖数小时。",
       ja: "牛肉を焼き色がつくまで炒め、野菜とワインを加え、数時間煮込む。",
-      tr: "kahverengi dana eti, Ekleyin sebzeler ve şarap, sonra kısık ateşte yavaşça pişirin için saat her şeyi yumuşak ve lezzetli.",
-      it: "marrone manzo, Aggiungi verdure e vino, poi cuoci lentamente per ore tutto  tenero e sapori intensi.",
-      ko: "갈색 소고기, 넣고 채소그리고 와인, 그다음 약한 불로 천천히 조리합니다 을 위해 시간 모든 것 입니다 부드럽게그리고 풍미가 좋은하세요."
+      tr: "Dana etini kızartın, sebzeleri ve şarabı ekleyin, ardından her şey yumuşak ve lezzetli olana kadar saatlerce kısık ateşte pişirin.",
+      it: "Rosolate il manzo, aggiungete le verdure e il vino, poi cuocete lentamente per ore finché tutto diventa tenero e saporito.",
+      ko: "소고기를 갈색이 되도록 볶은 후 채소와 와인을 넣고 모든 것이 부드럽고 풍미가 깊어질 때까지 몇 시간 동안 약불로 조리합니다."
     },
     originText: {
       ro: "Boeuf Bourguignon este o rețetă tradițională din Franța.",
@@ -16446,14 +16449,14 @@ export const recipes = [
       es: "Boeuf Bourguignon es una receta tradicional de Francia.",
       fr: "Boeuf Bourguignon est une recette traditionnelle de France.",
       de: "Boeuf Bourguignon ist ein traditionelles Rezept aus Frankreich.",
-      pt: "Boeuf Bourguignon é uma receita tradicional de França.",
-      ru: "Бёф бургиньон — традиционный рецепт из Франция.",
+      pt: "Boeuf Bourguignon é uma receita tradicional da França.",
+      ru: "Бёф бургиньон — традиционный рецепт из Франции.",
       ar: "بوف بورغينيون هي وصفة تقليدية من فرنسا.",
       zh: "红酒炖牛肉 是来自法国的传统食谱。",
       ja: "ブッフ・ブルギニヨン はフランスの伝統的なレシピです。",
-      tr: "Boeuf Bourguignon Fransa kökenli geleneksel bir tariftir.",
-      it: "Boeuf Bourguignon è una risotta tradizionale di Francia.",
-      ko: "Boeuf Bourguignon는(은) 프랑스의 전통 요리입니다."
+      tr: "Boeuf Bourguignon, Fransa kökenli geleneksel bir tariftir.",
+      it: "Boeuf Bourguignon è una ricetta tradizionale della Francia.",
+      ko: "뵈프 부르기뇽은 프랑스의 전통 요리입니다."
     }
   },
   {
