@@ -13802,7 +13802,7 @@ export const recipes = [
       ja: "オクロシカ",
       tr: "Okroshka",
       it: "Okroshka",
-      ko: "Okroshka"
+      ko: "오크로시카"
     },
     category: {
       ro: "Prânz",
@@ -13819,6 +13819,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     ingredients: {
       ro: ["chefir (sau kvass)", "castraveți", "cartofi", "ouă fierte", "ceapă verde", "mărar", "cârnați"],
       en: ["kefir (or kvass)", "cucumbers", "potatoes", "boiled eggs", "spring onions", "dill", "sausages"],
@@ -13830,9 +13833,9 @@ export const recipes = [
       ar: ["كفير (أو كفاس)", "خيار", "بطاطس", "بيض مسلوق", "بصل أخضر", "شبت", "نقانق"],
       zh: ["克非尔（或克瓦斯）", "黄瓜", "土豆", "煮鸡蛋", "葱", "莳萝", "香肠"],
       ja: ["ケフィール（またはクワス）", "キュウリ", "ジャガイモ", "ゆで卵", "青ねぎ", "ディル", "ソーセージ"],
-      tr: ["kefir (veya kvas)", "salatalıks", "patates", "byağ yumurta", "bahar soğans", "dereotu", "sosis"],
-      it: ["kefir (o kvas)", "cetriolos", "patate", "bolioed uova", "primavera cipollas", "aneto", "salsicce"],
-      ko: ["케피르 (또는 크바스)", "오이s", "감자", "b기름 계란", "봄 양파s", "딜", "소시지"]
+      tr: ["kefir (veya kvas)", "salatalık", "patates", "haşlanmış yumurta", "taze soğan", "dereotu", "sosis"],
+      it: ["kefir (o kvas)", "cetrioli", "patate", "uova sode", "cipollotti", "aneto", "salsicce"],
+      ko: ["케피르 (또는 크바스)", "오이", "감자", "삶은 계란", "실파", "딜", "소시지"]
     },
     howIsMade: {
       ro: "Taie toate ingredientele cuburi, amestecă-le și toarnă chefir sau kvass deasupra. Servește rece.",
@@ -13845,9 +13848,9 @@ export const recipes = [
       ar: "قطّع جميع المكونات إلى مكعبات، واخلطها واسكب الكفير أو الكفاس فوقها. قدّمها باردة.",
       zh: "所有食材切丁，混合后倒入克非尔或克瓦斯，冷食。",
       ja: "すべての材料をさいの目に切り、混ぜてケフィールまたはクワスをかけて冷やして提供。",
-      tr: "Dice tüm malzemeleri, Karıştır, ve dökün kefir veya kvas üzerine. soğuk servis edin.",
-      it: "Dice tutti gli ingredienti, Mescola, e versa kefir o kvas sopra. servila fredda.",
-      ko: "모든 재료를 깍둑썰기해 섞어주세요. 케피르 또는 크바스를 부어주세요. 차갑게 제공해주세요."
+      tr: "Tüm malzemeleri küp küp doğrayın, karıştırın ve üzerine kefir veya kvas dökün. Soğuk servis yapın.",
+      it: "Tagliate tutti gli ingredienti a cubetti, mescolateli e versate sopra il kefir o il kvas. Servite freddo.",
+      ko: "모든 재료를 깍둑썰기해 섞습니다. 케피르 또는 크바스를 붓고 차갑게 제공합니다."
     },
     originText: {
       ro: "Okroshka este o rețetă tradițională din Rusia.",
@@ -13855,14 +13858,14 @@ export const recipes = [
       es: "Okroshka es una receta tradicional de Rusia.",
       fr: "Okroshka est une recette traditionnelle de Russie.",
       de: "Okroshka ist ein traditionelles Rezept aus Russland.",
-      pt: "Okroshka é uma receita tradicional de Rússia.",
-      ru: "Окрошка — традиционный рецепт из Россия.",
+      pt: "Okroshka é uma receita tradicional da Rússia.",
+      ru: "Окрошка — традиционный рецепт из России.",
       ar: "أوكروشكا هي وصفة تقليدية من روسيا.",
       zh: "俄式冷汤 是来自俄罗斯的传统食谱。",
       ja: "オクロシカ はロシアの伝統的なレシピです。",
       tr: "Okroshka Rusya kökenli geleneksel bir tariftir.",
-      it: "Okroshka è una risotta tradizionale di Russia.",
-      ko: "Okroshka는(은) 러시아의 전통 요리입니다."
+      it: "Okroshka è una ricetta tradizionale della Russia.",
+      ko: "오크로시카는 러시아의 전통 요리입니다."
     }
   },
   {
