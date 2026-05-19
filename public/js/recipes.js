@@ -12554,7 +12554,7 @@ export const recipes = [
       ja: "キエフ風チキン",
       tr: "Tavuk Kiev",
       it: "Pollo Kiev",
-      ko: "닭 Kiev"
+      ko: "치킨 키예프"
     },
     category: {
       ro: "Cină",
@@ -12571,6 +12571,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["piept de pui", "unt", "usturoi", "pătrunjel", "ou", "pesmet", "făină", "ulei", "sare", "piper"],
       en: ["chicken breast", "butter", "garlic", "parsley", "egg", "breadcrumbs", "flour", "oil", "salt", "pepper"],
@@ -12582,9 +12585,9 @@ export const recipes = [
       ar: ["صدر دجاج", "زبدة", "ثوم", "بقدونس", "بيض", "بقسماط", "دقيق", "زيت", "ملح", "فلفل"],
       zh: ["鸡胸肉", "黄油", "大蒜", "香菜", "鸡蛋", "面包屑", "面粉", "油", "盐", "胡椒"],
       ja: ["鶏むね肉", "バター", "ニンニク", "パセリ", "卵", "パン粉", "小麦粉", "油", "塩", "コショウ"],
-      tr: ["tavuk göğsü", "tereyağı", "sarımsak", "maydanoz", "yumurta", "ekmekcrumbs", "un", "yağ", "tuz", "biber"],
-      it: ["petto di pollo", "burro", "aglio", "prezzemolo", "uovo", "panecrumbs", "farina", "olio", "sale", "peperone"],
-      ko: ["닭가슴살", "버터", "마늘", "파슬리", "계란", "빵빵가루", "밀가루", "기름", "소금", "고추"]
+      tr: ["tavuk göğsü", "tereyağı", "sarımsak", "maydanoz", "yumurta", "galeta unu", "un", "yağ", "tuz", "biber"],
+      it: ["petto di pollo", "burro", "aglio", "prezzemolo", "uovo", "pangrattato", "farina", "olio", "sale", "pepe"],
+      ko: ["닭가슴살", "버터", "마늘", "파슬리", "계란", "빵가루", "밀가루", "기름", "소금", "후추"]
     },
     howIsMade: {
       ro: "Umple pieptul de pui cu unt, usturoi și pătrunjel, rulează-l, dă-l prin făină, ou și pesmet, apoi prăjește-l până devine auriu.",
@@ -12597,24 +12600,24 @@ export const recipes = [
       ar: "احشِ صدور الدجاج بالزبدة والثوم والبقدونس، لُفّها، غطِّها بالدقيق ثم البيض والبقسماط، واقلها حتى تكتسب لونًا ذهبيًا.",
       zh: "将黄油、大蒜和香菜包入鸡胸肉，卷起，蘸面粉、蛋液和面包屑，炸至金黄。",
       ja: "鶏むね肉にバター、ニンニク、パセリを包み、巻いて小麦粉・卵・パン粉をつけて揚げる。",
-      tr: "doldurun tavuk göğsü ile tereyağı, sarımsak ve maydanoz, rulo yapın bunu , kaplayın ile un, yumurta ve galeta unu, sonra Kızartın altın rengi.",
-      it: "farcisci petto di pollo con burro, aglio e prezzemolo, arrotola esso , ricopri con farina, uovo e panecrumbs, poi Friggi dorato.",
-      ko: "채웁니다 닭가슴살와 버터, 마늘그리고 파슬리, 말아줍니다 그것 , 입힙니다와 밀가루, 계란그리고 빵빵가루, 그다음 볶거나 튀기고 노릇하게하세요."
+      tr: "Tavuk göğsünü tereyağı, sarımsak ve maydanozla doldurun, rulo yapın, un, yumurta ve galeta unuyla kaplayın, altın rengi olana kadar kızartın.",
+      it: "Farcite il petto di pollo con burro, aglio e prezzemolo, arrotolatelo, passatelo nella farina, nell'uovo e nel pangrattato, poi friggetelo fino a doratura.",
+      ko: "닭가슴살에 버터, 마늘, 파슬리를 채워 말고 밀가루, 계란, 빵가루를 입혀 노릇해질 때까지 튀깁니다."
     },
     originText: {
       ro: "Pui Kiev este o rețetă tradițională din Ucraina.",
       en: "Chicken Kiev is a traditional recipe from Ukraine.",
       es: "Pollo Kiev es una receta tradicional de Ucrania.",
-      fr: "Poulet Kiev est une recette traditionnelle de Ukraine.",
-      de: "Kiewer Hähnchen ist ein traditionelles Rezept aus Ukraine.",
-      pt: "Frango à Kiev é uma receita tradicional de Ucrânia.",
-      ru: "Котлета по-киевски — традиционный рецепт из Украина.",
+      fr: "Poulet Kiev est une recette traditionnelle de l'Ukraine.",
+      de: "Kiewer Hähnchen ist ein traditionelles Rezept aus der Ukraine.",
+      pt: "Frango à Kiev é uma receita tradicional da Ucrânia.",
+      ru: "Котлета по-киевски — традиционный рецепт из Украины.",
       ar: "دجاج كييف هي وصفة تقليدية من أوكرانيا.",
       zh: "基辅鸡排 是来自乌克兰的传统食谱。",
       ja: "キエフ風チキン はウクライナの伝統的なレシピです。",
-      tr: "tavuk Kiev Ukrayna kökenli geleneksel bir tariftir.",
-      it: "pollo Kiev è una risotta tradizionale di Ucraina.",
-      ko: "닭고기 Kiev는(은) 우크라이나의 전통 요리입니다."
+      tr: "Tavuk Kiev Ukrayna kökenli geleneksel bir tariftir.",
+      it: "Pollo Kiev è una ricetta tradizionale dell'Ucraina.",
+      ko: "치킨 키예프는 우크라이나의 전통 요리입니다."
     }
   },
   {
