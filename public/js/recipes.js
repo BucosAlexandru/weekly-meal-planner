@@ -10617,9 +10617,9 @@ export const recipes = [
       ar: "أوزبكستان",
       zh: "乌兹别克斯坦",
       ja: "ウズベキスタン",
-      tr: "Uzbekistan",
+      tr: "Özbekistan",
       it: "Uzbekistan",
-      ko: "Uzbekistan"
+      ko: "우즈베키스탄"
     },
     name: {
       ro: "Manti",
@@ -10634,7 +10634,7 @@ export const recipes = [
       ja: "マンティ",
       tr: "Manti",
       it: "Manti",
-      ko: "Manti"
+      ko: "만티"
     },
     category: {
       ro: "Cină",
@@ -10651,6 +10651,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["făină", "apă", "sare", "carne de vită", "ceapă", "unt", "condimente"],
       en: ["flour", "water", "salt", "beef", "onion", "butter", "spices"],
@@ -10662,7 +10665,7 @@ export const recipes = [
       ar: ["دقيق", "ماء", "ملح", "لحم بقري", "بصل", "زبدة", "بهارات"],
       zh: ["面粉", "水", "盐", "牛肉", "洋葱", "黄油", "香料"],
       ja: ["小麦粉", "水", "塩", "牛肉", "玉ねぎ", "バター", "スパイス"],
-      tr: ["un", "su", "tuz", "dana eti", "soğbir", "tereyağı", "baharatlar"],
+      tr: ["un", "su", "tuz", "dana eti", "soğan", "tereyağı", "baharatlar"],
       it: ["farina", "acqua", "sale", "manzo", "cipolla", "burro", "spezie"],
       ko: ["밀가루", "물", "소금", "소고기", "양파", "버터", "향신료"]
     },
@@ -10677,24 +10680,24 @@ export const recipes = [
       ar: "حضّر عجينة من الدقيق والماء والملح. احشها بخليط اللحم المفروم والبصل، تبّلها، شكّلها واطبخها على البخار. قدّمها مع الزبدة الذائبة أو اللبن.",
       zh: "用面粉、水和盐做面团。包入牛肉洋葱馅，调味，做成饺子蒸熟。可配黄油或酸奶食用。",
       ja: "小麦粉と水、塩で生地を作る。牛ひき肉と玉ねぎの具を包み、調味し、蒸し器で蒸す。溶かしバターやヨーグルトで提供。",
-      tr: "yapın a hamur -den un, su ve tuz. doldurun ile kıyılmış dana eti ve soğan karıştırınture, Baharatlandır, şekil verin mantı ve buharda pişirin. servis edin ile eritilmiş tereyağı veya yoğurt.",
-      it: "fai a impasto da farina, acqua e sale. farcisci con tritato manzo e cipolla mescolature, Condisci, dai forma ravioli e cuoci a vapore. servi con fuso burro o yogurt.",
-      ko: "만듭니다 a 반죽 에서 밀가루, 물그리고 소금. 채웁니다와 다진 소고기그리고 양파 섞습니다, 간을 맞추고, 모양을 만듭니다 만두그리고 찝니다. 제공합니다와 녹인 버터 또는 요거트하세요."
+      tr: "Un, su ve tuzdan hamur yapın. Kıyılmış dana eti ve soğan karışımını içine koyun, baharatlayın, mantı şeklini verin ve buharda pişirin. Eritilmiş tereyağı veya yoğurtla servis edin.",
+      it: "Preparare un impasto con farina, acqua e sale. Farcire con un misto di manzo macinato e cipolla, condire, dare la forma di ravioli e cuocere a vapore. Servire con burro fuso o yogurt.",
+      ko: "밀가루, 물, 소금으로 반죽을 만든 후 다진 소고기와 양파를 섞어 속을 채웁니다. 모양을 빚어 찜기에 쪄내고 녹인 버터나 요거트와 함께 제공합니다."
     },
     originText: {
       ro: "Manti este o rețetă tradițională din Uzbekistan.",
       en: "Manti is a traditional recipe from Uzbekistan.",
       es: "Manti es una receta tradicional de Uzbekistán.",
-      fr: "Manti est une recette traditionnelle de Ouzbékistan.",
+      fr: "Manti est une recette traditionnelle de l'Ouzbékistan.",
       de: "Manti ist ein traditionelles Rezept aus Usbekistan.",
-      pt: "Manti é uma receita tradicional de Uzbequistão.",
-      ru: "Манты — традиционный рецепт из Узбекистан.",
+      pt: "Manti é uma receita tradicional do Uzbequistão.",
+      ru: "Манты — традиционный рецепт из Узбекистана.",
       ar: "مانتي هي وصفة تقليدية من أوزبكستان.",
       zh: "乌兹别克馄饨 是来自乌兹别克斯坦的传统食谱。",
       ja: "マンティ はウズベキスタンの伝統的なレシピです。",
-      tr: "Manti Uzbekistan kökenli geleneksel bir tariftir.",
-      it: "Manti è una risotta tradizionale di Uzbekistan.",
-      ko: "Manti는(은) Uzbekistan의 전통 요리입니다."
+      tr: "Manti Özbekistan kökenli geleneksel bir tariftir.",
+      it: "Manti è una ricetta tradizionale dell'Uzbekistan.",
+      ko: "만티는 우즈베키스탄의 전통 요리입니다."
     }
   },
   {
