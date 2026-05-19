@@ -13113,9 +13113,9 @@ export const recipes = [
       ar: "كرواتيا",
       zh: "克罗地亚",
       ja: "クロアチア",
-      tr: "Croatia",
-      it: "Croatia",
-      ko: "Croatia"
+      tr: "Hırvatistan",
+      it: "Croazia",
+      ko: "크로아티아"
     },
     name: {
       ro: "Pašticada",
@@ -13130,7 +13130,7 @@ export const recipes = [
       ja: "パスティチャーダ",
       tr: "Pasticada",
       it: "Pasticada",
-      ko: "Pasticada"
+      ko: "파슈티차다"
     },
     category: {
       ro: "Cină",
@@ -13147,6 +13147,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de vită", "vin roșu", "morcovi", "ceapă", "roșii", "usturoi", "prune uscate", "condimente"],
       en: ["beef", "red wine", "carrots", "onion", "tomatoes", "garlic", "dried plums", "spices"],
@@ -13158,9 +13161,9 @@ export const recipes = [
       ar: ["لحم بقري", "نبيذ أحمر", "جزر", "بصل", "طماطم", "ثوم", "برقوق مجفف", "توابل"],
       zh: ["牛肉", "红葡萄酒", "胡萝卜", "洋葱", "番茄", "大蒜", "梅干", "香料"],
       ja: ["牛肉", "赤ワイン", "ニンジン", "玉ねぎ", "トマト", "ニンニク", "干しプラム", "スパイス"],
-      tr: ["dana eti", "kırmızı şarap", "havuçs", "soğbir", "domates", "sarımsak", "kurutulmuş erik", "baharatlar"],
-      it: ["manzo", "rosso vino", "carotas", "cipolla", "pomodori", "aglio", "secco prugne", "spezie"],
-      ko: ["소고기", "빨간 와인", "당근s", "양파", "토마토", "마늘", "말린 자두", "향신료"]
+      tr: ["dana eti", "kırmızı şarap", "havuç", "soğan", "domates", "sarımsak", "kurutulmuş erik", "baharatlar"],
+      it: ["manzo", "vino rosso", "carote", "cipolla", "pomodori", "aglio", "prugne secche", "spezie"],
+      ko: ["소고기", "빨간 와인", "당근", "양파", "토마토", "마늘", "말린 자두", "향신료"]
     },
     howIsMade: {
       ro: "Marinează carnea de vită cu oțet, usturoi și condimente, gătește-o încet cu legume, vin roșu și sos de roșii până devine fragedă.",
@@ -13173,9 +13176,9 @@ export const recipes = [
       ar: "انقع لحم البقر بالخل والثوم والتوابل، واطبخه ببطء مع الخضار والنبيذ الأحمر وصلصة الطماطم حتى ينضج.",
       zh: "牛肉用醋、大蒜和香料腌制，与蔬菜、红酒和番茄酱慢炖至酥烂。",
       ja: "牛肉を酢・ニンニク・スパイスでマリネし、野菜・赤ワイン・トマトソースと一緒にじっくり煮込む。",
-      tr: "marine edin dana eti ile sirke, sarımsak, ve baharatlar, kısık ateşte yavaşça pişirin bunu ile sebzeler, kırmızı şarap, ve domates sos yumuşayana kadar.",
-      it: "marina manzo con aceto, aglio, e spezie, cuoci lentamente esso con verdure, rosso vino, e pomodoro salsa finché sarà tenero.",
-      ko: "재웁니다 소고기와 식초, 마늘, 그리고 향신료, 약한 불로 천천히 조리합니다 그것와 채소, 빨간 와인, 그리고 토마토 소스 부드러워질 때까지하세요."
+      tr: "Dana etini sirke, sarımsak ve baharatlarla marine edin, sebzeler, kırmızı şarap ve domates sosuyla birlikte kısık ateşte yumuşayana kadar pişirin.",
+      it: "Marinate il manzo con aceto, aglio e spezie, poi cuocetelo a fuoco lento con verdure, vino rosso e salsa di pomodoro fino a quando sarà tenero.",
+      ko: "소고기를 식초, 마늘, 향신료로 재워 채소, 레드 와인, 토마토 소스와 함께 부드러워질 때까지 약불에 천천히 끓입니다."
     },
     originText: {
       ro: "Pašticada este o rețetă tradițională din Croația.",
@@ -13183,14 +13186,14 @@ export const recipes = [
       es: "Pašticada es una receta tradicional de Croacia.",
       fr: "Pašticada est une recette traditionnelle de Croatie.",
       de: "Pasticada ist ein traditionelles Rezept aus Kroatien.",
-      pt: "Pasticada é uma receita tradicional de Croácia.",
-      ru: "Пастицаде — традиционный рецепт из Хорватия.",
+      pt: "Pasticada é uma receita tradicional da Croácia.",
+      ru: "Пастицаде — традиционный рецепт из Хорватии.",
       ar: "باستيكادا هي وصفة تقليدية من كرواتيا.",
       zh: "克罗地亚炖牛肉 是来自克罗地亚的传统食谱。",
       ja: "パスティチャーダ はクロアチアの伝統的なレシピです。",
-      tr: "Pasticada Croatia kökenli geleneksel bir tariftir.",
-      it: "Pasticada è una risotta tradizionale di Croatia.",
-      ko: "Pasticada는(은) Croatia의 전통 요리입니다."
+      tr: "Pasticada Hırvatistan kökenli geleneksel bir tariftir.",
+      it: "Pasticada è una ricetta tradizionale della Croazia.",
+      ko: "파슈티차다는 크로아티아의 전통 요리입니다."
     }
   },
   {
