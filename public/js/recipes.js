@@ -5910,6 +5910,9 @@ export const recipes = [
   },
   {
     id: 63,
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     origin: {
       ro: "Georgia",
       en: "Georgia",
@@ -5921,9 +5924,9 @@ export const recipes = [
       ar: "جورجيا",
       zh: "格鲁吉亚",
       ja: "ジョージア",
-      tr: "Georgia",
+      tr: "Gürcistan",
       it: "Georgia",
-      ko: "Georgia"
+      ko: "조지아"
     },
     name: {
       ro: "Khachapuri",
@@ -5938,7 +5941,7 @@ export const recipes = [
       ja: "ハチャプリ",
       tr: "Khachapuri",
       it: "Khachapuri",
-      ko: "Khachapuri"
+      ko: "하차푸리"
     },
     category: {
       ro: "Mic dejun",
@@ -5991,14 +5994,14 @@ export const recipes = [
       es: "Khachapuri es una receta tradicional de Georgia.",
       fr: "Khachapuri est une recette traditionnelle de Géorgie.",
       de: "Khachapuri ist ein traditionelles Rezept aus Georgien.",
-      pt: "Khachapuri é uma receita tradicional de Geórgia.",
-      ru: "Хачапури — традиционный рецепт из Грузия.",
+      pt: "Khachapuri é uma receita tradicional da Geórgia.",
+      ru: "Хачапури — традиционный рецепт из Грузии.",
       ar: "خاتشابوري هي وصفة تقليدية من جورجيا.",
       zh: "乔治亚奶酪面包 是来自格鲁吉亚的传统食谱。",
       ja: "ハチャプリ はジョージアの伝統的なレシピです。",
-      tr: "Khachapuri Georgia kökenli geleneksel bir tariftir.",
-      it: "Khachapuri è una risotta tradizionale di Georgia.",
-      ko: "Khachapuri는(은) Georgia의 전통 요리입니다."
+      tr: "Khachapuri Gürcistan kökenli geleneksel bir tariftir.",
+      it: "Khachapuri è una ricetta tradizionale della Georgia.",
+      ko: "하차푸리는 조지아의 전통 요리입니다."
     }
   },
   {
