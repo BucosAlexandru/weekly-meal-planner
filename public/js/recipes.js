@@ -15597,6 +15597,9 @@ export const recipes = [
   },
   {
     id: 170,
+    servings: 2,
+    tipType: 'veg',
+    pairingsType: 'veg',
     origin: {
       ro: "Turcia",
       en: "Turkey",
@@ -15625,7 +15628,7 @@ export const recipes = [
       ja: "メネメン",
       tr: "Menemen",
       it: "Menemen",
-      ko: "Menemen"
+      ko: "메네멘"
     },
     category: {
       ro: "Mic dejun",
@@ -15653,7 +15656,7 @@ export const recipes = [
       ar: ["بيض", "فلفل رومي", "طماطم", "بصل", "زيت زيتون", "توابل", "بقدونس"],
       zh: ["鸡蛋", "彩椒", "番茄", "洋葱", "橄榄油", "香料", "欧芹"],
       ja: ["卵", "ピーマン", "トマト", "玉ねぎ", "オリーブオイル", "スパイス", "パセリ"],
-      tr: ["yumurta", "kapya biber", "domates", "soğbir", "zeytinyağı", "baharatlar", "maydanoz"],
+      tr: ["yumurta", "kapya biber", "domates", "soğan", "zeytinyağı", "baharatlar", "maydanoz"],
       it: ["uova", "peperone", "pomodori", "cipolla", "olio d'oliva", "spezie", "prezzemolo"],
       ko: ["계란", "파프리카", "토마토", "양파", "올리브오일", "향신료", "파슬리"]
     },
@@ -15668,24 +15671,24 @@ export const recipes = [
       ar: "اقلِ البصل والفلفل في زيت الزيتون، أضف الطماطم المفرومة، ثم اكسر البيض فوقها واطبخه مع التحريك.",
       zh: "洋葱和辣椒用橄榄油炒香，加番茄丁煮软，打入鸡蛋轻轻搅拌至熟。",
       ja: "玉ねぎとピーマンをオリーブオイルで炒め、刻んだトマトを加えて煮て、卵を割り入れ優しく混ぜながら火を通す。",
-      tr: "Kızartın soğan ve biber in zeytinyağı, Ekleyin doğranmış domates ve pişirin, sonra kırın yumurta üstüne üstüne ve pişirin nazikçe -ken karıştırarak.",
-      it: "Friggi cipolla e peperone in olio d'oliva, Aggiungi tritato pomodori e cuoci, poi rompi uova su sopra e cuoci delicatamente mentre mescolando.",
-      ko: "볶거나 튀기고 양파그리고 고추 에서 올리브오일, 넣고 다진 토마토그리고 조리합니다, 그다음 깨뜨립니다 계란 위에 위에그리고 조리합니다 부드럽게 동안 저으면서하세요."
+      tr: "Soğan ve biberi zeytinyağında kavurun, doğranmış domatesleri ekleyip pişirin, ardından üzerine yumurtaları kırarak karıştırarak pişirin.",
+      it: "Rosolate la cipolla e il peperone nell'olio d'oliva, aggiungete i pomodori tritati e cuocete, poi rompete le uova sopra e mescolate delicatamente fino a cottura.",
+      ko: "양파와 피망을 올리브유에 볶고 다진 토마토를 넣어 조리한 후, 계란을 위에 깨뜨려 넣고 부드럽게 저으며 익힙니다."
     },
     originText: {
       ro: "Menemen este o rețetă tradițională din Turcia.",
       en: "Menemen is a traditional recipe from Turkey.",
       es: "Menemen es una receta tradicional de Turquía.",
       fr: "Menemen est une recette traditionnelle de Turquie.",
-      de: "Menemen ist ein traditionelles Rezept aus Türkei.",
-      pt: "Menemen é uma receita tradicional de Turquia.",
-      ru: "Менемен — традиционный рецепт из Турция.",
+      de: "Menemen ist ein traditionelles Rezept aus der Türkei.",
+      pt: "Menemen é uma receita tradicional da Turquia.",
+      ru: "Менемен — традиционный рецепт из Турции.",
       ar: "مينمن هي وصفة تقليدية من تركيا.",
       zh: "土耳其蛋炒番茄 是来自土耳其的传统食谱。",
       ja: "メネメン はトルコの伝統的なレシピです。",
-      tr: "Menemen Türkiye kökenli geleneksel bir tariftir.",
-      it: "Menemen è una risotta tradizionale di Turchia.",
-      ko: "Menemen는(은) 터키의 전통 요리입니다."
+      tr: "Menemen, Türkiye kökenli geleneksel bir tariftir.",
+      it: "Menemen è una ricetta tradizionale della Turchia.",
+      ko: "메네멘은 터키의 전통 요리입니다."
     }
   },
   {
