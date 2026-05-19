@@ -10826,7 +10826,7 @@ export const recipes = [
       ja: "ロモ・サルタード",
       tr: "Lomo Saltado",
       it: "Lomo Saltado",
-      ko: "Lomo Saltado"
+      ko: "로모 살타도"
     },
     category: {
       ro: "Cină",
@@ -10843,6 +10843,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["carne de vită", "cartofi", "roșii", "ceapă", "ardei gras", "soia", "orez"],
       en: ["beef", "potatoes", "tomatoes", "onion", "bell pepper", "soy sauce", "rice"],
@@ -10854,7 +10857,7 @@ export const recipes = [
       ar: ["لحم بقري", "بطاطس", "طماطم", "بصل", "فلفل رومي", "صلصة الصويا", "أرز"],
       zh: ["牛肉", "土豆", "番茄", "洋葱", "灯笼椒", "酱油", "米饭"],
       ja: ["牛肉", "ジャガイモ", "トマト", "玉ねぎ", "パプリカ", "醤油", "ご飯"],
-      tr: ["dana eti", "patates", "domates", "soğbir", "kapya biber", "soya sosu", "pirinç"],
+      tr: ["dana eti", "patates", "domates", "soğan", "kapya biber", "soya sosu", "pirinç"],
       it: ["manzo", "patate", "pomodori", "cipolla", "peperone", "salsa di soia", "riso"],
       ko: ["소고기", "감자", "토마토", "양파", "파프리카", "간장", "쌀"]
     },
@@ -10869,24 +10872,24 @@ export const recipes = [
       ar: "قلّب شرائح اللحم مع البصل والطماطم والفلفل، أضف صوص الصويا، وقدّمها مع البطاطس المقلية والأرز.",
       zh: "牛肉条与洋葱、番茄、辣椒炒香，加酱油，配薯条和米饭。",
       ja: "牛肉・玉ねぎ・トマト・ピーマンを炒めて醤油を加え、フライドポテトとご飯と共に提供。",
-      tr: "soteleyin şeritler dana eti ile soğan, domates, ve biber, Ekleyin soya sosu, ve Servis edin ile patates kızartması ve pirinç.",
-      it: "soffriggié strisce  manzo con cipolla, pomodoro, e peperone, Aggiungi salsa di soia, e Servi con patatine fritte e riso.",
-      ko: "볶습니다é 조각 의 소고기와 양파, 토마토, 그리고 고추, 넣고 간장, 그리고 담아 내세요와 감자튀김그리고 쌀하세요."
+      tr: "Dana eti şeritlerini soğan, domates ve biberle soteleyin, soya sosu ekleyin ve patates kızartması ile pirinçle birlikte servis edin.",
+      it: "Saltare le strisce di manzo con cipolla, pomodoro e peperone, aggiungere la salsa di soia e servire con patate fritte e riso.",
+      ko: "소고기 스트립을 양파, 토마토, 파프리카와 함께 볶고 간장을 넣은 후 감자튀김과 밥과 함께 제공합니다."
     },
     originText: {
       ro: "Lomo Saltado este o rețetă tradițională din Peru.",
       en: "Lomo Saltado is a traditional recipe from Peru.",
       es: "Lomo Saltado es una receta tradicional de Perú.",
-      fr: "Lomo Saltado est une recette traditionnelle de Pérou.",
+      fr: "Lomo Saltado est une recette traditionnelle du Pérou.",
       de: "Lomo Saltado ist ein traditionelles Rezept aus Peru.",
-      pt: "Lomo Saltado é uma receita tradicional de Peru.",
+      pt: "Lomo Saltado é uma receita tradicional do Peru.",
       ru: "Ломо сальтадо — традиционный рецепт из Перу.",
       ar: "لومو سالتادو هي وصفة تقليدية من بيرو.",
       zh: "秘鲁牛肉炒薯条 是来自秘鲁的传统食谱。",
       ja: "ロモ・サルタード はペルーの伝統的なレシピです。",
       tr: "Lomo Saltado Peru kökenli geleneksel bir tariftir.",
-      it: "Lomo Saltado è una risotta tradizionale di Perù.",
-      ko: "Lomo Saltado는(은) 페루의 전통 요리입니다."
+      it: "Lomo Saltado è una ricetta tradizionale del Perù.",
+      ko: "로모 살타도는 페루의 전통 요리입니다."
     }
   },
   {
