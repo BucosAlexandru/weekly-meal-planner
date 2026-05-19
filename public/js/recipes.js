@@ -13965,6 +13965,9 @@ export const recipes = [
   },
   {
     id: 153,
+    servings: 8,
+    tipType: 'dessert',
+    pairingsType: 'dessert',
     origin: {
       ro: "Slovenia",
       en: "Slovenia",
@@ -13976,9 +13979,9 @@ export const recipes = [
       ar: "سلوفينيا",
       zh: "斯洛文尼亚",
       ja: "スロベニア",
-      tr: "Slovenia",
+      tr: "Slovenya",
       it: "Slovenia",
-      ko: "Slovenia"
+      ko: "슬로베니아"
     },
     name: {
       ro: "Potica",
@@ -13993,7 +13996,7 @@ export const recipes = [
       ja: "ポティツァ",
       tr: "Potica",
       it: "Potica",
-      ko: "Potica"
+      ko: "포티차"
     },
     category: {
       ro: "Desert",
@@ -14036,9 +14039,9 @@ export const recipes = [
       ar: "حضّر العجينة، افردها، أضف حشوة الجوز والعسل والزبدة، لفها واخبزها حتى تصبح ذهبية.",
       zh: "制作面团，擀开，加入核桃、蜂蜜和黄油馅，卷起后烘烤至金黄。",
       ja: "生地を作って伸ばし、クルミ・ハチミツ・バターのフィリングをのせて巻き、黄金色になるまで焼く。",
-      tr: "hazırlayın hamur, rulo yapın bunu , Ekleyin ceviz, bal, ve tereyağı iç harç, rulo yapın ve fırında pişirin altın rengi.",
-      it: "prepara impasto, arrotola esso , Aggiungi noce, miele, e burro ripieno, arrotola  e cuoci in forno dorato.",
-      ko: "준비합니다 반죽, 말아줍니다 그것 , 넣고 호두, 꿀, 그리고 버터 속재료, 말아줍니다 그리고 오븐에서 굽습니다 노릇하게하세요."
+      tr: "Hamuru hazırlayın, açın, ceviz, bal ve tereyağı dolgusuyla kaplayın, rulo yapın ve altın rengi olana kadar fırında pişirin.",
+      it: "Prepara l'impasto, stendilo, aggiungi il ripieno di noci, miele e burro, arrotola e cuoci in forno fino a doratura.",
+      ko: "반죽을 준비하고 펴서 호두, 꿀, 버터 속재료를 넣고 돌돌 말아 노릇해질 때까지 오븐에서 굽습니다."
     },
     originText: {
       ro: "Potica este o rețetă tradițională din Slovenia.",
@@ -14046,14 +14049,14 @@ export const recipes = [
       es: "Potica es una receta tradicional de Eslovenia.",
       fr: "Potica est une recette traditionnelle de Slovénie.",
       de: "Potica ist ein traditionelles Rezept aus Slowenien.",
-      pt: "Potica é uma receita tradicional de Eslovênia.",
-      ru: "Потица — традиционный рецепт из Словения.",
+      pt: "Potica é uma receita tradicional da Eslovênia.",
+      ru: "Потица — традиционный рецепт из Словении.",
       ar: "بوتيتسا هي وصفة تقليدية من سلوفينيا.",
       zh: "斯洛文尼亚核桃卷 是来自斯洛文尼亚的传统食谱。",
       ja: "ポティツァ はスロベニアの伝統的なレシピです。",
-      tr: "Potica Slovenia kökenli geleneksel bir tariftir.",
-      it: "Potica è una risotta tradizionale di Slovenia.",
-      ko: "Potica는(은) Slovenia의 전통 요리입니다."
+      tr: "Potica Slovenya kökenli geleneksel bir tariftir.",
+      it: "Potica è una ricetta tradizionale della Slovenia.",
+      ko: "포티차는 슬로베니아의 전통 요리입니다."
     }
   },
   {
