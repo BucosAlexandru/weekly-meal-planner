@@ -14445,6 +14445,9 @@ export const recipes = [
   },
   {
     id: 158,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Serbia",
       en: "Serbia",
@@ -14456,9 +14459,9 @@ export const recipes = [
       ar: "صربيا",
       zh: "塞尔维亚",
       ja: "セルビア",
-      tr: "Serbia",
+      tr: "Sırbistan",
       it: "Serbia",
-      ko: "Serbia"
+      ko: "세르비아"
     },
     name: {
       ro: "Pljeskavica",
@@ -14473,7 +14476,7 @@ export const recipes = [
       ja: "プリェスカヴィツァ",
       tr: "Pljeskavica",
       it: "Pljeskavica",
-      ko: "Pljeskavica"
+      ko: "플레스카비차"
     },
     category: {
       ro: "Cină",
@@ -14501,9 +14504,9 @@ export const recipes = [
       ar: ["لحم مفروم", "بصل", "ثوم", "بابريكا", "فلفل", "ملح", "زيت"],
       zh: ["碎肉", "洋葱", "大蒜", "红椒粉", "胡椒", "盐", "油"],
       ja: ["挽肉", "玉ねぎ", "ニンニク", "パプリカ", "コショウ", "塩", "油"],
-      tr: ["kıyılmış et", "soğbir", "sarımsak", "toz biber", "biber", "tuz", "yağ"],
-      it: ["tritato carne", "cipolla", "aglio", "paprika", "peperone", "sale", "olio"],
-      ko: ["다진 고기", "양파", "마늘", "파프리카 가루", "고추", "소금", "기름"]
+      tr: ["kıyılmış et", "soğan", "sarımsak", "toz biber", "biber", "tuz", "yağ"],
+      it: ["carne tritata", "cipolla", "aglio", "paprika", "pepe", "sale", "olio"],
+      ko: ["다진 고기", "양파", "마늘", "파프리카 가루", "후추", "소금", "기름"]
     },
     howIsMade: {
       ro: "Amestecă ingredientele, formează burgeri mari, prăjește sau frige pe grătar și servește cu salată sau chiflă.",
@@ -14516,9 +14519,9 @@ export const recipes = [
       ar: "اخلط المكونات، شكّل برجر كبير، اقلي أو اشوِ وقدّمه مع سلطة أو خبز.",
       zh: "混合原料，做成大肉饼，煎或烤，配沙拉或面包食用。",
       ja: "材料を混ぜて大きなパティを作り、焼くかグリルし、サラダやパンと一緒に提供。",
-      tr: "Karıştırın malzemeler, şekil verin büyük köfteler, Kızartın veya ızgara yapın ve servis edin ile salata veya ekmek.",
-      it: "Mescola ingredienti, forma grande polpette, Friggi o griglia e servi con insalata o panino.",
-      ko: "섞고 재료, 모양을 만듭니다 큰 패티, 볶거나 튀기고 또는 굽습니다그리고 제공합니다와 샐러드 또는 번하세요."
+      tr: "Malzemeleri karıştırın, büyük köfteler şeklinde şekillendirin, kızartın veya ızgara yapın ve salata ya da ekmekle servis edin.",
+      it: "Mescola gli ingredienti, forma grandi polpette, friggi o griglia e servi con insalata o panino.",
+      ko: "재료를 섞어 큰 패티를 만들고, 프라이팬에 굽거나 그릴에 구워 샐러드나 빵과 함께 냅니다."
     },
     originText: {
       ro: "Pljeskavica este o rețetă tradițională din Serbia.",
@@ -14526,14 +14529,14 @@ export const recipes = [
       es: "Pljeskavica es una receta tradicional de Serbia.",
       fr: "Pljeskavica est une recette traditionnelle de Serbie.",
       de: "Pljeskavica ist ein traditionelles Rezept aus Serbien.",
-      pt: "Pljeskavica é uma receita tradicional de Sérvia.",
-      ru: "Плескавица — традиционный рецепт из Сербия.",
+      pt: "Pljeskavica é uma receita tradicional da Sérvia.",
+      ru: "Плескавица — традиционный рецепт из Сербии.",
       ar: "بلييسكافيكا هي وصفة تقليدية من صربيا.",
       zh: "塞尔维亚烤肉饼 是来自塞尔维亚的传统食谱。",
       ja: "プリェスカヴィツァ はセルビアの伝統的なレシピです。",
-      tr: "Pljeskavica Serbia kökenli geleneksel bir tariftir.",
-      it: "Pljeskavica è una risotta tradizionale di Serbia.",
-      ko: "Pljeskavica는(은) Serbia의 전통 요리입니다."
+      tr: "Pljeskavica Sırbistan kökenli geleneksel bir tariftir.",
+      it: "Pljeskavica è una ricetta tradizionale della Serbia.",
+      ko: "플레스카비차는 세르비아의 전통 요리입니다."
     }
   },
   {
