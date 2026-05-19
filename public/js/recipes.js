@@ -12074,7 +12074,7 @@ export const recipes = [
       ja: "ロスティ",
       tr: "Rösti",
       it: "Rösti",
-      ko: "Rösti"
+      ko: "뢰스티"
     },
     category: {
       ro: "Mic dejun",
@@ -12091,6 +12091,9 @@ export const recipes = [
       it: "Colazione",
       ko: "아침"
     },
+    servings: 2,
+    tipType: 'veg',
+    pairingsType: 'veg',
     ingredients: {
       ro: ["cartofi", "unt", "sare", "piper", "ulei"],
       en: ["potatoes", "butter", "salt", "pepper", "oil"],
@@ -12103,8 +12106,8 @@ export const recipes = [
       zh: ["土豆", "黄油", "盐", "胡椒", "油"],
       ja: ["ジャガイモ", "バター", "塩", "コショウ", "油"],
       tr: ["patates", "tereyağı", "tuz", "biber", "yağ"],
-      it: ["patate", "burro", "sale", "peperone", "olio"],
-      ko: ["감자", "버터", "소금", "고추", "기름"]
+      it: ["patate", "burro", "sale", "pepe", "olio"],
+      ko: ["감자", "버터", "소금", "후추", "기름"]
     },
     howIsMade: {
       ro: "Rade cartofii, stoarce lichidul, formează plăcinte plate și prăjește-le pe ambele părți până devin aurii și crocante.",
@@ -12117,24 +12120,24 @@ export const recipes = [
       ar: "ابشر البطاطس واعصر السائل، شكّل أقراصاً واقلها حتى تحمر من الجهتين.",
       zh: "土豆擦丝去水，压成饼，两面煎至金黄酥脆。",
       ja: "じゃがいもをすりおろして水分を絞り、平たく成形し両面をこんがり焼く。",
-      tr: "Grate patates, sıkın sıvı, şekil verin içine düz köfteler, ve Kızartın üstüne her iki taraf altın rengi ve çıtır.",
-      it: "Grate patate, spremi  liquido, dai forma dentro piatto polpette, e Friggi su entrambi lati dorato e croccante.",
-      ko: "감자를 강판에 갈아 면포로 물기를 꼭 짜주세요. 소금으로 간을 맞추고 납작하게 빚어주세요. 팬에 기름을 두르고 양면이 노릇노릇해질 때까지 볶아주세요."
+      tr: "Patatesleri rendeleyin, suyunu sıkın, yassı şekil verin ve her iki tarafı altın rengi ve çıtır olana kadar kızartın.",
+      it: "Grattugiate le patate, strizzate il liquido, formate delle frittelle piatte e friggetele su entrambi i lati fino a dorarle.",
+      ko: "감자를 강판에 갈아 물기를 꼭 짜내고 소금으로 간을 한 후 납작하게 빚어 팬에 양면이 노릇해질 때까지 굽습니다."
     },
     originText: {
       ro: "Rösti este o rețetă tradițională din Elveția.",
       en: "Rösti is a traditional recipe from Switzerland.",
       es: "Rösti es una receta tradicional de Suiza.",
       fr: "Rösti est une recette traditionnelle de Suisse.",
-      de: "Rösti ist ein traditionelles Rezept aus Schweiz.",
-      pt: "Rösti é uma receita tradicional de Suíça.",
-      ru: "Рёсти — традиционный рецепт из Швейцария.",
+      de: "Rösti ist ein traditionelles Rezept aus der Schweiz.",
+      pt: "Rösti é uma receita tradicional da Suíça.",
+      ru: "Рёсти — традиционный рецепт из Швейцарии.",
       ar: "روستي هي وصفة تقليدية من سويسرا.",
       zh: "瑞士土豆饼 是来自瑞士的传统食谱。",
       ja: "ロスティ はスイスの伝統的なレシピです。",
       tr: "Rösti İsviçre kökenli geleneksel bir tariftir.",
-      it: "Rösti è una risotta tradizionale di Svizzera.",
-      ko: "Rösti는(은) 스위스의 전통 요리입니다."
+      it: "Rösti è una ricetta tradizionale della Svizzera.",
+      ko: "뢰스티는 스위스의 전통 요리입니다."
     }
   },
   {
