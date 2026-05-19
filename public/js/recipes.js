@@ -9081,9 +9081,9 @@ export const recipes = [
       ar: "نيجيريا",
       zh: "尼日利亚",
       ja: "ナイジェリア",
-      tr: "Nigeria",
+      tr: "Nijerya",
       it: "Nigeria",
-      ko: "Nigeria"
+      ko: "나이지리아"
     },
     name: {
       ro: "Jollof Rice",
@@ -9097,8 +9097,8 @@ export const recipes = [
       zh: "尼日利亚炒饭",
       ja: "ジョロフライス",
       tr: "Jollof Pilav",
-      it: "Jollof Riso",
-      ko: "Jollof 밥"
+      it: "Riso Jollof",
+      ko: "졸로프 라이스"
     },
     category: {
       ro: "Prânz",
@@ -9115,6 +9115,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'def',
+    pairingsType: 'def',
     ingredients: {
       ro: ["orez", "roșii", "ceapă", "ardei gras", "condimente", "ulei", "pui (opțional)"],
       en: ["rice", "tomatoes", "onion", "bell pepper", "spices", "oil", "chicken (optional)"],
@@ -9141,24 +9144,24 @@ export const recipes = [
       ar: "قلّب الأرز مع الطماطم والفلفل والبصل والتوابل، ثم اطبخه بالمرق حتى يمتص السائل ويصبح ملونًا.",
       zh: "米饭与番茄、辣椒、洋葱和香料一起炒香，加入高汤炖煮至汤汁吸收、米饭上色。",
       ja: "米をトマト・ピーマン・玉ねぎ・スパイスと炒め、ブイヨンで炊き上げて色がつくまで煮る。",
-      tr: "soteleyin pirinç ile domates, biber, soğans, ve baharatlar, sonra Kısık ateşte pişir ile sıvı çekilene kadar ve pirinç renkli.",
-      it: "soffriggié riso con pomodori, peperones, cipollas, e spezie, poi Fai sobbollire con brodo liquido  assorbito e riso  colorato.",
+      tr: "Pirinci domates, biber, soğan ve baharatlarla soteleyin, ardından suyun çekilip pirinç renkli hale gelene kadar et suyuyla kısık ateşte pişirin.",
+      it: "Soffriggere il riso con pomodori, peperoni, cipolle e spezie, poi cuocere a fuoco lento con il brodo fino a quando il liquido è assorbito e il riso è colorato.",
       ko: "쌀을 토마토, 피망, 양파, 향신료와 함께 볶아주세요. 육수를 넣고 물이 흡수되고 밥이 부드러워질 때까지 끓여주세요."
     },
     originText: {
       ro: "Jollof Rice este o rețetă tradițională din Nigeria.",
       en: "Jollof Rice is a traditional recipe from Nigeria.",
       es: "Arroz Jollof es una receta tradicional de Nigeria.",
-      fr: "Riz Jollof est une recette traditionnelle de Nigéria.",
+      fr: "Riz Jollof est une recette traditionnelle du Nigéria.",
       de: "Jollof-Reis ist ein traditionelles Rezept aus Nigeria.",
-      pt: "Arroz Jollof é uma receita tradicional de Nigéria.",
-      ru: "Джоллоф-рис — традиционный рецепт из Нигерия.",
+      pt: "Arroz Jollof é uma receita tradicional da Nigéria.",
+      ru: "Джоллоф-рис — традиционный рецепт из Нигерии.",
       ar: "أرز جولوف هي وصفة تقليدية من نيجيريا.",
       zh: "尼日利亚炒饭 是来自尼日利亚的传统食谱。",
       ja: "ジョロフライス はナイジェリアの伝統的なレシピです。",
-      tr: "Jollof pirinç Nigeria kökenli geleneksel bir tariftir.",
-      it: "Jollof riso è una risotta tradizionale di Nigeria.",
-      ko: "Jollof 쌀는(은) Nigeria의 전통 요리입니다."
+      tr: "Jollof Pilav Nijerya kökenli geleneksel bir tariftir.",
+      it: "Riso Jollof è una ricetta tradizionale della Nigeria.",
+      ko: "졸로프 라이스는 나이지리아의 전통 요리입니다."
     }
   },
   {
