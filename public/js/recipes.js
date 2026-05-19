@@ -5622,6 +5622,9 @@ export const recipes = [
   },
   {
     id: 60,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Mongolia",
       en: "Mongolia",
@@ -5633,9 +5636,9 @@ export const recipes = [
       ar: "منغوليا",
       zh: "蒙古",
       ja: "モンゴル",
-      tr: "Mongolia",
+      tr: "Moğolistan",
       it: "Mongolia",
-      ko: "Mongolia"
+      ko: "몽골"
     },
     name: {
       ro: "Buuz",
@@ -5650,7 +5653,7 @@ export const recipes = [
       ja: "ボーズ",
       tr: "Buuz",
       it: "Buuz",
-      ko: "Buuz"
+      ko: "부즈"
     },
     category: {
       ro: "Cină",
@@ -5702,15 +5705,15 @@ export const recipes = [
       en: "Buuz is a traditional recipe from Mongolia.",
       es: "Buuz es una receta tradicional de Mongolia.",
       fr: "Buuz est une recette traditionnelle de Mongolie.",
-      de: "Buuz ist ein traditionelles Rezept aus Mongolei.",
-      pt: "Buuz é uma receita tradicional de Mongólia.",
-      ru: "Бууз — традиционный рецепт из Монголия.",
+      de: "Buuz ist ein traditionelles Rezept aus der Mongolei.",
+      pt: "Buuz é uma receita tradicional da Mongólia.",
+      ru: "Бууз — традиционный рецепт из Монголии.",
       ar: "بوز هي وصفة تقليدية من منغوليا.",
       zh: "蒙古包子 是来自蒙古的传统食谱。",
       ja: "ボーズ はモンゴルの伝統的なレシピです。",
-      tr: "Buuz Mongolia kökenli geleneksel bir tariftir.",
-      it: "Buuz è una risotta tradizionale di Mongolia.",
-      ko: "Buuz는(은) Mongolia의 전통 요리입니다."
+      tr: "Buuz Moğolistan kökenli geleneksel bir tariftir.",
+      it: "Buuz è una ricetta tradizionale della Mongolia.",
+      ko: "부즈는 몽골의 전통 요리입니다."
     }
   },
   {
