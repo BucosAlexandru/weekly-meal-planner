@@ -6294,6 +6294,9 @@ export const recipes = [
   },
   {
     id: 67,
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     origin: {
       ro: "Vietnam",
       en: "Vietnam",
@@ -6322,7 +6325,7 @@ export const recipes = [
       ja: "バインミー",
       tr: "Banh Mi",
       it: "Banh Mi",
-      ko: "Banh Mi"
+      ko: "반미"
     },
     category: {
       ro: "Gustare",
@@ -6373,16 +6376,16 @@ export const recipes = [
       ro: "Banh Mi este o rețetă tradițională din Vietnam.",
       en: "Banh Mi is a traditional recipe from Vietnam.",
       es: "Banh Mi es una receta tradicional de Vietnam.",
-      fr: "Banh Mi est une recette traditionnelle de Vietnam.",
+      fr: "Banh Mi est une recette traditionnelle du Vietnam.",
       de: "Banh Mi ist ein traditionelles Rezept aus Vietnam.",
-      pt: "Banh Mi é uma receita tradicional de Vietnã.",
-      ru: "Бань Ми — традиционный рецепт из Вьетнам.",
+      pt: "Banh Mi é uma receita tradicional do Vietnã.",
+      ru: "Бань Ми — традиционный рецепт из Вьетнама.",
       ar: "بان مي هي وصفة تقليدية من فيتنام.",
       zh: "越南三明治 是来自越南的传统食谱。",
       ja: "バインミー はベトナムの伝統的なレシピです。",
       tr: "Banh Mi Vietnam kökenli geleneksel bir tariftir.",
-      it: "Banh Mi è una risotta tradizionale di Vietnam.",
-      ko: "Banh Mi는(은) 베트남의 전통 요리입니다."
+      it: "Banh Mi è una ricetta tradizionale del Vietnam.",
+      ko: "반미는 베트남의 전통 요리입니다."
     }
   },
   {
