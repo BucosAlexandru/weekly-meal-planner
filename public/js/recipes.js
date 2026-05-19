@@ -6198,6 +6198,9 @@ export const recipes = [
   },
   {
     id: 66,
+    servings: 8,
+    tipType: 'korean',
+    pairingsType: 'korean',
     origin: {
       ro: "Coreea de Sud",
       en: "South Korea",
@@ -6226,7 +6229,7 @@ export const recipes = [
       ja: "キムチ",
       tr: "Kimchi",
       it: "Kimchi",
-      ko: "Kimchi"
+      ko: "김치"
     },
     category: {
       ro: "Garnitură",
@@ -6239,9 +6242,9 @@ export const recipes = [
       ar: "طبق جانبي",
       zh: "配菜",
       ja: "副菜",
-      tr: "Side dish",
-      it: "Side dish",
-      ko: "Side dish"
+      tr: "Yan yemek",
+      it: "Contorno",
+      ko: "반찬"
     },
     ingredients: {
       ro: ["1 varză napa mare (aprox. 2 kg)", "3 linguri sare de mare (fără iod)", "4 linguri gochugaru (fulgi de ardei coreean)", "5 căței de usturoi, tocați mărunt", "1 linguriță ghimbir proaspăt, ras", "1 lingură sos de pește (sau sos de soia pentru variantă vegană)", "1 linguriță zahăr", "6 cepe verzi, tăiate în bucăți de 3 cm", "1 morcov mediu, julien"],
@@ -6279,14 +6282,14 @@ export const recipes = [
       es: "Kimchi es una receta tradicional de Corea del Sur.",
       fr: "Kimchi est une recette traditionnelle de Corée du Sud.",
       de: "Kimchi ist ein traditionelles Rezept aus Südkorea.",
-      pt: "Kimchi é uma receita tradicional de Coreia do Sul.",
-      ru: "Кимчи — традиционный рецепт из Южная Корея.",
+      pt: "Kimchi é uma receita tradicional da Coreia do Sul.",
+      ru: "Кимчи — традиционный рецепт из Южной Кореи.",
       ar: "كيمتشي هي وصفة تقليدية من كوريا الجنوبية.",
       zh: "泡菜 是来自韩国的传统食谱。",
       ja: "キムチ は韓国の伝統的なレシピです。",
-      tr: "kimchi Güney Kore kökenli geleneksel bir tariftir.",
-      it: "kimchi è una risotta tradizionale di Corea del Sud.",
-      ko: "김치는(은) 대한민국의 전통 요리입니다."
+      tr: "Kimchi Güney Kore kökenli geleneksel bir tariftir.",
+      it: "Kimchi è una ricetta tradizionale della Corea del Sud.",
+      ko: "김치는 대한민국의 전통 요리입니다."
     }
   },
   {
