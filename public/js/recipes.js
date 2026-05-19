@@ -13880,9 +13880,9 @@ export const recipes = [
       ar: "أوزبكستان",
       zh: "乌兹别克斯坦",
       ja: "ウズベキスタン",
-      tr: "Uzbekistan",
+      tr: "Özbekistan",
       it: "Uzbekistan",
-      ko: "Uzbekistan"
+      ko: "우즈베키스탄"
     },
     name: {
       ro: "Plov",
@@ -13890,13 +13890,14 @@ export const recipes = [
       es: "Plov",
       fr: "Plov",
       de: "Plov",
+      pt: "Plov",
       ru: "Плов",
       ar: "بلاف",
       zh: "抓饭",
       ja: "プロフ",
       tr: "Plov",
       it: "Plov",
-      ko: "Plov"
+      ko: "플로프"
     },
     category: {
       ro: "Cină",
@@ -13904,6 +13905,7 @@ export const recipes = [
       es: "Cena",
       fr: "Dîner",
       de: "Abendessen",
+      pt: "Jantar",
       ru: "Ужин",
       ar: "عشاء",
       zh: "晚餐",
@@ -13912,19 +13914,23 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 6,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["orez", "carne de miel sau vită", "morcovi", "ceapă", "ulei", "usturoi", "condimente"],
       en: ["rice", "lamb or beef", "carrots", "onion", "oil", "garlic", "spices"],
       es: ["arroz", "cordero o ternera", "zanahorias", "cebolla", "aceite", "ajo", "especias"],
       fr: ["riz", "agneau ou bœuf", "carottes", "oignon", "huile", "ail", "épices"],
       de: ["Reis", "Lamm oder Rindfleisch", "Karotten", "Zwiebel", "Öl", "Knoblauch", "Gewürze"],
+      pt: ["arroz", "cordeiro ou carne bovina", "cenouras", "cebola", "óleo", "alho", "especiarias"],
       ru: ["рис", "баранина или говядина", "морковь", "лук", "масло", "чеснок", "специи"],
       ar: ["أرز", "لحم الضأن أو البقر", "جزر", "بصل", "زيت", "ثوم", "بهارات"],
       zh: ["米饭", "羊肉或牛肉", "胡萝卜", "洋葱", "油", "大蒜", "香料"],
       ja: ["ご飯", "羊肉または牛肉", "にんじん", "玉ねぎ", "油", "にんにく", "スパイス"],
-      tr: ["pirinç", "kuzu veya dana eti", "havuçs", "soğbir", "yağ", "sarımsak", "baharatlar"],
-      it: ["riso", "agnello o manzo", "carotas", "cipolla", "olio", "aglio", "spezie"],
-      ko: ["쌀", "양고기 또는 소고기", "당근s", "양파", "기름", "마늘", "향신료"]
+      tr: ["pirinç", "kuzu veya dana eti", "havuç", "soğan", "yağ", "sarımsak", "baharatlar"],
+      it: ["riso", "agnello o manzo", "carote", "cipolla", "olio", "aglio", "spezie"],
+      ko: ["쌀", "양고기 또는 소고기", "당근", "양파", "기름", "마늘", "향신료"]
     },
     howIsMade: {
       ro: "Prăjește carnea și legumele, apoi fierbe totul cu orezul și condimentele până se absoarbe apa.",
@@ -13932,28 +13938,29 @@ export const recipes = [
       es: "Fríe la carne y las verduras, luego cocina todo con arroz y especias hasta que se absorba el agua.",
       fr: "Faites revenir la viande et les légumes, puis faites cuire le tout avec le riz et les épices jusqu'à absorption de l'eau.",
       de: "Fleisch und Gemüse anbraten, dann alles mit Reis und Gewürzen kochen, bis das Wasser aufgenommen ist.",
+      pt: "Refogue a carne e os legumes, depois cozinhe tudo com arroz e especiarias até a água ser absorvida.",
       ru: "Обжарьте мясо и овощи, затем варите всё с рисом и специями до впитывания воды.",
       ar: "اقلي اللحم والخضار، ثم اطبخ كل شيء مع الأرز والتوابل حتى تمتص الماء.",
       zh: "先炒肉和蔬菜，然后与米饭和香料一起煮至水分被吸收。",
       ja: "肉と野菜を炒め、ご飯とスパイスと一緒に水分がなくなるまで煮込む。",
-      tr: "Kızartın et ve sebzeler, sonra Pişirin her şeyi ile pirinç ve baharatlar su çekilene kadar.",
-      it: "Friggi carne e verdure, poi Cuoci tutto con riso e spezie acqua  assorbito.",
-      ko: "볶거나 튀기고 고기그리고 채소, 그다음 조리하고 모든 것와 쌀그리고 향신료 물 입니다 흡수될 때까지하세요."
+      tr: "Eti ve sebzeleri kızartın, ardından pirinç ve baharatları ekleyerek su çekilene kadar pişirin.",
+      it: "Rosolate la carne e le verdure, poi cuocete tutto con riso e spezie finché l'acqua non viene assorbita.",
+      ko: "고기와 채소를 볶다가 쌀과 향신료를 넣어 물이 흡수될 때까지 끓입니다."
     },
     originText: {
       ro: "Plov este o rețetă tradițională din Uzbekistan.",
       en: "Plov is a traditional recipe from Uzbekistan.",
       es: "Plov es una receta tradicional de Uzbekistán.",
-      fr: "Plov est une recette traditionnelle de Ouzbékistan.",
+      fr: "Plov est une recette traditionnelle de l'Ouzbékistan.",
       de: "Plov ist ein traditionelles Rezept aus Usbekistan.",
-      pt: "undefined é uma receita tradicional de undefined.",
-      ru: "Плов — традиционный рецепт из Узбекистан.",
+      pt: "Plov é uma receita tradicional do Uzbequistão.",
+      ru: "Плов — традиционный рецепт из Узбекистана.",
       ar: "بلاف هي وصفة تقليدية من أوزبكستان.",
       zh: "抓饭 是来自乌兹别克斯坦的传统食谱。",
       ja: "プロフ はウズベキスタンの伝統的なレシピです。",
-      tr: "Plov Uzbekistan kökenli geleneksel bir tariftir.",
-      it: "Plov è una risotta tradizionale di Uzbekistan.",
-      ko: "Plov는(은) Uzbekistan의 전통 요리입니다."
+      tr: "Plov Özbekistan kökenli geleneksel bir tariftir.",
+      it: "Plov è una ricetta tradizionale dell'Uzbekistan.",
+      ko: "플로프는 우즈베키스탄의 전통 요리입니다."
     }
   },
   {
