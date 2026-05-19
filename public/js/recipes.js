@@ -8142,7 +8142,7 @@ export const recipes = [
       ja: "ブンボーフエ",
       tr: "Bún bò Huế",
       it: "Bún bò Huế",
-      ko: "Bún bò Huế"
+      ko: "분보후에"
     },
     category: {
       ro: "Prânz",
@@ -8159,6 +8159,9 @@ export const recipes = [
       it: "Pranzo",
       ko: "점심"
     },
+    servings: 4,
+    tipType: 'soup',
+    pairingsType: 'soup',
     ingredients: {
       ro: ["tăiței de orez", "carne de vită", "picioare de porc", "citronella", "pasta de creveți", "ardei iute", "ceapă"],
       en: ["rice noodles", "beef", "pork hock", "lemongrass", "shrimp paste", "chili", "onion"],
@@ -8185,24 +8188,24 @@ export const recipes = [
       ar: "اسلق عظام البقر مع الليمون العطري والتوابل، أضف لحم البقر ونودلز الأرز. قدّمها مع الأعشاب والفلفل الحار.",
       zh: "牛骨加香茅和香料煮汤，加入牛肉和米粉，配香草和辣椒食用。",
       ja: "牛骨をレモングラス・スパイスと一緒に煮て、牛肉・米麺を加え、ハーブや唐辛子とともに提供。",
-      tr: "Haşlayın dana eti kemikler ile limongrass ve baharatlar, Ekleyin dana eti ve pirinç erişte. servis edin ile otlar ve acı biber.",
-      it: "Cuoci manzo ossa con limonegrass e spezie, Aggiungi manzo e riso spaghetti. servi con erbe aromatiche e peperoncino.",
-      ko: "삶고 소고기 뼈와 레몬풀그리고 향신료, 넣고 소고기그리고 쌀 면. 제공합니다와 허브그리고 고추하세요."
+      tr: "Dana eti kemiklerini limongrass ve baharatlarla birlikte haşlayın, dana eti ve pirinç eriştesi ekleyin. Otlar ve acı biberle servis edin.",
+      it: "Cuocere le ossa di manzo con lemongrass e spezie, aggiungere il manzo e i noodles di riso. Servire con erbe aromatiche e peperoncino.",
+      ko: "소고기 뼈를 레몬그라스와 향신료와 함께 끓인 후, 소고기와 쌀 면을 넣습니다. 허브와 고추를 곁들여 냅니다."
     },
     originText: {
       ro: "Bún bò Huế este o rețetă tradițională din Vietnam.",
       en: "Bún bò Huế is a traditional recipe from Vietnam.",
       es: "Bún bò Huế es una receta tradicional de Vietnam.",
-      fr: "Bún bò Huế est une recette traditionnelle de Vietnam.",
+      fr: "Bún bò Huế est une recette traditionnelle du Vietnam.",
       de: "Bún bò Huế ist ein traditionelles Rezept aus Vietnam.",
-      pt: "Bún bò Huế é uma receita tradicional de Vietnã.",
-      ru: "Бун бо Хюэ — традиционный рецепт из Вьетнам.",
+      pt: "Bún bò Huế é uma receita tradicional do Vietnã.",
+      ru: "Бун бо Хюэ — традиционный рецепт из Вьетнама.",
       ar: "بون بو هوي هي وصفة تقليدية من فيتنام.",
       zh: "顺化牛肉粉 是来自越南的传统食谱。",
       ja: "ブンボーフエ はベトナムの伝統的なレシピです。",
       tr: "Bún bò Huế Vietnam kökenli geleneksel bir tariftir.",
-      it: "Bún bò Huế è una risotta tradizionale di Vietnam.",
-      ko: "Bún bò Huế는(은) 베트남의 전통 요리입니다."
+      it: "Bún bò Huế è una ricetta tradizionale del Vietnam.",
+      ko: "분보후에는 베트남의 전통 요리입니다."
     }
   },
   {
