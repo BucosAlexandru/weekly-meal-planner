@@ -8810,7 +8810,7 @@ export const recipes = [
       ja: "チレス・エン・ノガダ",
       tr: "Chiles en nogada",
       it: "Chiles en nogada",
-      ko: "Chiles en nogada"
+      ko: "칠레스 엔 노가다"
     },
     category: {
       ro: "Cină",
@@ -8827,6 +8827,9 @@ export const recipes = [
       it: "Cena",
       ko: "저녁"
     },
+    servings: 4,
+    tipType: 'meat',
+    pairingsType: 'meat',
     ingredients: {
       ro: ["ardei gras", "carne tocată", "fructe", "nuci", "smântână", "rodie", "condimente"],
       en: ["bell pepper", "minced meat", "fruit", "walnuts", "cream", "pomegranate", "spices"],
@@ -8853,24 +8856,24 @@ export const recipes = [
       ar: "احشِ الفلفل المشوي باللحم المفروم والفواكه المجففة والتوابل، غطه بصلصة الجوز وزيّنه بالرمان.",
       zh: "烤辣椒内塞肉末、干果和香料，浇上核桃酱，撒上石榴籽。",
       ja: "焼きピーマンにひき肉・ドライフルーツ・スパイスを詰め、クルミソースとザクロをかける。",
-      tr: "Stuff kavrulmuş biber ile kıyılmış et, kuru meyveler, ve baharatlar, örtün ile ceviz sos, ve serpiştirin nar üstüne üstüne.",
-      it: "Stuff arrostito peperones con tritato carne, frutta secca, e spezie, copri con noce salsa, e spolvera melograno su sopra.",
+      tr: "Kavrulmuş biberleri kıyılmış et, kuru meyveler ve baharatlarla doldurun, üzerine ceviz sosu dökün ve nar taneleri serpin.",
+      it: "Farcire i peperoni arrostiti con carne tritata, frutta secca e spezie, coprire con salsa di noci e cospargere di melograno.",
       ko: "구운 피망에 다진 고기, 말린 과일, 향신료를 채워주세요. 호두 소스를 덮고 석류를 뿌려주세요."
     },
     originText: {
       ro: "Chiles en nogada este o rețetă tradițională din Mexic.",
       en: "Chiles en nogada is a traditional recipe from Mexico.",
       es: "Chiles en nogada es una receta tradicional de México.",
-      fr: "Chiles en nogada est une recette traditionnelle de Mexique.",
+      fr: "Chiles en nogada est une recette traditionnelle du Mexique.",
       de: "Chiles en nogada ist ein traditionelles Rezept aus Mexiko.",
-      pt: "Chiles en nogada é uma receita tradicional de México.",
-      ru: "Чили эн ногада — традиционный рецепт из Мексика.",
+      pt: "Chiles en nogada é uma receita tradicional do México.",
+      ru: "Чили эн ногада — традиционный рецепт из Мексики.",
       ar: "شيليز إن نوجادا هي وصفة تقليدية من المكسيك.",
       zh: "胡桃辣椒酱 是来自墨西哥的传统食谱。",
       ja: "チレス・エン・ノガダ はメキシコの伝統的なレシピです。",
       tr: "Chiles en nogada Meksika kökenli geleneksel bir tariftir.",
-      it: "Chiles en nogada è una risotta tradizionale di Messico.",
-      ko: "Chiles en nogada는(은) 멕시코의 전통 요리입니다."
+      it: "Chiles en nogada è una ricetta tradizionale del Messico.",
+      ko: "칠레스 엔 노가다는 멕시코의 전통 요리입니다."
     }
   },
   {
