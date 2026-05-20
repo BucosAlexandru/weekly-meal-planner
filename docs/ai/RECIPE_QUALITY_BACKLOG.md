@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 91 | Cullen Skink |
-| 2 | 92 | Gado-Gado |
-| 3 | 93 | Cinnamon Bun |
-| 4 | 94 | Chiles en Nogada |
-| 5 | 95 | Lentil Soup |
-| 6 | 96 | Spanakopita |
-| 7 | 97 | Jollof Rice |
-| 8 | 98 | Oka i'a |
-| 9 | 99 | Khorovats |
-| 10 | 100 | Verivorst |
+| 1 | 92 | Gado-Gado |
+| 2 | 93 | Cinnamon Bun |
+| 3 | 94 | Chiles en Nogada |
+| 4 | 95 | Lentil Soup |
+| 5 | 96 | Spanakopita |
+| 6 | 97 | Jollof Rice |
+| 7 | 98 | Oka i'a |
+| 8 | 99 | Khorovats |
+| 9 | 100 | Verivorst |
+| 10 | 101 | Tteokbokki |
 
 ---
 
