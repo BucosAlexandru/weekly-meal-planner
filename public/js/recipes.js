@@ -11952,7 +11952,8 @@ export const recipes = [
       ja: "オーストラリア",
       tr: "Avustralya",
       it: "Australia",
-      ko: "호주"
+      ko: "호주",
+      hi: "ऑस्ट्रेलिया"
     },
     name: {
       ro: "Meat Pie",
@@ -11967,7 +11968,8 @@ export const recipes = [
       ja: "ミートパイ",
       tr: "Meat Pie",
       it: "Meat Pie",
-      ko: "미트 파이"
+      ko: "미트 파이",
+      hi: "मीट पाई"
     },
     category: {
       ro: "Gustare",
@@ -11982,7 +11984,8 @@ export const recipes = [
       ja: "スナック",
       tr: "Atıştırmalık",
       it: "Spuntino",
-      ko: "간식"
+      ko: "간식",
+      hi: "नाश्ता"
     },
     ingredients: {
       ro: ["375 g aluat fraged gata preparat", "250 g aluat foietaj gata preparat", "500 g carne de vită tocată (slabă)", "1 ceapă medie (circa 150 g), tăiată mărunt", "2 căței de usturoi, pisați", "250 ml supă de vită", "2 linguri pastă de roșii", "1 lingură sos Worcestershire", "2 linguri făină albă", "1 ou, bătut ușor, pentru uns", "1 linguriță sare fină", "1/2 linguriță piper negru măcinat"],
@@ -12017,19 +12020,20 @@ export const recipes = [
       hi: "ओवन को 200°C (180°C फैन) पर पहले से गर्म करें। एक बड़े फ्राइंग पैन में थोड़ा तेल गरम करें मध्यम-तेज आंच पर, प्याज और लहसुन डालें और 3-4 मिनट नरम होने तक पकाएं। बीफ मिंस डालें और चम्मच से तोड़ते हुए 6-8 मिनट तक सभी तरफ से भूरा होने तक पकाएं। मैदा मिलाएं, 1 मिनट पकाएं, फिर स्टॉक, टोमेटो पेस्ट, वोर्सेस्टरशायर सॉस, नमक और काली मिर्च डालें; अच्छे से मिलाएं। मध्यम आंच पर 12-15 मिनट उबालें, कभी-कभी हिलाते हुए, जब तक ग्रेवी गाढ़ी होकर चम्मच की पीठ पर चिपके — भरावन गीला होना चाहिए लेकिन पतला नहीं; आंच से हटाएं और 15 मिनट ठंडा करें। शॉर्टक्रस्ट पेस्ट्री बेलें और 4 गोल काटें जो 4 व्यक्तिगत पाई टिन (लगभग 12 सेमी) में बिछाएं; टिन में दबाएं और बेस को कांटे से छेदें। भरावन को टिनों में समान रूप से बांटें, पफ पेस्ट्री की ढक्कन रखें, किनारे दबाकर सील करें और पीटे हुए अंडे से ब्रश करें। 25-30 मिनट तक बेक करें जब तक पेस्ट्री गहरे सुनहरे रंग की और ढक्कन फूले हुए व कुरकुरे न हो जाएं; 5 मिनट आराम दें फिर टमाटर सॉस के साथ परोसें।"
     },
     originText: {
-      ro: "Meat Pie este o rețetă tradițională din Australia.",
-      en: "Meat Pie is a traditional recipe from Australia.",
-      es: "Pastel de carne es una receta tradicional de Australia.",
-      fr: "Tourte à la viande est une recette traditionnelle d'Australie.",
-      de: "Fleischpastete ist ein traditionelles Rezept aus Australien.",
-      pt: "Empada de carne é uma receita tradicional da Austrália.",
-      ru: "Мясной пирог — традиционный рецепт из Австралии.",
-      ar: "فطيرة اللحم هي وصفة تقليدية من أستراليا.",
-      zh: "肉馅饼 是来自澳大利亚的传统食谱。",
-      ja: "ミートパイ はオーストラリアの伝統的なレシピです。",
-      tr: "Meat Pie Avustralya kökenli geleneksel bir tariftir.",
-      it: "Meat Pie è una ricetta tradizionale dell'Australia.",
-      ko: "미트 파이는 호주의 전통 요리입니다."
+      ro: "Plăcinta cu carne australiană este cel mai recunoscut aliment al țării — o plăcintă individuală de vită cu sos, vândută la stadioanele de fotbal, brutăriile de colț și stațiile de benzină din toată Australia. Mâncată cu mâna cu ketchup turnat deasupra, a devenit o parte centrală a culturii alimentare australiene în secolul al XIX-lea și începutul secolului XX. Construcția din aluat dublu este trăsătura definitorie: o bază din aluat fraged care rămâne fermă și o capac din aluat foietaj care crește și se crocantizează în cuptor.\n\nUmplătura trebuie să fie groasă — un sos adevărat, nu un bulion. Făina gătită în carnea tocată și supa creează consistența corectă: umplutura trebuie să-și mențină forma la tăiere, nu să curgă. Acesta este ceea ce separă o plăcintă bună de una umedă.",
+      en: "The Australian meat pie is the country's most recognized food — an individual beef and gravy pie sold at football grounds, corner bakeries, and petrol stations throughout Australia. Eaten handheld with tomato sauce on top, it became central to Australian working-class food culture in the late nineteenth century. The double pastry construction is the defining feature: a shortcrust base that holds firm and a puff pastry lid that rises and crisps in the oven.\n\nThe filling must be thick — a proper gravy rather than a broth. Flour cooked into the mince and stock creates the correct consistency: the filling should hold its shape when cut, not run. This is what separates a good pie from a wet one. The sauce-to-meat ratio and the brief resting time before slicing are equally important.",
+      es: "El pastel de carne australiano es el alimento más reconocido del país — un pastel individual de carne de res con salsa vendido en estadios de fútbol, panaderías de barrio y gasolineras de toda Australia. Comido a mano con salsa de tomate encima, se convirtió en parte central de la cultura alimentaria obrera australiana en el siglo XIX. La construcción de doble masa es la característica definitoria: una base de masa quebrada firme y una tapa de hojaldre que sube y se vuelve crujiente en el horno.\n\nEl relleno debe ser espeso — una salsa consistente, no un caldo. La harina cocinada con la carne picada y el caldo crea la consistencia correcta: el relleno debe mantener su forma al cortarlo, no escurrirse. Esto es lo que separa un buen pastel de uno aguado.",
+      fr: "La tourte à la viande australienne est l'aliment le plus reconnu du pays — une tourte individuelle de bœuf et de sauce vendue dans les stades de football, les boulangeries de quartier et les stations-service de toute l'Australie. Mangée à la main avec de la sauce tomate par-dessus, elle est devenue centrale dans la culture culinaire ouvrière australienne au XIXe siècle. La construction à double pâte est la caractéristique définitoire : une base de pâte brisée ferme et un couvercle de pâte feuilletée qui monte et devient croustillant au four.\n\nLa garniture doit être épaisse — une vraie sauce et non un bouillon. La farine cuite dans la viande hachée et le bouillon crée la bonne consistance : la garniture doit garder sa forme une fois coupée, ne pas couler. C'est ce qui distingue une bonne tourte d'une tourte détrempée.",
+      de: "Die australische Fleischpastete ist das bekannteste Gericht des Landes — eine individuelle Rindfleisc-Gratin-Pastete, die in Fußballstadien, Eckbäckereien und Tankstellen in ganz Australien verkauft wird. Mit der Hand gegessen und mit Tomatensauce beträufelt, wurde sie im späten neunzehnten Jahrhundert zu einem zentralen Teil der australischen Arbeiterklassen-Esskultur. Der doppelte Teigaufbau ist das Markenzeichen: ein Mürbeteigboden, der fest bleibt, und ein Blätterteigdeckel, der im Ofen aufgeht und knusprig wird.\n\nDie Füllung muss dick sein — eine echte Soße, kein Brühe. Mehl, das in Hackfleisch und Brühe eingekocht wird, erzeugt die richtige Konsistenz: Die Füllung soll beim Schneiden ihre Form behalten, nicht verlaufen. Das ist es, was eine gute Pastete von einer nassen unterscheidet.",
+      pt: "A empada de carne australiana é o alimento mais reconhecido do país — uma empada individual de carne bovina com molho vendida em campos de futebol, padarias de bairro e postos de gasolina em toda a Austrália. Comida à mão com molho de tomate por cima, tornou-se central na cultura alimentar da classe trabalhadora australiana no final do século XIX. A construção de dupla massa é a característica definitória: uma base de massa quebrada firme e uma tampa de massa folhada que cresce e fica crocante no forno.\n\nO recheio deve ser espesso — um molho consistente, não um caldo. A farinha cozinhada na carne picada e no caldo cria a consistência correta: o recheio deve manter a sua forma ao ser cortado, não escorrer. É isto que separa uma boa empada de uma empada aguada.",
+      ru: "Австралийский мясной пирог — самое узнаваемое блюдо страны: индивидуальный пирог с говядиной и подливой, который продаётся на футбольных стадионах, в угловых пекарнях и на бензозаправках по всей Австралии. Его едят руками, политым кетчупом, и он стал центральным элементом рабочей пищевой культуры Австралии в конце XIX века. Двойная конструкция из теста — главная черта: основа из песочного теста, которая сохраняет форму, и крышка из слоёного теста, которая поднимается и хрустит в духовке.\n\nНачинка должна быть густой — настоящий соус, а не бульон. Мука, приготовленная с фаршем и бульоном, создаёт нужную консистенцию: начинка должна держать форму при разрезании, а не вытекать. Это и отличает хороший пирог от влажного.",
+      ar: "فطيرة اللحم الأسترالية هي أكثر الأطعمة شهرةً في البلاد — فطيرة لحم بقري فردية مع مرق تُباع في ملاعب كرة القدم والمخابز المحلية ومحطات الوقود في أنحاء أستراليا. تُؤكل باليد مع صلصة الطماطم فوقها، وقد أصبحت محورية في ثقافة الطبقة العاملة الأسترالية في أواخر القرن التاسع عشر. البناء المزدوج من العجينة هو السمة المميزة: قاعدة من عجينة الفصيرة القصيرة الصلبة وغطاء من عجينة الفطير الملفوفة الذي يرتفع ويصبح مقرمشاً في الفرن.\n\nيجب أن يكون الحشو كثيفاً — مرقاً حقيقياً لا حساء. يخلق الدقيق المطبوخ مع اللحم المفروم والمرق القوام الصحيح: يجب أن يحتفظ الحشو بشكله عند القطع ولا يسيل. هذا هو ما يميز الفطيرة الجيدة عن الرطبة.",
+      zh: "澳大利亚肉馅饼是该国最具代表性的食品——一种个人装牛肉烩汁派，在澳大利亚全国各地的足球场、街角面包店和加油站出售。用手拿着吃，上面挤上番茄酱，它在19世纪末成为澳大利亚工人阶级饮食文化的核心。双层酥皮结构是其标志性特征：坚固的酥松底皮提供支撑，酥皮盖在烤箱中膨起变脆。\n\n馅料必须浓稠——是真正的肉汁而非清汤。面粉与肉馅和高汤一起煮制形成正确的质地：馅料切开时应保持形状，不能流淌。这正是一个好派与一个湿软派的区别所在。",
+      ja: "オーストラリアのミートパイは同国で最もよく知られた食べ物です — オーストラリア全土のフットボールグラウンド、街角の小さな製パン所、ガソリンスタンドで売られる、個人サイズの牛肉とグレービーのパイです。手持ちでトマトソースをかけて食べるスタイルは、19世紀後半のオーストラリア労働者階級の食文化の核となりました。二重生地の構造が特徴です：しっかりした土台のショートクラスト生地と、オーブンで膨らんでサクサクになるパフペストリーの蓋。\n\n具材は濃くなければなりません — ブロスではなく、本物のグレービーソース。肉と牛肉スープに加えて炒めた小麦粉が適切なとろみを作り出します：具材は切ったときに形を保ち、流れないようにする必要があります。これが良いパイと水っぽいパイを分けるポイントです。",
+      tr: "Avustralya et turtası, ülkenin en tanınmış yiyeceğidir — Avustralya genelinde futbol sahalarında, köşe fırınlarında ve benzin istasyonlarında satılan bireysel sığır eti ve sosu turta. El ile tutularak üzerine domates sosu dökülerek yenen bu yemek, 19. yüzyılın sonlarında Avustralya işçi sınıfı yemek kültürünün merkezine oturdu. Çift hamur yapısı belirleyici özelliktir: sağlam, yapıyı koruyan kısa hamur tabanı ve fırında kabarıp çıtır çıtır olan milföy hamur kapağı.\n\nİç dolgu kalın olmalıdır — bir et suyu değil, gerçek bir sos. Kıymaya ve et suyuna pişirilen un doğru kıvamı yaratır: iç dolgu kesildiğinde şeklini korumalı, akmamalıdır. Bu, iyi bir turtayı ıslak birinden ayıran şeydir.",
+      it: "Il meat pie australiano è il cibo più riconoscibile del paese — una torta individuale di manzo e sugo venduta negli stadi di calcio, nelle panetterie di quartiere e nelle stazioni di servizio di tutta l'Australia. Mangiata in mano con la salsa di pomodoro sopra, è diventata centrale nella cultura gastronomica della classe operaia australiana nel tardo Ottocento. La costruzione a doppio impasto è la caratteristica definitiva: una base di pasta brisée che tiene la forma e un coperchio di pasta sfoglia che si gonfia e diventa croccante nel forno.\n\nIl ripieno deve essere denso — un vero sugo, non un brodo. La farina cotta nella carne trita e nel brodo crea la giusta consistenza: il ripieno deve mantenere la forma una volta tagliato, senza colare. Questo è ciò che distingue una buona torta da una bagnata.",
+      ko: "호주 미트 파이는 나라에서 가장 잘 알려진 음식입니다 — 호주 전역의 축구 경기장, 동네 빵집, 주유소에서 판매되는 개인용 쇠고기 그레이비 파이입니다. 손으로 들고 위에 토마토 소스를 뿌려 먹는 방식으로, 19세기 말 호주 노동자 계층의 식문화의 중심이 되었습니다. 이중 페이스트리 구조가 핵심 특징입니다: 형태를 유지하는 단단한 쇼트크러스트 베이스와 오븐에서 부풀어 바삭해지는 퍼프 페이스트리 뚜껑.\n\n속재료는 걸쭉해야 합니다 — 맑은 국물이 아닌 진한 그레이비 소스. 다진 고기와 육수에 밀가루를 넣어 끓이면 적절한 농도가 만들어집니다: 속재료는 잘랐을 때 형태를 유지해야 하며, 흘러내리면 안 됩니다. 이것이 좋은 파이와 눅눅한 파이의 차이를 만드는 핵심입니다.",
+      hi: "ऑस्ट्रेलियाई मीट पाई देश का सबसे पहचाना जाने वाला भोजन है — ऑस्ट्रेलिया भर में फुटबॉल मैदानों, कोने की बेकरियों और पेट्रोल स्टेशनों पर बेची जाने वाली एक व्यक्तिगत बीफ और ग्रेवी पाई। ऊपर टमाटर सॉस डालकर हाथ में पकड़कर खाई जाती है, यह उन्नीसवीं सदी के अंत में ऑस्ट्रेलियाई मजदूर वर्ग की खाने की संस्कृति का केंद्र बन गई। दोहरी पेस्ट्री संरचना परिभाषित विशेषता है: एक मजबूत शॉर्टक्रस्ट बेस और एक पफ पेस्ट्री ढक्कन जो ओवन में फूलता और कुरकुरा होता है।\n\nभरावन गाढ़ा होना चाहिए — एक असली ग्रेवी, न कि शोरबा। कीमा और स्टॉक में पका हुआ आटा सही स्थिरता बनाता है: काटने पर भरावन को अपना आकार बनाए रखना चाहिए, बहना नहीं चाहिए। यही एक अच्छी पाई को गीली पाई से अलग करता है।"
     }
   },
   {
