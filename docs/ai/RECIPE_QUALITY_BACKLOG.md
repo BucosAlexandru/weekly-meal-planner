@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 59 | Pasticada |
-| 2 | 60 | Buuz |
-| 3 | 62 | Brik |
-| 4 | 63 | Khachapuri |
-| 5 | 64 | Bobotie |
-| 6 | 65 | Ceviche |
-| 7 | 67 | Banh Mi |
-| 8 | 68 | Satay |
-| 9 | 69 | Laksa |
-| 10 | 70 | Pupusa |
+| 1 | 60 | Buuz |
+| 2 | 62 | Brik |
+| 3 | 63 | Khachapuri |
+| 4 | 64 | Bobotie |
+| 5 | 65 | Ceviche |
+| 6 | 67 | Banh Mi |
+| 7 | 68 | Satay |
+| 8 | 69 | Laksa |
+| 9 | 70 | Pupusa |
+| 10 | 72 | Amok |
 
 ---
 
