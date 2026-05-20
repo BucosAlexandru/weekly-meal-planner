@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 79 | Gravlax |
-| 2 | 80 | Stoofvlees |
-| 3 | 81 | Zeamă |
-| 4 | 82 | Meat Pie |
-| 5 | 83 | Fatteh |
-| 6 | 84 | Smørrebrød |
-| 7 | 86 | Poutine |
-| 8 | 87 | Roti |
-| 9 | 88 | Jerk Chicken |
-| 10 | 89 | Sabich |
+| 1 | 80 | Stoofvlees |
+| 2 | 81 | Zeamă |
+| 3 | 82 | Meat Pie |
+| 4 | 83 | Fatteh |
+| 5 | 84 | Smørrebrød |
+| 6 | 86 | Poutine |
+| 7 | 87 | Roti |
+| 8 | 88 | Jerk Chicken |
+| 9 | 89 | Sabich |
+| 10 | 90 | Ropa Vieja |
 
 ---
 
