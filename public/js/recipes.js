@@ -10728,7 +10728,8 @@ export const recipes = [
       ja: "マレーシア",
       tr: "Malezya",
       it: "Malesia",
-      ko: "말레이시아"
+      ko: "말레이시아",
+      hi: "मलेशिया"
     },
     name: {
       ro: "Laksa",
@@ -10743,7 +10744,8 @@ export const recipes = [
       ja: "ラクサ",
       tr: "Laksa",
       it: "Laksa",
-      ko: "락사"
+      ko: "락사",
+      hi: "लक्सा"
     },
     category: {
       ro: "Prânz",
@@ -10758,7 +10760,8 @@ export const recipes = [
       ja: "ランチ",
       tr: "Öğle yemeği",
       it: "Pranzo",
-      ko: "점심"
+      ko: "점심",
+      hi: "दोपहर का खाना"
     },
     ingredients: {
       ro: ["3 linguri pastă laksa (sau pastă de curry roșu cu 1 linguriță pastă de creveți)", "2 linguri ulei vegetal", "800 ml lapte de cocos (2 conserve de 400 ml)", "600 ml supă de pui sau apă", "2 linguri sos de pește", "1 linguriță zahăr", "400 g creveți cruzi medii, curățați și devenați", "200 g tofu ferm, scurs și tăiat cuburi de 2 cm", "200 g muguri de soia proaspeți", "200 g vermicelli de orez, înmuiați în apă clocotită 3 minute și scurși", "4 ouă mari, fierte tari (7 minute), decojite și tăiate jumătate", "100 g fasole verde, curățată și tăiată în jumătăți", "2 lime, tăiate felii", "20 g coriandru proaspăt, frunze", "2 cepe verzi, feliate subțire"],
@@ -10793,19 +10796,20 @@ export const recipes = [
       hi: "चावल की सेवई को 3 मिनट उबलते पानी में भिगोएं, छानें, ठंडे पानी से धोएं और रख दें। अंडे 7 मिनट सख्त उबालें, बर्फ के पानी में ठंडे करें, छीलें और आधे काटें। एक बड़े वॉक या पैन में तेल गरम करें, लक्सा पेस्ट डालें और लगातार हिलाते हुए 2-3 मिनट भूनें जब तक खुशबू न आए और तेल अलग होने लगे। नारियल का दूध और चिकन स्टॉक डालकर हल्का उबाल लाएं। फिश सॉस और चीनी डालकर चखें — शोरबा समृद्ध और थोड़ा नमकीन होना चाहिए। हरी बीन्स डालकर 3 मिनट पकाएं, फिर झींगे और टोफू डालकर 2-3 मिनट पकाएं जब तक झींगे गुलाबी और पके न हों। नूडल्स को 4 गहरे बाउल में बांटें और ऊपर से गर्म शोरबा, झींगे, टोफू और बीन्स डालें। प्रत्येक बाउल को बीन स्प्राउट्स, आधे उबले अंडे, हरे प्याज और धनिया से सजाएं। नींबू के टुकड़ों के साथ तुरंत परोसें।"
     },
     originText: {
-      ro: "Laksa este o rețetă tradițională din Malaysia.",
-      en: "Laksa is a traditional recipe from Malaysia.",
-      es: "Laksa es una receta tradicional de Malasia.",
-      fr: "Laksa est une recette traditionnelle de Malaisie.",
-      de: "Laksa ist ein traditionelles Rezept aus Malaysia.",
-      pt: "Laksa é uma receita tradicional da Malásia.",
-      ru: "Лакса — традиционный рецепт из Малайзии.",
-      ar: "لاكسا هي وصفة تقليدية من ماليزيا.",
-      zh: "叻沙 是来自马来西亚的传统食谱。",
-      ja: "ラクサ はマレーシアの伝統的なレシピです。",
-      tr: "Laksa Malezya kökenli geleneksel bir tariftir.",
-      it: "Laksa è una ricetta tradizionale della Malesia.",
-      ko: "락사는 말레이시아의 전통 요리입니다."
+      ro: "Laksa este o supă condimentată cu tăiței care definește tradiția culinară Peranakan — amestecul malayo-chinez — din Asia de Sud-Est maritimă. S-a dezvoltat în comunitățile comerciale costiere ale Peninsulei Malacca, Singapore și Indoneziei, unde gătitul imigranților chinezi și condimentele malaeze s-au îmbinat de-a lungul generațiilor. Există două stiluri principale: laksa cu curry, cremoasă cu lapte de cocos, și laksa asam, acrișoară și pe bază de tamarind.\n\nPasta laksa este baza preparatului — un amestec de ardei iute uscat, pastă de creveți, lemongrass, galangal și alte aromatice. Prăjirea pastei în ulei înainte de adăugarea lichidului este pasul esențial: dezvoltă profunzimea și elimină gustul crud. Bulionul se finisează cu lapte de cocos, care îi conferă o bogăție cremoasă, și se ajustează cu sos de pește.",
+      en: "Laksa is a spiced noodle soup that defines the Peranakan — the mixed Malay-Chinese — culinary tradition of maritime Southeast Asia. It developed in the coastal trading communities of the Malay Peninsula, Singapore, and Indonesia, where Chinese immigrant cooking and Malay spicing merged over generations. The two main styles are curry laksa, rich with coconut milk, and asam laksa, which is sour and tamarind-based.\n\nThe laksa paste is the foundation of the dish — dried chilli, shrimp paste, lemongrass, galangal, and aromatics. Frying the paste in oil before adding liquid is the critical step; it develops depth and removes rawness. The broth is finished with coconut milk for creaminess and balanced with fish sauce. Bean sprouts, eggs, and coriander add contrast in texture.",
+      es: "La Laksa es una sopa de fideos especiada que define la tradición culinaria Peranakan — la mezcla malayo-china — del Sudeste Asiático marítimo. Se desarrolló en las comunidades comerciales costeras de la Península Malaya, Singapur e Indonesia, donde la cocina de los inmigrantes chinos y los condimentos malayos se fusionaron a lo largo de generaciones. Los dos estilos principales son la laksa de curry, cremosa con leche de coco, y la laksa asam, ácida y a base de tamarindo.\n\nLa pasta laksa es la base del plato — chile seco, pasta de gambas, hierba limón, galangal y aromáticos. Freír la pasta en aceite antes de añadir el líquido es el paso crítico: desarrolla profundidad y elimina el sabor crudo. El caldo se termina con leche de coco para dar cremosidad y se equilibra con salsa de pescado. Los brotes de soja, huevos y cilantro añaden contraste de textura.",
+      fr: "Le Laksa est une soupe de nouilles épicée qui définit la tradition culinaire Peranakan — le mélange malayo-chinois — de l'Asie du Sud-Est maritime. Il s'est développé dans les communautés commerciales côtières de la péninsule malaise, de Singapour et d'Indonésie, où la cuisine des immigrants chinois et les épices malaises ont fusionné au fil des générations. Les deux styles principaux sont le laksa au curry, riche en lait de coco, et le laksa asam, acide et à base de tamarin.\n\nLa pâte laksa est la base du plat — piment sec, pâte de crevettes, citronnelle, galangal et aromates. Faire revenir la pâte dans l'huile avant d'ajouter le liquide est l'étape critique: elle développe la profondeur et enlève le goût cru. Le bouillon est finalisé avec du lait de coco pour la crémeuse et équilibré avec la sauce nuoc-mam. Les pousses de soja, les oeufs et la coriandre ajoutent un contraste de texture.",
+      de: "Laksa ist eine gewürzte Nudelsuppe, die die Peranakan-Küche — die gemischte malaiisch-chinesische Tradition — des maritimen Südostasiens definiert. Sie entstand in den Küstenhandelsgemeinden der Malaiischen Halbinsel, Singapurs und Indonesiens, wo die Küche chinesischer Einwanderer und malaiische Gewürze über Generationen verschmolzen. Die zwei Hauptstile sind Curry-Laksa, reich an Kokosmilch, und Asam-Laksa, die sauer und auf Tamarindenbasis ist.\n\nDie Laksa-Paste ist die Grundlage des Gerichts — getrocknete Chili, Krabbenpaste, Zitronengras, Galangal und Aromaten. Das Anbraten der Paste in Öl vor dem Hinzufügen der Flüssigkeit ist der entscheidende Schritt: Es entwickelt Tiefe und entfernt die Rohheit. Die Brühe wird mit Kokosmilch für Cremigkeit abgeschmeckt und mit Fischsoße ausbalanciert. Sojasprossen, Eier und Koriander sorgen für Texturgegensatz.",
+      pt: "O Laksa é uma sopa de noodles especiada que define a tradição culinária Peranakan — a mistura malaio-chinesa — do Sudeste Asiático marítimo. Desenvolveu-se nas comunidades comerciais costeiras da Península Malaia, Singapura e Indonésia, onde a cozinha dos imigrantes chineses e os temperos malaios se fundiram ao longo de gerações. Os dois estilos principais são o laksa de caril, rico em leite de coco, e o laksa asam, ácido e à base de tamarindo.\n\nA pasta laksa é a base do prato — malagueta seca, pasta de camarão, erva-príncipe, galangal e aromáticos. Fritar a pasta no azeite antes de adicionar o líquido é o passo crítico: desenvolve profundidade e remove o sabor cru. O caldo é finalizado com leite de coco para cremosidade e equilibrado com molho de peixe. Os rebentos de soja, ovos e coentros acrescentam contraste de textura.",
+      ru: "Лакса — острый суп с лапшой, определяющий кулинарную традицию Перанакан — смешанную малайско-китайскую — морской Юго-Восточной Азии. Она сложилась в прибрежных торговых общинах Малайского полуострова, Сингапура и Индонезии, где кухня китайских иммигрантов и малайские специи слились воедино за несколько поколений. Два основных стиля: карри-лакса, богатая кокосовым молоком, и асам-лакса, кислая и на тамариндовой основе.\n\nПаста лакса — фундамент блюда: сушёный чили, паста из креветок, лемонграсс, галангал и ароматики. Обжарка пасты в масле до добавления жидкости — ключевой этап: она раскрывает глубину вкуса и убирает сырость. Бульон доводится до готовности кокосовым молоком для сливочности и балансируется рыбным соусом. Ростки сои, яйца и кинза добавляют контраст текстур.",
+      ar: "اللاكسا حساء شعيرية متبّلة تُعرِّف التقليد الطهوي البيرانكاني — المزيج الملايوي الصيني — في جنوب شرق آسيا البحرية. نشأت في المجتمعات التجارية الساحلية لشبه الجزيرة الملايوية وسنغافورة وإندونيسيا، حيث اندمجت مطبخ المهاجرين الصينيين مع توابل الملايو عبر الأجيال. الأسلوبان الرئيسيان هما لاكسا الكاري الغنية بحليب جوز الهند، ولاكسا الأسام الحامضة القائمة على التمر الهندي.\n\nمعجون اللاكسا هو أساس الطبق — فلفل حار مجفف ومعجون الروبيان وليمون الحشيش والكلنجان والعطريات. قلي المعجون في الزيت قبل إضافة السائل هو الخطوة المحورية؛ تُنمي العمق وتُزيل النيئة. يُنهى المرق بحليب جوز الهند للكريمية ويُعدَّل بصلصة السمك. براعم الصويا والبيض والكزبرة تُضيف تبايناً في الملمس.",
+      zh: "叻沙是一道香料面条汤，是东南亚海洋地区峇峇娘惹——马中混血——饮食传统的代表。它发展于马来半岛、新加坡和印度尼西亚的沿海贸易社区，在那里，华人移民的烹饪方式与马来香料历经数代融合而成。主要分为两种风格：以椰浆为基底的咖喱叻沙，以及酸爽的亚参叻沙。\n\n叻沙酱是这道菜的根基——由干辣椒、虾酱、香茅、南姜和香料调成。在加入液体前先将酱料在油中炒香是关键步骤，能激发深度、去除生味。汤底加入椰浆增添奶香，并以鱼露调味平衡。豆芽、鸡蛋和香菜则带来口感上的对比。",
+      ja: "ラクサは、東南アジア海洋部のプラナカン文化 — マレー・中国混合の食の伝統 — を象徴するスパイス豊かな麺スープだ。マレー半島・シンガポール・インドネシアの沿岸交易コミュニティで発展し、中国人移民の料理法とマレーのスパイス使いが世代をかけて融合した。二大スタイルはココナッツミルク豊富なカリーラクサと、酸味が特徴のアサムラクサ。\n\nラクサペーストが料理の土台となる — 乾燥唐辛子・エビペースト・レモングラス・ガランガル・香味野菜の合わせ物だ。液体を加える前にペーストを油で炒める工程が要で、深みを引き出し生っぽさを消す。ブロスはココナッツミルクでコク付けし、ナンプラーで味を整える。豆もやし・卵・コリアンダーがテクスチャーのコントラストを加える。",
+      tr: "Laksa, Güneydoğu Asya'nın denizci Peranakan — karma Malay-Çin — mutfak geleneğini tanımlayan baharatlı bir erişte çorbasıdır. Malay Yarımadası, Singapur ve Endonezya'nın kıyı ticaret topluluklarında gelişmiş; Çinli göçmenlerin pişirme geleneğiyle Malay baharatları nesiller boyu iç içe geçmiştir. İki ana stil vardır: hindistancevizi sütüyle zengin köri laksası ve ekşi, demirhindi bazlı asam laksası.\n\nLaksa ezmesi yemeğin temelidir — kurutulmuş biber, karides ezmesi, limon otu, galangal ve aromatiklerden oluşur. Sıvı eklemeden önce ezmesini yağda kavurmak kritik adımdır; derinlik kazandırır ve çiğliği giderir. Çorba hindistancevizi sütüyle kremalaştırılır ve balık sosuyla dengelenir. Soya filizleri, yumurta ve kişniş doku zıtlığı sağlar.",
+      it: "Il Laksa è una zuppa di noodles speziata che definisce la tradizione culinaria Peranakan — il misto malese-cinese — dell'Asia del Sud-Est marittima. Si è sviluppata nelle comunità commerciali costiere della Penisola Malese, Singapore e Indonesia, dove la cucina degli immigrati cinesi e le spezie malesi si sono fuse nel corso delle generazioni. I due stili principali sono il curry laksa, ricco di latte di cocco, e l'asam laksa, aspro e a base di tamarindo.\n\nLa pasta laksa è il fondamento del piatto — peperoncino essiccato, pasta di gamberi, citronella, galanga e aromi. Friggere la pasta nell'olio prima di aggiungere il liquido è il passaggio critico: sviluppa profondità ed elimina il sapore grezzo. Il brodo è rifinito con latte di cocco per la cremosità e bilanciato con salsa di pesce. I germogli di soia, le uova e il coriandolo aggiungono contrasto di texture.",
+      ko: "락사는 해양 동남아시아의 페라나칸 — 말레이-중국 혼합 — 음식 전통을 대표하는 향신료 가득한 국수 수프다. 말레이 반도, 싱가포르, 인도네시아의 해안 무역 공동체에서 발전했으며, 중국 이민자의 요리 방식과 말레이 향신료가 세대에 걸쳐 융합되었다. 두 가지 주요 스타일은 코코넛 밀크가 풍부한 커리 락사와 타마린드 기반의 새콤한 아삼 락사다.\n\n락사 페이스트가 요리의 기반이다 — 건조 고추, 새우 페이스트, 레몬그라스, 갈랑갈, 향신채로 이루어진다. 액체를 넣기 전 페이스트를 기름에 볶는 것이 핵심 단계로, 깊은 맛을 끌어내고 날 것의 향을 제거한다. 육수는 코코넛 밀크로 부드럽게 마무리되고 피시소스로 균형을 잡는다. 콩나물, 달걀, 고수가 식감의 대비를 더한다.",
+      hi: "लक्सा एक मसालेदार नूडल सूप है जो समुद्री दक्षिण-पूर्व एशिया की पेरानाकान — मिश्रित मलय-चीनी — पाक परंपरा को परिभाषित करता है। यह मलाया प्रायद्वीप, सिंगापुर और इंडोनेशिया के तटीय व्यापारिक समुदायों में विकसित हुआ, जहाँ चीनी प्रवासियों की रसोई और मलय मसाले पीढ़ियों से मिलते रहे। दो मुख्य शैलियाँ हैं: नारियल दूध से समृद्ध करी लक्सा और इमली आधारित खट्टा असम लक्सा।\n\nलक्सा पेस्ट इस व्यंजन की नींव है — सूखी मिर्च, झींगा पेस्ट, लेमनग्रास, गलंगल और सुगंधित मसाले। तरल पदार्थ मिलाने से पहले पेस्ट को तेल में भूनना महत्वपूर्ण कदम है; यह गहराई विकसित करता है और कच्चेपन को हटाता है। शोरबे को नारियल दूध से मलाईदार बनाया जाता है और फिश सॉस से संतुलित किया जाता है। बीन स्प्राउट्स, अंडे और धनिया बनावट में विपरीतता जोड़ते हैं।"
     }
   },
   {
