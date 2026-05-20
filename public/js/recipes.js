@@ -13377,7 +13377,8 @@ export const recipes = [
       ja: "ギリシャ",
       tr: "Yunanistan",
       it: "Grecia",
-      ko: "그리스"
+      ko: "그리스",
+      hi: "ग्रीस"
     },
     name: {
       ro: "Spanakopita",
@@ -13392,7 +13393,8 @@ export const recipes = [
       ja: "スパナコピタ",
       tr: "Spanakopita",
       it: "Spanakopita",
-      ko: "스파나코피타"
+      ko: "스파나코피타",
+      hi: "स्पानाकोपिटा"
     },
     category: {
       ro: "Gustare",
@@ -13407,7 +13409,8 @@ export const recipes = [
       ja: "スナック",
       tr: "Atıştırmalık",
       it: "Spuntino",
-      ko: "간식"
+      ko: "간식",
+      hi: "स्नैक"
     },
     servings: 6,
     tipType: 'veg',
@@ -13425,7 +13428,8 @@ export const recipes = [
       ja: ["フィロ生地", "ほうれん草", "フェタチーズ", "玉ねぎ", "卵", "オリーブオイル", "スパイス"],
       tr: ["yufka hamur", "ıspanak", "feta peyniri peynir", "soğbir", "yumurta", "zeytinyağı", "baharatlar"],
       it: ["pasta fillo pasta", "spinaci", "feta formaggio", "cipolla", "uova", "olio d'oliva", "spezie"],
-      ko: ["필로 반죽 파이지", "시금치", "페타 치즈 치즈", "양파", "계란", "올리브오일", "향신료"]
+      ko: ["필로 반죽 파이지", "시금치", "페타 치즈 치즈", "양파", "계란", "올리브오일", "향신료"],
+      hi: ["फ़िलो पेस्ट्री", "पालक", "फेटा चीज़", "प्याज़", "अंडे", "जैतून का तेल", "मसाले"]
     },
     howIsMade: {
       ro: "Umple foile subțiri cu amestec de spanac și brânză, rulează sau pune în tavă, unge cu ou și coace până devine aurie.",
@@ -13440,22 +13444,24 @@ export const recipes = [
       ja: "フィロ生地にほうれん草とチーズを包み、巻くか重ねて卵を塗り、焼き色がつくまで焼く。",
       tr: "Yufka hamurunu ıspanak ve peynir karışımıyla doldurun, rulo yapın veya tepside katmanlayın, yumurta sürün ve altın rengi olana kadar fırında pişirin.",
       it: "Farcire la sfoglia di pasta fillo con il misto di spinaci e formaggio, arrotolare o disporre nella teglia, spennellare con uovo e cuocere in forno fino a doratura.",
-      ko: "필로 반죽에 시금치와 치즈를 섞어 채운 후 돌돌 말거나 트레이에 층층이 쌓습니다. 달걀을 바르고 노릇해질 때까지 오븐에 굽습니다."
+      ko: "필로 반죽에 시금치와 치즈를 섞어 채운 후 돌돌 말거나 트레이에 층층이 쌓습니다. 달걀을 바르고 노릇해질 때까지 오븐에 굽습니다.",
+      hi: "पालक और चीज़ के मिश्रण से फ़िलो आटा भरें, रोल करें या ट्रे में रखें, अंडे से ब्रश करें और सुनहरा होने तक बेक करें।"
     },
     originText: {
-      ro: "Spanakopita este o rețetă tradițională din Grecia.",
-      en: "Spanakopita is a traditional recipe from Greece.",
-      es: "Spanakopita es una receta tradicional de Grecia.",
-      fr: "Spanakopita est une recette traditionnelle de Grèce.",
-      de: "Spanakopita ist ein traditionelles Rezept aus Griechenland.",
-      pt: "Spanakopita é uma receita tradicional da Grécia.",
-      ru: "Спанакопита — традиционный рецепт из Греции.",
-      ar: "سباناكوبيتا هي وصفة تقليدية من اليونان.",
-      zh: "希腊菠菜馅饼 是来自希腊的传统食谱。",
-      ja: "スパナコピタ はギリシャの伝統的なレシピです。",
-      tr: "Spanakopita Yunanistan kökenli geleneksel bir tariftir.",
-      it: "Spanakopita è una ricetta tradizionale della Grecia.",
-      ko: "스파나코피타는 그리스의 전통 요리입니다."
+      ro: "Spanakopita — plăcintă cu spanac și feta — este unul dintre cele mai reconoscibile preparate din bucătăria grecească. Umplutura de spanac ofilit, feta sfărâmată, ouă și adesea mărar este înfășurată în foi subțiri de aluat phyllo, unse generos cu ulei de măsline între fiecare strat. Preparatul apare în toată Grecia atât ca plăcintă mare coaptă în tavă, cât și ca triunghiuri individuale sau rulouri vândute la brutării.\n\nAluatul phyllo trebuie lucrat rapid: foile extrem de subțiri se usucă repede când sunt expuse la aer, devenind fragile. Păstrarea stivei nefolosite acoperită cu un șervețel ușor umed este esențială. Feta trebuie sfărâmată, nu pisată — textura grosieră creează buzunare de sărat în umplutură. Stoarcerea completă a spanacului fiert înainte de amestecare previne înmuierea aluatului.",
+      en: "Spanakopita — spinach and feta pie — is one of the most recognisable dishes in Greek cuisine. The filling of wilted spinach, crumbled feta, eggs, and often dill is wrapped in sheets of paper-thin phyllo pastry, brushed generously with olive oil between each layer. The dish appears across Greece as both a large tray-baked pie and as individual triangles or rolls sold at bakeries.\n\nThe phyllo must be handled quickly: the paper-thin sheets dry out fast when exposed to air, becoming brittle and difficult to work with. Keeping the unused stack covered with a slightly damp cloth is essential. Feta should be crumbled, not blended — the coarse texture creates pockets of saltiness within the filling. Squeezing the cooked spinach completely dry before mixing prevents the pastry from becoming soggy.",
+      es: "Spanakopita — tarta de espinacas y feta — es uno de los platos más reconocibles de la cocina griega. El relleno de espinacas marchitas, feta desmenuzado, huevos y a menudo eneldo se envuelve en láminas de masa filo finísima, pintada generosamente con aceite de oliva entre cada capa. El plato aparece en toda Grecia tanto como una gran tarta horneada en bandeja como en triángulos individuales o rollitos vendidos en panaderías.\n\nLa masa filo debe trabajarse rápidamente: las hojas finísimas se secan en contacto con el aire y se vuelven quebradizas. Mantener la pila sin usar cubierta con un paño ligeramente húmedo es fundamental. El feta debe desmenuzarse, no triturarse — la textura gruesa crea bolsillos de salinidad dentro del relleno. Exprimir bien las espinacas cocidas antes de mezclar evita que la masa se ablande.",
+      fr: "Spanakopita — tourte aux épinards et à la feta — est l'un des plats les plus reconnaissables de la cuisine grecque. La farce d'épinards fanés, de feta émiettée, d'œufs et souvent d'aneth est enveloppée dans des feuilles de pâte filo très fines, généreusement badigeonnées d'huile d'olive entre chaque couche. Le plat est présent dans toute la Grèce aussi bien sous forme de grande tourte cuite en plaque que de triangles individuels ou de rouleaux vendus en boulangerie.\n\nLa pâte filo doit être manipulée rapidement : les feuilles très fines sèchent vite exposées à l'air et deviennent cassantes. Garder la pile non utilisée couverte d'un linge légèrement humide est indispensable. La feta doit être émiettée, non mixée — la texture grossière crée des poches de salinité dans la farce. Presser les épinards cuits pour éliminer tout excès d'eau avant de les mélanger empêche la pâte de devenir détrempée.",
+      de: "Spanakopita — Spinat-Feta-Pie — ist eines der bekanntesten Gerichte der griechischen Küche. Die Füllung aus gewelktem Spinat, zerkrümeltem Feta, Eiern und oft Dill wird in hauchdünne Filoteigblätter gewickelt, die zwischen jeder Schicht großzügig mit Olivenöl bestrichen werden. Das Gericht findet sich in ganz Griechenland sowohl als große, in einem Blech gebackene Pie als auch als einzelne Dreiecke oder Rollen, die in Bäckereien verkauft werden.\n\nDer Filoteig muss zügig verarbeitet werden: Die hauchdünnen Blätter trocknen schnell aus wenn sie Luft ausgesetzt sind und werden brüchig. Den unbenutzten Stapel mit einem leicht feuchten Tuch abzudecken ist unerlässlich. Feta sollte zerkrümelt, nicht püriert werden — die grobe Textur erzeugt Salzigkeitstaschen in der Füllung. Den gekochten Spinat vor dem Mischen vollständig auszudrücken verhindert, dass der Teig weich wird.",
+      pt: "Spanakopita — tarte de espinafre e feta — é um dos pratos mais reconhecíveis da cozinha grega. O recheio de espinafres murchos, feta esfarelado, ovos e muitas vezes endro é envolvido em folhas de massa filo muito finas, pinceladas generosamente com azeite entre cada camada. O prato aparece em toda a Grécia tanto como uma grande tarte assada na forma quanto em triângulos individuais ou rolinhos vendidos em padarias.\n\nA massa filo deve ser trabalhada rapidamente: as folhas muito finas secam depressa quando expostas ao ar e ficam quebradiças. Manter a pilha não utilizada coberta com um pano ligeiramente húmido é essencial. O feta deve ser esfarelado, não triturado — a textura grossa cria bolsos de salinidade no recheio. Espremer bem o espinafre cozido antes de misturar evita que a massa fique encharcada.",
+      ru: "Спанакопита — пирог со шпинатом и фетой — одно из самых узнаваемых блюд греческой кухни. Начинка из привядшего шпината, раскрошенной феты, яиц и часто укропа заворачивается в тончайшие листы теста фило, которые щедро промазываются оливковым маслом между каждым слоем. Блюдо встречается по всей Греции как в виде большого пирога, запечённого на противне, так и в виде отдельных треугольников или рулетиков, которые продаются в пекарнях.\n\nФило нужно работать быстро: тончайшие листы быстро высыхают на воздухе и становятся хрупкими. Держать неиспользованную стопку накрытой слегка влажным полотенцем обязательно. Фету следует крошить, а не взбивать — грубая текстура создаёт в начинке карманы солёности. Полностью отжать приготовленный шпинат перед смешиванием предотвращает размокание теста.",
+      ar: "سباناكوبيتا — فطيرة السبانخ والفيتا — من أكثر الأطباق اليونانية شهرةً وتميزاً. يُلفّ حشوتها من السبانخ الذابلة والفيتا المفتتة والبيض والشبت في أحيان كثيرة بأوراق عجينة الفيلو الرقيقة كالورق، تُدهن بسخاء بزيت الزيتون بين كل طبقة. يظهر الطبق في أرجاء اليونان كافة بصورة فطيرة كبيرة مخبوزة في صينية، أو على شكل مثلثات وأدوار فردية تُباع في المخابز.\n\nيجب التعامل مع عجينة الفيلو بسرعة: تجفّ الأوراق الرقيقة جداً سريعاً حين تُعرَّض للهواء وتصبح هشة. تغطية الأوراق غير المستخدمة بقطعة قماش مرطّبة قليلاً ضرورة لا غنى عنها. يجب تفتيت الفيتا لا هرسها — القوام الخشن يخلق جيوباً مالحة داخل الحشوة. عصر السبانخ المطبوخ عصراً تاماً قبل الخلط يمنع العجينة من الترطّب.",
+      zh: "斯帕纳科皮塔——菠菜菲达奶酪馅饼——是希腊料理中最具辨识度的菜肴之一。由软化菠菜、碎菲达奶酪、鸡蛋以及时常加入的莳萝组成的馅料，被层层裹入薄如纸张的菲洛面皮中，每层之间慷慨地刷上橄榄油。这道菜在希腊各地均有出现，既有大烤盘里烘烤的整块馅饼，也有面包店出售的个人份三角形或卷饼。\n\n菲洛面皮必须迅速操作：极薄的面皮暴露在空气中很快就会变干发脆。将未使用的面皮堆叠覆盖上一块微湿的布是必不可少的步骤。菲达应该碎成块，而非打成泥——粗糙的质感在馅料中制造出咸味口袋。将煮熟的菠菜彻底挤干水分再混合，可防止面皮变软塌陷。",
+      ja: "スパナコピタ——ほうれん草とフェタのパイ——はギリシャ料理で最も認知度の高い料理のひとつだ。しんなりさせたほうれん草、砕いたフェタ、卵、そしてしばしばディルが入った具材を、紙のように薄いフィロ生地のシートに包み、各層の間にオリーブオイルをたっぷりと塗り重ねる。料理はギリシャ全土に広まり、大きなトレイで焼いたパイとしても、パン屋で売られる三角形や巻き型の個別サイズとしても見られる。\n\nフィロは素早く扱う必要がある：紙のように薄いシートは空気に触れると素早く乾燥し、もろく扱いにくくなる。使わないシートは少し湿らせた布で覆っておくことが欠かせない。フェタは砕くものであり、混ぜ合わせてはいけない——粗い質感が具材の中に塩気のポケットを作る。混ぜる前にゆでたほうれん草の水分を完全に絞り切ることで、生地がべちゃっとするのを防ぐ。",
+      tr: "Spanakopita — ıspanak ve beyaz peynir böreği — Yunan mutfağının en tanınan yemeklerinden biridir. Solmuş ıspanak, ufalanmış beyaz peynir, yumurta ve genellikle dereotundan oluşan iç harç, kağıt inceliğindeki yufka yapraklarına sarılır; her tabaka arasına bolca zeytinyağı sürülür. Yemek, tüm Yunanistan'da hem büyük tepsi böreği şeklinde hem de fırınlarda satılan bireysel üçgen veya rulo olarak karşımıza çıkar.\n\nYufka ile hızlı çalışılmalıdır: kağıt ince yapraklar havaya maruz kaldığında çabuk kurur ve kırılganlaşır. Kullanılmayan yaprakları hafif nemli bir bezle örtmek zorunludur. Beyaz peynir ufalanmalı, ezilmemelidir — kaba doku, iç harç içinde tuzluluk cepleği yaratır. Pişirilmiş ıspanağı karıştırmadan önce tamamen sıkmak hamurun ıslanmasını önler.",
+      it: "Spanakopita — torta di spinaci e feta — è uno dei piatti più riconoscibili della cucina greca. Il ripieno di spinaci appassiti, feta sbriciolata, uova e spesso aneto è avvolto in sfoglie sottilissime di pasta fillo, spennellate generosamente con olio d'oliva tra uno strato e l'altro. Il piatto è presente in tutta la Grecia sia come grande torta cotta in teglia sia come triangoli individuali o rotolini venduti nelle panetterie.\n\nLa pasta fillo deve essere lavorata velocemente: i fogli sottilissimi si seccano rapidamente all'aria e diventano fragili. Mantenere la pila inutilizzata coperta con un panno leggermente umido è fondamentale. La feta va sbriciolata, non frullata — la texture grezza crea sacche di sapidità nel ripieno. Strizzare completamente gli spinaci cotti prima di mescolare impedisce alla pasta di inzupparsi.",
+      ko: "스파나코피타 — 시금치와 페타 파이 — 는 그리스 요리에서 가장 잘 알려진 음식 중 하나입니다. 시든 시금치, 으깬 페타, 달걀, 그리고 종종 딜로 만든 속재료를 종이처럼 얇은 필로 반죽 시트에 싸고, 각 층 사이에 올리브 오일을 듬뿍 바릅니다. 이 요리는 그리스 전역에서 큰 트레이에 구운 파이 형태와 빵집에서 파는 개인용 삼각형 또는 롤 형태로 볼 수 있습니다.\n\n필로 반죽은 빠르게 다루어야 합니다: 종이처럼 얇은 시트는 공기에 노출되면 빠르게 건조되어 바삭하게 부서집니다. 사용하지 않는 시트를 약간 촉촉한 천으로 덮어두는 것이 중요합니다. 페타는 으깨야 하지, 갈아서는 안 됩니다 — 거친 질감이 속재료 안에 짭짤한 포켓을 만듭니다. 섞기 전에 익힌 시금치의 물기를 완전히 짜내야 반죽이 눅눅해지는 것을 방지합니다.",
+      hi: "स्पानाकोपिटा — पालक और फेटा पाई — ग्रीक व्यंजन के सबसे पहचानी जाने वाली डिशों में से एक है। मुरझाए पालक, टूटे फेटा, अंडे और अक्सर डिल से बनी भरावन को कागज जितनी पतली फ़िलो पेस्ट्री की परतों में लपेटा जाता है, हर परत के बीच जैतून के तेल का उदार लेप लगाया जाता है। यह व्यंजन पूरे ग्रीस में बड़ी ट्रे में पकाई पाई और बेकरियों में बिकने वाले अलग-अलग त्रिकोणों या रोल दोनों रूपों में मिलती है।\n\nफ़िलो को तेज़ी से संभालना होता है: कागज जितनी पतली परतें हवा के संपर्क में आने पर जल्दी सूख जाती हैं और भुरभुरी हो जाती हैं। न इस्तेमाल हो रही परतों को थोड़े नम कपड़े से ढकना ज़रूरी है। फेटा को तोड़ा जाए, पीसा नहीं — मोटी बनावट भरावन के अंदर नमक के पॉकेट बनाती है। मिलाने से पहले पके हुए पालक को पूरी तरह निचोड़ने से पेस्ट्री गीली होने से बचती है।"
     }
   },
   {
