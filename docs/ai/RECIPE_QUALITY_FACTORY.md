@@ -76,7 +76,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 54 | Moules-frites | Partial Fix Only | `04ba532e` | Struct + name.ko + originText pt/ru/tr/it/ko fixed; no stub note |
 | 55 | Moussaka | Partial Fix Only | `7fb899a0` | Struct + name.ko + originText pt/ru/it/ko fixed; no stub note |
 | 56 | Svíčková | Partial Fix Only | `96cd3925` | Struct + origin + name.ko + originText fr/pt/ru/tr/it/ko fixed; no stub note |
-| 57 | Fårikål | Stub / Needs Full Rewrite | `f8c93958` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 57 | Fårikål | Tier A Complete | `f8c93958` | Full EN rewrite: 5 ingredients with exact quantities (bone-in lamb, white cabbage, whole peppercorns, cold water, salt), 9-step howIsMade with timings (8-10 min to boil, 2-2.5 hr simmer) and doneness cues (falls off bone, broth rich and fragrant). All 14 locales retranslated including hi. |
 | 58 | Ful Medames | Stub / Needs Full Rewrite | `186f970a` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
 | 59 | Pasticada (id 59) | Stub / Needs Full Rewrite | `df31196c` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
 | 60 | Buuz | Stub / Needs Full Rewrite | `6ed83b6e` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
