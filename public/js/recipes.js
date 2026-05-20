@@ -377,7 +377,7 @@ export const recipes = [
       it: [
         {icon:'🇷🇴', t:'Icona romena',                  d:'Presente a ogni matrimonio e banchetto'},
         {icon:'⏳', t:'Lunga cottura',                   d:'2–3 ore per una trippa davvero tenera'},
-        {icon:'🥚', t:'Tecnica del temperaggio',         d:'Liaison ai tuorli — vellutata, non stracciataa'},
+        {icon:'🥚', t:'Tecnica del temperaggio',         d:'Liaison ai tuorli — vellutata, non stracciata'},
         {icon:'🌶️', t:'Con peperoncino piccante',       d:'La tradizione vuole i peperoni in tavola'},
       ],
       ko: [
