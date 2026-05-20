@@ -12867,7 +12867,8 @@ export const recipes = [
       ja: "スコットランド",
       tr: "İskoçya",
       it: "Scozia",
-      ko: "스코틀랜드"
+      ko: "스코틀랜드",
+      hi: "स्कॉटलैंड"
     },
     name: {
       ro: "Cullen Skink",
@@ -12882,7 +12883,8 @@ export const recipes = [
       ja: "カレンスキンク",
       tr: "Cullen Skink",
       it: "Cullen Skink",
-      ko: "컬렌 스킨크"
+      ko: "컬렌 스킨크",
+      hi: "कुलेन स्किंक"
     },
     category: {
       ro: "Prânz",
@@ -12897,7 +12899,8 @@ export const recipes = [
       ja: "ランチ",
       tr: "Öğle yemeği",
       it: "Pranzo",
-      ko: "점심"
+      ko: "점심",
+      hi: "दोपहर का खाना"
     },
     servings: 4,
     tipType: 'fish',
@@ -12935,19 +12938,20 @@ export const recipes = [
       hi: "स्मोक्ड हैडॉक को त्वचा की तरफ नीचे करके एक चौड़े बर्तन में रखें, दूध डालें, तेज पत्ते डालें और मध्यम आंच पर हल्के उबाल तक गर्म करें। 8–10 मिनट तक पकाएं जब तक मछली अपारदर्शी न हो जाए और सबसे मोटे भाग पर फ्लेक्स न बनने लगें। मछली को छलनी चम्मच से निकालें, त्वचा और कांटे हटाएं, बड़े टुकड़ों में तोड़ें और पोचिंग का दूध छान लें। उसी बर्तन में मक्खन मध्यम आंच पर पिघलाएं, प्याज डालें और 8–10 मिनट बार-बार हिलाते हुए पकाएं जब तक पूरी तरह नरम हो जाए पर रंग न बदले। आलू के टुकड़े और छाना हुआ दूध डालें, हल्का उबाल आने दें, ढक्कन थोड़ा खुला रखें और 15–18 मिनट पकाएं जब तक आलू पूरी तरह नरम न हों। एक तिहाई आलू को चम्मच की पीठ से बर्तन की दीवार पर दबाकर सूप गाढ़ा करें, बाकी टुकड़ों में रहने दें। क्रीम मिलाएं, हैडॉक के टुकड़े वापस डालें और 2–3 मिनट धीमी आंच पर गर्म करें। सावधानी से सफेद मिर्च और नमक से स्वाद लें क्योंकि मछली पहले से नमकीन होती है। गर्म कटोरे में परोसें, अजमोद छिड़कें और कुरकुरी ब्रेड के साथ दें।"
     },
     originText: {
-      ro: "Cullen Skink este o rețetă tradițională din Scoția.",
-      en: "Cullen Skink is a traditional recipe from Scotland.",
-      es: "Cullen Skink es una receta tradicional de Escocia.",
-      fr: "Cullen Skink est une recette traditionnelle d'Écosse.",
-      de: "Cullen Skink ist ein traditionelles Rezept aus Schottland.",
-      pt: "Cullen Skink é uma receita tradicional da Escócia.",
-      ru: "Каллен Скинк — традиционный рецепт из Шотландии.",
-      ar: "كالين سكينك هي وصفة تقليدية من اسكتلندا.",
-      zh: "卡伦鱼汤 是来自苏格兰的传统食谱。",
-      ja: "カレンスキンク はスコットランドの伝統的なレシピです。",
-      tr: "Cullen Skink İskoçya kökenli geleneksel bir tariftir.",
-      it: "Cullen Skink è una ricetta tradizionale della Scozia.",
-      ko: "컬렌 스킨크는 스코틀랜드의 전통 요리입니다."
+      ro: "Cullen Skink provine din satul de pescari Cullen, pe coasta de nord-est a Scoției, unde eglefinul afumat este un aliment de bază de secole. Cuvântul 'skink' este un termen vechi scoțian pentru o zeamă sau esență, preparat tradițional din pulpă de vită; când supa a migrat spre pește, numele a rămas. Vasul este construit integral în jurul Finnan haddie — eglefinul afumat local la rece — și reprezintă cea mai simplă formă de gătit costier scoțian.\n\nTehnica începe prin fierebrea eglefinului în lapte integral: laptele absoarbe aroma afumată a peștelui înainte de a deveni baza supei. Cartofii sunt fierți direct în acest lapte și parțial zdrobiți pe pereții cratiței — amidonul îngroașă supa fără făină. Frișca se adaugă la final, chiar înainte ca peștele să fie pus înapoi.",
+      en: "Cullen Skink takes its name from the fishing village of Cullen on the northeast coast of Scotland, where smoked haddock has been a staple for centuries. 'Skink' is an old Scots word for a broth or essence, traditionally made from shin of beef; when the soup transferred to fish, the name stayed. The dish is built entirely around Finnan haddie — the local cold-smoked haddock — and represents the simplest form of Scottish coastal cooking.\n\nThe technique begins by poaching the haddock in whole milk: the milk absorbs the smoky flavour of the fish before becoming the soup's base. The potatoes are cooked directly in this milk and partially mashed against the sides of the pan — the starch thickens the soup without flour. The cream is added at the end only, just before the fish goes back in.",
+      es: "Cullen Skink toma su nombre del pueblo pesquero de Cullen, en la costa noreste de Escocia, donde el eglefino ahumado ha sido un alimento básico durante siglos. 'Skink' es una antigua palabra escocesa para un caldo o esencia, que traditionally se hacía con jarrete de ternera; cuando la sopa pasó al pescado, el nombre se quedó. El plato se construye enteramente alrededor del Finnan haddie — el eglefino ahumado en frío local — y representa la forma más sencilla de la cocina costera escocesa.\n\nLa técnica comienza escalfando el eglefino en leche entera: la leche absorbe el sabor ahumado del pescado antes de convertirse en la base de la sopa. Las patatas se cocinan directamente en esta leche y se aplastan parcialmente contra las paredes de la sartén — el almidón espesa la sopa sin harina. La nata se añade solo al final, justo antes de que el pescado vuelva a entrar.",
+      fr: "Cullen Skink tire son nom du village de pêcheurs de Cullen, sur la côte nord-est de l'Écosse, où l'aiglefin fumé est un aliment de base depuis des siècles. 'Skink' est un vieux mot écossais désignant un bouillon ou une essence, traditionnellement préparé avec du jarret de bœuf ; lorsque la soupe a migré vers le poisson, le nom est resté. Le plat est entièrement construit autour du Finnan haddie — l'aiglefin fumé à froid local — et représente la forme la plus simple de la cuisine côtière écossaise.\n\nLa technique commence par le pochage de l'aiglefin dans du lait entier : le lait absorbe la saveur fumée du poisson avant de devenir la base de la soupe. Les pommes de terre cuisent directement dans ce lait et sont partiellement écrasées contre les parois de la casserole — l'amidon épaissit la soupe sans farine. La crème n'est ajoutée qu'à la fin, juste avant que le poisson ne soit remis.",
+      de: "Cullen Skink trägt den Namen des Fischerdorfs Cullen an der Nordostküste Schottlands, wo Räucherschellfisch seit Jahrhunderten ein Grundnahrungsmittel ist. 'Skink' ist ein altes schottisches Wort für eine Brühe oder Essenz, die traditionell aus Rinderhaxe zubereitet wurde; als die Suppe auf Fisch überging, blieb der Name. Das Gericht basiert vollständig auf Finnan Haddie — dem lokal kaltgeräucherten Schellfisch — und verkörpert die schlichteste Form schottischer Küstenküche.\n\nDie Technik beginnt damit, den Schellfisch in Vollmilch zu pochieren: Die Milch nimmt das Raucharoma des Fisches auf und wird zur Suppenbasis. Die Kartoffeln garen direkt in dieser Milch und werden teilweise gegen den Topfrand gedrückt — die Stärke bindet die Suppe ohne Mehl. Die Sahne wird erst am Ende zugegeben, kurz bevor der Fisch zurück in den Topf kommt.",
+      pt: "Cullen Skink deve o seu nome à aldeia piscatória de Cullen, na costa nordeste da Escócia, onde o arinca defumado é um alimento básico há séculos. 'Skink' é uma antiga palavra escocesa para um caldo ou essência, tradicionalmente feito com carne de joelho de vaca; quando a sopa passou para peixe, o nome ficou. O prato é construído inteiramente em torno do Finnan haddie — o arinca defumado a frio local — e representa a forma mais simples da cozinha costeira escocesa.\n\nA técnica começa por escalfar o arinca em leite gordo: o leite absorve o sabor fumado do peixe antes de se tornar a base da sopa. As batatas são cozidas diretamente neste leite e parcialmente amassadas contra as paredes da frigideira — o amido engrossa a sopa sem farinha. As natas são adicionadas apenas no final, mesmo antes de o peixe regressar.",
+      ru: "Каллен Скинк получил название от рыбацкой деревни Каллен на северо-восточном побережье Шотландии, где копчёная пикша является основным продуктом питания на протяжении столетий. «Скинк» — старое шотландское слово для обозначения бульона или навара, традиционно приготовленного из говяжьей голени; когда суп перешёл на рыбу, название осталось. Блюдо целиком построено на Finnan haddie — местной пикше холодного копчения — и представляет собой простейшую форму шотландской прибрежной кухни.\n\nТехника начинается с пашировки пикши в цельном молоке: молоко впитывает копчёный аромат рыбы, прежде чем стать основой супа. Картофель готовится прямо в этом молоке и частично разминается о стенки кастрюли — крахмал загущает суп без муки. Сливки добавляются только в конце, непосредственно перед тем, как рыба возвращается в суп.",
+      ar: "يأخذ كالين سكينك اسمه من قرية الصيد كالين على الساحل الشمالي الشرقي لاسكتلندا، حيث يُعدّ سمك الحدّاق المدخّن غذاءً أساسياً منذ قرون. 'سكينك' كلمة اسكتلندية قديمة تعني مرقاً أو جوهراً، كان يُحضَّر تقليدياً من ساق البقر؛ حين انتقلت الشوربة إلى السمك، ظلّ الاسم. يقوم الطبق بالكامل على سمك الحدّاق المدخّن بارداً محلياً — فينان هادي — ويمثّل أبسط أشكال الطبخ الساحلي الاسكتلندي.\n\nتبدأ التقنية بطهي الحدّاق في الحليب كامل الدسم: يمتصّ الحليب نكهة الدخان من السمك قبل أن يصبح قاعدة الشوربة. تُطهى البطاطس مباشرةً في هذا الحليب وتُهرس جزئياً على جدار القدر — يُكثّف النشا الشوربة بدون دقيق. تُضاف الكريمة في النهاية فقط، قُبيل إعادة السمك مباشرةً.",
+      zh: "卡伦鱼汤得名于苏格兰东北海岸的渔村卡伦，数百年来，熏黑线鳕一直是当地的主食。「skink」是古老的苏格兰词，意为肉汤或精华，传统上以牛腱制成；当这道汤转向鱼类时，名称保留了下来。这道菜完全围绕Finnan haddie——当地的冷熏黑线鳕——展开，代表了苏格兰沿海烹饪最质朴的形式。\n\n烹饪技巧从将黑线鳕放入全脂牛奶中慢煮开始：牛奶在成为汤底之前会吸收鱼的烟熏风味。土豆直接在这牛奶中煮熟，并部分压碎在锅壁上——淀粉无需面粉就能使汤汁变稠。奶油只在最后加入，就在鱼放回去之前。",
+      ja: "カレンスキンクは、スコットランド北東海岸の漁村カレンに由来する名前で、スモークハドックは何世紀にもわたって地元の主食となっている。「スキンク」は古いスコットランド語で、牛の脛から作られる伝統的な出汁やスープを意味する言葉で、魚のスープに転用されたときもその名が残った。この料理はフィナン・ハディ——地元の冷燻製ハドック——を中心に組み立てられており、スコットランドの沿岸料理の最も素朴な形を体現している。\n\n技法は、ハドックを全乳でポーチすることから始まる。牛乳は魚のスモークの風味を吸収し、スープのベースとなる。ジャガイモはその牛乳の中で直接調理され、鍋の側面に部分的にすり潰される——デンプンが小麦粉なしでスープをとろみ付けする。クリームは最後だけ加え、魚を戻す直前に入れる。",
+      tr: "Cullen Skink, adını İskoçya'nın kuzeydoğu kıyısındaki balıkçı köyü Cullen'dan almaktadır; burada tütsülenmiş mezgit yüzyıllardır temel besin kaynağıdır. 'Skink', geleneksel olarak dana incik kemiğinden hazırlanan bir et suyu ya da özü anlamına gelen eski bir İskoç kelimesidir; çorba balığa geçtiğinde ad kalmaya devam etti. Yemek tamamen yerel soğuk tütsülenmiş mezgit olan Finnan haddie üzerine kuruludur ve İskoç kıyı mutfağının en sade biçimini temsil eder.\n\nTeknik, mezgiti tam yağlı sütün içinde haşlamakla başlar: süt, çorbanın tabanı olmadan önce balığın tütsülü aromasını emip alır. Patatesler bu sütün içinde doğrudan pişirilir ve kısmen tavanın kenarlarına ezilir — nişasta, un kullanmadan çorbayı koyulaştırır. Krema yalnızca en sonda, balık geri konmadan hemen önce eklenir.",
+      it: "Cullen Skink prende il nome dal villaggio di pescatori di Cullen, sulla costa nordorientale della Scozia, dove l'eglefino affumicato è un alimento base da secoli. 'Skink' è un'antica parola scozzese che indica un brodo o un'essenza, tradizionalmente preparata con lo stinco di manzo; quando la zuppa passò al pesce, il nome rimase. Il piatto è costruito interamente attorno al Finnan haddie — l'eglefino affumicato a freddo locale — e rappresenta la forma più semplice della cucina costiera scozzese.\n\nLa tecnica inizia con il pochage dell'eglefino nel latte intero: il latte assorbe il sapore affumicato del pesce prima di diventare la base della zuppa. Le patate vengono cotte direttamente in questo latte e parzialmente schiacciate sulle pareti della pentola — l'amido addensa la zuppa senza farina. La panna si aggiunge solo alla fine, appena prima che il pesce rientri in pentola.",
+      ko: "컬렌 스킨크는 스코틀랜드 북동쪽 해안의 어촌 마을 컬렌에서 그 이름을 따왔으며, 이곳에서는 수세기 동안 훈제 해덕이 주식이었습니다. 'Skink'는 전통적으로 소 정강이뼈로 만든 육수나 에센스를 뜻하는 오래된 스코틀랜드 단어로, 수프가 생선으로 옮겨갔을 때도 이름은 남았습니다. 이 요리는 전적으로 현지 냉훈제 해덕인 피넌 해디를 중심으로 구성되어 있으며, 스코틀랜드 해안 요리의 가장 단순한 형태를 보여줍니다.\n\n조리 기술은 해덕을 전유로 포칭하는 것에서 시작됩니다. 우유는 수프의 베이스가 되기 전에 생선의 훈제 풍미를 흡수합니다. 감자는 이 우유에 직접 익히고 부분적으로 냄비 벽에 으깨어집니다 — 전분이 밀가루 없이 수프를 걸쭉하게 만듭니다. 크림은 생선을 다시 넣기 바로 전, 마지막에만 추가합니다.",
+      hi: "कुलेन स्किंक का नाम स्कॉटलैंड के उत्तर-पूर्वी तट पर स्थित मछुआरों के गांव कुलेन से लिया गया है, जहाँ सदियों से स्मोक्ड हैडॉक एक मुख्य भोजन रहा है। 'स्किंक' एक पुराना स्कॉटिश शब्द है जिसका अर्थ है शोरबा या सार, जो पारंपरिक रूप से गाय की पिंडली से बनाया जाता था; जब सूप मछली की तरफ गया, तो नाम वही रहा। यह व्यंजन पूरी तरह से फिनन हैडी — स्थानीय कोल्ड-स्मोक्ड हैडॉक — पर आधारित है और स्कॉटिश तटीय खाना पकाने के सबसे सरल रूप को दर्शाता है।\n\nतकनीक हैडॉक को पूरे दूध में पोच करने से शुरू होती है: दूध सूप का आधार बनने से पहले मछली का धुएँदार स्वाद सोख लेता है। आलू सीधे इसी दूध में पकाए जाते हैं और आंशिक रूप से बर्तन की दीवारों के खिलाफ मसले जाते हैं — स्टार्च बिना आटे के सूप को गाढ़ा करता है। क्रीम केवल अंत में डाली जाती है, ठीक उससे पहले जब मछली वापस डाली जाती है।"
     }
   },
   {
