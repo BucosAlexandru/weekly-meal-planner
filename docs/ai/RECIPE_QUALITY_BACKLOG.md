@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 52 | Stamppot |
-| 2 | 53 | Hangi |
-| 3 | 57 | Fårikål |
-| 4 | 58 | Ful Medames |
-| 5 | 59 | Pasticada |
-| 6 | 60 | Buuz |
-| 7 | 62 | Brik |
-| 8 | 63 | Khachapuri |
-| 9 | 64 | Bobotie |
-| 10 | 65 | Ceviche |
+| 1 | 53 | Hangi |
+| 2 | 57 | Fårikål |
+| 3 | 58 | Ful Medames |
+| 4 | 59 | Pasticada |
+| 5 | 60 | Buuz |
+| 6 | 62 | Brik |
+| 7 | 63 | Khachapuri |
+| 8 | 64 | Bobotie |
+| 9 | 65 | Ceviche |
+| 10 | 67 | Banh Mi |
 
 ---
 
