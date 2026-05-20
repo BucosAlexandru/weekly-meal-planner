@@ -13785,7 +13785,8 @@ export const recipes = [
       ja: "エストニア",
       tr: "Estonya",
       it: "Estonia",
-      ko: "에스토니아"
+      ko: "에스토니아",
+      hi: "एस्टोनिया"
     },
     name: {
       ro: "Verivorst",
@@ -13800,7 +13801,8 @@ export const recipes = [
       ja: "ヴェリヴォルスト",
       tr: "Verivorst",
       it: "Verivorst",
-      ko: "베리보르스트"
+      ko: "베리보르스트",
+      hi: "वेरिवोर्स्ट"
     },
     category: {
       ro: "Cină",
@@ -13815,7 +13817,8 @@ export const recipes = [
       ja: "夕食",
       tr: "Akşam yemeği",
       it: "Cena",
-      ko: "저녁"
+      ko: "저녁",
+      hi: "रात का खाना"
     },
     servings: 4,
     tipType: 'meat',
@@ -13833,7 +13836,8 @@ export const recipes = [
       ja: ["ブラッドソーセージ", "大麦", "玉ねぎ", "脂肪", "塩", "コショウ"],
       tr: ["kan sosis", "arpa", "soğbir", "yağ", "tuz", "biber"],
       it: ["sangue salsiccia", "orzo", "cipolla", "grasso", "sale", "peperone"],
-      ko: ["피 소시지", "보리", "양파", "지방", "소금", "고추"]
+      ko: ["피 소시지", "보리", "양파", "지방", "소금", "고추"],
+      hi: ["ब्लड सॉसेज", "जौ", "प्याज़", "चर्बी", "नमक", "काली मिर्च"]
     },
     howIsMade: {
       ro: "Umple intestinele cu un amestec de sânge de porc, orz, ceapă și condimente, leagă-le și fierbe-le sau prăjește-le.",
@@ -13848,22 +13852,24 @@ export const recipes = [
       ja: "豚の腸に豚の血・大麦・玉ねぎ・スパイスを詰め、縛って茹でるか揚げる。",
       tr: "Domuz bağırsaklarını domuz kanı, arpa, soğan ve baharatlar karışımıyla doldurun, bağlayın ve haşlayın veya kızartın.",
       it: "Riempire le budella di maiale con un misto di sangue di maiale, orzo, cipolla e spezie, legarle e bollirle oppure rosolarle.",
-      ko: "돼지 피, 보리, 양파, 향신료를 섞어 돼지 창자에 채워주세요. 끝을 묶어 삶거나 볶아주세요."
+      ko: "돼지 피, 보리, 양파, 향신료를 섞어 돼지 창자에 채워주세요. 끝을 묶어 삶거나 볶아주세요.",
+      hi: "सूअर की आंत में सूअर का खून, जौ, प्याज़ और मसालों का मिश्रण भरें, बांधें और उबालें या तलें।"
     },
     originText: {
-      ro: "Verivorst este o rețetă tradițională din Estonia.",
-      en: "Verivorst is a traditional recipe from Estonia.",
-      es: "Verivorst es una receta tradicional de Estonia.",
-      fr: "Verivorst est une recette traditionnelle d'Estonie.",
-      de: "Verivorst ist ein traditionelles Rezept aus Estland.",
-      pt: "Verivorst é uma receita tradicional da Estônia.",
-      ru: "Вериворст — традиционный рецепт из Эстонии.",
-      ar: "فيريفورست هي وصفة تقليدية من إستونيا.",
-      zh: "爱沙尼亚血肠 是来自爱沙尼亚的传统食谱。",
-      ja: "ヴェリヴォルスト はエストニアの伝統的なレシピです。",
-      tr: "Verivorst Estonya kökenli geleneksel bir tariftir.",
-      it: "Verivorst è una ricetta tradizionale dell'Estonia.",
-      ko: "베리보르스트는 에스토니아의 전통 요리입니다."
+      ro: "Verivorst este cârnatul de sânge național al Estoniei — un înveliș de intestin de porc umplut cu sânge de porc, orz, ceapă și grăsime de porc, fiert și prăjit înainte de servire. Preparatul este inseparabil de Crăciunul estonian: este piesa centrală a cinei tradiționale de Crăciun, servit cu varză murată și gem de lingonberri, pregătit în aproape fiecare gospodărie estonă în decembrie.\n\nUmplutura de orz diferențiază verivorst de alți cârnați de sânge europeni — boabele absorb sângele și grăsimea în timpul gătitului, creând o textură densă și compactă. Fierberea inițială stabilizează cârnatul; prăjirea în unt sau grăsime de porc crocantează învelișul fără să îl spargă. Gemul de lingonberri servit alături aduce aciditatea care taie bogăția sângelui și a grăsimii.",
+      en: "Verivorst is Estonia's national blood sausage — a pork intestine casing filled with pig's blood, barley, onion, and pork fat, boiled and then pan-fried before serving. The dish is inseparable from Estonian Christmas: it is the centrepiece of the traditional Christmas dinner, served with sauerkraut and lingonberry jam, and prepared in nearly every Estonian household through December.\n\nThe barley filling sets verivorst apart from other European blood sausages — the grain absorbs the blood and fat during cooking, producing a dense, cohesive texture rather than a loose one. Boiling first stabilises the sausage; pan-frying in butter or pork fat crisps the casing without splitting it. The lingonberry jam served alongside provides the acidity that cuts through the richness of the blood and fat.",
+      es: "Verivorst es el embutido de sangre nacional de Estonia — una tripa de cerdo rellena de sangre de cerdo, cebada, cebolla y grasa de cerdo, que se hierve y luego se fríe antes de servir. El plato es inseparable de la Navidad estonia: es el centro de la cena navideña tradicional, servido con chucrut y mermelada de arándano rojo, y preparado en casi todos los hogares estonios durante diciembre.\n\nEl relleno de cebada distingue el verivorst de otras morcillas europeas — el grano absorbe la sangre y la grasa durante la cocción, produciendo una textura densa y cohesiva. El hervido previo estabiliza el embutido; la fritura en mantequilla o grasa de cerdo deja la tripa crujiente sin romperla. La mermelada de arándano rojo servida al lado aporta la acidez que equilibra la riqueza de la sangre y la grasa.",
+      fr: "Le verivorst est le boudin national d'Estonie — un boyau de porc farci de sang de porc, d'orge, d'oignon et de graisse de porc, bouilli puis poêlé avant d'être servi. Le plat est indissociable de Noël en Estonie : il est la pièce maîtresse du dîner de Noël traditionnel, servi avec de la choucroute et de la confiture d'airelles, et préparé dans presque chaque foyer estonien en décembre.\n\nLa farce à l'orge distingue le verivorst des autres boudins européens — la céréale absorbe le sang et la graisse à la cuisson, donnant une texture dense et homogène. La cuisson à l'eau stabilise d'abord le boudin ; la poêlée dans le beurre ou le saindoux fait dorer le boyau sans le faire éclater. La confiture d'airelles servie en accompagnement apporte l'acidité qui contrebalance la richesse du sang et de la graisse.",
+      de: "Verivorst ist die estnische Nationalblubwurst — ein Schweinedarm gefüllt mit Schweineblut, Gerste, Zwiebel und Schweinefett, der gekocht und dann gebraten wird. Das Gericht ist untrennbar mit Weihnachten in Estland verbunden: Es ist das Herzstück des traditionellen Weihnachtsessens, serviert mit Sauerkraut und Preiselbeerkonfitüre, und wird im Dezember in nahezu jedem estnischen Haushalt zubereitet.\n\nDie Gerstenfüllung unterscheidet Verivorst von anderen europäischen Blutwürsten — das Korn nimmt während des Garens Blut und Fett auf und erzeugt eine dichte, kompakte Textur. Das Kochen stabilisiert die Wurst zunächst; das Braten in Butter oder Schweinefett macht die Pelle knusprig, ohne dass sie platzt. Die dazu gereichte Preiselbeerkonfitüre liefert die Säure, die die Reichhaltigkeit von Blut und Fett ausgleicht.",
+      pt: "Verivorst é a morcela nacional da Estônia — uma tripa de porco recheada com sangue de porco, cevada, cebola e banha de porco, cozida e depois frita antes de servir. O prato é inseparável do Natal estoniano: é a peça central da ceia de Natal tradicional, servida com chucrute e geleia de lingonberry, e preparado em quase todos os lares estonios em dezembro.\n\nO recheio de cevada distingue o verivorst das outras morcelas europeias — o grão absorve o sangue e a gordura durante o cozimento, produzindo uma textura densa e coesa. A cozedura prévia estabiliza a morcela; a fritura em manteiga ou banha torna a tripa crocante sem rachar. A geleia de lingonberry servida ao lado fornece a acidez que corta a riqueza do sangue e da gordura.",
+      ru: "Вериворст — национальная кровяная колбаса Эстонии: оболочка из свиной кишки, наполненная смесью свиной крови, ячменя, лука и свиного жира, отваренная и затем обжаренная. Блюдо неотделимо от эстонского Рождества: оно является центральным на традиционном рождественском ужине, подаётся с квашеной капустой и брусничным джемом и готовится в почти каждом эстонском доме в декабре.\n\nЯчменная начинка отличает вериворст от других европейских кровяных колбас — крупа впитывает кровь и жир во время приготовления, создавая плотную, однородную текстуру. Варка вначале стабилизирует колбасу; жарка на сливочном или свином жире делает оболочку хрустящей, не разрывая её. Брусничный джем, подаваемый рядом, даёт кислотность, которая уравновешивает жирность крови и сала.",
+      ar: "فيريفورست هو نقانق الدم الوطنية لإستونيا — غلاف من أمعاء الخنزير محشو بدم الخنزير والشعير والبصل والدهون، يُسلق ثم يُقلى قبل التقديم. الطبق لا ينفصل عن عيد الميلاد الإستوني: إذ يُمثّل محور العشاء التقليدي لعيد الميلاد، يُقدَّم مع مخلل الملفوف ومربى عنب الثعلب، ويُحضَّر في كل بيت إستوني تقريباً طوال ديسمبر.\n\nحشوة الشعير تميّز فيريفورست عن نقانق الدم الأوروبية الأخرى — إذ تمتص الحبوب الدم والدهون أثناء الطهي، منتجةً قواماً كثيفاً ومتماسكاً. السلق أولاً يثبّت النقانق؛ القلي في الزبدة أو الشحم يُقرمش الغلاف دون أن يُفجّره. تُقدَّم مربى عنب الثعلب جانباً لتوفير الحموضة التي تقطع ثراء الدم والدهون.",
+      zh: "爱沙尼亚血肠是爱沙尼亚的国民血肠——猪肠衣内填入猪血、大麦、洋葱和猪油混合物，先水煮后煎制上桌。这道菜与爱沙尼亚圣诞节密不可分：它是传统圣诞晚餐的核心，配以酸菜和越橘果酱，十二月间几乎每个爱沙尼亚家庭都会制作。\n\n大麦馅料令爱沙尼亚血肠有别于其他欧洲血肠——谷物在烹饪过程中吸收血液和油脂，形成紧实、黏合的口感而非松散的质地。先水煮使香肠定型；用黄油或猪油煎制则令肠衣酥脆不破裂。搭配的越橘果酱提供酸度，平衡血肠和油脂的浓郁。",
+      ja: "ヴェリヴォルストはエストニアの国民的ブラッドソーセージ — 豚の血、大麦、玉ねぎ、豚脂を混ぜた具材を豚の腸に詰め、茹でてからフライパンで焼いて仕上げる料理です。この料理はエストニアのクリスマスと切り離せません：伝統的なクリスマスディナーの中心に置かれ、ザワークラウトとリンゴンベリージャムとともに供され、12月にはほぼすべてのエストニアの家庭で作られます。\n\n大麦の詰め物がヴェリヴォルストを他のヨーロッパのブラッドソーセージと区別します — 穀物が調理中に血と脂肪を吸収し、崩れにくい密で均一な食感を生み出します。まず茹でることでソーセージが安定し、バターや豚脂で焼くと腸衣が破れずにパリッと仕上がります。添えるリンゴンベリージャムが酸味をもたらし、血と脂肪のコクを引き締めます。",
+      tr: "Verivorst, Estonya'nın ulusal kan sosisidir — domuz kanı, arpa, soğan ve domuz yağı karışımıyla doldurulmuş domuz bağırsak kılıfından yapılır, haşlanır ve servis edilmeden önce kızartılır. Yemek Estonyalı Noel'inden ayrılamaz: Geleneksel Noel yemeğinin merkezini oluşturur, lahana turşusu ve lingonberry reçeliyle servis edilir ve Aralık boyunca neredeyse her Estonyalı evde hazırlanır.\n\nArpa dolgusu verivorstu diğer Avrupa kan sosislerinden ayırır — tahıl pişirme sırasında kanı ve yağı emer, gevşek değil yoğun ve bir arada duran bir doku oluşturur. Önce haşlamak sosisi sabitler; tereyağı veya domuz yağında kızartmak kılıfı patlatmadan çıtır hale getirir. Yanında servis edilen lingonberry reçeli, kanın ve yağın zenginliğini kesen asitliği sağlar.",
+      it: "Il verivorst è il sanguinaccio nazionale dell'Estonia — un budello di maiale ripieno di sangue di maiale, orzo, cipolla e grasso di maiale, bollito e poi fritto prima di essere servito. Il piatto è inseparabile dal Natale estone: è il protagonista della cena natalizia tradizionale, servito con crauti e marmellata di mirtilli rossi, e preparato in quasi ogni casa estone in dicembre.\n\nIl ripieno di orzo distingue il verivorst dagli altri sanguinacci europei — il cereale assorbe il sangue e il grasso durante la cottura, creando una consistenza densa e coesa piuttosto che friabile. La bollitura stabilizza prima il sanguinaccio; la rosolatura nel burro o nello strutto rende il budello croccante senza romperlo. La marmellata di mirtilli rossi servita a lato fornisce l'acidità che taglia la ricchezza del sangue e del grasso.",
+      ko: "베리보르스트는 에스토니아의 국민 블러드 소시지입니다 — 돼지 피, 보리, 양파, 돼지 지방을 채운 돼지 창자로 만든 소시지를 삶은 뒤 팬에 구워 냅니다. 이 요리는 에스토니아 크리스마스와 떼려야 뗄 수 없습니다: 전통 크리스마스 만찬의 중심에 자리하며 사우어크라우트와 링곤베리 잼과 함께 제공되고, 12월 내내 거의 모든 에스토니아 가정에서 만들어집니다.\n\n보리 속재료가 베리보르스트를 다른 유럽 블러드 소시지와 구별 짓습니다 — 조리 중 곡물이 피와 지방을 흡수하며 느슨하지 않고 촘촘하고 응집력 있는 식감을 만들어냅니다. 먼저 삶으면 소시지가 안정되고, 버터나 돼지 기름으로 구우면 껍질이 터지지 않고 바삭하게 됩니다. 곁들이는 링곤베리 잼은 피와 지방의 풍부함을 잡아주는 산미를 제공합니다.",
+      hi: "वेरिवोर्स्ट एस्टोनिया का राष्ट्रीय ब्लड सॉसेज है — सूअर की आंत की केसिंग में सूअर का खून, जौ, प्याज़ और सूअर की चर्बी भरी जाती है, उबाला जाता है और परोसने से पहले तला जाता है। यह व्यंजन एस्टोनियाई क्रिसमस से अलग नहीं है: पारंपरिक क्रिसमस डिनर का केंद्रबिंदु है, खट्टी गोभी और लिंगोनबेरी जैम के साथ परोसा जाता है, और दिसंबर में लगभग हर एस्टोनियाई घर में तैयार किया जाता है।\n\nजौ की भरावट वेरिवोर्स्ट को अन्य यूरोपीय ब्लड सॉसेज से अलग करती है — पकाने के दौरान अनाज खून और चर्बी सोख लेता है, जिससे एक घनी, एकजुट बनावट बनती है। पहले उबालने से सॉसेज स्थिर होता है; मक्खन या सूअर की चर्बी में तलने से केसिंग फटे बिना कुरकुरी हो जाती है। साथ में परोसा गया लिंगोनबेरी जैम वह अम्लता प्रदान करता है जो खून और चर्बी की समृद्धि को संतुलित करती है।"
     }
   },
   {
