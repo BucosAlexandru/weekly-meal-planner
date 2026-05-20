@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 77 | Chakhchoukha |
-| 2 | 78 | Rendang |
-| 3 | 79 | Gravlax |
-| 4 | 80 | Stoofvlees |
-| 5 | 81 | Zeamă |
-| 6 | 82 | Meat Pie |
-| 7 | 83 | Fatteh |
-| 8 | 84 | Smørrebrød |
-| 9 | 86 | Poutine |
-| 10 | 87 | Roti |
+| 1 | 78 | Rendang |
+| 2 | 79 | Gravlax |
+| 3 | 80 | Stoofvlees |
+| 4 | 81 | Zeamă |
+| 5 | 82 | Meat Pie |
+| 6 | 83 | Fatteh |
+| 7 | 84 | Smørrebrød |
+| 8 | 86 | Poutine |
+| 9 | 87 | Roti |
+| 10 | 88 | Jerk Chicken |
 
 ---
 
