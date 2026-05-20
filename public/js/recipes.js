@@ -10524,7 +10524,8 @@ export const recipes = [
       ja: "ベトナム",
       tr: "Vietnam",
       it: "Vietnam",
-      ko: "베트남"
+      ko: "베트남",
+      hi: "वियतनाम"
     },
     name: {
       ro: "Banh Mi",
@@ -10539,7 +10540,8 @@ export const recipes = [
       ja: "バインミー",
       tr: "Banh Mi",
       it: "Banh Mi",
-      ko: "반미"
+      ko: "반미",
+      hi: "बान्ह मी"
     },
     category: {
       ro: "Gustare",
@@ -10554,7 +10556,8 @@ export const recipes = [
       ja: "スナック",
       tr: "Atıştırmalık",
       it: "Spuntino",
-      ko: "간식"
+      ko: "간식",
+      hi: "नाश्ता"
     },
     ingredients: {
       ro: ["4 baghetele mici (de circa 20 cm), tăiate pe lungime", "400 g mușchi de porc, tăiat felii subțiri (circa 5 mm)", "2 linguri sos de soia", "1 lingură sos de pește", "1 linguriță ulei de susan + 1 linguriță zahăr + 1/4 linguriță piper negru (pentru marinadă)", "2 morcovi medii (aproximativ 200 g), curățați și tăiați julienne", "100 g daikon (ridiche asiatică), curățat și juliennat (sau morcov în plus)", "3 linguri oțet de orez", "1 lingură zahăr + 1/2 linguriță sare (pentru murat)", "60 g pate de ficat de pui", "4 linguri maioneză", "1 castravete mare, tăiat bețe subțiri", "2 jalapeño sau ardei roșii, tăiați rondele", "20 g coriandru proaspăt, crengute"],
@@ -10589,19 +10592,20 @@ export const recipes = [
       hi: "गाजर और डाइकन को चावल के सिरके, चीनी और नमक के साथ मिलाएं और कम से कम 20 मिनट (या फ्रिज में 4 घंटे तक) के लिए अचार बनने दें जब तक हल्का नरम लेकिन अभी भी कुरकुरा हो। एक बर्तन में सोया सॉस, मछली की चटनी, तिल का तेल, चीनी और काली मिर्च मिलाएं, सूअर के मांस के टुकड़े डालें और कोट करें; कमरे के तापमान पर 15-20 मिनट मैरिनेट करें। एक भारी पैन को तेज आंच पर धुआं निकलने तक गर्म करें, मांस को 2-3 बैचों में एक परत में डालें और प्रत्येक तरफ 1-2 मिनट पकाएं जब तक किनारे कैरेमलाइज़ और सुनहरे न हों। बागेट को 200°C ओवन में 4-5 मिनट के लिए बाहर से कुरकुरा होने तक भूनें। कटी हुई सतहों पर पाते और मेयोनेज़ लगाएं। गर्म मांस के टुकड़े, निकाले हुए अचार की गाजर और डाइकन, खीरे की छड़ें, जलपेनो के छल्ले और ताजे धनिए की टहनियां डालें। हल्के से दबाएं और तुरंत परोसें।"
     },
     originText: {
-      ro: "Banh Mi este o rețetă tradițională din Vietnam.",
-      en: "Banh Mi is a traditional recipe from Vietnam.",
-      es: "Banh Mi es una receta tradicional de Vietnam.",
-      fr: "Banh Mi est une recette traditionnelle du Vietnam.",
-      de: "Banh Mi ist ein traditionelles Rezept aus Vietnam.",
-      pt: "Banh Mi é uma receita tradicional do Vietnã.",
-      ru: "Бань Ми — традиционный рецепт из Вьетнама.",
-      ar: "بان مي هي وصفة تقليدية من فيتنام.",
-      zh: "越南三明治 是来自越南的传统食谱。",
-      ja: "バインミー はベトナムの伝統的なレシピです。",
-      tr: "Banh Mi Vietnam kökenli geleneksel bir tariftir.",
-      it: "Banh Mi è una ricetta tradizionale del Vietnam.",
-      ko: "반미는 베트남의 전통 요리입니다."
+      ro: "Banh Mi este unul dintre cele mai cunoscute alimente stradale din Vietnam și unul dintre cele mai clare exemple de fuziune culinară din istoria Asiei de Sud-Est. Bagueta franceză a ajuns în Vietnam prin colonialism în secolul al XIX-lea; brutarii vietnamezi au adaptat-o într-o pâine mai ușoară și mai aerată, cu o coajă mai subțire. Umplutura — pate, maioneză și legume murate — combină tradițiile charcuteriei franceze cu profilurile de savoare vietnameze.\n\nCombinația funcționează prin contrast: pâinea crocantă față de pateul cremos; murăturile dulci-acrișoare față de carnea caramelizată; castravetele rece față de ardeiul iute. Morcovii și daikonul murați au nevoie de cel puțin douăzeci de minute pentru a se înmuia, dar un timp mai lung de murare produce o aromă mai complexă.",
+      en: "Banh Mi is Vietnam's most recognisable street food, and one of the clearest examples of culinary fusion in Southeast Asian history. The French baguette arrived with colonialism in the nineteenth century; Vietnamese bakers adapted it into a lighter, airier loaf with a thinner crust. The fillings — pâté, mayonnaise, and pickled vegetables — drew from both French charcuterie traditions and local Vietnamese flavour.\n\nThe combination works because of contrast: the crisp, toasted bread against the soft, fatty pâté; the sweet-sour pickle against the savoury, caramelised meat; the cool cucumber against the chilli heat. The pickled carrots and daikon require at least twenty minutes to soften, though a longer pickle develops a more rounded flavour.",
+      es: "El Banh Mi es el alimento callejero más reconocible de Vietnam y uno de los ejemplos más claros de fusión culinaria en la historia del Sudeste Asiático. La baguette francesa llegó con el colonialismo en el siglo XIX; los panaderos vietnamitas la adaptaron en un pan más ligero y aireado con una corteza más fina. Los rellenos — paté, mayonesa y encurtidos — combinan la charcutería francesa con los sabores locales vietnamitas.\n\nLa combinación funciona por contraste: el pan tostado y crujiente frente al paté suave; el encurtido agridulce frente a la carne caramelizada; el pepino frío frente al picante del chile. Las zanahorias y el daikon encurtidos necesitan al menos veinte minutos para ablandarse, aunque más tiempo produce un sabor más desarrollado.",
+      fr: "Le Banh Mi est la street food la plus emblématique du Vietnam, et l'un des exemples les plus parlants de fusion culinaire dans l'histoire de l'Asie du Sud-Est. La baguette française est arrivée avec le colonialisme au XIXe siècle; les boulangers vietnamiens l'ont adaptée en un pain plus léger, plus aéré, à la croûte plus fine. Les garnitures — pâté, mayonnaise et légumes marinés — empruntent à la charcuterie française et aux saveurs locales vietnamiennes.\n\nL'association fonctionne par contraste: le pain croustillant face au pâté fondant; le vinaigré aigre-doux face à la viande caramélisée; le concombre frais face au piment. Les carottes et le daikon marinés ont besoin d'au moins vingt minutes pour ramollir, mais une marinade plus longue développe une saveur plus équilibrée.",
+      de: "Banh Mi ist Vietnams bekanntestes Straßenessen und eines der deutlichsten Beispiele für kulinarische Fusion in der Geschichte Südostasiens. Das französische Baguette kam mit dem Kolonialismus im neunzehnten Jahrhundert; vietnamesische Bäcker passten es zu einem leichteren, luftigeren Brot mit dünnerer Kruste an. Die Füllung — Pastete, Mayonnaise und eingelegtes Gemüse — verbindet französische Charcuterie-Traditionen mit vietnamesischen Aromen.\n\nDie Kombination lebt vom Kontrast: knuspriges Brot gegen cremige Pastete; süß-saures Eingelegtes gegen karamellisiertes Fleisch; kühle Gurke gegen Chilischärfe. Die eingelegten Karotten und der Daikon brauchen mindestens zwanzig Minuten zum Weichen; eine längere Einlegezeit entwickelt ein ausgewogeneres Aroma.",
+      pt: "O Banh Mi é o alimento de rua mais reconhecível do Vietname e um dos exemplos mais claros de fusão culinária na história do Sudeste Asiático. A baguete francesa chegou com o colonialismo no século XIX; os padeiros vietnamitas adaptaram-na num pão mais leve e arejado, com uma crosta mais fina. Os recheios — paté, maionese e vegetais em conserva — combinam as tradições da charcutaria francesa com os sabores locais vietnamitas.\n\nA combinação funciona pelo contraste: o pão tostado e crocante contra o paté macio; o pickle agridoce contra a carne caramelizada; o pepino fresco contra o picante da malagueta. As cenouras e o daikon em conserva precisam de pelo menos vinte minutos para amolecer, embora uma conserva mais longa produza um sabor mais desenvolvido.",
+      ru: "Бань Ми — самый узнаваемый уличный фастфуд Вьетнама и один из наглядных примеров кулинарного слияния в истории Юго-Восточной Азии. Французский багет появился здесь в эпоху колониализма в XIX веке; вьетнамские пекари адаптировали его в более лёгкий, воздушный хлеб с тонкой коркой. Начинки — паштет, майонез и маринованные овощи — сочетают традиции французской шаркутери с местными вьетнамскими вкусами.\n\nКомбинация работает за счёт контраста: хрустящий поджаренный хлеб против кремового паштета; кисло-сладкий маринад против карамелизированного мяса; охлаждающий огурец против жара чили. Маринованная морковь и дайкон требуют минимум двадцати минут, чтобы размягчиться, хотя более долгое маринование даёт более округлый вкус.",
+      ar: "البان مي هو أشهر طعام شارع في فيتنام، وأحد أوضح أمثلة الاندماج الطهوي في تاريخ جنوب شرق آسيا. وصل الباجيت الفرنسي مع الاستعمار في القرن التاسع عشر؛ فطوّره الخبازون الفيتناميون إلى خبز أخف وأكثر تهوية بقشرة أرق. الحشوات — الباتيه والمايونيز والخضروات المخللة — تمزج بين تقاليد اللحوم الفرنسية والنكهات الفيتنامية المحلية.\n\nالمزيج يعمل بفضل التناقض: الخبز المحمص المقرمش في مواجهة الباتيه الكريمي؛ المخلل الحامض الحلو في مقابل اللحم المكرمل؛ الخيار البارد في مواجهة حرارة الفلفل. تحتاج الجزر والدايكون المخللان إلى عشرين دقيقة على الأقل للين، وإن كان التخليل الأطول ينتج نكهة أكثر تكاملاً.",
+      zh: "越南三明治是越南最具代表性的街头食品，也是东南亚饮食融合史上最鲜明的例证之一。法棍面包随十九世纪的殖民统治传入越南；越南面包师将其改良为更轻盈蓬松、外皮更薄的面包。内馅——肝酱、蛋黄酱和腌制蔬菜——融合了法式熟食传统与越南本地风味。\n\n这道组合的成功在于对比：酥脆的烤面包搭配绵软的肝酱；酸甜的腌菜衬托焦香的肉片；清凉的黄瓜化解辣椒的热度。腌制的胡萝卜和白萝卜至少需要二十分钟才能入味变软，腌制时间越长，风味越醇厚。",
+      ja: "バインミーはベトナムで最もよく知られたストリートフードであり、東南アジア史における料理の融合の最も明快な例の一つでもある。フランスのバゲットは19世紀の植民地時代に持ち込まれ、ベトナムのパン職人はそれをより軽くふんわりとした、薄い皮のパンへと改良した。パテ・マヨネーズ・酢漬け野菜という具材は、フランスのシャルキュトリーの伝統とベトナムの地元の味覚が混ざり合ったものだ。\n\nこの組み合わせが成立するのは対比の妙による。カリッと焼けたパンとなめらかなパテ、甘酸っぱい酢漬けとカラメル化した肉、冷たいきゅうりと唐辛子の辛さ。漬けた人参と大根は少なくとも20分休ませてやわらかくする必要があるが、時間をかけるほど風味が増す。",
+      tr: "Banh Mi, Vietnam'ın en tanınan sokak yemeğidir ve Güneydoğu Asya tarihinde mutfak füzyonunun en belirgin örneklerinden biridir. Fransız bageti on dokuzuncu yüzyılda sömürgecilikle birlikte geldi; Vietnamlı fırıncılar onu daha hafif, daha havadar ve ince kabuklu bir ekmek haline dönüştürdü. İçindekiler — pâté, mayonez ve salamura sebzeler — Fransız şarküteri geleneğini yerel Vietnam tatlarıyla birleştiriyor.\n\nKombinasyon, tezat sayesinde işe yarıyor: çıtır kızarmış ekmek ile kremsi pâté; tatlı-ekşi turşu ile karamelize et; serin salatalık ile biber ısısı. Salamura havuç ve daikon yumuşaması için en az yirmi dakika beklemeli; daha uzun bekletme daha dengeli bir lezzet ortaya çıkarır.",
+      it: "Il Banh Mi è il cibo di strada più riconoscibile del Vietnam e uno degli esempi più chiari di fusione culinaria nella storia del Sud-Est asiatico. La baguette francese arrivò con il colonialismo nel diciannovesimo secolo; i panettieri vietnamiti la adattarono in un pane più leggero, più soffice, con una crosta più sottile. I ripieni — paté, maionese e verdure in agrodolce — attingono sia alle tradizioni della charcuterie francese che ai sapori locali vietnamiti.\n\nLa combinazione funziona per contrasto: il pane tostato e croccante contro il paté cremoso; il sottaceto agrodolce contro la carne caramellata; il cetriolo fresco contro il calore del peperoncino. Le carote e il daikon in salamoia hanno bisogno di almeno venti minuti per ammorbidirsi, ma una marinatura più lunga sviluppa un sapore più equilibrato.",
+      ko: "반미는 베트남에서 가장 잘 알려진 길거리 음식이자 동남아시아 역사에서 요리 융합의 가장 선명한 사례 중 하나다. 프랑스 바게트는 19세기 식민지 시대에 전해졌고, 베트남 제빵사들은 이를 더 가볍고 공기가 잘 통하며 얇은 껍질을 가진 빵으로 변형시켰다. 내용물인 파테, 마요네즈, 절인 채소는 프랑스 샤르퀴트리 전통과 베트남 현지 풍미를 결합한 것이다.\n\n이 조합이 성공하는 이유는 대비에 있다. 바삭하게 구운 빵과 부드러운 파테, 새콤달콤한 절임과 캐러멜화된 고기, 시원한 오이와 고추의 열기. 절인 당근과 무는 최소 20분이 지나야 부드러워지며, 더 오래 절일수록 더 깊은 풍미가 형성된다.",
+      hi: "बान्ह मी वियतनाम का सबसे पहचानीय स्ट्रीट फूड है, और दक्षिण-पूर्व एशियाई इतिहास में पाक-कला के संगम का सबसे स्पष्ट उदाहरण है। फ्रांसीसी बागेट उन्नीसवीं सदी में उपनिवेशवाद के साथ आई; वियतनामी बेकरों ने इसे एक हल्की, हवादार और पतली परत वाली रोटी में बदल दिया। भराई — पाते, मेयोनेज़ और अचार — फ्रांसीसी शार्कुटरी परंपरा और स्थानीय वियतनामी स्वाद दोनों से ली गई है।\n\nयह संयोजन विपरीतता के कारण काम करता है: कुरकुरी भुनी रोटी और मुलायम पाते; मीठे-खट्टे अचार और कैरेमलाइज़ड मांस; ठंडे खीरे और मिर्च की गर्मी। अचार की गाजर और डाइकन को नरम होने के लिए कम से कम बीस मिनट चाहिए, हालांकि अधिक समय तक अचार बनाने से स्वाद और गहरा बनता है।"
     }
   },
   {
