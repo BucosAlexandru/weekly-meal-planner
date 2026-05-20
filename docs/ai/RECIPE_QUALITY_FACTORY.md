@@ -113,7 +113,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 91 | Cullen Skink | Tier A Complete | `pending` | Full EN rewrite: 10 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
 | 92 | Gado-Gado | Tier A Complete | `pending` | Full EN rewrite: 18 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
 | 93 | Cinnamon Bun | Tier A Complete | `pending` | Full EN rewrite: 14 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
-| 94 | Chiles en nogada | Partial Fix Only | `65ccb271` | Struct + name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 94 | Chiles en nogada | Tier A Complete | `pending` | Full EN rewrite: 15 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
 | 95 | Lentil Soup | Partial Fix Only | `4f0399d0` | Struct + origin/name/originText (all) + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
 | 96 | Spanakopita | Partial Fix Only | `d450ed9c` | Struct + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
 | 97 | Jollof Rice | Partial Fix Only | `5dbb975f` | Struct + origin/name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |

@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 94 | Chiles en Nogada |
-| 2 | 95 | Lentil Soup |
-| 3 | 96 | Spanakopita |
-| 4 | 97 | Jollof Rice |
-| 5 | 98 | Oka i'a |
-| 6 | 99 | Khorovats |
-| 7 | 100 | Verivorst |
-| 8 | 102 | Tteokbokki |
-| 9 | 103 | Shrimp Ceviche |
-| 10 | 104 | La Bandera |
+| 1 | 95 | Lentil Soup |
+| 2 | 96 | Spanakopita |
+| 3 | 97 | Jollof Rice |
+| 4 | 98 | Oka i'a |
+| 5 | 99 | Khorovats |
+| 6 | 100 | Verivorst |
+| 7 | 102 | Tteokbokki |
+| 8 | 103 | Shrimp Ceviche |
+| 9 | 104 | La Bandera |
+| 10 | 105 | Fesenjan |
 
 ---
 
