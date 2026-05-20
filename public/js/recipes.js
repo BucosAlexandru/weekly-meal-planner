@@ -12765,7 +12765,8 @@ export const recipes = [
       ja: "キューバ",
       tr: "Küba",
       it: "Cuba",
-      ko: "쿠바"
+      ko: "쿠바",
+      hi: "क्यूबा"
     },
     name: {
       ro: "Ropa Vieja",
@@ -12780,7 +12781,8 @@ export const recipes = [
       ja: "ロパ・ビエハ",
       tr: "Ropa Vieja",
       it: "Ropa Vieja",
-      ko: "로파 비에하"
+      ko: "로파 비에하",
+      hi: "रोपा विएजा"
     },
     category: {
       ro: "Cină",
@@ -12795,7 +12797,8 @@ export const recipes = [
       ja: "夕食",
       tr: "Akşam yemeği",
       it: "Cena",
-      ko: "저녁"
+      ko: "저녁",
+      hi: "रात का खाना"
     },
     servings: 4,
     tipType: 'meat',
@@ -12833,19 +12836,20 @@ export const recipes = [
       hi: "मांस को एक बर्तन में रखें, नमकीन ठंडे पानी से ढकें, उबाल आने पर झाग हटाएं, आंच कम करें और ढककर 1.5–2 घंटे पकाएं जब तक मांस आसानी से फाड़ा न जा सके। मांस निकालें, 200 मिली शोरबा बचाएं और मांस को लंबे रेशों में फाड़ लें। एक चौड़े पैन में जैतून का तेल मध्यम आंच पर गर्म करें, प्याज और दोनों शिमला मिर्च डालकर 8–10 मिनट नरम और हल्का रंगीन होने तक भूनें। लहसुन, जीरा और अजवायन डालकर 1 मिनट भूनें, फिर वाइन डालें और 2 मिनट आधी होने तक पकाएं। कुचले टमाटर, टोमैटो पेस्ट, बचाया शोरबा और तेज पत्ते डालें, नमक-मिर्च से स्वाद लें और 10 मिनट हल्का गाढ़ा होने तक पकाएं। फाड़ा हुआ मांस डालें, अच्छी तरह मिलाएं और 10–15 मिनट और पकाएं जब तक मांस सॉस सोख ले और मिश्रण रसीला हो जाए। तेज पत्ते निकालें और सफेद चावल और तले हुए केले के साथ परोसें।"
     },
     originText: {
-      ro: "Ropa Vieja este o rețetă tradițională din Cuba.",
-      en: "Ropa Vieja is a traditional recipe from Cuba.",
-      es: "Ropa Vieja es una receta tradicional de Cuba.",
-      fr: "Ropa Vieja est une recette traditionnelle de Cuba.",
-      de: "Ropa Vieja ist ein traditionelles Rezept aus Kuba.",
-      pt: "Ropa Vieja é uma receita tradicional de Cuba.",
-      ru: "Ропа Вьеха — традиционный рецепт из Кубы.",
-      ar: "روبا فييخا هي وصفة تقليدية من كوبا.",
-      zh: "古巴牛肉丝 是来自古巴的传统食谱。",
-      ja: "ロパ・ビエハ はキューバの伝統的なレシピです。",
-      tr: "Ropa Vieja Küba kökenli geleneksel bir tariftir.",
-      it: "Ropa Vieja è una ricetta tradizionale di Cuba.",
-      ko: "로파 비에하는 쿠바의 전통 요리입니다."
+      ro: "Ropa vieja — «haine vechi» în spaniolă — este mâncarea națională a Cubei: vită fiartă până se sfâșie în fâșii, apoi gătită într-un sofrito de roșii, ardei, ceapă și usturoi care pătrunde în fiecare fibră. Preparatul a ajuns în Cuba din Insulele Canare și are rădăcini în bucătăria medievală sefardă, unde era gătit din vită rămasă de la Shabbat. De-a lungul secolelor a devenit inseparabil de identitatea cubaneză.\n\nTehnica are două etape. Mai întâi, vita fierbe în apă sărată până devine complet fragedă și fibrele se despart ușor — durează cel puțin 90 de minute. Apoi carnea sfâșiată se finisează în sofrito, absorbând sosul de roșii cu chimion și oregano. Sosul trebuie să fie suficient de gros cât să acopere fiecare fâșie, nu să se adune sub ele.",
+      en: "Ropa vieja — 'old clothes' in Spanish — is Cuba's national dish: beef braised until it falls into shreds, then cooked in a sofrito of tomatoes, peppers, onion, and garlic that permeates every fibre. The dish arrived in Cuba from the Canary Islands and has roots in medieval Sephardic Jewish cooking, where it was made from leftover Sabbath beef. Over centuries it became inseparable from Cuban identity.\n\nThe technique is two stages. First, the beef simmers in salted water until completely tender and the fibres separate easily — at least ninety minutes. Then the shredded meat finishes in the sofrito, absorbing the sweet, acidic tomato sauce and the cumin and oregano that give it its Cuban character. The sauce must be thick enough to coat each strand, not pooled beneath them.",
+      es: "Ropa vieja — 'ropa vieja' en español — es el plato nacional de Cuba: carne de res estofada hasta que se deshace en hebras, luego cocinada en un sofrito de tomates, pimientos, cebolla y ajo que impregna cada fibra. El plato llegó a Cuba desde las Islas Canarias y tiene raíces en la cocina medieval sefardí, donde se elaboraba con la carne del Shabbat. Con los siglos, se volvió inseparable de la identidad cubana.\n\nLa técnica tiene dos etapas. Primero, la carne se cuece en agua salada hasta que está completamente tierna y las fibras se separan fácilmente — al menos noventa minutos. Luego la carne deshebrada termina en el sofrito, absorbiendo la salsa de tomate agridulce y el comino y orégano que le dan su carácter cubano. La salsa debe ser lo suficientemente espesa como para cubrir cada hebra.",
+      fr: "Ropa vieja — «vieux vêtements» en espagnol — est le plat national cubain : du bœuf braisé jusqu'à se défaire en fils, puis cuit dans un sofrito de tomates, poivrons, oignon et ail qui pénètre chaque fibre. Le plat est arrivé à Cuba depuis les îles Canaries et a des racines dans la cuisine médiévale séfarade, où il était préparé avec les restes du bœuf du Chabbat. Au fil des siècles, il est devenu indissociable de l'identité cubaine.\n\nLa technique comporte deux étapes. D'abord, le bœuf mijote dans de l'eau salée jusqu'à ce qu'il soit tendre et que les fibres se séparent facilement — au moins quatre-vingt-dix minutes. Ensuite, la viande effilochée finit dans le sofrito, absorbant la sauce tomate aigre-douce et le cumin et l'origan qui lui confèrent son caractère cubain. La sauce doit être assez épaisse pour enrober chaque filet.",
+      de: "Ropa vieja — «alte Kleider» auf Spanisch — ist Kubas Nationalgericht: Rindfleisch, das so lange geschmort wird, bis es in Fasern zerfällt, und dann in einem Sofrito aus Tomaten, Paprika, Zwiebeln und Knoblauch gegart wird, das jede Faser durchdringt. Das Gericht kam mit den Kanarischen Inseln nach Kuba und hat seine Wurzeln in der mittelalterlichen sephardischen Küche, wo es aus Sabbat-Rindfleisch-Resten zubereitet wurde. Über die Jahrhunderte wurde es untrennbar mit der kubanischen Identität verbunden.\n\nDie Technik besteht aus zwei Stufen. Zuerst köchelt das Rindfleisch in gesalzenem Wasser, bis es vollständig weich ist und die Fasern sich leicht trennen — mindestens neunzig Minuten. Dann wird das zerzupfte Fleisch im Sofrito fertiggestellt und nimmt die süßlich-saure Tomatensauce mit Kreuzkümmel und Oregano auf. Die Sauce muss dickflüssig genug sein, um jeden Faden zu umhüllen.",
+      pt: "Ropa vieja — «roupa velha» em espanhol — é o prato nacional de Cuba: carne de boi refogada até se desfazer em tiras, depois cozida num sofrito de tomates, pimentões, cebola e alho que penetra em cada fibra. O prato chegou a Cuba das Ilhas Canárias e tem raízes na culinária medieval sefardita, onde era preparado com o boi que sobrava do Shabat. Com os séculos, tornou-se inseparável da identidade cubana.\n\nA técnica tem duas etapas. Primeiro, a carne cozinha em água salgada até ficar completamente macia e as fibras se separarem facilmente — pelo menos noventa minutos. Depois, a carne desfiada termina no sofrito, absorvendo o molho de tomate agridoce e o cominho e orégano que lhe conferem o caráter cubano. O molho deve ser espesso o suficiente para cobrir cada fio.",
+      ru: "Ропа вьеха — «старая одежда» по-испански — национальное блюдо Кубы: говядина, тушёная до тех пор, пока не распадается на волокна, затем приготовленная в соусе «sofrito» из помидоров, перца, лука и чеснока, пропитывающем каждую нить. Блюдо попало на Кубу с Канарских островов и уходит корнями в средневековую сефардскую еврейскую кухню, где оно готовилось из остатков субботней говядины. Со временем оно стало неотъемлемой частью кубинской идентичности.\n\nТехника состоит из двух этапов. Сначала говядина варится в подсоленной воде до полной мягкости, когда волокна легко разделяются — не менее девяноста минут. Затем разобранное мясо доходит в соусе, впитывая кисло-сладкий томатный соус с тмином и орегано. Соус должен быть достаточно густым, чтобы обволакивать каждую нить.",
+      ar: "روبا فييخا — «الملابس القديمة» بالإسبانية — هي الطبق الوطني الكوبي: لحم بقري مطهوّ ببطء حتى يتفتّت إلى خيوط، ثم يُطهى في «سوفريتو» من الطماطم والفلفل والبصل والثوم يتغلغل في كل ليف. وصل الطبق إلى كوبا من جزر الكناري وتعود جذوره إلى مطبخ اليهود السفارديم في العصور الوسطى، حيث كان يُعدّ من بقايا لحم السبت. مع القرون، أصبح جزءاً لا يتجزأ من الهوية الكوبية.\n\nالتقنية على مرحلتين. أولاً، يُطهى اللحم في الماء المُملّح حتى يصبح طرياً تماماً وتنفصل أليافه بسهولة — لا تقل عن تسعين دقيقة. ثم يُنهى اللحم الممزّق في السوفريتو، يمتص صلصة الطماطم الحامضة-الحلوة والكمون والزعتر التي تمنحه طابعه الكوبي. يجب أن تكون الصلصة كثيفة بما يكفي لتغطية كل خيط.",
+      zh: "罗帕维耶哈（ropa vieja，西班牙语意为「旧衣裳」）是古巴的国菜：牛肉炖到丝状、再放入由番茄、辣椒、洋葱和大蒜制成的「软沙托」中烹煮，使酱汁渗透每一根肉丝。这道菜从加那利群岛传入古巴，可追溯至中世纪塞法迪犹太烹饪，最初用安息日剩余的牛肉制作。几个世纪以来，它已成为古巴文化身份不可分割的一部分。\n\n烹饪分两个步骤。首先，牛肉在盐水中慢炖至完全酥烂、纤维轻松分离——至少九十分钟。然后撕碎的肉在软沙托中收尾，吸入酸甜番茄汁以及赋予其古巴风味的孜然和牛至。酱汁必须足够浓稠，能包裹每一根肉丝，而不是沉积在底部。",
+      ja: "ロパ・ビエハ（スペイン語で「古い服」の意）はキューバの国民食です。牛肉を繊維状にほぐれるまで煮込んだ後、トマト、パプリカ、玉ねぎ、ニンニクのソフリトで仕上げ、すべての繊維に染み込ませます。カナリア諸島からキューバに伝わり、中世セファルディ系ユダヤ料理に起源を持ちます。そこではシャバットの残り牛肉から作られていました。何世紀もかけてキューバのアイデンティティと分かちがたく結びつきました。\n\n調理は二段階です。まず、牛肉を塩水でじっくり煮て完全に柔らかくし、繊維を手でほぐれるようにします — 少なくとも90分。次に、ほぐした肉をソフリトで仕上げ、クミンとオレガノが効いた甘酸っぱいトマトソースを吸わせます。ソースは各繊維をコーティングするほど濃い必要があり、底に溜まってはいけません。",
+      tr: "Ropa vieja — İspanyolca'da «eski kıyafetler» — Küba'nın ulusal yemeğidir: sığır eti ipliklere ayrılana kadar pişirilir, ardından her lifi saran domates, biber, soğan ve sarımsaktan oluşan bir sofrito'da tamamlanır. Yemek Küba'ya Kanarya Adaları'ndan gelmiş olup Orta Çağ Sefarad Yahudi mutfağına dayanır; orada Şabat'tan kalan sığır etiyle hazırlanırdı. Yüzyıllar içinde Küba kimliğinin ayrılmaz parçası oldu.\n\nTeknik iki aşamadan oluşur. Önce sığır eti tuzlu suda tamamen yumuşayıp lifleri kolayca ayrılana dek kaynatılır — en az doksan dakika. Ardından didiklenmiş et sofrito'da pişirilerek ekşi-tatlı domates sosunu ve Küba karakterini veren kimyon ve kekiği emer. Sos, her lifi kaplayacak kadar yoğun olmalı, altında birikmemeli.",
+      it: "Ropa vieja — «vecchi vestiti» in spagnolo — è il piatto nazionale cubano: manzo brasato fino a sfaldarsi in filamenti, poi cotto in un sofrito di pomodori, peperoni, cipolla e aglio che penetra ogni fibra. Il piatto giunse a Cuba dalle Isole Canarie e affonda le radici nella cucina medievale sefardita, dove veniva preparato con gli avanzi del manzo del Sabato. Nel corso dei secoli diventò inseparabile dall'identità cubana.\n\nLa tecnica prevede due fasi. Prima il manzo sobbollisce in acqua salata finché è completamente tenero e le fibre si separano facilmente — almeno novanta minuti. Poi la carne sfilacciata termina nel sofrito, assorbendo la salsa di pomodoro dolce-acida e il cumino e l'origano che le conferiscono il carattere cubano. La salsa deve essere abbastanza densa da avvolgere ogni filo.",
+      ko: "로파 비에하(ropa vieja, 스페인어로 '낡은 옷')는 쿠바의 국민 요리입니다. 실처럼 분리될 때까지 소고기를 조리한 다음, 모든 섬유에 스며드는 토마토·피망·양파·마늘로 만든 소프리토에서 마무리합니다. 카나리아 제도에서 쿠바로 전해진 이 요리는 중세 세파르디 유대 요리에 뿌리를 두며, 안식일에 남은 소고기로 만들어졌습니다. 수 세기에 걸쳐 쿠바 정체성과 분리할 수 없는 음식이 되었습니다.\n\n조리법은 두 단계입니다. 먼저 소금물에 소고기를 완전히 부드럽고 섬유가 쉽게 분리될 때까지 끓입니다 — 최소 90분. 그런 다음 찢은 고기를 소프리토에 넣어 마무리하며, 새콤달콤한 토마토 소스와 쿠민, 오레가노를 흡수시킵니다. 소스는 아래에 고이지 않고 각 가닥을 코팅할 만큼 걸쭉해야 합니다.",
+      hi: "रोपा विएजा (ropa vieja, स्पेनिश में 'पुराने कपड़े') क्यूबा का राष्ट्रीय व्यंजन है: गाय का मांस इतना पकाया जाता है कि रेशों में बिखर जाए, फिर टमाटर, मिर्च, प्याज और लहसुन के सोफ्रिटो में पकाया जाता है जो हर रेशे में समा जाता है। यह व्यंजन कैनरी द्वीप से क्यूबा पहुँचा और मध्यकालीन सेफार्डिक यहूदी खाना पकाने में इसकी जड़ें हैं, जहाँ इसे शबात के बचे हुए मांस से बनाया जाता था। सदियों में यह क्यूबाई पहचान का अभिन्न हिस्सा बन गया।\n\nतकनीक दो चरणों में है। पहले, मांस को नमकीन पानी में तब तक उबाला जाता है जब तक यह पूरी तरह नरम न हो जाए और रेशे आसानी से अलग न होने लगें — कम से कम नब्बे मिनट। फिर फाड़ा हुआ मांस सोफ्रिटो में अंतिम रूप लेता है, खट्टे-मीठे टमाटर सॉस और जीरे और अजवायन को सोखता है जो इसे क्यूबाई चरित्र देते हैं। सॉस इतना गाढ़ा होना चाहिए कि हर रेशे पर लेप चढ़े, नीचे इकट्ठा न हो।"
     }
   },
   {
