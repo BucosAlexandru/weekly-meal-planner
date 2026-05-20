@@ -11340,7 +11340,8 @@ export const recipes = [
       ja: "ジョージア",
       tr: "Gürcistan",
       it: "Georgia",
-      ko: "조지아"
+      ko: "조지아",
+      hi: "जॉर्जिया"
     },
     name: {
       ro: "Lobio",
@@ -11355,7 +11356,8 @@ export const recipes = [
       ja: "ロビオ",
       tr: "Lobio",
       it: "Lobio",
-      ko: "로비오"
+      ko: "로비오",
+      hi: "लोबियो"
     },
     category: {
       ro: "Cină",
@@ -11370,7 +11372,8 @@ export const recipes = [
       ja: "夕食",
       tr: "Akşam yemeği",
       it: "Cena",
-      ko: "저녁"
+      ko: "저녁",
+      hi: "रात का खाना"
     },
     ingredients: {
       ro: ["500 g fasole rosie uscata (sau 2 x 400 g conserve, clatite)", "1 ceapa mare (circa 200 g), tocata marunt", "4 catei de usturoi, tocati marunt", "100 g miez de nuca, macinat fin sau tocat marunt", "1 lingurita coriandru macinat", "1/2 lingurita schinduf macinat (utsho suneli)", "1/2 lingurita scortisoara", "1/2 lingurita fulgi de ardei iute sau 1 ardei iute mic, fara seminte, tocat", "2 linguri otet alb sau de vin rosu", "3 linguri ulei vegetal", "1 lingurita sare fina", "30 g coriandru proaspat, tocat marunt", "4 linguri boabe de rodie (circa 1/2 rodie)", "4 fire ceapa verde, taiate subtire"],
@@ -11405,19 +11408,20 @@ export const recipes = [
       hi: "यदि सूखी फलियाँ इस्तेमाल कर रहे हैं, तो उन्हें रात भर ठंडे पानी में भिगोएं, छान लें, एक बड़े बर्तन में ताज़े ठंडे पानी से ढकें, उबाल लाएं, झाग हटाएं और 45-60 मिनट धीमी आंच पर उबालें जब तक पूरी तरह नरम न हो जाएं और टूटने न लगें, पकाने का तरल गहरा लाल और गाढ़ा होना चाहिए। एक कड़ाही में मध्यम आंच पर तेल गर्म करें, प्याज डालें और बीच-बीच में हिलाते हुए 10-12 मिनट पकाएं जब तक गहरे सुनहरे रंग का और बहुत नरम न हो जाए। लहसुन, धनिया पाउडर, मेथी, दालचीनी और मिर्च डालें और 2 मिनट भूनें जब तक खुशबू न आ जाए। प्याज का मिश्रण, पिसे अखरोट और सिरका फलियों में मिलाएं और धीमी आंच पर 10 मिनट बीच-बीच में हिलाते हुए पकाएं जब तक स्वाद मिल न जाएं और फलियाँ बहुत नरम और गाढ़ी सॉस वाली न हो जाएं — कुछ फलियाँ बर्तन की दीवार पर दबाकर मैश करें ताकि गाढ़ापन आए। नमक और सिरका स्वाद के अनुसार मिलाएं। आंच से हटाएं और आधा ताज़ा धनिया मिलाएं। एक थाली में परोसें और ऊपर से हरी प्याज, अनार के दाने और बाकी धनिया डालें। गर्म रोटी के साथ परोसें।"
     },
     originText: {
-      ro: "Lobio este o rețetă tradițională din Georgia.",
-      en: "Lobio is a traditional recipe from Georgia.",
-      es: "Lobio es una receta tradicional de Georgia.",
-      fr: "Lobio est une recette traditionnelle de Géorgie.",
-      de: "Lobio ist ein traditionelles Rezept aus Georgien.",
-      pt: "Lobio é uma receita tradicional da Geórgia.",
-      ru: "Лобио — традиционный рецепт из Грузии.",
-      ar: "لوبيو هي وصفة تقليدية من جورجيا.",
-      zh: "格鲁吉亚豆炖菜 是来自格鲁吉亚的传统食谱。",
-      ja: "ロビオ はジョージアの伝統的なレシピです。",
-      tr: "Lobio Gürcistan kökenli geleneksel bir tariftir.",
-      it: "Lobio è una ricetta tradizionale della Georgia.",
-      ko: "로비오는 조지아의 전통 요리입니다."
+      ro: "Lobio — cuvântul georgian pentru fasole — este unul dintre cele mai vechi și mai răspândite preparate din Georgia. Fasolea roșie a fost un aliment de bază în Caucazul de Sud de secole, iar rețeta încorporează aromele definitorii ale bucătăriei georgiene: nuci măcinate, schinduf, coriandru și rodie. Apare la mese obișnuite și la supra, banchetul tradițional georgian.\n\nNucile sunt măcinate fin și adăugate departe de foc, unde îngroașă lichidul de fierbere și eliberează uleiurile fără a se amărî. Oțetul aduce nota acidă caracteristică bucătăriei georgiene. Boabele de rodie și ceapa verde servite deasupra nu sunt decorative — adaugă aciditate și textură care echilibrează fasolea bogată și hrănitoare.",
+      en: "Lobio — the Georgian word for bean — is one of Georgia's oldest and most widely prepared dishes. Red kidney beans have been a staple of the South Caucasus for centuries, and the dish incorporates the signature flavours of the Georgian table: ground walnuts, fenugreek, coriander, and pomegranate. It appears at everyday meals and at the supra, the formal Georgian feast.\n\nThe walnuts are ground finely and stirred in off the heat, where they thicken the cooking liquid and release their oils without turning bitter. The vinegar carries the characteristic sour note of Georgian cooking. The pomegranate seeds and spring onion served on top are not decorative — they add tartness and crunch that balances the rich, earthy beans.",
+      es: "Lobio — la palabra georgiana para «frijol» — es uno de los platos más antiguos y extendidos de Georgia. Los frijoles rojos han sido un alimento básico del Cáucaso del Sur durante siglos, y el plato incorpora los sabores definitorios de la cocina georgiana: nueces molidas, fenogreco, cilantro y granada. Aparece en comidas cotidianas y en el supra, el banquete formal georgiano.\n\nLas nueces se muelen finamente y se añaden fuera del fuego, donde espesan el líquido de cocción y liberan sus aceites sin amargarse. El vinagre aporta la nota ácida característica de la cocina georgiana. Las semillas de granada y la cebolleta servidas encima no son decorativas — añaden acidez y textura que equilibra los frijoles ricos y terrosos.",
+      fr: "Lobio — le mot géorgien pour haricot — est l'un des plats les plus anciens et les plus répandus de Géorgie. Les haricots rouges constituent un aliment de base du Caucase du Sud depuis des siècles, et le plat incorpore les saveurs emblématiques de la cuisine géorgienne : noix moulues, fenugrec, coriandre et grenade. Il figure aux repas quotidiens comme au supra, le festin géorgien traditionnel.\n\nLes noix sont finement moulues et incorporées hors du feu, où elles épaississent le liquide de cuisson et libèrent leurs huiles sans s'amériser. Le vinaigre apporte la note acidulée caractéristique de la cuisine géorgienne. Les graines de grenade et les oignons nouveaux servis par-dessus ne sont pas décoratifs — ils ajoutent acidité et croquant qui équilibrent les haricots riches et terreux.",
+      de: "Lobio — das georgische Wort für Bohne — ist eines der ältesten und am weitesten verbreiteten Gerichte Georgiens. Rote Kidneybohnen sind seit Jahrhunderten ein Grundnahrungsmittel im Südkaukasus, und das Gericht vereint die prägenden Aromen der georgischen Küche: gemahlene Walnüsse, Bockshornklee, Koriander und Granatapfel. Es erscheint bei alltäglichen Mahlzeiten und beim Supra, dem formellen georgischen Festmahl.\n\nDie Walnüsse werden fein gemahlen und vom Herd gerührt, wo sie die Kochflüssigkeit eindicken und ihre Öle freisetzen, ohne bitter zu werden. Der Essig bringt den charakteristischen Säureton der georgischen Küche. Die obenauf servierten Granatapfelkerne und Frühlingszwiebeln sind nicht dekorativ — sie fügen Säure und Knackigkeit hinzu, die die reichen, erdigen Bohnen ausbalanciert.",
+      pt: "Lobio — a palavra georgiana para feijão — é um dos pratos mais antigos e mais amplamente preparados da Geórgia. O feijão vermelho tem sido um alimento básico do Cáucaso do Sul há séculos, e o prato incorpora os sabores definidores da cozinha georgiana: nozes moídas, feno-grego, coentro e romã. Aparece em refeições do dia a dia e no supra, o banquete formal georgiano.\n\nAs nozes são moídas finamente e misturadas fora do fogo, onde engrossam o líquido de cozedura e libertam os seus óleos sem amargar. O vinagre traz a nota ácida característica da cozinha georgiana. As sementes de romã e as cebolinhas servidas por cima não são decorativas — acrescentam acidez e textura que equilibra o feijão rico e terroso.",
+      ru: "Лобио — грузинское слово, означающее «фасоль» — одно из самых древних и широко распространённых блюд Грузии. Красная фасоль была основным продуктом Южного Кавказа на протяжении столетий, а блюдо вобрало в себя характерные вкусы грузинской кухни: молотые грецкие орехи, пажитник, кориандр и гранат. Оно появляется как на повседневных трапезах, так и на супре — торжественном грузинском застолье.\n\nГрецкие орехи тонко перемалываются и вмешиваются вне огня, где загущают жидкость для варки и высвобождают масла, не горча. Уксус придаёт характерную кислинку, свойственную грузинской кухне. Зёрна граната и зелёный лук, поданные сверху, не просто украшение — они добавляют кислоту и хруст, уравновешивающие сытную, землистую фасоль.",
+      ar: "اللوبيو — الكلمة الجورجية لـ«الفاصوليا» — هو أحد أقدم الأطباق وأكثرها انتشاراً في جورجيا. كانت الفاصوليا الحمراء غذاءً أساسياً في جنوب القوقاز منذ قرون، ويجمع الطبق النكهات المميزة للمطبخ الجورجي: الجوز المطحون والحلبة والكزبرة والرمان. يُقدَّم في الوجبات اليومية وفي السوبرا، وهو الوليمة الجورجية الرسمية.\n\nيُطحن الجوز ناعماً ويُضاف بعيداً عن النار، حيث يُكثّف سائل الطهي ويُطلق زيوته دون أن يصبح مراً. يُضفي الخل النبرة الحامضة المميزة للمطبخ الجورجي. بذور الرمان والبصل الأخضر المقدَّمان فوقها ليسا مجرد زينة — فهما يُضيفان حموضة وقرمشة توازن الفاصوليا الغنية الترابية.",
+      zh: "洛比奥——格鲁吉亚语中「豆」的意思——是格鲁吉亚最古老、最广泛食用的菜肴之一。几个世纪以来，红腰豆一直是南高加索地区的主食，这道菜融合了格鲁吉亚餐桌的标志性风味：磨碎的核桃、葫芦巴、香菜和石榴。它出现在日常餐桌上，也出现在苏普拉——格鲁吉亚正式的盛宴上。\n\n核桃磨细后在离火时拌入，在这里它能使汤汁变得浓稠并释放油脂，而不会变苦。醋带来格鲁吉亚菜肴特有的酸味。上桌时撒上的石榴籽和小葱并非装饰——它们增添了酸味和嚼感，平衡了醇厚质朴的豆子。",
+      ja: "ロビオ — ジョージア語で「豆」を意味するこの言葉 — はジョージアで最も古く、広く親しまれている料理のひとつです。赤インゲン豆は何世紀にもわたって南コーカサスの主食であり、この料理はジョージア料理の象徴的な風味を凝縮しています：砕いたクルミ、フェネグリーク、コリアンダー、ザクロ。日常の食卓にも、格式あるジョージアの祝宴スプラにも登場します。\n\nクルミは細かく砕き、火を止めてから加えます。こうすることで煮汁にとろみをつけ、苦味を出さずに油分を引き出すことができます。酢はジョージア料理に特徴的な酸味をもたらします。上に添えるザクロの実と小ねぎは飾りではなく — 豊かでコクのある豆を引き締める、酸味と歯ごたえの重要な要素です。",
+      tr: "Lobio — Gürcüce'de fasulye anlamına gelen kelime — Gürcistan'ın en eski ve en yaygın yemeklerinden biridir. Kırmızı barbunya fasulyesi yüzyıllardır Güney Kafkasya'nın temel gıdası olmuş; yemek Gürcü mutfağının imza tatlarını bünyesinde toplar: öğütülmüş ceviz, çemen otu, kişniş ve nar. Hem gündelik öğünlerde hem de Gürcistan'ın geleneksel şöleni supra'da yer alır.\n\nCevizler ince öğütülür ve ateşten uzakta eklenir; burada pişirme sıvısını koyulaştırır ve acılaşmadan yağlarını bırakır. Sirke, Gürcü mutfağının karakteristik ekşi notasını taşır. Üzerine servis edilen nar taneleri ve taze soğan süs değildir — zengin, toprak kokulu fasulyeleri dengeleyen bir tat ve doku katarlar.",
+      it: "Il lobio — la parola georgiana per fagiolo — è uno dei piatti più antichi e diffusi della Georgia. I fagioli rossi sono un alimento base del Caucaso meridionale da secoli, e il piatto riunisce i sapori distintivi della cucina georgiana: noci tritate, fieno greco, coriandolo e melograno. Compare nei pasti quotidiani e nel supra, il banchetto formale georgiano.\n\nLe noci vengono tritate finemente e incorporate lontano dal fuoco, dove addensano il liquido di cottura e rilasciano i loro oli senza diventare amare. L'aceto porta la nota acidula caratteristica della cucina georgiana. I semi di melograno e i cipollotti serviti in cima non sono decorativi — aggiungono acidità e croccantezza che bilancia i fagioli ricchi e terrosi.",
+      ko: "로비오 — 조지아어로 '콩'을 뜻하는 말 — 는 조지아에서 가장 오래되고 널리 먹는 요리 중 하나입니다. 붉은 강낭콩은 수백 년 동안 남캅카스의 주식이었으며, 이 요리는 조지아 식탁의 특징적인 풍미를 담고 있습니다: 간 호두, 호로파, 고수, 석류. 일상 식사와 공식 조지아 연회인 수프라 양쪽에 모두 오릅니다.\n\n호두는 곱게 갈아 불에서 내린 후 넣는데, 이 단계에서 국물을 걸쭉하게 만들고 쓴맛 없이 기름을 풀어냅니다. 식초는 조지아 요리 특유의 신맛을 담당합니다. 위에 얹는 석류 알갱이와 쪽파는 장식이 아닙니다 — 진하고 구수한 콩의 풍미를 잡아주는 산미와 식감을 더합니다.",
+      hi: "लोबियो — जॉर्जियाई भाषा में 'फली' का अर्थ — जॉर्जिया के सबसे पुराने और व्यापक रूप से बनाए जाने वाले व्यंजनों में से एक है। लाल राजमा फलियाँ सदियों से दक्षिण काकेशस की मूल खाद्य सामग्री रही हैं, और यह व्यंजन जॉर्जियाई रसोई के विशिष्ट स्वादों को समाहित करता है: पिसे अखरोट, मेथी, धनिया और अनार। यह रोज़मर्रा के भोजन और सुप्रा — जॉर्जिया के पारंपरिक भव्य भोज — दोनों में उपस्थित रहता है।\n\nअखरोटों को बारीक पीसकर आंच से हटाने के बाद मिलाया जाता है, जहाँ वे पकाने के तरल को गाढ़ा करते हैं और कड़वाहट के बिना तेल छोड़ते हैं। सिरका जॉर्जियाई खाना पकाने की विशिष्ट खट्टी टोन लाता है। ऊपर से परोसे गए अनार के दाने और हरी प्याज सजावटी नहीं हैं — वे खट्टापन और कुरकुरापन जोड़ते हैं जो समृद्ध, मिट्टी की सुगंध वाली फलियों को संतुलित करता है।"
     }
   },
   {
