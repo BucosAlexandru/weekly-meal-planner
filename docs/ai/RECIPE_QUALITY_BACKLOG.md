@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 83 | Fatteh |
-| 2 | 84 | Smørrebrød |
-| 3 | 86 | Poutine |
-| 4 | 87 | Roti |
-| 5 | 88 | Jerk Chicken |
-| 6 | 89 | Sabich |
-| 7 | 90 | Ropa Vieja |
-| 8 | 91 | Cullen Skink |
-| 9 | 92 | Gado-Gado |
-| 10 | 93 | Cinnamon Bun |
+| 1 | 84 | Smørrebrød |
+| 2 | 86 | Poutine |
+| 3 | 87 | Roti |
+| 4 | 88 | Jerk Chicken |
+| 5 | 89 | Sabich |
+| 6 | 90 | Ropa Vieja |
+| 7 | 91 | Cullen Skink |
+| 8 | 92 | Gado-Gado |
+| 9 | 93 | Cinnamon Bun |
+| 10 | 94 | Chiles en Nogada |
 
 ---
 
