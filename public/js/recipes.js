@@ -13173,7 +13173,8 @@ export const recipes = [
       ja: "メキシコ",
       tr: "Meksika",
       it: "Messico",
-      ko: "멕시코"
+      ko: "멕시코",
+      hi: "मेक्सिको"
     },
     name: {
       ro: "Chiles en nogada",
@@ -13188,7 +13189,8 @@ export const recipes = [
       ja: "チレス・エン・ノガダ",
       tr: "Chiles en nogada",
       it: "Chiles en nogada",
-      ko: "칠레스 엔 노가다"
+      ko: "칠레스 엔 노가다",
+      hi: "चिलेस एन नोगाडा"
     },
     category: {
       ro: "Cină",
@@ -13203,7 +13205,8 @@ export const recipes = [
       ja: "夕食",
       tr: "Akşam yemeği",
       it: "Cena",
-      ko: "저녁"
+      ko: "저녁",
+      hi: "रात का खाना"
     },
     servings: 4,
     tipType: 'meat',
@@ -13241,19 +13244,20 @@ export const recipes = [
       hi: "पोब्लानो मिर्चों को सीधे गैस की लौ पर या गर्म ग्रिल के नीचे 8–10 मिनट तक चिमटे से पलटते हुए चारों तरफ से पूरी तरह काला होने तक भूनें; ढके हुए कटोरे में 10 मिनट रखें, फिर छिलका रगड़कर उतारें, एक लंबी चीरा लगाएं और छोटे चम्मच से बीज और नसें निकाल दें, मिर्च को पूरा रखें। एक चौड़े फ्राइंग पैन में मध्यम आंच पर तेल गरम करें, प्याज डालें और 5–6 मिनट तक पूरी तरह नरम होने तक भूनें; लहसुन डालें और 1 मिनट और भूनें। पिसा हुआ मांस डालें और 8 मिनट तक तोड़ते हुए गुलाबी रंग समाप्त होने तक भूनें; टमाटर डालें और 5 मिनट तक पानी सूखने तक पकाएं। किशमिश, बादाम, आड़ू, दालचीनी, लौंग, नमक और काली मिर्च मिलाएं; 5 मिनट तक फल नरम होने और मिश्रण सूखने तक पकाएं, फिर आंच से हटाएं और ठंडा होने दें। भिगोए हुए अखरोट को छानें और क्रीम चीज़ और खट्टी क्रीम के साथ पूरी तरह मुलायम होने तक ब्लेंड करें; नमक से स्वाद लें। प्रत्येक मिर्च को ठंडे मांस के भरावन से अच्छी तरह भरें और चीरे को धीरे से बंद करें; अलग-अलग प्लेटों पर रखें। प्रत्येक मिर्च पर अखरोट का सॉस भरपूर डालें, ऊपर अनार के दाने और अजमोद की पत्तियां बिखेरें और कमरे के तापमान पर परोसें।"
     },
     originText: {
-      ro: "Chiles en nogada este o rețetă tradițională din Mexic.",
-      en: "Chiles en nogada is a traditional recipe from Mexico.",
-      es: "Chiles en nogada es una receta tradicional de México.",
-      fr: "Chiles en nogada est une recette traditionnelle du Mexique.",
-      de: "Chiles en nogada ist ein traditionelles Rezept aus Mexiko.",
-      pt: "Chiles en nogada é uma receita tradicional do México.",
-      ru: "Чили эн ногада — традиционный рецепт из Мексики.",
-      ar: "شيليز إن نوجادا هي وصفة تقليدية من المكسيك.",
-      zh: "胡桃辣椒酱 是来自墨西哥的传统食谱。",
-      ja: "チレス・エン・ノガダ はメキシコの伝統的なレシピです。",
-      tr: "Chiles en nogada Meksika kökenli geleneksel bir tariftir.",
-      it: "Chiles en nogada è una ricetta tradizionale del Messico.",
-      ko: "칠레스 엔 노가다는 멕시코의 전통 요리입니다."
+      ro: "Chiles en nogada este considerat cel mai patriotic fel de mâncare al Mexicului — culorile sale oglindesc steagul mexican: verde din pătrunjel, alb din crema de nucă și roșu din semințele de rodiu. Preparatul provine din Puebla, din perioada colonială târzie, și este preparat tradițional în august și septembrie, când nucile și rodiile sunt ambele la sezon în același timp.\n\nUmplutura — picadillo — este o combinație distinctivă pre-colonială de dulce și sărat: fructe uscate, condimente calde și carne gătite împreună, un stil adus în Mexic prin tradițiile culinare maure venite cu Spania. Sosul de nucă trebuie preparat din nuci proaspete, cu pieliță; aceasta se îndepărtează prin înmuierea nucilor în lapte, care atenuează și amărăciunea. Preparatul se servește la temperatura camerei, nu fierbinte.",
+      en: "Chiles en nogada is considered Mexico's most patriotic dish — its colours mirror the Mexican flag: green from the parsley, white from the walnut cream, and red from the pomegranate seeds. The dish originates from Puebla in the late colonial period and is traditionally prepared in August and September, when walnuts and pomegranates are both in season at the same time.\n\nThe filling — picadillo — is a distinctly pre-colonial combination of sweet and savoury: dried fruit, warm spices, and meat cooked together, a style brought to Mexico through the Moorish culinary traditions that came with Spain. The walnut sauce must be made from fresh, peeled walnuts; soaking them in milk removes the thin bitter skin and mellows the flavour. The dish is served at room temperature, not hot.",
+      es: "Los chiles en nogada son considerados el plato más patriótico de México — sus colores reflejan la bandera mexicana: verde del perejil, blanco de la crema de nuez y rojo de los granos de granada. El plato proviene de Puebla, del período colonial tardío, y se prepara tradicionalmente en agosto y septiembre, cuando las nueces y las granadas están al mismo tiempo en temporada.\n\nEl relleno — el picadillo — es una combinación distintivamente precolonial de dulce y salado: frutas secas, especias cálidas y carne cocinados juntos, un estilo llevado a México a través de las tradiciones culinarias moriscas que llegaron con España. La salsa de nuez debe hacerse con nueces frescas peladas; remojarlas en leche elimina la fina piel amarga y suaviza el sabor. El plato se sirve a temperatura ambiente, no caliente.",
+      fr: "Les chiles en nogada sont considérés comme le plat le plus patriotique du Mexique — ses couleurs reflètent le drapeau mexicain : le vert du persil, le blanc de la crème de noix et le rouge des graines de grenade. Le plat est originaire de Puebla, à la fin de la période coloniale, et est traditionnellement préparé en août et septembre, lorsque les noix et les grenades sont en saison simultanément.\n\nLa farce — le picadillo — est une combinaison distinctement précoloniale de sucré-salé : fruits secs, épices chaudes et viande cuits ensemble, un style apporté au Mexique par les traditions culinaires mauresques venues avec l'Espagne. La sauce aux noix doit être préparée à partir de noix fraîches épluchées ; les tremper dans du lait élimine la fine peau amère et adoucit la saveur. Le plat se sert à température ambiante, pas chaud.",
+      de: "Chiles en nogada gilt als das patriotischste Gericht Mexikos — seine Farben spiegeln die mexikanische Flagge wider: Grün vom Petersil, Weiß von der Walnusssauce und Rot von den Granatapfelkernen. Das Gericht stammt aus der Spätkolonialzeit in Puebla und wird traditionell im August und September zubereitet, wenn Walnüsse und Granatäpfel gleichzeitig Saison haben.\n\nDie Füllung — Picadillo — ist eine ausgesprochen vorkoloniale Kombination aus Süß und Herzhaft: getrocknete Früchte, wärmende Gewürze und Fleisch werden zusammen gegart, ein Stil, der durch die maurischen Kochtraditionen, die mit Spanien kamen, nach Mexiko gelangte. Die Walnusssauce muss aus frischen, gehäuteten Walnüssen hergestellt werden; das Einweichen in Milch entfernt die dünne bittere Haut und mildert den Geschmack. Das Gericht wird bei Zimmertemperatur serviert, nicht heiß.",
+      pt: "Os chiles en nogada são considerados o prato mais patriótico do México — as suas cores espelham a bandeira mexicana: verde da salsa, branco do creme de nozes e vermelho das sementes de romã. O prato é originário de Puebla, no final do período colonial, e é preparado tradicionalmente em agosto e setembro, quando as nozes e as romãs estão em época ao mesmo tempo.\n\nO recheio — o picadillo — é uma combinação distintamente pré-colonial de doce e salgado: frutas secas, especiarias quentes e carne cozidos juntos, um estilo trazido para o México pelas tradições culinárias mouriscas que chegaram com Espanha. O molho de nozes deve ser feito com nozes frescas sem pele; mergulhá-las em leite remove a fina pele amarga e suaviza o sabor. O prato é servido à temperatura ambiente, não quente.",
+      ru: "Чили эн ногада считается самым патриотичным блюдом Мексики — его цвета повторяют мексиканский флаг: зелёный от петрушки, белый от орехового крема и красный от зёрен граната. Блюдо происходит из Пуэблы позднего колониального периода и традиционно готовится в августе-сентябре, когда грецкие орехи и гранаты одновременно в сезоне.\n\nНачинка — пикадильо — это выразительная доиспанская комбинация сладкого и солёного: сухофрукты, тёплые специи и мясо, приготовленные вместе, — стиль, привнесённый в Мексику через мавританские кулинарные традиции, пришедшие с Испанией. Ореховый соус нужно готовить только из свежих очищенных грецких орехов; замачивание в молоке снимает тонкую горькую плёнку и смягчает вкус. Блюдо подаётся при комнатной температуре, не горячим.",
+      ar: "تُعدّ شيلي إن نوجادا أكثر أطباق المكسيك وطنيةً — ألوانها تعكس العلم المكسيكي: أخضر من البقدونس، وأبيض من كريمة الجوز، وأحمر من حبوب الرمان. يعود أصل الطبق إلى بويبلا في أواخر الحقبة الاستعمارية، ويُحضَّر تقليدياً في أغسطس وسبتمبر حين يكون الجوز والرمان في موسمهما في آنٍ واحد.\n\nالحشوة — البيكاديلو — مزيج مميز سابق للاستعمار بين الحلو والمالح: فاكهة مجففة وبهارات دافئة ولحم مطبوخة معاً، أسلوب انتقل إلى المكسيك عبر التقاليد الطهوية الأندلسية التي جاءت مع الإسبان. يجب إعداد صلصة الجوز من جوز طازج منزوع القشرة الرقيقة؛ ينقع في الحليب لإزالة تلك القشرة المرّة وتلطيف النكهة. يُقدَّم الطبق بدرجة حرارة الغرفة، لا ساخناً.",
+      zh: "胡桃辣椒酱被视为墨西哥最具爱国色彩的菜肴——其颜色映照了墨西哥国旗：欧芹的绿色、核桃奶油的白色，以及石榴籽的红色。这道菜源于殖民地晚期的普埃布拉，传统上在八月和九月制作，此时核桃与石榴恰好同时上市。\n\n馅料——肉末（picadillo）——是一种独特的前殖民时期甜咸组合：干果、温润香料与肉同烹，这种风格随着西班牙带来的摩尔烹饪传统传入墨西哥。核桃酱必须用新鲜、已去薄皮的核桃制作；将核桃浸泡在牛奶中可去除那层薄薄的苦皮，并使风味更柔和。这道菜在室温下上桌，不是热食。",
+      ja: "チレス・エン・ノガダはメキシコで最も愛国的な料理とされる――その色はメキシコ国旗を映している：パセリの緑、クルミクリームの白、ザクロの種の赤。料理は植民地後期のプエブラに由来し、クルミとザクロが同時に旬を迎える8月と9月に伝統的に作られる。\n\n詰め物のピカディジョは、甘みと塩気が合わさった、はっきりと先スペイン時代の組み合わせだ：乾燥フルーツ、温かみのあるスパイス、そして肉を一緒に調理する――スペインとともにメキシコに持ち込まれたムーア料理の伝統から来ているスタイル。クルミソースは新鮮な皮なしクルミから作る必要があり、牛乳に浸すことで薄い苦い皮が取れて風味が柔らかくなる。料理は室温で供され、熱くない。",
+      tr: "Chiles en nogada, Meksika'nın en yurtsever yemeği olarak kabul edilir — renkleri Meksika bayrağını yansıtır: maydanozun yeşili, ceviz kremasının beyazı ve nar tanelerinin kırmızısı. Yemek, geç sömürge döneminde Puebla'dan gelmekte olup cevizle narın aynı anda mevsimde olduğu Ağustos ve Eylül aylarında geleneksel olarak hazırlanır.\n\nİç harç — picadillo — tatlı ve tuzlunun kendine özgü bir ön-Kolomb bileşimidir: kuru meyveler, ılık baharatlar ve et birlikte pişirilir; bu tarz, Ispanya ile birlikte gelen Endülüs mutfak gelenekleri aracılığıyla Meksika'ya taşındı. Ceviz sosu, taze, kabuğu soyulmuş cevizlerden yapılmalıdır; cevizleri sütte bekletmek ince acı kabuğu kaldırır ve lezzeti yumuşatır. Yemek sıcak değil, oda sıcaklığında servis edilir.",
+      it: "I chiles en nogada sono considerati il piatto più patriottico del Messico — i suoi colori rispecchiano la bandiera messicana: il verde del prezzemolo, il bianco della crema di noci e il rosso dei chicchi di melograno. Il piatto ha origine a Puebla nel tardo periodo coloniale e viene preparato tradizionalmente in agosto e settembre, quando le noci e i melograni sono contemporaneamente in stagione.\n\nIl ripieno — il picadillo — è una combinazione spiccatamente pre-coloniale di dolce e salato: frutta secca, spezie calde e carne cucinati insieme, uno stile portato in Messico attraverso le tradizioni culinarie moresche giunte con la Spagna. La salsa di noci deve essere preparata con noci fresche e sbucciate; ammolle in latte rimuove la sottile buccia amara e ammorbidisce il sapore. Il piatto si serve a temperatura ambiente, non caldo.",
+      ko: "칠레스 엔 노가다는 멕시코에서 가장 애국적인 요리로 여겨집니다 — 그 색은 멕시코 국기를 반영합니다: 파슬리의 초록색, 호두 크림의 흰색, 그리고 석류 씨앗의 빨간색. 이 요리는 식민지 후기 푸에블라에서 유래했으며, 호두와 석류가 동시에 제철인 8월과 9월에 전통적으로 준비됩니다.\n\n속재료인 피카디요는 달콤함과 짭짤함이 독특하게 결합된 식민지 이전의 조합입니다: 말린 과일, 따뜻한 향신료, 고기를 함께 요리하는 방식으로, 스페인과 함께 들어온 무어 요리 전통을 통해 멕시코에 전해졌습니다. 호두 소스는 신선하게 껍질을 벗긴 호두로 만들어야 합니다; 우유에 담그면 얇은 쓴 껍질이 제거되고 맛이 부드러워집니다. 이 요리는 뜨겁지 않고 실온에서 제공됩니다.",
+      hi: "चिलेस एन नोगाडा को मेक्सिको का सबसे देशभक्तिपूर्ण व्यंजन माना जाता है — इसके रंग मेक्सिकन ध्वज को दर्शाते हैं: अजमोद की हरियाली, अखरोट की क्रीम की सफेदी और अनार के दानों की लालिमा। यह व्यंजन उपनिवेशी काल के अंत में पुएब्ला से उत्पन्न हुआ और परंपरागत रूप से अगस्त और सितंबर में तैयार किया जाता है, जब अखरोट और अनार दोनों एक साथ मौसम में होते हैं।\n\nभरावन — पिकाडिलो — मीठे और नमकीन का एक विशिष्ट पूर्व-औपनिवेशिक संयोजन है: सूखे फल, गर्म मसाले और मांस एक साथ पकाए जाते हैं, यह शैली स्पेन के साथ आई मूर पाक परंपराओं के माध्यम से मेक्सिको में आई। अखरोट की चटनी ताजे, छिले हुए अखरोट से बनाई जानी चाहिए; दूध में भिगोने से पतली कड़वी परत हट जाती है और स्वाद मृदु हो जाता है। यह व्यंजन कमरे के तापमान पर परोसा जाता है, गर्म नहीं।"
     }
   },
   {
