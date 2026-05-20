@@ -67,7 +67,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 45 | Salmon Soup | Tier A Complete | — | Full rewrite: 11 EN ingredients with exact quantities; 10-step EN howIsMade with timings and doneness cues; all 14 locales including hi |
 | 46 | Ghormeh Sabzi | Tier A Complete | — | Full rewrite: 12 EN ingredients with exact quantities; multi-step EN howIsMade with timings (3–4 min browning, 8 min onion, 15–20 min herb fry, 2–2.5 hr simmer); all 14 locales including hi |
 | 47 | Bacalhau à Brás | Partial Fix Only | `8ec94c6f` | Struct + name.ko + originText fr/pt/ru/it/ko fixed; no stub note |
-| 48 | Adobo | Stub / Needs Full Rewrite | `8487adf0` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 48 | Adobo | Tier A Complete | — | Full rewrite: 8 EN ingredients with exact quantities; multi-step EN howIsMade with timings (30 min marinade, 30–45 min simmer, 15–20 min reduce, 3–4 min crisping); all 14 locales including hi |
 | 49 | Jerk Chicken | Partial Fix Only | `9401ae5e` | Struct + origin + name + originText fixed; no stub note |
 | 50 | Doro Wat | Stub / Needs Full Rewrite | `a0a1b5a5` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
 | 51 | Kibbeh | Stub / Needs Full Rewrite | `22730291` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
