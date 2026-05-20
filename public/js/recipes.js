@@ -12156,7 +12156,8 @@ export const recipes = [
       ja: "デンマーク",
       tr: "Danimarka",
       it: "Danimarca",
-      ko: "덴마크"
+      ko: "덴마크",
+      hi: "डेनमार्क"
     },
     name: {
       ro: "Smørrebrød",
@@ -12171,7 +12172,8 @@ export const recipes = [
       ja: "スモーブロー",
       tr: "Smørrebrød",
       it: "Smørrebrød",
-      ko: "스뫼레브뢰드"
+      ko: "스뫼레브뢰드",
+      hi: "स्मोरेब्रोड"
     },
     category: {
       ro: "Mic dejun",
@@ -12186,7 +12188,8 @@ export const recipes = [
       ja: "朝食",
       tr: "Kahvaltı",
       it: "Colazione",
-      ko: "아침"
+      ko: "아침",
+      hi: "नाश्ता"
     },
     ingredients: {
       ro: ["8 felii de pâine daneză de secară (rugbrød), circa 400 g", "100 g unt nesărat, înmuiat", "400 g hering murat (8 fileuri), scurs", "4 ouă fierte tari (10 minute), decojite și feliate în rondele", "1 ceapă roșie mică (circa 80 g), feliată subțire în inele", "4 ridichi, feliate subțire în rondele", "2 linguri capere, scurse", "4 linguri smântână sau crème fraîche", "1 linguriță muștar Dijon", "1 legătură mică de mărar proaspăt (circa 15 g)", "1/2 linguriță sare fină"],
@@ -12221,19 +12224,20 @@ export const recipes = [
       hi: "अंडे उबालें: उन्हें उबलते पानी में 10 मिनट पकाएं, फिर 5 मिनट के लिए ठंडे पानी में रखें; छीलें और गोल स्लाइस करें। एक छोटे कटोरे में खट्टी क्रीम, डिजोन मस्टर्ड और नमक की एक चुटकी मिलाएं। प्रत्येक राई ब्रेड स्लाइस को किनारों तक नरम मक्खन से उदारतापूर्वक फैलाएं — प्रति स्लाइस लगभग 1 बड़ा चम्मच। प्रत्येक मक्खन लगी स्लाइस पर 1-2 अचारी हेरिंग फ़िलेट्स रखें, उन्हें सतह पर स्वाभाविक रूप से मुड़ने दें। हेरिंग के ऊपर मस्टर्ड क्रीम की एक छोटी चम्मच डालें, फिर बगल में 2-3 अंडे के गोल रखें। ऊपर से लाल प्याज के छल्ले, मूली के स्लाइस और केपर्स छिड़कें। ताजे डिल की टहनियों से सजाएं और ठंडी बियर या अकुआविट के साथ तुरंत परोसें।"
     },
     originText: {
-      ro: "Smørrebrød este o rețetă tradițională din Danemarca.",
-      en: "Smørrebrød is a traditional recipe from Denmark.",
-      es: "Smørrebrød es una receta tradicional de Dinamarca.",
-      fr: "Smørrebrød est une recette traditionnelle du Danemark.",
-      de: "Smørrebrød ist ein traditionelles Rezept aus Dänemark.",
-      pt: "Smørrebrød é uma receita tradicional da Dinamarca.",
-      ru: "Смёрребрёд — традиционный рецепт из Дании.",
-      ar: "سموربرود هي وصفة تقليدية من الدنمارك.",
-      zh: "丹麦开放式三明治 是来自丹麦的传统食谱。",
-      ja: "スモーブロー はデンマークの伝統的なレシピです。",
-      tr: "Smørrebrød Danimarka kökenli geleneksel bir tariftir.",
-      it: "Smørrebrød è una ricetta tradizionale della Danimarca.",
-      ko: "스뫼레브뢰드는 덴마크의 전통 요리입니다."
+      ro: "Smørrebrød — literal «pâine cu unt» — este piatra de temelie a prânzului danez. Tartine deschise pe rugbrød dens și întunecat, acoperite cu hering murat, pește afumat, mezeluri sau brânzeturi, se mănâncă cu cuțitul și furculița — niciodată pliate sau ținute în mână. Tradiția datează din secolul al XIX-lea, când muncitorii danezi duceau pâine și garnituri la serviciu.\n\nRugbrød-ul este elementul esențial. Pâine de secară cu maia, densă și ușor acrișoară, coaptă în formă acoperită, oferă baza fermă care face structura posibilă. Untul se întinde generos până la margini, creând o barieră de umiditate între pâine și garnituri. Decorațiunile — mărar, capere, ceapă, ridichi — sunt aranjate cu grijă, nu aruncate.",
+      en: "Smørrebrød — literally 'butter bread' — is the foundation of the Danish lunch. Open-faced sandwiches on dense, dark rugbrød rye bread, topped with pickled herring, smoked fish, cold meats, or cheese, they are eaten with a knife and fork — never folded or held in the hand. The tradition dates to the nineteenth century, when Danish labourers carried bread and toppings to work.\n\nThe rugbrød is the essential element. Dense, slightly sour sourdough rye baked in a lidded tin, it provides the firm base that makes the structure possible. Butter is spread generously to the edges first, creating a moisture barrier between bread and toppings. The garnishes — dill, capers, onion, radish — are arranged deliberately, not scattered.",
+      es: "Smørrebrød — literalmente 'pan con mantequilla' — es la base del almuerzo danés. Sándwiches abiertos sobre rugbrød densa y oscura, cubiertos con arenque en escabeche, pescado ahumado, fiambres o queso, se comen con cuchillo y tenedor — nunca doblados ni sostenidos con la mano. La tradición data del siglo XIX, cuando los trabajadores daneses llevaban pan y guarniciones al trabajo.\n\nEl rugbrød es el elemento esencial. Pan de centeno de masa madre, denso y ligeramente ácido, horneado en molde tapado, proporciona la base firme que hace posible la estructura. La mantequilla se extiende generosamente hasta los bordes, creando una barrera de humedad entre el pan y los ingredientes. Las guarniciones — eneldo, alcaparras, cebolla, rábano — se colocan con precisión, no se esparcen.",
+      fr: "Smørrebrød — littéralement 'pain beurré' — est le fondement du déjeuner danois. Tartines ouvertes sur du rugbrød dense et sombre, garnies de hareng mariné, de poisson fumé, de charcuteries ou de fromage, elles se mangent avec un couteau et une fourchette — jamais pliées ni tenues en main. La tradition remonte au XIXe siècle, quand les ouvriers danois portaient pain et garnitures au travail.\n\nLe rugbrød est l'élément essentiel. Pain de seigle au levain, dense et légèrement acide, cuit dans un moule couvert, il offre la base ferme qui rend la structure possible. Le beurre est étalé généreusement jusqu'aux bords, créant une barrière contre l'humidité entre le pain et les garnitures. Les accompagnements — aneth, câpres, oignon, radis — sont disposés avec soin, non éparpillés.",
+      de: "Smørrebrød — wörtlich 'Butterbrot' — ist die Grundlage des dänischen Mittagessens. Offene Schnitten auf dichtem, dunklem Rugbrød, belegt mit Matjeshering, Räucherfisch, Aufschnitt oder Käse, werden mit Messer und Gabel gegessen — niemals gefaltet oder in der Hand gehalten. Die Tradition stammt aus dem 19. Jahrhundert, als dänische Arbeiter Brot und Belag zur Arbeit mitbrachten.\n\nDas Rugbrød ist das wesentliche Element. Dichtes, leicht saures Sauerteig-Roggenbrot, im Deckelkasten gebacken, bildet die feste Grundlage, die die Struktur ermöglicht. Die Butter wird großzügig bis zum Rand gestrichen und schafft eine Feuchtigkeitsbarriere zwischen Brot und Belag. Die Garnitur — Dill, Kapern, Zwiebeln, Radieschen — wird sorgfältig angerichtet, nicht darüber gestreut.",
+      pt: "Smørrebrød — literalmente 'pão com manteiga' — é a base do almoço dinamarquês. Sanduíches abertos sobre rugbrød denso e escuro, cobertos com arenque marinado, peixe fumado, frios ou queijo, comem-se com faca e garfo — nunca dobrados ou segurados na mão. A tradição remonta ao século XIX, quando os trabalhadores dinamarqueses levavam pão e guarnições para o trabalho.\n\nO rugbrød é o elemento essencial. Pão de centeio de fermentação natural, denso e ligeiramente ácido, cozido em forma tapada, oferece a base firme que torna a estrutura possível. A manteiga é barrada generosamente até às bordas, criando uma barreira de humidade entre o pão e os ingredientes. As guarnições — aneto, alcaparras, cebola, rabanete — são dispostas com cuidado, não espalhadas.",
+      ru: "Смёрребрёд — буквально 'хлеб с маслом' — является основой датского обеда. Открытые бутерброды на плотном тёмном ругброде с маринованной сельдью, копчёной рыбой, мясными деликатесами или сыром едят с ножом и вилкой — никогда не сворачивают и не держат в руках. Традиция восходит к XIX веку, когда датские рабочие брали хлеб и начинку на работу.\n\nРугброд — главный элемент. Плотный, слегка кисловатый хлеб из ржаной закваски, выпеченный в закрытой форме, обеспечивает твёрдую основу, делающую конструкцию возможной. Масло щедро намазывают до краёв, создавая влагозащитный барьер между хлебом и начинкой. Гарниры — укроп, каперсы, лук, редиска — укладываются аккуратно, а не разбрасываются.",
+      ar: "سموربرود — وتعني حرفياً «خبز الزبدة» — هو أساس الغداء الدانماركي. ساندويتشات مفتوحة على خبز الجاودار الداكن (روغبرود)، تُغطَّى بالرنجة المخللة أو السمك المدخن أو اللحوم الباردة أو الجبن، وتُؤكل بالسكين والشوكة — لا تُطوى ولا تُمسك باليد. يعود هذا التقليد إلى القرن التاسع عشر حين كان العمال الدانماركيون يحملون الخبز والمقبلات إلى العمل.\n\nخبز الروغبرود هو العنصر الأساسي. خبز جاودار بالعجين المخمر، كثيف وحامض قليلاً، يُخبز في قالب مغطى، ويوفر القاعدة الصلبة التي تجعل البناء ممكناً. تُدهن الزبدة بسخاء حتى الحواف لتشكل حاجزاً ضد الرطوبة بين الخبز والمقبلات. تُرتَّب المكملات — الشبت والكبر والبصل والفجل — بعناية لا تُرمى عشوائياً.",
+      zh: "丹麦开放式三明治（Smørrebrød，字面意为「黄油面包」）是丹麦午餐的基础。以浓密深色的黑麦粗面包（rugbrød）为底，铺上腌鲱鱼、烟熏鱼、冷肉或奶酪，用刀叉食用——从不折叠，也不用手拿。这一传统可追溯至19世纪，当时丹麦工人将面包和配料带去上班。\n\n黑麦粗面包是核心所在。这种用黑麦酸面团制成的面包紧实、略带酸味，在加盖模具中烘烤，提供了撑起整体结构的坚实底座。黄油先涂满至边缘，在面包与潮湿配料之间形成防潮屏障。莳萝、刺山柑、洋葱、萝卜等装饰食材需精心摆放，而非随意撒上。",
+      ja: "スモーブロー（Smørrebrød）は文字通り「バターパン」を意味し、デンマークのランチの基本です。濃くて黒いライ麦パン（ルブロー）を土台に、マリネしたニシン、スモークフィッシュ、コールドミート、チーズなどをのせ、ナイフとフォークで食べます — 折り畳んだり手で持ったりはしません。この伝統は19世紀に遡り、デンマークの労働者がパンとトッピングを職場に持参したことが始まりです。\n\nルブローは欠かせない要素です。ライ麦のサワードウから作られた密で少し酸味のある食パンは、蓋付きの型で焼かれ、構造を支える硬い土台を提供します。バターは端まで惜しみなく塗られ、パンとトッピングの間に湿気を防ぐバリアを作ります。ディル、ケイパー、玉ねぎ、ラディッシュなどの添え物は丁寧に並べられ、散らされることはありません。",
+      tr: "Smørrebrød — kelime anlamıyla 'tereyağlı ekmek' — Danimarkalı öğle yemeğinin temelidir. Yoğun ve koyu rugbrød üzerinde açık yüzlü sandviçler; turşu ringa balığı, tütsülenmiş balık, soğuk etler veya peynirle kaplanır ve bıçak-çatal ile yenir — asla katlanmaz ya da elle tutulmaz. Gelenek 19. yüzyıla dayanır; o dönemde Danimarkalı işçiler ekmek ve malzemeleri işe taşıdı.\n\nRugbrød temel unsurdur. Ekşi hamur çavdar ekmeği, yoğun ve hafif ekşi, kapaklı kalıpta fırınlanır; yapıyı mümkün kılan sağlam tabanı sağlar. Tereyağı kenarlara kadar cömertçe yayılır ve ekmek ile ıslak malzemeler arasında nem bariyeri oluşturur. Dereotu, kapari, soğan, turp gibi garnitürler özenle dizilir, rastgele serpilmez.",
+      it: "Smørrebrød — letteralmente 'pane al burro' — è il fondamento del pranzo danese. Tramezzini aperti su rugbrød denso e scuro, guarniti con aringa marinata, pesce affumicato, salumi o formaggio, si mangiano con coltello e forchetta — mai piegati né tenuti in mano. La tradizione risale al XIX secolo, quando gli operai danesi portavano pane e guarnizioni al lavoro.\n\nIl rugbrød è l'elemento essenziale. Pane di segale a lievitazione naturale, denso e leggermente acido, cotto in uno stampo coperto, fornisce la base solida che rende possibile la struttura. Il burro si spalma generosamente fino ai bordi, creando una barriera all'umidità tra il pane e i condimenti. Le guarnizioni — aneto, capperi, cipolla, ravanello — vengono disposte con cura, non cosparse.",
+      ko: "스뫼레브뢰드(Smørrebrød) — 문자 그대로 '버터 바른 빵' — 는 덴마크 점심 식사의 기본입니다. 짙고 촘촘한 호밀빵(rugbrød) 위에 피클 청어, 훈제 생선, 차가운 육류, 또는 치즈를 올려 칼과 포크로 먹습니다 — 절대 접거나 손으로 잡지 않습니다. 이 전통은 19세기로 거슬러 올라가며, 덴마크 노동자들이 빵과 토핑을 일터로 가져간 데서 비롯되었습니다.\n\n루브뢰드는 핵심 재료입니다. 사워도우 호밀로 만든 촘촘하고 약간 시큼한 빵으로, 뚜껑 있는 틀에 구워 구조를 가능하게 하는 단단한 기반을 제공합니다. 버터는 끝까지 넉넉하게 발라 빵과 촉촉한 토핑 사이에 습기 차단막을 형성합니다. 딜, 케이퍼, 양파, 무 등의 가니쉬는 정성껏 배치하며, 흩뿌리지 않습니다.",
+      hi: "स्मोरेब्रोड (Smørrebrød) — शाब्दिक अर्थ 'मक्खन लगी ब्रेड' — डेनिश दोपहर के भोजन की नींव है। घने, गहरे रगब्रोड राई ब्रेड पर खुले मुंह के सैंडविच, अचारी हेरिंग, स्मोक्ड मछली, ठंडे मांस या चीज के साथ, चाकू और कांटे से खाए जाते हैं — कभी मोड़कर या हाथ में लेकर नहीं। यह परंपरा उन्नीसवीं सदी से चली आ रही है जब डेनिश मजदूर ब्रेड और टॉपिंग काम पर ले जाते थे।\n\nरगब्रोड (rugbrød) आवश्यक तत्व है। सॉरडो राई से बना घना, हल्का खट्टा ब्रेड, ढके हुए टिन में पकाया जाता है और संरचना को संभव बनाने वाला दृढ़ आधार प्रदान करता है। मक्खन पहले किनारों तक उदारतापूर्वक फैलाया जाता है, ब्रेड और नम टॉपिंग के बीच नमी की बाधा बनाता है। गार्निश — डिल, केपर्स, प्याज, मूली — सोच-समझकर सजाए जाते हैं, बिखेरे नहीं।"
     }
   },
   {
