@@ -92,7 +92,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 70 | Pupusa | Tier A Complete | `edcc4a7c` | Full EN rewrite: 14 ingredients with exact quantities (masa harina 400g, refried beans 200g, mozzarella 200g, curtido: cabbage 300g, carrot 80g, onion 60g, vinegar, water, salt, sugar, oregano), 8-step howIsMade with timings (30 min curtido pickle, 3-4 min per side griddle) and doneness cues (dark golden-brown, dry not tacky). All 14 locales retranslated including hi. |
 | — | (id 71 absent) | — | — | No recipe with id 71 in file |
 | 72 | Amok | Tier A Complete | `1adeb0de` | Full EN rewrite: 14 ingredients with exact quantities, 7-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
-| 73 | Momo | Stub / Needs Full Rewrite | `f63ff84f` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 73 | Momo | Tier A Complete | `f63ff84f` | Full EN rewrite: 14 ingredients with exact quantities, 8-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
 | 74 | Encebollado | Stub / Needs Full Rewrite | `831fb0e0` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
 | 75 | Harira | Stub / Needs Full Rewrite | `226a3dbe` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 76 | Lobio | Stub / Needs Full Rewrite | `e7265c7a` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
