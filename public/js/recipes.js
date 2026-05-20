@@ -11442,7 +11442,8 @@ export const recipes = [
       ja: "アルジェリア",
       tr: "Cezayir",
       it: "Algeria",
-      ko: "알제리"
+      ko: "알제리",
+      hi: "अल्जीरिया"
     },
     name: {
       ro: "Chakhchoukha",
@@ -11450,13 +11451,15 @@ export const recipes = [
       es: "Chakhchoukha",
       fr: "Chakhchoukha",
       de: "Chakhchoukha",
+      pt: "Chakhchoukha",
       ru: "Шакшука",
       ar: "شخشوخة",
       zh: "阿尔及利亚炖肉饼",
       ja: "シャクシュカ",
       tr: "Chakhchoukha",
       it: "Chakhchoukha",
-      ko: "차크추카"
+      ko: "차크추카",
+      hi: "चखचौखा"
     },
     category: {
       ro: "Prânz",
@@ -11464,13 +11467,15 @@ export const recipes = [
       es: "Almuerzo",
       fr: "Déjeuner",
       de: "Mittagessen",
+      pt: "Almoço",
       ru: "Обед",
       ar: "غداء",
       zh: "午餐",
       ja: "ランチ",
       tr: "Öğle yemeği",
       it: "Pranzo",
-      ko: "점심"
+      ko: "점심",
+      hi: "दोपहर का खाना"
     },
     ingredients: {
       ro: ["600 g spata de miel cu os sau gat, taiata bucati de 4 cm", "400 g naut fiert (1 cutie 400 g), scurs si clatit", "4 rosii medii (circa 400 g), taiate grosier", "2 cepe medii (circa 300 g), tocate marunt", "4 catei de usturoi, tocati marunt", "2 linguri ulei vegetal", "1 lingurita chimen macinat", "1 lingurita coriandru macinat", "1 lingurita boia dulce", "1/2 lingurita scortisoara + 1/2 lingurita piper negru", "1 lingurita sare fina", "600 ml apa sau supa de miel", "4 foi mari de rougag (lipie algeriana) sau 4 tortilla mari, rupte bucati de 5 cm", "30 g coriandru proaspat si patrunjel plat, tocat grosier (pentru decor)"],
@@ -11505,19 +11510,20 @@ export const recipes = [
       hi: "एक बड़े भारी बर्तन में तेज़ आंच पर तेल गर्म करें, मेमने के टुकड़ों को बैचों में डालें और 4-5 मिनट सभी तरफ से भूरा होने तक सेकें। प्याज और लहसुन डालें और 5 मिनट नरम और सुनहरे होने तक पकाएं। जीरा, धनिया, पापरिका, दालचीनी, नमक और काली मिर्च मिलाएं और 1 मिनट भूनें जब तक मसालों की खुशबू न आ जाए। टमाटर डालें और बीच-बीच में हिलाते हुए 8-10 मिनट पकाएं जब तक गाढ़ी सॉस न बन जाए। पानी या शोरबा डालें, छोले मिलाएं और उबाल लाएं; आंच धीमी करें, ढकें और 50-60 मिनट उबालें जब तक मेमना पूरी तरह नरम न हो जाए और हड्डी से अलग न होने लगे। एक बड़े सर्विंग डिश की तली में फटी हुई रोटी के टुकड़े बिछाएं और ऊपर से गर्म मांस और सॉस उदारता से डालें, रोटी को हल्के से दबाएं ताकि तरल सोख ले और नरम हो जाए। ताज़े धनिया और अजमोद से सजाएं और तुरंत परोसें।"
     },
     originText: {
-      ro: "Chakhchoukha este o rețetă tradițională din Algeria.",
-      en: "Chakhchoukha is a traditional recipe from Algeria.",
-      es: "Chakhchoukha es una receta tradicional de Argelia.",
-      fr: "Chakhchoukha est une recette traditionnelle d'Algérie.",
-      de: "Chakhchoukha ist ein traditionelles Rezept aus Algerien.",
-      pt: "Chakhchoukha é uma receita tradicional da Argélia.",
-      ru: "Шакшука — традиционный рецепт из Алжира.",
-      ar: "شخشوخة هي وصفة تقليدية من الجزائر.",
-      zh: "阿尔及利亚炖肉饼 是来自阿尔及利亚的传统食谱。",
-      ja: "シャクシュカ はアルジェリアの伝統的なレシピです。",
-      tr: "Chakhchoukha Cezayir kökenli geleneksel bir tariftir.",
-      it: "Chakhchoukha è una ricetta tradizionale dell'Algeria.",
-      ko: "차크추카는 알제리의 전통 요리입니다."
+      ro: "Chakhchoukha este un preparat tradițional din podișul algerian, realizat prin ruperea pâinii plate subțiri — rougag — și turnarea deasupra unei tocănițe cu miel și năut gătite lent. Cuvântul chakhchoukha se referă la actul de rupere: pâinea este întotdeauna ruptă cu mâna, niciodată tăiată. Preparatul este strâns legat de sărbătorile comunitare — nunți, recolte și întâlniri de familie — unde este preparat în cantități mari și mâncat dintr-un platou comun.\n\nRougag absoarbe tocănița fără să se dizolve — devine moale și plină de arome, dar își păstrează forma. Breza îndelungată este esențială: mielul are nevoie de cel puțin cincizeci de minute pentru ca țesutul conjunctiv să se descompună în sos. Năutul adaugă consistență, iar scorțișoara, chimenul și roșia dau bulionului adâncimea caracteristică, caldă și ușor dulce.",
+      en: "Chakhchoukha is a traditional dish from the Algerian highlands, made by tearing thin flatbread — rougag — into pieces and pouring a slow-cooked lamb and chickpea stew over the top. The word chakhchoukha refers to the act of tearing: the bread is always hand-torn, never cut. The dish is closely tied to communal celebration — weddings, harvests, and family gatherings — where it is prepared in large quantities and eaten from a shared platter.\n\nThe rougag absorbs the stew without dissolving — it becomes tender and flavour-soaked but holds its form. The long braise is what makes the dish: the lamb needs at least fifty minutes for the connective tissue to break down into the sauce. The chickpeas add body, and the cinnamon, cumin, and tomato give the broth its characteristic warm, slightly sweet depth.",
+      es: "Chakhchoukha es un plato tradicional de las tierras altas argelinas, elaborado rompiendo con las manos un pan plano fino — rougag — y vertiendo encima un guiso de cordero y garbanzos cocido lentamente. La palabra chakhchoukha se refiere al acto de romper: el pan siempre se rompe a mano, nunca se corta. El plato está íntimamente ligado a las celebraciones comunitarias — bodas, cosechas y reuniones familiares — donde se prepara en grandes cantidades y se come de una bandeja compartida.\n\nEl rougag absorbe el guiso sin disolverse — se vuelve tierno e impregnado de sabor, pero mantiene su forma. El braseado prolongado es lo que hace este plato: el cordero necesita al menos cincuenta minutos para que el tejido conjuntivo se desintegre en la salsa. Los garbanzos aportan cuerpo, y la canela, el comino y el tomate dan al caldo su profundidad característica, cálida y ligeramente dulce.",
+      fr: "La chakhchoukha est un plat traditionnel des hauts plateaux algériens, réalisé en déchirant un pain plat fin — le rougag — et en versant par-dessus un ragoût d'agneau et de pois chiches mijoté. Le mot chakhchoukha désigne l'acte de déchirer : le pain est toujours déchiré à la main, jamais coupé. Le plat est intimement lié aux célébrations communautaires — mariages, récoltes et réunions familiales — où il est préparé en grandes quantités et consommé dans un plat commun.\n\nLe rougag absorbe le ragoût sans se dissoudre — il devient tendre et gorgé de saveurs tout en gardant sa forme. Le braisage prolongé est la clé : l'agneau a besoin d'au moins cinquante minutes pour que le tissu conjonctif se décompose dans la sauce. Les pois chiches donnent du corps, tandis que la cannelle, le cumin et la tomate confèrent au bouillon sa profondeur caractéristique, chaude et légèrement sucrée.",
+      de: "Chakhchoukha ist ein traditionelles Gericht aus dem algerischen Hochland, bei dem dünnes Fladenbrot — Rougag — zerrissen und mit einem langsam gegarten Lamm-Kichererbsen-Eintopf übergossen wird. Das Wort Chakhchoukha bezeichnet den Akt des Zerreißens: Das Brot wird stets mit der Hand gerissen, nie geschnitten. Das Gericht ist eng mit gesellschaftlichen Feiern verbunden — Hochzeiten, Erntefesten und Familientreffen — wo es in großen Mengen zubereitet und aus einem gemeinsamen Teller gegessen wird.\n\nDas Rougag saugt den Eintopf auf, ohne sich aufzulösen — es wird zart und geschmacksgetränkt, behält aber seine Form. Das lange Schmoren ist entscheidend: Das Lamm braucht mindestens fünfzig Minuten, damit das Bindegewebe in die Sauce übergeht. Die Kichererbsen geben Substanz, und Zimt, Kreuzkümmel und Tomate verleihen der Brühe ihre charakteristische warme, leicht süße Tiefe.",
+      pt: "A chakhchoukha é um prato tradicional dos planaltos argelinos, preparado rasgando um pão plano fino — rougag — à mão e deitando por cima um guisado de borrego e grão-de-bico cozido lentamente. A palavra chakhchoukha refere-se ao ato de rasgar: o pão é sempre rasgado à mão, nunca cortado. O prato está intimamente ligado às celebrações comunitárias — casamentos, colheitas e reuniões de família — onde é preparado em grandes quantidades e comido de uma travessa partilhada.\n\nO rougag absorve o guisado sem se dissolver — fica tenro e cheio de sabor, mas mantém a sua forma. O braseado prolongado é o que faz este prato: o borrego precisa de pelo menos cinquenta minutos para que o tecido conjuntivo se dissolva no molho. O grão-de-bico dá corpo, e a canela, o cominho e o tomate conferem ao caldo a sua profundidade característica, quente e ligeiramente doce.",
+      ru: "Чакчука — традиционное блюдо алжирского нагорья, приготавливаемое путём разрывания тонкой лепёшки — ругаг — и заливки медленно тушёным рагу из баранины и нута. Само слово «чакчука» означает «рвать»: хлеб всегда рвут руками, никогда не режут. Блюдо тесно связано с народными торжествами — свадьбами, праздниками урожая и семейными встречами — где его готовят в больших количествах и едят из общего блюда.\n\nРугаг впитывает рагу, не растворяясь — становится мягким и пропитанным ароматами, но сохраняет форму. Долгое тушение — главный элемент блюда: барановине нужно не менее пятидесяти минут, чтобы соединительная ткань растворилась в соусе. Нут придаёт густоту, а корица, тмин и томат дают бульону характерную тёплую, слегка сладковатую глубину.",
+      ar: "الشخشوخة طبق تقليدي من هضاب الجزائر، يُعدّ بتقطيع خبز رقيق — الرقاق — يدوياً وصبّ مرق اللحم والحمص المطهوّ ببطء فوقه. تشير كلمة شخشوخة إلى فعل التقطيع: يُشخشَخ الخبز دائماً باليد، ولا يُقطع بالسكين. يرتبط الطبق ارتباطاً وثيقاً بالمناسبات الجماعية — الأعراس والحصاد واللمّات العائلية — حيث يُحضَّر بكميات كبيرة ويُؤكل من إناء مشترك.\n\nيمتص الرقاق المرق دون أن يذوب — يصبح طرياً ومشبعاً بالنكهات مع الحفاظ على شكله. التقطير البطيء هو ما يصنع هذا الطبق: يحتاج لحم الخروف إلى خمسين دقيقة على الأقل حتى ينحل الكولاجين في الصلصة. يُضفي الحمص كثافة، فيما تمنح القرفة والكمون والطماطم المرقَ عمقه المميز الدافئ والخفيف الحلاوة.",
+      zh: "查赫舒哈是阿尔及利亚高原的传统菜肴，做法是将薄薄的鲁加格饼徒手撕碎，再浇上慢炖的羊肉鹰嘴豆浓汤。「查赫舒哈」一词指的正是撕的动作：饼永远用手撕开，从不用刀切。这道菜与集体庆典密切相关——婚礼、丰收节和家族聚会——通常大量制作，众人共享一盘。\n\n鲁加格饼吸收浓汤而不溶化——变得柔软、充满风味，但仍保持形态。长时间炖煮是关键：羊肉需要至少五十分钟，让结缔组织充分溶入酱汁。鹰嘴豆增加浓度，肉桂、孜然和番茄赋予汤汁特有的温暖、略带甜意的层次感。",
+      ja: "チャクチュカはアルジェリアの高原地帯の伝統料理で、薄いフラットブレッド — ルガグ — を手でちぎってのせ、ゆっくり煮込んだラムとひよこ豆のシチューをたっぷりかけていただきます。チャクチュカという言葉はちぎる行為を指しており、パンは必ず手でちぎり、包丁では切りません。この料理は結婚式、収穫祭、家族の集まりといった祝いの場と深く結びついており、大量に作って大皿から共に食べます。\n\nルガグはシチューを吸ってもとけることなく、柔らかくなじみながら形を保ちます。長時間のブレイズが要です：ラムは結合組織がソースに溶け込むまで少なくとも五十分かかります。ひよこ豆がボディを加え、シナモン、クミン、トマトがスープに温かみのある、ほのかな甘みを伴う深みを与えます。",
+      tr: "Chakhchoukha, Cezayir yaylalarının geleneksel bir yemeğidir; ince yassı ekmek — rougag — elle parçalanarak üzerine yavaş pişirilmiş kuzu eti ve nohut güvecinden dökülür. Chakhchoukha kelimesi yırtma eylemini anlatır: ekmek her zaman elle yırtılır, hiç kesilmez. Yemek toplumsal kutlamalarla — düğünler, hasatlar ve aile buluşmaları — iç içedir; büyük miktarlarda hazırlanır ve ortak büyük bir tabaktan yenir.\n\nRougag, güveçi yutarken erimez — yumuşar ve lezzete doyar, ama şeklini korur. Uzun süre bastırma pişirme yemeği yapan şeydir: kuzunun bağ dokusu sosu eriyene dek en az elli dakikaya ihtiyaç duyar. Nohut dolgunluk katar; tarçın, kimyon ve domates ise suya özgü sıcak, hafif tatlı derinliğini verir.",
+      it: "La chakhchoukha è un piatto tradizionale degli altopiani algerini, preparato strappando un pane piatto sottile — il rougag — e versandoci sopra uno stufato di agnello e ceci cotto a lungo. La parola chakhchoukha indica l'atto dello strappo: il pane viene sempre strappato a mano, mai tagliato. Il piatto è intimamente legato alle celebrazioni collettive — matrimoni, raccolti e raduni familiari — dove viene preparato in grande quantità e consumato da un vassoio condiviso.\n\nIl rougag assorbe lo stufato senza dissolversi — diventa tenero e impregnato di sapore, mantenendo però la sua forma. La cottura prolungata è fondamentale: l'agnello ha bisogno di almeno cinquanta minuti perché il tessuto connettivo si sciolga nel sugo. I ceci danno corpo, mentre cannella, cumino e pomodoro conferiscono al brodo la sua caratteristica profondità calda e leggermente dolce.",
+      ko: "차크추카는 알제리 고원의 전통 음식으로, 얇은 납작빵 — 루가그 — 을 손으로 찢어 그 위에 천천히 조린 양고기와 병아리콩 스튜를 부어 만듭니다. 차크추카라는 단어는 찢는 행위를 뜻하며, 빵은 반드시 손으로 찢고 칼로 자르지 않습니다. 이 요리는 결혼식, 추수, 가족 모임 같은 공동 축제와 깊이 연결되어 있어, 대량으로 만들어 큰 쟁반에서 함께 먹습니다.\n\n루가그는 스튜를 흡수하면서도 녹지 않아 — 부드럽고 풍미가 배어들면서 형태를 유지합니다. 오랜 브레이징이 이 요리의 핵심입니다: 양고기는 결합 조직이 소스에 녹아들기까지 최소 오십 분이 필요합니다. 병아리콩이 진한 맛을 더하고, 계피, 커민, 토마토는 국물에 특유의 따뜻하고 은은하게 달콤한 깊이를 줍니다.",
+      hi: "चखचौखा अल्जीरिया के पठार का पारंपरिक व्यंजन है, जो पतली रोटी — रुगाग — को हाथ से फाड़कर उसके ऊपर धीमी आंच पर पकाया गया मेमने और छोले का स्टू डालकर बनाया जाता है। 'चखचौखा' शब्द फाड़ने की क्रिया को संदर्भित करता है: रोटी हमेशा हाथ से फाड़ी जाती है, कभी चाकू से नहीं काटी जाती। यह व्यंजन सामूहिक उत्सवों — शादियों, फसल उत्सवों और पारिवारिक समारोहों — से गहरे जुड़ा है, जहाँ इसे बड़ी मात्रा में बनाकर साझा थाली में खाया जाता है।\n\nरुगाग स्टू को सोखता है लेकिन घुलता नहीं — वह नरम और स्वादपूर्ण हो जाता है पर अपना आकार बनाए रखता है। लंबी धीमी पकाई ही इस व्यंजन को बनाती है: मेमने को कम से कम पचास मिनट चाहिए ताकि संयोजी ऊतक सॉस में घुल सके। छोले गाढ़ापन देते हैं, और दालचीनी, जीरा और टमाटर शोरबे को उसकी विशिष्ट गर्म, हल्की मिठास वाली गहराई देते हैं।"
     }
   },
   {
