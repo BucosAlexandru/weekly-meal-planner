@@ -10626,7 +10626,8 @@ export const recipes = [
       ja: "インドネシア",
       tr: "Endonezya",
       it: "Indonesia",
-      ko: "인도네시아"
+      ko: "인도네시아",
+      hi: "इंडोनेशिया"
     },
     name: {
       ro: "Satay",
@@ -10641,7 +10642,8 @@ export const recipes = [
       ja: "サテ",
       tr: "Satay",
       it: "Satay",
-      ko: "사테"
+      ko: "사테",
+      hi: "सते"
     },
     category: {
       ro: "Gustare",
@@ -10656,7 +10658,8 @@ export const recipes = [
       ja: "スナック",
       tr: "Atıştırmalık",
       it: "Spuntino",
-      ko: "간식"
+      ko: "간식",
+      hi: "नाश्ता"
     },
     ingredients: {
       ro: ["700 g pulpe de pui dezosate și fără piele, tăiate cubulețe de 2 cm", "3 linguri sos de soia", "2 linguri lapte de cocos", "1 lingură zahăr brun pal", "2 lingurițe coriandru măcinat", "1 linguriță chimen măcinat", "1 linguriță turmeric măcinat", "2 căței de usturoi, fin rași", "1 tulpină lemongrass, partea palidă, fin tocată", "200 g unt de arahide cremos", "200 ml lapte de cocos (pentru sos)", "2 linguri kecap manis (sos de soia dulce)", "1 lingură suc de lime", "1 linguriță sambal oelek sau sriracha", "20 bețișoare de bambus, înmuiate în apă rece 30 de minute"],
@@ -10691,19 +10694,20 @@ export const recipes = [
       hi: "मैरिनेड के लिए एक बर्तन में सोया सॉस, नारियल का दूध, ब्राउन शुगर, धनिया पाउडर, जीरा, हल्दी, लहसुन और लेमनग्रास मिलाएं। चिकन के टुकड़े डालकर कोट करें और कम से कम 30 मिनट कमरे के तापमान पर या 4 घंटे तक फ्रिज में मैरिनेट करें। मूंगफली सॉस बनाएं: एक छोटे पैन में मूंगफली का मक्खन, नारियल का दूध, केकप मानिस, नींबू का रस और सांबल को धीमी आंच पर 3-4 मिनट तक हिलाते हुए चिकना और रेशमी बनाएं; बहुत गाढ़ा हो तो पानी मिलाएं। भिगोई हुई सींख पर 4-5 चिकन के टुकड़े कसकर गुथें। कोयले की आंच या कास्ट आयरन ग्रिल पैन को तेज आंच पर गर्म करें और हल्का तेल लगाएं। सींखों को एक बार पलटते हुए प्रत्येक तरफ 3-4 मिनट ग्रिल करें जब तक जगह-जगह गहरा भूरा हो जाए और चिकन सींख से आसानी से निकले — आंतरिक तापमान 75°C होना चाहिए। गर्म मूंगफली सॉस और खीरे के साथ तुरंत परोसें।"
     },
     originText: {
-      ro: "Satay este o rețetă tradițională din Indonezia.",
-      en: "Satay is a traditional recipe from Indonesia.",
-      es: "Satay es una receta tradicional de Indonesia.",
-      fr: "Satay est une recette traditionnelle d'Indonésie.",
-      de: "Satay ist ein traditionelles Rezept aus Indonesien.",
-      pt: "Satay é uma receita tradicional da Indonésia.",
-      ru: "Сатай — традиционный рецепт из Индонезии.",
-      ar: "ساتيه هي وصفة تقليدية من إندونيسيا.",
-      zh: "沙嗲串 是来自印度尼西亚的传统食谱。",
-      ja: "サテ はインドネシアの伝統的なレシピです。",
-      tr: "Satay Endonezya kökenli geleneksel bir tariftir.",
-      it: "Satay è una ricetta tradizionale dell'Indonesia.",
-      ko: "사테는 인도네시아의 전통 요리입니다."
+      ro: "Satay este un preparat din carne la grătar specific Asiei de Sud-Est, originar din Java, Indonezia, cel mai probabil în secolul al XIX-lea. Influențele veneau de la negustorii arabi care aduseseră tradiția kebabului, adaptată ulterior cu ingrediente locale — turmeric, lemongrass și lapte de cocos. De acolo s-a răspândit în toată regiunea: Tailanda, Malaysia, Singapore și Filipine au fiecare propria versiune, dar forma indoneziană rămâne cea mai recunoscută.\n\nElementul definitoriu este sosul de arahide — un amestec de arahide prăjite, lapte de cocos, kecap manis și ardei iute. El nu este un simplu condiment, ci componenta principală de gust a preparatului. Carnea se gătește rapid pe cărbuni la foc mare, obținând o ușoară caramelizare și o amăreală care echilibrează dulceața sosului.",
+      en: "Satay is a Southeast Asian grilled meat dish originating in Java, Indonesia, most likely in the nineteenth century. Arab traders brought kebab traditions to the region; local cooks adapted them with turmeric, lemongrass, and coconut milk. The dish spread across the entire region — Thailand, Malaysia, Singapore, and the Philippines all have their own versions — but the Javanese form with its yellow marinade and thick peanut sauce remains the most widely recognised.\n\nThe peanut sauce is the defining element. Made from ground roasted peanuts with coconut milk, sweet soy sauce, and chilli, it functions as more than a condiment — it carries the primary flavour of the dish. The chicken is grilled quickly over high heat to develop a light char, whose bitterness balances the sweet sauce.",
+      es: "El Satay es un plato de carne a la brasa del Sudeste Asiático originario de Java, Indonesia, probablemente en el siglo XIX. Los comerciantes árabes introdujeron las tradiciones del kebab en la región; los cocineros locales las adaptaron con cúrcuma, hierba limón y leche de coco. El plato se extendió por toda la región — Tailandia, Malasia, Singapur y Filipinas tienen sus propias versiones —, pero la forma javanesa con su marinada amarilla y la espesa salsa de cacahuete sigue siendo la más reconocida.\n\nLa salsa de cacahuete es el elemento definitorio. Elaborada con cacahuetes tostados molidos, leche de coco, salsa de soja dulce y chile, actúa como algo más que un condimento: es el sabor principal del plato. El pollo se asa rápidamente a fuego fuerte para desarrollar un ligero ahumado cuya amargura equilibra la dulzura de la salsa.",
+      fr: "Le Satay est un plat de viande grillée originaire de Java, en Indonésie, apparu très probablement au XIXe siècle. Les marchands arabes ont introduit les traditions du kebab dans la région; les cuisiniers locaux les ont adaptées avec du curcuma, de la citronnelle et du lait de coco. Le plat s'est répandu dans toute la région — la Thaïlande, la Malaisie, Singapour et les Philippines ont chacune leur propre version —, mais la forme javanaise avec sa marinade jaune et sa sauce aux cacahuètes épaisse reste la plus reconnue.\n\nLa sauce aux cacahuètes est l'élément définitoire. Préparée à partir de cacahuètes grillées moulues avec du lait de coco, de la sauce soja sucrée et du piment, elle fait bien plus qu'un condiment: elle porte la saveur principale du plat. Le poulet est grillé rapidement à feu vif pour développer une légère carbonisation dont l'amertume équilibre la douceur de la sauce.",
+      de: "Satay ist ein südostasiatisches Grillgericht aus Java, Indonesien, das vermutlich im neunzehnten Jahrhundert entstand. Arabische Händler brachten die Kebab-Tradition in die Region; lokale Köche passten sie mit Kurkuma, Zitronengras und Kokosmilch an. Das Gericht verbreitete sich in der gesamten Region — Thailand, Malaysia, Singapur und die Philippinen haben jeweils ihre eigenen Varianten —, doch die javanische Form mit ihrer gelben Marinade und der dicken Erdnusssauce ist die bekannteste geblieben.\n\nDie Erdnusssauce ist das prägende Element. Aus gemahlenen gerösteten Erdnüssen mit Kokosmilch, Kecap Manis und Chili hergestellt, dient sie mehr als ein Würzmittel: Sie trägt den Hauptgeschmack des Gerichts. Das Hähnchen wird schnell bei starker Hitze gegrillt und bekommt eine leichte Röstung, deren Bitterkeit die Süße der Sauce ausbalanciert.",
+      pt: "O Satay é um prato de carne grelhada do Sudeste Asiático originário de Java, na Indonésia, provavelmente no século XIX. Os comerciantes árabes trouxeram as tradições do kebab para a região; os cozinheiros locais adaptaram-nas com açafrão-da-terra, erva-príncipe e leite de coco. O prato espalhou-se por toda a região — a Tailândia, a Malásia, Singapura e as Filipinas têm as suas próprias versões —, mas a forma javanesa com a sua marinada amarela e o molho de amendoim espesso continua a ser a mais reconhecida.\n\nO molho de amendoim é o elemento definidor. Feito com amendoins torrados moídos, leite de coco, kecap manis e malagueta, funciona como mais do que um condimento — é o sabor principal do prato. O frango é grelhado rapidamente a fogo alto para desenvolver uma ligeira carbonização, cuja amargura equilibra a doçura do molho.",
+      ru: "Сатай — южноазиатское блюдо из жареного мяса, родиной которого является Ява, Индонезия, предположительно XIX века. Арабские торговцы принесли традиции кебаба в регион; местные повара адаптировали их с куркумой, лемонграссом и кокосовым молоком. Блюдо распространилось по всему региону — в Таиланде, Малайзии, Сингапуре и на Филиппинах есть свои версии, — но яванская форма с жёлтым маринадом и густым арахисовым соусом остаётся наиболее известной.\n\nАрахисовый соус — определяющий элемент. Приготовленный из молотых жареных арахисов с кокосовым молоком, кечапом манис и чили, он служит не просто приправой — он несёт главный вкус блюда. Курица быстро готовится при высокой температуре, приобретая лёгкий уголь, чья горечь уравновешивает сладость соуса.",
+      ar: "الساتيه طبق لحم مشوي من جنوب شرق آسيا، نشأ في جزيرة جاوة بإندونيسيا على الأرجح في القرن التاسع عشر. أحضر التجار العرب تقاليد الكباب إلى المنطقة، فأدخل عليها الطهاة المحليون الكركم وليمون الحشيش وحليب جوز الهند. انتشر الطبق في المنطقة بأسرها — لتايلاند وماليزيا وسنغافورة والفلبين نسخها الخاصة — غير أن الشكل الجاوي بتتبيلته الصفراء وصلصة الفول السوداني الكثيفة يبقى الأشهر.\n\nصلصة الفول السوداني هي العنصر المميز. مصنوعة من الفول السوداني المحمص المطحون مع حليب جوز الهند وصلصة الصويا الحلوة والفلفل الحار، تؤدي دوراً أكبر من مجرد توابل — إذ تحمل الطعم الرئيسي للطبق. يُشوى الدجاج سريعاً على حرارة عالية لتطوير احتراق خفيف تعوّض مرارته حلاوة الصلصة.",
+      zh: "沙嗲起源于印度尼西亚爪哇岛，可能兴起于十九世纪。阿拉伯商人将烤肉串的传统带入该地区，当地厨师以姜黄、香茅和椰浆加以改良。这道菜传遍整个东南亚——泰国、马来西亚、新加坡和菲律宾各有自己的版本——但爪哇风格的黄色腌料与浓郁花生酱的组合至今仍是最广为人知的形式。\n\n花生酱是这道菜的核心。以磨碎的炒花生加椰浆、甜酱油和辣椒制成，它不只是蘸料，而是承载整道菜主要风味的关键。鸡肉在大火上快速烤制，形成轻微的焦香，其苦味恰好平衡了酱汁的甜度。",
+      ja: "サテはインドネシアのジャワ島を発祥とする東南アジアの串焼き料理で、おそらく19世紀に成立した。アラブ商人がケバブの伝統をこの地域にもたらし、現地の料理人がターメリック・レモングラス・ coconut milkを加えて独自のスタイルに発展させた。タイ・マレーシア・シンガポール・フィリピンにも独自の版があるが、黄色いマリネと濃厚なピーナッツソースを特徴とするジャワのスタイルが最も広く知られている。\n\nピーナッツソースが決め手となる要素だ。炒って砕いたピーナッツにココナッツミルク・ケチャップマニス・唐辛子を合わせたもので、単なるつけだれではなく、料理の主たる風味を担う。鶏肉は高温で素早く焼き上げ、表面にかすかな焦げを作る。その苦みがソースの甘さを引き締める。",
+      tr: "Satay, Güneydoğu Asya'nın Java, Endonezya kökenli ızgara et yemeğidir; muhtemelen on dokuzuncu yüzyılda ortaya çıkmıştır. Arap tüccarlar kebap geleneğini bölgeye taşıdı; yerel aşçılar onu zerdeçal, limon otu ve hindistancevizi sütüyle uyarladı. Yemek tüm bölgeye yayıldı — Tayland, Malezya, Singapur ve Filipinlerin kendi versiyonları var — ama sarı marine ve koyu fıstık ezmesi sosuyla Cava stili en çok tanınan form olarak kaldı.\n\nFıstık ezmesi sosu belirleyici unsurdur. Kavrulmuş öğütülmüş fıstıktan hindistancevizi sütü, kecap manis ve biberle yapılır ve bir çeşni olmaktan öte, yemeğin temel lezzetini taşır. Tavuk yüksek ateşte hızla ızgara edilir ve hafif bir karamelleşme geliştirir; bu hafif acılık sosun tatlılığını dengeler.",
+      it: "Il Satay è un piatto di carne alla griglia originario di Giava, in Indonesia, sviluppatosi probabilmente nel diciannovesimo secolo. I mercanti arabi portarono le tradizioni del kebab nella regione; i cuochi locali le adattarono con curcuma, citronella e latte di cocco. Il piatto si diffuse in tutta la regione — Tailandia, Malesia, Singapore e Filippine hanno le loro versioni —, ma la forma giavanese con la marinata gialla e la ricca salsa di arachidi rimane la più riconoscibile.\n\nLa salsa di arachidi è l'elemento caratterizzante. Preparata con arachidi tostate e tritate, latte di cocco, kecap manis e peperoncino, svolge un ruolo ben oltre quello di condimento: porta il sapore principale del piatto. Il pollo viene grigliato rapidamente ad alta temperatura sviluppando una leggera bruciatura, la cui amarezza bilancia la dolcezza della salsa.",
+      ko: "사테는 인도네시아 자바 섬에서 유래한 동남아시아 꼬치 구이 요리로, 아마도 19세기에 성립된 것으로 보인다. 아랍 상인들이 케밥 전통을 이 지역에 전했고, 현지 요리사들은 강황, 레몬그라스, 코코넛 밀크를 더해 자신들의 스타일로 발전시켰다. 이 요리는 태국, 말레이시아, 싱가포르, 필리핀 등 동남아 전역으로 퍼져나갔지만, 노란 마리네이드와 진한 땅콩 소스를 특징으로 하는 자바 스타일이 가장 잘 알려져 있다.\n\n땅콩 소스가 핵심 요소다. 볶아 갈은 땅콩에 코코넛 밀크, 케캅 마니스, 고추를 합쳐 만든 이 소스는 단순한 곁들임이 아니라 요리의 주된 풍미를 담당한다. 닭고기는 강불에서 빠르게 구워 가벼운 탄 맛을 내고, 그 쌉쌀함이 소스의 단맛을 균형 있게 잡아준다.",
+      hi: "सते दक्षिण-पूर्व एशिया का ग्रिल्ड मांस व्यंजन है, जो इंडोनेशिया के जावा द्वीप से उत्पन्न हुआ, संभवतः उन्नीसवीं सदी में। अरब व्यापारी इस क्षेत्र में कबाब की परंपराएं लाए; स्थानीय रसोइयों ने उन्हें हल्दी, लेमनग्रास और नारियल के दूध के साथ अपनाया। यह व्यंजन पूरे क्षेत्र में फैला — थाईलैंड, मलेशिया, सिंगापुर और फिलीपींस के अपने-अपने संस्करण हैं — लेकिन पीले मैरिनेड और गाढ़ी मूंगफली चटनी वाला जावानीज़ रूप सबसे प्रसिद्ध है।\n\nमूंगफली की चटनी इस व्यंजन का परिभाषित तत्व है। भुनी और पिसी मूंगफली, नारियल का दूध, केकप मानिस और मिर्च से बनी यह चटनी केवल मसाला नहीं है — यह व्यंजन के मुख्य स्वाद की वाहक है। चिकन को तेज आंच पर जल्दी ग्रिल किया जाता है जिससे हल्की जलन होती है, जिसकी कड़वाहट चटनी की मिठास को संतुलित करती है।"
     }
   },
   {
