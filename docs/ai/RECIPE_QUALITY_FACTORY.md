@@ -70,7 +70,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 48 | Adobo | Tier A Complete | — | Full rewrite: 8 EN ingredients with exact quantities; multi-step EN howIsMade with timings (30 min marinade, 30–45 min simmer, 15–20 min reduce, 3–4 min crisping); all 14 locales including hi |
 | 49 | Jerk Chicken | Partial Fix Only | `9401ae5e` | Struct + origin + name + originText fixed; no stub note |
 | 50 | Doro Wat | Tier A Complete | — | Full rewrite: 12 EN ingredients with exact quantities; 15-step EN howIsMade with timings (25–30 min dry onion fry, 5 min spice bloom, 40–45 min covered simmer, 10 min egg finish); all 14 locales including hi |
-| 51 | Kibbeh | Stub / Needs Full Rewrite | `22730291` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 51 | Kibbeh | Tier A Complete | — | Full rewrite: 14 EN ingredients (shell + filling + oil) with exact quantities; 19-step EN howIsMade with timings (15 min soak, 3–4 min process, 6–8 min brown, 4–5 min fry at 175°C); all 14 locales including hi |
 | 52 | Stamppot | Stub / Needs Full Rewrite | `454512b4` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 53 | Hangi | Stub / Needs Full Rewrite | `09c90a91` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
 | 54 | Moules-frites | Partial Fix Only | `04ba532e` | Struct + name.ko + originText pt/ru/tr/it/ko fixed; no stub note |
