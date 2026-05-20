@@ -112,7 +112,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 90 | Ropa Vieja | Tier A Complete | `433ddd43` | Full EN rewrite: 12 ingredients with exact quantities (beef flank 700g, olive oil, onion, red+green bell pepper, garlic, canned crushed tomatoes 400g, tomato paste, white wine 100ml, cumin, oregano, bay leaves, salt+pepper), 7-step howIsMade with timings (1.5–2 hr braise, 8–10 min veg, 2 min wine reduce, 10 min sauce, 10–15 min final simmer) and doneness cues (pulls apart easily, beginning to colour, juicy but not soupy). All 14 locales retranslated including hi. |
 | 91 | Cullen Skink | Tier A Complete | `pending` | Full EN rewrite: 10 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
 | 92 | Gado-Gado | Tier A Complete | `pending` | Full EN rewrite: 18 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
-| 93 | Cinnamon Bun | Partial Fix Only | `1cb35fbc` | Struct + origin.pt added + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
+| 93 | Cinnamon Bun | Tier A Complete | `pending` | Full EN rewrite: 14 ingredients with exact quantities, 7-step howIsMade with timings, all 14 locales + hi |
 | 94 | Chiles en nogada | Partial Fix Only | `65ccb271` | Struct + name/originText + howIsMade tr/it fixed; EN howIsMade was stub — EN content still needs full rewrite |
 | 95 | Lentil Soup | Partial Fix Only | `4f0399d0` | Struct + origin/name/originText (all) + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
 | 96 | Spanakopita | Partial Fix Only | `d450ed9c` | Struct + name/originText + howIsMade tr/it/ko fixed; EN howIsMade was stub — EN content still needs full rewrite |
