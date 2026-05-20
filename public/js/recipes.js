@@ -12663,7 +12663,8 @@ export const recipes = [
       ja: "イスラエル",
       tr: "İsrail",
       it: "Israele",
-      ko: "이스라엘"
+      ko: "이스라엘",
+      hi: "इज़राइल"
     },
     name: {
       ro: "Sabich",
@@ -12678,7 +12679,8 @@ export const recipes = [
       ja: "サビッチ",
       tr: "Sabich",
       it: "Sabich",
-      ko: "사비크"
+      ko: "사비크",
+      hi: "साबिच"
     },
     category: {
       ro: "Mic dejun",
@@ -12693,7 +12695,8 @@ export const recipes = [
       ja: "朝食",
       tr: "Kahvaltı",
       it: "Colazione",
-      ko: "아침"
+      ko: "아침",
+      hi: "नाश्ता"
     },
     servings: 4,
     tipType: 'def',
@@ -12731,19 +12734,20 @@ export const recipes = [
       hi: "अंडों को सख्त उबालें: उबलते पानी में डालें, 10 मिनट पकाएं, फिर 5 मिनट ठंडे पानी में रखें, छीलें और गोल टुकड़ों में काटें। बैंगन के टुकड़ों पर दोनों तरफ 1/2 छोटा चम्मच नमक छिड़कें और 10 मिनट रखें, फिर किचन टॉवल से पोंछ लें। एक बड़े पैन में तेल मध्यम-तेज़ आंच पर गर्म करें और बैंगन को बैचों में प्रत्येक साइड 3–4 मिनट तक गहरा सुनहरा और अंदर से नरम होने तक तलें, फिर कागज पर निकालें। ताहिनी को नींबू के रस, लहसुन और 3–4 बड़े चम्मच ठंडे पानी के साथ मिलाकर मलाईदार और बहने वाला बनाएं। कटे हुए टमाटर और खीरे को 1/2 छोटा चम्मच नमक और थोड़े से जैतून के तेल के साथ मिलाकर सलाद बनाएं। प्रत्येक पीटा ब्रेड को सूखे पैन में दोनों तरफ 1-1 मिनट गर्म करें, फिर सावधानी से जेब खोलें। प्रत्येक पीटा में तला बैंगन, आलू और अंडे के टुकड़े, सब्जी सलाद, भरपूर ताहिनी, अम्बा सॉस का एक चम्मच, अचारी खीरा और ताजी अजमोद भरें और तुरंत परोसें।"
     },
     originText: {
-      ro: "Sabich este o rețetă tradițională din Israel.",
-      en: "Sabich is a traditional recipe from Israel.",
-      es: "Sabich es una receta tradicional de Israel.",
-      fr: "Sabich est une recette traditionnelle d'Israël.",
-      de: "Sabich ist ein traditionelles Rezept aus Israel.",
-      pt: "Sabich é uma receita tradicional de Israel.",
-      ru: "Сабих — традиционный рецепт из Израиля.",
-      ar: "سبيخ هي وصفة تقليدية من إسرائيل.",
-      zh: "萨比奇三明治 是来自以色列的传统食谱。",
-      ja: "サビッチ はイスラエルの伝統的なレシピです。",
-      tr: "Sabich İsrail kökenli geleneksel bir tariftir.",
-      it: "Sabich è una ricetta tradizionale di Israele.",
-      ko: "사비크는 이스라엘의 전통 요리입니다."
+      ro: "Sabich este o lipie umplută cu vânătă prăjită, ou fiert tare, cartofi, tahini și amba — un preparat care își are originile în imigranții evrei irakieni stabiliți în Israel în anii 1950. Numele se crede că derivă din cuvântul arab pentru dimineață, reflectând originile mâncării ca mic dejun de Shabbat. În ziua de odihnă, evreii respectuoși nu puteau găti, așa că componentele se prăjeau seara anterioară și se asamblau reci sâmbătă dimineața.\n\nSosul amba — mango fermentat cu schinduf, turmeric și chimen — este condimentul care diferențiază sabich de alte sandvișuri în lipie și nu poate fi substituit. Tahini-ul se prepară suficient de lichid pentru a se turna, nu a se întinde. Vânăta trebuie gătită complet și bine sărată înainte de prăjire.",
+      en: "Sabich is a pita filled with fried aubergine, hard-boiled egg, potato, tahini, and amba — a dish that traces its origins to Iraqi Jewish immigrants who settled in Israel in the 1950s. The name is thought to derive from the Arabic word for morning, reflecting the meal's origins as a Shabbat breakfast. On the Sabbath, observant Jews could not cook, so the components were fried the previous evening and assembled cold on Saturday morning.\n\nAmba sauce — fermented mango with fenugreek, turmeric, and cumin — is the condiment that distinguishes sabich from other pita sandwiches and cannot be substituted. The tahini is prepared thin enough to drizzle rather than spread. The aubergine must be fully cooked through and well-salted before frying.",
+      es: "Sabich es una pita rellena de berenjena frita, huevo duro, patata, tahini y amba — un plato que tiene sus orígenes en los inmigrantes judíos iraquíes que se establecieron en Israel en los años 1950. Se cree que el nombre deriva de la palabra árabe para mañana, reflejando los orígenes de la comida como desayuno de Shabbat. En el Sabbat, los judíos observantes no podían cocinar, por lo que los componentes se freían la tarde anterior y se ensamblaban fríos el sábado por la mañana.\n\nLa salsa amba — mango fermentado con fenogreco, cúrcuma y comino — es el condimento que distingue el sabich de otros sándwiches de pita y no puede sustituirse. El tahini se prepara lo suficientemente líquido para verterse, no untarse. La berenjena debe estar completamente cocida y bien salada antes de freírse.",
+      fr: "Le sabich est un pita garni d'aubergine frite, d'œuf dur, de pomme de terre, de tahini et d'amba — un plat dont les origines remontent aux immigrés juifs irakiens installés en Israël dans les années 1950. Le nom proviendrait du mot arabe pour matin, reflétant les origines du plat comme petit-déjeuner du Shabbat. Ce jour-là, les Juifs observants ne pouvaient pas cuisiner, les composants étaient donc frits la veille et assemblés froids le samedi matin.\n\nLa sauce amba — mangue fermentée au fenugrec, curcuma et cumin — est le condiment qui distingue le sabich des autres sandwichs en pita et ne peut être substitué. Le tahini est préparé assez liquide pour être versé plutôt qu'étalé. L'aubergine doit être entièrement cuite et bien salée avant d'être frite.",
+      de: "Sabich ist eine Pita gefüllt mit gebratener Aubergine, hartgekochtem Ei, Kartoffeln, Tahini und Amba — ein Gericht, das seinen Ursprung bei irakisch-jüdischen Einwanderern hat, die sich in den 1950er Jahren in Israel niederließen. Der Name soll vom arabischen Wort für Morgen stammen und spiegelt die Entstehung als Shabbat-Frühstück wider. Am Sabbat durften observante Juden nicht kochen, daher wurden die Komponenten am Vorabend gebraten und am Samstagmorgen kalt zusammengestellt.\n\nAmba-Sauce — fermentierte Mango mit Bockshornklee, Kurkuma und Kreuzkümmel — ist das Würzmittel, das Sabich von anderen Pita-Sandwiches unterscheidet und nicht ersetzt werden kann. Der Tahini wird so dünn zubereitet, dass er gegossen, nicht gestrichen werden kann. Die Aubergine muss vollständig gegart und gut gesalzen sein, bevor sie gebraten wird.",
+      pt: "Sabich é um pita recheado com beringela frita, ovo cozido, batata, tahine e amba — um prato cujas origens remontam aos imigrantes judeus iraquianos que se instalaram em Israel nos anos 1950. Acredita-se que o nome deriva da palavra árabe para manhã, refletindo as origens da refeição como café da manhã do Shabbat. No Shabat, os judeus observantes não podiam cozinhar, então os componentes eram fritos na véspera e montados frios na manhã de sábado.\n\nO molho amba — manga fermentada com feno-grego, cúrcuma e cominho — é o condimento que distingue o sabich de outros sanduíches de pita e não pode ser substituído. O tahine é preparado suficientemente líquido para regar, não para barrar. A beringela deve estar completamente cozida e bem salgada antes de fritar.",
+      ru: "Сабих — это пита с жареным баклажаном, яйцом вкрутую, картофелем, тахини и амбой. Блюдо восходит к иракским евреям, переселившимся в Израиль в 1950-х годах. Считается, что название происходит от арабского слова «утро», отражая происхождение блюда как субботнего завтрака. В шаббат соблюдающие евреи не могли готовить, поэтому компоненты жарили накануне вечером и холодными собирали в субботу утром.\n\nСоус амба — ферментированное манго с пажитником, куркумой и зирой — это приправа, отличающая сабих от других пита-сэндвичей, и заменить её невозможно. Тахини разводят достаточно жидким, чтобы поливать, а не намазывать. Баклажан должен быть полностью приготовлен и хорошо просолен перед жаркой.",
+      ar: "سبيخ هو خبز بيتا محشو بالباذنجان المقلي والبيض المسلوق والبطاطس والطحينة والعمبة — طبق يعود أصله إلى المهاجرين اليهود العراقيين الذين استقروا في إسرائيل في خمسينيات القرن الماضي. يُعتقد أن الاسم مشتق من الكلمة العربية «صباح»، مما يعكس أصل الوجبة كفطور يوم السبت. في يوم السبت، لا يستطيع اليهود المتدينون الطهي، لذا كانت المكونات تُقلى مساء الجمعة وتُحضَّر باردة صباح السبت.\n\nصوص العمبة — مانغو مخمّر مع الحلبة والكركم والكمون — هو التوابل التي تُميّز السبيخ عن غيره من سندويشات البيتا ولا يمكن استبداله. يُحضَّر الطحيني رقيقاً بما يكفي لسكبه لا دهنه. يجب طهي الباذنجان جيداً وتمليحه قبل القلي.",
+      zh: "萨比奇是一种皮塔饼，内馅为炸茄子、白煮蛋、土豆、芝麻酱和安巴酱——这道菜追溯至20世纪50年代定居以色列的伊拉克犹太移民。据认为，其名称源于阿拉伯语中「早晨」一词，反映了这道菜作为安息日早餐的起源。安息日当天，虔诚的犹太人不能开火，因此各食材在前一天晚上提前炸好，周六早晨冷着拼装。\n\n安巴酱——由发酵芒果、葫芦巴、姜黄和孜然制成——是区别萨比奇与其他皮塔三明治的核心调味品，无法替代。芝麻酱需调稀至可浇淋而非涂抹的程度。茄子在煎炸前必须充分腌盐并彻底熟透。",
+      ja: "サビッチは揚げたナス、固茹で卵、ジャガイモ、タヒニ、アンバソースを詰めたピタパンです。1950年代にイスラエルに定住したイラク系ユダヤ人移民が起源と言われています。名前はアラビア語で「朝」を意味する言葉に由来すると考えられており、シャバットの朝食としての成り立ちを反映しています。安息日には料理ができないため、材料を前夜に揚げておき土曜の朝に冷たいまま組み立てていたのが始まりです。\n\nアンバソース — フェヌグリーク、ターメリック、クミンで発酵させたマンゴー — は他のピタサンドイッチとサビッチを区別する調味料であり、代替は不可能です。タヒニはのせるよりも注げる程度に薄く準備します。ナスは揚げる前に十分塩をして完全に火を通す必要があります。",
+      tr: "Sabich; kızartılmış patlıcan, haşlanmış yumurta, patates, tahin ve amba ile doldurulmuş bir pide ekmeğidir. Kökleri, 1950'lerde İsrail'e yerleşen Iraklı Yahudi göçmenlerine dayanır. Adının, Şabat kahvaltısı olarak başlayan bu öğünün kökenini yansıtır biçimde, Arapça'da sabah anlamına gelen sözcükten geldiği düşünülmektedir. Şabat günü sofu Yahudiler yemek pişiremeyeceğinden, malzemeleri bir gece önce kızartıp Cumartesi sabahı soğuk olarak bir araya getirirlerdi.\n\nAmba sosu — çemen otu, zerdeçal ve kimyon ile fermente edilmiş mango — sabich'i diğer pide sandviçlerinden ayıran tatlandırıcıdır ve ikame edilemez. Tahin, sürülmek yerine gezdirilebilecek kıvamda ince hazırlanır. Patlıcan, kızartılmadan önce iyice tuzlanmalı ve tamamen pişirilmelidir.",
+      it: "Il sabich è un pita farcito con melanzane fritte, uovo sodo, patate, tahini e amba — un piatto che affonda le sue radici negli immigrati ebrei iracheni che si stabilirono in Israele negli anni '50. Si ritiene che il nome derivi dalla parola araba per mattina, riflettendo le origini del pasto come colazione dello Shabbat. In quel giorno, gli ebrei osservanti non potevano cucinare, quindi i componenti venivano fritti la sera precedente e assemblati freddi il sabato mattina.\n\nLa salsa amba — mango fermentato con fieno greco, curcuma e cumino — è il condimento che distingue il sabich dagli altri sandwich in pita e non può essere sostituito. Il tahini si prepara abbastanza liquido da essere versato, non spalmato. La melanzana deve essere completamente cotta e ben salata prima di friggere.",
+      ko: "사비크는 구운 가지, 완숙 달걀, 감자, 타히니, 안바 소스로 채운 피타 빵입니다. 1950년대 이스라엘에 정착한 이라크계 유대인 이민자들의 음식에서 유래했습니다. 이름은 안식일 아침 식사로서의 기원을 반영하여 아랍어로 '아침'을 뜻하는 단어에서 왔다고 알려져 있습니다. 안식일에 경건한 유대인들은 요리를 할 수 없었기 때문에 재료들을 전날 저녁에 미리 볶아두고 토요일 아침에 차갑게 조립했습니다.\n\n안바 소스 — 호로파, 강황, 커민으로 발효한 망고 — 는 사비크를 다른 피타 샌드위치와 구별하는 조미료로, 대체가 불가능합니다. 타히니는 펴 바르는 것이 아니라 뿌릴 수 있을 만큼 묽게 준비합니다. 가지는 볶기 전에 완전히 익히고 충분히 간을 해야 합니다.",
+      hi: "साबिच (Sabich) एक पीटा ब्रेड है जिसमें तला बैंगन, कड़े उबले अंडे, आलू, ताहिनी और अम्बा भरा जाता है — यह व्यंजन 1950 के दशक में इज़राइल में बसे इराकी यहूदी प्रवासियों से आता है। माना जाता है कि नाम अरबी शब्द 'सुबह' से लिया गया है, जो शबात के नाश्ते के रूप में इसकी उत्पत्ति को दर्शाता है। शबात पर, धर्मपरायण यहूदी खाना नहीं बना सकते थे, इसलिए सामग्री पिछली शाम को तली जाती थी और शनिवार की सुबह ठंडी असेंबल की जाती थी।\n\nअम्बा सॉस — मेथी, हल्दी और जीरे के साथ किण्वित आम — वह मसाला है जो साबिच को अन्य पीटा सैंडविच से अलग करता है और इसे बदला नहीं जा सकता। ताहिनी को फैलाने की बजाय डालने लायक पतला तैयार किया जाता है। बैंगन को तलने से पहले पूरी तरह पकाया और अच्छी तरह नमकीन किया जाना चाहिए।"
     }
   },
   {
