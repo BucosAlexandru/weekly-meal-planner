@@ -9910,6 +9910,7 @@ export const recipes = [
       ar: "باكستان",
       zh: "巴基斯坦",
       ja: "パキスタン",
+      hi: "पाकिस्तान",
       tr: "Pakistan",
       it: "Pakistan",
       ko: "파키스탄"
@@ -9925,6 +9926,7 @@ export const recipes = [
       ar: "برياني",
       zh: "印度香饭",
       ja: "ビリヤニ",
+      hi: "बिरयानी",
       tr: "Biryani",
       it: "Biryani",
       ko: "비리야니"
@@ -9940,6 +9942,7 @@ export const recipes = [
       ar: "عشاء",
       zh: "晚餐",
       ja: "夕食",
+      hi: "रात का खाना",
       tr: "Akşam yemeği",
       it: "Cena",
       ko: "저녁"
@@ -9955,6 +9958,7 @@ export const recipes = [
       ar: ["أرز بسمتي", "دجاج أو لحم ضأن", "لبن زبادي", "بصل", "بهارات برياني", "طماطم", "زيت"],
       zh: ["巴斯马蒂米", "鸡肉或羊肉", "酸奶", "洋葱", "香料", "番茄", "油"],
       ja: ["バスマティライス", "鶏肉またはラム肉", "ヨーグルト", "玉ねぎ", "ビリヤニスパイス", "トマト", "油"],
+      hi: ["बासमती चावल", "मुर्गी या मेमना", "दही", "प्याज़", "बिरयानी मसाले", "टमाटर", "तेल"],
       tr: ["basmati pirinç", "tavuk veya kuzu", "yoğurt", "soğbir", "biryani baharatlar", "domates", "yağ"],
       it: ["basmati riso", "pollo o agnello", "yogurt", "cipolla", "biryani spezie", "pomodori", "olio"],
       ko: ["바스마티 쌀", "닭고기 또는 양고기", "요거트", "양파", "비리야니 향신료", "토마토", "기름"]
@@ -9970,24 +9974,26 @@ export const recipes = [
       ar: "اطبخ الأرز بشكل منفصل، جهز اللحم بالتوابل ثم رتب الأرز واللحم بطبقات واطبخها معاً على نار هادئة.",
       zh: "米饭单独煮好，肉类加香料炒香，层层叠放后小火焖煮。",
       ja: "ご飯を別に炊き、スパイスで肉を調理し、層にして弱火で一緒に蒸し煮する。",
+      hi: "चावल को अलग पकाएं, मांस को मसालों के साथ तैयार करें, फिर चावल और मांस की परतें लगाएं और धीमी आंच पर एक साथ पकाएं।",
       tr: "Pişirin pirinç ayrı ayrı, hazırlayın et ile baharatlar, sonra katman pirinç ve et ve pişirin birlikte üstüne kısık ısıtın.",
       it: "Cuoci riso separatamente, prepara carne con spezie, poi strato riso e carne e cuoci insieme su basso scalda.",
       ko: "조리하고 쌀 따로, 준비합니다 고기와 향신료, 그다음 층 쌀그리고 고기그리고 조리합니다 함께 위에 약한 가열합니다하세요."
     },
     originText: {
-      ro: "Biryani este o rețetă tradițională din Pakistan.",
-      en: "Biryani is a traditional recipe from Pakistan.",
-      es: "Biryani es una receta tradicional de Pakistán.",
-      fr: "Biryani est une recette traditionnelle du Pakistan.",
-      de: "Biryani ist ein traditionelles Rezept aus Pakistan.",
-      pt: "Biryani é uma receita tradicional do Paquistão.",
-      ru: "Бирьяни — традиционный рецепт из Пакистана.",
-      ar: "برياني هي وصفة تقليدية من باكستان.",
-      zh: "印度香饭 是来自巴基斯坦的传统食谱。",
-      ja: "ビリヤニ はパキスタンの伝統的なレシピです。",
-      tr: "Biryani Pakistan kökenli geleneksel bir tariftir.",
-      it: "Biryani è una ricetta tradizionale del Pakistan.",
-      ko: "비리야니는 파키스탄의 전통 요리입니다."
+      ro: "Biryani provine din curțile imperiale moghule ale subcontinentului indian, unde preparatele de orez cu influențe persane au evoluat în forme regionale distincte. Tradiția biryani din Pakistan — în special stilurile din Karachi și Hyderabad — este printre cele mai aromatice de pe subcontinent, construită pe condimente întregi, ceapă caramelizată și straturi de orez. Felul de mâncare este central la fiecare ocazie importantă: nunți, sărbătoarea Eid și întâlniri mari de familie.\n\nTehnica este gătitul dum: orezul parțial fiert și carnea condimentată sunt sigilate împreună într-un vas greu și terminate la foc mic, aburul capturat finalizând ambele componente simultan. Ceapa prăjită — gătită până devine închisă și complet caramelizată — nu este o garnitură, ci un element structural; se dizolvă în timpul dum-ului, contribuind la dulceața și culoarea orezului. Șofranul dizolvat în lapte cald este stropit peste stratul superior înainte de sigilare.",
+      en: "Biryani traces back to the Mughal courts of the Indian subcontinent, where Persian-influenced rice dishes evolved into distinct regional forms over centuries. Pakistan's biryani — particularly the Karachi and Hyderabad styles — is among the most aromatic on the subcontinent, built on whole spices, caramelized onion, and layered rice. The dish is central to every significant occasion: weddings, Eid celebrations, and large family gatherings.\n\nThe technique is dum cooking: parcooked rice and spiced meat are sealed together in a heavy pot and finished over low heat, the trapped steam completing both components simultaneously. The fried onions — cooked until dark and caramelized — are not a garnish but a structural element; they dissolve during dum, contributing sweetness and color to the rice. Saffron dissolved in warm milk is drizzled over the top layer before sealing.",
+      es: "El biryani se remonta a las cortes mogolas del subcontinente indio, donde los platos de arroz de influencia persa evolucionaron en formas regionales distintas. La tradición del biryani pakistaní — especialmente los estilos de Karachi e Hyderabad — es una de las más aromáticas del subcontinente, construida sobre especias enteras, cebolla caramelizada y arroz en capas. El plato es central en cada ocasión importante: bodas, celebraciones de Eid y grandes reuniones familiares.\n\nLa técnica es la cocción dum: el arroz parcialmente cocido y la carne especiada se sellan juntos en una olla pesada y se terminan a fuego lento, el vapor atrapado completando ambos componentes simultáneamente. Las cebollas fritas — cocinadas hasta quedar oscuras y completamente caramelizadas — no son una guarnición sino un elemento estructural; se disuelven durante el dum, aportando dulzura y color al arroz. El azafrán disuelto en leche tibia se rocía sobre la capa superior antes de sellar.",
+      fr: "Le biryani remonte aux cours mogholes du sous-continent indien, où les plats de riz d'influence persane ont évolué en formes régionales distinctes. La tradition du biryani pakistanais — notamment les styles de Karachi et d'Hyderabad — compte parmi les plus aromatiques du sous-continent, construite sur des épices entières, des oignons caramélisés et du riz en couches. Le plat est central à chaque occasion importante : mariages, célébrations de l'Aïd et grands rassemblements familiaux.\n\nLa technique est la cuisson dum : le riz à moitié cuit et la viande épicée sont scellés ensemble dans une cocotte épaisse et terminés à feu doux, la vapeur emprisonnée achevant les deux composants simultanément. Les oignons frits — cuits jusqu'à être foncés et pleinement caramélisés — ne sont pas une garniture mais un élément structural ; ils se dissolvent pendant le dum, apportant douceur et couleur au riz. Le safran dissous dans du lait chaud est versé sur la couche supérieure avant de sceller.",
+      de: "Biryani geht auf die Mogulhöfe des indischen Subkontinents zurück, wo persisch beeinflusste Reisgerichte sich über Jahrhunderte in eigenständige regionale Formen entwickelten. Die pakistanische Biryani-Tradition — insbesondere die Stile aus Karachi und Hyderabad — gehört zu den aromatischsten des Subkontinents, aufgebaut auf ganzen Gewürzen, karamellisierten Zwiebeln und geschichtetem Reis. Das Gericht ist bei jedem wichtigen Anlass präsent: Hochzeiten, Eid-Feiern und große Familientreffen.\n\nDie Technik ist das Dum-Garen: halbgar gekochter Reis und gewürztes Fleisch werden zusammen in einem schweren Topf versiegelt und bei niedriger Hitze fertiggestellt, wobei der eingeschlossene Dampf beide Komponenten gleichzeitig gart. Die gebratenen Zwiebeln — bis zur dunklen Karamellisierung gegart — sind keine Beilage, sondern ein strukturelles Element; sie lösen sich beim Dum auf und verleihen dem Reis Süße und Farbe. Safran in warmer Milch aufgelöst wird vor dem Versiegeln über die oberste Schicht geträufelt.",
+      pt: "O biryani remonta às cortes mogóis do subcontinente indiano, onde pratos de arroz de influência persa evoluíram ao longo de séculos para formas regionais distintas. A tradição do biryani paquistanês — especialmente os estilos de Karachi e Hyderabad — está entre as mais aromáticas do subcontinente, construída sobre especiarias inteiras, cebola caramelizada e arroz em camadas. O prato é central em cada ocasião importante: casamentos, celebrações do Eid e grandes reuniões familiares.\n\nA técnica é o cozimento dum: o arroz parcialmente cozido e a carne temperada são selados juntos em uma panela pesada e terminados em fogo baixo, o vapor aprisionado completando ambos os componentes simultaneamente. As cebolas fritas — cozidas até ficarem escuras e completamente caramelizadas — não são uma guarnição, mas um elemento estrutural; elas se dissolvem durante o dum, contribuindo com doçura e cor ao arroz. O açafrão dissolvido em leite morno é regado sobre a camada superior antes de selar.",
+      ru: "Бирьяни берёт начало в могольских дворах Индийского субконтинента, где блюда из риса с персидским влиянием за столетия эволюционировали в самобытные региональные формы. Пакистанская традиция бирьяни — особенно стили из Карачи и Хайдарабада — входит в число наиболее ароматных на субконтиненте, построенных на целых специях, карамелизованном луке и слоях риса. Блюдо присутствует на каждом важном торжестве: свадьбах, праздновании Ид и больших семейных собраниях.\n\nТехника приготовления — дум: частично отваренный рис и пряное мясо запечатываются вместе в тяжёлой кастрюле и доводятся до готовности на слабом огне, а захваченный пар одновременно завершает оба компонента. Обжаренный лук — приготовленный до тёмной, полной карамелизации — не гарнир, а структурный элемент: он растворяется во время дума, придавая рису сладость и насыщенный цвет. Шафран, растворённый в тёплом молоке, сбрызгивается поверх верхнего слоя перед запечатыванием.",
+      ar: "يعود تاريخ البرياني إلى بلاط المغول في شبه القارة الهندية، حيث تطورت أطباق الأرز ذات التأثير الفارسي عبر القرون لتتخذ أشكالاً إقليمية مميزة. تُعدّ تقاليد برياني باكستان — ولا سيما أساليب كراتشي وحيدر آباد — من أكثر الأنواع عطراً في شبه القارة، وتقوم على التوابل الكاملة والبصل المكرمل والأرز المُطبَّق. يحتل الطبق مكانة محورية في كل مناسبة مهمة: الأفراح واحتفالات العيد وتجمعات الأسرة الكبيرة.\n\nالتقنية المستخدمة هي الطبخ على البخار (دم): يُغلق الأرز المسلوق جزئياً واللحم المتبَّل معاً في وعاء ثقيل ويُتمّ طهيهما على نار هادئة، إذ يُنهي البخار المحبوس كلا المكونين في وقت واحد. البصل المقلي — المطبوخ حتى يتحول إلى اللون الداكن ويتكرمل كلياً — ليس زينةً بل عنصر أساسي في البنية؛ يذوب أثناء الدم ويمنح الأرز حلاوةً ولوناً. يُرشّ الزعفران المذاب في الحليب الدافئ على الطبقة العلوية قبل الغلق.",
+      zh: "印度香饭的历史可追溯至印度次大陆的莫卧儿宫廷，当时受波斯影响的米饭料理历经数百年演变，形成各具特色的地方风味。巴基斯坦的香饭传统——尤其是卡拉奇和海得拉巴风格——是次大陆最香气馥郁的版本之一，以整粒香料、焦糖洋葱和分层米饭为基底。这道菜在每一个重要场合都不可缺席：婚宴、开斋节庆典及大型家庭聚会。\n\n核心技法是「封盖焖蒸」（dum）：半熟的米饭与香料肉类共同密封于厚重锅中，以小火慢煨，锁住的蒸汽同时将两种食材焖熟至恰到好处。油炸洋葱——炒至深色并充分焦糖化——并非装饰，而是结构性要素；在焖蒸过程中溶入米饭，赋予甜味与色泽。藏红花溶于温热牛奶后，在密封前淋洒于顶层米饭之上。",
+      ja: "ビリヤニはインド亜大陸のムガル宮廷に起源を持ち、ペルシャの影響を受けた米料理が数世紀をかけて独自の地域的形態へと発展した。パキスタンのビリヤニの伝統——特にカラチとハイデラバードのスタイル——は亜大陸でも最も香り豊かなものの一つで、ホールスパイス、カラメル状に炒めた玉ねぎ、そして重ねた米を基盤としている。この料理は結婚式やイード祝典、大規模な家族の集まりといった重要な行事に欠かせない存在だ。\n\n調理技法はダム蒸しだ。半煮えの米とスパイスで調味した肉を重い鍋に密閉し、弱火で仕上げる。閉じ込められた蒸気が二つの食材を同時に完成させる。こんがりと揚げた玉ねぎ——深い色に焦がしてカラメル化したもの——は飾りではなく構造的な要素で、ダムの過程で溶け込み、米に甘みと色を与える。温かいミルクに溶かしたサフランを、密閉前に最上層に振りかける。",
+      hi: "बिरयानी की जड़ें भारतीय उपमहाद्वीप के मुगल दरबारों में हैं, जहाँ फ़ारसी प्रभाव वाले चावल के व्यंजन शताब्दियों में विकसित होकर अलग-अलग क्षेत्रीय रूपों में आए। पाकिस्तान की बिरयानी परंपरा — विशेष रूप से कराची और हैदराबाद शैलियाँ — उपमहाद्वीप की सबसे सुगंधित किस्मों में से है, जो साबुत मसालों, कैरमेलाइज़्ड प्याज़ और परतदार चावल पर टिकी है। यह व्यंजन हर महत्वपूर्ण अवसर पर केंद्रीय भूमिका निभाता है: शादियाँ, ईद के उत्सव और बड़ी पारिवारिक सभाएँ।\n\nतकनीक है दम पकाई: आधे पके चावल और मसालेदार गोश्त को एक भारी बर्तन में एक साथ बंद करके धीमी आँच पर पकाया जाता है, जिसमें क़ैद भाप दोनों घटकों को एक साथ पूरा करती है। तली हुई प्याज़ — गहरे रंग और पूरी कैरमेलाइज़ेशन तक पकाई गई — महज़ सजावट नहीं बल्कि एक संरचनात्मक तत्व है; यह दम के दौरान घुलकर चावल को मिठास और रंग देती है। गर्म दूध में घोला गया केसर बंद करने से पहले ऊपरी परत पर छिड़का जाता है।",
+      tr: "Biryani, Hindistan alt kıtasının Babür saraylarına dayanır; burada yüzyıllar boyunca Pers etkili pirinç yemekleri kendine özgü bölgesel formlara evrildi. Pakistan'ın biryani geleneği — özellikle Karaçi ve Haydarabad stilleri — alt kıtanın en aromatik versiyonları arasında yer alır; bütün baharatlar, karamelize soğan ve katmanlı pirinç üzerine inşa edilmiştir. Bu yemek her önemli törende merkezde yer alır: düğünler, Ramazan Bayramı kutlamaları ve büyük aile toplantıları.\n\nTeknik dum pişirme yöntemidir: yarı pişmiş pirinç ve baharatlı et ağır bir tencerede birlikte mühürlenerek düşük ateşte pişirilir; hapsolmuş buhar her iki bileşeni de aynı anda tamamlar. Kızartılmış soğanlar — karanlık ve tam karamelize olana kadar pişirilen — bir garnitür değil yapısal bir unsurdur; dum sürecinde eriyerek pirince tatlılık ve renk katar. Sıcak sütte eritilen safran, mühürleme öncesinde üst tabakaya gezdirilerek dökülür.",
+      it: "Il biryani affonda le radici nelle corti moghul del subcontinente indiano, dove i piatti di riso a influenza persiana si sono evoluti nel corso dei secoli in forme regionali distinte. La tradizione del biryani pakistano — in particolare gli stili di Karachi e di Hyderabad — è tra le più aromatiche del subcontinente, costruita su spezie intere, cipolla caramellata e riso a strati. Il piatto è centrale ad ogni occasione importante: matrimoni, festeggiamenti dell'Eid e grandi riunioni familiari.\n\nLa tecnica è la cottura dum: il riso parzialmente cotto e la carne speziata vengono sigillati insieme in una pentola pesante e terminati a fuoco basso, con il vapore intrappolato che completa entrambi i componenti simultaneamente. Le cipolle fritte — cotte fino a scurire e caramellarsi completamente — non sono una guarnizione ma un elemento strutturale; si sciolgono durante il dum, contribuendo dolcezza e colore al riso. Lo zafferano sciolto in latte tiepido viene versato a filo sullo strato superiore prima di sigillare.",
+      ko: "비리야니의 기원은 인도 아대륙의 무굴 왕조 궁정으로 거슬러 올라가며, 페르시아의 영향을 받은 쌀 요리가 수 세기에 걸쳐 고유한 지역적 형태로 발전했다. 파키스탄의 비리야니 전통 — 특히 카라치와 하이데라바드 스타일 — 은 아대륙에서 가장 향기로운 버전 중 하나로, 통향신료, 캐러멜화한 양파, 겹겹이 쌓인 쌀을 기반으로 한다. 이 요리는 결혼식, 이드 축제, 대규모 가족 모임 등 모든 중요한 행사의 중심에 놓인다.\n\n핵심 기술은 덤 조리법이다. 반쯤 익힌 쌀과 향신료로 양념한 고기를 두꺼운 냄비에 함께 밀봉한 후 약한 불로 마저 익히는데, 갇힌 증기가 두 재료를 동시에 완성시킨다. 짙은 색으로 완전히 캐러멜화될 때까지 볶은 양파는 장식이 아니라 구조적인 요소로, 덤 과정에서 녹아들어 쌀에 단맛과 색깔을 부여한다. 따뜻한 우유에 녹인 사프란을 밀봉 전 최상단 층에 뿌린다."
     }
   },
   {
