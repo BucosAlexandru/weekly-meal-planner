@@ -12459,7 +12459,8 @@ export const recipes = [
       ja: "ベトナム",
       tr: "Vietnam",
       it: "Vietnam",
-      ko: "베트남"
+      ko: "베트남",
+      hi: "वियतनाम"
     },
     name: {
       ro: "Bún bò Huế",
@@ -12474,7 +12475,8 @@ export const recipes = [
       ja: "ブンボーフエ",
       tr: "Bún bò Huế",
       it: "Bún bò Huế",
-      ko: "분보후에"
+      ko: "분보후에",
+      hi: "बून बो ह्ये"
     },
     category: {
       ro: "Prânz",
@@ -12489,7 +12491,8 @@ export const recipes = [
       ja: "ランチ",
       tr: "Öğle yemeği",
       it: "Pranzo",
-      ko: "점심"
+      ko: "점심",
+      hi: "दोपहर का खाना"
     },
     servings: 4,
     tipType: 'soup',
@@ -12527,19 +12530,20 @@ export const recipes = [
       hi: "सुअर की नली और गाय की हड्डियों को 5 मिनट उबलते पानी में डालें, फिर छान लें और ठंडे पानी से धो लें। शैलॉट और लहसुन को कटे हुए भाग नीचे करके सूखे तवे पर तेज़ आंच पर 3–4 मिनट तक थोड़ा झुलसने तक सेंकें। बड़े बर्तन में सुअर की नली, हड्डियाँ, लेमनग्रास, सेंके हुए शैलॉट और लहसुन डालें, 2.5 लीटर ठंडा पानी डालें, उबाल लें, झाग निकालें और धीमी आंच पर 1 घंटे पकाएं। 100 मिली गर्म शोरबे में झींगे का पेस्ट घोलकर बर्तन में मिलाएं, फिर फिश सॉस, चीनी, नमक और मिर्च का तेल डालकर स्वाद को नमकीन, हल्का तीखा और खुशबूदार होने तक समायोजित करें। पतली कटी गाय की नली डालें और धीमी आंच पर 15–20 मिनट तक पोच करें जब तक पूरी तरह पक न जाए, फिर निकालकर पतला काटें। पैकेट के निर्देशों के अनुसार चावल के सेवईं पकाएं (आमतौर पर 3–5 मिनट), छानें और 4 गहरे कटोरों में बांटें। गर्म शोरबा ऊपर से डालें, सुअर और गाय के मांस के टुकड़े रखें और तुरंत अंकुरित सोयाबीन, ताजी जड़ी-बूटियाँ, नींबू के टुकड़े और मिर्च के साथ परोसें।"
     },
     originText: {
-      ro: "Bún bò Huế este o rețetă tradițională din Vietnam.",
-      en: "Bún bò Huế is a traditional recipe from Vietnam.",
-      es: "Bún bò Huế es una receta tradicional de Vietnam.",
-      fr: "Bún bò Huế est une recette traditionnelle du Vietnam.",
-      de: "Bún bò Huế ist ein traditionelles Rezept aus Vietnam.",
-      pt: "Bún bò Huế é uma receita tradicional do Vietnã.",
-      ru: "Бун бо Хюэ — традиционный рецепт из Вьетнама.",
-      ar: "بون بو هوي هي وصفة تقليدية من فيتنام.",
-      zh: "顺化牛肉粉 是来自越南的传统食谱。",
-      ja: "ブンボーフエ はベトナムの伝統的なレシピです。",
-      tr: "Bún bò Huế Vietnam kökenli geleneksel bir tariftir.",
-      it: "Bún bò Huế è una ricetta tradizionale del Vietnam.",
-      ko: "분보후에는 베트남의 전통 요리입니다."
+      ro: "Bún bò Huế vine din fosta capitală imperială Huế din centrul Vietnamului, unde este unul dintre preparatele emblematice ale orașului. Spre deosebire de pho — clar, ușor și subtil — bún bò Huế este puternic condimentat: lemongrass-ul și pasta de creveți fermentați dau supei o profunzime savuroasă complexă, iar uleiul de ardei iute produce culoarea și căldura care îl deosebesc de alte supe vietnameze cu tăiței.\n\nSupa necesită atât picior de porc cât și rasol de vită — porcul aduce colagen și consistență, iar vița un gust clar de carne. Arderea cepelor și usturoiului pe o tigaie uscată înainte de a le adăuga este un pas împrumutat din tehnica pho: elimină ascuțimea și adaugă o ușoară aromă afumată dulce care rotunjește supa.",
+      en: "Bún bò Huế comes from the former imperial capital of Huế in central Vietnam, where it is one of the city's defining dishes. Unlike pho — clear, mild, and subtle — bún bò Huế is deeply spiced: lemongrass and fermented shrimp paste give the broth a complex, savoury depth, and chilli oil produces a colour and warmth that sets it apart from other Vietnamese noodle soups. The round rice vermicelli are thicker than flat pho noodles and hold their texture in the hot broth.\n\nThe broth requires both pork hock and beef shank — the pork contributes collagen and body while the beef adds a cleaner meaty flavour. Charring the shallots and garlic on a dry pan before adding them is a step borrowed from pho technique: it removes sharpness and adds a sweet smokiness that rounds out the broth.",
+      es: "Bún bò Huế proviene de la antigua capital imperial de Huế, en el centro de Vietnam, donde es uno de los platos más representativos de la ciudad. A diferencia del pho — claro, suave y sutil — el bún bò Huế está profundamente especiado: la hierba limón y la pasta de camarones fermentados otorgan al caldo una profundidad sabrosa y compleja, y el aceite de chile produce un color y un calor que lo diferencian de otras sopas de fideos vietnamitas.\n\nEl caldo requiere tanto pata de cerdo como jarrete de res — el cerdo aporta colágeno y cuerpo, mientras que la carne da un sabor más limpio. Chamuscar las chalotas y el ajo en una sartén seca antes de añadirlos es un paso tomado de la técnica del pho: elimina la aspereza y añade un ahumado ligeramente dulce que redondea el caldo.",
+      fr: "Bún bò Huế vient de l'ancienne capitale impériale de Huế, au centre du Vietnam, où c'est l'un des plats emblématiques de la ville. Contrairement au pho — clair, doux et subtil — le bún bò Huế est fortement épicé : la citronnelle et la pâte de crevettes fermentées confèrent au bouillon une profondeur savoureuse et complexe, et l'huile de piment donne une couleur et une chaleur qui le distinguent des autres soupes de nouilles vietnamiennes.\n\nLe bouillon nécessite à la fois du pied de porc et du jarret de bœuf — le porc apporte du collagène et de la consistance, tandis que le bœuf donne une saveur de viande plus nette. Faire griller les échalotes et l'ail à sec avant de les ajouter est une technique empruntée au pho : elle supprime le piquant et ajoute une légère fumée sucrée qui arrondit le bouillon.",
+      de: "Bún bò Huế stammt aus der ehemaligen Kaiserhauptstadt Huế in Zentralvietnam, wo es eines der prägenden Gerichte der Stadt ist. Anders als Pho — klar, mild und subtil — ist bún bò Huế kräftig gewürzt: Zitronengras und fermentierte Garnelenpaste verleihen der Brühe eine komplexe, herzhafte Tiefe, und Chilliöl erzeugt eine Farbe und Wärme, die es von anderen vietnamesischen Nudelsuppen abhebt.\n\nDie Brühe braucht sowohl Schweinehaxe als auch Rinderhaxe — das Schweinefleisch liefert Kollagen und Körper, während das Rindfleisch einen klareren Fleischgeschmack beisteuert. Das Anrösten der Schalotten und des Knoblauchs in einer trockenen Pfanne ist eine Technik aus der Pho-Küche: Es mildert die Schärfe und fügt ein leicht süßliches Raucharoma hinzu, das die Brühe abrundet.",
+      pt: "Bún bò Huế vem da antiga capital imperial de Huế, no centro do Vietnã, onde é um dos pratos mais marcantes da cidade. Ao contrário do pho — claro, suave e sutil — o bún bò Huế é fortemente temperado: a erva-cidreira e a pasta de camarão fermentada conferem ao caldo uma profundidade saborosa e complexa, e o óleo de malagueta produz uma cor e um calor que o distinguem das outras sopas de macarrão vietnamitas.\n\nO caldo requer tanto pé de porco quanto músculo de boi — o porco contribui com colágeno e corpo, enquanto a carne dá um sabor mais limpo. Chamuscar as chalotas e o alho numa frigideira seca antes de os adicionar é um passo emprestado da técnica do pho: elimina a acidez e adiciona uma fumacidade ligeiramente adocicada que arredonda o caldo.",
+      ru: "Бун бо Хюэ родом из бывшей императорской столицы Хюэ в центральном Вьетнаме, где это одно из главных блюд города. В отличие от фо — прозрачного, мягкого и деликатного — бун бо Хюэ интенсивно приправлен: лемонграсс и ферментированная креветочная паста придают бульону сложную, насыщенную глубину, а чилийное масло создаёт цвет и тепло, которые выделяют его среди других вьетнамских лапш.\n\nДля бульона необходимы как свиная рулька, так и говяжья — свинина даёт коллаген и насыщенность, а говядина — более чистый мясной вкус. Обугливание шалота и чеснока на сухой сковороде — приём, заимствованный из техники фо: он убирает остроту и добавляет лёгкий сладковатый дымок, округляющий бульон.",
+      ar: "بون بو هوي يأتي من العاصمة الإمبراطورية القديمة هوي في وسط فيتنام، حيث يُعدّ من أبرز أطباق المدينة. على خلاف الفو — الشفاف والخفيف والرقيق — فإن بون بو هوي مُبهَّر بعمق: حشيشة الليمون ومعجون الروبيان المخمّر يمنحان المرق ثراءً لذيذاً ومعقداً، وزيت الفلفل الحار يُضفي لوناً ودفئاً يُميّزانه عن سائر حساءات النودلز الفيتنامية.\n\nيستلزم المرق كراع الخنزير وساق البقر معاً — يُسهم الخنزير بالكولاجين والجسم بينما تُضفي البقرة نكهة لحمية أوضح. يُعدّ تشويح الكراث والثوم في مقلاة جافة قبل إضافتهما تقنيةً مستعارة من الفو: تُزيل الحدة وتُضاف نكهة مدخنة خفيفة تُلطّف المرق.",
+      zh: "顺化牛肉粉来自越南中部的昔日皇都顺化，是这座城市的标志性美食之一。与清淡温和的越南河粉（pho）不同，顺化牛肉粉味道浓郁：香茅和发酵虾酱赋予汤底复杂的鲜香深度，辣椒油带来的色泽与热度也令其在越南面食汤品中独树一帜。圆形米线比河粉扁面更粗，在热汤中依旧保持良好口感。\n\n汤底需同时使用猪蹄和牛腱子——猪肉提供胶质和浓稠感，牛肉带来更清晰的肉香。将葱头和大蒜在干锅中炙烤再入汤，是借鉴河粉的手法：去除辛辣气，增添淡淡的甜烟香，令汤底更加醇厚圆润。",
+      ja: "ブンボーフエはベトナム中部の旧帝都フエを発祥とし、その街を代表する料理のひとつです。透明で控えめなフォーとは異なり、ブンボーフエは力強いスパイシーさが特徴です。レモングラスと発酵エビペーストがスープに複雑で旨みのある深みを与え、チリオイルが他のベトナム麺料理とは一線を画す色合いと温かさを生み出します。太めの丸いライスヴェルミチェッリは熱いスープの中でもしっかりした食感を保ちます。\n\nスープには豚すね肉と牛すね肉の両方が必要です。豚肉はコラーゲンとコクを与え、牛肉はすっきりした肉の旨みを加えます。シャロットとニンニクを乾いたフライパンで炙ってから加えるのはフォーの技法から借りた手順です。辛みを和らげ、甘くスモーキーな香りを加えてスープをまとめます。",
+      tr: "Bún bò Huế, Vietnam'ın merkezindeki eski imparatorluk başkenti Huế'den gelir ve şehrin simge yemeklerinden biridir. Berrak, hafif ve nüanslı bir çorba olan pho'nun aksine, bún bò Huế yoğun baharatlıdır: limonotu ve fermente karides ezmesi, suya karmaşık ve doyurucu bir derinlik katarken, acı biber yağı onu diğer Vietnam erişte çorbalarından ayıran rengi ve sıcaklığı sağlar. Yuvarlak pirinç eriştesi, düz pho eriştelerin aksine daha kalın olup sıcak suda dokusunu korur.\n\nSu, hem domuz incik hem de dana incik gerektirir — domuz kısmı jelatin ve gövde katarken, dana daha sade bir et tadı ekler. Arpacık soğanlarını ve sarımsakları kuru tavada kavurmak, pho tekniğinden alınan bir adımdır: keskinliği giderir ve suyu yumuşatan tatlımsı bir dumanlılık ekler.",
+      it: "Bún bò Huế viene dall'antica capitale imperiale di Huế, nel Vietnam centrale, dove è uno dei piatti più rappresentativi della città. A differenza del pho — limpido, delicato e sottile — il bún bò Huế è intensamente speziato: la citronella e la pasta di gamberi fermentati conferiscono al brodo una profondità saporita e complessa, e l'olio al peperoncino produce un colore e un calore che lo distinguono dalle altre zuppe di noodles vietnamite.\n\nIl brodo richiede sia lo stinco di maiale che quello di manzo — il maiale apporta collagene e consistenza, mentre il manzo aggiunge un sapore di carne più netto. Abbrustolire gli scalogni e l'aglio su una padella asciutta prima di aggiungerli è un passaggio preso in prestito dalla tecnica del pho: elimina l'asprezza e aggiunge un leggero affumicato dolce che arrotonda il brodo.",
+      ko: "분보후에는 베트남 중부의 옛 황도 후에에서 유래했으며, 이 도시를 대표하는 음식 중 하나입니다. 맑고 순하며 절제된 쌀국수 포와 달리, 분보후에는 깊은 향신료가 특징입니다. 레몬그라스와 발효 새우 페이스트가 국물에 복합적이고 감칠맛 나는 깊이를 더하고, 칠리 오일은 다른 베트남 면 요리와 차별화되는 색감과 따뜻함을 냅니다.\n\n국물에는 돼지 정강이와 소 정강이 모두 필요합니다. 돼지고기는 콜라겐과 풍성한 바디감을 더하고, 소고기는 맑은 육향을 냅니다. 샬롯과 마늘을 건식 팬에 구운 뒤 넣는 것은 쌀국수 포 기법에서 빌려온 단계입니다. 날카로운 맛을 제거하고 달콤한 훈연향을 더해 국물을 부드럽게 마무리합니다.",
+      hi: "बून बो ह्ये (Bún bò Huế) वियतनाम के मध्य में स्थित पुरानी शाही राजधानी ह्ये से आता है, जहाँ यह शहर के परिभाषित व्यंजनों में से एक है। फो के विपरीत — जो साफ, हल्का और सुक्ष्म होता है — बून बो ह्ये गहरे मसालों से भरपूर है: लेमनग्रास और किण्वित झींगे का पेस्ट शोरबे को जटिल, स्वादिष्ट गहराई देते हैं, और मिर्च का तेल उस रंग और गर्माहट को पैदा करता है जो इसे अन्य वियतनामी नूडल सूप से अलग करता है।\n\nशोरबे के लिए पोर्क हॉक और बीफ शैंक दोनों जरूरी हैं — सूअर कोलेजन और गाढ़ापन देता है जबकि गाय साफ मांसल स्वाद जोड़ती है। शैलॉट और लहसुन को सूखे तवे पर भूनना फो की तकनीक से उधार लिया गया कदम है: यह तीखापन दूर करता है और एक हल्की मीठी धुएँदार खुशबू जोड़ता है जो शोरबे को संतुलित करती है।"
     }
   },
   {
