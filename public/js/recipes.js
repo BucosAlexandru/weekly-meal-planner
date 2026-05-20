@@ -13683,7 +13683,8 @@ export const recipes = [
       ja: "アルメニア",
       tr: "Ermenistan",
       it: "Armenia",
-      ko: "아르메니아"
+      ko: "아르메니아",
+      hi: "आर्मेनिया"
     },
     name: {
       ro: "Khorovats",
@@ -13698,7 +13699,8 @@ export const recipes = [
       ja: "ホロヴァッツ",
       tr: "Khorovats",
       it: "Khorovats",
-      ko: "호로바츠"
+      ko: "호로바츠",
+      hi: "ख़ोरोवाट्स"
     },
     category: {
       ro: "Cină",
@@ -13713,7 +13715,8 @@ export const recipes = [
       ja: "夕食",
       tr: "Akşam yemeği",
       it: "Cena",
-      ko: "저녁"
+      ko: "저녁",
+      hi: "रात का खाना"
     },
     servings: 4,
     tipType: 'meat',
@@ -13731,7 +13734,8 @@ export const recipes = [
       ja: ["豚肉または牛肉", "パプリカ", "玉ねぎ", "トマト", "ナス", "スパイス"],
       tr: ["domuz eti veya dana eti", "kapya biber", "soğbir", "domates", "yumurtaplant", "baharatlar"],
       it: ["maiale o manzo", "peperone", "cipolla", "pomodori", "uovoplant", "spezie"],
-      ko: ["돼지고기 또는 소고기", "파프리카", "양파", "토마토", "계란식물", "향신료"]
+      ko: ["돼지고기 또는 소고기", "파프리카", "양파", "토마토", "계란식물", "향신료"],
+      hi: ["सूअर का मांस या बीफ", "शिमला मिर्च", "प्याज़", "टमाटर", "बैंगन", "मसाले"]
     },
     howIsMade: {
       ro: "Marinează bucățile de carne cu ceapă, condimente și ulei, înfige-le pe frigărui și frige-le pe grătar până devin fragede.",
@@ -13746,22 +13750,24 @@ export const recipes = [
       ja: "肉を玉ねぎ・スパイス・油でマリネし、串に刺して柔らかくなるまでグリルする。",
       tr: "Et parçalarını soğan, baharatlar ve yağla marine edin, şişe takın ve yumuşayana kadar ızgarada pişirin.",
       it: "Marinare i pezzi di carne con cipolla, spezie e olio, infilzarli su spiedini e cuocerli alla griglia fino a quando sono teneri.",
-      ko: "고기를 양파, 향신료, 기름에 재운 후 꼬치에 꿰어 부드러워질 때까지 그릴에 굽습니다."
+      ko: "고기를 양파, 향신료, 기름에 재운 후 꼬치에 꿰어 부드러워질 때까지 그릴에 굽습니다.",
+      hi: "मांस के टुकड़ों को प्याज़, मसालों और तेल के साथ मैरिनेट करें, सीखों पर लगाएं और नरम होने तक ग्रिल करें।"
     },
     originText: {
-      ro: "Khorovats este o rețetă tradițională din Armenia.",
-      en: "Khorovats is a traditional recipe from Armenia.",
-      es: "Khorovats es una receta tradicional de Armenia.",
-      fr: "Khorovats est une recette traditionnelle d'Arménie.",
-      de: "Khorovats ist ein traditionelles Rezept aus Armenien.",
-      pt: "Khorovats é uma receita tradicional da Armênia.",
-      ru: "Хоровац — традиционный рецепт из Армении.",
-      ar: "خوروفاتس هي وصفة تقليدية من أرمينيا.",
-      zh: "亚美尼亚烤肉 是来自亚美尼亚的传统食谱。",
-      ja: "ホロヴァッツ はアルメニアの伝統的なレシピです。",
-      tr: "Khorovats Ermenistan kökenli geleneksel bir tariftir.",
-      it: "Khorovats è una ricetta tradizionale dell'Armenia.",
-      ko: "호로바츠는 아르메니아의 전통 요리입니다."
+      ro: "Khorovats este cuvântul armenesc pentru grătar — mai specific, carne gătită pe foc viu de lemne sau cărbuni, adesea afară, la întruniri de familie și prieteni. În Armenia, prepararea khorovats-ului este un ritual: bărbații aprind focul, întrețin cărbunii și controlează gătitul, cu carnea de porc ca alegere cea mai comună, iar legumele — ardei întregi, ceapă, vinete și roșii — grilate alături de carne până devin negre și dulci.\n\nCarnea pentru khorovats nu necesită o marinadă elaborată — sare, ceapă și uneori piper negru sunt suficiente, focul oferind aroma. Exteriorul carbonizat caracteristic și interiorul suculent depind de căldura cărbunilor și de distanța cărnii față de ei. Legumele grilate sunt desfăcute la masă, cu coajele înlăturate și amestecate cu sucurile, formând un condiment grosier servit alături de carne.",
+      en: "Khorovats is the Armenian word for barbecue — specifically, meat cooked over live wood or charcoal fire, often outdoors, at gatherings of family and friends. In Armenia, the preparation of khorovats is a ritual occasion: men light the fire, tend the coals, and control the cooking, with pork the most common choice and vegetables — whole peppers, onions, aubergines, and tomatoes — grilled alongside the meat until blackened and sweet.\n\nThe meat for khorovats requires no elaborate marinade — salt, onion, and sometimes black pepper are enough, with the fire providing the flavour. The characteristic charred exterior and juicy interior depend on the heat of the coals and the distance of the meat from them. The grilled vegetables are pulled apart at the table, their skins stripped away, and mixed with the juices into a rough relish served alongside the meat.",
+      es: "Khorovats es la palabra armenia para barbacoa — específicamente, carne cocinada sobre fuego vivo de madera o carbón, a menudo al aire libre, en reuniones de familia y amigos. En Armenia, la preparación de khorovats es una ocasión ritual: los hombres encienden el fuego, cuidan las brasas y controlan la cocción, siendo el cerdo la elección más común y las verduras — pimientos enteros, cebollas, berenjenas y tomates — asadas junto a la carne hasta que se ennegrecen y endulzan.\n\nLa carne para khorovats no requiere una marinada elaborada — sal, cebolla y a veces pimienta negra son suficientes, siendo el fuego quien proporciona el sabor. El exterior carbonizado característico y el interior jugoso dependen del calor de las brasas y la distancia de la carne de ellas. Las verduras asadas se deshacen en la mesa, se les quita la piel y se mezclan con los jugos formando una salsa rústica servida junto a la carne.",
+      fr: "Khorovats est le mot arménien pour barbecue — plus précisément, de la viande cuite sur un feu de bois ou de charbon de bois, souvent en plein air, lors de rassemblements familiaux et entre amis. En Arménie, la préparation du khorovats est un rituel : les hommes allument le feu, entretiennent les braises et contrôlent la cuisson, le porc étant le choix le plus courant et les légumes — poivrons entiers, oignons, aubergines et tomates — grillés à côté de la viande jusqu'à être noircis et sucrés.\n\nLa viande pour le khorovats ne nécessite pas de marinade élaborée — sel, oignon et parfois poivre noir suffisent, le feu apportant la saveur. L'extérieur carbonisé caractéristique et l'intérieur juteux dépendent de la chaleur des braises et de la distance entre la viande et celles-ci. Les légumes grillés sont déchirés à table, leurs peaux ôtées, et mélangés avec les jus pour former un condiment rustique servi avec la viande.",
+      de: "Khorovats ist das armenische Wort für Barbecue — konkret Fleisch, das über offenem Holz- oder Holzkohlefeuer gegart wird, oft draußen, bei Familientreffen und Freundesgatherings. In Armenien ist die Zubereitung von Khorovats ein ritueller Anlass: Männer entzünden das Feuer, hegen die Glut und kontrollieren das Garen, wobei Schweinefleisch die häufigste Wahl ist und Gemüse — ganze Paprika, Zwiebeln, Auberginen und Tomaten — neben dem Fleisch gegrillt wird, bis es geschwärzt und süß ist.\n\nDas Fleisch für Khorovats braucht keine aufwendige Marinade — Salz, Zwiebel und gelegentlich schwarzer Pfeffer reichen aus; das Feuer sorgt für den Geschmack. Das charakteristisch verkohlte Äußere und das saftige Innere hängen von der Gluttemperatur und dem Abstand des Fleisches davon ab. Das gegrillte Gemüse wird am Tisch auseinandergenommen, die Haut entfernt und mit den Säften zu einem rustikalen Relish gemischt, das neben dem Fleisch serviert wird.",
+      pt: "Khorovats é a palavra armênia para churrasco — especificamente, carne cozida sobre fogo vivo de madeira ou carvão, frequentemente ao ar livre, em reuniões de família e amigos. Na Armênia, a preparação do khorovats é uma ocasião ritual: os homens acendem o fogo, cuidam do carvão e controlam o cozimento, sendo o porco a escolha mais comum e os legumes — pimentos inteiros, cebolas, berinjelas e tomates — grelhados ao lado da carne até ficarem enegrecidos e adocicados.\n\nA carne para o khorovats não requer uma marinada elaborada — sal, cebola e às vezes pimenta-do-reino são suficientes, sendo o fogo quem fornece o sabor. O exterior carbonizado característico e o interior suculento dependem do calor do carvão e da distância da carne deles. Os legumes grelhados são desfeitos à mesa, as peles retiradas e misturadas com os sucos para formar um condimento rústico servido ao lado da carne.",
+      ru: "Хоровац — армянское слово для обозначения барбекю: мясо, приготовленное на открытом огне из дров или углей, часто на улице, на встречах семьи и друзей. В Армении приготовление хороваца — это ритуальный повод: мужчины разжигают огонь, ухаживают за углями и контролируют приготовление, причём свинина — самый распространённый выбор, а овощи — целые перцы, лук, баклажаны и помидоры — жарятся рядом с мясом до потемнения и сладкости.\n\nМясо для хороваца не требует сложного маринада — соли, лука и иногда чёрного перца достаточно, а огонь сам по себе обеспечивает вкус. Характерная обугленная снаружи корочка и сочная внутренняя часть зависят от жара углей и расстояния мяса от них. Жареные овощи разбирают за столом, снимают с них кожицу и смешивают с соками в грубую приправу, которую подают рядом с мясом.",
+      ar: "خوروفاتس هو الكلمة الأرمنية للشواء — تحديداً لحم يُطهى فوق نار حطب أو فحم حيّة، في الهواء الطلق في الغالب، خلال تجمعات العائلة والأصدقاء. في أرمينيا، إعداد الخوروفاتس مناسبة طقوسية: يُشعل الرجال النار، ويرعون الجمر، ويديرون الطهي، إذ يُعدّ لحم الخنزير الخيار الأكثر شيوعاً، وتُشوى الخضروات — الفلفل الحلو كاملاً والبصل والباذنجان والطماطم — بجانب اللحم حتى تسودّ وتحلو.\n\nلحم الخوروفاتس لا يحتاج تتبيلة معقدة — الملح والبصل وربما الفلفل الأسود يكفي، والنار هي من تمنح النكهة. القشرة المتفحمة المميزة والمركز العصير يعتمدان على حرارة الجمر وبعد اللحم عنه. تُقسَّم الخضروات المشوية على الطاولة وتُقشَّر وتُخلط بعصائرها لتكوّن صلصة خشنة تُقدَّم جانباً.",
+      zh: "霍罗瓦茨是亚美尼亚语「烧烤」的意思——专指在燃烧的木材或炭火上烹制的肉，通常在户外进行，是家庭和朋友聚会的场合。在亚美尼亚，准备霍罗瓦茨是一种仪式性的场合：男人们生火、照料炭火并控制烹饪过程，猪肉是最常见的选择，蔬菜——整个辣椒、洋葱、茄子和番茄——与肉一起烤至焦黑甘甜。\n\n霍罗瓦茨的肉不需要精心的腌制——盐、洋葱，有时再加黑胡椒就足够了，火本身提供了风味。特有的焦黑外表和多汁内里取决于炭火的热度和肉与炭火的距离。烤好的蔬菜在桌上被拆开，去掉外皮后与汁液混合成一种粗犷的酱料，与肉一起上桌。",
+      ja: "ホロヴァッツはアルメニア語でバーベキューを意味する——具体的には、薪や炭の生きた火の上で調理された肉で、家族や友人の集まりでしばしば屋外で行われる。アルメニアでは、ホロヴァッツの準備は儀式的な機会だ：男性が火を起こし、炭の管理をし、調理をコントロールする。豚肉が最も一般的な選択で、ピーマン丸ごと、タマネギ、ナス、トマトなどの野菜が肉と一緒に黒くなり甘みが出るまでグリルされる。\n\nホロヴァッツの肉には手の込んだマリネは必要ない——塩、玉ねぎ、そして時には黒こしょうで十分で、火がフレーバーを提供する。特徴的な焦げた外側とジューシーな内側は炭の熱さと肉との距離によって決まる。グリルした野菜はテーブルで引き裂かれ、皮が取り除かれ、肉汁と混ぜられてラスティックなレリッシュになり、肉の付け合わせとして出される。",
+      tr: "Khorovats, Ermenice'de barbekü anlamına gelir — özellikle odun veya kömür ateşinin üzerinde pişirilen et, çoğunlukla açık havada, aile ve arkadaş buluşmalarında. Ermenistan'da khorovats hazırlamak ritüel bir fırsattır: erkekler ateşi yakar, közleri korur ve pişirmeyi kontrol eder; domuz eti en yaygın seçimdir ve sebzeler — bütün biber, soğan, patlıcan ve domates — etin yanında kararıp tatlılaşana kadar ızgarada pişirilir.\n\nKhorovats'ın eti ayrıntılı bir marine gerektirmez — tuz, soğan ve bazen karabiber yeterlidir; tadı ateş verir. Karakteristik yanmış dış yüzey ve sulu iç, közün sıcaklığına ve etin ondan olan mesafesine bağlıdır. Izgara sebzeler masada parçalanır, kabukları soyulur ve özleriyle karıştırılarak etin yanında servis edilen kaba bir sos oluşturulur.",
+      it: "Khorovats è la parola armena per barbecue — precisamente, carne cotta su fuoco vivo di legna o carboni, spesso all'aperto, in riunioni di famiglia e amici. In Armenia, la preparazione del khorovats è un'occasione rituale: gli uomini accendono il fuoco, curano i carboni e controllano la cottura, con il maiale come scelta più comune e le verdure — peperoni interi, cipolle, melanzane e pomodori — grigliate accanto alla carne finché non sono annerite e dolci.\n\nLa carne per il khorovats non richiede una marinatura elaborata — sale, cipolla e a volte pepe nero bastano, con il fuoco che fornisce il sapore. L'esterno carbonizzato caratteristico e l'interno succoso dipendono dal calore dei carboni e dalla distanza della carne da essi. Le verdure grigliate vengono scomposte a tavola, le bucce rimosse e mescolate con i succhi per formare un condimento rustico servito accanto alla carne.",
+      ko: "호로바츠는 아르메니아어로 바비큐를 뜻합니다 — 구체적으로는 살아있는 장작이나 숯불 위에서 조리된 고기로, 종종 야외에서 가족과 친구 모임에서 만들어집니다. 아르메니아에서 호로바츠 준비는 의식적인 행사입니다: 남성들이 불을 피우고, 숯을 관리하며, 조리를 통제하는데, 돼지고기가 가장 일반적인 선택이고 채소 — 통 피망, 양파, 가지, 토마토 — 가 고기와 함께 검게 탈 때까지 구워집니다.\n\n호로바츠의 고기는 정교한 마리네이드가 필요하지 않습니다 — 소금, 양파, 때로는 흑후추면 충분하며, 불이 맛을 제공합니다. 특유의 탄 외부와 촉촉한 내부는 숯불의 열기와 고기와 숯불 사이의 거리에 달려 있습니다. 구운 채소는 식탁에서 분해하여 껍질을 제거하고 즙과 섞어 고기 곁에 내는 거친 채소 소스를 만듭니다.",
+      hi: "ख़ोरोवाट्स आर्मेनियाई भाषा में बारबेक्यू के लिए शब्द है — विशेष रूप से, जीवित लकड़ी या चारकोल की आग पर पकाया गया मांस, अक्सर बाहर, परिवार और दोस्तों की सभाओं में। आर्मेनिया में, ख़ोरोवाट्स की तैयारी एक अनुष्ठान अवसर है: पुरुष आग जलाते हैं, कोयले की देखभाल करते हैं और खाना पकाने को नियंत्रित करते हैं, सूअर का मांस सबसे आम विकल्प है और सब्जियां — पूरी मिर्च, प्याज़, बैंगन और टमाटर — मांस के साथ काली और मीठी होने तक ग्रिल की जाती हैं।\n\nख़ोरोवाट्स के मांस के लिए विस्तृत मैरिनेड की जरूरत नहीं — नमक, प्याज़ और कभी-कभी काली मिर्च पर्याप्त है, आग स्वाद प्रदान करती है। विशिष्ट जला हुआ बाहरी हिस्सा और रसदार अंदरूनी हिस्सा कोयले की गर्मी और उनसे मांस की दूरी पर निर्भर करता है। ग्रिल की हुई सब्जियां मेज पर अलग की जाती हैं, उनके छिलके उतारे जाते हैं और रसों के साथ मिलाकर एक मोटी चटनी बनाई जाती है जो मांस के साथ परोसी जाती है।"
     }
   },
   {
