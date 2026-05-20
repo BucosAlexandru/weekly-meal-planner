@@ -11136,7 +11136,8 @@ export const recipes = [
       ja: "エクアドル",
       tr: "Ekvador",
       it: "Ecuador",
-      ko: "에콰도르"
+      ko: "에콰도르",
+      hi: "इक्वाडोर"
     },
     name: {
       ro: "Encebollado",
@@ -11151,7 +11152,8 @@ export const recipes = [
       ja: "エンセボジャード",
       tr: "Encebollado",
       it: "Encebollado",
-      ko: "엔세보야도"
+      ko: "엔세보야도",
+      hi: "एन्सेबोयादो"
     },
     category: {
       ro: "Prânz",
@@ -11166,7 +11168,8 @@ export const recipes = [
       ja: "ランチ",
       tr: "Öğle yemeği",
       it: "Pranzo",
-      ko: "점심"
+      ko: "점심",
+      hi: "दोपहर का खाना"
     },
     ingredients: {
       ro: ["700 g ton proaspăt sau 2 conserve ton în apă (400 g total), scurse", "600 g yuca (manioc), curățată și tăiată bucăți de 4 cm", "1 ceapă roșie mare (circa 200 g), tăiată în felii subțiri", "4 roșii medii (circa 400 g), tăiate grosier", "4 căței de usturoi, tăiați grosier", "1 linguriță chimen măcinat", "1 linguriță pastă de achiote sau 1/2 linguriță paprika dulce", "1,5 litri supă de pește sau apă", "3 linguri zeamă de lămâie verde (circa 2 lămâi)", "2 linguri ulei vegetal", "1 linguriță sare fină", "30 g coriandru proaspăt, împărțit — jumătate pentru gătit, jumătate pentru servit", "1 jalapeno sau ardei iute, fără semințe, feliat subțire", "2 fire ceapă verde, tăiate subțire (pentru decor)"],
@@ -11201,19 +11204,20 @@ export const recipes = [
       hi: "एक बड़े बर्तन में मध्यम आंच पर तेल गर्म करें, प्याज, लहसुन, टमाटर, जलापेनो और जीरा डालें और बीच-बीच में हिलाते हुए 8-10 मिनट पकाएं जब तक प्याज बहुत नरम न हो जाए और टमाटर गाढ़ी चटनी में न बदल जाएं। एचिओटे पेस्ट मिलाएं और 1 मिनट पकाएं जब तक तेल गहरे नारंगी रंग का न हो जाए। शोरबा डालें, उबाल लाएं, फिर कसावा डालें और 20-25 मिनट पकाएं जब तक पूरी तरह नरम न हो जाए और किनारों से टूटने न लगे। अगर ताज़ा टूना इस्तेमाल कर रहे हैं, तो हल्के नमकीन उबलते पानी में 5-6 मिनट पोच करें जब तक पक न जाए, थोड़ा ठंडा होने दें और बड़े टुकड़ों में तोड़ें। टूटे हुए टूना (या छाना हुआ कैन टूना), आधा धनिया और नींबू का रस बर्तन में डालें; 3-4 मिनट धीमी आंच पर उबालें ताकि स्वाद मिल जाएं। नमक का स्वाद लें और गहरे कटोरे में परोसें। बचा हुआ धनिया और हरी प्याज ऊपर से डालें और टोस्टादास या केले के चिप्स के साथ परोसें।"
     },
     originText: {
-      ro: "Encebollado este o rețetă tradițională din Ecuador.",
-      en: "Encebollado is a traditional recipe from Ecuador.",
-      es: "Encebollado es una receta tradicional de Ecuador.",
-      fr: "Encebollado est une recette traditionnelle de l'Équateur.",
-      de: "Encebollado ist ein traditionelles Rezept aus Ecuador.",
-      pt: "Encebollado é uma receita tradicional do Equador.",
-      ru: "Энсебольядо — традиционный рецепт из Эквадора.",
-      ar: "إينسيبولادو هي وصفة تقليدية من الإكوادور.",
-      zh: "洋葱炖鱼汤 是来自厄瓜多尔的传统食谱。",
-      ja: "エンセボジャード はエクアドルの伝統的なレシピです。",
-      tr: "Encebollado Ekvador kökenli geleneksel bir tariftir.",
-      it: "Encebollado è una ricetta tradizionale dell'Ecuador.",
-      ko: "엔세보야도는 에콰도르의 전통 요리입니다."
+      ro: "Encebollado este cel mai celebrat mâncare stradală din Ecuador și cel mai apreciat remediu pentru mahmureală — o tocăniță groasă de pește din ton albacore proaspăt, manioc și ceapă roșie, servită cu ceapă murată deasupra și tostadas alături. Se vinde de pe cărucioare stradale în Guayaquil și pe coastă, de dinaintea zorilor, și se consumă în cantități mai mari la sfârșitul de săptămână.\n\nTehnica definitorie este sofrito-ul de bază din roșii, ceapă și pastă de achiote. Achiote — annatto — dă ciorbei caracteristica culoare portocalie caldă. Maniocul se gătește direct în zeamă până se înmoaie complet, îngroșând supa pe măsură ce se destrămă. Ceapa roșie murată servită deasupra — marinată scurt în zeamă de lămâie verde și sare — oferă aciditate care echilibrează bogăția fierturii.",
+      en: "Encebollado is Ecuador's most celebrated street food and most cherished hangover remedy — a thick fish stew of fresh albacore tuna, cassava, and red onion, served with a pickled onion topping and tostadas. It is sold from street carts in Guayaquil and across the coast from before dawn, eaten in especially large quantities on weekends.\n\nThe defining technique is the sofrito base of tomatoes, onion, and achiote paste. Achiote — annatto — gives the broth its characteristic warm orange colour. The cassava cooks directly in the broth until very soft, thickening the soup as it breaks down. The pickled red onion served on top — briefly marinated in lime juice and salt — provides the sharpness that cuts through the richness of the stew.",
+      es: "El Encebollado es el street food más celebrado de Ecuador y el remedio para la resaca más querido del país — un guiso espeso de pescado con atún aleta amarilla fresco, yuca y cebolla roja, servido con cebolla encurtida encima y tostadas. Se vende en puestos callejeros en Guayaquil y toda la costa desde antes del amanecer, y se consume en especial los fines de semana.\n\nLa técnica definitoria es la base de sofrito de tomates, cebolla y pasta de achiote. El achiote — annatto — da al caldo su característica tonalidad naranja cálida. La yuca se cocina directamente en el caldo hasta ablandarse mucho, espesando la sopa al deshacerse. La cebolla roja encurtida servida encima — marinada brevemente en jugo de limón y sal — aporta la acidez que equilibra la riqueza del guiso.",
+      fr: "L'Encebollado est le street food le plus célèbre de l'Équateur et le remède de gueule de bois le plus chéri du pays — un ragoût épais de poisson à base de thon albacore frais, de manioc et d'oignon rouge, servi avec une garniture d'oignons marinés et des tostadas. Il est vendu sur des chariots de rue à Guayaquil et sur toute la côte avant l'aube, et consommé en grande quantité le week-end.\n\nLa technique définissante est la base sofrito de tomates, d'oignon et de pâte d'achiote. L'achiote — roucou — donne au bouillon sa caractéristique couleur orange chaude. Le manioc cuit directement dans le bouillon jusqu'à être très fondant, épaississant la soupe au fur et à mesure qu'il se défait. L'oignon rouge mariné servi dessus — brièvement mariné dans du jus de citron vert et du sel — apporte l'acidité qui coupe la richesse du ragoût.",
+      de: "Encebollado ist Ecuadors bekanntestes Straßenessen und das beliebteste Kater-Heilmittel des Landes — ein dicker Fischeintopf aus frischem Albacore-Thunfisch, Maniok und roter Zwiebel, serviert mit eingelegter Zwiebel obendrauf und Tostadas. Er wird in Guayaquil und an der gesamten Küste vor der Morgendämmerung an Straßenständen verkauft und vor allem am Wochenende konsumiert.\n\nDie prägende Technik ist die Sofrito-Basis aus Tomaten, Zwiebel und Achiote-Paste. Achiote — Annatto — verleiht der Brühe ihre charakteristische warme Orangefarbe. Der Maniok kocht direkt in der Brühe bis er sehr weich ist und dickt die Suppe beim Zerfall ein. Die eingelegte rote Zwiebel obendrauf — kurz in Limettensaft und Salz mariniert — liefert die Schärfe, die den reichen Eintopf ausbalanciert.",
+      pt: "O Encebollado é o street food mais celebrado do Equador e o remédio para ressaca mais querido do país — um guisado espesso de peixe com atum albacora fresco, mandioca e cebola roxa, servido com cebola em pickle por cima e tostadas. É vendido em carrinhos de rua em Guayaquil e em toda a costa antes do amanhecer, consumido especialmente ao fim de semana.\n\nA técnica definidora é a base de sofrito de tomates, cebola e pasta de achiote. O achiote — urucum — dá ao caldo a sua característica cor laranja quente. A mandioca coze directamente no caldo até ficar muito mole, engrossando a sopa à medida que se desfaz. A cebola roxa em pickle servida por cima — brevemente marinada em sumo de lima e sal — fornece a acidez que corta a riqueza do guisado.",
+      ru: "Энсебольядо — самый известный уличный фастфуд Эквадора и самое почитаемое средство от похмелья: густой рыбный суп из свежего тунца-альбакора, маниока и красного лука, подаваемый с маринованным луком сверху и тостадами. Его продают с уличных тележек в Гуаякиле и по всему побережью до рассвета, особенно много его едят по выходным.\n\nОпределяющая техника — соусная основа sofrito из томатов, лука и пасты ачиоте. Ачиоте — аннато — придаёт бульону характерный тёплый оранжевый цвет. Маниок готовится прямо в бульоне до полной мягкости, загущая суп при разваривании. Маринованный красный лук, подаваемый сверху — ненадолго выдержанный в соке лайма и соли — обеспечивает кислотность, которая уравновешивает насыщенность тушёного блюда.",
+      ar: "الإنسيبولادو هو أشهر طعام شوارع في الإكوادور وأعزّ علاج للخمار — يُقدَّم كحساء سميك من التونة الطازجة والكسافا والبصل الأحمر، مزيّن بطبقة من البصل المخلل ويُؤكل مع التوستاداس. يُباع من عربات الشوارع في غواياكيل وعلى طول الساحل قبل الفجر، ويُستهلك بكميات كبيرة في عطل نهاية الأسبوع.\n\nالتقنية المميزة هي قاعدة السوفريتو من الطماطم والبصل ومعجون الأشيوتي. الأشيوتي — المعروف بالأناتو — يُكسب المرق لونه البرتقالي الدافئ المميز. تُطهى الكسافا مباشرة في المرق حتى تلين جداً، مُكثِّفةً الحساء أثناء تفككها. البصل الأحمر المخلل الموضوع فوقها — المنقوع بسرعة في عصير الليمون والملح — يُضفي الحموضة التي توازن ثراء الطبق.",
+      zh: "恩塞博亚多是厄瓜多尔最知名的街头食品，也是最受推崇的解酒食物——一道以新鲜长鳍金枪鱼、木薯和红洋葱为主料的浓郁鱼汤，配以腌洋葱和玉米薄饼。它在瓜亚基尔和整个海岸地区的街头摊位在天亮前便开始售卖，尤其在周末大量消费。\n\n核心技法是以番茄、洋葱和阿希奥特酱为基础的炒底料。阿希奥特——胭脂树种子——赋予汤底标志性的温暖橙色。木薯直接在汤中煮至极软，边溶边稠化汤汁。上桌时铺在上面的腌红洋葱——用青柠汁和盐短暂腌制——提供酸爽感，平衡浓郁的炖汤。",
+      ja: "エンセボジャードはエクアドルで最も愛されるストリートフードであり、二日酔いの特効薬としても名高い料理だ。新鮮なアルバコア・マグロ、キャッサバ、赤玉ねぎで作る濃厚な魚のスープで、ピクルス玉ねぎをトッピングしてトスタダスと共に供される。グアヤキルをはじめ海岸沿い各地の屋台では夜明け前から売り始め、特に週末に大量に消費される。\n\n料理の決め手はトマト・玉ねぎ・アチョーテペーストで作るソフリートの下地だ。アチョーテ（アナット）がスープに特有の温かみあるオレンジ色を与える。キャッサバはスープの中で直接煮込まれ、くずれながらとろみをつける。上に盛る赤玉ねぎのピクルス — ライムジュースと塩で短時間漬けたもの — がシチューの濃さを引き締める鋭い酸味を加える。",
+      tr: "Encebollado, Ekvador'un en ünlü sokak yemeği ve en sevilen akşamdan kalma ilacıdır — taze albakor ton balığı, manyok ve kırmızı soğanla yapılan kalın bir balık güveci; üzerinde salamura soğan ve yanında tostadas ile servis edilir. Guayaquil'de ve kıyı boyunca sokak tezgahlarından şafak sökmeden satılır, özellikle hafta sonları çok miktarda tüketilir.\n\nBelirleyici teknik, domates, soğan ve achiote ezmesinin oluşturduğu sofrito tabanıdır. Achiote — annatto — çorbaya karakteristik sıcak turuncu rengini verir. Manyok doğrudan suda çok yumuşayıncaya kadar pişirilir ve dağılarak çorbayı koyulaştırır. Üstte servis edilen salamura kırmızı soğan — kısa süre misket limonu suyu ve tuzda marine edilmiş — güvecin zenginliğini dengeleyen keskinliği sağlar.",
+      it: "L'Encebollado è il cibo di strada più celebre dell'Ecuador e il rimedio per i postumi della sbornia più amato del paese — un denso stufato di pesce con tonno albacore fresco, manioca e cipolla rossa, servito con cipolla marinata in superficie e tostadas. Viene venduto da carretti di strada a Guayaquil e lungo tutta la costa prima dell'alba, e consumato in quantità particolarmente abbondanti nel weekend.\n\nLa tecnica caratterizzante è la base sofrito di pomodori, cipolla e pasta di achiote. L'achiote — annatto — dà al brodo il suo caratteristico colore arancione caldo. La manioca cuoce direttamente nel brodo fino a diventare molto morbida, addensando la zuppa mentre si disfa. La cipolla rossa marinata servita in superficie — brevemente immersa in succo di lime e sale — fornisce l'acidità che bilancia la ricchezza dello stufato.",
+      ko: "엔세보야도는 에콰도르에서 가장 유명한 길거리 음식이자 가장 사랑받는 숙취 해소 음식이다 — 신선한 참다랑어, 카사바, 붉은 양파로 만든 진한 생선 스튜에 절인 양파를 얹고 토스타다스를 곁들여 낸다. 과야킬을 비롯한 해안 곳곳의 노점에서 날이 밝기 전부터 팔리며, 특히 주말에 많이 소비된다.\n\n핵심 기법은 토마토, 양파, 아치오테 페이스트로 만드는 소프리토 베이스다. 아치오테 — 아나토 — 가 육수에 특유의 따뜻한 오렌지 색깔을 부여한다. 카사바는 육수 안에서 직접 끓여 완전히 부드러워지며 분해되면서 수프를 걸쭉하게 만든다. 위에 얹히는 절인 붉은 양파 — 라임즙과 소금에 잠깐 재운 것 — 는 스튜의 풍미를 잡아주는 날카로운 산미를 더한다.",
+      hi: "एन्सेबोयादो इक्वाडोर का सबसे मशहूर स्ट्रीट फूड और सबसे प्रिय हैंगओवर उपाय है — ताजे एल्बाकोर टूना, कसावा और लाल प्याज की एक गाढ़ी मछली स्टू, ऊपर से अचार वाले प्याज और टोस्टादास के साथ परोसी जाती है। गुआयाकिल और पूरे तट पर भोर से पहले स्ट्रीट कार्ट से बेची जाती है, खासकर सप्ताहांत में बड़ी मात्रा में खाई जाती है।\n\nपरिभाषित तकनीक टमाटर, प्याज और एचिओटे पेस्ट का सोफ्रिटो आधार है। एचिओटे — अनात्तो — शोरबे को उसका विशेषता वाला गर्म नारंगी रंग देता है। कसावा सीधे शोरबे में पकाया जाता है जब तक बहुत नरम न हो जाए, टूटते-टूटते सूप को गाढ़ा बनाता है। ऊपर परोसी जाने वाली अचार की लाल प्याज — थोड़ी देर नींबू के रस और नमक में मैरिनेट की — वह तीखापन देती है जो स्टू की समृद्धि को संतुलित करता है।"
     }
   },
   {
