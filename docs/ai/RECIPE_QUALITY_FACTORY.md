@@ -72,7 +72,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 50 | Doro Wat | Tier A Complete | — | Full rewrite: 12 EN ingredients with exact quantities; 15-step EN howIsMade with timings (25–30 min dry onion fry, 5 min spice bloom, 40–45 min covered simmer, 10 min egg finish); all 14 locales including hi |
 | 51 | Kibbeh | Tier A Complete | — | Full rewrite: 14 EN ingredients (shell + filling + oil) with exact quantities; 19-step EN howIsMade with timings (15 min soak, 3–4 min process, 6–8 min brown, 4–5 min fry at 175°C); all 14 locales including hi |
 | 52 | Stamppot | Tier A Complete | `454512b4` | Full EN rewrite: 8 ingredients with exact quantities, 7-step howIsMade with timings and doneness cues. All 14 locales retranslated including hi. |
-| 53 | Hangi | Stub / Needs Full Rewrite | `09c90a91` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 53 | Hangi | Tier A Complete | `09c90a91` | Full EN rewrite: 9 ingredients with exact quantities (lamb, chicken, potatoes, kumara, pumpkin, cabbage, oil, salt, pepper), 7-step oven-adapted howIsMade with timings and doneness cues. All 14 locales retranslated including hi. |
 | 54 | Moules-frites | Partial Fix Only | `04ba532e` | Struct + name.ko + originText pt/ru/tr/it/ko fixed; no stub note |
 | 55 | Moussaka | Partial Fix Only | `7fb899a0` | Struct + name.ko + originText pt/ru/it/ko fixed; no stub note |
 | 56 | Svíčková | Partial Fix Only | `96cd3925` | Struct + origin + name.ko + originText fr/pt/ru/tr/it/ko fixed; no stub note |
