@@ -13071,7 +13071,8 @@ export const recipes = [
       ja: "スウェーデン",
       tr: "İsveç",
       it: "Svezia",
-      ko: "스웨덴"
+      ko: "스웨덴",
+      hi: "स्वीडन"
     },
     name: {
       ro: "Kanelbulle",
@@ -13079,13 +13080,15 @@ export const recipes = [
       es: "Bollo de Canela",
       fr: "Brioche à la cannelle",
       de: "Zimtschnecke",
+      pt: "Kanelbulle",
       ru: "Булочка с корицей",
       ar: "لفائف القرفة",
       zh: "肉桂卷",
       ja: "シナモンロール",
       tr: "Tarçınlı Çörek",
       it: "Rotolo alla cannella",
-      ko: "시나몬 번"
+      ko: "시나몬 번",
+      hi: "कैनेलबुले"
     },
     category: {
       ro: "Desert",
@@ -13093,13 +13096,15 @@ export const recipes = [
       es: "Postre",
       fr: "Dessert",
       de: "Dessert",
+      pt: "Sobremesa",
       ru: "Десерт",
       ar: "حلوى",
       zh: "甜点",
       ja: "デザート",
       tr: "Tatlı",
       it: "Dessert",
-      ko: "디저트"
+      ko: "디저트",
+      hi: "मिठाई"
     },
     servings: 12,
     tipType: 'dessert',
@@ -13137,19 +13142,20 @@ export const recipes = [
       hi: "दूध को 37°C तक गरम करें, खमीर और 10 ग्राम चीनी मिलाएं और 5–10 मिनट तक झाग आने तक छोड़ें। एक बड़े कटोरे में आटा, इलायची और नमक मिलाएं; बीच में गड्ढा बनाकर खमीर का मिश्रण और अंडा डालें और एक खुरदरा आटा बनाएं। 100 ग्राम मुलायम मक्खन थोड़ा-थोड़ा करके डालें और हल्का आटे छिड़की हुई सतह पर 8–10 मिनट तक गूंधें जब तक आटा चिकना, लोचदार और हाथ से न चिपके; ढककर गर्म जगह पर 60–90 मिनट तक दोगुना होने तक रखें। 75 ग्राम मक्खन, 75 ग्राम चीनी, दालचीनी और दूसरी चम्मच इलायची मिलाकर भरावन तैयार करें। खमीर उठे आटे को थोड़े आटे से छिड़की हुई सतह पर 40×50 सेमी के आयत में बेलें; भरावन समान रूप से फैलाएं, आटे को लंबाई में तिहाई मोड़ें, फिर बेलें और 12 पट्टियों में काटें। हर पट्टी को मोड़कर एक गांठ में लपेटें और किनारे को नीचे दबाएं; बेकिंग पेपर लगी ट्रे पर दूरी रखकर रखें, ढककर 30–45 मिनट तक स्पष्ट रूप से फूलने तक छोड़ें और ओवन को 200°C (फैन 180°C) पर प्रीहीट करें। पीटे हुए अंडे से ब्रश करें, मोती चीनी छिड़कें और 12–15 मिनट तक गहरे सुनहरे रंग तक बेक करें; वायर रैक पर रखें और किचन टॉवल से ढक दें।"
     },
     originText: {
-      ro: "Kanelbulle este o rețetă tradițională din Suedia.",
-      en: "Cinnamon Bun is a traditional recipe from Sweden.",
-      es: "Bollo de Canela es una receta tradicional de Suecia.",
-      fr: "Brioche à la cannelle est une recette traditionnelle de Suède.",
-      de: "Zimtschnecke ist ein traditionelles Rezept aus Schweden.",
-      pt: "Kanelbulle é uma receita tradicional da Suécia.",
-      ru: "Булочка с корицей — традиционный рецепт из Швеции.",
-      ar: "لفائف القرفة هي وصفة تقليدية من السويد.",
-      zh: "肉桂卷 是来自瑞典的传统食谱。",
-      ja: "シナモンロール はスウェーデンの伝統的なレシピです。",
-      tr: "Tarçınlı Çörek İsveç kökenli geleneksel bir tariftir.",
-      it: "Rotolo alla cannella è una ricetta tradizionale della Svezia.",
-      ko: "시나몬 번은 스웨덴의 전통 요리입니다."
+      ro: "Kanelbulle este chiflă suedeză cu scorțișoară — un aluat moale și ușor îmbogățit aromat cu scorțișoară și cardamom, răsucit în noduri distinctive și presărat cu zahăr perle. Suedia îl celebrează cu propria sa zi, pe 4 octombrie, și chiflele apar în fiecare cafenea și brutărie din țară. Cardamomul din aluat separă versiunea suedeză de rulouri americane sau germane de scorțișoară.\n\nAluatul trebuie să fie suficient de bogat pentru a rămâne moale — contează conținutul de unt și ou — dar nu atât de bogat încât să devină brioche și greu. Umplutura se întinde generos pe întreaga suprafață a aluatului întins, apoi aluatul se pliază și se reîntinde înainte de tăiere, ceea ce distribuie zahărul cu scorțișoară prin straturi în loc să-l concentreze în centru. Acoperirea imediată a chiflelor coapte cu un prosop curat de bucătărie prinde aburul și menține coaja moale.",
+      en: "Kanelbulle is the Swedish cinnamon bun — a soft, lightly enriched dough flavoured with both cinnamon and cardamom, twisted into distinctive knots and scattered with pearl sugar. Sweden celebrates it with its own day, October 4th, and the bun appears in every café and bakery in the country. The cardamom in the dough is what separates the Swedish version from American or German cinnamon rolls.\n\nThe dough must be enriched enough to stay soft — the butter and egg content matters — but not so rich that it becomes brioche-like and heavy. The filling is spread across the full surface, then the dough is folded and rerolled before cutting, which distributes the cinnamon-sugar through the layers rather than concentrating it in the centre. Covering the baked buns immediately with a clean tea towel traps the steam and keeps the crust soft.",
+      es: "El kanelbulle es el bollo sueco de canela — una masa blanda y ligeramente enriquecida aromatizada con canela y cardamomo, retorcida en nudos distintivos y espolvoreada con azúcar perlado. Suecia lo celebra con su propio día, el 4 de octubre, y el bollo aparece en cada café y panadería del país. El cardamomo en la masa es lo que separa la versión sueca de los rollos de canela americanos o alemanes.\n\nLa masa debe estar suficientemente enriquecida para mantenerse blanda — importa el contenido de mantequilla y huevo — pero no tan rica como para volverse similar a un brioche y pesada. El relleno se extiende por toda la superficie, luego la masa se dobla y se vuelve a estirar antes de cortar, lo que distribuye el azúcar con canela por las capas en lugar de concentrarlo en el centro. Cubrir inmediatamente los bollos horneados con un paño de cocina limpio atrapa el vapor y mantiene la corteza blanda.",
+      fr: "Le kanelbulle est la brioche suédoise à la cannelle — une pâte moelleuse et légèrement enrichie parfumée à la cannelle et à la cardamome, tordue en nœuds distinctifs et parsemée de sucre perlé. La Suède le fête avec sa propre journée, le 4 octobre, et la brioche apparaît dans chaque café et boulangerie du pays. La cardamome dans la pâte est ce qui distingue la version suédoise des roulés à la cannelle américains ou allemands.\n\nLa pâte doit être suffisamment enrichie pour rester moelleuse — la teneur en beurre et en œuf compte — mais pas trop riche au point de devenir briochée et lourde. La garniture est étalée sur toute la surface, puis la pâte est pliée et réenroulée avant de couper, ce qui répartit le sucre à la cannelle dans les couches plutôt que de le concentrer au centre. Recouvrir immédiatement les brioches cuites d'un torchon propre emprisonne la vapeur et garde la croûte moelleuse.",
+      de: "Kanelbulle ist das schwedische Zimtbrötchen — ein weiches, leicht angereichertes Hefeteiggebäck, das mit Zimt und Kardamom aromatisiert, zu charakteristischen Knoten geformt und mit Perlzucker bestreut wird. Schweden feiert es mit seinem eigenen Tag am 4. Oktober, und das Brötchen ist in jedem Café und jeder Bäckerei des Landes zu finden. Der Kardamom im Teig unterscheidet die schwedische Version von amerikanischen oder deutschen Zimtschnecken.\n\nDer Teig muss reichhaltig genug sein, um weich zu bleiben — der Butter- und Eigehalt ist entscheidend — aber nicht so schwer, dass er briocheartig wird. Die Füllung wird über die gesamte Oberfläche verteilt, dann wird der Teig gefaltet und vor dem Schneiden erneut ausgerollt, was den Zucker-Zimt durch die Schichten verteilt anstatt ihn in der Mitte zu konzentrieren. Die gebackenen Brötchen sofort mit einem sauberen Küchentuch abzudecken fängt den Dampf auf und hält die Kruste weich.",
+      pt: "O kanelbulle é o pão de canela sueco — uma massa macia e levemente enriquecida aromatizada com canela e cardamomo, torcida em nós distintos e salpicada com açúcar perlado. A Suécia comemora-o com seu próprio dia, 4 de outubro, e o pão aparece em cada café e padaria do país. O cardamomo na massa é o que separa a versão sueca dos rolinhos de canela americanos ou alemães.\n\nA massa deve ser suficientemente enriquecida para permanecer macia — o teor de manteiga e ovo importa — mas não tão rica a ponto de se tornar brioche e pesada. O recheio é espalhado por toda a superfície, depois a massa é dobrada e reestendida antes de cortar, o que distribui o açúcar com canela pelas camadas em vez de concentrá-lo no centro. Cobrir imediatamente os pãezinhos assados com um pano de prato limpo prende o vapor e mantém a crosta macia.",
+      ru: "Канелбулле — шведская булочка с корицей: мягкое, слегка сдобное тесто, ароматизированное корицей и кардамоном, скрученное в характерные узелки и посыпанное жемчужным сахаром. Швеция отмечает его собственным днём — 4 октября, и булочка присутствует в каждом кафе и пекарне страны. Кардамон в тесте — именно то, что отличает шведский вариант от американских или немецких рулетов с корицей.\n\nТесто должно быть достаточно сдобным, чтобы оставаться мягким — содержание масла и яиц важно — но не настолько богатым, чтобы стать похожим на бриошь и тяжёлым. Начинку намазывают по всей поверхности, затем тесто складывают и снова раскатывают перед нарезкой, что распределяет сахар с корицей по слоям, а не концентрирует его в центре. Немедленное накрытие испечённых булочек чистым кухонным полотенцем задерживает пар и сохраняет мягкую корочку.",
+      ar: "الكانيلبوله هو كعكة القرفة السويدية — عجينة طرية ومُغنّاة قليلاً بنكهة القرفة والهيل، تُلوى في عقد مميزة وتُرش بسكر لؤلؤي. تحتفل السويد به بيومه الخاص في الرابع من أكتوبر، وتظهر الكعكة في كل مقهى ومخبز في البلاد. إن الهيل في العجينة هو ما يميز النسخة السويدية عن لفائف القرفة الأمريكية أو الألمانية.\n\nيجب أن تكون العجينة مُغنّاة بما يكفي للبقاء طرية — تُهمّ نسبة الزبدة والبيض — لكن ليس بما يجعلها ثقيلة كالبريوش. يُوزَّع الحشو على كامل السطح، ثم تُطوى العجينة وتُرقَّق من جديد قبل التقطيع، مما يوزع السكر بالقرفة بين الطبقات بدلاً من تركيزه في الوسط. تغطية الكعكات المخبوزة فوراً بمنشفة مطبخ نظيفة يحبس البخار ويحافظ على نعومة القشرة.",
+      zh: "卡内尔布勒是瑞典肉桂卷——一种柔软、略微丰富的面团，以肉桂和豆蔻调味，扭成独特的结形并撒上珍珠糖。瑞典为此设立了专属节日，每年10月4日，这款卷饼出现在全国每家咖啡馆和面包房。面团中的豆蔻是将瑞典版本与美式或德式肉桂卷区分开来的关键所在。\n\n面团必须足够丰富以保持柔软——黄油和鸡蛋的含量至关重要——但又不能太丰富以至于变得像布里欧修那样厚重。馅料铺满整个面团表面，然后面团折叠再擀开后再切，这样肉桂糖就会分布在各层之间，而不是集中在中心。烤好后立即用干净的茶巾盖住，能锁住蒸气，保持外皮柔软。",
+      ja: "カネルブッレはスウェーデンのシナモンロール——シナモンとカルダモンの両方で香りづけされた、やわらかく軽くリッチな生地を独特の結び目状に形成し、パールシュガーを散らしたもの。スウェーデンにはカネルブッレの日（10月4日）があり、バンは全国のカフェやベーカリーに並んでいる。生地に含まれるカルダモンが、スウェーデン版をアメリカやドイツのシナモンロールと一線を画す要素だ。\n\n生地はやわらかさを保つだけの豊かさが必要で——バターと卵の量が重要——ブリオッシュのように重くなりすぎてはいけない。フィリングは伸ばした生地の全面に広げ、折りたたんで再び伸ばしてから切ることで、シナモンシュガーが中心に集中せず各層に行き渡る。焼き上がったバンをすぐに清潔なキッチンタオルで覆うと蒸気が閉じ込められ、表面がやわらかいままに保たれる。",
+      tr: "Kanelbulle, İsveç tarçınlı çöreğidir — hem tarçın hem de kakule ile tatlandırılmış, yumuşak ve hafifçe zenginleştirilmiş bir hamurdan yapılır, kendine özgü düğümlere bükülür ve iri şeker serpilir. İsveç bunu 4 Ekim'de kendi özel günüyle kutlar ve çörek ülkedeki her kafe ve fırında yer alır. Hamurdaki kakule, İsveç versiyonunu Amerikan veya Alman tarçınlı rulo ekmeklerinden ayıran unsurdur.\n\nHamur yumuşak kalacak kadar zengin olmalıdır — tereyağı ve yumurta oranı önemlidir — ancak brioche gibi ağır olacak kadar zengin olmamalıdır. İç harç, açılmış hamurun tüm yüzeyine yayılır, ardından hamur kesilmeden önce katlanır ve tekrar açılır; bu, tarçın-şeker karışımını merkeze yığmak yerine katmanlar arasında eşit dağıtır. Pişmiş çörekleri hemen temiz bir mutfak beziyle örtmek buharı hapseder ve kabuğun yumuşak kalmasını sağlar.",
+      it: "Kanelbulle è il dolce svedese alla cannella — un impasto morbido e leggermente arricchito aromatizzato con cannella e cardamomo, attorcigliato in nodi caratteristici e cosparso di zucchero perlato. La Svezia lo celebra con una giornata dedicata, il 4 ottobre, e il dolce è presente in ogni caffè e panetteria del paese. Il cardamomo nell'impasto è ciò che distingue la versione svedese dalle girelle alla cannella americane o tedesche.\n\nL'impasto deve essere abbastanza ricco da rimanere morbido — il contenuto di burro e uova conta — ma non così pesante da diventare simile a una brioche. Il ripieno viene spalmato su tutta la superficie, poi l'impasto viene piegato e riesteso prima di tagliare, il che distribuisce lo zucchero alla cannella tra gli strati invece di concentrarlo al centro. Coprire immediatamente i dolci appena sfornati con un canovaccio pulito intrappola il vapore e mantiene la crosta morbida.",
+      ko: "카넬불레는 스웨덴의 시나몬 번으로 — 시나몬과 카다멈 두 가지로 맛을 낸 부드럽고 가볍게 풍부한 반죽을 독특한 매듭 모양으로 비틀고 펄슈거를 뿌린 것입니다. 스웨덴은 10월 4일을 전용 기념일로 정하여 축하하며, 이 빵은 전국의 모든 카페와 베이커리에 등장합니다. 반죽의 카다멈이 스웨덴 버전을 미국이나 독일의 시나몬 롤과 구별짓는 요소입니다.\n\n반죽은 부드러움을 유지할 만큼 충분히 풍부해야 하며 — 버터와 달걀 함량이 중요합니다 — 하지만 브리오슈처럼 무겁게 되어서는 안 됩니다. 필링은 밀어 펼친 반죽의 전체 표면에 고르게 펴 바르고, 자르기 전에 반죽을 접어서 다시 밀어냅니다. 이렇게 하면 시나몬 설탕이 중심에 집중되지 않고 각 층에 고르게 분포됩니다. 구운 번을 즉시 깨끗한 주방 타월로 덮으면 수증기가 갇혀 껍질이 부드럽게 유지됩니다.",
+      hi: "कैनेलबुले स्वीडिश दालचीनी की बन है — एक नरम, हल्की समृद्ध आटे की परत जिसे दालचीनी और इलायची दोनों से सुगंधित किया जाता है, विशिष्ट गांठों में मोड़ा जाता है और मोती चीनी से सजाया जाता है। स्वीडन इसे 4 अक्टूबर को अपने विशेष दिन के साथ मनाता है, और यह बन देश के हर कैफे और बेकरी में मिलती है। आटे में इलायची ही वह चीज़ है जो स्वीडिश संस्करण को अमेरिकी या जर्मन दालचीनी रोल से अलग करती है।\n\nआटे को नरम रहने के लिए पर्याप्त समृद्ध होना चाहिए — मक्खन और अंडे की मात्रा मायने रखती है — लेकिन इतना अधिक नहीं कि ब्रियोश जैसा भारी हो जाए। भरावन पूरी सतह पर फैलाई जाती है, फिर आटे को काटने से पहले मोड़कर फिर से बेला जाता है, जो दालचीनी-चीनी को केंद्र में केंद्रित करने के बजाय परतों में वितरित करता है। पके हुए बन को तुरंत एक साफ किचन टॉवल से ढकने से भाप रुकती है और परत नरम रहती है।"
     }
   },
   {
