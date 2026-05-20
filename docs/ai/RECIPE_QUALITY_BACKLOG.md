@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 50 | Doro Wat |
-| 2 | 51 | Kibbeh |
-| 3 | 52 | Stamppot |
-| 4 | 53 | Hangi |
-| 5 | 57 | Fårikål |
-| 6 | 58 | Ful Medames |
-| 7 | 59 | Pasticada |
-| 8 | 60 | Buuz |
-| 9 | 62 | Brik |
-| 10 | 63 | Khachapuri |
+| 1 | 51 | Kibbeh |
+| 2 | 52 | Stamppot |
+| 3 | 53 | Hangi |
+| 4 | 57 | Fårikål |
+| 5 | 58 | Ful Medames |
+| 6 | 59 | Pasticada |
+| 7 | 60 | Buuz |
+| 8 | 62 | Brik |
+| 9 | 63 | Khachapuri |
+| 10 | 64 | Bobotie |
 
 ---
 
