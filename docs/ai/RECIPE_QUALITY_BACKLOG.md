@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 67 | Banh Mi |
-| 2 | 68 | Satay |
-| 3 | 69 | Laksa |
-| 4 | 70 | Pupusa |
-| 5 | 72 | Amok |
-| 6 | 73 | Momo |
-| 7 | 74 | Encebollado |
-| 8 | 75 | Harira |
-| 9 | 76 | Lobio |
-| 10 | 77 | Chakhchoukha |
+| 1 | 68 | Satay |
+| 2 | 69 | Laksa |
+| 3 | 70 | Pupusa |
+| 4 | 72 | Amok |
+| 5 | 73 | Momo |
+| 6 | 74 | Encebollado |
+| 7 | 75 | Harira |
+| 8 | 76 | Lobio |
+| 9 | 77 | Chakhchoukha |
+| 10 | 78 | Rendang |
 
 ---
 
