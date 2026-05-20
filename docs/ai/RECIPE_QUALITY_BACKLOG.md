@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 45 | Salmon Soup |
-| 2 | 46 | Ghormeh Sabzi |
-| 3 | 48 | Adobo |
-| 4 | 50 | Doro Wat |
-| 5 | 51 | Kibbeh |
-| 6 | 52 | Stamppot |
-| 7 | 53 | Hangi |
-| 8 | 57 | Fårikål |
-| 9 | 58 | Ful Medames |
-| 10 | 59 | Pasticada |
+| 1 | 96 | Spanakopita |
+| 2 | 97 | Jollof Rice |
+| 3 | 98 | Oka i'a |
+| 4 | 99 | Khorovats |
+| 5 | 100 | Verivorst |
+| 6 | 102 | Tteokbokki |
+| 7 | 103 | Shrimp Ceviche |
+| 8 | 104 | La Bandera |
+| 9 | 105 | Fesenjan |
+| 10 | 106 | Kare-Kare |
 
 ---
 
