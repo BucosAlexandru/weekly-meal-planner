@@ -12054,7 +12054,8 @@ export const recipes = [
       ja: "シリア",
       tr: "Suriye",
       it: "Siria",
-      ko: "시리아"
+      ko: "시리아",
+      hi: "सीरिया"
     },
     name: {
       ro: "Fatteh",
@@ -12069,7 +12070,8 @@ export const recipes = [
       ja: "ファッテ",
       tr: "Fatteh",
       it: "Fatteh",
-      ko: "파테"
+      ko: "파테",
+      hi: "फत्ते"
     },
     category: {
       ro: "Mic dejun",
@@ -12084,7 +12086,8 @@ export const recipes = [
       ja: "朝食",
       tr: "Kahvaltı",
       it: "Colazione",
-      ko: "아침"
+      ko: "아침",
+      hi: "नाश्ता"
     },
     ingredients: {
       ro: ["2 pâini pita mari (circa 200 g), rupte în bucăți", "400 g năut din conservă (1 x 400 g), scurs și clătit", "500 g iaurt integral simplu", "3 căței de usturoi, pisați", "2 linguri tahini", "2 linguri suc proaspăt de lămâie", "3 linguri unt nesărat", "50 g semințe de pin", "1 linguriță chimion măcinat", "1 linguriță boia dulce", "1/2 linguriță sare fină", "2 linguri pătrunjel proaspăt, tocat fin"],
@@ -12119,19 +12122,20 @@ export const recipes = [
       hi: "ओवन को 200°C पर पहले से गर्म करें। पीटा के टुकड़ों को थोड़े तेल के साथ मिलाएं, बेकिंग ट्रे पर फैलाएं और 8-10 मिनट तक सुनहरे और कुरकुरे होने तक बेक करें। छोले निथारें; एक छोटे बर्तन में नमक की एक चुटकी और जीरे के साथ मध्यम आंच पर 3-4 मिनट गर्म करें। दही, कुचला हुआ लहसुन, तहिनी, नींबू का रस और नमक को चिकनी चटनी बनने तक मिलाएं; स्वाद के अनुसार समायोजित करें। बेक किए हुए पीटा के टुकड़े एक बड़े सर्विंग प्लेट पर समान परत में फैलाएं। गरम छोले पीटा परत के ऊपर समान रूप से बिछाएं। दही की चटनी छोले के ऊपर उदारतापूर्वक डालें, सब कुछ ढकें। एक छोटे पैन में मध्यम आंच पर मक्खन पिघलाएं; चीड़ के बीज डालें और 2-3 मिनट हिलाते हुए सुनहरा होने तक भूनें; पापरिका डालें और तुरंत गर्म मक्खन और बीज दही के ऊपर डालें। कटा हुआ अजमोद ऊपर से छिड़कें और पीटा नरम होने से पहले तुरंत परोसें।"
     },
     originText: {
-      ro: "Fatteh este o rețetă tradițională din Siria.",
-      en: "Fatteh is a traditional recipe from Syria.",
-      es: "Fatteh es una receta tradicional de Siria.",
-      fr: "Fatteh est une recette traditionnelle de Syrie.",
-      de: "Fatteh ist ein traditionelles Rezept aus Syrien.",
-      pt: "Fatteh é uma receita tradicional da Síria.",
-      ru: "Фатте — традиционный рецепт из Сирии.",
-      ar: "فتة هي وصفة تقليدية من سوريا.",
-      zh: "法塔 是来自叙利亚的传统食谱。",
-      ja: "ファッテ はシリアの伝統的なレシピです。",
-      tr: "Fatteh Suriye kökenli geleneksel bir tariftir.",
-      it: "Fatteh è una ricetta tradizionale della Siria.",
-      ko: "파테는 시리아의 전통 요리입니다."
+      ro: "Fatteh este un preparat sirian stratificat din pită prăjită, năut și sos de iaurt cu usturoi, finalizat cu un strop de unt fierbinte peste semințe de pin și boia. Numele provine din arabul pentru a sfărâma — referindu-se la pâinea ruptă de la bază. Se mănâncă în tot Levantul, cel mai frecvent ca masă de dimineață și în mod proeminent în Ramadan.\n\nSecvența stratificării determină textura. Pita trebuie mai întâi prăjită pentru a rămâne crocantă sub iaurt — dacă este înmuiată în avans, devine moale. Sosul de iaurt cu tahini și usturoi trebuie să fie condimentat energic; el poartă cea mai mare parte a aromei preparatului. Stropul de unt cu semințe de pin și boia se adaugă la final și servește ca element de finisare, adăugând bogăție și contrast vizual.",
+      en: "Fatteh is a layered Syrian dish of toasted pita, chickpeas, and garlic yogurt sauce, finished with a hot butter drizzle over pine nuts and paprika. The name comes from the Arabic word for crumbling — referring to the torn bread at the base. It is eaten throughout the Levant from Syria to Egypt, most commonly as a morning meal and prominently during Ramadan.\n\nThe layering sequence determines the texture. The pita must be toasted first so it stays crisp under the yogurt — if softened in advance, it becomes soggy. The yogurt sauce with tahini and garlic needs assertive seasoning; it carries the majority of the dish's flavour. The butter drizzle with pine nuts and paprika is added last, adding richness and visual contrast.",
+      es: "La fatteh es un plato sirio en capas de pita tostada, garbanzos y salsa de yogur con ajo, terminado con un chorrito de mantequilla caliente sobre piñones y pimentón. El nombre proviene del árabe para desmenuzar — refiriéndose al pan roto en la base. Se come en todo el Levante, desde Siria hasta Egipto, más comúnmente como comida matutina y de forma prominente durante el Ramadán.\n\nLa secuencia de capas determina la textura. El pan pita debe tostarse primero para que permanezca crujiente bajo el yogur — si se ablanda antes, queda pastoso. La salsa de yogur con tahini y ajo necesita condimentarse con decisión; lleva la mayor parte del sabor del plato. El chorrito de mantequilla con piñones y pimentón se agrega al final, añadiendo riqueza y contraste visual.",
+      fr: "La fatteh est un plat syrien en couches fait de pita grillée, de pois chiches et d'une sauce au yaourt à l'ail, terminé par un filet de beurre chaud sur des pignons et du paprika. Le nom vient de l'arabe pour émietter — en référence au pain émietté à la base. Elle est consommée dans tout le Levant, de la Syrie à l'Égypte, le plus souvent comme repas du matin et particulièrement pendant le Ramadan.\n\nL'ordre des couches détermine la texture. La pita doit d'abord être grillée pour rester croustillante sous le yaourt — si elle ramollit à l'avance, elle devient détrempée. La sauce au yaourt avec du tahini et de l'ail doit être assaisonnée franchement ; elle porte l'essentiel de la saveur du plat. Le filet de beurre avec les pignons et le paprika est ajouté en dernier, apportant richesse et contraste visuel.",
+      de: "Fatteh ist ein syrisches Schichtgericht aus geröstetem Pita, Kichererbsen und Knoblauch-Joghurtsauce, garniert mit einem Schuss heißer Butter über Pinienkernen und Paprika. Der Name kommt vom Arabischen für «zerbrechen» — bezieht sich auf das zerrissene Brot an der Basis. Es wird im gesamten Nahen Osten von Syrien bis Ägypten gegessen, am häufigsten als Morgenmahlzeit und bevorzugt während des Ramadan.\n\nDie Schichtungsreihenfolge bestimmt die Textur. Das Pita muss zuerst geröstet werden, damit es unter dem Joghurt knusprig bleibt — wenn es zu früh eingeweicht wird, wird es matschig. Die Joghurtsauce mit Tahini und Knoblauch braucht eine entschlossene Würzung; sie trägt den Hauptgeschmack des Gerichts. Der Butterschuss mit Pinienkernen und Paprika wird zuletzt hinzugefügt und bringt Reichtum und visuellen Kontrast.",
+      pt: "A fatteh é um prato sírio em camadas de pita torrada, grão-de-bico e molho de iogurte com alho, terminado com um fio de manteiga quente sobre pinhões e páprica. O nome vem do árabe para esfarelo — referindo-se ao pão rasgado na base. É comida em todo o Levante, da Síria ao Egito, mais comumente como refeição matinal e com destaque durante o Ramadã.\n\nA sequência de camadas determina a textura. A pita deve ser torrada primeiro para ficar crocante sob o iogurte — se amolecida antes, fica encharcada. O molho de iogurte com tahini e alho precisa ser temperado com decisão; carrega a maior parte do sabor do prato. O fio de manteiga com pinhões e páprica é adicionado por último, trazendo riqueza e contraste visual.",
+      ru: "Фатте — сирийское многослойное блюдо из поджаренной питы, нута и чесночного йогуртового соуса, завершённое горячим маслом с кедровыми орешками и паприкой. Название происходит от арабского слова «крошить» — имея в виду разорванный хлеб в основе. Его едят по всему Леванту от Сирии до Египта, чаще всего на завтрак и активно во время Рамадана.\n\nПоследовательность слоёв определяет текстуру. Пита должна быть сначала поджарена, чтобы оставаться хрустящей под йогуртом — если размочить её заранее, она станет мокрой. Йогуртовый соус с тахини и чесноком требует уверенной приправки; он несёт основной вкус блюда. Масляный полив с кедровыми орешками и паприкой добавляется последним, привнося насыщенность и визуальный контраст.",
+      ar: "الفتة طبق سوري متعدد الطبقات من الخبز العربي المحمص والحمص وصلصة اللبن بالثوم، ينتهي برشة زبدة ساخنة مع الصنوبر والبابريكا. يأتي الاسم من الفعل العربي «يفت» في إشارة إلى الخبز المفتّت في القاعدة. يُؤكل في أرجاء المشرق العربي من سوريا إلى مصر، في الغالب كوجبة صباحية وباستمرار خلال رمضان.\n\nيُحدِّد ترتيب الطبقات القوام. يجب تحميص الخبز أولاً ليبقى مقرمشاً تحت اللبن — إن نُقع مسبقاً أصبح طرياً فقد القرمشة. صلصة اللبن بالطحينة والثوم تستوجب توابل قوية؛ إذ تحمل معظم نكهة الطبق. رشة الزبدة مع الصنوبر والبابريكا تُضاف أخيراً، مضيفةً الغنى والتباين البصري.",
+      zh: "法塔是一道叙利亚层叠菜肴，由烤皮塔饼、鹰嘴豆和蒜味酸奶酱组成，最后淋上热黄油并撒松子和甜椒粉。其名称来自阿拉伯语「碎裂」一词，指的是铺在底层的碎面包。它在整个黎凡特地区从叙利亚到埃及广泛食用，最常见于早餐，在斋戒月期间尤为突出。\n\n叠加顺序决定了质感。皮塔饼必须先烤制，使其在酸奶下保持酥脆——若提前浸泡则会变软烂。加入芝麻酱和大蒜的酸奶酱需要足够的调味；它承载了这道菜大部分的风味。最后淋上的热黄油、松子和甜椒粉是收尾元素，带来浓郁口感和视觉对比。",
+      ja: "ファッテはトースとしたピタパン、ひよこ豆、にんにくヨーグルトソースを重ねたシリアの料理で、松の実とパプリカの上に熱いバターを垂らして仕上げます。名前はアラビア語の「砕く」に由来し、土台に置かれちぎったパンを指します。シリアからエジプトにかけてのレバント全域で食べられ、最も一般的には朝食として、またラマダン期間中に特に好まれます。\n\n重ねる順番が食感を左右します。ピタパンはまず焼いてからでないと、ヨーグルトの下でカリカリを保てません — 事前に水に浸すとべちゃべちゃになります。タヒニとにんにくのヨーグルトソースは力強い味付けが必要で、料理の風味の大部分を担います。松の実とパプリカのバター垂らしは最後に加え、コクと視覚的なコントラストを加えます。",
+      tr: "Fatteh, kızartılmış pita, nohut ve sarımsaklı yoğurt sosuyla hazırlanmış katmanlı bir Suriye yemeğidir; çam fıstıkları ve pul biber üzerine sıcak tereyağı gezdirilerek tamamlanır. İsim Arapça'da ufalamak anlamına gelen kelimeden gelir — tabanda parçalanmış ekmeği kasteder. Suriye'den Mısır'a kadar tüm Levant bölgesinde yenir; en yaygın sabah yemeği olarak ve Ramazan boyunca öne çıkar.\n\nKatlama sırası dokuyu belirler. Pita önce kızartılmalı ki yoğurdun altında çıtır kalsın — önceden ıslatılırsa ıslak olur. Tahin ve sarımsak ile yoğurt sosu güçlü baharatlandırma gerektirir; yemeğin lezzetinin büyük çoğunluğunu taşır. Çam fıstıkları ve pul biberli tereyağı son olarak eklenir, zenginlik ve görsel kontrast katar.",
+      it: "La fatteh è un piatto siriano stratificato di pita tostata, ceci e salsa di yogurt all'aglio, completato da un filo di burro caldo sopra pinoli e paprika. Il nome viene dall'arabo per sbriciolare — in riferimento al pane spezzato alla base. È consumata in tutto il Levante dalla Siria all'Egitto, più comunemente come pasto mattutino e in modo prominente durante il Ramadan.\n\nL'ordine degli strati determina la consistenza. La pita deve essere prima tostata per restare croccante sotto lo yogurt — se ammorbidita prima, diventa molliccia. La salsa di yogurt con tahini e aglio richiede un condimento deciso; porta la maggior parte del sapore del piatto. Il filo di burro con pinoli e paprika viene aggiunto per ultimo, apportando ricchezza e contrasto visivo.",
+      ko: "파테는 구운 피타 빵, 병아리콩, 마늘 요거트 소스를 층층이 쌓은 시리아 요리로, 잣과 파프리카 위에 뜨거운 버터를 뿌려 마무리합니다. 이름은 아랍어로 부서지다를 뜻하는 말에서 유래했으며, 바닥에 깐 찢은 빵을 가리킵니다. 시리아에서 이집트까지 레반트 전역에서 먹으며, 가장 일반적으로 아침 식사로, 라마단 기간에 특히 많이 먹습니다.\n\n층 쌓는 순서가 식감을 결정합니다. 피타는 요거트 아래에서 바삭함을 유지하기 위해 먼저 구워야 합니다 — 미리 불리면 흐물흐물해집니다. 타히니와 마늘을 넣은 요거트 소스는 강하게 간을 해야 합니다; 이 소스가 요리의 대부분의 풍미를 담당합니다. 잣과 파프리카를 뿌린 버터 드리즐은 마지막에 추가되어 풍미와 시각적 대비를 더합니다.",
+      hi: "फत्ते एक परतदार सीरियाई व्यंजन है जिसमें टोस्ट किए हुए पीटा, छोले और लहसुन दही की चटनी होती है, जिसे चीड़ के बीज और पापरिका के ऊपर गर्म मक्खन की बूंदाबांदी से पूरा किया जाता है। नाम अरबी शब्द 'तोड़ना' से आया है — आधार पर फटी हुई रोटी को संदर्भित करता है। यह सीरिया से मिस्र तक पूरे लेवांट क्षेत्र में खाया जाता है, सबसे अधिक सुबह के खाने के रूप में और रमजान के दौरान विशेष रूप से।\n\nपरतों का क्रम बनावट निर्धारित करता है। पीटा को पहले टोस्ट करना चाहिए ताकि दही के नीचे कुरकुरा रहे — पहले से भिगोने पर गीला हो जाता है। तहिनी और लहसुन के साथ दही की चटनी को दृढ़ता से सीज़न किया जाना चाहिए; यह व्यंजन के अधिकांश स्वाद को वहन करती है। चीड़ के बीज और पापरिका के साथ मक्खन की बूंदाबांदी अंत में जोड़ी जाती है, समृद्धि और दृश्य विपरीतता जोड़ती है।"
     }
   },
   {
