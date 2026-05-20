@@ -65,7 +65,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 43 | Masgouf | Tier A Complete | `f8fbcec3`→`TBD` | Full rewrite: 13 ingredients with exact quantities (1.5kg fish, turmeric/cumin marinade), 9-step howIsMade with grill times, all 14 locales |
 | 44 | Shakshuka | Tier A Complete | `feat/44` | Full rewrite: 14 ingredients with exact quantities, 8-step howIsMade with times/cues, all 14 locales |
 | 45 | Salmon Soup | Tier A Complete | — | Full rewrite: 11 EN ingredients with exact quantities; 10-step EN howIsMade with timings and doneness cues; all 14 locales including hi |
-| 46 | Ghormeh Sabzi | Stub / Needs Full Rewrite | `2ca28c8f` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 46 | Ghormeh Sabzi | Tier A Complete | — | Full rewrite: 12 EN ingredients with exact quantities; multi-step EN howIsMade with timings (3–4 min browning, 8 min onion, 15–20 min herb fry, 2–2.5 hr simmer); all 14 locales including hi |
 | 47 | Bacalhau à Brás | Partial Fix Only | `8ec94c6f` | Struct + name.ko + originText fr/pt/ru/it/ko fixed; no stub note |
 | 48 | Adobo | Stub / Needs Full Rewrite | `8487adf0` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 49 | Jerk Chicken | Partial Fix Only | `9401ae5e` | Struct + origin + name + originText fixed; no stub note |
