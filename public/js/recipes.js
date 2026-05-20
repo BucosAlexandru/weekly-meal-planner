@@ -11646,7 +11646,8 @@ export const recipes = [
       ja: "スウェーデン",
       tr: "İsveç",
       it: "Svezia",
-      ko: "스웨덴"
+      ko: "스웨덴",
+      hi: "स्वीडन"
     },
     name: {
       ro: "Gravlax",
@@ -11661,7 +11662,8 @@ export const recipes = [
       ja: "グラブラックス",
       tr: "Gravlax",
       it: "Gravlax",
-      ko: "그라블락스"
+      ko: "그라블락스",
+      hi: "ग्रावलाक्स"
     },
     category: {
       ro: "Gustare",
@@ -11676,7 +11678,8 @@ export const recipes = [
       ja: "スナック",
       tr: "Atıştırmalık",
       it: "Spuntino",
-      ko: "간식"
+      ko: "간식",
+      hi: "नाश्ता"
     },
     ingredients: {
       ro: ["600 g file de somon cu piele, cu oasele îndepărtate", "3 linguri sare grunjoasă de mare", "2 linguri zahăr tos", "1 linguriță boabe de piper alb, zdrobite grosier", "60 g mărar proaspăt (1 legătură mare), tocat grosier", "2 linguri aquavit sau vodcă (opțional)"],
@@ -11711,19 +11714,20 @@ export const recipes = [
       hi: "एक छोटे कटोरे में मोटा नमक, चीनी और कुचली हुई सफेद काली मिर्च मिलाएं। सालमन को एक बड़े क्लिंग फिल्म पर त्वचा की तरफ नीचे रखें; आधे डिल को मांस पर समान रूप से दबाएं, नमक का मिश्रण ऊपर से समान रूप से फैलाएं, अकुआविट छिड़कें यदि उपयोग कर रहे हैं, फिर बाकी डिल से ढक दें। क्लिंग फिल्म में कसकर लपेटें और एक गहरे बर्तन में रखें, मछली को दबाने के लिए ऊपर एक भारी प्लेट रखें। 48-72 घंटे रेफ्रिजरेट करें, हर 12 घंटे में पैकेज पलटें जैसे यह ठीक होता है — नमकीन पानी बर्तन में जमा होगा। खोलें, ठंडे पानी से धोएं और कागज के तौलिये से सुखाएं। एक लचीले चाकू से विकर्ण में बहुत पतले स्लाइस काटें और काली राई की रोटी पर सरसों-डिल सॉस के साथ परोसें।"
     },
     originText: {
-      ro: "Gravlax este o rețetă tradițională din Suedia.",
-      en: "Gravlax is a traditional recipe from Sweden.",
-      es: "Gravlax es una receta tradicional de Suecia.",
-      fr: "Gravlax est une recette traditionnelle de Suède.",
-      de: "Gravlax ist ein traditionelles Rezept aus Schweden.",
-      pt: "Gravlax é uma receita tradicional da Suécia.",
-      ru: "Гравлакс — традиционный рецепт из Швеции.",
-      ar: "غرافلاكس هي وصفة تقليدية من السويد.",
-      zh: "腌三文鱼 是来自瑞典的传统食谱。",
-      ja: "グラブラックス はスウェーデンの伝統的なレシピです。",
-      tr: "Gravlax İsveç kökenli geleneksel bir tariftir.",
-      it: "Gravlax è una ricetta tradizionale della Svezia.",
-      ko: "그라블락스는 스웨덴의 전통 요리입니다."
+      ro: "Gravlax este o metodă scandinavă de conservare a somonului crud cu sare, zahăr și mărar. Numele provine din cuvintele nordice vechi pentru mormânt și somon — în Evul Mediu, pescarii înmormântau peștele ușor sarat în pământ pentru a fermenta sub presiune. Versiunea modernă folosește o cură uscată și refrigerarea, dar tehnica de presare a peștelui rămâne aceeași.\n\nCura este simplă, dar precisă. Sarea extrage umezeala din pește prin osmoză, creând o saramură care conservă și fermă carnea. Zahărul echilibrează sarea și adaugă o dulceață delicată. Greutatea presată pe pește este esențială — accelerează circulația saramurii și produce o textură mai densă, mai uniform conservată. După patruzeci și opt de ore somonul este gata, deși șaptezeci și două dau un rezultat mai ferm.",
+      en: "Gravlax is a Scandinavian method of curing raw salmon with salt, sugar, and dill. The name comes from the Old Norse words for grave and salmon — in the medieval period, fishermen would bury lightly salted fish in the ground to ferment under pressure. The modern version uses a dry cure and refrigeration in place of burial, but the technique of pressing the fish as it cures remains unchanged.\n\nThe cure is simple but precise. Salt draws moisture from the fish through osmosis, creating a brine that both preserves and firms the flesh. Sugar balances the salt and contributes a delicate sweetness. The weight pressing down is essential — it accelerates brine circulation and results in a denser, more evenly cured texture. Forty-eight hours produces a lightly cured result; seventy-two gives a firmer, more intensely flavoured fish.",
+      es: "El gravlax es un método escandinavo de curar el salmón crudo con sal, azúcar y eneldo. El nombre proviene de las palabras nórdicas antiguas para tumba y salmón — en la época medieval, los pescadores enterraban el pescado ligeramente salado en la tierra para que fermentara bajo presión. La versión moderna usa una cura seca y refrigeración en lugar del enterramiento, pero la técnica de presionar el pescado durante el curado permanece sin cambios.\n\nLa cura es sencilla pero precisa. La sal extrae la humedad del pescado por ósmosis, creando una salmuera que conserva y firma la carne. El azúcar equilibra la sal y aporta una dulzura delicada. El peso que presiona hacia abajo es esencial — acelera la circulación de la salmuera y produce una textura más densa y uniformemente curada. Cuarenta y ocho horas produce un resultado levemente curado; setenta y dos dan un pescado más firme e intensamente sabroso.",
+      fr: "Le gravlax est une méthode scandinave de salaison du saumon cru avec du sel, du sucre et de l'aneth. Le nom vient des mots vieux nordiques pour tombe et saumon — au Moyen Âge, les pêcheurs enterraient le poisson légèrement salé dans le sol pour le faire fermenter sous pression. La version moderne utilise une salaison à sec et la réfrigération, mais la technique de presser le poisson pendant le salage reste inchangée.\n\nLa cure est simple mais précise. Le sel extrait l'humidité du poisson par osmose, créant une saumure qui conserve et raffermit la chair. Le sucre équilibre le sel et apporte une douceur délicate. Le poids qui presse est essentiel — il accélère la circulation de la saumure et produit une texture plus dense et uniformément salée. Quarante-huit heures donnent un résultat légèrement salé ; soixante-douze heures donnent un poisson plus ferme et plus intensément parfumé.",
+      de: "Gravlax ist eine skandinavische Methode, rohen Lachs mit Salz, Zucker und Dill zu pökeln. Der Name stammt aus dem Altnordischen für Grab und Lachs — im Mittelalter vergruben Fischer leicht gesalzenen Fisch im Boden, um ihn unter Druck fermentieren zu lassen. Die moderne Version verwendet eine Trockenpökelung und Kühlung statt Vergraben, aber die Technik des Pressens beim Pökeln bleibt unverändert.\n\nDie Pökelung ist einfach, aber präzise. Salz entzieht dem Fisch durch Osmose Feuchtigkeit und erzeugt eine Lake, die das Fleisch konserviert und festigt. Zucker balanciert das Salz und verleiht eine zarte Süße. Das Gewicht, das nach unten drückt, ist entscheidend — es beschleunigt den Lakeumlauf und erzeugt eine dichtere, gleichmäßiger gepökelte Textur. Achtundvierzig Stunden ergeben ein leicht gepökeltes Ergebnis; zweiundsiebzig Stunden einen festeren, intensiver aromatischen Fisch.",
+      pt: "O gravlax é um método escandinavo de curar salmão cru com sal, açúcar e endro. O nome vem das palavras nórdicas antigas para tumba e salmão — na época medieval, os pescadores enterravam o peixe levemente salgado no chão para fermentar sob pressão. A versão moderna usa uma cura seca e refrigeração em vez do enterramento, mas a técnica de pressionar o peixe durante a cura permanece inalterada.\n\nA cura é simples mas precisa. O sal extrai a humidade do peixe por osmose, criando uma salmoura que conserva e firma a carne. O açúcar equilibra o sal e contribui com uma doçura delicada. O peso que pressiona é essencial — acelera a circulação da salmoura e resulta numa textura mais densa e uniformemente curada. Quarenta e oito horas produzem um resultado levemente curado; setenta e duas dão um peixe mais firme e intensamente aromatizado.",
+      ru: "Гравлакс — скандинавский метод засолки сырого лосося с солью, сахаром и укропом. Название происходит от древнескандинавских слов «могила» и «лосось»: в Средние века рыбаки закапывали слегка посоленную рыбу в землю для ферментации под давлением. Современная версия использует сухой посол и охлаждение вместо закапывания, но техника прессования рыбы во время засолки осталась неизменной.\n\nПосол прост, но точен. Соль вытягивает влагу из рыбы через осмос, создавая рассол, который одновременно консервирует и уплотняет мясо. Сахар балансирует соль и придаёт нежную сладость. Вес, прижимающий рыбу, необходим — он ускоряет циркуляцию рассола и даёт более плотную, равномерно просоленную текстуру. Сорок восемь часов дают лёгкий посол; семьдесят два — более плотную, насыщенную рыбу.",
+      ar: "الغرافلاكس طريقة إسكندنافية لمعالجة السلمون النيء بالملح والسكر والشبت. يأتي الاسم من الكلمتين النورديتين القديمتين للقبر والسلمون — في العصور الوسطى كان الصيادون يدفنون السمك المملح قليلاً في الأرض ليتخمّر تحت الضغط. تستخدم النسخة الحديثة معالجة جافة والتبريد عوضاً عن الدفن، غير أن تقنية ضغط السمك أثناء المعالجة بقيت على حالها.\n\nالمعالجة بسيطة لكنها دقيقة. يسحب الملح الرطوبة من السمك عبر التناضح، مكوِّناً محلولاً ملحياً يحفظه ويصلّب لحمه. يوازن السكر الملح ويضفي حلاوة خفيفة. الوزن الضاغط من الأعلى ضروري — يعجّل دورة المحلول الملحي وينتج قواماً أكثف وأكثر تجانساً. يمنح ثمانية وأربعون ساعة نتيجة خفيفة التمليح؛ اثنتان وسبعون ساعة تمنح سمكاً أكثر صلابة ونكهة.",
+      zh: "腌三文鱼是一种斯堪的纳维亚方法，用盐、糖和莳萝腌制生三文鱼。其名称源于古诺尔斯语中「坟墓」和「三文鱼」两词——中世纪时，渔民会将轻度腌制的鱼埋入地下，在压力下令其发酵。现代版本以干腌和冷藏代替了掩埋，但腌制过程中压制鱼肉的技法保持不变。\n\n腌制方法简单但精确。盐通过渗透作用从鱼肉中析出水分，形成既能保鲜又能使肉质紧实的卤水。糖平衡了盐分并带来细腻的甜味。上方的重量至关重要——它加速卤水循环，产生更致密、腌制更均匀的质地。四十八小时产生轻度腌制效果；七十二小时则带来更紧实、风味更浓郁的成品。",
+      ja: "グラブラックスはスカンジナビアの生鮭を塩、砂糖、ディルで塩漬けにする方法です。名前は古ノルド語の「墓」と「鮭」に由来しており、中世には漁師が軽く塩をした魚を土中に埋めて圧力の下で発酵させていました。現代版は埋める代わりに乾塩漬けと冷蔵を使いますが、塩漬け中に魚を重石で押さえる技法は変わりません。\n\n塩漬けはシンプルですが正確です。塩は浸透圧によって魚から水分を引き出し、保存と身の引き締めを同時に行うブラインを作り出します。砂糖は塩を和らげ、繊細な甘みを加えます。上から押さえる重みは不可欠で、ブラインの循環を速め、より密度が高く均一に塩漬けされた食感をもたらします。四十八時間は軽い塩漬け、七十二時間はより固く風味豊かな仕上がりになります。",
+      tr: "Gravlax, çiğ somonu tuz, şeker ve dereotu ile kürlemenin İskandinav yöntemidir. İsim, eski Norveç dilinde mezar ve somon anlamına gelen kelimelerden gelir — ortaçağda balıkçılar hafifçe tuzlanmış balıkları basınç altında fermente etmek için toprağa gömerlerdi. Modern versiyonu gömme yerine kuru kürleme ve soğutma kullanır; ancak kürleme sırasında balığı bastırma tekniği değişmeden kalmıştır.\n\nKürleme basit ama hassastır. Tuz, ozmoz yoluyla balıktan nemi çeker, hem konserve edici hem de eti sıkılaştırıcı bir salamura oluşturur. Şeker tuzu dengeler ve zarif bir tatlılık katar. Üstten bastıran ağırlık olmazsa olmaz — salamura dolaşımını hızlandırır ve daha yoğun, eşit kürelenmiş bir doku sağlar. Kırk sekiz saat hafif kürelenmiş bir sonuç; yetmiş iki saat daha sert ve yoğun aromalı bir balık verir.",
+      it: "Il gravlax è un metodo scandinavo di salatura del salmone crudo con sale, zucchero e aneto. Il nome deriva dalle parole del norreno antico per tomba e salmone — nel Medioevo i pescatori seppellivano il pesce leggermente salato nel terreno per farlo fermentare sotto pressione. La versione moderna usa una salagione a secco e la refrigerazione al posto della sepoltura, ma la tecnica di pressare il pesce durante la maturazione rimane invariata.\n\nLa salagione è semplice ma precisa. Il sale estrae l'umidità dal pesce per osmosi, creando una salamoia che conserva e rassoda la polpa. Lo zucchero bilancia il sale e aggiunge una dolcezza delicata. Il peso che preme dall'alto è essenziale — accelera la circolazione della salamoia e produce una consistenza più densa e uniformemente stagionata. Quarantotto ore danno un risultato leggermente salato; settantadue ore un pesce più sodo e intensamente aromatico.",
+      ko: "그라블락스는 생 연어를 소금, 설탕, 딜로 절이는 스칸디나비아 방식입니다. 이름은 고대 노르드어의 무덤과 연어를 뜻하는 단어에서 유래했습니다 — 중세에 어부들은 가볍게 소금에 절인 생선을 땅에 묻어 압력 아래에서 발효시켰습니다. 현대 버전은 매장 대신 건식 절임과 냉장을 사용하지만, 절이는 동안 생선을 눌러주는 기술은 변함없이 이어집니다.\n\n절임은 단순하지만 정밀합니다. 소금은 삼투압으로 생선에서 수분을 끌어내어 생선을 보존하고 살을 단단하게 만드는 소금물을 만듭니다. 설탕은 소금을 균형 있게 만들고 섬세한 단맛을 더합니다. 위에서 누르는 무게는 필수적입니다 — 소금물 순환을 가속화하고 더 촘촘하고 균일하게 절인 식감을 만들어냅니다. 사십팔 시간은 가볍게 절인 결과를, 칠십이 시간은 더 단단하고 풍부한 풍미의 생선을 만들어냅니다.",
+      hi: "ग्रावलाक्स कच्चे सालमन को नमक, चीनी और डिल से ठीक करने की एक स्कैंडिनेवियाई विधि है। नाम पुरानी नॉर्स भाषा के कब्र और सालमन के शब्दों से आया है — मध्यकाल में मछुआरे हल्के नमकीन मछली को दबाव में किण्वित करने के लिए जमीन में दबाते थे। आधुनिक संस्करण दफन करने की जगह सूखे इलाज और प्रशीतन का उपयोग करता है, लेकिन इलाज के दौरान मछली को दबाने की तकनीक अपरिवर्तित रहती है।\n\nइलाज सरल लेकिन सटीक है। नमक ऑस्मोसिस के माध्यम से मछली से नमी खींचता है, एक नमकीन पानी बनाता है जो मांस को संरक्षित और दृढ़ करता है। चीनी नमक को संतुलित करती है और नाजुक मिठास लाती है। ऊपर से दबाने वाला वजन जरूरी है — यह नमकीन पानी के प्रवाह को तेज करता है और अधिक घने, समान रूप से ठीक की गई बनावट देता है। अड़तालीस घंटे हल्का ठीक किया गया परिणाम देते हैं; बहत्तर घंटे अधिक दृढ़, गहन स्वाद वाली मछली देते हैं।"
     }
   },
   {
