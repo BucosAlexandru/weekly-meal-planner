@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 86 | Poutine |
-| 2 | 87 | Roti |
-| 3 | 88 | Jerk Chicken |
-| 4 | 89 | Sabich |
-| 5 | 90 | Ropa Vieja |
-| 6 | 91 | Cullen Skink |
-| 7 | 92 | Gado-Gado |
-| 8 | 93 | Cinnamon Bun |
-| 9 | 94 | Chiles en Nogada |
-| 10 | 95 | Lentil Soup |
+| 1 | 87 | Bún bò Huế |
+| 2 | 88 | Moqueca |
+| 3 | 89 | Sabich |
+| 4 | 90 | Ropa Vieja |
+| 5 | 91 | Cullen Skink |
+| 6 | 92 | Gado-Gado |
+| 7 | 93 | Cinnamon Bun |
+| 8 | 94 | Chiles en Nogada |
+| 9 | 95 | Lentil Soup |
+| 10 | 96 | Spanakopita |
 
 ---
 
