@@ -10932,7 +10932,8 @@ export const recipes = [
       ja: "カンボジア",
       tr: "Kamboçya",
       it: "Cambogia",
-      ko: "캄보디아"
+      ko: "캄보디아",
+      hi: "कंबोडिया"
     },
     name: {
       ro: "Amok",
@@ -10947,7 +10948,8 @@ export const recipes = [
       ja: "アモック",
       tr: "Amok",
       it: "Amok",
-      ko: "아목"
+      ko: "아목",
+      hi: "अमोक"
     },
     category: {
       ro: "Cină",
@@ -10962,7 +10964,8 @@ export const recipes = [
       ja: "夕食",
       tr: "Akşam yemeği",
       it: "Cena",
-      ko: "저녁"
+      ko: "저녁",
+      hi: "रात का खाना"
     },
     ingredients: {
       ro: ["600 g file de pește alb (tilapia, biban sau somn), fără piele, tăiat bucăți de 3 cm", "400 ml lapte de cocos (1 conservă de 400 ml)", "2 ouă mari, ușor bătute", "3 linguri sos de pește", "1 linguriță zahăr", "2 tulpini lemongrass, doar partea palidă, fin tocate", "3 căței de usturoi, fin tocați", "3 șalote (aproximativ 100 g), fin tocate", "1 linguriță pastă de galangal (sau 1 cm galangal proaspăt, ras)", "1/2 linguriță turmeric măcinat", "1/2 linguriță fulgi de ardei iute uscat sau 1 ardei roșu, fin tocat", "4 frunze de kaffir lime, cotoare îndepărtate, fin feliate", "4 pătrate mari de frunze de bananer (30 x 30 cm), înmuiate, sau ramekine", "20 g frunze de busuioc proaspăt sau busuioc thai, pentru garnitură"],
@@ -10997,19 +11000,20 @@ export const recipes = [
       hi: "लेमनग्रास, लहसुन, शैलट, गलंगल, हल्दी और मिर्च को ओखली में कूटें या ब्लेंडर में चिकना पेस्ट बनाएं। एक बड़े बर्तन में नारियल का दूध, फेंटे अंडे, फिश सॉस और चीनी मिलाएं। मसाले का पेस्ट और आधे कफिर लाइम के पत्ते मिलाएं। मछली के टुकड़े डालें और धीरे से लपेटें; 15 मिनट मैरिनेट करें। केले के पत्तों को गैस की आंच या गर्म पानी में 30 सेकंड नरम करें। प्रत्येक को लगभग 12 सेमी चौड़े और 4 सेमी गहरे कप के आकार में मोड़ें और टूथपिक से सुरक्षित करें। मछली का मिश्रण 4 केले के पत्ते के कपों में समान रूप से बांटें, प्रत्येक को लगभग दो-तिहाई भरें और बाकी कफिर लाइम के पत्ते ऊपर छिड़कें। कपों को उबलते पानी के ऊपर बांस के स्टीमर में रखें, कसकर ढकें और 18-20 मिनट भाप में पकाएं जब तक अमोक जम जाए — कप हिलाने पर तरल न बहे — और ऊपरी हिस्सा थोड़ा कठोर हो जाए। ताजी तुलसी के पत्तों से सजाएं और जैस्मिन चावल के साथ तुरंत परोसें।"
     },
     originText: {
-      ro: "Amok este o rețetă tradițională din Cambodgia.",
-      en: "Amok is a traditional recipe from Cambodia.",
-      es: "Amok es una receta tradicional de Camboya.",
-      fr: "Amok est une recette traditionnelle du Cambodge.",
-      de: "Amok ist ein traditionelles Rezept aus Kambodscha.",
-      pt: "Amok é uma receita tradicional do Camboja.",
-      ru: "Амок — традиционный рецепт из Камбоджи.",
-      ar: "آموك هي وصفة تقليدية من كمبوديا.",
-      zh: "阿莫克咖喱鱼 是来自柬埔寨的传统食谱。",
-      ja: "アモック はカンボジアの伝統的なレシピです。",
-      tr: "Amok Kamboçya kökenli geleneksel bir tariftir.",
-      it: "Amok è una ricetta tradizionale della Cambogia.",
-      ko: "아목은 캄보디아의 전통 요리입니다."
+      ro: "Amok este cel mai celebrat fel de mâncare din Cambodgia — un curry de pește la aburi, preparat cu lapte proaspăt de cocos, pastă kroeung și frunze de kaffir lime, servit tradițional în cupe din frunze de bananer. Cupa din frunze de bananer nu este decorativă; ea modelează crema în timp ce se coagulează și conferă o aromă subtilă verde-vegetal.\n\nTextura este elementul definitoriu. Spre deosebire de un curry lichid, amok se gătește la aburi până se coagulează într-o masă mătăsoasă și cremoasă — moale dar fermă. Pasta kroeung — baza aromatică khmeră din lemongrass, galangal, coajă de kaffir lime, șalote și ardei iute uscat — este ceea ce o separă de curry-urile thai cu lapte de cocos. Timpul de aburire este precis; gătitul prea mult produce o textură granulară.",
+      en: "Amok is Cambodia's most celebrated dish — a steamed fish curry made with coconut milk, kroeung paste, and kaffir lime leaves, traditionally cooked and served inside banana leaf cups. The banana leaf vessel is functional, not decorative: it shapes the custard as it sets and imparts a subtle green fragrance.\n\nThe texture is the defining characteristic. Unlike a poured curry, amok is steamed until it sets into a silky, custardy mass — soft but sliceable, lighter than its components suggest. The kroeung paste — lemongrass, galangal, kaffir lime peel, shallots, and dried chilli — is what separates it from Thai coconut curries. Steaming time is precise; overcooking produces a grainy, rubbery texture.",
+      es: "El Amok es el plato más célebre de Camboya — un curry de pescado al vapor hecho con leche de coco, pasta kroeung y hojas de lima kaffir, cocinado y servido tradicionalmente en copas de hoja de plátano. El recipiente de hoja de plátano no es decorativo: moldea la crema mientras cuaja e imparte una sutil fragancia verde.\n\nLa textura es la característica definitoria. A diferencia de un curry líquido, el amok se cocina al vapor hasta que cuaja en una masa sedosa y cremosa — suave pero que se puede cortar. La pasta kroeung — hierba limón, galanga, piel de lima kaffir, chalotas y chile seco — es lo que lo distingue de los currys tailandeses con leche de coco. El tiempo de cocción es preciso; el exceso de cocción produce una textura granulosa.",
+      fr: "L'Amok est le plat le plus célèbre du Cambodge — un curry de poisson à la vapeur préparé avec du lait de coco, de la pâte kroeung et des feuilles de citron kaffir, traditionnellement cuit et servi dans des coupes de feuilles de bananier. La coupe en feuille de bananier est fonctionnelle, pas décorative: elle façonne la crème tandis qu'elle se prend et lui confère un léger parfum végétal.\n\nLa texture est la caractéristique définissante. Contrairement à un curry liquide, l'amok est cuit à la vapeur jusqu'à ce qu'il se prenne en une masse soyeuse et crémeuse — douce mais ferme. La pâte kroeung — citronnelle, galanga, zeste de citron kaffir, échalotes et piment séché — est ce qui le distingue des currys thaïs au lait de coco. Le temps de cuisson à la vapeur est précis; trop cuire produit une texture granuleuse.",
+      de: "Amok ist Kambodschas bekanntestes Gericht — ein gedämpftes Fischcurry aus Kokosmilch, Kroeung-Paste und Kaffir-Limettenblättern, traditionell in Bananenblatt-Bechern gekocht und serviert. Der Bananenblatt-Becher ist funktional, nicht dekorativ: Er formt die Creme beim Stocken und verleiht ihr einen feinen grünen Duft.\n\nDie Textur ist das prägende Merkmal. Anders als ein flüssiges Curry wird Amok gedämpft, bis er zu einer seidigen, puddinghaften Masse erstarrt — weich, aber schnittfest. Die Kroeung-Paste — Zitronengras, Galangal, Kaffir-Limettenabrieb, Schalotten und getrockneter Chili — unterscheidet ihn von thailändischen Kokosmilch-Currys. Die Dämpfzeit ist genau; Überkochen ergibt eine körnige Textur.",
+      pt: "O Amok é o prato mais célebre do Camboja — um curry de peixe cozinhado a vapor com leite de coco, pasta kroeung e folhas de lima kaffir, tradicionalmente cozinhado e servido em taças de folha de bananeira. A taça de folha de bananeira é funcional, não decorativa: molda o creme à medida que solidifica e confere uma sutil fragrância verde.\n\nA textura é a característica definidora. Ao contrário de um curry líquido, o amok é cozinhado a vapor até solidificar numa massa sedosa e cremosa — macia mas com estrutura. A pasta kroeung — capim-limão, galanga, casca de lima kaffir, chalotas e pimenta seca — é o que o distingue dos curries tailandeses com leite de coco. O tempo de cozedura a vapor é preciso; cozinhar demasiado produz uma textura granulosa.",
+      ru: "Амок — самое прославленное блюдо Камбоджи: рыбное карри на пару, приготовленное с кокосовым молоком, пастой крёунг и листьями каффир-лайма, традиционно подаваемое в стаканчиках из банановых листьев. Стаканчик из бананового листа не декоративен: он придаёт форму кустарду по мере застывания и сообщает тонкий зелёный аромат.\n\nТекстура — определяющая характеристика. В отличие от жидкого карри, амок готовится на пару до состояния шелковистой, нежной массы — мягкой, но держащей форму. Паста крёунг — лемонграсс, галангал, цедра каффир-лайма, шалот и сушёный чили — отличает его от тайских карри с кокосовым молоком. Время на пару точное: лишние минуты дают зернистую, резиновую текстуру.",
+      ar: "الآموك هو أشهر أطباق كمبوديا — كاري سمك مطهو على البخار بحليب جوز الهند ومعجون الكروينغ وأوراق ليمون كافير، يُطهى ويُقدَّم تقليدياً في أكواب مصنوعة من أوراق الموز. الكوب من أوراق الموز وظيفي لا زخرفي: يُشكِّل الكاسترد أثناء تماسكه ويُضفي عليه رائحة خضراء خفيفة.\n\nالقوام هو السمة المميزة. خلافاً للكاري السائل، يُبخَّر الآموك حتى يتماسك في كتلة حريرية كريمية — طرية لكنها متماسكة. معجون الكروينغ — ليمون الحشيش والجاوى وقشر الليمون كافير والكراث والفلفل الحار المجفف — هو ما يميزه عن كاري جوز الهند التايلاندية. وقت البخار دقيق؛ الإفراط في الطهي ينتج قواماً حبيبياً.",
+      zh: "阿莫克是柬埔寨最负盛名的菜肴——一道以椰浆、克勒乌蒙酱和卡菲尔青柠叶制作的蒸鱼咖喱，传统上在香蕉叶杯中烹制和上桌。香蕉叶容器不只是装饰，它在蒸制过程中塑造蛋奶冻的形状，并赋予菜肴淡淡的植物清香。\n\n质地是这道菜的核心特征。与液态咖喱不同，阿莫克要蒸到凝固成丝滑的蛋奶冻状——柔软但有形，比原料给人的印象更为轻盈。克勒乌蒙酱——由香茅、南姜、卡菲尔青柠皮、小葱和干辣椒组成——是它与泰式椰浆咖喱的本质区别。蒸制时间必须精确，蒸过头会产生颗粒状、橡皮状的口感。",
+      ja: "アモックはカンボジアで最も称えられる料理 — ナッツの香りあるクローン・ペーストとカフィルライムの葉を使った蒸し魚カレーで、伝統的にバナナの葉のカップで調理・供される。バナナの葉の器は装飾ではなく機能的なもので、固まりつつあるカスタードに形を与え、微かな緑の芳香を添える。\n\nテクスチャーが決定的な特徴だ。普通のカレーと違い、アモックは蒸し上げることでシルクのような、なめらかなプリン状の固さに仕上がる — 柔らかいが形をとどめ、素材から想像するより軽い。クローン・ペースト — レモングラス、ガランガル、カフィルライムの皮、シャロット、乾燥唐辛子 — がタイのコナッツミルクカレーとの違いを生む。蒸し時間は正確に守ること；蒸しすぎるとジャリジャリとしたゴム状になる。",
+      tr: "Amok, Kamboçya'nın en ünlü yemeğidir — hindistancevizi sütü, kroeung ezmesi ve kaffir misket limonu yapraklarıyla hazırlanan buharda pişirilmiş bir balık körisi; geleneksel olarak muz yaprağı kaplarında pişirilip servis edilir. Muz yaprağı kabı süs değil, işlevseldir: pıhtılaşan muhallebiyi şekillendirir ve ona hafif yeşil bir koku verir.\n\nDoku tanımlayıcı özelliktir. Sıvı bir köri yerine, amok ipeksi, muhallebi kıvamında katılaşana kadar buharda pişirilir — yumuşak ama dilimlenebilinir, bileşenlerinin düşündürdüğünden daha hafif. Kroeung ezmesi — limon otu, galangal, kaffir limonu kabuğu, arpacık soğanı ve kuru biber — onu Tayland hindistancevizi sütlü körilerinden ayırandır. Buhar süresi kesindir; fazla pişirme granüllü, lastik bir dokuya yol açar.",
+      it: "L'Amok è il piatto più celebre della Cambogia — un curry di pesce al vapore preparato con latte di cocco, pasta kroeung e foglie di lime kaffir, cotto e servito tradizionalmente in coppette di foglia di banana. La coppetta di foglia di banana è funzionale, non decorativa: dà forma alla crema mentre si rapprende e le conferisce un sottile profumo verde.\n\nLa consistenza è la caratteristica definitoria. A differenza di un curry liquido, l'amok è cotto al vapore finché non si rapprende in una massa setosa, simile a una crème caramel — morbida ma affettabile. La pasta kroeung — citronella, galanga, scorza di lime kaffir, scalogno e peperoncino secco — è ciò che lo distingue dai curry tailandesi al latte di cocco. Il tempo di cottura a vapore è preciso; troppa cottura produce una consistenza granulosa.",
+      ko: "아목은 캄보디아에서 가장 유명한 요리로, 코코넛 밀크, 크뢰웅 페이스트, 카피르 라임 잎으로 만든 찐 생선 카레다. 전통적으로 바나나 잎 컵 안에서 조리하고 그대로 내놓는다. 바나나 잎 그릇은 장식이 아니라 기능적 역할을 한다 — 굳어가는 커스터드를 형태 잡아주고 은은한 녹색 향기를 더한다.\n\n질감이 이 요리의 핵심이다. 일반 카레와 달리 아목은 쪄서 부드럽게 굳은 비단결 같은 커스터드 덩어리로 만든다 — 부드럽지만 썰 수 있고, 재료에서 예상하는 것보다 가볍다. 크뢰웅 페이스트 — 레몬그라스, 갈랑갈, 카피르 라임 껍질, 샬롯, 건조 고추 — 가 태국식 코코넛 카레와 구별되는 요소다. 찌는 시간은 정확해야 하며, 과조리하면 거칠고 질긴 식감이 된다.",
+      hi: "अमोक कंबोडिया का सबसे प्रसिद्ध व्यंजन है — नारियल दूध, क्रोयंग पेस्ट और कफिर लाइम के पत्तों से बनाई गई भाप में पकाई मछली की करी, परंपरागत रूप से केले के पत्तों के कपों में पकाई और परोसी जाती है। केले के पत्ते का बर्तन सजावटी नहीं, कार्यात्मक है: यह जमते हुए कस्टर्ड को आकार देता है और एक हल्की हरी सुगंध देता है।\n\nबनावट इस व्यंजन की परिभाषित विशेषता है। तरल करी के विपरीत, अमोक को भाप में तब तक पकाया जाता है जब तक यह एक रेशमी, कस्टर्ड जैसे द्रव्यमान में न जम जाए — नरम लेकिन काटने योग्य। क्रोयंग पेस्ट — लेमनग्रास, गलंगल, कफिर लाइम की छाल, शैलट और सूखी मिर्च — इसे थाई नारियल दूध की करी से अलग करती है। भाप का समय सटीक होना चाहिए; अधिक पकाने से दानेदार, रबरयुक्त बनावट बन जाती है।"
     }
   },
   {
