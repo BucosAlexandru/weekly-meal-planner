@@ -20,7 +20,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 
 | ID | Recipe | Status | Commit | Notes |
 |---|---|---|---|---|
-| 1 | Spaghetti Carbonara | Partial Fix Only | `2c4e9fc6` | Struct + name/originText/time fixed; EN ingredients+steps not re-verified |
+| 1 | Spaghetti Carbonara | Tier A Complete | `ref/1` | **Reference recipe.** Premium 3-sentence originText headnote + 8-step howIsMade with technique explanations (cold-pan rendering, residual heat emulsification, no-cream rule), all 14 locales |
 | 2 | Tripe Soup / Ciorbă de burtă | Partial Fix Only | `4b239d93` | name tr/it/ko + originText ru/tr/it fixed |
 | 3 | Quiche Lorraine | Partial Fix Only | `12dbcf41` | howIsMade.ru typo fixed; time + desc corrected |
 | 4 | Gazpacho | Partial Fix Only | `4e889857` | name.ko + originText fr/ru/it/ko + time corrected |

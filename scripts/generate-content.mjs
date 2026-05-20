@@ -2333,7 +2333,10 @@ function isSoup(cat, n, ingr) {
     || /\bbulion\b|\bstock\b|\bbroth\b|\bbouillon\b/i.test(ingr.join(' '));
 }
 
-function recipeFeatureCards(ingr, steps, cat, code, n) {
+function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
+  if (overrides?.featureCards) {
+    return overrides.featureCards.map(f=>`<div class="recipe-feature-card"><span class="recipe-feature-icon">${f.icon}</span><div><p class="recipe-feature-title">${esc(f.t)}</p><p class="recipe-feature-desc">${esc(f.d)}</p></div></div>`).join('');
+  }
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const ingrStr = ingr.join(' ').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
@@ -2349,7 +2352,8 @@ function recipeFeatureCards(ingr, steps, cat, code, n) {
   return cards.map(f=>`<div class="recipe-feature-card"><span class="recipe-feature-icon">${f.icon}</span><div><p class="recipe-feature-title">${f.t}</p><p class="recipe-feature-desc">${f.d}</p></div></div>`).join('');
 }
 
-function recipeNutrition(ingr, cat) {
+function recipeNutrition(ingr, cat, overrides) {
+  if (overrides?.nutrition) return overrides.nutrition;
   const ingrStr = ingr.join(' ').toLowerCase();
   const catStr = (cat||'').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|duck|turkey|veal|carne|pui|porc|vită|miel/.test(ingrStr);
@@ -2371,6 +2375,9 @@ function recipeNutrition(ingr, cat) {
 function recipePairings(ingr, cat, code, n, overrides) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const p = ui.pairs;
+  if (overrides?.pairings) {
+    return overrides.pairings.map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
+  }
   if (overrides && overrides.pairingsType && p[overrides.pairingsType]) {
     return p[overrides.pairingsType].map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
   }
@@ -2444,9 +2451,16 @@ function recipePage(recipe, rl) {
     ? `https://meal-planner.ro/images/${rslug}.jpg`
     : 'https://meal-planner.ro/images/cover2.jpg';
   const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
-  const overrides = { servings: recipe.servings, tipType: recipe.tipType, pairingsType: recipe.pairingsType };
+  const overrides = {
+    servings: recipe.servings,
+    tipType: recipe.tipType,
+    pairingsType: recipe.pairingsType,
+    featureCards: recipe.featureCards?.[code],
+    pairings: recipe.pairings?.[code],
+    nutrition: recipe.nutrition,
+  };
   const meta    = recipeMetadata(ingr, steps, cat, code, overrides);
-  const nutri   = recipeNutrition(ingr, cat);
+  const nutri   = recipeNutrition(ingr, cat, overrides);
   const emoji   = recipeCardEmoji(cat);
   const stepsUi = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
   const tip     = recipeTip(ingr, cat, code, n, overrides);
@@ -2527,7 +2541,7 @@ ${makeNav(lc)}
   </div>
 
   <!-- Feature Cards -->
-  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code, n)}</div>
+  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code, n, overrides)}</div>
 
   <!-- 3-column content -->
   <div class="recipe-content-grid">
