@@ -97,7 +97,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | 75 | Harira | Tier A Complete | `226a3dbe` | Full EN rewrite: 14 ingredients with exact quantities, 8-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
 | 76 | Lobio | Tier A Complete | `e7265c7a` | Full EN rewrite: 14 ingredients with exact quantities, 8-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
 | 77 | Chakhchoukha | Tier A Complete | `d7dac09d` | Full EN rewrite: 14 ingredients with exact quantities, 7-step howIsMade with timings and doneness cues. All 14 locales + hi + pt added. |
-| 78 | Rendang | Stub / Needs Full Rewrite | `21801e1c` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
+| 78 | Rendang | Tier A Complete | `21801e1c` | Full EN rewrite: 14 ingredients with exact quantities (beef 1kg, coconut milk 800ml, shallots x5, galangal, lemongrass, dried chillies, kaffir lime leaves), 7-step howIsMade with timings (5-6 min paste fry, 1.5 hr simmer, 30-45 min reduction) and doneness cues (deep mahogany brown, oil splits). All 14 locales + hi updated. |
 | 79 | Gravlax | Stub / Needs Full Rewrite | `799bd94b` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 80 | Stoofvlees | Stub / Needs Full Rewrite | `07267d80` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 81 | Zeamă | Stub / Needs Full Rewrite | `29c1a485` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
