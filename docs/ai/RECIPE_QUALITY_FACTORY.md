@@ -93,7 +93,7 @@ Audit details live in `RECIPE_QUALITY_PHASE_1_AUDIT.md`.
 | — | (id 71 absent) | — | — | No recipe with id 71 in file |
 | 72 | Amok | Tier A Complete | `1adeb0de` | Full EN rewrite: 14 ingredients with exact quantities, 7-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
 | 73 | Momo | Tier A Complete | `f63ff84f` | Full EN rewrite: 14 ingredients with exact quantities, 8-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
-| 74 | Encebollado | Stub / Needs Full Rewrite | `831fb0e0` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
+| 74 | Encebollado | Tier A Complete | `831fb0e0` | Full EN rewrite: 14 ingredients with exact quantities, 7-step howIsMade with timings and doneness cues. All 14 locales + hi updated. |
 | 75 | Harira | Stub / Needs Full Rewrite | `226a3dbe` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/name/originText surface-fixed only |
 | 76 | Lobio | Stub / Needs Full Rewrite | `e7265c7a` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only |
 | 77 | Chakhchoukha | Stub / Needs Full Rewrite | `d7dac09d` | EN ingredients have no quantities; howIsMade is 1–2 generic sentences. Struct/origin/name/originText surface-fixed only; origin.pt added |
