@@ -13581,7 +13581,8 @@ export const recipes = [
       ja: "サモア",
       tr: "Samoa",
       it: "Samoa",
-      ko: "사모아"
+      ko: "사모아",
+      hi: "सामोआ"
     },
     name: {
       ro: "Oka i'a",
@@ -13596,7 +13597,8 @@ export const recipes = [
       ja: "オカ・イア",
       tr: "Oka i'a",
       it: "Oka i'a",
-      ko: "오카 이아"
+      ko: "오카 이아",
+      hi: "ओका इआ"
     },
     category: {
       ro: "Gustare",
@@ -13611,7 +13613,8 @@ export const recipes = [
       ja: "スナック",
       tr: "Atıştırmalık",
       it: "Spuntino",
-      ko: "간식"
+      ko: "간식",
+      hi: "स्नैक"
     },
     servings: 4,
     tipType: 'fish',
@@ -13629,7 +13632,8 @@ export const recipes = [
       ja: ["生魚", "ココナッツミルク", "キュウリ", "玉ねぎ", "トマト", "ライム", "塩"],
       tr: ["çiğ balık", "hindistancevizi süt", "salatalık", "soğbir", "domates", "yeşil limon", "tuz"],
       it: ["crudo pesce", "cocco latte", "cetriolo", "cipolla", "pomodori", "lime", "sale"],
-      ko: ["생 생선", "코코넛 우유", "오이", "양파", "토마토", "라임", "소금"]
+      ko: ["생 생선", "코코넛 우유", "오이", "양파", "토마토", "라임", "소금"],
+      hi: ["कच्ची मछली", "नारियल का दूध", "खीरा", "प्याज़", "टमाटर", "नींबू", "नमक"]
     },
     howIsMade: {
       ro: "Taie peștele crud cubulețe, amestecă-l cu lapte de cocos, ceapă, roșii, castravete și sare. Servește rece.",
@@ -13644,22 +13648,24 @@ export const recipes = [
       ja: "生魚を角切りにし、ココナッツミルク・玉ねぎ・トマト・きゅうり・塩と和えて冷やして提供。",
       tr: "Çiğ balığı küp şeklinde doğrayın, hindistancevizi sütü, soğan, domates, salatalık ve tuzla karıştırın. Soğutulmuş olarak servis edin.",
       it: "Tagliare il pesce crudo a cubetti, mescolare con latte di cocco, cipolla, pomodoro, cetriolo e sale. Servire freddo.",
-      ko: "생선을 깍둑썰기로 자른 후 코코넛 우유, 양파, 토마토, 오이, 소금과 섞습니다. 차갑게 식혀 제공합니다."
+      ko: "생선을 깍둑썰기로 자른 후 코코넛 우유, 양파, 토마토, 오이, 소금과 섞습니다. 차갑게 식혀 제공합니다.",
+      hi: "कच्ची मछली को टुकड़ों में काटें, नारियल के दूध, प्याज़, टमाटर, खीरे और नमक के साथ मिलाएं। ठंडा परोसें।"
     },
     originText: {
-      ro: "Oka i'a este o rețetă tradițională din Samoa.",
-      en: "Oka i'a is a traditional recipe from Samoa.",
-      es: "Oka i'a es una receta tradicional de Samoa.",
-      fr: "Oka i'a est une recette traditionnelle de Samoa.",
-      de: "Oka i'a ist ein traditionelles Rezept aus Samoa.",
-      pt: "Oka i'a é uma receita tradicional de Samoa.",
-      ru: "Ока и'а — традиционный рецепт из Самоа.",
-      ar: "أوكا إيا هي وصفة تقليدية من ساموا.",
-      zh: "萨摩亚鱼沙拉 是来自萨摩亚的传统食谱。",
-      ja: "オカ・イア はサモアの伝統的なレシピです。",
-      tr: "Oka i'a Samoa kökenli geleneksel bir tariftir.",
-      it: "Oka i'a è una ricetta tradizionale di Samoa.",
-      ko: "오카 이아는 사모아의 전통 요리입니다."
+      ro: "Oka i'a este cel mai celebrat fel de mâncare din Samoa — pește crud marinat scurt în zeamă de lămâie verde, finalizat în lapte de cocos proaspăt, cu castraveți, ceapă și roșii adăugând textură și contrast. Numele înseamnă 'pește crud' în samoană, iar prepararea este o rudă din Pacific a ceviche-ului: lămâia verde înmoaie ușor peștele, dar nu îl gătește. Laptele de cocos se adaugă chiar înainte de servire, nu în timpul marinării, pentru a-și păstra prospețimea.\n\nCalitatea peștelui este esențială: ton ferm, proaspăt, de calitate sashimi, sau mahi-mahi sunt alegerile standard. Timpul de marinare în zeamă de lămâie verde contează — cincisprezece până la douăzeci de minute înmoaie exteriorul fără a face peștele sfărâmicios sau prea acid. Laptele de cocos trebuie să fie proaspăt deschis sau integral la conservă; versiunile degresate produc un rezultat apos. Preparatul se servește rece, imediat după asamblare.",
+      en: "Oka i'a is Samoa's most celebrated dish — raw fish marinated briefly in lime juice, then finished in fresh coconut milk, with cucumber, onion, and tomato adding texture and contrast. The name means 'raw fish' in Samoan, and the preparation is a Pacific island cousin of ceviche: the lime softens the fish slightly but does not cook it. Coconut milk is added just before serving, not during the marination, which keeps its freshness.\n\nThe quality of the fish is the whole point: firm, fresh, sashimi-grade tuna or mahi-mahi are standard choices. The lime marination time matters — fifteen to twenty minutes firms the exterior without making the fish mealy or overly acidic. The coconut milk must be freshly opened or full-fat canned; low-fat versions produce a watery result. The dish is served cold, immediately after assembly.",
+      es: "Oka i'a es el plato más celebrado de Samoa — pescado crudo marinado brevemente en jugo de lima, luego terminado en leche de coco fresca, con pepino, cebolla y tomate añadiendo textura y contraste. El nombre significa 'pescado crudo' en samoano, y la preparación es un primo isleño del Pacífico del ceviche: la lima ablanda ligeramente el pescado pero no lo cocina. La leche de coco se añade justo antes de servir, no durante la marinada, lo que preserva su frescura.\n\nLa calidad del pescado lo es todo: atún firme, fresco, de calidad sashimi, o mahi-mahi son las elecciones estándar. El tiempo de marinada en lima importa — quince a veinte minutos firma el exterior sin hacer el pescado harinoso o demasiado ácido. La leche de coco debe ser recién abierta o enlatada entera; las versiones bajas en grasa producen un resultado aguado. El plato se sirve frío, inmediatamente después de montarlo.",
+      fr: "Oka i'a est le plat le plus célébré de Samoa — du poisson cru mariné brièvement dans du jus de citron vert, puis fini dans du lait de coco frais, avec concombre, oignon et tomate ajoutant texture et contraste. Le nom signifie 'poisson cru' en samoan, et la préparation est un cousin insulaire du Pacifique du ceviche : le citron vert ramollit légèrement le poisson sans le cuire. Le lait de coco est ajouté juste avant de servir, pas pendant la marinade, ce qui préserve sa fraîcheur.\n\nLa qualité du poisson est l'essentiel : thon ferme, frais, de qualité sashimi, ou mahi-mahi sont les choix habituels. Le temps de marinade dans le jus de citron vert compte — quinze à vingt minutes raffermissent l'extérieur sans rendre le poisson pâteux ou trop acide. Le lait de coco doit être fraîchement ouvert ou en conserve entier ; les versions allégées donnent un résultat aqueux. Le plat se sert froid, immédiatement après l'assemblage.",
+      de: "Oka i'a ist das bekannteste Gericht Samoas — roher Fisch, kurz in Limettensaft mariniert, dann in frischer Kokosmilch vollendet, mit Gurke, Zwiebel und Tomate für Textur und Kontrast. Der Name bedeutet auf Samoanisch 'roher Fisch', und die Zubereitung ist ein Pazifik-Insel-Verwandter des Ceviche: Die Limette weicht den Fisch leicht auf, gart ihn aber nicht. Kokosmilch wird erst kurz vor dem Servieren hinzugefügt, nicht während der Marinade, damit die Frische erhalten bleibt.\n\nDie Qualität des Fisches ist entscheidend: fester, frischer Thunfisch in Sashimi-Qualität oder Mahi-Mahi sind die üblichen Wahlen. Die Marinierzeit in Limettensaft ist wichtig — fünfzehn bis zwanzig Minuten festigen die Außenseite, ohne den Fisch bröselig oder zu säuerlich zu machen. Die Kokosmilch muss frisch geöffnet oder in voller Fettstufe aus der Dose sein; fettarme Versionen ergeben ein wässriges Ergebnis. Das Gericht wird kalt unmittelbar nach dem Zusammenstellen serviert.",
+      pt: "Oka i'a é o prato mais celebrado de Samoa — peixe cru marinado brevemente em suco de limão, depois finalizado em leite de coco fresco, com pepino, cebola e tomate adicionando textura e contraste. O nome significa 'peixe cru' em samoano, e a preparação é um primo ilhéu do Pacífico do ceviche: o limão amolece ligeiramente o peixe mas não o cozinha. O leite de coco é adicionado logo antes de servir, não durante a marinada, o que preserva a sua frescura.\n\nA qualidade do peixe é o fundamental: atum firme, fresco, de qualidade sashimi, ou mahi-mahi são as escolhas padrão. O tempo de marinada no limão importa — quinze a vinte minutos firmam o exterior sem tornar o peixe farinhento ou demasiado ácido. O leite de coco deve ser recém-aberto ou integral enlatado; versões com baixo teor de gordura produzem um resultado aguado. O prato serve-se frio, imediatamente após a montagem.",
+      ru: "Ока и'а — самое известное блюдо Самоа: сырая рыба, ненадолго замаринованная в соке лайма, затем доведённая до готовности в свежем кокосовом молоке с огурцом, луком и помидором, придающими текстуру и контраст. Название означает «сырая рыба» на самоанском, а приготовление — тихоокеанский аналог севиче: лайм слегка смягчает рыбу, но не готовит её. Кокосовое молоко добавляется непосредственно перед подачей, а не в процессе маринования, что сохраняет его свежесть.\n\nКачество рыбы — это главное: плотный, свежий тунец качества сашими или мahi-mahi являются стандартными вариантами. Время маринования в соке лайма важно — пятнадцать-двадцать минут уплотняют внешний слой без того, чтобы рыба стала рассыпчатой или излишне кислой. Кокосовое молоко должно быть свежеоткрытым или цельным из банки; нежирные версии дают водянистый результат. Блюдо подаётся холодным сразу после сборки.",
+      ar: "أوكا إيا هو أشهر أطباق ساموا — سمك نيء يُنقع لفترة وجيزة في عصير الليمون الأخضر، ثم يُكتمل بحليب جوز الهند الطازج مع الخيار والبصل والطماطم لإضافة القوام والتباين. يعني الاسم 'سمكة نيئة' بالساموية، والطريقة تُعدّ قريبة المحيط الهادئ من السيفيشي: يُليّن الليمون السمكةَ قليلاً دون أن يطبخها. يُضاف حليب جوز الهند مباشرةً قبيل التقديم لا خلال النقع، مما يحافظ على نضارته.\n\nجودة السمك هي جوهر الطبق: التونا الطازجة الصلبة أو الماهي ماهي بجودة الساشيمي هي الخيارات المعتادة. مدة نقع السمك في عصير الليمون الأخضر مهمة — خمس عشرة إلى عشرون دقيقة تُماسك السطح دون أن يصبح السمك متفتتاً أو حامضاً أكثر من اللازم. يجب أن يكون حليب جوز الهند طازج الفتح أو كامل الدسم معلّباً؛ النسخ خفيفة الدهون تنتج نتيجة مائية. يُقدَّم الطبق بارداً فور التجميع.",
+      zh: "奥卡伊阿是萨摩亚最知名的菜肴——生鱼先在青柠汁中短暂腌制，再用新鲜椰奶收尾，加入黄瓜、洋葱和番茄增加口感与对比。这道菜的名字在萨摩亚语中意为「生鱼」，做法是太平洋岛屿版的酸橘汁腌鱼：青柠使鱼肉略微软化，但并不将其烹熟。椰奶在上桌前才加入，而非腌制期间，以保持其新鲜度。\n\n鱼的质量是关键所在：质地紧实、新鲜的刺身级金枪鱼或鲯鳅是标准选择。青柠腌制时间很重要——十五到二十分钟可使鱼肉表面变紧，而不会使其散粉或过酸。椰奶必须是刚开罐的或全脂罐装的；低脂版本会产生水状口感。这道菜应在冷藏状态下、组合好后立即上桌。",
+      ja: "オカ・イアはサモアで最も知られた料理だ——生魚をライム果汁で短時間マリネし、新鮮なココナッツミルクで仕上げ、きゅうり、玉ねぎ、トマトが食感とコントラストを加える。名前はサモア語で「生魚」を意味し、その作り方はセビーチェの太平洋島嶼版だ：ライムが魚を少し柔らかくするが、調理はしない。ococナッツミルクはマリネ中ではなく、提供直前にのみ加えることで、その新鮮さが保たれる。\n\n魚の品質がすべてだ：しっかりした食感の、新鮮なサシミグレードのマグロやマヒマヒが定番の選択肢。ライムでのマリネ時間が重要で——15〜20分で外側が締まり、魚がパサパサになったり酸味が強くなりすぎたりしない。ococナッツミルクは開けたばかりか全脂の缶詰でなければならず、低脂肪版は水っぽい仕上がりになる。料理は冷たいまま、盛り付け後すぐに供する。",
+      tr: "Oka i'a, Samoa'nın en ünlü yemeğidir — kısa süre limon suyunda marine edilmiş çiğ balık, ardından taze hindistancevizi sütünde tamamlanır; salatalık, soğan ve domates doku ve kontrast katar. Ad Samoca 'çiğ balık' anlamına gelir ve hazırlama, sevişin Pasifik adası versiyonudur: limon balığı hafifçe yumuşatır ama pişirmez. Hindistancevizi sütü, tazeliğini korumak için marine sırasında değil, servis etmeden hemen önce eklenir.\n\nBalığın kalitesi her şeydir: sert, taze, sashimi kalitesinde ton balığı veya mahi-mahi standart seçimlerdir. Limon suyundaki marine süresi önemlidir — on beş ila yirmi dakika dışı sertleştirir, balığı un gibi yapmadan veya aşırı asitli hale getirmeden. Hindistancevizi sütü taze açılmış veya tam yağlı konserve olmalıdır; az yağlı versiyonlar sulu bir sonuç üretir. Yemek soğuk, birleştirdikten hemen sonra servis edilir.",
+      it: "Oka i'a è il piatto più celebrato di Samoa — pesce crudo marinato brevemente nel succo di lime, poi rifinito con latte di cocco fresco, con cetriolo, cipolla e pomodoro che aggiungono consistenza e contrasto. Il nome significa 'pesce crudo' in samoano, e la preparazione è una variante insulare del Pacifico del ceviche: il lime ammorbidisce leggermente il pesce senza cuocerlo. Il latte di cocco viene aggiunto subito prima di servire, non durante la marinatura, il che preserva la sua freschezza.\n\nLa qualità del pesce è fondamentale: tonno sodo, fresco, di qualità sashimi, o mahi-mahi sono le scelte standard. Il tempo di marinatura nel lime è importante — quindici-venti minuti soda l'esterno senza rendere il pesce sfarinato o eccessivamente acido. Il latte di cocco deve essere appena aperto o intero in lattina; le versioni a basso contenuto di grassi producono un risultato acquoso. Il piatto si serve freddo, immediatamente dopo l'assemblaggio.",
+      ko: "오카 이아는 사모아의 가장 유명한 요리입니다 — 생선을 라임 즙에 잠깐 재운 후 신선한 코코넛 밀크로 마무리하며, 오이, 양파, 토마토가 질감과 대비를 더합니다. 이름은 사모아어로 '생 생선'을 의미하며, 이 요리는 세비체의 태평양 섬 사촌입니다: 라임이 생선을 살짝 부드럽게 하지만 익히지는 않습니다. 코코넛 밀크는 마리네이드 중이 아닌 서빙 직전에 추가하여 신선함을 유지합니다.\n\n생선의 품질이 핵심입니다: 단단하고 신선한 사시미 등급의 참치나 마히마히가 표준 선택입니다. 라임 마리네이드 시간이 중요합니다 — 15~20분이면 생선을 파슬파슬하거나 지나치게 산성으로 만들지 않고 겉을 단단하게 만듭니다. 코코넛 밀크는 새로 개봉한 것이거나 전지 통조림이어야 합니다; 저지방 버전은 물기 많은 결과를 냅니다. 이 요리는 조합 즉시 차게 제공합니다.",
+      hi: "ओका इआ सामोआ का सबसे प्रसिद्ध व्यंजन है — कच्ची मछली को थोड़े समय के लिए नींबू के रस में मैरिनेट किया जाता है, फिर ताज़े नारियल के दूध में तैयार किया जाता है, खीरे, प्याज़ और टमाटर बनावट और विपरीतता जोड़ते हैं। नाम का अर्थ सामोआई में 'कच्ची मछली' है, और यह तैयारी सेविचे का प्रशांत द्वीप संस्करण है: नींबू मछली को थोड़ा नरम करता है लेकिन पकाता नहीं। नारियल का दूध मैरिनेट के दौरान नहीं, बल्कि परोसने से ठीक पहले मिलाया जाता है, जिससे इसकी ताज़गी बनी रहती है।\n\nमछली की गुणवत्ता सबसे महत्वपूर्ण है: दृढ़, ताज़ी, सशिमी-ग्रेड टूना या माही-माही मानक विकल्प हैं। नींबू में मैरिनेशन का समय महत्वपूर्ण है — पंद्रह से बीस मिनट बाहरी हिस्से को दृढ़ बनाते हैं बिना मछली को चूर-चूर या अत्यधिक खट्टा बनाए। नारियल का दूध ताज़ा खोला हुआ या पूर्ण वसा वाला डिब्बाबंद होना चाहिए; कम वसा वाले संस्करण पानी जैसा परिणाम देते हैं। यह व्यंजन ठंडा, असेंबल होने के तुरंत बाद परोसा जाता है।"
     }
   },
   {
