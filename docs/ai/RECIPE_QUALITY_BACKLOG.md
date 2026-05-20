@@ -91,16 +91,16 @@ Work through these one at a time, in order. Do not advance to the next until the
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 72 | Amok |
-| 2 | 73 | Momo |
-| 3 | 74 | Encebollado |
-| 4 | 75 | Harira |
-| 5 | 76 | Lobio |
-| 6 | 77 | Chakhchoukha |
-| 7 | 78 | Rendang |
-| 8 | 79 | Gravlax |
-| 9 | 80 | Stoofvlees |
-| 10 | 81 | Zeamă |
+| 1 | 73 | Momo |
+| 2 | 74 | Encebollado |
+| 3 | 75 | Harira |
+| 4 | 76 | Lobio |
+| 5 | 77 | Chakhchoukha |
+| 6 | 78 | Rendang |
+| 7 | 79 | Gravlax |
+| 8 | 80 | Stoofvlees |
+| 9 | 81 | Zeamă |
+| 10 | 82 | Meat Pie |
 
 ---
 
