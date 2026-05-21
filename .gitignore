@@ -27,5 +27,8 @@ yarn-error.log*
 check-ssl-expiry.cjs
 check-ssl-expiry.js.claude/
 
+# Recipe-generation scripts — local only (audit_*.py stay tracked)
+/fix_*.py
+
 # Claude Code worktrees
 .claude/worktrees/
