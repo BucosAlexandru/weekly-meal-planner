@@ -2342,10 +2342,10 @@ function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
   const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
   const soupRecipe = isSoup(cat, n, ingr);
-  const isFreezer = soupRecipe || steps.length > 5;
+  const isFreezer = soupRecipe || steps.length > 5 || (overrides?.totalMins && overrides.totalMins > 35);
   const cards = [
     hasFish ? ui.feat[1] : hasMeat ? ui.feat[0] : ui.feat[2],
-    soupRecipe ? ui.feat[6] : ui.feat[7],
+    (soupRecipe || isFreezer) ? ui.feat[6] : ui.feat[7],
     ui.feat[3],
     isFreezer ? ui.feat[4] : ui.feat[5],
   ];
