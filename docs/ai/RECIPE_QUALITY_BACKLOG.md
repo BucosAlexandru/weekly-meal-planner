@@ -65,9 +65,9 @@ These have confirmed stub-level EN content. All 14 locale translations will need
 
 Translation stubs were fixed in tr/it/ko, but the EN howIsMade is still stub-level and EN ingredients still lack quantities. These need EN content rewrites before re-translating.
 
-IDs in order: 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
+IDs in order: 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
 
-Removed (now Tier A Complete): 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102
+Removed (now Tier A Complete): 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 104, 105
 
 ---
 
@@ -93,18 +93,18 @@ Work through these in batches of 3–5, in order. Do not advance to the next bat
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 103 | Shrimp Ceviche |
-| 2 | 104 | La Bandera |
-| 3 | 105 | Fesenjan |
-| 4 | 106 | Kare-Kare |
-| 5 | 107 | Francesinha |
-| 6 | 109 | Arroz Chaufa |
-| 7 | 110 | Chili Crab |
-| 8 | 111 | Tamale |
-| 9 | 112 | Tom Yum |
-| 10 | 113 | Milanesa |
+| 1 | 106 | Kare-Kare |
+| 2 | 107 | Francesinha |
+| 3 | 109 | Arroz Chaufa |
+| 4 | 110 | Chili Crab |
+| 5 | 111 | Tamale |
+| 6 | 112 | Tom Yum |
+| 7 | 113 | Milanesa |
+| 8 | 114 | Lok Lak |
+| 9 | 115 | Manti |
+| 10 | 116 | (next) |
 
-Previously completed (removed from this list): 96 Spanakopita, 97 Jollof Rice, 98 Oka i'a, 99 Khorovats, 100 Verivorst, 102 Tteokbokki.
+Previously completed (removed from this list): 96–100, 102, 103, 104, 105.
 
 ---
 
