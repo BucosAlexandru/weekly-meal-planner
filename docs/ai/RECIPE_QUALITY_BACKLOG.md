@@ -65,9 +65,9 @@ These have confirmed stub-level EN content. All 14 locale translations will need
 
 Translation stubs were fixed in tr/it/ko, but the EN howIsMade is still stub-level and EN ingredients still lack quantities. These need EN content rewrites before re-translating.
 
-IDs in order: 116, 117, 118, 119, 120, 121, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
+IDs in order: 117, 118, 119, 120, 121, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
 
-Removed (now Tier A Complete): 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115
+Removed (now Tier A Complete): 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116
 
 ---
 
@@ -93,18 +93,18 @@ Work through these in batches of 3–5, in order. Do not advance to the next bat
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 116 | (next) |
-| 2 | 117 | (next) |
-| 3 | 118 | (next) |
-| 4 | 119 | (next) |
-| 5 | 120 | (next) |
-| 6 | 121 | (next) |
-| 7 | 123 | (next) |
-| 8 | 124 | (next) |
-| 9 | 125 | (next) |
-| 10 | 126 | (next) |
+| 1 | 117 | Lomo Saltado |
+| 2 | 118 | Tagine |
+| 3 | 119 | (next) |
+| 4 | 120 | (next) |
+| 5 | 121 | (next) |
+| 6 | 123 | (next) |
+| 7 | 124 | (next) |
+| 8 | 125 | (next) |
+| 9 | 126 | (next) |
+| 10 | 127 | (next) |
 
-Previously completed (removed from this list): 96–100, 102–107, 109–115.
+Previously completed (removed from this list): 96–100, 102–107, 109–116.
 
 ---
 
