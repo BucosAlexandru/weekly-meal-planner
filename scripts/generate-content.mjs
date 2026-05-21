@@ -1739,8 +1739,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Rețetă tradițională',d:'Gust autentic'},
       {icon:'❄️',t:'Se poate congela',d:'Ideală pentru meal prep'},
       {icon:'⚡',t:'Rapid de preparat',d:'Gata în sub 30 minute'},
-      {icon:'☕',t:'Perfect pentru iarnă',d:'Reconfortant și cald'},
-      {icon:'👨‍👩‍👧‍👦',t:'Ideal pentru familie',d:'Toți vor adora'},
+      {icon:'🕐',t:'Fiert lent',d:'La foc mic, ore întregi'},
+      {icon:'🍲',t:'Un singur vas',d:'Totul în aceeași oală'},
+      {icon:'🌙',t:'Bulion peste noapte',d:'Necesită preparare cu o zi înainte'},
+      {icon:'🫙',t:'Ingrediente fermentate',d:'Conține produse fermentate'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Vin roșu'},{e:'🥗',n:'Salată verde'},{e:'🍞',n:'Pâine de casă'},{e:'🥔',n:'Cartofi noi'}],
@@ -1771,8 +1773,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Traditional recipe',d:'Authentic taste'},
       {icon:'❄️',t:'Can be frozen',d:'Great for meal prep'},
       {icon:'⚡',t:'Quick to prepare',d:'Ready in under 30 min'},
-      {icon:'☕',t:'Perfect for winter',d:'Comforting and warm'},
-      {icon:'👨‍👩‍👧‍👦',t:'Great for family',d:'Everyone will love it'},
+      {icon:'🕐',t:'Slow simmered',d:'Low and slow cooking'},
+      {icon:'🍲',t:'One-pot',d:'Minimal washing up'},
+      {icon:'🌙',t:'Overnight broth',d:'Start the day before'},
+      {icon:'🫙',t:'Fermented',d:'Contains fermented ingredients'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Red wine'},{e:'🥗',n:'Green salad'},{e:'🍞',n:'Fresh bread'},{e:'🥔',n:'Roasted potatoes'}],
@@ -1803,8 +1807,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Receta tradicional',d:'Sabor auténtico'},
       {icon:'❄️',t:'Se puede congelar',d:'Ideal para meal prep'},
       {icon:'⚡',t:'Rápido de preparar',d:'Listo en menos de 30 min'},
-      {icon:'☕',t:'Perfecto para el invierno',d:'Reconfortante y cálido'},
-      {icon:'👨‍👩‍👧‍👦',t:'Ideal para la familia',d:'A todos les encantará'},
+      {icon:'🕐',t:'Cocción lenta',d:'A fuego lento durante horas'},
+      {icon:'🍲',t:'Un solo recipiente',d:'Mínimo fregado'},
+      {icon:'🌙',t:'Caldo nocturno',d:'Empieza el día anterior'},
+      {icon:'🫙',t:'Fermentado',d:'Contiene ingredientes fermentados'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Vino tinto'},{e:'🥗',n:'Ensalada verde'},{e:'🍞',n:'Pan fresco'},{e:'🥔',n:'Patatas asadas'}],
@@ -1835,8 +1841,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Recette traditionnelle',d:'Goût authentique'},
       {icon:'❄️',t:'Se congèle bien',d:'Idéal pour le meal prep'},
       {icon:'⚡',t:'Rapide à préparer',d:'Prêt en moins de 30 min'},
-      {icon:'☕',t:'Parfait pour l\'hiver',d:'Réconfortant et chaud'},
-      {icon:'👨‍👩‍👧‍👦',t:'Idéal en famille',d:'Tout le monde adorera'},
+      {icon:'🕐',t:'Mijoté lentement',d:'Cuisson longue à feu doux'},
+      {icon:'🍲',t:'Plat unique',d:'Une seule casserole'},
+      {icon:'🌙',t:'Bouillon de nuit',d:'Commencez la veille'},
+      {icon:'🫙',t:'Fermenté',d:'Contient des ingrédients fermentés'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Vin rouge'},{e:'🥗',n:'Salade verte'},{e:'🍞',n:'Pain frais'},{e:'🥔',n:'Pommes de terre'}],
@@ -1867,8 +1875,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Traditionelles Rezept',d:'Authentischer Geschmack'},
       {icon:'❄️',t:'Einfrierbar',d:'Ideal für Meal Prep'},
       {icon:'⚡',t:'Schnell zubereitet',d:'In unter 30 Min. fertig'},
-      {icon:'☕',t:'Perfekt für den Winter',d:'Wärmend und wohltuend'},
-      {icon:'👨‍👩‍👧‍👦',t:'Ideal für die Familie',d:'Alle werden es lieben'},
+      {icon:'🕐',t:'Langsam geköchelt',d:'Stundenlang auf kleiner Flamme'},
+      {icon:'🍲',t:'Ein-Topf-Gericht',d:'Minimales Abspülen'},
+      {icon:'🌙',t:'Brühe über Nacht',d:'Am Vortag beginnen'},
+      {icon:'🫙',t:'Fermentiert',d:'Enthält fermentierte Zutaten'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Rotwein'},{e:'🥗',n:'Grüner Salat'},{e:'🍞',n:'Frisches Brot'},{e:'🥔',n:'Bratkartoffeln'}],
@@ -1899,8 +1909,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Receita tradicional',d:'Sabor autêntico'},
       {icon:'❄️',t:'Pode ser congelado',d:'Ideal para meal prep'},
       {icon:'⚡',t:'Rápido de preparar',d:'Pronto em menos de 30 min'},
-      {icon:'☕',t:'Perfeito para o inverno',d:'Reconfortante e quentinho'},
-      {icon:'👨‍👩‍👧‍👦',t:'Ideal para a família',d:'Todos vão adorar'},
+      {icon:'🕐',t:'Cozido lentamente',d:'Fogo baixo por horas'},
+      {icon:'🍲',t:'Um único recipiente',d:'Louça mínima'},
+      {icon:'🌙',t:'Caldo noturno',d:'Comece um dia antes'},
+      {icon:'🫙',t:'Fermentado',d:'Contém ingredientes fermentados'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Vinho tinto'},{e:'🥗',n:'Salada verde'},{e:'🍞',n:'Pão fresco'},{e:'🥔',n:'Batatas assadas'}],
@@ -1931,8 +1943,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Традиционный рецепт',d:'Аутентичный вкус'},
       {icon:'❄️',t:'Можно заморозить',d:'Идеально для meal prep'},
       {icon:'⚡',t:'Быстро готовится',d:'Готово менее чем за 30 мин'},
-      {icon:'☕',t:'Идеально зимой',d:'Согревающее и уютное'},
-      {icon:'👨‍👩‍👧‍👦',t:'Для всей семьи',d:'Понравится каждому'},
+      {icon:'🕐',t:'Долгое тушение',d:'Часами на слабом огне'},
+      {icon:'🍲',t:'В одной кастрюле',d:'Минимум посуды'},
+      {icon:'🌙',t:'Ночной бульон',d:'Начните за день до'},
+      {icon:'🫙',t:'Ферментированный',d:'Содержит ферментированные продукты'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Красное вино'},{e:'🥗',n:'Зелёный салат'},{e:'🍞',n:'Свежий хлеб'},{e:'🥔',n:'Жареный картофель'}],
@@ -1963,8 +1977,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'وصفة تقليدية',d:'طعم أصيل'},
       {icon:'❄️',t:'يمكن تجميده',d:'مثالي للتحضير المسبق'},
       {icon:'⚡',t:'سريع التحضير',d:'جاهز في أقل من 30 دقيقة'},
-      {icon:'☕',t:'مثالي للشتاء',d:'دافئ ومريح'},
-      {icon:'👨‍👩‍👧‍👦',t:'مثالي للعائلة',d:'سيحبه الجميع'},
+      {icon:'🕐',t:'طهي بطيء',d:'على نار هادئة لساعات'},
+      {icon:'🍲',t:'وعاء واحد',d:'حد أدنى من الغسيل'},
+      {icon:'🌙',t:'مرق ليلي',d:'ابدأ في اليوم السابق'},
+      {icon:'🫙',t:'مخمر',d:'يحتوي على مكونات مخمرة'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'نبيذ أحمر'},{e:'🥗',n:'سلطة خضراء'},{e:'🍞',n:'خبز طازج'},{e:'🥔',n:'بطاطس مشوية'}],
@@ -1995,8 +2011,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'传统食谱',d:'正宗口味'},
       {icon:'❄️',t:'可冷冻保存',d:'非常适合备餐'},
       {icon:'⚡',t:'快速制作',d:'30分钟内完成'},
-      {icon:'☕',t:'冬季佳品',d:'暖心又舒适'},
-      {icon:'👨‍👩‍👧‍👦',t:'家庭首选',d:'全家都会喜欢'},
+      {icon:'🕐',t:'慢炖',d:'小火慢煮数小时'},
+      {icon:'🍲',t:'一锅到底',d:'轻松清洗'},
+      {icon:'🌙',t:'隔夜高汤',d:'提前一天开始'},
+      {icon:'🫙',t:'发酵食品',d:'含有发酵食材'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'红酒'},{e:'🥗',n:'绿色沙拉'},{e:'🍞',n:'新鲜面包'},{e:'🥔',n:'烤土豆'}],
@@ -2027,8 +2045,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'伝統的なレシピ',d:'本格的な味'},
       {icon:'❄️',t:'冷凍保存可',d:'ミールプレップに最適'},
       {icon:'⚡',t:'素早く調理',d:'30分以内に完成'},
-      {icon:'☕',t:'冬に最適',d:'心も体も温まる'},
-      {icon:'👨‍👩‍👧‍👦',t:'家族向き',d:'みんなが喜ぶ'},
+      {icon:'🕐',t:'じっくり煮込み',d:'弱火でゆっくり調理'},
+      {icon:'🍲',t:'ワンポット',d:'後片付けが楽'},
+      {icon:'🌙',t:'一晩かけたブロス',d:'前日から仕込む'},
+      {icon:'🫙',t:'発酵食材使用',d:'発酵食品を含む'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'赤ワイン'},{e:'🥗',n:'グリーンサラダ'},{e:'🍞',n:'パン'},{e:'🥔',n:'ローストポテト'}],
@@ -2059,8 +2079,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'पारंपरिक रेसिपी',d:'असली स्वाद'},
       {icon:'❄️',t:'फ्रीज किया जा सकता है',d:'मील प्रेप के लिए बढ़िया'},
       {icon:'⚡',t:'जल्दी तैयार होता है',d:'30 मिनट में तैयार'},
-      {icon:'☕',t:'सर्दियों के लिए परफेक्ट',d:'आरामदायक और गर्म'},
-      {icon:'👨‍👩‍👧‍👦',t:'परिवार के लिए आदर्श',d:'सभी को पसंद आएगा'},
+      {icon:'🕐',t:'धीमी आंच पर',d:'घंटों तक धीमी आंच पर'},
+      {icon:'🍲',t:'एक बर्तन में',d:'कम बर्तन'},
+      {icon:'🌙',t:'रात भर बना शोरबा',d:'एक दिन पहले शुरू करें'},
+      {icon:'🫙',t:'किण्वित',d:'किण्वित सामग्री युक्त'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'रेड वाइन'},{e:'🥗',n:'हरा सलाद'},{e:'🍞',n:'ताजी ब्रेड'},{e:'🥔',n:'भुने आलू'}],
@@ -2091,8 +2113,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Geleneksel tarif',d:'Özgün lezzet'},
       {icon:'❄️',t:'Dondurulabilir',d:'Meal prep için ideal'},
       {icon:'⚡',t:'Hızlı hazırlık',d:'30 dakikada hazır'},
-      {icon:'☕',t:'Kış için mükemmel',d:'Sıcak ve rahatlatıcı'},
-      {icon:'👨‍👩‍👧‍👦',t:'Aile için ideal',d:'Herkes sevecek'},
+      {icon:'🕐',t:'Yavaş pişirme',d:'Saatlerce kısık ateşte'},
+      {icon:'🍲',t:'Tek tencere',d:'Az bulaşık'},
+      {icon:'🌙',t:'Gece boyunca et suyu',d:'Bir gün önceden başlayın'},
+      {icon:'🫙',t:'Fermente',d:'Fermente içerikler içerir'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Kırmızı şarap'},{e:'🥗',n:'Yeşil salata'},{e:'🍞',n:'Taze ekmek'},{e:'🥔',n:'Fırın patates'}],
@@ -2123,8 +2147,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'Ricetta tradizionale',d:'Sapore autentico'},
       {icon:'❄️',t:'Si può congelare',d:'Ideale per il meal prep'},
       {icon:'⚡',t:'Veloce da preparare',d:'Pronto in meno di 30 min'},
-      {icon:'☕',t:'Perfetto per l\'inverno',d:'Confortante e caldo'},
-      {icon:'👨‍👩‍👧‍👦',t:'Ideale per la famiglia',d:'Piacerà a tutti'},
+      {icon:'🕐',t:'Cottura lenta',d:'A fuoco basso per ore'},
+      {icon:'🍲',t:'Un solo tegame',d:'Minimo da lavare'},
+      {icon:'🌙',t:'Brodo notturno',d:'Inizia il giorno prima'},
+      {icon:'🫙',t:'Fermentato',d:'Contiene ingredienti fermentati'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'Vino rosso'},{e:'🥗',n:'Insalata verde'},{e:'🍞',n:'Pane fresco'},{e:'🥔',n:'Patate al forno'}],
@@ -2155,8 +2181,10 @@ const RECIPE_UI = {
       {icon:'⭐',t:'전통 레시피',d:'정통의 맛'},
       {icon:'❄️',t:'냉동 보관 가능',d:'밀프렙에 좋아요'},
       {icon:'⚡',t:'빠르게 조리해요',d:'30분 이내 완성'},
-      {icon:'☕',t:'겨울에 딱이에요',d:'따뜻하고 편안한'},
-      {icon:'👨‍👩‍👧‍👦',t:'온 가족이 좋아해요',d:'모두가 즐길 수 있어요'},
+      {icon:'🕐',t:'저온 장시간 조리',d:'뭉근히 오래 끓인'},
+      {icon:'🍲',t:'원팟 요리',d:'설거지 최소화'},
+      {icon:'🌙',t:'하룻밤 육수',d:'전날부터 시작'},
+      {icon:'🫙',t:'발효 식품',d:'발효 재료 포함'},
     ],
     pairs:{
       meat:[{e:'🍷',n:'레드 와인'},{e:'🥗',n:'그린 샐러드'},{e:'🍞',n:'신선한 빵'},{e:'🥔',n:'구운 감자'}],
@@ -2339,13 +2367,19 @@ function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
   }
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const ingrStr = ingr.join(' ').toLowerCase();
+  const nameStr = (n||'').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
   const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
   const soupRecipe = isSoup(cat, n, ingr);
-  const isFreezer = soupRecipe || steps.length > 5 || (overrides?.totalMins && overrides.totalMins > 35);
+  const totalMins = overrides?.totalMins ?? 0;
+  const isFreezer = soupRecipe || steps.length > 5 || (totalMins > 35);
+  const isOvernightRecipe = totalMins >= 480;
+  const isSlowCook = totalMins > 120;
+  const isFermented = /miso|kimchi|sauerkraut|tempeh|kefir|doenjang|gochujang|kvass/.test(ingrStr + ' ' + nameStr);
+  const card1 = isOvernightRecipe ? ui.feat[8] : isSlowCook ? ui.feat[6] : isFermented ? ui.feat[9] : ui.feat[7];
   const cards = [
     hasFish ? ui.feat[1] : hasMeat ? ui.feat[0] : ui.feat[2],
-    (soupRecipe || isFreezer) ? ui.feat[6] : ui.feat[7],
+    card1,
     ui.feat[3],
     isFreezer ? ui.feat[4] : ui.feat[5],
   ];
