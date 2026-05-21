@@ -2306,10 +2306,10 @@ function recipeMetadata(ingr, steps, cat, code, overrides) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const sc = steps.length;
   const ic = ingr.length;
-  const activeMins = Math.min(Math.max(sc * 9 + 8, 15), 85);
+  const autoActive = Math.min(Math.max(sc * 9 + 8, 15), 85);
   const roundTo5 = m => Math.round(m / 5) * 5;
-  const totalMins = roundTo5(activeMins + (activeMins > 40 ? 30 : 20));
-  const activeMinsR = roundTo5(activeMins);
+  const activeMinsR = overrides?.activeMins ?? roundTo5(autoActive);
+  const totalMins   = overrides?.totalMins  ?? roundTo5(autoActive + (autoActive > 40 ? 30 : 20));
   const fmt    = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
   const fmtISO = m => m >= 60 ? `PT${Math.floor(m/60)}H${m%60>0?m%60+'M':''}` : `PT${m}M`;
   const servings = (overrides && overrides.servings) ? overrides.servings : (ic < 5 ? 2 : ic < 9 ? 4 : 6);
@@ -2458,6 +2458,8 @@ function recipePage(recipe, rl) {
     featureCards: recipe.featureCards?.[code],
     pairings: recipe.pairings?.[code],
     nutrition: recipe.nutrition,
+    totalMins:  recipe.timeMins?.total,
+    activeMins: recipe.timeMins?.active,
   };
   const meta    = recipeMetadata(ingr, steps, cat, code, overrides);
   const nutri   = recipeNutrition(ingr, cat, overrides);
