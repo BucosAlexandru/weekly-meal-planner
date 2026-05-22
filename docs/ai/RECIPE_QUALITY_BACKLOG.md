@@ -65,9 +65,9 @@ These have confirmed stub-level EN content. All 14 locale translations will need
 
 Translation stubs were fixed in tr/it/ko, but the EN howIsMade is still stub-level and EN ingredients still lack quantities. These need EN content rewrites before re-translating.
 
-IDs in order: 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
+IDs in order: 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179
 
-Removed (now Tier A Complete): 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146
+Removed (now Tier A Complete): 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147
 
 ---
 
@@ -93,18 +93,18 @@ Work through these in batches of 3–5, in order. Do not advance to the next bat
 
 | # | ID | Recipe |
 |---|---|---|
-| 1 | 147 | Fufu |
-| 2 | 148 | Khinkali |
-| 3 | 149 | Pozole |
-| 4 | 150 | Pepian |
-| 5 | 151 | Okroshka |
-| 6 | 152 | Plov |
-| 7 | 153 | Potica |
-| 8 | 154 | Egusi soup |
-| 9 | 155 | Kotlet schabowy |
-| 10 | 156 | Kimbap |
+| 1 | 148 | Khinkali |
+| 2 | 149 | Pozole |
+| 3 | 150 | Pepian |
+| 4 | 151 | Okroshka |
+| 5 | 152 | Plov |
+| 6 | 153 | Potica |
+| 7 | 154 | Egusi soup |
+| 8 | 155 | Kotlet schabowy |
+| 9 | 156 | Kimbap |
+| 10 | 157 | Pastel de Choclo |
 
-Previously completed (removed from this list): 96–100, 102–107, 109–121, 123–127, 129–135, 137–146.
+Previously completed (removed from this list): 96–100, 102–107, 109–121, 123–127, 129–135, 137–147.
 
 ---
 
