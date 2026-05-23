@@ -1472,7 +1472,7 @@ function planPage(plan, lc) {
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc)}
 <main class="content-main">
-  <section class="content-hero">
+  <section class="content-hero${PLAN_HERO_IMG[plan.idEn] ? ' content-hero--photo' : ''}"${PLAN_HERO_IMG[plan.idEn] ? ` style="--hero-bg: url('${PLAN_HERO_IMG[plan.idEn]}')"` : ''}>
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <a href="/">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
