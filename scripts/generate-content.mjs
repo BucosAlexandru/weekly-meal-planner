@@ -2743,17 +2743,56 @@ ${makeNav(lc)}
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
+/* EN-origin → flag emoji. Multi-region origins ("Asia", "Middle East")
+   keep the generic globe. Used by recipeIndex() to give each country
+   card its own visual identity instead of a repeating 🌍. */
+const COUNTRY_FLAG = {
+  Algeria: '🇩🇿', Argentina: '🇦🇷', Armenia: '🇦🇲', Australia: '🇦🇺',
+  Belgium: '🇧🇪', 'Bosnia and Herzegovina': '🇧🇦', Brazil: '🇧🇷',
+  Cambodia: '🇰🇭', Canada: '🇨🇦', 'Cape Verde': '🇨🇻', Chile: '🇨🇱',
+  China: '🇨🇳', Colombia: '🇨🇴', Croatia: '🇭🇷', Cuba: '🇨🇺',
+  Cyprus: '🇨🇾', 'Czech Republic': '🇨🇿', Denmark: '🇩🇰',
+  'Dominican Republic': '🇩🇴', Ecuador: '🇪🇨', Egypt: '🇪🇬',
+  'El Salvador': '🇸🇻', Estonia: '🇪🇪', Ethiopia: '🇪🇹', Finland: '🇫🇮',
+  France: '🇫🇷', Georgia: '🇬🇪', Germany: '🇩🇪', Ghana: '🇬🇭',
+  Greece: '🇬🇷', Guatemala: '🇬🇹', Hungary: '🇭🇺', India: '🇮🇳',
+  Indonesia: '🇮🇩', Iran: '🇮🇷', Iraq: '🇮🇶', Israel: '🇮🇱',
+  Italy: '🇮🇹', Jamaica: '🇯🇲', Japan: '🇯🇵', Kuwait: '🇰🇼',
+  Kyrgyzstan: '🇰🇬', Latvia: '🇱🇻', Lebanon: '🇱🇧', Lithuania: '🇱🇹',
+  Malaysia: '🇲🇾', Mexico: '🇲🇽', Moldova: '🇲🇩', Mongolia: '🇲🇳',
+  Morocco: '🇲🇦', Nepal: '🇳🇵', Netherlands: '🇳🇱',
+  'New Zealand': '🇳🇿', Nigeria: '🇳🇬', 'North Korea': '🇰🇵',
+  Norway: '🇳🇴', Pakistan: '🇵🇰', Peru: '🇵🇪', Philippines: '🇵🇭',
+  Poland: '🇵🇱', Portugal: '🇵🇹', 'Republic of the Congo': '🇨🇬',
+  Romania: '🇷🇴', Russia: '🇷🇺', Samoa: '🇼🇸',
+  Scotland: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', Serbia: '🇷🇸', Singapore: '🇸🇬',
+  Slovenia: '🇸🇮', 'South Africa': '🇿🇦', 'South Korea': '🇰🇷',
+  Spain: '🇪🇸', 'Sri Lanka': '🇱🇰', Sudan: '🇸🇩', Sweden: '🇸🇪',
+  Switzerland: '🇨🇭', Syria: '🇸🇾', Thailand: '🇹🇭', Tunisia: '🇹🇳',
+  Turkey: '🇹🇷', Turkmenistan: '🇹🇲', UK: '🇬🇧', USA: '🇺🇸',
+  Ukraine: '🇺🇦', 'United Kingdom': '🇬🇧', Uzbekistan: '🇺🇿',
+  Venezuela: '🇻🇪', Vietnam: '🇻🇳',
+};
+
 function recipeIndex(rl) {
   const lc   = rl.lc;
   const code = lc.code;
+  // Group by EN origin so the flag lookup works even when the display
+  // origin is localized (e.g. RO "Italia", JA "イタリア" both map → Italy → 🇮🇹).
   const byOrigin = {};
   recipes.forEach(r => {
-    const o = r.origin?.[code] || r.origin?.en || 'Other';
-    (byOrigin[o] || (byOrigin[o] = [])).push(r);
+    const enKey = r.origin?.en || r.origin?.ro || 'Other';
+    const disp  = r.origin?.[code] || enKey;
+    const bucket = byOrigin[enKey] || (byOrigin[enKey] = { disp, recs: [] });
+    bucket.recs.push(r);
   });
-  const groups = Object.entries(byOrigin).sort((a,b)=>b[1].length-a[1].length).map(([o,recs])=>`
+  const groups = Object.entries(byOrigin)
+    .sort((a,b) => b[1].recs.length - a[1].recs.length)
+    .map(([enKey, {disp, recs}]) => {
+      const flag = COUNTRY_FLAG[enKey] || '🌍';
+      return `
   <div class="recipe-origin-group">
-    <h3 class="origin-title">🌍 ${esc(o)} <span class="recipe-count">(${recs.length})</span></h3>
+    <h3 class="origin-title">${flag} ${esc(disp)} <span class="recipe-count">${recs.length}</span></h3>
     <ul class="recipe-origin-list">
       ${recs.map(r => {
         const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
@@ -2761,7 +2800,8 @@ function recipeIndex(rl) {
         return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
       }).join('')}
     </ul>
-  </div>`).join('');
+  </div>`;
+    }).join('');
   const dir_attr = rl.dir_attr || 'ltr';
   return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
 ${makeNav(lc)}<main class="content-main">
