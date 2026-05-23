@@ -772,13 +772,17 @@ const NAV_PLANS_LABELS = {
 };
 const navPlansLink = (lc_code) => `<span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">${NAV_PLANS_LABELS[lc_code] || 'Plans'}</span>`;
 
-// Builds the lang-switcher dropdown for the in-page nav. Each option redirects
-// to the locale homepage (`/<code>/`); per-page slug mapping isn't tractable
-// at build time without a deep recipe-id round-trip, so the homepage fallback
-// matches the footer-langs behaviour.
-const buildNavLangSelect = (lc_code, id_prefix = 'nav-lang') => {
+// Builds the lang-switcher dropdown for the in-page nav. Caller passes an
+// optional `urlMap` keyed by locale code so the switcher preserves page
+// context across locales — e.g. switching from `/en/recipes/pav-bhaji/` to ES
+// lands on `/es/recetas/pav-bhaji/`, not the ES homepage. When `urlMap` is
+// missing a locale (or omitted entirely) we fall back to `/<code>/`.
+const buildNavLangSelect = (lc_code, id_prefix = 'nav-lang', urlMap = null) => {
   const options = Object.keys(NAV_LANG_NAMES)
-    .map(code => `<option value="/${code}/"${code === lc_code ? ' selected' : ''}>${NAV_LANG_NAMES[code]}</option>`)
+    .map(code => {
+      const href = (urlMap && urlMap[code]) || `/${code}/`;
+      return `<option value="${href}"${code === lc_code ? ' selected' : ''}>${NAV_LANG_NAMES[code]}</option>`;
+    })
     .join('');
   return `<div class="nav-lang">
       <label class="visually-hidden" for="${id_prefix}-${lc_code}">Select language</label>
@@ -786,7 +790,31 @@ const buildNavLangSelect = (lc_code, id_prefix = 'nav-lang') => {
     </div>`;
 };
 
-const makeNav = (lc) => `
+// Page-type URL builders for the context-preserving language switcher. Each
+// returns a `{ <code>: '/...' }` map covering all 14 locales. Knowledge of
+// per-locale dir slugs lives here so callers don't repeat themselves.
+const NAV_URL_FOR = {
+  // Plan-listing index: `/<lc>/<plan-dir>/`
+  planIndex: () =>
+    Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `${LANG_CONFIGS[c].dir}/`])),
+  // A specific plan page. Romanian uses plan.id ("asia"), all others use
+  // plan.idEn ("asian-fusion") — see filesystem layout under public/*/<dir>.
+  plan: (plan) =>
+    Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c =>
+      [c, `${LANG_CONFIGS[c].dir}/${c === 'ro' ? plan.id : plan.idEn}/`])),
+  // Recipe-listing index: `/<lc>/<recipe-dir>/`
+  recipeIndex: () =>
+    Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `${RECIPE_LANG[c].dir}/`])),
+  // A specific recipe page. The slug is derived from r.name.en in slug() and
+  // is locale-stable, so the same `rslug` works in every locale.
+  recipe: (rslug) =>
+    Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `${RECIPE_LANG[c].dir}/${rslug}/`])),
+  // Pricing page. Each locale has its own slug (premium / pricing / precios…).
+  pricing: () =>
+    Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `/${c}/${PRICING_SLUGS[c]}/`])),
+};
+
+const makeNav = (lc, langUrlMap = null) => `
 <header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="Main navigation">
     <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
@@ -799,7 +827,7 @@ const makeNav = (lc) => `
       <a href="${appHref(lc)}" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 ${lc.appLabel}</a>
       <a href="/${lc.code}/${PRICING_SLUGS[lc.code]}/" class="nav-link">⭐ Premium</a>
     </div>
-    ${buildNavLangSelect(lc.code, 'content-lang')}
+    ${buildNavLangSelect(lc.code, 'content-lang', langUrlMap)}
   </nav>
 </header>`;
 
@@ -1521,7 +1549,7 @@ function planPage(plan, lc) {
 
   return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
-${makeNav(lc)}
+${makeNav(lc, NAV_URL_FOR.plan(plan))}
 <main class="content-main">
   <section class="content-hero${PLAN_HERO_IMG[plan.idEn] ? ' content-hero--photo' : ''}"${PLAN_HERO_IMG[plan.idEn] ? ` style="--hero-bg: url('${PLAN_HERO_IMG[plan.idEn]}')"` : ''}>
     <div class="content-hero-inner">
@@ -1638,7 +1666,7 @@ function indexPage(lc) {
   const dir_attr = lc.dir_attr || 'ltr';
 
   return `${HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr)}
-${makeNav(lc)}
+${makeNav(lc, NAV_URL_FOR.planIndex())}
 <main class="content-main">
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
@@ -2845,7 +2873,7 @@ function recipePage(recipe, rl) {
   const dir_attr = rl.dir_attr || 'ltr';
   return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article', recipeImgUrl)}
 <script type="application/ld+json">${jsonLd}</script>
-${makeNav(lc)}
+${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
 <main class="content-main recipe-main">
 <div class="recipe-page-wrap">
 
@@ -2999,7 +3027,7 @@ function recipeIndex(rl) {
     }).join('');
   const dir_attr = rl.dir_attr || 'ltr';
   return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
-${makeNav(lc)}<main class="content-main">
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
     <h1>${rl.indexH1}</h1>

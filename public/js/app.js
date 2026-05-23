@@ -2696,7 +2696,20 @@ function applyTranslations() {
     });
     langSwitcher.value = lang;
     langSwitcher.addEventListener('change', () => {
-      lang = langSwitcher.value;
+      const next = langSwitcher.value;
+      // When the URL already encodes a locale (`/<code>/...`), keep the user
+      // on the equivalent page in the new locale rather than just swapping
+      // in-page translations — that mismatch ("URL says /en/, UI shows ES")
+      // breaks reload and back-button. The root `/` keeps the in-page swap.
+      const pathParts = (window.location.pathname || '/').split('/').filter(Boolean);
+      const urlLang = (pathParts[0] && i18n[pathParts[0]]) ? pathParts[0] : null;
+      if (urlLang && next !== urlLang) {
+        localStorage.setItem('lastLang', next);
+        const rest = pathParts.slice(1).join('/');
+        window.location.href = `/${next}/${rest ? rest + '/' : ''}`;
+        return;
+      }
+      lang = next;
       localStorage.setItem('lastLang', lang);
       applyTranslations();
       updateButtonState();

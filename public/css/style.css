@@ -1678,7 +1678,12 @@ button#manage-subscription:hover {
   box-shadow: 0 8px 28px rgba(36,113,42,.14), 0 0 0 6px #faf7f0;
   transform: translateY(-4px);
 }
-.step-num {
+/* Scoped to .step-item so it doesn't leak into recipe instruction step
+   numbers (which use .step-num inside .recipe-steps-new — a different
+   widget defined in content.css). Without the scope both selectors match
+   and the absolute-positioned homepage rule wins, stacking every recipe
+   step badge at right:-5px of the viewport. */
+.step-item .step-num {
   position: absolute;
   top: -5px; right: -5px;
   width: 22px; height: 22px;
