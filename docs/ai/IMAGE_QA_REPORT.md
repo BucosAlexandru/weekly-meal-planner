@@ -11,8 +11,8 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
-| **1. Local image override** | 9 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
-| **2. Mapped external image** | 149 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
+| **1. Local image override** | 10 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
+| **2. Mapped external image** | 148 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
 | **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
 | **4. Fallback emoji** | 17 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
@@ -73,16 +73,16 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|
 | Total recipes | 175 |
 | With external mapping in recipe-images.js | 153 |
-| With local override (`public/images/<slug>.{jpg,webp}`) | 9 |
+| With local override (`public/images/<slug>.{jpg,webp}`) | 10 |
 | SSR renders emoji (buckets 3 + 4) | 17 |
 | SSR renders `<img>` (buckets 1 + 2) | 158 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
-- **local-webp**: 6
+- **local-webp**: 7
 - **local-jpg**: 3
 - **fallback**: 17
-- **wikipedia**: 113
+- **wikipedia**: 112
 - **spoonacular**: 36
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
@@ -136,7 +136,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 55 | Moussaka | Greece | wikipedia | FLAGSHIP | **P3** | — |
 | 61 | Biryani | Pakistan | wikipedia | FLAGSHIP | **P3** | — |
 | 112 | Tom Yum | Thailand | wikipedia | FLAGSHIP | **P3** | — |
-| 149 | Pozole | Mexico | wikipedia | FLAGSHIP | **P3** | — |
+| 149 | Pozole | Mexico | local-webp | FLAGSHIP | **P3** | — |
 | 2 | Tripe Soup | Romania | spoonacular | — | **P3** | — |
 | 3 | Quiche Lorraine | France | spoonacular | — | **P3** | — |
 | 4 | Gazpacho | Spain | spoonacular | — | **P3** | — |
