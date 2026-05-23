@@ -1195,6 +1195,18 @@
   .recipe-hero-info-col .recipe-tagline { order: 4; }
   .recipe-hero-info-col .recipe-meta-row{ order: 5; }
 
+  /* Stack CTAs full-width on mobile — locales with long button text
+     (DE "Zum Mahlzeitenplan hinzufügen") wrap awkwardly side-by-side.
+     Single column reads cleanly across all 14 languages. */
+  .recipe-cta-row { flex-direction: column; gap: .55rem; }
+  .recipe-cta-row .btn-recipe-primary,
+  .recipe-cta-row .btn-recipe-outline { width: 100%; justify-content: center; }
+
+  /* Meta row: tighter chips so 5 items have a chance of fitting on one
+     row at common phone widths. */
+  .recipe-meta-row { gap: .45rem .4rem; padding: .75rem 0; }
+  .recipe-meta-item { min-width: 0; flex: 1 1 calc(33.333% - .4rem); padding: .42rem .35rem; }
+
   /* Listing mobile */
   .recipe-groups-grid { grid-template-columns: 1fr; gap: .9rem; }
   .recipe-origin-group { padding: 1.1rem 1.2rem 1rem; }
