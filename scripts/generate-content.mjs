@@ -2370,6 +2370,8 @@ function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
   const nameStr = (n||'').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
   const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
+  // Legume-rich vegan dishes (dal, hummus, falafel, chickpea curry, bean stews) — genuinely protein-rich
+  const hasLegume = /\bchickpea|chick-pea|garbanzo|lentil|red\s+bean|kidney\s+bean|black\s+bean|white\s+bean|cannellini|navy\s+bean|butter\s+bean|gigantes|edamame|soy\s*bean|tofu|tempeh|năut|linte|fasole/.test(ingrStr) || /dal|daal|dhal|rajma|chana|falafel|hummus|fasolada|harira|ful\s+medames|lobio|cassoulet/.test(nameStr);
   const soupRecipe = isSoup(cat, n, ingr);
   const totalMins = overrides?.totalMins ?? 0;
   const isOvernightRecipe = totalMins >= 480;
@@ -2379,8 +2381,10 @@ function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
   const isFragile = /\bsushi\b|sashimi|ceviche|tartare|tartar|carpaccio|gravlax|meringue|pavlova|souffl[ée]|cr[eê]pe|menemen|shakshuka|chakchouka|chakchuka|salad\b|salată|raw\s+fish|fondue|tartine|smørrebrød|smorrebrod|poffertjes|l[aá]ngos/.test(ingrStr + ' ' + nameStr);
   const isFreezer = !isFragile && (soupRecipe || steps.length > 5 || (totalMins > 35));
   const card1 = isOvernightRecipe ? ui.feat[8] : isSlowCook ? ui.feat[6] : isFermented ? ui.feat[9] : ui.feat[7];
+  // Protein/vitamin card: legume-rich vegan dishes also count as protein-rich, not just meat
+  const proteinCard = (hasMeat || hasLegume) ? ui.feat[0] : hasFish ? ui.feat[1] : ui.feat[2];
   const cards = [
-    hasFish ? ui.feat[1] : hasMeat ? ui.feat[0] : ui.feat[2],
+    proteinCard,
     card1,
     ui.feat[3],
     isFreezer ? ui.feat[4] : ui.feat[5],
@@ -2394,17 +2398,22 @@ function recipeNutrition(ingr, cat, overrides) {
   const catStr = (cat||'').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|duck|turkey|veal|carne|pui|porc|vită|miel/.test(ingrStr);
   const hasFish = /salmon|trout|cod|tuna|fish|pește|somon|ton|păstrăv/.test(ingrStr);
+  const hasLegume = /\bchickpea|chick-pea|garbanzo|lentil|red\s+bean|kidney\s+bean|black\s+bean|white\s+bean|cannellini|navy\s+bean|butter\s+bean|gigantes|edamame|soy\s*bean|tofu|tempeh|năut|linte|fasole/.test(ingrStr);
+  const hasEgg = /\beggs?\b|ouă|huevos|œufs|uova|yumurta|계란/.test(ingrStr);
   const isSoup = /soup|supă|ciorbă|borș|soupe|suppe|sopa|zuppa/.test(catStr);
   const isDesert = /dessert|desert|dolce|postre|tatlı|десерт/.test(catStr);
   const hasDairy = /cream|cheese|milk|smântână|brânză|lapte|parmezan|fromage|käse/.test(ingrStr);
   const hasGrain = /pasta|spaghetti|noodle|rice|orez|quinoa|orzo|couscous/.test(ingrStr);
-  let cal=350, prot=18, carb=28, fat=12, fib=4;
+  // Vegetable-default baseline lowered: 350/18 → 280/9 — real vegetable dishes are ~5–10 g protein
+  let cal=280, prot=9, carb=32, fat=10, fib=5;
   if (isSoup) { cal=185; prot=10; carb=16; fat=7; fib=3; }
   else if (isDesert) { cal=375; prot=5; carb=52; fat=14; fib=2; }
   else if (hasMeat) { cal=420; prot=32; carb=18; fat=20; fib=3; }
   else if (hasFish) { cal=285; prot=28; carb=12; fat=11; fib=2; }
-  if (hasDairy) cal += 55;
-  if (hasGrain) { carb += 18; cal += 75; }
+  else if (hasLegume) { cal=340; prot=17; carb=44; fat=8; fib=10; }
+  else if (hasEgg) { cal=270; prot=15; carb=12; fat=17; fib=2; }
+  if (hasDairy) { cal += 55; prot += 4; fat += 3; }
+  if (hasGrain) { carb += 18; cal += 75; prot += 3; }
   return { cal, prot, carb, fat, fib };
 }
 
