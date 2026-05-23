@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="shopping-list-section">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Complete shopping list</h2>
-      <p class="section-intro">All ingredients for the week, sorted alphabetically. Estimated <strong>~€40–55</strong> for 2 people.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Complete shopping list</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">159 ingredients</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">All ingredients for the week, sorted alphabetically. Estimated <strong>~€40–55</strong> for 2 people.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Vegetables &amp; herbs</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Bay leaves</span></li><li><span class="shop-name">Black pepper</span></li><li><span class="shop-name">Bouquet garni: 3 thyme sprigs</span></li><li><span class="shop-name">Butter</span></li><li><span class="shop-name">Chilli flakes</span></li><li><span class="shop-name">Cinnamon</span></li><li><span class="shop-name">Cumin</span></li><li><span class="shop-name">Dried oregano</span></li><li><span class="shop-name">Flour</span></li><li><span class="shop-name">Fresh dill</span></li><li><span class="shop-name">Fresh rosemary</span></li><li><span class="shop-name">Fresh thyme</span></li><li><span class="shop-name">Herbes de provence</span></li><li><span class="shop-name">Honey</span></li><li><span class="shop-name">Nutmeg</span></li><li><span class="shop-name">Olive oil</span></li><li><span class="shop-name">Oregano</span></li><li><span class="shop-name">Ras el hanout</span></li><li><span class="shop-name">Red wine vinegar</span></li><li><span class="shop-name">Saffron threads</span></li><li><span class="shop-name">Salt</span></li><li><span class="shop-name">Smoked paprika</span></li><li><span class="shop-name">Sugar</span></li><li><span class="shop-name">Turmeric</span></li><li><span class="shop-name">Water</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/en/?autoplan=mediteranean" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Open plan in app
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

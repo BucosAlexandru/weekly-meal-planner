@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="alisveris-listesi">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Tam alışveriş listesi</h2>
-      <p class="section-intro">Haftanın tüm malzemeleri. 2 kişi için yaklaşık <strong>~€31–42</strong>.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Tam alışveriş listesi</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">171 malzeme</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">Haftanın tüm malzemeleri. 2 kişi için yaklaşık <strong>~€31–42</strong>.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Sebze ve otlar</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Balık sosu</span></li><li><span class="shop-name">Chili flakes</span></li><li><span class="shop-name">Cumin seeds</span></li><li><span class="shop-name">Defne yaprağı</span></li><li><span class="shop-name">Garam masala</span></li><li><span class="shop-name">Herbes de provence</span></li><li><span class="shop-name">Hindistan cevizi (muskat)</span></li><li><span class="shop-name">Karabiber</span></li><li><span class="shop-name">Kasuri methi</span></li><li><span class="shop-name">Kimyon</span></li><li><span class="shop-name">Kırmızı şarap sirkesi</span></li><li><span class="shop-name">Nötr sıvı yağ</span></li><li><span class="shop-name">Oregano</span></li><li><span class="shop-name">Pul biber</span></li><li><span class="shop-name">Sade yağ (ghee)</span></li><li><span class="shop-name">Şeker</span></li><li><span class="shop-name">Sichuan peppercorns</span></li><li><span class="shop-name">Soya sosu</span></li><li><span class="shop-name">Su</span></li><li><span class="shop-name">Susam yağı</span></li><li><span class="shop-name">Tarçın</span></li><li><span class="shop-name">Tatlı kırmızı toz biber</span></li><li><span class="shop-name">Taze dereotu</span></li><li><span class="shop-name">Tereyağı</span></li><li><span class="shop-name">Tütsülenmiş kırmızı toz biber</span></li><li><span class="shop-name">Tuz</span></li><li><span class="shop-name">Un</span></li><li><span class="shop-name">Zerdeçal</span></li><li><span class="shop-name">Zeytinyağı</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=vegetarian" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Planı uygulamada aç
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

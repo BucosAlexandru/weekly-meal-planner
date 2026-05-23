@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="einkaufsliste">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Vollständige Einkaufsliste</h2>
-      <p class="section-intro">Alle Zutaten der Woche. Geschätzt <strong>~€31–42</strong> für 2 Personen.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Vollständige Einkaufsliste</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">165 Zutaten</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">Alle Zutaten der Woche. Geschätzt <strong>~€31–42</strong> für 2 Personen.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Gemüse &amp; Kräuter</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Butter</span></li><li><span class="shop-name">Chili flakes</span></li><li><span class="shop-name">Chiliflocken</span></li><li><span class="shop-name">Cumin seeds</span></li><li><span class="shop-name">Dill</span></li><li><span class="shop-name">Edelsüßer Paprika</span></li><li><span class="shop-name">Fischsauce</span></li><li><span class="shop-name">Garam Masala</span></li><li><span class="shop-name">Geräucherter Paprika</span></li><li><span class="shop-name">Ghee</span></li><li><span class="shop-name">Herbes de provence</span></li><li><span class="shop-name">Kasuri methi</span></li><li><span class="shop-name">Kreuzkümmel</span></li><li><span class="shop-name">Kurkuma</span></li><li><span class="shop-name">Lorbeerblätter</span></li><li><span class="shop-name">Mehl</span></li><li><span class="shop-name">Muskatnuss</span></li><li><span class="shop-name">Neutrales Öl</span></li><li><span class="shop-name">Olivenöl</span></li><li><span class="shop-name">Oregano</span></li><li><span class="shop-name">Rotweinessig</span></li><li><span class="shop-name">Salz</span></li><li><span class="shop-name">Schwarzer Pfeffer</span></li><li><span class="shop-name">Sesamöl</span></li><li><span class="shop-name">Sichuan peppercorns</span></li><li><span class="shop-name">Sojasauce</span></li><li><span class="shop-name">Wasser</span></li><li><span class="shop-name">Zimt</span></li><li><span class="shop-name">Zucker</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=vegetarian" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Plan in App öffnen
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

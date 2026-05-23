@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="lista-compras">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Lista de compras completa</h2>
-      <p class="section-intro">Todos os ingredientes da semana. Estimado <strong>~€42–55</strong> para 2 pessoas.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Lista de compras completa</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">176 ingredientes</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">Todos os ingredientes da semana. Estimado <strong>~€42–55</strong> para 2 pessoas.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Vegetais &amp; ervas</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Água</span></li><li><span class="shop-name">Apple cider vinegar</span></li><li><span class="shop-name">Azeite</span></li><li><span class="shop-name">Canela</span></li><li><span class="shop-name">Cominhos</span></li><li><span class="shop-name">Cumin and 1 tbsp smoked paprika</span></li><li><span class="shop-name">Fermento em pó</span></li><li><span class="shop-name">Folhas de louro</span></li><li><span class="shop-name">Mexican oregano</span></li><li><span class="shop-name">Molho de soja</span></li><li><span class="shop-name">Óleo de sésamo</span></li><li><span class="shop-name">Óleo neutro</span></li><li><span class="shop-name">Oregano</span></li><li><span class="shop-name">Paprica fumada</span></li><li><span class="shop-name">Pimenta-preta</span></li><li><span class="shop-name">Sal</span></li><li><span class="shop-name">Vinagre de vinho tinto</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=latin" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Abrir plano na app
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

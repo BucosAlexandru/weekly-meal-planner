@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="spisok-pokupok">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Полный список покупок</h2>
-      <p class="section-intro">Все ингредиенты недели. Примерно <strong>~€31–42</strong> на 2 человека.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Полный список покупок</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">168 ингредиентов</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">Все ингредиенты недели. Примерно <strong>~€31–42</strong> на 2 человека.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Овощи и зелень</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Chili flakes</span></li><li><span class="shop-name">Cumin seeds</span></li><li><span class="shop-name">Herbes de provence</span></li><li><span class="shop-name">Kasuri methi</span></li><li><span class="shop-name">Oregano</span></li><li><span class="shop-name">Sichuan peppercorns</span></li><li><span class="shop-name">Вода</span></li><li><span class="shop-name">Гарам масала</span></li><li><span class="shop-name">Зира</span></li><li><span class="shop-name">Копчёная паприка</span></li><li><span class="shop-name">Корица</span></li><li><span class="shop-name">Красный винный уксус</span></li><li><span class="shop-name">Кунжутное масло</span></li><li><span class="shop-name">Куркума</span></li><li><span class="shop-name">Лавровый лист</span></li><li><span class="shop-name">Мука</span></li><li><span class="shop-name">Мускатный орех</span></li><li><span class="shop-name">Оливковое масло</span></li><li><span class="shop-name">Растительное масло</span></li><li><span class="shop-name">Рыбный соус</span></li><li><span class="shop-name">Сахар</span></li><li><span class="shop-name">Сладкая паприка</span></li><li><span class="shop-name">Сливочное масло</span></li><li><span class="shop-name">Соевый соус</span></li><li><span class="shop-name">Соль</span></li><li><span class="shop-name">Топлёное масло гхи</span></li><li><span class="shop-name">Укроп</span></li><li><span class="shop-name">Хлопья чили</span></li><li><span class="shop-name">Чёрный перец</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=vegetarian" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Открыть план
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="lista-spesa">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Lista della spesa completa</h2>
-      <p class="section-intro">Tutti gli ingredienti della settimana. Stimato <strong>~€35–47</strong> per 2 persone.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Lista della spesa completa</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">150 ingredienti</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">Tutti gli ingredienti della settimana. Stimato <strong>~€35–47</strong> per 2 persone.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Verdure &amp; erbe</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Chili flakes</span></li><li><span class="shop-name">Cinnamon stick</span></li><li><span class="shop-name">Coriander and thai basil</span></li><li><span class="shop-name">Cumin seeds</span></li><li><span class="shop-name">Cumino</span></li><li><span class="shop-name">Curcuma</span></li><li><span class="shop-name">Farina</span></li><li><span class="shop-name">Fiocchi di peperoncino</span></li><li><span class="shop-name">Garam masala</span></li><li><span class="shop-name">Ghee</span></li><li><span class="shop-name">Kashmiri chili powder</span></li><li><span class="shop-name">Lievito chimico</span></li><li><span class="shop-name">Olio d'oliva</span></li><li><span class="shop-name">Olio neutro</span></li><li><span class="shop-name">Paprika affumicata</span></li><li><span class="shop-name">Paprika dolce</span></li><li><span class="shop-name">Pepe nero</span></li><li><span class="shop-name">Sale</span></li><li><span class="shop-name">Salsa di pesce</span></li><li><span class="shop-name">Salsa di soia</span></li><li><span class="shop-name">Star anise</span></li><li><span class="shop-name">Worcestershire sauce</span></li><li><span class="shop-name">Zucchero</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=rapid" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Apri piano nell'app
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

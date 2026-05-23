@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="lista-cumparaturi">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> Lista completă de cumpărături</h2>
-      <p class="section-intro">Toate ingredientele necesare, sortate alfabetic. Estimat <strong>~190–250 RON</strong> pentru 2 persoane.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> Lista completă de cumpărături</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">152 ingrediente</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">Toate ingredientele necesare, sortate alfabetic. Estimat <strong>~190–250 RON</strong> pentru 2 persoane.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">Legume și verdețuri</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Apă</span></li><li><span class="shop-name">Baking powder</span></li><li><span class="shop-name">Black cardamom pods</span></li><li><span class="shop-name">Boia afumată</span></li><li><span class="shop-name">Caraway</span></li><li><span class="shop-name">Chilli powder</span></li><li><span class="shop-name">Chimion</span></li><li><span class="shop-name">Cimbru</span></li><li><span class="shop-name">Cinnamon stick</span></li><li><span class="shop-name">Făină</span></li><li><span class="shop-name">Frunze de dafin</span></li><li><span class="shop-name">Fulgi de ardei iute</span></li><li><span class="shop-name">Garam masala</span></li><li><span class="shop-name">Ghee</span></li><li><span class="shop-name">Green cardamom pods</span></li><li><span class="shop-name">Ienibahar</span></li><li><span class="shop-name">Nucșoară</span></li><li><span class="shop-name">Piper negru</span></li><li><span class="shop-name">Sare</span></li><li><span class="shop-name">Scorțișoară</span></li><li><span class="shop-name">Sweet paprika</span></li><li><span class="shop-name">Turmeric</span></li><li><span class="shop-name">Ulei de măsline</span></li><li><span class="shop-name">Ulei neutru</span></li><li><span class="shop-name">Unt</span></li><li><span class="shop-name">Zahăr</span></li><li><span class="shop-name">Zahăr brun</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/ro/?autoplan=tur-mondial" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> Deschide planul în aplicație
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

@@ -114,6 +114,23 @@ function pickMotiv(langCode) {
     const mo = new MutationObserver(() => addDictationAriaLabels(document));
     mo.observe(target, { childList: true, subtree: true });
   });
+
+  // ── Auto-expand collapsible shopping list for browser print / Save-as-PDF ──
+  // Screen UX keeps the list collapsed by default to reduce scroll length,
+  // but any export path (Ctrl+P, browser PDF) must include the full data.
+  // The dedicated #pdf-list flow is unaffected — it builds from data, not DOM.
+  const _collapsibleOpenState = new WeakMap();
+  window.addEventListener('beforeprint', () => {
+    document.querySelectorAll('details.shopping-collapsible').forEach(d => {
+      _collapsibleOpenState.set(d, d.open);
+      d.open = true;
+    });
+  });
+  window.addEventListener('afterprint', () => {
+    document.querySelectorAll('details.shopping-collapsible').forEach(d => {
+      if (_collapsibleOpenState.has(d)) d.open = _collapsibleOpenState.get(d);
+    });
+  });
 })();
 // ===== Limba globală
 // --- Detect limbă din URL (ex: /ro/, /en/, /tr/, /it/, /ko/). Are prioritate peste localStorage.
@@ -1170,9 +1187,11 @@ function paginateCleanNode(root){
       costSummary.style.display = 'none';
     }
 
+    const countEl = document.getElementById('shopping-toggle-count');
     if (allIngr.size === 0) {
       listEl.innerHTML = '';
       listEl.setAttribute('data-empty', 'true');
+      if (countEl) countEl.textContent = '';
       return;
     }
     listEl.removeAttribute('data-empty');
@@ -1185,6 +1204,7 @@ function paginateCleanNode(root){
          </label>
        </li>`
     ).join('');
+    if (countEl) countEl.textContent = String(sorted.length);
   }
 
   // ── Recipe meta chips (time / cost / tags) under each meal input ──────────

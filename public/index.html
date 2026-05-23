@@ -170,16 +170,22 @@
         </div>
       </section>
 
-      <!-- ── Shopping List ── -->
-      <section class="app-section" aria-labelledby="shopping-heading">
-        <div class="section-head">
-          <span class="section-emoji" aria-hidden="true">🛒</span>
-          <h2 id="shopping-heading" class="section-title" data-i18n="shoppingList">Lista de cumpărături</h2>
-        </div>
-        <ul id="shopping-list"
-            class="shopping-list list-unstyled"
-            data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
-            aria-label="Shopping list items"></ul>
+      <!-- ── Shopping List ── (screen: collapsed by default; export/PDF uses #pdf-list) -->
+      <section class="app-section app-section--shopping" aria-labelledby="shopping-heading">
+        <details id="shopping-details" class="shopping-collapsible">
+          <summary class="section-head section-head--toggle">
+            <span class="section-emoji" aria-hidden="true">🛒</span>
+            <h2 id="shopping-heading" class="section-title" data-i18n="shoppingList">Lista de cumpărături</h2>
+            <span class="shopping-toggle-count" id="shopping-toggle-count" aria-hidden="true"></span>
+            <span class="shopping-toggle-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="shopping-collapsible__body">
+            <ul id="shopping-list"
+                class="shopping-list list-unstyled"
+                data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
+                aria-label="Shopping list items"></ul>
+          </div>
+        </details>
       </section>
 
       <!-- ── Pricing Plans (static render; JS re-renders on language change / hides on premium) ── -->

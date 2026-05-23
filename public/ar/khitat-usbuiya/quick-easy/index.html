@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="qaima-tasawuk">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> قائمة التسوق الكاملة</h2>
-      <p class="section-intro">جميع المكونات للأسبوع. تقدير <strong>~€35–47</strong> لشخصين.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> قائمة التسوق الكاملة</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">151 مكونات</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">جميع المكونات للأسبوع. تقدير <strong>~€35–47</strong> لشخصين.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">خضروات وأعشاب</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Chili flakes</span></li><li><span class="shop-name">Cinnamon stick</span></li><li><span class="shop-name">Coriander and thai basil</span></li><li><span class="shop-name">Cumin seeds</span></li><li><span class="shop-name">Kashmiri chili powder</span></li><li><span class="shop-name">Star anise</span></li><li><span class="shop-name">Worcestershire sauce</span></li><li><span class="shop-name">بابريكا حلوة</span></li><li><span class="shop-name">بابريكا مدخنة</span></li><li><span class="shop-name">بيكنغ باودر</span></li><li><span class="shop-name">دقيق</span></li><li><span class="shop-name">رقائق الفلفل الحار</span></li><li><span class="shop-name">زيت زيتون</span></li><li><span class="shop-name">زيت نباتي</span></li><li><span class="shop-name">سكر</span></li><li><span class="shop-name">سمن</span></li><li><span class="shop-name">صلصة السمك</span></li><li><span class="shop-name">صلصة الصويا</span></li><li><span class="shop-name">غارام ماسالا</span></li><li><span class="shop-name">فلفل أسود</span></li><li><span class="shop-name">كركم</span></li><li><span class="shop-name">كمون</span></li><li><span class="shop-name">ملح</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=rapid" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> فتح الخطة في التطبيق
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

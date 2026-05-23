@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="kaimono-list">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> 完全な買い物リスト</h2>
-      <p class="section-intro">今週必要な食材。2人分 <strong>~€40–55</strong> 程度。</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> 完全な買い物リスト</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">165種類の食材</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">今週必要な食材。2人分 <strong>~€40–55</strong> 程度。</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">野菜とハーブ</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Bouquet garni: 3 thyme sprigs</span></li><li><span class="shop-name">Herbes de provence</span></li><li><span class="shop-name">Oregano</span></li><li><span class="shop-name">オリーブオイル</span></li><li><span class="shop-name">クミン</span></li><li><span class="shop-name">サフランの糸</span></li><li><span class="shop-name">シナモン</span></li><li><span class="shop-name">スモークパプリカ</span></li><li><span class="shop-name">ターメリック</span></li><li><span class="shop-name">タイム</span></li><li><span class="shop-name">ディル</span></li><li><span class="shop-name">ドライオレガノ</span></li><li><span class="shop-name">ナツメグ</span></li><li><span class="shop-name">バター</span></li><li><span class="shop-name">はちみつ</span></li><li><span class="shop-name">ラス・エル・ハヌート</span></li><li><span class="shop-name">ローズマリー</span></li><li><span class="shop-name">ローリエ</span></li><li><span class="shop-name">唐辛子フレーク</span></li><li><span class="shop-name">塩</span></li><li><span class="shop-name">小麦粉</span></li><li><span class="shop-name">水</span></li><li><span class="shop-name">砂糖</span></li><li><span class="shop-name">赤ワインビネガー</span></li><li><span class="shop-name">黒こしょう</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=mediteranean" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> アプリでプランを開く
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>

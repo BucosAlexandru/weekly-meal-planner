@@ -132,9 +132,17 @@
 
   <section class="content-section content-section--green" id="jangbogi-list">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> 완전한 장보기 목록</h2>
-      <p class="section-intro">이번 주 필요한 모든 재료. 2인 기준 <strong>~€40–53</strong> 예상.</p>
-      <div class="shopping-groups">
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> 완전한 장보기 목록</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">152가지 재료</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">이번 주 필요한 모든 재료. 2인 기준 <strong>~€40–53</strong> 예상.</p>
+          <div class="shopping-groups">
       <section class="shopping-group" data-group="vegetables">
         <h3 class="shopping-group-h">채소와 허브</h3>
         <ul class="shopping-group-list">
@@ -183,6 +191,8 @@
           <li><span class="shop-name">Black cardamom pods</span></li><li><span class="shop-name">Caraway</span></li><li><span class="shop-name">Chilli powder</span></li><li><span class="shop-name">Cinnamon stick</span></li><li><span class="shop-name">Green cardamom pods</span></li><li><span class="shop-name">가람 마살라</span></li><li><span class="shop-name">강황</span></li><li><span class="shop-name">계피</span></li><li><span class="shop-name">고추 플레이크</span></li><li><span class="shop-name">기 버터</span></li><li><span class="shop-name">넛맥</span></li><li><span class="shop-name">단맛 파프리카</span></li><li><span class="shop-name">물</span></li><li><span class="shop-name">밀가루</span></li><li><span class="shop-name">버터</span></li><li><span class="shop-name">베이킹 파우더</span></li><li><span class="shop-name">설탕</span></li><li><span class="shop-name">소금</span></li><li><span class="shop-name">식용유</span></li><li><span class="shop-name">신선한 타임</span></li><li><span class="shop-name">올리브 오일</span></li><li><span class="shop-name">올스파이스</span></li><li><span class="shop-name">월계수 잎</span></li><li><span class="shop-name">쿠민</span></li><li><span class="shop-name">후추</span></li><li><span class="shop-name">훈제 파프리카</span></li><li><span class="shop-name">흑설탕</span></li>
         </ul>
       </section></div>
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="/?autoplan=tur-mondial" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> 앱에서 계획 열기
@@ -236,4 +246,16 @@
     </div>
   </div>
 </footer>
+<script>
+/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
+   then restore the previous state. Keeps screen UX light while ensuring full
+   data is captured by every export path. */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+})();
+</script>
 </body></html>
