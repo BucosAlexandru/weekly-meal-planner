@@ -11,7 +11,7 @@ export const recipeImages = {
   9: 'https://img.spoonacular.com/recipes/637391-312x231.jpg',
   10: 'https://img.spoonacular.com/recipes/633754-312x231.jpg',
   11: 'https://img.spoonacular.com/recipes/651076-312x231.jpg',
-  12: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/3_types_of_lentil.png/330px-3_types_of_lentil.png',
+  // 12 Dhal — image removed (was: 3_types_of_lentil.png — raw lentils, not cooked dal). See RECIPE_IMAGES_MISSING.md.
   13: 'https://img.spoonacular.com/recipes/715543-312x231.jpg',
   14: 'https://img.spoonacular.com/recipes/664396-312x231.jpg',
   15: 'https://img.spoonacular.com/recipes/661886-312x231.jpg',
@@ -37,7 +37,7 @@ export const recipeImages = {
   36: 'https://img.spoonacular.com/recipes/1697611-312x231.jpg',
   37: 'https://img.spoonacular.com/recipes/662422-312x231.jpg',
   38: 'https://img.spoonacular.com/recipes/655031-312x231.jpg',
-  39: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Food_at_WIkimanian_2017_02.jpg/330px-Food_at_WIkimanian_2017_02.jpg',
+  // 39 Poutine — image removed (was: Food_at_Wikimanian_2017_02.jpg — generic Wikimedia conference food). See RECIPE_IMAGES_MISSING.md.
   40: 'https://img.spoonacular.com/recipes/656049-312x231.jpg',
   41: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Nasi_Goreng_Kampung_%2811967588375%29.jpg/330px-Nasi_Goreng_Kampung_%2811967588375%29.jpg',
   42: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fondue_dish.jpg/330px-Fondue_dish.jpg',
