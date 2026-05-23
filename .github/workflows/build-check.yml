@@ -59,6 +59,7 @@ jobs:
             api/check-access.js \
             api/chat.js \
             api/coach.js \
+            api/generate-pdf.js \
             api/generate-token.js \
             api/stripe-webhook.js \
             api/create-checkout-session.js \

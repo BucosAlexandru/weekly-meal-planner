@@ -662,7 +662,39 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 }
+  // ── PDF v2 opt-in flag (Phase 1 scaffold) ──────────────────────────────────
+  // The current html2pdf path is the production default and remains untouched.
+  // pdfV2 is reached ONLY when the user has explicitly opted in via the URL
+  // (?pdfv2=1) or via localStorage (localStorage.pdfV2 = '1'). No default
+  // behaviour changes. To revert, the user removes the flag.
+  function isPdfV2Enabled() {
+    try {
+      const qs = new URLSearchParams(window.location.search || '');
+      if (qs.get('pdfv2') === '1') return true;
+      return localStorage.getItem('pdfV2') === '1';
+    } catch (_) { return false; }
+  }
+  async function exportViaPdfV2() {
+    // Reuses the same data the legacy generatePDFimpact() builds from. For
+    // Phase 1 we send the demo plan (server uses a built-in payload when no
+    // body is provided) to validate infra end-to-end before wiring the real
+    // user plan into the request shape.
+    const resp = await fetch('/api/generate-pdf', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+    if (!resp.ok) throw new Error('pdfv2 endpoint returned ' + resp.status);
+    const blob = await resp.blob();
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = 'meal-plan.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  }
+
   async function exportShoppingListToPDF() {
+  // Opt-in gateway. Default path below is unchanged.
+  if (isPdfV2Enabled()) {
+    try { await exportViaPdfV2(); return; }
+    catch (err) { console.warn('pdfv2 failed, falling back to legacy:', err); /* fall through */ }
+  }
   const pdfArea = document.getElementById('pdf-impact-area');
   if (!pdfArea) return;
   let cleanNode = null, styleEl = null;
