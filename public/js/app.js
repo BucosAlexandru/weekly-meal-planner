@@ -515,7 +515,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function stepsOL(r) {
     const raw = r?.howIsMade?.[lang] || r?.howIsMade?.ro || '';
-    const steps = raw.split('.').map(x => x.trim()).filter(Boolean);
+    // Use the same splitter as the static recipe pages: period+space OR CJK
+    // sentence-end. Plain "." inside "1.5 kg" / "8.10 min" / "Mr." stays intact.
+    const steps = raw
+      .split(/(?:\.\s+|[。！？]\s*)/)
+      .map(x => x.trim())
+      .filter(s => s.length > 2)
+      // Strip leading "N. " section markers ("1. ROAST THE..."). Without
+      // this, the OL would render "1. 1. ROAST..." because the embedded
+      // numeric prefix is rendered alongside the OL's own counter.
+      .map(s => s.replace(/^\d+\s*\.\s*/, ''))
+      // Drop orphan digit-only fragments left by aggressive splits
+      .filter(s => !/^\d+\s*$/.test(s));
     if (!steps.length) return '';
     return `<div class="meal-steps-label">${t('howIsMade') || 'Preparare'}</div>
     <ol class="meal-steps">${steps.map(s => `<li>${s}.</li>`).join('')}</ol>`;
