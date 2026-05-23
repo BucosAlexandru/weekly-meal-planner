@@ -752,6 +752,40 @@ let RECIPES_NAV = {};
 
 const appHref = (lc) => lc.appDir && lc.appDir !== '/' ? `${lc.appDir}/` : '/';
 
+// Localised display names for the in-nav language switcher (≤14 entries).
+const NAV_LANG_NAMES = {
+  ro:'Română', en:'English', es:'Español', fr:'Français', de:'Deutsch',
+  pt:'Português', ru:'Русский', ar:'العربية', zh:'中文', ja:'日本語',
+  hi:'हिन्दी', tr:'Türkçe', it:'Italiano', ko:'한국어'
+};
+
+// Compact section ("Plans") labels for the in-page nav. The full
+// lc.sectionLabel ("Weekly Meal Plans", "Meniuri Săptămânale") is too long to
+// fit alongside Recipes + Premium + lang switcher on a phone viewport, so we
+// use the short forms each per-locale homepage already ships. Emoji is split
+// from the text so CSS can collapse to icon-only at <360px.
+const NAV_PLANS_LABELS = {
+  ro:'Meniuri', en:'Meal Plans', es:'Menús',     fr:'Menus',
+  de:'Pläne',   pt:'Menus',      ru:'Меню',      ar:'قوائم',
+  zh:'菜单',     ja:'メニュー',     hi:'मेनू',       tr:'Menüler',
+  it:'Menu',    ko:'메뉴'
+};
+const navPlansLink = (lc_code) => `<span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">${NAV_PLANS_LABELS[lc_code] || 'Plans'}</span>`;
+
+// Builds the lang-switcher dropdown for the in-page nav. Each option redirects
+// to the locale homepage (`/<code>/`); per-page slug mapping isn't tractable
+// at build time without a deep recipe-id round-trip, so the homepage fallback
+// matches the footer-langs behaviour.
+const buildNavLangSelect = (lc_code, id_prefix = 'nav-lang') => {
+  const options = Object.keys(NAV_LANG_NAMES)
+    .map(code => `<option value="/${code}/"${code === lc_code ? ' selected' : ''}>${NAV_LANG_NAMES[code]}</option>`)
+    .join('');
+  return `<div class="nav-lang">
+      <label class="visually-hidden" for="${id_prefix}-${lc_code}">Select language</label>
+      <select id="${id_prefix}-${lc_code}" class="lang-select" aria-label="Select language" onchange="location.href=this.value">${options}</select>
+    </div>`;
+};
+
 const makeNav = (lc) => `
 <header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="Main navigation">
@@ -760,11 +794,12 @@ const makeNav = (lc) => `
       <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
     </a>
     <div class="nav-links">
-      <a href="${lc.dir}/" class="nav-link">${lc.sectionLabel}</a>
+      <a href="${lc.dir}/" class="nav-link nav-link--plans">${navPlansLink(lc.code)}</a>
       <a href="${RECIPES_NAV[lc.code].href}" class="nav-link">${RECIPES_NAV[lc.code].label}</a>
-      <a href="${appHref(lc)}" class="nav-link">${lc.appLabel}</a>
+      <a href="${appHref(lc)}" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 ${lc.appLabel}</a>
       <a href="/${lc.code}/${PRICING_SLUGS[lc.code]}/" class="nav-link">⭐ Premium</a>
     </div>
+    ${buildNavLangSelect(lc.code, 'content-lang')}
   </nav>
 </header>`;
 
@@ -1138,20 +1173,15 @@ const PRICING_COPY = {
   }
 };
 
-// Language display names for the pricing page language switcher
-const PRICING_LANG_NAMES = {
-  ro:'Română', en:'English', es:'Español', fr:'Français', de:'Deutsch',
-  pt:'Português', ru:'Русский', ar:'العربية', zh:'中文', ja:'日本語',
-  hi:'हिन्दी', tr:'Türkçe', it:'Italiano', ko:'한국어'
-};
-
-// Pricing-specific nav: extends makeNav with ⭐ Premium active link + language switcher
+// Pricing-specific nav: extends makeNav with ⭐ Premium active link + language switcher.
+// The lang switcher options jump to the equivalent pricing page in each locale
+// (uses PRICING_SLUGS so /ro/premium/ ↔ /en/pricing/ etc.).
 function makePricingNav(lc_code) {
   const lc = LANG_CONFIGS[lc_code];
   const pricingHref = `/${lc_code}/${PRICING_SLUGS[lc_code]}/`;
   const options = Object.entries(PRICING_SLUGS)
     .map(([code, sl]) =>
-      `<option value="/${code}/${sl}/"${code === lc_code ? ' selected' : ''}>${PRICING_LANG_NAMES[code]}</option>`
+      `<option value="/${code}/${sl}/"${code === lc_code ? ' selected' : ''}>${NAV_LANG_NAMES[code]}</option>`
     ).join('');
   return `<header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="Main navigation">
@@ -1160,7 +1190,7 @@ function makePricingNav(lc_code) {
       <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
     </a>
     <div class="nav-links">
-      <a href="${lc.dir}/" class="nav-link">${lc.sectionLabel}</a>
+      <a href="${lc.dir}/" class="nav-link nav-link--plans">${navPlansLink(lc_code)}</a>
       <a href="${RECIPES_NAV[lc_code].href}" class="nav-link">${RECIPES_NAV[lc_code].label}</a>
       <a href="${pricingHref}" class="nav-link nav-link--active" aria-current="page">⭐ Premium</a>
     </div>
