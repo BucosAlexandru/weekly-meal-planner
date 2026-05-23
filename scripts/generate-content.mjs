@@ -2366,20 +2366,30 @@ function recipeMetadata(ingr, steps, cat, code, overrides, howText) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const sc = steps.length;
   const ic = ingr.length;
-  const autoActive = Math.min(Math.max(sc * 9 + 8, 15), 85);
+  // Active time: ~3 min/step on average (steps are granular — many are 30s-1min "season/toss/drain"
+  // mixed with 5-10 min "render/sauté"). Coefficient was 9 which produced unrealistic 1h+ active
+  // times even for 30-minute pasta dishes. Capped 10..90 min.
+  const autoActive = Math.min(Math.max(sc * 3 + 5, 10), 90);
   const roundTo5 = m => Math.round(m / 5) * 5;
   // Real cook time: active step time + dominant slow-cook block found in the text.
   // Falls back to the step-count heuristic when no long-cook keyword is present.
   const cookFromText = extractLongCookMinutes(howText);
-  const totalGuess = autoActive + (autoActive > 40 ? 30 : 20);
+  const totalGuess = autoActive + (autoActive > 40 ? 20 : 10);
   const realTotal = cookFromText > 0 ? Math.max(totalGuess, autoActive + cookFromText) : totalGuess;
   const activeMinsR = overrides?.activeMins ?? roundTo5(autoActive);
   const totalMins   = overrides?.totalMins  ?? roundTo5(realTotal);
   const fmt    = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
   const fmtISO = m => m >= 60 ? `PT${Math.floor(m/60)}H${m%60>0?m%60+'M':''}` : `PT${m}M`;
   const servings = (overrides && overrides.servings) ? overrides.servings : (ic < 5 ? 2 : ic < 9 ? 4 : 6);
-  const diffIdx = sc <= 3 ? 0 : sc <= 5 ? 1 : 2;
+  // Difficulty by step count, after Tier A rewrites step counts range 4–35.
+  // Was sc<=3 Easy / <=5 Medium / else Hard — produced 97% Hard.
   const ingrStr = ingr.join(' ').toLowerCase();
+  const nameStr = (cat||'').toLowerCase();
+  // Genuinely hard techniques bump difficulty even if step count is moderate.
+  const hardTechnique = /knead|deep[\s-]?fry|sourdough|soufflé|souffle|tempering|emulsion|chou\s+pastry|laminated|en\s+croute|wellington/.test(ingrStr + ' ' + (howText||'').toLowerCase());
+  let diffIdx = sc <= 8 ? 0 : sc <= 18 ? 1 : 2;
+  if (hardTechnique) diffIdx = Math.min(2, diffIdx + 1);
+  if (totalMins >= 240) diffIdx = Math.max(diffIdx, 1); // ≥4h cook = at least Medium
   const expensive = /beef|veal|lamb|salmon|shrimp|lobster|crab|truffle|saffron|chocolate|vițel|miel|somon|creveți|caracatiță/.test(ingrStr);
   return {
     totalTime:    fmt(totalMins),
@@ -2522,7 +2532,9 @@ function recipePage(recipe, rl) {
   const how  = recipe.howIsMade?.[code]   || recipe.howIsMade?.en   || recipe.howIsMade?.ro   || '';
   const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
   const originTxt = recipe.originText?.[code] || recipe.originText?.en || recipe.originText?.ro || rl.heroDesc(o);
-  const rawSteps = how.split(/\.\s+/).filter(s => s.trim().length > 2);
+  // Sentence-end splitter: ASCII period+space (Latin/AR/HI/KO) or CJK full stop (ZH/JA).
+  // Without the CJK branch, ZH/JA howIsMade collapses into a single mega-step.
+  const rawSteps = how.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
   const steps = padSteps(rawSteps, code);
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
@@ -2579,7 +2591,7 @@ function recipePage(recipe, rl) {
       const rs = slug(r.name?.en || r.name?.ro || rn);
       const ri = r.ingredients?.[code] || r.ingredients?.en || [];
       const rh = r.howIsMade?.[code] || r.howIsMade?.en || '';
-      const rst = rh.split(/\.\s+/).filter(s=>s.trim().length>2);
+      const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s=>s.trim().length>2);
       const rcat = r.category?.[code] || r.category?.en || '';
       const rm = recipeMetadata(ri, rst, rcat, code);
       const re = recipeCardEmoji(rcat);
