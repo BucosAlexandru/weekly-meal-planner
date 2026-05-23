@@ -12,144 +12,270 @@ import { Document, Page, Text, View, StyleSheet, renderToBuffer } from '@react-p
 
 const h = React.createElement;
 
+// ── Design tokens ──────────────────────────────────────────────────────────
+// Restrained palette. Brand is reserved for sectioning (day labels, section
+// headings). Body text is near-black; meta is cool grey. No fills, no shadows.
+const INK        = '#1a1a2e';
+const INK_SOFT   = '#3f4a5b';
+const INK_MUTED  = '#7a8597';
+const BRAND      = '#1e7d3a';
+const HAIRLINE   = '#e2e8f0';
+const DOT        = '#c9d2cb';
+
 const styles = StyleSheet.create({
+  // A4: 595.28 × 841.89 pt. 36pt side margins ≈ 12.7mm.
   page: {
-    paddingTop: 28,
-    paddingBottom: 24,
-    paddingHorizontal: 28,
+    paddingTop: 32,
+    paddingBottom: 32,
+    paddingHorizontal: 36,
     fontSize: 9,
     fontFamily: 'Helvetica',
-    color: '#1a1a2e',
+    color: INK,
+    lineHeight: 1.4,
   },
-  header: {
+
+  // ── Page masthead ────────────────────────────────────────────────────────
+  masthead: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingBottom: 8,
-    marginBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#1e7d3a',
-  },
-  brand: { fontSize: 11, fontFamily: 'Helvetica-Bold', color: '#1e7d3a' },
-  weekLabel: { fontSize: 9, color: '#666' },
-
-  dayRow: {
-    flexDirection: 'row',
+    alignItems: 'flex-end',
+    paddingBottom: 6,
+    marginBottom: 14,
     borderBottomWidth: 0.5,
-    borderBottomColor: '#d8e0d6',
-    paddingVertical: 5,
+    borderBottomColor: HAIRLINE,
   },
-  dayLabel: {
-    width: 56,
-    fontSize: 8,
-    fontFamily: 'Helvetica-Bold',
-    color: '#1e7d3a',
-    textTransform: 'uppercase',
-    letterSpacing: 0.6,
-    paddingTop: 1,
-  },
-  mealCol: { flex: 1, paddingHorizontal: 6 },
-  mealName: { fontSize: 9.5, fontFamily: 'Helvetica-Bold', marginBottom: 2 },
-  mealMeta: { fontSize: 7.5, color: '#555', marginBottom: 2 },
-  mealIngr: { fontSize: 7.5, color: '#333', lineHeight: 1.3 },
-  mealEmpty: { fontSize: 7.5, color: '#999' },
+  brand:       { fontSize: 10, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.3 },
+  brandDot:    { color: BRAND },
+  mastheadRight: { alignItems: 'flex-end' },
+  planTitle:   { fontSize: 9, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.2 },
+  weekLabel:   { fontSize: 7.5, color: INK_MUTED, marginTop: 1 },
 
-  sectionTitle: {
+  // ── Day block (one per day) ──────────────────────────────────────────────
+  dayBlock: { marginBottom: 10 },
+
+  dayHeader: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    marginBottom: 4,
+  },
+  dayName: {
+    fontSize: 8.5,
+    fontFamily: 'Helvetica-Bold',
+    color: BRAND,
+    letterSpacing: 1.6,
+  },
+  dayRule: {
+    flex: 1,
+    height: 0.5,
+    backgroundColor: HAIRLINE,
+    marginLeft: 8,
+    marginBottom: 2,
+  },
+
+  mealRow: { flexDirection: 'row' },
+  mealCol: { flex: 1 },
+  mealColLeft: { paddingRight: 14 },
+  mealColRight: {
+    paddingLeft: 14,
+    borderLeftWidth: 0.5,
+    borderLeftColor: HAIRLINE,
+  },
+
+  mealKind: {
+    fontSize: 6.5,
+    color: INK_MUTED,
+    letterSpacing: 1.2,
+    marginBottom: 2,
+  },
+  mealName: {
+    fontSize: 10.5,
+    fontFamily: 'Helvetica-Bold',
+    color: INK,
+    marginBottom: 2,
+    lineHeight: 1.2,
+  },
+  mealMeta: {
+    fontSize: 7,
+    color: INK_SOFT,
+    marginBottom: 3,
+    letterSpacing: 0.2,
+  },
+  mealIngr: {
+    fontSize: 7.5,
+    color: INK_SOFT,
+    lineHeight: 1.45,
+  },
+  mealEmpty: { fontSize: 8, color: INK_MUTED, fontStyle: 'italic' },
+
+  // ── Shopping section ────────────────────────────────────────────────────
+  shopSection: { marginTop: 14 },
+  shopHeading: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    marginBottom: 8,
+  },
+  shopTitle: {
     fontSize: 10,
     fontFamily: 'Helvetica-Bold',
-    marginTop: 14,
-    marginBottom: 6,
-    color: '#1a1a2e',
-    textTransform: 'uppercase',
-    letterSpacing: 0.6,
+    color: BRAND,
+    letterSpacing: 1.8,
   },
+  shopRule: {
+    flex: 1,
+    height: 0.5,
+    backgroundColor: HAIRLINE,
+    marginLeft: 8,
+    marginBottom: 2,
+  },
+  shopSubLabel: {
+    fontSize: 7,
+    color: INK_MUTED,
+    letterSpacing: 0.4,
+    marginLeft: 10,
+  },
+  shopRuleTrail: { flex: 1, height: 0.5, backgroundColor: HAIRLINE, marginLeft: 10, marginBottom: 2 },
+
   shopGrid: { flexDirection: 'row', flexWrap: 'wrap' },
-  shopGroup: { width: '33.33%', paddingRight: 8, marginBottom: 8 },
+  shopGroup: { width: '50%', paddingRight: 14, marginBottom: 10 },
   shopGroupTitle: {
     fontSize: 7,
     fontFamily: 'Helvetica-Bold',
-    color: '#1e7d3a',
-    textTransform: 'uppercase',
-    letterSpacing: 0.7,
-    marginBottom: 2,
-    paddingBottom: 1,
-    borderBottomWidth: 0.5,
-    borderBottomColor: '#c8e6ca',
+    color: INK_MUTED,
+    letterSpacing: 1.4,
+    marginBottom: 4,
   },
-  shopItem: { fontSize: 7.5, marginBottom: 1, color: '#222' },
 
+  shopItem: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    paddingVertical: 1.5,
+  },
+  shopItemName: { fontSize: 8, color: INK },
+  shopItemLeader: {
+    flex: 1,
+    marginHorizontal: 4,
+    marginBottom: 2,
+    height: 0,
+    borderBottomWidth: 0.5,
+    borderBottomColor: DOT,
+    borderBottomStyle: 'dotted',
+  },
+  shopItemQty: {
+    fontSize: 7.5,
+    color: INK_MUTED,
+  },
+
+  // ── Footer ──────────────────────────────────────────────────────────────
   footer: {
     position: 'absolute',
-    bottom: 12,
-    left: 28,
-    right: 28,
-    fontSize: 7,
-    color: '#888',
+    bottom: 14,
+    left: 36,
+    right: 36,
+    height: 22,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    paddingTop: 6,
     borderTopWidth: 0.5,
-    borderTopColor: '#e2e8f0',
-    paddingTop: 4,
+    borderTopColor: HAIRLINE,
   },
+  footerLeft:  { fontSize: 6.5, color: INK_MUTED, letterSpacing: 0.3 },
+  footerRight: { fontSize: 6.5, color: INK_MUTED, letterSpacing: 0.3 },
 });
 
-function mealCell(meal) {
+function mealCell(meal, kindLabel) {
   if (!meal || !meal.name) {
-    return h(Text, { style: styles.mealEmpty }, '—');
+    return h(View, null,
+      h(Text, { style: styles.mealKind }, kindLabel),
+      h(Text, { style: styles.mealEmpty }, '—')
+    );
   }
   const metaParts = [];
-  if (meal.time) metaParts.push(`${meal.time} min`);
+  if (meal.time)     metaParts.push(`${meal.time} min`);
   if (meal.servings) metaParts.push(`${meal.servings} servings`);
-  if (meal.cost) metaParts.push(String(meal.cost));
+  if (meal.cost)     metaParts.push(String(meal.cost));
   const ingr = Array.isArray(meal.ingredients) ? meal.ingredients : [];
   const ingrShort = ingr.length
     ? ingr.slice(0, 6).join(', ') + (ingr.length > 6 ? `, +${ingr.length - 6} more` : '')
     : '';
-  const children = [h(Text, { key: 'n', style: styles.mealName }, meal.name)];
-  if (metaParts.length) children.push(h(Text, { key: 'm', style: styles.mealMeta }, metaParts.join(' · ')));
-  if (ingrShort) children.push(h(Text, { key: 'i', style: styles.mealIngr }, ingrShort));
+  const children = [
+    h(Text, { key: 'k', style: styles.mealKind }, kindLabel),
+    h(Text, { key: 'n', style: styles.mealName }, meal.name),
+  ];
+  if (metaParts.length) children.push(h(Text, { key: 'm', style: styles.mealMeta }, metaParts.join('  ·  ')));
+  if (ingrShort)        children.push(h(Text, { key: 'i', style: styles.mealIngr }, ingrShort));
   return h(View, null, ...children);
 }
 
+function dayBlock(d, idx) {
+  return h(View, { key: idx, style: styles.dayBlock, wrap: false },
+    h(View, { style: styles.dayHeader },
+      h(Text, { style: styles.dayName }, (d.day || `Day ${idx + 1}`).toUpperCase()),
+      h(View, { style: styles.dayRule }),
+    ),
+    h(View, { style: styles.mealRow },
+      h(View, { style: [styles.mealCol, styles.mealColLeft] }, mealCell(d.lunch, 'LUNCH')),
+      h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'DINNER')),
+    ),
+  );
+}
+
+function shopItemRow(it, idx) {
+  const name = typeof it === 'string' ? it : it.name;
+  const qty  = typeof it === 'string' ? ''  : (it.qty || '');
+  return h(View, { key: idx, style: styles.shopItem, wrap: false },
+    h(Text, { style: styles.shopItemName }, name),
+    h(View, { style: styles.shopItemLeader }),
+    qty ? h(Text, { style: styles.shopItemQty }, qty) : null,
+  );
+}
+
+function shopGroup(g, gi) {
+  return h(View, { key: gi, style: styles.shopGroup, wrap: false },
+    h(Text, { style: styles.shopGroupTitle }, (g.label || g.id || '').toUpperCase()),
+    ...(g.items || []).map(shopItemRow),
+  );
+}
+
 function MealPlanDocument(plan) {
-  const days = Array.isArray(plan.days) ? plan.days : [];
+  const days   = Array.isArray(plan.days) ? plan.days : [];
   const groups = Array.isArray(plan.shoppingGroups) ? plan.shoppingGroups : [];
+  const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
 
-  const headerEl = h(View, { style: styles.header, fixed: true },
-    h(Text, { style: styles.brand }, `Meal-Planner.ro · ${plan.title || 'Weekly plan'}`),
-    h(Text, { style: styles.weekLabel }, plan.weekLabel || ''),
+  const mastheadEl = h(View, { style: styles.masthead, fixed: true },
+    h(Text, { style: styles.brand }, 'Meal-Planner', h(Text, { style: styles.brandDot }, '.ro')),
+    h(View, { style: styles.mastheadRight },
+      h(Text, { style: styles.planTitle }, plan.title || 'Weekly plan'),
+      plan.weekLabel ? h(Text, { style: styles.weekLabel }, plan.weekLabel) : null,
+    ),
   );
 
-  const dayRows = days.map((d, idx) => h(View, { key: idx, style: styles.dayRow, wrap: false },
-    h(Text, { style: styles.dayLabel }, d.day || `Day ${idx + 1}`),
-    h(View, { style: styles.mealCol }, mealCell(d.lunch)),
-    h(View, { style: styles.mealCol }, mealCell(d.dinner)),
-  ));
+  const dayEls = days.map(dayBlock);
 
-  let shoppingEls = [];
-  if (groups.length > 0) {
-    shoppingEls.push(h(Text, { key: 'st', style: styles.sectionTitle }, 'Shopping list'));
-    shoppingEls.push(h(View, { key: 'sg', style: styles.shopGrid },
-      ...groups.map((g, gi) => h(View, { key: gi, style: styles.shopGroup, wrap: false },
-        h(Text, { style: styles.shopGroupTitle }, g.label || g.id),
-        ...(g.items || []).map((it, ii) => h(Text, { key: ii, style: styles.shopItem },
-          '• ' + (typeof it === 'string' ? it : (it.qty ? `${it.name} — ${it.qty}` : it.name))
-        )),
-      )),
-    ));
-  }
+  // Heading + grid render as one atomic block (wrap:false) so the section
+  // title never orphans. For a typical 50–100-item list across 6 groups in
+  // 2 columns, the block fits comfortably on a single A4 page.
+  const shopEls = groups.length ? [
+    h(View, { key: 'sh', style: styles.shopSection, wrap: false },
+      h(View, { style: styles.shopHeading },
+        h(Text, { style: styles.shopTitle }, 'SHOPPING LIST'),
+        totalItems ? h(Text, { style: styles.shopSubLabel }, `${totalItems} items`) : null,
+        h(View, { style: styles.shopRuleTrail }),
+      ),
+      h(View, { style: styles.shopGrid }, ...groups.map(shopGroup)),
+    ),
+  ] : [];
 
-  const footerRender = ({ pageNumber, totalPages }) => h(React.Fragment, null,
-    h(Text, null, `Meal-Planner.ro · ${new Date().toLocaleDateString('en-GB')}`),
-    h(Text, null, `Page ${pageNumber} / ${totalPages}`),
+  const today = new Date().toLocaleDateString('en-GB');
+  const footerEl = h(View, { style: styles.footer, fixed: true },
+    h(Text, { style: styles.footerLeft }, `Meal-Planner.ro  ·  ${today}`),
+    h(Text, { style: styles.footerRight }, plan.title || ''),
   );
-
-  const footerEl = h(View, { style: styles.footer, fixed: true, render: footerRender });
 
   const pageEl = h(Page, { size: 'A4', style: styles.page, wrap: true },
-    headerEl,
-    ...dayRows,
-    ...shoppingEls,
+    mastheadEl,
+    ...dayEls,
+    ...shopEls,
     footerEl,
   );
 
@@ -159,7 +285,7 @@ function MealPlanDocument(plan) {
 // Minimal demo payload used when the request body is empty / GET. Lets us
 // smoke-test the endpoint from a browser address bar without wiring the UI.
 const DEMO_PLAN = {
-  title: 'Demo weekly plan',
+  title: 'Mediterranean week',
   weekLabel: 'Week of 23 May 2026',
   days: [
     { day: 'Mon', lunch: { name: 'Spaghetti Carbonara', time: 30, servings: 4, cost: '€14', ingredients: ['Spaghetti','Guanciale','Eggs','Pecorino','Black pepper','Salt'] },
