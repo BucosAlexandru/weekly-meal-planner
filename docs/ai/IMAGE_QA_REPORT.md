@@ -11,8 +11,8 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
-| **1. Local image override** | 10 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
-| **2. Mapped external image** | 148 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
+| **1. Local image override** | 13 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
+| **2. Mapped external image** | 145 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
 | **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
 | **4. Fallback emoji** | 17 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
@@ -24,8 +24,8 @@ Empirical evidence: `/en/recipes/banh-xeo/` (id 126, bucket 3).
 
 ### Priority distribution after re-classification (every emoji is now P0 or P1)
 
-- **P1**: 22
-- **P3**: 153
+- **P1**: 23
+- **P3**: 152
 
 ## To stop seeing emoji: reduce buckets 3 and 4
 
@@ -73,17 +73,17 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|
 | Total recipes | 175 |
 | With external mapping in recipe-images.js | 153 |
-| With local override (`public/images/<slug>.{jpg,webp}`) | 10 |
+| With local override (`public/images/<slug>.{jpg,webp}`) | 13 |
 | SSR renders emoji (buckets 3 + 4) | 17 |
 | SSR renders `<img>` (buckets 1 + 2) | 158 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
-- **local-webp**: 7
+- **local-webp**: 10
 - **local-jpg**: 3
 - **fallback**: 17
-- **wikipedia**: 112
-- **spoonacular**: 36
+- **wikipedia**: 111
+- **spoonacular**: 34
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
 
@@ -99,6 +99,7 @@ or 2 (so the SSR renders an actual `<img>`):
 
 | ID | Name | Origin | Source | Flags | Priority | Action |
 |---|---|---|---|---|---|---|
+| 5 | Sushi | Japan | local-webp | UNUSUAL_AR, FLAGSHIP | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 39 | Poutine | Canada | local-webp | UNUSUAL_AR, FLAGSHIP | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 181 | Tonkotsu Ramen | Japan | local-jpg | OVERSIZED:2280KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 182 | Shoyu Ramen | Japan | local-jpg | OVERSIZED:4223KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
@@ -122,7 +123,6 @@ or 2 (so the SSR renders an actual `<img>`):
 | 168 | Shepherd's Pie | United Kingdom | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 177 | Karelian stew | Finland | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 1 | Spaghetti Carbonara | Italy | wikipedia | FLAGSHIP | **P3** | — |
-| 5 | Sushi | Japan | spoonacular | FLAGSHIP | **P3** | — |
 | 8 | Tacos | Mexico | spoonacular | FLAGSHIP | **P3** | — |
 | 9 | Chicken Curry | India | spoonacular | FLAGSHIP | **P3** | — |
 | 12 | Dhal | India | local-webp | FLAGSHIP | **P3** | — |
@@ -151,7 +151,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 19 | Kung Pao Chicken | China | spoonacular | — | **P3** | — |
 | 24 | Hummus | Syria | spoonacular | — | **P3** | — |
 | 25 | Tabbouleh | Lebanon | spoonacular | — | **P3** | — |
-| 26 | Risotto | Italy | spoonacular | — | **P3** | — |
+| 26 | Risotto | Italy | local-webp | — | **P3** | — |
 | 27 | Swedish Meatballs | Sweden | spoonacular | — | **P3** | — |
 | 28 | Ramen | Japan | spoonacular | — | **P3** | — |
 | 29 | Empanadas | Argentina | spoonacular | — | **P3** | — |
@@ -229,7 +229,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 121 | Karelian Pie | Finland | wikipedia | — | **P3** | — |
 | 123 | Pasta e fagioli | Italy | wikipedia | — | **P3** | — |
 | 124 | Kottu | Sri Lanka | wikipedia | — | **P3** | — |
-| 126 | Banh Xeo | Vietnam | wikipedia | — | **P3** | — |
+| 126 | Banh Xeo | Vietnam | local-webp | — | **P3** | — |
 | 130 | Coconut Rice | Asia | wikipedia | — | **P3** | — |
 | 131 | Nasi lemak | Malaysia | wikipedia | — | **P3** | — |
 | 133 | Beans with Sausages | Romania | wikipedia | — | **P3** | — |
