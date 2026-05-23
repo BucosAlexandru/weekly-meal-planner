@@ -602,10 +602,10 @@
   grid-template-columns: 1.15fr 1fr;
   gap: 2.8rem;
   align-items: start;
-  padding: .8rem 0 1.8rem;
+  padding: 1.25rem 0 2.4rem;
 }
 @media (max-width: 768px) {
-  .recipe-hero-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .recipe-hero-grid { grid-template-columns: 1fr; gap: 1.4rem; padding: .9rem 0 1.6rem; }
 }
 
 .recipe-hero-img-col {
@@ -763,8 +763,8 @@
 .recipe-features-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: .8rem;
-  padding: .25rem 0 1.75rem;
+  gap: .9rem;
+  padding: .25rem 0 2.4rem;
 }
 @media (max-width: 768px) {
   .recipe-features-row { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
@@ -810,12 +810,12 @@
 .recipe-content-grid {
   display: grid;
   grid-template-columns: 1fr 1.8fr 1fr;
-  gap: 2.2rem;
-  padding: 1.75rem 0 2.25rem;
-  border-top: 1px solid #eaecef;
+  gap: 2.6rem;
+  padding: 2.5rem 0 2.8rem;
+  border-top: 1px solid #f0f2f0;
 }
 @media (max-width: 960px) {
-  .recipe-content-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .recipe-content-grid { grid-template-columns: 1fr; gap: 2rem; padding: 1.8rem 0 2rem; }
 }
 
 .recipe-ingredients-col h2,
@@ -824,9 +824,11 @@
   font-size: 1rem;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 1.1rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid #24712A;
+  margin-bottom: 1.2rem;
+  padding-bottom: .55rem;
+  /* Softened underline: thinner + muted brand. Heavy 2px green felt
+     section-divider-y; the column header should be calm, not stamped. */
+  border-bottom: 1px solid rgba(36, 113, 42, .35);
   display: flex;
   align-items: center;
   gap: .5rem;
@@ -894,11 +896,11 @@
 .recipe-steps-new li {
   display: flex;
   gap: 1.1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid #f0f1f3;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid #f3f5f3;
   font-size: .9rem;
   color: #374151;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .recipe-steps-new li:last-child { border-bottom: none; }
 .step-num {
@@ -975,8 +977,8 @@
 
 /* ── Related Recipes Section ── */
 .recipe-related-section {
-  padding: 1.75rem 0 1.2rem;
-  border-top: 1px solid #eaecef;
+  padding: 2.6rem 0 1.6rem;
+  border-top: 1px solid #f0f2f0;
 }
 .recipe-related-header {
   display: flex;
