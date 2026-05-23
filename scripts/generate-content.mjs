@@ -11,6 +11,7 @@
 import { recipes }                    from '../public/js/recipes.js';
 import { recipes as budgetRecipes }   from '../public/js/recipes-budget.js';
 import { i18n }                       from '../public/js/i18n.js';
+import { recipeImages }               from '../public/js/recipe-images.js';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -2490,11 +2491,11 @@ function recipePage(recipe, rl) {
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
   const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
-  // Use recipe-specific image if it exists in public/images/, otherwise fall back to cover2.jpg
+  // Image priority: 1) local public/images/<slug>.jpg, 2) recipe-images.js external URL (Spoonacular/Wikipedia), 3) cover2.jpg fallback
   const recipeImgFile = path.join(PUBLIC, 'images', `${rslug}.jpg`);
   const recipeImgUrl  = fs.existsSync(recipeImgFile)
     ? `https://meal-planner.ro/images/${rslug}.jpg`
-    : 'https://meal-planner.ro/images/cover2.jpg';
+    : (recipeImages[recipe.id] || 'https://meal-planner.ro/images/cover2.jpg');
   const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
   const overrides = {
     servings: recipe.servings,
