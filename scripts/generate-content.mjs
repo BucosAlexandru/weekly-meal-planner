@@ -34,23 +34,38 @@ const capFirst = s => s ? s[0].toUpperCase() + s.slice(1) : '';
      2. public/images/<slug>.jpg    (existing convention)
      3. recipeImages[id]            (Spoonacular / Wikipedia mapping)
      4. cover2.jpg                  (last-resort fallback)
+   Returns { src, ogUrl }:
+     - `src`    — what goes in <img src=…>. Same-origin path for local files
+                  ('/images/<slug>.webp') so preview deploys
+                  (cts-xxx.vercel.app) and any future custom domain load
+                  correctly without hitting the production host.
+     - `ogUrl`  — what goes in <meta property="og:image">, JSON-LD, and the
+                  Twitter card. Absolute https://meal-planner.ro/... because
+                  social-share crawlers need a fully-qualified URL.
+   For external mapped URLs (Wikipedia/Spoonacular), src and ogUrl are
+   identical — they're already absolute and origin-independent.
    `imageWarnings` collects de-duplicated build-time diagnostics; the
    summary is emitted once at the bottom of the build. Run
    `node scripts/audit-images.mjs` for a full report. */
 const imageWarnings = { missing: [], lowres: [], fallback: [] };
 const _imgWarnSeen = new Set();
+const PROD_ORIGIN = 'https://meal-planner.ro';
 function resolveRecipeImage(recipe, rslug) {
   const localWebp = path.join(PUBLIC, 'images', `${rslug}.webp`);
   const localJpg  = path.join(PUBLIC, 'images', `${rslug}.jpg`);
-  if (fs.existsSync(localWebp)) return `https://meal-planner.ro/images/${rslug}.webp`;
-  if (fs.existsSync(localJpg))  return `https://meal-planner.ro/images/${rslug}.jpg`;
+  if (fs.existsSync(localWebp)) {
+    return { src: `/images/${rslug}.webp`, ogUrl: `${PROD_ORIGIN}/images/${rslug}.webp` };
+  }
+  if (fs.existsSync(localJpg)) {
+    return { src: `/images/${rslug}.jpg`, ogUrl: `${PROD_ORIGIN}/images/${rslug}.jpg` };
+  }
   const mapped = recipeImages[recipe.id];
-  if (mapped) return mapped;
+  if (mapped) return { src: mapped, ogUrl: mapped };
   if (!_imgWarnSeen.has(recipe.id)) {
     _imgWarnSeen.add(recipe.id);
     imageWarnings.fallback.push({ id: recipe.id, name: recipe.name?.en || recipe.name?.ro, slug: rslug });
   }
-  return 'https://meal-planner.ro/images/cover2.jpg';
+  return { src: `${PROD_ORIGIN}/images/cover2.jpg`, ogUrl: `${PROD_ORIGIN}/images/cover2.jpg` };
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -2830,7 +2845,11 @@ function recipePage(recipe, rl) {
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
   const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
-  const recipeImgUrl = resolveRecipeImage(recipe, rslug);
+  // `recipeImg.src` is what the <img> tag uses — same-origin for locals so
+  // preview deploys load without hitting production. `recipeImg.ogUrl` is
+  // the absolute URL used by og:image / JSON-LD / Twitter card.
+  const recipeImg    = resolveRecipeImage(recipe, rslug);
+  const recipeImgUrl = recipeImg.ogUrl;
   const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
   const overrides = {
     servings: recipe.servings,
@@ -2906,8 +2925,8 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
       <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}${
-        recipeImgUrl && !recipeImgUrl.endsWith('cover2.jpg')
-          ? `<img src="${recipeImgUrl}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
+        recipeImg.src && !recipeImg.src.endsWith('cover2.jpg')
+          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
           : ''
       }</div>
     </div>
