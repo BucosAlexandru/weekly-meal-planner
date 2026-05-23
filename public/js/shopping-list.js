@@ -125,6 +125,13 @@ const CATEGORY_LABELS = {
 /* Canonical name → category. Lookup is on the lowercased extracted name.
    Order matters when a name contains multiple keywords — earlier rules win. */
 const CATEGORY_RULES = [
+  // PRIORITY OVERRIDES — must come first to win over broader rules below.
+  // Stocks / broths / bouillons route to SAUCES, not MEAT (the broad meat rule
+  // would otherwise capture "chicken stock" via \bchicken\b).
+  [/^(chicken|beef|vegetable|fish|lamb|pork|veal|dashi|miso)\s+(stock|broth|bouillon)$/, 'sauces'],
+  // Fresh herbs route to VEGETABLES, not the dried-herb PANTRY rule below.
+  [/^fresh\s+(dill|thyme|oregano|rosemary|sage|chives?|basil|mint|parsley|coriander|cilantro|tarragon)$/, 'vegetables'],
+
   // PANTRY — match first so they don't fall into other categories
   [/^(salt|sea salt|kosher salt|fine sea salt|coarse salt|black pepper|white pepper|pepper)$/, 'pantry'],
   [/^(olive oil|extra-virgin olive oil|vegetable oil|cooking oil|neutral oil|sunflower oil|canola oil|sesame oil|oil)$/, 'pantry'],
@@ -205,12 +212,29 @@ const CANON_RULES = [
   [/^parsley and (lemon wedges?|fresh herbs?).*$/, 'fresh parsley'],
   [/^cucumber slices? and fried shallots.*$/, 'cucumber'],
   [/^coriander leaves? and lemon wedges?.*$/, 'fresh coriander'],
-  [/^grated parmigiano and extra[- ]virgin olive oil.*$/, 'grated parmesan'],
+  // Recipe authors sometimes pack two finishing ingredients into one line
+  // ("grated parmigiano and extra-virgin olive oil, to serve"). Canonicalize
+  // to plain parmesan so it MERGES with the main parmesan entry; the olive
+  // oil component is already covered elsewhere in the recipe.
+  [/^grated parmigiano and extra[- ]virgin olive oil.*$/, 'parmesan'],
   [/^smoked lardons?$/, 'bacon'],
   [/^streaky bacon$/, 'bacon'],
   [/^(extra[- ]?)?virgin olive oil$/, 'olive oil'],
   [/^grated nutmeg$/, 'nutmeg'],
-  [/^greek oregano$|^dried greek oregano$/, 'dried oregano'],
+  // "Bouquet garni: 3 thyme sprigs + 2 bay leaves + ..." — recipes occasionally
+  // write the components inline with a colon. Strip everything after the canonical.
+  [/^bouquet garni\b.*$/, 'bouquet garni'],
+  // Saffron threads / strands / pistils — all the same shopping item.
+  [/^saffron (threads?|strands?|pistils?|filaments?)$/, 'saffron'],
+  // "Full-bodied Burgundy red wine — do not use cheap wine" etc. — strip
+  // editorial wording, keep just "red wine" so it merges with other red wine.
+  [/^(full[- ]?bodied|dry|robust|fruity|medium[- ]?bodied)?\s*(burgundy|bordeaux|chianti|merlot|cabernet|pinot noir|rioja)?\s*red wine\b.*$/, 'red wine'],
+  [/^(full[- ]?bodied|dry|crisp|fruity)?\s*(burgundy|chardonnay|riesling|sauvignon blanc|pinot grigio)?\s*white wine\b.*$/, 'white wine'],
+  // "Grated parmesan", "Grated kefalotyri", "Grated gruyère" — drop the prep
+  // adjective so they merge with their ungrated counterparts at the canonical
+  // step. Returns the inner thing for further canonicalization.
+  [/^(grated|shredded|crumbled)\s+(.+)$/, (m) => m[2]],
+  [/^(oregano|dried oregano|greek oregano|dried greek oregano|mexican oregano)$/, 'dried oregano'],
   [/^(dry\s+)?white wine$/, 'white wine'],
   [/^(dry\s+)?red wine$/, 'red wine'],
   [/^(canned\s+)?cannellini$|^canned cannellini.*$/, 'white beans'],
@@ -331,14 +355,15 @@ const CANON_RULES = [
   [/^(whole|skimmed|semi-skimmed|full-fat)?\s*milk$/, 'milk'],
   [/^(double|single|heavy|whipping|sour)?\s*cream$/, 'cream'],
   [/^(greek|natural|plain)?\s*yo?ghurt$/, 'yoghurt'],
-  [/^parmesan( cheese)?$|^parmigiano( reggiano)?$/, 'parmesan'],
+  [/^parmesan( cheese)?$|^parmigiano([- ]reggiano)?$/, 'parmesan'],
   [/^pecorino( romano)?$/, 'pecorino'],
-  [/^(fresh\s+)?mozzarella$/, 'mozzarella'],
+  [/^(fresh\s+)?mozzarella( cheese)?$/, 'mozzarella'],
   [/^feta( cheese)?$/, 'feta'],
-  [/^ricotta$/, 'ricotta'],
-  [/^cheddar$/, 'cheddar'],
-  [/^(gruyere|gruyère)$/, 'gruyère'],
-  [/^kefalotyri$/, 'kefalotyri'],
+  [/^ricotta( cheese)?$/, 'ricotta'],
+  [/^ricotta salata$/, 'ricotta salata'],
+  [/^cheddar( cheese)?$/, 'cheddar'],
+  [/^(gruyere|gruyère)( cheese)?$/, 'gruyère'],
+  [/^kefalotyri( cheese)?$/, 'kefalotyri'],
 
   // Dry / pasta / rice
   [/^spaghetti$/, 'spaghetti'],
@@ -1736,8 +1761,34 @@ function parseIngredient(raw) {
   //   "Coriander leaves to finish" -> "Coriander leaves"
   s = s.replace(/\s+(for|to|if|when|while)\s+.*$/i, '').trim();
 
-  // Strip "or alternative" sections: "OR 200g..."
-  s = s.split(/\s+\bor\b\s+/i)[0].trim();
+  // Strip "or alternative" sections.
+  // Special case: when recipe authors share a tail noun between two
+  // alternatives ("warm chicken OR vegetable stock"), naive left-split
+  // leaves us with "warm chicken" — which canonicalizes wrong ("whole
+  // chicken"). Detect when the RIGHT alternative is a COMPOUND noun phrase
+  // (multi-word, ending in stock/broth/wine/oil/sauce/mince/paste) and the
+  // LEFT half is missing that tail noun — then graft the tail onto the
+  // left so it canonicalizes as the intended compound.
+  // Skip single-word right halves ("chicken stock or water") — those are
+  // genuine alternatives, not shared-tail constructions.
+  {
+    const orParts = s.split(/\s+\bor\b\s+/i);
+    if (orParts.length >= 2) {
+      const left = orParts[0].trim();
+      const right = orParts[1].trim();
+      const rightWords = right.split(/\s+/);
+      const COMPOUND_TAILS = /^(stock|broth|bouillon|wine|oil|sauce|mince|paste|rice|noodles?|pasta|beans?|lentils?|peas|peppers?|chillies|chilis|chilies)$/i;
+      if (rightWords.length >= 2 && COMPOUND_TAILS.test(rightWords[rightWords.length - 1])) {
+        const tail = rightWords[rightWords.length - 1];
+        const hasTail = new RegExp('\\b' + tail + '\\b', 'i').test(left);
+        s = hasTail ? left : `${left} ${tail}`;
+      } else {
+        s = left;
+      }
+    } else {
+      s = orParts[0].trim();
+    }
+  }
   // Strip "+ also" tails: "+ 1 whole egg"
   // We won't fully handle the "+", just keep the leading item
   s = s.split(/\s+\+\s+/)[0].trim();
@@ -1811,13 +1862,23 @@ function parseIngredient(raw) {
    CANONICALIZATION + CATEGORIZATION
    ============================================================ */
 
-function canonicalName(name) {
+function canonicalName(name, depth = 0) {
   if (!name) return null;
+  // Cap recursion to prevent any pathological rule pair from looping.
+  if (depth > 2) return name.toLowerCase().trim();
   const n = name.toLowerCase().trim();
   for (const [pattern, replacement] of CANON_RULES) {
     const m = n.match(pattern);
     if (m) {
-      return typeof replacement === 'function' ? replacement(m) : replacement;
+      const isFn = typeof replacement === 'function';
+      const result = isFn ? replacement(m) : replacement;
+      // Function-rules typically extract a substring (e.g. "grated parmesan"
+      // → "parmesan"); the result itself may still need canonicalization
+      // (e.g. parmesan → parmesan, parmigiano → parmesan). Re-run to apply
+      // the downstream rule. Static-string rules already produce the final
+      // canonical, so we return them as-is.
+      if (isFn && result && result !== n) return canonicalName(result, depth + 1);
+      return result;
     }
   }
   return n;
@@ -1848,9 +1909,12 @@ function unitGroup(u) {
   return null;
 }
 
+// Trim trailing ".0" so "2.0 kg" reads as "2 kg".
+function trimZero(s) { return s.replace(/\.0(\s)/, '$1'); }
+
 function formatQty(grams) {
   if (grams <= 0) return '';
-  if (grams >= 1000) return `${(grams / 1000).toFixed(grams >= 5000 ? 0 : 1)} kg`;
+  if (grams >= 1000) return trimZero(`${(grams / 1000).toFixed(grams >= 5000 ? 0 : 1)} kg`);
   if (grams >= 100) return `${Math.round(grams / 50) * 50} g`;
   if (grams >= 25) return `${Math.round(grams / 25) * 25} g`;
   return `${Math.round(grams)} g`;
@@ -1858,7 +1922,7 @@ function formatQty(grams) {
 
 function formatVolume(ml) {
   if (ml <= 0) return '';
-  if (ml >= 1000) return `${(ml / 1000).toFixed(ml >= 5000 ? 0 : 1)} L`;
+  if (ml >= 1000) return trimZero(`${(ml / 1000).toFixed(ml >= 5000 ? 0 : 1)} L`);
   if (ml < 25) return '';  // tsp-scale residue, suppress
   return `${Math.round(ml / 25) * 25} ml`;
 }
@@ -1882,7 +1946,10 @@ function combineItems(items) {
   const parts = [];
   if (totalGrams > 0) parts.push(formatQty(totalGrams));
   if (totalMl > 0)    parts.push(formatVolume(totalMl));
-  if (countPieces > 0) {
+  // If we already have a mass or volume, residual size-pieces ("1 large") are
+  // usually redundant (the recipe gave both forms) — suppress them. Only show
+  // size pieces when mass/volume is absent.
+  if (countPieces > 0 && totalGrams === 0 && totalMl === 0) {
     if (sizeCount.large > 0 || sizeCount.medium > 0 || sizeCount.small > 0) {
       const sizes = ['large', 'medium', 'small']
         .filter(s => sizeCount[s] > 0)
@@ -1951,7 +2018,7 @@ function _groupAndRender(allIngr, langCode) {
   // adjective or fragment with no real noun. Filter them out entirely.
   // Also filters cooking equipment that occasionally leaks into ingredient
   // lists (bamboo rolling mat, wooden skewers, parchment paper).
-  const ORPHAN = /^(canned|tinned|fresh|dried|raw|whole|warm|hot|cold|chilled|frozen|bunch|bunches|sprig|sprigs|stalk|stalks|head|piece|pieces|slice|slices|sheet|sheets|optional|to taste|to garnish|extra|more|some|big|wooden|red|green|yellow|orange|white|brown|black|good|nice|generous|small|medium|large|litres?|liters?|cups?|tsp|tbsp|pinch|pieces?|day-?old)$/i;
+  const ORPHAN = /^(canned|tinned|fresh|dried|raw|whole|warm|hot|cold|chilled|frozen|bunch|bunches|sprig|sprigs|stalk|stalks|head|piece|pieces|slice|slices|sheet|sheets|optional|to taste|to garnish|extra|more|some|big|wooden|red|green|yellow|orange|white|brown|black|good|nice|generous|small|medium|large|litres?|liters?|cups?|tsp|tbsp|pinch|pieces?|day-?old|water|ice|ice cubes)$/i;
   const NON_FOOD = /\b(bamboo (rolling )?mat|wooden skewers?|metal skewers?|parchment paper|cling film|aluminium foil|aluminum foil|cheesecloth|kitchen string|kitchen twine|toothpicks?|cocktail sticks?)\b/i;
 
   for (const [canonical, items] of Object.entries(byCanon)) {
