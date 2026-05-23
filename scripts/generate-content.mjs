@@ -2661,7 +2661,11 @@ ${makeNav(lc)}
   <!-- Hero -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}</div>
+      <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${
+        recipeImgUrl && !recipeImgUrl.endsWith('cover2.jpg')
+          ? `<img src="${recipeImgUrl}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async">`
+          : emoji
+      }</div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">⭐ ${esc(cat)} · ${esc(o)}</div>
