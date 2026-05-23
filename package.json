@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.23.1",
+    "sharp": "^0.34.5",
     "vercel": "^48.10.2"
   }
 }

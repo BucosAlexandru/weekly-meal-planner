@@ -1,0 +1,8 @@
+[
+  { "id": 12,  "source": "./sources/dhal.jpg",      "note": "P0 flagship — North Indian dal with tadka, served with rice" },
+  { "id": 39,  "source": "./sources/poutine.jpg",   "note": "P0 flagship — Quebec poutine, fries + curds + brown gravy" },
+  { "id": 149, "source": "./sources/pozole.jpg",    "note": "P0 flagship — Mexican red or green pozole with hominy + radish + lime" },
+  { "id": 126, "source": "./sources/banh-xeo.jpg",  "note": "P1 — Vietnamese crispy pancake, yellow turmeric batter, shrimp + pork + bean sprouts" },
+  { "id": 176, "source": "./sources/pav-bhaji.jpg", "note": "P1 — Mumbai street food, spiced vegetable mash with butter-toasted pav buns" },
+  { "id": 23,  "source": "./sources/bibimbap.jpg",  "force": true, "note": "Already mapped to Wikipedia — replace with cleaner local hi-res for OG sharpness" }
+]

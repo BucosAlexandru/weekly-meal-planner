@@ -32,3 +32,10 @@ check-ssl-expiry.js.claude/
 
 # Claude Code worktrees
 .claude/worktrees/
+
+# Image curation workflow — only the public/images/<slug>.{webp,jpg} output
+# should be committed. Raw sources live in ./sources/ locally and the manifest
+# you point batch-image-add.mjs at is your private working file. The
+# *.example.json template IS committed for reference.
+sources/
+data/image-batch.json
