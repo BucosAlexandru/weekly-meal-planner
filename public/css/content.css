@@ -1170,6 +1170,16 @@
   .recipe-card-item { width: 155px; }
   .recipe-card-img { height: 100px; }
 
+  /* Lift CTA buttons above tagline + meta-row on small screens so the
+     primary action sits in the first viewport without pushing them below
+     the fold. Desktop order is unchanged. */
+  .recipe-hero-info-col { gap: .85rem; }
+  .recipe-hero-info-col .recipe-badge   { order: 1; }
+  .recipe-hero-info-col h1              { order: 2; }
+  .recipe-hero-info-col .recipe-cta-row { order: 3; }
+  .recipe-hero-info-col .recipe-tagline { order: 4; }
+  .recipe-hero-info-col .recipe-meta-row{ order: 5; }
+
   /* Listing mobile */
   .recipe-groups-grid { grid-template-columns: 1fr; gap: .9rem; }
   .recipe-origin-group { padding: 1.1rem 1.2rem 1rem; }
