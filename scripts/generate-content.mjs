@@ -1375,6 +1375,28 @@ function buildShoppingList(plan, langCode) {
   return Object.values(ingMap).sort((a,b) => a.localeCompare(b));
 }
 
+/* Short one-line meal summary for the weekly plan table. Picks the recipe's
+   originText first sentence (the "tagline"), falls back to a sentence-cut
+   ingredients list. ~150 char target; sentence-boundary aware. */
+function mealSummary(rec, lc_code) {
+  if (!rec) return '';
+  const ot = rec.originText?.[lc_code] || rec.originText?.en || rec.originText?.ro || '';
+  if (ot) {
+    const firstSentence = ot.split(/(?:\.\s+|[。！？]\s*)/)[0] || ot;
+    const trimmed = firstSentence.trim();
+    if (trimmed.length <= 180) return trimmed + (trimmed.endsWith('.') || trimmed.endsWith('。') ? '' : '.');
+    // Word-boundary cut at 150 chars
+    const cut = trimmed.slice(0, 150);
+    const lastSpace = cut.lastIndexOf(' ');
+    return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut) + '…';
+  }
+  // Fallback: first 3 ingredients, no quantities, joined cleanly
+  const ingr = rec.ingredients?.[lc_code] || rec.ingredients?.en || rec.ingredients?.ro || [];
+  if (!ingr.length) return '';
+  const head = ingr.slice(0, 3).map(i => i.split(',')[0].trim()).join(', ');
+  return head;
+}
+
 /* ════════════════════════════════════════════════════════════════
    GENERIC planPage — works for ALL 14 languages
    ════════════════════════════════════════════════════════════════ */
@@ -1394,15 +1416,15 @@ function planPage(plan, lc) {
     const dRec  = src.find(r => r.name?.ro===dName || r.name?.en===dName);
     const lDispName = lRec?.name?.[lc_code] || lRec?.name?.en || lName;
     const dDispName = dRec?.name?.[lc_code] || dRec?.name?.en || dName;
-    const lIngr = (lRec?.ingredients?.[lc_code] || lRec?.ingredients?.ro || []).slice(0,5).join(', ');
-    const dIngr = (dRec?.ingredients?.[lc_code] || dRec?.ingredients?.ro || []).slice(0,5).join(', ');
+    const lSummary = mealSummary(lRec, lc_code);
+    const dSummary = mealSummary(dRec, lc_code);
     const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${lc.recipeBase}${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
     const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${lc.recipeBase}${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
     return `<tr>
       <td><strong>${day}</strong></td>
-      <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lIngr?`<br><small class="text-muted">${esc(lIngr)}…</small>`:''}
+      <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lSummary?`<br><small class="text-muted">${esc(lSummary)}</small>`:''}
       </td>
-      <td>${dSlug!=='#'?`<a href="${dSlug}" class="recipe-link">`:''}${esc(dDispName)}${dSlug!=='#'?'</a>':''}${dIngr?`<br><small class="text-muted">${esc(dIngr)}…</small>`:''}
+      <td>${dSlug!=='#'?`<a href="${dSlug}" class="recipe-link">`:''}${esc(dDispName)}${dSlug!=='#'?'</a>':''}${dSummary?`<br><small class="text-muted">${esc(dSummary)}</small>`:''}
       </td>
     </tr>`;
   }).join('');
