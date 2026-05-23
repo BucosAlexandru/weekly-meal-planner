@@ -767,16 +767,23 @@ const makeNav = (lc) => `
   </nav>
 </header>`;
 
+const FOOTER_LANG_LINKS = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi','tr','it','ko']
+  .map(c => `<a href="/${c}/" hreflang="${c}">${({ro:'Română',en:'English',es:'Español',fr:'Français',de:'Deutsch',pt:'Português',ru:'Русский',ar:'العربية',zh:'中文',ja:'日本語',hi:'हिन्दी',tr:'Türkçe',it:'Italiano',ko:'한국어'})[c]}</a>`)
+  .join('<span class="footer-lang-sep" aria-hidden="true">·</span>');
+
 const makeFooter = (lc) => `
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">
-    <span class="footer-brand">🥗 Meal-Planner.ro</span>
-    <span class="footer-sep">·</span>
-    <a href="${lc.dir}/">${lc.sectionLabel}</a>
-    <span class="footer-sep">·</span>
-    <a href="${appHref(lc)}">${lc.appLabel}</a>
-    <span class="footer-sep">·</span>
-    <span>© 2026</span>
+    <nav class="footer-langs" aria-label="Available languages">${FOOTER_LANG_LINKS}</nav>
+    <div class="footer-main">
+      <span class="footer-brand">🥗 Meal-Planner.ro</span>
+      <span class="footer-sep">·</span>
+      <a href="${lc.dir}/">${lc.sectionLabel}</a>
+      <span class="footer-sep">·</span>
+      <a href="${appHref(lc)}">${lc.appLabel}</a>
+      <span class="footer-sep">·</span>
+      <span>© 2026</span>
+    </div>
   </div>
 </footer>`;
 

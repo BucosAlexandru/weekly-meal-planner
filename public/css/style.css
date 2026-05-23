@@ -1375,21 +1375,53 @@ button#manage-subscription:hover {
 .app-footer {
   border-top: 1px solid var(--line);
   background: var(--surface);
-  padding: 22px 24px;
+  padding: 30px 24px 26px;
 }
 
 .footer-inner {
   max-width: 920px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 14px;
   font-size: 0.85rem;
   color: var(--ink-3);
+  text-align: center;
 }
 
+/* Available-languages row — gives the footer real signal of the 14-lang
+   product. Each link is the localized name; muted color, soft separator. */
+.footer-langs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 .55rem;
+  font-size: 0.78rem;
+  line-height: 2;
+  color: var(--ink-4);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+  max-width: 760px;
+  padding: 0 0 14px;
+}
+.footer-langs a {
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color .15s;
+}
+.footer-langs a:hover { color: var(--color-brand); }
+.footer-lang-sep { color: var(--ink-4); opacity: .55; }
+
+.footer-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
 .footer-brand { font-weight: 700; color: var(--ink-2); }
 .footer-sep   { color: var(--ink-4); }
 
