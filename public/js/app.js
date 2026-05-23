@@ -2,6 +2,7 @@
 import { recipes as recipesMain } from './recipes.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
+import { buildShoppingFromRawIngredients } from './shopping-list.js';
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
@@ -533,18 +534,24 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>`;
   }
 
-  // ── collect all ingredients for shopping list ─────────────────
-  const allIngrSet = new Set();
+  // ── collect all EN ingredients across visible meals, then run them
+  //    through the same grouping engine the static plan pages use ──
+  const rawEnIngredients = [];
   visibleMeals.forEach(m => {
     [m.lunch, m.dinner].filter(Boolean).forEach(meal => {
       const r = getRecipe(meal);
-      (r?.ingredients?.[lang] || r?.ingredients?.en || []).forEach(i => allIngrSet.add(i));
+      // Engine is calibrated for EN ingredient strings. Use them across all
+      // locales — the engine localizes the canonical labels for output.
+      (r?.ingredients?.en || r?.ingredients?.ro || []).forEach(i => rawEnIngredients.push(i));
     });
   });
-  const ingrArr = [...allIngrSet];
-  const half = Math.ceil(ingrArr.length / 2);
-  const col1 = ingrArr.slice(0, half);
-  const col2 = ingrArr.slice(half);
+  let shoppingGroups = [];
+  try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, lang); } catch (_) { shoppingGroups = []; }
+  // Legacy 2-col fallback if the engine returned nothing (e.g. no recipes added yet).
+  const flatIngrArr = [...new Set(rawEnIngredients)];
+  const half = Math.ceil(flatIngrArr.length / 2);
+  const col1 = flatIngrArr.slice(0, half);
+  const col2 = flatIngrArr.slice(half);
 
   // ── day cards ─────────────────────────────────────────────────
   let daysHTML = '';
@@ -560,17 +567,29 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>`;
   });
 
-  // ── shopping list ─────────────────────────────────────────────
-  const shoppingHTML = ingrArr.length ? `
-    <div class="pdf-shopping">
-      <div class="pdf-shopping-header">🛒 ${t('shoppingList') || 'Shopping List'}</div>
-      <div class="pdf-shopping-body">
-        <div class="shopping-grid">
-          <div>${col1.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
-          <div>${col2.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
-        </div>
-      </div>
-    </div>` : '';
+  // ── shopping list (grouped engine output; falls back to 2-col flat) ─
+  const shoppingGroupsHTML = shoppingGroups.map(g => `
+    <section class="pdf-shop-group" data-group="${g.id}">
+      <h4 class="pdf-shop-group-h">${g.label}</h4>
+      <ul class="pdf-shop-list">
+        ${g.items.map(it => `<li><span class="pdf-shop-name">${it.name}</span>${it.qty ? `<span class="pdf-shop-qty">${it.qty}</span>` : ''}</li>`).join('')}
+      </ul>
+    </section>`).join('');
+  const shoppingHTML = shoppingGroups.length
+    ? `<div class="pdf-shopping pdf-shopping--grouped">
+         <div class="pdf-shopping-header">🛒 ${t('shoppingList') || 'Shopping List'}</div>
+         <div class="pdf-shopping-body">${shoppingGroupsHTML}</div>
+       </div>`
+    : (flatIngrArr.length ? `
+        <div class="pdf-shopping">
+          <div class="pdf-shopping-header">🛒 ${t('shoppingList') || 'Shopping List'}</div>
+          <div class="pdf-shopping-body">
+            <div class="shopping-grid">
+              <div>${col1.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
+              <div>${col2.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
+            </div>
+          </div>
+        </div>` : '');
 
   // ── locked upsell ─────────────────────────────────────────────
   let lockedHTML = '';
@@ -749,6 +768,24 @@ html,body{ margin:0; padding:0; background:#fff; -webkit-print-color-adjust:exac
 .shopping-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.5mm 5mm; }
 .shop-item{ font-size:9pt; padding:.8mm 0; border-bottom:1px dotted #dde; color:var(--ink); }
 .shop-item::before{ content:'☐ '; color:var(--brand); font-size:9.5pt; font-weight:700; }
+/* ── Grouped shopping list (uses the same engine as the static plan pages) ── */
+.pdf-shopping--grouped .pdf-shopping-body{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm 5mm; padding:3.5mm 4mm; background:#fafff9; }
+.pdf-shop-group{ break-inside:avoid; page-break-inside:avoid; }
+.pdf-shop-group-h{
+  margin:0 0 1mm; padding-bottom:.6mm;
+  font-size:7.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--brand-dk); border-bottom:.4mm solid var(--brand-mid);
+}
+.pdf-shop-group[data-group="pantry"] .pdf-shop-group-h{ color:#666; border-bottom-color:#cfd6cf; }
+.pdf-shop-list{ list-style:none; padding:0; margin:0; }
+.pdf-shop-list li{
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:2mm; padding:.65mm 0; font-size:8.8pt; line-height:1.3;
+  border-bottom:.2mm dotted #d8e0d6; color:var(--ink);
+}
+.pdf-shop-list li:last-child{ border-bottom:none; }
+.pdf-shop-name::before{ content:'☐ '; color:var(--brand); font-size:9.2pt; }
+.pdf-shop-qty{ color:#555; font-size:7.8pt; font-variant-numeric:tabular-nums; white-space:nowrap; flex-shrink:0; }
 /* ── Locked upsell ── */
 .pdf-locked{
   margin-top:4mm; padding:6mm; border:2px dashed var(--brand);

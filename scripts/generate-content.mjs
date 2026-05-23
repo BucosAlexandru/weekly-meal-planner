@@ -12,7 +12,7 @@ import { recipes }                    from '../public/js/recipes.js';
 import { recipes as budgetRecipes }   from '../public/js/recipes-budget.js';
 import { i18n }                       from '../public/js/i18n.js';
 import { recipeImages }               from '../public/js/recipe-images.js';
-import { buildShoppingListV2 }        from './shopping-list.mjs';
+import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

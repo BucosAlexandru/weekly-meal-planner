@@ -585,6 +585,13 @@ function combineItems(items) {
    MAIN ENTRY POINT
    ============================================================ */
 
+/* Browser-runtime entry point: takes an already-collected array of raw EN
+   ingredient strings (e.g. from the user's current planner state) and
+   returns the same grouped output as buildShoppingListV2. */
+export function buildShoppingFromRawIngredients(rawIngredients, langCode) {
+  return _groupAndRender(rawIngredients || [], langCode);
+}
+
 export function buildShoppingListV2(plan, langCode, allRecipes, budgetRecipes) {
   const src = plan.isBudget ? budgetRecipes : allRecipes;
   const all = [...plan.lunches, ...plan.dinners];
@@ -600,6 +607,10 @@ export function buildShoppingListV2(plan, langCode, allRecipes, budgetRecipes) {
     const ingr = r.ingredients?.en || r.ingredients?.ro || [];
     for (const i of ingr) allIngr.push(i);
   }
+  return _groupAndRender(allIngr, langCode);
+}
+
+function _groupAndRender(allIngr, langCode) {
 
   // 2. Parse + canonicalize
   const parsed = [];
