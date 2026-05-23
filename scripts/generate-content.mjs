@@ -12,6 +12,7 @@ import { recipes }                    from '../public/js/recipes.js';
 import { recipes as budgetRecipes }   from '../public/js/recipes-budget.js';
 import { i18n }                       from '../public/js/i18n.js';
 import { recipeImages }               from '../public/js/recipe-images.js';
+import { buildShoppingListV2 }        from './shopping-list.mjs';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -1457,7 +1458,20 @@ function planPage(plan, lc) {
     </tr>`;
   }).join('');
 
-  const shoppingItems = shopping.map(i => `<li><i class="bi bi-check2-square"></i> ${esc(capFirst(i))}</li>`).join('\n');
+  // Curated grouped shopping list (V2). Falls back to the legacy flat list
+  // if the engine produces nothing (e.g. for budget plans with sparse data).
+  let shoppingGroups = [];
+  try { shoppingGroups = buildShoppingListV2(plan, lc_code, recipes, budgetRecipes); } catch (e) { shoppingGroups = []; }
+  const shoppingItems = shoppingGroups.length > 0
+    ? shoppingGroups.map(g => `
+      <section class="shopping-group" data-group="${g.id}">
+        <h3 class="shopping-group-h">${esc(g.label)}</h3>
+        <ul class="shopping-group-list">
+          ${g.items.map(it => `<li><span class="shop-name">${esc(it.name)}</span>${it.qty ? `<span class="shop-qty">${esc(it.qty)}</span>` : ''}</li>`).join('')}
+        </ul>
+      </section>`).join('')
+    : shopping.map(i => `<li><i class="bi bi-check2-square"></i> ${esc(capFirst(i))}</li>`).join('\n');
+  const shoppingIsGrouped = shoppingGroups.length > 0;
   const otherPlans = PLANS.filter(p => p.id !== plan.id).slice(0, 4).map(p =>
     `<a href="${lc.dir}/${lc.planIdFn(p)}/" class="content-card-mini">
       <span class="card-mini-emoji">${p.emoji}</span>
@@ -1520,7 +1534,9 @@ ${makeNav(lc)}
     <div class="content-section-inner">
       <h2><span class="section-emoji">🛒</span> ${lc.shoppingHeading}</h2>
       <p class="section-intro">${lc.shoppingIntro(plan, shopping.length)}</p>
-      <ul class="shopping-grid">${shoppingItems}</ul>
+      ${shoppingIsGrouped
+        ? `<div class="shopping-groups">${shoppingItems}</div>`
+        : `<ul class="shopping-grid">${shoppingItems}</ul>`}
       <div class="shopping-cta">
         <a href="${lc.appDir}/?autoplan=${plan.id}" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> ${lc.openPlanLabel}

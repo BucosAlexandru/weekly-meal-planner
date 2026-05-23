@@ -242,7 +242,56 @@
 .recipe-link { color: #1a5620; font-weight: 600; text-decoration: none; }
 .recipe-link:hover { color: #24712A; text-decoration: underline; }
 
-/* ── Shopping list grid ── */
+/* ────────────────────────────────────────────────────────────
+   Shopping list — curated, grouped, supermarket-flow output
+   (V2: grouped engine in scripts/shopping-list.mjs). Compact,
+   PDF/A4-friendly, scannable in <10 seconds.
+   ──────────────────────────────────────────────────────────── */
+.shopping-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem 1.8rem;
+  margin: 0 0 1.5rem;
+}
+.shopping-group { break-inside: avoid; page-break-inside: avoid; }
+.shopping-group-h {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #24712A;
+  margin: 0 0 .55rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid rgba(36,113,42,.18);
+}
+.shopping-group[data-group="pantry"] .shopping-group-h { color: #6b7280; border-color: rgba(107,114,128,.18); }
+.shopping-group-list { list-style: none; margin: 0; padding: 0; }
+.shopping-group-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .8rem;
+  padding: .3rem 0;
+  font-size: .88rem;
+  color: var(--ink-2, #374151);
+  line-height: 1.45;
+  border-bottom: 1px dotted rgba(36,113,42,.10);
+}
+.shopping-group-list li:last-child { border-bottom: none; }
+.shop-name { flex: 1; }
+.shop-qty {
+  color: #6b7280;
+  font-size: .82rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .shopping-groups { grid-template-columns: 1fr; gap: 1.1rem; }
+}
+
+/* ── Legacy flat shopping list (fallback only) ── */
 .shopping-grid {
   list-style: none;
   padding: 0;
@@ -1325,7 +1374,23 @@
   .pdf-ios-hint,
   .content-hero-badge,
   .plan-meta-chips,
-  .breadcrumb-nav { display: none !important; }
+  .breadcrumb-nav,
+  .content-cta-group,
+  .shopping-cta,
+  .other-plans-section,
+  .nav-lang { display: none !important; }
+
+  /* Shopping-list print-pack: dense, 3-column, no shadows, no decorative
+     borders — fits one or two A4 pages cleanly for supermarket use. */
+  .shopping-groups { grid-template-columns: repeat(3, 1fr); column-gap: 1.4rem; gap: .9rem; }
+  .shopping-group { page-break-inside: avoid; }
+  .shopping-group-h { font-size: 9pt; padding-bottom: .15rem; margin-bottom: .3rem; color: #000 !important; border-bottom-color: #999 !important; }
+  .shopping-group-list li { font-size: 9.5pt; padding: .12rem 0; border-bottom: 1px dotted #ddd !important; }
+  .shop-qty { color: #444 !important; }
+  .content-hero, .content-hero--photo { background: #fff !important; color: #111 !important; padding: 1cm 0 .4cm; }
+  .content-hero--photo { background-image: none !important; }
+  .content-hero h1 { color: #000 !important; font-size: 18pt; }
+  .content-hero-desc { color: #333 !important; font-size: 10.5pt; }
 
   /* Page setup */
   @page {
