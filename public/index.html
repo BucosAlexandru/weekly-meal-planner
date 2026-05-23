@@ -182,8 +182,51 @@
             aria-label="Shopping list items"></ul>
       </section>
 
-      <!-- ── Pricing Plans (shown only to non-premium users, filled by JS) ── -->
-      <section class="pricing-section no-print" id="pricing-section" aria-label="Pricing plans"></section>
+      <!-- ── Pricing Plans (static render; JS re-renders on language change / hides on premium) ── -->
+      <section class="pricing-section no-print" id="pricing-section" aria-label="Pricing plans">
+        <div class="pricing-inner">
+          <h2 class="pricing-title">Gratuit vs Premium</h2>
+          <div class="pricing-cards-row">
+
+            <div class="pricing-card pricing-card--free">
+              <div class="pcard-name">Gratuit</div>
+              <div class="pcard-price-block">
+                <span class="pcard-price">0</span>
+                <span class="pcard-sub">/lună</span>
+              </div>
+              <ul class="pcard-features">
+                <li>✅ Plan de mese 7 zile</li>
+                <li>✅ Listă de cumpărături automată</li>
+                <li>✅ 175 rețete din 70+ țări</li>
+                <li>✅ Previzualizare gratuită — 2 zile din 7</li>
+                <li class="feat-no">✗ PDF cu toate 7 zilele</li>
+                <li class="feat-no">✗ Meniu buget ieftin</li>
+              </ul>
+            </div>
+
+            <div class="pricing-card pricing-card--premium">
+              <div class="pcard-popular">CEL MAI POPULAR</div>
+              <div class="pcard-name">⭐ Premium</div>
+              <div class="pcard-price-block">
+                <span class="pcard-price">€3/lună</span>
+              </div>
+              <ul class="pcard-features">
+                <li>✅ Tot ce e gratuit, plus:</li>
+                <li>✅ PDF cu toate cele 7 zile</li>
+                <li>✅ Meniu buget săptămânal</li>
+                <li>✅ Asistent AI rețete (chat)</li>
+                <li>✅ Asistent AI planificare mese</li>
+                <li>✅ Acces nelimitat oricând</li>
+              </ul>
+              <button class="btn btn-upgrade pcard-cta" id="pricing-upgrade-btn" type="button">
+                Obține Premium →
+              </button>
+              <p class="pcard-already"><a href="#access-card">Ai deja abonament? Activează mai jos ↓</a></p>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       <!-- ── PDF Export ── -->
       <section class="export-section no-print" aria-label="Download PDF">
