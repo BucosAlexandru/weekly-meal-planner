@@ -2586,6 +2586,7 @@ function recipePage(recipe, rl) {
   const ui   = RECIPE_UI[code] || RECIPE_UI.en;
   const n    = recipe.name?.[code]    || recipe.name?.en    || recipe.name?.ro    || '';
   const o    = recipe.origin?.[code]  || recipe.origin?.en  || recipe.origin?.ro  || '';
+  const oEn  = recipe.origin?.en || recipe.origin?.ro || ''; // for COUNTRY_FLAG lookup (locale-stable)
   const ingr = recipe.ingredients?.[code] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
   const how  = recipe.howIsMade?.[code]   || recipe.howIsMade?.en   || recipe.howIsMade?.ro   || '';
   const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
@@ -2683,7 +2684,7 @@ ${makeNav(lc)}
       }</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">⭐ ${esc(cat)} · ${esc(o)}</div>
+      <div class="recipe-badge">${COUNTRY_FLAG[oEn] || '⭐'} ${esc(cat)} · ${esc(o)}</div>
       <h1>${esc(n)}</h1>
       <p class="recipe-tagline">${esc(originTxt)}</p>
       <div class="recipe-meta-row">
