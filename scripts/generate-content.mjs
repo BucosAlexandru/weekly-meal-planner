@@ -2331,14 +2331,46 @@ const RECIPE_STEPS_UI = {
 };
 
 /* ── Recipe metadata helpers ── */
-function recipeMetadata(ingr, steps, cat, code, overrides) {
+// Extract the dominant active-cook duration from the EN how-is-made text.
+// We look at each hour/minute mention in context and ignore passive prep windows
+// (overnight soaks, day-ahead marinades, fridge rests) that don't belong in the
+// recipe's total cooking time. Returns the maximum found, capped at 6 h.
+function extractLongCookMinutes(text) {
+  if (!text) return 0;
+  const t = String(text).toLowerCase();
+  let maxMin = 0;
+  const passiveCtx = /soak|marinate|marinad|overnight|fridge|refriger|chill\b|rest\s+(?:in|overnight)|peste\s+noapte|over\s*night|noche|nuit|nacht|notte/;
+  // Returns true if a passive keyword appears within 30 chars before the duration
+  const isPassive = (idx) => passiveCtx.test(t.substring(Math.max(0, idx - 50), idx));
+
+  // Hours: "4–5 h", "1.5 h", "2 hours". Cap at 6 h to ignore overnight/long-marinate hits.
+  for (const m of t.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:[–-]\s*(\d+(?:[.,]\d+)?))?\s*(?:h\b|hr\b|hours?\b|ore\b|stunden\b|часа?\b|часов\b|heures?\b|saat\b|시간\b)/g)) {
+    if (isPassive(m.index)) continue;
+    const hi = parseFloat((m[2] || m[1]).replace(',', '.'));
+    if (hi && hi <= 6) maxMin = Math.max(maxMin, Math.round(hi * 60));
+  }
+  // Long minute durations: "60–90 minutes", "45 min" — useful when no hour mention exists.
+  for (const m of t.matchAll(/(\d{2,3})\s*(?:[–-]\s*(\d{2,3}))?\s*(?:min\b|minutes?\b|minute\b|minuti?\b|minuten\b|минут|dakika\b|분\b)/g)) {
+    if (isPassive(m.index)) continue;
+    const hi = parseInt(m[2] || m[1], 10);
+    if (hi >= 25 && hi <= 240) maxMin = Math.max(maxMin, hi);
+  }
+  return maxMin;
+}
+
+function recipeMetadata(ingr, steps, cat, code, overrides, howText) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const sc = steps.length;
   const ic = ingr.length;
   const autoActive = Math.min(Math.max(sc * 9 + 8, 15), 85);
   const roundTo5 = m => Math.round(m / 5) * 5;
+  // Real cook time: active step time + dominant slow-cook block found in the text.
+  // Falls back to the step-count heuristic when no long-cook keyword is present.
+  const cookFromText = extractLongCookMinutes(howText);
+  const totalGuess = autoActive + (autoActive > 40 ? 30 : 20);
+  const realTotal = cookFromText > 0 ? Math.max(totalGuess, autoActive + cookFromText) : totalGuess;
   const activeMinsR = overrides?.activeMins ?? roundTo5(autoActive);
-  const totalMins   = overrides?.totalMins  ?? roundTo5(autoActive + (autoActive > 40 ? 30 : 20));
+  const totalMins   = overrides?.totalMins  ?? roundTo5(realTotal);
   const fmt    = m => m >= 60 ? `${Math.floor(m/60)}h${m%60>0?' '+(m%60)+'m':''}` : `${m}m`;
   const fmtISO = m => m >= 60 ? `PT${Math.floor(m/60)}H${m%60>0?m%60+'M':''}` : `PT${m}M`;
   const servings = (overrides && overrides.servings) ? overrides.servings : (ic < 5 ? 2 : ic < 9 ? 4 : 6);
@@ -2507,7 +2539,9 @@ function recipePage(recipe, rl) {
     totalMins:  recipe.timeMins?.total,
     activeMins: recipe.timeMins?.active,
   };
-  const meta    = recipeMetadata(ingr, steps, cat, code, overrides);
+  // Real cook time is parsed from the EN how-is-made — the source of truth for braises/marinades
+  const enHow   = recipe.howIsMade?.en || recipe.howIsMade?.ro || '';
+  const meta    = recipeMetadata(ingr, steps, cat, code, overrides, enHow);
   const nutri   = recipeNutrition(ingr, cat, overrides);
   const emoji   = recipeCardEmoji(cat);
   const stepsUi = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
