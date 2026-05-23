@@ -1382,24 +1382,84 @@
 
   /* Shopping-list print-pack: dense, 3-column, no shadows, no decorative
      borders — fits one or two A4 pages cleanly for supermarket use. */
-  .shopping-groups { grid-template-columns: repeat(3, 1fr); column-gap: 1.4rem; gap: .9rem; }
-  .shopping-group { page-break-inside: avoid; }
-  .shopping-group-h { font-size: 9pt; padding-bottom: .15rem; margin-bottom: .3rem; color: #000 !important; border-bottom-color: #999 !important; }
-  .shopping-group-list li { font-size: 9.5pt; padding: .12rem 0; border-bottom: 1px dotted #ddd !important; }
-  .shop-qty { color: #444 !important; }
-  .content-hero, .content-hero--photo { background: #fff !important; color: #111 !important; padding: 1cm 0 .4cm; }
+  .shopping-groups {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.0cm;
+    gap: .35cm 1.0cm;
+  }
+  .shopping-group {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: .25cm;
+  }
+  .shopping-group-h {
+    font-size: 8.5pt;
+    padding-bottom: 1pt;
+    margin-bottom: 3pt;
+    color: #000 !important;
+    border-bottom: .5pt solid #888 !important;
+    letter-spacing: .1em;
+    font-weight: 700;
+  }
+  .shopping-group[data-group="pantry"] .shopping-group-h { color: #555 !important; }
+  .shopping-group-list li {
+    font-size: 9.5pt;
+    padding: 1.2pt 0;
+    line-height: 1.25;
+    border-bottom: .25pt dotted #d4d4d4 !important;
+    gap: .35cm;
+  }
+  .shop-name { color: #111 !important; }
+  .shop-qty {
+    color: #555 !important;
+    font-size: 8.5pt;
+    font-variant-numeric: tabular-nums;
+  }
+  /* Compact section intro above the list */
+  .content-section--green {
+    background: #fff !important;
+    border: none !important;
+    padding: .3cm 0 0 !important;
+  }
+  .content-section--green h2 {
+    font-size: 12pt !important;
+    margin: 0 0 4pt !important;
+    page-break-after: avoid;
+  }
+  .section-intro {
+    font-size: 9pt !important;
+    color: #555 !important;
+    margin: 0 0 .35cm !important;
+    line-height: 1.35;
+  }
+  /* Hero: collapse photo + green to white, tight type, no big jumbo */
+  .content-hero, .content-hero--photo {
+    background: #fff !important;
+    color: #111 !important;
+    padding: 0 0 .25cm !important;
+  }
+  .content-hero::before, .content-hero::after,
+  .content-hero--photo::before, .content-hero--photo::after { display: none !important; }
   .content-hero--photo { background-image: none !important; }
-  .content-hero h1 { color: #000 !important; font-size: 18pt; }
-  .content-hero-desc { color: #333 !important; font-size: 10.5pt; }
+  .content-hero h1 {
+    color: #000 !important;
+    font-size: 16pt !important;
+    line-height: 1.1 !important;
+    margin: 0 0 4pt !important;
+  }
+  .content-hero-desc { color: #444 !important; font-size: 9.5pt !important; max-width: none !important; margin: 0 !important; }
 
-  /* Page setup */
+  /* Suppress the meal-table on the shopping print since the lead PDF is
+     about the supermarket list, not re-listing recipes. */
+  .planner-table { font-size: 9pt; }
+
+  /* Page setup — slightly narrower margins than the recipe-PDF default
+     so the 3-column shopping list has real working width. */
   @page {
-    margin: 1.6cm 2.2cm 2cm;
+    margin: 1.2cm 1.2cm 1.4cm;
     size: A4 portrait;
   }
-  @page :first {
-    margin-top: 1.2cm;
-  }
+  @page :first { margin-top: 1.0cm; }
 
   body {
     background: #fff !important;

@@ -103,13 +103,18 @@ const CATEGORY_RULES = [
 
   // MEAT & FISH — word-boundary short tokens to avoid substring false hits
   // ("ham" inside "bechamel", "cod" inside "coconut", "lamb" inside "lambic").
-  [/\b(beef|chuck|brisket|veal|lamb|pork|chicken|turkey|duck|guanciale|pancetta|prosciutto|bacon|sausage|chorizo|salami|ham|mince|mortadella|lardons?)\b/, 'meat'],
+  // Trailing s? on short tokens so plurals ("prawns", "mussels") match.
+  [/\b(beef|chuck|brisket|veal|lamb|pork|chicken|turkey|duck|guanciale|pancetta|prosciutto|bacon|sausages?|chorizo|salami|ham|hams|mince|mortadella|lardons?)\b/, 'meat'],
   [/short rib|ground beef|ground pork|ground lamb/, 'meat'],
-  [/\b(salmon|trout|cod|tuna|haddock|sea bass|sole|mackerel|sardines?|anchov\w*|prawn|shrimp|mussel|clam|squid|calamari|octopus|crab|lobster|stockfish|crayfish)\b/, 'meat'],
+  [/\b(salmon|trout|cod|tuna|haddock|sea bass|sole|mackerel|sardines?|anchov\w*|prawns?|shrimps?|mussels?|clams?|squid|calamari|octopus|crabs?|lobsters?|stockfish|crayfish|imitation crab)\b/, 'meat'],
   [/fish fillet|smoked fish/, 'meat'],
 
   // DAIRY & EGGS
-  [/(\b|^)(milk|whole milk|skimmed milk|cream|double cream|heavy cream|sour cream|yoghurt|yogurt|greek yoghurt|labneh|crème fraîche|creme fraiche|buttermilk|kefir|condensed milk|evaporated milk|bechamel|béchamel)/, 'dairy'],
+  [/(\b|^)(milk|whole milk|skimmed milk|cream|double cream|heavy cream|sour cream|yoghurt|yogurt|greek yoghurt|labneh|crème fraîche|creme fraiche|buttermilk|kefir|condensed milk|evaporated milk|béchamel|bechamel)/, 'dairy'],
+  // Vegetable additions that the broad regex missed
+  [/\b(bean sprouts?|beansprouts?|sprouts?|edamame|water spinach|morning glory|bok choy|pak choi|napa|chinese cabbage|enoki|daikon|burdock|yuca|jicama|chayote|tomatillo|prickly pear|nopales|plantain|okra|chayote|kohlrabi|fiddleheads?|ramps?)\b/, 'vegetables'],
+  // Nuts / dried fruit — keep in misc (treats / pantry-adjacent), but at least categorise
+  [/\b(walnuts?|almonds?|pistachios?|cashews?|peanuts?|hazelnuts?|pecans?|pine nuts?|sesame seeds?|sunflower seeds?|pumpkin seeds?|raisins?|currants?|sultanas?|dates?|prunes?|dried apricots?|dried figs?|dried cranberries|cocoa powder|chocolate|coconut milk|coconut cream)\b/, 'misc'],
   [/(\b|^)(egg|eggs|egg yolks?|egg whites?)\b/, 'dairy'],
   [/(parmesan|parmigiano|pecorino|mozzarella|feta|ricotta|halloumi|kefalotyri|cheddar|gruyere|gruyère|emmental|gorgonzola|brie|camembert|manchego|paneer|cottage cheese|cream cheese|mascarpone|burrata|gouda|comté|comte|provolone|caciocavallo|cheese)/, 'dairy'],
 
@@ -282,12 +287,19 @@ const CANON_RULES = [
   [/^(basmati|jasmine|long-grain|short-grain)\s+rice$/, m => `${m[1]} rice`],
   [/^(arborio|carnaroli|bomba)\s+rice$/, m => `${m[1]} rice`],
   [/^rice$/, 'rice'],
-  [/^chickpeas?$|^garbanzos?$/, 'chickpeas'],
+  [/^chickpeas?$|^garbanzos?$|^canned chickpeas?$/, 'chickpeas'],
   [/^(red|green|brown|du puy)\s+lentils?$/, m => `${m[1]} lentils`],
   [/^lentils?$/, 'lentils'],
-  [/^kidney beans?$/, 'kidney beans'],
-  [/^black beans?$/, 'black beans'],
-  [/^(white beans?|cannellini|navy beans?)$/, 'white beans'],
+  [/^kidney beans?$|^canned kidney beans?$|^red kidney beans?$/, 'kidney beans'],
+  [/^black beans?$|^canned black beans?$/, 'black beans'],
+  [/^(white beans?|cannellini|navy beans?|borlotti)$|^canned (cannellini|borlotti|white beans?|navy beans?)$/, 'white beans'],
+  [/^(pearl|baby)\s+onions?$/, 'pearl onions'],
+  [/^minced (beef|lamb|pork|veal)$/, m => `${m[1]} mince`],
+  [/^minced meat$/, 'beef mince'],
+  [/^bechamel( sauce)?$|^béchamel( sauce)?$/, 'béchamel'],
+  [/^(warm|hot|cold|chilled)\s+(chicken|beef|vegetable|fish)\s+stock$/, m => `${m[2]} stock`],
+  [/^(chicken|beef|vegetable|fish|lamb)\s+(stock|broth|bouillon)$/, m => `${m[1]} stock`],
+  [/^(extra[- ]virgin\s+)?olive oil\b.*$/, 'olive oil'],
 
   // Pantry — accept any "salt" / "pepper" / "butter" / "oil" string regardless of qualifier or trailing "for X" use case
   [/(^|\b)(sea|kosher|fine|coarse|table)\s+salt(\s+|$)/, 'salt'],
@@ -303,7 +315,7 @@ const CANON_RULES = [
   [/^brown sugar$/, 'brown sugar'],
   [/^honey$/, 'honey'],
   [/^(all-purpose|plain)\s+flour$|^flour$/, 'flour'],
-  [/^(unsalted|salted)?\s*butter(\s+.*)?$/, 'butter'],
+  [/^(extra\s+|unsalted\s+|salted\s+|cold\s+|softened\s+|melted\s+|clarified\s+)*butter(\s+.*)?$/, 'butter'],
   [/^water(\s+.*)?$/, 'water'],
   [/^(hot|cold|ice|warm|boiling|fresh)\s+water(\s+.*)?$/, 'water'],
   [/^bay leaf$|^bay leaves$/, 'bay leaves'],
@@ -384,8 +396,31 @@ function parseIngredient(raw) {
   if (weightInParen) parenWeight = { qty: parseQty(weightInParen[1]), unit: weightInParen[2].toLowerCase() };
   s = s.replace(/\s*\([^)]*\)/g, '');
 
+  // Strip em-dash / en-dash inline editorial comments. The dash MUST have
+  // spaces around it — that's the editorial pattern. Plain hyphens
+  // ("extra-virgin") and ranges ("8-10") stay intact.
+  //   "Full-bodied Burgundy red wine — do not use cheap wine" -> "Full-bodied Burgundy red wine"
+  //   "Lemongrass — outer leaves removed" -> "Lemongrass"
+  s = s.split(/\s+[—–]\s+/)[0].trim();
+
+  // Strip recipe-section prefixes that bloat the shopping label:
+  //   "For sautéed sauerkraut: 400 g drained sauerkraut" -> "400 g drained sauerkraut"
+  //   "Marinade: 1 tbsp soy sauce" -> "1 tbsp soy sauce"
+  //   "Garnish: 2 spring onions" -> "2 spring onions"
+  s = s.replace(/^(for\s+[^:]+|marinade|garnish|topping|sauce|filling|dressing|paste|stock|broth|dough|batter|crust):\s*/i, '').trim();
+  // Quantifier phrases "hand of X" / "knob of X" / "pinch of X" / "splash of X"
+  // become bare "X".
+  s = s.replace(/^(a\s+)?(hand|handful|knob|pinch|splash|dash|drizzle|squeeze|sprinkle|few|couple)\s+of\s+/i, '').trim();
+
   // Strip prep suffix after first comma (", finely diced", ", chopped", etc.)
   s = s.split(',')[0].trim();
+
+  // Strip trailing "for X" / "to X" / "if X" use-case notes that bloat the
+  // shopping label without changing the ingredient identity.
+  //   "Extra-virgin olive oil for shallow-frying the aubergine" -> "Extra-virgin olive oil"
+  //   "Wasabi and pickled ginger to serve" -> "Wasabi and pickled ginger"
+  //   "Coriander leaves to finish" -> "Coriander leaves"
+  s = s.replace(/\s+(for|to|if|when|while)\s+.*$/i, '').trim();
 
   // Strip "or alternative" sections: "OR 200g..."
   s = s.split(/\s+\bor\b\s+/i)[0].trim();
@@ -419,7 +454,7 @@ function parseIngredient(raw) {
   // Unit (with or without space after number)
   // Handle "400g" — number+unit no space — already stripped numbers above
   // Look for inline unit at start of remaining string
-  const unitMatch = s.match(/^(kg|g|ml|l|L|tsp|tbsp|cup|cups|oz|lb|cloves?|sprigs?|stalks?|sheets?|cans?|tins?|bunch|bunches|head|piece|pieces|slices?|stick|sticks|leaves|leaf)\b\.?\s*/i);
+  const unitMatch = s.match(/^(kg|kilograms?|g|grams?|ml|milliliters?|millilitres?|l|L|liters?|litres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|oz|lb|cloves?|sprigs?|stalks?|sheets?|cans?|tins?|jars?|packs?|packets?|bunch|bunches|head|piece|pieces|slices?|stick|sticks|leaves|leaf)\b\.?\s*(of\s+)?/i);
   if (unitMatch) {
     unit = unitMatch[1].toLowerCase();
     s = s.slice(unitMatch[0].length).trim();
@@ -439,8 +474,10 @@ function parseIngredient(raw) {
 
   // Strip leading state adjectives that don't change the ingredient identity
   // for shopping purposes: "raw prawns" → "prawns", "hot chicken stock" →
-  // "chicken stock", "warm milk" → "milk".
-  name = name.replace(/^(raw|cooked|fresh|hot|warm|cold|chilled|frozen|dry|dried|toasted|cooked|leftover)\s+/i, '');
+  // "chicken stock", "warm milk" → "milk", "freshly cracked pepper" → "pepper".
+  name = name.replace(/^(raw|cooked|fresh|freshly|hot|warm|cold|chilled|frozen|dry|dried|toasted|leftover|day-?old|ripe|softened|melted|extra)\s+/i, '');
+  // After dropping a leading "ground" / "cracked" verb, what's left is the spice itself
+  name = name.replace(/^(ground|cracked|crushed|whole)\s+/i, '');
   // Strip trailing prep verbs / state
   name = name.replace(/\s+(diced|chopped|sliced|minced|crushed|grated|peeled|deseeded|cubed|julienned|halved|quartered|cooked|raw|fresh|dried|toasted|ground|whole|finely|coarsely|roughly|thinly|thickly).*$/i, '');
   name = name.trim().toLowerCase();
@@ -587,10 +624,13 @@ export function buildShoppingListV2(plan, langCode, allRecipes, budgetRecipes) {
 
   // Names that are obviously orphans of bad parsing — they're a unit, an
   // adjective or fragment with no real noun. Filter them out entirely.
-  const ORPHAN = /^(canned|tinned|fresh|dried|bunch|bunches|sprig|sprigs|stalk|stalks|head|piece|pieces|slice|slices|sheet|sheets|optional|to taste|to garnish|extra|more|some)$/i;
+  // Also filters cooking equipment that occasionally leaks into ingredient
+  // lists (bamboo rolling mat, wooden skewers, parchment paper).
+  const ORPHAN = /^(canned|tinned|fresh|dried|raw|whole|warm|hot|cold|chilled|frozen|bunch|bunches|sprig|sprigs|stalk|stalks|head|piece|pieces|slice|slices|sheet|sheets|optional|to taste|to garnish|extra|more|some|big|wooden|red|green|yellow|orange|white|brown|black|good|nice|generous|small|medium|large|litres?|liters?|cups?|tsp|tbsp|pinch|pieces?|day-?old)$/i;
+  const NON_FOOD = /\b(bamboo (rolling )?mat|wooden skewers?|metal skewers?|parchment paper|cling film|aluminium foil|aluminum foil|cheesecloth|kitchen string|kitchen twine|toothpicks?|cocktail sticks?)\b/i;
 
   for (const [canonical, items] of Object.entries(byCanon)) {
-    if (ORPHAN.test(canonical) || canonical.length < 3) continue;
+    if (ORPHAN.test(canonical) || NON_FOOD.test(canonical) || canonical.length < 3) continue;
     const cat = items[0].category;
     const labelMap = ITEM_LABELS[langCode] || {};
     // Sentence-case the canonical name: capitalize first letter only,
