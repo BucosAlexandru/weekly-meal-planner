@@ -231,12 +231,12 @@
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  /* Wider columns + vertical column separators give the list a paper-list
-     feel instead of a packed inventory table. */
+  /* CSS multi-column instead of grid: rows flow vertically and balance across
+     columns, items break cleanly, and column-rule gives a subtle folded-paper
+     vertical line between groups — more editorial than a packed inventory grid. */
+  columns: 280px auto;
   column-gap: 2.4rem;
-  row-gap: 0;
+  column-rule: 1px solid rgba(36, 113, 42, .08);
 }
 .shopping-grid li {
   font-size: .9rem;
@@ -1166,7 +1166,7 @@
   .content-hero--short { padding: 2.4rem 1.1rem 2.1rem; }
   .plan-meta-chips { gap: .4rem; }
   .plan-chip { font-size: .77rem; padding: .26rem .7rem; }
-  .shopping-grid { grid-template-columns: 1fr 1fr; }
+  .shopping-grid { columns: 2; column-gap: 1.2rem; }
   .content-cards-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 
