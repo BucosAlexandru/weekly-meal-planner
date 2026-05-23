@@ -51,7 +51,7 @@
   "coconut rice": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Nasi_Liwet_Solo.jpg/330px-Nasi_Liwet_Solo.jpg",
   "cullen skink": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Cullen_Skink.JPG/500px-Cullen_Skink.JPG",
   "currywurst": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20220430_currywurst.jpg/500px-20220430_currywurst.jpg",
-  "dhal": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/3_types_of_lentil.png/330px-3_types_of_lentil.png",
+  // "dhal": removed — was raw lentils on a board, not cooked dal. See docs/ai/RECIPE_IMAGES_MISSING.md.
   "doro wat": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ethiopian_wat.jpg/500px-Ethiopian_wat.jpg",
   "egusi soup": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/500px-EGUSI.JPG",
   "empanadas": "https://img.spoonacular.com/recipes/653362-312x231.jpg",
@@ -132,7 +132,7 @@
   "poffertjes": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Poffertjes-Melkhuis_%28cropped%29.jpg/500px-Poffertjes-Melkhuis_%28cropped%29.jpg",
   "pork schnitzel": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg/500px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg",
   "potica": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MintpoticabySara.jpg/500px-MintpoticabySara.jpg",
-  "poutine": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Food_at_WIkimanian_2017_02.jpg/330px-Food_at_WIkimanian_2017_02.jpg",
+  // "poutine": removed — was a generic Wikimedia conference photo. See docs/ai/RECIPE_IMAGES_MISSING.md.
   "pozole": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Green_pozole%2C_dressed_%2829161841908%29.jpg/500px-Green_pozole%2C_dressed_%2829161841908%29.jpg",
   "pupusa": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pupusas_El_Salvador_Centro_America.JPG/500px-Pupusas_El_Salvador_Centro_America.JPG",
   "quiche lorraine": "https://img.spoonacular.com/recipes/639590-312x231.jpg",
@@ -179,10 +179,21 @@
 
   function injectImage(url, container) {
     if (!url || !container) return;
+    // Never overwrite an SSR-rendered img. The server-side resolver
+    // (resolveRecipeImage in scripts/generate-content.mjs) is the source of
+    // truth — it already considered local public/images/<slug>.{webp,jpg}
+    // overrides + recipe-images.js mappings. Wiping the SSR <img> here
+    // erases hand-curated local images (e.g. miso-ramen.jpg), and risks
+    // re-introducing previously blacklisted URLs that this file still ships.
+    if (container.querySelector('img')) return;
     const img = document.createElement('img');
     img.src = url; img.alt = recipeName; img.loading = 'lazy'; img.decoding = 'async';
+    // Don't wipe innerHTML up front — the SSR usually put an emoji (🍽️) as
+    // a placeholder, and we want to keep showing it if this fetch 404s.
+    // Image is position:absolute via .recipe-photo-container img, so it
+    // overlays the emoji on success. On error we just remove the img and
+    // the emoji is visible again.
     img.onerror = () => img.remove();
-    container.innerHTML = '';
     container.appendChild(img);
   }
 

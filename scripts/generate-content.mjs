@@ -28,6 +28,31 @@ const slug   = name => name.toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/
 const esc    = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const capFirst = s => s ? s[0].toUpperCase() + s.slice(1) : '';
 
+/* ── Recipe image resolution ──────────────────────────────────────
+   Precedence (first match wins):
+     1. public/images/<slug>.webp   (smaller, modern)
+     2. public/images/<slug>.jpg    (existing convention)
+     3. recipeImages[id]            (Spoonacular / Wikipedia mapping)
+     4. cover2.jpg                  (last-resort fallback)
+   `imageWarnings` collects de-duplicated build-time diagnostics; the
+   summary is emitted once at the bottom of the build. Run
+   `node scripts/audit-images.mjs` for a full report. */
+const imageWarnings = { missing: [], lowres: [], fallback: [] };
+const _imgWarnSeen = new Set();
+function resolveRecipeImage(recipe, rslug) {
+  const localWebp = path.join(PUBLIC, 'images', `${rslug}.webp`);
+  const localJpg  = path.join(PUBLIC, 'images', `${rslug}.jpg`);
+  if (fs.existsSync(localWebp)) return `https://meal-planner.ro/images/${rslug}.webp`;
+  if (fs.existsSync(localJpg))  return `https://meal-planner.ro/images/${rslug}.jpg`;
+  const mapped = recipeImages[recipe.id];
+  if (mapped) return mapped;
+  if (!_imgWarnSeen.has(recipe.id)) {
+    _imgWarnSeen.add(recipe.id);
+    imageWarnings.fallback.push({ id: recipe.id, name: recipe.name?.en || recipe.name?.ro, slug: rslug });
+  }
+  return 'https://meal-planner.ro/images/cover2.jpg';
+}
+
 /* ════════════════════════════════════════════════════════════════
    PLANS — 8 themed weekly plans with translations in 14 languages
    ════════════════════════════════════════════════════════════════ */
@@ -2805,11 +2830,7 @@ function recipePage(recipe, rl) {
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
   const pageUrl = `https://meal-planner.ro${rl.dir}/${rslug}/`;
-  // Image priority: 1) local public/images/<slug>.jpg, 2) recipe-images.js external URL (Spoonacular/Wikipedia), 3) cover2.jpg fallback
-  const recipeImgFile = path.join(PUBLIC, 'images', `${rslug}.jpg`);
-  const recipeImgUrl  = fs.existsSync(recipeImgFile)
-    ? `https://meal-planner.ro/images/${rslug}.jpg`
-    : (recipeImages[recipe.id] || 'https://meal-planner.ro/images/cover2.jpg');
+  const recipeImgUrl = resolveRecipeImage(recipe, rslug);
   const appUrl  = rl.appDir ? `${rl.appDir}/` : '/';
   const overrides = {
     servings: recipe.servings,
@@ -2884,10 +2905,10 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
   <!-- Hero -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${
+      <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}${
         recipeImgUrl && !recipeImgUrl.endsWith('cover2.jpg')
-          ? `<img src="${recipeImgUrl}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async">`
-          : emoji
+          ? `<img src="${recipeImgUrl}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
+          : ''
       }</div>
     </div>
     <div class="recipe-hero-info-col">
@@ -3079,6 +3100,17 @@ for (const [lc_code] of Object.entries(LANG_CONFIGS)) {
   count++;
 }
 console.log(`✅ 14 pricing pages generated → /{lang}/{slug}/`);
+
+// Image-resolution summary. Not a build error — degraded UX, but pages still
+// render. Some of these are rescued at runtime by content.js's parallel IMG
+// map (visible to users) — but the SSR <img>, the og:image meta tag, and
+// search-engine crawlers all see cover2.jpg here. Run `audit-images.mjs`
+// for the human-visible vs SEO-visible split.
+if (imageWarnings.fallback.length) {
+  console.log(`\n⚠️  ${imageWarnings.fallback.length} recipes SSR-render cover2.jpg (no local override + no recipe-images.js mapping).`);
+  console.log(`   Some are visually patched by content.js at runtime; og:image still = cover2.jpg.`);
+  console.log(`   Run \`node scripts/audit-images.mjs\` for the per-recipe priority breakdown.`);
+}
 
 console.log(`\n🎉 Done! Generated ${count} pages total.`);
 
