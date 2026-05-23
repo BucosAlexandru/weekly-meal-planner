@@ -1508,7 +1508,7 @@ ${makeNav(lc)}
         <span class="plan-chip"><i class="bi bi-bag-check-fill"></i> ${lc.ingredientsLabel(shopping.length)}</span>
       </div>
       <div class="content-cta-group">
-        <a href="${lc.appDir}/?autoplan=${plan.id}" class="btn btn-generate btn-lg">
+        <a href="${appHref(lc)}?autoplan=${plan.id}" class="btn btn-generate btn-lg">
           <i class="bi bi-pencil-square"></i> ${lc.openAppLabel}
         </a>
         <a href="#${lc.shoppingAnchor}" class="btn btn-outline-light btn-lg">
@@ -1538,7 +1538,7 @@ ${makeNav(lc)}
         ? `<div class="shopping-groups">${shoppingItems}</div>`
         : `<ul class="shopping-grid">${shoppingItems}</ul>`}
       <div class="shopping-cta">
-        <a href="${lc.appDir}/?autoplan=${plan.id}" class="btn btn-generate">
+        <a href="${appHref(lc)}?autoplan=${plan.id}" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> ${lc.openPlanLabel}
         </a>
         <small>${lc.openPlanSub}</small>
