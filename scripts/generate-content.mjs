@@ -1544,6 +1544,20 @@ ${makeFooter(lc)}
 </body></html>`;
 }
 
+/* Hero food image per plan. Lookup key is plan.idEn (English slug) so the
+   same image surfaces on all 14 locales. Recipe IDs picked for visual
+   "this is what the week looks like" representation. Budget intentionally
+   skips a hero — keeps an emoji-only card to vary the visual rhythm. */
+const PLAN_HERO_IMG = {
+  'mediterranean':      recipeImages[22], // Paella
+  'asian-fusion':       recipeImages[21], // Pho
+  'eastern-european':   recipeImages[14], // Borscht
+  'world-tour':         recipeImages[36], // Chili con carne
+  'latin-american':     recipeImages[13], // Guacamole
+  'vegetarian':         recipeImages[25], // Tabbouleh
+  'quick-easy':         recipeImages[16], // Pad Thai
+};
+
 /* ════════════════════════════════════════════════════════════════
    GENERIC indexPage — works for ALL 14 languages
    ════════════════════════════════════════════════════════════════ */
@@ -1554,15 +1568,16 @@ function indexPage(lc) {
     const desc  = sentenceTrim(p.desc[lc_code] || p.desc.en, 130);
     const planId = lc.planIdFn(p);
     const costDisplay = lc.costValue(p);
-    return `<a href="${lc.dir}/${planId}/" class="content-card">
-      <div class="content-card-header">
-        <span class="card-emoji">${p.emoji}</span>
-        <h2 class="card-title">${esc(theme)}</h2>
-      </div>
-      <p class="card-desc">${esc(desc)}</p>
-      <div class="card-meta">
-        <span><i class="bi bi-currency-exchange"></i> ${costDisplay} ${lc.costUnit}</span>
-        <span><i class="bi bi-arrow-right-circle-fill"></i> ${lc.indexViewPlan}</span>
+    const heroImg = PLAN_HERO_IMG[p.idEn];
+    return `<a href="${lc.dir}/${planId}/" class="content-card${heroImg ? ' content-card--with-img' : ''}">
+      ${heroImg ? `<div class="content-card-img"><img src="${heroImg}" alt="" loading="lazy" decoding="async"><span class="content-card-emoji">${p.emoji}</span></div>` : ''}
+      <div class="content-card-body">
+        ${!heroImg ? `<div class="content-card-header"><span class="card-emoji">${p.emoji}</span><h2 class="card-title">${esc(theme)}</h2></div>` : `<h2 class="card-title">${esc(theme)}</h2>`}
+        <p class="card-desc">${esc(desc)}</p>
+        <div class="card-meta">
+          <span><i class="bi bi-currency-exchange"></i> ${costDisplay} ${lc.costUnit}</span>
+          <span><i class="bi bi-arrow-right-circle-fill"></i> ${lc.indexViewPlan}</span>
+        </div>
       </div>
     </a>`;
   }).join('');

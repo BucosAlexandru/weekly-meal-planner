@@ -295,6 +295,48 @@
   position: relative;
   overflow: hidden;
 }
+
+/* When the card has a food hero image, drop the inner padding from the
+   outer container — the image sits flush against the top corners, then
+   .content-card-body provides the text padding below. */
+.content-card--with-img { padding: 0; gap: 0; }
+.content-card--with-img .content-card-body {
+  padding: 1.25rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  flex: 1;
+}
+
+.content-card-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(140deg, #d4edda, #a8d5b0);
+  overflow: hidden;
+}
+.content-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.content-card--with-img:hover .content-card-img img { transform: scale(1.045); }
+
+/* Small emoji badge in the corner of the food photo — keeps the per-plan
+   identity (🫒, 🍜, 💰, etc.) visible without competing with the title. */
+.content-card-emoji {
+  position: absolute;
+  top: 12px; left: 12px;
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+}
 .content-card::before {
   content: '';
   position: absolute;
