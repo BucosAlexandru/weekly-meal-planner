@@ -1711,23 +1711,27 @@ function renderDiscovery() {
   const menusUrl   = `/${lang}/${ro ? 'meniu-saptamanal' : 'weekly-menu'}/`;
   const recipesUrl = `/${lang}/${ro ? 'retete' : 'recipes'}/`;
 
-  // Correct URL per language
+  // Correct URL per language — these MUST match the actual generated route
+  // slugs from scripts/generate-content.mjs LANG_CONFIGS / RECIPE_LANG. The
+  // previous table had stale english "weekly-menu" placeholders for 7
+  // locales (ar/en/es/fr/hi/ko/zh) and a typo on zh recipes ("shpu" /
+  // mojibake "yori-beoب"), all of which produced 404s.
   const lc = lang;
   const baseUrls = {
-    ro: { menus:'meniu-saptamanal', recipes:'retete' },
-    en: { menus:'weekly-menu',      recipes:'recipes' },
-    es: { menus:'menu-semanal',     recipes:'recetas' },
-    fr: { menus:'menu-hebdomadaire',recipes:'recettes' },
-    de: { menus:'wochenplan',       recipes:'rezepte' },
-    pt: { menus:'plano-semanal',    recipes:'receitas' },
-    ru: { menus:'nedelnoe-menyu',   recipes:'retsepty' },
-    ar: { menus:'weekly-menu',      recipes:'wasafat' },
-    zh: { menus:'weekly-menu',      recipes:'shpu' },
-    ja: { menus:'weekly-menu',      recipes:'reshipi' },
-    ko: { menus:'weekly-menu',      recipes:'yori-beoب' },
-    hi: { menus:'weekly-menu',      recipes:'recipes' },
-    tr: { menus:'haftalik-menu',    recipes:'tarifler' },
-    it: { menus:'piano-settimanale',recipes:'ricette' },
+    ro: { menus:'meniu-saptamanal',  recipes:'retete' },
+    en: { menus:'weekly-meal-plan',  recipes:'recipes' },
+    es: { menus:'plan-semanal',      recipes:'recetas' },
+    fr: { menus:'plan-semaine',      recipes:'recettes' },
+    de: { menus:'wochenplan',        recipes:'rezepte' },
+    pt: { menus:'plano-semanal',     recipes:'receitas' },
+    ru: { menus:'nedelnoe-menyu',    recipes:'retsepty' },
+    ar: { menus:'khitat-usbuiya',    recipes:'wasafat' },
+    zh: { menus:'zhoujicaidan',      recipes:'shipu' },
+    ja: { menus:'weekly-menu',       recipes:'reshipi' },
+    ko: { menus:'jugan-menu',        recipes:'recipes' },
+    hi: { menus:'weekly-plan',       recipes:'recipes' },
+    tr: { menus:'haftalik-menu',     recipes:'tarifler' },
+    it: { menus:'piano-settimanale', recipes:'ricette' },
   };
   const urls = baseUrls[lc] || baseUrls.en;
   const mUrl = `/${lc}/${urls.menus}/`;
@@ -1943,15 +1947,16 @@ function renderPremiumHero() {
   // Always re-render on language switch — no guard that blocks re-runs
   hero.dataset.premium = '1';
 
+  // Must match actual generator route slugs (LANG_CONFIGS / RECIPE_LANG).
   const menusBase = {
-    ro:'meniu-saptamanal', en:'weekly-menu', es:'menu-semanal', fr:'menu-hebdomadaire',
+    ro:'meniu-saptamanal', en:'weekly-meal-plan', es:'plan-semanal', fr:'plan-semaine',
     de:'wochenplan', pt:'plano-semanal', ru:'nedelnoe-menyu', it:'piano-settimanale',
-    tr:'haftalik-menu', ar:'weekly-menu', zh:'weekly-menu', ja:'weekly-menu',
-    ko:'weekly-menu', hi:'weekly-menu',
+    tr:'haftalik-menu', ar:'khitat-usbuiya', zh:'zhoujicaidan', ja:'weekly-menu',
+    ko:'jugan-menu', hi:'weekly-plan',
   };
   const recipesBase = {
     ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
-    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'recipes', ja:'reshipi',
+    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'shipu', ja:'reshipi',
     ko:'recipes', hi:'recipes', tr:'tarifler', it:'ricette',
   };
   const mSeg = menusBase[lang] || 'weekly-menu';
@@ -2852,7 +2857,7 @@ if (verifyBtn && emailInput && resultDiv) {
     const PLAN_DATA = {
       mediteranean: {
         lunches: ['Spaghete Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
-        dinners: ['Musaca grecească','Ratatouille','Souvlaki','Tajine','Boeuf Bourguignon','Spanakopita','Harira']
+        dinners: ['Moussaka','Ratatouille','Souvlaki','Tagine','Boeuf Bourguignon','Spanakopita','Harira']
       },
       asia: {
         lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
@@ -2873,7 +2878,7 @@ if (verifyBtn && emailInput && resultDiv) {
       },
       vegetarian: {
         lunches: ['Gazpacho','Tabbouleh','Ratatouille','Dhal','Shakshuka','Fasolada','Pasta alla Norma'],
-        dinners: ['Musaca grecească','Pad Thai','Rajma','Hummus','Bibimbap','Spanakopita','Mapo Tofu']
+        dinners: ['Moussaka','Pad Thai','Rajma','Hummus','Bibimbap','Spanakopita','Mapo Tofu']
       },
       rapid: {
         lunches: ['Spaghete Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],

@@ -78,6 +78,48 @@ const CATEGORY_LABELS = {
     sauces: 'Salse & oli', bakery: 'Panetteria',
     misc: 'Varie', pantry: 'Dispensa di base',
   },
+  ru: {
+    vegetables: 'Овощи и зелень', meat: 'Мясо и рыба',
+    dairy: 'Молочные и яйца', dry: 'Крупы и бакалея',
+    sauces: 'Соусы и масла', bakery: 'Хлеб и выпечка',
+    misc: 'Прочее', pantry: 'Кладовая (обычно есть)',
+  },
+  ar: {
+    vegetables: 'خضروات وأعشاب', meat: 'لحوم وأسماك',
+    dairy: 'ألبان وبيض', dry: 'حبوب ومعكرونة',
+    sauces: 'صلصات وزيوت', bakery: 'مخبوزات',
+    misc: 'متفرقات', pantry: 'مونة المنزل',
+  },
+  zh: {
+    vegetables: '蔬菜与香草', meat: '肉类与海鲜',
+    dairy: '乳制品与鸡蛋', dry: '干货与豆类',
+    sauces: '酱料与油', bakery: '烘焙',
+    misc: '其他', pantry: '常备调料',
+  },
+  ja: {
+    vegetables: '野菜とハーブ', meat: '肉と魚',
+    dairy: '乳製品と卵', dry: '乾物と穀物',
+    sauces: 'ソースと油', bakery: 'パン類',
+    misc: 'その他', pantry: '常備品',
+  },
+  hi: {
+    vegetables: 'सब्ज़ियाँ और हर्ब्स', meat: 'मांस और मछली',
+    dairy: 'डेयरी और अंडे', dry: 'अनाज और दालें',
+    sauces: 'चटनी और तेल', bakery: 'बेकरी',
+    misc: 'विविध', pantry: 'रसोई की बुनियादी सामग्री',
+  },
+  tr: {
+    vegetables: 'Sebze ve otlar', meat: 'Et ve balık',
+    dairy: 'Süt ürünleri ve yumurta', dry: 'Kuru gıda',
+    sauces: 'Soslar ve yağlar', bakery: 'Fırın ürünleri',
+    misc: 'Diğer', pantry: 'Kiler malzemeleri',
+  },
+  ko: {
+    vegetables: '채소와 허브', meat: '육류와 생선',
+    dairy: '유제품과 달걀', dry: '건조 식품',
+    sauces: '소스와 기름', bakery: '베이커리',
+    misc: '기타', pantry: '비축 식품',
+  },
 };
 
 /* Canonical name → category. Lookup is on the lowercased extracted name.
@@ -358,6 +400,31 @@ const ITEM_LABELS = {
     'sugar': 'Zahăr', 'brown sugar': 'Zahăr brun', 'honey': 'Miere',
     'flour': 'Făină', 'butter': 'Unt', 'water': 'Apă', 'bay leaves': 'Frunze de dafin',
     'vinegar': 'Oțet', 'soy sauce': 'Sos de soia', 'fish sauce': 'Sos de pește',
+    // Stocks / broths / pastes — frequently leaked into RO PDFs
+    'chicken stock': 'Bulion de pui', 'beef stock': 'Bulion de vită',
+    'vegetable stock': 'Bulion de legume', 'fish stock': 'Fond de pește',
+    'lamb stock': 'Bulion de miel',
+    'coconut milk': 'Lapte de cocos', 'coconut cream': 'Smântână de cocos',
+    'dashi': 'Bulion dashi', 'dashi stock': 'Bulion dashi',
+    'béchamel': 'Sos béchamel',
+    'pearl onions': 'Ceapă perlată',
+    'preserved lemon': 'Lămâie murată',
+    'red kidney beans': 'Fasole roșie', 'borlotti': 'Fasole borlotti',
+    'arborio': 'Orez Arborio', 'bomba rice': 'Orez Bomba',
+    'basmati rice': 'Orez basmati', 'jasmine rice': 'Orez jasmine',
+    'phyllo pastry': 'Foi de plăcintă (filo)', 'shortcrust pastry': 'Aluat fraged',
+    'day-old white bread': 'Pâine albă veche', 'breadcrumbs': 'Pesmet',
+    // Meat extras
+    'guanciale': 'Guanciale', 'pancetta': 'Pancetta', 'lardons': 'Lardons',
+    'pork shoulder': 'Spată de porc', 'pork belly': 'Piept de porc',
+    'lamb shoulder': 'Spată de miel',
+    'beef cut': 'Vită', 'beef mince': 'Vită tocată',
+    // Misc that often shows in plans
+    'almonds': 'Migdale', 'walnuts': 'Nuci', 'pistachios': 'Fistic',
+    'dried apricots': 'Caise uscate', 'raisins': 'Stafide',
+    'dark chocolate': 'Ciocolată neagră', 'cocoa powder': 'Pudră de cacao',
+    'aonori': 'Aonori', 'katsuobushi': 'Katsuobushi', 'nori': 'Nori', 'kecap manis': 'Kecap manis',
+    'fresh herbs': 'Verdețuri proaspete',
   },
 };
 
