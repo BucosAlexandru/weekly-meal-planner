@@ -667,6 +667,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // pdfV2 is reached ONLY when the user has explicitly opted in via the URL
   // (?pdfv2=1) or via localStorage (localStorage.pdfV2 = '1'). No default
   // behaviour changes. To revert, the user removes the flag.
+  //
+  // Stickiness: as soon as ?pdfv2=1 is seen in the URL on ANY page load, we
+  // promote it to localStorage so the opt-in survives client-side navigations
+  // that drop the query string — notably the "Open in app & customize" link
+  // on static plan pages, which routes to /?autoplan=<id> and would otherwise
+  // strip the flag and fall back to legacy. To opt out: localStorage.removeItem('pdfV2').
+  try {
+    const _qs = new URLSearchParams(window.location.search || '');
+    if (_qs.get('pdfv2') === '1') localStorage.setItem('pdfV2', '1');
+  } catch (_) {}
+
   function isPdfV2Enabled() {
     try {
       const qs = new URLSearchParams(window.location.search || '');

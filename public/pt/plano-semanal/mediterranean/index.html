@@ -158,7 +158,7 @@
       <section class="shopping-group" data-group="dairy">
         <h3 class="shopping-group-h">Laticínios &amp; ovos</h3>
         <ul class="shopping-group-list">
-          <li><span class="shop-name">Feta</span><span class="shop-qty">300 g</span></li><li><span class="shop-name">Gemas</span><span class="shop-qty">4 large</span></li><li><span class="shop-name">Gruyère</span><span class="shop-qty">50 g</span></li><li><span class="shop-name">Kefalotyri</span><span class="shop-qty">200 g</span></li><li><span class="shop-name">Leite</span><span class="shop-qty">700 ml</span></li><li><span class="shop-name">Natas</span><span class="shop-qty">300 ml</span></li><li><span class="shop-name">Ovos</span><span class="shop-qty">6 large</span></li><li><span class="shop-name">Parmesão</span><span class="shop-qty">75 g</span></li><li><span class="shop-name">Parmesão ralado</span></li><li><span class="shop-name">Parmigiano rind</span><span class="shop-qty">1</span></li><li><span class="shop-name">Pecorino</span><span class="shop-qty">75 g</span></li><li><span class="shop-name">Ricotta salata</span><span class="shop-qty">100 g</span></li>
+          <li><span class="shop-name">Feta</span><span class="shop-qty">300 g</span></li><li><span class="shop-name">Gemas</span><span class="shop-qty">4 large</span></li><li><span class="shop-name">Gruyère</span><span class="shop-qty">50 g</span></li><li><span class="shop-name">Kefalotyri</span><span class="shop-qty">200 g</span></li><li><span class="shop-name">Leite</span><span class="shop-qty">700 ml</span></li><li><span class="shop-name">Natas</span><span class="shop-qty">300 ml</span></li><li><span class="shop-name">Ovos</span><span class="shop-qty">6 large</span></li><li><span class="shop-name">Parmesão</span><span class="shop-qty">75 g</span></li><li><span class="shop-name">Parmigiano rind</span><span class="shop-qty">1</span></li><li><span class="shop-name">Pecorino</span><span class="shop-qty">75 g</span></li><li><span class="shop-name">Ricotta salata</span><span class="shop-qty">100 g</span></li>
         </ul>
       </section>
       <section class="shopping-group" data-group="dry">
@@ -247,15 +247,22 @@
   </div>
 </footer>
 <script>
-/* Auto-expand the collapsible shopping list before browser print / Save-as-PDF,
-   then restore the previous state. Keeps screen UX light while ensuring full
-   data is captured by every export path. */
+/* (1) Auto-expand the collapsible shopping list before browser print /
+   Save-as-PDF, then restore. Keeps screen UX light while ensuring full
+   data is captured by every export path.
+   (2) Promote ?pdfv2=1 URL flag to localStorage so the opt-in survives
+   the "Open in app & customize" navigation (which strips the query
+   string and would otherwise drop the user back onto legacy html2pdf). */
 (function(){
   var state = new WeakMap();
   function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
   window.addEventListener('beforeprint', openAll);
   window.addEventListener('afterprint', restore);
+  try {
+    var qs = new URLSearchParams(window.location.search || '');
+    if (qs.get('pdfv2') === '1') localStorage.setItem('pdfV2', '1');
+  } catch (e) {}
 })();
 </script>
 </body></html>
