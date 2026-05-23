@@ -1361,6 +1361,26 @@
 
 /* ── Print / Save PDF ── */
 @media print {
+  /* ─────────────────────────────────────────────────────────────
+     Safari / iOS defensive resets — MUST come first.
+     - .content-main has min-height: 100vh. Safari iOS interprets
+       `vh` in print as the browser viewport (≈812 px on iPhone),
+       forcing the first content block to that height → blank
+       space at the top + content pushed to later pages + the
+       "scales down too aggressively" symptom.
+     - .app-header is position: sticky; Safari sometimes reserves
+       layout space even with display:none.
+     - backdrop-filter (.pcard-popular, .footer-langs) renders as
+       opaque white blocks in Safari print.
+     - hover-lift transforms persist in Safari rasterisation.
+  ───────────────────────────────────────────────────────────── */
+  html, body { min-height: 0 !important; height: auto !important; overflow: visible !important; }
+  .content-main, .app-main, .recipe-page-wrap,
+  .recipe-main, .hero, .content-hero, .content-section,
+  main, section, article { min-height: 0 !important; height: auto !important; }
+  .app-header, header[role="banner"] { position: static !important; }
+  * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transform: none !important; }
+
   /* Hide all chrome */
   .app-header,
   .app-footer,
@@ -1415,7 +1435,9 @@
     font-size: 8.5pt;
     font-variant-numeric: tabular-nums;
   }
-  /* Compact section intro above the list */
+  /* Compact section padding — desktop 3.5rem wastes a lot of A4 height. */
+  .content-section { padding: .25cm 0 .25cm !important; }
+  .content-section-inner { max-width: none !important; padding: 0 !important; }
   .content-section--green {
     background: #fff !important;
     border: none !important;
@@ -1449,9 +1471,18 @@
   }
   .content-hero-desc { color: #444 !important; font-size: 9.5pt !important; max-width: none !important; margin: 0 !important; }
 
-  /* Suppress the meal-table on the shopping print since the lead PDF is
-     about the supermarket list, not re-listing recipes. */
-  .planner-table { font-size: 9pt; }
+  /* Tighten the meal table — cell taglines + paddings consume A4 height
+     and push the shopping list onto far-later pages, especially in Safari. */
+  .planner-table { font-size: 9pt; border-collapse: collapse !important; }
+  .planner-table th, .planner-table td {
+    padding: 3pt 5pt !important;
+    line-height: 1.3 !important;
+    vertical-align: top !important;
+  }
+  .planner-table .text-muted { font-size: 7.8pt !important; line-height: 1.25 !important; color: #555 !important; }
+  /* Allow page-break between meal table and shopping section so the list
+     starts on a fresh page when the table fills an A4. */
+  .content-section + .content-section--green { page-break-before: auto; }
 
   /* Page setup — slightly narrower margins than the recipe-PDF default
      so the 3-column shopping list has real working width. */
