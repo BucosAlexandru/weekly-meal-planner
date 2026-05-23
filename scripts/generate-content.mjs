@@ -2739,7 +2739,7 @@ ${makeNav(lc)}
   <!-- Related recipes -->
   ${related ? `<div class="recipe-related-section">
     <div class="recipe-related-header">
-      <h2>${rl.relatedH(o)}</h2>
+      <h2>${COUNTRY_FLAG[oEn] ? COUNTRY_FLAG[oEn] + ' ' : ''}${rl.relatedH(o)}</h2>
       <a href="${rl.dir}/">${ui.seeAll}</a>
     </div>
     <div class="recipe-cards-scroll">${related}</div>
