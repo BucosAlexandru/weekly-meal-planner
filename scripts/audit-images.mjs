@@ -48,10 +48,11 @@ function readContentJsImgMap() {
 }
 const CONTENT_JS_IMG = readContentJsImgMap();
 
-// Slug derivation must mirror generate-content.mjs's local helper. Any drift
-// here means local override files won't be detected.
-const slug = (s) => String(s).toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
-  .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+// Mirror generate-content.mjs's slug() EXACTLY (line ~27). Any divergence
+// here (e.g. NFKD normalisation, lowercasing differences) means the audit
+// looks for local files at a different path than the build writes them.
+// "Chicken Fricassée" → "chicken-fricass-e" (NOT "chicken-fricassee").
+const slug = name => String(name).toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
 
 // 20 flagship recipes by exact English name. Order = visible-impact priority.
 // "Tacos" and "Chicken Curry" stand in for the user-spec "Tacos al Pastor" and

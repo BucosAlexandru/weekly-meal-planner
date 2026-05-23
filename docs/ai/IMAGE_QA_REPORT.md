@@ -11,12 +11,12 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
-| **1. Local image override** | 3 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
+| **1. Local image override** | 7 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
 | **2. Mapped external image** | 150 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
 | **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
-| **4. Fallback emoji** | 22 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
+| **4. Fallback emoji** | 18 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
-Total recipes: 175. Buckets 3 + 4 = **22 recipes that
+Total recipes: 175. Buckets 3 + 4 = **18 recipes that
 SSR-render emoji** — and this is what the user is reporting. Even bucket 3,
 which was previously assumed to be "rescued at runtime by content.js", fails
 silently when the Wikipedia/Spoonacular URL 404s, is blocked, or times out.
@@ -24,9 +24,9 @@ Empirical evidence: `/en/recipes/banh-xeo/` (id 126, bucket 3).
 
 ### Priority distribution after re-classification (every emoji is now P0 or P1)
 
-- **P0**: 2
-- **P1**: 23
-- **P3**: 150
+- **P0**: 1
+- **P1**: 20
+- **P3**: 154
 
 ## To stop seeing emoji: reduce buckets 3 and 4
 
@@ -44,17 +44,14 @@ or 2 (so the SSR renders an actual `<img>`):
    SSR + og:image use the URL. Only safe for URLs you've verified render
    correctly in production.
 
-## Bucket 4 — Fallback emoji (SSR emoji, **no URL anywhere** — 22 recipes)
+## Bucket 4 — Fallback emoji (SSR emoji, **no URL anywhere** — 18 recipes)
 
   - id 12 — **Dhal** (India) 🚩
-  - id 39 — **Poutine** (Canada) 🚩
   - id 53 — **Hangi** (New Zealand)
   - id 56 — **Svíčková** (Czech Republic)
   - id 57 — **Fårikål** (Norway)
   - id 59 — **Dalmatinska Pasticada** (Croatia)
   - id 81 — **Zeama** (Moldova)
-  - id 84 — **Smørrebrød** (Denmark)
-  - id 87 — **Bún bò Huế** (Vietnam)
   - id 98 — **Oka i'a** (Samoa)
   - id 104 — **La Bandera** (Dominican Republic)
   - id 114 — **Lok Lak** (Cambodia)
@@ -64,7 +61,6 @@ or 2 (so the SSR renders an actual `<img>`):
   - id 129 — **Beshbarmak** (Kyrgyzstan)
   - id 132 — **Rösti** (Switzerland)
   - id 137 — **Ichlekli** (Turkmenistan)
-  - id 140 — **Chicken Fricassée** (France)
   - id 164 — **Lángos** (Hungary)
   - id 168 — **Shepherd's Pie** (United Kingdom)
   - id 177 — **Karelian stew** (Finland)
@@ -79,16 +75,17 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|
 | Total recipes | 175 |
 | With external mapping in recipe-images.js | 153 |
-| With local override (`public/images/<slug>.{jpg,webp}`) | 3 |
-| SSR renders emoji (buckets 3 + 4) | 22 |
-| SSR renders `<img>` (buckets 1 + 2) | 153 |
+| With local override (`public/images/<slug>.{jpg,webp}`) | 7 |
+| SSR renders emoji (buckets 3 + 4) | 18 |
+| SSR renders `<img>` (buckets 1 + 2) | 157 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
-- **fallback**: 22
+- **fallback**: 18
 - **local-jpg**: 3
 - **wikipedia**: 114
 - **spoonacular**: 36
+- **local-webp**: 4
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
 
@@ -105,7 +102,6 @@ or 2 (so the SSR renders an actual `<img>`):
 | ID | Name | Origin | Source | Flags | Priority | Action |
 |---|---|---|---|---|---|---|
 | 12 | Dhal | India | fallback | FALLBACK, NO_MAPPING, FLAGSHIP | **P0** | Drop image into public/images/dhal.{webp,jpg}, OR fetch via Spoonacular tool |
-| 39 | Poutine | Canada | fallback | FALLBACK, NO_MAPPING, FLAGSHIP | **P0** | Drop image into public/images/poutine.{webp,jpg}, OR fetch via Spoonacular tool |
 | 181 | Tonkotsu Ramen | Japan | local-jpg | OVERSIZED:2280KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 182 | Shoyu Ramen | Japan | local-jpg | OVERSIZED:4223KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 183 | Miso Ramen | Japan | local-jpg | OVERSIZED:3239KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
@@ -114,8 +110,6 @@ or 2 (so the SSR renders an actual `<img>`):
 | 57 | Fårikål | Norway | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 59 | Dalmatinska Pasticada | Croatia | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 81 | Zeama | Moldova | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 84 | Smørrebrød | Denmark | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 87 | Bún bò Huế | Vietnam | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 98 | Oka i'a | Samoa | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 104 | La Bandera | Dominican Republic | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 114 | Lok Lak | Cambodia | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
@@ -125,7 +119,6 @@ or 2 (so the SSR renders an actual `<img>`):
 | 129 | Beshbarmak | Kyrgyzstan | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 132 | Rösti | Switzerland | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 137 | Ichlekli | Turkmenistan | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 140 | Chicken Fricassée | France | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 164 | Lángos | Hungary | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 168 | Shepherd's Pie | United Kingdom | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 177 | Karelian stew | Finland | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
@@ -139,6 +132,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 22 | Paella | Spain | spoonacular | FLAGSHIP | **P3** | — |
 | 23 | Bibimbap | South Korea | wikipedia | FLAGSHIP | **P3** | — |
 | 31 | French Onion Soup | France | spoonacular | FLAGSHIP | **P3** | — |
+| 39 | Poutine | Canada | local-webp | FLAGSHIP | **P3** | — |
 | 44 | Shakshuka | Israel | wikipedia | FLAGSHIP | **P3** | — |
 | 55 | Moussaka | Greece | wikipedia | FLAGSHIP | **P3** | — |
 | 61 | Biryani | Pakistan | wikipedia | FLAGSHIP | **P3** | — |
@@ -204,8 +198,10 @@ or 2 (so the SSR renders an actual `<img>`):
 | 80 | Stoofvlees | Belgium | wikipedia | — | **P3** | — |
 | 82 | Meat Pie | Australia | wikipedia | — | **P3** | — |
 | 83 | Fatteh | Syria | wikipedia | — | **P3** | — |
+| 84 | Smørrebrød | Denmark | local-webp | — | **P3** | — |
 | 85 | Naengmyeon | North Korea | wikipedia | — | **P3** | — |
 | 86 | Nihari | Pakistan | wikipedia | — | **P3** | — |
+| 87 | Bún bò Huế | Vietnam | local-webp | — | **P3** | — |
 | 88 | Moqueca | Brazil | wikipedia | — | **P3** | — |
 | 89 | Sabich | Israel | wikipedia | — | **P3** | — |
 | 90 | Ropa Vieja | Cuba | wikipedia | — | **P3** | — |
@@ -243,6 +239,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 135 | Pasta alla Norma | Italy | wikipedia | — | **P3** | — |
 | 138 | Chicken Kiev | Ukraine | wikipedia | — | **P3** | — |
 | 139 | Cepelinai | Lithuania | wikipedia | — | **P3** | — |
+| 140 | Chicken Fricassée | France | local-webp | — | **P3** | — |
 | 141 | Machboos | Kuwait | wikipedia | — | **P3** | — |
 | 142 | Moambe chicken | Republic of the Congo | wikipedia | — | **P3** | — |
 | 143 | Cassoulet | France | wikipedia | — | **P3** | — |
