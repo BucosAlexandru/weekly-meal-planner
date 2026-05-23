@@ -517,7 +517,7 @@ body {
   align-items: center;
 }
 .phone-meal-row:last-child { border-bottom: none; }
-.phone-meal-day  { font-weight: 700; color: #6b7c64; font-size: 0.61rem; }
+.phone-meal-day  { font-weight: 700; color: #4a5d4f; font-size: 0.61rem; }
 .phone-meal-name { color: #1a2016; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* Shopping inside phone */
@@ -1077,8 +1077,10 @@ input.form-control:focus {
 }
 .pcard-features li:last-child { border-bottom: none; }
 .pcard-features li.feat-no {
-  color: var(--ink-3);
-  opacity: .65;
+  /* Was: color var(--ink-3) + opacity .65 → effective ~#9ba1a9, contrast 2.44.
+     Use the darker --ink-2 without opacity so the strikethrough still reads
+     as "unavailable" while passing WCAG AA (≥4.5:1) on the pricing card. */
+  color: var(--ink-2);
 }
 .pcard-cta {
   width: 100%;
@@ -1228,18 +1230,21 @@ button#generate-btn:hover {
 /* Upgrade / Pay — amber */
 .btn-upgrade,
 button#pay-btn {
-  background: var(--amber);
+  /* Amber CTA: original #f59e0b → ratio 2.14 with white (fail).
+     Step 1 darker (#d97706) → 3.18 (still fails AA for normal text).
+     Step 2 darker (#b45309 / amber-700) → 5.49 (passes AA). */
+  background: #b45309;
   color: #fff;
   border: none;
   padding: 9px 22px;
   font-size: 0.88rem;
-  box-shadow: 0 4px 14px rgba(245,158,11,.35);
+  box-shadow: 0 4px 14px rgba(180,83,9,.35);
 }
 .btn-upgrade:hover,
 button#pay-btn:hover {
-  background: var(--amber-hover);
+  background: #92400e;
   color: #fff;
-  box-shadow: 0 6px 18px rgba(245,158,11,.42);
+  box-shadow: 0 6px 18px rgba(146,64,14,.42);
   transform: translateY(-1px);
 }
 
@@ -1441,7 +1446,7 @@ button#manage-subscription:hover {
   flex-wrap: wrap;
 }
 
-.feedback-note   { font-size: 0.8rem; color: var(--ink-4); }
+.feedback-note   { font-size: 0.8rem; color: var(--ink-3); }
 .feedback-status { margin-top: 8px; font-size: 0.875rem; }
 
 /* ================================================
@@ -1630,7 +1635,7 @@ button#manage-subscription:hover {
 .preview-section-sub {
   text-align: center;
   font-size: 1rem;
-  color: #6b7c64;
+  color: #4a5d4f;
   max-width: 460px;
   margin: 0 auto 56px;
   line-height: 1.65;
@@ -1704,7 +1709,7 @@ button#manage-subscription:hover {
 }
 .step-desc {
   font-size: 0.85rem;
-  color: #6b7c64;
+  color: #4a5d4f;
   line-height: 1.6;
   margin: 0;
 }
@@ -1798,7 +1803,7 @@ button#manage-subscription:hover {
 .discovery-sub {
   text-align: center;
   font-size: 0.97rem;
-  color: #6b7c64;
+  color: #4a5d4f;
   margin-bottom: 48px;
   line-height: 1.6;
 }
@@ -1853,7 +1858,7 @@ button#manage-subscription:hover {
 }
 .discovery-card-desc {
   font-size: 0.88rem;
-  color: #6b7c64;
+  color: #4a5d4f;
   line-height: 1.62;
   margin: 0;
   flex: 1;
@@ -1893,7 +1898,7 @@ button#manage-subscription:hover {
 }
 .planner-anchor-sub {
   font-size: 0.95rem;
-  color: #6b7c64;
+  color: #4a5d4f;
   line-height: 1.6;
 }
 

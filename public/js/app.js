@@ -1682,10 +1682,10 @@ function renderProductPreview() {
   const c = copy[lang] || copy.en;
 
   const html = `
-    <section id="${ID}" class="product-preview-section no-print">
+    <section id="${ID}" class="product-preview-section no-print" aria-labelledby="preview-section-heading">
       <div class="product-preview-inner">
         <div class="preview-section-eyebrow">${safeText(c.eyebrow)}</div>
-        <h2 class="preview-section-heading">${safeText(c.heading).replace('\n','<br>')}</h2>
+        <h2 id="preview-section-heading" class="preview-section-heading">${safeText(c.heading).replace('\n','<br>')}</h2>
         <p class="preview-section-sub">${safeText(c.sub)}</p>
         <div class="steps-grid">
           ${(c.steps || []).map(s => `
@@ -1893,9 +1893,9 @@ function renderDiscovery() {
   const s = discoveryCopy[lc] || discoveryCopy.en;
 
   const html = `
-    <section id="${ID}" class="discovery-section no-print">
+    <section id="${ID}" class="discovery-section no-print" aria-labelledby="discovery-title">
       <div class="discovery-inner">
-        <h2 class="discovery-title">${safeText(s.title)}</h2>
+        <h2 id="discovery-title" class="discovery-title">${safeText(s.title)}</h2>
         <p class="discovery-sub">${safeText(s.sub)}</p>
         <div class="discovery-cards">
           <a href="${mUrl}" class="discovery-card">
@@ -1941,8 +1941,8 @@ function renderPlannerAnchor() {
   const a = anchorCopy[lang] || anchorCopy.en;
 
   const html = `
-    <section id="${ID}" class="planner-anchor-section no-print">
-      <div class="planner-anchor-title">${safeText(a.title)}</div>
+    <section id="${ID}" class="planner-anchor-section no-print" aria-labelledby="planner-anchor-title">
+      <div id="planner-anchor-title" class="planner-anchor-title">${safeText(a.title)}</div>
       <div class="planner-anchor-sub">${safeText(a.sub)}</div>
     </section>`;
 
