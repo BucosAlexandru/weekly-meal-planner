@@ -1375,6 +1375,27 @@ function buildShoppingList(plan, langCode) {
   return Object.values(ingMap).sort((a,b) => a.localeCompare(b));
 }
 
+/* Sentence-aware truncation. Returns text unchanged if it fits; otherwise
+   prefers cutting at a sentence boundary (./。/!/?) within max-60..max; falls
+   back to a word-boundary cut with a single trailing "…" (preceded by a thin
+   space for visual separation). Never produces a mid-word cut. */
+function sentenceTrim(text, max = 130) {
+  if (!text) return '';
+  text = String(text).trim();
+  if (text.length <= max) return text;
+  const head = text.slice(0, max);
+  const sentenceEnd = Math.max(
+    head.lastIndexOf('. '),
+    head.lastIndexOf('。'),
+    head.lastIndexOf('! '),
+    head.lastIndexOf('? ')
+  );
+  if (sentenceEnd >= max - 60) return text.slice(0, sentenceEnd + 1);
+  const wordCut = head.slice(0, max - 1);
+  const lastSpace = wordCut.lastIndexOf(' ');
+  return (lastSpace > 40 ? wordCut.slice(0, lastSpace) : wordCut).trimEnd() + ' …';
+}
+
 /* Short one-line meal summary for the weekly plan table. Picks the recipe's
    originText first sentence (the "tagline"), falls back to a sentence-cut
    ingredients list. ~150 char target; sentence-boundary aware. */
@@ -1530,7 +1551,7 @@ function indexPage(lc) {
   const lc_code = lc.code;
   const cards = PLANS.map(p => {
     const theme = p.theme[lc_code] || p.theme.en;
-    const desc  = (p.desc[lc_code] || p.desc.en).slice(0, 110) + '…';
+    const desc  = sentenceTrim(p.desc[lc_code] || p.desc.en, 130);
     const planId = lc.planIdFn(p);
     const costDisplay = lc.costValue(p);
     return `<a href="${lc.dir}/${planId}/" class="content-card">
