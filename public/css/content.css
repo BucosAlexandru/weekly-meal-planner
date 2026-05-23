@@ -773,18 +773,20 @@
 .recipe-feature-card {
   display: flex;
   align-items: flex-start;
-  gap: .75rem;
-  background: #fff;
-  border: 1.5px solid #eaecef;
-  border-radius: 16px;
-  padding: .95rem 1rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,.04);
-  transition: box-shadow .18s, border-color .18s, transform .2s cubic-bezier(0.34,1.56,0.64,1);
+  gap: .8rem;
+  /* Quieter card surface: drop the 1.5px hard border, let a single tinted
+     background carry the shape. Four identical bordered boxes in a row was
+     the dominant remaining "template" beat on recipe pages. */
+  background: #fafbfa;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 1rem 1.05rem;
+  box-shadow: none;
+  transition: background .18s, border-color .18s;
 }
 .recipe-feature-card:hover {
-  box-shadow: 0 4px 18px rgba(36,113,42,.12);
-  border-color: rgba(36,113,42,.3);
-  transform: translateY(-2px);
+  background: #f3f7f3;
+  border-color: rgba(36, 113, 42, .15);
 }
 .recipe-feature-icon {
   font-size: 1.5rem;
