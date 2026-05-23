@@ -12,11 +12,11 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
 | **1. Local image override** | 3 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
-| **2. Mapped external image** | 64 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
-| **3. Client-only image** | 86 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
+| **2. Mapped external image** | 150 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
+| **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
 | **4. Fallback emoji** | 22 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
-Total recipes: 175. Buckets 3 + 4 = **108 recipes that
+Total recipes: 175. Buckets 3 + 4 = **22 recipes that
 SSR-render emoji** — and this is what the user is reporting. Even bucket 3,
 which was previously assumed to be "rescued at runtime by content.js", fails
 silently when the Wikipedia/Spoonacular URL 404s, is blocked, or times out.
@@ -24,9 +24,9 @@ Empirical evidence: `/en/recipes/banh-xeo/` (id 126, bucket 3).
 
 ### Priority distribution after re-classification (every emoji is now P0 or P1)
 
-- **P0**: 3
-- **P1**: 108
-- **P3**: 64
+- **P0**: 2
+- **P1**: 23
+- **P3**: 150
 
 ## To stop seeing emoji: reduce buckets 3 and 4
 
@@ -69,111 +69,25 @@ or 2 (so the SSR renders an actual `<img>`):
   - id 168 — **Shepherd's Pie** (United Kingdom)
   - id 177 — **Karelian stew** (Finland)
 
-## Bucket 3 — Client-only (SSR emoji, content.js IMG has URL — 86 recipes)
+## Bucket 3 — Client-only (SSR emoji, content.js IMG has URL — 0 recipes)
 
-  - id 149 — **Pozole** (Mexico) 🚩
-  - id 50 — **Doro Wat** (Ethiopia)
-  - id 52 — **Stamppot** (Netherlands)
-  - id 54 — **Moules-frites** (Belgium)
-  - id 58 — **Ful Medames** (Sudan)
-  - id 60 — **Buuz** (Mongolia)
-  - id 62 — **Brik** (Tunisia)
-  - id 63 — **Khachapuri** (Georgia)
-  - id 64 — **Bobotie** (South Africa)
-  - id 65 — **Ceviche** (Peru)
-  - id 67 — **Banh Mi** (Vietnam)
-  - id 68 — **Satay** (Indonesia)
-  - id 69 — **Laksa** (Malaysia)
-  - id 70 — **Pupusa** (El Salvador)
-  - id 77 — **Chakhchoukha** (Algeria)
-  - id 78 — **Rendang** (Indonesia)
-  - id 79 — **Gravlax** (Sweden)
-  - id 80 — **Stoofvlees** (Belgium)
-  - id 82 — **Meat Pie** (Australia)
-  - id 83 — **Fatteh** (Syria)
-  - id 85 — **Naengmyeon** (North Korea)
-  - id 86 — **Nihari** (Pakistan)
-  - id 88 — **Moqueca** (Brazil)
-  - id 89 — **Sabich** (Israel)
-  - id 90 — **Ropa Vieja** (Cuba)
-  - id 91 — **Cullen Skink** (Scotland)
-  - id 92 — **Gado-Gado** (Indonesia)
-  - id 93 — **Cinnamon Bun** (Sweden)
-  - id 94 — **Chiles en nogada** (Mexico)
-  - id 95 — **Lentil Soup** (Middle East)
-  - id 96 — **Spanakopita** (Greece)
-  - id 97 — **Jollof Rice** (Nigeria)
-  - id 99 — **Khorovats** (Armenia)
-  - id 100 — **Verivorst** (Estonia)
-  - id 103 — **Shrimp Ceviche** (Ecuador)
-  - id 105 — **Fesenjan** (Iran)
-  - id 106 — **Kare-Kare** (Philippines)
-  - id 107 — **Francesinha** (Portugal)
-  - id 109 — **Arroz Chaufa** (Peru)
-  - id 110 — **Chili Crab** (Singapore)
-  - id 115 — **Manti** (Uzbekistan)
-  - id 123 — **Pasta e fagioli** (Italy)
-  - id 124 — **Kottu** (Sri Lanka)
-  - id 126 — **Banh Xeo** (Vietnam)
-  - id 130 — **Coconut Rice** (Asia)
-  - id 131 — **Nasi lemak** (Malaysia)
-  - id 133 — **Beans with Sausages** (Romania)
-  - id 134 — **Chicken Paprikash** (Hungary)
-  - id 135 — **Pasta alla Norma** (Italy)
-  - id 138 — **Chicken Kiev** (Ukraine)
-  - id 139 — **Cepelinai** (Lithuania)
-  - id 141 — **Machboos** (Kuwait)
-  - id 142 — **Moambe chicken** (Republic of the Congo)
-  - id 143 — **Cassoulet** (France)
-  - id 144 — **Pasticada** (Croatia)
-  - id 145 — **Sheftalia** (Cyprus)
-  - id 146 — **Cevapi** (Bosnia and Herzegovina)
-  - id 147 — **Fufu** (Ghana)
-  - id 148 — **Khinkali** (Georgia)
-  - id 150 — **Pepian** (Guatemala)
-  - id 151 — **Okroshka** (Russia)
-  - id 152 — **Plov** (Uzbekistan)
-  - id 153 — **Potica** (Slovenia)
-  - id 154 — **Egusi soup** (Nigeria)
-  - id 155 — **Pork schnitzel** (Poland)
-  - id 156 — **Kimbap** (South Korea)
-  - id 157 — **Pastel de Choclo** (Chile)
-  - id 158 — **Pljeskavica** (Serbia)
-  - id 159 — **Poffertjes** (Netherlands)
-  - id 160 — **Japanese Curry Rice** (Japan)
-  - id 161 — **Fasolada** (Greece)
-  - id 162 — **Tlayudas** (Mexico)
-  - id 163 — **Bandeja Paisa** (Colombia)
-  - id 165 — **Rajma** (India)
-  - id 166 — **Picadillo** (Cuba)
-  - id 167 — **Lamb Tagine** (Morocco)
-  - id 169 — **Mapo Tofu** (China)
-  - id 170 — **Menemen** (Turkey)
-  - id 171 — **Solyanka** (Russia)
-  - id 172 — **Clam Chowder** (USA)
-  - id 173 — **Currywurst** (Germany)
-  - id 174 — **Tom Kha Gai** (Thailand)
-  - id 175 — **Cachupa** (Cape Verde)
-  - id 176 — **Pav Bhaji** (India)
-  - id 178 — **Boeuf Bourguignon** (France)
-  - id 179 — **Chakchouka** (Tunisia)
+  _(none)_
 
 ## Summary metrics
 
 | Metric | Count |
 |---|---|
 | Total recipes | 175 |
-| With external mapping in recipe-images.js | 64 |
+| With external mapping in recipe-images.js | 153 |
 | With local override (`public/images/<slug>.{jpg,webp}`) | 3 |
-| SSR renders emoji (buckets 3 + 4) | 108 |
-| SSR renders `<img>` (buckets 1 + 2) | 67 |
+| SSR renders emoji (buckets 3 + 4) | 22 |
+| SSR renders `<img>` (buckets 1 + 2) | 153 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
 - **fallback**: 22
-- **client-only**: 86
 - **local-jpg**: 3
-- **wikipedia**: 28
+- **wikipedia**: 114
 - **spoonacular**: 36
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
@@ -192,115 +106,29 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|---|---|---|---|---|
 | 12 | Dhal | India | fallback | FALLBACK, NO_MAPPING, FLAGSHIP | **P0** | Drop image into public/images/dhal.{webp,jpg}, OR fetch via Spoonacular tool |
 | 39 | Poutine | Canada | fallback | FALLBACK, NO_MAPPING, FLAGSHIP | **P0** | Drop image into public/images/poutine.{webp,jpg}, OR fetch via Spoonacular tool |
-| 149 | Pozole | Mexico | client-only | CLIENT_ONLY, FLAGSHIP | **P0** | Promote URL from content.js IMG → recipe-images.js, OR drop public/images/pozole.{webp,jpg} |
 | 181 | Tonkotsu Ramen | Japan | local-jpg | OVERSIZED:2280KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 182 | Shoyu Ramen | Japan | local-jpg | OVERSIZED:4223KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 183 | Miso Ramen | Japan | local-jpg | OVERSIZED:3239KB, FLAGSHIP | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
-| 50 | Doro Wat | Ethiopia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 52 | Stamppot | Netherlands | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 53 | Hangi | New Zealand | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 54 | Moules-frites | Belgium | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 56 | Svíčková | Czech Republic | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 57 | Fårikål | Norway | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 58 | Ful Medames | Sudan | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 59 | Dalmatinska Pasticada | Croatia | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 60 | Buuz | Mongolia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 62 | Brik | Tunisia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 63 | Khachapuri | Georgia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 64 | Bobotie | South Africa | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 65 | Ceviche | Peru | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 67 | Banh Mi | Vietnam | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 68 | Satay | Indonesia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 69 | Laksa | Malaysia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 70 | Pupusa | El Salvador | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 77 | Chakhchoukha | Algeria | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 78 | Rendang | Indonesia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 79 | Gravlax | Sweden | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 80 | Stoofvlees | Belgium | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 81 | Zeama | Moldova | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 82 | Meat Pie | Australia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 83 | Fatteh | Syria | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 84 | Smørrebrød | Denmark | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 85 | Naengmyeon | North Korea | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 86 | Nihari | Pakistan | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 87 | Bún bò Huế | Vietnam | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 88 | Moqueca | Brazil | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 89 | Sabich | Israel | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 90 | Ropa Vieja | Cuba | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 91 | Cullen Skink | Scotland | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 92 | Gado-Gado | Indonesia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 93 | Cinnamon Bun | Sweden | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 94 | Chiles en nogada | Mexico | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 95 | Lentil Soup | Middle East | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 96 | Spanakopita | Greece | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 97 | Jollof Rice | Nigeria | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 98 | Oka i'a | Samoa | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 99 | Khorovats | Armenia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 100 | Verivorst | Estonia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 103 | Shrimp Ceviche | Ecuador | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 104 | La Bandera | Dominican Republic | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 105 | Fesenjan | Iran | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 106 | Kare-Kare | Philippines | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 107 | Francesinha | Portugal | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 109 | Arroz Chaufa | Peru | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 110 | Chili Crab | Singapore | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 114 | Lok Lak | Cambodia | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 115 | Manti | Uzbekistan | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 119 | Kottbullar | Sweden | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 123 | Pasta e fagioli | Italy | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 124 | Kottu | Sri Lanka | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 125 | Piragi | Latvia | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 126 | Banh Xeo | Vietnam | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 127 | Causa Limeña | Peru | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 129 | Beshbarmak | Kyrgyzstan | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 130 | Coconut Rice | Asia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 131 | Nasi lemak | Malaysia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 132 | Rösti | Switzerland | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 133 | Beans with Sausages | Romania | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 134 | Chicken Paprikash | Hungary | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 135 | Pasta alla Norma | Italy | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 137 | Ichlekli | Turkmenistan | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 138 | Chicken Kiev | Ukraine | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 139 | Cepelinai | Lithuania | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 140 | Chicken Fricassée | France | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 141 | Machboos | Kuwait | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 142 | Moambe chicken | Republic of the Congo | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 143 | Cassoulet | France | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 144 | Pasticada | Croatia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 145 | Sheftalia | Cyprus | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 146 | Cevapi | Bosnia and Herzegovina | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 147 | Fufu | Ghana | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 148 | Khinkali | Georgia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 150 | Pepian | Guatemala | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 151 | Okroshka | Russia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 152 | Plov | Uzbekistan | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 153 | Potica | Slovenia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 154 | Egusi soup | Nigeria | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 155 | Pork schnitzel | Poland | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 156 | Kimbap | South Korea | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 157 | Pastel de Choclo | Chile | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 158 | Pljeskavica | Serbia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 159 | Poffertjes | Netherlands | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 160 | Japanese Curry Rice | Japan | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 161 | Fasolada | Greece | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 162 | Tlayudas | Mexico | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 163 | Bandeja Paisa | Colombia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 164 | Lángos | Hungary | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 165 | Rajma | India | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 166 | Picadillo | Cuba | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 167 | Lamb Tagine | Morocco | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 168 | Shepherd's Pie | United Kingdom | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 169 | Mapo Tofu | China | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 170 | Menemen | Turkey | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 171 | Solyanka | Russia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 172 | Clam Chowder | USA | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 173 | Currywurst | Germany | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 174 | Tom Kha Gai | Thailand | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 175 | Cachupa | Cape Verde | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 176 | Pav Bhaji | India | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 177 | Karelian stew | Finland | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 178 | Boeuf Bourguignon | France | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
-| 179 | Chakchouka | Tunisia | client-only | CLIENT_ONLY | **P1** | Promote URL from content.js IMG → recipe-images.js (SSR + og:image + share previews) |
 | 1 | Spaghetti Carbonara | Italy | wikipedia | FLAGSHIP | **P3** | — |
 | 5 | Sushi | Japan | spoonacular | FLAGSHIP | **P3** | — |
 | 8 | Tacos | Mexico | spoonacular | FLAGSHIP | **P3** | — |
@@ -315,6 +143,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 55 | Moussaka | Greece | wikipedia | FLAGSHIP | **P3** | — |
 | 61 | Biryani | Pakistan | wikipedia | FLAGSHIP | **P3** | — |
 | 112 | Tom Yum | Thailand | wikipedia | FLAGSHIP | **P3** | — |
+| 149 | Pozole | Mexico | wikipedia | FLAGSHIP | **P3** | — |
 | 2 | Tripe Soup | Romania | spoonacular | — | **P3** | — |
 | 3 | Quiche Lorraine | France | spoonacular | — | **P3** | — |
 | 4 | Gazpacho | Spain | spoonacular | — | **P3** | — |
@@ -349,21 +178,106 @@ or 2 (so the SSR renders an actual `<img>`):
 | 47 | Bacalhau à Brás | Portugal | spoonacular | — | **P3** | — |
 | 48 | Adobo | Philippines | spoonacular | — | **P3** | — |
 | 49 | Jerk Chicken | Jamaica | spoonacular | — | **P3** | — |
+| 50 | Doro Wat | Ethiopia | wikipedia | — | **P3** | — |
 | 51 | Kibbeh | Syria | spoonacular | — | **P3** | — |
+| 52 | Stamppot | Netherlands | wikipedia | — | **P3** | — |
+| 54 | Moules-frites | Belgium | wikipedia | — | **P3** | — |
+| 58 | Ful Medames | Sudan | wikipedia | — | **P3** | — |
+| 60 | Buuz | Mongolia | wikipedia | — | **P3** | — |
+| 62 | Brik | Tunisia | wikipedia | — | **P3** | — |
+| 63 | Khachapuri | Georgia | wikipedia | — | **P3** | — |
+| 64 | Bobotie | South Africa | wikipedia | — | **P3** | — |
+| 65 | Ceviche | Peru | wikipedia | — | **P3** | — |
 | 66 | Kimchi | South Korea | wikipedia | — | **P3** | — |
+| 67 | Banh Mi | Vietnam | wikipedia | — | **P3** | — |
+| 68 | Satay | Indonesia | wikipedia | — | **P3** | — |
+| 69 | Laksa | Malaysia | wikipedia | — | **P3** | — |
+| 70 | Pupusa | El Salvador | wikipedia | — | **P3** | — |
 | 72 | Amok | Cambodia | wikipedia | — | **P3** | — |
 | 73 | Momo | Nepal | wikipedia | — | **P3** | — |
 | 74 | Encebollado | Ecuador | wikipedia | — | **P3** | — |
 | 75 | Harira | Morocco | wikipedia | — | **P3** | — |
 | 76 | Lobio | Georgia | wikipedia | — | **P3** | — |
+| 77 | Chakhchoukha | Algeria | wikipedia | — | **P3** | — |
+| 78 | Rendang | Indonesia | wikipedia | — | **P3** | — |
+| 79 | Gravlax | Sweden | wikipedia | — | **P3** | — |
+| 80 | Stoofvlees | Belgium | wikipedia | — | **P3** | — |
+| 82 | Meat Pie | Australia | wikipedia | — | **P3** | — |
+| 83 | Fatteh | Syria | wikipedia | — | **P3** | — |
+| 85 | Naengmyeon | North Korea | wikipedia | — | **P3** | — |
+| 86 | Nihari | Pakistan | wikipedia | — | **P3** | — |
+| 88 | Moqueca | Brazil | wikipedia | — | **P3** | — |
+| 89 | Sabich | Israel | wikipedia | — | **P3** | — |
+| 90 | Ropa Vieja | Cuba | wikipedia | — | **P3** | — |
+| 91 | Cullen Skink | Scotland | wikipedia | — | **P3** | — |
+| 92 | Gado-Gado | Indonesia | wikipedia | — | **P3** | — |
+| 93 | Cinnamon Bun | Sweden | wikipedia | — | **P3** | — |
+| 94 | Chiles en nogada | Mexico | wikipedia | — | **P3** | — |
+| 95 | Lentil Soup | Middle East | wikipedia | — | **P3** | — |
+| 96 | Spanakopita | Greece | wikipedia | — | **P3** | — |
+| 97 | Jollof Rice | Nigeria | wikipedia | — | **P3** | — |
+| 99 | Khorovats | Armenia | wikipedia | — | **P3** | — |
+| 100 | Verivorst | Estonia | wikipedia | — | **P3** | — |
 | 102 | Tteokbokki | South Korea | wikipedia | — | **P3** | — |
+| 103 | Shrimp Ceviche | Ecuador | wikipedia | — | **P3** | — |
+| 105 | Fesenjan | Iran | wikipedia | — | **P3** | — |
+| 106 | Kare-Kare | Philippines | wikipedia | — | **P3** | — |
+| 107 | Francesinha | Portugal | wikipedia | — | **P3** | — |
+| 109 | Arroz Chaufa | Peru | wikipedia | — | **P3** | — |
+| 110 | Chili Crab | Singapore | wikipedia | — | **P3** | — |
 | 111 | Tamale | Mexico | wikipedia | — | **P3** | — |
 | 113 | Milanesa | Argentina | wikipedia | — | **P3** | — |
+| 115 | Manti | Uzbekistan | wikipedia | — | **P3** | — |
 | 116 | Chakhokhbili | Georgia | wikipedia | — | **P3** | — |
 | 117 | Lomo Saltado | Peru | wikipedia | — | **P3** | — |
 | 118 | Tagine | Morocco | wikipedia | — | **P3** | — |
 | 120 | Arepa | Venezuela | wikipedia | — | **P3** | — |
 | 121 | Karelian Pie | Finland | wikipedia | — | **P3** | — |
+| 123 | Pasta e fagioli | Italy | wikipedia | — | **P3** | — |
+| 124 | Kottu | Sri Lanka | wikipedia | — | **P3** | — |
+| 126 | Banh Xeo | Vietnam | wikipedia | — | **P3** | — |
+| 130 | Coconut Rice | Asia | wikipedia | — | **P3** | — |
+| 131 | Nasi lemak | Malaysia | wikipedia | — | **P3** | — |
+| 133 | Beans with Sausages | Romania | wikipedia | — | **P3** | — |
+| 134 | Chicken Paprikash | Hungary | wikipedia | — | **P3** | — |
+| 135 | Pasta alla Norma | Italy | wikipedia | — | **P3** | — |
+| 138 | Chicken Kiev | Ukraine | wikipedia | — | **P3** | — |
+| 139 | Cepelinai | Lithuania | wikipedia | — | **P3** | — |
+| 141 | Machboos | Kuwait | wikipedia | — | **P3** | — |
+| 142 | Moambe chicken | Republic of the Congo | wikipedia | — | **P3** | — |
+| 143 | Cassoulet | France | wikipedia | — | **P3** | — |
+| 144 | Pasticada | Croatia | wikipedia | — | **P3** | — |
+| 145 | Sheftalia | Cyprus | wikipedia | — | **P3** | — |
+| 146 | Cevapi | Bosnia and Herzegovina | wikipedia | — | **P3** | — |
+| 147 | Fufu | Ghana | wikipedia | — | **P3** | — |
+| 148 | Khinkali | Georgia | wikipedia | — | **P3** | — |
+| 150 | Pepian | Guatemala | wikipedia | — | **P3** | — |
+| 151 | Okroshka | Russia | wikipedia | — | **P3** | — |
+| 152 | Plov | Uzbekistan | wikipedia | — | **P3** | — |
+| 153 | Potica | Slovenia | wikipedia | — | **P3** | — |
+| 154 | Egusi soup | Nigeria | wikipedia | — | **P3** | — |
+| 155 | Pork schnitzel | Poland | wikipedia | — | **P3** | — |
+| 156 | Kimbap | South Korea | wikipedia | — | **P3** | — |
+| 157 | Pastel de Choclo | Chile | wikipedia | — | **P3** | — |
+| 158 | Pljeskavica | Serbia | wikipedia | — | **P3** | — |
+| 159 | Poffertjes | Netherlands | wikipedia | — | **P3** | — |
+| 160 | Japanese Curry Rice | Japan | wikipedia | — | **P3** | — |
+| 161 | Fasolada | Greece | wikipedia | — | **P3** | — |
+| 162 | Tlayudas | Mexico | wikipedia | — | **P3** | — |
+| 163 | Bandeja Paisa | Colombia | wikipedia | — | **P3** | — |
+| 165 | Rajma | India | wikipedia | — | **P3** | — |
+| 166 | Picadillo | Cuba | wikipedia | — | **P3** | — |
+| 167 | Lamb Tagine | Morocco | wikipedia | — | **P3** | — |
+| 169 | Mapo Tofu | China | wikipedia | — | **P3** | — |
+| 170 | Menemen | Turkey | wikipedia | — | **P3** | — |
+| 171 | Solyanka | Russia | wikipedia | — | **P3** | — |
+| 172 | Clam Chowder | USA | wikipedia | — | **P3** | — |
+| 173 | Currywurst | Germany | wikipedia | — | **P3** | — |
+| 174 | Tom Kha Gai | Thailand | wikipedia | — | **P3** | — |
+| 175 | Cachupa | Cape Verde | wikipedia | — | **P3** | — |
+| 176 | Pav Bhaji | India | wikipedia | — | **P3** | — |
+| 178 | Boeuf Bourguignon | France | wikipedia | — | **P3** | — |
+| 179 | Chakchouka | Tunisia | wikipedia | — | **P3** | — |
 | 180 | Okonomiyaki | Japan | wikipedia | — | **P3** | — |
 
 ## Constraints
