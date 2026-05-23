@@ -713,7 +713,7 @@ const LANG_CONFIGS = {
 /* ════════════════════════════════════════════════════════════════
    SHARED HTML HELPERS
    ════════════════════════════════════════════════════════════════ */
-const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website') => `<!DOCTYPE html>
+const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website', ogImage='https://meal-planner.ro/cover.jpg') => `<!DOCTYPE html>
 <html lang="${langCode}" dir="${dir}">
 <head>
   <meta charset="UTF-8"/>
@@ -729,7 +729,11 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website'
   <meta property="og:title" content="${esc(title)}"/>
   <meta property="og:description" content="${esc(desc)}"/>
   <meta property="og:url" content="https://meal-planner.ro${canonical}"/>
-  <meta property="og:image" content="https://meal-planner.ro/cover.jpg"/>
+  <meta property="og:image" content="${ogImage}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="${esc(title)}"/>
+  <meta name="twitter:description" content="${esc(desc)}"/>
+  <meta name="twitter:image" content="${ogImage}"/>
   <meta name="theme-color" content="#24712A"/>
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -2589,7 +2593,7 @@ function recipePage(recipe, rl) {
     }).join('');
 
   const dir_attr = rl.dir_attr || 'ltr';
-  return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article')}
+  return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article', recipeImgUrl)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc)}
 <main class="content-main recipe-main">
