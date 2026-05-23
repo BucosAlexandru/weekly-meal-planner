@@ -2372,10 +2372,12 @@ function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
   const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
   const soupRecipe = isSoup(cat, n, ingr);
   const totalMins = overrides?.totalMins ?? 0;
-  const isFreezer = soupRecipe || steps.length > 5 || (totalMins > 35);
   const isOvernightRecipe = totalMins >= 480;
   const isSlowCook = totalMins > 120;
   const isFermented = /miso|kimchi|sauerkraut|tempeh|kefir|doenjang|gochujang|kvass/.test(ingrStr + ' ' + nameStr);
+  // Dishes that genuinely DO NOT freeze well — never claim "Can be frozen" for these
+  const isFragile = /\bsushi\b|sashimi|ceviche|tartare|tartar|carpaccio|gravlax|meringue|pavlova|souffl[ée]|cr[eê]pe|menemen|shakshuka|chakchouka|chakchuka|salad\b|salată|raw\s+fish|fondue|tartine|smørrebrød|smorrebrod|poffertjes|l[aá]ngos/.test(ingrStr + ' ' + nameStr);
+  const isFreezer = !isFragile && (soupRecipe || steps.length > 5 || (totalMins > 35));
   const card1 = isOvernightRecipe ? ui.feat[8] : isSlowCook ? ui.feat[6] : isFermented ? ui.feat[9] : ui.feat[7];
   const cards = [
     hasFish ? ui.feat[1] : hasMeat ? ui.feat[0] : ui.feat[2],
