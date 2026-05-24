@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>トライプスープ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/reshipi/romania/">ルーマニア</a> › <span>トライプスープ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tripe-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/654283-312x231.jpg" alt="トライプスープ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 ランチ · ルーマニア</div>
+      <div class="recipe-badge">🇷🇴 ランチ · <a class="recipe-badge-origin" href="/ja/reshipi/romania/">ルーマニア</a></div>
       <h1>トライプスープ</h1>
       <p class="recipe-tagline">チョルバー・デ・ブルター（Ciorbă de burtă）は、モンテニアとオルテニアの台所に深く根ざしたルーマニア最愛の伝統料理のひとつです。白ワインビネガーとコクのあるサワークリームが生み出す穏やかな酸味と、数時間かけてじっくり煮込んだ牛のもつが合わさり、結婚式や宴席で供されてきた濃厚で体の温まるスープになります——民間伝承では二日酔いの特効薬としても知られています。最大の技法は「ドレガトゥラー（dregătură）」と呼ばれる卵黄のテンパリングで、熱いスープで少しずつ温度を上げた卵黄がスープを絹のようなとろみに仕上げ、決して凝固させません。</p>
       <div class="recipe-meta-row">
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 ルーマニアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/reshipi/romania/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/beans-with-sausages/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="beans-with-sausages">🍽️</div>
@@ -161,15 +163,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/reshipi/romania/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="ルーマニア"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">ルーマニア</span>
 </a>
 
 </main>

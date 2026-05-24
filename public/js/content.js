@@ -289,22 +289,31 @@
   }
 })();
 
-// ── Mobile recipe navigator: scroll restoration on "back to recipes" ─
+// ── Mobile recipe navigator: scroll restoration + cuisine context ───
 // Two cooperating pieces:
-//   A) On any list page (recipe index / cuisine pages) that contains
-//      .recipe-card-item links, save scrollY + pathname into
-//      sessionStorage when the user taps a recipe card.
-//   B) On a recipe page, when the user taps the sticky-nav back button
-//      ([data-rmn-back]) we set a one-shot flag. On the next load of
-//      the same list page, we restore the saved scrollY.
+//   A) On any list page (recipe index, cuisine hub, cuisine hub index)
+//      save scrollY + pathname when the user taps a recipe link. If the
+//      list page is a cuisine hub, also save its display label so the
+//      destination recipe page can rewrite its back-pill to point at the
+//      originating cuisine ("← Italia" → /ro/bucatarie/italy/) instead
+//      of the generic recipe index.
+//   B) On a recipe page, on load: read cuisine context from sessionStorage
+//      and (if present) rewrite the floating back-pill href + label.
+//      On click of the back button, set a one-shot flag so the destination
+//      list page restores the saved scrollY.
 //
-// Same-origin sessionStorage survives across these navigations. No
-// dependency on framework / router. Quiet on errors (private mode).
+// Same-origin sessionStorage survives these navigations. No framework
+// dependency. Quiet on errors (private-mode quota, etc).
 (function () {
   'use strict';
-  const SCROLL_KEY = 'mp-list-scroll';
-  const HREF_KEY   = 'mp-list-href';
-  const FLAG_KEY   = 'mp-restore-scroll';
+  const SCROLL_KEY  = 'mp-list-scroll';
+  const HREF_KEY    = 'mp-list-href';
+  const FLAG_KEY    = 'mp-restore-scroll';
+  // Cuisine-context keys: only set when the originating list page is a
+  // cuisine hub (i.e. <main data-cuisine-hub>). Recipe-index pages clear
+  // these so the back-pill falls back to its static localized label.
+  const HUB_HREF_KEY  = 'mp-cuisine-href';
+  const HUB_LABEL_KEY = 'mp-cuisine-label';
 
   function safe(fn) { try { fn(); } catch (_) {} }
 
@@ -312,13 +321,15 @@
 
   if (!onRecipePage) {
     // (A) list page — save state when ANY link to a recipe page is tapped.
-    // Use a delegated listener so we catch every recipe link regardless of
-    // the surrounding markup (recipe-index uses <ul class="recipe-origin-list">,
-    // cuisine pages may use .recipe-card-item, plan pages link via the
-    // weekly menu table, etc.). Match the per-locale recipe URL segment.
+    // Delegated listener catches every recipe link regardless of markup.
     const RECIPE_PATH = /\/(?:recipes|retete|recetas|recettes|rezepte|receitas|retsepty|wasafat|shipu|reshipi|tarifler|ricette|weekly-plan)\/[^\/]+\/?$/;
+    // Per-locale cuisine-hub URL prefixes (mirror CUISINE_HUB_LANG in
+    // scripts/generate-content.mjs). We detect "is this URL a cuisine hub"
+    // when overriding the back-pill on a recipe page reached directly.
+    const HUB_PATH = /^\/(?:ro|en|es|fr|de|pt|ru|ar|zh|ja|hi|tr|it|ko)\/(?:bucatarie|cuisine|cocina|kueche|cozinha|kuhnya|matbakh|caixi|ryori|vyanjan|mutfak|cucina|yori)\/[^\/]+\/?$/;
+    // Pick up cuisine context from <main data-cuisine-hub data-cuisine-label="…">
+    const hubMain = document.querySelector('main[data-cuisine-hub="1"]');
     document.addEventListener('click', (e) => {
-      // Only main-button left-clicks; let modifiers (cmd-click etc.) through.
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = e.target.closest && e.target.closest('a[href]');
       if (!a) return;
@@ -328,6 +339,17 @@
       safe(() => {
         sessionStorage.setItem(SCROLL_KEY, String(window.scrollY || 0));
         sessionStorage.setItem(HREF_KEY,   window.location.pathname);
+        if (hubMain) {
+          const label = hubMain.getAttribute('data-cuisine-label') || '';
+          const hubHref = hubMain.getAttribute('data-cuisine-href') || window.location.pathname;
+          sessionStorage.setItem(HUB_HREF_KEY,  hubHref);
+          sessionStorage.setItem(HUB_LABEL_KEY, label);
+        } else {
+          // Recipe index / plan page — clear so the back-pill falls back to
+          // its static localized label.
+          sessionStorage.removeItem(HUB_HREF_KEY);
+          sessionStorage.removeItem(HUB_LABEL_KEY);
+        }
       });
     }, true);
     // Restore on return — only if the flag was set by the recipe page.
@@ -336,7 +358,6 @@
       if (sessionStorage.getItem(HREF_KEY) !== window.location.pathname) return;
       const y = parseInt(sessionStorage.getItem(SCROLL_KEY) || '0', 10);
       if (y > 0) {
-        // Use rAF to ensure layout is settled before scrolling.
         requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
       }
       sessionStorage.removeItem(FLAG_KEY);
@@ -344,13 +365,41 @@
     return;
   }
 
-  // (B) recipe page — set the restore flag when the user taps "back".
+  // (B) recipe page — rewrite the back-pill if cuisine context is set, AND
+  // set the restore flag on click. Done at load time so the pill renders
+  // with the correct destination from the user's perspective.
   const backBtn = document.querySelector('[data-rmn-back]');
-  if (backBtn) {
-    backBtn.addEventListener('click', () => {
-      safe(() => sessionStorage.setItem(FLAG_KEY, '1'));
-    });
-  }
+  if (!backBtn) return;
+
+  safe(() => {
+    const hubHref  = sessionStorage.getItem(HUB_HREF_KEY);
+    const hubLabel = sessionStorage.getItem(HUB_LABEL_KEY);
+    // Only override when we have BOTH a valid same-origin path AND a label.
+    // Defensive: ensure the stored href looks like a cuisine hub URL (we
+    // don't want a malicious or stale value to silently redirect users
+    // away from the recipe). Path-only, same-origin — no scheme/host.
+    const HUB_PATH = /^\/(?:ro|en|es|fr|de|pt|ru|ar|zh|ja|hi|tr|it|ko)\/(?:bucatarie|cuisine|cocina|kueche|cozinha|kuhnya|matbakh|caixi|ryori|vyanjan|mutfak|cucina|yori)\/[^\/]+\/?$/;
+    if (hubHref && hubLabel && HUB_PATH.test(hubHref)) {
+      // Skip override if static href already points at the same hub — the
+      // build-time default is now cuisine-aware (recipePage in
+      // generate-content.mjs), so this is usually a no-op for users who
+      // open the recipe directly from the matching hub.
+      const currentHref = backBtn.getAttribute('href');
+      if (currentHref !== hubHref) {
+        backBtn.setAttribute('href', hubHref);
+        backBtn.setAttribute('aria-label', hubLabel);
+        const labelEl = backBtn.querySelector('.rmb-label');
+        if (labelEl) labelEl.textContent = hubLabel;
+        // Visual continuity: ensure the cuisine-accent strip appears when
+        // we override to a cuisine hub.
+        backBtn.classList.add('mp-back-pill', 'mp-back-pill--cuisine');
+      }
+    }
+  });
+
+  backBtn.addEventListener('click', () => {
+    safe(() => sessionStorage.setItem(FLAG_KEY, '1'));
+  });
 })();
 
 // (Phase K — swipe gestures intentionally NOT implemented. Spec says

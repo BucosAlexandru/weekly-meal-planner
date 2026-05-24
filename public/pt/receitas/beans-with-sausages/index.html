@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Feijão com Linguiça</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/romania/">Romênia</a> › <span>Feijão com Linguiça</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Feijão com Linguiça" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 Almoço · Romênia</div>
+      <div class="recipe-badge">🇷🇴 Almoço · <a class="recipe-badge-origin" href="/pt/receitas/romania/">Romênia</a></div>
       <h1>Feijão com Linguiça</h1>
       <p class="recipe-tagline">Fasole cu cârnați é o prato de inverno do lar romeno — feijão branco cozido lentamente com linguiças defumadas de porco, cebola, cenouras, extrato de tomate e folhas de louro, até o caldo engrossar e ficar profundamente perfumado. As linguiças adicionam gordura e defumado, transformando uma leguminosa humilde em uma refeição farta. Serve-se com picles e pão caseiro ou polenta.
 
@@ -141,11 +141,13 @@ A receita varia por região: na Moldávia acrescenta-se mais extrato de tomate; 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 Mais receitas de Romênia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/receitas/romania/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/tripe-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>
@@ -168,15 +170,20 @@ A receita varia por região: na Moldávia acrescenta-se mais extrato de tomate; 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/romania/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Romênia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Romênia</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>古巴牛肉丝</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/cuba/">古巴</a> › <span>古巴牛肉丝</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ropa-vieja" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cubanfood.jpg/330px-Cubanfood.jpg" alt="古巴牛肉丝" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 晚餐 · 古巴</div>
+      <div class="recipe-badge">🇨🇺 晚餐 · <a class="recipe-badge-origin" href="/zh/shipu/cuba/">古巴</a></div>
       <h1>古巴牛肉丝</h1>
       <p class="recipe-tagline">罗帕维耶哈（ropa vieja，西班牙语意为「旧衣裳」）是古巴的国菜：牛肉炖到丝状、再放入由番茄、辣椒、洋葱和大蒜制成的「软沙托」中烹煮，使酱汁渗透每一根肉丝。这道菜从加那利群岛传入古巴，可追溯至中世纪塞法迪犹太烹饪，最初用安息日剩余的牛肉制作。几个世纪以来，它已成为古巴文化身份不可分割的一部分。
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 更多来自古巴的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/cuba/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/picadillo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="picadillo">🍽️</div>
@@ -161,15 +163,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/cuba/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="古巴"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">古巴</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>瑞典肉丸</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/sweden/">瑞典</a> › <span>瑞典肉丸</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kottbullar" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 午餐 · 瑞典</div>
+      <div class="recipe-badge">🇸🇪 午餐 · <a class="recipe-badge-origin" href="/zh/shipu/sweden/">瑞典</a></div>
       <h1>瑞典肉丸</h1>
       <p class="recipe-tagline">瑞典肉丸——科特布拉尔——是瑞典在国际上最具知名度的菜肴之一，很大程度上随宜家的影响传播至全球。在瑞典本土，这道菜一个多世纪以来一直是日常餐桌和节日冷盘宴（smörgåsbord）的主角。猪肉与牛肉混合，加入泡软的面包屑和少量奶油，做出的肉丸比南欧同类菜肴明显更轻盈。
 
@@ -145,11 +145,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 更多来自瑞典的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/sweden/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/gravlax/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="gravlax">🍽️</div>
@@ -178,15 +180,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/sweden/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="瑞典"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">瑞典</span>
 </a>
 
 </main>

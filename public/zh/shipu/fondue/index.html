@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>奶酪火锅</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/switzerland/">瑞士</a> › <span>奶酪火锅</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fondue" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fondue_dish.jpg/330px-Fondue_dish.jpg" alt="奶酪火锅" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇭 晚餐 · 瑞士</div>
+      <div class="recipe-badge">🇨🇭 晚餐 · <a class="recipe-badge-origin" href="/zh/shipu/switzerland/">瑞士</a></div>
       <h1>奶酪火锅</h1>
       <p class="recipe-tagline">现代形式的芝士火锅很大程度上得益于刻意推广：瑞士奶酪联合会从1930年代起在国际上积极推广，以促进奶酪出口。这道菜本身更为古老——阿尔卑斯牧民在冬天面包变硬时，会将陈年奶酪与葡萄酒一同融化——但配备专用锅具和长叉的版本通过营销成为瑞士美食的世界象征。
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇭 更多来自瑞士的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/switzerland/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/r-sti/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="r-sti">🍽️</div>
@@ -160,15 +162,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/switzerland/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="瑞士"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">瑞士</span>
 </a>
 
 </main>

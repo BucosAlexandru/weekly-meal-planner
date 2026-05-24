@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Picadillo</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/cuba/">Cuba</a> › <span>Picadillo</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="picadillo" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Picadillo_and_rice.jpg/330px-Picadillo_and_rice.jpg" alt="Picadillo" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 Jantar · Cuba</div>
+      <div class="recipe-badge">🇨🇺 Jantar · <a class="recipe-badge-origin" href="/pt/receitas/cuba/">Cuba</a></div>
       <h1>Picadillo</h1>
       <p class="recipe-tagline">O picadillo é a comida cubana do dia a dia — um refogado saboroso de carne moída com tomates, cebola, alho, pimentão e a surpreendente combinação doce-salgada de azeitonas verdes e passas. Esta mistura de influência espanhola — herança da cozinha andaluza — dá ao picadillo um sabor unicamente cubano.
 
@@ -138,11 +138,13 @@ Em Cuba, o picadillo é servido com arroz branco, feijão preto e plátanos frit
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 Mais receitas de Cuba</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/receitas/cuba/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/ropa-vieja/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ropa-vieja">🍽️</div>
@@ -165,15 +167,20 @@ Em Cuba, o picadillo é servido com arroz branco, feijão preto e plátanos frit
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/cuba/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Cuba"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Cuba</span>
 </a>
 
 </main>

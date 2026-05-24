@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Schnitzel</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/retete/germany/">Germania</a> › <span>Schnitzel</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" alt="Schnitzel" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 Prânz · Germania</div>
+      <div class="recipe-badge">🇩🇪 Prânz · <a class="recipe-badge-origin" href="/ro/retete/germany/">Germania</a></div>
       <h1>Schnitzel</h1>
       <p class="recipe-tagline">Șnițelul aparține bucătăriei germano-austriece în sensul cel mai larg, dar versiunea definitivă — Wiener Schnitzel — a fost perfecționată la Viena, unde bucătarii din secolul XVIII au început să bată vițelul până la o subțirime aproape transparentă înainte de a-l trece prin făină, ou și pesmet fin și a-l prăji în untură fierbinte până când crusta se umfla în valuri dramatice. Temperatura și adâncimea uleiului determină crusta: șnițelul trebuie să plutească liber la 170°C, vârtejindu-se în grăsime mai degrabă decât să stea în ea, ceea ce creează crusta caracteristică pufos-sufleu. O stropire de lămâie la masă nu este opțională — acidul taie bogăția și preparatul este incomplet fără ea.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 Alte rețete din Germania</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/retete/germany/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/currywurst/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="currywurst">🍽️</div>
@@ -155,15 +157,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/retete/germany/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Germania"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Germania</span>
 </a>
 
 </main>

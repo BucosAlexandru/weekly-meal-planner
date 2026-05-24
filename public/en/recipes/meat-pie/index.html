@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Meat Pie</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/australia/">Australia</a> › <span>Meat Pie</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="meat-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/MeatPie.JPG/330px-MeatPie.JPG" alt="Meat Pie" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 Snack · Australia</div>
+      <div class="recipe-badge">🇦🇺 Snack · <a class="recipe-badge-origin" href="/en/recipes/australia/">Australia</a></div>
       <h1>Meat Pie</h1>
       <p class="recipe-tagline">The Australian meat pie is the country's most recognized food — an individual beef and gravy pie sold at football grounds, corner bakeries, and petrol stations throughout Australia. Eaten handheld with tomato sauce on top, it became central to Australian working-class food culture in the late nineteenth century. The double pastry construction is the defining feature: a shortcrust base that holds firm and a puff pastry lid that rises and crisps in the oven.
 
@@ -135,11 +135,13 @@ The filling must be thick — a proper gravy rather than a broth. Flour cooked i
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 More recipes from Australia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/australia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/pavlova/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pavlova">🍰</div>
@@ -162,15 +164,20 @@ The filling must be thick — a proper gravy rather than a broth. Flour cooked i
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/australia/" data-rmn-back
+   data-cuisine-atmosphere="anglo"
+   aria-label="Australia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Australia</span>
 </a>
 
 </main>

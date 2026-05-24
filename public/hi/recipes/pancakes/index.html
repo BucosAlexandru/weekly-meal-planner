@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>अमेरिकन पैनकेक</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/usa/">अमेरिका</a> › <span>अमेरिकन पैनकेक</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pancakes" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/661886-312x231.jpg" alt="अमेरिकन पैनकेक" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 नाश्ता · अमेरिका</div>
+      <div class="recipe-badge">🇺🇸 नाश्ता · <a class="recipe-badge-origin" href="/hi/recipes/usa/">अमेरिका</a></div>
       <h1>अमेरिकन पैनकेक</h1>
       <p class="recipe-tagline">अमेरिकन पैनकेक डाइनर काउंटर का निश्चित नाश्ता है — मोटे, अविश्वसनीय रूप से फूले हुए ढेर, जो यूरोप से अमेरिकी सरहद तक की यात्रा करने वाली ग्रिडल केक की परंपरा से जन्मे, जहाँ खमीर उठाने वाले तत्वों ने पतले क्रेप को बादल जैसे गोलों में बदल दिया। विज्ञान सरल है: डबल-एक्टिंग बेकिंग पाउडर दो बार बुलबुले बनाता है, पहले बैटर में और फिर गर्म ग्रिडल पर, जबकि बैटर को पाँच मिनट आराम देने से ग्लूटेन को ढीला होने का समय मिलता है और गैस बनने का भी। पलटने का क्षण अचूक है — पूरी सतह पर बुलबुले और किनारे सेट दिखें, उसी वक्त पलटें, पहले नहीं।</p>
       <div class="recipe-meta-row">
@@ -125,11 +125,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 अमेरिका की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/recipes/usa/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/cheeseburger/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/usa/" data-rmn-back
+   data-cuisine-atmosphere="anglo"
+   aria-label="अमेरिका"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">अमेरिका</span>
 </a>
 
 </main>

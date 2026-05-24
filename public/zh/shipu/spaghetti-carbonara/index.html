@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>意式培根蛋面</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/italy/">意大利</a> › <span>意式培根蛋面</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="spaghetti-carbonara" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/330px-Espaguetis_carbonara.jpg" alt="意式培根蛋面" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 午餐 · 意大利</div>
+      <div class="recipe-badge">🇮🇹 午餐 · <a class="recipe-badge-origin" href="/zh/shipu/italy/">意大利</a></div>
       <h1>意式培根蛋面</h1>
       <p class="recipe-tagline">意大利面卡邦纳拉是罗马的经典菜肴，仅由五种食材构成：意大利面、猪脸颊肉（关查莱）、鸡蛋、罗马佩科里诺干酪和黑胡椒。鸡蛋仅靠意大利面的余热熟透——不加奶油，无需额外加热——形成光泽丝滑的酱汁裹住每一根面条。浓郁、咸香、胡椒味突出，是全球最令人满足的30分钟料理之一。</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 更多来自意大利的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/italy/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/risotto/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="risotto">🍽️</div>
@@ -167,15 +169,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="意大利"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">意大利</span>
 </a>
 
 </main>

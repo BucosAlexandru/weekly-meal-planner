@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>스파게티 카르보나라</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/italy/">이탈리아</a> › <span>스파게티 카르보나라</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="spaghetti-carbonara" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/330px-Espaguetis_carbonara.jpg" alt="스파게티 카르보나라" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 점심 · 이탈리아</div>
+      <div class="recipe-badge">🇮🇹 점심 · <a class="recipe-badge-origin" href="/ko/recipes/italy/">이탈리아</a></div>
       <h1>스파게티 카르보나라</h1>
       <p class="recipe-tagline">스파게티 카르보나라는 단 다섯 가지 재료로 만드는 로마의 클래식 요리입니다: 파스타, 관찰레, 달걀, 페코리노 로마노, 그리고 흑후추. 달걀은 파스타의 잔열만으로 익습니다 — 크림도, 추가 가열도 필요 없이 — 모든 가닥을 감싸는 윤기 있고 실크처럼 부드러운 소스가 됩니다. 진하고 짭짤하며 후추향이 풍부한, 세계에서 가장 만족스러운 30분 요리 중 하나입니다.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 이탈리아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/italy/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/risotto/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="risotto">🍽️</div>
@@ -167,15 +169,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="이탈리아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">이탈리아</span>
 </a>
 
 </main>

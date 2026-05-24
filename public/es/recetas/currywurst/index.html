@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Currywurst</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/recetas/germany/">Alemania</a> › <span>Currywurst</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="currywurst" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20220430_currywurst.jpg/330px-20220430_currywurst.jpg" alt="Currywurst" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 Tentempié · Alemania</div>
+      <div class="recipe-badge">🇩🇪 Tentempié · <a class="recipe-badge-origin" href="/es/recetas/germany/">Alemania</a></div>
       <h1>Currywurst</h1>
       <p class="recipe-tagline">La currywurst es el símbolo callejero de Berlín — una salchicha de cerdo frita cortada en rodajas, servida con ketchup o salsa de tomate condimentada con curry en polvo, espolvoreada con curry amarillo y pimentón. La inventó en 1949 Herta Heuwer en Berlín-Charlottenburg, mezclando ketchup con salsa Worcestershire y curry — un gesto culinario sencillo que creó un fenómeno de masas.
 
@@ -136,11 +136,13 @@ La currywurst es la comida del puesto callejero (Imbiss), símbolo del fast food
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 Más recetas de Alemania</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/recetas/germany/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/schnitzel/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="schnitzel">🍽️</div>
@@ -163,15 +165,20 @@ La currywurst es la comida del puesto callejero (Imbiss), símbolo del fast food
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/recetas/germany/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Alemania"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Alemania</span>
 </a>
 
 </main>

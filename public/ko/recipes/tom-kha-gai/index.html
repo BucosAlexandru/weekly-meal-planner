@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>톰카가이</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/thailand/">태국</a> › <span>톰카가이</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-kha-gai" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg/330px-Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg" alt="톰카가이" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 점심 · 태국</div>
+      <div class="recipe-badge">🇹🇭 점심 · <a class="recipe-badge-origin" href="/ko/recipes/thailand/">태국</a></div>
       <h1>톰카가이</h1>
       <p class="recipe-tagline">톰카가이는 태국 요리의 보석입니다. 갈랑갈(태국 생강), 레몬그라스, 카피르 라임잎, 버섯과 닭고기가 들어간 진하고 향긋한 코코넛 밀크 수프입니다. 톰얌과 달리 톰카는 부드럽고 풍부하며 라임의 시트러스 향기로 빛납니다.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 태국의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/thailand/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>
@@ -173,15 +175,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/thailand/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="태국"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">태국</span>
 </a>
 
 </main>

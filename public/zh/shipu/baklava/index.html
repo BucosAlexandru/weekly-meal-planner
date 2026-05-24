@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>果仁蜜饼</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/turkey/">土耳其</a> › <span>果仁蜜饼</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="baklava" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/631783-312x231.jpg" alt="果仁蜜饼" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇷 甜点 · 土耳其</div>
+      <div class="recipe-badge">🇹🇷 甜点 · <a class="recipe-badge-origin" href="/zh/shipu/turkey/">土耳其</a></div>
       <h1>果仁蜜饼</h1>
       <p class="recipe-tagline">巴克拉瓦（Baklava）起源于伊斯坦布尔的奥斯曼帝国皇家厨房，成为宫廷的标志性甜点。每年斋月十五日，皇家举行「巴克拉瓦游行」（Baklava Alayı），将一盘盘巴克拉瓦正式呈送给禁卫军，可见这道甜点在奥斯曼礼仪生活中的核心地位。土耳其、黎巴嫩、希腊等国均声称拥有其起源权；土耳其东南部城市加济安泰普已获联合国教科文组织的地理标志认证。
 
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇷 更多来自土耳其的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/turkey/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/menemen/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="menemen">🍽️</div>
@@ -156,15 +158,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/turkey/" data-rmn-back
+   data-cuisine-atmosphere="middle-eastern"
+   aria-label="土耳其"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">土耳其</span>
 </a>
 
 </main>

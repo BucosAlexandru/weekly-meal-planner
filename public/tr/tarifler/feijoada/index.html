@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Feijoada</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/tarifler/brazil/">Brezilya</a> › <span>Feijoada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="feijoada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Feijoada" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 Akşam yemeği · Brezilya</div>
+      <div class="recipe-badge">🇧🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/tarifler/brazil/">Brezilya</a></div>
       <h1>Feijoada</h1>
       <p class="recipe-tagline">Feijoada, Brezilya'nın ulusal yemeği ve ülkenin en önemli sosyal öğünüdür — en az iki yüzyıldır Rio de Janeiro'daki evlerde ve restoranlarda her Çarşamba ve Cumartesi servis edilen yoğun siyah fasulye ve tütsülenmiş domuz yahnisi. Kökenleri tartışmalıdır: Bazıları, fasulye ve değersiz domuz kesimleriyle idare eden köleleştirilmiş insanlara bağlar; diğerleri ise Portekiz Alentejana mutfağına bağlar. Kesin olan şu ki feijoada, ulusal kimliğin bir sembolü haline geldi — tüm sosyal sınıflardan insanları bir araya getiren, her zaman beyaz pirinç, sotelenmiş couve, çıtır farofa ve taze portakallarla servis edilen bir yemek.</p>
       <div class="recipe-meta-row">
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 Brezilya tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/tarifler/brazil/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/moqueca/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moqueca">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/tarifler/brazil/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Brezilya"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">Brezilya</span>
 </a>
 
 </main>

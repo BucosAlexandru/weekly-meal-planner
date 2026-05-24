@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>鸡肉咖喱</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/india/">印度</a> › <span>鸡肉咖喱</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-curry" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="鸡肉咖喱" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 晚餐 · 印度</div>
+      <div class="recipe-badge">🇮🇳 晚餐 · <a class="recipe-badge-origin" href="/zh/shipu/india/">印度</a></div>
       <h1>鸡肉咖喱</h1>
       <p class="recipe-tagline">这道北印度风格的咖喱鸡源自旁遮普邦厨房，在那里厨师们完善了「布纳」（bhuna）技法——持续翻炒香料直至每一滴水分蒸发殆尽，玛莎拉酱在油中变深浓缩。带骨鸡肉不可或缺：长时间炖煮中释放的胶原蛋白和骨髓会使汤汁自然变稠，这是去骨鸡胸无法复制的效果。最后加入的印度综合香料需在离火后放入，让它轻柔绽放而非焦糊，赋予咖喱温暖复杂的芬芳。</p>
       <div class="recipe-meta-row">
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 更多来自印度的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/india/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/dhal/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dhal">🍽️</div>
@@ -176,15 +178,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/india/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="印度"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">印度</span>
 </a>
 
 </main>

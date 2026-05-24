@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>रतातुई</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/france/">फ्रांस</a> › <span>रतातुई</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ratatouille" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633754-312x231.jpg" alt="रतातुई" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 रात का खाना · फ्रांस</div>
+      <div class="recipe-badge">🇫🇷 रात का खाना · <a class="recipe-badge-origin" href="/hi/recipes/france/">फ्रांस</a></div>
       <h1>रतातुई</h1>
       <p class="recipe-tagline">रतातुई प्रोवेंकल गर्मियों की रसोई का सार है, जो नीस और वार के बाजार की रसोइयों में जन्मा, जहाँ किसानों के पास अगस्त की गर्मी में एक साथ पकने वाले बैंगन, तोरी, मिर्च और टमाटर की प्रचुरता थी। मूल तकनीक है धैर्य: हर सब्जी को अलग-अलग तब तक भूना जाता है जब तक हल्की सुनहरी न हो जाए, फिर मिलाया जाता है — इससे व्यक्तिगत बनावट बनी रहती है और पूरी डिश एकरूप लुगदी बनने से बचती है। एक दिन पहले बनाकर पूरी तरह ठंडा होने दिया जाए तो रतातुई काफी बेहतर हो जाती है — जैतून का तेल फिर से सोख लिया जाता है, प्रोवेंस की जड़ी-बूटियाँ गहरी हो जाती हैं, और अलग-अलग स्वाद मिलकर अपने योग से कहीं अधिक कुछ बन जाते हैं।</p>
       <div class="recipe-meta-row">
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 फ्रांस की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/recipes/france/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>
@@ -166,15 +168,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/france/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="फ्रांस"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">फ्रांस</span>
 </a>
 
 </main>

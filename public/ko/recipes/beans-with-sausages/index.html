@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>콩과 소시지</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/romania/">루마니아</a> › <span>콩과 소시지</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="콩과 소시지" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 점심 · 루마니아</div>
+      <div class="recipe-badge">🇷🇴 점심 · <a class="recipe-badge-origin" href="/ko/recipes/romania/">루마니아</a></div>
       <h1>콩과 소시지</h1>
       <p class="recipe-tagline">파솔레 쿠 카르나치는 루마니아 가정의 겨울 요리입니다. 흰 강낭콩을 훈제 돼지 소시지, 양파, 당근, 토마토 페이스트, 월계수 잎과 함께 국물이 걸쭉해지고 깊은 향이 날 때까지 천천히 끓입니다. 소시지가 기름기와 훈연 향을 더해 소박한 콩 요리를 든든하고 만족스러운 한 끼로 만들어줍니다. 피클과 집에서 만든 빵 또는 폴렌타와 함께 냅니다.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 루마니아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/romania/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/tripe-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>
@@ -168,15 +170,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/romania/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="루마니아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">루마니아</span>
 </a>
 
 </main>

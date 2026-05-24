@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Menemen</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/tarifler/turkey/">Türkiye</a> › <span>Menemen</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="menemen" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/My_breakfast_menemen.jpg/330px-My_breakfast_menemen.jpg" alt="Menemen" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇷 Kahvaltı · Türkiye</div>
+      <div class="recipe-badge">🇹🇷 Kahvaltı · <a class="recipe-badge-origin" href="/tr/tarifler/turkey/">Türkiye</a></div>
       <h1>Menemen</h1>
       <p class="recipe-tagline">Menemen, Türkiye'nin vazgeçilmez kahvaltısıdır — yumurtalar, domates, yeşil biber ve bazen soğanla birlikte doğrudan tavaya zeytinyağında kırılır. Yemek Ege bölgesinden gelir ve soğanlı mı soğansız mı diye sonsuz bir tartışma vardır: İstanbul'da otantik menemen soğansızdır; Ege ve Anadolu'da soğan zorunludur.
 
@@ -136,11 +136,13 @@ Menemen omlet değildir — yumurtalar ayrıca çırpılmaz, doğrudan sebzelerl
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇷 Türkiye tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/tarifler/turkey/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/baklava/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="baklava">🍽️</div>
@@ -163,15 +165,20 @@ Menemen omlet değildir — yumurtalar ayrıca çırpılmaz, doğrudan sebzelerl
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/tarifler/turkey/" data-rmn-back
+   data-cuisine-atmosphere="middle-eastern"
+   aria-label="Türkiye"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">Türkiye</span>
 </a>
 
 </main>

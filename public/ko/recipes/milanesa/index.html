@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>밀라네사</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/argentina/">아르헨티나</a> › <span>밀라네사</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="milanesa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Milanesa_con_fritas.png/330px-Milanesa_con_fritas.png" alt="밀라네사" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇷 저녁 · 아르헨티나</div>
+      <div class="recipe-badge">🇦🇷 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/argentina/">아르헨티나</a></div>
       <h1>밀라네사</h1>
       <p class="recipe-tagline">밀라네사는 19세기 말과 20세기 초 이탈리아 이민자들과 함께 아르헨티나에 도착했으며, 롬바르디아의 코톨레타 알라 밀라네세에서 직접 전해졌습니다. 아르헨티나 형태에서는 얇은 소고기 한 조각 — 때로는 닭고기나 송아지 고기 — 을 납작하게 두드려 달걀물과 빵가루를 묻혀 균일한 황금빛 껍질이 생길 때까지 기름에 튀깁니다. 과정은 빠르고 결과는 일관적입니다: 부드러운 고기를 감싼 바삭한 외층.
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇷 아르헨티나의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/argentina/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/empanadas/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="empanadas">🍽️</div>
@@ -160,15 +162,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/argentina/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="아르헨티나"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">아르헨티나</span>
 </a>
 
 </main>

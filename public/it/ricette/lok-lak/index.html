@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Lok Lak</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/ricette/cambodia/">Cambogia</a> › <span>Lok Lak</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lok-lak" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 Pranzo · Cambogia</div>
+      <div class="recipe-badge">🇰🇭 Pranzo · <a class="recipe-badge-origin" href="/it/ricette/cambodia/">Cambogia</a></div>
       <h1>Lok Lak</h1>
       <p class="recipe-tagline">Lok lak è il piatto di manzo più famoso della Cambogia, nato dall'incontro tra la cucina coloniale francese e le tecniche degli immigrati cinesi. I cubetti di manzo marinato vengono saltati a fuoco vivo con aglio, salsa di ostriche e abbondante pepe nero, producendo bocconi lucidi e saporiti.
 
@@ -141,11 +141,13 @@ La presentazione è centrale: la carne viene adagiata su un letto di lattuga cro
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 Altre ricette da Cambogia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/ricette/cambodia/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/amok/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="amok">🍽️</div>
@@ -168,15 +170,20 @@ La presentazione è centrale: la carne viene adagiata su un letto di lattuga cro
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/ricette/cambodia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Cambogia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Cambogia</span>
 </a>
 
 </main>

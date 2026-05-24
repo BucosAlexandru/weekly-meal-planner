@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>타진</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/morocco/">모로코</a> › <span>타진</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="타진" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 저녁 · 모로코</div>
+      <div class="recipe-badge">🇲🇦 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/morocco/">모로코</a></div>
       <h1>타진</h1>
       <p class="recipe-tagline">타진은 요리에 사용되는 원뿔형 토기 용기의 이름을 따온 것으로, 수 세기에 걸친 모로코 및 북아프리카 요리에서 본질적으로 변하지 않은 디자인입니다. 원뿔은 상승하는 증기를 가두어 재료에 수분을 돌려보내, 건조되지 않고 부드럽게 흐물어지는 고기와 걸쭉하게 할 필요 없는 진한 소스를 만들어냅니다.
 
@@ -144,11 +144,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 모로코의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/morocco/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>
@@ -177,15 +179,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/morocco/" data-rmn-back
+   data-cuisine-atmosphere="north-african"
+   aria-label="모로코"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">모로코</span>
 </a>
 
 </main>

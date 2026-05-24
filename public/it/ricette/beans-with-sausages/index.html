@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Fagioli con Salsicce</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/ricette/romania/">Romania</a> › <span>Fagioli con Salsicce</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Fagioli con Salsicce" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 Pranzo · Romania</div>
+      <div class="recipe-badge">🇷🇴 Pranzo · <a class="recipe-badge-origin" href="/it/ricette/romania/">Romania</a></div>
       <h1>Fagioli con Salsicce</h1>
       <p class="recipe-tagline">Fasole cu cârnați è il piatto invernale delle case rumene — fagioli bianchi cotti lentamente con salsicce di maiale affumicate, cipolla, carote, concentrato di pomodoro e foglie di alloro, finché il liquido si addensa e diventa profondamente aromatico. Le salsicce aggiungono grasso e affumicato, trasformando un umile legume in un pasto sostanzioso. Si serve con sottaceti e pane fatto in casa o polenta.
 
@@ -141,11 +141,13 @@ La ricetta varia per regione: in Moldavia si aggiunge più concentrato di pomodo
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 Altre ricette da Romania</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/ricette/romania/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/tripe-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>
@@ -168,15 +170,20 @@ La ricetta varia per regione: in Moldavia si aggiunge più concentrato di pomodo
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/ricette/romania/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Romania"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Romania</span>
 </a>
 
 </main>

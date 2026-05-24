@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Lángos</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/hungary/">Hungary</a> › <span>Lángos</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="l-ngos" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Snack · Hungary</div>
+      <div class="recipe-badge">🇭🇺 Snack · <a class="recipe-badge-origin" href="/en/recipes/hungary/">Hungary</a></div>
       <h1>Lángos</h1>
       <p class="recipe-tagline">Lángos is Hungary's national street snack — a deep-fried leavened flatbread, puffy and golden, smeared with sour cream and sprinkled with shredded cheese. The word comes from Magyar láng (flame), referring to the tradition of baking leftover dough near the bread oven fire. Today it is deep-fried in oil.
 
@@ -137,11 +137,13 @@ Lángos is sold at all markets, thermal lakes, and Hungarian festivals. Variants
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 More recipes from Hungary</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/hungary/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/goulash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="goulash">🍽️</div>
@@ -170,15 +172,20 @@ Lángos is sold at all markets, thermal lakes, and Hungarian festivals. Variants
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/hungary/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Hungary"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Hungary</span>
 </a>
 
 </main>

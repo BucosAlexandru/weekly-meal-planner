@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Khinkali</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/retete/georgia/">Georgia</a> › <span>Khinkali</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="khinkali" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Khinkali%2C_Restaurant_Aragvi.jpg/330px-Khinkali%2C_Restaurant_Aragvi.jpg" alt="Khinkali" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 Cină · Georgia</div>
+      <div class="recipe-badge">🇬🇪 Cină · <a class="recipe-badge-origin" href="/ro/retete/georgia/">Georgia</a></div>
       <h1>Khinkali</h1>
       <p class="recipe-tagline">Khinkali sunt găluștele naționale ale Georgiei — pungi mari de aluat umplute cu carne tocată de vită și porc cu ceapă, coriandru și piper, fierte în apă clocotită. Aluatul este destul de gros pentru a reține supa care se formează în interior din sucurile cărnii. Înainte de a mușca, se rupe vârful — coada răsucită — și se soarbe lichidul fierbinte.
 
@@ -138,11 +138,13 @@ Khinkali se mănâncă cu mâna, nu cu tacâm. Coada răsucită nu se mănâncă
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 Alte rețete din Georgia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/retete/georgia/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍳</div>
@@ -177,15 +179,20 @@ Khinkali se mănâncă cu mâna, nu cu tacâm. Coada răsucită nu se mănâncă
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/retete/georgia/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Georgia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Georgia</span>
 </a>
 
 </main>

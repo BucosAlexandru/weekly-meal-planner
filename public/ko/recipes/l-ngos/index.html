@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>랑고시</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/hungary/">헝가리</a> › <span>랑고시</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="l-ngos" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 간식 · 헝가리</div>
+      <div class="recipe-badge">🇭🇺 간식 · <a class="recipe-badge-origin" href="/ko/recipes/hungary/">헝가리</a></div>
       <h1>랑고시</h1>
       <p class="recipe-tagline">랑고시는 헝가리의 국민 길거리 간식입니다. 발효된 반죽을 깊은 기름에 튀겨 폭신하고 황금빛으로 만든 뒤 사워크림을 바르고 갈은 치즈를 얹습니다. 이 단어는 헝가리어 láng(불꽃)에서 유래하며, 빵 가마의 불 근처에서 남은 반죽을 굽던 전통을 가리킵니다. 오늘날에는 식용유에 튀깁니다.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 헝가리의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/hungary/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/goulash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="goulash">🍽️</div>
@@ -170,15 +172,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/hungary/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="헝가리"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">헝가리</span>
 </a>
 
 </main>

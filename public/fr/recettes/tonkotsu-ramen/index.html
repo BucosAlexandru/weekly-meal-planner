@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Ramen Tonkotsu</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/japan/">Japon</a> › <span>Ramen Tonkotsu</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tonkotsu-ramen" id="recipe-photo-main">🍽️<img src="/images/tonkotsu-ramen.jpg" alt="Ramen Tonkotsu" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Dîner · Japon</div>
+      <div class="recipe-badge">🇯🇵 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/japan/">Japon</a></div>
       <h1>Ramen Tonkotsu</h1>
       <p class="recipe-tagline">Le ramen tonkotsu vient de Hakata — aujourd'hui le quartier ferroviaire de Fukuoka — où un bol de bouillon crémeux d'os de porc est le déjeuner des travailleurs depuis les années 1940. La blancheur est de la physique: maintenir l'ébullition pendant douze heures décompose le collagène, émulsifiant la graisse dans le liquide et le rendant opaque et soyeux.
 
@@ -139,11 +139,13 @@ Le tare va en premier dans le bol, pas dans la casserole, pour que chaque portio
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Plus de recettes de Japon</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/japan/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>
@@ -190,15 +192,20 @@ Le tare va en premier dans le bol, pas dans la casserole, pour que chaque portio
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/japan/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="Japon"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Japon</span>
 </a>
 
 </main>

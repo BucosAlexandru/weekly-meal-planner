@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>아도보</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/philippines/">필리핀</a> › <span>아도보</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="adobo" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/638741-312x231.jpg" alt="아도보" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 저녁 · 필리핀</div>
+      <div class="recipe-badge">🇵🇭 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/philippines/">필리핀</a></div>
       <h1>아도보</h1>
       <p class="recipe-tagline">아도보는 필리핀의 국민 요리입니다. 단어 자체는 스페인어로, 식민지배자들이 토착 식초 브레이즈 방식에서 자신들의 절임 기법과 유사한 점을 발견해 붙인 이름입니다. 식초로 고기를 보존하는 필리핀 전통은 스페인이 오기 전부터 있었으며, 냉장 없이 열대 기후에서 음식을 보관하는 실용적인 해결책이었습니다.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 필리핀의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/philippines/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/kare-kare/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kare-kare">🍽️</div>
@@ -161,15 +163,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/philippines/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="필리핀"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">필리핀</span>
 </a>
 
 </main>

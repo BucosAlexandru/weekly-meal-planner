@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tagine cu miel</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/retete/morocco/">Maroc</a> › <span>Tagine cu miel</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lamb-tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tagine cu miel" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Cină · Maroc</div>
+      <div class="recipe-badge">🇲🇦 Cină · <a class="recipe-badge-origin" href="/ro/retete/morocco/">Maroc</a></div>
       <h1>Tagine cu miel</h1>
       <p class="recipe-tagline">Tagine cu miel este un simbol al bucătăriei marocane — o tocăniță gătită lent în vasul de lut conic (tagine), care captează aburii și întoarce sucurile înapoi în mâncare. Mielul devine fragil în ore de gătit lent cu ceapă, usturoi, caise uscate, migdale și amestecul de condimente ras el hanout, creând un sos concentrat dulce-picant.
 
@@ -141,11 +141,13 @@ Tagine-ul este gătit tradițional pe jar sau în cuptor cu lemne. Se servește 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Alte rețete din Maroc</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/retete/morocco/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>
@@ -174,15 +176,20 @@ Tagine-ul este gătit tradițional pe jar sau în cuptor cu lemne. Se servește 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/retete/morocco/" data-rmn-back
+   data-cuisine-atmosphere="north-african"
+   aria-label="Maroc"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Maroc</span>
 </a>
 
 </main>
