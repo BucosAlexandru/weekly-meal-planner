@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/de/wochenplan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Pläne</span></a>
       <a href="/de/rezepte/" class="nav-link">🍽️ Rezepte</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/de/preise/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Chakchouka</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/tunisia/">Tunesien</a> › <span>Chakchouka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="chakchouka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="Chakchouka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 Abendessen · Tunesien</div>
+      <div class="recipe-badge">🇹🇳 Abendessen · <a class="recipe-badge-origin" href="/de/rezepte/tunisia/">Tunesien</a></div>
       <h1>Chakchouka</h1>
       <p class="recipe-tagline">Chakchouka ist ein ikonisches Gericht der nordafrikanischen Küche, das aus Tunesien stammt, wo in einer gewürzten Tomaten-Paprika-Sauce pochierte Eier zum Symbol des gemeinschaftlichen Frühstücks wurden. Die Einfachheit der Zutaten verbirgt eine bemerkenswerte sensorische Komplexität.
 
@@ -137,11 +136,13 @@ Von Tunesien aus verbreitete sich das Rezept in ganz Nordafrika, Israel und dem 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 Weitere Rezepte aus Tunesien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/rezepte/tunisia/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/brik/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="brik">🍽️</div>
@@ -164,15 +165,20 @@ Von Tunesien aus verbreitete sich das Rezept in ganz Nordafrika, Israel und dem 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/rezepte/tunisia/" data-rmn-back
+   data-cuisine-atmosphere="north-african"
+   aria-label="Tunesien"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Tunesien</span>
 </a>
 
 </main>

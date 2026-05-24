@@ -1,0 +1,339 @@
+/* ═══════════════════════════════════════════════════════════════
+   Homepage Cuisine Discovery section
+   ───────────────────────────────────────────────────────────────
+   Lives on the SPA home (/<lc>/index.html), injected between the
+   hero and the planner UI by scripts/generate-content.mjs.
+
+   Goals:
+   - Visually NATIVE to the homepage (matches existing hero rhythm,
+     green-leaning palette, Inter typography).
+   - Lighter than full hub cards (this is a teaser, not browsing mode).
+   - Each card: flag + country + 2-3 dish names + recipe count.
+   - Entire card clickable (stretched link pattern, like hub-index).
+   - Atmosphere accent strip on hover ties cards to the cuisine system
+     without flooding the homepage with per-country colors.
+   - All hover/transitions stay subtle and respect prefers-reduced-motion.
+   ─────────────────────────────────────────────────────────────── */
+
+.hp-cuisine-discover {
+  /* Calm divider band between hero and planner UI. Soft white gradient,
+     no radial accents — keeps the section production-restrained. */
+  background: linear-gradient(180deg, #f7faf7 0%, #ffffff 100%);
+  padding: clamp(2rem, 5vw, 3rem) 1.25rem clamp(2.2rem, 5vw, 3.2rem);
+  border-top: 1px solid #eef0ee;
+  border-bottom: 1px solid #eef0ee;
+  /* iOS Safari sometimes mis-calculates content width inside flex parents
+     when the hero sets explicit padding. box-sizing here guarantees the
+     1.25rem horizontal padding doesn't push children into overflow. */
+  box-sizing: border-box;
+}
+.hp-cuisine-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  /* Center everything inside the inner column — fixes the landscape-mobile
+     CTA-drift bug where flex content rendered left-aligned at edge widths. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hp-cuisine-head,
+.hp-cuisine-grid,
+.hp-cuisine-cta {
+  width: 100%;
+  max-width: 980px;
+}
+.hp-cuisine-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 1.6rem;
+}
+.hp-cuisine-eyebrow {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #24712A;
+  display: inline-block;
+  position: relative;
+  padding-bottom: .4rem;
+  margin-bottom: .55rem;
+}
+.hp-cuisine-eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 28px;
+  height: 2px;
+  background: #24712A;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.hp-cuisine-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.45rem, 3.5vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.15;
+  color: #111827;
+  margin: 0 0 .55rem;
+}
+.hp-cuisine-title em {
+  font-style: normal;
+  color: #24712A;
+}
+.hp-cuisine-sub {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ── Card grid ───────────────────────────────────────────────────
+   3 columns desktop / 2 tablet / 1 phone. Compact, scannable. */
+/* Explicit responsive grid — auto-fill at narrow widths was producing
+   awkward 2.5-column states on landscape iPhone (~700-820px) and certain
+   iPad widths. Fixed breakpoints guarantee even distribution at every
+   common viewport: 1col on phones, 2col on tablets, 3col on desktop.
+   6 cuisines × 3 columns = 2 perfect rows of 3 on desktop. */
+.hp-cuisine-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .7rem;
+  margin: 1.4rem auto 1.6rem;
+  max-width: 980px;
+}
+@media (min-width: 560px) {
+  .hp-cuisine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+}
+@media (min-width: 900px) {
+  .hp-cuisine-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+}
+
+.hp-cuisine-card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: .8rem;
+  padding: .85rem .95rem;
+  background: #fff;
+  border: 1px solid #e8eaed;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  -webkit-tap-highlight-color: transparent;
+  min-height: 80px;
+}
+.hp-cuisine-card::before {
+  /* Thin atmosphere-coloured strip on the leading edge — same
+     accent system used on the recipe-index discovery CTA, ties
+     the homepage cards to the broader cuisine ecosystem. */
+  content: '';
+  position: absolute;
+  top: 14%;
+  left: 0;
+  bottom: 14%;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--cuisine-accent, #24712A);
+  opacity: .85;
+  transition: width .2s ease, opacity .2s ease;
+}
+[dir="rtl"] .hp-cuisine-card::before {
+  left: auto; right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.hp-cuisine-card:hover,
+.hp-cuisine-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(36,113,42,.35);
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+}
+.hp-cuisine-card:hover::before,
+.hp-cuisine-card:focus-within::before {
+  width: 5px;
+}
+.hp-cuisine-card:focus-visible {
+  outline: 2px solid var(--cuisine-accent, #24712A);
+  outline-offset: 2px;
+}
+.hp-cuisine-card:active { transform: translateY(0); transition-duration: .08s; }
+
+.hp-cuisine-card-flag {
+  font-size: 2.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.06));
+}
+.hp-cuisine-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .25rem;
+  min-width: 0;
+  flex: 1;
+}
+.hp-cuisine-card-top {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: space-between;
+}
+.hp-cuisine-card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: #111827;
+  margin: 0;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hp-cuisine-card-count {
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--cuisine-accent-ink, #24712A);
+  background: var(--cuisine-tint, #f3f4f6);
+  border-radius: 99px;
+  padding: .12rem .55rem;
+  flex-shrink: 0;
+}
+.hp-cuisine-card-dishes {
+  font-size: .82rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* ── CTA row ───────────────────────────────────────────────────── */
+.hp-cuisine-cta {
+  text-align: center;
+  margin: 0;
+}
+.hp-cuisine-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #24712A;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -.005em;
+  padding: .75rem 1.6rem;
+  border-radius: 99px;
+  transition:
+    background-color .18s ease,
+    transform .18s cubic-bezier(.2,.7,.2,1),
+    box-shadow .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.hp-cuisine-cta-btn:hover {
+  background: #1f5e23;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(36,113,42,.25);
+}
+.hp-cuisine-cta-btn:active { transform: translateY(0); }
+.hp-cuisine-cta-btn:focus-visible {
+  outline: 2px solid #24712A;
+  outline-offset: 3px;
+}
+.hp-cuisine-cta-btn::after {
+  /* Subtle chevron — Linear/Notion-style confident pointer, not an
+     aggressive "→". 0.85em keeps it visually lighter than the text. */
+  content: '›';
+  font-size: 1.05em;
+  line-height: 1;
+  font-weight: 400;
+  opacity: .85;
+  transition: transform .18s ease;
+}
+[dir="rtl"] .hp-cuisine-cta-btn::after { content: '‹'; }
+.hp-cuisine-cta-btn:hover::after { transform: translateX(2px); }
+[dir="rtl"] .hp-cuisine-cta-btn:hover::after { transform: translateX(-2px); }
+
+/* ── Mobile polish ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .hp-cuisine-grid { gap: .6rem; margin: 1.2rem 0 1.4rem; }
+  .hp-cuisine-card { padding: .8rem .9rem; min-height: 78px; }
+  .hp-cuisine-card-flag { font-size: 1.85rem; }
+  .hp-cuisine-card-name { font-size: .94rem; }
+  .hp-cuisine-card-dishes { font-size: .76rem; -webkit-line-clamp: 1; }
+  .hp-cuisine-title { font-size: 1.3rem; }
+  .hp-cuisine-sub { font-size: .92rem; }
+}
+
+/* ── Print: hide entire section (homepage uses .no-print elsewhere
+   too; cuisine browse is not relevant on paper). */
+@media print {
+  .hp-cuisine-discover { display: none !important; }
+}
+
+/* ── Reduced motion: respect user preferences ────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hp-cuisine-card,
+  .hp-cuisine-card::before,
+  .hp-cuisine-cta-btn,
+  .hp-cuisine-cta-btn::after {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ── Atmosphere CSS variables: only the subset needed for the
+       homepage cards. Full palette lives in content.css; we duplicate
+       a slim version here so the homepage doesn't need to load the
+       larger content.css bundle. */
+[data-cuisine-atmosphere="global"], [data-cuisine-atmosphere="mediterranean"] {
+  --cuisine-accent:#b85c3b; --cuisine-accent-ink:#7a3a23; --cuisine-tint:#fff5eb;
+}
+[data-cuisine-atmosphere="east-asian"] {
+  --cuisine-accent:#b34d6e; --cuisine-accent-ink:#6f2942; --cuisine-tint:#fcf2f4;
+}
+[data-cuisine-atmosphere="se-asian"] {
+  --cuisine-accent:#1e8a5c; --cuisine-accent-ink:#0e5a3a; --cuisine-tint:#e9f5ed;
+}
+[data-cuisine-atmosphere="south-asian"] {
+  --cuisine-accent:#c97a1f; --cuisine-accent-ink:#7d4b10; --cuisine-tint:#fdf3e2;
+}
+[data-cuisine-atmosphere="middle-eastern"] {
+  --cuisine-accent:#a8632b; --cuisine-accent-ink:#6c3d18; --cuisine-tint:#f8eedf;
+}
+[data-cuisine-atmosphere="north-african"] {
+  --cuisine-accent:#a04428; --cuisine-accent-ink:#642818; --cuisine-tint:#fbeae0;
+}
+[data-cuisine-atmosphere="latin"] {
+  --cuisine-accent:#d05c1f; --cuisine-accent-ink:#7c3411; --cuisine-tint:#fceadc;
+}
+[data-cuisine-atmosphere="east-european"] {
+  --cuisine-accent:#8e3a3a; --cuisine-accent-ink:#5a1f1f; --cuisine-tint:#f3e6e6;
+}
+[data-cuisine-atmosphere="nordic"] {
+  --cuisine-accent:#587a8c; --cuisine-accent-ink:#324958; --cuisine-tint:#eaf0f4;
+}
+[data-cuisine-atmosphere="sub-saharan"] {
+  --cuisine-accent:#9c5e2a; --cuisine-accent-ink:#5c3614; --cuisine-tint:#f7e9d8;
+}
+[data-cuisine-atmosphere="anglo"] {
+  --cuisine-accent:#3b5374; --cuisine-accent-ink:#1d2e48; --cuisine-tint:#e9eef5;
+}
+[data-cuisine-atmosphere="central-european"] {
+  --cuisine-accent:#5a7240; --cuisine-accent-ink:#324326; --cuisine-tint:#edf2e4;
+}
+[data-cuisine-atmosphere="central-asian"] {
+  --cuisine-accent:#3f8f8e; --cuisine-accent-ink:#1e5454; --cuisine-tint:#e2f0ef;
+}
+[data-cuisine-atmosphere="pacific"] {
+  --cuisine-accent:#2a8aa8; --cuisine-accent-ink:#185368; --cuisine-tint:#e1f0f5;
+}

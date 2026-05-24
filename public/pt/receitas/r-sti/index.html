@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/pt/plano-semanal/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menus</span></a>
       <a href="/pt/receitas/" class="nav-link">🍽️ Receitas</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/pt/precos/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Rösti</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/switzerland/">Suíça</a> › <span>Rösti</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="r-sti" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇭 Café da manhã · Suíça</div>
+      <div class="recipe-badge">🇨🇭 Café da manhã · <a class="recipe-badge-origin" href="/pt/receitas/switzerland/">Suíça</a></div>
       <h1>Rösti</h1>
       <p class="recipe-tagline">O rösti começou como o café da manhã dos agricultores bernenses — um simples bolo de batata ralada frito dos dois lados até obter uma crosta dourada e crocante. O cantão de Berna é considerado a sua terra natal, e o Röstigraben — a divisão linguística imaginária entre a Suíça de língua alemã e a francófona — às vezes empresta o nome do prato. Batatas frias do dia anterior dão melhores resultados do que frescas.
 
@@ -131,11 +130,13 @@ A versão clássica não acrescenta nada além de sal e manteiga clarificada. Va
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇭 Mais receitas de Suíça</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/receitas/switzerland/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/fondue/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="fondue">🍽️</div>
@@ -158,15 +159,20 @@ A versão clássica não acrescenta nada além de sal e manteiga clarificada. Va
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/switzerland/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Suíça"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Suíça</span>
 </a>
 
 </main>

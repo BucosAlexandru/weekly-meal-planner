@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/en/weekly-meal-plan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Meal Plans</span></a>
       <a href="/en/recipes/" class="nav-link">🍽️ Recipes</a>
-      <a href="/en/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/en/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Pancakes</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/usa/">USA</a> › <span>Pancakes</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="pancakes" id="recipe-photo-main">🍳<img src="https://img.spoonacular.com/recipes/661886-312x231.jpg" alt="Pancakes" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 Breakfast · USA</div>
+      <div class="recipe-badge">🇺🇸 Breakfast · <a class="recipe-badge-origin" href="/en/recipes/usa/">USA</a></div>
       <h1>Pancakes</h1>
       <p class="recipe-tagline">American pancakes are the definitive breakfast of the diner counter — thick, impossibly fluffy stacks born from the tradition of griddle cakes that travelled from Europe to the American frontier, where raising agents transformed thin crêpes into cloud-like rounds. The science is simple: double-acting baking powder creates bubbles twice, first in the batter and again on the hot griddle, while letting the batter rest for five minutes gives the gluten time to relax and the gas time to build. The moment to flip is unmistakable — bubbles appear across the surface and the edges look just set, no earlier.</p>
       <div class="recipe-meta-row">
@@ -131,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 More recipes from USA</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/usa/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/cheeseburger/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>
@@ -164,15 +165,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/usa/" data-rmn-back
+   data-cuisine-atmosphere="anglo"
+   aria-label="USA"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">USA</span>
 </a>
 
 </main>

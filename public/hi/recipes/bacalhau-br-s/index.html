@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/hi/weekly-plan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">मेनू</span></a>
       <a href="/hi/recipes/" class="nav-link">🍽️ व्यंजन</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 ऐप</a>
       <a href="/hi/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Bacalhau à Brás</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/portugal/">Portugal</a> › <span>Bacalhau à Brás</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="bacalhau-br-s" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633251-312x231.jpg" alt="Bacalhau à Brás" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 Dinner · Portugal</div>
+      <div class="recipe-badge">🇵🇹 Dinner · <a class="recipe-badge-origin" href="/hi/recipes/portugal/">Portugal</a></div>
       <h1>Bacalhau à Brás</h1>
       <p class="recipe-tagline">बकालहाउ आ ब्राज़ नमकीन कॉड की उन 365 तैयारियों में से एक है जिसका पुर्तगाली खाना पकाने में दावा है — साल के हर दिन के लिए एक नुस्खा। यह व्यंजन 19वीं सदी में लिस्बन के बायरो ऑल्टो जिले की एक शराबखाने से उत्पन्न हुआ, जहाँ ब्राज़ नामक किसी व्यक्ति ने नमक-भिगोई कॉड को बहुत पतली माचिस-तिली जैसी फ्राइज़ और फेंटे हुए अंडों के साथ मिलाया। 
 
@@ -131,7 +130,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->
@@ -146,15 +147,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/portugal/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Portugal"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">Portugal</span>
 </a>
 
 </main>
