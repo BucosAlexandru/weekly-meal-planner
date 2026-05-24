@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Banh Xeo</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/vietnam/">Vietnam</a> › <span>Banh Xeo</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="banh-xeo" id="recipe-photo-main">🍽️<img src="/images/banh-xeo.webp" alt="Banh Xeo" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Kahvaltı · Vietnam</div>
+      <div class="recipe-badge">🇻🇳 Kahvaltı · <a class="recipe-badge-origin" href="/tr/mutfak/vietnam/">Vietnam</a></div>
       <h1>Banh Xeo</h1>
       <p class="recipe-tagline">Bánh xèo — adı tam anlamıyla cızırdayan kek demek olan bu yemek — pirinç unu ve hindistan cevizi sütünden yapılan bir hamurla hazırlanan, zerdeçalın verdiği parlak sarı rengiyle göze çarpan çıtır bir Vietnam krepidir. Tavaya değdiğinde çıkardığı cızırtı yemeğe adını vermiştir. Karides, ince dilimlenmiş domuz eti ve fasulye filizleriyle doldurulup yarım kez katlanarak tabağa alınır.
 
@@ -141,11 +141,13 @@ Nasıl yenildiği tarif kadar önem taşır: koparılan parçalar taze otlarla b
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Vietnam tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/vietnam/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/pho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pho">🍽️</div>
@@ -180,15 +182,20 @@ Nasıl yenildiği tarif kadar önem taşır: koparılan parçalar taze otlarla b
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/mutfak/vietnam/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Vietnam"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">Vietnam</span>
 </a>
 
 </main>

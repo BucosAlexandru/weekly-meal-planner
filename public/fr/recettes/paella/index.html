@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Paella</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/spain/">Espagne</a> › <span>Paella</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="paella" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/652134-312x231.jpg" alt="Paella" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇸 Dîner · Espagne</div>
+      <div class="recipe-badge">🇪🇸 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/spain/">Espagne</a></div>
       <h1>Paella</h1>
       <p class="recipe-tagline">La paella a ses racines dans les rizières autour de la lagune de l'Albufera de Valence, où les agriculteurs cuisinaient les repas du dimanche sur des feux alimentés au bois d'oranger — le plat doit son nom à la poêle large et peu profonde dans laquelle il était préparé. La paella valenciana originale contenait du lapin, du poulet, des haricots verts, des haricots blancs et des escargots. La paella aux fruits de mer est une adaptation côtière ultérieure que les Valenciens regardent avec une désapprobation courtoise.
 
@@ -137,11 +137,13 @@ Ce qui sépare une grande paella d'un riz ordinaire est le socarrat : la croûte
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇸 Plus de recettes de Espagne</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/spain/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/gazpacho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="gazpacho">🍽️</div>
@@ -164,15 +166,20 @@ Ce qui sépare une grande paella d'un riz ordinaire est le socarrat : la croûte
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/cuisine/spain/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Espagne"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Espagne</span>
 </a>
 
 </main>

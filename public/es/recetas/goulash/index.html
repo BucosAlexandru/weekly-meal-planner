@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Goulash</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/cocina/hungary/">Hungría</a> › <span>Goulash</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="goulash" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/644476-312x231.jpg" alt="Goulash" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Cena · Hungría</div>
+      <div class="recipe-badge">🇭🇺 Cena · <a class="recipe-badge-origin" href="/es/cocina/hungary/">Hungría</a></div>
       <h1>Goulash</h1>
       <p class="recipe-tagline">Gulyás — la palabra significa 'vaquero' en húngaro — comenzó como un estofado de ganaderos cocinado por los cowboys de la Gran Llanura en el siglo XVIII. Se convirtió en un plato de importancia nacional en el siglo XIX, cuando los reformadores húngaros lo elevaron deliberadamente como símbolo de la identidad magiar frente a la dominación cultural habsburga. Lo que el resto del mundo llama gulash se parece más al pörkölt — en Hungría, el gulyás es propiamente una sopa, no un estofado espeso.
 
@@ -134,11 +134,13 @@ El pimentón es el plato. El pimentón dulce húngaro — no ahumado, no picante
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 Más recetas de Hungría</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/cocina/hungary/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/chicken-paprikash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-paprikash">🍽️</div>
@@ -167,15 +169,20 @@ El pimentón es el plato. El pimentón dulce húngaro — no ahumado, no picante
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/cocina/hungary/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Hungría"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Hungría</span>
 </a>
 
 </main>

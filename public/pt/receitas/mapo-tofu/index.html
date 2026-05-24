@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Mapo Tofu</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/china/">China</a> › <span>Mapo Tofu</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="mapo-tofu" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Chen_Mapo_Tofu.jpg/330px-Chen_Mapo_Tofu.jpg" alt="Mapo Tofu" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 Jantar · China</div>
+      <div class="recipe-badge">🇨🇳 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/china/">China</a></div>
       <h1>Mapo Tofu</h1>
       <p class="recipe-tagline">O mapo tofu é um prato emblemático da culinária de Sichuan — cubos de tofu suave cozidos num molho vermelho intenso de pasta de feijão fermentado (doubanjiang), óleo de malagueta e carne de porco moída. A qualidade entorpecente da pimenta de Sichuan e o calor das malaguetas criam a vibrante sensação ma-la: entorpecente e picante simultaneamente.
 
@@ -140,11 +140,13 @@ O nome traduz-se aproximadamente como o tofu da velha com cara marcada, referenc
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 Mais receitas de China</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/china/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>
@@ -173,15 +175,20 @@ O nome traduz-se aproximadamente como o tofu da velha com cara marcada, referenc
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/china/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="China"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">China</span>
 </a>
 
 </main>

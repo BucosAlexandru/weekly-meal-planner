@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Tarte carélienne</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/finland/">Finlande</a> › <span>Tarte carélienne</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="Tarte carélienne" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Petit-déjeuner · Finlande</div>
+      <div class="recipe-badge">🇫🇮 Petit-déjeuner · <a class="recipe-badge-origin" href="/fr/cuisine/finland/">Finlande</a></div>
       <h1>Tarte carélienne</h1>
       <p class="recipe-tagline">La tarte carélienne — karjalanpiirakka — est originaire de la région de Carélie, un territoire historique aujourd'hui divisé entre la Finlande et la Russie. Les coques ovales sont faites d'une pâte de seigle fine et croustillante qui entoure une garniture douce de porridge de riz cuit lentement dans le lait ; la garniture de pommes de terre est une alternative tout aussi traditionnelle. Les tartes sont cuites à haute température.
 
@@ -139,11 +139,13 @@ Chaudes du four, les karjalanpiirakka sont badigeonnées de munavoi — un méla
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Plus de recettes de Finlande</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/finland/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>
@@ -172,15 +174,20 @@ Chaudes du four, les karjalanpiirakka sont badigeonnées de munavoi — un méla
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/cuisine/finland/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="Finlande"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Finlande</span>
 </a>
 
 </main>

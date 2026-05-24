@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Moqueca</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/brazil/">Brasil</a> › <span>Moqueca</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moqueca" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Moqueca.jpg/330px-Moqueca.jpg" alt="Moqueca" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 Jantar · Brasil</div>
+      <div class="recipe-badge">🇧🇷 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/brazil/">Brasil</a></div>
       <h1>Moqueca</h1>
       <p class="recipe-tagline">A moqueca é um ensopado brasileiro de peixe cozido lentamente que existe em duas formas regionais distintas. A versão baiana — moqueca baiana — usa dendê (azeite de dendê) e leite de coco, dando-lhe uma rica cor laranja e um sabor distintivo moldado pelas tradições culinárias da África Ocidental trazidas através do tráfico de escravos. A versão capixaba do Espírito Santo não usa nenhum dos dois, baseando-se em azeite de urucum e um caldo mais limpo.
 
@@ -134,11 +134,13 @@ O dendê é o ingrediente que define o prato. O seu sabor é mais terroso e robu
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 Mais receitas de Brasil</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/brazil/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/feijoada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="feijoada">🍽️</div>
@@ -161,15 +163,20 @@ O dendê é o ingrediente que define o prato. O seu sabor é mais terroso e robu
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/brazil/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Brasil"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Brasil</span>
 </a>
 
 </main>

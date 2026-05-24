@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Plov</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/cocina/uzbekistan/">Uzbekistán</a> › <span>Plov</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="plov" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Afghan_Palo.jpg/330px-Afghan_Palo.jpg" alt="Plov" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 Cena · Uzbekistán</div>
+      <div class="recipe-badge">🇺🇿 Cena · <a class="recipe-badge-origin" href="/es/cocina/uzbekistan/">Uzbekistán</a></div>
       <h1>Plov</h1>
       <p class="recipe-tagline">El plov uzbeko es el rey del arroz centroasiático — un caldero de hierro fundido en el que el cordero o la ternera se fríen primero en grasa de cola de oveja (o aceite vegetal), seguidos de zanahorias juliana y cebolla, luego se añaden arroz y agua. Todo se cuece destapado hasta que el agua se absorbe, con ajo entero clavado en el arroz. El aroma de zanahoria caramelizada y especias (comino, cilantro) es inconfundible.
 
@@ -138,11 +138,13 @@ El plov se sirve de un caldero común en una bandeja grande, con ensaladas de to
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇿 Más recetas de Uzbekistán</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/cocina/uzbekistan/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/manti/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="manti">🍽️</div>
@@ -165,15 +167,20 @@ El plov se sirve de un caldero común en una bandeja grande, con ensaladas de to
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/cocina/uzbekistan/" data-rmn-back
+   data-cuisine-atmosphere="central-asian"
+   aria-label="Uzbekistán"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Uzbekistán</span>
 </a>
 
 </main>

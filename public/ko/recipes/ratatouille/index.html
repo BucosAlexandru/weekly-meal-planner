@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>라타투이</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/france/">프랑스</a> › <span>라타투이</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ratatouille" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633754-312x231.jpg" alt="라타투이" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 저녁 · 프랑스</div>
+      <div class="recipe-badge">🇫🇷 저녁 · <a class="recipe-badge-origin" href="/ko/yori/france/">프랑스</a></div>
       <h1>라타투이</h1>
       <p class="recipe-tagline">라타투이는 프로방스 여름 요리의 정수로, 8월의 뜨거운 햇살 아래 가지, 애호박, 피망, 토마토가 한꺼번에 익는 니스와 바르 지방의 시장 주방에서 탄생했습니다. 핵심 기법은 인내입니다: 각 채소를 따로따로 가볍게 황금빛이 될 때까지 볶은 후 합치는 것인데, 이렇게 하면 각각의 식감이 살아나고 전체가 균일한 죽처럼 변하는 것을 방지합니다. 하루 전날 만들어 완전히 식히면 라타투이는 놀랍도록 맛있어집니다 — 올리브 오일이 다시 흡수되고, 프로방스 허브의 향이 깊어지며, 따로따로인 풍미들이 그 합보다 훨씬 위대한 무언가로 어우러집니다.</p>
       <div class="recipe-meta-row">
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 프랑스의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/france/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>
@@ -183,15 +185,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/france/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="프랑스"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">프랑스</span>
 </a>
 
 </main>

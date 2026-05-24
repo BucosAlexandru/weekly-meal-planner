@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Ropa Vieja</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/cuba/">Cuba</a> › <span>Ropa Vieja</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ropa-vieja" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cubanfood.jpg/330px-Cubanfood.jpg" alt="Ropa Vieja" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 Dîner · Cuba</div>
+      <div class="recipe-badge">🇨🇺 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/cuba/">Cuba</a></div>
       <h1>Ropa Vieja</h1>
       <p class="recipe-tagline">Ropa vieja — «vieux vêtements» en espagnol — est le plat national cubain : du bœuf braisé jusqu'à se défaire en fils, puis cuit dans un sofrito de tomates, poivrons, oignon et ail qui pénètre chaque fibre. Le plat est arrivé à Cuba depuis les îles Canaries et a des racines dans la cuisine médiévale séfarade, où il était préparé avec les restes du bœuf du Chabbat. Au fil des siècles, il est devenu indissociable de l'identité cubaine.
 
@@ -134,11 +134,13 @@ La technique comporte deux étapes. D'abord, le bœuf mijote dans de l'eau salé
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 Plus de recettes de Cuba</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/cuba/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/picadillo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="picadillo">🍽️</div>
@@ -161,15 +163,20 @@ La technique comporte deux étapes. D'abord, le bœuf mijote dans de l'eau salé
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/cuisine/cuba/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Cuba"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Cuba</span>
 </a>
 
 </main>

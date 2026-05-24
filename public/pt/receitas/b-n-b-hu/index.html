@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Bún bò Huế</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/vietnam/">Vietnã</a> › <span>Bún bò Huế</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="b-n-b-hu" id="recipe-photo-main">🍽️<img src="/images/b-n-b-hu.webp" alt="Bún bò Huế" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Almoço · Vietnã</div>
+      <div class="recipe-badge">🇻🇳 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/vietnam/">Vietnã</a></div>
       <h1>Bún bò Huế</h1>
       <p class="recipe-tagline">Bún bò Huế vem da antiga capital imperial de Huế, no centro do Vietnã, onde é um dos pratos mais marcantes da cidade. Ao contrário do pho — claro, suave e sutil — o bún bò Huế é fortemente temperado: a erva-cidreira e a pasta de camarão fermentada conferem ao caldo uma profundidade saborosa e complexa, e o óleo de malagueta produz uma cor e um calor que o distinguem das outras sopas de macarrão vietnamitas.
 
@@ -135,11 +135,13 @@ O caldo requer tanto pé de porco quanto músculo de boi — o porco contribui c
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Mais receitas de Vietnã</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/vietnam/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/pho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pho">🍽️</div>
@@ -174,15 +176,20 @@ O caldo requer tanto pé de porco quanto músculo de boi — o porco contribui c
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/vietnam/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Vietnã"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Vietnã</span>
 </a>
 
 </main>

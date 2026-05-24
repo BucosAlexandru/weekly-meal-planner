@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Pho</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/vietnam/">Vietnam</a> › <span>Pho</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1096250-312x231.jpg" alt="Pho" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Öğle yemeği · Vietnam</div>
+      <div class="recipe-badge">🇻🇳 Öğle yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/vietnam/">Vietnam</a></div>
       <h1>Pho</h1>
       <p class="recipe-tagline">Pho, 20. yüzyılın başlarında Kuzey Vietnam'da şekillendi — büyük olasılıkla Kızıl Nehir Deltası kasabalarında, oradan Hanoi'ye yayılarak — ve kemik suyu yöntemi ile uzun pişirme süresinde Fransız sömürge mutfağının izlerini taşıyor. Ülke hâlâ ikiye bölünmüş: Hanoi versiyonu sade ve tuzlu, ince noodle ve berrak et suyu; Ho Chi Minh Şehri versiyonu daha tatlı, daha zengin, ot, filiz, hoisin ve sriracha ile dolu.
 
@@ -140,11 +140,13 @@ Et suyu her şeydir. Soğan ve zencefil, tencereye girmeden önce doğrudan ate�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Vietnam tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/vietnam/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/banh-mi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="banh-mi">🍽️</div>
@@ -179,15 +181,20 @@ Et suyu her şeydir. Soğan ve zencefil, tencereye girmeden önce doğrudan ate�
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/mutfak/vietnam/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Vietnam"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">Vietnam</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>किम्बाप</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/south-korea/">दक्षिण कोरिया</a> › <span>किम्बाप</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gimbap_%28pixabay%29.jpg/330px-Gimbap_%28pixabay%29.jpg" alt="किम्बाप" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 दोपहर का खाना · दक्षिण कोरिया</div>
+      <div class="recipe-badge">🇰🇷 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/south-korea/">दक्षिण कोरिया</a></div>
       <h1>किम्बाप</h1>
       <p class="recipe-tagline">किम्बाप — शाब्दिक अर्थ समुद्री शैवाल चावल — दक्षिण कोरिया का राष्ट्रीय स्नैक है और पिकनिक, लंबी यात्राओं या त्वरित दोपहर के भोजन के लिए उत्तम भोजन है। तिल के तेल से तैयार चावल को विभिन्न भराई (गाजर, पालक, अंडे, सॉसेज, दानमुजी, पनीर) के साथ नोरी शीट में लपेटा जाता है और गोल टुकड़ों में काटा जाता है। यह सुशी जैसा दिखता है लेकिन चावल में सिरका नहीं होता।
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 दक्षिण कोरिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/south-korea/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/kimchi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kimchi">🍽️</div>
@@ -171,15 +173,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/south-korea/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="दक्षिण कोरिया"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">दक्षिण कोरिया</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>पास्ता ए फाजोली</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/italy/">इटली</a> › <span>पास्ता ए फाजोली</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-e-fagioli" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Pasta_e_fagioli_cannellini.jpg/330px-Pasta_e_fagioli_cannellini.jpg" alt="पास्ता ए फाजोली" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 रात का खाना · इटली</div>
+      <div class="recipe-badge">🇮🇹 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/italy/">इटली</a></div>
       <h1>पास्ता ए फाजोली</h1>
       <p class="recipe-tagline">पास्ता ए फाजोली — पास्ता और राजमा — इटली के सबसे टिकाऊ किसान व्यंजनों में से एक है, जो सस्ती और लंबे समय तक टिकने वाली सामग्री से तृप्तिदायक भोजन बनाने की cucina povera परंपरा में निहित है। इटली के विभिन्न क्षेत्रों में यह काफ़ी भिन्न होता है: वेनेटो में यह पतला, लगभग सूप जैसा होता है; कैम्पानिया और लाज़ियो में यह गाढ़ी, दलिया जैसी बनावट तक गाढ़ा हो जाता है।
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 इटली की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/italy/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/risotto/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="risotto">🍽️</div>
@@ -173,15 +175,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="इटली"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">इटली</span>
 </a>
 
 </main>

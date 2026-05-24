@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Encebollado</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/ecuador/">Ecuador</a> › <span>Encebollado</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="encebollado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/960px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg" alt="Encebollado" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇨 Mittagessen · Ecuador</div>
+      <div class="recipe-badge">🇪🇨 Mittagessen · <a class="recipe-badge-origin" href="/de/kueche/ecuador/">Ecuador</a></div>
       <h1>Encebollado</h1>
       <p class="recipe-tagline">Encebollado ist Ecuadors bekanntestes Straßenessen und das beliebteste Kater-Heilmittel des Landes — ein dicker Fischeintopf aus frischem Albacore-Thunfisch, Maniok und roter Zwiebel, serviert mit eingelegter Zwiebel obendrauf und Tostadas. Er wird in Guayaquil und an der gesamten Küste vor der Morgendämmerung an Straßenständen verkauft und vor allem am Wochenende konsumiert.
 
@@ -136,11 +136,13 @@ Die prägende Technik ist die Sofrito-Basis aus Tomaten, Zwiebel und Achiote-Pas
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇨 Weitere Rezepte aus Ecuador</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/ecuador/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/shrimp-ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="shrimp-ceviche">🍽️</div>
@@ -163,15 +165,20 @@ Die prägende Technik ist die Sofrito-Basis aus Tomaten, Zwiebel und Achiote-Pas
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/kueche/ecuador/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Ecuador"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Ecuador</span>
 </a>
 
 </main>

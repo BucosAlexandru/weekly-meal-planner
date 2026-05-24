@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Lachssuppe</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/finland/">Finnland</a> › <span>Lachssuppe</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="salmon-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/659056-312x231.jpg" alt="Lachssuppe" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Mittagessen · Finnland</div>
+      <div class="recipe-badge">🇫🇮 Mittagessen · <a class="recipe-badge-origin" href="/de/kueche/finland/">Finnland</a></div>
       <h1>Lachssuppe</h1>
       <p class="recipe-tagline">Lohikeitto — Lachssuppe — ist eine der vertrautesten Zubereitungen Finnlands, das ganze Jahr über in Familienküchen und Straßencafés gegessen. Das Gericht spiegelt Finnlands Verhältnis zum Ostseelachs wider, der seit Jahrhunderten ein Grundnahrungsmittel entlang der Küsten und Flusssysteme des Landes ist. Die Suppe ist bewusst unkompliziert: eine überschaubare Anzahl Zutaten, jede in ausreichender Menge.
 
@@ -136,11 +136,13 @@ Die Sahne unterscheidet die finnische Lachssuppe von Brühen-basierten Fischsupp
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Weitere Rezepte aus Finnland</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/finland/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/karelian-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="karelian-pie">🍽️</div>
@@ -169,15 +171,20 @@ Die Sahne unterscheidet die finnische Lachssuppe von Brühen-basierten Fischsupp
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/kueche/finland/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="Finnland"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Finnland</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Амок</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/cambodia/">Камбоджа</a> › <span>Амок</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="amok" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fish_Amok_with_Rice.jpg/960px-Fish_Amok_with_Rice.jpg" alt="Амок" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 Ужин · Камбоджа</div>
+      <div class="recipe-badge">🇰🇭 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/cambodia/">Камбоджа</a></div>
       <h1>Амок</h1>
       <p class="recipe-tagline">Амок — самое прославленное блюдо Камбоджи: рыбное карри на пару, приготовленное с кокосовым молоком, пастой крёунг и листьями каффир-лайма, традиционно подаваемое в стаканчиках из банановых листьев. Стаканчик из бананового листа не декоративен: он придаёт форму кустарду по мере застывания и сообщает тонкий зелёный аромат.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 Ещё рецепты из Камбоджа</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/cambodia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/lok-lak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="lok-lak">🍽️</div>
@@ -165,15 +167,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/kuhnya/cambodia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Камбоджа"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Камбоджа</span>
 </a>
 
 </main>

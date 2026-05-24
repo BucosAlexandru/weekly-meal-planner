@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Spaghete Carbonara</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/italy/">Italia</a> › <span>Spaghete Carbonara</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="spaghetti-carbonara" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/330px-Espaguetis_carbonara.jpg" alt="Spaghete Carbonara" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 Prânz · Italia</div>
+      <div class="recipe-badge">🇮🇹 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/italy/">Italia</a></div>
       <h1>Spaghete Carbonara</h1>
       <p class="recipe-tagline">Spaghete Carbonara este un clasic roman construit din numai cinci ingrediente: paste, guanciale, ouă, Pecorino Romano și piper negru. Ouăle se gătesc din căldura reziduală a pastelor — fără smântână, fără tigaie — formând un sos lucios și mătăsos care îmbracă fiecare fir. Bogat, sărat și puternic piperat, este una dintre cele mai satisfăcătoare mese în 30 de minute din lume.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 Alte rețete din Italia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/italy/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/risotto/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="risotto">🍽️</div>
@@ -167,15 +169,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Italia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Italia</span>
 </a>
 
 </main>

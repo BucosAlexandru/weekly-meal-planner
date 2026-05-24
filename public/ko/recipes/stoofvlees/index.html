@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>스토프블레스</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/belgium/">벨기에</a> › <span>스토프블레스</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stoofvlees" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jielbeaumadier_carbonade_flamande_2_2012.jpg/330px-Jielbeaumadier_carbonade_flamande_2_2012.jpg" alt="스토프블레스" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 저녁 · 벨기에</div>
+      <div class="recipe-badge">🇧🇪 저녁 · <a class="recipe-badge-origin" href="/ko/yori/belgium/">벨기에</a></div>
       <h1>스토프블레스</h1>
       <p class="recipe-tagline">스토프블레스 — 프랑스어로 카르보나드 플라망드 — 는 벨기에에서 가장 상징적인 느린 조리 요리입니다: 쇠고기와 양파를 벨기에 흑맥주에서 고기가 흐물흐물해지고 소스가 광택 있는 마호가니 색 그레이비가 될 때까지 뭉근히 익힙니다. 중세 시대부터 먹어온 플랑드르 지역과 밀접하게 연관되어 있습니다. 벨기에 브라운 에일 — 그 맥아의 단맛 — 은 프랑스 부르기뇽에서 와인이 하는 역할을 합니다.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 벨기에의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/belgium/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/moules-frites/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moules-frites">🍽️</div>
@@ -161,15 +163,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/belgium/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="벨기에"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">벨기에</span>
 </a>
 
 </main>

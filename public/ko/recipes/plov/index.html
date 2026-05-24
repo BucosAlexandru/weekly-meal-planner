@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>플로프</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/uzbekistan/">우즈베키스탄</a> › <span>플로프</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="plov" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Afghan_Palo.jpg/330px-Afghan_Palo.jpg" alt="플로프" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 저녁 · 우즈베키스탄</div>
+      <div class="recipe-badge">🇺🇿 저녁 · <a class="recipe-badge-origin" href="/ko/yori/uzbekistan/">우즈베키스탄</a></div>
       <h1>플로프</h1>
       <p class="recipe-tagline">우즈베크 플로프는 중앙아시아 쌀 요리의 왕입니다. 무쇠 솥에 양고기나 소고기를 양꼬리 지방(또는 식물성 기름)에 먼저 볶고, 채 썬 당근과 양파를 더하고, 마지막으로 쌀과 물을 넣습니다. 뚜껑 없이 물이 모두 흡수될 때까지 조리하며, 통마늘을 쌀에 꽂습니다. 캐러멜화된 당근과 향신료(쿠민, 고수)의 향기가 독특합니다.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇿 우즈베키스탄의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/uzbekistan/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/manti/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="manti">🍽️</div>
@@ -165,15 +167,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/uzbekistan/" data-rmn-back
+   data-cuisine-atmosphere="central-asian"
+   aria-label="우즈베키스탄"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">우즈베키스탄</span>
 </a>
 
 </main>

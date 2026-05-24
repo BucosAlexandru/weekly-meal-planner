@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tom Yum</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/thailand/">Thailanda</a> › <span>Tom Yum</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-yum" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" alt="Tom Yum" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Prânz · Thailanda</div>
+      <div class="recipe-badge">🇹🇭 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/thailand/">Thailanda</a></div>
       <h1>Tom Yum</h1>
       <p class="recipe-tagline">Tom Yum este cea mai recunoscută internațional supă din Thailanda, construită pe o combinație distinctă de arome calde, acre, sărate și ușor dulci într-un singur bulion. Aromaticele — lemongrass, galangal și frunze de kaffir — sunt zdrobite mai degrabă decât tăiate, infuzând un bulion clar cu o căldură strălucitoare susținută de citrice. Supa nu poate fi condimentată în avans — echilibrul de sos de pește, suc de lime și zahăr de palmier se gustă și se ajustează chiar la final.
 
@@ -135,11 +135,13 @@ Tom Yum Goong — cu creveți — este cea mai familiară versiune, deși exist�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Alte rețete din Thailanda</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/thailand/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>
@@ -168,15 +170,20 @@ Tom Yum Goong — cu creveți — este cea mai familiară versiune, deși exist�
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/thailand/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Thailanda"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Thailanda</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>لفائف القرفة</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/sweden/">السويد</a> › <span>لفائف القرفة</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cinnamon-bun" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Cinnamon_roll_in_Stockholm.jpg/330px-Cinnamon_roll_in_Stockholm.jpg" alt="لفائف القرفة" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 حلوى · السويد</div>
+      <div class="recipe-badge">🇸🇪 حلوى · <a class="recipe-badge-origin" href="/ar/matbakh/sweden/">السويد</a></div>
       <h1>لفائف القرفة</h1>
       <p class="recipe-tagline">الكانيلبوله هو كعكة القرفة السويدية — عجينة طرية ومُغنّاة قليلاً بنكهة القرفة والهيل، تُلوى في عقد مميزة وتُرش بسكر لؤلؤي. تحتفل السويد به بيومه الخاص في الرابع من أكتوبر، وتظهر الكعكة في كل مقهى ومخبز في البلاد. إن الهيل في العجينة هو ما يميز النسخة السويدية عن لفائف القرفة الأمريكية أو الألمانية.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 المزيد من وصفات السويد</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/sweden/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/swedish-meatballs/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="swedish-meatballs">🍽️</div>
@@ -175,15 +177,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ar/wasafat/" data-rmn-back
-   aria-label="وصفات"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ar/matbakh/sweden/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="السويد"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">وصفات</span>
+  <span class="rmb-label">السويد</span>
 </a>
 
 </main>

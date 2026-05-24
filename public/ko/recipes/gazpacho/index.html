@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>가스파초</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/spain/">스페인</a> › <span>가스파초</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gazpacho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/662542-312x231.jpg" alt="가스파초" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇸 점심 · 스페인</div>
+      <div class="recipe-badge">🇪🇸 점심 · <a class="recipe-badge-origin" href="/ko/yori/spain/">스페인</a></div>
       <h1>가스파초</h1>
       <p class="recipe-tagline">가스파초(Gazpacho)는 스페인 남부 안달루시아의 대표 냉수프로, 과달키비르 계곡의 뙤약볕 아래 농장에서 태어났습니다. 밭일꾼들은 시원하고 든든하며 단순한 무언가가 필요했습니다. 이를 특별하게 만드는 것은 레시피가 아닌 방법입니다: 잘 익은 여름 토마토를 전날 빵과 함께 갈고, 올리브오일을 가는 실처럼 부어 유화시킨 뒤 6–8°C로 차게 식혀 풍미를 짙게 하고 질감을 실크처럼 만드는 것입니다. 절대로 실온에서 내면 안 됩니다 — 좋은 가스파초는 8월의 스페인 맛을 담고 있습니다.</p>
       <div class="recipe-meta-row">
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇸 스페인의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/spain/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/paella/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="paella">🍽️</div>
@@ -157,15 +159,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/spain/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="스페인"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">스페인</span>
 </a>
 
 </main>

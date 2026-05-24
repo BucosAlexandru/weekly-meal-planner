@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Nihari</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/pakistan/">Paquistão</a> › <span>Nihari</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="nihari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nalli_Nihari_India.jpg/330px-Nalli_Nihari_India.jpg" alt="Nihari" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Jantar · Paquistão</div>
+      <div class="recipe-badge">🇵🇰 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/pakistan/">Paquistão</a></div>
       <h1>Nihari</h1>
       <p class="recipe-tagline">Nihari tira o seu nome da palavra árabe para manhã — nahar — porque era um prato comido tradicionalmente ao amanhecer, após a oração do fajr, pelos trabalhadores e nawabs do Deli mogol. À medida que a capital mogol declinou, o prato migrou com os cozinheiros de Deli para Lucknow e depois para Carachi e Lahore.
 
@@ -135,11 +135,13 @@ O cozimento lento transforma o ossobuco em três a quatro horas, dissolvendo o c
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Mais receitas de Paquistão</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/pakistan/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/biryani/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="biryani">🍽️</div>
@@ -162,15 +164,20 @@ O cozimento lento transforma o ossobuco em três a quatro horas, dissolvendo o c
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/pakistan/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="Paquistão"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Paquistão</span>
 </a>
 
 </main>

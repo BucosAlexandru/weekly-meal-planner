@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Ceviche</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/peru/">Peru</a> › <span>Ceviche</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ceviche" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/330px-Cebiche_de_corvina.JPG" alt="Ceviche" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 Gustare · Peru</div>
+      <div class="recipe-badge">🇵🇪 Gustare · <a class="recipe-badge-origin" href="/ro/bucatarie/peru/">Peru</a></div>
       <h1>Ceviche</h1>
       <p class="recipe-tagline">Ceviche este preparatul național al Perului, cu o istorie ce se extinde înapoi la culturile precolombiene de pe coasta pacifică. Popoarele moche și chimu conservau peștele în chicha fermentată și sare; utilizarea citricelor a apărut după contactul cu spaniolii, când lime-urile au înlocuit agenții acizi anteriori. Peru a înregistrat oficial ceviche-ul ca parte a patrimoniului său cultural în 2004.
 
@@ -134,11 +134,13 @@ Elementul central este leche de tigre — laptele tigrului — marinada acidă d
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 Alte rețete din Peru</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/peru/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/arroz-chaufa/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="arroz-chaufa">🍽️</div>
@@ -173,15 +175,20 @@ Elementul central este leche de tigre — laptele tigrului — marinada acidă d
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/peru/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Peru"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Peru</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Schnitzel de porco</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/poland/">Polónia</a> › <span>Schnitzel de porco</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pork-schnitzel" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg/330px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg" alt="Schnitzel de porco" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Jantar · Polónia</div>
+      <div class="recipe-badge">🇵🇱 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/poland/">Polónia</a></div>
       <h1>Schnitzel de porco</h1>
       <p class="recipe-tagline">Kotlet schabowy — o schnitzel polaco — é o prato nacional de porco da Polónia. Uma fatia de lombo de porco é batida fina, coberta em farinha, ovo e pão ralado, depois frita em banha ou óleo até ficar dourada e crocante. Ao contrário do Wiener Schnitzel (vitela), o kotlet polaco sempre foi de porco e continua a ser o jantar de domingo de milhões de famílias.
 
@@ -135,7 +135,9 @@ Servido classicamente com batatas cozidas e chucrute salteado. A crosta estaladi
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->
@@ -150,15 +152,20 @@ Servido classicamente com batatas cozidas e chucrute salteado. A crosta estaladi
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/poland/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Polónia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Polónia</span>
 </a>
 
 </main>

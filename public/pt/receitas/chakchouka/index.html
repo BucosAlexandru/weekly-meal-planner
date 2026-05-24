@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Chakchouka</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/tunisia/">Tunísia</a> › <span>Chakchouka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakchouka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="Chakchouka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 Jantar · Tunísia</div>
+      <div class="recipe-badge">🇹🇳 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/tunisia/">Tunísia</a></div>
       <h1>Chakchouka</h1>
       <p class="recipe-tagline">O chakchouka é um prato icônico da cozinha norte-africana, originário da Tunísia, onde ovos escalfados em molho de tomate temperado com pimentões se tornaram símbolo do café da manhã comunitário. A simplicidade dos ingredientes esconde uma notável complexidade sensorial.
 
@@ -137,11 +137,13 @@ Da Tunísia, a receita se espalhou por todo o norte da África, Israel e Oriente
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 Mais receitas de Tunísia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/tunisia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/brik/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="brik">🍽️</div>
@@ -164,15 +166,20 @@ Da Tunísia, a receita se espalhou por todo o norte da África, Israel e Oriente
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/tunisia/" data-rmn-back
+   data-cuisine-atmosphere="north-african"
+   aria-label="Tunísia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Tunísia</span>
 </a>
 
 </main>

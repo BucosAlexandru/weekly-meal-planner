@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Biryani</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/pakistan/">Pakistan</a> › <span>Biryani</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="Biryani" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Akşam yemeği · Pakistan</div>
+      <div class="recipe-badge">🇵🇰 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/pakistan/">Pakistan</a></div>
       <h1>Biryani</h1>
       <p class="recipe-tagline">Biryani, Hindistan alt kıtasının Babür saraylarına dayanır; burada yüzyıllar boyunca Pers etkili pirinç yemekleri kendine özgü bölgesel formlara evrildi. Pakistan'ın biryani geleneği — özellikle Karaçi ve Haydarabad stilleri — alt kıtanın en aromatik versiyonları arasında yer alır; bütün baharatlar, karamelize soğan ve katmanlı pirinç üzerine inşa edilmiştir. Bu yemek her önemli törende merkezde yer alır: düğünler, Ramazan Bayramı kutlamaları ve büyük aile toplantıları.
 
@@ -145,11 +145,13 @@ Teknik dum pişirme yöntemidir: yarı pişmiş pirinç ve baharatlı et ağır 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Pakistan tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/pakistan/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>
@@ -172,15 +174,20 @@ Teknik dum pişirme yöntemidir: yarı pişmiş pirinç ve baharatlı et ağır 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/mutfak/pakistan/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="Pakistan"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">Pakistan</span>
 </a>
 
 </main>

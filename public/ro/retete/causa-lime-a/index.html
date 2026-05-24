@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Causa Limeña</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/peru/">Peru</a> › <span>Causa Limeña</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="causa-lime-a" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 Aperitiv · Peru</div>
+      <div class="recipe-badge">🇵🇪 Aperitiv · <a class="recipe-badge-origin" href="/ro/bucatarie/peru/">Peru</a></div>
       <h1>Causa Limeña</h1>
       <p class="recipe-tagline">Causa limeña este o terină presată de cartofi galbeni peruvieni, condimentați cu ají amarillo și zeamă de lămâie, și stratificată cu umplutură cremoasă de ton sau pui cu maioneză și avocado. Cartofii andini — mai ales cei cu pastă galbenă naturală — sunt fierți, pasați fin și amestecați cu ulei, ají și lămâie până obțin o textură mătăsoasă. Felul se servește rece, tăiat în felii care dezvăluie straturile contrastante.
 
@@ -138,11 +138,13 @@ Preparatul este o emblemă a fuziunii culinare peruane: cartofii andinii au mii 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 Alte rețete din Peru</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/peru/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>
@@ -177,15 +179,20 @@ Preparatul este o emblemă a fuziunii culinare peruane: cartofii andinii au mii 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/peru/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Peru"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Peru</span>
 </a>
 
 </main>

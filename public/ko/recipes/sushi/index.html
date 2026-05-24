@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>스시</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/japan/">일본</a> › <span>스시</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="sushi" id="recipe-photo-main">🍽️<img src="/images/sushi.webp" alt="스시" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 저녁 · 일본</div>
+      <div class="recipe-badge">🇯🇵 저녁 · <a class="recipe-badge-origin" href="/ko/yori/japan/">일본</a></div>
       <h1>스시</h1>
       <p class="recipe-tagline">현대 스시는 18세기 에도 — 지금의 도쿄 — 에서 완성되었습니다. 그곳에서는 속도와 정확함이 기술이었고, 생선이 아닌 밥이 예술이었습니다. 핵심은 샤리(配合酢飯)입니다: 단립 쌀에 식초, 설탕, 소금으로 간을 하고 자르듯 섞은 뒤 (절대 원을 그리지 않고), 냉장이 아닌 체온으로 보관합니다. 롤링 기술은 구조를 으깨지 않고 깔끔한 원형 단면을 얻기 위해 균일하고 단단한 압력과 날카롭게 젖은 칼이 필요합니다.</p>
       <div class="recipe-meta-row">
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 일본의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/japan/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/ramen/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ramen">🍽️</div>
@@ -186,15 +188,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/japan/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="일본"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">일본</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>पलोव</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/uzbekistan/">उज़्बेकिस्तान</a> › <span>पलोव</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="plov" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Afghan_Palo.jpg/330px-Afghan_Palo.jpg" alt="पलोव" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 रात का खाना · उज़्बेकिस्तान</div>
+      <div class="recipe-badge">🇺🇿 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/uzbekistan/">उज़्बेकिस्तान</a></div>
       <h1>पलोव</h1>
       <p class="recipe-tagline">उज़्बेक पलोव मध्य एशिया के चावल व्यंजनों का राजा है — एक लोहे की बड़ी कड़ाही में पहले मेमना या बीफ भेड़ की पूंछ की चर्बी (या वनस्पति तेल) में तला जाता है, फिर जूलियन गाजर और प्याज़ डाले जाते हैं, फिर चावल और पानी। सब कुछ बिना ढके पकाया जाता है जब तक पानी सोख न जाए, चावल में पूरा लहसुन घुसाया जाता है। कैरेमेलाइज़्ड गाजर और मसालों (जीरा, धनिया) की सुगंध अद्वितीय होती है।
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇿 उज़्बेकिस्तान की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/uzbekistan/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/manti/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="manti">🍽️</div>
@@ -165,15 +167,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/uzbekistan/" data-rmn-back
+   data-cuisine-atmosphere="central-asian"
+   aria-label="उज़्बेकिस्तान"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">उज़्बेकिस्तान</span>
 </a>
 
 </main>

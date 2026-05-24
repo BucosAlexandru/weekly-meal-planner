@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Pui dulce-acrișor</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/china/">China</a> › <span>Pui dulce-acrișor</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="sweet-and-sour-chicken" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/662422-312x231.jpg" alt="Pui dulce-acrișor" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 Cină · China</div>
+      <div class="recipe-badge">🇨🇳 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/china/">China</a></div>
       <h1>Pui dulce-acrișor</h1>
       <p class="recipe-tagline">Puiul dulce-acrișor în forma sa occidentală este în mare parte o exportație cantonează, modelată de restaurantele diasporei de la mijlocul secolului XX. Tradiția chineză a sosului dulce-acrișor — tancu, adică zahăr-oțet — aparține în principal bucătăriei cantoneze și era preparată tradițional cu porc. Versiunea cu ananas și ardei grași a devenit standardul occidental, adaptată pentru gusturi mai puțin familiare cu aromele originale.
 
@@ -133,11 +133,13 @@ Echilibrul este totul în acest fel. Sosul trebuie să lovească mai întâi acr
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 Alte rețete din China</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/china/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>
@@ -166,15 +168,20 @@ Echilibrul este totul în acest fel. Sosul trebuie să lovească mai întâi acr
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/china/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="China"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">China</span>
 </a>
 
 </main>

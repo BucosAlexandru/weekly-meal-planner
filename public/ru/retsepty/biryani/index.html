@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Бирьяни</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/pakistan/">Пакистан</a> › <span>Бирьяни</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="Бирьяни" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Ужин · Пакистан</div>
+      <div class="recipe-badge">🇵🇰 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/pakistan/">Пакистан</a></div>
       <h1>Бирьяни</h1>
       <p class="recipe-tagline">Бирьяни берёт начало в могольских дворах Индийского субконтинента, где блюда из риса с персидским влиянием за столетия эволюционировали в самобытные региональные формы. Пакистанская традиция бирьяни — особенно стили из Карачи и Хайдарабада — входит в число наиболее ароматных на субконтиненте, построенных на целых специях, карамелизованном луке и слоях риса. Блюдо присутствует на каждом важном торжестве: свадьбах, праздновании Ид и больших семейных собраниях.
 
@@ -145,11 +145,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Ещё рецепты из Пакистан</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/pakistan/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>
@@ -172,15 +174,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/kuhnya/pakistan/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="Пакистан"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Пакистан</span>
 </a>
 
 </main>

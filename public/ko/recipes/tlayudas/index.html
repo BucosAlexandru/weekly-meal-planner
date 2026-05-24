@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>틀라유다스</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/mexico/">멕시코</a> › <span>틀라유다스</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tlayudas" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/330px-Tlayuda12-05oaxaca013x.jpg" alt="틀라유다스" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 저녁 · 멕시코</div>
+      <div class="recipe-badge">🇲🇽 저녁 · <a class="recipe-badge-origin" href="/ko/yori/mexico/">멕시코</a></div>
       <h1>틀라유다스</h1>
       <p class="recipe-tagline">틀라유다스는 오아하카의 피자입니다. 크고(30cm) 반건조된 바삭한 옥수수 토르티야에 프리홀레스 네그로스(볶은 검은 콩)를 바르고 오아하카 치즈를 얹어 고기(타사호—말린 소고기, 초리소, 돼지고기)와 신선한 토핑을 올립니다. 오아하카는 멕시코 남부에서 토착 요리 전통이 가장 풍부한 주입니다.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 멕시코의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/mexico/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>
@@ -188,15 +190,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/mexico/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="멕시코"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">멕시코</span>
 </a>
 
 </main>

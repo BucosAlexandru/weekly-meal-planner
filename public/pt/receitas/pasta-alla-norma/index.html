@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Pasta alla Norma</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/italy/">Itália</a> › <span>Pasta alla Norma</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-alla-norma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg/330px-Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg" alt="Pasta alla Norma" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 Almoço · Itália</div>
+      <div class="recipe-badge">🇮🇹 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/italy/">Itália</a></div>
       <h1>Pasta alla Norma</h1>
       <p class="recipe-tagline">A pasta alla Norma é o orgulho de Catânia — um prato de massa siciliano onde a berinjela frita encontra o molho de tomate fresco, azeite, manjericão e ricotta salata ralada. O nome homenageia a ópera Norma do compositor catanense Vincenzo Bellini: diz-se que um escritor exclamou que o prato era tão perfeito quanto Norma. A berinjela deve ser frita separadamente e bem escorrida — não apenas refogada — para obter a textura sedosa certa.
 
@@ -136,11 +136,13 @@ A ricotta salata (ricotta prensada, salgada e seca) é insubstituível: firme, s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 Mais receitas de Itália</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/italy/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>
@@ -175,15 +177,20 @@ A ricotta salata (ricotta prensada, salgada e seca) é insubstituível: firme, s
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Itália"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Itália</span>
 </a>
 
 </main>

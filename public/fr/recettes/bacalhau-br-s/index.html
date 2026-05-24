@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Bacalhau à Brás</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/portugal/">Portugal</a> › <span>Bacalhau à Brás</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bacalhau-br-s" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633251-312x231.jpg" alt="Bacalhau à Brás" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 Dîner · Portugal</div>
+      <div class="recipe-badge">🇵🇹 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/portugal/">Portugal</a></div>
       <h1>Bacalhau à Brás</h1>
       <p class="recipe-tagline">Le bacalhau à Brás est l'une des 365 préparations de morue salée que la cuisine portugaise revendique — une recette pour chaque jour de l'année. Le plat tire son origine d'une taverne du Bairro Alto à Lisbonne au XIXe siècle, où un certain Brás a combiné la morue dessalée avec de très fines frites en allumettes et des œufs battus.
 
@@ -131,11 +131,13 @@ La morue salée doit tremper vingt-quatre à quarante-huit heures, avec des chan
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇹 Plus de recettes de Portugal</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/portugal/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/francesinha/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="francesinha">🍽️</div>
@@ -158,15 +160,20 @@ La morue salée doit tremper vingt-quatre à quarante-huit heures, avec des chan
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/cuisine/portugal/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Portugal"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Portugal</span>
 </a>
 
 </main>

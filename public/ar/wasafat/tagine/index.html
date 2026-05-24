@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>طاجين</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/morocco/">المغرب</a> › <span>طاجين</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="طاجين" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 عشاء · المغرب</div>
+      <div class="recipe-badge">🇲🇦 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/morocco/">المغرب</a></div>
       <h1>طاجين</h1>
       <p class="recipe-tagline">يأخذ الطاجين اسمه من الإناء الفخاري المخروطي الذي يُطهى فيه — تصميم ظلّ دون تغيير يُذكر عبر قرون من الطبخ المغربي وشمال أفريقيا. يحبس المخروط البخار المتصاعد ويعيد الرطوبة إلى المكونات، منتجاً لحماً طرياً دون أن يجفّ وصلصة مركّزة لا تحتاج إلى تكثيف. الضأن هو البروتين الأكثر تقليدية، وإن كانت طواجن الدجاج والسمك شائعة بالقدر ذاته.
 
@@ -144,11 +144,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 المزيد من وصفات المغرب</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/morocco/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>
@@ -177,15 +179,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ar/wasafat/" data-rmn-back
-   aria-label="وصفات"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ar/matbakh/morocco/" data-rmn-back
+   data-cuisine-atmosphere="north-african"
+   aria-label="المغرب"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">وصفات</span>
+  <span class="rmb-label">المغرب</span>
 </a>
 
 </main>

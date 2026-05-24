@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>بيبيمباب</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/south-korea/">كوريا الجنوبية</a> › <span>بيبيمباب</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bibimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/330px-Dolsot-bibimbap.jpg" alt="بيبيمباب" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 غداء · كوريا الجنوبية</div>
+      <div class="recipe-badge">🇰🇷 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/south-korea/">كوريا الجنوبية</a></div>
       <h1>بيبيمباب</h1>
       <p class="recipe-tagline">بيبيمباب — تعني الكلمة ببساطة 'أرز مخلوط' — يُعدّ من أكثر التعبيرات المباشرة عن فلسفة الطهي الكورية: مكوّنات تُحضَّر بشكل منفصل، يُطهى كل منها أو يُتبَّل لإبراز طابعه الخاص، ولا تتّحد إلا في لحظة الأكل. تطوّر الطبق في بلاط الملكية الجوسيونية، حيث كانت الخدمة المتفننة على الطاولة تستوجب تحضير كل نامول (خضار متبّل) على حدة.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 المزيد من وصفات كوريا الجنوبية</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/south-korea/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/kimchi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kimchi">🍽️</div>
@@ -173,15 +175,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ar/wasafat/" data-rmn-back
-   aria-label="وصفات"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ar/matbakh/south-korea/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="كوريا الجنوبية"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">وصفات</span>
+  <span class="rmb-label">كوريا الجنوبية</span>
 </a>
 
 </main>

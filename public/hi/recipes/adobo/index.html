@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Adobo</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/philippines/">Philippines</a> › <span>Adobo</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="adobo" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/638741-312x231.jpg" alt="Adobo" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Dinner · Philippines</div>
+      <div class="recipe-badge">🇵🇭 Dinner · <a class="recipe-badge-origin" href="/hi/vyanjan/philippines/">Philippines</a></div>
       <h1>Adobo</h1>
       <p class="recipe-tagline">अडोबो फिलीपींस का राष्ट्रीय व्यंजन है, हालांकि यह शब्द स्पेनिश है — उपनिवेशकारों द्वारा लाया गया जिन्होंने स्थानीय सिरके में पकाने की विधि में अपनी खुद की मैरिनेटिंग तकनीकों से समानता पाई। सिरके में मांस संरक्षित करने की फिलीपींस की परंपरा स्पेनिश आगमन से पहले की है: यह बिना रेफ्रिजरेशन के उष्णकटिबंधीय जलवायु में भोजन रखने का व्यावहारिक समाधान था।
 
@@ -127,7 +127,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->
@@ -142,15 +144,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/philippines/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Philippines"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">Philippines</span>
 </a>
 
 </main>

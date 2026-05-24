@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Kung Pao Tavuk</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/china/">Çin</a> › <span>Kung Pao Tavuk</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kung-pao-chicken" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/649129-312x231.jpg" alt="Kung Pao Tavuk" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 Akşam yemeği · Çin</div>
+      <div class="recipe-badge">🇨🇳 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/china/">Çin</a></div>
       <h1>Kung Pao Tavuk</h1>
       <p class="recipe-tagline">Kung Pao Tavuk — 宫保鸡丁, Gōngbǎo Jīdīng — Sichuan eyaletinin klasik bir yemeğidir; Gong Bao (saray koruyucusu) onur unvanını taşıyan 19. yüzyıl valisi Ding Baozhen onuruna yaratıldı. Yemek, feodalizmin sembolü olarak kınandığı Çin Kültür Devrimi'nden sağ çıktı ve her zamankinden daha popüler olarak çıktı. Dört lezzet dengesi — Chinkiang siyah pirinç sirkesinin ekşisi, soya sosunun tuzluluğu, şekerin tatlılığı ve Sichuan biberlerinin uyuşturucu acısı — uzmanların wok pişirmenin tanımlayıcı lezzet profili olarak nitelendirdiği şeydir.</p>
       <div class="recipe-meta-row">
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 Çin tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/china/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/sweet-and-sour-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sweet-and-sour-chicken">🍽️</div>
@@ -163,15 +165,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/mutfak/china/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="Çin"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">Çin</span>
 </a>
 
 </main>

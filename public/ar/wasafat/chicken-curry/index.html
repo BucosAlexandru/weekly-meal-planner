@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>دجاج بالكاري</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/india/">الهند</a> › <span>دجاج بالكاري</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-curry" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="دجاج بالكاري" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 عشاء · الهند</div>
+      <div class="recipe-badge">🇮🇳 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/india/">الهند</a></div>
       <h1>دجاج بالكاري</h1>
       <p class="recipe-tagline">يستمد كاري الدجاج على الطريقة الهندية الشمالية روحه من مطبخ البنجاب، حيث أتقن الطهاة تقنية البهونا — قلي التوابل حتى يتبخر كل قطرة رطوبة وتتركز معجونة الماسالا وتتعمق في الزيت. الدجاج بالعظم ضروري: يتحرر الكولاجين ونخاع العظام أثناء الطهي المطوّل مكثّفاً الصلصة بطريقة لا تستطيع أي صدور منزوعة العظام تحقيقها. تُضاف لمسة الغارام ماسالا الأخيرة بعيداً عن النار لتتفتّح برفق بدلاً من الاحتراق، مانحةً الكاري عطره الدافئ والمركّب.</p>
       <div class="recipe-meta-row">
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 المزيد من وصفات الهند</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/india/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/dhal/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dhal">🍽️</div>
@@ -177,15 +179,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ar/wasafat/" data-rmn-back
-   aria-label="وصفات"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ar/matbakh/india/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="الهند"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">وصفات</span>
+  <span class="rmb-label">الهند</span>
 </a>
 
 </main>

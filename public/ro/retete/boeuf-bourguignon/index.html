@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Boeuf Bourguignon</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/france/">Franța</a> › <span>Boeuf Bourguignon</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="boeuf-bourguignon" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Beef_bourguignon_NYT.jpg/330px-Beef_bourguignon_NYT.jpg" alt="Boeuf Bourguignon" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Cină · Franța</div>
+      <div class="recipe-badge">🇫🇷 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/france/">Franța</a></div>
       <h1>Boeuf Bourguignon</h1>
       <p class="recipe-tagline">Boeuf Bourguignon este bijuteria gastronomică a regiunii Burgundia din Franța, un preparat care transformă cărnea de vită în catifea lichidă prin ore lungi de fiert în vin roșu. Rețeta datează din bucătăria rurală franceză, unde gospodinele îl foloseau pentru a frăgezi tăieturile mai tari.
 
@@ -141,11 +141,13 @@ Fiecare cratiță capătă personalitate proprie prin garnitura de morcovi, cham
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Alte rețete din Franța</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/france/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍳</div>
@@ -192,15 +194,20 @@ Fiecare cratiță capătă personalitate proprie prin garnitura de morcovi, cham
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/france/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Franța"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Franța</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Куриный карри</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/india/">Индия</a> › <span>Куриный карри</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-curry" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="Куриный карри" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Ужин · Индия</div>
+      <div class="recipe-badge">🇮🇳 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/india/">Индия</a></div>
       <h1>Куриный карри</h1>
       <p class="recipe-tagline">Этот куриный карри в стиле северной Индии восходит своей душой к пенджабской кухне, где повара усовершенствовали технику бхуна — обжарку ароматических ингредиентов до полного испарения влаги, пока масала не потемнеет и не сконцентрируется в масле. Курица на кости незаменима: во время долгого тушения высвобождаются коллаген и костный мозг, загущая соус так, как никакое куриное филе повторить не может. Финальный штрих гарам масала добавляется с огня, где он мягко раскрывается вместо того чтобы гореть, наделяя карри тёплым, многогранным ароматом.</p>
       <div class="recipe-meta-row">
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Ещё рецепты из Индия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/india/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/dhal/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dhal">🍽️</div>
@@ -176,15 +178,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/kuhnya/india/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="Индия"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Индия</span>
 </a>
 
 </main>

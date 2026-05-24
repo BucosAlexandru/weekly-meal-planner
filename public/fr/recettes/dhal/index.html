@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Dhal</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/india/">Inde</a> › <span>Dhal</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dhal" id="recipe-photo-main">🍽️<img src="/images/dhal.webp" alt="Dhal" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Dîner · Inde</div>
+      <div class="recipe-badge">🇮🇳 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/india/">Inde</a></div>
       <h1>Dhal</h1>
       <p class="recipe-tagline">Le dhal est le pain quotidien du sous-continent indien — mangé tous les jours dans des millions de foyers, du Punjab au Tamil Nadu, des échoppes de rue de Kolkata aux dhabas du Rajasthan. Le mot signifie simplement 'légumineuse fendue', mais le plat est tout sauf simple : le masoor dal (lentilles rouges) est transformé par une base d'oignon caramélisé, gingembre, ail et épices en couches, puis fini avec un tadka — une explosion d'épices entières grillées dans du ghee brûlant versée sur le bol au dernier instant. Ce versement grésillant n'est pas de la garniture ; c'est le coup de saveur final qui distingue le dhal de la soupe.</p>
       <div class="recipe-meta-row">
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Plus de recettes de Inde</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/india/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>
@@ -175,15 +177,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/cuisine/india/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="Inde"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Inde</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Chakhokhbili</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/georgia/">Geórgia</a> › <span>Chakhokhbili</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakhokhbili" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/%D0%A7%D0%B0%D1%85%D0%BE%D1%85%D0%B1%D0%B8%D0%BB%D0%B8.JPG/330px-%D0%A7%D0%B0%D1%85%D0%BE%D1%85%D0%B1%D0%B8%D0%BB%D0%B8.JPG" alt="Chakhokhbili" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 Jantar · Geórgia</div>
+      <div class="recipe-badge">🇬🇪 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/georgia/">Geórgia</a></div>
       <h1>Chakhokhbili</h1>
       <p class="recipe-tagline">Chakhokhbili é um ensopado georgiano de frango cujo nome remonta à palavra para faisão — khokhobi — refletindo uma época em que o prato era feito com caça. A técnica é distintivamente georgiana: a carne é dourada a seco em uma panela quente, sem óleo ou líquido, para aprofundar o sabor pelo contato direto com o fundo.
 
@@ -138,11 +138,13 @@ Tomates frescos, cebola e uma mistura de especiarias georgianas incluindo feno-g
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 Mais receitas de Geórgia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/georgia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍽️</div>
@@ -177,15 +179,20 @@ Tomates frescos, cebola e uma mistura de especiarias georgianas incluindo feno-g
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/georgia/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Geórgia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Geórgia</span>
 </a>
 
 </main>

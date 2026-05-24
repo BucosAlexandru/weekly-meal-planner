@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>रोपा विएजा</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/cuba/">क्यूबा</a> › <span>रोपा विएजा</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ropa-vieja" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cubanfood.jpg/330px-Cubanfood.jpg" alt="रोपा विएजा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 रात का खाना · क्यूबा</div>
+      <div class="recipe-badge">🇨🇺 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/cuba/">क्यूबा</a></div>
       <h1>रोपा विएजा</h1>
       <p class="recipe-tagline">रोपा विएजा (ropa vieja, स्पेनिश में 'पुराने कपड़े') क्यूबा का राष्ट्रीय व्यंजन है: गाय का मांस इतना पकाया जाता है कि रेशों में बिखर जाए, फिर टमाटर, मिर्च, प्याज और लहसुन के सोफ्रिटो में पकाया जाता है जो हर रेशे में समा जाता है। यह व्यंजन कैनरी द्वीप से क्यूबा पहुँचा और मध्यकालीन सेफार्डिक यहूदी खाना पकाने में इसकी जड़ें हैं, जहाँ इसे शबात के बचे हुए मांस से बनाया जाता था। सदियों में यह क्यूबाई पहचान का अभिन्न हिस्सा बन गया।
 
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 क्यूबा की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/cuba/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/picadillo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="picadillo">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/cuba/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="क्यूबा"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">क्यूबा</span>
 </a>
 
 </main>

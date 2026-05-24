@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>닭 카레</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/india/">인도</a> › <span>닭 카레</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-curry" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="닭 카레" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 저녁 · 인도</div>
+      <div class="recipe-badge">🇮🇳 저녁 · <a class="recipe-badge-origin" href="/ko/yori/india/">인도</a></div>
       <h1>닭 카레</h1>
       <p class="recipe-tagline">이 북인도 스타일 닭 카레는 펀자브 주방에서 영혼을 찾습니다. 그곳에서 요리사들은 부나 기법을 완성했습니다——향신채를 모든 수분이 증발하고 마살라 페이스트가 기름 속에서 진하게 농축될 때까지 볶는 것입니다. 뼈 있는 닭고기는 필수입니다: 오래 끓이는 동안 콜라겐과 골수가 녹아 나와 뼈 없는 닭가슴살로는 결코 만들 수 없는 걸쭉함을 만들어냅니다. 마지막에 넣는 가람 마살라는 불에서 내린 후에 넣어야 타지 않고 부드럽게 향이 피어나 카레에 따뜻하고 복합적인 향을 줍니다.</p>
       <div class="recipe-meta-row">
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 인도의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/india/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/dhal/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dhal">🍽️</div>
@@ -177,15 +179,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/india/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="인도"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">인도</span>
 </a>
 
 </main>

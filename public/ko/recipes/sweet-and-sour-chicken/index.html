@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>탕수육 스타일 닭고기</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/china/">중국</a> › <span>탕수육 스타일 닭고기</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="sweet-and-sour-chicken" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/662422-312x231.jpg" alt="탕수육 스타일 닭고기" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 저녁 · 중국</div>
+      <div class="recipe-badge">🇨🇳 저녁 · <a class="recipe-badge-origin" href="/ko/yori/china/">중국</a></div>
       <h1>탕수육 스타일 닭고기</h1>
       <p class="recipe-tagline">중국 바깥에서 통용되는 탕수육 스타일 닭고기는 20세기 중반 해외 화교 식당들이 퍼뜨린 광동 요리의 수출품입니다. 중국의 새콤달콤한 전통 — 탕추(糖醋), 즉 설탕과 식초 — 은 주로 광동 요리에 속하며 전통적으로 돼지고기로 만들었습니다. 파인애플과 피망을 넣은 버전이 서양의 표준이 되었고, 낯선 입맛에 맞게 변형된 결과입니다.
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 중국의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/china/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>
@@ -166,15 +168,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/china/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="중국"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">중국</span>
 </a>
 
 </main>

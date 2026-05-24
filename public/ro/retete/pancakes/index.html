@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Clătite americane</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/usa/">SUA</a> › <span>Clătite americane</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pancakes" id="recipe-photo-main">🍳<img src="https://img.spoonacular.com/recipes/661886-312x231.jpg" alt="Clătite americane" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 Mic dejun · SUA</div>
+      <div class="recipe-badge">🇺🇸 Mic dejun · <a class="recipe-badge-origin" href="/ro/bucatarie/usa/">SUA</a></div>
       <h1>Clătite americane</h1>
       <p class="recipe-tagline">Clătitele americane sunt micul dejun definitiv al tejghelei de diner — stive groase și imposibil de pufoase, născute din tradiția prăjiturilor pe plită adusă din Europa pe frontiera americană, unde agenții de creștere au transformat crêpe-urile subțiri în rondele asemănătoare norilor. Știința este simplă: praful de copt dublu-activ creează bule de două ori, prima dată în aluat și din nou pe plita fierbinte, în timp ce lăsarea aluatului să se odihnească cinci minute dă glutenului timp să se relaxeze și gazului timp să se acumuleze. Momentul întoarcerii este inconfundabil — bule apar pe toată suprafața și marginile arată doar fixate, nu înainte.</p>
       <div class="recipe-meta-row">
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 Alte rețete din SUA</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/usa/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/cheeseburger/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>
@@ -162,15 +164,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/bucatarie/usa/" data-rmn-back
+   data-cuisine-atmosphere="anglo"
+   aria-label="SUA"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">SUA</span>
 </a>
 
 </main>

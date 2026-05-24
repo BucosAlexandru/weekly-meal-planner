@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ロパ・ビエハ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/cuba/">キューバ</a> › <span>ロパ・ビエハ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ropa-vieja" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cubanfood.jpg/330px-Cubanfood.jpg" alt="ロパ・ビエハ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 夕食 · キューバ</div>
+      <div class="recipe-badge">🇨🇺 夕食 · <a class="recipe-badge-origin" href="/ja/ryori/cuba/">キューバ</a></div>
       <h1>ロパ・ビエハ</h1>
       <p class="recipe-tagline">ロパ・ビエハ（スペイン語で「古い服」の意）はキューバの国民食です。牛肉を繊維状にほぐれるまで煮込んだ後、トマト、パプリカ、玉ねぎ、ニンニクのソフリトで仕上げ、すべての繊維に染み込ませます。カナリア諸島からキューバに伝わり、中世セファルディ系ユダヤ料理に起源を持ちます。そこではシャバットの残り牛肉から作られていました。何世紀もかけてキューバのアイデンティティと分かちがたく結びつきました。
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 キューバのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/cuba/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/picadillo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="picadillo">🍽️</div>
@@ -161,15 +163,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/ryori/cuba/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="キューバ"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">キューバ</span>
 </a>
 
 </main>

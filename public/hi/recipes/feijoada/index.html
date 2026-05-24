@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>फेइजोआदा</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/brazil/">ब्राज़ील</a> › <span>फेइजोआदा</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="feijoada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="फेइजोआदा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 रात का खाना · ब्राज़ील</div>
+      <div class="recipe-badge">🇧🇷 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/brazil/">ब्राज़ील</a></div>
       <h1>फेइजोआदा</h1>
       <p class="recipe-tagline">फेइजोआदा ब्राज़ील का राष्ट्रीय व्यंजन और देश का सबसे महत्वपूर्ण सामाजिक भोजन है — काली राजमा और स्मोक्ड पोर्क का एक गाढ़ा स्टू जो कम से कम दो शताब्दियों से रियो डी जनेरियो के घरों और रेस्तरांओं में हर बुधवार और शनिवार परोसा जाता है। इसकी उत्पत्ति विवादित है: कुछ इसे गुलामी से जोड़ते हैं, जहाँ दास राजमा और सस्ते सुअर के टुकड़ों से काम चलाते थे; अन्य इसे पुर्तगाली अलेंतेजाना रसोई से जोड़ते हैं। जो निश्चित है वह यह है कि फेइजोआदा राष्ट्रीय पहचान का प्रतीक बन गई — एक भोजन जो सभी सामाजिक वर्गों के लोगों को एक साथ लाता है, हमेशा सफेद चावल, भुनी काउवे, कुरकुरी फ़ारोफ़ा और ताजे संतरे के साथ परोसा जाता है।</p>
       <div class="recipe-meta-row">
@@ -126,11 +126,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 ब्राज़ील की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/brazil/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/moqueca/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moqueca">🍽️</div>
@@ -153,15 +155,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/brazil/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="ब्राज़ील"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">ब्राज़ील</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ラクサ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/malaysia/">マレーシア</a> › <span>ラクサ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="laksa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nyonya_Laksa.jpg/330px-Nyonya_Laksa.jpg" alt="ラクサ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 ランチ · マレーシア</div>
+      <div class="recipe-badge">🇲🇾 ランチ · <a class="recipe-badge-origin" href="/ja/ryori/malaysia/">マレーシア</a></div>
       <h1>ラクサ</h1>
       <p class="recipe-tagline">ラクサは、東南アジア海洋部のプラナカン文化 — マレー・中国混合の食の伝統 — を象徴するスパイス豊かな麺スープだ。マレー半島・シンガポール・インドネシアの沿岸交易コミュニティで発展し、中国人移民の料理法とマレーのスパイス使いが世代をかけて融合した。二大スタイルはココナッツミルク豊富なカリーラクサと、酸味が特徴のアサムラクサ。
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 マレーシアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/malaysia/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/nasi-lemak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-lemak">🍽️</div>
@@ -166,15 +168,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/ryori/malaysia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="マレーシア"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">マレーシア</span>
 </a>
 
 </main>

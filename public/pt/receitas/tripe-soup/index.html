@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Sopa de tripas</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/romania/">Romênia</a> › <span>Sopa de tripas</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tripe-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/654283-312x231.jpg" alt="Sopa de tripas" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 Almoço · Romênia</div>
+      <div class="recipe-badge">🇷🇴 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/romania/">Romênia</a></div>
       <h1>Sopa de tripas</h1>
       <p class="recipe-tagline">A ciorbă de burtă é um dos pratos tradicionais mais queridos da Romênia, com raízes profundas nas cozinhas da Muntenia e da Olténia. A suave acidez do vinagre de vinho branco e do creme azedo, combinada com o bucho de boi cozinhado lentamente por horas, produz uma sopa densa e reconfortante servida em casamentos, festas — e, pela tradição popular, como remédio para a ressaca. A técnica essencial é a liaison: gemas de ovo temperadas com caldo quente que engrossam a sopa até uma consistência aveludada sem talhar.</p>
       <div class="recipe-meta-row">
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 Mais receitas de Romênia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/romania/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/beans-with-sausages/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="beans-with-sausages">🍽️</div>
@@ -161,15 +163,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/romania/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Romênia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Romênia</span>
 </a>
 
 </main>

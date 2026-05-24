@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Chakhokhbili</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/georgia/">Georgia</a> › <span>Chakhokhbili</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakhokhbili" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/%D0%A7%D0%B0%D1%85%D0%BE%D1%85%D0%B1%D0%B8%D0%BB%D0%B8.JPG/330px-%D0%A7%D0%B0%D1%85%D0%BE%D1%85%D0%B1%D0%B8%D0%BB%D0%B8.JPG" alt="Chakhokhbili" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 Dinner · Georgia</div>
+      <div class="recipe-badge">🇬🇪 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/georgia/">Georgia</a></div>
       <h1>Chakhokhbili</h1>
       <p class="recipe-tagline">Chakhokhbili is a Georgian braised chicken stew whose name traces back to the word for pheasant — khokhobi — reflecting an era when the dish was made with wild game. The cooking technique is distinctively Georgian: the meat is first browned dry in a hot pot, without any oil or liquid, to deepen its flavour through direct contact with the pan.
 
@@ -138,11 +138,13 @@ Fresh tomatoes, onion, and a blend of Georgian spices including blue fenugreek a
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 More recipes from Georgia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/georgia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍳</div>
@@ -177,15 +179,20 @@ Fresh tomatoes, onion, and a blend of Georgian spices including blue fenugreek a
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/cuisine/georgia/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Georgia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Georgia</span>
 </a>
 
 </main>

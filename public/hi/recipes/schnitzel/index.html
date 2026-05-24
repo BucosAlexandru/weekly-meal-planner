@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>श्निट्ज़ेल</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/germany/">जर्मनी</a> › <span>श्निट्ज़ेल</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" alt="श्निट्ज़ेल" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 दोपहर का खाना · जर्मनी</div>
+      <div class="recipe-badge">🇩🇪 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/germany/">जर्मनी</a></div>
       <h1>श्निट्ज़ेल</h1>
       <p class="recipe-tagline">श्निट्ज़ेल व्यापक अर्थ में जर्मन-ऑस्ट्रियाई रसोई का है, लेकिन इसका निश्चित संस्करण — वीनर श्निट्ज़ेल — वियना में परिष्कृत हुआ, जहाँ 18वीं सदी के रसोइयों ने बछड़े का मांस लगभग पारदर्शी पतलेपन तक पीटना शुरू किया, फिर उसे आटे, अंडे और बारीक ब्रेडक्रम्ब्स में लपेटकर गर्म चर्बी में तलते थे जब तक क्रस्ट नाटकीय लहरों में फूल न जाए। तेल का तापमान और गहराई क्रस्ट तय करते हैं: श्निट्ज़ेल को 170°C पर स्वतंत्र रूप से तैरना चाहिए, तेल में घूमना चाहिए न कि उसमें बैठना — यही सोफले जैसी फुलाई हुई क्रस्ट बनाती है। टेबल पर नींबू का रस निचोड़ना वैकल्पिक नहीं है — एसिड समृद्धि को काटता है और इसके बिना व्यंजन अधूरा है।</p>
       <div class="recipe-meta-row">
@@ -124,11 +124,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 जर्मनी की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/germany/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/currywurst/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="currywurst">🍽️</div>
@@ -151,15 +153,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/germany/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="जर्मनी"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">जर्मनी</span>
 </a>
 
 </main>

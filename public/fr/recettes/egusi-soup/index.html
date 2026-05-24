@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Soupe d'egusi</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/nigeria/">Nigéria</a> › <span>Soupe d'egusi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="egusi-soup" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/330px-EGUSI.JPG" alt="Soupe d'egusi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 Dîner · Nigéria</div>
+      <div class="recipe-badge">🇳🇬 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/nigeria/">Nigéria</a></div>
       <h1>Soupe d'egusi</h1>
       <p class="recipe-tagline">La soupe d'egusi est le comfort food du Nigeria — une sauce épaisse à base de graines d'egusi grillées et moulues (un parent du melon amer), cuites dans de l'huile de palme rouge avec de la viande (bœuf, chèvre ou poulet), des feuilles de courge ou des épinards et du piment. Les graines d'egusi créent une texture unique: granuleuse à l'extérieur, crémeuse à l'intérieur.
 
@@ -141,11 +141,13 @@ La soupe d'egusi ne se mange jamais seule — elle accompagne toujours le fufu, 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 Plus de recettes de Nigéria</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/nigeria/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/jollof-rice/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="jollof-rice">🍽️</div>
@@ -168,15 +170,20 @@ La soupe d'egusi ne se mange jamais seule — elle accompagne toujours le fufu, 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/cuisine/nigeria/" data-rmn-back
+   data-cuisine-atmosphere="sub-saharan"
+   aria-label="Nigéria"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Nigéria</span>
 </a>
 
 </main>

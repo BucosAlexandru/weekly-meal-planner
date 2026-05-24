@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Tagine</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/morocco/">Marrocos</a> › <span>Tagine</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tagine" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Jantar · Marrocos</div>
+      <div class="recipe-badge">🇲🇦 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/morocco/">Marrocos</a></div>
       <h1>Tagine</h1>
       <p class="recipe-tagline">Tagine recebe o nome do recipiente cônico de barro em que é cozinhado — um design que permaneceu essencialmente inalterado ao longo de séculos de culinária marroquina e norte-africana. O cone captura o vapor ascendente e devolve a umidade aos ingredientes, produzindo carne que se desfaz sem ressecar e um molho concentrado que dispensa espessante. O cordeiro é a proteína mais tradicional, embora tagines de frango ou peixe sejam igualmente comuns.
 
@@ -144,11 +144,13 @@ O que torna o tagine marroquino distintivo é a interação entre salgado e doce
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Mais receitas de Marrocos</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/morocco/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>
@@ -177,15 +179,20 @@ O que torna o tagine marroquino distintivo é a interação entre salgado e doce
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/cozinha/morocco/" data-rmn-back
+   data-cuisine-atmosphere="north-african"
+   aria-label="Marrocos"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Marrocos</span>
 </a>
 
 </main>

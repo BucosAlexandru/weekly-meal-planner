@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>스탐팟</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/netherlands/">네덜란드</a> › <span>스탐팟</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stamppot" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/330px-Boerenkool_stamppot.jpg" alt="스탐팟" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 저녁 · 네덜란드</div>
+      <div class="recipe-badge">🇳🇱 저녁 · <a class="recipe-badge-origin" href="/ko/yori/netherlands/">네덜란드</a></div>
       <h1>스탐팟</h1>
       <p class="recipe-tagline">스탐팟——말 그대로 으깬 냄비——은 네덜란드 겨울 요리의 상징적인 컴포트 푸드입니다. 여러 형태가 있습니다. 케일 스탐팟(boerenkool)이 가장 친숙하고, 후츠팟은 감자를 당근과 양파와 함께 으깨고, 주르쿨 스탐팟은 사우어크라우트를 더합니다. 후츠팟 변형은 역사적 주장을 담고 있습니다 — 1574년 레이덴 포위전 해제와 기원을 연결하는 전설입니다.
 
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇱 네덜란드의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/netherlands/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/poffertjes/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="poffertjes">🍽️</div>
@@ -157,15 +159,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/netherlands/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="네덜란드"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">네덜란드</span>
 </a>
 
 </main>

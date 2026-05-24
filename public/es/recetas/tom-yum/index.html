@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Tom Yum</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/cocina/thailand/">Tailandia</a> › <span>Tom Yum</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-yum" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" alt="Tom Yum" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Almuerzo · Tailandia</div>
+      <div class="recipe-badge">🇹🇭 Almuerzo · <a class="recipe-badge-origin" href="/es/cocina/thailand/">Tailandia</a></div>
       <h1>Tom Yum</h1>
       <p class="recipe-tagline">Tom yum es la sopa más reconocida internacionalmente de Tailandia, construida sobre una combinación distintiva de sabores picantes, ácidos, salados y ligeramente dulces en un solo caldo. Los aromáticos — citronela, galanga y hojas de kaffir — se machacan en lugar de cortarse, infundiendo un caldo claro con un calor brillante respaldado por cítricos. La sopa no puede sazonarse con antelación — el equilibrio de salsa de pescado, jugo de lima y azúcar de palma se prueba y ajusta justo al final.
 
@@ -135,11 +135,13 @@ Tom yum goong — con gambas — es la versión más familiar, aunque existen va
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Más recetas de Tailandia</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/cocina/thailand/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>
@@ -168,15 +170,20 @@ Tom yum goong — con gambas — es la versión más familiar, aunque existen va
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/cocina/thailand/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Tailandia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Tailandia</span>
 </a>
 
 </main>

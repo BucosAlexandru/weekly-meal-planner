@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>가도가도</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/indonesia/">인도네시아</a> › <span>가도가도</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gado-gado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gado_gado_jakarta.jpg/330px-Gado_gado_jakarta.jpg" alt="가도가도" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 샐러드 · 인도네시아</div>
+      <div class="recipe-badge">🇮🇩 샐러드 · <a class="recipe-badge-origin" href="/ko/yori/indonesia/">인도네시아</a></div>
       <h1>가도가도</h1>
       <p class="recipe-tagline">가도가도는 삶고 데친 채소, 구운 두부와 템페, 완숙 달걀로 이루어진 인도네시아 샐러드로, 테이블에서 따뜻한 땅콩 소스를 뿌려 완성합니다. 이 요리는 인도네시아 전역에서 먹지만 자카르타와 서자바와 가장 밀접하게 연관되어 있습니다. 이름은 구어 인도네시아어로 '섞기-섞기'에 가까운 의미를 가지며, 접근 방식을 설명합니다: 가능한 것을 다양하게 조합한 요리.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 인도네시아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/indonesia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>
@@ -179,15 +181,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/indonesia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="인도네시아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">인도네시아</span>
 </a>
 
 </main>

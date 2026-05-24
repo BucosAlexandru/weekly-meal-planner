@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Ramen</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/japan/">Giappone</a> › <span>Ramen</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ramen" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1697543-312x231.jpg" alt="Ramen" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Pranzo · Giappone</div>
+      <div class="recipe-badge">🇯🇵 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/japan/">Giappone</a></div>
       <h1>Ramen</h1>
       <p class="recipe-tagline">Il ramen arrivò in Giappone con gli immigrati cinesi alla fine del XIX secolo, come versione della zuppa cinese di noodles di frumento. La trasformazione giapponese fu totale: nei decenni successivi emersero stili regionali distinti — tonkotsu ad Hakata, a base di miso a Sapporo, shoyu a salsa di soia a Tokyo — ognuno rispecchiante ingredienti e preferenze locali. Il piatto è oggi così profondamente giapponese che la sua origine cinese è raramente menzionata.
 
@@ -133,11 +133,13 @@ Il brodo è l'essenza del piatto. Il brodo tonkotsu richiede ossa di maiale cott
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Altre ricette da Giappone</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/japan/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>
@@ -184,15 +186,20 @@ Il brodo è l'essenza del piatto. Il brodo tonkotsu richiede ossa di maiale cott
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/cucina/japan/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="Giappone"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Giappone</span>
 </a>
 
 </main>

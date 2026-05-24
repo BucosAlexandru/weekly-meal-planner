@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>एन्सेबोयादो</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/ecuador/">इक्वाडोर</a> › <span>एन्सेबोयादो</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="encebollado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/960px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg" alt="एन्सेबोयादो" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇨 दोपहर का खाना · इक्वाडोर</div>
+      <div class="recipe-badge">🇪🇨 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/ecuador/">इक्वाडोर</a></div>
       <h1>एन्सेबोयादो</h1>
       <p class="recipe-tagline">एन्सेबोयादो इक्वाडोर का सबसे मशहूर स्ट्रीट फूड और सबसे प्रिय हैंगओवर उपाय है — ताजे एल्बाकोर टूना, कसावा और लाल प्याज की एक गाढ़ी मछली स्टू, ऊपर से अचार वाले प्याज और टोस्टादास के साथ परोसी जाती है। गुआयाकिल और पूरे तट पर भोर से पहले स्ट्रीट कार्ट से बेची जाती है, खासकर सप्ताहांत में बड़ी मात्रा में खाई जाती है।
 
@@ -133,7 +133,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->
@@ -148,15 +150,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/vyanjan/ecuador/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="इक्वाडोर"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">इक्वाडोर</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>똠얌</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/thailand/">태국</a> › <span>똠얌</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-yum" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" alt="똠얌" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 점심 · 태국</div>
+      <div class="recipe-badge">🇹🇭 점심 · <a class="recipe-badge-origin" href="/ko/yori/thailand/">태국</a></div>
       <h1>똠얌</h1>
       <p class="recipe-tagline">똠얌은 태국에서 국제적으로 가장 잘 알려진 수프로, 하나의 국물에 매운맛, 신맛, 짠맛, 약간의 단맛이 독특하게 조합되어 있습니다. 향신료 — 레몬그라스, 갈랑갈, 카피르 라임 잎 — 는 자르지 않고 두들겨서 맑은 국물에 밝은 시트러스 풍미의 매운맛을 불어넣습니다. 이 수프는 미리 간을 맞출 수 없습니다 — 피시 소스, 라임즙, 팜 슈가의 균형은 마지막에 맛을 보며 조절합니다.
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 태국의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/thailand/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>
@@ -168,15 +170,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/yori/thailand/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="태국"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">태국</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ファッテ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/syria/">シリア</a> › <span>ファッテ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fatteh" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg/330px-%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg" alt="ファッテ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 朝食 · シリア</div>
+      <div class="recipe-badge">🇸🇾 朝食 · <a class="recipe-badge-origin" href="/ja/ryori/syria/">シリア</a></div>
       <h1>ファッテ</h1>
       <p class="recipe-tagline">ファッテはトースとしたピタパン、ひよこ豆、にんにくヨーグルトソースを重ねたシリアの料理で、松の実とパプリカの上に熱いバターを垂らして仕上げます。名前はアラビア語の「砕く」に由来し、土台に置かれちぎったパンを指します。シリアからエジプトにかけてのレバント全域で食べられ、最も一般的には朝食として、またラマダン期間中に特に好まれます。
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 シリアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/syria/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>
@@ -169,15 +171,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/ryori/syria/" data-rmn-back
+   data-cuisine-atmosphere="middle-eastern"
+   aria-label="シリア"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">シリア</span>
 </a>
 
 </main>

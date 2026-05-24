@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>诺尔玛意大利面</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/italy/">意大利</a> › <span>诺尔玛意大利面</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-alla-norma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg/330px-Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg" alt="诺尔玛意大利面" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 午餐 · 意大利</div>
+      <div class="recipe-badge">🇮🇹 午餐 · <a class="recipe-badge-origin" href="/zh/caixi/italy/">意大利</a></div>
       <h1>诺尔玛意大利面</h1>
       <p class="recipe-tagline">诺尔玛意大利面是卡塔尼亚的骄傲——一道西西里意大利面，炸茄子与新鲜番茄酱、橄榄油、罗勒和刨碎的盐渍里考塔奶酪融合在一起。名字来自卡塔尼亚作曲家文森佐·贝利尼的歌剧《诺尔玛》：据说一位作家感叹这道菜与歌剧一样完美。茄子必须单独油炸并充分沥干——而不仅仅是翻炒——才能获得恰当的丝滑口感。
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 更多来自意大利的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/italy/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>
@@ -175,15 +177,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/caixi/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="意大利"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">意大利</span>
 </a>
 
 </main>

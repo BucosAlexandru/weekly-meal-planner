@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Rendang</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/indonesia/">Indonesia</a> › <span>Rendang</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="rendang" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rendang_daging_sapi_asli_Padang.JPG/330px-Rendang_daging_sapi_asli_Padang.JPG" alt="Rendang" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Dinner · Indonesia</div>
+      <div class="recipe-badge">🇮🇩 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/indonesia/">Indonesia</a></div>
       <h1>Rendang</h1>
       <p class="recipe-tagline">Rendang originates in the Minangkabau highlands of West Sumatra, developed as a preserved dish: by reducing the coconut milk completely and frying the meat in its own fat, the dish stays fresh without refrigeration for several days. It is central to Minangkabau ceremonial life — served at weddings, harvest celebrations, and Eid.
 
@@ -136,11 +136,13 @@ The two stages of cooking define the dish. First, the beef simmers in coconut mi
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 More recipes from Indonesia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/indonesia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>
@@ -175,15 +177,20 @@ The two stages of cooking define the dish. First, the beef simmers in coconut mi
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/cuisine/indonesia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Indonesia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Indonesia</span>
 </a>
 
 </main>
