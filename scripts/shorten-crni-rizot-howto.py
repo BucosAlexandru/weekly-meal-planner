@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""
+Shorten Crni Rizot (recipe id 59) howIsMade to Carbonara-style:
+~8 narrative sentences, ~1500 chars EN. Replaces the 16-sentence
+micro-bullet version with editorial flow.
+"""
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+
+# 8 narrative sentences per locale, mirroring Carbonara's editorial flow:
+# transitional phrases ("Meanwhile", "Just before", "Off the heat"),
+# inline timing, technique cues. ~700-1600 chars depending on language density.
+NEW_HOW = {
+    'ro': "Curata calmarii: scoate cu grija saculetii de cerneala intacti intr-un bol mic cu putina apa, apoi taie corpurile in inele de 1 cm si tentaculele in jumatate. Intr-o tigaie larga si grea, incinge 4 linguri ulei de masline la foc mediu si caleste ceapa 4-5 minute pana se inmoaie, apoi adauga usturoiul pentru inca 1 minut. Adauga inelele de calmar si tentaculele, soteaza 2-3 minute pana se albesc, apoi toarna vinul si lasa-l sa se evapore complet (cca 2 minute). Adauga orezul si amesteca 1 minut sa se acopere cu grasime, apoi incepe sa torni fondul de peste cald, polonic cu polonic, amestecand constant timp de 16-18 minute. La jumatate, sparge saculetii de cerneala in fondul ramas si toarna in tigaie — risotto-ul devine instant negru intens si capata gust adanc de mare. Cand orezul e al dente si cremos, cu putin lichid inca in tigaie, opreste focul si adauga untul rece, restul de 2 linguri ulei de masline, zeama de lamaie si patrunjelul. Amesteca viguros 30 de secunde pentru mantecatura, apoi acopera si lasa sa se odihneasca 2 minute. Serveste imediat in farfurii adanci, cu mai mult patrunjel deasupra si o felie de lamaie alaturi.",
+    'en': "Clean the squid carefully: lift out the ink sacs intact into a small bowl with a splash of water, then cut the bodies into 1 cm rings and halve the tentacles. In a wide heavy pan, heat 4 tbsp olive oil over medium heat and sauté the onion for 4-5 minutes until soft, then add the garlic for 1 minute more. Add the squid rings and tentacles, sauté for 2-3 minutes until just opaque, then pour in the wine and let it evaporate completely (about 2 minutes). Add the rice and stir for 1 minute to coat with fat, then begin adding the hot fish stock one ladle at a time, stirring constantly for 16-18 minutes total. Halfway through, break the ink sacs into the remaining stock and pour it in — the risotto turns deep jet black instantly and gains a profound oceanic depth. When the rice is al dente and creamy with a little stock still pooling, kill the heat and add the cold butter, the remaining 2 tbsp olive oil, the lemon juice, and the parsley. Stir vigorously for 30 seconds for the mantecatura, then cover and rest for 2 minutes. Serve immediately in shallow bowls with extra parsley on top and a wedge of lemon alongside.",
+    'es': "Limpia los calamares con cuidado: extrae las bolsas de tinta intactas en un bol pequeño con un poco de agua, luego corta los cuerpos en aros de 1 cm y los tentáculos por la mitad. En una sartén ancha y pesada, calienta 4 cucharadas de aceite de oliva a fuego medio y sofríe la cebolla 4-5 minutos hasta que se ablande, luego añade el ajo durante 1 minuto más. Añade los aros de calamar y los tentáculos, saltea 2-3 minutos hasta que estén opacos, vierte el vino y déjalo evaporar por completo (unos 2 minutos). Añade el arroz y remueve 1 minuto para cubrirlo con la grasa, luego empieza a añadir el caldo de pescado caliente cucharón a cucharón, removiendo constantemente durante 16-18 minutos en total. A mitad de cocción, abre las bolsas de tinta en el caldo restante y viértelo — el risotto se vuelve negro intenso al instante y gana una profundidad oceánica. Cuando el arroz esté al dente y cremoso, con un poco de caldo aún presente, apaga el fuego y añade la mantequilla fría, las 2 cucharadas de aceite restantes, el zumo de limón y el perejil. Remueve enérgicamente 30 segundos para la mantecatura, tapa y deja reposar 2 minutos. Sirve inmediatamente en platos hondos con más perejil por encima y un gajo de limón al lado.",
+    'fr': "Nettoyez les calmars avec soin : retirez les poches d'encre intactes dans un petit bol avec un peu d'eau, puis coupez les corps en anneaux d'1 cm et coupez les tentacules en deux. Dans une grande poêle lourde, chauffez 4 c. à soupe d'huile d'olive à feu moyen et faites suer l'oignon 4-5 minutes jusqu'à ce qu'il soit tendre, puis ajoutez l'ail pour 1 minute de plus. Ajoutez les anneaux de calmar et les tentacules, faites sauter 2-3 minutes jusqu'à ce qu'ils soient juste opaques, puis versez le vin et laissez-le s'évaporer complètement (environ 2 minutes). Ajoutez le riz et remuez 1 minute pour l'enrober, puis commencez à ajouter le fumet de poisson chaud louche par louche, en remuant constamment pendant 16-18 minutes au total. À mi-cuisson, percez les poches d'encre dans le fumet restant et versez-le — le risotto devient noir intense instantanément et gagne une profondeur marine. Quand le riz est al dente et crémeux, avec encore un peu de fumet, coupez le feu et ajoutez le beurre froid, les 2 c. à soupe d'huile restantes, le jus de citron et le persil. Remuez vigoureusement 30 secondes pour la mantecatura, couvrez et laissez reposer 2 minutes. Servez immédiatement dans des assiettes creuses avec plus de persil dessus et un quartier de citron à côté.",
+    'de': "Tintenfische sorgfältig putzen: Tintensäckchen unversehrt in eine kleine Schüssel mit etwas Wasser geben, dann die Körper in 1-cm-Ringe schneiden und Tentakeln halbieren. In einer weiten schweren Pfanne 4 EL Olivenöl bei mittlerer Hitze erhitzen und die Zwiebel 4-5 Minuten weich dünsten, dann den Knoblauch eine weitere Minute mitkochen. Tintenfischringe und Tentakeln zugeben, 2-3 Minuten anbraten bis sie gerade undurchsichtig sind, dann den Wein angießen und vollständig verkochen lassen (ca. 2 Minuten). Den Reis zugeben und 1 Minute rühren, damit er sich mit Fett überzieht, dann beginnen, die heiße Fischbrühe Kelle für Kelle zuzugeben, dabei ständig rühren — insgesamt 16-18 Minuten. Auf halber Strecke die Tintensäckchen in die restliche Brühe drücken und einrühren — das Risotto wird sofort tief tintenschwarz und gewinnt eine tiefe Meerestiefe. Wenn der Reis al dente und cremig ist und noch etwas Brühe übrig ist, die Hitze ausschalten und die kalte Butter, die restlichen 2 EL Olivenöl, den Zitronensaft und die Petersilie zugeben. 30 Sekunden kräftig rühren (Mantecatura), abgedeckt 2 Minuten ruhen lassen. Sofort in tiefen Tellern mit zusätzlicher Petersilie und einem Stück Zitrone servieren.",
+    'pt': "Limpe as lulas com cuidado: retire os sacos de tinta intactos para uma tigela pequena com um pouco de água, depois corte os corpos em anéis de 1 cm e os tentáculos ao meio. Numa frigideira larga e pesada, aqueça 4 colheres de sopa de azeite em fogo médio e refogue a cebola 4-5 minutos até amolecer, depois adicione o alho por mais 1 minuto. Adicione os anéis de lula e os tentáculos, salteie 2-3 minutos até ficarem opacos, depois despeje o vinho e deixe evaporar completamente (cerca de 2 minutos). Adicione o arroz e mexa 1 minuto para envolver com a gordura, depois comece a adicionar o caldo de peixe quente concha a concha, mexendo constantemente por 16-18 minutos no total. A meio da cozedura, rompa os sacos de tinta no caldo restante e despeje — o risoto fica preto profundo instantaneamente e ganha uma profundidade oceânica. Quando o arroz estiver al dente e cremoso, com algum caldo ainda presente, desligue o fogo e adicione a manteiga fria, as 2 colheres restantes de azeite, o sumo de limão e a salsinha. Mexa vigorosamente 30 segundos para a mantecatura, tape e descanse 2 minutos. Sirva imediatamente em pratos fundos com mais salsinha por cima e uma fatia de limão ao lado.",
+    'ru': "Аккуратно очистите кальмаров: целыми чернильные мешочки перенесите в маленькую миску с небольшим количеством воды, затем тела нарежьте кольцами 1 см, а щупальца разрежьте пополам. В широкой тяжёлой сковороде разогрейте 4 ст. л. оливкового масла на среднем огне и пассеруйте лук 4-5 минут до мягкости, затем добавьте чеснок ещё на 1 минуту. Положите кольца кальмара и щупальца, обжарьте 2-3 минуты до непрозрачности, влейте вино и дайте полностью выпариться (около 2 минут). Добавьте рис и помешивайте 1 минуту, чтобы он покрылся жиром, затем начинайте вливать горячий рыбный бульон по половнику, постоянно помешивая в общей сложности 16-18 минут. На полпути раздавите чернильные мешочки в оставшийся бульон и влейте в сковороду — ризотто мгновенно становится насыщенно чёрным и обретает глубокий морской вкус. Когда рис al dente и кремовый, а немного бульона ещё остаётся, выключите огонь и добавьте холодное сливочное масло, оставшиеся 2 ст. л. оливкового масла, лимонный сок и петрушку. Энергично помешивайте 30 секунд (мантекатура), накройте и дайте отдохнуть 2 минуты. Подавайте немедленно в глубоких тарелках с дополнительной петрушкой сверху и долькой лимона рядом.",
+    'ar': "نظف الكاليماري بعناية: أخرج أكياس الحبر سليمة إلى وعاء صغير مع قليل من الماء، ثم قطع الأجسام إلى حلقات 1 سم وقسم المجسات نصفين. في مقلاة واسعة وثقيلة، سخن 4 ملاعق كبيرة زيت زيتون على نار متوسطة وقلب البصل 4-5 دقائق حتى يلين، ثم أضف الثوم لدقيقة أخرى. أضف حلقات الكاليماري والمجسات، قلب 2-3 دقائق حتى تصبح معتمة، ثم أضف النبيذ واتركه يتبخر تمامًا (نحو دقيقتين). أضف الأرز وقلب لدقيقة ليغطى بالدهن، ثم ابدأ بإضافة مرق السمك الساخن مغرفة تلو الأخرى، مع التقليب المستمر لمدة 16-18 دقيقة إجمالًا. في منتصف الطهي، اكسر أكياس الحبر في المرق المتبقي وأضفه — يتحول الريزوتو إلى أسود عميق فورًا ويكتسب عمقًا بحريًا قويًا. عندما يصبح الأرز al dente وكريميًا مع بقاء قليل من المرق، أطفئ النار وأضف الزبدة الباردة والملعقتين الكبيرتين المتبقيتين من زيت الزيتون وعصير الليمون والبقدونس. قلب بقوة 30 ثانية للمنتيكاتورا، غطِ واتركه يرتاح دقيقتين. قدمه فورًا في أطباق عميقة مع المزيد من البقدونس فوقه وشريحة ليمون بجانبه.",
+    'zh': "仔细清洗鱿鱼：将墨囊完整地取出放入装有少量水的小碗，把身体切成1厘米的圈，触手对半切。在宽底厚锅中以中火加热4大勺橄榄油，将洋葱炒4-5分钟至软，再加大蒜炒1分钟。加入鱿鱼圈和触手，翻炒2-3分钟至刚变白，倒入白葡萄酒并让其完全蒸发（约2分钟）。加米翻炒1分钟使其裹油，然后开始一勺一勺地加入热鱼汤，持续搅拌共16-18分钟。中途，将墨囊在剩余的汤中捏破并倒入——烩饭瞬间变为深邃的墨黑色，海洋风味更浓郁。当米饭达到al dente且呈奶油状，汤汁还剩一点时，关火加入冷黄油、剩余2大勺橄榄油、柠檬汁和欧芹。用力搅拌30秒完成mantecatura，盖上盖子静置2分钟。立即在深盘中上桌，顶部撒上更多欧芹，旁边配一片柠檬。",
+    'ja': "イカを丁寧に下処理する：墨袋を壊さないよう少量の水と共に小さなボウルに分け、胴を1cmの輪切りに、足を半分に切る。大きめの厚手のフライパンにオリーブオイル大さじ4を中火で熱し、玉ねぎを4-5分炒めて柔らかくし、にんにくをさらに1分炒める。イカの輪と足を加え2-3分炒めて表面が白くなる程度に火を通し、ワインを注いで完全に蒸発させる（約2分）。米を加え1分かき混ぜて油をなじませ、温かい魚のだしを1杯ずつ加えながら絶えずかき混ぜる — 合計16-18分。途中で残りのだしに墨袋を破って混ぜ鍋に注ぐと、リゾットが瞬時に深い漆黒に変わり、海の風味が深まる。米がアル・デンテでクリーミー、まだ少しだしが残った状態で火を止め、冷たいバター、残りのオリーブオイル大さじ2、レモン汁、パセリを加える。30秒間しっかりかき混ぜてマンテカトゥーラを行い、蓋をして2分休ませる。すぐに深皿に盛り、上からパセリを散らし、レモン一切れを添えて提供する。",
+    'tr': "Kalamarları dikkatlice temizleyin: mürekkep keselerini sağlam halde bir kase suya alın, sonra gövdeleri 1 cm halkalar halinde ve tentakülleri ikiye bölün. Geniş ağır bir tavada 4 yemek kaşığı zeytinyağını orta ateşte ısıtın ve soğanı 4-5 dakika yumuşayana kadar pişirin, sonra sarımsağı 1 dakika daha ekleyin. Kalamar halkalarını ve tentakülleri ekleyin, 2-3 dakika sadece matlaşana kadar sote edin, sonra şarabı dökün ve tamamen buharlaşmasına izin verin (yaklaşık 2 dakika). Pirinci ekleyip 1 dakika çevirin ki yağla kaplansın, sonra sıcak balık suyunu birer kepçe ekleyerek toplam 16-18 dakika sürekli karıştırın. Yarı yolda mürekkep keselerini kalan balık suyuna kırın ve tavaya dökün — risotto anında derin siyaha dönüşür ve okyanus tadı derinleşir. Pirinç al dente ve kremamsı olduğunda, biraz suyu kalmışken ateşi kapatın ve soğuk tereyağı, kalan 2 yemek kaşığı zeytinyağı, limon suyu ve maydanozu ekleyin. Mantecatura için 30 saniye kuvvetle karıştırın, üzerini örtüp 2 dakika dinlendirin. Derin tabaklarda hemen üzerine ekstra maydanoz ve yanına bir dilim limonla servis edin.",
+    'it': "Pulisci i calamari con cura: estrai i sacchetti di nero intatti in una piccola ciotola con un goccio d'acqua, poi taglia i corpi ad anelli di 1 cm e dimezza i tentacoli. In una padella larga e pesante, scalda 4 cucchiai di olio d'oliva a fuoco medio e fai appassire la cipolla per 4-5 minuti, poi aggiungi l'aglio per 1 minuto ancora. Aggiungi gli anelli di calamaro e i tentacoli, fai saltare per 2-3 minuti finché diventano appena opachi, poi versa il vino e lascialo evaporare completamente (circa 2 minuti). Aggiungi il riso e mescola per 1 minuto perché si rivesta di grasso, poi inizia ad aggiungere il brodo di pesce caldo un mestolo alla volta, mescolando di continuo per 16-18 minuti totali. A metà cottura, rompi i sacchetti di nero nel brodo rimanente e versalo — il risotto diventa subito nero intenso e guadagna una profondità marina. Quando il riso è al dente e cremoso, con ancora un po' di brodo, spegni il fuoco e aggiungi il burro freddo, i restanti 2 cucchiai di olio d'oliva, il succo di limone e il prezzemolo. Mescola vigorosamente per 30 secondi per la mantecatura, copri e lascia riposare 2 minuti. Servi immediatamente in piatti fondi con altro prezzemolo sopra e una fetta di limone a lato.",
+    'ko': "오징어를 조심스럽게 손질한다: 먹물주머니는 깨지지 않게 약간의 물과 함께 작은 그릇에 따로 두고, 몸통은 1cm 링으로 다리는 반으로 자른다. 넓고 두꺼운 팬에 올리브유 4큰술을 중불에서 가열하고 양파를 4-5분 부드러워질 때까지 익힌 다음 마늘을 1분 더 익힌다. 오징어 링과 다리를 넣고 2-3분 표면이 막 불투명해질 정도로 볶은 후, 와인을 붓고 완전히 증발시킨다(약 2분). 쌀을 넣고 1분간 저어 기름이 코팅되게 한 후, 따뜻한 생선 육수를 한 국자씩 넣으며 끊임없이 저어 총 16-18분 익힌다. 중간쯤에 남은 육수에 먹물주머니를 터뜨려 팬에 부으면 — 리조토가 즉시 깊은 검은색으로 변하고 바다의 풍미가 깊어진다. 쌀이 알 덴테이고 크리미할 때, 육수가 약간 남은 상태에서 불을 끄고 차가운 버터, 남은 올리브유 2큰술, 레몬즙, 파슬리를 넣는다. 만테카투라를 위해 30초간 힘차게 젓고, 뚜껑을 덮어 2분간 휴지시킨다. 즉시 깊은 접시에 담아 파슬리를 더 뿌리고 옆에 레몬 한 조각을 곁들여 낸다.",
+    'hi': "स्क्विड को सावधानी से साफ करें: स्याही की थैलियाँ अखंड रखें थोड़े पानी वाले छोटे कटोरे में, फिर शरीर को 1 सेमी के छल्लों में और सूंडों को आधा काटें। चौड़े भारी पैन में 4 बड़े चम्मच जैतून का तेल मध्यम आंच पर गर्म करें, प्याज को 4-5 मिनट तक नर्म होने तक भूनें, फिर लहसुन को 1 मिनट और डालें। स्क्विड के छल्ले और सूंडें डालें, 2-3 मिनट तक हल्का अपारदर्शी होने तक भूनें, फिर वाइन डालकर पूरी तरह वाष्पीकृत होने दें (लगभग 2 मिनट)। चावल डालकर 1 मिनट हिलाएं ताकि वसा से लिपट जाए, फिर गर्म मछली शोरबा एक-एक कलछी डालते हुए लगातार हिलाएं — कुल 16-18 मिनट। आधे रास्ते में बचे शोरबा में स्याही की थैलियाँ तोड़ें और पैन में डालें — रिज़ोटो तुरंत गहरे काले रंग का हो जाता है और समुद्री गहराई पाता है। जब चावल अल डेंटे और मलाईदार हो जाए, थोड़ा शोरबा बचा हो, तब आंच बंद कर ठंडा मक्खन, बचा हुआ 2 बड़े चम्मच जैतून का तेल, नींबू का रस और अजमोद डालें। मंतेकातुरा के लिए 30 सेकंड जोर से हिलाएं, ढकें और 2 मिनट आराम दें। तुरंत गहरे प्लेटों में और अजमोद ऊपर डालकर, साथ में नींबू का एक टुकड़ा देकर परोसें।",
+}
+
+
+def replace_howismade():
+    path = ROOT / 'public/js/recipes.js'
+    text = path.read_text(encoding='utf-8')
+
+    # Find the howIsMade block for id 59. Anchor: just after `id: 59,`, find
+    # `howIsMade: {` then walk to the closing `},` on its own.
+    start_anchor = '    id: 59,'
+    id_start = text.find(start_anchor)
+    if id_start == -1:
+        raise SystemExit('id 59 not found')
+
+    how_start = text.find('howIsMade: {', id_start)
+    if how_start == -1:
+        raise SystemExit('howIsMade not found for id 59')
+
+    # Find matching `},` for the howIsMade object — walk brace balance.
+    i = how_start + len('howIsMade: {')
+    depth = 1
+    while i < len(text) and depth > 0:
+        ch = text[i]
+        if ch == '{':
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+        i += 1
+    # i is now position AFTER the closing `}`. Need to also consume `,`.
+    if text[i] == ',':
+        i += 1
+    block_end = i
+
+    # Build new howIsMade block
+    lines = ['howIsMade: {']
+    for lc in ['ro','en','es','fr','de','pt','ru','ar','zh','ja','tr','it','ko','hi']:
+        # Escape quotes inside the string for safe JS literal
+        v = NEW_HOW[lc].replace('\\', '\\\\').replace('"', '\\"')
+        lines.append(f'      {lc}: "{v}",')
+    # Remove trailing comma on last entry
+    lines[-1] = lines[-1].rstrip(',')
+    lines.append('    },')
+    new_block = '\n'.join(lines)
+
+    new_text = text[:how_start] + new_block + text[block_end:]
+    path.write_text(new_text, encoding='utf-8')
+
+    # Verify
+    print(f'  Replaced howIsMade block: {block_end - how_start} chars → {len(new_block)} chars')
+
+
+if __name__ == '__main__':
+    replace_howismade()
+    print('Done. Run `npm run content` to regenerate HTML.')
