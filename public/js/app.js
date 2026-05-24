@@ -685,6 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return localStorage.getItem('pdfV2') === '1';
     } catch (_) { return false; }
   }
+
+  // Startup log so QA can confirm which engine is wired at page-load time
+  // (verifiable from Safari Web Inspector before even clicking Generate PDF).
+  try { console.log('PDF_EXPORT_ENGINE (on load) = "' + (isPdfV2Enabled() ? 'pdfv2' : 'legacy') + '"'); } catch (_) {}
   async function exportViaPdfV2() {
     // Build the payload from the live planner state — same source data the
     // legacy generatePDFimpact() reads. This ensures pdfv2 exports whatever
@@ -789,11 +793,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function exportShoppingListToPDF() {
-  // Opt-in gateway. Default path below is unchanged.
-  if (isPdfV2Enabled()) {
-    try { await exportViaPdfV2(); return; }
-    catch (err) { console.warn('pdfv2 failed, falling back to legacy:', err); /* fall through */ }
+  // ── SINGLE DISPATCHER for all PDF exports. Every Generate PDF button must
+  // route through this function. No button is allowed to call html2pdf
+  // directly — see attachPdfListeners() below.
+  //
+  // If isPdfV2Enabled() returns true, ONLY the pdfv2 endpoint is used.
+  // We do NOT silently fall back to legacy on pdfv2 failure — that would
+  // sneak the full 10-page cookbook-style export back in front of a user
+  // who explicitly opted into the compact pdfv2 output. Instead we surface
+  // the error so the user knows pdfv2 didn't work and can retry.
+  const useV2 = isPdfV2Enabled();
+  // Loud console log so QA can verify which engine ran (visible in
+  // Safari Web Inspector under "Console").
+  console.log('PDF_EXPORT_ENGINE = "' + (useV2 ? 'pdfv2' : 'legacy') + '"');
+  if (useV2) {
+    try {
+      await exportViaPdfV2();
+      console.log('PDF_EXPORT_ENGINE = "pdfv2" · completed OK');
+      return;
+    } catch (err) {
+      console.error('PDF_EXPORT_ENGINE = "pdfv2" · FAILED — NOT falling back to legacy:', err);
+      try { alert('PDF generation (pdfv2) failed: ' + (err && err.message ? err.message : err) + '\n\nLegacy export was NOT used. Disable pdfv2 (remove ?pdfv2=1 and run localStorage.removeItem("pdfV2") in the console) to use the legacy exporter.'); } catch (_) {}
+      return;
+    }
   }
+  // ── LEGACY html2pdf path (production default; reached only when
+  // ── pdfv2 is NOT opted in). Untouched from before.
   const pdfArea = document.getElementById('pdf-impact-area');
   if (!pdfArea) return;
   let cleanNode = null, styleEl = null;
@@ -1552,11 +1577,14 @@ async function ensureHtml2pdfLoaded() {
   });
 }
   function attachPdfListeners() {
+  // Both Generate PDF buttons route through exportShoppingListToPDF — the
+  // single dispatcher. Skip the legacy html2pdf CDN preload when pdfv2 is
+  // active so a CDN hiccup can never accidentally trigger the legacy path
+  // and so pdfv2 has zero dependency on cdnjs.
   const freeBtn = document.getElementById('generate-btn');
   if (freeBtn && !freeBtn.dataset.attached) {
     freeBtn.onclick = async () => {
-      await ensureHtml2pdfLoaded();
-      // Free users always allowed — content is limited to 2 days inside generatePDFimpact()
+      if (!isPdfV2Enabled()) await ensureHtml2pdfLoaded();
       exportShoppingListToPDF();
     };
     freeBtn.dataset.attached = '1';
@@ -1567,7 +1595,7 @@ async function ensureHtml2pdfLoaded() {
       const paidBtn = document.getElementById('paid-generate-pdf');
       if (paidBtn && !paidBtn.dataset.attached) {
         paidBtn.onclick = async () => {
-          await ensureHtml2pdfLoaded();
+          if (!isPdfV2Enabled()) await ensureHtml2pdfLoaded();
           exportShoppingListToPDF();
         };
         paidBtn.dataset.attached = '1';
