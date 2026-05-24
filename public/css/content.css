@@ -738,6 +738,956 @@
 .content-seo h2 { font-size: 1.25rem; color: var(--ink,#111827); letter-spacing: -.015em; }
 .content-seo a { color: #24712A; }
 
+/* ═══════════════════════════════════════════════════════════════
+   CUISINE HUB INDEX — stretched-link card pattern
+   ═══════════════════════════════════════════════════════════════
+   .cuisine-card extends .recipe-origin-group with a full-card click
+   target (.cuisine-card-link) that sits underneath any sub-links
+   (recipe-origin-list) so both work independently:
+     • Clicking the whitespace / title / count → opens the hub
+     • Clicking a recipe name → opens the recipe page
+   The title text is a <span> (not <a>) so it inherits typography
+   from the design system instead of browser link defaults. */
+
+.cuisine-card { position: relative; }
+
+.cuisine-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  /* Visually invisible — the underlying card surface provides all chrome. */
+  text-indent: -9999em;
+  overflow: hidden;
+  /* Touch-target safety. */
+  -webkit-tap-highlight-color: transparent;
+}
+.cuisine-card-link:focus-visible {
+  outline: 2px solid #24712A;
+  outline-offset: 3px;
+}
+
+/* Title text (non-link) — premium card heading, no browser anchor styles. */
+.cuisine-card .origin-title-text {
+  color: #111827;
+  text-decoration: none;
+  letter-spacing: -.015em;
+}
+
+/* Sub-links float above the stretched link so each recipe stays clickable.
+   relative + z-index is the standard a11y-safe "exception" pattern. */
+.cuisine-card-sublist { position: relative; z-index: 2; }
+.cuisine-card-sublist a { position: relative; }
+
+/* Card affordance: pointer when hovering the surface (not just the visible
+   sub-link area) signals the entire card is interactive. */
+.cuisine-card { cursor: pointer; }
+.cuisine-card .recipe-origin-list a { cursor: pointer; } /* explicit; same as default */
+
+/* Slightly softer transition on the card so the hover feels "app-like"
+   rather than the sharper recipe-card spring. */
+.cuisine-card {
+  transition:
+    transform .24s cubic-bezier(.2,.7,.2,1),
+    box-shadow .22s cubic-bezier(.2,.7,.2,1),
+    border-color .2s ease;
+}
+.cuisine-card:hover,
+.cuisine-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 30px rgba(36,113,42,.14),
+    0 3px 12px rgba(0,0,0,.07);
+  border-color: rgba(36,113,42,.4);
+}
+.cuisine-card:active { transform: translateY(-1px); transition-duration: .08s; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CUISINE HUB PAGE — focused recipe list (no duplicate intro)
+   ═══════════════════════════════════════════════════════════════
+   The H1 already shows "🇮🇹 Recipes from Italy"; the page-body list
+   drops the redundant "🇮🇹 Italy  [count]" heading and goes straight
+   to recipes for a focused, app-like landing. */
+
+.cuisine-hub-recipes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .55rem .9rem;
+}
+.cuisine-hub-recipes li {
+  margin: 0;
+}
+.cuisine-hub-recipes a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem .95rem;
+  background: #fff;
+  border: 1.5px solid #e8eaed;
+  border-radius: 12px;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -.005em;
+  line-height: 1.4;
+  transition:
+    transform .18s cubic-bezier(.2,.7,.2,1),
+    border-color .18s ease,
+    background-color .18s ease,
+    box-shadow .18s ease,
+    color .15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.cuisine-hub-recipes a::after {
+  content: '→';
+  margin-left: auto;
+  font-size: .8rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+  color: #24712A;
+}
+.cuisine-hub-recipes a:hover {
+  border-color: rgba(36,113,42,.35);
+  background: #f7faf7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(36,113,42,.08);
+  color: #14532D;
+}
+.cuisine-hub-recipes a:hover::after { opacity: 1; transform: translateX(0); }
+.cuisine-hub-recipes a:active {
+  transform: translateY(0);
+  background: #eef5ee;
+  transition-duration: .06s;
+}
+.cuisine-hub-recipes a:focus-visible {
+  outline: 2px solid #24712A;
+  outline-offset: 2px;
+}
+
+/* Inline "back to recipes" link at the bottom of the country page tile
+   grid. Production-restrained: small, centered, subtle hover. */
+.cuisine-hub-back {
+  margin-top: 2rem;
+  font-size: .85rem;
+  text-align: center;
+}
+.cuisine-hub-back a {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .4rem .9rem;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  transition: background-color .15s ease, color .15s ease;
+}
+.cuisine-hub-back a:hover {
+  background: rgba(36,113,42,.06);
+  color: #24712A;
+}
+
+/* RTL: flip the arrow indicator. */
+[dir="rtl"] .cuisine-hub-recipes a::after { content: '←'; margin-left: 0; margin-right: auto; }
+[dir="rtl"] .cuisine-hub-recipes a:hover::after { transform: translateX(0); }
+
+/* Mobile: tighter gaps, single column to keep tap targets full-width. */
+@media (max-width: 600px) {
+  .cuisine-hub-recipes { grid-template-columns: 1fr; gap: .5rem; }
+  .cuisine-hub-recipes a { padding: .85rem 1rem; font-size: .95rem; }
+  .cuisine-card { padding: 1.15rem 1.25rem 1.05rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PHASE 4 — CUISINE EXPERIENCE UNIFICATION
+   ═══════════════════════════════════════════════════════════════
+   Atmosphere system, cuisine hero, image-backed recipe tiles, hub-
+   index thumbnail strips, recipe-index/plan-index discovery CTA.
+   All atmosphere theming is driven by a single
+   [data-cuisine-atmosphere="…"] attribute on the host element. */
+
+/* Atmosphere CSS variable palettes. Each atmosphere exports:
+     --cuisine-accent       — primary brand-aligned accent (used in
+                              borders, dots, hover states)
+     --cuisine-accent-ink   — dark variant for text on light bg
+     --cuisine-tint         — very pale tint for soft backgrounds
+     --cuisine-tint-strong  — slightly stronger tint for chips
+     --cuisine-gradient     — diagonal soft gradient for hero band */
+[data-cuisine-atmosphere="global"], [data-cuisine-atmosphere="mediterranean"] {
+  --cuisine-accent:#b85c3b;
+  --cuisine-accent-ink:#7a3a23;
+  --cuisine-tint:#fff5eb;
+  --cuisine-tint-strong:#f5e3d0;
+  --cuisine-gradient: linear-gradient(135deg,#fff5eb 0%, #f5e3d0 60%, #f0d9bd 100%);
+}
+[data-cuisine-atmosphere="east-asian"] {
+  --cuisine-accent:#b34d6e;
+  --cuisine-accent-ink:#6f2942;
+  --cuisine-tint:#fcf2f4;
+  --cuisine-tint-strong:#f2e0e6;
+  --cuisine-gradient: linear-gradient(135deg,#fcf2f4 0%, #f2e0e6 55%, #e6d3e0 100%);
+}
+[data-cuisine-atmosphere="se-asian"] {
+  --cuisine-accent:#1e8a5c;
+  --cuisine-accent-ink:#0e5a3a;
+  --cuisine-tint:#e9f5ed;
+  --cuisine-tint-strong:#d4e9d8;
+  --cuisine-gradient: linear-gradient(135deg,#e9f5ed 0%, #d4e9d8 55%, #c3e0c6 100%);
+}
+[data-cuisine-atmosphere="south-asian"] {
+  --cuisine-accent:#c97a1f;
+  --cuisine-accent-ink:#7d4b10;
+  --cuisine-tint:#fdf3e2;
+  --cuisine-tint-strong:#f4e2c1;
+  --cuisine-gradient: linear-gradient(135deg,#fdf3e2 0%, #f4e2c1 55%, #ecd29c 100%);
+}
+[data-cuisine-atmosphere="middle-eastern"] {
+  --cuisine-accent:#a8632b;
+  --cuisine-accent-ink:#6c3d18;
+  --cuisine-tint:#f8eedf;
+  --cuisine-tint-strong:#eddcc1;
+  --cuisine-gradient: linear-gradient(135deg,#f8eedf 0%, #eddcc1 55%, #ddc89e 100%);
+}
+[data-cuisine-atmosphere="north-african"] {
+  --cuisine-accent:#a04428;
+  --cuisine-accent-ink:#642818;
+  --cuisine-tint:#fbeae0;
+  --cuisine-tint-strong:#efd0bf;
+  --cuisine-gradient: linear-gradient(135deg,#fbeae0 0%, #efd0bf 55%, #e2b89c 100%);
+}
+[data-cuisine-atmosphere="latin"] {
+  --cuisine-accent:#d05c1f;
+  --cuisine-accent-ink:#7c3411;
+  --cuisine-tint:#fceadc;
+  --cuisine-tint-strong:#f6d2b5;
+  --cuisine-gradient: linear-gradient(135deg,#fceadc 0%, #f6d2b5 55%, #f0bd91 100%);
+}
+[data-cuisine-atmosphere="east-european"] {
+  --cuisine-accent:#8e3a3a;
+  --cuisine-accent-ink:#5a1f1f;
+  --cuisine-tint:#f3e6e6;
+  --cuisine-tint-strong:#e3cccc;
+  --cuisine-gradient: linear-gradient(135deg,#f3e6e6 0%, #e3cccc 55%, #d2b3b3 100%);
+}
+[data-cuisine-atmosphere="nordic"] {
+  --cuisine-accent:#587a8c;
+  --cuisine-accent-ink:#324958;
+  --cuisine-tint:#eaf0f4;
+  --cuisine-tint-strong:#d1dde6;
+  --cuisine-gradient: linear-gradient(135deg,#eaf0f4 0%, #d1dde6 55%, #b8c9d7 100%);
+}
+[data-cuisine-atmosphere="sub-saharan"] {
+  --cuisine-accent:#9c5e2a;
+  --cuisine-accent-ink:#5c3614;
+  --cuisine-tint:#f7e9d8;
+  --cuisine-tint-strong:#ecd0b0;
+  --cuisine-gradient: linear-gradient(135deg,#f7e9d8 0%, #ecd0b0 55%, #dfb887 100%);
+}
+[data-cuisine-atmosphere="anglo"] {
+  --cuisine-accent:#3b5374;
+  --cuisine-accent-ink:#1d2e48;
+  --cuisine-tint:#e9eef5;
+  --cuisine-tint-strong:#d2dbe8;
+  --cuisine-gradient: linear-gradient(135deg,#e9eef5 0%, #d2dbe8 55%, #b6c4d9 100%);
+}
+[data-cuisine-atmosphere="central-european"] {
+  --cuisine-accent:#5a7240;
+  --cuisine-accent-ink:#324326;
+  --cuisine-tint:#edf2e4;
+  --cuisine-tint-strong:#dae3c5;
+  --cuisine-gradient: linear-gradient(135deg,#edf2e4 0%, #dae3c5 55%, #c5d2a3 100%);
+}
+[data-cuisine-atmosphere="central-asian"] {
+  --cuisine-accent:#3f8f8e;
+  --cuisine-accent-ink:#1e5454;
+  --cuisine-tint:#e2f0ef;
+  --cuisine-tint-strong:#bfddda;
+  --cuisine-gradient: linear-gradient(135deg,#e2f0ef 0%, #bfddda 55%, #99c7c3 100%);
+}
+[data-cuisine-atmosphere="pacific"] {
+  --cuisine-accent:#2a8aa8;
+  --cuisine-accent-ink:#185368;
+  --cuisine-tint:#e1f0f5;
+  --cuisine-tint-strong:#bdd8e2;
+  --cuisine-gradient: linear-gradient(135deg,#e1f0f5 0%, #bdd8e2 55%, #99bfcf 100%);
+}
+
+/* ── Cuisine HERO (replaces .content-hero on hub pages) ────────────
+   Cinematic 2-column band: text on the left, featured-recipe image
+   on the right. Background uses the atmosphere gradient so each
+   cuisine "feels" different but stays inside one design system. */
+.cuisine-hero {
+  background: var(--cuisine-gradient, linear-gradient(135deg,#fff5eb,#f0d9bd));
+  position: relative;
+  overflow: hidden;
+  padding: 2.4rem 1.5rem 2.4rem;
+}
+.cuisine-hero::after {
+  /* Bottom edge softener — fades the atmosphere band into white. */
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1.6rem;
+  background: linear-gradient(180deg, transparent, #ffffff);
+  pointer-events: none;
+}
+.cuisine-hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.cuisine-hero-breadcrumb {
+  color: var(--cuisine-accent-ink, #4b5563) !important;
+  margin-bottom: 1.4rem;
+}
+.cuisine-hero-breadcrumb a { color: var(--cuisine-accent-ink, #4b5563); }
+.cuisine-hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+  gap: 2rem;
+  align-items: center;
+}
+.cuisine-hero-text { min-width: 0; }
+.cuisine-hero-flag {
+  font-size: 3rem;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: .55rem;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
+}
+.cuisine-hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  color: var(--cuisine-accent-ink, #1f2937);
+  margin: 0 0 .65rem;
+}
+.cuisine-hero h1 .accent { color: var(--cuisine-accent, #24712A); }
+.cuisine-hero-desc {
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #374151;
+  margin: 0;
+  max-width: 36em;
+}
+.cuisine-hero-image {
+  margin: 0;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--cuisine-tint-strong, #eee);
+  box-shadow: 0 4px 14px rgba(0,0,0,.10);
+}
+.cuisine-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Cuisine TILE GRID (replaces the old .cuisine-hub-recipes list)─
+   Image-backed cards: square image + title + descriptor + meta row.
+   The first tile becomes the "featured" tile when the cuisine has
+   ≥3 recipes (spans 2 columns on tablet+, image is wider). */
+.cuisine-hub-section { padding-top: 1.8rem; padding-bottom: 2.4rem; }
+.cuisine-tile-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+.cuisine-tile-grid > li { margin: 0; min-width: 0; }
+.cuisine-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.cuisine-tile:hover, .cuisine-tile:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.07);
+  border-color: rgba(36,113,42,.35);
+}
+.cuisine-tile:focus-visible { outline: 2px solid #24712A; outline-offset: 2px; }
+.cuisine-tile:active { transform: translateY(0); transition-duration: .08s; }
+
+.cuisine-tile-img {
+  display: block;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--cuisine-tint, #f3f4f6);
+  overflow: hidden;
+}
+.cuisine-tile-img img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+.cuisine-tile:hover .cuisine-tile-img img { transform: scale(1.03); }
+
+.cuisine-tile-body {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  padding: .9rem 1rem 1rem;
+}
+.cuisine-tile-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+}
+.cuisine-tile-desc {
+  font-size: .85rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cuisine-tile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem .55rem;
+  margin-top: .25rem;
+  font-size: .76rem;
+}
+.cuisine-tile-time {
+  color: var(--cuisine-accent-ink, #4b5563);
+  font-weight: 600;
+  display: inline-flex; align-items: center; gap: .2rem;
+}
+.cuisine-tile-tags { display: inline-flex; flex-wrap: wrap; gap: .25rem; }
+.cuisine-tile-tag {
+  background: var(--cuisine-tint, #f3f4f6);
+  color: var(--cuisine-accent-ink, #374151);
+  border-radius: 99px;
+  padding: .1rem .55rem;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .005em;
+  white-space: nowrap;
+}
+
+/* Featured spotlight: tile #0 takes 2 columns + bigger image on
+   tablet/desktop. On mobile it falls back to standard width. */
+@media (min-width: 720px) {
+  .cuisine-tile--featured {
+    grid-column: span 2;
+    flex-direction: row;
+  }
+  .cuisine-tile--featured .cuisine-tile-img {
+    flex: 0 0 56%;
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 220px;
+  }
+  .cuisine-tile--featured .cuisine-tile-body {
+    flex: 1 1 auto;
+    padding: 1.4rem 1.5rem 1.5rem;
+    justify-content: center;
+    gap: .5rem;
+  }
+  .cuisine-tile--featured .cuisine-tile-title { font-size: 1.3rem; }
+  .cuisine-tile--featured .cuisine-tile-desc {
+    font-size: .95rem;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* ── Hub-index CARDS — thumbnail strip + curated preview ──────────
+   Replaces the old "<ul> of recipe names" sub-list with a 3-image
+   thumbnail strip and a comma-separated preview, giving each card
+   visual identity beyond the country flag emoji.
+
+   Premium polish: thinner border (1px), multi-layer Apple-style
+   shadow ladder, smoother hover spring. */
+.cuisine-card--preview {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e8eaed;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.cuisine-card--preview:hover,
+.cuisine-card--preview:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.07);
+  border-color: rgba(36,113,42,.35);
+}
+.cuisine-card--preview:active { transform: translateY(0); transition-duration: .08s; }
+
+.cuisine-card-thumbs {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2px;
+  height: 130px;
+  background: var(--cuisine-tint-strong, #eee);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.cuisine-card-thumbs::after {
+  /* Soft atmosphere tint overlay — subtle, just enough to unify the
+     3 thumbnails without obscuring them. */
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.18) 100%);
+  pointer-events: none;
+}
+.cuisine-card-thumbs img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.cuisine-card--preview:hover .cuisine-card-thumbs img { transform: scale(1.06); }
+/* Grid responds to thumb count via [data-thumb-count] (see Phase 4.1
+   hardening section below). Old img:only-child fallback removed when
+   the markup switched from direct <img> children to wrapped <span>. */
+
+.cuisine-card-meta {
+  padding: 1rem 1.15rem 1.05rem;
+  position: relative;
+  z-index: 1;
+}
+.cuisine-card-meta .origin-title {
+  margin-bottom: .35rem;
+}
+.cuisine-card-preview-names {
+  font-size: .82rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: -.005em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── DISCOVERY CTA — on recipe-index and plan-listing index ───────
+   Surfaces the cuisine hub from existing entry points so users find
+   it via UX, not just SEO. Lightweight: eyebrow + heading + sub +
+   6-cuisine row + "see all" button. */
+.cuisine-discover {
+  background: linear-gradient(180deg, #f8faf8 0%, #ffffff 100%);
+  padding-top: 2.4rem;
+  padding-bottom: 2.6rem;
+  border-top: 1px solid #eef0ee;
+  border-bottom: 1px solid #eef0ee;
+}
+.cuisine-discover-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+.cuisine-discover-eyebrow {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #24712A;
+  display: inline-block;
+  margin-bottom: .35rem;
+}
+.cuisine-discover-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: #111827;
+  margin: 0 0 .4rem;
+}
+.cuisine-discover-sub {
+  font-size: .95rem;
+  color: #4b5563;
+  margin: 0 0 .6rem;
+  line-height: 1.5;
+}
+.cuisine-mini-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: .65rem;
+  max-width: 980px;
+  margin: 1.2rem auto 1.4rem;
+}
+.cuisine-mini {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .7rem .85rem;
+  background: var(--cuisine-tint, #fff);
+  border: 1.5px solid #e8eaed;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+  letter-spacing: -.005em;
+  transition:
+    transform .18s cubic-bezier(.2,.7,.2,1),
+    border-color .18s ease,
+    box-shadow .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.cuisine-mini:hover, .cuisine-mini:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--cuisine-accent, #24712A);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+.cuisine-mini:focus-visible { outline: 2px solid var(--cuisine-accent, #24712A); outline-offset: 2px; }
+.cuisine-mini-flag { font-size: 1.35rem; line-height: 1; flex-shrink: 0; }
+.cuisine-mini-name { flex: 1; min-width: 0; font-size: .92rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cuisine-mini-count {
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--cuisine-accent-ink, #6b7280);
+  background: rgba(255,255,255,.6);
+  border-radius: 99px;
+  padding: .1rem .5rem;
+  flex-shrink: 0;
+}
+.cuisine-discover-cta {
+  text-align: center;
+  margin: 0;
+}
+.cuisine-discover-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background: #24712A;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+  letter-spacing: -.005em;
+  padding: .65rem 1.4rem;
+  border-radius: 99px;
+  box-shadow: 0 2px 6px rgba(36,113,42,.18);
+  transition: background-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.cuisine-discover-btn::after {
+  content: '›';
+  font-size: 1.05em;
+  line-height: 1;
+  font-weight: 400;
+  opacity: .85;
+  transition: transform .15s ease;
+}
+[dir="rtl"] .cuisine-discover-btn::after { content: '‹'; }
+.cuisine-discover-btn:hover {
+  background: #1f5e23;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(36,113,42,.24);
+}
+.cuisine-discover-btn:hover::after { transform: translateX(2px); }
+[dir="rtl"] .cuisine-discover-btn:hover::after { transform: translateX(-2px); }
+.cuisine-discover-btn:active { transform: translateY(0); transition-duration: .08s; }
+
+/* ── Mobile responsive for all Phase 4 surfaces ── */
+@media (max-width: 720px) {
+  .cuisine-hero { padding: 1.8rem 1.1rem 2rem; }
+  .cuisine-hero-content {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .cuisine-hero-image {
+    aspect-ratio: 16 / 10;
+    order: -1; /* image first on mobile for visual anchor */
+  }
+  .cuisine-hero h1 { font-size: 1.7rem; }
+  .cuisine-hero-desc { font-size: .96rem; }
+  .cuisine-hero-flag { font-size: 2.4rem; }
+
+  .cuisine-tile-grid { grid-template-columns: 1fr 1fr; gap: .7rem; }
+  .cuisine-tile-body { padding: .65rem .75rem .85rem; gap: .25rem; }
+  .cuisine-tile-title { font-size: .92rem; }
+  .cuisine-tile-desc { font-size: .78rem; -webkit-line-clamp: 2; }
+  .cuisine-tile-meta { gap: .25rem .4rem; font-size: .7rem; }
+  .cuisine-tile-tag { font-size: .65rem; padding: .08rem .42rem; }
+
+  .cuisine-card--preview { border-radius: 16px; }
+  .cuisine-card-thumbs { height: 110px; }
+  .cuisine-card-meta { padding: .85rem 1rem .95rem; }
+
+  .cuisine-discover { padding: 1.8rem 0 2rem; }
+  .cuisine-discover-title { font-size: 1.25rem; }
+  .cuisine-discover-sub { font-size: .9rem; }
+  .cuisine-mini-row { grid-template-columns: 1fr 1fr; gap: .5rem; padding: 0 .9rem; }
+  .cuisine-mini { padding: .6rem .75rem; }
+  .cuisine-mini-name { font-size: .85rem; }
+}
+@media (max-width: 420px) {
+  .cuisine-tile-grid { grid-template-columns: 1fr; }
+  .cuisine-mini-row { grid-template-columns: 1fr; }
+}
+
+/* RTL: keep all visual logic identical; flip the meta-row arrow icons. */
+[dir="rtl"] .cuisine-tile-meta { direction: rtl; }
+
+/* ═══════════════════════════════════════════════════════════════
+   PHASE 4 HARDENING — fallbacks, duplicate mitigation, recipe-page
+   cuisine context, mobile polish, premium discovery section.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Image fallback layer ──────────────────────────────────────────
+   Every tile / thumb / hero <img> sits ON TOP of a country-flag
+   fallback. If the image is missing (.cover2.jpg skipped at build
+   time) or 404s at runtime (onerror removes the <img>), the flag
+   shows through against the atmosphere-tinted background — no
+   broken-image icons, no empty boxes, no layout jumps. */
+.cuisine-tile-img,
+.cuisine-card-thumb,
+.cuisine-hero-image {
+  position: relative;
+}
+.cuisine-tile-img-fallback,
+.cuisine-card-thumb-fallback,
+.cuisine-hero-image-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  line-height: 1;
+  opacity: .38;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  background: var(--cuisine-tint-strong, #eee);
+}
+.cuisine-hero-image-fallback { font-size: 4.4rem; opacity: .4; }
+.cuisine-card-thumb-fallback { font-size: 1.8rem; opacity: .46; }
+/* When the <img> loads, it sits on top of the fallback (z-index:1). */
+.cuisine-tile-img img,
+.cuisine-card-thumb img,
+.cuisine-hero-image img {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hub-index thumbnail strip: each thumb is its own grid cell so
+       the fallback layer can be positioned per-thumb (vs over the
+       whole strip). Wraps the original .cuisine-card-thumbs grid. */
+.cuisine-card-thumbs > .cuisine-card-thumb {
+  position: relative;
+  overflow: hidden;
+  background: var(--cuisine-tint-strong, #eee);
+}
+.cuisine-card-thumbs > .cuisine-card-thumb > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Duplicate-image mitigation ────────────────────────────────────
+   When the same image URL shows up twice or three times on a single
+   cuisine page (e.g. shakshuka/chakchouka), give the 2nd/3rd tiles
+   a subtle brightness+saturation tweak. Keeps the page from feeling
+   like a copy-paste error without needing per-recipe overrides. */
+.cuisine-tile-img[data-img-rot="1"] img {
+  filter: brightness(1.04) saturate(1.06) hue-rotate(-3deg);
+}
+.cuisine-tile-img[data-img-rot="2"] img {
+  filter: brightness(.96) saturate(.95) hue-rotate(3deg);
+}
+
+/* ── Mosaic hardening: responsive grid + crop balancing ────────────
+   The thumbnail strip adapts to thumb count so we never leave a
+   visible empty cell on cuisines with only 2 recipes. Per-position
+   object-position rotation keeps duplicate-image cards from cropping
+   to identical centers. */
+.cuisine-card-thumbs[data-thumb-count="3"] {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+.cuisine-card-thumbs[data-thumb-count="2"] {
+  grid-template-columns: 1fr 1fr;
+}
+.cuisine-card-thumbs[data-thumb-count="1"] {
+  grid-template-columns: 1fr;
+}
+.cuisine-card-thumb[data-thumb-pos="0"] img { object-position: center 45%; }
+.cuisine-card-thumb[data-thumb-pos="1"] img { object-position: 55% 50%; }
+.cuisine-card-thumb[data-thumb-pos="2"] img { object-position: 45% 55%; }
+
+/* ── Recipe page: clickable cuisine badge chip ─────────────────────
+   The hero badge's "origin" segment becomes a link to the cuisine
+   hub when one exists. Keeps the badge visually identical (no
+   default link styling) but adds an accent on hover. */
+.recipe-badge .recipe-badge-origin {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color .15s ease, color .15s ease;
+}
+.recipe-badge .recipe-badge-origin:hover,
+.recipe-badge .recipe-badge-origin:focus-visible {
+  color: var(--cuisine-accent, #24712A);
+  border-color: var(--cuisine-accent, #24712A);
+}
+
+/* Recipe page breadcrumb: cuisine link gets the atmosphere accent on
+   hover. Doesn't change layout — same row, same spacing. */
+.recipe-breadcrumb a:hover { color: var(--cuisine-accent, #24712A); }
+
+/* ── Discovery CTA polish (Phase 4E) ───────────────────────────────
+   Stronger visual treatment so the cuisine entry from recipe-index
+   and plan-listing index feels like a premium feature, not a
+   secondary block. Gradient backdrop, taller eyebrow, larger row
+   gap, more confident button styling. */
+.cuisine-discover {
+  background:
+    radial-gradient(ellipse at top, rgba(36,113,42,.05) 0%, transparent 60%),
+    linear-gradient(180deg, #f8faf8 0%, #ffffff 100%);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.cuisine-discover-eyebrow {
+  position: relative;
+  padding-bottom: .35rem;
+}
+.cuisine-discover-eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 28px;
+  height: 2px;
+  background: #24712A;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.cuisine-discover-title {
+  font-size: 1.65rem;
+  margin-bottom: .55rem;
+}
+.cuisine-discover-sub {
+  font-size: 1rem;
+}
+.cuisine-mini {
+  position: relative;
+  padding: .8rem .95rem;
+  border-width: 1px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.025),
+    0 2px 4px rgba(0,0,0,.025);
+}
+.cuisine-mini::before {
+  /* Thin atmosphere accent strip on the leading edge — lifts the
+     mini-pill out of pure-white visual flatness. */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3px;
+  height: 60%;
+  transform: translateY(-50%);
+  border-radius: 0 3px 3px 0;
+  background: var(--cuisine-accent, #24712A);
+  opacity: .85;
+  transition: width .2s ease;
+}
+[dir="rtl"] .cuisine-mini::before { left: auto; right: 0; border-radius: 3px 0 0 3px; }
+.cuisine-mini:hover::before { width: 5px; }
+.cuisine-mini-count {
+  background: var(--cuisine-tint, #f3f4f6);
+}
+.cuisine-discover-btn {
+  font-size: 1rem;
+  padding: .75rem 1.6rem;
+  letter-spacing: -.005em;
+  font-weight: 700;
+}
+
+/* ── Mobile-first polish pass (Phase 4F) ───────────────────────────
+   Tightens specific spots that felt cramped or wrapped awkwardly:
+   long country names in the hero, the breadcrumb on narrow screens,
+   tile metadata overflow, and the recipe-page badge wrap. */
+.recipe-badge {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .recipe-breadcrumb {
+    font-size: .8rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: .25rem;
+  }
+  .recipe-breadcrumb::-webkit-scrollbar { display: none; }
+
+  /* Tile meta — allow tags to wrap on a new line when out of space. */
+  .cuisine-tile-meta { row-gap: .35rem; }
+  .cuisine-tile-time { font-size: .72rem; }
+  .cuisine-tile-tag { font-size: .65rem; }
+
+  /* Hero: prevent country-name overflow on long names (Bosnia and
+     Herzegovina, Republic of the Congo, etc.). */
+  .cuisine-hero h1 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .cuisine-hero-flag { font-size: 2.2rem; margin-bottom: .35rem; }
+
+  /* Discovery CTA: slightly tighter on phones, but still confident. */
+  .cuisine-discover { padding: 2rem 0 2.2rem; }
+  .cuisine-discover-title { font-size: 1.2rem; }
+}
+
+@media (max-width: 380px) {
+  /* Extreme narrow (iPhone SE / 360px): force 1-column everything,
+     reduce hero flag, simplify tile body. */
+  .cuisine-hero h1 { font-size: 1.5rem; }
+  .cuisine-hero-desc { font-size: .9rem; }
+  .cuisine-tile-title { font-size: .88rem; }
+  .cuisine-tile-desc { -webkit-line-clamp: 1; font-size: .76rem; }
+}
+
+/* ── Reduced motion: respect user preferences ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .cuisine-card--preview,
+  .cuisine-card,
+  .cuisine-tile,
+  .cuisine-mini,
+  .cuisine-discover-btn,
+  .cuisine-tile-img img,
+  .cuisine-card-thumbs img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 /* ── Footer override for content pages ── */
 .app-footer a { color: var(--ink-2,#4b5563); text-decoration: none; }
 .app-footer a:hover { color: #24712A; }
@@ -1326,65 +2276,98 @@
    CLS at load. Safe-area-inset respected so the pill clears the iOS
    home indicator and stays above Safari's bottom URL bar.
    ──────────────────────────────────────────────────────────────────── */
-.recipe-mobile-back { display: none; }
+.recipe-mobile-back,
+.mp-back-pill { display: none; }
 
 @media (max-width: 768px) {
-  .recipe-mobile-back {
+  .recipe-mobile-back,
+  .mp-back-pill {
     display: inline-flex;
     align-items: center;
-    gap: .35rem;
+    gap: .3rem;
     position: fixed;
     left: max(14px, env(safe-area-inset-left));
     bottom: calc(max(14px, env(safe-area-inset-bottom)) + 6px);
     z-index: 90;
-    padding: .55rem .9rem .55rem .75rem;
-    background: rgba(26, 26, 46, .92);
-    -webkit-backdrop-filter: saturate(180%) blur(10px);
-    backdrop-filter: saturate(180%) blur(10px);
-    color: #fff;
+    /* Premium polish: chip-style frosted pill (was dark navy CTA).
+       Lighter, smaller, more integrated into the layout — reads as a
+       contextual chip rather than a primary action button. */
+    padding: .42rem .8rem .42rem .65rem;
+    background: rgba(255, 255, 255, .96);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    backdrop-filter: saturate(180%) blur(12px);
+    color: #1f2937;
     text-decoration: none;
-    font-size: .85rem;
+    font-size: .78rem;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.1;
+    letter-spacing: -.005em;
+    border: 1px solid rgba(0, 0, 0, .08);
     border-radius: 999px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .18), 0 1px 3px rgba(0, 0, 0, .12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
     -webkit-tap-highlight-color: transparent;
-    transition: transform .15s ease, background-color .15s ease;
+    transition: transform .15s ease,
+                background-color .15s ease,
+                box-shadow .15s ease;
     /* Cap label width on very narrow phones so the pill never grows
        beyond ~55% of viewport — keeps it out of the way of CTAs. */
     max-width: 60vw;
   }
-  .recipe-mobile-back:active {
-    transform: scale(.96);
-    background: rgba(26, 26, 46, 1);
+  .recipe-mobile-back:active,
+  .mp-back-pill:active {
+    transform: scale(.97);
+    background: rgba(245, 247, 250, 1);
   }
-  .recipe-mobile-back:focus-visible {
-    outline: 2px solid #fff;
+  .recipe-mobile-back:focus-visible,
+  .mp-back-pill:focus-visible {
+    outline: 2px solid var(--cuisine-accent, #24712A);
     outline-offset: 2px;
   }
-  .recipe-mobile-back .rmb-arrow {
-    font-size: 1rem;
+  .recipe-mobile-back .rmb-arrow,
+  .mp-back-pill .rmb-arrow {
+    font-size: .95rem;
     line-height: 1;
     flex-shrink: 0;
+    color: var(--cuisine-accent, #24712A);
+    font-weight: 500;
   }
-  .recipe-mobile-back .rmb-label {
+  .recipe-mobile-back .rmb-label,
+  .mp-back-pill .rmb-label {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #1f2937;
   }
-  /* Make sure the floating pill doesn't cover the bottom of the recipe
-     content. The pill is ~36pt tall + 14pt + safe-area. Total reserve
-     ≈ 60pt at the bottom is plenty without feeling cramped. */
-  .recipe-page-wrap {
+  /* Cuisine-aware variant: thin atmosphere-coloured strip on the leading
+     edge ties the pill to whichever cuisine the user is browsing. */
+  .mp-back-pill--cuisine::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 25%;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: var(--cuisine-accent, #24712A);
+    opacity: 1;
+  }
+  .mp-back-pill--cuisine { position: fixed; padding-left: .9rem; }
+  [dir="rtl"] .mp-back-pill--cuisine::before { left: auto; right: 0; border-radius: 3px 0 0 3px; }
+  /* Make sure the floating pill doesn't cover the bottom of content. */
+  .recipe-page-wrap,
+  .cuisine-hub-main,
+  .cuisine-hub-index-main {
     padding-bottom: calc(72px + env(safe-area-inset-bottom)) !important;
   }
 }
 
 /* Hide on print and during legacy PDF export */
 @media print {
-  .recipe-mobile-back { display: none !important; }
+  .recipe-mobile-back,
+  .mp-back-pill { display: none !important; }
 }
-body.pdf-exporting .recipe-mobile-back { display: none !important; }
+body.pdf-exporting .recipe-mobile-back,
+body.pdf-exporting .mp-back-pill { display: none !important; }
 
 /* ── Recipe tip box ── */
 .recipe-tip-box {

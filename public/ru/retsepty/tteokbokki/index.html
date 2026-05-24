@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ru/nedelnoe-menyu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Меню</span></a>
       <a href="/ru/retsepty/" class="nav-link">🍽️ Рецепты</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 Приложение</a>
       <a href="/ru/tseny/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Ттокпокки</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/retsepty/south-korea/">Южная Корея</a> › <span>Ттокпокки</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="tteokbokki" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/330px-Tteokbokki.JPG" alt="Ттокпокки" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Закуска · Южная Корея</div>
+      <div class="recipe-badge">🇰🇷 Закуска · <a class="recipe-badge-origin" href="/ru/retsepty/south-korea/">Южная Корея</a></div>
       <h1>Ттокпокки</h1>
       <p class="recipe-tagline">Ттокпокки — одна из самых популярных уличных закусок Южной Кореи: цилиндрические рисовые лепёшки, приготовленные в густом остром соусе на основе кочудяна — ферментированной пасты из красного перца, определяющей корейскую остроту. Блюдо продаётся у лотков пожангмача по всей Корее и едят его в любое время суток — от школьников после уроков до поздних вечерних трапез.
 
@@ -133,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Ещё рецепты из Южная Корея</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/retsepty/south-korea/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>
@@ -172,15 +173,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/retsepty/south-korea/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="Южная Корея"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Южная Корея</span>
 </a>
 
 </main>

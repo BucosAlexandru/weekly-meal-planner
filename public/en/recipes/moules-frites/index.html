@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/en/weekly-meal-plan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Meal Plans</span></a>
       <a href="/en/recipes/" class="nav-link">🍽️ Recipes</a>
-      <a href="/en/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/en/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Moules-frites</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/belgium/">Belgium</a> › <span>Moules-frites</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="moules-frites" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Moules-frites_at_Chez_Leon_in_Brussels.jpg/330px-Moules-frites_at_Chez_Leon_in_Brussels.jpg" alt="Moules-frites" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Dinner · Belgium</div>
+      <div class="recipe-badge">🇧🇪 Dinner · <a class="recipe-badge-origin" href="/en/recipes/belgium/">Belgium</a></div>
       <h1>Moules-frites</h1>
       <p class="recipe-tagline">Moules-frites — mussels and fries — is claimed by Belgium as a national dish, though both components have wider origins. Belgian fries are a matter of local pride: the tradition of cutting potatoes into strips and frying them in beef fat is documented in Belgium from the seventeenth century. The pairing with mussels became standard in the twentieth century as the North Sea mussel harvest grew.
 
@@ -131,11 +130,13 @@ The mussels are steamed in their own liquor combined with white wine, shallots, 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 More recipes from Belgium</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/belgium/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/stoofvlees/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stoofvlees">🍽️</div>
@@ -158,15 +159,20 @@ The mussels are steamed in their own liquor combined with white wine, shallots, 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/belgium/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Belgium"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Belgium</span>
 </a>
 
 </main>

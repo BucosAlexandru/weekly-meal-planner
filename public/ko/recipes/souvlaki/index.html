@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>수블라키</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/greece/">그리스</a> › <span>수블라키</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="souvlaki" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/651076-312x231.jpg" alt="수블라키" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 저녁 · 그리스</div>
+      <div class="recipe-badge">🇬🇷 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/greece/">그리스</a></div>
       <h1>수블라키</h1>
       <p class="recipe-tagline">수블라키 — 숯불에 구운 꼬치 요리 — 는 아테네 길거리 음식의 근간으로, 소우블라(꼬치)가 화덕만큼이나 요리의 핵심이었던 고대 그리스까지 거슬러 올라간다. 현대 아테네에서는 모든 프사로타베르나와 심야 그릴 가게에서 팔리며, 돼지고기는 레몬, 올리브 오일, 그리고 아티카 언덕에서 자생하는 말린 오레가노에 하룻밤 재워진다. 신선한 차지키와 생 적양파와 함께 부드러운 피타 빵에 감싸 제공되는 이 요리는 그리스 여름밤의 상징적인 맛이다.</p>
       <div class="recipe-meta-row">
@@ -127,11 +126,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 그리스의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/greece/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/tzatziki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tzatziki">🍽️</div>
@@ -172,15 +173,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/greece/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="그리스"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">그리스</span>
 </a>
 
 </main>

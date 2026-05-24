@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>모케카</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/brazil/">브라질</a> › <span>모케카</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="moqueca" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Moqueca.jpg/330px-Moqueca.jpg" alt="모케카" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 저녁 · 브라질</div>
+      <div class="recipe-badge">🇧🇷 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/brazil/">브라질</a></div>
       <h1>모케카</h1>
       <p class="recipe-tagline">모케카는 느리게 끓인 브라질 생선 스튜로 두 가지 서로 다른 지역 형태가 있습니다. 바이아 버전 — 모케카 바이아나 — 은 덴데(붉은 팜 오일)와 코코넛 밀크를 사용해 대서양 노예 무역을 통해 유입된 서아프리카 요리 전통에서 비롯된 풍부한 주황빛과 독특한 풍미를 냅니다. 에스피리투 산투의 카피샤바 버전은 둘 다 사용하지 않고 아나토 오일과 더 깔끔한 국물을 씁니다.
 
@@ -134,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 브라질의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/brazil/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/feijoada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="feijoada">🍽️</div>
@@ -161,15 +162,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/brazil/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="브라질"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">브라질</span>
 </a>
 
 </main>

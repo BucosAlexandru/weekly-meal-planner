@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>타말레</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/mexico/">멕시코</a> › <span>타말레</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="tamale" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg" alt="타말레" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 저녁 · 멕시코</div>
+      <div class="recipe-badge">🇲🇽 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/mexico/">멕시코</a></div>
       <h1>타말레</h1>
       <p class="recipe-tagline">타말레는 유럽과의 접촉 수천 년 전으로 거슬러 올라가는 중앙아메리카의 가장 오래된 조리 식품 중 하나입니다. 석회수에 겉껍질을 부드럽게 한 닉스타말 처리된 옥수수 알갱이로 만든 옥수수 반죽(마사)에 라드를 섞어 반죽이 가벼워질 때까지 반죽합니다. 이 마사를 옥수수 껍질에 펴서 속재료를 넣고 싸서 반죽이 속재료 주위에서 단단해질 때까지 찝니다.
 
@@ -140,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 멕시코의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/mexico/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>
@@ -191,15 +192,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/mexico/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="멕시코"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">멕시코</span>
 </a>
 
 </main>

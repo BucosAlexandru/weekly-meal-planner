@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>나시고렝</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/indonesia/">인도네시아</a> › <span>나시고렝</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="nasi-goreng" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Nasi_Goreng_Kampung_%2811967588375%29.jpg/330px-Nasi_Goreng_Kampung_%2811967588375%29.jpg" alt="나시고렝" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 저녁 · 인도네시아</div>
+      <div class="recipe-badge">🇮🇩 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/indonesia/">인도네시아</a></div>
       <h1>나시고렝</h1>
       <p class="recipe-tagline">나시고렝——문자 그대로 볶음밥——은 렌당과 함께 인도네시아의 두 지정 국민 음식 중 하나입니다. 이 요리는 군도 전역에서 수십 가지 지역 변형으로 나타나며, 각각 다른 향신료와 단백질을 사용합니다. 네덜란드 식민지화로 네덜란드에 전해졌고, 지금도 그곳에서 가장 인기 있는 일상 요리 중 하나입니다.
 
@@ -138,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 인도네시아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/indonesia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/satay/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="satay">🍽️</div>
@@ -177,15 +178,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/indonesia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="인도네시아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">인도네시아</span>
 </a>
 
 </main>

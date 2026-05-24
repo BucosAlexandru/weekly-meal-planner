@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/it/piano-settimanale/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menu</span></a>
       <a href="/it/ricette/" class="nav-link">🍽️ Ricette</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/it/prezzi/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Stoofvlees</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/ricette/belgium/">Belgio</a> › <span>Stoofvlees</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="stoofvlees" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jielbeaumadier_carbonade_flamande_2_2012.jpg/330px-Jielbeaumadier_carbonade_flamande_2_2012.jpg" alt="Stoofvlees" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Cena · Belgio</div>
+      <div class="recipe-badge">🇧🇪 Cena · <a class="recipe-badge-origin" href="/it/ricette/belgium/">Belgio</a></div>
       <h1>Stoofvlees</h1>
       <p class="recipe-tagline">Lo stoofvlees — noto come carbonnade flamande in francese — è il piatto a cottura lenta più emblematico del Belgio: manzo e cipolle brasati nella birra bruna belga finché la carne si sfalda e il sugo diventa una glassa acajù lucida. È strettamente legato alla regione fiamminga, dove si mangia dal Medioevo. La birra bruna belga — con la sua dolcezza maltata — fornisce la base di sapore che il vino dà nel bourguignon francese.
 
@@ -134,11 +133,13 @@ Il pane come addensante è la tecnica distintiva: fette spalmate di senape di Di
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 Altre ricette da Belgio</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/ricette/belgium/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/moules-frites/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moules-frites">🍽️</div>
@@ -161,15 +162,20 @@ Il pane come addensante è la tecnica distintiva: fette spalmate di senape di Di
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/ricette/belgium/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Belgio"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Belgio</span>
 </a>
 
 </main>

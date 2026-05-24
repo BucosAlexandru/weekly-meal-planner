@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/de/wochenplan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Pläne</span></a>
       <a href="/de/rezepte/" class="nav-link">🍽️ Rezepte</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/de/preise/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Satay</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/indonesia/">Indonesien</a> › <span>Satay</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="satay" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Sate_Udang.JPG/330px-Sate_Udang.JPG" alt="Satay" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Snack · Indonesien</div>
+      <div class="recipe-badge">🇮🇩 Snack · <a class="recipe-badge-origin" href="/de/rezepte/indonesia/">Indonesien</a></div>
       <h1>Satay</h1>
       <p class="recipe-tagline">Satay ist ein südostasiatisches Grillgericht aus Java, Indonesien, das vermutlich im neunzehnten Jahrhundert entstand. Arabische Händler brachten die Kebab-Tradition in die Region; lokale Köche passten sie mit Kurkuma, Zitronengras und Kokosmilch an. Das Gericht verbreitete sich in der gesamten Region — Thailand, Malaysia, Singapur und die Philippinen haben jeweils ihre eigenen Varianten —, doch die javanische Form mit ihrer gelben Marinade und der dicken Erdnusssauce ist die bekannteste geblieben.
 
@@ -137,11 +136,13 @@ Die Erdnusssauce ist das prägende Element. Aus gemahlenen gerösteten Erdnüsse
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 Weitere Rezepte aus Indonesien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/rezepte/indonesia/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>
@@ -176,15 +177,20 @@ Die Erdnusssauce ist das prägende Element. Aus gemahlenen gerösteten Erdnüsse
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/rezepte/indonesia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Indonesien"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Indonesien</span>
 </a>
 
 </main>
