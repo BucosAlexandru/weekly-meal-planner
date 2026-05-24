@@ -15,7 +15,8 @@ import { recipeImages }               from '../public/js/recipe-images.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import { CUISINE_INTRO }              from './cuisine-intros.mjs';
-import { RELATED_CUISINES, MAX_RELATED_CUISINES } from './discovery-config.mjs';
+import { RELATED_CUISINES, MAX_RELATED_CUISINES,
+         enrichCatalog, selectByTagMix, resolveDiscoveryTarget } from './discovery-config.mjs';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -23,6 +24,14 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT      = path.resolve(__dirname, '..');
 const PUBLIC    = path.join(ROOT, 'public');
+
+// Phase 7 PR 3: discovery catalog enriched once at module load. Reused by
+// recipePage() for the cross-cuisine "similar-tag-mix" bridge strip. The
+// id→raw lookup gives card-rendering helpers (recipeMetadata, slug, etc.)
+// access to the full recipe object after selectByTagMix returns its
+// enriched-but-trimmed shape.
+const discoveryCatalog = enrichCatalog({ recipes, recipesMeta });
+const recipesById      = new Map(recipes.map(r => [r.id, r]));
 
 /* ── helpers ──────────────────────────────────────────────────── */
 const mkdir  = p => fs.mkdirSync(p, { recursive: true });
@@ -3058,6 +3067,61 @@ function recipePage(recipe, rl) {
 </a>`;
     }).join('');
 
+  // Cross-cuisine bridge — Phase 7 PR 3. Strict different-origin filter via
+  // selectByTagMix; ranked by tag overlap desc, then id asc (deterministic).
+  // Gated on ro/en only per PR 3 scope; can be widened by removing the
+  // `bridgeLocales.has(code)` check. Cards reuse the same .recipe-card-item
+  // markup as the same-cuisine strip; layout is a CSS grid (no carousel).
+  // Skipped silently when the recipe has no tags or no eligible neighbours.
+  let bridgeHtml = '';
+  const bridgeLocales = new Set(['ro', 'en']);
+  if (bridgeLocales.has(code)) {
+    const currentItem = discoveryCatalog.find(it => it.id === recipe.id);
+    const bridgeItems = currentItem && currentItem.tags.length
+      ? selectByTagMix(discoveryCatalog, currentItem, { max: 4 })
+      : [];
+    if (bridgeItems.length > 0) {
+      const bridgeHeading = code === 'ro'
+        ? 'Asemănătoare din alte bucătării'
+        : 'Similar dishes from other cuisines';
+      const cards = bridgeItems.map(item => {
+        const raw = recipesById.get(item.id);
+        if (!raw) return '';
+        const rn = raw.name?.[code] || raw.name?.en || raw.name?.ro || '';
+        const rs = slug(raw.name?.en || raw.name?.ro || rn);
+        const ri = raw.ingredients?.[code] || raw.ingredients?.en || [];
+        const rh = raw.howIsMade?.[code]  || raw.howIsMade?.en  || '';
+        const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
+        const rcat = raw.category?.[code] || raw.category?.en || '';
+        const rm = recipeMetadata(ri, rst, rcat, code);
+        const re = recipeCardEmoji(rcat);
+        const rOriginEn = raw.origin?.en || '';
+        const rOriginLocal = raw.origin?.[code] || rOriginEn;
+        const rFlag = COUNTRY_FLAG[rOriginEn] || '';
+        const target = resolveDiscoveryTarget(item, code);
+        const href = target.target === 'recipe'
+          ? `${rl.dir}/${rs}/`
+          : (recipeCuisineHubHref(rOriginEn, code) || `${rl.dir}/`);
+        return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
+  <div class="recipe-card-img" data-card-recipe="${rs}">${re}</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">${esc(rn)}</p>
+    <span class="recipe-card-meta">${rFlag ? rFlag + ' ' : ''}${esc(rOriginLocal)} · ${rm.totalTime}</span>
+  </div>
+</a>`;
+      }).filter(Boolean).join('');
+      if (cards) {
+        bridgeHtml = `
+  <div class="recipe-bridge-section">
+    <div class="recipe-related-header">
+      <h2>${esc(bridgeHeading)}</h2>
+    </div>
+    <div class="recipe-bridge-grid">${cards}</div>
+  </div>`;
+      }
+    }
+  }
+
   const dir_attr = rl.dir_attr || 'ltr';
   // Cuisine hub link (if this origin has a hub of ≥2 recipes). When present
   // we expose it in 3 places: breadcrumb, recipe-badge origin chip, and the
@@ -3154,7 +3218,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     </div>
     <div class="recipe-cards-scroll">${related}</div>
   </div>` : ''}
-
+${bridgeHtml}
   <!-- CTA Banner -->
   <div class="recipe-cta-banner">
     <span class="cta-banner-icon">🥗</span>

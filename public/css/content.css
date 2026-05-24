@@ -2891,3 +2891,26 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
   .cuisine-related-card-flag { font-size: 1.3rem; }
   .cuisine-related-card-name { font-size: 0.9rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Recipe detail — cross-cuisine "similar tag mix" bridge (Phase 7 PR 3).
+   Reuses .recipe-card-item from the same-cuisine strip; only the container
+   changes: grid layout instead of horizontal scroll. The bridge variant
+   overrides the fixed 172px width so cards fill grid cells naturally.
+   ───────────────────────────────────────────────────────────────────── */
+.recipe-bridge-section {
+  padding: 2rem 0 1.6rem;
+  border-top: 1px solid #f0f2f0;
+}
+.recipe-bridge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  gap: 1rem;
+}
+.recipe-bridge-grid .recipe-card-item {
+  width: auto;
+  flex-shrink: 1;
+}
+@media (max-width: 480px) {
+  .recipe-bridge-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
+}
