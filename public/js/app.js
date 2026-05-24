@@ -708,6 +708,11 @@ document.addEventListener('DOMContentLoaded', () => {
     a.href = url; a.download = 'meal-plan.pdf';
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
+    // Return metadata for the dispatcher's telemetry log.
+    return {
+      bytes: blob.size,
+      serverRenderMs: parseInt(resp.headers.get('X-PDF-Render-Ms') || '0', 10) || null,
+    };
   }
 
   // Translate the live planner state into the pdfv2 endpoint's payload shape.
@@ -792,6 +797,29 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
+  // ── Export telemetry helpers ──
+  // Structured JSON log line, prefix PDF_EXPORT_TELEMETRY, so QA can grep
+  // a single regex in Safari Web Inspector. No PII: we log a Safari/iOS
+  // boolean instead of the raw userAgent, no email/plan/recipe content.
+  function _detectClient() {
+    const ua = (typeof navigator !== 'undefined' && navigator.userAgent) || '';
+    return {
+      isSafari: /^((?!chrome|crios|fxios|android).)*safari/i.test(ua),
+      isIOS:    /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1),
+      isMobile: window.matchMedia && window.matchMedia('(max-width: 768px)').matches,
+    };
+  }
+  function _logTelemetry(payload) {
+    try {
+      const client = _detectClient();
+      const data = Object.assign({
+        ts: Date.now(),
+        ...client,
+      }, payload);
+      console.log('PDF_EXPORT_TELEMETRY ' + JSON.stringify(data));
+    } catch (_) { /* never let telemetry break export */ }
+  }
+
   async function exportShoppingListToPDF() {
   // ── SINGLE DISPATCHER for all PDF exports. Every Generate PDF button must
   // route through this function. No button is allowed to call html2pdf
@@ -803,16 +831,32 @@ document.addEventListener('DOMContentLoaded', () => {
   // who explicitly opted into the compact pdfv2 output. Instead we surface
   // the error so the user knows pdfv2 didn't work and can retry.
   const useV2 = isPdfV2Enabled();
+  const _t0 = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
   // Loud console log so QA can verify which engine ran (visible in
   // Safari Web Inspector under "Console").
   console.log('PDF_EXPORT_ENGINE = "' + (useV2 ? 'pdfv2' : 'legacy') + '"');
   if (useV2) {
     try {
-      await exportViaPdfV2();
+      const _result = await exportViaPdfV2();
+      const _ms = Math.round(((typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now()) - _t0);
       console.log('PDF_EXPORT_ENGINE = "pdfv2" · completed OK');
+      _logTelemetry({
+        engine: 'pdfv2',
+        status: 'ok',
+        durationMs: _ms,
+        bytes:        _result && _result.bytes        || null,
+        serverRenderMs: _result && _result.serverRenderMs || null,
+      });
       return;
     } catch (err) {
+      const _ms = Math.round(((typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now()) - _t0);
       console.error('PDF_EXPORT_ENGINE = "pdfv2" · FAILED — NOT falling back to legacy:', err);
+      _logTelemetry({
+        engine: 'pdfv2',
+        status: 'error',
+        durationMs: _ms,
+        errorMessage: (err && err.message) ? String(err.message).slice(0, 200) : String(err).slice(0, 200),
+      });
       try { alert('PDF generation (pdfv2) failed: ' + (err && err.message ? err.message : err) + '\n\nLegacy export was NOT used. Disable pdfv2 (remove ?pdfv2=1 and run localStorage.removeItem("pdfV2") in the console) to use the legacy exporter.'); } catch (_) {}
       return;
     }
@@ -820,8 +864,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── LEGACY html2pdf path (production default; reached only when
   // ── pdfv2 is NOT opted in). Untouched from before.
   const pdfArea = document.getElementById('pdf-impact-area');
-  if (!pdfArea) return;
+  if (!pdfArea) {
+    _logTelemetry({ engine: 'legacy', status: 'error', durationMs: 0, errorMessage: 'no #pdf-impact-area' });
+    return;
+  }
   let cleanNode = null, styleEl = null;
+  let _pageCount = null;
+  let _telemetryStatus = 'ok';
+  let _telemetryError  = null;
   document.body.classList.add('pdf-exporting');
   try {
     generatePDFimpact();
@@ -838,6 +888,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(cleanNode);
     maybeCompactToTwoPages(cleanNode);
     paginateCleanNode(cleanNode);
+    // Count inserted page-break divs for telemetry (each one = a new page).
+    _pageCount = 1 + (cleanNode.querySelectorAll('.page-break').length || 0);
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     await html2pdf().set({
       margin: [0, 0, 0, 0],
@@ -860,10 +912,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .save();
   } catch (err) {
     console.error('❌ PDF generation error:', err);
+    _telemetryStatus = 'error';
+    _telemetryError  = (err && err.message) ? String(err.message).slice(0, 200) : String(err).slice(0, 200);
   } finally {
     if (styleEl) styleEl.remove();
     if (cleanNode) cleanNode.remove();
     document.body.classList.remove('pdf-exporting');
+    const _ms = Math.round(((typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now()) - _t0);
+    _logTelemetry({
+      engine: 'legacy',
+      status: _telemetryStatus,
+      durationMs: _ms,
+      pageCount: _pageCount,
+      errorMessage: _telemetryError,
+    });
   }
 }
 function buildCleanPdfNode() {
