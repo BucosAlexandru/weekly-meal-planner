@@ -55,11 +55,15 @@ const PROD_ORIGIN = 'https://meal-planner.ro';
 function resolveRecipeImage(recipe, rslug) {
   const localWebp = path.join(PUBLIC, 'images', `${rslug}.webp`);
   const localJpg  = path.join(PUBLIC, 'images', `${rslug}.jpg`);
+  const localPng  = path.join(PUBLIC, 'images', `${rslug}.png`);
   if (fs.existsSync(localWebp)) {
     return { src: `/images/${rslug}.webp`, ogUrl: `${PROD_ORIGIN}/images/${rslug}.webp` };
   }
   if (fs.existsSync(localJpg)) {
     return { src: `/images/${rslug}.jpg`, ogUrl: `${PROD_ORIGIN}/images/${rslug}.jpg` };
+  }
+  if (fs.existsSync(localPng)) {
+    return { src: `/images/${rslug}.png`, ogUrl: `${PROD_ORIGIN}/images/${rslug}.png` };
   }
   const mapped = recipeImages[recipe.id];
   if (mapped) return { src: mapped, ogUrl: mapped };
