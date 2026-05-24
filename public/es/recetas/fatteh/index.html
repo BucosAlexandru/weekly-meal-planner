@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/es/plan-semanal/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menús</span></a>
       <a href="/es/recetas/" class="nav-link">🍽️ Recetas</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/es/precios/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Fatteh</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/recetas/syria/">Siria</a> › <span>Fatteh</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="fatteh" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg/330px-%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg" alt="Fatteh" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 Desayuno · Siria</div>
+      <div class="recipe-badge">🇸🇾 Desayuno · <a class="recipe-badge-origin" href="/es/recetas/syria/">Siria</a></div>
       <h1>Fatteh</h1>
       <p class="recipe-tagline">La fatteh es un plato sirio en capas de pita tostada, garbanzos y salsa de yogur con ajo, terminado con un chorrito de mantequilla caliente sobre piñones y pimentón. El nombre proviene del árabe para desmenuzar — refiriéndose al pan roto en la base. Se come en todo el Levante, desde Siria hasta Egipto, más comúnmente como comida matutina y de forma prominente durante el Ramadán.
 
@@ -136,11 +135,13 @@ La secuencia de capas determina la textura. El pan pita debe tostarse primero pa
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Más recetas de Siria</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/recetas/syria/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>
@@ -169,15 +170,20 @@ La secuencia de capas determina la textura. El pan pita debe tostarse primero pa
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/recetas/syria/" data-rmn-back
+   data-cuisine-atmosphere="middle-eastern"
+   aria-label="Siria"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Siria</span>
 </a>
 
 </main>

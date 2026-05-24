@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>보르시</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/russia/">러시아</a> › <span>보르시</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="borscht" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/664396-312x231.jpg" alt="보르시" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 점심 · 러시아</div>
+      <div class="recipe-badge">🇷🇺 점심 · <a class="recipe-badge-origin" href="/ko/recipes/russia/">러시아</a></div>
       <h1>보르시</h1>
       <p class="recipe-tagline">보르시는 슬라브 동부의 위대한 수프로, 러시아와 우크라이나 문화 모두에 깊이 뿌리내린 요리다. 그 기원은 주변에 그어진 국경선보다 앞선다 — 유네스코는 2022년 우크라이나 보르시를 무형문화유산으로 등재했다. 결정적인 기법은 식초다. 생으로 간 비트와 함께 넣는 산성분이 그냥 놔두면 칙칙한 갈색으로 변할 석류 빨간색을 고정시킨다. 차가운 사워크림 한 숟가락과 신선한 딜을 얹어 내면, 그릇 하나에 담긴 완전한 겨울 한 끼가 완성된다.</p>
       <div class="recipe-meta-row">
@@ -133,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 러시아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/russia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/okroshka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="okroshka">🍽️</div>
@@ -166,15 +167,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/russia/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="러시아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">러시아</span>
 </a>
 
 </main>

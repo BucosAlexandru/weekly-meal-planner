@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>슈니첼</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/germany/">독일</a> › <span>슈니첼</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" alt="슈니첼" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 점심 · 독일</div>
+      <div class="recipe-badge">🇩🇪 점심 · <a class="recipe-badge-origin" href="/ko/recipes/germany/">독일</a></div>
       <h1>슈니첼</h1>
       <p class="recipe-tagline">슈니첼은 넓은 의미에서 독일-오스트리아 요리에 속하지만, 결정판인 비너 슈니첼은 빈에서 완성되었다. 18세기 요리사들은 송아지고기를 거의 투명해질 정도로 얇게 두드리기 시작했고, 밀가루, 달걀, 고운 빵가루를 입혀 뜨거운 라드에서 껍질이 극적인 파도처럼 부풀어 오를 때까지 튀겼다. 기름 온도와 깊이가 껍질을 결정한다: 슈니첼은 170°C에서 자유롭게 떠 있어야 하며, 기름 속에서 앉아 있는 것이 아니라 돌아야 한다 — 그것이 독특한 수플레 같은 부풀어 오른 껍질을 만들어낸다. 식탁에서 레몬을 짜는 것은 선택 사항이 아니다 — 산성분이 기름진 맛을 뚫어내며 그것 없이는 요리가 완성되지 않는다.</p>
       <div class="recipe-meta-row">
@@ -128,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 독일의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/germany/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/currywurst/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="currywurst">🍽️</div>
@@ -155,15 +156,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/germany/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="독일"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">독일</span>
 </a>
 
 </main>

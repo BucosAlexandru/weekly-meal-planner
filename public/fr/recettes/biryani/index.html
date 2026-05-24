@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/fr/plan-semaine/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menus</span></a>
       <a href="/fr/recettes/" class="nav-link">🍽️ Recettes</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 Application</a>
       <a href="/fr/tarifs/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Biryani</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/pakistan/">Pakistan</a> › <span>Biryani</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="Biryani" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Dîner · Pakistan</div>
+      <div class="recipe-badge">🇵🇰 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/pakistan/">Pakistan</a></div>
       <h1>Biryani</h1>
       <p class="recipe-tagline">Le biryani remonte aux cours mogholes du sous-continent indien, où les plats de riz d'influence persane ont évolué en formes régionales distinctes. La tradition du biryani pakistanais — notamment les styles de Karachi et d'Hyderabad — compte parmi les plus aromatiques du sous-continent, construite sur des épices entières, des oignons caramélisés et du riz en couches. Le plat est central à chaque occasion importante : mariages, célébrations de l'Aïd et grands rassemblements familiaux.
 
@@ -145,11 +144,13 @@ La technique est la cuisson dum : le riz à moitié cuit et la viande épicée s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Plus de recettes de Pakistan</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/pakistan/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>
@@ -172,15 +173,20 @@ La technique est la cuisson dum : le riz à moitié cuit et la viande épicée s
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/pakistan/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="Pakistan"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Pakistan</span>
 </a>
 
 </main>

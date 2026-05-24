@@ -12,6 +12,7 @@ import { recipes }                    from '../public/js/recipes.js';
 import { recipes as budgetRecipes }   from '../public/js/recipes-budget.js';
 import { i18n }                       from '../public/js/i18n.js';
 import { recipeImages }               from '../public/js/recipe-images.js';
+import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import fs   from 'fs';
 import path from 'path';
@@ -864,7 +865,6 @@ const makeNav = (lc, langUrlMap = null) => `
     <div class="nav-links">
       <a href="${lc.dir}/" class="nav-link nav-link--plans">${navPlansLink(lc.code)}</a>
       <a href="${RECIPES_NAV[lc.code].href}" class="nav-link">${RECIPES_NAV[lc.code].label}</a>
-      <a href="${appHref(lc)}" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 ${lc.appLabel}</a>
       <a href="/${lc.code}/${PRICING_SLUGS[lc.code]}/" class="nav-link">⭐ Premium</a>
     </div>
     ${buildNavLangSelect(lc.code, 'content-lang', langUrlMap)}
@@ -1740,6 +1740,28 @@ function indexPage(lc) {
 
   const dir_attr = lc.dir_attr || 'ltr';
 
+  // Cuisine discovery section — surfaces the hub architecture from the
+  // plan-listing index (the "Plans" nav entry point). Lightweight: 6
+  // featured cuisines + a single "see all" CTA. No images here to keep
+  // initial render cheap on a busy page; the hub-index handles imagery.
+  const ctaLang   = CUISINE_CTA[lc_code] || CUISINE_CTA.en;
+  // Phase 5: all cuisine entry points target /<lc>/<recipe-prefix>/.
+  const planRl    = RECIPE_LANG[lc_code];
+  const planRecipeDir = planRl ? planRl.dir : `/${lc_code}/recipes`;
+  const eligible  = buildCuisineHubs();
+  const featured  = eligible.slice(0, 6);
+  const cuisineMinis = featured.map(([enKey, recs]) => {
+    const display    = recs[0].origin?.[lc_code] || enKey;
+    const flagIcon   = COUNTRY_FLAG[enKey] || '🌍';
+    const originSlug = slug(enKey);
+    const atmosphere = cuisineAtmosphere(enKey);
+    return `<a class="cuisine-mini" href="${planRecipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
+      <span class="cuisine-mini-flag" aria-hidden="true">${flagIcon}</span>
+      <span class="cuisine-mini-name">${esc(display)}</span>
+      <span class="cuisine-mini-count">${recs.length}</span>
+    </a>`;
+  }).join('');
+
   return `${HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr)}
 ${makeNav(lc, NAV_URL_FOR.planIndex())}
 <main class="content-main">
@@ -1755,6 +1777,17 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
   <section class="content-section">
     <div class="content-section-inner">
       <div class="content-cards-grid">${cards}</div>
+    </div>
+  </section>
+  <section class="content-section cuisine-discover">
+    <div class="content-section-inner">
+      <div class="cuisine-discover-head">
+        <span class="cuisine-discover-eyebrow">${esc(ctaLang.eyebrow)}</span>
+        <h2 class="cuisine-discover-title">${esc(ctaLang.heading)}</h2>
+        <p class="cuisine-discover-sub">${esc(ctaLang.sub(eligible.length))}</p>
+      </div>
+      <div class="cuisine-mini-row">${cuisineMinis}</div>
+      <p class="cuisine-discover-cta"><a class="cuisine-discover-btn" href="${planRecipeDir}/">${esc(ctaLang.btn(eligible.length))}</a></p>
     </div>
   </section>
   <section class="content-section content-seo">
@@ -2946,14 +2979,27 @@ function recipePage(recipe, rl) {
     }).join('');
 
   const dir_attr = rl.dir_attr || 'ltr';
+  // Cuisine hub link (if this origin has a hub of ≥2 recipes). When present
+  // we expose it in 3 places: breadcrumb, recipe-badge origin chip, and the
+  // related-recipes "see all" target. This makes the recipe page a first-
+  // class node in the cuisine browsing graph — direct-entry users (Google
+  // search) can navigate up to the cuisine without sessionStorage state.
+  const hubHref       = recipeCuisineHubHref(oEn, code);
+  const hubAtmosphere = cuisineAtmosphere(oEn);
+  const originBadge   = hubHref
+    ? `<a class="recipe-badge-origin" href="${hubHref}">${esc(o)}</a>`
+    : esc(o);
+  const breadcrumbCuisine = hubHref
+    ? ` › <a href="${hubHref}">${esc(o)}</a>`
+    : '';
   return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article', recipeImgUrl)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="${hubAtmosphere}">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(n)}</span>
+    <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a>${breadcrumbCuisine} › <span>${esc(n)}</span>
   </nav>
 
   <!-- Hero -->
@@ -2966,7 +3012,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       }</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">${COUNTRY_FLAG[oEn] || '⭐'} ${esc(cat)} · ${esc(o)}</div>
+      <div class="recipe-badge">${COUNTRY_FLAG[oEn] || '⭐'} ${esc(cat)} · ${originBadge}</div>
       <h1>${esc(n)}</h1>
       <p class="recipe-tagline">${esc(originTxt)}</p>
       <div class="recipe-meta-row">
@@ -3018,11 +3064,13 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   ${related ? `<div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>${COUNTRY_FLAG[oEn] ? COUNTRY_FLAG[oEn] + ' ' : ''}${rl.relatedH(o)}</h2>
-      <a href="${rl.dir}/">${ui.seeAll}</a>
+      <a href="${hubHref || rl.dir + '/'}">${ui.seeAll}</a>
     </div>
     <div class="recipe-cards-scroll">${related}</div>
   </div>` : ''}
@@ -3039,15 +3087,20 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="${rl.dir}/" data-rmn-back
-   aria-label="${esc(rl.breadLabel)}"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill${hubHref ? ' mp-back-pill--cuisine' : ''}"
+   href="${hubHref || rl.dir + '/'}" data-rmn-back
+   data-cuisine-atmosphere="${hubAtmosphere}"
+   aria-label="${esc(hubHref ? o : rl.breadLabel)}"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">${esc(rl.breadLabel)}</span>
+  <span class="rmb-label">${esc(hubHref ? o : rl.breadLabel)}</span>
 </a>
 
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
@@ -3084,46 +3137,736 @@ const COUNTRY_FLAG = {
   Venezuela: '🇻🇪', Vietnam: '🇻🇳',
 };
 
+/* ════════════════════════════════════════════════════════════════
+   CUISINE ATMOSPHERE — per-origin visual identity
+   ════════════════════════════════════════════════════════════════
+   Each origin maps to one of ~13 regional "atmosphere" themes
+   (mediterranean, east-asian, latin, …). Atmospheres carry CSS
+   variables for accent + gradient (defined in content.css). The
+   render path stamps `data-cuisine-atmosphere="…"` on the hub
+   <main> and on each hub-index card so CSS can theme them.
+
+   Cuisines that aren't mapped here fall through to "global"
+   (warm green like the rest of the design system).
+*/
+const CUISINE_ATMOSPHERE = {
+  // Mediterranean: terracotta + cream
+  'Italy':'mediterranean','Greece':'mediterranean','Spain':'mediterranean',
+  'France':'mediterranean','Portugal':'mediterranean','Croatia':'mediterranean',
+  'Cyprus':'mediterranean','Bosnia and Herzegovina':'mediterranean','Slovenia':'mediterranean',
+  'Malta':'mediterranean','Cape Verde':'mediterranean',
+  // East Asian: sakura + indigo
+  'Japan':'east-asian','China':'east-asian','South Korea':'east-asian',
+  'North Korea':'east-asian','Mongolia':'east-asian',
+  // Southeast Asian: jade + coral
+  'Vietnam':'se-asian','Thailand':'se-asian','Indonesia':'se-asian',
+  'Malaysia':'se-asian','Philippines':'se-asian','Cambodia':'se-asian',
+  'Singapore':'se-asian','Sri Lanka':'se-asian','Laos':'se-asian',
+  // South Asian: saffron + curry
+  'India':'south-asian','Pakistan':'south-asian','Nepal':'south-asian','Bangladesh':'south-asian',
+  // Middle Eastern: copper + sand
+  'Syria':'middle-eastern','Lebanon':'middle-eastern','Iran':'middle-eastern',
+  'Iraq':'middle-eastern','Israel':'middle-eastern','Egypt':'middle-eastern',
+  'Kuwait':'middle-eastern','Turkey':'middle-eastern','Middle East':'middle-eastern',
+  'Jordan':'middle-eastern','Saudi Arabia':'middle-eastern',
+  // North African: spice + clay
+  'Morocco':'north-african','Tunisia':'north-african','Algeria':'north-african','Sudan':'north-african',
+  // Latin: sunset + lime
+  'Mexico':'latin','Peru':'latin','Argentina':'latin','Brazil':'latin',
+  'Cuba':'latin','Colombia':'latin','Ecuador':'latin','Chile':'latin',
+  'Dominican Republic':'latin','El Salvador':'latin','Venezuela':'latin',
+  'Guatemala':'latin','Jamaica':'latin',
+  // Eastern European: burgundy + forest
+  'Hungary':'east-european','Poland':'east-european','Czech Republic':'east-european',
+  'Romania':'east-european','Russia':'east-european','Ukraine':'east-european',
+  'Moldova':'east-european','Lithuania':'east-european','Latvia':'east-european',
+  'Estonia':'east-european','Serbia':'east-european','Bulgaria':'east-european',
+  'Georgia':'east-european','Armenia':'east-european','Belarus':'east-european',
+  // Nordic: glacier blue + silver
+  'Sweden':'nordic','Finland':'nordic','Norway':'nordic','Denmark':'nordic','Iceland':'nordic',
+  // Sub-Saharan: earth + amber
+  'Nigeria':'sub-saharan','Ghana':'sub-saharan','South Africa':'sub-saharan',
+  'Ethiopia':'sub-saharan','Republic of the Congo':'sub-saharan',
+  // Anglo: navy + cream
+  'UK':'anglo','United Kingdom':'anglo','USA':'anglo','Canada':'anglo',
+  'Australia':'anglo','New Zealand':'anglo','Scotland':'anglo',
+  // Central European: forest + oak
+  'Switzerland':'central-european','Germany':'central-european','Netherlands':'central-european',
+  'Belgium':'central-european','Austria':'central-european',
+  // Central Asian: turquoise + khaki
+  'Uzbekistan':'central-asian','Kyrgyzstan':'central-asian','Turkmenistan':'central-asian',
+  // Pacific / catch-all
+  'Samoa':'pacific',
+};
+const cuisineAtmosphere = (originEnKey) => CUISINE_ATMOSPHERE[originEnKey] || 'global';
+
+/* Helpers defined later (after CUISINE_MIN_RECIPES / CUISINE_HUB_LANG):
+     HUB_ELIGIBLE_ORIGINS — Set of origin EN keys with a hub
+     recipeCuisineHubHref(originEnKey, lc_code) — returns hub URL or null
+   Forward-declared via `var` so recipePage() can use them; populated
+   below where the cuisine constants are in scope. */
+var HUB_ELIGIBLE_ORIGINS;
+var recipeCuisineHubHref;
+
+/* ════════════════════════════════════════════════════════════════
+   CUISINE CTA STRINGS — localized labels for discovery surfaces
+   ════════════════════════════════════════════════════════════════
+   Used by the cuisine discovery CTA injected into the plan-listing
+   index (indexPage) and the recipes index (recipeIndex). Keeping
+   it as a flat lookup avoids adding fields to LANG_CONFIGS for a
+   single feature surface. */
+const CUISINE_CTA = {
+  ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea', sub:n=>`${n} bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.`, btn:n=>`Vezi toate cele ${n} bucătării →` },
+  en: { eyebrow:'Cuisines', heading:'Explore world cuisines', sub:n=>`${n} international cuisines, each with authentic recipes and a free meal planner.`, btn:n=>`Browse all ${n} cuisines →` },
+  es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo', sub:n=>`${n} cocinas internacionales, cada una con recetas auténticas y planificador gratuito.`, btn:n=>`Ver las ${n} cocinas →` },
+  fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde', sub:n=>`${n} cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.`, btn:n=>`Voir les ${n} cuisines →` },
+  de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt', sub:n=>`${n} internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.`, btn:n=>`Alle ${n} Küchen ansehen →` },
+  pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas do mundo', sub:n=>`${n} cozinhas internacionais, cada uma com receitas autênticas e planejador gratuito.`, btn:n=>`Ver as ${n} cozinhas →` },
+  ru: { eyebrow:'Кухни', heading:'Изучите кухни мира', sub:n=>`${n} мировых кухонь — подлинные рецепты и бесплатный планировщик меню.`, btn:n=>`Все ${n} кухни →` },
+  ar: { eyebrow:'مطابخ', heading:'اكتشف مطابخ العالم', sub:n=>`${n} مطبخًا عالميًا، كل منها بوصفات أصيلة ومخطط وجبات مجاني.`, btn:n=>`تصفح جميع المطابخ الـ ${n} ←` },
+  zh: { eyebrow:'菜系', heading:'探索世界各国菜系', sub:n=>`${n}个世界菜系，每个都有正宗菜谱和免费每周饮食计划。`, btn:n=>`浏览全部${n}个菜系 →` },
+  ja: { eyebrow:'料理', heading:'世界の料理を探す', sub:n=>`${n}か国の世界料理。本格レシピと無料の週間ミールプランナー。`, btn:n=>`${n}か国すべて見る →` },
+  hi: { eyebrow:'व्यंजन', heading:'दुनिया के व्यंजन देखें', sub:n=>`${n} वैश्विक व्यंजन, हर एक प्रामाणिक रेसिपी और मुफ्त मील प्लानर के साथ।`, btn:n=>`सभी ${n} व्यंजन देखें →` },
+  tr: { eyebrow:'Mutfaklar', heading:'Dünya mutfaklarını keşfedin', sub:n=>`${n} dünya mutfağı — otantik tarifler ve ücretsiz öğün planlayıcı.`, btn:n=>`Tüm ${n} mutfağı görüntüle →` },
+  it: { eyebrow:'Cucine', heading:'Esplora le cucine del mondo', sub:n=>`${n} cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.`, btn:n=>`Vedi tutte le ${n} cucine →` },
+  ko: { eyebrow:'요리', heading:'세계 요리를 탐색하세요', sub:n=>`${n}개국 세계 요리 — 정통 레시피와 무료 주간 식단 플래너.`, btn:n=>`${n}개 요리 모두 보기 →` },
+};
+
+/* Builds tile-display data for a single recipe on a cuisine page.
+   Returns { name, slug, href, img, atmosphereFallbackEmoji,
+             desc, timeMins, readyIn, tags } — every field is
+   locale-aware. `img` is the same URL the recipe page would use
+   so cache hits across navigations. */
+function cuisineTileData(recipe, lc_code, recipeBaseDir) {
+  const rn   = recipe.name?.[lc_code] || recipe.name?.en || recipe.name?.ro || '';
+  const rs   = slug(recipe.name?.en || recipe.name?.ro || rn);
+  const meta = recipesMeta[recipe.id] || {};
+  const img  = resolveRecipeImage(recipe, rs);
+  // Localized short descriptor, then EN fall-through.
+  const desc = meta.desc?.[lc_code] || meta.desc?.en || '';
+  const tags = (meta.tags || []).slice(0, 2)
+    .map(t => TAG_LABELS[t]?.[lc_code] || TAG_LABELS[t]?.en || t);
+  const readyFn = READY_IN[lc_code] || READY_IN.en;
+  const readyIn = meta.time ? readyFn(meta.time) : '';
+  return {
+    name: rn,
+    slug: rs,
+    href: `${recipeBaseDir}/${rs}/`,
+    img: img.src,
+    desc,
+    timeMins: meta.time,
+    readyIn,
+    tags,
+  };
+}
+
 function recipeIndex(rl) {
   const lc   = rl.lc;
   const code = lc.code;
-  // Group by EN origin so the flag lookup works even when the display
-  // origin is localized (e.g. RO "Italia", JA "イタリア" both map → Italy → 🇮🇹).
-  const byOrigin = {};
-  recipes.forEach(r => {
-    const enKey = r.origin?.en || r.origin?.ro || 'Other';
-    const disp  = r.origin?.[code] || enKey;
-    const bucket = byOrigin[enKey] || (byOrigin[enKey] = { disp, recs: [] });
-    bucket.recs.push(r);
-  });
-  const groups = Object.entries(byOrigin)
-    .sort((a,b) => b[1].recs.length - a[1].recs.length)
-    .map(([enKey, {disp, recs}]) => {
-      const flag = COUNTRY_FLAG[enKey] || '🌍';
-      return `
-  <div class="recipe-origin-group">
-    <h2 class="origin-title">${flag} ${esc(disp)} <span class="recipe-count">${recs.length}</span></h2>
-    <ul class="recipe-origin-list">
-      ${recs.map(r => {
-        const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
-        const rs = slug(r.name?.en || r.name?.ro || rn);
-        return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
-      }).join('')}
-    </ul>
-  </div>`;
-    }).join('');
   const dir_attr = rl.dir_attr || 'ltr';
+  // Phase 5: /<lc>/<recipe-prefix>/ IS the cuisine hub. The old per-origin
+  // recipe-list layout is gone (it duplicated the country pages a click
+  // away). The page now renders a card grid identical to what used to live
+  // at /<lc>/<cuisine-prefix>/ — one card per eligible cuisine, with
+  // thumbnail strip + curated preview, atmosphere-tinted accent.
+  const eligible = buildCuisineHubs();
+  const cards = eligible.map(([enKey, recs]) => {
+    const display    = recs[0].origin?.[code] || enKey;
+    const flag       = COUNTRY_FLAG[enKey] || '🌍';
+    const originSlug = slug(enKey);
+    const countryHref = `${rl.dir}/${originSlug}/`;
+    const atmosphere = cuisineAtmosphere(enKey);
+    // Pick up to 3 thumbnails, preferring real images over placeholder.
+    const allThumbs = recs.map(r => {
+      const rs = slug(r.name?.en || r.name?.ro || '');
+      return resolveRecipeImage(r, rs).src;
+    });
+    const goodThumbs = allThumbs.filter(u => !/cover2\.jpg$/.test(u));
+    const thumbs = (goodThumbs.length >= 3 ? goodThumbs : allThumbs).slice(0, 3);
+    const thumbsHtml = thumbs.map((u, i) => {
+      const isPlaceholder = /cover2\.jpg$/.test(u);
+      return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
+        <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
+        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+      </span>`;
+    }).join('');
+    const previewNames = recs.slice(0, 3).map(r =>
+      r.name?.[code] || r.name?.en || r.name?.ro || ''
+    ).filter(Boolean).join(' · ');
+    return `
+    <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="${atmosphere}">
+      <a class="cuisine-card-link" href="${countryHref}" aria-label="${esc(display)}"></a>
+      <div class="cuisine-card-thumbs" data-thumb-count="${thumbs.length}" aria-hidden="true">${thumbsHtml}</div>
+      <div class="cuisine-card-meta">
+        <h2 class="origin-title">
+          <span class="origin-title-text">${flag} ${esc(display)}</span>
+          <span class="recipe-count">${recs.length}</span>
+        </h2>
+        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>
+      </div>
+    </article>`;
+  }).join('');
+
+  // Schema.org CollectionPage describing the cuisine hub. itemListElement
+  // contains the country pages (positions 1..N) so search engines understand
+  // this is a directory of cuisines, not a flat recipe list.
+  const items = eligible.map(([enKey, recs], i) => {
+    const display = recs[0].origin?.[code] || enKey;
+    return {
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://meal-planner.ro${rl.dir}/${slug(enKey)}/`,
+      "name": display,
+    };
+  });
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": rl.indexTitle.split(' | ')[0],
+    "description": rl.indexDesc(recipes.length),
+    "url": `https://meal-planner.ro${rl.dir}/`,
+    "inLanguage": code,
+    "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
+    "hasPart": { "@type": "ItemList", "numberOfItems": eligible.length, "itemListElement": items }
+  });
+
   return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
-${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
     <h1>${rl.indexH1}</h1>
     <p class="content-hero-desc">${rl.indexDesc(recipes.length)}</p>
   </div></section>
   <section class="content-section"><div class="content-section-inner">
-    <div class="recipe-groups-grid">${groups}</div>
+    <div class="recipe-groups-grid">${cards}</div>
   </div></section>
+  <script type="application/ld+json">${jsonLd}</script>
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   HUB ARCHITECTURE — scalable static facet pages
+   ════════════════════════════════════════════════════════════════
+   Aggregates recipes by a single facet (origin, meal type, dietary
+   style, cooking method, ingredient). Each hub is a fully-static,
+   indexable, localized page at /<locale>/<prefix>/<slug>/.
+
+   Phase 3 Item 1 ships the architecture + the first hub type (cuisines).
+   Future hub types (meal-type, dietary, cooking, ingredient) plug into
+   the same hubPage()/HUB_LANG machinery.
+
+   URL-slug strategy: facet slugs are derived from the English label
+   (slug(origin.en)) so they stay stable across locales — mirrors the
+   recipe-slug convention (`/ro/retete/moussaka/`, `/ja/reshipi/moussaka/`).
+*/
+
+const CUISINE_MIN_RECIPES = 2;   // skip thin-content hubs (1-recipe origins)
+
+// Populate the forward-declared helpers now that CUISINE_MIN_RECIPES is in
+// scope. CUISINE_HUB_LANG is defined immediately below — it'll be in scope
+// by the time recipeCuisineHubHref is *called* (top-level script flow).
+HUB_ELIGIBLE_ORIGINS = new Set(
+  Object.entries(
+    recipes.reduce((m, r) => {
+      const k = r.origin?.en || r.origin?.ro;
+      if (k) m[k] = (m[k] || 0) + 1;
+      return m;
+    }, {})
+  ).filter(([, n]) => n >= CUISINE_MIN_RECIPES).map(([k]) => k)
+);
+recipeCuisineHubHref = function (originEnKey, lc_code) {
+  if (!originEnKey || !HUB_ELIGIBLE_ORIGINS.has(originEnKey)) return null;
+  const rl = RECIPE_LANG[lc_code];
+  if (!rl) return null;
+  // Phase 5 architecture: country pages live UNDER the recipe-index dir,
+  // not under a separate /<cuisine-prefix>/ branch. The URL pattern is
+  // /<lc>/<recipe-prefix>/<country-slug>/ — same level as individual
+  // recipes (no collision today; build-time guard added below).
+  return `${rl.dir}/${slug(originEnKey)}/`;
+};
+
+// Slug-collision guard: country pages and recipe pages now share the same
+// directory (/<lc>/<recipe-prefix>/<slug>/) so we must enforce that no
+// country slug ever matches a recipe slug. Throws at build time if any
+// collision exists — safer to fail the build than ship a 404 trap.
+(() => {
+  const recipeSlugs = new Set(
+    recipes.map(r => slug(r.name?.en || r.name?.ro || '')).filter(Boolean)
+  );
+  const collisions = [...HUB_ELIGIBLE_ORIGINS]
+    .map(k => ({ country: k, slug: slug(k) }))
+    .filter(c => recipeSlugs.has(c.slug));
+  if (collisions.length) {
+    console.error('\n❌ FATAL: country slug collides with recipe slug:');
+    collisions.forEach(c => console.error(`   ${c.country} → /${c.slug}/`));
+    console.error('   Rename one or the other before continuing.');
+    process.exit(1);
+  }
+})();
+
+const CUISINE_HUB_LANG = {
+  ro: { prefix:'bucatarie',
+        breadLabel:'Bucătărie',
+        title:    (o)    => `Rețete din ${o} – Bucătărie autentică | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} rețete tradiționale din ${o}: ingrediente, mod de preparare pas cu pas și valori nutriționale. Adaugă-le în planificatorul tău săptămânal gratuit.`,
+        h1:       (o)    => `Rețete din <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} rețete autentice din ${o}, cu ingrediente, mod de preparare și valori nutriționale. Toate pot fi adăugate în planul tău săptămânal gratuit.`,
+        backLink: 'Înapoi la toate rețetele' },
+  en: { prefix:'cuisine',
+        breadLabel:'Cuisine',
+        title:    (o)    => `Recipes from ${o} – Authentic Dishes & Free Meal Plan | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} traditional recipes from ${o} with ingredients, step-by-step instructions and nutrition info. Add any of them to your free weekly meal planner.`,
+        h1:       (o)    => `Recipes from <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} authentic recipes from ${o}, with ingredients, step-by-step instructions and nutrition info. Add any of them to your free weekly meal planner.`,
+        backLink: 'Back to all recipes' },
+  es: { prefix:'cocina',
+        breadLabel:'Cocina',
+        title:    (o)    => `Recetas de ${o} – Auténticas y Plan Gratuito | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} recetas tradicionales de ${o}: ingredientes, instrucciones paso a paso y nutrición. Añádelas a tu planificador semanal gratuito.`,
+        h1:       (o)    => `Recetas de <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} recetas auténticas de ${o}, con ingredientes, instrucciones y valores nutricionales. Todas pueden añadirse a tu plan semanal gratuito.`,
+        backLink: 'Volver a todas las recetas' },
+  fr: { prefix:'cuisine',
+        breadLabel:'Cuisine',
+        title:    (o)    => `Recettes de ${o} – Plats Authentiques | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} recettes traditionnelles de ${o} : ingrédients, instructions étape par étape et valeurs nutritionnelles. Ajoutez-les à votre planificateur hebdomadaire gratuit.`,
+        h1:       (o)    => `Recettes de <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} recettes authentiques de ${o}, avec ingrédients, instructions et valeurs nutritionnelles. Toutes peuvent être ajoutées à votre plan hebdomadaire gratuit.`,
+        backLink: 'Retour à toutes les recettes' },
+  de: { prefix:'kueche',
+        breadLabel:'Küche',
+        title:    (o)    => `Rezepte aus ${o} – Authentische Gerichte & Wochenplan | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} traditionelle Rezepte aus ${o}: Zutaten, Schritt-für-Schritt-Anleitung und Nährwerte. Füge sie zu deinem kostenlosen Wochenplaner hinzu.`,
+        h1:       (o)    => `Rezepte aus <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} authentische Rezepte aus ${o} mit Zutaten, Anleitung und Nährwerten. Alle können zu deinem kostenlosen Wochenplan hinzugefügt werden.`,
+        backLink: 'Zurück zu allen Rezepten' },
+  pt: { prefix:'cozinha',
+        breadLabel:'Cozinha',
+        title:    (o)    => `Receitas de ${o} – Pratos Autênticos | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} receitas tradicionais de ${o}: ingredientes, instruções passo a passo e nutrição. Adicione-as ao seu planejador semanal gratuito.`,
+        h1:       (o)    => `Receitas de <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} receitas autênticas de ${o}, com ingredientes, instruções e valores nutricionais. Todas podem ser adicionadas ao seu plano semanal gratuito.`,
+        backLink: 'Voltar a todas as receitas' },
+  ru: { prefix:'kuhnya',
+        breadLabel:'Кухня',
+        title:    (o)    => `Рецепты из ${o} – Аутентичные блюда | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} традиционных рецептов из ${o}: ингредиенты, пошаговые инструкции и пищевая ценность. Добавьте их в свой бесплатный планировщик меню на неделю.`,
+        h1:       (o)    => `Рецепты из <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} аутентичных рецептов из ${o} — ингредиенты, инструкции и пищевая ценность. Каждый можно добавить в бесплатный планировщик меню на неделю.`,
+        backLink: 'Назад ко всем рецептам' },
+  ar: { prefix:'matbakh',
+        breadLabel:'مطبخ',
+        title:    (o)    => `وصفات من ${o} – أطباق أصيلة وخطة وجبات | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} وصفة تقليدية من ${o}: مكونات وتعليمات خطوة بخطوة وقيم غذائية. أضفها إلى مخطط الوجبات الأسبوعي المجاني.`,
+        h1:       (o)    => `وصفات من <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} وصفة أصيلة من ${o} مع المكونات وطرق التحضير والقيم الغذائية. كل وصفة يمكن إضافتها إلى خطة الوجبات الأسبوعية المجانية.`,
+        backLink: 'العودة إلى جميع الوصفات' },
+  zh: { prefix:'caixi',
+        breadLabel:'菜系',
+        title:    (o)    => `${o}菜谱 – 正宗菜系与免费周计划 | Meal-Planner.ro`,
+        desc:     (o, n) => `${n}道来自${o}的传统菜谱:食材、分步说明和营养信息。可加入免费每周饮食计划。`,
+        h1:       (o)    => `来自<span class="accent">${o}</span>的菜谱`,
+        intro:    (o, n) => `${n}道来自${o}的正宗菜谱,含食材、做法和营养信息。每道都可加入免费的每周饮食计划。`,
+        backLink: '返回所有食谱' },
+  ja: { prefix:'ryori',
+        breadLabel:'料理',
+        title:    (o)    => `${o}のレシピ – 本格的な家庭料理と週間プラン | Meal-Planner.ro`,
+        desc:     (o, n) => `${n}の伝統的な${o}のレシピ。材料、手順、栄養情報付き。無料の週間ミールプランナーに追加できます。`,
+        h1:       (o)    => `<span class="accent">${o}</span>のレシピ`,
+        intro:    (o, n) => `${n}の本格的な${o}のレシピ。材料、手順、栄養情報を掲載。すべて無料の週間ミールプランナーに追加できます。`,
+        backLink: 'すべてのレシピに戻る' },
+  hi: { prefix:'vyanjan',
+        breadLabel:'व्यंजन',
+        title:    (o)    => `${o} की रेसिपी – पारंपरिक व्यंजन और मील प्लानर | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} पारंपरिक ${o} की रेसिपी: सामग्री, चरण-दर-चरण निर्देश और पोषण की जानकारी। मुफ्त साप्ताहिक मील प्लानर में जोड़ें।`,
+        h1:       (o)    => `<span class="accent">${o}</span> की रेसिपी`,
+        intro:    (o, n) => `${n} पारंपरिक ${o} की रेसिपी, सामग्री, निर्देश और पोषण की जानकारी के साथ। सभी को मुफ्त साप्ताहिक मील प्लानर में जोड़ा जा सकता है।`,
+        backLink: 'सभी रेसिपी पर वापस' },
+  tr: { prefix:'mutfak',
+        breadLabel:'Mutfak',
+        title:    (o)    => `${o} tarifleri – Otantik Yemekler | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} geleneksel ${o} tarifi: malzemeler, adım adım talimatlar ve besin değerleri. Ücretsiz haftalık öğün planlayıcınıza ekleyin.`,
+        h1:       (o)    => `<span class="accent">${o}</span> tarifleri`,
+        intro:    (o, n) => `${n} otantik ${o} tarifi — malzemeler, talimatlar ve besin değerleri. Her biri ücretsiz haftalık planlayıcıya eklenebilir.`,
+        backLink: 'Tüm tariflere dön' },
+  it: { prefix:'cucina',
+        breadLabel:'Cucina',
+        title:    (o)    => `Ricette di ${o} – Piatti Autentici e Piano Gratuito | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} ricette tradizionali di ${o}: ingredienti, istruzioni passo dopo passo e valori nutrizionali. Aggiungile al tuo piano settimanale gratuito.`,
+        h1:       (o)    => `Ricette di <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} ricette autentiche di ${o}, con ingredienti, istruzioni e valori nutrizionali. Tutte possono essere aggiunte al tuo piano settimanale gratuito.`,
+        backLink: 'Torna a tutte le ricette' },
+  ko: { prefix:'yori',
+        breadLabel:'요리',
+        title:    (o)    => `${o} 레시피 – 정통 요리와 주간 식단 | Meal-Planner.ro`,
+        desc:     (o, n) => `${n}개의 전통 ${o} 레시피: 재료, 단계별 지침, 영양 정보 포함. 무료 주간 식단 플래너에 추가하세요.`,
+        h1:       (o)    => `<span class="accent">${o}</span> 레시피`,
+        intro:    (o, n) => `${n}개의 정통 ${o} 레시피 — 재료, 지침, 영양 정보를 포함합니다. 모두 무료 주간 식단 플래너에 추가할 수 있습니다.`,
+        backLink: '모든 레시피로 돌아가기' },
+};
+
+// Localized hub-index labels (the "/cuisine/" landing page that lists all
+// cuisine hubs). Kept compact — full localization of marketing copy can be
+// expanded later without touching the per-hub pages.
+const CUISINE_HUB_INDEX_LANG = {
+  ro: { title:'Bucătării din toată lumea | Meal-Planner.ro', pill:'Toate bucătăriile',
+        desc: n=>`Descoperă ${n} bucătării internaționale cu rețete autentice și planificator gratuit.`,
+        h1:'Bucătării <span class="accent">din toată lumea</span>',
+        intro: n=>`Descoperă ${n} bucătării internaționale, fiecare cu rețete autentice, mod de preparare și valori nutriționale.` },
+  en: { title:'World Cuisines – Browse Recipes by Country | Meal-Planner.ro', pill:'All cuisines',
+        desc: n=>`Explore ${n} world cuisines with authentic recipes, ingredients, instructions and a free meal planner.`,
+        h1:'World <span class="accent">Cuisines</span>',
+        intro: n=>`Explore ${n} world cuisines, each with authentic recipes, step-by-step instructions and nutrition info.` },
+  es: { title:'Cocinas del mundo – Recetas por país | Meal-Planner.ro', pill:'Todas las cocinas',
+        desc: n=>`Explora ${n} cocinas del mundo con recetas auténticas, ingredientes, instrucciones y un planificador gratuito.`,
+        h1:'Cocinas <span class="accent">del mundo</span>',
+        intro: n=>`Explora ${n} cocinas del mundo, cada una con recetas auténticas, instrucciones paso a paso y datos nutricionales.` },
+  fr: { title:'Cuisines du monde – Recettes par pays | Meal-Planner.ro', pill:'Toutes les cuisines',
+        desc: n=>`Découvrez ${n} cuisines du monde avec recettes authentiques, ingrédients, instructions et planificateur gratuit.`,
+        h1:'Cuisines <span class="accent">du monde</span>',
+        intro: n=>`Découvrez ${n} cuisines du monde, chacune avec recettes authentiques, instructions étape par étape et nutrition.` },
+  de: { title:'Weltküchen – Rezepte nach Land | Meal-Planner.ro', pill:'Alle Küchen',
+        desc: n=>`Entdecke ${n} Weltküchen mit authentischen Rezepten, Zutaten, Anleitungen und einem kostenlosen Mahlzeitenplaner.`,
+        h1:'<span class="accent">Weltküchen</span>',
+        intro: n=>`Entdecke ${n} Weltküchen mit authentischen Rezepten, Anleitungen und Nährwertangaben.` },
+  pt: { title:'Cozinhas do mundo – Receitas por país | Meal-Planner.ro', pill:'Todas as cozinhas',
+        desc: n=>`Explore ${n} cozinhas do mundo com receitas autênticas, ingredientes, instruções e planejador gratuito.`,
+        h1:'Cozinhas <span class="accent">do mundo</span>',
+        intro: n=>`Explore ${n} cozinhas do mundo com receitas autênticas, instruções e nutrição.` },
+  ru: { title:'Кухни мира – Рецепты по странам | Meal-Planner.ro', pill:'Все кухни',
+        desc: n=>`Откройте для себя ${n} мировых кухонь с подлинными рецептами и бесплатным планировщиком меню.`,
+        h1:'<span class="accent">Кухни</span> мира',
+        intro: n=>`Откройте для себя ${n} мировых кухонь с подлинными рецептами, пошаговыми инструкциями и информацией о пищевой ценности.` },
+  ar: { title:'مطابخ العالم – وصفات حسب الدولة | Meal-Planner.ro', pill:'كل المطابخ',
+        desc: n=>`اكتشف ${n} مطبخًا عالميًا بوصفات أصيلة ومخطط وجبات مجاني.`,
+        h1:'<span class="accent">مطابخ</span> العالم',
+        intro: n=>`اكتشف ${n} مطبخًا عالميًا، كل منها بوصفات أصيلة وتعليمات تفصيلية ومعلومات غذائية.` },
+  zh: { title:'世界各国菜系 – 按国家浏览菜谱 | Meal-Planner.ro', pill:'全部菜系',
+        desc: n=>`探索${n}个世界菜系，正宗菜谱、食材、做法和免费每周饮食计划。`,
+        h1:'<span class="accent">世界</span>菜系',
+        intro: n=>`探索${n}个世界菜系，每个都有正宗菜谱、分步做法和营养信息。` },
+  ja: { title:'世界の料理 – 国別レシピ集 | Meal-Planner.ro', pill:'すべての料理',
+        desc: n=>`${n}か国の世界料理を本格的なレシピと無料の週間プランナーで紹介。`,
+        h1:'<span class="accent">世界の</span>料理',
+        intro: n=>`${n}か国の世界料理。本格的なレシピ、手順、栄養情報をご紹介します。` },
+  hi: { title:'दुनिया के व्यंजन – देश के अनुसार रेसिपी | Meal-Planner.ro', pill:'सभी व्यंजन',
+        desc: n=>`${n} वैश्विक व्यंजन, पारंपरिक रेसिपी और मुफ्त साप्ताहिक मील प्लानर के साथ।`,
+        h1:'<span class="accent">दुनिया के</span> व्यंजन',
+        intro: n=>`${n} वैश्विक व्यंजनों का अन्वेषण करें, हर एक प्रामाणिक रेसिपी, निर्देश और पोषण जानकारी के साथ।` },
+  tr: { title:'Dünya mutfakları – Ülkelere göre tarifler | Meal-Planner.ro', pill:'Tüm mutfaklar',
+        desc: n=>`${n} dünya mutfağını keşfedin: otantik tarifler, malzemeler, talimatlar ve ücretsiz öğün planlayıcı.`,
+        h1:'<span class="accent">Dünya</span> mutfakları',
+        intro: n=>`${n} dünya mutfağını keşfedin — otantik tarifler, adım adım talimatlar ve besin değerleri.` },
+  it: { title:'Cucine del mondo – Ricette per paese | Meal-Planner.ro', pill:'Tutte le cucine',
+        desc: n=>`Esplora ${n} cucine del mondo con ricette autentiche, ingredienti, istruzioni e pianificatore gratuito.`,
+        h1:'Cucine <span class="accent">del mondo</span>',
+        intro: n=>`Esplora ${n} cucine del mondo con ricette autentiche, istruzioni passo dopo passo e valori nutrizionali.` },
+  ko: { title:'세계 요리 – 국가별 레시피 | Meal-Planner.ro', pill:'모든 요리',
+        desc: n=>`${n}개국 세계 요리를 정통 레시피와 무료 주간 식단 플래너로 만나보세요.`,
+        h1:'<span class="accent">세계</span> 요리',
+        intro: n=>`${n}개국의 세계 요리를 탐색하세요. 정통 레시피, 단계별 지침, 영양 정보를 제공합니다.` },
+};
+
+// Eligible cuisines: origins with at least CUISINE_MIN_RECIPES recipes.
+// Computed once and reused by hub-page generation, hub-index generation
+// and the sitemap.
+function buildCuisineHubs() {
+  const byOrigin = {};
+  recipes.forEach(r => {
+    const enKey = r.origin?.en || r.origin?.ro;
+    if (!enKey) return;
+    (byOrigin[enKey] = byOrigin[enKey] || []).push(r);
+  });
+  return Object.entries(byOrigin)
+    .filter(([, recs]) => recs.length >= CUISINE_MIN_RECIPES)
+    .sort((a, b) => b[1].length - a[1].length);
+}
+
+// Per-locale hreflang set for a given country/cuisine page. Phase 5: pages
+// live at /<lc>/<recipe-prefix>/<country-slug>/ (collapsed under the recipe
+// hub — no separate /<cuisine-prefix>/ branch). Slug is locale-stable.
+function cuisineHubHreflangs(originSlug) {
+  const lines = Object.entries(RECIPE_LANG).map(([c, rl]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro${rl.dir}/${originSlug}/" />`
+  );
+  // x-default points to English variant for international fall-through.
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${RECIPE_LANG.en.dir}/${originSlug}/" />`);
+  return lines.join('\n');
+}
+
+function cuisineHubPage(originEnKey, recs, lc_code) {
+  const lc      = LANG_CONFIGS[lc_code];
+  const hub     = CUISINE_HUB_LANG[lc_code];
+  const rl      = RECIPE_LANG[lc_code];
+  const display = recs[0].origin?.[lc_code] || originEnKey;
+  const flag    = COUNTRY_FLAG[originEnKey] || '🌍';
+  const originSlug = slug(originEnKey);
+  // Phase 5: country pages live under the recipe-index dir
+  // (/<lc>/<recipe-prefix>/<country-slug>/), not under a separate
+  // /<cuisine-prefix>/ branch. Old URLs redirect via vercel.json.
+  const canonical  = `${rl.dir}/${originSlug}/`;
+  const atmosphere = cuisineAtmosphere(originEnKey);
+
+  // Build tile data once. Used by the hero (featured image), the tile grid,
+  // and the schema.org ItemList.
+  const tiles = recs.map(r => cuisineTileData(r, lc_code, rl.dir));
+  // Featured recipe: prefer the first one with a non-placeholder image so the
+  // hero doesn't render cover2.jpg if a better option exists in the cuisine.
+  const featured = tiles.find(t => !/cover2\.jpg$/.test(t.img)) || tiles[0];
+
+  const items = tiles.map((t, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "url": `https://meal-planner.ro${t.href}`,
+    "name": t.name,
+  }));
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": hub.title(display).split(' | ')[0],
+    "description": hub.desc(display, recs.length),
+    "url": `https://meal-planner.ro${canonical}`,
+    "inLanguage": lc_code,
+    "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
+    "hasPart": { "@type": "ItemList", "numberOfItems": recs.length, "itemListElement": items }
+  });
+
+  // Recipe tile grid. Each tile carries an image (lazy-loaded), localized
+  // descriptor, ready-in time, up to 2 tags. The first tile is rendered as
+  // the "featured" tile (bigger image) when there are enough recipes to
+  // benefit from the spotlight treatment (≥3) — otherwise tiles are uniform.
+  //
+  // Image fallback: every tile renders a country-flag emoji UNDER the <img>.
+  // If the image is missing (placeholder cover2.jpg) or 404s at runtime
+  // (onerror), the <img> hides and the branded flag fallback shows through
+  // — no broken-image icons, ever.
+  //
+  // Duplicate-image mitigation: if the same image URL appears multiple times
+  // (e.g. shakshuka and chakchouka share an upstream Wikipedia photo), the
+  // 2nd/3rd occurrences get data-img-rot="1|2" which applies a subtle
+  // filter (brightness/saturation tweak) so the page doesn't feel repetitive.
+  const seenImgs = new Map(); // url → occurrence count
+  const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
+  const tilesHtml = tiles.map((t, i) => {
+    const isFeatured = i === 0 && tiles.length >= 3;
+    const cls = `cuisine-tile${isFeatured ? ' cuisine-tile--featured' : ''}`;
+    const tagsHtml = t.tags.length
+      ? `<div class="cuisine-tile-tags">${t.tags.map(tag => `<span class="cuisine-tile-tag">${esc(tag)}</span>`).join('')}</div>`
+      : '';
+    const metaHtml = t.readyIn || t.tags.length
+      ? `<div class="cuisine-tile-meta">${t.readyIn ? `<span class="cuisine-tile-time">⏱ ${esc(t.readyIn)}</span>` : ''}${tagsHtml}</div>`
+      : '';
+    const descHtml = t.desc ? `<p class="cuisine-tile-desc">${esc(t.desc)}</p>` : '';
+    const isPlaceholder = isPlaceholderImg(t.img);
+    const occ = (seenImgs.get(t.img) || 0);
+    seenImgs.set(t.img, occ + 1);
+    const rotAttr = occ > 0 && !isPlaceholder ? ` data-img-rot="${Math.min(occ, 2)}"` : '';
+    const imgHtml = isPlaceholder
+      ? '' // skip the placeholder URL entirely so the flag fallback shows
+      : `<img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
+    return `<li>
+      <a class="${cls}" href="${t.href}">
+        <span class="cuisine-tile-img"${rotAttr}>
+          <span class="cuisine-tile-img-fallback" aria-hidden="true">${flag}</span>
+          ${imgHtml}
+        </span>
+        <span class="cuisine-tile-body">
+          <h3 class="cuisine-tile-title">${esc(t.name)}</h3>
+          ${descHtml}
+          ${metaHtml}
+        </span>
+      </a>
+    </li>`;
+  }).join('');
+
+  const dir_attr = rl.dir_attr || 'ltr';
+  // Use HEAD's default ogImage; later we can swap to cuisine-specific covers.
+  // Strip HEAD's default hreflang x-default/ro/en lines (they point at locale
+  // roots and don't apply to a cuisine hub) and replace with the hub-specific
+  // hreflang set covering all 14 locales.
+  const head = HEAD(hub.title(display), hub.desc(display, recs.length), canonical, lc_code, dir_attr)
+    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
+    .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
+    .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
+             cuisineHubHreflangs(originSlug));
+
+  // data-cuisine-hub / -label / -href = back-pill context restore on the
+  // recipe page (see content.js). data-cuisine-atmosphere = visual identity
+  // (accent gradient, soft tint) via CSS variables defined in content.css.
+  return `${head}
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-main" data-cuisine-hub="1" data-cuisine-label="${esc(display)}" data-cuisine-href="${canonical}" data-cuisine-atmosphere="${atmosphere}">
+  <section class="cuisine-hero" data-cuisine-atmosphere="${atmosphere}">
+    <div class="cuisine-hero-inner">
+      <nav aria-label="breadcrumb" class="breadcrumb-nav cuisine-hero-breadcrumb"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(display)}</span></nav>
+      <div class="cuisine-hero-content">
+        <div class="cuisine-hero-text">
+          <span class="cuisine-hero-flag" aria-hidden="true">${flag}</span>
+          <h1>${hub.h1(esc(display))}</h1>
+          <p class="cuisine-hero-desc">${hub.intro(esc(display), recs.length)}</p>
+        </div>
+        ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
+          <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
+          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
+        </figure>` : ''}
+      </div>
+    </div>
+  </section>
+  <section class="content-section cuisine-hub-section"><div class="content-section-inner">
+    <ul class="cuisine-tile-grid" aria-label="${esc(display)}">${tilesHtml}</ul>
+    <p class="cuisine-hub-back"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
+  </div></section>
+  <script type="application/ld+json">${jsonLd}</script>
+</main>
+
+<!-- Mobile-only floating back pill: ← All cuisines → /<lc>/<recipe-prefix>/
+     (which IS the cuisine hub in Phase 5). Same component as the recipe
+     page (.mp-back-pill), with the cuisine atmosphere accent strip on the
+     leading edge for visual continuity. -->
+<a class="mp-back-pill mp-back-pill--cuisine" href="${rl.dir}/"
+   data-cuisine-atmosphere="${atmosphere}"
+   aria-label="${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}</span>
+</a>
+
+${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+}
+
+// Phase 5: cuisineHubIndexPage() was removed. Its responsibility (cuisine
+// directory landing) now lives in recipeIndex() — /<lc>/<recipe-prefix>/
+// IS the cuisine hub. The old /<lc>/<cuisine-prefix>/ URLs redirect to
+// recipe-prefix via vercel.json (added below).
+
+/* ════════════════════════════════════════════════════════════════
+   HOMEPAGE CUISINE DISCOVERY — injected into each SPA home
+   ════════════════════════════════════════════════════════════════
+   Inserts a "Explore world cuisines" section between the hero and
+   the planner UI on every public/<lc>/index.html.
+
+   Idempotent via HTML markers — re-running the build replaces the
+   block in-place instead of duplicating it. Safe to run on every
+   build; safe to remove by deleting the markers.
+
+   The section uses the same CUISINE_CTA strings as the recipe-index
+   / plan-listing discovery CTA so messaging stays consistent. Cards
+   are richer (flag + name + 3 dishes + count) but visually lighter
+   than full hub cards — a teaser, not browsing mode.
+*/
+function cuisineHomeCard(originEnKey, recs, lc_code, recipeDir) {
+  const display    = recs[0].origin?.[lc_code] || originEnKey;
+  const flagIcon   = COUNTRY_FLAG[originEnKey] || '🌍';
+  const originSlug = slug(originEnKey);
+  const atmosphere = cuisineAtmosphere(originEnKey);
+  const dishNames  = recs.slice(0, 3).map(r =>
+    r.name?.[lc_code] || r.name?.en || r.name?.ro || ''
+  ).filter(Boolean).join(' · ');
+  return `<a class="hp-cuisine-card" href="${recipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
+        <span class="hp-cuisine-card-flag" aria-hidden="true">${flagIcon}</span>
+        <span class="hp-cuisine-card-body">
+          <span class="hp-cuisine-card-top">
+            <span class="hp-cuisine-card-name">${esc(display)}</span>
+            <span class="hp-cuisine-card-count">${recs.length}</span>
+          </span>
+          <span class="hp-cuisine-card-dishes">${esc(dishNames)}</span>
+        </span>
+      </a>`;
+}
+
+function cuisineHomeSectionHtml(lc_code) {
+  const ctaLang   = CUISINE_CTA[lc_code] || CUISINE_CTA.en;
+  // Phase 5: the cuisine hub IS the recipe index. CTA + card links point
+  // at /<lc>/<recipe-prefix>/ and /<lc>/<recipe-prefix>/<country-slug>/.
+  const rl        = RECIPE_LANG[lc_code];
+  const recipeDir = rl ? rl.dir : `/${lc_code}/recipes`;
+  const eligible  = buildCuisineHubs();
+  const featured  = eligible.slice(0, 6);
+  const cardsHtml = featured.map(([enKey, recs]) =>
+    cuisineHomeCard(enKey, recs, lc_code, recipeDir)
+  ).join('\n      ');
+  return `<section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading">
+    <div class="hp-cuisine-inner">
+      <div class="hp-cuisine-head">
+        <span class="hp-cuisine-eyebrow">${esc(ctaLang.eyebrow)}</span>
+        <h2 id="hp-cuisine-heading" class="hp-cuisine-title">${esc(ctaLang.heading)}</h2>
+        <p class="hp-cuisine-sub">${esc(ctaLang.sub(eligible.length))}</p>
+      </div>
+      <div class="hp-cuisine-grid">
+      ${cardsHtml}
+      </div>
+      <p class="hp-cuisine-cta">
+        <a class="hp-cuisine-cta-btn" href="${recipeDir}/">${esc(ctaLang.btn(eligible.length))}</a>
+      </p>
+    </div>
+  </section>`;
+}
+
+// HTML markers for idempotent injection. Re-running the build replaces
+// content between START/END with fresh markup. Removing the markers
+// removes the injection entirely.
+const HP_CUISINE_CSS_START = '<!-- HP_CUISINE_CSS:START -->';
+const HP_CUISINE_CSS_END   = '<!-- HP_CUISINE_CSS:END -->';
+const HP_CUISINE_SEC_START = '<!-- HP_CUISINE_DISCOVER:START -->';
+const HP_CUISINE_SEC_END   = '<!-- HP_CUISINE_DISCOVER:END -->';
+const HP_CUISINE_CSS_LINK  = '<link rel="stylesheet" href="/css/cuisine-homepage.css">';
+
+function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAfter) {
+  // If markers exist anywhere → replace content between them. Preserve
+  // the 2-space indentation from the initial insertion so re-runs of the
+  // build don't produce whitespace-only diffs (otherwise the homepage
+  // injection thrashes 14 files on every build).
+  const startIdx = haystack.indexOf(startMark);
+  const endIdx   = haystack.indexOf(endMark);
+  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
+    return haystack.slice(0, startIdx)
+      + startMark + '\n  ' + newBlock + '\n  ' + endMark
+      + haystack.slice(endIdx + endMark.length);
+  }
+  // Else insert AFTER the first occurrence of the fallback anchor.
+  const anchorIdx = haystack.indexOf(fallbackInsertAfter);
+  if (anchorIdx === -1) return haystack; // anchor missing — bail safely
+  const insertAt = anchorIdx + fallbackInsertAfter.length;
+  return haystack.slice(0, insertAt)
+    + '\n  ' + startMark + '\n  ' + newBlock + '\n  ' + endMark
+    + haystack.slice(insertAt);
+}
+
+function injectCuisineHomeSection(lc_code) {
+  const filePath = path.join(PUBLIC, lc_code, 'index.html');
+  if (!fs.existsSync(filePath)) return false;
+  let html = fs.readFileSync(filePath, 'utf8');
+  const original = html;
+
+  // 1) Ensure the cuisine-homepage.css <link> is in <head>. Inject after
+  //    the existing style.min.css link so it overrides nothing important.
+  const cssAnchor = '<link rel="stylesheet" href="/css/style.min.css">';
+  html = upsertBetween(html, HP_CUISINE_CSS_START, HP_CUISINE_CSS_END,
+                       HP_CUISINE_CSS_LINK, cssAnchor);
+
+  // 2) Inject/replace the discovery section right BEFORE <main class="app-main">.
+  //    upsertBetween inserts AFTER its anchor, so we anchor on the comment
+  //    that immediately precedes <main> in the existing markup.
+  const secAnchor = '<!-- ══════════ MAIN APP ══════════ -->';
+  const sectionHtml = cuisineHomeSectionHtml(lc_code);
+  html = upsertBetween(html, HP_CUISINE_SEC_START, HP_CUISINE_SEC_END,
+                       sectionHtml, secAnchor);
+
+  // Some SPA homepages may not have the exact anchor comment (older
+  // locales). Fallback to inserting before <main class="app-main">.
+  if (!html.includes(HP_CUISINE_SEC_START)) {
+    const mainIdx = html.indexOf('<main class="app-main"');
+    if (mainIdx !== -1) {
+      html = html.slice(0, mainIdx)
+        + HP_CUISINE_SEC_START + '\n  ' + sectionHtml + '\n  ' + HP_CUISINE_SEC_END + '\n\n  '
+        + html.slice(mainIdx);
+    }
+  }
+
+  if (html !== original) {
+    fs.writeFileSync(filePath, html, 'utf8');
+    return true;
+  }
+  return false;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -3167,6 +3910,33 @@ for (const [lc_code] of Object.entries(LANG_CONFIGS)) {
 }
 console.log(`✅ 14 pricing pages generated → /{lang}/{slug}/`);
 
+// ── Country pages: ≥2 recipes per origin × 14 languages ─────────
+// Phase 5: country pages live UNDER the recipe-index dir at
+// /<lc>/<recipe-prefix>/<country-slug>/. The recipe-index itself IS the
+// cuisine hub (see recipeIndex()) — no separate /<cuisine-prefix>/ layer.
+// Origin slug stays English (locale-stable). Old URLs redirect via
+// vercel.json (added below).
+const eligibleCuisines = buildCuisineHubs();
+for (const [lc_code, rl] of Object.entries(RECIPE_LANG)) {
+  const dirParts = rl.dir.split('/').filter(Boolean);
+  for (const [enKey, recs] of eligibleCuisines) {
+    const originSlug = slug(enKey);
+    write(path.join(PUBLIC, ...dirParts, originSlug, 'index.html'),
+          cuisineHubPage(enKey, recs, lc_code));
+    count++;
+  }
+}
+console.log(`✅ ${eligibleCuisines.length} country pages × 14 locales = ${eligibleCuisines.length * 14} country pages (under /<lc>/<recipe-prefix>/)`);
+
+// ── Homepage cuisine discovery section: injected into all 14 SPA homes ──
+// Idempotent via HTML markers — re-running this build replaces the block
+// in place. Updates BOTH the <head> CSS link and the <body> section.
+let hpInjected = 0;
+for (const lc_code of Object.keys(CUISINE_HUB_LANG)) {
+  if (injectCuisineHomeSection(lc_code)) hpInjected++;
+}
+console.log(`✅ ${hpInjected}/14 SPA homepages updated with cuisine discovery section`);
+
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
 // map (visible to users) — but the SSR <img>, the og:image meta tag, and
@@ -3207,6 +3977,15 @@ for (const rl of Object.values(RECIPE_LANG)) {
     const enName = r.name?.en || r.name?.ro;
     if (enName) sitemapUrls.push(`https://meal-planner.ro${rl.dir}/${slug(enName)}/`);
   });
+}
+
+// Country pages — Phase 5: live under /<lc>/<recipe-prefix>/<country>/.
+// No separate /<cuisine-prefix>/ index URL anymore (recipe-prefix root
+// IS the cuisine hub, already added above with the recipe-index loop).
+for (const [, rl] of Object.entries(RECIPE_LANG)) {
+  for (const [enKey] of eligibleCuisines) {
+    sitemapUrls.push(`https://meal-planner.ro${rl.dir}/${slug(enKey)}/`);
+  }
 }
 
 const today = new Date().toISOString().slice(0,10);

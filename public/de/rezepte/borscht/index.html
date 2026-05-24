@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/de/wochenplan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Pläne</span></a>
       <a href="/de/rezepte/" class="nav-link">🍽️ Rezepte</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/de/preise/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Borschtsch</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/russia/">Russland</a> › <span>Borschtsch</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="borscht" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/664396-312x231.jpg" alt="Borschtsch" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 Mittagessen · Russland</div>
+      <div class="recipe-badge">🇷🇺 Mittagessen · <a class="recipe-badge-origin" href="/de/rezepte/russia/">Russland</a></div>
       <h1>Borschtsch</h1>
       <p class="recipe-tagline">Borschtsch ist die große Suppe des slawischen Ostens, ein Gericht, das so tief in der russischen wie in der ukrainischen Kultur verwurzelt ist, dass seine Ursprünge die nationalen Grenzen übersteigen, die um ihn herum gezogen wurden — die UNESCO nahm ukrainischen Borschtsch 2022 als immaterielles Kulturerbe auf. Die entscheidende Technik ist der Essig: die mit der rohen geriebenen Roten Beete hinzugefügte Säure fixiert die granatrot Farbe, die sonst zu einem stumpfen Braun verblassen würde. Mit einem großzügigen Löffel kaltem Sauerrahm und frischem Dill serviert, ist es eine vollständige Wintermahlzeit in einer einzigen Schüssel.</p>
       <div class="recipe-meta-row">
@@ -134,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 Weitere Rezepte aus Russland</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/rezepte/russia/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/okroshka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="okroshka">🍽️</div>
@@ -167,15 +168,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/rezepte/russia/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Russland"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Russland</span>
 </a>
 
 </main>

@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ru/nedelnoe-menyu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Меню</span></a>
       <a href="/ru/retsepty/" class="nav-link">🍽️ Рецепты</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 Приложение</a>
       <a href="/ru/tseny/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Мидии с картошкой фри</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/retsepty/belgium/">Бельгия</a> › <span>Мидии с картошкой фри</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="moules-frites" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Moules-frites_at_Chez_Leon_in_Brussels.jpg/330px-Moules-frites_at_Chez_Leon_in_Brussels.jpg" alt="Мидии с картошкой фри" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Ужин · Бельгия</div>
+      <div class="recipe-badge">🇧🇪 Ужин · <a class="recipe-badge-origin" href="/ru/retsepty/belgium/">Бельгия</a></div>
       <h1>Мидии с картошкой фри</h1>
       <p class="recipe-tagline">Муль-фрит — мидии с картошкой фри — претендует на звание национального блюда Бельгии, хотя оба компонента имеют более широкое происхождение. Бельгийский картофель фри — предмет местной гордости: традиция нарезать картофель полосками и жарить в говяжьем жире задокументирована в Бельгии с XVII века. Сочетание с мидиями стало стандартным в XX веке, когда урожай мидий из Северного моря снабжал как прибрежные, так и внутренние рестораны.
 
@@ -131,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 Ещё рецепты из Бельгия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/retsepty/belgium/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/stoofvlees/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stoofvlees">🍽️</div>
@@ -158,15 +159,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/retsepty/belgium/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Бельгия"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Бельгия</span>
 </a>
 
 </main>

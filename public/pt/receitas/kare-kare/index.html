@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/pt/plano-semanal/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menus</span></a>
       <a href="/pt/receitas/" class="nav-link">🍽️ Receitas</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/pt/precos/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Kare-Kare</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/philippines/">Filipinas</a> › <span>Kare-Kare</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="kare-kare" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg" alt="Kare-Kare" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Jantar · Filipinas</div>
+      <div class="recipe-badge">🇵🇭 Jantar · <a class="recipe-badge-origin" href="/pt/receitas/philippines/">Filipinas</a></div>
       <h1>Kare-Kare</h1>
       <p class="recipe-tagline">Kare-kare é um guisado filipino brasado construído em torno de um molho espesso de amendoim colorido em dourado profundo pelo annatto, com rabo de boi ou jarrete como proteína principal. O molho vem de amendoins torrados e moídos, diluído com caldo e engrossado com arroz torrado moído — rico e saboroso mas deliberadamente suave.
 
@@ -137,11 +136,13 @@ O que dá ao kare-kare seu caráter completo é o bagoong — pasta de camarão 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 Mais receitas de Filipinas</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/receitas/philippines/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/adobo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="adobo">🍽️</div>
@@ -164,15 +165,20 @@ O que dá ao kare-kare seu caráter completo é o bagoong — pasta de camarão 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/philippines/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Filipinas"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Filipinas</span>
 </a>
 
 </main>

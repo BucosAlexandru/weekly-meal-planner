@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ro/meniu-saptamanal/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Meniuri</span></a>
       <a href="/ro/retete/" class="nav-link">🍽️ Rețete</a>
-      <a href="/ro/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 Aplicație</a>
       <a href="/ro/premium/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Moules-frites</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/retete/belgium/">Belgia</a> › <span>Moules-frites</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="moules-frites" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Moules-frites_at_Chez_Leon_in_Brussels.jpg/330px-Moules-frites_at_Chez_Leon_in_Brussels.jpg" alt="Moules-frites" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Cină · Belgia</div>
+      <div class="recipe-badge">🇧🇪 Cină · <a class="recipe-badge-origin" href="/ro/retete/belgium/">Belgia</a></div>
       <h1>Moules-frites</h1>
       <p class="recipe-tagline">Moules-frites — midii cu cartofi prăjiți — este revendicat de Belgia drept fel național, deși ambele componente au origini mai largi. Cartofii prăjiți belgieni sunt o chestiune de mândrie locală: tradiția de a tăia cartofii fâșii și de a-i prăji în grăsime de vită este documentată în Belgia din secolul al XVII-lea. Asocierea cu midiile a devenit standard în secolul XX, pe măsură ce recolta de midii din Marea Nordului aproviziona deopotrivă restaurantele de coastă și cele din interior.
 
@@ -131,11 +130,13 @@ Midiile se fierb la abur în propriul suc combinat cu vin alb, șalote și țeli
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 Alte rețete din Belgia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/retete/belgium/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/stoofvlees/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stoofvlees">🍽️</div>
@@ -158,15 +159,20 @@ Midiile se fierb la abur în propriul suc combinat cu vin alb, șalote și țeli
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/retete/belgium/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Belgia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Belgia</span>
 </a>
 
 </main>

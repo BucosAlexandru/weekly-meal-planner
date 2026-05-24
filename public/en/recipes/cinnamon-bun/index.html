@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/en/weekly-meal-plan/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Meal Plans</span></a>
       <a href="/en/recipes/" class="nav-link">🍽️ Recipes</a>
-      <a href="/en/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 App</a>
       <a href="/en/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Cinnamon Bun</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/sweden/">Sweden</a> › <span>Cinnamon Bun</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="cinnamon-bun" id="recipe-photo-main">🍰<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Cinnamon_roll_in_Stockholm.jpg/330px-Cinnamon_roll_in_Stockholm.jpg" alt="Cinnamon Bun" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 Dessert · Sweden</div>
+      <div class="recipe-badge">🇸🇪 Dessert · <a class="recipe-badge-origin" href="/en/recipes/sweden/">Sweden</a></div>
       <h1>Cinnamon Bun</h1>
       <p class="recipe-tagline">Kanelbulle is the Swedish cinnamon bun — a soft, lightly enriched dough flavoured with cinnamon and cardamom, twisted into distinctive knots and scattered with pearl sugar. Sweden celebrates it with its own day, October 4th, and the bun appears in every café and bakery in the country. The cardamom in the dough is what separates the Swedish version from American or German cinnamon rolls.
 
@@ -136,11 +135,13 @@ The dough must be enriched enough to stay soft — the butter and egg content ma
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 More recipes from Sweden</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/sweden/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/swedish-meatballs/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="swedish-meatballs">🍽️</div>
@@ -175,15 +176,20 @@ The dough must be enriched enough to stay soft — the butter and egg content ma
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/sweden/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="Sweden"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Sweden</span>
 </a>
 
 </main>

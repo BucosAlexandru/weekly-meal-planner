@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/fr/plan-semaine/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menus</span></a>
       <a href="/fr/recettes/" class="nav-link">🍽️ Recettes</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 Application</a>
       <a href="/fr/tarifs/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Laksa</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/malaysia/">Malaisie</a> › <span>Laksa</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="laksa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nyonya_Laksa.jpg/330px-Nyonya_Laksa.jpg" alt="Laksa" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 Déjeuner · Malaisie</div>
+      <div class="recipe-badge">🇲🇾 Déjeuner · <a class="recipe-badge-origin" href="/fr/recettes/malaysia/">Malaisie</a></div>
       <h1>Laksa</h1>
       <p class="recipe-tagline">Le Laksa est une soupe de nouilles épicée qui définit la tradition culinaire Peranakan — le mélange malayo-chinois — de l'Asie du Sud-Est maritime. Il s'est développé dans les communautés commerciales côtières de la péninsule malaise, de Singapour et d'Indonésie, où la cuisine des immigrants chinois et les épices malaises ont fusionné au fil des générations. Les deux styles principaux sont le laksa au curry, riche en lait de coco, et le laksa asam, acide et à base de tamarin.
 
@@ -139,11 +138,13 @@ La pâte laksa est la base du plat — piment sec, pâte de crevettes, citronnel
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 Plus de recettes de Malaisie</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/malaysia/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/nasi-lemak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-lemak">🍽️</div>
@@ -166,15 +167,20 @@ La pâte laksa est la base du plat — piment sec, pâte de crevettes, citronnel
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/malaysia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Malaisie"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Malaisie</span>
 </a>
 
 </main>

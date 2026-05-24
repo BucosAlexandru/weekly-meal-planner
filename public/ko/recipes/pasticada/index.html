@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ko/jugan-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">메뉴</span></a>
       <a href="/ko/recipes/" class="nav-link">🍽️ 레시피</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 앱</a>
       <a href="/ko/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>파슈티차다</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/croatia/">크로아티아</a> › <span>파슈티차다</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="pasticada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg/330px-Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg" alt="파슈티차다" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 저녁 · 크로아티아</div>
+      <div class="recipe-badge">🇭🇷 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/croatia/">크로아티아</a></div>
       <h1>파슈티차다</h1>
       <p class="recipe-tagline">파시티차다는 달마티아의 상징적인 요리입니다. 소고기 롤을 와인 식초, 마늘, 향신료에 며칠 동안 재우고, 돼지 지방, 당근, 정향으로 속을 채운 뒤, 유럽 요리에서 드문 복잡한 향신료 믹스(정향, 계피, 육두구)와 함께 레드 와인과 말린 자두 주스로 수 시간 브레이징합니다. 결과는 달콤하고 신 짙고 걸쭉한 소스와 함께 극히 부드러운 고기입니다.
 
@@ -141,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇷 크로아티아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/croatia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/dalmatinska-pasticada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dalmatinska-pasticada">🍽️</div>
@@ -168,15 +169,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/croatia/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="크로아티아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">크로아티아</span>
 </a>
 
 </main>

@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/ja/weekly-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">メニュー</span></a>
       <a href="/ja/reshipi/" class="nav-link">🍽️ レシピ</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 アプリ</a>
       <a href="/ja/pricing/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>アドボ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/reshipi/philippines/">フィリピン</a> › <span>アドボ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="adobo" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/638741-312x231.jpg" alt="アドボ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 夕食 · フィリピン</div>
+      <div class="recipe-badge">🇵🇭 夕食 · <a class="recipe-badge-origin" href="/ja/reshipi/philippines/">フィリピン</a></div>
       <h1>アドボ</h1>
       <p class="recipe-tagline">アドボはフィリピンの国民食ですが、言葉自体はスペイン語です。スペインの植民者が、現地の酢で蒸し煮にする調理法に自分たちの漬け込み技術との類似点を見出して名付けました。酢で肉を保存するフィリピンの伝統はスペイン到来以前から存在し、冷蔵設備のない熱帯気候で食料を保つ実用的な方法でした。
 
@@ -133,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 フィリピンのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/reshipi/philippines/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/kare-kare/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kare-kare">🍽️</div>
@@ -160,15 +161,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/reshipi/philippines/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="フィリピン"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">フィリピン</span>
 </a>
 
 </main>

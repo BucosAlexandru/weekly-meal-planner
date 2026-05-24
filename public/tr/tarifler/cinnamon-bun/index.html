@@ -41,7 +41,6 @@
     <div class="nav-links">
       <a href="/tr/haftalik-menu/" class="nav-link nav-link--plans"><span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">Menüler</span></a>
       <a href="/tr/tarifler/" class="nav-link">🍽️ Tarifler</a>
-      <a href="/" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 Uygulama</a>
       <a href="/tr/fiyatlar/" class="nav-link">⭐ Premium</a>
     </div>
     <div class="nav-lang">
@@ -50,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Tarçınlı Çörek</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/tarifler/sweden/">İsveç</a> › <span>Tarçınlı Çörek</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +62,7 @@
       <div class="recipe-photo-container" data-recipe="cinnamon-bun" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Cinnamon_roll_in_Stockholm.jpg/330px-Cinnamon_roll_in_Stockholm.jpg" alt="Tarçınlı Çörek" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 Tatlı · İsveç</div>
+      <div class="recipe-badge">🇸🇪 Tatlı · <a class="recipe-badge-origin" href="/tr/tarifler/sweden/">İsveç</a></div>
       <h1>Tarçınlı Çörek</h1>
       <p class="recipe-tagline">Kanelbulle, İsveç tarçınlı çöreğidir — hem tarçın hem de kakule ile tatlandırılmış, yumuşak ve hafifçe zenginleştirilmiş bir hamurdan yapılır, kendine özgü düğümlere bükülür ve iri şeker serpilir. İsveç bunu 4 Ekim'de kendi özel günüyle kutlar ve çörek ülkedeki her kafe ve fırında yer alır. Hamurdaki kakule, İsveç versiyonunu Amerikan veya Alman tarçınlı rulo ekmeklerinden ayıran unsurdur.
 
@@ -136,11 +135,13 @@ Hamur yumuşak kalacak kadar zengin olmalıdır — tereyağı ve yumurta oranı
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 İsveç tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/tarifler/sweden/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/swedish-meatballs/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="swedish-meatballs">🍽️</div>
@@ -175,15 +176,20 @@ Hamur yumuşak kalacak kadar zengin olmalıdır — tereyağı ve yumurta oranı
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/tr/tarifler/" data-rmn-back
-   aria-label="Tarifler"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/tr/tarifler/sweden/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="İsveç"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Tarifler</span>
+  <span class="rmb-label">İsveç</span>
 </a>
 
 </main>
