@@ -74,6 +74,80 @@ function resolveRecipeImage(recipe, rslug) {
   return { src: `${PROD_ORIGIN}/images/cover2.jpg`, ogUrl: `${PROD_ORIGIN}/images/cover2.jpg` };
 }
 
+/* Image quality pipeline (Phase 6 item 3): generates srcset + sizes for an
+   image URL so the browser picks an appropriately-sized variant per
+   viewport+DPR. Avoids serving 330px Wikipedia thumbs to Retina screens.
+
+   Returns { srcset, sizes } strings, or { srcset:'', sizes:'' } when the
+   URL doesn't support resizing (local images, opaque URLs).
+
+     Wikipedia thumb URL pattern:
+       https://upload.wikimedia.org/wikipedia/commons/thumb/X/XX/Filename.jpg/330px-Filename.jpg
+                                                                            ^^^^
+                                                                            width
+       → swap "330px-" for "660px-" / "990px-" to get higher-DPR variants.
+
+     Spoonacular URL pattern:
+       https://img.spoonacular.com/recipes/<id>-312x231.jpg
+                                            ^^^^^^^
+                                            w x h
+       → swap "-312x231" for "-556x370" / "-636x393" for high-DPR.
+
+     Local /images/<slug>.<ext> → no srcset (already optimal WebP/JPG/PNG).
+
+     `tileSize` is one of 'tile' | 'hero' | 'thumb' and drives the `sizes`
+     attribute hint so the browser knows how big the IMG renders at each
+     viewport. */
+function imageSrcset(url, tileSize = 'tile') {
+  if (!url || url.startsWith('/') || url.includes(PROD_ORIGIN) || url.endsWith('cover2.jpg')) {
+    return { srcset: '', sizes: '' };
+  }
+
+  // Wikipedia commons thumb pattern
+  const wikiMatch = url.match(/^(.+\/)(\d+)px-([^/]+)$/);
+  if (wikiMatch) {
+    const [, prefix, , name] = wikiMatch;
+    const srcset = [330, 660, 990]
+      .map(w => `${prefix}${w}px-${name} ${w}w`)
+      .join(', ');
+    const sizes = tileSize === 'hero'
+      ? '(max-width: 720px) 92vw, 480px'
+      : tileSize === 'thumb'
+      ? '(max-width: 600px) 33vw, 140px'
+      : '(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px';
+    return { srcset, sizes };
+  }
+
+  // Spoonacular pattern
+  const spoonMatch = url.match(/^(.+\/recipes\/\d+)-(\d+)x(\d+)\.(jpg|png|webp)$/);
+  if (spoonMatch) {
+    const [, base, , , ext] = spoonMatch;
+    // Spoonacular accepts: 312x231, 480x360, 556x370, 636x393, 1024x767
+    const srcset = [
+      `${base}-312x231.${ext} 312w`,
+      `${base}-556x370.${ext} 556w`,
+      `${base}-636x393.${ext} 636w`,
+    ].join(', ');
+    const sizes = tileSize === 'hero'
+      ? '(max-width: 720px) 92vw, 480px'
+      : tileSize === 'thumb'
+      ? '(max-width: 600px) 33vw, 140px'
+      : '(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px';
+    return { srcset, sizes };
+  }
+
+  // Unknown URL pattern — return empty (browser uses src as-is)
+  return { srcset: '', sizes: '' };
+}
+
+/* Convenience: build the attribute string `srcset="..." sizes="..."` to
+   slot into an <img> tag. Empty string when no variants generated. */
+function imgSrcsetAttrs(url, tileSize) {
+  const { srcset, sizes } = imageSrcset(url, tileSize);
+  if (!srcset) return '';
+  return ` srcset="${srcset}" sizes="${sizes}"`;
+}
+
 /* ════════════════════════════════════════════════════════════════
    PLANS — 8 themed weekly plans with translations in 14 languages
    ════════════════════════════════════════════════════════════════ */
@@ -3012,7 +3086,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     <div class="recipe-hero-img-col">
       <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}${
         recipeImg.src && !recipeImg.src.endsWith('cover2.jpg')
-          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
+          ? `<img src="${recipeImg.src}"${imgSrcsetAttrs(recipeImg.src, 'hero')} alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
           : ''
       }</div>
     </div>
@@ -3292,7 +3366,7 @@ function recipeIndex(rl) {
       const isPlaceholder = /cover2\.jpg$/.test(u);
       return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
         <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
-        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+        ${isPlaceholder ? '' : `<img src="${u}"${imgSrcsetAttrs(u, 'thumb')} alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
       </span>`;
     }).join('');
     const previewNames = recs.slice(0, 3).map(r =>
@@ -3668,7 +3742,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     const rotAttr = occ > 0 && !isPlaceholder ? ` data-img-rot="${Math.min(occ, 2)}"` : '';
     const imgHtml = isPlaceholder
       ? '' // skip the placeholder URL entirely so the flag fallback shows
-      : `<img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
+      : `<img src="${t.img}"${imgSrcsetAttrs(t.img, 'tile')} alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
     return `<li>
       <a class="${cls}" href="${t.href}">
         <span class="cuisine-tile-img"${rotAttr}>
@@ -3719,7 +3793,7 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
         </div>
         ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
           <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
-          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
+          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}"${imgSrcsetAttrs(featured.img, 'hero')} alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
         </figure>` : ''}
       </div>
     </div>
