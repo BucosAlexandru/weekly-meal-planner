@@ -247,8 +247,27 @@ function MealPlanDocument(plan) {
   // Heading + grid render as one atomic block (wrap:false) so the section
   // title never orphans. For a typical 50–100-item list across 6 groups in
   // 2 columns, the block fits comfortably on a single A4 page.
+  // Shopping section: groups wrap naturally between pages. Each individual
+  // group is still wrap:false so a category never splits mid-list. The
+  // heading uses minPresenceAhead so it never orphans alone at the bottom
+  // of a page — it'll push to the next page if the first group can't fit
+  // beside it.
+  // Old approach (wrap:false on the whole section) atomically failed for
+  // 7-day premium plans where the shopping list (~85 items) is too tall to
+  // fit even on a fresh page; React-PDF then collapsed all content onto
+  // page 1 with row overlap. Letting groups wrap fixes this — premium
+  // exports paginate naturally to 2–3 pages instead of compressing.
+  // Force a page break before the shopping section when the day grid is
+  // dense (more than 3 days). For premium 7-day plans this keeps the
+  // SHOPPING LIST heading + first groups together on page 2, instead of
+  // orphaning the heading at the bottom of page 1. For free 2-day
+  // previews, no break — heading + shopping flow naturally after the
+  // (small) day grid and the whole document fits on one page.
+  // Individual shopGroup views remain wrap:false so a category never
+  // splits mid-list; the parent grid wraps freely between groups.
+  const forceBreakBeforeShopping = days.length > 3;
   const shopEls = groups.length ? [
-    h(View, { key: 'sh', style: styles.shopSection, wrap: false },
+    h(View, { key: 'sh', style: styles.shopSection, break: forceBreakBeforeShopping },
       h(View, { style: styles.shopHeading },
         h(Text, { style: styles.shopTitle }, 'SHOPPING LIST'),
         h(View, { style: styles.shopRuleTrail }),
