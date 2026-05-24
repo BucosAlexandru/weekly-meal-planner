@@ -250,14 +250,18 @@
   outline-offset: 3px;
 }
 .hp-cuisine-cta-btn::after {
-  content: '→';
-  font-size: 1.1em;
+  /* Subtle chevron — Linear/Notion-style confident pointer, not an
+     aggressive "→". 0.85em keeps it visually lighter than the text. */
+  content: '›';
+  font-size: 1.05em;
   line-height: 1;
-  transition: transform .18s cubic-bezier(.2,.7,.2,1);
+  font-weight: 400;
+  opacity: .85;
+  transition: transform .18s ease;
 }
-[dir="rtl"] .hp-cuisine-cta-btn::after { content: '←'; }
-.hp-cuisine-cta-btn:hover::after { transform: translateX(3px); }
-[dir="rtl"] .hp-cuisine-cta-btn:hover::after { transform: translateX(-3px); }
+[dir="rtl"] .hp-cuisine-cta-btn::after { content: '‹'; }
+.hp-cuisine-cta-btn:hover::after { transform: translateX(2px); }
+[dir="rtl"] .hp-cuisine-cta-btn:hover::after { transform: translateX(-2px); }
 
 /* ── Mobile polish ─────────────────────────────────────────────── */
 @media (max-width: 600px) {

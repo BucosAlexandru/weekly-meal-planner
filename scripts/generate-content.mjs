@@ -14,6 +14,7 @@ import { i18n }                       from '../public/js/i18n.js';
 import { recipeImages }               from '../public/js/recipe-images.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
+import { CUISINE_INTRO }              from './cuisine-intros.mjs';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -3216,20 +3217,20 @@ var recipeCuisineHubHref;
    it as a flat lookup avoids adding fields to LANG_CONFIGS for a
    single feature surface. */
 const CUISINE_CTA = {
-  ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea', sub:n=>`${n} bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.`, btn:n=>`Vezi toate cele ${n} bucătării →` },
-  en: { eyebrow:'Cuisines', heading:'Explore world cuisines', sub:n=>`${n} international cuisines, each with authentic recipes and a free meal planner.`, btn:n=>`Browse all ${n} cuisines →` },
-  es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo', sub:n=>`${n} cocinas internacionales, cada una con recetas auténticas y planificador gratuito.`, btn:n=>`Ver las ${n} cocinas →` },
-  fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde', sub:n=>`${n} cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.`, btn:n=>`Voir les ${n} cuisines →` },
-  de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt', sub:n=>`${n} internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.`, btn:n=>`Alle ${n} Küchen ansehen →` },
-  pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas do mundo', sub:n=>`${n} cozinhas internacionais, cada uma com receitas autênticas e planejador gratuito.`, btn:n=>`Ver as ${n} cozinhas →` },
-  ru: { eyebrow:'Кухни', heading:'Изучите кухни мира', sub:n=>`${n} мировых кухонь — подлинные рецепты и бесплатный планировщик меню.`, btn:n=>`Все ${n} кухни →` },
-  ar: { eyebrow:'مطابخ', heading:'اكتشف مطابخ العالم', sub:n=>`${n} مطبخًا عالميًا، كل منها بوصفات أصيلة ومخطط وجبات مجاني.`, btn:n=>`تصفح جميع المطابخ الـ ${n} ←` },
-  zh: { eyebrow:'菜系', heading:'探索世界各国菜系', sub:n=>`${n}个世界菜系，每个都有正宗菜谱和免费每周饮食计划。`, btn:n=>`浏览全部${n}个菜系 →` },
-  ja: { eyebrow:'料理', heading:'世界の料理を探す', sub:n=>`${n}か国の世界料理。本格レシピと無料の週間ミールプランナー。`, btn:n=>`${n}か国すべて見る →` },
-  hi: { eyebrow:'व्यंजन', heading:'दुनिया के व्यंजन देखें', sub:n=>`${n} वैश्विक व्यंजन, हर एक प्रामाणिक रेसिपी और मुफ्त मील प्लानर के साथ।`, btn:n=>`सभी ${n} व्यंजन देखें →` },
-  tr: { eyebrow:'Mutfaklar', heading:'Dünya mutfaklarını keşfedin', sub:n=>`${n} dünya mutfağı — otantik tarifler ve ücretsiz öğün planlayıcı.`, btn:n=>`Tüm ${n} mutfağı görüntüle →` },
-  it: { eyebrow:'Cucine', heading:'Esplora le cucine del mondo', sub:n=>`${n} cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.`, btn:n=>`Vedi tutte le ${n} cucine →` },
-  ko: { eyebrow:'요리', heading:'세계 요리를 탐색하세요', sub:n=>`${n}개국 세계 요리 — 정통 레시피와 무료 주간 식단 플래너.`, btn:n=>`${n}개 요리 모두 보기 →` },
+  ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea', sub:n=>`${n} bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.`, btn:n=>`Vezi toate cele ${n} bucătării` },
+  en: { eyebrow:'Cuisines', heading:'Explore world cuisines', sub:n=>`${n} international cuisines, each with authentic recipes and a free meal planner.`, btn:n=>`Browse all ${n} cuisines` },
+  es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo', sub:n=>`${n} cocinas internacionales, cada una con recetas auténticas y planificador gratuito.`, btn:n=>`Ver las ${n} cocinas` },
+  fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde', sub:n=>`${n} cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.`, btn:n=>`Voir les ${n} cuisines` },
+  de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt', sub:n=>`${n} internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.`, btn:n=>`Alle ${n} Küchen ansehen` },
+  pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas do mundo', sub:n=>`${n} cozinhas internacionais, cada uma com receitas autênticas e planejador gratuito.`, btn:n=>`Ver as ${n} cozinhas` },
+  ru: { eyebrow:'Кухни', heading:'Изучите кухни мира', sub:n=>`${n} мировых кухонь — подлинные рецепты и бесплатный планировщик меню.`, btn:n=>`Все ${n} кухни` },
+  ar: { eyebrow:'مطابخ', heading:'اكتشف مطابخ العالم', sub:n=>`${n} مطبخًا عالميًا، كل منها بوصفات أصيلة ومخطط وجبات مجاني.`, btn:n=>`تصفح جميع المطابخ الـ ${n}` },
+  zh: { eyebrow:'菜系', heading:'探索世界各国菜系', sub:n=>`${n}个世界菜系，每个都有正宗菜谱和免费每周饮食计划。`, btn:n=>`浏览全部${n}个菜系` },
+  ja: { eyebrow:'料理', heading:'世界の料理を探す', sub:n=>`${n}か国の世界料理。本格レシピと無料の週間ミールプランナー。`, btn:n=>`${n}か国すべて見る` },
+  hi: { eyebrow:'व्यंजन', heading:'दुनिया के व्यंजन देखें', sub:n=>`${n} वैश्विक व्यंजन, हर एक प्रामाणिक रेसिपी और मुफ्त मील प्लानर के साथ।`, btn:n=>`सभी ${n} व्यंजन देखें` },
+  tr: { eyebrow:'Mutfaklar', heading:'Dünya mutfaklarını keşfedin', sub:n=>`${n} dünya mutfağı — otantik tarifler ve ücretsiz öğün planlayıcı.`, btn:n=>`Tüm ${n} mutfağı görüntüle` },
+  it: { eyebrow:'Cucine', heading:'Esplora le cucine del mondo', sub:n=>`${n} cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.`, btn:n=>`Vedi tutte le ${n} cucine` },
+  ko: { eyebrow:'요리', heading:'세계 요리를 탐색하세요', sub:n=>`${n}개국 세계 요리 — 정통 레시피와 무료 주간 식단 플래너.`, btn:n=>`${n}개 요리 모두 보기` },
 };
 
 /* Builds tile-display data for a single recipe on a cuisine page.
@@ -3690,6 +3691,14 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
              cuisineHubHreflangs(originSlug));
 
+  // Editorial intro: per-cuisine hand-written opening (en + ro shipped
+  // in Phase 5d). For locales without an editorial version, fall back
+  // to the locale's templated intro — still localized, just generic.
+  const editorial = CUISINE_INTRO[originEnKey]?.[lc_code];
+  const heroIntro = editorial
+    ? esc(editorial)
+    : hub.intro(esc(display), recs.length);
+
   // data-cuisine-hub / -label / -href = back-pill context restore on the
   // recipe page (see content.js). data-cuisine-atmosphere = visual identity
   // (accent gradient, soft tint) via CSS variables defined in content.css.
@@ -3702,7 +3711,7 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
         <div class="cuisine-hero-text">
           <span class="cuisine-hero-flag" aria-hidden="true">${flag}</span>
           <h1>${hub.h1(esc(display))}</h1>
-          <p class="cuisine-hero-desc">${hub.intro(esc(display), recs.length)}</p>
+          <p class="cuisine-hero-desc">${heroIntro}</p>
         </div>
         ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
           <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
