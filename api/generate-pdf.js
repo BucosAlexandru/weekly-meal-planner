@@ -25,8 +25,8 @@ const DOT        = '#c9d2cb';
 const styles = StyleSheet.create({
   // A4: 595.28 × 841.89 pt. 36pt side margins ≈ 12.7mm.
   page: {
-    paddingTop: 32,
-    paddingBottom: 32,
+    paddingTop: 30,
+    paddingBottom: 30,
     paddingHorizontal: 36,
     fontSize: 9,
     fontFamily: 'Helvetica',
@@ -39,118 +39,110 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    paddingBottom: 6,
-    marginBottom: 14,
+    paddingBottom: 7,
+    marginBottom: 16,
     borderBottomWidth: 0.5,
     borderBottomColor: HAIRLINE,
   },
-  brand:       { fontSize: 10, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.3 },
-  brandDot:    { color: BRAND },
+  brand:       { fontSize: 10, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.4 },
   mastheadRight: { alignItems: 'flex-end' },
-  planTitle:   { fontSize: 9, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.2 },
-  weekLabel:   { fontSize: 7.5, color: INK_MUTED, marginTop: 1 },
+  planTitle:   { fontSize: 10, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.2 },
+  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily: 'Helvetica-Oblique', marginTop: 2 },
 
   // ── Day block (one per day) ──────────────────────────────────────────────
-  dayBlock: { marginBottom: 10 },
+  dayBlock: { marginBottom: 12 },
 
   dayHeader: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    marginBottom: 4,
+    marginBottom: 5,
   },
   dayName: {
     fontSize: 8.5,
     fontFamily: 'Helvetica-Bold',
     color: BRAND,
-    letterSpacing: 1.6,
+    letterSpacing: 1.8,
   },
   dayRule: {
     flex: 1,
     height: 0.5,
     backgroundColor: HAIRLINE,
-    marginLeft: 8,
+    marginLeft: 10,
     marginBottom: 2,
   },
 
   mealRow: { flexDirection: 'row' },
   mealCol: { flex: 1 },
-  mealColLeft: { paddingRight: 14 },
+  mealColLeft: { paddingRight: 16 },
   mealColRight: {
-    paddingLeft: 14,
+    paddingLeft: 16,
     borderLeftWidth: 0.5,
     borderLeftColor: HAIRLINE,
   },
 
   mealKind: {
-    fontSize: 6.5,
+    fontSize: 6,
     color: INK_MUTED,
-    letterSpacing: 1.2,
+    letterSpacing: 1.4,
     marginBottom: 2,
   },
   mealName: {
-    fontSize: 10.5,
+    fontSize: 11,
     fontFamily: 'Helvetica-Bold',
     color: INK,
-    marginBottom: 2,
-    lineHeight: 1.2,
+    marginBottom: 3,
+    lineHeight: 1.15,
   },
   mealMeta: {
-    fontSize: 7,
+    fontSize: 6.5,
     color: INK_SOFT,
-    marginBottom: 3,
-    letterSpacing: 0.2,
+    marginBottom: 4,
+    letterSpacing: 0.6,
   },
   mealIngr: {
     fontSize: 7.5,
     color: INK_SOFT,
-    lineHeight: 1.45,
+    lineHeight: 1.4,
   },
   mealEmpty: { fontSize: 8, color: INK_MUTED, fontStyle: 'italic' },
 
   // ── Shopping section ────────────────────────────────────────────────────
-  shopSection: { marginTop: 14 },
+  shopSection: { marginTop: 16 },
   shopHeading: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    marginBottom: 8,
+    marginBottom: 10,
   },
   shopTitle: {
-    fontSize: 10,
+    fontSize: 10.5,
     fontFamily: 'Helvetica-Bold',
     color: BRAND,
-    letterSpacing: 1.8,
+    letterSpacing: 2.0,
   },
-  shopRule: {
+  shopRuleTrail: {
     flex: 1,
     height: 0.5,
     backgroundColor: HAIRLINE,
-    marginLeft: 8,
+    marginLeft: 12,
     marginBottom: 2,
   },
-  shopSubLabel: {
-    fontSize: 7,
-    color: INK_MUTED,
-    letterSpacing: 0.4,
-    marginLeft: 10,
-  },
-  shopRuleTrail: { flex: 1, height: 0.5, backgroundColor: HAIRLINE, marginLeft: 10, marginBottom: 2 },
 
   shopGrid: { flexDirection: 'row', flexWrap: 'wrap' },
-  shopGroup: { width: '50%', paddingRight: 14, marginBottom: 10 },
+  shopGroup: { width: '50%', paddingRight: 16, marginBottom: 14 },
   shopGroupTitle: {
-    fontSize: 7,
+    fontSize: 7.5,
     fontFamily: 'Helvetica-Bold',
     color: INK_MUTED,
-    letterSpacing: 1.4,
-    marginBottom: 4,
+    letterSpacing: 1.6,
+    marginBottom: 5,
   },
 
   shopItem: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    paddingVertical: 1.5,
+    paddingVertical: 2,
   },
-  shopItemName: { fontSize: 8, color: INK },
+  shopItemName: { fontSize: 8.5, color: INK },
   shopItemLeader: {
     flex: 1,
     marginHorizontal: 4,
@@ -162,7 +154,8 @@ const styles = StyleSheet.create({
   },
   shopItemQty: {
     fontSize: 7.5,
-    color: INK_MUTED,
+    fontFamily: 'Helvetica-Bold',
+    color: INK_SOFT,
   },
 
   // ── Footer ──────────────────────────────────────────────────────────────
@@ -171,16 +164,16 @@ const styles = StyleSheet.create({
     bottom: 14,
     left: 36,
     right: 36,
-    height: 22,
+    height: 24,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    paddingTop: 6,
+    paddingTop: 7,
     borderTopWidth: 0.5,
     borderTopColor: HAIRLINE,
   },
-  footerLeft:  { fontSize: 6.5, color: INK_MUTED, letterSpacing: 0.3 },
-  footerRight: { fontSize: 6.5, color: INK_MUTED, letterSpacing: 0.3 },
+  footerLeft:  { fontSize: 7, color: INK_MUTED, letterSpacing: 0.5 },
+  footerRight: { fontSize: 7, color: INK_MUTED, letterSpacing: 0.5 },
 });
 
 function mealCell(meal, kindLabel) {
@@ -240,10 +233,9 @@ function shopGroup(g, gi) {
 function MealPlanDocument(plan) {
   const days   = Array.isArray(plan.days) ? plan.days : [];
   const groups = Array.isArray(plan.shoppingGroups) ? plan.shoppingGroups : [];
-  const totalItems = groups.reduce((n, g) => n + (g.items?.length || 0), 0);
 
   const mastheadEl = h(View, { style: styles.masthead, fixed: true },
-    h(Text, { style: styles.brand }, 'Meal-Planner', h(Text, { style: styles.brandDot }, '.ro')),
+    h(Text, { style: styles.brand }, 'Meal-Planner.ro'),
     h(View, { style: styles.mastheadRight },
       h(Text, { style: styles.planTitle }, plan.title || 'Weekly plan'),
       plan.weekLabel ? h(Text, { style: styles.weekLabel }, plan.weekLabel) : null,
@@ -259,7 +251,6 @@ function MealPlanDocument(plan) {
     h(View, { key: 'sh', style: styles.shopSection, wrap: false },
       h(View, { style: styles.shopHeading },
         h(Text, { style: styles.shopTitle }, 'SHOPPING LIST'),
-        totalItems ? h(Text, { style: styles.shopSubLabel }, `${totalItems} items`) : null,
         h(View, { style: styles.shopRuleTrail }),
       ),
       h(View, { style: styles.shopGrid }, ...groups.map(shopGroup)),
