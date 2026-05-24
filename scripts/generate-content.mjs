@@ -865,7 +865,6 @@ const makeNav = (lc, langUrlMap = null) => `
     <div class="nav-links">
       <a href="${lc.dir}/" class="nav-link nav-link--plans">${navPlansLink(lc.code)}</a>
       <a href="${RECIPES_NAV[lc.code].href}" class="nav-link">${RECIPES_NAV[lc.code].label}</a>
-      <a href="${appHref(lc)}" class="nav-link nav-link--secondary" data-mobile-hide="1">🥗 ${lc.appLabel}</a>
       <a href="/${lc.code}/${PRICING_SLUGS[lc.code]}/" class="nav-link">⭐ Premium</a>
     </div>
     ${buildNavLangSelect(lc.code, 'content-lang', langUrlMap)}

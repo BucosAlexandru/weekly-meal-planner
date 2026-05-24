@@ -16,18 +16,31 @@
    ─────────────────────────────────────────────────────────────── */
 
 .hp-cuisine-discover {
-  /* Soft band so the section reads as a distinct unit between the dark
-     hero and the white planner UI, without competing with either. */
-  background:
-    radial-gradient(ellipse at top, rgba(36,113,42,.04) 0%, transparent 60%),
-    linear-gradient(180deg, #f7faf7 0%, #ffffff 100%);
-  padding: clamp(2.4rem, 5vw, 3.6rem) 1.25rem clamp(2.6rem, 5vw, 3.8rem);
+  /* Calm divider band between hero and planner UI. Soft white gradient,
+     no radial accents — keeps the section production-restrained. */
+  background: linear-gradient(180deg, #f7faf7 0%, #ffffff 100%);
+  padding: clamp(2rem, 5vw, 3rem) 1.25rem clamp(2.2rem, 5vw, 3.2rem);
   border-top: 1px solid #eef0ee;
   border-bottom: 1px solid #eef0ee;
+  /* iOS Safari sometimes mis-calculates content width inside flex parents
+     when the hero sets explicit padding. box-sizing here guarantees the
+     1.25rem horizontal padding doesn't push children into overflow. */
+  box-sizing: border-box;
 }
 .hp-cuisine-inner {
   max-width: 1180px;
   margin: 0 auto;
+  /* Center everything inside the inner column — fixes the landscape-mobile
+     CTA-drift bug where flex content rendered left-aligned at edge widths. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hp-cuisine-head,
+.hp-cuisine-grid,
+.hp-cuisine-cta {
+  width: 100%;
+  max-width: 980px;
 }
 .hp-cuisine-head {
   text-align: center;
@@ -78,35 +91,41 @@
 
 /* ── Card grid ───────────────────────────────────────────────────
    3 columns desktop / 2 tablet / 1 phone. Compact, scannable. */
+/* Explicit responsive grid — auto-fill at narrow widths was producing
+   awkward 2.5-column states on landscape iPhone (~700-820px) and certain
+   iPad widths. Fixed breakpoints guarantee even distribution at every
+   common viewport: 1col on phones, 2col on tablets, 3col on desktop.
+   6 cuisines × 3 columns = 2 perfect rows of 3 on desktop. */
 .hp-cuisine-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: .85rem;
-  margin: 1.6rem 0 1.7rem;
+  grid-template-columns: 1fr;
+  gap: .7rem;
+  margin: 1.4rem auto 1.6rem;
+  max-width: 980px;
+}
+@media (min-width: 560px) {
+  .hp-cuisine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+}
+@media (min-width: 900px) {
+  .hp-cuisine-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
 }
 
 .hp-cuisine-card {
   position: relative;
   display: flex;
   align-items: stretch;
-  gap: .85rem;
-  padding: .9rem 1rem;
+  gap: .8rem;
+  padding: .85rem .95rem;
   background: #fff;
   border: 1px solid #e8eaed;
-  border-radius: 14px;
+  border-radius: 12px;
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition:
-    transform .22s cubic-bezier(.2,.7,.2,1),
-    border-color .18s ease,
-    box-shadow .22s ease;
-  /* Multi-layer shadow ladder — consistent with cuisine-card--preview. */
-  box-shadow:
-    0 1px 2px rgba(0,0,0,.025),
-    0 2px 4px rgba(0,0,0,.025);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
   -webkit-tap-highlight-color: transparent;
-  min-height: 88px;
+  min-height: 80px;
 }
 .hp-cuisine-card::before {
   /* Thin atmosphere-coloured strip on the leading edge — same
@@ -130,11 +149,8 @@
 .hp-cuisine-card:hover,
 .hp-cuisine-card:focus-visible {
   transform: translateY(-2px);
-  border-color: var(--cuisine-accent, #24712A);
-  box-shadow:
-    0 1px 2px rgba(0,0,0,.04),
-    0 4px 8px rgba(0,0,0,.04),
-    0 10px 22px rgba(0,0,0,.06);
+  border-color: rgba(36,113,42,.35);
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
 }
 .hp-cuisine-card:hover::before,
 .hp-cuisine-card:focus-within::before {
