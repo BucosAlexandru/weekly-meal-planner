@@ -177,7 +177,19 @@
     <a href="/" class="btn-cta-banner">Genera il mio piano ora →</a>
   </div>
 
-</div>
+</div><!-- /.recipe-page-wrap -->
+
+<!-- Mobile-only floating back-to-recipes pill.
+     Hidden on desktop, print, and PDF export. Restores list scroll
+     position via sessionStorage when tapped (content.js handles the
+     flag + restore on the destination page). -->
+<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
+   aria-label="Ricette"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">Ricette</span>
+</a>
+
 </main>
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">

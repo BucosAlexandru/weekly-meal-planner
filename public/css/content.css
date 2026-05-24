@@ -1315,6 +1315,77 @@
   box-shadow: 0 6px 20px rgba(0,0,0,.18);
 }
 
+/* ────────────────────────────────────────────────────────────────────
+   FLOATING "BACK TO RECIPES" PILL (Phase K)
+   Mobile-only, compact floating pill anchored to the bottom-left of the
+   viewport. Subtle — does not compete with the recipe CTAs. Restores
+   the recipe-list scroll position via sessionStorage when tapped (see
+   content.js).
+   Hidden on desktop (≥769px), in @media print, and during the legacy
+   html2pdf export (body.pdf-exporting). Fixed positioning means no
+   CLS at load. Safe-area-inset respected so the pill clears the iOS
+   home indicator and stays above Safari's bottom URL bar.
+   ──────────────────────────────────────────────────────────────────── */
+.recipe-mobile-back { display: none; }
+
+@media (max-width: 768px) {
+  .recipe-mobile-back {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    position: fixed;
+    left: max(14px, env(safe-area-inset-left));
+    bottom: calc(max(14px, env(safe-area-inset-bottom)) + 6px);
+    z-index: 90;
+    padding: .55rem .9rem .55rem .75rem;
+    background: rgba(26, 26, 46, .92);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+    color: #fff;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18), 0 1px 3px rgba(0, 0, 0, .12);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .15s ease, background-color .15s ease;
+    /* Cap label width on very narrow phones so the pill never grows
+       beyond ~55% of viewport — keeps it out of the way of CTAs. */
+    max-width: 60vw;
+  }
+  .recipe-mobile-back:active {
+    transform: scale(.96);
+    background: rgba(26, 26, 46, 1);
+  }
+  .recipe-mobile-back:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+  .recipe-mobile-back .rmb-arrow {
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .recipe-mobile-back .rmb-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* Make sure the floating pill doesn't cover the bottom of the recipe
+     content. The pill is ~36pt tall + 14pt + safe-area. Total reserve
+     ≈ 60pt at the bottom is plenty without feeling cramped. */
+  .recipe-page-wrap {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* Hide on print and during legacy PDF export */
+@media print {
+  .recipe-mobile-back { display: none !important; }
+}
+body.pdf-exporting .recipe-mobile-back { display: none !important; }
+
 /* ── Recipe tip box ── */
 .recipe-tip-box {
   display: flex;

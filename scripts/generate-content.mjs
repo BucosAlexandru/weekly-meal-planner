@@ -3035,7 +3035,19 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     <a href="${appUrl}" class="btn-cta-banner">${ui.ctaBtn}</a>
   </div>
 
-</div>
+</div><!-- /.recipe-page-wrap -->
+
+<!-- Mobile-only floating back-to-recipes pill.
+     Hidden on desktop, print, and PDF export. Restores list scroll
+     position via sessionStorage when tapped (content.js handles the
+     flag + restore on the destination page). -->
+<a class="recipe-mobile-back" href="${rl.dir}/" data-rmn-back
+   aria-label="${esc(rl.breadLabel)}"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">${esc(rl.breadLabel)}</span>
+</a>
+
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
@@ -3109,7 +3121,7 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
   <section class="content-section"><div class="content-section-inner">
     <div class="recipe-groups-grid">${groups}</div>
   </div></section>
-</main>${makeFooter(lc)}</body></html>`;
+</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
