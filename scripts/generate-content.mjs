@@ -939,6 +939,12 @@ const NAV_URL_FOR = {
   // is locale-stable, so the same `rslug` works in every locale.
   recipe: (rslug) =>
     Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `${RECIPE_LANG[c].dir}/${rslug}/`])),
+  // A specific cuisine hub. originSlug is derived from r.origin.en (English,
+  // locale-stable). Switching languages on a hub now lands on the same hub
+  // in the target language (e.g. /en/recipes/japan/ → /ro/retete/japan/),
+  // not on the recipe index. Phase 7 PR 2.1 fix.
+  cuisineHub: (originSlug) =>
+    Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `${RECIPE_LANG[c].dir}/${originSlug}/`])),
   // Pricing page. Each locale has its own slug (premium / pricing / precios…).
   pricing: () =>
     Object.fromEntries(Object.keys(NAV_LANG_NAMES).map(c => [c, `/${c}/${PRICING_SLUGS[c]}/`])),
@@ -3908,7 +3914,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // recipe page (see content.js). data-cuisine-atmosphere = visual identity
   // (accent gradient, soft tint) via CSS variables defined in content.css.
   return `${head}
-${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-main" data-cuisine-hub="1" data-cuisine-label="${esc(display)}" data-cuisine-href="${canonical}" data-cuisine-atmosphere="${atmosphere}">
+${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuisine-hub-main" data-cuisine-hub="1" data-cuisine-label="${esc(display)}" data-cuisine-href="${canonical}" data-cuisine-atmosphere="${atmosphere}">
   <section class="cuisine-hero" data-cuisine-atmosphere="${atmosphere}">
     <div class="cuisine-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav cuisine-hero-breadcrumb"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(display)}</span></nav>
