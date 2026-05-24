@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>파블로바</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/australia/">호주</a> › <span>파블로바</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pavlova" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/655031-312x231.jpg" alt="파블로바" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 디저트 · 호주</div>
+      <div class="recipe-badge">🇦🇺 디저트 · <a class="recipe-badge-origin" href="/ko/yori/australia/">호주</a></div>
       <h1>파블로바</h1>
       <p class="recipe-tagline">파블로바는 1926년 호주와 뉴질랜드를 순회한 러시아 발레리나 안나 파블로바의 이름을 딴 디저트입니다. 두 나라 모두 이 디저트를 발명했다고 주장하며, 논쟁은 거의 한 세기 동안 해결 없이 이어지고 있습니다. 가장 오래된 문헌 기록은 뉴질랜드에 나타나지만, 호주 요리사들도 같은 시기의 자체 버전을 보유하고 있습니다.
 
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 호주의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/australia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/meat-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="meat-pie">🍽️</div>

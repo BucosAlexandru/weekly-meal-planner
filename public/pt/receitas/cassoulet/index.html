@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Cassoulet</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/france/">França</a> › <span>Cassoulet</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cassoulet" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/330px-Bowl_of_cassoulet.JPG" alt="Cassoulet" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Jantar · França</div>
+      <div class="recipe-badge">🇫🇷 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/france/">França</a></div>
       <h1>Cassoulet</h1>
       <p class="recipe-tagline">O cassoulet — cujo nome vem da cassole, o recipiente de argila em que é preparado — é o emblema da cozinha rústica do Languedoc: feijão branco cozido lentamente com linguiças de Toulouse, confit de pato ou ganso e carne de porco. As três cidades que disputam sua paternidade — Castelnaudary, Carcassonne e Toulouse — diferem nas escolhas de carne, mas todas insistem que a sua versão é a autêntica.
 
@@ -141,11 +141,13 @@ A crosta de farinha de rosca dourada na superfície é quebrada e misturada vár
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Mais receitas de França</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/france/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Guacamole</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/mexico/">Messico</a> › <span>Guacamole</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="guacamole" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/715543-312x231.jpg" alt="Guacamole" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Spuntino · Messico</div>
+      <div class="recipe-badge">🇲🇽 Spuntino · <a class="recipe-badge-origin" href="/it/cucina/mexico/">Messico</a></div>
       <h1>Guacamole</h1>
       <p class="recipe-tagline">Il guacamole ha radici nelle cucine azteche del Messico precolombiano, dove la parola nahuatl 'ahuacamolli' — tradotta approssimativamente come salsa di avocado — descriveva un semplice impasto di avocado, peperoncino e pomodoro pestati nel molcajete. Il piatto sopravvisse alla conquista spagnola invariato perché nessuna sostituzione era possibile: l'avocado Hass degli altopiani messicani ha una ricchezza burrosa e una nota di noce che nient'altro riesce a replicare. L'unica tecnica che conta è la sobrietà — schiacciato con la forchetta, mai frullato, affinché il risultato abbia corpo e consistenza piuttosto che la piattezza liscia di una crema industriale.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Altre ricette da Messico</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/mexico/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

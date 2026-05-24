@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>रिसोट्टो</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/italy/">इटली</a> › <span>रिसोट्टो</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="risotto" id="recipe-photo-main">🍽️<img src="/images/risotto.webp" alt="रिसोट्टो" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 रात का खाना · इटली</div>
+      <div class="recipe-badge">🇮🇹 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/italy/">इटली</a></div>
       <h1>रिसोट्टो</h1>
       <p class="recipe-tagline">रिसोट्टो की जड़ें उत्तरी इटली की पो घाटी में हैं, जहां छोटे दाने के चावल की खेती पंद्रहवीं सदी से होती आ रही है। इस व्यंजन ने अपना क्लासिक रूप मिलान में पाया — केसर से सुनहरा रिसोट्टो आला मिलानीज़े — और यह लोम्बार्डिया से गहराई से जुड़ा है। अधिकांश चावल के व्यंजनों के विपरीत, रिसोट्टो की मलाईदार बनावट केवल चावल के अपने स्टार्च से आती है, बिना किसी क्रीम के।
 
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 इटली की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/italy/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/pasta-e-fagioli/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pasta-e-fagioli">🍽️</div>

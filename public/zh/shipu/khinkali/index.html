@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>格鲁吉亚饺子</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/georgia/">格鲁吉亚</a> › <span>格鲁吉亚饺子</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="khinkali" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Khinkali%2C_Restaurant_Aragvi.jpg/330px-Khinkali%2C_Restaurant_Aragvi.jpg" alt="格鲁吉亚饺子" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 晚餐 · 格鲁吉亚</div>
+      <div class="recipe-badge">🇬🇪 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/georgia/">格鲁吉亚</a></div>
       <h1>格鲁吉亚饺子</h1>
       <p class="recipe-tagline">格鲁吉亚饺子是格鲁吉亚的国家饺子——大面皮袋里填入牛猪肉末加洋葱、香菜和胡椒，在水中煮制。面皮足够厚实，能包住肉汁在内部形成的汤汁。吃之前，先掰掉拧成的面结，吸饮热汤，再咬开。
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 更多来自格鲁吉亚的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/georgia/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍽️</div>

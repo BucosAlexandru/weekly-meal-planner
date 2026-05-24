@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>باستا ألا نورما</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/italy/">إيطاليا</a> › <span>باستا ألا نورما</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-alla-norma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg/330px-Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg" alt="باستا ألا نورما" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 غداء · إيطاليا</div>
+      <div class="recipe-badge">🇮🇹 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/italy/">إيطاليا</a></div>
       <h1>باستا ألا نورما</h1>
       <p class="recipe-tagline">باستا ألا نورما فخر مدينة كاتانيا — طبق معكرونة صقلي تلتقي فيه الباذنجان المقلي بصلصة الطماطم الطازجة وزيت الزيتون والريحان وريكوتا سالاتا المبشورة. أُطلق الاسم تكريماً لأوبرا نورما للمؤلف الموسيقي الكاتاني فينتشنتسو بيليني: يُقال إن كاتباً صاح أن الطبق بالغ الكمال مثل نورما. يجب قلي الباذنجان منفصلاً وتصفيته جيداً — لا مجرد تحميره — لتحقيق القوام الحريري المطلوب.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 المزيد من وصفات إيطاليا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/italy/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>

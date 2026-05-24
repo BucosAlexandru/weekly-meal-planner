@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Francesinha</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/cocina/portugal/">Portugal</a> › <span>Francesinha</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="francesinha" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Francesinha_Sandwich_%28cropped%29.jpg/330px-Francesinha_Sandwich_%28cropped%29.jpg" alt="Francesinha" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 Cena · Portugal</div>
+      <div class="recipe-badge">🇵🇹 Cena · <a class="recipe-badge-origin" href="/es/cocina/portugal/">Portugal</a></div>
       <h1>Francesinha</h1>
       <p class="recipe-tagline">Francesinha — Pequeña Francesa — es un sándwich de Oporto con una historia arraigada en la diáspora portuguesa. Creado en la década de 1960 por un emigrante retornado inspirado en el croque-monsieur francés, el plato se construye con pan tostado capas de jamón curado, linguiça y bistec, luego sellado bajo queso fundido y bañado en salsa.
 
@@ -144,11 +144,13 @@ La salsa es lo que lo define: cada restaurante de Oporto guarda su propia receta
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇹 Más recetas de Portugal</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/cocina/portugal/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/bacalhau-br-s/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bacalhau-br-s">🍽️</div>

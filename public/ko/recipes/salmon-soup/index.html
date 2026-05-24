@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>연어 수프</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/finland/">핀란드</a> › <span>연어 수프</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="salmon-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/659056-312x231.jpg" alt="연어 수프" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 점심 · 핀란드</div>
+      <div class="recipe-badge">🇫🇮 점심 · <a class="recipe-badge-origin" href="/ko/yori/finland/">핀란드</a></div>
       <h1>연어 수프</h1>
       <p class="recipe-tagline">로히케이토——연어 수프——는 핀란드에서 가장 친숙한 요리 중 하나로, 가정 부엌부터 길가 카페까지 연중 즐겨집니다. 이 요리는 핀란드와 발트해 연어의 관계를 반영합니다. 연어는 수 세기 동안 핀란드 해안선과 강 유역을 따라 주요 식재료였습니다. 수프는 의도적으로 단순합니다. 적은 재료, 각각 명확하게 느껴질 만큼 충분한 양.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 핀란드의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/finland/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/karelian-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="karelian-pie">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Бань Ми</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/vietnam/">Вьетнам</a> › <span>Бань Ми</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="banh-mi" id="recipe-photo-main">🍽️<img src="/images/banh-mi.webp" alt="Бань Ми" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Закуска · Вьетнам</div>
+      <div class="recipe-badge">🇻🇳 Закуска · <a class="recipe-badge-origin" href="/ru/kuhnya/vietnam/">Вьетнам</a></div>
       <h1>Бань Ми</h1>
       <p class="recipe-tagline">Бань Ми — самый узнаваемый уличный фастфуд Вьетнама и один из наглядных примеров кулинарного слияния в истории Юго-Восточной Азии. Французский багет появился здесь в эпоху колониализма в XIX веке; вьетнамские пекари адаптировали его в более лёгкий, воздушный хлеб с тонкой коркой. Начинки — паштет, майонез и маринованные овощи — сочетают традиции французской шаркутери с местными вьетнамскими вкусами.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Ещё рецепты из Вьетнам</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/vietnam/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/pho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pho">🍽️</div>

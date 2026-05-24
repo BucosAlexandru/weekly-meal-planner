@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>포솔레</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/mexico/">멕시코</a> › <span>포솔레</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pozole" id="recipe-photo-main">🍽️<img src="/images/pozole.webp" alt="포솔레" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 점심 · 멕시코</div>
+      <div class="recipe-badge">🇲🇽 점심 · <a class="recipe-badge-origin" href="/ko/yori/mexico/">멕시코</a></div>
       <h1>포솔레</h1>
       <p class="recipe-tagline">포솔레는 아즈텍 의식용 수프입니다. 나와틀어로 이 단어는 문자 그대로 '거품 나는 옥수수'를 의미합니다. 호미니 옥수수(닉스타말화 처리되어 알이 벌어진 상태)를 돼지고기와 건조 고추와 함께 몇 시간씩 끓여 진한 붉은색 향긋한 육수를 만듭니다. 이 요리는 콜럼버스 이전 멕시코에서 의식과 축제에 먹었습니다.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 멕시코의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/mexico/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

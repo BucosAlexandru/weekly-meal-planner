@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Булочка с корицей</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/sweden/">Швеция</a> › <span>Булочка с корицей</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cinnamon-bun" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Cinnamon_roll_in_Stockholm.jpg/330px-Cinnamon_roll_in_Stockholm.jpg" alt="Булочка с корицей" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 Десерт · Швеция</div>
+      <div class="recipe-badge">🇸🇪 Десерт · <a class="recipe-badge-origin" href="/ru/kuhnya/sweden/">Швеция</a></div>
       <h1>Булочка с корицей</h1>
       <p class="recipe-tagline">Канелбулле — шведская булочка с корицей: мягкое, слегка сдобное тесто, ароматизированное корицей и кардамоном, скрученное в характерные узелки и посыпанное жемчужным сахаром. Швеция отмечает его собственным днём — 4 октября, и булочка присутствует в каждом кафе и пекарне страны. Кардамон в тесте — именно то, что отличает шведский вариант от американских или немецких рулетов с корицей.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 Ещё рецепты из Швеция</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/sweden/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/swedish-meatballs/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="swedish-meatballs">🍽️</div>

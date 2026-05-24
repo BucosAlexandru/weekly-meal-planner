@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>굴라시</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/hungary/">헝가리</a> › <span>굴라시</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="goulash" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/644476-312x231.jpg" alt="굴라시" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 저녁 · 헝가리</div>
+      <div class="recipe-badge">🇭🇺 저녁 · <a class="recipe-badge-origin" href="/ko/yori/hungary/">헝가리</a></div>
       <h1>굴라시</h1>
       <p class="recipe-tagline">굴라시(Gulyás)는 헝가리어로 '소몰이꾼'을 뜻하며, 18세기 대평원의 카우보이들이 만들던 단순한 목동 스튜에서 시작되었습니다. 19세기에는 헝가리 개혁가들이 합스부르크 문화 지배에 맞선 마자르 정체성의 상징으로 의도적으로 격상시키면서 국민적인 요리가 되었습니다. 세계가 '굴라시'라고 부르는 것은 대개 페르쾰트(pörkölt)에 더 가깝습니다. 헝가리에서 굴라시는 본래 수프이지, 걸쭉한 스튜가 아닙니다.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 헝가리의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/hungary/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/chicken-paprikash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-paprikash">🍽️</div>

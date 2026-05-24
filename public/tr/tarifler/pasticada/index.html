@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Pasticada</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/croatia/">Hırvatistan</a> › <span>Pasticada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasticada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg/330px-Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg" alt="Pasticada" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 Akşam yemeği · Hırvatistan</div>
+      <div class="recipe-badge">🇭🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/croatia/">Hırvatistan</a></div>
       <h1>Pasticada</h1>
       <p class="recipe-tagline">Pašticada, Dalmaçya'nın simge yemeğidir — şarap sirkesi, sarımsak ve baharatlarla günlerce marine edilen bir dana eti rulosu, domuz yağı, havuç ve karanfille doldurulur, ardından kırmızı şarap, kuru erik suyu ve Avrupa mutfağı için alışılmadık karmaşık bir baharat karışımıyla (karanfil, tarçın, hindistancevizi) saatlerce pişirilir. Sonuç, tatlı ekşi, koyu ve yoğun soslu son derece yumuşak bir ettir.
 
@@ -141,7 +141,9 @@ Gnocchi veya ev yapımı makarna ile servis edilir. Dalmaçya düğünlerinde ve
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>졸로프 라이스</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/nigeria/">나이지리아</a> › <span>졸로프 라이스</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="jollof-rice" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/330px-Jollof_Rice_with_Stew.jpg" alt="졸로프 라이스" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 점심 · 나이지리아</div>
+      <div class="recipe-badge">🇳🇬 점심 · <a class="recipe-badge-origin" href="/ko/yori/nigeria/">나이지리아</a></div>
       <h1>졸로프 라이스</h1>
       <p class="recipe-tagline">졸로프 라이스는 서아프리카에서 가장 널리 먹히고 열정적으로 논쟁되는 요리입니다 — 블렌딩된 토마토, 피망, 양파의 진한 베이스에 쌀을 넣어 한 냄비에 조리하는 토마토 기반의 밥 요리로, 쌀알이 소스를 흡수하고 냄비 바닥에 훈제 크러스트가 생길 때까지 조리합니다. 나이지리아, 가나, 세네갈, 시에라리온 등에서 볼 수 있으며, 각 나라는 자신들의 버전이 정통이라고 주장합니다.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 나이지리아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/nigeria/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/egusi-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="egusi-soup">🍽️</div>

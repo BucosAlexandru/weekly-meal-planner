@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Фейжоада</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/brazil/">Бразилия</a> › <span>Фейжоада</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="feijoada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Фейжоада" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 Ужин · Бразилия</div>
+      <div class="recipe-badge">🇧🇷 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/brazil/">Бразилия</a></div>
       <h1>Фейжоада</h1>
       <p class="recipe-tagline">Фейжоада — национальное блюдо Бразилии и важнейшая социальная трапеза страны: густое рагу из чёрной фасоли с копчёной свининой, которое подают каждую среду и субботу в домах и ресторанах по всему Рио-де-Жанейро на протяжении не менее двух веков. Её происхождение дискутируется: одни связывают его с порабощёнными людьми, которые обходились фасолью и наименее ценными кусками свинины; другие — с португальской кухней Алентежу. Очевидно одно: фейжоада стала символом национальной идентичности, едой, объединяющей людей всех социальных слоёв; её всегда подают с белым рисом, обжаренным коуви, хрустящей фарофой и свежими апельсинами.</p>
       <div class="recipe-meta-row">
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 Ещё рецепты из Бразилия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/brazil/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/moqueca/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moqueca">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Lángos</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/hungary/">Macaristan</a> › <span>Lángos</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="l-ngos" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Atıştırmalık · Macaristan</div>
+      <div class="recipe-badge">🇭🇺 Atıştırmalık · <a class="recipe-badge-origin" href="/tr/mutfak/hungary/">Macaristan</a></div>
       <h1>Lángos</h1>
       <p class="recipe-tagline">Lángos, Macaristan'ın ulusal sokak atıştırmalığıdır — derin yağda kızartılmış, kabarık ve altın rengi mayalı bir yassı ekmek, ekşi krema ile sürülür ve rendelenmiş peynir serpilir. Kelime, Macarca láng (alev) kelimesinden gelir; ekmek fırınının ateşi yanında kalan hamurun pişirilmesi geleneğine atıfta bulunur. Bugün yağda kızartılır.
 
@@ -137,11 +137,13 @@ Lángos tüm pazarlarda, ıslak alanlarda ve Macar festivallerinde satılır. Ç
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 Macaristan tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/hungary/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/goulash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="goulash">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Ропа Вьеха</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/cuba/">Куба</a> › <span>Ропа Вьеха</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ropa-vieja" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cubanfood.jpg/330px-Cubanfood.jpg" alt="Ропа Вьеха" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 Ужин · Куба</div>
+      <div class="recipe-badge">🇨🇺 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/cuba/">Куба</a></div>
       <h1>Ропа Вьеха</h1>
       <p class="recipe-tagline">Ропа вьеха — «старая одежда» по-испански — национальное блюдо Кубы: говядина, тушёная до тех пор, пока не распадается на волокна, затем приготовленная в соусе «sofrito» из помидоров, перца, лука и чеснока, пропитывающем каждую нить. Блюдо попало на Кубу с Канарских островов и уходит корнями в средневековую сефардскую еврейскую кухню, где оно готовилось из остатков субботней говядины. Со временем оно стало неотъемлемой частью кубинской идентичности.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 Ещё рецепты из Куба</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/cuba/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/picadillo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="picadillo">🍽️</div>

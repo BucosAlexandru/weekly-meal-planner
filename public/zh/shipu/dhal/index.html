@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>印度扁豆汤</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/india/">印度</a> › <span>印度扁豆汤</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dhal" id="recipe-photo-main">🍽️<img src="/images/dhal.webp" alt="印度扁豆汤" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 晚餐 · 印度</div>
+      <div class="recipe-badge">🇮🇳 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/india/">印度</a></div>
       <h1>印度扁豆汤</h1>
       <p class="recipe-tagline">达尔是印度次大陆的日常主食——从旁遮普到泰米尔纳德，从加尔各答的街边小摊到拉贾斯坦邦的路边食堂，每天在数以百万计的家庭里出现。这个词的意思很简单，就是「去壳豆类」，但这道菜绝不简单：马苏尔达尔（红扁豆）经过焦糖洋葱、姜、蒜和层层叠叠的香料慢炖底料的转化，最后用塔达卡收尾——在最后一刻将整粒香料在滚烫酥油中爆香，直接淋在碗上。那声滋滋响不是点缀，而是将达尔与普通汤区分开来的最终风味冲击。</p>
       <div class="recipe-meta-row">
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 更多来自印度的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/india/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>

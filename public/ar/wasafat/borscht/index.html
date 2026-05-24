@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>بورشت</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/russia/">روسيا</a> › <span>بورشت</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="borscht" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/664396-312x231.jpg" alt="بورشت" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 غداء · روسيا</div>
+      <div class="recipe-badge">🇷🇺 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/russia/">روسيا</a></div>
       <h1>بورشت</h1>
       <p class="recipe-tagline">البورشت هو الشوربة العظيمة للشرق السلافي، طبق متجذر في الثقافتين الروسية والأوكرانية معاً بعمق يسبق الحدود الوطنية المرسومة حوله — أدرجت اليونسكو البورشت الأوكراني تراثاً ثقافياً غير ملموس عام 2022. التقنية المحورية هي الخل: الحموضة المضافة مع الشمندر الخام المبشور تثبّت اللون الأحمر الرماني الذي كان سيتحول لبني باهت. يُقدَّم مع ملعقة كريمة حامضة باردة وشبت طازج، فيكون وجبة شتاء متكاملة في طبق واحد.</p>
       <div class="recipe-meta-row">
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 المزيد من وصفات روسيا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/russia/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/okroshka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="okroshka">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>شكشوكة</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/tunisia/">تونس</a> › <span>شكشوكة</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakchouka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="شكشوكة" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 عشاء · تونس</div>
+      <div class="recipe-badge">🇹🇳 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/tunisia/">تونس</a></div>
       <h1>شكشوكة</h1>
       <p class="recipe-tagline">الشكشوكة طبق أيقوني في المطبخ شمال أفريقي، نشأ في تونس حيث أصبحت البيض المطهي في صلصة الطماطم المتبلة بالفلفل رمزاً للإفطار الجماعي. بساطة المكونات تخفي تعقيداً حسياً لافتاً.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 المزيد من وصفات تونس</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/tunisia/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/brik/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="brik">🍽️</div>

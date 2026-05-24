@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Arroz Chaufa</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/peru/">Pérou</a> › <span>Arroz Chaufa</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="arroz-chaufa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Arroz_Chaufa_%28266361654%29.jpg/330px-Arroz_Chaufa_%28266361654%29.jpg" alt="Arroz Chaufa" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 Dîner · Pérou</div>
+      <div class="recipe-badge">🇵🇪 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/peru/">Pérou</a></div>
       <h1>Arroz Chaufa</h1>
       <p class="recipe-tagline">L'arroz chaufa est le nom péruvien d'un style de riz frit chinois devenu un plat distinct grâce aux cuisines de la communauté Tusán — les descendants des travailleurs chinois arrivés au Pérou à partir du milieu du XIXe siècle. Le mot chaufa vient du cantonais chow fan, signifiant riz frit, et le plat porte clairement cette filiation : la technique est chinoise, mais les ingrédients s'adaptent au garde-manger péruvien.
 
@@ -135,11 +135,13 @@ Le riz est vieux d'un jour et froid, frit à feu vif avec des œufs, de la sauce
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 Plus de recettes de Pérou</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/peru/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Solyanka</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/russia/">Russia</a> › <span>Solyanka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="solyanka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Soljanka_food_05.jpg/330px-Soljanka_food_05.jpg" alt="Solyanka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 Lunch · Russia</div>
+      <div class="recipe-badge">🇷🇺 Lunch · <a class="recipe-badge-origin" href="/en/cuisine/russia/">Russia</a></div>
       <h1>Solyanka</h1>
       <p class="recipe-tagline">Solyanka is Russia's festive soup — a thick and tangy broth with beef, smoked sausages, ham, pickled cucumbers, olives, capers, and tomatoes, all finished with sour cream and a slice of lemon. Its distinctive character comes from the combination of salty, sour, and spicy from the pickles that form the flavor base.
 
@@ -140,11 +140,13 @@ Solyanka is not difficult to make, but requires quality ingredients and enough s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 More recipes from Russia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/russia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/borscht/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="borscht">🍽️</div>

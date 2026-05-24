@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Gulasch</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/hungary/">Ungarn</a> › <span>Gulasch</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="goulash" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/644476-312x231.jpg" alt="Gulasch" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Abendessen · Ungarn</div>
+      <div class="recipe-badge">🇭🇺 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/hungary/">Ungarn</a></div>
       <h1>Gulasch</h1>
       <p class="recipe-tagline">Gulyás — das Wort bedeutet 'Viehhirt' auf Ungarisch — begann im 18. Jahrhundert als Viehtreiber-Eintopf, den Cowboys auf der Großen Ungarischen Tiefebene zubereiteten. Im 19. Jahrhundert wurde er zum Nationalgericht, als ungarische Reformer ihn bewusst als Symbol der magyarischen Identität gegen die habsburgische Kulturherrschaft erhoben. Was der Rest der Welt Gulasch nennt, ähnelt oft eher dem Pörkölt — in Ungarn ist Gulyás eigentlich eine Suppe, kein dicker Eintopf.
 
@@ -134,11 +134,13 @@ Paprika ist das Gericht. Ungarischer süßer Paprika — nicht geräuchert, nich
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 Weitere Rezepte aus Ungarn</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/hungary/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/chicken-paprikash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-paprikash">🍽️</div>

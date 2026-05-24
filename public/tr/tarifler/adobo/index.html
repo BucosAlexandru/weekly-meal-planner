@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Adobo</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/philippines/">Filipinler</a> › <span>Adobo</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="adobo" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/638741-312x231.jpg" alt="Adobo" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Akşam yemeği · Filipinler</div>
+      <div class="recipe-badge">🇵🇭 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/philippines/">Filipinler</a></div>
       <h1>Adobo</h1>
       <p class="recipe-tagline">Adobo Filipinler'in ulusal yemeğidir; ancak kelime İspanyolcadan gelir — yerli sirke ile kavurma yönteminde kendi salamura tekniklerine benzer bir şey gören sömürgecilerce getirilmiştir. Etin sirkeyle muhafaza edilmesi geleneği İspanyolların gelişinden önceye dayanır: soğutucusuz tropikal iklimde yiyecekleri saklı tutmanın pratik bir yoluydu.
 
@@ -134,11 +134,13 @@ Sirke ile soya sosunun dengesi tarifi tanımlıyor. Beyaz kamış sirkesi — ç
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 Filipinler tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/philippines/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/kare-kare/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kare-kare">🍽️</div>

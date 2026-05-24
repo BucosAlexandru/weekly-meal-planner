@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>比利时啤酒炖牛肉</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/belgium/">比利时</a> › <span>比利时啤酒炖牛肉</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stoofvlees" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jielbeaumadier_carbonade_flamande_2_2012.jpg/330px-Jielbeaumadier_carbonade_flamande_2_2012.jpg" alt="比利时啤酒炖牛肉" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 晚餐 · 比利时</div>
+      <div class="recipe-badge">🇧🇪 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/belgium/">比利时</a></div>
       <h1>比利时啤酒炖牛肉</h1>
       <p class="recipe-tagline">斯托夫弗莱斯——法语称为弗拉芒炖牛肉——是比利时最具代表性的慢炖菜肴：牛肉和洋葱在比利时黑啤酒中长时间炖煮，直到肉质酥烂，酱汁变成光亮的棕红色浓汁。这道菜与弗拉芒地区密切相关，自中世纪以来便在那里食用。比利时棕啤酒——以其麦芽甜味——提供了法国勃艮第炖牛肉中葡萄酒所提供的风味基础。
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 更多来自比利时的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/belgium/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/moules-frites/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moules-frites">🍽️</div>

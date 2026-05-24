@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Egusi-Suppe</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/nigeria/">Nigeria</a> › <span>Egusi-Suppe</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="egusi-soup" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/330px-EGUSI.JPG" alt="Egusi-Suppe" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 Abendessen · Nigeria</div>
+      <div class="recipe-badge">🇳🇬 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/nigeria/">Nigeria</a></div>
       <h1>Egusi-Suppe</h1>
       <p class="recipe-tagline">Egusi-Suppe ist Nigerias Soulfood — eine dicke Sauce aus gerösteten und gemahlenen Egusi-Samen (ein Verwandter der Bittermelone), in rotem Palmöl mit Fleisch (Rind, Ziege oder Huhn), Kürbisblättern oder Spinat und Chili gegart. Die Egusi-Samen bilden eine einzigartige Textur: körnig außen, cremig innen.
 
@@ -141,11 +141,13 @@ Egusi-Suppe wird nie allein gegessen — sie begleitet immer Fufu, Eba (fester G
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 Weitere Rezepte aus Nigeria</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/nigeria/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/jollof-rice/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="jollof-rice">🍽️</div>

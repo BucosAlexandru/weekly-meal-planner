@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>पिकाडिलो</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/cuba/">क्यूबा</a> › <span>पिकाडिलो</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="picadillo" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Picadillo_and_rice.jpg/330px-Picadillo_and_rice.jpg" alt="पिकाडिलो" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 रात का खाना · क्यूबा</div>
+      <div class="recipe-badge">🇨🇺 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/cuba/">क्यूबा</a></div>
       <h1>पिकाडिलो</h1>
       <p class="recipe-tagline">पिकाडिलो क्यूबा का रोज़मर्रा का खाना है — कीमे को टमाटर, प्याज़, लहसुन, शिमला मिर्च और हरे जैतून व किशमिश के अनोखे मीठे-नमकीन मेल के साथ पकाया जाता है। यह अंदालुसी परंपरा से आई स्पेनिश विरासत पिकाडिलो को एक विशिष्ट क्यूबाई स्वाद देती है।
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 क्यूबा की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/cuba/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/ropa-vieja/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ropa-vieja">🍽️</div>

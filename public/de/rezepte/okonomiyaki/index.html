@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Okonomiyaki</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/japan/">Japan</a> › <span>Okonomiyaki</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="okonomiyaki" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg" alt="Okonomiyaki" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Abendessen · Japan</div>
+      <div class="recipe-badge">🇯🇵 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/japan/">Japan</a></div>
       <h1>Okonomiyaki</h1>
       <p class="recipe-tagline">Okonomiyaki bedeutet koche, was du magst — eine Anweisung, kein Name. Die Osaka-Version mischt grob geriebenen Kohl in einen dicken Teig aus Mehl, kaltem Dashi und Ei, der dann in einer gusseisernen Pfanne gebraten wird, bis die Ränder karamellisieren und die Mitte cremig bleibt. Schweinebauch kommt vor dem Wenden obendrauf, um direkt gegen das heiße Eisen zu schmelzen.
 
@@ -136,11 +136,13 @@ Hiroshimas Interpretation schichtet die gleichen Komponenten separat — zuerst 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Weitere Rezepte aus Japan</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/japan/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

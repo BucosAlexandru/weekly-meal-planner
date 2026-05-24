@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Moqueca</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/brazil/">Brezilya</a> › <span>Moqueca</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moqueca" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Moqueca.jpg/330px-Moqueca.jpg" alt="Moqueca" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 Akşam yemeği · Brezilya</div>
+      <div class="recipe-badge">🇧🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/brazil/">Brezilya</a></div>
       <h1>Moqueca</h1>
       <p class="recipe-tagline">Moqueca, iki farklı bölgesel formda var olan yavaş pişirilen bir Brezilya balık yahnisidir. Bahia versiyonu — moqueca baiana — dendê (kırmızı palmiye yağı) ve hindistancevizi sütü kullanır; bu da ona Atlantik köle ticareti yoluyla gelen Batı Afrika mutfak geleneklerinden şekillenmiş zengin bir turuncu renk ve kendine özgü bir lezzet verir. Espírito Santo'dan gelen Capixaba versiyonu ikisini de kullanmaz; bunun yerine annatto yağına ve daha berrak bir suya dayanır.
 
@@ -134,11 +134,13 @@ Dendê, yemeği tanımlayan malzemedir. Tadı standart bitkisel yağdan daha top
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 Brezilya tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/brazil/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/feijoada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="feijoada">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Fasolada</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/greece/">Grecia</a> › <span>Fasolada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fasolada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fasolada.JPG/330px-Fasolada.JPG" alt="Fasolada" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Prânz · Grecia</div>
+      <div class="recipe-badge">🇬🇷 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/greece/">Grecia</a></div>
       <h1>Fasolada</h1>
       <p class="recipe-tagline">Fasolada este supa națională a Greciei — o ciorbă simplă și hrănitoare de fasole albă cu morcovi, țelină, ceapă, roșii și ulei de măsline generos, care defineşte bucătăria mediteraneană frugală. Este mâncarea de post a Greciei ortodoxe — servită în Postul Mare și în perioadele de abstinenţă, dar consumată cu plăcere şi în restul anului.
 
@@ -138,11 +138,13 @@ Fasolada nu are niciun secret culinar: fasolea bine gătită şi uleiul de măsl
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Alte rețete din Grecia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/greece/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

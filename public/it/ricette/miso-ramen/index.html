@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Ramen Miso</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/japan/">Giappone</a> › <span>Ramen Miso</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="miso-ramen" id="recipe-photo-main">🍽️<img src="/images/miso-ramen.jpg" alt="Ramen Miso" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Pranzo · Giappone</div>
+      <div class="recipe-badge">🇯🇵 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/japan/">Giappone</a></div>
       <h1>Ramen Miso</h1>
       <p class="recipe-tagline">Il ramen miso è l'invenzione di Sapporo, nato negli anni '50 quando il proprietario di una bancarella di noodle di Hokkaido ha iniziato ad aggiungere pasta di soia fermentata al brodo in una fredda serata invernale. Gli inverni di Hokkaido richiedono una ciotola abbastanza densa da trattenere il calore, e il miso — grasso, salato, profondamente umami — lo fa in un modo che i brodi limpidi non possono.
 
@@ -135,11 +135,13 @@ La granella di mais e il burro sono aggiunte standard a Sapporo, non opzionali. 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Altre ricette da Giappone</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/japan/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

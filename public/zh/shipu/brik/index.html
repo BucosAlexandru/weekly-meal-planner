@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>突尼斯蛋饼</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/tunisia/">突尼斯</a> › <span>突尼斯蛋饼</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="brik" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Brikdish.jpg/330px-Brikdish.jpg" alt="突尼斯蛋饼" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 小吃 · 突尼斯</div>
+      <div class="recipe-badge">🇹🇳 小吃 · <a class="recipe-badge-origin" href="/zh/caixi/tunisia/">突尼斯</a></div>
       <h1>突尼斯蛋饼</h1>
       <p class="recipe-tagline">ب里克是突尼斯的标志性街头小吃和节日点心——一张薄而酥脆的饼皮包裹着一整颗鸡蛋，馅料通常是金枪鱼、刺山柑和欧芹。饼皮本身称为malsouqa，以湿面团在热铁板上按压而成，制出近乎半透明的薄片。这一技法遍及北非和马格里布地区，从摩洛哥到利比亚，brik均有各地变体。
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 更多来自突尼斯的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/tunisia/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/chakchouka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chakchouka">🍽️</div>

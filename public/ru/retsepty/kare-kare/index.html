@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Каре-Каре</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/philippines/">Филиппины</a> › <span>Каре-Каре</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kare-kare" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg" alt="Каре-Каре" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Ужин · Филиппины</div>
+      <div class="recipe-badge">🇵🇭 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/philippines/">Филиппины</a></div>
       <h1>Каре-Каре</h1>
       <p class="recipe-tagline">Каре-каре — тушёное рагу филиппинской кухни, основу которого составляет густой арахисовый соус золотисто-жёлтого цвета, окрашенного аннато, с бычьим хвостом или голяшкой в качестве основного белка. Соус готовится из молотых обжаренных арахисов, разведённых бульоном и загущенных обжаренным молотым рисом — насыщенный, но намеренно мягкий.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 Ещё рецепты из Филиппины</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/philippines/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/adobo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="adobo">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Causa Limeña</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/peru/">Peru</a> › <span>Causa Limeña</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="causa-lime-a" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 Appetizer · Peru</div>
+      <div class="recipe-badge">🇵🇪 Appetizer · <a class="recipe-badge-origin" href="/en/cuisine/peru/">Peru</a></div>
       <h1>Causa Limeña</h1>
       <p class="recipe-tagline">Causa limeña is a pressed terrine of yellow Peruvian potatoes seasoned with ají amarillo and lime juice, layered with a creamy filling of tuna or chicken with mayonnaise and avocado. The Andean potatoes — especially those with naturally yellow flesh — are boiled, riced smooth, and worked with oil, ají, and lime until silky. The dish is served cold, sliced to reveal its contrasting layers.
 
@@ -138,11 +138,13 @@ The dish is an emblem of Peru's culinary fusion: the Andean potatoes are millenn
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 More recipes from Peru</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/peru/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>

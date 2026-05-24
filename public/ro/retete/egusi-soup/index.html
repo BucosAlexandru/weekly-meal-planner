@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Egusi soup</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/nigeria/">Nigeria</a> › <span>Egusi soup</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="egusi-soup" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/330px-EGUSI.JPG" alt="Egusi soup" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 Cină · Nigeria</div>
+      <div class="recipe-badge">🇳🇬 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/nigeria/">Nigeria</a></div>
       <h1>Egusi soup</h1>
       <p class="recipe-tagline">Supa de egusi este mâncarea de suflet a Nigeriei — un sos gros preparat din semințe de dovleac-egusi (rudă cu pepenele amar) prăjite și măcinate, fierte în ulei de palmier roșu cu carne (vită, capră sau pui), frunze de pumpkin sau spanac și ardei iute. Semințele de egusi formează o textură unică: granuloasă la exterior, cremoasă la interior.
 
@@ -141,11 +141,13 @@ Supa de egusi nu se mănâncă singură — este întotdeauna însoțită de fuf
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 Alte rețete din Nigeria</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/nigeria/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/jollof-rice/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="jollof-rice">🍽️</div>

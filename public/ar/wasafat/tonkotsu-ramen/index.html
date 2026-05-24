@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>رامن تونكوتسو</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/japan/">اليابان</a> › <span>رامن تونكوتسو</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tonkotsu-ramen" id="recipe-photo-main">🍽️<img src="/images/tonkotsu-ramen.jpg" alt="رامن تونكوتسو" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 عشاء · اليابان</div>
+      <div class="recipe-badge">🇯🇵 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/japan/">اليابان</a></div>
       <h1>رامن تونكوتسو</h1>
       <p class="recipe-tagline">رامن التونكوتسو يأتي من هاكاتا — الآن حي المحطة في فوكوكا — حيث كان وعاء مرق العظام الكريمي غداء العمال منذ أربعينيات القرن الماضي. البياض فيزياء بحتة: حافظ على الغليان اثنتي عشرة ساعة ويتحلل الكولاجين، مُستحلباً الدهن في السائل ومحوّلاً إياه إلى أبيض حريري.
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 المزيد من وصفات اليابان</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/japan/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

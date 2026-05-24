@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>سوليانكا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/russia/">روسيا</a> › <span>سوليانكا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="solyanka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Soljanka_food_05.jpg/330px-Soljanka_food_05.jpg" alt="سوليانكا" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 غداء · روسيا</div>
+      <div class="recipe-badge">🇷🇺 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/russia/">روسيا</a></div>
       <h1>سوليانكا</h1>
       <p class="recipe-tagline">السوليانكا هي حساء روسيا الاحتفالي — مرقة سميكة ومتبلة بلحم البقر والنقانق المدخنة والجامبون والخيار المخلل والزيتون والكبر والطماطم، مع القشدة الحامضة وشريحة الليمون. طابعها المميز يأتي من مزيج المالح والحامض والحار من المخللات.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 المزيد من وصفات روسيا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/russia/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/borscht/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="borscht">🍽️</div>

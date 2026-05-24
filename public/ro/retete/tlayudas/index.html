@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tlayudas</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/mexico/">Mexic</a> › <span>Tlayudas</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tlayudas" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/330px-Tlayuda12-05oaxaca013x.jpg" alt="Tlayudas" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Cină · Mexic</div>
+      <div class="recipe-badge">🇲🇽 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/mexico/">Mexic</a></div>
       <h1>Tlayudas</h1>
       <p class="recipe-tagline">Tlayudas sunt pizza Oaxaca-ei — o tortilla mare (30 cm) din porumb, semiuscată și crocantă, unsă cu frijoles negros (fasole neagră prăjită), acoperită cu brânză Oaxaca rasă, carne (tasajo — vită uscată, chorizo sau carne de porc) și garnituri proaspete. Oaxaca este statul din sudul Mexicului cu cea mai bogată tradiție culinară indigenă.
 
@@ -137,11 +137,13 @@ Tlayuda se coace direct pe jăratic sau pe o plancha (tablă), iar brânza se to
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Alte rețete din Mexic</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/mexico/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

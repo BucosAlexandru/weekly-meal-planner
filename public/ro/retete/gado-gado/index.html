@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Gado-Gado</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/indonesia/">Indonezia</a> › <span>Gado-Gado</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gado-gado" id="recipe-photo-main">🥗<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gado_gado_jakarta.jpg/330px-Gado_gado_jakarta.jpg" alt="Gado-Gado" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Salată · Indonezia</div>
+      <div class="recipe-badge">🇮🇩 Salată · <a class="recipe-badge-origin" href="/ro/bucatarie/indonesia/">Indonezia</a></div>
       <h1>Gado-Gado</h1>
       <p class="recipe-tagline">Gado-gado este o salată indoneziană de legume fierte și blanșate, tofu și tempeh prăjit și ou fiert tare, unite de un sos gros de arahide turnat cald la masă. Preparatul este consumat în toată Indonezia, dar este cel mai strâns asociat cu Jakarta și Java de Vest. Numele înseamnă ceva asemănător cu 'amestec-amestec' în indoneziană colocvială, descriind abordarea: o combinație variată din ce este disponibil.
 
@@ -140,11 +140,13 @@ Sosul de arahide este elementul definitoriu și variază în funcție de regiune
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 Alte rețete din Indonezia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/indonesia/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>

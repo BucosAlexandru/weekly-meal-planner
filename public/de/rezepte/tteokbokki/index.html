@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Tteokbokki</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/south-korea/">Südkorea</a> › <span>Tteokbokki</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tteokbokki" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/330px-Tteokbokki.JPG" alt="Tteokbokki" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Snack · Südkorea</div>
+      <div class="recipe-badge">🇰🇷 Snack · <a class="recipe-badge-origin" href="/de/kueche/south-korea/">Südkorea</a></div>
       <h1>Tteokbokki</h1>
       <p class="recipe-tagline">Tteokbokki ist eines der beliebtesten Streetfoods Südkoreas — zylindrische Reiskuchen, in einer dicken, scharfen Gochujang-Soße gekocht, der fermentierten roten Chilipaste, die die koreanische Schärfe definiert. Das Gericht wird an Pojangmacha-Straßenständen in ganz Korea verkauft und zu jeder Stunde gegessen, von Schulkindern am Nachmittag bis zu späten Abendessern.
 
@@ -133,11 +133,13 @@ Die Soße hängt von Gochujang ab — seine fermentierte Tiefe unterscheidet sic
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Weitere Rezepte aus Südkorea</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/south-korea/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>

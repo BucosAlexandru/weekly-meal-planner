@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Fasolada</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/greece/">Grecia</a> › <span>Fasolada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fasolada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fasolada.JPG/330px-Fasolada.JPG" alt="Fasolada" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Pranzo · Grecia</div>
+      <div class="recipe-badge">🇬🇷 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/greece/">Grecia</a></div>
       <h1>Fasolada</h1>
       <p class="recipe-tagline">La fasolada è la zuppa nazionale della Grecia — una minestra semplice e nutriente di fagioli bianchi con carote, sedano, cipolla, pomodori e olio d'oliva abbondante. È il cibo del digiuno ortodosso greco, servita durante la Quaresima.
 
@@ -138,11 +138,13 @@ La fasolada non ha segreti culinari: fagioli ben cotti e olio d'oliva di qualit�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Altre ricette da Grecia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/greece/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

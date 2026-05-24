@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>تامالي</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/mexico/">المكسيك</a> › <span>تامالي</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tamale" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg" alt="تامالي" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 عشاء · المكسيك</div>
+      <div class="recipe-badge">🇲🇽 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/mexico/">المكسيك</a></div>
       <h1>تامالي</h1>
       <p class="recipe-tagline">التامالي هو أحد أقدم الأطعمة المحضَّرة في أمريكا الوسطى، يعود تاريخه إلى آلاف السنين قبل التواصل الأوروبي. يُبنى من عجينة الماسا — عجين الذرة المصنوع من حبوب منيكستمالية مُلطَّفة في ماء الجير — تُعجن بالدهن حتى تصبح خفيفة. تُفرد هذه الماسا على ورقة ذرة، تُحشى، تُلفّ وتُطهى بالبخار حتى يتصلّب العجين حول الحشوة.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 المزيد من وصفات المكسيك</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/mexico/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

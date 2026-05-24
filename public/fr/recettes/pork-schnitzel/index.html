@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Escalope de porc</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/poland/">Pologne</a> › <span>Escalope de porc</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pork-schnitzel" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg/330px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg" alt="Escalope de porc" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Dîner · Pologne</div>
+      <div class="recipe-badge">🇵🇱 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/poland/">Pologne</a></div>
       <h1>Escalope de porc</h1>
       <p class="recipe-tagline">Le kotlet schabowy — le schnitzel polonais — est le plat national de porc de la Pologne. Une tranche de longe de porc est aplatie, panée dans la farine, l'œuf et la chapelure, puis frite dans du saindoux ou de l'huile jusqu'à ce qu'elle soit dorée et croustillante. Contrairement au Wiener Schnitzel (veau), le kotlet polonais a toujours été à base de porc et reste le repas dominical de millions de familles.
 
@@ -135,11 +135,13 @@ Servi classiquement avec des pommes de terre bouillies et de la choucroute saut�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇱 Plus de recettes de Pologne</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/poland/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/pierogi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pierogi">🍽️</div>

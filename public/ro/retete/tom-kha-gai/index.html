@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tom Kha Gai</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/thailand/">Thailanda</a> › <span>Tom Kha Gai</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-kha-gai" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg/330px-Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg" alt="Tom Kha Gai" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Prânz · Thailanda</div>
+      <div class="recipe-badge">🇹🇭 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/thailand/">Thailanda</a></div>
       <h1>Tom Kha Gai</h1>
       <p class="recipe-tagline">Tom Kha Gai este bijuteria bucătăriei thai — un suet cremos și aromat de lapte de cocos cu pui, galangal (ghimbirul thai), lemongrass, frunze de kaffir lime și ciuperci. Spre deosebire de Tom Yam (picant și acru), Tom Kha este catifelat, bogat, ușor picant și însorit de aromele citrice ale limetei.
 
@@ -140,11 +140,13 @@ Galangalul este ingredientul definitoriu — ruda mai floral-citric-piperantă a
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Alte rețete din Thailanda</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/thailand/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>

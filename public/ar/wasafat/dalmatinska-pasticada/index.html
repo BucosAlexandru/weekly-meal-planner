@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>باستيكادا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/croatia/">كرواتيا</a> › <span>باستيكادا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dalmatinska-pasticada" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 عشاء · كرواتيا</div>
+      <div class="recipe-badge">🇭🇷 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/croatia/">كرواتيا</a></div>
       <h1>باستيكادا</h1>
       <p class="recipe-tagline">باستيكادا دالماتية هي طبق الاحتفالات الأبرز في الساحل الكرواتي، يُقدَّم في حفلات الأعراس والأعماد والمناسبات العائلية الكبرى في دالماشيا. الوصفة عريقة بعمر قرون، وترد في كتب الطبخ الدالماتية ذات التأثير البندقي من القرن الثامن عشر، مما يعكس الحقبة الطويلة للسيطرة البندقية على الساحل الدالماتي.
 
@@ -137,7 +137,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

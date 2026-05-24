@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>フェセンジャン</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/iran/">イラン</a> › <span>フェセンジャン</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fesenjan" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Khoresht-e_fesenjan.jpg/330px-Khoresht-e_fesenjan.jpg" alt="フェセンジャン" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇷 夕食 · イラン</div>
+      <div class="recipe-badge">🇮🇷 夕食 · <a class="recipe-badge-origin" href="/ja/ryori/iran/">イラン</a></div>
       <h1>フェセンジャン</h1>
       <p class="recipe-tagline">フェセンジャンはペルシャのホレシュ——濃くて暗い煮込み料理——であり、その性格を完全に形成する2つの食材で定義される：挽いたクルミとザクロシロップ。クルミをローストして滑らかなペーストに挽き、シロップと一緒にゆっくり煮てほぼ黒に近い色になるまで加熱する。ザクロの酸味がクルミの油脂と苦みを打ち消す。
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇷 イランのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/iran/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/ghormeh-sabzi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ghormeh-sabzi">🍽️</div>

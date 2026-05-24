@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>달</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/india/">인도</a> › <span>달</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dhal" id="recipe-photo-main">🍽️<img src="/images/dhal.webp" alt="달" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 저녁 · 인도</div>
+      <div class="recipe-badge">🇮🇳 저녁 · <a class="recipe-badge-origin" href="/ko/yori/india/">인도</a></div>
       <h1>달</h1>
       <p class="recipe-tagline">달은 인도 아대륙의 일상적인 주식으로, 펀자브에서 타밀나두까지, 콜카타의 길거리 음식 노점에서 라자스탄의 다바(dhabas)까지, 수백만 가정에서 매일 먹는다. 이 단어는 단순히 '쪼갠 콩류'를 의미하지만, 음식 자체는 결코 단순하지 않다. 마수르 달(붉은 렌틸)은 천천히 조리한 캐러멜라이즈드 양파, 생강, 마늘, 겹겹이 쌓인 향신료의 베이스로 변신하고, 마지막으로 타드카로 마무리된다 — 통째 향신료가 달아오른 기(ghee)에서 꽃피어 마지막 순간 그릇 위에 쏟아진다. 그 지글거리는 부음은 장식이 아니다. 달을 단순한 수프와 구별하는 최후의 풍미 일격이다.</p>
       <div class="recipe-meta-row">
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 인도의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/india/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>

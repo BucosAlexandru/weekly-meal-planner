@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>法式炖鸡</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/france/">法国</a> › <span>法式炖鸡</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-fricass-e" id="recipe-photo-main">🍽️<img src="/images/chicken-fricass-e.webp" alt="法式炖鸡" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 晚餐 · 法国</div>
+      <div class="recipe-badge">🇫🇷 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/france/">法国</a></div>
       <h1>法式炖鸡</h1>
       <p class="recipe-tagline">白酱焖鸡（来自法语动词fricasser，意为切块烹饪）是法国经典技法：鸡块在黄油中轻轻上色而不形成棕色外壳，然后在鸡汤或白葡萄酒中与蔬菜一起慢炖，最后以加入奶油、有时还有蛋黄的velouté酱收尾，形成丝滑的米白金色酱汁。
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 更多来自法国的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/france/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

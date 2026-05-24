@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>حساء السلمون</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/finland/">فنلندا</a> › <span>حساء السلمون</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="salmon-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/659056-312x231.jpg" alt="حساء السلمون" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 غداء · فنلندا</div>
+      <div class="recipe-badge">🇫🇮 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/finland/">فنلندا</a></div>
       <h1>حساء السلمون</h1>
       <p class="recipe-tagline">لوهيكيتو — حساء السلمون — واحدة من أكثر المستحضرات ألفةً في فنلندا، يُتناول طوال العام من المطابخ العائلية حتى المقاهي على جانب الطريق. يعكس الطبق علاقة فنلندا بسمك السلمون البلطيقي، الذي يُعدّ مكوناً أساسياً على امتداد سواحل البلاد وأنظمتها النهرية منذ قرون. تتسم الحساء بالبساطة عمداً: عدد قليل من المكونات، كل منها بكمية كافية للظهور بوضوح.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 المزيد من وصفات فنلندا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/finland/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/karelian-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="karelian-pie">🍽️</div>

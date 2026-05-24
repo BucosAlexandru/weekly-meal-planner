@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Пастицаде</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/croatia/">Хорватия</a> › <span>Пастицаде</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasticada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg/330px-Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg" alt="Пастицаде" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 Ужин · Хорватия</div>
+      <div class="recipe-badge">🇭🇷 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/croatia/">Хорватия</a></div>
       <h1>Пастицаде</h1>
       <p class="recipe-tagline">Пашитицада — эмблематическое блюдо Далмации: рулет из говядины, маринуемый несколько дней в винном уксусе, чесноке и специях, шпигованный свиным жиром, морковью и гвоздикой, затем тушёный часами в красном вине, соке чернослива и нетипично сложном для европейской кухни букете специй: гвоздика, корица, мускатный орех. Результат — невероятно нежное мясо в кисло-сладком, тёмном, густом соусе.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇷 Ещё рецепты из Хорватия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/croatia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/dalmatinska-pasticada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dalmatinska-pasticada">🍽️</div>

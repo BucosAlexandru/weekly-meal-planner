@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Souvlaki</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/greece/">Grecia</a> › <span>Souvlaki</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="souvlaki" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/651076-312x231.jpg" alt="Souvlaki" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Cena · Grecia</div>
+      <div class="recipe-badge">🇬🇷 Cena · <a class="recipe-badge-origin" href="/it/cucina/greece/">Grecia</a></div>
       <h1>Souvlaki</h1>
       <p class="recipe-tagline">Il souvlaki — carne su spiedino grigliata sulla brace — è la pietra angolare dello street food ateniese, le cui origini risalgono all'antica Grecia, dove la souvla (lo spiedo) era centrale nella cucina quanto il focolare stesso. Nell'Atene moderna si vende in ogni psarotaverna e nei chioschi notturni di grigliate, il maiale marinato tutta la notte nel limone, olio d'oliva e l'origano essiccato che cresce selvatico sulle colline dell'Attica. Avvolto in una morbida pita con tzatziki fresco e cipolla rossa cruda, è il sapore definitivo di una notte estiva greca.</p>
       <div class="recipe-meta-row">
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Altre ricette da Grecia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/greece/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/tzatziki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tzatziki">🍽️</div>

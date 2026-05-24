@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Picadillo</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/cuba/">Cuba</a> › <span>Picadillo</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="picadillo" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Picadillo_and_rice.jpg/330px-Picadillo_and_rice.jpg" alt="Picadillo" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 Dinner · Cuba</div>
+      <div class="recipe-badge">🇨🇺 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/cuba/">Cuba</a></div>
       <h1>Picadillo</h1>
       <p class="recipe-tagline">Picadillo is everyday Cuban food — a flavorful hash of ground beef cooked with tomatoes, onion, garlic, bell pepper, and the surprising sweet-salty combination of green olives and raisins. This Spanish-influenced blend — a legacy of Andalusian cuisine — gives picadillo a flavor uniquely Cuban.
 
@@ -138,11 +138,13 @@ In Cuba, picadillo is eaten with white rice, black beans, and platanos fritos (f
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 More recipes from Cuba</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/cuba/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/ropa-vieja/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ropa-vieja">🍽️</div>

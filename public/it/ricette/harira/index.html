@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Harira</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/morocco/">Marocco</a> › <span>Harira</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="harira" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="Harira" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Pranzo · Marocco</div>
+      <div class="recipe-badge">🇲🇦 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/morocco/">Marocco</a></div>
       <h1>Harira</h1>
       <p class="recipe-tagline">La Harira è la zuppa più importante del Marocco — una ricca pentola profumata di agnello, ceci, lenticchie e pomodori speziati con cumino, cannella e zenzero. Si mangia durante tutto l'anno ma è più strettamente associata al Ramadan, dove è il piatto tradizionale servito all'iftar — la rottura del digiuno al tramonto. La combinazione di proteine, legumi e spezie riscaldanti svolge una funzione sia pratica che cerimoniale.
 
@@ -137,11 +137,13 @@ Il carattere della zuppa viene dall'accumulo dei suoi ingredienti in una lunga c
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Altre ricette da Marocco</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/morocco/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/tagine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tagine">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Ratatouille</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/france/">Fransa</a> › <span>Ratatouille</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ratatouille" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633754-312x231.jpg" alt="Ratatouille" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Akşam yemeği · Fransa</div>
+      <div class="recipe-badge">🇫🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/france/">Fransa</a></div>
       <h1>Ratatouille</h1>
       <p class="recipe-tagline">Ratatouille, Ağustos sıcağında patlıcan, kabak, biber ve domateslerin hepsinin aynı anda olgunlaştığı Nice ve Var'ın pazar mutfaklarında doğan Provençal yaz yemek kültürünün özüdür. Belirleyici teknik sabırdır: her sebze, birleştirilmeden önce hafifçe altın rengi alana kadar ayrı ayrı sote edilir; bu, bireysel dokuların korunmasını sağlar ve her şeyin düzgün bir püreye dönüşmesini önler. Bir gün önceden hazırlanıp tamamen soğutulduğunda, ratatouille çok daha lezzetli olur — zeytinyağı yeniden emilir, Provençal otlar derinleşir ve ayrı tatlar toplamlarından çok daha büyük bir şeye dönüşür.</p>
       <div class="recipe-meta-row">
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Fransa tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/france/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

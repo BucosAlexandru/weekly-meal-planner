@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>프렌치 어니언 수프</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/france/">프랑스</a> › <span>프렌치 어니언 수프</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="french-onion-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/643362-312x231.jpg" alt="프렌치 어니언 수프" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 점심 · 프랑스</div>
+      <div class="recipe-badge">🇫🇷 점심 · <a class="recipe-badge-origin" href="/ko/yori/france/">프랑스</a></div>
       <h1>프렌치 어니언 수프</h1>
       <p class="recipe-tagline">프렌치 어니언 수프는 18세기 파리의 노동자 선술집에서 유래했습니다. 레 알의 야간 짐꾼들에게 저렴한 심야 식사로 제공되었습니다. 이 요리는 19세기에 현대적인 형태 — 위에 빵과 녹인 치즈를 올린 형태 — 를 갖추었으며, 이후 거의 변하지 않았습니다.
 
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 프랑스의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/france/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

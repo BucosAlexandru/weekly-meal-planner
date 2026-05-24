@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Паста алла Норма</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/italy/">Италия</a> › <span>Паста алла Норма</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-alla-norma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg/330px-Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg" alt="Паста алла Норма" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 Обед · Италия</div>
+      <div class="recipe-badge">🇮🇹 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/italy/">Италия</a></div>
       <h1>Паста алла Норма</h1>
       <p class="recipe-tagline">Паста алла Норма — гордость Катании: сицилийская паста, где жареные баклажаны встречаются со свежим томатным соусом, оливковым маслом, базиликом и тёртой рикоттой салатой. Название отдаёт дань опере «Норма» катанского композитора Винченцо Беллини: по преданию, один писатель воскликнул, что блюдо так же безупречно, как «Норма». Баклажаны нужно жарить отдельно и тщательно процеживать — не просто пассеровать — чтобы добиться нужной шелковистой текстуры.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 Ещё рецепты из Италия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/italy/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>

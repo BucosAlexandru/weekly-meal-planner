@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Tajine d'agneau</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/morocco/">Maroc</a> › <span>Tajine d'agneau</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lamb-tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tajine d'agneau" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Dîner · Maroc</div>
+      <div class="recipe-badge">🇲🇦 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/morocco/">Maroc</a></div>
       <h1>Tajine d'agneau</h1>
       <p class="recipe-tagline">Le tajine d'agneau est un symbole de la cuisine marocaine — un ragoût mijoté dans le pot conique en argile (tajine), qui piège la vapeur et renvoie les jus dans le plat. L'agneau devient fondant après des heures de cuisson lente avec oignon, ail, abricots secs, amandes et le mélange d'épices ras el hanout, créant une sauce concentrée douce et épicée.
 
@@ -141,11 +141,13 @@ Le tajine est traditionnellement cuit sur des braises ou au feu de bois, un ritu
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Plus de recettes de Maroc</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/morocco/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>

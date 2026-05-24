@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Dhal</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/india/">Hindistan</a> › <span>Dhal</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dhal" id="recipe-photo-main">🍽️<img src="/images/dhal.webp" alt="Dhal" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Akşam yemeği · Hindistan</div>
+      <div class="recipe-badge">🇮🇳 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/india/">Hindistan</a></div>
       <h1>Dhal</h1>
       <p class="recipe-tagline">Dhal, Hint alt kıtasının günlük ekmeğidir — Punjab'dan Tamil Nadu'ya, Kalküta'nın sokak yemek tezgâhlarından Rajasthan'ın dhaba restoranlarına kadar milyonlarca evde her gün yenilmektedir. Kelime basitçe 'ikiye bölünmüş baklagil' anlamına gelir, ancak yemek hiç de basit değildir: masoor dal (kırmızı mercimek), karamelize soğan, zencefil, sarımsak ve katmanlı baharatlardan oluşan yavaş pişirilmiş bir tabanla dönüştürülür, ardından tadka ile tamamlanır — son anda kızgın ghee'de çiçeklenen bütün baharatlar kasın üzerine dökülür. O çıtırtılı döküş garnitür değildir; dhalı çorbadan ayıran son lezzet atağıdır.</p>
       <div class="recipe-meta-row">
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Hindistan tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/india/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>

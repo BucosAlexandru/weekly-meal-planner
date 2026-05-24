@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Humus</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/syria/">Suriye</a> › <span>Humus</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="hummus" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/716195-312x231.jpg" alt="Humus" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 Atıştırmalık · Suriye</div>
+      <div class="recipe-badge">🇸🇾 Atıştırmalık · <a class="recipe-badge-origin" href="/tr/mutfak/syria/">Suriye</a></div>
       <h1>Humus</h1>
       <p class="recipe-tagline">Humus — Arapça'da 'nohut' anlamına gelen kelime — Lübnan, İsrail, Suriye, Filistin ve Mısır tarafından on yıllardır kültürel mülk olarak talep edilmiştir. Bu tartışmalar bir ölçüde konu dışıdır: yemek tüm bu sınırlardan önce var olmuş ve Arapça yemek kitaplarında belgelenen ilk kaydı 13. yüzyıl Suriye'sine dayanmaktadır. Tam adı — humus bi tahini — tam olarak ne olduğunu açıklar.
 
@@ -130,11 +130,13 @@ Restoran humusu ile yemeye değer humus arasındaki fark neredeyse tamamen bir s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Suriye tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/syria/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/kibbeh/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kibbeh">🍽️</div>

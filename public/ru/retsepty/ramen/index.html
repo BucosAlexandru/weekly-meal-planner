@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Рамен</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/japan/">Япония</a> › <span>Рамен</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ramen" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1697543-312x231.jpg" alt="Рамен" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Обед · Япония</div>
+      <div class="recipe-badge">🇯🇵 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/japan/">Япония</a></div>
       <h1>Рамен</h1>
       <p class="recipe-tagline">Рамен попал в Японию вместе с китайскими иммигрантами в конце XIX века как разновидность китайского супа с пшеничной лапшой. Японская трансформация оказалась полной: в последующие десятилетия возникли самобытные региональные стили — тонкоцу в Хаката, на основе мисо в Саппоро, с соевым соусом в Токио — каждый отражал местные ингредиенты и вкусовые предпочтения. Сегодня блюдо настолько укоренилось в японской культуре, что о его китайском происхождении почти не вспоминают.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Ещё рецепты из Япония</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/japan/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Rösti</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/switzerland/">Elveția</a> › <span>Rösti</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="r-sti" id="recipe-photo-main">🍳</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇭 Mic dejun · Elveția</div>
+      <div class="recipe-badge">🇨🇭 Mic dejun · <a class="recipe-badge-origin" href="/ro/bucatarie/switzerland/">Elveția</a></div>
       <h1>Rösti</h1>
       <p class="recipe-tagline">Rösti a apărut ca micul dejun al fermierilor bernezi — o plăcintă simplă de cartofi rași, prăjită pe ambele părți până la crustă crocantă aurie. Cantonul Berna este considerat patria sa de origine, iar linia Röstigraben — granița lingvistică fictivă dintre germano- și francofona Elveție — capătă uneori denumirea de la preparat. Cartofii răciți din ziua precedentă dau rezultate mai bune decât cei proaspeți.
 
@@ -131,11 +131,13 @@ Versiunea clasică nu adaugă nimic altceva decât sare și unt clarifiat, lăs�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇭 Alte rețete din Elveția</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/switzerland/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/fondue/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="fondue">🍽️</div>

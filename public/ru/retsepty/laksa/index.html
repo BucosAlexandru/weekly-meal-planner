@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Лакса</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/malaysia/">Малайзия</a> › <span>Лакса</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="laksa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nyonya_Laksa.jpg/330px-Nyonya_Laksa.jpg" alt="Лакса" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 Обед · Малайзия</div>
+      <div class="recipe-badge">🇲🇾 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/malaysia/">Малайзия</a></div>
       <h1>Лакса</h1>
       <p class="recipe-tagline">Лакса — острый суп с лапшой, определяющий кулинарную традицию Перанакан — смешанную малайско-китайскую — морской Юго-Восточной Азии. Она сложилась в прибрежных торговых общинах Малайского полуострова, Сингапура и Индонезии, где кухня китайских иммигрантов и малайские специи слились воедино за несколько поколений. Два основных стиля: карри-лакса, богатая кокосовым молоком, и асам-лакса, кислая и на тамариндовой основе.
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 Ещё рецепты из Малайзия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/malaysia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/nasi-lemak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-lemak">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Dhal</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/india/">Indien</a> › <span>Dhal</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dhal" id="recipe-photo-main">🍽️<img src="/images/dhal.webp" alt="Dhal" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Abendessen · Indien</div>
+      <div class="recipe-badge">🇮🇳 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/india/">Indien</a></div>
       <h1>Dhal</h1>
       <p class="recipe-tagline">Dhal ist das tägliche Brot des indischen Subkontinents — täglich in Millionen von Haushalten gegessen, von Punjab bis Tamil Nadu, von den Straßenständen Kolkatas bis zu den Dhabas Rajasthans. Das Wort bedeutet einfach 'gespaltene Hülsenfrucht', aber das Gericht ist alles andere als einfach: Masoor Dal (rote Linsen) wird durch eine langsam gegarte Basis aus karamellisierter Zwiebel, Ingwer, Knoblauch und geschichteten Gewürzen verwandelt, dann mit einem Tadka abgeschlossen — einem Schuss ganzer Gewürze, die in siedendem Ghee aufgeblüht und im letzten Moment über die Schüssel gegossen werden. Dieses zischende Gießen ist kein Garnieren; es ist der finale Geschmacksakzent, der Dhal von Suppe unterscheidet.</p>
       <div class="recipe-meta-row">
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Weitere Rezepte aus Indien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/india/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>

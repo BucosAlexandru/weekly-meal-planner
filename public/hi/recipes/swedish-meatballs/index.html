@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>स्वीडिश मीटबॉल</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/sweden/">स्वीडन</a> › <span>स्वीडिश मीटबॉल</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="swedish-meatballs" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/648565-312x231.jpg" alt="स्वीडिश मीटबॉल" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 दोपहर का खाना · स्वीडन</div>
+      <div class="recipe-badge">🇸🇪 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/sweden/">स्वीडन</a></div>
       <h1>स्वीडिश मीटबॉल</h1>
       <p class="recipe-tagline">कोटबुल्लार — स्वीडिश मीटबॉल — स्वीडिश घरेलू खाने का प्रतीकात्मक व्यंजन बन गया है, लेकिन इसके मसाले एक विदेशी छाप लिए हुए हैं। राजा चार्ल्स XII ने 1715 में स्वीडन लौटने से पहले ऑटोमन साम्राज्य में निर्वासन में वर्ष बिताए, और माना जाता है कि ऑलस्पाइस और जायफल जो कोटबुल्लार को अन्य मीटबॉल से अलग करते हैं, उसी सांस्कृतिक आदान-प्रदान से आए। क्रीम सॉस और लिंगनबेरी पूरी तरह से स्वीडिश हैं।
 
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 स्वीडन की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/sweden/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/gravlax/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="gravlax">🍽️</div>

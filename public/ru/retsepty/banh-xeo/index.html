@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Бань сео</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/vietnam/">Вьетнам</a> › <span>Бань сео</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="banh-xeo" id="recipe-photo-main">🍽️<img src="/images/banh-xeo.webp" alt="Бань сео" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Завтрак · Вьетнам</div>
+      <div class="recipe-badge">🇻🇳 Завтрак · <a class="recipe-badge-origin" href="/ru/kuhnya/vietnam/">Вьетнам</a></div>
       <h1>Бань сео</h1>
       <p class="recipe-tagline">Бань сео — название буквально означает «шипящий пирог» — это хрустящий вьетнамский блин, окрашенный в ярко-жёлтый цвет куркумой, из теста на рисовой муке и кокосовом молоке. Шипение, которое он издаёт, попадая на сковороду, и дало блюду имя. Начинка — креветки, тонко нарезанная свинина и проростки фасоли; блин складывают пополам и подают.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Ещё рецепты из Вьетнам</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/vietnam/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/pho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pho">🍽️</div>

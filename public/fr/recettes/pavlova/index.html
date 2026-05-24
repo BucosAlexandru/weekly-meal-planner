@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Pavlova</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/australia/">Australie</a> › <span>Pavlova</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pavlova" id="recipe-photo-main">🍰<img src="https://img.spoonacular.com/recipes/655031-312x231.jpg" alt="Pavlova" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 Dessert · Australie</div>
+      <div class="recipe-badge">🇦🇺 Dessert · <a class="recipe-badge-origin" href="/fr/cuisine/australia/">Australie</a></div>
       <h1>Pavlova</h1>
       <p class="recipe-tagline">La pavlova doit son nom à la ballerine russe Anna Pavlova, qui fit une tournée en Australie et en Nouvelle-Zélande en 1926. Les deux pays revendiquent l'invention du dessert, et le débat dure depuis près d'un siècle sans résolution. Les premières recettes documentées apparaissent en Nouvelle-Zélande, mais les cuisiniers australiens ont leurs propres versions de la même période.
 
@@ -132,11 +132,13 @@ La meringue cuit à basse température et lentement — environ 120°C pendant u
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 Plus de recettes de Australie</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/australia/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/meat-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="meat-pie">🍽️</div>

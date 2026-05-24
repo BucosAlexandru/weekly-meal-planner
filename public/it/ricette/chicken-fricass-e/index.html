@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Pollo Fricassée</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/france/">Francia</a> › <span>Pollo Fricassée</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-fricass-e" id="recipe-photo-main">🍽️<img src="/images/chicken-fricass-e.webp" alt="Pollo Fricassée" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Cena · Francia</div>
+      <div class="recipe-badge">🇫🇷 Cena · <a class="recipe-badge-origin" href="/it/cucina/france/">Francia</a></div>
       <h1>Pollo Fricassée</h1>
       <p class="recipe-tagline">La fricassea (dal verbo francese fricasser, cuocere in pezzi) è una tecnica francese classica per il pollo: i pezzi vengono leggermente dorati nel burro senza formare una crosta scura, poi brasati in brodo o vino bianco con verdure, rifiniti con una salsa vellutata arricchita con panna e a volte un tuorlo d'uovo.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Altre ricette da Francia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/france/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

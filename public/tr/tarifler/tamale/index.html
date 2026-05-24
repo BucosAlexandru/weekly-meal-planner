@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Tamale</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/mexico/">Meksika</a> › <span>Tamale</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tamale" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg" alt="Tamale" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Akşam yemeği · Meksika</div>
+      <div class="recipe-badge">🇲🇽 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/mexico/">Meksika</a></div>
       <h1>Tamale</h1>
       <p class="recipe-tagline">Tamale, Avrupa temasından binlerce yıl önce tarihlendirilmiş Mezoamerika'nın en eski hazırlanmış yiyeceklerinden biridir. Kireç suyunda kabuğu yumuşatılmış nixtamalleştirilmiş tanelerden yapılan mısır hamuru olan masa'dan oluşur; hamur kabuk hafifleşene kadar domuz yağıyla karıştırılır. Bu masa bir mısır yaprağı üzerine yayılır, doldurulur, sarılır ve hamurun dolgunun etrafında sertleşmesine kadar buharda pişirilir.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Meksika tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/mexico/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

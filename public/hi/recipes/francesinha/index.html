@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>फ्रांसेज़िन्हा</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/portugal/">पुर्तगाल</a> › <span>फ्रांसेज़िन्हा</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="francesinha" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Francesinha_Sandwich_%28cropped%29.jpg/330px-Francesinha_Sandwich_%28cropped%29.jpg" alt="फ्रांसेज़िन्हा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 रात का खाना · पुर्तगाल</div>
+      <div class="recipe-badge">🇵🇹 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/portugal/">पुर्तगाल</a></div>
       <h1>फ्रांसेज़िन्हा</h1>
       <p class="recipe-tagline">फ्रांसेज़िन्हा — छोटी फ्रांसीसी — पुर्तगाली प्रवासी इतिहास में जड़ें रखने वाली पोर्टो की एक सैंडविच है। 1960 के दशक में फ्रेंच क्रोक-मॉन्सियर से प्रेरित एक लौटे प्रवासी द्वारा बनाई गई, यह व्यंजन ठोस ब्रेड पर ठीक किए गए हैम, लिंगुइसा और स्टेक की परतों से बनता है, फिर पिघले पनीर से बंद किया जाता है और सॉस से भर दिया जाता है।
 
@@ -144,7 +144,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

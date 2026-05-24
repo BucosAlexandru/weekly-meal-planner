@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Том-ям</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/thailand/">Таиланд</a> › <span>Том-ям</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-yum" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" alt="Том-ям" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Обед · Таиланд</div>
+      <div class="recipe-badge">🇹🇭 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/thailand/">Таиланд</a></div>
       <h1>Том-ям</h1>
       <p class="recipe-tagline">Том-ям — самый международно известный суп Таиланда, построенный на характерном сочетании горячих, кислых, солёных и слегка сладких вкусов в одном бульоне. Ароматические компоненты — лемонграсс, галангал и листья каффирского лайма — расплющиваются, а не режутся, придавая прозрачному бульону яркий, цитрусовый жар. Суп нельзя приправить заранее — баланс рыбного соуса, сока лайма и пальмового сахара пробуется и регулируется прямо перед подачей.
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Ещё рецепты из Таиланд</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/thailand/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>

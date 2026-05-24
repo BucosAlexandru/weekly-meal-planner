@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>बिरयानी</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/pakistan/">पाकिस्तान</a> › <span>बिरयानी</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="बिरयानी" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 रात का खाना · पाकिस्तान</div>
+      <div class="recipe-badge">🇵🇰 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/pakistan/">पाकिस्तान</a></div>
       <h1>बिरयानी</h1>
       <p class="recipe-tagline">बिरयानी की जड़ें भारतीय उपमहाद्वीप के मुगल दरबारों में हैं, जहाँ फ़ारसी प्रभाव वाले चावल के व्यंजन शताब्दियों में विकसित होकर अलग-अलग क्षेत्रीय रूपों में आए। पाकिस्तान की बिरयानी परंपरा — विशेष रूप से कराची और हैदराबाद शैलियाँ — उपमहाद्वीप की सबसे सुगंधित किस्मों में से है, जो साबुत मसालों, कैरमेलाइज़्ड प्याज़ और परतदार चावल पर टिकी है। यह व्यंजन हर महत्वपूर्ण अवसर पर केंद्रीय भूमिका निभाता है: शादियाँ, ईद के उत्सव और बड़ी पारिवारिक सभाएँ।
 
@@ -145,11 +145,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 पाकिस्तान की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/pakistan/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>

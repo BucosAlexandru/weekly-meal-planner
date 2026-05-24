@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>クラムチャウダー</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/usa/">アメリカ</a> › <span>クラムチャウダー</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="clam-chowder" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Quail_07_bg_041506.jpg/330px-Quail_07_bg_041506.jpg" alt="クラムチャウダー" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 ディナー · アメリカ</div>
+      <div class="recipe-badge">🇺🇸 ディナー · <a class="recipe-badge-origin" href="/ja/ryori/usa/">アメリカ</a></div>
       <h1>クラムチャウダー</h1>
       <p class="recipe-tagline">クラムチャウダーはニューイングランドの象徴的なスープ——新鮮な二枚貝・じゃがいも・スモークベーコン・玉ねぎを牛乳とクリームで濃厚に仕上げたチャウダーです。何世紀にもわたる料理上の戦いがあります：ニューイングランド版（白い、クリーム入り）対マンハッタン版（赤い、トマト入り）で、ボストン市民はトマト版をほぼ侮辱と見なします。
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 アメリカのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/usa/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/cheeseburger/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>

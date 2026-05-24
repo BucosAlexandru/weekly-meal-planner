@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Picadillo</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/cuba/">Cuba</a> › <span>Picadillo</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="picadillo" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Picadillo_and_rice.jpg/330px-Picadillo_and_rice.jpg" alt="Picadillo" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 Cină · Cuba</div>
+      <div class="recipe-badge">🇨🇺 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/cuba/">Cuba</a></div>
       <h1>Picadillo</h1>
       <p class="recipe-tagline">Picadillo este mâncarea cubaneză de zi cu zi, un amestec aromat de carne tocată prăjită cu roșii, ceapă, usturoi, ardei gras și combinația surprinzătoare dulce-sărată de măsline verzi și stafide. Această combinație de influență spaniolă — moștenire a bucătăriei andaluze — face din picadillo un gust unic în bucătăria caribeană.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 Alte rețete din Cuba</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/cuba/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/ropa-vieja/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ropa-vieja">🍽️</div>

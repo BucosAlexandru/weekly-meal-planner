@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>شطيرة لحم الخنزير</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/poland/">بولندا</a> › <span>شطيرة لحم الخنزير</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pork-schnitzel" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg/330px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg" alt="شطيرة لحم الخنزير" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 عشاء · بولندا</div>
+      <div class="recipe-badge">🇵🇱 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/poland/">بولندا</a></div>
       <h1>شطيرة لحم الخنزير</h1>
       <p class="recipe-tagline">كوتليت شتشابوفي — شنيتسل بولندي — هو الطبق الوطني من لحم الخنزير في بولندا. شريحة من خاصرة الخنزير تُرقَّق بالطرق، تُغطى بالدقيق والبيض وفتات الخبز، ثم تُقلى في الشحم أو الزيت حتى تصبح ذهبية مقرمشة. على خلاف شنيتسل فيينا (لحم العجل)، كان الكوتليت البولندي دائماً من لحم الخنزير ويبقى عشاء أحد ملايين العائلات.
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇱 المزيد من وصفات بولندا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/poland/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/pierogi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pierogi">🍽️</div>

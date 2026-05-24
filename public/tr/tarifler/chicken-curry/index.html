@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Tavuk Köri</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/india/">Hindistan</a> › <span>Tavuk Köri</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-curry" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="Tavuk Köri" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Akşam yemeği · Hindistan</div>
+      <div class="recipe-badge">🇮🇳 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/india/">Hindistan</a></div>
       <h1>Tavuk Köri</h1>
       <p class="recipe-tagline">Kuzey Hindistan usulü bu tavuk köri, Pencap mutfağının özünü taşır; burada aşçılar bhuna tekniğini mükemmelleştirdi — aromatikleri her damla nem buharlaşana ve masala ezme yağda kararıp yoğunlaşana dek kavurmak. Kemikli tavuk şarttır: uzun pişirme sırasında açığa çıkan kolajen ve ilik, sosun hiçbir kemiksiz göğsün taklit edemeyeceği şekilde kıvam almasını sağlar. Garam masalanın son dokunuşu ateşten uzakta eklenir; bu sayede yanmak yerine nazikçe açılarak körie sıcak ve karmaşık parfümünü kazandırır.</p>
       <div class="recipe-meta-row">
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Hindistan tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/india/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/dhal/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dhal">🍽️</div>

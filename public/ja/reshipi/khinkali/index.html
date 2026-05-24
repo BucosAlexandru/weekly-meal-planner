@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ヒンカリ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/georgia/">ジョージア</a> › <span>ヒンカリ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="khinkali" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Khinkali%2C_Restaurant_Aragvi.jpg/330px-Khinkali%2C_Restaurant_Aragvi.jpg" alt="ヒンカリ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 ディナー · ジョージア</div>
+      <div class="recipe-badge">🇬🇪 ディナー · <a class="recipe-badge-origin" href="/ja/ryori/georgia/">ジョージア</a></div>
       <h1>ヒンカリ</h1>
       <p class="recipe-tagline">ヒンカリはジョージアの国民的餃子です——牛肉と豚肉のひき肉に玉ねぎ、コリアンダー、コショウを混ぜた大きな生地の袋を水で茹でます。生地は肉の旨みから作られるスープを中に保つのに十分な厚さがあります。食べる前に捻じれた頭——しっぽ——を折り取り、中の熱いスープを先に吸います。
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 ジョージアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/georgia/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍽️</div>

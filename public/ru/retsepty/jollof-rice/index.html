@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Джоллоф-рис</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/nigeria/">Нигерия</a> › <span>Джоллоф-рис</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="jollof-rice" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/330px-Jollof_Rice_with_Stew.jpg" alt="Джоллоф-рис" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 Обед · Нигерия</div>
+      <div class="recipe-badge">🇳🇬 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/nigeria/">Нигерия</a></div>
       <h1>Джоллоф-рис</h1>
       <p class="recipe-tagline">Джоллоф-рис — самое широко употребляемое и горячо оспариваемое блюдо Западной Африки: рис на томатной основе, приготовленный в одном горшке с густой смесью измельчённых помидоров, перцев и лука, пока зёрна не впитают соус и не образуют дымную корочку на дне горшка. Блюдо встречается в Нигерии, Гане, Сенегале, Сьерра-Леоне и за их пределами, причём каждая страна считает свою версию эталонной.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 Ещё рецепты из Нигерия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/nigeria/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/egusi-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="egusi-soup">🍽️</div>

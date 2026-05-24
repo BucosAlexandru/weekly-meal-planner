@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Karelya Turtası</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/finland/">Finlandiya</a> › <span>Karelya Turtası</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="Karelya Turtası" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Kahvaltı · Finlandiya</div>
+      <div class="recipe-badge">🇫🇮 Kahvaltı · <a class="recipe-badge-origin" href="/tr/mutfak/finland/">Finlandiya</a></div>
       <h1>Karelya Turtası</h1>
       <p class="recipe-tagline">Karelya turta — karjalanpiirakka — şu an Finlandiya ve Rusya arasında bölünmüş tarihi bir bölge olan Karelya'dan köken almaktadır. Oval kabuklar, sütü yavaşça pişirilerek hazırlanan yumuşak pirinç lapasını saran ince, çıtır çavdar hamurundan yapılır; patates dolgusı da aynı ölçüde geleneksel bir alternatiftir. Pastalar yüksek ısıda pişirilir.
 
@@ -139,11 +139,13 @@ Fırından sıcak çıkarılan karjalanpiirakka, haşlanmış yumurta ve tereya�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Finlandiya tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/finland/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>

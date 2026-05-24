@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Kimbap</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/south-korea/">Coreea de Sud</a> › <span>Kimbap</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gimbap_%28pixabay%29.jpg/330px-Gimbap_%28pixabay%29.jpg" alt="Kimbap" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Prânz · Coreea de Sud</div>
+      <div class="recipe-badge">🇰🇷 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/south-korea/">Coreea de Sud</a></div>
       <h1>Kimbap</h1>
       <p class="recipe-tagline">Kimbap — literal orez în alge de mare — este snack-ul național al Coreei de Sud și mâncarea perfectă pentru picnic, drum lung sau prânz rapid. Orezul cu ulei de susan se înfășoară cu diverse umpluturi (morcov, spanac, ouă, cârnați, danmuji, brânză) într-o foaie de nori și se taie în rondele. Seamănă vizual cu sushi, dar nu are oțet în orez și are un profil complet diferit de arome.
 
@@ -138,11 +138,13 @@ Kimbap a apărut în Coreea colonială japoneză (sec. XX) și a evoluat rapid �
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Alte rețete din Coreea de Sud</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/south-korea/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>

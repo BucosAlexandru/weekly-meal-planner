@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Brik</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/tunisia/">Tunísia</a> › <span>Brik</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="brik" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Brikdish.jpg/330px-Brikdish.jpg" alt="Brik" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 Lanche · Tunísia</div>
+      <div class="recipe-badge">🇹🇳 Lanche · <a class="recipe-badge-origin" href="/pt/cozinha/tunisia/">Tunísia</a></div>
       <h1>Brik</h1>
       <p class="recipe-tagline">O brik é o salgado de rua emblemático da Tunísia — uma fina e crocante envoltória de massa encerrando um ovo inteiro, tipicamente recheada com atum, alcaparras e salsa. A massa, chamada malsouqa, é feita pressionando massa úmida numa placa metálica quente, produzindo uma folha quase translúcida. A técnica é compartilhada por toda a África do Norte e o Magrebe, onde o brik aparece em variações do Marrocos à Líbia.
 
@@ -135,11 +135,13 @@ A janela de cozimento é estreita. O brik é frito por encomenda, recheado e dob
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 Mais receitas de Tunísia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/tunisia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/chakchouka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chakchouka">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>نهاري</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/pakistan/">باكستان</a> › <span>نهاري</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="nihari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nalli_Nihari_India.jpg/330px-Nalli_Nihari_India.jpg" alt="نهاري" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 عشاء · باكستان</div>
+      <div class="recipe-badge">🇵🇰 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/pakistan/">باكستان</a></div>
       <h1>نهاري</h1>
       <p class="recipe-tagline">نهاري يأخذ اسمه من الكلمة العربية للصباح — «نهار» — إذ كان يُؤكل تقليدياً عند الفجر، بعد صلاة الفجر، من قِبل عمّال ونوّاب دلهي المغولية. مع تراجع العاصمة المغولية، انتقلت هذه الوصفة مع طهاة دلهي إلى لكناؤ ثم إلى كراتشي ولاهور.
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 المزيد من وصفات باكستان</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/pakistan/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/biryani/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="biryani">🍽️</div>

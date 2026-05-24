@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Сувлаки</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/greece/">Греция</a> › <span>Сувлаки</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="souvlaki" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/651076-312x231.jpg" alt="Сувлаки" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Ужин · Греция</div>
+      <div class="recipe-badge">🇬🇷 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/greece/">Греция</a></div>
       <h1>Сувлаки</h1>
       <p class="recipe-tagline">Сувлаки — мясо на шампуре, жаренное на углях — это основа уличной кухни Афин, уходящая корнями в Древнюю Грецию, где соувла (вертел) было таким же неотъемлемым инструментом готовки, как и сам очаг. В современных Афинах его продают в каждой псаротаверне и ночном гриль-шопе: свинину маринуют на ночь в лимоне, оливковом масле и сушёном орегано, который дико растёт на холмах Аттики. Завёрнутое в мягкую питу с холодными дзадзики и сырым красным луком, это и есть вкус греческой летней ночи.</p>
       <div class="recipe-meta-row">
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Ещё рецепты из Греция</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/greece/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/tzatziki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tzatziki">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Domuz Şnitzeli</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/poland/">Polonya</a> › <span>Domuz Şnitzeli</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pork-schnitzel" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg/330px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg" alt="Domuz Şnitzeli" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Akşam yemeği · Polonya</div>
+      <div class="recipe-badge">🇵🇱 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/poland/">Polonya</a></div>
       <h1>Domuz Şnitzeli</h1>
       <p class="recipe-tagline">Kotlet schabowy — Polonya şnitzeli — Polonya'nın ulusal domuz eti yemeğidir. Bir dilim domuz fileti ince dövülür, un, yumurta ve galeta unuyla kaplanır, ardından domuz yağı veya bitkisel yağda altın rengi ve çıtır çıtır olana kadar kızartılır. Viyana Şnitzeli'nden (dana eti) farklı olarak, Polonya kotleti her zaman domuz etinden yapılmıştır ve milyonlarca ailenin Pazar yemeği olmaya devam etmektedir.
 
@@ -135,11 +135,13 @@ Klasik olarak haşlanmış patates ve sotelenmiş lahana turşusuyla servis edil
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇱 Polonya tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/poland/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/pierogi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pierogi">🍽️</div>

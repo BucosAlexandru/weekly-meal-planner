@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>チレス・エン・ノガダ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/mexico/">メキシコ</a> › <span>チレス・エン・ノガダ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chiles-en-nogada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Chile_en_nogada24.jpg/330px-Chile_en_nogada24.jpg" alt="チレス・エン・ノガダ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 夕食 · メキシコ</div>
+      <div class="recipe-badge">🇲🇽 夕食 · <a class="recipe-badge-origin" href="/ja/ryori/mexico/">メキシコ</a></div>
       <h1>チレス・エン・ノガダ</h1>
       <p class="recipe-tagline">チレス・エン・ノガダはメキシコで最も愛国的な料理とされる――その色はメキシコ国旗を映している：パセリの緑、クルミクリームの白、ザクロの種の赤。料理は植民地後期のプエブラに由来し、クルミとザクロが同時に旬を迎える8月と9月に伝統的に作られる。
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 メキシコのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/mexico/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

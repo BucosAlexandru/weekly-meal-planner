@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>باستيكادا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/croatia/">كرواتيا</a> › <span>باستيكادا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasticada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg/330px-Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg" alt="باستيكادا" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 عشاء · كرواتيا</div>
+      <div class="recipe-badge">🇭🇷 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/croatia/">كرواتيا</a></div>
       <h1>باستيكادا</h1>
       <p class="recipe-tagline">الباستيكادا هي الطبق الأيقوني لدلماتيا — لفافة لحم بقري تُنقَّع لأيام في خل الخمر والثوم والبهارات، وتُحشى بشحم الخنزير والجزر والقرنفل، ثم تُطهى ببطء لساعات في النبيذ الأحمر وعصير البرقوق المجفف مع خليط بهارات نادر في المطبخ الأوروبي: قرنفل وقرفة وجوزة الطيب. الناتج لحم طري للغاية مع صلصة حلوة حامضة، داكنة وكثيفة.
 
@@ -141,7 +141,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

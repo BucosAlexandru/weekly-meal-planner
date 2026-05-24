@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Boeuf Bourguignon</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/france/">France</a> › <span>Boeuf Bourguignon</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="boeuf-bourguignon" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Beef_bourguignon_NYT.jpg/330px-Beef_bourguignon_NYT.jpg" alt="Boeuf Bourguignon" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Dîner · France</div>
+      <div class="recipe-badge">🇫🇷 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/france/">France</a></div>
       <h1>Boeuf Bourguignon</h1>
       <p class="recipe-tagline">Le boeuf bourguignon est le joyau gastronomique de la région de Bourgogne en France, un plat qui transforme le boeuf en velours liquide grâce à de longues heures de mijotage dans du vin rouge. La recette remonte aux cuisines rurales françaises, où les cuisinières l'utilisaient pour attendrir les morceaux plus coriaces.
 
@@ -140,11 +140,13 @@ Chaque cocotte développe son caractère propre grâce à la garniture de carott
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Plus de recettes de France</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/france/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

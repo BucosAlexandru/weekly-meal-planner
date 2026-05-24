@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Haricots aux saucisses</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/romania/">Roumanie</a> › <span>Haricots aux saucisses</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Haricots aux saucisses" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 Déjeuner · Roumanie</div>
+      <div class="recipe-badge">🇷🇴 Déjeuner · <a class="recipe-badge-origin" href="/fr/cuisine/romania/">Roumanie</a></div>
       <h1>Haricots aux saucisses</h1>
       <p class="recipe-tagline">Fasole cu cârnați est le plat d'hiver des foyers roumains — haricots blancs mijotés longuement avec des saucisses de porc fumées, oignon, carottes, concentré de tomate et feuilles de laurier, jusqu'à ce que le bouillon épaississe et soit profondément parfumé. Les saucisses apportent gras et fumé, transformant une légumineuse humble en repas nourrissant. Se sert avec des cornichons, du pain maison ou de la polenta.
 
@@ -141,11 +141,13 @@ La recette varie selon les régions : en Moldavie on ajoute plus de concentré d
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 Plus de recettes de Roumanie</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/romania/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/tripe-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>

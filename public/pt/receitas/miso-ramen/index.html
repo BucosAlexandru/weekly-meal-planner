@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Ramen Miso</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/japan/">Japão</a> › <span>Ramen Miso</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="miso-ramen" id="recipe-photo-main">🍽️<img src="/images/miso-ramen.jpg" alt="Ramen Miso" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Almoço · Japão</div>
+      <div class="recipe-badge">🇯🇵 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/japan/">Japão</a></div>
       <h1>Ramen Miso</h1>
       <p class="recipe-tagline">O ramen miso é a invenção de Sapporo, nascido nos anos 1950 quando o dono de uma barraca de macarrão de Hokkaido começou a adicionar pasta de soja fermentada ao caldo numa fria noite de inverno. Os invernos de Hokkaido exigem uma tigela densa o suficiente para reter o calor, e o missô — gorduroso, salgado, profundamente umami — entrega isso de um jeito que caldos claros não conseguem.
 
@@ -135,11 +135,13 @@ Milho e manteiga são adições padrão em Sapporo, não opcionais. A carne moí
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Mais receitas de Japão</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/japan/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>キッシュ・ロレーヌ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/france/">フランス</a> › <span>キッシュ・ロレーヌ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="quiche-lorraine" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/639590-312x231.jpg" alt="キッシュ・ロレーヌ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 朝食 · フランス</div>
+      <div class="recipe-badge">🇫🇷 朝食 · <a class="recipe-badge-origin" href="/ja/ryori/france/">フランス</a></div>
       <h1>キッシュ・ロレーヌ</h1>
       <p class="recipe-tagline">キッシュ・ロレーヌはフランス北東部の歴史ある地域ロレーヌに起源を持ち、クリームと卵で満たした開放型のタルトを焼く伝統は16世紀にさかのぼります。クラシックなレシピにはスモークラードン、生クリーム、グリュイエールチーズだけ——玉ねぎも野菜も使わず——バター豊かなパイ生地の上で燻製ポークと濃厚なカスタードが語りかけます。完璧なキッシュの見極め方は中心にあり：型を軽く揺らしたとき、まるで焼き立てのクレーム・ブリュレのようにかすかに揺れているべきです。</p>
       <div class="recipe-meta-row">
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 フランスのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/france/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/ratatouille/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ratatouille">🍽️</div>

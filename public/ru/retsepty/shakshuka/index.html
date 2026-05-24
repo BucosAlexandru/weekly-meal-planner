@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Шакшука</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/israel/">Израиль</a> › <span>Шакшука</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="shakshuka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="Шакшука" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇱 Завтрак · Израиль</div>
+      <div class="recipe-badge">🇮🇱 Завтрак · <a class="recipe-badge-origin" href="/ru/kuhnya/israel/">Израиль</a></div>
       <h1>Шакшука</h1>
       <p class="recipe-tagline">Шакшука попала в Израиль с сефардскими евреями-иммигрантами из Северной Африки и Ближнего Востока в середине XX века, принеся кулинарные традиции Туниса, Ливии и Марокко. В Израиле она стала неотъемлемой частью культуры завтрака и, в конечном счёте, национальным стандартом. Название, вероятно, происходит от арабского слова, означающего смешивать или встряхивать.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇱 Ещё рецепты из Израиль</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/israel/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/sabich/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sabich">🍽️</div>

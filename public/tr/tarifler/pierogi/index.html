@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Pierogi</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/poland/">Polonya</a> › <span>Pierogi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pierogi" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656049-312x231.jpg" alt="Pierogi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Aksam yemegi · Polonya</div>
+      <div class="recipe-badge">🇵🇱 Aksam yemegi · <a class="recipe-badge-origin" href="/tr/mutfak/poland/">Polonya</a></div>
       <h1>Pierogi</h1>
       <p class="recipe-tagline">Pierogi, Polonya mutfağının en eski yiyeceklerinden biridir; on üçüncü yüzyıldan kalma yemek tarihçelerinde yer almaktadır. Polonya'nın koruyucu azizi Kinga ile ilişkilendirilir; efsaneye göre kökeni, onun Macaristan'dan gelişiyle bağlantılıdır. Patates ve taze peynir dolgusu en tanınan çeşittir, ancak yelpaze geniştir: mantarlı lahana turşusu, kıyma veya tatlı için yaban mersini.
 
@@ -132,11 +132,13 @@ Teknik iki aşamalı bir pişirmedir. Önce tuzlu suda yüzene kadar haşlanır 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇱 Polonya tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/poland/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/pork-schnitzel/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pork-schnitzel">🍽️</div>

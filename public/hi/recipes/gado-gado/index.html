@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>गाडो-गाडो</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/indonesia/">इंडोनेशिया</a> › <span>गाडो-गाडो</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gado-gado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gado_gado_jakarta.jpg/330px-Gado_gado_jakarta.jpg" alt="गाडो-गाडो" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 सलाद · इंडोनेशिया</div>
+      <div class="recipe-badge">🇮🇩 सलाद · <a class="recipe-badge-origin" href="/hi/vyanjan/indonesia/">इंडोनेशिया</a></div>
       <h1>गाडो-गाडो</h1>
       <p class="recipe-tagline">गाडो-गाडो उबली और ब्लांच की हुई सब्जियों, तले हुए टोफू और टेम्पे, और कठोर उबले अंडे से बनी एक इंडोनेशियाई सलाद है, जिसे मेज पर गरम मूंगफली की चटनी डालकर परोसा जाता है। यह व्यंजन पूरे इंडोनेशिया में खाया जाता है लेकिन जकार्ता और पश्चिम जावा से सबसे अधिक जुड़ा है। नाम बोलचाल की इंडोनेशियाई में 'मिक्स-मिक्स' के करीब है, जो इसके दृष्टिकोण को बताता है: जो उपलब्ध हो उसका विविध संयोजन।
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 इंडोनेशिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/indonesia/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/satay/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="satay">🍽️</div>

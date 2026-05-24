@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Tom Kha Gai</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/thailand/">Tailândia</a> › <span>Tom Kha Gai</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-kha-gai" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg/330px-Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg" alt="Tom Kha Gai" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Almoço · Tailândia</div>
+      <div class="recipe-badge">🇹🇭 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/thailand/">Tailândia</a></div>
       <h1>Tom Kha Gai</h1>
       <p class="recipe-tagline">Tom Kha Gai é a joia da cozinha tailandesa — uma sopa cremosa e aromática de leite de coco com frango, galanga (gengibre tailandês), capim-limão, folhas de kaffir lime e cogumelos. Ao contrário do Tom Yam, o Tom Kha é aveludado, rico e iluminado pelos aromas cítricos da lima.
 
@@ -140,11 +140,13 @@ A galanga é o ingrediente definidor — o primo mais floral, cítrico e apiment
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Mais receitas de Tailândia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/thailand/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Kare-Kare</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/philippines/">Filipinas</a> › <span>Kare-Kare</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kare-kare" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg" alt="Kare-Kare" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Jantar · Filipinas</div>
+      <div class="recipe-badge">🇵🇭 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/philippines/">Filipinas</a></div>
       <h1>Kare-Kare</h1>
       <p class="recipe-tagline">Kare-kare é um guisado filipino brasado construído em torno de um molho espesso de amendoim colorido em dourado profundo pelo annatto, com rabo de boi ou jarrete como proteína principal. O molho vem de amendoins torrados e moídos, diluído com caldo e engrossado com arroz torrado moído — rico e saboroso mas deliberadamente suave.
 
@@ -137,11 +137,13 @@ O que dá ao kare-kare seu caráter completo é o bagoong — pasta de camarão 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 Mais receitas de Filipinas</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/philippines/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/adobo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="adobo">🍽️</div>

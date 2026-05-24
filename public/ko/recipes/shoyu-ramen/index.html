@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>쇼유 라멘</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/japan/">일본</a> › <span>쇼유 라멘</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="shoyu-ramen" id="recipe-photo-main">🍽️<img src="/images/shoyu-ramen.jpg" alt="쇼유 라멘" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 점심 · 일본</div>
+      <div class="recipe-badge">🇯🇵 점심 · <a class="recipe-badge-origin" href="/ko/yori/japan/">일본</a></div>
       <h1>쇼유 라멘</h1>
       <p class="recipe-tagline">쇼유 라멘은 도쿄 스타일이자 주요 라멘 가족 중 가장 오래된 것입니다 — 20세기 초 수도에 중국 면 가게가 문을 열었을 때 틀을 세운 그릇입니다. 육수는 맑은 호박색으로, 닭뼈 또는 다시 육수에 혼합 쇼유 타레로 간을 맞춘 것으로, 각 재료가 입맛에 각각 느껴질 만큼 가볍습니다.
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 일본의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/japan/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

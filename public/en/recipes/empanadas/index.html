@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Empanadas</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/argentina/">Argentina</a> › <span>Empanadas</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="empanadas" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/653362-312x231.jpg" alt="Empanadas" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇷 Snack · Argentina</div>
+      <div class="recipe-badge">🇦🇷 Snack · <a class="recipe-badge-origin" href="/en/cuisine/argentina/">Argentina</a></div>
       <h1>Empanadas</h1>
       <p class="recipe-tagline">Empanadas arrived in Argentina with Spanish colonists in the sixteenth century — the name comes from 'empanar,' to wrap in dough — but the Argentine version developed its own identity over the following centuries. Each province holds its own filling conventions: Salta favors cumin-heavy beef with potato; Mendoza adds raisins and olives; Tucumán keeps the filling simpler. The regional differences are taken seriously.
 
@@ -133,11 +133,13 @@ A traditional Argentine filling — picadillo — combines ground beef with hard
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇷 More recipes from Argentina</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/argentina/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/milanesa/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="milanesa">🍽️</div>

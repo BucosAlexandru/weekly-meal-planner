@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Tagine</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/morocco/">Marocco</a> › <span>Tagine</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tagine" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Cena · Marocco</div>
+      <div class="recipe-badge">🇲🇦 Cena · <a class="recipe-badge-origin" href="/it/cucina/morocco/">Marocco</a></div>
       <h1>Tagine</h1>
       <p class="recipe-tagline">Tagine prende il nome dal recipiente conico in terracotta in cui viene cotto — un design rimasto essenzialmente invariato nel corso di secoli di cucina marocchina e nordafricana. Il cono intrappola il vapore e lo ridistribuisce sugli ingredienti, producendo una carne che si sfalda senza seccarsi e un sugo concentrato che non richiede addensanti. L'agnello è la proteina più tradizionale, sebbene i tagine di pollo e pesce siano ugualmente comuni.
 
@@ -144,11 +144,13 @@ Ciò che rende distintivo il tagine marocchino è l'interazione tra salato e dol
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Altre ricette da Marocco</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/morocco/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>

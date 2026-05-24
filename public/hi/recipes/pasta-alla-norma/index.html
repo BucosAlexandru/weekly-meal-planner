@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Pasta alla Norma</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/italy/">इटली</a> › <span>Pasta alla Norma</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-alla-norma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg/330px-Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg" alt="Pasta alla Norma" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 दोपहर का खाना · इटली</div>
+      <div class="recipe-badge">🇮🇹 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/italy/">इटली</a></div>
       <h1>Pasta alla Norma</h1>
       <p class="recipe-tagline">पास्ता अल्ला नोर्मा कातानिया का गर्व है — एक सिसिलियाई पास्ता व्यंजन जिसमें तला हुआ बैंगन ताज़े टमाटर की चटनी, जैतून का तेल, तुलसी और कसी हुई रिकोटा सलाटा के साथ मिलता है। नाम कातानिया के संगीतकार विन्सेंज़ो बेल्लिनी के ओपेरा नोर्मा के सम्मान में रखा गया: कहा जाता है एक लेखक ने कहा कि यह व्यंजन नोर्मा जितना ही परिपूर्ण है। बैंगन को अलग से तलकर अच्छी तरह से निकालना जरूरी है — केवल भूनना नहीं — सही रेशमी बनावट के लिए।
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 इटली की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/italy/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/risotto/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="risotto">🍽️</div>

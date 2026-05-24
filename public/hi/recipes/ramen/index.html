@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>रामेन</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/japan/">जापान</a> › <span>रामेन</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ramen" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1697543-312x231.jpg" alt="रामेन" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 दोपहर का खाना · जापान</div>
+      <div class="recipe-badge">🇯🇵 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/japan/">जापान</a></div>
       <h1>रामेन</h1>
       <p class="recipe-tagline">रामेन 19वीं सदी के अंत में चीनी प्रवासियों के साथ जापान पहुंचा, चीनी गेहूं के नूडल सूप के एक संस्करण के रूप में। जापानी परिवर्तन पूर्ण था: अगले दशकों में अलग-अलग क्षेत्रीय शैलियां उभरीं — हकाता में टोंकोत्सु, सप्पोरो में मिसो-आधारित, टोक्यो में सोया सॉस वाला — प्रत्येक स्थानीय सामग्री और स्वाद प्राथमिकताओं को दर्शाता है। आज यह व्यंजन इतना जापानी हो गया है कि इसकी चीनी उत्पत्ति का शायद ही उल्लेख होता है।
 
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 जापान की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/japan/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/japanese-curry-rice/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="japanese-curry-rice">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Kibbeh</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/syria/">Siria</a> › <span>Kibbeh</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kibbeh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/649403-312x231.jpg" alt="Kibbeh" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 Cena · Siria</div>
+      <div class="recipe-badge">🇸🇾 Cena · <a class="recipe-badge-origin" href="/it/cucina/syria/">Siria</a></div>
       <h1>Kibbeh</h1>
       <p class="recipe-tagline">Il kibbeh è considerato il piatto nazionale sia della Siria che del Libano, e si trova in tutto il Levante dalla Turchia all'Egitto. Il nome deriva da una parola araba che significa palla. La combinazione di base di carne macinata finemente con grano spezzato appare nei libri di cucina arabi medievali, rendendo il kibbeh uno dei piatti più a lungo documentati della regione.
 
@@ -138,11 +138,13 @@ Il guscio esterno si fa lavorando bulgur e carne cruda molto magra fino a ottene
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Altre ricette da Siria</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/syria/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

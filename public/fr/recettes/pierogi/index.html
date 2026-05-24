@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Pierogi</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/poland/">Pologne</a> › <span>Pierogi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pierogi" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656049-312x231.jpg" alt="Pierogi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Diner · Pologne</div>
+      <div class="recipe-badge">🇵🇱 Diner · <a class="recipe-badge-origin" href="/fr/cuisine/poland/">Pologne</a></div>
       <h1>Pierogi</h1>
       <p class="recipe-tagline">Les pierogi sont l'une des préparations les plus anciennes de la cuisine polonaise, documentées dans des archives culinaires datant du XIIIe siècle. Ils sont associés à sainte Kinga, sainte patronne de Pologne, à travers une légende liant leur origine à son arrivée de Hongrie. La farce pommes de terre-fromage blanc est la plus connue, mais le choix est large : choucroute aux champignons, viande hachée ou myrtilles sucrées pour le dessert.
 
@@ -132,11 +132,13 @@ La technique est une cuisson en deux temps. Ils sont bouillis dans de l'eau sal�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇱 Plus de recettes de Pologne</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/poland/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/pork-schnitzel/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pork-schnitzel">🍽️</div>

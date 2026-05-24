@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Chili con carne</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/mexico/">Meksika</a> › <span>Chili con carne</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chili-con-carne" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1697611-312x231.jpg" alt="Chili con carne" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Akşam yemeği · Meksika</div>
+      <div class="recipe-badge">🇲🇽 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/mexico/">Meksika</a></div>
       <h1>Chili con carne</h1>
       <p class="recipe-tagline">Chili con carne Meksika'dan çok Teksas mutfağına aittir — bu yemek, on dokuzuncu yüzyılda San Antonio'da şehrin meydanlarındaki tezgâhlardan satan ve chili kraliçeleri olarak bilinen seyyar satıcılar tarafından yaygınlaştırıldı. İsim İspanyolcadan gelir ve biber ile et anlamına gelir; ancak tarif Teksas'ta, kurutulmuş biber ve sığır etiyle yapılan özgün bir yahniye dönüştü. Geleneksel Teksas chili'si fasulye içermez; fasulye eklenmesi tartışmalı bir konu olmayı sürdürür.
 
@@ -133,11 +133,13 @@ Chipotle — tütsülenmiş, kurutulmuş bir jalapeño — odun dumanı altı no
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Meksika tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/mexico/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

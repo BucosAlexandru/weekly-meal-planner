@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Cheeseburger</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/usa/">USA</a> › <span>Cheeseburger</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cheeseburger" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/635350-312x231.jpg" alt="Cheeseburger" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 Abendessen · USA</div>
+      <div class="recipe-badge">🇺🇸 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/usa/">USA</a></div>
       <h1>Cheeseburger</h1>
       <p class="recipe-tagline">Der Cheeseburger ist die Inbegriff-Kreation amerikanischer Diners, geboren in den Theken des Mittleren Westens und Straßen-Drive-ins der 1930er Jahre und vervollkommnet in den gusseisernen Pfannen tausender Schnellköche. Die Smash-Technik — das Andrücken einer lockeren 125g-Kugel auf eine glühend heiße Fläche — erzeugt die Maillard-reiche, spitzenrandige Kruste, die ein großartiges Patty ausmacht; ohne diese Röstung ist es nur ein Fleischklops in einem Brötchen. Ein 80/20-Fett-zu-Magerfleisch-Verhältnis ist nicht verhandelbar: Das Fett trägt den Geschmack und hält das Patty bis zum letzten Bissen saftig.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 Weitere Rezepte aus USA</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/usa/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/pancakes/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pancakes">🍽️</div>

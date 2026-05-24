@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>कारे-कारे</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/philippines/">फिलीपींस</a> › <span>कारे-कारे</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kare-kare" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg" alt="कारे-कारे" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 रात का खाना · फिलीपींस</div>
+      <div class="recipe-badge">🇵🇭 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/philippines/">फिलीपींस</a></div>
       <h1>कारे-कारे</h1>
       <p class="recipe-tagline">कारे-कारे एक फिलिपिनो ब्रेज़्ड स्टू है जो एनाटो द्वारा गहरे सोने के रंग की गाढ़ी मूंगफली की चटनी के इर्द-गिर्द बना है, जिसमें बैल की पूंछ या बीफ शैंक मुख्य प्रोटीन के रूप में है। चटनी भुनी हुई पिसी मूंगफली से आती है जिसे शोरबे से पतला किया जाता है और भुने चावल के आटे से गाढ़ा किया जाता है — समृद्ध और स्वादिष्ट लेकिन जानबूझकर हल्की।
 
@@ -137,7 +137,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

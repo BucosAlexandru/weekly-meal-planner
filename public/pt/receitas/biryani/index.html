@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Biryani</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/pakistan/">Paquistão</a> › <span>Biryani</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="Biryani" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Jantar · Paquistão</div>
+      <div class="recipe-badge">🇵🇰 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/pakistan/">Paquistão</a></div>
       <h1>Biryani</h1>
       <p class="recipe-tagline">O biryani remonta às cortes mogóis do subcontinente indiano, onde pratos de arroz de influência persa evoluíram ao longo de séculos para formas regionais distintas. A tradição do biryani paquistanês — especialmente os estilos de Karachi e Hyderabad — está entre as mais aromáticas do subcontinente, construída sobre especiarias inteiras, cebola caramelizada e arroz em camadas. O prato é central em cada ocasião importante: casamentos, celebrações do Eid e grandes reuniões familiares.
 
@@ -145,11 +145,13 @@ A técnica é o cozimento dum: o arroz parcialmente cozido e a carne temperada s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Mais receitas de Paquistão</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/pakistan/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>

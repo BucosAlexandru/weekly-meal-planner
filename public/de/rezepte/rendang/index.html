@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Rendang</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/indonesia/">Indonesien</a> › <span>Rendang</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="rendang" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rendang_daging_sapi_asli_Padang.JPG/330px-Rendang_daging_sapi_asli_Padang.JPG" alt="Rendang" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Abendessen · Indonesien</div>
+      <div class="recipe-badge">🇮🇩 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/indonesia/">Indonesien</a></div>
       <h1>Rendang</h1>
       <p class="recipe-tagline">Rendang stammt aus dem Minangkabau-Hochland in Westsumatra, als Aufbewahrungsgericht entwickelt: Durch vollständiges Einkochen der Kokosmilch und Frittieren des Fleisches im eigenen Fett bleibt das Gericht mehrere Tage ohne Kühlung haltbar. Es ist zentral im zeremoniellen Leben der Minangkabau — bei Hochzeiten, Erntefesten und Eid.
 
@@ -136,11 +136,13 @@ Die zwei Kochstufen definieren das Gericht. Zunächst schmort das Rindfleisch ü
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 Weitere Rezepte aus Indonesien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/indonesia/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>

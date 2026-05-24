@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>चिलेस एन नोगाडा</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/mexico/">मेक्सिको</a> › <span>चिलेस एन नोगाडा</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chiles-en-nogada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Chile_en_nogada24.jpg/330px-Chile_en_nogada24.jpg" alt="चिलेस एन नोगाडा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 रात का खाना · मेक्सिको</div>
+      <div class="recipe-badge">🇲🇽 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/mexico/">मेक्सिको</a></div>
       <h1>चिलेस एन नोगाडा</h1>
       <p class="recipe-tagline">चिलेस एन नोगाडा को मेक्सिको का सबसे देशभक्तिपूर्ण व्यंजन माना जाता है — इसके रंग मेक्सिकन ध्वज को दर्शाते हैं: अजमोद की हरियाली, अखरोट की क्रीम की सफेदी और अनार के दानों की लालिमा। यह व्यंजन उपनिवेशी काल के अंत में पुएब्ला से उत्पन्न हुआ और परंपरागत रूप से अगस्त और सितंबर में तैयार किया जाता है, जब अखरोट और अनार दोनों एक साथ मौसम में होते हैं।
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 मेक्सिको की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/mexico/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

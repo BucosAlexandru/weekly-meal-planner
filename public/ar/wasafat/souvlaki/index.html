@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>سوفلاكي</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/greece/">اليونان</a> › <span>سوفلاكي</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="souvlaki" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/651076-312x231.jpg" alt="سوفلاكي" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 عشاء · اليونان</div>
+      <div class="recipe-badge">🇬🇷 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/greece/">اليونان</a></div>
       <h1>سوفلاكي</h1>
       <p class="recipe-tagline">السوفلاكي — لحم مشوي على الأسياخ فوق الفحم — هو حجر الزاوية في طعام الشوارع الأثيني، تمتد جذوره إلى اليونان القديمة حيث كانت السوفلا (السيخ) محورية في الطهي كالموقد نفسه. في أثينا الحديثة يُباع في كل مطعم بساروتافيرنا ومحل شواء ليلي، والخنزير ينقع طوال الليل في الليمون وزيت الزيتون والزعتر المجفف الذي ينمو برياً على تلال أتيكا. يُقدَّم ملفوفاً في خبز بيتا طري مع التزاتزيكي البارد والبصل الأحمر الطازج، وهو النكهة المميزة لليلة صيف يونانية.</p>
       <div class="recipe-meta-row">
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 المزيد من وصفات اليونان</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/greece/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/tzatziki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tzatziki">🍽️</div>

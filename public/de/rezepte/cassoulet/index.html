@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Cassoulet</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/france/">Frankreich</a> › <span>Cassoulet</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cassoulet" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/330px-Bowl_of_cassoulet.JPG" alt="Cassoulet" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Abendessen · Frankreich</div>
+      <div class="recipe-badge">🇫🇷 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/france/">Frankreich</a></div>
       <h1>Cassoulet</h1>
       <p class="recipe-tagline">Cassoulet — benannt nach der Cassole, dem Tongefäß, in dem es gegart wird — ist das Wahrzeichen der rustikalen Küche des Languedoc: ein langsam geschmortes Gericht aus weißen Bohnen mit Toulouse-Würsten, Enten- oder Gänseconfit und Schweinefleisch. Die drei Städte, die um seine Urheberschaft streiten — Castelnaudary, Carcassonne und Toulouse — unterscheiden sich in der Fleischauswahl, beharren aber alle darauf, dass ihre Version die authentische ist.
 
@@ -141,11 +141,13 @@ Die gebräunte Paniermehlkruste oben wird mehrfach eingerührt und nimmt die kr�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Weitere Rezepte aus Frankreich</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/france/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

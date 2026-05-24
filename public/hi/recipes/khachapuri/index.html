@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>खाचापुरी</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/georgia/">जॉर्जिया</a> › <span>खाचापुरी</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="khachapuri" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/%D0%92%D0%BA%D1%83%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA_%D0%9A%D1%85%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8.jpg/330px-%D0%92%D0%BA%D1%83%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA_%D0%9A%D1%85%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8.jpg" alt="खाचापुरी" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 नाश्ता · जॉर्जिया</div>
+      <div class="recipe-badge">🇬🇪 नाश्ता · <a class="recipe-badge-origin" href="/hi/vyanjan/georgia/">जॉर्जिया</a></div>
       <h1>खाचापुरी</h1>
       <p class="recipe-tagline">खाचापुरी — शाब्दिक अर्थ है पनीर की रोटी — जॉर्जिया का राष्ट्रीय भोजन है, जो त्बिलिसी से बाटुमी तक हर पारिवारिक मेज़ और गली की दुकान पर मिलता है। इस व्यंजन के कई क्षेत्रीय रूप हैं। अजारियन खाचापुरी, काला सागर तट का नाव के आकार का संस्करण, अंतरराष्ट्रीय स्तर पर सबसे ज़्यादा पहचाना जाता है — परोसते वक्त पिघले पनीर में कच्चा अंडा तोड़ा जाता है।
 
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 जॉर्जिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/georgia/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/lobio/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="lobio">🍽️</div>

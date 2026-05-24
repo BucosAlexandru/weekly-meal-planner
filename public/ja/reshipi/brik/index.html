@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ブリック</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/tunisia/">チュニジア</a> › <span>ブリック</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="brik" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Brikdish.jpg/330px-Brikdish.jpg" alt="ブリック" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 スナック · チュニジア</div>
+      <div class="recipe-badge">🇹🇳 スナック · <a class="recipe-badge-origin" href="/ja/ryori/tunisia/">チュニジア</a></div>
       <h1>ブリック</h1>
       <p class="recipe-tagline">ブリックはチュニジアを代表するストリートフードで祝いの軽食だ——薄くてパリパリの生地で丸ごと卵を包み、ツナ、ケーパー、パセリと合わせるのが定番。生地そのものはマルスーカと呼ばれ、濡れた生地を熱した金属板に押しつけてほぼ半透明のシートに仕上げる。この技法は北アフリカ全域とマグレブ地方で共有されており、ブリックはモロッコからリビアまでさまざまな形で存在する。
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 チュニジアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/tunisia/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/chakchouka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chakchouka">🍽️</div>

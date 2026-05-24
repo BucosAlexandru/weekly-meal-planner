@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Lobio</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/georgia/">Geórgia</a> › <span>Lobio</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lobio" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Lobio_with_summer_savory_and_ajika.jpg/960px-Lobio_with_summer_savory_and_ajika.jpg" alt="Lobio" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 Jantar · Geórgia</div>
+      <div class="recipe-badge">🇬🇪 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/georgia/">Geórgia</a></div>
       <h1>Lobio</h1>
       <p class="recipe-tagline">Lobio — a palavra georgiana para feijão — é um dos pratos mais antigos e mais amplamente preparados da Geórgia. O feijão vermelho tem sido um alimento básico do Cáucaso do Sul há séculos, e o prato incorpora os sabores definidores da cozinha georgiana: nozes moídas, feno-grego, coentro e romã. Aparece em refeições do dia a dia e no supra, o banquete formal georgiano.
 
@@ -137,11 +137,13 @@ As nozes são moídas finamente e misturadas fora do fogo, onde engrossam o líq
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 Mais receitas de Geórgia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/georgia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍽️</div>

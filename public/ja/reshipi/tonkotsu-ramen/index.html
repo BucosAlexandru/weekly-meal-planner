@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>豚骨ラーメン</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/japan/">日本</a> › <span>豚骨ラーメン</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tonkotsu-ramen" id="recipe-photo-main">🍽️<img src="/images/tonkotsu-ramen.jpg" alt="豚骨ラーメン" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 ディナー · 日本</div>
+      <div class="recipe-badge">🇯🇵 ディナー · <a class="recipe-badge-origin" href="/ja/ryori/japan/">日本</a></div>
       <h1>豚骨ラーメン</h1>
       <p class="recipe-tagline">豚骨ラーメンは博多——現在の福岡・博多駅エリア——が発祥で、1940年代から乳白色の豚骨スープが働く人たちの昼食だった。あの白さは物理の法則だ。十二時間グラグラ沸かし続けると骨のコラーゲンが溶け出し、脂と乳化してスープを不透明でなめらかに変える。
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 日本のその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/japan/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

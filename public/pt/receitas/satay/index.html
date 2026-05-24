@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Satay</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/indonesia/">Indonésia</a> › <span>Satay</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="satay" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Sate_Udang.JPG/330px-Sate_Udang.JPG" alt="Satay" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Lanche · Indonésia</div>
+      <div class="recipe-badge">🇮🇩 Lanche · <a class="recipe-badge-origin" href="/pt/cozinha/indonesia/">Indonésia</a></div>
       <h1>Satay</h1>
       <p class="recipe-tagline">O Satay é um prato de carne grelhada do Sudeste Asiático originário de Java, na Indonésia, provavelmente no século XIX. Os comerciantes árabes trouxeram as tradições do kebab para a região; os cozinheiros locais adaptaram-nas com açafrão-da-terra, erva-príncipe e leite de coco. O prato espalhou-se por toda a região — a Tailândia, a Malásia, Singapura e as Filipinas têm as suas próprias versões —, mas a forma javanesa com a sua marinada amarela e o molho de amendoim espesso continua a ser a mais reconhecida.
 
@@ -137,11 +137,13 @@ O molho de amendoim é o elemento definidor. Feito com amendoins torrados moído
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 Mais receitas de Indonésia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/indonesia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Manti</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/uzbekistan/">Uzbequistão</a> › <span>Manti</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="manti" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kayseride_bir_restoranda_Kayseri_mant%C4%B1.jpg/330px-Kayseride_bir_restoranda_Kayseri_mant%C4%B1.jpg" alt="Manti" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 Jantar · Uzbequistão</div>
+      <div class="recipe-badge">🇺🇿 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/uzbekistan/">Uzbequistão</a></div>
       <h1>Manti</h1>
       <p class="recipe-tagline">Manti são grandes bolinhos cozidos no vapor espalhados pela Ásia Central, Cáucaso e Turquia através da Rota da Seda e migrações nômades. No Uzbequistão, o recheio é tradicionalmente picado à mão — cordeiro ou boi com bastante cebola crua que derrete ao cozinhar, mantendo a carne úmida e perfumada. A massa é esticada fina e cada embrulho fechado à mão.
 
@@ -140,7 +140,9 @@ Ao contrário dos bolinhos chineses, os manti cozinham em vaporizador de múltip
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

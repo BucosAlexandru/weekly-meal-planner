@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>चिकन फ्रिकासी</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/france/">फ़्रांस</a> › <span>चिकन फ्रिकासी</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-fricass-e" id="recipe-photo-main">🍽️<img src="/images/chicken-fricass-e.webp" alt="चिकन फ्रिकासी" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 रात का खाना · फ़्रांस</div>
+      <div class="recipe-badge">🇫🇷 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/france/">फ़्रांस</a></div>
       <h1>चिकन फ्रिकासी</h1>
       <p class="recipe-tagline">फ्रिकासी (फ्रांसीसी क्रिया fricasser से, यानी टुकड़ों में पकाना) चिकन के लिए एक क्लासिक फ्रांसीसी तकनीक है: चिकन के टुकड़ों को मक्खन में हल्के सुनहरे रंग तक भूना जाता है बिना भूरी पपड़ी बनाए, फिर सब्ज़ियों के साथ चिकन स्टॉक या सफेद वाइन में ब्रेज़ करके, क्रीम और कभी-कभी अंडे की जर्दी से समृद्ध वेलूते सॉस के साथ परोसा जाता है।
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 फ़्रांस की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/france/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/cassoulet/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cassoulet">🍽️</div>

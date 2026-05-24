@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ビビンバ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/south-korea/">韓国</a> › <span>ビビンバ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bibimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/330px-Dolsot-bibimbap.jpg" alt="ビビンバ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 ランチ · 韓国</div>
+      <div class="recipe-badge">🇰🇷 ランチ · <a class="recipe-badge-origin" href="/ja/ryori/south-korea/">韓国</a></div>
       <h1>ビビンバ</h1>
       <p class="recipe-tagline">ビビンバ — この言葉はシンプルに「混ぜご飯」を意味する — は、韓国料理哲学の最も直接的な表現のひとつだ。各材料を別々に調理・味付けしてそれぞれの個性を引き出し、食べる瞬間にだけ一つにまとめる。この料理は朝鮮王朝の宮廷で発展したと考えられており、精緻なテーブルサービスが各ナムル（味付け野菜）の個別調理を必要としていた。
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 韓国のその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/south-korea/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/kimchi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kimchi">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Flemischer Biertopf</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/belgium/">Belgien</a> › <span>Flemischer Biertopf</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stoofvlees" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jielbeaumadier_carbonade_flamande_2_2012.jpg/330px-Jielbeaumadier_carbonade_flamande_2_2012.jpg" alt="Flemischer Biertopf" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Abendessen · Belgien</div>
+      <div class="recipe-badge">🇧🇪 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/belgium/">Belgien</a></div>
       <h1>Flemischer Biertopf</h1>
       <p class="recipe-tagline">Stoofvlees — auf Französisch Carbonnade flamande genannt — ist Belgiens emblematischstes Schmorgericht: Rindfleisch und Zwiebeln werden in belgischem Dunkelbier geschmort, bis das Fleisch zerfällt und die Sauce zu einer glänzenden Mahagonisoße wird. Es ist eng mit der flämischen Region verbunden, wo es seit dem Mittelalter gegessen wird. Belgisches Dunkelbier — mit seiner malzigen Süße — liefert die Geschmacksbasis, die Wein im französischen Bourguignon übernimmt.
 
@@ -134,11 +134,13 @@ Das Brot als Verdickungsmittel ist die charakteristische Technik: Scheiben mit D
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 Weitere Rezepte aus Belgien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/belgium/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/moules-frites/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moules-frites">🍽️</div>

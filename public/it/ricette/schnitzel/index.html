@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Schnitzel</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/germany/">Germania</a> › <span>Schnitzel</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" alt="Schnitzel" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 Pranzo · Germania</div>
+      <div class="recipe-badge">🇩🇪 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/germany/">Germania</a></div>
       <h1>Schnitzel</h1>
       <p class="recipe-tagline">Lo schnitzel appartiene alla cucina tedesco-austriaca nel senso più ampio, ma la versione definitiva — il Wiener Schnitzel — fu perfezionata a Vienna, dove i cuochi del XVIII secolo iniziarono a battere il vitello a uno spessore quasi trasparente prima di infarinarlo, passarlo nell'uovo e nel pangrattato fine e friggerlo nel lardo caldo finché la crosta si gonfiava in onde drammatiche. La temperatura e la profondità dell'olio determinano la crosta: la schnitzel deve galleggiare liberamente a 170°C, vorticando nel grasso piuttosto che posandosi in esso, il che crea la caratteristica crosta gonfia simile a un soufflé. Una spruzzata di limone a tavola non è opzionale — l'acido taglia la ricchezza e il piatto è incompleto senza di esso.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 Altre ricette da Germania</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/germany/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/currywurst/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="currywurst">🍽️</div>

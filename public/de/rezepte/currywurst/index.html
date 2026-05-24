@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Currywurst</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/germany/">Deutschland</a> › <span>Currywurst</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="currywurst" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20220430_currywurst.jpg/330px-20220430_currywurst.jpg" alt="Currywurst" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 Snack · Deutschland</div>
+      <div class="recipe-badge">🇩🇪 Snack · <a class="recipe-badge-origin" href="/de/kueche/germany/">Deutschland</a></div>
       <h1>Currywurst</h1>
       <p class="recipe-tagline">Currywurst ist Berlins Straßenfood-Ikone — eine gebratene Schweinswurst in Scheiben, mit Currypulver stark gewürzter Tomatensauce, mit gelbem Curry und Paprika bestreut. Sie wurde 1949 von Herta Heuwer in Berlin-Charlottenburg erfunden: Ketchup, Worcestershiresauce und Curry gemischt — ein einfacher Handgriff, der ein Massenphänomen schuf.
 
@@ -136,11 +136,13 @@ Currywurst ist das Imbiss-Essen, das Symbol des Berliner Fast Foods. Jährlich w
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 Weitere Rezepte aus Deutschland</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/germany/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/schnitzel/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="schnitzel">🍽️</div>

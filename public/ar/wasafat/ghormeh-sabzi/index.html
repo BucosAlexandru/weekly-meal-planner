@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>غورمه سبزي</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/iran/">إيران</a> › <span>غورمه سبزي</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ghormeh-sabzi" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ghormeh_Sabzi.JPG/330px-Ghormeh_Sabzi.JPG" alt="غورمه سبزي" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇷 عشاء · إيران</div>
+      <div class="recipe-badge">🇮🇷 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/iran/">إيران</a></div>
       <h1>غورمه سبزي</h1>
       <p class="recipe-tagline">الغورمه سبزي من أقدم الحساءات الفارسية وأكثرها محبةً، وتمتد تاريخها الموثق آلاف السنين. الاسم يعني الأعشاب المقلية — إذ تعني كلمة «سبزي» الأعشاب والخضروات — وهذا المزيج المقلي من الأعشاب هو ما يعرّف الطبق. يُعدّ على نطاق واسع الطبق الوطني غير الرسمي لإيران.
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇷 المزيد من وصفات إيران</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/iran/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/fesenjan/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="fesenjan">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Lok Lak</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/cambodia/">Cambodgia</a> › <span>Lok Lak</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lok-lak" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 Prânz · Cambodgia</div>
+      <div class="recipe-badge">🇰🇭 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/cambodia/">Cambodgia</a></div>
       <h1>Lok Lak</h1>
       <p class="recipe-tagline">Lok Lak este cel mai cunoscut preparat din carne de vită al Cambodgiei, apărut prin confluența bucătăriei coloniale franceze cu tehnicile emigranților chinezi. Cuburile de carne marinată sunt prăjite rapid cu usturoi, sos de stridii și mult piper negru, rezultând bucăți lucioase cu aromă savuroasă adâncă.
 
@@ -141,11 +141,13 @@ Presentarea este esențială: carnea se servește pe un pat de salată verde și
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 Alte rețete din Cambodgia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/cambodia/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/amok/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="amok">🍽️</div>

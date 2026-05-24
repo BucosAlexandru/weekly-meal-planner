@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Goulash</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/hungary/">Hungria</a> › <span>Goulash</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="goulash" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/644476-312x231.jpg" alt="Goulash" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Jantar · Hungria</div>
+      <div class="recipe-badge">🇭🇺 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/hungary/">Hungria</a></div>
       <h1>Goulash</h1>
       <p class="recipe-tagline">Gulyás — a palavra significa 'boiadeiro' em húngaro — começou como um guisado de boiadeiros cozinhado pelos cowboys da Grande Planície no século XVIII. Tornou-se um prato de importância nacional no século XIX, quando os reformadores húngaros o elevaram deliberadamente como símbolo da identidade magiar contra a dominação cultural dos Habsburgos. O que o resto do mundo chama de goulash assemelha-se mais ao pörkölt — na Hungria, o gulyás é propriamente uma sopa, não um guisado espesso.
 
@@ -134,11 +134,13 @@ A paprica é o prato. A paprica doce húngara — não defumada, não picante �
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 Mais receitas de Hungria</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/hungary/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/chicken-paprikash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-paprikash">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Tajine</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/morocco/">Maroc</a> › <span>Tajine</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tajine" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Dîner · Maroc</div>
+      <div class="recipe-badge">🇲🇦 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/morocco/">Maroc</a></div>
       <h1>Tajine</h1>
       <p class="recipe-tagline">Le tajine tire son nom du récipient en terre cuite conique dans lequel il cuit — un design resté essentiellement inchangé au fil des siècles de cuisine marocaine et nord-africaine. Le cône capture la vapeur montante et renvoie l'humidité vers les ingrédients, produisant une viande qui s'effrite sans se dessécher et une sauce concentrée sans besoin d'épaississement. L'agneau est la protéine la plus traditionnelle, bien que les tajines de poulet et de poisson soient tout aussi courants.
 
@@ -144,11 +144,13 @@ Ce qui rend le tajine marocain distinctif est le jeu entre salé et sucré : cit
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Plus de recettes de Maroc</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/morocco/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>

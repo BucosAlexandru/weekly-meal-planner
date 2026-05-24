@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Boulettes suédoises</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/sweden/">Suède</a> › <span>Boulettes suédoises</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="swedish-meatballs" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/648565-312x231.jpg" alt="Boulettes suédoises" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 Déjeuner · Suède</div>
+      <div class="recipe-badge">🇸🇪 Déjeuner · <a class="recipe-badge-origin" href="/fr/cuisine/sweden/">Suède</a></div>
       <h1>Boulettes suédoises</h1>
       <p class="recipe-tagline">Les köttbullar — boulettes suédoises — sont devenues un plat emblématique de la cuisine familiale suédoise, mais leurs épices portent une empreinte étrangère. Le roi Charles XII passa des années en exil ottoman avant de rentrer en Suède en 1715, et l'allspice et la muscade qui distinguent les köttbullar de toute autre boulette seraient issus de cet échange culinaire. La sauce à la crème et les airelles rouges sont des ajouts purement suédois.
 
@@ -134,11 +134,13 @@ Le mélange de bœuf et de porc n'est pas facultatif : le gras du porc apporte d
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 Plus de recettes de Suède</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/sweden/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/gravlax/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="gravlax">🍽️</div>

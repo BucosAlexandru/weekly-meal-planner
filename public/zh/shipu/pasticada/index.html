@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>克罗地亚炖牛肉</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/croatia/">克罗地亚</a> › <span>克罗地亚炖牛肉</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasticada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg/330px-Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg" alt="克罗地亚炖牛肉" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 晚餐 · 克罗地亚</div>
+      <div class="recipe-badge">🇭🇷 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/croatia/">克罗地亚</a></div>
       <h1>克罗地亚炖牛肉</h1>
       <p class="recipe-tagline">帕什蒂查达是达尔马提亚的标志性菜肴——牛肉卷在葡萄酒醋、大蒜和香料中腌制数日，填入猪油、胡萝卜和丁香，然后在红葡萄酒、梅干汁以及对于欧洲料理而言异常复杂的香料组合（丁香、肉桂、肉豆蔻）中慢炖数小时。成品是极为柔嫩的肉质，搭配甜酸、浓郁的深色酱汁。
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇷 更多来自克罗地亚的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/croatia/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/dalmatinska-pasticada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dalmatinska-pasticada">🍽️</div>

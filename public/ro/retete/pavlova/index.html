@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Pavlova</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/australia/">Australia</a> › <span>Pavlova</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pavlova" id="recipe-photo-main">🍰<img src="https://img.spoonacular.com/recipes/655031-312x231.jpg" alt="Pavlova" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 Desert · Australia</div>
+      <div class="recipe-badge">🇦🇺 Desert · <a class="recipe-badge-origin" href="/ro/bucatarie/australia/">Australia</a></div>
       <h1>Pavlova</h1>
       <p class="recipe-tagline">Pavlova poartă numele balerinei ruse Anna Pavlova, care a vizitat Australia și Noua Zeelandă în 1926. Ambele țări revendică invenția desertului, iar disputa durează de aproape un secol fără rezolvare. Cele mai vechi rețete documentate apar în Noua Zeelandă, dar bucătarii australieni au propriile versiuni din aceeași perioadă.
 
@@ -132,11 +132,13 @@ Bezea este coaptă uscat și la temperatură joasă — aproximativ 120°C timp 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 Alte rețete din Australia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/australia/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/meat-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="meat-pie">🍽️</div>

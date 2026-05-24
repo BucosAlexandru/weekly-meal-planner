@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>스웨덴식 미트볼</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/sweden/">스웨덴</a> › <span>스웨덴식 미트볼</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="swedish-meatballs" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/648565-312x231.jpg" alt="스웨덴식 미트볼" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇪 점심 · 스웨덴</div>
+      <div class="recipe-badge">🇸🇪 점심 · <a class="recipe-badge-origin" href="/ko/yori/sweden/">스웨덴</a></div>
       <h1>스웨덴식 미트볼</h1>
       <p class="recipe-tagline">쾨트불라르 — 스웨덴식 미트볼 — 는 스웨덴 가정 요리를 대표하는 음식이지만, 그 향신료는 이국적인 흔적을 담고 있습니다. 카를 12세는 1715년 스웨덴으로 귀국하기 전 오스만 제국에서 망명 생활을 했으며, 쾨트불라르를 다른 미트볼과 구별 짓는 올스파이스와 육두구는 그 문화적 교류에서 비롯된 것으로 알려져 있습니다. 크림 소스와 링곤베리는 순수하게 스웨덴적인 요소입니다.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇪 스웨덴의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/sweden/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/gravlax/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="gravlax">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Jollof Rice</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/nigeria/">Nigeria</a> › <span>Jollof Rice</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="jollof-rice" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/330px-Jollof_Rice_with_Stew.jpg" alt="Jollof Rice" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 Prânz · Nigeria</div>
+      <div class="recipe-badge">🇳🇬 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/nigeria/">Nigeria</a></div>
       <h1>Jollof Rice</h1>
       <p class="recipe-tagline">Jollof rice este cel mai mâncat și mai pasionat contestat preparat din Africa de Vest — un orez gătit într-un singur vas pe bază de roșii, fiert într-o bază groasă de roșii, ardei și ceapă mixate, până boabele absorb sosul și formează o crustă afumată la fundul oalei. Preparatul apare în Nigeria, Ghana, Senegal, Sierra Leone și dincolo de acestea, fiecare țară susținând că versiunea sa este cea definitivă.
 
@@ -138,11 +138,13 @@ Efectul 'jollof de petrecere' — stratul de jos afumat, ușor carbonizat, care 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 Alte rețete din Nigeria</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/nigeria/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/egusi-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="egusi-soup">🍽️</div>

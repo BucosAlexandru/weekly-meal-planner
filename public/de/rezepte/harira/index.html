@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Harira</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/morocco/">Marokko</a> › <span>Harira</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="harira" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="Harira" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Mittagessen · Marokko</div>
+      <div class="recipe-badge">🇲🇦 Mittagessen · <a class="recipe-badge-origin" href="/de/kueche/morocco/">Marokko</a></div>
       <h1>Harira</h1>
       <p class="recipe-tagline">Harira ist Marokkos wichtigste Suppe — ein reichhaltiger, aromatischer Eintopf aus Lamm, Kichererbsen, Linsen und Tomaten, gewürzt mit Kreuzkümmel, Zimt und Ingwer. Sie wird das ganze Jahr über gegessen, ist aber am engsten mit dem Ramadan verbunden, wo sie das traditionelle Gericht beim Iftar ist — dem Fastenbrechen bei Sonnenuntergang. Die Kombination aus Proteinen, Hülsenfrüchten und wärmenden Gewürzen hat sowohl eine praktische als auch eine zeremonielle Funktion.
 
@@ -137,11 +137,13 @@ Der Charakter der Suppe entsteht durch das Zusammenspiel der Zutaten beim langen
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Weitere Rezepte aus Marokko</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/morocco/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/tagine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tagine">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Banh Mi</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/vietnam/">Vietnam</a> › <span>Banh Mi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="banh-mi" id="recipe-photo-main">🍽️<img src="/images/banh-mi.webp" alt="Banh Mi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 En-cas · Vietnam</div>
+      <div class="recipe-badge">🇻🇳 En-cas · <a class="recipe-badge-origin" href="/fr/cuisine/vietnam/">Vietnam</a></div>
       <h1>Banh Mi</h1>
       <p class="recipe-tagline">Le Banh Mi est la street food la plus emblématique du Vietnam, et l'un des exemples les plus parlants de fusion culinaire dans l'histoire de l'Asie du Sud-Est. La baguette française est arrivée avec le colonialisme au XIXe siècle; les boulangers vietnamiens l'ont adaptée en un pain plus léger, plus aéré, à la croûte plus fine. Les garnitures — pâté, mayonnaise et légumes marinés — empruntent à la charcuterie française et aux saveurs locales vietnamiennes.
 
@@ -136,11 +136,13 @@ L'association fonctionne par contraste: le pain croustillant face au pâté fond
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Plus de recettes de Vietnam</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/vietnam/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/pho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pho">🍽️</div>

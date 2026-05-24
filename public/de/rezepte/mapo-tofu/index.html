@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Mapo Tofu</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/china/">China</a> › <span>Mapo Tofu</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="mapo-tofu" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Chen_Mapo_Tofu.jpg/330px-Chen_Mapo_Tofu.jpg" alt="Mapo Tofu" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 Abendessen · China</div>
+      <div class="recipe-badge">🇨🇳 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/china/">China</a></div>
       <h1>Mapo Tofu</h1>
       <p class="recipe-tagline">Mapo Tofu ist ein emblematisches Gericht der Sichuan-Küche — zarte Tofu-Würfel in einer intensiv roten Sauce aus fermentierter Bohnenpaste (Doubanjiang), Chiliöl und Schweinehackfleisch. Die betäubende Wirkung des Sichuan-Pfeffers und die Schärfe der Chilischoten erzeugen die vibrierende Ma-la-Empfindung: gleichzeitig betäubend und scharf.
 
@@ -140,11 +140,13 @@ Der Name bedeutet ungefähr Tofu der narbigen alten Frau, mit Bezug auf eine kul
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 Weitere Rezepte aus China</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/china/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>

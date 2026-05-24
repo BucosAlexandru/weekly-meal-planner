@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Солянка</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/russia/">Россия</a> › <span>Солянка</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="solyanka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Soljanka_food_05.jpg/330px-Soljanka_food_05.jpg" alt="Солянка" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 Обед · Россия</div>
+      <div class="recipe-badge">🇷🇺 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/russia/">Россия</a></div>
       <h1>Солянка</h1>
       <p class="recipe-tagline">Солянка — праздничный суп России: густой кисло-пряный бульон из говядины, копчёных колбас, ветчины, солёных огурцов, маслин, каперсов и помидоров, заправленный сметаной и долькой лимона. Неповторимый характер определяет сочетание солёного, кислого и острого от соленых огурцов.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 Ещё рецепты из Россия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/russia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/borscht/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="borscht">🍽️</div>

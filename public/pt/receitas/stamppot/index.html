@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Stamppot</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/netherlands/">Holanda</a> › <span>Stamppot</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stamppot" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/330px-Boerenkool_stamppot.jpg" alt="Stamppot" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 Jantar · Holanda</div>
+      <div class="recipe-badge">🇳🇱 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/netherlands/">Holanda</a></div>
       <h1>Stamppot</h1>
       <p class="recipe-tagline">Stamppot — literalmente pote amassado — é o prato de conforto por excelência da cozinha de inverno holandesa. O prato tem várias formas: o stamppot de couve (boerenkool) é o mais familiar; o hutspot amassa batatas com cenouras e cebolas; o stamppot de chucrute adiciona acidez. A variante hutspot tem uma reivindicação histórica — uma lenda que liga a sua origem ao levantamento do Cerco de Leiden em 1574.
 
@@ -130,7 +130,9 @@ A técnica depende do controlo da humidade. Após a cozedura, as batatas voltam 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

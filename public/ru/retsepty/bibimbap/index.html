@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Бибимбап</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/south-korea/">Южная Корея</a> › <span>Бибимбап</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bibimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/330px-Dolsot-bibimbap.jpg" alt="Бибимбап" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Обед · Южная Корея</div>
+      <div class="recipe-badge">🇰🇷 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/south-korea/">Южная Корея</a></div>
       <h1>Бибимбап</h1>
       <p class="recipe-tagline">Бибимбап — слово означает просто «смешанный рис» — является одним из наиболее прямых выражений корейской кулинарной философии: компоненты готовятся раздельно, каждый варится или приправляется так, чтобы раскрыть собственный характер, а объединяются лишь в момент еды. Блюдо сложилось при королевском дворе Чосон, где изысканная сервировка требовала индивидуального приготовления каждого намуля (приправленного овоща).
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Ещё рецепты из Южная Корея</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/south-korea/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/kimchi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kimchi">🍽️</div>

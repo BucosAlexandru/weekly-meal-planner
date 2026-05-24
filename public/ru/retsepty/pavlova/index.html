@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Павлова</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/australia/">Австралия</a> › <span>Павлова</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pavlova" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/655031-312x231.jpg" alt="Павлова" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 Десерт · Австралия</div>
+      <div class="recipe-badge">🇦🇺 Десерт · <a class="recipe-badge-origin" href="/ru/kuhnya/australia/">Австралия</a></div>
       <h1>Павлова</h1>
       <p class="recipe-tagline">Павлова названа в честь русской балерины Анны Павловой, гастролировавшей по Австралии и Новой Зеландии в 1926 году. Обе страны претендуют на изобретение этого десерта, и спор длится уже почти век без разрешения. Самые ранние задокументированные рецепты появились в Новой Зеландии, но у австралийских кулинаров есть свои версии того же периода.
 
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 Ещё рецепты из Австралия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/australia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/meat-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="meat-pie">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>아도보</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/philippines/">필리핀</a> › <span>아도보</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="adobo" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/638741-312x231.jpg" alt="아도보" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 저녁 · 필리핀</div>
+      <div class="recipe-badge">🇵🇭 저녁 · <a class="recipe-badge-origin" href="/ko/yori/philippines/">필리핀</a></div>
       <h1>아도보</h1>
       <p class="recipe-tagline">아도보는 필리핀의 국민 요리입니다. 단어 자체는 스페인어로, 식민지배자들이 토착 식초 브레이즈 방식에서 자신들의 절임 기법과 유사한 점을 발견해 붙인 이름입니다. 식초로 고기를 보존하는 필리핀 전통은 스페인이 오기 전부터 있었으며, 냉장 없이 열대 기후에서 음식을 보관하는 실용적인 해결책이었습니다.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 필리핀의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/philippines/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/kare-kare/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kare-kare">🍽️</div>

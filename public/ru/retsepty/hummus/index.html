@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Хумус</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/syria/">Сирия</a> › <span>Хумус</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="hummus" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/716195-312x231.jpg" alt="Хумус" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 Закуска · Сирия</div>
+      <div class="recipe-badge">🇸🇾 Закуска · <a class="recipe-badge-origin" href="/ru/kuhnya/syria/">Сирия</a></div>
       <h1>Хумус</h1>
       <p class="recipe-tagline">Хумус — арабское слово, означающее «нут» — десятилетиями является предметом культурных притязаний Ливана, Израиля, Сирии, Палестины и Египта. Споры в каком-то смысле не по существу: блюдо появилось раньше всех этих границ, а его самое раннее документальное упоминание в арабских кулинарных книгах относится к Сирии XIII века. Полное название — хумус би тахини — точно описывает то, чем он является.
 
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Ещё рецепты из Сирия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/syria/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/kibbeh/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kibbeh">🍽️</div>

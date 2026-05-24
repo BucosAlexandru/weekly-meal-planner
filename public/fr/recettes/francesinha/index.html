@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Francesinha</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/portugal/">Portugal</a> › <span>Francesinha</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="francesinha" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Francesinha_Sandwich_%28cropped%29.jpg/330px-Francesinha_Sandwich_%28cropped%29.jpg" alt="Francesinha" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 Dîner · Portugal</div>
+      <div class="recipe-badge">🇵🇹 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/portugal/">Portugal</a></div>
       <h1>Francesinha</h1>
       <p class="recipe-tagline">La francesinha — Petite Française — est un sandwich de Porto avec une histoire ancrée dans la diaspora portugaise. Créé dans les années 1960 par un émigrant de retour inspiré par le croque-monsieur français, le plat est construit à partir de pain grillé garni de jambon cru, de linguiça et de steak, puis scellé sous du fromage fondu et noyé de sauce.
 
@@ -144,11 +144,13 @@ La sauce est ce qui le définit : chaque restaurant de Porto garde sa propre rec
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇹 Plus de recettes de Portugal</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/portugal/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/bacalhau-br-s/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bacalhau-br-s">🍽️</div>

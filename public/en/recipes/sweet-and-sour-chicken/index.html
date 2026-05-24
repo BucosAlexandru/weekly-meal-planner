@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Sweet and Sour Chicken</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/china/">China</a> › <span>Sweet and Sour Chicken</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="sweet-and-sour-chicken" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/662422-312x231.jpg" alt="Sweet and Sour Chicken" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 Dinner · China</div>
+      <div class="recipe-badge">🇨🇳 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/china/">China</a></div>
       <h1>Sweet and Sour Chicken</h1>
       <p class="recipe-tagline">Sweet and sour chicken as it exists outside China is largely a Cantonese export, shaped by the diaspora restaurants of the mid-twentieth century. The original Chinese sweet-and-sour tradition — tancu, meaning sugar-vinegar — belongs mainly to Cantonese cooking and was traditionally made with pork. The pineapple-and-bell-pepper version became the Western standard, adapted to suit unfamiliar palates.
 
@@ -133,11 +133,13 @@ The balance is what the dish is about. The sauce should hit sour first, then swe
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 More recipes from China</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/china/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>
