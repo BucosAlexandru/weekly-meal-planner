@@ -738,6 +738,167 @@
 .content-seo h2 { font-size: 1.25rem; color: var(--ink,#111827); letter-spacing: -.015em; }
 .content-seo a { color: #24712A; }
 
+/* ═══════════════════════════════════════════════════════════════
+   CUISINE HUB INDEX — stretched-link card pattern
+   ═══════════════════════════════════════════════════════════════
+   .cuisine-card extends .recipe-origin-group with a full-card click
+   target (.cuisine-card-link) that sits underneath any sub-links
+   (recipe-origin-list) so both work independently:
+     • Clicking the whitespace / title / count → opens the hub
+     • Clicking a recipe name → opens the recipe page
+   The title text is a <span> (not <a>) so it inherits typography
+   from the design system instead of browser link defaults. */
+
+.cuisine-card { position: relative; }
+
+.cuisine-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  /* Visually invisible — the underlying card surface provides all chrome. */
+  text-indent: -9999em;
+  overflow: hidden;
+  /* Touch-target safety. */
+  -webkit-tap-highlight-color: transparent;
+}
+.cuisine-card-link:focus-visible {
+  outline: 2px solid #24712A;
+  outline-offset: 3px;
+}
+
+/* Title text (non-link) — premium card heading, no browser anchor styles. */
+.cuisine-card .origin-title-text {
+  color: #111827;
+  text-decoration: none;
+  letter-spacing: -.015em;
+}
+
+/* Sub-links float above the stretched link so each recipe stays clickable.
+   relative + z-index is the standard a11y-safe "exception" pattern. */
+.cuisine-card-sublist { position: relative; z-index: 2; }
+.cuisine-card-sublist a { position: relative; }
+
+/* Card affordance: pointer when hovering the surface (not just the visible
+   sub-link area) signals the entire card is interactive. */
+.cuisine-card { cursor: pointer; }
+.cuisine-card .recipe-origin-list a { cursor: pointer; } /* explicit; same as default */
+
+/* Slightly softer transition on the card so the hover feels "app-like"
+   rather than the sharper recipe-card spring. */
+.cuisine-card {
+  transition:
+    transform .24s cubic-bezier(.2,.7,.2,1),
+    box-shadow .22s cubic-bezier(.2,.7,.2,1),
+    border-color .2s ease;
+}
+.cuisine-card:hover,
+.cuisine-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 30px rgba(36,113,42,.14),
+    0 3px 12px rgba(0,0,0,.07);
+  border-color: rgba(36,113,42,.4);
+}
+.cuisine-card:active { transform: translateY(-1px); transition-duration: .08s; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CUISINE HUB PAGE — focused recipe list (no duplicate intro)
+   ═══════════════════════════════════════════════════════════════
+   The H1 already shows "🇮🇹 Recipes from Italy"; the page-body list
+   drops the redundant "🇮🇹 Italy  [count]" heading and goes straight
+   to recipes for a focused, app-like landing. */
+
+.cuisine-hub-recipes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .55rem .9rem;
+}
+.cuisine-hub-recipes li {
+  margin: 0;
+}
+.cuisine-hub-recipes a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem .95rem;
+  background: #fff;
+  border: 1.5px solid #e8eaed;
+  border-radius: 12px;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -.005em;
+  line-height: 1.4;
+  transition:
+    transform .18s cubic-bezier(.2,.7,.2,1),
+    border-color .18s ease,
+    background-color .18s ease,
+    box-shadow .18s ease,
+    color .15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.cuisine-hub-recipes a::after {
+  content: '→';
+  margin-left: auto;
+  font-size: .8rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+  color: #24712A;
+}
+.cuisine-hub-recipes a:hover {
+  border-color: rgba(36,113,42,.35);
+  background: #f7faf7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(36,113,42,.08);
+  color: #14532D;
+}
+.cuisine-hub-recipes a:hover::after { opacity: 1; transform: translateX(0); }
+.cuisine-hub-recipes a:active {
+  transform: translateY(0);
+  background: #eef5ee;
+  transition-duration: .06s;
+}
+.cuisine-hub-recipes a:focus-visible {
+  outline: 2px solid #24712A;
+  outline-offset: 2px;
+}
+
+.cuisine-hub-back {
+  margin-top: 1.6rem;
+  font-size: .95rem;
+}
+.cuisine-hub-back a {
+  color: #24712A;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .45rem .9rem .45rem .55rem;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  transition: background-color .15s ease, color .15s ease;
+}
+.cuisine-hub-back a:hover {
+  background: rgba(36,113,42,.08);
+  color: #14532D;
+}
+
+/* RTL: flip the arrow indicator. */
+[dir="rtl"] .cuisine-hub-recipes a::after { content: '←'; margin-left: 0; margin-right: auto; }
+[dir="rtl"] .cuisine-hub-recipes a:hover::after { transform: translateX(0); }
+
+/* Mobile: tighter gaps, single column to keep tap targets full-width. */
+@media (max-width: 600px) {
+  .cuisine-hub-recipes { grid-template-columns: 1fr; gap: .5rem; }
+  .cuisine-hub-recipes a { padding: .85rem 1rem; font-size: .95rem; }
+  .cuisine-card { padding: 1.15rem 1.25rem 1.05rem; }
+}
+
 /* ── Footer override for content pages ── */
 .app-footer a { color: var(--ink-2,#4b5563); text-decoration: none; }
 .app-footer a:hover { color: #24712A; }

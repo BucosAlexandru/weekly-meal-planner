@@ -3391,21 +3391,21 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
              cuisineHubHreflangs(originSlug));
 
+  // data-cuisine-hub + data-cuisine-label drive the back-pill context-restore
+  // logic in content.js: when a user clicks a recipe link from a cuisine hub
+  // page, the recipe page's floating "Back to recipes" pill is rewritten to
+  // point back to this hub (e.g. "← Italia" → /ro/bucatarie/italy/) instead
+  // of the generic recipe index.
   return `${head}
-${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-main" data-cuisine-hub="1" data-cuisine-label="${esc(display)}" data-cuisine-href="${canonical}">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(display)}</span></nav>
     <h1>${flag} ${hub.h1(esc(display))}</h1>
     <p class="content-hero-desc">${hub.intro(esc(display), recs.length)}</p>
   </div></section>
   <section class="content-section"><div class="content-section-inner">
-    <div class="recipe-groups-grid">
-      <div class="recipe-origin-group">
-        <h2 class="origin-title">${flag} ${esc(display)} <span class="recipe-count">${recs.length}</span></h2>
-        <ul class="recipe-origin-list">${cards}</ul>
-      </div>
-    </div>
-    <p style="margin-top:1.5rem"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
+    <ul class="cuisine-hub-recipes" aria-label="${esc(display)}">${cards}</ul>
+    <p class="cuisine-hub-back"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
@@ -3418,21 +3418,28 @@ function cuisineHubIndexPage(eligible, lc_code) {
   const rl    = RECIPE_LANG[lc_code];
   const canonical = `/${lc_code}/${hub.prefix}/`;
 
+  // Cards use the "stretched link" accessibility pattern: the whole card is
+  // a click-target via a single .cuisine-card-link (absolutely positioned,
+  // inset:0). Recipe links inside stay independently clickable because they
+  // get a higher z-index in CSS. No nested <a> elements (which would be
+  // invalid HTML and break the a11y tree).
   const cards = eligible.map(([enKey, recs]) => {
-    const display = recs[0].origin?.[lc_code] || enKey;
-    const flag    = COUNTRY_FLAG[enKey] || '🌍';
+    const display    = recs[0].origin?.[lc_code] || enKey;
+    const flag       = COUNTRY_FLAG[enKey] || '🌍';
     const originSlug = slug(enKey);
+    const hubHref    = `/${lc_code}/${hub.prefix}/${originSlug}/`;
     return `
-    <div class="recipe-origin-group">
-      <h2 class="origin-title"><a href="/${lc_code}/${hub.prefix}/${originSlug}/">${flag} ${esc(display)}</a> <span class="recipe-count">${recs.length}</span></h2>
-      <ul class="recipe-origin-list">
+    <article class="recipe-origin-group cuisine-card">
+      <a class="cuisine-card-link" href="${hubHref}" aria-label="${esc(display)}"></a>
+      <h2 class="origin-title"><span class="origin-title-text">${flag} ${esc(display)}</span> <span class="recipe-count">${recs.length}</span></h2>
+      <ul class="recipe-origin-list cuisine-card-sublist">
         ${recs.slice(0, 6).map(r => {
           const rn = r.name?.[lc_code] || r.name?.en || r.name?.ro || '';
           const rs = slug(r.name?.en || r.name?.ro || rn);
           return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
         }).join('')}
       </ul>
-    </div>`;
+    </article>`;
   }).join('');
 
   const jsonLd = JSON.stringify({
