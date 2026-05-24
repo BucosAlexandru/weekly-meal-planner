@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Beans with Sausages</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/romania/">रोमानिया</a> › <span>Beans with Sausages</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Beans with Sausages" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 दोपहर का खाना · रोमानिया</div>
+      <div class="recipe-badge">🇷🇴 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/romania/">रोमानिया</a></div>
       <h1>Beans with Sausages</h1>
       <p class="recipe-tagline">फसोले कू कार्नाची रोमानियाई घरों का सर्दियों का व्यंजन है — सफेद बीन्स को स्मोक्ड पोर्क सॉसेज, प्याज़, गाजर, टमाटर पेस्ट और तेज़ पत्ते के साथ धीमी आँच पर तब तक पकाया जाता है जब तक तरल गाढ़ा और गहरी सुगंध से भर नहीं जाता। सॉसेज चर्बी और धुएँदार स्वाद जोड़ता है, जो एक साधारण फलीदार सब्ज़ी को पेट भरने वाले भोजन में बदल देता है। अचार और घर की रोटी या पोलेंटा के साथ परोसा जाता है।
 
@@ -141,7 +141,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

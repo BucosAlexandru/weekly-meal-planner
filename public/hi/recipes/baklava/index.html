@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>बक्लावा</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/turkey/">तुर्की</a> › <span>बक्लावा</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="baklava" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/631783-312x231.jpg" alt="बक्लावा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇷 मिठाई · तुर्की</div>
+      <div class="recipe-badge">🇹🇷 मिठाई · <a class="recipe-badge-origin" href="/hi/vyanjan/turkey/">तुर्की</a></div>
       <h1>बक्लावा</h1>
       <p class="recipe-tagline">बक्लावा इस्तांबुल की ओटोमन शाही रसोइयों में विकसित हुई और दरबार की विशिष्ट मिठाई बन गई। वार्षिक बक्लावा अलायी — रमजान की पंद्रहवीं को जनिसरी सैनिकों को थालियां पहुंचाने की औपचारिक परंपरा — दर्शाती है कि यह ओटोमन समारोही जीवन में कितनी केंद्रीय थी। तुर्की, लेबनान, ग्रीस और अन्य इस पर अपना दावा करते हैं; गाज़ियान्टेप के पास यूनेस्को का भौगोलिक संकेत है।
 
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇷 तुर्की की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/turkey/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/menemen/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="menemen">🍽️</div>

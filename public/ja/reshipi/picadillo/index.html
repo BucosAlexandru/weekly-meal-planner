@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ピカディージョ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/cuba/">キューバ</a> › <span>ピカディージョ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="picadillo" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Picadillo_and_rice.jpg/330px-Picadillo_and_rice.jpg" alt="ピカディージョ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇺 ディナー · キューバ</div>
+      <div class="recipe-badge">🇨🇺 ディナー · <a class="recipe-badge-origin" href="/ja/ryori/cuba/">キューバ</a></div>
       <h1>ピカディージョ</h1>
       <p class="recipe-tagline">ピカディージョは日常のキューバ料理です——牛ひき肉をトマト・玉ねぎ・ニンニク・ピーマン、そして意外な甘じょっぱい組み合わせのグリーンオリーブとレーズンと一緒に炒めた香り豊かなハッシュです。アンダルシア料理に由来するこのスペイン風の甘酸っぱい組み合わせがピカディージョにキューバ独自の風味を与えます。
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇺 キューバのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/cuba/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/ropa-vieja/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ropa-vieja">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Pho</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/vietnam/">Vietnam</a> › <span>Pho</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1096250-312x231.jpg" alt="Pho" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Mittagessen · Vietnam</div>
+      <div class="recipe-badge">🇻🇳 Mittagessen · <a class="recipe-badge-origin" href="/de/kueche/vietnam/">Vietnam</a></div>
       <h1>Pho</h1>
       <p class="recipe-tagline">Pho entstand Anfang des 20. Jahrhunderts im Norden Vietnams — höchstwahrscheinlich in den Städten des Roten Flussdelta, bevor es sich nach Hanoi verbreitete — und trägt Spuren der französischen Kolonialküche in seiner Knochenbrühen-Methode und der langen Kochzeit. Das Land ist bis heute gespalten: Hanois Version ist karg und salzig, mit dünnen Nudeln und klarer Brühe; die Version aus Ho-Chi-Minh-Stadt ist süßer, reicher, mit Kräutern, Sprossen, Hoisin und Sriracha.
 
@@ -141,11 +141,13 @@ Die Brühe ist alles. Zwiebel und Ingwer werden direkt über der Flamme angebran
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Weitere Rezepte aus Vietnam</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/vietnam/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/banh-mi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="banh-mi">🍽️</div>

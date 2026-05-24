@@ -71,7 +71,8 @@
           <p class="cuisine-hero-desc">3 وصفة أصيلة من المغرب مع المكونات وطرق التحضير والقيم الغذائية. كل وصفة يمكن إضافتها إلى خطة الوجبات الأسبوعية المجانية.</p>
         </div>
         <figure class="cuisine-hero-image" aria-hidden="true">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.style.display='none'"/>
+          <span class="cuisine-hero-image-fallback" aria-hidden="true">🇲🇦</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>
         </figure>
       </div>
     </div>
@@ -80,7 +81,8 @@
     <ul class="cuisine-tile-grid" aria-label="المغرب"><li>
       <a class="cuisine-tile cuisine-tile--featured" href="/ar/wasafat/harira/">
         <span class="cuisine-tile-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+          <span class="cuisine-tile-img-fallback" aria-hidden="true">🇲🇦</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>
         </span>
         <span class="cuisine-tile-body">
           <h3 class="cuisine-tile-title">حريرة</h3>
@@ -91,7 +93,8 @@
     </li><li>
       <a class="cuisine-tile" href="/ar/wasafat/tagine/">
         <span class="cuisine-tile-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+          <span class="cuisine-tile-img-fallback" aria-hidden="true">🇲🇦</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>
         </span>
         <span class="cuisine-tile-body">
           <h3 class="cuisine-tile-title">طاجين</h3>
@@ -101,8 +104,9 @@
       </a>
     </li><li>
       <a class="cuisine-tile" href="/ar/wasafat/lamb-tagine/">
-        <span class="cuisine-tile-img">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+        <span class="cuisine-tile-img" data-img-rot="1">
+          <span class="cuisine-tile-img-fallback" aria-hidden="true">🇲🇦</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>
         </span>
         <span class="cuisine-tile-body">
           <h3 class="cuisine-tile-title">طاجين لحم الضأن</h3>

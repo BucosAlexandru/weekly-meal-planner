@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Pasticada</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/croatia/">Croazia</a> › <span>Pasticada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dalmatinska-pasticada" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 Cena · Croazia</div>
+      <div class="recipe-badge">🇭🇷 Cena · <a class="recipe-badge-origin" href="/it/cucina/croatia/">Croazia</a></div>
       <h1>Pasticada</h1>
       <p class="recipe-tagline">La pašticada dalmata è il piatto celebrativo per eccellenza della costa croata, servito a matrimoni, battesimi e grandi occasioni familiali in Dalmazia. La ricetta è secolare e compare nei libri di cucina dalmati a influenza veneziana del XVIII secolo, riflettendo il lungo periodo del dominio veneziano sulla costa dalmata.
 
@@ -137,7 +137,9 @@ La preparazione è un processo di due giorni. Il manzo viene lardellato — agli
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

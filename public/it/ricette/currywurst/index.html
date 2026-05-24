@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Currywurst</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/germany/">Germania</a> › <span>Currywurst</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="currywurst" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20220430_currywurst.jpg/330px-20220430_currywurst.jpg" alt="Currywurst" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 Spuntino · Germania</div>
+      <div class="recipe-badge">🇩🇪 Spuntino · <a class="recipe-badge-origin" href="/it/cucina/germany/">Germania</a></div>
       <h1>Currywurst</h1>
       <p class="recipe-tagline">La currywurst è l'icona dello street food berlinese — una salsiccia di maiale fritta tagliata a fette, servita con ketchup o densa salsa di pomodoro condita con curry in polvere, spolverata di curry giallo e paprica. Fu inventata nel 1949 da Herta Heuwer a Berlino-Charlottenburg mescolando ketchup, salsa Worcestershire e curry — una semplice mossa che creò un fenomeno di massa.
 
@@ -136,11 +136,13 @@ La currywurst è il cibo del chiosco di strada (Imbiss), simbolo del fast food b
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 Altre ricette da Germania</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/germany/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/schnitzel/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="schnitzel">🍽️</div>

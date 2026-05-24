@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Фо</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/vietnam/">Вьетнам</a> › <span>Фо</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1096250-312x231.jpg" alt="Фо" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Обед · Вьетнам</div>
+      <div class="recipe-badge">🇻🇳 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/vietnam/">Вьетнам</a></div>
       <h1>Фо</h1>
       <p class="recipe-tagline">Фо появился на севере Вьетнама в начале XX века — вероятно, в городах дельты Красной реки, прежде чем распространился в Ханой — и несёт следы французской колониальной кухни в методе костного бульона и длительном времени варки. Страна до сих пор разделена: ханойская версия сдержанная и солёная, с тонкой лапшой и прозрачным бульоном; хошиминская — слаще, насыщеннее, с горой зелени, ростков, хойсина и шрирачи.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Ещё рецепты из Вьетнам</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/vietnam/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/banh-mi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="banh-mi">🍽️</div>

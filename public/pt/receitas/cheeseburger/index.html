@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Cheeseburger</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/usa/">EUA</a> › <span>Cheeseburger</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cheeseburger" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/635350-312x231.jpg" alt="Cheeseburger" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 Jantar · EUA</div>
+      <div class="recipe-badge">🇺🇸 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/usa/">EUA</a></div>
       <h1>Cheeseburger</h1>
       <p class="recipe-tagline">O cheeseburger é a criação emblemática dos diners americanos, nascido nos balcões do Meio-Oeste e nos drive-ins das estradas dos anos 1930 e aperfeiçoado nas frigideiras de ferro fundido de milhares de cozinheiros de balcão. A técnica smash — pressionar uma bola solta de 125g sobre uma superfície em brasa — cria a crosta Maillard de bordas crocantes que define um bom hambúrguer; sem essa selagem, é apenas uma almôndega num pão. A proporção 80/20 gordura-magro é inegociável: a gordura carrega o sabor e mantém o suco até à última dentada.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 Mais receitas de EUA</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/usa/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/pancakes/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pancakes">🍽️</div>

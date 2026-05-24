@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>サビッチ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/israel/">イスラエル</a> › <span>サビッチ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="sabich" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Sabich1.png/330px-Sabich1.png" alt="サビッチ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇱 朝食 · イスラエル</div>
+      <div class="recipe-badge">🇮🇱 朝食 · <a class="recipe-badge-origin" href="/ja/ryori/israel/">イスラエル</a></div>
       <h1>サビッチ</h1>
       <p class="recipe-tagline">サビッチは揚げたナス、固茹で卵、ジャガイモ、タヒニ、アンバソースを詰めたピタパンです。1950年代にイスラエルに定住したイラク系ユダヤ人移民が起源と言われています。名前はアラビア語で「朝」を意味する言葉に由来すると考えられており、シャバットの朝食としての成り立ちを反映しています。安息日には料理ができないため、材料を前夜に揚げておき土曜の朝に冷たいまま組み立てていたのが始まりです。
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇱 イスラエルのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/israel/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/shakshuka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="shakshuka">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Gazpacho</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/spain/">Spagna</a> › <span>Gazpacho</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gazpacho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/662542-312x231.jpg" alt="Gazpacho" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇸 Pranzo · Spagna</div>
+      <div class="recipe-badge">🇪🇸 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/spain/">Spagna</a></div>
       <h1>Gazpacho</h1>
       <p class="recipe-tagline">Il gazpacho è la zuppa fredda emblematica dell'Andalusia, nel sud della Spagna, nata nelle fattorie bruciate dal sole della valle del Guadalquivir dove i lavoratori dei campi avevano bisogno di qualcosa di rinfrescante, nutriente e semplice. Ciò che lo distingue è il metodo, non la ricetta: pomodori maturi estivi frullati con pane raffermo, olio d'oliva emulsionato a filo e poi raffreddato a 6–8°C perché i sapori si intensifichino e la consistenza diventi setosa. Non va mai servito a temperatura ambiente — un buon gazpacho sa di Spagna in agosto.</p>
       <div class="recipe-meta-row">
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇸 Altre ricette da Spagna</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/spain/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/paella/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="paella">🍽️</div>

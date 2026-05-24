@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>辣椒牛肉</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/mexico/">墨西哥</a> › <span>辣椒牛肉</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chili-con-carne" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1697611-312x231.jpg" alt="辣椒牛肉" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 晚餐 · 墨西哥</div>
+      <div class="recipe-badge">🇲🇽 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/mexico/">墨西哥</a></div>
       <h1>辣椒牛肉</h1>
       <p class="recipe-tagline">辣椒牛肉更多是德克萨斯菜，而非墨西哥菜——这道菜在十九世纪由被称为「辣椒皇后」的街头小贩在圣安东尼奥推广，她们在城市广场的摊位上出售。菜名来自西班牙语，意为辣椒配肉，但食谱在德克萨斯演变为一道以干辣椒和牛肉为基础的炖菜。传统德克萨斯辣椒不含豆子，是否加豆至今仍有争议。
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 更多来自墨西哥的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/mexico/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

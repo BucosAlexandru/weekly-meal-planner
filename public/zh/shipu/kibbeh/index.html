@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>碎肉小麦球</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/syria/">叙利亚</a> › <span>碎肉小麦球</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kibbeh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/649403-312x231.jpg" alt="碎肉小麦球" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 晚餐 · 叙利亚</div>
+      <div class="recipe-badge">🇸🇾 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/syria/">叙利亚</a></div>
       <h1>碎肉小麦球</h1>
       <p class="recipe-tagline">基贝被认为是叙利亚和黎巴嫩的国菜，在从土耳其到埃及的整个黎凡特地区均有出现。名称源自阿拉伯语中意为球的词。细磨肉与碎麦的基本组合出现在中世纪阿拉伯烹饪书中，使基贝成为该地区记录时间最长的菜肴之一。
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 更多来自叙利亚的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/syria/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

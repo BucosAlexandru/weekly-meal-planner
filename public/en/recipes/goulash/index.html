@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Goulash</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/hungary/">Hungary</a> › <span>Goulash</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="goulash" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/644476-312x231.jpg" alt="Goulash" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Dinner · Hungary</div>
+      <div class="recipe-badge">🇭🇺 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/hungary/">Hungary</a></div>
       <h1>Goulash</h1>
       <p class="recipe-tagline">Gulyás — the word means 'herdsman' in Hungarian — started as a cattle drover's stew on the Great Plain. It became a dish of national significance in the nineteenth century, when Hungarian reformers deliberately elevated it as a symbol of Magyar identity against Habsburg cultural dominance. What the rest of the world calls goulash is often closer to pörkölt — in Hungary, gulyás is properly a soup, not a thick stew.
 
@@ -134,11 +134,13 @@ Paprika is the dish. Hungarian sweet paprika — not smoked, not hot — goes in
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 More recipes from Hungary</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/hungary/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/chicken-paprikash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-paprikash">🍽️</div>

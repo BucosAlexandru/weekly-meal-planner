@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>किमची</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/south-korea/">दक्षिण कोरिया</a> › <span>किमची</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kimchi" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Various_kimchi.jpg/330px-Various_kimchi.jpg" alt="किमची" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 साइड डिश · दक्षिण कोरिया</div>
+      <div class="recipe-badge">🇰🇷 साइड डिश · <a class="recipe-badge-origin" href="/hi/vyanjan/south-korea/">दक्षिण कोरिया</a></div>
       <h1>किमची</h1>
       <p class="recipe-tagline">किमची कोरिया का सबसे महत्वपूर्ण किण्वित खाद्य पदार्थ है और कोरियाई व्यंजन का आधारभूत तत्व है। नमक और मसालों में सब्जियों को संरक्षित करने की परंपरा सदियों पुरानी है। सत्रहवीं शताब्दी में जापान के रास्ते अमेरिका से आई लाल मिर्च के जुड़ने से किमची अपने आधुनिक रूप में बदली और इसे विशिष्ट तीखापन और लाल रंग मिला।
 
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 दक्षिण कोरिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/south-korea/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/tteokbokki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tteokbokki">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Fesenjan</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/iran/">Iran</a> › <span>Fesenjan</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fesenjan" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Khoresht-e_fesenjan.jpg/330px-Khoresht-e_fesenjan.jpg" alt="Fesenjan" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇷 Dîner · Iran</div>
+      <div class="recipe-badge">🇮🇷 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/iran/">Iran</a></div>
       <h1>Fesenjan</h1>
       <p class="recipe-tagline">Le fesenjan est un khoresh persan — un ragoût épais et sombre — défini par deux ingrédients qui façonnent entièrement son caractère : noix moulues et mélasse de grenade. Les noix sont grillées et réduites en pâte, puis mijotées lentement avec la mélasse jusqu'à ce que le mélange vire au presque noir, l'acidité de la grenade équilibrant le gras et l'amertume de la noix.
 
@@ -135,11 +135,13 @@ Le poulet ou le canard est la protéine la plus courante, braisé directement da
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇷 Plus de recettes de Iran</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/iran/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/ghormeh-sabzi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ghormeh-sabzi">🍽️</div>

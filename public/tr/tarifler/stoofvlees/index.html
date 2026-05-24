@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Stoofvlees</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/belgium/">Belçika</a> › <span>Stoofvlees</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stoofvlees" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jielbeaumadier_carbonade_flamande_2_2012.jpg/330px-Jielbeaumadier_carbonade_flamande_2_2012.jpg" alt="Stoofvlees" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Akşam yemeği · Belçika</div>
+      <div class="recipe-badge">🇧🇪 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/belgium/">Belçika</a></div>
       <h1>Stoofvlees</h1>
       <p class="recipe-tagline">Stoofvlees — Fransızca'da carbonnade flamande olarak bilinir — Belçika'nın en simgesel yavaş pişirme yemeğidir: sığır eti ve soğanlar, et parçalanana ve sos parlak bir maun renkli et suyu haline gelene kadar Belçika koyu birasında kavurulur. Orta Çağ'dan beri yendiği Flaman bölgesiyle yakından ilişkilidir. Belçika kahverengi birası — maltolu tatlılığıyla — Fransız bourguignon'unda şarabın sağladığı lezzet tabanını sunar.
 
@@ -134,11 +134,13 @@ Ekmek koyulaştırıcı, tanımlayıcı tekniktir: Dijon hardallı dilimler, har
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 Belçika tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/belgium/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/moules-frites/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moules-frites">🍽️</div>

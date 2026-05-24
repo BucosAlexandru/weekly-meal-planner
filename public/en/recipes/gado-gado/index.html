@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Gado-Gado</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/indonesia/">Indonesia</a> › <span>Gado-Gado</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gado-gado" id="recipe-photo-main">🥗<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gado_gado_jakarta.jpg/330px-Gado_gado_jakarta.jpg" alt="Gado-Gado" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Salad · Indonesia</div>
+      <div class="recipe-badge">🇮🇩 Salad · <a class="recipe-badge-origin" href="/en/cuisine/indonesia/">Indonesia</a></div>
       <h1>Gado-Gado</h1>
       <p class="recipe-tagline">Gado-gado is an Indonesian salad of boiled and blanched vegetables, fried tofu and tempeh, and hard-boiled egg, brought together by a thick peanut sauce poured warm at the table. The dish is eaten across Indonesia but is most closely associated with Jakarta and West Java. The name means something close to 'mix-mix' in colloquial Indonesian, describing the approach: a varied combination of whatever is available.
 
@@ -140,11 +140,13 @@ The peanut sauce is the defining element and varies by region — some versions 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 More recipes from Indonesia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/indonesia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>

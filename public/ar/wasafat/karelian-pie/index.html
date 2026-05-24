@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>فطيرة كاريليا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/finland/">فنلندا</a> › <span>فطيرة كاريليا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="فطيرة كاريليا" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 فطور · فنلندا</div>
+      <div class="recipe-badge">🇫🇮 فطور · <a class="recipe-badge-origin" href="/ar/matbakh/finland/">فنلندا</a></div>
       <h1>فطيرة كاريليا</h1>
       <p class="recipe-tagline">تأتي فطيرة كاريليا — كارياالانبييراكا — من منطقة كاريليا، وهي أرض تاريخية تنقسم حالياً بين فنلندا وروسيا. الأغلفة البيضاوية مصنوعة من عجينة جاودار رقيقة مقرمشة تحتضن حشوة ناعمة من عصيدة الأرز المطبوخة ببطء في الحليب؛ وحشوة البطاطس بديل تقليدي بالقدر ذاته. تُخبز الفطائر على حرارة عالية.
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 المزيد من وصفات فنلندا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/finland/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>

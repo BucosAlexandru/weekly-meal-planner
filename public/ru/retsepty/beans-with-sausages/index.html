@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Фасоль с колбасой</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/romania/">Румыния</a> › <span>Фасоль с колбасой</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Фасоль с колбасой" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 Обед · Румыния</div>
+      <div class="recipe-badge">🇷🇴 Обед · <a class="recipe-badge-origin" href="/ru/kuhnya/romania/">Румыния</a></div>
       <h1>Фасоль с колбасой</h1>
       <p class="recipe-tagline">Фасоль с колбасой — зимнее блюдо румынского дома: белая фасоль медленно тушится вместе с копчёной свиной колбасой, луком, морковью, томатной пастой и лавровым листом, пока бульон не загустеет и не наполнится глубоким ароматом. Колбаса добавляет жир и дымность, превращая скромную бобовую в сытное, согревающее блюдо. Подаётся с солениями и домашним хлебом или мамалыгой.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 Ещё рецепты из Румыния</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/romania/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/tripe-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>

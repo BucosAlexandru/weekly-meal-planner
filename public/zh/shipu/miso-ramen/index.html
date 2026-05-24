@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>味噌拉面</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/japan/">日本</a> › <span>味噌拉面</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="miso-ramen" id="recipe-photo-main">🍽️<img src="/images/miso-ramen.jpg" alt="味噌拉面" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 午餐 · 日本</div>
+      <div class="recipe-badge">🇯🇵 午餐 · <a class="recipe-badge-origin" href="/zh/caixi/japan/">日本</a></div>
       <h1>味噌拉面</h1>
       <p class="recipe-tagline">味噌拉面是札幌的发明，诞生于1950年代，当时一位北海道面食摊的老板在某个寒冷的冬夜开始往汤里加入发酵豆酱。北海道的冬天需要一碗足够浓厚的汤来保住温度，而味噌——油脂丰富、咸鲜深厚、充满鲜味——能做到这一点，清澈的高汤做不到。
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 更多来自日本的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/japan/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

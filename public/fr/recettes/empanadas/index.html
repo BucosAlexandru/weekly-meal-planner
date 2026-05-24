@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Empanadas</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/argentina/">Argentine</a> › <span>Empanadas</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="empanadas" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/653362-312x231.jpg" alt="Empanadas" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇷 En-cas · Argentine</div>
+      <div class="recipe-badge">🇦🇷 En-cas · <a class="recipe-badge-origin" href="/fr/cuisine/argentina/">Argentine</a></div>
       <h1>Empanadas</h1>
       <p class="recipe-tagline">Les empanadas sont arrivées en Argentine avec les colons espagnols au XVIe siècle — le nom vient d'« empanar », envelopper dans de la pâte — mais la version argentine a développé sa propre identité au fil des siècles suivants. Chaque province a ses propres conventions de garniture : Salta préfère une viande bovine abondamment épicée au cumin avec de la pomme de terre ; Mendoza ajoute des raisins secs et des olives ; Tucumán garde la farce plus simple. Les différences régionales sont prises au sérieux.
 
@@ -133,11 +133,13 @@ La garniture traditionnelle argentine — le picadillo — associe du bœuf hach
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇷 Plus de recettes de Argentine</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/argentina/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/milanesa/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="milanesa">🍽️</div>

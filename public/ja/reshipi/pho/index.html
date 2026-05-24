@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>フォー</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/vietnam/">ベトナム</a> › <span>フォー</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1096250-312x231.jpg" alt="フォー" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 ランチ · ベトナム</div>
+      <div class="recipe-badge">🇻🇳 ランチ · <a class="recipe-badge-origin" href="/ja/ryori/vietnam/">ベトナム</a></div>
       <h1>フォー</h1>
       <p class="recipe-tagline">フォーは20世紀初頭にベトナム北部で生まれ、紅河デルタの都市からハノイへと広がった。骨ブロスの製法と長い煮込み時間にはフランス植民地料理の痕跡が残る。味の好みは南北で今も異なる: ハノイの「フォー・バック」は質素で塩辛く、細麺と澄んだスープが特徴。ホーチミン市の「フォー・ナム」はより甘く、コクがあり、山盛りのハーブ・もやし・ホイシン・スリラチャが付く。
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 ベトナムのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/vietnam/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/banh-mi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="banh-mi">🍽️</div>

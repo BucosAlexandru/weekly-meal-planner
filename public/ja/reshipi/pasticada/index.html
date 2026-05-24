@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>パスティチャーダ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/croatia/">クロアチア</a> › <span>パスティチャーダ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasticada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg/330px-Sinjski_aramba%C5%A1i_-_priprema_-_kulturna_ba%C5%A1tina_%C5%A1ibensko-kninske_%C5%BEupanije.jpg" alt="パスティチャーダ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 夕食 · クロアチア</div>
+      <div class="recipe-badge">🇭🇷 夕食 · <a class="recipe-badge-origin" href="/ja/ryori/croatia/">クロアチア</a></div>
       <h1>パスティチャーダ</h1>
       <p class="recipe-tagline">パシティチャーダはダルマチアの象徴的な料理です——ワインビネガー、ニンニク、スパイスで数日間マリネした牛肉のロールが豚の脂肪、ニンジン、クローブで刺され、赤ワイン、プルーンジュース、そしてヨーロッパ料理では珍しく複雑なスパイスミックス（クローブ、シナモン、ナツメグ）で何時間も煮込まれます。結果は甘酸っぱい、濃く厚いソースを伴う極めて柔らかい肉です。
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇷 クロアチアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/croatia/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/dalmatinska-pasticada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dalmatinska-pasticada">🍽️</div>

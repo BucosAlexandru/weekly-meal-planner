@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>فتة</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/syria/">سوريا</a> › <span>فتة</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fatteh" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg/330px-%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg" alt="فتة" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 فطور · سوريا</div>
+      <div class="recipe-badge">🇸🇾 فطور · <a class="recipe-badge-origin" href="/ar/matbakh/syria/">سوريا</a></div>
       <h1>فتة</h1>
       <p class="recipe-tagline">الفتة طبق سوري متعدد الطبقات من الخبز العربي المحمص والحمص وصلصة اللبن بالثوم، ينتهي برشة زبدة ساخنة مع الصنوبر والبابريكا. يأتي الاسم من الفعل العربي «يفت» في إشارة إلى الخبز المفتّت في القاعدة. يُؤكل في أرجاء المشرق العربي من سوريا إلى مصر، في الغالب كوجبة صباحية وباستمرار خلال رمضان.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 المزيد من وصفات سوريا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/syria/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

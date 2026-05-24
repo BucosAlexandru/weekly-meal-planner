@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>에구시 수프</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/nigeria/">나이지리아</a> › <span>에구시 수프</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="egusi-soup" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/330px-EGUSI.JPG" alt="에구시 수프" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 저녁 · 나이지리아</div>
+      <div class="recipe-badge">🇳🇬 저녁 · <a class="recipe-badge-origin" href="/ko/yori/nigeria/">나이지리아</a></div>
       <h1>에구시 수프</h1>
       <p class="recipe-tagline">에구시 수프는 나이지리아의 소울푸드입니다. 볶아서 간 에구시 씨앗(쓴 멜론의 친척)을 붉은 팜유에 고기(소고기, 염소고기, 닭고기), 호박 잎이나 시금치, 고추와 함께 끓여 만든 진한 소스입니다. 에구시 씨앗은 독특한 질감을 만들어냅니다: 겉은 알갱이가 있고 안은 크림 같습니다.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 나이지리아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/nigeria/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/jollof-rice/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="jollof-rice">🍽️</div>

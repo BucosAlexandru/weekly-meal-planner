@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>芝士汉堡</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/usa/">美国</a> › <span>芝士汉堡</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cheeseburger" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/635350-312x231.jpg" alt="芝士汉堡" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 晚餐 · 美国</div>
+      <div class="recipe-badge">🇺🇸 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/usa/">美国</a></div>
       <h1>芝士汉堡</h1>
       <p class="recipe-tagline">芝士汉堡是美国餐厅的标志性发明，诞生于1930年代中西部的午餐吧台和公路驾车购食店，在无数快餐厨师的铸铁平底锅上日臻完善。Smash技法——将松散的125克肉球压在极热的铸铁表面——制造出花边酥脆的马亿尔反应焦壳，这正是一块优秀肉饼的精髓所在；没有这一步煎烙，不过是一颗肉丸夹在面包里。80/20的肥瘦比不容商量：脂肪承载风味，令每一口都保持多汁。</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 更多来自美国的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/usa/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/pancakes/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pancakes">🍽️</div>

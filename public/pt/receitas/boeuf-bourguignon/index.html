@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Boeuf Bourguignon</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/france/">França</a> › <span>Boeuf Bourguignon</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="boeuf-bourguignon" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Beef_bourguignon_NYT.jpg/330px-Beef_bourguignon_NYT.jpg" alt="Boeuf Bourguignon" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Jantar · França</div>
+      <div class="recipe-badge">🇫🇷 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/france/">França</a></div>
       <h1>Boeuf Bourguignon</h1>
       <p class="recipe-tagline">O boeuf bourguignon é a joia gastronômica da região da Borgonha na França, um prato que transforma a carne bovina em veludo líquido através de longas horas de cozimento em vinho tinto. A receita remonta às cozinhas rurais francesas, onde era usada para amaciar os cortes mais duros.
 
@@ -141,11 +141,13 @@ Cada panela desenvolve seu próprio caráter por meio da guarnição de cenouras
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Mais receitas de França</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/france/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>لوك لاك</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/cambodia/">كمبوديا</a> › <span>لوك لاك</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lok-lak" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 غداء · كمبوديا</div>
+      <div class="recipe-badge">🇰🇭 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/cambodia/">كمبوديا</a></div>
       <h1>لوك لاك</h1>
       <p class="recipe-tagline">لوك لاك هو أشهر أطباق لحم البقر في كمبوديا، نشأ من تقاطع المطبخ الاستعماري الفرنسي وتقنيات المهاجرين الصينيين. تُقلى مكعبات اللحم المتبّلة على نار عالية مع الثوم وصلصة المحار وكميات وافرة من الفلفل الأسود، لتنتج قطعاً لامعة غنية النكهة.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 المزيد من وصفات كمبوديا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/cambodia/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/amok/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="amok">🍽️</div>

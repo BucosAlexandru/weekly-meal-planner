@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tagine cu miel</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/morocco/">Maroc</a> › <span>Tagine cu miel</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lamb-tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tagine cu miel" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Cină · Maroc</div>
+      <div class="recipe-badge">🇲🇦 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/morocco/">Maroc</a></div>
       <h1>Tagine cu miel</h1>
       <p class="recipe-tagline">Tagine cu miel este un simbol al bucătăriei marocane — o tocăniță gătită lent în vasul de lut conic (tagine), care captează aburii și întoarce sucurile înapoi în mâncare. Mielul devine fragil în ore de gătit lent cu ceapă, usturoi, caise uscate, migdale și amestecul de condimente ras el hanout, creând un sos concentrat dulce-picant.
 
@@ -141,11 +141,13 @@ Tagine-ul este gătit tradițional pe jar sau în cuptor cu lemne. Se servește 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Alte rețete din Maroc</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/morocco/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>

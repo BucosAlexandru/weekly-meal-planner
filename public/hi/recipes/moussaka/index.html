@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Moussaka</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/greece/">Greece</a> › <span>Moussaka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moussaka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MussakasMeMelitsanesKePatates01.JPG/330px-MussakasMeMelitsanesKePatates01.JPG" alt="Moussaka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Dinner · Greece</div>
+      <div class="recipe-badge">🇬🇷 Dinner · <a class="recipe-badge-origin" href="/hi/vyanjan/greece/">Greece</a></div>
       <h1>Moussaka</h1>
       <p class="recipe-tagline">मूसाका मध्य पूर्व और बाल्कन में कई रूपों में मौजूद है, लेकिन ग्रीक संस्करण जानबूझकर मानकीकरण के जरिए अंतरराष्ट्रीय स्तर पर सबसे अधिक पहचाने जाने वाला बन गया। फ्रांस में प्रशिक्षित शेफ निकोलाओस त्सेलेमेंटेस ने 1920 के दशक में एक नुस्खा प्रकाशित किया जिसमें परतदार बैंगन और कीमे पर बेशामेल टॉपिंग जोड़ी गई।
 
@@ -139,7 +139,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

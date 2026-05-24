@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Bún bò Huế</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/vietnam/">Vietnam</a> › <span>Bún bò Huế</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="b-n-b-hu" id="recipe-photo-main">🍽️<img src="/images/b-n-b-hu.webp" alt="Bún bò Huế" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Öğle yemeği · Vietnam</div>
+      <div class="recipe-badge">🇻🇳 Öğle yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/vietnam/">Vietnam</a></div>
       <h1>Bún bò Huế</h1>
       <p class="recipe-tagline">Bún bò Huế, Vietnam'ın merkezindeki eski imparatorluk başkenti Huế'den gelir ve şehrin simge yemeklerinden biridir. Berrak, hafif ve nüanslı bir çorba olan pho'nun aksine, bún bò Huế yoğun baharatlıdır: limonotu ve fermente karides ezmesi, suya karmaşık ve doyurucu bir derinlik katarken, acı biber yağı onu diğer Vietnam erişte çorbalarından ayıran rengi ve sıcaklığı sağlar. Yuvarlak pirinç eriştesi, düz pho eriştelerin aksine daha kalın olup sıcak suda dokusunu korur.
 
@@ -135,11 +135,13 @@ Su, hem domuz incik hem de dana incik gerektirir — domuz kısmı jelatin ve g�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Vietnam tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/vietnam/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/pho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pho">🍽️</div>

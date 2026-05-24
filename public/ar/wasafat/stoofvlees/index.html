@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>ستوففليس</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/belgium/">بلجيكا</a> › <span>ستوففليس</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stoofvlees" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jielbeaumadier_carbonade_flamande_2_2012.jpg/330px-Jielbeaumadier_carbonade_flamande_2_2012.jpg" alt="ستوففليس" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 عشاء · بلجيكا</div>
+      <div class="recipe-badge">🇧🇪 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/belgium/">بلجيكا</a></div>
       <h1>ستوففليس</h1>
       <p class="recipe-tagline">الستوففليس — المعروف بالكربوناد الفلامانية بالفرنسية — هو أبرز أطباق الطهي البطيء في بلجيكا: لحم بقري وبصل يُبرّزان في الجعة البلجيكية الداكنة حتى يتفكك اللحم ويصبح الصلصة مرقاً لامعاً بلون خشب الماهوجني. يرتبط ارتباطاً وثيقاً بمنطقة فلاندرز، حيث يُؤكل منذ القرون الوسطى. تُوفّر الجعة البنية البلجيكية — بحلاوتها الشعيرية — قاعدة النكهة التي يُضيفها الخمر في البورغينيون الفرنسي.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 المزيد من وصفات بلجيكا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/belgium/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/moules-frites/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moules-frites">🍽️</div>

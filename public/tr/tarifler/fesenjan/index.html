@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Fesenjan</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/iran/">İran</a> › <span>Fesenjan</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fesenjan" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Khoresht-e_fesenjan.jpg/330px-Khoresht-e_fesenjan.jpg" alt="Fesenjan" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇷 Akşam yemeği · İran</div>
+      <div class="recipe-badge">🇮🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/iran/">İran</a></div>
       <h1>Fesenjan</h1>
       <p class="recipe-tagline">Fesenjan bir İran khoresh'i — yoğun, koyu bir güveç — karakterini tamamen şekillendiren iki malzeme tarafından tanımlanır: öğütülmüş ceviz ve nar pekmezi. Cevizler kavrulup eziyet kıvamına gelinceye dek öğütülür, ardından pekmezle yavaşça pişirilir; karışım neredeyse siyaha dönünceye dek narın asitliği cevizin yağını ve acılığını dengeler.
 
@@ -135,11 +135,13 @@ Tavuk veya ördek en yaygın proteindir, sosu tamamen emene dek doğrudan güve�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇷 İran tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/iran/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/ghormeh-sabzi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ghormeh-sabzi">🍽️</div>

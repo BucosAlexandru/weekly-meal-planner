@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Fricassée de Poulet</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/france/">France</a> › <span>Fricassée de Poulet</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-fricass-e" id="recipe-photo-main">🍽️<img src="/images/chicken-fricass-e.webp" alt="Fricassée de Poulet" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Dîner · France</div>
+      <div class="recipe-badge">🇫🇷 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/france/">France</a></div>
       <h1>Fricassée de Poulet</h1>
       <p class="recipe-tagline">La fricassée (du verbe fricasser, cuire en morceaux) est une technique française classique pour le poulet : les morceaux sont doucement dorés au beurre sans croûte brune, puis braisés dans un bouillon ou du vin blanc avec des légumes, terminés par une sauce velouté enrichie de crème et parfois d'un jaune d'œuf pour obtenir une sauce soyeuse blanc-or.
 
@@ -138,11 +138,13 @@ C'est l'une des techniques fondamentales de la cuisine française classique, pr�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Plus de recettes de France</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/france/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

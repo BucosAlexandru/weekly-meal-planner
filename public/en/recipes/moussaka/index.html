@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Moussaka</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/greece/">Greece</a> › <span>Moussaka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moussaka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MussakasMeMelitsanesKePatates01.JPG/330px-MussakasMeMelitsanesKePatates01.JPG" alt="Moussaka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Dinner · Greece</div>
+      <div class="recipe-badge">🇬🇷 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/greece/">Greece</a></div>
       <h1>Moussaka</h1>
       <p class="recipe-tagline">Moussaka exists in various forms across the Middle East and Balkans, but the Greek version became the most internationally recognised through a deliberate standardisation. Chef Nikolaos Tselementes, who trained in France, published a recipe in the 1920s that added a béchamel topping to the layered eggplant and minced meat.
 
@@ -139,11 +139,13 @@ The eggplant must be fried before layering — this removes moisture, preventing
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 More recipes from Greece</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/greece/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

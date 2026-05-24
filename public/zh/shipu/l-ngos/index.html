@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>匈牙利油饼</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/hungary/">匈牙利</a> › <span>匈牙利油饼</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="l-ngos" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 小吃 · 匈牙利</div>
+      <div class="recipe-badge">🇭🇺 小吃 · <a class="recipe-badge-origin" href="/zh/caixi/hungary/">匈牙利</a></div>
       <h1>匈牙利油饼</h1>
       <p class="recipe-tagline">朗戈什是匈牙利的国家街头小吃——一种深炸的发酵薄饼，蓬松金黄，涂上酸奶油，撒上碎奶酪。这个词来自匈牙利语láng（火焰），指的是在面包炉火旁烘烤剩余面团的传统。如今在热油中油炸。
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 更多来自匈牙利的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/hungary/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/goulash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="goulash">🍽️</div>

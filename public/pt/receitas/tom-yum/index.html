@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Tom Yum</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/thailand/">Tailândia</a> › <span>Tom Yum</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-yum" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" alt="Tom Yum" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Almoço · Tailândia</div>
+      <div class="recipe-badge">🇹🇭 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/thailand/">Tailândia</a></div>
       <h1>Tom Yum</h1>
       <p class="recipe-tagline">Tom yum é a sopa tailandesa mais reconhecida internacionalmente, construída sobre uma combinação distinta de sabores quentes, azedos, salgados e levemente doces em um único caldo. Os aromáticos — capim-limão, galanga e folhas de kaffir — são esmagados em vez de cortados, infundindo um caldo claro com calor brilhante apoiado em cítrico. A sopa não pode ser temperada com antecedência — o equilíbrio de molho de peixe, suco de limão e açúcar de palmeira é provado e ajustado no final.
 
@@ -135,11 +135,13 @@ Tom yum goong — com camarões — é a versão mais conhecida, embora existam 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Mais receitas de Tailândia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/thailand/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/pad-thai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Houmous</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/syria/">Syrie</a> › <span>Houmous</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="hummus" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/716195-312x231.jpg" alt="Houmous" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 En-cas · Syrie</div>
+      <div class="recipe-badge">🇸🇾 En-cas · <a class="recipe-badge-origin" href="/fr/cuisine/syria/">Syrie</a></div>
       <h1>Houmous</h1>
       <p class="recipe-tagline">Le houmous — le mot arabe pour 'pois chiche' — a été revendiqué comme propriété culturelle par le Liban, Israël, la Syrie, la Palestine et l'Égypte pendant des décennies. Les arguments sont quelque peu hors de propos : le plat précède toutes ces frontières, et sa première apparition documentée dans des livres de cuisine arabes remonte à la Syrie du XIIIe siècle. Le nom complet — houmous bi tahini — décrit exactement ce que c'est.
 
@@ -130,11 +130,13 @@ La différence entre le houmous de restaurant et celui qui vaut la peine d'être
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Plus de recettes de Syrie</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/syria/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/kibbeh/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kibbeh">🍽️</div>

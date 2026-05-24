@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Bacalhau à Brás</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/portugal/">Portugal</a> › <span>Bacalhau à Brás</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bacalhau-br-s" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633251-312x231.jpg" alt="Bacalhau à Brás" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 Jantar · Portugal</div>
+      <div class="recipe-badge">🇵🇹 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/portugal/">Portugal</a></div>
       <h1>Bacalhau à Brás</h1>
       <p class="recipe-tagline">O bacalhau à Brás é uma das 365 preparações de bacalhau salgado que a cozinha portuguesa reclama — uma receita para cada dia do ano. O prato tem origem numa taberna do Bairro Alto de Lisboa no século XIX, onde um tal Brás combinou bacalhau dessalgado com batatas palha muito finas e ovos batidos.
 
@@ -131,11 +131,13 @@ O bacalhau salgado deve ser demolhado durante vinte e quatro a quarenta e oito h
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇹 Mais receitas de Portugal</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/portugal/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/francesinha/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="francesinha">🍽️</div>

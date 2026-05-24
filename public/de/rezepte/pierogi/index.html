@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Pierogi</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/poland/">Polen</a> › <span>Pierogi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pierogi" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656049-312x231.jpg" alt="Pierogi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Abendessen · Polen</div>
+      <div class="recipe-badge">🇵🇱 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/poland/">Polen</a></div>
       <h1>Pierogi</h1>
       <p class="recipe-tagline">Pierogi gehören zu den ältesten Zubereitungen der polnischen Küche und sind in Kochaufzeichnungen aus dem 13. Jahrhundert belegt. Sie werden mit der Heiligen Kinga, Polens Schutzpatronin, in Verbindung gebracht — einer Legende zufolge stammen sie aus ihrer Ankunft aus Ungarn. Die Füllung aus Kartoffeln und Quark ist die bekannteste, aber die Auswahl ist breit: Sauerkraut mit Pilzen, Hackfleisch oder süße Heidelbeeren für den Nachtisch.
 
@@ -132,11 +132,13 @@ Die Technik ist zweistufig. Zuerst werden sie in gesalzenem Wasser gekocht, bis 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇱 Weitere Rezepte aus Polen</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/poland/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/pork-schnitzel/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pork-schnitzel">🍽️</div>

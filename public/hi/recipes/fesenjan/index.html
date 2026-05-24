@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>फेसेंजान</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/iran/">ईरान</a> › <span>फेसेंजान</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fesenjan" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Khoresht-e_fesenjan.jpg/330px-Khoresht-e_fesenjan.jpg" alt="फेसेंजान" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇷 रात का खाना · ईरान</div>
+      <div class="recipe-badge">🇮🇷 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/iran/">ईरान</a></div>
       <h1>फेसेंजान</h1>
       <p class="recipe-tagline">फेसेंजान एक फ़ारसी खोरेश है — एक गाढ़ा, गहरे रंग का स्टू — जो दो ऐसी सामग्रियों से परिभाषित होता है जो इसके चरित्र को पूरी तरह आकार देती हैं: पिसे हुए अखरोट और अनार का शीरा। अखरोटों को भूनकर पेस्ट बनाया जाता है, फिर शीरे के साथ धीमी आंच पर पकाया जाता है जब तक मिश्रण लगभग काला न हो जाए — अनार की खटास अखरोट की चर्बी और कड़वाहट को संतुलित करती है।
 
@@ -135,7 +135,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

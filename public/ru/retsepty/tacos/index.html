@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Такос</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/mexico/">Мексика</a> › <span>Такос</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tacos" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/645711-312x231.jpg" alt="Такос" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Ужин · Мексика</div>
+      <div class="recipe-badge">🇲🇽 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/mexico/">Мексика</a></div>
       <h1>Такос</h1>
       <p class="recipe-tagline">Такос — это душа мексиканской уличной еды, традиция, уходящая корнями значительно глубже XX века; её можно проследить до колониальных серебряных рудников, где рабочие заворачивали мясо в кукурузные тортильи для обеденного перерыва. Основа аутентичного уличного тако — тортилья из никстамализованной кукурузы (никогда не пшеничная), обжаренная прямо над газовым огнём до появления пузырей и дымного аромата. Простота — это доктрина: мясо, свежий пико-де-гальо, кинза и лайм — каждый ингредиент на виду, ничто не спрятано под соусом.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Ещё рецепты из Мексика</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/mexico/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/guacamole/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="guacamole">🍽️</div>

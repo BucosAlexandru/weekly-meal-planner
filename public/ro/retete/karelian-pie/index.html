@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Karjalanpiirakka</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/finland/">Finlanda</a> › <span>Karjalanpiirakka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍳<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="Karjalanpiirakka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Mic dejun · Finlanda</div>
+      <div class="recipe-badge">🇫🇮 Mic dejun · <a class="recipe-badge-origin" href="/ro/bucatarie/finland/">Finlanda</a></div>
       <h1>Karjalanpiirakka</h1>
       <p class="recipe-tagline">Plăcinta careliană — karjalanpiirakka — îşi are originea în regiunea Karelia, un teritoriu istoric împărțit astăzi între Finlanda și Rusia. Cojile ovale sunt făcute dintr-un aluat subțire și crocant de secară, ce înconjoară o umplutură moale de terci de orez gătit lent în lapte; umplutura de cartofi este o alternativă la fel de tradițională. Plăcintele se coc la temperatură ridicată până când secara devine crocantă.
 
@@ -139,11 +139,13 @@ Calde din cuptor, karjalanpiirakka se ung cu un amestec de ouă fierte tare și 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Alte rețete din Finlanda</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/finland/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>

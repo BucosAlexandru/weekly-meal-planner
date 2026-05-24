@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Moqueca</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/brazil/">Brésil</a> › <span>Moqueca</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moqueca" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Moqueca.jpg/330px-Moqueca.jpg" alt="Moqueca" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 Dîner · Brésil</div>
+      <div class="recipe-badge">🇧🇷 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/brazil/">Brésil</a></div>
       <h1>Moqueca</h1>
       <p class="recipe-tagline">La moqueca est un ragoût brésilien de poisson mijoté lentement qui existe en deux formes régionales distinctes. La version bahianaise — moqueca baiana — utilise du dendê (huile de palme rouge) et du lait de coco, lui conférant une riche couleur orange et une saveur distinctive façonnée par les traditions culinaires d'Afrique de l'Ouest apportées par la traite atlantique. La version capixaba d'Espírito Santo n'utilise ni l'un ni l'autre, se basant sur de l'huile d'annatto et un bouillon plus clair.
 
@@ -137,11 +137,13 @@ Le dendê est l'ingrédient qui définit le plat. Sa saveur est plus terreuse et
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 Plus de recettes de Brésil</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/brazil/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/feijoada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="feijoada">🍽️</div>

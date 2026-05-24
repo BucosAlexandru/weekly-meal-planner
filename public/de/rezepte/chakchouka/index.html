@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Chakchouka</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/tunisia/">Tunesien</a> › <span>Chakchouka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakchouka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="Chakchouka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 Abendessen · Tunesien</div>
+      <div class="recipe-badge">🇹🇳 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/tunisia/">Tunesien</a></div>
       <h1>Chakchouka</h1>
       <p class="recipe-tagline">Chakchouka ist ein ikonisches Gericht der nordafrikanischen Küche, das aus Tunesien stammt, wo in einer gewürzten Tomaten-Paprika-Sauce pochierte Eier zum Symbol des gemeinschaftlichen Frühstücks wurden. Die Einfachheit der Zutaten verbirgt eine bemerkenswerte sensorische Komplexität.
 
@@ -137,11 +137,13 @@ Von Tunesien aus verbreitete sich das Rezept in ganz Nordafrika, Israel und dem 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 Weitere Rezepte aus Tunesien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/tunisia/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/brik/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="brik">🍽️</div>

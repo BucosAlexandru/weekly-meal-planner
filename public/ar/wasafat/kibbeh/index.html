@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>كبة</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/syria/">سوريا</a> › <span>كبة</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kibbeh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/649403-312x231.jpg" alt="كبة" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 عشاء · سوريا</div>
+      <div class="recipe-badge">🇸🇾 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/syria/">سوريا</a></div>
       <h1>كبة</h1>
       <p class="recipe-tagline">تُعدّ الكبة الطبق الوطني لكل من سوريا ولبنان، وتنتشر عبر بلاد الشام من تركيا إلى مصر. الاسم مشتق من كلمة عربية تعني الكرة. يظهر المزيج الأساسي من اللحم المطحون ناعماً مع الجريش في كتب الطبخ العربية الوسيطة، مما يجعل الكبة من أقدم الأطباق الموثقة في المنطقة.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 المزيد من وصفات سوريا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/syria/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

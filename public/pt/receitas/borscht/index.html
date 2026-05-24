@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Borsch</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/russia/">Rússia</a> › <span>Borsch</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="borscht" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/664396-312x231.jpg" alt="Borsch" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 Almoço · Rússia</div>
+      <div class="recipe-badge">🇷🇺 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/russia/">Rússia</a></div>
       <h1>Borsch</h1>
       <p class="recipe-tagline">O borscht é a grande sopa do leste eslavo, um prato tão profundamente enraizado na cultura russa como na ucraniana, com origens que antecedem as fronteiras nacionais traçadas em seu redor — a UNESCO inscreveu o borscht ucraniano como patrimônio cultural imaterial em 2022. A técnica decisiva é o vinagre: o ácido adicionado com a beterraba crua ralada fixa a cor vermelho-granada que de outra forma se desvaneceria num castanho baço. Servido com uma colherada generosa de smetana fria e endro fresco, é uma refeição completa de inverno numa única tigela.</p>
       <div class="recipe-meta-row">
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 Mais receitas de Rússia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/russia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/okroshka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="okroshka">🍽️</div>

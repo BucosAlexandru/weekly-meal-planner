@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Rajma</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/india/">Hindistan</a> › <span>Rajma</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="rajma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Rajma_Masala_%2832081557778%29.jpg/330px-Rajma_Masala_%2832081557778%29.jpg" alt="Rajma" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Akşam yemeği · Hindistan</div>
+      <div class="recipe-badge">🇮🇳 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/india/">Hindistan</a></div>
       <h1>Rajma</h1>
       <p class="recipe-tagline">Rajma, Pencap'ın ruh yemeğidir — soğan, sarımsak, zencefil ve hint baharatları karışımı ile domates sosunda pişirilmiş kırmızı fasulyeden yapılmış kalın ve aromatik bir güveçtir. Kuzey Hindistan'ın temel vejetaryen yemeği olan rajma, ikonik rajma-chawal ikilisinin bir parçasıdır.
 
@@ -138,11 +138,13 @@ Rajma, hem Hindistan'da hem de diyasporada milyonlarca Pencaplı ev hanesi için
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Hindistan tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/india/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>

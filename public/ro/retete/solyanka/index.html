@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Solyanka</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/russia/">Rusia</a> › <span>Solyanka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="solyanka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Soljanka_food_05.jpg/330px-Soljanka_food_05.jpg" alt="Solyanka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 Prânz · Rusia</div>
+      <div class="recipe-badge">🇷🇺 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/russia/">Rusia</a></div>
       <h1>Solyanka</h1>
       <p class="recipe-tagline">Solyanka este supa festivă a Rusiei — un terci gros și acru cu carne de vită, cârnați afumați, șuncă, castraveți murați, măsline, capere și roșii, totul asezonat cu smântână și o felie de lămâie. Caracterul distinctiv al solyankăi este combinația de sărat, acru și picant din murăturile care formează baza savurii.
 
@@ -140,11 +140,13 @@ Solyanka nu este greu de preparat, dar necesită ingrediente de calitate și suf
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 Alte rețete din Rusia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/russia/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/borscht/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="borscht">🍽️</div>

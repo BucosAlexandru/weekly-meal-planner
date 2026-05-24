@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Lángos</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/hungary/">Hungria</a> › <span>Lángos</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="l-ngos" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 Lanche · Hungria</div>
+      <div class="recipe-badge">🇭🇺 Lanche · <a class="recipe-badge-origin" href="/pt/cozinha/hungary/">Hungria</a></div>
       <h1>Lángos</h1>
       <p class="recipe-tagline">O lángos é o snack de rua nacional da Hungria — um pão plano fermentado frito, fofo e dourado, coberto com creme azedo e queijo ralado. A palavra vem do húngaro láng (chama), referindo-se à tradição de assar a massa restante perto do forno de pão. Hoje é frito em óleo.
 
@@ -137,11 +137,13 @@ O lángos é vendido em todos os mercados, termas e festivais húngaros. As vari
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 Mais receitas de Hungria</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/hungary/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/goulash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="goulash">🍽️</div>

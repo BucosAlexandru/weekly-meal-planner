@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Tlayudas</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/mexico/">Mexique</a> › <span>Tlayudas</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tlayudas" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/330px-Tlayuda12-05oaxaca013x.jpg" alt="Tlayudas" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Dîner · Mexique</div>
+      <div class="recipe-badge">🇲🇽 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/mexico/">Mexique</a></div>
       <h1>Tlayudas</h1>
       <p class="recipe-tagline">Les tlayudas sont la pizza d'Oaxaca — une grande tortilla (30 cm) semi-sèche et croustillante de maïs enduite de frijoles negros (haricots noirs frits), couverte de fromage Oaxaca râpé, de viande (tasajo — bœuf séché, chorizo ou porc) et de garnitures fraîches. Oaxaca est l'état du sud du Mexique avec la tradition culinaire indigène la plus riche.
 
@@ -137,11 +137,13 @@ La tlayuda cuit directement sur la braise ou une plancha. On la mange pliée ou 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Plus de recettes de Mexique</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/mexico/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

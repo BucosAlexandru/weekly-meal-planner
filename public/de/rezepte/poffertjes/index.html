@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Poffertjes</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/netherlands/">Niederlande</a> › <span>Poffertjes</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="poffertjes" id="recipe-photo-main">🍰<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Poffertjes-Melkhuis_%28cropped%29.jpg/330px-Poffertjes-Melkhuis_%28cropped%29.jpg" alt="Poffertjes" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 Dessert · Niederlande</div>
+      <div class="recipe-badge">🇳🇱 Dessert · <a class="recipe-badge-origin" href="/de/kueche/netherlands/">Niederlande</a></div>
       <h1>Poffertjes</h1>
       <p class="recipe-tagline">Poffertjes sind kleine, hefige Mini-Pancakes aus den Niederlanden — klein, luftig, mit feuchtem Kern und goldener Oberfläche. Sie werden in einer speziellen Pfanne mit halbkugelförmigen Vertiefungen (Poffertjespan) gebacken, 12-20 auf einmal, und schnell mit einem Spieß gewendet. Der Teig enthält Hefe (manchmal Buchweizen), was ihnen eine luftige Textur verleiht, die sich deutlich von normalen Pfannkuchen unterscheidet.
 
@@ -134,11 +134,13 @@ Mit geschmolzener Butter und Puderzucker serviert, manchmal mit Sahne oder Sirup
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇱 Weitere Rezepte aus Niederlande</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/netherlands/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/stamppot/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stamppot">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Bibimbap</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/south-korea/">Südkorea</a> › <span>Bibimbap</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bibimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/330px-Dolsot-bibimbap.jpg" alt="Bibimbap" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Mittagessen · Südkorea</div>
+      <div class="recipe-badge">🇰🇷 Mittagessen · <a class="recipe-badge-origin" href="/de/kueche/south-korea/">Südkorea</a></div>
       <h1>Bibimbap</h1>
       <p class="recipe-tagline">Bibimbap — das Wort bedeutet schlicht 'gemischter Reis' — gehört zu den direktesten Ausdrucksformen der koreanischen Kochphilosophie: separat zubereitete Komponenten, jede einzeln gegart oder gewürzt, um ihren eigenen Charakter zu entfalten, vereint erst im Moment des Essens. Das Gericht entstand am Joseon-Königshof, wo die aufwändige Tischkultur die individuelle Zubereitung jedes Namul (gewürztes Gemüse) erforderte.
 
@@ -134,11 +134,13 @@ Gochujang, die fermentierte Chilipaste als Dressing, trägt das Gericht — aus 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Weitere Rezepte aus Südkorea</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/south-korea/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/kimchi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kimchi">🍽️</div>

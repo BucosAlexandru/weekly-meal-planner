@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Risotto</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/italy/">Italy</a> › <span>Risotto</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="risotto" id="recipe-photo-main">🍽️<img src="/images/risotto.webp" alt="Risotto" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 Dinner · Italy</div>
+      <div class="recipe-badge">🇮🇹 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/italy/">Italy</a></div>
       <h1>Risotto</h1>
       <p class="recipe-tagline">Risotto traces its roots to the Po Valley of northern Italy, where short-grain rice cultivation goes back to the fifteenth century. The dish took its defining form in Milan — risotto alla Milanese, tinted golden with saffron — and remains closely associated with Lombardy. Unlike most rice preparations, risotto achieves its creamy texture entirely from the grain's own starch, not from added cream.
 
@@ -132,11 +132,13 @@ The process is deliberate by design. The rice is toasted briefly in fat before a
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 More recipes from Italy</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/italy/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>पावलोवा</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/australia/">ऑस्ट्रेलिया</a> › <span>पावलोवा</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pavlova" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/655031-312x231.jpg" alt="पावलोवा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 मिठाई · ऑस्ट्रेलिया</div>
+      <div class="recipe-badge">🇦🇺 मिठाई · <a class="recipe-badge-origin" href="/hi/vyanjan/australia/">ऑस्ट्रेलिया</a></div>
       <h1>पावलोवा</h1>
       <p class="recipe-tagline">पावलोवा का नाम रूसी बैलेरिना अन्ना पावलोवा के नाम पर रखा गया है, जिन्होंने 1926 में ऑस्ट्रेलिया और न्यूजीलैंड का दौरा किया था। दोनों देश इस मिठाई को बनाने का दावा करते हैं, और यह विवाद लगभग एक सदी से बिना किसी समाधान के चल रहा है। सबसे पहले दस्तावेज़ीकृत व्यंजन न्यूजीलैंड में दिखते हैं, लेकिन ऑस्ट्रेलियाई रसोइयों के पास उसी समय के अपने संस्करण हैं।
 
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 ऑस्ट्रेलिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/australia/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/meat-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="meat-pie">🍽️</div>

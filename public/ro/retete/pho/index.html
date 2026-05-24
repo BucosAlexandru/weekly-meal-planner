@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Pho</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/vietnam/">Vietnam</a> › <span>Pho</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1096250-312x231.jpg" alt="Pho" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Prânz · Vietnam</div>
+      <div class="recipe-badge">🇻🇳 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/vietnam/">Vietnam</a></div>
       <h1>Pho</h1>
       <p class="recipe-tagline">Pho a luat naștere în nordul Vietnamului la începutul secolului al XX-lea — cel mai probabil în orașele din Delta Fluviului Roșu, înainte de a se răspândi la Hanoi — și poartă urme ale gătitului colonial francez în metoda sa de supă de oase și în timpul lung de fierbere. Țara este și astăzi împărțită: versiunea Hanoi este sobră și sărată, cu tăiței subțiri și supă limpede; versiunea din Ho Chi Minh este mai dulce, mai bogată, cu ierburi, muguri, hoisin și sriracha.
 
@@ -140,11 +140,13 @@ Supa este totul. Ceapa și ghimbirul sunt pârlite direct pe flacără înainte 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Alte rețete din Vietnam</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/vietnam/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/banh-mi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="banh-mi">🍽️</div>

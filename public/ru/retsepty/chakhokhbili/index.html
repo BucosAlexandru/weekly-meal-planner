@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Чахохбили</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/georgia/">Грузия</a> › <span>Чахохбили</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakhokhbili" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/%D0%A7%D0%B0%D1%85%D0%BE%D1%85%D0%B1%D0%B8%D0%BB%D0%B8.JPG/330px-%D0%A7%D0%B0%D1%85%D0%BE%D1%85%D0%B1%D0%B8%D0%BB%D0%B8.JPG" alt="Чахохбили" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 Ужин · Грузия</div>
+      <div class="recipe-badge">🇬🇪 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/georgia/">Грузия</a></div>
       <h1>Чахохбили</h1>
       <p class="recipe-tagline">Чахохбили — грузинское тушёное блюдо из курицы, название которого восходит к слову «фазан» — хохоби — напоминая о временах, когда готовили из дичи. Техника приготовления по-грузински: сначала мясо обжаривают насухо в горячей кастрюле, без масла и жидкости, чтобы добиться глубины вкуса через прямой контакт с дном.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 Ещё рецепты из Грузия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/georgia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/khachapuri/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="khachapuri">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Kung Pao Chicken</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/china/">China</a> › <span>Kung Pao Chicken</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kung-pao-chicken" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/649129-312x231.jpg" alt="Kung Pao Chicken" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 Dinner · China</div>
+      <div class="recipe-badge">🇨🇳 Dinner · <a class="recipe-badge-origin" href="/en/cuisine/china/">China</a></div>
       <h1>Kung Pao Chicken</h1>
       <p class="recipe-tagline">Kung Pao Chicken — 宫保鸡丁, Gōngbǎo Jīdīng — is a classic dish of Sichuan province, created in honour of Ding Baozhen, the 19th-century governor who held the honorary title Gong Bao (palatial guardian). The dish survived the Chinese Cultural Revolution, during which it was condemned as a symbol of feudalism, and emerged more popular than ever. The four-flavour balance — sour from Chinkiang black rice vinegar, salty from soy sauce, sweet from sugar, and numbing-hot from Sichuan chillies — is what connoisseurs describe as the defining flavour profile of wok cooking.</p>
       <div class="recipe-meta-row">
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 More recipes from China</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/china/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/sweet-and-sour-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sweet-and-sour-chicken">🍽️</div>

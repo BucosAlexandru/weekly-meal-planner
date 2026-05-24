@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Nihari</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/pakistan/">Pakistan</a> › <span>Nihari</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="nihari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nalli_Nihari_India.jpg/330px-Nalli_Nihari_India.jpg" alt="Nihari" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Cena · Pakistan</div>
+      <div class="recipe-badge">🇵🇰 Cena · <a class="recipe-badge-origin" href="/it/cucina/pakistan/">Pakistan</a></div>
       <h1>Nihari</h1>
       <p class="recipe-tagline">Nihari prende il nome dalla parola araba per mattino — nahar — perché era un piatto mangiato tradizionalmente all'alba, dopo la preghiera del fajr, dai lavoratori e dai nawab della Delhi moghul. Con il declino della capitale moghul, il piatto migrò con i cuochi di Delhi a Lucknow e poi a Karachi e Lahore.
 
@@ -135,11 +135,13 @@ La cottura lenta trasforma lo stinco di manzo in tre o quattro ore, sciogliendo 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Altre ricette da Pakistan</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/pakistan/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/biryani/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="biryani">🍽️</div>

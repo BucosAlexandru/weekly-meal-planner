@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>무사카</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/greece/">그리스</a> › <span>무사카</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moussaka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MussakasMeMelitsanesKePatates01.JPG/330px-MussakasMeMelitsanesKePatates01.JPG" alt="무사카" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 저녁 · 그리스</div>
+      <div class="recipe-badge">🇬🇷 저녁 · <a class="recipe-badge-origin" href="/ko/yori/greece/">그리스</a></div>
       <h1>무사카</h1>
       <p class="recipe-tagline">무사카는 중동과 발칸 지역에 다양한 형태로 존재하지만, 그리스 버전은 의도적인 표준화를 통해 국제적으로 가장 잘 알려진 버전이 되었습니다. 프랑스에서 훈련받은 요리사 니콜라오스 체레멘테스가 1920년대에 층층이 쌓인 가지와 다진 고기 위에 베샤멜 소스를 추가한 레시피를 발표했고,
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 그리스의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/greece/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

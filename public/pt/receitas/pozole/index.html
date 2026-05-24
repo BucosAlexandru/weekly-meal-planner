@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Pozole</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/mexico/">México</a> › <span>Pozole</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pozole" id="recipe-photo-main">🍽️<img src="/images/pozole.webp" alt="Pozole" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Almoço · México</div>
+      <div class="recipe-badge">🇲🇽 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/mexico/">México</a></div>
       <h1>Pozole</h1>
       <p class="recipe-tagline">Pozole é uma sopa ritual asteca — a palavra náuatle significa literalmente milho espumoso. O milho hominy (nixtamalizado, com o grão aberto) cozinha por horas com carne de porco e pimentas secas até desenvolver um caldo vermelho intenso e aromático. O prato era comido em cerimônias e celebrações no México pré-colombiano.
 
@@ -141,11 +141,13 @@ Servido com guarnições frias: repolho ralado, rabanete fatiado, orégano, lim�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Mais receitas de México</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/mexico/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

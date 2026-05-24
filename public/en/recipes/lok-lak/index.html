@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Lok Lak</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/cambodia/">Cambodia</a> › <span>Lok Lak</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lok-lak" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 Lunch · Cambodia</div>
+      <div class="recipe-badge">🇰🇭 Lunch · <a class="recipe-badge-origin" href="/en/cuisine/cambodia/">Cambodia</a></div>
       <h1>Lok Lak</h1>
       <p class="recipe-tagline">Lok lak is Cambodia's best-known beef dish, born from the confluence of French colonial cooking and Chinese immigrant techniques. Cubes of marinated beef are tossed over high heat with garlic, oyster sauce, and a generous measure of black pepper, producing glossy, tender pieces with savoury depth.
 
@@ -141,11 +141,13 @@ Presentation is central: the meat lands on a bed of crisp lettuce and sliced tom
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 More recipes from Cambodia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/cambodia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/amok/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="amok">🍽️</div>

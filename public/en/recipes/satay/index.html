@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Satay</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/cuisine/indonesia/">Indonesia</a> › <span>Satay</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="satay" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Sate_Udang.JPG/330px-Sate_Udang.JPG" alt="Satay" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 Snack · Indonesia</div>
+      <div class="recipe-badge">🇮🇩 Snack · <a class="recipe-badge-origin" href="/en/cuisine/indonesia/">Indonesia</a></div>
       <h1>Satay</h1>
       <p class="recipe-tagline">Satay is a Southeast Asian grilled meat dish originating in Java, Indonesia, most likely in the nineteenth century. Arab traders brought kebab traditions to the region; local cooks adapted them with turmeric, lemongrass, and coconut milk. The dish spread across the entire region — Thailand, Malaysia, Singapore, and the Philippines all have their own versions — but the Javanese form with its yellow marinade and thick peanut sauce remains the most widely recognised.
 
@@ -137,11 +137,13 @@ The peanut sauce is the defining element. Made from ground roasted peanuts with 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 More recipes from Indonesia</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/cuisine/indonesia/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>

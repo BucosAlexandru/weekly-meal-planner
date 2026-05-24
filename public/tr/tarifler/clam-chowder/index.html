@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Clam Chowder</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/usa/">ABD</a> › <span>Clam Chowder</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="clam-chowder" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Quail_07_bg_041506.jpg/330px-Quail_07_bg_041506.jpg" alt="Clam Chowder" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 Akşam yemeği · ABD</div>
+      <div class="recipe-badge">🇺🇸 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/usa/">ABD</a></div>
       <h1>Clam Chowder</h1>
       <p class="recipe-tagline">Clam chowder, Yeni İngiltere'nin simge çorbası — taze midye, patates, tütsülenmiş pastırma ve soğandan yapılmış kremalı ve yoğun bir chowder. Yüzyıllardır süren bir mutfak savaşı vardır: New England versiyonu (beyaz, kremalı) ile Manhattan versiyonu (kırmızı, domatesli); Bostonlular domatesli versiyonu neredeyse hakaret sayar.
 
@@ -139,11 +139,13 @@ Geleneksel olarak oyulmuş ekşi mayalı ekmek kasesinde servis edilir. Boston'�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 ABD tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/usa/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/cheeseburger/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>

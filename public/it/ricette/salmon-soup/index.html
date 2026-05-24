@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Zuppa di Salmone</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/cucina/finland/">Finlandia</a> › <span>Zuppa di Salmone</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="salmon-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/659056-312x231.jpg" alt="Zuppa di Salmone" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Pranzo · Finlandia</div>
+      <div class="recipe-badge">🇫🇮 Pranzo · <a class="recipe-badge-origin" href="/it/cucina/finland/">Finlandia</a></div>
       <h1>Zuppa di Salmone</h1>
       <p class="recipe-tagline">Lohikeitto — zuppa di salmone — è una delle preparazioni più familiari della Finlandia, consumata tutto l'anno dalle cucine di famiglia ai caffè sul ciglio della strada. Il piatto riflette il rapporto della Finlandia con il salmone del Baltico, da secoli ingrediente base lungo le coste e i sistemi fluviali del paese. La zuppa è volutamente semplice: pochi ingredienti, ciascuno in quantità sufficiente da emergere chiaramente.
 
@@ -136,11 +136,13 @@ La panna è ciò che distingue la zuppa di salmone finlandese dalle zuppe di pes
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Altre ricette da Finlandia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/cucina/finland/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/karelian-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="karelian-pie">🍽️</div>

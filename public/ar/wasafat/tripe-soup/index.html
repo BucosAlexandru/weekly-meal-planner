@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>شوربة الكرشة</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/romania/">رومانيا</a> › <span>شوربة الكرشة</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tripe-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/654283-312x231.jpg" alt="شوربة الكرشة" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 غداء · رومانيا</div>
+      <div class="recipe-badge">🇷🇴 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/romania/">رومانيا</a></div>
       <h1>شوربة الكرشة</h1>
       <p class="recipe-tagline">تُعدّ «شوربة الكرشة» (Ciorbă de burtă) من أكثر الأطباق التقليدية الرومانية محبةً، وجذورها ضاربة في مطابخ مقاطعتَي مونتينيا وأولتينيا. الحموضة الرقيقة من خل النبيذ الأبيض والقشدة الحامضة كاملة الدسم، إلى جانب الكرشة المطهوّة ببطء لساعات طويلة، تُنتج حساءً كثيفاً دافئاً ظلّ يُقدَّم في الأعراس والمهرجانات — وبالتقليد الشعبي كعلاج لصداع ما بعد السهر. والتقنية الأساسية هي «الدريغاتورا»: صفار البيض المُطفَّأ بمرق ساخن يُكثّف الحساء ليصبح كريميّاً ناعماً دون أن يتجبّن.</p>
       <div class="recipe-meta-row">
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 المزيد من وصفات رومانيا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/romania/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/beans-with-sausages/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="beans-with-sausages">🍽️</div>

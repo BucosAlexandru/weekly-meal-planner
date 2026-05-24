@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Arroz Chaufa</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/peru/">Peru</a> › <span>Arroz Chaufa</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="arroz-chaufa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Arroz_Chaufa_%28266361654%29.jpg/330px-Arroz_Chaufa_%28266361654%29.jpg" alt="Arroz Chaufa" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 Abendessen · Peru</div>
+      <div class="recipe-badge">🇵🇪 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/peru/">Peru</a></div>
       <h1>Arroz Chaufa</h1>
       <p class="recipe-tagline">Arroz Chaufa ist der peruanische Name für einen Stil von chinesisch gebratenem Reis, der durch die Küchen der Tusán-Gemeinschaft zu einem eigenen Gericht wurde — Nachkommen chinesischer Arbeiter, die ab Mitte des 19. Jahrhunderts nach Peru kamen. Das Wort Chaufa kommt vom kantonesischen chow fan, was gebratener Reis bedeutet, und das Gericht trägt diese Herkunft klar: die Technik ist chinesisch, aber die Zutaten verschieben sich mit der peruanischen Vorratskammer.
 
@@ -135,11 +135,13 @@ Der Reis ist einen Tag alt und kalt, bei hoher Hitze mit Eiern, Sojasoße, Knobl
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 Weitere Rezepte aus Peru</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/peru/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>

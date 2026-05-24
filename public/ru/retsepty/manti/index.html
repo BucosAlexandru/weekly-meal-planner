@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Манты</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/uzbekistan/">Узбекистан</a> › <span>Манты</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="manti" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kayseride_bir_restoranda_Kayseri_mant%C4%B1.jpg/330px-Kayseride_bir_restoranda_Kayseri_mant%C4%B1.jpg" alt="Манты" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 Ужин · Узбекистан</div>
+      <div class="recipe-badge">🇺🇿 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/uzbekistan/">Узбекистан</a></div>
       <h1>Манты</h1>
       <p class="recipe-tagline">Манты — большие паровые пельмени, распространившиеся по Центральной Азии, Кавказу и Турции через Шёлковый путь и кочевые миграции. В Узбекистане начинку традиционно рубят ножом крупно — баранина или говядина с большим количеством сырого лука, который тает при приготовлении, сохраняя мясо сочным. Тесто раскатывают тонко, каждый манты скрепляют вручную.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇿 Ещё рецепты из Узбекистан</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/uzbekistan/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/plov/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="plov">🍽️</div>

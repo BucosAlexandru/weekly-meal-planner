@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>رامن شويو</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/japan/">اليابان</a> › <span>رامن شويو</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="shoyu-ramen" id="recipe-photo-main">🍽️<img src="/images/shoyu-ramen.jpg" alt="رامن شويو" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 غداء · اليابان</div>
+      <div class="recipe-badge">🇯🇵 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/japan/">اليابان</a></div>
       <h1>رامن شويو</h1>
       <p class="recipe-tagline">رامن الشويو هو أسلوب طوكيو وأقدم عائلات الرامن الكبرى — الوعاء الذي وضع النموذج عندما فتحت أكشاك النودلز الصينية في العاصمة مطلع القرن العشرين. المرق كهرماني صافٍ: مرق دجاج أو داشي متبّل بتاري الصويا، خفيف بما يكفي ليُبرز كل مكوّن على الحنك.
 
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 المزيد من وصفات اليابان</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/japan/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

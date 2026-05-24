@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Nasi lemak</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/malaysia/">Malaisie</a> › <span>Nasi lemak</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="nasi-lemak" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/330px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg" alt="Nasi lemak" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 Petit-déjeuner · Malaisie</div>
+      <div class="recipe-badge">🇲🇾 Petit-déjeuner · <a class="recipe-badge-origin" href="/fr/cuisine/malaysia/">Malaisie</a></div>
       <h1>Nasi lemak</h1>
       <p class="recipe-tagline">Nasi lemak — dont le nom signifie riz gras ou riche en malais — est le plat national de la Malaisie et le petit-déjeuner de la nation. Le riz est cuit dans du lait de coco avec des feuilles de pandan et servi entouré d'un ensemble d'accompagnements fixes : sambal épicé, ikan bilis (anchois croustillants), cacahuètes grillées, concombre émincé et un œuf dur ou frit. Traditionnellement enveloppé dans une feuille de bananier.
 
@@ -141,11 +141,13 @@ Chaque élément a son rôle : le sambal apporte chaleur et complexité, les anc
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 Plus de recettes de Malaisie</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/malaysia/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/laksa/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="laksa">🍽️</div>

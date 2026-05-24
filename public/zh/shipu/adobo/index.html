@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>阿多波炖肉</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/philippines/">菲律宾</a> › <span>阿多波炖肉</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="adobo" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/638741-312x231.jpg" alt="阿多波炖肉" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 晚餐 · 菲律宾</div>
+      <div class="recipe-badge">🇵🇭 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/philippines/">菲律宾</a></div>
       <h1>阿多波炖肉</h1>
       <p class="recipe-tagline">阿多波是菲律宾的国菜，尽管这个词本身是西班牙语——由殖民者带来，他们在当地用醋炖肉的传统中辨认出与自己腌制方法相似的技术。菲律宾用醋保存肉类的传统早于西班牙人的到来：这是在热带气候下无需冷藏保存食物的实用方法。
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 更多来自菲律宾的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/philippines/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/kare-kare/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kare-kare">🍽️</div>

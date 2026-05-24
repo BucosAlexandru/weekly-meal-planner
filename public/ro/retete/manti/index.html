@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Manti</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/uzbekistan/">Uzbekistan</a> › <span>Manti</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="manti" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kayseride_bir_restoranda_Kayseri_mant%C4%B1.jpg/330px-Kayseride_bir_restoranda_Kayseri_mant%C4%B1.jpg" alt="Manti" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 Cină · Uzbekistan</div>
+      <div class="recipe-badge">🇺🇿 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/uzbekistan/">Uzbekistan</a></div>
       <h1>Manti</h1>
       <p class="recipe-tagline">Manti sunt găluște mari la aburi răspândite în Asia Centrală, Caucaz și Turcia prin drumurile comerciale ale Mătăsii și migrațiile nomade. În Uzbekistan, umplutura este tradițional tocată grosier cu cuțitul — miel sau vită cu ceapă crudă din abundență, care se topește în interior la gătire, menținând carnea fragedă și parfumată. Aluatul se întinde subțire și fiecare pachet se pliază manual.
 
@@ -140,11 +140,13 @@ Spre deosebire de găluștele chinezești, manti se gătesc într-un vas special
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇿 Alte rețete din Uzbekistan</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/uzbekistan/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/plov/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="plov">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>चक्चूका</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/tunisia/">ट्यूनीशिया</a> › <span>चक्चूका</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chakchouka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="चक्चूका" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇳 रात का खाना · ट्यूनीशिया</div>
+      <div class="recipe-badge">🇹🇳 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/tunisia/">ट्यूनीशिया</a></div>
       <h1>चक्चूका</h1>
       <p class="recipe-tagline">चक्चूका उत्तर अफ्रीकी व्यंजन का प्रतीकात्मक पकवान है, जो ट्यूनीशिया में उत्पन्न हुआ, जहां मसालेदार टमाटर और मिर्च की चटनी में पोच किए गए अंडे सामूहिक नाश्ते का प्रतीक बन गए। सामग्री की सरलता एक उल्लेखनीय संवेदी जटिलता को छुपाती है।
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇳 ट्यूनीशिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/tunisia/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/brik/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="brik">🍽️</div>

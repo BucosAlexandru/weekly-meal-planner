@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Poffertjes</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/netherlands/">Pays-Bas</a> › <span>Poffertjes</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="poffertjes" id="recipe-photo-main">🍰<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Poffertjes-Melkhuis_%28cropped%29.jpg/330px-Poffertjes-Melkhuis_%28cropped%29.jpg" alt="Poffertjes" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 Dessert · Pays-Bas</div>
+      <div class="recipe-badge">🇳🇱 Dessert · <a class="recipe-badge-origin" href="/fr/cuisine/netherlands/">Pays-Bas</a></div>
       <h1>Poffertjes</h1>
       <p class="recipe-tagline">Les poffertjes sont de mini-pancakes hollandais à la levure — petits, moelleux, avec un cœur humide et une surface dorée. Ils sont cuits dans une poêle spéciale à alvéoles hémisphériques (poffertjespan), 12 à 20 à la fois, rapidement retournés avec une brochette. La pâte contient de la levure (parfois du sarrasin), leur donnant une texture aérée distincte des crêpes ordinaires.
 
@@ -134,11 +134,13 @@ Servis avec du beurre fondu et du sucre glace, parfois avec de la crème ou du s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇱 Plus de recettes de Pays-Bas</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/netherlands/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/stamppot/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stamppot">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Biryani</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/pakistan/">Pakistan</a> › <span>Biryani</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="Biryani" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 Cină · Pakistan</div>
+      <div class="recipe-badge">🇵🇰 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/pakistan/">Pakistan</a></div>
       <h1>Biryani</h1>
       <p class="recipe-tagline">Biryani provine din curțile imperiale moghule ale subcontinentului indian, unde preparatele de orez cu influențe persane au evoluat în forme regionale distincte. Tradiția biryani din Pakistan — în special stilurile din Karachi și Hyderabad — este printre cele mai aromatice de pe subcontinent, construită pe condimente întregi, ceapă caramelizată și straturi de orez. Felul de mâncare este central la fiecare ocazie importantă: nunți, sărbătoarea Eid și întâlniri mari de familie.
 
@@ -145,11 +145,13 @@ Tehnica este gătitul dum: orezul parțial fiert și carnea condimentată sunt s
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 Alte rețete din Pakistan</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/pakistan/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>

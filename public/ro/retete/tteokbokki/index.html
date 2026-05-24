@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tteokbokki</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/south-korea/">Coreea de Sud</a> › <span>Tteokbokki</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tteokbokki" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/330px-Tteokbokki.JPG" alt="Tteokbokki" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Gustare · Coreea de Sud</div>
+      <div class="recipe-badge">🇰🇷 Gustare · <a class="recipe-badge-origin" href="/ro/bucatarie/south-korea/">Coreea de Sud</a></div>
       <h1>Tteokbokki</h1>
       <p class="recipe-tagline">Tteokbokki este unul dintre cele mai populare street food-uri din Coreea de Sud — bucăți cilindrice de orez gătite într-un sos gros și picant pe bază de gochujang, pasta fermentată de ardei roșu care definește iuțeala coreeană. Preparatul este vândut la tarabe pojangmacha pe străzile Coreei și mâncat la orice oră, de la copiii de la școală după-amiaza până la mesele târzii de noapte.
 
@@ -133,11 +133,13 @@ Sosul depinde de gochujang — adâncimea sa fermentată este diferită de iuțe
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Alte rețete din Coreea de Sud</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/south-korea/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>

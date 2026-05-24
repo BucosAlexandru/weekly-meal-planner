@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Paella</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/spain/">Spania</a> › <span>Paella</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="paella" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/652134-312x231.jpg" alt="Paella" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇸 Cină · Spania</div>
+      <div class="recipe-badge">🇪🇸 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/spain/">Spania</a></div>
       <h1>Paella</h1>
       <p class="recipe-tagline">Paella are rădăcinile în câmpurile de orez din jurul lagunei Albufera din Valencia, unde lucrătorii agricoli găteau duminica deasupra focului alimentat cu lemn de portocal — preparatul și-a luat numele de la tigaia lată și puțin adâncă în care era gătit. Paella valenciană originală conținea iepure, pui, fasole verde, fasole albă și melci. Paella cu fructe de mare este o adaptare ulterioară pe care valencienii o privesc cu dezacord politicos.
 
@@ -136,11 +136,13 @@ Ceea ce separă o paella excelentă de un simplu orez este socarrat-ul: crusta �
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇸 Alte rețete din Spania</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/spain/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/gazpacho/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="gazpacho">🍽️</div>

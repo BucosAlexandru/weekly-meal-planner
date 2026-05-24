@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Эмпанадас</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/argentina/">Аргентина</a> › <span>Эмпанадас</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="empanadas" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/653362-312x231.jpg" alt="Эмпанадас" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇷 Закуска · Аргентина</div>
+      <div class="recipe-badge">🇦🇷 Закуска · <a class="recipe-badge-origin" href="/ru/kuhnya/argentina/">Аргентина</a></div>
       <h1>Эмпанадас</h1>
       <p class="recipe-tagline">Эмпанадас попали в Аргентину с испанскими колонистами в XVI веке — название происходит от 'empanar', завернуть в тесто — однако за последующие столетия аргентинская версия приобрела собственную идентичность. У каждой провинции свои традиции начинки: в Сальте предпочитают говядину с обилием тмина и картофелем; в Мендосе добавляют изюм и оливки; Тукуман держится более простой начинки. Региональные различия воспринимаются всерьёз.
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇷 Ещё рецепты из Аргентина</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/argentina/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/milanesa/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="milanesa">🍽️</div>

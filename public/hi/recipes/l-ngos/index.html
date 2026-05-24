@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>लांगोश</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/hungary/">हंगरी</a> › <span>लांगोश</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="l-ngos" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇺 नाश्ता · हंगरी</div>
+      <div class="recipe-badge">🇭🇺 नाश्ता · <a class="recipe-badge-origin" href="/hi/vyanjan/hungary/">हंगरी</a></div>
       <h1>लांगोश</h1>
       <p class="recipe-tagline">लांगोश हंगरी का राष्ट्रीय स्ट्रीट स्नैक है — एक गहरे तेल में तली खमीरदार चपटी रोटी, फूली और सुनहरी, खट्टी क्रीम से पोती और कसे चीज़ से सजी। यह शब्द हंगेरियन láng (लौ) से आता है, जो रोटी की भट्टी की आग के पास बचे आटे को पकाने की परंपरा को संदर्भित करता है। आज इसे गहरे तेल में तला जाता है।
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇺 हंगरी की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/hungary/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/goulash/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="goulash">🍽️</div>

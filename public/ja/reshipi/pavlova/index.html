@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>パブロバ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/australia/">オーストラリア</a> › <span>パブロバ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pavlova" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/655031-312x231.jpg" alt="パブロバ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇺 デザート · オーストラリア</div>
+      <div class="recipe-badge">🇦🇺 デザート · <a class="recipe-badge-origin" href="/ja/ryori/australia/">オーストラリア</a></div>
       <h1>パブロバ</h1>
       <p class="recipe-tagline">パブロバは、1926年にオーストラリアとニュージーランドを巡演したロシアのバレリーナ、アンナ・パブロワにちなんで名付けられました。両国がこのデザートの発祥を主張しており、その論争は約一世紀続いています。最も古い記録のあるレシピはニュージーランドに見られますが、オーストラリアの料理人も同時期のバージョンを持っています。
 
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇺 オーストラリアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/australia/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/meat-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="meat-pie">🍽️</div>

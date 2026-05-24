@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Pho</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/vietnam/">Vietnã</a> › <span>Pho</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1096250-312x231.jpg" alt="Pho" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇻🇳 Almoço · Vietnã</div>
+      <div class="recipe-badge">🇻🇳 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/vietnam/">Vietnã</a></div>
       <h1>Pho</h1>
       <p class="recipe-tagline">O pho tomou forma no norte do Vietname no início do século XX — muito provavelmente nas cidades do delta do Rio Vermelho, antes de se espalhar para Hanói — e carrega traços da culinária colonial francesa no seu método de caldo de ossos e no longo tempo de cozedura. O país continua dividido: a versão de Hanói é sóbria e salgada, com macarrão fino e caldo limpo; a de Ho Chi Minh é mais doce, mais rica, com ervas, brotos, hoisin e sriracha.
 
@@ -140,11 +140,13 @@ O caldo é tudo. Cebola e gengibre são chamuscados diretamente sobre a chama an
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇻🇳 Mais receitas de Vietnã</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/vietnam/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/banh-mi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="banh-mi">🍽️</div>

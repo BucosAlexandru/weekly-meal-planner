@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Sabich</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/israel/">Israel</a> › <span>Sabich</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="sabich" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Sabich1.png/330px-Sabich1.png" alt="Sabich" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇱 Café da manhã · Israel</div>
+      <div class="recipe-badge">🇮🇱 Café da manhã · <a class="recipe-badge-origin" href="/pt/cozinha/israel/">Israel</a></div>
       <h1>Sabich</h1>
       <p class="recipe-tagline">Sabich é um pita recheado com beringela frita, ovo cozido, batata, tahine e amba — um prato cujas origens remontam aos imigrantes judeus iraquianos que se instalaram em Israel nos anos 1950. Acredita-se que o nome deriva da palavra árabe para manhã, refletindo as origens da refeição como café da manhã do Shabbat. No Shabat, os judeus observantes não podiam cozinhar, então os componentes eram fritos na véspera e montados frios na manhã de sábado.
 
@@ -135,11 +135,13 @@ O molho amba — manga fermentada com feno-grego, cúrcuma e cominho — é o co
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇱 Mais receitas de Israel</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/israel/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/shakshuka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="shakshuka">🍽️</div>

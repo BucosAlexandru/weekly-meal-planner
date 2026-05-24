@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Tagine de cordeiro</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/morocco/">Marrocos</a> › <span>Tagine de cordeiro</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lamb-tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tagine de cordeiro" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 Jantar · Marrocos</div>
+      <div class="recipe-badge">🇲🇦 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/morocco/">Marrocos</a></div>
       <h1>Tagine de cordeiro</h1>
       <p class="recipe-tagline">O tagine de cordeiro é um símbolo da cozinha marroquina — um ensopado de cozedura lenta no pote cónico de barro (tagine), que captura o vapor e devolve os sucos ao prato. O cordeiro fica tão tenro após horas de cozedura lenta com cebola, alho, damascos secos, amêndoas e a mistura ras el hanout, criando um molho concentrado doce e picante.
 
@@ -141,11 +141,13 @@ O tagine é cozinhado sobre carvão ou num forno a lenha, um ritual de paciênci
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 Mais receitas de Marrocos</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/morocco/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/harira/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="harira">🍽️</div>

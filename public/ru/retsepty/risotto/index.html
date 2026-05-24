@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Ризотто</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/italy/">Италия</a> › <span>Ризотто</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="risotto" id="recipe-photo-main">🍽️<img src="/images/risotto.webp" alt="Ризотто" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 Ужин · Италия</div>
+      <div class="recipe-badge">🇮🇹 Ужин · <a class="recipe-badge-origin" href="/ru/kuhnya/italy/">Италия</a></div>
       <h1>Ризотто</h1>
       <p class="recipe-tagline">Ризотто уходит корнями в долину реки По в северной Италии, где выращивание круглозернистого риса восходит к XV веку. Блюдо обрело классическую форму в Милане — risotto alla Milanese с золотистым шафраном — и по-прежнему неразрывно связано с Ломбардией. В отличие от большинства рисовых блюд, ризотто получает кремовую текстуру исключительно за счёт собственного крахмала зерна, без добавления сливок.
 
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 Ещё рецепты из Италия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/italy/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>

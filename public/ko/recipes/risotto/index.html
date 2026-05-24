@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>리소토</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/italy/">이탈리아</a> › <span>리소토</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="risotto" id="recipe-photo-main">🍽️<img src="/images/risotto.webp" alt="리소토" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 저녁 · 이탈리아</div>
+      <div class="recipe-badge">🇮🇹 저녁 · <a class="recipe-badge-origin" href="/ko/yori/italy/">이탈리아</a></div>
       <h1>리소토</h1>
       <p class="recipe-tagline">리소토는 15세기부터 단립 쌀을 재배해온 이탈리아 북부 포 강 유역에 뿌리를 두고 있다. 이 요리는 밀라노에서 그 정형을 완성했다 — 사프란으로 황금빛을 띠는 리소토 알라 밀라네제 — 이며 오늘날까지 롬바르디아 지방과 깊이 연결되어 있다. 대부분의 쌀 요리와 달리, 리소토는 크림 없이 오직 쌀 자체의 전분으로만 크리미한 질감을 만들어낸다.
 
@@ -132,11 +132,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 이탈리아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/italy/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Curry japonais</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/japan/">Japon</a> › <span>Curry japonais</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="japanese-curry-rice" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg" alt="Curry japonais" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Dîner · Japon</div>
+      <div class="recipe-badge">🇯🇵 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/japan/">Japon</a></div>
       <h1>Curry japonais</h1>
       <p class="recipe-tagline">Le curry japonais (kare raisu) est arrivé au Japon à l'ère Meiji par l'intermédiaire de marins britanniques et de recettes coloniales indo-britanniques. Rapidement adapté au goût japonais, il est devenu plus épais, plus doux et moins piquant. Les blocs de roux en sachets (commercialisés dans les années 1960) ont démocratisé sa préparation.
 
@@ -134,11 +134,13 @@ Le curry japonais est aujourd'hui l'un des plats les plus consommés au Japon. I
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Plus de recettes de Japon</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/japan/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

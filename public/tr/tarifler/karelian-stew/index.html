@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Karelian Yahni</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/finland/">Finlandiya</a> › <span>Karelian Yahni</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-stew" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Akşam yemeği · Finlandiya</div>
+      <div class="recipe-badge">🇫🇮 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/finland/">Finlandiya</a></div>
       <h1>Karelian Yahni</h1>
       <p class="recipe-tagline">Karjalanpaisti (Karelya yahnisi), Finlandiya'nın sembolik yemeğidir — üç tür et (dana, domuz, kuzu) soğan, havuç ve biberle saatlerce yavaş pişirilir; sos yok, ekstra yağ yok — sadece su ve tuz. Fin mutfak minimalizmasının saf halidir.
 
@@ -136,11 +136,13 @@ Tarihi Karelia'dan gelir, bugün Finlandiya ile Rusya arasında bölünmüştür
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Finlandiya tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/finland/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>

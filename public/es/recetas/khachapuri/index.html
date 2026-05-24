@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Khachapuri</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/cocina/georgia/">Georgia</a> › <span>Khachapuri</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="khachapuri" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/%D0%92%D0%BA%D1%83%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA_%D0%9A%D1%85%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8.jpg/330px-%D0%92%D0%BA%D1%83%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA_%D0%9A%D1%85%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8.jpg" alt="Khachapuri" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇪 Desayuno · Georgia</div>
+      <div class="recipe-badge">🇬🇪 Desayuno · <a class="recipe-badge-origin" href="/es/cocina/georgia/">Georgia</a></div>
       <h1>Khachapuri</h1>
       <p class="recipe-tagline">El khachapuri — literalmente pan de queso — es el plato nacional de Georgia, presente en cada mesa familiar y puesto callejero desde Tiflis hasta Batumi. El plato tiene varias variantes regionales. El khachapuri adjario, la forma de barca de la costa del Mar Negro, es la más reconocida internacionalmente, distinguida por un huevo crudo roto sobre el queso fundido en el momento de servir.
 
@@ -133,11 +133,13 @@ La masa es fermentada y similar al pan, no fina como una masa pastelera — se h
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇪 Más recetas de Georgia</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/cocina/georgia/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/lobio/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="lobio">🍽️</div>

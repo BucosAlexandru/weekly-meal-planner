@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="sub-saharan">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>حساء إيجوسي</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/nigeria/">نيجيريا</a> › <span>حساء إيجوسي</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="egusi-soup" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/330px-EGUSI.JPG" alt="حساء إيجوسي" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇬 عشاء · نيجيريا</div>
+      <div class="recipe-badge">🇳🇬 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/nigeria/">نيجيريا</a></div>
       <h1>حساء إيجوسي</h1>
       <p class="recipe-tagline">حساء الإيجوسي هو طعام الروح في نيجيريا — صوص كثيف مصنوع من بذور الإيجوسي المحمصة والمطحونة (قريبة من القرع المر)، تُطهى في زيت النخيل الأحمر مع اللحم (بقر أو ماعز أو دجاج) وأوراق اليقطين أو السبانخ والفلفل الحار. تشكل بذور الإيجوسي ملمساً فريداً: حبيبي من الخارج وكريمي من الداخل.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇬 المزيد من وصفات نيجيريا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/nigeria/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/jollof-rice/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="jollof-rice">🍽️</div>

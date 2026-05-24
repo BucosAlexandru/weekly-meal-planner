@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Spanakopita</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/greece/">Grèce</a> › <span>Spanakopita</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="spanakopita" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Spanakopita.jpg/330px-Spanakopita.jpg" alt="Spanakopita" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 En-cas · Grèce</div>
+      <div class="recipe-badge">🇬🇷 En-cas · <a class="recipe-badge-origin" href="/fr/cuisine/greece/">Grèce</a></div>
       <h1>Spanakopita</h1>
       <p class="recipe-tagline">Spanakopita — tourte aux épinards et à la feta — est l'un des plats les plus reconnaissables de la cuisine grecque. La farce d'épinards fanés, de feta émiettée, d'œufs et souvent d'aneth est enveloppée dans des feuilles de pâte filo très fines, généreusement badigeonnées d'huile d'olive entre chaque couche. Le plat est présent dans toute la Grèce aussi bien sous forme de grande tourte cuite en plaque que de triangles individuels ou de rouleaux vendus en boulangerie.
 
@@ -134,11 +134,13 @@ La pâte filo doit être manipulée rapidement : les feuilles très fines sèche
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Plus de recettes de Grèce</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/greece/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

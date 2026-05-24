@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Fatteh</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/syria/">Syrie</a> › <span>Fatteh</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fatteh" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg/330px-%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg" alt="Fatteh" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 Petit-déjeuner · Syrie</div>
+      <div class="recipe-badge">🇸🇾 Petit-déjeuner · <a class="recipe-badge-origin" href="/fr/cuisine/syria/">Syrie</a></div>
       <h1>Fatteh</h1>
       <p class="recipe-tagline">La fatteh est un plat syrien en couches fait de pita grillée, de pois chiches et d'une sauce au yaourt à l'ail, terminé par un filet de beurre chaud sur des pignons et du paprika. Le nom vient de l'arabe pour émietter — en référence au pain émietté à la base. Elle est consommée dans tout le Levant, de la Syrie à l'Égypte, le plus souvent comme repas du matin et particulièrement pendant le Ramadan.
 
@@ -136,11 +136,13 @@ L'ordre des couches détermine la texture. La pita doit d'abord être grillée p
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Plus de recettes de Syrie</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/syria/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

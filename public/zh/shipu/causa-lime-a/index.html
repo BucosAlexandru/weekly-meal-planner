@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>土豆鸡肉沙拉</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/peru/">秘鲁</a> › <span>土豆鸡肉沙拉</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="causa-lime-a" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 开胃菜 · 秘鲁</div>
+      <div class="recipe-badge">🇵🇪 开胃菜 · <a class="recipe-badge-origin" href="/zh/caixi/peru/">秘鲁</a></div>
       <h1>土豆鸡肉沙拉</h1>
       <p class="recipe-tagline">奥萨利梅尼亚是一道压制而成的秘鲁黄土豆冻糕，以黄辣椒和青柠汁调味，与涂有蛋黄酱的金枪鱼或鸡肉及牛油果层层叠加。安第斯土豆——尤其是天然黄肉品种——煮熟后捣成细泥，加入油、黄辣椒和青柠揉至如丝般顺滑。这道菜冷食，切开后露出鲜明对比的层次。
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 更多来自秘鲁的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/peru/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Ramen Shoyu</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/japan/">Japonia</a> › <span>Ramen Shoyu</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="shoyu-ramen" id="recipe-photo-main">🍽️<img src="/images/shoyu-ramen.jpg" alt="Ramen Shoyu" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Prânz · Japonia</div>
+      <div class="recipe-badge">🇯🇵 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/japan/">Japonia</a></div>
       <h1>Ramen Shoyu</h1>
       <p class="recipe-tagline">Ramen shoyu este stilul Tokyoului și cel mai vechi dintre familiile principale de ramen — bolul care a stabilit tiparul când primele standuri cu tăiței chinezești s-au deschis în capitală la începutul secolului XX. Bulionul este chihlimbar limpede: un fond de pui sau dashi asezonat cu un tare pe bază de sos de soia, destul de ușor pentru ca fiecare ingredient să-și arate profilul.
 
@@ -132,11 +132,13 @@ Narutomaki — prăjitura din pește cu spirală — este atât garnitură cât 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Alte rețete din Japonia</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/japan/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

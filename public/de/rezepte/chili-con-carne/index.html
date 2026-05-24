@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Chili con Carne</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/mexico/">Mexiko</a> › <span>Chili con Carne</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chili-con-carne" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/1697611-312x231.jpg" alt="Chili con Carne" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Abendessen · Mexiko</div>
+      <div class="recipe-badge">🇲🇽 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/mexico/">Mexiko</a></div>
       <h1>Chili con Carne</h1>
       <p class="recipe-tagline">Chili con Carne ist eher texanisch als mexikanisch — das Gericht wurde im San Antonio des 19. Jahrhunderts von Straßenhändlerinnen populär gemacht, die als Chili-Königinnen bekannt waren und es von Ständen auf den Stadtplätzen verkauften. Der Name ist Spanisch für Pfeffer mit Fleisch, aber das Rezept entwickelte sich in Texas zu etwas Eigenem: ein Rinderschmorgericht mit getrockneten Chilis. Traditionelles texanisches Chili enthält keine Bohnen; ihre Aufnahme ist ein strittiger Punkt.
 
@@ -133,11 +133,13 @@ Chipotle — ein geräucherter, getrockneter Jalapeño — liefert Schärfe mit 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Weitere Rezepte aus Mexiko</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/mexico/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

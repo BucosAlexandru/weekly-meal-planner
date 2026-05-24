@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>करेलियन पाई</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/finland/">फ़िनलैंड</a> › <span>करेलियन पाई</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="करेलियन पाई" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 नाश्ता · फ़िनलैंड</div>
+      <div class="recipe-badge">🇫🇮 नाश्ता · <a class="recipe-badge-origin" href="/hi/vyanjan/finland/">फ़िनलैंड</a></div>
       <h1>करेलियन पाई</h1>
       <p class="recipe-tagline">करेलियन पाई — कार्यालानपीराका — करेलिया क्षेत्र से उत्पन्न हुई, एक ऐतिहासिक भूमि जो अब फ़िनलैंड और रूस के बीच विभाजित है। अंडाकार खोल पतले, कुरकुरे राई के आटे से बने होते हैं जो दूध में धीरे पकाई चावल की खिचड़ी की नरम भराई को घेरते हैं; आलू की भराई भी उतनी ही पारंपरिक है। पाई को तेज़ तापमान पर बेक किया जाता है।
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 फ़िनलैंड की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/finland/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/karelian-stew/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="karelian-stew">🍽️</div>

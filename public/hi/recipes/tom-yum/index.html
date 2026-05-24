@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>टॉम यम</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/thailand/">थाईलैंड</a> › <span>टॉम यम</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tom-yum" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" alt="टॉम यम" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Lunch · थाईलैंड</div>
+      <div class="recipe-badge">🇹🇭 Lunch · <a class="recipe-badge-origin" href="/hi/vyanjan/thailand/">थाईलैंड</a></div>
       <h1>टॉम यम</h1>
       <p class="recipe-tagline">टॉम यम थाईलैंड का अंतरराष्ट्रीय स्तर पर सबसे प्रसिद्ध सूप है, जो एक ही शोरबे में गर्म, खट्टे, नमकीन और हल्के मीठे स्वादों के विशिष्ट संयोजन पर निर्मित है। सुगंधित सामग्री — लेमनग्रास, गैलंगल और काफ़िर लाइम पत्ते — काटने के बजाय कुचले जाते हैं, जिससे एक साफ शोरबे में उज्ज्वल, खट्टे-युक्त गर्मी भर जाती है। इस सूप को पहले से नहीं बनाया जा सकता — मछली सॉस, नींबू का रस और पाम चीनी का संतुलन अंत में ही चखकर समायोजित किया जाता है।
 
@@ -135,11 +135,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 थाईलैंड की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/thailand/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/tom-kha-gai/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tom-kha-gai">🍽️</div>

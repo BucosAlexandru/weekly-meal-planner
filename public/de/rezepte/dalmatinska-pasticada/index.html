@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Pasticada</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/croatia/">Kroatien</a> › <span>Pasticada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dalmatinska-pasticada" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 Abendessen · Kroatien</div>
+      <div class="recipe-badge">🇭🇷 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/croatia/">Kroatien</a></div>
       <h1>Pasticada</h1>
       <p class="recipe-tagline">Die dalmatinische Pašticada ist das Paradefeiertagsgericht der kroatischen Küste, serviert bei Hochzeiten, Taufen und wichtigen Familienanlässen in Dalmatien. Das Rezept ist Jahrhunderte alt und erscheint in venezianisch beeinflussten dalmatinischen Kochbüchern des achtzehnten Jahrhunderts, was die lange Periode venezianischer Herrschaft über die dalmatinische Küste widerspiegelt.
 
@@ -137,7 +137,9 @@ Die Zubereitung ist ein zweitägiger Prozess. Das Rindfleisch wird gespickt — 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

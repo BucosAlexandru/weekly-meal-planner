@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Stamppot</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/netherlands/">Pays-Bas</a> › <span>Stamppot</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="stamppot" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/330px-Boerenkool_stamppot.jpg" alt="Stamppot" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 Dîner · Pays-Bas</div>
+      <div class="recipe-badge">🇳🇱 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/netherlands/">Pays-Bas</a></div>
       <h1>Stamppot</h1>
       <p class="recipe-tagline">Stamppot — pot de purée, littéralement — est le plat réconfortant emblématique de la cuisine d'hiver néerlandaise. Le plat prend plusieurs formes : le stamppot de chou frisé (boerenkool) est le plus connu ; le hutspot écrase les pommes de terre avec des carottes et des oignons ; le stamppot de choucroute apporte une note acide. La variante hutspot revendique un ancrage historique — une légende reliant son origine à la levée du Siège de Leyde en 1574.
 
@@ -131,11 +131,13 @@ La technique repose sur le contrôle de l'humidité. Après cuisson, les pommes 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇱 Plus de recettes de Pays-Bas</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/netherlands/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/poffertjes/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="poffertjes">🍰</div>

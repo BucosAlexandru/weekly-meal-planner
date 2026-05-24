@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>阿莫克咖喱鱼</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/cambodia/">柬埔寨</a> › <span>阿莫克咖喱鱼</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="amok" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fish_Amok_with_Rice.jpg/960px-Fish_Amok_with_Rice.jpg" alt="阿莫克咖喱鱼" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 晚餐 · 柬埔寨</div>
+      <div class="recipe-badge">🇰🇭 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/cambodia/">柬埔寨</a></div>
       <h1>阿莫克咖喱鱼</h1>
       <p class="recipe-tagline">阿莫克是柬埔寨最负盛名的菜肴——一道以椰浆、克勒乌蒙酱和卡菲尔青柠叶制作的蒸鱼咖喱，传统上在香蕉叶杯中烹制和上桌。香蕉叶容器不只是装饰，它在蒸制过程中塑造蛋奶冻的形状，并赋予菜肴淡淡的植物清香。
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 更多来自柬埔寨的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/cambodia/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/lok-lak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="lok-lak">🍽️</div>

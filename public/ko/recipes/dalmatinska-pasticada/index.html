@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>파스티카다</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/croatia/">크로아티아</a> › <span>파스티카다</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dalmatinska-pasticada" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 저녁 · 크로아티아</div>
+      <div class="recipe-badge">🇭🇷 저녁 · <a class="recipe-badge-origin" href="/ko/yori/croatia/">크로아티아</a></div>
       <h1>파스티카다</h1>
       <p class="recipe-tagline">달마티아 파스티카다는 크로아티아 해안 지방의 대표적인 축하 요리로, 달마티아 전역의 결혼식, 세례식, 주요 가족 행사에서 제공됩니다. 이 레시피는 수백 년의 역사를 가지며 18세기 베네치아의 영향을 받은 달마티아 요리책에 등장하는데, 이는 달마티아 해안에 대한 베네치아의 오랜 통치를 반영합니다.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇭🇷 크로아티아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/croatia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/pasticada/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pasticada">🍽️</div>

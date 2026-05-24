@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Laksa</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/malaysia/">Malásia</a> › <span>Laksa</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="laksa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nyonya_Laksa.jpg/330px-Nyonya_Laksa.jpg" alt="Laksa" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 Almoço · Malásia</div>
+      <div class="recipe-badge">🇲🇾 Almoço · <a class="recipe-badge-origin" href="/pt/cozinha/malaysia/">Malásia</a></div>
       <h1>Laksa</h1>
       <p class="recipe-tagline">O Laksa é uma sopa de noodles especiada que define a tradição culinária Peranakan — a mistura malaio-chinesa — do Sudeste Asiático marítimo. Desenvolveu-se nas comunidades comerciais costeiras da Península Malaia, Singapura e Indonésia, onde a cozinha dos imigrantes chineses e os temperos malaios se fundiram ao longo de gerações. Os dois estilos principais são o laksa de caril, rico em leite de coco, e o laksa asam, ácido e à base de tamarindo.
 
@@ -139,11 +139,13 @@ A pasta laksa é a base do prato — malagueta seca, pasta de camarão, erva-pr�
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 Mais receitas de Malásia</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/malaysia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/nasi-lemak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-lemak">🍽️</div>

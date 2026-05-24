@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Karjalanpaisti</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/finland/">Finlanda</a> › <span>Karjalanpaisti</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-stew" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Cină · Finlanda</div>
+      <div class="recipe-badge">🇫🇮 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/finland/">Finlanda</a></div>
       <h1>Karjalanpaisti</h1>
       <p class="recipe-tagline">Karjalanpaisti (ragul Kareliei) este mâncarea simbolică a Finlandei — o tocăniță arhaică din trei cărni (vită, porc, miel), gătită lent ore întregi cu ceapă, morcovi și piper, fără sos, fără grăsime adăugată — pur și simplu apă și sare. Este minimalismul culinar finlandez în stare pură.
 
@@ -136,11 +136,13 @@ Karjalanpaisti vine din Karelia istorică, astăzi împărțită între Finlanda
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Alte rețete din Finlanda</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/finland/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>

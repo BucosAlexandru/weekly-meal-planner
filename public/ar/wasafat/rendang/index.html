@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>رندنج</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/indonesia/">إندونيسيا</a> › <span>رندنج</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="rendang" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rendang_daging_sapi_asli_Padang.JPG/330px-Rendang_daging_sapi_asli_Padang.JPG" alt="رندنج" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 عشاء · إندونيسيا</div>
+      <div class="recipe-badge">🇮🇩 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/indonesia/">إندونيسيا</a></div>
       <h1>رندنج</h1>
       <p class="recipe-tagline">يعود أصل الرندانج إلى مرتفعات مينانغكاباو في سومطرة الغربية، طُوِّر كطبق للحفظ: بتبخير حليب جوز الهند تماماً وقلي اللحم في دهنه الخاص، يبقى الطبق طازجاً دون تبريد لأيام عدة. يحتل مكانة محورية في حياة مينانغكاباو الاحتفالية — يُقدَّم في الأعراس ومواسم الحصاد والعيد.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 المزيد من وصفات إندونيسيا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/indonesia/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>

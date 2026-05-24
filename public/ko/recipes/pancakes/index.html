@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>아메리칸 팬케이크</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/usa/">미국</a> › <span>아메리칸 팬케이크</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pancakes" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/661886-312x231.jpg" alt="아메리칸 팬케이크" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 아침 · 미국</div>
+      <div class="recipe-badge">🇺🇸 아침 · <a class="recipe-badge-origin" href="/ko/yori/usa/">미국</a></div>
       <h1>아메리칸 팬케이크</h1>
       <p class="recipe-tagline">아메리칸 팬케이크는 다이너 카운터의 정통 아침 식사로, 두껍고 믿기 어려울 만큼 폭신한 스택이다. 유럽에서 미국 프런티어로 건너온 그리들 케이크 전통에서 비롯되었으며, 여기서 발효제가 얇은 크레페를 구름 같은 원형으로 탈바꿈시켰다. 과학은 단순하다: 더블 액션 베이킹파우더가 두 번 기포를 만든다 — 먼저 반죽에서, 그 다음 달군 그리들 위에서. 반죽을 5분 쉬게 하면 글루텐이 이완되고 가스가 축적될 시간이 생긴다. 뒤집는 타이밍은 틀릴 수 없다 — 표면 전체에 기포가 올라오고 가장자리가 막 굳은 그 순간, 그 이전은 안 된다.</p>
       <div class="recipe-meta-row">
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 미국의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/usa/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/cheeseburger/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>

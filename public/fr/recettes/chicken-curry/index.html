@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Curry de poulet</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/cuisine/india/">Inde</a> › <span>Curry de poulet</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="chicken-curry" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="Curry de poulet" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Dîner · Inde</div>
+      <div class="recipe-badge">🇮🇳 Dîner · <a class="recipe-badge-origin" href="/fr/cuisine/india/">Inde</a></div>
       <h1>Curry de poulet</h1>
       <p class="recipe-tagline">Ce curry de poulet de style nord-indien puise son âme dans la cuisine pendjabi, où les cuisiniers ont perfectionné la technique bhuna — faire revenir les aromates jusqu'à ce que chaque goutte d'humidité s'évapore et que la pâte masala noircisse et se concentre dans l'huile. Le poulet sur os est essentiel : le collagène et la moelle se libèrent durant la longue cuisson, épaississant la sauce d'une façon qu'aucun blanc de poulet désossé ne peut reproduire. La touche finale de garam masala est ajoutée hors du feu, où il s'épanouit doucement plutôt que de brûler, donnant au curry son parfum chaud et complexe.</p>
       <div class="recipe-meta-row">
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Plus de recettes de Inde</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/cuisine/india/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/dhal/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="dhal">🍽️</div>

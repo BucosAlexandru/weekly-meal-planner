@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>パスタ・アッラ・ノルマ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/ryori/italy/">イタリア</a> › <span>パスタ・アッラ・ノルマ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pasta-alla-norma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg/330px-Pasta_alla_Norma_-_Wiki_Loves_Sicilia.jpg" alt="パスタ・アッラ・ノルマ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 ランチ · イタリア</div>
+      <div class="recipe-badge">🇮🇹 ランチ · <a class="recipe-badge-origin" href="/ja/ryori/italy/">イタリア</a></div>
       <h1>パスタ・アッラ・ノルマ</h1>
       <p class="recipe-tagline">パスタ・アッラ・ノルマはカターニアの誇りです——揚げたナスと新鮮なトマトソース、オリーブオイル、バジル、削ったリコッタ・サラータが融合したシチリアのパスタ料理。名前はカターニア出身の作曲家ヴィンチェンツォ・ベッリーニのオペラ「ノルマ」にちなんでいます：ある作家がこの料理はノルマと同じくらい完璧だと叫んだと言われています。ナスは別に揚げてしっかり水気を切る必要があります——単に炒めるだけでは不十分で——適切なシルキーな食感を得るためです。
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 イタリアのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/ryori/italy/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/spaghetti-carbonara/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>

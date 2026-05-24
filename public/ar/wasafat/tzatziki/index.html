@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>تزاتزيكي</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/greece/">اليونان</a> › <span>تزاتزيكي</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tzatziki" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/645646-312x231.jpg" alt="تزاتزيكي" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 وجبة خفيفة · اليونان</div>
+      <div class="recipe-badge">🇬🇷 وجبة خفيفة · <a class="recipe-badge-origin" href="/ar/matbakh/greece/">اليونان</a></div>
       <h1>تزاتزيكي</h1>
       <p class="recipe-tagline">ينتمي تزاتزيكي إلى عائلة من التوابل المعتمدة على الزبادي والخيار المنتشرة في جميع أنحاء شرق البحر الأبيض المتوسط وصولاً إلى وسط آسيا. تعود الكلمة في أصلها إلى التركية جاجيك ذات الجذور الفارسية، والنسخة التركية — الأكثر سيولة — لا تزال قريبة منه. في اليونان، يكون تزاتزيكي أكثف وأغنى بالثوم، يُقدَّم بارداً كمقبّلات مع اللحوم المشوية أو خبز البيتا أو الخضار.
 
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 المزيد من وصفات اليونان</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/greece/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

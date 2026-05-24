@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>麻婆豆腐</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/caixi/china/">中国</a> › <span>麻婆豆腐</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="mapo-tofu" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Chen_Mapo_Tofu.jpg/330px-Chen_Mapo_Tofu.jpg" alt="麻婆豆腐" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 晚餐 · 中国</div>
+      <div class="recipe-badge">🇨🇳 晚餐 · <a class="recipe-badge-origin" href="/zh/caixi/china/">中国</a></div>
       <h1>麻婆豆腐</h1>
       <p class="recipe-tagline">麻婆豆腐是四川菜的标志性菜肴——嫩豆腐在豆瓣酱、辣椒油和猪肉末构成的浓郁红色酱汁中烹制。四川花椒特有的麻味和辣椒的热辣感共同创造了充满活力的麻辣感：麻与辣同时迸发。
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 更多来自中国的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/caixi/china/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>

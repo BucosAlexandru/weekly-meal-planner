@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>مابو توفو</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/china/">الصين</a> › <span>مابو توفو</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="mapo-tofu" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Chen_Mapo_Tofu.jpg/330px-Chen_Mapo_Tofu.jpg" alt="مابو توفو" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 عشاء · الصين</div>
+      <div class="recipe-badge">🇨🇳 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/china/">الصين</a></div>
       <h1>مابو توفو</h1>
       <p class="recipe-tagline">مابو توفو طبق رمزي في المطبخ السيتشواني — مكعبات توفو طري تُطهى في صلصة حمراء كثيفة من معجون الفاصوليا المخمرة (دوبانجيانج) وزيت الفلفل الحار واللحم المفروم. الخدر المميز لفلفل السيتشوان وحرارة الفلفل الحار يخلقان الإحساس النابض بالحياة ما-لا: خدر وحدة في آن واحد.
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 المزيد من وصفات الصين</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/china/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/kung-pao-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="kung-pao-chicken">🍽️</div>

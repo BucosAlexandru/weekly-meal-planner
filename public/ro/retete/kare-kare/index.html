@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Kare-Kare</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/philippines/">Filipine</a> › <span>Kare-Kare</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kare-kare" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg" alt="Kare-Kare" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Cină · Filipine</div>
+      <div class="recipe-badge">🇵🇭 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/philippines/">Filipine</a></div>
       <h1>Kare-Kare</h1>
       <p class="recipe-tagline">Kare-Kare este o tocăniță filipineză brasată construită în jurul unui sos gros de arahide colorat în auriu profund de semințe de annatto, cu coadă de vită sau ciolane ca proteine principale. Sosul provine din arahide prăjite și măcinate, diluat cu bulion și îngroșat cu orez prăjit măcinat — bogat și savuros, dar deliberat blând, conceput pentru a purta carnea și legumele, nu pentru a domina.
 
@@ -137,11 +137,13 @@ Ceea ce conferă kare-kare caracterul său complet este bagoong — pastă de cr
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 Alte rețete din Filipine</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/philippines/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/adobo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="adobo">🍽️</div>

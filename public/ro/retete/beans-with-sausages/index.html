@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Fasole cu cârnați</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/romania/">România</a> › <span>Fasole cu cârnați</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="beans-with-sausages" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Fasole cu cârnați" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 Prânz · România</div>
+      <div class="recipe-badge">🇷🇴 Prânz · <a class="recipe-badge-origin" href="/ro/bucatarie/romania/">România</a></div>
       <h1>Fasole cu cârnați</h1>
       <p class="recipe-tagline">Fasole cu cârnați este mâncarea de iarnă a gospodăriei românești — fasole albă fiartă îndelung împreună cu cârnați afumați de porc, ceapă, morcovi, bulion și foi de dafin, până când zeama devine groasă și aromată. Cârnații adaugă grăsime și fum, transformând leguminoasa modestă într-un preparat consistent și satisfăcător. Se servește cu murături și pâine de casă sau mămăligă.
 
@@ -141,11 +141,13 @@ Rețeta variază de la regiune la regiune: în Moldova se adaugă mai mult bulio
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇴 Alte rețete din România</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/romania/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/tripe-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>

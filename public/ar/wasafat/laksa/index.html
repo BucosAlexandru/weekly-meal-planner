@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>لاكسا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/malaysia/">ماليزيا</a> › <span>لاكسا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="laksa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nyonya_Laksa.jpg/330px-Nyonya_Laksa.jpg" alt="لاكسا" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 غداء · ماليزيا</div>
+      <div class="recipe-badge">🇲🇾 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/malaysia/">ماليزيا</a></div>
       <h1>لاكسا</h1>
       <p class="recipe-tagline">اللاكسا حساء شعيرية متبّلة تُعرِّف التقليد الطهوي البيرانكاني — المزيج الملايوي الصيني — في جنوب شرق آسيا البحرية. نشأت في المجتمعات التجارية الساحلية لشبه الجزيرة الملايوية وسنغافورة وإندونيسيا، حيث اندمجت مطبخ المهاجرين الصينيين مع توابل الملايو عبر الأجيال. الأسلوبان الرئيسيان هما لاكسا الكاري الغنية بحليب جوز الهند، ولاكسا الأسام الحامضة القائمة على التمر الهندي.
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 المزيد من وصفات ماليزيا</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/malaysia/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/nasi-lemak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-lemak">🍽️</div>

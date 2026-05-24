@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Kimchi</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/south-korea/">Coreia do Sul</a> › <span>Kimchi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kimchi" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Various_kimchi.jpg/330px-Various_kimchi.jpg" alt="Kimchi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Acompanhamento · Coreia do Sul</div>
+      <div class="recipe-badge">🇰🇷 Acompanhamento · <a class="recipe-badge-origin" href="/pt/cozinha/south-korea/">Coreia do Sul</a></div>
       <h1>Kimchi</h1>
       <p class="recipe-tagline">O kimchi é o alimento fermentado mais importante da Coreia e um elemento fundamental da cozinha coreana. A prática de preservar vegetais em sal e condimentos remonta a séculos. A adição da pimenta vermelha — introduzida da América via Japão no século XVII — transformou o kimchi na sua forma moderna e deu-lhe o calor característico e a cor carmesim.
 
@@ -130,11 +130,13 @@ O processo de fermentação é conduzido por bactérias lactobacillus de ocorrê
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Mais receitas de Coreia do Sul</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/south-korea/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>

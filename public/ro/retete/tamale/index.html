@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Tamale</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/mexico/">Mexic</a> › <span>Tamale</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tamale" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg" alt="Tamale" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Cină · Mexic</div>
+      <div class="recipe-badge">🇲🇽 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/mexico/">Mexic</a></div>
       <h1>Tamale</h1>
       <p class="recipe-tagline">Tamale este unul dintre cele mai vechi preparate alimentare din Mesoamerica, datând cu câteva mii de ani înainte de contactul european. Este construit din masa — aluat de porumb din boabe nixtamalizate, înmuiate în apă de var — amestecat cu untură până aluatul devine suficient de ușor. Această masa se întinde pe frunze de porumb, se umple, se înfășoară și se fierbe la abur până aluatul se întărește în jurul umpluturii.
 
@@ -140,11 +140,13 @@ Umpluturile variază mult în regiunile Mexicului: mole negro cu pui, carne de p
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Alte rețete din Mexic</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/mexico/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

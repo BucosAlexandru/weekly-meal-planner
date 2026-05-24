@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Pasticada</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/croatia/">Hırvatistan</a> › <span>Pasticada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dalmatinska-pasticada" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇭🇷 Akşam yemeği · Hırvatistan</div>
+      <div class="recipe-badge">🇭🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/croatia/">Hırvatistan</a></div>
       <h1>Pasticada</h1>
       <p class="recipe-tagline">Dalmaçya pašticada'sı, Hırvatistan kıyılarının simge kutlama yemeğidir; Dalmaçya'da düğün, vaftiz ve büyük aile etkinliklerinde sunulur. Tarif yüzyıllık bir geçmişe sahiptir ve Venedik etkisindeki on sekizinci yüzyıl Dalmaçya yemek kitaplarında yer almakta; bu durum, Dalmaçya kıyısı üzerindeki uzun Venedik egemenliğini yansıtmaktadır.
 
@@ -137,7 +137,9 @@ Hazırlık iki günlük bir süreçtir. Dana eti lardone işlemine tabi tutulur 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

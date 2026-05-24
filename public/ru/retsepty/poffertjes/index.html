@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Поффертьес</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/netherlands/">Нидерланды</a> › <span>Поффертьес</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="poffertjes" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Poffertjes-Melkhuis_%28cropped%29.jpg/330px-Poffertjes-Melkhuis_%28cropped%29.jpg" alt="Поффертьес" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 Десерт · Нидерланды</div>
+      <div class="recipe-badge">🇳🇱 Десерт · <a class="recipe-badge-origin" href="/ru/kuhnya/netherlands/">Нидерланды</a></div>
       <h1>Поффертьес</h1>
       <p class="recipe-tagline">Поффертьес — нидерландские дрожжевые мини-блинчики: маленькие, пышные, с влажной серединой и золотистой поверхностью. Их жарят в специальной сковородке с полусферическими углублениями (poffertjespan), по 12-20 штук сразу, быстро переворачивая шпажкой. Тесто содержит дрожжи (иногда гречневую муку), что придаёт им воздушную текстуру, совсем не похожую на обычные блины.
 
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇳🇱 Ещё рецепты из Нидерланды</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/netherlands/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/stamppot/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stamppot">🍽️</div>

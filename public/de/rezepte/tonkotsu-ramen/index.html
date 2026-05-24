@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Tonkotsu Ramen</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/kueche/japan/">Japan</a> › <span>Tonkotsu Ramen</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tonkotsu-ramen" id="recipe-photo-main">🍽️<img src="/images/tonkotsu-ramen.jpg" alt="Tonkotsu Ramen" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇯🇵 Abendessen · Japan</div>
+      <div class="recipe-badge">🇯🇵 Abendessen · <a class="recipe-badge-origin" href="/de/kueche/japan/">Japan</a></div>
       <h1>Tonkotsu Ramen</h1>
       <p class="recipe-tagline">Tonkotsu Ramen stammt aus Hakata — heute das Eisenbahnviertel von Fukuoka — wo eine Schüssel cremiger Schweineknochenbrühe seit den 1940er Jahren das Arbeiteressen ist. Das Weiß ist Physik: zwölf Stunden kochen lassen, und das Kollagen zerfällt, emulgiert das Fett in die Flüssigkeit und macht sie opak und seidig.
 
@@ -133,11 +133,13 @@ Tare kommt zuerst in die Schüssel, nicht in den Topf, damit jede Portion indivi
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇯🇵 Weitere Rezepte aus Japan</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/kueche/japan/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/sushi/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sushi">🍽️</div>

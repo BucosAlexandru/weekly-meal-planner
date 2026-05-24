@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Mexilhões com batatas fritas</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/belgium/">Bélgica</a> › <span>Mexilhões com batatas fritas</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moules-frites" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Moules-frites_at_Chez_Leon_in_Brussels.jpg/330px-Moules-frites_at_Chez_Leon_in_Brussels.jpg" alt="Mexilhões com batatas fritas" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Jantar · Bélgica</div>
+      <div class="recipe-badge">🇧🇪 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/belgium/">Bélgica</a></div>
       <h1>Mexilhões com batatas fritas</h1>
       <p class="recipe-tagline">Moules-frites — mexilhões com batatas fritas — é reclamado pela Bélgica como prato nacional, embora ambos os componentes tenham origens mais amplas. As batatas fritas belgas são uma questão de orgulho local: a tradição de cortar batatas em tiras e fritá-las em gordura de vaca está documentada na Bélgica desde o século XVII. A combinação com mexilhões tornou-se padrão no século XX, quando a colheita de mexilhões do Mar do Norte abastecia tanto os restaurantes costeiros como os do interior.
 
@@ -131,11 +131,13 @@ Os mexilhões são cozinhados a vapor no seu próprio suco combinado com vinho b
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇪 Mais receitas de Bélgica</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/cozinha/belgium/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/stoofvlees/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="stoofvlees">🍽️</div>

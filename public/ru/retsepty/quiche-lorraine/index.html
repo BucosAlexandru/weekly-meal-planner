@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Киш Лорен</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/france/">Франция</a> › <span>Киш Лорен</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="quiche-lorraine" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/639590-312x231.jpg" alt="Киш Лорен" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Завтрак · Франция</div>
+      <div class="recipe-badge">🇫🇷 Завтрак · <a class="recipe-badge-origin" href="/ru/kuhnya/france/">Франция</a></div>
       <h1>Киш Лорен</h1>
       <p class="recipe-tagline">Киш Лорен берёт начало в исторической области Лотарингия на северо-востоке Франции, где традиция запекания открытых тартов с кремово-яичной начинкой восходит к XVI веку. Классический рецепт включает исключительно копчёные ларданы, густые сливки и Грюйер — без лука, без овощей — позволяя копчёной свинине и бархатистому крему говорить за себя на фоне рассыпчатой масляной основы. Главный признак идеального киша — его центр: он должен дрожать, словно едва застывший крем-брюле, при лёгком встряхивании формы.</p>
       <div class="recipe-meta-row">
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Ещё рецепты из Франция</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/france/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/ratatouille/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ratatouille">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>ميلانيسا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/argentina/">الأرجنتين</a> › <span>ميلانيسا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="milanesa" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Milanesa_con_fritas.png/330px-Milanesa_con_fritas.png" alt="ميلانيسا" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇦🇷 عشاء · الأرجنتين</div>
+      <div class="recipe-badge">🇦🇷 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/argentina/">الأرجنتين</a></div>
       <h1>ميلانيسا</h1>
       <p class="recipe-tagline">وصلت الميلانيسا إلى الأرجنتين مع المهاجرين الإيطاليين في أواخر القرن التاسع عشر وأوائل العشرين، محمولةً مباشرةً من الكوتوليتا ألا ميلانيزي اللومباردية. في شكلها الأرجنتيني، تُرقَّق شريحة رفيعة من البقري — أحياناً دجاجاً أو عجلاً — وتُغمس في بيض مخفوق وفتات الخبز، ثم تُقلى في الزيت حتى يتشكّل قشر ذهبي منتظم. العملية سريعة والنتيجة ثابتة: قشرة مقرمشة حول لحم طري.
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇦🇷 المزيد من وصفات الأرجنتين</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/argentina/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/empanadas/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="empanadas">🍽️</div>

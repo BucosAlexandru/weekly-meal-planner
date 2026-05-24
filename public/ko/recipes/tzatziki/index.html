@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>차치키</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/yori/greece/">그리스</a> › <span>차치키</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tzatziki" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/645646-312x231.jpg" alt="차치키" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 간식 · 그리스</div>
+      <div class="recipe-badge">🇬🇷 간식 · <a class="recipe-badge-origin" href="/ko/yori/greece/">그리스</a></div>
       <h1>차치키</h1>
       <p class="recipe-tagline">차치키는 동지중해에서 중앙아시아에 이르는 요구르트와 오이를 이용한 소스 계열에 속합니다. 이 단어는 터키어 cacık를 거쳐 페르시아어에 뿌리를 두고 있으며, 더 묽고 액체 상태인 터키 버전은 오늘날에도 가까운 친척입니다. 그리스에서 차치키는 더 걸쭉하고 마늘 향이 강하며, 구운 고기·피타 빵·채소와 함께 메제로 차갑게 제공됩니다.
 
@@ -129,11 +129,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 그리스의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/yori/greece/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>

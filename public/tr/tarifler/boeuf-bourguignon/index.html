@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <span>Boeuf Bourguignon</span>
+    <a href="/">Ana Sayfa</a> › <a href="/tr/tarifler/">Tarifler</a> › <a href="/tr/mutfak/france/">Fransa</a> › <span>Boeuf Bourguignon</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="boeuf-bourguignon" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Beef_bourguignon_NYT.jpg/330px-Beef_bourguignon_NYT.jpg" alt="Boeuf Bourguignon" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Akşam yemeği · Fransa</div>
+      <div class="recipe-badge">🇫🇷 Akşam yemeği · <a class="recipe-badge-origin" href="/tr/mutfak/france/">Fransa</a></div>
       <h1>Boeuf Bourguignon</h1>
       <p class="recipe-tagline">Boeuf Bourguignon, Fransa'nın Burgundy bölgesinin gastronomi mücevheridir; kırmızı şarapta saatlerce pişirilerek sığır etini sıvı kadife haline dönüştüren bir yemektir. Tarif, köy Fransız mutfaklarından gelir; burada sert etleri yumuşatmak için kullanılırdı.
 
@@ -141,11 +141,13 @@ Her güveç, şarabın özünü emen havuç, mantar ve inci soğanı garnitürü
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Fransa tarihinden daha fazla tarif</h2>
-      <a href="/tr/tarifler/">Tüm tarifleri gör →</a>
+      <a href="/tr/mutfak/france/">Tüm tarifleri gör →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/tr/tarifler/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>

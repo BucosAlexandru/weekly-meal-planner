@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>पॉफर्चेस</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/netherlands/">नीदरलैंड</a> › <span>पॉफर्चेस</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="poffertjes" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Poffertjes-Melkhuis_%28cropped%29.jpg/330px-Poffertjes-Melkhuis_%28cropped%29.jpg" alt="पॉफर्चेस" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇳🇱 मिठाई · नीदरलैंड</div>
+      <div class="recipe-badge">🇳🇱 मिठाई · <a class="recipe-badge-origin" href="/hi/vyanjan/netherlands/">नीदरलैंड</a></div>
       <h1>पॉफर्चेस</h1>
       <p class="recipe-tagline">पॉफर्चेस नीदरलैंड के खमीर वाले मिनी पैनकेक हैं — छोटे, फूले हुए, नम अंदरूनी हिस्से के साथ सुनहरी सतह। इन्हें अर्धगोलाकार खांचों वाले विशेष पैन (poffertjespan) में 12-20 एक साथ पकाया जाता है और सींक से जल्दी पलटा जाता है। बैटर में खमीर (कभी-कभी कुट्टू का आटा) होता है जो इन्हें सामान्य पैनकेक से अलग हवादार बनावट देता है।
 
@@ -134,7 +134,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

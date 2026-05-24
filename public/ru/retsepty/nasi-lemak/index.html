@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Наси-лемак</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/kuhnya/malaysia/">Малайзия</a> › <span>Наси-лемак</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="nasi-lemak" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/330px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg" alt="Наси-лемак" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇾 Завтрак · Малайзия</div>
+      <div class="recipe-badge">🇲🇾 Завтрак · <a class="recipe-badge-origin" href="/ru/kuhnya/malaysia/">Малайзия</a></div>
       <h1>Наси-лемак</h1>
       <p class="recipe-tagline">Наси-лемак — название означает «жирный» или «богатый рис» на малайском — национальное блюдо Малайзии и завтрак нации. Рис варят в кокосовом молоке с листьями пандана и подают с набором неизменных добавок: острым самбалом, икан-билис (хрустящими анчоусами), жареным арахисом, ломтиками огурца и варёным или жареным яйцом. Традиционно всё заворачивалось в банановый лист.
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇾 Ещё рецепты из Малайзия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/kuhnya/malaysia/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/laksa/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="laksa">🍽️</div>

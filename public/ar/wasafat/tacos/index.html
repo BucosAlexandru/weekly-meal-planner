@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>تاكو</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/mexico/">المكسيك</a> › <span>تاكو</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tacos" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/645711-312x231.jpg" alt="تاكو" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 عشاء · المكسيك</div>
+      <div class="recipe-badge">🇲🇽 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/mexico/">المكسيك</a></div>
       <h1>تاكو</h1>
       <p class="recipe-tagline">التاكو هو روح الطعام الشعبي المكسيكي، وهو تقليد أقدم بكثير من القرن العشرين، يمكن تتبعه إلى مناجم الفضة الاستعمارية حيث كان العمال يلفون اللحم في تورتيلا الذرة لوجبة منتصف النهار. القاعدة الأصيلة لتاكو الشارع هي تورتيلا الذرة المنيخمالة — لا القمح أبداً — محمّصة مباشرةً على لهب الغاز حتى تتورم وتكتسب نكهة مدخنة. البساطة هي المبدأ: لحم وبيكو دي غايو طازج وكزبرة وليمون — كل مكوّن مرئي لا شيء مطموراً تحت الصلصة.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 المزيد من وصفات المكسيك</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/mexico/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/guacamole/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="guacamole">🍽️</div>

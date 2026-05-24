@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Pierogi</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/cozinha/poland/">Polonia</a> › <span>Pierogi</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pierogi" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656049-312x231.jpg" alt="Pierogi" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇱 Jantar · Polonia</div>
+      <div class="recipe-badge">🇵🇱 Jantar · <a class="recipe-badge-origin" href="/pt/cozinha/poland/">Polonia</a></div>
       <h1>Pierogi</h1>
       <p class="recipe-tagline">Os pierogi são uma das preparações mais antigas da cozinha polonesa, documentados em registos culinários do século XIII. Estão associados a Santa Kinga, padroeira da Polónia, através de uma lenda que liga a sua origem à chegada dela da Hungria. O recheio de batata e queijo fresco é o mais reconhecido, mas a variedade é ampla: chucrute com cogumelos, carne picada ou mirtilos doces para sobremesa.
 
@@ -132,7 +132,9 @@ A técnica é uma cozedura em duas etapas. Fervem-se em água salgada até subir
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->

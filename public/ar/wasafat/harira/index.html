@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="north-african">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>حريرة</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/morocco/">المغرب</a> › <span>حريرة</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="harira" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harira.png" alt="حريرة" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇦 غداء · المغرب</div>
+      <div class="recipe-badge">🇲🇦 غداء · <a class="recipe-badge-origin" href="/ar/matbakh/morocco/">المغرب</a></div>
       <h1>حريرة</h1>
       <p class="recipe-tagline">الحريرة هي الحساء الأكثر أهمية في المغرب — قدر غني وعطري من الخروف والحمص والعدس والطماطم المتبل بالكمون والقرفة والزنجبيل. تؤكل طوال العام لكنها مرتبطة ارتباطاً وثيقاً بشهر رمضان، إذ إنها الطبق التقليدي الذي يُقدَّم عند الإفطار — كسر الصيام عند غروب الشمس. يؤدي مزيج البروتينات والبقوليات والبهارات المدفئة وظيفة عملية وطقسية في آنٍ معاً.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇦 المزيد من وصفات المغرب</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/morocco/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/tagine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tagine">🍽️</div>

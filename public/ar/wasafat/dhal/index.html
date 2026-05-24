@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>دال</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/matbakh/india/">الهند</a> › <span>دال</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="dhal" id="recipe-photo-main">🍽️<img src="/images/dhal.webp" alt="دال" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 عشاء · الهند</div>
+      <div class="recipe-badge">🇮🇳 عشاء · <a class="recipe-badge-origin" href="/ar/matbakh/india/">الهند</a></div>
       <h1>دال</h1>
       <p class="recipe-tagline">الدال هو الخبز اليومي لشبه القارة الهندية — يُؤكل كل يوم في الملايين من البيوت، من البنجاب إلى تاميل نادو، ومن أكشاك الشوارع في كولكاتا إلى مطاعم الدهابا في راجستان. الكلمة تعني ببساطة «بقولة مقسّمة»، لكن الطبق أبعد ما يكون عن البساطة: يتحول ماسور دال (العدس الأحمر) بفضل قاعدة من البصل المكرمل والزنجبيل والثوم والتوابل المتراكبة، ثم يُختتم بالتادكا — انفجار من التوابل الكاملة تُحمَّر في سمن مشتعل وتُسكب فوق الطبق في اللحظة الأخيرة. ذلك الصب المتقطقط ليس تزييناً؛ بل هو الضربة النهائية من النكهة التي تفرق بين الدال والشوربة.</p>
       <div class="recipe-meta-row">
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 المزيد من وصفات الهند</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/matbakh/india/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>

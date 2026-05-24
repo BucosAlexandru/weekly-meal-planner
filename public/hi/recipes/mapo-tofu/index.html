@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>माओ टोफू</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/china/">चीन</a> › <span>माओ टोफू</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="mapo-tofu" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Chen_Mapo_Tofu.jpg/330px-Chen_Mapo_Tofu.jpg" alt="माओ टोफू" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇨🇳 रात का खाना · चीन</div>
+      <div class="recipe-badge">🇨🇳 रात का खाना · <a class="recipe-badge-origin" href="/hi/vyanjan/china/">चीन</a></div>
       <h1>माओ टोफू</h1>
       <p class="recipe-tagline">माओ टोफू सिचुआन व्यंजन का प्रतीक है — नरम टोफू के क्यूब्स को किण्वित बीन पेस्ट (दौबानजियांग), मिर्च के तेल और कीमा सूअर के मांस से बनी गहरी लाल चटनी में पकाया जाता है। सिचुआन मिर्च की सुन्न करने वाली विशेषता और मिर्ची की गर्मी मिलकर जीवंत माला अनुभव बनाती है: एक साथ सुन्न और तीखा।
 
@@ -140,11 +140,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇨🇳 चीन की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/china/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/sweet-and-sour-chicken/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sweet-and-sour-chicken">🍽️</div>

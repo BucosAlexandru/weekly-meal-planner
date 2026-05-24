@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Kibbeh</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/syria/">Siria</a> › <span>Kibbeh</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kibbeh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/649403-312x231.jpg" alt="Kibbeh" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 Cină · Siria</div>
+      <div class="recipe-badge">🇸🇾 Cină · <a class="recipe-badge-origin" href="/ro/bucatarie/syria/">Siria</a></div>
       <h1>Kibbeh</h1>
       <p class="recipe-tagline">Kibbeh este considerat preparatul național atât al Siriei, cât și al Libanului, și este prezent în tot Levantul, de la Turcia până în Egipt. Numele derivă dintr-un cuvânt arab care înseamnă minge sau bilă. Combinația de bază de carne tocată fin cu grâu crăpat apare în cărțile de bucate arabe medievale, ceea ce îl face unul dintre preparatele cel mai bine documentate din regiune.
 
@@ -139,11 +139,13 @@ Exteriorul este format din bulgu și carne crudă slabă procesate într-un alua
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 Alte rețete din Siria</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/syria/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>फत्ते</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/syria/">सीरिया</a> › <span>फत्ते</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fatteh" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg/330px-%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg" alt="फत्ते" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 नाश्ता · सीरिया</div>
+      <div class="recipe-badge">🇸🇾 नाश्ता · <a class="recipe-badge-origin" href="/hi/vyanjan/syria/">सीरिया</a></div>
       <h1>फत्ते</h1>
       <p class="recipe-tagline">फत्ते एक परतदार सीरियाई व्यंजन है जिसमें टोस्ट किए हुए पीटा, छोले और लहसुन दही की चटनी होती है, जिसे चीड़ के बीज और पापरिका के ऊपर गर्म मक्खन की बूंदाबांदी से पूरा किया जाता है। नाम अरबी शब्द 'तोड़ना' से आया है — आधार पर फटी हुई रोटी को संदर्भित करता है। यह सीरिया से मिस्र तक पूरे लेवांट क्षेत्र में खाया जाता है, सबसे अधिक सुबह के खाने के रूप में और रमजान के दौरान विशेष रूप से।
 
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 सीरिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/syria/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>

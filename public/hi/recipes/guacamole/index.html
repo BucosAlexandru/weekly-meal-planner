@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>गुआकामोले</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/vyanjan/mexico/">मेक्सिको</a> › <span>गुआकामोले</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="guacamole" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/715543-312x231.jpg" alt="गुआकामोले" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 नाश्ता · मेक्सिको</div>
+      <div class="recipe-badge">🇲🇽 नाश्ता · <a class="recipe-badge-origin" href="/hi/vyanjan/mexico/">मेक्सिको</a></div>
       <h1>गुआकामोले</h1>
       <p class="recipe-tagline">गुआकामोले की जड़ें प्री-कोलम्बियन मैक्सिको की एज़्टेक रसोइयों में हैं, जहाँ नाहुआतल शब्द 'अहुआकामोली' — जिसका अर्थ लगभग 'एवोकाडो सॉस' है — मोलकाहेते में कुटे हुए एवोकाडो, मिर्च और टमाटर की एक सादी पेस्ट को दर्शाता था। यह व्यंजन स्पेनिश विजय के बाद भी अपरिवर्तित बना रहा क्योंकि कोई विकल्प संभव नहीं था: मैक्सिकन हाइलैंड्स का हैस एवोकाडो एक मक्खन जैसी समृद्धि और अखरोट जैसे स्वाद का मेल रखता है जिसे कोई भी चीज दोहरा नहीं सकती। केवल एक तकनीक मायने रखती है: संयम — कांटे से मसला गया, कभी पिसा नहीं, ताकि परिणाम में शरीर और बनावट हो, न कि किसी प्रोसेस्ड स्प्रेड की सपाट चिकनाई।</p>
       <div class="recipe-meta-row">
@@ -124,11 +124,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 मेक्सिको की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/vyanjan/mexico/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>

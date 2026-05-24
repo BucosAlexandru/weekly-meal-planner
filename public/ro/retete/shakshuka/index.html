@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Shakshuka</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/bucatarie/israel/">Israel</a> › <span>Shakshuka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="shakshuka" id="recipe-photo-main">🍳<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shakshuka_by_Calliopejen1.jpg/330px-Shakshuka_by_Calliopejen1.jpg" alt="Shakshuka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇱 Mic dejun · Israel</div>
+      <div class="recipe-badge">🇮🇱 Mic dejun · <a class="recipe-badge-origin" href="/ro/bucatarie/israel/">Israel</a></div>
       <h1>Shakshuka</h1>
       <p class="recipe-tagline">Shakshuka a ajuns în Israel cu imigranții evrei sefardi din Africa de Nord și Orientul Mijlociu la mijlocul secolului XX, aducând cu ei tradiții culinare din Tunisia, Libia și Maroc. În Israel a devenit un element definitoriu al culturii micului dejun și, eventual, un standard național. Numele provine probabil dintr-un cuvânt arab care înseamnă a amesteca sau a zguduia.
 
@@ -137,11 +137,13 @@ Sosul de roșii este felul în sine. Trebuie să fiarbă cel puțin zece minute 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇱 Alte rețete din Israel</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/bucatarie/israel/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/sabich/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="sabich">🍳</div>
