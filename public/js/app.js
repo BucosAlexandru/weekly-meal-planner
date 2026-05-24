@@ -1198,7 +1198,7 @@ function paginateCleanNode(root){
       }
     },
     { id: 'med',       labelKey: 'filter.med',  emoji: '🫒',
-      test: r => ['Italia','Grecia','Franța','Spania','Turcia','Maroc','Portugalia'].includes(r.origin?.ro) },
+      test: r => ['Italia','Grecia','Franța','Spania','Turcia','Maroc','Portugalia','Croația'].includes(r.origin?.ro) },
     { id: 'asian',     labelKey: 'filter.asian', emoji: '🍜',
       test: r => ['Japonia','Coreea de Sud','China','Vietnam','Thailanda','India','Indonezia'].includes(r.origin?.ro) },
     { id: 'vegetarian',labelKey: 'filter.veg',   emoji: '🌱',

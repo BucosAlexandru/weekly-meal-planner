@@ -1,40 +1,234 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1.js" },
-    { "source": "/(.*)", "destination": "/public/$1" }
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
+    }
   ],
   "builds": [
-    { "src": "public/**/*", "use": "@vercel/static" },
-    { "src": "api/**/*.js", "use": "@vercel/node" }
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
   ],
   "redirects": [
-    { "source": "/ro/bucatarie",         "destination": "/ro/retete/",      "permanent": true },
-    { "source": "/ro/bucatarie/:path*",  "destination": "/ro/retete/:path*",  "permanent": true },
-    { "source": "/en/cuisine",           "destination": "/en/recipes/",     "permanent": true },
-    { "source": "/en/cuisine/:path*",    "destination": "/en/recipes/:path*", "permanent": true },
-    { "source": "/es/cocina",            "destination": "/es/recetas/",     "permanent": true },
-    { "source": "/es/cocina/:path*",     "destination": "/es/recetas/:path*", "permanent": true },
-    { "source": "/fr/cuisine",           "destination": "/fr/recettes/",    "permanent": true },
-    { "source": "/fr/cuisine/:path*",    "destination": "/fr/recettes/:path*", "permanent": true },
-    { "source": "/de/kueche",            "destination": "/de/rezepte/",     "permanent": true },
-    { "source": "/de/kueche/:path*",     "destination": "/de/rezepte/:path*", "permanent": true },
-    { "source": "/pt/cozinha",           "destination": "/pt/receitas/",    "permanent": true },
-    { "source": "/pt/cozinha/:path*",    "destination": "/pt/receitas/:path*", "permanent": true },
-    { "source": "/ru/kuhnya",            "destination": "/ru/retsepty/",    "permanent": true },
-    { "source": "/ru/kuhnya/:path*",     "destination": "/ru/retsepty/:path*", "permanent": true },
-    { "source": "/ar/matbakh",           "destination": "/ar/wasafat/",     "permanent": true },
-    { "source": "/ar/matbakh/:path*",    "destination": "/ar/wasafat/:path*", "permanent": true },
-    { "source": "/zh/caixi",             "destination": "/zh/shipu/",       "permanent": true },
-    { "source": "/zh/caixi/:path*",      "destination": "/zh/shipu/:path*", "permanent": true },
-    { "source": "/ja/ryori",             "destination": "/ja/reshipi/",     "permanent": true },
-    { "source": "/ja/ryori/:path*",      "destination": "/ja/reshipi/:path*", "permanent": true },
-    { "source": "/hi/vyanjan",           "destination": "/hi/recipes/",     "permanent": true },
-    { "source": "/hi/vyanjan/:path*",    "destination": "/hi/recipes/:path*", "permanent": true },
-    { "source": "/tr/mutfak",            "destination": "/tr/tarifler/",    "permanent": true },
-    { "source": "/tr/mutfak/:path*",     "destination": "/tr/tarifler/:path*", "permanent": true },
-    { "source": "/it/cucina",            "destination": "/it/ricette/",     "permanent": true },
-    { "source": "/it/cucina/:path*",     "destination": "/it/ricette/:path*", "permanent": true },
-    { "source": "/ko/yori",              "destination": "/ko/recipes/",     "permanent": true },
-    { "source": "/ko/yori/:path*",       "destination": "/ko/recipes/:path*", "permanent": true }
+    {
+      "source": "/ro/bucatarie",
+      "destination": "/ro/retete/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/bucatarie/:path*",
+      "destination": "/ro/retete/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/cuisine",
+      "destination": "/en/recipes/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cuisine/:path*",
+      "destination": "/en/recipes/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/es/cocina",
+      "destination": "/es/recetas/",
+      "permanent": true
+    },
+    {
+      "source": "/es/cocina/:path*",
+      "destination": "/es/recetas/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/fr/cuisine",
+      "destination": "/fr/recettes/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/cuisine/:path*",
+      "destination": "/fr/recettes/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/de/kueche",
+      "destination": "/de/rezepte/",
+      "permanent": true
+    },
+    {
+      "source": "/de/kueche/:path*",
+      "destination": "/de/rezepte/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/pt/cozinha",
+      "destination": "/pt/receitas/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/cozinha/:path*",
+      "destination": "/pt/receitas/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ru/kuhnya",
+      "destination": "/ru/retsepty/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/kuhnya/:path*",
+      "destination": "/ru/retsepty/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ar/matbakh",
+      "destination": "/ar/wasafat/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/matbakh/:path*",
+      "destination": "/ar/wasafat/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/caixi",
+      "destination": "/zh/shipu/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/caixi/:path*",
+      "destination": "/zh/shipu/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ja/ryori",
+      "destination": "/ja/reshipi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/ryori/:path*",
+      "destination": "/ja/reshipi/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/hi/vyanjan",
+      "destination": "/hi/recipes/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/vyanjan/:path*",
+      "destination": "/hi/recipes/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/tr/mutfak",
+      "destination": "/tr/tarifler/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/mutfak/:path*",
+      "destination": "/tr/tarifler/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/it/cucina",
+      "destination": "/it/ricette/",
+      "permanent": true
+    },
+    {
+      "source": "/it/cucina/:path*",
+      "destination": "/it/ricette/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ko/yori",
+      "destination": "/ko/recipes/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/yori/:path*",
+      "destination": "/ko/recipes/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/dalmatinska-pasticada",
+      "destination": "/ro/retete/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/dalmatinska-pasticada",
+      "destination": "/en/recipes/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/dalmatinska-pasticada",
+      "destination": "/es/recetas/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/dalmatinska-pasticada",
+      "destination": "/fr/recettes/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/dalmatinska-pasticada",
+      "destination": "/de/rezepte/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/dalmatinska-pasticada",
+      "destination": "/pt/receitas/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/dalmatinska-pasticada",
+      "destination": "/ru/retsepty/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/dalmatinska-pasticada",
+      "destination": "/ar/wasafat/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/dalmatinska-pasticada",
+      "destination": "/zh/shipu/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/dalmatinska-pasticada",
+      "destination": "/ja/reshipi/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/dalmatinska-pasticada",
+      "destination": "/hi/recipes/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/dalmatinska-pasticada",
+      "destination": "/tr/tarifler/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/dalmatinska-pasticada",
+      "destination": "/it/ricette/crni-rizot/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/dalmatinska-pasticada",
+      "destination": "/ko/recipes/crni-rizot/",
+      "permanent": true
+    }
   ]
 }
