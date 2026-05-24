@@ -3844,8 +3844,11 @@ function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAft
     + haystack.slice(insertAt);
 }
 
-function injectCuisineHomeSection(lc_code) {
-  const filePath = path.join(PUBLIC, lc_code, 'index.html');
+function injectCuisineHomeSection(lc_code, customPath) {
+  // Default file path: public/<lc>/index.html. Pass customPath to override —
+  // used for the root public/index.html which serves meal-planner.ro/ and
+  // is RO-localized but lives outside the /<lc>/ tree.
+  const filePath = customPath || path.join(PUBLIC, lc_code, 'index.html');
   if (!fs.existsSync(filePath)) return false;
   let html = fs.readFileSync(filePath, 'utf8');
   const original = html;
@@ -3948,7 +3951,15 @@ let hpInjected = 0;
 for (const lc_code of Object.keys(CUISINE_HUB_LANG)) {
   if (injectCuisineHomeSection(lc_code)) hpInjected++;
 }
+// Root public/index.html — separate file that serves meal-planner.ro/.
+// It's <html lang="ro"> so we inject the RO cuisine teaser. Same anchor
+// (<!-- ══════════ MAIN APP ══════════ -->) exists in this file too.
+let rootInjected = false;
+if (injectCuisineHomeSection('ro', path.join(PUBLIC, 'index.html'))) {
+  rootInjected = true;
+}
 console.log(`✅ ${hpInjected}/14 SPA homepages updated with cuisine discovery section`);
+console.log(`✅ Root /index.html cuisine teaser: ${rootInjected ? 'injected (RO content)' : 'no change'}`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
