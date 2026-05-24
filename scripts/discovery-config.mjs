@@ -46,6 +46,64 @@ export const CUISINE_MARQUEE = {
   peru: 80, turkey: 80, romania: 80, germany: 75, usa: 70, lebanon: 70,
 };
 
+// Curated culinary adjacencies for the cuisine-hub "related cuisines" strip
+// (Phase 7 PR 2). Selected for shared ingredients, technique, or historical
+// exchange — not continent grouping. Keys + values are lowercased English
+// origin names; matched case-insensitively against `recipe.origin.en`. A
+// related cuisine that has no eligible hub (< CUISINE_MIN_RECIPES) is
+// silently skipped at build time so links never 404.
+export const RELATED_CUISINES = Object.freeze({
+  // East & Southeast Asia
+  japan:         ['south korea', 'china', 'vietnam'],
+  'south korea': ['japan', 'china', 'vietnam'],
+  china:         ['japan', 'south korea', 'vietnam'],
+  vietnam:       ['thailand', 'china', 'japan'],
+  thailand:      ['vietnam', 'indonesia', 'india'],
+  indonesia:     ['thailand', 'vietnam', 'india'],
+
+  // South Asia
+  india:         ['thailand', 'indonesia', 'lebanon'],
+
+  // Mediterranean
+  italy:         ['france', 'greece', 'spain'],
+  france:        ['italy', 'spain', 'germany'],
+  spain:         ['italy', 'portugal', 'greece'],
+  greece:        ['turkey', 'lebanon', 'italy'],
+  portugal:      ['spain', 'italy', 'france'],
+
+  // Levant & Caucasus
+  turkey:        ['greece', 'lebanon', 'georgia'],
+  lebanon:       ['turkey', 'greece', 'india'],
+  georgia:       ['russia', 'turkey', 'romania'],
+
+  // Latin America
+  mexico:        ['peru', 'spain', 'usa'],
+  peru:          ['mexico', 'spain', 'brazil'],
+  brazil:        ['peru', 'portugal', 'mexico'],
+
+  // Americas
+  usa:           ['mexico', 'uk', 'italy'],
+
+  // Eastern Europe
+  romania:       ['hungary', 'greece', 'turkey'],
+  hungary:       ['romania', 'germany', 'georgia'],
+  russia:        ['georgia', 'romania', 'hungary'],
+  ukraine:       ['russia', 'romania', 'hungary'],
+  poland:        ['germany', 'hungary', 'russia'],
+
+  // Central Europe
+  germany:       ['france', 'hungary', 'poland'],
+  austria:       ['germany', 'hungary', 'italy'],
+
+  // Northern Europe
+  uk:            ['usa', 'france', 'india'],
+});
+
+// Hard cap on how many related cuisines we ever render per hub page.
+// Curated lists in RELATED_CUISINES are length 3 today; the cap is a
+// defensive ceiling so a future expansion of the map can't bloat pages.
+export const MAX_RELATED_CUISINES = 6;
+
 // ─── Catalog enrichment ─────────────────────────────────────────────────────
 
 // Returns an array of plain recipe items merged with their meta sidecar:
