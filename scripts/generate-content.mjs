@@ -3812,12 +3812,15 @@ const HP_CUISINE_SEC_END   = '<!-- HP_CUISINE_DISCOVER:END -->';
 const HP_CUISINE_CSS_LINK  = '<link rel="stylesheet" href="/css/cuisine-homepage.css">';
 
 function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAfter) {
-  // If markers exist anywhere → replace content between them.
+  // If markers exist anywhere → replace content between them. Preserve
+  // the 2-space indentation from the initial insertion so re-runs of the
+  // build don't produce whitespace-only diffs (otherwise the homepage
+  // injection thrashes 14 files on every build).
   const startIdx = haystack.indexOf(startMark);
   const endIdx   = haystack.indexOf(endMark);
   if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
     return haystack.slice(0, startIdx)
-      + startMark + '\n' + newBlock + '\n  ' + endMark
+      + startMark + '\n  ' + newBlock + '\n  ' + endMark
       + haystack.slice(endIdx + endMark.length);
   }
   // Else insert AFTER the first occurrence of the fallback anchor.
