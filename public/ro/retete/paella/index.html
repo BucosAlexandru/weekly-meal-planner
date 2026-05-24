@@ -161,7 +161,19 @@ Ceea ce separă o paella excelentă de un simplu orez este socarrat-ul: crusta �
     <a href="/ro/" class="btn-cta-banner">Generează planul meu acum →</a>
   </div>
 
-</div>
+</div><!-- /.recipe-page-wrap -->
+
+<!-- Mobile-only floating back-to-recipes pill.
+     Hidden on desktop, print, and PDF export. Restores list scroll
+     position via sessionStorage when tapped (content.js handles the
+     flag + restore on the destination page). -->
+<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
+   aria-label="Rețete"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">Rețete</span>
+</a>
+
 </main>
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">

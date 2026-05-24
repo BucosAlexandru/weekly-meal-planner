@@ -156,7 +156,19 @@ El bacalao salado debe remojarse durante veinticuatro a cuarenta y ocho horas, c
     <a href="/" class="btn-cta-banner">Generar mi plan ahora →</a>
   </div>
 
-</div>
+</div><!-- /.recipe-page-wrap -->
+
+<!-- Mobile-only floating back-to-recipes pill.
+     Hidden on desktop, print, and PDF export. Restores list scroll
+     position via sessionStorage when tapped (content.js handles the
+     flag + restore on the destination page). -->
+<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
+   aria-label="Recetas"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">Recetas</span>
+</a>
+
 </main>
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">
