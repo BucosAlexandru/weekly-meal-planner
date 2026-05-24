@@ -662,33 +662,62 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 }
-  // ── PDF v2 opt-in flag (Phase 1 scaffold) ──────────────────────────────────
-  // The current html2pdf path is the production default and remains untouched.
-  // pdfV2 is reached ONLY when the user has explicitly opted in via the URL
-  // (?pdfv2=1) or via localStorage (localStorage.pdfV2 = '1'). No default
-  // behaviour changes. To revert, the user removes the flag.
+  // ── PDF export engine: runtime switch + opt-in/opt-out flags ──────────────
   //
-  // Stickiness: as soon as ?pdfv2=1 is seen in the URL on ANY page load, we
-  // promote it to localStorage so the opt-in survives client-side navigations
-  // that drop the query string — notably the "Open in app & customize" link
-  // on static plan pages, which routes to /?autoplan=<id> and would otherwise
-  // strip the flag and fall back to legacy. To opt out: localStorage.removeItem('pdfV2').
+  // EMERGENCY KILL-SWITCH / DEFAULT FLIP
+  // -----------------------------------
+  // Flipping this single constant changes the DEFAULT engine for every user
+  // who hasn't explicitly opted in or out. To roll out pdfv2 as the default,
+  // change 'legacy' → 'pdfv2' in this line, run `npm run build`, push.
+  // To roll back: change it back to 'legacy', build, push.
+  //
+  //   PDF_EXPORT_DEFAULT_ENGINE = 'legacy' → existing html2pdf path
+  //   PDF_EXPORT_DEFAULT_ENGINE = 'pdfv2'  → server-side @react-pdf endpoint
+  //
+  // User-level overrides (always win over the default):
+  //   URL  ?pdfv2=1 → force pdfv2 for this session
+  //   URL  ?pdfv2=0 → force legacy for this session
+  //   localStorage pdfV2='1' → sticky opt-in across sessions
+  //   localStorage pdfV2='0' → sticky opt-out across sessions
+  //
+  // Stickiness: when the URL sets ?pdfv2=1 or ?pdfv2=0, we promote that
+  // value to localStorage so the choice survives navigations that drop
+  // the query string (e.g. "Open in app & customize" on static plan
+  // pages, which routes to /?autoplan=<id>).
+  // To return to the default after an explicit opt-in/out:
+  //   localStorage.removeItem('pdfV2')
+  const PDF_EXPORT_DEFAULT_ENGINE = 'legacy';  // 'legacy' | 'pdfv2'
+
   try {
     const _qs = new URLSearchParams(window.location.search || '');
-    if (_qs.get('pdfv2') === '1') localStorage.setItem('pdfV2', '1');
+    const _flag = _qs.get('pdfv2');
+    if (_flag === '1') localStorage.setItem('pdfV2', '1');
+    else if (_flag === '0') localStorage.setItem('pdfV2', '0');
   } catch (_) {}
 
   function isPdfV2Enabled() {
     try {
       const qs = new URLSearchParams(window.location.search || '');
-      if (qs.get('pdfv2') === '1') return true;
-      return localStorage.getItem('pdfV2') === '1';
-    } catch (_) { return false; }
+      const urlFlag = qs.get('pdfv2');
+      if (urlFlag === '1') return true;
+      if (urlFlag === '0') return false;
+      const lsFlag = localStorage.getItem('pdfV2');
+      if (lsFlag === '1') return true;
+      if (lsFlag === '0') return false;
+      return PDF_EXPORT_DEFAULT_ENGINE === 'pdfv2';
+    } catch (_) {
+      return PDF_EXPORT_DEFAULT_ENGINE === 'pdfv2';
+    }
   }
 
   // Startup log so QA can confirm which engine is wired at page-load time
   // (verifiable from Safari Web Inspector before even clicking Generate PDF).
-  try { console.log('PDF_EXPORT_ENGINE (on load) = "' + (isPdfV2Enabled() ? 'pdfv2' : 'legacy') + '"'); } catch (_) {}
+  try {
+    console.log(
+      'PDF_EXPORT_ENGINE (on load) = "' + (isPdfV2Enabled() ? 'pdfv2' : 'legacy') + '"' +
+      '  (default = "' + PDF_EXPORT_DEFAULT_ENGINE + '")'
+    );
+  } catch (_) {}
   async function exportViaPdfV2() {
     // Build the payload from the live planner state — same source data the
     // legacy generatePDFimpact() reads. This ensures pdfv2 exports whatever
