@@ -95,10 +95,16 @@ jobs:
           [ "$FAIL" -eq 0 ] || exit 1
 
       # 8. HTML page count
-      # Expected: 3250 pages (175 recipes × 14 languages + plan pages +
-      # pricing + 44 cuisine hubs × 14 locales + 14 hub indexes).
+      # Expected: ~3236 pages (Phase 5 architecture):
+      #   - 175 recipes × 14 locales        = 2450 recipe pages
+      #   - 44 country pages × 14 locales   =  616 country pages
+      #     (under /<lc>/<recipe-prefix>/<country-slug>/)
+      #   - 14 recipe-index/cuisine hubs    =   14
+      #   - 8 plans × 14 locales + 14 index =  126 plan pages
+      #   - 14 pricing pages                =   14
+      #   - 14 SPA homes (planner)          =   14 (+ 2 root)
       # If this number changes, update the thresholds here and in AGENTS.md.
-      - name: Verify HTML page count (expected ~3250)
+      - name: Verify HTML page count (expected ~3236)
         run: |
           COUNT=$(find public -name "*.html" | wc -l | tr -d ' ')
           echo "HTML pages found: $COUNT"

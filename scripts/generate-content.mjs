@@ -1746,7 +1746,9 @@ function indexPage(lc) {
   // featured cuisines + a single "see all" CTA. No images here to keep
   // initial render cheap on a busy page; the hub-index handles imagery.
   const ctaLang   = CUISINE_CTA[lc_code] || CUISINE_CTA.en;
-  const hubPrefix = CUISINE_HUB_LANG[lc_code]?.prefix || 'cuisine';
+  // Phase 5: all cuisine entry points target /<lc>/<recipe-prefix>/.
+  const planRl    = RECIPE_LANG[lc_code];
+  const planRecipeDir = planRl ? planRl.dir : `/${lc_code}/recipes`;
   const eligible  = buildCuisineHubs();
   const featured  = eligible.slice(0, 6);
   const cuisineMinis = featured.map(([enKey, recs]) => {
@@ -1754,7 +1756,7 @@ function indexPage(lc) {
     const flagIcon   = COUNTRY_FLAG[enKey] || '🌍';
     const originSlug = slug(enKey);
     const atmosphere = cuisineAtmosphere(enKey);
-    return `<a class="cuisine-mini" href="/${lc_code}/${hubPrefix}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
+    return `<a class="cuisine-mini" href="${planRecipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
       <span class="cuisine-mini-flag" aria-hidden="true">${flagIcon}</span>
       <span class="cuisine-mini-name">${esc(display)}</span>
       <span class="cuisine-mini-count">${recs.length}</span>
@@ -1786,7 +1788,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
         <p class="cuisine-discover-sub">${esc(ctaLang.sub(eligible.length))}</p>
       </div>
       <div class="cuisine-mini-row">${cuisineMinis}</div>
-      <p class="cuisine-discover-cta"><a class="cuisine-discover-btn" href="/${lc_code}/${hubPrefix}/">${esc(ctaLang.btn(eligible.length))}</a></p>
+      <p class="cuisine-discover-cta"><a class="cuisine-discover-btn" href="${planRecipeDir}/">${esc(ctaLang.btn(eligible.length))}</a></p>
     </div>
   </section>
   <section class="content-section content-seo">
@@ -3262,70 +3264,84 @@ function cuisineTileData(recipe, lc_code, recipeBaseDir) {
 function recipeIndex(rl) {
   const lc   = rl.lc;
   const code = lc.code;
-  // Group by EN origin so the flag lookup works even when the display
-  // origin is localized (e.g. RO "Italia", JA "イタリア" both map → Italy → 🇮🇹).
-  const byOrigin = {};
-  recipes.forEach(r => {
-    const enKey = r.origin?.en || r.origin?.ro || 'Other';
-    const disp  = r.origin?.[code] || enKey;
-    const bucket = byOrigin[enKey] || (byOrigin[enKey] = { disp, recs: [] });
-    bucket.recs.push(r);
-  });
-  const groups = Object.entries(byOrigin)
-    .sort((a,b) => b[1].recs.length - a[1].recs.length)
-    .map(([enKey, {disp, recs}]) => {
-      const flag = COUNTRY_FLAG[enKey] || '🌍';
-      return `
-  <div class="recipe-origin-group">
-    <h2 class="origin-title">${flag} ${esc(disp)} <span class="recipe-count">${recs.length}</span></h2>
-    <ul class="recipe-origin-list">
-      ${recs.map(r => {
-        const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
-        const rs = slug(r.name?.en || r.name?.ro || rn);
-        return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
-      }).join('')}
-    </ul>
-  </div>`;
-    }).join('');
   const dir_attr = rl.dir_attr || 'ltr';
-  // Cuisine discovery CTA — funnels recipe-index visitors into the hub
-  // architecture (Phase 4). We surface up to 6 "featured" cuisines as
-  // mini-cards on top of the existing per-origin grouped list. The full
-  // hub index is one click away.
-  const ctaLang   = CUISINE_CTA[code] || CUISINE_CTA.en;
-  const hubPrefix = CUISINE_HUB_LANG[code]?.prefix || 'cuisine';
-  const eligible  = buildCuisineHubs();
-  const featuredCuisines = eligible.slice(0, 6);
-  const cuisineCtaCards = featuredCuisines.map(([enKey, recs]) => {
+  // Phase 5: /<lc>/<recipe-prefix>/ IS the cuisine hub. The old per-origin
+  // recipe-list layout is gone (it duplicated the country pages a click
+  // away). The page now renders a card grid identical to what used to live
+  // at /<lc>/<cuisine-prefix>/ — one card per eligible cuisine, with
+  // thumbnail strip + curated preview, atmosphere-tinted accent.
+  const eligible = buildCuisineHubs();
+  const cards = eligible.map(([enKey, recs]) => {
     const display    = recs[0].origin?.[code] || enKey;
-    const flagIcon   = COUNTRY_FLAG[enKey] || '🌍';
+    const flag       = COUNTRY_FLAG[enKey] || '🌍';
     const originSlug = slug(enKey);
+    const countryHref = `${rl.dir}/${originSlug}/`;
     const atmosphere = cuisineAtmosphere(enKey);
-    return `<a class="cuisine-mini" href="/${code}/${hubPrefix}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
-      <span class="cuisine-mini-flag" aria-hidden="true">${flagIcon}</span>
-      <span class="cuisine-mini-name">${esc(display)}</span>
-      <span class="cuisine-mini-count">${recs.length}</span>
-    </a>`;
+    // Pick up to 3 thumbnails, preferring real images over placeholder.
+    const allThumbs = recs.map(r => {
+      const rs = slug(r.name?.en || r.name?.ro || '');
+      return resolveRecipeImage(r, rs).src;
+    });
+    const goodThumbs = allThumbs.filter(u => !/cover2\.jpg$/.test(u));
+    const thumbs = (goodThumbs.length >= 3 ? goodThumbs : allThumbs).slice(0, 3);
+    const thumbsHtml = thumbs.map((u, i) => {
+      const isPlaceholder = /cover2\.jpg$/.test(u);
+      return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
+        <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
+        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+      </span>`;
+    }).join('');
+    const previewNames = recs.slice(0, 3).map(r =>
+      r.name?.[code] || r.name?.en || r.name?.ro || ''
+    ).filter(Boolean).join(' · ');
+    return `
+    <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="${atmosphere}">
+      <a class="cuisine-card-link" href="${countryHref}" aria-label="${esc(display)}"></a>
+      <div class="cuisine-card-thumbs" data-thumb-count="${thumbs.length}" aria-hidden="true">${thumbsHtml}</div>
+      <div class="cuisine-card-meta">
+        <h2 class="origin-title">
+          <span class="origin-title-text">${flag} ${esc(display)}</span>
+          <span class="recipe-count">${recs.length}</span>
+        </h2>
+        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>
+      </div>
+    </article>`;
   }).join('');
+
+  // Schema.org CollectionPage describing the cuisine hub. itemListElement
+  // contains the country pages (positions 1..N) so search engines understand
+  // this is a directory of cuisines, not a flat recipe list.
+  const items = eligible.map(([enKey, recs], i) => {
+    const display = recs[0].origin?.[code] || enKey;
+    return {
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://meal-planner.ro${rl.dir}/${slug(enKey)}/`,
+      "name": display,
+    };
+  });
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": rl.indexTitle.split(' | ')[0],
+    "description": rl.indexDesc(recipes.length),
+    "url": `https://meal-planner.ro${rl.dir}/`,
+    "inLanguage": code,
+    "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
+    "hasPart": { "@type": "ItemList", "numberOfItems": eligible.length, "itemListElement": items }
+  });
+
   return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
-${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
     <h1>${rl.indexH1}</h1>
     <p class="content-hero-desc">${rl.indexDesc(recipes.length)}</p>
   </div></section>
-  <section class="content-section cuisine-discover"><div class="content-section-inner">
-    <div class="cuisine-discover-head">
-      <span class="cuisine-discover-eyebrow">${esc(ctaLang.eyebrow)}</span>
-      <h2 class="cuisine-discover-title">${esc(ctaLang.heading)}</h2>
-      <p class="cuisine-discover-sub">${esc(ctaLang.sub(eligible.length))}</p>
-    </div>
-    <div class="cuisine-mini-row">${cuisineCtaCards}</div>
-    <p class="cuisine-discover-cta"><a class="cuisine-discover-btn" href="/${code}/${hubPrefix}/">${esc(ctaLang.btn(eligible.length))}</a></p>
-  </div></section>
   <section class="content-section"><div class="content-section-inner">
-    <div class="recipe-groups-grid">${groups}</div>
+    <div class="recipe-groups-grid">${cards}</div>
   </div></section>
+  <script type="application/ld+json">${jsonLd}</script>
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
@@ -3361,10 +3377,33 @@ HUB_ELIGIBLE_ORIGINS = new Set(
 );
 recipeCuisineHubHref = function (originEnKey, lc_code) {
   if (!originEnKey || !HUB_ELIGIBLE_ORIGINS.has(originEnKey)) return null;
-  const hubPrefix = CUISINE_HUB_LANG[lc_code]?.prefix;
-  if (!hubPrefix) return null;
-  return `/${lc_code}/${hubPrefix}/${slug(originEnKey)}/`;
+  const rl = RECIPE_LANG[lc_code];
+  if (!rl) return null;
+  // Phase 5 architecture: country pages live UNDER the recipe-index dir,
+  // not under a separate /<cuisine-prefix>/ branch. The URL pattern is
+  // /<lc>/<recipe-prefix>/<country-slug>/ — same level as individual
+  // recipes (no collision today; build-time guard added below).
+  return `${rl.dir}/${slug(originEnKey)}/`;
 };
+
+// Slug-collision guard: country pages and recipe pages now share the same
+// directory (/<lc>/<recipe-prefix>/<slug>/) so we must enforce that no
+// country slug ever matches a recipe slug. Throws at build time if any
+// collision exists — safer to fail the build than ship a 404 trap.
+(() => {
+  const recipeSlugs = new Set(
+    recipes.map(r => slug(r.name?.en || r.name?.ro || '')).filter(Boolean)
+  );
+  const collisions = [...HUB_ELIGIBLE_ORIGINS]
+    .map(k => ({ country: k, slug: slug(k) }))
+    .filter(c => recipeSlugs.has(c.slug));
+  if (collisions.length) {
+    console.error('\n❌ FATAL: country slug collides with recipe slug:');
+    collisions.forEach(c => console.error(`   ${c.country} → /${c.slug}/`));
+    console.error('   Rename one or the other before continuing.');
+    process.exit(1);
+  }
+})();
 
 const CUISINE_HUB_LANG = {
   ro: { prefix:'bucatarie',
@@ -3544,24 +3583,15 @@ function buildCuisineHubs() {
     .sort((a, b) => b[1].length - a[1].length);
 }
 
-// Per-locale hreflang set for a given cuisine hub. URL pattern is
-// /<lc>/<hub-prefix>/<origin-slug>/ and the slug stays stable across
-// locales (locale-stable mirrors recipe slugs).
+// Per-locale hreflang set for a given country/cuisine page. Phase 5: pages
+// live at /<lc>/<recipe-prefix>/<country-slug>/ (collapsed under the recipe
+// hub — no separate /<cuisine-prefix>/ branch). Slug is locale-stable.
 function cuisineHubHreflangs(originSlug) {
-  const lines = Object.entries(CUISINE_HUB_LANG).map(([c, h]) =>
-    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro/${c}/${h.prefix}/${originSlug}/" />`
+  const lines = Object.entries(RECIPE_LANG).map(([c, rl]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro${rl.dir}/${originSlug}/" />`
   );
   // x-default points to English variant for international fall-through.
-  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/en/${CUISINE_HUB_LANG.en.prefix}/${originSlug}/" />`);
-  return lines.join('\n');
-}
-
-// Hreflang set for the per-locale cuisine hub INDEX (/<lc>/<prefix>/).
-function cuisineHubIndexHreflangs() {
-  const lines = Object.entries(CUISINE_HUB_LANG).map(([c, h]) =>
-    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro/${c}/${h.prefix}/" />`
-  );
-  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/en/${CUISINE_HUB_LANG.en.prefix}/" />`);
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${RECIPE_LANG.en.dir}/${originSlug}/" />`);
   return lines.join('\n');
 }
 
@@ -3572,7 +3602,10 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   const display = recs[0].origin?.[lc_code] || originEnKey;
   const flag    = COUNTRY_FLAG[originEnKey] || '🌍';
   const originSlug = slug(originEnKey);
-  const canonical  = `/${lc_code}/${hub.prefix}/${originSlug}/`;
+  // Phase 5: country pages live under the recipe-index dir
+  // (/<lc>/<recipe-prefix>/<country-slug>/), not under a separate
+  // /<cuisine-prefix>/ branch. Old URLs redirect via vercel.json.
+  const canonical  = `${rl.dir}/${originSlug}/`;
   const atmosphere = cuisineAtmosphere(originEnKey);
 
   // Build tile data once. Used by the hero (featured image), the tile grid,
@@ -3686,10 +3719,11 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
   <script type="application/ld+json">${jsonLd}</script>
 </main>
 
-<!-- Mobile-only floating back pill: ← All cuisines → hub index. Same
-     component as the recipe page (.mp-back-pill), with the cuisine
-     atmosphere accent strip on the leading edge for visual continuity. -->
-<a class="mp-back-pill mp-back-pill--cuisine" href="/${lc_code}/${hub.prefix}/"
+<!-- Mobile-only floating back pill: ← All cuisines → /<lc>/<recipe-prefix>/
+     (which IS the cuisine hub in Phase 5). Same component as the recipe
+     page (.mp-back-pill), with the cuisine atmosphere accent strip on the
+     leading edge for visual continuity. -->
+<a class="mp-back-pill mp-back-pill--cuisine" href="${rl.dir}/"
    data-cuisine-atmosphere="${atmosphere}"
    aria-label="${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}"
    role="button">
@@ -3700,110 +3734,137 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
 ${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
-function cuisineHubIndexPage(eligible, lc_code) {
-  const lc    = LANG_CONFIGS[lc_code];
-  const hub   = CUISINE_HUB_LANG[lc_code];
-  const idx   = CUISINE_HUB_INDEX_LANG[lc_code];
-  const rl    = RECIPE_LANG[lc_code];
-  const canonical = `/${lc_code}/${hub.prefix}/`;
+// Phase 5: cuisineHubIndexPage() was removed. Its responsibility (cuisine
+// directory landing) now lives in recipeIndex() — /<lc>/<recipe-prefix>/
+// IS the cuisine hub. The old /<lc>/<cuisine-prefix>/ URLs redirect to
+// recipe-prefix via vercel.json (added below).
 
-  // Stretched-link card with thumbnail strip + curated text preview. The
-  // thumbnail strip (3 images) gives each card visual identity beyond the
-  // flag emoji; the text preview lists ~3 recipe names as a "what's inside"
-  // signal. Sub-links would compete with the stretched link, so they're
-  // removed in favor of the implicit "open hub" affordance.
-  const cards = eligible.map(([enKey, recs]) => {
-    const display    = recs[0].origin?.[lc_code] || enKey;
-    const flag       = COUNTRY_FLAG[enKey] || '🌍';
-    const originSlug = slug(enKey);
-    const hubHref    = `/${lc_code}/${hub.prefix}/${originSlug}/`;
-    const atmosphere = cuisineAtmosphere(enKey);
-    // Pick up to 3 thumbnails, preferring real recipe images over cover2.jpg
-    // placeholders so cards feel curated, not "any image will do".
-    const allThumbs = recs.map(r => {
-      const rs = slug(r.name?.en || r.name?.ro || '');
-      return resolveRecipeImage(r, rs).src;
-    });
-    const goodThumbs = allThumbs.filter(u => !/cover2\.jpg$/.test(u));
-    const thumbs = (goodThumbs.length >= 3 ? goodThumbs : allThumbs).slice(0, 3);
-    // Each <img> is wrapped in a slot that carries the country-flag emoji
-    // as a fallback layer — keeps the strip visually balanced even when one
-    // of the 3 images 404s at runtime.
-    //
-    // Mosaic layout adapts to thumb count via data-thumb-count on the
-    // container so CSS can switch grid-template-columns:
-    //   3 → 2fr 1fr 1fr (featured + 2)
-    //   2 → 1fr 1fr     (split half/half)
-    //   1 → 1fr         (single full-width image)
-    // Avoids the "empty third column" feel on 2-recipe cuisines.
-    //
-    // Object-position rotates per-position so duplicate images don't crop
-    // to the same composition twice (subtle but breaks visual repetition).
-    const thumbsHtml = thumbs.map((u, i) => {
-      const isPlaceholder = /cover2\.jpg$/.test(u);
-      return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
-        <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
-        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
-      </span>`;
-    }).join('');
-    const thumbCount = thumbs.length;
-    // Text preview: 3 recipe names joined with " · ". Localized.
-    const previewNames = recs.slice(0, 3).map(r =>
-      r.name?.[lc_code] || r.name?.en || r.name?.ro || ''
-    ).filter(Boolean).join(' · ');
-    return `
-    <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="${atmosphere}">
-      <a class="cuisine-card-link" href="${hubHref}" aria-label="${esc(display)}"></a>
-      <div class="cuisine-card-thumbs" data-thumb-count="${thumbCount}" aria-hidden="true">${thumbsHtml}</div>
-      <div class="cuisine-card-meta">
-        <h2 class="origin-title">
-          <span class="origin-title-text">${flag} ${esc(display)}</span>
-          <span class="recipe-count">${recs.length}</span>
-        </h2>
-        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>
+/* ════════════════════════════════════════════════════════════════
+   HOMEPAGE CUISINE DISCOVERY — injected into each SPA home
+   ════════════════════════════════════════════════════════════════
+   Inserts a "Explore world cuisines" section between the hero and
+   the planner UI on every public/<lc>/index.html.
+
+   Idempotent via HTML markers — re-running the build replaces the
+   block in-place instead of duplicating it. Safe to run on every
+   build; safe to remove by deleting the markers.
+
+   The section uses the same CUISINE_CTA strings as the recipe-index
+   / plan-listing discovery CTA so messaging stays consistent. Cards
+   are richer (flag + name + 3 dishes + count) but visually lighter
+   than full hub cards — a teaser, not browsing mode.
+*/
+function cuisineHomeCard(originEnKey, recs, lc_code, recipeDir) {
+  const display    = recs[0].origin?.[lc_code] || originEnKey;
+  const flagIcon   = COUNTRY_FLAG[originEnKey] || '🌍';
+  const originSlug = slug(originEnKey);
+  const atmosphere = cuisineAtmosphere(originEnKey);
+  const dishNames  = recs.slice(0, 3).map(r =>
+    r.name?.[lc_code] || r.name?.en || r.name?.ro || ''
+  ).filter(Boolean).join(' · ');
+  return `<a class="hp-cuisine-card" href="${recipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
+        <span class="hp-cuisine-card-flag" aria-hidden="true">${flagIcon}</span>
+        <span class="hp-cuisine-card-body">
+          <span class="hp-cuisine-card-top">
+            <span class="hp-cuisine-card-name">${esc(display)}</span>
+            <span class="hp-cuisine-card-count">${recs.length}</span>
+          </span>
+          <span class="hp-cuisine-card-dishes">${esc(dishNames)}</span>
+        </span>
+      </a>`;
+}
+
+function cuisineHomeSectionHtml(lc_code) {
+  const ctaLang   = CUISINE_CTA[lc_code] || CUISINE_CTA.en;
+  // Phase 5: the cuisine hub IS the recipe index. CTA + card links point
+  // at /<lc>/<recipe-prefix>/ and /<lc>/<recipe-prefix>/<country-slug>/.
+  const rl        = RECIPE_LANG[lc_code];
+  const recipeDir = rl ? rl.dir : `/${lc_code}/recipes`;
+  const eligible  = buildCuisineHubs();
+  const featured  = eligible.slice(0, 6);
+  const cardsHtml = featured.map(([enKey, recs]) =>
+    cuisineHomeCard(enKey, recs, lc_code, recipeDir)
+  ).join('\n      ');
+  return `<section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading">
+    <div class="hp-cuisine-inner">
+      <div class="hp-cuisine-head">
+        <span class="hp-cuisine-eyebrow">${esc(ctaLang.eyebrow)}</span>
+        <h2 id="hp-cuisine-heading" class="hp-cuisine-title">${esc(ctaLang.heading)}</h2>
+        <p class="hp-cuisine-sub">${esc(ctaLang.sub(eligible.length))}</p>
       </div>
-    </article>`;
-  }).join('');
+      <div class="hp-cuisine-grid">
+      ${cardsHtml}
+      </div>
+      <p class="hp-cuisine-cta">
+        <a class="hp-cuisine-cta-btn" href="${recipeDir}/">${esc(ctaLang.btn(eligible.length))}</a>
+      </p>
+    </div>
+  </section>`;
+}
 
-  const jsonLd = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": idx.title.split(' | ')[0],
-    "description": idx.desc(eligible.length),
-    "url": `https://meal-planner.ro${canonical}`,
-    "inLanguage": lc_code
-  });
+// HTML markers for idempotent injection. Re-running the build replaces
+// content between START/END with fresh markup. Removing the markers
+// removes the injection entirely.
+const HP_CUISINE_CSS_START = '<!-- HP_CUISINE_CSS:START -->';
+const HP_CUISINE_CSS_END   = '<!-- HP_CUISINE_CSS:END -->';
+const HP_CUISINE_SEC_START = '<!-- HP_CUISINE_DISCOVER:START -->';
+const HP_CUISINE_SEC_END   = '<!-- HP_CUISINE_DISCOVER:END -->';
+const HP_CUISINE_CSS_LINK  = '<link rel="stylesheet" href="/css/cuisine-homepage.css">';
 
-  const dir_attr = rl.dir_attr || 'ltr';
-  const head = HEAD(idx.title, idx.desc(eligible.length), canonical, lc_code, dir_attr)
-    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
-    .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
-    .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
-             cuisineHubIndexHreflangs());
-  return `${head}
-${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
-  <section class="content-hero content-hero--short"><div class="content-hero-inner">
-    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(hub.breadLabel)}</span></nav>
-    <h1>${idx.h1}</h1>
-    <p class="content-hero-desc">${idx.intro(eligible.length)}</p>
-  </div></section>
-  <section class="content-section"><div class="content-section-inner">
-    <div class="recipe-groups-grid">${cards}</div>
-  </div></section>
-  <script type="application/ld+json">${jsonLd}</script>
-</main>
+function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAfter) {
+  // If markers exist anywhere → replace content between them.
+  const startIdx = haystack.indexOf(startMark);
+  const endIdx   = haystack.indexOf(endMark);
+  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
+    return haystack.slice(0, startIdx)
+      + startMark + '\n' + newBlock + '\n  ' + endMark
+      + haystack.slice(endIdx + endMark.length);
+  }
+  // Else insert AFTER the first occurrence of the fallback anchor.
+  const anchorIdx = haystack.indexOf(fallbackInsertAfter);
+  if (anchorIdx === -1) return haystack; // anchor missing — bail safely
+  const insertAt = anchorIdx + fallbackInsertAfter.length;
+  return haystack.slice(0, insertAt)
+    + '\n  ' + startMark + '\n  ' + newBlock + '\n  ' + endMark
+    + haystack.slice(insertAt);
+}
 
-<!-- Mobile-only floating back pill: ← Recipes → recipe index. Uses the
-     shared .mp-back-pill component for consistency with hub + recipe
-     pages. No atmosphere accent here (hub-index spans all cuisines). -->
-<a class="mp-back-pill" href="${rl.dir}/"
-   aria-label="${esc(rl.breadLabel)}"
-   role="button">
-  <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">${esc(rl.breadLabel)}</span>
-</a>
+function injectCuisineHomeSection(lc_code) {
+  const filePath = path.join(PUBLIC, lc_code, 'index.html');
+  if (!fs.existsSync(filePath)) return false;
+  let html = fs.readFileSync(filePath, 'utf8');
+  const original = html;
 
-${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+  // 1) Ensure the cuisine-homepage.css <link> is in <head>. Inject after
+  //    the existing style.min.css link so it overrides nothing important.
+  const cssAnchor = '<link rel="stylesheet" href="/css/style.min.css">';
+  html = upsertBetween(html, HP_CUISINE_CSS_START, HP_CUISINE_CSS_END,
+                       HP_CUISINE_CSS_LINK, cssAnchor);
+
+  // 2) Inject/replace the discovery section right BEFORE <main class="app-main">.
+  //    upsertBetween inserts AFTER its anchor, so we anchor on the comment
+  //    that immediately precedes <main> in the existing markup.
+  const secAnchor = '<!-- ══════════ MAIN APP ══════════ -->';
+  const sectionHtml = cuisineHomeSectionHtml(lc_code);
+  html = upsertBetween(html, HP_CUISINE_SEC_START, HP_CUISINE_SEC_END,
+                       sectionHtml, secAnchor);
+
+  // Some SPA homepages may not have the exact anchor comment (older
+  // locales). Fallback to inserting before <main class="app-main">.
+  if (!html.includes(HP_CUISINE_SEC_START)) {
+    const mainIdx = html.indexOf('<main class="app-main"');
+    if (mainIdx !== -1) {
+      html = html.slice(0, mainIdx)
+        + HP_CUISINE_SEC_START + '\n  ' + sectionHtml + '\n  ' + HP_CUISINE_SEC_END + '\n\n  '
+        + html.slice(mainIdx);
+    }
+  }
+
+  if (html !== original) {
+    fs.writeFileSync(filePath, html, 'utf8');
+    return true;
+  }
+  return false;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -3847,25 +3908,32 @@ for (const [lc_code] of Object.entries(LANG_CONFIGS)) {
 }
 console.log(`✅ 14 pricing pages generated → /{lang}/{slug}/`);
 
-// ── Cuisine hub pages: ≥2 recipes per origin × 14 languages ─────
-//   /<lc>/<hub-prefix>/<origin-slug>/  — one page per (origin, locale)
-//   /<lc>/<hub-prefix>/                — hub index listing all cuisines
-// Origin slug stays English (locale-stable) so cross-locale hreflang
-// stays trivial: same path under different prefixes.
+// ── Country pages: ≥2 recipes per origin × 14 languages ─────────
+// Phase 5: country pages live UNDER the recipe-index dir at
+// /<lc>/<recipe-prefix>/<country-slug>/. The recipe-index itself IS the
+// cuisine hub (see recipeIndex()) — no separate /<cuisine-prefix>/ layer.
+// Origin slug stays English (locale-stable). Old URLs redirect via
+// vercel.json (added below).
 const eligibleCuisines = buildCuisineHubs();
-for (const lc_code of Object.keys(CUISINE_HUB_LANG)) {
-  const hubPrefix = CUISINE_HUB_LANG[lc_code].prefix;
-  write(path.join(PUBLIC, lc_code, hubPrefix, 'index.html'),
-        cuisineHubIndexPage(eligibleCuisines, lc_code));
-  count++;
+for (const [lc_code, rl] of Object.entries(RECIPE_LANG)) {
+  const dirParts = rl.dir.split('/').filter(Boolean);
   for (const [enKey, recs] of eligibleCuisines) {
     const originSlug = slug(enKey);
-    write(path.join(PUBLIC, lc_code, hubPrefix, originSlug, 'index.html'),
+    write(path.join(PUBLIC, ...dirParts, originSlug, 'index.html'),
           cuisineHubPage(enKey, recs, lc_code));
     count++;
   }
 }
-console.log(`✅ ${eligibleCuisines.length} cuisine hubs × 14 locales = ${eligibleCuisines.length * 14} hub pages (+14 hub indexes)`);
+console.log(`✅ ${eligibleCuisines.length} country pages × 14 locales = ${eligibleCuisines.length * 14} country pages (under /<lc>/<recipe-prefix>/)`);
+
+// ── Homepage cuisine discovery section: injected into all 14 SPA homes ──
+// Idempotent via HTML markers — re-running this build replaces the block
+// in place. Updates BOTH the <head> CSS link and the <body> section.
+let hpInjected = 0;
+for (const lc_code of Object.keys(CUISINE_HUB_LANG)) {
+  if (injectCuisineHomeSection(lc_code)) hpInjected++;
+}
+console.log(`✅ ${hpInjected}/14 SPA homepages updated with cuisine discovery section`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
@@ -3909,11 +3977,12 @@ for (const rl of Object.values(RECIPE_LANG)) {
   });
 }
 
-// Cuisine hub pages + hub indexes (14 locales × N cuisines + 14 indexes)
-for (const [lc_code, hub] of Object.entries(CUISINE_HUB_LANG)) {
-  sitemapUrls.push(`https://meal-planner.ro/${lc_code}/${hub.prefix}/`);
+// Country pages — Phase 5: live under /<lc>/<recipe-prefix>/<country>/.
+// No separate /<cuisine-prefix>/ index URL anymore (recipe-prefix root
+// IS the cuisine hub, already added above with the recipe-index loop).
+for (const [, rl] of Object.entries(RECIPE_LANG)) {
   for (const [enKey] of eligibleCuisines) {
-    sitemapUrls.push(`https://meal-planner.ro/${lc_code}/${hub.prefix}/${slug(enKey)}/`);
+    sitemapUrls.push(`https://meal-planner.ro${rl.dir}/${slug(enKey)}/`);
   }
 }
 
