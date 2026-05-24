@@ -380,10 +380,20 @@
     // away from the recipe). Path-only, same-origin — no scheme/host.
     const HUB_PATH = /^\/(?:ro|en|es|fr|de|pt|ru|ar|zh|ja|hi|tr|it|ko)\/(?:bucatarie|cuisine|cocina|kueche|cozinha|kuhnya|matbakh|caixi|ryori|vyanjan|mutfak|cucina|yori)\/[^\/]+\/?$/;
     if (hubHref && hubLabel && HUB_PATH.test(hubHref)) {
-      backBtn.setAttribute('href', hubHref);
-      backBtn.setAttribute('aria-label', hubLabel);
-      const labelEl = backBtn.querySelector('.rmb-label');
-      if (labelEl) labelEl.textContent = hubLabel;
+      // Skip override if static href already points at the same hub — the
+      // build-time default is now cuisine-aware (recipePage in
+      // generate-content.mjs), so this is usually a no-op for users who
+      // open the recipe directly from the matching hub.
+      const currentHref = backBtn.getAttribute('href');
+      if (currentHref !== hubHref) {
+        backBtn.setAttribute('href', hubHref);
+        backBtn.setAttribute('aria-label', hubLabel);
+        const labelEl = backBtn.querySelector('.rmb-label');
+        if (labelEl) labelEl.textContent = hubLabel;
+        // Visual continuity: ensure the cuisine-accent strip appears when
+        // we override to a cuisine hub.
+        backBtn.classList.add('mp-back-pill', 'mp-back-pill--cuisine');
+      }
     }
   });
 

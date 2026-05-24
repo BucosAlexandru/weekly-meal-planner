@@ -1268,12 +1268,9 @@
   transition: transform .35s cubic-bezier(.2,.7,.2,1);
 }
 .cuisine-card--preview:hover .cuisine-card-thumbs img { transform: scale(1.06); }
-/* Graceful fallback: cards with <3 images just show what they have. */
-.cuisine-card-thumbs img:only-child,
-.cuisine-card-thumbs img:nth-child(1):nth-last-child(2),
-.cuisine-card-thumbs img:nth-child(2):nth-last-child(1) {
-  grid-column: span 1;
-}
+/* Grid responds to thumb count via [data-thumb-count] (see Phase 4.1
+   hardening section below). Old img:only-child fallback removed when
+   the markup switched from direct <img> children to wrapped <span>. */
 
 .cuisine-card-meta {
   padding: 1rem 1.15rem 1.05rem;
@@ -1508,6 +1505,24 @@
 .cuisine-tile-img[data-img-rot="2"] img {
   filter: brightness(.96) saturate(.95) hue-rotate(3deg);
 }
+
+/* ── Mosaic hardening: responsive grid + crop balancing ────────────
+   The thumbnail strip adapts to thumb count so we never leave a
+   visible empty cell on cuisines with only 2 recipes. Per-position
+   object-position rotation keeps duplicate-image cards from cropping
+   to identical centers. */
+.cuisine-card-thumbs[data-thumb-count="3"] {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+.cuisine-card-thumbs[data-thumb-count="2"] {
+  grid-template-columns: 1fr 1fr;
+}
+.cuisine-card-thumbs[data-thumb-count="1"] {
+  grid-template-columns: 1fr;
+}
+.cuisine-card-thumb[data-thumb-pos="0"] img { object-position: center 45%; }
+.cuisine-card-thumb[data-thumb-pos="1"] img { object-position: 55% 50%; }
+.cuisine-card-thumb[data-thumb-pos="2"] img { object-position: 45% 55%; }
 
 /* ── Recipe page: clickable cuisine badge chip ─────────────────────
    The hero badge's "origin" segment becomes a link to the cuisine
@@ -2246,10 +2261,12 @@
    CLS at load. Safe-area-inset respected so the pill clears the iOS
    home indicator and stays above Safari's bottom URL bar.
    ──────────────────────────────────────────────────────────────────── */
-.recipe-mobile-back { display: none; }
+.recipe-mobile-back,
+.mp-back-pill { display: none; }
 
 @media (max-width: 768px) {
-  .recipe-mobile-back {
+  .recipe-mobile-back,
+  .mp-back-pill {
     display: inline-flex;
     align-items: center;
     gap: .35rem;
@@ -2274,37 +2291,61 @@
        beyond ~55% of viewport — keeps it out of the way of CTAs. */
     max-width: 60vw;
   }
-  .recipe-mobile-back:active {
+  .recipe-mobile-back:active,
+  .mp-back-pill:active {
     transform: scale(.96);
     background: rgba(26, 26, 46, 1);
   }
-  .recipe-mobile-back:focus-visible {
+  .recipe-mobile-back:focus-visible,
+  .mp-back-pill:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 2px;
   }
-  .recipe-mobile-back .rmb-arrow {
+  .recipe-mobile-back .rmb-arrow,
+  .mp-back-pill .rmb-arrow {
     font-size: 1rem;
     line-height: 1;
     flex-shrink: 0;
   }
-  .recipe-mobile-back .rmb-label {
+  .recipe-mobile-back .rmb-label,
+  .mp-back-pill .rmb-label {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  /* Cuisine-aware variant: thin atmosphere-coloured strip on the leading
+     edge ties the pill to whichever cuisine the user is browsing. Keeps
+     the dark navy body for contrast + consistency across page types. */
+  .mp-back-pill--cuisine::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 22%;
+    bottom: 22%;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: var(--cuisine-accent, #24712A);
+    opacity: .9;
+  }
+  .mp-back-pill--cuisine { position: fixed; padding-left: 1rem; }
+  [dir="rtl"] .mp-back-pill--cuisine::before { left: auto; right: 0; border-radius: 3px 0 0 3px; }
   /* Make sure the floating pill doesn't cover the bottom of the recipe
      content. The pill is ~36pt tall + 14pt + safe-area. Total reserve
      ≈ 60pt at the bottom is plenty without feeling cramped. */
-  .recipe-page-wrap {
+  .recipe-page-wrap,
+  .cuisine-hub-main,
+  .cuisine-hub-index-main {
     padding-bottom: calc(72px + env(safe-area-inset-bottom)) !important;
   }
 }
 
 /* Hide on print and during legacy PDF export */
 @media print {
-  .recipe-mobile-back { display: none !important; }
+  .recipe-mobile-back,
+  .mp-back-pill { display: none !important; }
 }
-body.pdf-exporting .recipe-mobile-back { display: none !important; }
+body.pdf-exporting .recipe-mobile-back,
+body.pdf-exporting .mp-back-pill { display: none !important; }
 
 /* ── Recipe tip box ── */
 .recipe-tip-box {

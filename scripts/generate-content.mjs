@@ -3086,15 +3086,20 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="${rl.dir}/" data-rmn-back
-   aria-label="${esc(rl.breadLabel)}"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill${hubHref ? ' mp-back-pill--cuisine' : ''}"
+   href="${hubHref || rl.dir + '/'}" data-rmn-back
+   data-cuisine-atmosphere="${hubAtmosphere}"
+   aria-label="${esc(hubHref ? o : rl.breadLabel)}"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">${esc(rl.breadLabel)}</span>
+  <span class="rmb-label">${esc(hubHref ? o : rl.breadLabel)}</span>
 </a>
 
 </main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
@@ -3466,59 +3471,59 @@ const CUISINE_HUB_LANG = {
 // cuisine hubs). Kept compact — full localization of marketing copy can be
 // expanded later without touching the per-hub pages.
 const CUISINE_HUB_INDEX_LANG = {
-  ro: { title:'Bucătării din toată lumea | Meal-Planner.ro',
+  ro: { title:'Bucătării din toată lumea | Meal-Planner.ro', pill:'Toate bucătăriile',
         desc: n=>`Descoperă ${n} bucătării internaționale cu rețete autentice și planificator gratuit.`,
         h1:'Bucătării <span class="accent">din toată lumea</span>',
         intro: n=>`Descoperă ${n} bucătării internaționale, fiecare cu rețete autentice, mod de preparare și valori nutriționale.` },
-  en: { title:'World Cuisines – Browse Recipes by Country | Meal-Planner.ro',
+  en: { title:'World Cuisines – Browse Recipes by Country | Meal-Planner.ro', pill:'All cuisines',
         desc: n=>`Explore ${n} world cuisines with authentic recipes, ingredients, instructions and a free meal planner.`,
         h1:'World <span class="accent">Cuisines</span>',
         intro: n=>`Explore ${n} world cuisines, each with authentic recipes, step-by-step instructions and nutrition info.` },
-  es: { title:'Cocinas del mundo – Recetas por país | Meal-Planner.ro',
+  es: { title:'Cocinas del mundo – Recetas por país | Meal-Planner.ro', pill:'Todas las cocinas',
         desc: n=>`Explora ${n} cocinas del mundo con recetas auténticas, ingredientes, instrucciones y un planificador gratuito.`,
         h1:'Cocinas <span class="accent">del mundo</span>',
         intro: n=>`Explora ${n} cocinas del mundo, cada una con recetas auténticas, instrucciones paso a paso y datos nutricionales.` },
-  fr: { title:'Cuisines du monde – Recettes par pays | Meal-Planner.ro',
+  fr: { title:'Cuisines du monde – Recettes par pays | Meal-Planner.ro', pill:'Toutes les cuisines',
         desc: n=>`Découvrez ${n} cuisines du monde avec recettes authentiques, ingrédients, instructions et planificateur gratuit.`,
         h1:'Cuisines <span class="accent">du monde</span>',
         intro: n=>`Découvrez ${n} cuisines du monde, chacune avec recettes authentiques, instructions étape par étape et nutrition.` },
-  de: { title:'Weltküchen – Rezepte nach Land | Meal-Planner.ro',
+  de: { title:'Weltküchen – Rezepte nach Land | Meal-Planner.ro', pill:'Alle Küchen',
         desc: n=>`Entdecke ${n} Weltküchen mit authentischen Rezepten, Zutaten, Anleitungen und einem kostenlosen Mahlzeitenplaner.`,
         h1:'<span class="accent">Weltküchen</span>',
         intro: n=>`Entdecke ${n} Weltküchen mit authentischen Rezepten, Anleitungen und Nährwertangaben.` },
-  pt: { title:'Cozinhas do mundo – Receitas por país | Meal-Planner.ro',
+  pt: { title:'Cozinhas do mundo – Receitas por país | Meal-Planner.ro', pill:'Todas as cozinhas',
         desc: n=>`Explore ${n} cozinhas do mundo com receitas autênticas, ingredientes, instruções e planejador gratuito.`,
         h1:'Cozinhas <span class="accent">do mundo</span>',
         intro: n=>`Explore ${n} cozinhas do mundo com receitas autênticas, instruções e nutrição.` },
-  ru: { title:'Кухни мира – Рецепты по странам | Meal-Planner.ro',
+  ru: { title:'Кухни мира – Рецепты по странам | Meal-Planner.ro', pill:'Все кухни',
         desc: n=>`Откройте для себя ${n} мировых кухонь с подлинными рецептами и бесплатным планировщиком меню.`,
         h1:'<span class="accent">Кухни</span> мира',
         intro: n=>`Откройте для себя ${n} мировых кухонь с подлинными рецептами, пошаговыми инструкциями и информацией о пищевой ценности.` },
-  ar: { title:'مطابخ العالم – وصفات حسب الدولة | Meal-Planner.ro',
+  ar: { title:'مطابخ العالم – وصفات حسب الدولة | Meal-Planner.ro', pill:'كل المطابخ',
         desc: n=>`اكتشف ${n} مطبخًا عالميًا بوصفات أصيلة ومخطط وجبات مجاني.`,
         h1:'<span class="accent">مطابخ</span> العالم',
         intro: n=>`اكتشف ${n} مطبخًا عالميًا، كل منها بوصفات أصيلة وتعليمات تفصيلية ومعلومات غذائية.` },
-  zh: { title:'世界各国菜系 – 按国家浏览菜谱 | Meal-Planner.ro',
+  zh: { title:'世界各国菜系 – 按国家浏览菜谱 | Meal-Planner.ro', pill:'全部菜系',
         desc: n=>`探索${n}个世界菜系，正宗菜谱、食材、做法和免费每周饮食计划。`,
         h1:'<span class="accent">世界</span>菜系',
         intro: n=>`探索${n}个世界菜系，每个都有正宗菜谱、分步做法和营养信息。` },
-  ja: { title:'世界の料理 – 国別レシピ集 | Meal-Planner.ro',
+  ja: { title:'世界の料理 – 国別レシピ集 | Meal-Planner.ro', pill:'すべての料理',
         desc: n=>`${n}か国の世界料理を本格的なレシピと無料の週間プランナーで紹介。`,
         h1:'<span class="accent">世界の</span>料理',
         intro: n=>`${n}か国の世界料理。本格的なレシピ、手順、栄養情報をご紹介します。` },
-  hi: { title:'दुनिया के व्यंजन – देश के अनुसार रेसिपी | Meal-Planner.ro',
+  hi: { title:'दुनिया के व्यंजन – देश के अनुसार रेसिपी | Meal-Planner.ro', pill:'सभी व्यंजन',
         desc: n=>`${n} वैश्विक व्यंजन, पारंपरिक रेसिपी और मुफ्त साप्ताहिक मील प्लानर के साथ।`,
         h1:'<span class="accent">दुनिया के</span> व्यंजन',
         intro: n=>`${n} वैश्विक व्यंजनों का अन्वेषण करें, हर एक प्रामाणिक रेसिपी, निर्देश और पोषण जानकारी के साथ।` },
-  tr: { title:'Dünya mutfakları – Ülkelere göre tarifler | Meal-Planner.ro',
+  tr: { title:'Dünya mutfakları – Ülkelere göre tarifler | Meal-Planner.ro', pill:'Tüm mutfaklar',
         desc: n=>`${n} dünya mutfağını keşfedin: otantik tarifler, malzemeler, talimatlar ve ücretsiz öğün planlayıcı.`,
         h1:'<span class="accent">Dünya</span> mutfakları',
         intro: n=>`${n} dünya mutfağını keşfedin — otantik tarifler, adım adım talimatlar ve besin değerleri.` },
-  it: { title:'Cucine del mondo – Ricette per paese | Meal-Planner.ro',
+  it: { title:'Cucine del mondo – Ricette per paese | Meal-Planner.ro', pill:'Tutte le cucine',
         desc: n=>`Esplora ${n} cucine del mondo con ricette autentiche, ingredienti, istruzioni e pianificatore gratuito.`,
         h1:'Cucine <span class="accent">del mondo</span>',
         intro: n=>`Esplora ${n} cucine del mondo con ricette autentiche, istruzioni passo dopo passo e valori nutrizionali.` },
-  ko: { title:'세계 요리 – 국가별 레시피 | Meal-Planner.ro',
+  ko: { title:'세계 요리 – 국가별 레시피 | Meal-Planner.ro', pill:'모든 요리',
         desc: n=>`${n}개국 세계 요리를 정통 레시피와 무료 주간 식단 플래너로 만나보세요.`,
         h1:'<span class="accent">세계</span> 요리',
         intro: n=>`${n}개국의 세계 요리를 탐색하세요. 정통 레시피, 단계별 지침, 영양 정보를 제공합니다.` },
@@ -3679,7 +3684,20 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
     <p class="cuisine-hub-back"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
-</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+</main>
+
+<!-- Mobile-only floating back pill: ← All cuisines → hub index. Same
+     component as the recipe page (.mp-back-pill), with the cuisine
+     atmosphere accent strip on the leading edge for visual continuity. -->
+<a class="mp-back-pill mp-back-pill--cuisine" href="/${lc_code}/${hub.prefix}/"
+   data-cuisine-atmosphere="${atmosphere}"
+   aria-label="${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}</span>
+</a>
+
+${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 function cuisineHubIndexPage(eligible, lc_code) {
@@ -3711,13 +3729,24 @@ function cuisineHubIndexPage(eligible, lc_code) {
     // Each <img> is wrapped in a slot that carries the country-flag emoji
     // as a fallback layer — keeps the strip visually balanced even when one
     // of the 3 images 404s at runtime.
-    const thumbsHtml = thumbs.map(u => {
+    //
+    // Mosaic layout adapts to thumb count via data-thumb-count on the
+    // container so CSS can switch grid-template-columns:
+    //   3 → 2fr 1fr 1fr (featured + 2)
+    //   2 → 1fr 1fr     (split half/half)
+    //   1 → 1fr         (single full-width image)
+    // Avoids the "empty third column" feel on 2-recipe cuisines.
+    //
+    // Object-position rotates per-position so duplicate images don't crop
+    // to the same composition twice (subtle but breaks visual repetition).
+    const thumbsHtml = thumbs.map((u, i) => {
       const isPlaceholder = /cover2\.jpg$/.test(u);
-      return `<span class="cuisine-card-thumb">
+      return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
         <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
         ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
       </span>`;
     }).join('');
+    const thumbCount = thumbs.length;
     // Text preview: 3 recipe names joined with " · ". Localized.
     const previewNames = recs.slice(0, 3).map(r =>
       r.name?.[lc_code] || r.name?.en || r.name?.ro || ''
@@ -3725,7 +3754,7 @@ function cuisineHubIndexPage(eligible, lc_code) {
     return `
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="${atmosphere}">
       <a class="cuisine-card-link" href="${hubHref}" aria-label="${esc(display)}"></a>
-      <div class="cuisine-card-thumbs" aria-hidden="true">${thumbsHtml}</div>
+      <div class="cuisine-card-thumbs" data-thumb-count="${thumbCount}" aria-hidden="true">${thumbsHtml}</div>
       <div class="cuisine-card-meta">
         <h2 class="origin-title">
           <span class="origin-title-text">${flag} ${esc(display)}</span>
@@ -3752,7 +3781,7 @@ function cuisineHubIndexPage(eligible, lc_code) {
     .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
              cuisineHubIndexHreflangs());
   return `${head}
-${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(hub.breadLabel)}</span></nav>
     <h1>${idx.h1}</h1>
@@ -3762,7 +3791,19 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
     <div class="recipe-groups-grid">${cards}</div>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
-</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+</main>
+
+<!-- Mobile-only floating back pill: ← Recipes → recipe index. Uses the
+     shared .mp-back-pill component for consistency with hub + recipe
+     pages. No atmosphere accent here (hub-index spans all cuisines). -->
+<a class="mp-back-pill" href="${rl.dir}/"
+   aria-label="${esc(rl.breadLabel)}"
+   role="button">
+  <span class="rmb-arrow" aria-hidden="true">←</span>
+  <span class="rmb-label">${esc(rl.breadLabel)}</span>
+</a>
+
+${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
