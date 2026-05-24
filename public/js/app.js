@@ -1012,23 +1012,55 @@ function paginateCleanNode(root){
   const blocks = root.querySelectorAll(
     '.pdf-cover, .recipe-section, .pdf-shopping, .pdf-locked, .doc-footer'
   );
-  const SAFE = 24; 
+  const SAFE = 24;
+  // When the current page has used less than this fraction, allow the
+  // next block to consume the SAFE buffer (i.e. fit right up against
+  // the natural page edge) instead of pushing it to a new page. Fixes
+  // the "cover alone on page 1" bug where a barely-too-tall first
+  // recipe block got bumped to page 2, leaving the cover with massive
+  // whitespace below. recipe-section / pdf-cover already declare
+  // page-break-inside:avoid, so no content gets split.
+  const PAGE_EMPTY_RATIO = 0.35;
   let page = 1;
-  let y = padTop; 
+  let y = padTop;
+  let pageY = padTop;   // height used on the current page only
+  // Tolerance for the cover-alone recovery: the "usable" area is 271mm of
+  // the 297mm A4 page (26mm reserved for safety margins). When the current
+  // page is mostly empty, we let a block overflow the soft usable limit
+  // by up to RECOVERY_TOLERANCE px — still well inside the physical page
+  // (≈ 98px of additional headroom before clip). No content can ever
+  // cross the physical edge.
+  const RECOVERY_TOLERANCE = 80;
   blocks.forEach(el => {
     const s  = getComputedStyle(el);
     const mt = parseFloat(s.marginTop)    || 0;
     const mb = parseFloat(s.marginBottom) || 0;
-    const rectH = el.getBoundingClientRect().height; 
+    const rectH = el.getBoundingClientRect().height;
     const outerH = mt + rectH + mb;
-    if (y + outerH > (usable * page) - SAFE) {
+    const safeLimit    = (usable * page) - SAFE;
+    const naturalLimit = (usable * page);
+    if (y + outerH > safeLimit) {
+      // Recover the "cover alone on page 1" case: if the current page is
+      // mostly empty AND this block would fit within the natural limit
+      // plus a small tolerance (well inside the physical page), keep it
+      // on the current page. Both the cover and recipe-section already
+      // declare page-break-inside:avoid, so no content gets split.
+      const fitsWithTolerance = y + outerH <= naturalLimit + RECOVERY_TOLERANCE;
+      const pageMostlyEmpty   = pageY < (usable * PAGE_EMPTY_RATIO);
+      if (fitsWithTolerance && pageMostlyEmpty) {
+        y += outerH;
+        pageY += outerH;
+        return;
+      }
       const br = document.createElement('div');
       br.className = 'page-break';
       el.parentNode.insertBefore(br, el);
       page += 1;
-      y = padTop + outerH; 
+      y = padTop + outerH;
+      pageY = padTop + outerH;
     } else {
       y += outerH;
+      pageY += outerH;
     }
   });
   const footer = root.querySelector('.doc-footer');
