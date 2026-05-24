@@ -1193,22 +1193,23 @@
 
 /* Featured spotlight: tile #0 takes 2 columns + bigger image on
    tablet/desktop. On mobile it falls back to standard width. */
+/* Featured spotlight: tile #0 takes 2 columns on tablet+. Phase 5d fix:
+   the image in the featured tile is HIDDEN — the hero band above already
+   shows the same dish image (featured = first recipe = same image), so
+   showing it twice on a 2-recipe cuisine like Croatia looked like a bug.
+   Now the featured tile is a wide text-only card that complements the
+   hero image instead of duplicating it. */
+.cuisine-tile--featured .cuisine-tile-img { display: none; }
 @media (min-width: 720px) {
   .cuisine-tile--featured {
     grid-column: span 2;
     flex-direction: row;
   }
-  .cuisine-tile--featured .cuisine-tile-img {
-    flex: 0 0 56%;
-    aspect-ratio: auto;
-    height: auto;
-    min-height: 220px;
-  }
   .cuisine-tile--featured .cuisine-tile-body {
     flex: 1 1 auto;
-    padding: 1.4rem 1.5rem 1.5rem;
+    padding: 1.4rem 1.6rem 1.5rem;
     justify-content: center;
-    gap: .5rem;
+    gap: .6rem;
   }
   .cuisine-tile--featured .cuisine-tile-title { font-size: 1.3rem; }
   .cuisine-tile--featured .cuisine-tile-desc {
