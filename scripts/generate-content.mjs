@@ -2978,14 +2978,27 @@ function recipePage(recipe, rl) {
     }).join('');
 
   const dir_attr = rl.dir_attr || 'ltr';
+  // Cuisine hub link (if this origin has a hub of ≥2 recipes). When present
+  // we expose it in 3 places: breadcrumb, recipe-badge origin chip, and the
+  // related-recipes "see all" target. This makes the recipe page a first-
+  // class node in the cuisine browsing graph — direct-entry users (Google
+  // search) can navigate up to the cuisine without sessionStorage state.
+  const hubHref       = recipeCuisineHubHref(oEn, code);
+  const hubAtmosphere = cuisineAtmosphere(oEn);
+  const originBadge   = hubHref
+    ? `<a class="recipe-badge-origin" href="${hubHref}">${esc(o)}</a>`
+    : esc(o);
+  const breadcrumbCuisine = hubHref
+    ? ` › <a href="${hubHref}">${esc(o)}</a>`
+    : '';
   return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article', recipeImgUrl)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="${hubAtmosphere}">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(n)}</span>
+    <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a>${breadcrumbCuisine} › <span>${esc(n)}</span>
   </nav>
 
   <!-- Hero -->
@@ -2998,7 +3011,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       }</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">${COUNTRY_FLAG[oEn] || '⭐'} ${esc(cat)} · ${esc(o)}</div>
+      <div class="recipe-badge">${COUNTRY_FLAG[oEn] || '⭐'} ${esc(cat)} · ${originBadge}</div>
       <h1>${esc(n)}</h1>
       <p class="recipe-tagline">${esc(originTxt)}</p>
       <div class="recipe-meta-row">
@@ -3050,11 +3063,13 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   ${related ? `<div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>${COUNTRY_FLAG[oEn] ? COUNTRY_FLAG[oEn] + ' ' : ''}${rl.relatedH(o)}</h2>
-      <a href="${rl.dir}/">${ui.seeAll}</a>
+      <a href="${hubHref || rl.dir + '/'}">${ui.seeAll}</a>
     </div>
     <div class="recipe-cards-scroll">${related}</div>
   </div>` : ''}
@@ -3178,6 +3193,14 @@ const CUISINE_ATMOSPHERE = {
   'Samoa':'pacific',
 };
 const cuisineAtmosphere = (originEnKey) => CUISINE_ATMOSPHERE[originEnKey] || 'global';
+
+/* Helpers defined later (after CUISINE_MIN_RECIPES / CUISINE_HUB_LANG):
+     HUB_ELIGIBLE_ORIGINS — Set of origin EN keys with a hub
+     recipeCuisineHubHref(originEnKey, lc_code) — returns hub URL or null
+   Forward-declared via `var` so recipePage() can use them; populated
+   below where the cuisine constants are in scope. */
+var HUB_ELIGIBLE_ORIGINS;
+var recipeCuisineHubHref;
 
 /* ════════════════════════════════════════════════════════════════
    CUISINE CTA STRINGS — localized labels for discovery surfaces
@@ -3318,6 +3341,25 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
 */
 
 const CUISINE_MIN_RECIPES = 2;   // skip thin-content hubs (1-recipe origins)
+
+// Populate the forward-declared helpers now that CUISINE_MIN_RECIPES is in
+// scope. CUISINE_HUB_LANG is defined immediately below — it'll be in scope
+// by the time recipeCuisineHubHref is *called* (top-level script flow).
+HUB_ELIGIBLE_ORIGINS = new Set(
+  Object.entries(
+    recipes.reduce((m, r) => {
+      const k = r.origin?.en || r.origin?.ro;
+      if (k) m[k] = (m[k] || 0) + 1;
+      return m;
+    }, {})
+  ).filter(([, n]) => n >= CUISINE_MIN_RECIPES).map(([k]) => k)
+);
+recipeCuisineHubHref = function (originEnKey, lc_code) {
+  if (!originEnKey || !HUB_ELIGIBLE_ORIGINS.has(originEnKey)) return null;
+  const hubPrefix = CUISINE_HUB_LANG[lc_code]?.prefix;
+  if (!hubPrefix) return null;
+  return `/${lc_code}/${hubPrefix}/${slug(originEnKey)}/`;
+};
 
 const CUISINE_HUB_LANG = {
   ro: { prefix:'bucatarie',
@@ -3556,6 +3598,18 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // descriptor, ready-in time, up to 2 tags. The first tile is rendered as
   // the "featured" tile (bigger image) when there are enough recipes to
   // benefit from the spotlight treatment (≥3) — otherwise tiles are uniform.
+  //
+  // Image fallback: every tile renders a country-flag emoji UNDER the <img>.
+  // If the image is missing (placeholder cover2.jpg) or 404s at runtime
+  // (onerror), the <img> hides and the branded flag fallback shows through
+  // — no broken-image icons, ever.
+  //
+  // Duplicate-image mitigation: if the same image URL appears multiple times
+  // (e.g. shakshuka and chakchouka share an upstream Wikipedia photo), the
+  // 2nd/3rd occurrences get data-img-rot="1|2" which applies a subtle
+  // filter (brightness/saturation tweak) so the page doesn't feel repetitive.
+  const seenImgs = new Map(); // url → occurrence count
+  const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
   const tilesHtml = tiles.map((t, i) => {
     const isFeatured = i === 0 && tiles.length >= 3;
     const cls = `cuisine-tile${isFeatured ? ' cuisine-tile--featured' : ''}`;
@@ -3566,10 +3620,18 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
       ? `<div class="cuisine-tile-meta">${t.readyIn ? `<span class="cuisine-tile-time">⏱ ${esc(t.readyIn)}</span>` : ''}${tagsHtml}</div>`
       : '';
     const descHtml = t.desc ? `<p class="cuisine-tile-desc">${esc(t.desc)}</p>` : '';
+    const isPlaceholder = isPlaceholderImg(t.img);
+    const occ = (seenImgs.get(t.img) || 0);
+    seenImgs.set(t.img, occ + 1);
+    const rotAttr = occ > 0 && !isPlaceholder ? ` data-img-rot="${Math.min(occ, 2)}"` : '';
+    const imgHtml = isPlaceholder
+      ? '' // skip the placeholder URL entirely so the flag fallback shows
+      : `<img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
     return `<li>
       <a class="${cls}" href="${t.href}">
-        <span class="cuisine-tile-img">
-          <img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"/>
+        <span class="cuisine-tile-img"${rotAttr}>
+          <span class="cuisine-tile-img-fallback" aria-hidden="true">${flag}</span>
+          ${imgHtml}
         </span>
         <span class="cuisine-tile-body">
           <h3 class="cuisine-tile-title">${esc(t.name)}</h3>
@@ -3606,7 +3668,8 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
           <p class="cuisine-hero-desc">${hub.intro(esc(display), recs.length)}</p>
         </div>
         ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
-          <img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.style.display='none'"/>
+          <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
+          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
         </figure>` : ''}
       </div>
     </div>
@@ -3637,17 +3700,24 @@ function cuisineHubIndexPage(eligible, lc_code) {
     const originSlug = slug(enKey);
     const hubHref    = `/${lc_code}/${hub.prefix}/${originSlug}/`;
     const atmosphere = cuisineAtmosphere(enKey);
-    // Pick up to 3 thumbnails, skipping fallback covers when possible so
-    // cards feel curated, not "any image will do".
+    // Pick up to 3 thumbnails, preferring real recipe images over cover2.jpg
+    // placeholders so cards feel curated, not "any image will do".
     const allThumbs = recs.map(r => {
       const rs = slug(r.name?.en || r.name?.ro || '');
       return resolveRecipeImage(r, rs).src;
     });
     const goodThumbs = allThumbs.filter(u => !/cover2\.jpg$/.test(u));
     const thumbs = (goodThumbs.length >= 3 ? goodThumbs : allThumbs).slice(0, 3);
-    const thumbsHtml = thumbs.map(u =>
-      `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"/>`
-    ).join('');
+    // Each <img> is wrapped in a slot that carries the country-flag emoji
+    // as a fallback layer — keeps the strip visually balanced even when one
+    // of the 3 images 404s at runtime.
+    const thumbsHtml = thumbs.map(u => {
+      const isPlaceholder = /cover2\.jpg$/.test(u);
+      return `<span class="cuisine-card-thumb">
+        <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
+        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+      </span>`;
+    }).join('');
     // Text preview: 3 recipe names joined with " · ". Localized.
     const previewNames = recs.slice(0, 3).map(r =>
       r.name?.[lc_code] || r.name?.en || r.name?.ro || ''

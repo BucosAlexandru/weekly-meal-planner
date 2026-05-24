@@ -1439,6 +1439,225 @@
 /* RTL: keep all visual logic identical; flip the meta-row arrow icons. */
 [dir="rtl"] .cuisine-tile-meta { direction: rtl; }
 
+/* ═══════════════════════════════════════════════════════════════
+   PHASE 4 HARDENING — fallbacks, duplicate mitigation, recipe-page
+   cuisine context, mobile polish, premium discovery section.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Image fallback layer ──────────────────────────────────────────
+   Every tile / thumb / hero <img> sits ON TOP of a country-flag
+   fallback. If the image is missing (.cover2.jpg skipped at build
+   time) or 404s at runtime (onerror removes the <img>), the flag
+   shows through against the atmosphere-tinted background — no
+   broken-image icons, no empty boxes, no layout jumps. */
+.cuisine-tile-img,
+.cuisine-card-thumb,
+.cuisine-hero-image {
+  position: relative;
+}
+.cuisine-tile-img-fallback,
+.cuisine-card-thumb-fallback,
+.cuisine-hero-image-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  line-height: 1;
+  opacity: .32;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.06));
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  background: var(--cuisine-tint-strong, #eee);
+}
+.cuisine-hero-image-fallback { font-size: 5rem; opacity: .35; }
+.cuisine-card-thumb-fallback { font-size: 1.8rem; opacity: .42; }
+/* When the <img> loads, it sits on top of the fallback (z-index:1). */
+.cuisine-tile-img img,
+.cuisine-card-thumb img,
+.cuisine-hero-image img {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hub-index thumbnail strip: each thumb is its own grid cell so
+       the fallback layer can be positioned per-thumb (vs over the
+       whole strip). Wraps the original .cuisine-card-thumbs grid. */
+.cuisine-card-thumbs > .cuisine-card-thumb {
+  position: relative;
+  overflow: hidden;
+  background: var(--cuisine-tint-strong, #eee);
+}
+.cuisine-card-thumbs > .cuisine-card-thumb > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Duplicate-image mitigation ────────────────────────────────────
+   When the same image URL shows up twice or three times on a single
+   cuisine page (e.g. shakshuka/chakchouka), give the 2nd/3rd tiles
+   a subtle brightness+saturation tweak. Keeps the page from feeling
+   like a copy-paste error without needing per-recipe overrides. */
+.cuisine-tile-img[data-img-rot="1"] img {
+  filter: brightness(1.04) saturate(1.06) hue-rotate(-3deg);
+}
+.cuisine-tile-img[data-img-rot="2"] img {
+  filter: brightness(.96) saturate(.95) hue-rotate(3deg);
+}
+
+/* ── Recipe page: clickable cuisine badge chip ─────────────────────
+   The hero badge's "origin" segment becomes a link to the cuisine
+   hub when one exists. Keeps the badge visually identical (no
+   default link styling) but adds an accent on hover. */
+.recipe-badge .recipe-badge-origin {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color .15s ease, color .15s ease;
+}
+.recipe-badge .recipe-badge-origin:hover,
+.recipe-badge .recipe-badge-origin:focus-visible {
+  color: var(--cuisine-accent, #24712A);
+  border-color: var(--cuisine-accent, #24712A);
+}
+
+/* Recipe page breadcrumb: cuisine link gets the atmosphere accent on
+   hover. Doesn't change layout — same row, same spacing. */
+.recipe-breadcrumb a:hover { color: var(--cuisine-accent, #24712A); }
+
+/* ── Discovery CTA polish (Phase 4E) ───────────────────────────────
+   Stronger visual treatment so the cuisine entry from recipe-index
+   and plan-listing index feels like a premium feature, not a
+   secondary block. Gradient backdrop, taller eyebrow, larger row
+   gap, more confident button styling. */
+.cuisine-discover {
+  background:
+    radial-gradient(ellipse at top, rgba(36,113,42,.05) 0%, transparent 60%),
+    linear-gradient(180deg, #f8faf8 0%, #ffffff 100%);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.cuisine-discover-eyebrow {
+  position: relative;
+  padding-bottom: .35rem;
+}
+.cuisine-discover-eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 28px;
+  height: 2px;
+  background: #24712A;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.cuisine-discover-title {
+  font-size: 1.65rem;
+  margin-bottom: .55rem;
+}
+.cuisine-discover-sub {
+  font-size: 1rem;
+}
+.cuisine-mini {
+  position: relative;
+  padding: .8rem .95rem;
+  border-width: 1px;
+  background: #fff;
+}
+.cuisine-mini::before {
+  /* Thin atmosphere accent strip on the leading edge — lifts the
+     mini-pill out of pure-white visual flatness. */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3px;
+  height: 60%;
+  transform: translateY(-50%);
+  border-radius: 0 3px 3px 0;
+  background: var(--cuisine-accent, #24712A);
+  opacity: .85;
+  transition: width .2s ease;
+}
+[dir="rtl"] .cuisine-mini::before { left: auto; right: 0; border-radius: 3px 0 0 3px; }
+.cuisine-mini:hover::before { width: 5px; }
+.cuisine-mini-count {
+  background: var(--cuisine-tint, #f3f4f6);
+}
+.cuisine-discover-btn {
+  font-size: 1rem;
+  padding: .75rem 1.6rem;
+  letter-spacing: -.005em;
+  font-weight: 700;
+}
+
+/* ── Mobile-first polish pass (Phase 4F) ───────────────────────────
+   Tightens specific spots that felt cramped or wrapped awkwardly:
+   long country names in the hero, the breadcrumb on narrow screens,
+   tile metadata overflow, and the recipe-page badge wrap. */
+.recipe-badge {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .recipe-breadcrumb {
+    font-size: .8rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: .25rem;
+  }
+  .recipe-breadcrumb::-webkit-scrollbar { display: none; }
+
+  /* Tile meta — allow tags to wrap on a new line when out of space. */
+  .cuisine-tile-meta { row-gap: .35rem; }
+  .cuisine-tile-time { font-size: .72rem; }
+  .cuisine-tile-tag { font-size: .65rem; }
+
+  /* Hero: prevent country-name overflow on long names (Bosnia and
+     Herzegovina, Republic of the Congo, etc.). */
+  .cuisine-hero h1 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .cuisine-hero-flag { font-size: 2.2rem; margin-bottom: .35rem; }
+
+  /* Discovery CTA: slightly tighter on phones, but still confident. */
+  .cuisine-discover { padding: 2rem 0 2.2rem; }
+  .cuisine-discover-title { font-size: 1.2rem; }
+}
+
+@media (max-width: 380px) {
+  /* Extreme narrow (iPhone SE / 360px): force 1-column everything,
+     reduce hero flag, simplify tile body. */
+  .cuisine-hero h1 { font-size: 1.5rem; }
+  .cuisine-hero-desc { font-size: .9rem; }
+  .cuisine-tile-title { font-size: .88rem; }
+  .cuisine-tile-desc { -webkit-line-clamp: 1; font-size: .76rem; }
+}
+
+/* ── Reduced motion: respect user preferences ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .cuisine-card--preview,
+  .cuisine-card,
+  .cuisine-tile,
+  .cuisine-mini,
+  .cuisine-discover-btn,
+  .cuisine-tile-img img,
+  .cuisine-card-thumbs img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 /* ── Footer override for content pages ── */
 .app-footer a { color: var(--ink-2,#4b5563); text-decoration: none; }
 .app-footer a:hover { color: #24712A; }
