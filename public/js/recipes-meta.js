@@ -21,21 +21,39 @@ export const TAG_LABELS = {
 };
 
 // ─── "Ready in X minutes" in every language ─────────────────────────────────
+// Smart time formatter used by READY_IN below. Converts raw minutes into
+// a human-readable string per locale:
+//   45        → "45 min"
+//   60        → "1h"
+//   90        → "1h 30m"
+//   240       → "4h"
+//   720       → "12h"
+//   1620      → "27h"      (e.g. Pasticada with marinade — was "1620 min")
+//   1440+ × n → "N zile"   (e.g. Gravlax 4320 min → "3 zile" instead of "4320 min")
+function fmtTime(n, units) {
+  if (n < 60) return `${n}${units.minShort}`;
+  if (n % 1440 === 0 && n >= 1440) return `${n / 1440}${units.daySpace}`;
+  const h = Math.floor(n / 60);
+  const m = n % 60;
+  if (m === 0) return `${h}${units.hourShort}`;
+  return `${h}${units.hourShort} ${m}${units.minShortNoSpace}`;
+}
+
 export const READY_IN = {
-  ro: n => `Gata în ${n} min`,
-  en: n => `Ready in ${n} min`,
-  es: n => `Listo en ${n} min`,
-  fr: n => `Prêt en ${n} min`,
-  de: n => `Fertig in ${n} Min.`,
-  pt: n => `Pronto em ${n} min`,
-  ru: n => `Готово за ${n} мин`,
-  ar: n => `جاهز في ${n} دقيقة`,
-  zh: n => `${n}分钟即可完成`,
-  ja: n => `${n}分で完成`,
-  tr: n => `${n} dakikada hazır`,
-  it: n => `Pronto in ${n} min`,
-  ko: n => `${n}분이면 완성`,
-  hi: n => `${n} मिनट में तैयार`,
+  ro: n => `Gata în ${fmtTime(n, { hourShort:'h', minShort:' min', minShortNoSpace:'min', daySpace:' zile' })}`,
+  en: n => `Ready in ${fmtTime(n, { hourShort:'h', minShort:' min', minShortNoSpace:'min', daySpace:n>=2880?' days':' day' })}`,
+  es: n => `Listo en ${fmtTime(n, { hourShort:' h', minShort:' min', minShortNoSpace:'min', daySpace:n>=2880?' días':' día' })}`,
+  fr: n => `Prêt en ${fmtTime(n, { hourShort:' h', minShort:' min', minShortNoSpace:'min', daySpace:n>=2880?' jours':' jour' })}`,
+  de: n => `Fertig in ${fmtTime(n, { hourShort:' Std.', minShort:' Min.', minShortNoSpace:'Min.', daySpace:n>=2880?' Tagen':' Tag' })}`,
+  pt: n => `Pronto em ${fmtTime(n, { hourShort:' h', minShort:' min', minShortNoSpace:'min', daySpace:n>=2880?' dias':' dia' })}`,
+  ru: n => `Готово за ${fmtTime(n, { hourShort:' ч', minShort:' мин', minShortNoSpace:'мин', daySpace:n>=2880?' дн.':' день' })}`,
+  ar: n => `جاهز في ${fmtTime(n, { hourShort:' ساعة', minShort:' دقيقة', minShortNoSpace:'دقيقة', daySpace:' أيام' })}`,
+  zh: n => `${fmtTime(n, { hourShort:'小时', minShort:'分钟', minShortNoSpace:'分', daySpace:'天' })}即可完成`,
+  ja: n => `${fmtTime(n, { hourShort:'時間', minShort:'分', minShortNoSpace:'分', daySpace:'日' })}で完成`,
+  tr: n => `${fmtTime(n, { hourShort:' saat', minShort:' dakika', minShortNoSpace:'dakika', daySpace:' gün' })} hazır`,
+  it: n => `Pronto in ${fmtTime(n, { hourShort:' h', minShort:' min', minShortNoSpace:'min', daySpace:n>=2880?' giorni':' giorno' })}`,
+  ko: n => `${fmtTime(n, { hourShort:'시간', minShort:'분', minShortNoSpace:'분', daySpace:'일' })}이면 완성`,
+  hi: n => `${fmtTime(n, { hourShort:' घंटे', minShort:' मिनट', minShortNoSpace:'मि', daySpace:' दिन' })} में तैयार`,
 };
 
 // ─── Short descriptions (14 languages each) ──────────────────────────────────
