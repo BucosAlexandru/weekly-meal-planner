@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>三文鱼汤</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/finland/">芬兰</a> › <span>三文鱼汤</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="salmon-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/659056-312x231.jpg" alt="三文鱼汤" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 午餐 · 芬兰</div>
+      <div class="recipe-badge">🇫🇮 午餐 · <a class="recipe-badge-origin" href="/zh/shipu/finland/">芬兰</a></div>
       <h1>三文鱼汤</h1>
       <p class="recipe-tagline">洛希开图——三文鱼汤——是芬兰最家常的食物之一，全年享用，从家庭厨房到路边咖啡馆都能见到。这道菜体现了芬兰与波罗的海三文鱼的关系——几个世纪以来，三文鱼一直是沿海岸线和河流系统的主食。汤的设计简单：少量食材，每种用量足够突出。
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 更多来自芬兰的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/finland/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/karelian-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="karelian-pie">🍽️</div>
@@ -169,15 +171,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/finland/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="芬兰"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">芬兰</span>
 </a>
 
 </main>

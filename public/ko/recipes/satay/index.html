@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>사테</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/indonesia/">인도네시아</a> › <span>사테</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="satay" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Sate_Udang.JPG/330px-Sate_Udang.JPG" alt="사테" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇩 간식 · 인도네시아</div>
+      <div class="recipe-badge">🇮🇩 간식 · <a class="recipe-badge-origin" href="/ko/recipes/indonesia/">인도네시아</a></div>
       <h1>사테</h1>
       <p class="recipe-tagline">사테는 인도네시아 자바 섬에서 유래한 동남아시아 꼬치 구이 요리로, 아마도 19세기에 성립된 것으로 보인다. 아랍 상인들이 케밥 전통을 이 지역에 전했고, 현지 요리사들은 강황, 레몬그라스, 코코넛 밀크를 더해 자신들의 스타일로 발전시켰다. 이 요리는 태국, 말레이시아, 싱가포르, 필리핀 등 동남아 전역으로 퍼져나갔지만, 노란 마리네이드와 진한 땅콩 소스를 특징으로 하는 자바 스타일이 가장 잘 알려져 있다.
 
@@ -137,11 +137,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇩 인도네시아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/indonesia/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/nasi-goreng/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nasi-goreng">🍽️</div>
@@ -176,15 +178,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/indonesia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="인도네시아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">인도네시아</span>
 </a>
 
 </main>

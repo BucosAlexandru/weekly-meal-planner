@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>トッポッキ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/reshipi/south-korea/">韓国</a> › <span>トッポッキ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tteokbokki" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/330px-Tteokbokki.JPG" alt="トッポッキ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 スナック · 韓国</div>
+      <div class="recipe-badge">🇰🇷 スナック · <a class="recipe-badge-origin" href="/ja/reshipi/south-korea/">韓国</a></div>
       <h1>トッポッキ</h1>
       <p class="recipe-tagline">トッポッキは韓国で最も人気のある屋台料理のひとつ — 円柱形の餅を、韓国料理の辛さを象徴する発酵唐辛子ペースト「コチュジャン」ベースのとろみある辛いソースで煮た料理です。ポジャンマチャと呼ばれる屋台で全国各地で販売され、午後の学生から深夜の客まで一日中食べられています。
 
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 韓国のその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/reshipi/south-korea/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>
@@ -172,15 +174,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/reshipi/south-korea/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="韓国"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">韓国</span>
 </a>
 
 </main>

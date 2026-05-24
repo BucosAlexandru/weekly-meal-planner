@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Ratatouille</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/france/">France</a> › <span>Ratatouille</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="ratatouille" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633754-312x231.jpg" alt="Ratatouille" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇷 Dîner · France</div>
+      <div class="recipe-badge">🇫🇷 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/france/">France</a></div>
       <h1>Ratatouille</h1>
       <p class="recipe-tagline">La ratatouille est l'essence de la cuisine provençale d'été, née dans les marchés et les cuisines de Nice et du Var, où les agriculteurs disposaient d'une abondance d'aubergines, de courgettes, de poivrons et de tomates tous mûrs en même temps dans la chaleur du mois d'août. La technique fondamentale est la patience : chaque légume est sauté séparément jusqu'à ce qu'il soit légèrement doré avant d'être assemblé, ce qui préserve les textures individuelles et évite que l'ensemble ne devienne une bouillie uniforme. Préparée la veille et laissée refroidir complètement, la ratatouille est remarquablement meilleure — l'huile d'olive se réabsorbe, les herbes de Provence s'approfondissent, et les saveurs séparées s'épousent en quelque chose de bien plus grand que leur somme.</p>
       <div class="recipe-meta-row">
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇷 Plus de recettes de France</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/france/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/quiche-lorraine/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>
@@ -185,15 +187,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/france/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="France"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">France</span>
 </a>
 
 </main>

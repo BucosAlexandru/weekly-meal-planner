@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>巴西黑豆炖肉</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/brazil/">巴西</a> › <span>巴西黑豆炖肉</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="feijoada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="巴西黑豆炖肉" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 晚餐 · 巴西</div>
+      <div class="recipe-badge">🇧🇷 晚餐 · <a class="recipe-badge-origin" href="/zh/shipu/brazil/">巴西</a></div>
       <h1>巴西黑豆炖肉</h1>
       <p class="recipe-tagline">巴西黑豆炖肉是巴西的国菜，也是这个国家最重要的社交饮食——一锅浓厚的黑豆炖烟熏猪肉，至少两个世纪以来，里约热内卢的家庭和餐馆每逢周三和周六都会端上这道菜。其起源颇有争议：有人认为它源于奴隶，他们用黑豆和价值较低的猪肉部位凑合过活；也有人将其与葡萄牙阿连特茹厨房相连。可以确定的是，黑豆炖肉成了国家认同的象征，一顿跨越所有社会阶层的聚餐，总是与白米饭、炒羽衣甘蓝、香脆法罗法和新鲜橙子一起上桌。</p>
       <div class="recipe-meta-row">
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 更多来自巴西的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/brazil/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/moqueca/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moqueca">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/brazil/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="巴西"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">巴西</span>
 </a>
 
 </main>

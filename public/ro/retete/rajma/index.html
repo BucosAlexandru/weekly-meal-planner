@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Rajma</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/retete/india/">India</a> › <span>Rajma</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="rajma" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Rajma_Masala_%2832081557778%29.jpg/330px-Rajma_Masala_%2832081557778%29.jpg" alt="Rajma" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇳 Cină · India</div>
+      <div class="recipe-badge">🇮🇳 Cină · <a class="recipe-badge-origin" href="/ro/retete/india/">India</a></div>
       <h1>Rajma</h1>
       <p class="recipe-tagline">Rajma este mâncarea de suflet a Punjabului, o tocăniță groasă și aromată din fasole roșie gătită în sos de roșii cu ceapă, usturoi, ghimbir și condimente indiene. Este un preparat veg esențial din nordul Indiei, hrănitor și satisfăcător, parte din duo-ul iconic rajma-chawal (fasole cu orez).
 
@@ -138,11 +138,13 @@ Rajma este mâncarea duminicii în milioane de gospodării punjabi, atât în In
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇳 Alte rețete din India</h2>
-      <a href="/ro/retete/">Vezi toate rețetele →</a>
+      <a href="/ro/retete/india/">Vezi toate rețetele →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ro/retete/chicken-curry/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>
@@ -177,15 +179,20 @@ Rajma este mâncarea duminicii în milioane de gospodării punjabi, atât în In
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ro/retete/" data-rmn-back
-   aria-label="Rețete"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/retete/india/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="India"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">India</span>
 </a>
 
 </main>

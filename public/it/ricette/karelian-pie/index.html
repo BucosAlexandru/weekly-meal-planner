@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Torta della Carelia</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/ricette/finland/">Finlandia</a> › <span>Torta della Carelia</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="Torta della Carelia" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 Colazione · Finlandia</div>
+      <div class="recipe-badge">🇫🇮 Colazione · <a class="recipe-badge-origin" href="/it/ricette/finland/">Finlandia</a></div>
       <h1>Torta della Carelia</h1>
       <p class="recipe-tagline">La torta caréliana — karjalanpiirakka — ha origine nella regione della Carelia, un territorio storico oggi diviso tra Finlandia e Russia. I gusci ovali sono fatti di una pasta di segale sottile e croccante che racchiude un morbido ripieno di porridge di riso cotto lentamente nel latte; il ripieno di patate è un'alternativa altrettanto tradizionale. Le torte vengono cotte ad alta temperatura.
 
@@ -139,11 +139,13 @@ Calde dal forno, le karjalanpiirakka vengono spalmate con il munavoi — un mist
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 Altre ricette da Finlandia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/ricette/finland/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>
@@ -172,15 +174,20 @@ Calde dal forno, le karjalanpiirakka vengono spalmate con il munavoi — un mist
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/ricette/finland/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="Finlandia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Finlandia</span>
 </a>
 
 </main>

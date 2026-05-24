@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Causa Limeña</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/peru/">Peru</a> › <span>Causa Limeña</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="causa-lime-a" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 Appetizer · Peru</div>
+      <div class="recipe-badge">🇵🇪 Appetizer · <a class="recipe-badge-origin" href="/en/recipes/peru/">Peru</a></div>
       <h1>Causa Limeña</h1>
       <p class="recipe-tagline">Causa limeña is a pressed terrine of yellow Peruvian potatoes seasoned with ají amarillo and lime juice, layered with a creamy filling of tuna or chicken with mayonnaise and avocado. The Andean potatoes — especially those with naturally yellow flesh — are boiled, riced smooth, and worked with oil, ají, and lime until silky. The dish is served cold, sliced to reveal its contrasting layers.
 
@@ -138,11 +138,13 @@ The dish is an emblem of Peru's culinary fusion: the Andean potatoes are millenn
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 More recipes from Peru</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/peru/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>
@@ -177,15 +179,20 @@ The dish is an emblem of Peru's culinary fusion: the Andean potatoes are millenn
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/peru/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Peru"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Peru</span>
 </a>
 
 </main>

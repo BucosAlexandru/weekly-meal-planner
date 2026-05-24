@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>लोक लाक</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/cambodia/">कंबोडिया</a> › <span>लोक लाक</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="lok-lak" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 दोपहर का खाना · कंबोडिया</div>
+      <div class="recipe-badge">🇰🇭 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/recipes/cambodia/">कंबोडिया</a></div>
       <h1>लोक लाक</h1>
       <p class="recipe-tagline">लोक लाक कंबोडिया का सबसे प्रसिद्ध गोमांस व्यंजन है, जो फ्रांसीसी औपनिवेशिक खाना पकाने और चीनी प्रवासी तकनीकों के संगम से जन्मा। मैरिनेड किए गोमांस के टुकड़ों को तेज़ आंच पर लहसुन, ऑयस्टर सॉस और भरपूर काली मिर्च के साथ भूना जाता है, जिससे चमकदार और स्वादिष्ट टुकड़े मिलते हैं।
 
@@ -141,11 +141,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 कंबोडिया की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/recipes/cambodia/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/amok/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="amok">🍽️</div>
@@ -168,15 +170,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/cambodia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="कंबोडिया"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">कंबोडिया</span>
 </a>
 
 </main>

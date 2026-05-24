@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Encebollado</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/ecuador/">Ecuador</a> › <span>Encebollado</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="encebollado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/960px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg" alt="Encebollado" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇨 Lunch · Ecuador</div>
+      <div class="recipe-badge">🇪🇨 Lunch · <a class="recipe-badge-origin" href="/en/recipes/ecuador/">Ecuador</a></div>
       <h1>Encebollado</h1>
       <p class="recipe-tagline">Encebollado is Ecuador's most celebrated street food and most cherished hangover remedy — a thick fish stew of fresh albacore tuna, cassava, and red onion, served with a pickled onion topping and tostadas. It is sold from street carts in Guayaquil and across the coast from before dawn, eaten in especially large quantities on weekends.
 
@@ -136,11 +136,13 @@ The defining technique is the sofrito base of tomatoes, onion, and achiote paste
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇨 More recipes from Ecuador</h2>
-      <a href="/en/recipes/">See all recipes →</a>
+      <a href="/en/recipes/ecuador/">See all recipes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/en/recipes/shrimp-ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="shrimp-ceviche">🍽️</div>
@@ -163,15 +165,20 @@ The defining technique is the sofrito base of tomatoes, onion, and achiote paste
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/en/recipes/" data-rmn-back
-   aria-label="Recipes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/ecuador/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Ecuador"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Ecuador</span>
 </a>
 
 </main>

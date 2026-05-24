@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Tacos</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/ricette/mexico/">Messico</a> › <span>Tacos</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tacos" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/645711-312x231.jpg" alt="Tacos" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 Cena · Messico</div>
+      <div class="recipe-badge">🇲🇽 Cena · <a class="recipe-badge-origin" href="/it/ricette/mexico/">Messico</a></div>
       <h1>Tacos</h1>
       <p class="recipe-tagline">I tacos sono l'anima dello street food messicano, una tradizione molto più antica del XX secolo, rintracciabile fino alle miniere d'argento coloniali dove i lavoratori avvolgevano la carne in tortillas di mais per il pasto di mezzogiorno. La base autentica del taco da strada è una tortilla di mais nixtamalizzato — mai di frumento — carbonizzata direttamente sulla fiamma del gas finché non fa bolle e acquisisce note affumicate. La semplicità è la dottrina: carne, pico de gallo fresco, coriandolo e lime — ogni ingrediente visibile, niente sepolto sotto la salsa.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 Altre ricette da Messico</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/ricette/mexico/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/guacamole/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="guacamole">🍽️</div>
@@ -179,15 +181,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/ricette/mexico/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Messico"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Messico</span>
 </a>
 
 </main>

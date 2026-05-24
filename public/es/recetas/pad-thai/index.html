@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Pad Thai</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/recetas/thailand/">Tailandia</a> › <span>Pad Thai</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="pad-thai" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/663113-312x231.jpg" alt="Pad Thai" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇹🇭 Cena · Tailandia</div>
+      <div class="recipe-badge">🇹🇭 Cena · <a class="recipe-badge-origin" href="/es/recetas/thailand/">Tailandia</a></div>
       <h1>Pad Thai</h1>
       <p class="recipe-tagline">El pad Thai es el plato callejero nacional de Tailandia — un rápido salteado de fideos de arroz nacido en el Bangkok de los años 30, cuando el gobierno promovió los fideos de trigo en lugar del arroz para reducir costes alimentarios y fortalecer la identidad nacional. El equilibrio entre el tamarindo ácido, la salsa de pescado salada y el azúcar de palma dulce es la clásica tríada de sabor thai que convirtió este plato en un éxito mundial, pero la autenticidad vive en un wok ardiendo a 300°C y en la velocidad de ejecución, no en los ingredientes en sí. Los cacahuetes añadidos al final, el cilantro fresco y el chorrito de lima son algo más que decoración: completan el perfil de sabor.</p>
       <div class="recipe-meta-row">
@@ -134,11 +134,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇹🇭 Más recetas de Tailandia</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/recetas/thailand/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/tom-yum/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tom-yum">🍽️</div>
@@ -167,15 +169,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/recetas/thailand/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Tailandia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Tailandia</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>과카몰리</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/mexico/">멕시코</a> › <span>과카몰리</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="guacamole" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/715543-312x231.jpg" alt="과카몰리" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇲🇽 간식 · 멕시코</div>
+      <div class="recipe-badge">🇲🇽 간식 · <a class="recipe-badge-origin" href="/ko/recipes/mexico/">멕시코</a></div>
       <h1>과카몰리</h1>
       <p class="recipe-tagline">과카몰리는 콜럼버스 이전 멕시코의 아즈텍 부엌에 뿌리를 두고 있으며, 나와틀어 'ahuacamolli' — 대략 '아보카도 소스'로 번역된다 — 는 molcajete에서 아보카도, 고추, 토마토를 빻아 만든 단순한 페이스트를 묘사했다. 이 음식은 스페인 정복 이후에도 변함없이 살아남았는데, 대체물이 없었기 때문이다. 멕시코 고원의 하스 아보카도는 버터 같은 풍부함과 견과류 같은 향미를 지니고 있어 다른 어떤 것도 흉내 낼 수 없다. 중요한 기법은 단 하나, 절제다 — 포크로 으깨되 절대 퓌레로 만들지 않아야, 결과물이 가공 스프레드의 밋밋한 매끄러움이 아닌 묵직함과 질감을 갖게 된다.</p>
       <div class="recipe-meta-row">
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇲🇽 멕시코의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/mexico/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/tacos/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="tacos">🍽️</div>
@@ -178,15 +180,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/mexico/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="멕시코"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">멕시코</span>
 </a>
 
 </main>

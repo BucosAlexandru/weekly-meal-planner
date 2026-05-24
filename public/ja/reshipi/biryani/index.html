@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="south-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>ビリヤニ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/reshipi/pakistan/">パキスタン</a> › <span>ビリヤニ</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="biryani" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg" alt="ビリヤニ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇰 夕食 · パキスタン</div>
+      <div class="recipe-badge">🇵🇰 夕食 · <a class="recipe-badge-origin" href="/ja/reshipi/pakistan/">パキスタン</a></div>
       <h1>ビリヤニ</h1>
       <p class="recipe-tagline">ビリヤニはインド亜大陸のムガル宮廷に起源を持ち、ペルシャの影響を受けた米料理が数世紀をかけて独自の地域的形態へと発展した。パキスタンのビリヤニの伝統——特にカラチとハイデラバードのスタイル——は亜大陸でも最も香り豊かなものの一つで、ホールスパイス、カラメル状に炒めた玉ねぎ、そして重ねた米を基盤としている。この料理は結婚式やイード祝典、大規模な家族の集まりといった重要な行事に欠かせない存在だ。
 
@@ -148,11 +148,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇰 パキスタンのその他のレシピ</h2>
-      <a href="/ja/reshipi/">全レシピを見る →</a>
+      <a href="/ja/reshipi/pakistan/">全レシピを見る →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ja/reshipi/nihari/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="nihari">🍽️</div>
@@ -175,15 +177,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ja/reshipi/" data-rmn-back
-   aria-label="レシピ"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/reshipi/pakistan/" data-rmn-back
+   data-cuisine-atmosphere="south-asian"
+   aria-label="パキスタン"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">パキスタン</span>
 </a>
 
 </main>

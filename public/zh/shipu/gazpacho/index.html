@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>西班牙冷汤</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/spain/">西班牙</a> › <span>西班牙冷汤</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="gazpacho" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/662542-312x231.jpg" alt="西班牙冷汤" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇸 午餐 · 西班牙</div>
+      <div class="recipe-badge">🇪🇸 午餐 · <a class="recipe-badge-origin" href="/zh/shipu/spain/">西班牙</a></div>
       <h1>西班牙冷汤</h1>
       <p class="recipe-tagline">西班牙冷汤（Gazpacho）是西班牙南部安达卢西亚的标志性冷汤，诞生于瓜达尔基维尔河谷烈日炙烤的农庄，那里的田间劳作者需要清凉、滋养又简单的食物。令它与众不同的是方法，而非配方：将熟透的夏季番茄与隔夜面包混打，橄榄油以细线乳化，再冷藏至6–8°C，让风味层层加深、质地变得丝滑。它绝不应该在室温下上桌——一碗好的冷汤尝起来就是八月的西班牙。</p>
       <div class="recipe-meta-row">
@@ -130,11 +130,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇪🇸 更多来自西班牙的食谱</h2>
-      <a href="/zh/shipu/">查看全部食谱 →</a>
+      <a href="/zh/shipu/spain/">查看全部食谱 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/zh/shipu/paella/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="paella">🍽️</div>
@@ -157,15 +159,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/zh/shipu/" data-rmn-back
-   aria-label="食谱"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/spain/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="西班牙"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">西班牙</span>
 </a>
 
 </main>

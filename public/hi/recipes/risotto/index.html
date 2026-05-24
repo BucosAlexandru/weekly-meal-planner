@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>रिसोट्टो</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/italy/">इटली</a> › <span>रिसोट्टो</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="risotto" id="recipe-photo-main">🍽️<img src="/images/risotto.webp" alt="रिसोट्टो" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇮🇹 रात का खाना · इटली</div>
+      <div class="recipe-badge">🇮🇹 रात का खाना · <a class="recipe-badge-origin" href="/hi/recipes/italy/">इटली</a></div>
       <h1>रिसोट्टो</h1>
       <p class="recipe-tagline">रिसोट्टो की जड़ें उत्तरी इटली की पो घाटी में हैं, जहां छोटे दाने के चावल की खेती पंद्रहवीं सदी से होती आ रही है। इस व्यंजन ने अपना क्लासिक रूप मिलान में पाया — केसर से सुनहरा रिसोट्टो आला मिलानीज़े — और यह लोम्बार्डिया से गहराई से जुड़ा है। अधिकांश चावल के व्यंजनों के विपरीत, रिसोट्टो की मलाईदार बनावट केवल चावल के अपने स्टार्च से आती है, बिना किसी क्रीम के।
 
@@ -127,11 +127,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇮🇹 इटली की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/recipes/italy/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/pasta-e-fagioli/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pasta-e-fagioli">🍽️</div>
@@ -160,15 +162,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/italy/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="इटली"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">इटली</span>
 </a>
 
 </main>

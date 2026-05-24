@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Moules-frites</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/belgium/">Belgium</a> › <span>Moules-frites</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moules-frites" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Moules-frites_at_Chez_Leon_in_Brussels.jpg/330px-Moules-frites_at_Chez_Leon_in_Brussels.jpg" alt="Moules-frites" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇪 Dinner · Belgium</div>
+      <div class="recipe-badge">🇧🇪 Dinner · <a class="recipe-badge-origin" href="/hi/recipes/belgium/">Belgium</a></div>
       <h1>Moules-frites</h1>
       <p class="recipe-tagline">मोउल्स-फ्रिट — मसल्स और फ्राइज़ — को बेल्जियम अपना राष्ट्रीय व्यंजन मानता है, हालांकि दोनों सामग्रियों की उत्पत्ति व्यापक है। बेल्जियन फ्राइज़ स्थानीय गर्व का विषय हैं: आलू को पट्टियों में काटकर बीफ की चर्बी में तलने की परंपरा बेल्जियम में सत्रहवीं सदी से दर्ज है। मसल्स के साथ यह संयोजन बीसवीं सदी में मानक बन गया, जब उत्तरी सागर की मसल फसल तटीय और भीतरी दोनों रेस्तरां को आपूर्ति करने लगी।
 
@@ -131,7 +131,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->
@@ -146,15 +148,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/belgium/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Belgium"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">Belgium</span>
 </a>
 
 </main>

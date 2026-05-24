@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Плов</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/retsepty/uzbekistan/">Узбекистан</a> › <span>Плов</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="plov" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Afghan_Palo.jpg/330px-Afghan_Palo.jpg" alt="Плов" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇿 Ужин · Узбекистан</div>
+      <div class="recipe-badge">🇺🇿 Ужин · <a class="recipe-badge-origin" href="/ru/retsepty/uzbekistan/">Узбекистан</a></div>
       <h1>Плов</h1>
       <p class="recipe-tagline">Узбекский плов — король среднеазиатского риса: в чугунном казане сначала обжаривают баранину или говядину в курдючном жиру (или растительном масле), затем добавляют морковь соломкой и лук, потом рис и воду. Всё готовится без крышки до впитывания воды, с целыми головками чеснока, утопленными в рисе. Аромат карамелизированной моркови и пряностей (зиры, кориандра) неповторим.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇿 Ещё рецепты из Узбекистан</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/retsepty/uzbekistan/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/manti/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="manti">🍽️</div>
@@ -165,15 +167,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/retsepty/uzbekistan/" data-rmn-back
+   data-cuisine-atmosphere="central-asian"
+   aria-label="Узбекистан"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Узбекистан</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>كاوسا ليمنيا</span>
+    <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <a href="/ar/wasafat/peru/">بيرو</a> › <span>كاوسا ليمنيا</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="causa-lime-a" id="recipe-photo-main">🍽️</div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇪 مقبلات · بيرو</div>
+      <div class="recipe-badge">🇵🇪 مقبلات · <a class="recipe-badge-origin" href="/ar/wasafat/peru/">بيرو</a></div>
       <h1>كاوسا ليمنيا</h1>
       <p class="recipe-tagline">كاوسا ليمنيا تيرين مضغوط من البطاطس الصفراء البيروفية المتبّلة بالأجي أماريو وعصير الليمون، مرتبة في طبقات مع حشوة كريمية من التونة أو الدجاج مع المايونيز والأفوكادو. تُسلق البطاطس الأنديزية — لا سيما ذات اللب الأصفر الطبيعي — وتُهرس ناعماً وتُعجن مع الزيت والأجي والليمون حتى تصبح حريرية الملمس. يُقدَّم الطبق بارداً مقطعاً ليُظهر طبقاته المتباينة.
 
@@ -138,11 +138,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇪 المزيد من وصفات بيرو</h2>
-      <a href="/ar/wasafat/">عرض كل الوصفات →</a>
+      <a href="/ar/wasafat/peru/">عرض كل الوصفات →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ar/wasafat/ceviche/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="ceviche">🍽️</div>
@@ -177,15 +179,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ar/wasafat/" data-rmn-back
-   aria-label="وصفات"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ar/wasafat/peru/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="بيرو"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">وصفات</span>
+  <span class="rmb-label">بيرو</span>
 </a>
 
 </main>

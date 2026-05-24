@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Amok</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/cambodia/">Camboja</a> › <span>Amok</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="amok" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fish_Amok_with_Rice.jpg/960px-Fish_Amok_with_Rice.jpg" alt="Amok" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇭 Jantar · Camboja</div>
+      <div class="recipe-badge">🇰🇭 Jantar · <a class="recipe-badge-origin" href="/pt/receitas/cambodia/">Camboja</a></div>
       <h1>Amok</h1>
       <p class="recipe-tagline">O Amok é o prato mais célebre do Camboja — um curry de peixe cozinhado a vapor com leite de coco, pasta kroeung e folhas de lima kaffir, tradicionalmente cozinhado e servido em taças de folha de bananeira. A taça de folha de bananeira é funcional, não decorativa: molda o creme à medida que solidifica e confere uma sutil fragrância verde.
 
@@ -138,11 +138,13 @@ A textura é a característica definidora. Ao contrário de um curry líquido, o
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇭 Mais receitas de Camboja</h2>
-      <a href="/pt/receitas/">Ver todas as receitas →</a>
+      <a href="/pt/receitas/cambodia/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/lok-lak/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="lok-lak">🍽️</div>
@@ -165,15 +167,20 @@ A textura é a característica definidora. Ao contrário de um curry líquido, o
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/pt/receitas/" data-rmn-back
-   aria-label="Receitas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/cambodia/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Camboja"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Camboja</span>
 </a>
 
 </main>

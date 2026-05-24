@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Fasolada</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/greece/">Grèce</a> › <span>Fasolada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fasolada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fasolada.JPG/330px-Fasolada.JPG" alt="Fasolada" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Déjeuner · Grèce</div>
+      <div class="recipe-badge">🇬🇷 Déjeuner · <a class="recipe-badge-origin" href="/fr/recettes/greece/">Grèce</a></div>
       <h1>Fasolada</h1>
       <p class="recipe-tagline">La fasolada est la soupe nationale de la Grèce — une soupe simple et nourrissante de haricots blancs avec carottes, céleri, oignon, tomates et huile d'olive généreuse. C'est la nourriture du jeûne orthodoxe grec, servie pendant le Carême.
 
@@ -138,11 +138,13 @@ La fasolada n'a pas de secrets culinaires : haricots bien cuits et huile d'olive
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Plus de recettes de Grèce</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/greece/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>
@@ -183,15 +185,20 @@ La fasolada n'a pas de secrets culinaires : haricots bien cuits et huile d'olive
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/greece/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Grèce"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Grèce</span>
 </a>
 
 </main>

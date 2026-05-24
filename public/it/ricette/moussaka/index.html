@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <span>Moussaka</span>
+    <a href="/">Home</a> › <a href="/it/ricette/">Ricette</a> › <a href="/it/ricette/greece/">Grecia</a> › <span>Moussaka</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="moussaka" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MussakasMeMelitsanesKePatates01.JPG/330px-MussakasMeMelitsanesKePatates01.JPG" alt="Moussaka" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇷 Cena · Grecia</div>
+      <div class="recipe-badge">🇬🇷 Cena · <a class="recipe-badge-origin" href="/it/ricette/greece/">Grecia</a></div>
       <h1>Moussaka</h1>
       <p class="recipe-tagline">La moussaka esiste in varie forme in Medio Oriente e nei Balcani, ma la versione greca è diventata la più riconosciuta internazionalmente grazie a una standardizzazione deliberata. Il cuoco Nikolaos Tselementes, formatosi in Francia, pubblicò negli anni Venti una ricetta che aggiungeva uno strato di besciamella alle melanzane a strati e alla carne macinata.
 
@@ -139,11 +139,13 @@ Le melanzane devono essere fritte prima di essere stratificate — questo rimuov
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇷 Altre ricette da Grecia</h2>
-      <a href="/it/ricette/">Vedi tutte le ricette →</a>
+      <a href="/it/ricette/greece/">Vedi tutte le ricette →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/it/ricette/souvlaki/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="souvlaki">🍽️</div>
@@ -184,15 +186,20 @@ Le melanzane devono essere fritte prima di essere stratificate — questo rimuov
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/it/ricette/" data-rmn-back
-   aria-label="Ricette"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/it/ricette/greece/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="Grecia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Ricette</span>
+  <span class="rmb-label">Grecia</span>
 </a>
 
 </main>

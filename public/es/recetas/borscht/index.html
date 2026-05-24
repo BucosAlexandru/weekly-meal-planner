@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <span>Borscht</span>
+    <a href="/">Inicio</a> › <a href="/es/recetas/">Recetas</a> › <a href="/es/recetas/russia/">Rusia</a> › <span>Borscht</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="borscht" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/664396-312x231.jpg" alt="Borscht" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇺 Almuerzo · Rusia</div>
+      <div class="recipe-badge">🇷🇺 Almuerzo · <a class="recipe-badge-origin" href="/es/recetas/russia/">Rusia</a></div>
       <h1>Borscht</h1>
       <p class="recipe-tagline">El borscht es la gran sopa del este eslavo, un plato tan profundamente arraigado en la cultura rusa como en la ucraniana, cuyos orígenes son anteriores a las fronteras nacionales trazadas a su alrededor — la UNESCO inscribió el borscht ucraniano como patrimonio cultural inmaterial en 2022. La técnica definitoria es el vinagre: el ácido añadido junto con la remolacha cruda rallada fija el color rojo granate que de otro modo se desvanecería hasta un marrón apagado. Servido con una generosa cucharada de smetana fría y eneldo fresco, es una comida de invierno completa en un solo bol.</p>
       <div class="recipe-meta-row">
@@ -133,11 +133,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇷🇺 Más recetas de Rusia</h2>
-      <a href="/es/recetas/">Ver todas las recetas →</a>
+      <a href="/es/recetas/russia/">Ver todas las recetas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/es/recetas/okroshka/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="okroshka">🍽️</div>
@@ -166,15 +168,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/es/recetas/" data-rmn-back
-   aria-label="Recetas"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/es/recetas/russia/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Rusia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recetas</span>
+  <span class="rmb-label">Rusia</span>
 </a>
 
 </main>

@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Kare-Kare</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/philippines/">Philippines</a> › <span>Kare-Kare</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kare-kare" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg" alt="Kare-Kare" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇭 Dîner · Philippines</div>
+      <div class="recipe-badge">🇵🇭 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/philippines/">Philippines</a></div>
       <h1>Kare-Kare</h1>
       <p class="recipe-tagline">Le kare-kare est un ragoût braisé philippin construit autour d'une épaisse sauce aux cacahuètes colorée en or profond par l'annatto, avec de la queue de bœuf ou du jarret comme protéine principale. La sauce vient de cacahuètes grillées et moulues, diluées avec du bouillon et épaissies avec du riz grillé moulu — riche et savoureuse mais délibérément douce.
 
@@ -137,11 +137,13 @@ Ce qui confère au kare-kare son caractère complet est le bagoong — pâte de 
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇭 Plus de recettes de Philippines</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/philippines/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/adobo/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="adobo">🍽️</div>
@@ -164,15 +166,20 @@ Ce qui confère au kare-kare son caractère complet est le bagoong — pâte de 
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/fr/recettes/" data-rmn-back
-   aria-label="Recettes"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/philippines/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Philippines"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Philippines</span>
 </a>
 
 </main>

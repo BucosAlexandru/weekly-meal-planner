@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="latin">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Feijoada</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/brazil/">Brasilien</a> › <span>Feijoada</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="feijoada" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg" alt="Feijoada" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇧🇷 Abendessen · Brasilien</div>
+      <div class="recipe-badge">🇧🇷 Abendessen · <a class="recipe-badge-origin" href="/de/rezepte/brazil/">Brasilien</a></div>
       <h1>Feijoada</h1>
       <p class="recipe-tagline">Feijoada ist Brasiliens Nationalgericht und die wichtigste gesellschaftliche Mahlzeit des Landes — ein dicker Schwarzbohnen- und Räucherschweineintopf, der seit mindestens zwei Jahrhunderten jeden Mittwoch und Samstag in Häusern und Restaurants in ganz Rio de Janeiro serviert wird. Die Ursprünge werden diskutiert: Einige führen es auf versklavte Menschen zurück, die mit Bohnen und den weniger geschätzten Schweinefleischstücken auskamen; andere verbinden es mit der portugiesischen Alentejo-Küche. Was sicher ist: Feijoada wurde zum Symbol nationaler Identität, eine Mahlzeit, die Menschen aller sozialen Schichten zusammenbringt, immer serviert mit weißem Reis, sautiertem Couve, knuspriger Farofa und frischen Orangen.</p>
       <div class="recipe-meta-row">
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇧🇷 Weitere Rezepte aus Brasilien</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/rezepte/brazil/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/moqueca/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="moqueca">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/rezepte/brazil/" data-rmn-back
+   data-cuisine-atmosphere="latin"
+   aria-label="Brasilien"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Brasilien</span>
 </a>
 
 </main>

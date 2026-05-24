@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="mediterranean">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>바칼랴우 아 브라스</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/portugal/">포르투갈</a> › <span>바칼랴우 아 브라스</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="bacalhau-br-s" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/633251-312x231.jpg" alt="바칼랴우 아 브라스" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇵🇹 저녁 · 포르투갈</div>
+      <div class="recipe-badge">🇵🇹 저녁 · <a class="recipe-badge-origin" href="/ko/recipes/portugal/">포르투갈</a></div>
       <h1>바칼랴우 아 브라스</h1>
       <p class="recipe-tagline">바칼랴우 아 브라스는 포르투갈 요리가 주장하는 365가지 소금에 절인 대구 요리 중 하나입니다 — 1년 365일 각각 하나의 레시피. 이 요리는 19세기 리스본 바이루 알투 지역의 한 선술집에서 유래했으며, 브라스라는 인물이 염장 대구를 매우 얇은 성냥개비 모양의 감자튀김과 푼 달걀에 결합했습니다. 
 
@@ -131,11 +131,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇵🇹 포르투갈의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/portugal/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/francesinha/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="francesinha">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/portugal/" data-rmn-back
+   data-cuisine-atmosphere="mediterranean"
+   aria-label="포르투갈"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">포르투갈</span>
 </a>
 
 </main>

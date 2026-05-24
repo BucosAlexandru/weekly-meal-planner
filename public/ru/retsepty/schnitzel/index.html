@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="central-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Шницель</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/retsepty/germany/">Германия</a> › <span>Шницель</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" alt="Шницель" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇩🇪 Обед · Германия</div>
+      <div class="recipe-badge">🇩🇪 Обед · <a class="recipe-badge-origin" href="/ru/retsepty/germany/">Германия</a></div>
       <h1>Шницель</h1>
       <p class="recipe-tagline">Шницель принадлежит немецко-австрийской кухне в самом широком смысле, однако окончательная версия — Wiener Schnitzel — была доведена до совершенства в Вене, где повара XVIII века начали отбивать телятину до почти прозрачной тонкости, а затем панировали её в муке, яйце и мелких панировочных сухарях и жарили в горячем сале, пока корочка не вздувалась драматичными волнами. Температура и глубина масла определяют корочку: шницель должен свободно плавать при 170°C, кружась в жире, а не лежа в нём — именно это создаёт характерную суфлеобразную пышную корочку. Капля лимона за столом — не опция: кислота прорезает жирность, и блюдо неполно без неё.</p>
       <div class="recipe-meta-row">
@@ -128,11 +128,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇩🇪 Ещё рецепты из Германия</h2>
-      <a href="/ru/retsepty/">Все рецепты →</a>
+      <a href="/ru/retsepty/germany/">Все рецепты →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ru/retsepty/currywurst/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="currywurst">🍽️</div>
@@ -155,15 +157,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ru/retsepty/" data-rmn-back
-   aria-label="Рецепты"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/retsepty/germany/" data-rmn-back
+   data-cuisine-atmosphere="central-european"
+   aria-label="Германия"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Германия</span>
 </a>
 
 </main>

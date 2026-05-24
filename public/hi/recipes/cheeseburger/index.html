@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="anglo">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>चीज़बर्गर</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/usa/">अमेरिका</a> › <span>चीज़बर्गर</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="cheeseburger" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/635350-312x231.jpg" alt="चीज़बर्गर" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇺🇸 रात का खाना · अमेरिका</div>
+      <div class="recipe-badge">🇺🇸 रात का खाना · <a class="recipe-badge-origin" href="/hi/recipes/usa/">अमेरिका</a></div>
       <h1>चीज़बर्गर</h1>
       <p class="recipe-tagline">चीज़बर्गर अमेरिकी डाइनर्स की प्रतीक रचना है, जो 1930 के दशक में मिडवेस्टर्न लंच काउंटर और रोडसाइड ड्राइव-इन में पैदा हुई और हजारों शॉर्ट-ऑर्डर कुक के कास्ट-आयरन स्किलेट में परिपूर्ण हुई। स्मैश तकनीक — एक ढीले 125g गोले को अत्यधिक गर्म सतह पर दबाना — मेलार्ड-समृद्ध, फीते के किनारे वाली क्रस्ट बनाती है जो एक बेहतरीन पैटी को परिभाषित करती है; उस सीयर के बिना, यह सिर्फ बन में एक मीटबॉल है। 80/20 फैट-टू-लीन अनुपात पर कोई समझौता नहीं: वसा स्वाद लाती है और अंतिम निवाले तक पैटी को रसीली रखती है।</p>
       <div class="recipe-meta-row">
@@ -125,11 +125,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇺🇸 अमेरिका की और रेसिपी</h2>
-      <a href="/hi/recipes/">सभी रेसिपी देखें →</a>
+      <a href="/hi/recipes/usa/">सभी रेसिपी देखें →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/hi/recipes/pancakes/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="pancakes">🍽️</div>
@@ -158,15 +160,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/usa/" data-rmn-back
+   data-cuisine-atmosphere="anglo"
+   aria-label="अमेरिका"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">अमेरिका</span>
 </a>
 
 </main>

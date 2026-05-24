@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Kimbap</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/south-korea/">Südkorea</a> › <span>Kimbap</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="kimbap" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gimbap_%28pixabay%29.jpg/330px-Gimbap_%28pixabay%29.jpg" alt="Kimbap" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇰🇷 Mittagessen · Südkorea</div>
+      <div class="recipe-badge">🇰🇷 Mittagessen · <a class="recipe-badge-origin" href="/de/rezepte/south-korea/">Südkorea</a></div>
       <h1>Kimbap</h1>
       <p class="recipe-tagline">Kimbap — wörtlich Meeresalgen-Reis — ist Südkoreas nationaler Snack und das perfekte Essen für Picknicks, lange Reisen oder ein schnelles Mittagessen. Mit Sesamöl gewürzter Reis wird mit verschiedenen Füllungen in einem Nori-Blatt gerollt und in Scheiben geschnitten. Es sieht Sushi ähnlich, hat aber keinen Essig im Reis.
 
@@ -138,11 +138,13 @@ Kimbap entstand im kolonialen Korea (20. Jahrhundert) und entwickelte sich schne
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇰🇷 Weitere Rezepte aus Südkorea</h2>
-      <a href="/de/rezepte/">Alle Rezepte ansehen →</a>
+      <a href="/de/rezepte/south-korea/">Alle Rezepte ansehen →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/de/rezepte/bibimbap/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="bibimbap">🍽️</div>
@@ -177,15 +179,20 @@ Kimbap entstand im kolonialen Korea (20. Jahrhundert) und entwickelte sich schne
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/de/rezepte/" data-rmn-back
-   aria-label="Rezepte"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/rezepte/south-korea/" data-rmn-back
+   data-cuisine-atmosphere="east-asian"
+   aria-label="Südkorea"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Südkorea</span>
 </a>
 
 </main>

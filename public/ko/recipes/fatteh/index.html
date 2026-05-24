@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="middle-eastern">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>파테</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/syria/">시리아</a> › <span>파테</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="fatteh" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg/330px-%D9%81%D8%AA%D9%91%D8%A9_%D8%A8%D8%A7%D9%84%D8%B4%D8%A7%D9%85.jpg" alt="파테" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇸🇾 아침 · 시리아</div>
+      <div class="recipe-badge">🇸🇾 아침 · <a class="recipe-badge-origin" href="/ko/recipes/syria/">시리아</a></div>
       <h1>파테</h1>
       <p class="recipe-tagline">파테는 구운 피타 빵, 병아리콩, 마늘 요거트 소스를 층층이 쌓은 시리아 요리로, 잣과 파프리카 위에 뜨거운 버터를 뿌려 마무리합니다. 이름은 아랍어로 부서지다를 뜻하는 말에서 유래했으며, 바닥에 깐 찢은 빵을 가리킵니다. 시리아에서 이집트까지 레반트 전역에서 먹으며, 가장 일반적으로 아침 식사로, 라마단 기간에 특히 많이 먹습니다.
 
@@ -136,11 +136,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇸🇾 시리아의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/syria/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/hummus/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="hummus">🍽️</div>
@@ -169,15 +171,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/syria/" data-rmn-back
+   data-cuisine-atmosphere="middle-eastern"
+   aria-label="시리아"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">시리아</span>
 </a>
 
 </main>

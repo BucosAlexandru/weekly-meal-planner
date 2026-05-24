@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="nordic">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>카렐리야 파이</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/finland/">핀란드</a> › <span>카렐리야 파이</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="karelian-pie" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/330px-Karjalanpiirakka-20060227.jpg" alt="카렐리야 파이" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇫🇮 아침 · 핀란드</div>
+      <div class="recipe-badge">🇫🇮 아침 · <a class="recipe-badge-origin" href="/ko/recipes/finland/">핀란드</a></div>
       <h1>카렐리야 파이</h1>
       <p class="recipe-tagline">카렐리야 파이——카리알란피라카——는 현재 핀란드와 러시아로 나뉜 역사적 지역인 카렐리야에서 유래했습니다. 타원형 껍질은 우유에서 천천히 끓인 부드러운 쌀죽을 감싸는 얇고 바삭한 호밀 반죽으로 만들어집니다. 감자 소도 전통적인 대안입니다. 파이는 고온에서 구워 호밀이 바삭해집니다.
 
@@ -139,11 +139,13 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇫🇮 핀란드의 더 많은 레시피</h2>
-      <a href="/ko/recipes/">모든 레시피 보기 →</a>
+      <a href="/ko/recipes/finland/">모든 레시피 보기 →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/ko/recipes/salmon-soup/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="salmon-soup">🍽️</div>
@@ -172,15 +174,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/ko/recipes/" data-rmn-back
-   aria-label="레시피"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/finland/" data-rmn-back
+   data-cuisine-atmosphere="nordic"
+   aria-label="핀란드"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">핀란드</span>
 </a>
 
 </main>

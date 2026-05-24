@@ -50,11 +50,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main">
+<main class="content-main recipe-main" data-cuisine-atmosphere="east-european">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>Tripe Soup</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/romania/">Romania</a> › <span>Tripe Soup</span>
   </nav>
 
   <!-- Hero -->
@@ -63,7 +63,7 @@
       <div class="recipe-photo-container" data-recipe="tripe-soup" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/654283-312x231.jpg" alt="Tripe Soup" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇷🇴 दोपहर का खाना · Romania</div>
+      <div class="recipe-badge">🇷🇴 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/recipes/romania/">Romania</a></div>
       <h1>Tripe Soup</h1>
       <p class="recipe-tagline">Ciorbă de burtă is a defining fixture of Romanian Sunday tables, rooted in the kitchens of Muntenia and Oltenia. The gentle acidity from white wine vinegar and full-fat sour cream, paired with long-simmered beef tripe, produces a dense, warming soup that has been served at weddings, feasts — and, by folk tradition, as a hangover remedy. The defining technique is the liaison: egg yolks tempered with hot broth that thicken the soup to a rich, velvety consistency without curdling.</p>
       <div class="recipe-meta-row">
@@ -134,7 +134,9 @@
     </div>
   </div>
 
-  <!-- Related recipes -->
+  <!-- Related recipes — "see all" jumps to the cuisine hub when available,
+       so users land on a focused list of THIS cuisine rather than the full
+       175-recipe index. Direct recipe-index entry remains the fallback. -->
   
 
   <!-- CTA Banner -->
@@ -149,15 +151,20 @@
 
 </div><!-- /.recipe-page-wrap -->
 
-<!-- Mobile-only floating back-to-recipes pill.
-     Hidden on desktop, print, and PDF export. Restores list scroll
-     position via sessionStorage when tapped (content.js handles the
-     flag + restore on the destination page). -->
-<a class="recipe-mobile-back" href="/hi/recipes/" data-rmn-back
-   aria-label="रेसिपी"
+<!-- Mobile-only floating back pill. Static default:
+       • Recipe has a cuisine hub → pill points to that hub, label = origin
+         ("← Italy"). Visually distinct via .mp-back-pill--cuisine accent.
+       • No hub (single-recipe origins) → pill points to recipe index,
+         label = "← Recipes". Same component, no accent.
+     content.js may further override the label/href at runtime if the
+     user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/romania/" data-rmn-back
+   data-cuisine-atmosphere="east-european"
+   aria-label="Romania"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">Romania</span>
 </a>
 
 </main>
