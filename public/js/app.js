@@ -2,7 +2,7 @@
 import { recipes as recipesMain } from './recipes.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
-import { buildShoppingFromRawIngredients } from './shopping-list.js';
+import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
@@ -113,6 +113,23 @@ function pickMotiv(langCode) {
     const target = document.getElementById('pdf-content') || document.body;
     const mo = new MutationObserver(() => addDictationAriaLabels(document));
     mo.observe(target, { childList: true, subtree: true });
+  });
+
+  // ── Auto-expand collapsible shopping list for browser print / Save-as-PDF ──
+  // Screen UX keeps the list collapsed by default to reduce scroll length,
+  // but any export path (Ctrl+P, browser PDF) must include the full data.
+  // The dedicated #pdf-list flow is unaffected — it builds from data, not DOM.
+  const _collapsibleOpenState = new WeakMap();
+  window.addEventListener('beforeprint', () => {
+    document.querySelectorAll('details.shopping-collapsible').forEach(d => {
+      _collapsibleOpenState.set(d, d.open);
+      d.open = true;
+    });
+  });
+  window.addEventListener('afterprint', () => {
+    document.querySelectorAll('details.shopping-collapsible').forEach(d => {
+      if (_collapsibleOpenState.has(d)) d.open = _collapsibleOpenState.get(d);
+    });
   });
 })();
 // ===== Limba globală
@@ -645,7 +662,163 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 }
+  // ── PDF v2 opt-in flag (Phase 1 scaffold) ──────────────────────────────────
+  // The current html2pdf path is the production default and remains untouched.
+  // pdfV2 is reached ONLY when the user has explicitly opted in via the URL
+  // (?pdfv2=1) or via localStorage (localStorage.pdfV2 = '1'). No default
+  // behaviour changes. To revert, the user removes the flag.
+  //
+  // Stickiness: as soon as ?pdfv2=1 is seen in the URL on ANY page load, we
+  // promote it to localStorage so the opt-in survives client-side navigations
+  // that drop the query string — notably the "Open in app & customize" link
+  // on static plan pages, which routes to /?autoplan=<id> and would otherwise
+  // strip the flag and fall back to legacy. To opt out: localStorage.removeItem('pdfV2').
+  try {
+    const _qs = new URLSearchParams(window.location.search || '');
+    if (_qs.get('pdfv2') === '1') localStorage.setItem('pdfV2', '1');
+  } catch (_) {}
+
+  function isPdfV2Enabled() {
+    try {
+      const qs = new URLSearchParams(window.location.search || '');
+      if (qs.get('pdfv2') === '1') return true;
+      return localStorage.getItem('pdfV2') === '1';
+    } catch (_) { return false; }
+  }
+
+  // Startup log so QA can confirm which engine is wired at page-load time
+  // (verifiable from Safari Web Inspector before even clicking Generate PDF).
+  try { console.log('PDF_EXPORT_ENGINE (on load) = "' + (isPdfV2Enabled() ? 'pdfv2' : 'legacy') + '"'); } catch (_) {}
+  async function exportViaPdfV2() {
+    // Build the payload from the live planner state — same source data the
+    // legacy generatePDFimpact() reads. This ensures pdfv2 exports whatever
+    // the user has currently selected/customized, not the server's built-in
+    // demo plan (which now only fires when the endpoint is hit without a
+    // structured body, e.g. for a direct GET smoke-test).
+    const payload = buildPdfV2Payload();
+    const resp = await fetch('/api/generate-pdf', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!resp.ok) throw new Error('pdfv2 endpoint returned ' + resp.status);
+    const blob = await resp.blob();
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = 'meal-plan.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  }
+
+  // Translate the live planner state into the pdfv2 endpoint's payload shape.
+  // Reuses the same lookup logic as generatePDFimpact() (collectMeals +
+  // window.recipes + buildShoppingFromRawIngredients) so legacy and pdfv2
+  // see exactly the same data — only the rendering differs.
+  // Phase 1 endpoint is EN-only, so we emit English names + day labels and
+  // pass EN ingredient strings to the grouping engine. The user's display
+  // locale doesn't change the PDF output.
+  function buildPdfV2Payload() {
+    const isPremium    = !!window.hasUnlimited;
+    const allMeals     = collectMeals();
+    const freeDays     = 2;
+    const visibleMeals = isPremium ? allMeals : allMeals.slice(0, freeDays);
+
+    function findRecipe(mealText) {
+      if (!mealText) return null;
+      const title = extractRecipeName(mealText).toLowerCase();
+      return (window.recipes || []).find(r =>
+        r.name?.[lang]?.toLowerCase() === title ||
+        r.name?.en?.toLowerCase()     === title ||
+        r.name?.ro?.toLowerCase()     === title
+      ) || null;
+    }
+    // Extract a clean noun phrase from each raw ingredient string (drop
+    // quantities, parens, prep notes) so the per-meal ingredient line reads
+    // as a compact noun list — "Spaghetti, Guanciale, Eggs..." — not a
+    // verbose recipe-text dump. De-dupe across the same meal so repeats
+    // don't bloat the line.
+    function shortIngredients(rawList) {
+      const seen = new Set();
+      const out  = [];
+      for (const raw of rawList) {
+        const p = parseIngredient(raw);
+        if (!p || !p.name) continue;
+        const display = p.name.charAt(0).toUpperCase() + p.name.slice(1);
+        const key = p.name.toLowerCase();
+        if (seen.has(key)) continue;
+        seen.add(key);
+        out.push(display);
+      }
+      return out;
+    }
+    function mealPayload(mealText) {
+      if (!mealText) return null;
+      const r = findRecipe(mealText);
+      const displayName = r?.name?.en || r?.name?.ro || extractRecipeName(mealText);
+      const rawIngr = r?.ingredients?.en || r?.ingredients?.ro || [];
+      return {
+        name: displayName,
+        time: r?.time || null,
+        servings: r?.servings || null,
+        cost: r?.costRon ? `~$${Math.round(r.costRon / 4.6)}` : null,
+        ingredients: shortIngredients(rawIngr),
+      };
+    }
+
+    const EN_DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const days = visibleMeals.map((m, i) => ({
+      day: EN_DAYS[i] || `Day ${i + 1}`,
+      lunch: mealPayload(m.lunch),
+      dinner: mealPayload(m.dinner),
+    })).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
+
+    const rawEnIngredients = [];
+    visibleMeals.forEach(m => {
+      [m.lunch, m.dinner].filter(Boolean).forEach(text => {
+        const r = findRecipe(text);
+        (r?.ingredients?.en || r?.ingredients?.ro || []).forEach(i => rawEnIngredients.push(i));
+      });
+    });
+    let shoppingGroups = [];
+    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, 'en'); }
+    catch (_) { shoppingGroups = []; }
+
+    const today = new Date();
+    return {
+      title:     'Weekly meal plan',
+      weekLabel: `Week of ${today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+      days,
+      shoppingGroups,
+    };
+  }
+
   async function exportShoppingListToPDF() {
+  // ── SINGLE DISPATCHER for all PDF exports. Every Generate PDF button must
+  // route through this function. No button is allowed to call html2pdf
+  // directly — see attachPdfListeners() below.
+  //
+  // If isPdfV2Enabled() returns true, ONLY the pdfv2 endpoint is used.
+  // We do NOT silently fall back to legacy on pdfv2 failure — that would
+  // sneak the full 10-page cookbook-style export back in front of a user
+  // who explicitly opted into the compact pdfv2 output. Instead we surface
+  // the error so the user knows pdfv2 didn't work and can retry.
+  const useV2 = isPdfV2Enabled();
+  // Loud console log so QA can verify which engine ran (visible in
+  // Safari Web Inspector under "Console").
+  console.log('PDF_EXPORT_ENGINE = "' + (useV2 ? 'pdfv2' : 'legacy') + '"');
+  if (useV2) {
+    try {
+      await exportViaPdfV2();
+      console.log('PDF_EXPORT_ENGINE = "pdfv2" · completed OK');
+      return;
+    } catch (err) {
+      console.error('PDF_EXPORT_ENGINE = "pdfv2" · FAILED — NOT falling back to legacy:', err);
+      try { alert('PDF generation (pdfv2) failed: ' + (err && err.message ? err.message : err) + '\n\nLegacy export was NOT used. Disable pdfv2 (remove ?pdfv2=1 and run localStorage.removeItem("pdfV2") in the console) to use the legacy exporter.'); } catch (_) {}
+      return;
+    }
+  }
+  // ── LEGACY html2pdf path (production default; reached only when
+  // ── pdfv2 is NOT opted in). Untouched from before.
   const pdfArea = document.getElementById('pdf-impact-area');
   if (!pdfArea) return;
   let cleanNode = null, styleEl = null;
@@ -1170,9 +1343,11 @@ function paginateCleanNode(root){
       costSummary.style.display = 'none';
     }
 
+    const countEl = document.getElementById('shopping-toggle-count');
     if (allIngr.size === 0) {
       listEl.innerHTML = '';
       listEl.setAttribute('data-empty', 'true');
+      if (countEl) countEl.textContent = '';
       return;
     }
     listEl.removeAttribute('data-empty');
@@ -1185,6 +1360,7 @@ function paginateCleanNode(root){
          </label>
        </li>`
     ).join('');
+    if (countEl) countEl.textContent = String(sorted.length);
   }
 
   // ── Recipe meta chips (time / cost / tags) under each meal input ──────────
@@ -1401,11 +1577,14 @@ async function ensureHtml2pdfLoaded() {
   });
 }
   function attachPdfListeners() {
+  // Both Generate PDF buttons route through exportShoppingListToPDF — the
+  // single dispatcher. Skip the legacy html2pdf CDN preload when pdfv2 is
+  // active so a CDN hiccup can never accidentally trigger the legacy path
+  // and so pdfv2 has zero dependency on cdnjs.
   const freeBtn = document.getElementById('generate-btn');
   if (freeBtn && !freeBtn.dataset.attached) {
     freeBtn.onclick = async () => {
-      await ensureHtml2pdfLoaded();
-      // Free users always allowed — content is limited to 2 days inside generatePDFimpact()
+      if (!isPdfV2Enabled()) await ensureHtml2pdfLoaded();
       exportShoppingListToPDF();
     };
     freeBtn.dataset.attached = '1';
@@ -1416,7 +1595,7 @@ async function ensureHtml2pdfLoaded() {
       const paidBtn = document.getElementById('paid-generate-pdf');
       if (paidBtn && !paidBtn.dataset.attached) {
         paidBtn.onclick = async () => {
-          await ensureHtml2pdfLoaded();
+          if (!isPdfV2Enabled()) await ensureHtml2pdfLoaded();
           exportShoppingListToPDF();
         };
         paidBtn.dataset.attached = '1';

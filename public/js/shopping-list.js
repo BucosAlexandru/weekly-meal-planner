@@ -125,6 +125,13 @@ const CATEGORY_LABELS = {
 /* Canonical name → category. Lookup is on the lowercased extracted name.
    Order matters when a name contains multiple keywords — earlier rules win. */
 const CATEGORY_RULES = [
+  // PRIORITY OVERRIDES — must come first to win over broader rules below.
+  // Stocks / broths / bouillons route to SAUCES, not MEAT (the broad meat rule
+  // would otherwise capture "chicken stock" via \bchicken\b).
+  [/^(chicken|beef|vegetable|fish|lamb|pork|veal|dashi|miso)\s+(stock|broth|bouillon)$/, 'sauces'],
+  // Fresh herbs route to VEGETABLES, not the dried-herb PANTRY rule below.
+  [/^fresh\s+(dill|thyme|oregano|rosemary|sage|chives?|basil|mint|parsley|coriander|cilantro|tarragon)$/, 'vegetables'],
+
   // PANTRY — match first so they don't fall into other categories
   [/^(salt|sea salt|kosher salt|fine sea salt|coarse salt|black pepper|white pepper|pepper)$/, 'pantry'],
   [/^(olive oil|extra-virgin olive oil|vegetable oil|cooking oil|neutral oil|sunflower oil|canola oil|sesame oil|oil)$/, 'pantry'],
@@ -205,12 +212,36 @@ const CANON_RULES = [
   [/^parsley and (lemon wedges?|fresh herbs?).*$/, 'fresh parsley'],
   [/^cucumber slices? and fried shallots.*$/, 'cucumber'],
   [/^coriander leaves? and lemon wedges?.*$/, 'fresh coriander'],
-  [/^grated parmigiano and extra[- ]virgin olive oil.*$/, 'grated parmesan'],
+  [/^coriander and (lemon wedges?|lime wedges?).*$/, 'fresh coriander'],
+  [/^coriander and thai basil.*$/, 'fresh coriander'],
+  [/^wasabi and pickled ginger.*$/, 'wasabi'],
+  [/^hoisin sauce and sriracha.*$/, 'hoisin sauce'],
+  [/^salt and (freshly ground )?(black )?pepper.*$/, 'salt'],
+  [/^lime juice and zest.*$/, 'lime juice'],
+  [/^lemon juice and zest.*$/, 'lemon juice'],
+  // Recipe authors sometimes pack two finishing ingredients into one line
+  // ("grated parmigiano and extra-virgin olive oil, to serve"). Canonicalize
+  // to plain parmesan so it MERGES with the main parmesan entry; the olive
+  // oil component is already covered elsewhere in the recipe.
+  [/^grated parmigiano and extra[- ]virgin olive oil.*$/, 'parmesan'],
   [/^smoked lardons?$/, 'bacon'],
   [/^streaky bacon$/, 'bacon'],
   [/^(extra[- ]?)?virgin olive oil$/, 'olive oil'],
   [/^grated nutmeg$/, 'nutmeg'],
-  [/^greek oregano$|^dried greek oregano$/, 'dried oregano'],
+  // "Bouquet garni: 3 thyme sprigs + 2 bay leaves + ..." — recipes occasionally
+  // write the components inline with a colon. Strip everything after the canonical.
+  [/^bouquet garni\b.*$/, 'bouquet garni'],
+  // Saffron threads / strands / pistils — all the same shopping item.
+  [/^saffron (threads?|strands?|pistils?|filaments?)$/, 'saffron'],
+  // "Full-bodied Burgundy red wine — do not use cheap wine" etc. — strip
+  // editorial wording, keep just "red wine" so it merges with other red wine.
+  [/^(full[- ]?bodied|dry|robust|fruity|medium[- ]?bodied)?\s*(burgundy|bordeaux|chianti|merlot|cabernet|pinot noir|rioja)?\s*red wine\b.*$/, 'red wine'],
+  [/^(full[- ]?bodied|dry|crisp|fruity)?\s*(burgundy|chardonnay|riesling|sauvignon blanc|pinot grigio)?\s*white wine\b.*$/, 'white wine'],
+  // "Grated parmesan", "Grated kefalotyri", "Grated gruyère" — drop the prep
+  // adjective so they merge with their ungrated counterparts at the canonical
+  // step. Returns the inner thing for further canonicalization.
+  [/^(grated|shredded|crumbled)\s+(.+)$/, (m) => m[2]],
+  [/^(oregano|dried oregano|greek oregano|dried greek oregano|mexican oregano)$/, 'dried oregano'],
   [/^(dry\s+)?white wine$/, 'white wine'],
   [/^(dry\s+)?red wine$/, 'red wine'],
   [/^(canned\s+)?cannellini$|^canned cannellini.*$/, 'white beans'],
@@ -220,7 +251,7 @@ const CANON_RULES = [
   [/^(yellow|brown|white|spanish|sweet)\s+onion(s)?$/, 'onion'],
   [/^(\d+\s+)?(large|medium|small|big|whole)?\s*onion(s)?$/, 'onion'],
   [/^red onion(s)?$/, 'red onion'],
-  [/^spring onion(s)?$|^green onion(s)?$|^scallion(s)?$/, 'spring onions'],
+  [/^spring onion(s)?$|^green onion(s)?$|^scallion(s)?$|^spring onion stalks?$|^scallion stalks?$/, 'spring onions'],
   [/^shallot(s)?$/, 'shallot'],
 
   // Garlic
@@ -331,14 +362,15 @@ const CANON_RULES = [
   [/^(whole|skimmed|semi-skimmed|full-fat)?\s*milk$/, 'milk'],
   [/^(double|single|heavy|whipping|sour)?\s*cream$/, 'cream'],
   [/^(greek|natural|plain)?\s*yo?ghurt$/, 'yoghurt'],
-  [/^parmesan( cheese)?$|^parmigiano( reggiano)?$/, 'parmesan'],
+  [/^parmesan( cheese)?$|^parmigiano([- ]reggiano)?$/, 'parmesan'],
   [/^pecorino( romano)?$/, 'pecorino'],
-  [/^(fresh\s+)?mozzarella$/, 'mozzarella'],
+  [/^(fresh\s+)?mozzarella( cheese)?$/, 'mozzarella'],
   [/^feta( cheese)?$/, 'feta'],
-  [/^ricotta$/, 'ricotta'],
-  [/^cheddar$/, 'cheddar'],
-  [/^(gruyere|gruyère)$/, 'gruyère'],
-  [/^kefalotyri$/, 'kefalotyri'],
+  [/^ricotta( cheese)?$/, 'ricotta'],
+  [/^ricotta salata$/, 'ricotta salata'],
+  [/^cheddar( cheese)?$/, 'cheddar'],
+  [/^(gruyere|gruyère)( cheese)?$/, 'gruyère'],
+  [/^kefalotyri( cheese)?$/, 'kefalotyri'],
 
   // Dry / pasta / rice
   [/^spaghetti$/, 'spaghetti'],
@@ -1698,7 +1730,12 @@ function parseQty(s) {
   return isFinite(n) ? n : null;
 }
 
-function parseIngredient(raw) {
+// Exported for clients that need to display a clean noun phrase per
+// ingredient (e.g. the pdfv2 per-meal ingredient summary). Returns
+// { qty, unit, name, raw } or null. The `name` field is the lower-cased
+// noun extracted from the raw recipe string (no quantities, no parens,
+// no prep notes).
+export function parseIngredient(raw) {
   if (!raw) return null;
   let s = String(raw).trim();
   // Strip leading bullet/dash
@@ -1721,10 +1758,21 @@ function parseIngredient(raw) {
   //   "For sautéed sauerkraut: 400 g drained sauerkraut" -> "400 g drained sauerkraut"
   //   "Marinade: 1 tbsp soy sauce" -> "1 tbsp soy sauce"
   //   "Garnish: 2 spring onions" -> "2 spring onions"
-  s = s.replace(/^(for\s+[^:]+|marinade|garnish|topping|sauce|filling|dressing|paste|stock|broth|dough|batter|crust):\s*/i, '').trim();
+  //   "To serve: 320 g cooked jasmine rice" -> "320 g cooked jasmine rice"
+  s = s.replace(/^(for\s+[^:]+|marinade|garnish|topping|sauce|filling|dressing|paste|stock|broth|dough|batter|crust|to\s+serve|to\s+finish|to\s+garnish|to\s+top|to\s+drizzle|optional):\s*/i, '').trim();
+
+  // If a colon survives further in the string (e.g. "Spring onions: the white
+  // parts finely chopped"), it's typically a sub-clause that bloats the
+  // shopping label. Keep only the part before the colon.
+  const _colonIdx = s.indexOf(': ');
+  if (_colonIdx > 0 && _colonIdx < s.length - 2) s = s.slice(0, _colonIdx).trim();
   // Quantifier phrases "hand of X" / "knob of X" / "pinch of X" / "splash of X"
-  // become bare "X".
-  s = s.replace(/^(a\s+)?(hand|handful|knob|pinch|splash|dash|drizzle|squeeze|sprinkle|few|couple)\s+of\s+/i, '').trim();
+  // become bare "X". Also accept "plenty of X", a leading number, and an
+  // optional size modifier ("a small handful of X" / "1 big pinch of salt"):
+  //   "1 hand of fresh galangal"   → "fresh galangal"
+  //   "A small handful of fresh basil" → "fresh basil"
+  //   "A small handful of" (truncated) → "" (parseIngredient returns null)
+  s = s.replace(/^(\d+\s+)?(a\s+)?(small\s+|tiny\s+|big\s+|large\s+|good\s+|generous\s+|extra\s+|tiny\s+)?(hand|handful|knob|pinch|splash|dash|drizzle|squeeze|sprinkle|few|couple|plenty|loads|tons|piles?|bunch|bunches)\s+of(\s+|$)/i, '').trim();
 
   // Strip prep suffix after first comma (", finely diced", ", chopped", etc.)
   s = s.split(',')[0].trim();
@@ -1736,8 +1784,34 @@ function parseIngredient(raw) {
   //   "Coriander leaves to finish" -> "Coriander leaves"
   s = s.replace(/\s+(for|to|if|when|while)\s+.*$/i, '').trim();
 
-  // Strip "or alternative" sections: "OR 200g..."
-  s = s.split(/\s+\bor\b\s+/i)[0].trim();
+  // Strip "or alternative" sections.
+  // Special case: when recipe authors share a tail noun between two
+  // alternatives ("warm chicken OR vegetable stock"), naive left-split
+  // leaves us with "warm chicken" — which canonicalizes wrong ("whole
+  // chicken"). Detect when the RIGHT alternative is a COMPOUND noun phrase
+  // (multi-word, ending in stock/broth/wine/oil/sauce/mince/paste) and the
+  // LEFT half is missing that tail noun — then graft the tail onto the
+  // left so it canonicalizes as the intended compound.
+  // Skip single-word right halves ("chicken stock or water") — those are
+  // genuine alternatives, not shared-tail constructions.
+  {
+    const orParts = s.split(/\s+\bor\b\s+/i);
+    if (orParts.length >= 2) {
+      const left = orParts[0].trim();
+      const right = orParts[1].trim();
+      const rightWords = right.split(/\s+/);
+      const COMPOUND_TAILS = /^(stock|broth|bouillon|wine|oil|sauce|mince|paste|rice|noodles?|pasta|beans?|lentils?|peas|peppers?|chillies|chilis|chilies)$/i;
+      if (rightWords.length >= 2 && COMPOUND_TAILS.test(rightWords[rightWords.length - 1])) {
+        const tail = rightWords[rightWords.length - 1];
+        const hasTail = new RegExp('\\b' + tail + '\\b', 'i').test(left);
+        s = hasTail ? left : `${left} ${tail}`;
+      } else {
+        s = left;
+      }
+    } else {
+      s = orParts[0].trim();
+    }
+  }
   // Strip "+ also" tails: "+ 1 whole egg"
   // We won't fully handle the "+", just keep the leading item
   s = s.split(/\s+\+\s+/)[0].trim();
@@ -1775,9 +1849,30 @@ function parseIngredient(raw) {
     name = s;
   } else if (numMatch && !unit) {
     // No unit but had a number — strip an "of" or "x" connector
+    const hadX = /^x\s+/i.test(s);
     s = s.replace(/^(of\s+|x\s+)/i, '').trim();
     name = s;
+    // "2 x 400 g cans tomatoes" pattern: after stripping "2 " + "x ", the
+    // remaining "400 g cans tomatoes" still has a number+unit at the start
+    // that the single-pass parser missed. Re-run extraction on the tail.
+    if (hadX) {
+      const num2 = s.match(/^([0-9]+(?:[.,][0-9]+)?)\s*/);
+      if (num2) {
+        const tail = s.slice(num2[0].length);
+        const u2 = tail.match(/^(kg|kilograms?|g|grams?|ml|milliliters?|millilitres?|l|L|liters?|litres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|oz|lb)\b\.?\s*/i);
+        if (u2) {
+          qty = qty * parseFloat(num2[1].replace(',', '.'));
+          unit = u2[1].toLowerCase();
+          s = tail.slice(u2[0].length).trim();
+          name = s;
+        }
+      }
+    }
   }
+
+  // After unit extraction, strip redundant leading container nouns:
+  //   "400 g cans canned tomatoes" → unit="g", then "cans canned tomatoes" → "canned tomatoes"
+  name = name.replace(/^(cans?|tins?|jars?|packs?|packets?|sheets?|bunches?|heads?)\s+/i, '');
 
   // Strip leading size adjectives if present (large, medium, small) but keep them as unit fallback
   const sizeMatch = name.match(/^(extra-large|large|medium|small|big|whole)\s+/i);
@@ -1786,14 +1881,21 @@ function parseIngredient(raw) {
     name = name.slice(sizeMatch[0].length).trim();
   }
 
+  // Strip "X mixed/combined/blended/whisked with Y…" — keep just X
+  name = name.split(/\s+(?:mixed|combined|blended|whisked|whipped|stirred)\s+with\s+/i)[0];
+
   // Strip leading state adjectives that don't change the ingredient identity
   // for shopping purposes: "raw prawns" → "prawns", "hot chicken stock" →
   // "chicken stock", "warm milk" → "milk", "freshly cracked pepper" → "pepper".
   name = name.replace(/^(raw|cooked|fresh|freshly|hot|warm|cold|chilled|frozen|dry|dried|toasted|leftover|day-?old|ripe|softened|melted|extra)\s+/i, '');
   // After dropping a leading "ground" / "cracked" verb, what's left is the spice itself
   name = name.replace(/^(ground|cracked|crushed|whole)\s+/i, '');
-  // Strip trailing prep verbs / state
-  name = name.replace(/\s+(diced|chopped|sliced|minced|crushed|grated|peeled|deseeded|cubed|julienned|halved|quartered|cooked|raw|fresh|dried|toasted|ground|whole|finely|coarsely|roughly|thinly|thickly).*$/i, '');
+  // Strip trailing prep verbs / state — also catch leading intensifiers
+  // ("very", "really", "extremely") that often precede prep adverbs:
+  //   "yellow onions very finely sliced" → after strip "finely sliced.*" → "yellow onions very"
+  //   Add a second pass to clean up that trailing "very" / "extremely".
+  name = name.replace(/\s+(diced|chopped|sliced|minced|crushed|grated|peeled|deseeded|cubed|julienned|halved|quartered|cooked|raw|fresh|dried|toasted|ground|whole|finely|coarsely|roughly|thinly|thickly|generously|lightly|gently|barely|softly|smoothly|evenly).*$/i, '');
+  name = name.replace(/\s+(very|extremely|really|super|quite|fairly|relatively|pretty|so)\s*$/i, '');
   name = name.trim().toLowerCase();
 
   if (!name) return null;
@@ -1811,13 +1913,23 @@ function parseIngredient(raw) {
    CANONICALIZATION + CATEGORIZATION
    ============================================================ */
 
-function canonicalName(name) {
+function canonicalName(name, depth = 0) {
   if (!name) return null;
+  // Cap recursion to prevent any pathological rule pair from looping.
+  if (depth > 2) return name.toLowerCase().trim();
   const n = name.toLowerCase().trim();
   for (const [pattern, replacement] of CANON_RULES) {
     const m = n.match(pattern);
     if (m) {
-      return typeof replacement === 'function' ? replacement(m) : replacement;
+      const isFn = typeof replacement === 'function';
+      const result = isFn ? replacement(m) : replacement;
+      // Function-rules typically extract a substring (e.g. "grated parmesan"
+      // → "parmesan"); the result itself may still need canonicalization
+      // (e.g. parmesan → parmesan, parmigiano → parmesan). Re-run to apply
+      // the downstream rule. Static-string rules already produce the final
+      // canonical, so we return them as-is.
+      if (isFn && result && result !== n) return canonicalName(result, depth + 1);
+      return result;
     }
   }
   return n;
@@ -1848,9 +1960,12 @@ function unitGroup(u) {
   return null;
 }
 
+// Trim trailing ".0" so "2.0 kg" reads as "2 kg".
+function trimZero(s) { return s.replace(/\.0(\s)/, '$1'); }
+
 function formatQty(grams) {
   if (grams <= 0) return '';
-  if (grams >= 1000) return `${(grams / 1000).toFixed(grams >= 5000 ? 0 : 1)} kg`;
+  if (grams >= 1000) return trimZero(`${(grams / 1000).toFixed(grams >= 5000 ? 0 : 1)} kg`);
   if (grams >= 100) return `${Math.round(grams / 50) * 50} g`;
   if (grams >= 25) return `${Math.round(grams / 25) * 25} g`;
   return `${Math.round(grams)} g`;
@@ -1858,7 +1973,7 @@ function formatQty(grams) {
 
 function formatVolume(ml) {
   if (ml <= 0) return '';
-  if (ml >= 1000) return `${(ml / 1000).toFixed(ml >= 5000 ? 0 : 1)} L`;
+  if (ml >= 1000) return trimZero(`${(ml / 1000).toFixed(ml >= 5000 ? 0 : 1)} L`);
   if (ml < 25) return '';  // tsp-scale residue, suppress
   return `${Math.round(ml / 25) * 25} ml`;
 }
@@ -1882,7 +1997,10 @@ function combineItems(items) {
   const parts = [];
   if (totalGrams > 0) parts.push(formatQty(totalGrams));
   if (totalMl > 0)    parts.push(formatVolume(totalMl));
-  if (countPieces > 0) {
+  // If we already have a mass or volume, residual size-pieces ("1 large") are
+  // usually redundant (the recipe gave both forms) — suppress them. Only show
+  // size pieces when mass/volume is absent.
+  if (countPieces > 0 && totalGrams === 0 && totalMl === 0) {
     if (sizeCount.large > 0 || sizeCount.medium > 0 || sizeCount.small > 0) {
       const sizes = ['large', 'medium', 'small']
         .filter(s => sizeCount[s] > 0)
@@ -1951,11 +2069,15 @@ function _groupAndRender(allIngr, langCode) {
   // adjective or fragment with no real noun. Filter them out entirely.
   // Also filters cooking equipment that occasionally leaks into ingredient
   // lists (bamboo rolling mat, wooden skewers, parchment paper).
-  const ORPHAN = /^(canned|tinned|fresh|dried|raw|whole|warm|hot|cold|chilled|frozen|bunch|bunches|sprig|sprigs|stalk|stalks|head|piece|pieces|slice|slices|sheet|sheets|optional|to taste|to garnish|extra|more|some|big|wooden|red|green|yellow|orange|white|brown|black|good|nice|generous|small|medium|large|litres?|liters?|cups?|tsp|tbsp|pinch|pieces?|day-?old)$/i;
+  const ORPHAN = /^(canned|tinned|fresh|dried|raw|whole|warm|hot|cold|chilled|frozen|bunch|bunches|sprig|sprigs|stalk|stalks|head|piece|pieces|slice|slices|sheet|sheets|optional|to taste|to garnish|to serve|to finish|to top|to drizzle|extra|more|some|big|wooden|red|green|yellow|orange|white|brown|black|good|nice|generous|small|medium|large|litres?|liters?|cups?|tsp|tbsp|pinch|pieces?|day-?old|water|ice|ice cubes|cans?|tins?|jars?|packs?|packets?|portions?|servings?|hand of|handful of|knob of|plenty of|loads of|pile of|piles of|coarsely|finely|roughly|thinly|thickly|generously|lightly|gently|barely|softly|smoothly|evenly|chopped|sliced|diced|minced|crushed|grated|peeled|deseeded|cubed|julienned|halved|quartered|toasted|softened|melted|crumbled|shaved|trimmed|smoked|cracked|ground|preserved|pickled|simmered|reduced|drained|rinsed|boiled|steamed|baked|fried|grilled|roasted|sautéed|sauteed|braised|poached|cooked|undercooked|overcooked)$/i;
+  // Recipe-instruction artifacts that leak into the canonical name when the
+  // raw string is essentially a sentence ("Cornstarch mixed with 3 tbsp cold
+  // water"). Filter the whole canonical out.
+  const RECIPE_INSTRUCTION = /\b(mixed|combined|blended|whisked|whipped|stirred|tied|soaked|drained|reduced|simmered|cooked|infused|steeped)\s+(with|in|for|until|to|and)\b/i;
   const NON_FOOD = /\b(bamboo (rolling )?mat|wooden skewers?|metal skewers?|parchment paper|cling film|aluminium foil|aluminum foil|cheesecloth|kitchen string|kitchen twine|toothpicks?|cocktail sticks?)\b/i;
 
   for (const [canonical, items] of Object.entries(byCanon)) {
-    if (ORPHAN.test(canonical) || NON_FOOD.test(canonical) || canonical.length < 3) continue;
+    if (ORPHAN.test(canonical) || NON_FOOD.test(canonical) || RECIPE_INSTRUCTION.test(canonical) || canonical.length < 3) continue;
     const cat = items[0].category;
     const labelMap = ITEM_LABELS[langCode] || {};
     // Sentence-case the canonical name: capitalize first letter only,

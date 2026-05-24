@@ -229,6 +229,86 @@
 .recipe-link:hover { color: #24712A; text-decoration: underline; }
 
 /* ────────────────────────────────────────────────────────────
+   Shopping list — collapsible (screen-only)
+   ------------------------------------------------------------
+   On weekly menu pages the full shopping list lives inside a
+   <details> wrapper. Closed by default to reduce vertical
+   scroll on mobile / iPhone SE. Force-opened in @media print
+   so browser PDF export still includes the full list. Data is
+   never duplicated — the same DOM serves screen, print, and
+   search engines.
+   ──────────────────────────────────────────────────────────── */
+.content-section--green .shopping-collapsible { margin-bottom: 1.5rem; }
+.content-section--green .shopping-summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .9rem 1.1rem;
+  background: rgba(255,255,255,.72);
+  border: 1px solid #c8e6ca;
+  border-radius: 14px;
+  transition: background .15s ease, box-shadow .15s ease;
+}
+.content-section--green .shopping-summary::-webkit-details-marker { display: none; }
+.content-section--green .shopping-summary::marker { content: ''; }
+.content-section--green .shopping-summary:hover {
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(36,113,42,.08);
+}
+.content-section--green .shopping-summary:focus-visible {
+  outline: 2px solid #24712A;
+  outline-offset: 2px;
+}
+.content-section--green .shopping-summary h2 {
+  margin: 0;
+  flex: 1;
+  font-size: 1.35rem;
+}
+.shopping-summary-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+}
+.shopping-summary-count {
+  font-size: .82rem;
+  font-weight: 700;
+  color: #24712A;
+  background: #e8f5ea;
+  border-radius: 999px;
+  padding: 3px 11px;
+  letter-spacing: .02em;
+}
+.shopping-summary-chevron {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #24712A;
+  border-bottom: 2px solid #24712A;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+  margin-bottom: 4px;
+}
+.shopping-collapsible[open] .shopping-summary-chevron {
+  transform: rotate(-135deg);
+  margin-bottom: -2px;
+}
+.shopping-collapsible__body { padding-top: 1.2rem; }
+@media print {
+  .shopping-collapsible:not([open]) > .shopping-collapsible__body { display: block !important; }
+  .content-section--green .shopping-summary {
+    background: transparent; border: none; padding: 0;
+    box-shadow: none; cursor: default;
+  }
+  .shopping-summary-chevron, .shopping-summary-count { display: none; }
+}
+@media (max-width: 600px) {
+  .content-section--green .shopping-summary h2 { font-size: 1.15rem; }
+  .content-section--green .shopping-summary { padding: .75rem .9rem; gap: .6rem; }
+}
+
+/* ────────────────────────────────────────────────────────────
    Shopping list — curated, grouped, supermarket-flow output
    (V2: grouped engine in scripts/shopping-list.mjs). Compact,
    PDF/A4-friendly, scannable in <10 seconds.

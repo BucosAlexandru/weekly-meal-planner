@@ -1634,11 +1634,21 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
 
   <section class="content-section content-section--green" id="${lc.shoppingAnchor}">
     <div class="content-section-inner">
-      <h2><span class="section-emoji">🛒</span> ${lc.shoppingHeading}</h2>
-      <p class="section-intro">${lc.shoppingIntro(plan, shopping.length)}</p>
-      ${shoppingIsGrouped
-        ? `<div class="shopping-groups">${shoppingItems}</div>`
-        : `<ul class="shopping-grid">${shoppingItems}</ul>`}
+      <details class="shopping-collapsible">
+        <summary class="shopping-summary">
+          <h2><span class="section-emoji">🛒</span> ${lc.shoppingHeading}</h2>
+          <span class="shopping-summary-meta">
+            <span class="shopping-summary-count">${lc.ingredientsLabel(shopping.length)}</span>
+            <span class="shopping-summary-chevron" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="shopping-collapsible__body">
+          <p class="section-intro">${lc.shoppingIntro(plan, shopping.length)}</p>
+          ${shoppingIsGrouped
+            ? `<div class="shopping-groups">${shoppingItems}</div>`
+            : `<ul class="shopping-grid">${shoppingItems}</ul>`}
+        </div>
+      </details>
       <div class="shopping-cta">
         <a href="${appHref(lc)}?autoplan=${plan.id}" class="btn btn-generate">
           <i class="bi bi-pencil-square"></i> ${lc.openPlanLabel}
@@ -1666,6 +1676,25 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
   </section>
 </main>
 ${makeFooter(lc)}
+<script>
+/* (1) Auto-expand the collapsible shopping list before browser print /
+   Save-as-PDF, then restore. Keeps screen UX light while ensuring full
+   data is captured by every export path.
+   (2) Promote ?pdfv2=1 URL flag to localStorage so the opt-in survives
+   the "Open in app & customize" navigation (which strips the query
+   string and would otherwise drop the user back onto legacy html2pdf). */
+(function(){
+  var state = new WeakMap();
+  function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
+  function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
+  window.addEventListener('beforeprint', openAll);
+  window.addEventListener('afterprint', restore);
+  try {
+    var qs = new URLSearchParams(window.location.search || '');
+    if (qs.get('pdfv2') === '1') localStorage.setItem('pdfV2', '1');
+  } catch (e) {}
+})();
+</script>
 </body></html>`;
 }
 

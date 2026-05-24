@@ -982,6 +982,78 @@ input.form-control:focus {
 }
 
 /* ================================================
+   SHOPPING LIST — COLLAPSIBLE (screen-only)
+   ------------------------------------------------
+   Screen UX: collapsed by default to reduce scroll
+   length & visual clutter, especially on mobile.
+   The underlying #shopping-list still hydrates
+   via updateShoppingList() so PDF export (which
+   builds #pdf-list independently from data) and
+   browser print (forced-open below) remain intact.
+   ================================================ */
+.shopping-collapsible {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--surface);
+}
+.shopping-collapsible > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: 14px 18px;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  transition: background .15s ease;
+}
+.shopping-collapsible > summary::-webkit-details-marker { display: none; }
+.shopping-collapsible > summary::marker { display: none; content: ''; }
+.shopping-collapsible > summary:hover { background: #f5fbf6; }
+.shopping-collapsible > summary:focus-visible {
+  outline: 2px solid var(--color-brand, #1e7d3a);
+  outline-offset: 2px;
+}
+.shopping-collapsible .section-title {
+  margin: 0;
+  flex: 1;
+}
+.shopping-toggle-count {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink-3, #6b7280);
+  background: #f0f9f2;
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.shopping-toggle-count:empty { display: none; }
+.shopping-toggle-chevron {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--ink-3, #6b7280);
+  border-bottom: 2px solid var(--ink-3, #6b7280);
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+.shopping-collapsible[open] > summary .shopping-toggle-chevron {
+  transform: rotate(-135deg);
+  margin-bottom: -2px;
+}
+.shopping-collapsible__body { padding: 0; }
+/* Auto-expand when the PDF export flow runs OR the page is printed.
+   This guarantees ingredient data is never hidden from any export path. */
+@media print {
+  .shopping-collapsible:not([open]) > .shopping-collapsible__body { display: block !important; }
+  .shopping-collapsible > summary .shopping-toggle-chevron,
+  .shopping-collapsible > summary .shopping-toggle-count { display: none; }
+}
+body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__body { display: block !important; }
+
+/* ================================================
    PRICING SECTION
    ================================================ */
 .pricing-section {
