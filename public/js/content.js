@@ -288,3 +288,74 @@
     injectHelper();
   }
 })();
+
+// ── Mobile recipe navigator: scroll restoration on "back to recipes" ─
+// Two cooperating pieces:
+//   A) On any list page (recipe index / cuisine pages) that contains
+//      .recipe-card-item links, save scrollY + pathname into
+//      sessionStorage when the user taps a recipe card.
+//   B) On a recipe page, when the user taps the sticky-nav back button
+//      ([data-rmn-back]) we set a one-shot flag. On the next load of
+//      the same list page, we restore the saved scrollY.
+//
+// Same-origin sessionStorage survives across these navigations. No
+// dependency on framework / router. Quiet on errors (private mode).
+(function () {
+  'use strict';
+  const SCROLL_KEY = 'mp-list-scroll';
+  const HREF_KEY   = 'mp-list-href';
+  const FLAG_KEY   = 'mp-restore-scroll';
+
+  function safe(fn) { try { fn(); } catch (_) {} }
+
+  const onRecipePage = !!document.querySelector('.recipe-page-wrap');
+
+  if (!onRecipePage) {
+    // (A) list page — save state when ANY link to a recipe page is tapped.
+    // Use a delegated listener so we catch every recipe link regardless of
+    // the surrounding markup (recipe-index uses <ul class="recipe-origin-list">,
+    // cuisine pages may use .recipe-card-item, plan pages link via the
+    // weekly menu table, etc.). Match the per-locale recipe URL segment.
+    const RECIPE_PATH = /\/(?:recipes|retete|recetas|recettes|rezepte|receitas|retsepty|wasafat|shipu|reshipi|tarifler|ricette|weekly-plan)\/[^\/]+\/?$/;
+    document.addEventListener('click', (e) => {
+      // Only main-button left-clicks; let modifiers (cmd-click etc.) through.
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      let href; try { href = new URL(a.href, window.location.href); } catch (_) { return; }
+      if (href.origin !== window.location.origin) return;
+      if (!RECIPE_PATH.test(href.pathname)) return;
+      safe(() => {
+        sessionStorage.setItem(SCROLL_KEY, String(window.scrollY || 0));
+        sessionStorage.setItem(HREF_KEY,   window.location.pathname);
+      });
+    }, true);
+    // Restore on return — only if the flag was set by the recipe page.
+    safe(() => {
+      if (sessionStorage.getItem(FLAG_KEY) !== '1') return;
+      if (sessionStorage.getItem(HREF_KEY) !== window.location.pathname) return;
+      const y = parseInt(sessionStorage.getItem(SCROLL_KEY) || '0', 10);
+      if (y > 0) {
+        // Use rAF to ensure layout is settled before scrolling.
+        requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+      }
+      sessionStorage.removeItem(FLAG_KEY);
+    });
+    return;
+  }
+
+  // (B) recipe page — set the restore flag when the user taps "back".
+  const backBtn = document.querySelector('[data-rmn-back]');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      safe(() => sessionStorage.setItem(FLAG_KEY, '1'));
+    });
+  }
+})();
+
+// (Phase K — swipe gestures intentionally NOT implemented. Spec says
+// "if risky, skip swipe entirely — visible back control is higher
+// priority." Edge-swipe detection conflicts with Safari's native
+// back-gesture on iOS and never feels reliable; the floating pill
+// covers the use case without the risk.)
+
