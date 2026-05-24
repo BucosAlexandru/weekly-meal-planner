@@ -3127,6 +3127,351 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
 }
 
 /* ════════════════════════════════════════════════════════════════
+   HUB ARCHITECTURE — scalable static facet pages
+   ════════════════════════════════════════════════════════════════
+   Aggregates recipes by a single facet (origin, meal type, dietary
+   style, cooking method, ingredient). Each hub is a fully-static,
+   indexable, localized page at /<locale>/<prefix>/<slug>/.
+
+   Phase 3 Item 1 ships the architecture + the first hub type (cuisines).
+   Future hub types (meal-type, dietary, cooking, ingredient) plug into
+   the same hubPage()/HUB_LANG machinery.
+
+   URL-slug strategy: facet slugs are derived from the English label
+   (slug(origin.en)) so they stay stable across locales — mirrors the
+   recipe-slug convention (`/ro/retete/moussaka/`, `/ja/reshipi/moussaka/`).
+*/
+
+const CUISINE_MIN_RECIPES = 2;   // skip thin-content hubs (1-recipe origins)
+
+const CUISINE_HUB_LANG = {
+  ro: { prefix:'bucatarie',
+        breadLabel:'Bucătărie',
+        title:    (o)    => `Rețete din ${o} – Bucătărie autentică | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} rețete tradiționale din ${o}: ingrediente, mod de preparare pas cu pas și valori nutriționale. Adaugă-le în planificatorul tău săptămânal gratuit.`,
+        h1:       (o)    => `Rețete din <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} rețete autentice din ${o}, cu ingrediente, mod de preparare și valori nutriționale. Toate pot fi adăugate în planul tău săptămânal gratuit.`,
+        backLink: 'Înapoi la toate rețetele' },
+  en: { prefix:'cuisine',
+        breadLabel:'Cuisine',
+        title:    (o)    => `Recipes from ${o} – Authentic Dishes & Free Meal Plan | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} traditional recipes from ${o} with ingredients, step-by-step instructions and nutrition info. Add any of them to your free weekly meal planner.`,
+        h1:       (o)    => `Recipes from <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} authentic recipes from ${o}, with ingredients, step-by-step instructions and nutrition info. Add any of them to your free weekly meal planner.`,
+        backLink: 'Back to all recipes' },
+  es: { prefix:'cocina',
+        breadLabel:'Cocina',
+        title:    (o)    => `Recetas de ${o} – Auténticas y Plan Gratuito | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} recetas tradicionales de ${o}: ingredientes, instrucciones paso a paso y nutrición. Añádelas a tu planificador semanal gratuito.`,
+        h1:       (o)    => `Recetas de <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} recetas auténticas de ${o}, con ingredientes, instrucciones y valores nutricionales. Todas pueden añadirse a tu plan semanal gratuito.`,
+        backLink: 'Volver a todas las recetas' },
+  fr: { prefix:'cuisine',
+        breadLabel:'Cuisine',
+        title:    (o)    => `Recettes de ${o} – Plats Authentiques | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} recettes traditionnelles de ${o} : ingrédients, instructions étape par étape et valeurs nutritionnelles. Ajoutez-les à votre planificateur hebdomadaire gratuit.`,
+        h1:       (o)    => `Recettes de <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} recettes authentiques de ${o}, avec ingrédients, instructions et valeurs nutritionnelles. Toutes peuvent être ajoutées à votre plan hebdomadaire gratuit.`,
+        backLink: 'Retour à toutes les recettes' },
+  de: { prefix:'kueche',
+        breadLabel:'Küche',
+        title:    (o)    => `Rezepte aus ${o} – Authentische Gerichte & Wochenplan | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} traditionelle Rezepte aus ${o}: Zutaten, Schritt-für-Schritt-Anleitung und Nährwerte. Füge sie zu deinem kostenlosen Wochenplaner hinzu.`,
+        h1:       (o)    => `Rezepte aus <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} authentische Rezepte aus ${o} mit Zutaten, Anleitung und Nährwerten. Alle können zu deinem kostenlosen Wochenplan hinzugefügt werden.`,
+        backLink: 'Zurück zu allen Rezepten' },
+  pt: { prefix:'cozinha',
+        breadLabel:'Cozinha',
+        title:    (o)    => `Receitas de ${o} – Pratos Autênticos | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} receitas tradicionais de ${o}: ingredientes, instruções passo a passo e nutrição. Adicione-as ao seu planejador semanal gratuito.`,
+        h1:       (o)    => `Receitas de <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} receitas autênticas de ${o}, com ingredientes, instruções e valores nutricionais. Todas podem ser adicionadas ao seu plano semanal gratuito.`,
+        backLink: 'Voltar a todas as receitas' },
+  ru: { prefix:'kuhnya',
+        breadLabel:'Кухня',
+        title:    (o)    => `Рецепты из ${o} – Аутентичные блюда | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} традиционных рецептов из ${o}: ингредиенты, пошаговые инструкции и пищевая ценность. Добавьте их в свой бесплатный планировщик меню на неделю.`,
+        h1:       (o)    => `Рецепты из <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} аутентичных рецептов из ${o} — ингредиенты, инструкции и пищевая ценность. Каждый можно добавить в бесплатный планировщик меню на неделю.`,
+        backLink: 'Назад ко всем рецептам' },
+  ar: { prefix:'matbakh',
+        breadLabel:'مطبخ',
+        title:    (o)    => `وصفات من ${o} – أطباق أصيلة وخطة وجبات | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} وصفة تقليدية من ${o}: مكونات وتعليمات خطوة بخطوة وقيم غذائية. أضفها إلى مخطط الوجبات الأسبوعي المجاني.`,
+        h1:       (o)    => `وصفات من <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} وصفة أصيلة من ${o} مع المكونات وطرق التحضير والقيم الغذائية. كل وصفة يمكن إضافتها إلى خطة الوجبات الأسبوعية المجانية.`,
+        backLink: 'العودة إلى جميع الوصفات' },
+  zh: { prefix:'caixi',
+        breadLabel:'菜系',
+        title:    (o)    => `${o}菜谱 – 正宗菜系与免费周计划 | Meal-Planner.ro`,
+        desc:     (o, n) => `${n}道来自${o}的传统菜谱:食材、分步说明和营养信息。可加入免费每周饮食计划。`,
+        h1:       (o)    => `来自<span class="accent">${o}</span>的菜谱`,
+        intro:    (o, n) => `${n}道来自${o}的正宗菜谱,含食材、做法和营养信息。每道都可加入免费的每周饮食计划。`,
+        backLink: '返回所有食谱' },
+  ja: { prefix:'ryori',
+        breadLabel:'料理',
+        title:    (o)    => `${o}のレシピ – 本格的な家庭料理と週間プラン | Meal-Planner.ro`,
+        desc:     (o, n) => `${n}の伝統的な${o}のレシピ。材料、手順、栄養情報付き。無料の週間ミールプランナーに追加できます。`,
+        h1:       (o)    => `<span class="accent">${o}</span>のレシピ`,
+        intro:    (o, n) => `${n}の本格的な${o}のレシピ。材料、手順、栄養情報を掲載。すべて無料の週間ミールプランナーに追加できます。`,
+        backLink: 'すべてのレシピに戻る' },
+  hi: { prefix:'vyanjan',
+        breadLabel:'व्यंजन',
+        title:    (o)    => `${o} की रेसिपी – पारंपरिक व्यंजन और मील प्लानर | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} पारंपरिक ${o} की रेसिपी: सामग्री, चरण-दर-चरण निर्देश और पोषण की जानकारी। मुफ्त साप्ताहिक मील प्लानर में जोड़ें।`,
+        h1:       (o)    => `<span class="accent">${o}</span> की रेसिपी`,
+        intro:    (o, n) => `${n} पारंपरिक ${o} की रेसिपी, सामग्री, निर्देश और पोषण की जानकारी के साथ। सभी को मुफ्त साप्ताहिक मील प्लानर में जोड़ा जा सकता है।`,
+        backLink: 'सभी रेसिपी पर वापस' },
+  tr: { prefix:'mutfak',
+        breadLabel:'Mutfak',
+        title:    (o)    => `${o} tarifleri – Otantik Yemekler | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} geleneksel ${o} tarifi: malzemeler, adım adım talimatlar ve besin değerleri. Ücretsiz haftalık öğün planlayıcınıza ekleyin.`,
+        h1:       (o)    => `<span class="accent">${o}</span> tarifleri`,
+        intro:    (o, n) => `${n} otantik ${o} tarifi — malzemeler, talimatlar ve besin değerleri. Her biri ücretsiz haftalık planlayıcıya eklenebilir.`,
+        backLink: 'Tüm tariflere dön' },
+  it: { prefix:'cucina',
+        breadLabel:'Cucina',
+        title:    (o)    => `Ricette di ${o} – Piatti Autentici e Piano Gratuito | Meal-Planner.ro`,
+        desc:     (o, n) => `${n} ricette tradizionali di ${o}: ingredienti, istruzioni passo dopo passo e valori nutrizionali. Aggiungile al tuo piano settimanale gratuito.`,
+        h1:       (o)    => `Ricette di <span class="accent">${o}</span>`,
+        intro:    (o, n) => `${n} ricette autentiche di ${o}, con ingredienti, istruzioni e valori nutrizionali. Tutte possono essere aggiunte al tuo piano settimanale gratuito.`,
+        backLink: 'Torna a tutte le ricette' },
+  ko: { prefix:'yori',
+        breadLabel:'요리',
+        title:    (o)    => `${o} 레시피 – 정통 요리와 주간 식단 | Meal-Planner.ro`,
+        desc:     (o, n) => `${n}개의 전통 ${o} 레시피: 재료, 단계별 지침, 영양 정보 포함. 무료 주간 식단 플래너에 추가하세요.`,
+        h1:       (o)    => `<span class="accent">${o}</span> 레시피`,
+        intro:    (o, n) => `${n}개의 정통 ${o} 레시피 — 재료, 지침, 영양 정보를 포함합니다. 모두 무료 주간 식단 플래너에 추가할 수 있습니다.`,
+        backLink: '모든 레시피로 돌아가기' },
+};
+
+// Localized hub-index labels (the "/cuisine/" landing page that lists all
+// cuisine hubs). Kept compact — full localization of marketing copy can be
+// expanded later without touching the per-hub pages.
+const CUISINE_HUB_INDEX_LANG = {
+  ro: { title:'Bucătării din toată lumea | Meal-Planner.ro',
+        desc: n=>`Descoperă ${n} bucătării internaționale cu rețete autentice și planificator gratuit.`,
+        h1:'Bucătării <span class="accent">din toată lumea</span>',
+        intro: n=>`Descoperă ${n} bucătării internaționale, fiecare cu rețete autentice, mod de preparare și valori nutriționale.` },
+  en: { title:'World Cuisines – Browse Recipes by Country | Meal-Planner.ro',
+        desc: n=>`Explore ${n} world cuisines with authentic recipes, ingredients, instructions and a free meal planner.`,
+        h1:'World <span class="accent">Cuisines</span>',
+        intro: n=>`Explore ${n} world cuisines, each with authentic recipes, step-by-step instructions and nutrition info.` },
+  es: { title:'Cocinas del mundo – Recetas por país | Meal-Planner.ro',
+        desc: n=>`Explora ${n} cocinas del mundo con recetas auténticas, ingredientes, instrucciones y un planificador gratuito.`,
+        h1:'Cocinas <span class="accent">del mundo</span>',
+        intro: n=>`Explora ${n} cocinas del mundo, cada una con recetas auténticas, instrucciones paso a paso y datos nutricionales.` },
+  fr: { title:'Cuisines du monde – Recettes par pays | Meal-Planner.ro',
+        desc: n=>`Découvrez ${n} cuisines du monde avec recettes authentiques, ingrédients, instructions et planificateur gratuit.`,
+        h1:'Cuisines <span class="accent">du monde</span>',
+        intro: n=>`Découvrez ${n} cuisines du monde, chacune avec recettes authentiques, instructions étape par étape et nutrition.` },
+  de: { title:'Weltküchen – Rezepte nach Land | Meal-Planner.ro',
+        desc: n=>`Entdecke ${n} Weltküchen mit authentischen Rezepten, Zutaten, Anleitungen und einem kostenlosen Mahlzeitenplaner.`,
+        h1:'<span class="accent">Weltküchen</span>',
+        intro: n=>`Entdecke ${n} Weltküchen mit authentischen Rezepten, Anleitungen und Nährwertangaben.` },
+  pt: { title:'Cozinhas do mundo – Receitas por país | Meal-Planner.ro',
+        desc: n=>`Explore ${n} cozinhas do mundo com receitas autênticas, ingredientes, instruções e planejador gratuito.`,
+        h1:'Cozinhas <span class="accent">do mundo</span>',
+        intro: n=>`Explore ${n} cozinhas do mundo com receitas autênticas, instruções e nutrição.` },
+  ru: { title:'Кухни мира – Рецепты по странам | Meal-Planner.ro',
+        desc: n=>`Откройте для себя ${n} мировых кухонь с подлинными рецептами и бесплатным планировщиком меню.`,
+        h1:'<span class="accent">Кухни</span> мира',
+        intro: n=>`Откройте для себя ${n} мировых кухонь с подлинными рецептами, пошаговыми инструкциями и информацией о пищевой ценности.` },
+  ar: { title:'مطابخ العالم – وصفات حسب الدولة | Meal-Planner.ro',
+        desc: n=>`اكتشف ${n} مطبخًا عالميًا بوصفات أصيلة ومخطط وجبات مجاني.`,
+        h1:'<span class="accent">مطابخ</span> العالم',
+        intro: n=>`اكتشف ${n} مطبخًا عالميًا، كل منها بوصفات أصيلة وتعليمات تفصيلية ومعلومات غذائية.` },
+  zh: { title:'世界各国菜系 – 按国家浏览菜谱 | Meal-Planner.ro',
+        desc: n=>`探索${n}个世界菜系，正宗菜谱、食材、做法和免费每周饮食计划。`,
+        h1:'<span class="accent">世界</span>菜系',
+        intro: n=>`探索${n}个世界菜系，每个都有正宗菜谱、分步做法和营养信息。` },
+  ja: { title:'世界の料理 – 国別レシピ集 | Meal-Planner.ro',
+        desc: n=>`${n}か国の世界料理を本格的なレシピと無料の週間プランナーで紹介。`,
+        h1:'<span class="accent">世界の</span>料理',
+        intro: n=>`${n}か国の世界料理。本格的なレシピ、手順、栄養情報をご紹介します。` },
+  hi: { title:'दुनिया के व्यंजन – देश के अनुसार रेसिपी | Meal-Planner.ro',
+        desc: n=>`${n} वैश्विक व्यंजन, पारंपरिक रेसिपी और मुफ्त साप्ताहिक मील प्लानर के साथ।`,
+        h1:'<span class="accent">दुनिया के</span> व्यंजन',
+        intro: n=>`${n} वैश्विक व्यंजनों का अन्वेषण करें, हर एक प्रामाणिक रेसिपी, निर्देश और पोषण जानकारी के साथ।` },
+  tr: { title:'Dünya mutfakları – Ülkelere göre tarifler | Meal-Planner.ro',
+        desc: n=>`${n} dünya mutfağını keşfedin: otantik tarifler, malzemeler, talimatlar ve ücretsiz öğün planlayıcı.`,
+        h1:'<span class="accent">Dünya</span> mutfakları',
+        intro: n=>`${n} dünya mutfağını keşfedin — otantik tarifler, adım adım talimatlar ve besin değerleri.` },
+  it: { title:'Cucine del mondo – Ricette per paese | Meal-Planner.ro',
+        desc: n=>`Esplora ${n} cucine del mondo con ricette autentiche, ingredienti, istruzioni e pianificatore gratuito.`,
+        h1:'Cucine <span class="accent">del mondo</span>',
+        intro: n=>`Esplora ${n} cucine del mondo con ricette autentiche, istruzioni passo dopo passo e valori nutrizionali.` },
+  ko: { title:'세계 요리 – 국가별 레시피 | Meal-Planner.ro',
+        desc: n=>`${n}개국 세계 요리를 정통 레시피와 무료 주간 식단 플래너로 만나보세요.`,
+        h1:'<span class="accent">세계</span> 요리',
+        intro: n=>`${n}개국의 세계 요리를 탐색하세요. 정통 레시피, 단계별 지침, 영양 정보를 제공합니다.` },
+};
+
+// Eligible cuisines: origins with at least CUISINE_MIN_RECIPES recipes.
+// Computed once and reused by hub-page generation, hub-index generation
+// and the sitemap.
+function buildCuisineHubs() {
+  const byOrigin = {};
+  recipes.forEach(r => {
+    const enKey = r.origin?.en || r.origin?.ro;
+    if (!enKey) return;
+    (byOrigin[enKey] = byOrigin[enKey] || []).push(r);
+  });
+  return Object.entries(byOrigin)
+    .filter(([, recs]) => recs.length >= CUISINE_MIN_RECIPES)
+    .sort((a, b) => b[1].length - a[1].length);
+}
+
+// Per-locale hreflang set for a given cuisine hub. URL pattern is
+// /<lc>/<hub-prefix>/<origin-slug>/ and the slug stays stable across
+// locales (locale-stable mirrors recipe slugs).
+function cuisineHubHreflangs(originSlug) {
+  const lines = Object.entries(CUISINE_HUB_LANG).map(([c, h]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro/${c}/${h.prefix}/${originSlug}/" />`
+  );
+  // x-default points to English variant for international fall-through.
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/en/${CUISINE_HUB_LANG.en.prefix}/${originSlug}/" />`);
+  return lines.join('\n');
+}
+
+// Hreflang set for the per-locale cuisine hub INDEX (/<lc>/<prefix>/).
+function cuisineHubIndexHreflangs() {
+  const lines = Object.entries(CUISINE_HUB_LANG).map(([c, h]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro/${c}/${h.prefix}/" />`
+  );
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/en/${CUISINE_HUB_LANG.en.prefix}/" />`);
+  return lines.join('\n');
+}
+
+function cuisineHubPage(originEnKey, recs, lc_code) {
+  const lc      = LANG_CONFIGS[lc_code];
+  const hub     = CUISINE_HUB_LANG[lc_code];
+  const rl      = RECIPE_LANG[lc_code];
+  // Display name: prefer this recipe's localized origin, fall back to EN key.
+  const display = recs[0].origin?.[lc_code] || originEnKey;
+  const flag    = COUNTRY_FLAG[originEnKey] || '🌍';
+  const originSlug = slug(originEnKey);
+  const canonical  = `/${lc_code}/${hub.prefix}/${originSlug}/`;
+
+  const items = recs.map((r, i) => {
+    const rn = r.name?.[lc_code] || r.name?.en || r.name?.ro || '';
+    const rs = slug(r.name?.en || r.name?.ro || rn);
+    return {
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://meal-planner.ro${rl.dir}/${rs}/`,
+      "name": rn
+    };
+  });
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": hub.title(display).split(' | ')[0],
+    "description": hub.desc(display, recs.length),
+    "url": `https://meal-planner.ro${canonical}`,
+    "inLanguage": lc_code,
+    "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
+    "hasPart": { "@type": "ItemList", "numberOfItems": recs.length, "itemListElement": items }
+  });
+
+  const cards = recs.map(r => {
+    const rn = r.name?.[lc_code] || r.name?.en || r.name?.ro || '';
+    const rs = slug(r.name?.en || r.name?.ro || rn);
+    return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
+  }).join('');
+
+  const dir_attr = rl.dir_attr || 'ltr';
+  // Use HEAD's default ogImage; later we can swap to cuisine-specific covers.
+  // Strip HEAD's default hreflang x-default/ro/en lines (they point at locale
+  // roots and don't apply to a cuisine hub) and replace with the hub-specific
+  // hreflang set covering all 14 locales.
+  const head = HEAD(hub.title(display), hub.desc(display, recs.length), canonical, lc_code, dir_attr)
+    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
+    .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
+    .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
+             cuisineHubHreflangs(originSlug));
+
+  // data-cuisine-hub + data-cuisine-label drive the back-pill context-restore
+  // logic in content.js: when a user clicks a recipe link from a cuisine hub
+  // page, the recipe page's floating "Back to recipes" pill is rewritten to
+  // point back to this hub (e.g. "← Italia" → /ro/bucatarie/italy/) instead
+  // of the generic recipe index.
+  return `${head}
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-main" data-cuisine-hub="1" data-cuisine-label="${esc(display)}" data-cuisine-href="${canonical}">
+  <section class="content-hero content-hero--short"><div class="content-hero-inner">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(display)}</span></nav>
+    <h1>${flag} ${hub.h1(esc(display))}</h1>
+    <p class="content-hero-desc">${hub.intro(esc(display), recs.length)}</p>
+  </div></section>
+  <section class="content-section"><div class="content-section-inner">
+    <ul class="cuisine-hub-recipes" aria-label="${esc(display)}">${cards}</ul>
+    <p class="cuisine-hub-back"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
+  </div></section>
+  <script type="application/ld+json">${jsonLd}</script>
+</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+}
+
+function cuisineHubIndexPage(eligible, lc_code) {
+  const lc    = LANG_CONFIGS[lc_code];
+  const hub   = CUISINE_HUB_LANG[lc_code];
+  const idx   = CUISINE_HUB_INDEX_LANG[lc_code];
+  const rl    = RECIPE_LANG[lc_code];
+  const canonical = `/${lc_code}/${hub.prefix}/`;
+
+  // Cards use the "stretched link" accessibility pattern: the whole card is
+  // a click-target via a single .cuisine-card-link (absolutely positioned,
+  // inset:0). Recipe links inside stay independently clickable because they
+  // get a higher z-index in CSS. No nested <a> elements (which would be
+  // invalid HTML and break the a11y tree).
+  const cards = eligible.map(([enKey, recs]) => {
+    const display    = recs[0].origin?.[lc_code] || enKey;
+    const flag       = COUNTRY_FLAG[enKey] || '🌍';
+    const originSlug = slug(enKey);
+    const hubHref    = `/${lc_code}/${hub.prefix}/${originSlug}/`;
+    return `
+    <article class="recipe-origin-group cuisine-card">
+      <a class="cuisine-card-link" href="${hubHref}" aria-label="${esc(display)}"></a>
+      <h2 class="origin-title"><span class="origin-title-text">${flag} ${esc(display)}</span> <span class="recipe-count">${recs.length}</span></h2>
+      <ul class="recipe-origin-list cuisine-card-sublist">
+        ${recs.slice(0, 6).map(r => {
+          const rn = r.name?.[lc_code] || r.name?.en || r.name?.ro || '';
+          const rs = slug(r.name?.en || r.name?.ro || rn);
+          return `<li><a href="${rl.dir}/${rs}/">${esc(rn)}</a></li>`;
+        }).join('')}
+      </ul>
+    </article>`;
+  }).join('');
+
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": idx.title.split(' | ')[0],
+    "description": idx.desc(eligible.length),
+    "url": `https://meal-planner.ro${canonical}`,
+    "inLanguage": lc_code
+  });
+
+  const dir_attr = rl.dir_attr || 'ltr';
+  const head = HEAD(idx.title, idx.desc(eligible.length), canonical, lc_code, dir_attr)
+    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
+    .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
+    .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
+             cuisineHubIndexHreflangs());
+  return `${head}
+${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main">
+  <section class="content-hero content-hero--short"><div class="content-hero-inner">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(hub.breadLabel)}</span></nav>
+    <h1>${idx.h1}</h1>
+    <p class="content-hero-desc">${idx.intro(eligible.length)}</p>
+  </div></section>
+  <section class="content-section"><div class="content-section-inner">
+    <div class="recipe-groups-grid">${cards}</div>
+  </div></section>
+  <script type="application/ld+json">${jsonLd}</script>
+</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+}
+
+/* ════════════════════════════════════════════════════════════════
    WRITE ALL FILES
    ════════════════════════════════════════════════════════════════ */
 console.log('Generating content pages…\n');
@@ -3166,6 +3511,26 @@ for (const [lc_code] of Object.entries(LANG_CONFIGS)) {
   count++;
 }
 console.log(`✅ 14 pricing pages generated → /{lang}/{slug}/`);
+
+// ── Cuisine hub pages: ≥2 recipes per origin × 14 languages ─────
+//   /<lc>/<hub-prefix>/<origin-slug>/  — one page per (origin, locale)
+//   /<lc>/<hub-prefix>/                — hub index listing all cuisines
+// Origin slug stays English (locale-stable) so cross-locale hreflang
+// stays trivial: same path under different prefixes.
+const eligibleCuisines = buildCuisineHubs();
+for (const lc_code of Object.keys(CUISINE_HUB_LANG)) {
+  const hubPrefix = CUISINE_HUB_LANG[lc_code].prefix;
+  write(path.join(PUBLIC, lc_code, hubPrefix, 'index.html'),
+        cuisineHubIndexPage(eligibleCuisines, lc_code));
+  count++;
+  for (const [enKey, recs] of eligibleCuisines) {
+    const originSlug = slug(enKey);
+    write(path.join(PUBLIC, lc_code, hubPrefix, originSlug, 'index.html'),
+          cuisineHubPage(enKey, recs, lc_code));
+    count++;
+  }
+}
+console.log(`✅ ${eligibleCuisines.length} cuisine hubs × 14 locales = ${eligibleCuisines.length * 14} hub pages (+14 hub indexes)`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
@@ -3207,6 +3572,14 @@ for (const rl of Object.values(RECIPE_LANG)) {
     const enName = r.name?.en || r.name?.ro;
     if (enName) sitemapUrls.push(`https://meal-planner.ro${rl.dir}/${slug(enName)}/`);
   });
+}
+
+// Cuisine hub pages + hub indexes (14 locales × N cuisines + 14 indexes)
+for (const [lc_code, hub] of Object.entries(CUISINE_HUB_LANG)) {
+  sitemapUrls.push(`https://meal-planner.ro/${lc_code}/${hub.prefix}/`);
+  for (const [enKey] of eligibleCuisines) {
+    sitemapUrls.push(`https://meal-planner.ro/${lc_code}/${hub.prefix}/${slug(enKey)}/`);
+  }
 }
 
 const today = new Date().toISOString().slice(0,10);
