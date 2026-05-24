@@ -2,7 +2,7 @@
 import { recipes as recipesMain } from './recipes.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
-import { buildShoppingFromRawIngredients } from './shopping-list.js';
+import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
@@ -686,11 +686,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (_) { return false; }
   }
   async function exportViaPdfV2() {
-    // Reuses the same data the legacy generatePDFimpact() builds from. For
-    // Phase 1 we send the demo plan (server uses a built-in payload when no
-    // body is provided) to validate infra end-to-end before wiring the real
-    // user plan into the request shape.
-    const resp = await fetch('/api/generate-pdf', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+    // Build the payload from the live planner state — same source data the
+    // legacy generatePDFimpact() reads. This ensures pdfv2 exports whatever
+    // the user has currently selected/customized, not the server's built-in
+    // demo plan (which now only fires when the endpoint is hit without a
+    // structured body, e.g. for a direct GET smoke-test).
+    const payload = buildPdfV2Payload();
+    const resp = await fetch('/api/generate-pdf', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
     if (!resp.ok) throw new Error('pdfv2 endpoint returned ' + resp.status);
     const blob = await resp.blob();
     const url  = URL.createObjectURL(blob);
@@ -698,6 +704,88 @@ document.addEventListener('DOMContentLoaded', () => {
     a.href = url; a.download = 'meal-plan.pdf';
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 4000);
+  }
+
+  // Translate the live planner state into the pdfv2 endpoint's payload shape.
+  // Reuses the same lookup logic as generatePDFimpact() (collectMeals +
+  // window.recipes + buildShoppingFromRawIngredients) so legacy and pdfv2
+  // see exactly the same data — only the rendering differs.
+  // Phase 1 endpoint is EN-only, so we emit English names + day labels and
+  // pass EN ingredient strings to the grouping engine. The user's display
+  // locale doesn't change the PDF output.
+  function buildPdfV2Payload() {
+    const isPremium    = !!window.hasUnlimited;
+    const allMeals     = collectMeals();
+    const freeDays     = 2;
+    const visibleMeals = isPremium ? allMeals : allMeals.slice(0, freeDays);
+
+    function findRecipe(mealText) {
+      if (!mealText) return null;
+      const title = extractRecipeName(mealText).toLowerCase();
+      return (window.recipes || []).find(r =>
+        r.name?.[lang]?.toLowerCase() === title ||
+        r.name?.en?.toLowerCase()     === title ||
+        r.name?.ro?.toLowerCase()     === title
+      ) || null;
+    }
+    // Extract a clean noun phrase from each raw ingredient string (drop
+    // quantities, parens, prep notes) so the per-meal ingredient line reads
+    // as a compact noun list — "Spaghetti, Guanciale, Eggs..." — not a
+    // verbose recipe-text dump. De-dupe across the same meal so repeats
+    // don't bloat the line.
+    function shortIngredients(rawList) {
+      const seen = new Set();
+      const out  = [];
+      for (const raw of rawList) {
+        const p = parseIngredient(raw);
+        if (!p || !p.name) continue;
+        const display = p.name.charAt(0).toUpperCase() + p.name.slice(1);
+        const key = p.name.toLowerCase();
+        if (seen.has(key)) continue;
+        seen.add(key);
+        out.push(display);
+      }
+      return out;
+    }
+    function mealPayload(mealText) {
+      if (!mealText) return null;
+      const r = findRecipe(mealText);
+      const displayName = r?.name?.en || r?.name?.ro || extractRecipeName(mealText);
+      const rawIngr = r?.ingredients?.en || r?.ingredients?.ro || [];
+      return {
+        name: displayName,
+        time: r?.time || null,
+        servings: r?.servings || null,
+        cost: r?.costRon ? `~$${Math.round(r.costRon / 4.6)}` : null,
+        ingredients: shortIngredients(rawIngr),
+      };
+    }
+
+    const EN_DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const days = visibleMeals.map((m, i) => ({
+      day: EN_DAYS[i] || `Day ${i + 1}`,
+      lunch: mealPayload(m.lunch),
+      dinner: mealPayload(m.dinner),
+    })).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
+
+    const rawEnIngredients = [];
+    visibleMeals.forEach(m => {
+      [m.lunch, m.dinner].filter(Boolean).forEach(text => {
+        const r = findRecipe(text);
+        (r?.ingredients?.en || r?.ingredients?.ro || []).forEach(i => rawEnIngredients.push(i));
+      });
+    });
+    let shoppingGroups = [];
+    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, 'en'); }
+    catch (_) { shoppingGroups = []; }
+
+    const today = new Date();
+    return {
+      title:     'Weekly meal plan',
+      weekLabel: `Week of ${today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+      days,
+      shoppingGroups,
+    };
   }
 
   async function exportShoppingListToPDF() {

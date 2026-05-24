@@ -1723,7 +1723,12 @@ function parseQty(s) {
   return isFinite(n) ? n : null;
 }
 
-function parseIngredient(raw) {
+// Exported for clients that need to display a clean noun phrase per
+// ingredient (e.g. the pdfv2 per-meal ingredient summary). Returns
+// { qty, unit, name, raw } or null. The `name` field is the lower-cased
+// noun extracted from the raw recipe string (no quantities, no parens,
+// no prep notes).
+export function parseIngredient(raw) {
   if (!raw) return null;
   let s = String(raw).trim();
   // Strip leading bullet/dash
