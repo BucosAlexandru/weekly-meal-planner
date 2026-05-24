@@ -128,19 +128,19 @@ const styles = StyleSheet.create({
   },
 
   shopGrid: { flexDirection: 'row', flexWrap: 'wrap' },
-  shopGroup: { width: '50%', paddingRight: 16, marginBottom: 14 },
+  shopGroup: { width: '50%', paddingRight: 16, marginBottom: 10 },
   shopGroupTitle: {
     fontSize: 7.5,
     fontFamily: 'Helvetica-Bold',
     color: INK_MUTED,
     letterSpacing: 1.6,
-    marginBottom: 5,
+    marginBottom: 4,
   },
 
   shopItem: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    paddingVertical: 2,
+    paddingVertical: 1.5,
   },
   shopItemName: { fontSize: 8.5, color: INK },
   shopItemLeader: {
