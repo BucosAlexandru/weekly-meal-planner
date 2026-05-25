@@ -3048,8 +3048,20 @@ function recipePage(recipe, rl) {
       const rcat = r.category?.[code] || r.category?.en || '';
       const rm = recipeMetadata(ri, rst, rcat, code);
       const re = recipeCardEmoji(rcat);
+      // Use the same resolver as the hero (local /images/<slug>.{webp,jpg,png}
+      // → recipeImages[id] → cover2.jpg placeholder) so the related-recipes
+      // strip is consistent with what the detail page shows. The emoji stays
+      // behind the <img> via existing CSS (.recipe-card-img img is absolute
+      // overlay); on placeholder or 404 the <img> is omitted/removed and the
+      // emoji shows through. Replaces the old client-side content.js IMG-map
+      // injection, which had drifted from recipe-images.js.
+      const ri_img = resolveRecipeImage(r, rs);
+      const ri_isPlaceholder = ri_img.src.endsWith('cover2.jpg');
+      const ri_imgHtml = ri_isPlaceholder
+        ? ''
+        : `<img src="${ri_img.src}"${imgSrcsetAttrs(ri_img.src, 'tile')} alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
       return `<a href="${rl.dir}/${rs}/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="${rs}">${re}</div>
+  <div class="recipe-card-img" data-card-recipe="${rs}">${re}${ri_imgHtml}</div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">${esc(rn)}</p>
     <span class="recipe-card-meta">${rm.totalTime} · ${rm.difficulty}</span>
