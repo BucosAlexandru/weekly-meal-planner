@@ -21,6 +21,48 @@ These are user-reported missing images. They render as `🍽️` emoji until map
 |---|---|---|
 | 149 | Pozole | Mexican hominy stew — red or green broth, pork or chicken, large white hominy corn, garnished with sliced radish / shredded cabbage / lime wedges / oregano / dried chilli flakes. |
 
+## ⚠️ Priority — flagship recipes still hot-linking `img.spoonacular.com`
+
+33 recipes (listed below) currently render a 312×231 Spoonacular hotlink. When the upstream URL 404s, throttles, or is blocked by a region/network, the `<img onerror="this.remove()">` handler strips the image and exposes the country-flag fallback. These should be replaced by a local `public/images/<slug>.webp` (≤150 KB, 1200 px wide) or a verified Wikipedia commons URL — same precedence as the rest of the catalogue.
+
+Re-fetch order: flagship visibility first (Sushi/Ramen are already local; the names below are the next-tier crowd that drives most search traffic).
+
+| ID | Recipe | Origin | Current Spoonacular URL slug |
+|---|---|---|---|
+| 2 | Tripe Soup | Romania | `654283-312x231.jpg` |
+| 3 | Quiche Lorraine | France | `639590-312x231.jpg` |
+| 4 | Gazpacho | Spain | `662542-312x231.jpg` |
+| 7 | Cheeseburger | USA | `635350-312x231.jpg` |
+| 8 | Tacos | Mexico | `645711-312x231.jpg` |
+| 9 | Chicken Curry | India | `637391-312x231.jpg` |
+| 10 | Ratatouille | France | `633754-312x231.jpg` |
+| 11 | Souvlaki | Greece | `651076-312x231.jpg` |
+| 13 | Guacamole | Mexico | `715543-312x231.jpg` |
+| 14 | Borscht | Russia | `664396-312x231.jpg` |
+| 15 | Pancakes | USA | `661886-312x231.jpg` |
+| 16 | Pad Thai | Thailand | `663113-312x231.jpg` |
+| 17 | Schnitzel | Germany | `656819-312x231.jpg` |
+| 19 | Kung Pao Chicken | China | `649129-312x231.jpg` |
+| 21 | Pho | Vietnam | `1096250-312x231.jpg` |
+| 22 | Paella | Spain | `652134-312x231.jpg` |
+| 24 | Hummus | Syria | `716195-312x231.jpg` |
+| 25 | Tabbouleh | Lebanon | `642121-312x231.jpg` |
+| 27 | Swedish Meatballs | Sweden | `648565-312x231.jpg` |
+| 29 | Empanadas | Argentina | `653362-312x231.jpg` |
+| 30 | Tzatziki | Greece | `645646-312x231.jpg` |
+| 31 | French Onion Soup | France | `643362-312x231.jpg` |
+| 32 | Goulash | Hungary | `644476-312x231.jpg` |
+| 35 | Baklava | Turkey | `631783-312x231.jpg` |
+| 36 | Chili con carne | Mexico | `1697611-312x231.jpg` |
+| 37 | Sweet and Sour Chicken | China | `662422-312x231.jpg` |
+| 38 | Pavlova | Australia | `655031-312x231.jpg` |
+| 40 | Pierogi | Poland | `656049-312x231.jpg` |
+| 45 | Salmon Soup | Finland | `659056-312x231.jpg` |
+| 47 | Bacalhau à Brás | Portugal | `633251-312x231.jpg` |
+| 48 | Adobo | Philippines | `638741-312x231.jpg` |
+| 49 | Jerk Chicken | Jamaica | `637102-312x231.jpg` |
+| 51 | Kibbeh | Syria | `649403-312x231.jpg` |
+
 ## Process
 
 1. Run the image-fetch tool against each ID. Prefer Spoonacular (consistent 312×231 crops); fall back to Wikipedia commons thumbnails only for dishes Spoonacular doesn't index (regional/obscure).
