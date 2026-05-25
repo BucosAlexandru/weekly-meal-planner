@@ -3786,9 +3786,18 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     const occ = (seenImgs.get(t.img) || 0);
     seenImgs.set(t.img, occ + 1);
     const rotAttr = occ > 0 && !isPlaceholder ? ` data-img-rot="${Math.min(occ, 2)}"` : '';
+    // No srcset on tiles. Tiles render at ~240–320 CSS px; the base 330px
+    // Wikipedia thumb (same URL the detail-page hero uses as its `src` and
+    // og:image) is the most reliable variant. Multi-width srcset was causing
+    // runtime mismatches with the detail hero on hub pages: browsers using
+    // the tile's `sizes` hint sometimes picked a 660w/990w variant that
+    // wasn't available, fired onerror, and removed the <img> — leaving only
+    // the flag fallback even though the same recipe's detail page renders
+    // fine. Using just `src` guarantees the tile loads the exact URL the
+    // detail page is known to serve.
     const imgHtml = isPlaceholder
       ? '' // skip the placeholder URL entirely so the flag fallback shows
-      : `<img src="${t.img}"${imgSrcsetAttrs(t.img, 'tile')} alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
+      : `<img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
     return `<li>
       <a class="${cls}" href="${t.href}">
         <span class="cuisine-tile-img"${rotAttr}>
