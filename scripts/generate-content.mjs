@@ -3216,12 +3216,20 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a>${breadcrumbCuisine} › <span>${esc(n)}</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
       <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}${
         recipeImg.src && !recipeImg.src.endsWith('cover2.jpg')
-          ? `<img src="${recipeImg.src}"${imgSrcsetAttrs(recipeImg.src, 'hero')} alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
+          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
           : ''
       }</div>
     </div>

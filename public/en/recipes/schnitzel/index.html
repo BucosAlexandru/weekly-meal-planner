@@ -56,10 +56,18 @@
     <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/germany/">Germany</a> › <span>Schnitzel</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" srcset="https://img.spoonacular.com/recipes/656819-312x231.jpg 312w, https://img.spoonacular.com/recipes/656819-556x370.jpg 556w, https://img.spoonacular.com/recipes/656819-636x393.jpg 636w" sizes="(max-width: 720px) 92vw, 480px" alt="Schnitzel" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="schnitzel" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/656819-312x231.jpg" alt="Schnitzel" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇩🇪 Lunch · <a class="recipe-badge-origin" href="/en/recipes/germany/">Germany</a></div>

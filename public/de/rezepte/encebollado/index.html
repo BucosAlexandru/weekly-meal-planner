@@ -56,10 +56,18 @@
     <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/ecuador/">Ecuador</a> › <span>Encebollado</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="encebollado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/960px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/330px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/660px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/990px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="Encebollado" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="encebollado" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg/960px-Semifinal_del_Campeonato_del_Encebollado_en_Esmeraldas_2015_%2818062294436%29.jpg" alt="Encebollado" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇪🇨 Mittagessen · <a class="recipe-badge-origin" href="/de/rezepte/ecuador/">Ecuador</a></div>

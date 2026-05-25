@@ -56,10 +56,18 @@
     <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/morocco/">Marokko</a> › <span>Tajine</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/660px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/990px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="Tajine" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="tagine" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg/330px-Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg" alt="Tajine" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇲🇦 Abendessen · <a class="recipe-badge-origin" href="/de/rezepte/morocco/">Marokko</a></div>

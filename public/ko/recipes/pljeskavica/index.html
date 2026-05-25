@@ -56,10 +56,18 @@
     <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>플레스카비차</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="pljeskavica" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pleskavitsa.JPG/330px-Pleskavitsa.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pleskavitsa.JPG/330px-Pleskavitsa.JPG 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pleskavitsa.JPG/660px-Pleskavitsa.JPG 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pleskavitsa.JPG/990px-Pleskavitsa.JPG 990w" sizes="(max-width: 720px) 92vw, 480px" alt="플레스카비차" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="pljeskavica" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Pleskavitsa.JPG/330px-Pleskavitsa.JPG" alt="플레스카비차" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇷🇸 저녁 · 세르비아</div>

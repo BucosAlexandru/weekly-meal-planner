@@ -56,7 +56,15 @@
     <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Oka i'a</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
       <div class="recipe-photo-container" data-recipe="oka-i-a" id="recipe-photo-main">🍽️<img src="/images/oka-i-a.webp" alt="Oka i'a" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>

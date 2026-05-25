@@ -56,10 +56,18 @@
     <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/malaysia/">말레이시아</a> › <span>나시 르막</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="nasi-lemak" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/330px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/330px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/660px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/990px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="나시 르막" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="nasi-lemak" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg/330px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Nasi_Lemak.jpg" alt="나시 르막" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇲🇾 아침 · <a class="recipe-badge-origin" href="/ko/recipes/malaysia/">말레이시아</a></div>

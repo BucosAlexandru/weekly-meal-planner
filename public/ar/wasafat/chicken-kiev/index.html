@@ -56,10 +56,18 @@
     <a href="/">الرئيسية</a> › <a href="/ar/wasafat/">وصفات</a> › <span>دجاج كييف</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="chicken-kiev" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg/330px-Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg/330px-Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg/660px-Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg/990px-Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="دجاج كييف" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="chicken-kiev" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg/330px-Chicken_Kiev_-_Ukrainian_East_Village_restaurant_%282%29.jpg" alt="دجاج كييف" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇺🇦 عشاء · أوكرانيا</div>

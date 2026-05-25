@@ -56,10 +56,18 @@
     <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/netherlands/">Pays-Bas</a> › <span>Stamppot</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="stamppot" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/330px-Boerenkool_stamppot.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/330px-Boerenkool_stamppot.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/660px-Boerenkool_stamppot.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/990px-Boerenkool_stamppot.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="Stamppot" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="stamppot" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boerenkool_stamppot.jpg/330px-Boerenkool_stamppot.jpg" alt="Stamppot" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇳🇱 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/netherlands/">Pays-Bas</a></div>
