@@ -15,6 +15,7 @@ import { recipeImages }               from '../public/js/recipe-images.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import { CUISINE_INTRO }              from './cuisine-intros.mjs';
+import { RELATED_CUISINES, MAX_RELATED_CUISINES } from './discovery-config.mjs';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -3494,6 +3495,10 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-i
 */
 
 const CUISINE_MIN_RECIPES = 2;   // skip thin-content hubs (1-recipe origins)
+// Defensive cap on tiles rendered per hub. No cuisine currently exceeds 7
+// recipes so this is a no-op today; the cap protects against future growth
+// without adding pagination in Phase 7.
+const MAX_HUB_TILES = 8;
 
 // Populate the forward-declared helpers now that CUISINE_MIN_RECIPES is in
 // scope. CUISINE_HUB_LANG is defined immediately below — it'll be in scope
@@ -3638,6 +3643,27 @@ const CUISINE_HUB_LANG = {
         backLink: '모든 레시피로 돌아가기' },
 };
 
+// Phase 7 PR 2: heading shown above the cuisine-hub "related cuisines" strip
+// (one per locale). Kept in a side-map so it can be added/edited without
+// touching the per-key CUISINE_HUB_LANG block. Strings are ASCII-or-Unicode
+// (no curly quotes — see CLAUDE.md pre-commit invariant).
+const CUISINE_RELATED_HEADING = {
+  ro: 'Explorează bucătării similare',
+  en: 'Explore related cuisines',
+  es: 'Explora cocinas relacionadas',
+  fr: 'Explorez des cuisines proches',
+  de: 'Verwandte Küchen entdecken',
+  pt: 'Explore cozinhas relacionadas',
+  ru: 'Похожие кухни',
+  ar: 'اكتشف مطابخ مشابهة',
+  zh: '探索相关菜系',
+  ja: '関連する料理を見る',
+  hi: 'संबंधित व्यंजन देखें',
+  tr: 'İlgili mutfakları keşfedin',
+  it: 'Esplora cucine simili',
+  ko: '관련 요리 둘러보기',
+};
+
 // Localized hub-index labels (the "/cuisine/" landing page that lists all
 // cuisine hubs). Kept compact — full localization of marketing copy can be
 // expanded later without touching the per-hub pages.
@@ -3741,8 +3767,10 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   const atmosphere = cuisineAtmosphere(originEnKey);
 
   // Build tile data once. Used by the hero (featured image), the tile grid,
-  // and the schema.org ItemList.
-  const tiles = recs.map(r => cuisineTileData(r, lc_code, rl.dir));
+  // and the schema.org ItemList. Defensive MAX_HUB_TILES cap: no-op for
+  // current data (max cuisine = 7 recipes); guards future growth past 8
+  // until pagination lands.
+  const tiles = recs.map(r => cuisineTileData(r, lc_code, rl.dir)).slice(0, MAX_HUB_TILES);
   // Featured recipe: pick the most-stable-image tile (local > Wikipedia >
   // Spoonacular > placeholder), original recipes.js order as tie-breaker.
   // Falling back to "first non-placeholder" used to showcase Spoonacular
@@ -3768,7 +3796,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     "url": `https://meal-planner.ro${canonical}`,
     "inLanguage": lc_code,
     "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
-    "hasPart": { "@type": "ItemList", "numberOfItems": recs.length, "itemListElement": items }
+    "hasPart": { "@type": "ItemList", "numberOfItems": items.length, "itemListElement": items }
   });
 
   // Recipe tile grid. Each tile carries an image (lazy-loaded), localized
@@ -3856,6 +3884,41 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     ? esc(editorial)
     : hub.intro(esc(display), recs.length);
 
+  // Related cuisines strip (Phase 7 PR 2). Curated culinary neighbours from
+  // RELATED_CUISINES, filtered to those that have an eligible hub so links
+  // never 404. Capped at MAX_RELATED_CUISINES (6 today; curated lists are 3).
+  // Skipped entirely if the current cuisine isn't in the map or none of its
+  // neighbours pass eligibility — avoids rendering an empty section.
+  const relatedKey = originEnKey.trim().toLowerCase();
+  const relatedKeys = RELATED_CUISINES[relatedKey] || [];
+  const relatedItems = [];
+  for (const key of relatedKeys) {
+    if (relatedItems.length >= MAX_RELATED_CUISINES) break;
+    const hit = eligibleHubByKey.get(key);
+    if (!hit || hit.enKey === originEnKey) continue;
+    relatedItems.push(hit);
+  }
+  const relatedStripHtml = relatedItems.length === 0 ? '' : (() => {
+    const heading = CUISINE_RELATED_HEADING[lc_code] || CUISINE_RELATED_HEADING.en;
+    const cardsHtml = relatedItems.map(({ enKey, recs: rRecs }) => {
+      const rDisplay = rRecs[0].origin?.[lc_code] || enKey;
+      const rFlag    = COUNTRY_FLAG[enKey] || '🌍';
+      const rSlug    = slug(enKey);
+      const rAtmos   = cuisineAtmosphere(enKey);
+      return `<li>
+            <a class="cuisine-related-card" href="${rl.dir}/${rSlug}/" data-cuisine-atmosphere="${rAtmos}">
+              <span class="cuisine-related-card-flag" aria-hidden="true">${rFlag}</span>
+              <span class="cuisine-related-card-name">${esc(rDisplay)}</span>
+              <span class="cuisine-related-card-count" aria-label="${rRecs.length}">${rRecs.length}</span>
+            </a>
+          </li>`;
+    }).join('');
+    return `<aside class="cuisine-related-strip" aria-labelledby="cuisine-related-heading-${esc(originSlug)}">
+      <h2 class="cuisine-related-heading" id="cuisine-related-heading-${esc(originSlug)}">${esc(heading)}</h2>
+      <ul class="cuisine-related-grid">${cardsHtml}</ul>
+    </aside>`;
+  })();
+
   // data-cuisine-hub / -label / -href = back-pill context restore on the
   // recipe page (see content.js). data-cuisine-atmosphere = visual identity
   // (accent gradient, soft tint) via CSS variables defined in content.css.
@@ -3878,7 +3941,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
     </div>
   </section>
   <section class="content-section cuisine-hub-section"><div class="content-section-inner">
-    <ul class="cuisine-tile-grid" aria-label="${esc(display)}">${tilesHtml}</ul>
+    <ul class="cuisine-tile-grid" aria-label="${esc(display)}">${tilesHtml}</ul>${relatedStripHtml ? '\n    ' + relatedStripHtml : ''}
     <p class="cuisine-hub-back"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
@@ -4086,6 +4149,13 @@ console.log(`✅ 14 pricing pages generated → /{lang}/{slug}/`);
 // Origin slug stays English (locale-stable). Old URLs redirect via
 // vercel.json (added below).
 const eligibleCuisines = buildCuisineHubs();
+// Lowercase-key lookup used by the "related cuisines" strip in cuisineHubPage.
+// Keys are `recipe.origin.en.trim().toLowerCase()`; values give the original
+// PascalCase key + recipe array so we can build URLs and counts without
+// re-running buildCuisineHubs() per page.
+const eligibleHubByKey = new Map(eligibleCuisines.map(([enKey, recs]) =>
+  [enKey.trim().toLowerCase(), { enKey, recs }]
+));
 for (const [lc_code, rl] of Object.entries(RECIPE_LANG)) {
   const dirParts = rl.dir.split('/').filter(Boolean);
   for (const [enKey, recs] of eligibleCuisines) {
