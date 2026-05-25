@@ -11,10 +11,9 @@
  *   - 1-2 short sentences, ~30-55 words
  *
  * Locale coverage:
- *   - en + ro + es + fr + de + it + pt: full editorial rewrite for all 44
- *     hub-eligible cuisines (pt uses Brazilian Portuguese to match the
- *     existing CUISINE_HUB_LANG.pt register)
- *   - other 7 locales: fall back to the locale's templated intro in
+ *   - en + ro + es + fr + de + it + pt + ru + tr: full editorial rewrite
+ *     for all 44 hub-eligible cuisines (pt = Brazilian Portuguese)
+ *   - other 5 locales: fall back to the locale's templated intro in
  *     CUISINE_HUB_LANG.intro(o, n) — still localized, but generic
  *
  * Keyed by origin.en (locale-stable, matches the URL slug source).
@@ -30,6 +29,8 @@ export const CUISINE_INTRO = {
     de: "Die italienische Küche lebt von regionaler Disziplin — römische Carbonara mit Pecorino, langsam gerührter Risotto aus dem Norden, sizilianische Pasta alla Norma mit Aubergine. Olivenöl hält das Land zusammen, Pasta hält jede Region für sich.",
     it: "L'Italia mangia per disciplina regionale — carbonara romana al Pecorino, risotto del nord lavorato lentamente, pasta alla Norma siciliana con le melanzane. L'olio d'oliva tiene il paese insieme; la pasta lascia distinta ogni regione.",
     pt: "A cozinha italiana se ergue sobre a disciplina regional — carbonara romana com Pecorino, risoto do norte trabalhado em fogo brando, pasta alla Norma siciliana com berinjela. O azeite costura o país; a massa mantém cada região à parte.",
+    ru: "Итальянский стол держится на региональной сдержанности — римская карбонара с Пекорино, медленный ризотто с севера, сицилийские паста алла Норма с баклажанами. Оливковое масло соединяет страну, а паста хранит каждый регион отдельно.",
+    tr: "İtalyan mutfağı bölgesel ağırbaşlılığa dayanır — Roma usulü Pecorinolu carbonara, kuzeyin uzun yoğurulan risotto'su, Sicilya'nın patlıcanlı pasta alla Norma'sı. Zeytinyağı ülkeyi birbirine bağlar; makarna her bölgeyi ayrı tutar.",
   },
   'Greece': {
     en: "Greek cooking smells like oregano, olive oil and lemon zest — moussaka layered in baking trays, souvlaki turning over coals, spinach folded into thin phyllo. A coastal table, generous and unhurried.",
@@ -39,6 +40,8 @@ export const CUISINE_INTRO = {
     de: "Die griechische Küche riecht nach Oregano, Olivenöl und Zitronenschale — Moussaka in der Auflaufform geschichtet, Souvlaki über glühenden Kohlen, Spinat in dünnem Filoteig gerollt. Ein Küstentisch, großzügig, ohne Eile.",
     it: "La cucina greca profuma di origano, olio d'oliva e scorza di limone — moussaka a strati in teglia, souvlaki che gira sulla brace, spinaci avvolti in sottili sfoglie di phyllo. Una tavola mediterranea, generosa e senza fretta.",
     pt: "A cozinha grega cheira a orégano, azeite e raspa de limão — moussaka em camadas na assadeira, souvlaki girando sobre as brasas, espinafre enrolado em folhas finas de phyllo. Mesa litorânea, generosa e sem pressa.",
+    ru: "Греческая кухня пахнет орегано, оливковым маслом и лимонной цедрой — мусака слоями в противне, сувлаки крутится над углями, шпинат завёрнут в тонкие листы фило. Прибрежный стол, щедрый и без спешки.",
+    tr: "Yunan mutfağı kekik, zeytinyağı ve limon kabuğu kokar — fırın tepsisinde katlanmış moussaka, kor üzerinde dönen souvlaki, ince filo yapraklarına sarılan ıspanak. Kıyı sofrası, cömert ve aceleci değil.",
   },
   'Spain': {
     en: "Spain cooks between Andalusian sun and Valencian rice fields — chilled gazpacho when the heat won't quit, saffron-stained paella on a wide steel pan. Olive oil is the constant; the rest is fierce regional pride.",
@@ -48,6 +51,8 @@ export const CUISINE_INTRO = {
     de: "Spanien kocht zwischen andalusischer Sonne und valencianischen Reisfeldern — eisgekühltes Gazpacho, wenn die Hitze nicht nachlässt, safrangetränkte Paella in der breiten Stahlpfanne. Olivenöl bleibt die Konstante; alles andere ist regionaler Stolz.",
     it: "La Spagna cucina tra sole andaluso e risaie valenciane — gazpacho ghiacciato quando il caldo non molla, paella tinta di zafferano sulla padella d'acciaio larga. L'olio d'oliva resta la costante; il resto è orgoglio regionale feroce.",
     pt: "A Espanha cozinha entre o sol andaluz e os arrozais valencianos — gaspacho gelado quando o calor não cede, paella tingida de açafrão na frigideira larga. O azeite é a constante; o resto é orgulho regional bravo.",
+    ru: "Испания готовит между андалузским солнцем и валенсийскими рисовыми полями — холодный гаспачо, когда зной не отступает, паэлья с шафраном на широкой стальной сковороде. Оливковое масло — постоянство; всё остальное — яростная региональная гордость.",
+    tr: "İspanya, Endülüs güneşi ile Valensiya pirinç tarlaları arasında pişirir — sıcak çekilmediğinde buz gibi gazpacho, geniş çelik tavada safranlı paella. Zeytinyağı sabit kalır; gerisi azgın bölgesel gurur.",
   },
   'France': {
     en: "France runs on slow technique — butter, wine, patience. Whether it's a Provençal ratatouille or a Burgundy braise, the recipes carry their region in their bones and trust the cook to take their time.",
@@ -57,6 +62,8 @@ export const CUISINE_INTRO = {
     de: "Die französische Küche lebt von langsamer Technik — Butter, Wein, Geduld. Ob provenzalische Ratatouille oder Burgunder Schmorbraten — jede Rezeptur trägt ihre Region in den Knochen und vertraut dem Koch die Zeit an.",
     it: "La cucina francese vive di tecnica lenta — burro, vino, pazienza. Che sia una ratatouille provenzale o un brasato di Borgogna, ogni ricetta porta la sua regione nelle ossa e si fida del cuoco per prendersi il suo tempo.",
     pt: "A cozinha francesa vive da técnica lenta — manteiga, vinho, paciência. Seja uma ratatouille provençal ou um brasado de Borgonha, cada receita carrega sua região nos ossos e confia no cozinheiro para levar o tempo necessário.",
+    ru: "Французская кухня живёт медленной техникой — масло, вино, терпение. Будь то прованский рататуй или бургундское рагу, каждый рецепт несёт свой регион в костях и доверяет повару не торопиться.",
+    tr: "Fransız mutfağı yavaş tekniğe yaslanır — tereyağ, şarap, sabır. Provence usulü ratatouille olsun ya da Burgonya usulü demlenmiş et, her tarif bölgesini kemiklerinde taşır ve aşçıya zamanını almasına güvenir.",
   },
   'Portugal': {
     en: "Portuguese cooking is salt cod, olive oil and slow Atlantic afternoons — bacalhau cooked a hundred ways, beans simmered with chouriço. Quiet, rooted, generous with seafood and unhurried with stew.",
@@ -66,6 +73,8 @@ export const CUISINE_INTRO = {
     de: "Die portugiesische Küche ist Salzkabeljau, Olivenöl und lange Atlantik-Nachmittage — Bacalhau auf hundert Arten zubereitet, Bohnen langsam mit Chouriço geschmort. Leise, verwurzelt, großzügig mit Meeresfrüchten und unerschütterlich beim Eintopf.",
     it: "La cucina portoghese è merluzzo salato, olio d'oliva e lunghi pomeriggi atlantici — bacalhau cucinato in cento modi, fagioli sobbolliti con chouriço. Discreta, radicata, generosa di pesce e senza fretta sul brasato.",
     pt: "A cozinha portuguesa é bacalhau em sal, azeite e longas tardes atlânticas — bacalhau preparado de cem maneiras, feijão cozido devagar com chouriço. Discreta, enraizada, generosa nos frutos do mar e sem pressa no ensopado.",
+    ru: "Португальская кухня — это солёная треска, оливковое масло и долгие атлантические послеполуденные часы — бакальяу, приготовленный сотней способов, фасоль, томлёная с чоризо. Тихая, укоренённая, щедрая на морепродукты.",
+    tr: "Portekiz mutfağı tuzlu morina, zeytinyağı ve uzun Atlantik öğleden sonraları — yüz farklı yolla pişirilen bacalhau, chouriço ile usul usul kaynatılan kuru fasulye. Sessiz, köklü, deniz ürünlerinde cömert.",
   },
   'Croatia': {
     en: "Croatian cooking wanders between coast and inland — grilled ćevapi with raw onion, pašticada braised for hours with prunes and Dalmatian red wine. Olive oil on the sea side, paprika and pork inland.",
@@ -75,6 +84,8 @@ export const CUISINE_INTRO = {
     de: "Die kroatische Küche bewegt sich zwischen Küste und Hinterland — gegrillte Ćevapi mit roher Zwiebel, Pašticada stundenlang mit Pflaumen und dalmatinischem Rotwein geschmort. Olivenöl am Meer, Paprika und Schwein im Landesinneren.",
     it: "La cucina croata oscilla tra costa ed entroterra — ćevapi alla griglia con cipolla cruda, pašticada brasata per ore con prugne e rosso dalmata. Olio d'oliva sul lato mare, paprika e maiale nell'entroterra.",
     pt: "A cozinha croata oscila entre o litoral e o interior — ćevapi na grelha com cebola crua, pašticada brasada por horas com ameixas secas e tinto dálmata. Azeite na beira-mar, páprica e porco no interior.",
+    ru: "Хорватская кухня колеблется между побережьем и материком — чевапи на гриле с сырым луком, паштицада тушится часами с черносливом и далматинским красным. Оливковое масло на стороне моря, паприка и свинина — в глубине страны.",
+    tr: "Hırvat mutfağı kıyı ile içerisi arasında gidip gelir — çiğ soğanla ızgara ćevapi, kuru erik ve Dalmaçya kırmızısıyla saatlerce demlenen pašticada. Deniz tarafında zeytinyağı, iç kesimlerde kırmızı biber ve domuz.",
   },
 
   // ── East Asian
@@ -86,6 +97,8 @@ export const CUISINE_INTRO = {
     de: "Japan kocht mit Präzision und stillem Kontrast — Brühen stundenlang geköchelt, Reis gewaschen bis er klar wird, Garnituren mit Absicht platziert. Ramen-Theken, Sushi-Bars und Hausküchen teilen dieselbe Zurückhaltung.",
     it: "Il Giappone mangia per precisione e contrasto silenzioso — brodi sobbolliti per ore, riso lavato fino a diventare trasparente, guarnizioni posate con intenzione. Banconi di ramen, bar di sushi e cucine di casa condividono la stessa misura.",
     pt: "O Japão come pela precisão e o contraste silencioso — caldos fervidos por horas, arroz lavado até ficar limpo, guarnições postas com intenção. Balcões de ramen, bares de sushi e cozinhas de casa partilham a mesma contenção.",
+    ru: "Япония ест точностью и тихим контрастом — бульоны томятся часами, рис промывают до прозрачности, гарниры кладут с намерением. Стойки с раменом, суши-бары и домашние кухни делят одну и ту же сдержанность.",
+    tr: "Japonya, kesinlik ve sessiz karşıtlıkla yer — saatlerce demlenen et suları, suyu duruyana kadar yıkanan pirinç, niyetle yerleştirilen süslemeler. Ramen tezgâhları, sushi barları ve ev mutfakları aynı ölçülülüğü paylaşır.",
   },
   'China': {
     en: "Chinese cooking respects the wok and the clock — high heat for a fast stir-fry, slow simmer for a stew, oil bloomed with garlic and Sichuan pepper before anything else hits the pan.",
@@ -95,6 +108,8 @@ export const CUISINE_INTRO = {
     de: "Die chinesische Küche respektiert Wok und Uhr — hohe Hitze für das schnelle Pfannenrühren, langsames Köcheln für den Schmortopf, Öl mit Knoblauch und Sichuan-Pfeffer aromatisiert, bevor sonst irgendetwas in die Pfanne kommt.",
     it: "La cucina cinese rispetta il wok e l'orologio — fuoco vivo per la saltata veloce, fuoco basso per gli stufati, olio profumato con aglio e pepe del Sichuan prima di tutto il resto.",
     pt: "A cozinha chinesa respeita o wok e o relógio — fogo alto para o salteado rápido, fervura lenta para os ensopados, óleo perfumado com alho e pimenta de Sichuan antes de tudo o mais.",
+    ru: "Китайская кухня уважает вок и часы — высокий огонь для быстрого обжаривания, медленное томление для рагу, масло, ароматизированное чесноком и сычуаньским перцем, прежде чем всё остальное попадёт на сковороду.",
+    tr: "Çin mutfağı wok'a ve saate saygı duyar — hızlı kavurma için yüksek ateş, yahniler için yavaş demleme, her şeyden önce sarımsak ve Sichuan biberiyle kokulandırılan yağ.",
   },
   'South Korea': {
     en: "Korean cooking turns fermentation into a national pantry — kimchi crocks, doenjang stews, gochujang glazes. Banchan plates surround every meal; rice and shared heat carry the conversation.",
@@ -104,6 +119,8 @@ export const CUISINE_INTRO = {
     de: "Die koreanische Küche macht aus Fermentation eine nationale Vorratskammer — Kimchi-Töpfe, Doenjang-Eintöpfe, Gochujang-Glasuren. Banchan umrahmen jede Mahlzeit; Reis und geteilte Schärfe tragen das Gespräch.",
     it: "La cucina coreana fa della fermentazione una dispensa nazionale — vasi di kimchi, stufati di doenjang, glasse al gochujang. I banchan circondano ogni pasto; riso e piccante condiviso portano la conversazione.",
     pt: "A cozinha coreana transforma a fermentação em despensa nacional — potes de kimchi, ensopados de doenjang, glacês de gochujang. Os banchan rodeiam cada refeição; o arroz e o ardido compartilhado levam a conversa.",
+    ru: "Корейская кухня превращает ферментацию в национальную кладовую — горшки кимчи, рагу с твенджаном, глазури с кочуджаном. Панчхан окружает каждый приём пищи; рис и общая острота ведут разговор.",
+    tr: "Kore mutfağı fermantasyonu ulusal kilere çevirir — kimchi küpleri, doenjang yahnileri, gochujang glasürleri. Her öğünü banchan tabakları çevreler; pirinç ve paylaşılan keskinlik sohbeti taşır.",
   },
 
   // ── Southeast Asian
@@ -115,6 +132,8 @@ export const CUISINE_INTRO = {
     de: "Vietnam balanciert vier Geschmacksrichtungen an jedem Tisch — frische Kräuter, salzige Fischsoße, frischer Chili, ein Spritzer Limette. Von der Phở-Brühe am Morgen bis zum Bánh mì zur Mittagszeit bleibt das Kochen leicht und unmittelbar.",
     it: "Il Vietnam equilibra quattro sapori a ogni tavola — erbe vive, salsa di pesce salata, peperoncino fresco, una spremuta di lime. Dal brodo di phở all'alba al bánh mì a mezzogiorno, la cucina resta leggera e immediata.",
     pt: "O Vietnã equilibra quatro sabores em cada mesa — ervas vivas, molho de peixe salgado, pimenta fresca, um aperto de limão. Do caldo de phở ao amanhecer ao bánh mì ao meio-dia, a cozinha permanece leve e imediata.",
+    ru: "Вьетнам уравновешивает четыре вкуса на каждом столе — свежие травы, солёный рыбный соус, свежий чили, выжатый лайм. От бульона фо на рассвете до бань ми в полдень кухня остаётся лёгкой и непосредственной.",
+    tr: "Vietnam her sofrada dört tadı dengeler — taze otlar, tuzlu balık sosu, taze acı biber, bir sıkım yeşil limon. Şafakta phở suyundan öğle vakti bánh mì'ye kadar mutfak hafif ve dolaysız kalır.",
   },
   'Thailand': {
     en: "Thai cooking chases four flavors at once — hot, sour, sweet, salty. Pad thai negotiates them in a wok; tom yum sharpens them in clear broth; tom kha softens them with coconut milk.",
@@ -124,6 +143,8 @@ export const CUISINE_INTRO = {
     de: "Die thailändische Küche jagt vier Geschmäcker auf einmal — scharf, sauer, süß, salzig. Pad Thai verhandelt sie im Wok; Tom Yum schärft sie in klarer Brühe; Tom Kha mildert sie mit Kokosmilch.",
     it: "La cucina thailandese insegue quattro sapori insieme — piccante, acido, dolce, salato. Il pad thai li negozia nel wok; il tom yum li affila in brodo limpido; il tom kha li addolcisce con il latte di cocco.",
     pt: "A cozinha tailandesa persegue quatro sabores ao mesmo tempo — picante, ácido, doce, salgado. O pad thai os negocia no wok; o tom yum os afia em caldo claro; o tom kha os suaviza com leite de coco.",
+    ru: "Тайская кухня преследует четыре вкуса одновременно — острый, кислый, сладкий, солёный. Пад тай примиряет их в воке; том ям обостряет их в прозрачном бульоне; том кха смягчает их кокосовым молоком.",
+    tr: "Tay mutfağı dört tadı aynı anda kovalar — acı, ekşi, tatlı, tuzlu. Pad thai onları wok'ta uzlaştırır; tom yum berrak suda keskinleştirir; tom kha hindistan cevizi sütüyle yumuşatır.",
   },
   // REVIEW: "pasta de gambas" is peninsular Spanish; LATAM readers expect "camarones".
   // For a Romania-based site with mostly EU traffic, peninsular reads more natural.
@@ -135,6 +156,8 @@ export const CUISINE_INTRO = {
     de: "Indonesien kocht in Schichten — Kokosmilch stundenlang eingekocht, Sambal frisch gestampft, Palmzucker im Wok karamellisiert. Reis bildet die feste Mitte; Chili, Zitronengras und Garnelenpaste arbeiten drumherum.",
     it: "L'Indonesia cucina a strati — latte di cocco ridotto per ore, sambal pestato al momento, zucchero di palma caramellato nel wok. Il riso è il centro stabile; peperoncino, citronella e pasta di gamberi lavorano attorno.",
     pt: "A Indonésia cozinha em camadas — leite de coco reduzido por horas, sambal socado na hora, açúcar de palma caramelizado no wok. O arroz é o centro firme; pimenta, capim-limão e pasta de camarão trabalham em volta.",
+    ru: "Индонезия готовит слоями — кокосовое молоко уваривается часами, самбал толкут на месте, пальмовый сахар карамелизируется в воке. Рис — устойчивый центр; чили, лемонграсс и креветочная паста работают вокруг.",
+    tr: "Endonezya katmanlar hâlinde pişirir — saatlerce indirgenmiş hindistan cevizi sütü, anlık dövülen sambal, wok'ta karamelize olan palmiye şekeri. Pirinç sağlam merkez; biber, limon otu ve karides ezmesi etrafında çalışır.",
   },
   'Philippines': {
     en: "Filipino cooking sits where sour meets savory — adobo simmered in vinegar and soy, kare-kare rich with peanut and oxtail. Bagoong on the side, rice always, leftovers always better the next day.",
@@ -144,6 +167,8 @@ export const CUISINE_INTRO = {
     de: "Die philippinische Küche siedelt dort, wo sauer auf herzhaft trifft — Adobo in Essig und Sojasoße geschmort, Kare-kare reichhaltig mit Erdnuss und Ochsenschwanz. Bagoong daneben, Reis immer, die Reste am nächsten Tag immer besser.",
     it: "La cucina filippina sta dove l'acido incontra il saporito — adobo sobbollito in aceto e soia, kare-kare ricco di arachide e coda di bue. Bagoong di fianco, riso sempre, gli avanzi sempre migliori il giorno dopo.",
     pt: "A cozinha filipina mora onde o ácido encontra o saboroso — adobo cozido em vinagre e shoyu, kare-kare denso de amendoim e rabada. Bagoong ao lado, arroz sempre, sobras sempre melhores no dia seguinte.",
+    ru: "Филиппинская кухня живёт там, где кислое встречает солёное — адобо тушится в уксусе и сое, каре-каре густой от арахиса и бычьего хвоста. Багонг сбоку, рис всегда, остатки всегда вкуснее на следующий день.",
+    tr: "Filipin mutfağı ekşinin tuzluyla buluştuğu yerde durur — sirke ve soyada demlenen adobo, yer fıstığı ve sığır kuyruğuyla zenginleşen kare-kare. Yanında bagoong, hep pirinç, ertesi gün hep daha lezzetli artıklar.",
   },
   'Malaysia': {
     en: "Malaysian cooking lives at the hawker stall — laksa rich with coconut and shrimp paste, nasi lemak crowned with crisp anchovies. Multiple cultures, one wok station, breakfast served hot at 7 a.m.",
@@ -153,6 +178,8 @@ export const CUISINE_INTRO = {
     de: "Die malaysische Küche lebt am Garküchenstand — cremiges Laksa mit Kokos und Garnelenpaste, Nasi Lemak gekrönt von knusprigen Anchovis. Mehrere Kulturen, ein Wok-Posten, Frühstück heiß serviert um sieben Uhr morgens.",
     it: "La cucina malese vive ai banchi di strada — laksa cremoso di cocco e pasta di gamberi, nasi lemak coronato di acciughe croccanti. Più culture, una sola postazione di wok, colazione servita fumante alle sette del mattino.",
     pt: "A cozinha malaia vive no balcão de rua — laksa cremoso de coco e pasta de camarão, nasi lemak coroado por anchovas crocantes. Várias culturas, uma só estação de wok, café da manhã servido quente às sete.",
+    ru: "Малайзийская кухня живёт у уличных лотков — лакса с кокосом и креветочной пастой, наси лемак, увенчанный хрустящими анчоусами. Несколько культур, одна станция вока, завтрак подают горячим в семь утра.",
+    tr: "Malezya mutfağı sokak tezgâhlarında yaşar — hindistan cevizi ve karides ezmesiyle kremalı laksa, çıtır hamsi tepeleyen nasi lemak. Birden çok kültür, tek wok istasyonu, sabahın yedisinde sıcacık servis edilen kahvaltı.",
   },
   'Cambodia': {
     en: "Cambodian cooking quietly balances sweet, salty, sour and herbaceous — fish amok steamed in banana leaf, fresh chili and lime alongside every plate. Lemongrass, palm sugar and prahok do the heavy lifting.",
@@ -162,6 +189,8 @@ export const CUISINE_INTRO = {
     de: "Die kambodschanische Küche balanciert leise süß, salzig, sauer und kräuterig — Fisch-Amok im Bananenblatt gedämpft, frischer Chili und Limette neben jedem Teller. Zitronengras, Palmzucker und Prahok machen die eigentliche Arbeit.",
     it: "La cucina cambogiana equilibra in silenzio dolce, salato, acido e erbaceo — amok di pesce al vapore in foglia di banano, peperoncino fresco e lime accanto a ogni piatto. Citronella, zucchero di palma e prahok fanno il lavoro di fondo.",
     pt: "A cozinha cambojana equilibra em silêncio o doce, o salgado, o ácido e o herbáceo — amok de peixe no vapor em folha de bananeira, pimenta fresca e limão ao lado de cada prato. Capim-limão, açúcar de palma e prahok fazem o trabalho de base.",
+    ru: "Камбоджийская кухня тихо балансирует сладкое, солёное, кислое и травянистое — рыбный амок на пару в банановом листе, свежий чили и лайм рядом с каждой тарелкой. Лемонграсс, пальмовый сахар и прахок делают основную работу.",
+    tr: "Kamboçya mutfağı sessizce tatlıyı, tuzluyu, ekşiyi ve otsu olanı dengeler — muz yaprağında buharda balık amok, her tabağın yanında taze acı ve yeşil limon. Limon otu, palmiye şekeri ve prahok ağır işi yapar.",
   },
 
   // ── South Asian
@@ -173,6 +202,8 @@ export const CUISINE_INTRO = {
     de: "Indien schichtet Gewürze mit Bedacht — ganze Samen springen in heißem Ghee auf, Zwiebeln werden gekocht bis sie zerfallen, finale Aromen erst ganz am Ende dazugegeben. Currys, Biryanis und Straßenklassiker folgen demselben Rhythmus.",
     it: "L'India dispone le spezie con intenzione — semi interi che sbocciano nel ghee caldo, cipolle cotte fino a sciogliersi, aromi finali aggiunti proprio all'ultimo. Curry, biryani e classici di strada seguono lo stesso ritmo.",
     pt: "A Índia dispõe especiarias com intenção — sementes inteiras estourando no ghee quente, cebolas cozidas até derreter, aromas finais jogados bem no fim. Curries, biryanis e clássicos de rua seguem o mesmo ritmo.",
+    ru: "Индия укладывает специи с намерением — целые семена раскрываются в горячем гхи, лук готовится до полного растворения, финальные ароматы добавляют в самом конце. Карри, бирьяни и уличная классика следуют одному ритму.",
+    tr: "Hindistan baharatı niyetle katmanlar — sıcak ghee'de açan tüm tohumlar, eriyene kadar pişen soğanlar, sonda atılan finiş aromaları. Köri, biryani ve sokak klasikleri aynı ritmi izler.",
   },
   'Pakistan': {
     en: "Pakistani cooking turns spice into long heat — biryani layered with marinated lamb, nihari simmered overnight until the meat surrenders. Bone marrow, naan straight off the tandoor, and bread keep the table close.",
@@ -182,6 +213,8 @@ export const CUISINE_INTRO = {
     de: "Die pakistanische Küche verwandelt Gewürze in lange Hitze — Biryani in Schichten aus mariniertem Lamm, Nihari über Nacht geköchelt, bis das Fleisch nachgibt. Knochenmark, Naan frisch aus dem Tandoor, Brot hält den Tisch zusammen.",
     it: "La cucina pakistana trasforma la spezia in calore lungo — biryani a strati di agnello marinato, nihari sobbollito tutta la notte finché la carne cede. Midollo, naan appena uscito dal tandoor, il pane tiene la tavola unita.",
     pt: "A cozinha paquistanesa transforma a especiaria em calor longo — biryani em camadas de cordeiro marinado, nihari fervido a noite toda até a carne se render. Tutano, naan recém-saído do tandoor, o pão mantém a mesa junta.",
+    ru: "Пакистанская кухня превращает специи в долгий жар — бирьяни слоями с маринованным ягнёнком, нихари томится всю ночь, пока мясо не сдастся. Костный мозг, наан прямо из тандура, хлеб держит стол вместе.",
+    tr: "Pakistan mutfağı baharatı uzun bir sıcağa çevirir — marine edilmiş kuzuyla katmanlı biryani, et teslim olana kadar gece boyu demlenen nihari. İlik, tandırdan çıkmış naan, ekmek sofrayı yakın tutar.",
   },
 
   // ── Middle Eastern
@@ -193,6 +226,8 @@ export const CUISINE_INTRO = {
     de: "Persische Küchen schichten Geschmack mit Geduld — Fesenjān mit Walnuss und Granatapfel angedickt, Ghormeh Sabzi grün von langsam geschmorten Kräutern. Safran, getrocknete Limette und Reis-Tahdig schließen den Tisch.",
     it: "Le cucine persiane stratificano il sapore con pazienza — fesenjān addensato con noce e melagrana, ghormeh sabzi verde di erbe lungamente stufate. Zafferano, lime essiccato e il tahdig di riso chiudono la tavola.",
     pt: "As cozinhas persas estratificam o sabor com paciência — fesenjān engrossado com noz e romã, ghormeh sabzi verde de ervas longamente refogadas. Açafrão, limão seco e o tahdig de arroz fecham a mesa.",
+    ru: "Персидские кухни укладывают вкус с терпением — фесенджан загущают грецким орехом и гранатом, гормэ сабзи зелёный от долго тушёных трав. Шафран, сушёный лайм и тадиг из риса закрывают стол.",
+    tr: "İran mutfağı tadı sabırla katmanlar — cevizle ve narla koyulaştırılan fesencan, uzun süre pişen otlardan yeşil ghormeh sabzi. Safran, kurutulmuş limon ve pirincin tahdig'i sofrayı kapatır.",
   },
   'Israel': {
     en: "Israeli cooking pulls from across the eastern Mediterranean — silky hummus, sabich pita stuffed with eggplant and egg, lemon and parsley constant. Casual abundance, sharp seasoning, breakfast that lasts all day.",
@@ -202,6 +237,8 @@ export const CUISINE_INTRO = {
     de: "Die israelische Küche bedient sich quer durch das östliche Mittelmeer — seidiger Hummus, Sabich-Pita gefüllt mit Aubergine und Ei, Zitrone und Petersilie überall. Lässige Fülle, klare Würze, ein Frühstück, das sich über den ganzen Tag zieht.",
     it: "La cucina israeliana attinge a tutto il Mediterraneo orientale — hummus setoso, pita sabich farcita di melanzana e uovo, limone e prezzemolo sempre presenti. Abbondanza informale, condimento netto, una colazione che dura tutto il giorno.",
     pt: "A cozinha israelense puxa de todo o Mediterrâneo oriental — homus sedoso, sabich em pita recheada com berinjela e ovo, limão e salsinha sempre presentes. Abundância despretensiosa, tempero franco, café da manhã que dura o dia inteiro.",
+    ru: "Израильская кухня берёт со всего восточного Средиземноморья — шёлковый хумус, сабих в пите с баклажаном и яйцом, лимон и петрушка повсюду. Непринуждённое изобилие, чёткая приправа, завтрак на весь день.",
+    tr: "İsrail mutfağı tüm doğu Akdeniz'den toplar — ipeksi humus, patlıcan ve yumurta dolgulu sabich pidesi, hep yanında limon ve maydanoz. Rahat bolluk, net baharatlama, bütün gün süren bir kahvaltı.",
   },
   'Syria': {
     en: "Syrian tables run on generosity — kibbeh shaped by hand, shakshuka eaten straight from the pan, fatteh built in layers of bread, yogurt and chickpeas. Pomegranate molasses and sumac keep the seasoning sharp.",
@@ -211,6 +248,8 @@ export const CUISINE_INTRO = {
     de: "Syrische Tische leben von Großzügigkeit — Kibbeh von Hand geformt, Shakshuka direkt aus der Pfanne gegessen, Fatteh in Schichten aus Brot, Joghurt und Kichererbsen aufgebaut. Granatapfelsirup und Sumach halten die Würze scharf.",
     it: "Le tavole siriane vivono di generosità — kibbeh modellato a mano, shakshuka mangiata direttamente dalla padella, fatteh costruito a strati di pane, yogurt e ceci. Melassa di melagrana e sommacco tengono il condimento vivo.",
     pt: "As mesas sírias vivem de generosidade — kibe moldado à mão, shakshuka comida direto da frigideira, fatteh montado em camadas de pão, iogurte e grão-de-bico. Melaço de romã e sumagre mantêm o tempero vivo.",
+    ru: "Сирийские столы живут щедростью — киббех формируют руками, шакшуку едят прямо из сковороды, фатте собирают слоями хлеба, йогурта и нута. Гранатовая патока и сумах держат приправу острой.",
+    tr: "Suriye sofraları cömertlikten beslenir — elde şekil verilen kibbeh, tavadan doğrudan yenen şakşuka, ekmek, yoğurt ve nohut katmanlarından kurulan fatteh. Nar pekmezi ile sumak baharatı keskin tutar.",
   },
   'Turkey': {
     en: "Turkish cooking moves between meze, bread oven and copper pot — flaky baklava soaked in syrup, eggs scrambled into pepper-rich menemen. Strong tea is poured at every meal, often before the first plate arrives.",
@@ -220,6 +259,8 @@ export const CUISINE_INTRO = {
     de: "Die türkische Küche bewegt sich zwischen Meze, Brotofen und Kupferpfanne — blättriges Baklava in Sirup getränkt, Eier zu pfeffrigem Menemen verrührt. Starker Tee wird zu jeder Mahlzeit eingeschenkt, oft schon vor dem ersten Teller.",
     it: "La cucina turca si muove tra meze, forno del pane e pentola di rame — baklava sfogliato impregnato di sciroppo, uova strapazzate in menemen ricco di peperoncino. Il tè forte si versa a ogni pasto, spesso prima del primo piatto.",
     pt: "A cozinha turca se move entre meze, forno do pão e panela de cobre — baklava folhado encharcado em calda, ovos mexidos em menemen carregado de pimentão. O chá forte é servido em cada refeição, muitas vezes antes do primeiro prato.",
+    ru: "Турецкая кухня движется между мезе, печью для хлеба и медной кастрюлей — слоёная баклава, пропитанная сиропом, яйца, размешанные в менемен с большим количеством перца. Крепкий чай наливают на каждой трапезе, часто до первого блюда.",
+    tr: "Türk mutfağı meze, ekmek fırını ve bakır tencere arasında gezinir — şerbete batırılmış yufkalı baklava, biberle dolu menemenin içine kırılan yumurta. Demli çay her öğünde dökülür, çoğu zaman ilk tabaktan önce.",
   },
 
   // ── North African
@@ -231,6 +272,8 @@ export const CUISINE_INTRO = {
     de: "Marokkanische Küchen arbeiten langsam — Tonschüssel-Tajines mit Fleisch und Salzzitrone, Harira mit Linsen und Tomaten verdickt, Ras el Hanout parfümiert jedes Gericht. Gewürz, Frucht und Zeit kochen gemeinsam.",
     it: "Le cucine marocchine vanno piano — tajine di terracotta con carne e limone in salamoia, harira che si addensa con lenticchie e pomodoro, ras el hanout che profuma ogni piatto. La spezia, il frutto e il tempo cucinano insieme.",
     pt: "As cozinhas marroquinas andam devagar — tajines de barro com carne e limão em conserva, harira engrossando com lentilha e tomate, ras el hanout perfumando cada prato. Especiaria, fruta e tempo cozinham juntos.",
+    ru: "Марокканские кухни движутся медленно — глиняные тажины с мясом и солёным лимоном, харира густеет с чечевицей и помидорами, рас эль-ханут парфюмирует каждое блюдо. Специи, фрукты и время готовят вместе.",
+    tr: "Fas mutfakları yavaş yürür — etle ve tuzlu limonla dolu kil tajine'ler, mercimek ve domatesle koyulaşan harira, her tabağa kokusunu bırakan ras el hanout. Baharat, meyve ve zaman birlikte pişirir.",
   },
   'Tunisia': {
     en: "Tunisian cooking warms with harissa — brik fried until the egg sets just right, chakchouka bubbling with tomato and pepper. Olive oil and chili are everywhere; the heat is direct and unapologetic.",
@@ -240,6 +283,8 @@ export const CUISINE_INTRO = {
     de: "Die tunesische Küche heizt mit Harissa — Brik frittiert, bis das Ei genau richtig steht, Chakchouka blubbernd mit Tomate und Paprika. Olivenöl und Chili überall; die Schärfe ist direkt, ohne Entschuldigung.",
     it: "La cucina tunisina scalda con harissa — brik fritto finché l'uovo prende il giusto, chakchouka che borbotta con pomodoro e peperone. Olio d'oliva e peperoncino ovunque; il piccante è diretto, senza scuse.",
     pt: "A cozinha tunisiana esquenta com harissa — brik frito até o ovo firmar no ponto certo, chakchouka borbulhando com tomate e pimentão. Azeite e pimenta por toda parte; o ardor é direto, sem desculpas.",
+    ru: "Тунисская кухня согревает харисой — брик жарят до тех пор, пока яйцо не схватится в точку, чакчука клокочет с помидорами и перцем. Оливковое масло и чили повсюду; жар прямой, без оправданий.",
+    tr: "Tunus mutfağı harissa ile ısınır — yumurta tam kıvamında oturana kadar kızartılan brik, domates ve biberle fokurdayan şakşuka. Zeytinyağı ve acı biber her yerde; sıcaklık dolaysız, özürsüz.",
   },
 
   // ── Latin
@@ -251,6 +296,8 @@ export const CUISINE_INTRO = {
     de: "Mexiko kocht laut und hell — Chilis bis zum Rauch geröstet, Masa auf dem Comal erwärmt, Salsa frisch im Molcajete gestampft. Vom Straßenstand bis zum Küchentisch bleibt die Konstante Schärfe, ausgewogen durch Limette und ausgelassenes Fett.",
     it: "Il Messico cucina forte e luminoso — chili bruciati fino al fumo, masa scaldata sul comal, salsa pestata al momento nel molcajete. Dai banchi di strada alle tavole di casa, la costante è il piccante bilanciato da lime e grasso fuso.",
     pt: "O México cozinha alto e brilhante — pimentas tostadas até soltar fumaça, masa aquecida no comal, salsa socada na hora no molcajete. Das barracas de rua às mesas de casa, a constante é o picante equilibrado por limão e gordura derretida.",
+    ru: "Мексика готовит громко и ярко — перцы обжигают до дыма, маса греется на комале, сальсу толкут на месте в молкахете. От уличных лотков до домашних столов постоянная — острота, уравновешенная лаймом и вытопленным жиром.",
+    tr: "Meksika yüksek sesle ve aydınlık pişirir — duman atana kadar yakılan biberler, comal üzerinde ısıtılan masa, molcajete'de anlık dövülen salsa. Sokak tezgâhlarından ev sofralarına, değişmez olan misket limonu ve eriyen yağla dengelenen acılıktır.",
   },
   'Peru': {
     en: "Peru cooks where ocean meets the Andes — lime-cured ceviche on the coast, potato-rich causa from highland kitchens, lomo saltado borrowing wok craft from Chinese arrivals. Bright acid, bold contrast, working altitude.",
@@ -260,6 +307,8 @@ export const CUISINE_INTRO = {
     de: "Peru kocht dort, wo der Ozean auf die Anden trifft — limettengezogenes Ceviche an der Küste, kartoffelreiche Causa aus den Hochlandküchen, Lomo Saltado mit Wok-Technik der chinesischen Einwanderer. Helle Säure, mutiger Kontrast, arbeitende Höhe.",
     it: "Il Perù cucina dove l'oceano incontra le Ande — ceviche marcato al lime sulla costa, causa carica di patata dalle cucine d'altura, lomo saltado che prende il wok dagli arrivi cinesi. Acidità viva, contrasto deciso, altitudine che lavora.",
     pt: "O Peru cozinha onde o oceano encontra os Andes — ceviche curado no limão na costa, causa carregada de batata vinda das cozinhas serranas, lomo saltado tomando o wok emprestado dos chineses. Acidez brilhante, contraste forte, altitude que trabalha.",
+    ru: "Перу готовит там, где океан встречает Анды — севиче, маринованный в лайме на побережье, картофельная кауса из горных кухонь, ломо сальтадо, заимствующий вок у китайских переселенцев. Яркая кислота, смелый контраст, работающая высота.",
+    tr: "Peru, okyanusun And Dağları'yla buluştuğu yerde pişirir — sahilde misket limonuyla terbiye edilen ceviche, dağ mutfaklarından patates yüklü causa, Çinli göçmenlerden wok'u ödünç alan lomo saltado. Parlak asit, cesur kontrast, çalışan rakım.",
   },
   'Argentina': {
     en: "Argentina cooks for the asado — open fire, beef, salt — but the kitchen runs on hand pies and milanesa pounded thin. Chimichurri sits on every table; the bread is there to mop the plate clean.",
@@ -269,6 +318,8 @@ export const CUISINE_INTRO = {
     de: "Argentinien kocht für den Asado — offenes Feuer, Rindfleisch, Salz — aber der Alltag dreht sich um Empanadas und dünn geklopfte Milanesa. Chimichurri steht auf jedem Tisch; das Brot wischt den Teller sauber.",
     it: "L'Argentina cucina per l'asado — fuoco vivo, manzo, sale — ma la cucina di tutti i giorni gira intorno alle empanadas e alle milanesa battute fini. Il chimichurri sta su ogni tavola; il pane c'è per pulire il piatto.",
     pt: "A Argentina cozinha para o asado — fogo aberto, carne, sal — mas a cozinha do dia a dia gira em torno de empanadas e milanesas bem batidas. O chimichurri está em toda mesa; o pão está ali para limpar o prato.",
+    ru: "Аргентина готовит для асадо — открытый огонь, говядина, соль — но повседневная кухня крутится вокруг эмпанад и тонко отбитой миланесы. Чимичурри на каждом столе; хлеб здесь для того, чтобы подобрать соус с тарелки.",
+    tr: "Arjantin asado için pişirir — açık ateş, sığır eti, tuz — ama günlük mutfak, empanada'lar ve incecik dövülmüş milanesa etrafında döner. Chimichurri her sofrada; ekmek tabağı sıyırmak için orada.",
   },
   'Brazil': {
     en: "Brazilian cooking ranges from beach to interior — slow feijoada with black beans and smoked pork, coconut-rich moqueca simmered in clay pots. Citrus, hot pepper and rice anchor every plate.",
@@ -278,6 +329,8 @@ export const CUISINE_INTRO = {
     de: "Die brasilianische Küche reicht vom Strand bis ins Landesinnere — langsame Feijoada mit schwarzen Bohnen und geräuchertem Schwein, kokosreiche Moqueca im Tontopf geschmort. Zitrusfrüchte, scharfer Pfeffer und Reis tragen jeden Teller.",
     it: "La cucina brasiliana va dalla spiaggia all'entroterra — feijoada lenta con fagioli neri e maiale affumicato, moqueca cremosa di cocco sobbollita in pentole di terracotta. Agrumi, peperoncino e riso ancorano ogni piatto.",
     pt: "A cozinha brasileira vai da praia ao interior — feijoada lenta com feijão preto e porco defumado, moqueca cremosa de coco fervida em panela de barro. Cítrico, pimenta e arroz ancoram cada prato.",
+    ru: "Бразильская кухня тянется от пляжа до глубинки — медленная фейжоада с чёрной фасолью и копчёной свининой, мокека с кокосовым молоком, томлёная в глиняных горшках. Цитрус, острый перец и рис держат каждую тарелку.",
+    tr: "Brezilya mutfağı sahilden iç bölgeye uzanır — siyah fasulye ve füme domuzla yavaş feijoada, toprak güveçte demlenen hindistan cevizli moqueca. Turunçgil, acı biber ve pirinç her tabağı tutar.",
   },
   'Ecuador': {
     en: "Ecuadorian cooking is shaped by Pacific shore and Andean peaks — bright ceviches scattered with toasted corn, encebollado warm with tuna and yuca. Citrus, plantain and salt, the rhythm of altitude.",
@@ -287,6 +340,8 @@ export const CUISINE_INTRO = {
     de: "Die ecuadorianische Küche wird von der Pazifikküste und den Andengipfeln geprägt — lebendige Ceviches mit geröstetem Mais bestreut, warmes Encebollado mit Thunfisch und Yuca. Zitrus, Kochbanane und Salz — der Rhythmus der Höhe.",
     it: "La cucina ecuadoriana è forgiata dalla costa pacifica e dalle cime andine — ceviche vivace cosparso di mais tostato, encebollado caldo con tonno e yuca. Agrumi, platano e sale, il ritmo dell'altitudine.",
     pt: "A cozinha equatoriana é moldada pela costa pacífica e pelos picos andinos — ceviches vivos polvilhados com milho tostado, encebollado quente com atum e aipim. Cítrico, banana-da-terra e sal, o ritmo da altitude.",
+    ru: "Эквадорская кухня сформирована тихоокеанским побережьем и андскими вершинами — яркие севиче, посыпанные жареной кукурузой, энсебольядо горячий с тунцом и юккой. Цитрус, плантан и соль — ритм высоты.",
+    tr: "Ekvador mutfağı Pasifik kıyısı ve And zirveleriyle şekillenir — üzerine kavrulmuş mısır serpilen parlak ceviche'ler, ton balığı ve yuca ile sıcak encebollado. Turunçgil, plantain ve tuz — rakımın ritmi.",
   },
   'Cuba': {
     en: "Cuban cooking moves slowly with garlic, citrus and oregano — ropa vieja shredded and simmered with peppers, picadillo loaded with olives and raisins. Sweet plantains finish the plate; rice keeps the peace.",
@@ -296,6 +351,8 @@ export const CUISINE_INTRO = {
     de: "Die kubanische Küche bewegt sich langsam mit Knoblauch, Zitrusfrucht und Oregano — Ropa Vieja zerzupft und mit Paprika geschmort, Picadillo voller Oliven und Rosinen. Süße Kochbananen schließen den Teller; Reis hält den Frieden.",
     it: "La cucina cubana avanza lenta con aglio, agrume e origano — ropa vieja sfilacciata e cotta con peperoni, picadillo carico di olive e uvetta. I platani dolci chiudono il piatto; il riso tiene la pace.",
     pt: "A cozinha cubana avança devagar com alho, cítrico e orégano — ropa vieja desfiada e refogada com pimentões, picadillo carregado de azeitona e uva-passa. A banana-da-terra madura fecha o prato; o arroz mantém a paz.",
+    ru: "Кубинская кухня движется медленно с чесноком, цитрусом и орегано — ропа вьеха, разорванная и тушёная с перцами, пикадильо, нагружённый оливками и изюмом. Сладкий плантан закрывает тарелку; рис держит мир.",
+    tr: "Küba mutfağı sarımsak, turunçgil ve kekikle yavaş ilerler — biberlerle telcik telcik pişen ropa vieja, zeytin ve kuru üzümle yüklü picadillo. Olgun plantain tabağı kapatır; pirinç huzuru korur.",
   },
 
   // ── Eastern European
@@ -307,6 +364,8 @@ export const CUISINE_INTRO = {
     de: "Die rumänische Küche kommt aus langen Wintern und großen Tafelrunden — Sarmale fest in Kohlblätter gerollt, Ciorbă mit fermentierter Kleie säuerlich gestimmt. Viel Dill, Sauerrahm und lange Ofenstunden voller Geduld.",
     it: "La cucina rumena viene da inverni lunghi e tavole grandi — sarmale stretti nelle foglie di cavolo, ciorbă acidulata dalla crusca fermentata. Tanto aneto, panna acida e lunghe ore d'attesa al forno lento.",
     pt: "A cozinha romena vem de invernos longos e mesas grandes — sarmale apertados em folhas de repolho, ciorbă acidulada pelo farelo fermentado. Muito endro, creme azedo e longas horas pacientes de forno baixo.",
+    ru: "Румынская кухня приходит из долгих зим и больших столов — сармале, плотно завёрнутые в капустные листья, чорба, подкисленная ферментированными отрубями. Много укропа, сметаны и долгих часов в медленной духовке.",
+    tr: "Rumen mutfağı uzun kışlardan ve büyük sofralardan gelir — lahana yaprağına sıkıca sarılan sarmale, fermente buğday kepeğiyle ekşitilen ciorbă. Bol dereotu, ekşi krema ve düşük ısıda uzun fırın saatleri.",
   },
   'Hungary': {
     en: "Hungarian cooking centers on paprika — sweet, smoked, hot — bloomed in lard before anything else. Goulash runs deep and dark, paprikash mellows with sour cream, lángos comes crackling out of the fryer.",
@@ -316,6 +375,8 @@ export const CUISINE_INTRO = {
     de: "Die ungarische Küche dreht sich um Paprika — süß, geräuchert, scharf — in Schmalz aufgeblüht, bevor sonst etwas hineinkommt. Gulasch geht tief und dunkel, Paprikasch wird mit Sauerrahm milder, Lángos kommt knusprig aus der Friteuse.",
     it: "La cucina ungherese ruota attorno alla paprika — dolce, affumicata, piccante — fatta sbocciare nello strutto prima di tutto. Il goulash va profondo e scuro, il paprikash si addolcisce con la panna acida, il lángos esce sfrigolando dalla friggitrice.",
     pt: "A cozinha húngara gira em torno da páprica — doce, defumada, picante — aberta na banha antes de qualquer outra coisa. O goulash mergulha fundo e escuro, o paprikash se abranda com creme azedo, o lángos sai estalando da fritadeira.",
+    ru: "Венгерская кухня вращается вокруг паприки — сладкой, копчёной, острой — раскрытой в смальце прежде всего. Гуляш идёт глубоким и тёмным, паприкаш смягчается сметаной, лангош выходит шипящим из фритюра.",
+    tr: "Macar mutfağı kırmızı toz biber etrafında döner — tatlı, tütsülenmiş, acı — her şeyden önce domuz yağında açılır. Gulaş derin ve koyu gider, paprikash ekşi kremayla yumuşar, lángos cızırdayarak fritözden çıkar.",
   },
   'Poland': {
     en: "Polish kitchens warm against winter — pierogi pinched by hand, mushroom soups deep with dill, sour rye soup at Easter. Comfort food that doesn't apologize for butter or for second helpings.",
@@ -325,6 +386,8 @@ export const CUISINE_INTRO = {
     de: "Polnische Küchen wärmen gegen den Winter — Pierogi mit der Hand zugekniffen, Pilzsuppen voller Dill, saure Roggensuppe zu Ostern. Komfortküche, die sich weder für die Butter noch für den Nachschlag entschuldigt.",
     it: "Le cucine polacche scaldano contro l'inverno — pierogi pizzicati a mano, zuppe di funghi profonde d'aneto, zuppa acida di segale a Pasqua. Cucina di conforto che non si scusa né per il burro né per le seconde porzioni.",
     pt: "As cozinhas polonesas se esquentam contra o inverno — pierogi pinçados à mão, sopas de cogumelo cheias de endro, sopa azeda de centeio na Páscoa. Comida de conforto que não se desculpa pela manteiga nem por repetir.",
+    ru: "Польские кухни греют против зимы — пельмени-пероги, защипнутые руками, грибные супы с щедрым укропом, кислый ржаной суп на Пасху. Уютная еда, которая не извиняется ни за масло, ни за добавку.",
+    tr: "Polonya mutfakları kışa karşı ısınır — elle kapatılan pierogi, dereotuyla derinleşen mantar çorbaları, Paskalya'da ekşi çavdar çorbası. Tereyağı ya da ikinci porsiyon için özür dilemeyen ev yemekleri.",
   },
   'Russia': {
     en: "Russian cooking is winter cooking — borscht deep with beet and meat, kotlety pan-fried golden, solyanka rich with brine. Black bread, sour cream and dill quietly do most of the seasoning.",
@@ -334,6 +397,8 @@ export const CUISINE_INTRO = {
     de: "Die russische Küche ist Winterküche — Borschtsch tief mit Rote Bete und Fleisch, goldgebratene Kotlety, Soljanka kräftig von Salzgurken. Schwarzbrot, Schmand und Dill übernehmen leise den Großteil der Würze.",
     it: "La cucina russa è cucina d'inverno — borsch profondo di barbabietola e carne, kotlety dorate in padella, solyanka densa di salamoia. Pane nero, smetana e aneto fanno in silenzio gran parte del condimento.",
     pt: "A cozinha russa é cozinha de inverno — borsch profundo de beterraba e carne, kotlety dourados na frigideira, solyanka carregada de salmoura. Pão preto, smetana e endro fazem em silêncio a maior parte do tempero.",
+    ru: "Русская кухня — это зимняя кухня — борщ глубокий со свёклой и мясом, котлеты, обжаренные до золота, солянка, насыщенная рассолом. Чёрный хлеб, сметана и укроп тихо берут на себя большую часть приправы.",
+    tr: "Rus mutfağı kış mutfağıdır — pancar ve etle derin borş, tavada altın rengine getirilen kotlety, salamurayla zenginleşen solyanka. Kara ekmek, smetana ve dereotu baharatlamanın çoğunu sessizce yapar.",
   },
   'Georgia': {
     en: "Georgian cooking opens around the supra — long-table dinners with toasts, walnuts and pomegranate. Khachapuri straight from a clay oven, khinkali pinched into pleated dumplings, herbs everywhere on the plate.",
@@ -343,6 +408,8 @@ export const CUISINE_INTRO = {
     de: "Die georgische Küche öffnet sich rund um die Supra — lange Tafelabende mit Trinksprüchen, Walnuss und Granatapfel. Chatschapuri frisch aus dem Lehmofen, Chinkali zu plissierten Teigtaschen geformt, Kräuter überall auf dem Teller.",
     it: "La cucina georgiana si apre intorno alla supra — cene lunghe con brindisi, noci e melagrana. Khachapuri appena uscito dal forno di terra, khinkali pizzicati in fagottini pieghettati, erbe ovunque sul piatto.",
     pt: "A cozinha georgiana se abre em torno da supra — jantares longos com brindes, nozes e romã. Khachapuri recém-saído do forno de barro, khinkali pinçados em trouxinhas pregueadas, ervas por todo o prato.",
+    ru: "Грузинская кухня раскрывается вокруг супры — долгие застолья с тостами, грецким орехом и гранатом. Хачапури прямо из глиняной печи, хинкали, защипанные в плиссированные пельмени, зелень повсюду на тарелке.",
+    tr: "Gürcü mutfağı supra sofrası etrafında açılır — kadeh kaldırmaları, ceviz ve narla uzun akşamlar. Toprak fırından henüz çıkmış khachapuri, pileli mantı gibi tutturulan khinkali, tabakta her yerde otlar.",
   },
 
   // ── Nordic
@@ -354,6 +421,8 @@ export const CUISINE_INTRO = {
     de: "Schweden kocht für den langen Winter — mit Dill gebeizter Lachs, Köttbullar in Sahnesoße, Zimtschnecken mit Kardamom gewärmt. Ruhige Aromen, sorgfältige Würze, Fika als tägliches Ritual statt als Pause behandelt.",
     it: "La Svezia cucina per il lungo inverno — salmone marinato all'aneto, polpettine in sugo di panna, brioche alla cannella scaldate con cardamomo. Sapori calmi, condimento misurato, il fika trattato come rito quotidiano più che come pausa.",
     pt: "A Suécia cozinha para o longo inverno — salmão curado no endro, almôndegas em molho de creme, pãezinhos de canela aquecidos com cardamomo. Sabores calmos, tempero cuidadoso, o fika tratado como ritual diário em vez de pausa.",
+    ru: "Швеция готовит на долгую зиму — лосось маринуется с укропом, фрикадельки в сливочном соусе, булочки с корицей греются кардамоном. Спокойные вкусы, аккуратная приправа, фика — ежедневный ритуал, а не пауза.",
+    tr: "İsveç uzun kışa pişirir — dereotuyla terbiye edilmiş somon, kremalı sosta köfteler, kakuleyle ısıtılan tarçınlı çörekler. Sakin tatlar, ölçülü baharat, bir mola değil, günlük bir tören olarak ele alınan fika.",
   },
   'Finland': {
     en: "Finnish cooking draws flavor from cold landscape — rye-crust Karelian pies, dill-bright salmon soup, dense rye bread on every counter. Quiet meals, careful seasoning, deep respect for the lakes and forests.",
@@ -363,6 +432,8 @@ export const CUISINE_INTRO = {
     de: "Die finnische Küche zieht Geschmack aus der kalten Landschaft — Karelische Piroggen mit Roggenkruste, Lachssuppe leuchtend von Dill, dichtes Roggenbrot auf jeder Arbeitsplatte. Stille Mahlzeiten, sorgfältige Würze, tiefer Respekt vor Seen und Wäldern.",
     it: "La cucina finlandese trae sapore dal paesaggio freddo — tortine careliane con crosta di segale, zuppa di salmone vivace d'aneto, pane di segale denso su ogni piano. Pasti silenziosi, condimento misurato, profondo rispetto per laghi e foreste.",
     pt: "A cozinha finlandesa tira sabor da paisagem fria — pequenas tortas carelianas com crosta de centeio, sopa de salmão vibrante de endro, pão denso de centeio em cada bancada. Refeições silenciosas, tempero cuidadoso, respeito fundo pelos lagos e florestas.",
+    ru: "Финская кухня берёт вкус из холодного пейзажа — карельские пирожки с ржаной корочкой, суп из лосося с ярким укропом, плотный ржаной хлеб на каждой столешнице. Тихие приёмы пищи, глубокое уважение к озёрам и лесам.",
+    tr: "Fin mutfağı tadını soğuk manzaradan çıkarır — çavdar kabuklu Karelya turtaları, dereotuyla canlanan somon çorbası, her tezgâhta yoğun çavdar ekmeği. Sessiz öğünler, ölçülü baharat, göllere ve ormanlara derin bir saygı.",
   },
 
   // ── Sub-Saharan
@@ -374,6 +445,8 @@ export const CUISINE_INTRO = {
     de: "Die nigerianische Küche ist mutig und gemeinschaftlich — rauchiger Jollof-Reis, von Region zu Region heftig diskutiert, Egusi-Suppe mit Melonenkernen und bitteren Blattgrün verdickt. Palmöl, Scotch Bonnet, großzügige Portionen, nichts wird geflüstert.",
     it: "La cucina nigeriana è audace e comunitaria — jollof rice affumicato discusso da una regione all'altra, zuppa di egusi addensata con semi di melone e verdure amare. Olio di palma, scotch bonnet, porzioni generose, niente a voce bassa.",
     pt: "A cozinha nigeriana é ousada e comunal — jollof rice defumado debatido de uma região para outra, sopa de egusi engrossada com semente de melão e folhas amargas. Óleo de dendê, scotch bonnet, porções generosas, nada em voz baixa.",
+    ru: "Нигерийская кухня смелая и общинная — копчёный джоллоф-рис, спор о котором идёт от региона к региону, суп эгуси, загущённый семенами дыни и горькой зеленью. Пальмовое масло, скотч боннет, щедрые порции, ничего шёпотом.",
+    tr: "Nijerya mutfağı cesur ve paylaşımlıdır — bölgeden bölgeye tartışılan füme jollof pilavı, kavun çekirdeği ve acı yeşilliklerle koyulaşan egusi çorbası. Palmiye yağı, scotch bonnet biberi, cömert porsiyonlar, kısık ses yok.",
   },
 
   // ── Anglo
@@ -385,6 +458,8 @@ export const CUISINE_INTRO = {
     de: "Die amerikanische Küche ist regional, nicht national — Clam Chowder aus Neuengland, karibisch verwurzeltes Jerk, der Cheeseburger von überall mit einer Plancha. Der durchgehende Faden: Komfortküche, ernsthaft gemacht.",
     it: "La cucina americana è regionale, non nazionale — clam chowder del New England, jerk di radice caraibica, il cheeseburger nato ovunque ci sia una piastra. Il filo comune: cucina di conforto presa sul serio.",
     pt: "A cozinha americana é regional, não nacional — clam chowder da Nova Inglaterra, jerk de raiz caribenha, o cheeseburger nascido em qualquer canto com uma chapa. O fio comum: comida de conforto levada a sério.",
+    ru: "Американская кухня региональная, а не национальная — клэм-чаудер из Новой Англии, джерк с карибскими корнями, чизбургер из любого места, где есть плоская сковорода. Общая нить — уютная еда, к которой относятся серьёзно.",
+    tr: "Amerikan mutfağı ulusal değil, bölgeseldir — New England'dan deniz tarağı çorbası, Karayip köklü jerk, düz ızgaranın olduğu her yerde doğan cheeseburger. Her şeyden geçen ortak iplik, ciddi yapılan rahatlık yemeğidir.",
   },
   // REVIEW: "pastel de carne" risks reading as dessert in some LATAM markets;
   // peninsular Spanish accepts it as the Aussie meat-pie analogue.
@@ -394,6 +469,8 @@ export const CUISINE_INTRO = {
   // meat pie — Italian has no clean equivalent dish category.
   // REVIEW (PT): "tortinhas de carne" — same issue; BR readers may parse it as small
   // savoury tarts rather than the chunky-fill Aussie meat pie.
+  // REVIEW (TR): "etli börekler" reads as a Turkish börek (filled pastry); the
+  // Aussie meat pie has no clean Turkish equivalent.
   'Australia': {
     en: "Australian cooking borrows widely and barbecues constantly — peppery meat pies handed across counters, summer pavlova piled with passionfruit and cream. Coffee culture takes the rest seriously.",
     ro: "Bucătăria australiană împrumută peste tot și face grătar constant — plăcinte cu carne piperate, pavlova de vară cu fructul pasiunii și frișcă. Cultura cafelei tratează restul cu seriozitate.",
@@ -402,6 +479,8 @@ export const CUISINE_INTRO = {
     de: "Die australische Küche borgt weit und grillt unentwegt — pfeffrige Fleisch-Pies über die Theke gereicht, sommerliche Pavlova mit Passionsfrucht und Sahne gekrönt. Die Kaffeekultur nimmt den Rest sehr ernst.",
     it: "La cucina australiana prende a prestito ovunque e griglia di continuo — tortini di carne pepati passati sopra al bancone, pavlova estiva incoronata di frutto della passione e panna. La cultura del caffè prende il resto molto sul serio.",
     pt: "A cozinha australiana toma emprestado de toda parte e faz churrasco sem parar — tortinhas de carne apimentadas passadas por cima do balcão, pavlova de verão coroada de maracujá e chantilly. A cultura do café leva o resto muito a sério.",
+    ru: "Австралийская кухня заимствует широко и постоянно жарит на барбекю — острые мясные пирожки передают через прилавок, летняя павлова, увенчанная маракуйей и сливками. Кофейная культура остальное берёт всерьёз.",
+    tr: "Avustralya mutfağı çok yerden ödünç alır ve sürekli mangal yapar — tezgâhın üstünden geçirilen biberli etli börekler, üzerine çarkıfelek meyvesi ve krema yığılan yaz pavlovası. Kahve kültürü gerisini çok ciddiye alır.",
   },
 
   // ── Central European
@@ -415,6 +494,8 @@ export const CUISINE_INTRO = {
     de: "Die deutsche Küche ist herzhaft und direkt — Schweineschnitzel dünn geklopft, Currywurst auf dem Pappteller geschnitten, Senf und Brot immer in Reichweite. Wirtshausküche, regionaler Stolz, kein Aufhebens.",
     it: "La cucina tedesca è sostanziosa e diretta — cotoletta di maiale battuta fine, currywurst affettata su piatto di carta, senape e pane sempre a portata. Cucina da birreria, orgoglio regionale, senza fronzoli.",
     pt: "A cozinha alemã é farta e direta — bife à milanesa de porco batido fino, currywurst fatiada em prato de papelão, mostarda e pão sempre à mão. Comida de cervejaria, orgulho regional, sem afetação.",
+    ru: "Немецкая кухня сытная и прямая — свиной шницель, отбитый тонко, карривурст, нарезанный на бумажной тарелке, горчица и хлеб всегда рядом. Кухня пивного зала, региональная гордость, без суеты.",
+    tr: "Alman mutfağı doyurucu ve dolaysızdır — incecik dövülen domuz şnitzeli, karton tabakta dilimlenen currywurst, hardal ve ekmek hep yakında. Birahane konforu, bölgesel gurur, gösterişsiz.",
   },
   'Switzerland': {
     en: "Swiss cooking turns dairy and potato into ritual — rösti crisped golden in a skillet, fondue bubbling at the center of the table. Mountain food, mountain restraint, a long spoon.",
@@ -424,6 +505,8 @@ export const CUISINE_INTRO = {
     de: "Die Schweizer Küche macht aus Milchprodukten und Kartoffel ein Ritual — Rösti goldknusprig in der Pfanne, Fondue blubbernd in der Tischmitte. Bergküche, Bergzurückhaltung, ein langer Löffel.",
     it: "La cucina svizzera fa di latticini e patate un rito — rösti dorato croccante in padella, fondue che gorgoglia al centro della tavola. Cucina di montagna, misura di montagna, un cucchiaio lungo.",
     pt: "A cozinha suíça transforma laticínio e batata em ritual — rösti dourado e crocante na frigideira, fondue borbulhando no centro da mesa. Comida de montanha, comedimento de montanha, uma colher comprida.",
+    ru: "Швейцарская кухня превращает молочное и картофель в ритуал — рёшти золотится в сковороде, фондю булькает в центре стола. Горная еда, горная сдержанность, длинная ложка.",
+    tr: "İsviçre mutfağı süt ürününü ve patatesi ritüele dönüştürür — tavada altın rengi alan rösti, sofranın ortasında fokurdayan fondü. Dağ yemeği, dağ ölçüsü, uzun bir kaşık.",
   },
   'Netherlands': {
     en: "Dutch cooking keeps it practical — mashed-vegetable stamppot, small puffy poffertjes dusted with sugar. Cabbage, sausage, hot mustard, gezellig company at a long pine table.",
@@ -433,6 +516,8 @@ export const CUISINE_INTRO = {
     de: "Die niederländische Küche bleibt praktisch — Stamppot aus zerstampftem Gemüse, kleine fluffige Poffertjes mit Zucker bestäubt. Kohl, Wurst, scharfer Senf, gezellige Gesellschaft an einem langen Kieferntisch.",
     it: "La cucina olandese resta pratica — stamppot di verdure schiacciate, piccoli poffertjes gonfi spolverati di zucchero. Cavolo, salsiccia, senape forte, compagnia gezellig attorno a un lungo tavolo di pino.",
     pt: "A cozinha holandesa se mantém prática — stamppot de legumes amassados, pequenos poffertjes fofos polvilhados de açúcar. Repolho, linguiça, mostarda forte, companhia gezellig em uma longa mesa de pinho.",
+    ru: "Голландская кухня остаётся практичной — стампот из размятых овощей, маленькие пышные поффертье, посыпанные сахаром. Капуста, колбаса, острая горчица, gezellig-компания за длинным сосновым столом.",
+    tr: "Hollanda mutfağı pratik kalır — sebzelerin ezilmesiyle stamppot, üzerine pudra şekeri serpilen küçük kabarık poffertjes. Lahana, sosis, sert hardal, uzun çam masada gezellig sohbet.",
   },
   'Belgium': {
     en: "Belgian cooking is beer and butter — slow stoofvlees stewed in dark ale, moules-frites steamed open at the table. Frites with mayo are not a debate here, and the chocolate counter is taken seriously.",
@@ -442,6 +527,8 @@ export const CUISINE_INTRO = {
     de: "Die belgische Küche ist Bier und Butter — Stoofvlees langsam in dunklem Ale geschmort, Moules-frites am Tisch dampfend aufgehen lassen. Pommes mit Mayo werden hier nicht debattiert, und die Schokoladentheke nimmt man sehr ernst.",
     it: "La cucina belga è birra e burro — stoofvlees stufato a lungo nella birra scura, moules-frites aperte al vapore in tavola. Le patatine con mayo non si discutono qui, e il bancone del cioccolato si prende sul serio.",
     pt: "A cozinha belga é cerveja e manteiga — stoofvlees cozido devagar em cerveja escura, moules-frites abertos no vapor à mesa. As batatas com maionese não se discutem aqui, e o balcão do chocolate se leva muito a sério.",
+    ru: "Бельгийская кухня — это пиво и масло — стуфвлеес медленно тушится в тёмном эле, мюль-фрит открываются на пару прямо на столе. Картофель фри с майонезом здесь не обсуждается, а шоколадная стойка воспринимается всерьёз.",
+    tr: "Belçika mutfağı bira ve tereyağdır — koyu birada uzun süre demlenen stoofvlees, sofrada buharda açılan moules-frites. Mayonezli patates burada tartışılmaz, çikolata tezgâhı da çok ciddiye alınır.",
   },
 
   // ── Central Asian
@@ -453,5 +540,7 @@ export const CUISINE_INTRO = {
     de: "Die usbekische Küche dreht sich um Plov — Lamm, Reis und Karotten stundenlang im Kasan geschmort — und Manti, handgekniffene Teigtaschen mit Zwiebel und Lammfleisch gefüllt. Brot im Lehm-Tandyr gebacken, Tee unablässig nachgeschenkt.",
     it: "La cucina uzbeka gira attorno al plov — agnello, riso e carote sobbolliti per ore nel kazan — e ai manti, ravioli pizzicati a mano ripieni di cipolla e agnello. Pane cotto nel tandyr di terracotta, tè versato senza sosta.",
     pt: "A cozinha uzbeque gira em torno do plov — cordeiro, arroz e cenoura fervidos por horas no kazan — e do manti, pastéis pinçados à mão recheados de cebola e cordeiro. Pão assado no tandyr de barro, chá servido sem parar.",
+    ru: "Узбекская кухня крутится вокруг плова — баранина, рис и морковь часами томятся в казане — и манты, защипанные руками с луком и бараниной. Хлеб печётся в глиняном тандыре, чай разливают непрерывно.",
+    tr: "Özbek mutfağı plov etrafında döner — kazanda saatlerce kuzu, pirinç ve havuçla demlenir — ve manti, soğan ve kuzu dolgulu elde tutturulan hamur işi. Ekmek toprak tandırda pişer, çay durmadan dökülür.",
   },
 };
