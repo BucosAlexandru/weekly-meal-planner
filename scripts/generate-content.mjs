@@ -74,6 +74,25 @@ function resolveRecipeImage(recipe, rslug) {
   return { src: `${PROD_ORIGIN}/images/cover2.jpg`, ogUrl: `${PROD_ORIGIN}/images/cover2.jpg` };
 }
 
+/* Stability ranking for thumb/featured pickers on cuisine surfaces.
+   Card pickers (recipeIndex thumb-strip, cuisineHubPage featured hero) used
+   to take the first N recipes in array order, so cuisines with mixed sources
+   (e.g. Greece = 2 Spoonacular + 3 Wikipedia) ended up showcasing the
+   Spoonacular ones — which 404 in many regions and fall back to the flag.
+   Higher score = more reliable host, so the same set of available URLs gets
+   surfaced consistently regardless of recipes.js authoring order.
+     3 — local /images/<slug>.{webp,jpg,png} (same-origin, can't 404)
+     2 — upload.wikimedia.org (CDN, stable URLs)
+     1 — anything else with a real URL (img.spoonacular.com hot-links —
+         known flaky)
+     0 — placeholder cover2.jpg / missing                                  */
+function imgStability(url) {
+  if (!url || url.endsWith('cover2.jpg')) return 0;
+  if (url.startsWith('/')) return 3;
+  if (url.includes('upload.wikimedia.org')) return 2;
+  return 1;
+}
+
 /* Image quality pipeline (Phase 6 item 3): generates srcset + sizes for an
    image URL so the browser picks an appropriately-sized variant per
    viewport+DPR. Avoids serving 330px Wikipedia thumbs to Retina screens.
@@ -3367,13 +3386,21 @@ function recipeIndex(rl) {
     const originSlug = slug(enKey);
     const countryHref = `${rl.dir}/${originSlug}/`;
     const atmosphere = cuisineAtmosphere(enKey);
-    // Pick up to 3 thumbnails, preferring real images over placeholder.
+    // Pick up to 3 thumbnails, preferring stable hosts (local > Wikipedia >
+    // Spoonacular > placeholder). Stable-tier ranking matters because
+    // Spoonacular hot-links 404 in many regions — without sorting we'd
+    // surface flag fallbacks for cuisines that actually have working
+    // Wikipedia images further down the array.
     const allThumbs = recs.map(r => {
       const rs = slug(r.name?.en || r.name?.ro || '');
       return resolveRecipeImage(r, rs).src;
     });
-    const goodThumbs = allThumbs.filter(u => !/cover2\.jpg$/.test(u));
-    const thumbs = (goodThumbs.length >= 3 ? goodThumbs : allThumbs).slice(0, 3);
+    const ranked = allThumbs
+      .map((u, i) => ({ u, i, s: imgStability(u) }))
+      .sort((a, b) => b.s - a.s || a.i - b.i)
+      .map(x => x.u);
+    const goodThumbs = ranked.filter(u => !/cover2\.jpg$/.test(u));
+    const thumbs = (goodThumbs.length >= 3 ? goodThumbs : ranked).slice(0, 3);
     const thumbsHtml = thumbs.map((u, i) => {
       const isPlaceholder = /cover2\.jpg$/.test(u);
       return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
@@ -3701,9 +3728,16 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // Build tile data once. Used by the hero (featured image), the tile grid,
   // and the schema.org ItemList.
   const tiles = recs.map(r => cuisineTileData(r, lc_code, rl.dir));
-  // Featured recipe: prefer the first one with a non-placeholder image so the
-  // hero doesn't render cover2.jpg if a better option exists in the cuisine.
-  const featured = tiles.find(t => !/cover2\.jpg$/.test(t.img)) || tiles[0];
+  // Featured recipe: pick the most-stable-image tile (local > Wikipedia >
+  // Spoonacular > placeholder), original recipes.js order as tie-breaker.
+  // Falling back to "first non-placeholder" used to showcase Spoonacular
+  // hot-links (e.g. Greece featured = Souvlaki Spoonacular) even when the
+  // cuisine had Wikipedia images that would actually load.
+  const featured =
+    [...tiles]
+      .map((t, i) => ({ t, i, s: imgStability(t.img) }))
+      .sort((a, b) => b.s - a.s || a.i - b.i)[0]?.t
+    || tiles[0];
 
   const items = tiles.map((t, i) => ({
     "@type": "ListItem",
