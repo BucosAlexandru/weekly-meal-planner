@@ -15,7 +15,8 @@ import { recipeImages }               from '../public/js/recipe-images.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import { CUISINE_INTRO }              from './cuisine-intros.mjs';
-import { RELATED_CUISINES, MAX_RELATED_CUISINES } from './discovery-config.mjs';
+import { RELATED_CUISINES, MAX_RELATED_CUISINES,
+         enrichCatalog, selectByTagMix, resolveDiscoveryTarget } from './discovery-config.mjs';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -23,6 +24,14 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT      = path.resolve(__dirname, '..');
 const PUBLIC    = path.join(ROOT, 'public');
+
+// Phase 7 PR 3: discovery catalog enriched once at module load. Reused by
+// recipePage() for the cross-cuisine "similar-tag-mix" bridge strip. The
+// id→raw lookup gives card-rendering helpers (recipeMetadata, slug, etc.)
+// access to the full recipe object after selectByTagMix returns its
+// enriched-but-trimmed shape.
+const discoveryCatalog = enrichCatalog({ recipes, recipesMeta });
+const recipesById      = new Map(recipes.map(r => [r.id, r]));
 
 /* ── helpers ──────────────────────────────────────────────────── */
 const mkdir  = p => fs.mkdirSync(p, { recursive: true });
@@ -912,6 +921,27 @@ const NAV_PLANS_LABELS = {
 };
 const navPlansLink = (lc_code) => `<span class="nav-link-icon" aria-hidden="true">📅</span> <span class="nav-link-label">${NAV_PLANS_LABELS[lc_code] || 'Plans'}</span>`;
 
+// A11y labels for the nav and language switcher. Hardcoded English on
+// non-English pages was a mixed-language defect on cuisine hubs, pricing,
+// recipe pages — every page that renders the header.
+const A11Y_LABELS = {
+  ro: { selectLang:'Selectează limba',  mainNav:'Navigare principală',    availableLangs:'Limbi disponibile' },
+  en: { selectLang:'Select language',   mainNav:'Main navigation',        availableLangs:'Available languages' },
+  es: { selectLang:'Seleccionar idioma',mainNav:'Navegación principal',   availableLangs:'Idiomas disponibles' },
+  fr: { selectLang:'Choisir la langue', mainNav:'Navigation principale',  availableLangs:'Langues disponibles' },
+  de: { selectLang:'Sprache auswählen', mainNav:'Hauptnavigation',        availableLangs:'Verfügbare Sprachen' },
+  pt: { selectLang:'Selecionar idioma', mainNav:'Navegação principal',    availableLangs:'Idiomas disponíveis' },
+  ru: { selectLang:'Выбрать язык',      mainNav:'Главная навигация',      availableLangs:'Доступные языки' },
+  ar: { selectLang:'اختر اللغة',         mainNav:'التنقل الرئيسي',           availableLangs:'اللغات المتاحة' },
+  zh: { selectLang:'选择语言',           mainNav:'主导航',                  availableLangs:'可用语言' },
+  ja: { selectLang:'言語を選択',         mainNav:'メインナビゲーション',      availableLangs:'対応言語' },
+  hi: { selectLang:'भाषा चुनें',          mainNav:'मुख्य नेविगेशन',            availableLangs:'उपलब्ध भाषाएँ' },
+  tr: { selectLang:'Dili seçin',         mainNav:'Ana gezinme',            availableLangs:'Mevcut diller' },
+  it: { selectLang:'Seleziona la lingua',mainNav:'Navigazione principale', availableLangs:'Lingue disponibili' },
+  ko: { selectLang:'언어 선택',          mainNav:'기본 탐색',               availableLangs:'사용 가능한 언어' },
+};
+const a11y = (lc_code) => A11Y_LABELS[lc_code] || A11Y_LABELS.en;
+
 // Builds the lang-switcher dropdown for the in-page nav. Caller passes an
 // optional `urlMap` keyed by locale code so the switcher preserves page
 // context across locales — e.g. switching from `/en/recipes/pav-bhaji/` to ES
@@ -924,9 +954,10 @@ const buildNavLangSelect = (lc_code, id_prefix = 'nav-lang', urlMap = null) => {
       return `<option value="${href}"${code === lc_code ? ' selected' : ''}>${NAV_LANG_NAMES[code]}</option>`;
     })
     .join('');
+  const labels = a11y(lc_code);
   return `<div class="nav-lang">
-      <label class="visually-hidden" for="${id_prefix}-${lc_code}">Select language</label>
-      <select id="${id_prefix}-${lc_code}" class="lang-select" aria-label="Select language" onchange="location.href=this.value">${options}</select>
+      <label class="visually-hidden" for="${id_prefix}-${lc_code}">${labels.selectLang}</label>
+      <select id="${id_prefix}-${lc_code}" class="lang-select" aria-label="${labels.selectLang}" onchange="location.href=this.value">${options}</select>
     </div>`;
 };
 
@@ -961,7 +992,7 @@ const NAV_URL_FOR = {
 
 const makeNav = (lc, langUrlMap = null) => `
 <header class="app-header no-print" role="banner">
-  <nav class="app-nav" aria-label="Main navigation">
+  <nav class="app-nav" aria-label="${a11y(lc.code).mainNav}">
     <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
       <span class="nav-icon" aria-hidden="true">🥗</span>
       <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
@@ -982,7 +1013,7 @@ const FOOTER_LANG_LINKS = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi
 const makeFooter = (lc) => `
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">
-    <nav class="footer-langs" aria-label="Available languages">${FOOTER_LANG_LINKS}</nav>
+    <nav class="footer-langs" aria-label="${a11y(lc.code).availableLangs}">${FOOTER_LANG_LINKS}</nav>
     <div class="footer-main">
       <span class="footer-brand">🥗 Meal-Planner.ro</span>
       <span class="footer-sep">·</span>
@@ -1355,8 +1386,9 @@ function makePricingNav(lc_code) {
     .map(([code, sl]) =>
       `<option value="/${code}/${sl}/"${code === lc_code ? ' selected' : ''}>${NAV_LANG_NAMES[code]}</option>`
     ).join('');
+  const labels = a11y(lc_code);
   return `<header class="app-header no-print" role="banner">
-  <nav class="app-nav" aria-label="Main navigation">
+  <nav class="app-nav" aria-label="${labels.mainNav}">
     <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
       <span class="nav-icon" aria-hidden="true">🥗</span>
       <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
@@ -1367,8 +1399,8 @@ function makePricingNav(lc_code) {
       <a href="${pricingHref}" class="nav-link nav-link--active" aria-current="page">⭐ Premium</a>
     </div>
     <div class="nav-lang">
-      <label class="visually-hidden" for="pricing-lang-${lc_code}">Select language</label>
-      <select id="pricing-lang-${lc_code}" class="lang-select" aria-label="Select language" onchange="location.href=this.value">
+      <label class="visually-hidden" for="pricing-lang-${lc_code}">${labels.selectLang}</label>
+      <select id="pricing-lang-${lc_code}" class="lang-select" aria-label="${labels.selectLang}" onchange="location.href=this.value">
         ${options}
       </select>
     </div>
@@ -3094,6 +3126,61 @@ function recipePage(recipe, rl) {
 </a>`;
     }).join('');
 
+  // Cross-cuisine bridge — Phase 7 PR 3. Strict different-origin filter via
+  // selectByTagMix; ranked by tag overlap desc, then id asc (deterministic).
+  // Gated on ro/en only per PR 3 scope; can be widened by removing the
+  // `bridgeLocales.has(code)` check. Cards reuse the same .recipe-card-item
+  // markup as the same-cuisine strip; layout is a CSS grid (no carousel).
+  // Skipped silently when the recipe has no tags or no eligible neighbours.
+  let bridgeHtml = '';
+  const bridgeLocales = new Set(['ro', 'en']);
+  if (bridgeLocales.has(code)) {
+    const currentItem = discoveryCatalog.find(it => it.id === recipe.id);
+    const bridgeItems = currentItem && currentItem.tags.length
+      ? selectByTagMix(discoveryCatalog, currentItem, { max: 4 })
+      : [];
+    if (bridgeItems.length > 0) {
+      const bridgeHeading = code === 'ro'
+        ? 'Asemănătoare din alte bucătării'
+        : 'Similar dishes from other cuisines';
+      const cards = bridgeItems.map(item => {
+        const raw = recipesById.get(item.id);
+        if (!raw) return '';
+        const rn = raw.name?.[code] || raw.name?.en || raw.name?.ro || '';
+        const rs = slug(raw.name?.en || raw.name?.ro || rn);
+        const ri = raw.ingredients?.[code] || raw.ingredients?.en || [];
+        const rh = raw.howIsMade?.[code]  || raw.howIsMade?.en  || '';
+        const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
+        const rcat = raw.category?.[code] || raw.category?.en || '';
+        const rm = recipeMetadata(ri, rst, rcat, code);
+        const re = recipeCardEmoji(rcat);
+        const rOriginEn = raw.origin?.en || '';
+        const rOriginLocal = raw.origin?.[code] || rOriginEn;
+        const rFlag = COUNTRY_FLAG[rOriginEn] || '';
+        const target = resolveDiscoveryTarget(item, code);
+        const href = target.target === 'recipe'
+          ? `${rl.dir}/${rs}/`
+          : (recipeCuisineHubHref(rOriginEn, code) || `${rl.dir}/`);
+        return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
+  <div class="recipe-card-img" data-card-recipe="${rs}">${re}</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">${esc(rn)}</p>
+    <span class="recipe-card-meta">${rFlag ? rFlag + ' ' : ''}${esc(rOriginLocal)} · ${rm.totalTime}</span>
+  </div>
+</a>`;
+      }).filter(Boolean).join('');
+      if (cards) {
+        bridgeHtml = `
+  <div class="recipe-bridge-section">
+    <div class="recipe-related-header">
+      <h2>${esc(bridgeHeading)}</h2>
+    </div>
+    <div class="recipe-bridge-grid">${cards}</div>
+  </div>`;
+      }
+    }
+  }
+
   const dir_attr = rl.dir_attr || 'ltr';
   // Cuisine hub link (if this origin has a hub of ≥2 recipes). When present
   // we expose it in 3 places: breadcrumb, recipe-badge origin chip, and the
@@ -3190,7 +3277,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     </div>
     <div class="recipe-cards-scroll">${related}</div>
   </div>` : ''}
-
+${bridgeHtml}
   <!-- CTA Banner -->
   <div class="recipe-cta-banner">
     <span class="cta-banner-icon">🥗</span>
