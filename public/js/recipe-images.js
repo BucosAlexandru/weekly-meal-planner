@@ -15,7 +15,7 @@ export const recipeImages = {
   13: 'https://img.spoonacular.com/recipes/715543-312x231.jpg',
   14: 'https://img.spoonacular.com/recipes/664396-312x231.jpg',
   15: 'https://img.spoonacular.com/recipes/661886-312x231.jpg',
-  16: 'https://img.spoonacular.com/recipes/663113-312x231.jpg',
+  16: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/330px-Phat_Thai_kung_Chang_Khien_street_stall.jpg',
   17: 'https://img.spoonacular.com/recipes/656819-312x231.jpg',
   18: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Feijoada_%C3%A0_transmontada.jpg/330px-Feijoada_%C3%A0_transmontada.jpg',
   19: 'https://img.spoonacular.com/recipes/649129-312x231.jpg',
