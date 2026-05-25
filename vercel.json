@@ -229,6 +229,286 @@
       "source": "/ko/recipes/dalmatinska-pasticada",
       "destination": "/ko/recipes/crni-rizot/",
       "permanent": true
+    },
+    {
+      "source": "/ro/retete/kottbullar",
+      "destination": "/ro/retete/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/kottbullar",
+      "destination": "/en/recipes/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/kottbullar",
+      "destination": "/es/recetas/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/kottbullar",
+      "destination": "/fr/recettes/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/kottbullar",
+      "destination": "/de/rezepte/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/kottbullar",
+      "destination": "/pt/receitas/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/kottbullar",
+      "destination": "/ru/retsepty/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/kottbullar",
+      "destination": "/ar/wasafat/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/kottbullar",
+      "destination": "/zh/shipu/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/kottbullar",
+      "destination": "/ja/reshipi/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/kottbullar",
+      "destination": "/hi/recipes/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/kottbullar",
+      "destination": "/tr/tarifler/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/kottbullar",
+      "destination": "/it/ricette/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/kottbullar",
+      "destination": "/ko/recipes/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/tagine",
+      "destination": "/ro/retete/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/tagine",
+      "destination": "/en/recipes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/tagine",
+      "destination": "/es/recetas/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/tagine",
+      "destination": "/fr/recettes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/tagine",
+      "destination": "/de/rezepte/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/tagine",
+      "destination": "/pt/receitas/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/tagine",
+      "destination": "/ru/retsepty/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/tagine",
+      "destination": "/ar/wasafat/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/tagine",
+      "destination": "/zh/shipu/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/tagine",
+      "destination": "/ja/reshipi/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/tagine",
+      "destination": "/hi/recipes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/tagine",
+      "destination": "/tr/tarifler/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/tagine",
+      "destination": "/it/ricette/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/tagine",
+      "destination": "/ko/recipes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/ramen",
+      "destination": "/ro/retete/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/ramen",
+      "destination": "/en/recipes/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/ramen",
+      "destination": "/es/recetas/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/ramen",
+      "destination": "/fr/recettes/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/ramen",
+      "destination": "/de/rezepte/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/ramen",
+      "destination": "/pt/receitas/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/ramen",
+      "destination": "/ru/retsepty/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/ramen",
+      "destination": "/ar/wasafat/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/ramen",
+      "destination": "/zh/shipu/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/ramen",
+      "destination": "/ja/reshipi/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/ramen",
+      "destination": "/hi/recipes/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/ramen",
+      "destination": "/tr/tarifler/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/ramen",
+      "destination": "/it/ricette/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/ramen",
+      "destination": "/ko/recipes/classic-japanese-ramen/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pork-schnitzel",
+      "destination": "/ro/retete/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/pork-schnitzel",
+      "destination": "/en/recipes/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/pork-schnitzel",
+      "destination": "/es/recetas/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/pork-schnitzel",
+      "destination": "/fr/recettes/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/pork-schnitzel",
+      "destination": "/de/rezepte/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/pork-schnitzel",
+      "destination": "/pt/receitas/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/pork-schnitzel",
+      "destination": "/ru/retsepty/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/pork-schnitzel",
+      "destination": "/ar/wasafat/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/pork-schnitzel",
+      "destination": "/zh/shipu/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/pork-schnitzel",
+      "destination": "/ja/reshipi/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/pork-schnitzel",
+      "destination": "/hi/recipes/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/pork-schnitzel",
+      "destination": "/tr/tarifler/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/pork-schnitzel",
+      "destination": "/it/ricette/kotlet-schabowy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/pork-schnitzel",
+      "destination": "/ko/recipes/kotlet-schabowy/",
+      "permanent": true
     }
   ]
 }

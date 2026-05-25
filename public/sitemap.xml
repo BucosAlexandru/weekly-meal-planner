@@ -1099,7 +1099,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ro/retete/ramen/</loc>
+    <loc>https://meal-planner.ro/ro/retete/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1615,13 +1615,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ro/retete/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ro/retete/kottbullar/</loc>
+    <loc>https://meal-planner.ro/ro/retete/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1819,7 +1813,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ro/retete/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/ro/retete/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2155,7 +2149,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/en/recipes/ramen/</loc>
+    <loc>https://meal-planner.ro/en/recipes/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2671,13 +2665,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/en/recipes/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/en/recipes/kottbullar/</loc>
+    <loc>https://meal-planner.ro/en/recipes/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2875,7 +2863,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/en/recipes/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/en/recipes/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -3211,7 +3199,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/es/recetas/ramen/</loc>
+    <loc>https://meal-planner.ro/es/recetas/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3727,13 +3715,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/es/recetas/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/es/recetas/kottbullar/</loc>
+    <loc>https://meal-planner.ro/es/recetas/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -3931,7 +3913,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/es/recetas/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/es/recetas/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -4267,7 +4249,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/fr/recettes/ramen/</loc>
+    <loc>https://meal-planner.ro/fr/recettes/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -4783,13 +4765,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/fr/recettes/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/fr/recettes/kottbullar/</loc>
+    <loc>https://meal-planner.ro/fr/recettes/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -4987,7 +4963,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/fr/recettes/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/fr/recettes/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -5323,7 +5299,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/de/rezepte/ramen/</loc>
+    <loc>https://meal-planner.ro/de/rezepte/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -5839,13 +5815,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/de/rezepte/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/de/rezepte/kottbullar/</loc>
+    <loc>https://meal-planner.ro/de/rezepte/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -6043,7 +6013,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/de/rezepte/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/de/rezepte/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -6379,7 +6349,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/pt/receitas/ramen/</loc>
+    <loc>https://meal-planner.ro/pt/receitas/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -6895,13 +6865,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/pt/receitas/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/pt/receitas/kottbullar/</loc>
+    <loc>https://meal-planner.ro/pt/receitas/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -7099,7 +7063,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/pt/receitas/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/pt/receitas/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -7435,7 +7399,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ru/retsepty/ramen/</loc>
+    <loc>https://meal-planner.ro/ru/retsepty/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -7951,13 +7915,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ru/retsepty/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ru/retsepty/kottbullar/</loc>
+    <loc>https://meal-planner.ro/ru/retsepty/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -8155,7 +8113,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ru/retsepty/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/ru/retsepty/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -8491,7 +8449,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ar/wasafat/ramen/</loc>
+    <loc>https://meal-planner.ro/ar/wasafat/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -9007,13 +8965,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ar/wasafat/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ar/wasafat/kottbullar/</loc>
+    <loc>https://meal-planner.ro/ar/wasafat/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -9211,7 +9163,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ar/wasafat/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/ar/wasafat/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -9547,7 +9499,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/zh/shipu/ramen/</loc>
+    <loc>https://meal-planner.ro/zh/shipu/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -10063,13 +10015,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/zh/shipu/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/zh/shipu/kottbullar/</loc>
+    <loc>https://meal-planner.ro/zh/shipu/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -10267,7 +10213,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/zh/shipu/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/zh/shipu/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -10603,7 +10549,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ja/reshipi/ramen/</loc>
+    <loc>https://meal-planner.ro/ja/reshipi/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -11119,13 +11065,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ja/reshipi/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ja/reshipi/kottbullar/</loc>
+    <loc>https://meal-planner.ro/ja/reshipi/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -11323,7 +11263,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ja/reshipi/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/ja/reshipi/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -11659,7 +11599,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/hi/recipes/ramen/</loc>
+    <loc>https://meal-planner.ro/hi/recipes/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -12175,13 +12115,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/hi/recipes/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/hi/recipes/kottbullar/</loc>
+    <loc>https://meal-planner.ro/hi/recipes/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -12379,7 +12313,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/hi/recipes/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/hi/recipes/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -12715,7 +12649,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/tr/tarifler/ramen/</loc>
+    <loc>https://meal-planner.ro/tr/tarifler/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -13231,13 +13165,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/tr/tarifler/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/tr/tarifler/kottbullar/</loc>
+    <loc>https://meal-planner.ro/tr/tarifler/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -13435,7 +13363,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/tr/tarifler/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/tr/tarifler/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -13771,7 +13699,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/it/ricette/ramen/</loc>
+    <loc>https://meal-planner.ro/it/ricette/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -14287,13 +14215,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/it/ricette/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/it/ricette/kottbullar/</loc>
+    <loc>https://meal-planner.ro/it/ricette/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -14491,7 +14413,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/it/ricette/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/it/ricette/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -14827,7 +14749,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ko/recipes/ramen/</loc>
+    <loc>https://meal-planner.ro/ko/recipes/classic-japanese-ramen/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -15343,13 +15265,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ko/recipes/tagine/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ko/recipes/kottbullar/</loc>
+    <loc>https://meal-planner.ro/ko/recipes/chicken-tagine/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -15547,7 +15463,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ko/recipes/pork-schnitzel/</loc>
+    <loc>https://meal-planner.ro/ko/recipes/kotlet-schabowy/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -15775,12 +15691,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ro/retete/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/ro/retete/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -15818,6 +15728,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ro/retete/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -16051,12 +15967,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/en/recipes/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/en/recipes/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -16094,6 +16004,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -16327,12 +16243,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/es/recetas/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/es/recetas/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -16370,6 +16280,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/es/recetas/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -16603,12 +16519,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/fr/recettes/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/fr/recettes/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -16646,6 +16556,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -16879,12 +16795,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/de/rezepte/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/de/rezepte/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -16922,6 +16832,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/de/rezepte/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -17155,12 +17071,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/pt/receitas/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/pt/receitas/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -17198,6 +17108,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -17431,12 +17347,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ru/retsepty/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/ru/retsepty/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -17474,6 +17384,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ru/retsepty/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -17707,12 +17623,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ar/wasafat/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/ar/wasafat/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -17750,6 +17660,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -17983,12 +17899,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/zh/shipu/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/zh/shipu/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -18026,6 +17936,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/zh/shipu/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -18259,12 +18175,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ja/reshipi/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/ja/reshipi/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -18302,6 +18212,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -18535,12 +18451,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/hi/recipes/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/hi/recipes/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -18578,6 +18488,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/hi/recipes/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -18811,12 +18727,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/tr/tarifler/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/tr/tarifler/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -18854,6 +18764,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -19087,12 +19003,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/it/ricette/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/it/ricette/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -19130,6 +19040,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/it/ricette/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -19363,12 +19279,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://meal-planner.ro/ko/recipes/sweden/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://meal-planner.ro/ko/recipes/indonesia/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -19406,6 +19316,12 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ko/recipes/syria/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/sweden/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

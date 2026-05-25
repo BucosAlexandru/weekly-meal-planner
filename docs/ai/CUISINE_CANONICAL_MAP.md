@@ -191,9 +191,9 @@ Some dishes have legitimate parallel claims from multiple countries. Rule: **one
 
 ---
 
-## 6. Merge decisions log (Phase 8A)
+## 6. Merge decisions log
 
-Applied:
+### Phase 8A — Wave 1 (cuisine renormalization)
 
 | Date | Decision | Affected recipe id | Old | New |
 |---|---|---|---|---|
@@ -202,14 +202,15 @@ Applied:
 | 2026-05-25 | Reassign Lentil Soup from "Middle East" bucket. | 95 | `origin.en: 'Middle East'` (and 14 lang variants) | `origin.en: 'Lebanon'` (14 lang variants) — classic shorbat adas profile; promotes Lebanon to a 2-recipe hub (with Tabbouleh). |
 | 2026-05-25 | Add missing `pt` origin field on Plov. | 152 | `origin.pt` missing | `origin.pt: 'Uzbequistão'` |
 
-Deferred (require recipe deletion or renaming — affects URLs; awaiting explicit approval — see `RECIPE_CONFLICTS.md`):
+### Phase 8A — Wave 2 (deferred items, now applied)
 
-| Decision | Affected recipe id | Reason for deferral |
-|---|---|---|
-| Delete Kottbullar (duplicate of Swedish Meatballs). | 119 | Removing kills `/<lc>/recipes/kottbullar/` page across 14 locales (sitemap + any external backlinks). Needs sign-off. |
-| Delete or merge Lamb Tagine (overlap with Tagine). | 167 | Same URL-impact concern. Recommendation: rename id=118 to `Chicken Tagine` and keep id=167. |
-| Rename Pork schnitzel → Kotlet schabowy. | 155 | URL change. Otherwise Polish dish under wrong common name. |
-| Resolve Ramen generic vs Tonkotsu/Shoyu/Miso overlap. | 28, 181, 182, 183 | Generic Ramen ≈ Shoyu Ramen. Either delete id=28, merge id=28 into id=182, or rename id=28 to a regional variant. |
+| Date | Decision | Affected recipe id | Outcome |
+|---|---|---|---|
+| 2026-05-25 | **Delete Kottbullar** — duplicate of Swedish Meatballs. | 119 (removed) | Recipe object removed from `recipes.js`. Swedish Meatballs (id=27) stays canonical. The `kottbullar.webp` local image was renamed to `swedish-meatballs.webp` so id=27 now uses the higher-quality local thumbnail. 14 × 308 redirects added in `vercel.json`: `/<lc>/<dir>/kottbullar` → `/<lc>/<dir>/swedish-meatballs/`. Old recipe directories deleted across all 14 locales. |
+| 2026-05-25 | **Rename Tagine → Chicken Tagine** AND rewrite content to clearly differentiate from Lamb Tagine. | 118 | `name.*` updated across 14 locales. `ingredients` rewritten across 14 locales to a clean Djaj M'qalli profile (preserved lemons + green olives + saffron, no dried fruit / chickpeas / honey). `howIsMade` rewritten across 14 locales for the chicken-specific 40-45 min procedure. `originText` second paragraph notes "Djaj M'qalli style" as the distinguishing variant from id=167 Lamb Tagine. 14 × 308 redirects added (`tagine` → `chicken-tagine`). |
+| 2026-05-25 | **Rename id=28 Ramen → Classic Japanese Ramen.** Keep BOTH ramen entities (semantic hierarchy preserved: generic vs specific variants). | 28 | `name.*` updated across 14 locales. id=181 Tonkotsu, id=182 Shoyu, id=183 Miso Ramen remain unchanged as specific subtypes. 14 × 308 redirects added (`ramen` → `classic-japanese-ramen`). |
+| 2026-05-25 | **Rename Pork schnitzel → Kotlet schabowy.** | 155 | `name.*` updated across 14 locales. Origin still Poland. 14 × 308 redirects added (`pork-schnitzel` → `kotlet-schabowy`). `pork-schnitzel.webp` local image renamed to `kotlet-schabowy.webp`. |
+| 2026-05-25 | **Hindi (`hi`) backfill.** | 43 recipes | Added missing `name.hi` and/or `origin.hi` fields. After this pass, every one of the 174 recipes has all 14 language codes on both `name` and `origin`. |
 
 ---
 

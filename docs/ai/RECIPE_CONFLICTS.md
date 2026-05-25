@@ -9,7 +9,7 @@ This file is the source of truth for "which existing rows are problematic and wh
 
 ## 1. Hard duplicates (same dish, two rows)
 
-### 1.1 Kottbullar (id=119) === Swedish Meatballs (id=27) — DEFERRED
+### 1.1 Kottbullar (id=119) === Swedish Meatballs (id=27) — RESOLVED (Wave 2)
 
 Both rows are Swedish meatballs in beef-pork blend with cream gravy. Both share `origin.en = 'Sweden'`. Köttbullar IS the Swedish word for "Swedish Meatballs". The two recipes differ in technique detail (id=119 has the proper "panada" breadcrumb soak and soy-darkened gravy — closer to the IKEA-style canon; id=27 uses soaked bread instead of breadcrumbs and a simpler gravy) but they are the same dish.
 
@@ -23,13 +23,13 @@ Both rows are Swedish meatballs in beef-pork blend with cream gravy. Both share 
 | Gravy | Beef stock + double cream | Stock + cream + flour roux + soy sauce |
 | Image | yes | **no** |
 
-**Recommended fix:** keep id=27 (English title, has image, more SEO weight), delete id=119, merge the better technique notes (panada, soy-darkened gravy) into id=27's `howIsMade` content in a follow-up content pass.
+**Resolution applied (Phase 8A Wave 2):** id=119 deleted from `recipes.js`. The `kottbullar.webp` local image renamed to `swedish-meatballs.webp` so the now-canonical Swedish Meatballs page picks up the better local thumbnail instead of the Spoonacular fallback. 14 × 308 permanent redirects added in `vercel.json` (`/<lc>/<dir>/kottbullar` → `/<lc>/<dir>/swedish-meatballs/`) so any existing inbound links resolve correctly. Stale recipe directories deleted across all 14 locales. Net: –14 pages.
 
-**Why deferred:** removing id=119 deletes `/<lc>/recipes/kottbullar/` × 14 locales (–14 pages, –14 sitemap entries). External backlinks would 404. Needs sign-off.
+Follow-up (Phase 8B-eligible, not blocking): merge the better technique notes (panada step, soy-darkened gravy) from the deleted id=119 content into id=27's `howIsMade` block as a content-quality pass.
 
 ---
 
-### 1.2 Lamb Tagine (id=167) ≈ Tagine (id=118) — DEFERRED
+### 1.2 Lamb Tagine (id=167) ≈ Tagine (id=118) — RESOLVED (Wave 2)
 
 Both rows are Moroccan meat tagines. id=118's `name.en = 'Tagine'` but its ingredients list "1 kg bone-in lamb shoulder, cut into 4 cm cubes (or chicken thighs)" — so it's effectively a lamb tagine with chicken as a noted alternative. id=167 is a dedicated lamb tagine with more elaborate marination and spice work.
 
@@ -41,21 +41,17 @@ Both rows are Moroccan meat tagines. id=118's `name.en = 'Tagine'` but its ingre
 | Spices | Ras el hanout + cumin + cinnamon + turmeric | Same + coriander + paprika + ginger + saffron |
 | Distinct? | No — same dish family | No — same dish family |
 
-**Recommended fix:** rename id=118 to `Chicken Tagine` (and rewrite its ingredient list to make chicken the primary protein, not the alternative) so it's a genuinely different recipe. Keep id=167 as `Lamb Tagine`. This gives Morocco two distinct dishes instead of one duplicated dish.
-
-**Why deferred:** id=118's slug currently is `tagine`. Renaming changes the URL to `chicken-tagine`. Old URL 404s. Needs sign-off + a content rewrite (not a pure label change).
+**Resolution applied (Phase 8A Wave 2):** id=118 renamed to `Chicken Tagine` across 14 locales. `ingredients` rewritten to a Djaj M'qalli profile (chicken thighs + preserved lemons + green olives + saffron, no dried fruit / chickpeas / honey). `howIsMade` rewritten for the chicken-specific 40-45 min cooking procedure. `originText` second paragraph rewritten to explicitly call out the Djaj M'qalli variant distinction from the dried-fruit/ras-el-hanout lamb tagines. Morocco now has two genuinely different dishes: id=118 Chicken Tagine (preserved lemons + olives) and id=167 Lamb Tagine (dried fruit + ras el hanout). 14 × 308 redirects added (`tagine` → `chicken-tagine`).
 
 ---
 
 ## 2. Soft duplicates (intent overlap, may coexist with care)
 
-### 2.1 Ramen family — DEFERRED
+### 2.1 Ramen family — RESOLVED (Wave 2: rename only, no deletion)
 
-Japan has 4 ramen recipes: id=28 `Ramen`, id=181 `Tonkotsu Ramen`, id=182 `Shoyu Ramen`, id=183 `Miso Ramen`. The three sub-styles are legitimately distinct (different broth + tare). The generic `Ramen` (id=28) overlaps with `Shoyu Ramen` (id=182) — id=28's broth uses chicken/pork stock + soy + mirin, which IS the shoyu profile.
+Japan has 4 ramen recipes: id=28 `Ramen`, id=181 `Tonkotsu Ramen`, id=182 `Shoyu Ramen`, id=183 `Miso Ramen`. The three sub-styles are legitimately distinct (different broth + tare). The generic `Ramen` (id=28) overlapped with `Shoyu Ramen` (id=182) by ingredient profile (chicken/pork stock + soy + mirin = shoyu).
 
-**Recommended fix:** delete id=28 (the generic). The three sub-style pages give the user a more useful editorial map of ramen and don't double-count. Alternative: rename id=28 to `Yokohama Iekei Ramen` or another regional variant.
-
-**Why deferred:** removing id=28 deletes `/<lc>/recipes/ramen/` × 14 locales. "Ramen" is a high-search-volume slug and the Japan hub already had 7 entries that lean ramen-heavy — losing the canonical `Ramen` URL is potentially the biggest SEO hit on this list. Recommend renaming over deleting.
+**Resolution applied (Phase 8A Wave 2):** id=28 renamed to `Classic Japanese Ramen` across 14 locales. **All three subtype pages stay.** Semantic hierarchy preserved: generic "Classic Japanese Ramen" is the broad / high-volume entity that captures the canonical ramen search intent, while Tonkotsu / Shoyu / Miso ramen are the specific subtype pages. 14 × 308 redirects added (`ramen` → `classic-japanese-ramen`). `ramen.webp` local image renamed to `classic-japanese-ramen.webp`.
 
 ---
 
@@ -89,13 +85,11 @@ Levenshtein 2 but completely different. No action required.
 
 ## 3. Misattribution / wrong cuisine
 
-### 3.1 Pork schnitzel (id=155) — DEFERRED
+### 3.1 Pork schnitzel (id=155) — RESOLVED (Wave 2)
 
 `origin.en = 'Poland'` and `name.en = 'Pork schnitzel'`. The technique IS authentically Polish (kotlet schabowy: milk soak + flour-egg-breadcrumb breading + lard frying), but the English `name.en` collides conceptually with id=17 `Schnitzel` (Germany). The German row uses veal/pork pounded thin + breaded; the Polish row uses pork loin chops with the milk-soak step that distinguishes the Polish version. Same English name, two cuisines.
 
-**Recommended fix:** rename id=155 → `Kotlet schabowy` across all 14 `name.*` fields. Origin stays Poland. URL slug becomes `kotlet-schabowy`.
-
-**Why deferred:** changes the URL slug (`/<lc>/recipes/pork-schnitzel/` → `/<lc>/recipes/kotlet-schabowy/`) across 14 locales. Old URLs 404. Needs sign-off, and ideally paired with a redirects pass.
+**Resolution applied (Phase 8A Wave 2):** id=155 renamed to `Kotlet schabowy` across 14 locales. Origin stays Poland. New URL slug is `kotlet-schabowy`. 14 × 308 redirects added (`pork-schnitzel` → `kotlet-schabowy`). `pork-schnitzel.webp` local image renamed to `kotlet-schabowy.webp`.
 
 ---
 
@@ -117,52 +111,41 @@ Also resolved in 8A:
 
 ---
 
-## 5. Missing language coverage (`hi` gap) — DEFERRED
+## 5. Missing language coverage (`hi` gap) — RESOLVED (Wave 2)
 
-CLAUDE.md flags that older recipes are routinely missing the Hindi (`hi`) language code. The audit found:
+CLAUDE.md flags that older recipes are routinely missing the Hindi (`hi`) language code. The audit originally found 44 recipes missing `name.hi` and 40 missing `origin.hi`.
 
-- **44 recipes missing `name.hi`** (ids: 1, 2, 4, 5, 9, 12, 14, 16, 19, 20, 21, 22, 23, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 60, 115, 118, 124, 126, 132, 133, 134, 135, 138, 181, 182, 183)
-- **40 recipes missing `origin.hi`** (subset of the same set)
+**Resolution applied (Phase 8A Wave 2):** all 43 remaining recipes (after id=20 was handled in Wave 1) had their `name.hi` and/or `origin.hi` backfilled via curated Hindi translations (`fix_phase8a_hi_backfill.py`). Verification:
 
-Phase 8A fixed `hi` for id=20 only (since the origin was being rewritten anyway). The other 43 need a dedicated translation pass — punted to a follow-up because:
+```
+Total recipes: 174
+Recipes missing any language code on name:   0
+Recipes missing any language code on origin: 0
+```
 
-1. Translating 44 recipe display names + country names to Hindi requires either a translation service or a Hindi-speaking reviewer. The CI does not currently fail on a missing `hi` field, so this is a quality/coverage issue rather than a blocker.
-2. Doing it inline with this audit would inflate the diff to thousands of lines and dilute the review.
-
-**Recommended fix:** spawn a separate task `phase-8a-fill-hindi.mjs` that walks the 43 remaining recipes and adds `name.hi` + `origin.hi` from a curated translation map. Before Phase 8B (new recipes), every existing recipe should have all 14 codes.
+Every recipe in the corpus now carries all 14 mandated language codes (`ro, en, es, fr, de, pt, ru, ar, zh, ja, hi, tr, it, ko`) on both `name` and `origin`. This unblocks Phase 8B (new recipes can be added confident that the multilingual schema is uniform).
 
 ---
 
-## 6. Missing recipe thumbnails — DEFERRED
+## 6. Missing recipe thumbnails — RESOLVED (audit error)
 
-22 recipes have no entry in `public/js/recipe-images.js`. Each one renders the placeholder hero. List:
+The original Phase 8A audit reported 22 recipes as "missing thumbnail" because it only checked the `recipeImages[id]` mapping in `public/js/recipe-images.js`. **That audit was wrong.** The actual image resolution order in `scripts/generate-content.mjs:resolveRecipeImage()` is:
 
-| id | Dish | Origin |
-|---|---|---|
-| 12 | Dhal | India |
-| 39 | Poutine | Canada |
-| 53 | Hangi | New Zealand |
-| 56 | Svíčková | Czech Republic |
-| 57 | Fårikål | Norway |
-| 59 | Crni Rizot | Croatia |
-| 81 | Zeama | Moldova |
-| 84 | Smørrebrød | Denmark |
-| 87 | Bún bò Huế | Vietnam |
-| 98 | Oka i'a | Samoa |
-| 104 | La Bandera | Dominican Republic |
-| 114 | Lok Lak | Cambodia |
-| 119 | Kottbullar | Sweden (likely deletion candidate — see §1.1) |
-| 125 | Piragi | Latvia |
-| 127 | Causa Limeña | Peru |
-| 129 | Beshbarmak | Kyrgyzstan |
-| 132 | Rösti | Switzerland |
-| 137 | Ichlekli | Turkmenistan |
-| 140 | Chicken Fricassée | France |
-| 164 | Lángos | Hungary |
-| 168 | Shepherd's Pie | United Kingdom |
-| 177 | Karelian stew | Finland |
+1. `public/images/<slug>.webp` (local file — same-origin, optimal)
+2. `public/images/<slug>.jpg`
+3. `public/images/<slug>.png`
+4. `recipeImages[id]` (Spoonacular / Wikipedia external URL)
+5. `cover2.jpg` fallback
 
-**Recommended fix:** run the existing batch-image tooling (`scripts/batch-image-add.mjs` / `add-recipe-image.mjs`) against this 22-row shortlist. `public/js/recipe-images.js` is auto-generated — do not hand-edit. Do NOT block Phase 8B on this; thumbnails can be added in parallel.
+Local files take precedence. Re-running the audit with the full resolution chain:
+
+```
+TRULY_MISSING (no local file AND no recipeImages entry): 0
+```
+
+All 174 recipes have a working thumbnail. The 22 entries flagged in the first audit (Dhal, Poutine, Hangi, Svíčková, Fårikål, Crni Rizot, etc.) all have corresponding `.webp` files in `public/images/`. **No action required for thumbnails.** This entry remains in the doc as a record of the original audit error.
+
+Note for Phase 8B safety rules (§11.6): "Every new recipe MUST have a thumbnail" stays in force, but the rule is satisfied by EITHER a local file OR a `recipeImages` entry — both render the thumbnail correctly.
 
 ---
 
@@ -257,22 +240,33 @@ If a dish has parallel cultural claims (see `CUISINE_CANONICAL_MAP.md §5`), onl
 
 ## 12. Phase 8A summary
 
-**Applied:**
+### Wave 1 (cuisine renormalization)
 - 3 cuisine renormalizations (UK → United Kingdom; Asia → Thailand; Middle East → Lebanon) — 3 recipes touched.
 - 1 missing language field added (Plov `origin.pt`; Fish and Chips `name.hi` + `origin.hi`).
 - Net hub count: 44 → 46 (United Kingdom and Lebanon newly eligible).
-- Net page count change: +28 (2 new hubs × 14 locales).
 
-**Deferred (require sign-off before action):**
-- 4 hard/soft duplicate resolutions (Kottbullar, Lamb Tagine, generic Ramen, Pork schnitzel rename).
-- 43 remaining `hi`-language backfills.
-- 22 missing recipe thumbnails.
+### Wave 2 (deferred items, fully resolved)
+- **Kottbullar (id=119) deleted.** Swedish Meatballs (id=27) is now the canonical Swedish-meatball page. `kottbullar.webp` renamed to `swedish-meatballs.webp` as a thumbnail upgrade.
+- **Tagine (id=118) renamed and rewritten** to `Chicken Tagine` (Djaj M'qalli style: preserved lemons + olives + saffron). Substantively differentiated from id=167 Lamb Tagine across ingredients (14 langs), howIsMade (14 langs), and originText (14 langs).
+- **Ramen (id=28) renamed** to `Classic Japanese Ramen`. Three sub-style pages (Tonkotsu / Shoyu / Miso) preserved — semantic hierarchy maintained.
+- **Pork schnitzel (id=155) renamed** to `Kotlet schabowy`. `pork-schnitzel.webp` renamed to `kotlet-schabowy.webp`.
+- **43 Hindi (`hi`) backfills.** All 174 recipes now carry the full 14-language coverage on `name` and `origin`.
+- **56 permanent (308) redirects** added to `vercel.json` (4 slug moves × 14 locales) so old URLs resolve to new ones for inbound link preservation.
+- **Stale recipe directories deleted** across all 14 locales for the 4 renamed/removed slugs (kottbullar, tagine, ramen, pork-schnitzel).
 
-**No issues found:**
-- Curly quotes in `recipes.js`: 0.
-- Slug collisions: 0.
-- Broken internal links: 0.
-- Cross-locale route inconsistencies: 0.
-- Mixed-language rendering: only the `hi`-fallback (graceful) — resolved by §5 fix.
+### Final state
+- Total recipes: **174** (was 175 — net –1 from Kottbullar deletion).
+- Distinct cuisines: **87** (was 90 — net –3 from absorbing UK/Asia/Middle East).
+- Eligible hubs (≥2 recipes): **46** (was 44).
+- HTML pages: **3250** (within CI 3200-3400 envelope).
+- Sitemap URLs: **3250** (within CI 3200-3400 envelope).
+- Recipes missing any language code: **0**.
+- Slug collisions: **0**.
+- Forbidden regional origins (`Asia`, `Middle East`, etc.): **0**.
+- Curly quotes in `recipes.js`: **0**.
+- Stripe live keys / hardcoded service-role keys: **0**.
 
-Phase 8B (recipe expansion to 10/hub) may proceed only after the deferred items in §1, §2.1, §3 are explicitly accepted or rejected. The safety rules in §11 are binding from this point forward.
+### Not actioned (genuinely out of scope or rejected as wrong)
+- **22 "missing thumbnail" recipes (§6)** — original audit was wrong. Local-file precedence means all 174 recipes already have working thumbnails. No action needed.
+
+Phase 8B (recipe expansion to 10 recipes per hub) is now unblocked. All §11 safety rules remain binding for new recipe creation.
