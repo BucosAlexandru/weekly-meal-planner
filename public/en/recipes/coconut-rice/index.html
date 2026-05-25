@@ -49,11 +49,11 @@
     </div>
   </nav>
 </header>
-<main class="content-main recipe-main" data-cuisine-atmosphere="global">
+<main class="content-main recipe-main" data-cuisine-atmosphere="se-asian">
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <span>Coconut Rice</span>
+    <a href="/">Home</a> › <a href="/en/recipes/">Recipes</a> › <a href="/en/recipes/thailand/">Thailand</a> › <span>Coconut Rice</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -70,7 +70,7 @@
       <div class="recipe-photo-container" data-recipe="coconut-rice" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Nasi_Liwet_Solo.jpg/330px-Nasi_Liwet_Solo.jpg" alt="Coconut Rice" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">⭐ Lunch · Asia</div>
+      <div class="recipe-badge">🇹🇭 Lunch · <a class="recipe-badge-origin" href="/en/recipes/thailand/">Thailand</a></div>
       <h1>Coconut Rice</h1>
       <p class="recipe-tagline">Coconut rice is a staple across Southeast Asian, South Asian, and Caribbean cuisines — a simple technique with a surprisingly aromatic result. Rice is partly cooked in water, then finished in coconut milk, absorbing its fat and sweetness to produce a creamy, subtly rich grain. The ratio of coconut milk to water varies by region and desired richness.
 
@@ -144,7 +144,31 @@ In Malaysia and Singapore it is the foundation of nasi lemak; in Sri Lanka it ac
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇹🇭 More recipes from Thailand</h2>
+      <a href="/en/recipes/thailand/">See all recipes →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/en/recipes/pad-thai/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="pad-thai">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/330px-Phat_Thai_kung_Chang_Khien_street_stall.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/330px-Phat_Thai_kung_Chang_Khien_street_stall.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/660px-Phat_Thai_kung_Chang_Khien_street_stall.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/990px-Phat_Thai_kung_Chang_Khien_street_stall.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Pad Thai</p>
+    <span class="recipe-card-meta">35m · Easy</span>
+  </div>
+</a><a href="/en/recipes/tom-yum/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="tom-yum">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/330px-Tom_yam_kung_maenam.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/660px-Tom_yam_kung_maenam.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tom_yam_kung_maenam.jpg/990px-Tom_yam_kung_maenam.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Tom Yum</p>
+    <span class="recipe-card-meta">35m · Easy</span>
+  </div>
+</a><a href="/en/recipes/tom-kha-gai/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="tom-kha-gai">🍽️<img src="/images/tom-kha-gai.webp" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Tom Kha Gai</p>
+    <span class="recipe-card-meta">40m · Easy</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -195,13 +219,13 @@ In Malaysia and Singapore it is the foundation of nasi lemak; in Sri Lanka it ac
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/en/recipes/" data-rmn-back
-   data-cuisine-atmosphere="global"
-   aria-label="Recipes"
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/en/recipes/thailand/" data-rmn-back
+   data-cuisine-atmosphere="se-asian"
+   aria-label="Thailand"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recipes</span>
+  <span class="rmb-label">Thailand</span>
 </a>
 
 </main>

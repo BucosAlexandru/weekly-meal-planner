@@ -53,7 +53,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>शेफर्ड्स पाई</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/united-kingdom/">यूनाइटेड किंगडम</a> › <span>शेफर्ड्स पाई</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -70,7 +70,7 @@
       <div class="recipe-photo-container" data-recipe="shepherd-s-pie" id="recipe-photo-main">🍽️<img src="/images/shepherd-s-pie.webp" alt="शेफर्ड्स पाई" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇧 दोपहर का खाना · यूनाइटेड किंगडम</div>
+      <div class="recipe-badge">🇬🇧 दोपहर का खाना · <a class="recipe-badge-origin" href="/hi/recipes/united-kingdom/">यूनाइटेड किंगडम</a></div>
       <h1>शेफर्ड्स पाई</h1>
       <p class="recipe-tagline">शेफर्ड्स पाई एक पारंपरिक ब्रिटिश सर्दियों का व्यंजन है — मेमने के कीमे को गाजर, मटर और प्याज़ के साथ पकाकर बेकिंग डिश में रखा जाता है, फिर ऊपर मसले हुए आलू की परत बनाकर ओवन में सुनहरा बेक किया जाता है। इसका नाम इसकी उत्पत्ति बताता है: चरवाहों का किफायती खाना जो रविवार के रोस्ट से बचे मेमने से बनता था।
 
@@ -149,7 +149,19 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇬🇧 यूनाइटेड किंगडम की और रेसिपी</h2>
+      <a href="/hi/recipes/united-kingdom/">सभी रेसिपी देखें →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/hi/recipes/fish-and-chips/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="fish-and-chips">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/330px-Fish_and_chips_blackpool.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/330px-Fish_and_chips_blackpool.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/660px-Fish_and_chips_blackpool.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/990px-Fish_and_chips_blackpool.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">फिश एंड चिप्स</p>
+    <span class="recipe-card-meta">40m · कठिन</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -200,13 +212,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/hi/recipes/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/united-kingdom/" data-rmn-back
    data-cuisine-atmosphere="anglo"
-   aria-label="रेसिपी"
+   aria-label="यूनाइटेड किंगडम"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">यूनाइटेड किंगडम</span>
 </a>
 
 </main>

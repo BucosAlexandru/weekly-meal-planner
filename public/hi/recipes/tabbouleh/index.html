@@ -53,7 +53,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <span>तब्बूलेह</span>
+    <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/lebanon/">लेबनान</a> › <span>तब्बूलेह</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -70,7 +70,7 @@
       <div class="recipe-photo-container" data-recipe="tabbouleh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/642121-312x231.jpg" alt="तब्बूलेह" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇱🇧 सलाद · लेबनान</div>
+      <div class="recipe-badge">🇱🇧 सलाद · <a class="recipe-badge-origin" href="/hi/recipes/lebanon/">लेबनान</a></div>
       <h1>तब्बूलेह</h1>
       <p class="recipe-tagline">तब्बूलेह लेबनान और सीरिया के पहाड़ी गांवों से आता है, जहां फ्लैट-लीफ अजमोद हर रसोई की क्यारी में उगता है। यह शब्द अरबी मूल से आता है जिसका अर्थ है मसाला लगाना या स्वाद देना, हालांकि यह व्यंजन तीखे मसालों से नहीं बना — इसका चरित्र कच्ची, ताज़ी सामग्रियों के संतुलन से आता है। लेवांत के बाहर इसे अक्सर अजमोद के साथ बुलगर का व्यंजन समझ लिया जाता है; लेबनान में यह इसके विपरीत है: बनावट के लिए थोड़ी मात्रा में बुलगर के साथ अजमोद का सलाद, वजन से लगभग चार भाग अजमोद और एक भाग अनाज।
 
@@ -136,7 +136,19 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇱🇧 लेबनान की और रेसिपी</h2>
+      <a href="/hi/recipes/lebanon/">सभी रेसिपी देखें →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/hi/recipes/lentil-soup/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="lentil-soup">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/330px-EgFoodLentilSoup.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/330px-EgFoodLentilSoup.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/660px-EgFoodLentilSoup.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/990px-EgFoodLentilSoup.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">मसूर का सूप</p>
+    <span class="recipe-card-meta">20m · आसान</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -187,13 +199,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/hi/recipes/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/hi/recipes/lebanon/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="रेसिपी"
+   aria-label="लेबनान"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">रेसिपी</span>
+  <span class="rmb-label">लेबनान</span>
 </a>
 
 </main>

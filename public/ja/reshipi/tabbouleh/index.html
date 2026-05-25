@@ -53,7 +53,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>タブーレ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/reshipi/lebanon/">レバノン</a> › <span>タブーレ</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -70,7 +70,7 @@
       <div class="recipe-photo-container" data-recipe="tabbouleh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/642121-312x231.jpg" alt="タブーレ" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇱🇧 サラダ · レバノン</div>
+      <div class="recipe-badge">🇱🇧 サラダ · <a class="recipe-badge-origin" href="/ja/reshipi/lebanon/">レバノン</a></div>
       <h1>タブーレ</h1>
       <p class="recipe-tagline">タブーレはレバノンとシリアの山岳村落に起源を持ち、そこではイタリアンパセリがすべての家庭菜園で育てられている。この名はアラビア語で調味するという意味の語根に由来するが、料理に強い香辛料は使わない — その個性は生で新鮮な食材のバランスから生まれる。レバント地方の外ではパセリを加えたブルグル料理と誤解されがちだが、レバノンでは逆で、食感のために少量のブルグルを加えたパセリサラダだ。重量比でパセリ4に対してブルグル1が本来の配合である。
 
@@ -138,7 +138,19 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇱🇧 レバノンのその他のレシピ</h2>
+      <a href="/ja/reshipi/lebanon/">全レシピを見る →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/ja/reshipi/lentil-soup/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="lentil-soup">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/330px-EgFoodLentilSoup.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/330px-EgFoodLentilSoup.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/660px-EgFoodLentilSoup.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/990px-EgFoodLentilSoup.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">レンズ豆のスープ</p>
+    <span class="recipe-card-meta">35m · 簡単</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -189,13 +201,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/ja/reshipi/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/reshipi/lebanon/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="レシピ"
+   aria-label="レバノン"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">レバノン</span>
 </a>
 
 </main>

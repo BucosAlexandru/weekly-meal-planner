@@ -53,7 +53,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>타불레</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/lebanon/">레바논</a> › <span>타불레</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -70,7 +70,7 @@
       <div class="recipe-photo-container" data-recipe="tabbouleh" id="recipe-photo-main">🍽️<img src="https://img.spoonacular.com/recipes/642121-312x231.jpg" alt="타불레" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇱🇧 샐러드 · 레바논</div>
+      <div class="recipe-badge">🇱🇧 샐러드 · <a class="recipe-badge-origin" href="/ko/recipes/lebanon/">레바논</a></div>
       <h1>타불레</h1>
       <p class="recipe-tagline">타불레는 레바논과 시리아의 산골 마을에서 유래했으며, 그곳에서는 이탈리안 파슬리가 모든 텃밭에서 자란다. 이 이름은 아랍어 어근에서 왔으며 양념하다 또는 맛을 내다는 의미를 가지지만, 요리 자체에는 강한 향신료가 들어가지 않는다 — 그 개성은 생것 그대로의 신선한 재료들의 균형에서 나온다. 레반트 지역 밖에서는 흔히 파슬리가 들어간 불구르 요리로 오해된다; 레바논에서는 정반대다: 식감을 위해 소량의 불구르를 넣은 파슬리 샐러드로, 무게 기준 파슬리 약 4 대 불구르 1이 정통 비율이다.
 
@@ -138,7 +138,19 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇱🇧 레바논의 더 많은 레시피</h2>
+      <a href="/ko/recipes/lebanon/">모든 레시피 보기 →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/ko/recipes/lentil-soup/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="lentil-soup">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/330px-EgFoodLentilSoup.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/330px-EgFoodLentilSoup.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/660px-EgFoodLentilSoup.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/EgFoodLentilSoup.jpg/990px-EgFoodLentilSoup.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">렌틸 수프</p>
+    <span class="recipe-card-meta">35m · 쉬움</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -189,13 +201,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/ko/recipes/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/lebanon/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="레시피"
+   aria-label="레바논"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">레바논</span>
 </a>
 
 </main>

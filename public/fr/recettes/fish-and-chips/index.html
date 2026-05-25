@@ -53,7 +53,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Fish and Chips</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/united-kingdom/">Royaume-Uni</a> › <span>Fish and Chips</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -70,7 +70,7 @@
       <div class="recipe-photo-container" data-recipe="fish-and-chips" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/330px-Fish_and_chips_blackpool.jpg" alt="Fish and Chips" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇬🇧 Dîner · Royaume-Uni</div>
+      <div class="recipe-badge">🇬🇧 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/united-kingdom/">Royaume-Uni</a></div>
       <h1>Fish and Chips</h1>
       <p class="recipe-tagline">Le fish and chips n'est pas simplement un plat britannique — c'est un produit accidentel de l'histoire : le poisson frit est arrivé à Londres avec les immigrants juifs séfarades au XVIIe siècle, tandis que les frites en bâtonnets sont apparues dans le Lancashire au XIXe siècle, où les mineurs avaient besoin d'un repas rapide et nourrissant à midi. Leur combinaison sur les étals de rue londoniens dans les années 1860 a créé le souper du vendredi soir et le rituel de l'après-pub qui persistent inchangés aujourd'hui. La pâte à bière avec ses fines bulles — ce manteau légèrement friable — est l'essence : pas une croûte de pâtisserie, mais une coquille d'air frit, dorée et sonnant creux quand on la tape.</p>
       <div class="recipe-meta-row">
@@ -143,7 +143,7 @@
   <div class="recipe-related-section">
     <div class="recipe-related-header">
       <h2>🇬🇧 Plus de recettes de Royaume-Uni</h2>
-      <a href="/fr/recettes/">Voir toutes les recettes →</a>
+      <a href="/fr/recettes/united-kingdom/">Voir toutes les recettes →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/fr/recettes/shepherd-s-pie/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="shepherd-s-pie">🍽️<img src="/images/shepherd-s-pie.webp" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
@@ -203,13 +203,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/fr/recettes/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/united-kingdom/" data-rmn-back
    data-cuisine-atmosphere="anglo"
-   aria-label="Recettes"
+   aria-label="Royaume-Uni"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Royaume-Uni</span>
 </a>
 
 </main>
