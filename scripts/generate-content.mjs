@@ -3403,9 +3403,19 @@ function recipeIndex(rl) {
     const thumbs = (goodThumbs.length >= 3 ? goodThumbs : ranked).slice(0, 3);
     const thumbsHtml = thumbs.map((u, i) => {
       const isPlaceholder = /cover2\.jpg$/.test(u);
+      // No srcset on cuisine montage thumbs. The inline onerror handler is
+      // the only mechanism that can remove an SSR-rendered image (no JS on
+      // this page touches these elements — content.js targets recipe-detail
+      // surfaces only). With a multi-width srcset the browser picks a
+      // candidate based on `sizes` × DPR and 404s on the chosen variant for
+      // some Wikipedia files cause the image to flash into view then
+      // disappear as onerror removes it. Falling back to just the base 330w
+      // src — same URL the detail page renders and Open Graph crawlers
+      // already exercise — guarantees one URL is fetched and it's the one
+      // we know works.
       return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
         <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
-        ${isPlaceholder ? '' : `<img src="${u}"${imgSrcsetAttrs(u, 'thumb')} alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
       </span>`;
     }).join('');
     const previewNames = recs.slice(0, 3).map(r =>
