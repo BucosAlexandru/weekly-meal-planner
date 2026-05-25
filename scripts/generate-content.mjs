@@ -3773,8 +3773,18 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   const seenImgs = new Map(); // url → occurrence count
   const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
   const tilesHtml = tiles.map((t, i) => {
-    const isFeatured = i === 0 && tiles.length >= 3;
-    const cls = `cuisine-tile${isFeatured ? ' cuisine-tile--featured' : ''}`;
+    // Render every tile uniformly — no spotlight variant. The old
+    // `cuisine-tile--featured` class on tile #0 (with tiles.length >= 3)
+    // triggered `.cuisine-tile--featured .cuisine-tile-img { display:none }`
+    // in content.css, which hid the image entirely on the assumption that
+    // the hero band above always showed the same recipe's photo. That
+    // assumption broke after the picker switched to host-stability
+    // ordering: the hero may now show recipe N while tile #0 stays at
+    // recipe 0, so the most-prominent tile in the grid (e.g. Carbonara on
+    // /<lc>/<rp>/italy/) could end up image-less even though its detail
+    // page renders one. Dropping the class makes every tile go through the
+    // same render path and show its resolved image.
+    const cls = 'cuisine-tile';
     const tagsHtml = t.tags.length
       ? `<div class="cuisine-tile-tags">${t.tags.map(tag => `<span class="cuisine-tile-tag">${esc(tag)}</span>`).join('')}</div>`
       : '';
