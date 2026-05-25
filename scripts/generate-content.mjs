@@ -3128,56 +3128,51 @@ function recipePage(recipe, rl) {
 
   // Cross-cuisine bridge — Phase 7 PR 3. Strict different-origin filter via
   // selectByTagMix; ranked by tag overlap desc, then id asc (deterministic).
-  // Gated on ro/en only per PR 3 scope; can be widened by removing the
-  // `bridgeLocales.has(code)` check. Cards reuse the same .recipe-card-item
-  // markup as the same-cuisine strip; layout is a CSS grid (no carousel).
-  // Skipped silently when the recipe has no tags or no eligible neighbours.
+  // Phase 7 polish: widened from ro/en to all 14 locales via BRIDGE_HEADING.
+  // Cards reuse the same .recipe-card-item markup as the same-cuisine strip;
+  // layout is a CSS grid (no carousel). Skipped silently when the recipe
+  // has no tags or no eligible neighbours.
   let bridgeHtml = '';
-  const bridgeLocales = new Set(['ro', 'en']);
-  if (bridgeLocales.has(code)) {
-    const currentItem = discoveryCatalog.find(it => it.id === recipe.id);
-    const bridgeItems = currentItem && currentItem.tags.length
-      ? selectByTagMix(discoveryCatalog, currentItem, { max: 4 })
-      : [];
-    if (bridgeItems.length > 0) {
-      const bridgeHeading = code === 'ro'
-        ? 'Asemănătoare din alte bucătării'
-        : 'Similar dishes from other cuisines';
-      const cards = bridgeItems.map(item => {
-        const raw = recipesById.get(item.id);
-        if (!raw) return '';
-        const rn = raw.name?.[code] || raw.name?.en || raw.name?.ro || '';
-        const rs = slug(raw.name?.en || raw.name?.ro || rn);
-        const ri = raw.ingredients?.[code] || raw.ingredients?.en || [];
-        const rh = raw.howIsMade?.[code]  || raw.howIsMade?.en  || '';
-        const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
-        const rcat = raw.category?.[code] || raw.category?.en || '';
-        const rm = recipeMetadata(ri, rst, rcat, code);
-        const re = recipeCardEmoji(rcat);
-        const rOriginEn = raw.origin?.en || '';
-        const rOriginLocal = raw.origin?.[code] || rOriginEn;
-        const rFlag = COUNTRY_FLAG[rOriginEn] || '';
-        const target = resolveDiscoveryTarget(item, code);
-        const href = target.target === 'recipe'
-          ? `${rl.dir}/${rs}/`
-          : (recipeCuisineHubHref(rOriginEn, code) || `${rl.dir}/`);
-        return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
+  const currentItem = discoveryCatalog.find(it => it.id === recipe.id);
+  const bridgeItems = currentItem && currentItem.tags.length
+    ? selectByTagMix(discoveryCatalog, currentItem, { max: 4 })
+    : [];
+  if (bridgeItems.length > 0) {
+    const bridgeHeading = BRIDGE_HEADING[code] || BRIDGE_HEADING.en;
+    const cards = bridgeItems.map(item => {
+      const raw = recipesById.get(item.id);
+      if (!raw) return '';
+      const rn = raw.name?.[code] || raw.name?.en || raw.name?.ro || '';
+      const rs = slug(raw.name?.en || raw.name?.ro || rn);
+      const ri = raw.ingredients?.[code] || raw.ingredients?.en || [];
+      const rh = raw.howIsMade?.[code]  || raw.howIsMade?.en  || '';
+      const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
+      const rcat = raw.category?.[code] || raw.category?.en || '';
+      const rm = recipeMetadata(ri, rst, rcat, code);
+      const re = recipeCardEmoji(rcat);
+      const rOriginEn = raw.origin?.en || '';
+      const rOriginLocal = raw.origin?.[code] || rOriginEn;
+      const rFlag = COUNTRY_FLAG[rOriginEn] || '';
+      const target = resolveDiscoveryTarget(item, code);
+      const href = target.target === 'recipe'
+        ? `${rl.dir}/${rs}/`
+        : (recipeCuisineHubHref(rOriginEn, code) || `${rl.dir}/`);
+      return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
   <div class="recipe-card-img" data-card-recipe="${rs}">${re}</div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">${esc(rn)}</p>
     <span class="recipe-card-meta">${rFlag ? rFlag + ' ' : ''}${esc(rOriginLocal)} · ${rm.totalTime}</span>
   </div>
 </a>`;
-      }).filter(Boolean).join('');
-      if (cards) {
-        bridgeHtml = `
+    }).filter(Boolean).join('');
+    if (cards) {
+      bridgeHtml = `
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
       <h2>${esc(bridgeHeading)}</h2>
     </div>
     <div class="recipe-bridge-grid">${cards}</div>
   </div>`;
-      }
     }
   }
 
@@ -3749,6 +3744,28 @@ const CUISINE_RELATED_HEADING = {
   tr: 'İlgili mutfakları keşfedin',
   it: 'Esplora cucine simili',
   ko: '관련 요리 둘러보기',
+};
+
+// Phase 7 polish: heading for the cross-cuisine "similar dishes" bridge on
+// recipe detail pages. One per locale; recipePage falls back to en if a
+// locale is missing. Wider than CUISINE_RELATED_HEADING because the bridge
+// is per-recipe (not per-cuisine) — it implies "similar dishes" rather than
+// "similar cuisines", so the wording differs in some locales.
+const BRIDGE_HEADING = {
+  ro: 'Asemănătoare din alte bucătării',
+  en: 'Similar dishes from other cuisines',
+  es: 'Platos similares de otras cocinas',
+  fr: 'Plats similaires d\'autres cuisines',
+  de: 'Ähnliche Gerichte aus anderen Küchen',
+  pt: 'Pratos parecidos de outras cozinhas',
+  ru: 'Похожие блюда из других кухонь',
+  ar: 'أطباق مشابهة من مطابخ أخرى',
+  zh: '其他菜系的相似料理',
+  ja: '他の国の似た料理',
+  hi: 'अन्य व्यंजनों के समान पकवान',
+  tr: 'Diğer mutfaklardan benzer yemekler',
+  it: 'Piatti simili da altre cucine',
+  ko: '다른 요리의 비슷한 음식',
 };
 
 // Localized hub-index labels (the "/cuisine/" landing page that lists all
