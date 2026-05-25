@@ -12,7 +12,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { customerId, email, return_url } = req.body || {};
+    // Resolve a safe return URL. Accept either `return_url` (canonical) or
+    // `returnUrl` (legacy key used by app.js) from the client. Fallback to the
+    // production homepage — never `/account` (no such route, would 404 on
+    // Stripe Portal "Return to MEALPLANNER.RO" click).
+    const { customerId, email } = req.body || {};
+    const clientReturn = req.body?.return_url || req.body?.returnUrl;
+    const origin = req.headers.origin || 'https://meal-planner.ro';
+    const safeReturnUrl = clientReturn || `${origin}/`;
     let cid = customerId || null;
 
     // 1) Dacă n-ai primit customerId, caută-l în Supabase după email
@@ -60,7 +67,7 @@ export default async function handler(req, res) {
 
     const session = await stripe.billingPortal.sessions.create({
       customer: cid,
-      return_url: return_url || `${req.headers.origin}/account`,
+      return_url: safeReturnUrl,
     });
 
     return res.status(200).json({ url: session.url });

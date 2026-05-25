@@ -3087,7 +3087,7 @@ if (verifyBtn && emailInput && resultDiv) {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 email,
-                returnUrl: window.location.origin + window.location.pathname
+                return_url: window.location.origin + window.location.pathname
               })
             });
             const { url, error } = await r.json();

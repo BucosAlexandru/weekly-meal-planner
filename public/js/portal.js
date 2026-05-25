@@ -7,7 +7,8 @@ async function openPortal({ customerId, email }) {
       body: JSON.stringify({
         customerId: customerId || null,
         email: email || null,
-        return_url: window.location.origin + '/account'   // ← aliniat cu serverul
+        // Return to the page the user was on (not /account — no such route).
+        return_url: window.location.origin + window.location.pathname
       })
     });
 
