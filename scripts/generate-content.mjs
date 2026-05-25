@@ -3112,11 +3112,18 @@ function recipePage(recipe, rl) {
       // overlay); on placeholder or 404 the <img> is omitted/removed and the
       // emoji shows through. Replaces the old client-side content.js IMG-map
       // injection, which had drifted from recipe-images.js.
+      //
+      // No srcset on these cards. Same reasoning as cuisine hub tiles (see
+      // image-fix commit 95d92f5e5): browsers using the `sizes` hint sometimes
+      // picked a 660w/990w Wikipedia variant that doesn't exist for that
+      // source image, fired onerror, and removed the <img> — leaving only the
+      // emoji. Using just `src` guarantees the exact URL that the detail page
+      // is known to serve, matching cuisine hub behavior.
       const ri_img = resolveRecipeImage(r, rs);
       const ri_isPlaceholder = ri_img.src.endsWith('cover2.jpg');
       const ri_imgHtml = ri_isPlaceholder
         ? ''
-        : `<img src="${ri_img.src}"${imgSrcsetAttrs(ri_img.src, 'tile')} alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
+        : `<img src="${ri_img.src}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
       return `<a href="${rl.dir}/${rs}/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="${rs}">${re}${ri_imgHtml}</div>
   <div class="recipe-card-body">
@@ -3157,8 +3164,17 @@ function recipePage(recipe, rl) {
       const href = target.target === 'recipe'
         ? `${rl.dir}/${rs}/`
         : (recipeCuisineHubHref(rOriginEn, code) || `${rl.dir}/`);
+      // Resolve image the same way the cuisine hub / same-cuisine strip does.
+      // No srcset (Wikipedia 660w/990w variants sometimes 404, causing onerror
+      // to remove the entire <img>). Emoji stays behind via CSS absolute
+      // overlay; if the <img> is omitted (placeholder) or removed by onerror,
+      // the emoji shows through.
+      const bridgeImg = resolveRecipeImage(raw, rs);
+      const bridgeImgHtml = bridgeImg.src.endsWith('cover2.jpg')
+        ? ''
+        : `<img src="${bridgeImg.src}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
       return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="${rs}">${re}</div>
+  <div class="recipe-card-img" data-card-recipe="${rs}">${re}${bridgeImgHtml}</div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">${esc(rn)}</p>
     <span class="recipe-card-meta">${rFlag ? rFlag + ' ' : ''}${esc(rOriginLocal)} · ${rm.totalTime}</span>
