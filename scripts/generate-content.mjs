@@ -3867,7 +3867,7 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-m
         </div>
         ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
           <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
-          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}"${imgSrcsetAttrs(featured.img, 'hero')} alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
+          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
         </figure>` : ''}
       </div>
     </div>
