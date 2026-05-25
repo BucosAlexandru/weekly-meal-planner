@@ -64,8 +64,8 @@ or 2 (so the SSR renders an actual `<img>`):
 
 ### Effective source breakdown
 - **local-webp**: 41
-- **wikipedia**: 101
-- **spoonacular**: 33
+- **wikipedia**: 102
+- **spoonacular**: 32
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
 
@@ -88,7 +88,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 8 | Tacos | Mexico | spoonacular | FLAGSHIP | **P3** | — |
 | 9 | Chicken Curry | India | spoonacular | FLAGSHIP | **P3** | — |
 | 12 | Dhal | India | local-webp | FLAGSHIP | **P3** | — |
-| 16 | Pad Thai | Thailand | spoonacular | FLAGSHIP | **P3** | — |
+| 16 | Pad Thai | Thailand | wikipedia | MAP_DIVERGENCE, FLAGSHIP | **P3** | — |
 | 20 | Fish and Chips | UK | wikipedia | FLAGSHIP | **P3** | — |
 | 21 | Pho | Vietnam | spoonacular | FLAGSHIP | **P3** | — |
 | 22 | Paella | Spain | spoonacular | FLAGSHIP | **P3** | — |
