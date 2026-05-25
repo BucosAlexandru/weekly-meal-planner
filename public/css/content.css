@@ -1193,17 +1193,26 @@
 
 /* Featured spotlight: tile #0 takes 2 columns + bigger image on
    tablet/desktop. On mobile it falls back to standard width. */
-/* Featured spotlight: tile #0 takes 2 columns on tablet+. Phase 5d fix:
-   the image in the featured tile is HIDDEN — the hero band above already
-   shows the same dish image (featured = first recipe = same image), so
-   showing it twice on a 2-recipe cuisine like Croatia looked like a bug.
-   Now the featured tile is a wide text-only card that complements the
-   hero image instead of duplicating it. */
-.cuisine-tile--featured .cuisine-tile-img { display: none; }
+/* Featured spotlight: tile #0 takes 2 columns on tablet+. The image used
+   to be unconditionally `display: none` here on the assumption that the
+   hero band above always showed the same recipe (featured = first in
+   recipes.js = same as the hero pick), so hiding the tile image avoided
+   duplication. That assumption no longer holds: the hero picker now ranks
+   by image-host stability and may pick a different recipe than tile #0,
+   leaving the most-prominent tile image-less even when its detail page
+   renders fine. Hide the image only when the generator marks the tile as
+   actually duplicating the hero (data-hero-dup="1"); otherwise show it,
+   constrained to ~38% of the row on tablet+ by the @media block below. */
+.cuisine-tile--featured .cuisine-tile-img[data-hero-dup="1"] { display: none; }
 @media (min-width: 720px) {
   .cuisine-tile--featured {
     grid-column: span 2;
     flex-direction: row;
+  }
+  .cuisine-tile--featured .cuisine-tile-img {
+    flex: 0 0 38%;
+    aspect-ratio: auto;
+    align-self: stretch;
   }
   .cuisine-tile--featured .cuisine-tile-body {
     flex: 1 1 auto;
