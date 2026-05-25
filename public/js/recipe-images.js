@@ -156,4 +156,6 @@ export const recipeImages = {
   181: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tonkotsu_ramen.JPG/330px-Tonkotsu_ramen.JPG',
   182: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Gyoza_no_Ousho_20191210_125203.jpg/330px-Gyoza_no_Ousho_20191210_125203.jpg',
   183: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dosanko_Akaneri.jpg/330px-Dosanko_Akaneri.jpg',
+  184: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg',
+  185: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg',
 };
