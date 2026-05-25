@@ -164,7 +164,7 @@ export const CUISINE_INTRO = {
   },
   'Tunisia': {
     en: "Tunisian cooking warms with harissa — brik fried until the egg sets just right, chakchouka bubbling with tomato and pepper. Olive oil and chili are everywhere; the heat is direct and unapologetic.",
-    ro: "Bucătăria tunisiană încălzește cu harissa — brik prăjit până oul prinde exact bine, chakchouka bubbling cu roșii și ardei. Uleiul de măsline și ardeiul iute sunt peste tot; căldura e directă, fără scuze.",
+    ro: "Bucătăria tunisiană încălzește cu harissa — brik prăjit până oul prinde exact bine, chakchouka clocotind cu roșii și ardei. Uleiul de măsline și ardeiul iute sunt peste tot; căldura e directă, fără scuze.",
     ar: "يُدفّئ الطبخ التونسي بالهريسة — بريك مقلية حتى ينضج البيض تماماً، وشكشوكة تغلي بالطماطم والفلفل. زيت الزيتون والفلفل الحار في كل مكان؛ الحرارة مباشرة وبلا اعتذار.",
     zh: "突尼斯料理以哈里萨辣椒酱为底色——油炸至蛋黄刚好凝固的布里克，翻滚着番茄和甜椒的沙克舒卡。橄榄油与辣椒无处不在，辣度直接而毫不掩饰。",
   },
