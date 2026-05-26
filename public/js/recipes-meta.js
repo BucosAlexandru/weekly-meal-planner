@@ -688,6 +688,22 @@ export const recipesMeta = {
                 "Bouillabaisse marsigliese — un brodo ambrato estratto dai piccoli pesci di scoglio mediterranei, nel quale si pochano poi i pesci sodi; servita in due tempi: prima il brodo sulla baguette con rouille, poi il pesce in un piatto a parte.",
                 "마르세유 부야베스 — 지중해 잡어들로 우려낸 호박색 육수에 단단한 생선을 데쳐낸다; 두 단계로 서빙: 먼저 바게트 위에 루이유와 함께 육수, 이어서 별도의 접시에 생선.",
                 "मार्से बूया-बेस — भूमध्यसागरीय छोटी पथरीली मछलियों से निकाला हुआ अंबर रंग का स्टॉक, जिसमें फिर सख़्त मछलियाँ पकाई जाती हैं; दो हिस्सों में परोसा जाता है — पहले बेगेट पर रूई के साथ स्टॉक, फिर अलग प्लेट में मछली।") },
+
+  191: { time: 30, costRon: 20, tags: ['high-protein', 'family'],
+        desc: d("Croque monsieur clasic parizian — pâine de mie cu jambon de Paris și gruyère, acoperită cu béchamel și gratinată sub grătar până când sosul devine crustă rumenă și brânza topită bolborosește dedesubt.",
+                "Classic Parisian croque monsieur — pain de mie with jambon de Paris and Gruyère, topped with béchamel and finished under the broiler until the sauce browns into a crust and the melted cheese bubbles underneath.",
+                "Croque monsieur parisino clásico — pan de molde con jambon de Paris y Gruyère, cubierto con béchamel y gratinado hasta que la salsa forma costra dorada y el queso fundido borbotea debajo.",
+                "Croque monsieur parisien classique — pain de mie au jambon de Paris et au gruyère, nappé de béchamel et passé sous le gril jusqu'à ce que la sauce dore en croûte et que le fromage fondu bouillonne dessous.",
+                "Klassischer Pariser Croque monsieur — Pain de mie mit Jambon de Paris und Gruyère, mit Béchamel überzogen und unter dem Grill gebräunt, bis die Sauce zur Kruste wird und der geschmolzene Käse darunter sprudelt.",
+                "Croque monsieur parisiense clássico — pão de forma com jambon de Paris e Gruyère, coberto com bechamel e gratinado até o molho fazer côdea dourada e o queijo derretido borbulhar por baixo.",
+                "Классический парижский крок-месье — pain de mie с jambon de Paris и грюйером, под слоем бешамеля, запечённый под грилем до подрумяненной корки соуса и булькающего расплавленного сыра внутри.",
+                "كروك مسيو باريسي كلاسيكي — خبز بان دي مي مع جامبون باريس وغرويير، يُغطى بالبيشاميل ويُحمَّر تحت المشواية حتى تتحوّل الصلصة إلى قشرة ذهبية والجبن المنصهر يفور تحتها.",
+                "经典巴黎 croque monsieur — pain de mie 配 jambon de Paris 与 Gruyère，盖上贝夏梅酱后放进上火烤至酱面焦黄成壳，下面的奶酪在里头沸腾。",
+                "クラシックなパリ風クロックムッシュ — パン・ド・ミにジャンボン・ド・パリとグリュイエール、上にベシャメルをかけ、ブロイラーでソースが焼き色のクラストになり、下の溶けたチーズが沸くまで仕上げる。",
+                "Klasik Paris croque monsieur'ü — pain de mie ekmeği üstüne jambon de Paris ve Gruyère, beşamelle kaplanır ve sosun kabuğa dönüşüp altındaki eriyen peynirin fokurdadığı ana dek ızgara altında pişirilir.",
+                "Croque monsieur parigino classico — pain de mie con prosciutto cotto e Gruyère, ricoperto di besciamella e passato sotto il grill finché la salsa diventa crosta dorata e il formaggio fuso borbotta sotto.",
+                "고전 파리식 크로크 무슈 — 팽 드 미에 장봉 드 파리와 그뤼에르를 올리고 베샤멜로 덮어, 브로일러 아래에서 소스가 갈색 크러스트가 되고 아래 녹은 치즈가 끓을 때까지 마무리한다.",
+                "क्लासिक पेरिस का क्रोक मसियो — पैन डे मी पर जाम्बों दे पारी और ग्रुयेर, ऊपर बेशामेल और फिर ब्रॉयलर के नीचे तब तक पकाना जब तक सॉस सुनहरी पपड़ी न बन जाए और पिघला हुआ चीज़ नीचे बुलबुले छोड़े।") },
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
