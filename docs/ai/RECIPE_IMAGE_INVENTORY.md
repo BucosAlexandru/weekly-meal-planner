@@ -11,6 +11,7 @@
 | Date | Verified by | Entries | Mechanism | Resulting risk |
 |---|---|---|---|---|
 | 2026-05-26 | User upload via GitHub UI (commits `a07e36dc5` + `484cf2adf`) — wired in this session | 10 recipes: ids 184 (Tempura), 185 (Onigiri), 186 (Yakitori), 187 (Mole Poblano), 188 (Chilaquiles), 90 (Ropa Vieja), 106 (Kare-Kare), 133 (Beans with Sausages), 172 (Clam Chowder), 182 (Shoyu Ramen) | Verified images uploaded as `IMG_1090..IMG_1100.png` (skip IMG_1096), renamed in-repo to `public/images/<slug>.png` so the `resolveRecipeImage()` local-file precedence takes over from the external URLs. The pre-existing `public/images/shoyu-ramen.webp` (Phase 8B-era best-guess) was removed so the new `.png` would win. | HIGH/MEDIUM → **LOW (verified)** for all 10 |
+| 2026-05-26 | Phase T0/T1 recipe generation (this session) | id 189 (Tres Leches Cake, Mexico — closes Mexico hub to 10/10) | New recipe added with **no recipe-images.js entry** — sandbox network cannot verify a Wikipedia hash without making an authored best-guess that risks breaking via `onerror=this.remove()`. SSR-renders `/images/cover2.jpg` (generic fallback) until a verified upload arrives. Same pattern as the 2026-05-26 batch above. | n/a (no entry) — **awaiting verified upload** |
 
 ---
 
@@ -103,7 +104,11 @@ No `imageConfidence` field is implemented in code. With 10 entries now verified 
 
 ## 6. Missing thumbnails
 
-**Zero.** Every recipe resolves to either a local file or an external URL. The earlier Phase 8A "22 missing" flag was a false positive (missed local-file precedence).
+**1 (transient — id 189 Tres Leches Cake, awaiting verified upload).** Every other recipe resolves to either a local file or an external URL. The earlier Phase 8A "22 missing" flag was a false positive (missed local-file precedence).
+
+The one transient missing-thumbnail recipe is the newest Phase T0/T1 addition (Mexico hub, 10/10). Per §0 verification log, no best-guess URL was added because the sandbox cannot verify a Wikipedia hash without internet access, and a broken URL would be worse than the `cover2.jpg` fallback (the `onerror=this.remove()` handler would leave the page with no image at all). The recipe page renders correctly in every other respect — schema, ingredients, instructions, dish-specific tip in en + ro, dessert pairings.
+
+A verified upload (filename can be anything; ideally `IMG_<n>.png` matching the prior batch) will be wired automatically to `public/images/tres-leches-cake.png` by the same mechanism used for the 2026-05-26 batch.
 
 ---
 

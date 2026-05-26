@@ -656,6 +656,22 @@ export const recipesMeta = {
                 "Chilaquiles messicani — tortilla di mais croccanti in salsa rossa al guajillo, finite con uova all'occhio di bue, crema, queso fresco e cipolla rossa.",
                 "멕시코 칠라킬레스 — 과히요 살사 로하에 바삭한 옥수수 토르티야, 위에 프라이·크레마·케소 프레스코·적양파.",
                 "मेक्सिकन chilaquiles — गुआखियो की लाल साल्सा में कुरकुरी मक्के की टोर्टिया, ऊपर अंडे, क्रेमा, क्यूसो फ्रेस्को और लाल प्याज़।") },
+
+  189: { time: 45, costRon: 18, tags: ['vegetarian', 'family'],
+        desc: d("Tort tres leches mexican — pandișpan aerat înțepat și îmbibat cu lapte condensat, lapte evaporat și lapte integral cu smântână, finisat cu frișcă rece și scorțișoară.",
+                "Mexican tres leches cake — an airy whipped-egg sponge pierced and soaked in sweetened condensed milk, evaporated milk and a whole-milk-and-cream mixture, finished with cold whipped cream and a dusting of cinnamon.",
+                "Pastel de tres leches mexicano — un bizcocho aireado de huevos batidos, pinchado y empapado en leche condensada, evaporada y leche entera con crema, rematado con crema batida fría y canela.",
+                "Gâteau tres leches mexicain — une génoise aérienne aux œufs battus, piquée et imbibée de lait concentré sucré, lait évaporé et lait entier additionné de crème, finie d'une crème fouettée froide et de cannelle.",
+                "Mexikanischer Tres-Leches-Kuchen — ein luftiger Eierbiskuit, eingestochen und mit Kondensmilch, evaporated milk und Vollmilch-Sahne-Mischung getränkt, mit kalter Schlagsahne und Zimt vollendet.",
+                "Bolo tres leches mexicano — um pão de ló arejado de ovos batidos, picado e embebido em leite condensado, leite evaporado e leite gordo com natas, finalizado com chantilly frio e canela.",
+                "Мексиканский торт трес лечес — воздушный бисквит на взбитых яйцах, проколотый и пропитанный сгущённым молоком, evaporated milk и цельным молоком со сливками, с холодными взбитыми сливками и корицей сверху.",
+                "كعكة تريس ليتشيس المكسيكية — إسفنج هوائي من البيض المخفوق، يُثقب ويُنقع بالحليب المكثّف والحليب المبخّر وخليط الحليب الكامل مع الكريمة، ويُكلَّل بكريمة باردة مخفوقة والقرفة.",
+                "墨西哥三奶蛋糕——打蛋海绵糕体戳透后浸入加糖炼乳、淡奶以及全脂牛奶与淡奶油的混合液，最后铺上冷藏轻打发奶油并撒上肉桂粉。",
+                "メキシカン・トレス・レチェス — 卵を泡立てた軽い生地に底まで穴を開け、加糖練乳・無糖練乳・全脂牛乳と生クリームの混合液を吸わせ、冷たい軽く泡立てた生クリームとシナモンで仕上げる。",
+                "Meksika tres leches pastası — yumurtayla çırpılmış havadar bir pandispanya, delinip tatlandırılmış kondanse süt, buharla yoğunlaştırılmış süt ve krema katkılı tam yağlı sütle ıslatılır, üzerine soğuk çırpılmış krema ve tarçınla tamamlanır.",
+                "Torta tres leches messicana — un pan di Spagna leggero a base di uova montate, bucato e imbevuto in latte condensato, latte evaporato e latte intero con panna, completato con panna fredda semimontata e cannella.",
+                "멕시코 트레스 레체스 — 달걀을 휘핑한 가벼운 스펀지에 구멍을 내고 가당연유, 무가당연유, 전유–생크림 혼합액을 적셔, 차가운 가볍게 휘핑한 크림과 시나몬으로 마무리한 케이크.",
+                "मेक्सिकन ट्रेस लेचेस केक — फेंटे हुए अंडों का हलका स्पंज जिसे छेद कर मीठा कंडेंस्ड मिल्क, इवापोरेटेड मिल्क और फुल फैट दूध-क्रीम मिश्रण में भिगोया जाता है, ऊपर ठंडी फेंटी क्रीम और दालचीनी।") },
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
