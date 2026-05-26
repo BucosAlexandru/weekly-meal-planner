@@ -3919,3 +3919,75 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   .hp2-inspire-row { gap: 22px; }
   .hp2-planner-cta { padding: 28px 22px; }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 4b: motion refinement
+   Quieter, slower, almost invisible. Opacity-only on entry —
+   no translateY. Image hover zoom dialled back. Stagger
+   reduced to a single beat across the hero, none across rows.
+   ────────────────────────────────────────────────────────────── */
+@keyframes hp2FadeQuiet {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hp2-hero-title,
+  .hp2-hero-sub,
+  .hp2-hero-cta,
+  .hp2-hero-photo,
+  .hp2-section-head,
+  .hp2-cuisine-row > li,
+  .hp2-inspire-row > li,
+  .hp2-entry-card,
+  .hp2-pullquote,
+  .hp2-planner-cta-inner > * {
+    animation: hp2FadeQuiet 1100ms ease-out both;
+  }
+
+  /* Reset earlier stagger; keep a single gentle beat on the hero */
+  .hp2-hero-eyebrow,
+  .hp2-stat-chips,
+  .hp2-features-row > li,
+  .hp2-trust-text,
+  .hp2-trust-stats,
+  .hp2-testimonial { animation: none; }
+
+  .hp2-hero-title { animation-delay: 0ms; }
+  .hp2-hero-sub   { animation-delay: 120ms; }
+  .hp2-hero-cta   { animation-delay: 240ms; }
+  .hp2-hero-photo { animation-delay: 80ms; }
+
+  .hp2-cuisine-row > li:nth-child(n),
+  .hp2-inspire-row > li:nth-child(n) { animation-delay: 0ms; }
+  .hp2-entry-cards > .hp2-entry-card:nth-child(n) { animation-delay: 0ms; }
+}
+
+/* Image hover zoom — much subtler */
+.hp2-cuisine-card .hp2-photo img,
+.hp2-inspire-card .hp2-photo img,
+.hp2-entry-card .hp2-photo img {
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hp2-cuisine-card:hover .hp2-photo img,
+.hp2-inspire-card:hover .hp2-photo img,
+.hp2-entry-card:hover .hp2-photo img {
+  transform: scale(1.025);
+}
+
+/* Card hover lift — soft and slow */
+.hp2-cuisine-card,
+.hp2-inspire-card,
+.hp2-entry-card {
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hp2-cuisine-card:hover .hp2-photo img,
+  .hp2-inspire-card:hover .hp2-photo img,
+  .hp2-entry-card:hover .hp2-photo img {
+    transform: none;
+  }
+}
