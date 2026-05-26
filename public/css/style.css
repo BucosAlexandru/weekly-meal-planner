@@ -3519,3 +3519,103 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   .hp2-entry-title { font-size: 1.25rem; }
   .hp2-inspire-body { padding: 14px 16px 18px; }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 3c: motion
+   One-shot fade-up on initial paint, staggered. CTA glow on
+   hover. All wrapped in prefers-reduced-motion guard. No infinite
+   animations, no bounce, no JS.
+   ────────────────────────────────────────────────────────────── */
+@keyframes hp2FadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hp2-hero-eyebrow,
+  .hp2-hero-title,
+  .hp2-hero-sub,
+  .hp2-hero-cta,
+  .hp2-stat-chips,
+  .hp2-hero-photo,
+  .hp2-features-row > li,
+  .hp2-section-head,
+  .hp2-cuisine-row > li,
+  .hp2-inspire-row > li,
+  .hp2-entry-card,
+  .hp2-trust-text,
+  .hp2-trust-stats,
+  .hp2-testimonial,
+  .hp2-planner-cta-inner > * {
+    animation: hp2FadeUp 680ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Hero stagger */
+  .hp2-hero-eyebrow { animation-delay: 40ms; }
+  .hp2-hero-title   { animation-delay: 120ms; }
+  .hp2-hero-sub     { animation-delay: 220ms; }
+  .hp2-hero-cta     { animation-delay: 320ms; }
+  .hp2-stat-chips   { animation-delay: 420ms; }
+  .hp2-hero-photo   { animation-delay: 280ms; }
+
+  /* Feature/cuisine/inspire/entry stagger (1..6) */
+  .hp2-features-row > li:nth-child(1),
+  .hp2-cuisine-row  > li:nth-child(1),
+  .hp2-inspire-row  > li:nth-child(1) { animation-delay: 80ms; }
+  .hp2-features-row > li:nth-child(2),
+  .hp2-cuisine-row  > li:nth-child(2),
+  .hp2-inspire-row  > li:nth-child(2) { animation-delay: 160ms; }
+  .hp2-features-row > li:nth-child(3),
+  .hp2-cuisine-row  > li:nth-child(3),
+  .hp2-inspire-row  > li:nth-child(3) { animation-delay: 240ms; }
+  .hp2-features-row > li:nth-child(4),
+  .hp2-cuisine-row  > li:nth-child(4),
+  .hp2-inspire-row  > li:nth-child(4) { animation-delay: 320ms; }
+  .hp2-cuisine-row  > li:nth-child(5) { animation-delay: 400ms; }
+  .hp2-cuisine-row  > li:nth-child(6) { animation-delay: 480ms; }
+
+  .hp2-entry-cards > .hp2-entry-card:nth-child(1) { animation-delay: 80ms; }
+  .hp2-entry-cards > .hp2-entry-card:nth-child(2) { animation-delay: 180ms; }
+
+  /* Trust banner stagger */
+  .hp2-trust-text    { animation-delay: 0ms; }
+  .hp2-trust-stats   { animation-delay: 120ms; }
+  .hp2-testimonial   { animation-delay: 220ms; }
+}
+
+/* CTA glow — primary button only. Smooth transition on the
+   shadow + a subtle 2px lift. No animation, just a hover state. */
+.hp2-btn--primary {
+  box-shadow: 0 6px 18px -4px rgba(36, 113, 42, 0.30);
+  transition:
+    transform 220ms var(--ease),
+    background-color 220ms var(--ease),
+    box-shadow 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hp2-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 32px -8px rgba(36, 113, 42, 0.45),
+    0 6px 14px -4px rgba(36, 113, 42, 0.25);
+}
+.hp2-btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px -2px rgba(36, 113, 42, 0.35);
+  transition-duration: 80ms;
+}
+
+/* Reduced-motion fallback — keep elements in their final state
+   and disable transforms to avoid vestibular issues. */
+@media (prefers-reduced-motion: reduce) {
+  .hp2-btn:hover,
+  .hp2-cuisine-card:hover,
+  .hp2-inspire-card:hover,
+  .hp2-entry-card:hover {
+    transform: none;
+  }
+  .hp2-cuisine-card:hover .hp2-photo img,
+  .hp2-inspire-card:hover .hp2-photo img,
+  .hp2-entry-card:hover .hp2-photo img {
+    transform: none;
+  }
+}
