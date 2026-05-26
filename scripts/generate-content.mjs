@@ -2150,6 +2150,15 @@ const RECIPE_UI = {
       thai:[{e:'🍚',n:'Orez jasmine thailandez'},{e:'🌿',n:'Busuioc thailandez și coriandru'},{e:'🌶️',n:'Ardei iute cu sos de pește'},{e:'🍋',n:'Felii de lime'}],
       vietnamese:[{e:'🍚',n:'Orez jasmine la abur'},{e:'🌿',n:'Mentă, coriandru și busuioc thailandez'},{e:'🥢',n:'Legume murate'},{e:'🍋',n:'Felii de lime'}],
       'middle-eastern':[{e:'🍯',n:'Hummus și labneh'},{e:'🥗',n:'Tabbouleh'},{e:'🫓',n:'Lipie caldă'},{e:'🥒',n:'Napi murați și măsline'}],
+      'chinese':[{e:"🍵",n:"Ceai de iasomie"},{e:"🍚",n:"Orez aburit"},{e:"🥢",n:"Bok choy sotat"},{e:"🌶️",n:"Ulei picant"}],
+      'eastern-european':[{e:"🥖",n:"Pâine de secară"},{e:"🥣",n:"Smântână"},{e:"🥒",n:"Castraveți murați"},{e:"🌿",n:"Mărar proaspăt"}],
+      'nordic':[{e:"🫐",n:"Dulceață de merișor"},{e:"🍞",n:"Pâine crocantă de secară"},{e:"🌿",n:"Mărar proaspăt"},{e:"🐟",n:"Hering marinat"}],
+      'anglo':[{e:"🍺",n:"Bere brună"},{e:"🥔",n:"Piure de cartofi"},{e:"🥬",n:"Mazăre"},{e:"🥄",n:"Sos brun"}],
+      'sub-saharan':[{e:"🍚",n:"Orez alb"},{e:"🍌",n:"Banane plantain prăjite"},{e:"🌶️",n:"Sos iute"},{e:"🥬",n:"Verdețuri sotate"}],
+      'central-european':[{e:"🍺",n:"Bere blondă"},{e:"🥖",n:"Pâine de secară"},{e:"🥔",n:"Cartofi fierți"},{e:"🥒",n:"Castraveți murați"}],
+      'caucasus':[{e:"🍷",n:"Vin roșu Saperavi"},{e:"🌿",n:"Tarhon și coriandru"},{e:"🫓",n:"Pâine georgiană tonis puri"},{e:"🥒",n:"Murături"}],
+      'central-asian':[{e:"🍵",n:"Ceai verde"},{e:"🍞",n:"Lipie non"},{e:"🧅",n:"Ceapă feliată"},{e:"🌶️",n:"Ardei iute"}],
+      'dessert':[{e:"☕",n:"Espresso"},{e:"🍵",n:"Ceai negru"},{e:"🍓",n:"Fructe de pădure proaspete"},{e:"🥛",n:"Frișcă"}],
     }
   },
   en:{ totalTime:'Total time', activeTime:'Active time', servings:'Servings', difficulty:'Difficulty', cost:'Cost',
@@ -2193,6 +2202,15 @@ const RECIPE_UI = {
       thai:[{e:'🍚',n:'Thai jasmine rice'},{e:'🌿',n:'Fresh Thai basil and coriander'},{e:'🌶️',n:'Birds-eye chillies in fish sauce'},{e:'🍋',n:'Lime wedges'}],
       vietnamese:[{e:'🍚',n:'Steamed jasmine rice'},{e:'🌿',n:'Mint, coriander and Thai basil'},{e:'🥢',n:'Pickled vegetables'},{e:'🍋',n:'Lime wedges'}],
       'middle-eastern':[{e:'🍯',n:'Hummus and labneh'},{e:'🥗',n:'Tabbouleh'},{e:'🫓',n:'Warm flatbread'},{e:'🥒',n:'Pickled turnips and olives'}],
+      'chinese':[{e:"🍵",n:"Jasmine tea"},{e:"🍚",n:"Steamed jasmine rice"},{e:"🥢",n:"Stir-fried bok choy"},{e:"🌶️",n:"Chili oil"}],
+      'eastern-european':[{e:"🥖",n:"Rye bread"},{e:"🥣",n:"Smetana"},{e:"🥒",n:"Pickled cucumbers"},{e:"🌿",n:"Fresh dill"}],
+      'nordic':[{e:"🫐",n:"Lingonberry jam"},{e:"🍞",n:"Rye crispbread"},{e:"🌿",n:"Fresh dill"},{e:"🐟",n:"Pickled herring"}],
+      'anglo':[{e:"🍺",n:"Ale or stout"},{e:"🥔",n:"Mashed potatoes"},{e:"🥬",n:"Garden peas"},{e:"🥄",n:"Brown gravy"}],
+      'sub-saharan':[{e:"🍚",n:"Steamed white rice"},{e:"🍌",n:"Fried plantains"},{e:"🌶️",n:"Pepper sauce"},{e:"🥬",n:"Sautéed greens"}],
+      'central-european':[{e:"🍺",n:"Pilsner beer"},{e:"🥖",n:"Crusty rye"},{e:"🥔",n:"Boiled potatoes"},{e:"🥒",n:"Pickled gherkins"}],
+      'caucasus':[{e:"🍷",n:"Saperavi red wine"},{e:"🌿",n:"Tarragon and cilantro"},{e:"🫓",n:"Tonis puri bread"},{e:"🥒",n:"Pickled vegetables"}],
+      'central-asian':[{e:"🍵",n:"Green tea"},{e:"🍞",n:"Non flatbread"},{e:"🧅",n:"Sliced raw onion"},{e:"🌶️",n:"Hot pepper"}],
+      'dessert':[{e:"☕",n:"Espresso"},{e:"🍵",n:"Black tea"},{e:"🍓",n:"Fresh berries"},{e:"🥛",n:"Whipped cream"}],
     }
   },
   es:{ totalTime:'Tiempo total', activeTime:'Tiempo activo', servings:'Raciones', difficulty:'Dificultad', cost:'Coste',
@@ -2967,28 +2985,61 @@ const RULE_ONE_POT_DISHES = /\b(borscht|borsch|barszcz|cassoulet|jambalaya|ratat
 // precedence over a generic `pairingsType: 'meat' | 'fish' | …`
 // when the recipe's origin has a cultural pairing template.
 const CUISINE_PAIRING_TYPE = {
+  // East Asian
   Japan: 'japanese',
   'South Korea': 'korean', 'North Korea': 'korean',
+  China: 'chinese', Mongolia: 'central-asian',
+  // South / Southeast Asian
+  India: 'indian', Pakistan: 'indian', Nepal: 'indian', 'Sri Lanka': 'indian',
+  Vietnam: 'vietnamese', Cambodia: 'vietnamese',
+  Thailand: 'thai', Indonesia: 'thai', Malaysia: 'thai', Philippines: 'thai',
+  Singapore: 'thai',
+  // Central Asian
+  Uzbekistan: 'central-asian', Kyrgyzstan: 'central-asian',
+  Turkmenistan: 'central-asian',
+  // Caucasus
+  Georgia: 'caucasus', Armenia: 'caucasus',
+  // Middle East + North Africa
+  Lebanon: 'middle-eastern', Syria: 'middle-eastern', Iran: 'middle-eastern',
+  Iraq: 'middle-eastern', Israel: 'middle-eastern', Egypt: 'middle-eastern',
+  Kuwait: 'middle-eastern', Turkey: 'middle-eastern',
+  Morocco: 'middle-eastern', Tunisia: 'middle-eastern', Algeria: 'middle-eastern',
+  Sudan: 'middle-eastern',
+  // Mediterranean
   Italy: 'italian',
   France: 'french',
   Greece: 'mediterranean', Spain: 'mediterranean', Portugal: 'mediterranean',
   Croatia: 'mediterranean', Cyprus: 'mediterranean',
   'Bosnia and Herzegovina': 'mediterranean', Slovenia: 'mediterranean',
   'Cape Verde': 'mediterranean',
-  Lebanon: 'middle-eastern', Syria: 'middle-eastern', Iran: 'middle-eastern',
-  Iraq: 'middle-eastern', Israel: 'middle-eastern', Egypt: 'middle-eastern',
-  Kuwait: 'middle-eastern', Turkey: 'middle-eastern',
-  Morocco: 'middle-eastern', Tunisia: 'middle-eastern', Algeria: 'middle-eastern',
-  Sudan: 'middle-eastern',
-  India: 'indian', Pakistan: 'indian', Nepal: 'indian', 'Sri Lanka': 'indian',
-  Vietnam: 'vietnamese', Cambodia: 'vietnamese',
-  Thailand: 'thai', Indonesia: 'thai', Malaysia: 'thai', Philippines: 'thai',
-  Singapore: 'thai',
+  // Central European
+  Germany: 'central-european', Switzerland: 'central-european',
+  Netherlands: 'central-european', Belgium: 'central-european',
+  Austria: 'central-european',
+  // Eastern European (Slavic, Magyar, Romance, Baltic)
+  Russia: 'eastern-european', Ukraine: 'eastern-european',
+  Belarus: 'eastern-european', Moldova: 'eastern-european',
+  Poland: 'eastern-european', 'Czech Republic': 'eastern-european',
+  Slovakia: 'eastern-european', Hungary: 'eastern-european',
+  Romania: 'eastern-european', Bulgaria: 'eastern-european',
+  Serbia: 'eastern-european',
+  Estonia: 'eastern-european', Latvia: 'eastern-european',
+  Lithuania: 'eastern-european',
+  // Nordic
+  Sweden: 'nordic', Finland: 'nordic', Norway: 'nordic', Denmark: 'nordic',
+  Iceland: 'nordic',
+  // Anglo
+  USA: 'anglo', 'United Kingdom': 'anglo', Canada: 'anglo',
+  Australia: 'anglo', 'New Zealand': 'anglo', Scotland: 'anglo',
+  // Latin America
   Mexico: 'mexican',
   Peru: 'latin', Argentina: 'latin', Brazil: 'latin', Cuba: 'latin',
   Colombia: 'latin', Ecuador: 'latin', Chile: 'latin',
   'Dominican Republic': 'latin', 'El Salvador': 'latin', Venezuela: 'latin',
   Guatemala: 'latin', Jamaica: 'latin',
+  // Sub-Saharan
+  Nigeria: 'sub-saharan', Ghana: 'sub-saharan', Ethiopia: 'sub-saharan',
+  'South Africa': 'sub-saharan', 'Republic of the Congo': 'sub-saharan',
 };
 
 function inferPairingType(recipe, fallback) {
@@ -3026,10 +3077,16 @@ function evaluateBadges(ctx) {
   const hasFreshVeg = /\b(spinach|kale|broccoli|carrot|tomato|zucchini|eggplant|aubergine|bell\s+pepper|cucumber|asparagus|cabbage|cauliflower|leek|celery|chard|fennel|sprout|coriander|cilantro|parsley|basil|mint|dill|spanac|morcov|roșii|dovlecel|vânătă|castravete|sparanghel|varză|conopidă|praz|țelină)\b/i.test(ingrStr);
   if (hasFreshVeg && !hasMeat && !hasFish) decisions.push({ key: BADGE_RICH_VITAMIN, conf: 'high' });
 
-  // 3 — Traditional recipe: only for cuisines in our hub eligibility set
-  // (which already filters AI-filler names per Phase 8A safety rules).
+  // 3 — Traditional recipe: applies when the origin is in either
+  // HUB_ELIGIBLE_ORIGINS (≥2-recipe cuisines) OR CUISINE_PAIRING_TYPE
+  // (curated cuisine map — recognised cuisines even with 1 recipe in
+  // the corpus, like Egypt → Koshari or Ethiopia → Doro Wat). Phase 8A
+  // safety rules already reject AI-filler names at authoring time, so
+  // any recipe that reaches a recognised cuisine is genuinely
+  // historically recognised.
   const isHubCuisine = HUB_ELIGIBLE_ORIGINS && HUB_ELIGIBLE_ORIGINS.has(recipe?.origin?.en);
-  if (isHubCuisine) decisions.push({ key: BADGE_TRADITIONAL, conf: 'medium' });
+  const isMappedCuisine = recipe?.origin?.en && CUISINE_PAIRING_TYPE[recipe.origin.en];
+  if (isHubCuisine || isMappedCuisine) decisions.push({ key: BADGE_TRADITIONAL, conf: 'medium' });
 
   // 4 — Can be frozen: stews, soups, braises, slow-cooked meat dishes
   const freezableByStructure = isSoupRecipe
@@ -3127,19 +3184,37 @@ function recipePairings(ingr, cat, code, n, overrides, recipe) {
   const hasFish = /salmon|trout|cod|tuna|shrimp|pește|somon|ton|păstrăv|creveți/.test(ingrStr);
   const hasPasta = /pasta|spaghetti|noodle|linguine|tagliatelle/.test(ingrStr);
   const isVeg = !hasMeat && !hasFish;
-  const ingredientType = isSoup(cat,n,ingr) ? 'soup' : hasFish ? 'fish' : hasMeat ? 'meat' : hasPasta ? 'pasta' : isVeg ? 'veg' : 'def';
+  // Dessert detection covers both author-tagged `pairingsType: dessert`
+  // and category text (Dessert / Desert / Dolce / Postre / Tatlı /
+  // десерт). Sweet pairings (espresso / berries / whipped cream) make
+  // more sense for desserts than cuisine pairings — Pavlova doesn't
+  // pair with "garden peas" just because Australia is in the anglo map.
+  const isDessert = /dessert|desert|dolce|postre|tatlı|десерт|디저트/i.test(cat||'')
+    || overrides?.pairingsType === 'dessert';
+  const ingredientType = isDessert ? 'dessert'
+    : isSoup(cat,n,ingr) ? 'soup'
+    : hasFish ? 'fish' : hasMeat ? 'meat' : hasPasta ? 'pasta' : isVeg ? 'veg' : 'def';
   // Author-set explicit cuisine type wins. Author-set generic type
   // (meat/fish/soup/pasta/veg/def) is treated as a placeholder and
   // upgraded to the cuisine pairing if origin maps to one — the most
   // common Phase 8A artefact was generic `pairingsType: 'meat'` on
   // cuisine-tagged recipes like Bobotie (South Africa) or Pljeskavica
   // (Serbia) producing "red wine / fresh bread / roasted potatoes".
+  // Dessert is the one exception: dessert pairings beat cuisine pairings.
   const explicit = overrides?.pairingsType;
   const isGenericExplicit = !explicit || ['meat','fish','soup','pasta','veg','def','dessert'].includes(explicit);
-  const pairingKey = isGenericExplicit
-    ? inferPairingType(recipe, explicit || ingredientType)
-    : explicit;
-  const chosen = p[pairingKey] || p[ingredientType] || p.def;
+  const pairingKey = isDessert
+    ? 'dessert'
+    : isGenericExplicit
+      ? inferPairingType(recipe, explicit || ingredientType)
+      : explicit;
+  // Locale fallback chain: current locale's template → English template
+  // (for keys that haven't been translated yet) → ingredient-derived
+  // generic → final 'def' fallback. The EN-fallback step makes adding
+  // a new cuisine template a one-locale change instead of a 14-locale
+  // change, with non-EN locales degrading gracefully.
+  const enPairs = (RECIPE_UI.en && RECIPE_UI.en.pairs) || {};
+  const chosen = p[pairingKey] || enPairs[pairingKey] || p[ingredientType] || p.def;
   return chosen.map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
 }
 
