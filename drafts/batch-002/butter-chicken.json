@@ -1,0 +1,168 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Butter Chicken (Murgh Makhani)", "ro": "Butter Chicken (Murgh Makhani)",
+    "es": "Pollo a la mantequilla (Murgh Makhani)", "fr": "Poulet au beurre (Murgh Makhani)",
+    "de": "Butter Chicken (Murgh Makhani)", "pt": "Frango à manteiga (Murgh Makhani)",
+    "ru": "Баттер чикен (Мург Маханни)", "ar": "دجاج بالزبدة (مرغ مكهني)",
+    "zh": "黄油鸡 (Murgh Makhani)", "ja": "バターチキン (ムルグ・マカニ)",
+    "tr": "Tereyağlı Tavuk (Murgh Makhani)", "it": "Pollo al burro (Murgh Makhani)",
+    "ko": "버터 치킨 (무르그 마카니)", "hi": "बटर चिकन (मुर्ग़ मक्खनी)"
+  },
+  "cuisine": {
+    "en": "India", "ro": "India", "es": "India", "fr": "Inde",
+    "de": "Indien", "pt": "Índia", "ru": "Индия", "ar": "الهند",
+    "zh": "印度", "ja": "インド", "tr": "Hindistan", "it": "India",
+    "ko": "인도", "hi": "भारत"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "800 g boneless chicken thighs, cut into 4 cm pieces",
+      "For the marinade: 200 g full-fat yoghurt, 2 tbsp ginger-garlic paste, 1 tsp Kashmiri red chilli powder, 1 tsp garam masala, juice of half a lemon, 2 tbsp neutral oil, 1 tsp salt",
+      "For the gravy: 800 g ripe tomatoes (or 1 large can chopped tomatoes), 60 g raw cashews, 1 large onion quartered, 4 garlic cloves, 3 cm piece of ginger, 4 green cardamom pods, 1 cinnamon stick, 4 cloves, 1 bay leaf",
+      "80 g unsalted butter, 200 ml double cream",
+      "1 tbsp kasoori methi (dried fenugreek leaves)",
+      "1 tsp Kashmiri red chilli powder, 1 tsp garam masala, 1 tsp sugar, salt",
+      "Fresh coriander to finish"
+    ],
+    "ro": [
+      "800 g pulpe de pui dezosate, tăiate în bucăți de 4 cm",
+      "Pentru marinadă: 200 g iaurt gras, 2 linguri pastă de ghimbir-usturoi, 1 linguriță boia Kashmiri, 1 linguriță garam masala, zeama de la o jumătate de lămâie, 2 linguri ulei neutru, 1 linguriță sare",
+      "Pentru sosul de bază: 800 g roșii coapte (sau o cutie mare de roșii tocate), 60 g caju crud, 1 ceapă mare în sferturi, 4 căței de usturoi, 3 cm bucată de ghimbir, 4 capsule de cardamom verde, 1 baton de scorțișoară, 4 cuișoare, 1 frunză de dafin",
+      "80 g unt nesărat, 200 ml smântână grasă",
+      "1 lingură kasoori methi (frunze uscate de schinduf)",
+      "1 linguriță boia Kashmiri, 1 linguriță garam masala, 1 linguriță zahăr, sare",
+      "Coriandru proaspăt pentru a încheia"
+    ],
+    "es": [
+      "800 g de muslos de pollo deshuesados, cortados en trozos de 4 cm",
+      "Para la marinada: 200 g de yogur entero, 2 cdas de pasta de jengibre y ajo, 1 cdta de chile rojo Kashmiri en polvo, 1 cdta de garam masala, el zumo de medio limón, 2 cdas de aceite neutro, 1 cdta de sal",
+      "Para la salsa: 800 g de tomates maduros (o 1 lata grande de tomate triturado), 60 g de anacardos crudos, 1 cebolla grande cortada en cuartos, 4 dientes de ajo, 3 cm de jengibre, 4 vainas de cardamomo verde, 1 rama de canela, 4 clavos, 1 hoja de laurel",
+      "80 g de mantequilla sin sal, 200 ml de nata para montar",
+      "1 cda de kasoori methi (fenogreco seco)",
+      "1 cdta de chile rojo Kashmiri, 1 cdta de garam masala, 1 cdta de azúcar, sal",
+      "Cilantro fresco para terminar"
+    ],
+    "fr": [
+      "800 g de cuisses de poulet désossées, coupées en morceaux de 4 cm",
+      "Pour la marinade : 200 g de yaourt entier, 2 c. à soupe de pâte gingembre-ail, 1 c. à café de piment rouge Kashmiri, 1 c. à café de garam masala, le jus d'un demi-citron, 2 c. à soupe d'huile neutre, 1 c. à café de sel",
+      "Pour la sauce : 800 g de tomates mûres (ou 1 grande boîte de tomates concassées), 60 g de noix de cajou crues, 1 gros oignon en quartiers, 4 gousses d'ail, 3 cm de gingembre, 4 cosses de cardamome verte, 1 bâton de cannelle, 4 clous de girofle, 1 feuille de laurier",
+      "80 g de beurre doux, 200 ml de crème entière",
+      "1 c. à soupe de kasoori methi (feuilles de fenugrec sèches)",
+      "1 c. à café de piment Kashmiri, 1 c. à café de garam masala, 1 c. à café de sucre, sel",
+      "Coriandre fraîche pour finir"
+    ],
+    "de": [
+      "800 g entbeinte Hähnchenschenkel, in 4-cm-Stücke geschnitten",
+      "Für die Marinade: 200 g Vollfettjoghurt, 2 EL Ingwer-Knoblauch-Paste, 1 TL Kashmiri-Chilipulver, 1 TL Garam Masala, Saft einer halben Zitrone, 2 EL neutrales Öl, 1 TL Salz",
+      "Für die Sauce: 800 g reife Tomaten (oder 1 große Dose gehackte Tomaten), 60 g rohe Cashews, 1 große Zwiebel geviertelt, 4 Knoblauchzehen, 3 cm Ingwer, 4 grüne Kardamomkapseln, 1 Zimtstange, 4 Nelken, 1 Lorbeerblatt",
+      "80 g ungesalzene Butter, 200 ml Schlagsahne",
+      "1 EL Kasoori Methi (getrocknete Bockshornkleeblätter)",
+      "1 TL Kashmiri-Chilipulver, 1 TL Garam Masala, 1 TL Zucker, Salz",
+      "Frischer Koriander zum Abschluss"
+    ],
+    "pt": [
+      "800 g de coxas de frango desossadas, cortadas em pedaços de 4 cm",
+      "Para a marinada: 200 g de iogurte gordo, 2 colheres de sopa de pasta de gengibre e alho, 1 colher de chá de piri-piri Kashmiri em pó, 1 colher de chá de garam masala, sumo de meio limão, 2 colheres de sopa de óleo neutro, 1 colher de chá de sal",
+      "Para o molho: 800 g de tomates maduros (ou 1 lata grande de tomate picado), 60 g de castanhas de caju cruas, 1 cebola grande em quartos, 4 dentes de alho, 3 cm de gengibre, 4 cápsulas de cardamomo verde, 1 pau de canela, 4 cravinhos, 1 folha de louro",
+      "80 g de manteiga sem sal, 200 ml de natas",
+      "1 colher de sopa de kasoori methi (folhas de feno-grego secas)",
+      "1 colher de chá de piri-piri Kashmiri, 1 colher de chá de garam masala, 1 colher de chá de açúcar, sal",
+      "Coentros frescos para finalizar"
+    ],
+    "ru": [
+      "800 г куриных бёдер без кости, нарезанных кусками по 4 см",
+      "Для маринада: 200 г жирного йогурта, 2 ст. л. пасты из имбиря и чеснока, 1 ч. л. кашмирского красного перца, 1 ч. л. гарам масала, сок половины лимона, 2 ст. л. нейтрального масла, 1 ч. л. соли",
+      "Для соуса: 800 г спелых томатов (или 1 большая банка рубленых томатов), 60 г сырых кешью, 1 крупная луковица четвертинками, 4 зубчика чеснока, 3 см имбиря, 4 коробочки зелёного кардамона, 1 палочка корицы, 4 гвоздики, 1 лавровый лист",
+      "80 г несолёного сливочного масла, 200 мл жирных сливок",
+      "1 ст. л. касури мети (сушёные листья пажитника)",
+      "1 ч. л. кашмирского перца, 1 ч. л. гарам масала, 1 ч. л. сахара, соль",
+      "Свежая кинза для подачи"
+    ],
+    "ar": [
+      "800 غ من أوراك الدجاج منزوعة العظم، مقطّعة قطعاً بطول 4 سم",
+      "للتتبيلة: 200 غ لبن كامل الدسم، 2 ملعقة كبيرة من معجون الزنجبيل والثوم، 1 ملعقة صغيرة فلفل كشميري أحمر، 1 ملعقة صغيرة غارام ماسالا، عصير نصف ليمونة، 2 ملعقة كبيرة زيت محايد، 1 ملعقة صغيرة ملح",
+      "للصلصة: 800 غ طماطم ناضجة (أو علبة كبيرة من الطماطم المفرومة)، 60 غ من الكاجو النيء، 1 بصلة كبيرة مقسومة لأرباع، 4 فصوص ثوم، 3 سم من الزنجبيل، 4 حبات هيل أخضر، 1 عود قرفة، 4 قرنفل، 1 ورقة غار",
+      "80 غ زبدة غير مملحة، 200 مل كريمة دسمة",
+      "1 ملعقة كبيرة كاسوري ميثي (أوراق حلبة مجففة)",
+      "1 ملعقة صغيرة فلفل كشميري، 1 ملعقة صغيرة غارام ماسالا، 1 ملعقة صغيرة سكر، ملح",
+      "كزبرة طازجة للتزيين"
+    ],
+    "zh": [
+      "去骨鸡腿肉 800 克，切成 4 厘米的块",
+      "腌料：全脂酸奶 200 克、姜蒜泥 2 汤匙、克什米尔红辣椒粉 1 茶匙、garam masala 1 茶匙、半个柠檬的汁、中性油 2 汤匙、盐 1 茶匙",
+      "酱底：成熟番茄 800 克（或大罐 chopped tomatoes 1 罐）、生腰果 60 克、大洋葱 1 个切四瓣、蒜瓣 4 个、姜 3 厘米、绿豆蔻荚 4 颗、肉桂棒 1 根、丁香 4 颗、月桂叶 1 片",
+      "无盐黄油 80 克、淡奶油 200 毫升",
+      "kasoori methi（干胡芦巴叶）1 汤匙",
+      "克什米尔红辣椒粉 1 茶匙、garam masala 1 茶匙、糖 1 茶匙、盐",
+      "新鲜香菜，最后撒上"
+    ],
+    "ja": [
+      "骨なし鶏もも 800 g、4 cm 角に切る",
+      "マリネ用：全脂ヨーグルト 200 g、ジンジャー＆ガーリックペースト 大さじ 2、カシミール赤唐辛子粉 小さじ 1、ガラムマサラ 小さじ 1、レモン半個分の果汁、無味の油 大さじ 2、塩 小さじ 1",
+      "グレービー用：完熟トマト 800 g（または大缶のカットトマト 1 缶）、生カシューナッツ 60 g、大玉ねぎ 1 個（4 等分）、にんにく 4 片、しょうが 3 cm、グリーンカルダモン 4 粒、シナモンスティック 1 本、クローブ 4 粒、ローリエ 1 枚",
+      "無塩バター 80 g、生クリーム 200 ml",
+      "カスーリ・メティ（乾燥フェヌグリーク葉）大さじ 1",
+      "カシミール唐辛子粉 小さじ 1、ガラムマサラ 小さじ 1、砂糖 小さじ 1、塩",
+      "仕上げの生コリアンダー"
+    ],
+    "tr": [
+      "Kemiksiz tavuk but 800 g, 4 cm'lik parçalara kesilmiş",
+      "Marine için: 200 g tam yağlı yoğurt, 2 yemek kaşığı zencefil-sarımsak ezmesi, 1 çay kaşığı Keşmir kırmızı toz biber, 1 çay kaşığı garam masala, yarım limonun suyu, 2 yemek kaşığı nötr yağ, 1 çay kaşığı tuz",
+      "Sos için: 800 g olgun domates (ya da 1 büyük konserve doğranmış domates), 60 g çiğ kaju, 1 büyük soğan dört parçaya bölünmüş, 4 diş sarımsak, 3 cm taze zencefil, 4 yeşil kakule kapsülü, 1 tarçın çubuğu, 4 karanfil, 1 defne yaprağı",
+      "80 g tuzsuz tereyağı, 200 ml krema",
+      "1 yemek kaşığı kasoori methi (kuru çemen yaprağı)",
+      "1 çay kaşığı Keşmir kırmızı biber, 1 çay kaşığı garam masala, 1 çay kaşığı şeker, tuz",
+      "Üzerine taze kişniş"
+    ],
+    "it": [
+      "800 g di sovracosce di pollo disossate, tagliate in pezzi da 4 cm",
+      "Per la marinatura: 200 g di yogurt intero, 2 cucchiai di pasta di zenzero e aglio, 1 cucchiaino di peperoncino rosso Kashmiri, 1 cucchiaino di garam masala, succo di mezzo limone, 2 cucchiai di olio neutro, 1 cucchiaino di sale",
+      "Per il sugo: 800 g di pomodori maturi (oppure 1 latta grande di pomodori a pezzi), 60 g di anacardi crudi, 1 cipolla grande tagliata in quarti, 4 spicchi d'aglio, 3 cm di zenzero, 4 baccelli di cardamomo verde, 1 stecca di cannella, 4 chiodi di garofano, 1 foglia di alloro",
+      "80 g di burro non salato, 200 ml di panna fresca",
+      "1 cucchiaio di kasoori methi (foglie di fieno greco essiccate)",
+      "1 cucchiaino di Kashmiri, 1 cucchiaino di garam masala, 1 cucchiaino di zucchero, sale",
+      "Coriandolo fresco per finire"
+    ],
+    "ko": [
+      "뼈 없는 닭 허벅지살 800 g, 4 cm 크기로 자르기",
+      "마리네이드: 풀팻 요거트 200 g, 생강-마늘 페이스트 2큰술, 카슈미르 레드 칠리 가루 1작은술, 가람 마살라 1작은술, 레몬 반 개분 즙, 무미 식용유 2큰술, 소금 1작은술",
+      "그레이비: 잘 익은 토마토 800 g (또는 큰 캔 다진 토마토 1개), 생 캐슈너트 60 g, 큰 양파 1개 4등분, 마늘 4쪽, 생강 3 cm, 그린 카다멈 4꼬투리, 시나몬 스틱 1개, 정향 4알, 월계수잎 1장",
+      "무염 버터 80 g, 헤비크림 200 ml",
+      "카수리 메티 (말린 호로파 잎) 1큰술",
+      "카슈미르 칠리 가루 1작은술, 가람 마살라 1작은술, 설탕 1작은술, 소금",
+      "마무리용 신선한 고수"
+    ],
+    "hi": [
+      "बिना हड्डी के चिकन जांघें 800 ग्राम, 4 सेमी के टुकड़ों में कटे",
+      "मैरिनेड के लिए: 200 ग्राम फुल फैट दही, 2 बड़े चम्मच अदरक-लहसुन पेस्ट, 1 छोटा चम्मच कश्मीरी लाल मिर्च, 1 छोटा चम्मच गरम मसाला, आधे नींबू का रस, 2 बड़े चम्मच तटस्थ तेल, 1 छोटा चम्मच नमक",
+      "ग्रेवी के लिए: 800 ग्राम पके टमाटर (या 1 बड़े कैन कटे टमाटर), 60 ग्राम कच्चा काजू, 1 बड़ी प्याज़ चार टुकड़ों में, 4 लहसुन की कलियाँ, 3 सेमी अदरक, 4 हरी इलायची, 1 दालचीनी की डंडी, 4 लौंग, 1 तेज़पत्ता",
+      "80 ग्राम बिना नमक का मक्खन, 200 मिली हेवी क्रीम",
+      "1 बड़ा चम्मच कसूरी मेथी",
+      "1 छोटा चम्मच कश्मीरी मिर्च, 1 छोटा चम्मच गरम मसाला, 1 छोटा चम्मच चीनी, नमक",
+      "ऊपर डालने के लिए ताज़ा धनिया"
+    ]
+  },
+  "howIsMade": {
+    "en": "Mix the marinade in a wide bowl, add the chicken and turn each piece until well coated. Cover and chill at least 4 hours, ideally overnight — the yoghurt tenderises and the spices need time to settle into the meat.\n\nFor the gravy, soak the cashews in 100 ml of hot water for 20 minutes. Put the tomatoes, onion, garlic, ginger and the whole spices into a heavy pan with 200 ml of water, bring to a simmer and cook covered for 20–25 minutes, until the tomatoes have collapsed and the onion is fully soft. Fish out the cinnamon, cardamom, cloves and bay leaf, then blend everything — including the soaked cashews and their water — to a velvety purée and pass through a sieve back into the pan for restaurant-style smoothness.\n\nHeat the broiler high and line a tray with foil. Spread the marinated chicken in a single layer with space between the pieces and broil 5–6 cm from the heat for 6–8 minutes per side, until the edges are charred and the meat is just cooked through. The char is half the dish, so let those edges go genuinely dark.\n\nMelt the butter in a wide pan over medium heat, pour in the strained gravy, and add the chilli powder, sugar and a teaspoon of salt. Simmer gently for 10 minutes, stirring often, until the colour deepens to a rich brick-orange. Pour in the cream, stir until the gravy turns velvet, then slide in the charred chicken with any juices from the tray and let everything bubble together for 4–5 minutes more.\n\nCrush the kasoori methi between your palms over the pan, stir in the garam masala and taste for salt and sugar — the balance should be rich, gently sweet, with a quiet smoky bite from the char. Scatter coriander leaves on top and serve with naan or basmati rice.",
+    "ro": "Amestecă marinada într-un bol larg, adaugă puiul și învârte fiecare bucată până când este bine acoperită. Acoperă și pune la frigider minim 4 ore, ideal peste noapte — iaurtul frăgezește, iar mirodeniile au nevoie de timp ca să se așeze în carne.\n\nPentru sos, înmoaie caju-ul în 100 ml apă fierbinte 20 de minute. Pune roșiile, ceapa, usturoiul, ghimbirul și mirodeniile întregi într-o oală grea cu 200 ml apă, adu la fierbere și gătește acoperit 20–25 de minute, până când roșiile s-au desfăcut și ceapa este complet moale. Scoate scorțișoara, cardamomul, cuișoarele și foaia de dafin, apoi pasează totul — inclusiv caju-ul înmuiat și apa lui — într-un piure catifelat și trece-l printr-o sită înapoi în oală pentru o textură de restaurant.\n\nÎncinge grătarul cuptorului la maxim și acoperă o tavă cu folie. Așază puiul marinat într-un singur strat cu spațiu între bucăți și gratinează-l la 5–6 cm de sursa de căldură 6–8 minute pe fiecare parte, până când marginile sunt arse și carnea abia gătită. Arsura este jumătate din mâncare, deci las-o să capete o culoare cu adevărat închisă.\n\nTopește untul într-o tigaie largă pe foc mediu, toarnă sosul strecurat și adaugă boiaua, zahărul și o linguriță de sare. Fierbe blând 10 minute, amestecând des, până când culoarea se adâncește într-un portocaliu-cărămidiu bogat. Adaugă smântâna, amestecă până când sosul devine catifelat, apoi alunecă puiul ars cu tot ce a lăsat în tavă și las-o să bolborosească împreună încă 4–5 minute.\n\nStrivește între palme kasoori methi peste tigaie, încorporează garam masala și gustă de sare și zahăr — echilibrul trebuie să fie bogat, ușor dulce, cu o notă liniștită afumată de la arsură. Presară frunze de coriandru deasupra și servește cu naan sau orez basmati.",
+    "es": "Mezcla la marinada en un bol amplio, añade el pollo y voltea cada trozo hasta que esté bien recubierto. Tapa y refrigera al menos 4 horas, idealmente toda la noche — el yogur ablanda y las especias necesitan tiempo para asentarse en la carne.\n\nPara la salsa, remoja los anacardos en 100 ml de agua caliente durante 20 minutos. Pon los tomates, la cebolla, el ajo, el jengibre y las especias enteras en una olla pesada con 200 ml de agua, lleva a un hervor suave y cuece tapado 20–25 minutos, hasta que los tomates se hayan deshecho y la cebolla esté completamente blanda. Saca la canela, el cardamomo, los clavos y la hoja de laurel, después tritura todo — incluidos los anacardos y su agua — hasta un puré aterciopelado y pásalo por un colador de vuelta a la olla, para una textura de restaurante.\n\nCalienta el gratinador al máximo y forra una bandeja con papel aluminio. Coloca el pollo marinado en una sola capa, con espacio entre los trozos, y gratina a 5–6 cm de la fuente de calor durante 6–8 minutos por cada lado, hasta que los bordes estén carbonizados y la carne recién hecha. El char es la mitad del plato, así que deja que esos bordes se oscurezcan de verdad.\n\nDerrite la mantequilla en una sartén amplia a fuego medio, vierte la salsa colada y añade el chile en polvo, el azúcar y una cucharadita de sal. Cuece a fuego suave 10 minutos, removiendo a menudo, hasta que el color se haga un naranja-teja intenso. Añade la nata, remueve hasta que la salsa quede aterciopelada, después incorpora el pollo carbonizado con sus jugos de la bandeja y deja que todo borbotee junto 4–5 minutos más.\n\nFrota la kasoori methi entre las palmas sobre la sartén, incorpora el garam masala y prueba de sal y azúcar — el equilibrio debe ser rico, levemente dulce, con un mordisco ahumado tranquilo del char. Espolvorea hojas de cilantro por encima y sirve con naan o arroz basmati.",
+    "fr": "Mélangez la marinade dans un grand saladier, ajoutez le poulet et retournez chaque morceau jusqu'à ce qu'il soit bien enrobé. Couvrez et placez au frais au moins 4 heures, idéalement toute la nuit — le yaourt attendrit et les épices ont besoin de temps pour s'installer dans la viande.\n\nPour la sauce, faites tremper les noix de cajou dans 100 ml d'eau chaude pendant 20 minutes. Mettez les tomates, l'oignon, l'ail, le gingembre et les épices entières dans une cocotte épaisse avec 200 ml d'eau, portez à frémissement et faites cuire couvert 20 à 25 minutes, jusqu'à ce que les tomates s'effondrent et que l'oignon soit complètement tendre. Retirez la cannelle, la cardamome, les clous de girofle et le laurier, puis mixez tout — y compris les noix de cajou et leur eau de trempage — en une purée veloutée et passez-la au tamis dans la cocotte, pour une texture de restaurant.\n\nFaites chauffer le gril du four au maximum et tapissez une plaque de papier d'aluminium. Étalez le poulet mariné en une seule couche avec de l'espace entre les morceaux et faites griller à 5–6 cm de la source de chaleur pendant 6 à 8 minutes par face, jusqu'à ce que les bords soient charbonnés et la viande tout juste cuite. Le caramel noir est la moitié du plat, alors laissez ces bords devenir vraiment sombres.\n\nFaites fondre le beurre dans une grande poêle à feu moyen, versez la sauce tamisée et ajoutez le piment, le sucre et une cuillère à café de sel. Laissez frémir doucement 10 minutes en remuant souvent, jusqu'à ce que la couleur devienne un brun-orange brique. Ajoutez la crème, remuez jusqu'à ce que la sauce devienne veloutée, puis glissez-y le poulet grillé avec ses jus de la plaque et laissez tout mijoter ensemble 4 à 5 minutes de plus.\n\nÉcrasez le kasoori methi entre les paumes au-dessus de la poêle, incorporez le garam masala et goûtez le sel et le sucre — l'équilibre doit être riche, doucement sucré, avec une morsure fumée discrète venue du grillé. Parsemez de coriandre fraîche et servez avec du naan ou du riz basmati.",
+    "de": "Verrühren Sie die Marinade in einer breiten Schüssel, geben Sie das Hähnchen hinzu und wenden Sie jedes Stück, bis es vollständig überzogen ist. Abdecken und mindestens 4 Stunden, idealerweise über Nacht, kalt stellen — der Joghurt zart das Fleisch, die Gewürze brauchen Zeit, um einzuziehen.\n\nFür die Sauce die Cashews 20 Minuten in 100 ml heißem Wasser einweichen. Geben Sie die Tomaten, die Zwiebel, den Knoblauch, den Ingwer und die ganzen Gewürze in einen schweren Topf mit 200 ml Wasser, bringen Sie das Ganze zum Köcheln und kochen Sie zugedeckt 20–25 Minuten, bis die Tomaten zerfallen und die Zwiebel ganz weich ist. Holen Sie Zimt, Kardamom, Nelken und Lorbeerblatt heraus, mixen Sie dann alles — auch die eingeweichten Cashews mit ihrem Wasser — zu einem samtigen Püree und streichen Sie es durch ein Sieb zurück in den Topf, für die Restaurantglätte.\n\nHeizen Sie den Grill (Broiler) hoch und legen Sie ein Blech mit Folie aus. Verteilen Sie das marinierte Hähnchen in einer einzigen Schicht mit Abstand zwischen den Stücken und grillen Sie 5–6 cm vom Brenner für 6–8 Minuten je Seite, bis die Ränder verkohlt und das Fleisch gerade gar ist. Die Verkohlung ist die Hälfte des Gerichts, also lassen Sie diese Ränder wirklich dunkel werden.\n\nSchmelzen Sie die Butter in einer breiten Pfanne bei mittlerer Hitze, gießen Sie die passierte Sauce hinein und fügen Sie Chilipulver, Zucker und einen Teelöffel Salz hinzu. Lassen Sie 10 Minuten sanft köcheln, dabei oft rühren, bis die Farbe in ein tiefes Ziegelorange übergeht. Gießen Sie die Sahne ein, rühren Sie, bis die Sauce samtig wird, und schieben Sie dann das gegrillte Hähnchen mitsamt den Säften vom Blech hinein und lassen Sie alles weitere 4–5 Minuten zusammen blubbern.\n\nZerreiben Sie Kasoori Methi zwischen den Handflächen über die Pfanne, rühren Sie das Garam Masala ein und schmecken Sie mit Salz und Zucker ab — die Balance soll reich, sanft süß und mit einem ruhigen Räuchergeschmack vom Grillen sein. Streuen Sie Koriander darüber und servieren Sie mit Naan oder Basmati-Reis.",
+    "pt": "Misture a marinada numa taça larga, junte o frango e envolva cada pedaço até estar bem coberto. Tape e leve ao frio pelo menos 4 horas, idealmente uma noite — o iogurte amacia e as especiarias precisam de tempo para se assentar na carne.\n\nPara o molho, ponha as castanhas a demolhar em 100 ml de água quente durante 20 minutos. Coloque os tomates, a cebola, o alho, o gengibre e as especiarias inteiras numa panela pesada com 200 ml de água, leve a uma fervura branda e cozinhe tapado 20–25 minutos, até os tomates desfazerem-se e a cebola estar completamente macia. Retire a canela, o cardamomo, os cravinhos e o louro, depois triture tudo — incluindo as castanhas e a sua água de demolha — num puré aveludado e passe por um passador para a panela, para uma textura de restaurante.\n\nLigue o grelhador no máximo e forre um tabuleiro com alumínio. Distribua o frango marinado numa única camada com espaço entre os pedaços e grelhe a 5–6 cm da fonte de calor durante 6–8 minutos de cada lado, até as bordas estarem queimadas e a carne mal cozida. O queimado é metade do prato, por isso deixe essas bordas escurecerem a sério.\n\nDerreta a manteiga numa frigideira larga em lume médio, deite o molho coado e junte o piri-piri em pó, o açúcar e uma colher de chá de sal. Deixe ferver brandamente 10 minutos, mexendo com frequência, até a cor aprofundar para um cor de tijolo intenso. Verta as natas, mexa até o molho ficar aveludado, depois junte o frango queimado e os sucos do tabuleiro e deixe ferver juntos mais 4–5 minutos.\n\nEsmague o kasoori methi entre as palmas sobre a frigideira, incorpore o garam masala e prove de sal e açúcar — o equilíbrio deve ser rico, levemente doce, com uma mordida fumada calma vinda do char. Polvilhe coentros por cima e sirva com naan ou arroz basmati.",
+    "ru": "Смешайте маринад в широкой миске, добавьте курицу и обваляйте каждый кусок до полного покрытия. Накройте и охлаждайте минимум 4 часа, идеально на ночь — йогурт размягчает мясо, а специям нужно время, чтобы войти в курицу.\n\nДля соуса замочите кешью в 100 мл горячей воды на 20 минут. Положите томаты, лук, чеснок, имбирь и целые специи в тяжёлую кастрюлю с 200 мл воды, доведите до слабого кипения и варите под крышкой 20–25 минут, пока томаты не распадутся, а лук не станет полностью мягким. Выньте корицу, кардамон, гвоздику и лавровый лист, затем смешайте всё блендером — включая кешью и воду от замачивания — в бархатный пюре и пропустите через сито обратно в кастрюлю для ресторанной гладкости.\n\nРазогрейте верхний гриль на максимум и застелите противень фольгой. Выложите маринованную курицу в один слой с промежутками и подрумяньте в 5–6 см от нагревателя 6–8 минут с каждой стороны, до подгоревших краёв и едва прожаренного мяса. Подгар — это половина блюда, поэтому пусть эти края станут по-настоящему тёмными.\n\nРастопите масло в широкой сковороде на среднем огне, влейте процеженный соус и добавьте перец, сахар и чайную ложку соли. Томите 10 минут на слабом огне, часто помешивая, пока цвет не углубится в насыщенный кирпично-оранжевый. Влейте сливки, перемешайте, пока соус не станет бархатным, затем переложите подгорелую курицу со всеми соками с противня и дайте всему бурлить вместе ещё 4–5 минут.\n\nРастолките касури мети между ладонями над сковородой, вмешайте гарам масала и попробуйте на соль и сахар — баланс должен быть насыщенным, мягко сладковатым, с тихой дымной нотой от подгара. Посыпьте сверху кинзой и подавайте с наан или рисом басмати.",
+    "ar": "اخلط التتبيلة في وعاء واسع، أضف الدجاج وقلّب كل قطعة حتى تتغطى تماماً. غطّ وضع في الثلاجة لمدة 4 ساعات على الأقل، ويفضّل طوال الليل — اللبن يطرّي اللحم، والبهارات تحتاج إلى وقت لتستقر في اللحم.\n\nللصلصة، انقع الكاجو في 100 مل ماء ساخن لمدة 20 دقيقة. ضع الطماطم والبصل والثوم والزنجبيل والبهارات الكاملة في قدر ثقيل مع 200 مل ماء، أوصلها إلى غليان هادئ واطبخها مغطاة 20–25 دقيقة حتى تتفتّت الطماطم ويصبح البصل ليّناً تماماً. ارفع القرفة والهيل والقرنفل وورقة الغار، ثم اخلط الكل — بما فيه الكاجو وماء النقع — حتى تحصل على بوريه مخملي، ومرّره عبر مصفاة إلى القدر للحصول على نعومة المطاعم.\n\nسخّن مشواية الفرن إلى أعلى درجة وغطّ صينية بورق الألمنيوم. وزّع الدجاج المتبّل في طبقة واحدة مع مساحة بين القطع، واشوه على بعد 5–6 سم من العنصر الحراري لمدة 6–8 دقائق على كل وجه، حتى تتحمّر الأطراف بقوة ويكون اللحم قد نضج للتو. التحميص نصف الطبق، فاترك تلك الأطراف تغمق فعلاً.\n\nأذِب الزبدة في مقلاة واسعة على نار متوسطة، اسكب الصلصة المصفّاة وأضف الفلفل الحار والسكر وملعقة صغيرة من الملح. اطبخ على نار هادئة 10 دقائق مع التحريك المتكرر، حتى يصبح اللون برتقالياً قرميدياً عميقاً. أضف الكريمة، حرّك حتى تصبح الصلصة مخملية، ثم أدخل الدجاج المحمّر بكل ما تركه من عصارة في الصينية ودعه يفور مع الصلصة 4–5 دقائق إضافية.\n\nاسحق كاسوري ميثي بين كفّيك فوق المقلاة، أضف الغارام ماسالا وتذوّق الملح والسكر — يجب أن يكون التوازن غنياً، حلواً بهدوء، مع لمسة دخان هادئة من التحميص. انثر أوراق الكزبرة فوقه وقدّمه مع خبز النان أو أرز البسمتي.",
+    "zh": "在一个大碗里把腌料拌匀，加入鸡腿肉翻动每一块直到完全裹住。盖好后放冰箱至少 4 小时，最好放过夜——酸奶让肉变嫩，香料需要时间进入肉里。\n\n做酱底：先把腰果用 100 毫升热水浸泡 20 分钟。把番茄、洋葱、大蒜、姜和整粒香料放进厚锅，加 200 毫升水，烧至微沸后盖盖煮 20–25 分钟，直到番茄烂、洋葱完全软。捞出肉桂、豆蔻、丁香和月桂叶，再把剩下的全部——包括泡过的腰果连水一起——打成丝绒般的酱泥，再过细筛回锅，达到餐厅级别的顺滑。\n\n烤箱上火（broiler）开到最高，烤盘铺锡纸。把腌好的鸡肉单层平铺、块之间留点空隙，距上火 5–6 厘米烤每面 6–8 分钟，让边缘焦黑、肉刚刚熟透。这层焦边是整道菜一半的灵魂，所以让边缘真正烧黑一些。\n\n在宽底锅中中火融化黄油，倒入过筛后的酱底，加入辣椒粉、糖和 1 茶匙盐。小火慢煮 10 分钟，时不时搅一下，颜色慢慢变成深砖橙色。倒入淡奶油，搅至酱汁丝滑后，把烤盘里所有连带汁水的烤鸡放进酱中，再一起咕嘟 4–5 分钟。\n\n把 kasoori methi 在掌心里搓碎撒到锅里，拌入 garam masala，尝尝盐和糖——整体应当浓郁、带温柔的甜味和那层来自焦边的淡淡烟香。最后撒上香菜叶，配 naan 饼或 basmati 米饭享用。",
+    "ja": "マリネ液を大きめのボウルで混ぜ、鶏肉を加えて 1 切れずつしっかり絡める。ラップをして冷蔵庫で最低 4 時間、できれば一晩。ヨーグルトが肉をやわらかくし、スパイスが肉に染みていくには時間が必要だ。\n\nグレービー用に、カシューナッツを 100 ml の熱湯に 20 分浸ける。トマト、玉ねぎ、にんにく、しょうが、ホールスパイスを 200 ml の水と一緒に厚手の鍋に入れ、沸騰してから蓋をして 20〜25 分、トマトが崩れ玉ねぎがすっかりやわらかくなるまで煮る。シナモン、カルダモン、クローブ、ローリエを取り出し、残りすべて — 浸したカシューと浸け汁ごと — を撹拌してビロードのようなピューレにし、漉して鍋に戻す。レストランの滑らかさはこの一手間。\n\nオーブンの上火（ブロイラー）を最強で熱し、天板にアルミホイルを敷く。マリネした鶏肉を、互いに少し距離を取って 1 段に並べ、上火から 5〜6 cm の位置で片面 6〜8 分、縁が黒く焦げて中はちょうど火が通るまで焼く。この焦げ目こそ料理の半分なので、縁は本当に黒くなるまで焼く。\n\n広めの鍋にバターを溶かし、漉したグレービーを注ぎ、唐辛子粉、砂糖、塩小さじ 1 を加える。中弱火で 10 分、頻繁にかき混ぜながら煮詰めて、色が深いレンガ色〜オレンジに落ち着くまで仕上げる。生クリームを注ぎ、ソースがビロードになるまで混ぜ、焼いた鶏肉をトレイの汁ごと加え、さらに 4〜5 分一緒に煮る。\n\nカスーリ・メティを手のひらでこすりつぶしながら鍋にふりかけ、ガラムマサラを加え、塩と砂糖で味を整える — 全体は濃厚で、ほのかに甘く、焦げから生まれる静かなスモーキーさが効いた状態が理想。最後に生コリアンダーを散らし、ナンまたはバスマティライスと共に供する。",
+    "tr": "Marineyi geniş bir kâsede karıştır, tavuğu ekle ve her parçayı iyice kaplanana kadar çevir. Üzerini örtüp en az 4 saat, tercihen bir gece buzdolabında bekletin — yoğurt eti yumuşatır ve baharatların ete işlemesi için zaman gerekir.\n\nSos için, kajuyu 100 ml sıcak suda 20 dakika ıslatın. Domatesleri, soğanı, sarımsağı, zencefili ve bütün baharatları ağır bir tencereye 200 ml suyla koyun, kaynamaya getirin ve kapalı şekilde 20–25 dakika, domatesler dağılıp soğan tamamen yumuşayana kadar pişirin. Tarçını, kakuleyi, karanfilleri ve defne yaprağını çıkarın, sonra geri kalan her şeyi — ıslatılmış kajular ve suyu dahil — kadife gibi bir pürede karıştırın ve restoran pürüzsüzlüğü için süzgeçten tencereye geri geçirin.\n\nFırının üst ızgarasını en yükseğe ısıtın ve bir tepsiyi alüminyum folyo ile kaplayın. Marine edilmiş tavuğu parçalar arası boşluklarla tek kat halinde yayın ve ızgaraya 5–6 cm uzaklıkta, her yüzü 6–8 dakika, kenarları yanıp et tam pişene kadar pişirin. Yanma payı yemeğin yarısıdır, bu yüzden o kenarların gerçekten koyu olmasına izin verin.\n\nGeniş bir tavada tereyağını orta ateşte erit, süzülmüş sosu dök ve toz biber, şeker ve 1 çay kaşığı tuzu ekle. Sık karıştırarak 10 dakika hafif ateşte pişir, renk koyu tuğla-turuncu olana kadar. Kremayı dök, sos kadife haline gelene dek karıştır, sonra ızgaradaki tüm sularıyla birlikte tavuğu içine al ve birlikte 4–5 dakika daha kaynat.\n\nAvuçların arasında kasoori methi'yi tavanın üzerinde ovuştur, garam masala'yı ekle ve tuz ile şekeri tat — denge zengin, hafif tatlı ve ızgaradan gelen sessiz dumanlı bir tat olmalı. Üzerine kişniş yapraklarını serp ve naan ya da basmati pirinçle servis et.",
+    "it": "Mescolate la marinatura in una ciotola ampia, unite il pollo e rigirate ogni pezzo finché non è ben condito. Coprite e fate riposare in frigo almeno 4 ore, idealmente tutta la notte — lo yogurt intenerisce e le spezie hanno bisogno di tempo per assestarsi nella carne.\n\nPer il sugo, ammollate gli anacardi in 100 ml di acqua calda per 20 minuti. Mettete i pomodori, la cipolla, l'aglio, lo zenzero e le spezie intere in una pentola pesante con 200 ml di acqua, portate a un sobbollire e cuocete coperto per 20–25 minuti, finché i pomodori non si sono sciolti e la cipolla non è completamente morbida. Pescate fuori cannella, cardamomo, chiodi di garofano e alloro, poi frullate tutto — anacardi e loro acqua compresa — in una purea vellutata e passatela al setaccio nella pentola, per la levigatezza da ristorante.\n\nAccendete il grill del forno al massimo e foderate una teglia con alluminio. Disponete il pollo marinato in un solo strato con spazio tra i pezzi e grigliate a 5–6 cm dalla fonte di calore per 6–8 minuti per lato, finché i bordi non sono ben anneriti e la carne è appena cotta. La carbonizzazione è metà del piatto, quindi lasciate quei bordi diventare davvero scuri.\n\nFate sciogliere il burro in una padella ampia a fuoco medio, versate il sugo passato e unite il peperoncino, lo zucchero e un cucchiaino di sale. Fate sobbollire dolcemente 10 minuti, mescolando spesso, finché il colore non si fa di un mattone arancio intenso. Versate la panna, mescolate finché il sugo non diventa vellutato, poi unitevi il pollo grigliato con tutti i suoi sughi della teglia e fate sobbollire insieme altri 4–5 minuti.\n\nSfregate il kasoori methi tra i palmi sopra la padella, unite il garam masala e regolate di sale e zucchero — l'equilibrio deve essere ricco, dolcemente caramellato, con un morso fumé pacato dal grigliato. Spolverizzate il coriandolo fresco e servite con naan o riso basmati.",
+    "ko": "마리네이드를 넓은 볼에 섞고, 닭을 넣어 각 조각이 잘 묻을 때까지 뒤집어준다. 덮어서 최소 4시간, 가능하면 하룻밤 차게 둔다 — 요거트가 살을 부드럽게 하고, 향신료들은 살 속에 자리잡을 시간이 필요하다.\n\n그레이비를 위해, 캐슈를 100 ml의 뜨거운 물에 20분간 불린다. 토마토, 양파, 마늘, 생강, 통향신료를 두꺼운 냄비에 200 ml 물과 함께 넣고 약하게 끓을 때까지 가열한 다음, 뚜껑을 덮고 20–25분간, 토마토가 무너지고 양파가 완전히 부드러워질 때까지 끓인다. 시나몬, 카다멈, 정향, 월계수잎을 건져내고, 나머지 모든 것을 — 불린 캐슈와 그 물까지 — 부드러운 퓌레가 되도록 갈고, 체에 다시 걸러 냄비로 옮긴다 — 식당 같은 매끄러움은 이 한 단계에서 나온다.\n\n오븐의 상단 그릴(브로일러)을 최대로 예열하고 트레이에 호일을 깐다. 마리네이드한 닭을 한 겹으로 사이를 두고 펴고, 가열 요소에서 5–6 cm 떨어진 위치에서 양면 6–8분씩, 가장자리가 까맣게 그을리고 살이 막 익을 때까지 굽는다. 이 까맣게 탄 가장자리가 이 요리의 절반이니, 그 가장자리가 진짜 어두워질 때까지 둔다.\n\n넓은 팬에 버터를 중불로 녹이고, 거른 그레이비를 부어 칠리 가루, 설탕, 소금 1작은술을 더한다. 약불에서 10분, 자주 저어주며, 색이 진한 벽돌–오렌지로 깊어질 때까지 졸인다. 크림을 붓고 소스가 벨벳처럼 매끄러워질 때까지 저은 다음, 트레이의 모든 즙과 함께 그을린 닭을 넣어 4–5분 더 같이 끓인다.\n\n카수리 메티를 손바닥 사이에 비벼 팬 위에 흩뿌리고, 가람 마살라를 넣고 소금과 설탕을 본다 — 균형은 진하고, 은은하게 달콤하며, 그을림에서 오는 조용한 스모키 노트가 있어야 한다. 위에 고수 잎을 흩뿌리고 난이나 바스마티 라이스와 함께 낸다.",
+    "hi": "एक चौड़े बर्तन में मैरिनेड मिलाएँ, चिकन डालें और हर टुकड़े को अच्छी तरह लपेटें। ढक कर कम से कम 4 घंटे, बेहतर हो तो रात भर, फ्रिज में रखें — दही मांस को नर्म करता है और मसालों को मांस में बैठने का समय चाहिए।\n\nग्रेवी के लिए, काजू को 100 मिली गरम पानी में 20 मिनट भिगो दें। टमाटर, प्याज़, लहसुन, अदरक और साबुत मसाले एक भारी बर्तन में 200 मिली पानी के साथ डालें, उबाल पर लाएँ और ढक कर 20–25 मिनट तक पकाएँ, जब तक टमाटर पिघल न जाएँ और प्याज़ पूरी तरह नर्म न हो जाए। दालचीनी, इलायची, लौंग और तेज़पत्ता निकाल लें, फिर बाक़ी सब कुछ — भीगे काजू और उनके पानी सहित — एक मखमली प्यूरी में पीस लें, और रेस्टोरेंट जैसी चिकनाई के लिए छलनी से वापस बर्तन में छान दें।\n\nओवन का ऊपरी ग्रिल (ब्रॉयलर) अधिकतम पर गरम करें और एक ट्रे पर एल्यूमिनियम फ़ॉइल बिछा दें। मैरिनेट किया चिकन एक परत में टुकड़ों के बीच जगह छोड़ कर बिछाएँ, और गर्मी स्रोत से 5–6 सेमी दूर, हर तरफ़ 6–8 मिनट तक — किनारे काले-काले जलें और मांस बस-बस पका हो — ब्रॉयल करें। यह जला हुआ किनारा ही आधा व्यंजन है, इसलिए उन किनारों को सचमुच गहरा होने दें।\n\nएक चौड़े पैन में मध्यम आँच पर मक्खन पिघलाएँ, छनी हुई ग्रेवी डालें और मिर्च पाउडर, चीनी और 1 छोटा चम्मच नमक मिलाएँ। हलकी आँच पर 10 मिनट, बीच-बीच में चलाते रहें, जब तक रंग गहरे ईंट-नारंगी में न बदले। क्रीम डालें, सॉस मखमली होने तक चलाएँ, फिर ट्रे के सारे रसों समेत जला हुआ चिकन डालें और सबको 4–5 मिनट और साथ में पकने दें।\n\nहथेलियों के बीच कसूरी मेथी मसल कर पैन में डालें, गरम मसाला मिलाएँ और नमक-चीनी देखें — संतुलन समृद्ध, हलका मीठा, और भुने हुए किनारों से आती हलकी धुएँदार खुशबू वाला होना चाहिए। ऊपर ताज़ी धनिया छिड़कें और naan या बासमती चावल के साथ परोसें।"
+  }
+}

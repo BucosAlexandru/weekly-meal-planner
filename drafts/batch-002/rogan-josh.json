@@ -1,0 +1,207 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Rogan Josh", "ro": "Rogan Josh", "es": "Rogan Josh", "fr": "Rogan Josh",
+    "de": "Rogan Josh", "pt": "Rogan Josh", "ru": "Роган джош", "ar": "روغن جوش",
+    "zh": "克什米尔咖喱羊肉", "ja": "ローガン・ジョシュ", "tr": "Rogan Josh", "it": "Rogan Josh",
+    "ko": "로간 조시", "hi": "रोगन जोश"
+  },
+  "cuisine": {
+    "en": "India", "ro": "India", "es": "India", "fr": "Inde",
+    "de": "Indien", "pt": "Índia", "ru": "Индия", "ar": "الهند",
+    "zh": "印度", "ja": "インド", "tr": "Hindistan", "it": "India",
+    "ko": "인도", "hi": "भारत"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "1 kg bone-in lamb shoulder or leg, cut into 4 cm pieces",
+      "4 tbsp mustard oil",
+      "200 g full-fat yoghurt, whisked smooth",
+      "4 dried Kashmiri red chillies, soaked in warm water 20 minutes and ground to a paste (or 2 tbsp Kashmiri chilli powder)",
+      "1 tsp fennel powder",
+      "1 tsp dried ginger powder (sonth)",
+      "½ tsp asafoetida (hing)",
+      "Whole spices: 8 green cardamom + 2 black cardamom, 1 cinnamon stick, 6 cloves, 1 bay leaf",
+      "1 tsp salt",
+      "A pinch of saffron, soaked in 2 tbsp warm milk"
+    ],
+    "ro": [
+      "1 kg spată sau pulpă de miel cu os, tăiată în bucăți de 4 cm",
+      "4 linguri ulei de muștar",
+      "200 g iaurt gras, bătut neted",
+      "4 ardei roșii Kashmiri uscați, înmuiați 20 de minute în apă caldă și pisați pastă (sau 2 linguri boia Kashmiri)",
+      "1 linguriță pudră de fenicul",
+      "1 linguriță pudră de ghimbir uscat (sonth)",
+      "½ linguriță asafoetida (hing)",
+      "Mirodenii întregi: 8 capsule cardamom verde + 2 cardamom negru, 1 baton de scorțișoară, 6 cuișoare, 1 frunză de dafin",
+      "1 linguriță sare",
+      "Un vârf de șofran, infuzat în 2 linguri lapte cald"
+    ],
+    "es": [
+      "1 kg de paletilla o pierna de cordero con hueso, en trozos de 4 cm",
+      "4 cdas de aceite de mostaza",
+      "200 g de yogur entero, batido liso",
+      "4 chiles rojos Kashmiri secos, remojados 20 minutos en agua tibia y molidos a pasta (o 2 cdas de chile Kashmiri en polvo)",
+      "1 cdta de hinojo en polvo",
+      "1 cdta de jengibre seco en polvo (sonth)",
+      "½ cdta de asafétida (hing)",
+      "Especias enteras: 8 vainas de cardamomo verde + 2 de negro, 1 rama de canela, 6 clavos, 1 hoja de laurel",
+      "1 cdta de sal",
+      "Una pizca de azafrán infusionado en 2 cdas de leche tibia"
+    ],
+    "fr": [
+      "1 kg d'épaule ou de gigot d'agneau avec os, coupé en morceaux de 4 cm",
+      "4 c. à soupe d'huile de moutarde",
+      "200 g de yaourt entier, fouetté lisse",
+      "4 piments rouges Kashmiri secs, trempés 20 minutes dans l'eau tiède et broyés en pâte (ou 2 c. à soupe de piment Kashmiri en poudre)",
+      "1 c. à café de fenouil en poudre",
+      "1 c. à café de gingembre sec en poudre (sonth)",
+      "½ c. à café d'asa-fœtida (hing)",
+      "Épices entières : 8 cosses de cardamome verte + 2 de cardamome noire, 1 bâton de cannelle, 6 clous de girofle, 1 feuille de laurier",
+      "1 c. à café de sel",
+      "Une pincée de safran, infusée dans 2 c. à soupe de lait tiède"
+    ],
+    "de": [
+      "1 kg Lammschulter oder -keule mit Knochen, in 4-cm-Stücke geschnitten",
+      "4 EL Senföl",
+      "200 g Vollfettjoghurt, glatt verquirlt",
+      "4 getrocknete Kashmiri-Chilis, 20 Minuten in warmem Wasser eingeweicht und zu einer Paste vermahlen (oder 2 EL Kashmiri-Chilipulver)",
+      "1 TL Fenchelpulver",
+      "1 TL getrocknetes Ingwerpulver (Sonth)",
+      "½ TL Asafoetida (Hing)",
+      "Ganze Gewürze: 8 grüne Kardamomkapseln + 2 schwarze, 1 Zimtstange, 6 Nelken, 1 Lorbeerblatt",
+      "1 TL Salz",
+      "Eine Prise Safran in 2 EL warmer Milch eingelegt"
+    ],
+    "pt": [
+      "1 kg de pá ou perna de borrego com osso, em pedaços de 4 cm",
+      "4 colheres de sopa de óleo de mostarda",
+      "200 g de iogurte gordo, batido até ficar liso",
+      "4 piri-piris vermelhos Kashmiri secos, demolhados 20 minutos em água morna e triturados a pasta (ou 2 colheres de sopa de piri-piri Kashmiri em pó)",
+      "1 colher de chá de funcho em pó",
+      "1 colher de chá de gengibre seco em pó (sonth)",
+      "½ colher de chá de assa-fétida (hing)",
+      "Especiarias inteiras: 8 cápsulas de cardamomo verde + 2 de cardamomo preto, 1 pau de canela, 6 cravinhos, 1 folha de louro",
+      "1 colher de chá de sal",
+      "Uma pitada de açafrão infundida em 2 colheres de sopa de leite morno"
+    ],
+    "ru": [
+      "1 кг баранины (лопатка или нога) на кости, нарезанной кусками по 4 см",
+      "4 ст. л. горчичного масла",
+      "200 г жирного йогурта, гладко взбитого",
+      "4 сушёных кашмирских красных перца, замочить 20 минут в тёплой воде и измельчить в пасту (или 2 ст. л. кашмирского перца в порошке)",
+      "1 ч. л. молотого фенхеля",
+      "1 ч. л. сушёного имбиря в порошке (сонт)",
+      "½ ч. л. асафетиды (хинг)",
+      "Целые специи: 8 коробочек зелёного кардамона + 2 чёрного, 1 палочка корицы, 6 гвоздик, 1 лавровый лист",
+      "1 ч. л. соли",
+      "Щепотка шафрана, настоянная в 2 ст. л. тёплого молока"
+    ],
+    "ar": [
+      "1 كغ من كتف أو فخذ الضأن بالعظم، مقطّعة قطعاً بطول 4 سم",
+      "4 ملاعق كبيرة زيت خردل",
+      "200 غ لبن كامل الدسم، مخفوق ناعماً",
+      "4 حبات فلفل كشميري أحمر مجفّف، منقوعة 20 دقيقة في ماء دافئ ومطحونة إلى عجين (أو 2 ملعقة كبيرة فلفل كشميري ناعم)",
+      "1 ملعقة صغيرة شمر ناعم",
+      "1 ملعقة صغيرة زنجبيل مجفف ناعم (سونث)",
+      "½ ملعقة صغيرة من الهنغ (الحلتيت)",
+      "بهارات كاملة: 8 حبات هيل أخضر + 2 هيل أسود، 1 عود قرفة، 6 قرنفل، 1 ورقة غار",
+      "1 ملعقة صغيرة ملح",
+      "رشّة زعفران منقوعة في 2 ملعقة كبيرة من الحليب الدافئ"
+    ],
+    "zh": [
+      "1 公斤带骨羊肩或羊腿肉，切成 4 厘米的块",
+      "4 汤匙芥末油",
+      "200 克全脂酸奶，搅打顺滑",
+      "克什米尔干红辣椒 4 根，温水浸泡 20 分钟后磨成糊（或 2 汤匙克什米尔红辣椒粉）",
+      "1 茶匙茴香粉",
+      "1 茶匙干姜粉（sonth）",
+      "½ 茶匙阿魏（hing）",
+      "整粒香料：绿豆蔻 8 颗 + 黑豆蔻 2 颗、肉桂棒 1 根、丁香 6 颗、月桂叶 1 片",
+      "1 茶匙盐",
+      "一撮藏红花，用 2 汤匙温牛奶浸泡"
+    ],
+    "ja": [
+      "骨つきラム肩肉または腿肉 1 kg、4 cm 角に切る",
+      "マスタードオイル 大さじ 4",
+      "全脂ヨーグルト 200 g、なめらかに泡立てる",
+      "乾燥カシミール赤唐辛子 4 本、ぬるま湯で 20 分戻してペースト状にすりつぶす（またはカシミール唐辛子粉 大さじ 2）",
+      "フェンネルパウダー 小さじ 1",
+      "ジンジャーパウダー（ソント） 小さじ 1",
+      "アサフォエティダ（ヒング） 小さじ ½",
+      "ホールスパイス：グリーンカルダモン 8 粒 + ブラックカルダモン 2 粒、シナモンスティック 1 本、クローブ 6 粒、ローリエ 1 枚",
+      "塩 小さじ 1",
+      "サフラン ひとつまみを温めた牛乳 大さじ 2 に浸す"
+    ],
+    "tr": [
+      "1 kg kemikli kuzu kol veya but, 4 cm parçalara kesilmiş",
+      "4 yemek kaşığı hardal yağı",
+      "200 g tam yağlı yoğurt, pürüzsüz çırpılmış",
+      "4 adet kurutulmuş Keşmir kırmızı biberi, ılık suda 20 dakika ıslatılmış ve ezerek macun yapılmış (ya da 2 yemek kaşığı Keşmir toz biber)",
+      "1 çay kaşığı rezene tozu",
+      "1 çay kaşığı kuru zencefil tozu (sonth)",
+      "½ çay kaşığı şeytan tersi (hing)",
+      "Bütün baharatlar: 8 yeşil kakule + 2 siyah kakule, 1 tarçın çubuğu, 6 karanfil, 1 defne yaprağı",
+      "1 çay kaşığı tuz",
+      "Bir tutam safran 2 yemek kaşığı ılık sütte demlenmiş"
+    ],
+    "it": [
+      "1 kg di spalla o cosciotto di agnello con osso, tagliato in pezzi da 4 cm",
+      "4 cucchiai di olio di senape",
+      "200 g di yogurt intero, montato liscio",
+      "4 peperoncini rossi Kashmiri secchi, ammollati 20 minuti in acqua tiepida e macinati a pasta (oppure 2 cucchiai di peperoncino Kashmiri in polvere)",
+      "1 cucchiaino di finocchio in polvere",
+      "1 cucchiaino di zenzero secco in polvere (sonth)",
+      "½ cucchiaino di asafetida (hing)",
+      "Spezie intere: 8 cardamomi verdi + 2 cardamomi neri, 1 stecca di cannella, 6 chiodi di garofano, 1 foglia di alloro",
+      "1 cucchiaino di sale",
+      "Un pizzico di zafferano in infusione in 2 cucchiai di latte tiepido"
+    ],
+    "ko": [
+      "뼈 있는 양고기 어깨살 또는 다리살 1 kg, 4 cm로 자르기",
+      "겨자유 4큰술",
+      "풀팻 요거트 200 g, 매끄럽게 휘젓기",
+      "카슈미르 건고추 4개, 따뜻한 물에 20분 불려 페이스트로 갈기 (또는 카슈미르 칠리 가루 2큰술)",
+      "펜넬 가루 1작은술",
+      "건강 가루 (손스, sonth) 1작은술",
+      "아사푀티다 (힝) ½작은술",
+      "통향신료: 그린 카다멈 8알 + 블랙 카다멈 2알, 시나몬 스틱 1개, 정향 6알, 월계수잎 1장",
+      "소금 1작은술",
+      "사프란 한 꼬집, 따뜻한 우유 2큰술에 우려둠"
+    ],
+    "hi": [
+      "हड्डी सहित मटन कंधा या टांग 1 किलो, 4 सेमी के टुकड़ों में कटा",
+      "सरसों का तेल 4 बड़े चम्मच",
+      "फुल फैट दही 200 ग्राम, चिकनी फेंटी",
+      "सूखी कश्मीरी लाल मिर्च 4, गुनगुने पानी में 20 मिनट भिगो कर पीस कर पेस्ट बनाई (या कश्मीरी मिर्च पाउडर 2 बड़े चम्मच)",
+      "सौंफ पाउडर 1 छोटा चम्मच",
+      "सोंठ (सूखी अदरक का पाउडर) 1 छोटा चम्मच",
+      "हींग ½ छोटा चम्मच",
+      "साबुत मसाले: हरी इलायची 8 + काली इलायची 2, दालचीनी की डंडी 1, लौंग 6, तेज़पत्ता 1",
+      "नमक 1 छोटा चम्मच",
+      "एक चुटकी केसर, 2 बड़े चम्मच गुनगुने दूध में भिगोया"
+    ]
+  },
+  "howIsMade": {
+    "en": "Heat the mustard oil in a heavy pan until it just begins to smoke, then pull it off the heat for a moment — letting it smoke neutralises the raw pungency without scorching. Return to medium heat, add the whole spices and bay leaf, and let them perfume the oil for 30 seconds.\n\nAdd the lamb in a single layer and brown well on all sides for 8–10 minutes. This is the only browning the dish gets, so let the colour develop properly. Stir in the asafoetida, ginger powder and fennel powder, and let them coat the meat in the hot oil for another minute.\n\nWhisk the yoghurt with the Kashmiri chilli paste and a tablespoon of cold water, then add it to the pan a ladleful at a time, stirring continuously after each addition; going slowly keeps the yoghurt from splitting. Add the salt, lower the heat and cook covered for 10 minutes, until the yoghurt has melted into a glossy red base.\n\nPour in 500 ml of hot water, bring back to a simmer, then drop the heat to its lowest and braise covered for an hour and 20 minutes, stirring every 20 minutes, until the lamb is tender enough to yield to a spoon and the gravy is thin, glossy and a deep mahogany red. Swirl the saffron milk through 5 minutes before the end without fully stirring it out.\n\nRest off the heat for 10 minutes before serving with steamed basmati. Rogan Josh is meant to be soup-like, brilliantly coloured and aromatic rather than spicy hot — the heat is supplied by the meat, the colour by the chillies, and the perfume by everything else.",
+    "ro": "Încălzește uleiul de muștar într-o oală groasă până începe abia să fumege, apoi ia-l de pe foc pentru o clipă — fumul neutralizează asprimea fără să-l ardă. Pune-l înapoi pe foc mediu, adaugă mirodeniile întregi și foaia de dafin, și las-le să parfumeze uleiul 30 de secunde.\n\nAdaugă mielul într-un singur strat și rumenește-l bine pe toate părțile 8–10 minute. Aceasta este singura rumenire pe care o primește felul, așa că las-o să capete culoare cum trebuie. Încorporează asafoetida, pudra de ghimbir și cea de fenicul, și las-le să îmbrace carnea în uleiul fierbinte încă un minut.\n\nBate iaurtul cu pasta de chili Kashmiri și o lingură de apă rece, apoi adaugă-l în oală câte un polonic, amestecând continuu după fiecare adăugare; încet, iaurtul nu se taie. Adaugă sarea, micșorează focul și gătește acoperit 10 minute, până când iaurtul s-a topit într-o bază roșie și lucioasă.\n\nToarnă 500 ml apă fierbinte, adu din nou la fierbere, apoi coboară focul la minim și înăbușe acoperit o oră și 20 de minute, amestecând la fiecare 20 de minute, până când mielul cedează la lingură și sosul este subțire, lucios și de un roșu adânc de mahon. Introdu laptele cu șofran cu 5 minute înainte de final, doar amestecând-l ușor.\n\nOdihnește departe de foc 10 minute înainte de a servi cu orez basmati la abur. Rogan Josh trebuie să fie aproape ca o supă, viu colorată și parfumată mai degrabă decât picantă — căldura vine din carne, culoarea din ardei, iar parfumul din tot restul.",
+    "es": "Calienta el aceite de mostaza en una olla pesada hasta que apenas empiece a humear, después retírala del fuego un instante — el humo neutraliza la aspereza sin quemarse. Devuelve a fuego medio, añade las especias enteras y la hoja de laurel, y deja que perfumen el aceite 30 segundos.\n\nAñade el cordero en una sola capa y dóralo bien por todos los lados 8–10 minutos. Es el único dorado que recibe el plato, así que deja que el color se desarrolle como toca. Incorpora la asafétida, el jengibre seco y el hinojo en polvo, y deja que envuelvan la carne en el aceite caliente un minuto más.\n\nBate el yogur con la pasta de chile Kashmiri y una cucharada de agua fría, después añádelo a la olla cucharón a cucharón, removiendo sin parar después de cada adición; despacio, el yogur no se corta. Añade la sal, baja el fuego y cuece tapado 10 minutos, hasta que el yogur se haya fundido en una base roja y brillante.\n\nVierte 500 ml de agua caliente, vuelve a llevar a hervor, después baja al fuego más bajo y brasea tapado durante una hora y 20 minutos, removiendo cada 20 minutos, hasta que el cordero ceda a la cuchara y la salsa esté fina, brillante y de un rojo caoba profundo. Vierte la leche con azafrán 5 minutos antes del final, sin removerla del todo.\n\nReposa fuera del fuego 10 minutos antes de servir con basmati al vapor. El Rogan Josh debe ser casi como una sopa, vivamente coloreado y aromático más que picante — el calor lo aporta la carne, el color los chiles y el perfume todo lo demás.",
+    "fr": "Faites chauffer l'huile de moutarde dans une cocotte épaisse jusqu'à ce qu'elle commence tout juste à fumer, puis retirez-la du feu un instant — la fumée neutralise l'âcreté sans la brûler. Remettez à feu moyen, ajoutez les épices entières et la feuille de laurier, et laissez-les parfumer l'huile 30 secondes.\n\nAjoutez l'agneau en une seule couche et faites-le bien dorer sur toutes les faces pendant 8 à 10 minutes. C'est le seul moment de coloration du plat, alors laissez la couleur se développer comme il faut. Incorporez l'asa-fœtida, le gingembre en poudre et le fenouil en poudre, et laissez-les enrober la viande dans l'huile chaude encore une minute.\n\nFouettez le yaourt avec la pâte de piment Kashmiri et une cuillère à soupe d'eau froide, puis ajoutez-le dans la cocotte louche par louche, en remuant sans cesse après chaque ajout ; en y allant doucement, le yaourt ne tranche pas. Salez, baissez le feu et faites cuire couvert 10 minutes, jusqu'à ce que le yaourt ait fondu en une base rouge et brillante.\n\nVersez 500 ml d'eau chaude, ramenez à frémissement, puis baissez le feu au minimum et faites braiser couvert pendant 1 heure 20, en remuant toutes les 20 minutes, jusqu'à ce que l'agneau cède sous la cuillère et que la sauce soit fluide, brillante et d'un rouge acajou profond. Versez le lait au safran 5 minutes avant la fin, en l'incorporant à peine.\n\nLaissez reposer hors du feu 10 minutes avant de servir avec un riz basmati à la vapeur. Le Rogan Josh doit ressembler à une soupe, vivement coloré et parfumé plutôt que piquant — la chaleur vient de la viande, la couleur des piments et le parfum de tout le reste.",
+    "de": "Erhitzen Sie das Senföl in einem schweren Topf, bis es gerade zu rauchen beginnt, dann kurz vom Herd nehmen — der Rauch neutralisiert die Schärfe, ohne zu verbrennen. Wieder bei mittlerer Hitze auf den Herd stellen, die ganzen Gewürze und das Lorbeerblatt einrühren und 30 Sekunden im Öl parfümieren lassen.\n\nDas Lammfleisch in einer Lage hinzufügen und 8–10 Minuten von allen Seiten gut bräunen. Dies ist die einzige Bräunung, die das Gericht bekommt, also lassen Sie der Farbe Zeit. Asafoetida, Ingwer- und Fenchelpulver einrühren und eine Minute lang das Fleisch im heißen Öl umhüllen lassen.\n\nDen Joghurt mit der Kashmiri-Chilipaste und einem Esslöffel kaltem Wasser verquirlen, dann kellenweise in den Topf geben und nach jeder Zugabe ständig rühren; langsam zugegeben, gerinnt der Joghurt nicht. Salzen, die Hitze reduzieren und 10 Minuten zugedeckt köcheln, bis der Joghurt zu einer glänzenden roten Basis geschmolzen ist.\n\n500 ml heißes Wasser angießen, wieder zum Köcheln bringen, dann auf die niedrigste Stufe stellen und zugedeckt 1 Stunde 20 Minuten schmoren, alle 20 Minuten umrühren, bis das Lamm dem Löffel nachgibt und die Sauce dünn, glänzend und von tiefem Mahagonirot ist. Die Safranmilch 5 Minuten vor Schluss vorsichtig einrühren, ohne sie ganz unterzumischen.\n\n10 Minuten vom Herd ruhen lassen, bevor Sie mit gedämpftem Basmati servieren. Rogan Josh soll suppenartig sein, lebhaft gefärbt und aromatisch, nicht scharf — die Hitze kommt vom Fleisch, die Farbe von den Chilis und der Duft von allem anderen.",
+    "pt": "Aqueça o óleo de mostarda numa panela pesada até começar mesmo a fumegar, depois retire-a do lume por um instante — o fumo neutraliza a aspereza sem queimar. Devolva ao lume médio, junte as especiarias inteiras e a folha de louro, e deixe perfumarem o óleo durante 30 segundos.\n\nJunte o borrego numa única camada e doure-o bem de todos os lados durante 8–10 minutos. É o único douramento que o prato recebe, por isso deixe a cor desenvolver-se como deve ser. Junte a assa-fétida, o gengibre seco e o funcho em pó, e deixe-os envolver a carne no óleo quente mais um minuto.\n\nBata o iogurte com a pasta de piri-piri Kashmiri e uma colher de sopa de água fria, depois adicione à panela uma concha de cada vez, mexendo sem parar após cada adição; devagar, o iogurte não talha. Tempere com sal, baixe o lume e cozinhe tapado durante 10 minutos, até o iogurte se ter fundido numa base vermelha e brilhante.\n\nVerta 500 ml de água quente, volte a uma fervura branda, depois baixe o lume ao mínimo e estufe tapado durante uma hora e 20 minutos, mexendo a cada 20 minutos, até o borrego ceder à colher e o molho ficar fino, brilhante e de um vermelho mogno profundo. Envolva o leite com açafrão 5 minutos antes do fim, sem o misturar por completo.\n\nDeixe descansar fora do lume 10 minutos antes de servir com basmati ao vapor. O Rogan Josh deve ser quase sopa, intensamente colorido e aromático mais do que picante — o calor vem da carne, a cor dos piri-piris e o perfume de tudo o resto.",
+    "ru": "Разогрейте горчичное масло в тяжёлой кастрюле, пока оно не начнёт чуть дымить, затем на мгновение снимите с огня — дымок нейтрализует жёсткость без пригорания. Верните на средний огонь, добавьте целые специи и лавровый лист, дайте им ароматизировать масло 30 секунд.\n\nДобавьте баранину в один слой и хорошо подрумяньте со всех сторон 8–10 минут. Это единственное обжаривание блюда, так что дайте цвету развиться по-настоящему. Вмешайте асафетиду, имбирный и фенхельный порошок, и дайте им обволочь мясо в горячем масле ещё минуту.\n\nВзбейте йогурт с кашмирской пастой и столовой ложкой холодной воды, затем добавляйте его в кастрюлю по половнику, непрерывно помешивая после каждого; медленно — йогурт не сворачивается. Посолите, убавьте огонь и тушите под крышкой 10 минут, пока йогурт не растворится в глянцевую красную основу.\n\nВлейте 500 мл горячей воды, верните к лёгкому кипению, затем сделайте огонь минимальным и тушите под крышкой 1 час 20 минут, помешивая каждые 20 минут, пока ягнятина не станет уступать ложке, а соус — жидким, глянцевым и глубокого красного дерева. Влейте шафрановое молоко за 5 минут до конца, лишь слегка вмешав.\n\nДайте отдохнуть 10 минут вне огня, прежде чем подавать с басмати на пару. Роган джош должен быть почти как суп, ярко окрашенным и ароматным, а не острым — жар идёт от мяса, цвет — от перцев, аромат — от всего остального.",
+    "ar": "سخّن زيت الخردل في قدر ثقيل حتى يبدأ بإصدار الدخان للتو، ثم ارفعه عن النار لحظة — الدخان يحيّد الحدّة دون أن يحرق. أعده إلى نار متوسطة، أضف البهارات الكاملة وورقة الغار، واتركها تعطّر الزيت 30 ثانية.\n\nأضف الضأن في طبقة واحدة وحمّره من كل الجهات 8–10 دقائق. هذا هو التحمير الوحيد للطبق، فاترك اللون يتطور كما يجب. أضف الهنغ ومسحوق الزنجبيل ومسحوق الشمر، واتركها تغطي اللحم في الزيت الساخن دقيقة إضافية.\n\nاخفق اللبن مع عجينة الفلفل الكشميري وملعقة كبيرة من الماء البارد، ثم أضفه إلى القدر مغرفةً مغرفة، مع التحريك المستمر بعد كل إضافة؛ ببطء، لا ينقطع اللبن. أضف الملح، خفّف النار، واطبخ مغطىً 10 دقائق حتى يذوب اللبن في قاعدة حمراء لامعة.\n\nاسكب 500 مل من الماء الساخن، أعد المزيج إلى الغليان، ثم اخفض النار إلى أهدأ درجة، واطبخ مغطىً ساعة و 20 دقيقة مع التحريك كل 20 دقيقة، حتى يلين الضأن أمام الملعقة ويصبح المرق رفيعاً لامعاً بلون أحمر ماهوغني عميق. اسكب حليب الزعفران قبل النهاية بـ 5 دقائق وحرّكه قليلاً فقط.\n\nأرحه بعيداً عن النار 10 دقائق قبل التقديم مع أرز البسمتي المطهو على البخار. الروغن جوش يجب أن يكون شبه شوربة، حاد اللون والعطر أكثر من كونه حاراً — الحرارة من اللحم، واللون من الفلفل، والعطر من كل ما تبقى.",
+    "zh": "在厚重的锅里把芥末油烧到刚刚开始冒烟，然后离火片刻——冒烟可以让油的辛辣味变温和，又不会烧焦。再放回中火上，加入整粒香料和月桂叶，让它们在油里飘香 30 秒。\n\n把羊肉单层下锅，把每一面都好好煎 8–10 分钟。这是整道菜唯一一次煎色，所以请让颜色真正出来。加入阿魏、姜粉和茴香粉，让它们在热油里包裹羊肉再 1 分钟。\n\n把酸奶与克什米尔辣椒糊和 1 汤匙冷水一起搅打，然后一勺一勺地加入锅里，每加一勺都不停搅拌；慢慢加，酸奶就不会分离。加盐，调小火，盖盖煮 10 分钟，直到酸奶融化成发亮的红色基底。\n\n倒入 500 毫升热水，再煮至微沸，然后转最小火盖盖炖 1 小时 20 分钟，每 20 分钟搅一次，直到羊肉一压就散、酱汁稀薄发亮、呈深红木色。最后 5 分钟把藏红花牛奶轻轻拌入，只是稍稍带过即可。\n\n离火静置 10 分钟，再配蒸 basmati 米饭上桌。Rogan Josh 应当像一碗轻盈的汤——颜色鲜亮、香气浓郁，而不是辣味突出——辣味来自羊肉本身，颜色来自辣椒，香气来自其余一切。",
+    "ja": "厚手の鍋でマスタードオイルを「煙が立ち始める寸前」まで熱し、一瞬火から外す — この煙が刺激臭を和らげる、焦がさずに。中火に戻し、ホールスパイスとローリエを入れて 30 秒、油に香りを移す。\n\nラム肉を 1 段に並べ、全面を 8〜10 分かけてしっかり焼き色をつける。この料理の焼き色のチャンスはこれ 1 回だけだから、しっかり色を出す。アサフォエティダ、ジンジャーパウダー、フェンネルパウダーを加え、熱い油で肉を 1 分包む。\n\nヨーグルトにカシミール唐辛子のペーストと冷水大さじ 1 を加えて混ぜ、鍋にひしゃく 1 杯ずつ加え、加えるたびに絶えず混ぜる。ゆっくり加えれば、ヨーグルトは分離しない。塩を加えて火を弱め、蓋をして 10 分、ヨーグルトが艶のある赤いベースに溶けるまで煮る。\n\n熱湯 500 ml を加えて再沸騰させ、火を最弱にし、蓋をして 1 時間 20 分、20 分ごとに混ぜながら煮込む。ラムがスプーンに従って崩れ、ソースが薄く艶のある深いマホガニー色になればよい。サフランミルクは終了の 5 分前に流し入れ、完全には混ぜきらない。\n\n火から外して 10 分休ませ、蒸したバスマティライスと共に供する。ローガン・ジョシュはスープに近い料理 — 鮮やかな色と豊かな香りを持ち、辛さで攻めない。辛さは肉そのものから、色は唐辛子から、香りはそれ以外のすべてから来る。",
+    "tr": "Hardal yağını ağır bir tencerede tütmeye yeni başlayana dek ısıt, sonra bir an için ocaktan al — bu duman keskinliği yumuşatır, yağı yakmadan. Orta ateşe geri al, bütün baharatları ve defne yaprağını ekle ve 30 saniye boyunca yağı parfümlemelerine izin ver.\n\nKuzu etini tek katta yerleştir ve her tarafından iyice 8–10 dakika kahverengileştir. Bu yemeğin tek kahverengileştirme aşamasıdır, bu yüzden rengin gerçekten gelişmesine izin ver. Şeytan tersini, zencefil tozunu ve rezene tozunu ekle ve sıcak yağ içinde eti bir dakika daha kapla.\n\nYoğurdu Keşmir biber ezmesi ve 1 yemek kaşığı soğuk suyla çırp, sonra tencereye birer kepçe halinde, her ekleyişten sonra sürekli karıştırarak ekle; yavaş gidersen yoğurt kesilmez. Tuzu ekle, ateşi düşür ve kapalı 10 dakika pişir, yoğurt parlak kırmızı bir tabana eriyene dek.\n\n500 ml sıcak suyu dök, kaynamaya geri getir, sonra en kısık ateşe düşür ve kapalı 1 saat 20 dakika, her 20 dakikada bir karıştırarak pişir; et kaşığa boyun eğene ve sos ince, parlak ve koyu maun kırmızısı olana dek. Safranlı sütü bitime 5 dakika kala içine dök, tam karıştırmadan.\n\nOcaktan alıp 10 dakika dinlendir ve buğulanmış basmati pirinçle servis et. Rogan Josh bir çorbaya yakın olmalı — keskin değil, parlak renkli ve aromatik. Sıcaklık etten, renk biberlerden ve koku geri kalan her şeyden gelir.",
+    "it": "Scaldate l'olio di senape in una pentola pesante fino al primo accenno di fumo, poi togliete dal fuoco per un istante — il fumo neutralizza la punta acre senza bruciare. Rimettete sul fuoco medio, aggiungete le spezie intere e l'alloro, e lasciatele profumare l'olio per 30 secondi.\n\nUnite l'agnello in un solo strato e fatelo rosolare bene su tutti i lati per 8–10 minuti. È l'unica rosolatura del piatto, quindi lasciate che il colore si sviluppi davvero. Unite l'asafetida, il ginger in polvere e il finocchio in polvere, e lasciate che avvolgano la carne nell'olio caldo per un altro minuto.\n\nMontate lo yogurt con la pasta di peperoncino Kashmiri e un cucchiaio di acqua fredda, poi aggiungetelo in pentola un mestolo alla volta, mescolando senza sosta dopo ogni aggiunta; piano, lo yogurt non impazzisce. Salate, abbassate il fuoco e cuocete coperto 10 minuti, finché lo yogurt non si è sciolto in una base rossa e lucida.\n\nVersate 500 ml di acqua calda, riportate a sobbollire, poi abbassate al minimo e brasate coperto per un'ora e 20 minuti, mescolando ogni 20 minuti, finché l'agnello non cede al cucchiaio e il sugo non è fluido, lucido e di un rosso mogano profondo. Versate il latte allo zafferano 5 minuti prima della fine, senza mescolarlo del tutto.\n\nFate riposare fuori dal fuoco 10 minuti prima di servire con riso basmati al vapore. Il Rogan Josh deve essere quasi una zuppa, dai colori brillanti e dal profumo intenso piuttosto che dal piccante — il piccante viene dalla carne, il colore dai peperoncini, il profumo da tutto il resto.",
+    "ko": "두꺼운 냄비에 겨자유를 막 연기가 피어오르기 시작할 때까지 가열한 다음, 잠시 불에서 내려둔다 — 이 연기가 거친 매운맛을 누그러뜨려준다, 태우지 않으면서. 다시 중불에 올리고 통향신료와 월계수잎을 넣어 30초 동안 기름에 향을 입힌다.\n\n양고기를 한 겹으로 깔고 8–10분에 걸쳐 모든 면을 잘 갈색이 되게 굽는다. 이 요리에서 유일하게 색을 내는 단계이니, 색이 충분히 나도록 둔다. 아사푀티다, 건강 가루, 펜넬 가루를 넣고 뜨거운 기름이 고기를 1분 더 감싸게 한다.\n\n요거트를 카슈미르 칠리 페이스트와 차가운 물 1큰술과 함께 휘젓고, 한 국자씩 냄비에 더해 매번 끊임없이 저어준다; 천천히 더하면 요거트는 분리되지 않는다. 소금을 더하고 불을 줄여 뚜껑을 덮고 10분, 요거트가 윤기 있는 빨간 베이스로 녹아들 때까지 익힌다.\n\n뜨거운 물 500 ml를 붓고 다시 끓을 정도로 가열한 다음, 불을 가장 약하게 하고 뚜껑을 덮어 1시간 20분, 20분마다 저어주며 익힌다. 양고기가 숟가락에 굴복하고 소스가 묽고 윤기 있는 짙은 마호가니 적색이 될 때까지. 끝나기 5분 전에 사프란 우유를 살짝 둘러 넣되 완전히 섞지 않는다.\n\n불에서 내려 10분 쉬게 한 다음, 김 오른 바스마티 라이스와 함께 낸다. 로간 조시는 거의 수프에 가까운 요리다 — 강하게 매운 것이 아니라, 강렬한 색과 향이 주인공이다. 매운맛은 고기에서, 색은 칠리에서, 향은 그 외 모든 것에서 온다.",
+    "hi": "एक भारी बर्तन में सरसों के तेल को बस धुआँ उठने तक गरम करें, फिर एक पल के लिए आँच से उतार लें — यह धुआँ कच्चेपन को कम कर देता है, बिना तेल जलाए। मध्यम आँच पर वापस रखें, साबुत मसाले और तेज़पत्ता डालें, और उन्हें 30 सेकंड तक तेल को महक देने दें।\n\nमटन को एक परत में डालें और हर तरफ़ 8–10 मिनट तक अच्छी तरह सुनहरा-भूरा होने दें। यह व्यंजन का एकमात्र भूरा करने का मौक़ा है, इसलिए रंग को सही ढंग से उभरने दें। हींग, सोंठ और सौंफ पाउडर मिलाएँ और उन्हें गरम तेल में मांस के साथ 1 मिनट और लिपटाएँ।\n\nदही को कश्मीरी मिर्च पेस्ट और 1 बड़े चम्मच ठंडे पानी के साथ फेंटें, फिर बर्तन में एक करछुल भर के डालते जाएँ, हर बार लगातार चलाते रहें; धीरे-धीरे डालने से दही फटता नहीं। नमक डालें, आँच कम करें और ढक कर 10 मिनट पकाएँ जब तक दही चमकीले लाल बेस में न घुल जाए।\n\n500 मिली गरम पानी डालें, फिर से उबाल पर लाएँ, फिर सबसे धीमी आँच कर दें और ढक कर 1 घंटा 20 मिनट तक पकाएँ — हर 20 मिनट पर चलाएँ — जब तक मटन चम्मच की दबाव पर पिघले जैसा हो जाए और ग्रेवी पतली, चमकदार और गहरे महोगनी रंग की हो जाए। ख़त्म होने से 5 मिनट पहले केसर वाला दूध हलके से मिलाएँ, पूरी तरह न चलाएँ।\n\nआँच से उतार कर 10 मिनट आराम दें, फिर भाप वाले बासमती चावल के साथ परोसें। रोगन जोश एक सूप-जैसा व्यंजन है — चमकीले रंग और सुगंध से भरा, तीखा नहीं। तीख़ापन मांस से आता है, रंग मिर्च से, और सुगंध बाक़ी सब चीज़ों से।"
+  }
+}
