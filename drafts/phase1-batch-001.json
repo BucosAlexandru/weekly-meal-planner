@@ -1,0 +1,272 @@
+{
+  "$schema_version": 1,
+  "phase": 1,
+  "batch_id": "phase1-batch-001",
+  "created": "2026-05-26",
+  "scope": "ingredients + howIsMade (English only). Status tracking maintained per recipe. No translations / metadata / nutrition / pairings / SEO / slugs / badges / rendering. Recipes do not render to the site until Phase 4.",
+  "editorial_rules": [
+    "no procedural fragmentation",
+    "each paragraph = one cooking phase",
+    "avoid one-action-per-block rhythm",
+    "avoid excessive then / meanwhile / now",
+    "preserve realism and technical precision",
+    "preserve sensory cues",
+    "modern cookbook pacing",
+    "natural human editorial flow",
+    "no giant text walls",
+    "no robotic tutorial rhythm"
+  ],
+  "status_flag_meaning": {
+    "drafted": "Phase 1 — first pass written",
+    "needs_qa": "Phase 1 — editorial spot-check still required",
+    "needs_timing_review": "Phase 1 — total time + per-step durations not yet verified",
+    "needs_image_review": "Phase 1 — no image source identified or wired",
+    "localization_pending": "Phase 2 not done",
+    "enrichment_pending": "Phase 3 not done",
+    "publishing_pending": "Phase 4 not done"
+  },
+  "recipes": [
+    {
+      "name": "Avgolemono",
+      "cuisine": "Greece",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "1.5 kg whole chicken (or 1 kg bone-in chicken thighs)",
+        "2 carrots, 1 onion, 2 celery stalks (for the broth)",
+        "1 bay leaf, a handful of parsley stems, 8 black peppercorns",
+        "150 g long-grain rice (or orzo if you prefer)",
+        "3 large eggs, at room temperature",
+        "Juice of 2 lemons (about 80 ml)",
+        "Salt and white pepper",
+        "Fresh dill or parsley to finish"
+      ],
+      "howIsMade": "Place the chicken in a heavy pot with the carrots, onion, celery, bay leaf, parsley stems and peppercorns, cover with 2.5 L of cold water and bring to a gentle simmer; skim any foam that rises, and let it cook uncovered for about an hour and a half, until the meat falls from the bones.\n\nLift the chicken out to rest and strain the broth into a clean pot, discarding the vegetables. Pick the meat from the bones, shred it into bite-sized pieces and return it to the broth, bring back to a simmer and stir in the rice; cook 15–18 minutes until tender.\n\nWhisk the eggs in a bowl until light and foamy, then whisk in the lemon juice. The critical move now is to temper the eggs: slowly ladle a cup of hot broth into them while whisking constantly, then another, until the bowl is warm to the touch. Off the heat, pour the tempered mixture back into the pot in a slow steady stream, stirring continuously — never let the soup boil after this or the eggs will scramble.\n\nTaste, adjust salt and white pepper, and serve immediately, finished with dill or parsley. Avgolemono is meant to be silky and slightly cloudy, never thin and never broken."
+    },
+    {
+      "name": "Gyros",
+      "cuisine": "Greece",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "1 kg pork shoulder, sliced into 1 cm thick strips against the grain (or boneless chicken thighs)",
+        "4 garlic cloves, minced",
+        "2 tbsp Greek olive oil",
+        "1 tbsp red wine vinegar",
+        "1 tbsp dried oregano (Greek rigani if possible)",
+        "1 tsp sweet paprika",
+        "1 tsp salt, ½ tsp black pepper",
+        "4 large soft Greek pitas (the unfilled flatbread, not pocket pita)",
+        "To serve: 200 ml tzatziki, 1 ripe tomato sliced, ½ red onion thinly sliced, oregano, lemon wedges, optional French fries"
+      ],
+      "howIsMade": "Whisk the garlic, olive oil, vinegar, oregano, paprika, salt and pepper in a large bowl, add the pork strips and toss until every piece is coated. Cover and marinate at least 3 hours, ideally overnight — the longer the better, as oregano and garlic need time to penetrate.\n\nHeat a large heavy skillet or griddle pan over high heat until smoking. Lay the strips down in a single layer, in batches if needed, and sear without moving for 2–3 minutes per side, until the edges are deeply browned and the centre just cooked through; don't crowd the pan or the meat will steam instead of caramelise. Rest the cooked batch on a plate while you do the next.\n\nWarm the pitas one at a time on the same hot skillet for 20 seconds per side, just until pliable. Spread a heaped tablespoon of tzatziki down the centre of each, lay the hot pork on top, add a few tomato slices and rings of red onion, and — if you're being faithful to Athens — a small handful of French fries on top.\n\nWrap tightly in paper with one end pinched closed, and serve immediately with extra oregano, a wedge of lemon, and the rest of the tzatziki on the side."
+    },
+    {
+      "name": "Pastitsio",
+      "cuisine": "Greece",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "500 g pastitsio noodles (long, tubular #2; bucatini is a fair substitute)",
+        "600 g beef mince (or half beef, half lamb)",
+        "1 large onion, finely chopped",
+        "3 garlic cloves, minced",
+        "400 g chopped tomatoes (canned)",
+        "2 tbsp tomato paste",
+        "150 ml dry red wine",
+        "1 cinnamon stick, 4 whole cloves, 1 bay leaf, 1 tsp dried oregano",
+        "100 g Kefalotyri or Pecorino, finely grated (Parmesan works at a pinch)",
+        "For the béchamel: 100 g butter, 100 g flour, 1 L whole milk, 4 egg yolks, a grating of nutmeg",
+        "Salt and pepper, olive oil"
+      ],
+      "howIsMade": "Heat 3 tablespoons of olive oil in a heavy pan and brown the chopped onion for 8–10 minutes until soft and just gilded, add the garlic for 30 seconds, then crumble in the mince. Break it up with a wooden spoon and let it brown deeply — patience here, don't stir constantly or it greys rather than caramelises — about 10 minutes. Stir in the tomato paste, fry until brick-red, deglaze with the wine and let it reduce by half before adding the tomatoes, cinnamon stick, cloves, bay leaf and oregano. Season generously and simmer uncovered on low heat for at least 45 minutes, until thick and the spices have melted into the meat; fish out the whole spices before assembling.\n\nWhile the meat cooks, make the béchamel: melt the butter in a wide saucepan, whisk in the flour for a couple of minutes without colour, pour in the warm milk in a slow stream while whisking, and simmer 5–7 minutes until it coats the back of a spoon. Take off the heat, beat in the egg yolks one at a time, add the nutmeg and half the grated cheese, and season.\n\nBoil the pasta in well-salted water 2 minutes less than the package says — it'll finish cooking in the oven — drain and toss with the remaining grated cheese and a ladle of meat sauce so the noodles don't stick.\n\nIn a 25×35 cm baking dish, lay half the pasta in one direction, spread the meat sauce evenly over it, then top with the rest of the pasta arranged the same way (this aligned layout is what gives pastitsio its layered cross-section when you cut it). Pour the béchamel over the top, smooth it level, and bake at 180°C for 45–50 minutes until golden and bubbling.\n\nLet it rest at least 20 minutes before cutting; sliced too hot, the layers collapse into one heap."
+    },
+    {
+      "name": "Dolmades",
+      "cuisine": "Greece",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "1 jar (450 g) preserved grape leaves, drained and rinsed (or 60 fresh blanched leaves)",
+        "200 g long-grain rice (arborio works)",
+        "1 large onion, finely chopped",
+        "6 spring onions, thinly sliced",
+        "A large bunch of fresh dill, chopped",
+        "A small bunch of fresh mint, chopped",
+        "A small bunch of flat-leaf parsley, chopped",
+        "Juice of 2 lemons",
+        "150 ml extra-virgin olive oil",
+        "1 tsp salt, freshly ground black pepper",
+        "Optional but traditional: 1 grated tomato"
+      ],
+      "howIsMade": "Soak the rice in cold water for 15 minutes and drain. Heat 3 tablespoons of the olive oil in a wide pan and sweat the chopped onion gently for 8 minutes until translucent — no colour. Add the spring onions, all the herbs, the drained rice, half the lemon juice and a generous pinch of salt; stir for a minute, just to bloom the aromas and lightly toast the rice. Tip onto a plate to cool to room temperature, otherwise the leaves tear when you wrap them.\n\nLay a grape leaf on the work surface vein-side up, stem at the bottom. Place a heaped teaspoon of the rice mixture near the stem, fold the bottom edge up and over, fold both sides in, and roll up tightly into a small cigar. Don't overfill — the rice will swell as it cooks, and packed too tightly the dolma will split.\n\nLine the bottom of a heavy pot with a layer of torn or broken leaves to prevent sticking. Pack the rolled dolmades in concentric circles, seam-side down, each layer snug enough to hold its neighbours in place. Pour over the remaining olive oil and lemon juice, then add cold water to come just to the top of the dolmades, and press a heatproof plate directly on the surface to keep them submerged.\n\nBring slowly to a simmer, cover, and cook on the lowest heat for 50 minutes to an hour, until the rice is tender and the liquid mostly absorbed. Leave to cool in the pot — they're served cold or at room temperature, with a wedge of lemon and a bowl of thick yoghurt. Made the day before, the herbs settle and they taste markedly better."
+    },
+    {
+      "name": "Galaktoboureko",
+      "cuisine": "Greece",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "500 g phyllo pastry, thawed",
+        "200 g unsalted butter, melted",
+        "1 L whole milk",
+        "200 g caster sugar (for the custard)",
+        "150 g fine semolina",
+        "4 large eggs",
+        "1 tsp vanilla extract",
+        "Zest of 1 lemon",
+        "For the syrup: 400 g caster sugar, 250 ml water, juice of half a lemon, a strip of orange peel, 1 stick of cinnamon"
+      ],
+      "howIsMade": "Start the syrup well in advance — it must be cold when the hot pie comes out of the oven. Combine the sugar, water, lemon juice, orange peel and cinnamon in a small saucepan, bring to a boil, then simmer 4 minutes; take off the heat and leave to cool completely while you make everything else.\n\nFor the custard, heat the milk in a wide saucepan with the sugar and lemon zest until just steaming — don't let it boil. Sprinkle the semolina in a fine even stream while whisking constantly, then keep whisking on low heat for 5–6 minutes until it thickens to a loose pudding. Off the heat, beat in the eggs one at a time (the mixture should be warm but not hot enough to scramble them) and the vanilla. Press clingfilm directly onto the surface to stop a skin forming.\n\nBrush a 22×30 cm baking dish with melted butter. Lay 7 sheets of phyllo across the bottom, brushing each generously with butter and letting the edges hang over the sides — those flaps will fold back over the top later. Pour in the still-warm custard, smooth it level, fold the overhanging flaps inward and brush them with butter, then cover with another 7 sheets of phyllo, again buttering each, and trim or tuck the edges in neatly so the pie is fully sealed.\n\nScore the top phyllo into diamond or square portions with a sharp knife — cut all the way through, so the syrup can later penetrate — and brush the surface lavishly with the last of the butter. Bake at 170°C for 45–55 minutes, until the top is deeply golden brown.\n\nThe moment it comes out of the oven, pour the cold syrup evenly over the hot pie — it will sizzle and steam, and that temperature contrast is what makes the phyllo absorb the syrup without going soggy. Leave to settle at least 4 hours, ideally overnight, before cutting along the score lines and serving at room temperature."
+    },
+    {
+      "name": "Pizza Margherita",
+      "cuisine": "Italy",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "For the dough (4 pizzas): 500 g 00 flour (or bread flour), 325 ml cold water, 10 g salt, 1 g fresh yeast (or ¼ tsp dried)",
+        "For each pizza: 80 g San Marzano tomatoes (canned, hand-crushed), a pinch of salt, a drizzle of olive oil",
+        "100 g fior di latte mozzarella per pizza, torn into pieces (or buffalo mozzarella)",
+        "A few fresh basil leaves per pizza",
+        "Extra-virgin olive oil to finish",
+        "Semolina or flour for shaping and the peel"
+      ],
+      "howIsMade": "For the dough, dissolve the yeast in the cold water, then mix in the flour and salt until you have a shaggy mass. Knead by hand for 10 minutes (or 6 minutes with a stand mixer and dough hook) until smooth and elastic, cover and rest at room temperature for an hour, then refrigerate for at least 24 hours — ideally 48 to 72. The long cold proof is what gives Neapolitan dough its blistered char and airy structure; rushing it makes a flat, biscuity crust.\n\nTwo hours before baking, take the dough out, divide into four 210 g balls, dust with flour, cover with a damp cloth and let them come to room temperature. Meanwhile heat the oven as hot as it goes (250°C or above) with a pizza stone or heavy steel sheet inside for at least 45 minutes; without serious heat under the pizza, the crust will never set in time.\n\nHand-stretch one ball on a well-floured surface — press the centre flat with your fingertips, leaving a raised lip, then gently pull and stretch the disc to about 28 cm across. Never use a rolling pin, which collapses the gas pockets in the crust. Slide it onto a floured peel.\n\nSpoon 80 g of crushed tomato into the centre and spread it in a spiral with the back of the spoon, stopping 2 cm from the edge. Salt the tomato lightly, drizzle a little olive oil, and scatter the torn mozzarella over the top — not too much, or the pizza floods.\n\nSlide the pizza onto the stone and bake until the crust is puffed and charred in spots, the cheese has melted into pools and the rim is dark gold — 4 to 6 minutes in a domestic oven at full blast, 90 seconds in a wood-fired Neapolitan oven. Pull it out, tear over the basil leaves (which would scorch in the oven), drizzle a final thread of olive oil, and eat immediately."
+    },
+    {
+      "name": "Lasagne alla Bolognese",
+      "cuisine": "Italy",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "For the ragù: 400 g beef mince, 200 g pork mince, 80 g pancetta finely diced, 1 onion + 1 carrot + 1 celery stalk all finely diced, 200 ml dry red wine, 400 g passata or chopped tomatoes, 250 ml whole milk, 1 bay leaf, salt and pepper, olive oil",
+        "For the béchamel: 80 g butter, 80 g flour, 1 L whole milk, salt, a grating of nutmeg",
+        "300 g fresh egg lasagne sheets (or 250 g dried, blanched)",
+        "150 g Parmigiano Reggiano, finely grated",
+        "Butter for the dish"
+      ],
+      "howIsMade": "The ragù takes hours and rewards every one of them. Render the pancetta gently in a heavy pot with a splash of olive oil over medium-low heat for 5 minutes, until the fat runs clear, then add the chopped soffritto (onion, carrot, celery) and cook 10 minutes until soft and just gilded at the edges. Crumble in both meats and brown them properly — patience: don't stir for the first 3 minutes, then break them up and cook 10 more minutes until the pan bottom is deeply caramelised.\n\nPour in the wine, scrape the fond from the pan with a wooden spoon, and reduce by half. Add the tomatoes, the milk (the Bolognese signature — it rounds the acid and tightens the texture), the bay leaf and a teaspoon of salt. Bring to a bare simmer, partially cover, and cook on the lowest possible heat for at least 2 hours and ideally 3, stirring occasionally and adding a splash of water if it threatens to dry. The finished ragù should be glossy, deep brown-red, and almost a paste — never a soup.\n\nWhile the ragù finishes, make the béchamel: melt the butter, whisk in the flour for 2 minutes without colour, pour in the warm milk in a slow stream while whisking, and simmer 5 minutes until thick. Season with salt and a generous grating of nutmeg.\n\nIf using dried lasagne sheets, blanch them in salted boiling water for a minute and lay them out on damp tea towels; fresh sheets go in raw. Heat the oven to 180°C and butter a 25×35 cm baking dish.\n\nSpread a thin layer of béchamel on the bottom, then a layer of pasta, then ragù, then béchamel, then a snowy dusting of Parmigiano. Repeat until you've used everything — six to seven layers is the Bolognese target — finishing with béchamel and a heavier shower of Parmigiano. Bake 35–40 minutes until the top is bronzed and bubbling, then rest 20 minutes before cutting; lasagne sliced hot slides apart, lasagne rested holds its layers."
+    },
+    {
+      "name": "Osso Buco alla Milanese",
+      "cuisine": "Italy",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "4 thick-cut veal shanks (3–4 cm thick, about 350 g each), tied around the circumference with kitchen string",
+        "Salt and freshly ground black pepper",
+        "Plain flour for dusting",
+        "4 tbsp unsalted butter, 2 tbsp olive oil",
+        "1 onion + 1 carrot + 1 celery stalk, all finely diced",
+        "200 ml dry white wine",
+        "400 g chopped tomatoes",
+        "500 ml veal or chicken stock",
+        "1 bay leaf, a few sprigs of thyme",
+        "For the gremolata: zest of 1 lemon, 2 garlic cloves finely minced, a small bunch of flat-leaf parsley finely chopped"
+      ],
+      "howIsMade": "Pat the shanks dry — wet meat steams instead of searing — season aggressively with salt and pepper, and dust lightly in flour, knocking off the excess. Heat half the butter and all the oil in a heavy braising pan over medium-high heat until foaming, lay the shanks in and don't touch them for 4 minutes, until the bottom is deeply browned; flip and do the second side, then lift onto a plate.\n\nLower the heat to medium, add the rest of the butter and the soffritto, and cook gently for 10 minutes until soft and golden at the edges. Pour in the wine, raise the heat, and reduce by half while scraping up the caramelised bits from the bottom of the pan.\n\nStir in the tomatoes, bay leaf and thyme, and return the shanks to the pan in a single layer. Pour in just enough stock to come about two-thirds of the way up the meat — the bones should stay exposed so the marrow stays in. Bring to a bare simmer.\n\nCover and braise on the lowest heat, or in a 160°C oven, for 2 to 2½ hours, turning the shanks gently every 30 minutes so they cook evenly. They're done when the meat slumps off the bone at the press of a spoon and the sauce has thickened to a glossy gravy. Lift them out carefully — the bones and marrow are fragile at this point.\n\nWhile the shanks rest, stir together the lemon zest, garlic and parsley to make the gremolata. Place a shank on each plate, spoon over plenty of sauce, and crown with a generous pinch of the raw gremolata — its sharpness cuts the richness and is what makes osso buco Milanese rather than just braised veal. Serve with risotto alla milanese, polenta, or a piece of bread for the marrow."
+    },
+    {
+      "name": "Tiramisu",
+      "cuisine": "Italy",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "500 g mascarpone, at room temperature",
+        "5 large eggs, separated, at room temperature",
+        "100 g caster sugar",
+        "250 ml strong cold espresso (about 5 shots)",
+        "2 tbsp Marsala (sweet) or dark rum (optional, traditional in Treviso)",
+        "300 g savoiardi (Italian ladyfingers — the firm kind, not the soft kind)",
+        "Unsweetened cocoa powder for dusting",
+        "A small piece of dark chocolate for shaving (optional)",
+        "Pinch of salt for the egg whites"
+      ],
+      "howIsMade": "Whisk the egg yolks with the sugar in a large bowl for 4–5 minutes — by hand or with an electric beater — until pale, foamy and dramatically tripled in volume. The sugar should be completely dissolved when you rub a little between your fingers; undermixing here gives you a grainy tiramisu later.\n\nAdd the mascarpone in three batches, whisking gently after each, until the cream is smooth and glossy. In a separate clean bowl, whisk the egg whites with a pinch of salt to firm, glossy peaks — they should hold their shape when the whisk is lifted. Fold the whites into the mascarpone mixture in three additions, using a large spatula and folding from the centre outwards to keep the air in; the finished cream should be light, almost pourable, but holding soft peaks.\n\nMix the cold espresso and Marsala in a shallow dish. One at a time, dip a savoiardo into the espresso — just briefly, 2 seconds per side at most. They're sponges, and oversoaked ladyfingers turn to mush and weep through the cream. Lay them in a tight single layer in the bottom of a 22×30 cm dish.\n\nSpread half the mascarpone cream over the ladyfingers in an even layer, then repeat: another tight layer of dipped savoiardi, then the rest of the cream on top, smoothed level with the spatula.\n\nCover with clingfilm and refrigerate at least 6 hours, ideally overnight — tiramisu eaten the same day tastes like its parts; tiramisu rested overnight tastes like one dessert, with the coffee and cream merged together. Just before serving, dust the top generously with cocoa powder pushed through a fine sieve, shave over a little dark chocolate if you like, and cut with a hot knife wiped between slices."
+    },
+    {
+      "name": "Cacio e Pepe",
+      "cuisine": "Italy",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "400 g tonnarelli or thick spaghetti",
+        "200 g Pecorino Romano, finely grated on a microplane (no Parmesan — it doesn't melt the same way)",
+        "1 heaped tablespoon whole black peppercorns, freshly cracked in a mortar (not pre-ground)",
+        "Sea salt for the pasta water (less than usual, since the cheese is salty)"
+      ],
+      "howIsMade": "Toast the cracked pepper in a wide dry pan over medium heat for 30 seconds — until you can smell it sharply — and add half a ladle of cold water to stop the cooking and create a peppery slurry. Set aside off the heat.\n\nBring 3 L of lightly salted water to a boil and cook the pasta until just shy of al dente, about a minute less than the package says; in Rome the pasta finishes cooking in the sauce, not in the pot.\n\nWhile the pasta cooks, scoop out a mug of starchy water from the pot. In a wide bowl, whisk the grated Pecorino with about 4 tablespoons of the hot pasta water — let it cool a few seconds first, since boiling water on cheese clumps it instantly — until you have a thick, ricotta-like paste; loosen with another spoonful of water if it's too stiff.\n\nLift the pasta from the pot with tongs straight into the peppered pan (don't drain it), splash in a ladle of starchy water, and toss vigorously over low heat for 30 seconds, until the pasta is glossy and well coated.\n\nTake the pan off the heat — Pecorino above boiling point seizes into stringy clumps — pour over the cheese paste and toss again, fast, adding more pasta water by the spoonful if needed, until the sauce becomes a creamy emulsion that clings to every strand. Plate immediately with another crack of pepper on top; cacio e pepe cools quickly, so plates should be warm and diners at the table."
+    }
+  ]
+}
