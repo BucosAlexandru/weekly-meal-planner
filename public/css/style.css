@@ -3209,3 +3209,60 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   .hp2-hero { padding: 36px 22px; }
   .hp2-section-title { font-size: 1.5rem; }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 2.1 micro fixes
+   Hero stat-chip alignment: icon on left, num + label stacked
+   on right, all vertically centred at a consistent height.
+   ────────────────────────────────────────────────────────────── */
+.hp2-stat-chips {
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+.hp2-stat-chip {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  min-height: 56px;
+  min-width: 110px;
+  background: var(--color-brand-light);
+  border: 1px solid var(--color-brand-soft);
+  border-radius: var(--r-full);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(17,24,39,0.04);
+}
+.hp2-stat-chip-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hp2-stat-chip-body {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+.hp2-stat-chip-num {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.hp2-stat-chip-label {
+  font-size: 0.72rem;
+  color: var(--ink-3);
+  text-transform: lowercase;
+}
+
+@media (max-width: 1024px) {
+  .hp2-stat-chips { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .hp2-stat-chip {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+  }
+}
