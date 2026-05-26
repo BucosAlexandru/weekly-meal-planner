@@ -3662,3 +3662,260 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   .hp2-section-head { margin-bottom: 24px; }
   .hp2-footer { padding: 48px 20px 26px; }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 4: editorial simplification
+   Remove SaaS signals, soften everything. Cascade overrides
+   earlier hp2 declarations; old rules are not edited in place.
+   ────────────────────────────────────────────────────────────── */
+
+/* Generous breathing between sections */
+.hp2-main { gap: 120px; padding: 56px 24px 96px; }
+.hp2-section-head { margin-bottom: 44px; align-items: baseline; }
+.hp2-section-title { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.018em; color: var(--ink); }
+.hp2-section-sub   { font-size: 0.95rem; color: var(--ink-3); }
+.hp2-section-link  { font-size: 0.88rem; font-weight: 500; color: var(--ink-3); }
+.hp2-section-link:hover { color: var(--color-brand); text-decoration: none; }
+
+/* Hero — strip background gradients and trim padding so the
+   photo and headline carry the section. */
+.hp2-hero {
+  background: transparent;
+  padding: 32px 0 24px;
+  border-radius: 0;
+  box-shadow: none;
+}
+.hp2-hero::before { content: none; }
+
+.hp2-hero-grid {
+  grid-template-columns: 1.05fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hp2-hero-title {
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+  color: var(--ink);
+  margin: 0 0 22px;
+}
+.hp2-hero-title-line { display: block; }
+.hp2-hero-title-line--accent {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--ink);
+}
+.hp2-hero-sub {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  max-width: 480px;
+  margin: 0 0 28px;
+}
+.hp2-hero-cta { gap: 20px; align-items: center; }
+.hp2-hero-photo {
+  aspect-ratio: 4 / 5;
+  min-height: 420px;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px -28px rgba(17, 24, 39, 0.22);
+}
+
+/* Ghost CTA — text link in brand colour, no pill, no border */
+.hp2-btn--ghost {
+  background: transparent;
+  border: none;
+  color: var(--color-brand);
+  padding: 14px 4px;
+  box-shadow: none;
+}
+.hp2-btn--ghost:hover {
+  background: transparent;
+  color: var(--color-brand-hover);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary CTA — keep prominence, soften the glow */
+.hp2-btn--primary {
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.08);
+}
+.hp2-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 22px -8px rgba(36, 113, 42, 0.35),
+    0 2px 6px rgba(17, 24, 39, 0.06);
+}
+
+/* Cards — drop borders + harsh shadows. Almost flat at rest. */
+.hp2-cuisine-card,
+.hp2-inspire-card,
+.hp2-entry-card {
+  border: none;
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: none;
+}
+.hp2-cuisine-card:hover,
+.hp2-inspire-card:hover,
+.hp2-entry-card:hover {
+  transform: translateY(-2px);
+  border-color: transparent;
+  box-shadow: 0 16px 36px -22px rgba(17, 24, 39, 0.22);
+}
+.hp2-cuisine-card .hp2-photo,
+.hp2-inspire-card .hp2-photo,
+.hp2-entry-card .hp2-photo {
+  border-radius: 4px;
+}
+
+/* Cuisine row — calmer */
+.hp2-cuisine-row { gap: 22px; }
+.hp2-cuisine-card .hp2-photo { aspect-ratio: 4 / 5; }
+.hp2-cuisine-body { padding: 14px 4px 4px; gap: 4px; }
+.hp2-cuisine-name { font-weight: 600; color: var(--ink); }
+.hp2-cuisine-count {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+.hp2-flag { display: none; }
+
+/* Inspire — badge becomes a quiet eyebrow above the title */
+.hp2-inspire-row { gap: 28px; }
+.hp2-inspire-card { background: transparent; }
+.hp2-inspire-card .hp2-photo { aspect-ratio: 4 / 5; }
+.hp2-inspire-body { padding: 18px 4px 4px; }
+.hp2-inspire-badge {
+  position: static;
+  display: block;
+  margin: 0 0 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  color: var(--ink-4);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.hp2-inspire-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin: 0 0 6px;
+}
+.hp2-inspire-meta {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hp2-inspire-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+/* Pull-quote — single centred editorial line, no surround */
+.hp2-pullquote {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: center;
+}
+.hp2-pullquote blockquote {
+  margin: 0 0 14px;
+  padding: 0;
+  font-size: clamp(1.25rem, 2.3vw, 1.6rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.hp2-pullquote blockquote p { margin: 0; }
+.hp2-pullquote figcaption {
+  font-size: 0.82rem;
+  color: var(--ink-3);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Entry cards — looser, less card-like */
+.hp2-entry-card {
+  padding: 0;
+  gap: 28px;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  background: transparent;
+}
+.hp2-entry-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+.hp2-entry-card .hp2-photo { aspect-ratio: 4 / 5; border-radius: 4px; }
+.hp2-entry-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.hp2-entry-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  margin-bottom: 16px;
+}
+.hp2-entry-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-brand);
+}
+
+/* Planner CTA — keep clear but quieter band */
+.hp2-planner-cta {
+  background: var(--color-brand-light);
+  border-radius: 6px;
+  padding: 40px 44px;
+}
+.hp2-planner-cta-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.hp2-planner-cta-sub { color: var(--ink-3); }
+
+/* Footer — drop accent ridge, flat solid colour */
+.hp2-footer {
+  background: var(--color-brand-dark);
+  padding: 56px 24px 28px;
+}
+.hp2-footer::before { content: none; }
+
+/* Mobile — preserve responsiveness */
+@media (max-width: 1024px) {
+  .hp2-main { gap: 96px; padding: 40px 22px 80px; }
+  .hp2-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hp2-hero-photo { order: -1; min-height: 320px; aspect-ratio: 4 / 5; }
+  .hp2-entry-card { grid-template-columns: 1fr; gap: 18px; }
+  .hp2-entry-card .hp2-photo { aspect-ratio: 16 / 9; }
+}
+@media (max-width: 768px) {
+  .hp2-main { gap: 72px; padding: 24px 18px 56px; }
+  .hp2-section-head { margin-bottom: 28px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .hp2-section-title { font-size: 1.4rem; }
+  .hp2-hero { padding: 24px 0 12px; }
+  .hp2-hero-title { font-size: clamp(2rem, 8.5vw, 2.6rem); }
+  .hp2-cuisine-row { gap: 16px; }
+  .hp2-inspire-row { gap: 22px; }
+  .hp2-planner-cta { padding: 28px 22px; }
+}
