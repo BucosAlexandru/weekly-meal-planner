@@ -2905,6 +2905,8 @@ function recipeMetadata(ingr, steps, cat, code, overrides, howText) {
     activeTime:   fmt(activeMinsR),
     isoTotalTime: fmtISO(totalMins),
     isoPrepTime:  fmtISO(activeMinsR),
+    totalMinsRaw: totalMins,
+    activeMinsRaw: activeMinsR,
     servings,
     difficulty: ui.diffLevels[diffIdx],
     cost: expensive ? '$$' : '$',
@@ -2917,35 +2919,174 @@ function isSoup(cat, n, ingr) {
     || /\bbulion\b|\bstock\b|\bbroth\b|\bbouillon\b/i.test(ingr.join(' '));
 }
 
-function recipeFeatureCards(ingr, steps, cat, code, n, overrides) {
+/* ════════════════════════════════════════════════════════════════
+   CULINARY METADATA VALIDATION (Phase K)
+   ════════════════════════════════════════════════════════════════
+   Validation layer on top of `ui.feat` badges and `ui.pairs` chips.
+   Replaces the previous "always render 4 cards" heuristic that
+   produced fake badges (Traditional recipe on every page, Can be
+   frozen on any non-fragile multi-step recipe) and the "fall through
+   to generic" pairing default that produced robotic chips on
+   cuisine-tagged recipes.
+
+   Rule contract: a missing badge is better than a fake badge; a
+   missing pairing is better than a robotic pairing.
+
+   Each badge has a rule function returning one of:
+     'high'   — clear signal, render confidently
+     'medium' — directional signal, render
+     'low'    — signal too weak, do NOT render
+     'reject' — explicitly excluded, do NOT render
+   `evaluateBadges` collects all rules ≥ medium, prioritises specific
+   over generic, and caps at 4. If 0 qualify, the recipe renders 0
+   cards — not 4 fakes. The full reference + per-badge thresholds are
+   documented in `docs/ai/CULINARY_METADATA_VALIDATION.md`.
+   See also: documentation invariant — "A missing badge is better
+   than a fake badge" — applies to every new rule added here. */
+
+const BADGE_RICH_PROTEIN = 0;
+const BADGE_RICH_OMEGA3  = 1;
+const BADGE_RICH_VITAMIN = 2;
+const BADGE_TRADITIONAL  = 3;
+const BADGE_FREEZABLE    = 4;
+const BADGE_QUICK        = 5;
+const BADGE_SLOW_SIMMER  = 6;
+const BADGE_ONE_POT      = 7;
+const BADGE_OVERNIGHT    = 8;
+const BADGE_FERMENTED    = 9;
+
+// Reject list for the "Can be frozen" badge — texture or assembly
+// genuinely fails freezing.
+const RULE_NEVER_FREEZE = /\b(sushi|sashimi|ceviche|tartare|tartar|carpaccio|gravlax|meringue|pavlova|souffl[ée]|cr[eê]pe|menemen|shakshuka|chakchouka|chakchuka|fondue|tartine|smørrebrød|smorrebrod|poffertjes|l[aá]ngos|tempura|onigiri|yakitori|chilaquiles|salad\b|salată\b|salade\b|insalata|ensalada|raw\s+fish|sashimi|carpaccio|tartare|trota|tartar|sabich|gyros|souvlaki|tlayudas|pad\s+thai|nasi\s+goreng|huevos\s+rancheros|pierogi)\b/i;
+
+// Allow-list for "One-pot" — explicit because the existing heuristic
+// stamped almost everything. Conservative cultural canon only.
+const RULE_ONE_POT_DISHES = /\b(borscht|borsch|barszcz|cassoulet|jambalaya|ratatouille|paella|risotto|kichuri|kitchari|congee|chowder|gumbo|tagine|pozole|fasolada|harira|stamppot|stoofvlees|carbonnade|goulash|cocido|bourguignon|stew|stroganoff|cottage\s+pie|shepherd|moqueca|ropa\s+vieja|picadillo|biryani|plov|kabsa|mansaf|sundubu|jjigae|kimchi[\s-]?jjigae|tom\s+yum|tom\s+kha|laksa|olla|ghulash|svíčková|sviíčková|bigos|chorba|ciorbă|tocan|tochitur|jollof|egusi|moambé|moambe|sopa|caldo|chupe|locro|sarmale)\b/i;
+
+// Cuisine → preferred pairing-template key. Inference takes
+// precedence over a generic `pairingsType: 'meat' | 'fish' | …`
+// when the recipe's origin has a cultural pairing template.
+const CUISINE_PAIRING_TYPE = {
+  Japan: 'japanese',
+  'South Korea': 'korean', 'North Korea': 'korean',
+  Italy: 'italian',
+  France: 'french',
+  Greece: 'mediterranean', Spain: 'mediterranean', Portugal: 'mediterranean',
+  Croatia: 'mediterranean', Cyprus: 'mediterranean',
+  'Bosnia and Herzegovina': 'mediterranean', Slovenia: 'mediterranean',
+  'Cape Verde': 'mediterranean',
+  Lebanon: 'middle-eastern', Syria: 'middle-eastern', Iran: 'middle-eastern',
+  Iraq: 'middle-eastern', Israel: 'middle-eastern', Egypt: 'middle-eastern',
+  Kuwait: 'middle-eastern', Turkey: 'middle-eastern',
+  Morocco: 'middle-eastern', Tunisia: 'middle-eastern', Algeria: 'middle-eastern',
+  Sudan: 'middle-eastern',
+  India: 'indian', Pakistan: 'indian', Nepal: 'indian', 'Sri Lanka': 'indian',
+  Vietnam: 'vietnamese', Cambodia: 'vietnamese',
+  Thailand: 'thai', Indonesia: 'thai', Malaysia: 'thai', Philippines: 'thai',
+  Singapore: 'thai',
+  Mexico: 'mexican',
+  Peru: 'latin', Argentina: 'latin', Brazil: 'latin', Cuba: 'latin',
+  Colombia: 'latin', Ecuador: 'latin', Chile: 'latin',
+  'Dominican Republic': 'latin', 'El Salvador': 'latin', Venezuela: 'latin',
+  Guatemala: 'latin', Jamaica: 'latin',
+};
+
+function inferPairingType(recipe, fallback) {
+  const cuisinePair = CUISINE_PAIRING_TYPE[recipe?.origin?.en];
+  return cuisinePair || fallback;
+}
+
+// Single rule engine for badges. Returns the badge-index array to
+// render (in priority order, capped at 4). Empty array means render
+// nothing — preferred over fake cards.
+function evaluateBadges(ctx) {
+  const { recipe, ingr, steps, cat, n, howText, nutrition, totalMins } = ctx;
+  const ingrStr = (Array.isArray(ingr) ? ingr.join(' ') : '').toLowerCase();
+  const nameStr = (n || '').toLowerCase();
+  const catStr  = (cat || '').toLowerCase();
+  const isSoupRecipe = isSoup(cat, n, ingr);
+  const decisions = []; // {key, conf}
+
+  const proteinG = nutrition?.prot || 0;
+  const hasMeat  = /beef|chicken|pork|lamb|turkey|duck|veal|carne|pui|porc|vită|miel|vițel/.test(ingrStr);
+  const hasFish  = /salmon|trout|cod|tuna|fish|shrimp|prawn|squid|seafood|anchov|pește|somon|ton|păstrăv|creveți|caracatiță/.test(ingrStr);
+  const hasLegume = /\bchickpea|chick-pea|garbanzo|lentil|red\s+bean|kidney\s+bean|black\s+bean|white\s+bean|cannellini|navy\s+bean|butter\s+bean|gigantes|edamame|soy\s*bean|tofu|tempeh|năut|linte|fasole/.test(ingrStr)
+    || /dal|daal|dhal|rajma|chana|falafel|hummus|fasolada|harira|ful\s+medames|lobio|cassoulet|feijoada/.test(nameStr);
+
+  // 0 — Rich in protein
+  if (proteinG >= 25) decisions.push({ key: BADGE_RICH_PROTEIN, conf: 'high' });
+  else if (proteinG >= 18 || hasMeat || hasFish || hasLegume) decisions.push({ key: BADGE_RICH_PROTEIN, conf: 'medium' });
+
+  // 1 — Rich in omega-3: fatty fish only
+  if (/\b(salmon|mackerel|sardine|anchov|herring|trout|tuna|somon|sardin|hering|păstrăv|ton)\b/i.test(ingrStr) && !hasMeat) {
+    decisions.push({ key: BADGE_RICH_OMEGA3, conf: 'high' });
+  }
+
+  // 2 — Rich in vitamins: vegetable-forward dishes only
+  const hasFreshVeg = /\b(spinach|kale|broccoli|carrot|tomato|zucchini|eggplant|aubergine|bell\s+pepper|cucumber|asparagus|cabbage|cauliflower|leek|celery|chard|fennel|sprout|coriander|cilantro|parsley|basil|mint|dill|spanac|morcov|roșii|dovlecel|vânătă|castravete|sparanghel|varză|conopidă|praz|țelină)\b/i.test(ingrStr);
+  if (hasFreshVeg && !hasMeat && !hasFish) decisions.push({ key: BADGE_RICH_VITAMIN, conf: 'high' });
+
+  // 3 — Traditional recipe: only for cuisines in our hub eligibility set
+  // (which already filters AI-filler names per Phase 8A safety rules).
+  const isHubCuisine = HUB_ELIGIBLE_ORIGINS && HUB_ELIGIBLE_ORIGINS.has(recipe?.origin?.en);
+  if (isHubCuisine) decisions.push({ key: BADGE_TRADITIONAL, conf: 'medium' });
+
+  // 4 — Can be frozen: stews, soups, braises, slow-cooked meat dishes
+  const freezableByStructure = isSoupRecipe
+    || /\b(stew|tocăniță|guisado|estofado|braised|brais[ée]|braisé|casserole|tagine|curry|chili|chilli|ragù|ragu|cassoulet|carbonnade|stroganoff|bourguignon|goulash|borscht|pozole|adobo|rendang|bobotie|caldo|chupe|locro|sarmale|tochitur|fasol|jollof|egusi|moambé|moambe|jambalaya|gumbo|paella|risotto)\b/i.test(nameStr);
+  if (!RULE_NEVER_FREEZE.test(nameStr) && !RULE_NEVER_FREEZE.test(catStr) && freezableByStructure) {
+    decisions.push({ key: BADGE_FREEZABLE, conf: 'high' });
+  }
+
+  // 5 — Quick to prepare: <= 30 min total
+  if (totalMins > 0 && totalMins <= 30) decisions.push({ key: BADGE_QUICK, conf: 'high' });
+
+  // 6 — Slow simmered: >= 90 min total
+  if (totalMins >= 90) decisions.push({ key: BADGE_SLOW_SIMMER, conf: 'high' });
+
+  // 7 — One-pot: explicit allow-list only (no heuristic)
+  if (RULE_ONE_POT_DISHES.test(nameStr)) decisions.push({ key: BADGE_ONE_POT, conf: 'high' });
+
+  // 8 — Overnight: cure / marinade / proof of >= 8h
+  if (totalMins >= 480) decisions.push({ key: BADGE_OVERNIGHT, conf: 'high' });
+
+  // 9 — Fermented: explicit ingredient
+  if (/\b(miso|kimchi|sauerkraut|tempeh|kefir|doenjang|gochujang|kvass|natto|kombucha|fermented)\b/i.test(ingrStr + ' ' + nameStr)) {
+    decisions.push({ key: BADGE_FERMENTED, conf: 'high' });
+  }
+
+  // Dedupe by key (a recipe can match multiple rules for the same
+  // slot — keep the highest-confidence decision per key).
+  const byKey = new Map();
+  for (const d of decisions) {
+    const prior = byKey.get(d.key);
+    if (!prior || (prior.conf === 'medium' && d.conf === 'high')) byKey.set(d.key, d);
+  }
+
+  // Render-priority sort: high before medium; then Traditional drops to
+  // the back so it doesn't crowd out specific signal.
+  const ordered = [...byKey.values()].sort((a, b) => {
+    if (a.conf !== b.conf) return a.conf === 'high' ? -1 : 1;
+    if (a.key === BADGE_TRADITIONAL && b.key !== BADGE_TRADITIONAL) return 1;
+    if (b.key === BADGE_TRADITIONAL && a.key !== BADGE_TRADITIONAL) return -1;
+    return 0;
+  });
+
+  return ordered.slice(0, 4).map(d => d.key);
+}
+
+function recipeFeatureCards(ingr, steps, cat, code, n, overrides, recipe, howText, totalMins) {
   if (overrides?.featureCards) {
     return overrides.featureCards.map(f=>`<div class="recipe-feature-card"><span class="recipe-feature-icon">${f.icon}</span><div><p class="recipe-feature-title">${esc(f.t)}</p><p class="recipe-feature-desc">${esc(f.d)}</p></div></div>`).join('');
   }
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
-  const ingrStr = ingr.join(' ').toLowerCase();
-  const nameStr = (n||'').toLowerCase();
-  const hasMeat = /beef|chicken|pork|lamb|turkey|duck|veal|tuna|carne|pui|porc|vită|miel|vițel|ton/.test(ingrStr);
-  const hasFish = /salmon|trout|cod|shrimp|seafood|fish|anchov|pește|somon|păstrăv|creveți|caracatiță/.test(ingrStr);
-  // Legume-rich vegan dishes (dal, hummus, falafel, chickpea curry, bean stews) — genuinely protein-rich
-  const hasLegume = /\bchickpea|chick-pea|garbanzo|lentil|red\s+bean|kidney\s+bean|black\s+bean|white\s+bean|cannellini|navy\s+bean|butter\s+bean|gigantes|edamame|soy\s*bean|tofu|tempeh|năut|linte|fasole/.test(ingrStr) || /dal|daal|dhal|rajma|chana|falafel|hummus|fasolada|harira|ful\s+medames|lobio|cassoulet/.test(nameStr);
-  const soupRecipe = isSoup(cat, n, ingr);
-  const totalMins = overrides?.totalMins ?? 0;
-  const isOvernightRecipe = totalMins >= 480;
-  const isSlowCook = totalMins > 120;
-  const isFermented = /miso|kimchi|sauerkraut|tempeh|kefir|doenjang|gochujang|kvass/.test(ingrStr + ' ' + nameStr);
-  // Dishes that genuinely DO NOT freeze well — never claim "Can be frozen" for these
-  const isFragile = /\bsushi\b|sashimi|ceviche|tartare|tartar|carpaccio|gravlax|meringue|pavlova|souffl[ée]|cr[eê]pe|menemen|shakshuka|chakchouka|chakchuka|salad\b|salată|raw\s+fish|fondue|tartine|smørrebrød|smorrebrod|poffertjes|l[aá]ngos/.test(ingrStr + ' ' + nameStr);
-  const isFreezer = !isFragile && (soupRecipe || steps.length > 5 || (totalMins > 35));
-  const card1 = isOvernightRecipe ? ui.feat[8] : isSlowCook ? ui.feat[6] : isFermented ? ui.feat[9] : ui.feat[7];
-  // Protein/vitamin card: legume-rich vegan dishes also count as protein-rich, not just meat
-  const proteinCard = (hasMeat || hasLegume) ? ui.feat[0] : hasFish ? ui.feat[1] : ui.feat[2];
-  const cards = [
-    proteinCard,
-    card1,
-    ui.feat[3],
-    isFreezer ? ui.feat[4] : ui.feat[5],
-  ];
-  return cards.map(f=>`<div class="recipe-feature-card"><span class="recipe-feature-icon">${f.icon}</span><div><p class="recipe-feature-title">${f.t}</p><p class="recipe-feature-desc">${f.d}</p></div></div>`).join('');
+  const nutrition = overrides?.nutrition || recipeNutrition(ingr, cat, overrides);
+  const keys = evaluateBadges({ recipe, ingr, steps, cat, n, howText, nutrition, totalMins: totalMins || 0 });
+  if (keys.length === 0) return '';
+  return keys.map(k => {
+    const f = ui.feat[k];
+    return `<div class="recipe-feature-card"><span class="recipe-feature-icon">${f.icon}</span><div><p class="recipe-feature-title">${f.t}</p><p class="recipe-feature-desc">${f.d}</p></div></div>`;
+  }).join('');
 }
 
 function recipeNutrition(ingr, cat, overrides) {
@@ -2973,21 +3114,32 @@ function recipeNutrition(ingr, cat, overrides) {
   return { cal, prot, carb, fat, fib };
 }
 
-function recipePairings(ingr, cat, code, n, overrides) {
+function recipePairings(ingr, cat, code, n, overrides, recipe) {
   const ui = RECIPE_UI[code] || RECIPE_UI.en;
   const p = ui.pairs;
   if (overrides?.pairings) {
     return overrides.pairings.map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
   }
-  if (overrides && overrides.pairingsType && p[overrides.pairingsType]) {
-    return p[overrides.pairingsType].map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
-  }
+  // Ingredient-derived fallback type when no cuisine pairing template
+  // applies to the recipe's origin.
   const ingrStr = ingr.join(' ').toLowerCase();
   const hasMeat = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
   const hasFish = /salmon|trout|cod|tuna|shrimp|pește|somon|ton|păstrăv|creveți/.test(ingrStr);
   const hasPasta = /pasta|spaghetti|noodle|linguine|tagliatelle/.test(ingrStr);
   const isVeg = !hasMeat && !hasFish;
-  const chosen = isSoup(cat,n,ingr) ? p.soup : hasFish ? p.fish : hasMeat ? p.meat : hasPasta ? p.pasta : isVeg ? p.veg : p.def;
+  const ingredientType = isSoup(cat,n,ingr) ? 'soup' : hasFish ? 'fish' : hasMeat ? 'meat' : hasPasta ? 'pasta' : isVeg ? 'veg' : 'def';
+  // Author-set explicit cuisine type wins. Author-set generic type
+  // (meat/fish/soup/pasta/veg/def) is treated as a placeholder and
+  // upgraded to the cuisine pairing if origin maps to one — the most
+  // common Phase 8A artefact was generic `pairingsType: 'meat'` on
+  // cuisine-tagged recipes like Bobotie (South Africa) or Pljeskavica
+  // (Serbia) producing "red wine / fresh bread / roasted potatoes".
+  const explicit = overrides?.pairingsType;
+  const isGenericExplicit = !explicit || ['meat','fish','soup','pasta','veg','def','dessert'].includes(explicit);
+  const pairingKey = isGenericExplicit
+    ? inferPairingType(recipe, explicit || ingredientType)
+    : explicit;
+  const chosen = p[pairingKey] || p[ingredientType] || p.def;
   return chosen.map(x=>`<div class="pairing-chip">${x.e} ${esc(x.n)}</div>`).join('');
 }
 
@@ -3271,7 +3423,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
   </div>
 
   <!-- Feature Cards -->
-  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code, n, overrides)}</div>
+  <div class="recipe-features-row">${recipeFeatureCards(ingr, steps, cat, code, n, overrides, recipe, how, meta.totalMinsRaw)}</div>
 
   <!-- 3-column content -->
   <div class="recipe-content-grid">
@@ -3301,7 +3453,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       </div>
       <p class="nutrition-disclaimer">${ui.nutritionDisc}</p>
       <p class="recipe-pairings-h">${ui.pairingsH}</p>
-      <div class="pairings-grid">${recipePairings(ingr, cat, code, n, overrides)}</div>
+      <div class="pairings-grid">${recipePairings(ingr, cat, code, n, overrides, recipe)}</div>
     </div>
   </div>
 
