@@ -3619,3 +3619,46 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
     transform: none;
   }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 3d: footer warmth + section rhythm
+   Richer footer top accent, craft footnote, slightly larger
+   section gap, refined header spacing.
+   ────────────────────────────────────────────────────────────── */
+
+/* Looser breathing between major sections */
+.hp2-main { gap: 96px; padding: 40px 24px 72px; }
+.hp2-section-head { margin-bottom: 32px; }
+
+/* Footer — accent ridge on top, craft footnote */
+.hp2-footer {
+  position: relative;
+  padding: 64px 24px 28px;
+  background: linear-gradient(180deg, #1f5e22 0%, #173f1a 100%);
+}
+.hp2-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-brand) 0%,
+    #4ade80 50%,
+    var(--color-brand) 100%
+  );
+  opacity: 0.85;
+}
+.hp2-footer-craft {
+  font-style: italic;
+  color: #a7f3d0;
+}
+
+@media (max-width: 1024px) {
+  .hp2-main { gap: 80px; }
+}
+@media (max-width: 768px) {
+  .hp2-main { gap: 56px; padding: 24px 16px 48px; }
+  .hp2-section-head { margin-bottom: 24px; }
+  .hp2-footer { padding: 48px 20px 26px; }
+}
