@@ -169,6 +169,25 @@ function imageSrcset(url, tileSize = 'tile') {
   return { srcset: '', sizes: '' };
 }
 
+/* Image error handling: emit attributes that recover from transient Wikipedia
+   404s instead of permanently removing the <img>. The hash-bucket path
+   (/thumb/X/XX/Filename) can 404 when (a) the filename guess is slightly off
+   or (b) the upstream thumb cache hasn't generated that size yet. In both
+   cases Wikipedia's Special:FilePath redirector resolves by filename and
+   server-generates the thumbnail — much more forgiving than the direct CDN
+   URL. Only fall through to remove() after the fallback also fails.
+
+   For non-Wikimedia URLs (img.spoonacular.com, local /images/, cover2.jpg),
+   keep the existing remove-on-error behavior. */
+function imgFallbackAttrs(url) {
+  const wm = url.match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[^/]+\/[^/]+\/([^/]+)\/(\d+)px-/);
+  if (!wm) return ' onerror="this.remove()"';
+  const filename = wm[1];
+  const width = wm[2];
+  const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${filename}?width=${width}`;
+  return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+}
+
 /* Convenience: build the attribute string `srcset="..." sizes="..."` to
    slot into an <img> tag. Empty string when no variants generated. */
 function imgSrcsetAttrs(url, tileSize) {
@@ -3535,7 +3554,7 @@ function recipePage(recipe, rl) {
       const ri_isPlaceholder = ri_img.src.endsWith('cover2.jpg');
       const ri_imgHtml = ri_isPlaceholder
         ? ''
-        : `<img src="${ri_img.src}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
+        : `<img src="${ri_img.src}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(ri_img.src)}>`;
       return `<a href="${rl.dir}/${rs}/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="${rs}">${re}${ri_imgHtml}</div>
   <div class="recipe-card-body">
@@ -3584,7 +3603,7 @@ function recipePage(recipe, rl) {
       const bridgeImg = resolveRecipeImage(raw, rs);
       const bridgeImgHtml = bridgeImg.src.endsWith('cover2.jpg')
         ? ''
-        : `<img src="${bridgeImg.src}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
+        : `<img src="${bridgeImg.src}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(bridgeImg.src)}>`;
       return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
   <div class="recipe-card-img" data-card-recipe="${rs}">${re}${bridgeImgHtml}</div>
   <div class="recipe-card-body">
@@ -3641,7 +3660,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     <div class="recipe-hero-img-col">
       <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}${
         recipeImg.src && !recipeImg.src.endsWith('cover2.jpg')
-          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
+          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async"${imgFallbackAttrs(recipeImg.src)}>`
           : ''
       }</div>
     </div>
@@ -3939,7 +3958,7 @@ function recipeIndex(rl) {
       // we know works.
       return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
         <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
-        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(u)}/>`}
       </span>`;
     }).join('');
     const previewNames = recs.slice(0, 3).map(r =>
@@ -4400,7 +4419,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     // detail page is known to serve.
     const imgHtml = isPlaceholder
       ? '' // skip the placeholder URL entirely so the flag fallback shows
-      : `<img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
+      : `<img src="${t.img}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(t.img)}/>`;
     return `<li>
       <a class="${cls}" href="${t.href}">
         <span class="cuisine-tile-img"${rotAttr}${heroDupAttr}>
@@ -4486,7 +4505,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
         </div>
         ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
           <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
-          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
+          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high"${imgFallbackAttrs(featured.img)}/>`}
         </figure>` : ''}
       </div>
     </div>
