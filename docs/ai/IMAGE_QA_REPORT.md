@@ -11,12 +11,12 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
-| **1. Local image override** | 40 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
-| **2. Mapped external image** | 150 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
+| **1. Local image override** | 47 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
+| **2. Mapped external image** | 149 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
 | **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
-| **4. Fallback emoji** | 14 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
+| **4. Fallback emoji** | 8 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
-Total recipes: 204. Buckets 3 + 4 = **14 recipes that
+Total recipes: 204. Buckets 3 + 4 = **8 recipes that
 SSR-render emoji** — and this is what the user is reporting. Even bucket 3,
 which was previously assumed to be "rescued at runtime by content.js", fails
 silently when the Wikipedia/Spoonacular URL 404s, is blocked, or times out.
@@ -24,8 +24,8 @@ Empirical evidence: `/en/recipes/banh-xeo/` (id 126, bucket 3).
 
 ### Priority distribution after re-classification (every emoji is now P0 or P1)
 
-- **P1**: 17
-- **P3**: 187
+- **P1**: 14
+- **P3**: 190
 
 ## To stop seeing emoji: reduce buckets 3 and 4
 
@@ -43,21 +43,15 @@ or 2 (so the SSR renders an actual `<img>`):
    SSR + og:image use the URL. Only safe for URLs you've verified render
    correctly in production.
 
-## Bucket 4 — Fallback emoji (SSR emoji, **no URL anywhere** — 14 recipes)
+## Bucket 4 — Fallback emoji (SSR emoji, **no URL anywhere** — 8 recipes)
 
   - id 189 — **Tres Leches Cake** (Mexico)
   - id 190 — **Bouillabaisse** (France)
   - id 191 — **Croque Monsieur** (France)
   - id 192 — **Crêpes** (France)
   - id 193 — **Tarte Tatin** (France)
-  - id 194 — **Avgolemono** (Greece)
-  - id 195 — **Gyros** (Greece)
   - id 196 — **Pastitsio** (Greece)
-  - id 197 — **Dolmades** (Greece)
   - id 198 — **Galaktoboureko** (Greece)
-  - id 204 — **Butter Chicken (Murgh Makhani)** (India)
-  - id 206 — **Palak Paneer** (India)
-  - id 207 — **Rogan Josh** (India)
   - id 208 — **Samosa** (India)
 
 ## Bucket 3 — Client-only (SSR emoji, content.js IMG has URL — 0 recipes)
@@ -70,15 +64,15 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|
 | Total recipes | 204 |
 | With external mapping in recipe-images.js | 169 |
-| With local override (`public/images/<slug>.{jpg,webp}`) | 40 |
-| SSR renders emoji (buckets 3 + 4) | 14 |
-| SSR renders `<img>` (buckets 1 + 2) | 190 |
+| With local override (`public/images/<slug>.{jpg,webp}`) | 47 |
+| SSR renders emoji (buckets 3 + 4) | 8 |
+| SSR renders `<img>` (buckets 1 + 2) | 196 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
-- **local-webp**: 40
-- **fallback**: 14
-- **wikipedia**: 119
+- **local-webp**: 47
+- **fallback**: 8
+- **wikipedia**: 118
 - **spoonacular**: 31
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
@@ -103,14 +97,11 @@ or 2 (so the SSR renders an actual `<img>`):
 | 191 | Croque Monsieur | France | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 192 | Crêpes | France | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 193 | Tarte Tatin | France | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 194 | Avgolemono | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 195 | Gyros | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
+| 194 | Avgolemono | Greece | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
+| 195 | Gyros | Greece | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 196 | Pastitsio | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 197 | Dolmades | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 198 | Galaktoboureko | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 204 | Butter Chicken (Murgh Makhani) | India | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 206 | Palak Paneer | India | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 207 | Rogan Josh | India | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
+| 206 | Palak Paneer | India | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 208 | Samosa | India | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 1 | Spaghetti Carbonara | Italy | wikipedia | FLAGSHIP | **P3** | — |
 | 8 | Tacos | Mexico | spoonacular | FLAGSHIP | **P3** | — |
@@ -288,12 +279,15 @@ or 2 (so the SSR renders an actual `<img>`):
 | 186 | Yakitori | Japan | wikipedia | — | **P3** | — |
 | 187 | Mole Poblano | Mexico | wikipedia | — | **P3** | — |
 | 188 | Chilaquiles | Mexico | wikipedia | — | **P3** | — |
+| 197 | Dolmades | Greece | local-webp | — | **P3** | — |
 | 199 | Pizza Margherita | Italy | wikipedia | — | **P3** | — |
 | 200 | Lasagne alla Bolognese | Italy | wikipedia | — | **P3** | — |
 | 201 | Osso Buco alla Milanese | Italy | wikipedia | — | **P3** | — |
 | 202 | Tiramisu | Italy | wikipedia | — | **P3** | — |
 | 203 | Cacio e Pepe | Italy | wikipedia | — | **P3** | — |
-| 205 | Hyderabadi Lamb Biryani | India | wikipedia | — | **P3** | — |
+| 204 | Butter Chicken (Murgh Makhani) | India | local-webp | — | **P3** | — |
+| 205 | Hyderabadi Lamb Biryani | India | local-webp | — | **P3** | — |
+| 207 | Rogan Josh | India | local-webp | — | **P3** | — |
 | 209 | Green Curry (Gaeng Khiao Wan) | Thailand | wikipedia | — | **P3** | — |
 | 210 | Massaman Curry | Thailand | wikipedia | — | **P3** | — |
 | 211 | Som Tam | Thailand | wikipedia | — | **P3** | — |
