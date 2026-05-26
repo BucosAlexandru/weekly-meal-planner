@@ -720,6 +720,22 @@ export const recipesMeta = {
                 "Crêpes francesi dolci — pastella sottile di farina di grano, uova e latte con beurre noisette, riposata almeno 30 minuti, girata in padella calda, servita con zucchero e limone.",
                 "프랑스식 단 크레프 — 밀가루·달걀·우유의 얇은 반죽에 갈색 버터(beurre noisette)를 더해 최소 30분 휴지, 뜨거운 팬에 돌려서 부치고, 설탕과 레몬으로 마무리.",
                 "फ़्रांसीसी मीठे क्रेप — गेहूँ के आटे, अंडे और दूध का पतला बैटर जिसमें ब्राउन बटर (beurre noisette) मिलाया गया हो, कम से कम 30 मिनट आराम कराया गया हो, गरम पैन में फैला कर बनाया जाए, चीनी और नींबू के साथ परोसा जाए।") },
+
+  193: { time: 80, costRon: 22, tags: ['vegetarian', 'family'],
+        desc: d("Tarte Tatin clasică din Sologne — mere ferme caramelizate în unt și zahăr alb direct în tigaie, acoperite cu foitaj, coapte și răsturnate pe farfurie, servite cald cu crème fraîche.",
+                "Classic Sologne tarte Tatin — firm apples caramelised in butter and white sugar directly in the pan, covered with puff pastry, baked and inverted onto a plate, served warm with crème fraîche.",
+                "Tarta Tatin clásica de la Sologne — manzanas firmes caramelizadas en mantequilla y azúcar blanco directamente en la sartén, cubiertas con hojaldre, horneadas y volcadas sobre un plato, servidas templadas con crème fraîche.",
+                "Tarte Tatin classique de Sologne — pommes fermes caramélisées au beurre et au sucre blanc directement dans la poêle, couvertes de pâte feuilletée, cuites au four et démoulées sur une assiette, servies tièdes avec de la crème fraîche.",
+                "Klassische Tarte Tatin aus der Sologne — feste Äpfel werden direkt in der Pfanne mit Butter und weißem Zucker karamellisiert, mit Blätterteig bedeckt, gebacken und auf einen Teller gestürzt, warm mit Crème fraîche serviert.",
+                "Tarte Tatin clássica da Sologne — maçãs firmes caramelizadas em manteiga e açúcar branco diretamente na frigideira, cobertas com massa folhada, levadas ao forno e viradas para um prato, servidas mornas com crème fraîche.",
+                "Классический тарт Татен из Солони — плотные яблоки карамелизуются в масле и белом сахаре прямо в сковороде, накрываются слоёным тестом, выпекаются и переворачиваются на тарелку, подаются тёплыми с crème fraîche.",
+                "تارت تاتان كلاسيكية من سولونيي — تفاح صلب يُكرمل في الزبدة والسكر الأبيض مباشرة في المقلاة، يُغطّى بالعجين الفطير، يُخبز ويُقلب على صحن، ويُقدّم دافئاً مع الـ crème fraîche.",
+                "经典索洛涅 tarte Tatin —— 紧实苹果直接在锅中以黄油和白砂糖焦糖化，盖上酥皮烘烤，再翻扣到盘子上，配 crème fraîche 趁热享用。",
+                "古典的なソローニュのタルト・タタン — 歯ごたえのある林檎をバターと白砂糖でフライパンの中で直接キャラメリゼし、パイ生地を被せて焼き、皿にひっくり返して、温かいうちにクレーム・フレッシュを添えて供する。",
+                "Klasik Sologne tarte Tatin'i — sıkı elmalar tavanın içinde doğrudan tereyağı ve beyaz şekerle karamelize edilir, üstüne katmer hamuru örtülür, fırınlanır ve tabağa ters çevrilir; ılık olarak crème fraîche ile servis edilir.",
+                "Tarte Tatin classica della Sologne — mele sode caramellate in burro e zucchero bianco direttamente nella padella, coperte di pasta sfoglia, infornate e capovolte su un piatto, servite tiepide con crème fraîche.",
+                "고전 솔로뉴식 타르트 타탱 — 단단한 사과를 팬에서 직접 버터와 흰 설탕에 캐러멜화하고, 퍼프 페이스트리로 덮어 굽고, 접시에 뒤집어, 크렘 프레슈와 함께 따뜻하게 낸다.",
+                "क्लासिक सोलोन की टार्ट टैटैं — सख़्त सेब सीधे पैन में मक्खन और सफ़ेद चीनी में कैरामेल किए जाते हैं, ऊपर पफ़ पेस्ट्री से ढक कर बेक किए जाते हैं, फिर प्लेट पर पलट कर crème fraîche के साथ गरम परोसे जाते हैं।") },
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
