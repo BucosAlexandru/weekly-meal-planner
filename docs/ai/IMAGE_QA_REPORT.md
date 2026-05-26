@@ -11,12 +11,12 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
-| **1. Local image override** | 47 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
+| **1. Local image override** | 49 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
 | **2. Mapped external image** | 149 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
 | **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
-| **4. Fallback emoji** | 8 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
+| **4. Fallback emoji** | 6 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
-Total recipes: 204. Buckets 3 + 4 = **8 recipes that
+Total recipes: 204. Buckets 3 + 4 = **6 recipes that
 SSR-render emoji** — and this is what the user is reporting. Even bucket 3,
 which was previously assumed to be "rescued at runtime by content.js", fails
 silently when the Wikipedia/Spoonacular URL 404s, is blocked, or times out.
@@ -24,8 +24,8 @@ Empirical evidence: `/en/recipes/banh-xeo/` (id 126, bucket 3).
 
 ### Priority distribution after re-classification (every emoji is now P0 or P1)
 
-- **P1**: 14
-- **P3**: 190
+- **P1**: 13
+- **P3**: 191
 
 ## To stop seeing emoji: reduce buckets 3 and 4
 
@@ -43,15 +43,13 @@ or 2 (so the SSR renders an actual `<img>`):
    SSR + og:image use the URL. Only safe for URLs you've verified render
    correctly in production.
 
-## Bucket 4 — Fallback emoji (SSR emoji, **no URL anywhere** — 8 recipes)
+## Bucket 4 — Fallback emoji (SSR emoji, **no URL anywhere** — 6 recipes)
 
   - id 189 — **Tres Leches Cake** (Mexico)
   - id 190 — **Bouillabaisse** (France)
   - id 191 — **Croque Monsieur** (France)
   - id 192 — **Crêpes** (France)
   - id 193 — **Tarte Tatin** (France)
-  - id 196 — **Pastitsio** (Greece)
-  - id 198 — **Galaktoboureko** (Greece)
   - id 208 — **Samosa** (India)
 
 ## Bucket 3 — Client-only (SSR emoji, content.js IMG has URL — 0 recipes)
@@ -64,14 +62,14 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|
 | Total recipes | 204 |
 | With external mapping in recipe-images.js | 169 |
-| With local override (`public/images/<slug>.{jpg,webp}`) | 47 |
-| SSR renders emoji (buckets 3 + 4) | 8 |
-| SSR renders `<img>` (buckets 1 + 2) | 196 |
+| With local override (`public/images/<slug>.{jpg,webp}`) | 49 |
+| SSR renders emoji (buckets 3 + 4) | 6 |
+| SSR renders `<img>` (buckets 1 + 2) | 198 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
-- **local-webp**: 47
-- **fallback**: 8
+- **local-webp**: 49
+- **fallback**: 6
 - **wikipedia**: 118
 - **spoonacular**: 31
 
@@ -99,8 +97,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 193 | Tarte Tatin | France | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 194 | Avgolemono | Greece | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 195 | Gyros | Greece | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
-| 196 | Pastitsio | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
-| 198 | Galaktoboureko | Greece | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
+| 198 | Galaktoboureko | Greece | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 206 | Palak Paneer | India | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 208 | Samosa | India | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
 | 1 | Spaghetti Carbonara | Italy | wikipedia | FLAGSHIP | **P3** | — |
@@ -279,6 +276,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 186 | Yakitori | Japan | wikipedia | — | **P3** | — |
 | 187 | Mole Poblano | Mexico | wikipedia | — | **P3** | — |
 | 188 | Chilaquiles | Mexico | wikipedia | — | **P3** | — |
+| 196 | Pastitsio | Greece | local-webp | — | **P3** | — |
 | 197 | Dolmades | Greece | local-webp | — | **P3** | — |
 | 199 | Pizza Margherita | Italy | wikipedia | — | **P3** | — |
 | 200 | Lasagne alla Bolognese | Italy | wikipedia | — | **P3** | — |
