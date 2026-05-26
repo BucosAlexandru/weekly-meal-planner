@@ -3016,3 +3016,196 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   .hp2-hero-title   { font-size: clamp(1.75rem, 8vw, 2.25rem); }
   .hp2-stat-chip    { min-width: 0; flex: 1 1 calc(50% - 5px); }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 2 polish
+   Adds depth, hover motion, footer, and mobile refinements.
+   All hp2- scoped. Rules above are not modified.
+   ────────────────────────────────────────────────────────────── */
+
+/* Section rhythm */
+.hp2-main { gap: 80px; }
+
+/* Hero — stronger H1 typography + tagline width */
+.hp2-hero {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--color-brand-light) 140%);
+  padding: 56px 48px;
+}
+.hp2-hero-title {
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.hp2-hero-sub {
+  font-size: 1.1rem;
+  max-width: 560px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+/* Section heads — bigger title + breathing space */
+.hp2-section-title { font-size: 1.85rem; letter-spacing: -0.025em; }
+.hp2-section-sub   { font-size: 1rem; }
+
+/* Card depth — cuisine / inspire / entry */
+.hp2-cuisine-card,
+.hp2-inspire-card,
+.hp2-entry-card {
+  box-shadow: 0 1px 3px rgba(17,24,39,0.04), 0 1px 2px rgba(17,24,39,0.03);
+  transition: transform 240ms var(--ease), box-shadow 240ms var(--ease),
+              border-color 240ms var(--ease);
+}
+.hp2-cuisine-card:hover,
+.hp2-inspire-card:hover,
+.hp2-entry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(17,24,39,0.10), 0 4px 10px rgba(17,24,39,0.05);
+  border-color: var(--color-brand-soft);
+}
+
+/* Image zoom on card hover */
+.hp2-cuisine-card .hp2-photo,
+.hp2-inspire-card .hp2-photo,
+.hp2-entry-card .hp2-photo {
+  overflow: hidden;
+}
+.hp2-cuisine-card .hp2-photo img,
+.hp2-inspire-card .hp2-photo img,
+.hp2-entry-card .hp2-photo img {
+  transition: transform 420ms var(--ease);
+  will-change: transform;
+}
+.hp2-cuisine-card:hover .hp2-photo img,
+.hp2-inspire-card:hover .hp2-photo img,
+.hp2-entry-card:hover .hp2-photo img {
+  transform: scale(1.06);
+}
+
+/* Inspire badge — sharper */
+.hp2-inspire-badge {
+  box-shadow: 0 2px 6px rgba(146, 64, 14, 0.18);
+}
+
+/* Trust banner depth */
+.hp2-trust-banner {
+  background: linear-gradient(180deg, var(--color-brand-light) 0%, var(--color-brand-soft) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Planner CTA depth */
+.hp2-planner-cta {
+  background: linear-gradient(135deg, var(--color-brand-soft) 0%, #bbf7d0 100%);
+}
+
+/* Footer — Homepage v2 rich */
+.hp2-footer {
+  background: var(--color-brand-dark);
+  color: #dcfce7;
+  padding: 56px 24px 28px;
+  margin-top: 32px;
+}
+.hp2-footer a {
+  color: #dcfce7;
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+.hp2-footer a:hover { color: #ffffff; text-decoration: underline; }
+
+.hp2-footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr;
+  gap: 56px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(220, 252, 231, 0.18);
+}
+.hp2-footer-brand-col { display: flex; flex-direction: column; gap: 10px; }
+.hp2-footer-brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+.hp2-footer-tagline {
+  font-size: 0.92rem;
+  color: #bbf7d0;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 380px;
+}
+.hp2-footer-contact { font-size: 0.92rem; font-weight: 600; }
+
+.hp2-footer-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin: 0 0 14px;
+}
+.hp2-footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.hp2-footer-col li { font-size: 0.92rem; }
+
+.hp2-footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 22px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #bbf7d0;
+}
+.hp2-footer-sep { margin: 0 8px; opacity: 0.6; }
+
+/* Mobile polish — cuisine scroll */
+@media (max-width: 1024px) {
+  .hp2-cuisine-row {
+    margin: 0 -16px;
+    padding: 4px 16px 14px;
+    gap: 12px;
+    scrollbar-width: thin;
+  }
+  .hp2-cuisine-row > li { flex: 0 0 170px; }
+}
+
+/* Mobile polish — inspire becomes horizontal-image cards */
+@media (max-width: 560px) {
+  .hp2-inspire-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .hp2-inspire-card .hp2-photo {
+    flex: 0 0 130px;
+    aspect-ratio: 1 / 1;
+  }
+  .hp2-inspire-body { flex: 1; padding: 12px 14px; }
+  .hp2-inspire-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .hp2-inspire-badge {
+    top: 8px; left: 8px;
+    padding: 3px 8px;
+    font-size: 0.62rem;
+  }
+}
+
+/* Mobile polish — footer stacks */
+@media (max-width: 768px) {
+  .hp2-footer { padding: 40px 20px 22px; }
+  .hp2-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hp2-hero { padding: 36px 22px; }
+  .hp2-section-title { font-size: 1.5rem; }
+}
