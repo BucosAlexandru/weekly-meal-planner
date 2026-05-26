@@ -2981,6 +2981,14 @@ const RULE_NEVER_FREEZE = /\b(sushi|sashimi|ceviche|tartare|tartar|carpaccio|gra
 // stamped almost everything. Conservative cultural canon only.
 const RULE_ONE_POT_DISHES = /\b(borscht|borsch|barszcz|cassoulet|jambalaya|ratatouille|paella|risotto|kichuri|kitchari|congee|chowder|gumbo|tagine|pozole|fasolada|harira|stamppot|stoofvlees|carbonnade|goulash|cocido|bourguignon|stew|stroganoff|cottage\s+pie|shepherd|moqueca|ropa\s+vieja|picadillo|biryani|plov|kabsa|mansaf|sundubu|jjigae|kimchi[\s-]?jjigae|tom\s+yum|tom\s+kha|laksa|olla|ghulash|svíčková|sviíčková|bigos|chorba|ciorbă|tocan|tochitur|jollof|egusi|moambé|moambe|sopa|caldo|chupe|locro|sarmale)\b/i;
 
+// Reject list for "Slow simmered" badge. A recipe can clock 90+ min total
+// without simmering at all — slow baking (Pavlova, Tarte Tatin), proofing
+// (bread), marinating (gravlax), curing (ceviche), assembling (sushi),
+// grilling (yakitori), deep-frying (tempura), or being a cold/raw dish.
+// "Slow simmered" requires actual liquid heat. Excluding by name keyword
+// is safer than trying to detect cooking method from prose.
+const RULE_NEVER_SLOW_SIMMER = /\b(dessert|desert|dolce|postre|tatlı|디저트|десерт|pavlova|meringue|souffl[ée]|tiramis[uù]|cheesecake|panna\s+cotta|cr[èe]me\s+br[uü]l[ée]e|cr[èe]me\s+caramel|flan|profiterole|[ée]clair|donut|doughnut|cake|tarte?|pie|cookie|biscuit|brownie|baklava|kunafa|knafeh|halva|cr[eê]pe|pancake|waffle|churros|onigiri|sushi|sashimi|ceviche|tartare|tartar|carpaccio|gravlax|tempura|yakitori|gyros|souvlaki|tlayudas|tacos|burger|cheeseburger|sandwich|bruschetta|salad\b|salată\b|salade\b|insalata|ensalada|fried|frit[oa]|deep[\s-]?fri|grilled|grill[éee]|kebab|raw|cold|smør|smor|smörre|tartine|guacamole|hummus|tabbouleh|tabouli|bibimbap|onig|kimbap|spring\s+roll|nasi\s+goreng|pad\s+thai|chakchouka|shakshuka|menemen|piragi|chilaquiles|tres\s+leches)\b/i;
+
 // Cuisine → preferred pairing-template key. Inference takes
 // precedence over a generic `pairingsType: 'meat' | 'fish' | …`
 // when the recipe's origin has a cultural pairing template.
@@ -3098,8 +3106,15 @@ function evaluateBadges(ctx) {
   // 5 — Quick to prepare: <= 30 min total
   if (totalMins > 0 && totalMins <= 30) decisions.push({ key: BADGE_QUICK, conf: 'high' });
 
-  // 6 — Slow simmered: >= 90 min total
-  if (totalMins >= 90) decisions.push({ key: BADGE_SLOW_SIMMER, conf: 'high' });
+  // 6 — Slow simmered: >= 90 min total AND the dish actually simmers/
+  // braises/stews. Bakes, fries, grills, raw/cold/assembled dishes can
+  // have a >= 90 min total time (resting, proofing, marinating, slow
+  // baking) without simmering at all — Pavlova spends 90+ min in the
+  // oven; Tarte Tatin slow-bakes; Sushi/Ceviche/Gravlax all cure.
+  // Excluding by name keyword is more honest than excluding by minutes.
+  if (totalMins >= 90 && !RULE_NEVER_SLOW_SIMMER.test(nameStr) && !RULE_NEVER_SLOW_SIMMER.test(catStr)) {
+    decisions.push({ key: BADGE_SLOW_SIMMER, conf: 'high' });
+  }
 
   // 7 — One-pot: explicit allow-list only (no heuristic)
   if (RULE_ONE_POT_DISHES.test(nameStr)) decisions.push({ key: BADGE_ONE_POT, conf: 'high' });
@@ -3228,22 +3243,171 @@ function padSteps(steps, code) {
   return result;
 }
 
+/* ════════════════════════════════════════════════════════════════
+   Phase M — recipeTip() dish-name registry.
+
+   The pre-Phase-M tip selector returned one of six generic strings
+   (soup / meat / fish / pasta / dessert / def) for 94 percent of
+   recipes. That is filler by the Phase K/L invariant: "a missing
+   tip is better than a fake tip".
+
+   This registry returns a tip ONLY when the dish name (or a
+   dish-specific ingredient cue) matches a curated rule. If no rule
+   matches, the function returns null and the renderer omits the
+   tip section entirely (the conditional render at recipePage was
+   already in place).
+
+   Per locale: tips are authored in EN and RO (the project's two
+   primary locales per CLAUDE.md). For the other 12 locales the
+   function returns null — showing a mixed-language tip on a
+   French/Spanish/German page is worse than showing none. Extending
+   to other locales is purely additive. */
+const TIP_REGISTRY = {
+  en: [
+    { match: /\bsushi\b/i,                   tip: "Use rice that's body-temperature warm, not hot or cold — cold rice cracks the nori; hot rice steams the topping." },
+    { match: /\btempura\b/i,                 tip: "Mix the batter ice-cold with chopsticks and stop at five to eight strokes — the lumpy batter is what makes the crust crisp." },
+    { match: /\bonigiri\b/i,                 tip: "Shape the rice while it's just warm to the touch and salt only your hands, not the rice — the seasoning lives on the outer skin." },
+    { match: /\byakitori\b/i,                tip: "Soak the bamboo skewers in cold water for 30 minutes; otherwise they char through before the chicken is cooked." },
+    { match: /\bramen\b/i,                   tip: "Cook the noodles separately and ladle the broth over them at the last moment — noodles sitting in broth turn soft." },
+    { match: /\bokonomiyaki\b/i,             tip: "Use shredded cabbage and a light dashi-based batter; fold gently so the cabbage stays distinct from the egg, not bound into a pancake." },
+    { match: /\bbibimbap\b/i,                tip: "Press the rice firmly against the hot stone bowl and don't stir until the bottom crackles — that crisp nurungji is the point of the dish." },
+    { match: /\bkimchi\b/i,                  tip: "Salt the cabbage long enough that it bends without snapping — under-salted cabbage won't ferment cleanly." },
+    { match: /\bkung pao chicken\b/i,        tip: "Toast the dried chilies briefly in hot oil before the chicken — they should darken and perfume the oil without burning." },
+    { match: /\bmapo tofu\b/i,               tip: "Use silken tofu and slide it gently into the sauce — stirring breaks the cubes; folding keeps them intact." },
+    { match: /\bpho\b/i,                     tip: "Char the onion and ginger over an open flame until blackened in patches before they go in the broth — the burnt aromatics are pho's signature depth." },
+    { match: /\bbanh\s*mi\b/i,               tip: "Toast the baguette interior with a thin layer of mayonnaise — the fat keeps the bread crisp once the wet fillings go in." },
+    { match: /\bpad thai\b/i,                tip: "Soak the rice noodles in cold water until pliable but still firm — fully cooked noodles turn to mush in the wok." },
+    { match: /\btom yum\b/i,                 tip: "Bruise the lemongrass and galangal before adding — whole stalks stay quiet, bruised stalks open the broth." },
+    { match: /\bgreen curry|gaeng khiao wan\b/i, tip: "Fry the paste in coconut cream until the oil splits and pools — that's when the curry stops tasting flat." },
+    { match: /\bnasi goreng\b/i,             tip: "Use rice cooked a day ahead and chilled overnight; fresh rice clumps and steams in the wok instead of stir-frying." },
+    { match: /\bchicken curry\b/i,           tip: "Brown the onions until deeply caramelised before the spices go in — undercooked onion is the most common reason a curry tastes raw." },
+    { match: /\bdh?al|\bdaal\b/i,            tip: "Add a tempered tarka of cumin, mustard seed and curry leaf at the end — folding the hot oil through is what gives dal its lift." },
+    { match: /\bbiryani\b/i,                 tip: "Layer the par-cooked rice and meat in a heavy pot, seal the lid with dough, and steam (dum) on the lowest heat for the final 20 minutes." },
+    { match: /\brajma\b/i,                   tip: "Soak the kidney beans overnight and discard the soaking water — properly soaked beans cook tender without the bitter edge." },
+    { match: /\bhummus\b/i,                  tip: "Peel the cooked chickpeas (or simmer with baking soda) for the silkiest texture — skins are the enemy of smooth hummus." },
+    { match: /\bshakshuka\b/i,               tip: "Make wells in the simmering sauce before cracking in the eggs and cover the pan — steam sets the whites while the yolks stay runny." },
+    { match: /\btabbouleh\b/i,               tip: "Use far more parsley than bulgur — true tabbouleh is a parsley salad with grains, not a grain salad with herbs." },
+    { match: /\bkibbeh\b/i,                  tip: "Wet your hands with cold salt water while shaping — the cold keeps the meat from sticking and helps form an even shell." },
+    { match: /\btagine\b/i,                  tip: "Keep the lid on as much as possible — the conical shape traps steam and returns moisture to the pot. Every lift dries the dish out." },
+    { match: /\bpaella\b/i,                  tip: "Don't stir once the rice goes in — the prized socarrat (crusty bottom) only forms if the rice sits undisturbed." },
+    { match: /\brisotto\b/i,                 tip: "Add stock a ladle at a time and stir often enough to release starch but not constantly; the rice's own starch is what makes the sauce." },
+    { match: /\bcarbonara\b/i,               tip: "Take the pan off the heat before adding the egg-cheese mixture; residual heat sets the sauce without scrambling the egg." },
+    { match: /\bpasta alla norma\b/i,        tip: "Salt the diced aubergine in a colander for 30 minutes and pat dry — unsalted aubergine soaks up oil and turns greasy." },
+    { match: /\bgazpacho\b/i,                tip: "Chill at least 4 hours after blending and serve cold from the fridge — gazpacho is a chilled dish, not a room-temperature one." },
+    { match: /\bratatouille\b/i,             tip: "Cook each vegetable separately first, then combine — they each have different water content and timing." },
+    { match: /\bmoussaka\b/i,                tip: "Salt the aubergine slices and drain them 30 minutes before frying — they'll absorb less oil and won't go bitter." },
+    { match: /\bmole poblano\b/i,            tip: "Fry the blended paste in hot lard for the full 10–15 minutes, stirring constantly — this 'fries the mole' and is what separates real mole from thin sauce." },
+    { match: /\bchilaquiles\b/i,             tip: "Take the tortillas off the salsa within a minute or two — they should soak up sauce while keeping some bite." },
+    { match: /\bguacamole\b/i,               tip: "Mash with a fork, not a blender — guacamole should keep some texture, not turn into a smooth paste." },
+    { match: /\btacos\b/i,                   tip: "Warm the corn tortillas over an open gas flame for 5 seconds per side — this brings out the corn flavour and stops them cracking." },
+    { match: /\bborscht\b/i,                 tip: "Stir in a spoonful of vinegar or lemon juice at the end — the acid locks in the beet's deep red colour, otherwise it fades to brown." },
+    { match: /\bgoulash\b/i,                 tip: "Take the pan off the heat before adding the paprika; toasted in hot fat it turns bitter and acrid." },
+    { match: /\bpierogi\b/i,                 tip: "Roll the dough as thin as you can without tearing — thick dough is what makes pierogi heavy and gummy." },
+    { match: /\bcheeseburger\b/i,            tip: "Don't press the patty after it's on the heat — every drop of juice you squeeze out is flavour lost." },
+    { match: /\bpancakes?\b/i,               tip: "Let the batter rest 5–10 minutes after mixing — the gluten relaxes and the lift is dramatically better." },
+    { match: /\bclam chowder\b/i,            tip: "Add the cream off the heat once the potatoes are soft; boiling cream curdles, especially with acidic clam liquor." },
+    { match: /\bshepherd'?s pie\b/i,         tip: "Mash the potatoes with butter and warm milk, never cold — cold liquid makes them gluey." },
+    { match: /\bfish and chips\b/i,          tip: "Double-fry the chips: first low (140 °C) to cook through, then high (180 °C) to crisp the outside." },
+    { match: /\bpavlova\b/i,                 tip: "Bake low and slow, then turn the oven off and let the meringue cool inside — sudden temperature changes crack the shell." },
+    { match: /\bcr[eê]pes?\b/i,              tip: "Let the batter rest at least 30 minutes before cooking; the gluten relaxes and you'll get the thin, flexible texture crêpes are known for." },
+    { match: /\btarte tatin\b/i,             tip: "Cook the caramel until deep amber before adding the apples — pale caramel tastes flat and the colour bleeds out in the oven." },
+    { match: /\bquiche lorraine\b/i,         tip: "Blind-bake the pastry until pale golden before pouring in the custard — un-baked crust turns soggy under the egg." },
+    { match: /\bcoq au vin\b/i,              tip: "Marinate the chicken in the wine and aromatics overnight; the longer marinade is what gives coq au vin its colour and depth." },
+    { match: /\bbouillabaisse\b/i,           tip: "Add the firmer fish first and the delicate fish at the end — each species needs its own brief cook time." },
+    { match: /\bcroque monsieur\b/i,         tip: "Make the béchamel thick enough to hold a peak on the spoon — runny sauce slides off the toasted bread." },
+    { match: /\bchicken tagine\b/i,          tip: "Tuck the preserved lemon and olives in around (not on top of) the chicken — they release brine, so don't stir vigorously or the sauce splits." },
+    { match: /\blamb tagine\b/i,             tip: "Add the dried fruit and honey only in the last 20 minutes — earlier and the sugars caramelise and go bitter." },
+    { match: /\bclassic japanese ramen\b/i,  tip: "Bring the broth and tare to taste in the bowl, then ladle over the just-drained noodles — every step under a minute keeps the noodles springy." },
+    { match: /\bsouvlaki\b/i,                tip: "Marinate the pork at least 2 hours in olive oil, lemon and oregano — the acid tenderises and the oil carries the aromatics into the meat." },
+  ],
+  ro: [
+    { match: /\bsushi\b/i,                   tip: "Folosește orez cald la temperatura corpului, nu fierbinte sau rece — orezul rece crapă nori-ul, cel fierbinte aburește toppingul." },
+    { match: /\btempura\b/i,                 tip: "Amestecă aluatul cu apă cu gheață și oprește-te la cinci-opt mișcări — cocoloașele sunt cele care fac crusta crocantă." },
+    { match: /\bonigiri\b/i,                 tip: "Modelează orezul cât e doar călduț la atingere și sărează doar palmele, nu orezul — condimentul stă pe pielița exterioară." },
+    { match: /\byakitori\b/i,                tip: "Înmoaie frigăruile de bambus în apă rece 30 de minute, altfel se ard înainte ca puiul să fie gata." },
+    { match: /\bramen\b/i,                   tip: "Fierbe tăițeii separat și toarnă supa peste ei în ultimul moment — tăițeii care stau în supă se moaie." },
+    { match: /\bokonomiyaki\b/i,             tip: "Folosește varză rasă și un aluat ușor cu dashi; amestecă blând ca varza să rămână distinctă, nu să se transforme într-o clătită compactă." },
+    { match: /\bbibimbap\b/i,                tip: "Apasă orezul ferm pe bolul de piatră fierbinte și nu îl amesteca până nu crăpie la bază — crusta crocantă nurungji este sensul preparatului." },
+    { match: /\bkimchi\b/i,                  tip: "Sărează varza suficient cât să se îndoaie fără să se rupă — varza nesărată suficient nu fermentează curat." },
+    { match: /\bkung pao chicken\b/i,        tip: "Prăjește scurt ardeii uscați în ulei fierbinte înainte de pui — trebuie să se închidă la culoare și să parfumeze uleiul, nu să se ardă." },
+    { match: /\bmapo tofu\b/i,               tip: "Folosește tofu silken și introdu-l ușor în sos — amestecarea sparge cuburile; rularea blândă le păstrează intacte." },
+    { match: /\bpho\b/i,                     tip: "Arde ceapa și ghimbirul pe flacără până se înnegresc pe alocuri înainte de a-i pune în supă — aromaticele arse sunt profunzimea semnătură a pho-ului." },
+    { match: /\bbanh\s*mi\b/i,               tip: "Prăjește interiorul bagheteă cu un strat subțire de maioneză — grăsimea menține pâinea crocantă după ce intră umpluturile umede." },
+    { match: /\bpad thai\b/i,                tip: "Înmoaie tăițeii de orez în apă rece până sunt flexibili dar fermi — tăițeii fierți complet se transformă în terci în wok." },
+    { match: /\btom yum\b/i,                 tip: "Lovește lemongrass-ul și galangal-ul înainte de a-i adăuga — tulpinile întregi rămân tăcute, cele lovite deschid supa." },
+    { match: /\bgreen curry|gaeng khiao wan\b/i, tip: "Prăjește pasta în smântână de cocos până când uleiul se separă și formează bălți — atunci curry-ul încetează să fie fără gust." },
+    { match: /\bnasi goreng\b/i,             tip: "Folosește orez gătit cu o zi înainte și răcit peste noapte; orezul proaspăt se aglomerează și aburește în wok în loc să se prăjească." },
+    { match: /\bchicken curry\b/i,           tip: "Rumeneste ceapa până devine profund caramelizată înainte de a pune condimentele — ceapa necoaptă este motivul cel mai frecvent pentru care curry-ul are gust crud." },
+    { match: /\bdh?al|\bdaal\b/i,            tip: "Adaugă un tarka călit de chimion, semințe de muștar și frunze de curry la final — turnarea uleiului fierbinte este ceea ce dă dal-ului lift." },
+    { match: /\bbiryani\b/i,                 tip: "Așază în straturi orezul semi-fiert și carnea într-o oală grea, sigilează capacul cu aluat și aburește (dum) pe focul cel mai mic încă 20 de minute." },
+    { match: /\brajma\b/i,                   tip: "Înmoaie fasolea roșie peste noapte și aruncă apa de înmuiere — fasolea bine înmuiată se fierbe fragedă fără gust amărui." },
+    { match: /\bhummus\b/i,                  tip: "Curăță năutul fiert (sau fierbe-l cu bicarbonat) pentru cea mai fină textură — cojile sunt dușmanul hummusului mătăsos." },
+    { match: /\bshakshuka\b/i,               tip: "Fă gropițe în sosul care fierbe ușor înainte de a sparge ouăle și acoperă tigaia — aburul leagă albușurile iar gălbenușurile rămân moi." },
+    { match: /\btabbouleh\b/i,               tip: "Folosește mult mai mult pătrunjel decât bulgur — adevăratul tabbouleh este o salată de pătrunjel cu grăunțe, nu o salată de grăunțe cu ierburi." },
+    { match: /\bkibbeh\b/i,                  tip: "Udă-ți mâinile cu apă rece sărată în timp ce modelezi — apa rece împiedică carnea să se lipească și ajută la formarea unei coji uniforme." },
+    { match: /\btagine\b/i,                  tip: "Ține capacul cât mai mult posibil — forma conică captează aburul și îl întoarce în oală. Fiecare ridicare usucă preparatul." },
+    { match: /\bpaella\b/i,                  tip: "Nu amesteca odată ce a intrat orezul — prețioasa socarrat (crusta de jos) se formează doar dacă orezul stă nederanjat." },
+    { match: /\brisotto\b/i,                 tip: "Adaugă supa pe câte un polonic și amestecă suficient cât să elibereze amidonul, dar nu constant — amidonul orezului este cel care face sosul." },
+    { match: /\bcarbonara\b/i,               tip: "Ia tigaia de pe foc înainte de a adăuga amestecul de ou și cașcaval — căldura reziduală leagă sosul fără să gătească oul." },
+    { match: /\bpasta alla norma\b/i,        tip: "Sărează vânăta cubulețe într-o strecurătoare 30 de minute și șterge-o cu hârtie — vânăta nesărată absoarbe uleiul și devine grasă." },
+    { match: /\bgazpacho\b/i,                tip: "Refrigerează cel puțin 4 ore după pasare și servește rece direct din frigider — gazpacho este un preparat rece, nu unul la temperatura camerei." },
+    { match: /\bratatouille\b/i,             tip: "Gătește fiecare legumă separat mai întâi, apoi combină-le — fiecare are conținut de apă și timing diferit." },
+    { match: /\bmoussaka\b/i,                tip: "Sărează feliile de vânătă și scurge-le 30 de minute înainte de prăjit — vor absorbi mai puțin ulei și nu vor avea gust amărui." },
+    { match: /\bmole poblano\b/i,            tip: "Prăjește pasta amestecată în untură fierbinte 10–15 minute, amestecând neîncetat — asta înseamnă 'prăjirea mole-ului' și separă mole-ul adevărat de un sos subțire." },
+    { match: /\bchilaquiles\b/i,             tip: "Scoate tortilla din salsa în maxim un minut sau două — trebuie să absoarbă sos păstrând o textură." },
+    { match: /\bguacamole\b/i,               tip: "Strivește cu furculița, nu cu blenderul — guacamole trebuie să aibă textură, nu să devină o pastă fină." },
+    { match: /\btacos\b/i,                   tip: "Încălzește tortilla de porumb pe flacără 5 secunde pe fiecare parte — asta scoate gustul porumbului și împiedică crăparea." },
+    { match: /\bborscht\b/i,                 tip: "Toarnă o lingură de oțet sau zeamă de lămâie la final — acidul fixează culoarea roșu intens a sfeclei, altfel se decolorează spre maro." },
+    { match: /\bgoulash\b/i,                 tip: "Ia oala de pe foc înainte de a adăuga boiaua; prăjită în grăsime fierbinte se face amară." },
+    { match: /\bpierogi\b/i,                 tip: "Întinde aluatul cât mai subțire fără să se rupă — aluatul gros e ceea ce face pierogi grei și cleioși." },
+    { match: /\bcheeseburger\b/i,            tip: "Nu apăsa chiftaua după ce e pe foc — fiecare picătură de zeamă pe care o stoarci este aromă pierdută." },
+    { match: /\bpancakes?\b/i,               tip: "Lasă aluatul să se odihnească 5–10 minute după amestecare — glutenul se relaxează și creșterea este net mai bună." },
+    { match: /\bclam chowder\b/i,            tip: "Adaugă smântâna în afara focului după ce cartofii sunt moi; smântâna care fierbe se taie, mai ales cu sucul acidulat de scoici." },
+    { match: /\bshepherd'?s pie\b/i,         tip: "Pasează cartofii cu unt și lapte cald, niciodată rece — lichidul rece îi face cleioși." },
+    { match: /\bfish and chips\b/i,          tip: "Prăjește cartofii în două etape: mai întâi la temperatură mică (140 °C) ca să se gătească, apoi la mare (180 °C) ca să se rumenească." },
+    { match: /\bpavlova\b/i,                 tip: "Coace la temperatură joasă pe perioadă lungă, apoi oprește cuptorul și lasă bezeaua să se răcească înăuntru — variațiile bruste de temperatură crapă coaja." },
+    { match: /\bcr[eê]pes?\b/i,              tip: "Lasă aluatul să se odihnească cel puțin 30 de minute înainte de prăjit; glutenul se relaxează și obții textura subțire și flexibilă pentru care sunt cunoscute clătitele." },
+    { match: /\btarte tatin\b/i,             tip: "Caramelizează zahărul până devine de chihlimbar închis înainte de a adăuga merele — caramelul palid are gust fad și culoarea se pierde la cuptor." },
+    { match: /\bquiche lorraine\b/i,         tip: "Coace aluatul în orb până devine palid auriu înainte de a turna crema de ou — aluatul necopt devine umed sub ou." },
+    { match: /\bcoq au vin\b/i,              tip: "Marinează puiul în vin și aromatice peste noapte; marinada lungă este cea care dă coq au vin-ului culoarea și profunzimea." },
+    { match: /\bbouillabaisse\b/i,           tip: "Adaugă peștele mai ferm primul și cel delicat la final — fiecare specie are nevoie de propriul ei timp scurt de fierbere." },
+    { match: /\bcroque monsieur\b/i,         tip: "Fă béchamel suficient de gros încât să țină un vârf pe lingură — sosul prea fluid alunecă de pe pâinea prăjită." },
+    { match: /\bchicken tagine\b/i,          tip: "Bagă lămâia conservată și măslinele în jurul (nu deasupra) puiului — eliberează saramură, deci nu amesteca viguros sau sosul se taie." },
+    { match: /\blamb tagine\b/i,             tip: "Adaugă fructele uscate și mierea doar în ultimele 20 de minute — mai devreme și zahărul se caramelizează amar." },
+    { match: /\bclassic japanese ramen\b/i,  tip: "Așază supa și tare-ul după gust direct în bol, apoi toarnă peste tăițeii abia scurși — fiecare pas sub un minut păstrează textura elastică." },
+    { match: /\bsouvlaki\b/i,                tip: "Marinează porcul cel puțin 2 ore în ulei de măsline, lămâie și oregano — acidul frăgezește iar uleiul duce aromele în carne." },
+  ],
+};
+
+// Generic placeholder tip-type values. When a recipe carries one of
+// these as `tipType`, the renderer treats it as a placeholder (most of
+// the corpus has these set by default) and falls through to the
+// dish-name registry. Cuisine-specific or genuinely custom tipType
+// values still win when their key exists in the locale's tips dict.
+const GENERIC_TIP_TYPES = new Set(['soup','meat','fish','pasta','dessert','def','veg']);
+
 function recipeTip(ingr, cat, code, n, overrides) {
   const ui = RECIPE_STEPS_UI[code] || RECIPE_STEPS_UI.en;
-  const t = ui.tips;
-  if (overrides && overrides.tipType && t[overrides.tipType]) return t[overrides.tipType];
-  const ingrStr = ingr.join(' ').toLowerCase();
-  const catStr  = (cat || '').toLowerCase();
-  const hasFish   = /salmon|trout|cod|tuna|fish|pește|somon|ton|păstrăv|creveți|shrimp/.test(ingrStr);
-  const hasMeat   = /beef|chicken|pork|lamb|turkey|duck|carne|pui|porc|vită|miel/.test(ingrStr);
-  const hasPasta  = /pasta|spaghetti|noodle|linguine|tagliatelle|tăiței/.test(ingrStr);
-  const isDesert  = /dessert|desert|dolce|postre|tatlı|десерт/i.test(catStr);
-  if (isSoup(cat, n, ingr)) return t.soup;
-  if (hasFish)  return t.fish;
-  if (hasMeat)  return t.meat;
-  if (hasPasta) return t.pasta;
-  if (isDesert) return t.dessert;
-  return t.def;
+  const t = ui.tips || {};
+  // 1. Free-form author tip — explicit wins always.
+  if (overrides && overrides.tip) return overrides.tip;
+  // 2. Author tipType, but only when it's a non-generic key that
+  //    actually resolves in the current locale's tips dict.
+  if (overrides && overrides.tipType
+      && !GENERIC_TIP_TYPES.has(overrides.tipType)
+      && t[overrides.tipType]) {
+    return t[overrides.tipType];
+  }
+  // 3. Dish-name registry (EN + RO only). Returns the matched tip or
+  //    null if no dish-specific rule fires.
+  const registry = TIP_REGISTRY[code];
+  if (!registry) return null;        // 12 locales without a tip registry: hide.
+  const haystack = ((n || '') + ' ' + ingr.join(' ')).toLowerCase();
+  for (const entry of registry) {
+    if (entry.match.test(haystack)) return entry.tip;
+  }
+  // 4. No confident dish-name match: hide the tip rather than render filler.
+  return null;
 }
 
 function recipeCardEmoji(cat) {
