@@ -67,6 +67,16 @@
   <link rel="stylesheet" href="/css/cuisine-homepage.css">
   <!-- HP_CUISINE_CSS:END -->
 
+  <!-- Homepage v2: redirect planner query params to /ro/app/ before anything paints. -->
+  <script>
+    (function(){
+      var s = window.location.search;
+      if (s && /[?&](meal|autoplan)=/.test(s)) {
+        window.location.replace('/ro/app/' + s);
+      }
+    })();
+  </script>
+
   <!-- JSON-LD: aplicație web, gratuit (1/zi) + abonamente; fără înregistrare -->
   <script type="application/ld+json">
   {
