@@ -3396,3 +3396,126 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   .hp2-hero-photo { aspect-ratio: 4 / 3; min-height: 240px; }
   .hp2-hero-sub { font-size: 1rem; }
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — Phase 3b: card editorial polish
+   Warmer brand-tinted shadows, refined typography, stronger
+   entry blocks. Old rules untouched.
+   ────────────────────────────────────────────────────────────── */
+
+/* Shared warm shadow palette for all cards */
+.hp2-cuisine-card,
+.hp2-inspire-card,
+.hp2-entry-card {
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px rgba(17, 24, 39, 0.04),
+    0 6px 16px -8px rgba(36, 113, 42, 0.06);
+}
+.hp2-cuisine-card:hover,
+.hp2-inspire-card:hover,
+.hp2-entry-card:hover {
+  box-shadow:
+    0 4px 8px rgba(17, 24, 39, 0.04),
+    0 22px 44px -16px rgba(36, 113, 42, 0.20),
+    0 8px 18px -6px rgba(17, 24, 39, 0.08);
+}
+
+/* Cuisine card — refined typography + tighter crop */
+.hp2-cuisine-card .hp2-photo { aspect-ratio: 4 / 5; }
+.hp2-cuisine-body {
+  padding: 14px 14px 16px;
+  gap: 3px;
+}
+.hp2-cuisine-name {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+.hp2-cuisine-count {
+  font-size: 0.78rem;
+  color: var(--color-brand);
+  font-weight: 600;
+}
+.hp2-flag { font-size: 1.05rem; margin-right: 4px; }
+
+/* Inspire card — editorial scale */
+.hp2-inspire-card { border-radius: 18px; }
+.hp2-inspire-body { padding: 18px 20px 22px; }
+.hp2-inspire-title {
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.hp2-inspire-meta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-brand);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+.hp2-inspire-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+.hp2-inspire-badge {
+  top: 14px;
+  left: 14px;
+  padding: 5px 11px;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  color: var(--color-brand-dark);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.12);
+}
+
+/* Entry cards — stronger navigation block presence */
+.hp2-entry-card {
+  border-radius: 20px;
+  padding: 24px;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  position: relative;
+}
+.hp2-entry-card .hp2-photo { border-radius: 14px; }
+.hp2-entry-title {
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.hp2-entry-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.hp2-entry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.hp2-entry-link::after {
+  content: '→';
+  display: inline-block;
+  font-weight: 700;
+  transition: transform var(--t-base);
+}
+/* Replace the inline arrow span with the css arrow for animation */
+.hp2-entry-link span[aria-hidden] { display: none; }
+.hp2-entry-card:hover .hp2-entry-link::after { transform: translateX(4px); }
+
+@media (max-width: 768px) {
+  .hp2-entry-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .hp2-entry-title { font-size: 1.25rem; }
+  .hp2-inspire-body { padding: 14px 16px 18px; }
+}
