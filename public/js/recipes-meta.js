@@ -672,6 +672,22 @@ export const recipesMeta = {
                 "Torta tres leches messicana — un pan di Spagna leggero a base di uova montate, bucato e imbevuto in latte condensato, latte evaporato e latte intero con panna, completato con panna fredda semimontata e cannella.",
                 "멕시코 트레스 레체스 — 달걀을 휘핑한 가벼운 스펀지에 구멍을 내고 가당연유, 무가당연유, 전유–생크림 혼합액을 적셔, 차가운 가볍게 휘핑한 크림과 시나몬으로 마무리한 케이크.",
                 "मेक्सिकन ट्रेस लेचेस केक — फेंटे हुए अंडों का हलका स्पंज जिसे छेद कर मीठा कंडेंस्ड मिल्क, इवापोरेटेड मिल्क और फुल फैट दूध-क्रीम मिश्रण में भिगोया जाता है, ऊपर ठंडी फेंटी क्रीम और दालचीनी।") },
+
+  190: { time: 90, costRon: 60, tags: ['high-protein', 'family'],
+        desc: d("Bouillabaisse marsiliană — fondul ambrat din pești mici de stâncă storși prin sită, în care se poșează apoi peștii fermi mediteraneeni; se servește în două reprize: întâi fondul peste baghetă cu rouille, apoi peștele separat.",
+                "Marseille bouillabaisse — an amber broth pounded out of small Mediterranean rockfish, in which the firm eating fish are then poached; served in two courses: the broth over baguette with rouille first, the fish on a separate plate after.",
+                "Bullabesa marsellesa — un caldo ámbar exprimido a partir de pescaditos de roca mediterráneos, en el que después se escalfan los pescados firmes; se sirve en dos tiempos: primero el caldo sobre baguette con rouille, después el pescado en otro plato.",
+                "Bouillabaisse marseillaise — un bouillon ambré extrait des petits poissons de roche méditerranéens, dans lequel on poche ensuite les poissons fermes ; service en deux temps : d'abord le bouillon sur la baguette avec rouille, puis le poisson sur une assiette séparée.",
+                "Marseillaise Bouillabaisse — eine bernsteinfarbene Brühe, aus kleinen mediterranen Felsenfischen ausgepresst, in der die festen Speisefische pochiert werden; serviert in zwei Gängen: zuerst die Brühe über Baguette mit Rouille, dann der Fisch separat.",
+                "Bouillabaisse marselhesa — um caldo âmbar extraído de peixinhos de rocha mediterrânicos, no qual se escalfam depois os peixes firmes; serve-se em dois tempos: primeiro o caldo sobre baguete com rouille, depois o peixe num prato à parte.",
+                "Марсельский буйабес — янтарный бульон, выжатый из мелкой средиземноморской каменной рыбы, в котором затем варят плотную рыбу; подаётся в два приёма: сначала бульон поверх багета с руй, затем рыба на отдельной тарелке.",
+                "بوياباز مرسيلي — مرق عنبري مستخلص من أسماك الصخور المتوسطية الصغيرة، تُسلق فيه بعدها الأسماك المتينة؛ يُقدَّم على مرحلتين: أولاً المرق فوق الباغيت مع الرويّ، ثم السمك في صحن منفصل.",
+                "马赛 bouillabaisse — 从地中海小岩礁鱼中榨出的琥珀色鱼汤，再用这汤煮紧实的食用鱼；分两道上菜：先把汤淋在法棍上配 rouille，然后再单独上盘鱼。",
+                "マルセイユのブイヤベース — 地中海の小型岩礁魚から絞り出した琥珀色のスープに、身のしっかりした魚を煮る。供し方は二段階：まずバゲットにルイユを乗せたスープ、続いて別皿の魚。",
+                "Marsilya bouillabaisse'i — Akdeniz'in küçük kaya balıklarından sıkılan kehribar renkli bir balık suyu; ardından bu suda sıkı etli balıklar haşlanır; iki aşamada servis: önce baget üstüne rouille ile balık suyu, sonra ayrı tabakta balıklar.",
+                "Bouillabaisse marsigliese — un brodo ambrato estratto dai piccoli pesci di scoglio mediterranei, nel quale si pochano poi i pesci sodi; servita in due tempi: prima il brodo sulla baguette con rouille, poi il pesce in un piatto a parte.",
+                "마르세유 부야베스 — 지중해 잡어들로 우려낸 호박색 육수에 단단한 생선을 데쳐낸다; 두 단계로 서빙: 먼저 바게트 위에 루이유와 함께 육수, 이어서 별도의 접시에 생선.",
+                "मार्से बूया-बेस — भूमध्यसागरीय छोटी पथरीली मछलियों से निकाला हुआ अंबर रंग का स्टॉक, जिसमें फिर सख़्त मछलियाँ पकाई जाती हैं; दो हिस्सों में परोसा जाता है — पहले बेगेट पर रूई के साथ स्टॉक, फिर अलग प्लेट में मछली।") },
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
