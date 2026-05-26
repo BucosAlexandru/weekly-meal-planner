@@ -56,10 +56,18 @@
     <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/japan/">Japan</a> › <span>Onigiri</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="onigiri" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/660px-Onigiri.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/990px-Onigiri.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="Onigiri" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="onigiri" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg" alt="Onigiri" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇯🇵 Mittagessen · <a class="recipe-badge-origin" href="/de/rezepte/japan/">Japan</a></div>
@@ -146,7 +154,7 @@ Die prägende Technik ist mochizukuri — den Reis gerade so fest drücken, dass
     <span class="recipe-card-meta">35m · Einfach</span>
   </div>
 </a><a href="/de/rezepte/okonomiyaki/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="okonomiyaki">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/660px-Okonomiyaki_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/990px-Okonomiyaki_001.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="okonomiyaki">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Okonomiyaki</p>
     <span class="recipe-card-meta">40m · Mittel</span>
@@ -164,7 +172,7 @@ Die prägende Technik ist mochizukuri — den Reis gerade so fest drücken, dass
     <span class="recipe-card-meta">40m · Einfach</span>
   </div>
 </a><a href="/de/rezepte/yakitori/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/660px-Yakitori_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/990px-Yakitori_001.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Yakitori</p>
     <span class="recipe-card-meta">35m · Einfach</span>
@@ -177,25 +185,25 @@ Die prägende Technik ist mochizukuri — den Reis gerade so fest drücken, dass
       <h2>Ähnliche Gerichte aus anderen Küchen</h2>
     </div>
     <div class="recipe-bridge-grid"><a href="/de/rezepte/pancakes/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="pancakes">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="pancakes">🍽️<img src="https://img.spoonacular.com/recipes/661886-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Amerikanische Pfannkuchen</p>
     <span class="recipe-card-meta">🇺🇸 USA · 45m</span>
   </div>
 </a><a href="/de/rezepte/koshari/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="koshari">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="koshari">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Koshari</p>
     <span class="recipe-card-meta">🇪🇬 Ägypten · 45m</span>
   </div>
 </a><a href="/de/rezepte/poutine/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="poutine">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="poutine">🍽️<img src="/images/poutine.webp" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Poutine</p>
     <span class="recipe-card-meta">🇨🇦 Kanada · 45m</span>
   </div>
 </a><a href="/de/rezepte/pierogi/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="pierogi">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="pierogi">🍽️<img src="https://img.spoonacular.com/recipes/656049-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Pierogi</p>
     <span class="recipe-card-meta">🇵🇱 Polen · 40m</span>

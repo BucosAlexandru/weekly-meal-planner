@@ -56,10 +56,18 @@
     <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/japan/">Japon</a> › <span>Tempura</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="tempura" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/660px-Tempura_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/990px-Tempura_001.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="Tempura" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="tempura" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg" alt="Tempura" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇯🇵 Dîner · <a class="recipe-badge-origin" href="/fr/recettes/japan/">Japon</a></div>
@@ -154,7 +162,7 @@ Une bonne tempura se juge à la croûte plutôt qu'à la garniture. La pâte se 
     <span class="recipe-card-meta">50m · Moyen</span>
   </div>
 </a><a href="/fr/recettes/japanese-curry-rice/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="japanese-curry-rice">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/660px-Beef_curry_rice_003.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/990px-Beef_curry_rice_003.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="japanese-curry-rice">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Curry japonais</p>
     <span class="recipe-card-meta">40m · Facile</span>
@@ -166,7 +174,7 @@ Une bonne tempura se juge à la croûte plutôt qu'à la garniture. La pâte se 
     <span class="recipe-card-meta">1h · Moyen</span>
   </div>
 </a><a href="/fr/recettes/yakitori/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/660px-Yakitori_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/990px-Yakitori_001.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Yakitori</p>
     <span class="recipe-card-meta">35m · Facile</span>
@@ -179,25 +187,25 @@ Une bonne tempura se juge à la croûte plutôt qu'à la garniture. La pâte se 
       <h2>Plats similaires d'autres cuisines</h2>
     </div>
     <div class="recipe-bridge-grid"><a href="/fr/recettes/spaghetti-carbonara/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/330px-Espaguetis_carbonara.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Spaghetti Carbonara</p>
     <span class="recipe-card-meta">🇮🇹 Italie · 40m</span>
   </div>
 </a><a href="/fr/recettes/tripe-soup/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️<img src="https://img.spoonacular.com/recipes/654283-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Soupe de tripes</p>
     <span class="recipe-card-meta">🇷🇴 Roumanie · 45m</span>
   </div>
 </a><a href="/fr/recettes/quiche-lorraine/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️<img src="https://img.spoonacular.com/recipes/639590-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Quiche Lorraine</p>
     <span class="recipe-card-meta">🇫🇷 France · 40m</span>
   </div>
 </a><a href="/fr/recettes/cheeseburger/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️<img src="https://img.spoonacular.com/recipes/635350-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Cheeseburger</p>
     <span class="recipe-card-meta">🇺🇸 États-Unis · 35m</span>

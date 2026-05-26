@@ -56,10 +56,18 @@
     <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/mexico/">México</a> › <span>Mole poblano</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="mole-poblano" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/330px-Mole_poblano.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/330px-Mole_poblano.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/660px-Mole_poblano.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/990px-Mole_poblano.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="Mole poblano" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="mole-poblano" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/330px-Mole_poblano.jpg" alt="Mole poblano" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇲🇽 Jantar · <a class="recipe-badge-origin" href="/pt/receitas/mexico/">México</a></div>
@@ -144,13 +152,13 @@ Um bom mole compensa a paciência — a tostadura, o queimar e o longo mexer da 
       <a href="/pt/receitas/mexico/">Ver todas as receitas →</a>
     </div>
     <div class="recipe-cards-scroll"><a href="/pt/receitas/chili-con-carne/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="chili-con-carne">🍽️<img src="https://img.spoonacular.com/recipes/1697611-312x231.jpg" srcset="https://img.spoonacular.com/recipes/1697611-312x231.jpg 312w, https://img.spoonacular.com/recipes/1697611-556x370.jpg 556w, https://img.spoonacular.com/recipes/1697611-636x393.jpg 636w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="chili-con-carne">🍽️<img src="https://img.spoonacular.com/recipes/1697611-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Chili com carne</p>
     <span class="recipe-card-meta">40m · Média</span>
   </div>
 </a><a href="/pt/receitas/tamale/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="tamale">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/660px-Tamale_Oaxaque%C3%B1o.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/990px-Tamale_Oaxaque%C3%B1o.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="tamale">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tamale_Oaxaque%C3%B1o.jpg/330px-Tamale_Oaxaque%C3%B1o.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Tamale</p>
     <span class="recipe-card-meta">40m · Fácil</span>
@@ -162,13 +170,13 @@ Um bom mole compensa a paciência — a tostadura, o queimar e o longo mexer da 
     <span class="recipe-card-meta">40m · Fácil</span>
   </div>
 </a><a href="/pt/receitas/tlayudas/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="tlayudas">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/330px-Tlayuda12-05oaxaca013x.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/330px-Tlayuda12-05oaxaca013x.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/660px-Tlayuda12-05oaxaca013x.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/990px-Tlayuda12-05oaxaca013x.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="tlayudas">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tlayuda12-05oaxaca013x.jpg/330px-Tlayuda12-05oaxaca013x.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Tlayudas</p>
     <span class="recipe-card-meta">40m · Fácil</span>
   </div>
 </a><a href="/pt/receitas/chilaquiles/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="chilaquiles">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/330px-Chilaquiles_rojos.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/330px-Chilaquiles_rojos.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/660px-Chilaquiles_rojos.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/990px-Chilaquiles_rojos.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="chilaquiles">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/330px-Chilaquiles_rojos.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Chilaquiles</p>
     <span class="recipe-card-meta">35m · Fácil</span>
@@ -181,25 +189,25 @@ Um bom mole compensa a paciência — a tostadura, o queimar e o longo mexer da 
       <h2>Pratos parecidos de outras cozinhas</h2>
     </div>
     <div class="recipe-bridge-grid"><a href="/pt/receitas/chicken-curry/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="chicken-curry">🍽️<img src="https://img.spoonacular.com/recipes/637391-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Caril de frango</p>
     <span class="recipe-card-meta">🇮🇳 Índia · 50m</span>
   </div>
 </a><a href="/pt/receitas/ghormeh-sabzi/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="ghormeh-sabzi">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="ghormeh-sabzi">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ghormeh_Sabzi.JPG/330px-Ghormeh_Sabzi.JPG" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Ghormeh Sabzi</p>
     <span class="recipe-card-meta">🇮🇷 Irã · 35m</span>
   </div>
 </a><a href="/pt/receitas/jerk-chicken/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="jerk-chicken">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="jerk-chicken">🍽️<img src="https://img.spoonacular.com/recipes/637102-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Frango jerk</p>
     <span class="recipe-card-meta">🇯🇲 Jamaica · 40m</span>
   </div>
 </a><a href="/pt/receitas/doro-wat/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="doro-wat">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="doro-wat">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ethiopian_wat.jpg/330px-Ethiopian_wat.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">Doro Wat</p>
     <span class="recipe-card-meta">🇪🇹 Etiópia · 35m</span>

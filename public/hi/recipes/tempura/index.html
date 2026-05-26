@@ -56,10 +56,18 @@
     <a href="/">होम</a> › <a href="/hi/recipes/">रेसिपी</a> › <a href="/hi/recipes/japan/">जापान</a> › <span>टेम्पुरा</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="tempura" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/660px-Tempura_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/990px-Tempura_001.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="टेम्पुरा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="tempura" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg" alt="टेम्पुरा" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇯🇵 रात का खाना · <a class="recipe-badge-origin" href="/hi/recipes/japan/">जापान</a></div>
@@ -162,7 +170,7 @@
     <span class="recipe-card-meta">20m · आसान</span>
   </div>
 </a><a href="/hi/recipes/japanese-curry-rice/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="japanese-curry-rice">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/660px-Beef_curry_rice_003.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/990px-Beef_curry_rice_003.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="japanese-curry-rice">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/330px-Beef_curry_rice_003.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">जापानी करी चावल</p>
     <span class="recipe-card-meta">40m · आसान</span>
@@ -174,7 +182,7 @@
     <span class="recipe-card-meta">20m · आसान</span>
   </div>
 </a><a href="/hi/recipes/yakitori/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/660px-Yakitori_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/990px-Yakitori_001.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">याकितोरी</p>
     <span class="recipe-card-meta">20m · आसान</span>
@@ -187,25 +195,25 @@
       <h2>अन्य व्यंजनों के समान पकवान</h2>
     </div>
     <div class="recipe-bridge-grid"><a href="/hi/recipes/spaghetti-carbonara/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="spaghetti-carbonara">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/330px-Espaguetis_carbonara.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">स्पैगेटी कार्बोनारा</p>
     <span class="recipe-card-meta">🇮🇹 इटली · 40m</span>
   </div>
 </a><a href="/hi/recipes/tripe-soup/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="tripe-soup">🍽️<img src="https://img.spoonacular.com/recipes/654283-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">ट्राइप सूप</p>
     <span class="recipe-card-meta">🇷🇴 रोमानिया · 45m</span>
   </div>
 </a><a href="/hi/recipes/quiche-lorraine/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="quiche-lorraine">🍽️<img src="https://img.spoonacular.com/recipes/639590-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">क्विश लोरेन</p>
     <span class="recipe-card-meta">🇫🇷 फ्रांस · 20m</span>
   </div>
 </a><a href="/hi/recipes/cheeseburger/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="cheeseburger">🍽️<img src="https://img.spoonacular.com/recipes/635350-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">चीज़बर्गर</p>
     <span class="recipe-card-meta">🇺🇸 अमेरिका · 20m</span>

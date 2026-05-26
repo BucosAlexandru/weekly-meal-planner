@@ -56,10 +56,18 @@
     <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/japan/">일본</a> › <span>오니기리</span>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
+       related-card strip dropped srcset: browsers using the sizes hint
+       sometimes pick a Wikipedia 660w/990w thumb variant that the upstream
+       hasn't generated yet (cache miss to 404), onerror fires, and the
+       entire img is removed — leaving only the emoji. The intermittent
+       "image shows on second visit" symptom matches this exactly: a 404 on
+       the first request can trigger upstream generation, so the next visit
+       finds the variant cached. Using src alone guarantees the exact URL
+       resolveRecipeImage validated. -->
   <div class="recipe-hero-grid">
     <div class="recipe-hero-img-col">
-      <div class="recipe-photo-container" data-recipe="onigiri" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/660px-Onigiri.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/990px-Onigiri.jpg 990w" sizes="(max-width: 720px) 92vw, 480px" alt="오니기리" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
+      <div class="recipe-photo-container" data-recipe="onigiri" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg" alt="오니기리" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()"></div>
     </div>
     <div class="recipe-hero-info-col">
       <div class="recipe-badge">🇯🇵 점심 · <a class="recipe-badge-origin" href="/ko/recipes/japan/">일본</a></div>
@@ -149,7 +157,7 @@
     <span class="recipe-card-meta">40m · 쉬움</span>
   </div>
 </a><a href="/ko/recipes/okonomiyaki/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="okonomiyaki">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/660px-Okonomiyaki_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/990px-Okonomiyaki_001.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="okonomiyaki">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/330px-Okonomiyaki_001.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">오코노미야키</p>
     <span class="recipe-card-meta">40m · 보통</span>
@@ -167,7 +175,7 @@
     <span class="recipe-card-meta">35m · 쉬움</span>
   </div>
 </a><a href="/ko/recipes/yakitori/" class="recipe-card-item">
-  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg 330w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/660px-Yakitori_001.jpg 660w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/990px-Yakitori_001.jpg 990w" sizes="(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="recipe-card-img" data-card-recipe="yakitori">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">야키토리</p>
     <span class="recipe-card-meta">40m · 쉬움</span>
@@ -180,25 +188,25 @@
       <h2>다른 요리의 비슷한 음식</h2>
     </div>
     <div class="recipe-bridge-grid"><a href="/ko/recipes/pancakes/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="pancakes">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="pancakes">🍽️<img src="https://img.spoonacular.com/recipes/661886-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">아메리칸 팬케이크</p>
     <span class="recipe-card-meta">🇺🇸 미국 · 45m</span>
   </div>
 </a><a href="/ko/recipes/koshari/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="koshari">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="koshari">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">코샤리</p>
     <span class="recipe-card-meta">🇪🇬 이집트 · 45m</span>
   </div>
 </a><a href="/ko/recipes/poutine/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="poutine">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="poutine">🍽️<img src="/images/poutine.webp" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">푸틴</p>
     <span class="recipe-card-meta">🇨🇦 캐나다 · 45m</span>
   </div>
 </a><a href="/ko/recipes/pierogi/" class="recipe-card-item recipe-card-bridge">
-  <div class="recipe-card-img" data-card-recipe="pierogi">🍽️</div>
+  <div class="recipe-card-img" data-card-recipe="pierogi">🍽️<img src="https://img.spoonacular.com/recipes/656049-312x231.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
   <div class="recipe-card-body">
     <p class="recipe-card-name">피에로기</p>
     <span class="recipe-card-meta">🇵🇱 폴란드 · 40m</span>
