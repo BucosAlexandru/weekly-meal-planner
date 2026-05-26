@@ -7,6 +7,22 @@ This file is the source of truth for "which existing rows are problematic and wh
 
 ---
 
+## Architectural debt — preview caps vs hub completeness (Phase 8B)
+
+Phase 8B's 10-recipe floor crossed the original `MAX_HUB_TILES = 8` cap in `scripts/generate-content.mjs`. The cap silently hid Onigiri and Yakitori from the Japan hub even though the data was correct — they were in `recipes.js`, the sitemap, and at `/<lc>/recipes/onigiri/` and `/<lc>/recipes/yakitori/`, but no on-site navigation surfaced them. The Definition of Done was tightened in response: a recipe is fully integrated only when it is **visibly discoverable by a normal user**, not merely present in data and sitemap.
+
+**Interim fix applied:** `MAX_HUB_TILES` raised to **24** so every current and near-future cuisine hub renders its full corpus. Related-recipes strip picker also rebalanced from a naïve first-5 array slice to a deterministic multiplicative shuffle so every hub member appears in at least one other recipe's related strip.
+
+**Final architecture (TODO, not in this phase):**
+
+- **Preview surfaces** (homepage discovery, related-cuisines strip, landing cards): keep a small cap (~6–8 cards) for layout and mobile performance.
+- **Cuisine hub pages**: render the FULL cuisine corpus, OR provide an explicit "Show all recipes" / pagination / expandable behaviour. Never silently truncate.
+- The rule is invariant of the implementation: **no recipe may become undiscoverable because of a preview cap.** Audit every UI change that hides recipes against this rule.
+
+Until the hub-page split lands, the interim cap of 24 is the operating value and is documented inline at `scripts/generate-content.mjs:MAX_HUB_TILES`.
+
+---
+
 ## 1. Hard duplicates (same dish, two rows)
 
 ### 1.1 Kottbullar (id=119) === Swedish Meatballs (id=27) — RESOLVED (Wave 2)

@@ -3092,10 +3092,29 @@ function recipePage(recipe, rl) {
     "url":pageUrl
   });
 
-  // Related recipes — same origin, different name, up to 5
-  const related = recipes
-    .filter(r => (r.origin?.[code]||r.origin?.en) === o && (r.name?.[code]||r.name?.en) !== n)
-    .slice(0,5)
+  // Related recipes — same origin, different name, up to 5. The order is a
+  // deterministic but per-page-varying shuffle so that every hub-member
+  // recipe surfaces in some other recipe's related strip (otherwise the
+  // last-in-array members of large hubs never appear via related-strip
+  // discovery — the cuisine hub grid is then their only entry point).
+  const sameOrigin = recipes
+    .filter(r => (r.origin?.[code]||r.origin?.en) === o && (r.name?.[code]||r.name?.en) !== n);
+  const currentId = recipe.id || 0;
+  // Multiplicative mixer that distributes uniformly across the (current,
+  // candidate) id pairs. Math.imul keeps the 32-bit multiplication exact;
+  // shifting currentId by 7 before the XOR mixes high and low bits so the
+  // hash doesn't degenerate into ~sort-by-id (which was the bug with the
+  // naive variant).
+  const relWeight = (rId, cId) =>
+    Math.imul((rId + 1) ^ ((cId + 1) << 7) ^ ((cId + 1) >>> 3), 2654435761) >>> 0;
+  const related = sameOrigin
+    .map(r => ({ r, w: relWeight(r.id || 0, currentId) }))
+    .sort((a, b) => a.w - b.w)
+    .slice(0, 5)
+    .map(({ r }) => r)
+    // Re-sort by id ascending so the rendered strip itself looks stable —
+    // only the *selection* varies per page, not the visible order.
+    .sort((a, b) => (a.id || 0) - (b.id || 0))
     .map(r => {
       const rn = r.name?.[code] || r.name?.en || r.name?.ro || '';
       const rs = slug(r.name?.en || r.name?.ro || rn);
@@ -3601,10 +3620,21 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-i
 */
 
 const CUISINE_MIN_RECIPES = 2;   // skip thin-content hubs (1-recipe origins)
-// Defensive cap on tiles rendered per hub. No cuisine currently exceeds 7
-// recipes so this is a no-op today; the cap protects against future growth
-// without adding pagination in Phase 7.
-const MAX_HUB_TILES = 8;
+// INTERIM cap on tiles rendered per cuisine hub. Phase 8B targets a 10-recipe
+// floor per hub, so 8 (the original value) silently hid the last 2 recipes —
+// they became undiscoverable through normal navigation. Raising to 24 keeps
+// every current and near-future hub fully visible.
+//
+// This is NOT the final architecture. The correct long-term split is:
+//   - preview surfaces (homepage discovery, related-cuisines strip, landing
+//     cards): keep a small cap (~6–8) for layout/perf, mobile-friendly;
+//   - actual cuisine hub pages (this constant): render the FULL cuisine
+//     corpus, or provide an explicit "Show all recipes" / pagination /
+//     expandable behaviour so nothing is hidden.
+// Until the hub-page split lands, the rule is simple: no recipe may become
+// undiscoverable because of a preview cap. Audit every change that hides
+// recipes against that rule.
+const MAX_HUB_TILES = 24;
 
 // Populate the forward-declared helpers now that CUISINE_MIN_RECIPES is in
 // scope. CUISINE_HUB_LANG is defined immediately below — it'll be in scope
