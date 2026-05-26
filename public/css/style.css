@@ -2442,3 +2442,577 @@ body.theme-winter .app-header { position: relative; z-index: 2; }
 }
 body.pdf-exporting.theme-winter::before,
 body.pdf-exporting.theme-winter::after { display: none !important; }
+
+/* ──────────────────────────────────────────────────────────────
+   Homepage v2 — marketing landing at /ro/
+   All classes use hp2- prefix. Reuses existing CSS variables.
+   Do not modify rules above this block.
+   ────────────────────────────────────────────────────────────── */
+
+.hp2-body { background: var(--bg); color: var(--ink); }
+
+.hp2-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.hp2-lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: var(--r-full);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: border-color var(--t-fast), color var(--t-fast);
+}
+.hp2-lang-pill:hover { border-color: var(--color-brand); color: var(--color-brand); }
+
+/* Buttons ------------------------------------------------------- */
+.hp2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: var(--r-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform var(--t-fast), background var(--t-fast),
+              border-color var(--t-fast), color var(--t-fast),
+              box-shadow var(--t-fast);
+  white-space: nowrap;
+}
+.hp2-btn:hover { transform: translateY(-1px); }
+.hp2-btn--primary {
+  background: var(--color-brand);
+  color: #ffffff;
+  box-shadow: var(--shadow-brand);
+}
+.hp2-btn--primary:hover { background: var(--color-brand-hover); color: #ffffff; }
+.hp2-btn--outline {
+  background: var(--surface);
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+.hp2-btn--outline:hover { background: var(--color-brand-light); }
+.hp2-btn--large { padding: 16px 28px; font-size: 1rem; }
+
+/* Section header (shared) -------------------------------------- */
+.hp2-section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.hp2-section-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.hp2-section-sub {
+  font-size: 0.95rem;
+  color: var(--ink-3);
+  margin: 0;
+}
+.hp2-section-link {
+  flex-shrink: 0;
+  color: var(--color-brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.hp2-section-link:hover { text-decoration: underline; color: var(--color-brand-hover); }
+
+/* Photo wrapper + missing-image placeholder -------------------- */
+.hp2-photo {
+  position: relative;
+  display: block;
+  background: var(--color-brand-light);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.hp2-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hp2-photo--missing {
+  min-height: 160px;
+  background: #e7f3e7;
+  border: 2px dashed var(--color-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+}
+.hp2-photo--missing::after {
+  content: attr(data-filename);
+  color: var(--color-brand);
+  font-weight: 600;
+  font-size: 0.78rem;
+  font-family: ui-monospace, 'SF Mono', Monaco, Menlo, Consolas, monospace;
+  word-break: break-all;
+}
+
+/* Section 1 — Hero -------------------------------------------- */
+.hp2-hero {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-sm);
+}
+.hp2-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.hp2-hero-title {
+  margin: 0 0 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.05;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+}
+.hp2-hero-title-line { display: block; }
+.hp2-hero-sub {
+  font-size: 1.05rem;
+  color: var(--ink-3);
+  margin: 0 0 28px;
+  line-height: 1.55;
+  max-width: 540px;
+}
+.hp2-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.hp2-hero-photo {
+  aspect-ratio: 11 / 10;
+  min-height: 320px;
+}
+
+/* Stat chips (hero) ------------------------------------------- */
+.hp2-stat-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hp2-stat-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 8px 14px;
+  background: var(--color-brand-light);
+  border: 1px solid var(--color-brand-soft);
+  border-radius: var(--r-full);
+  min-width: 100px;
+}
+.hp2-stat-chip-num {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+.hp2-stat-chip-label {
+  font-size: 0.72rem;
+  color: var(--ink-3);
+  text-transform: lowercase;
+}
+
+/* Section 2 — Feature cards ----------------------------------- */
+.hp2-features-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.hp2-feature-card {
+  background: var(--color-brand-light);
+  border: 1px dashed var(--color-brand-soft);
+  border-radius: var(--r-md);
+  padding: 20px 18px;
+}
+.hp2-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-full);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.hp2-feature-icon--green { background: var(--color-brand-soft); }
+.hp2-feature-icon--amber { background: #fef3c7; }
+.hp2-feature-icon--pink  { background: #fce7f3; }
+.hp2-feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.hp2-feature-desc {
+  font-size: 0.85rem;
+  color: var(--ink-3);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Section 3 — Cuisine row ------------------------------------- */
+.hp2-cuisine-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+.hp2-cuisine-row > li { min-width: 0; }
+.hp2-cuisine-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--t-fast), box-shadow var(--t-fast),
+              border-color var(--t-fast);
+}
+.hp2-cuisine-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-brand-soft);
+  box-shadow: var(--shadow-md);
+}
+.hp2-cuisine-card .hp2-photo {
+  aspect-ratio: 1 / 1;
+  border-radius: 0;
+}
+.hp2-cuisine-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+}
+.hp2-cuisine-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.hp2-cuisine-count {
+  font-size: 0.78rem;
+  color: var(--ink-3);
+}
+.hp2-flag { font-size: 1.05rem; margin-right: 2px; }
+
+/* Section 4 — Inspirație -------------------------------------- */
+.hp2-inspire-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.hp2-inspire-row > li { min-width: 0; }
+.hp2-inspire-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+.hp2-inspire-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.hp2-inspire-card .hp2-photo {
+  aspect-ratio: 7 / 5;
+  border-radius: 0;
+}
+.hp2-inspire-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 4px 10px;
+  background: #fef3c7;
+  border: 1px solid var(--amber);
+  border-radius: var(--r-full);
+  color: #92400e;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.hp2-inspire-body {
+  padding: 14px 16px 16px;
+}
+.hp2-inspire-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.hp2-inspire-meta {
+  font-size: 0.78rem;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hp2-inspire-desc {
+  font-size: 0.82rem;
+  color: var(--ink-3);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Section 5 — Entry cards ------------------------------------- */
+.hp2-entry-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.hp2-entry-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+.hp2-entry-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.hp2-entry-card .hp2-photo {
+  aspect-ratio: 1 / 1;
+}
+.hp2-entry-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.hp2-entry-desc {
+  font-size: 0.92rem;
+  color: var(--ink-3);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+.hp2-entry-link {
+  color: var(--color-brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Section 6 — Trust banner ------------------------------------ */
+.hp2-trust-banner {
+  background: var(--color-brand-light);
+  border-radius: var(--r-lg);
+  padding: 40px;
+  border: 1px solid var(--color-brand-soft);
+}
+.hp2-trust-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  grid-template-areas:
+    "text  stats"
+    "text  quote";
+  gap: 24px 40px;
+  align-items: start;
+}
+.hp2-trust-text  { grid-area: text; }
+.hp2-trust-stats { grid-area: stats; }
+.hp2-testimonial { grid-area: quote; }
+.hp2-trust-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.hp2-trust-sub {
+  font-size: 0.95rem;
+  color: var(--ink-3);
+  margin: 0;
+  line-height: 1.55;
+}
+.hp2-trust-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.hp2-stat-counter {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-items: center;
+}
+.hp2-stat-counter-icon {
+  grid-row: 1 / span 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-full);
+  background: var(--color-brand-soft);
+  font-size: 1rem;
+}
+.hp2-stat-counter-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+}
+.hp2-stat-counter-label {
+  font-size: 0.78rem;
+  color: var(--ink-3);
+}
+.hp2-testimonial {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--color-brand);
+}
+.hp2-testimonial blockquote {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  font-style: italic;
+  line-height: 1.55;
+}
+.hp2-testimonial blockquote p { margin: 0; }
+.hp2-testimonial figcaption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hp2-testimonial-author {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+.hp2-testimonial-stars { color: var(--amber); font-size: 0.85rem; }
+
+/* Section 7 — Planner CTA banner ------------------------------ */
+.hp2-planner-cta {
+  background: var(--color-brand-soft);
+  border-radius: var(--r-lg);
+  padding: 32px 40px;
+}
+.hp2-planner-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hp2-planner-cta-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.hp2-planner-cta-sub {
+  font-size: 0.95rem;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* Responsive --------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hp2-features-row  { grid-template-columns: repeat(2, 1fr); }
+  .hp2-inspire-row   { grid-template-columns: repeat(2, 1fr); }
+  .hp2-cuisine-row {
+    grid-template-columns: none;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  .hp2-cuisine-row > li {
+    flex: 0 0 200px;
+    scroll-snap-align: start;
+  }
+  .hp2-trust-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "text" "stats" "quote";
+  }
+}
+
+@media (max-width: 768px) {
+  .hp2-main { padding: 20px 16px 48px; gap: 48px; }
+  .hp2-hero { padding: 32px 24px; }
+  .hp2-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hp2-hero-photo { order: -1; min-height: 240px; aspect-ratio: 4 / 3; }
+  .hp2-section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .hp2-section-title { font-size: 1.4rem; }
+  .hp2-entry-cards { grid-template-columns: 1fr; }
+  .hp2-entry-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hp2-entry-card .hp2-photo { aspect-ratio: 16 / 9; }
+  .hp2-trust-banner { padding: 28px 20px; }
+  .hp2-trust-stats { gap: 18px; flex-direction: column; }
+  .hp2-planner-cta { padding: 24px 20px; }
+  .hp2-planner-cta-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hp2-features-row { grid-template-columns: 1fr; }
+  .hp2-inspire-row  { grid-template-columns: 1fr; }
+  .hp2-hero-title   { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+  .hp2-stat-chip    { min-width: 0; flex: 1 1 calc(50% - 5px); }
+}
