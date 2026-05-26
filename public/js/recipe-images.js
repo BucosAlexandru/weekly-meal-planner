@@ -159,4 +159,6 @@ export const recipeImages = {
   184: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg',
   185: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg',
   186: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg',
+  187: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/330px-Mole_poblano.jpg',
+  188: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/330px-Chilaquiles_rojos.jpg',
 };
