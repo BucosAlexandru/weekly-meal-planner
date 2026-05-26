@@ -608,6 +608,22 @@ export const recipesMeta = {
                 "Onigiri giapponesi — triangoli di riso con nori, tonno e maionese, umeboshi o salmone salato. Il bento originale.",
                 "일본식 오니기리 — 김에 싼 삼각형 밥, 안에는 참치마요, 우메보시 또는 소금연어. 일본 도시락의 원형.",
                 "जापानी ओनिगिरी — नोरी, टूना मेयो, उमेबोशी या नमकीन सालमन के साथ चावल के त्रिकोण। मूल जापानी लंच बॉक्स।") },
+
+  186: { time: 50, costRon: 22, tags: ['high-protein', 'family'],
+        desc: d("Yakitori japoneză — frigărui de pulpă de pui pe foc mare, finisate cu sare (shio) sau cu glazură de soia-mirin-sake (tare).",
+                "Japanese yakitori — chicken thigh skewers grilled fast over high heat, finished with salt (shio) or soy-mirin-sake glaze (tare).",
+                "Yakitori japonés — brochetas de muslo de pollo a fuego alto, terminadas con sal (shio) o glaseado de soja-mirin-sake (tare).",
+                "Yakitori japonais — brochettes de cuisse de poulet à feu vif, finies au sel (shio) ou au glaçage soja-mirin-saké (tare).",
+                "Japanische Yakitori — Hähnchenschenkel-Spieße über starker Hitze, mit Salz (Shio) oder Soja-Mirin-Sake-Glasur (Tare).",
+                "Yakitori japonês — espetinhos de coxa de frango em fogo forte, acabados com sal (shio) ou envidraçado de soja-mirin-saquê (tare).",
+                "Японские якитори — шпажки из куриного бедра на сильном огне, с солью (сио) или соево-мирин-саке-глазурью (тарэ).",
+                "ياكيتوري ياباني — أسياخ فخذ دجاج على نار قوية، تُختم بالملح (شيو) أو بصلصة الصويا والميرين والساكي (تارِه).",
+                "日式 yakitori — 鸡腿肉串大火快烤，搭配盐（shio）或酱油-味淋-清酒釉（tare）。",
+                "日本の焼き鳥 — 鶏もも肉の串を強火で素早く焼き、塩またはタレで仕上げる定番の一品。",
+                "Japon usulü yakitori — yüksek ateşte hızla pişen tavuk but şişleri, tuz (shio) ya da soya-mirin-sake sırrıyla (tare) bitirilir.",
+                "Yakitori giapponese — spiedini di coscia di pollo a fuoco vivo, rifiniti con sale (shio) o glassa di soia-mirin-sake (tare).",
+                "일본식 야키토리 — 닭다리살 꼬치를 센 불에 빠르게 구워 소금(시오) 또는 간장-미린-청주 글레이즈(타레)로 마감.",
+                "जापानी याकितोरी — चिकन थाई की सींकें तेज़ आंच पर ग्रिल कर के नमक (शिओ) या सोया-मिरिन-साके ग्लेज़ (तारे) से फ़िनिश।") },
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────

@@ -158,4 +158,5 @@ export const recipeImages = {
   183: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Dosanko_Akaneri.jpg/330px-Dosanko_Akaneri.jpg',
   184: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tempura_001.jpg/330px-Tempura_001.jpg',
   185: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Onigiri.jpg/330px-Onigiri.jpg',
+  186: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg',
 };
