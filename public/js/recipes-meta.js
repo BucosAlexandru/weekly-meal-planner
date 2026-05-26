@@ -704,6 +704,22 @@ export const recipesMeta = {
                 "Croque monsieur parigino classico — pain de mie con prosciutto cotto e Gruyère, ricoperto di besciamella e passato sotto il grill finché la salsa diventa crosta dorata e il formaggio fuso borbotta sotto.",
                 "고전 파리식 크로크 무슈 — 팽 드 미에 장봉 드 파리와 그뤼에르를 올리고 베샤멜로 덮어, 브로일러 아래에서 소스가 갈색 크러스트가 되고 아래 녹은 치즈가 끓을 때까지 마무리한다.",
                 "क्लासिक पेरिस का क्रोक मसियो — पैन डे मी पर जाम्बों दे पारी और ग्रुयेर, ऊपर बेशामेल और फिर ब्रॉयलर के नीचे तब तक पकाना जब तक सॉस सुनहरी पपड़ी न बन जाए और पिघला हुआ चीज़ नीचे बुलबुले छोड़े।") },
+
+  192: { time: 35, costRon: 14, tags: ['vegetarian', 'budget', 'family'],
+        desc: d("Crêpes franțuzești dulci — aluat subțire de făină de grâu, ouă și lapte, cu unt alunizat (beurre noisette), odihnit minimum 30 de minute, întins în tigaie fierbinte, servit cu zahăr și lămâie.",
+                "French sweet crêpes — a thin wheat-flour, egg and milk batter with beurre noisette, rested at least 30 minutes, swirled in a hot pan, served with sugar and lemon.",
+                "Crepes francesas dulces — masa fina de harina de trigo, huevos y leche con beurre noisette, en reposo al menos 30 minutos, repartida en sartén caliente, servidas con azúcar y limón.",
+                "Crêpes sucrées françaises — pâte fine à la farine de blé, aux œufs et au lait avec beurre noisette, reposée au moins 30 minutes, tournée dans une poêle chaude, servies au sucre-citron.",
+                "Französische süße Crêpes — dünner Teig aus Weizenmehl, Eiern und Milch mit Beurre noisette, mindestens 30 Minuten geruht, in heißer Pfanne geschwenkt, mit Zucker und Zitrone serviert.",
+                "Crepes franceses doces — massa fina de farinha de trigo, ovos e leite com beurre noisette, em repouso pelo menos 30 minutos, espalhada em frigideira quente, servida com açúcar e limão.",
+                "Французские сладкие блинчики — тонкое тесто из пшеничной муки, яиц и молока с ореховым маслом (beurre noisette), отдохнувшее минимум 30 минут, размазанное по горячей сковороде, подаётся с сахаром и лимоном.",
+                "كريب فرنسي حلو — عجين رفيع من دقيق القمح والبيض والحليب مع زبدة البندق (beurre noisette)، يستريح 30 دقيقة على الأقل، يُسكب في مقلاة حارة، ويُقدّم بالسكر والليمون.",
+                "法式甜可丽饼——以小麦粉、鸡蛋和牛奶做的薄面糊，加入焦香黄油（beurre noisette），静置至少 30 分钟后倒入热锅旋开，撒糖、挤柠檬汁享用。",
+                "フランス風甘いクレープ — 薄力粉、卵、牛乳の薄い生地に焦がしバター（beurre noisette）を加え、最低 30 分休ませ、熱したフライパンで広げ、砂糖とレモンで供する。",
+                "Fransız tatlı krepleri — buğday unu, yumurta ve sütle yapılan ince hamur ve beurre noisette; en az 30 dakika dinlendirilir, sıcak tavada döndürülür, şeker ve limonla servis edilir.",
+                "Crêpes francesi dolci — pastella sottile di farina di grano, uova e latte con beurre noisette, riposata almeno 30 minuti, girata in padella calda, servita con zucchero e limone.",
+                "프랑스식 단 크레프 — 밀가루·달걀·우유의 얇은 반죽에 갈색 버터(beurre noisette)를 더해 최소 30분 휴지, 뜨거운 팬에 돌려서 부치고, 설탕과 레몬으로 마무리.",
+                "फ़्रांसीसी मीठे क्रेप — गेहूँ के आटे, अंडे और दूध का पतला बैटर जिसमें ब्राउन बटर (beurre noisette) मिलाया गया हो, कम से कम 30 मिनट आराम कराया गया हो, गरम पैन में फैला कर बनाया जाए, चीनी और नींबू के साथ परोसा जाए।") },
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
