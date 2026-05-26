@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Planificator de Mese Gratuit – PDF Săptămânal & Listă Cumpărături</title>
-  <meta name="description" content="Planifică meniul pentru 7 zile în 2 minute. Generează automat lista de cumpărături și descarcă PDF — gratuit, fără cont, în română." />
-  <meta name="keywords" content="planificator de mese gratuit, plan de mese saptamanal, lista de cumparaturi automata, planificator mese PDF, meniu saptamanal familie, planner mese romania, planificator meniu saptamanal" />
+  <title>Rețete din Toată Lumea & Planificator Mese Săptămânal | Meal-Planner.ro</title>
+  <meta name="description" content="Descoperă rețete autentice din întreaga lume, planifică meniuri echilibrate și transformă fiecare masă într-o experiență. Gratuit, fără cont, în română." />
+  <meta name="keywords" content="rețete din toată lumea, planificator de mese gratuit, plan de mese saptamanal, meniu saptamanal familie, retete autentice, bucatarii internationale, lista de cumparaturi automata" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://meal-planner.ro/ro/" />
 
@@ -30,14 +30,14 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Planificator Mese Săptămânal – PDF Gratuit" />
-  <meta property="og:description" content="Planifică meniul săptămânii și lista de cumpărături, descarcă PDF — gratuit, fără cont." />
+  <meta property="og:title" content="Rețete din Toată Lumea & Planificator Mese Săptămânal" />
+  <meta property="og:description" content="Descoperă rețete autentice, planifică meniuri echilibrate și transformă fiecare masă într-o experiență — gratuit." />
   <meta property="og:url" content="https://meal-planner.ro/ro/" />
   <meta property="og:image" content="https://meal-planner.ro/images/cover2.jpg" />
   <meta property="og:locale" content="ro_RO" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Planificator Mese Săptămânal – PDF Gratuit" />
-  <meta name="twitter:description" content="Creează-ți planul de mese, generează lista și descarcă PDF." />
+  <meta name="twitter:title" content="Rețete din Toată Lumea & Planificator Mese Săptămânal" />
+  <meta name="twitter:description" content="Descoperă rețete autentice, planifică meniuri echilibrate — gratuit, fără cont." />
   <meta name="twitter:url" content="https://meal-planner.ro/ro/" />
   <meta name="theme-color" content="#24712A" />
 
@@ -57,10 +57,8 @@
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
   <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.min.css">
   <!-- HP_CUISINE_CSS:START -->
@@ -77,344 +75,367 @@
     })();
   </script>
 
-  <!-- JSON-LD: aplicație web, gratuit (1/zi) + abonamente; fără înregistrare -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Planificator Mese Săptămânal",
-    "operatingSystem": "Web",
-    "applicationCategory": "LifestyleApplication",
+    "@type": "WebSite",
+    "name": "Meal-Planner.ro",
     "inLanguage": "ro",
-    "isAccessibleForFree": true,
     "url": "https://meal-planner.ro/ro/",
-    "image": "https://meal-planner.ro/images/cover2.jpg",
-    "description": "Creează planul săptămânal, generează lista de cumpărături și descarcă în PDF — gratuit (previzualizare PDF, 2 din 7 zile). Nu necesită cont; pentru descărcări nelimitate, validează e-mailul după abonare.",
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "0",
-      "highPrice": "3",
-      "priceCurrency": "EUR",
-      "offerCount": "3",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Plan gratuit",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "description": "Utilizare gratuită — previzualizare PDF, 2 din 7 zile."
-        },
-        {
-          "@type": "Offer",
-          "name": "Abonament lunar (RON)",
-          "price": "10",
-          "priceCurrency": "RON",
-          "description": "Descărcări PDF nelimitate. Este necesară validarea e-mailului după achiziție.",
-          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
-        },
-        {
-          "@type": "Offer",
-          "name": "Abonament lunar (EUR)",
-          "price": "3",
-          "priceCurrency": "EUR",
-          "description": "Descărcări PDF nelimitate. Este necesară validarea e-mailului după achiziție.",
-          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
-        }
-      ]
-    },
-    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+    "description": "Rețete autentice din toată lumea și planificator gratuit de meniuri săptămânale.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://meal-planner.ro/ro/retete/?q={query}",
+      "query-input": "required name=query"
+    }
   }
   </script>
 </head>
-<body>
+<body class="hp2-body">
 
-  <!-- ══════════ STICKY NAV ══════════ -->
-  <header class="app-header no-print" role="banner">
+  <!-- ══════════ STICKY NAV (existing) ══════════ -->
+  <header class="app-header" role="banner">
     <nav class="app-nav" aria-label="Main navigation">
       <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
         <span class="nav-icon" aria-hidden="true">🥗</span>
         <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
       </a>
-      <nav class="nav-links" id="content-nav" aria-label="Content navigation">
-        <a class="nav-link" id="nav-plans" href="/ro/meniu-saptamanal/">📅 Meniuri</a>
-        <a class="nav-link" id="nav-recipes" href="/ro/retete/">🍽️ Rețete</a>
-        <a class="nav-link" id="nav-pricing" href="/ro/premium/">⭐ Premium</a>
+      <nav class="nav-links" aria-label="Content navigation">
+        <a class="nav-link" href="/ro/meniu-saptamanal/">📅 Meniuri</a>
+        <a class="nav-link" href="/ro/retete/">🍽️ Rețete</a>
+        <a class="nav-link" href="/ro/app/">🥗 Planificator</a>
+        <a class="nav-link" href="/ro/premium/">⭐ Premium</a>
       </nav>
-      <div id="lang-bar" class="nav-lang">
-        <label for="lang-switcher" class="visually-hidden">Select language</label>
-        <select id="lang-switcher" class="lang-select"></select>
+      <div class="nav-lang">
+        <a class="hp2-lang-pill" href="/" aria-label="Change language">🌐 RO</a>
       </div>
     </nav>
   </header>
 
-  <!-- ══════════ HERO ══════════ -->
-  <section class="hero no-print" aria-label="Introduction">
-    <div class="hero-inner">
-      <div class="hero-badge">
-        <span class="badge-pulse" aria-hidden="true"></span>
-        <span data-i18n="hero.badge">✨ Gratuit · Fără cont · 14 limbi</span>
-      </div>
-      <h1 class="hero-title" data-i18n="header">Planificator Mese &amp; Listă de Cumpărături</h1>
-      <p class="hero-sub" data-i18n="hero.sub">Planifică mesele pentru 7 zile, generează lista de cumpărături automat și descarcă PDF — tot gratuit.</p>
-      <div class="hero-social-proof">
-        <span class="hero-stars" aria-hidden="true">⭐⭐⭐⭐⭐</span>
-        <span data-i18n="hero.social">Folosit în 14 limbi în toată lumea 🌍</span>
-      </div>
-      <div class="hero-cta-row no-print">
-        <button class="btn btn-hero-cta" id="hero-cta-btn" type="button" data-i18n="hero.cta">
-          🥗 Creează Planul Meu Gratuit
-        </button>
-      </div>
-      <div class="hero-pills" aria-label="Features">
-        <div class="hero-pill"><i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i> PDF gratuit — 2 din 7 zile</div>
-        <div class="hero-pill"><i class="bi bi-mic-fill"              aria-hidden="true"></i> Input vocal</div>
-        <div class="hero-pill"><i class="bi bi-cart3"                 aria-hidden="true"></i> Listă automată</div>
-        <div class="hero-pill"><i class="bi bi-translate"             aria-hidden="true"></i> 14 limbi</div>
-      </div>
-    </div>
-  </section>
+  <main class="hp2-main" role="main">
 
-  <!-- ══════════ MAIN APP ══════════ -->
-  <!-- HP_CUISINE_DISCOVER:START -->
-  <section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading">
-    <div class="hp-cuisine-inner">
-      <div class="hp-cuisine-head">
-        <span class="hp-cuisine-eyebrow">Bucătării</span>
-        <h2 id="hp-cuisine-heading" class="hp-cuisine-title">Explorează bucătării din toată lumea</h2>
-        <p class="hp-cuisine-sub">44 bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.</p>
-      </div>
-      <div class="hp-cuisine-grid">
-      <a class="hp-cuisine-card" href="/ro/retete/japan/" data-cuisine-atmosphere="east-asian">
-        <span class="hp-cuisine-card-flag" aria-hidden="true">🇯🇵</span>
-        <span class="hp-cuisine-card-body">
-          <span class="hp-cuisine-card-top">
-            <span class="hp-cuisine-card-name">Japonia</span>
-            <span class="hp-cuisine-card-count">7</span>
-          </span>
-          <span class="hp-cuisine-card-dishes">Sushi · Ramen · Curry japonez</span>
-        </span>
-      </a>
-      <a class="hp-cuisine-card" href="/ro/retete/mexico/" data-cuisine-atmosphere="latin">
-        <span class="hp-cuisine-card-flag" aria-hidden="true">🇲🇽</span>
-        <span class="hp-cuisine-card-body">
-          <span class="hp-cuisine-card-top">
-            <span class="hp-cuisine-card-name">Mexic</span>
-            <span class="hp-cuisine-card-count">7</span>
-          </span>
-          <span class="hp-cuisine-card-dishes">Tacos · Guacamole · Chili con carne</span>
-        </span>
-      </a>
-      <a class="hp-cuisine-card" href="/ro/retete/france/" data-cuisine-atmosphere="mediterranean">
-        <span class="hp-cuisine-card-flag" aria-hidden="true">🇫🇷</span>
-        <span class="hp-cuisine-card-body">
-          <span class="hp-cuisine-card-top">
-            <span class="hp-cuisine-card-name">Franța</span>
-            <span class="hp-cuisine-card-count">6</span>
-          </span>
-          <span class="hp-cuisine-card-dishes">Quiche Lorraine · Ratatouille · Supă de ceapă franțuzească</span>
-        </span>
-      </a>
-      <a class="hp-cuisine-card" href="/ro/retete/greece/" data-cuisine-atmosphere="mediterranean">
-        <span class="hp-cuisine-card-flag" aria-hidden="true">🇬🇷</span>
-        <span class="hp-cuisine-card-body">
-          <span class="hp-cuisine-card-top">
-            <span class="hp-cuisine-card-name">Grecia</span>
-            <span class="hp-cuisine-card-count">5</span>
-          </span>
-          <span class="hp-cuisine-card-dishes">Souvlaki · Tzatziki · Moussaka</span>
-        </span>
-      </a>
-      <a class="hp-cuisine-card" href="/ro/retete/italy/" data-cuisine-atmosphere="mediterranean">
-        <span class="hp-cuisine-card-flag" aria-hidden="true">🇮🇹</span>
-        <span class="hp-cuisine-card-body">
-          <span class="hp-cuisine-card-top">
-            <span class="hp-cuisine-card-name">Italia</span>
-            <span class="hp-cuisine-card-count">4</span>
-          </span>
-          <span class="hp-cuisine-card-dishes">Spaghete Carbonara · Risotto · Pasta e fagioli</span>
-        </span>
-      </a>
-      <a class="hp-cuisine-card" href="/ro/retete/india/" data-cuisine-atmosphere="south-asian">
-        <span class="hp-cuisine-card-flag" aria-hidden="true">🇮🇳</span>
-        <span class="hp-cuisine-card-body">
-          <span class="hp-cuisine-card-top">
-            <span class="hp-cuisine-card-name">India</span>
-            <span class="hp-cuisine-card-count">4</span>
-          </span>
-          <span class="hp-cuisine-card-dishes">Curry de pui · Dhal · Rajma</span>
-        </span>
-      </a>
-      </div>
-      <p class="hp-cuisine-cta">
-        <a class="hp-cuisine-cta-btn" href="/ro/retete/">Vezi toate cele 44 bucătării</a>
-      </p>
-    </div>
-  </section>
-  <!-- HP_CUISINE_DISCOVER:END -->
-  <main class="app-main" role="main">
-    <div id="pdf-content">
-
-      <!-- Auto Menu -->
-      <div id="auto-menu-bar" class="auto-menu-bar no-print">
-        <button id="auto-menu-btn" class="btn btn-autofill" type="button" data-i18n="btn.autoMenu">
-          <i class="bi bi-shuffle" aria-hidden="true"></i>
-          Generează meniu aleator
-        </button>
-      </div>
-
-      <!-- ── Weekly Planner ── -->
-      <section class="app-section" aria-labelledby="planner-heading">
-        <div class="section-head">
-          <span class="section-emoji" aria-hidden="true">📅</span>
-          <h2 id="planner-heading" class="section-title">Planul săptămânii</h2>
-        </div>
-        <div class="table-wrap">
-          <table class="table planner-table mb-0">
-            <thead>
-              <tr>
-                <th data-i18n="col.day">Ziua</th>
-                <th data-i18n="col.lunch">Prânz (ingrediente)</th>
-                <th data-i18n="col.dinner">Cină (ingrediente)</th>
-              </tr>
-            </thead>
-            <tbody id="plan-table"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- ── Shopping List ── (screen: collapsed by default; PDF export uses #pdf-list) -->
-      <section class="app-section app-section--shopping" aria-labelledby="shopping-heading">
-        <details id="shopping-details" class="shopping-collapsible">
-          <summary class="section-head section-head--toggle">
-            <span class="section-emoji" aria-hidden="true">🛒</span>
-            <h2 id="shopping-heading" class="section-title" data-i18n="shoppingList">Lista de cumpărături</h2>
-            <span class="shopping-toggle-count" id="shopping-toggle-count" aria-hidden="true"></span>
-            <span class="shopping-toggle-chevron" aria-hidden="true"></span>
-          </summary>
-          <div class="shopping-collapsible__body">
-            <ul id="shopping-list"
-                class="shopping-list list-unstyled"
-                data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
-                aria-label="Shopping list items"></ul>
+    <!-- ════════ Section 1 · Hero ════════ -->
+    <section class="hp2-hero" aria-label="Introducere">
+      <div class="hp2-hero-grid">
+        <div class="hp2-hero-text">
+          <h1 class="hp2-hero-title">
+            <span class="hp2-hero-title-line">Mâncarea este</span>
+            <span class="hp2-hero-title-line">carburantul corpului</span>
+            <span class="hp2-hero-title-line">și al sufletului.</span>
+          </h1>
+          <p class="hp2-hero-sub">
+            Descoperă rețete autentice din întreaga lume,
+            planifică meniuri echilibrate și transformă
+            fiecare masă într-o experiență.
+          </p>
+          <div class="hp2-hero-cta">
+            <a class="hp2-btn hp2-btn--primary" href="/ro/app/">
+              <span aria-hidden="true">📅</span>
+              Generează meniu săptămânal
+            </a>
+            <a class="hp2-btn hp2-btn--outline" href="/ro/retete/">
+              <span aria-hidden="true">🌍</span>
+              Explorează bucătării
+            </a>
           </div>
-        </details>
-      </section>
-
-      <!-- ── PDF Export ── -->
-      <section class="export-section no-print" aria-label="Download PDF">
-        <div class="export-left">
-          <div class="export-icon" aria-hidden="true">📄</div>
-          <div>
-            <div class="export-title" data-i18n="export.title">Download PDF</div>
-            <div class="export-sub" data-i18n="export.sub">Your plan, recipes &amp; shopping list</div>
-          </div>
+          <ul class="hp2-stat-chips" aria-label="Statistici platformă">
+            <li class="hp2-stat-chip">
+              <span class="hp2-stat-chip-num"><span aria-hidden="true">🌿</span> 44</span>
+              <span class="hp2-stat-chip-label">bucătării</span>
+            </li>
+            <li class="hp2-stat-chip">
+              <span class="hp2-stat-chip-num"><span aria-hidden="true">🌐</span> 14</span>
+              <span class="hp2-stat-chip-label">limbi</span>
+            </li>
+            <li class="hp2-stat-chip">
+              <span class="hp2-stat-chip-num"><span aria-hidden="true">👨‍🍳</span> 175+</span>
+              <span class="hp2-stat-chip-label">rețete</span>
+            </li>
+            <li class="hp2-stat-chip">
+              <span class="hp2-stat-chip-num"><span aria-hidden="true">❤️</span> 70+</span>
+              <span class="hp2-stat-chip-label">țări</span>
+            </li>
+          </ul>
         </div>
-        <div class="export-right">
-          <button id="pay-btn" class="btn btn-upgrade" type="button" data-i18n="btn.pay">
-            <i class="bi bi-crown-fill" aria-hidden="true"></i>
-            Plătește &amp; Descarcă
-          </button>
-          <button id="generate-btn" class="btn btn-generate" type="button" data-i18n="btn.generate">
-            <i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i>
-            Generează PDF
-          </button>
+        <div class="hp2-hero-photo hp2-photo" data-filename="hero-bowl.jpg">
+          <img src="/images/home/hero-bowl.jpg"
+               alt="Buddha bowl cu quinoa, legume proaspete și ierburi aromatice"
+               width="880" height="800"
+               onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
         </div>
-        <div id="payment-status" class="payment-status-msg" role="status" aria-live="polite"></div>
-      </section>
-
-      <!-- PDF impact area — hidden, used only for PDF generation -->
-      <div id="pdf-impact-area" class="no-print" aria-hidden="true">
-        <div id="pdf-title"></div>
-        <div id="pdf-impact-message"></div>
-        <div id="pdf-list"></div>
       </div>
+    </section>
 
-      <!-- ── Premium Access ── -->
-      <section class="access-section no-print" id="access-card" aria-label="Premium access">
-        <div class="access-header">
-          <i class="bi bi-gem" aria-hidden="true"></i>
-          <span data-i18n="banner.unlock">Already paid? Unlock unlimited PDF downloads</span>
-        </div>
-        <div class="access-body">
-          <div class="access-form">
-            <input type="email"
-                   id="emailInput"
-                   class="access-input"
-                   data-i18n-placeholder="input.email"
-                   placeholder="your@email.com"
-                   autocomplete="email"
-                   aria-label="Email address for premium access">
-            <button id="verifyBtn" class="btn btn-verify" type="button" data-i18n="btn.verify">
-              Verifică Email
-            </button>
-          </div>
-          <div id="result" class="access-result" role="status" aria-live="polite"></div>
-          <button id="manage-subscription" class="btn btn-manage-sub mt-2" type="button"
-                  style="display:none" data-i18n="btn.manage">
-            <i class="bi bi-gear-fill" aria-hidden="true"></i>
-            Manage subscription
-          </button>
-        </div>
-      </section>
+    <!-- ════════ Section 2 · 4 Feature cards ════════ -->
+    <section class="hp2-features" aria-label="Beneficii">
+      <ul class="hp2-features-row">
+        <li class="hp2-feature-card">
+          <span class="hp2-feature-icon hp2-feature-icon--green" aria-hidden="true">📅</span>
+          <h3 class="hp2-feature-title">Planifică ușor</h3>
+          <p class="hp2-feature-desc">Meniuri săptămânale adaptate stilului tău de viață.</p>
+        </li>
+        <li class="hp2-feature-card">
+          <span class="hp2-feature-icon hp2-feature-icon--amber" aria-hidden="true">👨‍🍳</span>
+          <h3 class="hp2-feature-title">Gătește cu încredere</h3>
+          <p class="hp2-feature-desc">Rețete testate, ingrediente simple și mod de preparare clar.</p>
+        </li>
+        <li class="hp2-feature-card">
+          <span class="hp2-feature-icon hp2-feature-icon--green" aria-hidden="true">🌍</span>
+          <h3 class="hp2-feature-title">Explorează lumea</h3>
+          <p class="hp2-feature-desc">Călătorește culinar prin tradiții și arome autentice.</p>
+        </li>
+        <li class="hp2-feature-card">
+          <span class="hp2-feature-icon hp2-feature-icon--pink" aria-hidden="true">❤️</span>
+          <h3 class="hp2-feature-title">Mănâncă mai bine</h3>
+          <p class="hp2-feature-desc">Inspirație pentru mese echilibrate care îți fac bine.</p>
+        </li>
+      </ul>
+    </section>
 
-      <!-- ── SEO Paragraph ── -->
-      <div class="seo-paragraph" id="seo-paragraph">
-        <p>
-          <strong>Planificator de mese săptămânal online</strong> – Creează-ți meniul pentru întreaga săptămână,
-          economisește timp și bani și bucură-te de mese sănătoase în familie. Aplicația noastră gratuită îți permite
-          să notezi ce gătești zilnic, să generezi automat lista de cumpărături și să descarci totul în format PDF.
-        </p>
-        <p>
-          Fie că vrei să organizezi mesele pentru copii, să urmezi o dietă echilibrată sau doar să fii mai eficient
-          cu bugetul, acest planner te ajută să te ții de plan și să eviți risipa alimentară. Totul este rapid,
-          online, și poți folosi aplicația în orice limbă dorești!
-        </p>
-        <p>Încearcă planificatorul de mese săptămânal gratuit – simplu, util și fără cont!</p>
+    <!-- ════════ Section 3 · Cuisine row ════════ -->
+    <section class="hp2-cuisine" aria-labelledby="hp2-cuisine-heading">
+      <div class="hp2-section-head">
+        <div>
+          <h2 id="hp2-cuisine-heading" class="hp2-section-title">Explorează bucătării din toată lumea</h2>
+          <p class="hp2-section-sub">Arome autentice. Tradiții fascinante. Gusturi pe care le vei iubi.</p>
+        </div>
+        <a class="hp2-section-link" href="/ro/retete/">Vezi toate cele 44 de bucătării <span aria-hidden="true">→</span></a>
       </div>
+      <ul class="hp2-cuisine-row" aria-label="Bucătării populare">
+        <li>
+          <a class="hp2-cuisine-card" href="/ro/retete/japan/">
+            <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-japan.jpg">
+              <img src="/images/home/cuisine-japan.jpg" alt="Bucătărie japoneză — bol de ramen" loading="lazy" width="600" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-cuisine-body">
+              <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇯🇵</span> Japonia</span>
+              <span class="hp2-cuisine-count">7 rețete</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-cuisine-card" href="/ro/retete/mexico/">
+            <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-mexico.jpg">
+              <img src="/images/home/cuisine-mexico.jpg" alt="Bucătărie mexicană — tacos colorate" loading="lazy" width="600" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-cuisine-body">
+              <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇲🇽</span> Mexic</span>
+              <span class="hp2-cuisine-count">7 rețete</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-cuisine-card" href="/ro/retete/italy/">
+            <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-italy.jpg">
+              <img src="/images/home/cuisine-italy.jpg" alt="Bucătărie italiană — paste cu sos de roșii" loading="lazy" width="600" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-cuisine-body">
+              <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇮🇹</span> Italia</span>
+              <span class="hp2-cuisine-count">4 rețete</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-cuisine-card" href="/ro/retete/india/">
+            <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-india.jpg">
+              <img src="/images/home/cuisine-india.jpg" alt="Bucătărie indiană — curry cu naan" loading="lazy" width="600" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-cuisine-body">
+              <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇮🇳</span> India</span>
+              <span class="hp2-cuisine-count">4 rețete</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-cuisine-card" href="/ro/retete/greece/">
+            <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-greece.jpg">
+              <img src="/images/home/cuisine-greece.jpg" alt="Bucătărie greacă — salată cu feta și măsline" loading="lazy" width="600" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-cuisine-body">
+              <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇬🇷</span> Grecia</span>
+              <span class="hp2-cuisine-count">5 rețete</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-cuisine-card" href="/ro/retete/france/">
+            <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-france.jpg">
+              <img src="/images/home/cuisine-france.jpg" alt="Bucătărie franceză — coq au vin" loading="lazy" width="600" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-cuisine-body">
+              <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇫🇷</span> Franța</span>
+              <span class="hp2-cuisine-count">6 rețete</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-      <!-- ── Feedback ── -->
-      <section class="app-section" id="feedback-section" aria-label="Send feedback">
-        <div class="section-head">
-          <span class="section-emoji" aria-hidden="true">💬</span>
-          <h2 class="section-title" data-i18n="feedback.header">Trimite feedback rapid</h2>
+    <!-- ════════ Section 4 · Inspirație pentru azi ════════ -->
+    <!-- Hardcoded picks; see /* pinned-inspire */ in style.css. -->
+    <section class="hp2-inspire" aria-labelledby="hp2-inspire-heading">
+      <div class="hp2-section-head">
+        <div>
+          <h2 id="hp2-inspire-heading" class="hp2-section-title">Inspirație pentru azi</h2>
+          <p class="hp2-section-sub">Rețete populare și idei delicioase pentru orice moment.</p>
         </div>
-        <form id="feedbackForm" class="feedback-form" novalidate>
-          <textarea class="feedback-textarea"
-                    id="feedbackMsg"
-                    rows="3"
-                    data-i18n-placeholder="feedback.placeholder"
-                    placeholder="Scrie-ne un mesaj..."
-                    aria-label="Feedback message"></textarea>
-          <div class="feedback-actions">
-            <button type="submit" class="btn btn-feedback" data-i18n="feedback.button">
-              <i class="bi bi-send-fill" aria-hidden="true"></i>
-              Trimite feedback
-            </button>
-            <small class="feedback-note" data-i18n="feedback.note">Feedbackul ajunge direct la dezvoltator.</small>
-          </div>
-          <div id="feedback-status" class="feedback-status" role="status" aria-live="polite"></div>
-        </form>
-      </section>
+        <a class="hp2-section-link" href="/ro/retete/">Vezi mai multe rețete <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="hp2-inspire-row" aria-label="Rețete recomandate">
+        <li>
+          <a class="hp2-inspire-card" href="/ro/retete/shoyu-ramen/">
+            <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-ramen.jpg">
+              <span class="hp2-inspire-badge">POPULAR</span>
+              <img src="/images/home/inspire-ramen.jpg" alt="Bol de Ramen Shoyu cu ou moale" loading="lazy" width="800" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-inspire-body">
+              <h3 class="hp2-inspire-title">Ramen Shoyu</h3>
+              <p class="hp2-inspire-meta">Japonia <span aria-hidden="true">·</span> 4h</p>
+              <p class="hp2-inspire-desc">Supă de tăiței cu bulion savuros, ouă moi și mirodenii japoneze.</p>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-inspire-card" href="/ro/retete/spaghetti-carbonara/">
+            <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-lemon-chicken.jpg">
+              <span class="hp2-inspire-badge">RAPID</span>
+              <img src="/images/home/inspire-lemon-chicken.jpg" alt="Spaghete Carbonara cu guanciale și Pecorino" loading="lazy" width="800" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-inspire-body">
+              <h3 class="hp2-inspire-title">Spaghete Carbonara</h3>
+              <p class="hp2-inspire-meta">Italia <span aria-hidden="true">·</span> 30 min</p>
+              <p class="hp2-inspire-desc">Clasic roman din numai cinci ingrediente — fără smântână, fără tigaie.</p>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-inspire-card" href="/ro/retete/dhal/">
+            <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-chickpea-curry.jpg">
+              <span class="hp2-inspire-badge">VEGETARIAN</span>
+              <img src="/images/home/inspire-chickpea-curry.jpg" alt="Dhal — supă cremoasă de linte cu condimente" loading="lazy" width="800" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-inspire-body">
+              <h3 class="hp2-inspire-title">Dhal</h3>
+              <p class="hp2-inspire-meta">India <span aria-hidden="true">·</span> 45 min</p>
+              <p class="hp2-inspire-desc">Linte roșie cu ceapă caramelizată, ghimbir și tadka cu condimente prăjite în ghee.</p>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="hp2-inspire-card" href="/ro/retete/pasta-e-fagioli/">
+            <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-lasagna.jpg">
+              <span class="hp2-inspire-badge">COMFORT FOOD</span>
+              <img src="/images/home/inspire-lasagna.jpg" alt="Pasta e fagioli — paste cu fasole rustic italiană" loading="lazy" width="800" height="600"
+                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            </span>
+            <span class="hp2-inspire-body">
+              <h3 class="hp2-inspire-title">Pasta e fagioli</h3>
+              <p class="hp2-inspire-meta">Italia <span aria-hidden="true">·</span> 60 min</p>
+              <p class="hp2-inspire-desc">Paste cu fasole — cucina povera italiană, densă, hrănitoare, perfectă pentru cină.</p>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    </div><!-- /#pdf-content -->
+    <!-- ════════ Section 5 · Two entry cards ════════ -->
+    <section class="hp2-entry" aria-label="Secțiuni principale">
+      <div class="hp2-entry-cards">
+        <a class="hp2-entry-card" href="/ro/meniu-saptamanal/">
+          <span class="hp2-photo hp2-photo--entry" data-filename="cover-weekly-menu.jpg">
+            <img src="/images/home/cover-weekly-menu.jpg" alt="Plan săptămânal de mese pregătite" loading="lazy" width="480" height="480"
+                 onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+          </span>
+          <span class="hp2-entry-body">
+            <h3 class="hp2-entry-title">Meniuri Săptămânale</h3>
+            <p class="hp2-entry-desc">Planuri complete și echilibrate pentru întreaga săptămână, adaptate stilului tău de viață.</p>
+            <span class="hp2-entry-link">Descoperă meniurile <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="hp2-entry-card" href="/ro/retete/">
+          <span class="hp2-photo hp2-photo--entry" data-filename="cover-recipes.jpg">
+            <img src="/images/home/cover-recipes.jpg" alt="Diversitate de feluri internaționale" loading="lazy" width="480" height="480"
+                 onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+          </span>
+          <span class="hp2-entry-body">
+            <h3 class="hp2-entry-title">Rețete din toată lumea</h3>
+            <p class="hp2-entry-desc">Rețete autentice din peste 70 de țări, cu ingrediente reale și mod de preparare pas cu pas.</p>
+            <span class="hp2-entry-link">Explorează rețetele <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════ Section 6 · Trust banner ════════ -->
+    <section class="hp2-trust-banner" aria-labelledby="hp2-trust-heading">
+      <div class="hp2-trust-grid">
+        <div class="hp2-trust-text">
+          <h2 id="hp2-trust-heading" class="hp2-trust-title">Creat pentru iubitorii de mâncare bună</h2>
+          <p class="hp2-trust-sub">Comunitate, pasiune și mii de rețete dintr-o singură sursă de inspirație.</p>
+        </div>
+        <ul class="hp2-trust-stats" aria-label="Statistici comunitate">
+          <li class="hp2-stat-counter">
+            <span class="hp2-stat-counter-icon" aria-hidden="true">📄</span>
+            <span class="hp2-stat-counter-num">3,000+</span>
+            <span class="hp2-stat-counter-label">pagini de rețete</span>
+          </li>
+          <li class="hp2-stat-counter">
+            <span class="hp2-stat-counter-icon" aria-hidden="true">👥</span>
+            <span class="hp2-stat-counter-num">100K+</span>
+            <span class="hp2-stat-counter-label">utilizatori inspirați</span>
+          </li>
+          <li class="hp2-stat-counter">
+            <span class="hp2-stat-counter-icon" aria-hidden="true">🍽️</span>
+            <span class="hp2-stat-counter-num">1M+</span>
+            <span class="hp2-stat-counter-label">mese planificate</span>
+          </li>
+        </ul>
+        <figure class="hp2-testimonial">
+          <blockquote>
+            <p>„Meal Planner m-a ajutat să descopăr bucătării noi și să gătesc mai variat pentru familia mea. Recomand cu drag!"</p>
+          </blockquote>
+          <figcaption>
+            <span class="hp2-testimonial-author">— Andreea, București</span>
+            <span class="hp2-testimonial-stars" aria-label="5 stele">★★★★★</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ════════ Section 7 · Planner CTA banner ════════ -->
+    <section class="hp2-planner-cta" aria-labelledby="hp2-cta-heading">
+      <div class="hp2-planner-cta-inner">
+        <div>
+          <h2 id="hp2-cta-heading" class="hp2-planner-cta-title">Începe să-ți planifici săptămâna acum</h2>
+          <p class="hp2-planner-cta-sub">Generator gratuit, fără cont, fără card. PDF descărcabil în 1 click.</p>
+        </div>
+        <a class="hp2-btn hp2-btn--primary hp2-btn--large" href="/ro/app/">
+          Deschide planificatorul <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ══════════ FOOTER ══════════ -->
-  <footer class="app-footer no-print" role="contentinfo">
+  <!-- ══════════ FOOTER (existing) ══════════ -->
+  <footer class="app-footer" role="contentinfo">
     <div class="footer-inner">
       <span class="footer-brand">🥗 Meal-Planner.ro</span>
       <span class="footer-sep" aria-hidden="true">·</span>
-      <span>Free weekly meal planner</span>
+      <span>Planificator gratuit de mese săptămânale</span>
       <span class="footer-sep" aria-hidden="true">·</span>
       <span>© 2026</span>
     </div>
   </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script type="module" src="/js/app.js" defer></script>
-  <script src="/js/checkout.min.js" defer></script>
-  <script src="/js/portal.min.js" defer></script>
 
 </body>
 </html>
