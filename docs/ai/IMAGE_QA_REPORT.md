@@ -11,8 +11,8 @@ og:image consumer, and a JS-disabled or slow-network visitor sees.
 
 | Bucket | Count | What renders | OG / share image | Verified-in-production? |
 |---|---|---|---|---|
-| **1. Local image override** | 49 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
-| **2. Mapped external image** | 149 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
+| **1. Local image override** | 53 | Curated `<img>` from `public/images/<slug>.{webp,jpg}` | curated URL | ✓ same-origin asset, always reaches |
+| **2. Mapped external image** | 145 | Spoonacular/Wikipedia `<img>` from `recipe-images.js` | mapped URL | mostly (URL liveness not asserted from sandbox) |
 | **3. Client-only image** | 0 | Emoji 🍽️ in SSR, then `content.js` injects `<img>` after load IF Wikipedia URL resolves | **cover2.jpg ❌** | **partial** — Banh Xeo (id 126) empirically shows emoji on the preview deploy |
 | **4. Fallback emoji** | 6 | Emoji 🍽️ in SSR, nothing else | **cover2.jpg ❌** | ✓ user sees emoji |
 
@@ -24,8 +24,8 @@ Empirical evidence: `/en/recipes/banh-xeo/` (id 126, bucket 3).
 
 ### Priority distribution after re-classification (every emoji is now P0 or P1)
 
-- **P1**: 13
-- **P3**: 191
+- **P1**: 17
+- **P3**: 187
 
 ## To stop seeing emoji: reduce buckets 3 and 4
 
@@ -62,15 +62,15 @@ or 2 (so the SSR renders an actual `<img>`):
 |---|---|
 | Total recipes | 204 |
 | With external mapping in recipe-images.js | 169 |
-| With local override (`public/images/<slug>.{jpg,webp}`) | 49 |
+| With local override (`public/images/<slug>.{jpg,webp}`) | 53 |
 | SSR renders emoji (buckets 3 + 4) | 6 |
 | SSR renders `<img>` (buckets 1 + 2) | 198 |
 | Flagship recipes | 20 |
 
 ### Effective source breakdown
-- **local-webp**: 49
+- **local-webp**: 53
 - **fallback**: 6
-- **wikipedia**: 118
+- **wikipedia**: 114
 - **spoonacular**: 31
 
 ## Priority legend (re-prioritised in Phase I.2 followup)
@@ -100,6 +100,10 @@ or 2 (so the SSR renders an actual `<img>`):
 | 198 | Galaktoboureko | Greece | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 206 | Palak Paneer | India | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 208 | Samosa | India | fallback | FALLBACK, NO_MAPPING | **P1** | Fetch via Spoonacular/Wikipedia tool |
+| 209 | Green Curry (Gaeng Khiao Wan) | Thailand | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
+| 210 | Massaman Curry | Thailand | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
+| 211 | Som Tam | Thailand | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
+| 212 | Khao Soi | Thailand | local-webp | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 1 | Spaghetti Carbonara | Italy | wikipedia | FLAGSHIP | **P3** | — |
 | 8 | Tacos | Mexico | spoonacular | FLAGSHIP | **P3** | — |
 | 9 | Chicken Curry | India | spoonacular | FLAGSHIP | **P3** | — |
@@ -286,10 +290,6 @@ or 2 (so the SSR renders an actual `<img>`):
 | 204 | Butter Chicken (Murgh Makhani) | India | local-webp | — | **P3** | — |
 | 205 | Hyderabadi Lamb Biryani | India | local-webp | — | **P3** | — |
 | 207 | Rogan Josh | India | local-webp | — | **P3** | — |
-| 209 | Green Curry (Gaeng Khiao Wan) | Thailand | wikipedia | — | **P3** | — |
-| 210 | Massaman Curry | Thailand | wikipedia | — | **P3** | — |
-| 211 | Som Tam | Thailand | wikipedia | — | **P3** | — |
-| 212 | Khao Soi | Thailand | wikipedia | — | **P3** | — |
 | 213 | Mango Sticky Rice (Khao Niao Mamuang) | Thailand | wikipedia | — | **P3** | — |
 
 ## Constraints
