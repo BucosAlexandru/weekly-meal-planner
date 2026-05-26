@@ -1,0 +1,286 @@
+{
+  "$schema_version": 1,
+  "phase": 1,
+  "batch_id": "phase1-batch-002",
+  "created": "2026-05-26",
+  "scope": "ingredients + howIsMade (English only). Status tracking maintained per recipe. No translations / metadata / nutrition / pairings / SEO / slugs / badges / rendering. Recipes do not render to the site until Phase 4.",
+  "editorial_rules": [
+    "calm confident cookbook voice",
+    "each paragraph = one cooking phase",
+    "pacing varies by recipe (4 or 5 paragraphs as the dish demands)",
+    "no procedural fragmentation, no one-action-per-block rhythm",
+    "minimal 'then / meanwhile / now' — only where parallel cooking requires it",
+    "no artificial suspense or dramatic narration",
+    "no over-explaining of obvious actions",
+    "warnings used sparingly; positive technique cues preferred over 'don't' / 'never'",
+    "preserve sensory cues, authentic technique, regional authenticity"
+  ],
+  "recipes": [
+    {
+      "name": "Butter Chicken (Murgh Makhani)",
+      "cuisine": "India",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "800 g boneless chicken thighs, cut into 4 cm pieces",
+        "For the marinade: 200 g full-fat yoghurt, 2 tbsp ginger-garlic paste, 1 tsp Kashmiri red chilli powder, 1 tsp garam masala, juice of half a lemon, 2 tbsp neutral oil, 1 tsp salt",
+        "For the gravy: 800 g ripe tomatoes (or 1 large can chopped tomatoes), 60 g raw cashews, 1 large onion quartered, 4 garlic cloves, 3 cm piece of ginger, 4 green cardamom pods, 1 cinnamon stick, 4 cloves, 1 bay leaf",
+        "80 g unsalted butter, 200 ml double cream",
+        "1 tbsp kasoori methi (dried fenugreek leaves)",
+        "1 tsp Kashmiri red chilli powder, 1 tsp garam masala, 1 tsp sugar, salt",
+        "Fresh coriander to finish"
+      ],
+      "howIsMade": "Mix the marinade in a wide bowl, add the chicken and turn each piece until well coated. Cover and chill at least 4 hours, ideally overnight — the yoghurt tenderises and the spices need time to settle into the meat.\n\nFor the gravy, soak the cashews in 100 ml of hot water for 20 minutes. Put the tomatoes, onion, garlic, ginger and the whole spices into a heavy pan with 200 ml of water, bring to a simmer and cook covered for 20–25 minutes, until the tomatoes have collapsed and the onion is fully soft. Fish out the cinnamon, cardamom, cloves and bay leaf, then blend everything — including the soaked cashews and their water — to a velvety purée and pass through a sieve back into the pan for restaurant-style smoothness.\n\nHeat the broiler high and line a tray with foil. Spread the marinated chicken in a single layer with space between the pieces and broil 5–6 cm from the heat for 6–8 minutes per side, until the edges are charred and the meat is just cooked through. The char is half the dish, so let those edges go genuinely dark.\n\nMelt the butter in a wide pan over medium heat, pour in the strained gravy, and add the chilli powder, sugar and a teaspoon of salt. Simmer gently for 10 minutes, stirring often, until the colour deepens to a rich brick-orange. Pour in the cream, stir until the gravy turns velvet, then slide in the charred chicken with any juices from the tray and let everything bubble together for 4–5 minutes more.\n\nCrush the kasoori methi between your palms over the pan, stir in the garam masala and taste for salt and sugar — the balance should be rich, gently sweet, with a quiet smoky bite from the char. Scatter coriander leaves on top and serve with naan or basmati rice."
+    },
+    {
+      "name": "Hyderabadi Lamb Biryani",
+      "cuisine": "India",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "800 g bone-in lamb shoulder or leg, cut into 4 cm pieces",
+        "500 g basmati rice, soaked 30 minutes in cold water and drained",
+        "4 large onions, very thinly sliced (about 600 g)",
+        "200 g full-fat yoghurt",
+        "50 g ghee + 80 ml neutral oil",
+        "3 tbsp ginger-garlic paste",
+        "2 green chillies, slit lengthwise",
+        "2 tsp Kashmiri red chilli powder, 1 tsp turmeric, 1 tsp salt",
+        "Whole spices: 1 cinnamon stick, 4 green cardamom + 2 black cardamom, 4 cloves, 1 bay leaf, 1 tsp shahi jeera, 1 tsp black peppercorns",
+        "A pinch of saffron infused in 60 ml warm whole milk",
+        "Juice of 1 lemon",
+        "2 tbsp chopped mint and 2 tbsp chopped coriander",
+        "1 tbsp rose water (optional, traditional)",
+        "A piece of soft dough or a sheet of heavy foil for sealing"
+      ],
+      "howIsMade": "Heat the ghee and oil in a wide heavy pan over medium heat and fry the sliced onions slowly for 25–30 minutes, stirring often, until they are deeply golden brown — birista, the soul of biryani. Drain on paper, reserve the oil in the pan, and keep half the onions for layering later.\n\nCombine the lamb with the yoghurt, ginger-garlic paste, half of the fried onions crushed in your hand, chilli powder, turmeric, salt, lemon juice and a teaspoon of the shahi jeera, mix thoroughly, and rest at least 2 hours or overnight in the fridge. Tip the marinated lamb back into the reserved onion oil, add the cinnamon, cardamom, cloves and bay leaf, and cook covered over low heat for an hour to an hour and a quarter, until the lamb is tender and the gravy has reduced to a thick coating.\n\nBring a deep pot of well-salted water to a rolling boil with the rest of the whole spices and a tablespoon of oil. Add the soaked basmati and cook just 4–5 minutes, until the grains have lengthened and are about three-quarters done — they will finish in the steam. Drain quickly and gently.\n\nNow layer the biryani in the same pan as the lamb: spread the rice evenly over the meat, scatter the remaining fried onions, chopped mint and coriander, and the green chillies on top, then drizzle the saffron milk in slow streaks across the surface and the rose water if using. Seal the lid with a strip of wet dough or a tight wrap of foil, set on the lowest heat for 25–30 minutes, then turn off the flame without lifting the lid.\n\nRest sealed for another 10 minutes before breaking the seal at the table. Plunge a long spoon to the bottom and lift up so each portion comes out with both rice and meat in one motion, never stirred together."
+    },
+    {
+      "name": "Palak Paneer",
+      "cuisine": "India",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "500 g fresh spinach (or 250 g frozen, defrosted)",
+        "250 g paneer, cut into 2 cm cubes",
+        "1 large onion, finely chopped",
+        "2 ripe tomatoes, chopped (or 200 g chopped tomatoes)",
+        "3 garlic cloves and 2 cm piece of ginger, minced together",
+        "2 green chillies",
+        "1 tsp cumin seeds",
+        "1 tsp coriander powder, 1 tsp Kashmiri chilli powder, ½ tsp turmeric, 1 tsp garam masala",
+        "1 tbsp kasoori methi (dried fenugreek leaves)",
+        "80 ml double cream, 3 tbsp ghee",
+        "Salt to taste",
+        "A small piece of fresh ginger, julienned, to finish"
+      ],
+      "howIsMade": "Bring a large pot of water to a boil and blanch the spinach for 90 seconds, then transfer immediately to a bowl of ice water. The shock-cool keeps the green vivid; spinach cooked too long turns drab. Drain, squeeze gently, and blend to a smooth purée with one of the green chillies and a few tablespoons of cold water.\n\nHeat a tablespoon of ghee in a wide pan and fry the paneer cubes over medium heat for 2–3 minutes per side, until lightly gold and crisp at the edges. Lift onto paper, or slip them into a bowl of warm salted water while everything else cooks — they stay softer that way.\n\nIn the same pan, add the remaining ghee and the cumin seeds, and let them sizzle for 30 seconds. Tip in the onion and cook gently for 8–10 minutes until soft and golden at the edges, then add the ginger-garlic and the second slit green chilli and cook a minute more. Stir in the chopped tomato with the coriander, chilli powder, turmeric and a teaspoon of salt, and cook 6–8 minutes until the masala is jammy and the oil starts to separate at the edges.\n\nPour in the spinach purée and 100 ml of water, stir well, and simmer gently for 5 minutes. Slide the paneer cubes into the gravy, swirl in the cream, crush the kasoori methi between your palms over the pan, and sprinkle the garam masala. Heat through for another two minutes, taste for salt, and finish with the julienned ginger on top.\n\nServe with naan, paratha or basmati."
+    },
+    {
+      "name": "Rogan Josh",
+      "cuisine": "India",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "1 kg bone-in lamb shoulder or leg, cut into 4 cm pieces",
+        "4 tbsp mustard oil",
+        "200 g full-fat yoghurt, whisked smooth",
+        "4 dried Kashmiri red chillies, soaked in warm water 20 minutes and ground to a paste (or 2 tbsp Kashmiri chilli powder)",
+        "1 tsp fennel powder",
+        "1 tsp dried ginger powder (sonth)",
+        "½ tsp asafoetida (hing)",
+        "Whole spices: 8 green cardamom + 2 black cardamom, 1 cinnamon stick, 6 cloves, 1 bay leaf",
+        "1 tsp salt",
+        "A pinch of saffron, soaked in 2 tbsp warm milk"
+      ],
+      "howIsMade": "Heat the mustard oil in a heavy pan until it just begins to smoke, then pull it off the heat for a moment — letting it smoke neutralises the raw pungency without scorching. Return to medium heat, add the whole spices and bay leaf, and let them perfume the oil for 30 seconds.\n\nAdd the lamb in a single layer and brown well on all sides for 8–10 minutes. This is the only browning the dish gets, so let the colour develop properly. Stir in the asafoetida, ginger powder and fennel powder, and let them coat the meat in the hot oil for another minute.\n\nWhisk the yoghurt with the Kashmiri chilli paste and a tablespoon of cold water, then add it to the pan a ladleful at a time, stirring continuously after each addition; going slowly keeps the yoghurt from splitting. Add the salt, lower the heat and cook covered for 10 minutes, until the yoghurt has melted into a glossy red base.\n\nPour in 500 ml of hot water, bring back to a simmer, then drop the heat to its lowest and braise covered for an hour and 20 minutes, stirring every 20 minutes, until the lamb is tender enough to yield to a spoon and the gravy is thin, glossy and a deep mahogany red. Swirl the saffron milk through 5 minutes before the end without fully stirring it out.\n\nRest off the heat for 10 minutes before serving with steamed basmati. Rogan Josh is meant to be soup-like, brilliantly coloured and aromatic rather than spicy hot — the heat is supplied by the meat, the colour by the chillies, and the perfume by everything else."
+    },
+    {
+      "name": "Samosa",
+      "cuisine": "India",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "For the pastry: 300 g plain flour, 1 tsp ajwain (carom) seeds, ½ tsp salt, 60 ml ghee or neutral oil, 120 ml cold water",
+        "For the filling: 500 g floury potatoes (Maris Piper or Russet), 100 g frozen peas, 2 tbsp neutral oil, 1 tsp cumin seeds, 1 green chilli minced, 2 cm piece of ginger minced",
+        "1 tsp coriander powder, 1 tsp garam masala, ½ tsp Kashmiri chilli powder, ½ tsp turmeric, 1 tsp amchur (dried mango powder), 1 tsp salt",
+        "A handful of fresh coriander, chopped",
+        "About 1 L neutral oil for deep-frying",
+        "To serve: tamarind chutney and mint-coriander chutney"
+      ],
+      "howIsMade": "Rub the ghee into the flour, ajwain and salt with your fingertips until the mixture resembles coarse breadcrumbs. The amount of fat is what gives samosa pastry its blistered, biscuit-crisp shell. Add the cold water a tablespoon at a time, mixing into a stiff, smooth dough — softer than chapati but firmer than bread dough — and rest it covered for 30 minutes.\n\nBoil the potatoes in their skins until just tender, drain and peel, then crush coarsely with the back of a fork; you want texture, not mash. Heat the oil in a wide pan, add the cumin seeds and let them sizzle, then the ginger and green chilli for 30 seconds. Stir in the dry spices and fry briefly, tip in the potato, peas, salt, amchur and coriander, and cook 4–5 minutes, turning everything together until the spices coat every piece. Cool to room temperature before shaping.\n\nDivide the dough into 8 balls. Roll one into a thin oval about 18 cm long, then cut across the middle to make two half-circles. Take one half-circle, brush a thin line of water along the straight edge, and fold into a cone by bringing the two corners of the straight edge together so they overlap by 1 cm. Pinch the seam tightly to seal.\n\nHold the cone in one hand, fill it three-quarters with potato, then pleat the open edge by folding a small tuck on one side and sealing the rim shut with a damp finger. The tucked pleat creates the samosa's signature side ridge and helps it sit upright while cooking. Repeat with the rest.\n\nHeat the frying oil to 150°C — lower than you might expect, but the slow climb is what gives the shell its blisters. Slip in the samosas in batches of 3 or 4 and fry 6–7 minutes, turning gently, until pale gold and just starting to colour. Raise the heat to 180°C and fry another 3–4 minutes, until deep golden and properly crisp. Drain on a rack and serve hot with tamarind and mint chutneys."
+    },
+    {
+      "name": "Green Curry (Gaeng Khiao Wan)",
+      "cuisine": "Thailand",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "4 tbsp green curry paste (homemade, or a good Thai brand like Mae Ploy)",
+        "400 ml full-fat coconut milk (Aroy-D is ideal)",
+        "200 ml coconut cream (the thick top layer from the can, or 100 ml plus the skimmed cream)",
+        "500 g chicken thighs, cut into 3 cm pieces",
+        "4 Thai eggplants, quartered (or 1 small Asian eggplant cubed)",
+        "A small handful of pea eggplants (mainly garnish, optional)",
+        "100 g bamboo shoots, sliced",
+        "4 kaffir lime leaves, torn (stem removed)",
+        "2 long red chillies, sliced thinly on the bias",
+        "1 tbsp palm sugar (or light brown sugar)",
+        "2 tbsp Thai fish sauce",
+        "A small handful of Thai basil leaves (horapha)",
+        "Jasmine rice to serve"
+      ],
+      "howIsMade": "In a wok or heavy pan over medium heat, spoon in the coconut cream and let it cook for 4–5 minutes, stirring occasionally, until the oil cracks out and the cream takes on a slick sheen. This foundation step is what separates Thai-restaurant green curry from the watery home version.\n\nAdd the green curry paste to the split cream and fry for 2–3 minutes, stirring constantly, until the paste darkens, releases its perfume of galangal, lemongrass and Thai basil, and the oil turns a vivid green. The kitchen will smell like a Bangkok back street.\n\nSlide in the chicken and turn the pieces in the paste until coated, cook 3–4 minutes until the meat is half-sealed, then pour in the coconut milk and bring to a gentle simmer. Add the eggplants, bamboo shoots and torn kaffir lime leaves, and simmer uncovered for 10–12 minutes, until the eggplants are tender and the chicken is just cooked through.\n\nSeason with the fish sauce and palm sugar, tasting as you go — the curry should hit salty, sweet, herbaceous and a clean green chilli heat all at once. Stir in the sliced red chillies and Thai basil, swirl the pan once, and take it off the heat after 30 seconds so the basil stays bright in the bowl.\n\nServe in shallow bowls with jasmine rice on the side."
+    },
+    {
+      "name": "Massaman Curry",
+      "cuisine": "Thailand",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "4 tbsp Massaman curry paste (Mae Ploy is reliable)",
+        "1 kg beef shin or chuck, cut into 5 cm cubes",
+        "800 ml full-fat coconut milk",
+        "200 ml coconut cream",
+        "500 g waxy potatoes (Charlotte or Yukon Gold), peeled and cut into 4 cm chunks",
+        "2 small onions, peeled and quartered",
+        "100 g roasted unsalted peanuts (a few crushed for garnish)",
+        "Whole spices: 5 cardamom pods, 1 cinnamon stick, 4 cloves, 1 star anise, 1 bay leaf",
+        "3 tbsp tamarind paste (or juice of 1 lime as a back-up)",
+        "3 tbsp palm sugar",
+        "3 tbsp Thai fish sauce",
+        "4 kaffir lime leaves, torn",
+        "Jasmine rice to serve"
+      ],
+      "howIsMade": "Spoon the coconut cream into a heavy pot over medium heat and let it cook for 5 minutes, stirring, until the oil separates and the cream looks glossy and slightly grainy. Add the Massaman paste and the whole spices and fry for 3 minutes — the paste will darken and the kitchen should smell of cinnamon, cardamom and roasted cumin. This early bloom of the spices is what gives Massaman its Persian-inflected depth.\n\nAdd the beef and turn it in the paste until every piece is dark red. Pour in the coconut milk, the tamarind paste and the kaffir lime leaves, bring to a bare simmer, and braise gently with the lid ajar for an hour and a half, stirring every 20 minutes. The beef is ready when it gives easily to a spoon but still holds its shape.\n\nSlide in the potatoes, onions and peanuts and continue cooking uncovered for another 30 minutes, until the potatoes are tender and the gravy has thickened to a glossy, rich brown. Stir in the fish sauce and palm sugar at the end, balancing the salt-sweet-sour triangle until it tastes deep and round, neither too sweet nor too sharp.\n\nRest off the heat for 10 minutes. Serve in shallow bowls with jasmine rice, scattered with a few crushed peanuts on top — Massaman is the Thai curry that gains depth overnight, and any leftovers taste better the next day."
+    },
+    {
+      "name": "Som Tam",
+      "cuisine": "Thailand",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "400 g green (unripe) papaya, peeled and finely julienned",
+        "4 cherry tomatoes, halved",
+        "2 long beans (yardlong) or 4 green beans, cut into 4 cm lengths",
+        "2 garlic cloves, peeled",
+        "2 bird's eye chillies (or to taste)",
+        "2 tbsp palm sugar",
+        "2 tbsp Thai fish sauce",
+        "Juice of 1 lime",
+        "1 tbsp tamarind concentrate",
+        "1 tbsp dried shrimp",
+        "2 tbsp roasted peanuts (some crushed, some whole)",
+        "Iceberg lettuce or cabbage leaves to serve (optional, traditional)"
+      ],
+      "howIsMade": "In a clay mortar (krok) or a sturdy stone mortar, pound the garlic and chillies together until bruised — not pulverised, just opened up. Add the palm sugar and pound a few more times to break it down into the chilli oil.\n\nPour in the fish sauce, lime juice and tamarind, stir with the pestle to dissolve the sugar, then tip in the dried shrimp and pound a couple of times to flatten them into the dressing.\n\nAdd the long beans and tomato halves and pound gently — five or six taps each, just enough to bruise them and release their juices into the dressing. The pestle here is a tool of seasoning, not destruction.\n\nTip in the shredded papaya in two batches, alternating between light pounding and turning everything with a spoon, until each strand is glossy with the dressing but still crisp. Add the peanuts — whole ones for crunch, crushed for body — and toss one last time.\n\nTaste. Som Tam should hit four flavours at once: sour, salty, sweet and chilli-fierce. Pile into shallow bowls or onto lettuce leaves and eat immediately with sticky rice or grilled chicken."
+    },
+    {
+      "name": "Khao Soi",
+      "cuisine": "Thailand",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "4 tbsp Northern Thai khao soi curry paste (or 3 tbsp red curry paste + 1 tsp curry powder + 1 tsp ground turmeric)",
+        "500 g bone-in chicken thighs or chicken legs cut into pieces",
+        "800 ml full-fat coconut milk",
+        "200 ml coconut cream",
+        "500 ml chicken stock",
+        "2 tbsp Thai fish sauce",
+        "1 tbsp palm sugar",
+        "400 g fresh egg noodles (or 300 g dried)",
+        "Neutral oil for deep-frying a handful of noodles",
+        "Juice of 2 limes, added at the table",
+        "Garnishes: sliced shallots, pickled mustard greens, fresh coriander, lime wedges, chilli oil"
+      ],
+      "howIsMade": "Heat the coconut cream in a heavy pot over medium heat for 4–5 minutes, until the oil cracks out and the cream looks slick. Stir in the khao soi paste and fry for 2–3 minutes, until it darkens and the kitchen smells deep and toasted — heavier and earthier than central-Thai curries because the paste leans on dry spices.\n\nAdd the chicken pieces and turn them in the paste until coated, then pour in the coconut milk and stock. Bring to a gentle simmer and cook with the lid ajar for 30–35 minutes, until the chicken is meltingly tender and the broth has reduced a little. Season with fish sauce and palm sugar towards the end; the broth should be rich, gently sweet, and faintly sour from the curry paste itself.\n\nWhile the curry simmers, take a small handful of the fresh egg noodles, shake off any excess water, and deep-fry in 180°C oil for 30–45 seconds, until puffed and golden — the crispy crown on top of every bowl. Drain on paper.\n\nBoil the remaining noodles in plain water until just tender, drain quickly, and divide between deep bowls. Ladle over the hot curry with at least one piece of chicken per portion, top with the fried noodles, and pass round the garnishes — sliced shallots, pickled mustard greens, coriander, a lime wedge to squeeze in last, and a spoon of chilli oil.\n\nThe dish lives on contrast: silky soup, soft noodles below, crisp noodles above, raw shallot bite, pickled tang, lime brightness. Each bowl is built at the table."
+    },
+    {
+      "name": "Mango Sticky Rice (Khao Niao Mamuang)",
+      "cuisine": "Thailand",
+      "status": {
+        "drafted": true,
+        "needs_qa": true,
+        "needs_timing_review": true,
+        "needs_image_review": true,
+        "localization_pending": true,
+        "enrichment_pending": true,
+        "publishing_pending": true
+      },
+      "ingredients": [
+        "300 g Thai glutinous (sticky) rice, soaked in cold water at least 4 hours or overnight",
+        "400 ml full-fat coconut milk",
+        "80 g palm sugar (or light brown sugar)",
+        "½ tsp salt",
+        "1 pandan leaf, tied in a knot (optional, traditional)",
+        "2 ripe yellow mangoes (Nam Dok Mai or Ataulfo), peeled and sliced",
+        "2 tbsp toasted sesame seeds or split mung beans, for garnish",
+        "1 tsp rice flour (optional, for thickening the salty topping)"
+      ],
+      "howIsMade": "Drain the soaked rice and steam it: line a steamer basket with cheesecloth or banana leaf, tip in the rice and steam covered over a moderate boil for 20–25 minutes. Halfway through, lift the cloth and turn the mound of rice over so the bottom and top swap places — this is what stops the bottom layer over-cooking into mush. The grains are done when they are translucent, glossy and chewy-tender all the way through.\n\nWhile the rice steams, warm 300 ml of the coconut milk in a small saucepan with the palm sugar, salt and pandan leaf, stirring just enough to dissolve the sugar without bringing it to a boil. Reserve the remaining 100 ml for the salty topping.\n\nWhen the rice is hot from the steamer, transfer it to a wide bowl and pour over two-thirds of the warm sweet coconut milk, folding it through with a spatula until each grain is glossy. Cover and let it sit for 15–20 minutes; this resting step is what makes proper sticky rice, as the rice drinks the coconut milk and swells to the consistency of soft pearl pudding.\n\nFor the salty topping, simmer the remaining coconut milk with a generous pinch of salt and the teaspoon of rice flour for 2 minutes, until it just thickens.\n\nMound the warm coconut rice on a plate, arrange the mango slices beside it, drizzle the salty coconut cream across the top, and finish with a scattering of toasted sesame seeds or split mung beans. Eat with a spoon, taking a bit of rice and a bit of mango in every mouthful — the contrast of warm coconut-sweet and cool fruit-sharp is the dish."
+    }
+  ]
+}
