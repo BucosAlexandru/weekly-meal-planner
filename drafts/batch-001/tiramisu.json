@@ -1,0 +1,193 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Tiramisu", "ro": "Tiramisu", "es": "Tiramisú", "fr": "Tiramisu",
+    "de": "Tiramisu", "pt": "Tiramisu", "ru": "Тирамису", "ar": "تيراميسو",
+    "zh": "提拉米苏", "ja": "ティラミス", "tr": "Tiramisu", "it": "Tiramisù",
+    "ko": "티라미수", "hi": "तिरामिसु"
+  },
+  "cuisine": {
+    "en": "Italy", "ro": "Italia", "es": "Italia", "fr": "Italie",
+    "de": "Italien", "pt": "Itália", "ru": "Италия", "ar": "إيطاليا",
+    "zh": "意大利", "ja": "イタリア", "tr": "İtalya", "it": "Italia",
+    "ko": "이탈리아", "hi": "इटली"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "500 g mascarpone, at room temperature",
+      "5 large eggs, separated, at room temperature",
+      "100 g caster sugar",
+      "250 ml strong cold espresso (about 5 shots)",
+      "2 tbsp Marsala (sweet) or dark rum (optional, traditional in Treviso)",
+      "300 g savoiardi (Italian ladyfingers — the firm kind, not the soft kind)",
+      "Unsweetened cocoa powder for dusting",
+      "A small piece of dark chocolate for shaving (optional)",
+      "Pinch of salt for the egg whites"
+    ],
+    "ro": [
+      "500 g mascarpone, la temperatura camerei",
+      "5 ouă mari, separate, la temperatura camerei",
+      "100 g zahăr tos",
+      "250 ml espresso tare rece (aproximativ 5 ceșcuțe)",
+      "2 linguri Marsala dulce sau rom închis (opțional, tradițional la Treviso)",
+      "300 g savoiardi (pișcoturi italiene — cele ferme, nu cele moi)",
+      "Cacao amară pentru pudrare",
+      "O bucățică de ciocolată neagră pentru ras (opțional)",
+      "Un praf de sare pentru albușuri"
+    ],
+    "es": [
+      "500 g de mascarpone, a temperatura ambiente",
+      "5 huevos grandes, separados, a temperatura ambiente",
+      "100 g de azúcar",
+      "250 ml de espresso fuerte frío (unos 5 cafés)",
+      "2 cdas de Marsala dulce o ron oscuro (opcional, tradicional en Treviso)",
+      "300 g de savoiardi (soletillas italianas firmes, no las blandas)",
+      "Cacao en polvo sin azúcar para espolvorear",
+      "Un trozo pequeño de chocolate negro para rallar (opcional)",
+      "Una pizca de sal para las claras"
+    ],
+    "fr": [
+      "500 g de mascarpone, à température ambiante",
+      "5 gros œufs, séparés, à température ambiante",
+      "100 g de sucre semoule",
+      "250 ml d'espresso fort et froid (environ 5 tasses)",
+      "2 c. à soupe de Marsala doux ou de rhum ambré (facultatif, traditionnel à Trévise)",
+      "300 g de savoiardi (biscuits à la cuiller italiens — le type ferme, pas le mou)",
+      "Cacao en poudre non sucré pour saupoudrer",
+      "Un petit morceau de chocolat noir à râper (facultatif)",
+      "Une pincée de sel pour les blancs"
+    ],
+    "de": [
+      "500 g Mascarpone, zimmerwarm",
+      "5 große Eier, getrennt, zimmerwarm",
+      "100 g feiner Zucker",
+      "250 ml starker, kalter Espresso (etwa 5 Tassen)",
+      "2 EL süßer Marsala oder dunkler Rum (optional, in Treviso traditionell)",
+      "300 g Savoiardi (italienische Löffelbiskuits — die festen, nicht die weichen)",
+      "Ungezuckertes Kakaopulver zum Bestäuben",
+      "Ein kleines Stück Zartbitterschokolade zum Hobeln (optional)",
+      "Eine Prise Salz für das Eiweiß"
+    ],
+    "pt": [
+      "500 g de mascarpone, à temperatura ambiente",
+      "5 ovos grandes, separados, à temperatura ambiente",
+      "100 g de açúcar",
+      "250 ml de espresso forte e frio (cerca de 5 cafés)",
+      "2 colheres de sopa de Marsala doce ou rum escuro (opcional, tradicional em Treviso)",
+      "300 g de savoiardi (palitos italianos firmes, não os moles)",
+      "Cacau em pó sem açúcar para polvilhar",
+      "Um pedaço pequeno de chocolate amargo para raspar (opcional)",
+      "Uma pitada de sal para as claras"
+    ],
+    "ru": [
+      "500 г маскарпоне, комнатной температуры",
+      "5 крупных яиц, разделить на белки и желтки, комнатной температуры",
+      "100 г мелкого сахара",
+      "250 мл крепкого холодного эспрессо (около 5 порций)",
+      "2 ст. л. сладкой Марсалы или тёмного рома (по желанию, традиционно в Тревизо)",
+      "300 г савоярди (итальянское дамское печенье — твёрдое, не мягкое)",
+      "Несладкое какао-порошок для посыпки",
+      "Кусочек тёмного шоколада для стружки (по желанию)",
+      "Щепотка соли для белков"
+    ],
+    "ar": [
+      "500 غ مسكربوني، في حرارة الغرفة",
+      "5 بيضات كبيرة، مفصولة، في حرارة الغرفة",
+      "100 غ سكر ناعم",
+      "250 مل إسبريسو قوي بارد (نحو 5 جرعات)",
+      "2 ملعقة كبيرة مارسالا حلوة أو رم داكن (اختياري، تقليدي في تريفيزو)",
+      "300 غ سافوياردي (أصابع البسكويت الإيطالية — النوع الصلب لا الطري)",
+      "كاكاو غير محلّى للتزيين",
+      "قطعة صغيرة من الشوكولاتة الداكنة للبرش (اختياري)",
+      "رشة ملح للبياض"
+    ],
+    "zh": [
+      "马斯卡彭奶酪 500 克，置于室温",
+      "大鸡蛋 5 个，分离蛋黄蛋白，置于室温",
+      "细砂糖 100 克",
+      "冷的浓缩咖啡 250 毫升（约 5 杯 espresso）",
+      "甜马沙拉酒（Marsala）或深色朗姆酒 2 汤匙（可选，特雷维索传统配方）",
+      "意大利手指饼干 savoiardi 300 克（结实的那种，不是软的）",
+      "无糖可可粉用于撒面",
+      "黑巧克力一小块，用来刨碎（可选）",
+      "一撮盐给蛋白"
+    ],
+    "ja": [
+      "マスカルポーネ 500 g、室温",
+      "L 卵 5 個、卵黄と卵白に分け、室温に戻したもの",
+      "グラニュー糖 100 g",
+      "濃いめの冷たいエスプレッソ 250 ml（約 5 ショット）",
+      "甘口マルサラ酒、またはダークラム 大さじ 2（任意、トレヴィーゾの伝統）",
+      "サヴォイアルディ 300 g（イタリアのフィンガービスケット、しっかりした硬めのタイプ）",
+      "仕上げ用の無糖ココアパウダー",
+      "削り用のダークチョコレート 少々（任意）",
+      "卵白用の塩ひとつまみ"
+    ],
+    "tr": [
+      "500 g mascarpone, oda sıcaklığında",
+      "5 büyük yumurta, sarısı ve beyazı ayrılmış, oda sıcaklığında",
+      "100 g toz şeker",
+      "250 ml güçlü, soğuk espresso (yaklaşık 5 shot)",
+      "2 yemek kaşığı tatlı Marsala ya da koyu rom (isteğe bağlı, Treviso geleneği)",
+      "300 g savoiardi (sert İtalyan kedidili bisküvileri — yumuşağı değil)",
+      "Üzeri için şekersiz kakao tozu",
+      "Rendelemek için bir parça bitter çikolata (isteğe bağlı)",
+      "Yumurta beyazları için bir tutam tuz"
+    ],
+    "it": [
+      "500 g di mascarpone, a temperatura ambiente",
+      "5 uova grandi, separate, a temperatura ambiente",
+      "100 g di zucchero semolato",
+      "250 ml di caffè espresso forte e freddo (circa 5 tazzine)",
+      "2 cucchiai di Marsala dolce o rum scuro (facoltativo, tradizionale a Treviso)",
+      "300 g di savoiardi (quelli sodi, non i morbidi)",
+      "Cacao amaro in polvere per spolverare",
+      "Un piccolo pezzo di cioccolato fondente da grattugiare (facoltativo)",
+      "Un pizzico di sale per gli albumi"
+    ],
+    "ko": [
+      "마스카르포네 500 g, 실온",
+      "큰 달걀 5개, 흰자와 노른자 분리, 실온",
+      "고운 설탕 100 g",
+      "차가운 진한 에스프레소 250 ml (약 5샷)",
+      "달콤한 마르살라 와인 또는 다크 럼 2큰술 (선택, 트레비조 전통)",
+      "사보이아르디 300 g (이탈리아식 단단한 핑거 비스킷, 부드러운 종류 아님)",
+      "무가당 코코아 파우더 (마무리용)",
+      "다크 초콜릿 작은 조각 (강판용, 선택)",
+      "흰자용 소금 한 꼬집"
+    ],
+    "hi": [
+      "500 ग्राम मस्कारपोने, कमरे के तापमान पर",
+      "5 बड़े अंडे, अलग किए हुए, कमरे के तापमान पर",
+      "100 ग्राम बारीक चीनी",
+      "250 मिली ठंडी तेज़ एस्प्रेसो कॉफ़ी (लगभग 5 शॉट)",
+      "2 बड़े चम्मच मीठी मार्साला या डार्क रम (वैकल्पिक, ट्रेविज़ो परंपरा)",
+      "300 ग्राम savoiardi (इतालवी फिंगर बिस्कुट — सख़्त वाले, नर्म नहीं)",
+      "ऊपर छिड़कने के लिए बिना चीनी का कोको पाउडर",
+      "कद्दूकस के लिए डार्क चॉकलेट का एक छोटा टुकड़ा (वैकल्पिक)",
+      "अंडे की सफ़ेदी के लिए एक चुटकी नमक"
+    ]
+  },
+  "howIsMade": {
+    "en": "Whisk the egg yolks with the sugar in a large bowl for 4–5 minutes — by hand or with an electric beater — until pale, foamy and dramatically tripled in volume. The sugar should be completely dissolved when you rub a little between your fingers; undermixing here gives you a grainy tiramisu later.\n\nAdd the mascarpone in three batches, whisking gently after each, until the cream is smooth and glossy. In a separate clean bowl, whisk the egg whites with a pinch of salt to firm, glossy peaks — they should hold their shape when the whisk is lifted. Fold the whites into the mascarpone mixture in three additions, using a large spatula and folding from the centre outwards to keep the air in; the finished cream should be light, almost pourable, but holding soft peaks.\n\nMix the cold espresso and Marsala in a shallow dish. One at a time, dip a savoiardo into the espresso — just briefly, 2 seconds per side at most. They're sponges, and oversoaked ladyfingers turn to mush and weep through the cream. Lay them in a tight single layer in the bottom of a 22×30 cm dish.\n\nSpread half the mascarpone cream over the ladyfingers in an even layer, then repeat: another tight layer of dipped savoiardi, then the rest of the cream on top, smoothed level with the spatula.\n\nCover with clingfilm and refrigerate at least 6 hours, ideally overnight — tiramisu eaten the same day tastes like its parts; tiramisu rested overnight tastes like one dessert, with the coffee and cream merged together. Just before serving, dust the top generously with cocoa powder pushed through a fine sieve, shave over a little dark chocolate if you like, and cut with a hot knife wiped between slices.",
+    "ro": "Bate gălbenușurile cu zahărul într-un bol mare 4–5 minute — cu mâna sau cu un mixer electric — până devin palide, spumoase și își triplează volumul. Zahărul trebuie să fie complet dizolvat când îl freci puțin între degete; dacă rămâne neamestecat aici, vei avea mai târziu o tiramisu cu granulație.\n\nAdaugă mascarpone în trei tranșe, amestecând blând cu telul după fiecare, până crema devine netedă și lucioasă. Într-un alt bol curat, bate albușurile cu un praf de sare până la vârfuri ferme și lucioase — trebuie să-și țină forma când ridici telul. Încorporează albușurile în masa de mascarpone în trei reprize, cu o spatulă mare, învârtind dinspre centru spre exterior ca să păstrezi aerul; crema finită trebuie să fie ușoară, aproape lichidă, dar să țină vârfuri moi.\n\nAmestecă espresso-ul rece cu Marsala într-un vas plat. Pe rând, înmoaie un savoiardo în espresso — scurt, maxim 2 secunde pe fiecare parte. Sunt bureți, iar pișcoturile prea înmuiate devin terci și plâng prin cremă. Așază-le strâns într-un singur strat pe fundul unui vas de 22×30 cm.\n\nÎntinde jumătate din crema de mascarpone peste pișcoturi într-un strat uniform, apoi repetă: încă un strat strâns de savoiardi înmuiate, apoi restul de cremă deasupra, nivelată cu spatula.\n\nAcoperă cu folie și pune la rece minim 6 ore, ideal peste noapte — tiramisu mâncată în aceeași zi are gust de părți; cea odihnită peste noapte are gust de un singur desert, în care cafeaua și crema s-au unit. Chiar înainte de servit, presară din belșug cacao pudră prin sită fină, rade puțină ciocolată neagră dacă vrei, și taie cu un cuțit fierbinte șters între felii.",
+    "es": "Bate las yemas con el azúcar en un bol grande 4–5 minutos — a mano o con varillas eléctricas — hasta que estén pálidas, espumosas y hayan triplicado su volumen. El azúcar debe estar completamente disuelto al frotarlo entre los dedos; quedarse corto aquí te dará un tiramisú granuloso más tarde.\n\nAñade el mascarpone en tres tandas, mezclando con suavidad después de cada una, hasta que la crema esté lisa y brillante. En un bol limpio aparte, monta las claras con una pizca de sal a picos firmes y brillantes — deben aguantar la forma cuando levantas las varillas. Incorpora las claras a la crema de mascarpone en tres adiciones, con una espátula grande y movimientos envolventes desde el centro hacia fuera para conservar el aire; la crema final debe ser ligera, casi vertible, pero mantener picos suaves.\n\nMezcla el espresso frío y la Marsala en un plato plano. De uno en uno, moja un savoiardo en el espresso — sólo brevemente, 2 segundos por cada lado como máximo. Son esponjas, y unas soletillas demasiado mojadas se convierten en puré y lloran a través de la crema. Colócalas en una capa apretada en el fondo de una fuente de 22×30 cm.\n\nExtiende la mitad de la crema de mascarpone sobre las soletillas en una capa uniforme, después repite: otra capa apretada de savoiardi mojados, y el resto de la crema por encima, nivelada con la espátula.\n\nCubre con film y refrigera al menos 6 horas, idealmente toda la noche — el tiramisú comido el mismo día sabe a sus partes; el tiramisú reposado toda la noche sabe a un único postre, con el café y la crema unidos. Justo antes de servir, espolvorea generosamente cacao en polvo a través de un colador fino, ralla un poco de chocolate negro si quieres, y corta con un cuchillo caliente limpiado entre porciones.",
+    "fr": "Fouettez les jaunes avec le sucre dans un grand bol 4 à 5 minutes — à la main ou au batteur électrique — jusqu'à ce qu'ils soient pâles, mousseux et triplés de volume. Le sucre doit être complètement dissous quand vous en frottez un peu entre les doigts ; négliger cette étape vous donnera ensuite un tiramisu granuleux.\n\nAjoutez le mascarpone en trois fois, en mélangeant doucement après chaque ajout, jusqu'à ce que la crème soit lisse et brillante. Dans un autre bol bien propre, montez les blancs avec une pincée de sel en pics fermes et brillants — ils doivent tenir leur forme quand on lève le fouet. Incorporez les blancs à la crème de mascarpone en trois fois, à la spatule, en repliant du centre vers l'extérieur pour garder l'air ; la crème finie doit être légère, presque coulante, mais retenir des pics souples.\n\nMélangez l'espresso froid et le Marsala dans un plat creux. Trempez un savoiardo à la fois dans l'espresso — brièvement, 2 secondes par face au maximum. Ce sont des éponges, et des biscuits trop trempés se transforment en bouillie et pleurent à travers la crème. Disposez-les en une couche serrée au fond d'un plat de 22×30 cm.\n\nÉtalez la moitié de la crème au mascarpone sur les biscuits en une couche régulière, puis recommencez : une autre couche serrée de savoiardi trempés, puis le reste de la crème par-dessus, lissée à la spatule.\n\nCouvrez de film et placez au frais au moins 6 heures, idéalement toute la nuit — un tiramisu mangé le jour même a un goût de chaque ingrédient ; un tiramisu reposé une nuit a un goût de dessert unique, café et crème fondus. Juste avant de servir, saupoudrez généreusement de cacao en poudre à travers un tamis fin, râpez un peu de chocolat noir si vous voulez, et coupez avec un couteau chaud, essuyé entre chaque part.",
+    "de": "Schlagen Sie die Eigelbe mit dem Zucker in einer großen Schüssel 4–5 Minuten — von Hand oder mit dem Handrührer — bis sie hell, schaumig sind und sich das Volumen verdreifacht hat. Der Zucker muss vollständig aufgelöst sein, wenn Sie etwas zwischen den Fingern verreiben; eine unzureichende Aufschlagung führt später zu körnigem Tiramisu.\n\nGeben Sie den Mascarpone in drei Portionen dazu und mischen Sie nach jeder sanft unter, bis die Creme glatt und glänzend ist. Schlagen Sie in einer separaten sauberen Schüssel die Eiweiß mit einer Prise Salz zu festen, glänzenden Spitzen — sie müssen ihre Form halten, wenn Sie den Schneebesen heben. Heben Sie das Eiweiß in drei Portionen mit einem großen Teigschaber unter, dabei von der Mitte nach außen wenden, um die Luft zu erhalten; die fertige Creme soll leicht, fast gießfähig sein, aber weiche Spitzen halten.\n\nVermischen Sie den kalten Espresso und den Marsala in einer flachen Schale. Tauchen Sie die Savoiardi einzeln in den Espresso — nur kurz, maximal 2 Sekunden je Seite. Sie sind Schwämme, und zu nasse Löffelbiskuits werden zu Brei und weinen durch die Creme. Legen Sie sie in einer dichten Schicht in eine 22×30-cm-Form.\n\nVerteilen Sie die Hälfte der Mascarpone-Creme gleichmäßig auf den Löffelbiskuits, dann wiederholen Sie: eine weitere dichte Lage getauchter Savoiardi, danach den Rest der Creme darüber, mit dem Teigschaber glatt gestrichen.\n\nMit Klarsichtfolie abdecken und mindestens 6 Stunden, idealerweise über Nacht kühlen — Tiramisu am selben Tag schmeckt nach seinen Bestandteilen; ein über Nacht ruhendes Tiramisu schmeckt nach einem einzigen Dessert, in dem Kaffee und Creme verschmolzen sind. Kurz vor dem Servieren großzügig mit ungesüßtem Kakao durch ein feines Sieb bestäuben, etwas Zartbitterschokolade darüber hobeln, wenn gewünscht, und mit einem heißen, zwischen den Schnitten abgewischten Messer schneiden.",
+    "pt": "Bata as gemas com o açúcar numa taça grande durante 4–5 minutos — à mão ou com batedeira elétrica — até estarem pálidas, espumosas e com o volume triplicado. O açúcar deve estar totalmente dissolvido ao esfregar um pouco entre os dedos; deixar este passo a meio dá um tiramisu granuloso mais tarde.\n\nAdicione o mascarpone em três partes, envolvendo com suavidade depois de cada uma, até o creme estar liso e brilhante. Numa taça limpa à parte, bata as claras com uma pitada de sal a picos firmes e brilhantes — devem aguentar a forma quando levantar as varas. Envolva as claras no creme de mascarpone em três adições, com uma espátula grande e movimentos do centro para fora para reter o ar; o creme final deve ser leve, quase liquido, mas sustentar picos moles.\n\nMisture o espresso frio e o Marsala numa tigela rasa. Um a um, molhe um savoiardo no espresso — apenas brevemente, 2 segundos por lado no máximo. São esponjas, e palitos demasiado embebidos viram puré e choram pelo creme. Disponha-os numa camada bem apertada no fundo de uma forma de 22×30 cm.\n\nEspalhe metade do creme de mascarpone sobre os palitos numa camada uniforme, depois repita: outra camada apertada de savoiardi molhados, e por cima o resto do creme, alisado com a espátula.\n\nCubra com película e leve ao frigorífico no mínimo 6 horas, idealmente uma noite — tiramisu comido no próprio dia sabe às suas partes; tiramisu descansado durante a noite sabe a uma única sobremesa, com café e creme fundidos. Mesmo antes de servir, polvilhe generosamente com cacau em pó por um passador fino, rale um pouco de chocolate negro se quiser, e corte com uma faca quente limpa entre fatias.",
+    "ru": "Взбейте желтки с сахаром в большой миске 4–5 минут — вручную или электрическим миксером — до бледной пены и трёхкратного увеличения объёма. Сахар должен полностью раствориться, когда вы потрёте немного массы между пальцами; недовзбитые желтки позже дадут зернистый тирамису.\n\nДобавьте маскарпоне в три приёма, мягко вмешивая венчиком после каждого, до гладкого и блестящего крема. В отдельной чистой миске взбейте белки со щепоткой соли до устойчивых блестящих пиков — они должны держать форму при поднятии венчика. Введите белки в крем в три приёма большой лопаткой, складывая от центра наружу, чтобы сохранить воздух; готовый крем должен быть лёгким, почти текучим, но удерживать мягкие пики.\n\nСмешайте холодный эспрессо и Марсалу в плоском блюде. По одному окуните савоярди в эспрессо — лишь коротко, не больше 2 секунд с каждой стороны. Они губки, и переувлажнённое печенье превращается в кашу и плачет сквозь крем. Уложите их плотным слоем на дно формы 22×30 см.\n\nРавномерно распределите половину маскарпоневого крема поверх печенья, затем повторите: ещё один плотный слой смоченных савоярди, поверх — остаток крема, выровнять лопаткой.\n\nЗакройте плёнкой и охлаждайте минимум 6 часов, идеально на ночь — тирамису, съеденный в тот же день, на вкус — набор ингредиентов; отдохнувший за ночь, он становится единым десертом, в котором кофе и крем сплавлены. Перед самой подачей щедро посыпьте через мелкое сито какао без сахара, при желании настрогайте сверху немного тёмного шоколада и нарежьте горячим ножом, протирая лезвие между порциями.",
+    "ar": "اخفق صفار البيض مع السكر في وعاء كبير 4–5 دقائق — يدوياً أو بخفّاقة كهربائية — حتى يصبح فاتح اللون، رغوياً، وقد تضاعف حجمه ثلاث مرات. يجب أن يكون السكر قد ذاب كلياً عند فرك القليل بين أصابعك؛ التقصير هنا يعطيك تيراميسو بحُبَيبات لاحقاً.\n\nأضف المسكربوني على ثلاث دفعات، مع التقليب اللطيف بعد كل دفعة، حتى تصبح الكريمة ناعمة ولامعة. في وعاء آخر نظيف، اخفق البياض مع رشة ملح حتى قمم قاسية لامعة — يجب أن يحتفظ شكله عند رفع المخفقة. أدخل البياض إلى المزيج على ثلاث دفعات بملعقة كبيرة، مع التقليب من المركز إلى الخارج للحفاظ على الهواء؛ يجب أن تكون الكريمة النهائية خفيفة، شبه سائلة، لكنها تحمل قمماً ليّنة.\n\nاخلط الإسبريسو البارد والمارسالا في وعاء مسطح. غمّس السافوياردي واحدة تلو الأخرى في الإسبريسو — لفترة قصيرة فقط، ثانيتان على كل وجه كحد أقصى. هي إسفنجات، والبسكويت المنقوع زيادة يتحول إلى عجين ويبكي عبر الكريمة. رصّها بإحكام في طبقة واحدة في قاع صينية 22×30 سم.\n\nوزّع نصف كريمة المسكربوني فوق البسكويت بطبقة متساوية، ثم كرّر: طبقة أخرى محكمة من السافوياردي المغموسة، ثم باقي الكريمة فوقها، مسوّاة بالملعقة.\n\nغطِّ بالغلاف البلاستيكي وضع في الثلاجة 6 ساعات على الأقل، ويفضّل طوال الليل — التيراميسو الذي يُؤكل في اليوم نفسه يكون طعمه طعم مكوّناته؛ والذي يرتاح ليلة كاملة يصبح حلوى واحدة، تذوب فيها القهوة والكريمة معاً. قبل التقديم مباشرة، انثر كاكاو غير محلّى بسخاء عبر مصفاة دقيقة، وابرش قطعة شوكولاتة داكنة إن رغبت، وقطّع بسكين ساخن تمسحه بين قطعة وأخرى.",
+    "zh": "在大碗里把蛋黄和糖打 4–5 分钟——手动或用电动打蛋器——直到颜色变浅、起泡、体积膨大三倍。用手指捻一点摸摸，糖应该完全溶化；这一步不到位，最后做出来的提拉米苏会粒粒发渣。\n\n马斯卡彭分三次加入，每次都用打蛋器轻轻拌至顺滑光亮。另取一只干净的碗，蛋白加一小撮盐打到挺立、有光泽的硬性发泡——抬起打蛋器要能立住峰。用大刮刀将蛋白分三次拌入奶酪糊中，从中心朝外翻拌以保留空气；最后的奶油糊应当轻盈、几乎能倒出来，但能保持柔性的尖。\n\n把冷的浓缩咖啡和马沙拉酒混在一只浅盘里。一片一片地把手指饼蘸进咖啡——很快，每面最多 2 秒。手指饼是海绵，泡过头会变成糊、并把咖啡渗到奶油里。把它们紧紧地铺一层放进 22×30 厘米的盘底。\n\n把一半的马斯卡彭奶油糊均匀铺在手指饼上，再重复一遍：又一层紧密的浸过咖啡的 savoiardi，最上面是剩下的奶油糊，用刮刀抹平。\n\n盖上保鲜膜，冷藏至少 6 小时，最好放过夜——当天吃的提拉米苏吃起来还是各种食材；放一夜的提拉米苏才像一道甜点，咖啡和奶油融为一体。上桌前用细筛把无糖可可粉大方地筛在表面，喜欢的话再刨一些黑巧克力屑，切的时候用热刀，每切一块擦一次。",
+    "ja": "大きなボウルに卵黄と砂糖を入れ、4〜5 分間 — 手動でも電動でも — 色が淡くなり、ふんわりと泡立ち、量が 3 倍ほどに膨らむまで泡立てる。指で少しこすってみて砂糖が完全に溶けている状態が正解。ここで泡立てが足りないと、後でジャリッとしたティラミスになる。\n\nマスカルポーネを 3 回に分けて加え、その都度やさしく混ぜ、なめらかで艶のあるクリームに仕上げる。別の清潔なボウルで、卵白に塩ひとつまみを加え、しっかりした艶のあるピークまで泡立てる — 泡立て器を持ち上げたとき、形を保てる固さ。大きめのへらでメレンゲをマスカルポーネ生地に 3 回に分けて加え、中心から外側へ折り込むように混ぜて空気を逃さない；仕上がりのクリームは軽く、流れ落ちる手前で、ゆるいピークが立つくらい。\n\n浅い器に冷たいエスプレッソとマルサラを混ぜる。サヴォイアルディを 1 本ずつ、ごく短く — 1 面につき 2 秒以内 — 浸す。彼らはスポンジで、浸しすぎたフィンガービスケットはぐずぐずに崩れ、クリームへ滲み出てしまう。22×30 cm の容器の底に、隙間なく 1 段並べる。\n\nマスカルポーネクリームの半量をビスケットの上に均一に塗り、もう一度同じ手順を繰り返す：浸したサヴォイアルディをぴったり並べ、その上に残りのクリームをのせ、へらで平らにならす。\n\nラップをして冷蔵庫で最低 6 時間、できれば一晩冷やす — 同じ日に食べるティラミスは「素材の味」のままだ。一晩寝かせたティラミスはひとつのデザートになる — コーヒーとクリームが解け合った状態だ。供する直前に、無糖のココアパウダーを細かい網で表面にたっぷりふり、好みでダークチョコレートを少し削り、熱したナイフで、一切れごとに拭きながら切り分ける。",
+    "tr": "Yumurta sarılarını şekerle birlikte büyük bir kâsede 4–5 dakika — elle ya da elektrikli çırpıcıyla — açık renkli, köpüklü ve hacmi üç katına çıkana dek çırpın. Bir miktarı parmaklar arasında ovuşturduğunuzda şeker tamamen erimiş olmalı; bu aşamayı eksik bırakmak sonradan size taneli bir tiramisu verir.\n\nMascarpone'yi üç partide ekleyin ve her ekleyişten sonra nazikçe karıştırın, krema pürüzsüz ve parlak olana kadar. Ayrı temiz bir kâsede yumurta beyazlarını bir tutam tuzla sıkı, parlak tepeler oluşana kadar çırpın — çırpıcıyı kaldırdığınızda şeklini koruyacak. Beyazları üç defada büyük bir spatulayla mascarpone karışımına katın, havanın korunması için merkezden dışa doğru kıvırarak; bitmiş krema hafif, neredeyse dökülecek kıvamda ama yumuşak tepe tutacak şekilde olmalı.\n\nSoğuk espresso ile Marsala'yı sığ bir kapta karıştırın. Savoiardi'leri tek tek espresso'ya kısa süre — her yüzü en fazla 2 saniye — daldırın. Süngerdir bunlar; fazla ıslatılmış kedidili lapaya döner ve kremanın içine doğru ağlar. 22×30 cm'lik bir kabın tabanına sıkı tek bir kat olarak dizin.\n\nMascarpone kremasının yarısını savoiardi'lerin üzerine eşit bir tabaka olarak yayın, sonra tekrarlayın: bir sıra daha sıkı dizilmiş ıslatılmış savoiardi, en üste kalan krema, spatulayla düzleştirin.\n\nÜzerini streç filmle örtün ve en az 6 saat, tercihen bir gece, buzdolabında dinlendirin — aynı gün yenen tiramisu malzemelerinin tadıdır; bir gece dinlendirilmiş tiramisu tek bir tatlıdır, kahve ile krema birleşmiştir. Servis etmeden hemen önce, üzerine ince bir süzgeçten cömertçe kakao tozu serpin, dilerseniz biraz bitter çikolata rendeleyin, sıcak bir bıçakla — her dilim arası silinerek — kesin.",
+    "it": "Montate i tuorli con lo zucchero in una ciotola grande per 4–5 minuti — a mano o con la frusta elettrica — finché non sono chiari, spumosi e triplicati di volume. Lo zucchero deve essere completamente sciolto se ne strofinate un po' tra le dita; saltare questo passaggio vi darà poi un tiramisù granuloso.\n\nAggiungete il mascarpone in tre volte, mescolando con delicatezza dopo ognuna, finché la crema non è liscia e lucida. In un'altra ciotola pulita, montate gli albumi con un pizzico di sale a picchi fermi e lucidi — devono restare in posizione quando si solleva la frusta. Incorporate gli albumi al composto di mascarpone in tre volte, con una grande spatola, ripiegando dal centro verso l'esterno per non far perdere aria; la crema finita deve essere leggera, quasi colabile, ma trattenere picchi morbidi.\n\nMescolate l'espresso freddo e il Marsala in un piatto fondo. Inzuppate i savoiardi uno alla volta nell'espresso — un attimo, al massimo 2 secondi per lato. Sono spugne, e dei savoiardi troppo inzuppati diventano poltiglia e gocciolano attraverso la crema. Disponeteli in uno strato stretto sul fondo di una pirofila di 22×30 cm.\n\nStendete metà della crema al mascarpone sui savoiardi in uno strato uniforme, poi ripetete: un altro strato stretto di savoiardi inzuppati, e sopra il resto della crema, livellata con la spatola.\n\nCoprite con pellicola e mettete in frigorifero almeno 6 ore, idealmente tutta la notte — il tiramisù mangiato in giornata sa di ingredienti; il tiramisù riposato una notte sa di un unico dolce, dove caffè e crema si sono fusi. Subito prima di servire, spolverate generosamente il cacao amaro attraverso un colino fine, grattate sopra un po' di cioccolato fondente se vi piace, e tagliate con un coltello caldo, asciugato fra una porzione e l'altra.",
+    "ko": "큰 볼에 노른자와 설탕을 넣고 4–5분 — 손이든 전동 비터든 — 색이 옅어지고 부피가 거의 세 배로 부풀 때까지 휘핑한다. 손가락으로 비벼봤을 때 설탕이 완전히 녹아 있어야 한다 — 여기서 부족하면 나중에 입자가 거친 티라미수가 된다.\n\n마스카르포네를 세 번에 나누어 넣으며 그때마다 부드럽게 섞어, 매끄럽고 광택 있는 크림으로 만든다. 별도의 깨끗한 볼에 흰자에 소금 한 꼬집을 넣고 단단하고 윤기 있는 뿔이 설 때까지 휘핑한다 — 거품기를 들어 올렸을 때 그 모양을 유지해야 한다. 흰자를 마스카르포네 크림에 세 번에 나누어 폴딩한다 — 큰 주걱으로 중앙에서 바깥쪽으로 접듯이 — 공기를 살리면서. 완성된 크림은 가볍고 거의 흐를 듯하지만 부드러운 뿔을 유지해야 한다.\n\n얕은 그릇에 차가운 에스프레소와 마르살라를 섞는다. 사보이아르디를 하나씩 — 짧게, 각 면 최대 2초 — 에스프레소에 담근다. 그들은 스펀지이고, 너무 적신 핑거 비스킷은 풀어져 크림 사이로 눈물을 흘린다. 22×30 cm 베이킹 그릇 바닥에 빈틈없이 한 켜로 빼곡히 깐다.\n\n마스카르포네 크림의 절반을 사보이아르디 위에 고르게 펴고, 같은 과정을 반복한다 — 적신 사보이아르디를 또 한 켜 빈틈없이, 그 위에 남은 크림을 올려 주걱으로 평평하게 마무리한다.\n\n랩으로 덮어 냉장고에서 최소 6시간, 가능하면 하룻밤 차게 둔다 — 당일 먹는 티라미수는 재료의 맛이지만, 하룻밤 휴식을 거친 티라미수는 커피와 크림이 하나로 녹아든 하나의 디저트가 된다. 서빙 직전에 무가당 코코아 파우더를 가는 체로 윗면에 듬뿍 뿌리고, 원한다면 다크 초콜릿을 약간 갈아 올린 다음, 뜨거운 칼로 — 자를 때마다 닦아가며 — 잘라 낸다.",
+    "hi": "एक बड़े बर्तन में अंडे की जर्दी और चीनी को 4–5 मिनट तक — हाथ से या इलेक्ट्रिक बीटर से — फेंटें, जब तक रंग हल्का, झागदार न हो जाए और मात्रा तीन गुनी हो जाए। उँगलियों के बीच रगड़ने पर चीनी पूरी तरह घुली हुई होनी चाहिए; यहाँ कम फेंटा तो बाद में तिरामिसु दानेदार हो जाएगा।\n\nमस्कारपोने को तीन हिस्सों में मिलाएँ, हर हिस्से के बाद हलके से फेंटें, जब तक क्रीम चिकनी और चमकदार न हो जाए। एक अलग साफ़ बर्तन में अंडे की सफ़ेदी को एक चुटकी नमक के साथ सख़्त, चमकदार चोटी बनने तक फेंटें — व्हिस्क उठाने पर आकार बना रहे। एक बड़े स्पैटुला से सफ़ेदी को मस्कारपोने मिश्रण में तीन हिस्सों में मिलाएँ, बीच से बाहर की ओर लपेटते हुए, ताकि हवा बनी रहे; तैयार क्रीम हल्की, लगभग बहने वाली, पर हलकी चोटी थामने वाली होनी चाहिए।\n\nएक उथले बर्तन में ठंडी एस्प्रेसो और मार्साला मिला लें। एक-एक करके savoiardo को एस्प्रेसो में — सिर्फ़ कुछ देर, हर तरफ़ अधिकतम 2 सेकंड — डुबोएँ। ये स्पंज हैं, ज़्यादा भिगो दिए तो दलिया बन जाते हैं और क्रीम में रोते रहते हैं। एक 22×30 सेमी की डिश के तले में उन्हें कस कर एक परत में बिछा दें।\n\nमस्कारपोने क्रीम का आधा हिस्सा बिस्कुटों पर एक समान परत में फैलाएँ, फिर दोहराएँ: डुबोई हुई savoiardi की एक और कसी हुई परत, और सबसे ऊपर बची हुई क्रीम, स्पैटुला से समतल।\n\nप्लास्टिक रैप से ढक कर कम से कम 6 घंटे, बेहतर हो तो रात भर, फ्रिज में रखें — उसी दिन खाया तिरामिसु अपनी सामग्री का स्वाद देता है; रात भर रखा तिरामिसु एक ही मिठाई जैसा लगता है — कॉफ़ी और क्रीम घुली-मिली। परोसने से ठीक पहले, बिना चीनी का कोको पाउडर बारीक छलनी से ऊपर अच्छी मात्रा में छिड़कें, चाहें तो थोड़ी डार्क चॉकलेट कद्दूकस करें, और गरम चाक़ू से — हर टुकड़े के बीच पोंछते हुए — काट कर निकालें।"
+  }
+}
