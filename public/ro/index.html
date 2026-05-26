@@ -171,7 +171,7 @@
           <img src="/images/home/hero-bowl.jpg"
                alt="Buddha bowl cu quinoa, legume proaspete și ierburi aromatice"
                width="880" height="800"
-               onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+               onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
         </div>
       </div>
     </section>
@@ -215,8 +215,8 @@
         <li>
           <a class="hp2-cuisine-card" href="/ro/retete/japan/">
             <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-japan.jpg">
-              <img src="/images/home/cuisine-japan.jpg" alt="Bucătărie japoneză — bol de ramen" loading="lazy" width="600" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/cuisine-japan.jpg" alt="Bucătărie japoneză — bol de ramen" width="600" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-cuisine-body">
               <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇯🇵</span> Japonia</span>
@@ -227,8 +227,8 @@
         <li>
           <a class="hp2-cuisine-card" href="/ro/retete/mexico/">
             <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-mexico.jpg">
-              <img src="/images/home/cuisine-mexico.jpg" alt="Bucătărie mexicană — tacos colorate" loading="lazy" width="600" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/cuisine-mexico.jpg" alt="Bucătărie mexicană — tacos colorate" width="600" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-cuisine-body">
               <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇲🇽</span> Mexic</span>
@@ -239,8 +239,8 @@
         <li>
           <a class="hp2-cuisine-card" href="/ro/retete/italy/">
             <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-italy.jpg">
-              <img src="/images/home/cuisine-italy.jpg" alt="Bucătărie italiană — paste cu sos de roșii" loading="lazy" width="600" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/cuisine-italy.jpg" alt="Bucătărie italiană — paste cu sos de roșii" width="600" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-cuisine-body">
               <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇮🇹</span> Italia</span>
@@ -251,8 +251,8 @@
         <li>
           <a class="hp2-cuisine-card" href="/ro/retete/india/">
             <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-india.jpg">
-              <img src="/images/home/cuisine-india.jpg" alt="Bucătărie indiană — curry cu naan" loading="lazy" width="600" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/cuisine-india.jpg" alt="Bucătărie indiană — curry cu naan" width="600" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-cuisine-body">
               <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇮🇳</span> India</span>
@@ -263,8 +263,8 @@
         <li>
           <a class="hp2-cuisine-card" href="/ro/retete/greece/">
             <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-greece.jpg">
-              <img src="/images/home/cuisine-greece.jpg" alt="Bucătărie greacă — salată cu feta și măsline" loading="lazy" width="600" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/cuisine-greece.jpg" alt="Bucătărie greacă — salată cu feta și măsline" width="600" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-cuisine-body">
               <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇬🇷</span> Grecia</span>
@@ -275,8 +275,8 @@
         <li>
           <a class="hp2-cuisine-card" href="/ro/retete/france/">
             <span class="hp2-photo hp2-photo--cuisine" data-filename="cuisine-france.jpg">
-              <img src="/images/home/cuisine-france.jpg" alt="Bucătărie franceză — coq au vin" loading="lazy" width="600" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/cuisine-france.jpg" alt="Bucătărie franceză — coq au vin" width="600" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-cuisine-body">
               <span class="hp2-cuisine-name"><span class="hp2-flag" aria-hidden="true">🇫🇷</span> Franța</span>
@@ -308,8 +308,8 @@
           <a class="hp2-inspire-card" href="/ro/retete/shoyu-ramen/">
             <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-ramen.jpg">
               <span class="hp2-inspire-badge">POPULAR</span>
-              <img src="/images/home/inspire-ramen.jpg" alt="Bol de Ramen Shoyu cu ou moale" loading="lazy" width="800" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/inspire-ramen.jpg" alt="Bol de Ramen Shoyu cu ou moale" width="800" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-inspire-body">
               <h3 class="hp2-inspire-title">Ramen Shoyu</h3>
@@ -322,8 +322,8 @@
           <a class="hp2-inspire-card" href="/ro/retete/shakshuka/">
             <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-shakshuka.jpg">
               <span class="hp2-inspire-badge">RAPID</span>
-              <img src="/images/home/inspire-shakshuka.jpg" alt="Shakshuka — ouă fierte în sos picant de roșii" loading="lazy" width="800" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/inspire-shakshuka.jpg" alt="Shakshuka — ouă fierte în sos picant de roșii" width="800" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-inspire-body">
               <h3 class="hp2-inspire-title">Shakshuka</h3>
@@ -336,8 +336,8 @@
           <a class="hp2-inspire-card" href="/ro/retete/spanakopita/">
             <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-spanakopita.jpg">
               <span class="hp2-inspire-badge">VEGETARIAN</span>
-              <img src="/images/home/inspire-spanakopita.jpg" alt="Spanakopita — plăcintă grecească cu spanac și feta" loading="lazy" width="800" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/inspire-spanakopita.jpg" alt="Spanakopita — plăcintă grecească cu spanac și feta" width="800" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-inspire-body">
               <h3 class="hp2-inspire-title">Spanakopita</h3>
@@ -350,8 +350,8 @@
           <a class="hp2-inspire-card" href="/ro/retete/spaghetti-carbonara/">
             <span class="hp2-photo hp2-photo--inspire" data-filename="inspire-carbonara.jpg">
               <span class="hp2-inspire-badge">COMFORT FOOD</span>
-              <img src="/images/home/inspire-carbonara.jpg" alt="Spaghete Carbonara cu guanciale și Pecorino" loading="lazy" width="800" height="600"
-                   onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+              <img src="/images/home/inspire-carbonara.jpg" alt="Spaghete Carbonara cu guanciale și Pecorino" width="800" height="600"
+                   onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
             </span>
             <span class="hp2-inspire-body">
               <h3 class="hp2-inspire-title">Spaghete Carbonara</h3>
@@ -368,8 +368,8 @@
       <div class="hp2-entry-cards">
         <a class="hp2-entry-card" href="/ro/meniu-saptamanal/">
           <span class="hp2-photo hp2-photo--entry" data-filename="cover-weekly-menu.jpg">
-            <img src="/images/home/cover-weekly-menu.jpg" alt="Plan săptămânal de mese pregătite" loading="lazy" width="480" height="480"
-                 onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            <img src="/images/home/cover-weekly-menu.jpg" alt="Plan săptămânal de mese pregătite" width="480" height="480"
+                 onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
           </span>
           <span class="hp2-entry-body">
             <h3 class="hp2-entry-title">Meniuri Săptămânale</h3>
@@ -379,8 +379,8 @@
         </a>
         <a class="hp2-entry-card" href="/ro/retete/">
           <span class="hp2-photo hp2-photo--entry" data-filename="cover-recipes.jpg">
-            <img src="/images/home/cover-recipes.jpg" alt="Diversitate de feluri internaționale" loading="lazy" width="480" height="480"
-                 onerror="this.parentElement.classList.add('hp2-photo--missing');this.style.display='none';if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
+            <img src="/images/home/cover-recipes.jpg" alt="Diversitate de feluri internaționale" width="480" height="480"
+                 onload="if(this.naturalWidth>0)this.parentElement.classList.add('hp2-photo--has-image')" onerror="this.remove();if(window.console){console.warn('missing image: '+this.getAttribute('src'))}">
           </span>
           <span class="hp2-entry-body">
             <h3 class="hp2-entry-title">Rețete din toată lumea</h3>
