@@ -4383,17 +4383,16 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // (e.g. shakshuka and chakchouka share an upstream Wikipedia photo), the
   // 2nd/3rd occurrences get data-img-rot="1|2" which applies a subtle
   // filter (brightness/saturation tweak) so the page doesn't feel repetitive.
-  // Uniform card layout across every cuisine hub. The previous code applied
-  // a `cuisine-tile--featured` modifier to the first tile when the hub had
-  // ≥3 recipes; at ≥720px that switched the tile to a row layout with a
-  // half-width image (and, when the image matched the hero band, hid the
-  // image entirely via `data-hero-dup="1"`). Result: the first card looked
-  // structurally different from the rest of the grid on most hubs, and on
-  // Greece/Japan/etc. it lost its image altogether. Both the class and the
-  // hero-dup attribute are gone — every tile is now the same shape: image
-  // on top with a fixed 4:3 aspect ratio, title + optional description +
-  // meta row below, meta pinned to the card bottom by CSS so cards align
-  // even when some recipes lack a meta.desc entry.
+  // Uniform card layout across every cuisine hub. Every tile is the same
+  // shape: image on top with a fixed 4:3 aspect ratio, then title and a
+  // meta row (time + tags). The previous version rendered a short
+  // description below the title when recipes-meta.js carried a `desc`
+  // entry for that recipe, but only ~30% of the 200+ recipes have one,
+  // so the grid showed text under some cards and not under others. To
+  // keep the grid visually consistent on every hub — and to stay
+  // future-proof as new recipes are added — the description is no
+  // longer rendered here. The full description still appears on each
+  // recipe's detail page, one click away.
   const seenImgs = new Map(); // url → occurrence count
   const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
   const tilesHtml = tiles.map((t) => {
@@ -4403,7 +4402,6 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     const metaHtml = t.readyIn || t.tags.length
       ? `<div class="cuisine-tile-meta">${t.readyIn ? `<span class="cuisine-tile-time">⏱ ${esc(t.readyIn)}</span>` : ''}${tagsHtml}</div>`
       : '';
-    const descHtml = t.desc ? `<p class="cuisine-tile-desc">${esc(t.desc)}</p>` : '';
     const isPlaceholder = isPlaceholderImg(t.img);
     const occ = (seenImgs.get(t.img) || 0);
     seenImgs.set(t.img, occ + 1);
@@ -4423,7 +4421,6 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
         </span>
         <span class="cuisine-tile-body">
           <h3 class="cuisine-tile-title">${esc(t.name)}</h3>
-          ${descHtml}
           ${metaHtml}
         </span>
       </a>

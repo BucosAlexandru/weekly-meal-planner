@@ -1160,16 +1160,10 @@
   margin: 0;
   line-height: 1.3;
 }
-.cuisine-tile-desc {
-  font-size: .85rem;
-  color: #4b5563;
-  margin: 0;
-  line-height: 1.45;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+/* .cuisine-tile-desc is no longer rendered by cuisineHubPage(): only ~30%
+   of recipes have a recipes-meta.js desc entry, so cards showed text under
+   some recipes and nothing under others. The full description still
+   appears on each recipe's detail page. */
 .cuisine-tile-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1420,7 +1414,6 @@
   .cuisine-tile-grid { grid-template-columns: 1fr 1fr; gap: .7rem; }
   .cuisine-tile-body { padding: .65rem .75rem .85rem; gap: .25rem; }
   .cuisine-tile-title { font-size: .92rem; }
-  .cuisine-tile-desc { font-size: .78rem; -webkit-line-clamp: 2; }
   .cuisine-tile-meta { gap: .25rem .4rem; font-size: .7rem; }
   .cuisine-tile-tag { font-size: .65rem; padding: .08rem .42rem; }
 
@@ -1665,7 +1658,6 @@
   .cuisine-hero h1 { font-size: 1.5rem; }
   .cuisine-hero-desc { font-size: .9rem; }
   .cuisine-tile-title { font-size: .88rem; }
-  .cuisine-tile-desc { -webkit-line-clamp: 1; font-size: .76rem; }
 }
 
 /* ── Reduced motion: respect user preferences ───────────────────── */
