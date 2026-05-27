@@ -3891,13 +3891,40 @@ const CUISINE_CTA = {
              desc, timeMins, readyIn, tags } — every field is
    locale-aware. `img` is the same URL the recipe page would use
    so cache hits across navigations. */
+// Tile-safe excerpt from a longer prose field (typically recipe.originText).
+// Takes the first sentence; if it exceeds ~160 chars, truncates at a word
+// boundary and appends an ellipsis. Handles Latin (`. `), Arabic/Hindi
+// (space-separated), and CJK (`。`/`！`/`？`) sentence terminators.
+function tileExcerpt(text, maxLen = 160) {
+  if (!text) return '';
+  const trimmed = String(text).trim();
+  if (!trimmed) return '';
+  // First sentence ending in Latin `.!?` or CJK `。！？`.
+  const m = trimmed.match(/^[^.!?。！？]*[.!?。！？]/);
+  const first = (m ? m[0] : trimmed).trim();
+  if (first.length <= maxLen) return first;
+  // Word-boundary truncation. The `> 60` guard avoids cutting CJK runs
+  // (which have no spaces) down to nothing — better to over-deliver and let
+  // CSS line-clamp handle the visual cap.
+  const cut = first.slice(0, maxLen);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 60 ? cut.slice(0, lastSpace) : cut) + '…';
+}
+
 function cuisineTileData(recipe, lc_code, recipeBaseDir) {
   const rn   = recipe.name?.[lc_code] || recipe.name?.en || recipe.name?.ro || '';
   const rs   = slug(recipe.name?.en || recipe.name?.ro || rn);
   const meta = recipesMeta[recipe.id] || {};
   const img  = resolveRecipeImage(recipe, rs);
-  // Localized short descriptor, then EN fall-through.
-  const desc = meta.desc?.[lc_code] || meta.desc?.en || '';
+  // Localized short descriptor with a four-level fallback chain so every
+  // tile renders a description. Authored meta.desc wins; otherwise an
+  // excerpt of the recipe's own originText (which is the source of the
+  // detail-page intro) — same content the reader sees one click away.
+  const desc = meta.desc?.[lc_code]
+            || meta.desc?.en
+            || tileExcerpt(recipe.originText?.[lc_code])
+            || tileExcerpt(recipe.originText?.en)
+            || '';
   const tags = (meta.tags || []).slice(0, 2)
     .map(t => TAG_LABELS[t]?.[lc_code] || TAG_LABELS[t]?.en || t);
   const readyFn = READY_IN[lc_code] || READY_IN.en;
