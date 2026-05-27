@@ -161,4 +161,23 @@ export const recipeImages = {
   186: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Yakitori_001.jpg/330px-Yakitori_001.jpg',
   187: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mole_poblano.jpg/330px-Mole_poblano.jpg',
   188: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chilaquiles_rojos.jpg/330px-Chilaquiles_rojos.jpg',
+  // 189–193: Tres Leches, Bouillabaisse, Croque Monsieur, Crêpes, Tarte Tatin — served from local /images/<slug>.png uploads.
+  // 194–198 (Greek) + 204, 206–208 (Indian): Wikimedia filename guesses didn't resolve in QA.
+  //   Removed so the SSR resolver returns the cover2.jpg placeholder, the <img> tag is omitted,
+  //   and the flag/emoji fallback shows immediately (no flash artifact). Restore by either:
+  //     a) dropping a verified local file at public/images/<slug>.webp, or
+  //     b) adding a verified Wikimedia thumb URL here.
+  // 205 Hyderabadi Lamb Biryani: reuses id 61's known-working canonical Hyderabadi Dum Biryani photo.
+  205: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/330px-%22Hyderabadi_Dum_Biryani%22.jpg',
+  // 199–203 (Italian) + 209–213 (Thai): verified rendering in production QA.
+  199: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/330px-Eq_it-na_pizza-margherita_sep2005_sml.jpg',
+  200: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/330px-Lasagne_-_stonesoup.jpg',
+  201: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ossobuco.jpg/330px-Ossobuco.jpg',
+  202: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Tiramisu_-_Raffaele_Diomede.jpg/330px-Tiramisu_-_Raffaele_Diomede.jpg',
+  203: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cacio_e_pepe.jpg/330px-Cacio_e_pepe.jpg',
+  209: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Thai_green_curry_with_chicken_2.jpg/330px-Thai_green_curry_with_chicken_2.jpg',
+  210: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Massaman_Beef_Curry.jpg/330px-Massaman_Beef_Curry.jpg',
+  211: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Som_tam_thai.jpg/330px-Som_tam_thai.jpg',
+  212: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Khao_soi.jpg/330px-Khao_soi.jpg',
+  213: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Mango_sticky_rice.jpg/330px-Mango_sticky_rice.jpg',
 };

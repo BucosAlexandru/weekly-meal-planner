@@ -1,0 +1,182 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Mango Sticky Rice (Khao Niao Mamuang)", "ro": "Orez glutinos cu mango (Khao Niao Mamuang)",
+    "es": "Arroz glutinoso con mango (Khao Niao Mamuang)", "fr": "Riz gluant à la mangue (Khao Niao Mamuang)",
+    "de": "Klebreis mit Mango (Khao Niao Mamuang)", "pt": "Arroz pegajoso com manga (Khao Niao Mamuang)",
+    "ru": "Клейкий рис с манго (Khao Niao Mamuang)", "ar": "أرز لزج بالمانجو (خاو نياو ماموانغ)",
+    "zh": "芒果糯米饭 (Khao Niao Mamuang)", "ja": "マンゴーともち米 (カオ・ニャオ・マムアン)",
+    "tr": "Mangolu Yapışkan Pirinç (Khao Niao Mamuang)", "it": "Riso glutinoso al mango (Khao Niao Mamuang)",
+    "ko": "망고 찰밥 (카오 니아오 마무앙)", "hi": "मैंगो स्टिकी राइस (Khao Niao Mamuang)"
+  },
+  "cuisine": {
+    "en": "Thailand", "ro": "Thailanda", "es": "Tailandia", "fr": "Thaïlande",
+    "de": "Thailand", "pt": "Tailândia", "ru": "Таиланд", "ar": "تايلاند",
+    "zh": "泰国", "ja": "タイ", "tr": "Tayland", "it": "Thailandia",
+    "ko": "태국", "hi": "थाईलैंड"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "300 g Thai glutinous (sticky) rice, soaked in cold water at least 4 hours or overnight",
+      "400 ml full-fat coconut milk",
+      "80 g palm sugar (or light brown sugar)",
+      "½ tsp salt",
+      "1 pandan leaf, tied in a knot (optional, traditional)",
+      "2 ripe yellow mangoes (Nam Dok Mai or Ataulfo), peeled and sliced",
+      "2 tbsp toasted sesame seeds or split mung beans, for garnish",
+      "1 tsp rice flour (optional, for thickening the salty topping)"
+    ],
+    "ro": [
+      "300 g orez glutinos thailandez (lipicios), pus la înmuiat în apă rece minim 4 ore sau peste noapte",
+      "400 ml lapte de cocos gras",
+      "80 g zahăr de palmier (sau zahăr brun deschis)",
+      "½ linguriță sare",
+      "1 frunză de pandan, legată în nod (opțional, tradițional)",
+      "2 mango galbene coapte (Nam Dok Mai sau Ataulfo), curățate și feliate",
+      "2 linguri semințe de susan prăjite sau mazăre mungo decorticată, pentru garnitură",
+      "1 linguriță făină de orez (opțional, pentru a îngroșa topping-ul sărat)"
+    ],
+    "es": [
+      "300 g de arroz glutinoso tailandés, en remojo en agua fría al menos 4 horas o toda la noche",
+      "400 ml de leche de coco entera",
+      "80 g de azúcar de palma (o azúcar moreno claro)",
+      "½ cdta de sal",
+      "1 hoja de pandan, atada en un nudo (opcional, tradicional)",
+      "2 mangos amarillos maduros (Nam Dok Mai o Ataulfo), pelados y en rodajas",
+      "2 cdas de semillas de sésamo tostadas o judías mung partidas, para decorar",
+      "1 cdta de harina de arroz (opcional, para espesar el topping salado)"
+    ],
+    "fr": [
+      "300 g de riz gluant thaï, trempé dans l'eau froide au moins 4 heures ou toute une nuit",
+      "400 ml de lait de coco entier",
+      "80 g de sucre de palme (ou de sucre roux clair)",
+      "½ c. à café de sel",
+      "1 feuille de pandan nouée (facultatif, traditionnel)",
+      "2 mangues jaunes mûres (Nam Dok Mai ou Ataulfo), pelées et tranchées",
+      "2 c. à soupe de graines de sésame torréfiées ou de haricots mungo décortiqués, pour la garniture",
+      "1 c. à café de farine de riz (facultatif, pour épaissir la sauce salée)"
+    ],
+    "de": [
+      "300 g thailändischer Klebreis, mindestens 4 Stunden oder über Nacht in kaltem Wasser eingeweicht",
+      "400 ml fettreiche Kokosmilch",
+      "80 g Palmzucker (oder heller brauner Zucker)",
+      "½ TL Salz",
+      "1 Pandanblatt, geknotet (optional, traditionell)",
+      "2 reife gelbe Mangos (Nam Dok Mai oder Ataulfo), geschält und in Scheiben",
+      "2 EL gerösteter Sesam oder geschälte Mungobohnen, zum Garnieren",
+      "1 TL Reismehl (optional, zum Eindicken der salzigen Sauce)"
+    ],
+    "pt": [
+      "300 g de arroz glutinoso tailandês, demolhado em água fria pelo menos 4 horas ou uma noite",
+      "400 ml de leite de coco gordo",
+      "80 g de açúcar de palma (ou açúcar mascavado claro)",
+      "½ colher de chá de sal",
+      "1 folha de pandan, atada num nó (opcional, tradicional)",
+      "2 mangas amarelas maduras (Nam Dok Mai ou Ataulfo), descascadas e fatiadas",
+      "2 colheres de sopa de sementes de sésamo tostadas ou feijão mungo descascado, para finalizar",
+      "1 colher de chá de farinha de arroz (opcional, para engrossar a cobertura salgada)"
+    ],
+    "ru": [
+      "300 г тайского клейкого риса, замоченного в холодной воде минимум на 4 часа или на ночь",
+      "400 мл жирного кокосового молока",
+      "80 г пальмового сахара (или светлого коричневого)",
+      "½ ч. л. соли",
+      "1 лист пандана, завязанный узлом (по желанию, традиционно)",
+      "2 спелых жёлтых манго (Nam Dok Mai или Ataulfo), очищенных и нарезанных",
+      "2 ст. л. жареных семян кунжута или лущёного маша для подачи",
+      "1 ч. л. рисовой муки (по желанию, для загущения солёной заливки)"
+    ],
+    "ar": [
+      "300 غ من الأرز اللزج التايلاندي، منقوع في ماء بارد لمدة 4 ساعات على الأقل أو طوال الليل",
+      "400 مل حليب جوز الهند كامل الدسم",
+      "80 غ سكر النخيل (أو سكر بني فاتح)",
+      "½ ملعقة صغيرة ملح",
+      "1 ورقة باندان مربوطة بعقدة (اختياري، تقليدي)",
+      "2 حبة مانجو صفراء ناضجة (نام دوك ماي أو أتولفو)، مقشّرتان ومقطّعتان شرائح",
+      "2 ملعقة كبيرة بذور سمسم محمّصة أو فاصولياء مونغ مقشّرة، للتزيين",
+      "1 ملعقة صغيرة دقيق أرز (اختياري، لتثخين الصلصة المالحة)"
+    ],
+    "zh": [
+      "泰国糯米 300 克，用冷水浸泡至少 4 小时或过夜",
+      "全脂椰奶 400 毫升",
+      "棕榈糖 80 克（或浅红糖）",
+      "盐 ½ 茶匙",
+      "斑斓叶（pandan）1 片，打个结（可选，传统配料）",
+      "成熟黄芒果 2 个（Nam Dok Mai 或 Ataulfo 品种），去皮切片",
+      "烤芝麻或去壳绿豆 2 汤匙，作装饰",
+      "米粉 1 茶匙（可选，用来稠化咸味椰奶顶料）"
+    ],
+    "ja": [
+      "タイのもち米（カオニャオ）300 g、冷水で 4 時間以上、できれば一晩浸ける",
+      "全脂ココナッツミルク 400 ml",
+      "パームシュガー 80 g（または淡いブラウンシュガー）",
+      "塩 小さじ ½",
+      "結んだパンダンリーフ 1 枚（任意、伝統)",
+      "完熟した黄色いマンゴー 2 個（ナムドクマイまたはアタウルフォ）、皮を剥いてスライス",
+      "ローストした白ごま、または剥いた緑豆 大さじ 2、飾り用",
+      "米粉 小さじ 1（任意、塩気のあるソースをとろませる用)"
+    ],
+    "tr": [
+      "300 g Tay yapışkan pirinci, soğuk suda en az 4 saat ya da bir gece ıslatılmış",
+      "400 ml tam yağlı hindistan cevizi sütü",
+      "80 g palmiye şekeri (ya da açık esmer şeker)",
+      "½ çay kaşığı tuz",
+      "1 düğüm atılmış pandan yaprağı (isteğe bağlı, geleneksel)",
+      "2 olgun sarı mango (Nam Dok Mai ya da Ataulfo), soyulmuş ve dilimlenmiş",
+      "2 yemek kaşığı kavrulmuş susam ya da soyulmuş mung fasulyesi, süs için",
+      "1 çay kaşığı pirinç unu (isteğe bağlı, tuzlu sosu koyulaştırmak için)"
+    ],
+    "it": [
+      "300 g di riso glutinoso thailandese, ammollato in acqua fredda almeno 4 ore o tutta la notte",
+      "400 ml di latte di cocco intero",
+      "80 g di zucchero di palma (o zucchero di canna chiaro)",
+      "½ cucchiaino di sale",
+      "1 foglia di pandano annodata (facoltativo, tradizionale)",
+      "2 manghi gialli maturi (Nam Dok Mai o Ataulfo), pelati e affettati",
+      "2 cucchiai di semi di sesamo tostati o fagioli mungo pelati, per la guarnizione",
+      "1 cucchiaino di farina di riso (facoltativa, per addensare la copertura salata)"
+    ],
+    "ko": [
+      "태국 찹쌀 300 g, 찬물에 최소 4시간 이상, 가능하면 하룻밤 불리기",
+      "풀팻 코코넛 밀크 400 ml",
+      "팜 슈가 80 g (또는 옅은 황설탕)",
+      "소금 ½작은술",
+      "판단 잎 1장, 매듭지어 (선택, 전통)",
+      "잘 익은 노란 망고 2개 (남독마이 또는 아타울포), 껍질 벗겨 슬라이스",
+      "구운 참깨 또는 깐 녹두 2큰술, 장식용",
+      "쌀가루 1작은술 (선택, 짭짤한 토핑을 걸쭉하게 하기 위해)"
+    ],
+    "hi": [
+      "थाई चिपचिपा चावल 300 ग्राम, ठंडे पानी में कम से कम 4 घंटे या रात भर भिगोया",
+      "फुल फैट नारियल का दूध 400 मिली",
+      "ताड़ की चीनी 80 ग्राम (या हल्की ब्राउन शुगर)",
+      "½ छोटा चम्मच नमक",
+      "1 पंडान का पत्ता, गाँठ में बँधा (वैकल्पिक, पारंपरिक)",
+      "2 पके पीले आम (Nam Dok Mai या Ataulfo), छिले और कटे",
+      "2 बड़े चम्मच भुने तिल या छिली मूँग दाल, सजावट के लिए",
+      "1 छोटा चम्मच चावल का आटा (वैकल्पिक, नमकीन टॉपिंग को गाढ़ा करने के लिए)"
+    ]
+  },
+  "howIsMade": {
+    "en": "Drain the soaked rice and steam it: line a steamer basket with cheesecloth or banana leaf, tip in the rice and steam covered over a moderate boil for 20–25 minutes. Halfway through, lift the cloth and turn the mound of rice over so the bottom and top swap places — this is what stops the bottom layer over-cooking into mush. The grains are done when they are translucent, glossy and chewy-tender all the way through.\n\nWhile the rice steams, warm 300 ml of the coconut milk in a small saucepan with the palm sugar, salt and pandan leaf, stirring just enough to dissolve the sugar without bringing it to a boil. Reserve the remaining 100 ml for the salty topping.\n\nWhen the rice is hot from the steamer, transfer it to a wide bowl and pour over two-thirds of the warm sweet coconut milk, folding it through with a spatula until each grain is glossy. Cover and let it sit for 15–20 minutes; this resting step is what makes proper sticky rice, as the rice drinks the coconut milk and swells to the consistency of soft pearl pudding.\n\nFor the salty topping, simmer the remaining coconut milk with a generous pinch of salt and the teaspoon of rice flour for 2 minutes, until it just thickens.\n\nMound the warm coconut rice on a plate, arrange the mango slices beside it, drizzle the salty coconut cream across the top, and finish with a scattering of toasted sesame seeds or split mung beans. Eat with a spoon, taking a bit of rice and a bit of mango in every mouthful — the contrast of warm coconut-sweet and cool fruit-sharp is the dish.",
+    "ro": "Scurge orezul înmuiat și aburește-l: căptușește un coș de aburi cu tifon sau frunză de banan, varsă orezul și aburește-l acoperit la fierbere moderată 20–25 de minute. La jumătatea timpului, ridică pânza și întoarce muntele de orez, ca partea de jos și cea de sus să-și schimbe locul — asta împiedică stratul de jos să se gătească excesiv într-un terci. Boabele sunt gata când sunt translucide, lucioase și moi-elastice pe toată întinderea.\n\nÎn timp ce orezul fierbe, încălzește 300 ml din laptele de cocos într-o crăticioară mică împreună cu zahărul de palmier, sarea și frunza de pandan, amestecând doar cât să dizolvi zahărul, fără să-l fierbi. Rezervă cei 100 ml rămași pentru topping-ul sărat.\n\nCând orezul este fierbinte din aburitoare, mută-l într-un bol larg și toarnă peste el două treimi din laptele cald și dulce, învârtindu-l cu o spatulă până când fiecare bob este lucios. Acoperă și las-o să stea 15–20 de minute; acest pas de odihnă este ce face orezul lipicios corect, fiindcă orezul soarbe laptele de cocos și se umflă la consistența unui budincă moale de perle.\n\nPentru topping-ul sărat, fierbe restul laptelui de cocos cu un praf generos de sare și lingurița de făină de orez 2 minute, doar până se îngroașă.\n\nPune orezul cald de cocos pe o farfurie sub formă de movilă, aranjează feliile de mango alături, picură smântâna sărată de cocos peste, și încheie cu o ploaie de semințe de susan prăjite sau mazăre mungo. Mănânc-o cu lingura, luând puțin orez și puțin mango la fiecare gură — contrastul dintre cocosul cald-dulce și fructul rece-tăios este preparatul însuși.",
+    "es": "Escurre el arroz remojado y cuécelo al vapor: forra una cesta vaporera con muselina o una hoja de banano, vuelca el arroz dentro y cuece tapado a hervor moderado durante 20–25 minutos. A mitad de cocción, levanta el paño y voltea el montón de arroz para que el fondo y la parte de arriba intercambien lugares — esto evita que la capa inferior se cocine demasiado y se vuelva papilla. Los granos están listos cuando son translúcidos, brillantes y de masticado tierno hasta el centro.\n\nMientras el arroz se cuece, calienta 300 ml de la leche de coco en un cazo con el azúcar de palma, la sal y la hoja de pandan, removiendo apenas para disolver el azúcar sin que llegue a hervir. Reserva los 100 ml restantes para el topping salado.\n\nCuando el arroz salga caliente del vapor, pásalo a un bol amplio y vierte por encima dos tercios de la leche de coco dulce y tibia, envolviéndolo con una espátula hasta que cada grano esté brillante. Tapa y déjalo reposar 15–20 minutos; este reposo es lo que hace el arroz pegajoso correcto, porque el arroz se bebe la leche de coco y se hincha hasta una consistencia de pudin de perlas.\n\nPara el topping salado, calienta el resto de la leche de coco con una pizca generosa de sal y la cucharadita de harina de arroz durante 2 minutos, justo hasta que apenas espese.\n\nMonta el arroz tibio en un plato, coloca las rodajas de mango al lado, riega la crema de coco salada por encima, y termina con un puñado de semillas de sésamo tostadas o de judías mung partidas. Cómelo con cuchara, tomando un poco de arroz y un poco de mango en cada bocado — el contraste entre el coco cálido y dulce y la fruta fresca y filo es el plato.",
+    "fr": "Égouttez le riz trempé et faites-le cuire à la vapeur : tapissez un panier vapeur d'une mousseline ou d'une feuille de bananier, versez-y le riz et faites cuire à couvert au-dessus d'une eau bouillante modérée pendant 20 à 25 minutes. À mi-cuisson, soulevez le linge et retournez le monticule de riz pour que le fond et le sommet inversent leurs places — c'est ce qui évite que la couche du fond ne devienne pâteuse. Les grains sont prêts quand ils sont translucides, brillants et fondants jusqu'au cœur.\n\nPendant que le riz cuit, faites tiédir 300 ml du lait de coco dans une petite casserole avec le sucre de palme, le sel et la feuille de pandan, en remuant juste assez pour dissoudre le sucre sans le faire bouillir. Réservez les 100 ml restants pour la garniture salée.\n\nQuand le riz sort chaud du cuit-vapeur, transférez-le dans un grand saladier et versez par-dessus les deux tiers du lait de coco sucré tiède, en l'enrobant à la spatule jusqu'à ce que chaque grain brille. Couvrez et laissez reposer 15 à 20 minutes ; ce temps de repos est ce qui fait le vrai riz gluant, car le riz boit le lait de coco et gonfle jusqu'à la texture d'un pudding aux perles.\n\nPour la garniture salée, faites frémir le reste du lait de coco avec une bonne pincée de sel et la cuillère à café de farine de riz 2 minutes, juste jusqu'à ce qu'il épaississe à peine.\n\nDéposez le riz chaud en monticule sur une assiette, disposez les tranches de mangue à côté, nappez la crème de coco salée par-dessus, et terminez d'une pluie de graines de sésame torréfiées ou de haricots mungo. Mangez à la cuillère, en prenant un peu de riz et un peu de mangue à chaque bouchée — le contraste du coco chaud et sucré avec le fruit frais et tranchant, c'est le plat lui-même.",
+    "de": "Den eingeweichten Reis abgießen und dämpfen: einen Dämpfkorb mit Mulltuch oder Bananenblatt auslegen, den Reis hineingeben und über mäßig kochendem Wasser zugedeckt 20–25 Minuten dämpfen. Nach der Hälfte der Zeit das Tuch anheben und den Reishaufen wenden, sodass Boden und Oberseite die Plätze tauschen — das verhindert, dass die untere Schicht zu Brei verkocht. Die Körner sind fertig, wenn sie durchscheinend, glänzend und durchgehend zart-bissfest sind.\n\nWährend der Reis dämpft, erwärmen Sie 300 ml der Kokosmilch in einem kleinen Topf mit Palmzucker, Salz und Pandanblatt und rühren Sie gerade so viel um, dass sich der Zucker auflöst, ohne dass die Milch kocht. Die restlichen 100 ml für die salzige Sauce zurückbehalten.\n\nWenn der Reis heiß aus dem Dämpfer kommt, in eine breite Schüssel umfüllen und zwei Drittel der warmen süßen Kokosmilch darüber gießen, mit einem Teigschaber unterheben, bis jedes Korn glänzt. Abdecken und 15–20 Minuten ruhen lassen; dieses Quellen ist das, was den echten Klebreis ausmacht, weil der Reis die Kokosmilch aufsaugt und auf die Konsistenz eines weichen Perlenpuddings anschwillt.\n\nFür die salzige Sauce die restliche Kokosmilch mit einer großzügigen Prise Salz und dem Teelöffel Reismehl 2 Minuten köcheln, bis sie gerade leicht eindickt.\n\nDen warmen Kokosreis als Hügel auf einen Teller setzen, die Mangoscheiben daneben anrichten, die salzige Kokoscreme darüber träufeln und mit gerösteten Sesamsamen oder geschälten Mungobohnen bestreuen. Mit dem Löffel essen, in jeden Bissen ein wenig Reis und ein wenig Mango — der Kontrast aus warm-süßer Kokosmilch und kühl-scharfer Frucht ist das eigentliche Gericht.",
+    "pt": "Escorra o arroz demolhado e coza-o a vapor: forre um cesto a vapor com gaze ou folha de bananeira, deite o arroz lá dentro e coza tapado sobre uma fervura moderada durante 20–25 minutos. A meio da cozedura, levante o pano e vire o monte de arroz para que o fundo e o topo troquem de lugar — é isto que impede a camada de baixo de cozer demais e virar puré. Os grãos estão prontos quando estão translúcidos, brilhantes e tenros até ao centro.\n\nEnquanto o arroz coze, aqueça 300 ml do leite de coco numa caçarola pequena com o açúcar de palma, o sal e a folha de pandan, mexendo apenas o suficiente para dissolver o açúcar sem deixar ferver. Reserve os 100 ml restantes para a cobertura salgada.\n\nQuando o arroz sair quente do vaporizador, transfira-o para uma taça larga e verta por cima dois terços do leite de coco doce e morno, envolvendo com uma espátula até cada grão estar brilhante. Tape e deixe descansar 15–20 minutos; este repouso é o que faz o arroz pegajoso a sério, pois o arroz bebe o leite de coco e incha até à consistência de um pudim macio de pérolas.\n\nPara a cobertura salgada, deixe ferver o leite de coco restante com uma boa pitada de sal e a colher de chá de farinha de arroz durante 2 minutos, apenas até engrossar levemente.\n\nDisponha o arroz morno em monte num prato, arrume as fatias de manga ao lado, regue por cima as natas salgadas de coco, e finalize com um polvilho de sementes de sésamo tostadas ou de feijão mungo descascado. Coma à colher, levando um pouco de arroz e um pouco de manga em cada garfada — o contraste entre o coco quente e doce e a fruta fresca e afiada é o próprio prato.",
+    "ru": "Слейте воду с замоченного риса и приготовьте на пару: выстелите пароварку марлей или банановым листом, всыпьте рис и варите под крышкой над умеренно кипящей водой 20–25 минут. На середине времени поднимите ткань и переверните рисовую гору, чтобы низ и верх поменялись местами — именно это не даёт нижнему слою развариться в кашу. Зерна готовы, когда они полупрозрачны, блестят и упруго-нежны насквозь.\n\nПока рис варится, нагрейте 300 мл кокосового молока в небольшой кастрюле с пальмовым сахаром, солью и листом пандана, помешивая ровно столько, чтобы растворить сахар и не довести до кипения. Оставшиеся 100 мл оставьте для солёной заливки.\n\nКак только рис будет горячим из пароварки, переложите его в широкую миску и влейте две трети тёплого сладкого кокосового молока, аккуратно вмешав лопаткой, пока каждое зёрнышко не заблестит. Накройте и оставьте на 15–20 минут; именно этот шаг превращает рис в настоящий клейкий — он впитывает кокос и набухает до консистенции мягкого жемчужного пудинга.\n\nДля солёной заливки потомите оставшееся кокосовое молоко с щедрой щепоткой соли и чайной ложкой рисовой муки 2 минуты, пока оно лишь чуть-чуть не загустеет.\n\nВыложите тёплый кокосовый рис горкой на тарелку, рядом разложите ломтики манго, полейте сверху солёным кокосовым кремом и завершите щепоткой жареных семечек кунжута или лущёного маша. Ешьте ложкой, забирая по немного риса и манго в каждый кусок — контраст тёплой кокосовой сладости и прохладного резкого фрукта и есть это блюдо.",
+    "ar": "صفّ الأرز المنقوع وبخّره: غطّ سلة البخار بشاش أو ورق موز، اسكب الأرز فيها واتركها مغطاة فوق ماء يغلي معتدل لمدة 20–25 دقيقة. في منتصف الوقت، ارفع القماش واقلب كومة الأرز كي يتبادل القاع والسطح أماكنهما — هذا ما يمنع الطبقة السفلية من أن تنضج زيادةً وتتحوّل إلى عجين. الحبوب ناضجة حين تصبح شفافة، لامعة، ومطّاطية-طرية حتى المنتصف.\n\nأثناء طهي الأرز، سخّن 300 مل من حليب جوز الهند في قدر صغير مع سكر النخيل والملح وورقة الباندان، حرّكها بما يكفي فقط لإذابة السكر دون أن يغلي. احتفظ بـ 100 مل لتغطية الصلصة المالحة.\n\nحين يخرج الأرز ساخناً من المُبخّر، انقله إلى وعاء واسع واسكب فوقه ثلثي حليب جوز الهند الحلو الدافئ، وقلّبه بملعقة حتى يلمع كل حبة. غطه واتركه يرتاح 15–20 دقيقة؛ هذه الراحة هي ما يجعل الأرز اللزج لزجاً فعلاً، إذ يشرب الحليب وينتفخ إلى قوام بودنغ لؤلؤي ناعم.\n\nللصلصة المالحة، اطهُ ما تبقى من حليب جوز الهند مع رشّة سخية من الملح وملعقة صغيرة من دقيق الأرز لمدة دقيقتين، فقط حتى يثخن قليلاً.\n\nاكوِم الأرز الدافئ على طبق، ورتب شرائح المانجو إلى جانبه، اسكب الكريمة المالحة فوقه، وأنهِ بنثرة من بذور السمسم المحمّصة أو فاصولياء المونغ المقشّرة. كل بالملعقة، آخذاً قليلاً من الأرز وقليلاً من المانجو في كل قضمة — التباين بين دفء وحلاوة جوز الهند وحدّة وبرودة الفاكهة هو الطبق نفسه.",
+    "zh": "把泡好的糯米沥干，开始蒸：在蒸笼里铺一层纱布或香蕉叶，倒入糯米，盖好在中等火候的水蒸气上蒸 20–25 分钟。蒸到一半时，掀起纱布把整堆米翻过来，让原来在底下的米去顶层 — 这一翻能避免底部那层蒸糊。米粒呈半透明、有光泽、从外到内都软而有嚼劲时，就好了。\n\n米在蒸的时候，把 300 毫升椰奶、棕榈糖、盐和打了结的斑斓叶放进小锅中加热，只需搅到糖溶化即可，不要烧开。剩下的 100 毫升留给最后那层咸味椰浆。\n\n米蒸好后趁热倒进宽口碗里，把三分之二的温热甜椰奶淋上去，用刮刀轻轻拌到每一粒都发亮。盖好让它静置 15–20 分钟；正是这个静置的过程让糯米成为真正的“糯”，因为它会把椰奶喝进去，膨胀成柔软的珍珠布丁般的质地。\n\n做咸味顶料：把剩下的椰奶、慷慨一撮盐和 1 茶匙米粉小火煮 2 分钟，刚刚开始变稠就好。\n\n把热腾腾的椰香糯米堆在盘子上，旁边摆放芒果片，淋上咸椰浆，再撒一把烤香的白芝麻或去壳绿豆。用勺子吃，每一口都带一点糯米和一点芒果 — 热的椰香甜与凉的果酸利之间那种对照本身，就是这道菜。",
+    "ja": "浸したもち米の水を切り、蒸し器に — 蒸し器のかごにさらしかバナナの葉を敷き、もち米を入れて、しっかり蒸気が立った状態で蓋をして 20〜25 分蒸す。蒸し時間の半ば頃、布を持ち上げて米の山をひっくり返し、底と上を入れ替える — そうしないと底層が蒸し過ぎてべちゃっとなる。米粒が半透明で艶があり、芯までもちっと柔らかくなったら完成。\n\n米を蒸している間に、ココナッツミルク 300 ml を小鍋に入れ、パームシュガー、塩、結んだパンダンリーフを加え、砂糖が溶ける程度に混ぜる — 沸騰させない。残りの 100 ml は塩気の仕上げ用にとっておく。\n\n蒸しあがった熱々のもち米を広めの器に移し、温かい甘いココナッツミルクの 3 分の 2 を上から回しかけ、ヘラで折りたたむように混ぜて、すべての粒が艶を帯びるまで仕上げる。蓋をして 15〜20 分置く。この「待つ」工程こそが本物のもち米料理を生み、米はココナッツミルクを飲み、柔らかなパールプディングのような食感まで膨らむ。\n\n塩気の仕上げソースには、残りのココナッツミルクを塩ひとつまみたっぷりと小さじ 1 の米粉と一緒に 2 分煮る、ちょうど少しとろみがつくまで。\n\n温かいココナッツライスを皿に山型に盛り、横にマンゴーのスライスを並べ、塩気のあるココナッツクリームを上から回しかけ、ローストしたごまや剥いた緑豆を散らして仕上げる。スプーンで、ひと口ごとに少しのご飯と少しのマンゴーを一緒に取って食べる — 温かいココナッツの甘さと冷たい果実の鋭さの対比、それこそが料理本体だ。",
+    "tr": "Islatılmış pirincin suyunu süz ve buharda pişir: buhar sepetini tülbentle veya muz yaprağıyla kapla, pirinci içine dök ve kaynayan suyun üzerinde, kapağı kapalı olarak 20–25 dakika buğula. Sürenin ortasında bezi kaldır ve pirinç tepesini ters çevir — alt ve üst yer değiştirsin; bu, alt tabakanın aşırı pişip lapaya dönmesini engelleyen şeydir. Taneler şeffaf, parlak ve içine kadar yumuşak-çıtır olduğunda hazırdır.\n\nPirinç pişerken küçük bir tencerede 300 ml hindistan cevizi sütünü palmiye şekeri, tuz ve düğümlü pandan yaprağıyla ısıt, şeker eriyene kadar — kaynamadan — karıştır. Kalan 100 ml'yi tuzlu üst sos için sakla.\n\nPirinç buharlıdan çıkar çıkmaz, geniş bir kâseye al ve ılık tatlı hindistan cevizi sütünün üçte ikisini üzerine dök, spatulayla katlayarak her tane parlayana kadar karıştır. Üstünü ört ve 15–20 dakika dinlendir; bu bekleme süresi gerçek bir yapışkan pirinç pişirmenin sırrıdır — pirinç hindistan cevizi sütünü içer ve yumuşak bir inci pudingi kıvamına kadar şişer.\n\nTuzlu üst sos için kalan hindistan cevizi sütünü cömert bir tutam tuz ve 1 çay kaşığı pirinç unu ile 2 dakika kaynat, sadece hafifçe koyulaşacak kadar.\n\nIlık hindistan cevizi pirincini bir tabağa tepe gibi koy, yanına mango dilimlerini diz, üstüne tuzlu hindistan cevizi kremasını gezdir, kavrulmuş susam ya da kabuğu soyulmuş mung fasulyesiyle bitir. Kaşıkla, her lokmada biraz pirinç ve biraz mango alarak ye — ılık ve tatlı hindistan cevizi ile serin, keskin meyvenin arasındaki karşıtlık, yemeğin ta kendisidir.",
+    "it": "Scolate il riso ammollato e cuocetelo a vapore: foderate un cestello di una vaporiera con mussola o foglia di banano, versate il riso e cuocete coperto sopra un'ebollizione moderata per 20–25 minuti. A metà cottura, sollevate il telo e girate il cumulo di riso in modo che fondo e cima si scambino — è questo che impedisce allo strato inferiore di stracuocere fino a diventare un purè. I chicchi sono pronti quando sono traslucidi, lucidi e morbidi-elastici fino al centro.\n\nMentre il riso cuoce, scaldate 300 ml del latte di cocco in un pentolino con lo zucchero di palma, il sale e la foglia di pandano annodata, mescolando il giusto per sciogliere lo zucchero senza farlo bollire. Tenete da parte i 100 ml restanti per la copertura salata.\n\nQuando il riso esce caldo dalla vaporiera, trasferitelo in una ciotola larga e versate sopra due terzi del latte di cocco dolce e tiepido, girandolo con una spatola fino a rendere ogni chicco lucido. Coprite e lasciatelo riposare per 15–20 minuti; questa pausa è ciò che fa il vero riso glutinoso, perché il riso beve il latte di cocco e si gonfia fino a una consistenza di morbido budino di perle.\n\nPer la copertura salata, fate sobbollire il resto del latte di cocco con una presa generosa di sale e il cucchiaino di farina di riso per 2 minuti, giusto fino a quando non si addensa appena.\n\nDisponete il riso caldo a monticello su un piatto, sistemate le fette di mango accanto, versate sopra la crema di cocco salata, e finite con una spolverata di semi di sesamo tostati o fagioli mungo pelati. Mangiate con il cucchiaio, prendendo un po' di riso e un po' di mango in ogni boccone — il contrasto tra il cocco caldo e dolce e la frutta fresca e tagliente è il piatto stesso.",
+    "ko": "불린 찹쌀의 물기를 빼고 찐다 — 찜기 바구니에 소창이나 바나나 잎을 깔고 찹쌀을 부어 중간 강도로 끓는 물 위에서 뚜껑을 덮고 20–25분간 찐다. 중간쯤에 천을 들어 올려 쌀 더미를 뒤집어, 아래쪽과 위쪽이 자리를 바꾸게 한다 — 이것이 아래층이 너무 익어 죽이 되는 것을 막는다. 알알이 반투명하고 윤기 있게 빛나며 속까지 쫄깃-부드러우면 다 된 것이다.\n\n찹쌀이 쪄지는 동안, 작은 냄비에 코코넛 밀크 300 ml, 팜 슈가, 소금, 매듭지은 판단 잎을 넣어 데우되, 끓이지 말고 설탕이 녹을 정도까지만 저어준다. 남은 100 ml는 짭짤한 토핑용으로 따로 둔다.\n\n찹쌀이 찜기에서 뜨거울 때 넓은 볼로 옮기고, 따뜻한 단 코코넛 밀크의 2/3을 그 위에 부어 주걱으로 접듯이 섞어, 모든 알갱이가 윤기 나게 한다. 덮어 15–20분 둔다 — 이 휴지가 진짜 찰밥을 만드는 단계다. 찹쌀이 코코넛 밀크를 들이마시고 부드러운 진주 푸딩 같은 식감까지 부풀어 오른다.\n\n짭짤한 토핑은 남은 코코넛 밀크에 소금 한 꼬집을 넉넉히, 그리고 쌀가루 1작은술을 함께 넣고 2분간, 살짝 농도가 잡힐 정도로만 졸인다.\n\n따뜻한 코코넛 찹밥을 접시에 봉긋이 올리고, 옆에 망고 슬라이스를 가지런히 놓고, 위에 짭짤한 코코넛 크림을 둘러주고, 구운 참깨나 깐 녹두를 흩뿌려 마무리한다. 숟가락으로, 한 입마다 찹밥 조금과 망고 조금을 함께 먹는다 — 따뜻한 코코넛의 단맛과 차가운 과일의 날카로운 신맛, 그 대비가 이 요리 자체다.",
+    "hi": "भिगोए हुए चावल छानें और स्टीम करें: एक स्टीमर की टोकरी में मसलिन कपड़ा या केले का पत्ता बिछाएँ, चावल उसमें डालें, और मध्यम उबाल पर ढक कर 20–25 मिनट तक भाप दें। आधे समय पर कपड़ा उठा कर चावल के ढेर को पलट दें, ताकि नीचे और ऊपर अदला-बदली हो जाए — यही नीचे की परत को गलकर लुगदी बनने से रोकता है। दाने तब तैयार हैं जब वो पारदर्शी, चमकदार और भीतर तक चबाने-योग्य नर्म हों।\n\nजब चावल भाप में हो, एक छोटे पैन में 300 मिली नारियल का दूध, ताड़ की चीनी, नमक और गाँठ बँधे पंडान पत्ते को गरम करें, बस इतना चलाएँ कि चीनी घुल जाए — उबलने न दें। बचे हुए 100 मिली को नमकीन टॉपिंग के लिए अलग रखें।\n\nजब चावल भाप से निकले-निकले गरम हो, उसे एक चौड़े बाउल में पलटें और ऊपर से दो-तिहाई गरम मीठा नारियल वाला दूध डालें, स्पैटुला से इस तरह मिलाएँ कि हर दाना चमकदार हो जाए। ढक कर 15–20 मिनट छोड़ दें; यह विश्राम वाली अवस्था ही सही sticky rice बनाती है, क्योंकि चावल नारियल दूध को पी लेता है और एक नर्म पर्ल पुडिंग जैसी बनावट तक फूल जाता है।\n\nनमकीन टॉपिंग के लिए, बचा नारियल दूध, एक भरी चुटकी नमक और 1 छोटा चम्मच चावल का आटा 2 मिनट तक, बस हल्का गाढ़ा होने तक, उबालें।\n\nगरम नारियल वाले चावल को प्लेट पर ढेर बना कर रखें, उसके बग़ल में आम के टुकड़े सजाएँ, ऊपर से नमकीन नारियल क्रीम डालें, और भुने तिल या छिली मूँग दाल छिड़क कर ख़त्म करें। चम्मच से खाएँ — हर निवाले में थोड़ा चावल और थोड़ा आम लें — गरम नारियल की मिठास और ठंडे फल की धार के बीच का यह कंट्रास्ट ही वास्तव में यह व्यंजन है।"
+  }
+}

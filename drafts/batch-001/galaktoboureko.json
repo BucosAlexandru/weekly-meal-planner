@@ -1,0 +1,193 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Galaktoboureko", "ro": "Galaktoboureko", "es": "Galaktoboureko", "fr": "Galaktoboureko",
+    "de": "Galaktoboureko", "pt": "Galaktoboureko", "ru": "Галактобуреко", "ar": "غالاكتوبوريكو",
+    "zh": "希腊牛奶酥皮派", "ja": "ガラクトブレコ", "tr": "Galaktoboureko", "it": "Galaktoboureko",
+    "ko": "갈락토부레코", "hi": "गालाक्तोबूरेको"
+  },
+  "cuisine": {
+    "en": "Greece", "ro": "Grecia", "es": "Grecia", "fr": "Grèce",
+    "de": "Griechenland", "pt": "Grécia", "ru": "Греция", "ar": "اليونان",
+    "zh": "希腊", "ja": "ギリシャ", "tr": "Yunanistan", "it": "Grecia",
+    "ko": "그리스", "hi": "ग्रीस"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "500 g phyllo pastry, thawed",
+      "200 g unsalted butter, melted",
+      "1 L whole milk",
+      "200 g caster sugar (for the custard)",
+      "150 g fine semolina",
+      "4 large eggs",
+      "1 tsp vanilla extract",
+      "Zest of 1 lemon",
+      "For the syrup: 400 g caster sugar, 250 ml water, juice of half a lemon, a strip of orange peel, 1 stick of cinnamon"
+    ],
+    "ro": [
+      "500 g foi de plăcintă (phyllo), dezghețate",
+      "200 g unt nesărat, topit",
+      "1 l lapte integral",
+      "200 g zahăr tos (pentru cremă)",
+      "150 g griș fin",
+      "4 ouă mari",
+      "1 linguriță extract de vanilie",
+      "Coaja rasă de la 1 lămâie",
+      "Pentru sirop: 400 g zahăr, 250 ml apă, zeama de la o jumătate de lămâie, o fâșie de coajă de portocală, 1 baton de scorțișoară"
+    ],
+    "es": [
+      "500 g de masa filo, descongelada",
+      "200 g de mantequilla sin sal, derretida",
+      "1 L de leche entera",
+      "200 g de azúcar (para la crema)",
+      "150 g de sémola fina",
+      "4 huevos grandes",
+      "1 cdta de extracto de vainilla",
+      "Ralladura de 1 limón",
+      "Para el almíbar: 400 g de azúcar, 250 ml de agua, zumo de medio limón, una tira de piel de naranja, 1 rama de canela"
+    ],
+    "fr": [
+      "500 g de pâte phyllo, décongelée",
+      "200 g de beurre doux, fondu",
+      "1 L de lait entier",
+      "200 g de sucre en poudre (pour la crème)",
+      "150 g de semoule fine",
+      "4 gros œufs",
+      "1 c. à café d'extrait de vanille",
+      "Zeste de 1 citron",
+      "Pour le sirop : 400 g de sucre, 250 ml d'eau, le jus d'un demi-citron, une bande de zeste d'orange, 1 bâton de cannelle"
+    ],
+    "de": [
+      "500 g Filoteig, aufgetaut",
+      "200 g ungesalzene Butter, geschmolzen",
+      "1 L Vollmilch",
+      "200 g feiner Zucker (für die Creme)",
+      "150 g feiner Grieß",
+      "4 große Eier",
+      "1 TL Vanilleextrakt",
+      "Abrieb von 1 Zitrone",
+      "Für den Sirup: 400 g Zucker, 250 ml Wasser, Saft einer halben Zitrone, ein Streifen Orangenschale, 1 Zimtstange"
+    ],
+    "pt": [
+      "500 g de massa filo, descongelada",
+      "200 g de manteiga sem sal, derretida",
+      "1 L de leite gordo",
+      "200 g de açúcar (para o creme)",
+      "150 g de sêmola fina",
+      "4 ovos grandes",
+      "1 colher de chá de extrato de baunilha",
+      "Raspa de 1 limão",
+      "Para a calda: 400 g de açúcar, 250 ml de água, sumo de meio limão, uma tira de casca de laranja, 1 pau de canela"
+    ],
+    "ru": [
+      "500 г теста фило, размороженного",
+      "200 г несолёного сливочного масла, растопленного",
+      "1 л цельного молока",
+      "200 г мелкого сахара (для крема)",
+      "150 г мелкой манной крупы",
+      "4 крупных яйца",
+      "1 ч. л. ванильного экстракта",
+      "Цедра 1 лимона",
+      "Для сиропа: 400 г сахара, 250 мл воды, сок половины лимона, полоска апельсиновой цедры, 1 палочка корицы"
+    ],
+    "ar": [
+      "500 غ من عجين الفيلو، مُذابة",
+      "200 غ زبدة غير مملحة، مذابة",
+      "1 لتر حليب كامل الدسم",
+      "200 غ سكر ناعم (للكاسترد)",
+      "150 غ سميد ناعم",
+      "4 بيضات كبيرة",
+      "1 ملعقة صغيرة خلاصة فانيليا",
+      "بشر ليمونة واحدة",
+      "للقطر: 400 غ سكر، 250 مل ماء، عصير نصف ليمونة، شريحة قشر برتقال، 1 عود قرفة"
+    ],
+    "zh": [
+      "酥皮（phyllo）500 克，解冻",
+      "无盐黄油 200 克，融化",
+      "全脂牛奶 1 升",
+      "细砂糖 200 克（用于卡仕达）",
+      "细粒粗粒小麦粉（semolina）150 克",
+      "大鸡蛋 4 个",
+      "香草精 1 茶匙",
+      "1 个柠檬的皮屑",
+      "糖浆：细砂糖 400 克、水 250 毫升、半个柠檬的汁、一条橙皮、肉桂棒 1 根"
+    ],
+    "ja": [
+      "フィロ生地 500 g、解凍",
+      "無塩バター 200 g、溶かしておく",
+      "全脂牛乳 1 L",
+      "グラニュー糖 200 g（カスタード用）",
+      "細かいセモリナ粉 150 g",
+      "L 卵 4 個",
+      "バニラエクストラクト 小さじ 1",
+      "レモン 1 個分の皮（すりおろし）",
+      "シロップ用：グラニュー糖 400 g、水 250 ml、レモン半個分の果汁、オレンジ皮ひと切れ、シナモンスティック 1 本"
+    ],
+    "tr": [
+      "500 g yufka (phyllo), çözdürülmüş",
+      "200 g tuzsuz tereyağı, eritilmiş",
+      "1 L tam yağlı süt",
+      "200 g toz şeker (muhallebi için)",
+      "150 g ince irmik",
+      "4 büyük yumurta",
+      "1 çay kaşığı vanilya özütü",
+      "1 limonun kabuğu rendelenmiş",
+      "Şerbet için: 400 g şeker, 250 ml su, yarım limonun suyu, bir şerit portakal kabuğu, 1 çubuk tarçın"
+    ],
+    "it": [
+      "500 g di pasta phyllo, scongelata",
+      "200 g di burro non salato, sciolto",
+      "1 L di latte intero",
+      "200 g di zucchero semolato (per la crema)",
+      "150 g di semolino fine",
+      "4 uova grandi",
+      "1 cucchiaino di estratto di vaniglia",
+      "Scorza di 1 limone",
+      "Per lo sciroppo: 400 g di zucchero, 250 ml di acqua, succo di mezzo limone, una striscia di scorza d'arancia, 1 stecca di cannella"
+    ],
+    "ko": [
+      "필로 페이스트리 500 g, 해동",
+      "무염 버터 200 g, 녹이기",
+      "전유 1 L",
+      "고운 설탕 200 g (커스터드용)",
+      "고운 세몰리나 150 g",
+      "큰 달걀 4개",
+      "바닐라 익스트랙트 1작은술",
+      "레몬 1개분 제스트",
+      "시럽용: 설탕 400 g, 물 250 ml, 레몬 반 개분 즙, 오렌지 껍질 한 조각, 시나몬 스틱 1개"
+    ],
+    "hi": [
+      "500 ग्राम फ़िलो पेस्ट्री, पिघलाई हुई",
+      "200 ग्राम बिना नमक का मक्खन, पिघला हुआ",
+      "1 लीटर फुल फैट दूध",
+      "200 ग्राम बारीक चीनी (कस्टर्ड के लिए)",
+      "150 ग्राम बारीक सूजी",
+      "4 बड़े अंडे",
+      "1 छोटा चम्मच वनीला एसेंस",
+      "1 नींबू का छिलका, कद्दूकस",
+      "चाशनी के लिए: 400 ग्राम चीनी, 250 मिली पानी, आधा नींबू का रस, संतरे के छिलके की एक पट्टी, 1 दालचीनी की डंडी"
+    ]
+  },
+  "howIsMade": {
+    "en": "Start the syrup well in advance — it must be cold when the hot pie comes out of the oven. Combine the sugar, water, lemon juice, orange peel and cinnamon in a small saucepan, bring to a boil, then simmer 4 minutes; take off the heat and leave to cool completely while you make everything else.\n\nFor the custard, heat the milk in a wide saucepan with the sugar and lemon zest until just steaming — don't let it boil. Sprinkle the semolina in a fine even stream while whisking constantly, then keep whisking on low heat for 5–6 minutes until it thickens to a loose pudding. Off the heat, beat in the eggs one at a time (the mixture should be warm but not hot enough to scramble them) and the vanilla. Press clingfilm directly onto the surface to stop a skin forming.\n\nBrush a 22×30 cm baking dish with melted butter. Lay 7 sheets of phyllo across the bottom, brushing each generously with butter and letting the edges hang over the sides — those flaps will fold back over the top later. Pour in the still-warm custard, smooth it level, fold the overhanging flaps inward and brush them with butter, then cover with another 7 sheets of phyllo, again buttering each, and trim or tuck the edges in neatly so the pie is fully sealed.\n\nScore the top phyllo into diamond or square portions with a sharp knife — cut all the way through, so the syrup can later penetrate — and brush the surface lavishly with the last of the butter. Bake at 170°C for 45–55 minutes, until the top is deeply golden brown.\n\nThe moment it comes out of the oven, pour the cold syrup evenly over the hot pie — it will sizzle and steam, and that temperature contrast is what makes the phyllo absorb the syrup without going soggy. Leave to settle at least 4 hours, ideally overnight, before cutting along the score lines and serving at room temperature.",
+    "ro": "Începe siropul cu mult timp înainte — trebuie să fie rece când plăcinta fierbinte iese din cuptor. Pune într-o cratiță mică zahărul, apa, zeama de lămâie, coaja de portocală și scorțișoara, adu la fierbere și apoi fierbe înăbușit 4 minute; ia de pe foc și lasă să se răcească complet cât faci restul.\n\nPentru cremă, încălzește laptele într-o cratiță largă împreună cu zahărul și coaja de lămâie, doar până începe să scoată aburi — nu lăsa să dea în clocot. Presară grișul într-un fir subțire și uniform bătând neîntrerupt cu telul, apoi continuă să bați la foc mic 5–6 minute până se îngroașă într-un pudding moale. Stinge focul, încorporează ouăle pe rând (amestecul trebuie să fie cald, dar nu fierbinte încât să le coaguleze) și vanilia. Pune folie de plastic direct pe suprafață, ca să nu se formeze pojghiță.\n\nUnge cu unt topit o tavă de 22×30 cm. Așază 7 foi de phyllo pe fund, ungând generos cu unt fiecare strat și lăsând marginile să atârne pe lateral — acele clape se vor pleca peste deasupra mai târziu. Toarnă crema încă-caldă, nivelează, pliază spre interior clapele atârnate și unge-le cu unt, apoi acoperă cu încă 7 foi de phyllo, ungând tot cu unt, și ajustează marginile ca plăcinta să fie complet sigilată.\n\nÎnsemnează foile de deasupra în romburi sau pătrate cu un cuțit ascuțit — taie până la fund, astfel încât siropul să poată pătrunde mai târziu — și unge generos suprafața cu ultimul unt topit. Coace la 170°C timp de 45–55 de minute, până când partea de sus devine adânc auriu-arămie.\n\nÎn clipa în care iese din cuptor, toarnă siropul rece uniform peste plăcinta fierbinte — va sfârâi și va scoate abur, iar acest contrast de temperatură face ca foile de phyllo să absoarbă siropul fără să devină umede. Lasă să se așeze minim 4 ore, ideal peste noapte, înainte de a o tăia pe liniile însemnate și a o servi la temperatura camerei.",
+    "es": "Empieza el almíbar con mucha antelación — debe estar frío cuando salga el pastel caliente del horno. En un cazo, combina el azúcar, el agua, el zumo de limón, la piel de naranja y la canela, lleva a hervor y deja cocer 4 minutos a fuego suave; aparta del fuego y deja enfriar por completo mientras haces el resto.\n\nPara la crema, calienta la leche en una cacerola amplia con el azúcar y la ralladura de limón hasta que apenas humee — no debe hervir. Espolvorea la sémola en hilo fino y constante batiendo sin parar con varillas, y sigue batiendo a fuego suave 5–6 minutos hasta que se espese en una crema floja. Fuera del fuego, incorpora los huevos uno a uno (la mezcla debe estar caliente pero no tanto como para cuajarlos) y la vainilla. Cubre con film tocando la superficie para que no se forme nata.\n\nUnta con mantequilla derretida una fuente de 22×30 cm. Coloca 7 láminas de phyllo en el fondo, untando cada una con mantequilla y dejando los bordes colgando por los lados — esas pestañas se doblarán encima al final. Vierte la crema aún tibia, alisa, pliega hacia dentro las pestañas y úntalas con mantequilla, después cubre con otras 7 láminas de phyllo, untando cada una, y recorta o mete los bordes para que el pastel quede bien sellado.\n\nMarca el phyllo de arriba en rombos o cuadrados con un cuchillo bien afilado — corta hasta el fondo, para que el almíbar pueda penetrar después — y unta la superficie generosamente con la mantequilla restante. Hornea a 170°C durante 45–55 minutos, hasta que la parte superior esté de un dorado intenso.\n\nEn cuanto salga del horno, vierte el almíbar frío uniformemente sobre el pastel caliente — chisporroteará y soltará vapor, y ese contraste de temperaturas es lo que hace que el phyllo absorba el almíbar sin reblandecerse. Déjalo asentar al menos 4 horas, idealmente toda la noche, antes de cortarlo por las marcas y servirlo a temperatura ambiente.",
+    "fr": "Commencez le sirop bien en avance — il doit être froid lorsque la pâtisserie chaude sort du four. Réunissez dans une petite casserole le sucre, l'eau, le jus de citron, le zeste d'orange et la cannelle, portez à ébullition, puis laissez frémir 4 minutes ; retirez du feu et laissez refroidir complètement pendant que vous faites le reste.\n\nPour la crème, faites chauffer le lait dans une grande casserole avec le sucre et le zeste de citron jusqu'à frémissement — sans le faire bouillir. Versez la semoule en pluie fine et régulière en fouettant sans cesse, puis continuez à fouetter à feu doux pendant 5 à 6 minutes jusqu'à obtenir une crème souple. Hors du feu, incorporez les œufs un à un (le mélange doit être chaud mais pas brûlant au point de les coaguler) et la vanille. Posez un film plastique directement à la surface pour éviter qu'une peau ne se forme.\n\nBeurrez généreusement un plat à four de 22×30 cm. Disposez 7 feuilles de phyllo dans le fond en beurrant chacune et en laissant dépasser les bords — ces rabats se replieront ensuite sur le dessus. Versez la crème encore tiède, lissez-la, repliez les rabats vers l'intérieur et beurrez-les, puis recouvrez de 7 autres feuilles de phyllo, en beurrant chacune, et ajustez les bords pour que la pâtisserie soit bien close.\n\nMarquez les feuilles du dessus en losanges ou carrés avec un couteau bien aiguisé — coupez jusqu'au fond, pour que le sirop puisse plus tard pénétrer — et badigeonnez la surface généreusement avec le reste du beurre. Enfournez à 170°C pendant 45 à 55 minutes, jusqu'à ce que le dessus soit d'un doré profond.\n\nAu moment où elle sort du four, versez le sirop froid uniformément sur la pâtisserie chaude — cela va siffler et fumer, et ce contraste de température est précisément ce qui permet au phyllo d'absorber le sirop sans se ramollir. Laissez reposer au moins 4 heures, idéalement toute la nuit, avant de découper le long des marques et de servir à température ambiante.",
+    "de": "Beginnen Sie den Sirup lange im Voraus — er muss kalt sein, wenn der heiße Kuchen aus dem Ofen kommt. Geben Sie Zucker, Wasser, Zitronensaft, Orangenschale und Zimt in einen kleinen Topf, bringen Sie das Ganze zum Kochen und lassen Sie es 4 Minuten köcheln; vom Herd nehmen und vollständig abkühlen lassen, während Sie das Übrige machen.\n\nFür die Creme erhitzen Sie die Milch in einem weiten Topf zusammen mit dem Zucker und dem Zitronenabrieb, bis sie gerade dampft — sie darf nicht kochen. Streuen Sie den Grieß in einem feinen gleichmäßigen Strahl unter ständigem Rühren mit dem Schneebesen ein, und rühren Sie bei niedriger Hitze 5–6 Minuten weiter, bis ein lockerer Pudding entsteht. Vom Herd nehmen, die Eier nacheinander einrühren (die Masse soll warm sein, aber nicht so heiß, dass die Eier gerinnen) und die Vanille. Drücken Sie Frischhaltefolie direkt auf die Oberfläche, damit sich keine Haut bildet.\n\nBestreichen Sie eine 22×30 cm Auflaufform mit der geschmolzenen Butter. Legen Sie 7 Filoblätter über den Boden, bestreichen Sie jedes großzügig mit Butter und lassen Sie die Ränder über die Seiten hängen — diese Klappen werden später nach innen geklappt. Geben Sie die noch warme Creme hinein, streichen Sie sie glatt, klappen Sie die überhängenden Ränder nach innen und bestreichen Sie sie mit Butter, dann decken Sie mit weiteren 7 Filoblättern ab, jedes wieder mit Butter bestrichen, und richten Sie die Ränder sauber ein, damit der Kuchen vollständig verschlossen ist.\n\nMarkieren Sie das obere Filo mit einem scharfen Messer in Rauten oder Quadrate — schneiden Sie ganz durch, damit der Sirup später eindringen kann — und bestreichen Sie die Oberfläche großzügig mit dem restlichen Butter. Backen Sie bei 170°C 45–55 Minuten, bis die Oberseite tief goldbraun ist.\n\nIn dem Moment, in dem sie aus dem Ofen kommt, gießen Sie den kalten Sirup gleichmäßig über den heißen Kuchen — er wird zischen und dampfen, und genau dieser Temperaturkontrast ist es, der das Filo den Sirup aufnehmen lässt, ohne weich zu werden. Lassen Sie das Ganze mindestens 4 Stunden, idealerweise über Nacht, ziehen, bevor Sie entlang der Markierungen schneiden und bei Zimmertemperatur servieren.",
+    "pt": "Comece a calda muito antes — tem de estar fria quando o doce quente sair do forno. Junte numa caçarola pequena o açúcar, a água, o sumo de limão, a casca de laranja e a canela, leve a ferver e deixe ferver brandamente 4 minutos; retire do lume e deixe arrefecer por completo enquanto faz o resto.\n\nPara o creme, aqueça o leite numa caçarola larga com o açúcar e a raspa de limão até começar a fumegar — não deixe ferver. Polvilhe a sêmola em fio fino e regular, batendo sem parar com varas de arames, e continue a bater em lume brando 5–6 minutos até engrossar num pudim mole. Fora do lume, incorpore os ovos um a um (o creme deve estar quente mas não tanto que coalhe os ovos) e a baunilha. Cubra com película diretamente sobre a superfície para não formar pele.\n\nPincele com manteiga derretida uma forma de 22×30 cm. Coloque 7 folhas de massa filo no fundo, pincelando cada uma generosamente com manteiga e deixando as bordas a pender pelos lados — essas abas serão dobradas para dentro depois. Verta o creme ainda morno, alise, dobre para dentro as abas que ficaram a pender e pincele-as com manteiga, depois cubra com outras 7 folhas de filo, pincelando cada uma, e ajuste as bordas para que o doce fique bem selado.\n\nMarque o filo de cima em losangos ou quadrados com uma faca bem afiada — corte até ao fundo, para que a calda possa depois penetrar — e pincele a superfície abundantemente com a manteiga restante. Leve ao forno a 170°C durante 45–55 minutos, até a parte de cima estar profundamente dourada.\n\nNo momento em que sair do forno, deite a calda fria de forma uniforme sobre o doce quente — chia e larga vapor, e esse contraste de temperaturas é o que faz a massa filo absorver a calda sem ficar mole. Deixe assentar pelo menos 4 horas, idealmente uma noite, antes de cortar pelas marcas e servir à temperatura ambiente.",
+    "ru": "Сироп нужно начать заранее — он должен быть холодным к моменту, когда горячий пирог выйдет из духовки. Соедините в небольшой кастрюле сахар, воду, лимонный сок, апельсиновую цедру и палочку корицы, доведите до кипения и проварите 4 минуты на медленном огне; снимите с огня и дайте полностью остыть, пока готовите остальное.\n\nДля крема разогрейте молоко в широкой кастрюле вместе с сахаром и лимонной цедрой — до едва заметного пара, не доводя до кипения. Тонкой ровной струйкой всыпьте манку, непрерывно взбивая венчиком, и продолжайте взбивать на слабом огне 5–6 минут, пока масса не загустеет до мягкого пудинга. Снимите с огня, поочерёдно вмешайте яйца (масса должна быть тёплой, но не настолько горячей, чтобы яйца свернулись) и ваниль. Прижмите пищевую плёнку прямо к поверхности, чтобы не образовалась плёнка.\n\nСмажьте растопленным маслом форму 22×30 см. Уложите по дну 7 листов фило, щедро смазывая каждый маслом и оставляя края свисать по сторонам — эти клапаны мы позже завернём поверх. Влейте ещё тёплый крем, выровняйте, заверните свисающие края внутрь и смажьте их маслом, затем накройте ещё 7 листами фило, смазывая каждый, и аккуратно подверните края, чтобы пирог был полностью запечатан.\n\nНадрежьте верхние листы фило острым ножом ромбами или квадратами — режьте до самого дна, чтобы сироп позже мог пропитать пирог — и щедро смажьте поверхность остатками масла. Выпекайте при 170°C 45–55 минут, пока верх не станет глубоко золотистым.\n\nКак только пирог выйдет из духовки, равномерно полейте его холодным сиропом — он зашипит и запарит, и именно этот контраст температур позволяет фило впитать сироп, не размокнув. Дайте настояться минимум 4 часа, идеально на ночь, прежде чем разрезать по надсечкам и подать при комнатной температуре.",
+    "ar": "ابدأ بتحضير القطر قبل وقت كافٍ — يجب أن يكون بارداً حين تخرج الفطيرة الساخنة من الفرن. ضع السكر والماء وعصير الليمون وقشر البرتقال وعود القرفة في قدر صغير، أوصلها إلى الغليان ثم اتركها على نار هادئة 4 دقائق؛ ارفعها عن النار واتركها تبرد تماماً بينما تحضّر الباقي.\n\nللكاسترد، سخّن الحليب في قدر واسع مع السكر وبشر الليمون حتى يبدأ بإصدار البخار — لا تجعله يغلي. انثر السميد بخيط رفيع ومنتظم مع الخفق المستمر بالمضرب، ثم استمر بالخفق على نار هادئة من 5 إلى 6 دقائق حتى يثخن إلى قوام بودينج ليّن. ارفعه عن النار، أضف البيض واحدة تلو الأخرى (يجب أن يكون المزيج دافئاً ولكن ليس ساخناً بما يخثّر البيض) ثم الفانيليا. ضع غلافاً بلاستيكياً ملامساً للسطح حتى لا تتكوّن قشرة.\n\nادهن صينية فرن قياس 22×30 سم بالزبدة المذابة. ضع 7 طبقات من عجين الفيلو في القاع، وادهن كل طبقة بسخاء بالزبدة، واترك الحواف تتدلّى على الجوانب — ستُطوى هذه الزوايا فوق الفطيرة لاحقاً. اسكب الكاسترد وهو ما زال دافئاً، سوِّ السطح، اطوِ الزوايا المتدلّية إلى الداخل وادهنها بالزبدة، ثم غطّها بـ 7 طبقات أخرى من الفيلو وادهن كل طبقة، وعدّل الحواف بأناقة حتى تكون الفطيرة محكمة الإغلاق.\n\nقسّم وجه الفيلو إلى معينات أو مربعات بسكين حاد — اقطع حتى القاع، ليتمكّن القطر لاحقاً من النفاذ — وادهن السطح بسخاء بما تبقى من الزبدة. اخبزها في 170°م لمدة 45–55 دقيقة حتى تصبح القشرة العلوية ذهبية بنية غامقة.\n\nفي اللحظة التي تخرج فيها من الفرن، اسكب القطر البارد بانتظام فوق الفطيرة الساخنة — ستفور ويتصاعد منها البخار، وهذا التباين الحراري بالضبط هو ما يجعل الفيلو يمتصّ القطر دون أن يصبح طريّاً. اتركها ترتاح 4 ساعات على الأقل، ويُفضّل طوال الليل، قبل التقطيع على الخطوط والتقديم بحرارة الغرفة.",
+    "zh": "提前做好糖浆——必须冷却后才能浇在出炉的热派上。把糖、水、柠檬汁、橙皮和肉桂放入小锅，烧开后小火再煮 4 分钟；离火，让它彻底放凉，期间你处理其他工序。\n\n做卡仕达：把牛奶、糖和柠檬皮屑放进一只宽锅中，加热到刚刚冒蒸气——不可烧开。一边持续打蛋器搅拌，一边把 semolina 以细均匀的雨丝洒下，转小火再不停搅拌 5–6 分钟，直到稠成一种柔软的布丁状。离火后将鸡蛋逐个搅入（混合物应温热但不至烫到把蛋煮熟），再加入香草精。让保鲜膜直接贴在卡仕达表面，防止结皮。\n\n把 22×30 厘米的烤盘用融化的黄油刷一遍。在底部铺 7 张 phyllo，每张都慷慨地刷上黄油，让叶子的边缘搭出锅沿——这些垂下来的部分稍后会折回顶上。把仍有余温的卡仕达倒进去，抹平，再把先前垂出的部分往中间折回并刷黄油，然后再盖 7 张 phyllo，同样每张都刷黄油，最后修剪或塞好边缘让派完全封口。\n\n用利刀在顶层 phyllo 上划出菱形或方块——一定要切到底，糖浆才能在最后渗下去——再把剩下的黄油慷慨地刷在表面。170°C 烤 45–55 分钟，直到上层呈深金棕色。\n\n出炉的那一刻，把冷却好的糖浆均匀地浇在滚烫的派上——它会嘶嘶作响、冒出蒸汽，正是这冷热反差让 phyllo 吸进糖浆而不变软塌。让它至少静置 4 小时，最好放过夜，再沿先前划好的线切开，于室温享用。",
+    "ja": "シロップは早めに作っておく — 焼き上がりのアツアツのパイにかける時には完全に冷めている必要がある。小鍋に砂糖、水、レモン汁、オレンジの皮、シナモンスティックを入れて沸騰させ、4 分弱火で煮詰める；火から外し、ほかの作業をしている間にしっかりと冷ます。\n\nカスタードを作る。広めの鍋に牛乳、砂糖、レモンの皮を入れて、湯気が立ち始めるまで温める — 沸騰させないこと。泡立て器でかき混ぜながら、セモリナを細く均等に振り入れ、弱火のまま 5〜6 分かき混ぜ続けて、ゆるいプディング状になるまで仕上げる。火から外し、卵を 1 個ずつ加えて混ぜる（カスタードは温かくあるが、卵が固まるほど熱くはない状態にする）。最後にバニラ。表面にラップを直接密着させて皮膜ができないようにする。\n\n22×30 cm の耐熱皿に溶かしバターを塗る。底にフィロを 7 枚重ね、それぞれにバターをたっぷり塗り、縁を皿の外側に垂らしておく — この垂らした部分は後で内側に折り返す。まだ温かいカスタードを流し込み、平らに均し、垂らしておいたフィロを内側に折り込んでバターを塗り、さらに 7 枚のフィロを重ねて毎回バターを塗り、縁を整えてパイが完全に閉じるようにする。\n\n切れ味のよいナイフで上のフィロにダイヤ形や四角の切り込みを入れる — シロップが行き渡るように、底まで切り通す — そして残りのバターを表面にたっぷりと塗る。170℃で 45〜55 分、表面が深い黄金色になるまで焼く。\n\nオーブンから出した瞬間、熱々のパイの上に冷たいシロップを均等に注ぐ — ジューと音がして湯気が立つ、この温度差こそがフィロをべちゃっとさせずにシロップを染み込ませる仕組みだ。最低 4 時間、できれば一晩置いてから、切り込みに沿って切り分け、室温で供する。",
+    "tr": "Şerbeti çok önceden başlat — sıcak tepsi fırından çıktığında soğumuş olmalı. Küçük bir tencerede şekeri, suyu, limon suyunu, portakal kabuğunu ve tarçını birleştir, kaynamaya getir ve 4 dakika hafif ateşte kaynat; ocaktan al ve sen diğer hazırlıkları yaparken tamamen soğusun.\n\nMuhallebi için sütü geniş bir tencerede şeker ve limon kabuğu ile, sadece buhar çıkacak kadar ısıt — kaynatma. İrmiği ince ve düzenli bir akıntıyla, çırpma teli ile durmadan karıştırarak ekle, ve düşük ateşte 5–6 dakika çırpmaya devam et, hafif bir muhallebi kıvamına gelene kadar. Ocaktan al, yumurtaları teker teker ekleyerek karıştır (karışım sıcak olmalı, ama yumurtaları kesecek kadar değil) ve vanilyayı katı. Yüzeyine doğrudan streç film bastırarak kabuk bağlamasını önle.\n\n22×30 cm bir fırın kabını eritilmiş tereyağıyla yağla. Tabana 7 yufka serip her birini bolca yağla ve kenarları kenarlardan sarkacak şekilde bırak — bu sarkan parçalar sonra üste katlanacak. Hâlâ ılık olan muhallebiyi içine dök, düzleştir, sarkan kenarları içeri katla ve onları da yağla, sonra üzerine 7 yufka daha ser, yine her birini yağla, ve kenarları muntazam şekilde içeri tıkıştırarak tepsiyi tamamen kapat.\n\nÜstteki yufkayı keskin bir bıçakla baklava veya kare dilimler şeklinde çiz — şerbet sonradan içine işleyebilsin diye tabana kadar kes — ve yüzeyi son kalan tereyağıyla cömertçe yağla. 170°C'de 45–55 dakika, üstü koyu altın rengine dönene kadar pişir.\n\nFırından çıktığı an, soğuk şerbeti sıcak tepsinin üzerine eşit şekilde dök — cızırdar ve buhar çıkarır, ve bu sıcak-soğuk farkı yufkayın yumuşamadan şerbeti çekmesini sağlayan şeydir. En az 4 saat, tercihen bir gece, dinlensin, sonra çizgi izlerinden kes ve oda sıcaklığında servis et.",
+    "it": "Cominciate lo sciroppo molto in anticipo — deve essere freddo quando la teglia calda esce dal forno. Riunite in un pentolino lo zucchero, l'acqua, il succo di limone, la scorza d'arancia e la cannella, portate a bollore e fate sobbollire 4 minuti; togliete dal fuoco e lasciate raffreddare completamente mentre preparate il resto.\n\nPer la crema, scaldate il latte in una pentola larga con lo zucchero e la scorza di limone, fino a quando inizia appena a fumare — non deve bollire. Fate cadere il semolino a pioggia fine e regolare frustando senza sosta, e continuate a frustare a fuoco basso per 5–6 minuti, finché non si addensa in un budino morbido. Fuori dal fuoco, incorporate le uova una alla volta (la crema deve essere calda ma non così tanto da rapprenderle) e la vaniglia. Premete della pellicola direttamente sulla superficie per impedire la formazione di una pellicina.\n\nSpennellate una pirofila di 22×30 cm con il burro fuso. Disponete 7 fogli di phyllo sul fondo, spennellando generosamente ogni foglio con burro e lasciando i bordi cadere oltre i lati — quei lembi si ripiegheranno poi verso l'interno. Versate la crema ancora tiepida, livellatela, ripiegate verso l'interno i lembi e spennellateli con burro, poi coprite con altri 7 fogli di phyllo, sempre spennellando, e rifilate o ripiegate i bordi in modo che la teglia sia ben chiusa.\n\nIncidete il phyllo superiore in rombi o quadrati con un coltello affilato — tagliate fino in fondo, in modo che lo sciroppo possa poi penetrare — e spennellate la superficie generosamente con l'ultimo burro. Cuocete a 170°C per 45–55 minuti, finché la superficie non è di un dorato intenso.\n\nNel momento in cui esce dal forno, versate uniformemente lo sciroppo freddo sulla teglia calda — sfrigolerà e farà vapore, e proprio questo contrasto di temperatura permette al phyllo di assorbire lo sciroppo senza inzupparsi. Lasciate riposare almeno 4 ore, idealmente tutta la notte, prima di tagliare lungo le incisioni e servire a temperatura ambiente.",
+    "ko": "시럽은 미리, 충분한 여유를 두고 시작한다 — 뜨거운 파이가 오븐에서 나올 때 시럽은 반드시 차가워야 한다. 작은 냄비에 설탕, 물, 레몬즙, 오렌지 껍질, 시나몬 스틱을 함께 넣어 끓이고, 약불에서 4분 더 졸인 다음; 불에서 내려 나머지 작업을 하는 동안 완전히 식힌다.\n\n커스터드는, 넓은 냄비에 우유와 설탕, 레몬 제스트를 넣고 김이 오르기 직전까지만 데운다 — 끓이지 말 것. 거품기로 끊임없이 휘저으며 세몰리나를 가는 비처럼 고르게 흩뿌리고, 약불에서 5–6분 계속 휘저어 부드러운 푸딩 정도의 농도로 졸인다. 불을 끄고 달걀을 하나씩 풀어 넣고 (혼합물이 따뜻해야 하지만 달걀이 익을 만큼 뜨겁지는 않아야 한다) 바닐라를 더한다. 표면에 직접 랩을 밀착시켜 막이 생기지 않게 한다.\n\n22×30 cm 베이킹 팬에 녹인 버터를 바른다. 바닥에 필로 7장을 깔고, 각 장마다 버터를 듬뿍 바르고, 가장자리는 팬 밖으로 늘어뜨려 둔다 — 이 늘어진 부분이 나중에 위쪽으로 접혀 들어간다. 아직 따뜻한 커스터드를 부어 평평하게 펴고, 늘어진 가장자리를 안쪽으로 접어 그 부분에도 버터를 바르고, 그 위에 다시 필로 7장을 같은 방식으로 버터 바르며 쌓고, 가장자리를 정리해 파이가 완전히 봉해지도록 한다.\n\n날카로운 칼로 윗면 필로를 다이아몬드형 또는 정사각형으로 잘라낸다 — 시럽이 나중에 스며들 수 있도록 바닥까지 끝까지 잘라준다 — 그리고 남은 버터를 표면에 듬뿍 바른다. 170°C에서 45–55분, 윗면이 짙은 황금색이 될 때까지 굽는다.\n\n오븐에서 꺼내는 그 순간, 차가운 시럽을 뜨거운 파이 위에 고르게 부어준다 — 치익 소리를 내며 김이 오르는데, 바로 이 온도 차이가 필로를 눅눅하지 않게 시럽을 흡수시킨다. 최소 4시간, 가능하면 하룻밤 둔 다음, 미리 그어둔 선을 따라 잘라 실온에서 낸다.",
+    "hi": "चाशनी पहले से तैयार करनी है — ओवन से गरम पाई निकलते वक़्त चाशनी पूरी तरह ठंडी हो जानी चाहिए। एक छोटे पैन में चीनी, पानी, नींबू का रस, संतरे का छिलका और दालचीनी डालें, उबाल पर लाएँ, फिर 4 मिनट और हल्की आँच पर पकाएँ; आँच से उतार कर पूरी तरह ठंडा होने दें जब तक आप बाक़ी हिस्सा बनाते हैं।\n\nकस्टर्ड के लिए, एक चौड़े पैन में दूध को चीनी और नींबू के छिलके के साथ तब तक गरम करें जब तक भाप उठने लगे — उबलने न दें। सूजी को पतली, समान धार में बरसाएँ और लगातार व्हिस्क से चलाते रहें, फिर धीमी आँच पर 5–6 मिनट और चलाते रहें जब तक यह नरम पुडिंग की तरह गाढ़ा न हो जाए। आँच से उतार कर अंडे एक-एक करके फेंट कर मिलाएँ (मिश्रण गरम होना चाहिए, पर इतना गरम नहीं कि अंडे फट जाएँ) और वनीला डालें। ऊपर पन्नी सीधे सतह पर चिपका दें ताकि परत न बने।\n\nएक 22×30 सेमी की बेकिंग डिश पर पिघले मक्खन से ब्रश करें। तले पर 7 शीट phyllo बिछाएँ, हर एक पर भर-भर कर मक्खन ब्रश करें और किनारे डिश के बाहर लटका रहने दें — ये किनारे बाद में ऊपर की तरफ़ मोड़े जाएँगे। अब भी गरम कस्टर्ड डालें, समतल करें, लटकते किनारों को अंदर मोड़ें और उन पर भी मक्खन लगाएँ, फिर 7 और शीट phyllo से ढक दें, हर एक पर फिर मक्खन, और किनारों को साफ़-सुथरे ढंग से बंद करें ताकि पाई पूरी तरह सील हो जाए।\n\nएक तेज़ चाक़ू से ऊपर वाली phyllo पर हीरों या चौकोरों के निशान बनाएँ — पूरी तरह तले तक काटें, ताकि बाद में चाशनी अंदर तक जा सके — और बचा हुआ मक्खन सतह पर अच्छी मात्रा में ब्रश कर दें। 170°C पर 45–55 मिनट, जब तक ऊपर का हिस्सा गहरा सुनहरा-भूरा न हो जाए, बेक करें।\n\nजैसे ही यह ओवन से बाहर निकले, ठंडी चाशनी को गरम पाई पर बराबर डाल दें — चटाक की आवाज़ और भाप उठेगी, और यही गरम-ठंडे का अंतर है जो phyllo को बिना नरम हुए चाशनी सोखने देता है। कम से कम 4 घंटे, बेहतर हो तो रात भर बैठने दें, फिर निशानों पर काटें और कमरे के तापमान पर परोसें।"
+  }
+}

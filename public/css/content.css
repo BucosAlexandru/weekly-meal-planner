@@ -1102,12 +1102,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1.1rem;
+  /* Cards size to their natural content. Some recipes have an authored
+     description in recipes-meta.js, others don't — top-aligning lets a
+     desc-less card simply end after its title + meta instead of growing
+     a block of empty whitespace to match a neighbour with two extra
+     lines of text. The grid's column/gap geometry keeps the rhythm
+     consistent across rows even when individual cards vary in height. */
+  align-items: start;
 }
 .cuisine-tile-grid > li { margin: 0; min-width: 0; }
 .cuisine-tile {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background: #fff;
   border: 1px solid #e8eaed;
   border-radius: 16px;
@@ -1145,7 +1151,7 @@
 .cuisine-tile-body {
   display: flex;
   flex-direction: column;
-  gap: .35rem;
+  gap: .5rem;
   padding: .9rem 1rem 1rem;
 }
 .cuisine-tile-title {
@@ -1156,8 +1162,14 @@
   margin: 0;
   line-height: 1.3;
 }
+/* Only rendered when recipes-meta.js carries an authored desc for this
+   recipe in the current locale (with EN fall-through). We never fabricate
+   text from ingredients/tags/metadata — cards without an authored desc
+   simply skip this element, and the grid's align-items: start lets them
+   end naturally one paragraph earlier instead of leaving empty
+   whitespace. line-clamp keeps a long desc from breaking visual rhythm. */
 .cuisine-tile-desc {
-  font-size: .85rem;
+  font-size: .86rem;
   color: #4b5563;
   margin: 0;
   line-height: 1.45;
@@ -1171,7 +1183,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: .35rem .55rem;
-  margin-top: .25rem;
+  padding-top: .15rem;
   font-size: .76rem;
 }
 .cuisine-tile-time {
@@ -1191,41 +1203,12 @@
   white-space: nowrap;
 }
 
-/* Featured spotlight: tile #0 takes 2 columns + bigger image on
-   tablet/desktop. On mobile it falls back to standard width. */
-/* Featured spotlight: tile #0 takes 2 columns on tablet+. The image used
-   to be unconditionally `display: none` here on the assumption that the
-   hero band above always showed the same recipe (featured = first in
-   recipes.js = same as the hero pick), so hiding the tile image avoided
-   duplication. That assumption no longer holds: the hero picker now ranks
-   by image-host stability and may pick a different recipe than tile #0,
-   leaving the most-prominent tile image-less even when its detail page
-   renders fine. Hide the image only when the generator marks the tile as
-   actually duplicating the hero (data-hero-dup="1"); otherwise show it,
-   constrained to ~38% of the row on tablet+ by the @media block below. */
-.cuisine-tile--featured .cuisine-tile-img[data-hero-dup="1"] { display: none; }
-@media (min-width: 720px) {
-  .cuisine-tile--featured {
-    grid-column: span 2;
-    flex-direction: row;
-  }
-  .cuisine-tile--featured .cuisine-tile-img {
-    flex: 0 0 38%;
-    aspect-ratio: auto;
-    align-self: stretch;
-  }
-  .cuisine-tile--featured .cuisine-tile-body {
-    flex: 1 1 auto;
-    padding: 1.4rem 1.6rem 1.5rem;
-    justify-content: center;
-    gap: .6rem;
-  }
-  .cuisine-tile--featured .cuisine-tile-title { font-size: 1.3rem; }
-  .cuisine-tile--featured .cuisine-tile-desc {
-    font-size: .95rem;
-    -webkit-line-clamp: 3;
-  }
-}
+/* The previous `.cuisine-tile--featured` modifier promoted the first tile
+   on each hub into a 2-column, row-layout spotlight and hid its image when
+   it matched the hero band. The result was an inconsistent grid: most hubs
+   had one card with a half-width side image (or no image at all) and the
+   rest with the standard image-on-top layout. The modifier is gone — every
+   tile on every hub now uses the same image-on-top layout. */
 
 /* ── Hub-index CARDS — thumbnail strip + curated preview ──────────
    Replaces the old "<ul> of recipe names" sub-list with a 3-image
@@ -1439,7 +1422,7 @@
   .cuisine-hero-flag { font-size: 2.4rem; }
 
   .cuisine-tile-grid { grid-template-columns: 1fr 1fr; gap: .7rem; }
-  .cuisine-tile-body { padding: .65rem .75rem .85rem; gap: .25rem; }
+  .cuisine-tile-body { padding: .65rem .75rem .85rem; gap: .35rem; }
   .cuisine-tile-title { font-size: .92rem; }
   .cuisine-tile-desc { font-size: .78rem; -webkit-line-clamp: 2; }
   .cuisine-tile-meta { gap: .25rem .4rem; font-size: .7rem; }

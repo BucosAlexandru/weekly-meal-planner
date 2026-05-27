@@ -1,0 +1,207 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Osso Buco alla Milanese", "ro": "Osso Buco alla Milanese", "es": "Osso Buco a la milanesa", "fr": "Osso buco à la milanaise",
+    "de": "Ossobuco alla Milanese", "pt": "Osso buco à milanesa", "ru": "Оссобуко по-милански", "ar": "أوسوبوكو ميلانيز",
+    "zh": "米兰式烩小牛膝", "ja": "オッソブーコ・アッラ・ミラネーゼ", "tr": "Milano Usulü Osso Buco", "it": "Ossobuco alla Milanese",
+    "ko": "오소부코 알라 밀라네제", "hi": "ओसो बूको अल्ला मिलानेज़े"
+  },
+  "cuisine": {
+    "en": "Italy", "ro": "Italia", "es": "Italia", "fr": "Italie",
+    "de": "Italien", "pt": "Itália", "ru": "Италия", "ar": "إيطاليا",
+    "zh": "意大利", "ja": "イタリア", "tr": "İtalya", "it": "Italia",
+    "ko": "이탈리아", "hi": "इटली"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "4 thick-cut veal shanks (3–4 cm thick, about 350 g each), tied around the circumference with kitchen string",
+      "Salt and freshly ground black pepper",
+      "Plain flour for dusting",
+      "4 tbsp unsalted butter, 2 tbsp olive oil",
+      "1 onion + 1 carrot + 1 celery stalk, all finely diced",
+      "200 ml dry white wine",
+      "400 g chopped tomatoes",
+      "500 ml veal or chicken stock",
+      "1 bay leaf, a few sprigs of thyme",
+      "For the gremolata: zest of 1 lemon, 2 garlic cloves finely minced, a small bunch of flat-leaf parsley finely chopped"
+    ],
+    "ro": [
+      "4 rasoluri groase de vițel (3–4 cm grosime, aproximativ 350 g fiecare), legate cu sfoară de bucătărie pe circumferință",
+      "Sare și piper negru proaspăt măcinat",
+      "Făină albă pentru tăvălit",
+      "4 linguri unt nesărat, 2 linguri ulei de măsline",
+      "1 ceapă + 1 morcov + 1 țelină, toate tocate mărunt",
+      "200 ml vin alb sec",
+      "400 g roșii tocate",
+      "500 ml fond de vițel sau pui",
+      "1 frunză de dafin, câteva fire de cimbru",
+      "Pentru gremolata: coaja rasă de la 1 lămâie, 2 căței de usturoi tocați fin, un mănunchi mic de pătrunjel cu frunza plată, tocat fin"
+    ],
+    "es": [
+      "4 ossobucos gruesos de ternera (3–4 cm de grosor, unos 350 g cada uno), atados con hilo de cocina por la circunferencia",
+      "Sal y pimienta negra recién molida",
+      "Harina común para enharinar",
+      "4 cdas de mantequilla sin sal, 2 cdas de aceite de oliva",
+      "1 cebolla + 1 zanahoria + 1 rama de apio, todo picado muy fino",
+      "200 ml de vino blanco seco",
+      "400 g de tomate triturado",
+      "500 ml de caldo de ternera o pollo",
+      "1 hoja de laurel, unas ramitas de tomillo",
+      "Para la gremolata: ralladura de 1 limón, 2 dientes de ajo muy picados, un manojo pequeño de perejil de hoja plana muy picado"
+    ],
+    "fr": [
+      "4 jarrets de veau épais (3–4 cm d'épaisseur, environ 350 g chacun), ficelés autour de la circonférence",
+      "Sel et poivre noir du moulin",
+      "Farine pour saupoudrer",
+      "4 c. à soupe de beurre doux, 2 c. à soupe d'huile d'olive",
+      "1 oignon + 1 carotte + 1 branche de céleri, tous finement taillés",
+      "200 ml de vin blanc sec",
+      "400 g de tomates concassées",
+      "500 ml de bouillon de veau ou de volaille",
+      "1 feuille de laurier, quelques brins de thym",
+      "Pour la gremolata : zeste de 1 citron, 2 gousses d'ail très finement hachées, un petit bouquet de persil plat ciselé"
+    ],
+    "de": [
+      "4 dicke Kalbsbeinscheiben (3–4 cm dick, je etwa 350 g), mit Küchengarn um den Umfang gebunden",
+      "Salz und frisch gemahlener schwarzer Pfeffer",
+      "Mehl zum Wenden",
+      "4 EL ungesalzene Butter, 2 EL Olivenöl",
+      "1 Zwiebel + 1 Karotte + 1 Stange Sellerie, alles fein gewürfelt",
+      "200 ml trockener Weißwein",
+      "400 g gehackte Tomaten",
+      "500 ml Kalbs- oder Hühnerfond",
+      "1 Lorbeerblatt, ein paar Zweige Thymian",
+      "Für die Gremolata: Abrieb von 1 Zitrone, 2 Knoblauchzehen sehr fein gehackt, ein kleines Bund glatte Petersilie fein gehackt"
+    ],
+    "pt": [
+      "4 chambão de vitela em fatias grossas (3–4 cm de espessura, cerca de 350 g cada), atados com fio de cozinha à volta",
+      "Sal e pimenta-preta moída na hora",
+      "Farinha para passar",
+      "4 colheres de sopa de manteiga sem sal, 2 colheres de sopa de azeite",
+      "1 cebola + 1 cenoura + 1 talo de aipo, todos bem picados",
+      "200 ml de vinho branco seco",
+      "400 g de tomate picado",
+      "500 ml de caldo de vitela ou frango",
+      "1 folha de louro, alguns raminhos de tomilho",
+      "Para a gremolata: raspa de 1 limão, 2 dentes de alho bem picados, um pequeno molho de salsa de folha lisa picada"
+    ],
+    "ru": [
+      "4 толстых среза телячьей голяшки (3–4 см толщиной, около 350 г каждый), обвязанные кулинарной нитью по окружности",
+      "Соль и свежемолотый чёрный перец",
+      "Мука для обваливания",
+      "4 ст. л. несолёного сливочного масла, 2 ст. л. оливкового масла",
+      "1 луковица + 1 морковь + 1 черешок сельдерея, всё мелко нарезать",
+      "200 мл сухого белого вина",
+      "400 г рубленых томатов",
+      "500 мл телячьего или куриного бульона",
+      "1 лавровый лист, несколько веточек тимьяна",
+      "Для гремолаты: цедра 1 лимона, 2 зубчика чеснока очень мелко измельчить, маленький пучок плоской петрушки мелко нарубленной"
+    ],
+    "ar": [
+      "4 شرائح سميكة من ساق العجل (3–4 سم سُمكاً، نحو 350 غ لكل واحدة)، مربوطة بخيط مطبخ حول المحيط",
+      "ملح وفلفل أسود مطحون طازجاً",
+      "دقيق أبيض للتغطية",
+      "4 ملاعق كبيرة زبدة غير مملحة، 2 ملعقة كبيرة زيت زيتون",
+      "1 بصلة + 1 جزرة + 1 ساق كرفس، جميعها مفرومة ناعماً",
+      "200 مل نبيذ أبيض جاف",
+      "400 غ طماطم مفرومة",
+      "500 مل مرق عجل أو دجاج",
+      "1 ورقة غار، بضع غصينات زعتر",
+      "للغريمولاتا: بشر ليمونة واحدة، 2 فص ثوم مفرومة جداً، حزمة صغيرة بقدونس عريض الورقة مفرومة"
+    ],
+    "zh": [
+      "4 块厚切小牛胫（3–4 厘米厚，每块约 350 克），用厨用棉绳沿圆周捆好",
+      "盐和现磨黑胡椒",
+      "撒粉用中筋面粉",
+      "无盐黄油 4 汤匙、橄榄油 2 汤匙",
+      "洋葱 1 个 + 胡萝卜 1 根 + 芹菜 1 根，全部切细末",
+      "干白葡萄酒 200 毫升",
+      "罐装碎番茄 400 克",
+      "小牛或鸡高汤 500 毫升",
+      "月桂叶 1 片、几枝百里香",
+      "Gremolata：1 个柠檬的皮屑、2 瓣大蒜剁极细、一小把平叶欧芹切细"
+    ],
+    "ja": [
+      "厚切りの子牛すね肉 4 枚（厚さ 3〜4 cm、各約 350 g）、外周をタコ糸で巻く",
+      "塩と挽きたての黒こしょう",
+      "まぶす用の薄力粉",
+      "無塩バター 大さじ 4、オリーブオイル 大さじ 2",
+      "玉ねぎ 1 個 + にんじん 1 本 + セロリ 1 本、すべて細かいみじん切り",
+      "辛口白ワイン 200 ml",
+      "缶詰のカットトマト 400 g",
+      "仔牛または鶏のフォン（だし） 500 ml",
+      "ローリエ 1 枚、タイムの枝数本",
+      "グレモラータ用：レモン 1 個分の皮（すりおろし）、にんにく 2 片 ごく細かく、イタリアンパセリ 小束 細かく刻む"
+    ],
+    "tr": [
+      "Kalın kesilmiş 4 dana incik dilimi (3–4 cm kalınlığında, her biri yaklaşık 350 g), çevresinden mutfak ipiyle bağlı",
+      "Tuz ve taze çekilmiş karabiber",
+      "Bulamak için un",
+      "4 yemek kaşığı tuzsuz tereyağı, 2 yemek kaşığı zeytinyağı",
+      "1 soğan + 1 havuç + 1 sap kereviz, hepsi ince doğranmış",
+      "200 ml sek beyaz şarap",
+      "400 g doğranmış domates",
+      "500 ml dana ya da tavuk suyu",
+      "1 defne yaprağı, birkaç dal kekik",
+      "Gremolata için: 1 limonun kabuğu, 2 diş sarımsak çok ince kıyılmış, küçük bir demet düz yapraklı maydanoz ince kıyılmış"
+    ],
+    "it": [
+      "4 ossobuchi di vitello tagliati spessi (3–4 cm di spessore, circa 350 g ciascuno), legati con spago da cucina lungo la circonferenza",
+      "Sale e pepe nero macinato al momento",
+      "Farina per infarinare",
+      "4 cucchiai di burro non salato, 2 cucchiai di olio d'oliva",
+      "1 cipolla + 1 carota + 1 costa di sedano, tutti tritati fini",
+      "200 ml di vino bianco secco",
+      "400 g di pomodori a pezzi",
+      "500 ml di brodo di vitello o di pollo",
+      "1 foglia di alloro, qualche rametto di timo",
+      "Per la gremolata: scorza di 1 limone, 2 spicchi d'aglio tritati molto fini, un mazzetto di prezzemolo a foglia piatta finemente tritato"
+    ],
+    "ko": [
+      "두껍게 자른 송아지 정강이살 4쪽 (두께 3~4 cm, 한 쪽 약 350 g), 주방용 실로 둘레를 묶어둔 것",
+      "소금과 갓 갈은 검은 후추",
+      "고기에 묻힐 박력분",
+      "무염 버터 4큰술, 올리브유 2큰술",
+      "양파 1개 + 당근 1개 + 셀러리 1대, 모두 잘게 다지기",
+      "드라이 화이트 와인 200 ml",
+      "다진 토마토 400 g",
+      "송아지 또는 닭 육수 500 ml",
+      "월계수잎 1장, 타임 가지 몇 줄기",
+      "그레몰라타용: 레몬 1개분 제스트, 마늘 2쪽 아주 잘게 다지기, 이탈리안 파슬리 작은 다발 잘게 다지기"
+    ],
+    "hi": [
+      "4 मोटे कटे वील शैंक (3–4 सेमी मोटे, हर एक लगभग 350 ग्राम), घेरे के चारों ओर रसोई के धागे से बंधे",
+      "नमक और ताज़ी पिसी काली मिर्च",
+      "लपेटने के लिए मैदा",
+      "4 बड़े चम्मच बिना नमक का मक्खन, 2 बड़े चम्मच ज़ैतून का तेल",
+      "1 प्याज़ + 1 गाजर + 1 अजवाइन डंठल, सभी बारीक कटे",
+      "200 मिली ड्राई व्हाइट वाइन",
+      "400 ग्राम कटे टमाटर",
+      "500 मिली वील या चिकन स्टॉक",
+      "1 तेज़पत्ता, थाइम की कुछ टहनियाँ",
+      "ग्रेमोलाटा के लिए: 1 नींबू का छिलका, 2 लहसुन कलियाँ बहुत बारीक कटी, एक छोटी मुट्ठी फ्लैट लीफ़ पार्सले बारीक कटी"
+    ]
+  },
+  "howIsMade": {
+    "en": "Pat the shanks dry — wet meat steams instead of searing — season aggressively with salt and pepper, and dust lightly in flour, knocking off the excess. Heat half the butter and all the oil in a heavy braising pan over medium-high heat until foaming, lay the shanks in and don't touch them for 4 minutes, until the bottom is deeply browned; flip and do the second side, then lift onto a plate.\n\nLower the heat to medium, add the rest of the butter and the soffritto, and cook gently for 10 minutes until soft and golden at the edges. Pour in the wine, raise the heat, and reduce by half while scraping up the caramelised bits from the bottom of the pan.\n\nStir in the tomatoes, bay leaf and thyme, and return the shanks to the pan in a single layer. Pour in just enough stock to come about two-thirds of the way up the meat — the bones should stay exposed so the marrow stays in. Bring to a bare simmer.\n\nCover and braise on the lowest heat, or in a 160°C oven, for 2 to 2½ hours, turning the shanks gently every 30 minutes so they cook evenly. They're done when the meat slumps off the bone at the press of a spoon and the sauce has thickened to a glossy gravy. Lift them out carefully — the bones and marrow are fragile at this point.\n\nWhile the shanks rest, stir together the lemon zest, garlic and parsley to make the gremolata. Place a shank on each plate, spoon over plenty of sauce, and crown with a generous pinch of the raw gremolata — its sharpness cuts the richness and is what makes osso buco Milanese rather than just braised veal. Serve with risotto alla milanese, polenta, or a piece of bread for the marrow.",
+    "ro": "Tamponează rasolurile cu hârtie absorbantă — carnea udă se aburește în loc să se rumenească — asezonează agresiv cu sare și piper, și tăvălește-le ușor în făină, scuturând surplusul. Încinge jumătate din unt și tot uleiul într-o oală grea de înăbușit pe foc mediu-mare până începe să spumeze, așază rasolurile și nu le atinge 4 minute, până când partea de jos este adânc rumenită; întoarce și fă a doua parte, apoi scoate-le pe o farfurie.\n\nMicșorează focul la mediu, adaugă restul de unt și soffritto-ul, și gătește blând 10 minute până se înmoaie și prinde marginile aurii. Toarnă vinul, ridică focul și redu la jumătate în timp ce ridici de pe fund părțile caramelizate.\n\nÎncorporează roșiile, foaia de dafin și cimbrul, și pune rasolurile înapoi în oală într-un singur strat. Toarnă suficient fond cât să ajungă la două treimi din înălțimea cărnii — oasele trebuie să rămână expuse ca măduva să rămână înăuntru. Adu la o fierbere abia perceptibilă.\n\nAcoperă și înăbușă la foc cât mai mic, sau în cuptor la 160°C, timp de 2 până la 2½ ore, întorcând rasolurile blând la fiecare 30 de minute pentru o gătire uniformă. Sunt gata când carnea se desprinde de pe os la apăsarea unei linguri, iar sosul s-a îngroșat într-un suc lucios. Scoate-le cu grijă — oasele și măduva sunt fragile în acest moment.\n\nÎn timp ce rasolurile se odihnesc, amestecă coaja de lămâie, usturoiul și pătrunjelul pentru gremolata. Așază un rasol pe fiecare farfurie, toarnă din belșug sos și încununează cu un praf generos de gremolata crudă — ascuțimea ei taie bogăția, și exact asta face din osso buco un fel milanez și nu doar carne înăbușită. Servește cu risotto alla milanese, polenta sau o bucată de pâine pentru măduvă.",
+    "es": "Seca los ossobucos con papel — la carne mojada se cuece al vapor en lugar de dorarse — sazona con energía con sal y pimienta, y pásalos ligeramente por harina, sacudiendo el sobrante. Calienta la mitad de la mantequilla y todo el aceite en una cocotte pesada a fuego medio-alto hasta que espume, coloca los ossobucos y no los toques durante 4 minutos, hasta que la parte inferior esté bien dorada; gira y dora la segunda cara, luego pásalos a un plato.\n\nBaja a fuego medio, añade el resto de la mantequilla y el sofrito, y cuece con suavidad 10 minutos hasta que esté tierno y dorado en los bordes. Vierte el vino, sube el fuego y reduce a la mitad mientras raspas los restos caramelizados del fondo.\n\nIncorpora los tomates, la hoja de laurel y el tomillo, y devuelve los ossobucos a la cocotte en una sola capa. Añade caldo justo hasta dos tercios de la altura de la carne — los huesos deben quedar expuestos para que el tuétano se quede dentro. Lleva a un hervor apenas perceptible.\n\nTapa y brasea al fuego más bajo, o en un horno a 160°C, durante 2 a 2½ horas, girando los ossobucos suavemente cada 30 minutos para que se cocinen parejos. Están listos cuando la carne se cae del hueso al presionarla con una cuchara y la salsa se ha espesado en una gravy brillante. Sácalos con cuidado — los huesos y el tuétano son frágiles en este punto.\n\nMientras los ossobucos reposan, mezcla la ralladura de limón, el ajo y el perejil para hacer la gremolata. Coloca un ossobuco en cada plato, vierte por encima abundante salsa y corónalo con una pizca generosa de gremolata cruda — su filo corta la grasitud y es justamente lo que convierte el osso buco en algo milanés y no en una mera ternera braseada. Sirve con risotto a la milanesa, polenta o un trozo de pan para el tuétano.",
+    "fr": "Épongez les jarrets — la viande mouillée cuit à la vapeur au lieu de saisir — assaisonnez généreusement de sel et de poivre, et farinez-les légèrement en ôtant l'excès. Faites chauffer la moitié du beurre et toute l'huile dans une cocotte épaisse à feu moyen-vif jusqu'à mousser, posez les jarrets et ne les touchez pas pendant 4 minutes, jusqu'à ce que le dessous soit profondément doré ; retournez et faites la seconde face, puis posez-les sur une assiette.\n\nBaissez à feu moyen, ajoutez le reste du beurre et le soffritto, et faites cuire doucement 10 minutes jusqu'à ce que les légumes soient tendres et dorés aux bords. Versez le vin, augmentez le feu, et réduisez de moitié en grattant les sucs caramélisés du fond.\n\nIncorporez les tomates, le laurier et le thym, et remettez les jarrets dans la cocotte en une seule couche. Ajoutez juste assez de bouillon pour atteindre les deux tiers de la hauteur de la viande — les os doivent rester émergés pour que la moelle reste à l'intérieur. Portez à frémissement à peine perceptible.\n\nCouvrez et faites braiser sur le feu le plus bas, ou dans un four à 160°C, pendant 2 à 2 heures et demie, en retournant doucement les jarrets toutes les 30 minutes pour qu'ils cuisent uniformément. Ils sont prêts quand la viande s'effondre de l'os sous la pression d'une cuillère et que la sauce s'est épaissie en un jus brillant. Sortez-les avec précaution — les os et la moelle sont fragiles à ce stade.\n\nPendant que les jarrets reposent, mélangez le zeste de citron, l'ail et le persil pour la gremolata. Posez un jarret par assiette, nappez généreusement de sauce, et couronnez d'une bonne pincée de gremolata crue — son tranchant coupe la richesse, et c'est précisément ce qui fait de l'osso buco un plat milanais et non un simple veau braisé. Servez avec un risotto à la milanaise, une polenta ou un morceau de pain pour la moelle.",
+    "de": "Tupfen Sie die Beinscheiben trocken — feuchtes Fleisch dampft statt zu braten — würzen Sie kräftig mit Salz und Pfeffer und wenden Sie sie leicht in Mehl, das überschüssige Mehl klopfen Sie ab. Erhitzen Sie die Hälfte der Butter und das gesamte Öl in einem schweren Schmortopf bei mittlerer bis starker Hitze, bis es schäumt, legen Sie die Scheiben ein und berühren Sie sie 4 Minuten lang nicht, bis die Unterseite tief gebräunt ist; wenden Sie sie und braten Sie die zweite Seite, dann auf einen Teller heben.\n\nReduzieren Sie auf mittlere Hitze, geben Sie die restliche Butter und das Soffritto hinzu, und garen Sie 10 Minuten sanft, bis es weich und an den Rändern goldgelb ist. Gießen Sie den Wein an, erhöhen Sie die Hitze, und reduzieren Sie um die Hälfte, während Sie den Bratensatz vom Boden kratzen.\n\nRühren Sie Tomaten, Lorbeerblatt und Thymian ein, und legen Sie die Beinscheiben in einer Lage zurück. Gießen Sie gerade so viel Brühe an, dass sie zwei Drittel der Fleischhöhe erreicht — die Knochen sollen freistehen, damit das Mark drinbleibt. Bringen Sie alles auf gerade so köcheln.\n\nDeckel drauf und auf niedrigster Stufe schmoren lassen oder in einem 160°C heißen Ofen 2 bis 2½ Stunden, dabei die Scheiben alle 30 Minuten vorsichtig umdrehen, damit sie gleichmäßig garen. Sie sind fertig, wenn das Fleisch beim Druck eines Löffels vom Knochen rutscht und die Sauce zu einer glänzenden Bratenflüssigkeit eingedickt ist. Heben Sie sie vorsichtig heraus — Knochen und Mark sind jetzt zerbrechlich.\n\nWährend die Beinscheiben ruhen, verrühren Sie Zitronenabrieb, Knoblauch und Petersilie zur Gremolata. Eine Beinscheibe pro Teller, reichlich Sauce darüber, gekrönt mit einer großzügigen Prise roher Gremolata — ihre Schärfe schneidet das Reichhaltige und macht aus Ossobuco eines Milaneser Gerichts statt einer bloß geschmorten Kalbsbeinscheibe. Servieren Sie mit Risotto alla Milanese, Polenta oder einem Stück Brot für das Mark.",
+    "pt": "Seque os ossobuchos com papel — carne molhada vaporiza em vez de selar — tempere generosamente com sal e pimenta e passe-os ligeiramente por farinha, sacudindo o excesso. Aqueça metade da manteiga e todo o azeite numa caçarola pesada em lume médio-alto até espumar, coloque os ossobuchos e não os toque durante 4 minutos, até a base estar bem dourada; vire e faça o segundo lado, depois passe-os a um prato.\n\nBaixe para lume médio, junte o resto da manteiga e o soffritto, e cozinhe brandamente durante 10 minutos até ficar macio e levemente dourado nas bordas. Verta o vinho, suba o lume e reduza para metade enquanto raspa o caramelizado do fundo.\n\nIncorpore os tomates, o louro e o tomilho, e devolva os ossobuchos à caçarola numa única camada. Junte caldo apenas o suficiente para subir até dois terços da altura da carne — os ossos devem permanecer expostos para que o tutano fique dentro. Leve a uma fervura mal perceptível.\n\nTape e estufe no lume mais baixo, ou num forno a 160°C, durante 2 a 2½ horas, virando os ossobuchos suavemente a cada 30 minutos para cozinharem por igual. Estão prontos quando a carne se desprende do osso à pressão de uma colher e o molho engrossou num caldo brilhante. Retire-os com cuidado — os ossos e o tutano estão frágeis nesta altura.\n\nEnquanto os ossobuchos descansam, misture a raspa de limão, o alho e a salsa para fazer a gremolata. Coloque um ossobuco em cada prato, regue com muito molho e coroe com uma generosa pitada de gremolata crua — a sua acidez corta a riqueza e é exatamente o que torna o osso buco um prato milanês, e não apenas vitela estufada. Sirva com risotto à milanesa, polenta ou um pedaço de pão para o tutano.",
+    "ru": "Промокните срезы — мокрое мясо вместо обжарки парится — щедро посолите-поперчите и обваляйте слегка в муке, стряхнув лишнее. Разогрейте половину масла и всё оливковое масло в тяжёлой сотейник на сильно-среднем огне до образования пены, выложите голяшки и не трогайте их 4 минуты, пока низ не станет глубоко золотистым; переверните и обжарьте вторую сторону, затем выньте на тарелку.\n\nУменьшите огонь до среднего, добавьте оставшееся масло и соффритто, и томите осторожно 10 минут, пока овощи не станут мягкими и слегка золотыми по краям. Влейте вино, поднимите огонь и упарьте вдвое, попутно соскребая карамелизованный пригар со дна.\n\nВмешайте томаты, лавровый лист и тимьян, и верните голяшки в сотейник в один слой. Подлейте столько бульона, чтобы он покрыл мясо примерно на две трети высоты — кости должны оставаться над поверхностью, чтобы костный мозг не вышел. Доведите до едва заметного кипения.\n\nНакройте крышкой и тушите на самом малом огне или в духовке при 160°C 2–2½ часа, аккуратно переворачивая каждые 30 минут для равномерного приготовления. Готовы, когда мясо отходит от кости от лёгкого нажатия ложкой, а соус сгустился в глянцевый гравий. Достаньте осторожно — кости и мозг сейчас хрупкие.\n\nПока голяшки отдыхают, смешайте лимонную цедру, чеснок и петрушку — это гремолата. Положите голяшку на каждую тарелку, щедро полейте соусом и увенчайте щедрой щепоткой сырой гремолаты — её резкость пересекает плотность блюда, и именно она делает оссобуко миланским, а не просто тушёной телятиной. Подавайте с ризотто по-милански, полентой или куском хлеба для мозга.",
+    "ar": "جفّف شرائح اللحم بمنشفة — اللحم الرطب يطبخ بالبخار بدل أن يتحمّر — تبّلها بسخاء بالملح والفلفل، ورشّ عليها قليلاً من الدقيق وانفض الزيادة. سخّن نصف الزبدة وكل الزيت في قدر سوتيه ثقيلة على نار متوسطة-عالية حتى تتراغى، ضع الشرائح ولا تلمسها لمدة 4 دقائق حتى يصبح القاع بنياً عميقاً؛ اقلبها ودع الوجه الآخر، ثم انقلها إلى طبق.\n\nاخفض النار إلى متوسطة، أضف باقي الزبدة والسوفريتو، واطبخه برفق 10 دقائق حتى يصبح ليّناً ومذهّباً عند الحواف. اسكب النبيذ، ارفع النار، ودعه يتبخّر للنصف بينما تحكّ القاع لجمع البقايا المكرملة.\n\nأضف الطماطم وورقة الغار والزعتر، وأعد شرائح اللحم إلى القدر في طبقة واحدة. اسكب من المرق ما يكفي ليصل إلى ثلثي ارتفاع اللحم — يجب أن تبقى العظام مكشوفة كي يحتفظ النخاع بمكانه. أوصلها إلى غليان بالكاد محسوس.\n\nغطّ القدر، وقدّمها للطبخ على أهدأ نار أو في فرن على 160°م لمدة 2 إلى 2½ ساعة، مع تقليب اللحم برفق كل 30 دقيقة لينضج بانتظام. ينضج اللحم حين يفلت عن العظم بضغطة ملعقة وتصبح الصلصة جلاسة لامعة. ارفعها بحذر — العظام والنخاع هشّ في هذه المرحلة.\n\nخلال راحة اللحم، اخلط بشر الليمون والثوم والبقدونس لتحضير الغريمولاتا. ضع قطعة في كل طبق، اسكب فوقها كثيراً من الصلصة، وكلّلها برشّة سخيّة من الغريمولاتا النيّئة — حدّتها تقطع دسم الطبق، وهي بالضبط ما يجعل من الأوسوبوكو طبقاً ميلانياً بدل مجرد عجل مطهي. قدّمها مع ريزوتو ميلانيز، بولينتا، أو قطعة خبز لتجميع النخاع.",
+    "zh": "把小牛胫拍干——湿的肉只能蒸不能煎——加足量的盐和黑胡椒，再轻轻拍上一层面粉，多余的拍掉。在厚重的炖锅里中大火加热一半的黄油和全部的橄榄油至起泡，把肉块放进去，4 分钟内不要动它，让底面深褐；翻面再煎另一边，再夹到盘子上。\n\n转中火，加入剩下的黄油和 soffritto，慢慢炒 10 分钟至蔬菜软化、边缘微金。倒入白葡萄酒，转大火让它收掉一半，同时用木铲把锅底焦化的部分刮起来。\n\n加入番茄碎、月桂叶和百里香，把小牛胫再次单层摆回锅里。倒入高汤，量刚好到肉的三分之二高度——骨头要露在外面，骨髓才不会流走。把火调到将沸不沸的状态。\n\n盖好盖子在最小火上炖，或者放进 160°C 烤箱里，2 到 2½ 小时，每 30 分钟轻轻翻面一次让肉受热均匀。当用勺子一压肉就脱骨、酱汁也变得浓亮，便算完成。小心把肉块端出来——这时候骨头和骨髓都很脆弱。\n\n肉在静置的时候，把柠檬皮屑、蒜末和欧芹拌到一起做 gremolata。一盘一块小牛胫，浇上充足的酱汁，最后撒一大撮生的 gremolata——它锋利的鲜味切开浓厚，正是让这道菜成为“米兰式”而不是“普通炖牛肉”的关键。配米兰式番红花烩饭、玉米粥或一块面包蘸骨髓。",
+    "ja": "すね肉の表面を布で押さえてしっかり水気を取る — 濡れた肉は焼きつかず蒸れてしまう。塩こしょうをしっかり利かせ、薄力粉を軽くまぶし、余分は払い落とす。重い煮込み鍋にバター半量と油すべてを入れ、中強火で泡が立つまで熱し、肉を並べたら 4 分間動かさず、底が深く焼けるまで待つ；ひっくり返してもう片面も同様にし、皿に取り置く。\n\n火を中火に落とし、残りのバターとソフリットを加え、10 分やわらかく、縁にほんのり焼き色がつくまで蒸し炒める。ワインを注ぎ、火を上げて半量まで詰めながら、木べらで底の旨味を引き剥がす。\n\nトマト、ローリエ、タイムを加え、肉を一段に重ねて鍋に戻す。出汁を肉の高さの 2/3 まで届くだけ注ぐ — 骨は液面から顔を出し、骨髄が中に残るようにする。ぎりぎり沸騰しない程度の火加減にする。\n\n蓋をして、ごく弱火または 160℃のオーブンで 2〜2 時間半、30 分ごとに優しく肉を返しながら均等に煮込む。スプーンの背で押したとき骨から肉が落ち、ソースが艶のあるグレービー状に詰まれば完成。肉を取り出す時は慎重に — このときの骨と骨髄は壊れやすい。\n\n肉を休ませている間に、レモン皮、にんにく、パセリを混ぜてグレモラータを作る。各皿に肉を 1 枚ずつ盛り、ソースをたっぷりかけ、生のグレモラータをふんわりひとつまみのせる — その鋭さがコクを切り、これこそがオッソブーコをただの煮込み仔牛ではなくミラネーゼたらしめる要素だ。リゾット・アッラ・ミラネーゼ、ポレンタ、骨髄をすくうためのパンと共に供する。",
+    "tr": "İncik dilimlerini iyice kurulayın — ıslak et kavurmaz, buharda pişer — bol tuz ve karabiberle baharatlayın, hafifçe una bulayıp fazlasını silkeleyin. Ağır bir güveç tenceresinde tereyağının yarısını ve tüm zeytinyağını orta-yüksek ateşte köpürene kadar ısıtın, etleri yerleştirin ve 4 dakika boyunca dokunmayın, alt yüzeyleri koyu kahverengi olana kadar; çevirip ikinci yüzü pişirin, sonra bir tabağa alın.\n\nAteşi orta seviyeye düşürün, kalan tereyağını ve soffritto'yu ekleyin ve 10 dakika nazikçe, yumuşayıp kenarları altın rengine dönene kadar pişirin. Şarabı dökün, ateşi yükseltin ve yarıya inene kadar buharlaştırın, bu sırada ahşap kaşıkla dipteki karamelize parçaları kazıyın.\n\nDomatesleri, defne yaprağını ve kekiği ekleyin ve etleri tek kat halinde tencereye geri koyun. Etin üçte ikisine kadar gelecek kadar et suyu ekleyin — kemikler dışarıda kalmalı ki ilik içeride dursun. Zar zor algılanan bir kaynamaya getirin.\n\nKapağı kapatın ve en kısık ateşte ya da 160°C'lik fırında 2–2½ saat, etleri eşit pişmesi için her 30 dakikada bir nazikçe çevirerek pişirin. Kaşığın baskısıyla et kemikten ayrıldığında ve sos parlak bir et suyu kıvamına geldiğinde tamamdır. Dikkatlice çıkarın — kemikler ve ilik bu noktada kırılgan.\n\nEtler dinlenirken, limon kabuğu, sarımsak ve maydanozu karıştırarak gremolata yapın. Her tabağa bir incik koyun, üzerine bolca sos dökün ve cömert bir tutam çiğ gremolata ile taçlandırın — onun keskinliği yağlılığı keser, ve osso buco'yu sıradan haşlama dana yerine Milanolu yapan tam olarak budur. Milano usulü risotto, polenta ya da iliği almak için bir parça ekmekle servis edin.",
+    "it": "Asciugate gli ossobuchi con un panno — la carne umida non rosola, evapora — salate e pepate con generosità, infarinateli leggermente e scuotete via la farina in eccesso. In una casseruola pesante fate sciogliere a fuoco medio-alto metà del burro e tutto l'olio fino a quando schiumano, adagiate gli ossobuchi e non toccateli per 4 minuti, finché il fondo non è ben dorato; girateli e fate la seconda faccia, poi trasferiteli su un piatto.\n\nAbbassate a fuoco medio, unite il resto del burro e il soffritto e fate cuocere gentilmente per 10 minuti, finché non è morbido e appena dorato sui bordi. Versate il vino, alzate la fiamma, e fate ridurre della metà raschiando con un cucchiaio di legno i sughi caramellati dal fondo.\n\nUnite i pomodori, l'alloro e il timo, e rimettete gli ossobuchi in un solo strato. Aggiungete tanto brodo quanto basta a raggiungere i due terzi dell'altezza della carne — gli ossi devono restare esposti, così il midollo non esce. Portate a un sobbollire appena percettibile.\n\nCoprite e brasate sul fuoco più basso, oppure in forno a 160°C, per 2 o 2½ ore, girando gli ossobuchi con delicatezza ogni 30 minuti per una cottura uniforme. Sono pronti quando la carne si stacca dall'osso al tocco di un cucchiaio e il sugo si è ridotto in una gravy lucida. Toglieteli con cautela — ossi e midollo sono fragili a questo punto.\n\nMentre la carne riposa, mescolate la scorza di limone, l'aglio e il prezzemolo per fare la gremolata. Mettete un ossobuco in ogni piatto, nappate con abbondante sugo e coronate con una generosa presa di gremolata cruda — la sua nitidezza taglia la ricchezza, ed è esattamente ciò che fa dell'ossobuco un piatto milanese e non un semplice vitello brasato. Servite con un risotto alla milanese, polenta o un pezzo di pane per il midollo.",
+    "ko": "정강이살을 키친타올로 두드려 물기를 제거한다 — 젖은 고기는 굽지 않고 쪄진다 — 소금과 후추로 듬뿍 간하고 박력분을 얇게 묻혀 여분은 털어낸다. 두꺼운 브레이징 팬에 버터의 절반과 올리브유 전부를 중강불에서 거품이 일 때까지 가열하고, 정강이를 올려 4분 동안 움직이지 말고 굽는다 — 아랫면이 진하게 갈색으로 익을 때까지; 뒤집어 반대편도 똑같이 굽고 접시에 옮긴다.\n\n불을 중불로 낮추고 남은 버터와 소프리토를 넣어 10분 동안 부드럽고 가장자리가 약간 노릇해질 때까지 부드럽게 익힌다. 와인을 붓고 불을 올려 절반으로 졸이면서, 바닥의 캐러멜화된 부분을 나무 주걱으로 긁어낸다.\n\n토마토, 월계수잎, 타임을 넣고 정강이를 다시 한 겹으로 팬에 올린다. 고기 높이의 약 2/3까지만 잠기게 육수를 부어준다 — 뼈는 위로 노출되어야 골수가 안에 남는다. 거의 보이지 않는 정도의 약한 끓음으로 만든다.\n\n뚜껑을 덮고 가능한 가장 약한 불에서, 또는 160°C 오븐에서 2–2½시간 동안, 30분마다 정강이를 살살 뒤집어 고르게 익힌다. 숟가락으로 살짝 눌렀을 때 살이 뼈에서 떨어지고 소스가 윤기 있는 그레이비로 농축되면 완성이다. 조심스럽게 꺼낸다 — 이 시점의 뼈와 골수는 부서지기 쉽다.\n\n고기가 쉬는 동안 레몬 제스트, 마늘, 파슬리를 섞어 그레몰라타를 만든다. 접시마다 정강이를 한 쪽씩 올리고 소스를 듬뿍 끼얹은 다음, 날 것 그대로의 그레몰라타를 넉넉히 한 꼬집 올려 마무리한다 — 그 날카로움이 진한 풍미를 끊어주고, 바로 이것이 오소부코를 단순한 송아지 찜이 아닌 '밀라네제'로 만든다. 리조토 알라 밀라네제, 폴렌타, 혹은 골수를 떠먹을 빵과 함께 낸다.",
+    "hi": "वील शैंक को सूखे कपड़े से थपथपा कर सुखाएँ — गीला मांस सेकने के बजाय भाप में पकेगा — खूब नमक और काली मिर्च लगाएँ, हलके से मैदा में लपेटें और ज़्यादा झाड़ दें। एक भारी ब्रेज़िंग पैन में आधा मक्खन और सारा तेल मध्यम-तेज़ आँच पर तब तक गरम करें जब तक झाग न आ जाए, फिर शैंक रखें और 4 मिनट तक न छेड़ें, जब तक नीचे का हिस्सा गहरा भूरा न हो जाए; पलट कर दूसरी तरफ़ भी सेकें, फिर एक प्लेट में निकाल लें।\n\nआँच मध्यम कर दें, बाक़ी का मक्खन और soffritto डालें, और 10 मिनट तक धीरे से पकाएँ जब तक नरम और किनारों पर सुनहरा न हो। वाइन डालें, आँच तेज़ करें, और आधा होने तक उबलने दें, साथ ही लकड़ी के चम्मच से तले के कैरामेलाइज़ हुए हिस्से उठा लें।\n\nटमाटर, तेज़पत्ता और थाइम मिलाएँ और शैंक को एक परत में पैन में वापस रखें। बस इतना स्टॉक डालें कि मांस के दो-तिहाई तक पहुँचे — हड्डियाँ ऊपर ही रहनी चाहिए, ताकि मज्जा अंदर बनी रहे। बहुत हलकी, बमुश्किल दिखने वाली उबाल पर लाएँ।\n\nढक दें और सबसे धीमी आँच पर, या 160°C ओवन में, 2 से 2½ घंटे तक ब्रेज़ करें, हर 30 मिनट पर शैंक को हलके से पलटें ताकि बराबर पकें। तैयार तब हैं जब चम्मच के दबाव से मांस हड्डी से अलग हो जाए और सॉस चमकदार gravy में गाढ़ी हो जाए। उन्हें ध्यान से निकालें — इस वक़्त हड्डियाँ और मज्जा बहुत नाज़ुक होते हैं।\n\nजब शैंक आराम कर रहे हों, नींबू का छिलका, लहसुन और पार्सले को मिला कर गremolata बनाएँ। हर प्लेट में एक शैंक रखें, ऊपर भर-भर के सॉस डालें और कच्ची gremolata की एक भरी चुटकी ताज से सजाएँ — उसकी तीक्ष्णता रिचनेस को काट देती है, और यही चीज़ osso buco को सिर्फ़ braised वील की बजाय एक मिलानी व्यंजन बनाती है। risotto alla milanese, polenta या मज्जा खाने के लिए ब्रेड के टुकड़े के साथ परोसें।"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Gyros", "ro": "Gyros", "es": "Gyros", "fr": "Gyros",
+    "de": "Gyros", "pt": "Gyros", "ru": "Гирос", "ar": "جيروس",
+    "zh": "希腊烤肉卷", "ja": "ギロピタ", "tr": "Gyros", "it": "Gyros",
+    "ko": "기로스", "hi": "गायरो"
+  },
+  "cuisine": {
+    "en": "Greece", "ro": "Grecia", "es": "Grecia", "fr": "Grèce",
+    "de": "Griechenland", "pt": "Grécia", "ru": "Греция", "ar": "اليونان",
+    "zh": "希腊", "ja": "ギリシャ", "tr": "Yunanistan", "it": "Grecia",
+    "ko": "그리스", "hi": "ग्रीस"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "1 kg pork shoulder, sliced into 1 cm thick strips against the grain (or boneless chicken thighs)",
+      "4 garlic cloves, minced",
+      "2 tbsp Greek olive oil",
+      "1 tbsp red wine vinegar",
+      "1 tbsp dried oregano (Greek rigani if possible)",
+      "1 tsp sweet paprika",
+      "1 tsp salt, ½ tsp black pepper",
+      "4 large soft Greek pitas (the unfilled flatbread, not pocket pita)",
+      "To serve: 200 ml tzatziki, 1 ripe tomato sliced, ½ red onion thinly sliced, oregano, lemon wedges, optional French fries"
+    ],
+    "ro": [
+      "1 kg ceafă de porc, tăiată în fâșii de 1 cm grosime contra fibrei (sau pulpe de pui dezosate)",
+      "4 căței de usturoi, tocați",
+      "2 linguri ulei de măsline grecesc",
+      "1 lingură oțet de vin roșu",
+      "1 lingură oregano uscat (rigani grecesc, dacă ai)",
+      "1 linguriță boia dulce",
+      "1 linguriță sare, ½ linguriță piper negru",
+      "4 lipii grecești mari și moi (turtă plată neumplută, nu pita cu buzunar)",
+      "Pentru servit: 200 ml tzatziki, 1 roșie coaptă feliată, ½ ceapă roșie tăiată subțire, oregano, felii de lămâie, opțional cartofi prăjiți"
+    ],
+    "es": [
+      "1 kg de aguja o paleta de cerdo, cortada en tiras de 1 cm a contra-veta (o muslos de pollo deshuesados)",
+      "4 dientes de ajo picados",
+      "2 cdas de aceite de oliva griego",
+      "1 cda de vinagre de vino tinto",
+      "1 cda de orégano seco (rigani griego si lo encuentras)",
+      "1 cdta de pimentón dulce",
+      "1 cdta de sal, ½ cdta de pimienta negra",
+      "4 pitas griegas grandes y blandas (la torta plana sin bolsillo)",
+      "Para servir: 200 ml de tzatziki, 1 tomate maduro en rodajas, ½ cebolla roja en juliana fina, orégano, gajos de limón, patatas fritas opcionales"
+    ],
+    "fr": [
+      "1 kg d'échine de porc, coupée en lanières de 1 cm dans le sens contraire des fibres (ou cuisses de poulet désossées)",
+      "4 gousses d'ail, hachées",
+      "2 c. à soupe d'huile d'olive grecque",
+      "1 c. à soupe de vinaigre de vin rouge",
+      "1 c. à soupe d'origan séché (rigani grec si possible)",
+      "1 c. à café de paprika doux",
+      "1 c. à café de sel, ½ c. à café de poivre noir",
+      "4 grandes pita grecques moelleuses (la galette plate non fendue, pas la pita à poche)",
+      "Pour servir : 200 ml de tzatziki, 1 tomate mûre tranchée, ½ oignon rouge émincé fin, origan, quartiers de citron, frites en option"
+    ],
+    "de": [
+      "1 kg Schweinenacken, gegen die Faser in 1 cm dicke Streifen geschnitten (oder ausgelöste Hähnchenschenkel)",
+      "4 Knoblauchzehen, fein gehackt",
+      "2 EL griechisches Olivenöl",
+      "1 EL Rotweinessig",
+      "1 EL getrockneter Oregano (möglichst griechisches Rigani)",
+      "1 TL süßes Paprikapulver",
+      "1 TL Salz, ½ TL schwarzer Pfeffer",
+      "4 große weiche griechische Pita-Brote (das flache Fladen-Pita, nicht das Pita mit Tasche)",
+      "Zum Servieren: 200 ml Tzatziki, 1 reife Tomate in Scheiben, ½ rote Zwiebel in feinen Ringen, Oregano, Zitronenspalten, optional Pommes frites"
+    ],
+    "pt": [
+      "1 kg de cachaço de porco, cortado em tiras de 1 cm contra a fibra (ou coxas de frango desossadas)",
+      "4 dentes de alho, picados",
+      "2 colheres de sopa de azeite grego",
+      "1 colher de sopa de vinagre de vinho tinto",
+      "1 colher de sopa de orégãos secos (rigani grego, se possível)",
+      "1 colher de chá de colorau doce",
+      "1 colher de chá de sal, ½ colher de chá de pimenta-preta",
+      "4 pitas gregas grandes e macias (a flatbread sem bolso, não a pita com bolso)",
+      "Para servir: 200 ml de tzatziki, 1 tomate maduro às rodelas, ½ cebola roxa em fatias finas, orégãos, gomos de limão, batatas fritas opcionais"
+    ],
+    "ru": [
+      "1 кг свиной шеи, нарезанной полосками 1 см толщиной поперёк волокон (или куриные бёдра без кости)",
+      "4 зубчика чеснока, измельчить",
+      "2 ст. л. греческого оливкового масла",
+      "1 ст. л. красного винного уксуса",
+      "1 ст. л. сушёного орегано (по возможности греческий ригани)",
+      "1 ч. л. сладкой паприки",
+      "1 ч. л. соли, ½ ч. л. чёрного перца",
+      "4 больших мягких греческих питы (плоская лепёшка без кармана, не питакарман)",
+      "Для подачи: 200 мл дзадзики, 1 спелый помидор кружками, ½ красной луковицы тонкими полукольцами, орегано, дольки лимона, по желанию картофель фри"
+    ],
+    "ar": [
+      "1 كغ كتف خنزير، مقطّع شرائح بسماكة 1 سم عكس اتجاه الألياف (أو أوراك دجاج بدون عظم)",
+      "4 فصوص ثوم مفرومة",
+      "2 ملعقة كبيرة زيت زيتون يوناني",
+      "1 ملعقة كبيرة خل النبيذ الأحمر",
+      "1 ملعقة كبيرة زعتر مجفف (ريجاني يوناني إن أمكن)",
+      "1 ملعقة صغيرة بابريكا حلوة",
+      "1 ملعقة صغيرة ملح، ½ ملعقة صغيرة فلفل أسود",
+      "4 خبزات بيتا يونانية كبيرة وطرية (الخبز المسطّح غير المجوف)",
+      "للتقديم: 200 مل تزاتزيكي، 1 بندورة ناضجة شرائح، ½ بصلة حمراء شرائح رفيعة، زعتر، شرائح ليمون، بطاطس مقلية اختياري"
+    ],
+    "zh": [
+      "猪肩肉 1 公斤，逆纹切成 1 厘米厚的条（或去骨鸡腿）",
+      "蒜瓣 4 个，剁末",
+      "希腊橄榄油 2 汤匙",
+      "红酒醋 1 汤匙",
+      "干牛至 1 汤匙（有希腊 rigani 最好）",
+      "甜红椒粉 1 茶匙",
+      "盐 1 茶匙、黑胡椒 ½ 茶匙",
+      "希腊大软面饼 4 张（不带袋子的扁面饼，不是开口 pita）",
+      "搭配：tzatziki 200 毫升、熟番茄 1 个切片、红洋葱 ½ 个切薄丝、牛至、柠檬角，可选薯条"
+    ],
+    "ja": [
+      "豚肩ロース 1 kg、繊維に逆らって 1 cm 幅にスライス（または骨なし鶏もも）",
+      "にんにく 4 片、みじん切り",
+      "ギリシャ産オリーブオイル 大さじ 2",
+      "赤ワインビネガー 大さじ 1",
+      "ドライオレガノ 大さじ 1（可能ならギリシャの「リガニ」）",
+      "甘いパプリカパウダー 小さじ 1",
+      "塩 小さじ 1、黒こしょう 小さじ ½",
+      "大ぶりの柔らかいギリシャのピタ 4 枚（ポケットなしの平たいフラットブレッド）",
+      "添え：ツァジキ 200 ml、完熟トマト 1 個のスライス、紫玉ねぎ ½ 個の薄切り、オレガノ、レモンのくし切り、お好みでフライドポテト"
+    ],
+    "tr": [
+      "1 kg domuz boyun eti, lif yönüne ters 1 cm kalınlığında şeritler halinde kesilmiş (ya da kemiksiz tavuk but)",
+      "4 diş sarımsak, ince kıyılmış",
+      "2 yemek kaşığı Yunan zeytinyağı",
+      "1 yemek kaşığı kırmızı şarap sirkesi",
+      "1 yemek kaşığı kuru kekik (mümkünse Yunan rigani)",
+      "1 çay kaşığı tatlı toz biber",
+      "1 çay kaşığı tuz, ½ çay kaşığı karabiber",
+      "4 büyük yumuşak Yunan pidesi (cep açılmamış düz ekmek, cepli pita değil)",
+      "Servis için: 200 ml tzatziki, 1 olgun domates dilimleri, ½ kırmızı soğan ince ince doğranmış, kekik, limon dilimleri, isteğe bağlı patates kızartması"
+    ],
+    "it": [
+      "1 kg di coppa di maiale, tagliata controfibra in strisce da 1 cm (oppure sovracosce di pollo disossate)",
+      "4 spicchi d'aglio, tritati",
+      "2 cucchiai di olio extravergine greco",
+      "1 cucchiaio di aceto di vino rosso",
+      "1 cucchiaio di origano secco (rigani greco se possibile)",
+      "1 cucchiaino di paprika dolce",
+      "1 cucchiaino di sale, ½ cucchiaino di pepe nero",
+      "4 grandi pita greche morbide (la focaccia piatta senza tasca, non la pita con tasca)",
+      "Per servire: 200 ml di tzatziki, 1 pomodoro maturo a fette, ½ cipolla rossa a fettine sottili, origano, spicchi di limone, patatine fritte opzionali"
+    ],
+    "ko": [
+      "돼지 목살 1 kg, 결 반대로 1 cm 두께로 슬라이스 (또는 뼈 없는 닭 허벅지살)",
+      "마늘 4쪽, 다지기",
+      "그리스 올리브유 2큰술",
+      "레드 와인 식초 1큰술",
+      "말린 오레가노 1큰술 (가능하면 그리스산 리가니)",
+      "단맛 파프리카 가루 1작은술",
+      "소금 1작은술, 검은 후추 ½작은술",
+      "크고 부드러운 그리스 피타 4장 (주머니 없는 납작한 빵, 포켓 피타가 아님)",
+      "곁들임: 차지키 200 ml, 잘 익은 토마토 1개 슬라이스, 적양파 ½개 얇게, 오레가노, 레몬 조각, 선택적으로 감자튀김"
+    ],
+    "hi": [
+      "1 किलो पोर्क कंधा, रेशे के विरुद्ध 1 सेमी मोटी पट्टियों में कटा (या बिना हड्डी की चिकन जांघें)",
+      "4 लहसुन कलियाँ, बारीक कटी",
+      "2 बड़े चम्मच ग्रीक ज़ैतून का तेल",
+      "1 बड़ा चम्मच रेड वाइन सिरका",
+      "1 बड़ा चम्मच सूखा ऑरगानो (हो सके तो ग्रीक रिगानी)",
+      "1 छोटा चम्मच मीठा पपरिका",
+      "1 छोटा चम्मच नमक, ½ छोटा चम्मच काली मिर्च",
+      "4 बड़ी मुलायम ग्रीक पीटा (बिना जेब वाली फ्लैटब्रेड, पॉकेट पीटा नहीं)",
+      "परोसने के लिए: 200 मिली tzatziki, 1 पका टमाटर कटा, ½ लाल प्याज़ बारीक, ऑरगानो, नींबू के टुकड़े, इच्छानुसार फ़्रेंच फ्राइज़"
+    ]
+  },
+  "howIsMade": {
+    "en": "Whisk the garlic, olive oil, vinegar, oregano, paprika, salt and pepper in a large bowl, add the pork strips and toss until every piece is coated. Cover and marinate at least 3 hours, ideally overnight — the longer the better, as oregano and garlic need time to penetrate.\n\nHeat a large heavy skillet or griddle pan over high heat until smoking. Lay the strips down in a single layer, in batches if needed, and sear without moving for 2–3 minutes per side, until the edges are deeply browned and the centre just cooked through; don't crowd the pan or the meat will steam instead of caramelise. Rest the cooked batch on a plate while you do the next.\n\nWarm the pitas one at a time on the same hot skillet for 20 seconds per side, just until pliable. Spread a heaped tablespoon of tzatziki down the centre of each, lay the hot pork on top, add a few tomato slices and rings of red onion, and — if you're being faithful to Athens — a small handful of French fries on top.\n\nWrap tightly in paper with one end pinched closed, and serve immediately with extra oregano, a wedge of lemon, and the rest of the tzatziki on the side.",
+    "ro": "Amestecă într-un bol mare usturoiul, uleiul de măsline, oțetul, oregano, boiaua, sarea și piperul, adaugă fâșiile de porc și învârte-le bine până când fiecare bucată este acoperită. Acoperă și marinează minim 3 ore, ideal peste noapte — cu cât stă mai mult, cu atât oregano și usturoiul pătrund mai bine.\n\nÎncinge o tigaie grea sau o gril-tigaie pe foc mare până începe să fumege. Așază fâșiile într-un singur strat, în reprize dacă e nevoie, și prăjește-le fără să le miști 2–3 minute pe fiecare parte, până se rumenesc adânc la margini și mijlocul este abia gătit; nu aglomera tigaia, altfel carnea va abur în loc să se caramelizeze. Odihnește carnea gătită pe o farfurie cât pregătești următoarea tură.\n\nÎncălzește lipiile câte una pe aceeași tigaie încinsă, 20 de secunde pe fiecare parte, doar cât să devină moi. Întinde o lingură plină de tzatziki pe mijlocul fiecăreia, așază peste ea carnea fierbinte, adaugă câteva felii de roșie și inele de ceapă roșie și — dacă vrei să fii fidel Atenei — un mic pumn de cartofi prăjiți deasupra.\n\nÎmpachetează strâns în hârtie cu un capăt strâns, și servește imediat cu oregano în plus, o felie de lămâie și restul de tzatziki alături.",
+    "es": "Bate el ajo, el aceite, el vinagre, el orégano, el pimentón, la sal y la pimienta en un bol grande, añade las tiras de cerdo y revuélvelas hasta que cada pieza quede impregnada. Cubre y deja marinar al menos 3 horas, idealmente toda la noche — cuanto más tiempo, mejor, porque el orégano y el ajo necesitan calar.\n\nCalienta una sartén pesada o una plancha a fuego muy alto hasta que humee. Coloca las tiras en una sola capa, en tandas si hace falta, y séllalas sin moverlas 2–3 minutos por cada lado, hasta que los bordes estén bien dorados y el centro recién hecho; no abarrotes la sartén o la carne se cuece al vapor en lugar de caramelizar. Reserva la tanda hecha en un plato mientras haces la siguiente.\n\nCalienta las pitas una a una en la misma sartén, 20 segundos por cada lado, lo justo para que queden flexibles. Extiende una cucharada colmada de tzatziki por el centro de cada una, coloca la carne caliente encima, añade unas rodajas de tomate y aros de cebolla roja, y — si quieres ser fiel a Atenas — un pequeño puñado de patatas fritas por encima.\n\nEnvuelve fuerte en papel con un extremo pinzado, y sirve enseguida con más orégano, un gajo de limón y el resto del tzatziki aparte.",
+    "fr": "Fouettez dans un grand saladier l'ail, l'huile d'olive, le vinaigre, l'origan, le paprika, le sel et le poivre, ajoutez les lanières de porc et mélangez jusqu'à ce que chaque morceau soit enrobé. Couvrez et faites mariner au moins 3 heures, idéalement toute la nuit — plus c'est long, mieux c'est, l'origan et l'ail ont besoin de temps pour pénétrer.\n\nFaites chauffer une grande poêle épaisse ou une plancha à feu vif jusqu'à fumée. Posez les lanières en une seule couche, en plusieurs fois si besoin, et saisissez-les sans les bouger 2 à 3 minutes par face, jusqu'à ce que les bords soient bien colorés et le centre tout juste cuit ; ne surchargez pas la poêle, sinon la viande va cuire à la vapeur plutôt que de caraméliser. Réservez la fournée cuite sur une assiette pendant que vous faites la suivante.\n\nRéchauffez les pitas une à une dans la même poêle, 20 secondes par face, juste pour les assouplir. Étalez une grosse cuillère à soupe de tzatziki au centre de chacune, posez le porc chaud par-dessus, ajoutez quelques rondelles de tomate et d'oignon rouge, et — par fidélité à Athènes — une petite poignée de frites en couronnement.\n\nRoulez serré dans du papier en pinçant une extrémité, et servez aussitôt avec un peu d'origan supplémentaire, un quartier de citron et le reste de tzatziki à part.",
+    "de": "Verquirlen Sie in einer großen Schüssel den Knoblauch, das Olivenöl, den Essig, den Oregano, das Paprikapulver, das Salz und den Pfeffer, geben Sie die Schweinestreifen dazu und wenden Sie sie, bis jedes Stück überzogen ist. Decken Sie zu und marinieren Sie mindestens 3 Stunden, idealerweise über Nacht — je länger, desto besser, Oregano und Knoblauch brauchen Zeit, um durchzudringen.\n\nErhitzen Sie eine schwere Pfanne oder eine Grillpfanne über starker Hitze, bis sie raucht. Legen Sie die Streifen in einer einzigen Lage hinein, gegebenenfalls in mehreren Durchgängen, und braten Sie sie ohne zu bewegen 2–3 Minuten je Seite, bis die Ränder tief gebräunt sind und die Mitte gerade gar ist; überfüllen Sie die Pfanne nicht, sonst dampft das Fleisch statt zu karamellisieren. Lassen Sie die fertige Portion auf einem Teller ruhen, während Sie die nächste braten.\n\nWärmen Sie die Pita-Brote einzeln in derselben heißen Pfanne, 20 Sekunden je Seite, gerade so weit, dass sie geschmeidig werden. Streichen Sie auf jede Pita einen gehäuften Esslöffel Tzatziki, legen Sie das heiße Fleisch darauf, dazu ein paar Tomatenscheiben und rote Zwiebelringe, und — wenn Sie Athen die Treue halten — eine kleine Handvoll Pommes obendrauf.\n\nWickeln Sie alles fest in Papier mit einem zusammengedrückten Ende und servieren Sie sofort, mit etwas zusätzlichem Oregano, einer Zitronenspalte und dem restlichen Tzatziki dazu.",
+    "pt": "Numa taça grande, bata o alho, o azeite, o vinagre, os orégãos, o colorau, o sal e a pimenta, junte as tiras de porco e envolva até cada pedaço ficar bem coberto. Tape e deixe marinar pelo menos 3 horas, idealmente uma noite — quanto mais tempo, melhor, os orégãos e o alho precisam de tempo para penetrar.\n\nAqueça uma frigideira pesada ou uma grelha em lume forte até começar a fumegar. Disponha as tiras numa só camada, em tandas se for preciso, e sele-as sem mexer 2–3 minutos de cada lado, até os bordos ficarem bem dourados e o centro estar mesmo a fazer-se; não amontoe a frigideira, ou a carne coze em vapor em vez de caramelizar. Reserve a tanda pronta num prato enquanto faz a seguinte.\n\nAqueça as pitas uma a uma na mesma frigideira, 20 segundos de cada lado, apenas o suficiente para ficarem maleáveis. Espalhe uma colher cheia de tzatziki ao meio de cada uma, coloque a carne quente por cima, junte algumas rodelas de tomate e aros de cebola roxa, e — para ser fiel a Atenas — um pequeno punhado de batatas fritas no topo.\n\nEmbrulhe bem em papel com uma das pontas apertada, e sirva de imediato com mais orégãos, um gomo de limão e o restante tzatziki à parte.",
+    "ru": "В большой миске взбейте чеснок, оливковое масло, уксус, орегано, паприку, соль и перец, добавьте полоски свинины и перемешайте, чтобы каждый кусок был покрыт маринадом. Накройте и оставьте мариноваться минимум на 3 часа, идеально на ночь — чем дольше, тем лучше, орегано и чесноку нужно время, чтобы войти в мясо.\n\nРазогрейте тяжёлую сковороду или гриль-сковороду на сильном огне до появления дымка. Выложите полоски в один слой, при необходимости партиями, и обжаривайте, не двигая, 2–3 минуты с каждой стороны, пока края не станут глубоко золотистыми, а центр едва прожарится; не загромождайте сковороду, иначе мясо начнёт париться, а не карамелизоваться. Готовую партию отдыхайте на тарелке, пока готовится следующая.\n\nПрогревайте питы по одной на той же сковороде, по 20 секунд с каждой стороны, ровно до мягкости. Намажьте на середину каждой питы по столовой ложке дзадзики с горкой, выложите сверху горячее мясо, добавьте несколько ломтиков помидора и колец красного лука, и — если хочется быть верным Афинам — небольшую горсть картошки фри на самый верх.\n\nЗаверните плотно в бумагу, прижав один край, и подавайте сразу же с дополнительным орегано, долькой лимона и остатком дзадзики отдельно.",
+    "ar": "في وعاء كبير، اخفق الثوم وزيت الزيتون والخل والزعتر والبابريكا والملح والفلفل، أضف شرائح اللحم وقلّبها حتى تتغطى كل قطعة. غطّ الوعاء وانقع لمدة 3 ساعات على الأقل، ويفضل طوال الليل — كلما طالت المدة كان أفضل، فالزعتر والثوم يحتاجان وقتاً ليتغلغلا في اللحم.\n\nسخّن مقلاة ثقيلة أو مقلاة شواء على نار عالية حتى يبدأ منها الدخان. ضع الشرائح في طبقة واحدة، على دفعات إن لزم، واتركها تتحمّر دون أن تحرّكها 2–3 دقائق على كل وجه، حتى تصبح الأطراف بنية غامقة والوسط مستوياً بالكاد؛ لا تكدّس المقلاة، فاللحم يطبخ بالبخار بدل أن يتكرمل. ضع الدفعة الجاهزة على طبق بينما تطبخ التالية.\n\nسخّن خبزات البيتا واحدة تلو الأخرى على المقلاة نفسها، 20 ثانية على كل وجه، فقط حتى تطرى. وزّع ملعقة كبيرة مكوّمة من التزاتزيكي في وسط كل خبزة، ضع اللحم الساخن فوقها، أضف بضع شرائح طماطم وحلقات بصل أحمر، و — إن أردت الإخلاص لأثينا — حفنة صغيرة من البطاطس المقلية في الأعلى.\n\nلفّ بإحكام في ورقة مع طيّ أحد الطرفين، وقدّم فوراً مع المزيد من الزعتر وشريحة ليمون وما تبقى من التزاتزيكي إلى الجانب.",
+    "zh": "在一个大碗里把蒜末、橄榄油、醋、牛至、红椒粉、盐和胡椒搅匀，把猪肉条放进去翻拌，让每一片都裹上酱汁。盖好冷藏腌制至少 3 小时，最好放过夜——时间越久越好，牛至和蒜需要时间渗进肉里。\n\n把一只厚重的平底锅或铸铁锅烧到冒烟。把肉条单层铺进锅里，必要时分批，每面不动 2–3 分钟，让边缘上深褐色、中心刚刚熟透；锅里别挤太满，否则肉是被蒸而不是被煎焦。煎好的肉放盘子上稍歇，再煎下一批。\n\n用同一只热锅依次温热面饼，每面 20 秒，让它柔软可卷即可。在每张饼中央抹一大勺 tzatziki，铺上热的猪肉，加几片番茄和几圈红洋葱，再——若你忠于雅典风味——叠一小把薯条。\n\n用纸紧紧卷起来，把底端捏住封口，立即上桌，旁边再放点牛至、一角柠檬和剩下的 tzatziki。",
+    "ja": "大きなボウルに、にんにく、オリーブオイル、ビネガー、オレガノ、パプリカ、塩、こしょうを入れて泡立て器でよく混ぜ、豚肉のスライスを加えて 1 枚 1 枚に味がからむまで和える。ラップをして冷蔵庫で最低 3 時間、できれば一晩漬け込む — 長く置くほど良く、オレガノとにんにくが肉に染みていくのに時間がいる。\n\n重いフライパン、または波型のグリルパンを煙が出るまで強火で熱する。肉を 1 段に並べ、必要なら数回に分けて、動かさずに片面 2〜3 分、縁が深く色づき中央がちょうど火が通るまで焼く；鍋を詰め込み過ぎないこと、詰め込むと肉は蒸れてしまい、香ばしく焼けない。焼けた分は皿に休ませ、次の分を焼く。\n\n同じフライパンでピタを 1 枚ずつ、片面 20 秒ずつ温め、柔らかくしなるまで火を入れる。各ピタの中央にツァジキを大さじ山盛り 1 杯広げ、その上に熱い豚肉を乗せ、トマトのスライスと紫玉ねぎの輪を数枚添え、そして — アテネに忠実でいたいなら — フライドポテトをひとつかみ重ねる。\n\n紙でしっかり巻き、片方の端をひねって留め、すぐに供する — 別添えでオレガノ、レモンのくし切り、残りのツァジキを添えて。",
+    "tr": "Büyük bir kâseye sarımsağı, zeytinyağını, sirkeyi, kekiği, toz biberi, tuzu ve karabiberi koyup çırpın, eti şeritler halinde ekleyin ve her parçanın iyice kaplanması için karıştırın. Üzerini örtüp en az 3 saat, tercihen bir gece marine edin — ne kadar uzun, o kadar iyi, kekik ve sarımsağın ete işlemesi için zaman gerekir.\n\nAğır bir tavayı ya da ızgara tavayı yüksek ateşte dumanı çıkana kadar ısıtın. Şeritleri tek kat olacak şekilde dizin, gerekirse hamleler halinde, ve dokunmadan her yüzünü 2–3 dakika, kenarlar koyu kızarana ve içleri tam pişene kadar tutun; tavayı doldurmayın, yoksa et karamelize olacak yerde buharda pişer. Pişen partiyi bir tabakta dinlendirirken bir sonraki partiyi pişirin.\n\nAynı sıcak tavada pidelerin her birini, her yüzünü 20 saniye, yumuşayıncaya kadar ısıtın. Her pidenin ortasına bolca bir kaşık tzatziki sürün, üstüne sıcak eti dizin, birkaç dilim domates ve kırmızı soğan halkası ekleyin, ve — Atina'ya sadıksanız — küçük bir avuç patates kızartmasını üste serpin.\n\nKağıda sıkıca sarın, bir ucunu büzerek kapatın ve hemen servis edin; yanında biraz daha kekik, bir dilim limon ve geri kalan tzatziki ile.",
+    "it": "In una ciotola grande sbattete l'aglio, l'olio d'oliva, l'aceto, l'origano, la paprika, il sale e il pepe, unite le strisce di maiale e mescolatele finché ogni pezzo non è ben condito. Coprite e fate marinare almeno 3 ore, idealmente tutta la notte — più a lungo è meglio, perché origano e aglio hanno bisogno di tempo per penetrare.\n\nScaldate una padella pesante o una bistecchiera a fiamma alta fino a quando inizia a fumare. Disponete le strisce in un solo strato, in più riprese se serve, e fatele rosolare senza muoverle 2–3 minuti per lato, fino a quando i bordi sono ben caramellati e il centro è appena cotto; non sovraccaricate la padella, altrimenti la carne lessa al vapore invece di caramellare. Tenete la prima tranche al caldo su un piatto mentre cuocete la successiva.\n\nScaldate le pite una alla volta nella stessa padella, 20 secondi per lato, giusto perché diventino flessibili. Spalmate un cucchiaio colmo di tzatziki al centro di ciascuna, poggiate la carne calda sopra, aggiungete qualche fetta di pomodoro e anelli di cipolla rossa, e — se volete essere fedeli ad Atene — una piccola manciata di patatine fritte sopra.\n\nAvvolgete strette nella carta con un'estremità ripiegata, e servite subito con altro origano, uno spicchio di limone e il resto del tzatziki a parte.",
+    "ko": "큰 볼에 마늘, 올리브유, 식초, 오레가노, 파프리카 가루, 소금, 후추를 넣고 잘 휘저은 다음, 돼지고기 스트립을 넣고 모든 조각이 양념에 묻도록 잘 버무린다. 덮어서 최소 3시간, 가능하면 하룻밤 재워둔다 — 오래 둘수록 좋고, 오레가노와 마늘은 고기 속으로 스며들 시간이 필요하다.\n\n무거운 팬이나 그릴팬을 연기가 날 정도로 강한 불에 달군다. 고기를 한 겹으로 깔고, 필요하면 여러 번에 나누어, 움직이지 말고 한 면에 2–3분씩 가장자리가 짙은 갈색이 되고 가운데가 막 익을 때까지 굽는다; 팬을 가득 채우지 말 것 — 그러면 고기가 캐러멜라이즈되지 않고 찐다. 구운 분량은 접시에서 잠시 쉬게 두고, 다음 분량을 굽는다.\n\n같은 뜨거운 팬에 피타를 하나씩, 양면 20초씩, 부드러워질 정도로만 데운다. 각 피타 중앙에 차지키를 한 큰술 듬뿍 펴 바르고, 그 위에 뜨거운 돼지고기를 올리고, 토마토 슬라이스 몇 개와 적양파 링을 더하고 — 아테네에 충실하고 싶다면 — 감자튀김 한 줌을 그 위에 얹는다.\n\n종이로 단단히 말아서 한쪽 끝을 꼬집어 봉하고, 곧장 낸다 — 곁들임으로 오레가노, 레몬 한 조각, 남은 차지키를 옆에 둔다.",
+    "hi": "एक बड़े बर्तन में लहसुन, ज़ैतून का तेल, सिरका, ऑरगानो, पपरिका, नमक और काली मिर्च को मिला कर फेंट लें, फिर पोर्क की पट्टियाँ डाल कर ऐसे मिलाएँ कि हर टुकड़े पर मसाला चढ़ जाए। ढक कर कम से कम 3 घंटे, बेहतर हो तो रात भर मैरिनेट करें — जितनी देर रहे उतना बढ़िया, ऑरगानो और लहसुन को मांस में जाने का समय चाहिए।\n\nएक भारी पैन या ग्रिडल पैन को तेज़ आँच पर तब तक गरम करें जब तक धुआँ न आने लगे। पट्टियों को एक परत में रखें, ज़रूरत पड़े तो बैचों में, और बिना हिलाए हर तरफ़ 2–3 मिनट सेंकें, जब तक किनारे गहरे भूरे हों और बीच पक कर तैयार हो; पैन भर मत दें, वरना मांस भाप में पकेगा बजाय कैरामेलाइज़ होने के। पकी पट्टियाँ एक प्लेट में रखें और अगले बैच पर लग जाएँ।\n\nउसी गरम पैन में पीटा को बारी-बारी से, हर तरफ़ 20 सेकंड, बस इतना कि वह नर्म और मुड़ने लायक हो जाए। हर पीटा के बीच में एक भरा बड़ा चम्मच tzatziki फैलाएँ, ऊपर गरम पोर्क रखें, कुछ टमाटर के टुकड़े और लाल प्याज़ के छल्ले डालें, और — अगर एथेंस के असली स्वाद के साथ ईमानदार रहना है — एक मुट्ठी फ़्रेंच फ्राइज़ ऊपर रख दें।\n\nकाग़ज़ में कस कर लपेटें, एक सिरा दबा कर बंद करें, और तुरंत परोसें — साथ में थोड़ा और ऑरगानो, नींबू का एक टुकड़ा और बचा हुआ tzatziki।"
+  }
+}

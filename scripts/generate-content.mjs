@@ -169,6 +169,25 @@ function imageSrcset(url, tileSize = 'tile') {
   return { srcset: '', sizes: '' };
 }
 
+/* Image error handling: emit attributes that recover from transient Wikipedia
+   404s instead of permanently removing the <img>. The hash-bucket path
+   (/thumb/X/XX/Filename) can 404 when (a) the filename guess is slightly off
+   or (b) the upstream thumb cache hasn't generated that size yet. In both
+   cases Wikipedia's Special:FilePath redirector resolves by filename and
+   server-generates the thumbnail — much more forgiving than the direct CDN
+   URL. Only fall through to remove() after the fallback also fails.
+
+   For non-Wikimedia URLs (img.spoonacular.com, local /images/, cover2.jpg),
+   keep the existing remove-on-error behavior. */
+function imgFallbackAttrs(url) {
+  const wm = url.match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[^/]+\/[^/]+\/([^/]+)\/(\d+)px-/);
+  if (!wm) return ' onerror="this.remove()"';
+  const filename = wm[1];
+  const width = wm[2];
+  const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${filename}?width=${width}`;
+  return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+}
+
 /* Convenience: build the attribute string `srcset="..." sizes="..."` to
    slot into an <img> tag. Empty string when no variants generated. */
 function imgSrcsetAttrs(url, tileSize) {
@@ -1950,7 +1969,7 @@ const RECIPE_LANG = {
         seoP: n=>`Adaugă <strong>${esc(n)}</strong> în planul tău săptămânal cu <a href="/ro/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Rețetă ${esc(n)} – Ingrediente și Mod de Preparare | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Rețeta de ${n}: ingrediente, mod de preparare pas cu pas. Adaugă în planificator gratuit.`,
-        heroDesc: o=>`Rețetă din <strong>${esc(o)}</strong>. Ingrediente proaspete, preparare simplă.`,
+        heroDesc: o=>`Rețetă din ${esc(o)}. Ingrediente proaspete, preparare simplă.`,
         appDir:'/ro', lc: null },
   en: { dir:'/en/recipes',   indexTitle:`Recipes from Around the World | Meal-Planner.ro`,
         indexH1:'Recipes from <span class="accent">Around the World</span>',
@@ -1961,7 +1980,7 @@ const RECIPE_LANG = {
         seoP: n=>`Add <strong>${esc(n)}</strong> to your weekly plan with the <a href="/en/">free Meal-Planner.ro app</a>.`,
         pageTitle: n=>`${esc(n)} Recipe – Ingredients & How to Make | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} recipe: ingredients, step-by-step instructions. Add to your free meal planner.`,
-        heroDesc: o=>`Traditional recipe from <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Traditional recipe from ${esc(o)}.`,
         appDir:'/en', lc: null },
   es: { dir:'/es/recetas',   indexTitle:`Recetas del Mundo | Meal-Planner.ro`,
         indexH1:'Recetas del <span class="accent">Mundo</span>',
@@ -1972,7 +1991,7 @@ const RECIPE_LANG = {
         seoP: n=>`Añade <strong>${esc(n)}</strong> a tu plan semanal con <a href="/es/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Receta de ${esc(n)} – Ingredientes y Preparación | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receta de ${n} de ${o}: ingredientes e instrucciones paso a paso.`,
-        heroDesc: o=>`Receta tradicional de <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Receta tradicional de ${esc(o)}.`,
         appDir:'', lc: null },
   fr: { dir:'/fr/recettes',  indexTitle:`Recettes du Monde | Meal-Planner.ro`,
         indexH1:'Recettes du <span class="accent">Monde</span>',
@@ -1983,7 +2002,7 @@ const RECIPE_LANG = {
         seoP: n=>`Ajoutez <strong>${esc(n)}</strong> à votre plan hebdomadaire avec <a href="/fr/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Recette ${esc(n)} – Ingrédients et Préparation | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Recette de ${n} de ${o}: ingrédients et instructions étape par étape.`,
-        heroDesc: o=>`Recette traditionnelle de <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Recette traditionnelle de ${esc(o)}.`,
         appDir:'', lc: null },
   de: { dir:'/de/rezepte',   indexTitle:`Rezepte aus aller Welt | Meal-Planner.ro`,
         indexH1:'Rezepte aus <span class="accent">aller Welt</span>',
@@ -1994,7 +2013,7 @@ const RECIPE_LANG = {
         seoP: n=>`Füge <strong>${esc(n)}</strong> zu deinem Wochenplan mit <a href="/de/">Meal-Planner.ro</a> hinzu.`,
         pageTitle: n=>`${esc(n)} Rezept – Zutaten & Zubereitung | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} Rezept aus ${o}: Zutaten und Schritt-für-Schritt-Anleitung.`,
-        heroDesc: o=>`Traditionelles Rezept aus <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Traditionelles Rezept aus ${esc(o)}.`,
         appDir:'', lc: null },
   pt: { dir:'/pt/receitas',  indexTitle:`Receitas do Mundo | Meal-Planner.ro`,
         indexH1:'Receitas do <span class="accent">Mundo</span>',
@@ -2005,7 +2024,7 @@ const RECIPE_LANG = {
         seoP: n=>`Adicione <strong>${esc(n)}</strong> ao seu plano semanal com <a href="/pt/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Receita de ${esc(n)} – Ingredientes e Preparo | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receita de ${n} de ${o}: ingredientes e instruções passo a passo.`,
-        heroDesc: o=>`Receita tradicional de <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Receita tradicional de ${esc(o)}.`,
         appDir:'', lc: null },
   ru: { dir:'/ru/retsepty',  indexTitle:`Рецепты со всего мира | Meal-Planner.ro`,
         indexH1:'Рецепты со <span class="accent">всего мира</span>',
@@ -2016,7 +2035,7 @@ const RECIPE_LANG = {
         seoP: n=>`Добавьте <strong>${esc(n)}</strong> в свой план на неделю с <a href="/ru/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Рецепт ${esc(n)} – Ингредиенты и приготовление | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Рецепт ${n} из ${o}: ингредиенты и пошаговые инструкции.`,
-        heroDesc: o=>`Традиционный рецепт из <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Традиционный рецепт из ${esc(o)}.`,
         appDir:'', lc: null },
   ar: { dir:'/ar/wasafat',   indexTitle:`وصفات من حول العالم | Meal-Planner.ro`,
         indexH1:'وصفات من <span class="accent">حول العالم</span>',
@@ -2027,7 +2046,7 @@ const RECIPE_LANG = {
         seoP: n=>`أضف <strong>${esc(n)}</strong> إلى خطتك الأسبوعية مع <a href="/ar/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`وصفة ${esc(n)} – المكونات وطريقة التحضير | Meal-Planner.ro`,
         pageDesc: (n,o)=>`وصفة ${n} من ${o}: مكونات وتعليمات خطوة بخطوة.`,
-        heroDesc: o=>`وصفة تقليدية من <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`وصفة تقليدية من ${esc(o)}.`,
         appDir:'', dir_attr:'rtl', lc: null },
   zh: { dir:'/zh/shipu',     indexTitle:`世界各地食谱 | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界各地</span>食谱',
@@ -2038,7 +2057,7 @@ const RECIPE_LANG = {
         seoP: n=>`将<strong>${esc(n)}</strong>添加到您的每周计划 <a href="/zh/">Meal-Planner.ro</a>。`,
         pageTitle: n=>`${esc(n)}食谱 – 食材和做法 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n}食谱来自${o}：食材和步骤说明。`,
-        heroDesc: o=>`来自<strong>${esc(o)}</strong>的传统食谱。`,
+        heroDesc: o=>`来自${esc(o)}的传统食谱。`,
         appDir:'', lc: null },
   ja: { dir:'/ja/reshipi',   indexTitle:`世界の料理レシピ | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界の</span>料理レシピ',
@@ -2049,7 +2068,7 @@ const RECIPE_LANG = {
         seoP: n=>`<strong>${esc(n)}</strong>を<a href="/ja/">Meal-Planner.ro</a>の週間プランに追加しましょう。`,
         pageTitle: n=>`${esc(n)}のレシピ – 材料と作り方 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}の${n}レシピ：材料とステップごとの作り方。`,
-        heroDesc: o=>`<strong>${esc(o)}</strong>の伝統的なレシピ。`,
+        heroDesc: o=>`${esc(o)}の伝統的なレシピ。`,
         appDir:'', lc: null },
   hi: { dir:'/hi/recipes',   indexTitle:`दुनिया भर की रेसिपी | Meal-Planner.ro`,
         indexH1:'<span class="accent">दुनिया भर</span> की रेसिपी',
@@ -2060,7 +2079,7 @@ const RECIPE_LANG = {
         seoP: n=>`<strong>${esc(n)}</strong> को <a href="/hi/">Meal-Planner.ro</a> के साथ अपनी साप्ताहिक योजना में जोड़ें।`,
         pageTitle: n=>`${esc(n)} रेसिपी – सामग्री और बनाने का तरीका | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o} से ${n} रेसिपी: सामग्री और चरण-दर-चरण निर्देश।`,
-        heroDesc: o=>`<strong>${esc(o)}</strong> की पारंपरिक रेसिपी।`,
+        heroDesc: o=>`${esc(o)} की पारंपरिक रेसिपी।`,
         appDir:'', lc: null },
   tr: { dir:'/tr/tarifler',  indexTitle:`Dünyadan Tarifler | Meal-Planner.ro`,
         indexH1:'<span class="accent">Dünyadan</span> Tarifler',
@@ -2071,7 +2090,7 @@ const RECIPE_LANG = {
         seoP: n=>`<strong>${esc(n)}</strong>'ı <a href="/tr/">Meal-Planner.ro</a> ile haftalık planınıza ekleyin.`,
         pageTitle: n=>`${esc(n)} Tarifi – Malzemeler ve Yapılışı | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}'dan ${n} tarifi: malzemeler ve adım adım talimatlar.`,
-        heroDesc: o=>`<strong>${esc(o)}</strong>'dan geleneksel tarif.`,
+        heroDesc: o=>`${esc(o)}'dan geleneksel tarif.`,
         appDir:'', lc: null },
   it: { dir:'/it/ricette',   indexTitle:`Ricette dal Mondo | Meal-Planner.ro`,
         indexH1:'Ricette dal <span class="accent">Mondo</span>',
@@ -2082,7 +2101,7 @@ const RECIPE_LANG = {
         seoP: n=>`Aggiungi <strong>${esc(n)}</strong> al tuo piano settimanale con <a href="/it/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Ricetta ${esc(n)} – Ingredienti e Preparazione | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Ricetta di ${n} da ${o}: ingredienti e istruzioni passo dopo passo.`,
-        heroDesc: o=>`Ricetta tradizionale da <strong>${esc(o)}</strong>.`,
+        heroDesc: o=>`Ricetta tradizionale da ${esc(o)}.`,
         appDir:'', lc: null },
   ko: { dir:'/ko/recipes',   indexTitle:`세계 요리 레시피 | Meal-Planner.ro`,
         indexH1:'<span class="accent">세계</span> 요리 레시피',
@@ -2093,7 +2112,7 @@ const RECIPE_LANG = {
         seoP: n=>`<strong>${esc(n)}</strong>을(를) <a href="/ko/">Meal-Planner.ro</a>의 주간 플랜에 추가하세요.`,
         pageTitle: n=>`${esc(n)} 레시피 – 재료 및 만드는 법 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}의 ${n} 레시피: 재료와 단계별 지침.`,
-        heroDesc: o=>`<strong>${esc(o)}</strong>의 전통 레시피.`,
+        heroDesc: o=>`${esc(o)}의 전통 레시피.`,
         appDir:'', lc: null },
 };
 // Attach lc nav/footer builders + populate RECIPES_NAV
@@ -3434,7 +3453,8 @@ function recipePage(recipe, rl) {
   const ingr = recipe.ingredients?.[code] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
   const how  = recipe.howIsMade?.[code]   || recipe.howIsMade?.en   || recipe.howIsMade?.ro   || '';
   const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
-  const originTxt = recipe.originText?.[code] || recipe.originText?.en || recipe.originText?.ro || rl.heroDesc(o);
+  const metaDesc  = recipesMeta[recipe.id]?.desc?.[code] || recipesMeta[recipe.id]?.desc?.en || '';
+  const originTxt = recipe.originText?.[code] || recipe.originText?.en || recipe.originText?.ro || metaDesc || rl.heroDesc(o);
   // Sentence-end splitter: ASCII period+space (Latin/AR/HI/KO) or CJK full stop (ZH/JA).
   // Without the CJK branch, ZH/JA howIsMade collapses into a single mega-step.
   const rawSteps = how.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
@@ -3535,7 +3555,7 @@ function recipePage(recipe, rl) {
       const ri_isPlaceholder = ri_img.src.endsWith('cover2.jpg');
       const ri_imgHtml = ri_isPlaceholder
         ? ''
-        : `<img src="${ri_img.src}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
+        : `<img src="${ri_img.src}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(ri_img.src)}>`;
       return `<a href="${rl.dir}/${rs}/" class="recipe-card-item">
   <div class="recipe-card-img" data-card-recipe="${rs}">${re}${ri_imgHtml}</div>
   <div class="recipe-card-body">
@@ -3584,7 +3604,7 @@ function recipePage(recipe, rl) {
       const bridgeImg = resolveRecipeImage(raw, rs);
       const bridgeImgHtml = bridgeImg.src.endsWith('cover2.jpg')
         ? ''
-        : `<img src="${bridgeImg.src}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`;
+        : `<img src="${bridgeImg.src}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(bridgeImg.src)}>`;
       return `<a href="${href}" class="recipe-card-item recipe-card-bridge">
   <div class="recipe-card-img" data-card-recipe="${rs}">${re}${bridgeImgHtml}</div>
   <div class="recipe-card-body">
@@ -3641,7 +3661,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
     <div class="recipe-hero-img-col">
       <div class="recipe-photo-container" data-recipe="${rslug}" id="recipe-photo-main">${emoji}${
         recipeImg.src && !recipeImg.src.endsWith('cover2.jpg')
-          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async" onerror="this.remove()">`
+          ? `<img src="${recipeImg.src}" alt="${esc(n)}" loading="eager" fetchpriority="high" decoding="async"${imgFallbackAttrs(recipeImg.src)}>`
           : ''
       }</div>
     </div>
@@ -3871,13 +3891,40 @@ const CUISINE_CTA = {
              desc, timeMins, readyIn, tags } — every field is
    locale-aware. `img` is the same URL the recipe page would use
    so cache hits across navigations. */
+// Tile-safe excerpt from a longer prose field (typically recipe.originText).
+// Takes the first sentence; if it exceeds ~160 chars, truncates at a word
+// boundary and appends an ellipsis. Handles Latin (`. `), Arabic/Hindi
+// (space-separated), and CJK (`。`/`！`/`？`) sentence terminators.
+function tileExcerpt(text, maxLen = 160) {
+  if (!text) return '';
+  const trimmed = String(text).trim();
+  if (!trimmed) return '';
+  // First sentence ending in Latin `.!?` or CJK `。！？`.
+  const m = trimmed.match(/^[^.!?。！？]*[.!?。！？]/);
+  const first = (m ? m[0] : trimmed).trim();
+  if (first.length <= maxLen) return first;
+  // Word-boundary truncation. The `> 60` guard avoids cutting CJK runs
+  // (which have no spaces) down to nothing — better to over-deliver and let
+  // CSS line-clamp handle the visual cap.
+  const cut = first.slice(0, maxLen);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 60 ? cut.slice(0, lastSpace) : cut) + '…';
+}
+
 function cuisineTileData(recipe, lc_code, recipeBaseDir) {
   const rn   = recipe.name?.[lc_code] || recipe.name?.en || recipe.name?.ro || '';
   const rs   = slug(recipe.name?.en || recipe.name?.ro || rn);
   const meta = recipesMeta[recipe.id] || {};
   const img  = resolveRecipeImage(recipe, rs);
-  // Localized short descriptor, then EN fall-through.
-  const desc = meta.desc?.[lc_code] || meta.desc?.en || '';
+  // Localized short descriptor with a four-level fallback chain so every
+  // tile renders a description. Authored meta.desc wins; otherwise an
+  // excerpt of the recipe's own originText (which is the source of the
+  // detail-page intro) — same content the reader sees one click away.
+  const desc = meta.desc?.[lc_code]
+            || meta.desc?.en
+            || tileExcerpt(recipe.originText?.[lc_code])
+            || tileExcerpt(recipe.originText?.en)
+            || '';
   const tags = (meta.tags || []).slice(0, 2)
     .map(t => TAG_LABELS[t]?.[lc_code] || TAG_LABELS[t]?.en || t);
   const readyFn = READY_IN[lc_code] || READY_IN.en;
@@ -3939,7 +3986,7 @@ function recipeIndex(rl) {
       // we know works.
       return `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
         <span class="cuisine-card-thumb-fallback" aria-hidden="true">${flag}</span>
-        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`}
+        ${isPlaceholder ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(u)}/>`}
       </span>`;
     }).join('');
     const previewNames = recs.slice(0, 3).map(r =>
@@ -4364,11 +4411,19 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // (e.g. shakshuka and chakchouka share an upstream Wikipedia photo), the
   // 2nd/3rd occurrences get data-img-rot="1|2" which applies a subtle
   // filter (brightness/saturation tweak) so the page doesn't feel repetitive.
+  // Uniform card layout across every cuisine hub. Every tile is the same
+  // shape: image on top with a fixed 4:3 aspect ratio, then title, then —
+  // ONLY when recipes-meta.js carries an authored desc for that recipe —
+  // a short description, then a meta row (time + tags). Cards size to
+  // their natural content; the grid uses align-items: start (see CSS) so
+  // a card without an authored description simply ends one paragraph
+  // earlier instead of growing a block of empty whitespace to match its
+  // neighbours. We never fabricate text from ingredients/tags/metadata —
+  // the description either exists in recipes-meta.js for that locale
+  // (with EN fall-through) or it doesn't render at all.
   const seenImgs = new Map(); // url → occurrence count
   const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
-  const tilesHtml = tiles.map((t, i) => {
-    const isFeatured = i === 0 && tiles.length >= 3;
-    const cls = `cuisine-tile${isFeatured ? ' cuisine-tile--featured' : ''}`;
+  const tilesHtml = tiles.map((t) => {
     const tagsHtml = t.tags.length
       ? `<div class="cuisine-tile-tags">${t.tags.map(tag => `<span class="cuisine-tile-tag">${esc(tag)}</span>`).join('')}</div>`
       : '';
@@ -4380,30 +4435,16 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     const occ = (seenImgs.get(t.img) || 0);
     seenImgs.set(t.img, occ + 1);
     const rotAttr = occ > 0 && !isPlaceholder ? ` data-img-rot="${Math.min(occ, 2)}"` : '';
-    // Spotlight tile (i === 0, ≥3 recipes): mark the image as a hero-dup
-    // when its URL matches the hero band's URL so the CSS hides it and
-    // avoids showing the same picture twice on the page (e.g. Japan, where
-    // sushi is both first-in-array and the stability winner). When the
-    // spotlight tile differs from the hero (e.g. Italy: hero=risotto,
-    // spotlight=carbonara), the attribute is absent and the image renders.
-    const heroDupAttr = isFeatured && !isPlaceholder && t.img === featured.img
-      ? ' data-hero-dup="1"'
-      : '';
     // No srcset on tiles. Tiles render at ~240–320 CSS px; the base 330px
     // Wikipedia thumb (same URL the detail-page hero uses as its `src` and
-    // og:image) is the most reliable variant. Multi-width srcset was causing
-    // runtime mismatches with the detail hero on hub pages: browsers using
-    // the tile's `sizes` hint sometimes picked a 660w/990w variant that
-    // wasn't available, fired onerror, and removed the <img> — leaving only
-    // the flag fallback even though the same recipe's detail page renders
-    // fine. Using just `src` guarantees the tile loads the exact URL the
-    // detail page is known to serve.
+    // og:image) is the most reliable variant. Using just `src` guarantees
+    // the tile loads the exact URL the detail page is known to serve.
     const imgHtml = isPlaceholder
       ? '' // skip the placeholder URL entirely so the flag fallback shows
-      : `<img src="${t.img}" alt="" loading="lazy" decoding="async" onerror="this.remove()"/>`;
+      : `<img src="${t.img}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(t.img)}/>`;
     return `<li>
-      <a class="${cls}" href="${t.href}">
-        <span class="cuisine-tile-img"${rotAttr}${heroDupAttr}>
+      <a class="cuisine-tile" href="${t.href}">
+        <span class="cuisine-tile-img"${rotAttr}>
           <span class="cuisine-tile-img-fallback" aria-hidden="true">${flag}</span>
           ${imgHtml}
         </span>
@@ -4486,7 +4527,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
         </div>
         ${featured ? `<figure class="cuisine-hero-image" aria-hidden="true">
           <span class="cuisine-hero-image-fallback" aria-hidden="true">${flag}</span>
-          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high" onerror="this.remove()"/>`}
+          ${/cover2\.jpg$/.test(featured.img) ? '' : `<img src="${featured.img}" alt="" loading="eager" decoding="async" fetchpriority="high"${imgFallbackAttrs(featured.img)}/>`}
         </figure>` : ''}
       </div>
     </div>

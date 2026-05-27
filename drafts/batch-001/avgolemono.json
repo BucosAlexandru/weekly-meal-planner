@@ -1,0 +1,193 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Avgolemono",
+    "ro": "Avgolemono",
+    "es": "Avgolemono",
+    "fr": "Avgolemono",
+    "de": "Avgolemono",
+    "pt": "Avgolemono",
+    "ru": "Авголемоно",
+    "ar": "أفغوليمونو",
+    "zh": "希腊蛋柠檬鸡汤",
+    "ja": "アヴゴレモノ",
+    "tr": "Avgolemono",
+    "it": "Avgolemono",
+    "ko": "아브골레모노",
+    "hi": "अवगोलेमोनो"
+  },
+  "cuisine": {
+    "en": "Greece", "ro": "Grecia", "es": "Grecia", "fr": "Grèce",
+    "de": "Griechenland", "pt": "Grécia", "ru": "Греция", "ar": "اليونان",
+    "zh": "希腊", "ja": "ギリシャ", "tr": "Yunanistan", "it": "Grecia",
+    "ko": "그리스", "hi": "ग्रीस"
+  },
+  "status": {
+    "drafted": true,
+    "needs_qa": true,
+    "needs_timing_review": true,
+    "needs_image_review": true,
+    "localization_pending": false,
+    "enrichment_pending": true,
+    "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "1.5 kg whole chicken (or 1 kg bone-in chicken thighs)",
+      "2 carrots, 1 onion, 2 celery stalks (for the broth)",
+      "1 bay leaf, a handful of parsley stems, 8 black peppercorns",
+      "150 g long-grain rice (or orzo if you prefer)",
+      "3 large eggs, at room temperature",
+      "Juice of 2 lemons (about 80 ml)",
+      "Salt and white pepper",
+      "Fresh dill or parsley to finish"
+    ],
+    "ro": [
+      "1,5 kg pui întreg (sau 1 kg pulpe de pui cu os)",
+      "2 morcovi, 1 ceapă, 2 tulpini de țelină (pentru fond)",
+      "1 frunză de dafin, un mănunchi de codițe de pătrunjel, 8 boabe de piper negru",
+      "150 g orez cu bob lung (sau orzo, dacă preferi)",
+      "3 ouă mari, la temperatura camerei",
+      "Zeama de la 2 lămâi (aproximativ 80 ml)",
+      "Sare și piper alb",
+      "Mărar sau pătrunjel proaspăt pentru a încheia"
+    ],
+    "es": [
+      "1,5 kg de pollo entero (o 1 kg de muslos con hueso)",
+      "2 zanahorias, 1 cebolla, 2 ramas de apio (para el caldo)",
+      "1 hoja de laurel, un manojo de tallos de perejil, 8 granos de pimienta negra",
+      "150 g de arroz de grano largo (o orzo si lo prefieres)",
+      "3 huevos grandes, a temperatura ambiente",
+      "El zumo de 2 limones (unos 80 ml)",
+      "Sal y pimienta blanca",
+      "Eneldo o perejil fresco para terminar"
+    ],
+    "fr": [
+      "1,5 kg de poulet entier (ou 1 kg de cuisses de poulet avec os)",
+      "2 carottes, 1 oignon, 2 branches de céleri (pour le bouillon)",
+      "1 feuille de laurier, une poignée de tiges de persil, 8 grains de poivre noir",
+      "150 g de riz long grain (ou des orzos si vous préférez)",
+      "3 gros œufs, à température ambiante",
+      "Le jus de 2 citrons (environ 80 ml)",
+      "Sel et poivre blanc",
+      "Aneth ou persil frais pour la finition"
+    ],
+    "de": [
+      "1,5 kg ganzes Huhn (oder 1 kg Hähnchenschenkel mit Knochen)",
+      "2 Karotten, 1 Zwiebel, 2 Stangen Sellerie (für die Brühe)",
+      "1 Lorbeerblatt, eine Handvoll Petersilienstiele, 8 schwarze Pfefferkörner",
+      "150 g Langkornreis (oder Orzo, falls gewünscht)",
+      "3 große Eier, zimmerwarm",
+      "Saft von 2 Zitronen (etwa 80 ml)",
+      "Salz und weißer Pfeffer",
+      "Frischer Dill oder Petersilie zum Abschluss"
+    ],
+    "pt": [
+      "1,5 kg de frango inteiro (ou 1 kg de coxas de frango com osso)",
+      "2 cenouras, 1 cebola, 2 talos de aipo (para o caldo)",
+      "1 folha de louro, um molho de talos de salsa, 8 grãos de pimenta-preta",
+      "150 g de arroz de grão longo (ou orzo, se preferir)",
+      "3 ovos grandes, à temperatura ambiente",
+      "Sumo de 2 limões (cerca de 80 ml)",
+      "Sal e pimenta branca",
+      "Endro ou salsa fresca para terminar"
+    ],
+    "ru": [
+      "1,5 кг целой курицы (или 1 кг куриных бёдер на кости)",
+      "2 моркови, 1 луковица, 2 черешка сельдерея (для бульона)",
+      "1 лавровый лист, пучок стеблей петрушки, 8 горошин чёрного перца",
+      "150 г длиннозерного риса (или орзо, если предпочитаете)",
+      "3 крупных яйца комнатной температуры",
+      "Сок 2 лимонов (около 80 мл)",
+      "Соль и белый перец",
+      "Свежий укроп или петрушка для подачи"
+    ],
+    "ar": [
+      "1,5 كغ دجاجة كاملة (أو 1 كغ أوراك دجاج بالعظم)",
+      "2 جزر، 1 بصلة، 2 ساق كرفس (للمرق)",
+      "1 ورقة غار، حفنة من سيقان البقدونس، 8 حبات فلفل أسود",
+      "150 غ أرز طويل الحبة (أو أورزو إن فضّلت)",
+      "3 بيضات كبيرة، في حرارة الغرفة",
+      "عصير ليمونتين (نحو 80 مل)",
+      "ملح وفلفل أبيض",
+      "شبت أو بقدونس طازج للتزيين"
+    ],
+    "zh": [
+      "整鸡 1.5 公斤（或带骨鸡腿 1 公斤）",
+      "胡萝卜 2 根、洋葱 1 个、芹菜 2 根（用于熬汤）",
+      "月桂叶 1 片、欧芹梗一小把、黑胡椒粒 8 颗",
+      "长粒米 150 克（或换成 orzo 米粒面）",
+      "大鸡蛋 3 个，置于室温",
+      "柠檬 2 个的汁（约 80 毫升）",
+      "盐与白胡椒",
+      "新鲜莳萝或欧芹，最后撒上"
+    ],
+    "ja": [
+      "丸鶏 1.5 kg（または骨つき鶏もも 1 kg）",
+      "にんじん 2 本、玉ねぎ 1 個、セロリ 2 本（出汁用）",
+      "ローリエ 1 枚、パセリの茎ひとつかみ、黒こしょう 8 粒",
+      "長粒米 150 g（オルゾでも可）",
+      "L 卵 3 個、室温に戻したもの",
+      "レモン 2 個分の果汁（約 80 ml）",
+      "塩と白こしょう",
+      "仕上げ用のディルかパセリ"
+    ],
+    "tr": [
+      "1,5 kg bütün tavuk (ya da 1 kg kemikli tavuk but)",
+      "2 havuç, 1 soğan, 2 sap kereviz (suyu için)",
+      "1 defne yaprağı, bir avuç maydanoz sapı, 8 tane karabiber",
+      "150 g uzun taneli pirinç (ya da tercih edersen şehriye/orzo)",
+      "3 büyük yumurta, oda sıcaklığında",
+      "2 limonun suyu (yaklaşık 80 ml)",
+      "Tuz ve beyaz biber",
+      "Üzerine taze dereotu ya da maydanoz"
+    ],
+    "it": [
+      "1,5 kg di pollo intero (oppure 1 kg di sovracosce di pollo con osso)",
+      "2 carote, 1 cipolla, 2 coste di sedano (per il brodo)",
+      "1 foglia di alloro, una manciata di gambi di prezzemolo, 8 grani di pepe nero",
+      "150 g di riso a chicco lungo (o orzo, se preferisci)",
+      "3 uova grandi, a temperatura ambiente",
+      "Succo di 2 limoni (circa 80 ml)",
+      "Sale e pepe bianco",
+      "Aneto o prezzemolo fresco per rifinire"
+    ],
+    "ko": [
+      "통닭 1.5 kg (또는 뼈 있는 닭 허벅지살 1 kg)",
+      "당근 2개, 양파 1개, 셀러리 2대 (육수용)",
+      "월계수 잎 1장, 파슬리 줄기 한 줌, 검은 통후추 8알",
+      "장립종 쌀 150 g (또는 원하면 오르조 파스타)",
+      "큰 달걀 3개, 실온",
+      "레몬 2개 분량의 즙 (약 80 ml)",
+      "소금과 백후추",
+      "마무리용 신선한 딜이나 파슬리"
+    ],
+    "hi": [
+      "1.5 किलो साबुत चिकन (या 1 किलो हड्डी सहित चिकन जांघें)",
+      "2 गाजर, 1 प्याज़, 2 अजवाइन डंठल (शोरबा के लिए)",
+      "1 तेज़पत्ता, मुट्ठीभर पार्सले के डंठल, 8 काली मिर्च के दाने",
+      "150 ग्राम लंबे दाने वाला चावल (या ओर्ज़ो अगर पसंद हो)",
+      "3 बड़े अंडे, कमरे के तापमान पर",
+      "2 नींबू का रस (लगभग 80 मिली)",
+      "नमक और सफ़ेद मिर्च",
+      "ऊपर डालने के लिए ताज़ा डिल या पार्सले"
+    ]
+  },
+  "howIsMade": {
+    "en": "Place the chicken in a heavy pot with the carrots, onion, celery, bay leaf, parsley stems and peppercorns, cover with 2.5 L of cold water and bring to a gentle simmer; skim any foam that rises, and let it cook uncovered for about an hour and a half, until the meat falls from the bones.\n\nLift the chicken out to rest and strain the broth into a clean pot, discarding the vegetables. Pick the meat from the bones, shred it into bite-sized pieces and return it to the broth, bring back to a simmer and stir in the rice; cook 15–18 minutes until tender.\n\nWhisk the eggs in a bowl until light and foamy, then whisk in the lemon juice. The critical move now is to temper the eggs: slowly ladle a cup of hot broth into them while whisking constantly, then another, until the bowl is warm to the touch. Off the heat, pour the tempered mixture back into the pot in a slow steady stream, stirring continuously — never let the soup boil after this or the eggs will scramble.\n\nTaste, adjust salt and white pepper, and serve immediately, finished with dill or parsley. Avgolemono is meant to be silky and slightly cloudy, never thin and never broken.",
+    "ro": "Pune puiul într-o oală groasă cu morcovii, ceapa, țelina, foaia de dafin, codițele de pătrunjel și boabele de piper, acoperă cu 2,5 l de apă rece și adu la o fierbere blândă; ia spuma care urcă și lasă să fiarbă neacoperit aproximativ o oră și jumătate, până când carnea se desprinde de pe oase.\n\nScoate puiul să se odihnească și strecoară fondul într-o oală curată, aruncând legumele. Desface carnea de pe oase, taie-o în bucățele de o îmbucătură și pune-o înapoi în fond, adu din nou la fierbere și adaugă orezul; fierbe 15–18 minute, până devine moale.\n\nBate ouăle într-un bol până devin spumoase și deschise la culoare, apoi încorporează zeama de lămâie. Acum vine pasul cel mai delicat — temperează ouăle: toarnă încet o cană de fond fierbinte peste ele bătând continuu, apoi încă una, până când bolul devine cald la atingere. Stinge focul și toarnă amestecul temperat înapoi în oală într-un fir constant, amestecând fără oprire — supa nu trebuie să mai fiarbă după acest moment, altfel ouăle se taie.\n\nGustă, ajustează sarea și piperul alb și servește imediat, finisând cu mărar sau pătrunjel. Avgolemono trebuie să fie mătăsoasă și ușor tulbure, niciodată subțire sau tăiată.",
+    "es": "Pon el pollo en una olla pesada con las zanahorias, la cebolla, el apio, la hoja de laurel, los tallos de perejil y los granos de pimienta, cúbrelo con 2,5 l de agua fría y llévalo a un hervor suave; retira la espuma que suba y déjalo cocer destapado durante aproximadamente una hora y media, hasta que la carne se desprenda de los huesos.\n\nSaca el pollo a reposar y cuela el caldo a una olla limpia, descartando las verduras. Deshuesa la carne, desmenúzala en bocados y devuélvela al caldo, vuelve a llevarlo a un hervor suave y añade el arroz; cuece 15–18 minutos hasta que esté tierno.\n\nBate los huevos en un bol hasta que estén espumosos y claros, e incorpora el zumo de limón. Ahora viene el paso delicado — atemperar los huevos: vierte lentamente una taza de caldo caliente sobre ellos batiendo sin parar, y luego otra, hasta que el bol esté tibio al tacto. Fuera del fuego, vierte la mezcla atemperada de vuelta en la olla en hilo constante, removiendo sin parar — la sopa no debe hervir más después de este punto, o los huevos se cortarán.\n\nPrueba, ajusta la sal y la pimienta blanca, y sirve enseguida, terminado con eneldo o perejil. La avgolemono debe ser sedosa y ligeramente turbia, nunca aguada ni cortada.",
+    "fr": "Placez le poulet dans une cocotte épaisse avec les carottes, l'oignon, le céleri, la feuille de laurier, les tiges de persil et les grains de poivre, couvrez avec 2,5 L d'eau froide et portez à un frémissement doux ; écumez la mousse qui remonte, et laissez cuire à découvert environ une heure et demie, jusqu'à ce que la chair se détache des os.\n\nRetirez le poulet pour qu'il repose et filtrez le bouillon dans une cocotte propre, en jetant les légumes. Détachez la viande des os, déchirez-la en bouchées et remettez-la dans le bouillon, ramenez à frémissement et ajoutez le riz ; faites cuire 15 à 18 minutes, jusqu'à tendre.\n\nFouettez les œufs dans un bol jusqu'à ce qu'ils soient mousseux et pâles, puis incorporez le jus de citron. Vient maintenant le moment délicat — tempérer les œufs : versez lentement une louche de bouillon chaud sur les œufs en fouettant sans cesse, puis une autre, jusqu'à ce que le bol soit tiède au toucher. Hors du feu, versez le mélange tempéré dans la cocotte en filet constant, en remuant sans interruption — la soupe ne doit plus bouillir après ce point, sinon les œufs vont coaguler.\n\nGoûtez, rectifiez le sel et le poivre blanc, et servez aussitôt, fini d'aneth ou de persil. L'avgolemono doit être soyeux et légèrement trouble, jamais clair ni tranché.",
+    "de": "Geben Sie das Huhn in einen schweren Topf mit den Karotten, der Zwiebel, dem Sellerie, dem Lorbeerblatt, den Petersilienstielen und den Pfefferkörnern, bedecken Sie es mit 2,5 L kaltem Wasser und bringen Sie es zum sanften Köcheln; schöpfen Sie den aufsteigenden Schaum ab und lassen Sie es offen etwa anderthalb Stunden kochen, bis sich das Fleisch von den Knochen löst.\n\nNehmen Sie das Huhn zum Ruhen heraus und gießen Sie die Brühe durch ein Sieb in einen sauberen Topf, das Gemüse kommt weg. Lösen Sie das Fleisch von den Knochen, zupfen Sie es in mundgerechte Stücke und geben Sie es zurück in die Brühe, bringen Sie sie wieder zum Köcheln und rühren Sie den Reis ein; 15–18 Minuten kochen, bis er gar ist.\n\nSchlagen Sie die Eier in einer Schüssel, bis sie schaumig und hell sind, und rühren Sie den Zitronensaft ein. Jetzt kommt der heikle Moment — die Eier temperieren: gießen Sie langsam eine Kelle heißer Brühe unter ständigem Rühren über die Eier, dann eine zweite, bis die Schüssel sich warm anfühlt. Vom Herd nehmen und die temperierte Mischung in einem dünnen, gleichmäßigen Strahl in den Topf zurückgießen, dabei ununterbrochen rühren — die Suppe darf jetzt nicht mehr kochen, sonst gerinnen die Eier.\n\nAbschmecken mit Salz und weißem Pfeffer, sofort servieren, mit Dill oder Petersilie vollendet. Avgolemono soll seidig und leicht trüb sein, niemals dünn und niemals geronnen.",
+    "pt": "Coloque o frango numa panela pesada com as cenouras, a cebola, o aipo, a folha de louro, os talos de salsa e os grãos de pimenta, cubra com 2,5 L de água fria e leve a uma fervura branda; retire a espuma que subir e deixe cozer destapado cerca de uma hora e meia, até a carne se soltar dos ossos.\n\nRetire o frango para repousar e coe o caldo para uma panela limpa, descartando os legumes. Desosse a carne, desfie-a em pedaços e devolva ao caldo, leve novamente a uma fervura branda e junte o arroz; deixe cozer 15–18 minutos, até estar tenro.\n\nBata os ovos numa taça até ficarem espumosos e claros, depois incorpore o sumo de limão. Vem agora o passo delicado — temperar os ovos: verta devagar uma concha de caldo quente sobre os ovos batendo sem parar, e depois outra, até a taça estar morna ao toque. Fora do lume, verta a mistura temperada de volta para a panela em fio constante, mexendo sem interrupção — a sopa não deve voltar a ferver, ou os ovos coalham.\n\nProve, acerte de sal e pimenta branca e sirva de imediato, terminado com endro ou salsa. O avgolemono deve ser sedoso e ligeiramente turvo, nunca aguado nem talhado.",
+    "ru": "Положите курицу в тяжёлую кастрюлю с морковью, луком, сельдереем, лавровым листом, стеблями петрушки и горошинами перца, залейте 2,5 л холодной воды и доведите до мягкого кипения; снимайте пенку, которая поднимается, и варите без крышки около полутора часов, пока мясо не начнёт отходить от костей.\n\nДостаньте курицу отдохнуть и процедите бульон в чистую кастрюлю, овощи отложите. Снимите мясо с костей, разберите на удобные кусочки и верните в бульон, снова доведите до кипения и всыпьте рис; варите 15–18 минут, пока рис не станет мягким.\n\nВзбейте яйца в миске до пышности и светлого цвета, затем вмешайте лимонный сок. Сейчас деликатный момент — темперировать яйца: медленно влейте в них половник горячего бульона, не переставая взбивать, потом ещё один, пока миска не станет тёплой на ощупь. Сняв с огня, верните темперированную смесь обратно в кастрюлю тонкой ровной струёй, непрерывно помешивая — после этого суп уже не должен кипеть, иначе яйца свернутся.\n\nПопробуйте, поправьте соль и белый перец и подавайте сразу, посыпав укропом или петрушкой. Авголемоно должна быть шёлковой и чуть мутной — не жидкой и не свернувшейся.",
+    "ar": "ضع الدجاجة في قدر ثقيل مع الجزر والبصل والكرفس وورقة الغار وسيقان البقدونس وحبات الفلفل، وغمرها بـ 2.5 لتر من الماء البارد وأوصلها إلى غليان هادئ؛ ارفع الرغوة التي ترتفع، واتركها تطهو دون غطاء نحو ساعة ونصف، حتى ينفصل اللحم عن العظم.\n\nأخرج الدجاجة لترتاح وصفِّ المرق إلى قدر نظيف، وتخلّص من الخضار. انزع اللحم عن العظم وقطّعه إلى قطع صغيرة، وأعده إلى المرق، أوصله إلى الغليان من جديد وأضف الأرز؛ اطبخه 15–18 دقيقة حتى ينضج.\n\nاخفق البيض في وعاء حتى يصبح رغوياً وفاتح اللون، ثم اخفق فيه عصير الليمون. تأتي الآن اللحظة الدقيقة — تلطيف البيض: اسكب مغرفة من المرق الساخن على البيض ببطء مع الخفق المستمر، ثم مغرفة ثانية، حتى يصبح الوعاء دافئاً عند اللمس. ارفع القدر عن النار واسكب المزيج الملطّف في القدر بخيط ثابت مع التحريك دون توقف — يجب ألا يغلي المرق بعد هذه المرحلة، وإلا تخثّر البيض.\n\nتذوّق، عدّل الملح والفلفل الأبيض وقدّم فوراً، ورشّ الشبت أو البقدونس فوقها. الأفغوليمونو يجب أن تكون حريرية وضبابية قليلاً، لا رقيقة ولا متخثّرة.",
+    "zh": "把整鸡放入厚底锅，加入胡萝卜、洋葱、芹菜、月桂叶、欧芹梗和黑胡椒粒，倒入 2.5 升冷水，慢慢加热到微微沸腾；表面起的浮沫随时撇去，不盖盖煮约一个半小时，直到肉一碰就脱骨。\n\n把鸡捞出来稍稍静置，把汤过滤到一只干净的锅里，蔬菜弃去。把鸡肉从骨头上拆下来，撕成一口大小的块再放回汤中，重新加热到微沸，倒入米；煮 15–18 分钟，至米粒柔软。\n\n把鸡蛋在碗里打到颜色变浅、起泡，再把柠檬汁打入。接下来是最关键的一步——给蛋液回温：一边持续搅打，一边把一勺热汤慢慢淋到蛋液上，再加一勺，直到碗摸起来微温。离火，把回温后的蛋柠檬液以细而稳的水流倒回汤里，不停搅动——这之后汤不可再煮沸，否则鸡蛋会凝结成絮。\n\n试味，用盐和白胡椒调到合适，立即上桌，撒上莳萝或欧芹。Avgolemono 应当呈丝绸般顺滑、微微浑浊的状态，不可清汤寡水，也不可凝散开来。",
+    "ja": "厚手の鍋に鶏、にんじん、玉ねぎ、セロリ、ローリエ、パセリの茎、こしょうを入れ、冷水 2.5 L を注いで穏やかに沸かす；上がってきたアクは丁寧にすくい取り、蓋をせず 1 時間半ほど、肉が骨から外れるまで煮込む。\n\n鶏を取り出して休ませ、スープは野菜を漉してきれいな鍋に移す。骨から肉を外して一口大に手で割り、スープに戻し、再び沸かして米を加える；15〜18 分、米が柔らかくなるまで炊く。\n\nボウルに卵を割り入れ、淡く泡立つまで泡立て、レモン汁を加えてさらに混ぜる。ここからが繊細な一手 — 卵をテンパリングする：熱いスープをひしゃくで少しずつ注ぎながら絶えず泡立て、もう一杯加え、ボウルがほんのり温かくなるまで続ける。火を止めて、テンパリングした卵液を細く均等な流れで鍋に戻し、止めずに混ぜ続ける — この後スープを沸騰させてはならない。沸騰すれば卵が散ってしまう。\n\n味をみて塩と白こしょうで整え、ディルかパセリを散らし、すぐに供する。アヴゴレモノは絹のように滑らかでわずかに濁った状態が正しく、薄くも分離してもいけない。",
+    "tr": "Tavuğu havuçlar, soğan, kereviz sapları, defne yaprağı, maydanoz sapları ve karabiber taneleriyle birlikte ağır bir tencereye koyun, 2,5 L soğuk suyla örtün ve yumuşak bir kaynamaya getirin; yüzeye çıkan köpüğü alın ve kapaksız olarak yaklaşık bir buçuk saat, et kemikten ayrılana kadar pişirin.\n\nTavuğu dinlenmeye alın ve suyu temiz bir tencereye süzün, sebzeleri kenara ayırın. Eti kemiklerden ayırıp lokma büyüklüğünde parçalayın ve suya geri koyun, tekrar kaynamaya getirin ve pirinci ekleyin; 15–18 dakika, pirinç yumuşayana kadar pişirin.\n\nBir kâseye yumurtaları kırıp köpük gibi açık renk olana dek çırpın, ardından limon suyunu da çırparak ekleyin. Şimdi sıra hassas adımda — yumurtaları temperleme: çırpmayı bırakmadan üzerine bir kepçe sıcak suyu yavaşça akıtın, sonra bir kepçe daha, kâse ele dokunduğunuzda ılık hissedilene kadar. Ocaktan alıp temperlenmiş karışımı ince ve düzenli bir akışla tencereye geri dökün, durmadan karıştırın — bu noktadan sonra çorba kaynamamalı, kaynarsa yumurta keser.\n\nTadına bakın, tuz ve beyaz biberi ayarlayın ve hemen, üzerine dereotu ya da maydanoz serpiştirerek servis edin. Avgolemono ipeksi ve hafifçe bulanık olmalı — asla sulu, asla kesik.",
+    "it": "Mettete il pollo in una pentola pesante con le carote, la cipolla, il sedano, l'alloro, i gambi di prezzemolo e i grani di pepe, coprite con 2,5 L di acqua fredda e portate a un sobbollire delicato; schiumate la schiuma che sale e lasciate cuocere scoperto per circa un'ora e mezza, finché la carne non si stacca dall'osso.\n\nTogliete il pollo a riposare e filtrate il brodo in una pentola pulita, scartando le verdure. Spolpate il pollo e sfilacciatelo in bocconi, rimettetelo nel brodo, riportate a sobbollire e unite il riso; cuocete 15–18 minuti, finché il riso è tenero.\n\nSbattete le uova in una ciotola finché non sono spumose e chiare, poi incorporate il succo di limone. Ora arriva il momento delicato — temperare le uova: versate lentamente un mestolo di brodo caldo sulle uova mescolando senza sosta, poi un secondo, finché la ciotola non risulta calda al tatto. Fuori dal fuoco, riversate la miscela temperata nella pentola in un filo costante, mescolando ininterrottamente — la zuppa non deve più bollire da questo punto, altrimenti le uova si rapprendono.\n\nAssaggiate, regolate sale e pepe bianco e servite subito, finita con aneto o prezzemolo. L'avgolemono deve essere setosa e leggermente velata, mai brodosa e mai impazzita.",
+    "ko": "두꺼운 냄비에 닭, 당근, 양파, 셀러리, 월계수 잎, 파슬리 줄기, 통후추를 넣고 찬물 2.5 L을 부어 천천히 끓인다; 떠오르는 거품은 그때그때 걷어내고, 뚜껑을 덮지 않은 채 약 한 시간 반, 살이 뼈에서 떨어질 때까지 익힌다.\n\n닭을 꺼내 한숨 식히고, 육수는 채소를 걸러내어 깨끗한 냄비에 옮긴다. 살을 뼈에서 발라내 한입 크기로 찢어 다시 육수에 넣고, 다시 끓을 때 쌀을 넣어 15–18분, 부드러워질 때까지 익힌다.\n\n달걀을 볼에 깨뜨려 색이 옅고 거품이 일 때까지 휘핑한 다음 레몬즙을 함께 휘핑한다. 이제 가장 섬세한 한 수 — 달걀을 템퍼링한다: 뜨거운 육수를 한 국자씩 천천히 부어가며 끊임없이 휘저어, 한 번 더 부어 볼이 손에 따뜻하게 느껴질 때까지 한다. 불을 끄고 템퍼링한 액을 가는 줄기로 냄비에 다시 부어가며 멈추지 말고 계속 저어준다 — 이 이후로 국이 끓어서는 안 된다. 끓으면 달걀이 풀린다.\n\n맛을 보고 소금과 백후추로 정리한 뒤, 딜이나 파슬리를 흩뿌려 곧장 낸다. 아브골레모노는 비단처럼 매끄럽고 살짝 뿌연 상태여야 하며, 묽거나 풀어져서는 안 된다.",
+    "hi": "एक भारी बर्तन में चिकन रखें, उसके साथ गाजर, प्याज़, अजवाइन, तेज़पत्ता, पार्सले के डंठल और साबुत काली मिर्च डालें, 2.5 लीटर ठंडे पानी से ढक दें और हल्की उबाल पर लाएँ; ऊपर आता झाग चम्मच से उठाते रहें, और बिना ढके लगभग डेढ़ घंटा पकाएँ, जब तक मांस हड्डियों से अलग न होने लगे।\n\nचिकन को निकाल कर थोड़ा ठंडा होने दें और शोरबा को छान कर साफ़ बर्तन में डालें — सब्ज़ियाँ अलग कर दें। हड्डियों से मांस उतार लें, हाथों से उसके छोटे-छोटे टुकड़े करके वापस शोरबे में डालें, फिर से उबाल पर लाएँ और चावल डालें; 15–18 मिनट, चावल नरम होने तक पकाएँ।\n\nएक कटोरे में अंडों को रंग हल्का होने और झाग बनने तक फेंटें, फिर नींबू का रस मिलाते हुए फेंटें। अब आता है सबसे नाज़ुक हिस्सा — अंडों को टेम्पर करना: एक कप गरम शोरबा अंडों के ऊपर धीरे-धीरे डालें, बिना रुके फेंटते जाएँ, फिर एक कप और, जब तक कटोरा छूने पर गर्म न लगे। आँच बंद करके यह टेम्पर किया मिश्रण पतली, स्थिर धार में बर्तन में वापस डालें, लगातार चलाते रहें — इसके बाद सूप को उबलने नहीं देना है, वरना अंडे फट जाएँगे।\n\nस्वाद देखें, नमक और सफ़ेद मिर्च ठीक करें और तुरंत परोसें, ऊपर डिल या पार्सले छिड़क कर। Avgolemono रेशम जैसी मुलायम और हल्की धुंधली होनी चाहिए — न पतली, न फटी।"
+  }
+}

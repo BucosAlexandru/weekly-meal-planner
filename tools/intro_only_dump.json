@@ -1,0 +1,812 @@
+[
+  {
+    "id": 77,
+    "name": "Chakhchoukha",
+    "origin": "Algeria",
+    "first_sentences": "Chakhchoukha is a slow-cooked speciality from the Algerian highlands, made by tearing thin flatbread — rougag — into pieces and pouring a slow-cooked lamb and chickpea stew over the top. The word chakhchoukha refers to the act of tearing: the bread is always hand-torn, never cut."
+  },
+  {
+    "id": 29,
+    "name": "Empanadas",
+    "origin": "Argentina",
+    "first_sentences": "Empanadas arrived in Argentina with Spanish colonists in the sixteenth century — the name comes from 'empanar,' to wrap in dough — but the Argentine version developed its own identity over the following centuries. Each province holds its own filling conventions: Salta favors cumin-heavy beef with potato; Mendoza adds raisins and olives; Tucumán keeps the filling simpler."
+  },
+  {
+    "id": 113,
+    "name": "Milanesa",
+    "origin": "Argentina",
+    "first_sentences": "Milanesa arrived in Argentina with the Italian immigrants of the late 19th and early 20th centuries, carried directly from the cotoletta alla Milanese of Lombardy. In its Argentine form, a thin slice of beef — or sometimes chicken or veal — is pounded flat, dredged in beaten egg and breadcrumbs, and fried in oil until a uniform golden crust forms."
+  },
+  {
+    "id": 99,
+    "name": "Khorovats",
+    "origin": "Armenia",
+    "first_sentences": "Khorovats is the Armenian word for barbecue — specifically, meat cooked over live wood or charcoal fire, often outdoors, at gatherings of family and friends. In Armenia, the preparation of khorovats is a ritual occasion: men light the fire, tend the coals, and control the cooking, with pork the most common choice and vegetables — whole peppers, onions, aubergines, and tomatoes — grilled alongside "
+  },
+  {
+    "id": 38,
+    "name": "Pavlova",
+    "origin": "Australia",
+    "first_sentences": "Pavlova takes its name from the Russian ballerina Anna Pavlova, who toured Australia and New Zealand in 1926. Both countries claim to have invented the dessert, and the dispute has run for nearly a century without resolution."
+  },
+  {
+    "id": 82,
+    "name": "Meat Pie",
+    "origin": "Australia",
+    "first_sentences": "The Australian meat pie is the country's most recognized food — an individual beef and gravy pie sold at football grounds, corner bakeries, and petrol stations throughout Australia. Eaten handheld with tomato sauce on top, it became central to Australian working-class food culture in the late nineteenth century."
+  },
+  {
+    "id": 54,
+    "name": "Moules-frites",
+    "origin": "Belgium",
+    "first_sentences": "Moules-frites — mussels and fries — is claimed by Belgium as a national dish, though both components have wider origins. Belgian fries are a matter of local pride: the tradition of cutting potatoes into strips and frying them in beef fat is documented in Belgium from the seventeenth century."
+  },
+  {
+    "id": 80,
+    "name": "Stoofvlees",
+    "origin": "Belgium",
+    "first_sentences": "Stoofvlees — known as Carbonnade flamande in French — is Belgium's most emblematic slow-cooked dish: beef and onions braised in Belgian dark ale until the meat falls apart and the sauce becomes a glossy mahogany gravy. It is closely associated with the Flemish region, where it has been eaten since the Middle Ages."
+  },
+  {
+    "id": 146,
+    "name": "Cevapi",
+    "origin": "Bosnia and Herzegovina",
+    "first_sentences": "Cevapi are the Balkan version of small sausages — skinless minced beef and lamb patties seasoned with garlic and paprika, grilled and served in flatbread with ajvar (roasted pepper paste) and chopped onion. In Bosnia, they are considered a national food and serious local rivalries exist over the exact recipe."
+  },
+  {
+    "id": 88,
+    "name": "Moqueca",
+    "origin": "Brazil",
+    "first_sentences": "Moqueca is a slow-simmered Brazilian fish stew that exists in two distinct regional forms. The Bahian version — moqueca baiana — uses dendê (red palm oil) and coconut milk, giving it a rich orange colour and a distinctive flavour shaped by West African culinary traditions brought through the Atlantic slave trade."
+  },
+  {
+    "id": 72,
+    "name": "Amok",
+    "origin": "Cambodia",
+    "first_sentences": "Amok is Cambodia's most celebrated dish — a steamed fish curry made with coconut milk, kroeung paste, and kaffir lime leaves, traditionally cooked and served inside banana leaf cups. The banana leaf vessel is functional, not decorative: it shapes the custard as it sets and imparts a subtle green fragrance."
+  },
+  {
+    "id": 114,
+    "name": "Lok Lak",
+    "origin": "Cambodia",
+    "first_sentences": "Lok lak is Cambodia's best-known beef dish, born from the confluence of French colonial cooking and Chinese immigrant techniques. Cubes of marinated beef are tossed over high heat with garlic, oyster sauce, and a generous measure of black pepper, producing glossy, tender pieces with savoury depth."
+  },
+  {
+    "id": 39,
+    "name": "Poutine",
+    "origin": "Canada",
+    "first_sentences": "Poutine appeared in Quebec in the late 1950s, though the exact origin is disputed among several small diners and snack bars. The most cited account points to a restaurant in Warwick, Quebec, where a customer asked the owner to add cheese curds to his fries, and the owner wrapped the result in paper to keep it warm."
+  },
+  {
+    "id": 175,
+    "name": "Cachupa",
+    "origin": "Cape Verde",
+    "first_sentences": "Cachupa is the soul of Cape Verdean cuisine — a dense and generous stew of hominy corn, beans, vegetables, and pork or sausages, slow-cooked for hours. There is cachupa rica (with meat and sausages) and cachupa pobre (the simpler version, with little or no meat) — a distinction that reflected the social classes of the colonial era."
+  },
+  {
+    "id": 157,
+    "name": "Pastel de Choclo",
+    "origin": "Chile",
+    "first_sentences": "Pastel de choclo is Chile's national corn pie — a clay pot in which boiled chicken with onion, olives, hard-boiled eggs, and raisins hides under a thick layer of fresh corn purée (choclo) cooked with milk and butter, then baked until a caramelized crust forms, dusted with sugar. The sweet-savory combination — raisins in the meat filling, sugar on the crust — is a trademark of Andean cuisine."
+  },
+  {
+    "id": 37,
+    "name": "Sweet and Sour Chicken",
+    "origin": "China",
+    "first_sentences": "Sweet and sour chicken as it exists outside China is largely a Cantonese export, shaped by the diaspora restaurants of the mid-twentieth century. The original Chinese sweet-and-sour tradition — tancu, meaning sugar-vinegar — belongs mainly to Cantonese cooking and was traditionally made with pork."
+  },
+  {
+    "id": 169,
+    "name": "Mapo Tofu",
+    "origin": "China",
+    "first_sentences": "Mapo tofu is an emblematic dish of Sichuan cuisine — silken tofu cubes cooked in an intense red sauce of fermented bean paste (doubanjiang), chili oil, and minced pork. The characteristic numbing quality of Sichuan pepper and the heat of chili peppers create the vibrant ma-la sensation: numbing and spicy simultaneously."
+  },
+  {
+    "id": 163,
+    "name": "Bandeja Paisa",
+    "origin": "Colombia",
+    "first_sentences": "Bandeja paisa is Colombia's national dish and Latin America's most generous plate — a massive platter with 9-11 components: frijoles (red beans), white rice, carne molida (ground beef), chicharrón (fried pork rind), chorizo, morcilla (blood sausage), fried egg, arepa (corn tortilla), fried plantain, avocado, and bread. Everything is served on one single plate."
+  },
+  {
+    "id": 144,
+    "name": "Pasticada",
+    "origin": "Croatia",
+    "first_sentences": "Pašticada is Dalmatia's emblematic dish — a beef roll marinated for days in wine vinegar, garlic, and spices, larded with pork fat, carrot, and cloves, then braised for hours in red wine, dried plum juice, and an unusually complex spice mix for European cuisine: cloves, cinnamon, nutmeg. The result is extremely tender meat with a sweet-sour, dark, thick sauce of irreducible complexity."
+  },
+  {
+    "id": 90,
+    "name": "Ropa Vieja",
+    "origin": "Cuba",
+    "first_sentences": "Ropa vieja — 'old clothes' in Spanish — is Cuba's national dish: beef braised until it falls into shreds, then cooked in a sofrito of tomatoes, peppers, onion, and garlic that permeates every fibre. The dish arrived in Cuba from the Canary Islands and has roots in medieval Sephardic Jewish cooking, where it was made from leftover Sabbath beef."
+  },
+  {
+    "id": 166,
+    "name": "Picadillo",
+    "origin": "Cuba",
+    "first_sentences": "Picadillo is everyday Cuban food — a flavorful hash of ground beef cooked with tomatoes, onion, garlic, bell pepper, and the surprising sweet-salty combination of green olives and raisins. This Spanish-influenced blend — a legacy of Andalusian cuisine — gives picadillo a flavor uniquely Cuban."
+  },
+  {
+    "id": 145,
+    "name": "Sheftalia",
+    "origin": "Cyprus",
+    "first_sentences": "Sheftalia are Cyprus's national sausages — a mixture of minced pork and lamb with onion, parsley, and spices, wrapped in caul fat and grilled over charcoal. The caul fat melts during cooking, keeping the sausage juicy and giving it a distinctive, lightly crisped crust."
+  },
+  {
+    "id": 56,
+    "name": "Svíčková",
+    "origin": "Czech Republic",
+    "first_sentences": "Svíčková — braised beef sirloin in cream sauce — is the Czech Republic's defining Sunday dish and a centrepiece of Czech culinary identity. The name refers to the cut: svíčková means candle in Czech, describing the shape of the tenderloin."
+  },
+  {
+    "id": 84,
+    "name": "Smørrebrød",
+    "origin": "Denmark",
+    "first_sentences": "Smørrebrød — literally 'butter bread' — is the foundation of the Danish lunch. Open-faced sandwiches on dense, dark rugbrød rye bread, topped with pickled herring, smoked fish, cold meats, or cheese, they are eaten with a knife and fork — never folded or held in the hand."
+  },
+  {
+    "id": 104,
+    "name": "La Bandera",
+    "origin": "Dominican Republic",
+    "first_sentences": "La Bandera — The Flag — is the Dominican Republic's national plate, eaten at midday in homes and small restaurants across the country. The name is a point of pride: white rice, red-stewed kidney beans, and braised meat are plated together in colors associated with the flag."
+  },
+  {
+    "id": 74,
+    "name": "Encebollado",
+    "origin": "Ecuador",
+    "first_sentences": "Encebollado is Ecuador's most celebrated street food and most cherished hangover remedy — a thick fish stew of fresh albacore tuna, cassava, and red onion, served with a pickled onion topping and tostadas. It is sold from street carts in Guayaquil and across the coast from before dawn, eaten in especially large quantities on weekends."
+  },
+  {
+    "id": 103,
+    "name": "Shrimp Ceviche",
+    "origin": "Ecuador",
+    "first_sentences": "Ecuador's shrimp ceviche differs from the Peruvian original in one important way: the shrimp are pre-cooked rather than cured by citrus alone, making the dish lighter and more approachable. The sauce combines lime juice with tomato — often a blend of tree tomato and regular tomato — and is sometimes softened with orange juice, giving Ecuadorian ceviche a mellow acidity rather than the sharp bite o"
+  },
+  {
+    "id": 33,
+    "name": "Koshari",
+    "origin": "Egypt",
+    "first_sentences": "Koshari is Egypt's national street food, sold from carts and storefronts across Cairo and Alexandria. The dish is a crossroads meal — rice, brown lentils, macaroni, and chickpeas all layered together — and its mix of ingredients reflects Egypt's history as a trading hub."
+  },
+  {
+    "id": 70,
+    "name": "Pupusa",
+    "origin": "El Salvador",
+    "first_sentences": "Pupusa is El Salvador's national dish — a thick, hand-shaped corn flatbread filled with cheese, beans, or chicharrón, cooked on a clay comal or cast-iron griddle. The preparation predates Spanish colonisation; the Pipil people were making filled corn cakes long before the sixteenth century."
+  },
+  {
+    "id": 100,
+    "name": "Verivorst",
+    "origin": "Estonia",
+    "first_sentences": "Verivorst is Estonia's national blood sausage — a pork intestine casing filled with pig's blood, barley, onion, and pork fat, boiled and then pan-fried before serving. The dish is inseparable from Estonian Christmas: it is the centrepiece of the traditional Christmas dinner, served with sauerkraut and lingonberry jam, and prepared in nearly every Estonian household through December."
+  },
+  {
+    "id": 50,
+    "name": "Doro Wat",
+    "origin": "Ethiopia",
+    "first_sentences": "Doro wat is Ethiopia's most celebrated dish, a centerpiece of Ethiopian cuisine served on holidays and special occasions. The name simply means chicken stew — doro is chicken, wat is stew — but the preparation is complex and unhurried."
+  },
+  {
+    "id": 45,
+    "name": "Salmon Soup",
+    "origin": "Finland",
+    "first_sentences": "Lohikeitto — salmon soup — is one of Finland's most familiar preparations, eaten year-round from family kitchens to roadside cafés. The dish reflects Finland's relationship with Baltic salmon, which has been a staple along the country's coastlines and river systems for centuries."
+  },
+  {
+    "id": 121,
+    "name": "Karelian Pie",
+    "origin": "Finland",
+    "first_sentences": "Karelian pie — karjalanpiirakka — originated in the region of Karelia, a historical territory now divided between Finland and Russia. The oval-shaped shells are made from a thin, crisp rye dough that frames a soft filling of rice porridge slow-cooked in milk; potato filling is an equally traditional alternative."
+  },
+  {
+    "id": 177,
+    "name": "Karelian stew",
+    "origin": "Finland",
+    "first_sentences": "Karjalanpaisti (Karelian stew) is Finland's symbolic dish — an archaic Finnish stew of three meats (beef, pork, lamb), slow-cooked for hours with onion, carrots, and pepper, without sauce, without added fat — just water and salt. It is Finnish culinary minimalism in pure form."
+  },
+  {
+    "id": 31,
+    "name": "French Onion Soup",
+    "origin": "France",
+    "first_sentences": "French onion soup traces to the working-class taverns of eighteenth-century Paris, where it fed the overnight porters of Les Halles cheaply. The dish took its modern form — bread and melted cheese on top — in the nineteenth century, and has barely changed since."
+  },
+  {
+    "id": 140,
+    "name": "Chicken Fricassée",
+    "origin": "France",
+    "first_sentences": "Fricassée (from the French verb meaning to cook in pieces) is a classic French technique for chicken: pieces are gently gilded in butter without forming a brown crust, then braised in chicken stock or white wine with vegetables, finished with a velouté sauce enriched with cream and sometimes an egg yolk to create a silky white-gold sauce. It is one of the foundation techniques of classic French cu"
+  },
+  {
+    "id": 143,
+    "name": "Cassoulet",
+    "origin": "France",
+    "first_sentences": "Cassoulet — named after the cassole, the clay pot in which it cooks — is the emblem of Languedoc's rustic cuisine: a slow-cooked white bean and meat feast of Toulouse sausages, duck or goose confit, and pork. The three towns that dispute its parentage — Castelnaudary, Carcassonne, and Toulouse — differ in their meat choices, but all insist theirs is the authentic version."
+  },
+  {
+    "id": 178,
+    "name": "Boeuf Bourguignon",
+    "origin": "France",
+    "first_sentences": "Boeuf Bourguignon is the gastronomic jewel of the Burgundy region of France, a dish that transforms beef into liquid velvet through long hours of simmering in red wine. The recipe traces back to French rural kitchens, where cooks used it to tenderize tougher cuts."
+  },
+  {
+    "id": 63,
+    "name": "Khachapuri",
+    "origin": "Georgia",
+    "first_sentences": "Khachapuri — literally cheese bread — is the national food of Georgia, present at every family table and street stall from Tbilisi to Batumi. The dish has several regional variations."
+  },
+  {
+    "id": 76,
+    "name": "Lobio",
+    "origin": "Georgia",
+    "first_sentences": "Lobio — the Georgian word for bean — is one of Georgia's oldest and most widely prepared dishes. Red kidney beans have been a staple of the South Caucasus for centuries, and the dish incorporates the signature flavours of the Georgian table: ground walnuts, fenugreek, coriander, and pomegranate."
+  },
+  {
+    "id": 116,
+    "name": "Chakhokhbili",
+    "origin": "Georgia",
+    "first_sentences": "Chakhokhbili is a Georgian braised chicken stew whose name traces back to the word for pheasant — khokhobi — reflecting an era when the dish was made with wild game. The cooking technique is distinctively Georgian: the meat is first browned dry in a hot pot, without any oil or liquid, to deepen its flavour through direct contact with the pan."
+  },
+  {
+    "id": 148,
+    "name": "Khinkali",
+    "origin": "Georgia",
+    "first_sentences": "Khinkali are Georgia's national dumplings — large dough pouches filled with minced beef and pork with onion, coriander, and pepper, boiled in water. The dough is thick enough to retain the broth that forms inside from the meat juices."
+  },
+  {
+    "id": 173,
+    "name": "Currywurst",
+    "origin": "Germany",
+    "first_sentences": "Currywurst is Berlin's street food icon — a fried pork sausage cut into slices, served with ketchup or a thick tomato sauce heavily seasoned with curry powder, dusted with yellow curry and paprika. It was invented in 1949 by Herta Heuwer in Berlin-Charlottenburg, who mixed ketchup with Worcestershire sauce and curry — a simple culinary move that created a mass phenomenon."
+  },
+  {
+    "id": 147,
+    "name": "Fufu",
+    "origin": "Ghana",
+    "first_sentences": "Fufu is the staple starch of West Africa — a dense, elastic paste made by boiling and pounding cassava together with plantain. The traditional process involves a large wooden mortar and a long pestle: two people work together, one pounding rhythmically, the other turning the paste between strokes."
+  },
+  {
+    "id": 150,
+    "name": "Pepian",
+    "origin": "Guatemala",
+    "first_sentences": "Pepian is a Guatemalan national sauce with pre-Columbian Maya roots — a rich blend of toasted sesame and pumpkin seeds, dried chilies, tomatoes, and spices ground into a thick paste in which chicken or turkey pieces are cooked. The dish exists in red, green, and black variants, each with distinct flavor profiles."
+  },
+  {
+    "id": 32,
+    "name": "Goulash",
+    "origin": "Hungary",
+    "first_sentences": "Gulyás — the word means 'herdsman' in Hungarian — started as a cattle drover's stew on the Great Plain. It became a dish of national significance in the nineteenth century, when Hungarian reformers deliberately elevated it as a symbol of Magyar identity against Habsburg cultural dominance."
+  },
+  {
+    "id": 134,
+    "name": "Chicken Paprikash",
+    "origin": "Hungary",
+    "first_sentences": "Csirkepaprikás — chicken paprikash — is the emblem of Hungarian cuisine: chicken pieces braised slowly in a sauce of onion and sweet Hungarian paprika, finished with thick sour cream for a silky texture. Paprika reached Hungary via the Ottoman Empire in the sixteenth century and became the country's defining ingredient."
+  },
+  {
+    "id": 164,
+    "name": "Lángos",
+    "origin": "Hungary",
+    "first_sentences": "Lángos is Hungary's national street snack — a deep-fried leavened flatbread, puffy and golden, smeared with sour cream and sprinkled with shredded cheese. The word comes from Magyar láng (flame), referring to the tradition of baking leftover dough near the bread oven fire."
+  },
+  {
+    "id": 165,
+    "name": "Rajma",
+    "origin": "India",
+    "first_sentences": "Rajma is the soul food of Punjab — a thick, aromatic stew of red kidney beans cooked in a tomato-based sauce with onion, garlic, ginger, and a blend of Indian spices. It is an essential vegetarian dish from northern India, nourishing and satisfying, part of the iconic rajma-chawal duo (beans with rice)."
+  },
+  {
+    "id": 176,
+    "name": "Pav Bhaji",
+    "origin": "India",
+    "first_sentences": "Pav bhaji is the emblematic street food of Mumbai — a thick, spiced mash of butter-cooked vegetables (potatoes, cauliflower, peas, bell pepper) served with soft butter-toasted buns (pav). The bhaji is cooked on a large flat griddle in full view, crushed and mixed in front of customers with generous butter and pav bhaji masala."
+  },
+  {
+    "id": 41,
+    "name": "Nasi Goreng",
+    "origin": "Indonesia",
+    "first_sentences": "Nasi goreng — fried rice, literally — is one of Indonesia's two designated national dishes, alongside rendang. The dish appears across the archipelago in dozens of regional variations, each using different aromatics and proteins."
+  },
+  {
+    "id": 68,
+    "name": "Satay",
+    "origin": "Indonesia",
+    "first_sentences": "Satay is a Southeast Asian grilled meat dish originating in Java, Indonesia, most likely in the nineteenth century. Arab traders brought kebab traditions to the region; local cooks adapted them with turmeric, lemongrass, and coconut milk."
+  },
+  {
+    "id": 92,
+    "name": "Gado-Gado",
+    "origin": "Indonesia",
+    "first_sentences": "Gado-gado is an Indonesian salad of boiled and blanched vegetables, fried tofu and tempeh, and hard-boiled egg, brought together by a thick peanut sauce poured warm at the table. The dish is eaten across Indonesia but is most closely associated with Jakarta and West Java."
+  },
+  {
+    "id": 105,
+    "name": "Fesenjan",
+    "origin": "Iran",
+    "first_sentences": "Fesenjan is a Persian khoresh — a thick, dark stew — defined by two ingredients that shape its character completely: ground walnuts and pomegranate molasses. The walnuts are toasted and ground to a paste, then slow-cooked with the molasses until the mixture deepens to near-black, the sourness of pomegranate balancing the fat and bitterness of the nut."
+  },
+  {
+    "id": 43,
+    "name": "Masgouf",
+    "origin": "Iraq",
+    "first_sentences": "Masgouf is Iraq's national dish and one of the oldest continuously prepared fish recipes in the world, with records of Tigris River carp grilled this way dating back thousands of years. The carp is split lengthwise, seasoned with olive oil, turmeric, and tamarind paste, then cooked upright on wooden stakes around an open wood fire."
+  },
+  {
+    "id": 44,
+    "name": "Shakshuka",
+    "origin": "Israel",
+    "first_sentences": "Shakshuka arrived in Israel with Sephardic Jewish immigrants from North Africa and the Middle East in the mid-twentieth century, bringing the dish from the culinary traditions of Tunisia, Libya, and Morocco. In Israel it became a fixture of breakfast culture and, eventually, a national standard."
+  },
+  {
+    "id": 89,
+    "name": "Sabich",
+    "origin": "Israel",
+    "first_sentences": "Sabich is a pita filled with fried aubergine, hard-boiled egg, potato, tahini, and amba — a dish that traces its origins to Iraqi Jewish immigrants who settled in Israel in the 1950s. The name is thought to derive from the Arabic word for morning, reflecting the meal's origins as a Shabbat breakfast."
+  },
+  {
+    "id": 26,
+    "name": "Risotto",
+    "origin": "Italy",
+    "first_sentences": "Risotto traces its roots to the Po Valley of northern Italy, where short-grain rice cultivation goes back to the fifteenth century. The dish took its defining form in Milan — risotto alla Milanese, tinted golden with saffron — and remains closely associated with Lombardy."
+  },
+  {
+    "id": 123,
+    "name": "Pasta e fagioli",
+    "origin": "Italy",
+    "first_sentences": "Pasta e fagioli — pasta and beans — is one of Italy's most enduring peasant dishes, rooted in the cucina povera tradition of making a satisfying meal from cheap, shelf-stable staples. Across Italian regions it varies considerably: in the Veneto it tends to be more liquid, almost a soup; in Campania and Lazio it thickens to a dense, porridge-like consistency."
+  },
+  {
+    "id": 135,
+    "name": "Pasta alla Norma",
+    "origin": "Italy",
+    "first_sentences": "Pasta alla Norma is the pride of Catania — a Sicilian pasta dish in which fried aubergine meets fresh tomato sauce, olive oil, basil, and grated ricotta salata. The name honours the opera Norma by Catanian composer Vincenzo Bellini: a writer is said to have exclaimed that the dish was as perfect as Norma."
+  },
+  {
+    "id": 49,
+    "name": "Jerk Chicken",
+    "origin": "Jamaica",
+    "first_sentences": "Jerk is a Jamaican cooking tradition developed by the Maroons — escaped enslaved Africans who hid in the island's interior mountains during the colonial period. The technique combines spiced marinades, slow indirect smoking, and pimento (allspice) wood, which is indigenous to Jamaica and provides a flavour that other woods cannot replicate."
+  },
+  {
+    "id": 141,
+    "name": "Machboos",
+    "origin": "Kuwait",
+    "first_sentences": "Machboos — considered Kuwait's national dish — is an aromatic rice pilaf with meat (lamb, chicken, fish, or shrimp) cooked with a complex spice blend called baharat: cardamom, cloves, cinnamon, allspice, cumin, turmeric, and sometimes loomi (dried lime). The meat is first fried with onion and spices, water is added to create a concentrated stock, and the rice absorbs this stock during the final co"
+  },
+  {
+    "id": 129,
+    "name": "Beshbarmak",
+    "origin": "Kyrgyzstan",
+    "first_sentences": "Beshbarmak — whose name means five fingers, reflecting the traditional way of eating it by hand — is the emblematic dish of Kyrgyzstan, Kazakhstan, and the wider Central Asian nomadic cultures. A whole lamb or horse is boiled for hours in salted water, and the concentrated broth is poured over wide, flat squares of dough cooked in the same broth."
+  },
+  {
+    "id": 125,
+    "name": "Piragi",
+    "origin": "Latvia",
+    "first_sentences": "Piragi are small crescent-shaped buns filled with smoked bacon and finely chopped onion, baked in leavened dough until golden. They are indispensable at Latvian celebrations, especially Jāņi — the midsummer solstice festival — when they are made by the dozen and shared generously."
+  },
+  {
+    "id": 25,
+    "name": "Tabbouleh",
+    "origin": "Lebanon",
+    "first_sentences": "Tabbouleh comes from the mountain villages of Lebanon and Syria, where flat-leaf parsley grows in every kitchen garden. The word derives from an Arabic root meaning to spice or season, though the dish carries no heavy spicing — its character comes from the balance of raw, fresh elements."
+  },
+  {
+    "id": 95,
+    "name": "Lentil Soup",
+    "origin": "Lebanon",
+    "first_sentences": "Red lentil soup is one of the oldest dishes in the world — lentils were a staple across the Levant and Mesopotamia thousands of years before the common era. The cumin-coriander-turmeric spiced version appears in Lebanese, Syrian, Egyptian, and Turkish kitchens, varying slightly by region but following the same essential structure."
+  },
+  {
+    "id": 139,
+    "name": "Cepelinai",
+    "origin": "Lithuania",
+    "first_sentences": "Cepelinai — named after Count Zeppelin's airship for their oval shape — are Lithuania's national dish. The dough combines raw grated potatoes with mashed boiled potatoes to form a dense, elastic mass around a filling of minced pork and onion."
+  },
+  {
+    "id": 69,
+    "name": "Laksa",
+    "origin": "Malaysia",
+    "first_sentences": "Laksa is a spiced noodle soup that defines the Peranakan — the mixed Malay-Chinese — culinary tradition of maritime Southeast Asia. It developed in the coastal trading communities of the Malay Peninsula, Singapore, and Indonesia, where Chinese immigrant cooking and Malay spicing merged over generations."
+  },
+  {
+    "id": 131,
+    "name": "Nasi lemak",
+    "origin": "Malaysia",
+    "first_sentences": "Nasi lemak — whose name means fatty or rich rice in Malay — is Malaysia's national dish and the nation's breakfast. Rice is cooked in coconut milk with pandan leaves and served surrounded by a fixed set of accompaniments: spicy sambal, ikan bilis (crispy anchovies), roasted peanuts, sliced cucumber, and a boiled or fried egg."
+  },
+  {
+    "id": 36,
+    "name": "Chili con carne",
+    "origin": "Mexico",
+    "first_sentences": "Chili con carne is more Texan than Mexican — the dish was popularized in San Antonio in the nineteenth century by street vendors known as the chili queens, who sold it from stands in the city's plazas. The name is Spanish for pepper with meat, but the recipe as it evolved in Texas became something distinct: a cattle-country stew built on dried chillies and beef."
+  },
+  {
+    "id": 94,
+    "name": "Chiles en nogada",
+    "origin": "Mexico",
+    "first_sentences": "Chiles en nogada is considered Mexico's most patriotic dish — its colours mirror the Mexican flag: green from the parsley, white from the walnut cream, and red from the pomegranate seeds. The dish originates from Puebla in the late colonial period and is traditionally prepared in August and September, when walnuts and pomegranates are both in season at the same time."
+  },
+  {
+    "id": 111,
+    "name": "Tamale",
+    "origin": "Mexico",
+    "first_sentences": "The tamale is one of Mesoamerica's oldest prepared foods, dating back several thousand years before European contact. It is built from masa — corn dough made from nixtamalized kernels, their hulls softened in limewater — mixed with lard until the dough becomes light."
+  },
+  {
+    "id": 149,
+    "name": "Pozole",
+    "origin": "Mexico",
+    "first_sentences": "Pozole is an Aztec ritual soup — the Nahuatl word literally means foamy corn. Hominy corn (nixtamalized, with the kernel bloomed open) simmers for hours with pork and dried chilies until a deep red, aromatic broth develops."
+  },
+  {
+    "id": 162,
+    "name": "Tlayudas",
+    "origin": "Mexico",
+    "first_sentences": "Tlayudas are Oaxaca's pizza — a large (30 cm) semi-dried, crunchy corn tortilla smeared with frijoles negros (refried black beans), covered with shredded Oaxaca cheese, meat (tasajo — dried beef, chorizo, or pork), and fresh toppings. Oaxaca is the southern Mexican state with the richest indigenous culinary tradition."
+  },
+  {
+    "id": 81,
+    "name": "Zeama",
+    "origin": "Moldova",
+    "first_sentences": "Zeama is Moldova's most cherished soup — a clear, golden chicken broth with thin egg noodles and a characteristic sourness from borș, the fermented wheat bran liquid unique to Moldovan and Romanian cooking. The soup is tied to celebration and comfort alike: it is served at weddings, Easter, and as a restorative after illness."
+  },
+  {
+    "id": 60,
+    "name": "Buuz",
+    "origin": "Mongolia",
+    "first_sentences": "Buuz are the steamed dumplings of Mongolia, eaten year-round but most closely associated with Tsagaan Sar — the Mongolian Lunar New Year celebration. During the festival, households prepare and eat dozens to hundreds of buuz over several days, and the dish functions as much as a social ritual as it does as food."
+  },
+  {
+    "id": 75,
+    "name": "Harira",
+    "origin": "Morocco",
+    "first_sentences": "Harira is Morocco's most important soup — a rich, fragrant pot of lamb, chickpeas, lentils, and tomatoes spiced with cumin, cinnamon, and ginger. It is eaten throughout the year but is most closely associated with Ramadan, where it is the traditional dish served at iftar — the breaking of the fast at sunset."
+  },
+  {
+    "id": 118,
+    "name": "Chicken Tagine",
+    "origin": "Morocco",
+    "first_sentences": "Tagine takes its name from the conical earthenware vessel in which it is cooked — a design that has remained essentially unchanged across centuries of Moroccan and North African cooking. The cone traps rising steam and returns moisture to the ingredients, producing meat that falls apart without drying out and a concentrated sauce that needs no thickening."
+  },
+  {
+    "id": 167,
+    "name": "Lamb Tagine",
+    "origin": "Morocco",
+    "first_sentences": "Lamb tagine is a symbol of Moroccan cuisine — a slow-cooked stew made in the conical clay pot (tagine), which traps steam and returns juices back into the dish. The lamb becomes fall-apart tender after hours of slow cooking with onion, garlic, dried apricots, almonds, and the spice blend ras el hanout, creating a concentrated sweet-spiced sauce."
+  },
+  {
+    "id": 73,
+    "name": "Momo",
+    "origin": "Nepal",
+    "first_sentences": "Momo are the steamed dumplings of the Himalayan region — Nepal, Tibet, Bhutan, and the Indian states of Sikkim and Darjeeling — eaten at any time of day as a snack, street food, or main meal. The form likely arrived through contact with Tibetan and Chinese cuisine; Tibetan immigrants brought their version to Kathmandu in the twentieth century, and from there momo spread rapidly across Nepal."
+  },
+  {
+    "id": 52,
+    "name": "Stamppot",
+    "origin": "Netherlands",
+    "first_sentences": "Stamppot — mashed pot, literally — is the defining dish of Dutch winter cooking. The dish takes several forms: boerenkool (kale) stamppot is the most familiar; hutspot mashes potatoes with carrots and onions; zuurkool stamppot adds sauerkraut."
+  },
+  {
+    "id": 159,
+    "name": "Poffertjes",
+    "origin": "Netherlands",
+    "first_sentences": "Poffertjes are Dutch yeast mini-pancakes — small, fluffy, with a moist center and golden surface. They are baked in a special pan with hemispherical indentations (poffertjespan), 12-20 at a time, quickly flipped with a skewer."
+  },
+  {
+    "id": 53,
+    "name": "Hangi",
+    "origin": "New Zealand",
+    "first_sentences": "Hangi is the traditional Māori method of cooking food in an earth oven — a pit dug in the ground, lined with heated volcanic rocks, and sealed with earth to retain steam. It has been central to Māori culture for centuries, used to prepare food for hui (gatherings), tangihanga (funerals), and celebrations."
+  },
+  {
+    "id": 97,
+    "name": "Jollof Rice",
+    "origin": "Nigeria",
+    "first_sentences": "Jollof rice is West Africa's most widely eaten and passionately contested dish — a tomato-based one-pot rice cooked in a thick base of blended tomatoes, peppers, and onions until the grains absorb the sauce and develop a smoky crust at the bottom of the pot. The dish appears across Nigeria, Ghana, Senegal, Sierra Leone, and beyond, with each country claiming its version as definitive."
+  },
+  {
+    "id": 154,
+    "name": "Egusi soup",
+    "origin": "Nigeria",
+    "first_sentences": "Egusi soup is Nigeria's soul food — a thick sauce made from toasted and ground egusi seeds (a relative of bitter melon), cooked in red palm oil with meat (beef, goat, or chicken), pumpkin leaves or spinach, and chili pepper. The egusi seeds form a unique texture: granular on the outside, creamy on the inside."
+  },
+  {
+    "id": 61,
+    "name": "Biryani",
+    "origin": "Pakistan",
+    "first_sentences": "Biryani traces back to the Mughal courts of the Indian subcontinent, where Persian-influenced rice dishes evolved into distinct regional forms over centuries. Pakistan's biryani — particularly the Karachi and Hyderabad styles — is among the most aromatic on the subcontinent, built on whole spices, caramelized onion, and layered rice."
+  },
+  {
+    "id": 86,
+    "name": "Nihari",
+    "origin": "Pakistan",
+    "first_sentences": "Nihari takes its name from the Arabic word for morning — nahar — because this was traditionally a dish eaten at dawn, after fajr prayers, by the workers and nawabs of Mughal Delhi. As the Mughal capital declined, the dish migrated with Delhi's cooks to Lucknow and later to Karachi and Lahore, where it became deeply embedded in Pakistani food culture."
+  },
+  {
+    "id": 65,
+    "name": "Ceviche",
+    "origin": "Peru",
+    "first_sentences": "Ceviche is Peru's national dish, with a history extending back to pre-Columbian coastal cultures. The Moche and Chimu peoples cured fish in fermented chicha and salt; the use of citrus arrived after Spanish contact, when limes replaced earlier acidic agents."
+  },
+  {
+    "id": 109,
+    "name": "Arroz Chaufa",
+    "origin": "Peru",
+    "first_sentences": "Arroz chaufa is the Peruvian name for a style of Chinese fried rice that became its own distinct dish through the kitchens of the Tusán community — descendants of Chinese laborers who arrived in Peru from the mid-19th century onward. The word chaufa comes from the Cantonese chow fan, meaning fried rice, and the dish carries that lineage clearly: the technique is Chinese, but the ingredients shift "
+  },
+  {
+    "id": 117,
+    "name": "Lomo Saltado",
+    "origin": "Peru",
+    "first_sentences": "Lomo saltado is one of Peru's most emblematic stir-fries, born from the chifa tradition — the fusion of Cantonese cooking with Peruvian ingredients that emerged in the nineteenth century through Chinese immigrant communities along the Pacific coast. Strips of beef sirloin are sautéed over extreme heat with red onion, ají amarillo, and tomatoes, then doused with soy sauce and a splash of vinegar."
+  },
+  {
+    "id": 127,
+    "name": "Causa Limeña",
+    "origin": "Peru",
+    "first_sentences": "Causa limeña is a pressed terrine of yellow Peruvian potatoes seasoned with ají amarillo and lime juice, layered with a creamy filling of tuna or chicken with mayonnaise and avocado. The Andean potatoes — especially those with naturally yellow flesh — are boiled, riced smooth, and worked with oil, ají, and lime until silky."
+  },
+  {
+    "id": 48,
+    "name": "Adobo",
+    "origin": "Philippines",
+    "first_sentences": "Adobo is the Philippines' national dish, though the word itself is Spanish — brought by colonizers who recognized in the indigenous vinegar-braised preparation a technique similar to their own pickling methods. The Filipino tradition of preserving meat in vinegar predates the Spanish arrival: it was a practical solution for keeping food in a tropical climate without refrigeration."
+  },
+  {
+    "id": 106,
+    "name": "Kare-Kare",
+    "origin": "Philippines",
+    "first_sentences": "Kare-kare is a Filipino braised stew built around a thick peanut sauce colored deep gold by annatto, with oxtail or beef shank as the primary protein. The sauce comes from ground toasted peanuts thinned with broth and thickened with toasted rice powder — rich and savory but deliberately mild, designed to carry the meat and vegetables rather than dominate them."
+  },
+  {
+    "id": 40,
+    "name": "Pierogi",
+    "origin": "Poland",
+    "first_sentences": "Pierogi are one of the oldest preparations in Polish cooking, documented in culinary records from the thirteenth century. They are associated with Saint Kinga, Poland's patron saint, through a legend connecting their origin to her arrival from Hungary."
+  },
+  {
+    "id": 155,
+    "name": "Kotlet schabowy",
+    "origin": "Poland",
+    "first_sentences": "Kotlet schabowy — the Polish schnitzel — is Poland's national pork dish. A pork loin slice is pounded thin, coated in flour, egg, and breadcrumbs, then fried in lard or oil until golden, crispy, and evenly cooked through."
+  },
+  {
+    "id": 47,
+    "name": "Bacalhau à Brás",
+    "origin": "Portugal",
+    "first_sentences": "Bacalhau à Brás is one of the 365 salt cod preparations that Portuguese cooking claims — a recipe for every day of the year. The dish originates from a tavern in Lisbon's Bairro Alto district in the nineteenth century, where someone named Brás combined desalted cod with very thin matchstick fries and beaten eggs."
+  },
+  {
+    "id": 107,
+    "name": "Francesinha",
+    "origin": "Portugal",
+    "first_sentences": "Francesinha — Little Frenchie — is a sandwich from Porto with a history rooted in the Portuguese diaspora. Created in the 1960s by a returned emigrant inspired by the French croque-monsieur, the dish is built from toasted bread layered with cured ham, linguiça, and steak, then sealed under melted cheese and flooded with sauce."
+  },
+  {
+    "id": 142,
+    "name": "Moambe chicken",
+    "origin": "Republic of the Congo",
+    "first_sentences": "Muamba chicken — the national dish of both the Republic of the Congo and the Democratic Republic of the Congo — is a rich stew in which chicken is cooked in a sauce made from palm paste (or red palm oil with peanut butter), tomatoes, garlic, and chili. Moamba or muamba comes from the Lingala word for the fat extracted from the kernel of palm fruits."
+  },
+  {
+    "id": 133,
+    "name": "Beans with Sausages",
+    "origin": "Romania",
+    "first_sentences": "Fasole cu cârnați is the winter dish of the Romanian household — white beans slow-cooked together with smoked pork sausages, onion, carrots, tomato paste, and bay leaves until the liquid thickens and turns deeply fragrant. The sausages add fat and smoke, transforming a humble legume into a hearty, satisfying meal."
+  },
+  {
+    "id": 151,
+    "name": "Okroshka",
+    "origin": "Russia",
+    "first_sentences": "Okroshka is the summer cold soup of Russia — a bowl of kefir (or kvass, a fermented bread drink) into which boiled potatoes, eggs, fresh cucumbers, spring onions, dill, and sliced sausages are added, all diced. The result is a refreshing, tangy soup combining the crunch of vegetables with cool dairy liquid."
+  },
+  {
+    "id": 171,
+    "name": "Solyanka",
+    "origin": "Russia",
+    "first_sentences": "Solyanka is Russia's festive soup — a thick and tangy broth with beef, smoked sausages, ham, pickled cucumbers, olives, capers, and tomatoes, all finished with sour cream and a slice of lemon. Its distinctive character comes from the combination of salty, sour, and spicy from the pickles that form the flavor base."
+  },
+  {
+    "id": 98,
+    "name": "Oka i'a",
+    "origin": "Samoa",
+    "first_sentences": "Oka i'a is Samoa's most celebrated dish — raw fish marinated briefly in lime juice, then finished in fresh coconut milk, with cucumber, onion, and tomato adding texture and contrast. The name means 'raw fish' in Samoan, and the preparation is a Pacific island cousin of ceviche: the lime softens the fish slightly but does not cook it."
+  },
+  {
+    "id": 91,
+    "name": "Cullen Skink",
+    "origin": "Scotland",
+    "first_sentences": "Cullen Skink takes its name from the fishing village of Cullen on the northeast coast of Scotland, where smoked haddock has been a staple for centuries. 'Skink' is an old Scots word for a broth or essence, traditionally made from shin of beef; when the soup transferred to fish, the name stayed."
+  },
+  {
+    "id": 158,
+    "name": "Pljeskavica",
+    "origin": "Serbia",
+    "first_sentences": "Pljeskavica is Serbia's national burger — a wide, flat patty of mixed minced meat (beef, pork, lamb) with onion, garlic, and paprika, grilled over high heat on charcoal. It is larger and flatter than an American burger and has a distinctive texture: charred exterior, juicy interior."
+  },
+  {
+    "id": 110,
+    "name": "Chili Crab",
+    "origin": "Singapore",
+    "first_sentences": "Chili crab is Singapore's most iconic dish, created in the 1950s and now deeply embedded in the city's food identity. Mud crabs — large, meaty, and sold live — are wok-fried in a rich sauce of tomato paste, sweet chili, garlic, and ginger, with beaten eggs stirred in to create silky threads through the sauce."
+  },
+  {
+    "id": 153,
+    "name": "Potica",
+    "origin": "Slovenia",
+    "first_sentences": "Potica is Slovenia's national pastry — a leavened roll wrapped around a generous layer of ground walnut with honey, egg yolks, and butter, baked in a tubular mold. The dough is rich, almost brioche-like, and the walnut filling is dense and fragrant."
+  },
+  {
+    "id": 64,
+    "name": "Bobotie",
+    "origin": "South Africa",
+    "first_sentences": "Bobotie is South Africa's national dish, tracing its roots to Cape Malay cooking — the culinary tradition developed by enslaved and indentured workers brought from Indonesia, Bengal, and Madagascar to the Cape Colony in the seventeenth century. The Cape Malay influence is present throughout: the curry spicing, the dried fruit, and the signature technique of baking a spiced meat filling beneath an "
+  },
+  {
+    "id": 23,
+    "name": "Bibimbap",
+    "origin": "South Korea",
+    "first_sentences": "Bibimbap — the word means simply 'mixed rice' — is one of the most direct expressions of Korean cooking philosophy: components prepared separately, each cooked or seasoned to bring out its own character, unified only at the moment of eating. The dish evolved in the Joseon royal court, where elaborate table service required every namul (seasoned vegetable) to be prepared individually."
+  },
+  {
+    "id": 66,
+    "name": "Kimchi",
+    "origin": "South Korea",
+    "first_sentences": "Kimchi is Korea's most important fermented food and a foundational element of Korean cuisine. The practice of preserving vegetables in salt and seasonings dates back centuries."
+  },
+  {
+    "id": 102,
+    "name": "Tteokbokki",
+    "origin": "South Korea",
+    "first_sentences": "Tteokbokki is one of South Korea's most popular street foods — cylindrical rice cakes cooked in a thick, spicy sauce made from gochujang, the fermented red chili paste that defines Korean heat. The dish is sold from pojangmacha street stalls across Korea and eaten at all hours, from schoolchildren in the afternoon to late-night diners."
+  },
+  {
+    "id": 156,
+    "name": "Kimbap",
+    "origin": "South Korea",
+    "first_sentences": "Kimbap — literally seaweed rice — is South Korea's national snack and the perfect food for picnics, long journeys, or a quick lunch. Sesame-oil seasoned rice is wrapped with various fillings (carrot, spinach, eggs, sausage, danmuji, cheese) in a nori sheet and sliced into rounds."
+  },
+  {
+    "id": 22,
+    "name": "Paella",
+    "origin": "Spain",
+    "first_sentences": "Paella has its roots in the rice fields around Valencia's Albufera lagoon, where farmworkers cooked Sunday meals over open fires fed by orange wood — the dish was named after the wide, shallow pan in which it was made. The original paella valenciana contained rabbit, chicken, green beans, white beans, and snails."
+  },
+  {
+    "id": 124,
+    "name": "Kottu",
+    "origin": "Sri Lanka",
+    "first_sentences": "Kottu roti is Sri Lanka's most recognisable street food — a chopped mixture of roti bread, eggs, vegetables, and chicken or beef stir-fried on a hot griddle. The rhythmic metallic clang of the cleavers mincing the roti into small pieces is the soundtrack of Colombo and Jaffna streets: you hear it from dozens of metres before you see the stall."
+  },
+  {
+    "id": 58,
+    "name": "Ful Medames",
+    "origin": "Sudan",
+    "first_sentences": "Ful medames is one of the oldest prepared foods still in common use — fava beans cooked and eaten in Egypt and the Levant for at least four thousand years. The name derives from Arabic: medames means buried or covered, referring to the old practice of cooking sealed pots in hot embers."
+  },
+  {
+    "id": 27,
+    "name": "Swedish Meatballs",
+    "origin": "Sweden",
+    "first_sentences": "Köttbullar — Swedish meatballs — became a defining dish of Swedish home cooking, but their spicing carries a foreign signature. King Charles XII spent years in Ottoman exile before returning to Sweden in 1715, and the allspice and nutmeg that mark köttbullar apart from any other meatball are thought to trace back to that culinary exchange."
+  },
+  {
+    "id": 93,
+    "name": "Cinnamon Bun",
+    "origin": "Sweden",
+    "first_sentences": "Kanelbulle is the Swedish cinnamon bun — a soft, lightly enriched dough flavoured with cinnamon and cardamom, twisted into distinctive knots and scattered with pearl sugar. Sweden celebrates it with its own day, October 4th, and the bun appears in every café and bakery in the country."
+  },
+  {
+    "id": 42,
+    "name": "Fondue",
+    "origin": "Switzerland",
+    "first_sentences": "Fondue in its modern form owes much to deliberate promotion: the Swiss Cheese Union championed it internationally from the 1930s onward to boost cheese exports. The dish itself is older — Alpine herders melted aged cheese with wine in winter when bread was stale — but the version with its dedicated pot and long forks became a worldwide symbol of Swiss cuisine through mid-century marketing."
+  },
+  {
+    "id": 132,
+    "name": "Rösti",
+    "origin": "Switzerland",
+    "first_sentences": "Rösti began as the breakfast of Bernese farmers — a simple cake of grated potatoes fried on both sides to a golden, crispy crust. The canton of Bern is considered its homeland, and the Röstigraben — the imaginary linguistic divide between German- and French-speaking Switzerland — occasionally borrows the dish's name."
+  },
+  {
+    "id": 24,
+    "name": "Hummus",
+    "origin": "Syria",
+    "first_sentences": "Hummus — the Arabic word for chickpea — has been claimed as cultural property by Lebanon, Israel, Syria, Palestine, and Egypt for decades. The arguments are somewhat beside the point: the dish predates all of these borders, and its earliest documented appearance in Arabic cookbooks dates to thirteenth-century Syria."
+  },
+  {
+    "id": 51,
+    "name": "Kibbeh",
+    "origin": "Syria",
+    "first_sentences": "Kibbeh is considered the national dish of both Syria and Lebanon, and is found across the Levant from Turkey to Egypt. The name derives from an Arabic word meaning ball."
+  },
+  {
+    "id": 83,
+    "name": "Fatteh",
+    "origin": "Syria",
+    "first_sentences": "Fatteh is a layered Syrian dish of toasted pita, chickpeas, and garlic yogurt sauce, finished with a hot butter drizzle over pine nuts and paprika. The name comes from the Arabic word for crumbling — referring to the torn bread at the base."
+  },
+  {
+    "id": 112,
+    "name": "Tom Yum",
+    "origin": "Thailand",
+    "first_sentences": "Tom yum is Thailand's most internationally recognized soup, built on a distinct combination of hot, sour, salty, and lightly sweet flavors in a single broth. The aromatics — lemongrass, galangal, and kaffir lime leaves — are bruised rather than cut, infusing a clear broth with bright, citrus-backed heat."
+  },
+  {
+    "id": 130,
+    "name": "Coconut Rice",
+    "origin": "Thailand",
+    "first_sentences": "Coconut rice is a staple across Southeast Asian, South Asian, and Caribbean cuisines — a simple technique with a surprisingly aromatic result. Rice is partly cooked in water, then finished in coconut milk, absorbing its fat and sweetness to produce a creamy, subtly rich grain."
+  },
+  {
+    "id": 174,
+    "name": "Tom Kha Gai",
+    "origin": "Thailand",
+    "first_sentences": "Tom Kha Gai is the jewel of Thai cuisine — a creamy and aromatic coconut milk soup with chicken, galangal (Thai ginger), lemongrass, kaffir lime leaves, and mushrooms. Unlike Tom Yam (spicy and sour), Tom Kha is velvety, rich, mildly spicy, and brightened by the citrus aromas of lime."
+  },
+  {
+    "id": 62,
+    "name": "Brik",
+    "origin": "Tunisia",
+    "first_sentences": "Brik is Tunisia's signature street food and celebratory snack — a thin, crisp pastry shell encasing a whole egg, typically filled with tuna, capers, and parsley. The pastry itself, called malsouqa, is made by pressing wet dough onto a hot metal plate, producing a nearly translucent sheet."
+  },
+  {
+    "id": 179,
+    "name": "Chakchouka",
+    "origin": "Tunisia",
+    "first_sentences": "Chakchouka is an iconic dish of North African cuisine, originating in Tunisia, where eggs poached in a spiced tomato and pepper sauce became the symbol of communal breakfast. The simplicity of its ingredients conceals a remarkable sensory complexity."
+  },
+  {
+    "id": 35,
+    "name": "Baklava",
+    "origin": "Turkey",
+    "first_sentences": "Baklava developed in the Ottoman imperial kitchens of Istanbul, where it became the court's signature dessert. The annual Baklava Alayı — a ceremonial procession delivering trays to the Janissary troops on the fifteenth of Ramadan — shows how central the sweet was to Ottoman ceremonial life."
+  },
+  {
+    "id": 170,
+    "name": "Menemen",
+    "origin": "Turkey",
+    "first_sentences": "Menemen is the quintessential Turkish breakfast — eggs cracked directly into a pan with tomatoes, green bell pepper, and sometimes onion, everything cooked in olive oil. The dish comes from the Aegean region and carries an eternal culinary debate: with or without onion?"
+  },
+  {
+    "id": 137,
+    "name": "Ichlekli",
+    "origin": "Turkmenistan",
+    "first_sentences": "Ichlekli is a flat meat pie specific to Turkmenistan — two thin sheets of unleavened dough enclose a filling of minced lamb or beef with onion, seasoned with cumin and pepper, then baked or fried directly on fire. The dish belongs to the nomadic culinary tradition of Central Asia, where easily portable stuffed breads were essential during migration."
+  },
+  {
+    "id": 172,
+    "name": "Clam Chowder",
+    "origin": "USA",
+    "first_sentences": "Clam chowder is the emblematic soup of New England — a creamy, thick chowder with fresh clams, potatoes, smoked bacon, and onion, enriched with milk and cream. There is a centuries-old culinary war: New England Clam Chowder (white, with cream) versus Manhattan Clam Chowder (red, with tomatoes), and Bostonians consider the tomato version nearly an offense."
+  },
+  {
+    "id": 138,
+    "name": "Chicken Kiev",
+    "origin": "Ukraine",
+    "first_sentences": "Chicken Kiev is a dish of exceptional technical refinement: a deboned chicken breast pounded thin around a cylinder of cold butter mixed with garlic and parsley, then triple-breaded — flour, beaten egg, breadcrumbs — and deep-fried. When cut, the melted butter explodes in a golden stream — the dramatic effect is intentional and desired."
+  },
+  {
+    "id": 168,
+    "name": "Shepherd's Pie",
+    "origin": "United Kingdom",
+    "first_sentences": "Shepherd's Pie is a British winter dish — a layer of minced lamb with carrots, peas, and onion, topped with a golden mashed potato crust baked until crisp. Its name reflects its origin: it was the economical food of shepherds, made from leftover lamb after Sunday's roast."
+  },
+  {
+    "id": 115,
+    "name": "Manti",
+    "origin": "Uzbekistan",
+    "first_sentences": "Manti are large steamed dumplings that spread across Central Asia, the Caucasus, and Turkey through Silk Road trade and nomadic migration. In Uzbekistan, the filling is traditionally hand-chopped — lamb or beef with plenty of raw onion that melts as it steams, keeping the meat moist and fragrant."
+  },
+  {
+    "id": 152,
+    "name": "Plov",
+    "origin": "Uzbekistan",
+    "first_sentences": "Uzbek plov is the king of Central Asian rice — a cast-iron cauldron in which lamb or beef is first fried in sheep tail fat (or vegetable oil), followed by julienned carrots and onion, then rice and water are added. Everything cooks uncovered until the water is absorbed, with whole garlic pushed into the rice."
+  },
+  {
+    "id": 126,
+    "name": "Banh Xeo",
+    "origin": "Vietnam",
+    "first_sentences": "Bánh xèo — whose name literally means sizzling cake — is a crispy Vietnamese crepe coloured bright yellow by turmeric, made from a batter of rice flour and coconut milk. The sizzle it makes when hit the pan gives the dish its name."
+  }
+]

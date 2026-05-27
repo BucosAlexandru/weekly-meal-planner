@@ -1,0 +1,151 @@
+{
+  "$schema_version": 2,
+  "phase_completed": [1, 2],
+  "name": {
+    "en": "Pizza Margherita", "ro": "Pizza Margherita", "es": "Pizza Margherita", "fr": "Pizza Margherita",
+    "de": "Pizza Margherita", "pt": "Pizza Margherita", "ru": "Пицца Маргарита", "ar": "بيتزا مارغريتا",
+    "zh": "玛格丽特披萨", "ja": "ピッツァ・マルゲリータ", "tr": "Margherita Pizza", "it": "Pizza Margherita",
+    "ko": "피자 마르게리타", "hi": "पिज़्ज़ा मार्गेरिटा"
+  },
+  "cuisine": {
+    "en": "Italy", "ro": "Italia", "es": "Italia", "fr": "Italie",
+    "de": "Italien", "pt": "Itália", "ru": "Италия", "ar": "إيطاليا",
+    "zh": "意大利", "ja": "イタリア", "tr": "İtalya", "it": "Italia",
+    "ko": "이탈리아", "hi": "इटली"
+  },
+  "status": {
+    "drafted": true, "needs_qa": true, "needs_timing_review": true,
+    "needs_image_review": true, "localization_pending": false,
+    "enrichment_pending": true, "publishing_pending": true
+  },
+  "ingredients": {
+    "en": [
+      "For the dough (4 pizzas): 500 g 00 flour (or bread flour), 325 ml cold water, 10 g salt, 1 g fresh yeast (or ¼ tsp dried)",
+      "For each pizza: 80 g San Marzano tomatoes (canned, hand-crushed), a pinch of salt, a drizzle of olive oil",
+      "100 g fior di latte mozzarella per pizza, torn into pieces (or buffalo mozzarella)",
+      "A few fresh basil leaves per pizza",
+      "Extra-virgin olive oil to finish",
+      "Semolina or flour for shaping and the peel"
+    ],
+    "ro": [
+      "Pentru aluat (4 pizza): 500 g făină 00 (sau pentru pâine), 325 ml apă rece, 10 g sare, 1 g drojdie proaspătă (sau ¼ linguriță uscată)",
+      "Pentru fiecare pizza: 80 g roșii San Marzano (la conservă, sfărâmate cu mâna), un praf de sare, un fir de ulei de măsline",
+      "100 g mozzarella fior di latte per pizza, ruptă în bucățele (sau mozzarella de bivoliță)",
+      "Câteva frunze de busuioc proaspăt pentru fiecare pizza",
+      "Ulei de măsline extravirgin pentru finalizare",
+      "Griș sau făină pentru modelare și pentru lopată"
+    ],
+    "es": [
+      "Para la masa (4 pizzas): 500 g de harina 00 (o de fuerza), 325 ml de agua fría, 10 g de sal, 1 g de levadura fresca (o ¼ cdta seca)",
+      "Para cada pizza: 80 g de tomates San Marzano (de bote, machacados a mano), una pizca de sal, un chorrito de aceite de oliva",
+      "100 g de mozzarella fior di latte por pizza, troceada con la mano (o mozzarella de búfala)",
+      "Unas hojas de albahaca fresca por pizza",
+      "Aceite de oliva virgen extra para terminar",
+      "Sémola o harina para estirar y para la pala"
+    ],
+    "fr": [
+      "Pour la pâte (4 pizzas) : 500 g de farine 00 (ou farine à pain), 325 ml d'eau froide, 10 g de sel, 1 g de levure fraîche (ou ¼ c. à café de sèche)",
+      "Pour chaque pizza : 80 g de tomates San Marzano (en conserve, écrasées à la main), une pincée de sel, un filet d'huile d'olive",
+      "100 g de mozzarella fior di latte par pizza, déchirée à la main (ou mozzarella de bufflonne)",
+      "Quelques feuilles de basilic frais par pizza",
+      "Huile d'olive vierge extra pour la finition",
+      "Semoule ou farine pour façonner et pour la pelle"
+    ],
+    "de": [
+      "Für den Teig (4 Pizzen): 500 g 00-Mehl (oder Brotmehl), 325 ml kaltes Wasser, 10 g Salz, 1 g frische Hefe (oder ¼ TL Trockenhefe)",
+      "Pro Pizza: 80 g San-Marzano-Tomaten (aus der Dose, mit der Hand zerdrückt), eine Prise Salz, ein Schuss Olivenöl",
+      "100 g Fior-di-Latte-Mozzarella pro Pizza, mit der Hand zerrissen (oder Büffelmozzarella)",
+      "Ein paar frische Basilikumblätter pro Pizza",
+      "Natives Olivenöl extra zum Vollenden",
+      "Hartweizengrieß oder Mehl zum Ausformen und für die Schaufel"
+    ],
+    "pt": [
+      "Para a massa (4 pizzas): 500 g de farinha 00 (ou farinha de pão), 325 ml de água fria, 10 g de sal, 1 g de fermento de padeiro fresco (ou ¼ colher de chá de seco)",
+      "Para cada pizza: 80 g de tomate San Marzano (em lata, esmagado à mão), uma pitada de sal, um fio de azeite",
+      "100 g de mozzarella fior di latte por pizza, partida à mão (ou mozzarella de búfala)",
+      "Algumas folhas de manjericão fresco por pizza",
+      "Azeite virgem extra para finalizar",
+      "Sêmola ou farinha para abrir a massa e para a pá"
+    ],
+    "ru": [
+      "Для теста (4 пиццы): 500 г муки 00 (или хлебной), 325 мл холодной воды, 10 г соли, 1 г свежих дрожжей (или ¼ ч. л. сухих)",
+      "На каждую пиццу: 80 г томатов San Marzano (консервированных, размятых руками), щепотка соли, немного оливкового масла",
+      "100 г моцареллы fior di latte на пиццу, разорвать руками (или моцарелла из молока буйволицы)",
+      "Несколько листьев свежего базилика на пиццу",
+      "Оливковое масло extra virgin для финиша",
+      "Манка или мука для формовки и для пиццы-лопаты"
+    ],
+    "ar": [
+      "للعجين (4 بيتزات): 500 غ دقيق 00 (أو دقيق الخبز)، 325 مل ماء بارد، 10 غ ملح، 1 غ خميرة طازجة (أو ¼ ملعقة صغيرة من الجافة)",
+      "لكل بيتزا: 80 غ من طماطم سان مارزانو (معلّبة، تُهرس باليد)، رشة ملح، رشّة زيت زيتون",
+      "100 غ موزاريلا فيور دي لاتي لكل بيتزا، مفتّتة باليد (أو موزاريلا الجاموس)",
+      "بضع أوراق ريحان طازج لكل بيتزا",
+      "زيت زيتون بكر ممتاز للتزيين",
+      "سميد أو دقيق للتشكيل وللمجرفة"
+    ],
+    "zh": [
+      "面团（4 张披萨）：00 号面粉 500 克（或高筋面粉）、冷水 325 毫升、盐 10 克、鲜酵母 1 克（或干酵母 ¼ 茶匙）",
+      "每张披萨：San Marzano 罐头番茄 80 克（手捏碎）、一撮盐、一点橄榄油",
+      "每张披萨用 fior di latte 莫扎雷拉 100 克，手撕（或水牛奶莫扎雷拉）",
+      "每张披萨配几片新鲜罗勒",
+      "上桌前淋特级初榨橄榄油",
+      "整形和铲面用的粗粒小麦粉或面粉"
+    ],
+    "ja": [
+      "生地（ピッツァ 4 枚分）：00 粉 500 g（または強力粉）、冷水 325 ml、塩 10 g、生イースト 1 g（またはドライイースト 小さじ ¼）",
+      "ピッツァ 1 枚あたり：サンマルツァーノ缶詰トマト 80 g（手で潰す）、塩ひとつまみ、オリーブオイル少々",
+      "ピッツァ 1 枚あたり、フィオール・ディ・ラッテのモッツァレラ 100 g、手でちぎる（または水牛のモッツァレラ）",
+      "ピッツァ 1 枚あたり、フレッシュバジルの葉を数枚",
+      "仕上げ用エクストラバージンオリーブオイル",
+      "成形やピール用のセモリナまたは小麦粉"
+    ],
+    "tr": [
+      "Hamur için (4 pizza): 500 g 00 unu (ya da ekmeklik un), 325 ml soğuk su, 10 g tuz, 1 g taze maya (ya da ¼ çay kaşığı kuru)",
+      "Her pizza için: 80 g San Marzano domates (konserveden, elle ezilmiş), bir tutam tuz, bir damla zeytinyağı",
+      "Her pizza için 100 g fior di latte mozzarella, elle parçalanmış (ya da manda mozzarellası)",
+      "Her pizza için birkaç yaprak taze fesleğen",
+      "Bitişte sızma zeytinyağı",
+      "Şekillendirme ve kürek için irmik ya da un"
+    ],
+    "it": [
+      "Per l'impasto (4 pizze): 500 g di farina 00 (o farina da pane), 325 ml di acqua fredda, 10 g di sale, 1 g di lievito di birra fresco (o ¼ di cucchiaino di lievito secco)",
+      "Per ogni pizza: 80 g di pomodori San Marzano (in scatola, schiacciati a mano), un pizzico di sale, un filo d'olio",
+      "100 g di mozzarella fior di latte per pizza, spezzettata a mano (oppure mozzarella di bufala)",
+      "Qualche foglia di basilico fresco per pizza",
+      "Olio extravergine d'oliva per finire",
+      "Semola o farina per la stesa e per la pala"
+    ],
+    "ko": [
+      "도우용 (피자 4판): 00 밀가루 500 g (또는 강력분), 찬물 325 ml, 소금 10 g, 생이스트 1 g (또는 드라이 이스트 ¼작은술)",
+      "피자 1판당: 산 마르자노 토마토 80 g (캔, 손으로 으깨기), 소금 한 꼬집, 올리브유 약간",
+      "피자 1판당 피오르 디 라테 모차렐라 100 g, 손으로 찢기 (또는 물소 모차렐라)",
+      "피자 1판당 신선한 바질 잎 몇 장",
+      "마무리용 엑스트라 버진 올리브유",
+      "성형 및 피일용 세몰리나 또는 밀가루"
+    ],
+    "hi": [
+      "आटे के लिए (4 पिज़्ज़ा): 500 ग्राम 00 आटा (या ब्रेड फ़्लोर), 325 मिली ठंडा पानी, 10 ग्राम नमक, 1 ग्राम ताज़ा खमीर (या ¼ छोटा चम्मच सूखा)",
+      "हर पिज़्ज़ा के लिए: 80 ग्राम San Marzano टमाटर (कैन वाले, हाथ से कुचले), एक चुटकी नमक, थोड़ा ज़ैतून का तेल",
+      "हर पिज़्ज़ा पर 100 ग्राम fior di latte मोज़रेला, हाथ से तोड़ी हुई (या भैंस के दूध की मोज़रेला)",
+      "हर पिज़्ज़ा पर ताज़े तुलसी के कुछ पत्ते",
+      "ऊपर डालने के लिए एक्स्ट्रा वर्जिन ज़ैतून का तेल",
+      "गोल बनाने और पील के लिए सूजी या मैदा"
+    ]
+  },
+  "howIsMade": {
+    "en": "For the dough, dissolve the yeast in the cold water, then mix in the flour and salt until you have a shaggy mass. Knead by hand for 10 minutes (or 6 minutes with a stand mixer and dough hook) until smooth and elastic, cover and rest at room temperature for an hour, then refrigerate for at least 24 hours — ideally 48 to 72. The long cold proof is what gives Neapolitan dough its blistered char and airy structure; rushing it makes a flat, biscuity crust.\n\nTwo hours before baking, take the dough out, divide into four 210 g balls, dust with flour, cover with a damp cloth and let them come to room temperature. Meanwhile heat the oven as hot as it goes (250°C or above) with a pizza stone or heavy steel sheet inside for at least 45 minutes; without serious heat under the pizza, the crust will never set in time.\n\nHand-stretch one ball on a well-floured surface — press the centre flat with your fingertips, leaving a raised lip, then gently pull and stretch the disc to about 28 cm across. Never use a rolling pin, which collapses the gas pockets in the crust. Slide it onto a floured peel.\n\nSpoon 80 g of crushed tomato into the centre and spread it in a spiral with the back of the spoon, stopping 2 cm from the edge. Salt the tomato lightly, drizzle a little olive oil, and scatter the torn mozzarella over the top — not too much, or the pizza floods.\n\nSlide the pizza onto the stone and bake until the crust is puffed and charred in spots, the cheese has melted into pools and the rim is dark gold — 4 to 6 minutes in a domestic oven at full blast, 90 seconds in a wood-fired Neapolitan oven. Pull it out, tear over the basil leaves (which would scorch in the oven), drizzle a final thread of olive oil, and eat immediately.",
+    "ro": "Pentru aluat, dizolvă drojdia în apa rece, apoi amestecă făina și sarea până obții o masă neuniformă. Frământă cu mâna 10 minute (sau 6 minute la robot cu cârligul de aluat) până devine neted și elastic, acoperă și odihnește la temperatura camerei o oră, apoi pune la rece minim 24 de ore — ideal 48 până la 72. Dospirea lungă la rece este ceea ce dă aluatului napolitan crusta arsă în pete și miezul aerat; dacă o grăbești, ieși cu o blat plat și biscuitos.\n\nCu două ore înainte de copt, scoate aluatul, împarte-l în patru bile de 210 g, presară făină, acoperă cu o cârpă umedă și lasă-l să ajungă la temperatura camerei. Între timp încinge cuptorul la maximum (250°C sau mai mult) cu o piatră de pizza sau o tablă groasă de oțel înăuntru, minim 45 de minute; fără căldură serioasă sub pizza, blatul nu se va închega la timp.\n\nÎntinde o bilă cu mâna pe o suprafață bine făinată — apasă centrul cu buricele degetelor lăsând o margine ridicată, apoi trage și întinde discul ușor până la aproximativ 28 cm diametru. Nu folosi sucitorul, care strivește pungile de aer din coajă. Alunecă pizza pe lopata făinată.\n\nPune 80 g de roșii sfărâmate în centru și întinde-le în spirală cu dosul lingurii, oprindu-te la 2 cm de margine. Sărează ușor roșiile, picură puțin ulei de măsline și împrăștie mozzarella ruptă deasupra — nu prea multă, ca să nu inunde pizza.\n\nAlunecă pizza pe piatră și coace-o până când blatul este umflat și ars pe alocuri, brânza s-a topit în bălți, iar marginea este un auriu închis — 4–6 minute într-un cuptor casnic la maxim, 90 de secunde într-un cuptor napolitan cu lemne. Scoate-o, rupe deasupra frunzele de busuioc (care s-ar arde la cuptor), picură un ultim fir de ulei de măsline și mănânc-o imediat.",
+    "es": "Para la masa, disuelve la levadura en el agua fría, luego incorpora la harina y la sal hasta tener una masa irregular. Amasa a mano 10 minutos (o 6 minutos con amasadora y gancho) hasta que esté lisa y elástica, cubre y deja reposar a temperatura ambiente una hora, después refrigera mínimo 24 horas — idealmente entre 48 y 72. La fermentación larga en frío es lo que da a la masa napolitana su corteza moteada y su estructura aireada; con prisa sale una corteza plana y bizcochuda.\n\nDos horas antes de hornear, saca la masa, divídela en cuatro bolas de 210 g, espolvorea con harina, tapa con un paño húmedo y deja que se atemperen. Mientras, calienta el horno al máximo (250°C o más) con una piedra de pizza o una bandeja de acero pesada dentro, mínimo 45 minutos; sin un calor serio debajo, la corteza nunca se asentará a tiempo.\n\nEstira una bola a mano sobre una superficie bien enharinada — aplasta el centro con las yemas dejando un borde elevado, y luego tira y estira el disco hasta unos 28 cm. No uses rodillo, aplasta las bolsas de gas de la corteza. Pasa la masa a una pala enharinada.\n\nPon 80 g de tomate triturado en el centro y extiéndelo en espiral con el dorso de la cuchara, deteniéndote a 2 cm del borde. Sala ligeramente el tomate, riega con un poco de aceite y reparte por encima la mozzarella troceada — no demasiada, o la pizza se inunda.\n\nDesliza la pizza sobre la piedra y hornea hasta que la corteza esté hinchada y moteada de oscuro, el queso fundido en charquitos y el borde de un dorado intenso — 4–6 minutos en un horno doméstico al máximo, 90 segundos en un horno napolitano de leña. Sácala, rasga las hojas de albahaca por encima (se quemarían dentro del horno), riega un último hilo de aceite y cómela enseguida.",
+    "fr": "Pour la pâte, délayez la levure dans l'eau froide, puis incorporez la farine et le sel jusqu'à obtenir une masse grumeleuse. Pétrissez à la main 10 minutes (ou 6 minutes au robot avec le crochet) jusqu'à ce que la pâte soit lisse et élastique, couvrez et laissez reposer à température ambiante pendant une heure, puis placez au frais au moins 24 heures — idéalement de 48 à 72. La longue maturation à froid est ce qui donne à la pâte napolitaine sa croûte tachée et son intérieur aéré ; à la précipiter, on obtient une croûte plate et biscuitée.\n\nDeux heures avant la cuisson, sortez la pâte, divisez-la en quatre boules de 210 g, farinez, couvrez d'un linge humide et laissez-les revenir à température ambiante. Pendant ce temps, chauffez le four au maximum (250°C ou plus) avec une pierre à pizza ou une plaque d'acier épaisse à l'intérieur, au moins 45 minutes ; sans chaleur sérieuse sous la pizza, la croûte ne s'arrêtera jamais à temps.\n\nÉtirez à la main une boule sur un plan bien fariné — aplatissez le centre du bout des doigts en laissant une lèvre relevée, puis tirez et étirez délicatement le disque à environ 28 cm. N'utilisez pas de rouleau, qui écrase les poches de gaz dans la croûte. Faites glisser la pâte sur une pelle farinée.\n\nDéposez 80 g de tomates écrasées au centre et étalez-les en spirale avec le dos de la cuillère, en vous arrêtant à 2 cm du bord. Salez légèrement la tomate, ajoutez un trait d'huile d'olive et parsemez la mozzarella déchirée — pas trop, ou la pizza s'inonde.\n\nFaites glisser la pizza sur la pierre et faites cuire jusqu'à ce que la croûte soit gonflée et tachetée de noir, le fromage fondu en flaques et le bord d'un doré foncé — 4 à 6 minutes dans un four domestique à pleine puissance, 90 secondes dans un four à bois napolitain. Sortez-la, déchirez les feuilles de basilic dessus (qui brûleraient au four), versez un dernier filet d'huile d'olive et mangez immédiatement.",
+    "de": "Für den Teig die Hefe im kalten Wasser auflösen, dann Mehl und Salz untermischen, bis eine zottige Masse entsteht. Mit der Hand 10 Minuten kneten (oder 6 Minuten mit der Küchenmaschine und dem Knethaken), bis er glatt und elastisch ist, abdecken und bei Zimmertemperatur eine Stunde ruhen lassen, dann mindestens 24 Stunden in den Kühlschrank — idealerweise 48 bis 72. Die lange kalte Gare ist es, die neapolitanischem Teig seine gefleckte Kruste und seine luftige Struktur verleiht; in Eile entsteht eine flache, biscuitartige Kruste.\n\nZwei Stunden vor dem Backen den Teig herausnehmen, in vier Kugeln zu je 210 g teilen, mit Mehl bestäuben, mit einem feuchten Tuch abdecken und auf Zimmertemperatur kommen lassen. Inzwischen den Ofen auf höchste Stufe heizen (250°C oder mehr) mit einem Pizzastein oder einer schweren Stahlplatte darin, mindestens 45 Minuten lang; ohne ernsthafte Hitze unter der Pizza wird die Kruste nie rechtzeitig fest.\n\nEine Kugel auf gut bemehlter Fläche von Hand ausziehen — die Mitte mit den Fingerspitzen flach drücken und einen erhöhten Rand stehen lassen, dann den Teig sanft zu einem etwa 28 cm großen Kreis ziehen und dehnen. Kein Nudelholz verwenden, das die Gasblasen in der Kruste zerdrückt. Auf eine bemehlte Schaufel gleiten lassen.\n\n80 g zerdrückte Tomaten in die Mitte geben und mit dem Rücken des Löffels spiralförmig verteilen, 2 cm vom Rand entfernt aufhören. Die Tomate leicht salzen, mit Olivenöl beträufeln und die zerrissene Mozzarella darüber verteilen — nicht zu viel, sonst läuft die Pizza über.\n\nDie Pizza auf den Stein gleiten lassen und backen, bis die Kruste aufgegangen und an Stellen verkohlt, der Käse zu Pfützen geschmolzen und der Rand tief golden ist — 4 bis 6 Minuten in einem Haushaltsofen auf Volllast, 90 Sekunden in einem neapolitanischen Holzofen. Herausziehen, die Basilikumblätter darüber zerzupfen (sie würden im Ofen verbrennen), einen letzten Faden Olivenöl darüber geben und sofort essen.",
+    "pt": "Para a massa, dissolva o fermento na água fria, depois junte a farinha e o sal até ter uma massa grumosa. Amasse à mão 10 minutos (ou 6 minutos em batedeira com gancho) até estar lisa e elástica, tape e deixe repousar à temperatura ambiente uma hora, depois leve ao frigorífico pelo menos 24 horas — idealmente 48 a 72. A longa fermentação a frio é o que dá à massa napolitana a sua côdea pintada e a estrutura arejada; com pressa, sai uma côdea chata e abolachada.\n\nDuas horas antes de levar ao forno, retire a massa, divida em quatro bolas de 210 g, polvilhe com farinha, tape com um pano húmido e deixe-as voltar à temperatura ambiente. Entretanto aqueça o forno no máximo (250°C ou mais) com uma pedra de pizza ou uma chapa pesada lá dentro, pelo menos 45 minutos; sem calor a sério por baixo, a côdea nunca pega a tempo.\n\nAbra à mão uma bola sobre uma superfície bem polvilhada — pressione o centro com as pontas dos dedos deixando um rebordo, depois puxe e estique o disco até cerca de 28 cm. Não use rolo, que esmaga as bolsas de gás da côdea. Passe a massa para uma pá polvilhada com farinha.\n\nColoque 80 g de tomate esmagado no centro e espalhe em espiral com as costas da colher, parando a 2 cm da borda. Salgue o tomate ligeiramente, regue com um fio de azeite e distribua por cima a mozzarella partida — não muita, ou a pizza inunda.\n\nDeslize a pizza para a pedra e leve ao forno até a côdea estar inchada e malhada de escuro, o queijo derretido em poços e a borda de um dourado intenso — 4 a 6 minutos num forno doméstico ao máximo, 90 segundos num forno napolitano a lenha. Retire-a, rasgue por cima as folhas de manjericão (que se queimariam no forno), regue com um último fio de azeite e coma de imediato.",
+    "ru": "Для теста растворите дрожжи в холодной воде, затем вмешайте муку и соль до образования рыхлой массы. Месите вручную 10 минут (или 6 минут в миксере с крюком), пока тесто не станет гладким и эластичным, накройте и оставьте при комнатной температуре на час, после чего уберите в холодильник минимум на 24 часа — идеально на 48–72. Долгое холодное созревание — это то, что даёт неаполитанскому тесту его обугленные пятна и воздушную структуру; если торопиться, получится плоская сухарная корка.\n\nЗа два часа до выпечки достаньте тесто, разделите на четыре шарика по 210 г, присыпьте мукой, накройте влажным полотенцем и дайте дойти до комнатной температуры. Тем временем разогрейте духовку на максимум (250°C или выше) с пиццакамнем или тяжёлым стальным листом внутри минимум на 45 минут; без серьёзного жара снизу корка просто не успеет схватиться.\n\nРастяните один шарик руками на хорошо подпылённой мукой поверхности — продавите центр кончиками пальцев, оставив приподнятый бортик, затем мягко вытяните диск до 28 см в диаметре. Скалкой пользоваться не стоит — она раздавливает газовые пузыри в корке. Сдвиньте на присыпанную мукой пиццу-лопату.\n\nВыложите 80 г размятых томатов в центр и распределите по спирали обратной стороной ложки, не доходя 2 см до края. Слегка подсолите томат, сбрызните оливковым маслом и рассыпьте сверху порванную моцареллу — не слишком много, иначе пицца зальётся.\n\nСдвиньте пиццу на камень и пеките, пока корка не вздуется и не покроется тёмными пятнами, сыр не растает лужицами, а бортик не станет глубоко золотистым — 4–6 минут в домашней духовке на максимум, 90 секунд в неаполитанской дровяной печи. Достаньте, разорвите сверху листья базилика (в духовке они бы сгорели), сбрызните последней струйкой оливкового масла и ешьте сразу.",
+    "ar": "للعجين، أذِب الخميرة في الماء البارد، ثم اخلط الدقيق والملح حتى تحصل على كتلة خشنة. اعجن باليد 10 دقائق (أو 6 دقائق في الخلاط الكهربائي بخطّاف العجين) حتى يصبح ناعماً ومرناً، غطّ العجين واتركه يرتاح في حرارة الغرفة لمدة ساعة، ثم ضعه في الثلاجة 24 ساعة على الأقل — ويفضل من 48 إلى 72. التخمير البارد الطويل هو ما يمنح العجين النابوليتاني قشرته المرقّطة وداخله الهوائي؛ والاستعجال يعطي قشرة مسطحة كالبسكويت.\n\nقبل الخبز بساعتين، أخرج العجين، قسّمه إلى أربع كرات بوزن 210 غ، رشّ عليها الدقيق، غطّها بمنشفة مبلّلة، واتركها تصل إلى حرارة الغرفة. في هذه الأثناء، سخّن الفرن على أقصى درجة (250°م أو أعلى) وضع بداخله حجر بيتزا أو صفيحة فولاذية ثقيلة لمدة 45 دقيقة على الأقل؛ بدون حرارة جدّية من تحت، لن تتماسك القشرة في الوقت المناسب.\n\nمدّ كرة العجين باليد على سطح مرشوش جيداً بالدقيق — اضغط الوسط بأطراف الأصابع وأبقِ حافة مرتفعة، ثم اسحب القرص ومدّه برفق ليصبح بقطر نحو 28 سم. لا تستخدم النشّابة لأنها تسحق فقاعات الغاز في القشرة. مرّر القرص إلى مجرفة مرشوشة بالدقيق.\n\nضع 80 غ من الطماطم المهروسة في الوسط، ووزّعها بظهر الملعقة في حركة حلزونية، متوقفاً على بعد 2 سم من الحافة. رشّ ملحاً خفيفاً على الطماطم، أضف قليلاً من زيت الزيتون، وانثر الموزاريلا المفتّتة فوقها — لا تكثر منها، وإلا تغرق البيتزا.\n\nمرّر البيتزا على الحجر واخبزها حتى ينتفخ القرص ويتحمّر بقعاً، ويذوب الجبن في بحيرات صغيرة، وتصبح الحافة ذهبية غامقة — 4 إلى 6 دقائق في فرن منزلي على أقصى قوة، 90 ثانية في فرن نابوليتاني يعمل بالحطب. أخرجها، مزّق فوقها أوراق الريحان (التي ستحترق داخل الفرن)، أضف خيطاً أخيراً من زيت الزيتون، وكُلها فوراً.",
+    "zh": "做面团：把酵母先溶解在冷水里，再倒入面粉和盐拌成粗糙团块。手工揉 10 分钟（或用厨师机配勾揉 6 分钟），至光滑有弹性，盖好室温醒发 1 小时，再放冰箱低温发酵至少 24 小时——理想是 48–72 小时。长时间低温发酵正是给那不勒斯披萨皮带来斑驳焦痕和蓬松结构的关键；急着出来，皮会扁而像饼干。\n\n烤前 2 小时把面团取出，分成四个 210 克的小球，撒粉，盖湿布让它回温。同时把烤箱开到最高温（250°C 以上），里面放一块披萨石或厚钢板，预热至少 45 分钟；披萨底下没有强烈热源，皮根本来不及定型。\n\n在撒粉的台面上手工抻一团：用指尖压平中心，留出一圈起伏的边缘，然后轻轻把面饼拉到约 28 厘米直径。不要用擀面杖，那会压扁皮内的气泡。把饼滑到撒粉的披萨铲上。\n\n把 80 克手捏的番茄放在中央，用勺背画圈式抹开，距边 2 厘米止。给番茄轻轻撒点盐、滴一点橄榄油，再把撕碎的莫扎雷拉散落在上面——不要放太多，否则披萨会汪水。\n\n把披萨滑到石头上烤，直到皮膨起、出现深色焦斑、奶酪融化成几汪、边缘呈深金色——家用烤箱开到最高约 4–6 分钟，那不勒斯柴火炉只需 90 秒。出炉后撕几片新鲜罗勒放上（罗勒在烤箱里会糊），最后再淋一线橄榄油，立刻享用。",
+    "ja": "生地は、まずイーストを冷水に溶かし、続けて 00 粉と塩を加えて粗いまとまりになるまで混ぜる。手で 10 分（スタンドミキサーのドゥフックなら 6 分）こねて、なめらかで弾力が出るまで仕上げ、覆って室温で 1 時間休ませ、その後冷蔵庫で最低 24 時間 — できれば 48〜72 時間 — 低温発酵させる。この長い冷蔵発酵こそが、ナポリ生地のまだら模様の焦げ目と空気を含んだ気泡質を生む。急いだ生地は平たく、ビスケットのような食感になる。\n\n焼く 2 時間前に生地を冷蔵庫から出し、4 等分にして 1 個 210 g の球に丸め、打ち粉をかけ、湿らせた布で覆って室温に戻す。並行して、オーブンを最高温度（250℃以上）に予熱し、ピザストーンか厚手のスチール板を中に入れて最低 45 分熱しておく。下からの強烈な熱がなければ、生地は時間内に固まらない。\n\n打ち粉をたっぷりした台で 1 つの生地を手で広げる — 指先で中央を平らに押し、縁を盛り上げて残し、円盤を直径約 28 cm までやさしく伸ばす。麺棒は使わないこと、生地の気泡を潰してしまうから。打ち粉をしたピールに移す。\n\n手で潰したトマト 80 g を中央に落とし、スプーンの背でらせん状に縁から 2 cm 残して広げる。トマトに塩を軽く振り、オリーブオイルを少し垂らし、ちぎったモッツァレラを散らす — 載せ過ぎないこと、ピザが水浸しになる。\n\nピザをストーンに滑り込ませ、生地が膨らんで部分的に焦げ目がつき、チーズが小さなプールのように溶け、縁が濃いきつね色になるまで焼く — 家庭用オーブンの最強で 4〜6 分、ナポリの薪窯なら 90 秒。取り出して、バジルの葉を上にちぎる（オーブンの中だと焦げてしまう）、最後にオリーブオイルを糸のように回しかけ、すぐに食べる。",
+    "tr": "Hamur için mayayı soğuk suda erit, sonra unu ve tuzu karıştırıp pürtüklü bir kütle olana kadar yoğur. Elinle 10 dakika (ya da mikserle hamur çengeli kullanarak 6 dakika) düzgün ve elastik olana dek yoğur, üstünü ört ve oda sıcaklığında 1 saat dinlendir, sonra buzdolabında en az 24 saat — tercihen 48 ile 72 saat arası — fermente et. Uzun, soğuk fermentasyon, Napoliten hamura o benekli yanıkları ve havalı dokuyu veren şeydir; aceleyle yapılan bir hamur, düz ve bisküvi kıvamında bir kabuk verir.\n\nPişirmeden 2 saat önce hamuru çıkar, 210 g'lık dört topa böl, üzerlerine un serp, nemli bir bezle ört ve oda sıcaklığına gelmelerini bekle. Bu arada fırını maksimuma (250°C veya üstü) ısıt ve içine pizza taşı ya da kalın çelik bir tepsi yerleştirip en az 45 dakika ısıt; pizzanın altında ciddi bir ısı olmazsa, kabuk zamanında tutunmaz.\n\nUnladığın tezgâhta hamur toplarından birini elinle aç — merkezini parmak uçlarınla bastır, yüksek bir kenar bırak, sonra diski 28 cm çapa kadar nazikçe çek ve uzat. Oklava kullanma — kabuktaki gaz ceplerini ezer. Hamuru unlanmış küreğe kaydır.\n\n80 g elle ezilmiş domatesi merkeze koy ve kaşığın tersiyle spiral şeklinde yay, kenara 2 cm kala dur. Domatesi hafifçe tuzla, biraz zeytinyağı damlat ve elle parçalanmış mozzarellayı üstüne dağıt — fazla koyma, yoksa pizza sular altında kalır.\n\nPizzayı taşa kaydır ve kabuk şişip yer yer kararana, peynir küçük göletler halinde eriyene ve kenar koyu altın rengine dönene kadar pişir — en yüksek ayardaki ev fırınında 4–6 dakika, Napoli odun fırınında 90 saniye. Çıkar, üzerine taze fesleğen yapraklarını parçala (fırın içinde yanardı), son olarak ince bir zeytinyağı tutamı dolaştır ve hemen ye.",
+    "it": "Per l'impasto, sciogliete il lievito nell'acqua fredda, poi unite la farina e il sale fino ad avere una massa grezza. Impastate a mano 10 minuti (o 6 minuti con planetaria e gancio) finché non è liscio ed elastico, coprite e fate riposare a temperatura ambiente per un'ora, poi in frigo almeno 24 ore — idealmente da 48 a 72. La lunga lievitazione a freddo è ciò che dà all'impasto napoletano la crosta picchiettata e l'alveolatura ariosa; affrettarla porta a una crosta piatta e biscottosa.\n\nDue ore prima di infornare, tirate fuori l'impasto, dividetelo in quattro palline da 210 g, infarinate, coprite con un panno umido e lasciate tornare a temperatura ambiente. Nel frattempo scaldate il forno al massimo (250°C o più) con una pietra refrattaria o una piastra d'acciaio pesante dentro, per almeno 45 minuti; senza un calore serio sotto la pizza, la crosta non riuscirà a fissarsi in tempo.\n\nStendete una pallina a mano su un piano ben infarinato — schiacciate il centro con la punta delle dita lasciando un cornicione, poi tirate e allargate dolcemente il disco fino a circa 28 cm. Non usate il mattarello, che schiaccia le bolle di gas nella crosta. Fate scivolare la base su una pala infarinata.\n\nDeponete 80 g di pomodoro schiacciato al centro e stendetelo a spirale con il dorso del cucchiaio, fermandovi a 2 cm dal bordo. Salate leggermente il pomodoro, aggiungete un filo d'olio e distribuite la mozzarella spezzettata — non troppa, altrimenti la pizza si allaga.\n\nFate scivolare la pizza sulla pietra e cuocete finché la crosta non è gonfia e screziata di nero, il formaggio fuso in pozzanghere e il cornicione di un oro intenso — 4–6 minuti in un forno casalingo al massimo, 90 secondi in un forno napoletano a legna. Estraetela, strappate sopra le foglie di basilico (che brucerebbero in forno), versate un ultimo filo d'olio e mangiate subito.",
+    "ko": "도우는, 먼저 차가운 물에 이스트를 풀고, 그다음 밀가루와 소금을 넣어 거친 덩어리가 될 때까지 섞는다. 손으로 10분 (또는 스탠드 믹서 도우 후크로 6분) 매끄럽고 탄력이 생길 때까지 반죽하고, 덮어서 실온에 1시간 두었다가, 냉장고에서 최소 24시간 — 가능하면 48에서 72시간 — 저온 숙성한다. 이 긴 저온 숙성이 나폴리식 도우 특유의 반점 같은 그을림과 공기를 머금은 구조를 만든다 — 서두르면 평평하고 비스킷 같은 크러스트가 나온다.\n\n굽기 2시간 전에 도우를 꺼내 210 g씩 4개의 공으로 나누고, 밀가루를 살짝 뿌린 뒤 젖은 천으로 덮어 실온으로 회복시킨다. 그동안 오븐을 최대 (250°C 이상)로 예열하고 안에 피자 스톤이나 두꺼운 강판을 넣어 최소 45분 달군다. 피자 아래에서 충분한 열이 받쳐주지 않으면 크러스트는 제때 잡히지 않는다.\n\n밀가루를 충분히 뿌린 작업대에서 도우 공 하나를 손으로 늘려준다 — 손가락 끝으로 중심을 평평하게 누르고 가장자리를 솟아오르게 두고, 디스크를 약 28 cm까지 부드럽게 잡아당겨 펴준다. 밀대는 쓰지 말 것 — 크러스트의 가스 주머니가 무너진다. 밀가루를 묻힌 피일 위로 옮긴다.\n\n으깬 토마토 80 g을 중앙에 올리고 숟가락 뒷면으로 나선형으로 펴되, 가장자리 2 cm를 남긴다. 토마토에 소금을 살짝 뿌리고 올리브유를 약간 두르고, 찢어둔 모차렐라를 위에 흩뿌린다 — 너무 많이 올리면 피자가 범람한다.\n\n피자를 스톤 위로 밀어 넣고, 크러스트가 부풀고 군데군데 그을리고 치즈가 작은 웅덩이처럼 녹고 가장자리가 짙은 황금색이 될 때까지 굽는다 — 가정용 오븐 최대로 4–6분, 나폴리식 장작 화덕에서는 90초. 꺼낸 다음, 바질 잎을 위에 손으로 찢어 올리고 (오븐 안에 두면 타버린다), 마지막으로 올리브유 한 줄기를 두르고 곧장 먹는다.",
+    "hi": "आटे के लिए, खमीर को ठंडे पानी में घोल लें, फिर मैदा और नमक मिला कर एक खुरदुरा सा गाँव-गाँव सा गुथा हुआ ढेला बनाएँ। हाथ से 10 मिनट गूँधें (या स्टैंड मिक्सर पर डो हुक से 6 मिनट), जब तक चिकना और लचीला न हो जाए, ढक कर कमरे के तापमान पर 1 घंटे आराम दें, फिर फ्रिज में कम से कम 24 घंटे — बेहतर हो तो 48 से 72 — रखें। यह लंबा ठंडा फरमेंटेशन ही नैपोलिटन डो को उसका बबल-दार जला हुआ निशान और हलकी हवादार बनावट देता है; जल्दी की तो क्रस्ट सपाट और बिस्कुट जैसी निकलेगी।\n\nबेक करने से 2 घंटे पहले आटा निकालें, 210 ग्राम की 4 गोलियाँ बनाएँ, ऊपर मैदा छिड़कें, गीले कपड़े से ढक कर कमरे के तापमान पर आने दें। साथ ही ओवन को अधिकतम (250°C या उससे ऊपर) पर पहले से गरम कर लें, अंदर पिज़्ज़ा स्टोन या भारी स्टील की शीट रख कर — कम से कम 45 मिनट। नीचे से ठीक से गर्मी न हो तो क्रस्ट समय पर सेट नहीं होगी।\n\nभरपूर मैदा वाली सतह पर एक गोली हाथ से फैलाएँ — उँगलियों के पोरों से बीच को दबाएँ और एक ऊँचा किनारा छोड़ दें, फिर डिस्क को धीरे-धीरे लगभग 28 सेमी तक खींच कर फैलाएँ। बेलन इस्तेमाल न करें — वह क्रस्ट के अंदर की गैस वाली जेबें कुचल देगा। मैदा वाली पिज़्ज़ा पील पर सरका दें।\n\n80 ग्राम कुचले टमाटर बीच में डालें और चम्मच के पिछले हिस्से से सर्पिलाकार में फैलाएँ, किनारे से 2 सेमी पहले रुक जाएँ। टमाटर पर हलका नमक, थोड़ा ज़ैतून का तेल, और टूटी हुई मोज़रेला ऊपर बिखेर दें — बहुत ज़्यादा नहीं, वरना पिज़्ज़ा भर जाएगा।\n\nपिज़्ज़ा को स्टोन पर सरका दें और तब तक बेक करें जब तक क्रस्ट फूल कर जगह-जगह जले निशान दिखाए, चीज़ छोटे-छोटे तालाबों जैसा पिघले और किनारा गहरा सुनहरा हो — घरेलू ओवन में अधिकतम पर 4–6 मिनट, नैपोलिटन लकड़ी की भट्टी में 90 सेकंड। निकाल कर ऊपर तुलसी के पत्ते हाथ से तोड़ कर डालें (ओवन में डाल देते तो जल जाते), आख़िर में ज़ैतून के तेल की एक लहर डालें और तुरंत खाएँ।"
+  }
+}
