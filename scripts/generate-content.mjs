@@ -4383,11 +4383,20 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // (e.g. shakshuka and chakchouka share an upstream Wikipedia photo), the
   // 2nd/3rd occurrences get data-img-rot="1|2" which applies a subtle
   // filter (brightness/saturation tweak) so the page doesn't feel repetitive.
+  // Uniform card layout across every cuisine hub. The previous code applied
+  // a `cuisine-tile--featured` modifier to the first tile when the hub had
+  // ≥3 recipes; at ≥720px that switched the tile to a row layout with a
+  // half-width image (and, when the image matched the hero band, hid the
+  // image entirely via `data-hero-dup="1"`). Result: the first card looked
+  // structurally different from the rest of the grid on most hubs, and on
+  // Greece/Japan/etc. it lost its image altogether. Both the class and the
+  // hero-dup attribute are gone — every tile is now the same shape: image
+  // on top with a fixed 4:3 aspect ratio, title + optional description +
+  // meta row below, meta pinned to the card bottom by CSS so cards align
+  // even when some recipes lack a meta.desc entry.
   const seenImgs = new Map(); // url → occurrence count
   const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
-  const tilesHtml = tiles.map((t, i) => {
-    const isFeatured = i === 0 && tiles.length >= 3;
-    const cls = `cuisine-tile${isFeatured ? ' cuisine-tile--featured' : ''}`;
+  const tilesHtml = tiles.map((t) => {
     const tagsHtml = t.tags.length
       ? `<div class="cuisine-tile-tags">${t.tags.map(tag => `<span class="cuisine-tile-tag">${esc(tag)}</span>`).join('')}</div>`
       : '';
@@ -4399,30 +4408,16 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     const occ = (seenImgs.get(t.img) || 0);
     seenImgs.set(t.img, occ + 1);
     const rotAttr = occ > 0 && !isPlaceholder ? ` data-img-rot="${Math.min(occ, 2)}"` : '';
-    // Spotlight tile (i === 0, ≥3 recipes): mark the image as a hero-dup
-    // when its URL matches the hero band's URL so the CSS hides it and
-    // avoids showing the same picture twice on the page (e.g. Japan, where
-    // sushi is both first-in-array and the stability winner). When the
-    // spotlight tile differs from the hero (e.g. Italy: hero=risotto,
-    // spotlight=carbonara), the attribute is absent and the image renders.
-    const heroDupAttr = isFeatured && !isPlaceholder && t.img === featured.img
-      ? ' data-hero-dup="1"'
-      : '';
     // No srcset on tiles. Tiles render at ~240–320 CSS px; the base 330px
     // Wikipedia thumb (same URL the detail-page hero uses as its `src` and
-    // og:image) is the most reliable variant. Multi-width srcset was causing
-    // runtime mismatches with the detail hero on hub pages: browsers using
-    // the tile's `sizes` hint sometimes picked a 660w/990w variant that
-    // wasn't available, fired onerror, and removed the <img> — leaving only
-    // the flag fallback even though the same recipe's detail page renders
-    // fine. Using just `src` guarantees the tile loads the exact URL the
-    // detail page is known to serve.
+    // og:image) is the most reliable variant. Using just `src` guarantees
+    // the tile loads the exact URL the detail page is known to serve.
     const imgHtml = isPlaceholder
       ? '' // skip the placeholder URL entirely so the flag fallback shows
       : `<img src="${t.img}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(t.img)}/>`;
     return `<li>
-      <a class="${cls}" href="${t.href}">
-        <span class="cuisine-tile-img"${rotAttr}${heroDupAttr}>
+      <a class="cuisine-tile" href="${t.href}">
+        <span class="cuisine-tile-img"${rotAttr}>
           <span class="cuisine-tile-img-fallback" aria-hidden="true">${flag}</span>
           ${imgHtml}
         </span>

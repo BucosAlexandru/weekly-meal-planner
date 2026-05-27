@@ -1147,6 +1147,10 @@
   flex-direction: column;
   gap: .35rem;
   padding: .9rem 1rem 1rem;
+  /* Fill the rest of the card height after the image so the meta row
+     (margin-top: auto below) pins to the bottom edge. Without this every
+     card with a shorter description would float its meta row halfway up. */
+  flex: 1 1 auto;
 }
 .cuisine-tile-title {
   font-size: 1.02rem;
@@ -1171,7 +1175,11 @@
   flex-wrap: wrap;
   align-items: center;
   gap: .35rem .55rem;
-  margin-top: .25rem;
+  /* margin-top:auto pushes the meta row to the bottom of the card body so
+     every card lines up at the same baseline regardless of whether the
+     recipe has a description in recipes-meta.js. */
+  margin-top: auto;
+  padding-top: .35rem;
   font-size: .76rem;
 }
 .cuisine-tile-time {
@@ -1191,41 +1199,12 @@
   white-space: nowrap;
 }
 
-/* Featured spotlight: tile #0 takes 2 columns + bigger image on
-   tablet/desktop. On mobile it falls back to standard width. */
-/* Featured spotlight: tile #0 takes 2 columns on tablet+. The image used
-   to be unconditionally `display: none` here on the assumption that the
-   hero band above always showed the same recipe (featured = first in
-   recipes.js = same as the hero pick), so hiding the tile image avoided
-   duplication. That assumption no longer holds: the hero picker now ranks
-   by image-host stability and may pick a different recipe than tile #0,
-   leaving the most-prominent tile image-less even when its detail page
-   renders fine. Hide the image only when the generator marks the tile as
-   actually duplicating the hero (data-hero-dup="1"); otherwise show it,
-   constrained to ~38% of the row on tablet+ by the @media block below. */
-.cuisine-tile--featured .cuisine-tile-img[data-hero-dup="1"] { display: none; }
-@media (min-width: 720px) {
-  .cuisine-tile--featured {
-    grid-column: span 2;
-    flex-direction: row;
-  }
-  .cuisine-tile--featured .cuisine-tile-img {
-    flex: 0 0 38%;
-    aspect-ratio: auto;
-    align-self: stretch;
-  }
-  .cuisine-tile--featured .cuisine-tile-body {
-    flex: 1 1 auto;
-    padding: 1.4rem 1.6rem 1.5rem;
-    justify-content: center;
-    gap: .6rem;
-  }
-  .cuisine-tile--featured .cuisine-tile-title { font-size: 1.3rem; }
-  .cuisine-tile--featured .cuisine-tile-desc {
-    font-size: .95rem;
-    -webkit-line-clamp: 3;
-  }
-}
+/* The previous `.cuisine-tile--featured` modifier promoted the first tile
+   on each hub into a 2-column, row-layout spotlight and hid its image when
+   it matched the hero band. The result was an inconsistent grid: most hubs
+   had one card with a half-width side image (or no image at all) and the
+   rest with the standard image-on-top layout. The modifier is gone — every
+   tile on every hub now uses the same image-on-top layout. */
 
 /* ── Hub-index CARDS — thumbnail strip + curated preview ──────────
    Replaces the old "<ul> of recipe names" sub-list with a 3-image
