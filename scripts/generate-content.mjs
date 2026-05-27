@@ -4384,15 +4384,15 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // 2nd/3rd occurrences get data-img-rot="1|2" which applies a subtle
   // filter (brightness/saturation tweak) so the page doesn't feel repetitive.
   // Uniform card layout across every cuisine hub. Every tile is the same
-  // shape: image on top with a fixed 4:3 aspect ratio, then title and a
-  // meta row (time + tags). The previous version rendered a short
-  // description below the title when recipes-meta.js carried a `desc`
-  // entry for that recipe, but only ~30% of the 200+ recipes have one,
-  // so the grid showed text under some cards and not under others. To
-  // keep the grid visually consistent on every hub — and to stay
-  // future-proof as new recipes are added — the description is no
-  // longer rendered here. The full description still appears on each
-  // recipe's detail page, one click away.
+  // shape: image on top with a fixed 4:3 aspect ratio, then title, then —
+  // ONLY when recipes-meta.js carries an authored desc for that recipe —
+  // a short description, then a meta row (time + tags). Cards size to
+  // their natural content; the grid uses align-items: start (see CSS) so
+  // a card without an authored description simply ends one paragraph
+  // earlier instead of growing a block of empty whitespace to match its
+  // neighbours. We never fabricate text from ingredients/tags/metadata —
+  // the description either exists in recipes-meta.js for that locale
+  // (with EN fall-through) or it doesn't render at all.
   const seenImgs = new Map(); // url → occurrence count
   const isPlaceholderImg = (url) => /cover2\.jpg$/.test(url);
   const tilesHtml = tiles.map((t) => {
@@ -4402,6 +4402,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
     const metaHtml = t.readyIn || t.tags.length
       ? `<div class="cuisine-tile-meta">${t.readyIn ? `<span class="cuisine-tile-time">⏱ ${esc(t.readyIn)}</span>` : ''}${tagsHtml}</div>`
       : '';
+    const descHtml = t.desc ? `<p class="cuisine-tile-desc">${esc(t.desc)}</p>` : '';
     const isPlaceholder = isPlaceholderImg(t.img);
     const occ = (seenImgs.get(t.img) || 0);
     seenImgs.set(t.img, occ + 1);
@@ -4421,6 +4422,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
         </span>
         <span class="cuisine-tile-body">
           <h3 class="cuisine-tile-title">${esc(t.name)}</h3>
+          ${descHtml}
           ${metaHtml}
         </span>
       </a>
