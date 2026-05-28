@@ -4062,13 +4062,21 @@ body:has(.recipe-main) .app-header {
    hard edges. */
 .cuisine-hub-index-main .content-hero::before {
   background:
+    /* Phase 19 — warm butter tint focused over the photo on the left,
+       giving the hero an intentional direction instead of generic
+       cream emptiness. Restrained alpha so it never feels like a
+       banner. */
+    radial-gradient(42rem 32rem at 14% 50%, color-mix(in srgb, var(--hp-warm-deep) 14%, transparent), transparent 68%),
     radial-gradient(44rem 34rem at 88% 22%, color-mix(in srgb, var(--hp-warm-deep) 16%, transparent), transparent 65%),
     radial-gradient(38rem 32rem at 10% 80%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
     radial-gradient(50rem 38rem at 55% 115%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%),
+    /* Phase 19 — cream gradient at 0% drops from 0.68 to 0.55 so the
+       photo reads ~45% on the left edge (was ~32%). Smooth fade to
+       1.0 by 65% width keeps the title on clean cream. No hard edges. */
     linear-gradient(95deg,
-      rgba(250, 245, 234, 0.68) 0%,
-      rgba(250, 245, 234, 0.86) 38%,
-      rgba(250, 245, 234, 0.97) 65%,
+      rgba(250, 245, 234, 0.55) 0%,
+      rgba(250, 245, 234, 0.80) 38%,
+      rgba(250, 245, 234, 0.96) 65%,
       rgba(250, 245, 234, 1)    100%),
     url('https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=2200&q=72') left center / cover no-repeat;
   opacity: 1;
@@ -4083,7 +4091,12 @@ body:has(.recipe-main) .app-header {
 }
 
 .cuisine-hub-index-main .content-hero-inner {
-  max-width: 920px;
+  /* Phase 19 — widened so the hero text aligns with the wider grid
+     rhythm below. The title and description preserve their own
+     max-widths (18ch / 54ch) so they don't over-stretch on very wide
+     viewports; the widened container just shifts them left to use
+     the canvas. */
+  max-width: 1280px;
 }
 
 /* Breadcrumb */
@@ -4159,9 +4172,21 @@ body:has(.recipe-main) .app-header {
   padding-top: 2.5rem;
   padding-bottom: 5rem;
 }
+/* Phase 19 — widen the recipes-index canvas. The global
+   .content-section-inner caps at 940px (right for article-style
+   pages); the recipes hub needs more horizontal room for its grid
+   to breathe. Scoped override only here. Other pages using
+   .content-section-inner stay at their 940px article width. */
+.cuisine-hub-index-main .content-section-inner {
+  max-width: 1280px;
+}
 .cuisine-hub-index-main .recipe-groups-grid {
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.6rem;
+  /* Phase 19 — wider card minimum + slightly larger gap so photos
+     read generously. With max-width 1280 + 320 min + 1.75rem gap we
+     get 3 cards × ~410px on standard desktop, 4 cards on very wide
+     viewports. */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
 }
 
 /* ── Country cards — food magazine tiles ───────────────────── */
@@ -4395,8 +4420,9 @@ body:has(.cuisine-hub-index-main) .app-header {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 0;
-  /* Taller mosaic so the single image has the room to be appetizing. */
-  height: 240px;
+  /* Phase 19 — bumped from 240 → 260px so each card's food
+     photography reads more generously inside the wider grid cells. */
+  height: 260px;
 }
 .cuisine-hub-index-main .cuisine-card-thumb:nth-child(1) {
   grid-row: 1;
