@@ -4070,7 +4070,7 @@ body:has(.recipe-main) .app-header {
       rgba(250, 245, 234, 0.86) 38%,
       rgba(250, 245, 234, 0.97) 65%,
       rgba(250, 245, 234, 1)    100%),
-    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=72') left center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=2200&q=72') left center / cover no-repeat;
   opacity: 1;
 }
 .cuisine-hub-index-main .content-hero::after {
