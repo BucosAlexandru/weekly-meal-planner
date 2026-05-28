@@ -3192,6 +3192,65 @@ function renderFAQ() {
   }
 }
 
+// Localized label for the sticky upgrade pill — used by both
+// updateStickyUpgradeText() (called from applyTranslations) and the
+// observer setup. Kept module-scope so phases stay decoupled.
+const STICKY_UPGRADE_LABEL = {
+  ro: '⭐ Vezi Premium · €3/lună',  en: '⭐ Get Premium · €3/mo',
+  es: '⭐ Ver Premium · €3/mes',    fr: '⭐ Voir Premium · €3/mois',
+  de: '⭐ Premium · €3/Monat',      pt: '⭐ Ver Premium · €3/mês',
+  ru: '⭐ Премиум · €3/мес',        it: '⭐ Premium · €3/mese',
+  tr: '⭐ Premium · €3/ay',         ar: '⭐ بريميوم · €3/شهر',
+  zh: '⭐ 高级版 · €3/月',           ja: '⭐ プレミアム · €3/月',
+  ko: '⭐ 프리미엄 · €3/월',         hi: '⭐ प्रीमियम · €3/माह',
+};
+
+function updateStickyUpgradeText() {
+  const pill = document.getElementById('hp-sticky-upgrade');
+  if (!pill) return;
+  pill.textContent = STICKY_UPGRADE_LABEL[lang] || STICKY_UPGRADE_LABEL.en;
+  pill.setAttribute('aria-label', STICKY_UPGRADE_LABEL[lang] || STICKY_UPGRADE_LABEL.en);
+}
+
+// Local state for the sticky pill visibility. Updated by the
+// IntersectionObservers below and reread when the user becomes premium.
+let _stickyState = { pastHero: false, pricingVisible: false };
+
+function refreshStickyUpgrade() {
+  const pill = document.getElementById('hp-sticky-upgrade');
+  if (!pill) return;
+  const premium = !!window.hasUnlimited;
+  const show = _stickyState.pastHero && !premium && !_stickyState.pricingVisible;
+  pill.classList.toggle('hp-sticky-upgrade--show', show);
+}
+
+function setupStickyUpgrade() {
+  const pill = document.getElementById('hp-sticky-upgrade');
+  if (!pill) return;
+  if (typeof IntersectionObserver === 'undefined') return;
+  if (pill.dataset.observed === '1') return;
+  pill.dataset.observed = '1';
+
+  // Watch the hero: once it scrolls offscreen, the pill becomes a candidate.
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    new IntersectionObserver((entries) => {
+      _stickyState.pastHero = !entries[0].isIntersecting;
+      refreshStickyUpgrade();
+    }, { rootMargin: '-60px' }).observe(hero);
+  }
+
+  // Watch the pricing section: when it's on screen, hide the pill —
+  // no need for a second CTA when the primary one is already visible.
+  const pricing = document.getElementById('pricing-section');
+  if (pricing) {
+    new IntersectionObserver((entries) => {
+      _stickyState.pricingVisible = entries[0].isIntersecting;
+      refreshStickyUpgrade();
+    }, { threshold: 0.15 }).observe(pricing);
+  }
+}
+
 function setupScrollFadeIn() {
   if (typeof IntersectionObserver === 'undefined') return;
   const els = document.querySelectorAll('.hp-fade-in:not(.is-visible)');
@@ -3476,6 +3535,8 @@ function applyTranslations() {
   renderTrustSignals();
   renderPremiumPreview();
   renderFAQ();
+  updateStickyUpgradeText();
+  refreshStickyUpgrade();
   setupScrollFadeIn();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
@@ -3502,6 +3563,7 @@ function applyTranslations() {
     // Drop the upsell panel and flip the nav badge to "Active" right away.
     document.getElementById('hp-premium-preview')?.remove();
     if (typeof updateContentNav === 'function') updateContentNav(lang);
+    if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
     window.history.replaceState({}, '', window.location.pathname);
   }
 
@@ -3776,9 +3838,15 @@ const manageBtn  = document.getElementById('manage-subscription');
       if (manageBtn) manageBtn.style.display = 'inline-block';
       if (typeof updateButtonState === 'function') updateButtonState();
       if (typeof updateContentNav === 'function') updateContentNav(lang);
+      if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
     })
     .catch(() => { /* network blip — user can re-verify manually */ });
 })();
+
+// Sticky upgrade pill — wire observers once. applyTranslations() handles
+// the text + visibility refresh on every language switch and on premium
+// state changes.
+if (typeof setupStickyUpgrade === 'function') setupStickyUpgrade();
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
     const email = emailInput.value.trim();
@@ -3833,6 +3901,7 @@ if (verifyBtn && emailInput && resultDiv) {
       document.getElementById('hp-premium-preview')?.remove();
       if (typeof updateButtonState === 'function') updateButtonState();
       if (typeof updateContentNav === 'function') updateContentNav(lang);
+      if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
     } else if (found) {
       // Account exists but subscription is expired
       window.hasUnlimited = false;
