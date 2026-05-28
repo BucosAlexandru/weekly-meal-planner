@@ -1758,49 +1758,6 @@ async function ensureHtml2pdfLoaded() {
 
 /* ─── LANDING PAGE SECTIONS ────────────────────────────────── */
 
-function renderLandingFeatures() {
-  const ID = 'landing-features-section';
-  if (document.getElementById(ID)) return;
-
-  const ro = lang === 'ro';
-  const strings = {
-    title: ro ? 'De ce Meal-Planner?' : 'Why Meal-Planner?',
-    sub:   ro ? 'Simplu, rapid și complet gratuit.' : 'Simple, fast, and completely free.',
-    features: ro ? [
-      { icon:'💰', title:'Economisești bani',   desc:'Planifici exact ce cumperi — fără risipă, fără cheltuieli inutile' },
-      { icon:'⏱️', title:'Economisești timp',   desc:'Lista de cumpărături se generează automat în câteva secunde' },
-      { icon:'📄', title:'PDF frumos',           desc:'Descarcă planul tău ca PDF — perfect pentru imprimat sau partajat' },
-      { icon:'🌍', title:'14 limbi',             desc:'Funcționează în română, engleză, spaniolă, franceză și 10 alte limbi' },
-      { icon:'🍽️', title:'175+ rețete',         desc:'Rețete internaționale din 70+ țări cu ingrediente și mod de preparare' },
-    ] : [
-      { icon:'💰', title:'Save money',      desc:'Plan exactly what to buy — no waste, no impulse spending' },
-      { icon:'⏱️', title:'Save time',       desc:'Shopping list generated automatically in seconds' },
-      { icon:'📄', title:'Beautiful PDF',   desc:'Download your plan as a PDF — perfect for printing or sharing' },
-      { icon:'🌍', title:'14 languages',   desc:'Works in English, Spanish, French, Romanian and 10 more' },
-      { icon:'🍽️', title:'175+ recipes',   desc:'International recipes from 70+ countries with full instructions' },
-    ]
-  };
-
-  const html = `
-    <section id="${ID}" class="landing-features no-print">
-      <div class="landing-features-inner">
-        <h2 class="landing-features-title">${strings.title}</h2>
-        <p class="landing-features-sub">${strings.sub}</p>
-        <div class="features-grid">
-          ${strings.features.map(f => `
-            <div class="feature-card">
-              <div class="feature-icon">${f.icon}</div>
-              <div class="feature-title">${f.title}</div>
-              <div class="feature-desc">${f.desc}</div>
-            </div>`).join('')}
-        </div>
-      </div>
-    </section>`;
-
-  const hiw = document.getElementById('how-it-works-section');
-  if (hiw) hiw.insertAdjacentHTML('afterend', html);
-}
-
 function renderProductPreview() {
   const ID = 'product-preview-section';
   // Remove existing so language switch re-renders with new language
@@ -2280,7 +2237,7 @@ function renderPremiumHero() {
   // Per-language strings (ro primary, en fallback for rest)
   const copy = {
     ro: {
-      badge: 'Gratuit · Fără cont · 14 limbi',
+      badge: 'Gratuit · Fără înregistrare · 14 limbi',
       line1: 'Mâncă bine,',
       line2: 'în fiecare',
       line3: 'săptămână.',
@@ -2303,7 +2260,7 @@ function renderPremiumHero() {
       chips:['paste','ouă','parmezan','roșii','feta','ciuperci','pui','lămâie'],
     },
     en: {
-      badge: 'Free · No account · 14 languages',
+      badge: 'Free · No signup · 14 languages',
       line1: 'Eat well,',
       line2: 'every single',
       line3: 'week.',
@@ -2326,7 +2283,7 @@ function renderPremiumHero() {
       chips:['pasta','eggs','parmesan','tomatoes','feta','mushrooms','chicken','lemon'],
     },
     es: {
-      badge: 'Gratis · Sin cuenta · 14 idiomas',
+      badge: 'Gratis · Sin registro · 14 idiomas',
       line1: 'Come bien,',
       line2: 'cada',
       line3: 'semana.',
@@ -2349,7 +2306,7 @@ function renderPremiumHero() {
       chips:['arroz','tomates','pollo','aceite','cebolla','ajo','limón','huevos'],
     },
     fr: {
-      badge: 'Gratuit · Sans compte · 14 langues',
+      badge: 'Gratuit · Sans inscription · 14 langues',
       line1: 'Mangez bien,',
       line2: 'chaque',
       line3: 'semaine.',
@@ -2372,7 +2329,7 @@ function renderPremiumHero() {
       chips:['beurre','oeufs','farine','tomates','poulet','ail','herbes','vin'],
     },
     de: {
-      badge: 'Kostenlos · Kein Konto · 14 Sprachen',
+      badge: 'Kostenlos · Keine Anmeldung · 14 Sprachen',
       line1: 'Gut essen,',
       line2: 'jede',
       line3: 'Woche.',
@@ -2395,7 +2352,7 @@ function renderPremiumHero() {
       chips:['Kartoffeln','Zwiebeln','Hähnchen','Möhren','Mehl','Butter','Eier','Käse'],
     },
     pt: {
-      badge: 'Gratuito · Sem conta · 14 idiomas',
+      badge: 'Gratuito · Sem cadastro · 14 idiomas',
       line1: 'Coma bem,',
       line2: 'todas as',
       line3: 'semanas.',
@@ -2418,7 +2375,7 @@ function renderPremiumHero() {
       chips:['massa','ovos','parmesão','tomates','frango','cogumelos','limão','arroz'],
     },
     ru: {
-      badge: 'Бесплатно · Без аккаунта · 14 языков',
+      badge: 'Бесплатно · Без регистрации · 14 языков',
       line1: 'Питайтесь',
       line2: 'хорошо',
       line3: 'каждую неделю.',
@@ -2441,7 +2398,7 @@ function renderPremiumHero() {
       chips:['картофель','морковь','курица','рис','лук','масло','яйца','сыр'],
     },
     it: {
-      badge: 'Gratuito · Senza account · 14 lingue',
+      badge: 'Gratuito · Senza registrazione · 14 lingue',
       line1: 'Mangia bene,',
       line2: 'ogni',
       line3: 'settimana.',
@@ -2464,7 +2421,7 @@ function renderPremiumHero() {
       chips:['pasta','uova','parmigiano','pomodori','pollo','funghi','limone','riso'],
     },
     tr: {
-      badge: 'Ücretsiz · Hesap yok · 14 dil',
+      badge: 'Ücretsiz · Kayıt yok · 14 dil',
       line1: 'Her hafta',
       line2: 'iyi',
       line3: 'yiyin.',
@@ -2487,7 +2444,7 @@ function renderPremiumHero() {
       chips:['tavuk','pirinç','domates','soğan','biber','zeytinyağı','yumurta','peynir'],
     },
     ar: {
-      badge: 'مجاني · بدون حساب · 14 لغة',
+      badge: 'مجاني · بدون تسجيل · 14 لغة',
       line1: 'تناول طعاماً',
       line2: 'صحياً كل',
       line3: 'أسبوع.',
@@ -2510,7 +2467,7 @@ function renderPremiumHero() {
       chips:['أرز','دجاج','طماطم','بصل','زيت زيتون','بيض','جبنة','خضروات'],
     },
     zh: {
-      badge: '免费 · 无需账户 · 14种语言',
+      badge: '免费 · 无需注册 · 14种语言',
       line1: '每周',
       line2: '吃得',
       line3: '好。',
@@ -2533,7 +2490,7 @@ function renderPremiumHero() {
       chips:['大米','鸡肉','豆腐','白菜','葱','姜','蒜','酱油'],
     },
     ja: {
-      badge: '無料 · アカウント不要 · 14言語',
+      badge: '無料 · 登録不要 · 14言語',
       line1: '毎週、',
       line2: 'おいしく',
       line3: '食べよう。',
@@ -2556,7 +2513,7 @@ function renderPremiumHero() {
       chips:['鶏肉','米','豆腐','にんじん','たまご','醤油','みりん','味噌'],
     },
     ko: {
-      badge: '무료 · 계정 불필요 · 14개 언어',
+      badge: '무료 · 가입 불필요 · 14개 언어',
       line1: '매주,',
       line2: '잘',
       line3: '먹으세요.',
@@ -2579,7 +2536,7 @@ function renderPremiumHero() {
       chips:['쌀','닭고기','두부','달걀','당근','간장','참기름','김치'],
     },
     hi: {
-      badge: 'मुफ़्त · कोई खाता नहीं · 14 भाषाएं',
+      badge: 'मुफ़्त · बिना पंजीकरण · 14 भाषाएं',
       line1: 'हर हफ्ते',
       line2: 'अच्छा',
       line3: 'खाएं।',
@@ -2630,10 +2587,10 @@ function renderPremiumHero() {
             <span class="hero-stat-label">${safeText(s.stat2l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
-          <div class="hero-stat">
+          <a class="hero-stat hero-stat--link" href="#pricing-section" style="text-decoration:none;color:inherit;">
             <span class="hero-stat-num">${safeText(s.stat3n)}</span>
             <span class="hero-stat-label">${safeText(s.stat3l)}</span>
-          </div>
+          </a>
         </div>
         <div class="hero-premium-cta">
           <button class="btn-hero-cta" id="hero-cta-btn" type="button">${safeText(s.cta)}</button>
@@ -2697,42 +2654,211 @@ function renderPremiumHero() {
   });
 }
 /* ─── END LANDING PAGE SECTIONS ────────────────────────────── */
- function renderHowItWorks() {
-  const SECTION_ID = 'how-it-works-section';
-  const t = key => (i18n[lang] && i18n[lang][key]) || (i18n['en'] && i18n['en'][key]) || key;
-  const isRtl = lang === 'ar';
 
-  const steps = [
-    { icon: '📋', titleKey: 'how.step1.title', descKey: 'how.step1.desc' },
-    { icon: '🛒', titleKey: 'how.step2.title', descKey: 'how.step2.desc' },
-    { icon: '📥', titleKey: 'how.step3.title', descKey: 'how.step3.desc' },
+function renderCuisineDiscover() {
+  const ID = 'hp-cuisine-discover';
+  // Remove the previous render AND the static fallback (no id attribute)
+  // so language switch produces a fresh localized block.
+  document.getElementById(ID)?.remove();
+  document.querySelectorAll('.hp-cuisine-discover').forEach(el => {
+    if (el.id !== ID) el.remove();
+  });
+
+  // Recipe URL segment per locale — must match generate-content.mjs RECIPE_LANG.
+  const recipesBase = {
+    ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
+    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'shipu', ja:'reshipi',
+    ko:'recipes', hi:'recipes', tr:'tarifler', it:'ricette',
+  };
+  const rSeg = recipesBase[lang] || 'recipes';
+
+  const cuisines = [
+    { slug:'france', flag:'🇫🇷', count:10, atmosphere:'mediterranean' },
+    { slug:'japan',  flag:'🇯🇵', count:10, atmosphere:'east-asian' },
+    { slug:'mexico', flag:'🇲🇽', count:10, atmosphere:'latin' },
+    { slug:'greece', flag:'🇬🇷', count:10, atmosphere:'mediterranean' },
+    { slug:'italy',  flag:'🇮🇹', count:9,  atmosphere:'mediterranean' },
+    { slug:'india',  flag:'🇮🇳', count:9,  atmosphere:'south-asian' },
   ];
 
-  const stepsHTML = steps.map((s, i) => `
-    <div class="how-step">
-      <div class="how-step-icon">
-        <span class="how-step-num">${i + 1}</span>
-        ${s.icon}
-      </div>
-      <h3 class="how-step-title">${t(s.titleKey)}</h3>
-      <p class="how-step-desc">${t(s.descKey)}</p>
-    </div>
-  `).join('');
+  const copy = {
+    ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea',
+      sub:'46 bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.',
+      cta:'Vezi toate cele 46 bucătării',
+      names:{ france:'Franța', japan:'Japonia', mexico:'Mexic', greece:'Grecia', italy:'Italia', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Supă de ceapă franțuzească',
+        japan:'Sushi · Ramen clasic japonez · Curry japonez',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghete Carbonara · Risotto · Pasta e fagioli',
+        india:'Curry de pui · Dhal · Rajma' } },
+    en: { eyebrow:'Cuisines', heading:'Explore cuisines from around the world',
+      sub:'46 international cuisines, each with authentic recipes and a free planner.',
+      cta:'See all 46 cuisines',
+      names:{ france:'France', japan:'Japan', mexico:'Mexico', greece:'Greece', italy:'Italy', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · French onion soup',
+        japan:'Sushi · Classic Japanese ramen · Japanese curry',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghetti Carbonara · Risotto · Pasta e fagioli',
+        india:'Chicken curry · Dhal · Rajma' } },
+    es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo',
+      sub:'46 cocinas internacionales, cada una con recetas auténticas y planificador gratuito.',
+      cta:'Ver las 46 cocinas',
+      names:{ france:'Francia', japan:'Japón', mexico:'México', greece:'Grecia', italy:'Italia', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Sopa de cebolla francesa',
+        japan:'Sushi · Ramen japonés clásico · Curry japonés',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Musaca',
+        italy:'Espagueti a la carbonara · Risotto · Pasta e fagioli',
+        india:'Pollo al curry · Dhal · Rajma' } },
+    fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde',
+      sub:'46 cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.',
+      cta:'Voir les 46 cuisines',
+      names:{ france:'France', japan:'Japon', mexico:'Mexique', greece:'Grèce', italy:'Italie', india:'Inde' },
+      dishes:{ france:'Quiche lorraine · Ratatouille · Soupe à l\'oignon',
+        japan:'Sushi · Ramen japonais classique · Curry japonais',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatzíki · Moussaka',
+        italy:'Spaghetti carbonara · Risotto · Pasta e fagioli',
+        india:'Poulet au curry · Dhal · Rajma' } },
+    de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt',
+      sub:'46 internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.',
+      cta:'Alle 46 Küchen ansehen',
+      names:{ france:'Frankreich', japan:'Japan', mexico:'Mexiko', greece:'Griechenland', italy:'Italien', india:'Indien' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Französische Zwiebelsuppe',
+        japan:'Sushi · Klassisches japanisches Ramen · Japanisches Curry',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghetti Carbonara · Risotto · Pasta e fagioli',
+        india:'Hühnchen-Curry · Dhal · Rajma' } },
+    pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas de todo o mundo',
+      sub:'46 cozinhas internacionais, cada uma com receitas autênticas e planificador gratuito.',
+      cta:'Ver todas as 46 cozinhas',
+      names:{ france:'França', japan:'Japão', mexico:'México', greece:'Grécia', italy:'Itália', india:'Índia' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Sopa de cebola francesa',
+        japan:'Sushi · Ramen japonês clássico · Curry japonês',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Espaguete à carbonara · Risoto · Pasta e fagioli',
+        india:'Frango ao curry · Dhal · Rajma' } },
+    ru: { eyebrow:'Кухни', heading:'Откройте кухни со всего мира',
+      sub:'46 международных кухонь, каждая с аутентичными рецептами и бесплатным планировщиком.',
+      cta:'Посмотреть все 46 кухонь',
+      names:{ france:'Франция', japan:'Япония', mexico:'Мексика', greece:'Греция', italy:'Италия', india:'Индия' },
+      dishes:{ france:'Киш Лорен · Рататуй · Французский луковый суп',
+        japan:'Суши · Классический японский рамен · Японское карри',
+        mexico:'Такос · Гуакамоле · Чили кон карне',
+        greece:'Сувлаки · Цацики · Мусака',
+        italy:'Спагетти карбонара · Ризотто · Паста э фаджоли',
+        india:'Куриное карри · Даль · Раджма' } },
+    it: { eyebrow:'Cucine', heading:'Esplora cucine da tutto il mondo',
+      sub:'46 cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.',
+      cta:'Vedi tutte le 46 cucine',
+      names:{ france:'Francia', japan:'Giappone', mexico:'Messico', greece:'Grecia', italy:'Italia', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Zuppa di cipolle francese',
+        japan:'Sushi · Ramen giapponese classico · Curry giapponese',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghetti alla carbonara · Risotto · Pasta e fagioli',
+        india:'Pollo al curry · Dhal · Rajma' } },
+    tr: { eyebrow:'Mutfaklar', heading:'Dünyanın dört bir yanından mutfakları keşfedin',
+      sub:'46 uluslararası mutfak, her biri özgün tarifler ve ücretsiz planlayıcı ile.',
+      cta:'46 mutfağın tamamına bak',
+      names:{ france:'Fransa', japan:'Japonya', mexico:'Meksika', greece:'Yunanistan', italy:'İtalya', india:'Hindistan' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Fransız soğan çorbası',
+        japan:'Suşi · Klasik Japon ramen · Japon köri',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Cacık · Musakka',
+        italy:'Spagetti Carbonara · Risotto · Pasta e fagioli',
+        india:'Tavuk köri · Dhal · Rajma' } },
+    ar: { eyebrow:'المطابخ', heading:'استكشف المطابخ من جميع أنحاء العالم',
+      sub:'46 مطبخًا دوليًا، كل منها بوصفات أصيلة ومخطط مجاني.',
+      cta:'شاهد كل 46 مطبخًا',
+      names:{ france:'فرنسا', japan:'اليابان', mexico:'المكسيك', greece:'اليونان', italy:'إيطاليا', india:'الهند' },
+      dishes:{ france:'كيش لورين · راتاتوي · حساء البصل الفرنسي',
+        japan:'سوشي · رامن ياباني كلاسيكي · كاري ياباني',
+        mexico:'تاكو · جواكامولي · تشيلي كون كارني',
+        greece:'سوفلاكي · تزاتزيكي · موساكا',
+        italy:'سباغيتي كاربونارا · ريزوتو · باستا إي فاجولي',
+        india:'دجاج بالكاري · دال · راجما' } },
+    zh: { eyebrow:'美食', heading:'探索世界各地的美食',
+      sub:'46种国际美食，每一种都有正宗食谱和免费规划器。',
+      cta:'查看全部46种美食',
+      names:{ france:'法国', japan:'日本', mexico:'墨西哥', greece:'希腊', italy:'意大利', india:'印度' },
+      dishes:{ france:'洛林乳蛋饼 · 普罗旺斯炖菜 · 法式洋葱汤',
+        japan:'寿司 · 经典日式拉面 · 日式咖喱',
+        mexico:'塔可 · 鳄梨酱 · 辣肉酱',
+        greece:'烤肉串 · 酸奶酱 · 慕沙卡',
+        italy:'培根蛋面 · 烩饭 · 意式豆面汤',
+        india:'鸡肉咖喱 · 扁豆糊 · 红豆咖喱' } },
+    ja: { eyebrow:'料理', heading:'世界の料理を探索',
+      sub:'46の国際料理、それぞれに本格的なレシピと無料プランナー。',
+      cta:'46の料理すべてを見る',
+      names:{ france:'フランス', japan:'日本', mexico:'メキシコ', greece:'ギリシャ', italy:'イタリア', india:'インド' },
+      dishes:{ france:'キッシュ・ロレーヌ · ラタトゥイユ · オニオングラタンスープ',
+        japan:'寿司 · クラシックなラーメン · 日本のカレー',
+        mexico:'タコス · ワカモレ · チリコンカルネ',
+        greece:'スブラキ · ザジキ · ムサカ',
+        italy:'スパゲッティ・カルボナーラ · リゾット · パスタ・エ・ファジョーリ',
+        india:'チキンカレー · ダール · ラジマ' } },
+    ko: { eyebrow:'요리', heading:'세계 각국의 요리 탐험',
+      sub:'46가지 국제 요리, 각각 정통 레시피와 무료 플래너 포함.',
+      cta:'46가지 요리 모두 보기',
+      names:{ france:'프랑스', japan:'일본', mexico:'멕시코', greece:'그리스', italy:'이탈리아', india:'인도' },
+      dishes:{ france:'키슈 로렌 · 라타투이 · 프렌치 어니언 수프',
+        japan:'스시 · 클래식 일본 라멘 · 일본 카레',
+        mexico:'타코 · 과카몰리 · 칠리 콘 카르네',
+        greece:'수블라키 · 차치키 · 무사카',
+        italy:'스파게티 카르보나라 · 리소토 · 파스타 에 파지올리',
+        india:'치킨 카레 · 달 · 라즈마' } },
+    hi: { eyebrow:'व्यंजन', heading:'दुनिया भर के व्यंजन देखें',
+      sub:'46 अंतर्राष्ट्रीय व्यंजन, हर एक में प्रामाणिक रेसिपी और मुफ्त प्लानर।',
+      cta:'सभी 46 व्यंजन देखें',
+      names:{ france:'फ्रांस', japan:'जापान', mexico:'मेक्सिको', greece:'यूनान', italy:'इटली', india:'भारत' },
+      dishes:{ france:'किश लोरेन · रतातुई · फ्रेंच प्याज सूप',
+        japan:'सुशी · क्लासिक जापानी रामेन · जापानी करी',
+        mexico:'टैकोस · ग्वाकामोल · चिली कोन कार्ने',
+        greece:'सूवलाकी · ज़ात्ज़ीकी · मुसाका',
+        italy:'स्पेगेटी कार्बोनारा · रिसोट्टो · पास्ता ए फजोली',
+        india:'चिकन करी · दाल · राजमा' } },
+  };
+  const s = copy[lang] || copy.en;
+
+  const cardsHTML = cuisines.map(c => `
+      <a class="hp-cuisine-card" href="/${lang}/${rSeg}/${c.slug}/" data-cuisine-atmosphere="${c.atmosphere}">
+        <span class="hp-cuisine-card-flag" aria-hidden="true">${c.flag}</span>
+        <span class="hp-cuisine-card-body">
+          <span class="hp-cuisine-card-top">
+            <span class="hp-cuisine-card-name">${safeText(s.names[c.slug])}</span>
+            <span class="hp-cuisine-card-count">${c.count}</span>
+          </span>
+          <span class="hp-cuisine-card-dishes">${safeText(s.dishes[c.slug])}</span>
+        </span>
+      </a>`).join('');
 
   const html = `
-    <section id="${SECTION_ID}" class="how-it-works no-print" aria-label="${t('how.title')}"${isRtl ? ' dir="rtl"' : ''}>
-      <div class="how-inner">
-        <h2 class="how-title">${t('how.title')}</h2>
-        <div class="how-steps">${stepsHTML}</div>
+    <section id="${ID}" class="hp-cuisine-discover no-print" aria-labelledby="hp-cuisine-heading">
+      <div class="hp-cuisine-inner">
+        <div class="hp-cuisine-head">
+          <span class="hp-cuisine-eyebrow">${safeText(s.eyebrow)}</span>
+          <h2 id="hp-cuisine-heading" class="hp-cuisine-title">${safeText(s.heading)}</h2>
+          <p class="hp-cuisine-sub">${safeText(s.sub)}</p>
+        </div>
+        <div class="hp-cuisine-grid">${cardsHTML}</div>
+        <p class="hp-cuisine-cta">
+          <a class="hp-cuisine-cta-btn" href="/${lang}/${rSeg}/">${safeText(s.cta)}</a>
+        </p>
       </div>
     </section>`;
 
-  const existing = document.getElementById(SECTION_ID);
-  if (existing) {
-    existing.outerHTML = html;
+  // Insert before the product-preview section if it already exists, else
+  // after the hero. Makes the function order-independent within applyTranslations().
+  const ppEl = document.getElementById('product-preview-section');
+  if (ppEl) {
+    ppEl.insertAdjacentHTML('beforebegin', html);
   } else {
-    const main = document.querySelector('.app-main');
-    if (main) main.insertAdjacentHTML('beforebegin', html);
+    document.querySelector('.hero')?.insertAdjacentHTML('afterend', html);
   }
 }
 
@@ -2789,6 +2915,7 @@ function applyTranslations() {
   renderPricingSection();
   renderPremiumHero();
   renderProductPreview();
+  renderCuisineDiscover();
   renderDiscovery();
   renderPlannerAnchor();
   // 6) Paragraful SEO per limbă
