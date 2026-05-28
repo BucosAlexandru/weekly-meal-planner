@@ -539,6 +539,99 @@ body.hp-cursor-active::after { opacity: 1; }
     transform: none !important;
   }
 }
+
+/* ── Phase 10: Final polish ─────────────────────────────────── */
+/* Warm, premium-feeling scrollbar. WebKit-only (the spec-standard
+   scrollbar-color is set below for Firefox). */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4a017, #b5891b);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f5c243, #d4a017);
+}
+html { scrollbar-color: #d4a017 rgba(255, 255, 255, 0.5); }
+
+/* Selection color in the warm palette */
+::selection {
+  background: rgba(212, 160, 23, 0.28);
+  color: #2d2d2d;
+}
+
+/* Subtle gradient sweep on the hero title — single, slow pass that
+   plays once on load. Keeps the title legible and adds a premium
+   "shimmer" without ever feeling distracting. */
+.hero-premium-title {
+  background: linear-gradient(
+    100deg,
+    #1a1a1a 0%, #1a1a1a 30%,
+    #b5891b 48%, #d4a017 52%,
+    #1a1a1a 70%, #1a1a1a 100%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hp-title-sweep 3.5s ease-out 0.4s 1 both;
+}
+@keyframes hp-title-sweep {
+  to { background-position: -50% 0; }
+}
+
+/* Nav brand a touch livelier — the emoji + brand text get a tiny
+   bounce on first paint to anchor the user. */
+.nav-brand .nav-icon {
+  display: inline-block;
+  transform-origin: 50% 80%;
+  animation: hp-brand-bob 4s ease-in-out 1s infinite;
+}
+@keyframes hp-brand-bob {
+  0%, 100%   { transform: translateY(0)   rotate(0deg); }
+  20%        { transform: translateY(-2px) rotate(-4deg); }
+  40%        { transform: translateY(0)   rotate(0deg); }
+  60%        { transform: translateY(-1px) rotate(3deg); }
+  80%        { transform: translateY(0)   rotate(0deg); }
+}
+
+/* Subtle press feedback for any button — feels responsive. */
+.btn-upgrade:active,
+.btn-hero-cta:active,
+.hp-preview-cta-btn:active,
+.hp-sticky-upgrade:active,
+.btn-verify:active,
+.btn-generate:active {
+  transform: scale(0.96) !important;
+  transition: transform 0.08s ease-out;
+}
+
+/* Focus rings — keyboard accessibility deserves to look as polished
+   as the rest. */
+.btn-upgrade:focus-visible,
+.btn-hero-cta:focus-visible,
+.hp-preview-cta-btn:focus-visible,
+.hp-sticky-upgrade:focus-visible,
+.hp-faq-summary:focus-visible {
+  outline: 3px solid rgba(212, 160, 23, 0.55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-premium-title {
+    animation: none !important;
+    -webkit-text-fill-color: initial;
+    background: none;
+  }
+  .nav-brand .nav-icon { animation: none !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body::before { animation: none; }
