@@ -1394,7 +1394,10 @@ body::before {
   opacity: 0;
   transform: translateY(0.4em);
   filter: blur(4px);
-  animation: hp-word-reveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  /* fill-mode `both` so the final state (opacity:1) is retained
+     after the animation finishes. With `backwards` the element
+     reverted to the base rule (opacity:0) and the title disappeared. */
+  animation: hp-word-reveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: calc(var(--reveal-index, 0) * 110ms + 200ms);
   margin-right: 0.22em;
 }
