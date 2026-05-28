@@ -3232,8 +3232,10 @@ function refreshStickyUpgrade() {
 function setupMagneticCTAs() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!window.matchMedia('(hover: hover)').matches) return;
-  const SELECTOR =
-    '#pricing-upgrade-btn, .hp-preview-cta-btn, .btn-hero-cta, .btn-upgrade';
+  // Phase 11 — editorial restraint: magnetic only on the one true
+  // conversion moment (the pricing card upgrade button). Every other
+  // CTA stays still so the page reads calm instead of cluttered.
+  const SELECTOR = '#pricing-upgrade-btn';
   document.querySelectorAll(SELECTOR).forEach(btn => {
     if (btn.dataset.magnetic === '1') return;
     btn.dataset.magnetic = '1';

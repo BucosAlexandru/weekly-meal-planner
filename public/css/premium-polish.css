@@ -632,6 +632,534 @@ html { scrollbar-color: #d4a017 rgba(255, 255, 255, 0.5); }
   }
   .nav-brand .nav-icon { animation: none !important; }
 }
+
+/* ───────────────────────────────────────────────────────────── */
+/*  Phase 11 — EDITORIAL RESTART                                 */
+/*                                                                */
+/*  Drops the "premium SaaS template" feel in favor of a warm,    */
+/*  editorial food-magazine aesthetic. Big serif typography,      */
+/*  real hero photography, restrained motion, deeper palette.    */
+/*                                                                */
+/*  This block also turns OFF several Phase 6-10 motions that     */
+/*  worked against the new direction (emoji bob in nav,           */
+/*  title shimmer, etc).                                          */
+/* ───────────────────────────────────────────────────────────── */
+
+/* Editorial color tokens. Used by hero + headings + accents. */
+:root {
+  --hp-cream:        #faf5ea;
+  --hp-cream-deep:   #f1e7d1;
+  --hp-ink:          #1d1812;
+  --hp-ink-soft:     #3a342b;
+  --hp-warm:         #d4a017;
+  --hp-warm-deep:    #a87a0c;
+  --hp-terracotta:   #c1392c;
+  --hp-sage:         #4a6b4a;
+  --hp-aubergine:    #3a2438;
+  --hp-butter:       #e8b85b;
+  --hp-muted:        #8a7e6a;
+}
+
+/* Typography hierarchy. Fraunces for display, Inter for body. */
+.hp-editorial-title,
+.hp-faq-title,
+.hp-premium-preview-title,
+.hp-cuisine-title,
+.preview-section-heading,
+.discovery-title,
+.pricing-title,
+.hero-premium-title {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  font-feature-settings: 'ss01', 'ss02', 'ss03';
+}
+.hp-editorial-eyebrow,
+.hp-premium-preview-eyebrow,
+.hp-faq-eyebrow,
+.hp-cuisine-eyebrow,
+.preview-section-eyebrow {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+}
+
+/* ─── Hero: dark editorial cover with full-bleed photo ─────── */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  background: var(--hp-ink);
+  color: var(--hp-cream);
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero[data-premium] { padding: 6vh 0 8vh; }
+
+/* Background photograph — atmospheric kitchen scene, dimmed
+   warm-dark overlay so the headline reads clean over any area. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(29,24,18,0.92) 0%, rgba(29,24,18,0.74) 50%, rgba(29,24,18,0.92) 100%),
+    url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=2400&q=70') center / cover no-repeat;
+  filter: saturate(0.85);
+}
+/* Sub-glow that hints at depth without spilling into the body. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 60rem at 70% 30%, rgba(232,184,91,0.18), transparent 55%),
+    radial-gradient(40rem 40rem at 18% 78%, rgba(193,57,44,0.10),  transparent 60%);
+  pointer-events: none;
+}
+
+.hero-premium-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 6vw;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+@media (min-width: 980px) {
+  .hero-premium-inner { grid-template-columns: 1.2fr 1fr; gap: 5rem; }
+}
+.hero-text-col { padding: 4vh 0; }
+
+/* Editorial badge — small caps, italic Fraunces, with a hairline. */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 0;
+  border: none;
+  background: none;
+  color: var(--hp-butter);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.hero-badge::before {
+  content: '';
+  display: inline-block;
+  width: 2.2rem;
+  height: 1px;
+  background: rgba(232, 184, 91, 0.6);
+}
+.hero-badge .badge-pulse,
+.hero-badge .badge-pulse::after { display: none; }
+
+/* The headline. Big, serif, editorial. */
+.hero-premium-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(2.8rem, 7.5vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 1.5rem 0 1.5rem;
+  color: var(--hp-cream);
+  background: none;
+  -webkit-text-fill-color: initial;
+  animation: none;
+}
+.hero-premium-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--hp-butter);
+}
+
+.hero-premium-sub {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.55;
+  color: rgba(250, 245, 234, 0.78);
+  max-width: 32rem;
+  margin: 0 0 2rem;
+}
+
+/* Stats — refined, magazine-data-row feel. */
+.hero-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2.25rem;
+  align-items: baseline;
+  border-top: 1px solid rgba(250, 245, 234, 0.18);
+  border-bottom: 1px solid rgba(250, 245, 234, 0.18);
+  padding: 1.25rem 0;
+  margin: 0 0 2.25rem;
+}
+.hero-stat-sep { display: none; }
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: inherit;
+}
+.hero-stat-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  color: var(--hp-cream);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.hero-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(250, 245, 234, 0.55);
+}
+.hero-stat--link {
+  transition: color 0.2s ease;
+}
+.hero-stat--link:hover .hero-stat-num { color: var(--hp-butter); }
+.hero-stat--link:hover .hero-stat-label { color: rgba(232, 184, 91, 0.85); }
+
+/* CTAs in the hero — primary button uses butter on ink. */
+.hero-premium-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+}
+.btn-hero-cta {
+  background: var(--hp-cream);
+  color: var(--hp-ink) !important;
+  border: none;
+  padding: 1rem 1.85rem;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+.btn-hero-cta:hover {
+  background: var(--hp-butter);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(232, 184, 91, 0.28);
+}
+.hero-ghost-link {
+  color: rgba(250, 245, 234, 0.7);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(250, 245, 234, 0.3);
+  padding-bottom: 0.15rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.hero-ghost-link:hover {
+  color: var(--hp-cream);
+  border-color: var(--hp-butter);
+}
+.hero-premium-link {
+  color: var(--hp-butter);
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+}
+.hero-premium-link:hover { color: var(--hp-cream); }
+
+/* The phone visual column — gone. We replace it with a magazine
+   "still life" — a stack of cards visually quoted from a recipe
+   book in the secondary column. Keep the existing hero-visual-col
+   markup but restyle. */
+.hero-visual-col { display: none; }
+@media (min-width: 980px) {
+  .hero-visual-col {
+    display: block;
+    position: relative;
+    height: 60vh;
+    pointer-events: none;
+  }
+}
+.hero-phone-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-phone-frame {
+  width: 92%;
+  max-width: 360px;
+  aspect-ratio: 9 / 14;
+  background:
+    linear-gradient(180deg, rgba(250, 245, 234, 0.97), rgba(250, 245, 234, 0.92));
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 2px 0 rgba(255, 255, 255, 0.06) inset;
+  padding: 1.75rem 1.5rem 1.25rem;
+  color: var(--hp-ink);
+  font-family: 'Fraunces', serif;
+  overflow: hidden;
+  transform: rotate(-1.5deg);
+  animation: hp-card-float 9s ease-in-out infinite alternate;
+}
+.hero-phone-notch { display: none; }
+.hero-phone-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+.phone-app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hp-muted);
+  border-bottom: 1px solid rgba(29, 24, 18, 0.1);
+  padding-bottom: 0.55rem;
+}
+.phone-app-pdf-btn {
+  color: var(--hp-warm-deep);
+  font-weight: 600;
+}
+.phone-meal-header { display: none; }
+.phone-meal-row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.5rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(29, 24, 18, 0.06);
+  align-items: baseline;
+}
+.phone-meal-day {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hp-muted);
+}
+.phone-meal-name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--hp-ink);
+  line-height: 1.25;
+}
+.phone-meal-row .phone-meal-name + .phone-meal-name {
+  grid-column: 2;
+  font-size: 0.82rem;
+  color: var(--hp-ink-soft);
+}
+.phone-shopping {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(29, 24, 18, 0.1);
+}
+.phone-shopping-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hp-muted);
+  margin-bottom: 0.4rem;
+}
+.phone-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.phone-chip {
+  background: rgba(212, 160, 23, 0.12);
+  color: var(--hp-warm-deep);
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.hero-food-accent { display: none; }
+
+@keyframes hp-card-float {
+  0%   { transform: rotate(-1.5deg) translateY(0); }
+  100% { transform: rotate(-0.5deg) translateY(-10px); }
+}
+
+/* ─── Body background returns to cream after the hero ─────── */
+body {
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+}
+/* Aurora drift over a cream background — much subtler. Slow it down. */
+body::before {
+  background:
+    radial-gradient(50rem 50rem at 18% 28%, rgba(212, 160, 23, 0.07), transparent 65%),
+    radial-gradient(46rem 46rem at 82% 22%, rgba(74, 107, 74, 0.06),  transparent 65%),
+    radial-gradient(52rem 52rem at 50% 86%, rgba(193, 57, 44, 0.05),  transparent 65%);
+  animation-duration: 60s;
+}
+
+/* Body section typography upgrades */
+.hp-faq-title,
+.hp-premium-preview-title,
+.hp-cuisine-title,
+.discovery-title,
+.preview-section-heading,
+.pricing-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  color: var(--hp-ink);
+}
+.hp-premium-preview-eyebrow,
+.hp-faq-eyebrow,
+.hp-cuisine-eyebrow,
+.preview-section-eyebrow {
+  color: var(--hp-warm-deep);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+/* The faded mockup in Premium Preview cards picks up the serif. */
+.hp-preview-card-title { font-family: 'Fraunces', serif; font-weight: 700; }
+.hp-preview-card-mock {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--hp-warm-deep);
+  background: linear-gradient(180deg, rgba(241, 231, 209, 0.55), rgba(250, 245, 234, 0.85));
+  border-color: rgba(212, 160, 23, 0.3);
+}
+
+/* Pricing premium card softer, less of the loud conic in this pass. */
+.pricing-card--premium::before {
+  filter: blur(2px);
+  opacity: 0.6;
+  animation-duration: 16s;
+}
+
+/* ─── Phase 11 — Motion pruning ──────────────────────────── */
+/* Off: brand emoji bob (annoying loop), title shimmer (it wasn't
+   our DNA), magnetic on most CTAs (kept only on the Premium
+   upgrade button), card tilt on cuisine/discovery/steps. We keep
+   tilt on .hp-preview-card only — that's the moment the user
+   weighs the upgrade. */
+.nav-brand .nav-icon {
+  animation: none !important;
+  transform: none !important;
+}
+.hero-premium-title {
+  animation: none !important;
+}
+.hp-cuisine-card,
+.discovery-card,
+.step-item {
+  transform: none !important;
+  transition: box-shadow 0.25s ease, border-color 0.2s ease;
+}
+.hp-cuisine-card:hover,
+.discovery-card:hover,
+.step-item:hover {
+  box-shadow: 0 16px 36px rgba(29, 24, 18, 0.08);
+}
+
+/* Magnetic CTA — only on the Premium upgrade button now. */
+.btn-hero-cta,
+.hp-preview-cta-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Sticky pill — softer, less aggressive breathing. */
+.hp-sticky-upgrade--show {
+  animation-duration: 5s;
+}
+.hp-sticky-upgrade {
+  background: var(--hp-ink);
+  color: var(--hp-butter) !important;
+  border: 1px solid rgba(232, 184, 91, 0.45);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+.hp-sticky-upgrade:hover {
+  background: var(--hp-aubergine);
+  color: var(--hp-cream) !important;
+}
+
+/* Nav refinements — more editorial, less candy. */
+.app-header {
+  background: rgba(250, 245, 234, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(29, 24, 18, 0.06);
+}
+.nav-brand .nav-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+/* Cuisine cards refined to match editorial cream + butter. */
+.hp-cuisine-card {
+  background: linear-gradient(180deg, #ffffff, var(--hp-cream));
+  border: 1px solid rgba(29, 24, 18, 0.08);
+  border-radius: 18px;
+}
+.hp-cuisine-card-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.hp-cuisine-card-dishes {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--hp-ink-soft);
+}
+
+/* FAQ — editorial, on a stronger cream surface. */
+.hp-faq-item {
+  background: #ffffff;
+  border: 1px solid rgba(29, 24, 18, 0.07);
+}
+.hp-faq-summary {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--hp-ink);
+}
+.hp-faq-body {
+  font-family: 'Inter', sans-serif;
+  color: var(--hp-ink-soft);
+}
+
+/* ─── Refined respect for reduced motion ──────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-phone-frame { animation: none !important; transform: rotate(-1deg) !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body::before { animation: none; }
