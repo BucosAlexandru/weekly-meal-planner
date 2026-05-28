@@ -4032,28 +4032,46 @@ body:has(.recipe-main) .app-header {
 .cuisine-hub-index-main .content-hero {
   background: var(--hp-cream);
   color: var(--hp-ink);
-  padding: 5rem 1.5rem 4rem;
+  /* Phase 17 — reduce vertical footprint so the first row of cuisine
+     cards lands much closer to the fold. Previously 5rem/4rem; now
+     3rem/2.5rem. The hero introduces emotion quickly and hands the
+     viewport to the grid. */
+  padding: 3rem 1.5rem 2.5rem;
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 .cuisine-hub-index-main .content-hero--short {
-  padding: 5rem 1.5rem 4rem;
+  padding: 3rem 1.5rem 2.5rem;
 }
 
-/* Drop the white-noise + green radial overlays that were on
-   ::before / ::after, replace with layered warm radials for depth.
-   The point: never feel empty, but never feel like a fashion landing. */
+/* Phase 17 — atmospheric backdrop. The empty left side becomes a
+   subconscious food atmosphere: a very low-opacity ingredients spread
+   anchored to the left, faded into cream as it crosses the title.
+   The warm radials stay on top so the photo is felt, not seen.
+   Stacking order (top → bottom):
+     1. warm radial accents (visible)
+     2. cream gradient (transparent on the left, opaque on the right)
+     3. atmospheric food photograph (left-anchored)
+   The cream gradient is 0.82 alpha at the left edge so the photo
+   bleeds in at ~18% — almost subconscious — and runs to 1.0 by 70%
+   width so the title sits on clean cream. No hard edges. */
 .cuisine-hub-index-main .content-hero::before {
   background:
-    radial-gradient(48rem 38rem at 88% 18%, color-mix(in srgb, var(--hp-warm-deep) 16%, transparent), transparent 65%),
-    radial-gradient(40rem 36rem at 12% 78%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
-    radial-gradient(56rem 42rem at 50% 110%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%);
+    radial-gradient(44rem 34rem at 88% 22%, color-mix(in srgb, var(--hp-warm-deep) 16%, transparent), transparent 65%),
+    radial-gradient(38rem 32rem at 10% 80%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
+    radial-gradient(50rem 38rem at 55% 115%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%),
+    linear-gradient(95deg,
+      rgba(250, 245, 234, 0.82) 0%,
+      rgba(250, 245, 234, 0.92) 40%,
+      rgba(250, 245, 234, 0.99) 70%,
+      rgba(250, 245, 234, 1)    100%),
+    url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=2000&q=70') left center / cover no-repeat;
   opacity: 1;
 }
 .cuisine-hub-index-main .content-hero::after {
-  /* Replace the white-noise grain with a barely-there warm grain so
-     the cream surface has tactile depth, like uncoated paper. */
+  /* Warm grain noise — keeps cream surface tactile, like uncoated
+     paper. Sits on top of the photo + radials. */
   background-image:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
   opacity: 0.4;
@@ -4108,22 +4126,25 @@ body:has(.recipe-main) .app-header {
   font-style: italic;
 }
 
-/* Standfirst description — italic editorial body */
+/* Standfirst description — italic editorial body, slightly bumped
+   to carry the new editorial copy with a bit more visual weight. */
 .cuisine-hub-index-main .content-hero-desc {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  line-height: 1.6;
+  font-size: clamp(1.1rem, 1.65vw, 1.32rem);
+  line-height: 1.55;
   color: var(--hp-ink-soft);
-  max-width: 52ch;
+  max-width: 54ch;
   margin: 0;
   opacity: 1;
 }
 
-/* ── Recipe groups grid — generous breathing ───────────────── */
+/* ── Recipe groups grid — tighter transition into the catalog ── */
 .cuisine-hub-index-main .content-section {
-  padding-top: 4rem;
+  /* Phase 17 — tighter top padding so the first row of cards lands
+     closer to the hero. Previously 4rem; now 2.5rem. */
+  padding-top: 2.5rem;
   padding-bottom: 5rem;
 }
 .cuisine-hub-index-main .recipe-groups-grid {
@@ -4230,21 +4251,32 @@ body:has(.cuisine-hub-index-main) .app-header {
 @media (max-width: 600px) {
   .cuisine-hub-index-main .content-hero,
   .cuisine-hub-index-main .content-hero--short {
-    padding: 3rem 1.25rem 2.5rem;
+    /* Phase 17 — mobile hero shorter. Cards arrive faster on phones. */
+    padding: 2rem 1.25rem 1.75rem;
+  }
+  .cuisine-hub-index-main .content-hero::before {
+    /* Phase 17 — drop the photo layer on mobile and increase the cream
+       gradient opacity to 1.0 so the photo is invisible. Mobile heroes
+       don't have the horizontal room for the photo composition to read
+       cleanly; the radials alone carry the warmth. */
+    background:
+      radial-gradient(36rem 28rem at 88% 18%, color-mix(in srgb, var(--hp-warm-deep) 16%, transparent), transparent 65%),
+      radial-gradient(32rem 28rem at 10% 88%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
+      radial-gradient(44rem 32rem at 55% 115%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%);
   }
   .cuisine-hub-index-main .breadcrumb-nav {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
   .cuisine-hub-index-main .content-hero h1 {
     font-size: clamp(1.95rem, 8.5vw, 2.6rem);
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.85rem;
   }
   .cuisine-hub-index-main .content-hero-desc {
-    font-size: 1rem;
+    font-size: 1.02rem;
     line-height: 1.55;
   }
   .cuisine-hub-index-main .content-section {
-    padding-top: 2.25rem;
+    padding-top: 1.5rem;
     padding-bottom: 3rem;
   }
   .cuisine-hub-index-main .recipe-groups-grid {
