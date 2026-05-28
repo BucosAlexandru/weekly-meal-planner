@@ -2604,9 +2604,20 @@ function renderPremiumHero() {
           <span class="badge-pulse" aria-hidden="true"></span>
           ${safeText(s.badge)}
         </div>
-        <h1 class="hero-premium-title">
-          ${safeText(s.line1)}<br>${safeText(s.line2)}<br><em>${safeText(s.line3)}</em>
-        </h1>
+        <h1 class="hero-premium-title">${
+          // Phase 12 — wrap each word in a .hp-reveal-word span carrying
+          // a --reveal-index so CSS can stagger the fade-up. Line breaks
+          // are preserved between line1/2/3 so the editorial layout still
+          // breathes the way the typography was designed for.
+          (() => {
+            let idx = 0;
+            const wrap = (text, italic) => safeText(text).split(/\s+/).filter(Boolean).map(w => {
+              const span = `<span class="hp-reveal-word" style="--reveal-index:${idx++}">${italic ? '<em>' + w + '</em>' : w}</span>`;
+              return span;
+            }).join(' ');
+            return [wrap(s.line1, false), wrap(s.line2, false), wrap(s.line3, true)].join('<br>');
+          })()
+        }</h1>
         <p class="hero-premium-sub">${safeText(s.sub).replace('\n','<br>')}</p>
         <div class="hero-stats-row" aria-label="Key stats">
           <div class="hero-stat">
@@ -2904,6 +2915,190 @@ function renderPremiumPreview() {
   } else {
     // Fallback: append before the export section.
     document.querySelector('.export-section')?.insertAdjacentHTML('beforebegin', html);
+  }
+}
+
+// Phase 12 — Hand-coded SVG ornaments used as section decorations
+// and in eyebrow rows. Tiny, currentColor-driven so they inherit
+// from .hp-warm-deep wherever they sit.
+const HP_ORNAMENTS = {
+  wheat: '<svg class="hp-ornament" viewBox="0 0 24 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><line x1="12" y1="10" x2="12" y2="80"/><path d="M12 22 Q7 20 5 14 M12 22 Q17 20 19 14"/><path d="M12 34 Q7 32 5 26 M12 34 Q17 32 19 26"/><path d="M12 46 Q7 44 5 38 M12 46 Q17 44 19 38"/><path d="M12 58 Q7 56 5 50 M12 58 Q17 56 19 50"/></svg>',
+  sprig: '<svg class="hp-ornament" viewBox="0 0 28 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><line x1="14" y1="6" x2="14" y2="80"/><ellipse cx="9" cy="20" rx="5" ry="1.6" transform="rotate(-30 9 20)"/><ellipse cx="19" cy="26" rx="5" ry="1.6" transform="rotate(30 19 26)"/><ellipse cx="9" cy="34" rx="5" ry="1.6" transform="rotate(-30 9 34)"/><ellipse cx="19" cy="40" rx="5" ry="1.6" transform="rotate(30 19 40)"/><ellipse cx="9" cy="48" rx="5" ry="1.6" transform="rotate(-30 9 48)"/><ellipse cx="19" cy="54" rx="5" ry="1.6" transform="rotate(30 19 54)"/></svg>',
+  fork: '<svg class="hp-ornament" viewBox="0 0 22 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><line x1="3" y1="6" x2="3" y2="22"/><line x1="8.3" y1="6" x2="8.3" y2="22"/><line x1="13.7" y1="6" x2="13.7" y2="22"/><line x1="19" y1="6" x2="19" y2="22"/><line x1="3" y1="22" x2="19" y2="22"/><line x1="11" y1="22" x2="11" y2="80"/></svg>',
+};
+
+// Phase 12 — The featured-recipe editorial section. One hand-curated
+// recipe rendered as a cookbook page. Localized in the four primary
+// locales (ro, en, es, fr) with en fallback for the others — the
+// editorial voice is uniform enough that the fallback still reads
+// well. Uses an Unsplash CDN photo. Slotted between hero and trust
+// signals so it's the FIRST content beat after the hero.
+function renderFeaturedRecipe() {
+  const ID = 'hp-featured-recipe';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: {
+      eyebrow: 'În seara asta, gătește',
+      title: 'Spaghete\nalla Carbonara',
+      bylineOrigin: 'Din Roma, Italia',
+      bylineTime: '25 min',
+      bylineServes: 'Pentru 4',
+      caption: 'Clasica romană — ouă, pecorino, guanciale și piper negru. Nu există smântână în carbonara autentică.',
+      ingredientsLabel: 'Ingrediente',
+      methodLabel: 'Mod de preparare',
+      ingredients: [
+        ['Spaghete', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Gălbenușuri de ou', '4'],
+        ['Pecorino Romano ras', '60 g'],
+        ['Piper negru proaspăt măcinat', 'după gust'],
+        ['Sare grunjoasă', 'pentru apă'],
+      ],
+      method: [
+        'Pune la fiert o oală mare cu apă cu sare. Carbonara cere apă suficient de sărată — gândește-o ca pe „apa de mare".',
+        'Taie guanciale în batoane subțiri. Pune-l într-o tigaie rece, apoi încălzește treptat până se topește grăsimea și carnea devine crocantă, 6-7 minute.',
+        'Bate gălbenușurile cu pecorino-ul și un strop de piper negru într-un bol mare. Vei amesteca pasta direct aici.',
+        'Fierbe spaghetele al dente. Păstrează 200 ml din apa de fierbere înainte să scurgi.',
+        'Adaugă pasta caldă peste guanciale, amestecă rapid 10 secunde. Tigaia trebuie să fie OFF — căldura reziduală e suficientă. Toarnă peste amestecul de ouă, adaugă 2-3 linguri din apa păstrată, amestecă viguros până se formează crema.',
+      ],
+      cta: 'Adaug-o la săptămâna ta — gratuit.',
+    },
+    en: {
+      eyebrow: 'Tonight, cook this',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'From Rome, Italy',
+      bylineTime: '25 min',
+      bylineServes: 'Serves 4',
+      caption: 'The Roman classic — egg yolks, pecorino, guanciale, and black pepper. No cream in an honest carbonara.',
+      ingredientsLabel: 'Ingredients',
+      methodLabel: 'Method',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Egg yolks', '4'],
+        ['Pecorino Romano, grated', '60 g'],
+        ['Black pepper, fresh-ground', 'to taste'],
+        ['Sea salt', 'for the water'],
+      ],
+      method: [
+        'Bring a large pot of well-salted water to the boil. Carbonara wants the water properly seasoned — think sea-water salty.',
+        'Cut the guanciale into thin batons. Start it in a cold pan, then bring up the heat slowly until the fat renders and the meat crisps, 6-7 minutes.',
+        'Whisk the egg yolks with the pecorino and a generous turn of pepper in a large bowl. You\'ll toss the pasta directly into this.',
+        'Cook the spaghetti al dente. Reserve 200 ml of the pasta water before draining.',
+        'Tip the hot pasta into the pan with the guanciale, toss for 10 seconds. Pan must be off the heat — residual warmth is enough. Pour the mixture into the egg bowl, add 2-3 tablespoons of the reserved water, whisk vigorously until a glossy cream forms.',
+      ],
+      cta: 'Add it to your week — free.',
+    },
+    es: {
+      eyebrow: 'Esta noche, cocina esto',
+      title: 'Espaguetis\nalla Carbonara',
+      bylineOrigin: 'Desde Roma, Italia',
+      bylineTime: '25 min',
+      bylineServes: 'Para 4',
+      caption: 'El clásico romano — yemas, pecorino, guanciale y pimienta negra. La carbonara auténtica no lleva nata.',
+      ingredientsLabel: 'Ingredientes',
+      methodLabel: 'Preparación',
+      ingredients: [
+        ['Espaguetis', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Yemas de huevo', '4'],
+        ['Pecorino Romano rallado', '60 g'],
+        ['Pimienta negra recién molida', 'al gusto'],
+        ['Sal gruesa', 'para el agua'],
+      ],
+      method: [
+        'Pon a hervir una olla grande con agua bien salada. La carbonara quiere el agua bien salada — como agua de mar.',
+        'Corta el guanciale en bastoncitos finos. Empieza en sartén fría y sube fuego despacio hasta que la grasa se derrita y la carne quede crujiente, 6-7 minutos.',
+        'Bate las yemas con el pecorino y bastante pimienta en un bol grande. Mezclarás la pasta directamente aquí.',
+        'Cuece los espaguetis al dente. Reserva 200 ml de agua de cocción antes de escurrir.',
+        'Echa la pasta caliente sobre el guanciale, remueve 10 segundos. La sartén debe estar APAGADA — el calor residual basta. Vierte sobre las yemas, añade 2-3 cucharadas del agua reservada y bate enérgicamente hasta formar una crema brillante.',
+      ],
+      cta: 'Añádelo a tu semana — gratis.',
+    },
+    fr: {
+      eyebrow: 'Ce soir, cuisinez',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'Depuis Rome, Italie',
+      bylineTime: '25 min',
+      bylineServes: 'Pour 4',
+      caption: 'Le classique romain — jaunes d\'œufs, pecorino, guanciale et poivre noir. Une vraie carbonara n\'a pas de crème.',
+      ingredientsLabel: 'Ingrédients',
+      methodLabel: 'Préparation',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Jaunes d\'œufs', '4'],
+        ['Pecorino Romano râpé', '60 g'],
+        ['Poivre noir, fraîchement moulu', 'au goût'],
+        ['Sel marin', 'pour l\'eau'],
+      ],
+      method: [
+        'Portez une grande casserole d\'eau bien salée à ébullition. La carbonara exige une eau bien salée — comme l\'eau de mer.',
+        'Coupez le guanciale en fins bâtonnets. Démarrez dans une poêle froide, montez doucement en chaleur jusqu\'à ce que la graisse fonde et la chair croustille, 6-7 minutes.',
+        'Fouettez les jaunes avec le pecorino et beaucoup de poivre dans un grand bol. Vous mélangerez les pâtes directement ici.',
+        'Cuisez les spaghetti al dente. Réservez 200 ml d\'eau de cuisson avant d\'égoutter.',
+        'Versez les pâtes chaudes dans la poêle avec le guanciale, remuez 10 secondes. La poêle doit être HORS du feu — la chaleur résiduelle suffit. Versez sur les jaunes, ajoutez 2-3 cuillères d\'eau réservée, fouettez énergiquement jusqu\'à obtenir une crème brillante.',
+      ],
+      cta: 'Ajoutez-la à votre semaine — gratuit.',
+    },
+  };
+  const s = copy[lang] || copy.en;
+
+  const ingredientsHTML = s.ingredients.map(
+    ([name, qty]) => `<li><span class="ing-name">${safeText(name)}</span><span class="ing-qty">${safeText(qty)}</span></li>`
+  ).join('');
+
+  const methodHTML = s.method.map(step => `<li>${safeText(step)}</li>`).join('');
+
+  // Hand-picked Unsplash photo of carbonara — atmospheric overhead shot.
+  const photoUrl = 'https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=1800&q=70';
+
+  // Split the title into two display lines.
+  const titleLines = s.title.split('\n').map(l => safeText(l)).join('<br>');
+
+  const html = `
+    <section id="${ID}" class="hp-featured-recipe hp-fade-in no-print" aria-labelledby="hp-featured-title">
+      <div class="hp-featured-inner">
+        <div class="hp-featured-eyebrow-row">
+          ${HP_ORNAMENTS.wheat}
+          <span class="hp-featured-eyebrow">${safeText(s.eyebrow)}</span>
+          ${HP_ORNAMENTS.wheat}
+        </div>
+        <h2 id="hp-featured-title" class="hp-featured-title">${titleLines}</h2>
+        <div class="hp-featured-byline">
+          ${safeText(s.bylineOrigin)}
+          <span class="hp-featured-byline-sep">✦</span>
+          ${safeText(s.bylineTime)}
+          <span class="hp-featured-byline-sep">✦</span>
+          ${safeText(s.bylineServes)}
+        </div>
+        <figure class="hp-featured-figure">
+          <img src="${photoUrl}" alt="${safeText(s.title.replace('\n', ' '))}" loading="lazy" decoding="async">
+          <figcaption class="hp-featured-figcaption">${safeText(s.caption)}</figcaption>
+        </figure>
+        <div class="hp-featured-grid">
+          <aside class="hp-featured-ingredients">
+            <div class="hp-featured-section-title">${safeText(s.ingredientsLabel)}</div>
+            <ul>${ingredientsHTML}</ul>
+          </aside>
+          <div class="hp-featured-method">
+            <div class="hp-featured-section-title">${safeText(s.methodLabel)}</div>
+            <ol>${methodHTML}</ol>
+          </div>
+        </div>
+        <div class="hp-divider">${HP_ORNAMENTS.sprig}</div>
+        <p class="hp-featured-cta-row"><a href="#pricing-section">${safeText(s.cta)}</a></p>
+      </div>
+    </section>`;
+
+  // Slot right after the hero. Falls back to before-cuisine if hero
+  // somehow isn't there.
+  const heroEl = document.querySelector('.hero');
+  if (heroEl) {
+    heroEl.insertAdjacentHTML('afterend', html);
+  } else {
+    document.getElementById('hp-cuisine-discover')?.insertAdjacentHTML('beforebegin', html);
   }
 }
 
@@ -3222,6 +3417,36 @@ function refreshStickyUpgrade() {
   const premium = !!window.hasUnlimited;
   const show = _stickyState.pastHero && !premium && !_stickyState.pricingVisible;
   pill.classList.toggle('hp-sticky-upgrade--show', show);
+}
+
+// Phase 12 — Variable font axis play. As the user scrolls past the
+// hero, the headline's opsz and GRAD axes shift subtly. Pure type-
+// nerd flex; invisible to most but quietly signals craft.
+function setupHeroVariableFontScroll() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (typeof IntersectionObserver === 'undefined') return;
+  const hero = document.querySelector('.hero');
+  if (!hero || hero.dataset.fontScrollBound === '1') return;
+  hero.dataset.fontScrollBound = '1';
+
+  let raf = null;
+  const update = () => {
+    raf = null;
+    const rect = hero.getBoundingClientRect();
+    const heroH = rect.height || 1;
+    // 0 when hero is full in view; 1 when hero has scrolled fully out.
+    const p = Math.min(1, Math.max(0, -rect.top / heroH));
+    // opsz: 144 (display) → 36 (text) as scroll deepens. GRAD: 0 → -50.
+    const opsz = 144 - 108 * p;
+    const grad = 0 - 80 * p;
+    document.documentElement.style.setProperty('--hero-opsz', opsz.toFixed(1));
+    document.documentElement.style.setProperty('--hero-grad', grad.toFixed(1));
+  };
+  window.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(update);
+  }, { passive: true });
+  update();
 }
 
 // Phase 9 — Magnetic CTAs: the main upgrade buttons follow the cursor
@@ -3810,7 +4035,12 @@ function applyTranslations() {
   // Trust signals are inserted at hero.afterend, so calling this LAST
   // ensures the strip slots in right below the hero without disturbing
   // the order of the other sections.
+  // Order matters: each hero.afterend insertion becomes the new
+  // immediate-next-sibling of hero, pushing prior siblings down. So
+  // trust signals first → featured last gives us
+  // hero → FEATURED → TRUST → cuisine → product-preview → ...
   renderTrustSignals();
+  renderFeaturedRecipe();
   renderPremiumPreview();
   renderFAQ();
   updateStickyUpgradeText();
@@ -3824,6 +4054,8 @@ function applyTranslations() {
   // on language switch doesn't re-trigger animations.
   setupHeroCounters();
   setupHeroParallax();
+  // Phase 12 — variable font axis scroll, idempotent.
+  setupHeroVariableFontScroll();
   // Phase 8 — card tilt. Idempotent (dataset.tilted guard).
   setupCardTilt();
   // Phase 9 — magnetic CTAs. Idempotent (dataset.magnetic guard).

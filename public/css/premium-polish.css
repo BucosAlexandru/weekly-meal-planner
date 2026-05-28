@@ -1160,6 +1160,323 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .hero-phone-frame { animation: none !important; transform: rotate(-1deg) !important; }
 }
+
+/* ───────────────────────────────────────────────────────────── */
+/*  Phase 12 — SIGNATURE EDITORIAL                               */
+/*                                                                */
+/*  The featured-recipe section + custom SVG ornaments + word     */
+/*  level hero reveal + variable font axis play on scroll.       */
+/*  Where the page stops being "editorial enough" and becomes     */
+/*  a brand voice.                                                */
+/* ───────────────────────────────────────────────────────────── */
+
+/* SVG ornaments — hand-coded fine-line botanicals + tools.
+   Used as section dividers and to flank eyebrow text. Sized via
+   font-size on the parent to inherit color via currentColor. */
+.hp-ornament {
+  display: inline-block;
+  width: 1em;
+  height: 1.6em;
+  color: var(--hp-warm-deep);
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* Decorative section divider — centered ornament with hairlines. */
+.hp-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 5rem auto;
+  max-width: 540px;
+  color: var(--hp-warm-deep);
+}
+.hp-divider::before,
+.hp-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 122, 12, 0.35), transparent);
+}
+.hp-divider .hp-ornament {
+  width: 1.8em;
+  height: 2.6em;
+  font-size: 1.2rem;
+}
+
+/* ─── Featured recipe section — the editorial signature moment ─ */
+.hp-featured-recipe {
+  position: relative;
+  max-width: 1140px;
+  margin: 6rem auto 4rem;
+  padding: 0 1.5rem;
+}
+.hp-featured-eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  color: var(--hp-warm-deep);
+  margin-bottom: 1.25rem;
+}
+.hp-featured-eyebrow-row .hp-ornament {
+  font-size: 1rem;
+  width: 1.4em;
+  height: 2.2em;
+}
+.hp-featured-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+}
+.hp-featured-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: var(--hp-ink);
+  margin: 0 auto 0.85rem;
+  max-width: 14ch;
+}
+.hp-featured-byline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--hp-warm-deep);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.hp-featured-byline-sep {
+  display: inline-block;
+  margin: 0 0.6rem;
+  color: rgba(168, 122, 12, 0.55);
+}
+
+.hp-featured-figure {
+  position: relative;
+  margin: 0 auto 3rem;
+  max-width: 920px;
+}
+.hp-featured-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 30px 80px rgba(29, 24, 18, 0.18);
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.hp-featured-figcaption {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.92rem;
+  color: var(--hp-muted);
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Two-column ingredient + method layout — proper cookbook spread. */
+.hp-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+@media (min-width: 760px) {
+  .hp-featured-grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 4rem;
+  }
+}
+.hp-featured-section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: var(--hp-warm-deep);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(29, 24, 18, 0.12);
+}
+
+/* Ingredients — quantity right-aligned, leader between (cookbook style). */
+.hp-featured-ingredients ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hp-featured-ingredients li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(29, 24, 18, 0.07);
+  font-family: 'Fraunces', serif;
+  font-size: 1.02rem;
+  color: var(--hp-ink);
+}
+.hp-featured-ingredients li:last-child { border-bottom: none; }
+.hp-featured-ingredients li .ing-name { font-weight: 400; }
+.hp-featured-ingredients li .ing-qty {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--hp-warm-deep);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Method — numbered paragraphs in Fraunces, real cookbook leading. */
+.hp-featured-method ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: hp-method;
+}
+.hp-featured-method li {
+  counter-increment: hp-method;
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 1.5rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--hp-ink);
+}
+.hp-featured-method li::before {
+  content: counter(hp-method, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--hp-warm-deep);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hp-featured-cta-row {
+  margin-top: 3.5rem;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--hp-ink-soft);
+}
+.hp-featured-cta-row a {
+  color: var(--hp-warm-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1em;
+  font-style: italic;
+}
+.hp-featured-cta-row a:hover { color: var(--hp-ink); }
+
+/* ─── Word-level hero reveal ────────────────────────────────── */
+.hp-reveal-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.4em);
+  filter: blur(4px);
+  animation: hp-word-reveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(var(--reveal-index, 0) * 110ms + 200ms);
+  margin-right: 0.22em;
+}
+@keyframes hp-word-reveal {
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+.hp-reveal-word em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--hp-butter);
+}
+
+/* ─── Variable font axis play ───────────────────────────────── */
+/* JS updates --hero-opsz / --hero-grad as the user scrolls so the
+   headline subtly shifts optical size + grade. Premium type-nerd
+   detail; invisible to most but signals craft. */
+.hero-premium-title {
+  font-variation-settings:
+    'opsz' var(--hero-opsz, 144),
+    'GRAD' var(--hero-grad, 0);
+  transition: font-variation-settings 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hp-reveal-word {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .hero-premium-title { transition: none !important; }
+}
+
+/* ─── Editorial pacing — section breathing ─────────────────── */
+.hp-faq,
+.hp-premium-preview,
+.hp-cuisine-discover {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.hp-faq-list { gap: 0.75rem; }
+
+/* Headings get a tighter typographic treatment now that Fraunces
+   weight settles in. Italic display titles look richer at the
+   italic + 500 weight. */
+.hp-faq-title,
+.hp-premium-preview-title,
+.hp-cuisine-title,
+.discovery-title {
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  letter-spacing: -0.018em;
+}
+
+.hp-cuisine-eyebrow,
+.hp-faq-eyebrow,
+.hp-premium-preview-eyebrow,
+.preview-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.hp-cuisine-eyebrow::before,
+.hp-faq-eyebrow::before,
+.hp-premium-preview-eyebrow::before,
+.preview-section-eyebrow::before {
+  content: '✦';
+  font-size: 0.9rem;
+  color: var(--hp-warm-deep);
+  line-height: 1;
+}
+
+/* Refined sticky pill — italic Fraunces, more book-feeling. */
+.hp-sticky-upgrade {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.4rem;
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body::before { animation: none; }
