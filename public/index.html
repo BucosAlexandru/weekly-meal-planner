@@ -66,6 +66,7 @@
   <!-- HP_CUISINE_CSS:START -->
   <link rel="stylesheet" href="/css/cuisine-homepage.css">
   <!-- HP_CUISINE_CSS:END -->
+  <link rel="stylesheet" href="/css/premium-polish.css">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -91,6 +92,66 @@
       ]
     },
     "creator": { "@type": "Organization", "name": "Meal Planner" }
+  }
+  </script>
+
+  <!-- FAQ schema mirrors the FAQ accordion rendered by app.js (RO locale,
+       matching the page's canonical lang). Helps search engines surface
+       answers directly in the SERP. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Planificatorul este cu adevărat gratuit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da. Planificarea săptămânală, lista de cumpărături automată și cele 175+ rețete sunt gratuite, fără înregistrare. PDF-ul gratuit oferă o previzualizare de 2 zile din 7."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce primesc în plus cu Premium?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PDF complet pentru toate cele 7 zile, meniu buget săptămânal, asistent AI pentru rețete (chat) și asistent AI pentru planificarea meselor. €3/lună, fără angajament."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot anula abonamentul oricând?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da. Anulezi oricând din portalul Stripe, accesibil prin butonul „Manage subscription” după activare. Continui să folosești Premium până la sfârșitul perioadei plătite."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trebuie să-mi fac cont?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru utilizarea gratuită nu, deloc. Pentru Premium este suficient un email — îl folosim doar ca să-ți reactivăm accesul pe alt dispozitiv."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cum activez Premium pe un alt dispozitiv?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Introdu același email cu care ai plătit în secțiunea „Ai plătit deja? Deblochează”. Verificarea se face server-side prin Stripe — fără parole, fără reset."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "În câte limbi funcționează?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "14 limbi: română, engleză, spaniolă, franceză, germană, portugheză, rusă, italiană, turcă, arabă, chineză, japoneză, coreeană și hindi."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -350,6 +411,12 @@
       <span>© 2026</span>
     </div>
   </footer>
+
+  <!-- Sticky Premium upgrade pill (shown by app.js after the hero leaves
+       viewport, hidden for premium users and when #pricing-section is
+       already on screen). Initial text is RO; localized by JS. -->
+  <a id="hp-sticky-upgrade" class="hp-sticky-upgrade no-print" href="#pricing-section"
+     aria-label="Vezi Premium">⭐ Vezi Premium · €3/lună</a>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
