@@ -3224,6 +3224,65 @@ function refreshStickyUpgrade() {
   pill.classList.toggle('hp-sticky-upgrade--show', show);
 }
 
+// Phase 8 — Card choreography: 3D tilt on hover for the major card
+// surfaces. RAF-throttled, capped at ±6° per axis. Uses pointermove
+// so pen + touch + mouse all work (touch falls through to the
+// pointerleave reset). Reset transform on leave so the card eases
+// back to rest via the CSS transition.
+function setupCardTilt() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  const SELECTOR = '.hp-preview-card, .hp-cuisine-card, .discovery-card, .step-item';
+  document.querySelectorAll(SELECTOR).forEach(card => {
+    if (card.dataset.tilted === '1') return;
+    card.dataset.tilted = '1';
+    let raf = null;
+    card.addEventListener('mousemove', (e) => {
+      if (raf) return;
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 12; // ±6deg
+      const y = ((e.clientY - rect.top)  / rect.height - 0.5) * 12;
+      raf = requestAnimationFrame(() => {
+        card.style.transform =
+          `perspective(900px) rotateY(${x.toFixed(2)}deg) rotateX(${(-y).toFixed(2)}deg) translateY(-3px)`;
+        raf = null;
+      });
+    }, { passive: true });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+// Phase 8 — Apply --stagger-index to children of grid-like containers
+// so the CSS stagger animation reveals them in sequence on scroll-in.
+// Also tag the v2 section wrappers with .hp-fade-in so they trigger
+// the scroll observer.
+function applyStaggerAndFadeMarkers() {
+  // Containers whose children should stagger.
+  document.querySelectorAll(
+    '.hp-trust-row, .hp-premium-preview-grid, .hp-faq-list, ' +
+    '.hp-cuisine-grid, .discovery-cards, .steps-grid'
+  ).forEach(parent => {
+    Array.from(parent.children).forEach((child, i) => {
+      child.style.setProperty('--stagger-index', i);
+    });
+  });
+  // Sections that should fade in on scroll. The hp-trust-signals,
+  // hp-premium-preview, hp-faq are already tagged inside their render
+  // functions; tag the legacy ones here.
+  [
+    'product-preview-section',
+    'discovery-section',
+    'hp-cuisine-discover',
+  ].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.classList.contains('hp-fade-in')) {
+      el.classList.add('hp-fade-in');
+    }
+  });
+}
+
 // Phase 7 — Hero choreography: animate the .hero-stat-num spans from
 // 0 → target value when they scroll into view. Handles values like
 // "175+", "14", "€3", "Free", "175+ Recipes" by parsing the numeric
@@ -3649,12 +3708,17 @@ function applyTranslations() {
   renderFAQ();
   updateStickyUpgradeText();
   refreshStickyUpgrade();
+  // Phase 8 — tag new section wrappers + write stagger indices BEFORE the
+  // observer kicks so the reveal animation plays from the first frame.
+  applyStaggerAndFadeMarkers();
   setupScrollFadeIn();
   // Phase 7 — hero choreography. Both helpers are idempotent (counters
   // mark counted spans, parallax marks the hero element) so re-running
   // on language switch doesn't re-trigger animations.
   setupHeroCounters();
   setupHeroParallax();
+  // Phase 8 — card tilt. Idempotent (dataset.tilted guard).
+  setupCardTilt();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {

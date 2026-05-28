@@ -384,6 +384,58 @@ body.hp-cursor-active::after { opacity: 1; }
     transform: none !important;
   }
 }
+
+/* ── Phase 8: Card choreography ───────────────────────────── */
+/* 3D tilt-on-hover. Cards keep their layout transform stack
+   intact; only translateZ + rotateX/Y change. transition lets
+   the card ease back to rest when the cursor leaves. */
+.hp-preview-card,
+.hp-cuisine-card,
+.discovery-card,
+.step-item {
+  transform-style: preserve-3d;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.28s ease;
+  will-change: transform;
+}
+.hp-preview-card:hover,
+.hp-cuisine-card:hover,
+.discovery-card:hover,
+.step-item:hover {
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Stagger reveal — children of a .hp-fade-in container appear one
+   after another when the parent becomes visible. JS writes a
+   --stagger-index custom property on each child. */
+.hp-fade-in.is-visible .hp-trust-pill,
+.hp-fade-in.is-visible .hp-preview-card,
+.hp-fade-in.is-visible .hp-faq-item,
+.hp-fade-in.is-visible .hp-cuisine-card,
+.hp-fade-in.is-visible .discovery-card,
+.hp-fade-in.is-visible .step-item {
+  animation: hp-stagger-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(var(--stagger-index, 0) * 65ms);
+}
+@keyframes hp-stagger-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Make the surrounding section containers fade-in-eligible. The
+   .hp-fade-in class is already on .hp-trust-signals / .hp-premium-preview
+   / .hp-faq. Add it to existing v2 sections via JS in Phase 8. */
+
+@media (prefers-reduced-motion: reduce) {
+  .hp-preview-card,
+  .hp-cuisine-card,
+  .discovery-card,
+  .step-item {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body::before { animation: none; }
