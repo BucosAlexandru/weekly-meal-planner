@@ -2906,3 +2906,310 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
 @media (max-width: 480px) {
   .recipe-bridge-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 13 — Cuisine hub editorial alignment
+   ─────────────────────────────────────────────────────────────────────
+   CSS-only consistency pass. Brings cuisine hub pages into the same
+   editorial language as the homepage (Fraunces serif headings + warm
+   cream surfaces + hairline cards) WITHOUT touching the generator,
+   the page markup, or the per-cuisine atmosphere palette.
+
+   Scope is enforced by always selecting under .cuisine-hub-main so
+   recipe pages (.recipe-main), weekly-menu pages, and homepage are
+   untouched. Existing --cuisine-accent / --cuisine-accent-ink
+   atmosphere tokens are preserved and re-used — every cuisine keeps
+   its identity (mediterranean amber, latin terracotta, east-asian
+   teal, etc.). Only the typographic and surface treatment changes.
+
+   Fraunces is loaded here via @import to avoid regenerating ~3250
+   static pages just to add a <link>. Slight blocking-load cost is
+   the documented trade-off; can be promoted to <link rel="preload">
+   in the generator template later if perceptual perf needs it.
+   ═════════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&display=swap');
+
+/* Editorial color tokens scoped to the cuisine hub. Mirror the
+   homepage --hp-* names so the visual language stays portable, but
+   redefined here so we don't depend on premium-polish.css being
+   loaded on these pages. */
+.cuisine-hub-main {
+  --hp-cream:        #faf5ea;
+  --hp-cream-deep:   #f1e7d1;
+  --hp-ink:          #1d1812;
+  --hp-ink-soft:     #3a342b;
+  --hp-warm-deep:    #a87a0c;
+  --hp-muted:        #8a7e6a;
+  --hp-hairline:     rgba(29, 24, 18, 0.10);
+  --hp-hairline-soft:rgba(29, 24, 18, 0.06);
+
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+.cuisine-hub-main .cuisine-hero {
+  background:
+    linear-gradient(180deg, rgba(250,245,234,0) 0%, rgba(250,245,234,0.7) 100%),
+    var(--hp-cream);
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
+}
+.cuisine-hub-main .cuisine-hero::after {
+  /* Soft warm wash using the per-cuisine accent — keeps atmosphere
+     identity while letting the cream surface dominate. */
+  background:
+    radial-gradient(60% 70% at 80% 0%, color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 14%, transparent), transparent 70%);
+}
+.cuisine-hub-main .cuisine-hero-breadcrumb {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--hp-muted) !important;
+  margin-bottom: 1.5rem;
+}
+.cuisine-hub-main .cuisine-hero-breadcrumb a {
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.cuisine-hub-main .cuisine-hero-breadcrumb a:hover {
+  border-bottom-color: currentColor;
+}
+.cuisine-hub-main .cuisine-hero-flag {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+.cuisine-hub-main .cuisine-hero h1 {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  color: var(--hp-ink);
+  margin: 0.4rem 0 1.2rem;
+}
+.cuisine-hub-main .cuisine-hero h1 .accent {
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  font-style: italic;
+}
+.cuisine-hub-main .cuisine-hero-desc {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--hp-ink-soft);
+  max-width: 36rem;
+}
+.cuisine-hub-main .cuisine-hero-image {
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(29, 24, 18, 0.15);
+}
+
+/* ── Hub section spacing rhythm ──────────────────────────────── */
+.cuisine-hub-main .cuisine-hub-section {
+  padding-top: 3rem;
+  padding-bottom: 4.5rem;
+}
+
+/* ── Tile grid — editorial calm ──────────────────────────────── */
+.cuisine-hub-main .cuisine-tile-grid {
+  gap: 1.4rem;
+}
+.cuisine-hub-main .cuisine-tile {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(29, 24, 18, 0.02);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cuisine-hub-main .cuisine-tile:hover,
+.cuisine-hub-main .cuisine-tile:focus-visible {
+  /* No more translateY lift; just a calm shadow + atmosphere border tint. */
+  transform: none;
+  box-shadow: 0 14px 36px rgba(29, 24, 18, 0.08);
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 40%, var(--hp-hairline));
+}
+.cuisine-hub-main .cuisine-tile:focus-visible {
+  outline: 2px solid var(--cuisine-accent, var(--hp-warm-deep));
+  outline-offset: 3px;
+}
+/* Drop the image scale-on-hover — editorial pages stay still. */
+.cuisine-hub-main .cuisine-tile:hover .cuisine-tile-img img,
+.cuisine-hub-main .cuisine-tile:focus-visible .cuisine-tile-img img {
+  transform: none;
+}
+.cuisine-hub-main .cuisine-tile-img {
+  aspect-ratio: 4 / 3;
+  background: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 8%, var(--hp-cream-deep));
+}
+.cuisine-hub-main .cuisine-tile-body {
+  gap: 0.55rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+.cuisine-hub-main .cuisine-tile-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  line-height: 1.2;
+}
+.cuisine-hub-main .cuisine-tile-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--hp-ink-soft);
+}
+.cuisine-hub-main .cuisine-tile-meta {
+  padding-top: 0.45rem;
+  margin-top: 0.15rem;
+  border-top: 1px solid var(--hp-hairline-soft);
+  font-size: 0.74rem;
+  gap: 0.5rem 0.75rem;
+}
+.cuisine-hub-main .cuisine-tile-time {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+}
+.cuisine-hub-main .cuisine-tile-tag {
+  background: transparent;
+  border: 1px solid var(--hp-hairline);
+  color: var(--hp-ink-soft);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  padding: 0.18rem 0.55rem;
+}
+
+/* ── Related cuisines strip — editorial card grid ───────────── */
+.cuisine-hub-main .cuisine-related-strip {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--hp-hairline);
+}
+.cuisine-hub-main .cuisine-related-heading {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.cuisine-hub-main .cuisine-related-heading::before {
+  content: '✦';
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--hp-warm-deep);
+  line-height: 1;
+  transform: translateY(-0.15em);
+}
+.cuisine-hub-main .cuisine-related-card {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.cuisine-hub-main .cuisine-related-card:hover,
+.cuisine-hub-main .cuisine-related-card:focus-visible {
+  transform: none;
+  box-shadow: 0 10px 24px rgba(29, 24, 18, 0.06);
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 35%, var(--hp-hairline));
+}
+.cuisine-hub-main .cuisine-related-card-name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--hp-ink);
+}
+.cuisine-hub-main .cuisine-related-card-count {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--hp-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Back link — italic, restrained ──────────────────────────── */
+.cuisine-hub-main .cuisine-hub-back {
+  margin-top: 3rem;
+  text-align: center;
+}
+.cuisine-hub-main .cuisine-hub-back a {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--hp-warm-deep);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--hp-warm-deep) 30%, transparent);
+  padding-bottom: 0.15em;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.cuisine-hub-main .cuisine-hub-back a:hover {
+  color: var(--hp-ink);
+  border-bottom-color: currentColor;
+}
+
+/* ── Header consistency on cuisine pages ─────────────────────── */
+body:has(.cuisine-hub-main) .app-header {
+  background: rgba(250, 245, 234, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hp-hairline-soft);
+}
+
+/* ── Mobile elegance — tighter spacing without losing breathing ─ */
+@media (max-width: 600px) {
+  .cuisine-hub-main .cuisine-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .cuisine-hub-main .cuisine-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+  .cuisine-hub-main .cuisine-hub-section {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .cuisine-hub-main .cuisine-tile-grid {
+    gap: 1rem;
+  }
+  .cuisine-hub-main .cuisine-tile-body {
+    padding: 0.95rem 1rem 1.05rem;
+  }
+  .cuisine-hub-main .cuisine-tile-title {
+    font-size: 1.05rem;
+  }
+  .cuisine-hub-main .cuisine-related-strip {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+}
+
+/* Reduced motion — already minimal animation on these pages, but
+   pin the no-transform behavior explicitly for the few hover states
+   that still ease via transition. */
+@media (prefers-reduced-motion: reduce) {
+  .cuisine-hub-main .cuisine-tile,
+  .cuisine-hub-main .cuisine-related-card,
+  .cuisine-hub-main .cuisine-hub-back a {
+    transition: none !important;
+  }
+}
