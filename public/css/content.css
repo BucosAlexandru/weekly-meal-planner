@@ -3978,3 +3978,334 @@ body:has(.recipe-main) .app-header {
     box-shadow: none !important;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 15 — Recipes index editorial landing
+   ─────────────────────────────────────────────────────────────────────
+   The /recipes/ landing is the main visual entry point into the food
+   universe — it should feel like opening a premium cookbook, not
+   browsing a category dashboard. CSS-only consistency + emotional
+   warmth pass.
+
+   Scope strictly anchored to .cuisine-hub-index-main (UNIQUE to this
+   page). The hero rules use .cuisine-hub-index-main .content-hero so
+   the GLOBAL .content-hero on weekly menu pages stays untouched. The
+   card rules use .cuisine-hub-index-main .cuisine-card--preview so
+   the modifier scope can't leak elsewhere even if .cuisine-card grows
+   new variants.
+
+   Per-cuisine atmosphere preserved — every country card inherits
+   --cuisine-accent / --cuisine-tint via data-cuisine-atmosphere set
+   by the generator. France stays mediterranean amber, Japan stays
+   east-asian teal, Mexico stays latin terracotta, etc.
+
+   Fraunces is loaded via @import from Phase 13. Used surgically here:
+     • H1 + .accent (display title)
+     • .content-hero-desc (editorial standfirst)
+     • .origin-title-text (country name on cards)
+     • .cuisine-card-preview-names (dish list — italic 500 for
+       readability, NOT romantic ultra-light)
+   Inter remains for breadcrumb, count pills, all metadata.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* ── Color tokens scoped to the index landing ──────────────── */
+.cuisine-hub-index-main {
+  --hp-cream:        #faf5ea;
+  --hp-cream-deep:   #f1e7d1;
+  --hp-ink:          #1d1812;
+  --hp-ink-soft:     #3a342b;
+  --hp-warm-deep:    #a87a0c;
+  --hp-butter:       #e8b85b;
+  --hp-terracotta:   #c1392c;
+  --hp-muted:        #8a7e6a;
+  --hp-hairline:     rgba(29, 24, 18, 0.10);
+  --hp-hairline-soft:rgba(29, 24, 18, 0.06);
+
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+}
+
+/* ── Hero — magazine cover with warm radial depth ──────────── */
+/* These rules override .content-hero ONLY when nested inside
+   .cuisine-hub-index-main. The global .content-hero (used by weekly
+   menu listing + detail pages) keeps its dark green treatment. */
+.cuisine-hub-index-main .content-hero {
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+  padding: 5rem 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.cuisine-hub-index-main .content-hero--short {
+  padding: 5rem 1.5rem 4rem;
+}
+
+/* Drop the white-noise + green radial overlays that were on
+   ::before / ::after, replace with layered warm radials for depth.
+   The point: never feel empty, but never feel like a fashion landing. */
+.cuisine-hub-index-main .content-hero::before {
+  background:
+    radial-gradient(48rem 38rem at 88% 18%, color-mix(in srgb, var(--hp-warm-deep) 16%, transparent), transparent 65%),
+    radial-gradient(40rem 36rem at 12% 78%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
+    radial-gradient(56rem 42rem at 50% 110%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%);
+  opacity: 1;
+}
+.cuisine-hub-index-main .content-hero::after {
+  /* Replace the white-noise grain with a barely-there warm grain so
+     the cream surface has tactile depth, like uncoated paper. */
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+
+.cuisine-hub-index-main .content-hero-inner {
+  max-width: 920px;
+}
+
+/* Breadcrumb */
+.cuisine-hub-index-main .breadcrumb-nav {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--hp-muted);
+  opacity: 1;
+  margin-bottom: 1.75rem;
+}
+.cuisine-hub-index-main .breadcrumb-nav a {
+  color: var(--hp-warm-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  opacity: 1;
+}
+.cuisine-hub-index-main .breadcrumb-nav a:hover {
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+.cuisine-hub-index-main .breadcrumb-nav span {
+  color: var(--hp-ink);
+  opacity: 1;
+}
+
+/* Display title — italic Fraunces, cookbook scale */
+.cuisine-hub-index-main .content-hero h1 {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--hp-ink);
+  margin: 0 0 1.1rem;
+  max-width: 18ch;
+}
+.cuisine-hub-index-main .content-hero .accent {
+  color: var(--hp-warm-deep);
+  font-style: italic;
+}
+
+/* Standfirst description — italic editorial body */
+.cuisine-hub-index-main .content-hero-desc {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--hp-ink-soft);
+  max-width: 52ch;
+  margin: 0;
+  opacity: 1;
+}
+
+/* ── Recipe groups grid — generous breathing ───────────────── */
+.cuisine-hub-index-main .content-section {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+.cuisine-hub-index-main .recipe-groups-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.6rem;
+}
+
+/* ── Country cards — food magazine tiles ───────────────────── */
+.cuisine-hub-index-main .cuisine-card--preview {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(29, 24, 18, 0.02);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+}
+.cuisine-hub-index-main .cuisine-card--preview:hover,
+.cuisine-hub-index-main .cuisine-card--preview:focus-within {
+  /* Drop translateY lift — page reads calmer when 46 cards don't
+     all bob on hover. Just a soft shadow + atmosphere-tinted border. */
+  transform: none;
+  box-shadow: 0 16px 36px rgba(29, 24, 18, 0.10);
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 40%, var(--hp-hairline));
+}
+.cuisine-hub-index-main .cuisine-card--preview:active {
+  transform: none;
+}
+
+/* Stretched-link focus ring uses atmosphere */
+.cuisine-hub-index-main .cuisine-card-link:focus-visible {
+  outline: 2px solid var(--cuisine-accent, var(--hp-warm-deep));
+  outline-offset: 3px;
+}
+
+/* ── Thumbnail mosaic — food photography dominance ─────────── */
+.cuisine-hub-index-main .cuisine-card-thumbs {
+  height: 185px;
+  background: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 14%, var(--hp-cream-deep));
+}
+.cuisine-hub-index-main .cuisine-card-thumbs::after {
+  /* Slightly stronger bottom gradient than the original — keeps the
+     italic country name legible over any photo (light or dark). */
+  background: linear-gradient(180deg, transparent 50%, rgba(29, 24, 18, 0.22) 100%);
+}
+.cuisine-hub-index-main .cuisine-card--preview:hover .cuisine-card-thumbs img {
+  /* Drop the scale-on-hover — calmer browsing, less restless. */
+  transform: none;
+}
+
+/* ── Card meta — typography hierarchy ──────────────────────── */
+.cuisine-hub-index-main .cuisine-card-meta {
+  padding: 1.1rem 1.2rem 1.15rem;
+}
+.cuisine-hub-index-main .cuisine-card-meta .origin-title {
+  margin-bottom: 0.4rem;
+  align-items: baseline;
+}
+.cuisine-hub-index-main .cuisine-card .origin-title-text {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.18rem;
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  line-height: 1.2;
+}
+
+/* Count pill — atmosphere-aware editorial tag */
+.cuisine-hub-index-main .cuisine-card-meta .recipe-count {
+  background: transparent;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  border: 1px solid color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 30%, var(--hp-hairline));
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Preview dish names — italic Fraunces 500 (readable at scale, not
+   romantic ultra-light). User refinement: editorial + scannable. */
+.cuisine-hub-index-main .cuisine-card-preview-names {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: -0.005em;
+  line-height: 1.5;
+  color: var(--hp-ink-soft);
+  /* Keep the 2-line clamp from the base rule. */
+}
+
+/* ── Header tone consistency ───────────────────────────────── */
+body:has(.cuisine-hub-index-main) .app-header {
+  background: rgba(250, 245, 234, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hp-hairline-soft);
+}
+
+/* ── Mobile reading experience ─────────────────────────────── */
+@media (max-width: 600px) {
+  .cuisine-hub-index-main .content-hero,
+  .cuisine-hub-index-main .content-hero--short {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+  .cuisine-hub-index-main .breadcrumb-nav {
+    margin-bottom: 1.25rem;
+  }
+  .cuisine-hub-index-main .content-hero h1 {
+    font-size: clamp(1.95rem, 8.5vw, 2.6rem);
+    margin-bottom: 0.9rem;
+  }
+  .cuisine-hub-index-main .content-hero-desc {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .cuisine-hub-index-main .content-section {
+    padding-top: 2.25rem;
+    padding-bottom: 3rem;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.1rem;
+  }
+  .cuisine-hub-index-main .cuisine-card-thumbs {
+    /* User refinement: keep mobile density practical, not scroll-heavy.
+       155px lands between the desktop 185 and the original 130, giving
+       photos presence without making 46 cards a marathon scroll. */
+    height: 155px;
+  }
+  .cuisine-hub-index-main .cuisine-card-meta {
+    padding: 0.95rem 1rem 1rem;
+  }
+  .cuisine-hub-index-main .cuisine-card .origin-title-text {
+    font-size: 1.08rem;
+  }
+  .cuisine-hub-index-main .cuisine-card-preview-names {
+    font-size: 0.88rem;
+  }
+}
+
+/* Two-column phones: still keep some breathing */
+@media (max-width: 480px) {
+  .cuisine-hub-index-main .recipe-groups-grid {
+    grid-template-columns: 1fr;
+  }
+  .cuisine-hub-index-main .cuisine-card-thumbs {
+    height: 165px;
+  }
+}
+
+/* ── Reduced motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .cuisine-hub-index-main .cuisine-card--preview,
+  .cuisine-hub-index-main .breadcrumb-nav a {
+    transition: none !important;
+  }
+}
+
+/* ── Print — restore plain white surface ───────────────────── */
+@media print {
+  .cuisine-hub-index-main {
+    background: white;
+    color: black;
+  }
+  .cuisine-hub-index-main .content-hero {
+    background: white !important;
+    color: black !important;
+  }
+  .cuisine-hub-index-main .content-hero::before,
+  .cuisine-hub-index-main .content-hero::after {
+    display: none !important;
+  }
+  .cuisine-hub-index-main .content-hero h1,
+  .cuisine-hub-index-main .content-hero-desc {
+    color: black !important;
+  }
+  .cuisine-hub-index-main .cuisine-card--preview {
+    box-shadow: none !important;
+    border-color: #999 !important;
+  }
+}
