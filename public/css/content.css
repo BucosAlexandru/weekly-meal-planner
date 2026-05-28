@@ -4045,28 +4045,32 @@ body:has(.recipe-main) .app-header {
   padding: 3rem 1.5rem 2.5rem;
 }
 
-/* Phase 17 — atmospheric backdrop. The empty left side becomes a
-   subconscious food atmosphere: a very low-opacity ingredients spread
-   anchored to the left, faded into cream as it crosses the title.
-   The warm radials stay on top so the photo is felt, not seen.
+/* Phase 18 — atmospheric backdrop with cultural warmth.
+   The left side carries a real food / family moment photograph —
+   not an obvious tourism postcard, not a stock-photo banner. A
+   warm shared-table scene that reads as "family eating together"
+   on first glance. The cream gradient fades it across the title
+   so it never compromises readability, but the photo is now
+   visibly present (was almost subconscious in Phase 17, ~18%; is
+   now ~32% on the left edge — felt clearly, still cinematic).
    Stacking order (top → bottom):
-     1. warm radial accents (visible)
-     2. cream gradient (transparent on the left, opaque on the right)
-     3. atmospheric food photograph (left-anchored)
-   The cream gradient is 0.82 alpha at the left edge so the photo
-   bleeds in at ~18% — almost subconscious — and runs to 1.0 by 70%
-   width so the title sits on clean cream. No hard edges. */
+     1. warm radial accents (atmospheric warmth)
+     2. cream gradient (transparent-ish left → opaque right)
+     3. food / shared-meal photograph (left-anchored)
+   The cream gradient starts at 0.68 alpha (was 0.82) so the photo
+   bleeds in clearly without becoming a banner. Smooth fade, no
+   hard edges. */
 .cuisine-hub-index-main .content-hero::before {
   background:
     radial-gradient(44rem 34rem at 88% 22%, color-mix(in srgb, var(--hp-warm-deep) 16%, transparent), transparent 65%),
     radial-gradient(38rem 32rem at 10% 80%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
     radial-gradient(50rem 38rem at 55% 115%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%),
     linear-gradient(95deg,
-      rgba(250, 245, 234, 0.82) 0%,
-      rgba(250, 245, 234, 0.92) 40%,
-      rgba(250, 245, 234, 0.99) 70%,
+      rgba(250, 245, 234, 0.68) 0%,
+      rgba(250, 245, 234, 0.86) 38%,
+      rgba(250, 245, 234, 0.97) 65%,
       rgba(250, 245, 234, 1)    100%),
-    url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=2000&q=70') left center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=72') left center / cover no-repeat;
   opacity: 1;
 }
 .cuisine-hub-index-main .content-hero::after {
@@ -4126,8 +4130,10 @@ body:has(.recipe-main) .app-header {
   font-style: italic;
 }
 
-/* Standfirst description — italic editorial body, slightly bumped
-   to carry the new editorial copy with a bit more visual weight. */
+/* Phase 18 — Standfirst description now a 3-paragraph editorial
+   beat. The container is a <div> wrapping 3 <p> elements: the
+   scene, the scale, and the invitation. Paragraph spacing creates
+   the magazine rhythm seen in the reference. */
 .cuisine-hub-index-main .content-hero-desc {
   font-family: 'Fraunces', serif;
   font-style: italic;
@@ -4138,6 +4144,12 @@ body:has(.recipe-main) .app-header {
   max-width: 54ch;
   margin: 0;
   opacity: 1;
+}
+.cuisine-hub-index-main .content-hero-desc p {
+  margin: 0 0 0.55em;
+}
+.cuisine-hub-index-main .content-hero-desc p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── Recipe groups grid — tighter transition into the catalog ── */
@@ -4343,123 +4355,95 @@ body:has(.cuisine-hub-index-main) .app-header {
 }
 
 /* ═════════════════════════════════════════════════════════════════════
-   Phase 16 — Editorial focal anchor (RECALIBRATED — restrained)
+   Phase 18 — Emotional warmth via composition + photography
    ─────────────────────────────────────────────────────────────────────
-   The first iteration of this phase (grid-column: span 2 + 3-thumb
-   collage + 320px mosaic + ✦ + atmosphere halo) read as a "hero
-   billboard": the asymmetry broke the grid's rhythm, the collage
-   amplified inconsistent crops + dark images, and the card felt
-   mechanically "featured" rather than naturally elevated.
+   The page had structure but lacked appetite. Earlier phases tried to
+   add appetite via a focal first card (Phase 16) — that was a layout
+   trick. The real problem was lower-level: the 3-thumb collage
+   amplified inconsistent crops across 46 cuisines, the empty cream
+   space made the hero feel like a clean SaaS landing, and nothing
+   communicated cultural warmth per cuisine.
 
-   Recalibrated to ~15–18% elevation:
-     • Same column width as the rest of the catalog (no span 2)
-     • Single dominant photo (drop the 3-thumb composition for the
-       featured card — the supporting accents fought the lead image)
-     • Mosaic ~18% taller (220px vs 185px catalog baseline)
-     • Subtle atmosphere-tinted border + very faint warm shadow
-       (image hierarchy carries the moment, not the chrome)
-     • ✦ glyph removed (was reading decorative)
-     • Typography only slightly elevated (1.18 → 1.28rem)
-     • Preview names stay clamped — natural composition, no
-       stretched-meta feeling
+   This phase replaces those compromises with three composition moves:
 
-   The eye pauses briefly on the larger photo, then continues
-   naturally into the catalog rhythm. Effortless, not "this is the
-   special card".
+     1. Drop the 3-thumb mosaic on every card. Each cuisine now leads
+        with a SINGLE dominant photograph — its strongest image — so
+        the grid reads like a food magazine, not a Pinterest board.
+        Cards become taller to give that photo room (185 → 240px desktop,
+        155 → 180px mobile).
+
+     2. Cards carry their cuisine's atmosphere through a warm
+        atmosphere-tinted bottom gradient that mixes --cuisine-accent
+        with the existing ink-dark gradient. Japan reads cool/calm,
+        Mexico reads terracotta warmth, France/Italy/Greece read amber,
+        India reads deep south-asian — all subconsciously.
+
+     3. Phase 16's featured first-card focal is REMOVED. Every card now
+        has equal visual weight; the grid is a uniform discovery of
+        warm food moments rather than "this one is special". The
+        emotional pull comes from the photography itself.
+
+   No new sections, no JS, no animations. Pure composition refinement.
    ═════════════════════════════════════════════════════════════════════ */
 
-/* ── Featured card — restrained elevation, no billboard ─────── */
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child {
-  /* Stay in the natural column flow — no grid-column: span 2 */
-  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 22%, var(--hp-hairline));
-  /* Atmosphere, not glow. Very low percentage + tight spread.
-     Reads as "this card is warmer", almost subconsciously. */
-  box-shadow:
-    0 0 32px -22px color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 18%, transparent),
-    0 8px 22px rgba(29, 24, 18, 0.06);
-}
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child:hover,
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child:focus-within {
-  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 36%, var(--hp-hairline));
-  box-shadow:
-    0 0 40px -20px color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 24%, transparent),
-    0 14px 32px rgba(29, 24, 18, 0.09);
-}
-
-/* ── Single dominant image — drop the collage for the featured card ── */
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
-  /* ~18% taller than the 185px catalog baseline. The image is the
-     hero; the layout supports it without competing crops. */
-  height: 220px;
+/* ── Single dominant photo on every card — drop the 3-thumb mosaic ─ */
+.cuisine-hub-index-main .cuisine-card-thumbs {
+  /* Replace the 2fr 1fr 1fr grid with a single full-width image cell.
+     The supporting thumbs 2 and 3 stay in the DOM (markup untouched,
+     accessibility preserved) but are hidden visually so the lead photo
+     dominates. */
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 0;
+  /* Taller mosaic so the single image has the room to be appetizing. */
+  height: 240px;
 }
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(1) {
+.cuisine-hub-index-main .cuisine-card-thumb:nth-child(1) {
   grid-row: 1;
   grid-column: 1;
 }
-/* Supporting accents removed — one clean lead photo, no Pinterest
-   collage. The hidden thumbs stay in the DOM so the markup is
-   untouched and accessibility / aria-hidden parent flow is preserved. */
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(2),
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(3) {
+.cuisine-hub-index-main .cuisine-card-thumb:nth-child(2),
+.cuisine-hub-index-main .cuisine-card-thumb:nth-child(3) {
   display: none;
 }
 
-/* ── Meta panel — matches catalog padding, no luxury stretch ── */
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-meta {
-  /* Same padding as the catalog cards — no stretched-meta feeling. */
-  padding: 1.1rem 1.2rem 1.15rem;
-}
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .origin-title-text {
-  /* Direction preserved (slight elevation), intensity dialed back
-     from 1.4–1.65rem to a calmer 1.28rem. */
-  font-size: 1.28rem;
-  letter-spacing: -0.014em;
-}
-.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-preview-names {
-  /* Preview names stay clamped to 2 lines, like the catalog. No
-     unclamp gesture — keeps the card's composition natural. */
-  font-size: 0.94rem;
+/* ── Atmosphere-tinted bottom gradient — cultural warmth per cuisine ─ */
+/* Overrides the Phase 15 black-only bottom gradient. Each cuisine card
+   now blends its --cuisine-accent-ink into the gradient so the bottom
+   strip subtly carries the cuisine's atmosphere. Title text stays
+   readable over any photo (the dark stop maintains contrast). */
+.cuisine-hub-index-main .cuisine-card-thumbs::after {
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    color-mix(in srgb, var(--cuisine-accent-ink, #1d1812) 38%, rgba(29, 24, 18, 0.55)) 100%
+  );
 }
 
-/* ── Mobile — same single-image principle, shorter mosaic ───── */
+/* ── Mobile — same single-photo principle, practical density ────── */
 @media (max-width: 600px) {
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child {
-    box-shadow:
-      0 0 24px -22px color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 18%, transparent),
-      0 6px 16px rgba(29, 24, 18, 0.05);
-  }
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
-    /* ~13% taller than 155px catalog mobile — modest, not marathon. */
-    height: 175px;
-  }
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .origin-title-text {
-    font-size: 1.16rem;
+  .cuisine-hub-index-main .cuisine-card-thumbs {
+    height: 180px;
   }
 }
-
-/* Narrow phones — bump slightly since we're single column anyway */
 @media (max-width: 480px) {
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
-    height: 185px;
+  .cuisine-hub-index-main .cuisine-card-thumbs {
+    height: 200px;
   }
 }
 
-/* Print — strip the focal treatment entirely */
+/* ── Print — restore the 3-thumb composition for ink-friendly output ─ */
 @media print {
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child {
-    box-shadow: none !important;
-    border-color: var(--hp-hairline) !important;
-  }
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
+  .cuisine-hub-index-main .cuisine-card-thumbs {
     height: auto;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr;
   }
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(2),
-  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(3) {
+  .cuisine-hub-index-main .cuisine-card-thumb:nth-child(2),
+  .cuisine-hub-index-main .cuisine-card-thumb:nth-child(3) {
     display: block;
+  }
+  .cuisine-hub-index-main .cuisine-card-thumbs::after {
+    background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.2) 100%);
   }
 }

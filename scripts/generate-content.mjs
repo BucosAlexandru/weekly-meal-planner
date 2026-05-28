@@ -1962,7 +1962,7 @@ ${makeFooter(lc)}
 const RECIPE_LANG = {
   ro: { dir:'/ro/retete',    indexTitle:'Rețete din Toată Lumea | Meal-Planner.ro',
         indexH1:'Rețete din <span class="accent">Toată Lumea</span>',
-        indexDesc: n=>`De la un bistro din Lyon la un bol de ramen din Tokyo — explorează ${n} rețete din 46 de bucătării și alege unde începe cina diseară.`,
+        indexDesc: n=>`<p>De la mesele de familie la tradițiile transmise din generație în generație.</p><p>${n} rețete din 46 de bucătării, în 14 limbi.</p><p>Alege unde începe cina diseară.</p>`,
         breadHome:'Acasă', breadLabel:'Rețete',
         ingredientsH:'🛒 Ingrediente', howToH:'👨‍🍳 Mod de preparare',
         addBtn: n=>`Adaugă în planul meu`, relatedH: o=>`Alte rețete din ${esc(o)}`,
@@ -1973,7 +1973,7 @@ const RECIPE_LANG = {
         appDir:'/ro', lc: null },
   en: { dir:'/en/recipes',   indexTitle:`Recipes from Around the World | Meal-Planner.ro`,
         indexH1:'Recipes from <span class="accent">Around the World</span>',
-        indexDesc: n=>`From a Lyon bistro to a Tokyo ramen counter — explore ${n} recipes from 46 kitchens and choose where dinner starts tonight.`,
+        indexDesc: n=>`<p>From family tables to traditions passed down through generations.</p><p>${n} recipes from 46 kitchens, in 14 languages.</p><p>Choose where dinner starts tonight.</p>`,
         breadHome:'Home', breadLabel:'Recipes',
         ingredientsH:'🛒 Ingredients', howToH:'👨‍🍳 How to make it',
         addBtn: n=>`Add to my meal plan`, relatedH: o=>`More recipes from ${esc(o)}`,
@@ -1984,7 +1984,7 @@ const RECIPE_LANG = {
         appDir:'/en', lc: null },
   es: { dir:'/es/recetas',   indexTitle:`Recetas del Mundo | Meal-Planner.ro`,
         indexH1:'Recetas del <span class="accent">Mundo</span>',
-        indexDesc: n=>`De un bistró en Lyon a un mostrador de ramen en Tokio — explora ${n} recetas de 46 cocinas y elige dónde empieza la cena esta noche.`,
+        indexDesc: n=>`<p>De las mesas familiares a las tradiciones que pasan de generación en generación.</p><p>${n} recetas de 46 cocinas, en 14 idiomas.</p><p>Elige dónde empieza la cena esta noche.</p>`,
         breadHome:'Inicio', breadLabel:'Recetas',
         ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Cómo prepararlo',
         addBtn: n=>`Añadir a mi plan`, relatedH: o=>`Más recetas de ${esc(o)}`,
@@ -1995,7 +1995,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   fr: { dir:'/fr/recettes',  indexTitle:`Recettes du Monde | Meal-Planner.ro`,
         indexH1:'Recettes du <span class="accent">Monde</span>',
-        indexDesc: n=>`D'un bistrot lyonnais à un comptoir de ramen tokyoïte — explorez ${n} recettes de 46 cuisines et choisissez où démarre le dîner ce soir.`,
+        indexDesc: n=>`<p>Des tables familiales aux traditions transmises de génération en génération.</p><p>${n} recettes de 46 cuisines, en 14 langues.</p><p>Choisissez où commence le dîner ce soir.</p>`,
         breadHome:'Accueil', breadLabel:'Recettes',
         ingredientsH:'🛒 Ingrédients', howToH:'👨‍🍳 Comment préparer',
         addBtn: n=>`Ajouter à mon plan`, relatedH: o=>`Plus de recettes de ${esc(o)}`,
@@ -2006,7 +2006,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   de: { dir:'/de/rezepte',   indexTitle:`Rezepte aus aller Welt | Meal-Planner.ro`,
         indexH1:'Rezepte aus <span class="accent">aller Welt</span>',
-        indexDesc: n=>`Vom Lyoner Bistro bis zur Tokioter Ramen-Bar — entdecke ${n} Rezepte aus 46 Küchen und wähle, wo das Abendessen heute beginnt.`,
+        indexDesc: n=>`<p>Vom Familientisch zu Traditionen, die über Generationen weitergegeben werden.</p><p>${n} Rezepte aus 46 Küchen, in 14 Sprachen.</p><p>Wähle, wo das Abendessen heute beginnt.</p>`,
         breadHome:'Startseite', breadLabel:'Rezepte',
         ingredientsH:'🛒 Zutaten', howToH:'👨‍🍳 Zubereitung',
         addBtn: n=>`Zu meinem Plan hinzufügen`, relatedH: o=>`Weitere Rezepte aus ${esc(o)}`,
@@ -2017,7 +2017,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   pt: { dir:'/pt/receitas',  indexTitle:`Receitas do Mundo | Meal-Planner.ro`,
         indexH1:'Receitas do <span class="accent">Mundo</span>',
-        indexDesc: n=>`De um bistrô em Lyon a um balcão de ramen em Tóquio — explore ${n} receitas de 46 cozinhas e escolha onde começa o jantar esta noite.`,
+        indexDesc: n=>`<p>Das mesas de família às tradições transmitidas de geração em geração.</p><p>${n} receitas de 46 cozinhas, em 14 idiomas.</p><p>Escolha onde começa o jantar esta noite.</p>`,
         breadHome:'Início', breadLabel:'Receitas',
         ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Como preparar',
         addBtn: n=>`Adicionar ao meu plano`, relatedH: o=>`Mais receitas de ${esc(o)}`,
@@ -2028,7 +2028,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ru: { dir:'/ru/retsepty',  indexTitle:`Рецепты со всего мира | Meal-Planner.ro`,
         indexH1:'Рецепты со <span class="accent">всего мира</span>',
-        indexDesc: n=>`От лионского бистро до прилавка с раменом в Токио — изучите ${n} рецептов из 46 кухонь и выберите, где начнётся ужин сегодня.`,
+        indexDesc: n=>`<p>От семейных столов до традиций, передаваемых из поколения в поколение.</p><p>${n} рецептов из 46 кухонь, на 14 языках.</p><p>Выберите, где начнётся ужин сегодня.</p>`,
         breadHome:'Главная', breadLabel:'Рецепты',
         ingredientsH:'🛒 Ингредиенты', howToH:'👨‍🍳 Как приготовить',
         addBtn: n=>`Добавить в мой план`, relatedH: o=>`Ещё рецепты из ${esc(o)}`,
@@ -2039,7 +2039,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ar: { dir:'/ar/wasafat',   indexTitle:`وصفات من حول العالم | Meal-Planner.ro`,
         indexH1:'وصفات من <span class="accent">حول العالم</span>',
-        indexDesc: n=>`من بيسترو في ليون إلى منضدة رامن في طوكيو — استكشف ${n} وصفة من 46 مطبخًا واختر من أين يبدأ العشاء الليلة.`,
+        indexDesc: n=>`<p>من موائد العائلة إلى التقاليد المتوارثة جيلاً بعد جيل.</p><p>${n} وصفة من 46 مطبخًا، بـ 14 لغة.</p><p>اختر من أين يبدأ العشاء الليلة.</p>`,
         breadHome:'الرئيسية', breadLabel:'وصفات',
         ingredientsH:'🛒 المكونات', howToH:'👨‍🍳 طريقة التحضير',
         addBtn: n=>`أضف إلى خطتي`, relatedH: o=>`المزيد من وصفات ${esc(o)}`,
@@ -2050,7 +2050,7 @@ const RECIPE_LANG = {
         appDir:'', dir_attr:'rtl', lc: null },
   zh: { dir:'/zh/shipu',     indexTitle:`世界各地食谱 | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界各地</span>食谱',
-        indexDesc: n=>`从里昂小酒馆到东京拉面摊位 — 探索来自46个厨房的${n}道食谱，选择今晚晚餐从哪里开始。`,
+        indexDesc: n=>`<p>从家庭餐桌到代代相传的传统。</p><p>来自46个厨房的${n}道食谱，14种语言。</p><p>选择今晚晚餐从哪里开始。</p>`,
         breadHome:'首页', breadLabel:'食谱',
         ingredientsH:'🛒 食材', howToH:'👨‍🍳 做法',
         addBtn: n=>`加入我的计划`, relatedH: o=>`更多来自${esc(o)}的食谱`,
@@ -2061,7 +2061,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ja: { dir:'/ja/reshipi',   indexTitle:`世界の料理レシピ | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界の</span>料理レシピ',
-        indexDesc: n=>`リヨンのビストロから東京のラーメンカウンターまで — 46の厨房から${n}のレシピを巡り、今夜の食事をどこから始めるか選びましょう。`,
+        indexDesc: n=>`<p>家族の食卓から、世代を超えて受け継がれる伝統まで。</p><p>46の厨房から${n}のレシピ、14言語で。</p><p>今夜の食事をどこから始めるか選びましょう。</p>`,
         breadHome:'ホーム', breadLabel:'レシピ',
         ingredientsH:'🛒 材料', howToH:'👨‍🍳 作り方',
         addBtn: n=>`プランに追加`, relatedH: o=>`${esc(o)}のその他のレシピ`,
@@ -2072,7 +2072,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   hi: { dir:'/hi/recipes',   indexTitle:`दुनिया भर की रेसिपी | Meal-Planner.ro`,
         indexH1:'<span class="accent">दुनिया भर</span> की रेसिपी',
-        indexDesc: n=>`ल्यों के बिस्ट्रो से टोक्यो के रामेन काउंटर तक — 46 रसोइयों की ${n} रेसिपी देखें और आज रात का खाना कहां से शुरू होगा, चुनें।`,
+        indexDesc: n=>`<p>परिवार की मेज़ से लेकर पीढ़ी दर पीढ़ी चली आ रही परंपराओं तक।</p><p>46 रसोइयों की ${n} रेसिपी, 14 भाषाओं में।</p><p>आज रात का खाना कहां से शुरू होगा, चुनें।</p>`,
         breadHome:'होम', breadLabel:'रेसिपी',
         ingredientsH:'🛒 सामग्री', howToH:'👨‍🍳 बनाने का तरीका',
         addBtn: n=>`मेरी योजना में जोड़ें`, relatedH: o=>`${esc(o)} की और रेसिपी`,
@@ -2083,7 +2083,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   tr: { dir:'/tr/tarifler',  indexTitle:`Dünyadan Tarifler | Meal-Planner.ro`,
         indexH1:'<span class="accent">Dünyadan</span> Tarifler',
-        indexDesc: n=>`Lyon'da bir bistrodan Tokyo'da bir ramen tezgâhına — 46 mutfaktan ${n} tarifi keşfet ve akşam yemeği bu gece nereden başlayacak, sen seç.`,
+        indexDesc: n=>`<p>Aile sofralarından nesilden nesle aktarılan geleneklere.</p><p>46 mutfaktan ${n} tarif, 14 dilde.</p><p>Akşam yemeğinin nereden başlayacağını seç.</p>`,
         breadHome:'Ana Sayfa', breadLabel:'Tarifler',
         ingredientsH:'🛒 Malzemeler', howToH:'👨‍🍳 Nasıl yapılır',
         addBtn: n=>`Planıma ekle`, relatedH: o=>`${esc(o)} tarihinden daha fazla tarif`,
@@ -2094,7 +2094,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   it: { dir:'/it/ricette',   indexTitle:`Ricette dal Mondo | Meal-Planner.ro`,
         indexH1:'Ricette dal <span class="accent">Mondo</span>',
-        indexDesc: n=>`Da un bistrot di Lione a un banco di ramen di Tokyo — esplora ${n} ricette da 46 cucine e scegli dove inizia la cena stasera.`,
+        indexDesc: n=>`<p>Dalle tavole di famiglia alle tradizioni tramandate di generazione in generazione.</p><p>${n} ricette da 46 cucine, in 14 lingue.</p><p>Scegli dove inizia la cena stasera.</p>`,
         breadHome:'Home', breadLabel:'Ricette',
         ingredientsH:'🛒 Ingredienti', howToH:'👨‍🍳 Come preparare',
         addBtn: n=>`Aggiungi al mio piano`, relatedH: o=>`Altre ricette da ${esc(o)}`,
@@ -2105,7 +2105,7 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ko: { dir:'/ko/recipes',   indexTitle:`세계 요리 레시피 | Meal-Planner.ro`,
         indexH1:'<span class="accent">세계</span> 요리 레시피',
-        indexDesc: n=>`리옹의 비스트로부터 도쿄의 라멘 카운터까지 — 46개 주방의 ${n}가지 레시피를 둘러보고 오늘 저녁이 어디서 시작될지 선택하세요.`,
+        indexDesc: n=>`<p>가족의 식탁에서 대대로 이어진 전통까지.</p><p>46개 주방의 ${n}가지 레시피, 14개 언어로.</p><p>오늘 저녁이 어디서 시작될지 선택하세요.</p>`,
         breadHome:'홈', breadLabel:'레시피',
         ingredientsH:'🛒 재료', howToH:'👨‍🍳 만드는 법',
         addBtn: n=>`내 플랜에 추가`, relatedH: o=>`${esc(o)}의 더 많은 레시피`,
@@ -4018,23 +4018,27 @@ function recipeIndex(rl) {
       "name": display,
     };
   });
+  // indexDesc(n) now returns HTML with 3 <p> paragraphs for the visible
+  // hero. SEO surfaces (HEAD meta description + JSON-LD) need plain text
+  // so we collapse the paragraph tags into a single sentence stream.
+  const descPlain = rl.indexDesc(recipes.length).replace(/<\/p>\s*<p>/g, ' ').replace(/<\/?p>/g, '');
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": rl.indexTitle.split(' | ')[0],
-    "description": rl.indexDesc(recipes.length),
+    "description": descPlain,
     "url": `https://meal-planner.ro${rl.dir}/`,
     "inLanguage": code,
     "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
     "hasPart": { "@type": "ItemList", "numberOfItems": eligible.length, "itemListElement": items }
   });
 
-  return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
+  return `${HEAD(rl.indexTitle, descPlain, `${rl.dir}/`, code, dir_attr)}
 ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
     <h1>${rl.indexH1}</h1>
-    <p class="content-hero-desc">${rl.indexDesc(recipes.length)}</p>
+    <div class="content-hero-desc">${rl.indexDesc(recipes.length)}</div>
   </div></section>
   <section class="content-section"><div class="content-section-inner">
     <div class="recipe-groups-grid">${cards}</div>
