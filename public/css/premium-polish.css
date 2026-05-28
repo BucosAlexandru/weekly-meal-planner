@@ -330,6 +330,60 @@ body.hp-cursor-active::after { opacity: 1; }
 @media (hover: none) {
   body::after { display: none; }
 }
+
+/* ── Phase 7: Hero choreography ────────────────────────────── */
+/* Gentle floating animation on the phone mockup. Bobs up by ~10px
+   with a 1deg rocking tilt over 7s. perspective() lives on the
+   parent so the mouse-parallax JS can stack rotateX/rotateY without
+   wiping this transform. */
+.hero-phone-wrap {
+  animation: hp-phone-float 7s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes hp-phone-float {
+  0%   { transform: translate3d(0, 0, 0) rotate(-1deg); }
+  100% { transform: translate3d(0, -10px, 0) rotate(1deg); }
+}
+
+/* Mouse parallax wrapper — JS sets the 3D rotation on this element
+   so it doesn't conflict with the bob animation on .hero-phone-wrap. */
+.hero-phone-frame {
+  transition: transform 0.18s ease-out;
+  will-change: transform;
+}
+
+/* Hero stats — count-up animation needs the number to land on the
+   exact pixel each frame; give it a tabular-num for stable width. */
+.hero-stat-num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Badge pulse — soften the existing dot and add a slow halo. */
+.hero-badge .badge-pulse {
+  position: relative;
+}
+.hero-badge .badge-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(45, 143, 71, 0.35);
+  animation: hp-badge-halo 2.4s ease-out infinite;
+}
+@keyframes hp-badge-halo {
+  0%   { transform: scale(0.6); opacity: 0.6; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-phone-wrap,
+  .hero-phone-frame,
+  .hero-badge .badge-pulse::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body::before { animation: none; }

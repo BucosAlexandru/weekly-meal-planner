@@ -2610,17 +2610,17 @@ function renderPremiumHero() {
         <p class="hero-premium-sub">${safeText(s.sub).replace('\n','<br>')}</p>
         <div class="hero-stats-row" aria-label="Key stats">
           <div class="hero-stat">
-            <span class="hero-stat-num">${safeText(s.stat1n)}</span>
+            <span class="hero-stat-num" data-count-target="${safeText(s.stat1n)}">${safeText(s.stat1n)}</span>
             <span class="hero-stat-label">${safeText(s.stat1l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
           <div class="hero-stat">
-            <span class="hero-stat-num">${safeText(s.stat2n)}</span>
+            <span class="hero-stat-num" data-count-target="${safeText(s.stat2n)}">${safeText(s.stat2n)}</span>
             <span class="hero-stat-label">${safeText(s.stat2l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
           <a class="hero-stat hero-stat--link" href="#pricing-section" style="text-decoration:none;color:inherit;">
-            <span class="hero-stat-num">${safeText(s.stat3n)}</span>
+            <span class="hero-stat-num" data-count-target="${safeText(s.stat3n)}">${safeText(s.stat3n)}</span>
             <span class="hero-stat-label">${safeText(s.stat3l)}</span>
           </a>
         </div>
@@ -3224,6 +3224,87 @@ function refreshStickyUpgrade() {
   pill.classList.toggle('hp-sticky-upgrade--show', show);
 }
 
+// Phase 7 — Hero choreography: animate the .hero-stat-num spans from
+// 0 → target value when they scroll into view. Handles values like
+// "175+", "14", "€3", "Free", "175+ Recipes" by parsing the numeric
+// prefix and keeping the suffix as-is. No-ops if the value has no
+// digits (e.g. "Free", "मुफ़्त" — but Phase 4 already replaced those
+// with "€3").
+function setupHeroCounters() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (typeof IntersectionObserver === 'undefined') return;
+  const stats = document.querySelectorAll('.hero-stat-num[data-count-target]');
+  if (!stats.length) return;
+
+  const animate = (el, raw) => {
+    // Parse: optional prefix (€, $, etc.), integer, optional suffix (+, %, k).
+    const m = /^([^\d-]*)(-?\d+(?:\.\d+)?)(.*)$/.exec(raw || '');
+    if (!m) return; // No digits — leave as-is.
+    const prefix = m[1];
+    const target = parseFloat(m[2]);
+    const suffix = m[3];
+    const start = performance.now();
+    const dur = 1200;
+    const step = (now) => {
+      const elapsed = now - start;
+      const p = Math.min(elapsed / dur, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - p, 3);
+      const v = Math.round(target * eased);
+      el.textContent = prefix + v + (p >= 1 ? suffix : '');
+      if (p < 1) requestAnimationFrame(step);
+    };
+    el.textContent = prefix + '0' + suffix;
+    requestAnimationFrame(step);
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.counted) {
+        e.target.dataset.counted = '1';
+        animate(e.target, e.target.getAttribute('data-count-target'));
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.55 });
+  stats.forEach(s => io.observe(s));
+}
+
+// Phase 7 — Mouse parallax on the hero phone mockup. The phone tilts
+// gently toward the cursor while the user is over the hero. The bob
+// animation lives on .hero-phone-wrap (parent); we set the tilt on
+// .hero-phone-frame (child) so the two transforms never conflict.
+function setupHeroParallax() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  const hero = document.querySelector('.hero');
+  if (!hero || hero.dataset.parallaxBound === '1') return;
+  hero.dataset.parallaxBound = '1';
+
+  // Query the phone INSIDE the handler each frame — renderPremiumHero()
+  // replaces the hero's innerHTML on language switch, so any captured
+  // reference would point to a detached node after the first re-render.
+  let raf = null;
+  hero.addEventListener('mousemove', (e) => {
+    if (raf) return;
+    const rect = hero.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width  - 0.5;
+    const y = (e.clientY - rect.top)  / rect.height - 0.5;
+    raf = requestAnimationFrame(() => {
+      const phone = hero.querySelector('.hero-phone-frame');
+      if (phone) {
+        phone.style.transform =
+          `perspective(1200px) rotateY(${(x * 8).toFixed(2)}deg) rotateX(${(-y * 8).toFixed(2)}deg)`;
+      }
+      raf = null;
+    });
+  }, { passive: true });
+  hero.addEventListener('mouseleave', () => {
+    const phone = hero.querySelector('.hero-phone-frame');
+    if (phone) phone.style.transform = '';
+  });
+}
+
 // Phase 6 — Atmosphere: cursor glow tracking. Updates --mouse-x / --mouse-y
 // CSS custom properties on body so the warm radial halo behind ::after
 // follows the pointer. RAF-throttled. Only active on hover-capable devices
@@ -3569,6 +3650,11 @@ function applyTranslations() {
   updateStickyUpgradeText();
   refreshStickyUpgrade();
   setupScrollFadeIn();
+  // Phase 7 — hero choreography. Both helpers are idempotent (counters
+  // mark counted spans, parallax marks the hero element) so re-running
+  // on language switch doesn't re-trigger animations.
+  setupHeroCounters();
+  setupHeroParallax();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
