@@ -3224,6 +3224,111 @@ function refreshStickyUpgrade() {
   pill.classList.toggle('hp-sticky-upgrade--show', show);
 }
 
+// Phase 9 — Magnetic CTAs: the main upgrade buttons follow the cursor
+// slightly when it hovers, giving them an "attractor" feel. Capped at
+// 9px translation on each axis. Only the primary conversion buttons
+// (Premium upgrade, preview CTA, hero CTA, generic .btn-upgrade) are
+// wired — secondary links stay still.
+function setupMagneticCTAs() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  const SELECTOR =
+    '#pricing-upgrade-btn, .hp-preview-cta-btn, .btn-hero-cta, .btn-upgrade';
+  document.querySelectorAll(SELECTOR).forEach(btn => {
+    if (btn.dataset.magnetic === '1') return;
+    btn.dataset.magnetic = '1';
+    let raf = null;
+    btn.addEventListener('mousemove', (e) => {
+      if (raf) return;
+      const rect = btn.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 18; // ±9px
+      const y = ((e.clientY - rect.top)  / rect.height - 0.5) * 18;
+      raf = requestAnimationFrame(() => {
+        btn.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+        raf = null;
+      });
+    }, { passive: true });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+}
+
+// Phase 9 — Confetti burst, fired exactly once when premium activates
+// (Stripe success redirect or first-time successful manual verify).
+// Canvas is created on-the-fly and removed when particles settle —
+// no library dependency, no idle DOM after the celebration.
+function celebratePremium() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    if (sessionStorage.getItem('mp:celebrated') === '1') return;
+    sessionStorage.setItem('mp:celebrated', '1');
+  } catch (_) { /* sessionStorage blocked — celebrate anyway */ }
+
+  const canvas = document.createElement('canvas');
+  canvas.style.cssText =
+    'position:fixed;inset:0;pointer-events:none;z-index:9999;';
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = innerWidth * dpr;
+  canvas.height = innerHeight * dpr;
+  canvas.style.width  = innerWidth + 'px';
+  canvas.style.height = innerHeight + 'px';
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const colors = ['#d4a017', '#f5c243', '#fff5d6', '#2d8f47', '#a3d977', '#b5891b'];
+  const N = 90;
+  const cx = innerWidth / 2;
+  const cy = innerHeight * 0.35;
+  const particles = Array.from({ length: N }, () => ({
+    x: cx + (Math.random() - 0.5) * 220,
+    y: cy,
+    vx: (Math.random() - 0.5) * 14,
+    vy: -Math.random() * 18 - 6,
+    g: 0.42,
+    drag: 0.992,
+    rot: Math.random() * Math.PI * 2,
+    vr: (Math.random() - 0.5) * 0.32,
+    w: 6 + Math.random() * 7,
+    h: 4 + Math.random() * 5,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    life: 0,
+    maxLife: 150 + Math.random() * 60,
+  }));
+
+  let frame = 0;
+  const tick = () => {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    let alive = false;
+    for (const p of particles) {
+      if (p.life > p.maxLife) continue;
+      p.vx *= p.drag;
+      p.vy = p.vy * p.drag + p.g;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.vr;
+      p.life++;
+      alive = true;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, 1 - p.life / p.maxLife);
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    }
+    frame++;
+    if (alive && frame < 320) {
+      requestAnimationFrame(tick);
+    } else {
+      canvas.remove();
+    }
+  };
+  requestAnimationFrame(tick);
+}
+
 // Phase 8 — Card choreography: 3D tilt on hover for the major card
 // surfaces. RAF-throttled, capped at ±6° per axis. Uses pointermove
 // so pen + touch + mouse all work (touch falls through to the
@@ -3719,6 +3824,8 @@ function applyTranslations() {
   setupHeroParallax();
   // Phase 8 — card tilt. Idempotent (dataset.tilted guard).
   setupCardTilt();
+  // Phase 9 — magnetic CTAs. Idempotent (dataset.magnetic guard).
+  setupMagneticCTAs();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
@@ -3745,6 +3852,8 @@ function applyTranslations() {
     document.getElementById('hp-premium-preview')?.remove();
     if (typeof updateContentNav === 'function') updateContentNav(lang);
     if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
+    // Phase 9 — one-shot celebration on first Stripe success redirect.
+    if (typeof celebratePremium === 'function') celebratePremium();
     window.history.replaceState({}, '', window.location.pathname);
   }
 

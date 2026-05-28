@@ -436,6 +436,109 @@ body.hp-cursor-active::after { opacity: 1; }
     animation: none !important;
   }
 }
+
+/* ── Phase 9: Premium showcase ─────────────────────────────── */
+/* Register --angle so the conic-gradient border can be animated.
+   Falls back gracefully in browsers without @property — the border
+   just shows the gradient statically. */
+@property --hp-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Rotating conic-gradient halo around the Premium pricing card.
+   The actual card sits on top of the halo via a solid white inner
+   layer drawn by the existing .pricing-card--premium background. */
+.pricing-card--premium {
+  position: relative;
+  isolation: isolate;
+}
+.pricing-card--premium::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--hp-angle, 0deg),
+    #d4a017, #f5c243, #fff5d6, #d4a017, #b5891b, #d4a017
+  );
+  animation: hp-rotate-angle 8s linear infinite;
+  filter: blur(0.5px);
+  opacity: 0.9;
+}
+@keyframes hp-rotate-angle {
+  to { --hp-angle: 360deg; }
+}
+
+/* CTA glow — the Premium upgrade button gets a soft ambient halo
+   on hover so it visually anchors the section. */
+#pricing-upgrade-btn,
+.hp-preview-cta-btn,
+.btn-hero-cta {
+  position: relative;
+  z-index: 1;
+}
+#pricing-upgrade-btn::after,
+.hp-preview-cta-btn::after,
+.btn-hero-cta::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.45), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+#pricing-upgrade-btn:hover::after,
+.hp-preview-cta-btn:hover::after,
+.btn-hero-cta:hover::after {
+  opacity: 1;
+}
+
+/* Sticky pill breathing — once visible, the pill softly pulses to
+   draw the eye without screaming for it. */
+.hp-sticky-upgrade--show {
+  animation: hp-pill-breathe 3.6s ease-in-out infinite;
+}
+@keyframes hp-pill-breathe {
+  0%, 100% {
+    box-shadow: 0 10px 28px rgba(212, 160, 23, 0.40),
+                0 0 0 0 rgba(212, 160, 23, 0.5);
+  }
+  50% {
+    box-shadow: 0 14px 36px rgba(212, 160, 23, 0.55),
+                0 0 0 14px rgba(212, 160, 23, 0);
+  }
+}
+
+/* Magnetic CTA transform — JS pushes the button toward the cursor.
+   The transition gives the snap-back a natural feel. */
+#pricing-upgrade-btn,
+.hp-preview-cta-btn,
+.btn-hero-cta,
+.btn-upgrade {
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.22s ease;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card--premium::before {
+    animation: none !important;
+  }
+  .hp-sticky-upgrade--show { animation: none !important; }
+  #pricing-upgrade-btn,
+  .hp-preview-cta-btn,
+  .btn-hero-cta,
+  .btn-upgrade {
+    transition: none !important;
+    transform: none !important;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body::before { animation: none; }
