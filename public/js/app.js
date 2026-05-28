@@ -163,11 +163,36 @@ const NAV_CONTENT_LINKS = {
   ko: { plans: { href: '/ko/jugan-menu/',        label: '📅 메뉴' },          recipes: { href: '/ko/recipes/',              label: '🍽️ 레시피' } },
   hi: { plans: { href: '/hi/weekly-plan/',       label: '📅 मेनू' },         recipes: { href: '/hi/recipes/',              label: '🍽️ व्यंजन' } },
 };
+// Localized "See Premium →" link shown as a third CTA in the hero (Phase 4).
+// Hidden when window.hasUnlimited (paying user, no upsell needed).
+const HERO_PREMIUM_LINK = {
+  ro: 'Vezi Premium →',      en: 'See Premium →',         es: 'Ver Premium →',
+  fr: 'Voir Premium →',      de: 'Premium ansehen →',     pt: 'Ver Premium →',
+  ru: 'Посмотреть Премиум →', it: 'Vedi Premium →',        tr: "Premium'a bak →",
+  ar: 'شاهد بريميوم →',      zh: '查看高级版 →',           ja: 'プレミアムを見る →',
+  ko: '프리미엄 보기 →',      hi: 'प्रीमियम देखें →',
+};
+
 const NAV_PRICING_LINKS = {
   ro:'/ro/premium/', en:'/en/pricing/', es:'/es/precios/', fr:'/fr/tarifs/',
   de:'/de/preise/', pt:'/pt/precos/', ru:'/ru/tseny/', ar:'/ar/asaar/',
   zh:'/zh/jiage/', ja:'/ja/pricing/', hi:'/hi/pricing/', tr:'/tr/fiyatlar/',
   it:'/it/prezzi/', ko:'/ko/pricing/'
+};
+// Nav labels for the Premium link — localized in both states. The default
+// "⭐ Premium" surface gets swapped to "✅ Active" with a gold-gradient
+// pill when window.hasUnlimited is true so paying users see they're in.
+const NAV_PREMIUM_LABEL = {
+  ro: '⭐ Premium',  en: '⭐ Premium',  es: '⭐ Premium',  fr: '⭐ Premium',
+  de: '⭐ Premium',  pt: '⭐ Premium',  ru: '⭐ Премиум',  it: '⭐ Premium',
+  tr: '⭐ Premium',  ar: '⭐ بريميوم',  zh: '⭐ 高级版',    ja: '⭐ プレミアム',
+  ko: '⭐ 프리미엄',  hi: '⭐ प्रीमियम',
+};
+const NAV_ACTIVE_PREMIUM_LABEL = {
+  ro: '✅ Activ',    en: '✅ Active',   es: '✅ Activo',   fr: '✅ Actif',
+  de: '✅ Aktiv',    pt: '✅ Ativo',    ru: '✅ Активно',  it: '✅ Attivo',
+  tr: '✅ Aktif',    ar: '✅ مفعّل',     zh: '✅ 已激活',    ja: '✅ 有効',
+  ko: '✅ 활성',     hi: '✅ सक्रिय',
 };
 function updateContentNav(currentLang) {
   const navPlans   = document.getElementById('nav-plans');
@@ -182,6 +207,13 @@ function updateContentNav(currentLang) {
   }
   if (navPricing) {
     navPricing.href = NAV_PRICING_LINKS[currentLang] || '/pricing/';
+    if (window.hasUnlimited) {
+      navPricing.textContent = NAV_ACTIVE_PREMIUM_LABEL[currentLang] || NAV_ACTIVE_PREMIUM_LABEL.en;
+      navPricing.classList.add('nav-link--active-premium');
+    } else {
+      navPricing.textContent = NAV_PREMIUM_LABEL[currentLang] || NAV_PREMIUM_LABEL.en;
+      navPricing.classList.remove('nav-link--active-premium');
+    }
   }
 }
 
@@ -2595,6 +2627,7 @@ function renderPremiumHero() {
         <div class="hero-premium-cta">
           <button class="btn-hero-cta" id="hero-cta-btn" type="button">${safeText(s.cta)}</button>
           <a href="${mUrl}" class="hero-ghost-link">${safeText(s.ghost)}</a>
+          ${window.hasUnlimited ? '' : `<a href="#pricing-section" class="hero-premium-link">${safeText(HERO_PREMIUM_LINK[lang] || HERO_PREMIUM_LINK.en)}</a>`}
         </div>
       </div>
 
@@ -3466,6 +3499,9 @@ function applyTranslations() {
     if (statusEl) statusEl.innerHTML = i18n[lang]["payment.success"] || '✅ Plata a fost realizată cu succes!';
     if (generateBtn) generateBtn.style.display = 'inline-block';
     updateButtonState(); // ← adăugare, ca să ascundă galbenul + selectorul
+    // Drop the upsell panel and flip the nav badge to "Active" right away.
+    document.getElementById('hp-premium-preview')?.remove();
+    if (typeof updateContentNav === 'function') updateContentNav(lang);
     window.history.replaceState({}, '', window.location.pathname);
   }
 
@@ -3612,6 +3648,27 @@ function applyTranslations() {
     ).join('');
     const premList = s.premFeats.map(f => `<li>${f}</li>`).join('');
 
+    // Trust strip shown below the cards — reassures cancel/no-commit terms.
+    const TRUST_STRIP = {
+      ro: ['🔒 Plăți Stripe securizate', '↩ Anulezi oricând', '💳 Fără angajament'],
+      en: ['🔒 Stripe-secured', '↩ Cancel anytime', '💳 No commitment'],
+      es: ['🔒 Seguro con Stripe', '↩ Cancela cuando quieras', '💳 Sin compromiso'],
+      fr: ['🔒 Sécurisé par Stripe', '↩ Annulez à tout moment', '💳 Sans engagement'],
+      de: ['🔒 Stripe-gesichert', '↩ Jederzeit kündbar', '💳 Keine Bindung'],
+      pt: ['🔒 Seguro com Stripe', '↩ Cancele quando quiser', '💳 Sem compromisso'],
+      ru: ['🔒 Защищено Stripe', '↩ Отмена в любое время', '💳 Без обязательств'],
+      it: ['🔒 Pagamenti Stripe sicuri', '↩ Cancella quando vuoi', '💳 Senza impegno'],
+      tr: ['🔒 Stripe ile güvenli', '↩ Dilediğin zaman iptal', '💳 Taahhüt yok'],
+      ar: ['🔒 آمن مع Stripe', '↩ ألغِ في أي وقت', '💳 بدون التزام'],
+      zh: ['🔒 Stripe 安全', '↩ 随时取消', '💳 无承诺'],
+      ja: ['🔒 Stripe で安全', '↩ いつでもキャンセル', '💳 契約なし'],
+      ko: ['🔒 Stripe 보안', '↩ 언제든 취소', '💳 약정 없음'],
+      hi: ['🔒 Stripe सुरक्षित', '↩ कभी भी रद्द', '💳 कोई प्रतिबद्धता नहीं'],
+    };
+    const trustItems = (TRUST_STRIP[lang] || TRUST_STRIP.en)
+      .map(t => `<span class="pricing-trust-strip-item">${t}</span>`)
+      .join('<span aria-hidden="true">·</span>');
+
     el.innerHTML = `
       <div class="pricing-inner">
         <h2 class="pricing-title">${s.title}</h2>
@@ -3641,6 +3698,7 @@ function applyTranslations() {
           </div>
 
         </div>
+        <div class="pricing-trust-strip">${trustItems}</div>
       </div>
     `;
 
@@ -3713,8 +3771,11 @@ const manageBtn  = document.getElementById('manage-subscription');
       if (emailInput && !emailInput.value) emailInput.value = hintEmail;
       const pricingEl = document.getElementById('pricing-section');
       if (pricingEl) pricingEl.style.display = 'none';
+      // Premium preview panel only makes sense for non-premium users.
+      document.getElementById('hp-premium-preview')?.remove();
       if (manageBtn) manageBtn.style.display = 'inline-block';
       if (typeof updateButtonState === 'function') updateButtonState();
+      if (typeof updateContentNav === 'function') updateContentNav(lang);
     })
     .catch(() => { /* network blip — user can re-verify manually */ });
 })();
@@ -3768,7 +3829,10 @@ if (verifyBtn && emailInput && resultDiv) {
       // Manage-subscription click is wired globally in public/js/portal.js
       // (delegated handler). Just toggle visibility here.
       if (manageBtn) manageBtn.style.display = 'inline-block';
+      // Drop the premium preview panel — paying users don't need the upsell.
+      document.getElementById('hp-premium-preview')?.remove();
       if (typeof updateButtonState === 'function') updateButtonState();
+      if (typeof updateContentNav === 'function') updateContentNav(lang);
     } else if (found) {
       // Account exists but subscription is expired
       window.hasUnlimited = false;
