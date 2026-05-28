@@ -2700,6 +2700,180 @@ function renderTrustSignals() {
   document.querySelector('.hero')?.insertAdjacentHTML('afterend', html);
 }
 
+function renderPremiumPreview() {
+  // Don't show the upsell to users who already have Premium.
+  if (window.hasUnlimited) {
+    document.getElementById('hp-premium-preview')?.remove();
+    return;
+  }
+  const ID = 'hp-premium-preview';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: { eyebrow:'Cu Premium', title:'Vezi ce deblochezi cu €3/lună', sub:'Trei lucruri concrete pe care le primești când treci la Premium.',
+      cards: [
+        { ico:'📄', title:'PDF complet 7 zile', desc:'Nu doar previzualizarea de 2 zile — toate cele 7 zile cu rețete, ingrediente și lista de cumpărături.',
+          mock:'Luni — Marți — Miercuri — Joi — Vineri — Sâmbătă — Duminică' },
+        { ico:'🤖', title:'Asistent AI pentru rețete', desc:'Întreabă în chat: ce gătesc cu pui și brocoli? AI-ul îți sugerează rețete și alternative.',
+          mock:'„Sugerează 3 cine rapide cu pui și legume" → Pui cu broccoli...' },
+        { ico:'💰', title:'Meniu buget săptămânal', desc:'Un meniu pre-construit, cu rețete ieftine și lista de cumpărături optimizată pentru sub 150 lei.',
+          mock:'7 zile · ingrediente accesibile · listă centralizată' },
+      ], cta:'Vezi planul Premium →' },
+    en: { eyebrow:'With Premium', title:'See what €3/month unlocks', sub:'Three concrete things you get when you upgrade.',
+      cards: [
+        { ico:'📄', title:'Full 7-day PDF', desc:'Not just the 2-day preview — all 7 days with recipes, ingredients and the full shopping list.',
+          mock:'Mon — Tue — Wed — Thu — Fri — Sat — Sun' },
+        { ico:'🤖', title:'AI recipe assistant', desc:'Chat with it: "what can I cook with chicken and broccoli?" — get recipes and alternatives.',
+          mock:'"Suggest 3 quick dinners with chicken and veg" → Chicken with broccoli...' },
+        { ico:'💰', title:'Weekly budget menu', desc:'A pre-built menu of cheap recipes with a shopping list optimized to stay under €30 per week.',
+          mock:'7 days · affordable ingredients · single shopping list' },
+      ], cta:'See the Premium plan →' },
+    es: { eyebrow:'Con Premium', title:'Mira qué desbloqueas con €3/mes', sub:'Tres cosas concretas que obtienes al pasar a Premium.',
+      cards: [
+        { ico:'📄', title:'PDF completo 7 días', desc:'No solo la vista previa de 2 días — los 7 días con recetas, ingredientes y lista de compras.',
+          mock:'Lun — Mar — Mié — Jue — Vie — Sáb — Dom' },
+        { ico:'🤖', title:'Asistente IA de recetas', desc:'Chatea: "¿qué cocino con pollo y brócoli?" — recibe recetas y alternativas.',
+          mock:'"Sugiere 3 cenas rápidas con pollo y verduras" → Pollo con brócoli...' },
+        { ico:'💰', title:'Menú económico semanal', desc:'Un menú prearmado con recetas baratas y lista de compras optimizada por debajo de €30/semana.',
+          mock:'7 días · ingredientes accesibles · una sola lista' },
+      ], cta:'Ver el plan Premium →' },
+    fr: { eyebrow:'Avec Premium', title:'Voyez ce que €3/mois débloque', sub:'Trois choses concrètes que vous obtenez en passant à Premium.',
+      cards: [
+        { ico:'📄', title:'PDF complet 7 jours', desc:'Pas seulement l\'aperçu de 2 jours — les 7 jours avec recettes, ingrédients et liste complète.',
+          mock:'Lun — Mar — Mer — Jeu — Ven — Sam — Dim' },
+        { ico:'🤖', title:'Assistant IA recettes', desc:'Discutez : "que cuisiner avec poulet et brocoli ?" — obtenez recettes et alternatives.',
+          mock:'"Propose 3 dîners rapides poulet-légumes" → Poulet au brocoli...' },
+        { ico:'💰', title:'Menu budget hebdomadaire', desc:'Un menu pré-construit de recettes économiques avec liste de courses optimisée pour rester sous €30/semaine.',
+          mock:'7 jours · ingrédients accessibles · liste unique' },
+      ], cta:'Voir le plan Premium →' },
+    de: { eyebrow:'Mit Premium', title:'Schau, was €3/Monat freischaltet', sub:'Drei konkrete Dinge, die du beim Upgrade bekommst.',
+      cards: [
+        { ico:'📄', title:'Volles 7-Tage-PDF', desc:'Nicht nur die 2-Tage-Vorschau — alle 7 Tage mit Rezepten, Zutaten und vollständiger Einkaufsliste.',
+          mock:'Mo — Di — Mi — Do — Fr — Sa — So' },
+        { ico:'🤖', title:'KI-Rezept-Assistent', desc:'Chatte: "Was kann ich mit Hähnchen und Brokkoli kochen?" — bekomme Rezepte und Alternativen.',
+          mock:'„Schlage 3 schnelle Hähnchen-Gemüse-Gerichte vor" → Hähnchen mit Brokkoli...' },
+        { ico:'💰', title:'Wöchentliches Budget-Menü', desc:'Ein fertiges Menü mit günstigen Rezepten und einer Einkaufsliste, die unter €30/Woche bleibt.',
+          mock:'7 Tage · günstige Zutaten · eine Liste' },
+      ], cta:'Premium-Plan ansehen →' },
+    pt: { eyebrow:'Com Premium', title:'Veja o que €3/mês desbloqueia', sub:'Três coisas concretas que recebe ao fazer upgrade.',
+      cards: [
+        { ico:'📄', title:'PDF completo 7 dias', desc:'Não só a pré-visualização de 2 dias — os 7 dias com receitas, ingredientes e lista completa.',
+          mock:'Seg — Ter — Qua — Qui — Sex — Sáb — Dom' },
+        { ico:'🤖', title:'Assistente IA receitas', desc:'Converse: "o que cozinhar com frango e brócolis?" — receba receitas e alternativas.',
+          mock:'"Sugere 3 jantares rápidos com frango e legumes" → Frango com brócolis...' },
+        { ico:'💰', title:'Menu económico semanal', desc:'Um menu pré-construído com receitas baratas e lista de compras otimizada para ficar sob €30/semana.',
+          mock:'7 dias · ingredientes acessíveis · lista única' },
+      ], cta:'Ver o plano Premium →' },
+    ru: { eyebrow:'С Премиум', title:'Что разблокирует €3/мес', sub:'Три конкретные вещи, которые вы получаете при обновлении.',
+      cards: [
+        { ico:'📄', title:'Полный PDF на 7 дней', desc:'Не только превью 2 дней — все 7 дней с рецептами, ингредиентами и полным списком покупок.',
+          mock:'Пн — Вт — Ср — Чт — Пт — Сб — Вс' },
+        { ico:'🤖', title:'ИИ-помощник по рецептам', desc:'Чат: "что приготовить из курицы и брокколи?" — получите рецепты и альтернативы.',
+          mock:'„Предложи 3 быстрых ужина с курицей и овощами" → Курица с брокколи...' },
+        { ico:'💰', title:'Недельное бюджетное меню', desc:'Готовое меню из дешёвых рецептов и список покупок, оптимизированный для уровня меньше €30/неделю.',
+          mock:'7 дней · доступные ингредиенты · единый список' },
+      ], cta:'Посмотреть Премиум →' },
+    it: { eyebrow:'Con Premium', title:'Scopri cosa sblocchi con €3/mese', sub:'Tre cose concrete che ottieni passando a Premium.',
+      cards: [
+        { ico:'📄', title:'PDF completo 7 giorni', desc:'Non solo l\'anteprima di 2 giorni — tutti e 7 i giorni con ricette, ingredienti e lista della spesa completa.',
+          mock:'Lun — Mar — Mer — Gio — Ven — Sab — Dom' },
+        { ico:'🤖', title:'Assistente IA ricette', desc:'Chiedi: "cosa cucino con pollo e broccoli?" — ricevi ricette e alternative.',
+          mock:'"Proponi 3 cene veloci pollo-verdure" → Pollo con broccoli...' },
+        { ico:'💰', title:'Menu economico settimanale', desc:'Un menu già pronto con ricette economiche e lista della spesa ottimizzata per stare sotto €30/settimana.',
+          mock:'7 giorni · ingredienti accessibili · lista unica' },
+      ], cta:'Vedi il piano Premium →' },
+    tr: { eyebrow:'Premium ile', title:'€3/ay ile neyin kilidini açtığını gör', sub:'Yükselttiğinde aldığın üç somut şey.',
+      cards: [
+        { ico:'📄', title:'Tam 7 günlük PDF', desc:'Sadece 2 günlük önizleme değil — tarifler, malzemeler ve tam alışveriş listesiyle 7 günün hepsi.',
+          mock:'Pzt — Sal — Çar — Per — Cum — Cmt — Paz' },
+        { ico:'🤖', title:'AI tarif asistanı', desc:'Sohbet et: "tavuk ve brokoli ile ne pişiririm?" — tarifler ve alternatifler al.',
+          mock:'„3 hızlı tavuk-sebze yemeği öner" → Brokolili tavuk...' },
+        { ico:'💰', title:'Haftalık bütçe menüsü', desc:'€30/haftanın altında kalmak için ucuz tarifler ve optimize alışveriş listesi olan hazır menü.',
+          mock:'7 gün · uygun malzemeler · tek liste' },
+      ], cta:'Premium planı gör →' },
+    ar: { eyebrow:'مع بريميوم', title:'شاهد ماذا يفتح لك €3/شهر', sub:'ثلاثة أشياء ملموسة تحصل عليها عند الترقية.',
+      cards: [
+        { ico:'📄', title:'PDF كامل 7 أيام', desc:'ليس فقط معاينة اليومين — كل الأيام السبعة مع الوصفات والمكونات وقائمة التسوق الكاملة.',
+          mock:'الإثنين — الثلاثاء — الأربعاء — الخميس — الجمعة — السبت — الأحد' },
+        { ico:'🤖', title:'مساعد وصفات بالذكاء الاصطناعي', desc:'دردش: "ماذا أطبخ بالدجاج والبروكلي؟" — احصل على وصفات وبدائل.',
+          mock:'„اقترح 3 وجبات سريعة بالدجاج والخضار" → دجاج بالبروكلي...' },
+        { ico:'💰', title:'قائمة ميزانية أسبوعية', desc:'قائمة جاهزة بوصفات اقتصادية وقائمة تسوق محسّنة للبقاء تحت €30/أسبوع.',
+          mock:'7 أيام · مكونات ميسورة · قائمة واحدة' },
+      ], cta:'شاهد خطة بريميوم →' },
+    zh: { eyebrow:'通过高级版', title:'看看 €3/月 解锁了什么', sub:'升级后您会获得三样具体的东西。',
+      cards: [
+        { ico:'📄', title:'完整7天PDF', desc:'不只是2天预览 — 全部7天包含食谱、食材和完整购物清单。',
+          mock:'周一 — 周二 — 周三 — 周四 — 周五 — 周六 — 周日' },
+        { ico:'🤖', title:'AI食谱助手', desc:'聊天问："鸡肉和西兰花能做什么？"— 获得食谱和替代方案。',
+          mock:'"推荐3道鸡肉蔬菜快手菜" → 西兰花炒鸡肉...' },
+        { ico:'💰', title:'每周节俭菜单', desc:'预先构建的便宜食谱菜单，购物清单优化至每周不到€30。',
+          mock:'7天 · 实惠食材 · 一份清单' },
+      ], cta:'查看高级版 →' },
+    ja: { eyebrow:'プレミアムで', title:'€3/月で何が解除されるか見る', sub:'アップグレードで得られる3つの具体的なもの。',
+      cards: [
+        { ico:'📄', title:'7日間フルPDF', desc:'2日プレビューだけでなく — 7日間すべてのレシピ、食材、完全な買い物リスト。',
+          mock:'月 — 火 — 水 — 木 — 金 — 土 — 日' },
+        { ico:'🤖', title:'AIレシピアシスタント', desc:'チャット：「鶏肉とブロッコリーで何が作れる？」— レシピと代替案を得る。',
+          mock:'「鶏肉と野菜の素早い夕食を3つ提案」→ 鶏肉とブロッコリー...' },
+        { ico:'💰', title:'週間節約メニュー', desc:'週€30以下を維持するために最適化された安価なレシピと買い物リストのプリビルトメニュー。',
+          mock:'7日 · 手頃な食材 · 単一の買い物リスト' },
+      ], cta:'プレミアムプランを見る →' },
+    ko: { eyebrow:'프리미엄으로', title:'€3/월이 무엇을 잠금 해제하는지 보세요', sub:'업그레이드 시 얻는 세 가지 구체적인 것.',
+      cards: [
+        { ico:'📄', title:'7일 전체 PDF', desc:'2일 미리보기만이 아닌 — 레시피, 재료, 전체 장보기 목록이 포함된 7일 전체.',
+          mock:'월 — 화 — 수 — 목 — 금 — 토 — 일' },
+        { ico:'🤖', title:'AI 레시피 도우미', desc:'채팅: "닭고기와 브로콜리로 무엇을 만들 수 있나요?" — 레시피와 대안 받기.',
+          mock:'"닭과 야채로 빠른 저녁 3개 제안" → 브로콜리 닭...' },
+        { ico:'💰', title:'주간 예산 메뉴', desc:'주당 €30 미만으로 유지하도록 최적화된 저렴한 레시피와 장보기 목록의 미리 구성된 메뉴.',
+          mock:'7일 · 저렴한 재료 · 단일 목록' },
+      ], cta:'프리미엄 플랜 보기 →' },
+    hi: { eyebrow:'प्रीमियम के साथ', title:'देखें €3/माह क्या अनलॉक करता है', sub:'अपग्रेड पर आपको मिलने वाली तीन ठोस चीजें।',
+      cards: [
+        { ico:'📄', title:'पूर्ण 7-दिन PDF', desc:'सिर्फ 2-दिन का पूर्वावलोकन नहीं — रेसिपी, सामग्री और पूरी खरीदारी सूची के साथ सभी 7 दिन।',
+          mock:'सोम — मंगल — बुध — गुरु — शुक्र — शनि — रवि' },
+        { ico:'🤖', title:'AI रेसिपी सहायक', desc:'चैट करें: "चिकन और ब्रोकोली से क्या बना सकते हैं?" — रेसिपी और विकल्प पाएं।',
+          mock:'"चिकन-सब्ज़ी के 3 तेज़ डिनर सुझाएं" → ब्रोकोली चिकन...' },
+        { ico:'💰', title:'साप्ताहिक बजट मेनू', desc:'सस्ती रेसिपी का प्री-बिल्ट मेनू और प्रति सप्ताह €30 से कम रहने के लिए अनुकूलित खरीदारी सूची।',
+          mock:'7 दिन · किफायती सामग्री · एक सूची' },
+      ], cta:'प्रीमियम योजना देखें →' },
+  };
+  const s = copy[lang] || copy.en;
+
+  const cardsHTML = s.cards.map(c => `
+      <div class="hp-preview-card">
+        <div class="hp-preview-card-icon" aria-hidden="true">${safeText(c.ico, '⭐')}</div>
+        <h3 class="hp-preview-card-title">${safeText(c.title)}</h3>
+        <p class="hp-preview-card-desc">${safeText(c.desc)}</p>
+        <div class="hp-preview-card-mock">
+          <span class="hp-preview-card-mock-lock" aria-hidden="true">🔒</span>
+          ${safeText(c.mock)}
+        </div>
+      </div>`).join('');
+
+  const html = `
+    <section id="${ID}" class="hp-premium-preview hp-fade-in no-print" aria-labelledby="hp-premium-preview-title">
+      <div class="hp-premium-preview-head">
+        <span class="hp-premium-preview-eyebrow">${safeText(s.eyebrow)}</span>
+        <h2 id="hp-premium-preview-title" class="hp-premium-preview-title">${safeText(s.title)}</h2>
+        <p class="hp-premium-preview-sub">${safeText(s.sub)}</p>
+      </div>
+      <div class="hp-premium-preview-grid">${cardsHTML}</div>
+      <p class="hp-preview-cta">
+        <a class="hp-preview-cta-btn" href="#pricing-section">${safeText(s.cta)}</a>
+      </p>
+    </section>`;
+
+  // Insert right before the pricing section so the visual upsell leads
+  // directly into the actual pricing cards.
+  const pricingEl = document.getElementById('pricing-section');
+  if (pricingEl) {
+    pricingEl.insertAdjacentHTML('beforebegin', html);
+  } else {
+    // Fallback: append before the export section.
+    document.querySelector('.export-section')?.insertAdjacentHTML('beforebegin', html);
+  }
+}
+
 function renderFAQ() {
   const ID = 'hp-faq';
   document.getElementById(ID)?.remove();
@@ -3267,6 +3441,7 @@ function applyTranslations() {
   // ensures the strip slots in right below the hero without disturbing
   // the order of the other sections.
   renderTrustSignals();
+  renderPremiumPreview();
   renderFAQ();
   setupScrollFadeIn();
   // 6) Paragraful SEO per limbă
