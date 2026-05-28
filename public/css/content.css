@@ -4309,3 +4309,179 @@ body:has(.cuisine-hub-index-main) .app-header {
     border-color: #999 !important;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 16 — Editorial focal anchor on recipes index
+   ─────────────────────────────────────────────────────────────────────
+   The catalog reads clean now but no single tile stops the eye. This
+   phase elevates the FIRST .cuisine-card--preview into a magazine-cover
+   moment so the page opens with "tonight, this one" before settling
+   into the catalog rhythm. Restraint is intentional — the food
+   photography is the hero; the layout supports it.
+
+   No new content, no markup changes, no animations. Pure CSS hierarchy
+   scoped to .cuisine-hub-index-main .recipe-groups-grid
+   .cuisine-card--preview:first-child so the focal can't leak to other
+   cuisine-card variants or surfaces.
+
+   Per-cuisine atmosphere flows through: the featured card carries the
+   warm radiance of its --cuisine-accent (France amber, Italy
+   terracotta, Japan teal, etc.). One focal point. The remaining
+   45 cards stay uniform so the catalog stays scannable.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* ── Spotlight first card — naturally elevated, not promotional ── */
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child {
+  grid-column: span 2;
+  border-radius: 16px;
+  position: relative;
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 24%, var(--hp-hairline));
+  /* Halo is atmosphere, not glow. Low percentage + tight spread so it
+     reads as "the card belongs to a warmer corner of the page" rather
+     than "this card is being promoted". */
+  box-shadow:
+    0 0 56px -18px color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 22%, transparent),
+    0 22px 50px rgba(29, 24, 18, 0.10);
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child:hover,
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child:focus-within {
+  /* Slight intensification on hover — still atmospheric, no flash */
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 36%, var(--hp-hairline));
+  box-shadow:
+    0 0 70px -16px color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 30%, transparent),
+    0 26px 60px rgba(29, 24, 18, 0.13);
+}
+
+/* Subtle editorial signal — almost subconscious. Lower opacity + small
+   size so it reads as a curator's mark, not a badge. Will be removed
+   in a follow-up if it starts feeling decorative. */
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child::after {
+  content: '✦';
+  position: absolute;
+  top: 1rem;
+  right: 1.15rem;
+  z-index: 3;
+  font-family: 'Fraunces', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--hp-cream);
+  opacity: 0.7;
+  text-shadow: 0 1px 6px rgba(29, 24, 18, 0.4);
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* ── Mosaic re-composition: dominant photo + 2 stacked accents ── */
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
+  /* The image IS the hero — give it room without ostentatious height. */
+  height: 320px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(1) {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(2) {
+  grid-row: 1;
+  grid-column: 2;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(3) {
+  grid-row: 2;
+  grid-column: 2;
+}
+/* Strengthen the bottom gradient slightly so the title reads cleanly
+   against any photo — still respecting the image. */
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs::after {
+  background: linear-gradient(180deg, transparent 55%, rgba(29, 24, 18, 0.26) 100%);
+}
+
+/* ── Meta panel — naturally elevated, not luxurious ─────────── */
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-meta {
+  padding: 1.4rem 1.55rem 1.45rem;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .origin-title {
+  margin-bottom: 0.5rem;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .origin-title-text {
+  /* One notch up from 1.18rem, not a display-scale gesture. */
+  font-size: clamp(1.4rem, 2.4vw, 1.65rem);
+  letter-spacing: -0.018em;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .recipe-count {
+  /* Count pill matches the slightly elevated typographic register. */
+  font-size: 0.64rem;
+  padding: 0.2rem 0.65rem;
+}
+.cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-preview-names {
+  /* Unclamp the dish list — the featured card earns its full preview.
+     Slightly elevated body size but not jumbo. */
+  font-size: clamp(0.96rem, 1.15vw, 1.02rem);
+  line-height: 1.55;
+  -webkit-line-clamp: unset;
+  display: block;
+  max-width: 46ch;
+}
+
+/* ── Mobile — natural width, shorter mosaic, scannable scroll ── */
+@media (max-width: 600px) {
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child {
+    /* Already 1-col below this breakpoint; revert the span so the card
+       doesn't try to span into a column that doesn't exist. */
+    grid-column: auto;
+    box-shadow:
+      0 0 38px -16px color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 22%, transparent),
+      0 14px 32px rgba(29, 24, 18, 0.09);
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child::after {
+    top: 0.85rem;
+    right: 1rem;
+    font-size: 0.72rem;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
+    /* Practical density on mobile — don't make the first scroll a
+       marathon. 230px is meaningfully taller than the 155px catalog
+       cards without dominating the viewport. */
+    height: 230px;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-meta {
+    padding: 1.1rem 1.15rem 1.15rem;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .origin-title-text {
+    font-size: 1.3rem;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-preview-names {
+    font-size: 0.94rem;
+  }
+}
+
+/* Narrow phones — keep the mosaic readable but compact */
+@media (max-width: 480px) {
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
+    height: 200px;
+  }
+}
+
+/* Print — drop the focal treatment, return to uniform catalog */
+@media print {
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child {
+    grid-column: span 1;
+    box-shadow: none !important;
+    border-color: var(--hp-hairline) !important;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child::after {
+    display: none !important;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumbs {
+    height: auto;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(1),
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(2),
+  .cuisine-hub-index-main .recipe-groups-grid .cuisine-card--preview:first-child .cuisine-card-thumb:nth-child(3) {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}
