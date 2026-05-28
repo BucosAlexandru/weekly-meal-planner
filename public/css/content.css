@@ -4078,7 +4078,7 @@ body:has(.recipe-main) .app-header {
       rgba(250, 245, 234, 0.80) 38%,
       rgba(250, 245, 234, 0.96) 65%,
       rgba(250, 245, 234, 1)    100%),
-    url('https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=2200&q=72') left center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2200&q=72') left center / cover no-repeat;
   opacity: 1;
 }
 .cuisine-hub-index-main .content-hero::after {
@@ -4163,6 +4163,39 @@ body:has(.recipe-main) .app-header {
 }
 .cuisine-hub-index-main .content-hero-desc p:last-child {
   margin-bottom: 0;
+}
+
+/* Phase 20 — Micro-story kicker. ONE evocative editorial line below
+   the standfirst description. Three sensory moments (Tokyo midnight /
+   Lyon lunch / Naples Sunday) telegraph the breadth of the catalog
+   in a single phrase — restrained, italic, no decoration. Lives
+   inside the hero so it doesn't introduce a new section. */
+.cuisine-hub-index-main .content-hero-kicker {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.25vw, 1.05rem);
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  color: var(--hp-warm-deep);
+  margin: 1.5rem 0 0;
+  max-width: 54ch;
+  opacity: 0.92;
+}
+@media (max-width: 600px) {
+  .cuisine-hub-index-main .content-hero-kicker {
+    font-size: 0.92rem;
+    margin-top: 1.1rem;
+  }
+}
+
+/* Phase 20 — Subtle warmth lift on card photos. Saturation +4% and
+   a hair of contrast lift the food imagery without changing its
+   character. Conservative enough that good photos stay good; not
+   enough to make weak photos look weird. Applied only to the
+   single-photo cards on the recipes index. */
+.cuisine-hub-index-main .cuisine-card-thumb img {
+  filter: saturate(1.04) contrast(1.02);
 }
 
 /* ── Recipe groups grid — tighter transition into the catalog ── */
