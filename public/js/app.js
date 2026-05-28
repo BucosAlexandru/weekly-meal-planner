@@ -2655,6 +2655,66 @@ function renderPremiumHero() {
 }
 /* ─── END LANDING PAGE SECTIONS ────────────────────────────── */
 
+function renderTrustSignals() {
+  const ID = 'hp-trust-signals';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: ['🔓 Fără înregistrare', '🛡️ Plăți Stripe securizate', '🌍 Funcționează în orice browser', '↩️ Anulezi oricând'],
+    en: ['🔓 No signup needed', '🛡️ Stripe-secured payments', '🌍 Works in any browser', '↩️ Cancel anytime'],
+    es: ['🔓 Sin registro', '🛡️ Pagos seguros con Stripe', '🌍 Funciona en cualquier navegador', '↩️ Cancela cuando quieras'],
+    fr: ['🔓 Sans inscription', '🛡️ Paiements sécurisés par Stripe', '🌍 Marche dans tout navigateur', '↩️ Annulez à tout moment'],
+    de: ['🔓 Keine Anmeldung', '🛡️ Stripe-gesicherte Zahlungen', '🌍 Funktioniert in jedem Browser', '↩️ Jederzeit kündbar'],
+    pt: ['🔓 Sem cadastro', '🛡️ Pagamentos seguros via Stripe', '🌍 Funciona em qualquer navegador', '↩️ Cancele quando quiser'],
+    ru: ['🔓 Без регистрации', '🛡️ Безопасная оплата Stripe', '🌍 Работает в любом браузере', '↩️ Отмена в любое время'],
+    it: ['🔓 Senza registrazione', '🛡️ Pagamenti sicuri con Stripe', '🌍 Funziona in ogni browser', '↩️ Cancella quando vuoi'],
+    tr: ['🔓 Kayıt yok', '🛡️ Stripe ile güvenli ödeme', '🌍 Her tarayıcıda çalışır', '↩️ Dilediğin zaman iptal et'],
+    ar: ['🔓 بدون تسجيل', '🛡️ دفع آمن عبر Stripe', '🌍 يعمل في أي متصفح', '↩️ ألغِ في أي وقت'],
+    zh: ['🔓 无需注册', '🛡️ Stripe 安全支付', '🌍 任何浏览器都能用', '↩️ 随时取消'],
+    ja: ['🔓 登録不要', '🛡️ Stripe による安全な決済', '🌍 どのブラウザでも動作', '↩️ いつでもキャンセル可'],
+    ko: ['🔓 가입 불필요', '🛡️ Stripe 안전 결제', '🌍 모든 브라우저에서 작동', '↩️ 언제든 취소'],
+    hi: ['🔓 बिना पंजीकरण', '🛡️ Stripe सुरक्षित भुगतान', '🌍 किसी भी ब्राउज़र में काम करता है', '↩️ कभी भी रद्द करें'],
+  };
+  const pills = copy[lang] || copy.en;
+
+  const pillsHTML = pills.map(p => {
+    // Split first emoji from the rest of the label so we can size the
+    // icon and the text independently.
+    const m = p.match(/^(\S+)\s+(.+)$/);
+    const ico = m ? m[1] : '';
+    const txt = m ? m[2] : p;
+    return `<span class="hp-trust-pill">
+      <span class="hp-trust-pill-ico" aria-hidden="true">${ico}</span>
+      <span class="hp-trust-pill-txt">${safeText(txt)}</span>
+    </span>`;
+  }).join('');
+
+  const html = `
+    <section id="${ID}" class="hp-trust-signals hp-fade-in no-print" aria-label="Trust signals">
+      <div class="hp-trust-row">${pillsHTML}</div>
+    </section>`;
+
+  // Always insert at hero.afterend. applyTranslations() calls this
+  // function LAST so other sections are already in place; new content
+  // inserted at afterend becomes the hero's immediate next sibling.
+  document.querySelector('.hero')?.insertAdjacentHTML('afterend', html);
+}
+
+function setupScrollFadeIn() {
+  if (typeof IntersectionObserver === 'undefined') return;
+  const els = document.querySelectorAll('.hp-fade-in:not(.is-visible)');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '-40px' });
+  els.forEach(el => io.observe(el));
+}
+
 function renderCuisineDiscover() {
   const ID = 'hp-cuisine-discover';
   // Remove the previous render AND the static fallback (no id attribute)
@@ -2918,6 +2978,11 @@ function applyTranslations() {
   renderCuisineDiscover();
   renderDiscovery();
   renderPlannerAnchor();
+  // Trust signals are inserted at hero.afterend, so calling this LAST
+  // ensures the strip slots in right below the hero without disturbing
+  // the order of the other sections.
+  renderTrustSignals();
+  setupScrollFadeIn();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
