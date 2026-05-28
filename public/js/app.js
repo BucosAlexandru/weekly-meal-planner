@@ -3224,6 +3224,37 @@ function refreshStickyUpgrade() {
   pill.classList.toggle('hp-sticky-upgrade--show', show);
 }
 
+// Phase 6 — Atmosphere: cursor glow tracking. Updates --mouse-x / --mouse-y
+// CSS custom properties on body so the warm radial halo behind ::after
+// follows the pointer. RAF-throttled. Only active on hover-capable devices
+// and when reduced-motion is not requested.
+function setupCursorAtmosphere() {
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (document.body.dataset.cursorBound === '1') return;
+  document.body.dataset.cursorBound = '1';
+
+  let raf = null;
+  let lastX = 0, lastY = 0;
+  document.addEventListener('mousemove', (e) => {
+    lastX = e.clientX;
+    lastY = e.clientY;
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      document.body.style.setProperty('--mouse-x', lastX + 'px');
+      document.body.style.setProperty('--mouse-y', lastY + 'px');
+      if (!document.body.classList.contains('hp-cursor-active')) {
+        document.body.classList.add('hp-cursor-active');
+      }
+      raf = null;
+    });
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => {
+    document.body.classList.remove('hp-cursor-active');
+  });
+}
+
 function setupStickyUpgrade() {
   const pill = document.getElementById('hp-sticky-upgrade');
   if (!pill) return;
@@ -3847,6 +3878,9 @@ const manageBtn  = document.getElementById('manage-subscription');
 // the text + visibility refresh on every language switch and on premium
 // state changes.
 if (typeof setupStickyUpgrade === 'function') setupStickyUpgrade();
+
+// Phase 6 — Atmosphere setup (cursor glow). Runs once on script load.
+if (typeof setupCursorAtmosphere === 'function') setupCursorAtmosphere();
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
     const email = emailInput.value.trim();

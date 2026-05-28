@@ -279,7 +279,61 @@
   opacity: 1;
   transform: none;
 }
+
+/* ── Phase 6: Atmosphere ──────────────────────────────────── */
+/* Smooth in-page scrolling for anchor jumps (sticky pill, hero CTAs). */
+html { scroll-behavior: smooth; }
+
+/* Drifting aurora gradient. Behind everything via z-index:-2.
+   Animation is slow enough to feel ambient, not distracting. */
+body { position: relative; }
+body::before {
+  content: '';
+  position: fixed;
+  inset: -10%;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(40rem 40rem at 18% 24%, rgba(212, 160, 23, 0.10), transparent 65%),
+    radial-gradient(36rem 36rem at 82% 18%, rgba(45, 143, 71, 0.08),  transparent 65%),
+    radial-gradient(42rem 42rem at 50% 86%, rgba(245, 194, 67, 0.07), transparent 65%),
+    radial-gradient(34rem 34rem at 12% 78%, rgba(255, 224, 130, 0.06), transparent 65%);
+  animation: hp-aurora-drift 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes hp-aurora-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-2.5%, 1.5%, 0) scale(1.06); }
+  100% { transform: translate3d(1.5%, -2%, 0) scale(1.02); }
+}
+
+/* Soft cursor glow that follows the mouse — adds a warm focus halo
+   wherever the user is looking. JS sets --mouse-x / --mouse-y. */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 320px; height: 320px;
+  transform: translate3d(calc(var(--mouse-x, 50vw) - 160px), calc(var(--mouse-y, 50vh) - 160px), 0);
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.10), transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  mix-blend-mode: multiply;
+  filter: blur(8px);
+  will-change: transform, opacity;
+}
+body.hp-cursor-active::after { opacity: 1; }
+
+@media (hover: none) {
+  body::after { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body::before { animation: none; }
+  body::after { display: none; }
   .hp-fade-in,
   .hp-preview-card,
   .hp-sticky-upgrade,
@@ -287,5 +341,6 @@
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
   }
 }
