@@ -3213,3 +3213,768 @@ body:has(.cuisine-hub-main) .app-header {
     transition: none !important;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 14 — Recipe detail page editorial alignment
+   ─────────────────────────────────────────────────────────────────────
+   CSS-only consistency pass. Brings recipe detail pages into the same
+   editorial visual language as the homepage and cuisine hubs WITHOUT
+   touching the generator, the page markup, image pipeline, JS, or
+   any recipe content.
+
+   Fraunces (already loaded via @import in Phase 13) is used surgically:
+     • h1 (recipe name)
+     • h2 column headers (Ingredients / Method / Nutrition)
+     • Step counters (decimal-leading-zero italic)
+     • Section accents (pairings, related, bridge, CTA banner heading)
+   Inter remains the body font for tagline, ingredients, method bodies,
+   nutrition rows, feature descriptions, card meta — readability first.
+
+   Scope is enforced by always selecting under .recipe-main so cuisine
+   hubs (.cuisine-hub-main), weekly menus (.content-main only), and
+   the homepage are unaffected.
+
+   Per-cuisine atmosphere is preserved — every recipe inherits the
+   --cuisine-accent / --cuisine-accent-ink tokens already wired by the
+   generator (data-cuisine-atmosphere on .recipe-main). Italian carbonara
+   stays warm-terracotta, Japanese ramen stays east-asian teal, etc.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* ── Color tokens scoped to the recipe page ─────────────────── */
+.recipe-main {
+  --hp-cream:        #faf5ea;
+  --hp-cream-deep:   #f1e7d1;
+  --hp-ink:          #1d1812;
+  --hp-ink-soft:     #3a342b;
+  --hp-warm-deep:    #a87a0c;
+  --hp-butter:       #e8b85b;
+  --hp-muted:        #8a7e6a;
+  --hp-hairline:     rgba(29, 24, 18, 0.10);
+  --hp-hairline-soft:rgba(29, 24, 18, 0.06);
+
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+}
+
+/* ── Breadcrumb ────────────────────────────────────────────── */
+.recipe-main .recipe-breadcrumb {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--hp-muted);
+  padding: 1.5rem 0 0.6rem;
+}
+.recipe-main .recipe-breadcrumb a {
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.recipe-main .recipe-breadcrumb a:hover {
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+.recipe-main .recipe-breadcrumb span {
+  color: var(--hp-ink);
+}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.recipe-main .recipe-hero-grid {
+  padding: 1.25rem 0 3rem;
+  gap: 3rem;
+}
+.recipe-main .recipe-hero-img-col {
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 9%, var(--hp-cream-deep));
+  box-shadow: 0 20px 50px rgba(29, 24, 18, 0.14);
+  transition: none;
+}
+.recipe-main .recipe-photo-container {
+  background: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 9%, var(--hp-cream-deep));
+}
+.recipe-main .recipe-hero-img-col:hover img {
+  transform: none;
+}
+.recipe-main .recipe-hero-info-col {
+  gap: 1.1rem;
+}
+
+/* Badge — editorial hairline pill, atmosphere-tinted */
+.recipe-main .recipe-badge {
+  background: transparent;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  border: 1px solid color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 32%, var(--hp-hairline));
+  border-radius: 999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+}
+.recipe-main .recipe-badge-origin {
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.recipe-main .recipe-badge-origin:hover {
+  border-bottom-color: currentColor;
+}
+
+/* H1 — cookbook display title (italic Fraunces, intentional, one per page) */
+.recipe-main .recipe-hero-info-col h1 {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.95rem, 4.6vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  color: var(--hp-ink);
+  margin: 0.3rem 0 0.75rem;
+}
+
+/* Tagline — kept Inter (body copy, readability over style) */
+.recipe-main .recipe-tagline {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--hp-ink-soft);
+  font-weight: 400;
+  max-width: 58ch;
+  margin: 0 0 0.4rem;
+}
+
+/* Meta row — hairline-divided data row, no card backgrounds */
+.recipe-main .recipe-meta-row {
+  border-top: 1px solid var(--hp-hairline);
+  border-bottom: 1px solid var(--hp-hairline);
+  padding: 1.05rem 0;
+  gap: 1.4rem 1.25rem;
+  margin: 0.5rem 0 1rem;
+}
+.recipe-main .recipe-meta-item {
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-width: 0;
+  gap: 0.18rem;
+  align-items: flex-start;
+  transition: none;
+}
+.recipe-main .recipe-meta-item:hover {
+  background: transparent;
+  border: none;
+}
+.recipe-main .recipe-meta-item i {
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  font-size: 0.95rem;
+}
+.recipe-main .recipe-meta-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.62rem;
+  color: var(--hp-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.recipe-main .recipe-meta-value {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--hp-ink);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.005em;
+}
+
+/* CTA buttons (hero) — calm ink primary + cream outline */
+.recipe-main .btn-recipe-primary {
+  background: var(--hp-ink);
+  color: var(--hp-cream);
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0;
+  box-shadow: 0 10px 24px rgba(29, 24, 18, 0.14);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.recipe-main .btn-recipe-primary:hover {
+  background: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  color: var(--hp-cream);
+  transform: none;
+  box-shadow: 0 12px 28px rgba(29, 24, 18, 0.2);
+}
+.recipe-main .btn-recipe-outline {
+  background: #fffefa;
+  color: var(--hp-ink);
+  border: 1px solid var(--hp-hairline);
+  border-radius: 999px;
+  padding: 0.82rem 1.4rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.recipe-main .btn-recipe-outline:hover {
+  background: #fffefa;
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 35%, var(--hp-hairline));
+  color: var(--hp-ink);
+  transform: none;
+}
+
+/* ── Feature cards — hairline-divided 4-column strip ────────── */
+.recipe-main .recipe-features-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--hp-hairline-soft);
+  border-bottom: 1px solid var(--hp-hairline-soft);
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+}
+.recipe-main .recipe-feature-card {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--hp-hairline-soft);
+  border-radius: 0;
+  padding: 0.3rem 1.4rem;
+  box-shadow: none;
+  transition: none;
+}
+.recipe-main .recipe-feature-card:first-child { padding-left: 0; }
+.recipe-main .recipe-feature-card:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+.recipe-main .recipe-feature-card:hover {
+  background: transparent;
+  border-right-color: var(--hp-hairline-soft);
+}
+.recipe-main .recipe-feature-card:last-child:hover {
+  border-right: none;
+}
+.recipe-main .recipe-feature-icon {
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+.recipe-main .recipe-feature-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--hp-ink);
+  letter-spacing: -0.005em;
+  margin: 0 0 0.2rem;
+}
+.recipe-main .recipe-feature-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.76rem;
+  color: var(--hp-ink-soft);
+  line-height: 1.5;
+}
+
+/* ── 3-column content grid ────────────────────────────────── */
+.recipe-main .recipe-content-grid {
+  padding: 3.5rem 0 3rem;
+  border-top: 1px solid var(--hp-hairline);
+  gap: 3rem 3rem;
+}
+
+/* Column headers — italic Fraunces 500, hairline underline only.
+   No ✦ on column headers — restraint; the layout structure already
+   signals "section". ✦ accents are reserved for major boundaries
+   (Pairings, Related, Bridge). */
+.recipe-main .recipe-ingredients-col h2,
+.recipe-main .recipe-steps-col h2,
+.recipe-main .recipe-nutrition-col h2 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.18rem;
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  margin: 0 0 1.35rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--hp-hairline);
+  gap: 0.6rem;
+}
+
+/* Servings badge — hairline editorial tag */
+.recipe-main .servings-badge {
+  background: transparent;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  border: 1px solid var(--hp-hairline);
+  border-radius: 999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.65rem;
+  margin-left: auto;
+}
+
+/* ── Ingredients ────────────────────────────────────────────── */
+.recipe-main .recipe-ingr-list-new {
+  margin: 0 0 1.4rem;
+}
+.recipe-main .recipe-ingr-list-new li {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--hp-ink);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--hp-hairline-soft);
+  gap: 0.7rem;
+  transition: none;
+}
+.recipe-main .recipe-ingr-list-new li:hover {
+  color: var(--hp-ink);
+  background: transparent;
+}
+.recipe-main .recipe-ingr-list-new li:last-child {
+  border-bottom: none;
+}
+.recipe-main .recipe-ingr-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--cuisine-accent, var(--hp-warm-deep));
+  margin-top: 0.6rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* "Add to shopping list" — calm hairline action */
+.recipe-main .btn-add-shopping {
+  width: 100%;
+  background: transparent;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  border: 1px solid var(--hp-hairline);
+  border-radius: 999px;
+  padding: 0.72rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.recipe-main .btn-add-shopping:hover {
+  background: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 7%, transparent);
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 40%, var(--hp-hairline));
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  transform: none;
+}
+
+/* ── Method — cookbook-style decimal-leading-zero italic counters ─ */
+.recipe-main .recipe-steps-new {
+  counter-reset: recipe-step;
+}
+.recipe-main .recipe-steps-new .step-num {
+  /* The literal "1, 2, 3..." spans in the markup are replaced by a CSS
+     counter rendered via ::before on each <li>. The original spans get
+     hidden — markup stays untouched. */
+  display: none;
+}
+.recipe-main .recipe-steps-new li {
+  counter-increment: recipe-step;
+  display: flex;
+  align-items: baseline;
+  gap: 1.3rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--hp-hairline-soft);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--hp-ink);
+}
+.recipe-main .recipe-steps-new li:last-child {
+  border-bottom: none;
+}
+.recipe-main .recipe-steps-new li::before {
+  content: counter(recipe-step, decimal-leading-zero);
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.55rem;
+  line-height: 1;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.025em;
+  flex-shrink: 0;
+  min-width: 2.5rem;
+  transform: translateY(0.12em);
+}
+
+/* Tip box — calm warm-cream, no loud accent */
+.recipe-main .recipe-tip-box {
+  background: color-mix(in srgb, var(--hp-warm-deep) 5%, var(--hp-cream));
+  border: 1px solid color-mix(in srgb, var(--hp-warm-deep) 22%, var(--hp-hairline));
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin-top: 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--hp-ink-soft);
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.recipe-main .recipe-tip-box strong {
+  color: var(--hp-ink);
+  font-weight: 600;
+}
+.recipe-main .recipe-tip-box .tip-icon {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  flex-shrink: 0;
+}
+
+/* ── Nutrition ────────────────────────────────────────────── */
+.recipe-main .nutrition-per {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.68rem;
+  color: var(--hp-muted);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: -0.65rem 0 1rem;
+}
+.recipe-main .nutrition-list {
+  border-radius: 0;
+  border: none;
+  overflow: visible;
+  margin-bottom: 1.5rem;
+}
+.recipe-main .nutrition-row {
+  background: transparent !important;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--hp-hairline-soft);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: var(--hp-ink-soft);
+  transition: none;
+}
+.recipe-main .nutrition-row:hover {
+  background: transparent !important;
+}
+.recipe-main .nutrition-row:last-child {
+  border-bottom: none;
+}
+.recipe-main .nutrition-row span {
+  color: var(--hp-ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+}
+.recipe-main .nutrition-disclaimer {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  color: var(--hp-muted);
+  font-style: italic;
+  margin: 0 0 1.5rem;
+}
+
+/* ── Pairings ─────────────────────────────────────────────── */
+.recipe-main .recipe-pairings-h {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  border-bottom: 1px solid var(--hp-hairline);
+  padding-bottom: 0.7rem;
+  margin: 1.2rem 0 1.1rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  width: 100%;
+}
+.recipe-main .recipe-pairings-h::before {
+  content: '✦';
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--hp-warm-deep);
+  line-height: 1;
+  transform: translateY(-0.15em);
+}
+.recipe-main .pairings-grid {
+  gap: 0.55rem;
+}
+.recipe-main .pairing-chip {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  color: var(--hp-ink-soft);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  transition: border-color 0.2s ease;
+}
+.recipe-main .pairing-chip:hover {
+  background: #fffefa;
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 35%, var(--hp-hairline));
+}
+
+/* ── Related / Bridge sections ───────────────────────────── */
+.recipe-main .recipe-related-section {
+  padding: 4rem 0 1.5rem;
+  border-top: 1px solid var(--hp-hairline);
+}
+.recipe-main .recipe-bridge-section {
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid var(--hp-hairline-soft);
+}
+.recipe-main .recipe-related-header {
+  margin-bottom: 1.6rem;
+}
+.recipe-main .recipe-related-header h2 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+.recipe-main .recipe-related-header h2::before {
+  content: '✦';
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--hp-warm-deep);
+  line-height: 1;
+  transform: translateY(-0.15em);
+}
+.recipe-main .recipe-related-header a {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--cuisine-accent-ink, var(--hp-warm-deep));
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  text-decoration: none;
+}
+.recipe-main .recipe-related-header a:hover {
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+
+/* Recipe-card items inside related/bridge scrolls */
+.recipe-main .recipe-card-item {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(29, 24, 18, 0.02);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.recipe-main .recipe-card-item:hover {
+  transform: none;
+  box-shadow: 0 12px 28px rgba(29, 24, 18, 0.08);
+  border-color: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 35%, var(--hp-hairline));
+}
+.recipe-main .recipe-card-item:hover .recipe-card-img img {
+  transform: none;
+}
+.recipe-main .recipe-card-img {
+  background: color-mix(in srgb, var(--cuisine-accent, var(--hp-warm-deep)) 9%, var(--hp-cream-deep));
+}
+.recipe-main .recipe-card-body {
+  padding: 0.7rem 0.85rem 0.85rem;
+}
+.recipe-main .recipe-card-name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  line-height: 1.3;
+}
+.recipe-main .recipe-card-meta {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.7rem;
+  color: var(--hp-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── CTA banner — calm ink + warm cream ─────────────────── */
+.recipe-main .recipe-cta-banner {
+  background: var(--hp-ink);
+  border-radius: 14px;
+  padding: 2.25rem 2.5rem;
+  margin: 3rem 0 2rem;
+  box-shadow: 0 18px 40px rgba(29, 24, 18, 0.2);
+  gap: 1.5rem;
+}
+.recipe-main .recipe-cta-banner::before {
+  background:
+    radial-gradient(70% 80% at 92% 50%, color-mix(in srgb, var(--hp-warm-deep) 24%, transparent), transparent 70%);
+}
+.recipe-main .cta-banner-icon {
+  font-size: 2.4rem;
+}
+.recipe-main .cta-banner-text h3 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.3vw, 1.45rem);
+  letter-spacing: -0.018em;
+  color: var(--hp-cream);
+  line-height: 1.22;
+  margin: 0 0 0.35rem;
+}
+.recipe-main .cta-banner-text p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: rgba(250, 245, 234, 0.72);
+  line-height: 1.55;
+}
+.recipe-main .btn-cta-banner {
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+  border-radius: 999px;
+  padding: 0.85rem 1.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.recipe-main .btn-cta-banner:hover {
+  background: var(--hp-butter);
+  color: var(--hp-ink);
+  transform: none;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Header tone consistency on recipe pages ──────────────── */
+body:has(.recipe-main) .app-header {
+  background: rgba(250, 245, 234, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hp-hairline-soft);
+}
+
+/* ── Mobile reading experience ────────────────────────────── */
+@media (max-width: 600px) {
+  .recipe-main .recipe-breadcrumb { padding: 1rem 0 0.4rem; }
+  .recipe-main .recipe-hero-grid {
+    padding: 0.85rem 0 2rem;
+    gap: 1.5rem;
+  }
+  .recipe-main .recipe-hero-info-col h1 {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+  }
+  .recipe-main .recipe-tagline {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+  .recipe-main .recipe-meta-row {
+    gap: 1rem 0.85rem;
+    padding: 0.95rem 0;
+  }
+  .recipe-main .recipe-meta-value {
+    font-size: 0.9rem;
+  }
+  .recipe-main .recipe-content-grid {
+    padding: 2.25rem 0 2.5rem;
+    gap: 2.5rem;
+  }
+  .recipe-main .recipe-ingredients-col h2,
+  .recipe-main .recipe-steps-col h2,
+  .recipe-main .recipe-nutrition-col h2 {
+    font-size: 1.08rem;
+    margin: 0 0 1.1rem;
+  }
+  .recipe-main .recipe-steps-new li {
+    padding: 1.15rem 0;
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+  .recipe-main .recipe-steps-new li::before {
+    font-size: 1.3rem;
+    min-width: 2rem;
+    transform: translateY(0.18em);
+  }
+  .recipe-main .recipe-cta-banner {
+    padding: 1.65rem 1.45rem;
+    margin: 2rem 0 1rem;
+    border-radius: 12px;
+  }
+  .recipe-main .cta-banner-text h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Below 768 — features collapse to vertical hairline-divided list */
+@media (max-width: 768px) {
+  .recipe-main .recipe-features-row {
+    grid-template-columns: 1fr;
+    padding: 1.1rem 0;
+  }
+  .recipe-main .recipe-feature-card {
+    border-right: none;
+    border-bottom: 1px solid var(--hp-hairline-soft);
+    padding: 0.85rem 0;
+  }
+  .recipe-main .recipe-feature-card:first-child { padding-top: 0; }
+  .recipe-main .recipe-feature-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .recipe-main .recipe-card-item,
+  .recipe-main .btn-recipe-primary,
+  .recipe-main .btn-recipe-outline,
+  .recipe-main .btn-add-shopping,
+  .recipe-main .btn-cta-banner,
+  .recipe-main .pairing-chip,
+  .recipe-main .recipe-breadcrumb a {
+    transition: none !important;
+  }
+}
+
+/* ── Print — restore plain white for ink-friendly printing ── */
+@media print {
+  .recipe-main {
+    background: white;
+    color: black;
+  }
+  .recipe-main .recipe-cta-banner {
+    background: white !important;
+    border: 1px solid #999;
+    box-shadow: none !important;
+    color: black;
+  }
+  .recipe-main .recipe-cta-banner::before { display: none; }
+  .recipe-main .cta-banner-text h3,
+  .recipe-main .cta-banner-text p {
+    color: black !important;
+  }
+  .recipe-main .btn-cta-banner {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #999;
+    box-shadow: none !important;
+  }
+  .recipe-main .recipe-hero-img-col,
+  .recipe-main .recipe-photo-container {
+    box-shadow: none !important;
+  }
+}
