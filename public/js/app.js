@@ -1830,7 +1830,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Choose your meals',   desc:'Fill in manually or auto-generate a full week in one click. Mix and match as you like.' },
         { icon:'🛒', n:2, title:'Shopping list ready', desc:'Ingredients are compiled automatically and sorted — ready to take to the store.' },
-        { icon:'📄', n:3, title:'Download PDF',        desc:'A beautifully formatted PDF with your full plan and list — free once per day.' },
+        { icon:'📄', n:3, title:'Download PDF',        desc:'A beautifully formatted PDF with your full plan and shopping list — ready to print or share.' },
       ],
       cta1: '🥗 Plan now — free',
       cta2: '📅 Weekly menus',
@@ -1842,7 +1842,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Elige tus comidas',    desc:'Completa manualmente o genera automáticamente una semana entera con un clic.' },
         { icon:'🛒', n:2, title:'Lista lista al instante', desc:'Los ingredientes se recopilan automáticamente y se ordenan para ir al mercado.' },
-        { icon:'📄', n:3, title:'Descarga PDF',         desc:'Un PDF elegante con tu plan completo y la lista — gratis una vez al día.' },
+        { icon:'📄', n:3, title:'Descarga PDF',         desc:'Un PDF elegante con tu plan completo y lista de compras — listo para imprimir o compartir.' },
       ],
       cta1: '🥗 Planificar ahora — gratis',
       cta2: '📅 Menús semanales',
@@ -1854,7 +1854,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Choisissez vos repas',     desc:'Remplissez manuellement ou générez automatiquement une semaine entière en un clic.' },
         { icon:'🛒', n:2, title:'Liste prête en un instant', desc:'Les ingrédients sont compilés automatiquement et triés pour faire vos courses.' },
-        { icon:'📄', n:3, title:'Téléchargez le PDF',       desc:'Un PDF élégant avec votre plan complet et votre liste — gratuit une fois par jour.' },
+        { icon:'📄', n:3, title:'Téléchargez le PDF',       desc:'Un PDF élégant avec votre plan complet et votre liste de courses — prêt à imprimer ou partager.' },
       ],
       cta1: '🥗 Planifier maintenant',
       cta2: '📅 Menus hebdomadaires',
@@ -1866,7 +1866,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Mahlzeiten wählen',     desc:'Manuell ausfüllen oder mit einem Klick automatisch eine ganze Woche generieren.' },
         { icon:'🛒', n:2, title:'Einkaufsliste sofort',  desc:'Zutaten werden automatisch zusammengestellt und sortiert — bereit zum Einkaufen.' },
-        { icon:'📄', n:3, title:'PDF herunterladen',     desc:'Ein elegantes PDF mit Ihrem vollständigen Plan — einmal täglich kostenlos.' },
+        { icon:'📄', n:3, title:'PDF herunterladen',     desc:'Ein elegantes PDF mit Ihrem vollständigen Plan und Einkaufsliste — bereit zum Drucken oder Teilen.' },
       ],
       cta1: '🥗 Jetzt planen — kostenlos',
       cta2: '📅 Wochenpläne',
@@ -1878,7 +1878,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Escolha suas refeições',  desc:'Preencha manualmente ou gere automaticamente uma semana completa com um clique.' },
         { icon:'🛒', n:2, title:'Lista pronta na hora',    desc:'Os ingredientes são compilados automaticamente e ordenados para as compras.' },
-        { icon:'📄', n:3, title:'Baixar PDF',              desc:'Um PDF elegante com seu plano completo e lista — gratuito uma vez por dia.' },
+        { icon:'📄', n:3, title:'Baixar PDF',              desc:'Um PDF elegante com seu plano completo e lista de compras — pronto para imprimir ou compartilhar.' },
       ],
       cta1: '🥗 Planificar agora — grátis',
       cta2: '📅 Planos semanais',
@@ -1890,7 +1890,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Выберите блюда',        desc:'Заполните вручную или автоматически сгенерируйте целую неделю одним кликом.' },
         { icon:'🛒', n:2, title:'Список готов мгновенно', desc:'Ингредиенты собираются автоматически и сортируются для похода в магазин.' },
-        { icon:'📄', n:3, title:'Скачать PDF',            desc:'Красивый PDF с полным планом и списком — бесплатно один раз в день.' },
+        { icon:'📄', n:3, title:'Скачать PDF',            desc:'Красивый PDF с полным планом и списком покупок — готов к печати или отправке.' },
       ],
       cta1: '🥗 Планировать — бесплатно',
       cta2: '📅 Еженедельные меню',
@@ -1902,7 +1902,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Scegli i tuoi pasti',      desc:'Compila manualmente o genera automaticamente una settimana intera con un clic.' },
         { icon:'🛒', n:2, title:'Lista pronta all\'istante', desc:'Gli ingredienti vengono compilati e ordinati automaticamente per la spesa.' },
-        { icon:'📄', n:3, title:'Scarica il PDF',            desc:'Un elegante PDF con il tuo piano completo e la lista — gratuito una volta al giorno.' },
+        { icon:'📄', n:3, title:'Scarica il PDF',            desc:'Un elegante PDF con il tuo piano completo e lista della spesa — pronto da stampare o condividere.' },
       ],
       cta1: '🥗 Pianifica ora — gratis',
       cta2: '📅 Menu settimanali',
@@ -1914,7 +1914,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Öğünleri seçin',           desc:'Manuel olarak doldurun veya tek tıklamayla otomatik olarak tam bir hafta oluşturun.' },
         { icon:'🛒', n:2, title:'Liste anında hazır',        desc:'Malzemeler otomatik olarak derlenir ve alışveriş için sıralanır.' },
-        { icon:'📄', n:3, title:'PDF indir',                 desc:'Tam planınız ve listenizle zarif bir PDF — günde bir kez ücretsiz.' },
+        { icon:'📄', n:3, title:'PDF indir',                 desc:'Tam planınız ve alışveriş listenizle zarif bir PDF — yazdırmaya veya paylaşmaya hazır.' },
       ],
       cta1: '🥗 Şimdi planla — ücretsiz',
       cta2: '📅 Haftalık menüler',
@@ -1926,7 +1926,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'اختر وجباتك',            desc:'أضف يدويًا أو أنشئ أسبوعًا كاملاً تلقائيًا بنقرة واحدة.' },
         { icon:'🛒', n:2, title:'قائمة التسوق جاهزة فوراً', desc:'يتم تجميع المكونات تلقائيًا ومرتبة للتسوق.' },
-        { icon:'📄', n:3, title:'تحميل PDF',               desc:'ملف PDF أنيق مع خطتك الكاملة والقائمة — مجانًا مرة في اليوم.' },
+        { icon:'📄', n:3, title:'تحميل PDF',               desc:'ملف PDF أنيق مع خطتك الكاملة وقائمة التسوق — جاهز للطباعة أو المشاركة.' },
       ],
       cta1: '🥗 ابدأ التخطيط — مجاناً',
       cta2: '📅 القوائم الأسبوعية',
@@ -1938,7 +1938,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'选择您的餐食',   desc:'手动填写或一键自动生成整周计划。' },
         { icon:'🛒', n:2, title:'购物清单即刻生成', desc:'食材自动汇总并排序，随时可去购物。' },
-        { icon:'📄', n:3, title:'下载PDF',         desc:'格式精美的PDF包含完整计划和清单 — 每天免费一次。' },
+        { icon:'📄', n:3, title:'下载PDF',         desc:'格式精美的PDF包含完整计划和购物清单 — 可打印或分享。' },
       ],
       cta1: '🥗 立即规划 — 免费',
       cta2: '📅 每周菜单',
@@ -1950,7 +1950,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'食事を選ぶ',           desc:'手動で入力するか、ワンクリックで1週間分を自動生成。' },
         { icon:'🛒', n:2, title:'買い物リストがすぐ完成', desc:'食材が自動でまとめられ、買い物に行けるよう整理されます。' },
-        { icon:'📄', n:3, title:'PDFをダウンロード',      desc:'完全なプランとリストが入った美しいPDF — 1日1回無料。' },
+        { icon:'📄', n:3, title:'PDFをダウンロード',      desc:'完全なプランと買い物リストが入った美しいPDF — 印刷や共有に最適。' },
       ],
       cta1: '🥗 今すぐ計画 — 無料',
       cta2: '📅 週間メニュー',
@@ -1962,7 +1962,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'식사 선택',            desc:'직접 입력하거나 클릭 한 번으로 한 주 전체를 자동 생성하세요.' },
         { icon:'🛒', n:2, title:'장보기 목록 즉시 완성', desc:'재료가 자동으로 정리되고 쇼핑에 맞게 정렬됩니다.' },
-        { icon:'📄', n:3, title:'PDF 다운로드',          desc:'완전한 계획과 목록이 담긴 예쁜 PDF — 하루 한 번 무료.' },
+        { icon:'📄', n:3, title:'PDF 다운로드',          desc:'완전한 계획과 장보기 목록이 담긴 예쁜 PDF — 인쇄하거나 공유할 준비 완료.' },
       ],
       cta1: '🥗 지금 계획 — 무료',
       cta2: '📅 주간 메뉴',
@@ -1974,7 +1974,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'भोजन चुनें',            desc:'मैन्युअल रूप से भरें या एक क्लिक से पूरे सप्ताह को स्वचालित रूप से बनाएं।' },
         { icon:'🛒', n:2, title:'सूची तुरंत तैयार',      desc:'सामग्री स्वचालित रूप से एकत्र और खरीदारी के लिए व्यवस्थित की जाती है।' },
-        { icon:'📄', n:3, title:'PDF डाउनलोड करें',      desc:'आपकी पूरी योजना और सूची के साथ एक सुंदर PDF — दिन में एक बार मुफ्त।' },
+        { icon:'📄', n:3, title:'PDF डाउनलोड करें',      desc:'आपकी पूरी योजना और खरीदारी सूची के साथ एक सुंदर PDF — प्रिंट करने या साझा करने के लिए तैयार।' },
       ],
       cta1: '🥗 अभी योजना बनाएं — मुफ़्त',
       cta2: '📅 साप्ताहिक मेनू',
@@ -2287,7 +2287,7 @@ function renderPremiumHero() {
       sub: 'Plan complet în câteva secunde.\nListă de cumpărături automată. PDF gratuit.',
       stat1n:'175+', stat1l:'Rețete',
       stat2n:'14',   stat2l:'Limbi',
-      stat3n:'0€',   stat3l:'Mereu gratuit',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Creează Planul Meu',
       ghost: 'Explorează meniuri →',
       planLabel: 'Planul Săptămânal',
@@ -2310,7 +2310,7 @@ function renderPremiumHero() {
       sub: 'Full plan in seconds.\nAuto shopping list. Free PDF download.',
       stat1n:'175+', stat1l:'Recipes',
       stat2n:'14',   stat2l:'Languages',
-      stat3n:'Free', stat3l:'Forever',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Create My Free Plan',
       ghost: 'Explore menus →',
       planLabel: 'Weekly Plan',
@@ -2333,7 +2333,7 @@ function renderPremiumHero() {
       sub: 'Plan completo en segundos.\nLista de compras automática. PDF gratis.',
       stat1n:'175+', stat1l:'Recetas',
       stat2n:'14',   stat2l:'Idiomas',
-      stat3n:'0€',   stat3l:'Siempre gratis',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Crear Mi Plan Gratis',
       ghost: 'Explorar menús →',
       planLabel: 'Plan Semanal',
@@ -2356,7 +2356,7 @@ function renderPremiumHero() {
       sub: 'Plan complet en quelques secondes.\nListe de courses automatique. PDF gratuit.',
       stat1n:'175+', stat1l:'Recettes',
       stat2n:'14',   stat2l:'Langues',
-      stat3n:'0€',   stat3l:'Toujours gratuit',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Créer Mon Plan Gratuit',
       ghost: 'Explorer les menus →',
       planLabel: 'Plan Hebdomadaire',
@@ -2379,7 +2379,7 @@ function renderPremiumHero() {
       sub: 'Vollständiger Plan in Sekunden.\nEinkaufsliste automatisch. PDF kostenlos.',
       stat1n:'175+', stat1l:'Rezepte',
       stat2n:'14',   stat2l:'Sprachen',
-      stat3n:'0€',   stat3l:'Immer kostenlos',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Meinen Plan Erstellen',
       ghost: 'Menüs erkunden →',
       planLabel: 'Wochenplan',
@@ -2402,7 +2402,7 @@ function renderPremiumHero() {
       sub: 'Plano completo em segundos.\nLista de compras automática. PDF gratuito.',
       stat1n:'175+', stat1l:'Receitas',
       stat2n:'14',   stat2l:'Idiomas',
-      stat3n:'0€',   stat3l:'Sempre grátis',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Criar Meu Plano Grátis',
       ghost: 'Explorar planos →',
       planLabel: 'Plano Semanal',
@@ -2425,7 +2425,7 @@ function renderPremiumHero() {
       sub: 'Полный план за секунды.\nСписок покупок автоматически. PDF бесплатно.',
       stat1n:'175+', stat1l:'Рецептов',
       stat2n:'14',   stat2l:'Языков',
-      stat3n:'0€',   stat3l:'Всегда бесплатно',
+      stat3n:'€3',   stat3l:'Премиум',
       cta: '🥗 Создать Мой План',
       ghost: 'Просмотреть меню →',
       planLabel: 'Недельный план',
@@ -2448,7 +2448,7 @@ function renderPremiumHero() {
       sub: 'Piano completo in pochi secondi.\nLista della spesa automatica. PDF gratuito.',
       stat1n:'175+', stat1l:'Ricette',
       stat2n:'14',   stat2l:'Lingue',
-      stat3n:'0€',   stat3l:'Sempre gratuito',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Crea Il Mio Piano Gratis',
       ghost: 'Esplora i menu →',
       planLabel: 'Piano Settimanale',
@@ -2471,7 +2471,7 @@ function renderPremiumHero() {
       sub: 'Saniyeler içinde tam plan.\nOtomatik alışveriş listesi. Ücretsiz PDF.',
       stat1n:'175+', stat1l:'Tarif',
       stat2n:'14',   stat2l:'Dil',
-      stat3n:'0€',   stat3l:'Hep ücretsiz',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Planımı Oluştur',
       ghost: 'Menüleri keşfet →',
       planLabel: 'Haftalık Plan',
@@ -2494,7 +2494,7 @@ function renderPremiumHero() {
       sub: 'خطة كاملة في ثوانٍ.\nقائمة تسوق تلقائية. PDF مجاني.',
       stat1n:'175+', stat1l:'وصفة',
       stat2n:'14',   stat2l:'لغة',
-      stat3n:'0€',   stat3l:'مجاني دائماً',
+      stat3n:'€3',   stat3l:'بريميوم',
       cta: '🥗 إنشاء خطتي المجانية',
       ghost: 'استكشف القوائم →',
       planLabel: 'الخطة الأسبوعية',
@@ -2517,7 +2517,7 @@ function renderPremiumHero() {
       sub: '几秒内生成完整计划。\n自动购物清单。免费PDF下载。',
       stat1n:'175+', stat1l:'食谱',
       stat2n:'14',   stat2l:'语言',
-      stat3n:'免费', stat3l:'永久免费',
+      stat3n:'€3',   stat3l:'高级版',
       cta: '🥗 创建我的免费计划',
       ghost: '探索菜单 →',
       planLabel: '每周计划',
@@ -2540,7 +2540,7 @@ function renderPremiumHero() {
       sub: '数秒でフルプラン完成。\n買い物リスト自動生成。PDF無料ダウンロード。',
       stat1n:'175+', stat1l:'レシピ',
       stat2n:'14',   stat2l:'言語',
-      stat3n:'無料', stat3l:'ずっと無料',
+      stat3n:'€3',   stat3l:'プレミアム',
       cta: '🥗 無料プランを作成',
       ghost: 'メニューを探索 →',
       planLabel: '週間プラン',
@@ -2563,7 +2563,7 @@ function renderPremiumHero() {
       sub: '몇 초 만에 전체 플랜 완성.\n자동 장보기 목록. 무료 PDF 다운로드.',
       stat1n:'175+', stat1l:'레시피',
       stat2n:'14',   stat2l:'언어',
-      stat3n:'무료', stat3l:'영원히 무료',
+      stat3n:'€3',   stat3l:'프리미엄',
       cta: '🥗 무료 플랜 만들기',
       ghost: '메뉴 탐색 →',
       planLabel: '주간 플랜',
@@ -2586,7 +2586,7 @@ function renderPremiumHero() {
       sub: 'कुछ सेकंड में पूरी योजना।\nस्वचालित खरीदारी सूची। मुफ़्त PDF डाउनलोड।',
       stat1n:'175+', stat1l:'व्यंजन',
       stat2n:'14',   stat2l:'भाषाएं',
-      stat3n:'मुफ़्त', stat3l:'हमेशा मुफ़्त',
+      stat3n:'€3',     stat3l:'प्रीमियम',
       cta: '🥗 मेरी मुफ़्त योजना बनाएं',
       ghost: 'मेनू देखें →',
       planLabel: 'साप्ताहिक योजना',
@@ -2653,12 +2653,20 @@ function renderPremiumHero() {
               <div class="phone-meal-header">
                 <span>${safeText(s.colDay)}</span><span>${safeText(s.colL)}</span><span>${safeText(s.colD)}</span>
               </div>
-              ${meals.map(([d,l,c]) => `
-              <div class="phone-meal-row">
-                <span class="phone-meal-day">${safeText(d)}</span>
+              ${meals.map(([d,l,c], i) => {
+                // Mockup mirrors the free preview: first 2 days visible,
+                // remaining days faded with a lock — matches the 2-of-7
+                // free PDF behavior so the visual doesn't oversell.
+                const locked = i >= 2;
+                const rowStyle = locked ? ' style="opacity:0.35;"' : '';
+                const dayPrefix = locked ? '🔒 ' : '';
+                return `
+              <div class="phone-meal-row"${rowStyle}>
+                <span class="phone-meal-day">${dayPrefix}${safeText(d)}</span>
                 <span class="phone-meal-name">${safeText(l)}</span>
                 <span class="phone-meal-name">${safeText(c)}</span>
-              </div>`).join('')}
+              </div>`;
+              }).join('')}
               <div class="phone-shopping">
                 <div class="phone-shopping-title">🛒 ${safeText(s.shLabel)}</div>
                 <div class="phone-chips">
@@ -3032,6 +3040,31 @@ window.hasUnlimited = false;
 const verifyBtn  = document.getElementById('verifyBtn');
 const emailInput = document.getElementById('emailInput');
 const manageBtn  = document.getElementById('manage-subscription');
+
+// Premium-state persistence: silently re-verify on load using the last
+// known-good email so paying users don't see the upsell flow on every
+// reload. Server stays authoritative — localStorage is a hint only.
+(function restorePremiumFromHint() {
+  let hintEmail = null;
+  try { hintEmail = localStorage.getItem('mp:lastEmail'); } catch (_) {}
+  if (!hintEmail) return;
+  fetch(`/api/check-access?email=${encodeURIComponent(hintEmail)}`)
+    .then(r => r.json())
+    .then(({ active }) => {
+      if (!active) {
+        try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
+        return;
+      }
+      window.hasUnlimited = true;
+      window.verifiedEmail = hintEmail;
+      if (emailInput && !emailInput.value) emailInput.value = hintEmail;
+      const pricingEl = document.getElementById('pricing-section');
+      if (pricingEl) pricingEl.style.display = 'none';
+      if (manageBtn) manageBtn.style.display = 'inline-block';
+      if (typeof updateButtonState === 'function') updateButtonState();
+    })
+    .catch(() => { /* network blip — user can re-verify manually */ });
+})();
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
     const email = emailInput.value.trim();
@@ -3062,6 +3095,7 @@ if (verifyBtn && emailInput && resultDiv) {
       window.hasUnlimited = true;
       // Store email for AI endpoints (chat/coach require email in POST body)
       window.verifiedEmail = email;
+      try { localStorage.setItem('mp:lastEmail', email); } catch (_) {}
       const expiryText = until
         ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
             new Date(until).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' })
@@ -3078,36 +3112,21 @@ if (verifyBtn && emailInput && resultDiv) {
       if (buyBtn) buyBtn.style.display = 'none';
       if (currencySelUI) currencySelUI.style.display = 'none';
       attachPdfListeners();
-      if (manageBtn) {
-        manageBtn.style.display = 'inline-block';
-        manageBtn.onclick = async () => {
-          try {
-            const r = await fetch('/api/create-portal-session', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                email,
-                return_url: window.location.origin + window.location.pathname
-              })
-            });
-            const { url, error } = await r.json();
-            if (error || !url) { alert(error || 'Nu s-a putut deschide portalul Stripe.'); return; }
-            window.location.href = url;
-          } catch (e) {
-            alert('Eroare: ' + e.message);
-          }
-        };
-      }
+      // Manage-subscription click is wired globally in public/js/portal.js
+      // (delegated handler). Just toggle visibility here.
+      if (manageBtn) manageBtn.style.display = 'inline-block';
       if (typeof updateButtonState === 'function') updateButtonState();
     } else if (found) {
       // Account exists but subscription is expired
       window.hasUnlimited = false;
+      try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.invalid || 'Nu există acces valid pentru acest email.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
       if (typeof updateButtonState === 'function') updateButtonState();
     } else {
       // No account found at all
       window.hasUnlimited = false;
+      try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.not_found || 'Nu există acces pentru acest email. Plătește întâi sau verifică adresa.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
       if (typeof updateButtonState === 'function') updateButtonState();
