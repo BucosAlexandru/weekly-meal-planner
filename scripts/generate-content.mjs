@@ -3778,7 +3778,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       </div>
       <div class="recipe-cta-row">
         <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
-        <button class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
+        <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
       </div>
     </div>
   </div>
@@ -3793,7 +3793,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       <ul class="recipe-ingr-list-new">
         ${ingr.map(i=>`<li><span class="recipe-ingr-dot"></span>${esc(capFirst(i))}</li>`).join('\n        ')}
       </ul>
-      <button class="btn-add-shopping"><i class="bi bi-cart-plus"></i> ${ui.addShopping}</button>
+      <button type="button" class="btn-add-shopping"><i class="bi bi-cart-plus"></i> ${ui.addShopping}</button>
     </div>
     <div class="recipe-steps-col">
       <h2>${rl.howToH.replace(/^[👨‍🍳\s]+/,'')}</h2>
