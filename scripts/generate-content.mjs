@@ -565,7 +565,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Planificarea meselor este una din cele mai eficiente metode de a mânca sănătos și de a economisi bani.',
     metaTitle: (theme)=>`Meniu Săptămânal ${theme} – Listă Cumpărături | Meal-Planner.ro`,
     days:['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.id,
   },
   en: {
@@ -596,7 +595,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Planning meals in advance is one of the most effective ways to eat healthier and save money.',
     metaTitle: (theme)=>`Weekly Meal Plan – ${theme} | Meal-Planner.ro`,
     days:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-    recipeBase:'/en/recipes/',
     planIdFn: p=>p.idEn,
   },
   es: {
@@ -627,7 +625,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Planificar las comidas es una de las formas más eficaces de comer más sano y ahorrar dinero.',
     metaTitle: (theme)=>`Plan Semanal – ${theme} | Meal-Planner.ro`,
     days:['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   fr: {
@@ -658,7 +655,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Planifier les repas à l\'avance est l\'un des moyens les plus efficaces de manger sainement.',
     metaTitle: (theme)=>`Plan de Repas – ${theme} | Meal-Planner.ro`,
     days:['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   de: {
@@ -689,7 +685,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Die Mahlzeitenplanung im Voraus ist eine der effektivsten Methoden, gesünder zu essen.',
     metaTitle: (theme)=>`Wochenplan – ${theme} | Meal-Planner.ro`,
     days:['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   pt: {
@@ -720,7 +715,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Planejar as refeições com antecedência é uma das formas mais eficazes de comer melhor.',
     metaTitle: (theme)=>`Plano Semanal – ${theme} | Meal-Planner.ro`,
     days:['Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ru: {
@@ -751,7 +745,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Планирование питания — один из эффективных способов питаться здоровее.',
     metaTitle: (theme)=>`Недельное меню – ${theme} | Meal-Planner.ro`,
     days:['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ar: {
@@ -782,7 +775,6 @@ const LANG_CONFIGS = {
     indexSeoP:'التخطيط المسبق للوجبات من أفضل الطرق لتناول طعام صحي وتوفير المال.',
     metaTitle: (theme)=>`الخطة الأسبوعية – ${theme} | Meal-Planner.ro`,
     days:['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   zh: {
@@ -813,7 +805,6 @@ const LANG_CONFIGS = {
     indexSeoP:'提前规划饮食是健康饮食和节省开支的最有效方法之一。',
     metaTitle: (theme)=>`每周饮食计划 – ${theme} | Meal-Planner.ro`,
     days:['周一','周二','周三','周四','周五','周六','周日'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ja: {
@@ -844,7 +835,6 @@ const LANG_CONFIGS = {
     indexSeoP:'食事を事前に計画することは、健康的に食べるための最も効果的な方法の一つです。',
     metaTitle: (theme)=>`週間プラン – ${theme} | Meal-Planner.ro`,
     days:['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   hi: {
@@ -875,7 +865,6 @@ const LANG_CONFIGS = {
     indexSeoP:'पहले से भोजन की योजना बनाना स्वस्थ खाने और पैसे बचाने के सबसे प्रभावी तरीकों में से एक है।',
     metaTitle: (theme)=>`साप्ताहिक योजना – ${theme} | Meal-Planner.ro`,
     days:['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   tr: {
@@ -906,7 +895,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Yemek planlaması, daha sağlıklı beslenmenin ve para biriktirmenin en etkili yollarından biridir.',
     metaTitle: (theme)=>`Haftalık Plan – ${theme} | Meal-Planner.ro`,
     days:['Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi','Pazar'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   it: {
@@ -937,7 +925,6 @@ const LANG_CONFIGS = {
     indexSeoP:'Pianificare i pasti in anticipo è uno dei metodi più efficaci per mangiare in modo più sano.',
     metaTitle: (theme)=>`Piano Settimanale – ${theme} | Meal-Planner.ro`,
     days:['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ko: {
@@ -968,7 +955,6 @@ const LANG_CONFIGS = {
     indexSeoP:'식사를 미리 계획하는 것은 건강하게 먹고 비용을 절약하는 가장 효과적인 방법 중 하나입니다.',
     metaTitle: (theme)=>`주간 계획 – ${theme} | Meal-Planner.ro`,
     days:['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
 };
@@ -1787,8 +1773,8 @@ function planPage(plan, lc) {
     const dDispName = dRec?.name?.[lc_code] || dRec?.name?.en || dName;
     const lSummary = mealSummary(lRec, lc_code);
     const dSummary = mealSummary(dRec, lc_code);
-    const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${lc.recipeBase}${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
-    const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${lc.recipeBase}${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
+    const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${RECIPE_LANG[lc_code].dir}/${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
+    const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${RECIPE_LANG[lc_code].dir}/${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
     return `<tr>
       <td><strong>${day}</strong></td>
       <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lSummary?`<br><small class="text-muted">${esc(lSummary)}</small>`:''}
