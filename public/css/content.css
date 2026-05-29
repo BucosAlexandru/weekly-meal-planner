@@ -93,12 +93,17 @@
   backdrop-filter: blur(4px);
 }
 .content-hero h1 {
-  font-size: clamp(1.75rem, 4.5vw, 2.8rem);
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
   font-weight: 800;
   line-height: 1.14;
   margin-bottom: .8rem;
   color: #fff;
   letter-spacing: -.025em;
+  /* Hero clips with overflow:hidden — guarantee long single-word titles
+     wrap instead of being cut off on narrow phones. */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 .content-hero .accent {
   color: #a8f0b0;
@@ -228,6 +233,84 @@
 .recipe-link { color: #1a5620; font-weight: 600; text-decoration: none; }
 .recipe-link:hover { color: #24712A; text-decoration: underline; }
 
+/* Anchor jumps (e.g. "See shopping list" → #shopping) must clear the
+   sticky 62px header so the target heading is never hidden under it. */
+.content-section[id] { scroll-margin-top: 78px; }
+
+/* ════════════════════════════════════════════════════════════════
+   Weekly meal-plan table → stacked cards on mobile/tablet (≤768px)
+   ----------------------------------------------------------------
+   Scoped to .content-table (the plan-detail weekly grid only) so the
+   interactive app planner (.planner-table WITHOUT .content-table)
+   keeps its own card rules untouched. Fixes:
+     • the 560px min-width that forced an in-table horizontal scroll
+       on phones (dinner column ran off-screen);
+     • missing Lunch/Dinner labels once <thead> is hidden;
+     • day rows not grouped — each day now reads as one card.
+   Breakpoint matches the app planner (≤640px): phones get cards,
+   641–768px tablets keep the compact 3-column table (560px min-width
+   fits comfortably, no horizontal scroll).
+   !important is used only on the few properties where the shared
+   .planner-table mobile rules in style.css (≤640px) also use it.
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  table.content-table {
+    min-width: 0;
+    display: block;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .content-table thead { display: none; }
+  .content-table tbody { display: block; }
+  .content-table tbody tr {
+    display: block;
+    background: var(--surface, #fff);
+    border: 1px solid #d9ebdb;
+    border-radius: 14px;
+    box-shadow: 0 1px 7px rgba(0,0,0,.05);
+    margin-bottom: .8rem;
+    overflow: hidden;
+  }
+  .content-table tbody tr:last-child { margin-bottom: 0; }
+  .content-table tbody tr:hover { background: var(--surface, #fff); }
+  .content-table tbody td {
+    display: block;
+    width: auto;
+    padding: .72rem .95rem !important;
+    border-bottom: 1px solid #eef4ef;
+    font-size: .92rem !important;
+  }
+  .content-table tbody td:last-child { border-bottom: none; }
+  /* Day name → card header band (overrides style.css light-band !important) */
+  .content-table tbody td:first-child {
+    background: linear-gradient(90deg, #1a5620, #24712A) !important;
+    border-bottom: none !important;
+    padding: .55rem .95rem !important;
+  }
+  .content-table tbody td:first-child strong {
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  /* Surface the Lunch / Dinner label from data-label (thead is hidden). */
+  .content-table tbody td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: .15rem;
+    font-size: .67rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #5f8a64;
+  }
+  .content-table tbody td .text-muted { font-size: .8rem; }
+}
+
 /* ────────────────────────────────────────────────────────────
    Shopping list — collapsible (screen-only)
    ------------------------------------------------------------
@@ -304,8 +387,11 @@
   .shopping-summary-chevron, .shopping-summary-count { display: none; }
 }
 @media (max-width: 600px) {
-  .content-section--green .shopping-summary h2 { font-size: 1.15rem; }
-  .content-section--green .shopping-summary { padding: .75rem .9rem; gap: .6rem; }
+  .content-section--green .shopping-summary h2 { font-size: 1.15rem; min-width: 0; }
+  /* Allow the count chip + chevron to wrap under the heading on very
+     narrow phones (e.g. RO label at 320px) instead of overflowing. */
+  .content-section--green .shopping-summary { padding: .75rem .9rem; gap: .5rem .6rem; flex-wrap: wrap; }
+  .shopping-summary-meta { flex-shrink: 0; }
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -2401,10 +2487,19 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
-  .content-hero { padding: 2.8rem 1.1rem 2.4rem; }
-  .content-hero--short { padding: 2.4rem 1.1rem 2.1rem; }
-  .plan-meta-chips { gap: .4rem; }
+  /* Tighter hero so it doesn't dominate the first screen on phones. */
+  .content-hero { padding: 2.2rem 1.1rem 2rem; }
+  .content-hero--short { padding: 2rem 1.1rem 1.8rem; }
+  .content-hero-desc { font-size: .96rem; margin-bottom: 1.15rem; max-width: 100%; }
+  .plan-meta-chips { gap: .4rem; margin-bottom: 1.15rem; }
   .plan-chip { font-size: .77rem; padding: .26rem .7rem; }
+  /* CTAs stack full-width and stay comfortably tappable. */
+  .content-cta-group { gap: .55rem; width: 100%; }
+  .content-cta-group .btn { width: 100%; justify-content: center; }
+  /* Any content CTA must never exceed the viewport — allow long
+     localized labels (e.g. RO "Deschide planul în aplicație") to wrap. */
+  .content-section .btn,
+  .shopping-cta .btn-generate { max-width: 100%; white-space: normal; }
   .shopping-grid { columns: 2; column-gap: 1.2rem; }
   .content-cards-grid { grid-template-columns: 1fr; }
 

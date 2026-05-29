@@ -1708,9 +1708,9 @@ function planPage(plan, lc) {
     const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${lc.recipeBase}${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
     return `<tr>
       <td><strong>${day}</strong></td>
-      <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lSummary?`<br><small class="text-muted">${esc(lSummary)}</small>`:''}
+      <td data-label="${esc(lc.lunchTh)}">${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lSummary?`<br><small class="text-muted">${esc(lSummary)}</small>`:''}
       </td>
-      <td>${dSlug!=='#'?`<a href="${dSlug}" class="recipe-link">`:''}${esc(dDispName)}${dSlug!=='#'?'</a>':''}${dSummary?`<br><small class="text-muted">${esc(dSummary)}</small>`:''}
+      <td data-label="${esc(lc.dinnerTh)}">${dSlug!=='#'?`<a href="${dSlug}" class="recipe-link">`:''}${esc(dDispName)}${dSlug!=='#'?'</a>':''}${dSummary?`<br><small class="text-muted">${esc(dSummary)}</small>`:''}
       </td>
     </tr>`;
   }).join('');
