@@ -4891,10 +4891,14 @@ body:has(.cuisine-hub-index-main) .app-header {
 /* Header tint on these pages */
 body:has(.meal-plans-index-main) .app-header,
 body:has(.meal-plan-detail-main) .app-header {
-  background: rgba(250, 245, 234, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--hp-hairline-soft);
+  /* Sticky header used to render at 0.85 alpha; on scroll the H1 below
+     bled through the translucent strip as a clipped-looking ghost. Lift
+     to 0.96 + a slightly thicker hairline so any title sliding under
+     reads as cleanly hidden, not clipped. */
+  background: rgba(250, 245, 234, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--hp-hairline);
 }
 
 /* ── DETAIL page — themed weekly plan ── */
@@ -4903,10 +4907,12 @@ body:has(.meal-plan-detail-main) .app-header {
    to warm cream + ink for editorial consistency. */
 .meal-plan-detail-main .content-hero {
   color: var(--hp-cream);
-  /* Trim the desktop top/bottom padding so the hero stops eating the whole
-     fold on a 1366×768 laptop. 5rem/4rem (≈144 px) became clamp() so it
-     scales from ~64 px on small phones up to ~88 px on desktop. */
-  padding: clamp(2.5rem, 5.5vw, 3.75rem) 1.5rem clamp(2rem, 4.5vw, 3rem);
+  /* Top padding sized to ALWAYS clear the 62-px sticky header plus a
+     visual buffer (≈4 rem on desktop = 64 px). Bottom padding stays
+     tight so the weekly plan table rises above the 1366×768 laptop
+     fold. Net hero is ~50 px shorter than the previous pass while the
+     H1 never starts inside the header zone. */
+  padding: clamp(4rem, 7vw, 5.5rem) 1.5rem clamp(1.6rem, 3.5vw, 2.4rem);
   /* Cross-plan rhythm fallback: plans without a hero photo (currently
      budget) inherit the same warm ink-on-cream gradient instead of
      rendering an unstyled section. background-image overrides this for
@@ -4915,8 +4921,13 @@ body:has(.meal-plan-detail-main) .app-header {
     linear-gradient(180deg, rgba(29, 24, 18, 0.92) 0%, rgba(58, 44, 28, 0.88) 60%, rgba(29, 24, 18, 0.95) 100%);
 }
 .meal-plan-detail-main .content-hero--photo {
+  /* Heavier dark overlay than the previous pass — Spoonacular publishes
+     only up to 636×393, so even after the URL upgrade the background
+     image stretches ~1.85× on a 1180-px hero. The stronger overlay
+     turns the photo into an atmospheric backdrop instead of a focal
+     image, hiding upscale softness. */
   background-image:
-    linear-gradient(180deg, rgba(29, 24, 18, 0.62) 0%, rgba(29, 24, 18, 0.50) 45%, rgba(29, 24, 18, 0.72) 100%),
+    linear-gradient(180deg, rgba(29, 24, 18, 0.78) 0%, rgba(29, 24, 18, 0.62) 45%, rgba(29, 24, 18, 0.82) 100%),
     var(--hero-bg);
   background-size: cover;
   background-position: center;
@@ -4960,26 +4971,38 @@ body:has(.meal-plan-detail-main) .app-header {
   font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(2.3rem, 6vw, 4.5rem);
-  line-height: 1.04;
+  /* Trimmed from 4.5 rem → 3.6 rem max so the title takes less vertical
+     space, weekly plan table rises closer to the fold, and very long
+     translated titles (DE/RU) still stay on one line. */
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.06;
   letter-spacing: -0.022em;
   color: var(--hp-cream);
-  margin: 0.4rem 0 0.9rem;
-  max-width: 24ch;
+  margin: 0.3rem 0 0.7rem;
+  /* The H1 used to clamp at 24 ch, which on Fraunces italic measured
+     narrower than the actual title strings (a Fraunces italic '0' — the
+     ch unit — is one of the slimmest glyphs in the alphabet). Lift to
+     32 ch so "Sunday at the Table", "Vendredi à la Maison",
+     "Mediterranean Sea" etc. all stay on a single line at desktop. */
+  max-width: 32ch;
+  /* If a long translated title forces an anchor scroll, leave room for
+     the sticky header so the H1 doesn't land beneath it. */
+  scroll-margin-top: 80px;
 }
 .meal-plan-detail-main .content-hero-desc {
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
-  line-height: 1.6;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.5;
   color: rgba(250, 245, 234, 0.92);
-  max-width: 58ch;
+  max-width: 54ch;
+  margin-bottom: 0;
   opacity: 1;
 }
 .meal-plan-detail-main .plan-meta-chips {
-  margin-top: 1.4rem;
-  margin-bottom: 1.7rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
 }
 .meal-plan-detail-main .plan-chip {
   background: rgba(250, 245, 234, 0.10);
@@ -5083,9 +5106,17 @@ body:has(.meal-plan-detail-main) .app-header {
   word-break: break-word;
   overflow-wrap: anywhere;
 }
+/* Day column wide enough for the longest weekday in any of the 14
+   languages — "Wednesday" / "Wednesda y" was wrapping at the previous
+   7-rem width even on desktop. 9 rem + tabular-nums + no-wrap on the
+   <strong> keeps every locale on one line. */
 .meal-plan-detail-main .planner-table td:first-child,
 .meal-plan-detail-main .planner-table th:first-child {
-  width: 7rem;
+  width: 9rem;
+}
+.meal-plan-detail-main .planner-table td:first-child strong,
+.meal-plan-detail-main .planner-table th:first-child {
+  white-space: nowrap;
 }
 .meal-plan-detail-main .planner-table .text-muted {
   display: -webkit-box;

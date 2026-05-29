@@ -1829,11 +1829,16 @@ function planPage(plan, lc) {
   const dir_attr = lc.dir_attr || 'ltr';
   const costDisplay = lc.costValue(plan);
 
-  // PLAN_HERO_IMG carries Spoonacular thumbnails at 312×231; the detail-page
-  // hero stretches them to ~1180 px wide, so swap to the 636×393 variant the
-  // CDN serves at the same canonical recipe ID. Wikipedia URLs pass through.
+  // PLAN_HERO_IMG carries low-res sources (Spoonacular 312×231 and
+  // Wikipedia /thumb/.../330px-...). The detail hero stretches the image
+  // to ~1180 px wide, so upgrade to the largest public CDN variant for
+  // each provider. Spoonacular caps at 636×393. Wikipedia accepts an
+  // arbitrary <W>px segment as long as it's ≤ the original asset's
+  // width; 1024 px is safe for every recipe photo on the planner.
   const heroImgRaw = PLAN_HERO_IMG[plan.idEn] || '';
-  const heroImg = heroImgRaw.replace(/-312x231\.(jpg|jpeg|png|webp)$/, '-636x393.$1');
+  const heroImg = heroImgRaw
+    .replace(/-312x231\.(jpg|jpeg|png|webp)$/, '-636x393.$1')
+    .replace(/\/(?:330|300|320)px-/, '/1024px-');
 
   return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
