@@ -4903,7 +4903,16 @@ body:has(.meal-plan-detail-main) .app-header {
    to warm cream + ink for editorial consistency. */
 .meal-plan-detail-main .content-hero {
   color: var(--hp-cream);
-  padding: 5rem 1.5rem 4rem;
+  /* Trim the desktop top/bottom padding so the hero stops eating the whole
+     fold on a 1366×768 laptop. 5rem/4rem (≈144 px) became clamp() so it
+     scales from ~64 px on small phones up to ~88 px on desktop. */
+  padding: clamp(2.5rem, 5.5vw, 3.75rem) 1.5rem clamp(2rem, 4.5vw, 3rem);
+  /* Cross-plan rhythm fallback: plans without a hero photo (currently
+     budget) inherit the same warm ink-on-cream gradient instead of
+     rendering an unstyled section. background-image overrides this for
+     the photo plans. */
+  background:
+    linear-gradient(180deg, rgba(29, 24, 18, 0.92) 0%, rgba(58, 44, 28, 0.88) 60%, rgba(29, 24, 18, 0.95) 100%);
 }
 .meal-plan-detail-main .content-hero--photo {
   background-image:
@@ -5062,6 +5071,31 @@ body:has(.meal-plan-detail-main) .app-header {
   margin-bottom: 0.4rem;
 }
 
+/* Weekly plan table — row consistency + mobile card layout.
+   Themed plans (mediterranean, world-tour, …) emit a recipe-link plus a
+   1-3-line summary in <small class="text-muted">. Budget plans emit a
+   short ingredient list. Without a clamp the summary line could push a
+   single row to 4 lines tall, ruining the table's visual rhythm. */
+.meal-plan-detail-main .planner-table { table-layout: fixed; }
+.meal-plan-detail-main .planner-table td,
+.meal-plan-detail-main .planner-table th {
+  vertical-align: top;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.meal-plan-detail-main .planner-table td:first-child,
+.meal-plan-detail-main .planner-table th:first-child {
+  width: 7rem;
+}
+.meal-plan-detail-main .planner-table .text-muted {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
   .meal-plans-index-main .content-hero,
@@ -5075,10 +5109,83 @@ body:has(.meal-plan-detail-main) .app-header {
     height: 200px;
   }
   .meal-plan-detail-main .content-hero {
-    padding: 3rem 1.25rem 2.5rem;
+    padding: clamp(2rem, 7vw, 2.6rem) 1.1rem clamp(1.6rem, 6vw, 2.2rem);
   }
   .meal-plan-detail-main .content-hero h1 {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+  /* Hero CTAs stack vertically with full-width buttons so neither side
+     squeezes the other on a 320 px phone. */
+  .meal-plan-detail-main .content-cta-group {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .meal-plan-detail-main .content-cta-group .btn { width: 100%; justify-content: center; }
+  /* Plan metadata chips: tighter gap + smaller chip on phones; row wraps
+     into 2 columns of 2 chips each rather than one long ragged row. */
+  .meal-plan-detail-main .plan-meta-chips {
+    gap: 0.35rem 0.45rem;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .meal-plan-detail-main .plan-chip {
+    font-size: 0.74rem;
+    padding: 0.22rem 0.65rem;
+  }
+
+  /* Mobile card layout for the weekly plan table — mirrors the planner
+     SPA's .planner-row pattern but scoped to the meal-plan detail so it
+     doesn't bleed into other tables. Each <tr> becomes a card, the day
+     cell becomes the card header, lunch + dinner stack vertically.
+     Eliminates the 3-column horizontal scroll at narrow widths. */
+  .meal-plan-detail-main .table-wrap { overflow-x: visible; }
+  .meal-plan-detail-main .planner-table,
+  .meal-plan-detail-main .planner-table tbody { display: block; table-layout: auto; }
+  .meal-plan-detail-main .planner-table thead { display: none; }
+  .meal-plan-detail-main .planner-table tbody tr {
+    display: block;
+    border: 1px solid var(--hp-hairline-soft);
+    border-radius: 12px;
+    background: #fffefa;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(29, 24, 18, 0.02);
+  }
+  .meal-plan-detail-main .planner-table td {
+    display: block;
+    width: auto !important;
+    border: none;
+    border-bottom: 1px solid var(--hp-hairline-soft);
+    padding: 0.8rem 1rem;
+    font-size: 0.92rem;
+  }
+  .meal-plan-detail-main .planner-table td:last-child { border-bottom: none; }
+  .meal-plan-detail-main .planner-table td:first-child {
+    background: color-mix(in srgb, var(--hp-warm-deep) 6%, var(--hp-cream-deep));
+    border-bottom: 1px solid var(--hp-hairline);
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--hp-warm-deep);
+  }
+  .meal-plan-detail-main .planner-table td:first-child strong {
+    font-weight: 600;
+    color: inherit;
+  }
+  /* Annotate lunch + dinner cells with their meal label since the
+     table header is hidden in this mobile card layout. */
+  .meal-plan-detail-main .planner-table td:nth-child(2)::before {
+    content: '☀ ';
+    color: var(--hp-warm-deep);
+    font-weight: 700;
+    margin-inline-end: 0.2rem;
+  }
+  .meal-plan-detail-main .planner-table td:nth-child(3)::before {
+    content: '☾ ';
+    color: var(--hp-warm-deep);
+    font-weight: 700;
+    margin-inline-end: 0.2rem;
   }
 }
 

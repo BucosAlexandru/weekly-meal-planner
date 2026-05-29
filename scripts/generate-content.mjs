@@ -1829,11 +1829,17 @@ function planPage(plan, lc) {
   const dir_attr = lc.dir_attr || 'ltr';
   const costDisplay = lc.costValue(plan);
 
+  // PLAN_HERO_IMG carries Spoonacular thumbnails at 312×231; the detail-page
+  // hero stretches them to ~1180 px wide, so swap to the 636×393 variant the
+  // CDN serves at the same canonical recipe ID. Wikipedia URLs pass through.
+  const heroImgRaw = PLAN_HERO_IMG[plan.idEn] || '';
+  const heroImg = heroImgRaw.replace(/-312x231\.(jpg|jpeg|png|webp)$/, '-636x393.$1');
+
   return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.plan(plan))}
 <main class="content-main meal-plan-detail-main" data-plan="${plan.idEn}">
-  <section class="content-hero${PLAN_HERO_IMG[plan.idEn] ? ' content-hero--photo' : ''}"${PLAN_HERO_IMG[plan.idEn] ? ` style="--hero-bg: url('${PLAN_HERO_IMG[plan.idEn]}')"` : ''}>
+  <section class="content-hero${heroImg ? ' content-hero--photo' : ''}"${heroImg ? ` style="--hero-bg: url('${heroImg}')"` : ''}>
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <a href="/">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
