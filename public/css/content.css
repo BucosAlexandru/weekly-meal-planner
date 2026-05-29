@@ -1116,8 +1116,11 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.1rem;
+  /* `min(100%, 240px)` keeps the track from exceeding the container at
+     narrow viewports (320 px small phones), which would otherwise force
+     horizontal scroll before the explicit 1-column breakpoint kicks in. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: clamp(.75rem, 2.4vw, 1.1rem);
   /* Row-stretch so every card in a row shares the tallest sibling's height —
      image stays a fixed 4/3 aspect, the body absorbs the extra space, and
      the meta row pins to the bottom of the card (flex auto-margin below).
@@ -1449,9 +1452,12 @@
   .cuisine-hero-flag { font-size: 2.4rem; }
 
   .cuisine-tile-grid { grid-template-columns: 1fr 1fr; gap: .7rem; }
-  .cuisine-tile-body { padding: .65rem .75rem .85rem; gap: .35rem; }
-  .cuisine-tile-title { font-size: .92rem; }
-  .cuisine-tile-desc { font-size: .78rem; -webkit-line-clamp: 2; }
+  .cuisine-tile-body {
+    padding: clamp(.6rem, 2.2vw, .85rem) clamp(.7rem, 2.6vw, .95rem) clamp(.7rem, 2.5vw, .95rem);
+    gap: .35rem;
+  }
+  .cuisine-tile-title { font-size: clamp(.88rem, 2.4vw, .98rem); }
+  .cuisine-tile-desc { font-size: clamp(.74rem, 2vw, .82rem); -webkit-line-clamp: 2; }
   .cuisine-tile-meta { gap: .25rem .4rem; font-size: .7rem; }
   .cuisine-tile-tag { font-size: .65rem; padding: .08rem .42rem; }
 
@@ -1466,9 +1472,21 @@
   .cuisine-mini { padding: .6rem .75rem; }
   .cuisine-mini-name { font-size: .85rem; }
 }
-@media (max-width: 420px) {
-  .cuisine-tile-grid { grid-template-columns: 1fr; }
+/* 1-column threshold raised to 520 px so 360–430 phones (Android,
+   iPhone 12+, large Android) get a single comfortable column instead
+   of two cramped 180-px tiles. Above 520 px (small tablets and up) the
+   2-column rule from the 720 px block still applies. */
+@media (max-width: 520px) {
+  .cuisine-tile-grid { grid-template-columns: 1fr; gap: .85rem; }
   .cuisine-mini-row { grid-template-columns: 1fr; }
+}
+/* Very small phones (≤360 px): tighten image height so the card never
+   exceeds ~78 vh on a Galaxy S8 / iPhone SE 1st gen and stays one tap
+   above the fold. Image keeps the 4/3 aspect via clamp on max width. */
+@media (max-width: 360px) {
+  .cuisine-tile-grid { gap: .65rem; }
+  .cuisine-tile-img { aspect-ratio: 16 / 10; }
+  .cuisine-tile-body { padding: .65rem .8rem .8rem; }
 }
 
 /* RTL: keep all visual logic identical; flip the meta-row arrow icons. */
@@ -3099,7 +3117,10 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
 }
 .cuisine-hub-main .cuisine-tile-meta {
   padding-top: 0.45rem;
-  margin-top: 0.15rem;
+  /* Keep the bottom-pin from the global rule; the 0.15rem nudge it
+     used to have here was overriding the flex auto-margin and breaking
+     row alignment when descriptions had different line counts. */
+  margin-top: auto;
   border-top: 1px solid var(--hp-hairline-soft);
   font-size: 0.74rem;
   gap: 0.5rem 0.75rem;
@@ -3227,6 +3248,21 @@ body:has(.cuisine-hub-main) .app-header {
   .cuisine-hub-main .cuisine-related-strip {
     margin-top: 2.5rem;
     padding-top: 2rem;
+  }
+}
+/* Narrower phones (≤430 px) — let the global 1-column threshold at
+   520 px decide the layout but tighten title sizing so it never wraps
+   past two lines on a 320-px viewport. */
+@media (max-width: 430px) {
+  .cuisine-hub-main .cuisine-tile-body {
+    padding: 0.85rem 0.9rem 0.95rem;
+    gap: 0.45rem;
+  }
+  .cuisine-hub-main .cuisine-tile-title {
+    font-size: clamp(0.96rem, 4vw, 1.05rem);
+  }
+  .cuisine-hub-main .cuisine-tile-desc {
+    font-size: clamp(0.8rem, 3.4vw, 0.86rem);
   }
 }
 
