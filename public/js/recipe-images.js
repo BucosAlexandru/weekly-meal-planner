@@ -180,4 +180,22 @@ export const recipeImages = {
   211: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Som_tam_thai.jpg/330px-Som_tam_thai.jpg',
   212: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Khao_soi.jpg/330px-Khao_soi.jpg',
   213: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Mango_sticky_rice.jpg/330px-Mango_sticky_rice.jpg',
+
+  // 214-229: added with meal-plan-coverage batch.
+  214: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Irish_stew_-_Tom%27s_Kitchen.jpg/330px-Irish_stew_-_Tom%27s_Kitchen.jpg',
+  215: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/01_Greek_Salad.jpg/330px-01_Greek_Salad.jpg',
+  216: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Caprese_salad.jpg/330px-Caprese_salad.jpg',
+  217: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/330px-Lasagne_-_stonesoup.jpg',
+  218: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Sala%C3%B0_ni%C3%A7oise_-_Mat_pr%C3%AD%C3%B0i.jpg/330px-Sala%C3%B0_ni%C3%A7oise_-_Mat_pr%C3%AD%C3%B0i.jpg',
+  219: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Beef_stroganoff_with_pasta.jpg/330px-Beef_stroganoff_with_pasta.jpg',
+  220: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Schweineschnitzel.jpg/330px-Schweineschnitzel.jpg',
+  221: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mushroom_risotto.jpg/330px-Mushroom_risotto.jpg',
+  222: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Coq_au_vin1.jpg/330px-Coq_au_vin1.jpg',
+  223: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bigos2.jpg/330px-Bigos2.jpg',
+  224: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Lamb_Tagine_with_preserved_lemons_and_olives.jpg/330px-Lamb_Tagine_with_preserved_lemons_and_olives.jpg',
+  225: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Shoyu_Ramen.jpg/330px-Shoyu_Ramen.jpg',
+  226: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/G%E1%BB%8Fi_cu%E1%BB%91n_t%C3%B4m_th%E1%BB%8Bt%2C_2_qu%E1%BA%A7y_TLC_v%C3%A0_b%C3%A1nh_x%C3%B2.JPG/330px-G%E1%BB%8Fi_cu%E1%BB%91n_t%C3%B4m_th%E1%BB%8Bt%2C_2_qu%E1%BA%A7y_TLC_v%C3%A0_b%C3%A1nh_x%C3%B2.JPG',
+  227: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sea_bream_grilled.jpg/330px-Sea_bream_grilled.jpg',
+  228: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Branzino_al_forno.jpg/330px-Branzino_al_forno.jpg',
+  229: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pollo_alla_diavola.jpg/330px-Pollo_alla_diavola.jpg',
 };
