@@ -274,16 +274,20 @@ const styles = StyleSheet.create({
 
   // ── Shopping section ────────────────────────────────────────────────────
   shopSection: { marginTop: 4 },
-  // 3 columns instead of 2 — denser, fits more groups per page without
-  // shrinking type. Each column is ~165pt wide @ A4 32pt side margins
-  // (530pt content / 3 ≈ 177pt before padding).
-  shopGrid: { flexDirection: 'row', flexWrap: 'wrap' },
-  shopGroup: { width: '33.33%', paddingRight: 12, marginBottom: 9 },
+  // Vertical-column layout: 3 column Views in a row, each containing its
+  // assigned groups stacked top-to-bottom. Greedy bin-pack distributes
+  // groups by item count so columns end at similar heights — eliminates
+  // the ragged whitespace the prior flex-wrap row layout produced when
+  // categories had very different sizes.
+  shopGrid: { flexDirection: 'row' },
+  shopColumn:     { flex: 1, paddingRight: 10 },
+  shopColumnLast: { paddingRight: 0 },
+  shopGroup: { marginBottom: 6 },
   shopGroupHead: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingBottom: 3,
-    marginBottom: 4,
+    paddingBottom: 2,
+    marginBottom: 3,
     borderBottomWidth: 0.6,
     borderBottomColor: BRAND,
   },
@@ -299,10 +303,14 @@ const styles = StyleSheet.create({
     letterSpacing: 1.6,
   },
 
+  // Each shop item used to render ~24pt tall (baseline alignment + implicit
+  // line-height inherited from page). Now we lock alignment to center,
+  // tighten vertical padding and set explicit small line-heights so each
+  // row is ~13pt — without shrinking the actual font size.
   shopItem: {
     flexDirection: 'row',
-    alignItems: 'baseline',
-    paddingVertical: 1.2,
+    alignItems: 'center',
+    paddingVertical: 0.4,
   },
   shopCheck: {
     width: 6, height: 6,
@@ -311,11 +319,11 @@ const styles = StyleSheet.create({
     borderRadius: 1,
     marginRight: 5,
   },
-  shopItemName: { fontSize: 7.8, color: INK },
+  shopItemName: { fontSize: 7.8, color: INK, lineHeight: 1.2 },
   shopItemLeader: {
     flex: 1,
     marginHorizontal: 4,
-    marginBottom: 2,
+    marginBottom: 1.5,
     height: 0,
     borderBottomWidth: 0.5,
     borderBottomColor: DOT,
@@ -325,6 +333,7 @@ const styles = StyleSheet.create({
     fontSize: 7,
     fontFamily: 'Helvetica-Bold',
     color: INK_SOFT,
+    lineHeight: 1.2,
   },
 
   // ── Tip box (compact, inline after shopping list) ────────────────────────
@@ -569,19 +578,47 @@ function MealPlanDocument(plan) {
       'Items are grouped by supermarket aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.'),
   ) : null;
 
-  // Sort groups by item count descending so the tallest categories flow
-  // first and 3-column packing leaves less ragged whitespace.
+  // Greedy bin-pack: sort groups by item count desc, assign each to the
+  // currently-shortest column. Tends to give 3 columns of near-equal height
+  // even when one category dominates (e.g. Vegetables 24 vs Meat 10).
+  const COLUMNS = 3;
   const sortedGroups = groups.slice().sort((a, b) => {
     const an = Array.isArray(a.items) ? a.items.length : 0;
     const bn = Array.isArray(b.items) ? b.items.length : 0;
     return bn - an;
   });
+  const cols = Array.from({ length: COLUMNS }, () => ({ groups: [], total: 0 }));
+  for (const g of sortedGroups) {
+    const itemCount = Array.isArray(g.items) ? g.items.length : 0;
+    let minIdx = 0;
+    for (let i = 1; i < COLUMNS; i++) {
+      if (cols[i].total < cols[minIdx].total) minIdx = i;
+    }
+    cols[minIdx].groups.push(g);
+    cols[minIdx].total += itemCount;
+  }
+  // PRO TIP rides at the bottom of the shortest column, integrating into
+  // the grid instead of dangling under it as a full-width strip that often
+  // pushed onto a near-empty trailing page.
+  const tipColIdx = cols.reduce(
+    (min, c, i) => (c.total < cols[min].total ? i : min),
+    0,
+  );
+
+  const colEls = cols.map((col, i) => {
+    const isLast = i === COLUMNS - 1;
+    const children = col.groups.map((g, gi) => shopGroup(g, `${i}-${gi}`));
+    if (i === tipColIdx && tipEl) children.push(tipEl);
+    return h(View,
+      { key: `c${i}`, style: [styles.shopColumn, isLast ? styles.shopColumnLast : null] },
+      ...children,
+    );
+  });
 
   const shopEls = groups.length ? [
     h(View, { key: 'sh', style: styles.shopSection },
       shopHeadingEl,
-      h(View, { style: styles.shopGrid }, ...sortedGroups.map(shopGroup)),
-      tipEl,
+      h(View, { style: styles.shopGrid }, ...colEls),
     ),
   ] : [];
 
