@@ -1118,18 +1118,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1.1rem;
-  /* Cards size to their natural content. Some recipes have an authored
-     description in recipes-meta.js, others don't — top-aligning lets a
-     desc-less card simply end after its title + meta instead of growing
-     a block of empty whitespace to match a neighbour with two extra
-     lines of text. The grid's column/gap geometry keeps the rhythm
-     consistent across rows even when individual cards vary in height. */
-  align-items: start;
+  /* Row-stretch so every card in a row shares the tallest sibling's height —
+     image stays a fixed 4/3 aspect, the body absorbs the extra space, and
+     the meta row pins to the bottom of the card (flex auto-margin below).
+     Cards with short descriptions get a small breathing gap instead of a
+     ragged grid; cards with long descriptions still clamp to 2 lines. */
+  align-items: stretch;
 }
-.cuisine-tile-grid > li { margin: 0; min-width: 0; }
+.cuisine-tile-grid > li { margin: 0; min-width: 0; display: flex; }
 .cuisine-tile {
   display: flex;
   flex-direction: column;
+  flex: 1;
   background: #fff;
   border: 1px solid #e8eaed;
   border-radius: 16px;
@@ -1167,6 +1167,8 @@
 .cuisine-tile-body {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0;
   gap: .5rem;
   padding: .9rem 1rem 1rem;
 }
@@ -1177,6 +1179,12 @@
   color: #111827;
   margin: 0;
   line-height: 1.3;
+  /* Clamp very long names (e.g. "Butter Chicken Murgh Makhani") to 2 lines
+     so one outlier doesn't drag every neighbour's height up. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 /* Only rendered when recipes-meta.js carries an authored desc for this
    recipe in the current locale (with EN fall-through). We never fabricate
@@ -1201,6 +1209,9 @@
   gap: .35rem .55rem;
   padding-top: .15rem;
   font-size: .76rem;
+  /* Pin the meta row to the card's bottom edge so every card aligns its
+     meta line across the row, regardless of description length. */
+  margin-top: auto;
 }
 .cuisine-tile-time {
   color: var(--cuisine-accent-ink, #4b5563);
