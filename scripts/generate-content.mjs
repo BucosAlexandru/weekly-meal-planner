@@ -3964,6 +3964,27 @@ function recipeIndex(rl) {
   // away). The page now renders a card grid identical to what used to live
   // at /<lc>/<cuisine-prefix>/ — one card per eligible cuisine, with
   // thumbnail strip + curated preview, atmosphere-tinted accent.
+
+  // Phase 21 — extract the cuisine's soul whisper from its existing
+  // editorial intro (cuisine-intros.mjs). The intros are hand-curated
+  // per locale for the country pages; surfacing their first phrase on
+  // the index card gives each cuisine a brief italic editorial voice
+  // instead of "name + count + dishes". Reuses existing curated
+  // content — zero new strings written.
+  const extractCuisineSoul = (intro) => {
+    if (!intro) return '';
+    // Most intros begin with a vivid first phrase before an em-dash.
+    let first = intro.split(/[—–]/)[0].trim();
+    // Fallback: first sentence if the em-dash split returned too much.
+    if (first.length > 90) first = first.split(/(?<=[.!?])\s/)[0].trim();
+    // Hard truncate at the nearest word boundary, with an ellipsis.
+    if (first.length > 90) {
+      const cut = first.lastIndexOf(' ', 90);
+      first = (cut > 0 ? first.slice(0, cut) : first.slice(0, 90)) + '…';
+    }
+    return first;
+  };
+
   const eligible = buildCuisineHubs();
   const cards = eligible.map(([enKey, recs]) => {
     const display    = recs[0].origin?.[code] || enKey;
@@ -4006,6 +4027,14 @@ function recipeIndex(rl) {
     const previewNames = recs.slice(0, 3).map(r =>
       r.name?.[code] || r.name?.en || r.name?.ro || ''
     ).filter(Boolean).join(' · ');
+    // Phase 21 — cuisine soul whisper. Pulls from CUISINE_INTRO data
+    // (already shipped for cuisine hub heroes) and surfaces it as one
+    // italic editorial line under the dish list. Falls back to EN if
+    // the current locale doesn't have a hand-written intro for this
+    // cuisine, and to empty (no soul line rendered) if neither exists.
+    const introText = CUISINE_INTRO[enKey]?.[code] || CUISINE_INTRO[enKey]?.en || '';
+    const soul = extractCuisineSoul(introText);
+    const soulMarkup = soul ? `\n        <p class="cuisine-card-soul">${esc(soul)}</p>` : '';
     return `
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="${atmosphere}">
       <a class="cuisine-card-link" href="${countryHref}" aria-label="${esc(display)}"></a>
@@ -4015,7 +4044,7 @@ function recipeIndex(rl) {
           <span class="origin-title-text">${flag} ${esc(display)}</span>
           <span class="recipe-count">${recs.length}</span>
         </h2>
-        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>
+        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>${soulMarkup}
       </div>
     </article>`;
   }).join('');
