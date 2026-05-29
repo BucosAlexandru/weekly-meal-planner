@@ -32,6 +32,7 @@ const PUBLIC    = path.join(ROOT, 'public');
 // enriched-but-trimmed shape.
 const discoveryCatalog = enrichCatalog({ recipes, recipesMeta });
 const recipesById      = new Map(recipes.map(r => [r.id, r]));
+const RECIPE_COUNT     = recipes.length;
 
 /* ── helpers ──────────────────────────────────────────────────── */
 const mkdir  = p => fs.mkdirSync(p, { recursive: true });
@@ -528,6 +529,9 @@ const PLANS = [
   },
 ];
 
+const PLAN_COUNT    = PLANS.length;
+const PLAN_COUNT_AR = String(PLAN_COUNT).replace(/[0-9]/g, d => '٠١٢٣٤٥٦٧٨٩'[+d]);
+
 /* ════════════════════════════════════════════════════════════════
    LANGUAGE CONFIGS — UI strings + URL structure for all 14 langs
    ════════════════════════════════════════════════════════════════ */
@@ -548,14 +552,14 @@ const LANG_CONFIGS = {
     openPlanLabel:'Deschide planul în aplicație',
     openPlanSub:'Personalizează și descarcă PDF gratuit',
     otherPlansHeading:'Alte meniuri săptămânale',
-    seeAll:'Vezi toate cele 8 meniuri →',
+    seeAll:`Vezi toate cele ${PLAN_COUNT} meniuri →`,
     seoHeading:'De ce să planifici mesele în avans?',
     seoBullets:['Reduci risipa alimentară cu până la <strong>30%</strong>','Economisești <strong>timp și bani</strong> — o singură tură','Mănânci mai <strong>sănătos</strong>','Elimini stresul zilnic al întrebării „ce gătesc azi?"'],
-    indexTitle:'Meniuri Săptămânale cu Liste de Cumpărături – 8 Planuri | Meal-Planner.ro',
-    indexDesc:'8 meniuri săptămânale complete cu liste de cumpărături și costuri estimate. Mediteranean, Asian, Buget, Vegetarian și altele.',
+    indexTitle:`Meniuri Săptămânale cu Liste de Cumpărături – ${PLAN_COUNT} Planuri | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} meniuri săptămânale complete cu liste de cumpărături și costuri estimate. Mediteranean, Asian, Buget, Vegetarian și altele.`,
     indexH1:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
     indexH1raw:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
-    indexSubdesc:'8 planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat.',
+    indexSubdesc:`${PLAN_COUNT} planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat.`,
     indexViewPlan:'Vezi planul',
     indexSeoH:'De ce să folosești un planificator săptămânal?',
     indexSeoP:'Planificarea meselor este una din cele mai eficiente metode de a mânca sănătos și de a economisi bani.',
@@ -580,13 +584,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Open plan in app',
     openPlanSub:'Customise recipes and download free PDF',
     otherPlansHeading:'More weekly plans',
-    seeAll:'See all 8 plans →',
+    seeAll:`See all ${PLAN_COUNT} plans →`,
     seoHeading:'Why plan meals in advance?',
     seoBullets:['Reduce food waste by up to <strong>30%</strong>','Save <strong>time and money</strong> — one shopping trip','Eat <strong>healthier</strong>','Eliminate the daily "what should I cook?" stress'],
-    indexTitle:'Free Weekly Meal Plans with Shopping Lists – 8 Themes | Meal-Planner.ro',
-    indexDesc:'8 complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.',
+    indexTitle:`Free Weekly Meal Plans with Shopping Lists – ${PLAN_COUNT} Themes | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.`,
     indexH1raw:'Free Weekly Meal Plans with <span class="accent">Shopping Lists</span>',
-    indexSubdesc:'8 complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost.',
+    indexSubdesc:`${PLAN_COUNT} complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost.`,
     indexViewPlan:'View plan',
     indexSeoH:'Why use a weekly meal planner?',
     indexSeoP:'Planning meals in advance is one of the most effective ways to eat healthier and save money.',
@@ -611,13 +615,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Abrir plan en la app',
     openPlanSub:'Personaliza recetas y descarga PDF gratis',
     otherPlansHeading:'Más planes semanales',
-    seeAll:'Ver los 8 planes →',
+    seeAll:`Ver los ${PLAN_COUNT} planes →`,
     seoHeading:'¿Por qué planificar las comidas?',
     seoBullets:['Reduce el desperdicio de alimentos hasta un <strong>30%</strong>','Ahorra <strong>tiempo y dinero</strong>','Come de forma más <strong>saludable</strong>','Elimina el estrés diario de "¿qué cocino hoy?"'],
-    indexTitle:'Planes de Comida Semanales con Listas de Compra – 8 Temas | Meal-Planner.ro',
-    indexDesc:'8 planes de comida semanales completos con listas de compra y costes estimados.',
+    indexTitle:`Planes de Comida Semanales con Listas de Compra – ${PLAN_COUNT} Temas | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} planes de comida semanales completos con listas de compra y costes estimados.`,
     indexH1raw:'Planes Semanales con <span class="accent">Listas de Compra</span>',
-    indexSubdesc:'8 planes completos, cada uno con 14 recetas, lista de compra ordenada y coste estimado.',
+    indexSubdesc:`${PLAN_COUNT} planes completos, cada uno con 14 recetas, lista de compra ordenada y coste estimado.`,
     indexViewPlan:'Ver plan',
     indexSeoH:'¿Por qué usar un planificador semanal?',
     indexSeoP:'Planificar las comidas es una de las formas más eficaces de comer más sano y ahorrar dinero.',
@@ -642,13 +646,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Ouvrir le plan dans l\'app',
     openPlanSub:'Personnalisez et téléchargez le PDF gratuitement',
     otherPlansHeading:'Autres plans hebdomadaires',
-    seeAll:'Voir les 8 plans →',
+    seeAll:`Voir les ${PLAN_COUNT} plans →`,
     seoHeading:'Pourquoi planifier les repas ?',
     seoBullets:['Réduisez le gaspillage alimentaire de <strong>30%</strong>','Économisez <strong>temps et argent</strong>','Mangez plus <strong>sainement</strong>','Éliminez le stress quotidien de "que cuisiner ?"'],
-    indexTitle:'Plans Repas Hebdomadaires avec Listes de Courses – 8 Thèmes | Meal-Planner.ro',
-    indexDesc:'8 plans repas hebdomadaires complets avec listes de courses et coûts estimés.',
+    indexTitle:`Plans Repas Hebdomadaires avec Listes de Courses – ${PLAN_COUNT} Thèmes | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} plans repas hebdomadaires complets avec listes de courses et coûts estimés.`,
     indexH1raw:'Plans Hebdomadaires avec <span class="accent">Listes de Courses</span>',
-    indexSubdesc:'8 plans complets, chacun avec 14 recettes, une liste de courses et un coût estimé.',
+    indexSubdesc:`${PLAN_COUNT} plans complets, chacun avec 14 recettes, une liste de courses et un coût estimé.`,
     indexViewPlan:'Voir le plan',
     indexSeoH:'Pourquoi utiliser un planificateur hebdomadaire ?',
     indexSeoP:'Planifier les repas à l\'avance est l\'un des moyens les plus efficaces de manger sainement.',
@@ -673,13 +677,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Plan in App öffnen',
     openPlanSub:'Rezepte anpassen und PDF kostenlos herunterladen',
     otherPlansHeading:'Weitere Wochenpläne',
-    seeAll:'Alle 8 Pläne anzeigen →',
+    seeAll:`Alle ${PLAN_COUNT} Pläne anzeigen →`,
     seoHeading:'Warum Mahlzeiten im Voraus planen?',
     seoBullets:['Lebensmittelverschwendung bis zu <strong>30%</strong> reduzieren','<strong>Zeit und Geld</strong> sparen','<strong>Gesünder</strong> essen','Täglichen Stress beim "Was koche ich?" eliminieren'],
-    indexTitle:'Wochenspeisepläne mit Einkaufslisten – 8 Themen | Meal-Planner.ro',
-    indexDesc:'8 vollständige Wochenspeisepläne mit Einkaufslisten und Kostenabschätzungen.',
+    indexTitle:`Wochenspeisepläne mit Einkaufslisten – ${PLAN_COUNT} Themen | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} vollständige Wochenspeisepläne mit Einkaufslisten und Kostenabschätzungen.`,
     indexH1raw:'Wochenpläne mit <span class="accent">Einkaufslisten</span>',
-    indexSubdesc:'8 vollständige Pläne, jeder mit 14 Rezepten, einer sortierten Einkaufsliste und Kostenabschätzung.',
+    indexSubdesc:`${PLAN_COUNT} vollständige Pläne, jeder mit 14 Rezepten, einer sortierten Einkaufsliste und Kostenabschätzung.`,
     indexViewPlan:'Plan ansehen',
     indexSeoH:'Warum einen Wochenplaner verwenden?',
     indexSeoP:'Die Mahlzeitenplanung im Voraus ist eine der effektivsten Methoden, gesünder zu essen.',
@@ -704,13 +708,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Abrir plano na app',
     openPlanSub:'Personalize receitas e baixe PDF grátis',
     otherPlansHeading:'Mais planos semanais',
-    seeAll:'Ver todos os 8 planos →',
+    seeAll:`Ver todos os ${PLAN_COUNT} planos →`,
     seoHeading:'Por que planejar as refeições?',
     seoBullets:['Reduza o desperdício de alimentos em <strong>30%</strong>','Economize <strong>tempo e dinheiro</strong>','Coma de forma mais <strong>saudável</strong>','Elimine o estresse diário de "o que cozinhar?"'],
     indexTitle:'Planos de Refeições Semanais com Listas de Compras | Meal-Planner.ro',
-    indexDesc:'8 planos semanais completos com listas de compras e custos estimados.',
+    indexDesc:`${PLAN_COUNT} planos semanais completos com listas de compras e custos estimados.`,
     indexH1raw:'Planos Semanais com <span class="accent">Listas de Compras</span>',
-    indexSubdesc:'8 planos completos, cada um com 14 receitas, lista de compras e custo estimado.',
+    indexSubdesc:`${PLAN_COUNT} planos completos, cada um com 14 receitas, lista de compras e custo estimado.`,
     indexViewPlan:'Ver plano',
     indexSeoH:'Por que usar um planejador semanal?',
     indexSeoP:'Planejar as refeições com antecedência é uma das formas mais eficazes de comer melhor.',
@@ -735,13 +739,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Открыть план',
     openPlanSub:'Настройте рецепты и скачайте PDF бесплатно',
     otherPlansHeading:'Другие недельные меню',
-    seeAll:'Все 8 меню →',
+    seeAll:`Все ${PLAN_COUNT} меню →`,
     seoHeading:'Зачем планировать питание?',
     seoBullets:['Снижает пищевые отходы на <strong>30%</strong>','Экономит <strong>время и деньги</strong>','Помогает питаться <strong>здоровее</strong>','Убирает ежедневный стресс'],
     indexTitle:'Недельные меню с Cписками покупок | Meal-Planner.ro',
-    indexDesc:'8 полных недельных планов питания со списками покупок и оценками стоимости.',
+    indexDesc:`${PLAN_COUNT} полных недельных планов питания со списками покупок и оценками стоимости.`,
     indexH1raw:'Недельные меню со <span class="accent">Списками покупок</span>',
-    indexSubdesc:'8 планов с 14 рецептами каждый, отсортированным списком и оценкой стоимости.',
+    indexSubdesc:`${PLAN_COUNT} планов с 14 рецептами каждый, отсортированным списком и оценкой стоимости.`,
     indexViewPlan:'Смотреть план',
     indexSeoH:'Почему стоит планировать питание?',
     indexSeoP:'Планирование питания — один из эффективных способов питаться здоровее.',
@@ -766,13 +770,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'فتح الخطة في التطبيق',
     openPlanSub:'خصّص الوصفات وحمّل PDF مجاناً',
     otherPlansHeading:'خطط أسبوعية أخرى',
-    seeAll:'عرض جميع الخطط الـ ٨ →',
+    seeAll:`عرض جميع الخطط الـ ${PLAN_COUNT_AR} →`,
     seoHeading:'لماذا تخطط وجباتك مسبقاً؟',
     seoBullets:['تقليل هدر الطعام حتى <strong>٣٠٪</strong>','توفير <strong>الوقت والمال</strong>','تناول طعام <strong>أكثر صحة</strong>','إزالة التوتر اليومي'],
     indexTitle:'خطط وجبات أسبوعية مع قوائم تسوق | Meal-Planner.ro',
-    indexDesc:'٨ خطط أسبوعية كاملة مع قوائم تسوق وتقديرات تكلفة.',
+    indexDesc:`${PLAN_COUNT_AR} خطط أسبوعية كاملة مع قوائم تسوق وتقديرات تكلفة.`,
     indexH1raw:'خطط أسبوعية مع <span class="accent">قوائم التسوق</span>',
-    indexSubdesc:'٨ خطط كاملة، كل منها يحتوي على ١٤ وصفة وقائمة تسوق وتقدير التكلفة.',
+    indexSubdesc:`${PLAN_COUNT_AR} خطط كاملة، كل منها يحتوي على ١٤ وصفة وقائمة تسوق وتقدير التكلفة.`,
     indexViewPlan:'عرض الخطة',
     indexSeoH:'لماذا تستخدم مخططاً أسبوعياً؟',
     indexSeoP:'التخطيط المسبق للوجبات من أفضل الطرق لتناول طعام صحي وتوفير المال.',
@@ -797,13 +801,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'在应用中打开计划',
     openPlanSub:'自定义食谱并免费下载PDF',
     otherPlansHeading:'更多每周计划',
-    seeAll:'查看全部8个计划 →',
+    seeAll:`查看全部${PLAN_COUNT}个计划 →`,
     seoHeading:'为什么要提前规划饮食？',
     seoBullets:['减少食物浪费高达 <strong>30%</strong>','节省<strong>时间和金钱</strong>','饮食更<strong>健康</strong>','消除每天"今天吃什么"的烦恼'],
     indexTitle:'每周饮食计划与购物清单 | Meal-Planner.ro',
-    indexDesc:'8个完整的每周饮食计划，附购物清单和费用估算。',
+    indexDesc:`${PLAN_COUNT}个完整的每周饮食计划，附购物清单和费用估算。`,
     indexH1raw:'每周饮食计划与<span class="accent">购物清单</span>',
-    indexSubdesc:'8个完整计划，每个包含14道食谱、购物清单和费用估算。',
+    indexSubdesc:`${PLAN_COUNT}个完整计划，每个包含14道食谱、购物清单和费用估算。`,
     indexViewPlan:'查看计划',
     indexSeoH:'为什么使用每周饮食规划器？',
     indexSeoP:'提前规划饮食是健康饮食和节省开支的最有效方法之一。',
@@ -828,13 +832,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'アプリでプランを開く',
     openPlanSub:'レシピをカスタマイズして無料PDFをダウンロード',
     otherPlansHeading:'他の週間プラン',
-    seeAll:'全8プランを見る →',
+    seeAll:`全${PLAN_COUNT}プランを見る →`,
     seoHeading:'なぜ食事を計画すべきか？',
     seoBullets:['食品廃棄を <strong>30%</strong> 削減','<strong>時間とお金</strong> の節約','より<strong>健康的</strong>な食事','毎日の「何を作ろう？」というストレスを解消'],
     indexTitle:'週間献立プランと買い物リスト | Meal-Planner.ro',
-    indexDesc:'8つの完全な週間食事プラン、買い物リスト付き。',
+    indexDesc:`${PLAN_COUNT}つの完全な週間食事プラン、買い物リスト付き。`,
     indexH1raw:'週間献立と<span class="accent">買い物リスト</span>',
-    indexSubdesc:'8つのプラン、それぞれ14レシピ、買い物リスト、費用概算付き。',
+    indexSubdesc:`${PLAN_COUNT}つのプラン、それぞれ14レシピ、買い物リスト、費用概算付き。`,
     indexViewPlan:'プランを見る',
     indexSeoH:'なぜ週間プランナーを使うのか？',
     indexSeoP:'食事を事前に計画することは、健康的に食べるための最も効果的な方法の一つです。',
@@ -859,13 +863,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'ऐप में योजना खोलें',
     openPlanSub:'रेसिपी कस्टमाइज़ करें और मुफ्त PDF डाउनलोड करें',
     otherPlansHeading:'अन्य साप्ताहिक योजनाएं',
-    seeAll:'सभी 8 योजनाएं देखें →',
+    seeAll:`सभी ${PLAN_COUNT} योजनाएं देखें →`,
     seoHeading:'भोजन की योजना क्यों बनाएं?',
     seoBullets:['खाद्य अपशिष्ट <strong>30%</strong> तक कम करें','<strong>समय और पैसा</strong> बचाएं','अधिक <strong>स्वस्थ</strong> खाएं','रोज़ "आज क्या पकाएं?" की परेशानी खत्म करें'],
     indexTitle:'साप्ताहिक भोजन योजनाएं और खरीदारी सूची | Meal-Planner.ro',
-    indexDesc:'8 पूर्ण साप्ताहिक भोजन योजनाएं, खरीदारी सूची और लागत अनुमान के साथ।',
+    indexDesc:`${PLAN_COUNT} पूर्ण साप्ताहिक भोजन योजनाएं, खरीदारी सूची और लागत अनुमान के साथ।`,
     indexH1raw:'साप्ताहिक योजनाएं और <span class="accent">खरीदारी सूची</span>',
-    indexSubdesc:'8 पूर्ण योजनाएं, प्रत्येक में 14 रेसिपी, खरीदारी सूची और लागत अनुमान।',
+    indexSubdesc:`${PLAN_COUNT} पूर्ण योजनाएं, प्रत्येक में 14 रेसिपी, खरीदारी सूची और लागत अनुमान।`,
     indexViewPlan:'योजना देखें',
     indexSeoH:'साप्ताहिक प्लानर क्यों उपयोग करें?',
     indexSeoP:'पहले से भोजन की योजना बनाना स्वस्थ खाने और पैसे बचाने के सबसे प्रभावी तरीकों में से एक है।',
@@ -890,13 +894,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Planı uygulamada aç',
     openPlanSub:'Tarifleri özelleştir ve ücretsiz PDF indir',
     otherPlansHeading:'Diğer haftalık planlar',
-    seeAll:'Tüm 8 planı gör →',
+    seeAll:`Tüm ${PLAN_COUNT} planı gör →`,
     seoHeading:'Yemekleri neden önceden planlayın?',
     seoBullets:['Gıda israfını <strong>%30</strong> azalt','<strong>Zaman ve para</strong> tasarrufu','Daha <strong>sağlıklı</strong> beslen','Günlük "bugün ne pişirsem?" stresini yok et'],
     indexTitle:'Haftalık Yemek Planları ve Alışveriş Listeleri | Meal-Planner.ro',
-    indexDesc:'8 tam haftalık yemek planı, alışveriş listeleri ve maliyet tahminleriyle.',
+    indexDesc:`${PLAN_COUNT} tam haftalık yemek planı, alışveriş listeleri ve maliyet tahminleriyle.`,
     indexH1raw:'Haftalık Planlar ve <span class="accent">Alışveriş Listeleri</span>',
-    indexSubdesc:'Her biri 14 tarif, alışveriş listesi ve maliyet tahmini içeren 8 tam plan.',
+    indexSubdesc:`Her biri 14 tarif, alışveriş listesi ve maliyet tahmini içeren ${PLAN_COUNT} tam plan.`,
     indexViewPlan:'Planı gör',
     indexSeoH:'Haftalık planlayıcı neden kullanılmalı?',
     indexSeoP:'Yemek planlaması, daha sağlıklı beslenmenin ve para biriktirmenin en etkili yollarından biridir.',
@@ -921,13 +925,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'Apri piano nell\'app',
     openPlanSub:'Personalizza ricette e scarica PDF gratis',
     otherPlansHeading:'Altri piani settimanali',
-    seeAll:'Vedi tutti gli 8 piani →',
+    seeAll:`Vedi tutti gli ${PLAN_COUNT} piani →`,
     seoHeading:'Perché pianificare i pasti?',
     seoBullets:['Riduci gli sprechi alimentari fino al <strong>30%</strong>','Risparmia <strong>tempo e denaro</strong>','Mangia in modo più <strong>sano</strong>','Elimina lo stress quotidiano'],
     indexTitle:'Piani Pasti Settimanali con Liste della Spesa | Meal-Planner.ro',
-    indexDesc:'8 piani settimanali completi con liste della spesa e stime dei costi.',
+    indexDesc:`${PLAN_COUNT} piani settimanali completi con liste della spesa e stime dei costi.`,
     indexH1raw:'Piani Settimanali con <span class="accent">Liste della Spesa</span>',
-    indexSubdesc:'8 piani completi, ognuno con 14 ricette, lista della spesa e stima dei costi.',
+    indexSubdesc:`${PLAN_COUNT} piani completi, ognuno con 14 ricette, lista della spesa e stima dei costi.`,
     indexViewPlan:'Vedi piano',
     indexSeoH:'Perché usare un pianificatore settimanale?',
     indexSeoP:'Pianificare i pasti in anticipo è uno dei metodi più efficaci per mangiare in modo più sano.',
@@ -952,13 +956,13 @@ const LANG_CONFIGS = {
     openPlanLabel:'앱에서 계획 열기',
     openPlanSub:'레시피를 커스터마이즈하고 무료 PDF 다운로드',
     otherPlansHeading:'다른 주간 계획',
-    seeAll:'전체 8개 계획 보기 →',
+    seeAll:`전체 ${PLAN_COUNT}개 계획 보기 →`,
     seoHeading:'왜 식사를 미리 계획해야 할까요?',
     seoBullets:['식품 낭비를 <strong>30%</strong> 줄이기','<strong>시간과 돈</strong> 절약','더 <strong>건강하게</strong> 먹기','매일 "오늘 뭐 먹지?" 스트레스 해소'],
     indexTitle:'주간 식단 계획 및 장보기 목록 | Meal-Planner.ro',
-    indexDesc:'장보기 목록과 비용 추정이 포함된 8가지 완전한 주간 식단 계획.',
+    indexDesc:`장보기 목록과 비용 추정이 포함된 ${PLAN_COUNT}가지 완전한 주간 식단 계획.`,
     indexH1raw:'주간 계획과 <span class="accent">장보기 목록</span>',
-    indexSubdesc:'각각 14가지 레시피, 장보기 목록, 비용 추정이 포함된 8가지 완전한 계획.',
+    indexSubdesc:`각각 14가지 레시피, 장보기 목록, 비용 추정이 포함된 ${PLAN_COUNT}가지 완전한 계획.`,
     indexViewPlan:'계획 보기',
     indexSeoH:'주간 플래너를 사용하는 이유',
     indexSeoP:'식사를 미리 계획하는 것은 건강하게 먹고 비용을 절약하는 가장 효과적인 방법 중 하나입니다.',
@@ -1530,11 +1534,13 @@ function pricingPage(lc_code) {
   const dir_attr = lc.dir_attr || 'ltr';
   const canonical = `https://meal-planner.ro/${lc_code}/${sl}/`;
 
-  const freeRows  = cp.freeFeats.map(f => `            <li class="${f.startsWith('✗') ? 'feat-no' : ''}">${f}</li>`).join('\n');
-  const premRows  = cp.premFeats.map(f => `            <li>${f}</li>`).join('\n');
+  // Substitute the legacy "175" placeholder with the live recipe count.
+  const subN = s => s.replace(/175/g, String(RECIPE_COUNT));
+  const freeRows  = cp.freeFeats.map(f => `            <li class="${f.startsWith('✗') ? 'feat-no' : ''}">${subN(f)}</li>`).join('\n');
+  const premRows  = cp.premFeats.map(f => `            <li>${subN(f)}</li>`).join('\n');
   const faqRows   = cp.faq.map(([q, a]) => `        <div class="faq-item">
-          <dt>${q}</dt>
-          <dd>${a}</dd>
+          <dt>${subN(q)}</dt>
+          <dd>${subN(a)}</dd>
         </div>`).join('\n');
 
   return `<!DOCTYPE html>
@@ -1961,7 +1967,7 @@ function indexPage(lc) {
     const costDisplay = lc.costValue(p);
     const heroImg = PLAN_HERO_IMG[p.idEn];
     return `<a href="${lc.dir}/${planId}/" class="content-card${heroImg ? ' content-card--with-img' : ''}">
-      ${heroImg ? `<div class="content-card-img"><img src="${heroImg}" alt="" loading="lazy" decoding="async"><span class="content-card-emoji">${p.emoji}</span></div>` : ''}
+      ${heroImg ? `<div class="content-card-img"><img src="${heroImg}" alt="" loading="lazy" decoding="async" onerror="this.closest('.content-card-img')?.classList.add('content-card-img--failed');this.remove();"><span class="content-card-emoji">${p.emoji}</span></div>` : ''}
       <div class="content-card-body">
         ${!heroImg ? `<div class="content-card-header"><span class="card-emoji">${p.emoji}</span><h2 class="card-title">${esc(theme)}</h2></div>` : `<h2 class="card-title">${esc(theme)}</h2>`}
         <p class="card-desc">${esc(desc)}</p>

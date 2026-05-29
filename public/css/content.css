@@ -452,6 +452,22 @@
   transition: transform .55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .content-card--with-img:hover .content-card-img img { transform: scale(1.045); }
+/* Graceful fallback when the external hero photo fails to load —
+   keep the warm gradient + center the per-plan emoji so the card
+   never shows a broken-image icon. */
+.content-card-img--failed {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(140deg, #f5e9d0, #e8b85b);
+}
+.content-card-img--failed .content-card-emoji {
+  position: static;
+  width: auto; height: auto;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  font-size: 3rem;
+}
 
 /* Small emoji badge in the corner of the food photo — keeps the per-plan
    identity (🫒, 🍜, 💰, etc.) visible without competing with the title. */
