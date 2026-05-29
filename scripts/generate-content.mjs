@@ -436,6 +436,96 @@ const PLANS = [
     lunches: ['Spaghetti Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
     dinners: ['Kung Pao Chicken','Pho','Tom Yum','Chicken Curry','Nasi Goreng','Cheeseburger','Fish and Chips'],
   },
+  {
+    id: 'iarna-confort', idEn: 'winter-comfort', emoji: '🍲',
+    costRON: '180–240', costEUR: '38–50',
+    theme: {
+      ro:'Iarnă – Mese de Confort', en:'Winter Comfort – Slow & Hearty',
+      es:'Invierno – Reconfortante', fr:'Hiver – Réconfortant',
+      de:'Winter – Wärmend & Herzhaft', pt:'Inverno – Aconchegante',
+      ru:'Зима – Тёплая и сытная', ar:'الشتاء – وجبات دافئة',
+      zh:'冬日暖食', ja:'冬のコンフォート', hi:'सर्दियों का आराम',
+      tr:'Kış – Sıcak & Doyurucu', it:'Inverno – Caldo e Confortante', ko:'겨울 – 따뜻한 위로'
+    },
+    desc: {
+      ro:'Tocane lent fierte, supe fierbinți și mese hrănitoare pentru zilele reci. Borș, gulaș, ciulama, pho — căldura iernii la masă.',
+      en:'Slow-cooked stews, hot soups and nourishing meals for cold days. Borscht, goulash, beef bourguignon, pho — winter warmth at the table.',
+      es:'Guisos a fuego lento, sopas calientes y comidas reconfortantes para días fríos. Borscht, goulash, boeuf bourguignon, pho.',
+      fr:'Ragoûts mijotés, soupes chaudes et plats nourrissants pour les jours froids. Bortsch, goulasch, bœuf bourguignon, pho.',
+      de:'Langsam geschmorte Eintöpfe, heiße Suppen und sättigende Mahlzeiten für kalte Tage. Borschtsch, Gulasch, Bœuf bourguignon, Pho.',
+      pt:'Guisados lentos, sopas quentes e refeições reconfortantes para dias frios. Borscht, goulash, boeuf bourguignon, pho.',
+      ru:'Медленно тушёные блюда, горячие супы и сытная еда для холодных дней. Борщ, гуляш, бёф бургиньон, фо.',
+      ar:'يخنات تطهى ببطء، حساء ساخن، ووجبات مغذية للأيام الباردة. بورش، غولاش، بوف بورغينيون، فو.',
+      zh:'慢炖菜肴、热汤和滋补饮食，温暖寒冷日子。罗宋汤、匈牙利牛肉汤、勃艮第炖牛肉、越南河粉。',
+      ja:'じっくり煮込んだシチュー、熱々のスープ、心と体を満たす料理。ボルシチ、グーラッシュ、ブッフブルギニヨン、フォー。',
+      hi:'धीमी आँच पर पका स्टू, गर्म सूप और सर्द दिनों के लिए पौष्टिक भोजन। बोर्श, गुलाश, बीफ बुर्गिन्योन, फो।',
+      tr:'Ağır ateşte pişen yahniler, sıcak çorbalar ve soğuk günler için doyurucu yemekler. Borş, gulaş, boeuf bourguignon, pho.',
+      it:'Stufati a fuoco lento, zuppe calde e piatti nutrienti per le giornate fredde. Borscht, gulasch, boeuf bourguignon, pho.',
+      ko:'천천히 끓인 스튜, 뜨거운 수프, 추운 날을 위한 든든한 요리. 보르시, 굴라시, 뵈프 부르기뇽, 포.'
+    },
+    lunches: ['Borscht','Goulash','Mushroom risotto','Chicken Paprikash','Pho','Cassoulet','Lobio'],
+    dinners: ['Boeuf Bourguignon','Tagine','Chicken Kiev','Coq au Vin','Solyanka','Bigos','Lamb Stew'],
+  },
+  {
+    id: 'vara-usoara', idEn: 'summer-light', emoji: '🍋',
+    costRON: '160–210', costEUR: '34–44',
+    theme: {
+      ro:'Vară – Mese Ușoare', en:'Summer Light – Fresh & Bright',
+      es:'Verano – Ligero y Fresco', fr:'Été – Léger & Frais',
+      de:'Sommer – Leicht & Frisch', pt:'Verão – Leve & Fresco',
+      ru:'Лето – Лёгкое и Свежее', ar:'الصيف – خفيف ومنعش',
+      zh:'夏日轻食', ja:'夏のライト食卓', hi:'गर्मी – हल्का और ताज़ा',
+      tr:'Yaz – Hafif & Ferah', it:'Estate – Leggero e Fresco', ko:'여름 – 가볍고 상쾌하게'
+    },
+    desc: {
+      ro:'Salate vibrante, supe reci, peste la grătar și mese care nu cer ore în bucătărie. Gazpacho, ceviche, salată grecească — vară pe farfurie.',
+      en:'Vibrant salads, cold soups, grilled fish and meals that don\'t ask for hours in the kitchen. Gazpacho, ceviche, Greek salad — summer on a plate.',
+      es:'Ensaladas vibrantes, sopas frías, pescado a la parrilla y comidas que no piden horas en la cocina. Gazpacho, ceviche, ensalada griega.',
+      fr:'Salades vibrantes, soupes froides, poissons grillés et repas qui ne demandent pas des heures en cuisine. Gazpacho, ceviche, salade grecque.',
+      de:'Lebendige Salate, kalte Suppen, gegrillter Fisch und Gerichte ohne stundenlange Kocherei. Gazpacho, Ceviche, griechischer Salat.',
+      pt:'Saladas vibrantes, sopas frias, peixe grelhado e refeições que não pedem horas na cozinha. Gazpacho, ceviche, salada grega.',
+      ru:'Яркие салаты, холодные супы, рыба на гриле и блюда без долгой готовки. Гаспачо, севиче, греческий салат.',
+      ar:'سلطات نابضة بالحياة، شوربات باردة، سمك مشوي، ووجبات لا تتطلب ساعات في المطبخ. غاسباتشو، سيفيتشي، سلطة يونانية.',
+      zh:'活力沙拉、冷汤、烤鱼，简单不费时的料理。西班牙冷汤、酸橘汁腌鱼、希腊沙拉——盘中的夏天。',
+      ja:'色鮮やかなサラダ、冷たいスープ、焼き魚、長時間キッチンに立たずに作れる料理。ガスパチョ、セビーチェ、ギリシャサラダ。',
+      hi:'जीवंत सलाद, ठंडे सूप, ग्रिल्ड मछली और रसोई में घंटों न माँगने वाले भोजन। गाजपाचो, सेविचे, ग्रीक सलाद।',
+      tr:'Canlı salatalar, soğuk çorbalar, ızgara balık ve saatlerce mutfak gerektirmeyen yemekler. Gazpacho, ceviche, Yunan salatası.',
+      it:'Insalate vibranti, zuppe fredde, pesce alla griglia e piatti che non richiedono ore in cucina. Gazpacho, ceviche, insalata greca.',
+      ko:'생기 넘치는 샐러드, 차가운 수프, 구운 생선, 주방에 오래 머물 필요 없는 요리. 가스파초, 세비체, 그릭 샐러드.'
+    },
+    lunches: ['Gazpacho','Ceviche','Greek Salad','Tabbouleh','Vietnamese Spring Rolls','Caprese Salad','Salade Niçoise'],
+    dinners: ['Grilled Sea Bream','Sushi','Avgolemono','Sea Bass Provençal','Souvlaki','Bouillabaisse','Smørrebrød'],
+  },
+  {
+    id: 'duminica-familie', idEn: 'family-sunday', emoji: '🍷',
+    costRON: '220–280', costEUR: '45–58',
+    theme: {
+      ro:'Duminică în Familie', en:'Sunday at the Table',
+      es:'Domingo en Familia', fr:'Dimanche en Famille',
+      de:'Sonntag am Tisch', pt:'Domingo em Família',
+      ru:'Воскресенье за столом', ar:'يوم الأحد على المائدة',
+      zh:'家庭周日餐桌', ja:'家族の日曜の食卓', hi:'परिवार का रविवार',
+      tr:'Aile Sofrasında Pazar', it:'Domenica in Famiglia', ko:'가족의 일요일 식탁'
+    },
+    desc: {
+      ro:'Friptura lentă la cuptor, lasagna pe care o aștepți toată săptămâna, paella în farfurii adânci. Mese care cer timp și înconjurate de oameni.',
+      en:'Slow roasts in the oven, the lasagna you wait for all week, paella in deep plates. Meals that ask for time and the people you love around them.',
+      es:'Asados lentos al horno, la lasaña que esperas toda la semana, paella en platos hondos. Comidas que piden tiempo y a la gente alrededor.',
+      fr:'Rôtis lents au four, la lasagne attendue toute la semaine, paella en assiette creuse. Des repas qui demandent du temps et les gens autour.',
+      de:'Langsam gebratenes aus dem Ofen, die Lasagne, auf die du die ganze Woche wartest, Paella in tiefen Tellern. Mahlzeiten, die Zeit und Menschen brauchen.',
+      pt:'Assados lentos no forno, a lasanha que se espera toda a semana, paella em pratos fundos. Refeições que pedem tempo e gente em volta.',
+      ru:'Медленное жаркое из духовки, лазанья, которую ждёшь всю неделю, паэлья в глубоких тарелках. Еда, требующая времени и близких рядом.',
+      ar:'لحوم مشوية ببطء في الفرن، اللازانيا التي تنتظرها طوال الأسبوع، البايييا في أطباق عميقة. وجبات تستحق الوقت والأحباء حولها.',
+      zh:'烤箱里的慢烤、整周期待的千层面、深盘里的西班牙海鲜饭。需要时间和爱人共享的菜肴。',
+      ja:'オーブンでじっくり焼くロースト、一週間待ったラザニア、深皿に盛るパエリャ。時間と大切な人を求める料理。',
+      hi:'ओवन में धीमी आँच पर भुना मांस, हफ्ता भर इंतज़ार की लसान्या, गहरे प्लेट में पाएया। समय और प्रियजनों की माँग करने वाले व्यंजन।',
+      tr:'Fırında ağır pişen rostolar, bütün hafta beklediğin lazanya, derin tabaklarda paella. Zaman ve sevdiklerini isteyen yemekler.',
+      it:'Arrosti lenti nel forno, la lasagna che aspetti tutta la settimana, paella nei piatti fondi. Pasti che chiedono tempo e persone intorno.',
+      ko:'오븐에서 천천히 굽는 로스트, 일주일을 기다리는 라자냐, 깊은 접시의 빠에야. 시간과 사랑하는 사람들을 부르는 요리.'
+    },
+    lunches: ['Lasagna','Paella','Risotto','Quiche Lorraine','Spanakopita','Moussaka','Pasta alla Norma'],
+    dinners: ['Boeuf Bourguignon','Roast Chicken Diavola','Cassoulet','Tagine','Beef Stroganoff','Coq au Vin','Lamb Stew'],
+  },
 ];
 
 /* ════════════════════════════════════════════════════════════════
@@ -1749,7 +1839,7 @@ function planPage(plan, lc) {
   return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.plan(plan))}
-<main class="content-main">
+<main class="content-main meal-plan-detail-main" data-plan="${plan.idEn}">
   <section class="content-hero${PLAN_HERO_IMG[plan.idEn] ? ' content-hero--photo' : ''}"${PLAN_HERO_IMG[plan.idEn] ? ` style="--hero-bg: url('${PLAN_HERO_IMG[plan.idEn]}')"` : ''}>
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
@@ -1919,7 +2009,7 @@ function indexPage(lc) {
 
   return `${HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr)}
 ${makeNav(lc, NAV_URL_FOR.planIndex())}
-<main class="content-main">
+<main class="content-main meal-plans-index-main">
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">

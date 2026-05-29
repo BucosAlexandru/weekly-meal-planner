@@ -4560,3 +4560,485 @@ body:has(.cuisine-hub-index-main) .app-header {
     background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.2) 100%);
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 23 — Meal Plans premium editorial alignment
+   ─────────────────────────────────────────────────────────────────────
+   Brings the meal plans listing (/<lc>/<plan-prefix>/) and each themed
+   plan detail page into the same warm editorial system as the recipes
+   index. Scoped to two unique main classes (.meal-plans-index-main +
+   .meal-plan-detail-main) added by the generator so cuisine hubs,
+   recipe details, and the recipes index itself stay untouched.
+
+   The .content-hero on these pages is the SHARED global hero — by
+   scoping under our new classes we override only here without
+   touching the (unrelated) shared rules.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* ── Color tokens shared with the rest of the editorial system ── */
+.meal-plans-index-main,
+.meal-plan-detail-main {
+  --hp-cream:        #faf5ea;
+  --hp-cream-deep:   #f1e7d1;
+  --hp-ink:          #1d1812;
+  --hp-ink-soft:     #3a342b;
+  --hp-warm-deep:    #a87a0c;
+  --hp-butter:       #e8b85b;
+  --hp-terracotta:   #c1392c;
+  --hp-muted:        #8a7e6a;
+  --hp-hairline:     rgba(29, 24, 18, 0.10);
+  --hp-hairline-soft:rgba(29, 24, 18, 0.06);
+
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+}
+
+/* ── INDEX page — listing of themed weekly plans ── */
+.meal-plans-index-main .content-hero,
+.meal-plans-index-main .content-hero--short {
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+  padding: 3.5rem 1.5rem 2.8rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+/* Drop the original green grain + overlay layers; replace with a
+   warm-radial atmosphere consistent with the recipes index. */
+.meal-plans-index-main .content-hero::before {
+  background:
+    radial-gradient(40rem 32rem at 88% 22%, color-mix(in srgb, var(--hp-warm-deep) 14%, transparent), transparent 65%),
+    radial-gradient(36rem 30rem at 12% 80%, color-mix(in srgb, var(--hp-terracotta) 9%, transparent), transparent 70%),
+    radial-gradient(48rem 34rem at 50% 115%, color-mix(in srgb, var(--hp-butter) 11%, transparent), transparent 70%);
+  opacity: 1;
+}
+.meal-plans-index-main .content-hero::after {
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+.meal-plans-index-main .content-hero-inner {
+  max-width: 1280px;
+}
+.meal-plans-index-main .breadcrumb-nav {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--hp-muted);
+  opacity: 1;
+  margin-bottom: 1.6rem;
+}
+.meal-plans-index-main .breadcrumb-nav a {
+  color: var(--hp-warm-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  opacity: 1;
+}
+.meal-plans-index-main .breadcrumb-nav a:hover {
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+.meal-plans-index-main .breadcrumb-nav span {
+  color: var(--hp-ink);
+  opacity: 1;
+}
+.meal-plans-index-main .content-hero h1 {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.2rem, 5.8vw, 4.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  color: var(--hp-ink);
+  margin: 0 0 1.1rem;
+  max-width: 22ch;
+}
+.meal-plans-index-main .content-hero .accent {
+  color: var(--hp-warm-deep);
+  font-style: italic;
+}
+.meal-plans-index-main .content-hero-desc {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+  line-height: 1.55;
+  color: var(--hp-ink-soft);
+  max-width: 56ch;
+  opacity: 1;
+}
+
+/* ── Plan cards on the listing — editorial calm grid ── */
+.meal-plans-index-main .content-section {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+.meal-plans-index-main .content-section-inner {
+  max-width: 1280px;
+}
+.meal-plans-index-main .content-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+.meal-plans-index-main .content-card {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(29, 24, 18, 0.02);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.meal-plans-index-main .content-card:hover,
+.meal-plans-index-main .content-card:focus-visible {
+  transform: none;
+  box-shadow: 0 16px 36px rgba(29, 24, 18, 0.10);
+  border-color: color-mix(in srgb, var(--hp-warm-deep) 30%, var(--hp-hairline));
+}
+.meal-plans-index-main .content-card-img {
+  position: relative;
+  height: 240px;
+  background: color-mix(in srgb, var(--hp-warm-deep) 9%, var(--hp-cream-deep));
+  overflow: hidden;
+}
+.meal-plans-index-main .content-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.04) contrast(1.02);
+  transition: none;
+}
+.meal-plans-index-main .content-card:hover .content-card-img img {
+  transform: none;
+}
+.meal-plans-index-main .content-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(29, 24, 18, 0.22) 100%);
+  pointer-events: none;
+}
+.meal-plans-index-main .content-card-emoji {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 1rem;
+  font-size: 1.6rem;
+  z-index: 2;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+}
+/* Cards without image (e.g., budget plan) — atmosphere-tinted header */
+.meal-plans-index-main .content-card:not(.content-card--with-img) .content-card-body {
+  padding-top: 1.4rem;
+}
+.meal-plans-index-main .content-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.meal-plans-index-main .card-emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.meal-plans-index-main .content-card-body {
+  padding: 1.15rem 1.25rem 1.25rem;
+}
+.meal-plans-index-main .card-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+  margin: 0 0 0.55rem;
+}
+.meal-plans-index-main .card-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--hp-ink-soft);
+  margin: 0 0 0.85rem;
+  /* Clamp so card heights stay close */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.meal-plans-index-main .card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--hp-hairline-soft);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.meal-plans-index-main .card-meta span:first-child {
+  color: var(--hp-warm-deep);
+  font-variant-numeric: tabular-nums;
+}
+.meal-plans-index-main .card-meta span:last-child {
+  color: var(--hp-ink);
+  margin-left: auto;
+}
+.meal-plans-index-main .card-meta i {
+  font-size: 0.85rem;
+  margin-right: 0.25rem;
+}
+
+/* Cuisine discover strip at bottom of index — calmer cream surface */
+.meal-plans-index-main .content-section.cuisine-discover {
+  background: transparent;
+  border-top: 1px solid var(--hp-hairline);
+  border-bottom: none;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+.meal-plans-index-main .cuisine-discover-eyebrow {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--hp-warm-deep);
+}
+.meal-plans-index-main .cuisine-discover-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  letter-spacing: -0.012em;
+  color: var(--hp-ink);
+}
+.meal-plans-index-main .cuisine-discover-sub {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--hp-ink-soft);
+}
+
+/* Header tint on these pages */
+body:has(.meal-plans-index-main) .app-header,
+body:has(.meal-plan-detail-main) .app-header {
+  background: rgba(250, 245, 234, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hp-hairline-soft);
+}
+
+/* ── DETAIL page — themed weekly plan ── */
+/* The detail page already uses .content-hero--photo (background image
+   set inline via --hero-bg). We keep the photo but soften the overlay
+   to warm cream + ink for editorial consistency. */
+.meal-plan-detail-main .content-hero {
+  color: var(--hp-cream);
+  padding: 5rem 1.5rem 4rem;
+}
+.meal-plan-detail-main .content-hero--photo {
+  background-image:
+    linear-gradient(180deg, rgba(29, 24, 18, 0.62) 0%, rgba(29, 24, 18, 0.50) 45%, rgba(29, 24, 18, 0.72) 100%),
+    var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+}
+.meal-plan-detail-main .content-hero-inner {
+  max-width: 1180px;
+}
+.meal-plan-detail-main .breadcrumb-nav {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.85;
+  color: rgba(250, 245, 234, 0.85);
+  margin-bottom: 1.4rem;
+}
+.meal-plan-detail-main .breadcrumb-nav a {
+  color: var(--hp-butter);
+  opacity: 1;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+.meal-plan-detail-main .breadcrumb-nav a:hover { border-bottom-color: currentColor; }
+.meal-plan-detail-main .breadcrumb-nav span {
+  color: rgba(250, 245, 234, 0.85);
+  opacity: 1;
+}
+.meal-plan-detail-main .content-hero-badge {
+  background: rgba(250, 245, 234, 0.12);
+  border: 1px solid rgba(250, 245, 234, 0.28);
+  color: var(--hp-cream);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.32rem 1rem;
+}
+.meal-plan-detail-main .content-hero h1 {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  color: var(--hp-cream);
+  margin: 0.4rem 0 0.9rem;
+  max-width: 24ch;
+}
+.meal-plan-detail-main .content-hero-desc {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 1.6;
+  color: rgba(250, 245, 234, 0.92);
+  max-width: 58ch;
+  opacity: 1;
+}
+.meal-plan-detail-main .plan-meta-chips {
+  margin-top: 1.4rem;
+  margin-bottom: 1.7rem;
+}
+.meal-plan-detail-main .plan-chip {
+  background: rgba(250, 245, 234, 0.10);
+  border: 1px solid rgba(250, 245, 234, 0.22);
+  color: rgba(250, 245, 234, 0.94);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+}
+.meal-plan-detail-main .plan-chip.cost-chip {
+  background: color-mix(in srgb, var(--hp-butter) 22%, transparent);
+  border-color: color-mix(in srgb, var(--hp-butter) 38%, transparent);
+}
+.meal-plan-detail-main .btn-generate {
+  background: var(--hp-cream);
+  color: var(--hp-ink) !important;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  transition: background 0.2s ease, transform 0.18s ease;
+}
+.meal-plan-detail-main .btn-generate:hover {
+  background: var(--hp-butter);
+  transform: translateY(-1px);
+}
+.meal-plan-detail-main .btn-outline-light {
+  border: 1px solid rgba(250, 245, 234, 0.45);
+  color: var(--hp-cream) !important;
+  border-radius: 999px;
+  padding: 0.82rem 1.4rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  background: transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.meal-plan-detail-main .btn-outline-light:hover {
+  border-color: var(--hp-butter);
+  background: rgba(250, 245, 234, 0.08);
+}
+
+/* Detail body sections — warm cream surface, editorial type */
+.meal-plan-detail-main .content-section {
+  padding: 3rem 1.5rem;
+}
+.meal-plan-detail-main .content-section-inner {
+  max-width: 1180px;
+}
+.meal-plan-detail-main .content-section h2 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  letter-spacing: -0.014em;
+  color: var(--hp-ink);
+  margin-bottom: 1.5rem;
+}
+.meal-plan-detail-main .content-section--green {
+  background: linear-gradient(180deg, var(--hp-cream) 0%, var(--hp-cream-deep) 100%) !important;
+  border-top: 1px solid var(--hp-hairline);
+  border-bottom: 1px solid var(--hp-hairline);
+}
+
+/* Day-by-day mini cards */
+.meal-plan-detail-main .mini-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.meal-plan-detail-main .content-card-mini {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.meal-plan-detail-main .content-card-mini:hover {
+  box-shadow: 0 10px 28px rgba(29, 24, 18, 0.08);
+  border-color: color-mix(in srgb, var(--hp-warm-deep) 30%, var(--hp-hairline));
+}
+.meal-plan-detail-main .card-mini-emoji {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .meal-plans-index-main .content-hero,
+  .meal-plans-index-main .content-hero--short {
+    padding: 2.25rem 1.25rem 1.85rem;
+  }
+  .meal-plans-index-main .content-hero h1 {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+  .meal-plans-index-main .content-card-img {
+    height: 200px;
+  }
+  .meal-plan-detail-main .content-hero {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+  .meal-plan-detail-main .content-hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}
+
+/* Print + reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .meal-plans-index-main .content-card,
+  .meal-plan-detail-main .content-card-mini,
+  .meal-plan-detail-main .btn-generate {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+@media print {
+  .meal-plans-index-main,
+  .meal-plan-detail-main {
+    background: white;
+    color: black;
+  }
+  .meal-plans-index-main .content-hero::before,
+  .meal-plans-index-main .content-hero::after { display: none !important; }
+  .meal-plans-index-main .content-card,
+  .meal-plan-detail-main .content-card-mini {
+    box-shadow: none !important;
+    border-color: #999 !important;
+  }
+}
