@@ -5150,3 +5150,359 @@ html[dir="rtl"] .meal-plans-index-main .content-card:focus-visible .card-meta sp
     opacity: 1 !important;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 25 — Pricing pages editorial alignment
+   ─────────────────────────────────────────────────────────────────────
+   The pricing pages were the last surface still on the old palette:
+   inline <style> in the generator template (Inter only, gray #555,
+   green-dark #1f5e22 accents, white card backgrounds with #e0e0e0
+   borders). Misaligned with the rest of the site.
+
+   Scope: #pricing-main (unique id on the pricing-page <main>). All
+   rules here cannot leak elsewhere — even other content.main pages
+   don't carry this id.
+   ═════════════════════════════════════════════════════════════════════ */
+
+#pricing-main {
+  --hp-cream:        #faf5ea;
+  --hp-cream-deep:   #f1e7d1;
+  --hp-ink:          #1d1812;
+  --hp-ink-soft:     #3a342b;
+  --hp-warm-deep:    #a87a0c;
+  --hp-butter:       #e8b85b;
+  --hp-muted:        #8a7e6a;
+  --hp-hairline:     rgba(29, 24, 18, 0.10);
+  --hp-hairline-soft:rgba(29, 24, 18, 0.06);
+
+  background: var(--hp-cream);
+  color: var(--hp-ink);
+}
+body:has(#pricing-main) {
+  background: var(--hp-cream);
+}
+body:has(#pricing-main) .app-header {
+  background: rgba(250, 245, 234, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hp-hairline-soft);
+}
+
+/* Hero — italic Fraunces title + standfirst */
+#pricing-main .pricing-page-hero {
+  text-align: center;
+  padding: 4rem 1.25rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+#pricing-main .pricing-page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(36rem 28rem at 80% 30%, color-mix(in srgb, var(--hp-warm-deep) 14%, transparent), transparent 65%),
+    radial-gradient(30rem 24rem at 18% 88%, color-mix(in srgb, var(--hp-butter) 12%, transparent), transparent 70%);
+}
+#pricing-main .pricing-page-hero h1 {
+  font-family: 'Fraunces', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+  color: var(--hp-ink);
+  margin: 0 0 0.8rem;
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+#pricing-main .pricing-page-hero p {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--hp-ink-soft);
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+/* Wrapper + pricing cards row */
+#pricing-main .pricing-page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+#pricing-main .pricing-inner {
+  margin-top: 1.5rem;
+}
+#pricing-main .pricing-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Cards — editorial, hairline border */
+#pricing-main .pricing-card {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 16px;
+  padding: 1.85rem 1.75rem 2rem;
+  position: relative;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+#pricing-main .pricing-card:hover {
+  box-shadow: 0 16px 36px rgba(29, 24, 18, 0.10);
+}
+#pricing-main .pricing-card--premium {
+  border-color: color-mix(in srgb, var(--hp-warm-deep) 30%, var(--hp-hairline));
+  background: linear-gradient(180deg, #fffefa 0%, color-mix(in srgb, var(--hp-cream-deep) 50%, #fffefa) 100%);
+}
+#pricing-main .pricing-card--premium:hover {
+  box-shadow: 0 22px 50px rgba(168, 122, 12, 0.18), 0 4px 12px rgba(29, 24, 18, 0.08);
+  border-color: color-mix(in srgb, var(--hp-warm-deep) 50%, var(--hp-hairline));
+}
+#pricing-main .pcard-popular {
+  position: absolute;
+  top: -0.55rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--hp-ink);
+  color: var(--hp-butter);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
+}
+#pricing-main .pcard-name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--hp-ink);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.012em;
+}
+#pricing-main .pcard-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  border-bottom: 1px solid var(--hp-hairline-soft);
+  padding-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+#pricing-main .pcard-price {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.4rem;
+  letter-spacing: -0.025em;
+  color: var(--hp-ink);
+  line-height: 1;
+}
+#pricing-main .pcard-sub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: var(--hp-muted);
+  font-weight: 500;
+}
+#pricing-main .pcard-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+#pricing-main .pcard-features li {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--hp-ink);
+  padding: 0.45rem 0;
+}
+#pricing-main .pcard-features li.feat-no {
+  color: var(--hp-muted);
+}
+#pricing-main .pcard-cta {
+  width: 100%;
+  background: var(--hp-ink);
+  color: var(--hp-cream);
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  letter-spacing: 0;
+  box-shadow: 0 10px 24px rgba(29, 24, 18, 0.14);
+  transition: background 0.2s ease, transform 0.18s ease;
+}
+#pricing-main .pcard-cta:hover {
+  background: var(--hp-warm-deep);
+  color: var(--hp-cream);
+  transform: translateY(-1px);
+}
+#pricing-main .pcard-already {
+  text-align: center;
+  margin: 1rem 0 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.84rem;
+}
+#pricing-main .pcard-already a {
+  color: var(--hp-warm-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+#pricing-main .pcard-already a:hover { border-bottom-color: currentColor; }
+
+/* Access mini-form — calm cream surface, hairline border */
+#pricing-main .access-mini {
+  background: #fffefa;
+  border: 1px solid var(--hp-hairline-soft);
+  border-radius: 12px;
+  padding: 1.4rem 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+#pricing-main .access-mini p {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--hp-ink-soft);
+  margin: 0 0 0.85rem;
+}
+#pricing-main .access-mini strong {
+  color: var(--hp-ink);
+  font-weight: 500;
+}
+#pricing-main .access-mini-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#pricing-main .access-mini-form input {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--hp-hairline);
+  border-radius: 999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  min-width: 220px;
+  background: white;
+  color: var(--hp-ink);
+}
+#pricing-main .access-mini-form input:focus {
+  outline: none;
+  border-color: var(--hp-warm-deep);
+}
+#pricing-main .btn-verify {
+  background: transparent;
+  color: var(--hp-warm-deep);
+  border: 1px solid var(--hp-hairline);
+  border-radius: 999px;
+  padding: 0.65rem 1.3rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+#pricing-main .btn-verify:hover {
+  background: color-mix(in srgb, var(--hp-warm-deep) 7%, transparent);
+  border-color: color-mix(in srgb, var(--hp-warm-deep) 40%, var(--hp-hairline));
+  color: var(--hp-warm-deep);
+}
+
+/* FAQ — editorial typography */
+#pricing-main .pricing-faq {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--hp-hairline);
+}
+#pricing-main .pricing-faq h2 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  letter-spacing: -0.014em;
+  color: var(--hp-ink);
+  text-align: center;
+  margin: 0 0 1.75rem;
+}
+#pricing-main .faq-item {
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--hp-hairline-soft);
+}
+#pricing-main .faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+#pricing-main .faq-item dt {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--hp-ink);
+  margin-bottom: 0.4rem;
+}
+#pricing-main .faq-item dd {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--hp-ink-soft);
+  margin: 0;
+}
+
+/* Back link */
+#pricing-main .pricing-back {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--hp-muted);
+}
+#pricing-main .pricing-back a {
+  color: var(--hp-warm-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+#pricing-main .pricing-back a:hover { border-bottom-color: currentColor; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  #pricing-main .pricing-page-hero {
+    padding: 2.5rem 1.25rem 1.75rem;
+  }
+  #pricing-main .pricing-card {
+    padding: 1.5rem 1.3rem 1.6rem;
+  }
+  #pricing-main .pricing-cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced motion + print */
+@media (prefers-reduced-motion: reduce) {
+  #pricing-main .pricing-card,
+  #pricing-main .pcard-cta,
+  #pricing-main .btn-verify {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+@media print {
+  #pricing-main { background: white; color: black; }
+  #pricing-main .pricing-page-hero::before { display: none; }
+  #pricing-main .pricing-card { box-shadow: none !important; border-color: #999 !important; }
+}

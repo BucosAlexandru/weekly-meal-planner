@@ -993,7 +993,7 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website'
   <meta name="twitter:title" content="${esc(title)}"/>
   <meta name="twitter:description" content="${esc(desc)}"/>
   <meta name="twitter:image" content="${ogImage}"/>
-  <meta name="theme-color" content="#24712A"/>
+  <meta name="theme-color" content="#1d1812"/>
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -1567,6 +1567,7 @@ ${PRICING_HREFLANGS_FULL}
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
   <!-- Bootstrap + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -1574,6 +1575,8 @@ ${PRICING_HREFLANGS_FULL}
 
   <!-- App styles -->
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/content.css">
+  <meta name="theme-color" content="#1d1812">
 
   <!-- JSON-LD: Product with pricing offers -->
   <script type="application/ld+json">
@@ -1610,24 +1613,8 @@ ${PRICING_HREFLANGS_FULL}
   }
   </script>
 
-  <style>
-    .pricing-page-hero { text-align: center; padding: 56px 20px 32px; }
-    .pricing-page-hero h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 12px; color: var(--text-primary, #1a1a2e); }
-    .pricing-page-hero p { font-size: 1.1rem; color: var(--text-secondary, #555); max-width: 480px; margin: 0 auto 8px; }
-    .pricing-page-wrap { max-width: 860px; margin: 0 auto; padding: 0 16px 64px; }
-    .pricing-faq { margin-top: 48px; padding-top: 32px; border-top: 1px solid #eee; }
-    .pricing-faq h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; text-align: center; }
-    .faq-item { margin-bottom: 20px; }
-    .faq-item dt { font-weight: 600; margin-bottom: 4px; }
-    .faq-item dd { margin: 0; color: #555; font-size: 0.95rem; }
-    .pricing-back { text-align: center; margin-top: 36px; font-size: 0.9rem; color: #5a5a5a; }
-    .pricing-back a { color: var(--color-brand-dark, #1f5e22); }
-    .nav-link--active { font-weight: 700; color: var(--color-brand-dark, #1f5e22) !important; }
-    .access-mini { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px 24px; margin-top: 32px; text-align: center; }
-    .access-mini p { margin-bottom: 12px; color: #555; font-size: 0.95rem; }
-    .access-mini-form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-    .access-mini-form input { padding: 8px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 0.95rem; min-width: 220px; }
-  </style>
+  <!-- Pricing-page styles now live in /css/content.css under
+       #pricing-main scope (Phase 25). Inline <style> block removed. -->
 </head>
 
 <body>
