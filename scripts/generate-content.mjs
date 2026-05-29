@@ -1105,14 +1105,28 @@ const makeNav = (lc, langUrlMap = null) => `
   </nav>
 </header>`;
 
-const FOOTER_LANG_LINKS = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi','tr','it','ko']
-  .map(c => `<a href="/${c}/" hreflang="${c}">${({ro:'Română',en:'English',es:'Español',fr:'Français',de:'Deutsch',pt:'Português',ru:'Русский',ar:'العربية',zh:'中文',ja:'日本語',hi:'हिन्दी',tr:'Türkçe',it:'Italiano',ko:'한국어'})[c]}</a>`)
+const FOOTER_LANG_NAMES = {
+  ro:'Română', en:'English', es:'Español', fr:'Français', de:'Deutsch',
+  pt:'Português', ru:'Русский', ar:'العربية', zh:'中文', ja:'日本語',
+  hi:'हिन्दी', tr:'Türkçe', it:'Italiano', ko:'한국어'
+};
+// Footer language links preserve page context the same way the header
+// <select> switcher does: each href points at the equivalent locale page
+// (recipe / cuisine hub / plan / pricing / etc.) — falling back to the
+// locale root only when the caller didn't supply a map. Reuses the same
+// NAV_URL_FOR.* helpers that already feed the header switcher so the
+// header and footer never disagree about where the user lands.
+const footerLangLinks = (langUrlMap = null) => Object.keys(FOOTER_LANG_NAMES)
+  .map(c => {
+    const href = (langUrlMap && langUrlMap[c]) || `/${c}/`;
+    return `<a href="${href}" hreflang="${c}">${FOOTER_LANG_NAMES[c]}</a>`;
+  })
   .join('<span class="footer-lang-sep" aria-hidden="true">·</span>');
 
-const makeFooter = (lc) => `
+const makeFooter = (lc, langUrlMap = null) => `
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">
-    <nav class="footer-langs" aria-label="${a11y(lc.code).availableLangs}">${FOOTER_LANG_LINKS}</nav>
+    <nav class="footer-langs" aria-label="${a11y(lc.code).availableLangs}">${footerLangLinks(langUrlMap)}</nav>
     <div class="footer-main">
       <span class="footer-brand">🥗 Meal-Planner.ro</span>
       <span class="footer-sep">·</span>
@@ -1682,7 +1696,7 @@ ${faqRows}
 
   </main>
 
-  ${makeFooter(lc)}
+  ${makeFooter(lc, NAV_URL_FOR.pricing())}
 
   <script src="/js/checkout.min.js" defer></script>
 </body>
@@ -1899,7 +1913,7 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
     </div>
   </section>
 </main>
-${makeFooter(lc)}
+${makeFooter(lc, NAV_URL_FOR.plan(plan))}
 <script>
 /* (1) Auto-expand the collapsible shopping list before browser print /
    Save-as-PDF, then restore. Keeps screen UX light while ensuring full
@@ -2024,7 +2038,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
     </div>
   </section>
 </main>
-${makeFooter(lc)}
+${makeFooter(lc, NAV_URL_FOR.planIndex())}
 </body></html>`;
 }
 
@@ -3843,7 +3857,7 @@ ${bridgeHtml}
   <span class="rmb-label">${esc(hubHref ? o : rl.breadLabel)}</span>
 </a>
 
-</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipe(rslug))}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* EN-origin → flag emoji. Multi-region origins ("Asia", "Middle East")
@@ -4160,7 +4174,7 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-i
     <div class="recipe-groups-grid">${cards}</div>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
-</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipeIndex())}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -4671,7 +4685,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
   <span class="rmb-label">${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}</span>
 </a>
 
-${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+${makeFooter(lc, NAV_URL_FOR.cuisineHub(originSlug))}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 // Phase 5: cuisineHubIndexPage() was removed. Its responsibility (cuisine
