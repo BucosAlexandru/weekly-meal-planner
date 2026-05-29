@@ -1957,6 +1957,9 @@ const PLAN_HERO_IMG = {
   'latin-american':     recipeImages[13], // Guacamole
   'vegetarian':         recipeImages[25], // Tabbouleh
   'quick-easy':         recipeImages[16], // Pad Thai
+  'winter-comfort':     recipeImages[178], // Beef Bourguignon
+  'summer-light':       recipeImages[65],  // Ceviche
+  'family-sunday':      recipeImages[22],  // Paella (shared with Mediterranean — different page context)
 };
 
 /* ════════════════════════════════════════════════════════════════

@@ -5042,3 +5042,111 @@ body:has(.meal-plan-detail-main) .app-header {
     border-color: #999 !important;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════════
+   Phase 24 — Subtle CSS animations bringing the 11-plan grid to life
+   ─────────────────────────────────────────────────────────────────────
+   Four small motions, none of them loud:
+
+   1. Stagger fade-in on page load: each card eases in with a 70ms
+      delay relative to its predecessor. Eleven plans land in
+      sequence across ~900ms instead of arriving as a slab.
+
+   2. Card image subtle zoom on hover: image scales 1.0 → 1.035
+      over 600ms ease-out. Standard premium-card pattern; reads as
+      "the dish is leaning toward you."
+
+   3. View-plan arrow slide on hover: the arrow icon translates 4px
+      to the right (or to the start in RTL). Tiny but communicates
+      "click goes through."
+
+   4. Emoji breath: the card emoji scales 1.0 ↔ 1.05 on a 4s
+      ease-in-out loop, staggered per card so the grid breathes
+      asynchronously. Almost subconscious; adds quiet life to the
+      page even when nothing is hovered.
+
+   All respect prefers-reduced-motion via the override block at the
+   end — animations off, transforms off, transitions off, opacity 1.
+   ═════════════════════════════════════════════════════════════════════ */
+
+@keyframes hp-plan-card-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes hp-emoji-breath {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+
+.meal-plans-index-main .content-cards-grid .content-card {
+  animation: hp-plan-card-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(1)  { animation-delay: 0.10s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(2)  { animation-delay: 0.17s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(3)  { animation-delay: 0.24s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(4)  { animation-delay: 0.31s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(5)  { animation-delay: 0.38s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(6)  { animation-delay: 0.45s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(7)  { animation-delay: 0.52s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(8)  { animation-delay: 0.59s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(9)  { animation-delay: 0.66s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(10) { animation-delay: 0.73s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(11) { animation-delay: 0.80s; }
+.meal-plans-index-main .content-cards-grid .content-card:nth-child(12) { animation-delay: 0.87s; }
+
+/* Card image zoom on hover (overrides the Phase 23 transform:none) */
+.meal-plans-index-main .content-card-img img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.meal-plans-index-main .content-card:hover .content-card-img img,
+.meal-plans-index-main .content-card:focus-visible .content-card-img img {
+  transform: scale(1.035) !important;
+}
+
+/* View-plan arrow slide on hover */
+.meal-plans-index-main .card-meta span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.meal-plans-index-main .card-meta span:last-child i {
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.meal-plans-index-main .content-card:hover .card-meta span:last-child i,
+.meal-plans-index-main .content-card:focus-visible .card-meta span:last-child i {
+  transform: translateX(4px);
+}
+html[dir="rtl"] .meal-plans-index-main .content-card:hover .card-meta span:last-child i,
+html[dir="rtl"] .meal-plans-index-main .content-card:focus-visible .card-meta span:last-child i {
+  transform: translateX(-4px);
+}
+
+/* Emoji breath — staggered per card so the grid breathes asynchronously */
+.meal-plans-index-main .content-card-emoji,
+.meal-plans-index-main .card-emoji {
+  animation: hp-emoji-breath 4s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+.meal-plans-index-main .content-card:nth-child(3n+2) .content-card-emoji,
+.meal-plans-index-main .content-card:nth-child(3n+2) .card-emoji {
+  animation-delay: 1.3s;
+}
+.meal-plans-index-main .content-card:nth-child(3n) .content-card-emoji,
+.meal-plans-index-main .content-card:nth-child(3n) .card-emoji {
+  animation-delay: 2.6s;
+}
+
+/* Reduced motion — kill ALL Phase 24 animations cleanly */
+@media (prefers-reduced-motion: reduce) {
+  .meal-plans-index-main .content-cards-grid .content-card,
+  .meal-plans-index-main .content-card-emoji,
+  .meal-plans-index-main .card-emoji,
+  .meal-plans-index-main .content-card-img img,
+  .meal-plans-index-main .card-meta span:last-child i {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
