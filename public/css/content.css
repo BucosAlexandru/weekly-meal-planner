@@ -220,6 +220,32 @@
   width: 100%;
   box-shadow: 0 2px 12px rgba(0,0,0,.06);
 }
+
+/* Weekly-plan day cards — each meal becomes a dish thumbnail + name + summary
+   (mirrors the recipe-app feel of the rest of the site). Works in the desktop
+   table cells and the mobile stacked-card layout alike. */
+.planner-table .plan-meal { display: flex; gap: .7rem; align-items: flex-start; }
+.planner-table .plan-meal-thumb {
+  position: relative; flex: 0 0 54px; width: 54px; height: 54px;
+  border-radius: 10px; overflow: hidden;
+  background: var(--hp-cream-deep, #f1e7d1);
+}
+.planner-table .plan-meal-thumb img {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.planner-table .plan-meal-thumb-fallback {
+  position: absolute; inset: 0; z-index: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; opacity: .7;
+}
+.planner-table .plan-meal-body { flex: 1 1 auto; min-width: 0; }
+.planner-table .plan-meal-name { font-weight: 600; }
+.planner-table .plan-meal-desc { display: block; margin-top: .2rem; line-height: 1.4; }
+@media (max-width: 640px) {
+  .planner-table .plan-meal-thumb { flex-basis: 48px; width: 48px; height: 48px; }
+}
+
 /* Mobile: the weekly-plan table switches to a stacked card layout
    (style.css @ max-width:640px). The desktop min-width:560px above would
    otherwise keep the stacked cards 560px wide inside a ~342px viewport,
@@ -5214,19 +5240,20 @@ body:has(.meal-plan-detail-main) .app-header {
     font-weight: 600;
     color: inherit;
   }
-  /* Annotate lunch + dinner cells with their meal label since the
-     table header is hidden in this mobile card layout. */
+  /* Annotate lunch + dinner cells with their meal label since the table
+     header is hidden in this mobile card layout. Rendered as a subtle
+     top-right badge so it sits with the meal card, not orphaned above it. */
+  .meal-plan-detail-main .planner-table td:nth-child(2),
+  .meal-plan-detail-main .planner-table td:nth-child(3) { position: relative; }
   .meal-plan-detail-main .planner-table td:nth-child(2)::before {
-    content: '☀ ';
-    color: var(--hp-warm-deep);
-    font-weight: 700;
-    margin-inline-end: 0.2rem;
+    content: '☀';
+    position: absolute; top: 10px; right: 12px; margin: 0;
+    color: var(--hp-warm-deep); font-weight: 700; font-size: .95rem; opacity: .6;
   }
   .meal-plan-detail-main .planner-table td:nth-child(3)::before {
-    content: '☾ ';
-    color: var(--hp-warm-deep);
-    font-weight: 700;
-    margin-inline-end: 0.2rem;
+    content: '☾';
+    position: absolute; top: 10px; right: 12px; margin: 0;
+    color: var(--hp-warm-deep); font-weight: 700; font-size: .95rem; opacity: .6;
   }
 }
 

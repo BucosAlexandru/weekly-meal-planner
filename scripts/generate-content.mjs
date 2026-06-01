@@ -1889,12 +1889,30 @@ function planPage(plan, lc) {
     const dSummary = mealSummary(dRec, lc_code);
     const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${RECIPE_LANG[lc_code].dir}/${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
     const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${RECIPE_LANG[lc_code].dir}/${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
+    // Small dish thumbnail per meal (decorative). Budget recipes ship no
+    // images → emoji fallback only. cover2.jpg is the placeholder, treated as
+    // "no photo" so the fallback shows instead of a generic card.
+    const thumbSrc = rec => {
+      if (!rec) return '';
+      const u = resolveRecipeImage(rec, slug(rec.name?.en || rec.name?.ro || '')).src;
+      return /cover2\.jpg$/.test(u) ? '' : u;
+    };
+    const lImg = thumbSrc(lRec), dImg = thumbSrc(dRec);
+    const mealCell = (slugUrl, dispName, summary, img) => `
+      <div class="plan-meal">
+        <span class="plan-meal-thumb" aria-hidden="true">
+          <span class="plan-meal-thumb-fallback">${plan.emoji}</span>
+          ${img ? `<img src="${img}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(img)}/>` : ''}
+        </span>
+        <span class="plan-meal-body">
+          ${slugUrl !== '#' ? `<a href="${slugUrl}" class="recipe-link plan-meal-name">${esc(dispName)}</a>` : `<span class="plan-meal-name">${esc(dispName)}</span>`}
+          ${summary ? `<small class="text-muted plan-meal-desc">${esc(summary)}</small>` : ''}
+        </span>
+      </div>`;
     return `<tr>
       <td><strong>${day}</strong></td>
-      <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lSummary?`<br><small class="text-muted">${esc(lSummary)}</small>`:''}
-      </td>
-      <td>${dSlug!=='#'?`<a href="${dSlug}" class="recipe-link">`:''}${esc(dDispName)}${dSlug!=='#'?'</a>':''}${dSummary?`<br><small class="text-muted">${esc(dSummary)}</small>`:''}
-      </td>
+      <td>${mealCell(lSlug, lDispName, lSummary, lImg)}</td>
+      <td>${mealCell(dSlug, dDispName, dSummary, dImg)}</td>
     </tr>`;
   }).join('');
 
