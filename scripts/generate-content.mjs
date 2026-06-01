@@ -170,22 +170,43 @@ function imageSrcset(url, tileSize = 'tile') {
 }
 
 /* Image error handling: emit attributes that recover from transient Wikipedia
-   404s instead of permanently removing the <img>. The hash-bucket path
-   (/thumb/X/XX/Filename) can 404 when (a) the filename guess is slightly off
-   or (b) the upstream thumb cache hasn't generated that size yet. In both
-   cases Wikipedia's Special:FilePath redirector resolves by filename and
-   server-generates the thumbnail — much more forgiving than the direct CDN
-   URL. Only fall through to remove() after the fallback also fails.
+   404s instead of permanently removing the <img>. Two Wikimedia URL shapes are
+   used as primary sources across recipe-images.js, and both now get a fallback
+   chain that ends at the flag/emoji card (remove()) rather than a broken slot:
+
+   A) upload.wikimedia.org hash-bucket thumb
+        .../commons/thumb/X/XX/Filename.jpg/330px-Filename.jpg
+      Can 404 when (a) the filename guess is slightly off or (b) the upstream
+      thumb cache hasn't generated that size yet. On error, retry the
+      Special:FilePath redirector (resolves by filename and server-generates
+      the thumbnail — far more forgiving than the direct CDN URL), then remove.
+
+   B) Special:FilePath redirector used directly as the primary src
+        https://en.wikipedia.org/wiki/Special:FilePath/Filename.jpg?width=636
+      The width-pinned form can still 404 when the requested size can't be
+      generated. On error, retry the full-resolution FilePath (no ?width),
+      then remove. Previously these URLs hit the generic remove()-immediately
+      branch with no retry, so a single hiccup left an empty image slot.
 
    For non-Wikimedia URLs (img.spoonacular.com, local /images/, cover2.jpg),
-   keep the existing remove-on-error behavior. */
+   keep the existing remove-on-error behavior — that already reveals the emoji.
+   In every case the terminal state is remove(), so the .recipe-card-img emoji
+   (rendered behind the <img> via CSS) becomes the graceful fallback. */
 function imgFallbackAttrs(url) {
+  // Pattern A — upload.wikimedia.org thumb → Special:FilePath redirector → card.
   const wm = url.match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[^/]+\/[^/]+\/([^/]+)\/(\d+)px-/);
-  if (!wm) return ' onerror="this.remove()"';
-  const filename = wm[1];
-  const width = wm[2];
-  const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${filename}?width=${width}`;
-  return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+  if (wm) {
+    const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${wm[1]}?width=${wm[2]}`;
+    return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+  }
+  // Pattern B — width-pinned Special:FilePath → full-resolution FilePath → card.
+  const fp = url.match(/^https:\/\/[a-z]+\.wikipedia\.org\/wiki\/Special:FilePath\/([^?#]+)\?width=\d+$/);
+  if (fp) {
+    const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${fp[1]}`;
+    return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+  }
+  // Everything else — remove on error so the emoji card shows.
+  return ' onerror="this.remove()"';
 }
 
 /* Convenience: build the attribute string `srcset="..." sizes="..."` to
