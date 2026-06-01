@@ -39,3 +39,5 @@ check-ssl-expiry.js.claude/
 # *.example.json template IS committed for reference.
 sources/
 data/image-batch.json
+__pycache__/
+*.pyc

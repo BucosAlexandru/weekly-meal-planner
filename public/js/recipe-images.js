@@ -180,4 +180,20 @@ export const recipeImages = {
   211: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Som_tam_thai.jpg/330px-Som_tam_thai.jpg',
   212: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Khao_soi.jpg/330px-Khao_soi.jpg',
   213: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Mango_sticky_rice.jpg/330px-Mango_sticky_rice.jpg',
+
+  // 214-229: added with meal-plan-coverage batch.
+  214: 'https://en.wikipedia.org/wiki/Special:FilePath/Irish_stew.jpg?width=636',
+  215: 'https://en.wikipedia.org/wiki/Special:FilePath/Greek_salad.jpg?width=636',
+  216: 'https://en.wikipedia.org/wiki/Special:FilePath/Caprese_salad.jpg?width=636',
+  217: 'https://en.wikipedia.org/wiki/Special:FilePath/Lasagne.jpg?width=636',
+  218: 'https://en.wikipedia.org/wiki/Special:FilePath/Sala%C3%B0_ni%C3%A7oise_-_Mat_pr%C3%AD%C3%B0i.jpg?width=636',
+  219: 'https://en.wikipedia.org/wiki/Special:FilePath/Beef_stroganoff_with_pasta.jpg?width=636',
+  222: 'https://en.wikipedia.org/wiki/Special:FilePath/Coq_au_vin.jpg?width=636',
+  223: 'https://en.wikipedia.org/wiki/Special:FilePath/Bigos.jpg?width=636',
+  226: 'https://en.wikipedia.org/wiki/Special:FilePath/G%E1%BB%8Fi_cu%E1%BB%91n.jpg?width=636',
+  227: 'https://en.wikipedia.org/wiki/Special:FilePath/Sea_bream_grilled.jpg?width=636',
+  228: 'https://en.wikipedia.org/wiki/Special:FilePath/Sea_bass_in_salt_crust.jpg?width=636',
+  229: 'https://en.wikipedia.org/wiki/Special:FilePath/Pollo_alla_diavola.jpg?width=636',
+
+  // 214-229: added with meal-plan-coverage batch.
 };

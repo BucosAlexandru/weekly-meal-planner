@@ -4,6 +4,13 @@ import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
 import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
 
+// ===== Live counts (single source of truth for discovery/FAQ/stats copy)
+// Round recipes down to the nearest 25 so the "X+" marketing copy stays
+// stable across small additions (204 → "200+"). Plans count must match the
+// PLANS array in scripts/generate-content.mjs — update both together.
+const RECIPE_COUNT_ROUND = Math.floor(recipesMain.length / 25) * 25;
+const PLAN_COUNT = 11;
+
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
 let _budgetLoadPromise = null;
@@ -163,11 +170,36 @@ const NAV_CONTENT_LINKS = {
   ko: { plans: { href: '/ko/jugan-menu/',        label: '📅 메뉴' },          recipes: { href: '/ko/recipes/',              label: '🍽️ 레시피' } },
   hi: { plans: { href: '/hi/weekly-plan/',       label: '📅 मेनू' },         recipes: { href: '/hi/recipes/',              label: '🍽️ व्यंजन' } },
 };
+// Localized "See Premium →" link shown as a third CTA in the hero (Phase 4).
+// Hidden when window.hasUnlimited (paying user, no upsell needed).
+const HERO_PREMIUM_LINK = {
+  ro: 'Vezi Premium →',      en: 'See Premium →',         es: 'Ver Premium →',
+  fr: 'Voir Premium →',      de: 'Premium ansehen →',     pt: 'Ver Premium →',
+  ru: 'Посмотреть Премиум →', it: 'Vedi Premium →',        tr: "Premium'a bak →",
+  ar: 'شاهد بريميوم →',      zh: '查看高级版 →',           ja: 'プレミアムを見る →',
+  ko: '프리미엄 보기 →',      hi: 'प्रीमियम देखें →',
+};
+
 const NAV_PRICING_LINKS = {
   ro:'/ro/premium/', en:'/en/pricing/', es:'/es/precios/', fr:'/fr/tarifs/',
   de:'/de/preise/', pt:'/pt/precos/', ru:'/ru/tseny/', ar:'/ar/asaar/',
   zh:'/zh/jiage/', ja:'/ja/pricing/', hi:'/hi/pricing/', tr:'/tr/fiyatlar/',
   it:'/it/prezzi/', ko:'/ko/pricing/'
+};
+// Nav labels for the Premium link — localized in both states. The default
+// "⭐ Premium" surface gets swapped to "✅ Active" with a gold-gradient
+// pill when window.hasUnlimited is true so paying users see they're in.
+const NAV_PREMIUM_LABEL = {
+  ro: '⭐ Premium',  en: '⭐ Premium',  es: '⭐ Premium',  fr: '⭐ Premium',
+  de: '⭐ Premium',  pt: '⭐ Premium',  ru: '⭐ Премиум',  it: '⭐ Premium',
+  tr: '⭐ Premium',  ar: '⭐ بريميوم',  zh: '⭐ 高级版',    ja: '⭐ プレミアム',
+  ko: '⭐ 프리미엄',  hi: '⭐ प्रीमियम',
+};
+const NAV_ACTIVE_PREMIUM_LABEL = {
+  ro: '✅ Activ',    en: '✅ Active',   es: '✅ Activo',   fr: '✅ Actif',
+  de: '✅ Aktiv',    pt: '✅ Ativo',    ru: '✅ Активно',  it: '✅ Attivo',
+  tr: '✅ Aktif',    ar: '✅ مفعّل',     zh: '✅ 已激活',    ja: '✅ 有効',
+  ko: '✅ 활성',     hi: '✅ सक्रिय',
 };
 function updateContentNav(currentLang) {
   const navPlans   = document.getElementById('nav-plans');
@@ -182,6 +214,13 @@ function updateContentNav(currentLang) {
   }
   if (navPricing) {
     navPricing.href = NAV_PRICING_LINKS[currentLang] || '/pricing/';
+    if (window.hasUnlimited) {
+      navPricing.textContent = NAV_ACTIVE_PREMIUM_LABEL[currentLang] || NAV_ACTIVE_PREMIUM_LABEL.en;
+      navPricing.classList.add('nav-link--active-premium');
+    } else {
+      navPricing.textContent = NAV_PREMIUM_LABEL[currentLang] || NAV_PREMIUM_LABEL.en;
+      navPricing.classList.remove('nav-link--active-premium');
+    }
   }
 }
 
@@ -1758,49 +1797,6 @@ async function ensureHtml2pdfLoaded() {
 
 /* ─── LANDING PAGE SECTIONS ────────────────────────────────── */
 
-function renderLandingFeatures() {
-  const ID = 'landing-features-section';
-  if (document.getElementById(ID)) return;
-
-  const ro = lang === 'ro';
-  const strings = {
-    title: ro ? 'De ce Meal-Planner?' : 'Why Meal-Planner?',
-    sub:   ro ? 'Simplu, rapid și complet gratuit.' : 'Simple, fast, and completely free.',
-    features: ro ? [
-      { icon:'💰', title:'Economisești bani',   desc:'Planifici exact ce cumperi — fără risipă, fără cheltuieli inutile' },
-      { icon:'⏱️', title:'Economisești timp',   desc:'Lista de cumpărături se generează automat în câteva secunde' },
-      { icon:'📄', title:'PDF frumos',           desc:'Descarcă planul tău ca PDF — perfect pentru imprimat sau partajat' },
-      { icon:'🌍', title:'14 limbi',             desc:'Funcționează în română, engleză, spaniolă, franceză și 10 alte limbi' },
-      { icon:'🍽️', title:'175+ rețete',         desc:'Rețete internaționale din 70+ țări cu ingrediente și mod de preparare' },
-    ] : [
-      { icon:'💰', title:'Save money',      desc:'Plan exactly what to buy — no waste, no impulse spending' },
-      { icon:'⏱️', title:'Save time',       desc:'Shopping list generated automatically in seconds' },
-      { icon:'📄', title:'Beautiful PDF',   desc:'Download your plan as a PDF — perfect for printing or sharing' },
-      { icon:'🌍', title:'14 languages',   desc:'Works in English, Spanish, French, Romanian and 10 more' },
-      { icon:'🍽️', title:'175+ recipes',   desc:'International recipes from 70+ countries with full instructions' },
-    ]
-  };
-
-  const html = `
-    <section id="${ID}" class="landing-features no-print">
-      <div class="landing-features-inner">
-        <h2 class="landing-features-title">${strings.title}</h2>
-        <p class="landing-features-sub">${strings.sub}</p>
-        <div class="features-grid">
-          ${strings.features.map(f => `
-            <div class="feature-card">
-              <div class="feature-icon">${f.icon}</div>
-              <div class="feature-title">${f.title}</div>
-              <div class="feature-desc">${f.desc}</div>
-            </div>`).join('')}
-        </div>
-      </div>
-    </section>`;
-
-  const hiw = document.getElementById('how-it-works-section');
-  if (hiw) hiw.insertAdjacentHTML('afterend', html);
-}
-
 function renderProductPreview() {
   const ID = 'product-preview-section';
   // Remove existing so language switch re-renders with new language
@@ -1830,7 +1826,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Choose your meals',   desc:'Fill in manually or auto-generate a full week in one click. Mix and match as you like.' },
         { icon:'🛒', n:2, title:'Shopping list ready', desc:'Ingredients are compiled automatically and sorted — ready to take to the store.' },
-        { icon:'📄', n:3, title:'Download PDF',        desc:'A beautifully formatted PDF with your full plan and list — free once per day.' },
+        { icon:'📄', n:3, title:'Download PDF',        desc:'A beautifully formatted PDF with your full plan and shopping list — ready to print or share.' },
       ],
       cta1: '🥗 Plan now — free',
       cta2: '📅 Weekly menus',
@@ -1842,7 +1838,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Elige tus comidas',    desc:'Completa manualmente o genera automáticamente una semana entera con un clic.' },
         { icon:'🛒', n:2, title:'Lista lista al instante', desc:'Los ingredientes se recopilan automáticamente y se ordenan para ir al mercado.' },
-        { icon:'📄', n:3, title:'Descarga PDF',         desc:'Un PDF elegante con tu plan completo y la lista — gratis una vez al día.' },
+        { icon:'📄', n:3, title:'Descarga PDF',         desc:'Un PDF elegante con tu plan completo y lista de compras — listo para imprimir o compartir.' },
       ],
       cta1: '🥗 Planificar ahora — gratis',
       cta2: '📅 Menús semanales',
@@ -1854,7 +1850,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Choisissez vos repas',     desc:'Remplissez manuellement ou générez automatiquement une semaine entière en un clic.' },
         { icon:'🛒', n:2, title:'Liste prête en un instant', desc:'Les ingrédients sont compilés automatiquement et triés pour faire vos courses.' },
-        { icon:'📄', n:3, title:'Téléchargez le PDF',       desc:'Un PDF élégant avec votre plan complet et votre liste — gratuit une fois par jour.' },
+        { icon:'📄', n:3, title:'Téléchargez le PDF',       desc:'Un PDF élégant avec votre plan complet et votre liste de courses — prêt à imprimer ou partager.' },
       ],
       cta1: '🥗 Planifier maintenant',
       cta2: '📅 Menus hebdomadaires',
@@ -1866,7 +1862,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Mahlzeiten wählen',     desc:'Manuell ausfüllen oder mit einem Klick automatisch eine ganze Woche generieren.' },
         { icon:'🛒', n:2, title:'Einkaufsliste sofort',  desc:'Zutaten werden automatisch zusammengestellt und sortiert — bereit zum Einkaufen.' },
-        { icon:'📄', n:3, title:'PDF herunterladen',     desc:'Ein elegantes PDF mit Ihrem vollständigen Plan — einmal täglich kostenlos.' },
+        { icon:'📄', n:3, title:'PDF herunterladen',     desc:'Ein elegantes PDF mit Ihrem vollständigen Plan und Einkaufsliste — bereit zum Drucken oder Teilen.' },
       ],
       cta1: '🥗 Jetzt planen — kostenlos',
       cta2: '📅 Wochenpläne',
@@ -1878,7 +1874,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Escolha suas refeições',  desc:'Preencha manualmente ou gere automaticamente uma semana completa com um clique.' },
         { icon:'🛒', n:2, title:'Lista pronta na hora',    desc:'Os ingredientes são compilados automaticamente e ordenados para as compras.' },
-        { icon:'📄', n:3, title:'Baixar PDF',              desc:'Um PDF elegante com seu plano completo e lista — gratuito uma vez por dia.' },
+        { icon:'📄', n:3, title:'Baixar PDF',              desc:'Um PDF elegante com seu plano completo e lista de compras — pronto para imprimir ou compartilhar.' },
       ],
       cta1: '🥗 Planificar agora — grátis',
       cta2: '📅 Planos semanais',
@@ -1890,7 +1886,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Выберите блюда',        desc:'Заполните вручную или автоматически сгенерируйте целую неделю одним кликом.' },
         { icon:'🛒', n:2, title:'Список готов мгновенно', desc:'Ингредиенты собираются автоматически и сортируются для похода в магазин.' },
-        { icon:'📄', n:3, title:'Скачать PDF',            desc:'Красивый PDF с полным планом и списком — бесплатно один раз в день.' },
+        { icon:'📄', n:3, title:'Скачать PDF',            desc:'Красивый PDF с полным планом и списком покупок — готов к печати или отправке.' },
       ],
       cta1: '🥗 Планировать — бесплатно',
       cta2: '📅 Еженедельные меню',
@@ -1902,7 +1898,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Scegli i tuoi pasti',      desc:'Compila manualmente o genera automaticamente una settimana intera con un clic.' },
         { icon:'🛒', n:2, title:'Lista pronta all\'istante', desc:'Gli ingredienti vengono compilati e ordinati automaticamente per la spesa.' },
-        { icon:'📄', n:3, title:'Scarica il PDF',            desc:'Un elegante PDF con il tuo piano completo e la lista — gratuito una volta al giorno.' },
+        { icon:'📄', n:3, title:'Scarica il PDF',            desc:'Un elegante PDF con il tuo piano completo e lista della spesa — pronto da stampare o condividere.' },
       ],
       cta1: '🥗 Pianifica ora — gratis',
       cta2: '📅 Menu settimanali',
@@ -1914,7 +1910,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'Öğünleri seçin',           desc:'Manuel olarak doldurun veya tek tıklamayla otomatik olarak tam bir hafta oluşturun.' },
         { icon:'🛒', n:2, title:'Liste anında hazır',        desc:'Malzemeler otomatik olarak derlenir ve alışveriş için sıralanır.' },
-        { icon:'📄', n:3, title:'PDF indir',                 desc:'Tam planınız ve listenizle zarif bir PDF — günde bir kez ücretsiz.' },
+        { icon:'📄', n:3, title:'PDF indir',                 desc:'Tam planınız ve alışveriş listenizle zarif bir PDF — yazdırmaya veya paylaşmaya hazır.' },
       ],
       cta1: '🥗 Şimdi planla — ücretsiz',
       cta2: '📅 Haftalık menüler',
@@ -1926,7 +1922,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'اختر وجباتك',            desc:'أضف يدويًا أو أنشئ أسبوعًا كاملاً تلقائيًا بنقرة واحدة.' },
         { icon:'🛒', n:2, title:'قائمة التسوق جاهزة فوراً', desc:'يتم تجميع المكونات تلقائيًا ومرتبة للتسوق.' },
-        { icon:'📄', n:3, title:'تحميل PDF',               desc:'ملف PDF أنيق مع خطتك الكاملة والقائمة — مجانًا مرة في اليوم.' },
+        { icon:'📄', n:3, title:'تحميل PDF',               desc:'ملف PDF أنيق مع خطتك الكاملة وقائمة التسوق — جاهز للطباعة أو المشاركة.' },
       ],
       cta1: '🥗 ابدأ التخطيط — مجاناً',
       cta2: '📅 القوائم الأسبوعية',
@@ -1938,7 +1934,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'选择您的餐食',   desc:'手动填写或一键自动生成整周计划。' },
         { icon:'🛒', n:2, title:'购物清单即刻生成', desc:'食材自动汇总并排序，随时可去购物。' },
-        { icon:'📄', n:3, title:'下载PDF',         desc:'格式精美的PDF包含完整计划和清单 — 每天免费一次。' },
+        { icon:'📄', n:3, title:'下载PDF',         desc:'格式精美的PDF包含完整计划和购物清单 — 可打印或分享。' },
       ],
       cta1: '🥗 立即规划 — 免费',
       cta2: '📅 每周菜单',
@@ -1950,7 +1946,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'食事を選ぶ',           desc:'手動で入力するか、ワンクリックで1週間分を自動生成。' },
         { icon:'🛒', n:2, title:'買い物リストがすぐ完成', desc:'食材が自動でまとめられ、買い物に行けるよう整理されます。' },
-        { icon:'📄', n:3, title:'PDFをダウンロード',      desc:'完全なプランとリストが入った美しいPDF — 1日1回無料。' },
+        { icon:'📄', n:3, title:'PDFをダウンロード',      desc:'完全なプランと買い物リストが入った美しいPDF — 印刷や共有に最適。' },
       ],
       cta1: '🥗 今すぐ計画 — 無料',
       cta2: '📅 週間メニュー',
@@ -1962,7 +1958,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'식사 선택',            desc:'직접 입력하거나 클릭 한 번으로 한 주 전체를 자동 생성하세요.' },
         { icon:'🛒', n:2, title:'장보기 목록 즉시 완성', desc:'재료가 자동으로 정리되고 쇼핑에 맞게 정렬됩니다.' },
-        { icon:'📄', n:3, title:'PDF 다운로드',          desc:'완전한 계획과 목록이 담긴 예쁜 PDF — 하루 한 번 무료.' },
+        { icon:'📄', n:3, title:'PDF 다운로드',          desc:'완전한 계획과 장보기 목록이 담긴 예쁜 PDF — 인쇄하거나 공유할 준비 완료.' },
       ],
       cta1: '🥗 지금 계획 — 무료',
       cta2: '📅 주간 메뉴',
@@ -1974,7 +1970,7 @@ function renderProductPreview() {
       steps: [
         { icon:'🥗', n:1, title:'भोजन चुनें',            desc:'मैन्युअल रूप से भरें या एक क्लिक से पूरे सप्ताह को स्वचालित रूप से बनाएं।' },
         { icon:'🛒', n:2, title:'सूची तुरंत तैयार',      desc:'सामग्री स्वचालित रूप से एकत्र और खरीदारी के लिए व्यवस्थित की जाती है।' },
-        { icon:'📄', n:3, title:'PDF डाउनलोड करें',      desc:'आपकी पूरी योजना और सूची के साथ एक सुंदर PDF — दिन में एक बार मुफ्त।' },
+        { icon:'📄', n:3, title:'PDF डाउनलोड करें',      desc:'आपकी पूरी योजना और खरीदारी सूची के साथ एक सुंदर PDF — प्रिंट करने या साझा करने के लिए तैयार।' },
       ],
       cta1: '🥗 अभी योजना बनाएं — मुफ़्त',
       cta2: '📅 साप्ताहिक मेनू',
@@ -2053,141 +2049,141 @@ function renderDiscovery() {
   const discoveryCopy = {
     ro: {
       title: 'Explorează și inspiră-te',
-      sub:   '8 meniuri complete săptămânale și 175+ rețete internaționale',
+      sub:   `${PLAN_COUNT} meniuri complete săptămânale și ${RECIPE_COUNT_ROUND}+ rețete internaționale`,
       m_title: 'Meniuri Săptămânale',
-      m_desc: '8 planuri complete — Mediteranean, Asian, Vegetarian, Buget și altele — cu liste de cumpărături incluse.',
+      m_desc: `${PLAN_COUNT} planuri complete — Mediteranean, Asian, Vegetarian, Buget și altele — cu liste de cumpărături incluse.`,
       m_cta:  'Explorează meniurile →',
-      r_title: '175+ Rețete Internaționale',
+      r_title: `${RECIPE_COUNT_ROUND}+ Rețete Internaționale`,
       r_desc: 'Rețete autentice din 70+ țări cu ingrediente, mod de preparare, valori nutriționale și sfaturi.',
       r_cta:  'Descoperă rețetele →',
     },
     en: {
       title: 'Explore and get inspired',
-      sub:   '8 complete weekly menus and 175+ international recipes',
+      sub:   `${PLAN_COUNT} complete weekly menus and ${RECIPE_COUNT_ROUND}+ international recipes`,
       m_title: 'Weekly Menus',
-      m_desc: '8 complete plans — Mediterranean, Asian, Vegetarian, Budget and more — with shopping lists included.',
+      m_desc: `${PLAN_COUNT} complete plans — Mediterranean, Asian, Vegetarian, Budget and more — with shopping lists included.`,
       m_cta:  'Explore menus →',
-      r_title: '175+ International Recipes',
+      r_title: `${RECIPE_COUNT_ROUND}+ International Recipes`,
       r_desc: 'Authentic recipes from 70+ countries with ingredients, instructions, nutrition info and tips.',
       r_cta:  'Discover recipes →',
     },
     es: {
       title: 'Explora e inspírate',
-      sub:   '8 menús semanales completos y 175+ recetas internacionales',
+      sub:   `${PLAN_COUNT} menús semanales completos y ${RECIPE_COUNT_ROUND}+ recetas internacionales`,
       m_title: 'Menús Semanales',
-      m_desc: '8 planes completos — Mediterráneo, Asiático, Vegetariano, Económico y más — con listas de compras.',
+      m_desc: `${PLAN_COUNT} planes completos — Mediterráneo, Asiático, Vegetariano, Económico y más — con listas de compras.`,
       m_cta:  'Explorar menús →',
-      r_title: '175+ Recetas Internacionales',
+      r_title: `${RECIPE_COUNT_ROUND}+ Recetas Internacionales`,
       r_desc: 'Recetas auténticas de 70+ países con ingredientes, preparación, nutrición y consejos.',
       r_cta:  'Descubrir recetas →',
     },
     fr: {
       title: 'Explorez et inspirez-vous',
-      sub:   '8 menus hebdomadaires complets et 175+ recettes internationales',
+      sub:   `${PLAN_COUNT} menus hebdomadaires complets et ${RECIPE_COUNT_ROUND}+ recettes internationales`,
       m_title: 'Menus Hebdomadaires',
-      m_desc: '8 plans complets — Méditerranéen, Asiatique, Végétarien, Budget et plus — avec listes de courses.',
+      m_desc: `${PLAN_COUNT} plans complets — Méditerranéen, Asiatique, Végétarien, Budget et plus — avec listes de courses.`,
       m_cta:  'Explorer les menus →',
-      r_title: '175+ Recettes Internationales',
+      r_title: `${RECIPE_COUNT_ROUND}+ Recettes Internationales`,
       r_desc: 'Recettes authentiques de 70+ pays avec ingrédients, instructions, nutrition et conseils.',
       r_cta:  'Découvrir les recettes →',
     },
     de: {
       title: 'Entdecken und inspirieren lassen',
-      sub:   '8 vollständige Wochenpläne und 175+ internationale Rezepte',
+      sub:   `${PLAN_COUNT} vollständige Wochenpläne und ${RECIPE_COUNT_ROUND}+ internationale Rezepte`,
       m_title: 'Wochenpläne',
-      m_desc: '8 vollständige Pläne — Mediterran, Asiatisch, Vegetarisch, Budget und mehr — mit Einkaufslisten.',
+      m_desc: `${PLAN_COUNT} vollständige Pläne — Mediterran, Asiatisch, Vegetarisch, Budget und mehr — mit Einkaufslisten.`,
       m_cta:  'Pläne erkunden →',
-      r_title: '175+ Internationale Rezepte',
+      r_title: `${RECIPE_COUNT_ROUND}+ Internationale Rezepte`,
       r_desc: 'Authentische Rezepte aus 70+ Ländern mit Zutaten, Anleitung, Nährwerten und Tipps.',
       r_cta:  'Rezepte entdecken →',
     },
     pt: {
       title: 'Explore e inspire-se',
-      sub:   '8 planos semanais completos e 175+ receitas internacionais',
+      sub:   `${PLAN_COUNT} planos semanais completos e ${RECIPE_COUNT_ROUND}+ receitas internacionais`,
       m_title: 'Planos Semanais',
-      m_desc: '8 planos completos — Mediterrâneo, Asiático, Vegetariano, Econômico e mais — com listas de compras.',
+      m_desc: `${PLAN_COUNT} planos completos — Mediterrâneo, Asiático, Vegetariano, Econômico e mais — com listas de compras.`,
       m_cta:  'Explorar planos →',
-      r_title: '175+ Receitas Internacionais',
+      r_title: `${RECIPE_COUNT_ROUND}+ Receitas Internacionais`,
       r_desc: 'Receitas autênticas de 70+ países com ingredientes, preparo, nutrição e dicas.',
       r_cta:  'Descobrir receitas →',
     },
     ru: {
       title: 'Исследуйте и вдохновляйтесь',
-      sub:   '8 полных недельных меню и 175+ международных рецептов',
+      sub:   `${PLAN_COUNT} полных недельных меню и ${RECIPE_COUNT_ROUND}+ международных рецептов`,
       m_title: 'Еженедельные меню',
-      m_desc: '8 полных планов — Средиземноморский, Азиатский, Вегетарианский, Бюджетный и другие — со списками.',
+      m_desc: `${PLAN_COUNT} полных планов — Средиземноморский, Азиатский, Вегетарианский, Бюджетный и другие — со списками.`,
       m_cta:  'Просмотреть меню →',
-      r_title: '175+ Международных рецептов',
+      r_title: `${RECIPE_COUNT_ROUND}+ Международных рецептов`,
       r_desc: 'Аутентичные рецепты из 70+ стран с ингредиентами, приготовлением, нутриентами и советами.',
       r_cta:  'Открыть рецепты →',
     },
     it: {
       title: 'Esplora e ispirati',
-      sub:   '8 menu settimanali completi e 175+ ricette internazionali',
+      sub:   `${PLAN_COUNT} menu settimanali completi e ${RECIPE_COUNT_ROUND}+ ricette internazionali`,
       m_title: 'Menu Settimanali',
-      m_desc: '8 piani completi — Mediterraneo, Asiatico, Vegetariano, Budget e altro — con liste della spesa.',
+      m_desc: `${PLAN_COUNT} piani completi — Mediterraneo, Asiatico, Vegetariano, Budget e altro — con liste della spesa.`,
       m_cta:  'Esplora i menu →',
-      r_title: '175+ Ricette Internazionali',
+      r_title: `${RECIPE_COUNT_ROUND}+ Ricette Internazionali`,
       r_desc: 'Ricette autentiche da 70+ paesi con ingredienti, preparazione, valori nutrizionali e consigli.',
       r_cta:  'Scopri le ricette →',
     },
     tr: {
       title: 'Keşfet ve ilham al',
-      sub:   '8 tam haftalık menü ve 175+ uluslararası tarif',
+      sub:   `${PLAN_COUNT} tam haftalık menü ve ${RECIPE_COUNT_ROUND}+ uluslararası tarif`,
       m_title: 'Haftalık Menüler',
-      m_desc: '8 tam plan — Akdeniz, Asya, Vejetaryen, Bütçe ve daha fazlası — alışveriş listeleriyle birlikte.',
+      m_desc: `${PLAN_COUNT} tam plan — Akdeniz, Asya, Vejetaryen, Bütçe ve daha fazlası — alışveriş listeleriyle birlikte.`,
       m_cta:  'Menüleri keşfet →',
-      r_title: '175+ Uluslararası Tarif',
+      r_title: `${RECIPE_COUNT_ROUND}+ Uluslararası Tarif`,
       r_desc: '70+ ülkeden otantik tarifler: malzemeler, yapılış, besin değerleri ve ipuçlarıyla.',
       r_cta:  'Tarifleri keşfet →',
     },
     ar: {
       title: 'استكشف واستلهم',
-      sub:   '8 قوائم أسبوعية كاملة و175+ وصفة دولية',
+      sub:   `${PLAN_COUNT} قوائم أسبوعية كاملة و${RECIPE_COUNT_ROUND}+ وصفة دولية`,
       m_title: 'القوائم الأسبوعية',
-      m_desc: '8 خطط كاملة — متوسطية، آسيوية، نباتية، اقتصادية وأكثر — مع قوائم التسوق.',
+      m_desc: `${PLAN_COUNT} خطط كاملة — متوسطية، آسيوية، نباتية، اقتصادية وأكثر — مع قوائم التسوق.`,
       m_cta:  'استكشف القوائم →',
-      r_title: '+175 وصفة دولية',
+      r_title: `+${RECIPE_COUNT_ROUND} وصفة دولية`,
       r_desc: 'وصفات أصيلة من 70+ دولة مع المكونات وطريقة التحضير والقيم الغذائية.',
       r_cta:  'اكتشف الوصفات →',
     },
     zh: {
       title: '探索并获得灵感',
-      sub:   '8个完整的周计划和175+国际食谱',
+      sub:   `${PLAN_COUNT}个完整的周计划和${RECIPE_COUNT_ROUND}+国际食谱`,
       m_title: '每周菜单',
-      m_desc: '8个完整计划 — 地中海、亚洲、素食、经济型等 — 附购物清单。',
+      m_desc: `${PLAN_COUNT}个完整计划 — 地中海、亚洲、素食、经济型等 — 附购物清单。`,
       m_cta:  '探索菜单 →',
-      r_title: '175+国际食谱',
+      r_title: `${RECIPE_COUNT_ROUND}+国际食谱`,
       r_desc: '来自70+国家的正宗食谱，包含食材、做法、营养信息和小贴士。',
       r_cta:  '发现食谱 →',
     },
     ja: {
       title: '探索してインスピレーションを得よう',
-      sub:   '8つの完全な週間メニューと175以上の国際的なレシピ',
+      sub:   `${PLAN_COUNT}つの完全な週間メニューと${RECIPE_COUNT_ROUND}以上の国際的なレシピ`,
       m_title: '週間メニュー',
-      m_desc: '8つの完全なプラン — 地中海、アジア、ベジタリアン、節約など — 買い物リスト付き。',
+      m_desc: `${PLAN_COUNT}つの完全なプラン — 地中海、アジア、ベジタリアン、節約など — 買い物リスト付き。`,
       m_cta:  'メニューを探索 →',
-      r_title: '175以上の国際レシピ',
+      r_title: `${RECIPE_COUNT_ROUND}以上の国際レシピ`,
       r_desc: '70以上の国からの本格レシピ。材料・作り方・栄養価・コツ付き。',
       r_cta:  'レシピを発見 →',
     },
     ko: {
       title: '탐색하고 영감을 얻으세요',
-      sub:   '8가지 완전한 주간 메뉴와 175개 이상의 국제 레시피',
+      sub:   `${PLAN_COUNT}가지 완전한 주간 메뉴와 ${RECIPE_COUNT_ROUND}개 이상의 국제 레시피`,
       m_title: '주간 메뉴',
-      m_desc: '8가지 완전한 플랜 — 지중해, 아시아, 채식, 절약 등 — 장보기 목록 포함.',
+      m_desc: `${PLAN_COUNT}가지 완전한 플랜 — 지중해, 아시아, 채식, 절약 등 — 장보기 목록 포함.`,
       m_cta:  '메뉴 탐색 →',
-      r_title: '175+ 국제 레시피',
+      r_title: `${RECIPE_COUNT_ROUND}+ 국제 레시피`,
       r_desc: '70개 이상의 나라에서 온 정통 레시피. 재료, 조리법, 영양 정보, 팁 포함.',
       r_cta:  '레시피 발견 →',
     },
     hi: {
       title: 'खोजें और प्रेरणा लें',
-      sub:   '8 पूर्ण साप्ताहिक मेनू और 175+ अंतर्राष्ट्रीय व्यंजन',
+      sub:   `${PLAN_COUNT} पूर्ण साप्ताहिक मेनू और ${RECIPE_COUNT_ROUND}+ अंतर्राष्ट्रीय व्यंजन`,
       m_title: 'साप्ताहिक मेनू',
-      m_desc: '8 पूर्ण योजनाएं — भूमध्यसागरीय, एशियाई, शाकाहारी, बजट और अधिक — खरीदारी सूची के साथ।',
+      m_desc: `${PLAN_COUNT} पूर्ण योजनाएं — भूमध्यसागरीय, एशियाई, शाकाहारी, बजट और अधिक — खरीदारी सूची के साथ।`,
       m_cta:  'मेनू देखें →',
-      r_title: '175+ अंतर्राष्ट्रीय व्यंजन',
+      r_title: `${RECIPE_COUNT_ROUND}+ अंतर्राष्ट्रीय व्यंजन`,
       r_desc: '70+ देशों से प्रामाणिक व्यंजन। सामग्री, विधि, पोषण और सुझाव सहित।',
       r_cta:  'व्यंजन खोजें →',
     },
@@ -2217,58 +2213,6 @@ function renderDiscovery() {
     </section>`;
 
   document.getElementById('product-preview-section')?.insertAdjacentHTML('afterend', html);
-}
-
-// Re-localize the SSR cuisine-discovery section (.hp-cuisine-discover) to the
-// active language. The section is injected server-side in one fixed language
-// (Romanian on the root "/"), but the root auto-translates to the visitor's
-// browser language — leaving this block in the wrong language. We update text
-// in place using i18n.js (single source for the CTA strings) + the recipe data
-// already loaded here (origin[lang] for names, name[lang] for the dish line).
-// No-ops on pages without the section. Layout/structure/flags/counts untouched.
-function renderCuisineDiscover() {
-  const sec = document.querySelector('[data-hp-cuisine-section]');
-  if (!sec) return;
-  const byId = id => recipesMain.find(r => String(r.id) === String(id));
-  const tr = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || '';
-  const count = sec.getAttribute('data-cuisine-count') || '';
-
-  const setText = (sel, val) => { const el = sec.querySelector(sel); if (el && val) el.textContent = val; };
-  setText('.hp-cuisine-eyebrow', tr('cuisine.eyebrow'));
-  setText('#hp-cuisine-heading', tr('cuisine.heading'));
-  setText('.hp-cuisine-sub', (tr('cuisine.sub') || '').replace('{n}', count));
-
-  // Recipe-index path segment per locale (matches generate-content.mjs RECIPE_LANG).
-  const recipeSeg = {
-    ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
-    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'shipu', ja:'reshipi',
-    hi:'recipes', tr:'tarifler', it:'ricette', ko:'recipes',
-  }[lang] || 'recipes';
-  const recipeDir = `/${lang}/${recipeSeg}`;
-
-  sec.querySelectorAll('.hp-cuisine-card').forEach(card => {
-    const rep = byId(card.getAttribute('data-cuisine-rep-id'));
-    if (rep) {
-      const nameEl = card.querySelector('.hp-cuisine-card-name');
-      const localName = rep.origin?.[lang] || rep.origin?.en || rep.origin?.ro;
-      if (nameEl && localName) nameEl.textContent = localName;
-    }
-    const ids = (card.getAttribute('data-card-ids') || '').split('|').filter(Boolean);
-    const dishNames = ids.map(byId).filter(Boolean)
-      .map(r => r.name?.[lang] || r.name?.en || r.name?.ro).filter(Boolean);
-    const dishEl = card.querySelector('.hp-cuisine-card-dishes');
-    if (dishEl && dishNames.length) dishEl.textContent = dishNames.join(' · ');
-
-    const cslug = card.getAttribute('data-cuisine-slug');
-    if (cslug) card.setAttribute('href', `${recipeDir}/${cslug}/`);
-  });
-
-  const ctaBtn = sec.querySelector('.hp-cuisine-cta-btn');
-  if (ctaBtn) {
-    const btnTxt = (tr('cuisine.btn') || '').replace('{n}', count);
-    if (btnTxt) ctaBtn.textContent = btnTxt;
-    ctaBtn.setAttribute('href', `${recipeDir}/`);
-  }
 }
 
 function renderPlannerAnchor() {
@@ -2332,14 +2276,14 @@ function renderPremiumHero() {
   // Per-language strings (ro primary, en fallback for rest)
   const copy = {
     ro: {
-      badge: 'Gratuit · Fără cont · 14 limbi',
+      badge: 'Gratuit · Fără înregistrare · 14 limbi',
       line1: 'Mâncă bine,',
       line2: 'în fiecare',
       line3: 'săptămână.',
       sub: 'Plan complet în câteva secunde.\nListă de cumpărături automată. PDF gratuit.',
-      stat1n:'175+', stat1l:'Rețete',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Rețete',
       stat2n:'14',   stat2l:'Limbi',
-      stat3n:'0€',   stat3l:'Mereu gratuit',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Creează Planul Meu',
       ghost: 'Explorează meniuri →',
       planLabel: 'Planul Săptămânal',
@@ -2355,14 +2299,14 @@ function renderPremiumHero() {
       chips:['paste','ouă','parmezan','roșii','feta','ciuperci','pui','lămâie'],
     },
     en: {
-      badge: 'Free · No account · 14 languages',
+      badge: 'Free · No signup · 14 languages',
       line1: 'Eat well,',
       line2: 'every single',
       line3: 'week.',
       sub: 'Full plan in seconds.\nAuto shopping list. Free PDF download.',
-      stat1n:'175+', stat1l:'Recipes',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Recipes',
       stat2n:'14',   stat2l:'Languages',
-      stat3n:'Free', stat3l:'Forever',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Create My Free Plan',
       ghost: 'Explore menus →',
       planLabel: 'Weekly Plan',
@@ -2378,14 +2322,14 @@ function renderPremiumHero() {
       chips:['pasta','eggs','parmesan','tomatoes','feta','mushrooms','chicken','lemon'],
     },
     es: {
-      badge: 'Gratis · Sin cuenta · 14 idiomas',
+      badge: 'Gratis · Sin registro · 14 idiomas',
       line1: 'Come bien,',
       line2: 'cada',
       line3: 'semana.',
       sub: 'Plan completo en segundos.\nLista de compras automática. PDF gratis.',
-      stat1n:'175+', stat1l:'Recetas',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Recetas',
       stat2n:'14',   stat2l:'Idiomas',
-      stat3n:'0€',   stat3l:'Siempre gratis',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Crear Mi Plan Gratis',
       ghost: 'Explorar menús →',
       planLabel: 'Plan Semanal',
@@ -2401,14 +2345,14 @@ function renderPremiumHero() {
       chips:['arroz','tomates','pollo','aceite','cebolla','ajo','limón','huevos'],
     },
     fr: {
-      badge: 'Gratuit · Sans compte · 14 langues',
+      badge: 'Gratuit · Sans inscription · 14 langues',
       line1: 'Mangez bien,',
       line2: 'chaque',
       line3: 'semaine.',
       sub: 'Plan complet en quelques secondes.\nListe de courses automatique. PDF gratuit.',
-      stat1n:'175+', stat1l:'Recettes',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Recettes',
       stat2n:'14',   stat2l:'Langues',
-      stat3n:'0€',   stat3l:'Toujours gratuit',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Créer Mon Plan Gratuit',
       ghost: 'Explorer les menus →',
       planLabel: 'Plan Hebdomadaire',
@@ -2424,14 +2368,14 @@ function renderPremiumHero() {
       chips:['beurre','oeufs','farine','tomates','poulet','ail','herbes','vin'],
     },
     de: {
-      badge: 'Kostenlos · Kein Konto · 14 Sprachen',
+      badge: 'Kostenlos · Keine Anmeldung · 14 Sprachen',
       line1: 'Gut essen,',
       line2: 'jede',
       line3: 'Woche.',
       sub: 'Vollständiger Plan in Sekunden.\nEinkaufsliste automatisch. PDF kostenlos.',
-      stat1n:'175+', stat1l:'Rezepte',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Rezepte',
       stat2n:'14',   stat2l:'Sprachen',
-      stat3n:'0€',   stat3l:'Immer kostenlos',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Meinen Plan Erstellen',
       ghost: 'Menüs erkunden →',
       planLabel: 'Wochenplan',
@@ -2447,14 +2391,14 @@ function renderPremiumHero() {
       chips:['Kartoffeln','Zwiebeln','Hähnchen','Möhren','Mehl','Butter','Eier','Käse'],
     },
     pt: {
-      badge: 'Gratuito · Sem conta · 14 idiomas',
+      badge: 'Gratuito · Sem cadastro · 14 idiomas',
       line1: 'Coma bem,',
       line2: 'todas as',
       line3: 'semanas.',
       sub: 'Plano completo em segundos.\nLista de compras automática. PDF gratuito.',
-      stat1n:'175+', stat1l:'Receitas',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Receitas',
       stat2n:'14',   stat2l:'Idiomas',
-      stat3n:'0€',   stat3l:'Sempre grátis',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Criar Meu Plano Grátis',
       ghost: 'Explorar planos →',
       planLabel: 'Plano Semanal',
@@ -2470,14 +2414,14 @@ function renderPremiumHero() {
       chips:['massa','ovos','parmesão','tomates','frango','cogumelos','limão','arroz'],
     },
     ru: {
-      badge: 'Бесплатно · Без аккаунта · 14 языков',
+      badge: 'Бесплатно · Без регистрации · 14 языков',
       line1: 'Питайтесь',
       line2: 'хорошо',
       line3: 'каждую неделю.',
       sub: 'Полный план за секунды.\nСписок покупок автоматически. PDF бесплатно.',
-      stat1n:'175+', stat1l:'Рецептов',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Рецептов',
       stat2n:'14',   stat2l:'Языков',
-      stat3n:'0€',   stat3l:'Всегда бесплатно',
+      stat3n:'€3',   stat3l:'Премиум',
       cta: '🥗 Создать Мой План',
       ghost: 'Просмотреть меню →',
       planLabel: 'Недельный план',
@@ -2493,14 +2437,14 @@ function renderPremiumHero() {
       chips:['картофель','морковь','курица','рис','лук','масло','яйца','сыр'],
     },
     it: {
-      badge: 'Gratuito · Senza account · 14 lingue',
+      badge: 'Gratuito · Senza registrazione · 14 lingue',
       line1: 'Mangia bene,',
       line2: 'ogni',
       line3: 'settimana.',
       sub: 'Piano completo in pochi secondi.\nLista della spesa automatica. PDF gratuito.',
-      stat1n:'175+', stat1l:'Ricette',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Ricette',
       stat2n:'14',   stat2l:'Lingue',
-      stat3n:'0€',   stat3l:'Sempre gratuito',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Crea Il Mio Piano Gratis',
       ghost: 'Esplora i menu →',
       planLabel: 'Piano Settimanale',
@@ -2516,14 +2460,14 @@ function renderPremiumHero() {
       chips:['pasta','uova','parmigiano','pomodori','pollo','funghi','limone','riso'],
     },
     tr: {
-      badge: 'Ücretsiz · Hesap yok · 14 dil',
+      badge: 'Ücretsiz · Kayıt yok · 14 dil',
       line1: 'Her hafta',
       line2: 'iyi',
       line3: 'yiyin.',
       sub: 'Saniyeler içinde tam plan.\nOtomatik alışveriş listesi. Ücretsiz PDF.',
-      stat1n:'175+', stat1l:'Tarif',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Tarif',
       stat2n:'14',   stat2l:'Dil',
-      stat3n:'0€',   stat3l:'Hep ücretsiz',
+      stat3n:'€3',   stat3l:'Premium',
       cta: '🥗 Planımı Oluştur',
       ghost: 'Menüleri keşfet →',
       planLabel: 'Haftalık Plan',
@@ -2539,14 +2483,14 @@ function renderPremiumHero() {
       chips:['tavuk','pirinç','domates','soğan','biber','zeytinyağı','yumurta','peynir'],
     },
     ar: {
-      badge: 'مجاني · بدون حساب · 14 لغة',
+      badge: 'مجاني · بدون تسجيل · 14 لغة',
       line1: 'تناول طعاماً',
       line2: 'صحياً كل',
       line3: 'أسبوع.',
       sub: 'خطة كاملة في ثوانٍ.\nقائمة تسوق تلقائية. PDF مجاني.',
-      stat1n:'175+', stat1l:'وصفة',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'وصفة',
       stat2n:'14',   stat2l:'لغة',
-      stat3n:'0€',   stat3l:'مجاني دائماً',
+      stat3n:'€3',   stat3l:'بريميوم',
       cta: '🥗 إنشاء خطتي المجانية',
       ghost: 'استكشف القوائم →',
       planLabel: 'الخطة الأسبوعية',
@@ -2562,14 +2506,14 @@ function renderPremiumHero() {
       chips:['أرز','دجاج','طماطم','بصل','زيت زيتون','بيض','جبنة','خضروات'],
     },
     zh: {
-      badge: '免费 · 无需账户 · 14种语言',
+      badge: '免费 · 无需注册 · 14种语言',
       line1: '每周',
       line2: '吃得',
       line3: '好。',
       sub: '几秒内生成完整计划。\n自动购物清单。免费PDF下载。',
-      stat1n:'175+', stat1l:'食谱',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'食谱',
       stat2n:'14',   stat2l:'语言',
-      stat3n:'免费', stat3l:'永久免费',
+      stat3n:'€3',   stat3l:'高级版',
       cta: '🥗 创建我的免费计划',
       ghost: '探索菜单 →',
       planLabel: '每周计划',
@@ -2585,14 +2529,14 @@ function renderPremiumHero() {
       chips:['大米','鸡肉','豆腐','白菜','葱','姜','蒜','酱油'],
     },
     ja: {
-      badge: '無料 · アカウント不要 · 14言語',
+      badge: '無料 · 登録不要 · 14言語',
       line1: '毎週、',
       line2: 'おいしく',
       line3: '食べよう。',
       sub: '数秒でフルプラン完成。\n買い物リスト自動生成。PDF無料ダウンロード。',
-      stat1n:'175+', stat1l:'レシピ',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'レシピ',
       stat2n:'14',   stat2l:'言語',
-      stat3n:'無料', stat3l:'ずっと無料',
+      stat3n:'€3',   stat3l:'プレミアム',
       cta: '🥗 無料プランを作成',
       ghost: 'メニューを探索 →',
       planLabel: '週間プラン',
@@ -2608,14 +2552,14 @@ function renderPremiumHero() {
       chips:['鶏肉','米','豆腐','にんじん','たまご','醤油','みりん','味噌'],
     },
     ko: {
-      badge: '무료 · 계정 불필요 · 14개 언어',
+      badge: '무료 · 가입 불필요 · 14개 언어',
       line1: '매주,',
       line2: '잘',
       line3: '먹으세요.',
       sub: '몇 초 만에 전체 플랜 완성.\n자동 장보기 목록. 무료 PDF 다운로드.',
-      stat1n:'175+', stat1l:'레시피',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'레시피',
       stat2n:'14',   stat2l:'언어',
-      stat3n:'무료', stat3l:'영원히 무료',
+      stat3n:'€3',   stat3l:'프리미엄',
       cta: '🥗 무료 플랜 만들기',
       ghost: '메뉴 탐색 →',
       planLabel: '주간 플랜',
@@ -2631,14 +2575,14 @@ function renderPremiumHero() {
       chips:['쌀','닭고기','두부','달걀','당근','간장','참기름','김치'],
     },
     hi: {
-      badge: 'मुफ़्त · कोई खाता नहीं · 14 भाषाएं',
+      badge: 'मुफ़्त · बिना पंजीकरण · 14 भाषाएं',
       line1: 'हर हफ्ते',
       line2: 'अच्छा',
       line3: 'खाएं।',
       sub: 'कुछ सेकंड में पूरी योजना।\nस्वचालित खरीदारी सूची। मुफ़्त PDF डाउनलोड।',
-      stat1n:'175+', stat1l:'व्यंजन',
+      stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'व्यंजन',
       stat2n:'14',   stat2l:'भाषाएं',
-      stat3n:'मुफ़्त', stat3l:'हमेशा मुफ़्त',
+      stat3n:'€3',     stat3l:'प्रीमियम',
       cta: '🥗 मेरी मुफ़्त योजना बनाएं',
       ghost: 'मेनू देखें →',
       planLabel: 'साप्ताहिक योजना',
@@ -2667,29 +2611,41 @@ function renderPremiumHero() {
           <span class="badge-pulse" aria-hidden="true"></span>
           ${safeText(s.badge)}
         </div>
-        <h1 class="hero-premium-title">
-          ${safeText(s.line1)}<br>${safeText(s.line2)}<br><em>${safeText(s.line3)}</em>
-        </h1>
+        <h1 class="hero-premium-title">${
+          // Phase 12 — wrap each word in a .hp-reveal-word span carrying
+          // a --reveal-index so CSS can stagger the fade-up. Line breaks
+          // are preserved between line1/2/3 so the editorial layout still
+          // breathes the way the typography was designed for.
+          (() => {
+            let idx = 0;
+            const wrap = (text, italic) => safeText(text).split(/\s+/).filter(Boolean).map(w => {
+              const span = `<span class="hp-reveal-word" style="--reveal-index:${idx++}">${italic ? '<em>' + w + '</em>' : w}</span>`;
+              return span;
+            }).join(' ');
+            return [wrap(s.line1, false), wrap(s.line2, false), wrap(s.line3, true)].join('<br>');
+          })()
+        }</h1>
         <p class="hero-premium-sub">${safeText(s.sub).replace('\n','<br>')}</p>
         <div class="hero-stats-row" aria-label="Key stats">
           <div class="hero-stat">
-            <span class="hero-stat-num">${safeText(s.stat1n)}</span>
+            <span class="hero-stat-num" data-count-target="${safeText(s.stat1n)}">${safeText(s.stat1n)}</span>
             <span class="hero-stat-label">${safeText(s.stat1l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
           <div class="hero-stat">
-            <span class="hero-stat-num">${safeText(s.stat2n)}</span>
+            <span class="hero-stat-num" data-count-target="${safeText(s.stat2n)}">${safeText(s.stat2n)}</span>
             <span class="hero-stat-label">${safeText(s.stat2l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
-          <div class="hero-stat">
-            <span class="hero-stat-num">${safeText(s.stat3n)}</span>
+          <a class="hero-stat hero-stat--link" href="#pricing-section" style="text-decoration:none;color:inherit;">
+            <span class="hero-stat-num" data-count-target="${safeText(s.stat3n)}">${safeText(s.stat3n)}</span>
             <span class="hero-stat-label">${safeText(s.stat3l)}</span>
-          </div>
+          </a>
         </div>
         <div class="hero-premium-cta">
           <button class="btn-hero-cta" id="hero-cta-btn" type="button">${safeText(s.cta)}</button>
           <a href="${mUrl}" class="hero-ghost-link">${safeText(s.ghost)}</a>
+          ${window.hasUnlimited ? '' : `<a href="#pricing-section" class="hero-premium-link">${safeText(HERO_PREMIUM_LINK[lang] || HERO_PREMIUM_LINK.en)}</a>`}
         </div>
       </div>
 
@@ -2705,12 +2661,20 @@ function renderPremiumHero() {
               <div class="phone-meal-header">
                 <span>${safeText(s.colDay)}</span><span>${safeText(s.colL)}</span><span>${safeText(s.colD)}</span>
               </div>
-              ${meals.map(([d,l,c]) => `
-              <div class="phone-meal-row">
-                <span class="phone-meal-day">${safeText(d)}</span>
+              ${meals.map(([d,l,c], i) => {
+                // Mockup mirrors the free preview: first 2 days visible,
+                // remaining days faded with a lock — matches the 2-of-7
+                // free PDF behavior so the visual doesn't oversell.
+                const locked = i >= 2;
+                const rowStyle = locked ? ' style="opacity:0.35;"' : '';
+                const dayPrefix = locked ? '🔒 ' : '';
+                return `
+              <div class="phone-meal-row"${rowStyle}>
+                <span class="phone-meal-day">${dayPrefix}${safeText(d)}</span>
                 <span class="phone-meal-name">${safeText(l)}</span>
                 <span class="phone-meal-name">${safeText(c)}</span>
-              </div>`).join('')}
+              </div>`;
+              }).join('')}
               <div class="phone-shopping">
                 <div class="phone-shopping-title">🛒 ${safeText(s.shLabel)}</div>
                 <div class="phone-chips">
@@ -2741,52 +2705,7 @@ function renderPremiumHero() {
   });
 }
 /* ─── END LANDING PAGE SECTIONS ────────────────────────────── */
- function renderHowItWorks() {
-  const SECTION_ID = 'how-it-works-section';
-  const t = key => (i18n[lang] && i18n[lang][key]) || (i18n['en'] && i18n['en'][key]) || key;
-  const isRtl = lang === 'ar';
 
-  const steps = [
-    { icon: '📋', titleKey: 'how.step1.title', descKey: 'how.step1.desc' },
-    { icon: '🛒', titleKey: 'how.step2.title', descKey: 'how.step2.desc' },
-    { icon: '📥', titleKey: 'how.step3.title', descKey: 'how.step3.desc' },
-  ];
-
-  const stepsHTML = steps.map((s, i) => `
-    <div class="how-step">
-      <div class="how-step-icon">
-        <span class="how-step-num">${i + 1}</span>
-        ${s.icon}
-      </div>
-      <h3 class="how-step-title">${t(s.titleKey)}</h3>
-      <p class="how-step-desc">${t(s.descKey)}</p>
-    </div>
-  `).join('');
-
-  const html = `
-    <section id="${SECTION_ID}" class="how-it-works no-print" aria-label="${t('how.title')}"${isRtl ? ' dir="rtl"' : ''}>
-      <div class="how-inner">
-        <h2 class="how-title">${t('how.title')}</h2>
-        <div class="how-steps">${stepsHTML}</div>
-      </div>
-    </section>`;
-
-  const existing = document.getElementById(SECTION_ID);
-  if (existing) {
-    existing.outerHTML = html;
-  } else {
-    const main = document.querySelector('.app-main');
-    if (main) main.insertAdjacentHTML('beforebegin', html);
-  }
-}
-
-/* ───────────────────────────────────────────────────────────
-   Homepage V2 interactivity (ported from homepage-premium-audit-Hs3mH)
-   Trust signals, premium preview, FAQ accordion, sticky upgrade,
-   hero motion. CSS lives in premium-polish.css (already on main).
-   Excluded to preserve current main: renderCuisineDiscover (#23),
-   renderFeaturedRecipe + celebratePremium (out of PR-B scope).
-   ─────────────────────────────────────────────────────────── */
 function renderTrustSignals() {
   const ID = 'hp-trust-signals';
   document.getElementById(ID)?.remove();
@@ -3021,6 +2940,435 @@ const HP_ORNAMENTS = {
 // editorial voice is uniform enough that the fallback still reads
 // well. Uses an Unsplash CDN photo. Slotted between hero and trust
 // signals so it's the FIRST content beat after the hero.
+function renderFeaturedRecipe() {
+  const ID = 'hp-featured-recipe';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: {
+      eyebrow: 'În seara asta, gătește',
+      title: 'Spaghete\nalla Carbonara',
+      bylineOrigin: 'Din Roma, Italia',
+      bylineTime: '25 min',
+      bylineServes: 'Pentru 4',
+      caption: 'Clasica romană — ouă, pecorino, guanciale și piper negru. Nu există smântână în carbonara autentică.',
+      ingredientsLabel: 'Ingrediente',
+      methodLabel: 'Mod de preparare',
+      ingredients: [
+        ['Spaghete', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Gălbenușuri de ou', '4'],
+        ['Pecorino Romano ras', '60 g'],
+        ['Piper negru proaspăt măcinat', 'după gust'],
+        ['Sare grunjoasă', 'pentru apă'],
+      ],
+      method: [
+        'Pune la fiert o oală mare cu apă cu sare. Carbonara cere apă suficient de sărată — gândește-o ca pe „apa de mare".',
+        'Taie guanciale în batoane subțiri. Pune-l într-o tigaie rece, apoi încălzește treptat până se topește grăsimea și carnea devine crocantă, 6-7 minute.',
+        'Bate gălbenușurile cu pecorino-ul și un strop de piper negru într-un bol mare. Vei amesteca pasta direct aici.',
+        'Fierbe spaghetele al dente. Păstrează 200 ml din apa de fierbere înainte să scurgi.',
+        'Adaugă pasta caldă peste guanciale, amestecă rapid 10 secunde. Tigaia trebuie să fie OFF — căldura reziduală e suficientă. Toarnă peste amestecul de ouă, adaugă 2-3 linguri din apa păstrată, amestecă viguros până se formează crema.',
+      ],
+      cta: 'Adaug-o la săptămâna ta — gratuit.',
+    },
+    en: {
+      eyebrow: 'Tonight, cook this',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'From Rome, Italy',
+      bylineTime: '25 min',
+      bylineServes: 'Serves 4',
+      caption: 'The Roman classic — egg yolks, pecorino, guanciale, and black pepper. No cream in an honest carbonara.',
+      ingredientsLabel: 'Ingredients',
+      methodLabel: 'Method',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Egg yolks', '4'],
+        ['Pecorino Romano, grated', '60 g'],
+        ['Black pepper, fresh-ground', 'to taste'],
+        ['Sea salt', 'for the water'],
+      ],
+      method: [
+        'Bring a large pot of well-salted water to the boil. Carbonara wants the water properly seasoned — think sea-water salty.',
+        'Cut the guanciale into thin batons. Start it in a cold pan, then bring up the heat slowly until the fat renders and the meat crisps, 6-7 minutes.',
+        'Whisk the egg yolks with the pecorino and a generous turn of pepper in a large bowl. You\'ll toss the pasta directly into this.',
+        'Cook the spaghetti al dente. Reserve 200 ml of the pasta water before draining.',
+        'Tip the hot pasta into the pan with the guanciale, toss for 10 seconds. Pan must be off the heat — residual warmth is enough. Pour the mixture into the egg bowl, add 2-3 tablespoons of the reserved water, whisk vigorously until a glossy cream forms.',
+      ],
+      cta: 'Add it to your week — free.',
+    },
+    es: {
+      eyebrow: 'Esta noche, cocina esto',
+      title: 'Espaguetis\nalla Carbonara',
+      bylineOrigin: 'Desde Roma, Italia',
+      bylineTime: '25 min',
+      bylineServes: 'Para 4',
+      caption: 'El clásico romano — yemas, pecorino, guanciale y pimienta negra. La carbonara auténtica no lleva nata.',
+      ingredientsLabel: 'Ingredientes',
+      methodLabel: 'Preparación',
+      ingredients: [
+        ['Espaguetis', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Yemas de huevo', '4'],
+        ['Pecorino Romano rallado', '60 g'],
+        ['Pimienta negra recién molida', 'al gusto'],
+        ['Sal gruesa', 'para el agua'],
+      ],
+      method: [
+        'Pon a hervir una olla grande con agua bien salada. La carbonara quiere el agua bien salada — como agua de mar.',
+        'Corta el guanciale en bastoncitos finos. Empieza en sartén fría y sube fuego despacio hasta que la grasa se derrita y la carne quede crujiente, 6-7 minutos.',
+        'Bate las yemas con el pecorino y bastante pimienta en un bol grande. Mezclarás la pasta directamente aquí.',
+        'Cuece los espaguetis al dente. Reserva 200 ml de agua de cocción antes de escurrir.',
+        'Echa la pasta caliente sobre el guanciale, remueve 10 segundos. La sartén debe estar APAGADA — el calor residual basta. Vierte sobre las yemas, añade 2-3 cucharadas del agua reservada y bate enérgicamente hasta formar una crema brillante.',
+      ],
+      cta: 'Añádelo a tu semana — gratis.',
+    },
+    fr: {
+      eyebrow: 'Ce soir, cuisinez',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'Depuis Rome, Italie',
+      bylineTime: '25 min',
+      bylineServes: 'Pour 4',
+      caption: 'Le classique romain — jaunes d\'œufs, pecorino, guanciale et poivre noir. Une vraie carbonara n\'a pas de crème.',
+      ingredientsLabel: 'Ingrédients',
+      methodLabel: 'Préparation',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Jaunes d\'œufs', '4'],
+        ['Pecorino Romano râpé', '60 g'],
+        ['Poivre noir, fraîchement moulu', 'au goût'],
+        ['Sel marin', 'pour l\'eau'],
+      ],
+      method: [
+        'Portez une grande casserole d\'eau bien salée à ébullition. La carbonara exige une eau bien salée — comme l\'eau de mer.',
+        'Coupez le guanciale en fins bâtonnets. Démarrez dans une poêle froide, montez doucement en chaleur jusqu\'à ce que la graisse fonde et la chair croustille, 6-7 minutes.',
+        'Fouettez les jaunes avec le pecorino et beaucoup de poivre dans un grand bol. Vous mélangerez les pâtes directement ici.',
+        'Cuisez les spaghetti al dente. Réservez 200 ml d\'eau de cuisson avant d\'égoutter.',
+        'Versez les pâtes chaudes dans la poêle avec le guanciale, remuez 10 secondes. La poêle doit être HORS du feu — la chaleur résiduelle suffit. Versez sur les jaunes, ajoutez 2-3 cuillères d\'eau réservée, fouettez énergiquement jusqu\'à obtenir une crème brillante.',
+      ],
+      cta: 'Ajoutez-la à votre semaine — gratuit.',
+    },
+    de: {
+      eyebrow: 'Heute Abend kochst du das',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'Aus Rom, Italien',
+      bylineTime: '25 Min.',
+      bylineServes: '4 Portionen',
+      caption: 'Der römische Klassiker — Eigelb, Pecorino, Guanciale und schwarzer Pfeffer. Echte Carbonara kommt ohne Sahne aus.',
+      ingredientsLabel: 'Zutaten',
+      methodLabel: 'Zubereitung',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Eigelb', '4'],
+        ['Pecorino Romano, gerieben', '60 g'],
+        ['Schwarzer Pfeffer, frisch gemahlen', 'nach Geschmack'],
+        ['Grobes Meersalz', 'für das Wasser'],
+      ],
+      method: [
+        'Einen großen Topf gut gesalzenes Wasser zum Kochen bringen. Carbonara braucht richtig salziges Wasser — denk an Meerwasser.',
+        'Den Guanciale in feine Stäbchen schneiden. In einer kalten Pfanne starten, dann langsam erhitzen, bis das Fett austritt und das Fleisch knusprig wird, 6-7 Minuten.',
+        'Eigelb mit Pecorino und reichlich Pfeffer in einer großen Schüssel verquirlen. Die Pasta wird direkt hier hineingegeben.',
+        'Spaghetti al dente kochen. 200 ml Nudelwasser vor dem Abgießen abnehmen.',
+        'Die heiße Pasta in die Pfanne mit dem Guanciale geben, 10 Sekunden schwenken. Pfanne MUSS vom Herd sein — Restwärme reicht. In die Eier-Schüssel kippen, 2-3 EL Nudelwasser zugeben, kräftig schlagen, bis eine glänzende Creme entsteht.',
+      ],
+      cta: 'Füge sie deiner Woche hinzu — kostenlos.',
+    },
+    pt: {
+      eyebrow: 'Esta noite, cozinha isto',
+      title: 'Espaguete\nalla Carbonara',
+      bylineOrigin: 'De Roma, Itália',
+      bylineTime: '25 min',
+      bylineServes: 'Para 4',
+      caption: 'O clássico romano — gemas, pecorino, guanciale e pimenta preta. Uma verdadeira carbonara não leva natas.',
+      ingredientsLabel: 'Ingredientes',
+      methodLabel: 'Preparação',
+      ingredients: [
+        ['Esparguete', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Gemas de ovo', '4'],
+        ['Pecorino Romano ralado', '60 g'],
+        ['Pimenta preta moída na hora', 'a gosto'],
+        ['Sal grosso', 'para a água'],
+      ],
+      method: [
+        'Leve uma panela grande de água bem salgada à fervura. A carbonara exige água bem salgada — pense em água do mar.',
+        'Corte o guanciale em palitos finos. Comece em frigideira fria, aumente o fogo devagar até a gordura derreter e a carne ficar crocante, 6-7 minutos.',
+        'Bata as gemas com o pecorino e bastante pimenta numa tigela grande. A massa será misturada diretamente aqui.',
+        'Coza o esparguete al dente. Reserve 200 ml da água de cozedura antes de escorrer.',
+        'Despeje a massa quente sobre o guanciale, envolva 10 segundos. A frigideira deve estar FORA do lume — o calor residual basta. Despeje sobre as gemas, junte 2-3 colheres da água reservada, bata vigorosamente até formar um creme brilhante.',
+      ],
+      cta: 'Adicione-a à sua semana — grátis.',
+    },
+    ru: {
+      eyebrow: 'Сегодня вечером приготовь это',
+      title: 'Спагетти\nалла Карбонара',
+      bylineOrigin: 'Из Рима, Италия',
+      bylineTime: '25 мин',
+      bylineServes: 'На 4 порции',
+      caption: 'Римская классика — яичные желтки, пекорино, гуанчале и чёрный перец. В настоящей карбонаре нет сливок.',
+      ingredientsLabel: 'Ингредиенты',
+      methodLabel: 'Приготовление',
+      ingredients: [
+        ['Спагетти', '400 г'],
+        ['Гуанчале', '150 г'],
+        ['Яичные желтки', '4'],
+        ['Пекорино Романо, тёртый', '60 г'],
+        ['Чёрный перец свежемолотый', 'по вкусу'],
+        ['Морская соль крупного помола', 'для воды'],
+      ],
+      method: [
+        'Поставьте большую кастрюлю хорошо подсолённой воды на огонь. Для карбонары вода должна быть как морская — солёной.',
+        'Нарежьте гуанчале тонкими полосками. Положите в холодную сковороду и медленно прогревайте, пока жир не вытопится, а мясо не станет хрустящим, 6-7 минут.',
+        'Взбейте желтки с пекорино и щедрой щепоткой перца в большой миске. Пасту будете перемешивать прямо здесь.',
+        'Сварите спагетти аль денте. Перед тем как слить, сохраните 200 мл варочной воды.',
+        'Горячую пасту переложите в сковороду с гуанчале, перемешайте 10 секунд. Сковорода ДОЛЖНА быть выключена — остаточного тепла достаточно. Переложите в миску с желтками, добавьте 2-3 столовые ложки варочной воды и энергично перемешивайте, пока не образуется блестящий крем.',
+      ],
+      cta: 'Добавь её в свою неделю — бесплатно.',
+    },
+    ar: {
+      eyebrow: 'الليلة، اطبخ هذا',
+      title: 'سباغيتي\nألا كاربونارا',
+      bylineOrigin: 'من روما، إيطاليا',
+      bylineTime: '25 دقيقة',
+      bylineServes: 'لـ 4 أشخاص',
+      caption: 'الكلاسيكية الرومانية — صفار البيض والبكورينو والغوانتشالي والفلفل الأسود. الكاربونارا الحقيقية بدون كريمة.',
+      ingredientsLabel: 'المكونات',
+      methodLabel: 'الطريقة',
+      ingredients: [
+        ['سباغيتي', '400 غ'],
+        ['غوانتشالي', '150 غ'],
+        ['صفار بيض', '4'],
+        ['بكورينو رومانو مبشور', '60 غ'],
+        ['فلفل أسود طازج', 'حسب الذوق'],
+        ['ملح خشن', 'للماء'],
+      ],
+      method: [
+        'اغلِ قدراً كبيراً من الماء المملّح جيداً. الكاربونارا تحتاج ماءً مالحاً كماء البحر.',
+        'قطّع الغوانتشالي إلى أعواد رفيعة. ابدأ في مقلاة باردة ثم ارفع الحرارة تدريجياً حتى تذوب الدهون ويصبح اللحم مقرمشاً، 6-7 دقائق.',
+        'اخفق الصفار مع البكورينو وكمية وفيرة من الفلفل في وعاء كبير. ستخلط المعكرونة هنا مباشرة.',
+        'اطبخ السباغيتي ال دنتي. احتفظ بـ 200 مل من ماء السلق قبل التصفية.',
+        'انقل المعكرونة الساخنة إلى مقلاة الغوانتشالي وقلّب 10 ثوان. يجب أن تكون المقلاة بعيدة عن النار — الحرارة المتبقية كافية. اسكب على الصفار، أضف 2-3 ملاعق من ماء السلق، وحرّك بقوة حتى يتكوّن كريم لامع.',
+      ],
+      cta: 'أضفها إلى أسبوعك — مجاناً.',
+    },
+    zh: {
+      eyebrow: '今晚就做这道',
+      title: '意式培根\n奶汁意面',
+      bylineOrigin: '来自意大利罗马',
+      bylineTime: '25 分钟',
+      bylineServes: '4 人份',
+      caption: '罗马经典——蛋黄、佩科里诺、guanciale 和黑胡椒。真正的 Carbonara 不放奶油。',
+      ingredientsLabel: '食材',
+      methodLabel: '做法',
+      ingredients: [
+        ['意大利长面（spaghetti）', '400 克'],
+        ['Guanciale（意式风干猪颊肉）', '150 克'],
+        ['蛋黄', '4 个'],
+        ['佩科里诺羊奶酪 (Pecorino Romano)', '60 克'],
+        ['现磨黑胡椒', '适量'],
+        ['粗盐', '煮面水用'],
+      ],
+      method: [
+        '大锅加水煮开，加足量盐。Carbonara 的煮面水要像海水一样咸。',
+        'Guanciale 切成细条，从冷锅开始小火慢慢加热，让脂肪渗出、肉变酥脆，6-7 分钟。',
+        '蛋黄、佩科里诺、足量黑胡椒在大碗里搅匀。意面将直接拌入这碗中。',
+        '把面煮到 al dente（弹牙）。捞出前先舀出 200 毫升煮面水。',
+        '把热面倒入有 guanciale 的锅中，快速翻拌 10 秒。锅必须离火——余温就够。倒入蛋黄碗，加 2-3 汤匙煮面水，剧烈搅打至形成光亮乳化酱汁。',
+      ],
+      cta: '把它加入你的一周——免费。',
+    },
+    ja: {
+      eyebrow: '今夜、作るならこれ',
+      title: 'スパゲッティ\nアッラ・カルボナーラ',
+      bylineOrigin: 'イタリア・ローマ発',
+      bylineTime: '25分',
+      bylineServes: '4人分',
+      caption: 'ローマの古典料理 — 卵黄、ペコリーノ、グアンチャーレ、黒こしょう。本物のカルボナーラに生クリームは使わない。',
+      ingredientsLabel: '材料',
+      methodLabel: '作り方',
+      ingredients: [
+        ['スパゲッティ', '400 g'],
+        ['グアンチャーレ', '150 g'],
+        ['卵黄', '4 個'],
+        ['ペコリーノ・ロマーノ（おろし）', '60 g'],
+        ['挽きたて黒こしょう', '適量'],
+        ['粗塩', '茹で湯用'],
+      ],
+      method: [
+        '大きな鍋にしっかり塩を加えた湯を沸かす。カルボナーラの茹で湯は海水並みの塩加減が必要。',
+        'グアンチャーレを細い棒状に切り、冷たいフライパンから入れて弱めの火でゆっくり加熱し、脂が出て肉がカリッとするまで6〜7分。',
+        '大きなボウルに卵黄、ペコリーノ、たっぷりの黒こしょうを入れて混ぜる。パスタをここに直接合わせる。',
+        'スパゲッティをアルデンテに茹でる。湯切り前に茹で汁を200ml取っておく。',
+        '熱いパスタをグアンチャーレのフライパンへ入れ、10秒ほど和える。フライパンは火から外す — 余熱で十分。卵黄のボウルに移し、取っておいた茹で汁を大さじ2〜3加え、つやのあるクリーム状になるまで力強く混ぜる。',
+      ],
+      cta: '一週間の献立に加える — 無料。',
+    },
+    hi: {
+      eyebrow: 'आज रात, यह बनाएँ',
+      title: 'स्पैगेटी\nअल्ला कार्बोनारा',
+      bylineOrigin: 'रोम, इटली से',
+      bylineTime: '25 मिनट',
+      bylineServes: '4 के लिए',
+      caption: 'रोमन क्लासिक — अंडे की जर्दी, पेकोरीनो, ग्वांचाले और काली मिर्च। असली कार्बोनारा में क्रीम नहीं होती।',
+      ingredientsLabel: 'सामग्री',
+      methodLabel: 'विधि',
+      ingredients: [
+        ['स्पैगेटी', '400 ग्राम'],
+        ['ग्वांचाले (Guanciale)', '150 ग्राम'],
+        ['अंडे की जर्दी', '4'],
+        ['पेकोरीनो रोमानो, कद्दूकस', '60 ग्राम'],
+        ['ताज़ी पिसी काली मिर्च', 'स्वादानुसार'],
+        ['मोटा नमक', 'पानी के लिए'],
+      ],
+      method: [
+        'एक बड़े बर्तन में अच्छी तरह नमकीन पानी उबालने रखें। कार्बोनारा का पानी समुद्र के पानी जितना नमकीन होना चाहिए।',
+        'ग्वांचाले को पतले स्ट्रिप्स में काटें। ठंडी पैन में डालकर धीमी आँच पर 6-7 मिनट तक पकाएँ जब तक चर्बी निकल जाए और मांस कुरकुरा हो जाए।',
+        'एक बड़े बाउल में अंडे की जर्दी, पेकोरीनो और भरपूर काली मिर्च फेंटें। पास्ता को सीधे यहीं मिलाएँगे।',
+        'स्पैगेटी अल डेन्टे तक उबालें। पानी निकालने से पहले 200 मिली पास्ता पानी बचाएँ।',
+        'गरम पास्ता को ग्वांचाले की पैन में डालें, 10 सेकंड चलाएँ। पैन आँच से उतरी होनी चाहिए — बची हुई गर्मी काफ़ी है। अंडे वाले बाउल में डालें, 2-3 बड़े चम्मच पास्ता पानी मिलाएँ, ज़ोर से फेंटें जब तक चमकदार क्रीमी सॉस न बने।',
+      ],
+      cta: 'इसे अपने हफ्ते में जोड़ें — मुफ़्त।',
+    },
+    tr: {
+      eyebrow: 'Bu akşam, bunu pişir',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'Roma, İtalya',
+      bylineTime: '25 dk',
+      bylineServes: '4 kişilik',
+      caption: 'Roma klasiği — yumurta sarısı, pecorino, guanciale ve karabiber. Gerçek carbonara'+"'"+'da krema olmaz.',
+      ingredientsLabel: 'Malzemeler',
+      methodLabel: 'Yapılışı',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Yumurta sarısı', '4'],
+        ['Pecorino Romano, rendelenmiş', '60 g'],
+        ['Taze çekilmiş karabiber', 'damak tadına göre'],
+        ['İri tane tuz', 'su için'],
+      ],
+      method: [
+        'Büyük bir tencerede iyice tuzlanmış suyu kaynatın. Carbonara için su deniz suyu kıvamında tuzlu olmalı.',
+        'Guanciale'+"'"+'yi ince çubuklara doğrayın. Soğuk tavada başlayın, yağı eriyene ve eti çıtırlaşana dek yavaşça pişirin, 6-7 dakika.',
+        'Büyük bir kasede yumurta sarılarını pecorino ve bolca karabiberle çırpın. Makarnayı doğrudan burada karıştıracaksınız.',
+        'Spaghetti'+"'"+'yi al dente pişirin. Süzmeden önce 200 ml haşlama suyu ayırın.',
+        'Sıcak makarnayı guanciale tavasına alın, 10 saniye karıştırın. Tava ATEŞTEN inmiş olmalı — kalan ısı yeterli. Yumurta kasesine boşaltın, 2-3 yemek kaşığı haşlama suyu ekleyin, parlak bir krema oluşana dek hızla karıştırın.',
+      ],
+      cta: 'Onu haftana ekle — ücretsiz.',
+    },
+    it: {
+      eyebrow: 'Stasera, cucina questa',
+      title: 'Spaghetti\nalla Carbonara',
+      bylineOrigin: 'Da Roma, Italia',
+      bylineTime: '25 min',
+      bylineServes: 'Per 4 persone',
+      caption: 'Il classico romano — tuorli, pecorino, guanciale e pepe nero. Nella vera carbonara non c'+"'"+'è panna.',
+      ingredientsLabel: 'Ingredienti',
+      methodLabel: 'Procedimento',
+      ingredients: [
+        ['Spaghetti', '400 g'],
+        ['Guanciale', '150 g'],
+        ['Tuorli d'+"'"+'uovo', '4'],
+        ['Pecorino Romano grattugiato', '60 g'],
+        ['Pepe nero macinato fresco', 'q.b.'],
+        ['Sale grosso', 'per l'+"'"+'acqua'],
+      ],
+      method: [
+        'Porta a ebollizione una pentola capiente di acqua ben salata. Per la carbonara l'+"'"+'acqua deve essere salata come l'+"'"+'acqua di mare.',
+        'Taglia il guanciale a bastoncini sottili. Parti da padella fredda e alza il fuoco lentamente finché il grasso si scioglie e la carne diventa croccante, 6-7 minuti.',
+        'In una ciotola capiente sbatti i tuorli con il pecorino e una generosa macinata di pepe. La pasta verrà mescolata direttamente qui.',
+        'Cuoci gli spaghetti al dente. Tieni da parte 200 ml di acqua di cottura prima di scolare.',
+        'Versa la pasta calda nella padella con il guanciale, salta 10 secondi. La padella deve essere SPENTA — il calore residuo basta. Trasferisci nella ciotola dei tuorli, aggiungi 2-3 cucchiai di acqua di cottura, mescola energicamente fino a ottenere una crema lucida.',
+      ],
+      cta: 'Aggiungila alla tua settimana — gratis.',
+    },
+    ko: {
+      eyebrow: '오늘 저녁, 이것을 만드세요',
+      title: '스파게티\n알라 카르보나라',
+      bylineOrigin: '이탈리아 로마에서',
+      bylineTime: '25분',
+      bylineServes: '4인분',
+      caption: '로마의 고전 — 달걀 노른자, 페코리노, 관찰레, 그리고 흑후추. 진짜 카르보나라에는 생크림이 들어가지 않는다.',
+      ingredientsLabel: '재료',
+      methodLabel: '만드는 법',
+      ingredients: [
+        ['스파게티', '400 g'],
+        ['관찰레', '150 g'],
+        ['달걀 노른자', '4 개'],
+        ['페코리노 로마노 (간 것)', '60 g'],
+        ['갓 갈은 흑후추', '취향껏'],
+        ['굵은 소금', '면수용'],
+      ],
+      method: [
+        '큰 냄비에 충분히 짭짤한 물을 끓입니다. 카르보나라의 면수는 바닷물 정도로 짜야 합니다.',
+        '관찰레를 가늘게 막대 모양으로 썰어 차가운 팬에서 시작해 약불에서 천천히 가열, 기름이 나오고 살이 바삭해질 때까지 6-7분.',
+        '큰 볼에 달걀 노른자, 페코리노, 후추를 듬뿍 넣고 휘젓습니다. 파스타를 바로 여기에 섞을 것입니다.',
+        '스파게티를 알 덴테로 삶습니다. 면수를 200ml 따로 남기고 물을 뺍니다.',
+        '뜨거운 면을 관찰레가 든 팬에 넣고 10초간 섞습니다. 팬은 불에서 내려야 합니다 — 잔열로 충분. 달걀 볼에 옮겨 담고 면수 2-3큰술을 더해, 윤기 나는 크림이 형성될 때까지 힘차게 섞습니다.',
+      ],
+      cta: '주간 메뉴에 추가하세요 — 무료.',
+    },
+  };
+  const s = copy[lang] || copy.en;
+
+  const ingredientsHTML = s.ingredients.map(
+    ([name, qty]) => `<li><span class="ing-name">${safeText(name)}</span><span class="ing-qty">${safeText(qty)}</span></li>`
+  ).join('');
+
+  const methodHTML = s.method.map(step => `<li>${safeText(step)}</li>`).join('');
+
+  // Hand-picked Unsplash photo of carbonara — atmospheric overhead shot.
+  const photoUrl = 'https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=1800&q=70';
+
+  // Split the title into two display lines.
+  const titleLines = s.title.split('\n').map(l => safeText(l)).join('<br>');
+
+  const html = `
+    <section id="${ID}" class="hp-featured-recipe hp-fade-in no-print" aria-labelledby="hp-featured-title">
+      <div class="hp-featured-inner">
+        <div class="hp-featured-eyebrow-row">
+          ${HP_ORNAMENTS.wheat}
+          <span class="hp-featured-eyebrow">${safeText(s.eyebrow)}</span>
+          ${HP_ORNAMENTS.wheat}
+        </div>
+        <h2 id="hp-featured-title" class="hp-featured-title">${titleLines}</h2>
+        <div class="hp-featured-byline">
+          ${safeText(s.bylineOrigin)}
+          <span class="hp-featured-byline-sep">✦</span>
+          ${safeText(s.bylineTime)}
+          <span class="hp-featured-byline-sep">✦</span>
+          ${safeText(s.bylineServes)}
+        </div>
+        <figure class="hp-featured-figure">
+          <img src="${photoUrl}" alt="${safeText(s.title.replace('\n', ' '))}" loading="lazy" decoding="async">
+          <figcaption class="hp-featured-figcaption">${safeText(s.caption)}</figcaption>
+        </figure>
+        <div class="hp-featured-grid">
+          <aside class="hp-featured-ingredients">
+            <div class="hp-featured-section-title">${safeText(s.ingredientsLabel)}</div>
+            <ul>${ingredientsHTML}</ul>
+          </aside>
+          <div class="hp-featured-method">
+            <div class="hp-featured-section-title">${safeText(s.methodLabel)}</div>
+            <ol>${methodHTML}</ol>
+          </div>
+        </div>
+        <div class="hp-divider">${HP_ORNAMENTS.sprig}</div>
+        <p class="hp-featured-cta-row"><a href="#pricing-section">${safeText(s.cta)}</a></p>
+      </div>
+    </section>`;
+
+  // Slot right after the hero. Falls back to before-cuisine if hero
+  // somehow isn't there.
+  const heroEl = document.querySelector('.hero');
+  if (heroEl) {
+    heroEl.insertAdjacentHTML('afterend', html);
+  } else {
+    document.getElementById('hp-cuisine-discover')?.insertAdjacentHTML('beforebegin', html);
+  }
+}
+
 function renderFAQ() {
   const ID = 'hp-faq';
   document.getElementById(ID)?.remove();
@@ -3404,6 +3752,82 @@ function setupMagneticCTAs() {
 // (Stripe success redirect or first-time successful manual verify).
 // Canvas is created on-the-fly and removed when particles settle —
 // no library dependency, no idle DOM after the celebration.
+function celebratePremium() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    if (sessionStorage.getItem('mp:celebrated') === '1') return;
+    sessionStorage.setItem('mp:celebrated', '1');
+  } catch (_) { /* sessionStorage blocked — celebrate anyway */ }
+
+  const canvas = document.createElement('canvas');
+  canvas.style.cssText =
+    'position:fixed;inset:0;pointer-events:none;z-index:9999;';
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = innerWidth * dpr;
+  canvas.height = innerHeight * dpr;
+  canvas.style.width  = innerWidth + 'px';
+  canvas.style.height = innerHeight + 'px';
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const colors = ['#d4a017', '#f5c243', '#fff5d6', '#2d8f47', '#a3d977', '#b5891b'];
+  const N = 90;
+  const cx = innerWidth / 2;
+  const cy = innerHeight * 0.35;
+  const particles = Array.from({ length: N }, () => ({
+    x: cx + (Math.random() - 0.5) * 220,
+    y: cy,
+    vx: (Math.random() - 0.5) * 14,
+    vy: -Math.random() * 18 - 6,
+    g: 0.42,
+    drag: 0.992,
+    rot: Math.random() * Math.PI * 2,
+    vr: (Math.random() - 0.5) * 0.32,
+    w: 6 + Math.random() * 7,
+    h: 4 + Math.random() * 5,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    life: 0,
+    maxLife: 150 + Math.random() * 60,
+  }));
+
+  let frame = 0;
+  const tick = () => {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    let alive = false;
+    for (const p of particles) {
+      if (p.life > p.maxLife) continue;
+      p.vx *= p.drag;
+      p.vy = p.vy * p.drag + p.g;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.vr;
+      p.life++;
+      alive = true;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, 1 - p.life / p.maxLife);
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    }
+    frame++;
+    if (alive && frame < 320) {
+      requestAnimationFrame(tick);
+    } else {
+      canvas.remove();
+    }
+  };
+  requestAnimationFrame(tick);
+}
+
+// Phase 8 — Card choreography: 3D tilt on hover for the major card
+// surfaces. RAF-throttled, capped at ±6° per axis. Uses pointermove
+// so pen + touch + mouse all work (touch falls through to the
+// pointerleave reset). Reset transform on leave so the card eases
+// back to rest via the CSS transition.
 function setupCardTilt() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!window.matchMedia('(hover: hover)').matches) return;
@@ -3612,6 +4036,212 @@ function setupScrollFadeIn() {
   els.forEach(el => io.observe(el));
 }
 
+function renderCuisineDiscover() {
+  const ID = 'hp-cuisine-discover';
+  // Remove the previous render AND the static fallback (no id attribute)
+  // so language switch produces a fresh localized block.
+  document.getElementById(ID)?.remove();
+  document.querySelectorAll('.hp-cuisine-discover').forEach(el => {
+    if (el.id !== ID) el.remove();
+  });
+
+  // Recipe URL segment per locale — must match generate-content.mjs RECIPE_LANG.
+  const recipesBase = {
+    ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
+    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'shipu', ja:'reshipi',
+    ko:'recipes', hi:'recipes', tr:'tarifler', it:'ricette',
+  };
+  const rSeg = recipesBase[lang] || 'recipes';
+
+  const cuisines = [
+    { slug:'france', flag:'🇫🇷', count:10, atmosphere:'mediterranean' },
+    { slug:'japan',  flag:'🇯🇵', count:10, atmosphere:'east-asian' },
+    { slug:'mexico', flag:'🇲🇽', count:10, atmosphere:'latin' },
+    { slug:'greece', flag:'🇬🇷', count:10, atmosphere:'mediterranean' },
+    { slug:'italy',  flag:'🇮🇹', count:9,  atmosphere:'mediterranean' },
+    { slug:'india',  flag:'🇮🇳', count:9,  atmosphere:'south-asian' },
+  ];
+
+  const copy = {
+    ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea',
+      sub:'46 bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.',
+      cta:'Vezi toate cele 46 bucătării',
+      names:{ france:'Franța', japan:'Japonia', mexico:'Mexic', greece:'Grecia', italy:'Italia', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Supă de ceapă franțuzească',
+        japan:'Sushi · Ramen clasic japonez · Curry japonez',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghete Carbonara · Risotto · Pasta e fagioli',
+        india:'Curry de pui · Dhal · Rajma' } },
+    en: { eyebrow:'Cuisines', heading:'Explore cuisines from around the world',
+      sub:'46 international cuisines, each with authentic recipes and a free planner.',
+      cta:'See all 46 cuisines',
+      names:{ france:'France', japan:'Japan', mexico:'Mexico', greece:'Greece', italy:'Italy', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · French onion soup',
+        japan:'Sushi · Classic Japanese ramen · Japanese curry',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghetti Carbonara · Risotto · Pasta e fagioli',
+        india:'Chicken curry · Dhal · Rajma' } },
+    es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo',
+      sub:'46 cocinas internacionales, cada una con recetas auténticas y planificador gratuito.',
+      cta:'Ver las 46 cocinas',
+      names:{ france:'Francia', japan:'Japón', mexico:'México', greece:'Grecia', italy:'Italia', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Sopa de cebolla francesa',
+        japan:'Sushi · Ramen japonés clásico · Curry japonés',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Musaca',
+        italy:'Espagueti a la carbonara · Risotto · Pasta e fagioli',
+        india:'Pollo al curry · Dhal · Rajma' } },
+    fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde',
+      sub:'46 cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.',
+      cta:'Voir les 46 cuisines',
+      names:{ france:'France', japan:'Japon', mexico:'Mexique', greece:'Grèce', italy:'Italie', india:'Inde' },
+      dishes:{ france:'Quiche lorraine · Ratatouille · Soupe à l\'oignon',
+        japan:'Sushi · Ramen japonais classique · Curry japonais',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatzíki · Moussaka',
+        italy:'Spaghetti carbonara · Risotto · Pasta e fagioli',
+        india:'Poulet au curry · Dhal · Rajma' } },
+    de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt',
+      sub:'46 internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.',
+      cta:'Alle 46 Küchen ansehen',
+      names:{ france:'Frankreich', japan:'Japan', mexico:'Mexiko', greece:'Griechenland', italy:'Italien', india:'Indien' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Französische Zwiebelsuppe',
+        japan:'Sushi · Klassisches japanisches Ramen · Japanisches Curry',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghetti Carbonara · Risotto · Pasta e fagioli',
+        india:'Hühnchen-Curry · Dhal · Rajma' } },
+    pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas de todo o mundo',
+      sub:'46 cozinhas internacionais, cada uma com receitas autênticas e planificador gratuito.',
+      cta:'Ver todas as 46 cozinhas',
+      names:{ france:'França', japan:'Japão', mexico:'México', greece:'Grécia', italy:'Itália', india:'Índia' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Sopa de cebola francesa',
+        japan:'Sushi · Ramen japonês clássico · Curry japonês',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Espaguete à carbonara · Risoto · Pasta e fagioli',
+        india:'Frango ao curry · Dhal · Rajma' } },
+    ru: { eyebrow:'Кухни', heading:'Откройте кухни со всего мира',
+      sub:'46 международных кухонь, каждая с аутентичными рецептами и бесплатным планировщиком.',
+      cta:'Посмотреть все 46 кухонь',
+      names:{ france:'Франция', japan:'Япония', mexico:'Мексика', greece:'Греция', italy:'Италия', india:'Индия' },
+      dishes:{ france:'Киш Лорен · Рататуй · Французский луковый суп',
+        japan:'Суши · Классический японский рамен · Японское карри',
+        mexico:'Такос · Гуакамоле · Чили кон карне',
+        greece:'Сувлаки · Цацики · Мусака',
+        italy:'Спагетти карбонара · Ризотто · Паста э фаджоли',
+        india:'Куриное карри · Даль · Раджма' } },
+    it: { eyebrow:'Cucine', heading:'Esplora cucine da tutto il mondo',
+      sub:'46 cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.',
+      cta:'Vedi tutte le 46 cucine',
+      names:{ france:'Francia', japan:'Giappone', mexico:'Messico', greece:'Grecia', italy:'Italia', india:'India' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Zuppa di cipolle francese',
+        japan:'Sushi · Ramen giapponese classico · Curry giapponese',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Tzatziki · Moussaka',
+        italy:'Spaghetti alla carbonara · Risotto · Pasta e fagioli',
+        india:'Pollo al curry · Dhal · Rajma' } },
+    tr: { eyebrow:'Mutfaklar', heading:'Dünyanın dört bir yanından mutfakları keşfedin',
+      sub:'46 uluslararası mutfak, her biri özgün tarifler ve ücretsiz planlayıcı ile.',
+      cta:'46 mutfağın tamamına bak',
+      names:{ france:'Fransa', japan:'Japonya', mexico:'Meksika', greece:'Yunanistan', italy:'İtalya', india:'Hindistan' },
+      dishes:{ france:'Quiche Lorraine · Ratatouille · Fransız soğan çorbası',
+        japan:'Suşi · Klasik Japon ramen · Japon köri',
+        mexico:'Tacos · Guacamole · Chili con carne',
+        greece:'Souvlaki · Cacık · Musakka',
+        italy:'Spagetti Carbonara · Risotto · Pasta e fagioli',
+        india:'Tavuk köri · Dhal · Rajma' } },
+    ar: { eyebrow:'المطابخ', heading:'استكشف المطابخ من جميع أنحاء العالم',
+      sub:'46 مطبخًا دوليًا، كل منها بوصفات أصيلة ومخطط مجاني.',
+      cta:'شاهد كل 46 مطبخًا',
+      names:{ france:'فرنسا', japan:'اليابان', mexico:'المكسيك', greece:'اليونان', italy:'إيطاليا', india:'الهند' },
+      dishes:{ france:'كيش لورين · راتاتوي · حساء البصل الفرنسي',
+        japan:'سوشي · رامن ياباني كلاسيكي · كاري ياباني',
+        mexico:'تاكو · جواكامولي · تشيلي كون كارني',
+        greece:'سوفلاكي · تزاتزيكي · موساكا',
+        italy:'سباغيتي كاربونارا · ريزوتو · باستا إي فاجولي',
+        india:'دجاج بالكاري · دال · راجما' } },
+    zh: { eyebrow:'美食', heading:'探索世界各地的美食',
+      sub:'46种国际美食，每一种都有正宗食谱和免费规划器。',
+      cta:'查看全部46种美食',
+      names:{ france:'法国', japan:'日本', mexico:'墨西哥', greece:'希腊', italy:'意大利', india:'印度' },
+      dishes:{ france:'洛林乳蛋饼 · 普罗旺斯炖菜 · 法式洋葱汤',
+        japan:'寿司 · 经典日式拉面 · 日式咖喱',
+        mexico:'塔可 · 鳄梨酱 · 辣肉酱',
+        greece:'烤肉串 · 酸奶酱 · 慕沙卡',
+        italy:'培根蛋面 · 烩饭 · 意式豆面汤',
+        india:'鸡肉咖喱 · 扁豆糊 · 红豆咖喱' } },
+    ja: { eyebrow:'料理', heading:'世界の料理を探索',
+      sub:'46の国際料理、それぞれに本格的なレシピと無料プランナー。',
+      cta:'46の料理すべてを見る',
+      names:{ france:'フランス', japan:'日本', mexico:'メキシコ', greece:'ギリシャ', italy:'イタリア', india:'インド' },
+      dishes:{ france:'キッシュ・ロレーヌ · ラタトゥイユ · オニオングラタンスープ',
+        japan:'寿司 · クラシックなラーメン · 日本のカレー',
+        mexico:'タコス · ワカモレ · チリコンカルネ',
+        greece:'スブラキ · ザジキ · ムサカ',
+        italy:'スパゲッティ・カルボナーラ · リゾット · パスタ・エ・ファジョーリ',
+        india:'チキンカレー · ダール · ラジマ' } },
+    ko: { eyebrow:'요리', heading:'세계 각국의 요리 탐험',
+      sub:'46가지 국제 요리, 각각 정통 레시피와 무료 플래너 포함.',
+      cta:'46가지 요리 모두 보기',
+      names:{ france:'프랑스', japan:'일본', mexico:'멕시코', greece:'그리스', italy:'이탈리아', india:'인도' },
+      dishes:{ france:'키슈 로렌 · 라타투이 · 프렌치 어니언 수프',
+        japan:'스시 · 클래식 일본 라멘 · 일본 카레',
+        mexico:'타코 · 과카몰리 · 칠리 콘 카르네',
+        greece:'수블라키 · 차치키 · 무사카',
+        italy:'스파게티 카르보나라 · 리소토 · 파스타 에 파지올리',
+        india:'치킨 카레 · 달 · 라즈마' } },
+    hi: { eyebrow:'व्यंजन', heading:'दुनिया भर के व्यंजन देखें',
+      sub:'46 अंतर्राष्ट्रीय व्यंजन, हर एक में प्रामाणिक रेसिपी और मुफ्त प्लानर।',
+      cta:'सभी 46 व्यंजन देखें',
+      names:{ france:'फ्रांस', japan:'जापान', mexico:'मेक्सिको', greece:'यूनान', italy:'इटली', india:'भारत' },
+      dishes:{ france:'किश लोरेन · रतातुई · फ्रेंच प्याज सूप',
+        japan:'सुशी · क्लासिक जापानी रामेन · जापानी करी',
+        mexico:'टैकोस · ग्वाकामोल · चिली कोन कार्ने',
+        greece:'सूवलाकी · ज़ात्ज़ीकी · मुसाका',
+        italy:'स्पेगेटी कार्बोनारा · रिसोट्टो · पास्ता ए फजोली',
+        india:'चिकन करी · दाल · राजमा' } },
+  };
+  const s = copy[lang] || copy.en;
+
+  const cardsHTML = cuisines.map(c => `
+      <a class="hp-cuisine-card" href="/${lang}/${rSeg}/${c.slug}/" data-cuisine-atmosphere="${c.atmosphere}">
+        <span class="hp-cuisine-card-flag" aria-hidden="true">${c.flag}</span>
+        <span class="hp-cuisine-card-body">
+          <span class="hp-cuisine-card-top">
+            <span class="hp-cuisine-card-name">${safeText(s.names[c.slug])}</span>
+            <span class="hp-cuisine-card-count">${c.count}</span>
+          </span>
+          <span class="hp-cuisine-card-dishes">${safeText(s.dishes[c.slug])}</span>
+        </span>
+      </a>`).join('');
+
+  const html = `
+    <section id="${ID}" class="hp-cuisine-discover no-print" aria-labelledby="hp-cuisine-heading">
+      <div class="hp-cuisine-inner">
+        <div class="hp-cuisine-head">
+          <span class="hp-cuisine-eyebrow">${safeText(s.eyebrow)}</span>
+          <h2 id="hp-cuisine-heading" class="hp-cuisine-title">${safeText(s.heading)}</h2>
+          <p class="hp-cuisine-sub">${safeText(s.sub)}</p>
+        </div>
+        <div class="hp-cuisine-grid">${cardsHTML}</div>
+        <p class="hp-cuisine-cta">
+          <a class="hp-cuisine-cta-btn" href="/${lang}/${rSeg}/">${safeText(s.cta)}</a>
+        </p>
+      </div>
+    </section>`;
+
+  // Insert before the product-preview section if it already exists, else
+  // after the hero. Makes the function order-independent within applyTranslations().
+  const ppEl = document.getElementById('product-preview-section');
+  if (ppEl) {
+    ppEl.insertAdjacentHTML('beforebegin', html);
+  } else {
+    document.querySelector('.hero')?.insertAdjacentHTML('afterend', html);
+  }
+}
 
 function applyTranslations() {
   // 0) Update <html lang> and RTL direction for the active language
@@ -3666,24 +4296,36 @@ function applyTranslations() {
   renderPricingSection();
   renderPremiumHero();
   renderProductPreview();
-  renderDiscovery();
   renderCuisineDiscover();
+  renderDiscovery();
   renderPlannerAnchor();
-  // Homepage v2 interactivity (ported from Hs3mH). Idempotent; safe to re-run
-  // on every language change. renderCuisineDiscover() above is main's #23
-  // version (Hs3mH's was deliberately not ported). renderFeaturedRecipe and
-  // celebratePremium were excluded as out of PR-B scope.
+  // Trust signals are inserted at hero.afterend, so calling this LAST
+  // ensures the strip slots in right below the hero without disturbing
+  // the order of the other sections.
+  // Order matters: each hero.afterend insertion becomes the new
+  // immediate-next-sibling of hero, pushing prior siblings down. So
+  // trust signals first → featured last gives us
+  // hero → FEATURED → TRUST → cuisine → product-preview → ...
   renderTrustSignals();
+  renderFeaturedRecipe();
   renderPremiumPreview();
   renderFAQ();
   updateStickyUpgradeText();
   refreshStickyUpgrade();
+  // Phase 8 — tag new section wrappers + write stagger indices BEFORE the
+  // observer kicks so the reveal animation plays from the first frame.
   applyStaggerAndFadeMarkers();
   setupScrollFadeIn();
+  // Phase 7 — hero choreography. Both helpers are idempotent (counters
+  // mark counted spans, parallax marks the hero element) so re-running
+  // on language switch doesn't re-trigger animations.
   setupHeroCounters();
   setupHeroParallax();
+  // Phase 12 — variable font axis scroll, idempotent.
   setupHeroVariableFontScroll();
+  // Phase 8 — card tilt. Idempotent (dataset.tilted guard).
   setupCardTilt();
+  // Phase 9 — magnetic CTAs. Idempotent (dataset.magnetic guard).
   setupMagneticCTAs();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
@@ -3707,6 +4349,12 @@ function applyTranslations() {
     if (statusEl) statusEl.innerHTML = i18n[lang]["payment.success"] || '✅ Plata a fost realizată cu succes!';
     if (generateBtn) generateBtn.style.display = 'inline-block';
     updateButtonState(); // ← adăugare, ca să ascundă galbenul + selectorul
+    // Drop the upsell panel and flip the nav badge to "Active" right away.
+    document.getElementById('hp-premium-preview')?.remove();
+    if (typeof updateContentNav === 'function') updateContentNav(lang);
+    if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
+    // Phase 9 — one-shot celebration on first Stripe success redirect.
+    if (typeof celebratePremium === 'function') celebratePremium();
     window.history.replaceState({}, '', window.location.pathname);
   }
 
@@ -3723,7 +4371,7 @@ function applyTranslations() {
             price:'€3/lună', sub:'', popular:'CEL MAI POPULAR',
             cta:'Obține Premium →', already:'Ai deja abonament? Activează mai jos ↓',
             freeFeats:['✅ Plan de mese 7 zile','✅ Listă de cumpărături automată',
-                       '✅ 175 rețete din 70+ țări','✅ Previzualizare gratuită — 2 zile din 7',
+                       '✅ 200+ rețete din 70+ țări','✅ Previzualizare gratuită — 2 zile din 7',
                        '✗ PDF cu toate 7 zilele','✗ Meniu buget ieftin'],
             premFeats:['✅ Tot ce e gratuit, plus:','✅ PDF cu toate cele 7 zile',
                        '✅ Meniu buget săptămânal','✅ Asistent AI rețete (chat)',
@@ -3732,7 +4380,7 @@ function applyTranslations() {
             price:'€3/month', sub:'', popular:'MOST POPULAR',
             cta:'Get Premium →', already:'Already subscribed? Activate below ↓',
             freeFeats:['✅ 7-day meal plan','✅ Auto shopping list',
-                       '✅ 175 recipes from 70+ countries','✅ Free preview — 2 of 7 days',
+                       '✅ 200+ recipes from 70+ countries','✅ Free preview — 2 of 7 days',
                        '✗ Full 7-day PDF','✗ Budget menu'],
             premFeats:['✅ Everything in Free, plus:','✅ Full PDF with all 7 days',
                        '✅ Weekly budget menu','✅ AI recipe assistant (chat)',
@@ -3741,7 +4389,7 @@ function applyTranslations() {
             price:'€3/mes', sub:'', popular:'MÁS POPULAR',
             cta:'Obtener Premium →', already:'¿Ya suscrito? Activa abajo ↓',
             freeFeats:['✅ Plan de comidas 7 días','✅ Lista de compras automática',
-                       '✅ 175 recetas de 70+ países','✅ Vista previa gratuita — 2 de 7 días',
+                       '✅ 200+ recetas de 70+ países','✅ Vista previa gratuita — 2 de 7 días',
                        '✗ PDF con los 7 días','✗ Menú económico'],
             premFeats:['✅ Todo lo gratis, más:','✅ PDF completo con 7 días',
                        '✅ Menú económico semanal','✅ Asistente IA recetas (chat)',
@@ -3750,7 +4398,7 @@ function applyTranslations() {
             price:'€3/mois', sub:'', popular:'LE PLUS POPULAIRE',
             cta:'Obtenir Premium →', already:'Déjà abonné ? Activez ci-dessous ↓',
             freeFeats:['✅ Plan de repas 7 jours','✅ Liste de courses automatique',
-                       '✅ 175 recettes de 70+ pays','✅ Aperçu gratuit — 2 jours sur 7',
+                       '✅ 200+ recettes de 70+ pays','✅ Aperçu gratuit — 2 jours sur 7',
                        '✗ PDF avec les 7 jours','✗ Menu budget'],
             premFeats:['✅ Tout le gratuit, plus :','✅ PDF complet sur 7 jours',
                        '✅ Menu budget hebdomadaire','✅ Assistant IA recettes (chat)',
@@ -3759,7 +4407,7 @@ function applyTranslations() {
             price:'€3/Monat', sub:'', popular:'AM BELIEBTESTEN',
             cta:'Premium holen →', already:'Bereits abonniert? Unten aktivieren ↓',
             freeFeats:['✅ 7-Tage-Mahlzeitenplan','✅ Automatische Einkaufsliste',
-                       '✅ 175 Rezepte aus 70+ Ländern','✅ Kostenlose Vorschau — 2 von 7 Tagen',
+                       '✅ 200+ Rezepte aus 70+ Ländern','✅ Kostenlose Vorschau — 2 von 7 Tagen',
                        '✗ PDF mit allen 7 Tagen','✗ Budget-Menü'],
             premFeats:['✅ Alles Kostenlose, plus:','✅ PDF mit allen 7 Tagen',
                        '✅ Wöchentliches Budget-Menü','✅ KI-Rezept-Assistent (Chat)',
@@ -3768,7 +4416,7 @@ function applyTranslations() {
             price:'€3/mês', sub:'', popular:'MAIS POPULAR',
             cta:'Obter Premium →', already:'Já assinante? Ative abaixo ↓',
             freeFeats:['✅ Plano de refeições 7 dias','✅ Lista de compras automática',
-                       '✅ 175 receitas de 70+ países','✅ Pré-visualização gratuita — 2 de 7 dias',
+                       '✅ 200+ receitas de 70+ países','✅ Pré-visualização gratuita — 2 de 7 dias',
                        '✗ PDF com todos os 7 dias','✗ Menu económico'],
             premFeats:['✅ Tudo gratuito, mais:','✅ PDF completo com 7 dias',
                        '✅ Menu económico semanal','✅ Assistente IA receitas (chat)',
@@ -3777,7 +4425,7 @@ function applyTranslations() {
             price:'€3/мес', sub:'', popular:'САМЫЙ ПОПУЛЯРНЫЙ',
             cta:'Получить Премиум →', already:'Уже подписаны? Активируйте ниже ↓',
             freeFeats:['✅ План питания на 7 дней','✅ Автоматический список покупок',
-                       '✅ 175 рецептов из 70+ стран','✅ Бесплатный просмотр — 2 из 7 дней',
+                       '✅ 200+ рецептов из 70+ стран','✅ Бесплатный просмотр — 2 из 7 дней',
                        '✗ PDF на все 7 дней','✗ Бюджетное меню'],
             premFeats:['✅ Всё из бесплатного, плюс:','✅ Полный PDF на 7 дней',
                        '✅ Недельное бюджетное меню','✅ ИИ-помощник по рецептам (чат)',
@@ -3786,7 +4434,7 @@ function applyTranslations() {
             price:'€3/شهر', sub:'', popular:'الأكثر شعبية',
             cta:'احصل على بريميوم →', already:'مشترك بالفعل؟ فعّل أدناه ↓',
             freeFeats:['✅ خطة وجبات 7 أيام','✅ قائمة تسوق تلقائية',
-                       '✅ 175 وصفة من 70+ دولة','✅ معاينة مجانية — يومان من أصل 7',
+                       '✅ 200+ وصفة من 70+ دولة','✅ معاينة مجانية — يومان من أصل 7',
                        '✗ PDF كامل 7 أيام','✗ قائمة الميزانية'],
             premFeats:['✅ كل المجاني، بالإضافة:','✅ PDF كامل بجميع 7 أيام',
                        '✅ قائمة ميزانية أسبوعية','✅ مساعد وصفات بالذكاء الاصطناعي (دردشة)',
@@ -3795,7 +4443,7 @@ function applyTranslations() {
             price:'€3/月', sub:'', popular:'最受欢迎',
             cta:'获取高级版 →', already:'已订阅？在下方激活 ↓',
             freeFeats:['✅ 7天餐饮计划','✅ 自动购物清单',
-                       '✅ 70+国175道菜谱','✅ 免费预览 — 7天中的2天',
+                       '✅ 70+国200+道菜谱','✅ 免费预览 — 7天中的2天',
                        '✗ 完整7天PDF','✗ 节俭菜单'],
             premFeats:['✅ 所有免费功能，加上：','✅ 完整7天PDF',
                        '✅ 每周节俭菜单','✅ AI食谱助手（聊天）',
@@ -3804,7 +4452,7 @@ function applyTranslations() {
             price:'€3/月', sub:'', popular:'最人気',
             cta:'プレミアムを取得 →', already:'すでに購読済み？下でアクティブ化 ↓',
             freeFeats:['✅ 7日間の食事プラン','✅ 自動買い物リスト',
-                       '✅ 70カ国以上175レシピ','✅ 無料プレビュー — 7日中2日',
+                       '✅ 70カ国以上200+レシピ','✅ 無料プレビュー — 7日中2日',
                        '✗ 7日分フルPDF','✗ 節約メニュー'],
             premFeats:['✅ 無料のすべて、プラス：','✅ 7日分フルPDF',
                        '✅ 週間節約メニュー','✅ AIレシピアシスタント（チャット）',
@@ -3813,7 +4461,7 @@ function applyTranslations() {
             price:'€3/ay', sub:'', popular:'EN POPÜLER',
             cta:'Premium Al →', already:'Zaten abone misiniz? Aşağıdan aktive edin ↓',
             freeFeats:['✅ 7 günlük yemek planı','✅ Otomatik alışveriş listesi',
-                       '✅ 70+ ülkeden 175 tarif','✅ Ücretsiz önizleme — 7 günden 2\'si',
+                       '✅ 70+ ülkeden 200+ tarif','✅ Ücretsiz önizleme — 7 günden 2\'si',
                        '✗ 7 günlük tam PDF','✗ Bütçe menüsü'],
             premFeats:['✅ Ücretsizin her şeyi, artı:','✅ 7 günlük tam PDF',
                        '✅ Haftalık bütçe menüsü','✅ AI tarif asistanı (sohbet)',
@@ -3822,7 +4470,7 @@ function applyTranslations() {
             price:'€3/mese', sub:'', popular:'PIÙ POPOLARE',
             cta:'Ottieni Premium →', already:'Già abbonato? Attiva qui sotto ↓',
             freeFeats:['✅ Piano pasti 7 giorni','✅ Lista della spesa automatica',
-                       '✅ 175 ricette da 70+ paesi','✅ Anteprima gratuita — 2 giorni su 7',
+                       '✅ 200+ ricette da 70+ paesi','✅ Anteprima gratuita — 2 giorni su 7',
                        '✗ PDF con tutti i 7 giorni','✗ Menu economico'],
             premFeats:['✅ Tutto il gratuito, più:','✅ PDF completo 7 giorni',
                        '✅ Menu economico settimanale','✅ Assistente IA ricette (chat)',
@@ -3831,7 +4479,7 @@ function applyTranslations() {
             price:'€3/월', sub:'', popular:'가장 인기',
             cta:'프리미엄 이용 →', already:'이미 구독 중? 아래에서 활성화 ↓',
             freeFeats:['✅ 7일 식단 계획','✅ 자동 장보기 목록',
-                       '✅ 70개국 175가지 레시피','✅ 무료 미리보기 — 7일 중 2일',
+                       '✅ 70개국 200+가지 레시피','✅ 무료 미리보기 — 7일 중 2일',
                        '✗ 7일 전체 PDF','✗ 예산 메뉴'],
             premFeats:['✅ 무료의 모든 것, 추가로:','✅ 7일 전체 PDF',
                        '✅ 주간 예산 메뉴','✅ AI 레시피 도우미 (채팅)',
@@ -3840,7 +4488,7 @@ function applyTranslations() {
             price:'€3/माह', sub:'', popular:'सबसे लोकप्रिय',
             cta:'प्रीमियम पाएं →', already:'पहले से सदस्य? नीचे सक्रिय करें ↓',
             freeFeats:['✅ 7 दिन का भोजन योजना','✅ स्वचालित खरीदारी सूची',
-                       '✅ 70+ देशों की 175 रेसिपी','✅ मुफ्त पूर्वावलोकन — 7 में से 2 दिन',
+                       '✅ 70+ देशों की 200+ रेसिपी','✅ मुफ्त पूर्वावलोकन — 7 में से 2 दिन',
                        '✗ पूर्ण 7 दिन PDF','✗ बजट मेनू'],
             premFeats:['✅ सब कुछ मुफ्त में, साथ में:','✅ पूर्ण 7 दिन PDF',
                        '✅ साप्ताहिक बजट मेनू','✅ AI रेसिपी सहायक (चैट)',
@@ -3852,6 +4500,27 @@ function applyTranslations() {
       `<li class="${f.startsWith('✗') ? 'feat-no' : ''}">${f}</li>`
     ).join('');
     const premList = s.premFeats.map(f => `<li>${f}</li>`).join('');
+
+    // Trust strip shown below the cards — reassures cancel/no-commit terms.
+    const TRUST_STRIP = {
+      ro: ['🔒 Plăți Stripe securizate', '↩ Anulezi oricând', '💳 Fără angajament'],
+      en: ['🔒 Stripe-secured', '↩ Cancel anytime', '💳 No commitment'],
+      es: ['🔒 Seguro con Stripe', '↩ Cancela cuando quieras', '💳 Sin compromiso'],
+      fr: ['🔒 Sécurisé par Stripe', '↩ Annulez à tout moment', '💳 Sans engagement'],
+      de: ['🔒 Stripe-gesichert', '↩ Jederzeit kündbar', '💳 Keine Bindung'],
+      pt: ['🔒 Seguro com Stripe', '↩ Cancele quando quiser', '💳 Sem compromisso'],
+      ru: ['🔒 Защищено Stripe', '↩ Отмена в любое время', '💳 Без обязательств'],
+      it: ['🔒 Pagamenti Stripe sicuri', '↩ Cancella quando vuoi', '💳 Senza impegno'],
+      tr: ['🔒 Stripe ile güvenli', '↩ Dilediğin zaman iptal', '💳 Taahhüt yok'],
+      ar: ['🔒 آمن مع Stripe', '↩ ألغِ في أي وقت', '💳 بدون التزام'],
+      zh: ['🔒 Stripe 安全', '↩ 随时取消', '💳 无承诺'],
+      ja: ['🔒 Stripe で安全', '↩ いつでもキャンセル', '💳 契約なし'],
+      ko: ['🔒 Stripe 보안', '↩ 언제든 취소', '💳 약정 없음'],
+      hi: ['🔒 Stripe सुरक्षित', '↩ कभी भी रद्द', '💳 कोई प्रतिबद्धता नहीं'],
+    };
+    const trustItems = (TRUST_STRIP[lang] || TRUST_STRIP.en)
+      .map(t => `<span class="pricing-trust-strip-item">${t}</span>`)
+      .join('<span aria-hidden="true">·</span>');
 
     el.innerHTML = `
       <div class="pricing-inner">
@@ -3882,6 +4551,7 @@ function applyTranslations() {
           </div>
 
         </div>
+        <div class="pricing-trust-strip">${trustItems}</div>
       </div>
     `;
 
@@ -3934,6 +4604,43 @@ window.hasUnlimited = false;
 const verifyBtn  = document.getElementById('verifyBtn');
 const emailInput = document.getElementById('emailInput');
 const manageBtn  = document.getElementById('manage-subscription');
+
+// Premium-state persistence: silently re-verify on load using the last
+// known-good email so paying users don't see the upsell flow on every
+// reload. Server stays authoritative — localStorage is a hint only.
+(function restorePremiumFromHint() {
+  let hintEmail = null;
+  try { hintEmail = localStorage.getItem('mp:lastEmail'); } catch (_) {}
+  if (!hintEmail) return;
+  fetch(`/api/check-access?email=${encodeURIComponent(hintEmail)}`)
+    .then(r => r.json())
+    .then(({ active }) => {
+      if (!active) {
+        try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
+        return;
+      }
+      window.hasUnlimited = true;
+      window.verifiedEmail = hintEmail;
+      if (emailInput && !emailInput.value) emailInput.value = hintEmail;
+      const pricingEl = document.getElementById('pricing-section');
+      if (pricingEl) pricingEl.style.display = 'none';
+      // Premium preview panel only makes sense for non-premium users.
+      document.getElementById('hp-premium-preview')?.remove();
+      if (manageBtn) manageBtn.style.display = 'inline-block';
+      if (typeof updateButtonState === 'function') updateButtonState();
+      if (typeof updateContentNav === 'function') updateContentNav(lang);
+      if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
+    })
+    .catch(() => { /* network blip — user can re-verify manually */ });
+})();
+
+// Sticky upgrade pill — wire observers once. applyTranslations() handles
+// the text + visibility refresh on every language switch and on premium
+// state changes.
+if (typeof setupStickyUpgrade === 'function') setupStickyUpgrade();
+
+// Phase 6 — Atmosphere setup (cursor glow). Runs once on script load.
+if (typeof setupCursorAtmosphere === 'function') setupCursorAtmosphere();
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
     const email = emailInput.value.trim();
@@ -3964,6 +4671,7 @@ if (verifyBtn && emailInput && resultDiv) {
       window.hasUnlimited = true;
       // Store email for AI endpoints (chat/coach require email in POST body)
       window.verifiedEmail = email;
+      try { localStorage.setItem('mp:lastEmail', email); } catch (_) {}
       const expiryText = until
         ? `${(access[lang]?.validUntil || 'Valabil până la')} ${
             new Date(until).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' })
@@ -3980,36 +4688,25 @@ if (verifyBtn && emailInput && resultDiv) {
       if (buyBtn) buyBtn.style.display = 'none';
       if (currencySelUI) currencySelUI.style.display = 'none';
       attachPdfListeners();
-      if (manageBtn) {
-        manageBtn.style.display = 'inline-block';
-        manageBtn.onclick = async () => {
-          try {
-            const r = await fetch('/api/create-portal-session', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                email,
-                return_url: window.location.origin + window.location.pathname
-              })
-            });
-            const { url, error } = await r.json();
-            if (error || !url) { alert(error || 'Nu s-a putut deschide portalul Stripe.'); return; }
-            window.location.href = url;
-          } catch (e) {
-            alert('Eroare: ' + e.message);
-          }
-        };
-      }
+      // Manage-subscription click is wired globally in public/js/portal.js
+      // (delegated handler). Just toggle visibility here.
+      if (manageBtn) manageBtn.style.display = 'inline-block';
+      // Drop the premium preview panel — paying users don't need the upsell.
+      document.getElementById('hp-premium-preview')?.remove();
       if (typeof updateButtonState === 'function') updateButtonState();
+      if (typeof updateContentNav === 'function') updateContentNav(lang);
+      if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
     } else if (found) {
       // Account exists but subscription is expired
       window.hasUnlimited = false;
+      try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.invalid || 'Nu există acces valid pentru acest email.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
       if (typeof updateButtonState === 'function') updateButtonState();
     } else {
       // No account found at all
       window.hasUnlimited = false;
+      try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.not_found || 'Nu există acces pentru acest email. Plătește întâi sau verifică adresa.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
       if (typeof updateButtonState === 'function') updateButtonState();
@@ -4183,12 +4880,6 @@ if (verifyBtn && emailInput && resultDiv) {
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();
-  // Homepage v2 one-time setups (ported from Hs3mH): scroll-driven sticky
-  // upgrade pill + cursor atmosphere. Guarded; no-op on pages without the
-  // homepage markup. (The per-language render/motion helpers run inside
-  // applyTranslations above.)
-  if (typeof setupStickyUpgrade === 'function') setupStickyUpgrade();
-  if (typeof setupCursorAtmosphere === 'function') setupCursorAtmosphere();
   attachPdfListeners();
   updateButtonState();
   wireInputsToShoppingList();

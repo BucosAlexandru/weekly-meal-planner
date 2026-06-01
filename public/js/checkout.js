@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const email = document.querySelector('#emailInput')?.value?.trim() || null;
       const customerId = window.currentStripeCustomerId || null;
+      // Hint for premium auto-restore after Stripe success: lets app.js
+      // silently re-verify the user instead of forcing manual activation.
+      if (email) { try { localStorage.setItem('mp:lastEmail', email); } catch (_) {} }
       await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId });
     });
   }

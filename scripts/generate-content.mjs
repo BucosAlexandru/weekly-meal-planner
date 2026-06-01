@@ -32,6 +32,7 @@ const PUBLIC    = path.join(ROOT, 'public');
 // enriched-but-trimmed shape.
 const discoveryCatalog = enrichCatalog({ recipes, recipesMeta });
 const recipesById      = new Map(recipes.map(r => [r.id, r]));
+const RECIPE_COUNT     = recipes.length;
 
 /* ── helpers ──────────────────────────────────────────────────── */
 const mkdir  = p => fs.mkdirSync(p, { recursive: true });
@@ -170,22 +171,43 @@ function imageSrcset(url, tileSize = 'tile') {
 }
 
 /* Image error handling: emit attributes that recover from transient Wikipedia
-   404s instead of permanently removing the <img>. The hash-bucket path
-   (/thumb/X/XX/Filename) can 404 when (a) the filename guess is slightly off
-   or (b) the upstream thumb cache hasn't generated that size yet. In both
-   cases Wikipedia's Special:FilePath redirector resolves by filename and
-   server-generates the thumbnail — much more forgiving than the direct CDN
-   URL. Only fall through to remove() after the fallback also fails.
+   404s instead of permanently removing the <img>. Two Wikimedia URL shapes are
+   used as primary sources across recipe-images.js, and both now get a fallback
+   chain that ends at the flag/emoji card (remove()) rather than a broken slot:
+
+   A) upload.wikimedia.org hash-bucket thumb
+        .../commons/thumb/X/XX/Filename.jpg/330px-Filename.jpg
+      Can 404 when (a) the filename guess is slightly off or (b) the upstream
+      thumb cache hasn't generated that size yet. On error, retry the
+      Special:FilePath redirector (resolves by filename and server-generates
+      the thumbnail — far more forgiving than the direct CDN URL), then remove.
+
+   B) Special:FilePath redirector used directly as the primary src
+        https://en.wikipedia.org/wiki/Special:FilePath/Filename.jpg?width=636
+      The width-pinned form can still 404 when the requested size can't be
+      generated. On error, retry the full-resolution FilePath (no ?width),
+      then remove. Previously these URLs hit the generic remove()-immediately
+      branch with no retry, so a single hiccup left an empty image slot.
 
    For non-Wikimedia URLs (img.spoonacular.com, local /images/, cover2.jpg),
-   keep the existing remove-on-error behavior. */
+   keep the existing remove-on-error behavior — that already reveals the emoji.
+   In every case the terminal state is remove(), so the .recipe-card-img emoji
+   (rendered behind the <img> via CSS) becomes the graceful fallback. */
 function imgFallbackAttrs(url) {
+  // Pattern A — upload.wikimedia.org thumb → Special:FilePath redirector → card.
   const wm = url.match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[^/]+\/[^/]+\/([^/]+)\/(\d+)px-/);
-  if (!wm) return ' onerror="this.remove()"';
-  const filename = wm[1];
-  const width = wm[2];
-  const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${filename}?width=${width}`;
-  return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+  if (wm) {
+    const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${wm[1]}?width=${wm[2]}`;
+    return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+  }
+  // Pattern B — width-pinned Special:FilePath → full-resolution FilePath → card.
+  const fp = url.match(/^https:\/\/[a-z]+\.wikipedia\.org\/wiki\/Special:FilePath\/([^?#]+)\?width=\d+$/);
+  if (fp) {
+    const fb = `https://en.wikipedia.org/wiki/Special:FilePath/${fp[1]}`;
+    return ` data-wm-fb="${fb}" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"`;
+  }
+  // Everything else — remove on error so the emoji card shows.
+  return ' onerror="this.remove()"';
 }
 
 /* Convenience: build the attribute string `srcset="..." sizes="..."` to
@@ -436,7 +458,100 @@ const PLANS = [
     lunches: ['Spaghetti Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
     dinners: ['Kung Pao Chicken','Pho','Tom Yum','Chicken Curry','Nasi Goreng','Cheeseburger','Fish and Chips'],
   },
+  {
+    id: 'iarna-confort', idEn: 'winter-comfort', emoji: '🍲',
+    costRON: '180–240', costEUR: '38–50',
+    theme: {
+      ro:'Iarnă – Mese de Confort', en:'Winter Comfort – Slow & Hearty',
+      es:'Invierno – Reconfortante', fr:'Hiver – Réconfortant',
+      de:'Winter – Wärmend & Herzhaft', pt:'Inverno – Aconchegante',
+      ru:'Зима – Тёплая и сытная', ar:'الشتاء – وجبات دافئة',
+      zh:'冬日暖食', ja:'冬のコンフォート', hi:'सर्दियों का आराम',
+      tr:'Kış – Sıcak & Doyurucu', it:'Inverno – Caldo e Confortante', ko:'겨울 – 따뜻한 위로'
+    },
+    desc: {
+      ro:'Tocane lent fierte, supe fierbinți și mese hrănitoare pentru zilele reci. Borș, gulaș, ciulama, pho — căldura iernii la masă.',
+      en:'Slow-cooked stews, hot soups and nourishing meals for cold days. Borscht, goulash, beef bourguignon, pho — winter warmth at the table.',
+      es:'Guisos a fuego lento, sopas calientes y comidas reconfortantes para días fríos. Borscht, goulash, boeuf bourguignon, pho.',
+      fr:'Ragoûts mijotés, soupes chaudes et plats nourrissants pour les jours froids. Bortsch, goulasch, bœuf bourguignon, pho.',
+      de:'Langsam geschmorte Eintöpfe, heiße Suppen und sättigende Mahlzeiten für kalte Tage. Borschtsch, Gulasch, Bœuf bourguignon, Pho.',
+      pt:'Guisados lentos, sopas quentes e refeições reconfortantes para dias frios. Borscht, goulash, boeuf bourguignon, pho.',
+      ru:'Медленно тушёные блюда, горячие супы и сытная еда для холодных дней. Борщ, гуляш, бёф бургиньон, фо.',
+      ar:'يخنات تطهى ببطء، حساء ساخن، ووجبات مغذية للأيام الباردة. بورش، غولاش، بوف بورغينيون، فو.',
+      zh:'慢炖菜肴、热汤和滋补饮食，温暖寒冷日子。罗宋汤、匈牙利牛肉汤、勃艮第炖牛肉、越南河粉。',
+      ja:'じっくり煮込んだシチュー、熱々のスープ、心と体を満たす料理。ボルシチ、グーラッシュ、ブッフブルギニヨン、フォー。',
+      hi:'धीमी आँच पर पका स्टू, गर्म सूप और सर्द दिनों के लिए पौष्टिक भोजन। बोर्श, गुलाश, बीफ बुर्गिन्योन, फो।',
+      tr:'Ağır ateşte pişen yahniler, sıcak çorbalar ve soğuk günler için doyurucu yemekler. Borş, gulaş, boeuf bourguignon, pho.',
+      it:'Stufati a fuoco lento, zuppe calde e piatti nutrienti per le giornate fredde. Borscht, gulasch, boeuf bourguignon, pho.',
+      ko:'천천히 끓인 스튜, 뜨거운 수프, 추운 날을 위한 든든한 요리. 보르시, 굴라시, 뵈프 부르기뇽, 포.'
+    },
+    lunches: ['Borscht','Goulash','Risotto','Chicken Paprikash','Pho','Cassoulet','Lobio'],
+    dinners: ['Boeuf Bourguignon','Lamb Tagine','Chicken Kiev','Coq au Vin','Solyanka','Bigos','Lamb Stew'],
+  },
+  {
+    id: 'vara-usoara', idEn: 'summer-light', emoji: '🍋',
+    costRON: '160–210', costEUR: '34–44',
+    theme: {
+      ro:'Vară – Mese Ușoare', en:'Summer Light – Fresh & Bright',
+      es:'Verano – Ligero y Fresco', fr:'Été – Léger & Frais',
+      de:'Sommer – Leicht & Frisch', pt:'Verão – Leve & Fresco',
+      ru:'Лето – Лёгкое и Свежее', ar:'الصيف – خفيف ومنعش',
+      zh:'夏日轻食', ja:'夏のライト食卓', hi:'गर्मी – हल्का और ताज़ा',
+      tr:'Yaz – Hafif & Ferah', it:'Estate – Leggero e Fresco', ko:'여름 – 가볍고 상쾌하게'
+    },
+    desc: {
+      ro:'Salate vibrante, supe reci, peste la grătar și mese care nu cer ore în bucătărie. Gazpacho, ceviche, salată grecească — vară pe farfurie.',
+      en:'Vibrant salads, cold soups, grilled fish and meals that don\'t ask for hours in the kitchen. Gazpacho, ceviche, Greek salad — summer on a plate.',
+      es:'Ensaladas vibrantes, sopas frías, pescado a la parrilla y comidas que no piden horas en la cocina. Gazpacho, ceviche, ensalada griega.',
+      fr:'Salades vibrantes, soupes froides, poissons grillés et repas qui ne demandent pas des heures en cuisine. Gazpacho, ceviche, salade grecque.',
+      de:'Lebendige Salate, kalte Suppen, gegrillter Fisch und Gerichte ohne stundenlange Kocherei. Gazpacho, Ceviche, griechischer Salat.',
+      pt:'Saladas vibrantes, sopas frias, peixe grelhado e refeições que não pedem horas na cozinha. Gazpacho, ceviche, salada grega.',
+      ru:'Яркие салаты, холодные супы, рыба на гриле и блюда без долгой готовки. Гаспачо, севиче, греческий салат.',
+      ar:'سلطات نابضة بالحياة، شوربات باردة، سمك مشوي، ووجبات لا تتطلب ساعات في المطبخ. غاسباتشو، سيفيتشي، سلطة يونانية.',
+      zh:'活力沙拉、冷汤、烤鱼，简单不费时的料理。西班牙冷汤、酸橘汁腌鱼、希腊沙拉——盘中的夏天。',
+      ja:'色鮮やかなサラダ、冷たいスープ、焼き魚、長時間キッチンに立たずに作れる料理。ガスパチョ、セビーチェ、ギリシャサラダ。',
+      hi:'जीवंत सलाद, ठंडे सूप, ग्रिल्ड मछली और रसोई में घंटों न माँगने वाले भोजन। गाजपाचो, सेविचे, ग्रीक सलाद।',
+      tr:'Canlı salatalar, soğuk çorbalar, ızgara balık ve saatlerce mutfak gerektirmeyen yemekler. Gazpacho, ceviche, Yunan salatası.',
+      it:'Insalate vibranti, zuppe fredde, pesce alla griglia e piatti che non richiedono ore in cucina. Gazpacho, ceviche, insalata greca.',
+      ko:'생기 넘치는 샐러드, 차가운 수프, 구운 생선, 주방에 오래 머물 필요 없는 요리. 가스파초, 세비체, 그릭 샐러드.'
+    },
+    lunches: ['Gazpacho','Ceviche','Greek Salad','Tabbouleh','Vietnamese Spring Rolls','Caprese Salad','Salade Niçoise'],
+    dinners: ['Grilled Sea Bream','Sushi','Avgolemono','Sea Bass Provençal','Souvlaki','Bouillabaisse','Smørrebrød'],
+  },
+  {
+    id: 'duminica-familie', idEn: 'family-sunday', emoji: '🍷',
+    costRON: '220–280', costEUR: '45–58',
+    theme: {
+      ro:'Duminică în Familie', en:'Sunday at the Table',
+      es:'Domingo en Familia', fr:'Dimanche en Famille',
+      de:'Sonntag am Tisch', pt:'Domingo em Família',
+      ru:'Воскресенье за столом', ar:'يوم الأحد على المائدة',
+      zh:'家庭周日餐桌', ja:'家族の日曜の食卓', hi:'परिवार का रविवार',
+      tr:'Aile Sofrasında Pazar', it:'Domenica in Famiglia', ko:'가족의 일요일 식탁'
+    },
+    desc: {
+      ro:'Friptura lentă la cuptor, lasagna pe care o aștepți toată săptămâna, paella în farfurii adânci. Mese care cer timp și înconjurate de oameni.',
+      en:'Slow roasts in the oven, the lasagna you wait for all week, paella in deep plates. Meals that ask for time and the people you love around them.',
+      es:'Asados lentos al horno, la lasaña que esperas toda la semana, paella en platos hondos. Comidas que piden tiempo y a la gente alrededor.',
+      fr:'Rôtis lents au four, la lasagne attendue toute la semaine, paella en assiette creuse. Des repas qui demandent du temps et les gens autour.',
+      de:'Langsam gebratenes aus dem Ofen, die Lasagne, auf die du die ganze Woche wartest, Paella in tiefen Tellern. Mahlzeiten, die Zeit und Menschen brauchen.',
+      pt:'Assados lentos no forno, a lasanha que se espera toda a semana, paella em pratos fundos. Refeições que pedem tempo e gente em volta.',
+      ru:'Медленное жаркое из духовки, лазанья, которую ждёшь всю неделю, паэлья в глубоких тарелках. Еда, требующая времени и близких рядом.',
+      ar:'لحوم مشوية ببطء في الفرن، اللازانيا التي تنتظرها طوال الأسبوع، البايييا في أطباق عميقة. وجبات تستحق الوقت والأحباء حولها.',
+      zh:'烤箱里的慢烤、整周期待的千层面、深盘里的西班牙海鲜饭。需要时间和爱人共享的菜肴。',
+      ja:'オーブンでじっくり焼くロースト、一週間待ったラザニア、深皿に盛るパエリャ。時間と大切な人を求める料理。',
+      hi:'ओवन में धीमी आँच पर भुना मांस, हफ्ता भर इंतज़ार की लसान्या, गहरे प्लेट में पाएया। समय और प्रियजनों की माँग करने वाले व्यंजन।',
+      tr:'Fırında ağır pişen rostolar, bütün hafta beklediğin lazanya, derin tabaklarda paella. Zaman ve sevdiklerini isteyen yemekler.',
+      it:'Arrosti lenti nel forno, la lasagna che aspetti tutta la settimana, paella nei piatti fondi. Pasti che chiedono tempo e persone intorno.',
+      ko:'오븐에서 천천히 굽는 로스트, 일주일을 기다리는 라자냐, 깊은 접시의 빠에야. 시간과 사랑하는 사람들을 부르는 요리.'
+    },
+    lunches: ['Lasagna','Paella','Risotto','Quiche Lorraine','Spanakopita','Moussaka','Pasta alla Norma'],
+    dinners: ['Boeuf Bourguignon','Roast Chicken Diavola','Cassoulet','Lamb Tagine','Beef Stroganoff','Coq au Vin','Lamb Stew'],
+  },
 ];
+
+const PLAN_COUNT    = PLANS.length;
+const PLAN_COUNT_AR = String(PLAN_COUNT).replace(/[0-9]/g, d => '٠١٢٣٤٥٦٧٨٩'[+d]);
 
 /* ════════════════════════════════════════════════════════════════
    LANGUAGE CONFIGS — UI strings + URL structure for all 14 langs
@@ -458,20 +573,19 @@ const LANG_CONFIGS = {
     openPlanLabel:'Deschide planul în aplicație',
     openPlanSub:'Personalizează și descarcă PDF gratuit',
     otherPlansHeading:'Alte meniuri săptămânale',
-    seeAll:'Vezi toate cele 8 meniuri →',
+    seeAll:`Vezi toate cele ${PLAN_COUNT} meniuri →`,
     seoHeading:'De ce să planifici mesele în avans?',
     seoBullets:['Reduci risipa alimentară cu până la <strong>30%</strong>','Economisești <strong>timp și bani</strong> — o singură tură','Mănânci mai <strong>sănătos</strong>','Elimini stresul zilnic al întrebării „ce gătesc azi?"'],
-    indexTitle:'Meniuri Săptămânale cu Liste de Cumpărături – 8 Planuri | Meal-Planner.ro',
-    indexDesc:'8 meniuri săptămânale complete cu liste de cumpărături și costuri estimate. Mediteranean, Asian, Buget, Vegetarian și altele.',
+    indexTitle:`Meniuri Săptămânale cu Liste de Cumpărături – ${PLAN_COUNT} Planuri | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} meniuri săptămânale complete cu liste de cumpărături și costuri estimate. Mediteranean, Asian, Buget, Vegetarian și altele.`,
     indexH1:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
     indexH1raw:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
-    indexSubdesc:'8 planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat.',
+    indexSubdesc:`${PLAN_COUNT} planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat.`,
     indexViewPlan:'Vezi planul',
     indexSeoH:'De ce să folosești un planificator săptămânal?',
     indexSeoP:'Planificarea meselor este una din cele mai eficiente metode de a mânca sănătos și de a economisi bani.',
     metaTitle: (theme)=>`Meniu Săptămânal ${theme} – Listă Cumpărături | Meal-Planner.ro`,
     days:['Luni','Marți','Miercuri','Joi','Vineri','Sâmbătă','Duminică'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.id,
   },
   en: {
@@ -490,19 +604,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Open plan in app',
     openPlanSub:'Customise recipes and download free PDF',
     otherPlansHeading:'More weekly plans',
-    seeAll:'See all 8 plans →',
+    seeAll:`See all ${PLAN_COUNT} plans →`,
     seoHeading:'Why plan meals in advance?',
     seoBullets:['Reduce food waste by up to <strong>30%</strong>','Save <strong>time and money</strong> — one shopping trip','Eat <strong>healthier</strong>','Eliminate the daily "what should I cook?" stress'],
-    indexTitle:'Free Weekly Meal Plans with Shopping Lists – 8 Themes | Meal-Planner.ro',
-    indexDesc:'8 complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.',
+    indexTitle:`Free Weekly Meal Plans with Shopping Lists – ${PLAN_COUNT} Themes | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.`,
     indexH1raw:'Free Weekly Meal Plans with <span class="accent">Shopping Lists</span>',
-    indexSubdesc:'8 complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost.',
+    indexSubdesc:`${PLAN_COUNT} complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost.`,
     indexViewPlan:'View plan',
     indexSeoH:'Why use a weekly meal planner?',
     indexSeoP:'Planning meals in advance is one of the most effective ways to eat healthier and save money.',
     metaTitle: (theme)=>`Weekly Meal Plan – ${theme} | Meal-Planner.ro`,
     days:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-    recipeBase:'/en/recipes/',
     planIdFn: p=>p.idEn,
   },
   es: {
@@ -521,19 +634,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Abrir plan en la app',
     openPlanSub:'Personaliza recetas y descarga PDF gratis',
     otherPlansHeading:'Más planes semanales',
-    seeAll:'Ver los 8 planes →',
+    seeAll:`Ver los ${PLAN_COUNT} planes →`,
     seoHeading:'¿Por qué planificar las comidas?',
     seoBullets:['Reduce el desperdicio de alimentos hasta un <strong>30%</strong>','Ahorra <strong>tiempo y dinero</strong>','Come de forma más <strong>saludable</strong>','Elimina el estrés diario de "¿qué cocino hoy?"'],
-    indexTitle:'Planes de Comida Semanales con Listas de Compra – 8 Temas | Meal-Planner.ro',
-    indexDesc:'8 planes de comida semanales completos con listas de compra y costes estimados.',
+    indexTitle:`Planes de Comida Semanales con Listas de Compra – ${PLAN_COUNT} Temas | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} planes de comida semanales completos con listas de compra y costes estimados.`,
     indexH1raw:'Planes Semanales con <span class="accent">Listas de Compra</span>',
-    indexSubdesc:'8 planes completos, cada uno con 14 recetas, lista de compra ordenada y coste estimado.',
+    indexSubdesc:`${PLAN_COUNT} planes completos, cada uno con 14 recetas, lista de compra ordenada y coste estimado.`,
     indexViewPlan:'Ver plan',
     indexSeoH:'¿Por qué usar un planificador semanal?',
     indexSeoP:'Planificar las comidas es una de las formas más eficaces de comer más sano y ahorrar dinero.',
     metaTitle: (theme)=>`Plan Semanal – ${theme} | Meal-Planner.ro`,
     days:['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   fr: {
@@ -552,19 +664,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Ouvrir le plan dans l\'app',
     openPlanSub:'Personnalisez et téléchargez le PDF gratuitement',
     otherPlansHeading:'Autres plans hebdomadaires',
-    seeAll:'Voir les 8 plans →',
+    seeAll:`Voir les ${PLAN_COUNT} plans →`,
     seoHeading:'Pourquoi planifier les repas ?',
     seoBullets:['Réduisez le gaspillage alimentaire de <strong>30%</strong>','Économisez <strong>temps et argent</strong>','Mangez plus <strong>sainement</strong>','Éliminez le stress quotidien de "que cuisiner ?"'],
-    indexTitle:'Plans Repas Hebdomadaires avec Listes de Courses – 8 Thèmes | Meal-Planner.ro',
-    indexDesc:'8 plans repas hebdomadaires complets avec listes de courses et coûts estimés.',
+    indexTitle:`Plans Repas Hebdomadaires avec Listes de Courses – ${PLAN_COUNT} Thèmes | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} plans repas hebdomadaires complets avec listes de courses et coûts estimés.`,
     indexH1raw:'Plans Hebdomadaires avec <span class="accent">Listes de Courses</span>',
-    indexSubdesc:'8 plans complets, chacun avec 14 recettes, une liste de courses et un coût estimé.',
+    indexSubdesc:`${PLAN_COUNT} plans complets, chacun avec 14 recettes, une liste de courses et un coût estimé.`,
     indexViewPlan:'Voir le plan',
     indexSeoH:'Pourquoi utiliser un planificateur hebdomadaire ?',
     indexSeoP:'Planifier les repas à l\'avance est l\'un des moyens les plus efficaces de manger sainement.',
     metaTitle: (theme)=>`Plan de Repas – ${theme} | Meal-Planner.ro`,
     days:['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   de: {
@@ -583,19 +694,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Plan in App öffnen',
     openPlanSub:'Rezepte anpassen und PDF kostenlos herunterladen',
     otherPlansHeading:'Weitere Wochenpläne',
-    seeAll:'Alle 8 Pläne anzeigen →',
+    seeAll:`Alle ${PLAN_COUNT} Pläne anzeigen →`,
     seoHeading:'Warum Mahlzeiten im Voraus planen?',
     seoBullets:['Lebensmittelverschwendung bis zu <strong>30%</strong> reduzieren','<strong>Zeit und Geld</strong> sparen','<strong>Gesünder</strong> essen','Täglichen Stress beim "Was koche ich?" eliminieren'],
-    indexTitle:'Wochenspeisepläne mit Einkaufslisten – 8 Themen | Meal-Planner.ro',
-    indexDesc:'8 vollständige Wochenspeisepläne mit Einkaufslisten und Kostenabschätzungen.',
+    indexTitle:`Wochenspeisepläne mit Einkaufslisten – ${PLAN_COUNT} Themen | Meal-Planner.ro`,
+    indexDesc:`${PLAN_COUNT} vollständige Wochenspeisepläne mit Einkaufslisten und Kostenabschätzungen.`,
     indexH1raw:'Wochenpläne mit <span class="accent">Einkaufslisten</span>',
-    indexSubdesc:'8 vollständige Pläne, jeder mit 14 Rezepten, einer sortierten Einkaufsliste und Kostenabschätzung.',
+    indexSubdesc:`${PLAN_COUNT} vollständige Pläne, jeder mit 14 Rezepten, einer sortierten Einkaufsliste und Kostenabschätzung.`,
     indexViewPlan:'Plan ansehen',
     indexSeoH:'Warum einen Wochenplaner verwenden?',
     indexSeoP:'Die Mahlzeitenplanung im Voraus ist eine der effektivsten Methoden, gesünder zu essen.',
     metaTitle: (theme)=>`Wochenplan – ${theme} | Meal-Planner.ro`,
     days:['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   pt: {
@@ -614,19 +724,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Abrir plano na app',
     openPlanSub:'Personalize receitas e baixe PDF grátis',
     otherPlansHeading:'Mais planos semanais',
-    seeAll:'Ver todos os 8 planos →',
+    seeAll:`Ver todos os ${PLAN_COUNT} planos →`,
     seoHeading:'Por que planejar as refeições?',
     seoBullets:['Reduza o desperdício de alimentos em <strong>30%</strong>','Economize <strong>tempo e dinheiro</strong>','Coma de forma mais <strong>saudável</strong>','Elimine o estresse diário de "o que cozinhar?"'],
     indexTitle:'Planos de Refeições Semanais com Listas de Compras | Meal-Planner.ro',
-    indexDesc:'8 planos semanais completos com listas de compras e custos estimados.',
+    indexDesc:`${PLAN_COUNT} planos semanais completos com listas de compras e custos estimados.`,
     indexH1raw:'Planos Semanais com <span class="accent">Listas de Compras</span>',
-    indexSubdesc:'8 planos completos, cada um com 14 receitas, lista de compras e custo estimado.',
+    indexSubdesc:`${PLAN_COUNT} planos completos, cada um com 14 receitas, lista de compras e custo estimado.`,
     indexViewPlan:'Ver plano',
     indexSeoH:'Por que usar um planejador semanal?',
     indexSeoP:'Planejar as refeições com antecedência é uma das formas mais eficazes de comer melhor.',
     metaTitle: (theme)=>`Plano Semanal – ${theme} | Meal-Planner.ro`,
     days:['Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ru: {
@@ -645,19 +754,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Открыть план',
     openPlanSub:'Настройте рецепты и скачайте PDF бесплатно',
     otherPlansHeading:'Другие недельные меню',
-    seeAll:'Все 8 меню →',
+    seeAll:`Все ${PLAN_COUNT} меню →`,
     seoHeading:'Зачем планировать питание?',
     seoBullets:['Снижает пищевые отходы на <strong>30%</strong>','Экономит <strong>время и деньги</strong>','Помогает питаться <strong>здоровее</strong>','Убирает ежедневный стресс'],
     indexTitle:'Недельные меню с Cписками покупок | Meal-Planner.ro',
-    indexDesc:'8 полных недельных планов питания со списками покупок и оценками стоимости.',
+    indexDesc:`${PLAN_COUNT} полных недельных планов питания со списками покупок и оценками стоимости.`,
     indexH1raw:'Недельные меню со <span class="accent">Списками покупок</span>',
-    indexSubdesc:'8 планов с 14 рецептами каждый, отсортированным списком и оценкой стоимости.',
+    indexSubdesc:`${PLAN_COUNT} планов с 14 рецептами каждый, отсортированным списком и оценкой стоимости.`,
     indexViewPlan:'Смотреть план',
     indexSeoH:'Почему стоит планировать питание?',
     indexSeoP:'Планирование питания — один из эффективных способов питаться здоровее.',
     metaTitle: (theme)=>`Недельное меню – ${theme} | Meal-Planner.ro`,
     days:['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ar: {
@@ -676,19 +784,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'فتح الخطة في التطبيق',
     openPlanSub:'خصّص الوصفات وحمّل PDF مجاناً',
     otherPlansHeading:'خطط أسبوعية أخرى',
-    seeAll:'عرض جميع الخطط الـ ٨ →',
+    seeAll:`عرض جميع الخطط الـ ${PLAN_COUNT_AR} →`,
     seoHeading:'لماذا تخطط وجباتك مسبقاً؟',
     seoBullets:['تقليل هدر الطعام حتى <strong>٣٠٪</strong>','توفير <strong>الوقت والمال</strong>','تناول طعام <strong>أكثر صحة</strong>','إزالة التوتر اليومي'],
     indexTitle:'خطط وجبات أسبوعية مع قوائم تسوق | Meal-Planner.ro',
-    indexDesc:'٨ خطط أسبوعية كاملة مع قوائم تسوق وتقديرات تكلفة.',
+    indexDesc:`${PLAN_COUNT_AR} خطط أسبوعية كاملة مع قوائم تسوق وتقديرات تكلفة.`,
     indexH1raw:'خطط أسبوعية مع <span class="accent">قوائم التسوق</span>',
-    indexSubdesc:'٨ خطط كاملة، كل منها يحتوي على ١٤ وصفة وقائمة تسوق وتقدير التكلفة.',
+    indexSubdesc:`${PLAN_COUNT_AR} خطط كاملة، كل منها يحتوي على ١٤ وصفة وقائمة تسوق وتقدير التكلفة.`,
     indexViewPlan:'عرض الخطة',
     indexSeoH:'لماذا تستخدم مخططاً أسبوعياً؟',
     indexSeoP:'التخطيط المسبق للوجبات من أفضل الطرق لتناول طعام صحي وتوفير المال.',
     metaTitle: (theme)=>`الخطة الأسبوعية – ${theme} | Meal-Planner.ro`,
     days:['الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت','الأحد'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   zh: {
@@ -707,19 +814,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'在应用中打开计划',
     openPlanSub:'自定义食谱并免费下载PDF',
     otherPlansHeading:'更多每周计划',
-    seeAll:'查看全部8个计划 →',
+    seeAll:`查看全部${PLAN_COUNT}个计划 →`,
     seoHeading:'为什么要提前规划饮食？',
     seoBullets:['减少食物浪费高达 <strong>30%</strong>','节省<strong>时间和金钱</strong>','饮食更<strong>健康</strong>','消除每天"今天吃什么"的烦恼'],
     indexTitle:'每周饮食计划与购物清单 | Meal-Planner.ro',
-    indexDesc:'8个完整的每周饮食计划，附购物清单和费用估算。',
+    indexDesc:`${PLAN_COUNT}个完整的每周饮食计划，附购物清单和费用估算。`,
     indexH1raw:'每周饮食计划与<span class="accent">购物清单</span>',
-    indexSubdesc:'8个完整计划，每个包含14道食谱、购物清单和费用估算。',
+    indexSubdesc:`${PLAN_COUNT}个完整计划，每个包含14道食谱、购物清单和费用估算。`,
     indexViewPlan:'查看计划',
     indexSeoH:'为什么使用每周饮食规划器？',
     indexSeoP:'提前规划饮食是健康饮食和节省开支的最有效方法之一。',
     metaTitle: (theme)=>`每周饮食计划 – ${theme} | Meal-Planner.ro`,
     days:['周一','周二','周三','周四','周五','周六','周日'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ja: {
@@ -738,19 +844,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'アプリでプランを開く',
     openPlanSub:'レシピをカスタマイズして無料PDFをダウンロード',
     otherPlansHeading:'他の週間プラン',
-    seeAll:'全8プランを見る →',
+    seeAll:`全${PLAN_COUNT}プランを見る →`,
     seoHeading:'なぜ食事を計画すべきか？',
     seoBullets:['食品廃棄を <strong>30%</strong> 削減','<strong>時間とお金</strong> の節約','より<strong>健康的</strong>な食事','毎日の「何を作ろう？」というストレスを解消'],
     indexTitle:'週間献立プランと買い物リスト | Meal-Planner.ro',
-    indexDesc:'8つの完全な週間食事プラン、買い物リスト付き。',
+    indexDesc:`${PLAN_COUNT}つの完全な週間食事プラン、買い物リスト付き。`,
     indexH1raw:'週間献立と<span class="accent">買い物リスト</span>',
-    indexSubdesc:'8つのプラン、それぞれ14レシピ、買い物リスト、費用概算付き。',
+    indexSubdesc:`${PLAN_COUNT}つのプラン、それぞれ14レシピ、買い物リスト、費用概算付き。`,
     indexViewPlan:'プランを見る',
     indexSeoH:'なぜ週間プランナーを使うのか？',
     indexSeoP:'食事を事前に計画することは、健康的に食べるための最も効果的な方法の一つです。',
     metaTitle: (theme)=>`週間プラン – ${theme} | Meal-Planner.ro`,
     days:['月曜日','火曜日','水曜日','木曜日','金曜日','土曜日','日曜日'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   hi: {
@@ -769,19 +874,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'ऐप में योजना खोलें',
     openPlanSub:'रेसिपी कस्टमाइज़ करें और मुफ्त PDF डाउनलोड करें',
     otherPlansHeading:'अन्य साप्ताहिक योजनाएं',
-    seeAll:'सभी 8 योजनाएं देखें →',
+    seeAll:`सभी ${PLAN_COUNT} योजनाएं देखें →`,
     seoHeading:'भोजन की योजना क्यों बनाएं?',
     seoBullets:['खाद्य अपशिष्ट <strong>30%</strong> तक कम करें','<strong>समय और पैसा</strong> बचाएं','अधिक <strong>स्वस्थ</strong> खाएं','रोज़ "आज क्या पकाएं?" की परेशानी खत्म करें'],
     indexTitle:'साप्ताहिक भोजन योजनाएं और खरीदारी सूची | Meal-Planner.ro',
-    indexDesc:'8 पूर्ण साप्ताहिक भोजन योजनाएं, खरीदारी सूची और लागत अनुमान के साथ।',
+    indexDesc:`${PLAN_COUNT} पूर्ण साप्ताहिक भोजन योजनाएं, खरीदारी सूची और लागत अनुमान के साथ।`,
     indexH1raw:'साप्ताहिक योजनाएं और <span class="accent">खरीदारी सूची</span>',
-    indexSubdesc:'8 पूर्ण योजनाएं, प्रत्येक में 14 रेसिपी, खरीदारी सूची और लागत अनुमान।',
+    indexSubdesc:`${PLAN_COUNT} पूर्ण योजनाएं, प्रत्येक में 14 रेसिपी, खरीदारी सूची और लागत अनुमान।`,
     indexViewPlan:'योजना देखें',
     indexSeoH:'साप्ताहिक प्लानर क्यों उपयोग करें?',
     indexSeoP:'पहले से भोजन की योजना बनाना स्वस्थ खाने और पैसे बचाने के सबसे प्रभावी तरीकों में से एक है।',
     metaTitle: (theme)=>`साप्ताहिक योजना – ${theme} | Meal-Planner.ro`,
     days:['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   tr: {
@@ -800,19 +904,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Planı uygulamada aç',
     openPlanSub:'Tarifleri özelleştir ve ücretsiz PDF indir',
     otherPlansHeading:'Diğer haftalık planlar',
-    seeAll:'Tüm 8 planı gör →',
+    seeAll:`Tüm ${PLAN_COUNT} planı gör →`,
     seoHeading:'Yemekleri neden önceden planlayın?',
     seoBullets:['Gıda israfını <strong>%30</strong> azalt','<strong>Zaman ve para</strong> tasarrufu','Daha <strong>sağlıklı</strong> beslen','Günlük "bugün ne pişirsem?" stresini yok et'],
     indexTitle:'Haftalık Yemek Planları ve Alışveriş Listeleri | Meal-Planner.ro',
-    indexDesc:'8 tam haftalık yemek planı, alışveriş listeleri ve maliyet tahminleriyle.',
+    indexDesc:`${PLAN_COUNT} tam haftalık yemek planı, alışveriş listeleri ve maliyet tahminleriyle.`,
     indexH1raw:'Haftalık Planlar ve <span class="accent">Alışveriş Listeleri</span>',
-    indexSubdesc:'Her biri 14 tarif, alışveriş listesi ve maliyet tahmini içeren 8 tam plan.',
+    indexSubdesc:`Her biri 14 tarif, alışveriş listesi ve maliyet tahmini içeren ${PLAN_COUNT} tam plan.`,
     indexViewPlan:'Planı gör',
     indexSeoH:'Haftalık planlayıcı neden kullanılmalı?',
     indexSeoP:'Yemek planlaması, daha sağlıklı beslenmenin ve para biriktirmenin en etkili yollarından biridir.',
     metaTitle: (theme)=>`Haftalık Plan – ${theme} | Meal-Planner.ro`,
     days:['Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi','Pazar'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   it: {
@@ -831,19 +934,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'Apri piano nell\'app',
     openPlanSub:'Personalizza ricette e scarica PDF gratis',
     otherPlansHeading:'Altri piani settimanali',
-    seeAll:'Vedi tutti gli 8 piani →',
+    seeAll:`Vedi tutti gli ${PLAN_COUNT} piani →`,
     seoHeading:'Perché pianificare i pasti?',
     seoBullets:['Riduci gli sprechi alimentari fino al <strong>30%</strong>','Risparmia <strong>tempo e denaro</strong>','Mangia in modo più <strong>sano</strong>','Elimina lo stress quotidiano'],
     indexTitle:'Piani Pasti Settimanali con Liste della Spesa | Meal-Planner.ro',
-    indexDesc:'8 piani settimanali completi con liste della spesa e stime dei costi.',
+    indexDesc:`${PLAN_COUNT} piani settimanali completi con liste della spesa e stime dei costi.`,
     indexH1raw:'Piani Settimanali con <span class="accent">Liste della Spesa</span>',
-    indexSubdesc:'8 piani completi, ognuno con 14 ricette, lista della spesa e stima dei costi.',
+    indexSubdesc:`${PLAN_COUNT} piani completi, ognuno con 14 ricette, lista della spesa e stima dei costi.`,
     indexViewPlan:'Vedi piano',
     indexSeoH:'Perché usare un pianificatore settimanale?',
     indexSeoP:'Pianificare i pasti in anticipo è uno dei metodi più efficaci per mangiare in modo più sano.',
     metaTitle: (theme)=>`Piano Settimanale – ${theme} | Meal-Planner.ro`,
     days:['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
   ko: {
@@ -862,19 +964,18 @@ const LANG_CONFIGS = {
     openPlanLabel:'앱에서 계획 열기',
     openPlanSub:'레시피를 커스터마이즈하고 무료 PDF 다운로드',
     otherPlansHeading:'다른 주간 계획',
-    seeAll:'전체 8개 계획 보기 →',
+    seeAll:`전체 ${PLAN_COUNT}개 계획 보기 →`,
     seoHeading:'왜 식사를 미리 계획해야 할까요?',
     seoBullets:['식품 낭비를 <strong>30%</strong> 줄이기','<strong>시간과 돈</strong> 절약','더 <strong>건강하게</strong> 먹기','매일 "오늘 뭐 먹지?" 스트레스 해소'],
     indexTitle:'주간 식단 계획 및 장보기 목록 | Meal-Planner.ro',
-    indexDesc:'장보기 목록과 비용 추정이 포함된 8가지 완전한 주간 식단 계획.',
+    indexDesc:`장보기 목록과 비용 추정이 포함된 ${PLAN_COUNT}가지 완전한 주간 식단 계획.`,
     indexH1raw:'주간 계획과 <span class="accent">장보기 목록</span>',
-    indexSubdesc:'각각 14가지 레시피, 장보기 목록, 비용 추정이 포함된 8가지 완전한 계획.',
+    indexSubdesc:`각각 14가지 레시피, 장보기 목록, 비용 추정이 포함된 ${PLAN_COUNT}가지 완전한 계획.`,
     indexViewPlan:'계획 보기',
     indexSeoH:'주간 플래너를 사용하는 이유',
     indexSeoP:'식사를 미리 계획하는 것은 건강하게 먹고 비용을 절약하는 가장 효과적인 방법 중 하나입니다.',
     metaTitle: (theme)=>`주간 계획 – ${theme} | Meal-Planner.ro`,
     days:['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
-    recipeBase:'/ro/retete/',
     planIdFn: p=>p.idEn,
   },
 };
@@ -903,7 +1004,7 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website'
   <meta name="twitter:title" content="${esc(title)}"/>
   <meta name="twitter:description" content="${esc(desc)}"/>
   <meta name="twitter:image" content="${ogImage}"/>
-  <meta name="theme-color" content="#24712A"/>
+  <meta name="theme-color" content="#1d1812"/>
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -1025,14 +1126,28 @@ const makeNav = (lc, langUrlMap = null) => `
   </nav>
 </header>`;
 
-const FOOTER_LANG_LINKS = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi','tr','it','ko']
-  .map(c => `<a href="/${c}/" hreflang="${c}">${({ro:'Română',en:'English',es:'Español',fr:'Français',de:'Deutsch',pt:'Português',ru:'Русский',ar:'العربية',zh:'中文',ja:'日本語',hi:'हिन्दी',tr:'Türkçe',it:'Italiano',ko:'한국어'})[c]}</a>`)
+const FOOTER_LANG_NAMES = {
+  ro:'Română', en:'English', es:'Español', fr:'Français', de:'Deutsch',
+  pt:'Português', ru:'Русский', ar:'العربية', zh:'中文', ja:'日本語',
+  hi:'हिन्दी', tr:'Türkçe', it:'Italiano', ko:'한국어'
+};
+// Footer language links preserve page context the same way the header
+// <select> switcher does: each href points at the equivalent locale page
+// (recipe / cuisine hub / plan / pricing / etc.) — falling back to the
+// locale root only when the caller didn't supply a map. Reuses the same
+// NAV_URL_FOR.* helpers that already feed the header switcher so the
+// header and footer never disagree about where the user lands.
+const footerLangLinks = (langUrlMap = null) => Object.keys(FOOTER_LANG_NAMES)
+  .map(c => {
+    const href = (langUrlMap && langUrlMap[c]) || `/${c}/`;
+    return `<a href="${href}" hreflang="${c}">${FOOTER_LANG_NAMES[c]}</a>`;
+  })
   .join('<span class="footer-lang-sep" aria-hidden="true">·</span>');
 
-const makeFooter = (lc) => `
+const makeFooter = (lc, langUrlMap = null) => `
 <footer class="app-footer" role="contentinfo">
   <div class="footer-inner">
-    <nav class="footer-langs" aria-label="${a11y(lc.code).availableLangs}">${FOOTER_LANG_LINKS}</nav>
+    <nav class="footer-langs" aria-label="${a11y(lc.code).availableLangs}">${footerLangLinks(langUrlMap)}</nav>
     <div class="footer-main">
       <span class="footer-brand">🥗 Meal-Planner.ro</span>
       <span class="footer-sep">·</span>
@@ -1440,11 +1555,13 @@ function pricingPage(lc_code) {
   const dir_attr = lc.dir_attr || 'ltr';
   const canonical = `https://meal-planner.ro/${lc_code}/${sl}/`;
 
-  const freeRows  = cp.freeFeats.map(f => `            <li class="${f.startsWith('✗') ? 'feat-no' : ''}">${f}</li>`).join('\n');
-  const premRows  = cp.premFeats.map(f => `            <li>${f}</li>`).join('\n');
+  // Substitute the legacy "175" placeholder with the live recipe count.
+  const subN = s => s.replace(/175/g, String(RECIPE_COUNT));
+  const freeRows  = cp.freeFeats.map(f => `            <li class="${f.startsWith('✗') ? 'feat-no' : ''}">${subN(f)}</li>`).join('\n');
+  const premRows  = cp.premFeats.map(f => `            <li>${subN(f)}</li>`).join('\n');
   const faqRows   = cp.faq.map(([q, a]) => `        <div class="faq-item">
-          <dt>${q}</dt>
-          <dd>${a}</dd>
+          <dt>${subN(q)}</dt>
+          <dd>${subN(a)}</dd>
         </div>`).join('\n');
 
   return `<!DOCTYPE html>
@@ -1477,6 +1594,7 @@ ${PRICING_HREFLANGS_FULL}
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
   <!-- Bootstrap + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -1484,6 +1602,8 @@ ${PRICING_HREFLANGS_FULL}
 
   <!-- App styles -->
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/content.css">
+  <meta name="theme-color" content="#1d1812">
 
   <!-- JSON-LD: Product with pricing offers -->
   <script type="application/ld+json">
@@ -1520,24 +1640,8 @@ ${PRICING_HREFLANGS_FULL}
   }
   </script>
 
-  <style>
-    .pricing-page-hero { text-align: center; padding: 56px 20px 32px; }
-    .pricing-page-hero h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 12px; color: var(--text-primary, #1a1a2e); }
-    .pricing-page-hero p { font-size: 1.1rem; color: var(--text-secondary, #555); max-width: 480px; margin: 0 auto 8px; }
-    .pricing-page-wrap { max-width: 860px; margin: 0 auto; padding: 0 16px 64px; }
-    .pricing-faq { margin-top: 48px; padding-top: 32px; border-top: 1px solid #eee; }
-    .pricing-faq h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; text-align: center; }
-    .faq-item { margin-bottom: 20px; }
-    .faq-item dt { font-weight: 600; margin-bottom: 4px; }
-    .faq-item dd { margin: 0; color: #555; font-size: 0.95rem; }
-    .pricing-back { text-align: center; margin-top: 36px; font-size: 0.9rem; color: #5a5a5a; }
-    .pricing-back a { color: var(--color-brand-dark, #1f5e22); }
-    .nav-link--active { font-weight: 700; color: var(--color-brand-dark, #1f5e22) !important; }
-    .access-mini { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px 24px; margin-top: 32px; text-align: center; }
-    .access-mini p { margin-bottom: 12px; color: #555; font-size: 0.95rem; }
-    .access-mini-form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-    .access-mini-form input { padding: 8px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 0.95rem; min-width: 220px; }
-  </style>
+  <!-- Pricing-page styles now live in /css/content.css under
+       #pricing-main scope (Phase 25). Inline <style> block removed. -->
 </head>
 
 <body>
@@ -1613,7 +1717,7 @@ ${faqRows}
 
   </main>
 
-  ${makeFooter(lc)}
+  ${makeFooter(lc, NAV_URL_FOR.pricing())}
 
   <script src="/js/checkout.min.js" defer></script>
 </body>
@@ -1704,8 +1808,8 @@ function planPage(plan, lc) {
     const dDispName = dRec?.name?.[lc_code] || dRec?.name?.en || dName;
     const lSummary = mealSummary(lRec, lc_code);
     const dSummary = mealSummary(dRec, lc_code);
-    const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${lc.recipeBase}${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
-    const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${lc.recipeBase}${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
+    const lSlug = (!plan.isBudget && (lRec?.name?.en || lRec?.name?.ro)) ? `${RECIPE_LANG[lc_code].dir}/${slug(lRec.name?.en||lRec.name?.ro)}/` : '#';
+    const dSlug = (!plan.isBudget && (dRec?.name?.en || dRec?.name?.ro)) ? `${RECIPE_LANG[lc_code].dir}/${slug(dRec.name?.en||dRec.name?.ro)}/` : '#';
     return `<tr>
       <td><strong>${day}</strong></td>
       <td>${lSlug!=='#'?`<a href="${lSlug}" class="recipe-link">`:''}${esc(lDispName)}${lSlug!=='#'?'</a>':''}${lSummary?`<br><small class="text-muted">${esc(lSummary)}</small>`:''}
@@ -1746,11 +1850,22 @@ function planPage(plan, lc) {
   const dir_attr = lc.dir_attr || 'ltr';
   const costDisplay = lc.costValue(plan);
 
+  // PLAN_HERO_IMG carries low-res sources (Spoonacular 312×231 and
+  // Wikipedia /thumb/.../330px-...). The detail hero stretches the image
+  // to ~1180 px wide, so upgrade to the largest public CDN variant for
+  // each provider. Spoonacular caps at 636×393. Wikipedia accepts an
+  // arbitrary <W>px segment as long as it's ≤ the original asset's
+  // width; 1024 px is safe for every recipe photo on the planner.
+  const heroImgRaw = PLAN_HERO_IMG[plan.idEn] || '';
+  const heroImg = heroImgRaw
+    .replace(/-312x231\.(jpg|jpeg|png|webp)$/, '-636x393.$1')
+    .replace(/\/(?:330|300|320)px-/, '/1024px-');
+
   return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.plan(plan))}
-<main class="content-main">
-  <section class="content-hero${PLAN_HERO_IMG[plan.idEn] ? ' content-hero--photo' : ''}"${PLAN_HERO_IMG[plan.idEn] ? ` style="--hero-bg: url('${PLAN_HERO_IMG[plan.idEn]}')"` : ''}>
+<main class="content-main meal-plan-detail-main" data-plan="${plan.idEn}">
+  <section class="content-hero${heroImg ? ' content-hero--photo' : ''}"${heroImg ? ` style="--hero-bg: url('${heroImg}')"` : ''}>
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <a href="/">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
@@ -1830,7 +1945,7 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
     </div>
   </section>
 </main>
-${makeFooter(lc)}
+${makeFooter(lc, NAV_URL_FOR.plan(plan))}
 <script>
 /* (1) Auto-expand the collapsible shopping list before browser print /
    Save-as-PDF, then restore. Keeps screen UX light while ensuring full
@@ -1867,6 +1982,9 @@ const PLAN_HERO_IMG = {
   'latin-american':     recipeImages[13], // Guacamole
   'vegetarian':         recipeImages[25], // Tabbouleh
   'quick-easy':         recipeImages[16], // Pad Thai
+  'winter-comfort':     recipeImages[178], // Beef Bourguignon
+  'summer-light':       recipeImages[65],  // Ceviche
+  'family-sunday':      recipeImages[22],  // Paella (shared with Mediterranean — different page context)
 };
 
 /* ════════════════════════════════════════════════════════════════
@@ -1881,7 +1999,7 @@ function indexPage(lc) {
     const costDisplay = lc.costValue(p);
     const heroImg = PLAN_HERO_IMG[p.idEn];
     return `<a href="${lc.dir}/${planId}/" class="content-card${heroImg ? ' content-card--with-img' : ''}">
-      ${heroImg ? `<div class="content-card-img"><img src="${heroImg}" alt="" loading="lazy" decoding="async"><span class="content-card-emoji">${p.emoji}</span></div>` : ''}
+      ${heroImg ? `<div class="content-card-img"><img src="${heroImg}" alt="" loading="lazy" decoding="async" onerror="this.closest('.content-card-img')?.classList.add('content-card-img--failed');this.remove();"><span class="content-card-emoji">${p.emoji}</span></div>` : ''}
       <div class="content-card-body">
         ${!heroImg ? `<div class="content-card-header"><span class="card-emoji">${p.emoji}</span><h2 class="card-title">${esc(theme)}</h2></div>` : `<h2 class="card-title">${esc(theme)}</h2>`}
         <p class="card-desc">${esc(desc)}</p>
@@ -1919,7 +2037,7 @@ function indexPage(lc) {
 
   return `${HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr)}
 ${makeNav(lc, NAV_URL_FOR.planIndex())}
-<main class="content-main">
+<main class="content-main meal-plans-index-main">
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
@@ -1952,7 +2070,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
     </div>
   </section>
 </main>
-${makeFooter(lc)}
+${makeFooter(lc, NAV_URL_FOR.planIndex())}
 </body></html>`;
 }
 
@@ -1962,7 +2080,8 @@ ${makeFooter(lc)}
 const RECIPE_LANG = {
   ro: { dir:'/ro/retete',    indexTitle:'Rețete din Toată Lumea | Meal-Planner.ro',
         indexH1:'Rețete din <span class="accent">Toată Lumea</span>',
-        indexDesc: n=>`${n} rețete cu ingrediente și mod de preparare.`,
+        indexDesc: n=>`<p>De la mesele de familie la tradițiile transmise din generație în generație.</p><p>${n} rețete din 46 de bucătării, în 14 limbi.</p><p>Alege unde începe cina de azi.</p>`,
+        indexKicker:'În Napoli, gnocchi se rulează.<br>La Tokyo, supa clocotește.<br>La Lyon, untul se rumenește.<br><strong>Toate patruzeci și șase de bucătării sunt vii.</strong>',
         breadHome:'Acasă', breadLabel:'Rețete',
         ingredientsH:'🛒 Ingrediente', howToH:'👨‍🍳 Mod de preparare',
         addBtn: n=>`Adaugă în planul meu`, relatedH: o=>`Alte rețete din ${esc(o)}`,
@@ -1973,7 +2092,8 @@ const RECIPE_LANG = {
         appDir:'/ro', lc: null },
   en: { dir:'/en/recipes',   indexTitle:`Recipes from Around the World | Meal-Planner.ro`,
         indexH1:'Recipes from <span class="accent">Around the World</span>',
-        indexDesc: n=>`${n} recipes with ingredients and instructions.`,
+        indexDesc: n=>`<p>From family tables to traditions passed down through generations.</p><p>${n} recipes from 46 kitchens, in 14 languages.</p><p>Choose where dinner starts today.</p>`,
+        indexKicker:'In Naples, gnocchi are folding.<br>In Tokyo, broth is steaming.<br>In Lyon, butter is browning.<br><strong>All forty-six kitchens are alive right now.</strong>',
         breadHome:'Home', breadLabel:'Recipes',
         ingredientsH:'🛒 Ingredients', howToH:'👨‍🍳 How to make it',
         addBtn: n=>`Add to my meal plan`, relatedH: o=>`More recipes from ${esc(o)}`,
@@ -1984,7 +2104,8 @@ const RECIPE_LANG = {
         appDir:'/en', lc: null },
   es: { dir:'/es/recetas',   indexTitle:`Recetas del Mundo | Meal-Planner.ro`,
         indexH1:'Recetas del <span class="accent">Mundo</span>',
-        indexDesc: n=>`${n} recetas con ingredientes e instrucciones.`,
+        indexDesc: n=>`<p>De las mesas familiares a las tradiciones que pasan de generación en generación.</p><p>${n} recetas de 46 cocinas, en 14 idiomas.</p><p>Elige dónde empieza la cena de hoy.</p>`,
+        indexKicker:'En Nápoles, alguien enrolla gnocchi.<br>En Tokio, un caldo hierve.<br>En Lyon, la mantequilla se dora.<br><strong>Cuarenta y seis cocinas están vivas ahora mismo.</strong>',
         breadHome:'Inicio', breadLabel:'Recetas',
         ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Cómo prepararlo',
         addBtn: n=>`Añadir a mi plan`, relatedH: o=>`Más recetas de ${esc(o)}`,
@@ -1995,7 +2116,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   fr: { dir:'/fr/recettes',  indexTitle:`Recettes du Monde | Meal-Planner.ro`,
         indexH1:'Recettes du <span class="accent">Monde</span>',
-        indexDesc: n=>`${n} recettes avec ingrédients et instructions.`,
+        indexDesc: n=>`<p>Des tables familiales aux traditions transmises de génération en génération.</p><p>${n} recettes de 46 cuisines, en 14 langues.</p><p>Choisissez où commence le dîner d'aujourd'hui.</p>`,
+        indexKicker:'À Naples, on roule des gnocchis.<br>À Tokyo, un bouillon mijote.<br>À Lyon, le beurre rissole.<br><strong>Quarante-six cuisines sont vivantes en ce moment.</strong>',
         breadHome:'Accueil', breadLabel:'Recettes',
         ingredientsH:'🛒 Ingrédients', howToH:'👨‍🍳 Comment préparer',
         addBtn: n=>`Ajouter à mon plan`, relatedH: o=>`Plus de recettes de ${esc(o)}`,
@@ -2006,7 +2128,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   de: { dir:'/de/rezepte',   indexTitle:`Rezepte aus aller Welt | Meal-Planner.ro`,
         indexH1:'Rezepte aus <span class="accent">aller Welt</span>',
-        indexDesc: n=>`${n} Rezepte mit Zutaten und Anleitung.`,
+        indexDesc: n=>`<p>Vom Familientisch zu Traditionen, die über Generationen weitergegeben werden.</p><p>${n} Rezepte aus 46 Küchen, in 14 Sprachen.</p><p>Wähle, wo das heutige Abendessen beginnt.</p>`,
+        indexKicker:'In Neapel rollen gerade Gnocchi.<br>In Tokio köchelt eine Brühe.<br>In Lyon bräunt Butter.<br><strong>Sechsundvierzig Küchen sind jetzt lebendig.</strong>',
         breadHome:'Startseite', breadLabel:'Rezepte',
         ingredientsH:'🛒 Zutaten', howToH:'👨‍🍳 Zubereitung',
         addBtn: n=>`Zu meinem Plan hinzufügen`, relatedH: o=>`Weitere Rezepte aus ${esc(o)}`,
@@ -2017,7 +2140,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   pt: { dir:'/pt/receitas',  indexTitle:`Receitas do Mundo | Meal-Planner.ro`,
         indexH1:'Receitas do <span class="accent">Mundo</span>',
-        indexDesc: n=>`${n} receitas com ingredientes e instruções.`,
+        indexDesc: n=>`<p>Das mesas de família às tradições transmitidas de geração em geração.</p><p>${n} receitas de 46 cozinhas, em 14 idiomas.</p><p>Escolha onde começa o jantar de hoje.</p>`,
+        indexKicker:'Em Nápoles, alguém enrola nhoques.<br>Em Tóquio, um caldo ferve.<br>Em Lyon, a manteiga doura.<br><strong>Quarenta e seis cozinhas estão vivas neste instante.</strong>',
         breadHome:'Início', breadLabel:'Receitas',
         ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Como preparar',
         addBtn: n=>`Adicionar ao meu plano`, relatedH: o=>`Mais receitas de ${esc(o)}`,
@@ -2028,7 +2152,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ru: { dir:'/ru/retsepty',  indexTitle:`Рецепты со всего мира | Meal-Planner.ro`,
         indexH1:'Рецепты со <span class="accent">всего мира</span>',
-        indexDesc: n=>`${n} рецептов с ингредиентами и инструкциями.`,
+        indexDesc: n=>`<p>От семейных столов до традиций, передаваемых из поколения в поколение.</p><p>${n} рецептов из 46 кухонь, на 14 языках.</p><p>Выберите, где начнётся сегодняшний ужин.</p>`,
+        indexKicker:'В Неаполе раскатывают ньокки.<br>В Токио кипит бульон.<br>В Лионе румянится масло.<br><strong>Сорок шесть кухонь живы прямо сейчас.</strong>',
         breadHome:'Главная', breadLabel:'Рецепты',
         ingredientsH:'🛒 Ингредиенты', howToH:'👨‍🍳 Как приготовить',
         addBtn: n=>`Добавить в мой план`, relatedH: o=>`Ещё рецепты из ${esc(o)}`,
@@ -2039,7 +2164,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ar: { dir:'/ar/wasafat',   indexTitle:`وصفات من حول العالم | Meal-Planner.ro`,
         indexH1:'وصفات من <span class="accent">حول العالم</span>',
-        indexDesc: n=>`${n} وصفة مع المكونات والتعليمات.`,
+        indexDesc: n=>`<p>من موائد العائلة إلى التقاليد المتوارثة جيلاً بعد جيل.</p><p>${n} وصفة من 46 مطبخًا، بـ 14 لغة.</p><p>اختر من أين يبدأ عشاء اليوم.</p>`,
+        indexKicker:'في نابولي، يُلفّ النوكي.<br>في طوكيو، يغلي المرق.<br>في ليون، تتحمر الزبدة.<br><strong>ستة وأربعون مطبخًا على قيد الحياة الآن.</strong>',
         breadHome:'الرئيسية', breadLabel:'وصفات',
         ingredientsH:'🛒 المكونات', howToH:'👨‍🍳 طريقة التحضير',
         addBtn: n=>`أضف إلى خطتي`, relatedH: o=>`المزيد من وصفات ${esc(o)}`,
@@ -2050,7 +2176,8 @@ const RECIPE_LANG = {
         appDir:'', dir_attr:'rtl', lc: null },
   zh: { dir:'/zh/shipu',     indexTitle:`世界各地食谱 | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界各地</span>食谱',
-        indexDesc: n=>`${n}个食谱，含食材和制作方法。`,
+        indexDesc: n=>`<p>从家庭餐桌到代代相传的传统。</p><p>来自46个厨房的${n}道食谱，14种语言。</p><p>选择今天晚餐从哪里开始。</p>`,
+        indexKicker:'那不勒斯，有人在卷意大利团子。<br>东京，高汤正在沸腾。<br>里昂，黄油在焦化。<br><strong>此刻，四十六个厨房都在运转。</strong>',
         breadHome:'首页', breadLabel:'食谱',
         ingredientsH:'🛒 食材', howToH:'👨‍🍳 做法',
         addBtn: n=>`加入我的计划`, relatedH: o=>`更多来自${esc(o)}的食谱`,
@@ -2061,7 +2188,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ja: { dir:'/ja/reshipi',   indexTitle:`世界の料理レシピ | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界の</span>料理レシピ',
-        indexDesc: n=>`${n}のレシピ、材料と作り方付き。`,
+        indexDesc: n=>`<p>家族の食卓から、世代を超えて受け継がれる伝統まで。</p><p>46の厨房から${n}のレシピ、14言語で。</p><p>今日の食事をどこから始めるか選びましょう。</p>`,
+        indexKicker:'ナポリでは、ニョッキが丸まっている。<br>東京では、出汁が沸いている。<br>リヨンでは、バターが色づいている。<br><strong>四十六の厨房が今、生きている。</strong>',
         breadHome:'ホーム', breadLabel:'レシピ',
         ingredientsH:'🛒 材料', howToH:'👨‍🍳 作り方',
         addBtn: n=>`プランに追加`, relatedH: o=>`${esc(o)}のその他のレシピ`,
@@ -2072,7 +2200,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   hi: { dir:'/hi/recipes',   indexTitle:`दुनिया भर की रेसिपी | Meal-Planner.ro`,
         indexH1:'<span class="accent">दुनिया भर</span> की रेसिपी',
-        indexDesc: n=>`${n} रेसिपी सामग्री और निर्देशों के साथ।`,
+        indexDesc: n=>`<p>परिवार की मेज़ से लेकर पीढ़ी दर पीढ़ी चली आ रही परंपराओं तक।</p><p>46 रसोइयों की ${n} रेसिपी, 14 भाषाओं में।</p><p>आज का खाना कहां से शुरू होगा, चुनें।</p>`,
+        indexKicker:'नेपल्स में, कोई ग्नोकी बेल रहा है।<br>टोक्यो में, शोरबा उबल रहा है।<br>ल्यों में, मक्खन सुनहरा हो रहा है।<br><strong>छियालीस रसोइयाँ अभी ज़िंदा हैं।</strong>',
         breadHome:'होम', breadLabel:'रेसिपी',
         ingredientsH:'🛒 सामग्री', howToH:'👨‍🍳 बनाने का तरीका',
         addBtn: n=>`मेरी योजना में जोड़ें`, relatedH: o=>`${esc(o)} की और रेसिपी`,
@@ -2083,7 +2212,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   tr: { dir:'/tr/tarifler',  indexTitle:`Dünyadan Tarifler | Meal-Planner.ro`,
         indexH1:'<span class="accent">Dünyadan</span> Tarifler',
-        indexDesc: n=>`${n} tarif, malzemeler ve talimatlarla.`,
+        indexDesc: n=>`<p>Aile sofralarından nesilden nesle aktarılan geleneklere.</p><p>46 mutfaktan ${n} tarif, 14 dilde.</p><p>Bugünkü akşam yemeğinin nereden başlayacağını seç.</p>`,
+        indexKicker:"Napoli'de biri gnocchi yuvarlıyor.<br>Tokyo'da et suyu kaynıyor.<br>Lyon'da tereyağı kavruluyor.<br><strong>Kırk altı mutfak şu an canlı.</strong>",
         breadHome:'Ana Sayfa', breadLabel:'Tarifler',
         ingredientsH:'🛒 Malzemeler', howToH:'👨‍🍳 Nasıl yapılır',
         addBtn: n=>`Planıma ekle`, relatedH: o=>`${esc(o)} tarihinden daha fazla tarif`,
@@ -2094,7 +2224,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   it: { dir:'/it/ricette',   indexTitle:`Ricette dal Mondo | Meal-Planner.ro`,
         indexH1:'Ricette dal <span class="accent">Mondo</span>',
-        indexDesc: n=>`${n} ricette con ingredienti e istruzioni.`,
+        indexDesc: n=>`<p>Dalle tavole di famiglia alle tradizioni tramandate di generazione in generazione.</p><p>${n} ricette da 46 cucine, in 14 lingue.</p><p>Scegli dove inizia la cena di oggi.</p>`,
+        indexKicker:'A Napoli, qualcuno rotola gli gnocchi.<br>A Tokyo, un brodo sobbolle.<br>A Lione, il burro si dora.<br><strong>Quarantasei cucine sono vive in questo istante.</strong>',
         breadHome:'Home', breadLabel:'Ricette',
         ingredientsH:'🛒 Ingredienti', howToH:'👨‍🍳 Come preparare',
         addBtn: n=>`Aggiungi al mio piano`, relatedH: o=>`Altre ricette da ${esc(o)}`,
@@ -2105,7 +2236,8 @@ const RECIPE_LANG = {
         appDir:'', lc: null },
   ko: { dir:'/ko/recipes',   indexTitle:`세계 요리 레시피 | Meal-Planner.ro`,
         indexH1:'<span class="accent">세계</span> 요리 레시피',
-        indexDesc: n=>`재료와 만드는 법이 있는 ${n}가지 레시피.`,
+        indexDesc: n=>`<p>가족의 식탁에서 대대로 이어진 전통까지.</p><p>46개 주방의 ${n}가지 레시피, 14개 언어로.</p><p>오늘의 저녁이 어디서 시작될지 선택하세요.</p>`,
+        indexKicker:'나폴리에서 누군가 뇨키를 말고 있다.<br>도쿄에서 육수가 끓고 있다.<br>리옹에서 버터가 노릇해진다.<br><strong>마흔여섯 개의 주방이 지금 살아 있다.</strong>',
         breadHome:'홈', breadLabel:'레시피',
         ingredientsH:'🛒 재료', howToH:'👨‍🍳 만드는 법',
         addBtn: n=>`내 플랜에 추가`, relatedH: o=>`${esc(o)}의 더 많은 레시피`,
@@ -3678,7 +3810,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       </div>
       <div class="recipe-cta-row">
         <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
-        <button class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
+        <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
       </div>
     </div>
   </div>
@@ -3693,7 +3825,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
       <ul class="recipe-ingr-list-new">
         ${ingr.map(i=>`<li><span class="recipe-ingr-dot"></span>${esc(capFirst(i))}</li>`).join('\n        ')}
       </ul>
-      <button class="btn-add-shopping"><i class="bi bi-cart-plus"></i> ${ui.addShopping}</button>
+      <button type="button" class="btn-add-shopping"><i class="bi bi-cart-plus"></i> ${ui.addShopping}</button>
     </div>
     <div class="recipe-steps-col">
       <h2>${rl.howToH.replace(/^[👨‍🍳\s]+/,'')}</h2>
@@ -3757,7 +3889,7 @@ ${bridgeHtml}
   <span class="rmb-label">${esc(hubHref ? o : rl.breadLabel)}</span>
 </a>
 
-</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipe(rslug))}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* EN-origin → flag emoji. Multi-region origins ("Asia", "Middle East")
@@ -3946,6 +4078,27 @@ function recipeIndex(rl) {
   // away). The page now renders a card grid identical to what used to live
   // at /<lc>/<cuisine-prefix>/ — one card per eligible cuisine, with
   // thumbnail strip + curated preview, atmosphere-tinted accent.
+
+  // Phase 21 — extract the cuisine's soul whisper from its existing
+  // editorial intro (cuisine-intros.mjs). The intros are hand-curated
+  // per locale for the country pages; surfacing their first phrase on
+  // the index card gives each cuisine a brief italic editorial voice
+  // instead of "name + count + dishes". Reuses existing curated
+  // content — zero new strings written.
+  const extractCuisineSoul = (intro) => {
+    if (!intro) return '';
+    // Most intros begin with a vivid first phrase before an em-dash.
+    let first = intro.split(/[—–]/)[0].trim();
+    // Fallback: first sentence if the em-dash split returned too much.
+    if (first.length > 90) first = first.split(/(?<=[.!?])\s/)[0].trim();
+    // Hard truncate at the nearest word boundary, with an ellipsis.
+    if (first.length > 90) {
+      const cut = first.lastIndexOf(' ', 90);
+      first = (cut > 0 ? first.slice(0, cut) : first.slice(0, 90)) + '…';
+    }
+    return first;
+  };
+
   const eligible = buildCuisineHubs();
   const cards = eligible.map(([enKey, recs]) => {
     const display    = recs[0].origin?.[code] || enKey;
@@ -3988,6 +4141,14 @@ function recipeIndex(rl) {
     const previewNames = recs.slice(0, 3).map(r =>
       r.name?.[code] || r.name?.en || r.name?.ro || ''
     ).filter(Boolean).join(' · ');
+    // Phase 21 — cuisine soul whisper. Pulls from CUISINE_INTRO data
+    // (already shipped for cuisine hub heroes) and surfaces it as one
+    // italic editorial line under the dish list. Falls back to EN if
+    // the current locale doesn't have a hand-written intro for this
+    // cuisine, and to empty (no soul line rendered) if neither exists.
+    const introText = CUISINE_INTRO[enKey]?.[code] || CUISINE_INTRO[enKey]?.en || '';
+    const soul = extractCuisineSoul(introText);
+    const soulMarkup = soul ? `\n        <p class="cuisine-card-soul">${esc(soul)}</p>` : '';
     return `
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="${atmosphere}">
       <a class="cuisine-card-link" href="${countryHref}" aria-label="${esc(display)}"></a>
@@ -3997,7 +4158,7 @@ function recipeIndex(rl) {
           <span class="origin-title-text">${flag} ${esc(display)}</span>
           <span class="recipe-count">${recs.length}</span>
         </h2>
-        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>
+        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>${soulMarkup}
       </div>
     </article>`;
   }).join('');
@@ -4014,29 +4175,34 @@ function recipeIndex(rl) {
       "name": display,
     };
   });
+  // indexDesc(n) now returns HTML with 3 <p> paragraphs for the visible
+  // hero. SEO surfaces (HEAD meta description + JSON-LD) need plain text
+  // so we collapse the paragraph tags into a single sentence stream.
+  const descPlain = rl.indexDesc(recipes.length).replace(/<\/p>\s*<p>/g, ' ').replace(/<\/?p>/g, '');
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": rl.indexTitle.split(' | ')[0],
-    "description": rl.indexDesc(recipes.length),
+    "description": descPlain,
     "url": `https://meal-planner.ro${rl.dir}/`,
     "inLanguage": code,
     "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
     "hasPart": { "@type": "ItemList", "numberOfItems": eligible.length, "itemListElement": items }
   });
 
-  return `${HEAD(rl.indexTitle, rl.indexDesc(recipes.length), `${rl.dir}/`, code, dir_attr)}
+  return `${HEAD(rl.indexTitle, descPlain, `${rl.dir}/`, code, dir_attr)}
 ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
     <h1>${rl.indexH1}</h1>
-    <p class="content-hero-desc">${rl.indexDesc(recipes.length)}</p>
+    <div class="content-hero-desc">${rl.indexDesc(recipes.length)}</div>
+    <p class="content-hero-kicker">${rl.indexKicker}</p>
   </div></section>
   <section class="content-section"><div class="content-section-inner">
     <div class="recipe-groups-grid">${cards}</div>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
-</main>${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipeIndex())}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -4547,7 +4713,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
   <span class="rmb-label">${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}</span>
 </a>
 
-${makeFooter(lc)}<script src="/js/content.js" defer></script></body></html>`;
+${makeFooter(lc, NAV_URL_FOR.cuisineHub(originSlug))}<script src="/js/content.js" defer></script></body></html>`;
 }
 
 // Phase 5: cuisineHubIndexPage() was removed. Its responsibility (cuisine
