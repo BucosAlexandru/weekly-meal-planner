@@ -2780,6 +2780,839 @@ function renderPremiumHero() {
   }
 }
 
+/* ───────────────────────────────────────────────────────────
+   Homepage V2 interactivity (ported from homepage-premium-audit-Hs3mH)
+   Trust signals, premium preview, FAQ accordion, sticky upgrade,
+   hero motion. CSS lives in premium-polish.css (already on main).
+   Excluded to preserve current main: renderCuisineDiscover (#23),
+   renderFeaturedRecipe + celebratePremium (out of PR-B scope).
+   ─────────────────────────────────────────────────────────── */
+function renderTrustSignals() {
+  const ID = 'hp-trust-signals';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: ['🔓 Fără înregistrare', '🛡️ Plăți Stripe securizate', '🌍 Funcționează în orice browser', '↩️ Anulezi oricând'],
+    en: ['🔓 No signup needed', '🛡️ Stripe-secured payments', '🌍 Works in any browser', '↩️ Cancel anytime'],
+    es: ['🔓 Sin registro', '🛡️ Pagos seguros con Stripe', '🌍 Funciona en cualquier navegador', '↩️ Cancela cuando quieras'],
+    fr: ['🔓 Sans inscription', '🛡️ Paiements sécurisés par Stripe', '🌍 Marche dans tout navigateur', '↩️ Annulez à tout moment'],
+    de: ['🔓 Keine Anmeldung', '🛡️ Stripe-gesicherte Zahlungen', '🌍 Funktioniert in jedem Browser', '↩️ Jederzeit kündbar'],
+    pt: ['🔓 Sem cadastro', '🛡️ Pagamentos seguros via Stripe', '🌍 Funciona em qualquer navegador', '↩️ Cancele quando quiser'],
+    ru: ['🔓 Без регистрации', '🛡️ Безопасная оплата Stripe', '🌍 Работает в любом браузере', '↩️ Отмена в любое время'],
+    it: ['🔓 Senza registrazione', '🛡️ Pagamenti sicuri con Stripe', '🌍 Funziona in ogni browser', '↩️ Cancella quando vuoi'],
+    tr: ['🔓 Kayıt yok', '🛡️ Stripe ile güvenli ödeme', '🌍 Her tarayıcıda çalışır', '↩️ Dilediğin zaman iptal et'],
+    ar: ['🔓 بدون تسجيل', '🛡️ دفع آمن عبر Stripe', '🌍 يعمل في أي متصفح', '↩️ ألغِ في أي وقت'],
+    zh: ['🔓 无需注册', '🛡️ Stripe 安全支付', '🌍 任何浏览器都能用', '↩️ 随时取消'],
+    ja: ['🔓 登録不要', '🛡️ Stripe による安全な決済', '🌍 どのブラウザでも動作', '↩️ いつでもキャンセル可'],
+    ko: ['🔓 가입 불필요', '🛡️ Stripe 안전 결제', '🌍 모든 브라우저에서 작동', '↩️ 언제든 취소'],
+    hi: ['🔓 बिना पंजीकरण', '🛡️ Stripe सुरक्षित भुगतान', '🌍 किसी भी ब्राउज़र में काम करता है', '↩️ कभी भी रद्द करें'],
+  };
+  const pills = copy[lang] || copy.en;
+
+  const pillsHTML = pills.map(p => {
+    // Split first emoji from the rest of the label so we can size the
+    // icon and the text independently.
+    const m = p.match(/^(\S+)\s+(.+)$/);
+    const ico = m ? m[1] : '';
+    const txt = m ? m[2] : p;
+    return `<span class="hp-trust-pill">
+      <span class="hp-trust-pill-ico" aria-hidden="true">${ico}</span>
+      <span class="hp-trust-pill-txt">${safeText(txt)}</span>
+    </span>`;
+  }).join('');
+
+  const html = `
+    <section id="${ID}" class="hp-trust-signals hp-fade-in no-print" aria-label="Trust signals">
+      <div class="hp-trust-row">${pillsHTML}</div>
+    </section>`;
+
+  // Always insert at hero.afterend. applyTranslations() calls this
+  // function LAST so other sections are already in place; new content
+  // inserted at afterend becomes the hero's immediate next sibling.
+  document.querySelector('.hero')?.insertAdjacentHTML('afterend', html);
+}
+
+function renderPremiumPreview() {
+  // Don't show the upsell to users who already have Premium.
+  if (window.hasUnlimited) {
+    document.getElementById('hp-premium-preview')?.remove();
+    return;
+  }
+  const ID = 'hp-premium-preview';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: { eyebrow:'Cu Premium', title:'Vezi ce deblochezi cu €3/lună', sub:'Trei lucruri concrete pe care le primești când treci la Premium.',
+      cards: [
+        { ico:'📄', title:'PDF complet 7 zile', desc:'Nu doar previzualizarea de 2 zile — toate cele 7 zile cu rețete, ingrediente și lista de cumpărături.',
+          mock:'Luni — Marți — Miercuri — Joi — Vineri — Sâmbătă — Duminică' },
+        { ico:'🤖', title:'Asistent AI pentru rețete', desc:'Întreabă în chat: ce gătesc cu pui și brocoli? AI-ul îți sugerează rețete și alternative.',
+          mock:'„Sugerează 3 cine rapide cu pui și legume" → Pui cu broccoli...' },
+        { ico:'💰', title:'Meniu buget săptămânal', desc:'Un meniu pre-construit, cu rețete ieftine și lista de cumpărături optimizată pentru sub 150 lei.',
+          mock:'7 zile · ingrediente accesibile · listă centralizată' },
+      ], cta:'Vezi planul Premium →' },
+    en: { eyebrow:'With Premium', title:'See what €3/month unlocks', sub:'Three concrete things you get when you upgrade.',
+      cards: [
+        { ico:'📄', title:'Full 7-day PDF', desc:'Not just the 2-day preview — all 7 days with recipes, ingredients and the full shopping list.',
+          mock:'Mon — Tue — Wed — Thu — Fri — Sat — Sun' },
+        { ico:'🤖', title:'AI recipe assistant', desc:'Chat with it: "what can I cook with chicken and broccoli?" — get recipes and alternatives.',
+          mock:'"Suggest 3 quick dinners with chicken and veg" → Chicken with broccoli...' },
+        { ico:'💰', title:'Weekly budget menu', desc:'A pre-built menu of cheap recipes with a shopping list optimized to stay under €30 per week.',
+          mock:'7 days · affordable ingredients · single shopping list' },
+      ], cta:'See the Premium plan →' },
+    es: { eyebrow:'Con Premium', title:'Mira qué desbloqueas con €3/mes', sub:'Tres cosas concretas que obtienes al pasar a Premium.',
+      cards: [
+        { ico:'📄', title:'PDF completo 7 días', desc:'No solo la vista previa de 2 días — los 7 días con recetas, ingredientes y lista de compras.',
+          mock:'Lun — Mar — Mié — Jue — Vie — Sáb — Dom' },
+        { ico:'🤖', title:'Asistente IA de recetas', desc:'Chatea: "¿qué cocino con pollo y brócoli?" — recibe recetas y alternativas.',
+          mock:'"Sugiere 3 cenas rápidas con pollo y verduras" → Pollo con brócoli...' },
+        { ico:'💰', title:'Menú económico semanal', desc:'Un menú prearmado con recetas baratas y lista de compras optimizada por debajo de €30/semana.',
+          mock:'7 días · ingredientes accesibles · una sola lista' },
+      ], cta:'Ver el plan Premium →' },
+    fr: { eyebrow:'Avec Premium', title:'Voyez ce que €3/mois débloque', sub:'Trois choses concrètes que vous obtenez en passant à Premium.',
+      cards: [
+        { ico:'📄', title:'PDF complet 7 jours', desc:'Pas seulement l\'aperçu de 2 jours — les 7 jours avec recettes, ingrédients et liste complète.',
+          mock:'Lun — Mar — Mer — Jeu — Ven — Sam — Dim' },
+        { ico:'🤖', title:'Assistant IA recettes', desc:'Discutez : "que cuisiner avec poulet et brocoli ?" — obtenez recettes et alternatives.',
+          mock:'"Propose 3 dîners rapides poulet-légumes" → Poulet au brocoli...' },
+        { ico:'💰', title:'Menu budget hebdomadaire', desc:'Un menu pré-construit de recettes économiques avec liste de courses optimisée pour rester sous €30/semaine.',
+          mock:'7 jours · ingrédients accessibles · liste unique' },
+      ], cta:'Voir le plan Premium →' },
+    de: { eyebrow:'Mit Premium', title:'Schau, was €3/Monat freischaltet', sub:'Drei konkrete Dinge, die du beim Upgrade bekommst.',
+      cards: [
+        { ico:'📄', title:'Volles 7-Tage-PDF', desc:'Nicht nur die 2-Tage-Vorschau — alle 7 Tage mit Rezepten, Zutaten und vollständiger Einkaufsliste.',
+          mock:'Mo — Di — Mi — Do — Fr — Sa — So' },
+        { ico:'🤖', title:'KI-Rezept-Assistent', desc:'Chatte: "Was kann ich mit Hähnchen und Brokkoli kochen?" — bekomme Rezepte und Alternativen.',
+          mock:'„Schlage 3 schnelle Hähnchen-Gemüse-Gerichte vor" → Hähnchen mit Brokkoli...' },
+        { ico:'💰', title:'Wöchentliches Budget-Menü', desc:'Ein fertiges Menü mit günstigen Rezepten und einer Einkaufsliste, die unter €30/Woche bleibt.',
+          mock:'7 Tage · günstige Zutaten · eine Liste' },
+      ], cta:'Premium-Plan ansehen →' },
+    pt: { eyebrow:'Com Premium', title:'Veja o que €3/mês desbloqueia', sub:'Três coisas concretas que recebe ao fazer upgrade.',
+      cards: [
+        { ico:'📄', title:'PDF completo 7 dias', desc:'Não só a pré-visualização de 2 dias — os 7 dias com receitas, ingredientes e lista completa.',
+          mock:'Seg — Ter — Qua — Qui — Sex — Sáb — Dom' },
+        { ico:'🤖', title:'Assistente IA receitas', desc:'Converse: "o que cozinhar com frango e brócolis?" — receba receitas e alternativas.',
+          mock:'"Sugere 3 jantares rápidos com frango e legumes" → Frango com brócolis...' },
+        { ico:'💰', title:'Menu económico semanal', desc:'Um menu pré-construído com receitas baratas e lista de compras otimizada para ficar sob €30/semana.',
+          mock:'7 dias · ingredientes acessíveis · lista única' },
+      ], cta:'Ver o plano Premium →' },
+    ru: { eyebrow:'С Премиум', title:'Что разблокирует €3/мес', sub:'Три конкретные вещи, которые вы получаете при обновлении.',
+      cards: [
+        { ico:'📄', title:'Полный PDF на 7 дней', desc:'Не только превью 2 дней — все 7 дней с рецептами, ингредиентами и полным списком покупок.',
+          mock:'Пн — Вт — Ср — Чт — Пт — Сб — Вс' },
+        { ico:'🤖', title:'ИИ-помощник по рецептам', desc:'Чат: "что приготовить из курицы и брокколи?" — получите рецепты и альтернативы.',
+          mock:'„Предложи 3 быстрых ужина с курицей и овощами" → Курица с брокколи...' },
+        { ico:'💰', title:'Недельное бюджетное меню', desc:'Готовое меню из дешёвых рецептов и список покупок, оптимизированный для уровня меньше €30/неделю.',
+          mock:'7 дней · доступные ингредиенты · единый список' },
+      ], cta:'Посмотреть Премиум →' },
+    it: { eyebrow:'Con Premium', title:'Scopri cosa sblocchi con €3/mese', sub:'Tre cose concrete che ottieni passando a Premium.',
+      cards: [
+        { ico:'📄', title:'PDF completo 7 giorni', desc:'Non solo l\'anteprima di 2 giorni — tutti e 7 i giorni con ricette, ingredienti e lista della spesa completa.',
+          mock:'Lun — Mar — Mer — Gio — Ven — Sab — Dom' },
+        { ico:'🤖', title:'Assistente IA ricette', desc:'Chiedi: "cosa cucino con pollo e broccoli?" — ricevi ricette e alternative.',
+          mock:'"Proponi 3 cene veloci pollo-verdure" → Pollo con broccoli...' },
+        { ico:'💰', title:'Menu economico settimanale', desc:'Un menu già pronto con ricette economiche e lista della spesa ottimizzata per stare sotto €30/settimana.',
+          mock:'7 giorni · ingredienti accessibili · lista unica' },
+      ], cta:'Vedi il piano Premium →' },
+    tr: { eyebrow:'Premium ile', title:'€3/ay ile neyin kilidini açtığını gör', sub:'Yükselttiğinde aldığın üç somut şey.',
+      cards: [
+        { ico:'📄', title:'Tam 7 günlük PDF', desc:'Sadece 2 günlük önizleme değil — tarifler, malzemeler ve tam alışveriş listesiyle 7 günün hepsi.',
+          mock:'Pzt — Sal — Çar — Per — Cum — Cmt — Paz' },
+        { ico:'🤖', title:'AI tarif asistanı', desc:'Sohbet et: "tavuk ve brokoli ile ne pişiririm?" — tarifler ve alternatifler al.',
+          mock:'„3 hızlı tavuk-sebze yemeği öner" → Brokolili tavuk...' },
+        { ico:'💰', title:'Haftalık bütçe menüsü', desc:'€30/haftanın altında kalmak için ucuz tarifler ve optimize alışveriş listesi olan hazır menü.',
+          mock:'7 gün · uygun malzemeler · tek liste' },
+      ], cta:'Premium planı gör →' },
+    ar: { eyebrow:'مع بريميوم', title:'شاهد ماذا يفتح لك €3/شهر', sub:'ثلاثة أشياء ملموسة تحصل عليها عند الترقية.',
+      cards: [
+        { ico:'📄', title:'PDF كامل 7 أيام', desc:'ليس فقط معاينة اليومين — كل الأيام السبعة مع الوصفات والمكونات وقائمة التسوق الكاملة.',
+          mock:'الإثنين — الثلاثاء — الأربعاء — الخميس — الجمعة — السبت — الأحد' },
+        { ico:'🤖', title:'مساعد وصفات بالذكاء الاصطناعي', desc:'دردش: "ماذا أطبخ بالدجاج والبروكلي؟" — احصل على وصفات وبدائل.',
+          mock:'„اقترح 3 وجبات سريعة بالدجاج والخضار" → دجاج بالبروكلي...' },
+        { ico:'💰', title:'قائمة ميزانية أسبوعية', desc:'قائمة جاهزة بوصفات اقتصادية وقائمة تسوق محسّنة للبقاء تحت €30/أسبوع.',
+          mock:'7 أيام · مكونات ميسورة · قائمة واحدة' },
+      ], cta:'شاهد خطة بريميوم →' },
+    zh: { eyebrow:'通过高级版', title:'看看 €3/月 解锁了什么', sub:'升级后您会获得三样具体的东西。',
+      cards: [
+        { ico:'📄', title:'完整7天PDF', desc:'不只是2天预览 — 全部7天包含食谱、食材和完整购物清单。',
+          mock:'周一 — 周二 — 周三 — 周四 — 周五 — 周六 — 周日' },
+        { ico:'🤖', title:'AI食谱助手', desc:'聊天问："鸡肉和西兰花能做什么？"— 获得食谱和替代方案。',
+          mock:'"推荐3道鸡肉蔬菜快手菜" → 西兰花炒鸡肉...' },
+        { ico:'💰', title:'每周节俭菜单', desc:'预先构建的便宜食谱菜单，购物清单优化至每周不到€30。',
+          mock:'7天 · 实惠食材 · 一份清单' },
+      ], cta:'查看高级版 →' },
+    ja: { eyebrow:'プレミアムで', title:'€3/月で何が解除されるか見る', sub:'アップグレードで得られる3つの具体的なもの。',
+      cards: [
+        { ico:'📄', title:'7日間フルPDF', desc:'2日プレビューだけでなく — 7日間すべてのレシピ、食材、完全な買い物リスト。',
+          mock:'月 — 火 — 水 — 木 — 金 — 土 — 日' },
+        { ico:'🤖', title:'AIレシピアシスタント', desc:'チャット：「鶏肉とブロッコリーで何が作れる？」— レシピと代替案を得る。',
+          mock:'「鶏肉と野菜の素早い夕食を3つ提案」→ 鶏肉とブロッコリー...' },
+        { ico:'💰', title:'週間節約メニュー', desc:'週€30以下を維持するために最適化された安価なレシピと買い物リストのプリビルトメニュー。',
+          mock:'7日 · 手頃な食材 · 単一の買い物リスト' },
+      ], cta:'プレミアムプランを見る →' },
+    ko: { eyebrow:'프리미엄으로', title:'€3/월이 무엇을 잠금 해제하는지 보세요', sub:'업그레이드 시 얻는 세 가지 구체적인 것.',
+      cards: [
+        { ico:'📄', title:'7일 전체 PDF', desc:'2일 미리보기만이 아닌 — 레시피, 재료, 전체 장보기 목록이 포함된 7일 전체.',
+          mock:'월 — 화 — 수 — 목 — 금 — 토 — 일' },
+        { ico:'🤖', title:'AI 레시피 도우미', desc:'채팅: "닭고기와 브로콜리로 무엇을 만들 수 있나요?" — 레시피와 대안 받기.',
+          mock:'"닭과 야채로 빠른 저녁 3개 제안" → 브로콜리 닭...' },
+        { ico:'💰', title:'주간 예산 메뉴', desc:'주당 €30 미만으로 유지하도록 최적화된 저렴한 레시피와 장보기 목록의 미리 구성된 메뉴.',
+          mock:'7일 · 저렴한 재료 · 단일 목록' },
+      ], cta:'프리미엄 플랜 보기 →' },
+    hi: { eyebrow:'प्रीमियम के साथ', title:'देखें €3/माह क्या अनलॉक करता है', sub:'अपग्रेड पर आपको मिलने वाली तीन ठोस चीजें।',
+      cards: [
+        { ico:'📄', title:'पूर्ण 7-दिन PDF', desc:'सिर्फ 2-दिन का पूर्वावलोकन नहीं — रेसिपी, सामग्री और पूरी खरीदारी सूची के साथ सभी 7 दिन।',
+          mock:'सोम — मंगल — बुध — गुरु — शुक्र — शनि — रवि' },
+        { ico:'🤖', title:'AI रेसिपी सहायक', desc:'चैट करें: "चिकन और ब्रोकोली से क्या बना सकते हैं?" — रेसिपी और विकल्प पाएं।',
+          mock:'"चिकन-सब्ज़ी के 3 तेज़ डिनर सुझाएं" → ब्रोकोली चिकन...' },
+        { ico:'💰', title:'साप्ताहिक बजट मेनू', desc:'सस्ती रेसिपी का प्री-बिल्ट मेनू और प्रति सप्ताह €30 से कम रहने के लिए अनुकूलित खरीदारी सूची।',
+          mock:'7 दिन · किफायती सामग्री · एक सूची' },
+      ], cta:'प्रीमियम योजना देखें →' },
+  };
+  const s = copy[lang] || copy.en;
+
+  const cardsHTML = s.cards.map(c => `
+      <div class="hp-preview-card">
+        <div class="hp-preview-card-icon" aria-hidden="true">${safeText(c.ico, '⭐')}</div>
+        <h3 class="hp-preview-card-title">${safeText(c.title)}</h3>
+        <p class="hp-preview-card-desc">${safeText(c.desc)}</p>
+        <div class="hp-preview-card-mock">
+          <span class="hp-preview-card-mock-lock" aria-hidden="true">🔒</span>
+          ${safeText(c.mock)}
+        </div>
+      </div>`).join('');
+
+  const html = `
+    <section id="${ID}" class="hp-premium-preview hp-fade-in no-print" aria-labelledby="hp-premium-preview-title">
+      <div class="hp-premium-preview-head">
+        <span class="hp-premium-preview-eyebrow">${safeText(s.eyebrow)}</span>
+        <h2 id="hp-premium-preview-title" class="hp-premium-preview-title">${safeText(s.title)}</h2>
+        <p class="hp-premium-preview-sub">${safeText(s.sub)}</p>
+      </div>
+      <div class="hp-premium-preview-grid">${cardsHTML}</div>
+      <p class="hp-preview-cta">
+        <a class="hp-preview-cta-btn" href="#pricing-section">${safeText(s.cta)}</a>
+      </p>
+    </section>`;
+
+  // Insert right before the pricing section so the visual upsell leads
+  // directly into the actual pricing cards.
+  const pricingEl = document.getElementById('pricing-section');
+  if (pricingEl) {
+    pricingEl.insertAdjacentHTML('beforebegin', html);
+  } else {
+    // Fallback: append before the export section.
+    document.querySelector('.export-section')?.insertAdjacentHTML('beforebegin', html);
+  }
+}
+
+// Phase 12 — Hand-coded SVG ornaments used as section decorations
+// and in eyebrow rows. Tiny, currentColor-driven so they inherit
+// from .hp-warm-deep wherever they sit.
+const HP_ORNAMENTS = {
+  wheat: '<svg class="hp-ornament" viewBox="0 0 24 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><line x1="12" y1="10" x2="12" y2="80"/><path d="M12 22 Q7 20 5 14 M12 22 Q17 20 19 14"/><path d="M12 34 Q7 32 5 26 M12 34 Q17 32 19 26"/><path d="M12 46 Q7 44 5 38 M12 46 Q17 44 19 38"/><path d="M12 58 Q7 56 5 50 M12 58 Q17 56 19 50"/></svg>',
+  sprig: '<svg class="hp-ornament" viewBox="0 0 28 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><line x1="14" y1="6" x2="14" y2="80"/><ellipse cx="9" cy="20" rx="5" ry="1.6" transform="rotate(-30 9 20)"/><ellipse cx="19" cy="26" rx="5" ry="1.6" transform="rotate(30 19 26)"/><ellipse cx="9" cy="34" rx="5" ry="1.6" transform="rotate(-30 9 34)"/><ellipse cx="19" cy="40" rx="5" ry="1.6" transform="rotate(30 19 40)"/><ellipse cx="9" cy="48" rx="5" ry="1.6" transform="rotate(-30 9 48)"/><ellipse cx="19" cy="54" rx="5" ry="1.6" transform="rotate(30 19 54)"/></svg>',
+  fork: '<svg class="hp-ornament" viewBox="0 0 22 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><line x1="3" y1="6" x2="3" y2="22"/><line x1="8.3" y1="6" x2="8.3" y2="22"/><line x1="13.7" y1="6" x2="13.7" y2="22"/><line x1="19" y1="6" x2="19" y2="22"/><line x1="3" y1="22" x2="19" y2="22"/><line x1="11" y1="22" x2="11" y2="80"/></svg>',
+};
+
+// Phase 12 — The featured-recipe editorial section. One hand-curated
+// recipe rendered as a cookbook page. Localized in the four primary
+// locales (ro, en, es, fr) with en fallback for the others — the
+// editorial voice is uniform enough that the fallback still reads
+// well. Uses an Unsplash CDN photo. Slotted between hero and trust
+// signals so it's the FIRST content beat after the hero.
+function renderFAQ() {
+  const ID = 'hp-faq';
+  document.getElementById(ID)?.remove();
+
+  const copy = {
+    ro: {
+      eyebrow: 'Întrebări frecvente',
+      title: 'Răspunsuri rapide',
+      items: [
+        { q: 'Planificatorul este cu adevărat gratuit?',
+          a: 'Da. Planificarea săptămânală, lista de cumpărături și cele 200+ rețete sunt gratuite, fără înregistrare. PDF-ul gratuit oferă o previzualizare de 2 zile din 7.' },
+        { q: 'Ce primesc în plus cu Premium?',
+          a: 'PDF complet pentru toate cele 7 zile, meniu buget săptămânal, asistent AI pentru rețete (chat) și asistent AI pentru planificarea meselor. €3/lună, fără angajament.' },
+        { q: 'Pot anula abonamentul oricând?',
+          a: 'Da. Anulezi oricând din portalul Stripe, accesibil prin butonul „Manage subscription" după activare. Continui să folosești Premium până la sfârșitul perioadei plătite.' },
+        { q: 'Trebuie să-mi fac cont?',
+          a: 'Pentru utilizarea gratuită — deloc. Pentru Premium e suficient un email — îl folosim doar ca să-ți reactivăm accesul pe alt dispozitiv.' },
+        { q: 'Cum activez Premium pe un alt dispozitiv?',
+          a: 'Introdu același email cu care ai plătit în secțiunea „Ai plătit deja? Deblochează". Verificarea se face server-side prin Stripe — fără parole, fără reset.' },
+        { q: 'În câte limbi funcționează?',
+          a: '14 limbi: română, engleză, spaniolă, franceză, germană, portugheză, rusă, italiană, turcă, arabă, chineză, japoneză, coreeană și hindi.' },
+      ],
+    },
+    en: {
+      eyebrow: 'FAQ',
+      title: 'Quick answers',
+      items: [
+        { q: 'Is the planner really free?',
+          a: 'Yes. The weekly planner, shopping list, and 200+ recipes are free with no signup. The free PDF gives you a 2-of-7-day preview.' },
+        { q: 'What do I get with Premium?',
+          a: 'Full PDF for all 7 days, a weekly budget menu, an AI recipe assistant (chat) and an AI meal planning assistant. €3/month, no commitment.' },
+        { q: 'Can I cancel anytime?',
+          a: 'Yes. Cancel anytime from the Stripe portal, reachable via the "Manage subscription" button after activation. You keep Premium until the end of the paid period.' },
+        { q: 'Do I need to create an account?',
+          a: 'Not for the free tier. For Premium an email is enough — we only use it to reactivate access on other devices.' },
+        { q: 'How do I activate Premium on a new device?',
+          a: 'Enter the same email you paid with under "Already paid? Unlock". Verification runs server-side through Stripe — no passwords, no resets.' },
+        { q: 'How many languages are supported?',
+          a: '14: Romanian, English, Spanish, French, German, Portuguese, Russian, Italian, Turkish, Arabic, Chinese, Japanese, Korean and Hindi.' },
+      ],
+    },
+    es: {
+      eyebrow: 'Preguntas frecuentes',
+      title: 'Respuestas rápidas',
+      items: [
+        { q: '¿El planificador es realmente gratis?',
+          a: 'Sí. El planificador semanal, la lista de compras y las 200+ recetas son gratuitas sin registro. El PDF gratuito ofrece una vista previa de 2 de 7 días.' },
+        { q: '¿Qué incluye Premium?',
+          a: 'PDF completo de los 7 días, menú económico semanal, asistente IA de recetas (chat) y asistente IA de planificación de comidas. €3/mes, sin compromiso.' },
+        { q: '¿Puedo cancelar cuando quiera?',
+          a: 'Sí. Cancela cuando quieras desde el portal Stripe, accesible mediante el botón "Manage subscription" tras la activación. Mantienes Premium hasta el fin del periodo pagado.' },
+        { q: '¿Necesito crear una cuenta?',
+          a: 'Para la versión gratuita no. Para Premium basta con un email — lo usamos solo para reactivar el acceso en otros dispositivos.' },
+        { q: '¿Cómo activo Premium en otro dispositivo?',
+          a: 'Introduce el mismo email con el que pagaste en "¿Ya pagaste? Desbloquea". La verificación se hace en el servidor mediante Stripe — sin contraseñas ni reinicios.' },
+        { q: '¿En cuántos idiomas funciona?',
+          a: '14 idiomas: rumano, inglés, español, francés, alemán, portugués, ruso, italiano, turco, árabe, chino, japonés, coreano e hindi.' },
+      ],
+    },
+    fr: {
+      eyebrow: 'Questions fréquentes',
+      title: 'Réponses rapides',
+      items: [
+        { q: 'Le planificateur est-il vraiment gratuit ?',
+          a: 'Oui. Le planificateur hebdomadaire, la liste de courses et les 200+ recettes sont gratuits sans inscription. Le PDF gratuit offre un aperçu de 2 jours sur 7.' },
+        { q: 'Que comprend Premium ?',
+          a: 'PDF complet 7 jours, menu budget hebdomadaire, assistant IA recettes (chat) et assistant IA de planification. €3/mois, sans engagement.' },
+        { q: 'Puis-je annuler à tout moment ?',
+          a: 'Oui. Annulez quand vous voulez depuis le portail Stripe, accessible via le bouton "Manage subscription" après activation. Vous gardez Premium jusqu\'à la fin de la période payée.' },
+        { q: 'Dois-je créer un compte ?',
+          a: 'Pour la version gratuite, non. Pour Premium un email suffit — nous l\'utilisons uniquement pour réactiver l\'accès sur d\'autres appareils.' },
+        { q: 'Comment activer Premium sur un autre appareil ?',
+          a: 'Saisissez le même email utilisé pour le paiement dans "Déjà payé ? Débloquez". La vérification se fait côté serveur via Stripe — sans mots de passe.' },
+        { q: 'Dans combien de langues fonctionne-t-il ?',
+          a: '14 langues : roumain, anglais, espagnol, français, allemand, portugais, russe, italien, turc, arabe, chinois, japonais, coréen et hindi.' },
+      ],
+    },
+    de: {
+      eyebrow: 'Häufige Fragen',
+      title: 'Schnelle Antworten',
+      items: [
+        { q: 'Ist der Planer wirklich kostenlos?',
+          a: 'Ja. Wochenplaner, Einkaufsliste und 200+ Rezepte sind ohne Anmeldung kostenlos. Das kostenlose PDF zeigt eine Vorschau von 2 von 7 Tagen.' },
+        { q: 'Was bekomme ich mit Premium?',
+          a: 'Vollständiges PDF für alle 7 Tage, wöchentliches Budget-Menü, KI-Rezept-Assistent (Chat) und KI-Mahlzeiten-Assistent. €3/Monat, ohne Bindung.' },
+        { q: 'Kann ich jederzeit kündigen?',
+          a: 'Ja. Kündige jederzeit im Stripe-Portal, erreichbar über die Schaltfläche "Manage subscription" nach der Aktivierung. Premium bleibt bis zum Ende des bezahlten Zeitraums aktiv.' },
+        { q: 'Muss ich ein Konto anlegen?',
+          a: 'Für die kostenlose Version nicht. Für Premium reicht eine E-Mail — wir nutzen sie nur, um den Zugang auf anderen Geräten wieder zu aktivieren.' },
+        { q: 'Wie aktiviere ich Premium auf einem anderen Gerät?',
+          a: 'Gib dieselbe E-Mail, mit der du bezahlt hast, unter "Bereits bezahlt? Freischalten" ein. Die Prüfung läuft serverseitig über Stripe — ohne Passwörter.' },
+        { q: 'In wie vielen Sprachen funktioniert es?',
+          a: '14 Sprachen: Rumänisch, Englisch, Spanisch, Französisch, Deutsch, Portugiesisch, Russisch, Italienisch, Türkisch, Arabisch, Chinesisch, Japanisch, Koreanisch und Hindi.' },
+      ],
+    },
+    pt: {
+      eyebrow: 'Perguntas frequentes',
+      title: 'Respostas rápidas',
+      items: [
+        { q: 'O planificador é realmente gratuito?',
+          a: 'Sim. O planificador semanal, lista de compras e 200+ receitas são gratuitos sem cadastro. O PDF gratuito oferece uma pré-visualização de 2 de 7 dias.' },
+        { q: 'O que recebo com Premium?',
+          a: 'PDF completo dos 7 dias, menu económico semanal, assistente IA de receitas (chat) e assistente IA de planeamento de refeições. €3/mês, sem compromisso.' },
+        { q: 'Posso cancelar quando quiser?',
+          a: 'Sim. Cancele quando quiser no portal Stripe, acessível pelo botão "Manage subscription" após a ativação. Mantém Premium até ao fim do período pago.' },
+        { q: 'Preciso criar uma conta?',
+          a: 'Para a versão gratuita, não. Para Premium basta um email — usamos apenas para reativar o acesso noutros dispositivos.' },
+        { q: 'Como ativo Premium noutro dispositivo?',
+          a: 'Introduz o mesmo email que usaste no pagamento em "Já pagou? Desbloqueie". A verificação é feita no servidor via Stripe — sem passwords.' },
+        { q: 'Em quantos idiomas funciona?',
+          a: '14 idiomas: romeno, inglês, espanhol, francês, alemão, português, russo, italiano, turco, árabe, chinês, japonês, coreano e hindi.' },
+      ],
+    },
+    ru: {
+      eyebrow: 'Частые вопросы',
+      title: 'Быстрые ответы',
+      items: [
+        { q: 'Планировщик действительно бесплатный?',
+          a: 'Да. Недельный план, список покупок и 200+ рецептов бесплатны без регистрации. Бесплатный PDF показывает превью 2 из 7 дней.' },
+        { q: 'Что входит в Премиум?',
+          a: 'Полный PDF на все 7 дней, недельное бюджетное меню, ИИ-помощник по рецептам (чат) и ИИ-помощник по планированию. €3/мес, без обязательств.' },
+        { q: 'Могу ли я отменить в любое время?',
+          a: 'Да. Отмените в любое время в портале Stripe, доступном через кнопку "Manage subscription" после активации. Премиум сохраняется до конца оплаченного периода.' },
+        { q: 'Нужно ли создавать аккаунт?',
+          a: 'Для бесплатной версии — нет. Для Премиума достаточно email — мы используем его только для повторной активации на других устройствах.' },
+        { q: 'Как активировать Премиум на другом устройстве?',
+          a: 'Введите тот же email, которым оплатили, в разделе "Уже оплатили? Откройте". Проверка происходит на сервере через Stripe — без паролей.' },
+        { q: 'На скольких языках работает?',
+          a: '14 языков: румынский, английский, испанский, французский, немецкий, португальский, русский, итальянский, турецкий, арабский, китайский, японский, корейский и хинди.' },
+      ],
+    },
+    it: {
+      eyebrow: 'Domande frequenti',
+      title: 'Risposte rapide',
+      items: [
+        { q: 'Il pianificatore è davvero gratuito?',
+          a: 'Sì. Pianificatore settimanale, lista della spesa e 200+ ricette sono gratis senza registrazione. Il PDF gratuito offre un\'anteprima di 2 giorni su 7.' },
+        { q: 'Cosa include Premium?',
+          a: 'PDF completo 7 giorni, menu economico settimanale, assistente IA ricette (chat) e assistente IA di pianificazione pasti. €3/mese, senza impegno.' },
+        { q: 'Posso disdire quando voglio?',
+          a: 'Sì. Disdici quando vuoi dal portale Stripe, raggiungibile tramite il pulsante "Manage subscription" dopo l\'attivazione. Mantieni Premium fino alla fine del periodo pagato.' },
+        { q: 'Devo creare un account?',
+          a: 'Per la versione gratuita, no. Per Premium basta un\'email — la usiamo solo per riattivare l\'accesso su altri dispositivi.' },
+        { q: 'Come attivo Premium su un altro dispositivo?',
+          a: 'Inserisci la stessa email usata per il pagamento in "Già abbonato? Attiva". La verifica avviene sul server tramite Stripe — senza password.' },
+        { q: 'In quante lingue funziona?',
+          a: '14 lingue: rumeno, inglese, spagnolo, francese, tedesco, portoghese, russo, italiano, turco, arabo, cinese, giapponese, coreano e hindi.' },
+      ],
+    },
+    tr: {
+      eyebrow: 'Sık sorulan sorular',
+      title: 'Hızlı yanıtlar',
+      items: [
+        { q: 'Planlayıcı gerçekten ücretsiz mi?',
+          a: 'Evet. Haftalık planlayıcı, alışveriş listesi ve 200+ tarif kayıt olmadan ücretsizdir. Ücretsiz PDF, 7 günden 2 günlük bir önizleme sunar.' },
+        { q: 'Premium ile ne kazanırım?',
+          a: 'Tüm 7 günler için tam PDF, haftalık bütçe menüsü, AI tarif asistanı (sohbet) ve AI yemek planlama asistanı. €3/ay, taahhüt yok.' },
+        { q: 'İstediğim zaman iptal edebilir miyim?',
+          a: 'Evet. Aktivasyondan sonra "Manage subscription" düğmesiyle erişilebilen Stripe portalından istediğin zaman iptal et. Ödenen dönem sonuna kadar Premium devam eder.' },
+        { q: 'Hesap oluşturmam gerekiyor mu?',
+          a: 'Ücretsiz sürüm için hayır. Premium için bir e-posta yeterli — sadece diğer cihazlarda erişimi yeniden etkinleştirmek için kullanırız.' },
+        { q: 'Premium\'u başka bir cihazda nasıl etkinleştiririm?',
+          a: 'Ödeme yaptığın aynı e-postayı "Zaten ödedin mi? Kilidini aç" bölümüne gir. Doğrulama Stripe üzerinden sunucu tarafında yapılır — şifre yok.' },
+        { q: 'Kaç dili destekliyor?',
+          a: '14 dil: Romence, İngilizce, İspanyolca, Fransızca, Almanca, Portekizce, Rusça, İtalyanca, Türkçe, Arapça, Çince, Japonca, Korece ve Hintçe.' },
+      ],
+    },
+    ar: {
+      eyebrow: 'الأسئلة الشائعة',
+      title: 'إجابات سريعة',
+      items: [
+        { q: 'هل المخطط مجاني بالفعل؟',
+          a: 'نعم. المخطط الأسبوعي وقائمة التسوق و200+ وصفة مجانية بدون تسجيل. ملف PDF المجاني يعرض معاينة 2 من 7 أيام.' },
+        { q: 'ماذا أحصل مع بريميوم؟',
+          a: 'PDF كامل لجميع 7 أيام، قائمة ميزانية أسبوعية، مساعد وصفات بالذكاء الاصطناعي (دردشة) ومساعد تخطيط وجبات بالذكاء الاصطناعي. €3/شهر، بدون التزام.' },
+        { q: 'هل يمكنني الإلغاء في أي وقت؟',
+          a: 'نعم. ألغِ في أي وقت من بوابة Stripe، التي يمكن الوصول إليها عبر زر "Manage subscription" بعد التفعيل. تستمر بريميوم حتى نهاية الفترة المدفوعة.' },
+        { q: 'هل أحتاج إلى إنشاء حساب؟',
+          a: 'للنسخة المجانية، لا. لبريميوم بريد إلكتروني واحد يكفي — نستخدمه فقط لإعادة تفعيل الوصول على الأجهزة الأخرى.' },
+        { q: 'كيف أفعّل بريميوم على جهاز آخر؟',
+          a: 'أدخل البريد الإلكتروني نفسه الذي دفعت به في "هل دفعت بالفعل؟ افتح". يتم التحقق على الخادم عبر Stripe — بدون كلمات مرور.' },
+        { q: 'كم لغة يدعم؟',
+          a: '14 لغة: الرومانية، الإنجليزية، الإسبانية، الفرنسية، الألمانية، البرتغالية، الروسية، الإيطالية، التركية، العربية، الصينية، اليابانية، الكورية والهندية.' },
+      ],
+    },
+    zh: {
+      eyebrow: '常见问题',
+      title: '快速解答',
+      items: [
+        { q: '规划器真的免费吗？',
+          a: '是的。每周规划器、购物清单和200+食谱免费且无需注册。免费PDF提供7天中2天的预览。' },
+        { q: '高级版包含什么？',
+          a: '7天完整PDF、每周节俭菜单、AI食谱助手（聊天）和AI膳食规划助手。€3/月，无承诺。' },
+        { q: '可以随时取消吗？',
+          a: '可以。激活后通过"Manage subscription"按钮进入Stripe门户随时取消。在已付费时段结束前继续保留高级版。' },
+        { q: '需要创建账户吗？',
+          a: '免费版不需要。高级版只需邮箱 — 仅用于在其他设备重新激活访问权限。' },
+        { q: '如何在新设备上激活高级版？',
+          a: '在"已经付款？解锁"部分输入付款时使用的邮箱。验证通过Stripe在服务器端进行 — 无需密码。' },
+        { q: '支持多少种语言？',
+          a: '14种语言：罗马尼亚语、英语、西班牙语、法语、德语、葡萄牙语、俄语、意大利语、土耳其语、阿拉伯语、中文、日语、韩语和印地语。' },
+      ],
+    },
+    ja: {
+      eyebrow: 'よくある質問',
+      title: '簡単な回答',
+      items: [
+        { q: 'プランナーは本当に無料ですか？',
+          a: 'はい。週間プランナー、買い物リスト、200以上のレシピは登録不要で無料です。無料PDFは7日中2日のプレビューを提供します。' },
+        { q: 'プレミアムには何が含まれますか？',
+          a: '7日間フルPDF、週間節約メニュー、AIレシピアシスタント（チャット）、AIミールプランアシスタント。€3/月、契約縛りなし。' },
+        { q: 'いつでもキャンセルできますか？',
+          a: 'はい。アクティベーション後「Manage subscription」ボタンからアクセスできるStripeポータルでいつでもキャンセル可能。支払期間終了までプレミアムは継続します。' },
+        { q: 'アカウントを作る必要がありますか？',
+          a: '無料版では不要です。プレミアムはメールアドレスのみ — 他のデバイスでアクセスを再有効化するためだけに使用します。' },
+        { q: '他のデバイスでプレミアムを有効化するには？',
+          a: '支払いに使ったメールアドレスを「すでに支払いましたか？ロック解除」に入力してください。検証はStripe経由でサーバー側で行われます — パスワード不要。' },
+        { q: '何言語に対応していますか？',
+          a: '14言語：ルーマニア語、英語、スペイン語、フランス語、ドイツ語、ポルトガル語、ロシア語、イタリア語、トルコ語、アラビア語、中国語、日本語、韓国語、ヒンディー語。' },
+      ],
+    },
+    ko: {
+      eyebrow: '자주 묻는 질문',
+      title: '빠른 답변',
+      items: [
+        { q: '플래너가 정말 무료인가요?',
+          a: '네. 주간 플래너, 장보기 목록, 200개 이상의 레시피는 가입 없이 무료입니다. 무료 PDF는 7일 중 2일 미리보기를 제공합니다.' },
+        { q: '프리미엄에는 무엇이 포함되나요?',
+          a: '7일 전체 PDF, 주간 예산 메뉴, AI 레시피 도우미(채팅), AI 식단 계획 도우미. €3/월, 약정 없음.' },
+        { q: '언제든 취소할 수 있나요?',
+          a: '네. 활성화 후 "Manage subscription" 버튼으로 접근 가능한 Stripe 포털에서 언제든 취소할 수 있습니다. 결제 기간 끝까지 프리미엄은 유지됩니다.' },
+        { q: '계정을 만들어야 하나요?',
+          a: '무료 버전은 필요 없습니다. 프리미엄은 이메일만 있으면 됩니다 — 다른 기기에서 액세스를 재활성화하는 용도로만 사용합니다.' },
+        { q: '새 기기에서 프리미엄을 어떻게 활성화하나요?',
+          a: '"이미 결제하셨나요? 잠금 해제" 섹션에 결제 시 사용한 동일한 이메일을 입력하세요. 검증은 Stripe를 통해 서버 측에서 진행됩니다 — 비밀번호 불필요.' },
+        { q: '몇 개 언어를 지원하나요?',
+          a: '14개 언어: 루마니아어, 영어, 스페인어, 프랑스어, 독일어, 포르투갈어, 러시아어, 이탈리아어, 터키어, 아랍어, 중국어, 일본어, 한국어, 힌디어.' },
+      ],
+    },
+    hi: {
+      eyebrow: 'अक्सर पूछे जाने वाले प्रश्न',
+      title: 'त्वरित उत्तर',
+      items: [
+        { q: 'क्या प्लानर वास्तव में मुफ्त है?',
+          a: 'हाँ। साप्ताहिक प्लानर, खरीदारी सूची और 200+ रेसिपी पंजीकरण के बिना मुफ्त हैं। मुफ्त PDF 7 में से 2 दिनों का पूर्वावलोकन प्रदान करता है।' },
+        { q: 'प्रीमियम में क्या मिलता है?',
+          a: 'सभी 7 दिनों के लिए पूर्ण PDF, साप्ताहिक बजट मेनू, AI रेसिपी सहायक (चैट) और AI भोजन योजना सहायक। €3/माह, कोई प्रतिबद्धता नहीं।' },
+        { q: 'क्या मैं कभी भी रद्द कर सकता हूँ?',
+          a: 'हाँ। सक्रियण के बाद "Manage subscription" बटन के माध्यम से पहुँच योग्य Stripe पोर्टल से कभी भी रद्द करें। भुगतान की गई अवधि के अंत तक प्रीमियम जारी रहता है।' },
+        { q: 'क्या मुझे खाता बनाने की आवश्यकता है?',
+          a: 'मुफ्त संस्करण के लिए नहीं। प्रीमियम के लिए एक ईमेल पर्याप्त है — हम इसका उपयोग केवल अन्य उपकरणों पर एक्सेस को पुनः सक्रिय करने के लिए करते हैं।' },
+        { q: 'नए डिवाइस पर प्रीमियम कैसे सक्रिय करें?',
+          a: 'भुगतान के लिए उपयोग किया गया ईमेल "पहले से भुगतान किया? अनलॉक करें" में दर्ज करें। सत्यापन Stripe के माध्यम से सर्वर-साइड पर होता है — पासवर्ड नहीं।' },
+        { q: 'कितनी भाषाओं में काम करता है?',
+          a: '14 भाषाएँ: रोमानियाई, अंग्रेजी, स्पेनिश, फ्रेंच, जर्मन, पुर्तगाली, रूसी, इतालवी, तुर्की, अरबी, चीनी, जापानी, कोरियाई और हिंदी।' },
+      ],
+    },
+  };
+  const s = copy[lang] || copy.en;
+
+  const itemsHTML = s.items.map(item => `
+    <details class="hp-faq-item">
+      <summary class="hp-faq-summary">${safeText(item.q)}</summary>
+      <div class="hp-faq-body">${safeText(item.a)}</div>
+    </details>`).join('');
+
+  const html = `
+    <section id="${ID}" class="hp-faq hp-fade-in no-print" aria-labelledby="hp-faq-title">
+      <div class="hp-faq-head">
+        <span class="hp-faq-eyebrow">${safeText(s.eyebrow)}</span>
+        <h2 id="hp-faq-title" class="hp-faq-title">${safeText(s.title)}</h2>
+      </div>
+      <div class="hp-faq-list">${itemsHTML}</div>
+    </section>`;
+
+  // Insert right before the SEO paragraph (it lives inside #pdf-content
+  // near the bottom of the page). Fallback: before feedback section.
+  const seoEl = document.getElementById('seo-paragraph');
+  if (seoEl) {
+    seoEl.insertAdjacentHTML('beforebegin', html);
+  } else {
+    document.getElementById('feedback-section')?.insertAdjacentHTML('beforebegin', html);
+  }
+}
+
+// Localized label for the sticky upgrade pill — used by both
+// updateStickyUpgradeText() (called from applyTranslations) and the
+// observer setup. Kept module-scope so phases stay decoupled.
+const STICKY_UPGRADE_LABEL = {
+  ro: '⭐ Vezi Premium · €3/lună',  en: '⭐ Get Premium · €3/mo',
+  es: '⭐ Ver Premium · €3/mes',    fr: '⭐ Voir Premium · €3/mois',
+  de: '⭐ Premium · €3/Monat',      pt: '⭐ Ver Premium · €3/mês',
+  ru: '⭐ Премиум · €3/мес',        it: '⭐ Premium · €3/mese',
+  tr: '⭐ Premium · €3/ay',         ar: '⭐ بريميوم · €3/شهر',
+  zh: '⭐ 高级版 · €3/月',           ja: '⭐ プレミアム · €3/月',
+  ko: '⭐ 프리미엄 · €3/월',         hi: '⭐ प्रीमियम · €3/माह',
+};
+
+function updateStickyUpgradeText() {
+  const pill = document.getElementById('hp-sticky-upgrade');
+  if (!pill) return;
+  pill.textContent = STICKY_UPGRADE_LABEL[lang] || STICKY_UPGRADE_LABEL.en;
+  pill.setAttribute('aria-label', STICKY_UPGRADE_LABEL[lang] || STICKY_UPGRADE_LABEL.en);
+}
+
+// Local state for the sticky pill visibility. Updated by the
+// IntersectionObservers below and reread when the user becomes premium.
+let _stickyState = { pastHero: false, pricingVisible: false };
+
+function refreshStickyUpgrade() {
+  const pill = document.getElementById('hp-sticky-upgrade');
+  if (!pill) return;
+  const premium = !!window.hasUnlimited;
+  const show = _stickyState.pastHero && !premium && !_stickyState.pricingVisible;
+  pill.classList.toggle('hp-sticky-upgrade--show', show);
+}
+
+// Phase 12 — Variable font axis play. As the user scrolls past the
+// hero, the headline's opsz and GRAD axes shift subtly. Pure type-
+// nerd flex; invisible to most but quietly signals craft.
+function setupHeroVariableFontScroll() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (typeof IntersectionObserver === 'undefined') return;
+  const hero = document.querySelector('.hero');
+  if (!hero || hero.dataset.fontScrollBound === '1') return;
+  hero.dataset.fontScrollBound = '1';
+
+  let raf = null;
+  const update = () => {
+    raf = null;
+    const rect = hero.getBoundingClientRect();
+    const heroH = rect.height || 1;
+    // 0 when hero is full in view; 1 when hero has scrolled fully out.
+    const p = Math.min(1, Math.max(0, -rect.top / heroH));
+    // opsz: 144 (display) → 36 (text) as scroll deepens. GRAD: 0 → -50.
+    const opsz = 144 - 108 * p;
+    const grad = 0 - 80 * p;
+    document.documentElement.style.setProperty('--hero-opsz', opsz.toFixed(1));
+    document.documentElement.style.setProperty('--hero-grad', grad.toFixed(1));
+  };
+  window.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(update);
+  }, { passive: true });
+  update();
+}
+
+// Phase 9 — Magnetic CTAs: the main upgrade buttons follow the cursor
+// slightly when it hovers, giving them an "attractor" feel. Capped at
+// 9px translation on each axis. Only the primary conversion buttons
+// (Premium upgrade, preview CTA, hero CTA, generic .btn-upgrade) are
+// wired — secondary links stay still.
+function setupMagneticCTAs() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  // Phase 11 — editorial restraint: magnetic only on the one true
+  // conversion moment (the pricing card upgrade button). Every other
+  // CTA stays still so the page reads calm instead of cluttered.
+  const SELECTOR = '#pricing-upgrade-btn';
+  document.querySelectorAll(SELECTOR).forEach(btn => {
+    if (btn.dataset.magnetic === '1') return;
+    btn.dataset.magnetic = '1';
+    let raf = null;
+    btn.addEventListener('mousemove', (e) => {
+      if (raf) return;
+      const rect = btn.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 18; // ±9px
+      const y = ((e.clientY - rect.top)  / rect.height - 0.5) * 18;
+      raf = requestAnimationFrame(() => {
+        btn.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+        raf = null;
+      });
+    }, { passive: true });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+}
+
+// Phase 9 — Confetti burst, fired exactly once when premium activates
+// (Stripe success redirect or first-time successful manual verify).
+// Canvas is created on-the-fly and removed when particles settle —
+// no library dependency, no idle DOM after the celebration.
+function setupCardTilt() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  const SELECTOR = '.hp-preview-card, .hp-cuisine-card, .discovery-card, .step-item';
+  document.querySelectorAll(SELECTOR).forEach(card => {
+    if (card.dataset.tilted === '1') return;
+    card.dataset.tilted = '1';
+    let raf = null;
+    card.addEventListener('mousemove', (e) => {
+      if (raf) return;
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 12; // ±6deg
+      const y = ((e.clientY - rect.top)  / rect.height - 0.5) * 12;
+      raf = requestAnimationFrame(() => {
+        card.style.transform =
+          `perspective(900px) rotateY(${x.toFixed(2)}deg) rotateX(${(-y).toFixed(2)}deg) translateY(-3px)`;
+        raf = null;
+      });
+    }, { passive: true });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+// Phase 8 — Apply --stagger-index to children of grid-like containers
+// so the CSS stagger animation reveals them in sequence on scroll-in.
+// Also tag the v2 section wrappers with .hp-fade-in so they trigger
+// the scroll observer.
+function applyStaggerAndFadeMarkers() {
+  // Containers whose children should stagger.
+  document.querySelectorAll(
+    '.hp-trust-row, .hp-premium-preview-grid, .hp-faq-list, ' +
+    '.hp-cuisine-grid, .discovery-cards, .steps-grid'
+  ).forEach(parent => {
+    Array.from(parent.children).forEach((child, i) => {
+      child.style.setProperty('--stagger-index', i);
+    });
+  });
+  // Sections that should fade in on scroll. The hp-trust-signals,
+  // hp-premium-preview, hp-faq are already tagged inside their render
+  // functions; tag the legacy ones here.
+  [
+    'product-preview-section',
+    'discovery-section',
+    'hp-cuisine-discover',
+  ].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.classList.contains('hp-fade-in')) {
+      el.classList.add('hp-fade-in');
+    }
+  });
+}
+
+// Phase 7 — Hero choreography: animate the .hero-stat-num spans from
+// 0 → target value when they scroll into view. Handles values like
+// "175+", "14", "€3", "Free", "175+ Recipes" by parsing the numeric
+// prefix and keeping the suffix as-is. No-ops if the value has no
+// digits (e.g. "Free", "मुफ़्त" — but Phase 4 already replaced those
+// with "€3").
+function setupHeroCounters() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (typeof IntersectionObserver === 'undefined') return;
+  const stats = document.querySelectorAll('.hero-stat-num[data-count-target]');
+  if (!stats.length) return;
+
+  const animate = (el, raw) => {
+    // Parse: optional prefix (€, $, etc.), integer, optional suffix (+, %, k).
+    const m = /^([^\d-]*)(-?\d+(?:\.\d+)?)(.*)$/.exec(raw || '');
+    if (!m) return; // No digits — leave as-is.
+    const prefix = m[1];
+    const target = parseFloat(m[2]);
+    const suffix = m[3];
+    const start = performance.now();
+    const dur = 1200;
+    const step = (now) => {
+      const elapsed = now - start;
+      const p = Math.min(elapsed / dur, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - p, 3);
+      const v = Math.round(target * eased);
+      el.textContent = prefix + v + (p >= 1 ? suffix : '');
+      if (p < 1) requestAnimationFrame(step);
+    };
+    el.textContent = prefix + '0' + suffix;
+    requestAnimationFrame(step);
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.counted) {
+        e.target.dataset.counted = '1';
+        animate(e.target, e.target.getAttribute('data-count-target'));
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.55 });
+  stats.forEach(s => io.observe(s));
+}
+
+// Phase 7 — Mouse parallax on the hero phone mockup. The phone tilts
+// gently toward the cursor while the user is over the hero. The bob
+// animation lives on .hero-phone-wrap (parent); we set the tilt on
+// .hero-phone-frame (child) so the two transforms never conflict.
+function setupHeroParallax() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  const hero = document.querySelector('.hero');
+  if (!hero || hero.dataset.parallaxBound === '1') return;
+  hero.dataset.parallaxBound = '1';
+
+  // Query the phone INSIDE the handler each frame — renderPremiumHero()
+  // replaces the hero's innerHTML on language switch, so any captured
+  // reference would point to a detached node after the first re-render.
+  let raf = null;
+  hero.addEventListener('mousemove', (e) => {
+    if (raf) return;
+    const rect = hero.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width  - 0.5;
+    const y = (e.clientY - rect.top)  / rect.height - 0.5;
+    raf = requestAnimationFrame(() => {
+      const phone = hero.querySelector('.hero-phone-frame');
+      if (phone) {
+        phone.style.transform =
+          `perspective(1200px) rotateY(${(x * 8).toFixed(2)}deg) rotateX(${(-y * 8).toFixed(2)}deg)`;
+      }
+      raf = null;
+    });
+  }, { passive: true });
+  hero.addEventListener('mouseleave', () => {
+    const phone = hero.querySelector('.hero-phone-frame');
+    if (phone) phone.style.transform = '';
+  });
+}
+
+// Phase 6 — Atmosphere: cursor glow tracking. Updates --mouse-x / --mouse-y
+// CSS custom properties on body so the warm radial halo behind ::after
+// follows the pointer. RAF-throttled. Only active on hover-capable devices
+// and when reduced-motion is not requested.
+function setupCursorAtmosphere() {
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (document.body.dataset.cursorBound === '1') return;
+  document.body.dataset.cursorBound = '1';
+
+  let raf = null;
+  let lastX = 0, lastY = 0;
+  document.addEventListener('mousemove', (e) => {
+    lastX = e.clientX;
+    lastY = e.clientY;
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      document.body.style.setProperty('--mouse-x', lastX + 'px');
+      document.body.style.setProperty('--mouse-y', lastY + 'px');
+      if (!document.body.classList.contains('hp-cursor-active')) {
+        document.body.classList.add('hp-cursor-active');
+      }
+      raf = null;
+    });
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => {
+    document.body.classList.remove('hp-cursor-active');
+  });
+}
+
+function setupStickyUpgrade() {
+  const pill = document.getElementById('hp-sticky-upgrade');
+  if (!pill) return;
+  if (typeof IntersectionObserver === 'undefined') return;
+  if (pill.dataset.observed === '1') return;
+  pill.dataset.observed = '1';
+
+  // Watch the hero: once it scrolls offscreen, the pill becomes a candidate.
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    new IntersectionObserver((entries) => {
+      _stickyState.pastHero = !entries[0].isIntersecting;
+      refreshStickyUpgrade();
+    }, { rootMargin: '-60px' }).observe(hero);
+  }
+
+  // Watch the pricing section: when it's on screen, hide the pill —
+  // no need for a second CTA when the primary one is already visible.
+  const pricing = document.getElementById('pricing-section');
+  if (pricing) {
+    new IntersectionObserver((entries) => {
+      _stickyState.pricingVisible = entries[0].isIntersecting;
+      refreshStickyUpgrade();
+    }, { threshold: 0.15 }).observe(pricing);
+  }
+}
+
+function setupScrollFadeIn() {
+  if (typeof IntersectionObserver === 'undefined') return;
+  const els = document.querySelectorAll('.hp-fade-in:not(.is-visible)');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '-40px' });
+  els.forEach(el => io.observe(el));
+}
+
+
 function applyTranslations() {
   // 0) Update <html lang> and RTL direction for the active language
   document.documentElement.lang = lang;
@@ -2836,6 +3669,22 @@ function applyTranslations() {
   renderDiscovery();
   renderCuisineDiscover();
   renderPlannerAnchor();
+  // Homepage v2 interactivity (ported from Hs3mH). Idempotent; safe to re-run
+  // on every language change. renderCuisineDiscover() above is main's #23
+  // version (Hs3mH's was deliberately not ported). renderFeaturedRecipe and
+  // celebratePremium were excluded as out of PR-B scope.
+  renderTrustSignals();
+  renderPremiumPreview();
+  renderFAQ();
+  updateStickyUpgradeText();
+  refreshStickyUpgrade();
+  applyStaggerAndFadeMarkers();
+  setupScrollFadeIn();
+  setupHeroCounters();
+  setupHeroParallax();
+  setupHeroVariableFontScroll();
+  setupCardTilt();
+  setupMagneticCTAs();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
   if (seoContainer && seoParagraphs[lang]) {
@@ -3334,6 +4183,12 @@ if (verifyBtn && emailInput && resultDiv) {
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();
+  // Homepage v2 one-time setups (ported from Hs3mH): scroll-driven sticky
+  // upgrade pill + cursor atmosphere. Guarded; no-op on pages without the
+  // homepage markup. (The per-language render/motion helpers run inside
+  // applyTranslations above.)
+  if (typeof setupStickyUpgrade === 'function') setupStickyUpgrade();
+  if (typeof setupCursorAtmosphere === 'function') setupCursorAtmosphere();
   attachPdfListeners();
   updateButtonState();
   wireInputsToShoppingList();
