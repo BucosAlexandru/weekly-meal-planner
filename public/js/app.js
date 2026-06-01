@@ -4053,13 +4053,18 @@ function renderCuisineDiscover() {
   };
   const rSeg = recipesBase[lang] || 'recipes';
 
+  const COUNTRY_BY_SLUG = {
+    france:'France', japan:'Japan', mexico:'Mexico',
+    greece:'Greece', italy:'Italy', india:'India',
+  };
+  const cuisineCount = slug => recipesMain.filter(r => r.origin?.en === COUNTRY_BY_SLUG[slug]).length;
   const cuisines = [
-    { slug:'france', flag:'🇫🇷', count:10, atmosphere:'mediterranean' },
-    { slug:'japan',  flag:'🇯🇵', count:10, atmosphere:'east-asian' },
-    { slug:'mexico', flag:'🇲🇽', count:10, atmosphere:'latin' },
-    { slug:'greece', flag:'🇬🇷', count:10, atmosphere:'mediterranean' },
-    { slug:'italy',  flag:'🇮🇹', count:9,  atmosphere:'mediterranean' },
-    { slug:'india',  flag:'🇮🇳', count:9,  atmosphere:'south-asian' },
+    { slug:'france', flag:'🇫🇷', count:cuisineCount('france'), atmosphere:'mediterranean' },
+    { slug:'japan',  flag:'🇯🇵', count:cuisineCount('japan'),  atmosphere:'east-asian' },
+    { slug:'mexico', flag:'🇲🇽', count:cuisineCount('mexico'), atmosphere:'latin' },
+    { slug:'greece', flag:'🇬🇷', count:cuisineCount('greece'), atmosphere:'mediterranean' },
+    { slug:'italy',  flag:'🇮🇹', count:cuisineCount('italy'),  atmosphere:'mediterranean' },
+    { slug:'india',  flag:'🇮🇳', count:cuisineCount('india'),  atmosphere:'south-asian' },
   ];
 
   const copy = {
