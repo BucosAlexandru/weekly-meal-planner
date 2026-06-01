@@ -8,13 +8,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run build         # full build: esbuild JS + esbuild CSS + generate-content.mjs
 npm run build:js      # bundles app.js, checkout.js, portal.js → *.min.js (recipes-budget.js is external)
 npm run build:css     # minifies public/css/style.css → style.min.css
-npm run content       # regenerates ~3250 HTML pages + public/sitemap.xml
+npm run content       # regenerates ~3670 HTML pages + public/sitemap.xml
 npm run sitemap       # standalone sitemap regen (scripts/generate-sitemap.cjs)
 ```
 
 No test runner is configured. The CI workflow (`.github/workflows/build-check.yml`) is the de facto test suite: it runs the curly-quote check, `node --check` on every API file, the full build, then asserts:
-- HTML page count is 3200–3400 (target 3250)
-- `public/sitemap.xml` has 3200–3400 `<url>` entries (target 3250)
+- HTML page count is 3550–3800 (target 3670)
+- `public/sitemap.xml` has 3550–3800 `<url>` entries (target 3670)
 - No `sk_live_` Stripe keys anywhere in source
 - No hard-coded `SUPABASE_SERVICE_ROLE_KEY=…` assignments (only `process.env.SUPABASE_SERVICE_ROLE_KEY` reads allowed, in `api/`)
 
@@ -26,7 +26,7 @@ Violating these will silently break production or trip CI:
 
 1. **Curly quotes (U+2018 / U+2019) in `public/js/recipes.js` break JS parsing.** Always grep before committing:
    `python3 -c "s=open('public/js/recipes.js',encoding='utf-8').read(); print(s.count('‘')+s.count('’'))"` must be `0`.
-2. **Any edit to `public/js/recipes.js` requires `npm run content`** to regenerate HTML, and the resulting page count must stay ~3250.
+2. **Any edit to `public/js/recipes.js` requires `npm run content`** to regenerate HTML, and the resulting page count must stay ~3670.
 3. **Every multilingual field needs all 14 language codes**: `ro, en, es, fr, de, pt, ru, ar, zh, ja, hi, tr, it, ko`. Older recipes are often missing `hi` — add it.
 4. **Recipes with 9+ ingredients need an explicit `servings: 4` override** at the recipe-object level (default scaling assumptions otherwise produce wrong amounts).
 5. **Never commit `.env` or `.env.local`** — gitignored, hold Stripe + Supabase + OpenAI secrets.
@@ -43,14 +43,14 @@ Workflow: commit directly to `main` and push. No feature branches, no PRs. (See 
 
 ### Content pipeline
 
-`scripts/generate-content.mjs` is the engine. It imports `public/js/recipes.js`, `public/js/recipes-budget.js`, and `public/js/i18n.js`, then writes ~3250 static HTML pages:
+`scripts/generate-content.mjs` is the engine. It imports `public/js/recipes.js`, `public/js/recipes-budget.js`, and `public/js/i18n.js`, then writes ~3670 static HTML pages:
 
 - 14 language home indexes (`/{lc}/`)
 - 8 themed weekly plans × 14 languages = 112 plan pages
-- 175 recipes × 14 languages = 2450 recipe pages (under language-specific dirs like `/ro/retete/`, `/en/recipes/`, `/de/rezepte/`, etc.)
+- 204 recipes × 14 languages = 2856 recipe pages (under language-specific dirs like `/ro/retete/`, `/en/recipes/`, `/de/rezepte/`, etc.)
 - 14 pricing pages
-- 44 cuisine hubs × 14 locales = 616 hub pages + 14 hub indexes (under language-specific prefixes like `/en/cuisine/<country>/`, `/ro/bucatarie/<country>/`, `/de/kueche/<country>/`)
-- `public/sitemap.xml` (~3250 URLs)
+- 46 cuisine hubs × 14 locales = 644 hub pages + 14 hub indexes (under language-specific prefixes like `/en/cuisine/<country>/`, `/ro/bucatarie/<country>/`, `/de/kueche/<country>/`)
+- `public/sitemap.xml` (~3670 URLs)
 
 Recipe slugs are derived from `r.name.en || r.name.ro` via the local `slug()` helper. If you rename a recipe's English name, every language's URL for that recipe changes — update internal links and check 301s.
 
@@ -59,7 +59,7 @@ Per-language URL prefixes for recipes and pricing are hard-coded in the `RECIPE_
 ### Frontend JS layout
 
 - `public/js/app.js` — main planner UI. Bundled. Imports `recipes.js`, `recipes-meta.js`, `i18n.js`. **`recipes-budget.js` is marked external in the esbuild command** and lazy-loaded at runtime (`ensureBudgetRecipes()`) to keep initial JS under ~1.7 MB. Do not statically import `recipes-budget.js` from `app.js`.
-- `public/js/recipes.js` — 175 main recipes, one object per recipe with multilingual `name`, `origin`, `featureCards`, `ingredients`, `howIsMade`, plus `nutrition`, `tipType`, `pairingsType`. This is the canonical content source; the HTML generator reads it directly.
+- `public/js/recipes.js` — 204 main recipes, one object per recipe with multilingual `name`, `origin`, `featureCards`, `ingredients`, `howIsMade`, plus `nutrition`, `tipType`, `pairingsType`. This is the canonical content source; the HTML generator reads it directly.
 - `public/js/recipes-meta.js` — per-recipe `time`, `costRon`, `tags`, optional `desc`. Applied to recipe objects at runtime by `app.js` (does not mutate the file).
 - `public/js/recipes-budget.js` — secondary recipe set, only loaded when the budget toggle is on.
 - `public/js/i18n.js` — all UI translations, language names, SEO paragraph templates, PDF messages.
