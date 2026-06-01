@@ -464,8 +464,8 @@ const PLANS = [
       it:'Stufati a fuoco lento, zuppe calde e piatti nutrienti per le giornate fredde. Borscht, gulasch, boeuf bourguignon, pho.',
       ko:'천천히 끓인 스튜, 뜨거운 수프, 추운 날을 위한 든든한 요리. 보르시, 굴라시, 뵈프 부르기뇽, 포.'
     },
-    lunches: ['Borscht','Goulash','Mushroom risotto','Chicken Paprikash','Pho','Cassoulet','Lobio'],
-    dinners: ['Boeuf Bourguignon','Tagine','Chicken Kiev','Coq au Vin','Solyanka','Bigos','Lamb Stew'],
+    lunches: ['Borscht','Goulash','Risotto','Chicken Paprikash','Pho','Cassoulet','Lobio'],
+    dinners: ['Boeuf Bourguignon','Lamb Tagine','Chicken Kiev','Coq au Vin','Solyanka','Bigos','Lamb Stew'],
   },
   {
     id: 'vara-usoara', idEn: 'summer-light', emoji: '🍋',
@@ -525,7 +525,7 @@ const PLANS = [
       ko:'오븐에서 천천히 굽는 로스트, 일주일을 기다리는 라자냐, 깊은 접시의 빠에야. 시간과 사랑하는 사람들을 부르는 요리.'
     },
     lunches: ['Lasagna','Paella','Risotto','Quiche Lorraine','Spanakopita','Moussaka','Pasta alla Norma'],
-    dinners: ['Boeuf Bourguignon','Roast Chicken Diavola','Cassoulet','Tagine','Beef Stroganoff','Coq au Vin','Lamb Stew'],
+    dinners: ['Boeuf Bourguignon','Roast Chicken Diavola','Cassoulet','Lamb Tagine','Beef Stroganoff','Coq au Vin','Lamb Stew'],
   },
 ];
 
