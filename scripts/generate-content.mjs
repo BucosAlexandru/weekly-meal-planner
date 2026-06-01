@@ -2073,21 +2073,50 @@ function indexPage(lc) {
   const lc_code = lc.code;
   const cards = PLANS.map(p => {
     const theme = p.theme[lc_code] || p.theme.en;
-    const desc  = sentenceTrim(p.desc[lc_code] || p.desc.en, 130);
+    const desc  = sentenceTrim(p.desc[lc_code] || p.desc.en, 110);
     const planId = lc.planIdFn(p);
     const costDisplay = lc.costValue(p);
-    const heroImg = PLAN_HERO_IMG[p.idEn];
-    return `<a href="${lc.dir}/${planId}/" class="content-card${heroImg ? ' content-card--with-img' : ''}">
-      ${heroImg ? `<div class="content-card-img"><img src="${heroImg}" alt="" loading="lazy" decoding="async" onerror="this.closest('.content-card-img')?.classList.add('content-card-img--failed');this.remove();"><span class="content-card-emoji">${p.emoji}</span></div>` : ''}
-      <div class="content-card-body">
-        ${!heroImg ? `<div class="content-card-header"><span class="card-emoji">${p.emoji}</span><h2 class="card-title">${esc(theme)}</h2></div>` : `<h2 class="card-title">${esc(theme)}</h2>`}
-        <p class="card-desc">${esc(desc)}</p>
-        <div class="card-meta">
-          <span><i class="bi bi-currency-exchange"></i> ${costDisplay} ${lc.costUnit}</span>
-          <span><i class="bi bi-arrow-right-circle-fill"></i> ${lc.indexViewPlan}</span>
-        </div>
+    // Mirror the recipes-index cuisine cards: a 3-photo montage of the plan's
+    // own (auto-selected) meals + a dish-name preview + a one-line soul.
+    const mealSrc  = p.isBudget ? budgetRecipes : recipes;
+    const mealRecs = [...p.lunches, ...p.dinners]
+      .map(n => mealSrc.find(r => r.name?.ro === n || r.name?.en === n))
+      .filter(Boolean);
+    const atmosphere = (mealRecs[0] && cuisineAtmosphere(mealRecs[0].origin?.en)) || 'mediterranean';
+    // Budget recipes ship without photos, so the montage would be an empty
+    // emoji grid. Borrow a few cheap, photogenic main-corpus dishes (lentils,
+    // pasta & beans, bean soup) for the budget card's images only — the dish
+    // preview below still lists the real budget meals.
+    const photoRecs = p.isBudget
+      ? ['Dhal','Pasta e fagioli','Fasolada','Rajma','Koshari','Shakshuka']
+          .map(n => recipes.find(r => r.name?.en === n)).filter(Boolean)
+      : mealRecs;
+    const ranked = photoRecs
+      .map(r => resolveRecipeImage(r, slug(r.name?.en || r.name?.ro || '')).src)
+      .map((u, i) => ({ u, i, s: imgStability(u) }))
+      .sort((a, b) => b.s - a.s || a.i - b.i)
+      .map(x => x.u);
+    const good   = ranked.filter(u => !/cover2\.jpg$/.test(u));
+    const thumbs = (good.length >= 3 ? good : ranked).slice(0, 3);
+    const thumbsHtml = thumbs.map((u, i) => `<span class="cuisine-card-thumb" data-thumb-pos="${i}">
+        <span class="cuisine-card-thumb-fallback" aria-hidden="true">${p.emoji}</span>
+        ${/cover2\.jpg$/.test(u) ? '' : `<img src="${u}" alt="" loading="lazy" decoding="async"${imgFallbackAttrs(u)}/>`}
+      </span>`).join('');
+    const previewNames = mealRecs.slice(0, 3)
+      .map(r => r.name?.[lc_code] || r.name?.en || r.name?.ro || '').filter(Boolean).join(' · ');
+    return `
+    <article class="cuisine-card cuisine-card--preview plan-card" data-cuisine-atmosphere="${atmosphere}">
+      <a class="cuisine-card-link" href="${lc.dir}/${planId}/" aria-label="${esc(theme)}"></a>
+      <div class="cuisine-card-thumbs" data-thumb-count="${thumbs.length}" aria-hidden="true">${thumbsHtml}</div>
+      <div class="cuisine-card-meta">
+        <h2 class="origin-title">
+          <span class="origin-title-text">${p.emoji} ${esc(theme)}</span>
+          <span class="recipe-count">${costDisplay} ${lc.costUnit}</span>
+        </h2>
+        <p class="cuisine-card-preview-names">${esc(previewNames)}</p>
+        <p class="cuisine-card-soul">${esc(desc)}</p>
       </div>
-    </a>`;
+    </article>`;
   }).join('');
 
   const dir_attr = lc.dir_attr || 'ltr';
@@ -2128,7 +2157,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
   </section>
   <section class="content-section">
     <div class="content-section-inner">
-      <div class="content-cards-grid">${cards}</div>
+      <div class="recipe-groups-grid">${cards}</div>
     </div>
   </section>
   <section class="content-section cuisine-discover">
