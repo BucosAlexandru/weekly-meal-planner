@@ -2083,7 +2083,15 @@ function indexPage(lc) {
       .map(n => mealSrc.find(r => r.name?.ro === n || r.name?.en === n))
       .filter(Boolean);
     const atmosphere = (mealRecs[0] && cuisineAtmosphere(mealRecs[0].origin?.en)) || 'mediterranean';
-    const ranked = mealRecs
+    // Budget recipes ship without photos, so the montage would be an empty
+    // emoji grid. Borrow a few cheap, photogenic main-corpus dishes (lentils,
+    // pasta & beans, bean soup) for the budget card's images only — the dish
+    // preview below still lists the real budget meals.
+    const photoRecs = p.isBudget
+      ? ['Dhal','Pasta e fagioli','Fasolada','Rajma','Koshari','Shakshuka']
+          .map(n => recipes.find(r => r.name?.en === n)).filter(Boolean)
+      : mealRecs;
+    const ranked = photoRecs
       .map(r => resolveRecipeImage(r, slug(r.name?.en || r.name?.ro || '')).src)
       .map((u, i) => ({ u, i, s: imgStability(u) }))
       .sort((a, b) => b.s - a.s || a.i - b.i)
