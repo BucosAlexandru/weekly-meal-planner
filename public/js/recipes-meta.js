@@ -1039,6 +1039,23 @@ export const recipesMeta = {
                 "찐 태국 찰밥을 단 코코넛 밀크에 적시고, 잘 익은 망고와 짭짤한 코코넛 크림을 곁들인다.",
                 "भाप में पका थाई चिपचिपा चावल मीठे नारियल दूध में डूबा, साथ में पका आम और हलकी नमकीन नारियल क्रीम।") },
 
+  // ─── 214-229: meal-plan-coverage batch (Lamb Stew, Greek Salad, Caprese, Lasagna,
+  // Salade Niçoise, Beef Stroganoff, Coq au Vin, Bigos, Vietnamese Spring Rolls,
+  // Grilled Sea Bream, Sea Bass Provençal, Roast Chicken Diavola). Time/cost/tags
+  // only — desc=null falls back to howIsMade first sentence per locale.
+  214: { time: 150, costRon: 32, tags: ['high-protein', 'family'], desc: null },
+  215: { time: 15,  costRon: 18, tags: ['vegetarian', 'quick', 'healthy'], desc: null },
+  216: { time: 10,  costRon: 18, tags: ['vegetarian', 'quick'], desc: null },
+  217: { time: 90,  costRon: 28, tags: ['high-protein', 'family'], desc: null },
+  218: { time: 30,  costRon: 26, tags: ['high-protein', 'healthy'], desc: null },
+  219: { time: 35,  costRon: 32, tags: ['high-protein', 'family'], desc: null },
+  222: { time: 130, costRon: 38, tags: ['high-protein', 'family'], desc: null },
+  223: { time: 180, costRon: 28, tags: ['high-protein', 'family', 'one-pot'], desc: null },
+  226: { time: 35,  costRon: 22, tags: ['quick', 'healthy'], desc: null },
+  227: { time: 30,  costRon: 30, tags: ['high-protein', 'healthy', 'quick'], desc: null },
+  228: { time: 40,  costRon: 34, tags: ['high-protein', 'healthy'], desc: null },
+  229: { time: 75,  costRon: 26, tags: ['high-protein', 'family'], desc: null },
+
   30: { time: 20, costRon: 14, tags: ['quick','budget','vegetarian'],
         desc: d("Sos grecesc gros de iaurt și castravete cu usturoi crud — servit rece ca meze.",
                 "Thick Greek yoghurt and cucumber dip with raw garlic — served cold as a meze.",
