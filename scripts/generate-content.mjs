@@ -226,7 +226,7 @@ const PLANS = [
       ko:'이탈리아, 그리스, 프랑스, 스페인, 모로코 요리에서 영감을 받은 한 주. 신선한 재료와 올리브 오일.'
     },
     lunches: ['Spaghetti Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
-    dinners: ['Moussaka','Ratatouille','Souvlaki','Tagine','Boeuf Bourguignon','Spanakopita','Harira'],
+    dinners: ['Moussaka','Ratatouille','Souvlaki','Chicken Tagine','Boeuf Bourguignon','Spanakopita','Harira'],
   },
   {
     id: 'asia', idEn: 'asian-fusion', emoji: '🍜',
@@ -253,7 +253,7 @@ const PLANS = [
       ko:'일본, 한국, 베트남, 태국, 인도, 인도네시아 요리를 맛보는 7일간의 여행.'
     },
     lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
-    dinners: ['Sushi','Chicken Curry','Ramen','Kung Pao Chicken','Nasi Goreng','Rendang','Tom Kha Gai'],
+    dinners: ['Sushi','Chicken Curry','Classic Japanese Ramen','Kung Pao Chicken','Nasi Goreng','Rendang','Tom Kha Gai'],
   },
   {
     id: 'buget', idEn: 'budget', emoji: '💰',
@@ -312,7 +312,7 @@ const PLANS = [
       ko:'루마니아, 조지아, 헝가리, 폴란드의 전통 요리. 따뜻한 가정식.'
     },
     lunches: ['Tripe Soup','Borscht','Beans with Sausages','Goulash','Pierogi','Lobio','Chakhokhbili'],
-    dinners: ['Chicken Kiev','Khinkali','Chicken Paprikash','Pork schnitzel','Zeama','Okroshka','Solyanka'],
+    dinners: ['Chicken Kiev','Khinkali','Chicken Paprikash','Kotlet schabowy','Zeama','Okroshka','Solyanka'],
   },
   {
     id: 'tur-mondial', idEn: 'world-tour', emoji: '🌍',
@@ -3980,22 +3980,18 @@ var recipeCuisineHubHref;
    index (indexPage) and the recipes index (recipeIndex). Keeping
    it as a flat lookup avoids adding fields to LANG_CONFIGS for a
    single feature surface. */
-const CUISINE_CTA = {
-  ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea', sub:n=>`${n} bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.`, btn:n=>`Vezi toate cele ${n} bucătării` },
-  en: { eyebrow:'Cuisines', heading:'Explore world cuisines', sub:n=>`${n} international cuisines, each with authentic recipes and a free meal planner.`, btn:n=>`Browse all ${n} cuisines` },
-  es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo', sub:n=>`${n} cocinas internacionales, cada una con recetas auténticas y planificador gratuito.`, btn:n=>`Ver las ${n} cocinas` },
-  fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde', sub:n=>`${n} cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.`, btn:n=>`Voir les ${n} cuisines` },
-  de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt', sub:n=>`${n} internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.`, btn:n=>`Alle ${n} Küchen ansehen` },
-  pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas do mundo', sub:n=>`${n} cozinhas internacionais, cada uma com receitas autênticas e planejador gratuito.`, btn:n=>`Ver as ${n} cozinhas` },
-  ru: { eyebrow:'Кухни', heading:'Изучите кухни мира', sub:n=>`${n} мировых кухонь — подлинные рецепты и бесплатный планировщик меню.`, btn:n=>`Все ${n} кухни` },
-  ar: { eyebrow:'مطابخ', heading:'اكتشف مطابخ العالم', sub:n=>`${n} مطبخًا عالميًا، كل منها بوصفات أصيلة ومخطط وجبات مجاني.`, btn:n=>`تصفح جميع المطابخ الـ ${n}` },
-  zh: { eyebrow:'菜系', heading:'探索世界各国菜系', sub:n=>`${n}个世界菜系，每个都有正宗菜谱和免费每周饮食计划。`, btn:n=>`浏览全部${n}个菜系` },
-  ja: { eyebrow:'料理', heading:'世界の料理を探す', sub:n=>`${n}か国の世界料理。本格レシピと無料の週間ミールプランナー。`, btn:n=>`${n}か国すべて見る` },
-  hi: { eyebrow:'व्यंजन', heading:'दुनिया के व्यंजन देखें', sub:n=>`${n} वैश्विक व्यंजन, हर एक प्रामाणिक रेसिपी और मुफ्त मील प्लानर के साथ।`, btn:n=>`सभी ${n} व्यंजन देखें` },
-  tr: { eyebrow:'Mutfaklar', heading:'Dünya mutfaklarını keşfedin', sub:n=>`${n} dünya mutfağı — otantik tarifler ve ücretsiz öğün planlayıcı.`, btn:n=>`Tüm ${n} mutfağı görüntüle` },
-  it: { eyebrow:'Cucine', heading:'Esplora le cucine del mondo', sub:n=>`${n} cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.`, btn:n=>`Vedi tutte le ${n} cucine` },
-  ko: { eyebrow:'요리', heading:'세계 요리를 탐색하세요', sub:n=>`${n}개국 세계 요리 — 정통 레시피와 무료 주간 식단 플래너.`, btn:n=>`${n}개 요리 모두 보기` },
-};
+/* Sourced from i18n.js (single source of truth — see CUISINE_I18N there).
+   Kept as a {eyebrow,heading,sub(n),btn(n)} shape so existing call sites are
+   unchanged; {n} in the i18n strings is interpolated with the cuisine count. */
+const CUISINE_CTA = Object.fromEntries(Object.keys(i18n).map(lc => {
+  const g = k => (i18n[lc] && i18n[lc][k]) || i18n.en[k] || '';
+  return [lc, {
+    eyebrow: g('cuisine.eyebrow'),
+    heading: g('cuisine.heading'),
+    sub: n => g('cuisine.sub').replace('{n}', n),
+    btn: n => g('cuisine.btn').replace('{n}', n),
+  }];
+}));
 
 /* Builds tile-display data for a single recipe on a cuisine page.
    Returns { name, slug, href, img, atmosphereFallbackEmoji,
@@ -4724,10 +4720,14 @@ function cuisineHomeCard(originEnKey, recs, lc_code, recipeDir) {
   const flagIcon   = COUNTRY_FLAG[originEnKey] || '🌍';
   const originSlug = slug(originEnKey);
   const atmosphere = cuisineAtmosphere(originEnKey);
-  const dishNames  = recs.slice(0, 3).map(r =>
+  const topRecs    = recs.slice(0, 3);
+  const dishNames  = topRecs.map(r =>
     r.name?.[lc_code] || r.name?.en || r.name?.ro || ''
   ).filter(Boolean).join(' · ');
-  return `<a class="hp-cuisine-card" href="${recipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
+  // data-* hooks let app.js re-localize name/dishes/href at runtime (root /
+  // auto-translates to the visitor's browser language). rep-id → origin[lang]
+  // for the card name; card-ids → name[lang] for the dish line; slug → href.
+  return `<a class="hp-cuisine-card" href="${recipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}" data-cuisine-rep-id="${recs[0].id}" data-cuisine-slug="${originSlug}" data-card-ids="${topRecs.map(r => r.id).join('|')}">
         <span class="hp-cuisine-card-flag" aria-hidden="true">${flagIcon}</span>
         <span class="hp-cuisine-card-body">
           <span class="hp-cuisine-card-top">
@@ -4750,7 +4750,7 @@ function cuisineHomeSectionHtml(lc_code) {
   const cardsHtml = featured.map(([enKey, recs]) =>
     cuisineHomeCard(enKey, recs, lc_code, recipeDir)
   ).join('\n      ');
-  return `<section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading">
+  return `<section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading" data-hp-cuisine-section="1" data-cuisine-count="${eligible.length}">
     <div class="hp-cuisine-inner">
       <div class="hp-cuisine-head">
         <span class="hp-cuisine-eyebrow">${esc(ctaLang.eyebrow)}</span>
@@ -4775,6 +4775,20 @@ const HP_CUISINE_CSS_END   = '<!-- HP_CUISINE_CSS:END -->';
 const HP_CUISINE_SEC_START = '<!-- HP_CUISINE_DISCOVER:START -->';
 const HP_CUISINE_SEC_END   = '<!-- HP_CUISINE_DISCOVER:END -->';
 const HP_CUISINE_CSS_LINK  = '<link rel="stylesheet" href="/css/cuisine-homepage.css">';
+
+// Homepage v2 premium head: warm theme-color, editorial display font
+// (Fraunces) and the premium-polish.css visual layer. Injected ONLY into the
+// 15 SPA homepages (root + 14 locales) so the polish stays scoped to the home
+// experience and never leaks onto recipe/plan/hub pages. Idempotent via the
+// HP_PREMIUM_HEAD markers, mirroring the cuisine-discovery injection.
+const HP_PREMIUM_HEAD_START = '<!-- HP_PREMIUM_HEAD:START -->';
+const HP_PREMIUM_HEAD_END   = '<!-- HP_PREMIUM_HEAD:END -->';
+const HP_PREMIUM_HEAD_BLOCK = [
+  '<meta name="theme-color" content="#1d1812" media="(prefers-color-scheme: light)">',
+  '  <meta name="theme-color" content="#1d1812" media="(prefers-color-scheme: dark)">',
+  '  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">',
+  '  <link rel="stylesheet" href="/css/premium-polish.css">'
+].join('\n');
 
 function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAfter) {
   // If markers exist anywhere → replace content between them. Preserve
@@ -4831,6 +4845,31 @@ function injectCuisineHomeSection(lc_code, customPath) {
     }
   }
 
+  if (html !== original) {
+    fs.writeFileSync(filePath, html, 'utf8');
+    return true;
+  }
+  return false;
+}
+
+// Inject the premium head (theme-color + Fraunces + premium-polish.css) into a
+// single SPA homepage file. Runs for ALL 14 locales + root so the visual layer
+// is applied uniformly. premium-polish.css must load LAST so it overrides the
+// shared .hp-cuisine-* selectors in cuisine-homepage.css: anchor right after
+// the cuisine-CSS block when present, else after the style.min.css link
+// (older locales ship the self-closing XHTML form). Idempotent via markers.
+function injectPremiumHead(filePath) {
+  if (!fs.existsSync(filePath)) return false;
+  let html = fs.readFileSync(filePath, 'utf8');
+  const original = html;
+  const cssAnchorSelfClose = '<link rel="stylesheet" href="/css/style.min.css" />';
+  const cssAnchorVoid      = '<link rel="stylesheet" href="/css/style.min.css">';
+  let cssAnchor;
+  if (html.includes(HP_CUISINE_CSS_END))      cssAnchor = HP_CUISINE_CSS_END;
+  else if (html.includes(cssAnchorSelfClose)) cssAnchor = cssAnchorSelfClose;
+  else                                        cssAnchor = cssAnchorVoid;
+  html = upsertBetween(html, HP_PREMIUM_HEAD_START, HP_PREMIUM_HEAD_END,
+                       HP_PREMIUM_HEAD_BLOCK, cssAnchor);
   if (html !== original) {
     fs.writeFileSync(filePath, html, 'utf8');
     return true;
@@ -4920,6 +4959,17 @@ if (injectCuisineHomeSection('ro', path.join(PUBLIC, 'index.html'))) {
 }
 console.log(`✅ ${hpInjected}/14 SPA homepages updated with cuisine discovery section`);
 console.log(`✅ Root /index.html cuisine teaser: ${rootInjected ? 'injected (RO content)' : 'no change'}`);
+
+// ── Homepage v2 premium head: injected into ALL 14 SPA homes + root ──
+// Runs AFTER the cuisine-discovery injection so premium-polish.css anchors
+// just after the cuisine-CSS block and loads LAST in <head>. Scoped to the
+// homepages only — recipe/plan/hub pages are untouched.
+let premiumHeadInjected = 0;
+for (const lc_code of Object.keys(LANG_CONFIGS)) {
+  if (injectPremiumHead(path.join(PUBLIC, lc_code, 'index.html'))) premiumHeadInjected++;
+}
+if (injectPremiumHead(path.join(PUBLIC, 'index.html'))) premiumHeadInjected++;
+console.log(`✅ ${premiumHeadInjected}/15 SPA homepages got the premium head (theme-color + Fraunces + premium-polish.css)`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
