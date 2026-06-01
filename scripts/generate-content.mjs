@@ -550,6 +550,85 @@ const PLANS = [
   },
 ];
 
+/* ════════════════════════════════════════════════════════════════
+   AUTO-FILL plan meals from the live recipe corpus, by theme.
+
+   Each plan's 14 meals (7 lunches + 7 dinners) are selected automatically
+   from recipes.js instead of being hand-curated. Benefits:
+     • no manual maintenance — adding/removing recipes just works;
+     • a plan can NEVER reference a recipe that doesn't exist (the class of
+       bug that produced the old "Tagine"/"Ramen" dead links);
+     • selection is DETERMINISTIC (seeded by plan id), so every build is
+       reproducible and the static pages don't churn.
+   The hand-written lunches/dinners arrays above are kept only as a fallback
+   and are overwritten here for every plan that has a PLAN_PICK selector.
+   ════════════════════════════════════════════════════════════════ */
+const PLAN_PICK = {
+  // Cuisine-based themes → pick from recipes whose origin is in the list.
+  mediteranean:       { cuisines: ['Italy','Greece','France','Spain','Morocco','Lebanon','Turkey','Tunisia','Portugal','Israel','Cyprus','Algeria','Egypt'] },
+  asia:               { cuisines: ['Japan','South Korea','North Korea','Vietnam','Thailand','India','Indonesia','China','Malaysia','Philippines','Cambodia','Singapore','Sri Lanka','Nepal','Pakistan'] },
+  'est-european':     { cuisines: ['Russia','Georgia','Hungary','Poland','Romania','Ukraine','Moldova','Bulgaria','Czech Republic','Lithuania','Latvia','Estonia','Serbia','Croatia','Bosnia and Herzegovina','Slovenia','Armenia'] },
+  latin:              { cuisines: ['Mexico','Peru','Brazil','Cuba','Argentina','Colombia','Venezuela','El Salvador','Chile','Ecuador','Guatemala','Dominican Republic'] },
+  'iarna-confort':    { cuisines: ['France','Russia','Georgia','Hungary','Poland','Germany','Romania','Ukraine','Czech Republic','Switzerland','Belgium','Netherlands','Finland','Sweden','Norway','Denmark','United Kingdom','Ireland','Italy','Austria'] },
+  'duminica-familie': { cuisines: ['France','Italy','Spain','Greece','United Kingdom','USA','Portugal','Morocco','Germany','Belgium'] },
+  // Attribute-based themes.
+  'tur-mondial':      { diverse: true },               // one recipe per distinct country
+  vegetarian:         { tags: ['vegetarian','vegan'] },
+  rapid:              { tags: ['quick'] },
+  'vara-usoara':      { tags: ['healthy'] },
+  // buget: left to its own isBudget slice (already automatic from budgetRecipes).
+};
+
+// FNV-1a 32-bit — small, fast, deterministic string hash for seeded ordering.
+function planHash(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+// Stable per-plan ordering: shuffle-like but reproducible (seed = plan id + recipe id).
+const planSeedSort = (planId, arr, salt = '') =>
+  arr.slice().sort((a, b) => planHash(planId + salt + ':' + a.id) - planHash(planId + salt + ':' + b.id));
+
+function autoPlanMeals(plan) {
+  const sel = PLAN_PICK[plan.id];
+  if (!sel) return null;
+  const originEn = r => (r.origin?.en || r.origin?.ro || '').trim();
+  const tagsOf   = r => (recipesMeta?.[r.id]?.tags) || [];
+
+  let pool;
+  if (sel.diverse) {
+    const seen = new Set(); pool = [];
+    for (const r of planSeedSort(plan.id, recipes)) {
+      const o = originEn(r);
+      if (o && !seen.has(o)) { seen.add(o); pool.push(r); }
+    }
+  } else if (sel.cuisines) {
+    pool = recipes.filter(r => sel.cuisines.includes(originEn(r)));
+  } else if (sel.tags) {
+    pool = recipes.filter(r => tagsOf(r).some(t => sel.tags.includes(t)));
+  } else {
+    pool = recipes.slice();
+  }
+  pool = planSeedSort(plan.id, pool);
+
+  // Safety: guarantee 14 distinct meals even if a pool is short — top up
+  // deterministically from the whole corpus.
+  if (pool.length < 14) {
+    const have = new Set(pool.map(r => r.id));
+    for (const r of planSeedSort(plan.id, recipes, '#')) {
+      if (!have.has(r.id)) { pool.push(r); have.add(r.id); }
+      if (pool.length >= 14) break;
+    }
+  }
+  const names = pool.slice(0, 14).map(r => r.name?.en || r.name?.ro).filter(Boolean);
+  return { lunches: names.slice(0, 7), dinners: names.slice(7, 14) };
+}
+
+for (const plan of PLANS) {
+  const m = autoPlanMeals(plan);
+  if (m) { plan.lunches = m.lunches; plan.dinners = m.dinners; }
+}
+
 const PLAN_COUNT    = PLANS.length;
 const PLAN_COUNT_AR = String(PLAN_COUNT).replace(/[0-9]/g, d => '٠١٢٣٤٥٦٧٨٩'[+d]);
 
