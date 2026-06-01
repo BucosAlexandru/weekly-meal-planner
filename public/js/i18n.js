@@ -1329,6 +1329,35 @@ ko: {
 }
 };
 
+/* Cuisine-discovery homepage section strings. Single source of truth shared
+   by the static generator (scripts/generate-content.mjs CUISINE_CTA reads
+   these at build time) and the runtime localizer (app.js renderCuisineDiscover).
+   {n} is replaced with the live cuisine count by both consumers. */
+const CUISINE_I18N = {
+  ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea', sub:'{n} bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.', btn:'Vezi toate cele {n} bucătării' },
+  en: { eyebrow:'Cuisines', heading:'Explore world cuisines', sub:'{n} international cuisines, each with authentic recipes and a free meal planner.', btn:'Browse all {n} cuisines' },
+  es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo', sub:'{n} cocinas internacionales, cada una con recetas auténticas y planificador gratuito.', btn:'Ver las {n} cocinas' },
+  fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde', sub:'{n} cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.', btn:'Voir les {n} cuisines' },
+  de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt', sub:'{n} internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.', btn:'Alle {n} Küchen ansehen' },
+  pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas do mundo', sub:'{n} cozinhas internacionais, cada uma com receitas autênticas e planejador gratuito.', btn:'Ver as {n} cozinhas' },
+  ru: { eyebrow:'Кухни', heading:'Изучите кухни мира', sub:'{n} мировых кухонь — подлинные рецепты и бесплатный планировщик меню.', btn:'Все {n} кухни' },
+  ar: { eyebrow:'مطابخ', heading:'اكتشف مطابخ العالم', sub:'{n} مطبخًا عالميًا، كل منها بوصفات أصيلة ومخطط وجبات مجاني.', btn:'تصفح جميع المطابخ الـ {n}' },
+  zh: { eyebrow:'菜系', heading:'探索世界各国菜系', sub:'{n}个世界菜系，每个都有正宗菜谱和免费每周饮食计划。', btn:'浏览全部{n}个菜系' },
+  ja: { eyebrow:'料理', heading:'世界の料理を探す', sub:'{n}か国の世界料理。本格レシピと無料の週間ミールプランナー。', btn:'{n}か国すべて見る' },
+  hi: { eyebrow:'व्यंजन', heading:'दुनिया के व्यंजन देखें', sub:'{n} वैश्विक व्यंजन, हर एक प्रामाणिक रेसिपी और मुफ्त मील प्लानर के साथ।', btn:'सभी {n} व्यंजन देखें' },
+  tr: { eyebrow:'Mutfaklar', heading:'Dünya mutfaklarını keşfedin', sub:'{n} dünya mutfağı — otantik tarifler ve ücretsiz öğün planlayıcı.', btn:'Tüm {n} mutfağı görüntüle' },
+  it: { eyebrow:'Cucine', heading:'Esplora le cucine del mondo', sub:'{n} cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.', btn:'Vedi tutte le {n} cucine' },
+  ko: { eyebrow:'요리', heading:'세계 요리를 탐색하세요', sub:'{n}개국 세계 요리 — 정통 레시피와 무료 주간 식단 플래너.', btn:'{n}개 요리 모두 보기' },
+};
+for (const lc in CUISINE_I18N) {
+  if (!i18n[lc]) continue;
+  const c = CUISINE_I18N[lc];
+  i18n[lc]['cuisine.eyebrow'] = c.eyebrow;
+  i18n[lc]['cuisine.heading'] = c.heading;
+  i18n[lc]['cuisine.sub']     = c.sub;
+  i18n[lc]['cuisine.btn']     = c.btn;
+}
+
 export { i18n, langNames, seoParagraphs, pdfMessages, MOTIV,access };
 
 

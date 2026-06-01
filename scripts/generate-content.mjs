@@ -3869,22 +3869,18 @@ var recipeCuisineHubHref;
    index (indexPage) and the recipes index (recipeIndex). Keeping
    it as a flat lookup avoids adding fields to LANG_CONFIGS for a
    single feature surface. */
-const CUISINE_CTA = {
-  ro: { eyebrow:'Bucătării', heading:'Explorează bucătării din toată lumea', sub:n=>`${n} bucătării internaționale, fiecare cu rețete autentice și planificator gratuit.`, btn:n=>`Vezi toate cele ${n} bucătării` },
-  en: { eyebrow:'Cuisines', heading:'Explore world cuisines', sub:n=>`${n} international cuisines, each with authentic recipes and a free meal planner.`, btn:n=>`Browse all ${n} cuisines` },
-  es: { eyebrow:'Cocinas', heading:'Explora cocinas del mundo', sub:n=>`${n} cocinas internacionales, cada una con recetas auténticas y planificador gratuito.`, btn:n=>`Ver las ${n} cocinas` },
-  fr: { eyebrow:'Cuisines', heading:'Explorez les cuisines du monde', sub:n=>`${n} cuisines internationales, chacune avec des recettes authentiques et un planificateur gratuit.`, btn:n=>`Voir les ${n} cuisines` },
-  de: { eyebrow:'Küchen', heading:'Entdecke Küchen aus aller Welt', sub:n=>`${n} internationale Küchen, jede mit authentischen Rezepten und kostenlosem Planer.`, btn:n=>`Alle ${n} Küchen ansehen` },
-  pt: { eyebrow:'Cozinhas', heading:'Explore cozinhas do mundo', sub:n=>`${n} cozinhas internacionais, cada uma com receitas autênticas e planejador gratuito.`, btn:n=>`Ver as ${n} cozinhas` },
-  ru: { eyebrow:'Кухни', heading:'Изучите кухни мира', sub:n=>`${n} мировых кухонь — подлинные рецепты и бесплатный планировщик меню.`, btn:n=>`Все ${n} кухни` },
-  ar: { eyebrow:'مطابخ', heading:'اكتشف مطابخ العالم', sub:n=>`${n} مطبخًا عالميًا، كل منها بوصفات أصيلة ومخطط وجبات مجاني.`, btn:n=>`تصفح جميع المطابخ الـ ${n}` },
-  zh: { eyebrow:'菜系', heading:'探索世界各国菜系', sub:n=>`${n}个世界菜系，每个都有正宗菜谱和免费每周饮食计划。`, btn:n=>`浏览全部${n}个菜系` },
-  ja: { eyebrow:'料理', heading:'世界の料理を探す', sub:n=>`${n}か国の世界料理。本格レシピと無料の週間ミールプランナー。`, btn:n=>`${n}か国すべて見る` },
-  hi: { eyebrow:'व्यंजन', heading:'दुनिया के व्यंजन देखें', sub:n=>`${n} वैश्विक व्यंजन, हर एक प्रामाणिक रेसिपी और मुफ्त मील प्लानर के साथ।`, btn:n=>`सभी ${n} व्यंजन देखें` },
-  tr: { eyebrow:'Mutfaklar', heading:'Dünya mutfaklarını keşfedin', sub:n=>`${n} dünya mutfağı — otantik tarifler ve ücretsiz öğün planlayıcı.`, btn:n=>`Tüm ${n} mutfağı görüntüle` },
-  it: { eyebrow:'Cucine', heading:'Esplora le cucine del mondo', sub:n=>`${n} cucine internazionali, ognuna con ricette autentiche e pianificatore gratuito.`, btn:n=>`Vedi tutte le ${n} cucine` },
-  ko: { eyebrow:'요리', heading:'세계 요리를 탐색하세요', sub:n=>`${n}개국 세계 요리 — 정통 레시피와 무료 주간 식단 플래너.`, btn:n=>`${n}개 요리 모두 보기` },
-};
+/* Sourced from i18n.js (single source of truth — see CUISINE_I18N there).
+   Kept as a {eyebrow,heading,sub(n),btn(n)} shape so existing call sites are
+   unchanged; {n} in the i18n strings is interpolated with the cuisine count. */
+const CUISINE_CTA = Object.fromEntries(Object.keys(i18n).map(lc => {
+  const g = k => (i18n[lc] && i18n[lc][k]) || i18n.en[k] || '';
+  return [lc, {
+    eyebrow: g('cuisine.eyebrow'),
+    heading: g('cuisine.heading'),
+    sub: n => g('cuisine.sub').replace('{n}', n),
+    btn: n => g('cuisine.btn').replace('{n}', n),
+  }];
+}));
 
 /* Builds tile-display data for a single recipe on a cuisine page.
    Returns { name, slug, href, img, atmosphereFallbackEmoji,
@@ -4579,10 +4575,14 @@ function cuisineHomeCard(originEnKey, recs, lc_code, recipeDir) {
   const flagIcon   = COUNTRY_FLAG[originEnKey] || '🌍';
   const originSlug = slug(originEnKey);
   const atmosphere = cuisineAtmosphere(originEnKey);
-  const dishNames  = recs.slice(0, 3).map(r =>
+  const topRecs    = recs.slice(0, 3);
+  const dishNames  = topRecs.map(r =>
     r.name?.[lc_code] || r.name?.en || r.name?.ro || ''
   ).filter(Boolean).join(' · ');
-  return `<a class="hp-cuisine-card" href="${recipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}">
+  // data-* hooks let app.js re-localize name/dishes/href at runtime (root /
+  // auto-translates to the visitor's browser language). rep-id → origin[lang]
+  // for the card name; card-ids → name[lang] for the dish line; slug → href.
+  return `<a class="hp-cuisine-card" href="${recipeDir}/${originSlug}/" data-cuisine-atmosphere="${atmosphere}" data-cuisine-rep-id="${recs[0].id}" data-cuisine-slug="${originSlug}" data-card-ids="${topRecs.map(r => r.id).join('|')}">
         <span class="hp-cuisine-card-flag" aria-hidden="true">${flagIcon}</span>
         <span class="hp-cuisine-card-body">
           <span class="hp-cuisine-card-top">
@@ -4605,7 +4605,7 @@ function cuisineHomeSectionHtml(lc_code) {
   const cardsHtml = featured.map(([enKey, recs]) =>
     cuisineHomeCard(enKey, recs, lc_code, recipeDir)
   ).join('\n      ');
-  return `<section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading">
+  return `<section class="hp-cuisine-discover" aria-labelledby="hp-cuisine-heading" data-hp-cuisine-section="1" data-cuisine-count="${eligible.length}">
     <div class="hp-cuisine-inner">
       <div class="hp-cuisine-head">
         <span class="hp-cuisine-eyebrow">${esc(ctaLang.eyebrow)}</span>
