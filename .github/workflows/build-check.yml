@@ -95,25 +95,27 @@ jobs:
           [ "$FAIL" -eq 0 ] || exit 1
 
       # 8. HTML page count
-      # Expected: ~3236 pages (Phase 5 architecture):
-      #   - 175 recipes × 14 locales        = 2450 recipe pages
-      #   - 44 country pages × 14 locales   =  616 country pages
+      # Expected: ~3670 pages (Phase 5 architecture, current corpus):
+      #   - 204 recipes × 14 locales        = 2856 recipe pages
+      #   - 46 country pages × 14 locales   =  644 country pages
       #     (under /<lc>/<recipe-prefix>/<country-slug>/)
       #   - 14 recipe-index/cuisine hubs    =   14
       #   - 8 plans × 14 locales + 14 index =  126 plan pages
       #   - 14 pricing pages                =   14
       #   - 14 SPA homes (planner)          =   14 (+ 2 root)
+      # Band is ~3670 ±130 (3550–3800): tight enough to catch an accidental
+      # page explosion, with headroom for ~9 more recipes (×14 locales).
       # If this number changes, update the thresholds here and in AGENTS.md.
-      - name: Verify HTML page count (expected ~3236)
+      - name: Verify HTML page count (expected ~3670)
         run: |
           COUNT=$(find public -name "*.html" | wc -l | tr -d ' ')
           echo "HTML pages found: $COUNT"
-          if [ "$COUNT" -lt 3200 ]; then
-            echo "ERROR: Too few pages. Expected ~3250, got $COUNT"
+          if [ "$COUNT" -lt 3550 ]; then
+            echo "ERROR: Too few pages. Expected ~3670, got $COUNT"
             echo "Content generation may have failed or recipes/cuisines were removed."
             exit 1
           fi
-          if [ "$COUNT" -gt 3400 ]; then
+          if [ "$COUNT" -gt 3800 ]; then
             echo "ERROR: Too many pages ($COUNT) -- check generate-content.mjs for duplicates"
             exit 1
           fi
@@ -121,8 +123,8 @@ jobs:
 
       # 9. Sitemap validation
       # generate-content.mjs writes the sitemap to public/sitemap.xml (not repo root).
-      # Expected: 3250 <url> entries after build.
-      - name: Validate sitemap.xml (expected ~3250 URLs)
+      # Expected: ~3670 <url> entries after build (same band as the page count).
+      - name: Validate sitemap.xml (expected ~3670 URLs)
         run: |
           if [ ! -f "public/sitemap.xml" ]; then
             echo "ERROR: public/sitemap.xml not found after build"
@@ -130,11 +132,11 @@ jobs:
           fi
           URL_COUNT=$(grep -c "<url>" public/sitemap.xml)
           echo "sitemap.xml url entries: $URL_COUNT"
-          if [ "$URL_COUNT" -lt 3200 ]; then
-            echo "ERROR: Expected ~3250 URLs, got $URL_COUNT -- sitemap may be incomplete"
+          if [ "$URL_COUNT" -lt 3550 ]; then
+            echo "ERROR: Expected ~3670 URLs, got $URL_COUNT -- sitemap may be incomplete"
             exit 1
           fi
-          if [ "$URL_COUNT" -gt 3400 ]; then
+          if [ "$URL_COUNT" -gt 3800 ]; then
             echo "ERROR: Too many URLs ($URL_COUNT) -- check for sitemap generation bug"
             exit 1
           fi
