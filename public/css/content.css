@@ -220,6 +220,16 @@
   width: 100%;
   box-shadow: 0 2px 12px rgba(0,0,0,.06);
 }
+/* Mobile: the weekly-plan table switches to a stacked card layout
+   (style.css @ max-width:640px). The desktop min-width:560px above would
+   otherwise keep the stacked cards 560px wide inside a ~342px viewport,
+   pushing the meal descriptions off-screen. Reset it so cards fit the
+   viewport and text wraps. Scoped to .planner-table; loaded after
+   style.min.css so it wins the cascade. */
+@media (max-width: 640px) {
+  .planner-table.content-table,
+  .planner-table { min-width: 0; }
+}
 .content-table thead { background: linear-gradient(90deg, #1a5620, #24712A); color: #fff; }
 .content-table thead th { font-weight: 700; font-size: .88rem; padding: .9rem 1.1rem; letter-spacing: .01em; }
 .content-table tbody tr { transition: background .12s; }
