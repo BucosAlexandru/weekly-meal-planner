@@ -225,7 +225,7 @@ const PLANS = [
       ko:'이탈리아, 그리스, 프랑스, 스페인, 모로코 요리에서 영감을 받은 한 주. 신선한 재료와 올리브 오일.'
     },
     lunches: ['Spaghetti Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
-    dinners: ['Moussaka','Ratatouille','Souvlaki','Tagine','Boeuf Bourguignon','Spanakopita','Harira'],
+    dinners: ['Moussaka','Ratatouille','Souvlaki','Chicken Tagine','Boeuf Bourguignon','Spanakopita','Harira'],
   },
   {
     id: 'asia', idEn: 'asian-fusion', emoji: '🍜',
@@ -252,7 +252,7 @@ const PLANS = [
       ko:'일본, 한국, 베트남, 태국, 인도, 인도네시아 요리를 맛보는 7일간의 여행.'
     },
     lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
-    dinners: ['Sushi','Chicken Curry','Ramen','Kung Pao Chicken','Nasi Goreng','Rendang','Tom Kha Gai'],
+    dinners: ['Sushi','Chicken Curry','Classic Japanese Ramen','Kung Pao Chicken','Nasi Goreng','Rendang','Tom Kha Gai'],
   },
   {
     id: 'buget', idEn: 'budget', emoji: '💰',
@@ -311,7 +311,7 @@ const PLANS = [
       ko:'루마니아, 조지아, 헝가리, 폴란드의 전통 요리. 따뜻한 가정식.'
     },
     lunches: ['Tripe Soup','Borscht','Beans with Sausages','Goulash','Pierogi','Lobio','Chakhokhbili'],
-    dinners: ['Chicken Kiev','Khinkali','Chicken Paprikash','Pork schnitzel','Zeama','Okroshka','Solyanka'],
+    dinners: ['Chicken Kiev','Khinkali','Chicken Paprikash','Kotlet schabowy','Zeama','Okroshka','Solyanka'],
   },
   {
     id: 'tur-mondial', idEn: 'world-tour', emoji: '🌍',
