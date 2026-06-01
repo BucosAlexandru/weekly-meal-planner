@@ -519,31 +519,31 @@ const PLANS = [
     dinners: ['Grilled Sea Bream','Sushi','Avgolemono','Sea Bass Provençal','Souvlaki','Bouillabaisse','Smørrebrød'],
   },
   {
-    id: 'duminica-familie', idEn: 'family-sunday', emoji: '🍷',
-    costRON: '220–280', costEUR: '45–58',
+    id: 'duminica-familie', idEn: 'family-sunday', emoji: '🍷', weekend: true,
+    costRON: '70–100', costEUR: '15–22',
     theme: {
-      ro:'Duminică în Familie', en:'Sunday at the Table',
-      es:'Domingo en Familia', fr:'Dimanche en Famille',
-      de:'Sonntag am Tisch', pt:'Domingo em Família',
-      ru:'Воскресенье за столом', ar:'يوم الأحد على المائدة',
-      zh:'家庭周日餐桌', ja:'家族の日曜の食卓', hi:'परिवार का रविवार',
-      tr:'Aile Sofrasında Pazar', it:'Domenica in Famiglia', ko:'가족의 일요일 식탁'
+      ro:'Weekend în familie', en:'Family Weekend',
+      es:'Fin de Semana en Familia', fr:'Week-end en Famille',
+      de:'Familien-Wochenende', pt:'Fim de Semana em Família',
+      ru:'Семейные выходные', ar:'عطلة نهاية الأسبوع العائلية',
+      zh:'家庭周末', ja:'家族の週末', hi:'परिवार का सप्ताहांत',
+      tr:'Ailecek Hafta Sonu', it:'Weekend in Famiglia', ko:'가족 주말'
     },
     desc: {
-      ro:'Friptura lentă la cuptor, lasagna pe care o aștepți toată săptămâna, paella în farfurii adânci. Mese care cer timp și înconjurate de oameni.',
-      en:'Slow roasts in the oven, the lasagna you wait for all week, paella in deep plates. Meals that ask for time and the people you love around them.',
-      es:'Asados lentos al horno, la lasaña que esperas toda la semana, paella en platos hondos. Comidas que piden tiempo y a la gente alrededor.',
-      fr:'Rôtis lents au four, la lasagne attendue toute la semaine, paella en assiette creuse. Des repas qui demandent du temps et les gens autour.',
-      de:'Langsam gebratenes aus dem Ofen, die Lasagne, auf die du die ganze Woche wartest, Paella in tiefen Tellern. Mahlzeiten, die Zeit und Menschen brauchen.',
-      pt:'Assados lentos no forno, a lasanha que se espera toda a semana, paella em pratos fundos. Refeições que pedem tempo e gente em volta.',
-      ru:'Медленное жаркое из духовки, лазанья, которую ждёшь всю неделю, паэлья в глубоких тарелках. Еда, требующая времени и близких рядом.',
-      ar:'لحوم مشوية ببطء في الفرن، اللازانيا التي تنتظرها طوال الأسبوع، البايييا في أطباق عميقة. وجبات تستحق الوقت والأحباء حولها.',
-      zh:'烤箱里的慢烤、整周期待的千层面、深盘里的西班牙海鲜饭。需要时间和爱人共享的菜肴。',
-      ja:'オーブンでじっくり焼くロースト、一週間待ったラザニア、深皿に盛るパエリャ。時間と大切な人を求める料理。',
-      hi:'ओवन में धीमी आँच पर भुना मांस, हफ्ता भर इंतज़ार की लसान्या, गहरे प्लेट में पाएया। समय और प्रियजनों की माँग करने वाले व्यंजन।',
-      tr:'Fırında ağır pişen rostolar, bütün hafta beklediğin lazanya, derin tabaklarda paella. Zaman ve sevdiklerini isteyen yemekler.',
-      it:'Arrosti lenti nel forno, la lasagna che aspetti tutta la settimana, paella nei piatti fondi. Pasti che chiedono tempo e persone intorno.',
-      ko:'오븐에서 천천히 굽는 로스트, 일주일을 기다리는 라자냐, 깊은 접시의 빠에야. 시간과 사랑하는 사람들을 부르는 요리.'
+      ro:'Două zile fără grabă: prânz și cină de sâmbătă și duminică. Friptură lentă la cuptor, lasagna, paella în farfurii adânci — mese care cer timp și oameni dragi în jur.',
+      en:'Two unhurried days: lunch and dinner for Saturday and Sunday. Slow roasts, lasagna, paella in deep plates — meals that ask for time and the people you love around the table.',
+      es:'Dos días sin prisa: almuerzo y cena de sábado y domingo. Asados lentos, lasaña, paella en platos hondos — comidas que piden tiempo y a la gente alrededor.',
+      fr:'Deux jours sans hâte : déjeuner et dîner du samedi et du dimanche. Rôtis lents, lasagne, paella en assiette creuse — des repas qui demandent du temps et les gens autour.',
+      de:'Zwei entspannte Tage: Mittag- und Abendessen für Samstag und Sonntag. Langsame Braten, Lasagne, Paella in tiefen Tellern — Mahlzeiten für Zeit und die Liebsten am Tisch.',
+      pt:'Dois dias sem pressa: almoço e jantar de sábado e domingo. Assados lentos, lasanha, paella em pratos fundos — refeições que pedem tempo e gente em volta.',
+      ru:'Два дня без спешки: обед и ужин в субботу и воскресенье. Медленное жаркое, лазанья, паэлья в глубоких тарелках — еда, требующая времени и близких рядом.',
+      ar:'يومان دون عجلة: غداء وعشاء السبت والأحد. لحوم مشوية ببطء، لازانيا، بايييا في أطباق عميقة — وجبات تستحق الوقت والأحباء حول المائدة.',
+      zh:'不慌不忙的两天：周六和周日的午餐与晚餐。慢烤、千层面、深盘海鲜饭——值得花时间、与所爱之人共享的菜肴。',
+      ja:'急がない二日間：土曜と日曜の昼食と夕食。じっくり焼くロースト、ラザニア、深皿のパエリャ。時間と大切な人を囲む料理。',
+      hi:'बिना जल्दबाज़ी के दो दिन: शनिवार और रविवार का दोपहर और रात का खाना। धीमी आँच पर भुना मांस, लसान्या, गहरी प्लेट में पाएया — समय और अपनों की माँग करने वाले व्यंजन।',
+      tr:'Acelesiz iki gün: cumartesi ve pazar için öğle ve akşam yemeği. Ağır rostolar, lazanya, derin tabaklarda paella — zaman ve sevdiklerini isteyen yemekler.',
+      it:'Due giorni senza fretta: pranzo e cena di sabato e domenica. Arrosti lenti, lasagna, paella nei piatti fondi — pasti che chiedono tempo e persone intorno.',
+      ko:'서두르지 않는 이틀: 토요일과 일요일의 점심과 저녁. 천천히 굽는 로스트, 라자냐, 깊은 접시의 빠에야 — 시간과 사랑하는 사람을 부르는 요리.'
     },
     lunches: ['Lasagna','Paella','Risotto','Quiche Lorraine','Spanakopita','Moussaka','Pasta alla Norma'],
     dinners: ['Boeuf Bourguignon','Roast Chicken Diavola','Cassoulet','Lamb Tagine','Beef Stroganoff','Coq au Vin','Lamb Stew'],
@@ -620,8 +620,10 @@ function autoPlanMeals(plan) {
       if (pool.length >= 14) break;
     }
   }
-  const names = pool.slice(0, 14).map(r => r.name?.en || r.name?.ro).filter(Boolean);
-  return { lunches: names.slice(0, 7), dinners: names.slice(7, 14) };
+  // Weekend plans cover only Saturday + Sunday → 2 lunches + 2 dinners.
+  const nDays = plan.weekend ? 2 : 7;
+  const names = pool.slice(0, nDays * 2).map(r => r.name?.en || r.name?.ro).filter(Boolean);
+  return { lunches: names.slice(0, nDays), dinners: names.slice(nDays, nDays * 2) };
 }
 
 for (const plan of PLANS) {
@@ -1869,16 +1871,38 @@ function mealSummary(rec, lc_code) {
 /* ════════════════════════════════════════════════════════════════
    GENERIC planPage — works for ALL 14 languages
    ════════════════════════════════════════════════════════════════ */
+// Weekend plans (Sat+Sun) override the "weekly" badge + section heading.
+const WEEKEND_LABELS = {
+  ro: { badge:'Meniu de weekend',        heading:'Planul de weekend' },
+  en: { badge:'Weekend menu',            heading:'Your weekend plan' },
+  es: { badge:'Menú de fin de semana',   heading:'Plan de fin de semana' },
+  fr: { badge:'Menu de week-end',        heading:'Votre plan du week-end' },
+  de: { badge:'Wochenend-Menü',          heading:'Dein Wochenendplan' },
+  pt: { badge:'Menu de fim de semana',   heading:'Plano de fim de semana' },
+  ru: { badge:'Меню на выходные',        heading:'План на выходные' },
+  ar: { badge:'قائمة نهاية الأسبوع',      heading:'خطة نهاية الأسبوع' },
+  zh: { badge:'周末菜单',                 heading:'周末计划' },
+  ja: { badge:'週末メニュー',             heading:'週末のプラン' },
+  hi: { badge:'सप्ताहांत मेनू',           heading:'सप्ताहांत की योजना' },
+  tr: { badge:'Hafta sonu menüsü',       heading:'Hafta sonu planı' },
+  it: { badge:'Menù del weekend',        heading:'Il piano del weekend' },
+  ko: { badge:'주말 메뉴',                heading:'주말 플랜' },
+};
+
 function planPage(plan, lc) {
   const src = plan.isBudget ? budgetRecipes : recipes;
   const lc_code = lc.code;
+  const wknd = plan.weekend ? (WEEKEND_LABELS[lc_code] || WEEKEND_LABELS.en) : null;
   const shopping = buildShoppingList(plan, lc_code);
   const planId = lc.planIdFn(plan);
   const theme  = plan.theme[lc_code] || plan.theme.en;
   const desc   = plan.desc[lc_code]  || plan.desc.en;
   const canonical = `${lc.dir}/${planId}/`;
 
-  const rows = lc.days.map((day, i) => {
+  // Weekend plans render only Saturday + Sunday (the last two day labels);
+  // meal indices stay 0-based against the 4-meal weekend selection.
+  const planDays = plan.weekend ? lc.days.slice(5) : lc.days;
+  const rows = planDays.map((day, i) => {
     const lName = plan.lunches[i] || '';
     const dName = plan.dinners[i] || '';
     const lRec  = src.find(r => r.name?.ro===lName || r.name?.en===lName);
@@ -1967,12 +1991,12 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <a href="/">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
       </nav>
-      <div class="content-hero-badge">${plan.emoji} ${lc.planBadge}</div>
+      <div class="content-hero-badge">${plan.emoji} ${wknd?.badge || lc.planBadge}</div>
       <h1>${esc(theme)}</h1>
       <p class="content-hero-desc">${esc(desc)}</p>
       <div class="plan-meta-chips">
         <span class="plan-chip"><i class="bi bi-people-fill"></i> ${lc.persons}</span>
-        <span class="plan-chip"><i class="bi bi-calendar-week"></i> ${lc.weeks}</span>
+        <span class="plan-chip"><i class="bi bi-calendar-week"></i> ${plan.weekend ? `${lc.days[5]}–${lc.days[6]}` : lc.weeks}</span>
         <span class="plan-chip cost-chip"><i class="bi bi-currency-exchange"></i> ~${costDisplay} ${lc.costUnit}</span>
         <span class="plan-chip"><i class="bi bi-bag-check-fill"></i> ${lc.ingredientsLabel(shopping.length)}</span>
       </div>
@@ -1989,7 +2013,7 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
 
   <section class="content-section" aria-labelledby="plan-h">
     <div class="content-section-inner">
-      <h2 id="plan-h"><span class="section-emoji">📅</span> ${lc.planHeading}</h2>
+      <h2 id="plan-h"><span class="section-emoji">📅</span> ${wknd?.heading || lc.planHeading}</h2>
       <div class="table-wrap">
         <table class="table planner-table content-table">
           <thead><tr><th>${lc.dayTh}</th><th><i class="bi bi-sun"></i> ${lc.lunchTh}</th><th><i class="bi bi-moon-stars"></i> ${lc.dinnerTh}</th></tr></thead>
