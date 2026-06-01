@@ -4631,6 +4631,20 @@ const HP_CUISINE_SEC_START = '<!-- HP_CUISINE_DISCOVER:START -->';
 const HP_CUISINE_SEC_END   = '<!-- HP_CUISINE_DISCOVER:END -->';
 const HP_CUISINE_CSS_LINK  = '<link rel="stylesheet" href="/css/cuisine-homepage.css">';
 
+// Homepage v2 premium head: warm theme-color, editorial display font
+// (Fraunces) and the premium-polish.css layer. Injected ONLY into the 15
+// SPA homepages (root + 14 locales) so the polish stays scoped to the home
+// experience and never leaks onto recipe/plan/hub pages. Idempotent via the
+// HP_PREMIUM_HEAD markers, same as the cuisine-discovery injection.
+const HP_PREMIUM_HEAD_START = '<!-- HP_PREMIUM_HEAD:START -->';
+const HP_PREMIUM_HEAD_END   = '<!-- HP_PREMIUM_HEAD:END -->';
+const HP_PREMIUM_HEAD_BLOCK = [
+  '<meta name="theme-color" content="#1d1812" media="(prefers-color-scheme: light)">',
+  '  <meta name="theme-color" content="#1d1812" media="(prefers-color-scheme: dark)">',
+  "  <link href=\"https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&display=swap\" rel=\"stylesheet\">",
+  '  <link rel="stylesheet" href="/css/premium-polish.css">'
+].join('\n');
+
 function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAfter) {
   // If markers exist anywhere → replace content between them. Preserve
   // the 2-space indentation from the initial insertion so re-runs of the
@@ -4686,6 +4700,35 @@ function injectCuisineHomeSection(lc_code, customPath) {
     }
   }
 
+  if (html !== original) {
+    fs.writeFileSync(filePath, html, 'utf8');
+    return true;
+  }
+  return false;
+}
+
+// Homepage v2 premium head (theme-color + Fraunces + premium-polish.css),
+// injected into a single SPA homepage file. Unlike the cuisine-discovery
+// injection this runs for ALL 14 locales + root, so the premium layer is
+// applied uniformly (no mixed old/new homepages). Anchored on the always-
+// present style.min.css link; idempotent via the HP_PREMIUM_HEAD markers.
+function injectPremiumHead(filePath) {
+  if (!fs.existsSync(filePath)) return false;
+  let html = fs.readFileSync(filePath, 'utf8');
+  const original = html;
+  // premium-polish.css must load LAST so its polish overrides the shared
+  // selectors in cuisine-homepage.css (.hp-cuisine-card*, .hp-cuisine-*).
+  // When the cuisine-CSS block is present (10 locales + root) anchor right
+  // after it; otherwise (de/it/ko/tr, no cuisine block) anchor on the
+  // style.min.css link. Older locales ship the self-closing XHTML form.
+  const cssAnchorSelfClose = '<link rel="stylesheet" href="/css/style.min.css" />';
+  const cssAnchorVoid      = '<link rel="stylesheet" href="/css/style.min.css">';
+  let cssAnchor;
+  if (html.includes(HP_CUISINE_CSS_END))        cssAnchor = HP_CUISINE_CSS_END;
+  else if (html.includes(cssAnchorSelfClose))   cssAnchor = cssAnchorSelfClose;
+  else                                          cssAnchor = cssAnchorVoid;
+  html = upsertBetween(html, HP_PREMIUM_HEAD_START, HP_PREMIUM_HEAD_END,
+                       HP_PREMIUM_HEAD_BLOCK, cssAnchor);
   if (html !== original) {
     fs.writeFileSync(filePath, html, 'utf8');
     return true;
@@ -4775,6 +4818,18 @@ if (injectCuisineHomeSection('ro', path.join(PUBLIC, 'index.html'))) {
 }
 console.log(`✅ ${hpInjected}/14 SPA homepages updated with cuisine discovery section`);
 console.log(`✅ Root /index.html cuisine teaser: ${rootInjected ? 'injected (RO content)' : 'no change'}`);
+
+// ── Homepage v2 premium head: injected into ALL 14 SPA homes + root ──
+// Runs AFTER the cuisine-discovery injection so premium-polish.css anchors
+// just after the cuisine-CSS block and loads LAST in <head> — its polish
+// then overrides the shared .hp-cuisine-* selectors in cuisine-homepage.css.
+// Idempotent via the HP_PREMIUM_HEAD markers.
+let premiumHeadInjected = 0;
+for (const lc_code of Object.keys(LANG_CONFIGS)) {
+  if (injectPremiumHead(path.join(PUBLIC, lc_code, 'index.html'))) premiumHeadInjected++;
+}
+if (injectPremiumHead(path.join(PUBLIC, 'index.html'))) premiumHeadInjected++;
+console.log(`✅ ${premiumHeadInjected}/15 SPA homepages got the premium head (theme-color + Fraunces + premium-polish.css)`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
