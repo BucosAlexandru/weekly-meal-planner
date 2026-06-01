@@ -2219,6 +2219,58 @@ function renderDiscovery() {
   document.getElementById('product-preview-section')?.insertAdjacentHTML('afterend', html);
 }
 
+// Re-localize the SSR cuisine-discovery section (.hp-cuisine-discover) to the
+// active language. The section is injected server-side in one fixed language
+// (Romanian on the root "/"), but the root auto-translates to the visitor's
+// browser language — leaving this block in the wrong language. We update text
+// in place using i18n.js (single source for the CTA strings) + the recipe data
+// already loaded here (origin[lang] for names, name[lang] for the dish line).
+// No-ops on pages without the section. Layout/structure/flags/counts untouched.
+function renderCuisineDiscover() {
+  const sec = document.querySelector('[data-hp-cuisine-section]');
+  if (!sec) return;
+  const byId = id => recipesMain.find(r => String(r.id) === String(id));
+  const tr = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || '';
+  const count = sec.getAttribute('data-cuisine-count') || '';
+
+  const setText = (sel, val) => { const el = sec.querySelector(sel); if (el && val) el.textContent = val; };
+  setText('.hp-cuisine-eyebrow', tr('cuisine.eyebrow'));
+  setText('#hp-cuisine-heading', tr('cuisine.heading'));
+  setText('.hp-cuisine-sub', (tr('cuisine.sub') || '').replace('{n}', count));
+
+  // Recipe-index path segment per locale (matches generate-content.mjs RECIPE_LANG).
+  const recipeSeg = {
+    ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
+    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'shipu', ja:'reshipi',
+    hi:'recipes', tr:'tarifler', it:'ricette', ko:'recipes',
+  }[lang] || 'recipes';
+  const recipeDir = `/${lang}/${recipeSeg}`;
+
+  sec.querySelectorAll('.hp-cuisine-card').forEach(card => {
+    const rep = byId(card.getAttribute('data-cuisine-rep-id'));
+    if (rep) {
+      const nameEl = card.querySelector('.hp-cuisine-card-name');
+      const localName = rep.origin?.[lang] || rep.origin?.en || rep.origin?.ro;
+      if (nameEl && localName) nameEl.textContent = localName;
+    }
+    const ids = (card.getAttribute('data-card-ids') || '').split('|').filter(Boolean);
+    const dishNames = ids.map(byId).filter(Boolean)
+      .map(r => r.name?.[lang] || r.name?.en || r.name?.ro).filter(Boolean);
+    const dishEl = card.querySelector('.hp-cuisine-card-dishes');
+    if (dishEl && dishNames.length) dishEl.textContent = dishNames.join(' · ');
+
+    const cslug = card.getAttribute('data-cuisine-slug');
+    if (cslug) card.setAttribute('href', `${recipeDir}/${cslug}/`);
+  });
+
+  const ctaBtn = sec.querySelector('.hp-cuisine-cta-btn');
+  if (ctaBtn) {
+    const btnTxt = (tr('cuisine.btn') || '').replace('{n}', count);
+    if (btnTxt) ctaBtn.textContent = btnTxt;
+    ctaBtn.setAttribute('href', `${recipeDir}/`);
+  }
+}
+
 function renderPlannerAnchor() {
   const ID = 'planner-anchor-section';
   // Remove existing so language switch re-renders with new language
@@ -2782,6 +2834,7 @@ function applyTranslations() {
   renderPremiumHero();
   renderProductPreview();
   renderDiscovery();
+  renderCuisineDiscover();
   renderPlannerAnchor();
   // 6) Paragraful SEO per limbă
   const seoContainer = document.getElementById('seo-paragraph');
