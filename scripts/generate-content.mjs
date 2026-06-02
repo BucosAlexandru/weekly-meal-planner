@@ -1982,7 +1982,7 @@ function planPage(plan, lc) {
     .replace(/-312x231\.(jpg|jpeg|png|webp)$/, '-636x393.$1')
     .replace(/\/(?:330|300|320)px-/, '/1024px-');
 
-  return `${HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr)}
+  return `${withHreflang(HEAD(lc.metaTitle(theme), desc, canonical, lc_code, dir_attr), planHreflangs(plan))}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.plan(plan))}
 <main class="content-main meal-plan-detail-main" data-plan="${plan.idEn}">
@@ -2185,7 +2185,7 @@ function indexPage(lc) {
     </a>`;
   }).join('');
 
-  return `${HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr)}
+  return `${withHreflang(HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr), planIndexHreflangs())}
 ${makeNav(lc, NAV_URL_FOR.planIndex())}
 <main class="content-main meal-plans-index-main">
   <section class="content-hero content-hero--short">
@@ -3920,7 +3920,7 @@ function recipePage(recipe, rl) {
   const breadcrumbCuisine = hubHref
     ? ` › <a href="${hubHref}">${esc(o)}</a>`
     : '';
-  return `${HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article', recipeImgUrl)}
+  return `${withHreflang(HEAD(rl.pageTitle(n), rl.pageDesc(n,o), `${rl.dir}/${rslug}/`, code, dir_attr, 'article', recipeImgUrl), recipeHreflangs(rslug))}
 <script type="application/ld+json">${jsonLd}</script>
 ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
 <main class="content-main recipe-main" data-cuisine-atmosphere="${hubAtmosphere}">
@@ -4340,7 +4340,7 @@ function recipeIndex(rl) {
     "hasPart": { "@type": "ItemList", "numberOfItems": eligible.length, "itemListElement": items }
   });
 
-  return `${HEAD(rl.indexTitle, descPlain, `${rl.dir}/`, code, dir_attr)}
+  return `${withHreflang(HEAD(rl.indexTitle, descPlain, `${rl.dir}/`, code, dir_attr), recipeIndexHreflangs())}
 ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
     <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
@@ -4661,6 +4661,53 @@ function cuisineHubHreflangs(originSlug) {
   // x-default points to English variant for international fall-through.
   lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${RECIPE_LANG.en.dir}/${originSlug}/" />`);
   return lines.join('\n');
+}
+
+// Recipe hreflang: same slug across all 14 locales (derived from name.en).
+function recipeHreflangs(rslug) {
+  const lines = Object.entries(RECIPE_LANG).map(([c, rl]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro${rl.dir}/${rslug}/" />`
+  );
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${RECIPE_LANG.en.dir}/${rslug}/" />`);
+  return lines.join('\n');
+}
+
+// Recipe-index landing (/{lc}/{recipe-prefix}/).
+function recipeIndexHreflangs() {
+  const lines = Object.entries(RECIPE_LANG).map(([c, rl]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro${rl.dir}/" />`
+  );
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${RECIPE_LANG.en.dir}/" />`);
+  return lines.join('\n');
+}
+
+// Weekly-plan page hreflang. Plan slug differs per locale (RO uses p.id,
+// other locales use p.idEn) — resolved via each locale's planIdFn.
+function planHreflangs(plan) {
+  const lines = Object.entries(LANG_CONFIGS).map(([c, lc]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro${lc.dir}/${lc.planIdFn(plan)}/" />`
+  );
+  const enLc = LANG_CONFIGS.en;
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${enLc.dir}/${enLc.planIdFn(plan)}/" />`);
+  return lines.join('\n');
+}
+
+// Weekly-plan-index landing (/{lc}/{plan-prefix}/).
+function planIndexHreflangs() {
+  const lines = Object.entries(LANG_CONFIGS).map(([c, lc]) =>
+    `  <link rel="alternate" hreflang="${c}" href="https://meal-planner.ro${lc.dir}/" />`
+  );
+  lines.unshift(`  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro${LANG_CONFIGS.en.dir}/" />`);
+  return lines.join('\n');
+}
+
+// Strip the default 3-tag hreflang block from HEAD output and inject the
+// provided locale-specific hreflang set in its place.
+function withHreflang(headHtml, hreflangBlock) {
+  return headHtml
+    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
+    .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
+    .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/, hreflangBlock);
 }
 
 function cuisineHubPage(originEnKey, recs, lc_code) {
