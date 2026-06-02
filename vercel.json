@@ -579,6 +579,846 @@
       "source": "/ko/recipes/pork-schnitzel",
       "destination": "/ko/recipes/kotlet-schabowy/",
       "permanent": true
+    },
+    {
+      "source": "/ro/retete/greek-moussaka",
+      "destination": "/ro/retete/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/greek-moussaka/",
+      "destination": "/ro/retete/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/greek-moussaka",
+      "destination": "/en/recipes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/greek-moussaka/",
+      "destination": "/en/recipes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/greek-moussaka",
+      "destination": "/es/recetas/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/greek-moussaka/",
+      "destination": "/es/recetas/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/greek-moussaka",
+      "destination": "/fr/recettes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/greek-moussaka/",
+      "destination": "/fr/recettes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/greek-moussaka",
+      "destination": "/de/rezepte/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/greek-moussaka/",
+      "destination": "/de/rezepte/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/greek-moussaka",
+      "destination": "/pt/receitas/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/greek-moussaka/",
+      "destination": "/pt/receitas/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/greek-moussaka",
+      "destination": "/ru/retsepty/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/greek-moussaka/",
+      "destination": "/ru/retsepty/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/greek-moussaka",
+      "destination": "/ar/wasafat/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/greek-moussaka/",
+      "destination": "/ar/wasafat/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/greek-moussaka",
+      "destination": "/zh/shipu/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/greek-moussaka/",
+      "destination": "/zh/shipu/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/greek-moussaka",
+      "destination": "/ja/reshipi/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/greek-moussaka/",
+      "destination": "/ja/reshipi/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/greek-moussaka",
+      "destination": "/hi/recipes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/greek-moussaka/",
+      "destination": "/hi/recipes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/greek-moussaka",
+      "destination": "/tr/tarifler/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/greek-moussaka/",
+      "destination": "/tr/tarifler/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/greek-moussaka",
+      "destination": "/it/ricette/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/greek-moussaka/",
+      "destination": "/it/ricette/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/greek-moussaka",
+      "destination": "/ko/recipes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/greek-moussaka/",
+      "destination": "/ko/recipes/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/cevapcici",
+      "destination": "/ro/retete/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/cevapcici/",
+      "destination": "/ro/retete/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/cevapcici",
+      "destination": "/en/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/cevapcici/",
+      "destination": "/en/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/cevapcici",
+      "destination": "/es/recetas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/cevapcici/",
+      "destination": "/es/recetas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/cevapcici",
+      "destination": "/fr/recettes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/cevapcici/",
+      "destination": "/fr/recettes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/cevapcici",
+      "destination": "/de/rezepte/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/cevapcici/",
+      "destination": "/de/rezepte/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/cevapcici",
+      "destination": "/pt/receitas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/cevapcici/",
+      "destination": "/pt/receitas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/cevapcici",
+      "destination": "/ru/retsepty/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/cevapcici/",
+      "destination": "/ru/retsepty/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/cevapcici",
+      "destination": "/ar/wasafat/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/cevapcici/",
+      "destination": "/ar/wasafat/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/cevapcici",
+      "destination": "/zh/shipu/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/cevapcici/",
+      "destination": "/zh/shipu/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/cevapcici",
+      "destination": "/ja/reshipi/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/cevapcici/",
+      "destination": "/ja/reshipi/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/cevapcici",
+      "destination": "/hi/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/cevapcici/",
+      "destination": "/hi/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/cevapcici",
+      "destination": "/tr/tarifler/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/cevapcici/",
+      "destination": "/tr/tarifler/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/cevapcici",
+      "destination": "/it/ricette/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/cevapcici/",
+      "destination": "/it/ricette/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/cevapcici",
+      "destination": "/ko/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/cevapcici/",
+      "destination": "/ko/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/evapi",
+      "destination": "/ro/retete/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/evapi/",
+      "destination": "/ro/retete/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/evapi",
+      "destination": "/en/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/evapi/",
+      "destination": "/en/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/evapi",
+      "destination": "/es/recetas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/evapi/",
+      "destination": "/es/recetas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/evapi",
+      "destination": "/fr/recettes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/evapi/",
+      "destination": "/fr/recettes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/evapi",
+      "destination": "/de/rezepte/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/evapi/",
+      "destination": "/de/rezepte/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/evapi",
+      "destination": "/pt/receitas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/evapi/",
+      "destination": "/pt/receitas/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/evapi",
+      "destination": "/ru/retsepty/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/evapi/",
+      "destination": "/ru/retsepty/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/evapi",
+      "destination": "/ar/wasafat/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/evapi/",
+      "destination": "/ar/wasafat/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/evapi",
+      "destination": "/zh/shipu/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/evapi/",
+      "destination": "/zh/shipu/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/evapi",
+      "destination": "/ja/reshipi/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/evapi/",
+      "destination": "/ja/reshipi/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/evapi",
+      "destination": "/hi/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/evapi/",
+      "destination": "/hi/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/evapi",
+      "destination": "/tr/tarifler/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/evapi/",
+      "destination": "/tr/tarifler/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/evapi",
+      "destination": "/it/ricette/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/evapi/",
+      "destination": "/it/ricette/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/evapi",
+      "destination": "/ko/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/evapi/",
+      "destination": "/ko/recipes/cevapi/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/koshary",
+      "destination": "/ro/retete/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/koshary/",
+      "destination": "/ro/retete/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/koshary",
+      "destination": "/en/recipes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/koshary/",
+      "destination": "/en/recipes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/koshary",
+      "destination": "/es/recetas/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/koshary/",
+      "destination": "/es/recetas/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/koshary",
+      "destination": "/fr/recettes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/koshary/",
+      "destination": "/fr/recettes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/koshary",
+      "destination": "/de/rezepte/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/koshary/",
+      "destination": "/de/rezepte/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/koshary",
+      "destination": "/pt/receitas/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/koshary/",
+      "destination": "/pt/receitas/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/koshary",
+      "destination": "/ru/retsepty/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/koshary/",
+      "destination": "/ru/retsepty/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/koshary",
+      "destination": "/ar/wasafat/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/koshary/",
+      "destination": "/ar/wasafat/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/koshary",
+      "destination": "/zh/shipu/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/koshary/",
+      "destination": "/zh/shipu/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/koshary",
+      "destination": "/ja/reshipi/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/koshary/",
+      "destination": "/ja/reshipi/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/koshary",
+      "destination": "/hi/recipes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/koshary/",
+      "destination": "/hi/recipes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/koshary",
+      "destination": "/tr/tarifler/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/koshary/",
+      "destination": "/tr/tarifler/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/koshary",
+      "destination": "/it/ricette/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/koshary/",
+      "destination": "/it/ricette/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/koshary",
+      "destination": "/ko/recipes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/koshary/",
+      "destination": "/ko/recipes/koshari/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/arepas",
+      "destination": "/ro/retete/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/arepas/",
+      "destination": "/ro/retete/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/arepas",
+      "destination": "/en/recipes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/arepas/",
+      "destination": "/en/recipes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/arepas",
+      "destination": "/es/recetas/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/arepas/",
+      "destination": "/es/recetas/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/arepas",
+      "destination": "/fr/recettes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/arepas/",
+      "destination": "/fr/recettes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/arepas",
+      "destination": "/de/rezepte/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/arepas/",
+      "destination": "/de/rezepte/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/arepas",
+      "destination": "/pt/receitas/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/arepas/",
+      "destination": "/pt/receitas/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/arepas",
+      "destination": "/ru/retsepty/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/arepas/",
+      "destination": "/ru/retsepty/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/arepas",
+      "destination": "/ar/wasafat/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/arepas/",
+      "destination": "/ar/wasafat/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/arepas",
+      "destination": "/zh/shipu/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/arepas/",
+      "destination": "/zh/shipu/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/arepas",
+      "destination": "/ja/reshipi/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/arepas/",
+      "destination": "/ja/reshipi/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/arepas",
+      "destination": "/hi/recipes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/arepas/",
+      "destination": "/hi/recipes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/arepas",
+      "destination": "/tr/tarifler/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/arepas/",
+      "destination": "/tr/tarifler/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/arepas",
+      "destination": "/it/ricette/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/arepas/",
+      "destination": "/it/ricette/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/arepas",
+      "destination": "/ko/recipes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/arepas/",
+      "destination": "/ko/recipes/arepa/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/flemish-stew",
+      "destination": "/ro/retete/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/flemish-stew/",
+      "destination": "/ro/retete/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/flemish-stew",
+      "destination": "/en/recipes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/flemish-stew/",
+      "destination": "/en/recipes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/flemish-stew",
+      "destination": "/es/recetas/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/flemish-stew/",
+      "destination": "/es/recetas/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/flemish-stew",
+      "destination": "/fr/recettes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/flemish-stew/",
+      "destination": "/fr/recettes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/flemish-stew",
+      "destination": "/de/rezepte/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/flemish-stew/",
+      "destination": "/de/rezepte/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/flemish-stew",
+      "destination": "/pt/receitas/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/flemish-stew/",
+      "destination": "/pt/receitas/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/flemish-stew",
+      "destination": "/ru/retsepty/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/retsepty/flemish-stew/",
+      "destination": "/ru/retsepty/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/flemish-stew",
+      "destination": "/ar/wasafat/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/flemish-stew/",
+      "destination": "/ar/wasafat/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/flemish-stew",
+      "destination": "/zh/shipu/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/flemish-stew/",
+      "destination": "/zh/shipu/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/flemish-stew",
+      "destination": "/ja/reshipi/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/flemish-stew/",
+      "destination": "/ja/reshipi/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/flemish-stew",
+      "destination": "/hi/recipes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/recipes/flemish-stew/",
+      "destination": "/hi/recipes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/flemish-stew",
+      "destination": "/tr/tarifler/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/flemish-stew/",
+      "destination": "/tr/tarifler/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/flemish-stew",
+      "destination": "/it/ricette/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/flemish-stew/",
+      "destination": "/it/ricette/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/flemish-stew",
+      "destination": "/ko/recipes/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/flemish-stew/",
+      "destination": "/ko/recipes/stoofvlees/",
+      "permanent": true
     }
   ]
 }
