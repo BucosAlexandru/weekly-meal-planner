@@ -204,6 +204,33 @@ const CATEGORY_RULES = [
 /* Canonical name normalization. Maps the messy extracted name to a single
    clean shopping label. Lookup is case-insensitive on the lowercased input. */
 const CANON_RULES = [
+  // ── User-reported leakage normalisations (round 4) ──────────────────────
+  // Patterns where the raw recipe phrasing wasn't being canonicalised, so
+  // non-EN PDFs surfaced English strings in the shopping list. Each rule
+  // here removes a specific leak observed in production:
+  //   * 'Flat-leaf parsley leaves' → 'fresh parsley' (variant phrasing)
+  //   * 'Blanched/Sliced/Chopped almonds' → 'almonds' (prep adjective)
+  //   * 'Walnut halves' / 'Chopped walnuts' → 'walnuts'
+  //   * 'Seeds of 1 pomegranate' / 'Pomegranate seeds' → 'pomegranate'
+  //   * 'Pork' → bare cut alone needs a canonical too (added to ITEM_LABELS)
+  //   * 'Cream cheese' → existed in CATEGORY_RULES, now also canonical
+  //   * 'Lasagna sheets' / 'Lasagne sheets' → 'lasagna sheets' (new canon)
+  //   * 'Peach(es)' → 'peach' (new canon)
+  //   * 'Tomato sauce' → 'tomato sauce' (new canon, kept distinct from passata)
+  [/^flat[- ]?leaf parsley(\s+leaves)?$/, 'fresh parsley'],
+  [/^(italian\s+)?parsley\s+leaves$/, 'fresh parsley'],
+  [/^(blanched|sliced|chopped|flaked|whole|raw|skin-?on)\s+almonds?$/, 'almonds'],
+  [/^almonds?\s+(blanched|sliced|chopped|flaked|whole|skin[- ]?on)$/, 'almonds'],
+  [/^walnut\s+(halves|pieces|kernels)$/, 'walnuts'],
+  [/^(chopped|crushed|toasted|whole)\s+walnuts?$/, 'walnuts'],
+  [/^(seeds?\s+of\s+\d+\s+|seeds?\s+of\s+)?pomegranate(s)?$/, 'pomegranate'],
+  [/^pomegranate\s+(seeds?|arils?)$/, 'pomegranate'],
+  [/^lasagn[ae]\s+sheets$/, 'lasagna sheets'],
+  [/^peach(es)?$/, 'peach'],
+  [/^(ripe\s+)?peach(es)?$/, 'peach'],
+  [/^pork$/, 'pork'],
+  [/^cream\s+cheese$/, 'cream cheese'],
+  [/^tomato\s+sauce$/, 'tomato sauce'],
   // Compound recipe-ingredient phrases ("Coriander and flat-leaf parsley",
   // "Grated parmigiano and extra-virgin olive oil") that recipe authors
   // write as a single string but should canonicalize to a translatable
@@ -507,6 +534,10 @@ const ITEM_LABELS = {
     'white wine': 'Vin alb', 'red wine': 'Vin roșu', 'cognac': 'Coniac',
     'dry white wine': 'Vin alb sec', 'dry red wine': 'Vin roșu sec',
     'bell peppers': 'Ardei gras',
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    'pork':'Porc', 'cream cheese':'Brânză cremă', 'peach':'Piersică', 'pomegranate':'Rodie', 'lasagna sheets':'Foi de lasagna', 'tomato sauce':'Sos de roșii', 'lime juice':'Suc de lime', 'lemon juice':'Suc de lămâie',
   },
   fr: {
     // Vegetables
@@ -601,6 +632,10 @@ const ITEM_LABELS = {
     'dark chocolate': 'Chocolat noir', 'cocoa powder': 'Cacao en poudre',
     'aonori': 'Aonori', 'katsuobushi': 'Katsuobushi', 'nori': 'Nori',
     'kecap manis': 'Kecap manis',
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    'pork':'Porc', 'cream cheese':'Fromage à la crème', 'peach':'Pêche', 'pomegranate':'Grenade', 'lasagna sheets':'Pâtes à lasagne', 'tomato sauce':'Sauce tomate', 'lime juice':'Jus de citron vert', 'lemon juice':'Jus de citron',
   },
   /* German / Deutsch — covers the top ~80 most-frequent shopping items. */
   de: {
@@ -654,6 +689,10 @@ const ITEM_LABELS = {
     'dark chocolate':'Zartbitterschokolade','cocoa powder':'Kakaopulver',
     'aonori':'Aonori','katsuobushi':'Katsuobushi','nori':'Nori','kecap manis':'Kecap manis',
     'pearl onions':'Perlzwiebeln','preserved lemon':'Salzzitrone','fresh herbs':'Frische Kräuter',
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    'pork':'Schweinefleisch', 'cream cheese':'Frischkäse', 'peach':'Pfirsich', 'pomegranate':'Granatapfel', 'lasagna sheets':'Lasagneplatten', 'tomato sauce':'Tomatensoße', 'lime juice':'Limettensaft', 'lemon juice':'Zitronensaft',
   },
   /* Spanish / Español */
   es: {
@@ -703,6 +742,10 @@ const ITEM_LABELS = {
     'dark chocolate':'Chocolate negro','cocoa powder':'Cacao en polvo',
     'aonori':'Aonori','katsuobushi':'Katsuobushi','nori':'Nori','kecap manis':'Kecap manis',
     'pearl onions':'Cebollitas francesas','preserved lemon':'Limón encurtido','fresh herbs':'Hierbas frescas',
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    'pork':'Cerdo', 'cream cheese':'Queso crema', 'peach':'Melocotón', 'pomegranate':'Granada', 'lasagna sheets':'Láminas de lasaña', 'tomato sauce':'Salsa de tomate', 'lime juice':'Zumo de lima', 'lemon juice':'Zumo de limón',
   },
   /* Italian / Italiano */
   it: {
@@ -752,6 +795,10 @@ const ITEM_LABELS = {
     'dark chocolate':'Cioccolato fondente','cocoa powder':'Cacao in polvere',
     'aonori':'Aonori','katsuobushi':'Katsuobushi','nori':'Nori','kecap manis':'Kecap manis',
     'pearl onions':'Cipolline borettane','preserved lemon':'Limone in salamoia','fresh herbs':'Erbe aromatiche',
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    'pork':'Maiale', 'cream cheese':'Formaggio cremoso', 'peach':'Pesca', 'pomegranate':'Melograno', 'lasagna sheets':'Sfoglie di lasagna', 'tomato sauce':'Salsa di pomodoro', 'lime juice':'Succo di lime', 'lemon juice':'Succo di limone',
   },
   /* Portuguese / Português */
   pt: {
@@ -801,6 +848,10 @@ const ITEM_LABELS = {
     'dark chocolate':'Chocolate negro','cocoa powder':'Cacau em pó',
     'aonori':'Aonori','katsuobushi':'Katsuobushi','nori':'Nori','kecap manis':'Kecap manis',
     'pearl onions':'Cebolinhas pérola','preserved lemon':'Limão em conserva','fresh herbs':'Ervas aromáticas',
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    'pork':'Porco', 'cream cheese':'Cream cheese', 'peach':'Pêssego', 'pomegranate':'Romã', 'lasagna sheets':'Folhas de lasanha', 'tomato sauce':'Molho de tomate', 'lime juice':'Suco de lima', 'lemon juice':'Suco de limão',
   },
   /* Russian / Русский */
   ru: {
@@ -854,6 +905,10 @@ const ITEM_LABELS = {
     "dark chocolate":"Тёмный шоколад","cocoa powder":"Какао-порошок",
     "aonori":"Аонори","katsuobushi":"Кацуобуси","nori":"Нори","kecap manis":"Кечап манис",
     "pearl onions":"Лук-севок","preserved lemon":"Солёный лимон","fresh herbs":"Свежая зелень",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"Свинина", "cream cheese":"Сливочный сыр", "peach":"Персик", "pomegranate":"Гранат", "lasagna sheets":"Листы лазаньи", "tomato sauce":"Томатный соус", "lime juice":"Сок лайма", "lemon juice":"Лимонный сок",
   },
   /* Arabic / العربية */
   ar: {
@@ -907,6 +962,10 @@ const ITEM_LABELS = {
     "dark chocolate":"شوكولاتة داكنة","cocoa powder":"مسحوق كاكاو",
     "aonori":"أونوري","katsuobushi":"كاتسوبوشي","nori":"نوري","kecap manis":"كيكاب مانيس",
     "pearl onions":"بصل لؤلؤي","preserved lemon":"ليمون مخلل","fresh herbs":"أعشاب طازجة",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"لحم خنزير", "cream cheese":"جبنة كريمية", "peach":"خوخ", "pomegranate":"رمان", "lasagna sheets":"شرائح اللازانيا", "tomato sauce":"صلصة الطماطم", "lime juice":"عصير ليمون أخضر", "lemon juice":"عصير الليمون",
   },
   /* Turkish / Türkçe */
   tr: {
@@ -960,6 +1019,10 @@ const ITEM_LABELS = {
     "dark chocolate":"Bitter çikolata","cocoa powder":"Kakao",
     "aonori":"Aonori","katsuobushi":"Katsuobushi","nori":"Nori","kecap manis":"Kecap manis",
     "pearl onions":"Arpacık soğanı (inci)","preserved lemon":"Tuzlanmış limon","fresh herbs":"Taze otlar",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"Domuz eti", "cream cheese":"Krem peynir", "peach":"Şeftali", "pomegranate":"Nar", "lasagna sheets":"Lazanya yufkası", "tomato sauce":"Domates sosu", "lime juice":"Lime suyu", "lemon juice":"Limon suyu",
   },
   /* Chinese Simplified / zh */
   zh: {
@@ -1146,6 +1209,10 @@ const ITEM_LABELS = {
     "pearl onions": "珍珠洋葱",
     "preserved lemon": "腌柠檬",
     "fresh herbs": "新鲜香草",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"猪肉", "cream cheese":"奶油芝士", "peach":"桃子", "pomegranate":"石榴", "lasagna sheets":"千层面皮", "tomato sauce":"番茄酱", "lime juice":"青柠汁", "lemon juice":"柠檬汁",
   },
   /* Japanese / ja */
   ja: {
@@ -1332,6 +1399,10 @@ const ITEM_LABELS = {
     "pearl onions": "ペコロス",
     "preserved lemon": "塩漬けレモン",
     "fresh herbs": "生ハーブ",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"豚肉", "cream cheese":"クリームチーズ", "peach":"桃", "pomegranate":"ザクロ", "lasagna sheets":"ラザニアシート", "tomato sauce":"トマトソース", "lime juice":"ライムジュース", "lemon juice":"レモン汁",
   },
   /* Hindi / hi */
   hi: {
@@ -1518,6 +1589,10 @@ const ITEM_LABELS = {
     "pearl onions": "मोती प्याज़",
     "preserved lemon": "परिरक्षित नींबू",
     "fresh herbs": "ताज़ी जड़ी-बूटियाँ",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"पोर्क", "cream cheese":"क्रीम चीज़", "peach":"आड़ू", "pomegranate":"अनार", "lasagna sheets":"लज़ान्या शीट", "tomato sauce":"टमाटर सॉस", "lime juice":"नींबू का रस", "lemon juice":"नींबू का रस",
   },
   /* Korean / ko */
   ko: {
@@ -1704,6 +1779,10 @@ const ITEM_LABELS = {
     "pearl onions": "펄 양파",
     "preserved lemon": "절인 레몬",
     "fresh herbs": "신선한 허브",
+    // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
+    // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
+    // English in non-EN PDFs because they had no canonical entry.
+    "pork":"돼지고기", "cream cheese":"크림 치즈", "peach":"복숭아", "pomegranate":"석류", "lasagna sheets":"라자냐 시트", "tomato sauce":"토마토 소스", "lime juice":"라임 즙", "lemon juice":"레몬 즙",
   },
 };
 

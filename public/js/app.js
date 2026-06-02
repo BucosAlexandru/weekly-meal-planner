@@ -740,7 +740,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // pages, which routes to /?autoplan=<id>).
   // To return to the default after an explicit opt-in/out:
   //   localStorage.removeItem('pdfV2')
-  const PDF_EXPORT_DEFAULT_ENGINE = 'legacy';  // 'legacy' | 'pdfv2'
+  const PDF_EXPORT_DEFAULT_ENGINE = 'pdfv2';  // 'legacy' | 'pdfv2'
 
   try {
     const _qs = new URLSearchParams(window.location.search || '');
@@ -749,8 +749,16 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (_flag === '0') localStorage.setItem('pdfV2', '0');
   } catch (_) {}
 
+  // Locales that should NEVER use pdfv2 because of an unresolved upstream
+  // bug in @react-pdf/textkit's bidi reordering (issue tracked under
+  // jsx-pdf/issues/2820). Arabic crashes mid-render; we fall back to the
+  // legacy html2pdf path so AR users still get a PDF, just with the older
+  // visual style. Revisit when textkit ≥ 6.4 is released.
+  const PDFV2_BLOCKED_LANGS = new Set(['ar']);
+
   function isPdfV2Enabled() {
     try {
+      if (PDFV2_BLOCKED_LANGS.has(typeof lang === 'string' ? lang : '')) return false;
       const qs = new URLSearchParams(window.location.search || '');
       const urlFlag = qs.get('pdfv2');
       if (urlFlag === '1') return true;
@@ -802,9 +810,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Reuses the same lookup logic as generatePDFimpact() (collectMeals +
   // window.recipes + buildShoppingFromRawIngredients) so legacy and pdfv2
   // see exactly the same data — only the rendering differs.
-  // Phase 1 endpoint is EN-only, so we emit English names + day labels and
-  // pass EN ingredient strings to the grouping engine. The user's display
-  // locale doesn't change the PDF output.
+  //
+  // Every field that the user can see in the resulting PDF is emitted in
+  // the active locale: recipe names, ingredient previews, shopping list
+  // groups (engine localises), day abbreviations, chrome labels. EN
+  // remains the safety fallback for any recipe that lacks a translation.
   function buildPdfV2Payload() {
     const isPremium    = !!window.hasUnlimited;
     const allMeals     = collectMeals();
@@ -838,8 +848,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function mealPayload(mealText) {
       if (!mealText) return null;
       const r = findRecipe(mealText);
-      const displayName = r?.name?.en || r?.name?.ro || extractRecipeName(mealText);
-      const rawIngr = r?.ingredients?.en || r?.ingredients?.ro || [];
+      // Resolve recipe name + ingredient list in the active locale, falling
+      // back to EN then RO. Without this, an Italian user generates a PDF
+      // with English ingredient previews under Italian chrome — labels
+      // ("INGREDIENTI") localised but data ("Chicken thighs · Garlic
+      // cloves") still in English.
+      const displayName = r?.name?.[lang] || r?.name?.en || r?.name?.ro
+                          || extractRecipeName(mealText);
+      const rawIngr = r?.ingredients?.[lang] || r?.ingredients?.en
+                      || r?.ingredients?.ro || [];
       return {
         name: displayName,
         time: r?.time || null,
@@ -849,9 +866,19 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 
-    const EN_DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    // Localized 3-letter weekday labels — used as the day header inside
+    // the PDF. We derive them from the i18n.weekdays array (which is the
+    // full weekday name list for the active locale) so the server-side
+    // renderer doesn't need its own 14-locale table.
+    const lcStrings = i18n[lang] || i18n.en || {};
+    const fullDays = Array.isArray(lcStrings.weekdays) && lcStrings.weekdays.length === 7
+      ? lcStrings.weekdays
+      : ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const abbrev = (s) => String(s || '').trim().slice(0, 3);
+    const localizedDays = fullDays.map(abbrev);
+
     const days = visibleMeals.map((m, i) => ({
-      day: EN_DAYS[i] || `Day ${i + 1}`,
+      day: localizedDays[i] || `Day ${i + 1}`,
       lunch: mealPayload(m.lunch),
       dinner: mealPayload(m.dinner),
     })).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
@@ -864,15 +891,191 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
     let shoppingGroups = [];
-    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, 'en'); }
+    // Build the shopping list against the active locale so the rendered
+    // group/item labels match the rest of the PDF (was hard-coded 'en').
+    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, lang); }
     catch (_) { shoppingGroups = []; }
 
+    // Locked days notice — non-premium users only see days 1-freeDays.
+    // Pass the names of the remaining locked days so the server can render
+    // a localized "🔒 Days N–M are Premium" notice instead of silently
+    // dropping the rest of the plan.
+    const locked = !isPremium && allMeals.length > freeDays
+      ? {
+          fromDay: localizedDays[freeDays] || `Day ${freeDays + 1}`,
+          toDay:   localizedDays[allMeals.length - 1] || `Day ${allMeals.length}`,
+          title:   t('pdf.locked.title'),
+          sub:     t('pdf.locked.sub'),
+          cta:     t('pdf.locked.cta'),
+        }
+      : null;
+
+    // Localized week label. Uses Intl with the locale's BCP-47 tag so e.g.
+    // RO renders "Săptămâna 29 mai 2026" rather than the EN form.
     const today = new Date();
+    const localeMap = {
+      ro:'ro-RO', en:'en-GB', es:'es-ES', fr:'fr-FR', de:'de-DE', pt:'pt-PT',
+      ru:'ru-RU', ar:'ar-SA', zh:'zh-CN', ja:'ja-JP', hi:'hi-IN', tr:'tr-TR',
+      it:'it-IT', ko:'ko-KR',
+    };
+    const dateStr = today.toLocaleDateString(localeMap[lang] || 'en-GB', {
+      day: 'numeric', month: 'long', year: 'numeric',
+    });
+    const WEEK_OF = {
+      ro:'Săptămâna', en:'Week of', es:'Semana del', fr:'Semaine du',
+      de:'Woche vom', pt:'Semana de', ru:'Неделя с', ar:'أسبوع', zh:'本周',
+      ja:'今週', hi:'सप्ताह', tr:'Hafta', it:'Settimana del', ko:'주간',
+    };
+
+    // Localized labels shipped IN the payload so the server-side renderer
+    // is locale-agnostic (no need to duplicate the 14-language i18n table
+    // server-side). Server falls back to the EN string if a key is missing.
+    //
+    // The strings below intentionally short — they're letter-spaced badge
+    // labels in the PDF, not paragraph copy. The table covers all 14 site
+    // locales; missing translations fall back to EN.
+    const PDF_LABELS = {
+      ro: {
+        eyebrow:'GENERAT AUTOMAT', sectionPlan:'Săptămâna, zi cu zi',
+        lunch:'PRÂNZ', dinner:'CINĂ',
+        stats:{ days:'ZILE', meals:'MESE', avg:'MED', cuisines:'BUCĂTĂRII', groups:'GRUPE' },
+        mealsSuffix:'mese', minTotal:'min total', moreSuffix:'altele',
+        tipLabel:'SFAT', tipText:'Ingredientele sunt grupate pe rafturi — bifează pe măsură ce cumperi. Produsele proaspete și carnea la final pentru a păstra prospețimea.',
+        pageOf:'Pagina {n} din {t}', servingsWord:'porții',
+      },
+      en: {
+        eyebrow:'AUTO-GENERATED', sectionPlan:'The week, day by day',
+        lunch:'LUNCH', dinner:'DINNER',
+        stats:{ days:'DAYS', meals:'MEALS', avg:'AVG', cuisines:'CUISINES', groups:'GROUPS' },
+        mealsSuffix:'meals', minTotal:'min total', moreSuffix:'more',
+        tipLabel:'PRO TIP', tipText:'Items grouped by aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.',
+        pageOf:'Page {n} of {t}', servingsWord:'servings',
+      },
+      es: {
+        eyebrow:'GENERADO AUTO', sectionPlan:'La semana, día a día',
+        lunch:'ALMUERZO', dinner:'CENA',
+        stats:{ days:'DÍAS', meals:'COMIDAS', avg:'MED', cuisines:'COCINAS', groups:'GRUPOS' },
+        mealsSuffix:'comidas', minTotal:'min total', moreSuffix:'más',
+        tipLabel:'CONSEJO', tipText:'Ingredientes agrupados por pasillo — marca al comprar. Productos frescos y proteínas al final mantienen todo fresco.',
+        pageOf:'Página {n} de {t}', servingsWord:'raciones',
+      },
+      fr: {
+        eyebrow:'GÉNÉRÉ AUTO', sectionPlan:'La semaine, jour par jour',
+        lunch:'DÉJEUNER', dinner:'DÎNER',
+        stats:{ days:'JOURS', meals:'REPAS', avg:'MOY', cuisines:'CUISINES', groups:'GROUPES' },
+        mealsSuffix:'repas', minTotal:'min total', moreSuffix:'autres',
+        tipLabel:'ASTUCE', tipText:'Ingrédients regroupés par rayon — cochez en faisant les courses. Légumes frais et protéines en dernier pour la fraîcheur.',
+        pageOf:'Page {n} sur {t}', servingsWord:'portions',
+      },
+      de: {
+        eyebrow:'AUTO-ERSTELLT', sectionPlan:'Die Woche, Tag für Tag',
+        lunch:'MITTAG', dinner:'ABEND',
+        stats:{ days:'TAGE', meals:'MAHLZ.', avg:'Ø', cuisines:'KÜCHEN', groups:'GRUPPEN' },
+        mealsSuffix:'Mahlzeiten', minTotal:'Min gesamt', moreSuffix:'weitere',
+        tipLabel:'TIPP', tipText:'Zutaten nach Supermarkt-Gang gruppiert — beim Einkauf abhaken. Frisches und Eiweiß zuletzt für maximale Frische.',
+        pageOf:'Seite {n} von {t}', servingsWord:'Portionen',
+      },
+      pt: {
+        eyebrow:'GERADO AUTO', sectionPlan:'A semana, dia a dia',
+        lunch:'ALMOÇO', dinner:'JANTAR',
+        stats:{ days:'DIAS', meals:'REFEIÇÕES', avg:'MED', cuisines:'COZINHAS', groups:'GRUPOS' },
+        mealsSuffix:'refeições', minTotal:'min total', moreSuffix:'mais',
+        tipLabel:'DICA', tipText:'Ingredientes agrupados por corredor — marque ao comprar. Frescos e proteínas por último para máxima frescura.',
+        pageOf:'Página {n} de {t}', servingsWord:'porções',
+      },
+      ru: {
+        eyebrow:'АВТО-ГЕНЕРАЦИЯ', sectionPlan:'Неделя, день за днём',
+        lunch:'ОБЕД', dinner:'УЖИН',
+        stats:{ days:'ДНИ', meals:'БЛЮДА', avg:'СРЕД', cuisines:'КУХНИ', groups:'ГРУППЫ' },
+        mealsSuffix:'блюд', minTotal:'мин всего', moreSuffix:'ещё',
+        tipLabel:'СОВЕТ', tipText:'Продукты сгруппированы по отделам — отмечайте при покупке. Свежие и белки в конце для максимальной свежести.',
+        pageOf:'Стр. {n} из {t}', servingsWord:'порций',
+      },
+      it: {
+        eyebrow:'AUTO-GENERATO', sectionPlan:'La settimana, giorno per giorno',
+        lunch:'PRANZO', dinner:'CENA',
+        stats:{ days:'GIORNI', meals:'PASTI', avg:'MED', cuisines:'CUCINE', groups:'GRUPPI' },
+        mealsSuffix:'pasti', minTotal:'min totali', moreSuffix:'altri',
+        tipLabel:'CONSIGLIO', tipText:'Ingredienti raggruppati per corsia — spunta mentre fai la spesa. Freschi e proteine per ultimi per la massima freschezza.',
+        pageOf:'Pagina {n} di {t}', servingsWord:'porzioni',
+      },
+      tr: {
+        eyebrow:'OTOMATİK', sectionPlan:'Hafta, gün gün',
+        lunch:'ÖĞLE', dinner:'AKŞAM',
+        stats:{ days:'GÜN', meals:'YEMEK', avg:'ORT', cuisines:'MUTFAK', groups:'GRUP' },
+        mealsSuffix:'yemek', minTotal:'dk toplam', moreSuffix:'daha',
+        tipLabel:'İPUCU', tipText:'Malzemeler reyon bazlı gruplandı — alışveriş ederken işaretle. Taze ürünler ve protein en son için maksimum tazelik.',
+        pageOf:'Sayfa {n} / {t}', servingsWord:'porsiyon',
+      },
+      ar: {
+        eyebrow:'مُنشأ تلقائيًا', sectionPlan:'الأسبوع، يوم بيوم',
+        lunch:'الغداء', dinner:'العشاء',
+        stats:{ days:'أيام', meals:'وجبات', avg:'متوسط', cuisines:'مطابخ', groups:'مجموعات' },
+        mealsSuffix:'وجبات', minTotal:'دقيقة إجمالًا', moreSuffix:'أخرى',
+        tipLabel:'نصيحة', tipText:'المكونات مُجمَّعة حسب رواق المتجر — اشطب أثناء التسوق. الطازج والبروتين في الأخير للحفاظ على النضارة.',
+        pageOf:'صفحة {n} من {t}', servingsWord:'حصص',
+      },
+      zh: {
+        eyebrow:'自动生成', sectionPlan:'一周食谱',
+        lunch:'午餐', dinner:'晚餐',
+        stats:{ days:'天', meals:'餐', avg:'均', cuisines:'菜系', groups:'类' },
+        mealsSuffix:'餐', minTotal:'分钟总计', moreSuffix:'更多',
+        tipLabel:'小贴士', tipText:'食材按超市货架分组——边购物边打勾。生鲜和蛋白类最后买，保证新鲜。',
+        pageOf:'第 {n} / {t} 页', servingsWord:'份',
+      },
+      ja: {
+        eyebrow:'自動生成', sectionPlan:'今週の献立',
+        lunch:'昼食', dinner:'夕食',
+        stats:{ days:'日', meals:'食', avg:'平均', cuisines:'料理', groups:'分類' },
+        mealsSuffix:'食', minTotal:'分合計', moreSuffix:'その他',
+        tipLabel:'ヒント', tipText:'食材は売場別にグループ化。買い物中にチェック。生鮮品とタンパク質は最後で鮮度キープ。',
+        pageOf:'{n} / {t} ページ', servingsWord:'人分',
+      },
+      hi: {
+        eyebrow:'स्वतः-निर्मित', sectionPlan:'सप्ताह, दिन-प्रतिदिन',
+        lunch:'दोपहर', dinner:'रात्रि',
+        stats:{ days:'दिन', meals:'भोजन', avg:'औसत', cuisines:'व्यंजन', groups:'समूह' },
+        mealsSuffix:'भोजन', minTotal:'मि कुल', moreSuffix:'और',
+        tipLabel:'सुझाव', tipText:'सामग्री अलमारी के अनुसार समूहित — खरीदते समय निशान लगाएँ। ताज़ा सामान और प्रोटीन अंत में लें ताकि सब ताज़ा रहे।',
+        pageOf:'पृष्ठ {n} / {t}', servingsWord:'सर्विंग',
+      },
+      ko: {
+        eyebrow:'자동 생성', sectionPlan:'한 주 식단',
+        lunch:'점심', dinner:'저녁',
+        stats:{ days:'일', meals:'식사', avg:'평균', cuisines:'요리', groups:'그룹' },
+        mealsSuffix:'식', minTotal:'분 합계', moreSuffix:'개 더',
+        tipLabel:'팁', tipText:'재료는 매대별로 그룹화 — 장보면서 체크. 신선식품과 단백질은 마지막에 담으면 신선도 유지.',
+        pageOf:'{n} / {t} 페이지', servingsWord:'인분',
+      },
+    };
+    const L = PDF_LABELS[lang] || PDF_LABELS.en;
+    const labels = {
+      eyebrow:        L.eyebrow,
+      sectionPlan:    L.sectionPlan,
+      sectionShop:    lcStrings.shoppingList || 'Shopping list',
+      lunch:          L.lunch,
+      dinner:         L.dinner,
+      ingredients:    lcStrings['col.ingredients']
+                        ? lcStrings['col.ingredients'].toUpperCase()
+                        : 'INGREDIENTS',
+      stats:          L.stats,
+      mealsSuffix:    L.mealsSuffix,
+      minTotal:       L.minTotal,
+      moreSuffix:     L.moreSuffix,
+      tipLabel:       L.tipLabel,
+      tipText:        L.tipText,
+      pageOf:         L.pageOf,
+      servingsWord:   L.servingsWord,
+    };
+
     return {
-      title:     'Weekly meal plan',
-      weekLabel: `Week of ${today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+      lang,
+      title:     lcStrings.title || 'Weekly Meal Plan',
+      weekLabel: `${WEEK_OF[lang] || WEEK_OF.en} ${dateStr}`,
       days,
       shoppingGroups,
+      labels,
+      locked,
     };
   }
 
@@ -1610,8 +1813,17 @@ function paginateCleanNode(root){
       const bar = document.getElementById('auto-menu-bar');
       if (bar) bar.appendChild(costBar);
     }
-    const ron = COST_RON[filterId] || 200;
-    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${i18n[lang]?.costEstimate || 'Cost estimat'}: ${formatCost(ron)}</strong> / ${i18n[lang]?.perWeek || 'săptămână · 2 persoane'}`;
+    const weeklyRon = COST_RON[filterId] || 200;
+    const mode = window._planMode || 'week';
+    // 14 meals/week → 1 meal ≈ 1/14, 1 day (lunch+dinner) ≈ 1/7
+    const ron = mode === 'meal' ? Math.round(weeklyRon / 14)
+              : mode === 'day'  ? Math.round(weeklyRon / 7)
+              : weeklyRon;
+    const lbls = i18n[lang] || i18n.en || {};
+    const unit = mode === 'meal' ? (lbls.perMeal || 'meal')
+               : mode === 'day'  ? (lbls.perDay  || 'day · 2 people')
+               : (lbls.perWeek || 'săptămână · 2 persoane');
+    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${lbls.costEstimate || 'Cost estimat'}: ${formatCost(ron)}</strong> / ${unit}`;
     costBar.style.display = 'flex';
   }
 
@@ -1637,16 +1849,22 @@ function paginateCleanNode(root){
         updateAutoMenuBtn();
         updateShoppingList();
         updateExportSectionVisibility();
+        showCostEstimate(window._activeFilter);
       });
     });
   }
 
   function updateAutoMenuBtn() {
     const autoBtn = document.getElementById('auto-menu-btn');
-    if (autoBtn) {
-      const mode = window._planMode;
-      const icon = mode === 'meal' ? '✨' : '<i class="bi bi-shuffle" aria-hidden="true"></i>';
-      autoBtn.innerHTML = `${icon} ${t(`mode.btn.${mode}`)}`;
+    if (!autoBtn) return;
+    const mode = window._planMode;
+    const label = t(`mode.btn.${mode}`);
+    // For 'meal' the i18n label already starts with ✨ (Surprise me); for the
+    // other modes prepend the shuffle icon. Avoids the duplicate-sparkle bug.
+    if (mode === 'meal') {
+      autoBtn.innerHTML = label;
+    } else {
+      autoBtn.innerHTML = `<i class="bi bi-shuffle" aria-hidden="true"></i> ${label}`;
     }
   }
 
@@ -1665,6 +1883,19 @@ function paginateCleanNode(root){
       chipRow.className = 'filter-chip-row';
       bar.insertBefore(chipRow, bar.firstChild);
     }
+
+    // ── Eyebrow header (premium polish) ───────────────────────
+    let header = document.getElementById('auto-menu-header');
+    if (!header) {
+      header = document.createElement('div');
+      header.id = 'auto-menu-header';
+      header.className = 'auto-menu-header';
+      bar.insertBefore(header, bar.firstChild);
+    }
+    const headerLabel = t('autoMenu.header') !== 'autoMenu.header'
+      ? t('autoMenu.header')
+      : (lang === 'ro' ? 'Generator inteligent' : 'Smart generator');
+    header.innerHTML = `<span class="header-icon" aria-hidden="true">✨</span><span>${headerLabel}</span>`;
     const labels = FILTER_LABELS[lang] || FILTER_LABELS.default;
     chipRow.innerHTML = FILTER_DEFS.map(f =>
       `<button class="filter-chip${window._activeFilter===f.id?' active':''}" data-filter="${f.id}" type="button" aria-pressed="${window._activeFilter===f.id}">
