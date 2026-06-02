@@ -164,7 +164,10 @@ function makeStyles(fontFamily) { return StyleSheet.create({
   brand:       { fontSize: 10.5, fontFamily, fontWeight: 700, color: INK, letterSpacing: 0.4 },
   mastheadRight: { alignItems: 'flex-end' },
   planTitle:   { fontSize: 10, fontFamily, fontWeight: 700, color: INK, letterSpacing: 0.2 },
-  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily, fontStyle: 'italic', marginTop: 2 },
+  // Tiny left padding stops italic glyphs with a negative left-side
+  // bearing (e.g. Roboto-Italic 'S' in 'Settimana', 'C' in 'Ce…') from
+  // having their overhang clipped at the container's left edge.
+  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily, fontStyle: 'italic', marginTop: 2, paddingLeft: 2 },
 
   // ── Hero (page 1 only) ──────────────────────────────────────────────────
   // Compact: title + week + 4 stats in a single visual block. The stats are
@@ -319,6 +322,10 @@ function makeStyles(fontFamily) { return StyleSheet.create({
     color: INK_MUTED,
     letterSpacing: 1.4,
     fontFamily, fontWeight: 700,
+    // Reclaim the half-letter-spacing the renderer eats off the left edge,
+    // otherwise letter-spaced labels starting with 'C' (CENA) or 'S' get
+    // their first glyph clipped at the container start.
+    paddingLeft: 1,
   },
   mealName: {
     fontSize: 11,
@@ -392,6 +399,7 @@ function makeStyles(fontFamily) { return StyleSheet.create({
     fontFamily, fontWeight: 700,
     color: BRAND_DARK,
     letterSpacing: 1.6,
+    paddingLeft: 1,
   },
 
   // Each shop item used to render ~24pt tall (baseline alignment + implicit
@@ -446,6 +454,7 @@ function makeStyles(fontFamily) { return StyleSheet.create({
     color: ACCENT,
     letterSpacing: 1.6,
     marginRight: 8,
+    paddingLeft: 1,
   },
   tipText: { fontSize: 7.6, color: INK_SOFT, lineHeight: 1.35, flex: 1 },
 
