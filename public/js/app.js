@@ -550,236 +550,13 @@ document.addEventListener('DOMContentLoaded', () => {
       dinner: document.getElementById(`d${i+1}c`)?.value.trim() || ''
     }));
   }
-  function generatePDFimpact() {
-  const isPremium = !!window.hasUnlimited;
-  const allMeals  = collectMeals();
-  const freeDays   = 2;
-  const visibleMeals = isPremium ? allMeals : allMeals.slice(0, freeDays);
-  const lockedMeals  = isPremium ? []        : allMeals.slice(freeDays);
-  const hasLocked    = lockedMeals.some(m => m.lunch || m.dinner);
-  const t = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || k;
-
-  // ── helpers ──────────────────────────────────────────────────
-  function getRecipe(mealText) {
-    if (!mealText) return null;
-    const title = extractRecipeName(mealText);
-    return (window.recipes || []).find(r =>
-      r.name?.[lang]?.toLowerCase() === title.toLowerCase() ||
-      r.name?.en?.toLowerCase()  === title.toLowerCase()
-    ) || null;
-  }
-  function metaHTML(r) {
-    if (!r) return '';
-    const parts = [];
-    if (r.time)    parts.push(`<span class="meta-tag">⏱ ${r.time} min</span>`);
-    if (r.costRon) parts.push(`<span class="meta-tag">💰 ${formatCost(r.costRon)}</span>`);
-    if (r.origin?.[lang]) parts.push(`<span class="meta-tag">🌍 ${r.origin[lang]}</span>`);
-    return parts.length ? `<div class="meal-meta">${parts.join('')}</div>` : '';
-  }
-  function ingrPillsHTML(r) {
-    const items = r?.ingredients?.[lang] || r?.ingredients?.en || [];
-    if (!items.length) return '';
-    return `<div class="meal-ingr">
-      <div class="ingr-label">${t('col.ingredients') || 'Ingrediente'}</div>
-      <div class="ingr-pills">${items.map(i => `<span class="ingr-pill">${i}</span>`).join('')}</div>
-    </div>`;
-  }
-  function stepsOL(r) {
-    const raw = r?.howIsMade?.[lang] || r?.howIsMade?.ro || '';
-    // Use the same splitter as the static recipe pages: period+space OR CJK
-    // sentence-end. Plain "." inside "1.5 kg" / "8.10 min" / "Mr." stays intact.
-    const steps = raw
-      .split(/(?:\.\s+|[。！？]\s*)/)
-      .map(x => x.trim())
-      .filter(s => s.length > 2)
-      // Strip leading "N. " section markers ("1. ROAST THE..."). Without
-      // this, the OL would render "1. 1. ROAST..." because the embedded
-      // numeric prefix is rendered alongside the OL's own counter.
-      .map(s => s.replace(/^\d+\s*\.\s*/, ''))
-      // Drop orphan digit-only fragments left by aggressive splits
-      .filter(s => !/^\d+\s*$/.test(s));
-    if (!steps.length) return '';
-    return `<div class="meal-steps-label">${t('howIsMade') || 'Preparare'}</div>
-    <ol class="meal-steps">${steps.map(s => `<li>${s}.</li>`).join('')}</ol>`;
-  }
-  function mealBlockHTML(mealText, type) {
-    const r    = getRecipe(mealText);
-    const name = mealText ? extractRecipeName(mealText) : '';
-    const icon = type === 'lunch' ? '🍲' : '🌙';
-    const label = type === 'lunch' ? (t('col.lunch') || 'Lunch') : (t('col.dinner') || 'Dinner');
-    return `<div class="meal-block meal-block--${type}">
-      <div class="meal-label">${icon} ${label}</div>
-      <div class="meal-name">${name}</div>
-      ${metaHTML(r)}
-      ${ingrPillsHTML(r)}
-      ${stepsOL(r)}
-    </div>`;
-  }
-
-  // ── collect all EN ingredients across visible meals, then run them
-  //    through the same grouping engine the static plan pages use ──
-  const rawEnIngredients = [];
-  visibleMeals.forEach(m => {
-    [m.lunch, m.dinner].filter(Boolean).forEach(meal => {
-      const r = getRecipe(meal);
-      // Engine is calibrated for EN ingredient strings. Use them across all
-      // locales — the engine localizes the canonical labels for output.
-      (r?.ingredients?.en || r?.ingredients?.ro || []).forEach(i => rawEnIngredients.push(i));
-    });
-  });
-  let shoppingGroups = [];
-  try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, lang); } catch (_) { shoppingGroups = []; }
-  // Legacy 2-col fallback if the engine returned nothing (e.g. no recipes added yet).
-  const flatIngrArr = [...new Set(rawEnIngredients)];
-  const half = Math.ceil(flatIngrArr.length / 2);
-  const col1 = flatIngrArr.slice(0, half);
-  const col2 = flatIngrArr.slice(half);
-
-  // ── day cards ─────────────────────────────────────────────────
-  let daysHTML = '';
-  visibleMeals.forEach((m, idx) => {
-    if (!m.lunch && !m.dinner) return;
-    daysHTML += `<div class="recipe-section">
-      <div class="recipe-day-header">
-        <span class="day-num">${idx + 1}</span>
-        <span class="day-name">${m.day}</span>
-      </div>
-      ${m.lunch  ? mealBlockHTML(m.lunch,  'lunch')  : ''}
-      ${m.dinner ? mealBlockHTML(m.dinner, 'dinner') : ''}
-    </div>`;
-  });
-
-  // ── shopping list (grouped engine output; falls back to 2-col flat) ─
-  const shoppingGroupsHTML = shoppingGroups.map(g => `
-    <section class="pdf-shop-group" data-group="${g.id}">
-      <h4 class="pdf-shop-group-h">${g.label}</h4>
-      <ul class="pdf-shop-list">
-        ${g.items.map(it => `<li><span class="pdf-shop-name">${it.name}</span>${it.qty ? `<span class="pdf-shop-qty">${it.qty}</span>` : ''}</li>`).join('')}
-      </ul>
-    </section>`).join('');
-  const shoppingHTML = shoppingGroups.length
-    ? `<div class="pdf-shopping pdf-shopping--grouped">
-         <div class="pdf-shopping-header">🛒 ${t('shoppingList') || 'Shopping List'}</div>
-         <div class="pdf-shopping-body">${shoppingGroupsHTML}</div>
-       </div>`
-    : (flatIngrArr.length ? `
-        <div class="pdf-shopping">
-          <div class="pdf-shopping-header">🛒 ${t('shoppingList') || 'Shopping List'}</div>
-          <div class="pdf-shopping-body">
-            <div class="shopping-grid">
-              <div>${col1.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
-              <div>${col2.map(i => `<div class="shop-item">${i}</div>`).join('')}</div>
-            </div>
-          </div>
-        </div>` : '');
-
-  // ── locked upsell ─────────────────────────────────────────────
-  let lockedHTML = '';
-  if (hasLocked) {
-    const lockedDays = lockedMeals.filter(m => m.lunch || m.dinner).map(m => m.day).join(' · ');
-    lockedHTML = `<div class="pdf-locked">
-      <div class="pdf-locked-icon">🔒</div>
-      <div class="pdf-locked-title">${t('pdf.locked.title')}</div>
-      <div class="pdf-locked-days">${lockedDays}</div>
-      <div class="pdf-locked-sub">${t('pdf.locked.sub')}</div>
-      <div class="pdf-locked-cta">meal-planner.ro · ${t('pdf.locked.cta')}</div>
-    </div>`;
-  }
-
-  // ── cover page ────────────────────────────────────────────────
-  const footerDate = new Date().toLocaleDateString(lang, { day: '2-digit', month: '2-digit', year: 'numeric' });
-  const weekLabel  = new Date().toLocaleDateString(lang, { day: 'numeric', month: 'long', year: 'numeric' });
-  const freeBadge  = !isPremium ? `<div class="pdf-free-badge">${t('pdf.free.label')}</div>` : '';
-  const coverHTML  = `<div class="pdf-cover">
-    <div class="pdf-cover-brand">🥗 Meal-Planner.ro</div>
-    <div class="pdf-cover-title">${t('title') || 'Meal Plan'}</div>
-    <div class="pdf-cover-week">${weekLabel}</div>
-    <div class="pdf-cover-divider"></div>
-    <div class="pdf-cover-motiv">${pickMotiv(lang)}</div>
-    ${freeBadge}
-  </div>`;
-
-  // ── clear legacy slots, write everything to #pdf-list ─────────
-  const titleEl = document.getElementById('pdf-title');
-  const msgEl   = document.getElementById('pdf-impact-message');
-  if (titleEl) titleEl.innerHTML = '';
-  if (msgEl)   msgEl.innerHTML   = '';
-
-  const listEl = document.getElementById('pdf-list');
-  if (listEl) {
-    listEl.innerHTML = `
-      ${coverHTML}
-      ${daysHTML}
-      ${shoppingHTML}
-      ${lockedHTML}
-      <div class="doc-footer">🥗 Meal-Planner.ro · ${footerDate}</div>
-    `;
-  }
-}
-  // ── PDF export engine: runtime switch + opt-in/opt-out flags ──────────────
-  //
-  // EMERGENCY KILL-SWITCH / DEFAULT FLIP
-  // -----------------------------------
-  // Flipping this single constant changes the DEFAULT engine for every user
-  // who hasn't explicitly opted in or out. To roll out pdfv2 as the default,
-  // change 'legacy' → 'pdfv2' in this line, run `npm run build`, push.
-  // To roll back: change it back to 'legacy', build, push.
-  //
-  //   PDF_EXPORT_DEFAULT_ENGINE = 'legacy' → existing html2pdf path
-  //   PDF_EXPORT_DEFAULT_ENGINE = 'pdfv2'  → server-side @react-pdf endpoint
-  //
-  // User-level overrides (always win over the default):
-  //   URL  ?pdfv2=1 → force pdfv2 for this session
-  //   URL  ?pdfv2=0 → force legacy for this session
-  //   localStorage pdfV2='1' → sticky opt-in across sessions
-  //   localStorage pdfV2='0' → sticky opt-out across sessions
-  //
-  // Stickiness: when the URL sets ?pdfv2=1 or ?pdfv2=0, we promote that
-  // value to localStorage so the choice survives navigations that drop
-  // the query string (e.g. "Open in app & customize" on static plan
-  // pages, which routes to /?autoplan=<id>).
-  // To return to the default after an explicit opt-in/out:
-  //   localStorage.removeItem('pdfV2')
-  const PDF_EXPORT_DEFAULT_ENGINE = 'pdfv2';  // 'legacy' | 'pdfv2'
-
-  try {
-    const _qs = new URLSearchParams(window.location.search || '');
-    const _flag = _qs.get('pdfv2');
-    if (_flag === '1') localStorage.setItem('pdfV2', '1');
-    else if (_flag === '0') localStorage.setItem('pdfV2', '0');
-  } catch (_) {}
-
-  // Locales that should NEVER use pdfv2 because of an unresolved upstream
-  // bug in @react-pdf/textkit's bidi reordering (issue tracked under
-  // jsx-pdf/issues/2820). Arabic crashes mid-render; we fall back to the
-  // legacy html2pdf path so AR users still get a PDF, just with the older
-  // visual style. Revisit when textkit ≥ 6.4 is released.
-  const PDFV2_BLOCKED_LANGS = new Set(['ar']);
-
-  function isPdfV2Enabled() {
-    try {
-      if (PDFV2_BLOCKED_LANGS.has(typeof lang === 'string' ? lang : '')) return false;
-      const qs = new URLSearchParams(window.location.search || '');
-      const urlFlag = qs.get('pdfv2');
-      if (urlFlag === '1') return true;
-      if (urlFlag === '0') return false;
-      const lsFlag = localStorage.getItem('pdfV2');
-      if (lsFlag === '1') return true;
-      if (lsFlag === '0') return false;
-      return PDF_EXPORT_DEFAULT_ENGINE === 'pdfv2';
-    } catch (_) {
-      return PDF_EXPORT_DEFAULT_ENGINE === 'pdfv2';
-    }
-  }
-
-  // Startup log so QA can confirm which engine is wired at page-load time
-  // (verifiable from Safari Web Inspector before even clicking Generate PDF).
-  try {
-    console.log(
-      'PDF_EXPORT_ENGINE (on load) = "' + (isPdfV2Enabled() ? 'pdfv2' : 'legacy') + '"' +
-      '  (default = "' + PDF_EXPORT_DEFAULT_ENGINE + '")'
-    );
-  } catch (_) {}
+  // (legacy generatePDFimpact removed — see git log for the html2pdf restore recipe.)
+  // ── PDF export engine ─────────────────────────────────────────────────────
+  // pdfv2 (server-side @react-pdf/renderer at /api/generate-pdf) is the only
+  // export path. The legacy html2pdf branch and its runtime flags were
+  // removed once pdfv2 went production-default. To roll back, revert the
+  // commit titled "Remove legacy html2pdf export path" — that brings back
+  // generatePDFimpact + buildCleanPdfNode + the engine switch.
   async function exportViaPdfV2() {
     // Build the payload from the live planner state — same source data the
     // legacy generatePDFimpact() reads. This ensures pdfv2 exports whatever
@@ -1103,324 +880,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function exportShoppingListToPDF() {
-  // ── SINGLE DISPATCHER for all PDF exports. Every Generate PDF button must
-  // route through this function. No button is allowed to call html2pdf
-  // directly — see attachPdfListeners() below.
-  //
-  // If isPdfV2Enabled() returns true, ONLY the pdfv2 endpoint is used.
-  // We do NOT silently fall back to legacy on pdfv2 failure — that would
-  // sneak the full 10-page cookbook-style export back in front of a user
-  // who explicitly opted into the compact pdfv2 output. Instead we surface
-  // the error so the user knows pdfv2 didn't work and can retry.
-  const useV2 = isPdfV2Enabled();
-  const _t0 = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
-  // Loud console log so QA can verify which engine ran (visible in
-  // Safari Web Inspector under "Console").
-  console.log('PDF_EXPORT_ENGINE = "' + (useV2 ? 'pdfv2' : 'legacy') + '"');
-  if (useV2) {
+    // Single PDF export path: POST the live planner state to
+    // /api/generate-pdf and let @react-pdf render it server-side.
+    // The legacy html2pdf branch was removed once pdfv2 went production
+    // default; see git log for the rollback recipe if anyone ever needs
+    // to bring it back.
+    //
+    // Arabic note: @react-pdf/textkit 6.3 still crashes on bidi reorder
+    // for AR (jsx-pdf#2820). Until upstream ships a fix we surface a
+    // friendly notice instead of letting the user click into a 500.
+    // The blocked-language counter is the data point we'll use to
+    // decide whether it's worth hand-rolling an alternative.
+    const _t0 = (typeof performance !== 'undefined' && performance.now)
+      ? performance.now() : Date.now();
+    if (typeof lang === 'string' && lang === 'ar') {
+      _logTelemetry({ engine:'pdfv2', status:'blocked', durationMs:0,
+                      errorMessage:'lang=ar (textkit bidi bug)' });
+      try { alert('PDF generation for Arabic is temporarily unavailable. We are tracking the upstream fix and will re-enable it as soon as it lands.'); } catch (_) {}
+      return;
+    }
     try {
       const _result = await exportViaPdfV2();
-      const _ms = Math.round(((typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now()) - _t0);
-      console.log('PDF_EXPORT_ENGINE = "pdfv2" · completed OK');
+      const _ms = Math.round(((typeof performance !== 'undefined' && performance.now)
+        ? performance.now() : Date.now()) - _t0);
       _logTelemetry({
-        engine: 'pdfv2',
-        status: 'ok',
-        durationMs: _ms,
-        bytes:        _result && _result.bytes        || null,
+        engine:         'pdfv2',
+        status:         'ok',
+        durationMs:     _ms,
+        bytes:          _result && _result.bytes        || null,
         serverRenderMs: _result && _result.serverRenderMs || null,
       });
-      return;
     } catch (err) {
-      const _ms = Math.round(((typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now()) - _t0);
-      console.error('PDF_EXPORT_ENGINE = "pdfv2" · FAILED — NOT falling back to legacy:', err);
+      const _ms = Math.round(((typeof performance !== 'undefined' && performance.now)
+        ? performance.now() : Date.now()) - _t0);
+      console.error('PDF generation failed:', err);
       _logTelemetry({
-        engine: 'pdfv2',
-        status: 'error',
-        durationMs: _ms,
-        errorMessage: (err && err.message) ? String(err.message).slice(0, 200) : String(err).slice(0, 200),
+        engine:       'pdfv2',
+        status:       'error',
+        durationMs:   _ms,
+        errorMessage: (err && err.message) ? String(err.message).slice(0, 200)
+                                            : String(err).slice(0, 200),
       });
-      try { alert('PDF generation (pdfv2) failed: ' + (err && err.message ? err.message : err) + '\n\nLegacy export was NOT used. Disable pdfv2 (remove ?pdfv2=1 and run localStorage.removeItem("pdfV2") in the console) to use the legacy exporter.'); } catch (_) {}
-      return;
+      try { alert('PDF generation failed: ' + (err && err.message ? err.message : err) + '\n\nPlease try again in a moment.'); } catch (_) {}
     }
   }
-  // ── LEGACY html2pdf path (production default; reached only when
-  // ── pdfv2 is NOT opted in). Untouched from before.
-  const pdfArea = document.getElementById('pdf-impact-area');
-  if (!pdfArea) {
-    _logTelemetry({ engine: 'legacy', status: 'error', durationMs: 0, errorMessage: 'no #pdf-impact-area' });
-    return;
-  }
-  let cleanNode = null, styleEl = null;
-  let _pageCount = null;
-  let _telemetryStatus = 'ok';
-  let _telemetryError  = null;
-  document.body.classList.add('pdf-exporting');
-  try {
-    generatePDFimpact();
-    window.scrollTo(0, 0);
-    await new Promise(resolve => setTimeout(resolve, 80));
-    const built = buildCleanPdfNode();
-    cleanNode = built.node;
-    styleEl = built.styleEl;
-    document.head.appendChild(styleEl);
-    cleanNode.style.position = 'absolute';
-    cleanNode.style.left = '-9999px';
-    // Force A4 width so paginateCleanNode measures at the same width as the PDF render
-    cleanNode.style.width = '719px'; // 190mm @ 96dpi
-    document.body.appendChild(cleanNode);
-    maybeCompactToTwoPages(cleanNode);
-    paginateCleanNode(cleanNode);
-    // Count inserted page-break divs for telemetry (each one = a new page).
-    _pageCount = 1 + (cleanNode.querySelectorAll('.page-break').length || 0);
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    await html2pdf().set({
-      margin: [0, 0, 0, 0],
-      filename: 'meal-planner.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: {
-        scale: isIOS ? 1.36 : 2,
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        scrollX: 0,
-        scrollY: 0
-      },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: {
-        mode: ['css'],
-        avoid: ['.recipe-section', '#pdf-impact-message', '.origin', '.ingredients', '.how-title', '.motiv']
-      }
-    })
-    .from(cleanNode)
-    .save();
-  } catch (err) {
-    console.error('❌ PDF generation error:', err);
-    _telemetryStatus = 'error';
-    _telemetryError  = (err && err.message) ? String(err.message).slice(0, 200) : String(err).slice(0, 200);
-  } finally {
-    if (styleEl) styleEl.remove();
-    if (cleanNode) cleanNode.remove();
-    document.body.classList.remove('pdf-exporting');
-    const _ms = Math.round(((typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now()) - _t0);
-    _logTelemetry({
-      engine: 'legacy',
-      status: _telemetryStatus,
-      durationMs: _ms,
-      pageCount: _pageCount,
-      errorMessage: _telemetryError,
-    });
-  }
-}
-function buildCleanPdfNode() {
-  const src = document.getElementById('pdf-impact-area');
-  const node = src.cloneNode(true);
-
-  // curățăm toate stilurile inline, ca să nu încurce layoutul pentru PDF
-  if (node.hasAttribute('style')) node.removeAttribute('style');
-  node.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
-  const styleEl = document.createElement('style');
-  styleEl.id = 'pdf-safe-style';
-  styleEl.textContent = `
-/* ===== Premium PDF – A4 (html2pdf) ===== */
-html,body{ margin:0; padding:0; background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-:root{
-  --brand:#1e7d3a; --brand-dk:#155a2a; --brand-soft:#f0f9f2; --brand-mid:#c8e6c9;
-  --dinner-bg:#eef3ff; --dinner-clr:#2044b4;
-  --ink:#1a1a2e; --muted:#666; --line:#e2e8f0; --r:8px;
-}
-/* ── Container ── */
-#pdf-impact-area{
-  width:190mm; padding:0; margin:0 auto;
-  background:#fff; font-family:'Segoe UI',Arial,sans-serif;
-  color:var(--ink); font-size:10.5pt; line-height:1.4; box-sizing:border-box;
-}
-/* ── Cover ── */
-.pdf-cover{
-  background:linear-gradient(135deg,#1e7d3a 0%,#27a247 55%,#46c16a 100%);
-  color:#fff; padding:13mm 11mm 9mm; margin-bottom:5mm;
-  page-break-inside:avoid; break-inside:avoid;
-}
-.pdf-cover-brand{ font-size:9pt; font-weight:700; opacity:.8; letter-spacing:.08em; text-transform:uppercase; margin-bottom:3mm; }
-.pdf-cover-title{ font-size:20pt; font-weight:800; line-height:1.1; margin-bottom:2mm; }
-.pdf-cover-week{ font-size:10.5pt; opacity:.88; margin-bottom:4mm; }
-.pdf-cover-divider{ width:36mm; height:2px; background:rgba(255,255,255,.35); margin-bottom:4mm; }
-.pdf-cover-motiv{ font-size:9.5pt; font-style:italic; opacity:.85; line-height:1.45; }
-.pdf-free-badge{
-  display:inline-block; margin-top:4mm; padding:2px 10px;
-  background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.4);
-  border-radius:999px; font-size:8pt; font-weight:600; letter-spacing:.03em;
-}
-/* ── Day cards ── */
-.recipe-section{
-  border:1px solid var(--line); border-radius:var(--r);
-  margin-bottom:3mm; overflow:hidden;
-  page-break-inside:avoid; break-inside:avoid;
-}
-.recipe-day-header{
-  background:var(--ink); color:#fff;
-  padding:2.5mm 4mm; display:flex; align-items:center; gap:3mm;
-}
-.day-num{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:5mm; height:5mm; background:var(--brand); border-radius:50%;
-  font-size:7.5pt; font-weight:800; flex-shrink:0;
-}
-.day-name{ font-size:10.5pt; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
-/* ── Meal blocks ── */
-.meal-block{ padding:3mm 4mm; }
-.meal-block--lunch{ border-bottom:1px solid var(--line); background:#fafffe; }
-.meal-block--dinner{ background:#fafaff; }
-.meal-label{ font-size:7.5pt; font-weight:700; letter-spacing:.09em; text-transform:uppercase; margin-bottom:1mm; }
-.meal-block--lunch  .meal-label{ color:var(--brand); }
-.meal-block--dinner .meal-label{ color:var(--dinner-clr); }
-.meal-name{ font-size:11.5pt; font-weight:700; margin-bottom:1.5mm; color:var(--ink); }
-.meal-meta{ margin-bottom:2mm; }
-.meta-tag{
-  display:inline-block; background:var(--brand-soft); color:var(--brand-dk);
-  border-radius:999px; padding:1px 6px; margin-right:1.5mm; font-size:7.5pt; font-weight:600;
-}
-.meal-ingr{ margin-bottom:2mm; }
-.ingr-label{ font-size:7.5pt; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:1mm; }
-.ingr-pills{ display:flex; flex-wrap:wrap; gap:1.5mm; }
-.ingr-pill{
-  display:inline-block; background:var(--brand-mid); color:var(--brand-dk);
-  border-radius:999px; padding:1px 7px; font-size:7.5pt; font-weight:500;
-}
-.meal-steps-label{ font-size:7.5pt; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:1mm; }
-.meal-steps{ margin:0; padding-left:4.5mm; font-size:9.5pt; line-height:1.45; }
-.meal-steps li{ margin-bottom:.7mm; }
-.meal-steps li::marker{ color:var(--brand); font-weight:700; }
-/* ── Shopping list ── */
-.pdf-shopping{ margin-top:4mm; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; page-break-inside:avoid; break-inside:avoid; }
-.pdf-shopping-header{ background:var(--ink); color:#fff; padding:2.5mm 4mm; font-size:10.5pt; font-weight:800; }
-.pdf-shopping-body{ padding:3mm 4mm; background:#fafff9; }
-.shopping-grid{ display:grid; grid-template-columns:1fr 1fr; gap:.5mm 5mm; }
-.shop-item{ font-size:9pt; padding:.8mm 0; border-bottom:1px dotted #dde; color:var(--ink); }
-.shop-item::before{ content:'☐ '; color:var(--brand); font-size:9.5pt; font-weight:700; }
-/* ── Grouped shopping list (uses the same engine as the static plan pages) ── */
-.pdf-shopping--grouped .pdf-shopping-body{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm 5mm; padding:3.5mm 4mm; background:#fafff9; }
-.pdf-shop-group{ break-inside:avoid; page-break-inside:avoid; }
-.pdf-shop-group-h{
-  margin:0 0 1mm; padding-bottom:.6mm;
-  font-size:7.5pt; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
-  color:var(--brand-dk); border-bottom:.4mm solid var(--brand-mid);
-}
-.pdf-shop-group[data-group="pantry"] .pdf-shop-group-h{ color:#666; border-bottom-color:#cfd6cf; }
-.pdf-shop-list{ list-style:none; padding:0; margin:0; }
-.pdf-shop-list li{
-  display:flex; justify-content:space-between; align-items:baseline;
-  gap:2mm; padding:.65mm 0; font-size:8.8pt; line-height:1.3;
-  border-bottom:.2mm dotted #d8e0d6; color:var(--ink);
-}
-.pdf-shop-list li:last-child{ border-bottom:none; }
-.pdf-shop-name::before{ content:'☐ '; color:var(--brand); font-size:9.2pt; }
-.pdf-shop-qty{ color:#555; font-size:7.8pt; font-variant-numeric:tabular-nums; white-space:nowrap; flex-shrink:0; }
-/* ── Locked upsell ── */
-.pdf-locked{
-  margin-top:4mm; padding:6mm; border:2px dashed var(--brand);
-  border-radius:var(--r); background:var(--brand-soft); text-align:center;
-  page-break-inside:avoid; break-inside:avoid;
-}
-.pdf-locked-icon{ font-size:16pt; margin-bottom:2mm; }
-.pdf-locked-title{ font-size:11pt; font-weight:700; color:var(--brand-dk); margin-bottom:2mm; }
-.pdf-locked-days{ font-size:8.5pt; color:var(--muted); filter:blur(2.5px); margin-bottom:2mm; }
-.pdf-locked-sub{ font-size:9pt; color:#444; margin-bottom:4mm; line-height:1.5; }
-.pdf-locked-cta{
-  display:inline-block; padding:2.5mm 8mm; background:var(--brand); color:#fff;
-  font-weight:700; font-size:9.5pt; border-radius:6px; letter-spacing:.01em;
-}
-/* ── Footer ── */
-.doc-footer{ margin-top:5mm; padding-top:3mm; border-top:1px solid var(--line); font-size:8.5pt; color:var(--muted); text-align:center; }
-/* ── Page breaks ── */
-.page-break{ break-before:page; page-break-before:always; height:0; margin:0; padding:0; border:0; }
-`;
-  return { node, styleEl };
-}
-function maybeCompactToTwoPages(root){
-  const MM_TO_PX = 96 / 25.4;
-  const usable = (297 - 12 - 14) * MM_TO_PX;
-  const pagesNeeded = Math.ceil(root.scrollHeight / usable);
-  if (pagesNeeded > 3) {
-    root.style.fontSize = '9.5pt';
-    root.style.lineHeight = '1.28';
-    root.querySelectorAll('.meal-block').forEach(s => { s.style.padding = '2mm 3mm'; });
-    root.querySelectorAll('.meal-steps').forEach(u => { u.style.fontSize = '8.5pt'; });
-    root.querySelectorAll('.pdf-cover').forEach(c => { c.style.padding = '8mm 10mm 6mm'; });
-  }
-}
-function paginateCleanNode(root){
-  const MM_TO_PX = 96 / 25.4;
-  const usable = (297 - 12 - 14) * MM_TO_PX; // mm → px
-  const csRoot = getComputedStyle(root);
-  const padTop    = parseFloat(csRoot.paddingTop)    || 0;
-  const padBottom = parseFloat(csRoot.paddingBottom) || 0;
-  const blocks = root.querySelectorAll(
-    '.pdf-cover, .recipe-section, .pdf-shopping, .pdf-locked, .doc-footer'
-  );
-  const SAFE = 24;
-  // When the current page has used less than this fraction, allow the
-  // next block to consume the SAFE buffer (i.e. fit right up against
-  // the natural page edge) instead of pushing it to a new page. Fixes
-  // the "cover alone on page 1" bug where a barely-too-tall first
-  // recipe block got bumped to page 2, leaving the cover with massive
-  // whitespace below. recipe-section / pdf-cover already declare
-  // page-break-inside:avoid, so no content gets split.
-  const PAGE_EMPTY_RATIO = 0.35;
-  let page = 1;
-  let y = padTop;
-  let pageY = padTop;   // height used on the current page only
-  // Tolerance for the cover-alone recovery: the "usable" area is 271mm of
-  // the 297mm A4 page (26mm reserved for safety margins). When the current
-  // page is mostly empty, we let a block overflow the soft usable limit
-  // by up to RECOVERY_TOLERANCE px — still well inside the physical page
-  // (≈ 98px of additional headroom before clip). No content can ever
-  // cross the physical edge.
-  const RECOVERY_TOLERANCE = 80;
-  blocks.forEach(el => {
-    const s  = getComputedStyle(el);
-    const mt = parseFloat(s.marginTop)    || 0;
-    const mb = parseFloat(s.marginBottom) || 0;
-    const rectH = el.getBoundingClientRect().height;
-    const outerH = mt + rectH + mb;
-    const safeLimit    = (usable * page) - SAFE;
-    const naturalLimit = (usable * page);
-    if (y + outerH > safeLimit) {
-      // Recover the "cover alone on page 1" case: if the current page is
-      // mostly empty AND this block would fit within the natural limit
-      // plus a small tolerance (well inside the physical page), keep it
-      // on the current page. Both the cover and recipe-section already
-      // declare page-break-inside:avoid, so no content gets split.
-      const fitsWithTolerance = y + outerH <= naturalLimit + RECOVERY_TOLERANCE;
-      const pageMostlyEmpty   = pageY < (usable * PAGE_EMPTY_RATIO);
-      if (fitsWithTolerance && pageMostlyEmpty) {
-        y += outerH;
-        pageY += outerH;
-        return;
-      }
-      const br = document.createElement('div');
-      br.className = 'page-break';
-      el.parentNode.insertBefore(br, el);
-      page += 1;
-      y = padTop + outerH;
-      pageY = padTop + outerH;
-    } else {
-      y += outerH;
-      pageY += outerH;
-    }
-  });
-  const footer = root.querySelector('.doc-footer');
-  if (footer) {
-    const sF  = getComputedStyle(footer);
-    const mtF = parseFloat(sF.marginTop)    || 0;
-    const mbF = parseFloat(sF.marginBottom) || 0;
-    const hF  = footer.getBoundingClientRect().height + mtF + mbF;
-
-    if (y + hF + padBottom > (usable * page) - SAFE) {
-      const br = document.createElement('div');
-      br.className = 'page-break';
-      footer.parentNode.insertBefore(br, footer);
-    }
-  }
-}
+// (legacy html2pdf helpers buildCleanPdfNode/maybeCompactToTwoPages/paginateCleanNode removed)
   // ── Filter definitions ────────────────────────────────────────
   const FILTER_DEFS = [
     { id: 'all',       labelKey: 'filter.all',  emoji: '🌍',
@@ -1964,28 +1468,15 @@ function paginateCleanNode(root){
     // Initial meta render (deferred so DOM is stable)
     setTimeout(updateAllRecipeMeta, 150);
   }
-// --- Lazy-load pentru html2pdf.js (varianta sigură pe CDN)
-async function ensureHtml2pdfLoaded() {
-  if (window.html2pdf) return;
-  await new Promise((resolve, reject) => {
-    const s = document.createElement('script');
-    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
-    s.onload = resolve;
-    s.onerror = () => reject(new Error('Nu s-a putut încărca html2pdf'));
-    document.head.appendChild(s);
-  });
-}
+// (legacy html2pdf CDN loader removed — pdfv2 is the only PDF export path.)
+
   function attachPdfListeners() {
   // Both Generate PDF buttons route through exportShoppingListToPDF — the
-  // single dispatcher. Skip the legacy html2pdf CDN preload when pdfv2 is
-  // active so a CDN hiccup can never accidentally trigger the legacy path
-  // and so pdfv2 has zero dependency on cdnjs.
+  // single dispatcher. The server-side @react-pdf endpoint is the only
+  // export path now, so there's no CDN preload to wait for.
   const freeBtn = document.getElementById('generate-btn');
   if (freeBtn && !freeBtn.dataset.attached) {
-    freeBtn.onclick = async () => {
-      if (!isPdfV2Enabled()) await ensureHtml2pdfLoaded();
-      exportShoppingListToPDF();
-    };
+    freeBtn.onclick = () => { exportShoppingListToPDF(); };
     freeBtn.dataset.attached = '1';
   }
   // butonul plătit apare dinamic
@@ -1993,10 +1484,7 @@ async function ensureHtml2pdfLoaded() {
     const obs = new MutationObserver(() => {
       const paidBtn = document.getElementById('paid-generate-pdf');
       if (paidBtn && !paidBtn.dataset.attached) {
-        paidBtn.onclick = async () => {
-          if (!isPdfV2Enabled()) await ensureHtml2pdfLoaded();
-          exportShoppingListToPDF();
-        };
+        paidBtn.onclick = () => { exportShoppingListToPDF(); };
         paidBtn.dataset.attached = '1';
       }
     });
@@ -4985,7 +4473,6 @@ if (verifyBtn && emailInput && resultDiv) {
   }
   // ---------- Expunere funcții pe window (pt. onclick inline) ----------
   window.startDictation = startDictation;
-  window.generatePDFimpact = generatePDFimpact;
   window.exportShoppingListToPDF = exportShoppingListToPDF;
   window.updateShoppingList = updateShoppingList;
 
