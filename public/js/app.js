@@ -505,6 +505,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (pool.length < 2) pool = recipesMain; // fallback
   }
 
+  // Exclude non-main categories (Dessert / Snack / Salad / Breakfast / Appetizer
+  // / Side dish) from lunch/dinner generation. Category EN values are stable;
+  // recipes without a category fall through as eligible.
+  const NON_MAIN_MEAL = new Set(['Dessert', 'Snack', 'Salad', 'Breakfast', 'Appetizer', 'Side dish']);
+  const mainOnly = pool.filter(r => !NON_MAIN_MEAL.has(r.category?.en || ''));
+  if (mainOnly.length >= 2) pool = mainOnly;
+
   if (!Array.isArray(pool) || pool.length < 1) {
     console.warn("Random menu: pool too small", pool?.length);
     return;
