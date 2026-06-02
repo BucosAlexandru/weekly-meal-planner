@@ -1194,7 +1194,7 @@ const NAV_URL_FOR = {
 const makeNav = (lc, langUrlMap = null) => `
 <header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="${a11y(lc.code).mainNav}">
-    <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
+    <a class="nav-brand" href="/${lc.code}/" aria-label="Meal-Planner.ro – home">
       <span class="nav-icon" aria-hidden="true">🥗</span>
       <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
     </a>
@@ -1604,7 +1604,7 @@ function makePricingNav(lc_code) {
   const labels = a11y(lc_code);
   return `<header class="app-header no-print" role="banner">
   <nav class="app-nav" aria-label="${labels.mainNav}">
-    <a class="nav-brand" href="/" aria-label="Meal-Planner.ro – home">
+    <a class="nav-brand" href="/${lc_code}/" aria-label="Meal-Planner.ro – home">
       <span class="nav-icon" aria-hidden="true">🥗</span>
       <span class="nav-title">Meal-Planner<span class="nav-tld">.ro</span></span>
     </a>
@@ -5040,7 +5040,12 @@ function injectCuisineHomeSection(lc_code, customPath) {
 
   // 1) Ensure the cuisine-homepage.css <link> is in <head>. Inject after
   //    the existing style.min.css link so it overrides nothing important.
-  const cssAnchor = '<link rel="stylesheet" href="/css/style.min.css">';
+  //    Some locale homepages ship the XHTML self-closing form of <link/>
+  //    (de/it/tr/ko) while others use the HTML5 void form (en/ro/...);
+  //    handle both so the CSS link is reliably injected everywhere.
+  const cssAnchorVoid      = '<link rel="stylesheet" href="/css/style.min.css">';
+  const cssAnchorSelfClose = '<link rel="stylesheet" href="/css/style.min.css" />';
+  const cssAnchor = html.includes(cssAnchorVoid) ? cssAnchorVoid : cssAnchorSelfClose;
   html = upsertBetween(html, HP_CUISINE_CSS_START, HP_CUISINE_CSS_END,
                        HP_CUISINE_CSS_LINK, cssAnchor);
 
