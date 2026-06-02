@@ -734,8 +734,16 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (_flag === '0') localStorage.setItem('pdfV2', '0');
   } catch (_) {}
 
+  // Locales that should NEVER use pdfv2 because of an unresolved upstream
+  // bug in @react-pdf/textkit's bidi reordering (issue tracked under
+  // jsx-pdf/issues/2820). Arabic crashes mid-render; we fall back to the
+  // legacy html2pdf path so AR users still get a PDF, just with the older
+  // visual style. Revisit when textkit ≥ 6.4 is released.
+  const PDFV2_BLOCKED_LANGS = new Set(['ar']);
+
   function isPdfV2Enabled() {
     try {
+      if (PDFV2_BLOCKED_LANGS.has(typeof lang === 'string' ? lang : '')) return false;
       const qs = new URLSearchParams(window.location.search || '');
       const urlFlag = qs.get('pdfv2');
       if (urlFlag === '1') return true;

@@ -15,18 +15,24 @@ import path from 'node:path';
 const h = React.createElement;
 
 // ── Font registration ──────────────────────────────────────────────────────
-// Built-in Helvetica lacks Latin Extended A — Romanian (ă â ș ț), Turkish (ğ
-// ı ş), Polish (ą ć ę), etc. — and Cyrillic. We bundle Roboto, which covers
-// every Latin-script locale we currently serve plus Russian. The files live
-// inside api/_fonts so Vercel's serverless bundler includes them in the
-// function output (use the @vercel/node `includeFiles` config if it ever
-// gets tree-shaken).
+// One font family per script. The handler picks the right family at render
+// time via the plan.lang field; locales without a registered family fall
+// back to Roboto and render with missing glyphs (won't happen for any of
+// the 14 supported site locales after this commit).
 //
-// Script families not covered by Roboto Latin+Cyrillic — Arabic (ar),
-// CJK (zh/ja/ko) and Devanagari (hi) — still fall through to Helvetica.
-// They render with missing glyphs for now; a follow-up PR can register
-// Noto Sans Arabic / CJK / Devanagari behind a per-locale conditional.
+//   Roboto                — Latin + Cyrillic  → ro en es fr de pt ru it tr
+//   NotoSansArabic        — Arabic            → ar
+//   NotoSansDevanagari    — Hindi             → hi
+//   NotoSansSC            — Simplified Han    → zh
+//   NotoSansJP            — Japanese kana+kanji→ ja
+//   NotoSansKR            — Hangul            → ko
+//
+// SC/JP/KR are variable-axis TTFs that handle Regular and Bold from the
+// same file (the `wght` axis covers 100-900). Registering the same src
+// twice with different fontWeight values is intentional — @react-pdf
+// rasterises the appropriate axis position per weight.
 const FONTS_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '_fonts');
+
 Font.register({
   family: 'Roboto',
   fonts: [
@@ -35,9 +41,67 @@ Font.register({
     { src: path.join(FONTS_DIR, 'Roboto-Italic.ttf'),  fontWeight: 400, fontStyle: 'italic' },
   ],
 });
+Font.register({
+  family: 'NotoSansArabic',
+  fonts: [
+    { src: path.join(FONTS_DIR, 'NotoSansArabic-Regular.ttf'), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, 'NotoSansArabic-Bold.ttf'),    fontWeight: 700 },
+    // Arabic script is cursive by default — there's no true italic. Map
+    // the italic style back onto the regular weight so @react-pdf can
+    // satisfy the style request without crashing the bidi pass.
+    { src: path.join(FONTS_DIR, 'NotoSansArabic-Regular.ttf'), fontWeight: 400, fontStyle: 'italic' },
+    { src: path.join(FONTS_DIR, 'NotoSansArabic-Bold.ttf'),    fontWeight: 700, fontStyle: 'italic' },
+  ],
+});
+Font.register({
+  family: 'NotoSansDevanagari',
+  fonts: [
+    { src: path.join(FONTS_DIR, 'NotoSansDevanagari-Regular.ttf'), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, 'NotoSansDevanagari-Bold.ttf'),    fontWeight: 700 },
+    { src: path.join(FONTS_DIR, 'NotoSansDevanagari-Regular.ttf'), fontWeight: 400, fontStyle: 'italic' },
+  ],
+});
+Font.register({
+  family: 'NotoSansSC',
+  fonts: [
+    { src: path.join(FONTS_DIR, 'NotoSansSC-Regular.ttf'), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, 'NotoSansSC-Regular.ttf'), fontWeight: 700 },
+    { src: path.join(FONTS_DIR, 'NotoSansSC-Regular.ttf'), fontWeight: 400, fontStyle: 'italic' },
+  ],
+});
+Font.register({
+  family: 'NotoSansJP',
+  fonts: [
+    { src: path.join(FONTS_DIR, 'NotoSansJP-Regular.ttf'), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, 'NotoSansJP-Regular.ttf'), fontWeight: 700 },
+    { src: path.join(FONTS_DIR, 'NotoSansJP-Regular.ttf'), fontWeight: 400, fontStyle: 'italic' },
+  ],
+});
+Font.register({
+  family: 'NotoSansKR',
+  fonts: [
+    { src: path.join(FONTS_DIR, 'NotoSansKR-Regular.ttf'), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, 'NotoSansKR-Regular.ttf'), fontWeight: 700 },
+    { src: path.join(FONTS_DIR, 'NotoSansKR-Regular.ttf'), fontWeight: 400, fontStyle: 'italic' },
+  ],
+});
+
 // Disable word-break hyphenation so e.g. "supermarket" doesn't wrap as
 // "su-permarket" in narrow shopping columns.
 Font.registerHyphenationCallback(word => [word]);
+
+// Per-locale font family resolver. Latin/Cyrillic locales (most of the
+// catalogue) use Roboto. Non-Latin scripts get their own Noto Sans.
+const FONT_FOR_LOCALE = {
+  ro: 'Roboto', en: 'Roboto', es: 'Roboto', fr: 'Roboto', de: 'Roboto',
+  pt: 'Roboto', it: 'Roboto', tr: 'Roboto', ru: 'Roboto',
+  ar: 'NotoSansArabic',
+  hi: 'NotoSansDevanagari',
+  zh: 'NotoSansSC',
+  ja: 'NotoSansJP',
+  ko: 'NotoSansKR',
+};
+const fontFor = (lang) => FONT_FOR_LOCALE[lang] || 'Roboto';
 
 // ── Design tokens ──────────────────────────────────────────────────────────
 // Editorial palette. Brand green anchors sectioning; ink scale provides
@@ -55,7 +119,7 @@ const HAIRLINE   = '#e2e8f0';
 const HAIRLINE_2 = '#edf1f5';
 const DOT        = '#c9d2cb';
 
-const styles = StyleSheet.create({
+function makeStyles(fontFamily) { return StyleSheet.create({
   // A4: 595.28 × 841.89 pt. 30pt side margins ≈ 10.6mm.
   // Compacted from 30/38/36 to give more usable area without crowding.
   page: {
@@ -63,7 +127,7 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
     paddingHorizontal: 32,
     fontSize: 9,
-    fontFamily: 'Roboto',
+    fontFamily,
     color: INK,
     lineHeight: 1.4,
   },
@@ -93,14 +157,14 @@ const styles = StyleSheet.create({
     marginRight: 6,
     color: '#fff',
     fontSize: 8,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     textAlign: 'center',
     paddingTop: 2.5,
   },
-  brand:       { fontSize: 10.5, fontFamily: 'Roboto', fontWeight: 700, color: INK, letterSpacing: 0.4 },
+  brand:       { fontSize: 10.5, fontFamily, fontWeight: 700, color: INK, letterSpacing: 0.4 },
   mastheadRight: { alignItems: 'flex-end' },
-  planTitle:   { fontSize: 10, fontFamily: 'Roboto', fontWeight: 700, color: INK, letterSpacing: 0.2 },
-  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily: 'Roboto', fontStyle: 'italic', marginTop: 2 },
+  planTitle:   { fontSize: 10, fontFamily, fontWeight: 700, color: INK, letterSpacing: 0.2 },
+  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily, fontStyle: 'italic', marginTop: 2 },
 
   // ── Hero (page 1 only) ──────────────────────────────────────────────────
   // Compact: title + week + 4 stats in a single visual block. The stats are
@@ -128,12 +192,12 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: BRAND_DARK,
     letterSpacing: 2.2,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     marginBottom: 3,
   },
   heroTitle: {
     fontSize: 19,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: INK,
     letterSpacing: -0.3,
     lineHeight: 1.12,
@@ -142,12 +206,12 @@ const styles = StyleSheet.create({
   heroWeek: {
     fontSize: 9,
     color: INK_SOFT,
-    fontFamily: 'Roboto', fontStyle: 'italic',
+    fontFamily, fontStyle: 'italic',
   },
   heroStat: { flex: 1 },
   heroStatNum: {
     fontSize: 15,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: BRAND_DARK,
     lineHeight: 1.1,
   },
@@ -156,7 +220,7 @@ const styles = StyleSheet.create({
     color: INK_MUTED,
     letterSpacing: 1.3,
     marginTop: 2,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
   },
   heroStatDivider: {
     width: 0.5,
@@ -175,12 +239,12 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: BRAND,
     letterSpacing: 2,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     marginRight: 8,
   },
   sectionTitle: {
     fontSize: 13,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: INK,
     letterSpacing: 0.1,
   },
@@ -205,14 +269,14 @@ const styles = StyleSheet.create({
     backgroundColor: BRAND,
     color: '#fff',
     fontSize: 7.4,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     textAlign: 'center',
     paddingTop: 2.6,
     marginRight: 7,
   },
   dayName: {
     fontSize: 8.6,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: INK,
     letterSpacing: 1.5,
   },
@@ -242,7 +306,7 @@ const styles = StyleSheet.create({
   mealKindBadge: {
     width: 9, height: 9, borderRadius: 4.5,
     fontSize: 5.6,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: '#fff',
     textAlign: 'center',
     paddingTop: 1.8,
@@ -254,11 +318,11 @@ const styles = StyleSheet.create({
     fontSize: 6,
     color: INK_MUTED,
     letterSpacing: 1.4,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
   },
   mealName: {
     fontSize: 11,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: INK,
     marginBottom: 2,
     lineHeight: 1.15,
@@ -283,13 +347,13 @@ const styles = StyleSheet.create({
   mealMetaChipCost: {
     backgroundColor: ACCENT_TINT,
     color: ACCENT,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
   },
   mealIngrLabel: {
     fontSize: 5.6,
     color: INK_FAINT,
     letterSpacing: 1.2,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     marginBottom: 1.5,
   },
   mealIngr: {
@@ -325,7 +389,7 @@ const styles = StyleSheet.create({
   },
   shopGroupTitle: {
     fontSize: 7.4,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: BRAND_DARK,
     letterSpacing: 1.6,
   },
@@ -358,7 +422,7 @@ const styles = StyleSheet.create({
   },
   shopItemQty: {
     fontSize: 7,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: INK_SOFT,
     lineHeight: 1.2,
   },
@@ -378,7 +442,7 @@ const styles = StyleSheet.create({
   },
   tipLabel: {
     fontSize: 6.4,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: ACCENT,
     letterSpacing: 1.6,
     marginRight: 8,
@@ -400,7 +464,7 @@ const styles = StyleSheet.create({
   },
   lockedTitle: {
     fontSize: 10,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: BRAND_DARK,
     marginBottom: 4,
   },
@@ -412,7 +476,7 @@ const styles = StyleSheet.create({
   },
   lockedCta: {
     fontSize: 8,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     color: BRAND,
     letterSpacing: 0.3,
   },
@@ -436,15 +500,23 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: INK_MUTED,
     letterSpacing: 0.5,
-    fontFamily: 'Roboto', fontWeight: 700,
+    fontFamily, fontWeight: 700,
     textAlign: 'center',
     position: 'absolute',
     left: 0, right: 0, top: 7,
   },
   footerRight: { fontSize: 7, color: INK_MUTED, letterSpacing: 0.5 },
-});
+}); }
 
-function mealCell(meal, kind, L) {
+// Cache the StyleSheet per font family — StyleSheet.create() is cheap but
+// runs through @react-pdf's prop validation; one call per family is enough.
+const _stylesCache = {};
+function getStyles(fontFamily) {
+  if (!_stylesCache[fontFamily]) _stylesCache[fontFamily] = makeStyles(fontFamily);
+  return _stylesCache[fontFamily];
+}
+
+function mealCell(meal, kind, L, styles) {
   const kindLabel = kind === 'lunch' ? (L.lunch || 'LUNCH') : (L.dinner || 'DINNER');
   const kindLetter = kindLabel.charAt(0);
   const kindStyle = kind === 'lunch' ? styles.mealKindLunch : styles.mealKindDinner;
@@ -482,7 +554,7 @@ function mealCell(meal, kind, L) {
   return h(View, null, ...children);
 }
 
-function dayBlock(d, idx, L) {
+function dayBlock(d, idx, L, styles) {
   const totalMin = (d.lunch && d.lunch.time ? d.lunch.time : 0)
                  + (d.dinner && d.dinner.time ? d.dinner.time : 0);
   const meals = (d.lunch ? 1 : 0) + (d.dinner ? 1 : 0);
@@ -498,13 +570,13 @@ function dayBlock(d, idx, L) {
       h(View, { style: styles.dayRule }),
     ),
     h(View, { style: styles.mealRow },
-      h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch',  L)),
-      h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner', L)),
+      h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch',  L, styles)),
+      h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner', L, styles)),
     ),
   );
 }
 
-function shopItemRow(it, idx) {
+function shopItemRow(it, idx, styles) {
   const name = typeof it === 'string' ? it : it.name;
   const qty  = typeof it === 'string' ? ''  : (it.qty || '');
   return h(View, { key: idx, style: styles.shopItem, wrap: false },
@@ -515,19 +587,23 @@ function shopItemRow(it, idx) {
   );
 }
 
-function shopGroup(g, gi) {
+function shopGroup(g, gi, styles) {
   return h(View, { key: gi, style: styles.shopGroup, wrap: false },
     h(View, { style: styles.shopGroupHead },
       h(View, { style: styles.shopGroupDot }),
       h(Text, { style: styles.shopGroupTitle }, (g.label || g.id || '').toUpperCase()),
     ),
-    ...(g.items || []).map(shopItemRow),
+    ...(g.items || []).map((it, idx) => shopItemRow(it, idx, styles)),
   );
 }
 
 function MealPlanDocument(plan) {
   const days   = Array.isArray(plan.days) ? plan.days : [];
   const groups = Array.isArray(plan.shoppingGroups) ? plan.shoppingGroups : [];
+  // Resolve the font family for this locale. Latin/Cyrillic → Roboto;
+  // Arabic/Devanagari/CJK each get their own Noto Sans. Then build the
+  // localized StyleSheet (cached across renders).
+  const styles = getStyles(fontFor(plan.lang));
   // Localized labels shipped from the client. We keep the EN strings as
   // fallbacks so direct GET smoke-tests and pre-i18n callers still render.
   const L = (plan.labels && typeof plan.labels === 'object') ? plan.labels : {};
@@ -603,7 +679,7 @@ function MealPlanDocument(plan) {
     h(View, { style: styles.sectionRule }),
   );
 
-  const dayEls = days.map((d, i) => dayBlock(d, i, L));
+  const dayEls = days.map((d, i) => dayBlock(d, i, L, styles));
 
   // ── Locked-days notice (free preview only) ──
   // Roboto ships Latin Extended + Cyrillic only — no emoji or supplementary
@@ -680,7 +756,7 @@ function MealPlanDocument(plan) {
 
   const colEls = cols.map((col, i) => {
     const isLast = i === COLUMNS - 1;
-    const children = col.groups.map((g, gi) => shopGroup(g, `${i}-${gi}`));
+    const children = col.groups.map((g, gi) => shopGroup(g, `${i}-${gi}`, styles));
     if (i === tipColIdx && tipEl) children.push(tipEl);
     return h(View,
       { key: `c${i}`, style: [styles.shopColumn, isLast ? styles.shopColumnLast : null] },
