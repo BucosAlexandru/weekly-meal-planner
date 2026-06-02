@@ -67,6 +67,21 @@ function extractRecipeName(text) {
     .replace(/(este o rețetă|es una receta|is a traditional|est une recette|ist ein traditionelles|é uma receita|является традиционным|هي وصفة تقليدية|は伝統的な料理|は伝統料理です)[^.]*\.*$/, '')
     .trim();
 }
+// Match a recipe by extracted name. A few recipes have parens in their canonical
+// name (e.g. "Butter Chicken (Murgh Makhani)"); strip them when comparing so the
+// lookup still finds the meta/badges row.
+function recipeNameMatches(r, lang, extractedName) {
+  if (!r?.name) return false;
+  const candidates = [r.name[lang], r.name.en, r.name.ro];
+  for (const n of candidates) {
+    if (!n) continue;
+    const low = n.toLowerCase();
+    if (low === extractedName) return true;
+    const stripped = low.split('(')[0].trim();
+    if (stripped && stripped === extractedName) return true;
+  }
+  return false;
+}
 function pickMotiv(langCode) {
   const arr = MOTIV[langCode] || MOTIV.ro;
   return arr[Math.floor(Math.random() * arr.length)];
@@ -799,11 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function findRecipe(mealText) {
       if (!mealText) return null;
       const title = extractRecipeName(mealText).toLowerCase();
-      return (window.recipes || []).find(r =>
-        r.name?.[lang]?.toLowerCase() === title ||
-        r.name?.en?.toLowerCase()     === title ||
-        r.name?.ro?.toLowerCase()     === title
-      ) || null;
+      return (window.recipes || []).find(r => recipeNameMatches(r, lang, title)) || null;
     }
     // Extract a clean noun phrase from each raw ingredient string (drop
     // quantities, parens, prep notes) so the per-meal ingredient line reads
@@ -1467,11 +1478,8 @@ function paginateCleanNode(root){
     meals.forEach(m => {
       [m.lunch, m.dinner].forEach(mealText => {
         if (!mealText) return;
-        const recipeName = extractRecipeName(mealText);
-        const rec = (window.recipes || []).find(r =>
-          r.name?.[lang]?.toLowerCase() === recipeName.toLowerCase() ||
-          r.name?.ro?.toLowerCase()     === recipeName.toLowerCase()
-        );
+        const recipeName = extractRecipeName(mealText).toLowerCase();
+        const rec = (window.recipes || []).find(r => recipeNameMatches(r, lang, recipeName));
         if (rec) {
           matchedRecipes++;
           if (rec.costRon) totalCost += rec.costRon;
@@ -1529,9 +1537,7 @@ function paginateCleanNode(root){
   function getRecipeByInput(inputVal) {
     if (!inputVal) return null;
     const name = extractRecipeName(inputVal).toLowerCase();
-    return (window.recipes || []).find(r =>
-      r.name?.[lang]?.toLowerCase() === name || r.name?.ro?.toLowerCase() === name
-    ) || null;
+    return (window.recipes || []).find(r => recipeNameMatches(r, lang, name)) || null;
   }
 
   function renderRecipeMeta(rec) {
