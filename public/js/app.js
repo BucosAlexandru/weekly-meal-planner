@@ -795,9 +795,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Reuses the same lookup logic as generatePDFimpact() (collectMeals +
   // window.recipes + buildShoppingFromRawIngredients) so legacy and pdfv2
   // see exactly the same data — only the rendering differs.
-  // Phase 1 endpoint is EN-only, so we emit English names + day labels and
-  // pass EN ingredient strings to the grouping engine. The user's display
-  // locale doesn't change the PDF output.
+  //
+  // Every field that the user can see in the resulting PDF is emitted in
+  // the active locale: recipe names, ingredient previews, shopping list
+  // groups (engine localises), day abbreviations, chrome labels. EN
+  // remains the safety fallback for any recipe that lacks a translation.
   function buildPdfV2Payload() {
     const isPremium    = !!window.hasUnlimited;
     const allMeals     = collectMeals();
@@ -835,8 +837,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function mealPayload(mealText) {
       if (!mealText) return null;
       const r = findRecipe(mealText);
-      const displayName = r?.name?.en || r?.name?.ro || extractRecipeName(mealText);
-      const rawIngr = r?.ingredients?.en || r?.ingredients?.ro || [];
+      // Resolve recipe name + ingredient list in the active locale, falling
+      // back to EN then RO. Without this, an Italian user generates a PDF
+      // with English ingredient previews under Italian chrome — labels
+      // ("INGREDIENTI") localised but data ("Chicken thighs · Garlic
+      // cloves") still in English.
+      const displayName = r?.name?.[lang] || r?.name?.en || r?.name?.ro
+                          || extractRecipeName(mealText);
+      const rawIngr = r?.ingredients?.[lang] || r?.ingredients?.en
+                      || r?.ingredients?.ro || [];
       return {
         name: displayName,
         time: r?.time || null,
