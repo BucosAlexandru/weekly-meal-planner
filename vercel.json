@@ -24,6 +24,11 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
       "source": "/ro/bucatarie",
       "destination": "/ro/retete/",
       "permanent": true
