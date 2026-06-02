@@ -8,9 +8,36 @@
 // of JSX so it runs as plain ESM on @vercel/node without a build step.
 
 import React from 'react';
-import { Document, Page, Text, View, StyleSheet, renderToBuffer } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Font, renderToBuffer } from '@react-pdf/renderer';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 
 const h = React.createElement;
+
+// ── Font registration ──────────────────────────────────────────────────────
+// Built-in Helvetica lacks Latin Extended A — Romanian (ă â ș ț), Turkish (ğ
+// ı ş), Polish (ą ć ę), etc. — and Cyrillic. We bundle Roboto, which covers
+// every Latin-script locale we currently serve plus Russian. The files live
+// inside api/_fonts so Vercel's serverless bundler includes them in the
+// function output (use the @vercel/node `includeFiles` config if it ever
+// gets tree-shaken).
+//
+// Script families not covered by Roboto Latin+Cyrillic — Arabic (ar),
+// CJK (zh/ja/ko) and Devanagari (hi) — still fall through to Helvetica.
+// They render with missing glyphs for now; a follow-up PR can register
+// Noto Sans Arabic / CJK / Devanagari behind a per-locale conditional.
+const FONTS_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '_fonts');
+Font.register({
+  family: 'Roboto',
+  fonts: [
+    { src: path.join(FONTS_DIR, 'Roboto-Regular.ttf'), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, 'Roboto-Bold.ttf'),    fontWeight: 700 },
+    { src: path.join(FONTS_DIR, 'Roboto-Italic.ttf'),  fontWeight: 400, fontStyle: 'italic' },
+  ],
+});
+// Disable word-break hyphenation so e.g. "supermarket" doesn't wrap as
+// "su-permarket" in narrow shopping columns.
+Font.registerHyphenationCallback(word => [word]);
 
 // ── Design tokens ──────────────────────────────────────────────────────────
 // Editorial palette. Brand green anchors sectioning; ink scale provides
@@ -36,7 +63,7 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
     paddingHorizontal: 32,
     fontSize: 9,
-    fontFamily: 'Helvetica',
+    fontFamily: 'Roboto',
     color: INK,
     lineHeight: 1.4,
   },
@@ -66,14 +93,14 @@ const styles = StyleSheet.create({
     marginRight: 6,
     color: '#fff',
     fontSize: 8,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     textAlign: 'center',
     paddingTop: 2.5,
   },
-  brand:       { fontSize: 10.5, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.4 },
+  brand:       { fontSize: 10.5, fontFamily: 'Roboto', fontWeight: 700, color: INK, letterSpacing: 0.4 },
   mastheadRight: { alignItems: 'flex-end' },
-  planTitle:   { fontSize: 10, fontFamily: 'Helvetica-Bold', color: INK, letterSpacing: 0.2 },
-  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily: 'Helvetica-Oblique', marginTop: 2 },
+  planTitle:   { fontSize: 10, fontFamily: 'Roboto', fontWeight: 700, color: INK, letterSpacing: 0.2 },
+  weekLabel:   { fontSize: 7.5, color: INK_MUTED, fontFamily: 'Roboto', fontStyle: 'italic', marginTop: 2 },
 
   // ── Hero (page 1 only) ──────────────────────────────────────────────────
   // Compact: title + week + 4 stats in a single visual block. The stats are
@@ -101,12 +128,12 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: BRAND_DARK,
     letterSpacing: 2.2,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     marginBottom: 3,
   },
   heroTitle: {
     fontSize: 19,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: INK,
     letterSpacing: -0.3,
     lineHeight: 1.12,
@@ -115,12 +142,12 @@ const styles = StyleSheet.create({
   heroWeek: {
     fontSize: 9,
     color: INK_SOFT,
-    fontFamily: 'Helvetica-Oblique',
+    fontFamily: 'Roboto', fontStyle: 'italic',
   },
   heroStat: { flex: 1 },
   heroStatNum: {
     fontSize: 15,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: BRAND_DARK,
     lineHeight: 1.1,
   },
@@ -129,7 +156,7 @@ const styles = StyleSheet.create({
     color: INK_MUTED,
     letterSpacing: 1.3,
     marginTop: 2,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
   },
   heroStatDivider: {
     width: 0.5,
@@ -148,12 +175,12 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: BRAND,
     letterSpacing: 2,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     marginRight: 8,
   },
   sectionTitle: {
     fontSize: 13,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: INK,
     letterSpacing: 0.1,
   },
@@ -178,14 +205,14 @@ const styles = StyleSheet.create({
     backgroundColor: BRAND,
     color: '#fff',
     fontSize: 7.4,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     textAlign: 'center',
     paddingTop: 2.6,
     marginRight: 7,
   },
   dayName: {
     fontSize: 8.6,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: INK,
     letterSpacing: 1.5,
   },
@@ -215,7 +242,7 @@ const styles = StyleSheet.create({
   mealKindBadge: {
     width: 9, height: 9, borderRadius: 4.5,
     fontSize: 5.6,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: '#fff',
     textAlign: 'center',
     paddingTop: 1.8,
@@ -227,11 +254,11 @@ const styles = StyleSheet.create({
     fontSize: 6,
     color: INK_MUTED,
     letterSpacing: 1.4,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
   },
   mealName: {
     fontSize: 11,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: INK,
     marginBottom: 2,
     lineHeight: 1.15,
@@ -256,13 +283,13 @@ const styles = StyleSheet.create({
   mealMetaChipCost: {
     backgroundColor: ACCENT_TINT,
     color: ACCENT,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
   },
   mealIngrLabel: {
     fontSize: 5.6,
     color: INK_FAINT,
     letterSpacing: 1.2,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     marginBottom: 1.5,
   },
   mealIngr: {
@@ -298,7 +325,7 @@ const styles = StyleSheet.create({
   },
   shopGroupTitle: {
     fontSize: 7.4,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: BRAND_DARK,
     letterSpacing: 1.6,
   },
@@ -331,7 +358,7 @@ const styles = StyleSheet.create({
   },
   shopItemQty: {
     fontSize: 7,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: INK_SOFT,
     lineHeight: 1.2,
   },
@@ -351,12 +378,44 @@ const styles = StyleSheet.create({
   },
   tipLabel: {
     fontSize: 6.4,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     color: ACCENT,
     letterSpacing: 1.6,
     marginRight: 8,
   },
   tipText: { fontSize: 7.6, color: INK_SOFT, lineHeight: 1.35, flex: 1 },
+
+  // ── Locked-days notice (free preview) ───────────────────────────────────
+  // Rendered after the meal-plan grid when the payload includes a `locked`
+  // block. Mirrors the "Days N–M are Premium" upsell that the legacy
+  // html2pdf exporter shows for free users so the perceived value of the
+  // export stays consistent across both engines.
+  lockedBox: {
+    marginTop: 8,
+    paddingTop: 10, paddingBottom: 10, paddingHorizontal: 14,
+    backgroundColor: BRAND_TINT,
+    borderRadius: 4,
+    borderLeftWidth: 3,
+    borderLeftColor: BRAND,
+  },
+  lockedTitle: {
+    fontSize: 10,
+    fontFamily: 'Roboto', fontWeight: 700,
+    color: BRAND_DARK,
+    marginBottom: 4,
+  },
+  lockedSub: {
+    fontSize: 8.4,
+    color: INK_SOFT,
+    lineHeight: 1.4,
+    marginBottom: 6,
+  },
+  lockedCta: {
+    fontSize: 8,
+    fontFamily: 'Roboto', fontWeight: 700,
+    color: BRAND,
+    letterSpacing: 0.3,
+  },
 
   // ── Footer ──────────────────────────────────────────────────────────────
   footer: {
@@ -377,7 +436,7 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: INK_MUTED,
     letterSpacing: 0.5,
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto', fontWeight: 700,
     textAlign: 'center',
     position: 'absolute',
     left: 0, right: 0, top: 7,
@@ -385,9 +444,9 @@ const styles = StyleSheet.create({
   footerRight: { fontSize: 7, color: INK_MUTED, letterSpacing: 0.5 },
 });
 
-function mealCell(meal, kind) {
-  const kindLabel = kind.toUpperCase();
-  const kindLetter = kind.charAt(0).toUpperCase();
+function mealCell(meal, kind, L) {
+  const kindLabel = kind === 'lunch' ? (L.lunch || 'LUNCH') : (L.dinner || 'DINNER');
+  const kindLetter = kindLabel.charAt(0);
   const kindStyle = kind === 'lunch' ? styles.mealKindLunch : styles.mealKindDinner;
   if (!meal || !meal.name) {
     return h(View, null,
@@ -399,12 +458,10 @@ function mealCell(meal, kind) {
     );
   }
   const ingr = Array.isArray(meal.ingredients) ? meal.ingredients : [];
-  // Cap at 5 ingredients — typically fits on one line at the new column
-  // width, so day blocks stay predictable in height. " +X more" suffix
-  // signals truncation without burning extra vertical room.
   const MAX = 5;
+  const moreWord = L.moreSuffix || 'more';
   const ingrShort = ingr.length
-    ? ingr.slice(0, MAX).join(' · ') + (ingr.length > MAX ? ` · +${ingr.length - MAX} more` : '')
+    ? ingr.slice(0, MAX).join(' · ') + (ingr.length > MAX ? ` · +${ingr.length - MAX} ${moreWord}` : '')
     : '';
   const children = [
     h(View, { key: 'h', style: styles.mealHead },
@@ -415,24 +472,23 @@ function mealCell(meal, kind) {
   ];
   const chips = [];
   if (meal.time)     chips.push(h(Text, { key: 'ct', style: styles.mealMetaChip }, `${meal.time} min`));
-  if (meal.servings) chips.push(h(Text, { key: 'cs', style: styles.mealMetaChip }, `${meal.servings} servings`));
+  if (meal.servings) chips.push(h(Text, { key: 'cs', style: styles.mealMetaChip }, `${meal.servings} ${L.servingsWord || 'servings'}`));
   if (meal.cost)     chips.push(h(Text, { key: 'cc', style: [styles.mealMetaChip, styles.mealMetaChipCost] }, String(meal.cost)));
   if (chips.length)  children.push(h(View, { key: 'm', style: styles.mealMeta }, ...chips));
   if (ingrShort) {
-    children.push(h(Text, { key: 'il', style: styles.mealIngrLabel }, 'INGREDIENTS'));
+    children.push(h(Text, { key: 'il', style: styles.mealIngrLabel }, L.ingredients || 'INGREDIENTS'));
     children.push(h(Text, { key: 'i',  style: styles.mealIngr }, ingrShort));
   }
   return h(View, null, ...children);
 }
 
-function dayBlock(d, idx) {
-  // Total active minutes for the day (lunch + dinner)
+function dayBlock(d, idx, L) {
   const totalMin = (d.lunch && d.lunch.time ? d.lunch.time : 0)
                  + (d.dinner && d.dinner.time ? d.dinner.time : 0);
   const meals = (d.lunch ? 1 : 0) + (d.dinner ? 1 : 0);
   const metaBits = [];
-  if (meals)    metaBits.push(`${meals} meal${meals > 1 ? 's' : ''}`);
-  if (totalMin) metaBits.push(`${totalMin} min total`);
+  if (meals)    metaBits.push(`${meals} ${L.mealsSuffix || 'meals'}`);
+  if (totalMin) metaBits.push(`${totalMin} ${L.minTotal || 'min total'}`);
   return h(View, { key: idx, style: styles.dayBlock, wrap: false },
     h(View, { style: styles.dayHeader },
       h(Text, { style: styles.dayBadge }, String(idx + 1)),
@@ -442,8 +498,8 @@ function dayBlock(d, idx) {
       h(View, { style: styles.dayRule }),
     ),
     h(View, { style: styles.mealRow },
-      h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch')),
-      h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner')),
+      h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch',  L)),
+      h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner', L)),
     ),
   );
 }
@@ -472,6 +528,10 @@ function shopGroup(g, gi) {
 function MealPlanDocument(plan) {
   const days   = Array.isArray(plan.days) ? plan.days : [];
   const groups = Array.isArray(plan.shoppingGroups) ? plan.shoppingGroups : [];
+  // Localized labels shipped from the client. We keep the EN strings as
+  // fallbacks so direct GET smoke-tests and pre-i18n callers still render.
+  const L = (plan.labels && typeof plan.labels === 'object') ? plan.labels : {};
+  const LStats = (L.stats && typeof L.stats === 'object') ? L.stats : {};
 
   // ── Weekly stats for the hero ─────────────────────────────────────────
   let mealCount = 0, totalMin = 0, cuisines = 0;
@@ -507,28 +567,29 @@ function MealPlanDocument(plan) {
   heroStats.push(
     h(View, { key: 's1', style: styles.heroStat },
       h(Text, { style: styles.heroStatNum }, String(days.length || 0)),
-      h(Text, { style: styles.heroStatLabel }, 'DAYS'),
+      h(Text, { style: styles.heroStatLabel }, LStats.days || 'DAYS'),
     ),
     h(View, { key: 'd1', style: styles.heroStatDivider }),
     h(View, { key: 's2', style: styles.heroStat },
       h(Text, { style: styles.heroStatNum }, String(mealCount)),
-      h(Text, { style: styles.heroStatLabel }, 'MEALS'),
+      h(Text, { style: styles.heroStatLabel }, LStats.meals || 'MEALS'),
     ),
     h(View, { key: 'd2', style: styles.heroStatDivider }),
     h(View, { key: 's3', style: styles.heroStat },
       h(Text, { style: styles.heroStatNum }, avgMin ? `${avgMin}'` : '—'),
-      h(Text, { style: styles.heroStatLabel }, 'AVG'),
+      h(Text, { style: styles.heroStatLabel }, LStats.avg || 'AVG'),
     ),
     h(View, { key: 'd3', style: styles.heroStatDivider }),
     h(View, { key: 's4', style: styles.heroStat },
       h(Text, { style: styles.heroStatNum }, cuisines ? String(cuisines) : `${groups.length || '—'}`),
-      h(Text, { style: styles.heroStatLabel }, cuisines ? 'CUISINES' : 'GROUPS'),
+      h(Text, { style: styles.heroStatLabel }, cuisines ? (LStats.cuisines || 'CUISINES') : (LStats.groups || 'GROUPS')),
     ),
   );
 
+  const eyebrowSuffix = L.eyebrow || 'AUTO-GENERATED';
   const heroEl = h(View, { style: styles.hero },
     h(View, { style: styles.heroLeft },
-      h(Text, { style: styles.heroEyebrow }, 'MEAL-PLANNER.RO  ·  AUTO-GENERATED'),
+      h(Text, { style: styles.heroEyebrow }, `MEAL-PLANNER.RO  ·  ${eyebrowSuffix}`),
       h(Text, { style: styles.heroTitle }, plan.title || 'Weekly Meal Plan'),
       plan.weekLabel ? h(Text, { style: styles.heroWeek }, plan.weekLabel) : null,
     ),
@@ -538,11 +599,25 @@ function MealPlanDocument(plan) {
   // ── Section heading: THE PLAN ──
   const planHeadingEl = h(View, { style: styles.sectionHead },
     h(Text, { style: styles.sectionEyebrow }, '01'),
-    h(Text, { style: styles.sectionTitle }, 'The week, day by day'),
+    h(Text, { style: styles.sectionTitle }, L.sectionPlan || 'The week, day by day'),
     h(View, { style: styles.sectionRule }),
   );
 
-  const dayEls = days.map(dayBlock);
+  const dayEls = days.map((d, i) => dayBlock(d, i, L));
+
+  // ── Locked-days notice (free preview only) ──
+  // Roboto ships Latin Extended + Cyrillic only — no emoji or supplementary
+  // pictographs. Strip those code points before rendering so the lock title
+  // doesn't show a tofu box where 🔒 used to be. Same for the right-arrow
+  // suffix common in i18n strings: substitute the ASCII "->".
+  const sanitizePdfText = (s) => String(s || '')
+    .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F000}-\u{1F2FF}]\s*/gu, '')
+    .replace(/→/g, '->');
+  const lockedEl = (plan.locked && plan.locked.title) ? h(View, { style: styles.lockedBox, wrap: false },
+    h(Text, { style: styles.lockedTitle }, sanitizePdfText(plan.locked.title)),
+    plan.locked.sub ? h(Text, { style: styles.lockedSub }, sanitizePdfText(plan.locked.sub)) : null,
+    plan.locked.cta ? h(Text, { style: styles.lockedCta }, `${sanitizePdfText(plan.locked.cta)}  meal-planner.ro`) : null,
+  ) : null;
 
   // Heading + grid render as one atomic block (wrap:false) so the section
   // title never orphans. For a typical 50–100-item list across 6 groups in
@@ -567,15 +642,13 @@ function MealPlanDocument(plan) {
   // splits mid-list; the parent grid wraps freely between groups.
   const shopHeadingEl = h(View, { style: styles.sectionHead, minPresenceAhead: 80 },
     h(Text, { style: styles.sectionEyebrow }, '02'),
-    h(Text, { style: styles.sectionTitle }, 'Shopping list'),
+    h(Text, { style: styles.sectionTitle }, L.sectionShop || 'Shopping list'),
     h(View, { style: styles.sectionRule }),
   );
-  // Single-line PRO TIP — sits inline after the grid without orphaning to
-  // a near-empty trailing page.
   const tipEl = groups.length ? h(View, { style: styles.tipBox, wrap: false },
-    h(Text, { style: styles.tipLabel }, 'PRO TIP'),
+    h(Text, { style: styles.tipLabel }, L.tipLabel || 'PRO TIP'),
     h(Text, { style: styles.tipText },
-      'Items are grouped by supermarket aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.'),
+      L.tipText || 'Items are grouped by supermarket aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.'),
   ) : null;
 
   // Greedy bin-pack: sort groups by item count desc, assign each to the
@@ -623,11 +696,15 @@ function MealPlanDocument(plan) {
   ] : [];
 
   const today = new Date().toLocaleDateString('en-GB');
+  // pageOf is a tiny template ("Page {n} of {t}") so the locale chooses
+  // word order ("Pagina {n} din {t}" in RO, "{n}/{t} ページ" in JA).
+  const pageOfTpl = L.pageOf || 'Page {n} of {t}';
   const footerEl = h(View, { style: styles.footer, fixed: true },
     h(Text, { style: styles.footerLeft }, `Meal-Planner.ro  ·  ${today}`),
     h(Text, {
       style: styles.footerCenter,
-      render: ({ pageNumber, totalPages }) => `Page ${pageNumber} of ${totalPages}`,
+      render: ({ pageNumber, totalPages }) =>
+        pageOfTpl.replace('{n}', pageNumber).replace('{t}', totalPages),
     }),
     h(Text, { style: styles.footerRight }, plan.title || 'Weekly plan'),
   );
@@ -638,6 +715,7 @@ function MealPlanDocument(plan) {
     heroEl,
     planHeadingEl,
     ...dayEls,
+    lockedEl,
     ...shopEls,
     footerEl,
   );

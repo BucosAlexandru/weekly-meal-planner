@@ -686,7 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // pages, which routes to /?autoplan=<id>).
   // To return to the default after an explicit opt-in/out:
   //   localStorage.removeItem('pdfV2')
-  const PDF_EXPORT_DEFAULT_ENGINE = 'legacy';  // 'legacy' | 'pdfv2'
+  const PDF_EXPORT_DEFAULT_ENGINE = 'pdfv2';  // 'legacy' | 'pdfv2'
 
   try {
     const _qs = new URLSearchParams(window.location.search || '');
@@ -799,9 +799,19 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 
-    const EN_DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    // Localized 3-letter weekday labels — used as the day header inside
+    // the PDF. We derive them from the i18n.weekdays array (which is the
+    // full weekday name list for the active locale) so the server-side
+    // renderer doesn't need its own 14-locale table.
+    const lcStrings = i18n[lang] || i18n.en || {};
+    const fullDays = Array.isArray(lcStrings.weekdays) && lcStrings.weekdays.length === 7
+      ? lcStrings.weekdays
+      : ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const abbrev = (s) => String(s || '').trim().slice(0, 3);
+    const localizedDays = fullDays.map(abbrev);
+
     const days = visibleMeals.map((m, i) => ({
-      day: EN_DAYS[i] || `Day ${i + 1}`,
+      day: localizedDays[i] || `Day ${i + 1}`,
       lunch: mealPayload(m.lunch),
       dinner: mealPayload(m.dinner),
     })).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
@@ -814,15 +824,75 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
     let shoppingGroups = [];
-    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, 'en'); }
+    // Build the shopping list against the active locale so the rendered
+    // group/item labels match the rest of the PDF (was hard-coded 'en').
+    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, lang); }
     catch (_) { shoppingGroups = []; }
 
+    // Locked days notice — non-premium users only see days 1-freeDays.
+    // Pass the names of the remaining locked days so the server can render
+    // a localized "🔒 Days N–M are Premium" notice instead of silently
+    // dropping the rest of the plan.
+    const locked = !isPremium && allMeals.length > freeDays
+      ? {
+          fromDay: localizedDays[freeDays] || `Day ${freeDays + 1}`,
+          toDay:   localizedDays[allMeals.length - 1] || `Day ${allMeals.length}`,
+          title:   t('pdf.locked.title'),
+          sub:     t('pdf.locked.sub'),
+          cta:     t('pdf.locked.cta'),
+        }
+      : null;
+
+    // Localized week label. Uses Intl with the locale's BCP-47 tag so e.g.
+    // RO renders "Săptămâna 29 mai 2026" rather than the EN form.
     const today = new Date();
+    const localeMap = {
+      ro:'ro-RO', en:'en-GB', es:'es-ES', fr:'fr-FR', de:'de-DE', pt:'pt-PT',
+      ru:'ru-RU', ar:'ar-SA', zh:'zh-CN', ja:'ja-JP', hi:'hi-IN', tr:'tr-TR',
+      it:'it-IT', ko:'ko-KR',
+    };
+    const dateStr = today.toLocaleDateString(localeMap[lang] || 'en-GB', {
+      day: 'numeric', month: 'long', year: 'numeric',
+    });
+    const WEEK_OF = {
+      ro:'Săptămâna', en:'Week of', es:'Semana del', fr:'Semaine du',
+      de:'Woche vom', pt:'Semana de', ru:'Неделя с', ar:'أسبوع', zh:'本周',
+      ja:'今週', hi:'सप्ताह', tr:'Hafta', it:'Settimana del', ko:'주간',
+    };
+
+    // Localized labels shipped IN the payload so the server-side renderer
+    // is locale-agnostic (no need to duplicate the 14-language i18n table
+    // server-side). Server falls back to the EN string if a key is missing.
+    const labels = {
+      eyebrow:        'AUTO-GENERATED',
+      sectionPlan:    'The week, day by day',
+      sectionShop:    lcStrings.shoppingList || 'Shopping list',
+      lunch:          'LUNCH',
+      dinner:         'DINNER',
+      ingredients:    lcStrings['col.ingredients']
+                        ? lcStrings['col.ingredients'].toUpperCase()
+                        : 'INGREDIENTS',
+      stats: {
+        days:     'DAYS',     meals:    'MEALS',
+        avg:      'AVG',      cuisines: 'CUISINES',
+        groups:   'GROUPS',
+      },
+      mealsSuffix:  'meals',
+      minTotal:     'min total',
+      moreSuffix:   'more',     // "+5 more"
+      tipLabel:     'PRO TIP',
+      tipText:      'Items grouped by aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.',
+      pageOf:       'Page {n} of {t}',
+    };
+
     return {
-      title:     'Weekly meal plan',
-      weekLabel: `Week of ${today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+      lang,
+      title:     lcStrings.title || 'Weekly Meal Plan',
+      weekLabel: `${WEEK_OF[lang] || WEEK_OF.en} ${dateStr}`,
       days,
       shoppingGroups,
+      labels,
+      locked,
     };
   }
 
@@ -1565,8 +1635,17 @@ function paginateCleanNode(root){
       const bar = document.getElementById('auto-menu-bar');
       if (bar) bar.appendChild(costBar);
     }
-    const ron = COST_RON[filterId] || 200;
-    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${i18n[lang]?.costEstimate || 'Cost estimat'}: ${formatCost(ron)}</strong> / ${i18n[lang]?.perWeek || 'săptămână · 2 persoane'}`;
+    const weeklyRon = COST_RON[filterId] || 200;
+    const mode = window._planMode || 'week';
+    // 14 meals/week → 1 meal ≈ 1/14, 1 day (lunch+dinner) ≈ 1/7
+    const ron = mode === 'meal' ? Math.round(weeklyRon / 14)
+              : mode === 'day'  ? Math.round(weeklyRon / 7)
+              : weeklyRon;
+    const lbls = i18n[lang] || i18n.en || {};
+    const unit = mode === 'meal' ? (lbls.perMeal || 'meal')
+               : mode === 'day'  ? (lbls.perDay  || 'day · 2 people')
+               : (lbls.perWeek || 'săptămână · 2 persoane');
+    costBar.innerHTML = `<i class="bi bi-currency-exchange"></i> <strong>${lbls.costEstimate || 'Cost estimat'}: ${formatCost(ron)}</strong> / ${unit}`;
     costBar.style.display = 'flex';
   }
 
@@ -1592,16 +1671,22 @@ function paginateCleanNode(root){
         updateAutoMenuBtn();
         updateShoppingList();
         updateExportSectionVisibility();
+        showCostEstimate(window._activeFilter);
       });
     });
   }
 
   function updateAutoMenuBtn() {
     const autoBtn = document.getElementById('auto-menu-btn');
-    if (autoBtn) {
-      const mode = window._planMode;
-      const icon = mode === 'meal' ? '✨' : '<i class="bi bi-shuffle" aria-hidden="true"></i>';
-      autoBtn.innerHTML = `${icon} ${t(`mode.btn.${mode}`)}`;
+    if (!autoBtn) return;
+    const mode = window._planMode;
+    const label = t(`mode.btn.${mode}`);
+    // For 'meal' the i18n label already starts with ✨ (Surprise me); for the
+    // other modes prepend the shuffle icon. Avoids the duplicate-sparkle bug.
+    if (mode === 'meal') {
+      autoBtn.innerHTML = label;
+    } else {
+      autoBtn.innerHTML = `<i class="bi bi-shuffle" aria-hidden="true"></i> ${label}`;
     }
   }
 
@@ -1620,6 +1705,19 @@ function paginateCleanNode(root){
       chipRow.className = 'filter-chip-row';
       bar.insertBefore(chipRow, bar.firstChild);
     }
+
+    // ── Eyebrow header (premium polish) ───────────────────────
+    let header = document.getElementById('auto-menu-header');
+    if (!header) {
+      header = document.createElement('div');
+      header.id = 'auto-menu-header';
+      header.className = 'auto-menu-header';
+      bar.insertBefore(header, bar.firstChild);
+    }
+    const headerLabel = t('autoMenu.header') !== 'autoMenu.header'
+      ? t('autoMenu.header')
+      : (lang === 'ro' ? 'Generator inteligent' : 'Smart generator');
+    header.innerHTML = `<span class="header-icon" aria-hidden="true">✨</span><span>${headerLabel}</span>`;
     const labels = FILTER_LABELS[lang] || FILTER_LABELS.default;
     chipRow.innerHTML = FILTER_DEFS.map(f =>
       `<button class="filter-chip${window._activeFilter===f.id?' active':''}" data-filter="${f.id}" type="button" aria-pressed="${window._activeFilter===f.id}">
