@@ -306,7 +306,17 @@
       "permanent": true
     },
     {
+      "source": "/ro/retete/tagine/",
+      "destination": "/ro/retete/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/en/recipes/tagine",
+      "destination": "/en/recipes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/en/recipes/tagine/",
       "destination": "/en/recipes/chicken-tagine/",
       "permanent": true
     },
@@ -316,7 +326,17 @@
       "permanent": true
     },
     {
+      "source": "/es/recetas/tagine/",
+      "destination": "/es/recetas/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/fr/recettes/tagine",
+      "destination": "/fr/recettes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/tagine/",
       "destination": "/fr/recettes/chicken-tagine/",
       "permanent": true
     },
@@ -326,7 +346,17 @@
       "permanent": true
     },
     {
+      "source": "/de/rezepte/tagine/",
+      "destination": "/de/rezepte/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/pt/receitas/tagine",
+      "destination": "/pt/receitas/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/tagine/",
       "destination": "/pt/receitas/chicken-tagine/",
       "permanent": true
     },
@@ -336,7 +366,17 @@
       "permanent": true
     },
     {
+      "source": "/ru/retsepty/tagine/",
+      "destination": "/ru/retsepty/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/ar/wasafat/tagine",
+      "destination": "/ar/wasafat/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/tagine/",
       "destination": "/ar/wasafat/chicken-tagine/",
       "permanent": true
     },
@@ -346,7 +386,17 @@
       "permanent": true
     },
     {
+      "source": "/zh/shipu/tagine/",
+      "destination": "/zh/shipu/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/ja/reshipi/tagine",
+      "destination": "/ja/reshipi/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/tagine/",
       "destination": "/ja/reshipi/chicken-tagine/",
       "permanent": true
     },
@@ -356,7 +406,17 @@
       "permanent": true
     },
     {
+      "source": "/hi/recipes/tagine/",
+      "destination": "/hi/recipes/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/tr/tarifler/tagine",
+      "destination": "/tr/tarifler/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/tagine/",
       "destination": "/tr/tarifler/chicken-tagine/",
       "permanent": true
     },
@@ -366,7 +426,17 @@
       "permanent": true
     },
     {
+      "source": "/it/ricette/tagine/",
+      "destination": "/it/ricette/chicken-tagine/",
+      "permanent": true
+    },
+    {
       "source": "/ko/recipes/tagine",
+      "destination": "/ko/recipes/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/recipes/tagine/",
       "destination": "/ko/recipes/chicken-tagine/",
       "permanent": true
     },
