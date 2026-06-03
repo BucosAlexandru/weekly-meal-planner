@@ -2369,15 +2369,15 @@ function renderPremiumHero() {
             <span class="hero-stat-label">${safeText(s.stat2l)}</span>
           </div>
           <span class="hero-stat-sep" aria-hidden="true">·</span>
-          <a class="hero-stat hero-stat--link" href="#pricing-section" style="text-decoration:none;color:inherit;">
+          <div class="hero-stat">
             <span class="hero-stat-num" data-count-target="${safeText(s.stat3n)}">${safeText(s.stat3n)}</span>
             <span class="hero-stat-label">${safeText(s.stat3l)}</span>
-          </a>
+          </div>
         </div>
         <div class="hero-premium-cta">
           <button class="btn-hero-cta" id="hero-cta-btn" type="button">${safeText(s.cta)}</button>
           <a href="${mUrl}" class="hero-ghost-link">${safeText(s.ghost)}</a>
-          ${window.hasUnlimited ? '' : `<a href="#pricing-section" class="hero-premium-link">${safeText(HERO_PREMIUM_LINK[lang] || HERO_PREMIUM_LINK.en)}</a>`}
+          ${window.hasUnlimited ? '' : `<a href="${NAV_PRICING_LINKS[lang] || NAV_PRICING_LINKS.en}" class="hero-premium-link">${safeText(HERO_PREMIUM_LINK[lang] || HERO_PREMIUM_LINK.en)}</a>`}
         </div>
       </div>
 
@@ -2642,7 +2642,7 @@ function renderPremiumPreview() {
       </div>
       <div class="hp-premium-preview-grid">${cardsHTML}</div>
       <p class="hp-preview-cta">
-        <a class="hp-preview-cta-btn" href="#pricing-section">${safeText(s.cta)}</a>
+        <a class="hp-preview-cta-btn" href="${NAV_PRICING_LINKS[lang] || NAV_PRICING_LINKS.en}">${safeText(s.cta)}</a>
       </p>
     </section>`;
 
@@ -3087,7 +3087,7 @@ function renderFeaturedRecipe() {
           </div>
         </div>
         <div class="hp-divider">${HP_ORNAMENTS.sprig}</div>
-        <p class="hp-featured-cta-row"><a href="#pricing-section">${safeText(s.cta)}</a></p>
+        <p class="hp-featured-cta-row"><a href="#auto-menu-bar" class="hp-featured-cta-link" data-featured-recipe-id="1">${safeText(s.cta)}</a></p>
       </div>
     </section>`;
 
@@ -3099,6 +3099,31 @@ function renderFeaturedRecipe() {
   } else {
     document.getElementById('hp-cuisine-discover')?.insertAdjacentHTML('beforebegin', html);
   }
+
+  // CTA "Add it to your week — free": wire the featured-recipe link to actually
+  // add the recipe to the first empty planner slot (lunch first, then dinner,
+  // scanning Mon→Sun) and smooth-scroll into the planner so the user sees it
+  // appear. Falls back to a plain anchor jump if recipe lookup fails.
+  document.querySelector('.hp-featured-cta-link')?.addEventListener('click', (e) => {
+    const recipeId = Number(e.currentTarget.dataset.featuredRecipeId);
+    const recipe   = (window.recipesMain || []).find(r => r.id === recipeId);
+    if (!recipe) return; // let the href anchor jump still work as fallback
+    e.preventDefault();
+    let placed = false;
+    for (let i = 1; i <= 7 && !placed; i++) {
+      for (const slot of [`d${i}l`, `d${i}c`]) {
+        const inp = document.getElementById(slot);
+        if (inp && !inp.value.trim()) {
+          inp.value = getRecipeText(recipe, lang);
+          inp.dispatchEvent(new Event('input', { bubbles: true }));
+          placed = true;
+          break;
+        }
+      }
+    }
+    const target = document.getElementById('auto-menu-bar') || document.getElementById('plan-table');
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 }
 
 function renderFAQ() {
@@ -3404,6 +3429,7 @@ function updateStickyUpgradeText() {
   if (!pill) return;
   pill.textContent = STICKY_UPGRADE_LABEL[lang] || STICKY_UPGRADE_LABEL.en;
   pill.setAttribute('aria-label', STICKY_UPGRADE_LABEL[lang] || STICKY_UPGRADE_LABEL.en);
+  pill.setAttribute('href', NAV_PRICING_LINKS[lang] || NAV_PRICING_LINKS.en);
 }
 
 // Local state for the sticky pill visibility. Updated by the
