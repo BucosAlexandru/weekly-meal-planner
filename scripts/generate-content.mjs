@@ -1255,7 +1255,7 @@ const PRICING_SLUGS = {
 const PRICING_COPY = {
   ro: {
     metaTitle: 'Prețuri – Gratuit vs Premium | Meal-Planner.ro',
-    metaDesc:  'Compară planurile Gratuit și Premium. PDF-uri nelimitate, asistent AI, meniu cu buget — doar €3/lună.',
+    metaDesc:  'Compară planurile Gratuit și Premium. PDF-uri nelimitate, 216 rețete din 70+ țări, meniu cu buget — doar €3/lună.',
     title:     'Prețuri simple și clare',
     subtitle:  'Începe gratuit. Fă upgrade când ai nevoie de mai mult.',
     freeName:  'Gratuit',
@@ -1271,7 +1271,7 @@ const PRICING_COPY = {
     faqTitle:  'Întrebări frecvente',
     faq: [
       ['Ce include planul Gratuit?','Acces complet la planificatorul de 7 zile, listă de cumpărături automată, 175 rețete în 14 limbi și o previzualizare PDF gratuită (2 zile din 7).'],
-      ['Ce adaugă Premium?','Un PDF cu întregul plan de 7 zile, meniu cu buget săptămânal, asistentul AI de rețete și asistentul AI de planificare — toate nelimitate.'],
+      ['Ce adaugă Premium?','Un PDF cu întregul plan de 7 zile, meniu cu buget săptămânal, acces la toate cele 216 rețete din 70+ țări și rețete noi adăugate regulat — toate nelimitate.'],
       ['Cum funcționează facturarea?','€3/lună, facturat prin Stripe. Poți anula oricând din portalul clienților.'],
       ['Cum activez după plată?','Revino pe pagina principală și introdu emailul în secțiunea „Ai deja abonament?". Statusul tău premium va fi verificat instant.'],
       ['Este disponibil în limba mea?','Da — în 14 limbi: română, engleză, spaniolă, franceză, germană, portugheză, rusă, arabă, chineză, japoneză, hindi, turcă, italiană și coreeană.']
@@ -1279,7 +1279,7 @@ const PRICING_COPY = {
   },
   en: {
     metaTitle: 'Pricing – Free vs Premium | Meal-Planner.ro',
-    metaDesc:  'Compare Free and Premium plans. Unlimited PDFs, AI recipe assistant, weekly budget menu — just €3/month.',
+    metaDesc:  'Compare Free and Premium plans. Unlimited PDFs, 216 recipes from 70+ countries, weekly budget menu — just €3/month.',
     title:     'Simple, honest pricing',
     subtitle:  'Start free. Upgrade when you need more.',
     freeName:  'Free',
@@ -1295,7 +1295,7 @@ const PRICING_COPY = {
     faqTitle:  'Frequently asked questions',
     faq: [
       ['What does Free include?','Full access to the 7-day meal planner, automatic shopping list, 175 recipes in 14 languages, and a free PDF preview (2 of 7 days).'],
-      ['What does Premium add?','A single PDF with your entire 7-day plan, a weekly budget menu, the AI recipe chat assistant, and the AI meal planning assistant — all unlimited.'],
+      ['What does Premium add?','A single PDF with your entire 7-day plan, a weekly budget menu, access to all 216 recipes from 70+ countries, and new recipes added regularly — all unlimited.'],
       ['How does billing work?','€3/month, billed via Stripe. You can cancel at any time from the customer portal.'],
       ['How do I activate after payment?','Return to the homepage and enter your email in the "Already subscribed?" section. Your premium status will be verified instantly.'],
       ['Is it available in my language?','Yes — in 14 languages: English, Romanian, Spanish, French, German, Portuguese, Russian, Arabic, Chinese, Japanese, Hindi, Turkish, Italian, and Korean.']
@@ -1303,7 +1303,7 @@ const PRICING_COPY = {
   },
   es: {
     metaTitle: 'Precios – Gratis vs Premium | Meal-Planner.ro',
-    metaDesc:  'Compara los planes Gratis y Premium. PDFs ilimitados, asistente de recetas IA, menú con presupuesto — solo €3/mes.',
+    metaDesc:  'Compara los planes Gratis y Premium. PDFs ilimitados, 216 recetas de 70+ países, menú con presupuesto — solo €3/mes.',
     title:     'Precios simples y claros',
     subtitle:  'Comienza gratis. Mejora cuando necesites más.',
     freeName:  'Gratis',
@@ -1319,7 +1319,7 @@ const PRICING_COPY = {
     faqTitle:  'Preguntas frecuentes',
     faq: [
       ['¿Qué incluye el plan Gratis?','Acceso completo al planificador de 7 días, lista de compras automática, 175 recetas en 14 idiomas y una vista previa PDF gratuita (2 de 7 días).'],
-      ['¿Qué agrega Premium?','Un PDF con tu plan completo de 7 días, menú semanal con presupuesto, asistente de recetas IA y asistente IA de planificación — todo ilimitado.'],
+      ['¿Qué agrega Premium?','Un PDF con tu plan completo de 7 días, menú semanal con presupuesto, acceso a las 216 recetas de 70+ países y nuevas recetas regularmente — todo ilimitado.'],
       ['¿Cómo funciona la facturación?','€3/mes, facturado a través de Stripe. Puedes cancelar en cualquier momento desde el portal de clientes.'],
       ['¿Cómo activo tras el pago?','Vuelve a la página principal e introduce tu email en la sección "¿Ya suscrito?". Tu estado premium se verificará al instante.'],
       ['¿Está disponible en mi idioma?','Sí — en 14 idiomas: español, inglés, rumano, francés, alemán, portugués, ruso, árabe, chino, japonés, hindi, turco, italiano y coreano.']
@@ -1327,7 +1327,7 @@ const PRICING_COPY = {
   },
   fr: {
     metaTitle: 'Tarifs – Gratuit vs Premium | Meal-Planner.ro',
-    metaDesc:  'Comparez les offres Gratuit et Premium. PDFs illimités, assistant recettes IA, menu budgétaire — seulement €3/mois.',
+    metaDesc:  'Comparez les offres Gratuit et Premium. PDFs illimités, 216 recettes de 70+ pays, menu budgétaire — seulement €3/mois.',
     title:     'Tarifs simples et transparents',
     subtitle:  'Commencez gratuitement. Passez à Premium quand vous en avez besoin.',
     freeName:  'Gratuit',
@@ -1343,7 +1343,7 @@ const PRICING_COPY = {
     faqTitle:  'Questions fréquentes',
     faq: [
       ["Qu'inclut le plan Gratuit ?","Accès complet au planificateur 7 jours, liste de courses automatique, 175 recettes en 14 langues et un aperçu PDF gratuit (2 jours sur 7)."],
-      ['Que ajoute Premium ?',"Un PDF avec votre plan complet de 7 jours, un menu budgétaire, l'assistant recettes IA et l'assistant IA de planification — tout illimité."],
+      ['Que ajoute Premium ?',"Un PDF avec votre plan complet de 7 jours, un menu budgétaire, accès aux 216 recettes de 70+ pays et nouvelles recettes ajoutées régulièrement — tout illimité."],
       ['Comment fonctionne la facturation ?','€3/mois, facturé via Stripe. Vous pouvez annuler à tout moment depuis le portail client.'],
       ['Comment activer après le paiement ?','Retournez sur la page principale et entrez votre email dans la section "Déjà abonné ?". Votre statut premium sera vérifié instantanément.'],
       ['Est-il disponible dans ma langue ?','Oui — en 14 langues : français, anglais, roumain, espagnol, allemand, portugais, russe, arabe, chinois, japonais, hindi, turc, italien et coréen.']
@@ -1351,7 +1351,7 @@ const PRICING_COPY = {
   },
   de: {
     metaTitle: 'Preise – Kostenlos vs Premium | Meal-Planner.ro',
-    metaDesc:  'Kostenlose und Premium-Pläne vergleichen. Unbegrenzte PDFs, KI-Rezept-Assistent, Wochenbudget-Menü — nur €3/Monat.',
+    metaDesc:  'Kostenlose und Premium-Pläne vergleichen. Unbegrenzte PDFs, 216 Rezepte aus 70+ Ländern, Wochenbudget-Menü — nur €3/Monat.',
     title:     'Einfache, transparente Preise',
     subtitle:  'Kostenlos starten. Upgraden wenn Sie mehr brauchen.',
     freeName:  'Kostenlos',
@@ -1367,7 +1367,7 @@ const PRICING_COPY = {
     faqTitle:  'Häufige Fragen',
     faq: [
       ['Was beinhaltet der kostenlose Plan?','Vollzugriff auf den 7-Tage-Planer, automatische Einkaufsliste, 175 Rezepte in 14 Sprachen und eine kostenlose PDF-Vorschau (2 von 7 Tagen).'],
-      ['Was bietet Premium zusätzlich?','Ein vollständiges 7-Tage-PDF, ein Wochenbudget-Menü, den KI-Rezept-Assistenten und den KI-Mahlzeiten-Assistenten — alles unbegrenzt.'],
+      ['Was bietet Premium zusätzlich?','Ein vollständiges 7-Tage-PDF, ein Wochenbudget-Menü, Zugang zu allen 216 Rezepten aus 70+ Ländern und regelmäßig neue Rezepte — alles unbegrenzt.'],
       ['Wie funktioniert die Abrechnung?','€3/Monat, abgerechnet über Stripe. Sie können jederzeit über das Kundenportal kündigen.'],
       ['Wie aktiviere ich nach der Zahlung?','Kehren Sie zur Startseite zurück und geben Sie Ihre E-Mail in den Bereich "Bereits abonniert?" ein. Ihr Premium-Status wird sofort überprüft.'],
       ['Ist es in meiner Sprache verfügbar?','Ja — in 14 Sprachen: Deutsch, Englisch, Rumänisch, Spanisch, Französisch, Portugiesisch, Russisch, Arabisch, Chinesisch, Japanisch, Hindi, Türkisch, Italienisch und Koreanisch.']
@@ -1375,7 +1375,7 @@ const PRICING_COPY = {
   },
   pt: {
     metaTitle: 'Preços – Gratuito vs Premium | Meal-Planner.ro',
-    metaDesc:  'Compare os planos Gratuito e Premium. PDFs ilimitados, assistente de receitas IA, menu com orçamento — apenas €3/mês.',
+    metaDesc:  'Compare os planos Gratuito e Premium. PDFs ilimitados, 216 receitas de 70+ países, menu com orçamento — apenas €3/mês.',
     title:     'Preços simples e transparentes',
     subtitle:  'Comece gratuitamente. Faça upgrade quando precisar de mais.',
     freeName:  'Gratuito',
@@ -1391,7 +1391,7 @@ const PRICING_COPY = {
     faqTitle:  'Perguntas frequentes',
     faq: [
       ['O que inclui o plano Gratuito?','Acesso completo ao planejador de 7 dias, lista de compras automática, 175 receitas em 14 idiomas e uma pré-visualização PDF gratuita (2 de 7 dias).'],
-      ['O que o Premium adiciona?','Um PDF com o seu plano completo de 7 dias, menu semanal com orçamento, assistente de receitas IA e assistente IA de planeamento — tudo ilimitado.'],
+      ['O que o Premium adiciona?','Um PDF com o seu plano completo de 7 dias, menu semanal com orçamento, acesso a todas as 216 receitas de 70+ países e novas receitas regularmente — tudo ilimitado.'],
       ['Como funciona a cobrança?','€3/mês, cobrado via Stripe. Você pode cancelar a qualquer momento pelo portal do cliente.'],
       ['Como ativo após o pagamento?','Volte à página principal e insira seu email na seção "Já assinante?". Seu status premium será verificado instantaneamente.'],
       ['Está disponível no meu idioma?','Sim — em 14 idiomas: português, inglês, romeno, espanhol, francês, alemão, russo, árabe, chinês, japonês, hindi, turco, italiano e coreano.']
@@ -1399,7 +1399,7 @@ const PRICING_COPY = {
   },
   ru: {
     metaTitle: 'Цены – Бесплатно vs Премиум | Meal-Planner.ro',
-    metaDesc:  'Сравните бесплатный и премиум-планы. Неограниченные PDF, ИИ-помощник по рецептам, недельное меню — всего €3/мес.',
+    metaDesc:  'Сравните бесплатный и премиум-планы. Неограниченные PDF, 216 рецептов из 70+ стран, недельное меню — всего €3/мес.',
     title:     'Простые и честные цены',
     subtitle:  'Начните бесплатно. Переходите на Premium, когда нужно больше.',
     freeName:  'Бесплатно',
@@ -1415,7 +1415,7 @@ const PRICING_COPY = {
     faqTitle:  'Часто задаваемые вопросы',
     faq: [
       ['Что включает бесплатный план?','Полный доступ к 7-дневному планировщику, автоматический список покупок, 175 рецептов на 14 языках и бесплатный просмотр PDF (2 из 7 дней).'],
-      ['Что добавляет Premium?','PDF со всем 7-дневным планом, недельное бюджетное меню, ИИ-помощник по рецептам и ИИ-помощник по планированию — всё без ограничений.'],
+      ['Что добавляет Premium?','PDF со всем 7-дневным планом, недельное бюджетное меню, доступ ко всем 216 рецептам из 70+ стран и новые рецепты регулярно — всё без ограничений.'],
       ['Как работает оплата?','€3/мес, оплата через Stripe. Вы можете отменить в любое время в личном кабинете.'],
       ['Как активировать после оплаты?','Вернитесь на главную страницу и введите email в разделе "Уже подписчик?". Ваш премиум-статус будет проверен мгновенно.'],
       ['Доступен ли он на моём языке?','Да — на 14 языках: русский, английский, румынский, испанский, французский, португальский, немецкий, арабский, китайский, японский, хинди, турецкий, итальянский и корейский.']
@@ -1423,7 +1423,7 @@ const PRICING_COPY = {
   },
   ar: {
     metaTitle: 'الأسعار – مجاني مقابل بريميوم | Meal-Planner.ro',
-    metaDesc:  'قارن بين الخطة المجانية وبريميوم. PDFs غير محدودة، مساعد وصفات بالذكاء الاصطناعي، قائمة طعام أسبوعية — فقط €3/شهر.',
+    metaDesc:  'قارن بين الخطة المجانية وبريميوم. PDFs غير محدودة، 216 وصفة من 70+ دولة، قائمة طعام أسبوعية — فقط €3/شهر.',
     title:     'أسعار بسيطة وشفافة',
     subtitle:  'ابدأ مجاناً. قم بالترقية عندما تحتاج المزيد.',
     freeName:  'مجاني',
@@ -1434,12 +1434,12 @@ const PRICING_COPY = {
     backLabel: 'العودة إلى المخطط ←',
     alreadyLabel:    'لديك اشتراك بالفعل؟',
     alreadyActivate: 'تفعيل ←',
-    freeFeats: ['✅ مخطط وجبات لمدة 7 أيام','✅ قائمة تسوق تلقائية','✅ 175 وصفة من 70+ دولة','✅ 14 لغة','✅ معاينة مجانية — يومان من أصل 7','✗ ملف PDF كامل لمدة 7 أيام','✗ قائمة طعام أسبوعية بالميزانية','✗ مساعد وصفات بالذكاء الاصطناعي','✗ مساعد الذكاء الاصطناعي للتخطيط'],
+    freeFeats: ['✅ مخطط وجبات لمدة 7 أيام','✅ قائمة تسوق تلقائية','✅ 175 وصفة من 70+ دولة','✅ 14 لغة','✅ معاينة مجانية — يومان من أصل 7','✗ ملف PDF كامل لمدة 7 أيام','✗ قائمة طعام أسبوعية بالميزانية'],
     premFeats: ['✅ كل ما في المجاني، بالإضافة إلى:','✅ ملف PDF كامل لمدة 7 أيام','✅ قائمة طعام أسبوعية بالميزانية','✅ 216 وصفة من 70+ دولة','✅ وصفات جديدة بانتظام','✅ وصول غير محدود في أي وقت','✅ إلغاء في أي وقت'],
     faqTitle:  'الأسئلة الشائعة',
     faq: [
       ['ماذا يتضمن الخطة المجانية؟','وصول كامل إلى مخطط 7 أيام، قائمة تسوق تلقائية، 175 وصفة بـ14 لغة ومعاينة PDF مجانية (يومان من أصل 7).'],
-      ['ماذا يضيف بريميوم؟','ملف PDF بخطتك الكاملة لـ7 أيام، قائمة طعام أسبوعية بالميزانية، مساعد الوصفات ومساعد الذكاء الاصطناعي للتخطيط — كل ذلك بلا حدود.'],
+      ['ماذا يضيف بريميوم؟','ملف PDF بخطتك الكاملة لـ7 أيام، قائمة طعام أسبوعية بالميزانية، الوصول إلى جميع 216 وصفة من أكثر من 70 دولة، ووصفات جديدة بانتظام — كل ذلك بلا حدود.'],
       ['كيف يعمل الفوترة؟','€3/شهر، مدفوع عبر Stripe. يمكنك الإلغاء في أي وقت من بوابة العملاء.'],
       ['كيف أُفعّل بعد الدفع؟','ارجع إلى الصفحة الرئيسية وأدخل بريدك الإلكتروني في قسم "مشترك بالفعل؟". سيتم التحقق من حالتك الممتازة فوراً.'],
       ['هل هو متاح بلغتي؟','نعم — بـ14 لغة: العربية، الإنجليزية، الرومانية، الإسبانية، الفرنسية، البرتغالية، الروسية، الصينية، اليابانية، الهندية، التركية، الإيطالية والكورية.']
@@ -1447,7 +1447,7 @@ const PRICING_COPY = {
   },
   zh: {
     metaTitle: '定价 – 免费版 vs 高级版 | Meal-Planner.ro',
-    metaDesc:  '比较免费版和高级版。无限PDF下载、AI食谱助手、每周预算菜单 — 仅需€3/月。',
+    metaDesc:  '比较免费版和高级版。无限PDF下载、来自 70+ 国家的 216 道食谱、每周预算菜单 — 仅需€3/月。',
     title:     '简单透明的定价',
     subtitle:  '免费开始，需要更多时升级。',
     freeName:  '免费版',
@@ -1458,12 +1458,12 @@ const PRICING_COPY = {
     backLabel: '← 返回饮食计划器',
     alreadyLabel:    '已有订阅？',
     alreadyActivate: '激活 →',
-    freeFeats: ['✅ 7天饮食计划器','✅ 自动购物清单','✅ 175道来自70+国家的食谱','✅ 14种语言','✅ 免费预览 — 7天中的2天','✗ 完整7天PDF下载','✗ 每周预算菜单','✗ AI食谱助手','✗ AI膳食规划助手'],
+    freeFeats: ['✅ 7天饮食计划器','✅ 自动购物清单','✅ 175道来自70+国家的食谱','✅ 14种语言','✅ 免费预览 — 7天中的2天','✗ 完整7天PDF下载','✗ 每周预算菜单'],
     premFeats: ['✅ 免费版所有功能，另加：','✅ 完整7天PDF下载','✅ 每周预算菜单','✅ 来自 70+ 国家的 216 道食谱','✅ 定期添加新食谱','✅ 随时无限访问','✅ 随时取消，无承诺'],
     faqTitle:  '常见问题',
     faq: [
       ['免费版包含什么？','完整访问7天计划器、自动购物清单、14种语言的175道食谱以及免费PDF预览（7天中的2天）。'],
-      ['高级版增加了什么？','包含您完整7天计划的PDF、每周预算菜单、AI食谱聊天助手和AI膳食规划助手 — 全部无限次使用。'],
+      ['高级版增加了什么？','包含您完整7天计划的PDF、每周预算菜单、来自70+国家的216道食谱以及定期添加的新食谱 — 全部无限次使用。'],
       ['如何计费？','每月€3，通过Stripe付款。您可以随时通过客户门户取消。'],
       ['付款后如何激活？','返回主页，在"已订阅？"部分输入您的电子邮件。您的高级状态将立即得到验证。'],
       ['支持我的语言吗？','是的 — 支持14种语言：中文、英语、罗马尼亚语、西班牙语、法语、葡萄牙语、俄语、阿拉伯语、日语、印地语、土耳其语、意大利语和韩语。']
@@ -1471,7 +1471,7 @@ const PRICING_COPY = {
   },
   ja: {
     metaTitle: '料金プラン – 無料 vs プレミアム | Meal-Planner.ro',
-    metaDesc:  '無料プランとプレミアムプランを比較。無制限PDF、AIレシピアシスタント、週次予算メニュー — わずか€3/月。',
+    metaDesc:  '無料プランとプレミアムプランを比較。無制限PDF、70カ国以上から216のレシピ、週次予算メニュー — わずか€3/月。',
     title:     'シンプルで明確な料金',
     subtitle:  '無料で始めて、必要なときにアップグレード。',
     freeName:  '無料',
@@ -1482,12 +1482,12 @@ const PRICING_COPY = {
     backLabel: '← ミールプランナーに戻る',
     alreadyLabel:    'すでにサブスクリプションをお持ちですか？',
     alreadyActivate: '有効化 →',
-    freeFeats: ['✅ 7日間ミールプランナー','✅ 自動買い物リスト','✅ 70カ国以上の175レシピ','✅ 14言語','✅ 無料プレビュー — 7日中2日','✗ 7日間完全PDFダウンロード','✗ 週次予算メニュー','✗ AIミールプランアシスタント'],
+    freeFeats: ['✅ 7日間ミールプランナー','✅ 自動買い物リスト','✅ 70カ国以上の175レシピ','✅ 14言語','✅ 無料プレビュー — 7日中2日','✗ 7日間完全PDFダウンロード','✗ 週次予算メニュー'],
     premFeats: ['✅ 無料版のすべて、さらに：','✅ 7日間完全PDFダウンロード','✅ 週次予算メニュー','✅ 70カ国以上から216のレシピ','✅ 定期的に新レシピ追加','✅ いつでも無制限アクセス','✅ いつでもキャンセル可能'],
     faqTitle:  'よくある質問',
     faq: [
       ['無料プランには何が含まれますか？','7日間プランナー、自動買い物リスト、14言語の175レシピ、無料PDFプレビュー（7日中2日）への完全アクセス。'],
-      ['プレミアムは何を追加しますか？','7日間完全PDF、週次予算メニュー、AIレシピチャットアシスタント、AIミールプランアシスタント — すべて無制限。'],
+      ['プレミアムは何を追加しますか？','7日間完全PDF、週次予算メニュー、70カ国以上から216のレシピへのアクセス、定期的に追加される新レシピ — すべて無制限。'],
       ['請求はどのように機能しますか？','月額€3、Stripe経由で請求。カスタマーポータルからいつでもキャンセルできます。'],
       ['支払い後のアクティベート方法は？','ホームページに戻り、「すでに登録済みですか？」セクションにメールアドレスを入力してください。プレミアムステータスが即時確認されます。'],
       ['自分の言語で利用できますか？','はい — 14言語対応：日本語、英語、ルーマニア語、スペイン語、フランス語、ドイツ語、ポルトガル語、ロシア語、アラビア語、中国語、ヒンディー語、トルコ語、イタリア語、韓国語。']
@@ -1495,7 +1495,7 @@ const PRICING_COPY = {
   },
   hi: {
     metaTitle: 'मूल्य निर्धारण – निःशुल्क बनाम प्रीमियम | Meal-Planner.ro',
-    metaDesc:  'निःशुल्क और प्रीमियम योजनाओं की तुलना करें। असीमित PDF, AI रेसिपी सहायक, साप्ताहिक बजट मेनू — केवल €3/माह।',
+    metaDesc:  'निःशुल्क और प्रीमियम योजनाओं की तुलना करें। असीमित PDF, 70+ देशों से 216 रेसिपी, साप्ताहिक बजट मेनू — केवल €3/माह।',
     title:     'सरल और पारदर्शी मूल्य',
     subtitle:  'निःशुल्क शुरू करें। जब आपको अधिक की आवश्यकता हो तो अपग्रेड करें।',
     freeName:  'निःशुल्क',
@@ -1511,7 +1511,7 @@ const PRICING_COPY = {
     faqTitle:  'अक्सर पूछे जाने वाले प्रश्न',
     faq: [
       ['निःशुल्क योजना में क्या शामिल है?','7-दिन के प्लानर, स्वचालित खरीदारी सूची, 14 भाषाओं में 175 रेसिपी और मुफ्त PDF पूर्वावलोकन (7 में से 2 दिन) तक पूर्ण पहुंच।'],
-      ['प्रीमियम क्या जोड़ता है?','आपके 7-दिन के पूर्ण प्लान के साथ PDF, साप्ताहिक बजट मेनू, AI रेसिपी चैट सहायक और AI भोजन योजना सहायक — सभी असीमित।'],
+      ['प्रीमियम क्या जोड़ता है?','आपके 7-दिन के पूर्ण प्लान के साथ PDF, साप्ताहिक बजट मेनू, 70+ देशों से सभी 216 रेसिपी तक पहुँच और नियमित रूप से नई रेसिपी — सभी असीमित।'],
       ['बिलिंग कैसे काम करती है?','€3/माह, Stripe के माध्यम से बिल किया जाता है। आप ग्राहक पोर्टल से कभी भी रद्द कर सकते हैं।'],
       ['भुगतान के बाद सक्रिय कैसे करें?','होमपेज पर वापस जाएं और "पहले से सदस्यता है?" अनुभाग में अपना ईमेल दर्ज करें। आपकी प्रीमियम स्थिति तुरंत सत्यापित हो जाएगी।'],
       ['क्या यह मेरी भाषा में उपलब्ध है?','हां — 14 भाषाओं में: हिंदी, अंग्रेजी, रोमानियाई, स्पेनिश, फ्रेंच, जर्मन, पुर्तगाली, रूसी, अरबी, चीनी, जापानी, तुर्की, इतालवी और कोरियाई।']
@@ -1519,7 +1519,7 @@ const PRICING_COPY = {
   },
   tr: {
     metaTitle: 'Fiyatlar – Ücretsiz vs Premium | Meal-Planner.ro',
-    metaDesc:  'Ücretsiz ve Premium planları karşılaştırın. Sınırsız PDF, AI tarif asistanı, haftalık bütçe menüsü — sadece €3/ay.',
+    metaDesc:  'Ücretsiz ve Premium planları karşılaştırın. Sınırsız PDF, 70+ ülkeden 216 tarif, haftalık bütçe menüsü — sadece €3/ay.',
     title:     'Basit ve şeffaf fiyatlar',
     subtitle:  'Ücretsiz başlayın. Daha fazlasına ihtiyaç duyduğunuzda yükseltin.',
     freeName:  'Ücretsiz',
@@ -1530,12 +1530,12 @@ const PRICING_COPY = {
     backLabel: '← Yemek Planlayıcıya Dön',
     alreadyLabel:    'Zaten aboneliğiniz var mı?',
     alreadyActivate: 'Etkinleştir →',
-    freeFeats: ['✅ 7 günlük yemek planlayıcı','✅ Otomatik alışveriş listesi','✅ 70+ ülkeden 175 tarif','✅ 14 dil','✅ Ücretsiz önizleme — 7 günden 2\'si','✗ 7 günlük tam PDF indirme','✗ Haftalık bütçe menüsü','✗ AI tarif asistanı'],
+    freeFeats: ['✅ 7 günlük yemek planlayıcı','✅ Otomatik alışveriş listesi','✅ 70+ ülkeden 175 tarif','✅ 14 dil','✅ Ücretsiz önizleme — 7 günden 2\'si','✗ 7 günlük tam PDF indirme','✗ Haftalık bütçe menüsü'],
     premFeats: ['✅ Ücretsiz\'deki her şey, artı:','✅ 7 günlük tam PDF indirme','✅ Haftalık bütçe menüsü','✅ 70+ ülkeden 216 tarif','✅ Düzenli olarak yeni tarifler','✅ İstediğiniz zaman sınırsız erişim','✅ İstediğiniz zaman iptal edin'],
     faqTitle:  'Sıkça sorulan sorular',
     faq: [
       ['Ücretsiz plan neleri içerir?','7 günlük planlayıcı, otomatik alışveriş listesi, 14 dilde 175 tarif ve ücretsiz PDF önizlemesine (7 günden 2\'si) tam erişim.'],
-      ['Premium ne ekler?','7 günlük tam planınızı içeren PDF, haftalık bütçe menüsü, AI tarif sohbet asistanı ve AI yemek planlama asistanı — hepsi sınırsız.'],
+      ['Premium ne ekler?','7 günlük tam planınızı içeren PDF, haftalık bütçe menüsü, 70+ ülkeden 216 tarife erişim ve düzenli olarak eklenen yeni tarifler — hepsi sınırsız.'],
       ['Faturalandırma nasıl çalışır?','Ayda €3, Stripe üzerinden faturalandırılır. Müşteri portalından istediğiniz zaman iptal edebilirsiniz.'],
       ['Ödemeden sonra nasıl etkinleştiririm?','Ana sayfaya dönün ve "Zaten abone misiniz?" bölümüne e-postanızı girin. Premium durumunuz anında doğrulanacak.'],
       ['Dilimde mevcut mu?','Evet — 14 dilde: Türkçe, İngilizce, Romence, İspanyolca, Fransızca, Almanca, Portekizce, Rusça, Arapça, Çince, Japonca, Hintçe, İtalyanca ve Korece.']
@@ -1543,7 +1543,7 @@ const PRICING_COPY = {
   },
   it: {
     metaTitle: 'Prezzi – Gratuito vs Premium | Meal-Planner.ro',
-    metaDesc:  'Confronta i piani Gratuito e Premium. PDF illimitati, assistente ricette IA, menu settimanale con budget — solo €3/mese.',
+    metaDesc:  'Confronta i piani Gratuito e Premium. PDF illimitati, 216 ricette da 70+ paesi, menu settimanale con budget — solo €3/mese.',
     title:     'Prezzi semplici e trasparenti',
     subtitle:  'Inizia gratis. Passa a Premium quando ne hai bisogno.',
     freeName:  'Gratuito',
@@ -1554,12 +1554,12 @@ const PRICING_COPY = {
     backLabel: '← Torna al Pianificatore',
     alreadyLabel:    'Hai già un abbonamento?',
     alreadyActivate: 'Attiva →',
-    freeFeats: ['✅ Pianificatore 7 giorni','✅ Lista della spesa automatica','✅ 175 ricette da 70+ paesi','✅ 14 lingue','✅ Anteprima gratuita — 2 giorni su 7','✗ PDF completo 7 giorni','✗ Menu settimanale con budget','✗ Assistente ricette IA'],
+    freeFeats: ['✅ Pianificatore 7 giorni','✅ Lista della spesa automatica','✅ 175 ricette da 70+ paesi','✅ 14 lingue','✅ Anteprima gratuita — 2 giorni su 7','✗ PDF completo 7 giorni','✗ Menu settimanale con budget'],
     premFeats: ['✅ Tutto nel Gratuito, più:','✅ PDF completo 7 giorni','✅ Menu settimanale con budget','✅ 216 ricette da 70+ paesi','✅ Nuove ricette aggiunte regolarmente','✅ Accesso illimitato, in qualsiasi momento','✅ Disdici quando vuoi'],
     faqTitle:  'Domande frequenti',
     faq: [
       ['Cosa include il piano Gratuito?','Accesso completo al pianificatore di 7 giorni, lista della spesa automatica, 175 ricette in 14 lingue e un\'anteprima PDF gratuita (2 giorni su 7).'],
-      ['Cosa aggiunge Premium?','Un PDF con il tuo piano completo di 7 giorni, menu settimanale con budget, assistente ricette IA e assistente IA di pianificazione — tutto illimitato.'],
+      ['Cosa aggiunge Premium?','Un PDF con il tuo piano completo di 7 giorni, menu settimanale con budget, accesso a tutte le 216 ricette da 70+ paesi e nuove ricette aggiunte regolarmente — tutto illimitato.'],
       ['Come funziona la fatturazione?','€3/mese, fatturato tramite Stripe. Puoi annullare in qualsiasi momento dal portale clienti.'],
       ['Come attivo dopo il pagamento?','Torna alla homepage e inserisci la tua email nella sezione "Già abbonato?". Il tuo stato premium verrà verificato istantaneamente.'],
       ['È disponibile nella mia lingua?','Sì — in 14 lingue: italiano, inglese, rumeno, spagnolo, francese, tedesco, portoghese, russo, arabo, cinese, giapponese, hindi, turco e coreano.']
@@ -1567,7 +1567,7 @@ const PRICING_COPY = {
   },
   ko: {
     metaTitle: '요금제 – 무료 vs 프리미엄 | Meal-Planner.ro',
-    metaDesc:  '무료 및 프리미엄 플랜을 비교하세요. 무제한 PDF, AI 레시피 도우미, 주간 예산 메뉴 — 월 €3만으로.',
+    metaDesc:  '무료 및 프리미엄 플랜을 비교하세요. 무제한 PDF, 70+ 국가의 216개 레시피, 주간 예산 메뉴 — 월 €3만으로.',
     title:     '간단하고 투명한 요금제',
     subtitle:  '무료로 시작하고, 더 필요할 때 업그레이드하세요.',
     freeName:  '무료',
@@ -1583,7 +1583,7 @@ const PRICING_COPY = {
     faqTitle:  '자주 묻는 질문',
     faq: [
       ['무료 플랜에는 무엇이 포함되나요?','7일 플래너, 자동 쇼핑 목록, 14개 언어로 된 175가지 레시피, 무료 PDF 미리보기(7일 중 2일)에 대한 전체 액세스.'],
-      ['프리미엄은 무엇을 추가하나요?','7일 전체 플랜이 담긴 PDF, 주간 예산 메뉴, AI 레시피 채팅 도우미, AI 식단 계획 도우미 — 모두 무제한.'],
+      ['프리미엄은 무엇을 추가하나요?','7일 전체 플랜이 담긴 PDF, 주간 예산 메뉴, 70+ 국가의 216개 레시피 이용, 정기적으로 추가되는 새 레시피 — 모두 무제한.'],
       ['청구는 어떻게 되나요?','월 €3, Stripe를 통해 청구됩니다. 고객 포털에서 언제든지 취소할 수 있습니다.'],
       ['결제 후 어떻게 활성화하나요?','홈페이지로 돌아가서 "이미 구독 중이신가요?" 섹션에 이메일을 입력하세요. 프리미엄 상태가 즉시 확인됩니다.'],
       ['제 언어로 이용 가능한가요?','네 — 14개 언어: 한국어, 영어, 루마니아어, 스페인어, 프랑스어, 독일어, 포르투갈어, 러시아어, 아랍어, 중국어, 일본어, 힌디어, 터키어, 이탈리아어.']
