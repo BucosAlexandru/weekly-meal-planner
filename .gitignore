@@ -27,8 +27,21 @@ yarn-error.log*
 check-ssl-expiry.cjs
 check-ssl-expiry.js.claude/
 
-# Recipe-generation scripts — local only (audit_*.py stay tracked)
+# Recipe-generation scripts — local only, never committed.
+# All .py and one-off helper scripts at repo root are throwaway tooling per
+# CLAUDE.md ("audit_*.py"/"fix_*.py"/etc. are not a library). Block the whole
+# class so accidental commits via web UI don't re-add them.
+/*.py
+/audit_*.py
 /fix_*.py
+/_*.py
+/add_*.py
+
+# Accidental image uploads (phone screenshots, drafts) at repo root.
+# Recipe images live under public/images/.
+/IMG_*.png
+/IMG_*.jpg
+/IMG_*.jpeg
 
 # Claude Code worktrees
 .claude/worktrees/
