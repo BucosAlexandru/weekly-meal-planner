@@ -66,6 +66,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.25rem;
+  align-items: stretch;
 }
 @media (max-width: 800px) {
   .hp-premium-preview-grid { grid-template-columns: 1fr; }
@@ -78,6 +79,13 @@
   padding: 1.25rem;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Flex column so the mock chip pins to the card bottom regardless of how
+     many lines the description wraps to — keeps the 3 mocks visually aligned
+     even when content lengths differ across locales. Pairs with the grid's
+     align-items: stretch above. */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .hp-preview-card:hover {
   transform: translateY(-3px);
@@ -109,6 +117,10 @@
   color: #5a4a1f;
   line-height: 1.45;
   min-height: 4rem;
+  /* Pins the chip to the card's bottom edge — see flex comment on
+     .hp-preview-card. Without this, longer desc lines push the chip down
+     so the 3 chips end up at different heights across cards. */
+  margin-top: auto;
 }
 .hp-preview-card-mock-lock {
   position: absolute;
