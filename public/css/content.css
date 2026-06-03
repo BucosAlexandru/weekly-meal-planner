@@ -3003,12 +3003,12 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
    its identity (mediterranean amber, latin terracotta, east-asian
    teal, etc.). Only the typographic and surface treatment changes.
 
-   Fraunces is loaded here via @import to avoid regenerating ~3250
-   static pages just to add a <link>. Slight blocking-load cost is
-   the documented trade-off; can be promoted to <link rel="preload">
-   in the generator template later if perceptual perf needs it.
+   Fraunces is now loaded via <link rel="stylesheet"> in HEAD()
+   (scripts/generate-content.mjs) — the previous @import here was a
+   no-op because CSS spec requires @import to appear before any other
+   rule, and this one sat at line 3011 after thousands of rules. Moved
+   to a real <link> so the font actually applies to every generated page.
    ═════════════════════════════════════════════════════════════════════ */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&display=swap');
 
 /* Editorial color tokens scoped to the cuisine hub. Mirror the
    homepage --hp-* names so the visual language stays portable, but
