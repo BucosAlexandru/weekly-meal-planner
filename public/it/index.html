@@ -216,15 +216,26 @@
       </section>
 
       <!-- ── Shopping List ── -->
-      <section class="app-section" aria-labelledby="shopping-heading">
-        <div class="section-head">
-          <span class="section-emoji" aria-hidden="true">🛒</span>
-          <h2 id="shopping-heading" class="section-title" data-i18n="shoppingList">Lista de cumpărături</h2>
+      <!-- Screen shows a teaser only; the full list is built from data (not DOM)
+           and rendered into the PDF (see app.js). #shopping-list is kept (hidden)
+           so updateShoppingList() / empty-state JS stays untouched. -->
+      <section class="app-section app-section--shopping" aria-labelledby="shopping-heading">
+        <div class="shopping-teaser">
+          <div class="section-head">
+            <span class="section-emoji" aria-hidden="true">🛒</span>
+            <h2 id="shopping-heading" class="section-title" data-i18n="shoppingList">Lista de cumpărături</h2>
+          </div>
+          <p class="shopping-teaser-desc" data-i18n="shopping.teaser.desc">Organizată automat pe categorii și gata de cumpărături în PDF.</p>
         </div>
-        <ul id="shopping-list"
-            class="shopping-list list-unstyled"
-            data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
-            aria-label="Shopping list items"></ul>
+        <!-- Hidden data container: app.js populates #shopping-list and inserts
+             #shopping-cost-summary into its parent here, so both stay hidden.
+             The full list + cost live in the PDF (built from data, not DOM). -->
+        <div class="shopping-data" hidden aria-hidden="true">
+          <ul id="shopping-list"
+              class="shopping-list list-unstyled"
+              data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
+              aria-label="Shopping list items"></ul>
+        </div>
       </section>
 
       <!-- ── PDF Export ── -->

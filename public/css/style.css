@@ -1054,6 +1054,35 @@ input.form-control:focus {
 body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__body { display: block !important; }
 
 /* ================================================
+   SHOPPING TEASER (homepage)
+   The full list is built from data and rendered into the
+   PDF; on screen we show a teaser only. #shopping-list stays
+   in the DOM (hidden) so app.js logic is untouched.
+   ================================================ */
+.app-section--shopping { margin-bottom: 16px; }
+.app-section--shopping .shopping-teaser {
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 13px 22px;
+}
+.app-section--shopping .shopping-teaser .section-head {
+  justify-content: center;
+  padding: 0;
+  border-bottom: 0;
+  margin-bottom: 3px;
+}
+.shopping-teaser-desc {
+  margin: 0 auto;
+  max-width: 64ch;
+  color: var(--ink-3, #6b7280);
+  font-size: .94rem;
+  line-height: 1.45;
+}
+/* Tighten the gap to the Premium section when it follows the teaser (was 80px). */
+.app-section--shopping + .hp-premium-preview { margin-top: 36px; }
+
+/* ================================================
    PRICING SECTION
    ================================================ */
 .pricing-section {

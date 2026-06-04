@@ -277,22 +277,26 @@
       </section>
 
       <!-- ── Shopping List ── -->
-      <!-- Screen: collapsed by default; PDF export uses #pdf-list independently. -->
+      <!-- Screen shows a teaser only; the full list is built from data (not DOM)
+           and rendered into the PDF (see app.js). #shopping-list is kept (hidden)
+           so updateShoppingList() / empty-state JS stays untouched. -->
       <section class="app-section app-section--shopping" aria-labelledby="shopping-heading">
-        <details id="shopping-details" class="shopping-collapsible">
-          <summary class="section-head section-head--toggle">
+        <div class="shopping-teaser">
+          <div class="section-head">
             <span class="section-emoji" aria-hidden="true">🛒</span>
             <h2 id="shopping-heading" class="section-title" data-i18n="shoppingList">Lista de cumpărături</h2>
-            <span class="shopping-toggle-count" id="shopping-toggle-count" aria-hidden="true"></span>
-            <span class="shopping-toggle-chevron" aria-hidden="true"></span>
-          </summary>
-          <div class="shopping-collapsible__body">
-            <ul id="shopping-list"
-                class="shopping-list list-unstyled"
-                data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
-                aria-label="Shopping list items"></ul>
           </div>
-        </details>
+          <p class="shopping-teaser-desc" data-i18n="shopping.teaser.desc">Organizată automat pe categorii și gata de cumpărături în PDF.</p>
+        </div>
+        <!-- Hidden data container: app.js populates #shopping-list and inserts
+             #shopping-cost-summary into its parent here, so both stay hidden.
+             The full list + cost live in the PDF (built from data, not DOM). -->
+        <div class="shopping-data" hidden aria-hidden="true">
+          <ul id="shopping-list"
+              class="shopping-list list-unstyled"
+              data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"
+              aria-label="Shopping list items"></ul>
+        </div>
       </section>
 
       <!-- ── PDF Export ── -->
