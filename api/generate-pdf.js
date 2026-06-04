@@ -666,15 +666,14 @@ function MealPlanDocument(plan) {
     ),
     h(View, { key: 'd3', style: styles.heroStatDivider }),
     h(View, { key: 's4', style: styles.heroStat },
-      h(Text, { style: styles.heroStatNum }, cuisines ? String(cuisines) : `${groups.length || '—'}`),
-      h(Text, { style: styles.heroStatLabel }, cuisines ? (LStats.cuisines || 'CUISINES') : (LStats.groups || 'GROUPS')),
+      h(Text, { style: styles.heroStatNum }, cuisines ? String(cuisines) : '—'),
+      h(Text, { style: styles.heroStatLabel }, LStats.cuisines || 'CUISINES'),
     ),
   );
 
-  const eyebrowSuffix = L.eyebrow || 'AUTO-GENERATED';
   const heroEl = h(View, { style: styles.hero },
     h(View, { style: styles.heroLeft },
-      h(Text, { style: styles.heroEyebrow }, `MEAL-PLANNER.RO  ·  ${eyebrowSuffix}`),
+      h(Text, { style: styles.heroEyebrow }, 'MEAL-PLANNER.RO'),
       h(Text, { style: styles.heroTitle }, plan.title || 'Weekly Meal Plan'),
       plan.weekLabel ? h(Text, { style: styles.heroWeek }, plan.weekLabel) : null,
     ),
