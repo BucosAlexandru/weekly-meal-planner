@@ -393,6 +393,24 @@
   .shopping-groups { grid-template-columns: 1fr; gap: 1.1rem; }
 }
 
+/* Smallest phones (≤400px): let the shopping-list CTA button and the
+   summary header wrap/shrink instead of holding a fixed single-line width.
+   Long-label locales (e.g. RO "Deschide planul în aplicație", "120
+   ingrediente") otherwise pushed past a 320px viewport and triggered
+   horizontal document scroll. CSS-only; no HTML/JS change. */
+@media (max-width: 400px) {
+  /* F-1 — CTA button fits the viewport and wraps its label */
+  .shopping-cta .btn {
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+  }
+  /* F-2 — shopping-list summary header wraps its count/chevron below the title */
+  .content-section--green .shopping-summary { flex-wrap: wrap; }
+  .content-section--green .shopping-summary h2 { min-width: 0; }
+}
+
 /* ── Legacy flat shopping list (fallback only) ── */
 .shopping-grid {
   list-style: none;
