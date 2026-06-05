@@ -5005,7 +5005,7 @@ const HP_PREMIUM_HEAD_END   = '<!-- HP_PREMIUM_HEAD:END -->';
 const HP_PREMIUM_HEAD_BLOCK = [
   '<meta name="theme-color" content="#1d1812" media="(prefers-color-scheme: light)">',
   '  <meta name="theme-color" content="#1d1812" media="(prefers-color-scheme: dark)">',
-  '  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">',
+  '  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">',
   '  <link rel="stylesheet" href="/css/premium-polish.css">'
 ].join('\n');
 
