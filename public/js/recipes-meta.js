@@ -1056,6 +1056,27 @@ export const recipesMeta = {
   228: { time: 40,  costRon: 34, tags: ['high-protein', 'healthy'], desc: null },
   229: { time: 75,  costRon: 26, tags: ['high-protein', 'family'], desc: null },
 
+  // ─── Batch 10 — Iconice românești (preview/recipe-batch-10-ro) ───────────
+  // RO + EN master only for preview; other 12 langs fall back to EN in generator.
+  230: { time: 150, costRon: 16, tags: ['family', 'high-protein'],
+        desc: (en => d('Sarmale tradiționale din varză murată, fierte încet până se topesc, servite cu smântână și mămăligă.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Traditional cabbage rolls braised slowly until meltingly tender, served with sour cream and polenta.') },
+  231: { time: 25,  costRon: 8,  tags: ['vegetarian', 'budget', 'family'],
+        desc: (en => d('Mămăligă cremoasă în straturi cu brânză sărată și smântână rece, garnitura națională românească.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Creamy polenta layered with salty cheese and cold sour cream, the Romanian national staple.') },
+  232: { time: 60,  costRon: 14, tags: ['high-protein', 'healthy', 'family'],
+        desc: (en => d('Ciorbă rădăuțeană dreasă cu smântână și usturoi, varianta blândă cu pui a ciorbei de burtă.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Rădăuți chicken soup finished with sour cream and garlic, the gentle chicken take on tripe soup.') },
+  233: { time: 40,  costRon: 12, tags: ['vegetarian', 'family'],
+        desc: (en => d('Papanași pufoși din brânză de vaci, prăjiți și serviți calzi cu smântână și dulceață de vișine.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Pillowy fresh-cheese doughnuts, fried and served warm with sour cream and sour cherry jam.') },
+  234: { time: 240, costRon: 9,  tags: ['vegetarian', 'family'],
+        desc: (en => d('Cozonac pufos împletit, cu umplutură de nucă și cacao, pâinea dulce de Crăciun și Paște.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Fluffy braided sweet bread with a walnut and cocoa filling, the Christmas and Easter classic.') },
+  235: { time: 30,  costRon: 18, tags: ['high-protein', 'family'],
+        desc: (en => d('Mici suculenți din amestec de cărnuri, fripți pe grătar și serviți cu muștar, pâine și murături.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Juicy grilled minced-meat rolls from a meat blend, served with mustard, bread and pickles.') },
+  236: { time: 60,  costRon: 14, tags: ['family', 'high-protein'],
+        desc: (en => d('Salată de boeuf festivă, cu carne și legume tăiate cubulețe, legate fin cu maioneză.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Festive beef salad of finely diced meat and vegetables, bound with mayonnaise.') },
+  237: { time: 120, costRon: 7,  tags: ['vegan', 'vegetarian', 'healthy', 'budget'],
+        desc: (en => d('Zacuscă de vinete și gogoșari copți, fiartă încet, pastă vegană pentru cămara de iarnă.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Roasted aubergine and pepper spread, slow-simmered, a vegan staple for the winter pantry.') },
+  238: { time: 90,  costRon: 22, tags: ['high-protein', 'family'],
+        desc: (en => d('Mușchi de porc împănat cu usturoi, copt cu vin și cartofi, friptura de duminică românească.', en, en, en, en, en, en, en, en, en, en, en, en, en))('Garlic-studded pork loin roasted with wine and potatoes, the Romanian Sunday roast.') },
+
   30: { time: 20, costRon: 14, tags: ['quick','budget','vegetarian'],
         desc: d("Sos grecesc gros de iaurt și castravete cu usturoi crud — servit rece ca meze.",
                 "Thick Greek yoghurt and cucumber dip with raw garlic — served cold as a meze.",
