@@ -1,5 +1,7 @@
 // ===== Imports (TOATE sus)
-import { recipes as recipesMain } from './recipes.js';
+// NOTE: the main recipe corpus (recipes.js, ~10 MB / ~2.5 MB brotli) is NOT
+// statically imported. It is lazy-loaded on first interaction via
+// ensureMainRecipes() below, to keep the initial planner payload small.
 import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
 import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
@@ -8,7 +10,10 @@ import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-lis
 // Round recipes down to the nearest 25 so the "X+" marketing copy stays
 // stable across small additions (204 → "200+"). Plans count must match the
 // PLANS array in scripts/generate-content.mjs — update both together.
-const RECIPE_COUNT_ROUND = Math.floor(recipesMain.length / 25) * 25;
+// Hard-coded (not derived from recipesMain.length) because the corpus is now
+// lazy-loaded and empty at module init. Round down to nearest 25; bump when
+// the recipes.js count crosses a 25-boundary (currently 216 → 200).
+const RECIPE_COUNT_ROUND = 200;
 const PLAN_COUNT = 11;
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
@@ -32,21 +37,42 @@ async function ensureBudgetRecipes() {
   return _budgetLoadPromise;
 }
 
-// ===== Apply metadata to main recipes =========================================
-recipesMain.forEach(r => {
-  const meta = recipesMeta[r.id];
-  if (!meta) return;
-  r.time    = meta.time;
-  r.costRon = meta.costRon;
-  r.tags    = meta.tags || [];
-  if (meta.desc) r.desc = meta.desc;
-});
+// ===== Main recipe corpus — lazy-loaded (deferred off initial page load) =====
+// recipes.js is ~10 MB of multilingual content (~2.5 MB brotli). The planner
+// renders nothing until the user interacts, so the corpus is dynamic-imported
+// on first interaction / first generate (see ensureMainRecipes) rather than at
+// module-eval time. Per-recipe metadata is applied once, right after it loads.
+let recipesMain = [];
+let _mainLoadPromise = null;
+async function ensureMainRecipes() {
+  if (recipesMain.length > 0) return;
+  if (_mainLoadPromise) return _mainLoadPromise;
+  _mainLoadPromise = import('./recipes.js').then(mod => {
+    recipesMain = mod.recipes || mod.default || [];
+    recipesMain.forEach(r => {
+      const meta = recipesMeta[r.id];
+      if (!meta) return;
+      r.time    = meta.time;
+      r.costRon = meta.costRon;
+      r.tags    = meta.tags || [];
+      if (meta.desc) r.desc = meta.desc;
+    });
+    window.recipesMain = recipesMain;
+    window.recipes = [...recipesMain, ...recipesBudget];
+  }).catch(err => console.error('Main recipes load failed:', err));
+  return _mainLoadPromise;
+}
+
+// Warm the corpus on the user's first interaction so it's ready by the time a
+// plan is generated — without blocking the initial page load.
+['pointerdown', 'keydown', 'touchstart'].forEach(evt =>
+  window.addEventListener(evt, () => { ensureMainRecipes(); }, { once: true, passive: true }));
 
 // ===== Global / debug =========================================================
 window.isBudgetMenu = window.isBudgetMenu ?? false;
-window.recipesMain  = recipesMain;
+window.recipesMain  = recipesMain;   // [] until ensureMainRecipes() resolves
 window.recipesBudget = recipesBudget;
-window.recipes = [...recipesMain];   // budget appended after lazy load
+window.recipes = [];                 // populated after the lazy corpus load
 
 // helper
 function isBudgetMenuEnabled() {
@@ -492,6 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function generateRandomMenu() {
+  await ensureMainRecipes();
   let pool;
   if (window.isBudgetMenu) {
     await ensureBudgetRecipes();
@@ -3103,11 +3130,15 @@ function renderFeaturedRecipe() {
   // add the recipe to the first empty planner slot (lunch first, then dinner,
   // scanning Mon→Sun) and smooth-scroll into the planner so the user sees it
   // appear. Falls back to a plain anchor jump if recipe lookup fails.
-  document.querySelector('.hp-featured-cta-link')?.addEventListener('click', (e) => {
-    const recipeId = Number(e.currentTarget.dataset.featuredRecipeId);
-    const recipe   = (window.recipesMain || []).find(r => r.id === recipeId);
-    if (!recipe) return; // let the href anchor jump still work as fallback
+  document.querySelector('.hp-featured-cta-link')?.addEventListener('click', async (e) => {
+    const link = e.currentTarget;            // capture before await (nulled after dispatch)
+    const recipeId = Number(link.dataset.featuredRecipeId);
+    // Corpus is lazy-loaded: prevent the default anchor jump up-front, then load
+    // the recipes and place the dish. On any failure, fall back to the href.
     e.preventDefault();
+    await ensureMainRecipes();
+    const recipe = (window.recipesMain || []).find(r => r.id === recipeId);
+    if (!recipe) { if (link.href) window.location.href = link.href; return; }
     let placed = false;
     for (let i = 1; i <= 7 && !placed; i++) {
       for (const slot of [`d${i}l`, `d${i}c`]) {
@@ -3814,7 +3845,12 @@ function renderCuisineDiscover() {
     france:'France', japan:'Japan', mexico:'Mexico',
     greece:'Greece', italy:'Italy', india:'India',
   };
-  const cuisineCount = slug => recipesMain.filter(r => r.origin?.en === COUNTRY_BY_SLUG[slug]).length;
+  // The corpus is lazy-loaded and usually absent when the homepage first
+  // renders, so fall back to static counts (mirror recipes.js origin counts).
+  const CUISINE_COUNT_FALLBACK = { france:13, japan:10, mexico:10, greece:11, italy:12, india:9 };
+  const cuisineCount = slug => recipesMain.length
+    ? recipesMain.filter(r => r.origin?.en === COUNTRY_BY_SLUG[slug]).length
+    : (CUISINE_COUNT_FALLBACK[slug] || 0);
   const cuisines = [
     { slug:'france', flag:'🇫🇷', count:cuisineCount('france'), atmosphere:'mediterranean' },
     { slug:'japan',  flag:'🇯🇵', count:cuisineCount('japan'),  atmosphere:'east-asian' },
@@ -4573,7 +4609,8 @@ if (verifyBtn && emailInput && resultDiv) {
     };
     const plan = PLAN_DATA[autoplanParam];
     if (plan) {
-      setTimeout(() => { // wait for renderTable
+      setTimeout(async () => { // wait for renderTable
+        await ensureMainRecipes();
         if (plan.isBudget) {
           window.isBudgetMenu = true;
           generateRandomMenu();
@@ -4604,7 +4641,8 @@ if (verifyBtn && emailInput && resultDiv) {
   // ---------- ?meal= deep link (from recipe pages "Add to my plan") ----------
   const mealParam = new URLSearchParams(window.location.search).get('meal');
   if (mealParam) {
-    setTimeout(() => {
+    setTimeout(async () => {
+      await ensureMainRecipes();
       const allSrc = [...recipesMain, ...recipesBudget];
       const rec = allSrc.find(r =>
         Object.values(r.name || {}).some(n => n.toLowerCase() === mealParam.toLowerCase())
