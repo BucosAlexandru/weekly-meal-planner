@@ -22,7 +22,7 @@ let _budgetLoadPromise = null;
 async function ensureBudgetRecipes() {
   if (recipesBudget.length > 0) return;
   if (_budgetLoadPromise) return _budgetLoadPromise;
-  _budgetLoadPromise = import('./recipes-budget.js').then(mod => {
+  _budgetLoadPromise = import('./recipes-budget.min.js').then(mod => {
     recipesBudget = mod.recipes || mod.default || [];
     // Auto-assign metadata for budget recipes
     recipesBudget.forEach((r, idx) => {
@@ -47,7 +47,7 @@ let _mainLoadPromise = null;
 async function ensureMainRecipes() {
   if (recipesMain.length > 0) return;
   if (_mainLoadPromise) return _mainLoadPromise;
-  _mainLoadPromise = import('./recipes.js').then(mod => {
+  _mainLoadPromise = import('./recipes.min.js').then(mod => {
     recipesMain = mod.recipes || mod.default || [];
     recipesMain.forEach(r => {
       const meta = recipesMeta[r.id];
