@@ -18,18 +18,14 @@ const PLAN_COUNT = 11;
 
 // ===== Per-locale recipe corpus resolution (Phase 3) =======================
 // The corpus is split into one content-hashed chunk per locale. Each SPA
-// homepage inlines `window.__RECIPE_MANIFEST` (a { <lc>: { main, budget } }
-// map of hashed URLs) BEFORE this deferred bundle runs. We import exactly the
-// active locale's chunk — never the full 14-language corpus. `lang` (defined
-// below) drives the choice; English is the fallback when the active locale has
-// no chunk (or the manifest is somehow absent).
-function _corpusEntry() {
-  const m = (typeof window !== 'undefined' && window.__RECIPE_MANIFEST) || null;
-  if (!m) return null;
-  return m[typeof lang !== 'undefined' ? lang : 'en'] || m.en || null;
-}
-function _mainChunkUrl()   { const e = _corpusEntry(); return e && e.main; }
-function _budgetChunkUrl() { const e = _corpusEntry(); return e && e.budget; }
+// homepage inlines its OWN locale's hashed chunk URLs as two scalar globals —
+// `window.__RECIPE_CHUNK_MAIN` and `window.__RECIPE_CHUNK_BUDGET` — BEFORE this
+// deferred bundle runs (the inline classic script executes during parse, ahead
+// of the deferred module). We import exactly those URLs via fully-dynamic
+// import(), so esbuild never bundles the corpus and the active locale ships
+// exactly one main (and, on toggle, one budget) chunk.
+function _mainChunkUrl()   { return (typeof window !== 'undefined' && window.__RECIPE_CHUNK_MAIN)   || null; }
+function _budgetChunkUrl() { return (typeof window !== 'undefined' && window.__RECIPE_CHUNK_BUDGET) || null; }
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
@@ -4402,18 +4398,10 @@ function applyTranslations() {
       }
       lang = next;
       localStorage.setItem('lastLang', lang);
-      // Per-locale corpus (Phase 3): the loaded chunk is for the PREVIOUS
-      // locale, so drop it and lazy-reload the active locale's chunk on demand,
-      // then re-render. Only the root `/` in-page swap reaches here — locale-
-      // prefixed planner pages navigate (full reload) and load their own chunk.
-      const _wasBudget = recipesBudget.length > 0 || window.isBudgetMenu;
-      recipesMain = []; _mainLoadPromise = null;
-      recipesBudget = []; _budgetLoadPromise = null;
-      window.recipes = [];
-      ensureMainRecipes().then(async () => {
-        if (_wasBudget) await ensureBudgetRecipes();
-        if (typeof renderTable === 'function') renderTable();
-      });
+      // Per-locale corpus (Phase 3): only the root `/` reaches this in-page
+      // path, and it 301-redirects to /en/, so the active locale's chunk is
+      // already the one injected here. Locale-prefixed planner pages navigate
+      // (full reload above) and load their own chunk fresh.
       applyTranslations();
       updateButtonState();
       attachPdfListeners();

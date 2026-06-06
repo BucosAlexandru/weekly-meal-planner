@@ -5009,32 +5009,35 @@ const HP_PREMIUM_HEAD_BLOCK = [
   '  <link rel="stylesheet" href="/css/premium-polish.css">'
 ].join('\n');
 
-// Per-locale recipe corpus manifest (Phase 3). The splitter (build:recipes)
+// Per-locale recipe corpus chunks (Phase 3). The splitter (build:recipes)
 // writes public/js/recipes-manifest.json mapping each locale to its
-// content-hashed { main, budget } chunk URLs. We inline the whole map into the
-// 15 SPA homepages as window.__RECIPE_MANIFEST so the deferred app.min.js can
-// import exactly the active locale's chunk (and any locale on an in-page root
-// swap). It lives in the HTML — which is served fresh, never immutable-cached —
-// so the hashed URLs always reflect the latest build (app.min.js stays stable).
+// content-hashed { main, budget } chunk URLs. We inline ONLY the active
+// locale's two URLs into its homepage as window.__RECIPE_CHUNK_MAIN /
+// window.__RECIPE_CHUNK_BUDGET, so the deferred app.min.js imports exactly that
+// locale's chunk. These live in the HTML — served fresh, never immutable-cached
+// — so the hashed URLs always reflect the latest build (app.min.js stays a
+// stable, immutable-safe name).
 const HP_RECIPE_MANIFEST_START = '<!-- HP_RECIPE_MANIFEST:START -->';
 const HP_RECIPE_MANIFEST_END   = '<!-- HP_RECIPE_MANIFEST:END -->';
 const APP_SCRIPT_TAG = '<script type="module" src="/js/app.min.js" defer></script>';
-let HP_RECIPE_MANIFEST_BLOCK = null;
+let RECIPE_MANIFEST = null;
 try {
-  const mf = fs.readFileSync(path.join(PUBLIC, 'js', 'recipes-manifest.json'), 'utf8');
-  HP_RECIPE_MANIFEST_BLOCK = `<script>window.__RECIPE_MANIFEST=${mf.trim()}</script>`;
+  RECIPE_MANIFEST = JSON.parse(fs.readFileSync(path.join(PUBLIC, 'js', 'recipes-manifest.json'), 'utf8'));
 } catch (_) {
-  console.warn('⚠️  recipes-manifest.json not found — run `npm run build:recipes` first; skipping corpus-manifest injection.');
+  console.warn('⚠️  recipes-manifest.json not found — run `npm run build:recipes` first; skipping corpus-chunk injection.');
 }
 
-function injectRecipeManifest(filePath) {
-  if (!HP_RECIPE_MANIFEST_BLOCK) return false;
+function injectRecipeChunk(filePath, lc) {
+  if (!RECIPE_MANIFEST) return false;
+  const entry = RECIPE_MANIFEST[lc] || RECIPE_MANIFEST.en;
+  if (!entry) return false;
   if (!fs.existsSync(filePath)) return false;
   let html = fs.readFileSync(filePath, 'utf8');
   if (!html.includes(APP_SCRIPT_TAG)) return false; // only the SPA homepages
+  const block = `<script>window.__RECIPE_CHUNK_MAIN=${JSON.stringify(entry.main)};window.__RECIPE_CHUNK_BUDGET=${JSON.stringify(entry.budget)}</script>`;
   const original = html;
   html = upsertBetween(html, HP_RECIPE_MANIFEST_START, HP_RECIPE_MANIFEST_END,
-                       HP_RECIPE_MANIFEST_BLOCK, APP_SCRIPT_TAG);
+                       block, APP_SCRIPT_TAG);
   if (html !== original) { fs.writeFileSync(filePath, html, 'utf8'); return true; }
   return false;
 }
@@ -5225,13 +5228,14 @@ for (const lc_code of Object.keys(LANG_CONFIGS)) {
 if (injectPremiumHead(path.join(PUBLIC, 'index.html'))) premiumHeadInjected++;
 console.log(`✅ ${premiumHeadInjected}/15 SPA homepages got the premium head (theme-color + Fraunces + premium-polish.css)`);
 
-// ── Phase 3: inline the per-locale corpus manifest into the 15 SPA homepages ──
+// ── Phase 3: inline each locale's own corpus chunk URLs into its homepage ──
 let manifestInjected = 0;
 for (const lc_code of Object.keys(LANG_CONFIGS)) {
-  if (injectRecipeManifest(path.join(PUBLIC, lc_code, 'index.html'))) manifestInjected++;
+  if (injectRecipeChunk(path.join(PUBLIC, lc_code, 'index.html'), lc_code)) manifestInjected++;
 }
-if (injectRecipeManifest(path.join(PUBLIC, 'index.html'))) manifestInjected++;
-console.log(`✅ ${manifestInjected}/15 SPA homepages got the per-locale recipe manifest (window.__RECIPE_MANIFEST)`);
+// Root public/index.html serves meal-planner.ro/ → RO locale.
+if (injectRecipeChunk(path.join(PUBLIC, 'index.html'), 'ro')) manifestInjected++;
+console.log(`✅ ${manifestInjected}/15 SPA homepages got their per-locale corpus chunk URLs (window.__RECIPE_CHUNK_MAIN/BUDGET)`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG
