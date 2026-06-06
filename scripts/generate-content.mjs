@@ -5009,6 +5009,36 @@ const HP_PREMIUM_HEAD_BLOCK = [
   '  <link rel="stylesheet" href="/css/premium-polish.css">'
 ].join('\n');
 
+// Per-locale recipe corpus manifest (Phase 3). The splitter (build:recipes)
+// writes public/js/recipes-manifest.json mapping each locale to its
+// content-hashed { main, budget } chunk URLs. We inline the whole map into the
+// 15 SPA homepages as window.__RECIPE_MANIFEST so the deferred app.min.js can
+// import exactly the active locale's chunk (and any locale on an in-page root
+// swap). It lives in the HTML — which is served fresh, never immutable-cached —
+// so the hashed URLs always reflect the latest build (app.min.js stays stable).
+const HP_RECIPE_MANIFEST_START = '<!-- HP_RECIPE_MANIFEST:START -->';
+const HP_RECIPE_MANIFEST_END   = '<!-- HP_RECIPE_MANIFEST:END -->';
+const APP_SCRIPT_TAG = '<script type="module" src="/js/app.min.js" defer></script>';
+let HP_RECIPE_MANIFEST_BLOCK = null;
+try {
+  const mf = fs.readFileSync(path.join(PUBLIC, 'js', 'recipes-manifest.json'), 'utf8');
+  HP_RECIPE_MANIFEST_BLOCK = `<script>window.__RECIPE_MANIFEST=${mf.trim()}</script>`;
+} catch (_) {
+  console.warn('⚠️  recipes-manifest.json not found — run `npm run build:recipes` first; skipping corpus-manifest injection.');
+}
+
+function injectRecipeManifest(filePath) {
+  if (!HP_RECIPE_MANIFEST_BLOCK) return false;
+  if (!fs.existsSync(filePath)) return false;
+  let html = fs.readFileSync(filePath, 'utf8');
+  if (!html.includes(APP_SCRIPT_TAG)) return false; // only the SPA homepages
+  const original = html;
+  html = upsertBetween(html, HP_RECIPE_MANIFEST_START, HP_RECIPE_MANIFEST_END,
+                       HP_RECIPE_MANIFEST_BLOCK, APP_SCRIPT_TAG);
+  if (html !== original) { fs.writeFileSync(filePath, html, 'utf8'); return true; }
+  return false;
+}
+
 function upsertBetween(haystack, startMark, endMark, newBlock, fallbackInsertAfter) {
   // If markers exist anywhere → replace content between them. Preserve
   // the 2-space indentation from the initial insertion so re-runs of the
@@ -5194,6 +5224,14 @@ for (const lc_code of Object.keys(LANG_CONFIGS)) {
 }
 if (injectPremiumHead(path.join(PUBLIC, 'index.html'))) premiumHeadInjected++;
 console.log(`✅ ${premiumHeadInjected}/15 SPA homepages got the premium head (theme-color + Fraunces + premium-polish.css)`);
+
+// ── Phase 3: inline the per-locale corpus manifest into the 15 SPA homepages ──
+let manifestInjected = 0;
+for (const lc_code of Object.keys(LANG_CONFIGS)) {
+  if (injectRecipeManifest(path.join(PUBLIC, lc_code, 'index.html'))) manifestInjected++;
+}
+if (injectRecipeManifest(path.join(PUBLIC, 'index.html'))) manifestInjected++;
+console.log(`✅ ${manifestInjected}/15 SPA homepages got the per-locale recipe manifest (window.__RECIPE_MANIFEST)`);
 
 // Image-resolution summary. Not a build error — degraded UX, but pages still
 // render. Some of these are rescued at runtime by content.js's parallel IMG

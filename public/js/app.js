@@ -16,13 +16,30 @@ import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-lis
 const RECIPE_COUNT_ROUND = 200;
 const PLAN_COUNT = 11;
 
+// ===== Per-locale recipe corpus resolution (Phase 3) =======================
+// The corpus is split into one content-hashed chunk per locale. Each SPA
+// homepage inlines `window.__RECIPE_MANIFEST` (a { <lc>: { main, budget } }
+// map of hashed URLs) BEFORE this deferred bundle runs. We import exactly the
+// active locale's chunk — never the full 14-language corpus. `lang` (defined
+// below) drives the choice; English is the fallback when the active locale has
+// no chunk (or the manifest is somehow absent).
+function _corpusEntry() {
+  const m = (typeof window !== 'undefined' && window.__RECIPE_MANIFEST) || null;
+  if (!m) return null;
+  return m[typeof lang !== 'undefined' ? lang : 'en'] || m.en || null;
+}
+function _mainChunkUrl()   { const e = _corpusEntry(); return e && e.main; }
+function _budgetChunkUrl() { const e = _corpusEntry(); return e && e.budget; }
+
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
 let _budgetLoadPromise = null;
 async function ensureBudgetRecipes() {
   if (recipesBudget.length > 0) return;
   if (_budgetLoadPromise) return _budgetLoadPromise;
-  _budgetLoadPromise = import('./recipes-budget.min.js').then(mod => {
+  const _budgetUrl = _budgetChunkUrl();
+  if (!_budgetUrl) { console.error('No budget corpus chunk for locale', typeof lang !== 'undefined' ? lang : '?'); return; }
+  _budgetLoadPromise = import(_budgetUrl).then(mod => {
     recipesBudget = mod.recipes || mod.default || [];
     // Auto-assign metadata for budget recipes
     recipesBudget.forEach((r, idx) => {
@@ -47,7 +64,9 @@ let _mainLoadPromise = null;
 async function ensureMainRecipes() {
   if (recipesMain.length > 0) return;
   if (_mainLoadPromise) return _mainLoadPromise;
-  _mainLoadPromise = import('./recipes.min.js').then(mod => {
+  const _mainUrl = _mainChunkUrl();
+  if (!_mainUrl) { console.error('No main corpus chunk for locale', typeof lang !== 'undefined' ? lang : '?'); return; }
+  _mainLoadPromise = import(_mainUrl).then(mod => {
     recipesMain = mod.recipes || mod.default || [];
     recipesMain.forEach(r => {
       const meta = recipesMeta[r.id];
@@ -4383,6 +4402,18 @@ function applyTranslations() {
       }
       lang = next;
       localStorage.setItem('lastLang', lang);
+      // Per-locale corpus (Phase 3): the loaded chunk is for the PREVIOUS
+      // locale, so drop it and lazy-reload the active locale's chunk on demand,
+      // then re-render. Only the root `/` in-page swap reaches here — locale-
+      // prefixed planner pages navigate (full reload) and load their own chunk.
+      const _wasBudget = recipesBudget.length > 0 || window.isBudgetMenu;
+      recipesMain = []; _mainLoadPromise = null;
+      recipesBudget = []; _budgetLoadPromise = null;
+      window.recipes = [];
+      ensureMainRecipes().then(async () => {
+        if (_wasBudget) await ensureBudgetRecipes();
+        if (typeof renderTable === 'function') renderTable();
+      });
       applyTranslations();
       updateButtonState();
       attachPdfListeners();

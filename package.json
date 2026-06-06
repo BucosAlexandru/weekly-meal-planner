@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sitemap": "node scripts/generate-sitemap.cjs",
-    "build:js": "esbuild public/js/app.js --bundle --minify --charset=utf8 --external:./recipes-budget.min.js --external:./recipes.min.js --outfile=public/js/app.min.js && esbuild public/js/checkout.js --bundle --minify --charset=utf8 --outfile=public/js/checkout.min.js && esbuild public/js/portal.js --bundle --minify --charset=utf8 --outfile=public/js/portal.min.js",
-    "build:recipes": "esbuild public/js/recipes.js --minify --charset=utf8 --outfile=public/js/recipes.min.js && esbuild public/js/recipes-budget.js --minify --charset=utf8 --outfile=public/js/recipes-budget.min.js",
+    "build:js": "esbuild public/js/app.js --bundle --minify --charset=utf8 --outfile=public/js/app.min.js && esbuild public/js/checkout.js --bundle --minify --charset=utf8 --outfile=public/js/checkout.min.js && esbuild public/js/portal.js --bundle --minify --charset=utf8 --outfile=public/js/portal.min.js",
+    "build:recipes": "node scripts/split-recipes.mjs",
     "build:css": "esbuild public/css/style.css --minify --outfile=public/css/style.min.css",
     "content": "node scripts/generate-content.mjs",
-    "build": "npm run build:js && npm run build:recipes && npm run build:css && npm run content"
+    "build": "npm run build:recipes && npm run build:js && npm run build:css && npm run content"
   },
   "repository": {
     "type": "git",
