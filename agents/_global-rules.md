@@ -92,14 +92,18 @@ escalates instead.
 1. **The human owner** — final authority on scope, approvals, commits, merges, and
    production deploys. Approves this document and every agent definition.
 2. **`_global-rules.md` (this document)** — the binding contract all agents obey.
-3. **Build & Deploy authority** — the gate that certifies a change is releasable.
+3. **Build & Deploy authority** — the gate that certifies a change is releasable, and
+   the **only** agent that integrates approved drafts into production source
+   (`recipes.js` / `recipes-budget.js` / `recipes-meta.js`) and runs `npm run content`.
    It enforces, but cannot relax, the rules in this document, and it still may not
    commit/push/deploy without explicit human instruction (§0).
 4. **QA authority** (editorial, translation, browser) — **read-only**; can block a
    change by issuing a FAIL and may propose fixes, but may not modify source files or
    approve a merge/deploy.
-5. **Producer agents** (recipe, translation, SEO) — propose and implement changes
-   within their zone as working-tree edits; cannot self-certify, commit, or deploy.
+5. **Producer agents** (recipe-generator, translation, SEO) — propose and implement
+   changes **only inside `drafts/recipes/`** as working-tree edits. They never write
+   production source; integration is build-deploy-agent's job. They cannot self-certify,
+   commit, or deploy.
 
 When two agents of equal tier conflict, the matter escalates to the human owner.
 
@@ -110,18 +114,22 @@ When two agents of equal tier conflict, the matter escalates to the human owner.
 Each agent owns exactly one zone and must stay inside it. Cross-zone work is performed
 by **hand-off**, never by reaching into another agent's files.
 
-| Zone | Owning agent (to be defined) |
-|------|------------------------------|
-| Recipe content in `recipes.js` / `recipes-budget.js` / `recipes-meta.js` | recipe-generator |
-| Editorial quality of recipe content (**review only**) | editorial-qa-agent |
-| Locale strings in recipe fields + `i18n.js` | translation-agent |
+| Zone | Owning agent |
+|------|--------------|
+| Recipe **drafts** (English master + neutral fields + proposed meta) in `drafts/recipes/` | recipe-generator |
+| Editorial quality of recipe drafts (**review only**) | editorial-qa-agent |
+| Locale slices added to recipe **drafts** in `drafts/recipes/` | translation-agent |
 | Translation completeness & correctness verification (**review only**) | translation-qa-agent |
-| SEO: titles, meta, schema.org, hreflang, sitemap, SEO logic in `generate-content.mjs` | seo-agent |
-| Build, content regen, CI/CD, `vercel.json`, deploy | build-deploy-agent |
+| SEO **drafts** (English copy + locale-safe patterns) in `drafts/recipes/` + SEO audit | seo-agent |
+| **Production-source integration**, build, content regen, CI/CD, `vercel.json`, deploy | build-deploy-agent |
 | Rendered-page / UX verification in a browser (**review only**) | browser-qa-agent |
 
-Shared zones (`generate-content.mjs`, `i18n.js`) are co-owned: edit only the slice your
-role owns and announce the change in the hand-off so co-owners can re-verify.
+The pipeline is **draft-first**: producer agents (recipe-generator, translation, seo)
+write only inside `drafts/recipes/` (see §5.2), each editing only its own slice and
+announcing the change in the hand-off so co-owners can re-verify. **Production source —
+including `recipes.js`, `recipes-budget.js`, `recipes-meta.js`, the generated pages,
+`sitemap.xml`, and the generator/i18n files — is written only by build-deploy-agent**
+(and `generate-content.mjs` / `i18n.js` by seo-agent only when a task explicitly says so).
 
 ---
 
@@ -129,20 +137,26 @@ role owns and announce the change in the hand-off so co-owners can re-verify.
 
 | Path / area | Who may modify | Notes |
 |-------------|----------------|-------|
-| `public/js/recipes.js`, `recipes-budget.js` | recipe-generator (content), translation-agent (locale keys) | Triggers `npm run content`; curly-quote gate applies. QA agents may **not** edit. |
-| `public/js/recipes-meta.js` | recipe-generator | metadata only |
-| `public/js/i18n.js` | translation-agent (strings), seo-agent (SEO templates) | co-owned |
-| `scripts/generate-content.mjs`, `scripts/generate-sitemap.cjs` | seo-agent (SEO logic), build-deploy-agent (pipeline) | co-owned |
-| `public/sitemap.xml` | generated only | never hand-edit |
+| `drafts/recipes/**` (non-production draft JSON) | recipe-generator (English master + neutral + proposed meta), translation-agent (13 locale slices), seo-agent (proposed SEO block) | each edits only its own slice; see §5.2. The only place producer agents write. |
+| `public/js/recipes.js`, `recipes-budget.js` | **build-deploy-agent only** | sole integrator; only **after** all upstream PASS gates. Triggers `npm run content`; curly-quote gate applies. Producer & QA agents may **not** edit. |
+| `public/js/recipes-meta.js` | **build-deploy-agent only** | integrated from the approved draft's `proposed_meta` |
+| `public/js/i18n.js` | build-deploy-agent (integration); seo-agent **only if explicitly tasked** | production source; otherwise read-only |
+| `scripts/generate-content.mjs`, `scripts/generate-sitemap.cjs` | build-deploy-agent (pipeline); seo-agent **only if explicitly tasked** | otherwise read-only inspection |
+| `public/sitemap.xml` and generated HTML pages | generated only (by build-deploy-agent via `npm run content`) | never hand-edit |
 | `public/js/recipe-images.js` | **nobody** | auto-generated |
 | `api/**`, `vercel.json`, `.github/workflows/**` | build-deploy-agent | new routes must be registered in CI |
 | `public/js/app.js`, `checkout.js`, `portal.js`, `public/css/**` | out of scope for this agent set | hand to human / frontend owner |
 | `.env`, `.env.local` | **nobody** | secrets, gitignored |
 | `agents/**` (this governance directory) | **human owner only** | see §5.1 |
 
+**Producer agents (recipe-generator, translation-agent, seo-agent) have no write access
+to any production source file; they write only inside `drafts/recipes/`.** Only
+build-deploy-agent integrates approved drafts into production source, and only after every
+upstream PASS gate.
+
 **QA agents (editorial-qa, translation-qa, browser-qa) have no write permission to any
-source, content, or config file.** They read, verify, and report; proposed fixes are
-returned to the owning producer agent for implementation.
+file.** They read, verify, and report; proposed fixes are returned to the owning agent for
+implementation.
 
 Any modification outside an agent's permitted set is a **FAIL** and a stop condition.
 
@@ -154,6 +168,20 @@ Any modification outside an agent's permitted set is a **FAIL** and a stop condi
   global file — during an operational task. An agent cannot grant itself permissions,
   relax a gate, or alter its boundaries.
 - Changes to governance files are reviewed by the human owner before they take effect.
+
+### 5.2 Draft files (`drafts/recipes/`)
+
+- `drafts/recipes/` holds **non-production** draft JSON and is the **only** location
+  producer agents may write to.
+- Each producer edits only its own slice of a draft and never overwrites another's:
+  **recipe-generator** writes the English master + neutral fields + `proposed_meta`;
+  **translation-agent** adds the 13 non-English locale slices (after Editorial QA PASS);
+  **seo-agent** adds the proposed SEO block (English copy + locale-safe pattern).
+- A draft is never production. It becomes production source **only** when
+  build-deploy-agent integrates it — after Recipe Generator, Editorial QA, Translation,
+  Translation QA, and SEO have all returned **PASS**.
+- Drafts are working-tree changes for review like any other change: no auto-commit and no
+  push without explicit human instruction (§0).
 
 ---
 
