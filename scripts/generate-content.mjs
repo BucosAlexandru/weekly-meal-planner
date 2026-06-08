@@ -4649,7 +4649,13 @@ function buildCuisineHubs() {
   });
   return Object.entries(byOrigin)
     .filter(([, recs]) => recs.length >= CUISINE_MIN_RECIPES)
-    .sort((a, b) => b[1].length - a[1].length);
+    // Primary: recipe count DESC. Secondary: alphabetical ASC on origin
+    // key, so cuisines with equal counts keep a deterministic order
+    // across builds and don't flip when recipes.js insertion order
+    // shifts. Without the tie-break, the homepage top-6 selection could
+    // silently rearrange (e.g. Japan ↔ Mexico, both currently 10) when
+    // a new recipe is added or removed.
+    .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
 }
 
 // Per-locale hreflang set for a given country/cuisine page. Phase 5: pages
