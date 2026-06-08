@@ -694,17 +694,29 @@ document.addEventListener('DOMContentLoaded', () => {
       dinner: mealPayload(m.dinner),
     })).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
 
-    const rawEnIngredients = [];
+    // Hybrid-B: pass aligned { en, loc } pairs, not a flat EN list. The EN
+    // string drives parsing/canonical/category/quantity math (English-only
+    // engine); the locale string at the SAME index supplies the localized
+    // display label. ingredients.en[i] ↔ ingredients[lang][i] are aligned by
+    // construction in recipes.js. We fall back to RO when EN is absent so the
+    // engine still has English-shaped tokens; loc falls back to the EN string
+    // when the active locale lacks that line (keeps indices in lockstep).
+    const ingredientPairs = [];
     visibleMeals.forEach(m => {
       [m.lunch, m.dinner].filter(Boolean).forEach(text => {
         const r = findRecipe(text);
-        (r?.ingredients?.en || r?.ingredients?.ro || []).forEach(i => rawEnIngredients.push(i));
+        if (!r) return;
+        const enArr  = r.ingredients?.en || r.ingredients?.ro || [];
+        const locArr = r.ingredients?.[lang] || enArr;
+        enArr.forEach((en, i) => {
+          ingredientPairs.push({ en, loc: locArr[i] != null ? locArr[i] : en });
+        });
       });
     });
     let shoppingGroups = [];
     // Build the shopping list against the active locale so the rendered
     // group/item labels match the rest of the PDF (was hard-coded 'en').
-    try { shoppingGroups = buildShoppingFromRawIngredients(rawEnIngredients, lang); }
+    try { shoppingGroups = buildShoppingFromRawIngredients(ingredientPairs, lang); }
     catch (_) { shoppingGroups = []; }
 
     // Locked days notice — non-premium users only see days 1-freeDays.

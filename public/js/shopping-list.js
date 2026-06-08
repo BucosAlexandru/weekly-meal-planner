@@ -1921,7 +1921,11 @@ export function parseIngredient(raw) {
   // Unit (with or without space after number)
   // Handle "400g" — number+unit no space — already stripped numbers above
   // Look for inline unit at start of remaining string
-  const unitMatch = s.match(/^(kg|kilograms?|g|grams?|ml|milliliters?|millilitres?|l|L|liters?|litres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|oz|lb|cloves?|sprigs?|stalks?|sheets?|cans?|tins?|jars?|packs?|packets?|bunch|bunches|head|piece|pieces|slices?|stick|sticks|leaves|leaf)\b\.?\s*(of\s+)?/i);
+  // Unicode-aware boundary: a unit letter must NOT be followed by another
+  // letter/number. ASCII-`\b` wrongly treated a following non-ASCII letter
+  // (e.g. RO "gălbenușuri", "lămâie") as a word boundary and ate the unit
+  // letter. For pure-EN input this behaves identically to `\b`.
+  const unitMatch = s.match(/^(kg|kilograms?|g|grams?|ml|milliliters?|millilitres?|l|L|liters?|litres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|oz|lb|cloves?|sprigs?|stalks?|sheets?|cans?|tins?|jars?|packs?|packets?|bunch|bunches|head|piece|pieces|slices?|stick|sticks|leaves|leaf)(?![\p{L}\p{N}])\.?\s*(of\s+)?/iu);
   if (unitMatch) {
     unit = unitMatch[1].toLowerCase();
     s = s.slice(unitMatch[0].length).trim();
@@ -1938,7 +1942,7 @@ export function parseIngredient(raw) {
       const num2 = s.match(/^([0-9]+(?:[.,][0-9]+)?)\s*/);
       if (num2) {
         const tail = s.slice(num2[0].length);
-        const u2 = tail.match(/^(kg|kilograms?|g|grams?|ml|milliliters?|millilitres?|l|L|liters?|litres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|oz|lb)\b\.?\s*/i);
+        const u2 = tail.match(/^(kg|kilograms?|g|grams?|ml|milliliters?|millilitres?|l|L|liters?|litres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|oz|lb)(?![\p{L}\p{N}])\.?\s*/iu);
         if (u2) {
           qty = qty * parseFloat(num2[1].replace(',', '.'));
           unit = u2[1].toLowerCase();
@@ -2093,12 +2097,59 @@ function combineItems(items) {
 }
 
 /* ============================================================
+   LOCALIZED LABEL HELPERS (hybrid-B)
+   ============================================================ */
+
+/* Derive a clean, title-cased display label from a recipe's localized
+   ingredient string. Reuses parseIngredient's language-neutral stripping
+   (parentheses, comma clauses, leading qty/unit, " — " editorial notes) to
+   reach the core noun. Returns null when nothing usable remains, so the
+   caller can fall back to ITEM_LABELS. */
+function _localizedLabelFrom(raw) {
+  if (!raw) return null;
+  // Normalize CJK/fullwidth punctuation to ASCII so parseIngredient's
+  // existing parenthetical / comma stripping also trims Japanese & Chinese
+  // asides ("（厚めにスライス）" → dropped, "完熟トマト、スライス" → "完熟トマト").
+  const norm = String(raw)
+    .replace(/[（｟［【〔]/g, '(')
+    .replace(/[）｠］】〕]/g, ')')
+    .replace(/[，、]/g, ',');
+  const p = parseIngredient(norm);
+  if (!p || !p.name) return null;
+  const n = p.name.trim();
+  if (!n) return null;
+  // Capitalize first letter only; preserve internal accents / scripts
+  // (CJK is unaffected by toUpperCase()).
+  return n.charAt(0).toUpperCase() + n.slice(1);
+}
+
+/* Pick the representative label for a merged row: the most frequent localized
+   label, tie-broken by the shortest string. Keeps the displayed name stable
+   and clean when several recipes phrase the same canonical ingredient
+   differently ("Ceapă galbenă" / "Ceapă roșie" / "Ceapă" → "Ceapă"). Returns
+   null for an empty list. */
+function _pickRepresentative(labels) {
+  if (!labels || !labels.length) return null;
+  const freq = new Map();
+  for (const l of labels) freq.set(l, (freq.get(l) || 0) + 1);
+  let best = null, bestCount = -1;
+  for (const [l, c] of freq) {
+    if (c > bestCount || (c === bestCount && best != null && l.length < best.length)) {
+      best = l; bestCount = c;
+    }
+  }
+  return best;
+}
+
+/* ============================================================
    MAIN ENTRY POINT
    ============================================================ */
 
-/* Browser-runtime entry point: takes an already-collected array of raw EN
-   ingredient strings (e.g. from the user's current planner state) and
-   returns the same grouped output as buildShoppingListV2. */
+/* Browser-runtime entry point. Accepts EITHER an array of raw EN ingredient
+   strings (legacy callers) OR an array of aligned { en, loc } pairs
+   (hybrid-B path). In both cases the EN side drives aggregation, categorization
+   and quantity math; the loc side, when present, supplies the localized
+   display label. Returns the same grouped output as buildShoppingListV2. */
 export function buildShoppingFromRawIngredients(rawIngredients, langCode) {
   return _groupAndRender(rawIngredients || [], langCode);
 }
@@ -2123,13 +2174,24 @@ export function buildShoppingListV2(plan, langCode, allRecipes, budgetRecipes) {
 
 function _groupAndRender(allIngr, langCode) {
 
-  // 2. Parse + canonicalize
+  // 2. Parse + canonicalize.
+  // Each entry is either a raw EN string (legacy callers) or an aligned
+  // { en, loc } pair (hybrid-B path). The EN string ALWAYS drives parsing,
+  // canonicalization, categorization and quantity math — that machinery is
+  // English-only by design. The localized string, when present, only
+  // supplies the human-facing display label (resolved in step 4).
   const parsed = [];
-  for (const raw of allIngr) {
-    const p = parseIngredient(raw);
+  for (const entry of allIngr) {
+    const enRaw  = typeof entry === 'string' ? entry : (entry && entry.en);
+    const locRaw = typeof entry === 'string' ? null  : (entry && entry.loc);
+    const p = parseIngredient(enRaw);
     if (!p) continue;
     p.canonical = canonicalName(p.name);
     p.category = categoryFor(p.canonical);
+    // Aligned localized label, derived from the recipe's own localized
+    // ingredient string. Null when no alignment was supplied (legacy path)
+    // or the localized string parsed to nothing → falls back to ITEM_LABELS.
+    p.locLabel = locRaw ? _localizedLabelFrom(locRaw) : null;
     parsed.push(p);
   }
 
@@ -2162,10 +2224,23 @@ function _groupAndRender(allIngr, langCode) {
     // Sentence-case the canonical name: capitalize first letter only,
     // preserve any internal accent / case (Gruyère, jalapeño).
     const titleCase = canonical.charAt(0).toUpperCase() + canonical.slice(1);
-    const label = labelMap[canonical] || titleCase;
+    // Hybrid-B label resolution. Primary source is the aligned localized
+    // recipe label (most-frequent across merged sources, shortest tie-break).
+    // ITEM_LABELS and the English title-case are fallbacks only.
+    const localized = _pickRepresentative(items.map(it => it.locLabel).filter(Boolean));
     if (cat === 'pantry') {
+      // Pantry staples ("salt", "olive oil"…) often carry long trailing
+      // clauses in the recipe text ("Fine sea salt for the pasta water")
+      // that the EN-only stripper can't trim in other languages, so the
+      // curated ITEM_LABELS entry is preferred here; localized recipe text
+      // and the English title-case back it up.
+      const label = labelMap[canonical] || localized || titleCase;
       categoryItems.pantry.push({ name: label });
     } else {
+      // Everything else prefers the recipe's own localized wording so the
+      // shopping list scales with content (no per-ingredient dictionary
+      // upkeep). ITEM_LABELS / title-case only cover the no-alignment path.
+      const label = localized || labelMap[canonical] || titleCase;
       categoryItems[cat].push({ name: label, qty: combineItems(items) });
     }
   }
