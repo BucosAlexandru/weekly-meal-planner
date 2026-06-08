@@ -3854,7 +3854,6 @@ function renderCuisineDiscover() {
   const rSeg = recipesBase[lang] || 'recipes';
 
   const COUNTRY_BY_SLUG = {
-    france:'France', japan:'Japan', mexico:'Mexico',
     france:'France', italy:'Italy', greece:'Greece',
     romania:'Romania', japan:'Japan', mexico:'Mexico',
   };
