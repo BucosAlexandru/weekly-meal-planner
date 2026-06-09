@@ -5762,3 +5762,81 @@ body:has(#pricing-main) .app-header {
   #pricing-main .pricing-page-hero::before { display: none; }
   #pricing-main .pricing-card { box-shadow: none !important; border-color: #999 !important; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   MEAL-PLANS INDEX — responsive plan-card grid
+   ----------------------------------------------------------------
+   The plan cards on /weekly-meal-plan/ render as
+   .cuisine-card--preview.plan-card inside .recipe-groups-grid. The
+   older .meal-plans-index-main .content-card* rules above are DEAD
+   for this page (the markup moved to the cuisine-preview component
+   but those rules were never updated), so the cards previously fell
+   back to generic cuisine-hub styling and looked unfinished on
+   mobile/tablet. These rules give the listing its own clean
+   responsive behaviour. Scoped strictly to .meal-plans-index-main
+   (the /recipes/ index uses the same grid class under
+   .cuisine-hub-index-main and is intentionally untouched).
+   Columns: 1 (≤640 phone) · 2 (≤1023 tablet) · 3 (≤1279 laptop) · 4 (desktop).
+   ════════════════════════════════════════════════════════════════ */
+.meal-plans-index-main .recipe-groups-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+@media (max-width: 1279px) {
+  .meal-plans-index-main .recipe-groups-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1023px) {
+  .meal-plans-index-main .recipe-groups-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  .meal-plans-index-main .recipe-groups-grid {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+}
+
+/* Image area: replace the fixed-height thumb strip with an aspect ratio
+   so the 3-thumbnail mosaic scales with the card width and never crops
+   into a thin band (the previous 110–130px fixed height looked squashed
+   on full-width phone cards). */
+.meal-plans-index-main .plan-card .cuisine-card-thumbs {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+@media (max-width: 640px) {
+  .meal-plans-index-main .plan-card .cuisine-card-thumbs {
+    aspect-ratio: 2 / 1;
+  }
+}
+
+/* Title + weekly-cost pill: keep them on one row on wide cards, but on
+   narrow cards let the plan name wrap instead of colliding with the
+   nowrap / flex-shrink:0 cost pill. */
+.meal-plans-index-main .plan-card .origin-title {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem .5rem;
+}
+.meal-plans-index-main .plan-card .origin-title-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.meal-plans-index-main .plan-card .recipe-count {
+  margin-left: auto;
+}
+
+/* Consistent, comfortable inner spacing for the meta block. */
+.meal-plans-index-main .plan-card .cuisine-card-meta {
+  padding: 1rem 1.1rem 1.1rem;
+}
+@media (max-width: 640px) {
+  .meal-plans-index-main .plan-card .cuisine-card-meta {
+    padding: .9rem 1rem 1rem;
+  }
+}
