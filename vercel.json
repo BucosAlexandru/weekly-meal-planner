@@ -29,6 +29,16 @@
       "permanent": true
     },
     {
+      "source": "/pricing",
+      "destination": "/en/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/en/pricing/",
+      "permanent": true
+    },
+    {
       "source": "/ro/bucatarie",
       "destination": "/ro/retete/",
       "permanent": true
