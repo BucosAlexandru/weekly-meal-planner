@@ -145,7 +145,7 @@ export const recipeImages = {
   169: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Chen_Mapo_Tofu.jpg/330px-Chen_Mapo_Tofu.jpg',
   170: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/My_breakfast_menemen.jpg/330px-My_breakfast_menemen.jpg',
   171: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Soljanka_food_05.jpg/330px-Soljanka_food_05.jpg',
-  172: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Quail_07_bg_041506.jpg/330px-Quail_07_bg_041506.jpg',
+  172: 'https://meal-planner.ro/images/clam-chowder.png',
   173: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20220430_currywurst.jpg/330px-20220430_currywurst.jpg',
   174: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg/330px-Flickr_preppybyday_4714085019--Tom_Kha_Kai.jpg',
   175: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cachupa_2.jpg/330px-Cachupa_2.jpg',
