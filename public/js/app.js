@@ -15,6 +15,14 @@ import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-lis
 // the recipes.js count crosses a 25-boundary (currently 216 → 200).
 const RECIPE_COUNT_ROUND = 200;
 const PLAN_COUNT = 11;
+// Exact catalogue size for copy that must state the precise number (premium
+// preview cards, homepage FAQ, premium feature list). Single source of truth,
+// mirrors RECIPE_COUNT in scripts/generate-content.mjs (recipes.js length).
+// The corpus is lazy-loaded so it can't be read synchronously at module init —
+// bump this one line when the count crosses (same convention as PLAN_COUNT).
+// The "X+" hero/discovery copy keeps using RECIPE_COUNT_ROUND and is untouched.
+const RECIPE_COUNT = 225;
+const fillRecipeCount = (s) => String(s).replace(/\{\{RECIPE_COUNT\}\}/g, String(RECIPE_COUNT));
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===
 let recipesBudget = [];
@@ -2543,7 +2551,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'PDF complet 7 zile', desc:'Nu doar previzualizarea de 2 zile — toate cele 7 zile cu rețete, ingrediente și lista de cumpărături.',
           mock:'Luni — Marți — Miercuri — Joi — Vineri — Sâmbătă — Duminică' },
-        { ico:'🌍', title:'216 rețete • 70+ țări', desc:'Acces la rețete din bucătării din întreaga lume — de la clasicii italieni și francezi la favoritele thailandeze, japoneze și din Orientul Mijlociu.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} rețete • 70+ țări', desc:'Acces la rețete din bucătării din întreaga lume — de la clasicii italieni și francezi la favoritele thailandeze, japoneze și din Orientul Mijlociu.',
           mock:'Italia • Franța • Japonia • Thailanda • Mexic • India...' },
         { ico:'💰', title:'Meniu buget săptămânal', desc:'Un meniu pre-construit, cu rețete ieftine și lista de cumpărături optimizată pentru sub 150 lei.',
           mock:'7 zile · ingrediente accesibile · listă centralizată' },
@@ -2552,7 +2560,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'Full 7-day PDF', desc:'Not just the 2-day preview — all 7 days with recipes, ingredients and the full shopping list.',
           mock:'Mon — Tue — Wed — Thu — Fri — Sat — Sun' },
-        { ico:'🌍', title:'216 recipes • 70+ countries', desc:'Access recipes from cuisines around the world — from Italian and French classics to Thai, Japanese and Middle Eastern favorites.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} recipes • 70+ countries', desc:'Access recipes from cuisines around the world — from Italian and French classics to Thai, Japanese and Middle Eastern favorites.',
           mock:'Italy • France • Japan • Thailand • Mexico • India...' },
         { ico:'💰', title:'Weekly budget menu', desc:'A pre-built menu of cheap recipes with a shopping list optimized to stay under €30 per week.',
           mock:'7 days · affordable ingredients · single shopping list' },
@@ -2561,7 +2569,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'PDF completo 7 días', desc:'No solo la vista previa de 2 días — los 7 días con recetas, ingredientes y lista de compras.',
           mock:'Lun — Mar — Mié — Jue — Vie — Sáb — Dom' },
-        { ico:'🌍', title:'216 recetas • 70+ países', desc:'Acceso a recetas de cocinas de todo el mundo — desde clásicos italianos y franceses hasta favoritos tailandeses, japoneses y de Medio Oriente.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} recetas • 70+ países', desc:'Acceso a recetas de cocinas de todo el mundo — desde clásicos italianos y franceses hasta favoritos tailandeses, japoneses y de Medio Oriente.',
           mock:'Italia • Francia • Japón • Tailandia • México • India...' },
         { ico:'💰', title:'Menú económico semanal', desc:'Un menú prearmado con recetas baratas y lista de compras optimizada por debajo de €30/semana.',
           mock:'7 días · ingredientes accesibles · una sola lista' },
@@ -2570,7 +2578,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'PDF complet 7 jours', desc:'Pas seulement l\'aperçu de 2 jours — les 7 jours avec recettes, ingrédients et liste complète.',
           mock:'Lun — Mar — Mer — Jeu — Ven — Sam — Dim' },
-        { ico:'🌍', title:'216 recettes • 70+ pays', desc:'Accédez à des recettes du monde entier — des classiques italiens et français aux favoris thaïlandais, japonais et du Moyen-Orient.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} recettes • 70+ pays', desc:'Accédez à des recettes du monde entier — des classiques italiens et français aux favoris thaïlandais, japonais et du Moyen-Orient.',
           mock:'Italie • France • Japon • Thaïlande • Mexique • Inde...' },
         { ico:'💰', title:'Menu budget hebdomadaire', desc:'Un menu pré-construit de recettes économiques avec liste de courses optimisée pour rester sous €30/semaine.',
           mock:'7 jours · ingrédients accessibles · liste unique' },
@@ -2579,7 +2587,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'Volles 7-Tage-PDF', desc:'Nicht nur die 2-Tage-Vorschau — alle 7 Tage mit Rezepten, Zutaten und vollständiger Einkaufsliste.',
           mock:'Mo — Di — Mi — Do — Fr — Sa — So' },
-        { ico:'🌍', title:'216 Rezepte • 70+ Länder', desc:'Rezepte aus Küchen rund um die Welt — von italienischen und französischen Klassikern bis zu thailändischen, japanischen und nahöstlichen Favoriten.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} Rezepte • 70+ Länder', desc:'Rezepte aus Küchen rund um die Welt — von italienischen und französischen Klassikern bis zu thailändischen, japanischen und nahöstlichen Favoriten.',
           mock:'Italien • Frankreich • Japan • Thailand • Mexiko • Indien...' },
         { ico:'💰', title:'Wöchentliches Budget-Menü', desc:'Ein fertiges Menü mit günstigen Rezepten und einer Einkaufsliste, die unter €30/Woche bleibt.',
           mock:'7 Tage · günstige Zutaten · eine Liste' },
@@ -2588,7 +2596,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'PDF completo 7 dias', desc:'Não só a pré-visualização de 2 dias — os 7 dias com receitas, ingredientes e lista completa.',
           mock:'Seg — Ter — Qua — Qui — Sex — Sáb — Dom' },
-        { ico:'🌍', title:'216 receitas • 70+ países', desc:'Acesso a receitas de cozinhas do mundo todo — dos clássicos italianos e franceses aos favoritos tailandeses, japoneses e do Oriente Médio.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} receitas • 70+ países', desc:'Acesso a receitas de cozinhas do mundo todo — dos clássicos italianos e franceses aos favoritos tailandeses, japoneses e do Oriente Médio.',
           mock:'Itália • França • Japão • Tailândia • México • Índia...' },
         { ico:'💰', title:'Menu económico semanal', desc:'Um menu pré-construído com receitas baratas e lista de compras otimizada para ficar sob €30/semana.',
           mock:'7 dias · ingredientes acessíveis · lista única' },
@@ -2597,7 +2605,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'Полный PDF на 7 дней', desc:'Не только превью 2 дней — все 7 дней с рецептами, ингредиентами и полным списком покупок.',
           mock:'Пн — Вт — Ср — Чт — Пт — Сб — Вс' },
-        { ico:'🌍', title:'216 рецептов • 70+ стран', desc:'Рецепты со всего мира — от классической итальянской и французской кухни до тайских, японских и ближневосточных фаворитов.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} рецептов • 70+ стран', desc:'Рецепты со всего мира — от классической итальянской и французской кухни до тайских, японских и ближневосточных фаворитов.',
           mock:'Италия • Франция • Япония • Таиланд • Мексика • Индия...' },
         { ico:'💰', title:'Недельное бюджетное меню', desc:'Готовое меню из дешёвых рецептов и список покупок, оптимизированный для уровня меньше €30/неделю.',
           mock:'7 дней · доступные ингредиенты · единый список' },
@@ -2606,7 +2614,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'PDF completo 7 giorni', desc:'Non solo l\'anteprima di 2 giorni — tutti e 7 i giorni con ricette, ingredienti e lista della spesa completa.',
           mock:'Lun — Mar — Mer — Gio — Ven — Sab — Dom' },
-        { ico:'🌍', title:'216 ricette • 70+ paesi', desc:'Accesso a ricette da cucine di tutto il mondo — dai classici italiani e francesi ai preferiti thailandesi, giapponesi e mediorientali.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} ricette • 70+ paesi', desc:'Accesso a ricette da cucine di tutto il mondo — dai classici italiani e francesi ai preferiti thailandesi, giapponesi e mediorientali.',
           mock:'Italia • Francia • Giappone • Thailandia • Messico • India...' },
         { ico:'💰', title:'Menu economico settimanale', desc:'Un menu già pronto con ricette economiche e lista della spesa ottimizzata per stare sotto €30/settimana.',
           mock:'7 giorni · ingredienti accessibili · lista unica' },
@@ -2615,7 +2623,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'Tam 7 günlük PDF', desc:'Sadece 2 günlük önizleme değil — tarifler, malzemeler ve tam alışveriş listesiyle 7 günün hepsi.',
           mock:'Pzt — Sal — Çar — Per — Cum — Cmt — Paz' },
-        { ico:'🌍', title:'216 tarif • 70+ ülke', desc:'Dünyanın dört bir yanından mutfaklara erişim — İtalyan ve Fransız klasiklerinden Tayland, Japon ve Orta Doğu favorilerine kadar.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} tarif • 70+ ülke', desc:'Dünyanın dört bir yanından mutfaklara erişim — İtalyan ve Fransız klasiklerinden Tayland, Japon ve Orta Doğu favorilerine kadar.',
           mock:'İtalya • Fransa • Japonya • Tayland • Meksika • Hindistan...' },
         { ico:'💰', title:'Haftalık bütçe menüsü', desc:'€30/haftanın altında kalmak için ucuz tarifler ve optimize alışveriş listesi olan hazır menü.',
           mock:'7 gün · uygun malzemeler · tek liste' },
@@ -2624,7 +2632,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'PDF كامل 7 أيام', desc:'ليس فقط معاينة اليومين — كل الأيام السبعة مع الوصفات والمكونات وقائمة التسوق الكاملة.',
           mock:'الإثنين — الثلاثاء — الأربعاء — الخميس — الجمعة — السبت — الأحد' },
-        { ico:'🌍', title:'216 وصفة • أكثر من 70 دولة', desc:'وصفات من مطابخ حول العالم — من الكلاسيكيات الإيطالية والفرنسية إلى المفضلات التايلاندية واليابانية والشرق أوسطية.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} وصفة • أكثر من 70 دولة', desc:'وصفات من مطابخ حول العالم — من الكلاسيكيات الإيطالية والفرنسية إلى المفضلات التايلاندية واليابانية والشرق أوسطية.',
           mock:'إيطاليا • فرنسا • اليابان • تايلاند • المكسيك • الهند...' },
         { ico:'💰', title:'قائمة ميزانية أسبوعية', desc:'قائمة جاهزة بوصفات اقتصادية وقائمة تسوق محسّنة للبقاء تحت €30/أسبوع.',
           mock:'7 أيام · مكونات ميسورة · قائمة واحدة' },
@@ -2633,7 +2641,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'完整7天PDF', desc:'不只是2天预览 — 全部7天包含食谱、食材和完整购物清单。',
           mock:'周一 — 周二 — 周三 — 周四 — 周五 — 周六 — 周日' },
-        { ico:'🌍', title:'216 道食谱 • 70+ 国家', desc:'探索来自世界各地的菜系 — 从意大利和法国经典菜到泰国、日本和中东风味。',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} 道食谱 • 70+ 国家', desc:'探索来自世界各地的菜系 — 从意大利和法国经典菜到泰国、日本和中东风味。',
           mock:'意大利 • 法国 • 日本 • 泰国 • 墨西哥 • 印度...' },
         { ico:'💰', title:'每周节俭菜单', desc:'预先构建的便宜食谱菜单，购物清单优化至每周不到€30。',
           mock:'7天 · 实惠食材 · 一份清单' },
@@ -2642,7 +2650,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'7日間フルPDF', desc:'2日プレビューだけでなく — 7日間すべてのレシピ、食材、完全な買い物リスト。',
           mock:'月 — 火 — 水 — 木 — 金 — 土 — 日' },
-        { ico:'🌍', title:'216レシピ • 70カ国以上', desc:'世界中の料理にアクセス — イタリア・フランスの定番から、タイ・日本・中東のお気に入りまで。',
+        { ico:'🌍', title:'{{RECIPE_COUNT}}レシピ • 70カ国以上', desc:'世界中の料理にアクセス — イタリア・フランスの定番から、タイ・日本・中東のお気に入りまで。',
           mock:'イタリア • フランス • 日本 • タイ • メキシコ • インド...' },
         { ico:'💰', title:'週間節約メニュー', desc:'週€30以下を維持するために最適化された安価なレシピと買い物リストのプリビルトメニュー。',
           mock:'7日 · 手頃な食材 · 単一の買い物リスト' },
@@ -2651,7 +2659,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'7일 전체 PDF', desc:'2일 미리보기만이 아닌 — 레시피, 재료, 전체 장보기 목록이 포함된 7일 전체.',
           mock:'월 — 화 — 수 — 목 — 금 — 토 — 일' },
-        { ico:'🌍', title:'216개 레시피 • 70+ 국가', desc:'전 세계 요리에 접근 — 이탈리아 및 프랑스 클래식부터 태국, 일본, 중동의 인기 메뉴까지.',
+        { ico:'🌍', title:'{{RECIPE_COUNT}}개 레시피 • 70+ 국가', desc:'전 세계 요리에 접근 — 이탈리아 및 프랑스 클래식부터 태국, 일본, 중동의 인기 메뉴까지.',
           mock:'이탈리아 • 프랑스 • 일본 • 태국 • 멕시코 • 인도...' },
         { ico:'💰', title:'주간 예산 메뉴', desc:'주당 €30 미만으로 유지하도록 최적화된 저렴한 레시피와 장보기 목록의 미리 구성된 메뉴.',
           mock:'7일 · 저렴한 재료 · 단일 목록' },
@@ -2660,7 +2668,7 @@ function renderPremiumPreview() {
       cards: [
         { ico:'📄', title:'पूर्ण 7-दिन PDF', desc:'सिर्फ 2-दिन का पूर्वावलोकन नहीं — रेसिपी, सामग्री और पूरी खरीदारी सूची के साथ सभी 7 दिन।',
           mock:'सोम — मंगल — बुध — गुरु — शुक्र — शनि — रवि' },
-        { ico:'🌍', title:'216 रेसिपी • 70+ देश', desc:'दुनिया भर के व्यंजनों तक पहुँच — इतालवी और फ्रेंच क्लासिक से लेकर थाई, जापानी और मध्य पूर्वी पसंदीदा तक।',
+        { ico:'🌍', title:'{{RECIPE_COUNT}} रेसिपी • 70+ देश', desc:'दुनिया भर के व्यंजनों तक पहुँच — इतालवी और फ्रेंच क्लासिक से लेकर थाई, जापानी और मध्य पूर्वी पसंदीदा तक।',
           mock:'इटली • फ्रांस • जापान • थाईलैंड • मैक्सिको • भारत...' },
         { ico:'💰', title:'साप्ताहिक बजट मेनू', desc:'सस्ती रेसिपी का प्री-बिल्ट मेनू और प्रति सप्ताह €30 से कम रहने के लिए अनुकूलित खरीदारी सूची।',
           mock:'7 दिन · किफायती सामग्री · एक सूची' },
@@ -2671,8 +2679,8 @@ function renderPremiumPreview() {
   const cardsHTML = s.cards.map(c => `
       <div class="hp-preview-card">
         <div class="hp-preview-card-icon" aria-hidden="true">${safeText(c.ico, '⭐')}</div>
-        <h3 class="hp-preview-card-title">${safeText(c.title)}</h3>
-        <p class="hp-preview-card-desc">${safeText(c.desc)}</p>
+        <h3 class="hp-preview-card-title">${safeText(fillRecipeCount(c.title))}</h3>
+        <p class="hp-preview-card-desc">${safeText(fillRecipeCount(c.desc))}</p>
         <div class="hp-preview-card-mock">
           <span class="hp-preview-card-mock-lock" aria-hidden="true">🔒</span>
           ${safeText(c.mock)}
@@ -3188,7 +3196,7 @@ function renderFAQ() {
         { q: 'Planificatorul este cu adevărat gratuit?',
           a: 'Da. Planificarea săptămânală, lista de cumpărături și cele 200+ rețete sunt gratuite, fără înregistrare. PDF-ul gratuit oferă o previzualizare de 2 zile din 7.' },
         { q: 'Ce primesc în plus cu Premium?',
-          a: 'PDF complet pentru toate cele 7 zile, meniu buget săptămânal, acces la toate cele 216 rețete și rețete noi adăugate regulat. €3/lună, fără angajament.' },
+          a: 'PDF complet pentru toate cele 7 zile, meniu buget săptămânal, acces la toate cele {{RECIPE_COUNT}} rețete și rețete noi adăugate regulat. €3/lună, fără angajament.' },
         { q: 'Pot anula abonamentul oricând?',
           a: 'Da. Anulezi oricând din portalul Stripe, accesibil prin butonul „Manage subscription" după activare. Continui să folosești Premium până la sfârșitul perioadei plătite.' },
         { q: 'Trebuie să-mi fac cont?',
@@ -3206,7 +3214,7 @@ function renderFAQ() {
         { q: 'Is the planner really free?',
           a: 'Yes. The weekly planner, shopping list, and 200+ recipes are free with no signup. The free PDF gives you a 2-of-7-day preview.' },
         { q: 'What do I get with Premium?',
-          a: 'Full PDF for all 7 days, a weekly budget menu, access to all 216 recipes from 70+ countries, and new recipes added regularly. €3/month, no commitment.' },
+          a: 'Full PDF for all 7 days, a weekly budget menu, access to all {{RECIPE_COUNT}} recipes from 70+ countries, and new recipes added regularly. €3/month, no commitment.' },
         { q: 'Can I cancel anytime?',
           a: 'Yes. Cancel anytime from the Stripe portal, reachable via the "Manage subscription" button after activation. You keep Premium until the end of the paid period.' },
         { q: 'Do I need to create an account?',
@@ -3224,7 +3232,7 @@ function renderFAQ() {
         { q: '¿El planificador es realmente gratis?',
           a: 'Sí. El planificador semanal, la lista de compras y las 200+ recetas son gratuitas sin registro. El PDF gratuito ofrece una vista previa de 2 de 7 días.' },
         { q: '¿Qué incluye Premium?',
-          a: 'PDF completo de los 7 días, menú económico semanal, acceso a todas las 216 recetas de 70+ países y nuevas recetas regularmente. €3/mes, sin compromiso.' },
+          a: 'PDF completo de los 7 días, menú económico semanal, acceso a todas las {{RECIPE_COUNT}} recetas de 70+ países y nuevas recetas regularmente. €3/mes, sin compromiso.' },
         { q: '¿Puedo cancelar cuando quiera?',
           a: 'Sí. Cancela cuando quieras desde el portal Stripe, accesible mediante el botón "Manage subscription" tras la activación. Mantienes Premium hasta el fin del periodo pagado.' },
         { q: '¿Necesito crear una cuenta?',
@@ -3242,7 +3250,7 @@ function renderFAQ() {
         { q: 'Le planificateur est-il vraiment gratuit ?',
           a: 'Oui. Le planificateur hebdomadaire, la liste de courses et les 200+ recettes sont gratuits sans inscription. Le PDF gratuit offre un aperçu de 2 jours sur 7.' },
         { q: 'Que comprend Premium ?',
-          a: 'PDF complet 7 jours, menu budget hebdomadaire, accès aux 216 recettes de 70+ pays et nouvelles recettes ajoutées régulièrement. €3/mois, sans engagement.' },
+          a: 'PDF complet 7 jours, menu budget hebdomadaire, accès aux {{RECIPE_COUNT}} recettes de 70+ pays et nouvelles recettes ajoutées régulièrement. €3/mois, sans engagement.' },
         { q: 'Puis-je annuler à tout moment ?',
           a: 'Oui. Annulez quand vous voulez depuis le portail Stripe, accessible via le bouton "Manage subscription" après activation. Vous gardez Premium jusqu\'à la fin de la période payée.' },
         { q: 'Dois-je créer un compte ?',
@@ -3260,7 +3268,7 @@ function renderFAQ() {
         { q: 'Ist der Planer wirklich kostenlos?',
           a: 'Ja. Wochenplaner, Einkaufsliste und 200+ Rezepte sind ohne Anmeldung kostenlos. Das kostenlose PDF zeigt eine Vorschau von 2 von 7 Tagen.' },
         { q: 'Was bekomme ich mit Premium?',
-          a: 'Vollständiges PDF für alle 7 Tage, wöchentliches Budget-Menü, Zugang zu allen 216 Rezepten aus 70+ Ländern und regelmäßig neue Rezepte. €3/Monat, ohne Bindung.' },
+          a: 'Vollständiges PDF für alle 7 Tage, wöchentliches Budget-Menü, Zugang zu allen {{RECIPE_COUNT}} Rezepten aus 70+ Ländern und regelmäßig neue Rezepte. €3/Monat, ohne Bindung.' },
         { q: 'Kann ich jederzeit kündigen?',
           a: 'Ja. Kündige jederzeit im Stripe-Portal, erreichbar über die Schaltfläche "Manage subscription" nach der Aktivierung. Premium bleibt bis zum Ende des bezahlten Zeitraums aktiv.' },
         { q: 'Muss ich ein Konto anlegen?',
@@ -3278,7 +3286,7 @@ function renderFAQ() {
         { q: 'O planificador é realmente gratuito?',
           a: 'Sim. O planificador semanal, lista de compras e 200+ receitas são gratuitos sem cadastro. O PDF gratuito oferece uma pré-visualização de 2 de 7 dias.' },
         { q: 'O que recebo com Premium?',
-          a: 'PDF completo dos 7 dias, menu económico semanal, acesso às 216 receitas de 70+ países e novas receitas regularmente. €3/mês, sem compromisso.' },
+          a: 'PDF completo dos 7 dias, menu económico semanal, acesso às {{RECIPE_COUNT}} receitas de 70+ países e novas receitas regularmente. €3/mês, sem compromisso.' },
         { q: 'Posso cancelar quando quiser?',
           a: 'Sim. Cancele quando quiser no portal Stripe, acessível pelo botão "Manage subscription" após a ativação. Mantém Premium até ao fim do período pago.' },
         { q: 'Preciso criar uma conta?',
@@ -3296,7 +3304,7 @@ function renderFAQ() {
         { q: 'Планировщик действительно бесплатный?',
           a: 'Да. Недельный план, список покупок и 200+ рецептов бесплатны без регистрации. Бесплатный PDF показывает превью 2 из 7 дней.' },
         { q: 'Что входит в Премиум?',
-          a: 'Полный PDF на все 7 дней, недельное бюджетное меню, доступ ко всем 216 рецептам из 70+ стран и новые рецепты регулярно. €3/мес, без обязательств.' },
+          a: 'Полный PDF на все 7 дней, недельное бюджетное меню, доступ ко всем {{RECIPE_COUNT}} рецептам из 70+ стран и новые рецепты регулярно. €3/мес, без обязательств.' },
         { q: 'Могу ли я отменить в любое время?',
           a: 'Да. Отмените в любое время в портале Stripe, доступном через кнопку "Manage subscription" после активации. Премиум сохраняется до конца оплаченного периода.' },
         { q: 'Нужно ли создавать аккаунт?',
@@ -3332,7 +3340,7 @@ function renderFAQ() {
         { q: 'Planlayıcı gerçekten ücretsiz mi?',
           a: 'Evet. Haftalık planlayıcı, alışveriş listesi ve 200+ tarif kayıt olmadan ücretsizdir. Ücretsiz PDF, 7 günden 2 günlük bir önizleme sunar.' },
         { q: 'Premium ile ne kazanırım?',
-          a: 'Tüm 7 günler için tam PDF, haftalık bütçe menüsü, 70+ ülkeden 216 tarife erişim ve düzenli olarak yeni tarifler. €3/ay, taahhüt yok.' },
+          a: 'Tüm 7 günler için tam PDF, haftalık bütçe menüsü, 70+ ülkeden {{RECIPE_COUNT}} tarife erişim ve düzenli olarak yeni tarifler. €3/ay, taahhüt yok.' },
         { q: 'İstediğim zaman iptal edebilir miyim?',
           a: 'Evet. Aktivasyondan sonra "Manage subscription" düğmesiyle erişilebilen Stripe portalından istediğin zaman iptal et. Ödenen dönem sonuna kadar Premium devam eder.' },
         { q: 'Hesap oluşturmam gerekiyor mu?',
@@ -3350,7 +3358,7 @@ function renderFAQ() {
         { q: 'هل المخطط مجاني بالفعل؟',
           a: 'نعم. المخطط الأسبوعي وقائمة التسوق و200+ وصفة مجانية بدون تسجيل. ملف PDF المجاني يعرض معاينة 2 من 7 أيام.' },
         { q: 'ماذا أحصل مع بريميوم؟',
-          a: 'PDF كامل لجميع 7 أيام، قائمة ميزانية أسبوعية، الوصول إلى جميع 216 وصفة من أكثر من 70 دولة، ووصفات جديدة بانتظام. €3/شهر، بدون التزام.' },
+          a: 'PDF كامل لجميع 7 أيام، قائمة ميزانية أسبوعية، الوصول إلى جميع {{RECIPE_COUNT}} وصفة من أكثر من 70 دولة، ووصفات جديدة بانتظام. €3/شهر، بدون التزام.' },
         { q: 'هل يمكنني الإلغاء في أي وقت؟',
           a: 'نعم. ألغِ في أي وقت من بوابة Stripe، التي يمكن الوصول إليها عبر زر "Manage subscription" بعد التفعيل. تستمر بريميوم حتى نهاية الفترة المدفوعة.' },
         { q: 'هل أحتاج إلى إنشاء حساب؟',
@@ -3368,7 +3376,7 @@ function renderFAQ() {
         { q: '规划器真的免费吗？',
           a: '是的。每周规划器、购物清单和200+食谱免费且无需注册。免费PDF提供7天中2天的预览。' },
         { q: '高级版包含什么？',
-          a: '7天完整PDF、每周节俭菜单、访问来自70+国家的216道食谱，以及定期添加的新食谱。€3/月，无承诺。' },
+          a: '7天完整PDF、每周节俭菜单、访问来自70+国家的{{RECIPE_COUNT}}道食谱，以及定期添加的新食谱。€3/月，无承诺。' },
         { q: '可以随时取消吗？',
           a: '可以。激活后通过"Manage subscription"按钮进入Stripe门户随时取消。在已付费时段结束前继续保留高级版。' },
         { q: '需要创建账户吗？',
@@ -3386,7 +3394,7 @@ function renderFAQ() {
         { q: 'プランナーは本当に無料ですか？',
           a: 'はい。週間プランナー、買い物リスト、200以上のレシピは登録不要で無料です。無料PDFは7日中2日のプレビューを提供します。' },
         { q: 'プレミアムには何が含まれますか？',
-          a: '7日間フルPDF、週間節約メニュー、70カ国以上から216のレシピへのアクセス、定期的に追加される新レシピ。€3/月、契約縛りなし。' },
+          a: '7日間フルPDF、週間節約メニュー、70カ国以上から{{RECIPE_COUNT}}のレシピへのアクセス、定期的に追加される新レシピ。€3/月、契約縛りなし。' },
         { q: 'いつでもキャンセルできますか？',
           a: 'はい。アクティベーション後「Manage subscription」ボタンからアクセスできるStripeポータルでいつでもキャンセル可能。支払期間終了までプレミアムは継続します。' },
         { q: 'アカウントを作る必要がありますか？',
@@ -3404,7 +3412,7 @@ function renderFAQ() {
         { q: '플래너가 정말 무료인가요?',
           a: '네. 주간 플래너, 장보기 목록, 200개 이상의 레시피는 가입 없이 무료입니다. 무료 PDF는 7일 중 2일 미리보기를 제공합니다.' },
         { q: '프리미엄에는 무엇이 포함되나요?',
-          a: '7일 전체 PDF, 주간 예산 메뉴, 70+ 국가의 216개 레시피 모두 이용, 정기적으로 추가되는 새 레시피. €3/월, 약정 없음.' },
+          a: '7일 전체 PDF, 주간 예산 메뉴, 70+ 국가의 {{RECIPE_COUNT}}개 레시피 모두 이용, 정기적으로 추가되는 새 레시피. €3/월, 약정 없음.' },
         { q: '언제든 취소할 수 있나요?',
           a: '네. 활성화 후 "Manage subscription" 버튼으로 접근 가능한 Stripe 포털에서 언제든 취소할 수 있습니다. 결제 기간 끝까지 프리미엄은 유지됩니다.' },
         { q: '계정을 만들어야 하나요?',
@@ -3422,7 +3430,7 @@ function renderFAQ() {
         { q: 'क्या प्लानर वास्तव में मुफ्त है?',
           a: 'हाँ। साप्ताहिक प्लानर, खरीदारी सूची और 200+ रेसिपी पंजीकरण के बिना मुफ्त हैं। मुफ्त PDF 7 में से 2 दिनों का पूर्वावलोकन प्रदान करता है।' },
         { q: 'प्रीमियम में क्या मिलता है?',
-          a: 'सभी 7 दिनों के लिए पूर्ण PDF, साप्ताहिक बजट मेनू, 70+ देशों से सभी 216 रेसिपी तक पहुँच, और नियमित रूप से जोड़ी जाने वाली नई रेसिपी। €3/माह, कोई प्रतिबद्धता नहीं।' },
+          a: 'सभी 7 दिनों के लिए पूर्ण PDF, साप्ताहिक बजट मेनू, 70+ देशों से सभी {{RECIPE_COUNT}} रेसिपी तक पहुँच, और नियमित रूप से जोड़ी जाने वाली नई रेसिपी। €3/माह, कोई प्रतिबद्धता नहीं।' },
         { q: 'क्या मैं कभी भी रद्द कर सकता हूँ?',
           a: 'हाँ। सक्रियण के बाद "Manage subscription" बटन के माध्यम से पहुँच योग्य Stripe पोर्टल से कभी भी रद्द करें। भुगतान की गई अवधि के अंत तक प्रीमियम जारी रहता है।' },
         { q: 'क्या मुझे खाता बनाने की आवश्यकता है?',
@@ -3438,8 +3446,8 @@ function renderFAQ() {
 
   const itemsHTML = s.items.map(item => `
     <details class="hp-faq-item">
-      <summary class="hp-faq-summary">${safeText(item.q)}</summary>
-      <div class="hp-faq-body">${safeText(item.a)}</div>
+      <summary class="hp-faq-summary">${safeText(fillRecipeCount(item.q))}</summary>
+      <div class="hp-faq-body">${safeText(fillRecipeCount(item.a))}</div>
     </details>`).join('');
 
   const html = `
@@ -4194,7 +4202,7 @@ function applyTranslations() {
                        '✅ 200+ rețete din 70+ țări','✅ Previzualizare gratuită — 2 zile din 7',
                        '✗ PDF cu toate 7 zilele','✗ Meniu buget ieftin'],
             premFeats:['✅ Tot ce e gratuit, plus:','✅ PDF cu toate cele 7 zile',
-                       '✅ Meniu buget săptămânal','✅ 216 rețete din 70+ țări',
+                       '✅ Meniu buget săptămânal','✅ {{RECIPE_COUNT}} rețete din 70+ țări',
                        '✅ Rețete noi adăugate regulat','✅ Acces nelimitat oricând'] },
       en: { title:'Free vs Premium', freeName:'Free', premName:'⭐ Premium',
             price:'€3/month', sub:'', popular:'MOST POPULAR',
@@ -4203,7 +4211,7 @@ function applyTranslations() {
                        '✅ 200+ recipes from 70+ countries','✅ Free preview — 2 of 7 days',
                        '✗ Full 7-day PDF','✗ Budget menu'],
             premFeats:['✅ Everything in Free, plus:','✅ Full PDF with all 7 days',
-                       '✅ Weekly budget menu','✅ 216 recipes from 70+ countries',
+                       '✅ Weekly budget menu','✅ {{RECIPE_COUNT}} recipes from 70+ countries',
                        '✅ New recipes added regularly','✅ Unlimited access anytime'] },
       es: { title:'Gratis vs Premium', freeName:'Gratis', premName:'⭐ Premium',
             price:'€3/mes', sub:'', popular:'MÁS POPULAR',
@@ -4212,7 +4220,7 @@ function applyTranslations() {
                        '✅ 200+ recetas de 70+ países','✅ Vista previa gratuita — 2 de 7 días',
                        '✗ PDF con los 7 días','✗ Menú económico'],
             premFeats:['✅ Todo lo gratis, más:','✅ PDF completo con 7 días',
-                       '✅ Menú económico semanal','✅ 216 recetas de 70+ países',
+                       '✅ Menú económico semanal','✅ {{RECIPE_COUNT}} recetas de 70+ países',
                        '✅ Nuevas recetas añadidas regularmente','✅ Acceso ilimitado siempre'] },
       fr: { title:'Gratuit vs Premium', freeName:'Gratuit', premName:'⭐ Premium',
             price:'€3/mois', sub:'', popular:'LE PLUS POPULAIRE',
@@ -4221,7 +4229,7 @@ function applyTranslations() {
                        '✅ 200+ recettes de 70+ pays','✅ Aperçu gratuit — 2 jours sur 7',
                        '✗ PDF avec les 7 jours','✗ Menu budget'],
             premFeats:['✅ Tout le gratuit, plus :','✅ PDF complet sur 7 jours',
-                       '✅ Menu budget hebdomadaire','✅ 216 recettes de 70+ pays',
+                       '✅ Menu budget hebdomadaire','✅ {{RECIPE_COUNT}} recettes de 70+ pays',
                        '✅ Nouvelles recettes ajoutées régulièrement','✅ Accès illimité à tout moment'] },
       de: { title:'Kostenlos vs Premium', freeName:'Kostenlos', premName:'⭐ Premium',
             price:'€3/Monat', sub:'', popular:'AM BELIEBTESTEN',
@@ -4230,7 +4238,7 @@ function applyTranslations() {
                        '✅ 200+ Rezepte aus 70+ Ländern','✅ Kostenlose Vorschau — 2 von 7 Tagen',
                        '✗ PDF mit allen 7 Tagen','✗ Budget-Menü'],
             premFeats:['✅ Alles Kostenlose, plus:','✅ PDF mit allen 7 Tagen',
-                       '✅ Wöchentliches Budget-Menü','✅ 216 Rezepte aus 70+ Ländern',
+                       '✅ Wöchentliches Budget-Menü','✅ {{RECIPE_COUNT}} Rezepte aus 70+ Ländern',
                        '✅ Regelmäßig neue Rezepte','✅ Unbegrenzter Zugang'] },
       pt: { title:'Gratuito vs Premium', freeName:'Gratuito', premName:'⭐ Premium',
             price:'€3/mês', sub:'', popular:'MAIS POPULAR',
@@ -4239,7 +4247,7 @@ function applyTranslations() {
                        '✅ 200+ receitas de 70+ países','✅ Pré-visualização gratuita — 2 de 7 dias',
                        '✗ PDF com todos os 7 dias','✗ Menu económico'],
             premFeats:['✅ Tudo gratuito, mais:','✅ PDF completo com 7 dias',
-                       '✅ Menu económico semanal','✅ 216 receitas de 70+ países',
+                       '✅ Menu económico semanal','✅ {{RECIPE_COUNT}} receitas de 70+ países',
                        '✅ Novas receitas regularmente','✅ Acesso ilimitado'] },
       ru: { title:'Бесплатно vs Премиум', freeName:'Бесплатно', premName:'⭐ Премиум',
             price:'€3/мес', sub:'', popular:'САМЫЙ ПОПУЛЯРНЫЙ',
@@ -4248,7 +4256,7 @@ function applyTranslations() {
                        '✅ 200+ рецептов из 70+ стран','✅ Бесплатный просмотр — 2 из 7 дней',
                        '✗ PDF на все 7 дней','✗ Бюджетное меню'],
             premFeats:['✅ Всё из бесплатного, плюс:','✅ Полный PDF на 7 дней',
-                       '✅ Недельное бюджетное меню','✅ 216 рецептов из 70+ стран',
+                       '✅ Недельное бюджетное меню','✅ {{RECIPE_COUNT}} рецептов из 70+ стран',
                        '✅ Новые рецепты регулярно','✅ Безлимитный доступ'] },
       ar: { title:'مجاني vs بريميوم', freeName:'مجاني', premName:'⭐ بريميوم',
             price:'€3/شهر', sub:'', popular:'الأكثر شعبية',
@@ -4257,7 +4265,7 @@ function applyTranslations() {
                        '✅ 200+ وصفة من 70+ دولة','✅ معاينة مجانية — يومان من أصل 7',
                        '✗ PDF كامل 7 أيام','✗ قائمة الميزانية'],
             premFeats:['✅ كل المجاني، بالإضافة:','✅ PDF كامل بجميع 7 أيام',
-                       '✅ قائمة ميزانية أسبوعية','✅ 216 وصفة من 70+ دولة',
+                       '✅ قائمة ميزانية أسبوعية','✅ {{RECIPE_COUNT}} وصفة من 70+ دولة',
                        '✅ وصفات جديدة بانتظام','✅ وصول غير محدود'] },
       zh: { title:'免费 vs 高级版', freeName:'免费', premName:'⭐ 高级版',
             price:'€3/月', sub:'', popular:'最受欢迎',
@@ -4266,7 +4274,7 @@ function applyTranslations() {
                        '✅ 70+国200+道菜谱','✅ 免费预览 — 7天中的2天',
                        '✗ 完整7天PDF','✗ 节俭菜单'],
             premFeats:['✅ 所有免费功能，加上：','✅ 完整7天PDF',
-                       '✅ 每周节俭菜单','✅ 来自 70+ 国家的 216 道食谱',
+                       '✅ 每周节俭菜单','✅ 来自 70+ 国家的 {{RECIPE_COUNT}} 道食谱',
                        '✅ 定期添加新食谱','✅ 随时无限访问'] },
       ja: { title:'無料 vs プレミアム', freeName:'無料', premName:'⭐ プレミアム',
             price:'€3/月', sub:'', popular:'最人気',
@@ -4275,7 +4283,7 @@ function applyTranslations() {
                        '✅ 70カ国以上200+レシピ','✅ 無料プレビュー — 7日中2日',
                        '✗ 7日分フルPDF','✗ 節約メニュー'],
             premFeats:['✅ 無料のすべて、プラス：','✅ 7日分フルPDF',
-                       '✅ 週間節約メニュー','✅ 70カ国以上から216のレシピ',
+                       '✅ 週間節約メニュー','✅ 70カ国以上から{{RECIPE_COUNT}}のレシピ',
                        '✅ 定期的に新レシピ追加','✅ 無制限アクセス'] },
       tr: { title:'Ücretsiz vs Premium', freeName:'Ücretsiz', premName:'⭐ Premium',
             price:'€3/ay', sub:'', popular:'EN POPÜLER',
@@ -4284,7 +4292,7 @@ function applyTranslations() {
                        '✅ 70+ ülkeden 200+ tarif','✅ Ücretsiz önizleme — 7 günden 2\'si',
                        '✗ 7 günlük tam PDF','✗ Bütçe menüsü'],
             premFeats:['✅ Ücretsizin her şeyi, artı:','✅ 7 günlük tam PDF',
-                       '✅ Haftalık bütçe menüsü','✅ 70+ ülkeden 216 tarif',
+                       '✅ Haftalık bütçe menüsü','✅ 70+ ülkeden {{RECIPE_COUNT}} tarif',
                        '✅ Düzenli olarak yeni tarifler','✅ Sınırsız erişim'] },
       it: { title:'Gratuito vs Premium', freeName:'Gratuito', premName:'⭐ Premium',
             price:'€3/mese', sub:'', popular:'PIÙ POPOLARE',
@@ -4293,7 +4301,7 @@ function applyTranslations() {
                        '✅ 200+ ricette da 70+ paesi','✅ Anteprima gratuita — 2 giorni su 7',
                        '✗ PDF con tutti i 7 giorni','✗ Menu economico'],
             premFeats:['✅ Tutto il gratuito, più:','✅ PDF completo 7 giorni',
-                       '✅ Menu economico settimanale','✅ 216 ricette da 70+ paesi',
+                       '✅ Menu economico settimanale','✅ {{RECIPE_COUNT}} ricette da 70+ paesi',
                        '✅ Nuove ricette aggiunte regolarmente','✅ Accesso illimitato'] },
       ko: { title:'무료 vs 프리미엄', freeName:'무료', premName:'⭐ 프리미엄',
             price:'€3/월', sub:'', popular:'가장 인기',
@@ -4302,7 +4310,7 @@ function applyTranslations() {
                        '✅ 70개국 200+가지 레시피','✅ 무료 미리보기 — 7일 중 2일',
                        '✗ 7일 전체 PDF','✗ 예산 메뉴'],
             premFeats:['✅ 무료의 모든 것, 추가로:','✅ 7일 전체 PDF',
-                       '✅ 주간 예산 메뉴','✅ 70+ 국가의 216개 레시피',
+                       '✅ 주간 예산 메뉴','✅ 70+ 국가의 {{RECIPE_COUNT}}개 레시피',
                        '✅ 정기적으로 새 레시피 추가','✅ 무제한 접속'] },
       hi: { title:'मुफ्त vs प्रीमियम', freeName:'मुफ्त', premName:'⭐ प्रीमियम',
             price:'€3/माह', sub:'', popular:'सबसे लोकप्रिय',
@@ -4311,7 +4319,7 @@ function applyTranslations() {
                        '✅ 70+ देशों की 200+ रेसिपी','✅ मुफ्त पूर्वावलोकन — 7 में से 2 दिन',
                        '✗ पूर्ण 7 दिन PDF','✗ बजट मेनू'],
             premFeats:['✅ सब कुछ मुफ्त में, साथ में:','✅ पूर्ण 7 दिन PDF',
-                       '✅ साप्ताहिक बजट मेनू','✅ 70+ देशों से 216 रेसिपी',
+                       '✅ साप्ताहिक बजट मेनू','✅ 70+ देशों से {{RECIPE_COUNT}} रेसिपी',
                        '✅ नियमित रूप से नई रेसिपी','✅ असीमित पहुंच'] },
     };
 
@@ -4319,7 +4327,7 @@ function applyTranslations() {
     const freeList = s.freeFeats.map(f =>
       `<li class="${f.startsWith('✗') ? 'feat-no' : ''}">${f}</li>`
     ).join('');
-    const premList = s.premFeats.map(f => `<li>${f}</li>`).join('');
+    const premList = s.premFeats.map(f => `<li>${fillRecipeCount(f)}</li>`).join('');
 
     // Trust strip shown below the cards — reassures cancel/no-commit terms.
     const TRUST_STRIP = {
