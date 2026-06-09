@@ -890,8 +890,16 @@ document.addEventListener('DOMContentLoaded', () => {
       servingsWord:   L.servingsWord,
     };
 
+    // Send the verified email so the SERVER can authorise the full 7-day PDF.
+    // Security is enforced server-side: window.hasUnlimited above only trims
+    // the payload for snappier UX — a free user (or a tampered flag) still
+    // gets at most a 2-day preview because /api/generate-pdf re-checks premium.
+    let email = window.verifiedEmail || null;
+    if (!email) { try { email = localStorage.getItem('mp:lastEmail') || null; } catch (_) {} }
+
     return {
       lang,
+      email: email || undefined,
       title:     lcStrings.title || 'Weekly Meal Plan',
       weekLabel: `${WEEK_OF[lang] || WEEK_OF.en} ${dateStr}`,
       days,

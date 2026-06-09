@@ -11,8 +11,53 @@ import React from 'react';
 import { Document, Page, Text, View, StyleSheet, Font, renderToBuffer } from '@react-pdf/renderer';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { isPremiumEmail } from './_lib/requirePremium.js';
+import { checkRateLimit } from './_lib/rateLimiter.js';
 
 const h = React.createElement;
+
+// ── Access gating (server-authoritative) ────────────────────────────────────
+// SECURITY: the SERVER decides how much of the plan it renders, never the
+// browser. Free / unverified requests get at most FREE_DAYS days regardless of
+// what the client sends (window.hasUnlimited, a fat payload, or a raw curl
+// cannot unlock the full plan — only a premium email validated against Supabase
+// can). Free generation is also rate-limited per email/IP.
+const FREE_DAYS           = 2;
+const FREE_PDF_LIMIT      = 8;                // free PDFs allowed per window …
+const FREE_PDF_WINDOW_MS  = 60 * 60 * 1000;   // … per rolling hour, per email/IP
+
+/**
+ * Clamp a plan to what the requester is entitled to. Pure + synchronous so it
+ * is unit-testable without Supabase.
+ *
+ *  - premium  → plan returned unchanged (full 7-day plan allowed).
+ *  - non-premium → days capped at FREE_DAYS. If the client tried to send more
+ *    than the free allowance, the shopping list is dropped too (it can't be
+ *    trusted/mapped to the 2 visible days) and a locked-days upsell notice is
+ *    injected when one isn't already present.
+ *
+ * @param {object} plan
+ * @param {boolean} isPremium
+ * @returns {object}
+ */
+export function gatePlanForAccess(plan, isPremium) {
+  if (isPremium) return plan;
+  const days = Array.isArray(plan && plan.days) ? plan.days : [];
+  if (days.length <= FREE_DAYS) return plan; // legitimate free preview — leave as-is
+  const locked = plan.locked || {
+    title: 'The full 7-day plan is Premium',
+    sub:   'Upgrade to unlock every day, the full shopping list and the weekly budget menu.',
+    cta:   'Get Premium → meal-planner.ro',
+  };
+  return { ...plan, days: days.slice(0, FREE_DAYS), shoppingGroups: [], locked };
+}
+
+/** Best-effort client IP for rate-limit keying behind Vercel's proxy. */
+function clientIp(req) {
+  const xff = req && req.headers && req.headers['x-forwarded-for'];
+  if (xff) return String(xff).split(',')[0].trim();
+  return (req && req.socket && req.socket.remoteAddress) || 'anon';
+}
 
 // ── Font registration ──────────────────────────────────────────────────────
 // One font family per script. The handler picks the right family at render
@@ -847,12 +892,36 @@ const DEMO_PLAN = {
 export default async function handler(req, res) {
   try {
     let plan = DEMO_PLAN;
+    let email = '';
     if (req.method === 'POST') {
       const body = req.body && typeof req.body === 'object' ? req.body : null;
+      if (body && typeof body.email === 'string') email = body.email.trim();
       if (body && (Array.isArray(body.days) || Array.isArray(body.shoppingGroups))) {
         plan = body;
       }
     }
+
+    // SECURITY: server decides the entitlement, not the browser. Validate the
+    // email against Supabase (fail-closed). window.hasUnlimited / a fat payload
+    // are irrelevant here.
+    const premium = await isPremiumEmail(email);
+
+    // Rate-limit free generation (premium users are paying — skip).
+    if (!premium) {
+      const key = 'pdf:' + (email || clientIp(req));
+      const { allowed, retryAfterSec } = checkRateLimit(key, FREE_PDF_LIMIT, FREE_PDF_WINDOW_MS);
+      if (!allowed) {
+        res.setHeader('Retry-After', String(retryAfterSec));
+        res.status(429).json({
+          error: 'Too many free PDF requests. Please try again later or upgrade to Premium.',
+          retryAfterSec,
+        });
+        return;
+      }
+    }
+
+    // Clamp the plan to what the requester is entitled to (free → ≤2 days).
+    plan = gatePlanForAccess(plan, premium);
 
     const t0 = Date.now();
     const buffer = await renderToBuffer(MealPlanDocument(plan));

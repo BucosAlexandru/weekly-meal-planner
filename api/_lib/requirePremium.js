@@ -58,3 +58,39 @@ export async function requirePremium(req, res) {
 
   return email;
 }
+
+/**
+ * Non-throwing premium check. Returns a boolean and NEVER writes a response —
+ * for handlers that must degrade gracefully (e.g. serve a free preview)
+ * instead of rejecting the request when the email isn't premium.
+ *
+ * Fails CLOSED: a missing email, missing/expired row, or any backend error
+ * resolves to `false` (treated as non-premium), so a Supabase outage or
+ * misconfiguration can never accidentally unlock premium content.
+ *
+ * @param {string|null|undefined} email
+ * @returns {Promise<boolean>}
+ */
+export async function isPremiumEmail(email) {
+  const e = typeof email === 'string' ? email.trim() : '';
+  if (!e) return false;
+  try {
+    const { data: rows, error } = await supabase
+      .from('tokens')
+      .select('expires_at')
+      .eq('email', e)
+      .order('expires_at', { ascending: false });
+
+    if (error || !rows || rows.length === 0) return false;
+
+    const now = Date.now();
+    return rows.some(row => {
+      if (!row.expires_at) return true; // lifetime — no expiry set
+      let exp = Number(row.expires_at);
+      if (exp < 1e12) exp = exp * 1000; // seconds → milliseconds
+      return exp > now;
+    });
+  } catch (_) {
+    return false; // fail closed
+  }
+}
