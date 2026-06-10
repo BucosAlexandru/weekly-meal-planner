@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sitemap": "node scripts/generate-sitemap.cjs",
-    "build:js": "esbuild public/js/app.js --bundle --minify --external:./recipes-budget.js --outfile=public/js/app.min.js && esbuild public/js/checkout.js --bundle --minify --outfile=public/js/checkout.min.js && esbuild public/js/portal.js --bundle --minify --outfile=public/js/portal.min.js",
+    "build:js": "esbuild public/js/app.js --bundle --minify --external:./recipes-budget.js --outfile=public/js/app.min.js && esbuild public/js/checkout.js --bundle --minify --outfile=public/js/checkout.min.js && esbuild public/js/portal.js --bundle --minify --outfile=public/js/portal.min.js && esbuild public/js/analytics.js --bundle --minify --outfile=public/js/analytics.min.js",
     "build:css": "esbuild public/css/style.css --minify --outfile=public/css/style.min.css",
     "content": "node scripts/generate-content.mjs",
     "validate:plans": "node scripts/validate-open-in-app.mjs",

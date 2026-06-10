@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Hint for premium auto-restore after Stripe success: lets app.js
       // silently re-verify the user instead of forcing manual activation.
       if (email) { try { localStorage.setItem('mp:lastEmail', email); } catch (_) {} }
+      if (window.mpTrack) window.mpTrack('checkout_started', { priceId: PRICE_EUR });
       await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId });
     });
   }

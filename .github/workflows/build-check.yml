@@ -57,6 +57,7 @@ jobs:
         run: |
           for file in \
             api/check-access.js \
+            api/event.js \
             api/chat.js \
             api/coach.js \
             api/generate-pdf.js \

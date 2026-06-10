@@ -1,9 +1,18 @@
 // /api/stripe-webhook.js
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
+import crypto from 'crypto';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+
+// Funnel analytics: pseudonymous, deterministic email id so subscription_active
+// rows can join the anonymous client funnel without ever storing the raw email.
+function hashEmail(email) {
+  if (!email) return null;
+  const salt = process.env.ANALYTICS_HASH_SALT || '';
+  return crypto.createHmac('sha256', salt).update(String(email).trim().toLowerCase()).digest('hex');
+}
 
 function readRawBody(req) {
   return new Promise((resolve, reject) => {
@@ -123,6 +132,25 @@ export default async function handler(req, res) {
           console.log(`checkout.session.completed → email=${email}, expires_at=${expiresAt}`);
         } else {
           console.warn('checkout.session.completed: missing customerId');
+        }
+
+        // Funnel analytics — final step. Recorded server-side (no raw email).
+        // Wrapped so a telemetry failure can never break billing. Dedupe in
+        // queries via props.stripeEventId if Stripe re-delivers the event.
+        try {
+          await supabase.from('events').insert({
+            event: 'subscription_active',
+            email_hash: hashEmail(email),
+            props: {
+              plan: 'subscription',
+              amount: session.amount_total ?? null,
+              currency: session.currency ?? null,
+              expiresAt: expiresAt,
+              stripeEventId: event.id,
+            },
+          });
+        } catch (e) {
+          console.warn('analytics subscription_active insert failed:', e?.message);
         }
         break;
       }

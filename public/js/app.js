@@ -1498,6 +1498,7 @@ document.addEventListener('DOMContentLoaded', () => {
       generateRandomMenu();
       updateShoppingList();
       showCostEstimate(window._activeFilter);
+      if (window.mpTrack) window.mpTrack('plan_generated', { filter: window._activeFilter || 'all' });
     };
 
     // ── Budget checkbox (hidden, kept for compatibility) ──────
@@ -1538,7 +1539,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // export path now, so there's no CDN preload to wait for.
   const freeBtn = document.getElementById('generate-btn');
   if (freeBtn && !freeBtn.dataset.attached) {
-    freeBtn.onclick = () => { exportShoppingListToPDF(); };
+    freeBtn.onclick = () => {
+      if (window.mpTrack) window.mpTrack('pdf_click', { tier: 'free' });
+      exportShoppingListToPDF();
+    };
     freeBtn.dataset.attached = '1';
   }
   // butonul plătit apare dinamic
@@ -1546,7 +1550,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const obs = new MutationObserver(() => {
       const paidBtn = document.getElementById('paid-generate-pdf');
       if (paidBtn && !paidBtn.dataset.attached) {
-        paidBtn.onclick = () => { exportShoppingListToPDF(); };
+        paidBtn.onclick = () => {
+          if (window.mpTrack) window.mpTrack('pdf_click', { tier: 'premium' });
+          exportShoppingListToPDF();
+        };
         paidBtn.dataset.attached = '1';
       }
     });
