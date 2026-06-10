@@ -4194,6 +4194,30 @@ function tileExcerpt(text, maxLen = 160) {
   return (lastSpace > 60 ? cut.slice(0, lastSpace) : cut) + '…';
 }
 
+// Display-only helper for cuisine/country hub tiles. On a hub every card title
+// repeats the country adjective (e.g. on /en/recipes/romania/ each card reads
+// "Romanian …"), which is redundant. Strip that leading demonym word from the
+// VISIBLE tile title when it matches the hub country in the current locale.
+// Scoped strictly to the hub card heading — canonical names in recipes.js, the
+// H1, slugs, canonical URLs, JSON-LD (which keeps t.name) and the recipe detail
+// pages are all untouched. Space-delimited scripts ONLY: CJK fuses the adjective
+// morpheme onto the country (e.g. アメリカン from アメリカ), so those are left as-is
+// to avoid leftover characters.
+function hubCardDisplayName(name, originLocalized) {
+  if (!name || !originLocalized) return name;
+  if (!/\s/.test(name.trim())) return name; // no spaces (CJK etc.) → never touch
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '')
+                     .toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+  const words  = name.trim().split(/\s+/);
+  const first  = norm(words[0]);
+  const origin = norm(originLocalized.split(/[\s,(]/)[0]);
+  const k = Math.min(first.length, origin.length, 5);
+  if (words.length > 1 && k >= 4 && first.slice(0, k) === origin.slice(0, k) && first !== origin) {
+    return words.slice(1).join(' ');
+  }
+  return name;
+}
+
 function cuisineTileData(recipe, lc_code, recipeBaseDir) {
   const rn   = recipe.name?.[lc_code] || recipe.name?.en || recipe.name?.ro || '';
   const rs   = slug(recipe.name?.en || recipe.name?.ro || rn);
@@ -4214,6 +4238,7 @@ function cuisineTileData(recipe, lc_code, recipeBaseDir) {
   const readyIn = meta.time ? readyFn(meta.time) : '';
   return {
     name: rn,
+    displayName: hubCardDisplayName(rn, recipe.origin?.[lc_code]),
     slug: rs,
     href: `${recipeBaseDir}/${rs}/`,
     img: img.src,
@@ -4819,7 +4844,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
           ${imgHtml}
         </span>
         <span class="cuisine-tile-body">
-          <h3 class="cuisine-tile-title">${esc(t.name)}</h3>
+          <h3 class="cuisine-tile-title">${esc(t.displayName || t.name)}</h3>
           ${descHtml}
           ${metaHtml}
         </span>
