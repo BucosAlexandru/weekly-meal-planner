@@ -2,7 +2,7 @@
 // Sources: Spoonacular API + Wikipedia. Remaining use cuisine fallback.
 export const recipeImages = {
   1: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/330px-Espaguetis_carbonara.jpg',
-  2: 'https://img.spoonacular.com/recipes/654283-312x231.jpg',
+  2: 'https://meal-planner.ro/images/tripe-soup.webp',
   3: 'https://img.spoonacular.com/recipes/639590-312x231.jpg',
   4: 'https://img.spoonacular.com/recipes/662542-312x231.jpg',
   5: 'https://img.spoonacular.com/recipes/648506-312x231.jpg',
@@ -91,9 +91,9 @@ export const recipeImages = {
   99: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Barbecue_Armenian.jpg/330px-Barbecue_Armenian.jpg',
   100: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Boudin3.jpg/330px-Boudin3.jpg',
   102: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/330px-Tteokbokki.JPG',
-  103: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/330px-Cebiche_de_corvina.JPG',
+  103: 'https://meal-planner.ro/images/shrimp-ceviche.webp',
   105: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Khoresht-e_fesenjan.jpg/330px-Khoresht-e_fesenjan.jpg',
-  106: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mac_MG_5939.jpg/330px-Mac_MG_5939.jpg',
+  106: 'https://meal-planner.ro/images/kare-kare.webp',
   107: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Francesinha_Sandwich_%28cropped%29.jpg/330px-Francesinha_Sandwich_%28cropped%29.jpg',
   109: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Arroz_Chaufa_%28266361654%29.jpg/330px-Arroz_Chaufa_%28266361654%29.jpg',
   110: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Chilli_crab-02.jpg/330px-Chilli_crab-02.jpg',
@@ -127,7 +127,7 @@ export const recipeImages = {
   149: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Green_pozole%2C_dressed_%2829161841908%29.jpg/330px-Green_pozole%2C_dressed_%2829161841908%29.jpg',
   150: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cocinando_El_Pepian.jpg/330px-Cocinando_El_Pepian.jpg',
   151: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D0%BA%D1%80%D0%BE%D1%88%D0%BA%D0%B0.jpg/330px-%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D0%BA%D1%80%D0%BE%D1%88%D0%BA%D0%B0.jpg',
-  152: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Afghan_Palo.jpg/330px-Afghan_Palo.jpg',
+  152: 'https://meal-planner.ro/images/plov.webp',
   153: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MintpoticabySara.jpg/330px-MintpoticabySara.jpg',
   154: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/EGUSI.JPG/330px-EGUSI.JPG',
   155: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg/330px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.jpg',
@@ -192,7 +192,7 @@ export const recipeImages = {
   223: 'https://en.wikipedia.org/wiki/Special:FilePath/Bigos.jpg?width=636',
   226: 'https://en.wikipedia.org/wiki/Special:FilePath/G%E1%BB%8Fi_cu%E1%BB%91n.jpg?width=636',
   227: 'https://en.wikipedia.org/wiki/Special:FilePath/Sea_bream_grilled.jpg?width=636',
-  228: 'https://en.wikipedia.org/wiki/Special:FilePath/Sea_bass_in_salt_crust.jpg?width=636',
+  228: 'https://meal-planner.ro/images/sea-bass-proven-al.webp',
   229: 'https://en.wikipedia.org/wiki/Special:FilePath/Pollo_alla_diavola.jpg?width=636',
 
   // 214-229: added with meal-plan-coverage batch.
