@@ -5781,7 +5781,21 @@ body:has(#pricing-main) .app-header {
 .meal-plans-index-main .recipe-groups-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
+}
+/* Equal-height plan cards: each card fills its grid cell so cards in the same
+   row line up regardless of title/description length. The cuisine-preview
+   component is block-level, so without this shorter cards leave a ragged
+   bottom edge (the "uneven cards" issue). Image keeps its aspect ratio; the
+   meta block grows to fill the remaining height. Scoped to .plan-card so the
+   cuisine hubs (.cuisine-card--preview without .plan-card) are untouched. */
+.meal-plans-index-main .plan-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.meal-plans-index-main .plan-card .cuisine-card-meta {
+  flex: 1 1 auto;
 }
 @media (max-width: 1279px) {
   .meal-plans-index-main .recipe-groups-grid {
