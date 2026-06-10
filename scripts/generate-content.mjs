@@ -1841,6 +1841,7 @@ ${faqRows}
 
   ${makeFooter(lc, NAV_URL_FOR.pricing())}
 
+  <script src="/js/analytics.min.js" defer></script>
   <script src="/js/checkout.min.js" defer></script>
 </body>
 </html>`;
