@@ -4606,14 +4606,19 @@ if (verifyBtn && emailInput && resultDiv) {
   const autoplanParam = new URLSearchParams(window.location.search).get('autoplan');
   if (autoplanParam) {
     // Map of plan ID → { lunches[], dinners[], isBudget? }
+    // Keys are the RO plan ids used by ?autoplan= (PLANS[].id in
+    // scripts/generate-content.mjs). Meal names must match a recipe's
+    // name.ro or name.en exactly, otherwise the slot carries no recipe
+    // data. Keep this map in sync with PLANS — scripts/validate-open-in-app.mjs
+    // is the build-time guard that fails loud on any drift.
     const PLAN_DATA = {
       mediteranean: {
         lunches: ['Spaghete Carbonara','Gazpacho','Quiche Lorraine','Risotto','Paella','Pasta e fagioli','Pasta alla Norma'],
-        dinners: ['Moussaka','Ratatouille','Souvlaki','Tagine','Boeuf Bourguignon','Spanakopita','Harira']
+        dinners: ['Moussaka','Ratatouille','Souvlaki','Chicken Tagine','Boeuf Bourguignon','Spanakopita','Harira']
       },
       asia: {
         lunches: ['Pho','Bibimbap','Tom Yum','Pad Thai','Dhal','Kimbap','Okonomiyaki'],
-        dinners: ['Sushi','Curry de pui','Ramen','Pui Gong Bao','Nasi Goreng','Rendang','Tom Kha Gai']
+        dinners: ['Sushi','Curry de pui','Classic Japanese Ramen','Pui Gong Bao','Nasi Goreng','Rendang','Tom Kha Gai']
       },
       buget: { isBudget: true },
       'est-european': {
@@ -4635,10 +4640,31 @@ if (verifyBtn && emailInput && resultDiv) {
       rapid: {
         lunches: ['Spaghete Carbonara','Tacos','Pad Thai','Shakshuka','Dhal','Schnitzel','Okonomiyaki'],
         dinners: ['Pui Gong Bao','Pho','Tom Yum','Curry de pui','Nasi Goreng','Cheeseburger','Fish and Chips']
+      },
+      'iarna-confort': {
+        lunches: ['Borscht','Goulash','Risotto','Chicken Paprikash','Pho','Cassoulet','Lobio'],
+        dinners: ['Boeuf Bourguignon','Lamb Tagine','Chicken Kiev','Coq au Vin','Solyanka','Bigos','Lamb Stew']
+      },
+      'vara-usoara': {
+        lunches: ['Gazpacho','Ceviche','Greek Salad','Tabbouleh','Vietnamese Spring Rolls','Caprese Salad','Salade Niçoise'],
+        dinners: ['Grilled Sea Bream','Sushi','Avgolemono','Sea Bass Provençal','Souvlaki','Bouillabaisse','Smørrebrød']
+      },
+      'duminica-familie': {
+        lunches: ['Lasagna','Paella','Risotto','Quiche Lorraine','Spanakopita','Moussaka','Pasta alla Norma'],
+        dinners: ['Boeuf Bourguignon','Roast Chicken Diavola','Cassoulet','Lamb Tagine','Beef Stroganoff','Coq au Vin','Lamb Stew']
       }
     };
     const plan = PLAN_DATA[autoplanParam];
-    if (plan) {
+    if (!plan) {
+      // Explicit failure: an SEO page linked ?autoplan=<id> to a plan that
+      // has no PLAN_DATA entry (PLANS/PLAN_DATA drift). Do NOT continue
+      // silently with an empty planner — report which key is missing.
+      console.error(
+        `[open-in-app] Unknown plan key "${autoplanParam}". ` +
+        `Cannot build the plan from this deep link. ` +
+        `Known keys: ${Object.keys(PLAN_DATA).join(', ')}.`
+      );
+    } else {
       setTimeout(async () => { // wait for renderTable
         await ensureMainRecipes();
         if (plan.isBudget) {
@@ -4646,18 +4672,29 @@ if (verifyBtn && emailInput && resultDiv) {
           generateRandomMenu();
         } else {
           const allSrc = [...recipesMain, ...recipesBudget];
-          plan.lunches.forEach((name, i) => {
-            const inp = document.getElementById(`d${i+1}l`);
-            if (!inp) return;
-            const rec = allSrc.find(r => r.name?.ro === name || r.name?.en === name);
-            inp.value = rec ? getRecipeText(rec, lang) : name;
-          });
-          plan.dinners.forEach((name, i) => {
-            const inp = document.getElementById(`d${i+1}c`);
-            if (!inp) return;
-            const rec = allSrc.find(r => r.name?.ro === name || r.name?.en === name);
-            inp.value = rec ? getRecipeText(rec, lang) : name;
-          });
+          const unresolved = [];
+          const fillSlots = (names, slotSuffix) => {
+            (names || []).forEach((name, i) => {
+              const inp = document.getElementById(`d${i+1}${slotSuffix}`);
+              if (!inp) return;
+              const rec = allSrc.find(r => r.name?.ro === name || r.name?.en === name);
+              if (!rec) unresolved.push(name);
+              inp.value = rec ? getRecipeText(rec, lang) : name;
+            });
+          };
+          fillSlots(plan.lunches, 'l');
+          fillSlots(plan.dinners, 'c');
+          if (unresolved.length) {
+            // Explicit failure: one or more plan meals matched no recipe by
+            // name.ro/name.en (PLAN_DATA drifted from recipes.js). Those
+            // slots fell back to literal text and carry no ingredient data.
+            // Report loudly instead of failing silently.
+            console.error(
+              `[open-in-app] Plan "${autoplanParam}" has ${unresolved.length} ` +
+              `unresolved meal(s): ${unresolved.join(', ')}. ` +
+              `These slots carry no recipe data — fix PLAN_DATA to match recipe names.`
+            );
+          }
         }
         updateShoppingList();
         // clean up URL
