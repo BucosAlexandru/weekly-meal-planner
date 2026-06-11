@@ -2143,18 +2143,59 @@ function combineItems(items) {
    (parentheses, comma clauses, leading qty/unit, " — " editorial notes) to
    reach the core noun. Returns null when nothing usable remains, so the
    caller can fall back to ITEM_LABELS. */
-function _localizedLabelFrom(raw) {
+function _localizedLabelFrom(raw, langCode) {
   if (!raw) return null;
   // Normalize CJK/fullwidth punctuation to ASCII so parseIngredient's
   // existing parenthetical / comma stripping also trims Japanese & Chinese
   // asides ("（厚めにスライス）" → dropped, "完熟トマト、スライス" → "完熟トマト").
-  const norm = String(raw)
+  let norm = String(raw)
     .replace(/[（｟［【〔]/g, '(')
     .replace(/[）｠］】〕]/g, ')')
     .replace(/[，、]/g, ',');
+  // Minimal RO clause stripper. parseIngredient's clause/prep stripping is
+  // English-only; these mirror its EN rules for the Romanian markers observed
+  // in production labels. Gated to RO so no other locale's text is touched —
+  // including the decimal-comma protection: un-truncating "1,5 л бульона"
+  // for locales without their own measure-word strip would surface orphaned
+  // unit words instead of the curated ITEM_LABELS fallback.
+  if (langCode === 'ro') {
+    // Protect decimal commas ("3,2% grăsime", "1,5 kg") before
+    // parseIngredient's first-comma split, which would truncate to "… 3".
+    norm = norm.replace(/(\d),(\d)/g, '$1.$2');
+    // Remove parentheticals FIRST — the "sau"/"pentru" splits below must not
+    // cut inside "(sau șuncă fiartă)"-style asides and leave an unbalanced
+    // paren in the label. Also drop an unclosed trailing "(…" remnant.
+    norm = norm.replace(/\s*\([^)]*\)/g, '').replace(/\s*\([^)]*$/, '');
+    // "Pentru varza murată: 400 g …" / "Umplutură: …" → keep what follows.
+    // (pentru\s+[^\s:][^:]* — single deterministic parse, no nested
+    // whitespace quantifiers: a malformed "pentru    …"-with-no-colon line
+    // must not send the regex engine superlinear.)
+    norm = norm.replace(/^(pentru\s+[^\s:][^:]*|sos|umplutură|umplutura|marinad[ăa]|garnitur[ăa]|aluat|glazur[ăa]|decor):\s*/i, '');
+    // "X sau Y" → first alternative (mirrors the EN "or" split).
+    norm = norm.split(/\s+sau\s+/i)[0];
+    // Trailing PURPOSE clauses only — whitelisted heads. A blanket
+    // "pentru …" strip would also eat product-defining compounds where RO
+    // uses "pentru" as the noun-noun connector: "smântână pentru frișcă"
+    // (whipping cream) is a different product from "smântână", and "făină
+    // pentru pâine" (bread flour) from "făină". Those must survive.
+    norm = norm.replace(/\s+pentru\s+(servire|servit|masă|decor|ornat|garnisit|pr[ăa]jit|pr[ăa]jire|g[ăa]tit|fr[ăa]m[âa]ntare|uns|pres[ăa]rat|stropit|umplutur[ăa]|aluat|sos|marinad[ăa]|glazur[ăa]|topping)\b.*$/i, '')
+               .replace(/\s+(la\s+servire|de\s+servit)\s*$/i, '');
+    // Fat/percentage residue: "chefir simplu 3.2% grăsime, bine răcit" →
+    // "chefir simplu, bine răcit" (NOT end-anchored — a ", clause" may follow;
+    // parseIngredient's comma split then trims the rest).
+    norm = norm.replace(/\s+\d+(?:\.\d+)?\s*%(\s+gr[ăa]sime)?/gi, '');
+  }
   const p = parseIngredient(norm);
   if (!p || !p.name) return null;
-  const n = p.name.trim();
+  let n = p.name.trim();
+  // RO measure words that survive parseIngredient's EN-only unit extraction
+  // ("1 linguriță zahăr" → qty=1, name="linguriță zahăr"). Drop the measure
+  // word (and its "de" connector) so the noun stands alone. "praf" is NOT in
+  // the list — "praf de copt" (baking powder) is a real ingredient name.
+  if (langCode === 'ro') {
+    n = n.replace(/^[½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]\s*/, '')
+         .replace(/^(linguri[țt][ăae]?|lingur[ăai]|c[ăa]n[ăai]|ce[șs]ti|cea[șs]c[ăa]|c[ăa][țt]e[il]|felii?|felie|buc[ăa][țt][iă]|bucat[ăa]|crengu[țt][ăae]|fire?|leg[ăa]tur[ăai]|plicuri?|plic|borcane?|conserve?|cutii?|cutie|pachete?|litri|litru|grame?|gram|kilograme?|kilogram|mililitri|mililitru)\s+((?:mic[ăi]?|mici|mare|mari|mijlocie|mijlocii|mijlociu|gros|groase|sub[țt]iri|sub[țt]ire)\s+)?(de\s+)?/i, '').trim();
+  }
   if (!n) return null;
   // Capitalize first letter only; preserve internal accents / scripts
   // (CJK is unaffected by toUpperCase()).
@@ -2201,11 +2242,30 @@ export function buildShoppingListV2(plan, langCode, allRecipes, budgetRecipes) {
     if (r) recipesUsed.push(r);
   }
 
-  // 1. Collect all EN ingredient strings across all recipes
+  // 1. Collect EN ingredient strings — EN always drives parsing, canonical,
+  //    category and quantity math. Hybrid-B (same scheme the planner PDF
+  //    already uses in app.js): when the target locale's array is reliably
+  //    index-aligned with EN (same length), pair each EN string with its
+  //    localized sibling so the DISPLAY LABEL can come from the recipe's own
+  //    translation. A misaligned or missing locale array falls back to the
+  //    plain-EN path for that whole recipe — labels then resolve via
+  //    ITEM_LABELS exactly as before.
+  //
+  //    RO-ONLY for now: _localizedLabelFrom's clause/measure-word stripping
+  //    knows English + Romanian. Feeding the other locales through it leaves
+  //    orphaned unit words ("Мл говяжьего бульона", "De guanciale") and
+  //    CJK labels with embedded quantities that contradict the qty column —
+  //    verified on the regenerated pages. Each locale gets enabled here as
+  //    its stripper rules land (ticket #6, pass-4 follow-up).
+  const HYBRID_B_LOCALES = new Set(['ro']);
   const allIngr = [];
   for (const r of recipesUsed) {
-    const ingr = r.ingredients?.en || r.ingredients?.ro || [];
-    for (const i of ingr) allIngr.push(i);
+    const en = r.ingredients?.en || r.ingredients?.ro || [];
+    const loc = HYBRID_B_LOCALES.has(langCode) ? r.ingredients?.[langCode] : null;
+    const aligned = !!(loc && loc.length === en.length);
+    for (let i = 0; i < en.length; i++) {
+      allIngr.push(aligned ? { en: en[i], loc: loc[i] } : en[i]);
+    }
   }
   return _groupAndRender(allIngr, langCode);
 }
@@ -2229,7 +2289,7 @@ function _groupAndRender(allIngr, langCode) {
     // Aligned localized label, derived from the recipe's own localized
     // ingredient string. Null when no alignment was supplied (legacy path)
     // or the localized string parsed to nothing → falls back to ITEM_LABELS.
-    p.locLabel = locRaw ? _localizedLabelFrom(locRaw) : null;
+    p.locLabel = locRaw ? _localizedLabelFrom(locRaw, langCode) : null;
     parsed.push(p);
   }
 
