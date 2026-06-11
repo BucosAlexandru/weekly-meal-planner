@@ -3,86 +3,95 @@
    validate-open-in-app.mjs — build-time guard for the "Open in app"
    (?autoplan=) deep link.
 
-   The SEO meal-plan pages are generated from PLANS (generate-content.mjs)
-   but "Open in app" reconstructs the plan from a SEPARATE hand-maintained
-   map, PLAN_DATA (public/js/app.js). The two can drift, producing two
-   silent failure modes this script makes loud:
+   Single source of truth: scripts/generate-content.mjs renders the SEO
+   meal-plan pages AND emits public/js/plan-meals.generated.js (per-plan
+   recipe IDs) from the SAME deterministic selection. app.js consumes those
+   IDs so "Open in app" loads exactly the meals the page shows.
 
-     1. A PLANS plan id with NO matching PLAN_DATA key
-        → "Open in app" is a no-op (empty planner).
-     2. A PLAN_DATA meal name that matches no recipe by name.ro/name.en
-        → that slot falls back to literal text and carries no recipe data.
-
-   Exits non-zero on either, so it can gate CI / the build. This is an
-   INTERIM guard until PLANS/PLAN_DATA are unified onto recipe ids.
+   This guard fails loud (non-zero exit) on any of:
+     1. A PLANS plan id (generate-content.mjs) with no PLAN_MEALS entry
+        → "Open in app" would land on an empty planner.
+     2. A PLAN_MEALS recipe id that no longer exists in recipes.js
+        → that slot would carry no recipe data.
+     3. Wrong meal count for a plan (expected 14, or 4 for weekend).
+     4. PARITY: the set of recipes in PLAN_MEALS for a plan differs from the
+        set of recipes rendered into that plan's EN SEO page table.
    ════════════════════════════════════════════════════════════════ */
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { recipes } from '../public/js/recipes.js';
 import { recipes as budgetRecipes } from '../public/js/recipes-budget.js';
+import { PLAN_MEALS } from '../public/js/plan-meals.generated.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fail = msg => { console.error(`✗ ${msg}`); process.exitCode = 1; };
 
-// ---- extract a top-level `const NAME = { … };` object literal by brace match
-function extractObjectLiteral(src, declaration) {
-  const start = src.indexOf(declaration);
-  if (start === -1) throw new Error(`could not find "${declaration}"`);
-  const braceStart = src.indexOf('{', start);
-  let depth = 0, end = -1;
-  for (let i = braceStart; i < src.length; i++) {
-    const c = src[i];
-    if (c === '{') depth++;
-    else if (c === '}') { depth--; if (depth === 0) { end = i; break; } }
-  }
-  if (end === -1) throw new Error(`unbalanced braces after "${declaration}"`);
-  const literal = src.slice(braceStart, end + 1);
-  // Data-only literal (arrays of strings + booleans); safe to evaluate.
-  return new Function(`return (${literal});`)();
-}
+// Mirror the slug() helper in generate-content.mjs exactly.
+const slug = name => name.toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
 
-const appSrc = readFileSync(join(ROOT, 'public/js/app.js'), 'utf8');
+const byId = new Map([...recipes, ...budgetRecipes].map(r => [r.id, r]));
+const recipeSlug = id => { const r = byId.get(id); return r ? slug(r.name?.en || r.name?.ro || '') : null; };
+
 const genSrc = readFileSync(join(ROOT, 'scripts/generate-content.mjs'), 'utf8');
-
-// ---- PLAN_DATA (app.js)
-let PLAN_DATA;
-try {
-  PLAN_DATA = extractObjectLiteral(appSrc, 'const PLAN_DATA =');
-} catch (e) {
-  fail(`Failed to parse PLAN_DATA from public/js/app.js: ${e.message}`);
-  process.exit(1);
-}
-
-// ---- PLANS ids (generate-content.mjs): every plan id must have a deep link
 const planIds = [...genSrc.matchAll(/\bid:\s*'([a-z0-9-]+)',\s*idEn:\s*'([a-z0-9-]+)'/g)]
   .map(m => ({ id: m[1], idEn: m[2] }));
 if (!planIds.length) fail('Could not extract any PLANS ids from generate-content.mjs');
 
-// ---- recipe name resolver (mirrors app.js: name.ro || name.en exact match)
-const all = [...recipes, ...budgetRecipes];
-const resolves = name => all.some(r => r.name?.ro === name || r.name?.en === name);
+let checkedPlans = 0, checkedMeals = 0, parityChecked = 0;
 
-let checkedPlans = 0, checkedMeals = 0;
-
-// (1) every SEO plan id must have a PLAN_DATA key
+// (1) every SEO plan id must have a PLAN_MEALS entry
 for (const { id, idEn } of planIds) {
-  if (!(id in PLAN_DATA)) {
-    fail(`PLANS plan "${id}" (${idEn}) has no PLAN_DATA key in app.js — ` +
+  if (!(id in PLAN_MEALS)) {
+    fail(`PLANS plan "${id}" (${idEn}) has no PLAN_MEALS entry — ` +
          `"Open in app" would land on an empty planner.`);
   }
 }
 
-// (2) every PLAN_DATA meal name must resolve to a recipe
-for (const [key, plan] of Object.entries(PLAN_DATA)) {
+for (const [key, plan] of Object.entries(PLAN_MEALS)) {
   checkedPlans++;
-  if (plan.isBudget) continue; // budget plan is generated randomly, no name list
-  for (const name of [...(plan.lunches || []), ...(plan.dinners || [])]) {
+  if (plan.isBudget) continue; // budget plan is generated randomly, no id list
+
+  const ids = [...(plan.lunchIds || []), ...(plan.dinnerIds || [])];
+
+  // (2) every recipe id must resolve
+  for (const id of ids) {
     checkedMeals++;
-    if (!resolves(name)) {
-      fail(`PLAN_DATA["${key}"] meal "${name}" matches no recipe ` +
-           `by name.ro/name.en — slot would carry no recipe data.`);
+    if (!byId.has(id)) {
+      fail(`PLAN_MEALS["${key}"] recipe id ${id} does not exist in recipes.js — ` +
+           `slot would carry no recipe data.`);
     }
+  }
+
+  // (3) meal count
+  const expected = plan.weekend ? 4 : 14;
+  if (ids.length !== expected) {
+    fail(`PLAN_MEALS["${key}"] has ${ids.length} meals, expected ${expected}.`);
+  }
+
+  // (4) parity: PLAN_MEALS recipe set === EN SEO page table recipe set
+  const pageFile = join(ROOT, 'public/en/weekly-meal-plan', plan.idEn, 'index.html');
+  if (!existsSync(pageFile)) {
+    fail(`PLAN_MEALS["${key}"] — EN page not found at ${pageFile}. ` +
+         `Run "npm run content" before validating.`);
+    continue;
+  }
+  const html = readFileSync(pageFile, 'utf8');
+  // Recipe links inside the planner table: /en/recipes/<slug>/
+  const tableMatch = html.match(/<table[^>]*planner-table[\s\S]*?<\/table>/);
+  const scope = tableMatch ? tableMatch[0] : html;
+  const pageSlugs = new Set(
+    [...scope.matchAll(/\/en\/recipes\/([^/"]+)\//g)].map(m => m[1])
+  );
+  const idSlugs = new Set(ids.map(recipeSlug).filter(Boolean));
+  parityChecked++;
+
+  const missingOnPage = [...idSlugs].filter(s => !pageSlugs.has(s));
+  const extraOnPage    = [...pageSlugs].filter(s => !idSlugs.has(s));
+  if (missingOnPage.length || extraOnPage.length) {
+    fail(`PARITY MISMATCH for "${key}" (page ${plan.idEn}): ` +
+         (missingOnPage.length ? `in PLAN_MEALS but not on page: ${missingOnPage.join(', ')}. ` : '') +
+         (extraOnPage.length ? `on page but not in PLAN_MEALS: ${extraOnPage.join(', ')}.` : ''));
   }
 }
 
@@ -90,5 +99,5 @@ if (process.exitCode === 1) {
   console.error(`\nOpen-in-app validation FAILED.`);
   process.exit(1);
 }
-console.log(`✓ Open-in-app OK: ${planIds.length} SEO plans, ${checkedPlans} PLAN_DATA entries, ` +
-            `${checkedMeals} meals — all resolve, all linked.`);
+console.log(`✓ Open-in-app OK: ${planIds.length} SEO plans, ${checkedPlans} PLAN_MEALS entries, ` +
+            `${checkedMeals} meals resolve, ${parityChecked} plans page↔app parity verified.`);

@@ -76,6 +76,14 @@ jobs:
       - name: Build (JS + CSS + content generation)
         run: npm run build
 
+      # 6b. Open-in-app single-source-of-truth guard
+      # Fails if a meal-plan page and its ?autoplan= deep link would load
+      # different recipes: validates that generated PLAN_MEALS ids resolve,
+      # cover every plan, and match the recipes rendered into each EN plan
+      # page table. Runs after build so plan-meals.generated.js + pages exist.
+      - name: Validate Open-in-app plan parity
+        run: npm run validate:plans
+
       # 7. Verify minified asset files exist
       - name: Verify build artifacts
         run: |
