@@ -79,7 +79,7 @@
       </div>
       <div class="content-cta-group">
         <a href="/?autoplan=vara-usoara" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> 앱에서 열기
+          <i class="bi bi-pencil-square"></i> 이 플랜 맞춤설정
         </a>
         <a href="#jangbogi-list" class="btn btn-outline-light btn-lg">
           <i class="bi bi-cart3"></i> 장보기 목록 보기
@@ -332,10 +332,9 @@
         </div>
       </details>
       <div class="shopping-cta">
-        <a href="/?autoplan=vara-usoara" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> 앱에서 계획 열기
-        </a>
-        <small>레시피를 커스터마이즈하고 무료 PDF 다운로드</small>
+        <button type="button" class="btn btn-generate js-plan-print">
+          <i class="bi bi-printer"></i> 인쇄 / PDF로 저장
+        </button>
       </div>
     </div>
   </section>
@@ -397,6 +396,12 @@
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
   window.addEventListener('beforeprint', openAll);
   window.addEventListener('afterprint', restore);
+  /* (3) "Print / Save as PDF" CTA → native browser print dialog. The
+     beforeprint handler above expands the shopping list so the export is
+     complete. No backend; the real /api/generate-pdf path is a later PR. */
+  document.querySelectorAll('.js-plan-print').forEach(function(btn){
+    btn.addEventListener('click', function(){ window.print(); });
+  });
   try {
     var qs = new URLSearchParams(window.location.search || '');
     var f = qs.get('pdfv2');

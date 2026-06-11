@@ -79,7 +79,7 @@
       </div>
       <div class="content-cta-group">
         <a href="/en/?autoplan=rapid" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> Open in app &amp; customise
+          <i class="bi bi-pencil-square"></i> Customize this plan
         </a>
         <a href="#shopping-list-section" class="btn btn-outline-light btn-lg">
           <i class="bi bi-cart3"></i> See shopping list
@@ -332,10 +332,9 @@
         </div>
       </details>
       <div class="shopping-cta">
-        <a href="/en/?autoplan=rapid" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> Open plan in app
-        </a>
-        <small>Customise recipes and download free PDF</small>
+        <button type="button" class="btn btn-generate js-plan-print">
+          <i class="bi bi-printer"></i> Print / Save as PDF
+        </button>
       </div>
     </div>
   </section>
@@ -397,6 +396,12 @@
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
   window.addEventListener('beforeprint', openAll);
   window.addEventListener('afterprint', restore);
+  /* (3) "Print / Save as PDF" CTA → native browser print dialog. The
+     beforeprint handler above expands the shopping list so the export is
+     complete. No backend; the real /api/generate-pdf path is a later PR. */
+  document.querySelectorAll('.js-plan-print').forEach(function(btn){
+    btn.addEventListener('click', function(){ window.print(); });
+  });
   try {
     var qs = new URLSearchParams(window.location.search || '');
     var f = qs.get('pdfv2');

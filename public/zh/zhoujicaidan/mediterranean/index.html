@@ -79,7 +79,7 @@
       </div>
       <div class="content-cta-group">
         <a href="/?autoplan=mediteranean" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> 在应用中打开
+          <i class="bi bi-pencil-square"></i> 自定义此计划
         </a>
         <a href="#gouwu-qingdan" class="btn btn-outline-light btn-lg">
           <i class="bi bi-cart3"></i> 查看购物清单
@@ -332,10 +332,9 @@
         </div>
       </details>
       <div class="shopping-cta">
-        <a href="/?autoplan=mediteranean" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> 在应用中打开计划
-        </a>
-        <small>自定义食谱并免费下载PDF</small>
+        <button type="button" class="btn btn-generate js-plan-print">
+          <i class="bi bi-printer"></i> 打印 / 另存为 PDF
+        </button>
       </div>
     </div>
   </section>
@@ -397,6 +396,12 @@
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
   window.addEventListener('beforeprint', openAll);
   window.addEventListener('afterprint', restore);
+  /* (3) "Print / Save as PDF" CTA → native browser print dialog. The
+     beforeprint handler above expands the shopping list so the export is
+     complete. No backend; the real /api/generate-pdf path is a later PR. */
+  document.querySelectorAll('.js-plan-print').forEach(function(btn){
+    btn.addEventListener('click', function(){ window.print(); });
+  });
   try {
     var qs = new URLSearchParams(window.location.search || '');
     var f = qs.get('pdfv2');

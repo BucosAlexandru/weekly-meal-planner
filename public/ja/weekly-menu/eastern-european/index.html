@@ -79,7 +79,7 @@
       </div>
       <div class="content-cta-group">
         <a href="/?autoplan=est-european" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> アプリで開く
+          <i class="bi bi-pencil-square"></i> このプランをカスタマイズ
         </a>
         <a href="#kaimono-list" class="btn btn-outline-light btn-lg">
           <i class="bi bi-cart3"></i> 買い物リストを見る
@@ -332,10 +332,9 @@
         </div>
       </details>
       <div class="shopping-cta">
-        <a href="/?autoplan=est-european" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> アプリでプランを開く
-        </a>
-        <small>レシピをカスタマイズして無料PDFをダウンロード</small>
+        <button type="button" class="btn btn-generate js-plan-print">
+          <i class="bi bi-printer"></i> 印刷 / PDFとして保存
+        </button>
       </div>
     </div>
   </section>
@@ -397,6 +396,12 @@
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
   window.addEventListener('beforeprint', openAll);
   window.addEventListener('afterprint', restore);
+  /* (3) "Print / Save as PDF" CTA → native browser print dialog. The
+     beforeprint handler above expands the shopping list so the export is
+     complete. No backend; the real /api/generate-pdf path is a later PR. */
+  document.querySelectorAll('.js-plan-print').forEach(function(btn){
+    btn.addEventListener('click', function(){ window.print(); });
+  });
   try {
     var qs = new URLSearchParams(window.location.search || '');
     var f = qs.get('pdfv2');

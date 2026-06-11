@@ -79,7 +79,7 @@
       </div>
       <div class="content-cta-group">
         <a href="/?autoplan=tur-mondial" class="btn btn-generate btn-lg">
-          <i class="bi bi-pencil-square"></i> In App öffnen &amp; anpassen
+          <i class="bi bi-pencil-square"></i> Diesen Plan anpassen
         </a>
         <a href="#einkaufsliste" class="btn btn-outline-light btn-lg">
           <i class="bi bi-cart3"></i> Einkaufsliste anzeigen
@@ -332,10 +332,9 @@
         </div>
       </details>
       <div class="shopping-cta">
-        <a href="/?autoplan=tur-mondial" class="btn btn-generate">
-          <i class="bi bi-pencil-square"></i> Plan in App öffnen
-        </a>
-        <small>Rezepte anpassen und PDF kostenlos herunterladen</small>
+        <button type="button" class="btn btn-generate js-plan-print">
+          <i class="bi bi-printer"></i> Drucken / Als PDF speichern
+        </button>
       </div>
     </div>
   </section>
@@ -397,6 +396,12 @@
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
   window.addEventListener('beforeprint', openAll);
   window.addEventListener('afterprint', restore);
+  /* (3) "Print / Save as PDF" CTA → native browser print dialog. The
+     beforeprint handler above expands the shopping list so the export is
+     complete. No backend; the real /api/generate-pdf path is a later PR. */
+  document.querySelectorAll('.js-plan-print').forEach(function(btn){
+    btn.addEventListener('click', function(){ window.print(); });
+  });
   try {
     var qs = new URLSearchParams(window.location.search || '');
     var f = qs.get('pdfv2');
