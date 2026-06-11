@@ -131,6 +131,9 @@ const CATEGORY_RULES = [
   [/^(chicken|beef|vegetable|fish|lamb|pork|veal|dashi|miso)\s+(stock|broth|bouillon)$/, 'sauces'],
   // Fresh herbs route to VEGETABLES, not the dried-herb PANTRY rule below.
   [/^fresh\s+(dill|thyme|oregano|rosemary|sage|chives?|basil|mint|parsley|coriander|cilantro|tarragon)$/, 'vegetables'],
+  // Spirits used as flavouring shop with treats/baking, NOT cooking oils/sauces.
+  // Must precede the broad alcohol→sauces rule below ("rum" lives there too).
+  [/^(dark\s+|white\s+|spiced\s+|golden\s+|aged\s+)?rum$/, 'misc'],
 
   // PANTRY — match first so they don't fall into other categories
   [/^(salt|sea salt|kosher salt|fine sea salt|coarse salt|black pepper|white pepper|pepper)$/, 'pantry'],
@@ -157,6 +160,11 @@ const CATEGORY_RULES = [
   [/short rib|ground beef|ground pork|ground lamb/, 'meat'],
   [/\b(salmon|trout|cod|tuna|haddock|sea bass|sole|mackerel|sardines?|anchov\w*|prawns?|shrimps?|mussels?|clams?|squid|calamari|octopus|crabs?|lobsters?|stockfish|crayfish|imitation crab)\b/, 'meat'],
   [/fish fillet|smoked fish/, 'meat'],
+  // Blood-based charcuterie (not "blood orange", which the citrus rule owns).
+  [/\bpig'?s blood\b|^blood$|\bblood (sausage|pudding)\b|black pudding/, 'meat'],
+  // Processed fish / seafood products that otherwise fall through to misc.
+  [/\b(fish ?cakes?|fishcakes?|narutomaki|kamaboko|surimi|eomuk|odeng|imitation crab|crab sticks?)\b/, 'meat'],
+  [/\b(ikan bilis|dried anchov\w*|niboshi|oxtail|ox tail)\b/, 'meat'],
 
   // DAIRY & EGGS
   [/(\b|^)(milk|whole milk|skimmed milk|cream|double cream|heavy cream|sour cream|yoghurt|yogurt|greek yoghurt|labneh|crème fraîche|creme fraiche|buttermilk|kefir|condensed milk|evaporated milk|béchamel|bechamel)/, 'dairy'],
@@ -231,6 +239,31 @@ const CANON_RULES = [
   [/^pork$/, 'pork'],
   [/^cream\s+cheese$/, 'cream cheese'],
   [/^tomato\s+sauce$/, 'tomato sauce'],
+  // ── Ticket #6 (pass 2): dedup obvious variants + citrus juice/zest ─────────
+  // Paprika family → one canonical (sweet / hot / smoked / Hungarian all shop
+  // as paprika; localized label resolves via ITEM_LABELS, e.g. ro "Boia").
+  [/^(sweet\s+|hot\s+|smoked\s+|mild\s+|noble\s+sweet\s+|spanish\s+|hungarian\s+|sweet\s+hungarian\s+)?paprika$/, 'paprika'],
+  // Yeast family → "instant yeast".
+  [/^(sachet\s+(of\s+)?)?(instant\s+|active\s+|fast[- ]?action\s+|fresh\s+|dried\s+)?(dry\s+)?yeast$/, 'instant yeast'],
+  // Cornflour (UK) == cornstarch (US).
+  [/^corn\s?(flour|starch)$/, 'cornstarch'],
+  // Bread-flour variants (same product) — kept DISTINCT from plain / 00 flour.
+  // NOTE: plain / all-purpose / bare "flour" are already normalised to the
+  // localised 'flour' canonical further down (do NOT add a 'plain flour' rule
+  // here — it would shadow that and de-localise the label, e.g. ro "Făină").
+  [/^(strong\s+)?(white\s+|wholemeal\s+|whole\s?wheat\s+)?bread\s+flour$/, 'bread flour'],
+  // Lard variants (rendered pork fat) — safe merges only; "pork fat" left as-is.
+  [/^(pork\s+lard|lard\s+oil|rendered\s+lard)$/, 'lard'],
+  // Citrus juice / zest, however the recipe phrases the quantity.
+  [/^juice of\b.*\blemons?$/, 'lemon juice'],
+  [/^juice of\b.*\blimes?$/, 'lime juice'],
+  [/^juice of\b.*\boranges?$/, 'orange juice'],
+  [/^zest of\b.*\blemons?$/, 'lemon zest'],
+  [/^zest of\b.*\blimes?$/, 'lime zest'],
+  [/^zest of\b.*\boranges?$/, 'orange zest'],
+  [/^.*\blemon zest$/, 'lemon zest'],
+  [/^.*\blime zest$/, 'lime zest'],
+  [/^.*\borange zest$/, 'orange zest'],
   // Compound recipe-ingredient phrases ("Coriander and flat-leaf parsley",
   // "Grated parmigiano and extra-virgin olive oil") that recipe authors
   // write as a single string but should canonicalize to a translatable
@@ -1891,9 +1924,9 @@ export function parseIngredient(raw) {
       s = orParts[0].trim();
     }
   }
-  // Strip "+ also" tails: "+ 1 whole egg"
+  // Strip "+ also" tails: "+ 1 whole egg" / "plus 150 ml warm water"
   // We won't fully handle the "+", just keep the leading item
-  s = s.split(/\s+\+\s+/)[0].trim();
+  s = s.split(/\s+(?:\+|plus)\s+/i)[0].trim();
 
   // Extract qty + unit prefix
   // Patterns:
@@ -1965,7 +1998,7 @@ export function parseIngredient(raw) {
   }
 
   // Strip "X mixed/combined/blended/whisked with Y…" — keep just X
-  name = name.split(/\s+(?:mixed|combined|blended|whisked|whipped|stirred)\s+with\s+/i)[0];
+  name = name.split(/\s+(?:mixed|combined|blended|whisked|whipped|stirred|beaten|tossed)\s+with\s+/i)[0];
 
   // Strip leading state adjectives that don't change the ingredient identity
   // for shopping purposes: "raw prawns" → "prawns", "hot chicken stock" →
@@ -1979,6 +2012,11 @@ export function parseIngredient(raw) {
   //   Add a second pass to clean up that trailing "very" / "extremely".
   name = name.replace(/\s+(diced|chopped|sliced|minced|crushed|grated|peeled|deseeded|cubed|julienned|halved|quartered|cooked|raw|fresh|dried|toasted|ground|whole|finely|coarsely|roughly|thinly|thickly|generously|lightly|gently|barely|softly|smoothly|evenly).*$/i, '');
   name = name.replace(/\s+(very|extremely|really|super|quite|fairly|relatively|pretty|so)\s*$/i, '');
+  // Drop a dangling trailing conjunction left when a compound phrase was only
+  // partially reduced ("ice cubes and …for serving" → "ice cubes and"). Removes
+  // the "and" (plus a trailing article) so the head noun stands alone, or — if
+  // nothing meaningful remains — the leftover is dropped by the ORPHAN filter.
+  name = name.replace(/\s+and(\s+(?:a|the|some|more|extra))?\s*$/i, '');
   name = name.trim().toLowerCase();
 
   if (!name) return null;
@@ -2214,11 +2252,15 @@ function _groupAndRender(allIngr, langCode) {
   // Recipe-instruction artifacts that leak into the canonical name when the
   // raw string is essentially a sentence ("Cornstarch mixed with 3 tbsp cold
   // water"). Filter the whole canonical out.
-  const RECIPE_INSTRUCTION = /\b(mixed|combined|blended|whisked|whipped|stirred|tied|soaked|drained|reduced|simmered|cooked|infused|steeped)\s+(with|in|for|until|to|and)\b/i;
-  const NON_FOOD = /\b(bamboo (rolling )?mat|wooden skewers?|metal skewers?|parchment paper|cling film|aluminium foil|aluminum foil|cheesecloth|kitchen string|kitchen twine|toothpicks?|cocktail sticks?)\b/i;
+  const RECIPE_INSTRUCTION = /\b(mixed|combined|blended|whisked|whipped|stirred|beaten|tossed|tied|soaked|drained|reduced|simmered|cooked|infused|steeped)\s+(with|in|for|until|to|and)\b/i;
+  const NON_FOOD = /\b(bamboo (rolling )?mat|wooden skewers?|metal skewers?|bamboo skewers?|parchment paper|cling film|aluminium foil|aluminum foil|cheesecloth|kitchen string|kitchen twine|toothpicks?|cocktail sticks?)\b/i;
+  // Standalone adjective / structural fragments that survive parsing as a whole
+  // "ingredient" but carry no food noun ("Boneless", "Bone-in", "Fine",
+  // "Handful", "A few", "Filling option 2", "Juice of half a"). Dropped entirely.
+  const FRAGMENT = /^(boneless|bone[- ]?in|skin[- ]?on|skinless|fine|coarse|handful|a few|few|a couple( of)?|couple( of)?|(filling )?options?\s*\d*|juice of (a |half ?a? ?|the )?|zest of (a |half ?a? ?|the )?)$/i;
 
   for (const [canonical, items] of Object.entries(byCanon)) {
-    if (ORPHAN.test(canonical) || NON_FOOD.test(canonical) || RECIPE_INSTRUCTION.test(canonical) || canonical.length < 3) continue;
+    if (ORPHAN.test(canonical) || NON_FOOD.test(canonical) || RECIPE_INSTRUCTION.test(canonical) || FRAGMENT.test(canonical) || canonical.length < 3) continue;
     const cat = items[0].category;
     const labelMap = ITEM_LABELS[langCode] || {};
     // Sentence-case the canonical name: capitalize first letter only,
