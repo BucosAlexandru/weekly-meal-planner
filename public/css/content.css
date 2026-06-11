@@ -2701,6 +2701,55 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
      starts on a fresh page when the table fills an A4. */
   .content-section + .content-section--green { page-break-before: auto; }
 
+  /* ── Meal thumbs: print-safe single-layer rendering ──
+     Chromium's print engine re-lays-out positioned elements inside
+     fragmented table cells: the absolutely-positioned emoji fallback
+     becomes in-flow (pushing the photo down so it prints clipped to a
+     half-height strip) and both layers end up visible at once. For print
+     we drop the screen overlay pattern entirely: no absolute positioning,
+     exactly one layer per meal — the photo when present, the emoji on
+     its cream card otherwise. Screen styles are untouched. */
+  .planner-table tr,
+  .planner-table .plan-meal {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .planner-table .plan-meal-thumb {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: static !important;
+    overflow: hidden !important;
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    /* Re-assert the cream card after the global
+       `* { background: transparent !important }` print reset. */
+    background: var(--hp-cream-deep, #f1e7d1) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .planner-table .plan-meal-thumb-fallback {
+    position: static !important;
+    inset: auto !important;
+    font-size: 1.1rem;
+  }
+  .planner-table .plan-meal-thumb img {
+    position: static !important;
+    z-index: auto !important;
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: cover !important;
+    border-radius: 8px;
+  }
+  /* One image OR one fallback, never both: when the photo element exists,
+     the emoji is removed from the print layout. (If the photo 404s the
+     inline onerror removes the <img>, so the emoji card returns.) */
+  .planner-table .plan-meal-thumb:has(img) .plan-meal-thumb-fallback {
+    display: none !important;
+  }
+
   /* Page setup — slightly narrower margins than the recipe-PDF default
      so the 3-column shopping list has real working width. */
   @page {
