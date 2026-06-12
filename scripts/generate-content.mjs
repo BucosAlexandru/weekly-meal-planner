@@ -2105,7 +2105,17 @@ ${makeFooter(lc, NAV_URL_FOR.plan(plan))}
   var state = new WeakMap();
   function openAll(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ state.set(d,d.open); d.open=true; }); }
   function restore(){ document.querySelectorAll('details.shopping-collapsible').forEach(function(d){ if(state.has(d)) d.open=state.get(d); }); }
-  window.addEventListener('beforeprint', openAll);
+  /* Print-safe meal thumbs: force lazy thumbs to load (Safari doesn't do
+     this for print) and drop any thumb <img> that already failed but whose
+     inline onerror hasn't fired — otherwise the PDF shows a broken-image
+     placeholder on top of the emoji fallback. */
+  function prepThumbs(){
+    document.querySelectorAll('.plan-meal-thumb img').forEach(function(im){
+      if (im.loading === 'lazy') im.loading = 'eager';
+      if (im.complete && im.naturalWidth === 0) im.remove();
+    });
+  }
+  window.addEventListener('beforeprint', function(){ openAll(); prepThumbs(); });
   window.addEventListener('afterprint', restore);
   /* (3) "Print / Save as PDF" CTA → native browser print dialog. The
      beforeprint handler above expands the shopping list so the export is
