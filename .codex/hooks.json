@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/andreeaifrim/Documents/GitHub/weekly-meal-planner/.codex/hooks/session-start.sh'"
+          }
+        ]
+      }
+    ]
+  }
+}
