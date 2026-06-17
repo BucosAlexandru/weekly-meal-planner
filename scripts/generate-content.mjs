@@ -2496,6 +2496,7 @@ const RECIPE_UI = {
       'middle-eastern':[{e:'🍯',n:'Hummus și labneh'},{e:'🥗',n:'Tabbouleh'},{e:'🫓',n:'Lipie caldă'},{e:'🥒',n:'Napi murați și măsline'}],
       'chinese':[{e:"🍵",n:"Ceai de iasomie"},{e:"🍚",n:"Orez aburit"},{e:"🥢",n:"Bok choy sotat"},{e:"🌶️",n:"Ulei picant"}],
       'eastern-european':[{e:"🥖",n:"Pâine de secară"},{e:"🥣",n:"Smântână"},{e:"🥒",n:"Castraveți murați"},{e:"🌿",n:"Mărar proaspăt"}],
+      'hungarian':[{e:"🍜",n:"Galuște ciupite (csipetke)"},{e:"🥖",n:"Pâine albă crocantă"},{e:"🍷",n:"Vin roșu Egri Bikavér"},{e:"🌶️",n:"Pastă de ardei iute (Erős Pista)"}],
       'nordic':[{e:"🫐",n:"Dulceață de merișor"},{e:"🍞",n:"Pâine crocantă de secară"},{e:"🌿",n:"Mărar proaspăt"},{e:"🐟",n:"Hering marinat"}],
       'anglo':[{e:"🍺",n:"Bere brună"},{e:"🥔",n:"Piure de cartofi"},{e:"🥬",n:"Mazăre"},{e:"🥄",n:"Sos brun"}],
       'sub-saharan':[{e:"🍚",n:"Orez alb"},{e:"🍌",n:"Banane plantain prăjite"},{e:"🌶️",n:"Sos iute"},{e:"🥬",n:"Verdețuri sotate"}],
@@ -2548,6 +2549,7 @@ const RECIPE_UI = {
       'middle-eastern':[{e:'🍯',n:'Hummus and labneh'},{e:'🥗',n:'Tabbouleh'},{e:'🫓',n:'Warm flatbread'},{e:'🥒',n:'Pickled turnips and olives'}],
       'chinese':[{e:"🍵",n:"Jasmine tea"},{e:"🍚",n:"Steamed jasmine rice"},{e:"🥢",n:"Stir-fried bok choy"},{e:"🌶️",n:"Chili oil"}],
       'eastern-european':[{e:"🥖",n:"Rye bread"},{e:"🥣",n:"Smetana"},{e:"🥒",n:"Pickled cucumbers"},{e:"🌿",n:"Fresh dill"}],
+      'hungarian':[{e:"🍜",n:"Csipetke (pinched noodles)"},{e:"🥖",n:"Crusty white bread"},{e:"🍷",n:"Egri Bikavér (red wine)"},{e:"🌶️",n:"Erős Pista (hot paprika paste)"}],
       'nordic':[{e:"🫐",n:"Lingonberry jam"},{e:"🍞",n:"Rye crispbread"},{e:"🌿",n:"Fresh dill"},{e:"🐟",n:"Pickled herring"}],
       'anglo':[{e:"🍺",n:"Ale or stout"},{e:"🥔",n:"Mashed potatoes"},{e:"🥬",n:"Garden peas"},{e:"🥄",n:"Brown gravy"}],
       'sub-saharan':[{e:"🍚",n:"Steamed white rice"},{e:"🍌",n:"Fried plantains"},{e:"🌶️",n:"Pepper sauce"},{e:"🥬",n:"Sautéed greens"}],
@@ -3212,20 +3214,26 @@ const RECIPE_STEPS_UI = {
 // recipe's total cooking time. Returns the maximum found, capped at 6 h.
 function extractLongCookMinutes(text) {
   if (!text) return 0;
-  const t = String(text).toLowerCase();
+  // P0-2: normalise fraction glyphs ("2½ hours" → "2.5 hours") so braise/bake
+  // durations written with vulgar fractions are parsed instead of silently
+  // collapsing to the integer part. Passive set is intentionally unchanged.
+  const t = String(text).toLowerCase()
+    .replace(/(\d)\s*½/g, '$1.5').replace(/(\d)\s*¼/g, '$1.25').replace(/(\d)\s*¾/g, '$1.75')
+    .replace(/(\d)\s*⅓/g, '$1.33').replace(/(\d)\s*⅔/g, '$1.67');
   let maxMin = 0;
   const passiveCtx = /soak|marinate|marinad|overnight|fridge|refriger|chill\b|rest\s+(?:in|overnight)|peste\s+noapte|over\s*night|noche|nuit|nacht|notte/;
   // Returns true if a passive keyword appears within 30 chars before the duration
   const isPassive = (idx) => passiveCtx.test(t.substring(Math.max(0, idx - 50), idx));
 
-  // Hours: "4–5 h", "1.5 h", "2 hours". Cap at 6 h to ignore overnight/long-marinate hits.
-  for (const m of t.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:[–-]\s*(\d+(?:[.,]\d+)?))?\s*(?:h\b|hr\b|hours?\b|ore\b|stunden\b|часа?\b|часов\b|heures?\b|saat\b|시간\b)/g)) {
+  // Hours: "4–5 h", "1.5 h", "2 hours", "2 to 3 hours". Cap at 6 h to ignore overnight/long-marinate hits.
+  // P0-2: range connector accepts "to/and/or" in addition to the en/em dash.
+  for (const m of t.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:(?:[–-]|to|and|or)\s*(\d+(?:[.,]\d+)?))?\s*(?:h\b|hr\b|hrs\b|hours?\b|ore\b|stunden\b|часа?\b|часов\b|heures?\b|saat\b|시간\b)/g)) {
     if (isPassive(m.index)) continue;
     const hi = parseFloat((m[2] || m[1]).replace(',', '.'));
     if (hi && hi <= 6) maxMin = Math.max(maxMin, Math.round(hi * 60));
   }
   // Long minute durations: "60–90 minutes", "45 min" — useful when no hour mention exists.
-  for (const m of t.matchAll(/(\d{2,3})\s*(?:[–-]\s*(\d{2,3}))?\s*(?:min\b|minutes?\b|minute\b|minuti?\b|minuten\b|минут|dakika\b|분\b)/g)) {
+  for (const m of t.matchAll(/(\d{2,3})\s*(?:(?:[–-]|to|and|or)\s*(\d{2,3}))?\s*(?:min\b|minutes?\b|minute\b|minuti?\b|minuten\b|минут|dakika\b|분\b)/g)) {
     if (isPassive(m.index)) continue;
     const hi = parseInt(m[2] || m[1], 10);
     if (hi >= 25 && hi <= 240) maxMin = Math.max(maxMin, hi);
@@ -3260,7 +3268,17 @@ function recipeMetadata(ingr, steps, cat, code, overrides, howText) {
   const hardTechnique = /knead|deep[\s-]?fry|sourdough|soufflé|souffle|tempering|emulsion|chou\s+pastry|laminated|en\s+croute|wellington/.test(ingrStr + ' ' + (howText||'').toLowerCase());
   let diffIdx = sc <= 8 ? 0 : sc <= 18 ? 1 : 2;
   if (hardTechnique) diffIdx = Math.min(2, diffIdx + 1);
-  if (totalMins >= 240) diffIdx = Math.max(diffIdx, 1); // ≥4h cook = at least Medium
+  // P0-1: real cook time is a commitment/complexity signal. Lowered the single
+  // ≥4h→Medium bump to a graded scale so 2–3h braises stop reading "Easy".
+  if (totalMins >= 120) diffIdx = Math.max(diffIdx, 1); // ≥2h = at least Medium
+  if (totalMins >= 300) diffIdx = Math.max(diffIdx, 2); // ≥5h = Hard
+  // P0-1: braise / slow-cook / multi-stage techniques imply at least Medium.
+  // 'caramelize' is intentionally excluded — "caramelize the onions" appears in
+  // many genuinely easy dishes and would over-promote them.
+  const mediumTechnique = /brais|slow[- ]?cook|\bstew\b|confit|\bdum\b|laminat|deglaz/.test((howText || '').toLowerCase());
+  if (mediumTechnique) diffIdx = Math.max(diffIdx, 1);
+  // P0-1: high ingredient complexity (≥18 components) = at least Medium.
+  if (ic >= 18) diffIdx = Math.max(diffIdx, 1);
   const expensive = /beef|veal|lamb|salmon|shrimp|lobster|crab|truffle|saffron|chocolate|vițel|miel|somon|creveți|caracatiță/.test(ingrStr);
   return {
     totalTime:    fmt(totalMins),
@@ -3372,7 +3390,8 @@ const CUISINE_PAIRING_TYPE = {
   Russia: 'eastern-european', Ukraine: 'eastern-european',
   Belarus: 'eastern-european', Moldova: 'eastern-european',
   Poland: 'eastern-european', 'Czech Republic': 'eastern-european',
-  Slovakia: 'eastern-european', Hungary: 'eastern-european',
+  Slovakia: 'eastern-european', Hungary: 'hungarian', // P0-4: Magyar pairings ≠ generic Slavic
+
   Romania: 'eastern-european', Bulgaria: 'eastern-european',
   Serbia: 'eastern-european',
   Estonia: 'eastern-european', Latvia: 'eastern-european',
@@ -3517,6 +3536,10 @@ function recipeNutrition(ingr, cat, overrides) {
   const isDesert = /dessert|desert|dolce|postre|tatlı|десерт/.test(catStr);
   const hasDairy = /cream|cheese|milk|smântână|brânză|lapte|parmezan|fromage|käse/.test(ingrStr);
   const hasGrain = /pasta|spaghetti|noodle|rice|orez|quinoa|orzo|couscous/.test(ingrStr);
+  // P0-3: starch-dominant mains (potato/dumpling/gnocchi/dough). 'bread', 'tortilla'
+  // and bare 'flour' are excluded — they are usually a side or a thickener, not the
+  // dish's carb load, so counting them over-stated carbs (e.g. shakshuka, coq au vin).
+  const hasStarch = /\bpotato|dumpling|gnocchi|\bdough\b|cartof/.test(ingrStr);
   // Vegetable-default baseline lowered: 350/18 → 280/9 — real vegetable dishes are ~5–10 g protein
   let cal=280, prot=9, carb=32, fat=10, fib=5;
   if (isSoup) { cal=185; prot=10; carb=16; fat=7; fib=3; }
@@ -3526,7 +3549,11 @@ function recipeNutrition(ingr, cat, overrides) {
   else if (hasLegume) { cal=340; prot=17; carb=44; fat=8; fib=10; }
   else if (hasEgg) { cal=270; prot=15; carb=12; fat=17; fib=2; }
   if (hasDairy) { cal += 55; prot += 4; fat += 3; }
-  if (hasGrain) { carb += 18; cal += 75; prot += 3; }
+  // P0-3: grain bump raised (+18 → +33 g carb) so rice/pasta-dominant mains reflect
+  // their real starch load (e.g. biryani, risotto). Starch bump added for potato/
+  // dumpling mains when the dish is not already grain-based (e.g. pierogi).
+  if (hasGrain) { carb += 33; cal += 140; prot += 4; }
+  else if (hasStarch) { carb += 25; cal += 110; prot += 3; }
   return { cal, prot, carb, fat, fib };
 }
 
