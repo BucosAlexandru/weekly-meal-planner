@@ -4503,6 +4503,18 @@ if (verifyBtn && emailInput && resultDiv) {
 
     const { active, found, until } = accessData;
 
+    // Funnel analytics: the email gate is the unmonitored rung between
+    // pdf_click and checkout. No PII — the email itself is never sent, only
+    // the access OUTCOME. tier_intent = the PDF tier this submission unlocks
+    // (premium when the subscription is active, else the free 2-day export).
+    if (window.mpTrack) window.mpTrack('email_submitted', {
+      source: 'pdf_gate',
+      access: active ? 'active' : found ? 'found' : 'none',
+      filter: window._activeFilter || 'all',
+      isBudget: !!window.isBudgetMenu,
+      tier_intent: active ? 'premium' : 'free',
+    });
+
     if (active) {
       window.hasUnlimited = true;
       // Store email for AI endpoints (chat/coach require email in POST body)

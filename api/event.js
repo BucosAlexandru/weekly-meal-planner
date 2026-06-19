@@ -22,6 +22,7 @@ const CLIENT_EVENTS = new Set([
   'page_view',
   'plan_generated',
   'pdf_click',
+  'email_submitted',
   'checkout_started',
 ]);
 

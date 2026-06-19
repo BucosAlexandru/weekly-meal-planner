@@ -27,7 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Hint for premium auto-restore after Stripe success: lets app.js
       // silently re-verify the user instead of forcing manual activation.
       if (email) { try { localStorage.setItem('mp:lastEmail', email); } catch (_) {} }
-      if (window.mpTrack) window.mpTrack('checkout_started', { priceId: PRICE_EUR });
+      // Plan-type / budget context comes from the planner globals (app.js sets
+      // them); on a standalone pricing page app.js isn't loaded, so they fall
+      // back to defaults and source reflects the pricing entry point.
+      if (window.mpTrack) window.mpTrack('checkout_started', {
+        priceId: PRICE_EUR,
+        filter: window._activeFilter || 'all',
+        isBudget: !!window.isBudgetMenu,
+        source: /(pricing|abonament|preturi|prețuri|preise|precios|prix|prezzi|fiyat)/i.test(location.pathname) ? 'pricing' : 'planner',
+      });
       await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId });
     });
   }

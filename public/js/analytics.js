@@ -12,7 +12,7 @@
 
   var ENDPOINT = '/api/event';
   // Whitelist mirrors the server. subscription_active is server-only.
-  var ALLOWED = { page_view: 1, plan_generated: 1, pdf_click: 1, checkout_started: 1 };
+  var ALLOWED = { page_view: 1, plan_generated: 1, pdf_click: 1, email_submitted: 1, checkout_started: 1 };
 
   function anonId() {
     try {
