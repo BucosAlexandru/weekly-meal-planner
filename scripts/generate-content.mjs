@@ -15,6 +15,7 @@ import { recipeImages }               from '../public/js/recipe-images.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import { CUISINE_INTRO }              from './cuisine-intros.mjs';
+import { REGION_FLAVOURS, CUISINE_HUB_PROSE } from './cuisine-hub-prose.mjs';
 import { RELATED_CUISINES, MAX_RELATED_CUISINES,
          enrichCatalog, selectByTagMix, resolveDiscoveryTarget } from './discovery-config.mjs';
 import fs   from 'fs';
@@ -2228,6 +2229,27 @@ function indexPage(lc) {
     </a>`;
   }).join('');
 
+  // Schema.org CollectionPage describing the weekly-meal-plan listing. Mirrors
+  // the recipeIndex JSON-LD shape (CollectionPage + ItemList) so the 14
+  // plan-index pages carry structured data like every other hub. itemListElement
+  // lists the themed weekly plans (positions 1..N) at their localized URLs.
+  const planItems = PLANS.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "url": `https://meal-planner.ro${lc.dir}/${lc.planIdFn(p)}/`,
+    "name": p.theme[lc_code] || p.theme.en,
+  }));
+  const planIndexJsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": lc.indexTitle.split(' | ')[0],
+    "description": lc.indexDesc,
+    "url": `https://meal-planner.ro${lc.dir}/`,
+    "inLanguage": lc_code,
+    "isPartOf": { "@type": "WebSite", "name": "Meal-Planner.ro", "url": "https://meal-planner.ro/" },
+    "hasPart": { "@type": "ItemList", "numberOfItems": PLANS.length, "itemListElement": planItems }
+  });
+
   return `${withHreflang(HEAD(lc.indexTitle, lc.indexDesc, `${lc.dir}/`, lc_code, dir_attr), planIndexHreflangs())}
 ${makeNav(lc, NAV_URL_FOR.planIndex())}
 <main class="content-main meal-plans-index-main">
@@ -2262,6 +2284,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
       <p>${lc.indexSeoP}</p>
     </div>
   </section>
+  <script type="application/ld+json">${planIndexJsonLd}</script>
 </main>
 ${makeFooter(lc, NAV_URL_FOR.planIndex())}
 </body></html>`;
@@ -4626,6 +4649,81 @@ const CUISINE_HUB_LANG = {
         backLink: '모든 레시피로 돌아가기' },
 };
 
+/* ════════════════════════════════════════════════════════════════
+   CUISINE HUB PROSE — reusable localized editorial sections
+   ════════════════════════════════════════════════════════════════
+   Phase: SEO QA thin-content fix. Country/cuisine hub pages used to be
+   mostly a tile grid (~135-290 visible words), which tripped the
+   "under 300 words" SEO check in space-delimited languages. Two tables —
+   imported from ./cuisine-hub-prose.mjs — drive THREE short prose sections
+   rendered by cuisineHubProse() below: a flavours/about paragraph, a
+   "what you can cook" paragraph and a weekly-meal-plan CTA.
+
+   The content is template-driven (no per-page hand editing) yet avoids
+   shipping 46 identical paragraphs: every rendered paragraph interpolates
+   the localized country name, the recipe count and the actual dish names
+   on that page, all of which differ per country. The only regionally-
+   shared fragment is REGION_FLAVOURS — a factual flavour-base phrase keyed
+   by the country's CUISINE_ATMOSPHERE region (Mediterranean cuisines do
+   share an olive-oil/tomato/herb base; that is accurate, not filler).
+
+   Placeholders in CUISINE_HUB_PROSE strings, interpolated by fillProse():
+     {country}  — localized country display name
+     {n}        — recipe count on the page
+     {flavours} — REGION_FLAVOURS phrase for the country's region
+     {dishes}   — localized list of up to 4 dish names from this page
+   (REGION_FLAVOURS + CUISINE_HUB_PROSE are imported at the top of file.) */
+
+// Interpolate the {placeholder} tokens in a prose template. Dynamic values are
+// escaped by the caller before they arrive here; the template text itself is
+// authored/trusted, so it is emitted as-is.
+function fillProse(tpl, vars) {
+  return String(tpl)
+    .replace(/\{country\}/g, vars.country)
+    .replace(/\{n\}/g, vars.n)
+    .replace(/\{flavours\}/g, vars.flavours)
+    .replace(/\{dishes\}/g, vars.dishes);
+}
+
+// Build the three localized prose sections for a cuisine hub. Returns an HTML
+// string (one <section>) appended after the tile grid. Falls back to English
+// per-field so a missing locale never renders an empty block.
+function cuisineHubProse(originEnKey, display, recs, tiles, lc_code, lc, rl) {
+  const prose = CUISINE_HUB_PROSE[lc_code] || CUISINE_HUB_PROSE.en;
+  const enProse = CUISINE_HUB_PROSE.en;
+  const pick = (k) => prose[k] || enProse[k];
+  const region = cuisineAtmosphere(originEnKey);
+  const flavours =
+    REGION_FLAVOURS[region]?.[lc_code]
+    || REGION_FLAVOURS[region]?.en
+    || REGION_FLAVOURS.global[lc_code]
+    || REGION_FLAVOURS.global.en;
+  // Dish list: up to 4 real dish names from this page, localized. CJK joins
+  // with the ideographic comma, every other script with a regular comma.
+  const sep = /^(zh|ja)$/.test(lc_code) ? '、' : ', ';
+  const dishNames = (tiles.length ? tiles : recs.map(r => ({ name: r.name?.[lc_code] || r.name?.en || r.name?.ro || '' })))
+    .map(t => t.name).filter(Boolean).slice(0, 4);
+  const vars = {
+    country: esc(display),
+    n: recs.length,
+    flavours: esc(flavours),
+    dishes: esc(dishNames.join(sep)),
+  };
+  const planUrl = `${lc.dir}/`;
+  return `
+  <section class="content-section cuisine-hub-prose">
+    <div class="content-section-inner">
+      <h2>${fillProse(pick('flavoursH'), vars)}</h2>
+      <p>${fillProse(pick('flavoursP'), vars)}</p>
+      <h2>${fillProse(pick('exploreH'), vars)}</h2>
+      <p>${fillProse(pick('exploreP'), vars)}</p>
+      <h2>${fillProse(pick('ctaH'), vars)}</h2>
+      <p>${fillProse(pick('ctaP'), vars)}</p>
+      <p class="cuisine-hub-prose-cta"><a class="cuisine-discover-btn" href="${planUrl}">${esc(pick('ctaBtn'))}</a></p>
+    </div>
+  </section>`;
+}
+
 // Phase 7 PR 2: heading shown above the cuisine-hub "related cuisines" strip
 // (one per locale). Kept in a side-map so it can be added/edited without
 // touching the per-key CUISINE_HUB_LANG block. Strings are ASCII-or-Unicode
@@ -4994,6 +5092,8 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
   </section>
   <section class="content-section cuisine-hub-section"><div class="content-section-inner">
     <ul class="cuisine-tile-grid" aria-label="${esc(display)}">${tilesHtml}</ul>${relatedStripHtml ? '\n    ' + relatedStripHtml : ''}
+  </div></section>${cuisineHubProse(originEnKey, display, recs, tiles, lc_code, lc, rl)}
+  <section class="content-section cuisine-hub-back-section"><div class="content-section-inner">
     <p class="cuisine-hub-back"><a href="${rl.dir}/">← ${esc(hub.backLink)}</a></p>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>

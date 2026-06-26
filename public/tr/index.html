@@ -61,6 +61,55 @@
   <link rel="stylesheet" href="/css/premium-polish.css">
   <!-- HP_PREMIUM_HEAD:END -->
 
+  <!-- JSON-LD: web uygulaması, ücretsiz (7 günün 2'si önizleme) + abonelik; kayıt gerekmez -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Haftalık Yemek Planlayıcı ve Alışveriş Listesi",
+    "operatingSystem": "Web",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "tr",
+    "isAccessibleForFree": true,
+    "url": "https://meal-planner.ro/tr/",
+    "image": "https://meal-planner.ro/images/cover2.jpg",
+    "description": "Haftalık yemek planı oluştur, alışveriş listesini otomatik oluştur ve her şeyi PDF olarak indir — ücretsiz (PDF önizleme, 7 günün 2'si). Kayıt gerekmez; sınırsız indirme için abonelik sonrası e-postanı doğrula.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "3",
+      "priceCurrency": "EUR",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Ücretsiz Plan",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Ücretsiz kullanım — 7 günün 2'si PDF önizleme."
+        },
+        {
+          "@type": "Offer",
+          "name": "Aylık abonelik (RON)",
+          "price": "10",
+          "priceCurrency": "RON",
+          "description": "Sınırsız PDF indirme. Satın alma sonrası e-posta doğrulaması.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        },
+        {
+          "@type": "Offer",
+          "name": "Aylık abonelik (EUR)",
+          "price": "3",
+          "priceCurrency": "EUR",
+          "description": "Sınırsız PDF indirme. Satın alma sonrası e-posta doğrulaması.",
+          "acceptedPaymentMethod": ["https://schema.org/CreditCard", "Apple Pay", "Klarna", "Revolut Pay"]
+        }
+      ]
+    },
+    "creator": { "@type": "Organization", "name": "MEALPLANNER.RO" }
+  }
+  </script>
+
 </head>
 <body>
 
