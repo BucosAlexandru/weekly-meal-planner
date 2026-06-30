@@ -431,16 +431,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function getRecipeText(recipe, langCode) {
     if (!recipe) return '';
-    const name = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
-    const ingr = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
-    const list = Array.isArray(ingr) ? ingr : [];
-    // Short format for input field: "RecipeName (ingr1, ingr2, ingr3)"
-    // No "traditional from X" sentence — keeps input clean & consistent
-    if (!list.length) return name;
-    // Show max 4 ingredients to keep input readable
-    const shown = list.slice(0, 4);
-    const suffix = list.length > 4 ? ', ...' : '';
-    return `${name} (${shown.join(', ')}${suffix})`;
+    // Meal inputs display ONLY the recipe name. Ingredients live in the
+    // shopping list and on the recipe page — they are never preloaded into the
+    // editable field (that produced an unreadable "Name (50-word ingredient
+    // dump…)" value). Lookups still resolve: extractRecipeName() returns the
+    // bare name and recipeNameMatches() finds the recipe in the corpus.
+    return recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
   }
 
   // Full-sentence version used only in PDF output
@@ -469,11 +465,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     return (templates[langCode] || templates.en)(name, origin, list);
   }
-  // ── Smart diversity picker for full-week generation ─────────────────────────
-  // Rules: max 2 recipes from same country, max 3 pasta/rice, max 4 heavy-meat
-  function smartPickWeek(pool, count) {
+  // ── Smart diversity + feasibility picker for full-week generation ──────────
+  // Diversity rules: max 2 recipes from same country, max 3 pasta/rice, max 4
+  // heavy-meat. Feasibility: an optional `maxTimes` array gives a per-slot cook-
+  // time ceiling (minutes) so very-long recipes stay off weekday slots and are
+  // reserved for the weekend (see generateRandomMenu). Slots are filled in
+  // order, so the tighter weekday slots are served from the short pool first.
+  function smartPickWeek(pool, count, maxTimes) {
     const shuffled = [...pool].sort(() => 0.5 - Math.random());
-    const result = [];
+    const result = new Array(count).fill(null);
+    const used = new Set();
     const countryCounts = Object.create(null);
     let pastaCount = 0;
     let heavyMeatCount = 0;
@@ -486,43 +487,36 @@ document.addEventListener('DOMContentLoaded', () => {
       const ingr = (r.ingredients?.en || r.ingredients?.ro || []).join(' ').toLowerCase();
       return /(beef|pork|lamb|veal|steak|vit[aă]|porc|miel|biftec|cotlet)/.test(ingr);
     };
-
-    // Pass 1 – strict: max 2 per country, max 3 pasta, max 4 heavy meat
-    for (const r of shuffled) {
-      if (result.length >= count) break;
+    // A recipe is too long for slot k only if it has a known time that exceeds
+    // that slot's ceiling. Unknown-time recipes are never excluded by time.
+    const timeOk = (r, k) => {
+      const max = maxTimes ? maxTimes[k] : Infinity;
+      return !(max != null && max !== Infinity && r.time && r.time > max);
+    };
+    const diversityOk = r => {
       const country = r.origin?.en || r.origin?.ro || '';
-      if ((countryCounts[country] || 0) >= 2) continue;
-      if (isPasta(r) && pastaCount >= 3) continue;
-      if (isHeavyMeat(r) && heavyMeatCount >= 4) continue;
-      result.push(r);
+      if ((countryCounts[country] || 0) >= 2) return false;
+      if (isPasta(r) && pastaCount >= 3) return false;
+      if (isHeavyMeat(r) && heavyMeatCount >= 4) return false;
+      return true;
+    };
+    const take = r => {
+      used.add(r);
+      const country = r.origin?.en || r.origin?.ro || '';
       countryCounts[country] = (countryCounts[country] || 0) + 1;
       if (isPasta(r)) pastaCount++;
       if (isHeavyMeat(r)) heavyMeatCount++;
-    }
+    };
 
-    // Pass 2 – relax country limit (keep pasta/meat limits)
-    if (result.length < count) {
-      const used = new Set(result);
-      for (const r of shuffled) {
-        if (result.length >= count) break;
-        if (used.has(r)) continue;
-        if (isPasta(r) && pastaCount >= 3) continue;
-        if (isHeavyMeat(r) && heavyMeatCount >= 4) continue;
-        result.push(r); used.add(r);
-        if (isPasta(r)) pastaCount++;
-        if (isHeavyMeat(r)) heavyMeatCount++;
-      }
+    for (let k = 0; k < count; k++) {
+      // Per slot, prefer (time + diversity); then relax diversity but keep the
+      // time ceiling; only as a last resort relax time too, then take anything.
+      const pick =
+        shuffled.find(r => !used.has(r) && timeOk(r, k) && diversityOk(r)) ||
+        shuffled.find(r => !used.has(r) && timeOk(r, k)) ||
+        shuffled.find(r => !used.has(r));
+      if (pick) { result[k] = pick; take(pick); }
     }
-
-    // Pass 3 – final fallback: any unused recipe
-    if (result.length < count) {
-      const used = new Set(result);
-      for (const r of shuffled) {
-        if (result.length >= count) break;
-        if (!used.has(r)) { result.push(r); used.add(r); }
-      }
-    }
-
     return result;
   }
 
@@ -577,7 +571,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (l && !l.value.trim()) emptySlots.push(l);
       if (c && !c.value.trim()) emptySlots.push(c);
     }
-    const picks = smartPickWeek(pool, emptySlots.length);
+    // Feasibility: keep very-long recipes off weekday slots (days 1–5) so the
+    // default week is realistic for an average household; allow them only on
+    // the weekend (days 6–7), where there's time for a project recipe.
+    const WEEKDAY_MAX_MIN = 75;
+    const dayOfSlot = el => parseInt((el.id.match(/^d(\d)/) || [])[1], 10) || 1;
+    const maxTimes = emptySlots.map(el => (dayOfSlot(el) >= 6 ? Infinity : WEEKDAY_MAX_MIN));
+    const picks = smartPickWeek(pool, emptySlots.length, maxTimes);
     emptySlots.forEach((inp, i) => {
       if (picks[i]) inp.value = getRecipeText(picks[i], lang);
     });
@@ -681,7 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name: displayName,
         time: r?.time || null,
         servings: r?.servings || null,
-        cost: r?.costRon ? `~$${Math.round(r.costRon / 4.6)}` : null,
+        cost: r?.costRon ? (lang === 'ro' ? `~${r.costRon} RON` : `~€${Math.round(r.costRon / 4.97)}`) : null,
         ingredients: shortIngredients(rawIngr),
       };
     }
@@ -1325,12 +1325,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     if (!parts.length) return '';
-    // Description: use custom desc or first sentence of howIsMade, capped at 90 chars
+    // Description, capped at 90 chars. Source priority: authored desc → the
+    // recipe's own intro prose (originText, clean and descriptive) → a method
+    // step ONLY as a last resort, and only if it reads like a sentence — this
+    // avoids surfacing terse fragments like "Rinse 1." as a description.
     let descTxt = rec.desc?.[lang] || rec.desc?.en || '';
+    if (!descTxt) {
+      const intro = rec.originText?.[lang] || rec.originText?.en || '';
+      if (intro) descTxt = intro.split(/(?<=[.!?])\s/)[0].trim();
+    }
     if (!descTxt && rec.howIsMade) {
       const raw = rec.howIsMade[lang] || rec.howIsMade.ro || rec.howIsMade.en || '';
-      descTxt = raw.split(/[.!?]/)[0].trim();
-      if (descTxt && rec.time) descTxt += `. ${(READY_IN[lang] || READY_IN.en)(rec.time)}.`;
+      const first = raw.split(/[.!?]/)[0].trim();
+      if (first.length >= 25) {
+        descTxt = first;
+        if (rec.time) descTxt += `. ${(READY_IN[lang] || READY_IN.en)(rec.time)}.`;
+      }
     }
     if (descTxt.length > 90) descTxt = descTxt.slice(0, 88) + '…';
     return `<div class="recipe-meta-row">${parts.join('')}${descTxt ? `<span class="rmeta-desc">${descTxt}</span>` : ''}</div>`;
@@ -1364,11 +1374,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const COST_RON = { all:200, med:240, asian:250, budget:130, vegetarian:170, quick:180, family:190, latin:220, eastern:190, worldtour:210,
                      chicken:210, meat:230, fish:220, pasta:160 };
 
-  // Currency display: RON for Romanian, USD for everyone else
+  // Currency display: RON for Romanian, EUR for everyone else — consistent with
+  // the €3 Premium price and the € shown on the SEO/plan pages (was USD "$",
+  // which clashed with the rest of the product).
   function formatCost(ron) {
     if (lang === 'ro') return `~${ron} RON`;
-    const usd = Math.round(ron / 4.6); // ~1 USD = 4.6 RON
-    return `~$${usd}`;
+    const eur = Math.round(ron / 4.97); // ~1 EUR ≈ 4.97 RON
+    return `~€${eur}`;
   }
   function showCostEstimate(filterId) {
     let costBar = document.getElementById('cost-estimate-bar');
@@ -4689,17 +4701,17 @@ if (verifyBtn && emailInput && resultDiv) {
       const rec = allSrc.find(r =>
         Object.values(r.name || {}).some(n => n.toLowerCase() === mealParam.toLowerCase())
       );
-      // Find first empty slot (lunch first, then dinner)
-      const slots = ['d1l','d2l','d3l','d4l','d5l','d6l','d7l','d1c','d2c','d3c','d4c','d5c','d6c','d7c'];
-      const firstEmpty = slots.find(id => {
-        const el = document.getElementById(id);
-        return el && !el.value.trim();
-      }) || 'd1l';
-      const inp = document.getElementById(firstEmpty);
-      if (inp) {
-        inp.value = rec ? getRecipeText(rec, lang) : mealParam;
-        inp.dispatchEvent(new Event('input'));
+      // Pin the chosen recipe to Monday lunch, then build a COMPLETE week
+      // around it. generateRandomMenu() (week mode) only fills empty slots, so
+      // the pinned recipe is preserved while the other 13 slots are generated.
+      // This avoids dropping the user into an almost-empty planner.
+      const anchor = document.getElementById('d1l');
+      if (anchor) {
+        anchor.value = rec ? getRecipeText(rec, lang) : mealParam;
+        anchor.dispatchEvent(new Event('input'));
       }
+      window._planMode = 'week';
+      try { await generateRandomMenu(); } catch (_) { /* anchor still placed */ }
       updateShoppingList();
       window.history.replaceState({}, '', window.location.pathname);
       document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior:'smooth', block:'start' });
