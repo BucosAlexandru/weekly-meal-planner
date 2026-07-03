@@ -12,8 +12,9 @@ async function startSubscriptionCheckout({ email, priceId, customerId, anonId })
     }),
   });
   const data = await r.json();
-  if (data?.url) window.location.href = data.url;
-  else alert(data.error || 'Nu am putut crea sesiunea de checkout.');
+  if (data?.url) { window.location.href = data.url; return true; } // redirecting
+  alert(data.error || 'Nu am putut crea sesiunea de checkout.');
+  return false;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     payBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       // Guard: an impatient double-click must not fire two checkout_started
-      // events or create two Stripe sessions. Reset in finally so a failed
-      // session creation still lets the user retry.
+      // events or create two Stripe sessions. Once a redirect to Stripe starts
+      // the button stays locked (page is unloading); it is only released if
+      // session creation failed, so the user can retry.
       if (payBtn._checkoutInFlight) return;
       payBtn._checkoutInFlight = true;
+      let redirecting = false;
       try {
         const email = document.querySelector('#emailInput')?.value?.trim() || null;
         const customerId = window.currentStripeCustomerId || null;
@@ -54,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
           isBudget: !!window.isBudgetMenu,
           source: source,
         });
-        await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId, anonId });
+        redirecting = await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId, anonId });
       } finally {
-        payBtn._checkoutInFlight = false;
+        if (!redirecting) payBtn._checkoutInFlight = false;
       }
     });
   }

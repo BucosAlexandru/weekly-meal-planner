@@ -70,6 +70,12 @@
 
   function send(event, props) {
     if (!ALLOWED[event]) return; // never POST a disallowed/server-only event
+    // Drop browser-automation traffic (scrapers, headless bots, test runners)
+    // so the funnel — now firing on ~3,900 SEO pages — isn't inflated by
+    // non-human page loads. Real browsers report navigator.webdriver falsy.
+    // Note: this only catches flagged automation; JS-rendering crawlers that
+    // do not set the flag still count (mitigate server-side if needed).
+    try { if (navigator.webdriver) return; } catch (_) {}
     try {
       var json = JSON.stringify({
         event: event,

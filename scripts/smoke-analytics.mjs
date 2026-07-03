@@ -151,6 +151,8 @@ check('analytics.min.js drops dead patterns (abonament/preturi/prix)',
 check('analytics.min.js reads data-page-type override', amin.includes('data-page-type'));
 check('analytics.min.js exposes mpPageType + mpAnonId',
       amin.includes('mpPageType') && amin.includes('mpAnonId'));
+check('analytics.min.js drops browser-automation traffic (navigator.webdriver)',
+      amin.includes('webdriver'));
 
 // ═════════════════════════════════════════════════════════════════════════════
 console.log('\n[4] anon_id ↔ subscription_active join wired end-to-end (no PII)\n');
@@ -182,6 +184,8 @@ check('email_submitted: in-flight guard + skip already-premium re-verify (source
       appSrc.includes('_verifying') && appSrc.includes('wasPremium') && appSrc.includes('!(wasPremium && active)'));
 check('checkout_started: in-flight guard on pay button (source)',
       checkoutSrc.includes('_checkoutInFlight'));
+check('checkout_started: button stays locked once redirecting (no reset on success)',
+      checkoutSrc.includes('if (!redirecting)') && /return true;\s*}\s*\/\/ redirecting/.test(checkoutSrc));
 // … and the built bundles must carry the property-named guards through minify.
 check('built app.min.js carries _generating + _verifying guards',
       appMin.includes('_generating') && appMin.includes('_verifying'));
