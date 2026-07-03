@@ -1,12 +1,12 @@
 // public/js/checkout.js
 const PRICE_EUR = 'price_1RvvfCH2AzHMl4LgJDB1QS8O';
 
-async function startSubscriptionCheckout({ email, priceId, customerId }) {
+async function startSubscriptionCheckout({ email, priceId, customerId, anonId }) {
   const r = await fetch('/api/create-checkout-session', {
     method: 'POST',
     headers: { 'Content-Type':'application/json' },
     body: JSON.stringify({
-      email, priceId, customerId,
+      email, priceId, customerId, anonId,
       successUrl: window.location.origin + '/?success=true',
       cancelUrl: window.location.origin + '/'
     }),
@@ -22,21 +22,42 @@ document.addEventListener('DOMContentLoaded', () => {
   if (payBtn) {
     payBtn.addEventListener('click', async (e) => {
       e.preventDefault();
-      const email = document.querySelector('#emailInput')?.value?.trim() || null;
-      const customerId = window.currentStripeCustomerId || null;
-      // Hint for premium auto-restore after Stripe success: lets app.js
-      // silently re-verify the user instead of forcing manual activation.
-      if (email) { try { localStorage.setItem('mp:lastEmail', email); } catch (_) {} }
-      // Plan-type / budget context comes from the planner globals (app.js sets
-      // them); on a standalone pricing page app.js isn't loaded, so they fall
-      // back to defaults and source reflects the pricing entry point.
-      if (window.mpTrack) window.mpTrack('checkout_started', {
-        priceId: PRICE_EUR,
-        filter: window._activeFilter || 'all',
-        isBudget: !!window.isBudgetMenu,
-        source: /(pricing|abonament|preturi|prețuri|preise|precios|prix|prezzi|fiyat)/i.test(location.pathname) ? 'pricing' : 'planner',
-      });
-      await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId });
+      // Guard: an impatient double-click must not fire two checkout_started
+      // events or create two Stripe sessions. Reset in finally so a failed
+      // session creation still lets the user retry.
+      if (payBtn._checkoutInFlight) return;
+      payBtn._checkoutInFlight = true;
+      try {
+        const email = document.querySelector('#emailInput')?.value?.trim() || null;
+        const customerId = window.currentStripeCustomerId || null;
+        // Hint for premium auto-restore after Stripe success: lets app.js
+        // silently re-verify the user instead of forcing manual activation.
+        if (email) { try { localStorage.setItem('mp:lastEmail', email); } catch (_) {} }
+        // Anonymous funnel id (random UUID, no PII) → carried into the Stripe
+        // session so the webhook can join subscription_active to this funnel.
+        const anonId = (typeof window.mpAnonId === 'function') ? window.mpAnonId() : null;
+        // source reuses analytics.js' corrected page-type detection so
+        // /ro/premium/ and every localized pricing slug reports 'pricing'.
+        let source = 'planner';
+        try {
+          if (typeof window.mpPageType === 'function') {
+            source = window.mpPageType() === 'pricing' ? 'pricing' : 'planner';
+          } else if (/\/(pricing|premium|precios|precos|tarifs|preise|tseny|asaar|jiage|fiyatlar|prezzi)(?:\/|$)/i.test(location.pathname)) {
+            source = 'pricing';
+          }
+        } catch (_) {}
+        // Plan-type / budget context comes from the planner globals (app.js
+        // sets them); on a standalone pricing page they fall back to defaults.
+        if (window.mpTrack) window.mpTrack('checkout_started', {
+          priceId: PRICE_EUR,
+          filter: window._activeFilter || 'all',
+          isBudget: !!window.isBudgetMenu,
+          source: source,
+        });
+        await startSubscriptionCheckout({ email, priceId: PRICE_EUR, customerId, anonId });
+      } finally {
+        payBtn._checkoutInFlight = false;
+      }
     });
   }
 });

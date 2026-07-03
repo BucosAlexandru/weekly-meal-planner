@@ -38,11 +38,32 @@
     return /^[a-z]{2}$/.test(seg) ? seg : 'ro';
   }
 
+  // Locale-complete, path-segment-anchored URL patterns covering all 14 slugs
+  // (see PRICING_SLUGS / RECIPE_LANG / LANG_CONFIGS in generate-content.mjs).
+  // Dead legacy patterns removed: abonament, preturi, prețuri, prix, rețete.
+  var PRICING_RE = /\/(pricing|premium|precios|precos|tarifs|preise|tseny|asaar|jiage|fiyatlar|prezzi)(?:\/|$)/i;
+  var RECIPE_RE  = /\/(recipes|retete|recetas|recettes|rezepte|receitas|retsepty|wasafat|shipu|reshipi|tarifler|ricette)\//i;
+  var PLAN_RE    = /\/(meniu-saptamanal|weekly-meal-plan|plan-semanal|plan-semaine|wochenplan|plano-semanal|nedelnoe-menyu|khitat-usbuiya|zhoujicaidan|weekly-menu|weekly-plan|haftalik-menu|piano-settimanale|jugan-menu)(?:\/|$)/i;
+
+  // Generated SEO pages declare their type via data-page-type on the analytics
+  // <script> tag — authoritative, so /ro/premium/ (and every localized slug) is
+  // classified correctly regardless of URL. Hand-maintained homepages carry no
+  // attribute and fall through to the URL patterns below (→ 'home').
+  function declaredPageType() {
+    try {
+      var el = document.querySelector('script[data-page-type][src*="/js/analytics"]');
+      var v = el && el.getAttribute('data-page-type');
+      return v || null;
+    } catch (_) { return null; }
+  }
+
   function pageType() {
+    var declared = declaredPageType();
+    if (declared) return declared;
     var p = location.pathname;
-    if (/(pricing|abonament|preturi|prețuri|preise|precios|prix|prezzi|fiyat)/i.test(p)) return 'pricing';
-    if (/(\/recipes\/|\/retete\/|\/rețete\/|\/rezepte\/|\/recetas\/|\/recettes\/)/i.test(p)) return 'recipe';
-    if (/\/plan/i.test(p)) return 'plan';
+    if (PRICING_RE.test(p)) return 'pricing';
+    if (RECIPE_RE.test(p)) return 'recipe';
+    if (PLAN_RE.test(p)) return 'plan';
     if (p === '/' || /^\/[a-z]{2}\/?$/.test(p)) return 'home';
     return 'other';
   }
@@ -74,6 +95,13 @@
   }
 
   window.mpTrack = send;
+  // Reused by checkout.js so checkout_started.source uses the SAME corrected
+  // page-type detection, and so the anonymous id can be passed into the Stripe
+  // Checkout session as client_reference_id — the only join key between the
+  // anonymous client funnel and the server-side subscription_active row. This
+  // id is a random UUID, never an email.
+  window.mpPageType = pageType;
+  window.mpAnonId = anonId;
 
   function firePageView() { send('page_view', { pageType: pageType() }); }
   if (document.readyState === 'loading') {

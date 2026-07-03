@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!Array.isArray(pool) || pool.length < 1) {
     console.warn("Random menu: pool too small", pool?.length);
-    return;
+    return false; // signal failure so plan_generated is NOT counted
   }
 
   const mode = window._planMode;
@@ -584,6 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setTimeout(() => updateAllRecipeMeta(), 50);
+  return true; // signal a plan was actually generated
 }
 
   function collectMeals() {
@@ -1506,11 +1507,21 @@ document.addEventListener('DOMContentLoaded', () => {
       bar.appendChild(autoBtn);
     }
     updateAutoMenuBtn();
-    autoBtn.onclick = () => {
-      generateRandomMenu();
-      updateShoppingList();
-      showCostEstimate(window._activeFilter);
-      if (window.mpTrack) window.mpTrack('plan_generated', { filter: window._activeFilter || 'all' });
+    autoBtn.onclick = async () => {
+      // Re-entry guard: generation is async (dynamic recipe import), so a
+      // double-click must not fire two plan_generated events. Fire the event
+      // only AFTER generation actually succeeds — not on the pool-too-small
+      // early return and not before the async work completes.
+      if (autoBtn._generating) return;
+      autoBtn._generating = true;
+      try {
+        const ok = await generateRandomMenu();
+        updateShoppingList();
+        showCostEstimate(window._activeFilter);
+        if (ok && window.mpTrack) window.mpTrack('plan_generated', { filter: window._activeFilter || 'all' });
+      } finally {
+        autoBtn._generating = false;
+      }
     };
 
     // ── Budget checkbox (hidden, kept for compatibility) ──────
@@ -4491,6 +4502,14 @@ if (typeof setupStickyUpgrade === 'function') setupStickyUpgrade();
 if (typeof setupCursorAtmosphere === 'function') setupCursorAtmosphere();
 if (verifyBtn && emailInput && resultDiv) {
   verifyBtn.onclick = async function () {
+    // Guard: rapid re-clicks / Enter-spam must not fire duplicate
+    // email_submitted events for a single submission.
+    if (verifyBtn._verifying) return;
+    verifyBtn._verifying = true;
+    // Capture premium state BEFORE this verify so we can suppress the event
+    // when an already-premium user merely re-verifies (pure inflation).
+    const wasPremium = !!window.hasUnlimited;
+    try {
     const email = emailInput.value.trim();
     resultDiv.innerText = (i18n[lang]?.msg?.checking) || 'Checking...';
     if (manageBtn) manageBtn.style.display = 'none';
@@ -4519,7 +4538,9 @@ if (verifyBtn && emailInput && resultDiv) {
     // pdf_click and checkout. No PII — the email itself is never sent, only
     // the access OUTCOME. tier_intent = the PDF tier this submission unlocks
     // (premium when the subscription is active, else the free 2-day export).
-    if (window.mpTrack) window.mpTrack('email_submitted', {
+    // Skip when an already-premium user is just re-verifying an active sub —
+    // that is not a new gate passage, only inflation.
+    if (window.mpTrack && !(wasPremium && active)) window.mpTrack('email_submitted', {
       source: 'pdf_gate',
       access: active ? 'active' : found ? 'found' : 'none',
       filter: window._activeFilter || 'all',
@@ -4570,6 +4591,9 @@ if (verifyBtn && emailInput && resultDiv) {
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.not_found || 'Nu există acces pentru acest email. Plătește întâi sau verifică adresa.'}</span>`;
       if (manageBtn) manageBtn.style.display = 'none';
       if (typeof updateButtonState === 'function') updateButtonState();
+    }
+    } finally {
+      verifyBtn._verifying = false;
     }
   };
   // Enter submit

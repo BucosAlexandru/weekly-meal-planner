@@ -60,6 +60,9 @@ export default async function handler(req, res) {
       case 'checkout.session.completed': {
         const session    = event.data.object;
         const customerId = session.customer || null;
+        // Anonymous funnel id set by create-checkout-session.js (no PII) — lets
+        // the subscription_active row below join the client-side funnel.
+        const anonId     = session.client_reference_id || null;
 
         let email =
           session.customer_email ||
@@ -140,6 +143,7 @@ export default async function handler(req, res) {
         try {
           await supabase.from('events').insert({
             event: 'subscription_active',
+            anon_id: anonId ? String(anonId).slice(0, 64) : null,
             email_hash: hashEmail(email),
             props: {
               plan: 'subscription',

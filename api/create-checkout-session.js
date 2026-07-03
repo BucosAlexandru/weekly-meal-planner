@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { email, priceId, customerId, successUrl, cancelUrl } = req.body || {};
+    const { email, priceId, customerId, successUrl, cancelUrl, anonId } = req.body || {};
     if (!priceId) return res.status(400).json({ error: 'Missing priceId' });
 
     const origin = req.headers.origin || 'http://localhost:3000';
@@ -20,6 +20,10 @@ export default async function handler(req, res) {
       customer: customerId || undefined,
       customer_email: customerId ? undefined : (email || undefined),
       line_items: [{ price: priceId, quantity: 1 }],
+      // Pseudonymous funnel id (random UUID, no PII) so stripe-webhook.js can
+      // join subscription_active back to the anonymous client funnel. Stripe
+      // caps client_reference_id at 200 chars; omit when absent.
+      client_reference_id: (typeof anonId === 'string' && anonId) ? anonId.slice(0, 200) : undefined,
       success_url: (successUrl || `${origin}/?success=true&session_id={CHECKOUT_SESSION_ID}`),
       cancel_url: cancelUrl || `${origin}/?canceled=true`,
     });

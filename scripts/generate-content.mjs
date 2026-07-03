@@ -1828,7 +1828,7 @@ ${faqRows}
 
   ${makeFooter(lc, NAV_URL_FOR.pricing())}
 
-  <script src="/js/analytics.min.js" defer></script>
+  <script src="/js/analytics.min.js" data-page-type="pricing" defer></script>
   <script src="/js/checkout.min.js" defer></script>
 </body>
 </html>`;
@@ -2132,6 +2132,7 @@ ${makeFooter(lc, NAV_URL_FOR.plan(plan))}
   } catch (e) {}
 })();
 </script>
+<script src="/js/analytics.min.js" data-page-type="plan" defer></script>
 </body></html>`;
 }
 
@@ -2287,6 +2288,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
   <script type="application/ld+json">${planIndexJsonLd}</script>
 </main>
 ${makeFooter(lc, NAV_URL_FOR.planIndex())}
+<script src="/js/analytics.min.js" data-page-type="plan_index" defer></script>
 </body></html>`;
 }
 
@@ -4132,7 +4134,7 @@ ${bridgeHtml}
   <span class="rmb-label">${esc(hubHref ? o : rl.breadLabel)}</span>
 </a>
 
-</main>${makeFooter(lc, NAV_URL_FOR.recipe(rslug))}<script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipe(rslug))}<script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* EN-origin → flag emoji. Multi-region origins ("Asia", "Middle East")
@@ -4470,7 +4472,7 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-i
     <div class="recipe-groups-grid">${cards}</div>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
-</main>${makeFooter(lc, NAV_URL_FOR.recipeIndex())}<script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipeIndex())}<script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -5111,7 +5113,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
   <span class="rmb-label">${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}</span>
 </a>
 
-${makeFooter(lc, NAV_URL_FOR.cuisineHub(originSlug))}<script src="/js/content.js" defer></script></body></html>`;
+${makeFooter(lc, NAV_URL_FOR.cuisineHub(originSlug))}<script src="/js/analytics.min.js" data-page-type="hub" defer></script><script src="/js/content.js" defer></script></body></html>`;
 }
 
 // Phase 5: cuisineHubIndexPage() was removed. Its responsibility (cuisine
