@@ -4493,6 +4493,11 @@ function switchAccount() {
   const pricingEl = document.getElementById('pricing-section');
   if (pricingEl) pricingEl.style.display = '';
   if (typeof renderPremiumPreview === 'function') renderPremiumPreview();
+  // renderPremiumPreview() re-inserts a fresh .hp-fade-in panel that starts
+  // at opacity:0 until the scroll-reveal observer tags it .is-visible. Re-run
+  // the observer setup (as applyTranslations does after rendering) so the new
+  // panel reveals instead of leaving a full-height invisible gap.
+  if (typeof setupScrollFadeIn === 'function') setupScrollFadeIn();
   if (typeof updateButtonState === 'function') updateButtonState();
   if (typeof updateContentNav === 'function') updateContentNav(lang);
   if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
