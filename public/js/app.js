@@ -4464,6 +4464,64 @@ const verifyBtn  = document.getElementById('verifyBtn');
 const emailInput = document.getElementById('emailInput');
 const manageBtn  = document.getElementById('manage-subscription');
 
+// ── Switch account / forget this email ─────────────────────────────
+// On a shared device a remembered premium email auto-restores for anyone
+// who opens the page (see restorePremiumFromHint). This gives the user a
+// small control to drop that remembered email and return the box to its
+// signed-out, non-premium state. Purely client-side: it clears the
+// localStorage hint + in-memory flags and re-shows the upsell CTAs. It never
+// calls the backend or Stripe, so the subscription itself is untouched and
+// the user (or the real owner) can re-verify at any time.
+function switchAccount() {
+  try { localStorage.removeItem('mp:lastEmail'); } catch (_) {}
+  window.hasUnlimited = false;
+  window.verifiedEmail = null;
+  // Drop the cached Stripe customer so a new checkout/portal isn't opened
+  // against the forgotten account's customer id.
+  window.currentStripeCustomerId = null;
+
+  // Reset the verify box back to its blank state.
+  if (emailInput) emailInput.value = '';
+  if (resultDiv)  resultDiv.innerHTML = '';
+  if (manageBtn)  manageBtn.style.display = 'none';
+  const swBtn = document.getElementById('switch-account');
+  if (swBtn) swBtn.style.display = 'none';
+
+  // Bring the pricing / premium upsell CTAs back — the inverse of the
+  // premium-activation paths. #pricing-section is absent on the homepage
+  // (guarded); the live upsell is the re-rendered #hp-premium-preview panel.
+  const pricingEl = document.getElementById('pricing-section');
+  if (pricingEl) pricingEl.style.display = '';
+  if (typeof renderPremiumPreview === 'function') renderPremiumPreview();
+  if (typeof updateButtonState === 'function') updateButtonState();
+  if (typeof updateContentNav === 'function') updateContentNav(lang);
+  if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
+  if (emailInput) emailInput.focus();
+}
+
+// Lazily create the small "Switch account" control (once), placed right
+// after Manage subscription, and reveal it. Shown only while premium is
+// active in this tab; hidden again by switchAccount() and on re-verify.
+function revealSwitchAccount() {
+  if (!manageBtn || !manageBtn.parentNode) return;
+  let btn = document.getElementById('switch-account');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'switch-account';
+    btn.type = 'button';
+    btn.className = 'btn-switch-account';
+    btn.setAttribute('data-i18n', 'btn.switchAccount');
+    btn.style.cssText = 'display:block;background:none;border:none;padding:4px 8px;' +
+      'margin-top:6px;font-size:0.82rem;color:#6b7280;text-decoration:underline;cursor:pointer;';
+    btn.textContent = (i18n[lang] && i18n[lang]['btn.switchAccount'])
+      || (i18n['en'] && i18n['en']['btn.switchAccount'])
+      || 'Switch account';
+    btn.addEventListener('click', switchAccount);
+    manageBtn.insertAdjacentElement('afterend', btn);
+  }
+  btn.style.display = 'block';
+}
+
 // Premium-state persistence: silently re-verify on load using the last
 // known-good email so paying users don't see the upsell flow on every
 // reload. Server stays authoritative — localStorage is a hint only.
@@ -4486,6 +4544,7 @@ const manageBtn  = document.getElementById('manage-subscription');
       // Premium preview panel only makes sense for non-premium users.
       document.getElementById('hp-premium-preview')?.remove();
       if (manageBtn) manageBtn.style.display = 'inline-block';
+      revealSwitchAccount();
       if (typeof updateButtonState === 'function') updateButtonState();
       if (typeof updateContentNav === 'function') updateContentNav(lang);
       if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
@@ -4513,6 +4572,7 @@ if (verifyBtn && emailInput && resultDiv) {
     const email = emailInput.value.trim();
     resultDiv.innerText = (i18n[lang]?.msg?.checking) || 'Checking...';
     if (manageBtn) manageBtn.style.display = 'none';
+    document.getElementById('switch-account')?.style.setProperty('display', 'none');
     if (!email) {
       window.hasUnlimited = false;
       resultDiv.innerHTML = `<span class="text-danger">${i18n[lang]?.msg?.empty || 'Introduceți adresa de email!'}</span>`;
@@ -4572,6 +4632,7 @@ if (verifyBtn && emailInput && resultDiv) {
       // Manage-subscription click is wired globally in public/js/portal.js
       // (delegated handler). Just toggle visibility here.
       if (manageBtn) manageBtn.style.display = 'inline-block';
+      revealSwitchAccount();
       // Drop the premium preview panel — paying users don't need the upsell.
       document.getElementById('hp-premium-preview')?.remove();
       if (typeof updateButtonState === 'function') updateButtonState();
