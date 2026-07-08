@@ -425,11 +425,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const emoji   = kind === 'lunch' ? '🍱' : '🌙';
       const label   = kind === 'lunch' ? t('pw.lunch') : t('pw.dinner');
       const ph      = kind === 'lunch' ? t('placeholderL') : t('placeholderD');
+      const dayName = weekdays[idx];
+      const rerollLabel = `${t('pw.reroll')} — ${dayName}, ${label}`;
+      const removeLabel = `${t('pw.remove')} — ${dayName}, ${label}`;
       // The pre-created #rmeta-… div is picked up by updateAllRecipeMeta() (it
       // looks the id up before appending next to the input), so the meta chips
       // land BELOW the input instead of inside the .input-group.
+      // Action buttons (Day 2) render always but are CSS-hidden while the slot
+      // is empty (.pw-meal without .pw-filled) — empty-slot UI is Day 3.
       return `
         <div class="pw-meal">
+          <div class="pw-actions">
+            <button type="button" class="pw-btn" data-act="reroll" data-input="${inputId}" aria-label="${rerollLabel}" title="${rerollLabel}"><span aria-hidden="true">🎲</span></button>
+            <button type="button" class="pw-btn" data-act="remove" data-input="${inputId}" aria-label="${removeLabel}" title="${removeLabel}"><span aria-hidden="true">✕</span></button>
+          </div>
           <div class="pw-meal-kind"><span aria-hidden="true">${emoji}</span> ${label}</div>
           <div class="input-group input-group-sm">
             <input id="${inputId}" class="form-control" placeholder="${ph}">
@@ -468,6 +477,18 @@ document.addEventListener('DOMContentLoaded', () => {
     wireInputsToShoppingList();
     updateWeekOverview();
     setTimeout(updateAllRecipeMeta, 0);
+
+    // Day 2: one delegated listener on the persistent container handles every
+    // 🎲/✕ click — survives innerHTML re-renders and needs no per-button wiring.
+    if (!cardsEl.dataset.pwActionsWired) {
+      cardsEl.addEventListener('click', (e) => {
+        const btn = e.target.closest ? e.target.closest('.pw-btn') : null;
+        if (!btn) return;
+        if (btn.dataset.act === 'reroll') rerollMeal(btn.dataset.input, btn);
+        else if (btn.dataset.act === 'remove') removeMealSlot(btn.dataset.input);
+      });
+      cardsEl.dataset.pwActionsWired = '1';
+    }
   }
 
   // Live stats: Week Overview strip + per-day cost in each card header.
@@ -501,6 +522,192 @@ document.addEventListener('DOMContentLoaded', () => {
     set('pw-ov-cost', totalCost > 0 ? formatCost(totalCost) : '—');
     set('pw-ov-cuisines', cuisines.size ? String(cuisines.size) : '—');
   }
+
+  // ── Day 2: meal mutations — reroll 🎲 / remove ✕ + change toast with undo ──
+  // Spec: docs/ai/PLANNER_BRAIN_SPEC.md §1 (reroll criteria), §2 (toast+undo),
+  // §7 (recalculation). THE mechanism: every mutation writes the localized
+  // recipe name into the legacy input (same format the generator/autocomplete
+  // writes) and dispatches a real 'input' event. That routes ALL recalculation
+  // — shopping list, Week Overview, per-day costs, meta chips, PDF payload
+  // (reads live state at export) — through the existing wiring. No duplicated
+  // recalculation logic anywhere in this section.
+  function setSlotValue(input, value) {
+    input.value = value;
+    // Immediate visual state for the action buttons; updateAllRecipeMeta()
+    // re-asserts this on its own (debounced) pass.
+    input.closest('.pw-meal')?.classList.toggle('pw-filled', !!value.trim());
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  // The exact pool generateRandomMenu() draws from: active filter chip
+  // (window._activeFilter) or the budget corpus, minus non-main-meal
+  // categories. Shared so 🎲 can never suggest something Generate wouldn't.
+  async function getGenerationPool() {
+    await ensureMainRecipes();
+    let pool;
+    if (window.isBudgetMenu) {
+      await ensureBudgetRecipes();
+      pool = recipesBudget;
+    } else {
+      const filterDef = typeof FILTER_DEFS !== 'undefined'
+        ? FILTER_DEFS.find(f => f.id === (window._activeFilter || 'all'))
+        : null;
+      const test = filterDef && filterDef.id !== 'all' ? filterDef.test : () => true;
+      pool = recipesMain.filter(test);
+      if (pool.length < 2) pool = recipesMain; // fallback
+    }
+    // Exclude non-main categories (Dessert / Snack / Salad / Breakfast /
+    // Appetizer / Side dish) from lunch/dinner slots. Category EN values are
+    // stable; recipes without a category fall through as eligible.
+    const NON_MAIN_MEAL = new Set(['Dessert', 'Snack', 'Salad', 'Breakfast', 'Appetizer', 'Side dish']);
+    const mainOnly = pool.filter(r => !NON_MAIN_MEAL.has(r.category?.en || ''));
+    if (mainOnly.length >= 2) pool = mainOnly;
+    return Array.isArray(pool) ? pool : [];
+  }
+
+  // Every recipe currently in any slot, resolved through the same helper the
+  // rest of the app uses (getRecipeByInput → recipeNameMatches).
+  function recipeIdsInPlan() {
+    const used = new Set();
+    for (let d = 1; d <= 7; d++) {
+      ['l', 'c'].forEach(sfx => {
+        const val = document.getElementById(`d${d}${sfx}`)?.value.trim() || '';
+        if (!val) return;
+        const rec = getRecipeByInput(val);
+        if (rec) used.add(rec.id);
+      });
+    }
+    return used;
+  }
+
+  // Signed cost delta in the site's cost convention (§6: always "~"; RON for
+  // ro, €/4.97 otherwise). Returns '' when the displayed magnitude rounds to 0.
+  function pwCostDelta(deltaRon) {
+    if (deltaRon == null || !isFinite(deltaRon)) return '';
+    const mag = lang === 'ro' ? Math.abs(deltaRon) : Math.round(Math.abs(deltaRon) / 4.97);
+    if (!mag) return '';
+    const sign = deltaRon > 0 ? '+' : '−';
+    return lang === 'ro' ? `${sign}~${Math.abs(deltaRon)} RON` : `${sign}~€${mag}`;
+  }
+  // Time delta only when |Δ| ≥ 10 min (brain spec §2).
+  function pwTimeDelta(oldT, newT) {
+    if (oldT == null || newT == null) return '';
+    const d = newT - oldT;
+    if (Math.abs(d) < 10) return '';
+    return `${d > 0 ? '+' : '−'}${Math.abs(d)} min`;
+  }
+
+  async function rerollMeal(inputId, btn) {
+    const input = document.getElementById(inputId);
+    if (!input || !input.value.trim()) return;
+    const prevValue = input.value;
+    const current = getRecipeByInput(prevValue);
+    const pool = await getGenerationPool();
+    const used = recipeIdsInPlan();
+    // §1.2: zero duplicates — exclude everything already in the plan.
+    const valid = pool.filter(r => !used.has(r.id));
+    if (!valid.length) { pwPoolEmptyFeedback(btn); return; }
+    // §1.3: prefer similar effort/price (time ±15 min AND cost ±10 RON);
+    // fall back to random from the full valid pool when that sub-pool is empty.
+    const similar = current ? valid.filter(r =>
+      current.time != null && r.time != null && Math.abs(r.time - current.time) <= 15 &&
+      current.costRon != null && r.costRon != null && Math.abs(r.costRon - current.costRon) <= 10
+    ) : [];
+    const from = similar.length ? similar : valid;
+    const pick = from[Math.floor(Math.random() * from.length)];
+    setSlotValue(input, getRecipeText(pick, lang));
+    const oldName = getRecipeText(current, lang) || extractRecipeName(prevValue) || prevValue;
+    showChangeToast({
+      inputId,
+      prevValue,
+      text: [
+        `${oldName} → ${getRecipeText(pick, lang)}`,
+        current && current.costRon != null && pick.costRon != null
+          ? pwCostDelta(pick.costRon - current.costRon) : '',
+        pwTimeDelta(current?.time, pick.time),
+      ].filter(Boolean).join(' · '),
+    });
+  }
+
+  function removeMealSlot(inputId) {
+    const input = document.getElementById(inputId);
+    if (!input || !input.value.trim()) return;
+    const prevValue = input.value;
+    const rec = getRecipeByInput(prevValue);
+    setSlotValue(input, '');
+    const name = getRecipeText(rec, lang) || extractRecipeName(prevValue) || prevValue;
+    showChangeToast({
+      inputId,
+      prevValue,
+      text: [
+        `${name} ${t('pw.removed')}`,
+        rec && rec.costRon != null ? pwCostDelta(-rec.costRon) : '',
+      ].filter(Boolean).join(' · '),
+    });
+  }
+
+  // Pool exhausted (§1: everything in the filter is already planned): brief
+  // pulse + tooltip swap on the button itself — no alert(), no error state.
+  function pwPoolEmptyFeedback(btn) {
+    if (!btn) return;
+    if (!btn.dataset.origTitle) btn.dataset.origTitle = btn.title || '';
+    btn.title = t('pw.noMore');
+    btn.classList.add('pw-btn-shake');
+    clearTimeout(btn._pwShakeTimer);
+    btn._pwShakeTimer = setTimeout(() => btn.classList.remove('pw-btn-shake'), 650);
+    clearTimeout(btn._pwTitleTimer);
+    btn._pwTitleTimer = setTimeout(() => { btn.title = btn.dataset.origTitle; }, 2500);
+  }
+
+  // ── Change toast (brain spec §2): one at a time, single-step undo ──
+  let _pwToastHideTimer = null;
+  let _pwUndo = null; // { inputId, prevValue } — replaced by every new change
+
+  // Created once at init (not lazily) so the aria-live region exists in the
+  // DOM before its first announcement. No HTML file edits — JS-built.
+  function ensurePwToast() {
+    let el = document.getElementById('pw-toast');
+    if (el) return el;
+    el = document.createElement('div');
+    el.id = 'pw-toast';
+    el.className = 'pw-toast';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    const txt = document.createElement('span');
+    txt.className = 'pw-toast-text';
+    const undoBtn = document.createElement('button');
+    undoBtn.type = 'button';
+    undoBtn.className = 'pw-toast-undo';
+    undoBtn.addEventListener('click', () => {
+      const undo = _pwUndo;
+      _pwUndo = null;
+      hidePwToast();
+      if (!undo) return;
+      const input = document.getElementById(undo.inputId);
+      // Same set-value+dispatch mechanism → full recalculation chain (§7).
+      if (input) setSlotValue(input, undo.prevValue);
+    });
+    el.appendChild(txt);
+    el.appendChild(undoBtn);
+    document.body.appendChild(el);
+    return el;
+  }
+
+  function hidePwToast() {
+    clearTimeout(_pwToastHideTimer);
+    document.getElementById('pw-toast')?.classList.remove('pw-toast-show');
+  }
+
+  function showChangeToast({ inputId, prevValue, text }) {
+    const el = ensurePwToast();
+    _pwUndo = { inputId, prevValue }; // new change replaces the pending undo
+    el.querySelector('.pw-toast-text').textContent = text;
+    el.querySelector('.pw-toast-undo').textContent = t('pw.undo');
+    el.classList.add('pw-toast-show');
+    clearTimeout(_pwToastHideTimer);
+    _pwToastHideTimer = setTimeout(hidePwToast, 6000);
+  }
+
   function startDictation(inputId) {
     if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
       alert('Dictarea nu este suportată de browserul tău!');
@@ -620,26 +827,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function generateRandomMenu() {
-  await ensureMainRecipes();
-  let pool;
-  if (window.isBudgetMenu) {
-    await ensureBudgetRecipes();
-    pool = recipesBudget;
-  } else {
-    const filterDef = typeof FILTER_DEFS !== 'undefined'
-      ? FILTER_DEFS.find(f => f.id === (window._activeFilter || 'all'))
-      : null;
-    const test = filterDef && filterDef.id !== 'all' ? filterDef.test : () => true;
-    pool = recipesMain.filter(test);
-    if (pool.length < 2) pool = recipesMain; // fallback
-  }
-
-  // Exclude non-main categories (Dessert / Snack / Salad / Breakfast / Appetizer
-  // / Side dish) from lunch/dinner generation. Category EN values are stable;
-  // recipes without a category fall through as eligible.
-  const NON_MAIN_MEAL = new Set(['Dessert', 'Snack', 'Salad', 'Breakfast', 'Appetizer', 'Side dish']);
-  const mainOnly = pool.filter(r => !NON_MAIN_MEAL.has(r.category?.en || ''));
-  if (mainOnly.length >= 2) pool = mainOnly;
+  // Pool building is shared with the per-slot reroll (Day 2) — see
+  // getGenerationPool(): active filter / budget corpus / non-main exclusion.
+  const pool = await getGenerationPool();
 
   if (!Array.isArray(pool) || pool.length < 1) {
     console.warn("Random menu: pool too small", pool?.length);
@@ -1485,6 +1675,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ['l','c'].forEach(type => {
         const input = document.getElementById(`d${day}${type}`);
         if (!input) return;
+        // Day 2: filled slots show the 🎲/✕ actions (CSS keys off .pw-filled).
+        // Covers every fill path — typing, dictation, generate, deep links —
+        // since they all funnel through this refresh. No-op in table mode.
+        input.closest('.pw-meal')?.classList.toggle('pw-filled', !!input.value.trim());
         const metaId = `rmeta-d${day}${type}`;
         let metaEl = document.getElementById(metaId);
         const rec = getRecipeByInput(input.value);
@@ -5003,4 +5197,5 @@ if (verifyBtn && emailInput && resultDiv) {
   attachPdfListeners();
   updateButtonState();
   wireInputsToShoppingList();
+  ensurePwToast(); // aria-live region must exist before its first announcement
 });

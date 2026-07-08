@@ -2608,3 +2608,106 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
 .pw-meta { margin-top: 6px; }
 .pw-meta:empty { display: none; }
 .pw-meta .recipe-meta-row { margin-top: 0; }
+
+/* ── Day 2: per-meal actions 🎲/✕ (spec RESPONSIVE §3-5, BRAIN §1) ──────────
+   Touch-first: always visible, 44px targets. Pointer devices (real hover):
+   28px visual, revealed on .pw-meal hover / focus-within. RTL-safe via
+   logical properties (inset-inline-end). Hidden while the slot is empty —
+   the empty-slot picker button is Day 3. */
+.pw-meal { position: relative; }
+.pw-actions {
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-end: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.pw-meal:not(.pw-filled) .pw-actions { display: none; }
+.pw-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line, #e5e7eb);
+  background: var(--surface, #fff);
+  color: var(--ink-3, #6b7280);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: border-color .12s, color .12s, background .12s;
+}
+.pw-btn:hover,
+.pw-btn:focus-visible {
+  border-color: var(--color-brand, #24712A);
+  color: var(--color-brand, #24712A);
+  background: var(--color-brand-light, #f0fdf4);
+}
+.pw-btn:focus-visible { outline: 2px solid var(--color-brand, #24712A); outline-offset: 2px; }
+/* Reserve headroom in the kind row so the always-visible touch buttons never
+   overlap the input (44px button + 8px offset < 12px pad + 48px row). */
+.pw-meal.pw-filled .pw-meal-kind { min-height: 48px; align-items: flex-start; }
+@media (hover: hover) and (pointer: fine) {
+  .pw-btn { width: 28px; height: 28px; font-size: .85rem; }
+  .pw-meal.pw-filled .pw-meal-kind { min-height: 30px; }
+  .pw-actions { opacity: 0; transition: opacity .15s; }
+  .pw-meal:hover .pw-actions,
+  .pw-meal:focus-within .pw-actions { opacity: 1; }
+}
+/* Pool exhausted feedback: brief pulse, no alert (BRAIN §1) */
+.pw-btn-shake { animation: pw-shake .6s ease; }
+@keyframes pw-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+/* ── Day 2: change toast with single-step undo (BRAIN §2) ──────────────────
+   Bottom-center, one at a time, auto-hides ~6s (JS timer + this transition).
+   Plain left:50% centering is symmetric, so it needs no RTL mirroring. */
+.pw-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 8px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(92vw, 480px);
+  background: var(--surface, #fff);
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+  padding: 10px 14px;
+  font-size: .9rem;
+  color: var(--ink, #111827);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s, transform .25s;
+  z-index: 1200;
+}
+.pw-toast-show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+.pw-toast-text { min-width: 0; }
+.pw-toast-undo {
+  border: 0;
+  background: none;
+  padding: 6px 10px;
+  margin: -6px -10px;
+  min-height: 44px;
+  color: var(--color-brand, #24712A);
+  font-weight: 700;
+  font-size: .9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 6px;
+}
+.pw-toast-undo:hover { text-decoration: underline; }
+.pw-toast-undo:focus-visible { outline: 2px solid var(--color-brand, #24712A); outline-offset: 2px; }
