@@ -5903,3 +5903,73 @@ body:has(#pricing-main) .app-header {
     padding: .9rem 1rem 1rem;
   }
 }
+
+/* ============================================================
+   RECIPE PRINT / PDF — authoritative overrides
+   ------------------------------------------------------------
+   Added last, on purpose. The `.recipe-main …` design rules
+   (specificity 0,2,x) are NOT scoped to screen, so in print they
+   override the older, weaker recipe print rules (0,1,x): hidden
+   web chrome reappears as empty bands, carousels pull broken lazy
+   images and overflow the page, and the ingredient left-gutter
+   collapses so the bullet dot lands on top of the first glyph.
+   These rules match that specificity and come later in source, so
+   they win; !important guards the few single-class targets.
+   ============================================================ */
+@media print {
+  /* 1 — Hide web-only chrome that prints as an empty band, pulls
+     broken lazy images, or overflows the printable width. */
+  .recipe-main .recipe-features-row,
+  .recipe-main .recipe-cta-row,
+  .recipe-main .recipe-cta-banner,
+  .recipe-main .btn-add-shopping,
+  .recipe-main .recipe-badge,
+  .recipe-main .recipe-pairings-h,
+  .recipe-main .pairings-grid,
+  .recipe-main .recipe-related-section,
+  .recipe-main .recipe-bridge-section {
+    display: none !important;
+  }
+
+  /* 1b — Collapse the hero: it stays a 2-col grid with 3rem bottom padding
+     and a reserved (hidden) image column, which prints as a tall empty band
+     between the title/stats and the ingredients. Flow it as a plain block. */
+  .recipe-main .recipe-hero-grid {
+    display: block !important;
+    padding: 0 0 .3rem !important;
+    gap: 0 !important;
+  }
+  .recipe-main .recipe-hero-img-col { display: none !important; }
+
+  /* 1c — The content grid carries 3.5rem top padding plus its own top border,
+     stacked on the stats strip's bottom border — a wide gap before the first
+     section. Tighten it for print. */
+  .recipe-main .recipe-content-grid {
+    padding: .8rem 0 .4rem !important;
+    border-top: none !important;
+  }
+
+  /* 2 — Ingredients: predictable single column with a real left gutter
+     so the bullet dot sits beside — not on top of — the first character. */
+  .recipe-main .recipe-ingr-list-new { columns: 1 !important; }
+  .recipe-main .recipe-ingr-list-new li {
+    padding: .18rem 0 .18rem 15px !important;
+    position: relative !important;
+    break-inside: avoid;
+  }
+  .recipe-main .recipe-ingr-dot {
+    position: absolute !important;
+    left: 1px !important;
+    top: .62em !important;
+    width: 5px !important;
+    height: 5px !important;
+    margin: 0 !important;
+  }
+
+  /* 3 — Method steps: the "01, 02…" counter is an italic Fraunces glyph with
+     a large negative left side-bearing; a left gutter keeps the first digit
+     from shearing at the printable-area edge. */
+  .recipe-main .recipe-steps-new { padding-left: 5px !important; }
+  .recipe-main .recipe-steps-new li { padding: .5rem 0 !important; gap: 1rem !important; }
+  .recipe-main .recipe-steps-new li::before { padding-left: 2px !important; }
+}
