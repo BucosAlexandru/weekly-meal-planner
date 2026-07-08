@@ -1711,6 +1711,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return `~€${eur}`;
   }
   function showCostEstimate(filterId) {
+    // Week mode renders the card Week Overview, which computes EST. COST from
+    // the REAL plan (sum of matched recipes' costRon). This bar's COST_RON
+    // table is a static per-filter guess and contradicted it on screen
+    // (~€40 vs ~€60) — one calculation everywhere (PLANNER_BRAIN_SPEC §6),
+    // so in week mode the static bar stays hidden and the overview owns the
+    // number. 'meal'/'day' modes have no overview and keep the bar.
+    if ((window._planMode || 'week') === 'week') {
+      const existing = document.getElementById('cost-estimate-bar');
+      if (existing) existing.style.display = 'none';
+      return;
+    }
     let costBar = document.getElementById('cost-estimate-bar');
     if (!costBar) {
       costBar = document.createElement('div');
