@@ -898,7 +898,9 @@ document.addEventListener('DOMContentLoaded', () => {
     search.setAttribute('aria-label', t('pw.searchHint'));
     search.removeAttribute('aria-activedescendant');
 
-    _pwPicker = { inputId, mode, items: [], hi: -1, scrollY: window.scrollY || 0, seq: 0 };
+    _pwPicker = { inputId, mode, items: [], hi: -1,
+      scrollY: (document.scrollingElement || document.documentElement).scrollTop || window.scrollY || 0,
+      seq: 0 };
     // Body scroll lock that preserves the scroll position (restored on close).
     document.body.style.top = `-${_pwPicker.scrollY}px`;
     document.body.classList.add('pw-noscroll');
@@ -918,16 +920,24 @@ document.addEventListener('DOMContentLoaded', () => {
     backdrop.classList.remove('pw-open');
     document.body.classList.remove('pw-noscroll');
     document.body.style.top = '';
-    if (st) window.scrollTo(0, st.scrollY);
     // On ANY close, focus returns to the edited slot's visible trigger
-    // (responsive spec §5). After a pick the slot just flipped to filled, so
-    // resolve the button by the CURRENT state, not the one that opened us.
+    // (responsive spec §5). preventScroll: focus() must not fight the scroll
+    // restore below (QA finding, 8 iul: page jumped to hero after picking).
     const meal = st ? document.getElementById(st.inputId)?.closest('.pw-meal') : null;
     if (meal) {
       const btn = meal.classList.contains('pw-filled')
         ? meal.querySelector('.pw-meal-name')
         : meal.querySelector('.pw-empty-slot');
-      if (btn) btn.focus();
+      if (btn) { try { btn.focus({ preventScroll: true }); } catch (_) { btn.focus(); } }
+    }
+    // Restore AFTER focus, twice (immediate + next tick). behavior:'instant'
+    // is REQUIRED: html has scroll-behavior:smooth and the smooth animation
+    // silently never progresses right after unlocking the fixed body (QA
+    // finding, 8 iul — page ended at the hero after every picker close).
+    if (st) {
+      const restore = () => window.scrollTo({ top: st.scrollY, left: 0, behavior: 'instant' });
+      restore();
+      setTimeout(restore, 50);
     }
   }
 
