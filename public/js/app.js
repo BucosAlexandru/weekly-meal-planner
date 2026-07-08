@@ -319,6 +319,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mode = window._planMode;
 
+    // Planner redesign (Day 1): week mode renders day cards into a JS-created
+    // #plan-cards container and hides the legacy .table-wrap; 'meal' and 'day'
+    // modes keep the table untouched. Static HTML is never edited — all 14
+    // language homepages share the same table skeleton.
+    const tableWrap = tbody.closest('.table-wrap');
+    if (mode === 'week') {
+      if (tableWrap) tableWrap.classList.add('pw-hidden');
+    } else {
+      if (tableWrap) tableWrap.classList.remove('pw-hidden');
+      const cardsEl = document.getElementById('plan-cards');
+      if (cardsEl) { cardsEl.innerHTML = ''; cardsEl.classList.add('pw-hidden'); }
+    }
+
     // Update table column headers
     const thead = tbody.closest('table')?.querySelector('thead tr');
     if (thead) {
@@ -376,31 +389,117 @@ document.addEventListener('DOMContentLoaded', () => {
         </tr>
       `);
     } else {
-      // Week mode — 7 rows
-      i18n[lang].weekdays.forEach((day, idx) => {
-        tbody.insertAdjacentHTML('beforeend', `
-          <tr class="planner-row">
-            <td><strong>${day}</strong></td>
-            <td>
-              <div class="input-group input-group-sm">
-                <input id="d${idx+1}l" class="form-control" placeholder="${t('placeholderL')}">
-                <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}l')">
-                  <i class="bi bi-mic-fill" aria-hidden="true"></i>
-                </button>
-              </div>
-            </td>
-            <td>
-              <div class="input-group input-group-sm">
-                <input id="d${idx+1}c" class="form-control" placeholder="${t('placeholderD')}">
-                <button type="button" class="btn btn-outline-secondary" onclick="startDictation('d${idx+1}c')">
-                  <i class="bi bi-mic-fill" aria-hidden="true"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-        `);
-      });
+      // Week mode — 7 day cards + Week Overview strip (replaces the table)
+      renderWeekCards();
     }
+  }
+
+  // ── Week-mode day cards + Week Overview (planner redesign, Day 1) ──────────
+  // Cards render into a JS-created #plan-cards inserted right after .table-wrap.
+  // Inputs keep the legacy ids d{n}l / d{n}c and the same mic-button markup, so
+  // collectMeals(), buildPdfV2Payload(), updateShoppingList(), dictation and
+  // generateRandomMenu() keep working unchanged. Interactions (picker, reroll,
+  // remove) are Day 2-3 — Day 1 is layout only.
+  function ensurePlanCardsContainer() {
+    let el = document.getElementById('plan-cards');
+    if (!el) {
+      // Anchor to the planner's OWN .table-wrap (not any table wrapper on the
+      // page) so the cards always sit inside the planner section.
+      const wrap = document.getElementById('plan-table')?.closest('.table-wrap');
+      if (!wrap) return null;
+      el = document.createElement('div');
+      el.id = 'plan-cards';
+      wrap.insertAdjacentElement('afterend', el);
+    }
+    return el;
+  }
+
+  function renderWeekCards() {
+    const cardsEl = ensurePlanCardsContainer();
+    if (!cardsEl) return;
+    cardsEl.classList.remove('pw-hidden');
+    const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
+
+    const mealSlot = (idx, kind) => {
+      const inputId = `d${idx + 1}${kind === 'lunch' ? 'l' : 'c'}`;
+      const emoji   = kind === 'lunch' ? '🍱' : '🌙';
+      const label   = kind === 'lunch' ? t('pw.lunch') : t('pw.dinner');
+      const ph      = kind === 'lunch' ? t('placeholderL') : t('placeholderD');
+      // The pre-created #rmeta-… div is picked up by updateAllRecipeMeta() (it
+      // looks the id up before appending next to the input), so the meta chips
+      // land BELOW the input instead of inside the .input-group.
+      return `
+        <div class="pw-meal">
+          <div class="pw-meal-kind"><span aria-hidden="true">${emoji}</span> ${label}</div>
+          <div class="input-group input-group-sm">
+            <input id="${inputId}" class="form-control" placeholder="${ph}">
+            <button type="button" class="btn btn-outline-secondary" onclick="startDictation('${inputId}')">
+              <i class="bi bi-mic-fill" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div id="rmeta-${inputId}" class="pw-meta"></div>
+        </div>`;
+    };
+
+    const ovCard = (id, labelKey) =>
+      `<div class="pw-ov-card"><div class="pw-ov-num" id="${id}">—</div><div class="pw-ov-label">${t(labelKey)}</div></div>`;
+
+    cardsEl.innerHTML = `
+      <div class="pw-overview" aria-live="polite">
+        ${ovCard('pw-ov-days', 'pw.ovDays')}
+        ${ovCard('pw-ov-time', 'pw.ovTime')}
+        ${ovCard('pw-ov-cost', 'pw.ovCost')}
+        ${ovCard('pw-ov-cuisines', 'pw.ovCuisines')}
+      </div>
+      <div class="pw-days">
+        ${weekdays.map((day, idx) => `
+          <div class="pw-day-card">
+            <div class="pw-day-head">
+              <span class="pw-day-name">${day}</span>
+              <span class="pw-day-cost" id="pw-day-cost-${idx + 1}"></span>
+            </div>
+            ${mealSlot(idx, 'lunch')}
+            ${mealSlot(idx, 'dinner')}
+          </div>`).join('')}
+      </div>`;
+
+    // Wire the fresh inputs into the live shopping-list/meta pipeline and
+    // paint the stats (both are idempotent — dataset flags guard re-wiring).
+    wireInputsToShoppingList();
+    updateWeekOverview();
+    setTimeout(updateAllRecipeMeta, 0);
+  }
+
+  // Live stats: Week Overview strip + per-day cost in each card header.
+  // Called from updateShoppingList(), i.e. on exactly the same events that
+  // already refresh the shopping list (typing, dictation, generate, mode
+  // switch, deep links). No-op while the cards are not rendered (meal/day).
+  function updateWeekOverview() {
+    const cardsEl = document.getElementById('plan-cards');
+    if (!cardsEl || cardsEl.classList.contains('pw-hidden') || !cardsEl.firstElementChild) return;
+    let daysPlanned = 0, totalCost = 0, totalTime = 0, timeCount = 0;
+    const cuisines = new Set();
+    for (let d = 1; d <= 7; d++) {
+      let dayCost = 0, dayHasMeal = false;
+      ['l', 'c'].forEach(sfx => {
+        const val = document.getElementById(`d${d}${sfx}`)?.value.trim() || '';
+        if (!val) return;
+        dayHasMeal = true;
+        const rec = getRecipeByInput(val);
+        if (!rec) return;
+        if (rec.costRon) { dayCost += rec.costRon; totalCost += rec.costRon; }
+        if (rec.time)    { totalTime += rec.time; timeCount++; }
+        cuisines.add(rec.origin?.en || rec.origin?.ro || rec.id);
+      });
+      if (dayHasMeal) daysPlanned++;
+      const costEl = document.getElementById(`pw-day-cost-${d}`);
+      if (costEl) costEl.textContent = dayCost > 0 ? formatCost(dayCost) : '';
+    }
+    const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+    set('pw-ov-days', String(daysPlanned));
+    set('pw-ov-time', timeCount ? `~${Math.round(totalTime / timeCount)} min` : '—');
+    set('pw-ov-cost', totalCost > 0 ? formatCost(totalCost) : '—');
+    set('pw-ov-cuisines', cuisines.size ? String(cuisines.size) : '—');
   }
   function startDictation(inputId) {
     if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
@@ -588,8 +687,12 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
   function collectMeals() {
-    return i18n[lang].weekdays.map((_, i) => ({
-      day: document.querySelector(`#plan-table tr:nth-child(${i+1}) td strong`)?.textContent || '',
+    // Day names come from i18n (index-based), NOT from the table DOM — week
+    // mode renders day cards (no <tr> rows) since the planner redesign, and
+    // the inputs d{n}l / d{n}c are the single source of truth in every mode.
+    const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
+    return weekdays.map((day, i) => ({
+      day,
       lunch: document.getElementById(`d${i+1}l`)?.value.trim() || '',
       dinner: document.getElementById(`d${i+1}c`)?.value.trim() || ''
     }));
@@ -1248,6 +1351,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   function updateShoppingList() {
+    // Week-card stats (overview strip + per-day costs) share this exact
+    // refresh path so they stay live on every input/generate/mode event.
+    updateWeekOverview();
     const listEl = document.getElementById('shopping-list');
     if (!listEl) return;
     const meals   = collectMeals();
@@ -1568,7 +1674,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cbEl) cbEl.checked = !!window.isBudgetMenu;
 
     // ── Wire up input change → live shopping list + recipe meta ──
-    document.querySelectorAll('#plan-table input').forEach(inp => {
+    document.querySelectorAll('#plan-table input, #plan-cards input').forEach(inp => {
       if (!inp.dataset.shopListener) {
         inp.addEventListener('input', () => {
           updateShoppingList();
@@ -4723,9 +4829,9 @@ if (verifyBtn && emailInput && resultDiv) {
   window.exportShoppingListToPDF = exportShoppingListToPDF;
   window.updateShoppingList = updateShoppingList;
 
-  // ---------- Wire plan-table inputs → live shopping list + meta ----------
+  // ---------- Wire planner inputs (table OR week cards) → live shopping list + meta ----------
   function wireInputsToShoppingList() {
-    document.querySelectorAll('#plan-table input').forEach(inp => {
+    document.querySelectorAll('#plan-table input, #plan-cards input').forEach(inp => {
       if (!inp.dataset.shopWired) {
         inp.addEventListener('input', () => {
           updateShoppingList();
