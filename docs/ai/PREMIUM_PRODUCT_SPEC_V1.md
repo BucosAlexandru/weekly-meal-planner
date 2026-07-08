@@ -1,8 +1,10 @@
-# Meal-Planner Premium Product Specification v1.0
+# Meal-Planner Premium Product Specification v1.1
 
-_Data: 2026-07-08_
+_Data: 2026-07-08 (v1.1 — adăugate Product Principles, DoD, Quality Checklist, Product Review, North Star)_
 _Status: aprobat pentru Etapa 1_
 _Document viu — se actualizează cu versiuni, nu se apără. Deciziile contrazise de date se schimbă aici, nu se ignoră._
+
+**Rolul documentului:** constituția produsului. Orice idee nouă (de la producător, de la ChatGPT, de la Claude) trece prin filtrul: ajută clientul principal? respectă principiile? se aliniază cu etapa curentă? putem măsura efectul? Dacă da → backlog. Dacă nu → rămâne o idee bună pentru mai târziu.
 
 ---
 
@@ -17,6 +19,25 @@ Nu pentru nutriționiști. Nu pentru culturiști. Nu pentru toată lumea. Pentru
 **Testul reușitei:** un utilizator obișnuit înțelege planul în 30 de secunde, iar un nutriționist nu s-ar jena să-l trimită unui client.
 
 **Ce NU facem încă** (interzis până la Etapa 4-5): macros/calorii afișate, coach mode, white-label, verticale pentru nutriționiști. Motivul: produsul pentru utilizatorul obișnuit nu e încă excelent.
+
+---
+
+## 1b. Product Principles (constituția)
+
+1. Fiecare ecran răspunde la: **„ce fac mai departe?"**
+2. Fiecare funcționalitate economisește **timp, bani sau efort mental** — altfel nu intră.
+3. **Nu optimizăm pentru noi.** Producătorul nu e utilizatorul; intuițiile noastre sunt ipoteze, nu dovezi.
+4. **Comportamentul utilizatorilor bate opiniile** — inclusiv ale noastre și ale AI-urilor.
+5. **Simplu înainte de puternic.**
+6. **Profesionist înainte de bogat în funcții.** Premium = eliminarea zgomotului, nu adăugarea de funcții.
+
+---
+
+## 1c. North Star
+
+> Scopul nu e să generăm PDF-uri. Scopul e: **un utilizator generează un plan, revine săptămâna următoare și generează altul.**
+
+Măsurabil de azi cu `mp:anon` id: % utilizatori cu `plan_generated` în două săptămâni consecutive. Dacă metrica asta crește constant, retenția, conversia și recomandările tind să urmeze. Toate pragurile din §7 sunt subordonate ei.
 
 ---
 
@@ -78,6 +99,15 @@ Plus un **Week Overview** deasupra planului: 7 zile · 14 mese · timp mediu de 
 ### Decizie de formă
 Direcția (carduri aerisit) e decisă. Forma exactă NU se cercetează înainte — se livrează o variantă rezonabilă în Etapa 1 și se pune pe masă la interviurile din Etapa 2. Oamenii reacționează mai bine la ceva concret decât la abstracțiuni.
 
+**Referințe de design** (inspirație, nu copiere — modelul lor de produs diferă): MyFitnessPal, Lifesum, Mealime, Paprika, AnyList, Apple Health. Ce împrumutăm: spațiu alb, tipografie disciplinată, o singură acțiune principală pe ecran.
+
+### Definition of Done — Planner
+- [ ] Responsive: mobil + desktop, fără layout shift (CLS)
+- [ ] Print decent (planul se poate lipi pe frigider)
+- [ ] Toate cele 14 limbi, fără overflow pe textele lungi (de, ru, ar RTL)
+- [ ] Lighthouse fără regresii vs. main
+- [ ] 5 utilizatori îl înțeleg fără explicații (testul din §8)
+
 ---
 
 ## 5. Specificația shopping list
@@ -132,10 +162,11 @@ PDF v2 există (`api/generate-pdf.js`, @react-pdf/renderer): masthead, hero cu s
 ### Ținta
 Documentul trebuie să pară **cumpărat, nu exportat** (referințe de calitate: MyFitnessPal, Lifesum): spațiu alb generos, tipografie disciplinată, iconografie consistentă, pagini clare. Structura rămâne: titlu + săptămână → rezumat → zile → shopping list la final.
 
-### Criterii de acceptare
+### Definition of Done — PDF
 - [ ] Un utilizator din testul de 5 persoane spune neîntrebat „l-aș printa / l-aș salva"
 - [ ] Vizual consistent cu plannerul de pe ecran (aceleași informații, aceeași ierarhie)
-- [ ] Trece `scripts/stress-test-pdf.mjs` pe toate limbile suportate (ar rămâne blocat client-side — bug bidi cunoscut)
+- [ ] Toate limbile suportate: fără overflow, fără text tăiat, fără pagini rupte la mijloc de secțiune (`wrap: false` pe blocuri)
+- [ ] Trece `scripts/stress-test-pdf.mjs` (ar rămâne blocat client-side — bug bidi cunoscut)
 
 ---
 
@@ -210,13 +241,34 @@ Fix → Test → Merge
 
 Fără implementare direct în `main` pe banda grea. O etapă e „Done" când îndeplinește criteriul de acceptare stabilit **înainte** — nu când build-ul e verde și nu când Claude spune „done".
 
+### Quality Checklist — înainte de orice merge pe banda grea
+
+```
+□ Responsive (mobil + desktop)      □ Localization (14 limbi, fără overflow)
+□ Accessibility (focus, contrast)   □ PDF neafectat (preview-pdf.mjs)
+□ Performance (Lighthouse, bundle)  □ Analytics (evenimentele încă emit)
+□ SEO (paginile generate intacte)   □ CI verde (count HTML, node --check, secrete)
+```
+
+Banda rapidă: doar testul relevant + CI. Checklist-ul complet pe fix-uri de o oră ar ucide viteza.
+
+### Product Review — la sfârșitul fiecărui sprint, 5 întrebări
+
+1. Un utilizator nou ar înțelege ce s-a livrat, fără explicații?
+2. Un părinte ocupat l-ar folosi?
+3. **Ce arată datele că utilizatorii au făcut diferit după acest sprint?** (nu „mi-ar plăcea mie?" — producătorul nu e utilizatorul, principiul 3)
+4. Economisește timp real?
+5. **Ce eliminăm?** (nu „ce mai adăugăm?")
+
 ---
 
 ## 11. Planul pe 30 de zile (de la 2026-07-08)
 
+Ordinea de implementare ≠ ordinea din user journey (plannerul e primul văzut, dar shopping list era quick win cu motor existent și risc zero — decizie închisă, implementată pe `feature/shopping-list-engine-ui`, 2026-07-08).
+
 | Săpt. | Livrabil | Bandă |
 |---|---|---|
-| 1 | Shopping list pe ecran conectată la motorul existent + evenimente analytics noi (`shopping_list_viewed`, `premium_viewed`) | grea (dar spec = acest document) |
+| 1 | ✅ Shopping list pe ecran conectată la motorul existent (LIVRAT 2026-07-08) + evenimente analytics noi (`shopping_list_viewed`, `premium_viewed`) | grea (dar spec = acest document) |
 | 2 | Planner redesign: carduri + Week Overview | grea |
 | 3 | PDF polish + testul cu 5 persoane | grea |
 | 4 | Interviuri finalizate + citirea pragurilor din §7 → **decizia de direcție (Etapa 3)** | — |
