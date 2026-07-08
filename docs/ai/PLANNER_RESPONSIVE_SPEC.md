@@ -115,3 +115,26 @@ După orice modificare se recalculează **imediat, fără reload**: costul zilei
 
 **Testul final**
 - [ ] 5 persoane (min. 2 necunoscute), pe telefonul lor: înțeleg și folosesc 🎲/✕/picker fără explicații; 4/5 răspund „da" la „ai avea încredere să folosești asta săptămâna viitoare?"
+
+## 9. Definition of Success (≠ Definition of Done)
+
+DoD (§8) = implementarea e corectă. DoS = implementarea și-a atins scopul. Se evaluează cu oameni reali, nu de către noi. Plannerul e gata de testare cu utilizatori doar când răspunsul e DA la toate:
+
+1. Un utilizator nou înțelege plannerul în sub 30 de secunde?
+2. Poate schimba o rețetă fără explicații?
+3. Poate găsi o rețetă după ingredient fără tutorial?
+4. Costul și lista de cumpărături se actualizează imediat și sunt credibile?
+5. Funcționează la fel de bine pe telefon ca pe desktop?
+6. După ce îi arăt plannerul două minute, îl poate folosi singur, fără să-i explic?
+
+DA la toate ≠ produs final. Înseamnă doar că următorul feedback merită să vină de la oameni reali, nu din presupunerile noastre.
+
+## 10. Plan de implementare în straturi (aprobat)
+
+| Zi | Strat | Conține |
+|---|---|---|
+| 1 | UI static | layout, carduri, Week Overview, responsive, RTL — fără interacțiuni |
+| 2 | Mutații | 🎲 reroll, ✕ remove, toast undo, recalculare instant |
+| 3 | Picker | modal/bottom sheet, search, recomandări, tastatură |
+| 4 | QA | telefon/tabletă/desktop, Safari/Chrome/Firefox/Edge, 14 limbi, checklist §8 |
+| 5 | Preview | deploy preview + primele priviri de oameni reali |
