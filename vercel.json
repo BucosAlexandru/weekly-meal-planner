@@ -1757,6 +1757,106 @@
       "source": "/hi/recipes/pepi-n/",
       "destination": "/hi/recipes/pepian/",
       "permanent": true
+    },
+    {
+      "source": "/ro/retete/pepi-n",
+      "destination": "/ro/retete/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pepi-n/",
+      "destination": "/ro/retete/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/pepi-n",
+      "destination": "/es/recetas/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/es/recetas/pepi-n/",
+      "destination": "/es/recetas/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/pepi-n",
+      "destination": "/fr/recettes/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/recettes/pepi-n/",
+      "destination": "/fr/recettes/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/pepi-n",
+      "destination": "/de/rezepte/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/de/rezepte/pepi-n/",
+      "destination": "/de/rezepte/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/pepi-n",
+      "destination": "/pt/receitas/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/receitas/pepi-n/",
+      "destination": "/pt/receitas/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/pepi-n",
+      "destination": "/ar/wasafat/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/wasafat/pepi-n/",
+      "destination": "/ar/wasafat/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/pepi-n",
+      "destination": "/zh/shipu/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/shipu/pepi-n/",
+      "destination": "/zh/shipu/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/pepi-n",
+      "destination": "/ja/reshipi/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/reshipi/pepi-n/",
+      "destination": "/ja/reshipi/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/pepi-n",
+      "destination": "/tr/tarifler/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/tarifler/pepi-n/",
+      "destination": "/tr/tarifler/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/pepi-n",
+      "destination": "/it/ricette/pepian/",
+      "permanent": true
+    },
+    {
+      "source": "/it/ricette/pepi-n/",
+      "destination": "/it/ricette/pepian/",
+      "permanent": true
     }
   ]
 }
