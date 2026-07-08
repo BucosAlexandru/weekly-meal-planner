@@ -1237,32 +1237,47 @@ document.addEventListener('DOMContentLoaded', () => {
   window._activeFilter = window._activeFilter || 'all';
 
   // ── Live shopping list renderer ───────────────────────────────
+  // Renders the SAME normalization-engine output the PDF uses
+  // (shopping-list.js: quantity aggregation, unit normalization,
+  // category grouping, localized labels) — previously the on-screen
+  // list was a naive lowercase-dedup + alphabetical flat list while
+  // the good engine only fed the PDF payload.
+  const SHOPPING_CATEGORY_EMOJI = {
+    vegetables: '🥬', meat: '🥩', dairy: '🥛', dry: '🌾',
+    sauces: '🫙', bakery: '🍞', misc: '🧺', pantry: '🧂',
+  };
+
   function updateShoppingList() {
     const listEl = document.getElementById('shopping-list');
     if (!listEl) return;
     const meals   = collectMeals();
-    const allIngr = new Map();
     let   totalCost = 0;
     let   matchedRecipes = 0;
 
+    // Hybrid-B alignment, same as buildPdfV2Payload(): the EN string
+    // drives parsing/canonical/category/quantity math (English-only
+    // engine); the locale string at the SAME index supplies the
+    // localized display label.
+    const ingredientPairs = [];
     meals.forEach(m => {
       [m.lunch, m.dinner].forEach(mealText => {
         if (!mealText) return;
         const recipeName = extractRecipeName(mealText).toLowerCase();
         const rec = (window.recipes || []).find(r => recipeNameMatches(r, lang, recipeName));
-        if (rec) {
-          matchedRecipes++;
-          if (rec.costRon) totalCost += rec.costRon;
-        }
-        const ingr = rec?.ingredients?.[lang] || rec?.ingredients?.ro || rec?.ingredients?.en || [];
-        ingr.forEach(i => {
-          const key = i.toLowerCase().replace(/\s*\(.*?\)/g,'').trim();
-          // Skip trivial pantry staples everyone has at home
-          const trivial = /^(ap[aă]|water|agua|eau|wasser|água|вода|水|お湯|su|acqua)$|^(sare|salt|sel|salz|sal|соль|塩|tuz)$|^(piper negru|black pepper|poivre noir|schwarzer pfeffer|pimienta negra|pepe nero|черный перец|黒胡椒)$/i;
-          if (key && !trivial.test(key) && !allIngr.has(key)) allIngr.set(key, i);
+        if (!rec) return;
+        matchedRecipes++;
+        if (rec.costRon) totalCost += rec.costRon;
+        const enArr  = rec.ingredients?.en || rec.ingredients?.ro || [];
+        const locArr = rec.ingredients?.[lang] || enArr;
+        enArr.forEach((en, i) => {
+          ingredientPairs.push({ en, loc: locArr[i] != null ? locArr[i] : en });
         });
       });
     });
+
+    let shoppingGroups = [];
+    try { shoppingGroups = buildShoppingFromRawIngredients(ingredientPairs, lang); }
+    catch (_) { shoppingGroups = []; }
 
     // Show/hide cost summary bar
     let costSummary = document.getElementById('shopping-cost-summary');
@@ -1284,23 +1299,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const countEl = document.getElementById('shopping-toggle-count');
-    if (allIngr.size === 0) {
+    const totalItems = shoppingGroups.reduce((n, g) => n + (g.items?.length || 0), 0);
+    if (totalItems === 0) {
       listEl.innerHTML = '';
       listEl.setAttribute('data-empty', 'true');
       if (countEl) countEl.textContent = '';
       return;
     }
     listEl.removeAttribute('data-empty');
-    const sorted = [...allIngr.values()].sort((a,b)=>a.localeCompare(b));
-    listEl.innerHTML = sorted.map(i =>
-      `<li class="shopping-item">
-         <label class="shopping-label">
-           <input type="checkbox" class="shopping-check">
-           <span>${i[0].toUpperCase() + i.slice(1)}</span>
-         </label>
-       </li>`
-    ).join('');
-    if (countEl) countEl.textContent = String(sorted.length);
+    const cap = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
+    listEl.innerHTML = shoppingGroups.map(g => {
+      const emoji = SHOPPING_CATEGORY_EMOJI[g.id] || '🛒';
+      const items = (g.items || []).map(it =>
+        `<li class="shopping-item">
+           <label class="shopping-label">
+             <input type="checkbox" class="shopping-check">
+             <span class="shopping-name">${cap(it.name)}</span>
+             ${it.qty ? `<span class="shopping-qty">${it.qty}</span>` : ''}
+           </label>
+         </li>`
+      ).join('');
+      return `<li class="shopping-group">
+        <div class="shopping-group-title">
+          <span class="sg-emoji" aria-hidden="true">${emoji}</span>
+          <span>${g.label || g.id || ''}</span>
+        </div>
+        <ul class="shopping-group-items list-unstyled">${items}</ul>
+      </li>`;
+    }).join('');
+    if (countEl) countEl.textContent = String(totalItems);
   }
 
   // ── Recipe meta chips (time / cost / tags) under each meal input ──────────
@@ -4819,6 +4846,46 @@ if (verifyBtn && emailInput && resultDiv) {
 
   // NOTE: hero-cta-btn listener is now attached inside renderPremiumHero()
   // (hero is rendered by applyTranslations below; the button doesn't exist here yet)
+
+  // ---------- FUNNEL OBSERVERS (analytics) ----------
+  // shopping_list_viewed: the shopping section scrolled into view while the
+  // grouped list is non-empty. premium_viewed: the premium upsell (pricing
+  // section, or the homepage preview panel) scrolled into view. Both fire at
+  // most once per page load and are whitelisted server-side in api/event.js.
+  function initFunnelObservers() {
+    if (!('IntersectionObserver' in window)) return;
+    const shopSection = document.querySelector('.app-section--shopping');
+    if (shopSection) {
+      let sent = false;
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting || sent) continue;
+          const items = document.querySelectorAll('#shopping-list .shopping-item').length;
+          if (!items) continue; // empty list = nothing was actually "viewed"
+          sent = true;
+          if (window.mpTrack) window.mpTrack('shopping_list_viewed', { items });
+          io.disconnect();
+        }
+      }, { threshold: 0.15 });
+      io.observe(shopSection);
+    }
+    const premiumEl = document.getElementById('pricing-section')
+      || document.getElementById('hp-premium-preview')
+      || document.querySelector('.hp-premium-preview');
+    if (premiumEl) {
+      let sent = false;
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting || sent) continue;
+          sent = true;
+          if (window.mpTrack) window.mpTrack('premium_viewed', { source: premiumEl.id || 'preview' });
+          io.disconnect();
+        }
+      }, { threshold: 0.15 });
+      io.observe(premiumEl);
+    }
+  }
+  initFunnelObservers();
 
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();

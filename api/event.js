@@ -1,7 +1,8 @@
 // api/event.js
-// Funnel Analytics MVP — ingestion endpoint for the 4 CLIENT-side funnel events.
+// Funnel Analytics MVP — ingestion endpoint for the CLIENT-side funnel events.
 //
-//   page_view · plan_generated · pdf_click · checkout_started
+//   page_view · plan_generated · shopping_list_viewed · premium_viewed
+//   · pdf_click · email_submitted · checkout_started
 //
 // `subscription_active` is intentionally NOT accepted here — it is written
 // server-side by api/stripe-webhook.js, the only place the (hashed) email is
@@ -21,6 +22,8 @@ const supabase = createClient(
 const CLIENT_EVENTS = new Set([
   'page_view',
   'plan_generated',
+  'shopping_list_viewed',
+  'premium_viewed',
   'pdf_click',
   'email_submitted',
   'checkout_started',
