@@ -25,11 +25,15 @@ Nu pentru nutriționiști. Nu pentru culturiști. Nu pentru toată lumea. Pentru
 ## 1b. Product Principles (constituția)
 
 1. Fiecare ecran răspunde la: **„ce fac mai departe?"**
-2. Fiecare funcționalitate economisește **timp, bani sau efort mental** — altfel nu intră.
+2. Fiecare funcționalitate economisește **timp, bani sau efort mental** — altfel nu intră. Testul: ce problemă rezolvă utilizatorului în sub 3 secunde? Dacă răspunsul cere un paragraf, funcția nu intră.
 3. **Nu optimizăm pentru noi.** Producătorul nu e utilizatorul; intuițiile noastre sunt ipoteze, nu dovezi.
 4. **Comportamentul utilizatorilor bate opiniile** — inclusiv ale noastre și ale AI-urilor.
 5. **Simplu înainte de puternic.**
 6. **Profesionist înainte de bogat în funcții.** Premium = eliminarea zgomotului, nu adăugarea de funcții.
+7. **Regula celor 2 secunde.** Orice acțiune frecventă (schimb, scot, adaug, văd costul) se rezolvă în max. 2 secunde. Acțiunile rare pot costa mai mult; cele frecvente, niciodată.
+8. **Fără formulare.** Plannerul se simte ca Notion/Apple Notes, nu ca un formular ANAF. Nicio acțiune de bază nu cere completat câmpuri.
+9. **Predictibil, nu inteligent.** După 5 apăsări pe 🎲, utilizatorul trebuie să poată spune singur regulile („evită duplicatele, ține costul"). Magia neexplicabilă distruge încrederea; regulile simțite o construiesc.
+10. **Constructor, nu generator.** Utilizatorul nu consumă un plan — își construiește planul (inclusiv ca instrument de negociere în familie: copilul nu vrea pește, soția vrea vegetarian). Generarea doar pornește procesul; atașamentul apare la finalizarea lui de către om.
 
 ---
 

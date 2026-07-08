@@ -90,6 +90,7 @@ Nimic nu așteaptă refresh. Nivelul 1 din straturi („pot să-mi fac planul?")
 ## 9. Backlog explicit (NU în v1, în ordinea de după 22 iulie)
 
 1. **Istoric / „Folosește planul de săptămâna trecută"** — cel mai puternic răspuns la „de ce revin luni dimineață?"; localStorage, ieftin. Primul după deadline.
+1b. **Panou lateral de detaliu rețetă** (poză, ingrediente, Înlocuiește / Vezi rețeta — fără a părăsi plannerul). Schimbă centrul de greutate al aplicației de pe pagina de rețetă pe planner. Candidat puternic post-22, dar în v1 click pe nume = picker (acțiunea frecventă e înlocuirea → regula celor 2 secunde); detaliul e acțiune rară și își așteaptă rândul.
 2. Favorite ❤️ (localStorage; devine și sursă de date pentru recomandări reale).
 3. kcal/proteine pe zi — după auditul câmpului `nutrition` din recipes.js (acoperire + corectitudine). Faza 2 din roadmap.
 4. Reroll cu criterii de proteină/bucătărie — după completarea metadatei.
