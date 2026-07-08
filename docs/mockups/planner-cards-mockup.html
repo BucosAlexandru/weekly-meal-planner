@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mockup — Planner carduri (spec §4, pentru aprobare)</title>
+<title>Mockup v3 — Planner dinamic (interactiv, pentru aprobare)</title>
 <style>
   :root {
     --color-brand: #24712A; --color-brand-light: #f0fdf4; --color-brand-soft: #dcfce7;
@@ -22,137 +22,241 @@
     padding: 10px 14px; font-size: .85rem; color: #92400e; margin-bottom: 22px;
   }
 
-  /* ── Week Overview ── */
   h1 { font-size: 1.35rem; margin: 0 0 4px; }
   .week-sub { color: var(--ink-3); font-size: .9rem; margin: 0 0 16px; }
-  .overview {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 26px;
-  }
-  .ov-card {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
-    padding: 12px 14px;
-  }
+  .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 26px; }
+  .ov-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
   .ov-num { font-size: 1.25rem; font-weight: 700; color: var(--color-brand); }
   .ov-label { font-size: .74rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
   @media (max-width: 560px) { .overview { grid-template-columns: repeat(2, 1fr); } }
 
-  /* ── Day cards ── */
   .days { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 700px) { .days { grid-template-columns: 1fr; } }
   .day-card {
     background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
-    overflow: hidden;
-    display: flex; flex-direction: column;
+    overflow: hidden; display: flex; flex-direction: column;
   }
   .day-head {
     display: flex; align-items: baseline; justify-content: space-between;
-    padding: 10px 16px; background: var(--color-brand-light);
-    border-bottom: 1px solid var(--line);
+    padding: 10px 16px; background: var(--color-brand-light); border-bottom: 1px solid var(--line);
   }
   .day-name { font-weight: 700; font-size: .95rem; }
   .day-cost { font-size: .78rem; color: var(--ink-3); }
-  /* flex:1 → prânzul și cina ocupă înălțimi egale în card, deci „Cină"
-     pornește la aceeași linie pe toate cardurile din același rând. */
-  .meal { padding: 12px 16px; flex: 1; }
+  .meal { padding: 12px 16px; flex: 1; position: relative; }
   .meal + .meal { border-top: 1px dashed var(--line); }
   .meal-kind {
     font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
     color: var(--ink-4); display: flex; align-items: center; gap: 5px; margin-bottom: 3px;
   }
-  .meal-name { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
-  .meal-meta { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip {
-    font-size: .72rem; color: var(--ink-2); background: var(--bg);
-    border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px;
+  .meal-name {
+    font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 5px;
+    cursor: pointer; display: inline-block; border-radius: 6px;
   }
+  .meal-name:hover { color: var(--color-brand); }
+  .meal-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: .72rem; color: var(--ink-2); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
   .chip--tag { background: var(--color-brand-soft); border-color: transparent; color: #166534; }
-  /* Stare goală = slot de completat, vizibil intenționat (nu o greșeală):
-     chenar punctat + „+", ca un buton de adăugare. */
+
+  /* ── Acțiuni per masă: 🎲 alta / ✕ scoate. Vizibile la hover pe desktop,
+       mereu vizibile (discret) pe touch. ── */
+  .meal-actions { position: absolute; top: 10px; right: 12px; display: flex; gap: 4px; }
+  .ma-btn {
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink-3);
+    border-radius: 8px; width: 28px; height: 28px; font-size: .85rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; padding: 0;
+    transition: all .12s;
+  }
+  .ma-btn:hover { border-color: var(--color-brand); color: var(--color-brand); background: var(--color-brand-light); }
+  @media (hover: hover) {
+    .meal-actions { opacity: 0; transition: opacity .15s; }
+    .meal:hover .meal-actions { opacity: 1; }
+  }
+
   .empty-slot {
     display: flex; align-items: center; gap: 8px;
     border: 1.5px dashed var(--line); border-radius: 10px;
     padding: 9px 12px; margin-top: 2px;
-    color: var(--ink-4); font-size: .9rem; cursor: pointer;
+    color: var(--ink-4); font-size: .9rem; cursor: pointer; background: none; width: 100%;
+    font-family: inherit;
   }
   .empty-slot:hover { border-color: var(--color-brand); color: var(--color-brand); background: var(--color-brand-light); }
   .empty-slot .plus { font-size: 1.1rem; font-weight: 700; line-height: 1; }
+
+  /* ── Picker (search după rețetă SAU ingredient) ── */
+  .picker-backdrop {
+    position: fixed; inset: 0; background: rgba(17,24,39,.45);
+    display: none; align-items: flex-start; justify-content: center; padding: 8vh 16px 16px; z-index: 50;
+  }
+  .picker-backdrop.open { display: flex; }
+  .picker {
+    background: var(--surface); border-radius: 16px; width: 100%; max-width: 480px;
+    max-height: 70vh; display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,.2);
+  }
+  .picker-head { padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
+  .picker-title { font-size: .8rem; color: var(--ink-3); margin-bottom: 8px; }
+  .picker-search {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 10px;
+    padding: 9px 12px; font-size: .95rem; outline: none; font-family: inherit;
+  }
+  .picker-search:focus { border-color: var(--color-brand); }
+  .picker-list { overflow-y: auto; padding: 6px; }
+  .pick-item {
+    display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+    background: none; border: 0; border-radius: 10px; padding: 9px 10px; cursor: pointer;
+    font-family: inherit;
+  }
+  .pick-item:hover { background: var(--color-brand-light); }
+  .pick-name { font-weight: 600; font-size: .92rem; color: var(--ink); }
+  .pick-meta { font-size: .75rem; color: var(--ink-3); margin-top: 1px; }
+  .pick-why { margin-left: auto; font-size: .72rem; color: var(--ink-4); white-space: nowrap; }
+  .picker-empty { padding: 20px; text-align: center; color: var(--ink-4); font-size: .88rem; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="mock-note">
-    <strong>MOCKUP pentru aprobare (v2)</strong> — nu e implementare. Spec §4: carduri pe zi, Week Overview,
-    max 2 taguri per masă, fără stele/scoruri. Joi-prânz arată intenționat <em>starea goală</em>
-    (slot „＋ adaugă"): utilizatorii reali vor avea zile necompletate și cardul trebuie să arate bine și atunci.
-    Redimensionează fereastra pentru varianta mobil.
+    <strong>MOCKUP v3 — interactiv.</strong> Încearcă gesturile: <strong>🎲</strong> = altă rețetă instant (respectă filtrul),
+    <strong>✕</strong> = scoate masa, <strong>click pe numele rețetei</strong> sau pe slotul gol = căutare după rețetă
+    <em>sau ingredient</em> (scrie „pui" sau „orez"). Pe desktop, acțiunile apar la hover. Costul zilei se recalculează.
   </div>
 
   <h1>Planul săptămânii</h1>
-  <p class="week-sub">6 – 12 iulie · 14 mese planificate</p>
+  <p class="week-sub">6 – 12 iulie · <span id="meal-count">7</span> mese planificate</p>
 
   <div class="overview">
-    <div class="ov-card"><div class="ov-num">7</div><div class="ov-label">zile</div></div>
-    <div class="ov-card"><div class="ov-num">~34 min</div><div class="ov-label">timp mediu</div></div>
-    <div class="ov-card"><div class="ov-num">~320 RON</div><div class="ov-label">cost estimat</div></div>
-    <div class="ov-card"><div class="ov-num">9</div><div class="ov-label">bucătării</div></div>
+    <div class="ov-card"><div class="ov-num">4</div><div class="ov-label">zile</div></div>
+    <div class="ov-card"><div class="ov-num" id="ov-time">~32 min</div><div class="ov-label">timp mediu</div></div>
+    <div class="ov-card"><div class="ov-num" id="ov-cost">~168 RON</div><div class="ov-label">cost estimat</div></div>
+    <div class="ov-card"><div class="ov-num" id="ov-cuisines">7</div><div class="ov-label">bucătării</div></div>
   </div>
 
-  <div class="days">
-    <div class="day-card">
-      <div class="day-head"><span class="day-name">Luni</span><span class="day-cost">~44 RON</span></div>
-      <div class="meal">
-        <div class="meal-kind">🍱 Prânz</div>
-        <div class="meal-name">Onigiri</div>
-        <div class="meal-meta"><span class="chip">⏱️ 20 min</span><span class="chip">~18 RON</span><span class="chip chip--tag">⚡ Rapid</span></div>
-      </div>
-      <div class="meal">
-        <div class="meal-kind">🌙 Cină</div>
-        <div class="meal-name">Bacalhau à Brás</div>
-        <div class="meal-meta"><span class="chip">⏱️ 45 min</span><span class="chip">~26 RON</span></div>
-      </div>
-    </div>
+  <div class="days" id="days"></div>
+</div>
 
-    <div class="day-card">
-      <div class="day-head"><span class="day-name">Marți</span><span class="day-cost">~39 RON</span></div>
-      <div class="meal">
-        <div class="meal-kind">🍱 Prânz</div>
-        <div class="meal-name">Nasi Goreng</div>
-        <div class="meal-meta"><span class="chip">⏱️ 25 min</span><span class="chip">~17 RON</span><span class="chip chip--tag">🍲 One-pot</span></div>
-      </div>
-      <div class="meal">
-        <div class="meal-kind">🌙 Cină</div>
-        <div class="meal-name">Okonomiyaki</div>
-        <div class="meal-meta"><span class="chip">⏱️ 30 min</span><span class="chip">~22 RON</span><span class="chip chip--tag">🌱 Vegetarian</span></div>
-      </div>
+<div class="picker-backdrop" id="picker-backdrop">
+  <div class="picker">
+    <div class="picker-head">
+      <div class="picker-title" id="picker-title">Alege rețeta pentru Luni · Prânz</div>
+      <input class="picker-search" id="picker-search" type="search"
+             placeholder="Caută rețetă sau ingredient… (ex: pui, orez, dovlecei)">
     </div>
-
-    <div class="day-card">
-      <div class="day-head"><span class="day-name">Miercuri</span><span class="day-cost">~47 RON</span></div>
-      <div class="meal">
-        <div class="meal-kind">🍱 Prânz</div>
-        <div class="meal-name">Spaghetti Carbonara</div>
-        <div class="meal-meta"><span class="chip">⏱️ 25 min</span><span class="chip">~24 RON</span></div>
-      </div>
-      <div class="meal">
-        <div class="meal-kind">🌙 Cină</div>
-        <div class="meal-name">Ciorbă de burtă</div>
-        <div class="meal-meta"><span class="chip">⏱️ 60 min</span><span class="chip">~23 RON</span><span class="chip chip--tag">👨‍👩‍👧 Familie</span></div>
-      </div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-head"><span class="day-name">Joi</span><span class="day-cost">~15 RON</span></div>
-      <div class="meal">
-        <div class="meal-kind">🍱 Prânz</div>
-        <div class="empty-slot"><span class="plus">＋</span> Alege o rețetă sau generează</div>
-      </div>
-      <div class="meal">
-        <div class="meal-kind">🌙 Cină</div>
-        <div class="meal-name">Shakshuka</div>
-        <div class="meal-meta"><span class="chip">⏱️ 30 min</span><span class="chip">~15 RON</span><span class="chip chip--tag">💲 Buget</span></div>
-      </div>
-    </div>
+    <div class="picker-list" id="picker-list"></div>
   </div>
 </div>
+
+<script>
+// Demo data — în implementare vine din recipes.js + recipes-meta.js
+const RECIPES = [
+  { name:'Onigiri', time:20, cost:18, tag:'⚡ Rapid', ingr:['orez','somon','alge nori','susan'] },
+  { name:'Bacalhau à Brás', time:45, cost:26, tag:null, ingr:['cod','cartofi','ouă','ceapă','măsline'] },
+  { name:'Nasi Goreng', time:25, cost:17, tag:'🍲 One-pot', ingr:['orez','pui','ouă','sos de soia','ceapă'] },
+  { name:'Okonomiyaki', time:30, cost:22, tag:'🌱 Vegetarian', ingr:['varză','făină','ouă','ceapă verde'] },
+  { name:'Spaghetti Carbonara', time:25, cost:24, tag:null, ingr:['spaghete','guanciale','ouă','pecorino'] },
+  { name:'Ciorbă de burtă', time:60, cost:23, tag:'👨‍👩‍👧 Familie', ingr:['burtă de vită','smântână','usturoi','oțet'] },
+  { name:'Shakshuka', time:30, cost:15, tag:'💲 Buget', ingr:['ouă','roșii','ardei','chimion'] },
+  { name:'Pui cu orez ca la mama', time:40, cost:19, tag:'👨‍👩‍👧 Familie', ingr:['pui','orez','morcovi','ceapă'] },
+  { name:'Zucchini fritters', time:25, cost:12, tag:'💲 Buget', ingr:['dovlecei','făină','ouă','mărar'] },
+  { name:'Pad Thai', time:30, cost:21, tag:'⚡ Rapid', ingr:['tăiței de orez','pui','arahide','lime'] },
+  { name:'Chili con carne', time:50, cost:25, tag:'🍲 One-pot', ingr:['vită tocată','fasole roșie','roșii','ardei'] },
+  { name:'Tortilla española', time:35, cost:13, tag:'🌱 Vegetarian', ingr:['cartofi','ouă','ceapă'] },
+];
+
+// Starea planului (4 zile în mockup)
+const plan = [
+  { day:'Luni',     lunch:0,  dinner:1 },
+  { day:'Marți',    lunch:2,  dinner:3 },
+  { day:'Miercuri', lunch:4,  dinner:5 },
+  { day:'Joi',      lunch:null, dinner:6 },
+];
+const KIND_LABEL = { lunch:'🍱 Prânz', dinner:'🌙 Cină' };
+let pickTarget = null;
+
+function chipHtml(r) {
+  return `<span class="chip">⏱️ ${r.time} min</span><span class="chip">~${r.cost} RON</span>`
+       + (r.tag ? `<span class="chip chip--tag">${r.tag}</span>` : '');
+}
+function render() {
+  const days = document.getElementById('days');
+  days.innerHTML = plan.map((d, di) => {
+    const cost = ['lunch','dinner'].reduce((s,k)=> s + (d[k]!=null ? RECIPES[d[k]].cost : 0), 0);
+    const meals = ['lunch','dinner'].map(k => {
+      const r = d[k]!=null ? RECIPES[d[k]] : null;
+      if (!r) return `<div class="meal">
+        <div class="meal-kind">${KIND_LABEL[k]}</div>
+        <button class="empty-slot" onclick="openPicker(${di},'${k}')"><span class="plus">＋</span> Alege o rețetă sau generează</button>
+      </div>`;
+      return `<div class="meal">
+        <div class="meal-actions">
+          <button class="ma-btn" title="Altă rețetă (instant)" onclick="reroll(${di},'${k}')">🎲</button>
+          <button class="ma-btn" title="Scoate masa" onclick="removeMeal(${di},'${k}')">✕</button>
+        </div>
+        <div class="meal-kind">${KIND_LABEL[k]}</div>
+        <div class="meal-name" title="Click: caută altă rețetă" onclick="openPicker(${di},'${k}')">${r.name}</div>
+        <div class="meal-meta">${chipHtml(r)}</div>
+      </div>`;
+    }).join('');
+    return `<div class="day-card">
+      <div class="day-head"><span class="day-name">${d.day}</span><span class="day-cost">${cost ? '~'+cost+' RON' : '—'}</span></div>
+      ${meals}
+    </div>`;
+  }).join('');
+
+  const used = plan.flatMap(d => [d.lunch, d.dinner]).filter(x => x != null);
+  document.getElementById('meal-count').textContent = used.length;
+  const avg = used.length ? Math.round(used.reduce((s,i)=>s+RECIPES[i].time,0)/used.length) : 0;
+  document.getElementById('ov-time').textContent = '~' + avg + ' min';
+  document.getElementById('ov-cost').textContent = '~' + used.reduce((s,i)=>s+RECIPES[i].cost,0)*2 + ' RON';
+  document.getElementById('ov-cuisines').textContent = new Set(used).size;
+}
+
+// 🎲 Nivel 1: un click = altă rețetă (fără dialoguri). Evită duplicatele din plan.
+function reroll(di, kind) {
+  const used = new Set(plan.flatMap(d => [d.lunch, d.dinner]).filter(x => x != null));
+  const pool = RECIPES.map((_, i) => i).filter(i => !used.has(i));
+  if (!pool.length) return;
+  plan[di][kind] = pool[Math.floor(Math.random() * pool.length)];
+  render();
+}
+// ✕ Nivel 3: scoate masa → slotul redevine „＋ adaugă"
+function removeMeal(di, kind) { plan[di][kind] = null; render(); }
+
+// 🔍 Nivel 2: picker cu search după nume SAU ingredient
+function openPicker(di, kind) {
+  pickTarget = { di, kind };
+  document.getElementById('picker-title').textContent =
+    `Alege rețeta pentru ${plan[di].day} · ${KIND_LABEL[kind].replace(/^\S+ /,'')}`;
+  document.getElementById('picker-backdrop').classList.add('open');
+  const s = document.getElementById('picker-search');
+  s.value = ''; renderPickList(''); s.focus();
+}
+function renderPickList(q) {
+  q = q.trim().toLowerCase();
+  const hits = RECIPES.map((r, i) => {
+    if (!q) return { i, why: null };
+    if (r.name.toLowerCase().includes(q)) return { i, why: null };
+    const ing = r.ingr.find(x => x.includes(q));
+    return ing ? { i, why: 'conține ' + ing } : null;
+  }).filter(Boolean);
+  const list = document.getElementById('picker-list');
+  list.innerHTML = hits.length ? hits.map(({ i, why }) => {
+    const r = RECIPES[i];
+    return `<button class="pick-item" onclick="pick(${i})">
+      <span><span class="pick-name">${r.name}</span>
+      <div class="pick-meta">⏱️ ${r.time} min · ~${r.cost} RON${r.tag ? ' · ' + r.tag : ''}</div></span>
+      ${why ? `<span class="pick-why">${why}</span>` : ''}
+    </button>`;
+  }).join('') : `<div class="picker-empty">Nimic pentru „${q}". Încearcă un ingredient: pui, orez, ouă…</div>`;
+}
+function pick(i) {
+  if (pickTarget) { plan[pickTarget.di][pickTarget.kind] = i; pickTarget = null; }
+  closePicker(); render();
+}
+function closePicker() { document.getElementById('picker-backdrop').classList.remove('open'); }
+document.getElementById('picker-search').addEventListener('input', e => renderPickList(e.target.value));
+document.getElementById('picker-backdrop').addEventListener('click', e => { if (e.target.id === 'picker-backdrop') closePicker(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePicker(); });
+render();
+</script>
 </body>
 </html>
