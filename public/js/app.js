@@ -428,11 +428,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const dayName = weekdays[idx];
       const rerollLabel = `${t('pw.reroll')} — ${dayName}, ${label}`;
       const removeLabel = `${t('pw.remove')} — ${dayName}, ${label}`;
+      const addLabel    = kind === 'lunch' ? t('pw.addLunch') : t('pw.addDinner');
       // The pre-created #rmeta-… div is picked up by updateAllRecipeMeta() (it
       // looks the id up before appending next to the input), so the meta chips
       // land BELOW the input instead of inside the .input-group.
       // Action buttons (Day 2) render always but are CSS-hidden while the slot
-      // is empty (.pw-meal without .pw-filled) — empty-slot UI is Day 3.
+      // is empty (.pw-meal without .pw-filled).
+      // Day 3 display layer: the input REMAINS the data layer — collectMeals(),
+      // updateShoppingList(), the PDF payload and deep links all read it, and
+      // setSlotValue() writes it — but it is visually hidden on week cards
+      // (.pw-visually-hidden keeps it in the DOM, functional and focusable
+      // programmatically). What the user sees/clicks instead: the recipe-name
+      // button (filled → picker in replace mode) or the empty-slot button
+      // (empty → picker in add mode, copy per PLANNER_BRAIN_SPEC §8). CSS
+      // toggles between the two off .pw-filled; text is synced by
+      // updateAllRecipeMeta()/setSlotValue().
       return `
         <div class="pw-meal">
           <div class="pw-actions">
@@ -442,9 +452,14 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="pw-meal-kind"><span aria-hidden="true">${emoji}</span> ${label}</div>
           <!-- Mic removed on cards (producer decision, 8 iul): dictation is
                redundant once the Day 3 picker lands; table modes keep it. -->
-          <div class="input-group input-group-sm">
-            <input id="${inputId}" class="form-control" placeholder="${ph}">
+          <div class="input-group input-group-sm pw-visually-hidden" aria-hidden="true">
+            <input id="${inputId}" class="form-control" placeholder="${ph}" tabindex="-1">
           </div>
+          <button type="button" class="pw-meal-name" data-input="${inputId}" title="${t('pw.searchHint')}"></button>
+          <button type="button" class="pw-empty-slot" data-input="${inputId}" aria-label="${addLabel} — ${dayName}">
+            <span class="pw-es-add"><span class="pw-es-plus" aria-hidden="true">＋</span> ${addLabel}</span>
+            <span class="pw-es-hint">${t('pw.searchHint')}</span>
+          </button>
           <div id="rmeta-${inputId}" class="pw-meta"></div>
         </div>`;
     };
@@ -477,14 +492,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWeekOverview();
     setTimeout(updateAllRecipeMeta, 0);
 
-    // Day 2: one delegated listener on the persistent container handles every
-    // 🎲/✕ click — survives innerHTML re-renders and needs no per-button wiring.
+    // Day 2/3: one delegated listener on the persistent container handles every
+    // 🎲/✕/name/empty-slot click — survives innerHTML re-renders, no per-button
+    // wiring. Name button → picker in replace mode; empty slot → add mode.
     if (!cardsEl.dataset.pwActionsWired) {
       cardsEl.addEventListener('click', (e) => {
-        const btn = e.target.closest ? e.target.closest('.pw-btn') : null;
+        const btn = e.target.closest ? e.target.closest('.pw-btn, .pw-meal-name, .pw-empty-slot') : null;
         if (!btn) return;
-        if (btn.dataset.act === 'reroll') rerollMeal(btn.dataset.input, btn);
-        else if (btn.dataset.act === 'remove') removeMealSlot(btn.dataset.input);
+        if (btn.classList.contains('pw-btn')) {
+          if (btn.dataset.act === 'reroll') rerollMeal(btn.dataset.input, btn);
+          else if (btn.dataset.act === 'remove') removeMealSlot(btn.dataset.input);
+        } else {
+          openPwPicker(btn.dataset.input, btn.classList.contains('pw-empty-slot') ? 'add' : 'replace');
+        }
       });
       cardsEl.dataset.pwActionsWired = '1';
     }
@@ -532,10 +552,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // recalculation logic anywhere in this section.
   function setSlotValue(input, value) {
     input.value = value;
-    // Immediate visual state for the action buttons; updateAllRecipeMeta()
-    // re-asserts this on its own (debounced) pass.
-    input.closest('.pw-meal')?.classList.toggle('pw-filled', !!value.trim());
+    // Immediate visual state (action buttons + Day 3 name/empty display swap);
+    // updateAllRecipeMeta() re-asserts both on its own (debounced) pass.
+    syncSlotDisplay(input);
     input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  // Day 3 display layer: keep the visible slot UI (recipe-name button vs
+  // empty-slot button) in sync with the hidden input that owns the data.
+  // Fallback safety: free text that doesn't resolve to a recipe is shown
+  // verbatim in the name button.
+  function syncSlotDisplay(input) {
+    const meal = input.closest('.pw-meal');
+    if (!meal) return; // table modes ('meal'/'day') have no card wrapper
+    const filled = !!input.value.trim();
+    meal.classList.toggle('pw-filled', filled);
+    const nameBtn = meal.querySelector('.pw-meal-name');
+    if (nameBtn) {
+      const rec = filled ? getRecipeByInput(input.value) : null;
+      const name = rec ? getRecipeText(rec, lang) : input.value.trim();
+      if (nameBtn.textContent !== name) nameBtn.textContent = name;
+    }
   }
 
   // The exact pool generateRandomMenu() draws from: active filter chip
@@ -705,6 +742,369 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('pw-toast-show');
     clearTimeout(_pwToastHideTimer);
     _pwToastHideTimer = setTimeout(hidePwToast, 6000);
+  }
+
+  // ── Day 3: recipe picker — centered modal ≥700px / bottom sheet <700px ─────
+  // Specs: PLANNER_BRAIN_SPEC §3 (search ranking, DECIDED), §4 (recommenda-
+  // tions), §5 (manual duplicates allowed, with hint), §8 (empty-slot copy);
+  // PLANNER_RESPONSIVE_SPEC §4 (surfaces, touch targets), §5 (dialog roles,
+  // keyboard, focus return). JS-created singleton, no HTML file edits,
+  // everything `pw-` namespaced. Selection goes through setSlotValue() → the
+  // full recalculation chain (§7) — no plan logic lives in the picker itself.
+  let _pwPicker = null; // { inputId, mode:'add'|'replace', items, hi, scrollY, seq }
+
+  function pwEsc(s) {
+    return String(s).replace(/[&<>"']/g, c =>
+      ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+  }
+
+  // Diacritic-insensitive normalization (§3): NFD + strip combining marks
+  // covers ș/ț/ă/ö/ç/é/ñ…; non-Latin scripts (ru/ar/zh/ja/hi/ko) pass through
+  // unchanged, so the plain includes() path still matches them.
+  function pwNorm(s) {
+    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  function pwRecipeName(r) {
+    return r?.name?.[lang] || r?.name?.en || r?.name?.ro || '';
+  }
+
+  // Search corpus: same base getGenerationPool() draws from, but WITHOUT the
+  // active-filter restriction — the filter shapes GENERATION; explicit search
+  // is user intent and wins (searching "pui" with the veg chip on still finds
+  // chicken). Budget mode keeps its own corpus: that's a different catalog,
+  // not a preference filter.
+  async function getPickerCorpus() {
+    await ensureMainRecipes();
+    if (window.isBudgetMenu) {
+      await ensureBudgetRecipes();
+      return recipesBudget;
+    }
+    return recipesMain;
+  }
+
+  // recipe id → weekday name of its first slot, for the "already in plan ·
+  // Monday" hint (§5 — manual duplicates are ALLOWED, just hinted).
+  function pwPlanDayByRecipe() {
+    const map = new Map();
+    const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
+    for (let d = 1; d <= 7; d++) {
+      ['l', 'c'].forEach(sfx => {
+        const val = document.getElementById(`d${d}${sfx}`)?.value.trim() || '';
+        if (!val) return;
+        const rec = getRecipeByInput(val);
+        if (rec && !map.has(rec.id)) map.set(rec.id, weekdays[d - 1]);
+      });
+    }
+    return map;
+  }
+
+  // §3 exactly: tier 1 name-starts-with > tier 2 name-contains > tier 3
+  // ingredient-contains; inside each tier, cooking time ascending (missing
+  // time sinks to the end). Name/ingredients in the active locale with EN
+  // fallback. Cap 30. No invented scores, no popularity.
+  function pwSearchRecipes(corpus, q) {
+    const nq = pwNorm(q);
+    const tiers = [[], [], []];
+    for (const r of corpus) {
+      const name = pwNorm(pwRecipeName(r));
+      if (!name) continue;
+      if (name.startsWith(nq)) { tiers[0].push({ r }); continue; }
+      if (name.includes(nq)) { tiers[1].push({ r }); continue; }
+      const ingr = r.ingredients?.[lang] || r.ingredients?.en || r.ingredients?.ro || [];
+      if (ingr.some(x => pwNorm(x).includes(nq))) tiers[2].push({ r, byIngredient: true });
+    }
+    const byTime = (a, b) => (a.r.time ?? 9999) - (b.r.time ?? 9999);
+    tiers.forEach(tier => tier.sort(byTime));
+    return tiers[0].concat(tiers[1], tiers[2]).slice(0, 30);
+  }
+
+  // §4: replace mode → "Potrivite cu planul tău": filter-respecting pool, not
+  // in plan, time ±15 min AND cost ±10 RON vs the current recipe, sorted by
+  // cost proximity, max 3. Add mode → "Rapide și ieftine": top 3 by
+  // time + costRon. Honest labels only — no taste profile exists yet.
+  async function pwRecommendations(mode, currentRec) {
+    const pool = await getGenerationPool();
+    const used = recipeIdsInPlan();
+    const free = pool.filter(r => !used.has(r.id));
+    if (mode === 'replace' && currentRec) {
+      return free
+        .filter(r =>
+          currentRec.time != null && r.time != null && Math.abs(r.time - currentRec.time) <= 15 &&
+          currentRec.costRon != null && r.costRon != null && Math.abs(r.costRon - currentRec.costRon) <= 10)
+        .sort((a, b) =>
+          Math.abs(a.costRon - currentRec.costRon) - Math.abs(b.costRon - currentRec.costRon))
+        .slice(0, 3);
+    }
+    return free.slice()
+      .sort((a, b) => ((a.time ?? 999) + (a.costRon ?? 999)) - ((b.time ?? 999) + (b.costRon ?? 999)))
+      .slice(0, 3);
+  }
+
+  function ensurePwPicker() {
+    let backdrop = document.getElementById('pw-picker-backdrop');
+    if (backdrop) return backdrop;
+    backdrop = document.createElement('div');
+    backdrop.id = 'pw-picker-backdrop';
+    backdrop.className = 'pw-picker-backdrop';
+    backdrop.innerHTML = `
+      <div class="pw-picker" role="dialog" aria-modal="true" aria-labelledby="pw-picker-title">
+        <div class="pw-picker-head">
+          <div class="pw-picker-grip" aria-hidden="true"></div>
+          <div class="pw-picker-title" id="pw-picker-title"></div>
+          <input class="pw-picker-search" id="pw-picker-search" type="search"
+                 autocomplete="off" aria-controls="pw-picker-list">
+        </div>
+        <div class="pw-picker-list" id="pw-picker-list" role="listbox" aria-labelledby="pw-picker-title"></div>
+      </div>`;
+    document.body.appendChild(backdrop);
+
+    const search = backdrop.querySelector('#pw-picker-search');
+    const list = backdrop.querySelector('#pw-picker-list');
+    search.addEventListener('input', () => { renderPwPickerList(search.value); });
+    // Backdrop click closes; clicks inside the dialog don't reach the backdrop.
+    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closePwPicker(); });
+    backdrop.addEventListener('keydown', pwPickerKeydown);
+    list.addEventListener('click', (e) => {
+      const item = e.target.closest ? e.target.closest('.pw-pick-item') : null;
+      if (item) pwPickItem(parseInt(item.dataset.idx, 10));
+    });
+    // Tabbing onto a result syncs the aria-selected highlight with focus.
+    list.addEventListener('focusin', (e) => {
+      const item = e.target.closest ? e.target.closest('.pw-pick-item') : null;
+      if (item && _pwPicker) { _pwPicker.hi = parseInt(item.dataset.idx, 10); paintPwSelection(false); }
+    });
+    return backdrop;
+  }
+
+  async function openPwPicker(inputId, mode) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    const backdrop = ensurePwPicker();
+    // Surface decided by matchMedia AT OPEN TIME (responsive spec §4): bottom
+    // sheet under the same 700px threshold the card grid uses.
+    backdrop.classList.toggle('pw-picker--sheet', window.matchMedia('(max-width: 699px)').matches);
+
+    // d{n}l / d{n}c → day 1-7 + lunch/dinner, reusing the Day 1 i18n keys.
+    const day = parseInt(inputId.slice(1), 10);
+    const kind = inputId.endsWith('l') ? 'lunch' : 'dinner';
+    const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
+    document.getElementById('pw-picker-title').textContent =
+      `${weekdays[day - 1] || ''} · ${kind === 'lunch' ? t('pw.lunch') : t('pw.dinner')}`;
+
+    const search = document.getElementById('pw-picker-search');
+    search.value = '';
+    search.placeholder = t('pw.searchPh');
+    search.setAttribute('aria-label', t('pw.searchHint'));
+    search.removeAttribute('aria-activedescendant');
+
+    _pwPicker = { inputId, mode, items: [], hi: -1, scrollY: window.scrollY || 0, seq: 0 };
+    // Body scroll lock that preserves the scroll position (restored on close).
+    document.body.style.top = `-${_pwPicker.scrollY}px`;
+    document.body.classList.add('pw-noscroll');
+    backdrop.classList.add('pw-open');
+
+    renderPwPickerList('');
+    // Focus after the sheet slide-up (~60ms) so the mobile keyboard doesn't
+    // jump mid-animation (responsive spec §4).
+    setTimeout(() => { if (_pwPicker) search.focus(); }, 60);
+  }
+
+  function closePwPicker() {
+    const backdrop = document.getElementById('pw-picker-backdrop');
+    if (!backdrop || !backdrop.classList.contains('pw-open')) return;
+    const st = _pwPicker;
+    _pwPicker = null;
+    backdrop.classList.remove('pw-open');
+    document.body.classList.remove('pw-noscroll');
+    document.body.style.top = '';
+    if (st) window.scrollTo(0, st.scrollY);
+    // On ANY close, focus returns to the edited slot's visible trigger
+    // (responsive spec §5). After a pick the slot just flipped to filled, so
+    // resolve the button by the CURRENT state, not the one that opened us.
+    const meal = st ? document.getElementById(st.inputId)?.closest('.pw-meal') : null;
+    if (meal) {
+      const btn = meal.classList.contains('pw-filled')
+        ? meal.querySelector('.pw-meal-name')
+        : meal.querySelector('.pw-empty-slot');
+      if (btn) btn.focus();
+    }
+  }
+
+  // One render for both states: query ≥ 1 char → §3 ranked search over the
+  // full corpus; empty query → browse mode: §4 recommendations + "Toate
+  // rețetele" (filter-respecting pool, time asc, cap 30).
+  async function renderPwPickerList(rawQuery) {
+    const st = _pwPicker;
+    if (!st) return;
+    const seq = ++st.seq;
+    const list = document.getElementById('pw-picker-list');
+    const query = String(rawQuery || '').trim();
+    const dayMap = pwPlanDayByRecipe();
+
+    const entries = [];
+    let html = '';
+    const headerHtml = (txt) =>
+      `<div class="pw-picker-header" role="presentation">${pwEsc(txt)}</div>`;
+    const itemHtml = (r, why) => {
+      const idx = entries.length;
+      entries.push(r);
+      const metaParts = [];
+      if (r.time) metaParts.push(`⏱️ ${r.time} min`);
+      if (r.costRon) metaParts.push(formatCost(r.costRon));
+      const tagId = r.tags && r.tags[0];
+      if (tagId) metaParts.push((TAG_LABELS[tagId] || {})[lang] || (TAG_LABELS[tagId] || {}).en || tagId);
+      const already = dayMap.has(r.id)
+        ? t('pw.alreadyIn').replace('{day}', dayMap.get(r.id)) : '';
+      return `
+        <button type="button" class="pw-pick-item" id="pw-opt-${idx}" role="option"
+                aria-selected="false" data-idx="${idx}">
+          <span class="pw-pick-main">
+            <span class="pw-pick-name">${pwEsc(pwRecipeName(r))}</span>
+            ${metaParts.length ? `<span class="pw-pick-meta">${pwEsc(metaParts.join(' · '))}</span>` : ''}
+            ${already ? `<span class="pw-pick-already">${pwEsc(already)}</span>` : ''}
+          </span>
+          ${why ? `<span class="pw-pick-why">${pwEsc(why)}</span>` : ''}
+        </button>`;
+    };
+
+    if (query.length >= 1) {
+      const corpus = await getPickerCorpus();
+      if (st !== _pwPicker || seq !== st.seq) return; // closed / superseded
+      const hits = pwSearchRecipes(corpus, query);
+      if (!hits.length) {
+        st.items = []; st.hi = -1;
+        list.innerHTML = `<div class="pw-picker-empty">${pwEsc(t('pw.noResults'))}</div>`;
+        paintPwSelection(false);
+        return;
+      }
+      // Ingredient-tier badge shows the matched term — "conține pui" (§3).
+      const whyTxt = t('pw.contains').replace('{ing}', query);
+      hits.forEach(h => { html += itemHtml(h.r, h.byIngredient ? whyTxt : ''); });
+    } else {
+      const inputEl = document.getElementById(st.inputId);
+      const currentRec = st.mode === 'replace' ? getRecipeByInput(inputEl?.value || '') : null;
+      const recs = await pwRecommendations(st.mode, currentRec);
+      const pool = await getGenerationPool();
+      if (st !== _pwPicker || seq !== st.seq) return;
+      if (recs.length) {
+        html += headerHtml(st.mode === 'replace' ? t('pw.recommended') : t('pw.quickCheap'));
+        recs.forEach(r => { html += itemHtml(r, ''); });
+      }
+      html += headerHtml(t('pw.allRecipes'));
+      pool.slice()
+        .sort((a, b) => (a.time ?? 9999) - (b.time ?? 9999))
+        .slice(0, 30)
+        .forEach(r => { html += itemHtml(r, ''); });
+    }
+
+    st.items = entries;
+    st.hi = entries.length ? 0 : -1;
+    list.innerHTML = html;
+    list.scrollTop = 0;
+    paintPwSelection(false);
+  }
+
+  function paintPwSelection(scroll) {
+    const st = _pwPicker;
+    if (!st) return;
+    document.querySelectorAll('#pw-picker-list .pw-pick-item').forEach(el => {
+      el.setAttribute('aria-selected', String(parseInt(el.dataset.idx, 10) === st.hi));
+    });
+    const search = document.getElementById('pw-picker-search');
+    if (search) {
+      if (st.hi >= 0) search.setAttribute('aria-activedescendant', `pw-opt-${st.hi}`);
+      else search.removeAttribute('aria-activedescendant');
+    }
+    if (scroll && st.hi >= 0) {
+      const el = document.getElementById(`pw-opt-${st.hi}`);
+      if (el && el.scrollIntoView) el.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function movePwHighlight(dir) {
+    const st = _pwPicker;
+    if (!st || !st.items.length) return;
+    const n = st.items.length;
+    st.hi = ((st.hi + dir) % n + n) % n;
+    paintPwSelection(true);
+  }
+
+  // Keyboard (responsive spec §5): ↑/↓ move the aria-selected highlight,
+  // Enter picks it, Escape closes, Tab is a simple two-stop trap between the
+  // search field and the results list (in-list navigation is the arrows' job).
+  function pwPickerKeydown(e) {
+    const st = _pwPicker;
+    if (!st) return;
+    const search = document.getElementById('pw-picker-search');
+    if (e.key === 'Escape') { e.preventDefault(); closePwPicker(); return; }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      movePwHighlight(e.key === 'ArrowDown' ? 1 : -1);
+      return;
+    }
+    if (e.key === 'Enter') {
+      // On a result button, Enter = native click (list delegation handles it);
+      // from the search field it picks the highlighted option.
+      if (document.activeElement === search && st.hi >= 0) {
+        e.preventDefault();
+        pwPickItem(st.hi);
+      }
+      return;
+    }
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      if (document.activeElement === search) {
+        const target = document.getElementById(`pw-opt-${Math.max(st.hi, 0)}`)
+          || document.querySelector('#pw-picker-list .pw-pick-item');
+        if (target) target.focus();
+      } else if (search) {
+        search.focus();
+      }
+    }
+  }
+
+  // Selection: write through setSlotValue() — chips, Week Overview, shopping
+  // list and PDF payload all update through the existing wiring (§7) — then
+  // show the Day 2 change toast (undo restores the previous value, including
+  // the empty state in add mode) and close with focus return.
+  function pwPickItem(idx) {
+    const st = _pwPicker;
+    if (!st || idx < 0 || !st.items[idx]) return;
+    const rec = st.items[idx];
+    const input = document.getElementById(st.inputId);
+    if (!input) { closePwPicker(); return; }
+    const prevValue = input.value;
+    const wasFilled = !!prevValue.trim();
+    const prevRec = wasFilled ? getRecipeByInput(prevValue) : null;
+    const newText = getRecipeText(rec, lang);
+    if (newText && newText !== prevValue) {
+      setSlotValue(input, newText);
+      if (wasFilled) {
+        // Replace: old → new with honest deltas (brain spec §2).
+        const oldName = getRecipeText(prevRec, lang) || extractRecipeName(prevValue) || prevValue;
+        showChangeToast({
+          inputId: st.inputId,
+          prevValue,
+          text: [
+            `${oldName} → ${newText}`,
+            prevRec && prevRec.costRon != null && rec.costRon != null
+              ? pwCostDelta(rec.costRon - prevRec.costRon) : '',
+            pwTimeDelta(prevRec?.time, rec.time),
+          ].filter(Boolean).join(' · '),
+        });
+      } else {
+        // Add: name + cost added — no new i18n key needed; undo (prevValue
+        // '') restores the empty slot through the same mechanism.
+        showChangeToast({
+          inputId: st.inputId,
+          prevValue,
+          text: [newText, rec.costRon != null ? pwCostDelta(rec.costRon) : '']
+            .filter(Boolean).join(' · '),
+        });
+      }
+    }
+    closePwPicker();
   }
 
   function startDictation(inputId) {
@@ -1674,10 +2074,11 @@ document.addEventListener('DOMContentLoaded', () => {
       ['l','c'].forEach(type => {
         const input = document.getElementById(`d${day}${type}`);
         if (!input) return;
-        // Day 2: filled slots show the 🎲/✕ actions (CSS keys off .pw-filled).
-        // Covers every fill path — typing, dictation, generate, deep links —
-        // since they all funnel through this refresh. No-op in table mode.
-        input.closest('.pw-meal')?.classList.toggle('pw-filled', !!input.value.trim());
+        // Day 2/3: filled slots show the 🎲/✕ actions (CSS keys off .pw-filled)
+        // and the recipe-name button; empty slots show the add button. Covers
+        // every fill path — typing, dictation, generate, deep links — since
+        // they all funnel through this refresh. No-op in table mode.
+        syncSlotDisplay(input);
         const metaId = `rmeta-d${day}${type}`;
         let metaEl = document.getElementById(metaId);
         const rec = getRecipeByInput(input.value);
