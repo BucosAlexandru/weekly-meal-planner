@@ -2608,6 +2608,19 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
 .pw-meta { margin-top: 6px; }
 .pw-meta:empty { display: none; }
 .pw-meta .recipe-meta-row { margin-top: 0; }
+/* Simetrie între carduri (feedback producător, 8 iul): sloturile au înălțime
+   uniformă indiferent de conținut — max 4 chips (timp + cost + 2 taguri,
+   spec §4), descrierea plafonată la 2 rânduri, înălțime minimă fixă pe meta.
+   Astfel „Dinner" începe la același nivel pe cardurile din același rând. */
+.pw-meal .pw-meta { min-height: 4.5rem; }
+.pw-meal .rmeta-chip:nth-child(n+5) { display: none; }
+.pw-meal .rmeta-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.2em;
+}
 
 /* ── Day 2: per-meal actions 🎲/✕ (spec RESPONSIVE §3-5, BRAIN §1) ──────────
    Touch-first: always visible, 44px targets. Pointer devices (real hover):

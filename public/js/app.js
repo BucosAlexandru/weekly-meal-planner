@@ -440,11 +440,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <button type="button" class="pw-btn" data-act="remove" data-input="${inputId}" aria-label="${removeLabel}" title="${removeLabel}"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
           </div>
           <div class="pw-meal-kind"><span aria-hidden="true">${emoji}</span> ${label}</div>
+          <!-- Mic removed on cards (producer decision, 8 iul): dictation is
+               redundant once the Day 3 picker lands; table modes keep it. -->
           <div class="input-group input-group-sm">
             <input id="${inputId}" class="form-control" placeholder="${ph}">
-            <button type="button" class="btn btn-outline-secondary" onclick="startDictation('${inputId}')">
-              <i class="bi bi-mic-fill" aria-hidden="true"></i>
-            </button>
           </div>
           <div id="rmeta-${inputId}" class="pw-meta"></div>
         </div>`;
