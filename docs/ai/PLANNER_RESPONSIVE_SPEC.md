@@ -20,12 +20,14 @@ Două praguri, trei layout-uri. Capabilitatea de hover se detectează prin media
 /* coloane */
 .days { grid-template-columns: 1fr; }
 @media (min-width: 700px) { .days { grid-template-columns: 1fr 1fr; } }
-/* hover-reveal DOAR pe dispozitive cu hover real */
+/* acțiunile: MEREU vizibile; pe pointer discrete în repaus, pline la hover */
 @media (hover: hover) and (pointer: fine) {
-  .meal-actions { opacity: 0; }
+  .meal-actions { opacity: .55; }
   .meal:hover .meal-actions, .meal:focus-within .meal-actions { opacity: 1; }
 }
 ```
+
+_Amendament 8 iul (feedback producător la testul Day 2): hover-reveal complet (opacity 0) respins — funcție nedescoperibilă. Acțiunile rămân mereu vizibile, atenuate în repaus. Iconografie: bi-shuffle / bi-x-lg (Bootstrap Icons, consistent cu butonul Generate), nu emoji._
 
 Motivarea pragului 700px: un card de zi are nevoie de min. ~320px pentru nume de rețete lungi (de, ru) + chips fără wrap urât; 2×320 + gap + padding ≈ 700.
 

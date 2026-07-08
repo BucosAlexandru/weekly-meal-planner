@@ -2650,9 +2650,11 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
    overlap the input (44px button + 8px offset < 12px pad + 48px row). */
 .pw-meal.pw-filled .pw-meal-kind { min-height: 48px; align-items: flex-start; }
 @media (hover: hover) and (pointer: fine) {
-  .pw-btn { width: 28px; height: 28px; font-size: .85rem; }
-  .pw-meal.pw-filled .pw-meal-kind { min-height: 30px; }
-  .pw-actions { opacity: 0; transition: opacity .15s; }
+  .pw-btn { width: 30px; height: 30px; font-size: .85rem; }
+  .pw-meal.pw-filled .pw-meal-kind { min-height: 32px; }
+  /* Producer feedback (8 iul, test Day 2): hover-only = nedescoperibil.
+     Butoanele rămân MEREU vizibile, discrete în repaus, pline la hover. */
+  .pw-actions { opacity: .55; transition: opacity .15s; }
   .pw-meal:hover .pw-actions,
   .pw-meal:focus-within .pw-actions { opacity: 1; }
 }

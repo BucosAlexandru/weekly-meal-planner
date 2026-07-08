@@ -436,8 +436,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <div class="pw-meal">
           <div class="pw-actions">
-            <button type="button" class="pw-btn" data-act="reroll" data-input="${inputId}" aria-label="${rerollLabel}" title="${rerollLabel}"><span aria-hidden="true">🎲</span></button>
-            <button type="button" class="pw-btn" data-act="remove" data-input="${inputId}" aria-label="${removeLabel}" title="${removeLabel}"><span aria-hidden="true">✕</span></button>
+            <button type="button" class="pw-btn" data-act="reroll" data-input="${inputId}" aria-label="${rerollLabel}" title="${rerollLabel}"><i class="bi bi-shuffle" aria-hidden="true"></i></button>
+            <button type="button" class="pw-btn" data-act="remove" data-input="${inputId}" aria-label="${removeLabel}" title="${removeLabel}"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
           </div>
           <div class="pw-meal-kind"><span aria-hidden="true">${emoji}</span> ${label}</div>
           <div class="input-group input-group-sm">
