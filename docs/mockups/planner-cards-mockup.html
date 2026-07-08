@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="ro" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mockup v3 — Planner dinamic (interactiv, pentru aprobare)</title>
+<title>Mockup v4 — Planner responsive (spec PLANNER_RESPONSIVE_SPEC.md)</title>
 <style>
   :root {
     --color-brand: #24712A; --color-brand-light: #f0fdf4; --color-brand-soft: #dcfce7;
@@ -14,24 +14,46 @@
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    padding: 24px 16px 60px;
+    padding: 12px 16px 60px;
   }
-  .wrap { max-width: 860px; margin: 0 auto; }
-  .mock-note {
-    background: #fffbeb; border: 1px dashed var(--amber); border-radius: 10px;
-    padding: 10px 14px; font-size: .85rem; color: #92400e; margin-bottom: 22px;
+
+  /* ── Toolbar simulator (doar pentru mockup, nu intră în producție) ── */
+  .simbar {
+    max-width: 900px; margin: 0 auto 14px; background: #111827; color: #e5e7eb;
+    border-radius: 12px; padding: 10px 14px; font-size: .8rem;
+    display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
+  }
+  .simbar .grp { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+  .simbar .grp b { margin-right: 2px; font-weight: 600; color: #9ca3af; }
+  .simbar button {
+    background: #1f2937; color: #e5e7eb; border: 1px solid #374151; border-radius: 7px;
+    padding: 4px 10px; font-size: .78rem; cursor: pointer; font-family: inherit;
+  }
+  .simbar button.on { background: var(--color-brand); border-color: var(--color-brand); color: #fff; }
+
+  /* ── Scena simulată ── */
+  .stage { max-width: 860px; margin: 0 auto; transition: max-width .2s; }
+  body[data-sim="desktop"] .stage { max-width: 860px; }
+  body[data-sim="tablet"]  .stage { max-width: 720px; }
+  body[data-sim="mobile"]  .stage { max-width: 390px; }
+  body:not([data-sim="auto"]) .stage {
+    border: 1px solid #d1d5db; border-radius: 18px; padding: 16px 12px; background: var(--bg);
+    box-shadow: 0 6px 24px rgba(0,0,0,.07);
   }
 
   h1 { font-size: 1.35rem; margin: 0 0 4px; }
   .week-sub { color: var(--ink-3); font-size: .9rem; margin: 0 0 16px; }
-  .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 26px; }
-  .ov-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
-  .ov-num { font-size: 1.25rem; font-weight: 700; color: var(--color-brand); }
-  .ov-label { font-size: .74rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
-  @media (max-width: 560px) { .overview { grid-template-columns: repeat(2, 1fr); } }
 
+  /* Overview: 2×2 pe mobil, 4 pe rând altfel (spec §1) */
+  .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  body[data-cols="1"] .overview { grid-template-columns: repeat(2, 1fr); }
+  .ov-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .ov-num { font-size: 1.2rem; font-weight: 700; color: var(--color-brand); }
+  .ov-label { font-size: .72rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+
+  /* Carduri: 1 col sub 700px simulat, 2 col altfel (spec §1-2) */
   .days { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  @media (max-width: 700px) { .days { grid-template-columns: 1fr; } }
+  body[data-cols="1"] .days { grid-template-columns: 1fr; }
   .day-card {
     background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
     overflow: hidden; display: flex; flex-direction: column;
@@ -49,40 +71,45 @@
     color: var(--ink-4); display: flex; align-items: center; gap: 5px; margin-bottom: 3px;
   }
   .meal-name {
-    font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 5px;
-    cursor: pointer; display: inline-block; border-radius: 6px;
+    font-size: 1rem; font-weight: 600; color: var(--ink); margin: 0 0 5px; padding: 0;
+    background: none; border: 0; cursor: pointer; text-align: start; font-family: inherit;
+    display: block; max-width: calc(100% - 70px); line-height: 1.3;
+    /* nume lungi: wrap, max ~2 rânduri vizual, fără ellipsis care ascunde (spec §2, §6) */
   }
-  .meal-name:hover { color: var(--color-brand); }
+  .meal-name:hover, .meal-name:focus-visible { color: var(--color-brand); }
+  .meal-name:focus-visible, .ma-btn:focus-visible, .empty-slot:focus-visible, .pick-item:focus-visible {
+    outline: 2px solid var(--color-brand); outline-offset: 2px;
+  }
   .meal-meta { display: flex; flex-wrap: wrap; gap: 6px; }
   .chip { font-size: .72rem; color: var(--ink-2); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
   .chip--tag { background: var(--color-brand-soft); border-color: transparent; color: #166534; }
 
-  /* ── Acțiuni per masă: 🎲 alta / ✕ scoate. Vizibile la hover pe desktop,
-       mereu vizibile (discret) pe touch. ── */
-  .meal-actions { position: absolute; top: 10px; right: 12px; display: flex; gap: 4px; }
+  /* Acțiuni: proprietăți logice pentru RTL (spec §6) */
+  .meal-actions { position: absolute; top: 10px; inset-inline-end: 12px; display: flex; gap: 4px; }
   .ma-btn {
     border: 1px solid var(--line); background: var(--surface); color: var(--ink-3);
     border-radius: 8px; width: 28px; height: 28px; font-size: .85rem; cursor: pointer;
-    display: flex; align-items: center; justify-content: center; padding: 0;
-    transition: all .12s;
+    display: flex; align-items: center; justify-content: center; padding: 0; transition: all .12s;
   }
   .ma-btn:hover { border-color: var(--color-brand); color: var(--color-brand); background: var(--color-brand-light); }
-  @media (hover: hover) {
-    .meal-actions { opacity: 0; transition: opacity .15s; }
-    .meal:hover .meal-actions { opacity: 1; }
-  }
+  /* hover-reveal DOAR în modul pointer (spec §1); pe touch mereu vizibile + 44px */
+  body[data-input="pointer"] .meal-actions { opacity: 0; transition: opacity .15s; }
+  body[data-input="pointer"] .meal:hover .meal-actions,
+  body[data-input="pointer"] .meal:focus-within .meal-actions,
+  body[data-input="pointer"] .meal.force-hover .meal-actions { opacity: 1; }
+  body[data-input="touch"] .ma-btn { width: 40px; height: 40px; font-size: 1rem; }
 
   .empty-slot {
     display: flex; align-items: center; gap: 8px;
     border: 1.5px dashed var(--line); border-radius: 10px;
-    padding: 9px 12px; margin-top: 2px;
+    padding: 10px 12px; margin-top: 2px; min-height: 44px;
     color: var(--ink-4); font-size: .9rem; cursor: pointer; background: none; width: 100%;
-    font-family: inherit;
+    font-family: inherit; text-align: start;
   }
   .empty-slot:hover { border-color: var(--color-brand); color: var(--color-brand); background: var(--color-brand-light); }
   .empty-slot .plus { font-size: 1.1rem; font-weight: 700; line-height: 1; }
 
-  /* ── Picker (search după rețetă SAU ingredient) ── */
+  /* ── Picker: modal centrat (pointer/lat) sau bottom sheet (1 col) — spec §4 ── */
   .picker-backdrop {
     position: fixed; inset: 0; background: rgba(17,24,39,.45);
     display: none; align-items: flex-start; justify-content: center; padding: 8vh 16px 16px; z-index: 50;
@@ -93,38 +120,67 @@
     max-height: 70vh; display: flex; flex-direction: column; overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,.2);
   }
+  body[data-cols="1"] .picker-backdrop { align-items: flex-end; padding: 0; }
+  body[data-cols="1"] .picker {
+    max-width: none; max-height: 85vh; border-radius: 18px 18px 0 0;
+    animation: sheet-up .18s ease-out;
+  }
+  @keyframes sheet-up { from { transform: translateY(30%); opacity: .6; } to { transform: none; opacity: 1; } }
   .picker-head { padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
+  body[data-cols="1"] .picker-head::before {
+    content: ""; display: block; width: 36px; height: 4px; border-radius: 2px;
+    background: var(--line); margin: 0 auto 10px;
+  }
   .picker-title { font-size: .8rem; color: var(--ink-3); margin-bottom: 8px; }
   .picker-search {
     width: 100%; border: 1.5px solid var(--line); border-radius: 10px;
-    padding: 9px 12px; font-size: .95rem; outline: none; font-family: inherit;
+    padding: 10px 12px; font-size: 1rem; outline: none; font-family: inherit;
   }
   .picker-search:focus { border-color: var(--color-brand); }
   .picker-list { overflow-y: auto; padding: 6px; }
   .pick-item {
-    display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
-    background: none; border: 0; border-radius: 10px; padding: 9px 10px; cursor: pointer;
-    font-family: inherit;
+    display: flex; align-items: center; gap: 10px; width: 100%; text-align: start;
+    background: none; border: 0; border-radius: 10px; padding: 10px; min-height: 44px;
+    cursor: pointer; font-family: inherit;
   }
-  .pick-item:hover { background: var(--color-brand-light); }
+  .pick-item:hover, .pick-item[aria-selected="true"] { background: var(--color-brand-light); }
+  .pick-item[aria-selected="true"] { box-shadow: inset 0 0 0 1.5px var(--color-brand); }
   .pick-name { font-weight: 600; font-size: .92rem; color: var(--ink); }
   .pick-meta { font-size: .75rem; color: var(--ink-3); margin-top: 1px; }
-  .pick-why { margin-left: auto; font-size: .72rem; color: var(--ink-4); white-space: nowrap; }
+  .pick-why { margin-inline-start: auto; font-size: .72rem; color: var(--ink-4); white-space: nowrap; }
   .picker-empty { padding: 20px; text-align: center; color: var(--ink-4); font-size: .88rem; }
 </style>
 </head>
-<body>
-<div class="wrap">
-  <div class="mock-note">
-    <strong>MOCKUP v3 — interactiv.</strong> Încearcă gesturile: <strong>🎲</strong> = altă rețetă instant (respectă filtrul),
-    <strong>✕</strong> = scoate masa, <strong>click pe numele rețetei</strong> sau pe slotul gol = căutare după rețetă
-    <em>sau ingredient</em> (scrie „pui" sau „orez"). Pe desktop, acțiunile apar la hover. Costul zilei se recalculează.
-  </div>
+<body data-sim="auto" data-cols="2" data-input="pointer">
 
+<div class="simbar" dir="ltr">
+  <div class="grp"><b>Layout:</b>
+    <button data-sim-btn="auto" class="on" onclick="setSim('auto')">Auto (fereastră)</button>
+    <button data-sim-btn="desktop" onclick="setSim('desktop')">Desktop 860</button>
+    <button data-sim-btn="tablet" onclick="setSim('tablet')">Tabletă 720</button>
+    <button data-sim-btn="mobile" onclick="setSim('mobile')">Mobil 390</button>
+  </div>
+  <div class="grp"><b>Input:</b>
+    <button data-input-btn="pointer" class="on" onclick="setInput('pointer')">Mouse (hover)</button>
+    <button data-input-btn="touch" onclick="setInput('touch')">Touch (44px)</button>
+  </div>
+  <div class="grp"><b>Stări:</b>
+    <button onclick="stateNormal()">Normal</button>
+    <button onclick="stateHover()">Hover</button>
+    <button onclick="openPicker(0,'lunch', document.body)">Picker</button>
+    <button onclick="stateNoResults()">Fără rezultate</button>
+  </div>
+  <div class="grp"><b>Direcție:</b>
+    <button data-dir-btn="ltr" class="on" onclick="setDir('ltr')">LTR</button>
+    <button data-dir-btn="rtl" onclick="setDir('rtl')">RTL (ar)</button>
+  </div>
+</div>
+
+<div class="stage">
   <h1>Planul săptămânii</h1>
   <p class="week-sub">6 – 12 iulie · <span id="meal-count">7</span> mese planificate</p>
 
-  <div class="overview">
+  <div class="overview" aria-live="polite">
     <div class="ov-card"><div class="ov-num">4</div><div class="ov-label">zile</div></div>
     <div class="ov-card"><div class="ov-num" id="ov-time">~32 min</div><div class="ov-label">timp mediu</div></div>
     <div class="ov-card"><div class="ov-num" id="ov-cost">~168 RON</div><div class="ov-label">cost estimat</div></div>
@@ -135,24 +191,26 @@
 </div>
 
 <div class="picker-backdrop" id="picker-backdrop">
-  <div class="picker">
+  <div class="picker" role="dialog" aria-modal="true" aria-labelledby="picker-title">
     <div class="picker-head">
-      <div class="picker-title" id="picker-title">Alege rețeta pentru Luni · Prânz</div>
+      <div class="picker-title" id="picker-title">Alege rețeta</div>
       <input class="picker-search" id="picker-search" type="search"
-             placeholder="Caută rețetă sau ingredient… (ex: pui, orez, dovlecei)">
+             aria-label="Caută rețetă sau ingredient"
+             placeholder="Caută rețetă sau ingredient… (ex: pui, orez)">
     </div>
-    <div class="picker-list" id="picker-list"></div>
+    <div class="picker-list" id="picker-list" role="listbox" aria-label="Rezultate"></div>
   </div>
 </div>
 
 <script>
-// Demo data — în implementare vine din recipes.js + recipes-meta.js
+// ─── Date demo (în implementare: recipes.js + recipes-meta.js) ───
+// Include intenționat un nume DE foarte lung pentru testul de wrap (spec §6).
 const RECIPES = [
   { name:'Onigiri', time:20, cost:18, tag:'⚡ Rapid', ingr:['orez','somon','alge nori','susan'] },
   { name:'Bacalhau à Brás', time:45, cost:26, tag:null, ingr:['cod','cartofi','ouă','ceapă','măsline'] },
   { name:'Nasi Goreng', time:25, cost:17, tag:'🍲 One-pot', ingr:['orez','pui','ouă','sos de soia','ceapă'] },
   { name:'Okonomiyaki', time:30, cost:22, tag:'🌱 Vegetarian', ingr:['varză','făină','ouă','ceapă verde'] },
-  { name:'Spaghetti Carbonara', time:25, cost:24, tag:null, ingr:['spaghete','guanciale','ouă','pecorino'] },
+  { name:'Hühnerfrikassee mit Champignons und Spargel', time:45, cost:27, tag:null, ingr:['pui','ciuperci','sparanghel','smântână'] },
   { name:'Ciorbă de burtă', time:60, cost:23, tag:'👨‍👩‍👧 Familie', ingr:['burtă de vită','smântână','usturoi','oțet'] },
   { name:'Shakshuka', time:30, cost:15, tag:'💲 Buget', ingr:['ouă','roșii','ardei','chimion'] },
   { name:'Pui cu orez ca la mama', time:40, cost:19, tag:'👨‍👩‍👧 Familie', ingr:['pui','orez','morcovi','ceapă'] },
@@ -161,17 +219,50 @@ const RECIPES = [
   { name:'Chili con carne', time:50, cost:25, tag:'🍲 One-pot', ingr:['vită tocată','fasole roșie','roșii','ardei'] },
   { name:'Tortilla española', time:35, cost:13, tag:'🌱 Vegetarian', ingr:['cartofi','ouă','ceapă'] },
 ];
-
-// Starea planului (4 zile în mockup)
 const plan = [
-  { day:'Luni',     lunch:0,  dinner:1 },
-  { day:'Marți',    lunch:2,  dinner:3 },
-  { day:'Miercuri', lunch:4,  dinner:5 },
+  { day:'Luni',     lunch:0,    dinner:1 },
+  { day:'Marți',    lunch:2,    dinner:3 },
+  { day:'Miercuri', lunch:4,    dinner:5 },
   { day:'Joi',      lunch:null, dinner:6 },
 ];
 const KIND_LABEL = { lunch:'🍱 Prânz', dinner:'🌙 Cină' };
-let pickTarget = null;
 
+// ─── Simulator (doar mockup) ───
+function mark(sel, attr, val) {
+  document.querySelectorAll(`[${attr}]`).forEach(b => b.classList.toggle('on', b.getAttribute(attr) === val));
+}
+function setSim(mode) {
+  document.body.dataset.sim = mode; mark(null, 'data-sim-btn', mode); applyAuto();
+}
+function setInput(mode) { document.body.dataset.input = mode; mark(null, 'data-input-btn', mode); }
+function setDir(dir) { document.documentElement.dir = dir; mark(null, 'data-dir-btn', dir); }
+function applyAuto() {
+  const sim = document.body.dataset.sim;
+  // Pragul din spec: 700px → 1 coloană + bottom sheet
+  const narrow = sim === 'mobile' || (sim === 'auto' && window.innerWidth < 700);
+  document.body.dataset.cols = narrow ? '1' : '2';
+  if (sim === 'auto') setInputAuto();
+}
+function setInputAuto() {
+  const touch = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  document.body.dataset.input = touch ? 'touch' : 'pointer';
+  mark(null, 'data-input-btn', document.body.dataset.input);
+}
+window.addEventListener('resize', applyAuto);
+
+// ─── Stări demonstrabile (spec §7) ───
+function stateNormal() { closePicker(); document.querySelectorAll('.force-hover').forEach(el => el.classList.remove('force-hover')); }
+function stateHover() {
+  stateNormal(); setInput('pointer');
+  const first = document.querySelector('.meal'); if (first) first.classList.add('force-hover');
+}
+function stateNoResults() {
+  openPicker(0, 'lunch', document.body);
+  const s = document.getElementById('picker-search');
+  s.value = 'xyzq'; renderPickList('xyzq');
+}
+
+// ─── Render planner ───
 function chipHtml(r) {
   return `<span class="chip">⏱️ ${r.time} min</span><span class="chip">~${r.cost} RON</span>`
        + (r.tag ? `<span class="chip chip--tag">${r.tag}</span>` : '');
@@ -182,17 +273,19 @@ function render() {
     const cost = ['lunch','dinner'].reduce((s,k)=> s + (d[k]!=null ? RECIPES[d[k]].cost : 0), 0);
     const meals = ['lunch','dinner'].map(k => {
       const r = d[k]!=null ? RECIPES[d[k]] : null;
+      const slotId = `slot-${di}-${k}`;
       if (!r) return `<div class="meal">
         <div class="meal-kind">${KIND_LABEL[k]}</div>
-        <button class="empty-slot" onclick="openPicker(${di},'${k}')"><span class="plus">＋</span> Alege o rețetă sau generează</button>
+        <button class="empty-slot" id="${slotId}" aria-label="Adaugă rețetă pentru ${d.day} ${k==='lunch'?'prânz':'cină'}"
+                onclick="openPicker(${di},'${k}',this)"><span class="plus" aria-hidden="true">＋</span> Alege o rețetă sau generează</button>
       </div>`;
       return `<div class="meal">
         <div class="meal-actions">
-          <button class="ma-btn" title="Altă rețetă (instant)" onclick="reroll(${di},'${k}')">🎲</button>
-          <button class="ma-btn" title="Scoate masa" onclick="removeMeal(${di},'${k}')">✕</button>
+          <button class="ma-btn" aria-label="Altă rețetă pentru ${d.day} ${k==='lunch'?'prânz':'cină'}" title="Altă rețetă (instant)" onclick="reroll(${di},'${k}')"><span aria-hidden="true">🎲</span></button>
+          <button class="ma-btn" aria-label="Scoate masa de ${k==='lunch'?'prânz':'cină'} de ${d.day}" title="Scoate masa" onclick="removeMeal(${di},'${k}')"><span aria-hidden="true">✕</span></button>
         </div>
         <div class="meal-kind">${KIND_LABEL[k]}</div>
-        <div class="meal-name" title="Click: caută altă rețetă" onclick="openPicker(${di},'${k}')">${r.name}</div>
+        <button class="meal-name" id="${slotId}" aria-label="Schimbă rețeta: ${r.name}" title="Click: caută altă rețetă" onclick="openPicker(${di},'${k}',this)">${r.name}</button>
         <div class="meal-meta">${chipHtml(r)}</div>
       </div>`;
     }).join('');
@@ -210,53 +303,74 @@ function render() {
   document.getElementById('ov-cuisines').textContent = new Set(used).size;
 }
 
-// 🎲 Nivel 1: un click = altă rețetă (fără dialoguri). Evită duplicatele din plan.
+// ─── Interacțiuni (spec §3) ───
 function reroll(di, kind) {
   const used = new Set(plan.flatMap(d => [d.lunch, d.dinner]).filter(x => x != null));
   const pool = RECIPES.map((_, i) => i).filter(i => !used.has(i));
-  if (!pool.length) return;
+  if (!pool.length) return; // spec §7.6: feedback discret în implementare
   plan[di][kind] = pool[Math.floor(Math.random() * pool.length)];
   render();
 }
-// ✕ Nivel 3: scoate masa → slotul redevine „＋ adaugă"
 function removeMeal(di, kind) { plan[di][kind] = null; render(); }
 
-// 🔍 Nivel 2: picker cu search după nume SAU ingredient
-function openPicker(di, kind) {
+// ─── Picker cu tastatură (spec §4-5) ───
+let pickTarget = null, returnFocusEl = null, hits = [], hi = -1;
+function openPicker(di, kind, trigger) {
   pickTarget = { di, kind };
+  returnFocusEl = trigger && trigger.id ? trigger : document.getElementById(`slot-${di}-${kind}`);
   document.getElementById('picker-title').textContent =
-    `Alege rețeta pentru ${plan[di].day} · ${KIND_LABEL[kind].replace(/^\S+ /,'')}`;
+    `Alege rețeta pentru ${plan[di].day} · ${kind === 'lunch' ? 'Prânz' : 'Cină'}`;
   document.getElementById('picker-backdrop').classList.add('open');
   const s = document.getElementById('picker-search');
-  s.value = ''; renderPickList(''); s.focus();
+  s.value = ''; renderPickList('');
+  setTimeout(() => s.focus(), 60); // după animația de sheet, ca tastatura mobilă să nu sară
 }
 function renderPickList(q) {
   q = q.trim().toLowerCase();
-  const hits = RECIPES.map((r, i) => {
+  hits = RECIPES.map((r, i) => {
     if (!q) return { i, why: null };
     if (r.name.toLowerCase().includes(q)) return { i, why: null };
     const ing = r.ingr.find(x => x.includes(q));
     return ing ? { i, why: 'conține ' + ing } : null;
   }).filter(Boolean);
+  hi = hits.length ? 0 : -1;
+  paintList(q);
+}
+function paintList(q) {
   const list = document.getElementById('picker-list');
-  list.innerHTML = hits.length ? hits.map(({ i, why }) => {
+  list.innerHTML = hits.length ? hits.map(({ i, why }, idx) => {
     const r = RECIPES[i];
-    return `<button class="pick-item" onclick="pick(${i})">
+    return `<button class="pick-item" role="option" aria-selected="${idx === hi}" onclick="pick(${i})">
       <span><span class="pick-name">${r.name}</span>
       <div class="pick-meta">⏱️ ${r.time} min · ~${r.cost} RON${r.tag ? ' · ' + r.tag : ''}</div></span>
       ${why ? `<span class="pick-why">${why}</span>` : ''}
     </button>`;
-  }).join('') : `<div class="picker-empty">Nimic pentru „${q}". Încearcă un ingredient: pui, orez, ouă…</div>`;
+  }).join('') : `<div class="picker-empty">Nimic pentru „${q}".<br>Încearcă un ingredient: pui, orez, ouă…</div>`;
 }
 function pick(i) {
-  if (pickTarget) { plan[pickTarget.di][pickTarget.kind] = i; pickTarget = null; }
+  if (pickTarget) { plan[pickTarget.di][pickTarget.kind] = i; }
   closePicker(); render();
+  // focus înapoi pe slotul editat (spec §5)
+  if (pickTarget) {
+    const el = document.getElementById(`slot-${pickTarget.di}-${pickTarget.kind}`);
+    if (el) el.focus();
+    pickTarget = null;
+  }
 }
-function closePicker() { document.getElementById('picker-backdrop').classList.remove('open'); }
+function closePicker() {
+  document.getElementById('picker-backdrop').classList.remove('open');
+  if (returnFocusEl && document.contains(returnFocusEl)) returnFocusEl.focus();
+}
 document.getElementById('picker-search').addEventListener('input', e => renderPickList(e.target.value));
+document.getElementById('picker-search').addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown') { e.preventDefault(); if (hits.length) { hi = (hi + 1) % hits.length; paintList(e.target.value); } }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); if (hits.length) { hi = (hi - 1 + hits.length) % hits.length; paintList(e.target.value); } }
+  else if (e.key === 'Enter') { e.preventDefault(); if (hi >= 0) pick(hits[hi].i); }
+});
 document.getElementById('picker-backdrop').addEventListener('click', e => { if (e.target.id === 'picker-backdrop') closePicker(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePicker(); });
-render();
+
+applyAuto(); setInputAuto(); render();
 </script>
 </body>
 </html>
