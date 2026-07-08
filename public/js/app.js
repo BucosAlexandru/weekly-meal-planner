@@ -4860,7 +4860,11 @@ if (verifyBtn && emailInput && resultDiv) {
       const io = new IntersectionObserver((entries) => {
         for (const e of entries) {
           if (!e.isIntersecting || sent) continue;
-          const items = document.querySelectorAll('#shopping-list .shopping-item').length;
+          const listEl = document.getElementById('shopping-list');
+          // Only count as "viewed" if the list is actually visible on screen
+          // (the .shopping-data container may be hidden = teaser-only mode).
+          if (!listEl || listEl.offsetParent === null) continue;
+          const items = listEl.querySelectorAll('.shopping-item').length;
           if (!items) continue; // empty list = nothing was actually "viewed"
           sent = true;
           if (window.mpTrack) window.mpTrack('shopping_list_viewed', { items });
