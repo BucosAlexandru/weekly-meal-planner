@@ -324,9 +324,9 @@
       </section>
 
       <!-- ── Shopping List ── -->
-      <!-- Screen shows a teaser only; the full list is built from data (not DOM)
-           and rendered into the PDF (see app.js). #shopping-list is kept (hidden)
-           so updateShoppingList() / empty-state JS stays untouched. -->
+      <!-- On-screen list renders the SAME normalization-engine output as the
+           PDF (shopping-list.js via updateShoppingList in app.js): categories,
+           aggregated quantities, localized labels. -->
       <section class="app-section app-section--shopping" aria-labelledby="shopping-heading">
         <div class="shopping-teaser">
           <div class="section-head">
@@ -335,10 +335,7 @@
           </div>
           <p class="shopping-teaser-desc" data-i18n="shopping.teaser.desc">Organizată automat pe categorii și gata de cumpărături în PDF.</p>
         </div>
-        <!-- Hidden data container: app.js populates #shopping-list and inserts
-             #shopping-cost-summary into its parent here, so both stay hidden.
-             The full list + cost live in the PDF (built from data, not DOM). -->
-        <div class="shopping-data" hidden aria-hidden="true">
+        <div class="shopping-data">
           <ul id="shopping-list"
               class="shopping-list list-unstyled"
               data-empty-msg="Adaugă mese pentru a genera lista de cumpărături"

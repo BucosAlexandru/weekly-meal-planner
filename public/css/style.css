@@ -2471,3 +2471,39 @@ body.theme-winter .app-header { position: relative; z-index: 2; }
 }
 body.pdf-exporting.theme-winter::before,
 body.pdf-exporting.theme-winter::after { display: none !important; }
+
+/* ── Grouped shopping list (normalization-engine output on screen) ── */
+.shopping-list { margin: 0; padding: 0; }
+.shopping-group { list-style: none; margin: 0 0 1rem; }
+.shopping-group-title {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink-3, #6b7280);
+  border-bottom: 1px solid var(--line, #e5e7eb);
+  padding-bottom: .3rem;
+  margin-bottom: .4rem;
+}
+.shopping-group-title .sg-emoji { font-size: .95rem; }
+.shopping-group-items { margin: 0; padding: 0; }
+@media (min-width: 640px) {
+  .shopping-group-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.75rem;
+  }
+}
+.shopping-name { flex: 1 1 auto; }
+.shopping-qty {
+  flex-shrink: 0;
+  margin-left: auto;
+  font-size: .8rem;
+  color: var(--ink-3, #6b7280);
+  font-variant-numeric: tabular-nums;
+}
+/* RTL (ar): qty flips to the left edge automatically via flex + margin-inline */
+[dir="rtl"] .shopping-qty { margin-left: 0; margin-right: auto; }
