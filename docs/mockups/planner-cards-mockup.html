@@ -42,6 +42,7 @@
   .day-card {
     background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
     overflow: hidden;
+    display: flex; flex-direction: column;
   }
   .day-head {
     display: flex; align-items: baseline; justify-content: space-between;
@@ -50,7 +51,9 @@
   }
   .day-name { font-weight: 700; font-size: .95rem; }
   .day-cost { font-size: .78rem; color: var(--ink-3); }
-  .meal { padding: 12px 16px; }
+  /* flex:1 → prânzul și cina ocupă înălțimi egale în card, deci „Cină"
+     pornește la aceeași linie pe toate cardurile din același rând. */
+  .meal { padding: 12px 16px; flex: 1; }
   .meal + .meal { border-top: 1px dashed var(--line); }
   .meal-kind {
     font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
@@ -63,14 +66,25 @@
     border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px;
   }
   .chip--tag { background: var(--color-brand-soft); border-color: transparent; color: #166534; }
-  .meal--empty .meal-name { color: var(--ink-4); font-weight: 400; font-style: italic; }
+  /* Stare goală = slot de completat, vizibil intenționat (nu o greșeală):
+     chenar punctat + „+", ca un buton de adăugare. */
+  .empty-slot {
+    display: flex; align-items: center; gap: 8px;
+    border: 1.5px dashed var(--line); border-radius: 10px;
+    padding: 9px 12px; margin-top: 2px;
+    color: var(--ink-4); font-size: .9rem; cursor: pointer;
+  }
+  .empty-slot:hover { border-color: var(--color-brand); color: var(--color-brand); background: var(--color-brand-light); }
+  .empty-slot .plus { font-size: 1.1rem; font-weight: 700; line-height: 1; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="mock-note">
-    <strong>MOCKUP pentru aprobare</strong> — nu e implementare. Spec §4: carduri pe zi, Week Overview,
-    max 2 taguri per masă, fără stele/scoruri. Redimensionează fereastra pentru varianta mobil.
+    <strong>MOCKUP pentru aprobare (v2)</strong> — nu e implementare. Spec §4: carduri pe zi, Week Overview,
+    max 2 taguri per masă, fără stele/scoruri. Joi-prânz arată intenționat <em>starea goală</em>
+    (slot „＋ adaugă"): utilizatorii reali vor avea zile necompletate și cardul trebuie să arate bine și atunci.
+    Redimensionează fereastra pentru varianta mobil.
   </div>
 
   <h1>Planul săptămânii</h1>
@@ -127,10 +141,10 @@
     </div>
 
     <div class="day-card">
-      <div class="day-head"><span class="day-name">Joi</span><span class="day-cost">—</span></div>
-      <div class="meal meal--empty">
+      <div class="day-head"><span class="day-name">Joi</span><span class="day-cost">~15 RON</span></div>
+      <div class="meal">
         <div class="meal-kind">🍱 Prânz</div>
-        <div class="meal-name">Alege o rețetă sau generează</div>
+        <div class="empty-slot"><span class="plus">＋</span> Alege o rețetă sau generează</div>
       </div>
       <div class="meal">
         <div class="meal-kind">🌙 Cină</div>
