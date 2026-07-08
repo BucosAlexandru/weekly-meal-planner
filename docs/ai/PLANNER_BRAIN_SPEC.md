@@ -91,6 +91,8 @@ Nimic nu așteaptă refresh. Nivelul 1 din straturi („pot să-mi fac planul?")
 
 1. **Istoric / „Folosește planul de săptămâna trecută"** — cel mai puternic răspuns la „de ce revin luni dimineață?"; localStorage, ieftin. Primul după deadline.
 1b. **Panou lateral de detaliu rețetă** (poză, ingrediente, Înlocuiește / Vezi rețeta — fără a părăsi plannerul). Schimbă centrul de greutate al aplicației de pe pagina de rețetă pe planner. Candidat puternic post-22, dar în v1 click pe nume = picker (acțiunea frecventă e înlocuirea → regula celor 2 secunde); detaliul e acțiune rară și își așteaptă rândul.
+1c. **Swap/mutare între sloturi** (feedback producător, 8 iul, la testul Day 1): „cina de joi îmi place, o vreau luni la prânz". Fără drag-and-drop (exclus explicit din v1) — varianta click: acțiune „mută" în picker sau pe slot, alegi destinația, cele două mese fac schimb. Costurile și lista se recalculează.
+1d. **Generatorul disponibil oriunde** — de pe paginile de rețete poți trimite rețeta direct într-un slot din plan („Adaugă în planul meu → alege ziua/masa"). Transformă cele 2450 pagini SEO în puncte de intrare spre planner. Post-22.
 2. Favorite ❤️ (localStorage; devine și sursă de date pentru recomandări reale).
 3. kcal/proteine pe zi — după auditul câmpului `nutrition` din recipes.js (acoperire + corectitudine). Faza 2 din roadmap.
 4. Reroll cu criterii de proteină/bucătărie — după completarea metadatei.
