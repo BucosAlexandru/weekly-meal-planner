@@ -4847,6 +4847,46 @@ if (verifyBtn && emailInput && resultDiv) {
   // NOTE: hero-cta-btn listener is now attached inside renderPremiumHero()
   // (hero is rendered by applyTranslations below; the button doesn't exist here yet)
 
+  // ---------- FUNNEL OBSERVERS (analytics) ----------
+  // shopping_list_viewed: the shopping section scrolled into view while the
+  // grouped list is non-empty. premium_viewed: the premium upsell (pricing
+  // section, or the homepage preview panel) scrolled into view. Both fire at
+  // most once per page load and are whitelisted server-side in api/event.js.
+  function initFunnelObservers() {
+    if (!('IntersectionObserver' in window)) return;
+    const shopSection = document.querySelector('.app-section--shopping');
+    if (shopSection) {
+      let sent = false;
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting || sent) continue;
+          const items = document.querySelectorAll('#shopping-list .shopping-item').length;
+          if (!items) continue; // empty list = nothing was actually "viewed"
+          sent = true;
+          if (window.mpTrack) window.mpTrack('shopping_list_viewed', { items });
+          io.disconnect();
+        }
+      }, { threshold: 0.15 });
+      io.observe(shopSection);
+    }
+    const premiumEl = document.getElementById('pricing-section')
+      || document.getElementById('hp-premium-preview')
+      || document.querySelector('.hp-premium-preview');
+    if (premiumEl) {
+      let sent = false;
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting || sent) continue;
+          sent = true;
+          if (window.mpTrack) window.mpTrack('premium_viewed', { source: premiumEl.id || 'preview' });
+          io.disconnect();
+        }
+      }, { threshold: 0.15 });
+      io.observe(premiumEl);
+    }
+  }
+  initFunnelObservers();
+
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();

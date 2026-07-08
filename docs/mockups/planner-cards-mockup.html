@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup — Planner carduri (spec §4, pentru aprobare)</title>
+<style>
+  :root {
+    --color-brand: #24712A; --color-brand-light: #f0fdf4; --color-brand-soft: #dcfce7;
+    --bg: #f5f9f5; --surface: #fff; --ink: #111827; --ink-2: #374151;
+    --ink-3: #6b7280; --ink-4: #9ca3af; --line: #e5e7eb; --amber: #f59e0b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .mock-note {
+    background: #fffbeb; border: 1px dashed var(--amber); border-radius: 10px;
+    padding: 10px 14px; font-size: .85rem; color: #92400e; margin-bottom: 22px;
+  }
+
+  /* ── Week Overview ── */
+  h1 { font-size: 1.35rem; margin: 0 0 4px; }
+  .week-sub { color: var(--ink-3); font-size: .9rem; margin: 0 0 16px; }
+  .overview {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 26px;
+  }
+  .ov-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .ov-num { font-size: 1.25rem; font-weight: 700; color: var(--color-brand); }
+  .ov-label { font-size: .74rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+  @media (max-width: 560px) { .overview { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ── Day cards ── */
+  .days { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .days { grid-template-columns: 1fr; } }
+  .day-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden;
+  }
+  .day-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 10px 16px; background: var(--color-brand-light);
+    border-bottom: 1px solid var(--line);
+  }
+  .day-name { font-weight: 700; font-size: .95rem; }
+  .day-cost { font-size: .78rem; color: var(--ink-3); }
+  .meal { padding: 12px 16px; }
+  .meal + .meal { border-top: 1px dashed var(--line); }
+  .meal-kind {
+    font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--ink-4); display: flex; align-items: center; gap: 5px; margin-bottom: 3px;
+  }
+  .meal-name { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+  .meal-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: .72rem; color: var(--ink-2); background: var(--bg);
+    border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px;
+  }
+  .chip--tag { background: var(--color-brand-soft); border-color: transparent; color: #166534; }
+  .meal--empty .meal-name { color: var(--ink-4); font-weight: 400; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mock-note">
+    <strong>MOCKUP pentru aprobare</strong> — nu e implementare. Spec §4: carduri pe zi, Week Overview,
+    max 2 taguri per masă, fără stele/scoruri. Redimensionează fereastra pentru varianta mobil.
+  </div>
+
+  <h1>Planul săptămânii</h1>
+  <p class="week-sub">6 – 12 iulie · 14 mese planificate</p>
+
+  <div class="overview">
+    <div class="ov-card"><div class="ov-num">7</div><div class="ov-label">zile</div></div>
+    <div class="ov-card"><div class="ov-num">~34 min</div><div class="ov-label">timp mediu</div></div>
+    <div class="ov-card"><div class="ov-num">~320 RON</div><div class="ov-label">cost estimat</div></div>
+    <div class="ov-card"><div class="ov-num">9</div><div class="ov-label">bucătării</div></div>
+  </div>
+
+  <div class="days">
+    <div class="day-card">
+      <div class="day-head"><span class="day-name">Luni</span><span class="day-cost">~44 RON</span></div>
+      <div class="meal">
+        <div class="meal-kind">🍱 Prânz</div>
+        <div class="meal-name">Onigiri</div>
+        <div class="meal-meta"><span class="chip">⏱️ 20 min</span><span class="chip">~18 RON</span><span class="chip chip--tag">⚡ Rapid</span></div>
+      </div>
+      <div class="meal">
+        <div class="meal-kind">🌙 Cină</div>
+        <div class="meal-name">Bacalhau à Brás</div>
+        <div class="meal-meta"><span class="chip">⏱️ 45 min</span><span class="chip">~26 RON</span></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-head"><span class="day-name">Marți</span><span class="day-cost">~39 RON</span></div>
+      <div class="meal">
+        <div class="meal-kind">🍱 Prânz</div>
+        <div class="meal-name">Nasi Goreng</div>
+        <div class="meal-meta"><span class="chip">⏱️ 25 min</span><span class="chip">~17 RON</span><span class="chip chip--tag">🍲 One-pot</span></div>
+      </div>
+      <div class="meal">
+        <div class="meal-kind">🌙 Cină</div>
+        <div class="meal-name">Okonomiyaki</div>
+        <div class="meal-meta"><span class="chip">⏱️ 30 min</span><span class="chip">~22 RON</span><span class="chip chip--tag">🌱 Vegetarian</span></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-head"><span class="day-name">Miercuri</span><span class="day-cost">~47 RON</span></div>
+      <div class="meal">
+        <div class="meal-kind">🍱 Prânz</div>
+        <div class="meal-name">Spaghetti Carbonara</div>
+        <div class="meal-meta"><span class="chip">⏱️ 25 min</span><span class="chip">~24 RON</span></div>
+      </div>
+      <div class="meal">
+        <div class="meal-kind">🌙 Cină</div>
+        <div class="meal-name">Ciorbă de burtă</div>
+        <div class="meal-meta"><span class="chip">⏱️ 60 min</span><span class="chip">~23 RON</span><span class="chip chip--tag">👨‍👩‍👧 Familie</span></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-head"><span class="day-name">Joi</span><span class="day-cost">—</span></div>
+      <div class="meal meal--empty">
+        <div class="meal-kind">🍱 Prânz</div>
+        <div class="meal-name">Alege o rețetă sau generează</div>
+      </div>
+      <div class="meal">
+        <div class="meal-kind">🌙 Cină</div>
+        <div class="meal-name">Shakshuka</div>
+        <div class="meal-meta"><span class="chip">⏱️ 30 min</span><span class="chip">~15 RON</span><span class="chip chip--tag">💲 Buget</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
