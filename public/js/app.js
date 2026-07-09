@@ -1333,14 +1333,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lunchInput)  lunchInput.value  = picks[0] ? getRecipeText(picks[0], lang) : '';
     if (dinnerInput) dinnerInput.value = picks[1] ? getRecipeText(picks[1], lang) : '';
   } else {
-    // Full week — 7 days × lunch + dinner
-    // Only fill empty slots — preserve any recipes already added manually
+    // Full week — 7 days × lunch + dinner.
+    // §2b (8 iul): Generate produces a FRESH week — fills ALL slots, not just
+    // empty ones. The old "preserve manual edits by skipping filled slots"
+    // rule made regeneration impossible (Generate on a full plan did nothing
+    // — producer bug report). Manual work is now protected by REVERSIBILITY:
+    // the bulk-undo toast restores the entire previous plan in one tap.
     const emptySlots = [];
     for (let i = 0; i < 7; i++) {
       const l = document.getElementById(`d${i+1}l`);
       const c = document.getElementById(`d${i+1}c`);
-      if (l && !l.value.trim()) emptySlots.push(l);
-      if (c && !c.value.trim()) emptySlots.push(c);
+      if (l) emptySlots.push(l);
+      if (c) emptySlots.push(c);
     }
     // Feasibility: keep very-long recipes off weekday slots (days 1–5) so the
     // default week is realistic for an average household; allow them only on
