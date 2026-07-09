@@ -71,7 +71,7 @@ const MENU = [
   ['Mon', 'Spaghetti Carbonara', 'Moussaka'],
   ['Tue', 'Gazpacho',            'Ratatouille'],
   ['Wed', 'Quiche Lorraine',     'Souvlaki'],
-  ['Thu', 'Risotto',             'Tagine'],
+  ['Thu', 'Risotto',             'Chicken Tagine'],
   ['Fri', 'Paella',              'Boeuf Bourguignon'],
   ['Sat', 'Pasta e fagioli',     'Spanakopita'],
   ['Sun', 'Pasta alla Norma',    'Harira'],
