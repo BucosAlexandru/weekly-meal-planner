@@ -2527,16 +2527,27 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
   justify-content: flex-end;
   margin-bottom: 2px;
 }
+/* Feedback producător (8 iul): varianta text-link era nedescoperibilă.
+   Buton secundar conturat, cu icon — vizibil, dar sub Generate ca pondere. */
 .pw-clear-plan {
-  border: 0;
-  background: none;
-  padding: 8px 10px;
-  font-size: .8rem;
-  color: var(--ink-3, #6b7280);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line, #e5e7eb);
+  background: var(--surface, #fff);
+  padding: 8px 14px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink-2, #374151);
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 999px;
+  transition: border-color .12s, color .12s, background .12s;
 }
-.pw-clear-plan:hover { color: var(--color-brand, #24712A); text-decoration: underline; }
+.pw-clear-plan:hover {
+  border-color: var(--color-brand, #24712A);
+  color: var(--color-brand, #24712A);
+  background: var(--color-brand-light, #f0fdf4);
+}
 .pw-clear-plan:focus-visible { outline: 2px solid var(--color-brand, #24712A); outline-offset: 2px; }
 @media (pointer: coarse) {
   /* ≥44px touch target via padding (PLANNER_RESPONSIVE_SPEC §4) */

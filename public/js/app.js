@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // updatePwClearBtn() shows it as soon as ≥1 slot is filled.
     cardsEl.innerHTML = `
       <div class="pw-plan-header">
-        <button type="button" id="pw-clear-plan" class="pw-clear-plan pw-hidden">${t('pw.clearPlan')}</button>
+        <button type="button" id="pw-clear-plan" class="pw-clear-plan pw-hidden"><i class="bi bi-eraser" aria-hidden="true"></i> ${t('pw.clearPlan')}</button>
       </div>
       <div class="pw-overview" aria-live="polite">
         ${ovCard('pw-ov-days', 'pw.ovDays')}
@@ -5601,6 +5601,11 @@ if (verifyBtn && emailInput && resultDiv) {
           };
           fillSlots(plan.lunchIds, 'l');
           fillSlots(plan.dinnerIds, 'c');
+          // Bug fix (8 iul): values were written directly into the (now
+          // hidden) inputs with no events, so the card display layer —
+          // name buttons, .pw-filled, clear button — never refreshed and
+          // the planner LOOKED empty despite holding the plan. Refresh it.
+          updateAllRecipeMeta();
           if (unresolved.length) {
             // Explicit failure: one or more plan recipe ids no longer exist in
             // recipes.js (corpus drifted from the generated PLAN_MEALS). Report
