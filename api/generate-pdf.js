@@ -718,12 +718,20 @@ function shopItemRow(it, idx, styles) {
 }
 
 function shopGroup(g, gi, styles) {
-  return h(View, { key: gi, style: styles.shopGroup, wrap: false },
-    h(View, { style: styles.shopGroupHead },
+  // wrap policy (production bug, 9 iul — meal-plan-6.pdf): a big group
+  // (Vegetables on a rich 7-day plan can exceed 30 items) with wrap:false
+  // that lands in the leftover space at a page bottom overflows and
+  // OVERPRINTS itself. Small groups keep the tidy no-split behaviour;
+  // large ones flow across the page break, with the group header pinned
+  // to at least its first rows via minPresenceAhead.
+  const items = g.items || [];
+  const noSplit = items.length <= 12;
+  return h(View, { key: gi, style: styles.shopGroup, wrap: !noSplit },
+    h(View, { style: styles.shopGroupHead, minPresenceAhead: 48 },
       h(View, { style: styles.shopGroupDot }),
       h(Text, { style: styles.shopGroupTitle }, (g.label || g.id || '').toUpperCase()),
     ),
-    ...(g.items || []).map((it, idx) => shopItemRow(it, idx, styles)),
+    ...items.map((it, idx) => shopItemRow(it, idx, styles)),
   );
 }
 
