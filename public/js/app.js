@@ -1023,7 +1023,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let html = '';
     const headerHtml = (txt) =>
       `<div class="pw-picker-header" role="presentation">${pwEsc(txt)}</div>`;
-    const itemHtml = (r, why) => {
+    const itemHtml = (r, why, fav) => {
       const idx = entries.length;
       entries.push(r);
       const metaParts = [];
@@ -1037,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button type="button" class="pw-pick-item" id="pw-opt-${idx}" role="option"
                 aria-selected="false" data-idx="${idx}">
           <span class="pw-pick-main">
-            <span class="pw-pick-name">${pwEsc(pwRecipeName(r))}</span>
+            <span class="pw-pick-name">${fav ? '<span class="pw-pick-fav-mark" aria-hidden="true">♥</span> ' : ''}${pwEsc(pwRecipeName(r))}</span>
             ${metaParts.length ? `<span class="pw-pick-meta">${pwEsc(metaParts.join(' · '))}</span>` : ''}
             ${already ? `<span class="pw-pick-already">${pwEsc(already)}</span>` : ''}
           </span>
@@ -1063,10 +1063,40 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentRec = st.mode === 'replace' ? getRecipeByInput(inputEl?.value || '') : null;
       const recs = await pwRecommendations(st.mode, currentRec);
       const pool = await getGenerationPool();
+      // Favorites (BRAIN §9 item 2): hearts saved on recipe pages
+      // (plan-cart.js, localStorage 'mp:favorites' = [{en, display}]) surface
+      // here — browse mode only, between recommendations and "All recipes".
+      let favs = [];
+      try {
+        const v = JSON.parse(localStorage.getItem('mp:favorites'));
+        if (Array.isArray(v)) favs = v.filter(f => f && typeof f.en === 'string' && f.en);
+      } catch (_) { /* unreadable storage → no section */ }
+      const favCorpus = favs.length ? await getPickerCorpus() : null;
       if (st !== _pwPicker || seq !== st.seq) return;
       if (recs.length) {
         html += headerHtml(st.mode === 'replace' ? t('pw.recommended') : t('pw.quickCheap'));
         recs.forEach(r => { html += itemHtml(r, ''); });
+      }
+      if (favCorpus) {
+        // Same resolution as the cart pour: the stored EN name is matched
+        // against every name locale. Unresolved names are skipped silently;
+        // recipes already in the plan still show (the pw.alreadyIn hint in
+        // itemHtml covers duplicates). Deduped by en, cap 8.
+        const seen = new Set();
+        const favRecs = [];
+        for (const f of favs) {
+          if (favRecs.length >= 8) break;
+          const key = f.en.toLowerCase();
+          if (seen.has(key)) continue;
+          seen.add(key);
+          const rec = favCorpus.find(r => Object.values(r.name || {}).some(n =>
+            typeof n === 'string' && n.toLowerCase() === key));
+          if (rec) favRecs.push(rec);
+        }
+        if (favRecs.length) {
+          html += headerHtml(t('pw.favs'));
+          favRecs.forEach(r => { html += itemHtml(r, '', true); });
+        }
       }
       html += headerHtml(t('pw.allRecipes'));
       pool.slice()

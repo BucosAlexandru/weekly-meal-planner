@@ -3132,3 +3132,48 @@ a.btn-recipe-primary.pw-cart-in:hover {
   [dir="rtl"] .pw-cart-badge { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   [dir="rtl"] .pw-cart-panel { bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* ── Favorites heart (BRAIN §9 item 2): ♡/♥ toggle next to the add-to-plan
+   button on recipe pages (same .recipe-cta-row). Terracotta family — the
+   same #b04a2f/#e3b8a5/#fdf4ef trio as .pw-clear-plan — warm, not alarm-red.
+   Injected by plan-cart.min.js; without JS the button simply doesn't exist. */
+.pw-fav-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border: 2px solid var(--line, #e5e7eb);
+  border-radius: var(--r-full, 9999px);
+  background: var(--surface, #fff);
+  color: var(--ink-3, #6b7280);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .12s, color .12s, background .12s;
+}
+.pw-fav-btn:hover { border-color: #e3b8a5; color: #b04a2f; }
+.pw-fav-btn:focus-visible {
+  outline: 2px solid var(--color-brand, #24712A);
+  outline-offset: 2px;
+}
+.pw-fav-btn.pw-fav-on {
+  border-color: #e3b8a5;
+  background: #fdf4ef;
+  color: #b04a2f;
+}
+/* Toggle feedback: quick heart pop; static under reduced motion. */
+@keyframes pw-fav-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.28); }
+  100% { transform: scale(1); }
+}
+.pw-fav-pop { animation: pw-fav-pop .3s var(--ease, ease); }
+@media (prefers-reduced-motion: reduce) {
+  .pw-fav-pop { animation: none; }
+}
+
+/* Picker "Your favorites" section: the small ♥ before the name (aria-hidden). */
+.pw-pick-fav-mark { color: #b04a2f; }

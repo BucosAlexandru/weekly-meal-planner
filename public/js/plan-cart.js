@@ -19,16 +19,19 @@
   'use strict';
 
   var KEY = 'mp:plan-cart';
+  var FKEY = 'mp:favorites';
   var CAP = 14; // one full week (7 days × lunch + dinner)
 
   var cfg = document.getElementById('plan-cart-config');
   if (!cfg) return; // page wasn't generated with cart support → do nothing
 
   var L = {
-    app:   cfg.getAttribute('data-app')   || '/',
-    added: cfg.getAttribute('data-added') || '✓ In plan',
-    open:  cfg.getAttribute('data-open')  || 'Build my plan',
-    yours: cfg.getAttribute('data-yours') || 'Your recipes'
+    app:      cfg.getAttribute('data-app')       || '/',
+    added:    cfg.getAttribute('data-added')     || '✓ In plan',
+    open:     cfg.getAttribute('data-open')      || 'Build my plan',
+    yours:    cfg.getAttribute('data-yours')     || 'Your recipes',
+    favAdd:   cfg.getAttribute('data-fav-add')   || 'Save to favorites',
+    favAdded: cfg.getAttribute('data-fav-added') || 'In favorites'
   };
 
   /* ── storage ──────────────────────────────────────────────────────────
@@ -58,6 +61,54 @@
     return -1;
   }
 
+  /* ── favorites (❤️, BRAIN spec §9 item 2) ─────────────────────────────
+     Same { en, display } shape as the cart (en = stable cross-language
+     key), deduped by en case-insensitively, but NO cap and never consumed:
+     the planner picker surfaces them as a browse section ("Your
+     favorites") — that is where the information earns its existence. */
+  function readFavs() {
+    try {
+      var v = JSON.parse(localStorage.getItem(FKEY));
+      if (!Array.isArray(v)) return [];
+      return v.filter(function (x) {
+        return x && typeof x.en === 'string' && x.en;
+      });
+    } catch (e) { return []; }
+  }
+  function writeFavs(items) {
+    try {
+      if (items.length) localStorage.setItem(FKEY, JSON.stringify(items));
+      else localStorage.removeItem(FKEY);
+    } catch (e) { /* private mode / quota — favorites simply won't persist */ }
+  }
+
+  function syncFavButton(btn, isFav) {
+    btn.textContent = isFav ? '♥' : '♡';
+    btn.classList.toggle('pw-fav-on', isFav);
+    btn.setAttribute('aria-pressed', String(isFav));
+    var label = isFav ? L.favAdded : L.favAdd;
+    btn.setAttribute('aria-label', label);
+    btn.title = label;
+  }
+  function makeFavButton(en, display) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pw-fav-btn';
+    syncFavButton(btn, cartIndex(readFavs(), en) >= 0);
+    btn.addEventListener('click', function () {
+      var favs = readFavs();
+      var at = cartIndex(favs, en);
+      if (at >= 0) favs.splice(at, 1);
+      else favs.push({ en: en, display: display });
+      writeFavs(favs);
+      syncFavButton(btn, at < 0);
+      btn.classList.remove('pw-fav-pop');
+      void btn.offsetWidth; // restart the pop (CSS no-ops it for reduced motion)
+      btn.classList.add('pw-fav-pop');
+    });
+    return btn;
+  }
+
   /* ── add buttons (recipe pages only; hubs just carry the badge) ────────
      The generator gives each button data-display="<localized name>" and an
      href ending in ?meal=<EN name> — the same URL non-JS users navigate to. */
@@ -76,6 +127,10 @@
         display: a.getAttribute('data-display') || en,
         orig: a.innerHTML // restored when the recipe is removed from the cart
       });
+      // Favorites heart, same button row (recipe-cta-row), right of the add
+      // button — same en/display source as the cart entry above.
+      a.insertAdjacentElement('afterend',
+        makeFavButton(en, a.getAttribute('data-display') || en));
       a.addEventListener('click', function (ev) {
         ev.preventDefault(); // cart toggle instead of leaving the page
         var items = readCart();
