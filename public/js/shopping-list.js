@@ -128,7 +128,7 @@ const CATEGORY_RULES = [
   // PRIORITY OVERRIDES — must come first to win over broader rules below.
   // Stocks / broths / bouillons route to SAUCES, not MEAT (the broad meat rule
   // would otherwise capture "chicken stock" via \bchicken\b).
-  [/^(chicken|beef|vegetable|fish|lamb|pork|veal|dashi|miso)\s+(stock|broth|bouillon)$/, 'sauces'],
+  [/^(chicken|beef|vegetable|fish|lamb|pork|veal|dashi|miso|clam(?:\s+juice)?|seafood|shellfish)\s+(stock|broth|bouillon)$/, 'sauces'],
   // Fresh herbs route to VEGETABLES, not the dried-herb PANTRY rule below.
   [/^fresh\s+(dill|thyme|oregano|rosemary|sage|chives?|basil|mint|parsley|coriander|cilantro|tarragon)$/, 'vegetables'],
   // Spirits used as flavouring shop with treats/baking, NOT cooking oils/sauces.
@@ -183,7 +183,7 @@ const CATEGORY_RULES = [
 
   // SAUCES & OILS — non-pantry
   [/(tomato paste|tomato passata|tomato puree|crushed tomatoes|chopped tomatoes|canned tomatoes|tinned tomatoes|tomato sauce|marinara|salsa|ketchup|mayonnaise|dijon mustard|mustard|wholegrain mustard|aioli|harissa|sambal|gochujang|gochugaru|miso|miso paste|tamari|hoisin|oyster sauce|tahini|sesame paste|sriracha|chimichurri|pesto|piri[ -]?piri)/, 'sauces'],
-  [/(red wine|white wine|dry white wine|dry red wine|burgundy|sherry|port|mirin|sake|cooking wine|stock|broth|chicken stock|beef stock|vegetable stock|fish stock|bouillon|dashi|chicken bouillon|beef bouillon|cognac|brandy|rum)/, 'sauces'],
+  [/(red wine|white wine|dry white wine|dry red wine|burgundy|sherry|port|mirin|sake|cooking wine|stock|broth|chicken stock|beef stock|vegetable stock|fish stock|bouillon|dashi|chicken bouillon|beef bouillon|cognac|brandy|rum|lager|pale ale)/, 'sauces'],
 
   // BAKERY
   [/(bread|baguette|ciabatta|focaccia|pita|naan|tortilla|tortillas|sourdough|brioche|loaf|crouton|breadcrumbs|panko|phyllo|filo|puff pastry|shortcrust pastry|pizza dough|pie crust|crackers|grissini)/, 'bakery'],
@@ -239,6 +239,16 @@ const CANON_RULES = [
   [/^pork$/, 'pork'],
   [/^cream\s+cheese$/, 'cream cheese'],
   [/^tomato\s+sauce$/, 'tomato sauce'],
+  // ── PDF-audit artifact fixes (2026-07) ──────────────────────────────────
+  // "500g mixed ground pork and beef" → parse rewrites to "pork and beef
+  // mince"; both orders land on one canonical so quantities merge.
+  [/^(?:pork and beef|beef and pork)\s+mince$/, 'beef & pork mince'],
+  // Clam varieties ("littleneck or quahog clams…" left-splits to the bare
+  // variety word) — all shop as clams.
+  [/^(?:littleneck|quahog|manila|razor)s?(?:\s+clams?)?$/, 'clams'],
+  // Clam juice ≈ fish stock for shopping purposes (the recipes themselves
+  // offer them as alternatives) — merges + localizes + categorizes as stock.
+  [/^clam juice(?:\s+stock)?$/, 'fish stock'],
   // ── Ticket #6 (pass 2): dedup obvious variants + citrus juice/zest ─────────
   // Paprika family → one canonical (sweet / hot / smoked / Hungarian all shop
   // as paprika; localized label resolves via ITEM_LABELS, e.g. ro "Boia").
@@ -450,7 +460,7 @@ const CANON_RULES = [
   [/^minced (beef|lamb|pork|veal)$/, m => `${m[1]} mince`],
   [/^minced meat$/, 'beef mince'],
   [/^bechamel( sauce)?$|^béchamel( sauce)?$/, 'béchamel'],
-  [/^(warm|hot|cold|chilled)\s+(chicken|beef|vegetable|fish)\s+stock$/, m => `${m[2]} stock`],
+  [/^(warm|hot|cold|ice[- ]?cold|chilled)\s+(chicken|beef|vegetable|fish)\s+stock$/, m => `${m[2]} stock`],
   [/^(chicken|beef|vegetable|fish|lamb)\s+(stock|broth|bouillon)$/, m => `${m[1]} stock`],
   [/^(extra[- ]virgin\s+)?olive oil\b.*$/, 'olive oil'],
 
@@ -496,7 +506,7 @@ const ITEM_LABELS = {
     'lemongrass': 'Lemongrass', 'kaffir lime leaves': 'Frunze de lime kaffir',
     'lemons': 'Lămâi', 'limes': 'Lime', 'oranges': 'Portocale',
     'beef chuck': 'Vită (pulpă/coastă)', 'beef cut': 'Vită', 'beef mince': 'Vită tocată',
-    'lamb mince': 'Miel tocat', 'pork mince': 'Porc tocat',
+    'lamb mince': 'Miel tocat', 'pork mince': 'Porc tocat', 'beef & pork mince': 'Carne tocată mixtă (vită și porc)',
     'whole chicken': 'Pui întreg', 'bacon': 'Bacon', 'guanciale': 'Guanciale', 'pancetta': 'Pancetta', 'prosciutto': 'Prosciutto',
     'chorizo': 'Chorizo', 'sausages': 'Cârnați',
     'salmon': 'Somon', 'cod': 'Cod', 'tuna': 'Ton', 'prawns': 'Creveți', 'mussels': 'Midii', 'clams': 'Scoici', 'anchovies': 'Anșoa', 'sardines': 'Sardine',
@@ -597,7 +607,7 @@ const ITEM_LABELS = {
     'pearl onions': 'Petits oignons grelots', 'preserved lemon': 'Citron confit',
     // Meat & fish
     'beef chuck': 'Paleron de bœuf', 'beef cut': 'Bœuf', 'beef mince': 'Bœuf haché',
-    'lamb mince': 'Agneau haché', 'pork mince': 'Porc haché',
+    'lamb mince': 'Agneau haché', 'pork mince': 'Porc haché', 'beef & pork mince': 'Hachis mélangé bœuf-porc',
     'whole chicken': 'Poulet entier',
     'chicken thighs': 'Hauts de cuisse de poulet', 'chicken breasts': 'Blancs de poulet',
     'chicken wings': 'Ailes de poulet', 'chicken drumsticks': 'Pilons de poulet',
@@ -687,7 +697,7 @@ const ITEM_LABELS = {
     'lemongrass':'Zitronengras','kaffir lime leaves':'Kaffir-Limettenblätter',
     'lemons':'Zitronen','limes':'Limetten','oranges':'Orangen',
     'beef chuck':'Rinderschulter','beef cut':'Rindfleisch','beef':'Rindfleisch','beef mince':'Rinderhackfleisch',
-    'lamb mince':'Lammhackfleisch','pork mince':'Schweinehackfleisch','whole chicken':'Ganzes Hähnchen',
+    'lamb mince':'Lammhackfleisch','pork mince':'Schweinehackfleisch','beef & pork mince':'Gemischtes Hackfleisch (Rind & Schwein)','whole chicken':'Ganzes Hähnchen',
     'chicken thighs':'Hähnchenschenkel','chicken breasts':'Hähnchenbrust','chicken wings':'Hähnchenflügel','chicken drumsticks':'Hähnchen-Unterschenkel',
     'pork shoulder':'Schweineschulter','pork belly':'Schweinebauch','lamb shoulder':'Lammschulter',
     'bacon':'Speck','guanciale':'Guanciale','pancetta':'Pancetta','prosciutto':'Prosciutto','chorizo':'Chorizo','sausages':'Bratwurst',
@@ -744,7 +754,7 @@ const ITEM_LABELS = {
     'lemongrass':'Hierba limón','kaffir lime leaves':'Hojas de lima kaffir',
     'lemons':'Limones','limes':'Limas','oranges':'Naranjas',
     'beef chuck':'Aguja de ternera','beef cut':'Ternera','beef':'Ternera','beef mince':'Carne picada de ternera',
-    'lamb mince':'Cordero picado','pork mince':'Carne picada de cerdo','whole chicken':'Pollo entero',
+    'lamb mince':'Cordero picado','pork mince':'Carne picada de cerdo','beef & pork mince':'Carne picada mixta (ternera y cerdo)','whole chicken':'Pollo entero',
     'chicken thighs':'Muslos de pollo','chicken breasts':'Pechugas de pollo','chicken wings':'Alitas de pollo','chicken drumsticks':'Jamoncitos de pollo',
     'pork shoulder':'Paletilla de cerdo','pork belly':'Panceta de cerdo','lamb shoulder':'Paletilla de cordero',
     'bacon':'Bacon','guanciale':'Guanciale','pancetta':'Panceta italiana','prosciutto':'Jamón serrano','chorizo':'Chorizo','sausages':'Salchichas',
@@ -797,7 +807,7 @@ const ITEM_LABELS = {
     'lemongrass':'Citronella','kaffir lime leaves':'Foglie di lime kaffir',
     'lemons':'Limoni','limes':'Lime','oranges':'Arance',
     'beef chuck':'Cappello del prete','beef cut':'Manzo','beef':'Manzo','beef mince':'Macinato di manzo',
-    'lamb mince':'Macinato di agnello','pork mince':'Macinato di maiale','whole chicken':'Pollo intero',
+    'lamb mince':'Macinato di agnello','pork mince':'Macinato di maiale','beef & pork mince':'Macinato misto (manzo e maiale)','whole chicken':'Pollo intero',
     'chicken thighs':'Cosce di pollo','chicken breasts':'Petti di pollo','chicken wings':'Alette di pollo','chicken drumsticks':'Fusi di pollo',
     'pork shoulder':'Spalla di maiale','pork belly':'Pancia di maiale','lamb shoulder':'Spalla di agnello',
     'bacon':'Pancetta affumicata','guanciale':'Guanciale','pancetta':'Pancetta','prosciutto':'Prosciutto','chorizo':'Chorizo','sausages':'Salsicce',
@@ -850,7 +860,7 @@ const ITEM_LABELS = {
     'lemongrass':'Capim-limão','kaffir lime leaves':'Folhas de lima kaffir',
     'lemons':'Limões','limes':'Limas','oranges':'Laranjas',
     'beef chuck':'Acém de vaca','beef cut':'Vaca','beef':'Vaca','beef mince':'Carne picada de vaca',
-    'lamb mince':'Carne picada de borrego','pork mince':'Carne picada de porco','whole chicken':'Frango inteiro',
+    'lamb mince':'Carne picada de borrego','pork mince':'Carne picada de porco','beef & pork mince':'Carne picada mista (vaca e porco)','whole chicken':'Frango inteiro',
     'chicken thighs':'Coxas de frango','chicken breasts':'Peitos de frango','chicken wings':'Asas de frango','chicken drumsticks':'Pernas de frango',
     'pork shoulder':'Pá de porco','pork belly':'Barriga de porco','lamb shoulder':'Pá de borrego',
     'bacon':'Bacon','guanciale':'Guanciale','pancetta':'Pancetta','prosciutto':'Presunto','chorizo':'Chouriço','sausages':'Salsichas',
@@ -903,7 +913,7 @@ const ITEM_LABELS = {
     "lemongrass":"Лемонграсс","kaffir lime leaves":"Листья кафрского лайма",
     "lemons":"Лимоны","limes":"Лаймы","oranges":"Апельсины",
     "beef chuck":"Говяжья лопатка","beef cut":"Говядина","beef":"Говядина","beef mince":"Говяжий фарш",
-    "lamb mince":"Фарш из баранины","pork mince":"Свиной фарш","whole chicken":"Целая курица",
+    "lamb mince":"Фарш из баранины","pork mince":"Свиной фарш","beef & pork mince":"Смешанный фарш (говядина и свинина)","whole chicken":"Целая курица",
     "chicken thighs":"Куриные бёдра","chicken breasts":"Куриная грудка","chicken wings":"Куриные крылышки","chicken drumsticks":"Куриные голени",
     "pork shoulder":"Свиная лопатка","pork belly":"Свиная грудинка","lamb shoulder":"Бараньи лопатки",
     "bacon":"Бекон","guanciale":"Гуанчале","pancetta":"Панчетта","prosciutto":"Прошутто","chorizo":"Чоризо","sausages":"Сосиски",
@@ -960,7 +970,7 @@ const ITEM_LABELS = {
     "lemongrass":"حشيشة الليمون","kaffir lime leaves":"أوراق ليمون الكافير",
     "lemons":"ليمون","limes":"ليمون أخضر","oranges":"برتقال",
     "beef chuck":"كتف بقري","beef cut":"لحم بقري","beef":"لحم بقري","beef mince":"لحم بقري مفروم",
-    "lamb mince":"لحم ضأن مفروم","pork mince":"لحم خنزير مفروم","whole chicken":"دجاجة كاملة",
+    "lamb mince":"لحم ضأن مفروم","pork mince":"لحم خنزير مفروم","beef & pork mince":"لحم مفروم مشكل (بقر وخنزير)","whole chicken":"دجاجة كاملة",
     "chicken thighs":"أفخاذ دجاج","chicken breasts":"صدور دجاج","chicken wings":"أجنحة دجاج","chicken drumsticks":"أوراك دجاج",
     "pork shoulder":"كتف خنزير","pork belly":"بطن خنزير","lamb shoulder":"كتف ضأن",
     "bacon":"لحم مقدد","guanciale":"غوانتشاله","pancetta":"بانشيتا","prosciutto":"بروشوتو","chorizo":"تشوريزو","sausages":"نقانق",
@@ -1017,7 +1027,7 @@ const ITEM_LABELS = {
     "lemongrass":"Limon otu","kaffir lime leaves":"Kaffir misket limonu yaprağı",
     "lemons":"Limon","limes":"Misket limonu","oranges":"Portakal",
     "beef chuck":"Dana kürek","beef cut":"Dana eti","beef":"Dana eti","beef mince":"Dana kıyma",
-    "lamb mince":"Kuzu kıyma","pork mince":"Domuz kıyma","whole chicken":"Bütün tavuk",
+    "lamb mince":"Kuzu kıyma","pork mince":"Domuz kıyma","beef & pork mince":"Karışık kıyma (dana-domuz)","whole chicken":"Bütün tavuk",
     "chicken thighs":"Tavuk but","chicken breasts":"Tavuk göğsü","chicken wings":"Tavuk kanat","chicken drumsticks":"Tavuk baget",
     "pork shoulder":"Domuz kürek","pork belly":"Domuz pastırması (göbek)","lamb shoulder":"Kuzu kürek",
     "bacon":"Beykın","guanciale":"Guanciale","pancetta":"Pancetta","prosciutto":"Prosciutto","chorizo":"Chorizo","sausages":"Sosis",
@@ -1112,6 +1122,7 @@ const ITEM_LABELS = {
     "beef mince": "牛肉末",
     "lamb mince": "羊肉末",
     "pork mince": "猪肉末",
+    "beef & pork mince": "牛猪混合肉馅",
     "whole chicken": "整鸡",
     "chicken thighs": "鸡腿肉",
     "chicken breasts": "鸡胸肉",
@@ -1302,6 +1313,7 @@ const ITEM_LABELS = {
     "beef mince": "牛ひき肉",
     "lamb mince": "ラムひき肉",
     "pork mince": "豚ひき肉",
+    "beef & pork mince": "合いびき肉（牛豚）",
     "whole chicken": "丸鶏",
     "chicken thighs": "鶏もも肉",
     "chicken breasts": "鶏むね肉",
@@ -1492,6 +1504,7 @@ const ITEM_LABELS = {
     "beef mince": "बीफ़ कीमा",
     "lamb mince": "मटन कीमा",
     "pork mince": "पोर्क कीमा",
+    "beef & pork mince": "मिश्रित कीमा (बीफ़-पोर्क)",
     "whole chicken": "पूरा चिकन",
     "chicken thighs": "चिकन जांघ",
     "chicken breasts": "चिकन ब्रेस्ट",
@@ -1682,6 +1695,7 @@ const ITEM_LABELS = {
     "beef mince": "다진 쇠고기",
     "lamb mince": "다진 양고기",
     "pork mince": "다진 돼지고기",
+    "beef & pork mince": "소·돼지 혼합 다짐육",
     "whole chicken": "통닭",
     "chicken thighs": "닭다리살",
     "chicken breasts": "닭가슴살",
@@ -1886,6 +1900,13 @@ export function parseIngredient(raw) {
   //   "A small handful of" (truncated) → "" (parseIngredient returns null)
   s = s.replace(/^(\d+\s+)?(a\s+)?(small\s+|tiny\s+|big\s+|large\s+|good\s+|generous\s+|extra\s+|tiny\s+)?(hand|handful|knob|pinch|splash|dash|drizzle|squeeze|sprinkle|few|couple|plenty|loads|tons|piles?|bunch|bunches)\s+of(\s+|$)/i, '').trim();
 
+  // "A small piece of X" / "a thin slice of Y" → "X" / "Y". Article-led ONLY
+  // ("a"/"an"/"one"), so digit-led quantities ("2 slices of bread") keep their
+  // qty/unit parse via the number+unit extraction below. Without this,
+  // "A small piece of fresh ginger, julienned" surfaced the quantifier phrase
+  // itself as a shopping item ("A small piece of…") instead of the noun.
+  s = s.replace(/^(?:a|an|one)\s+(?:small\s+|little\s+|tiny\s+|big\s+|large\s+|thin\s+|thick\s+)?(?:pieces?|slices?|chunks?|slivers?|wedges?|knobs?)\s+of\s+/i, '').trim();
+
   // Strip prep suffix after first comma (", finely diced", ", chopped", etc.)
   s = s.split(',')[0].trim();
 
@@ -2000,10 +2021,31 @@ export function parseIngredient(raw) {
   // Strip "X mixed/combined/blended/whisked with Y…" — keep just X
   name = name.split(/\s+(?:mixed|combined|blended|whisked|whipped|stirred|beaten|tossed)\s+with\s+/i)[0];
 
+  // "Mixed ground pork and beef (50/50)" — the TRAILING prep-verb strip below
+  // would eat " ground pork and beef" (the "ground" keyword matches mid-phrase
+  // with .*$) and leave the bare adjective "mixed" as the shopping item.
+  // Rewrite to a noun-preserving compound FIRST: "pork and beef mince", which
+  // then canonicalizes to 'beef & pork mince'.
+  name = name.replace(/^mixed\s+(?:ground|minced)\s+(pork|beef|veal|lamb)\s+and\s+(pork|beef|veal|lamb)\b.*$/i, '$1 and $2 mince');
+
   // Strip leading state adjectives that don't change the ingredient identity
   // for shopping purposes: "raw prawns" → "prawns", "hot chicken stock" →
   // "chicken stock", "warm milk" → "milk", "freshly cracked pepper" → "pepper".
-  name = name.replace(/^(raw|cooked|fresh|freshly|hot|warm|cold|chilled|frozen|dry|dried|toasted|leftover|day-?old|ripe|softened|melted|extra)\s+/i, '');
+  // Temperature epithets ("ice-cold lager", "ice-cold beef stock") don't
+  // belong on a shopping list either.
+  name = name.replace(/^(raw|cooked|fresh|freshly|hot|warm|cold|ice[- ]?cold|chilled|frozen|dry|dried|toasted|leftover|day-?old|ripe|softened|melted|extra)\s+/i, '');
+  // Butchery prefixes: the cut noun must survive ("Bone-in chicken thighs" →
+  // "chicken thighs", "boneless skinless chicken breasts" → "chicken breasts").
+  // Repeatable — these prefixes often stack.
+  name = name.replace(/^((?:bone[- ]?in|boneless|skin[- ]?on|skinless)\s+)+/i, '');
+  // Leading prep participles. Without this, "Thinly sliced pork belly" hits
+  // the TRAILING strip mid-phrase (" sliced pork belly" matches) and orphans
+  // the adverb ("Thinly"); "Sliced onion" forked a duplicate item next to
+  // "Onion". Adverb-led combos strip fully; bare "sliced/shredded/julienned"
+  // strip alone. Deliberately NOT stripping bare "chopped/crushed/canned" —
+  // those are load-bearing for the canned-tomatoes canonical.
+  name = name.replace(/^(?:very\s+)?(?:thinly|thickly|finely|coarsely|roughly)\s+(?:sliced|chopped|diced|shredded|julienned|grated|cut|minced)\s+/i, '');
+  name = name.replace(/^(?:sliced|shredded|julienned)\s+/i, '');
   // After dropping a leading "ground" / "cracked" verb, what's left is the spice itself
   name = name.replace(/^(ground|cracked|crushed|whole)\s+/i, '');
   // Strip trailing prep verbs / state — also catch leading intensifiers
@@ -2317,7 +2359,7 @@ function _groupAndRender(allIngr, langCode) {
   // Standalone adjective / structural fragments that survive parsing as a whole
   // "ingredient" but carry no food noun ("Boneless", "Bone-in", "Fine",
   // "Handful", "A few", "Filling option 2", "Juice of half a"). Dropped entirely.
-  const FRAGMENT = /^(boneless|bone[- ]?in|skin[- ]?on|skinless|fine|coarse|handful|a few|few|a couple( of)?|couple( of)?|(filling )?options?\s*\d*|juice of (a |half ?a? ?|the )?|zest of (a |half ?a? ?|the )?)$/i;
+  const FRAGMENT = /^(boneless|bone[- ]?in|skin[- ]?on|skinless|fine|coarse|mixed|ice[- ]?cold|thinly|thickly|handful|a few|few|a couple( of)?|couple( of)?|(a |an |one )?(small |little |tiny |big |large |thin |thick )?(pieces?|slices?|chunks?|slivers?|wedges?|knobs?)( of)?|(filling )?options?\s*\d*|juice of (a |half ?a? ?|the )?|zest of (a |half ?a? ?|the )?)$/i;
 
   for (const [canonical, items] of Object.entries(byCanon)) {
     if (ORPHAN.test(canonical) || NON_FOOD.test(canonical) || RECIPE_INSTRUCTION.test(canonical) || FRAGMENT.test(canonical) || canonical.length < 3) continue;
