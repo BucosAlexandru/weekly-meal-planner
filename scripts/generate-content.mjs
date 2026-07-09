@@ -4711,7 +4711,12 @@ function cuisineHubProse(originEnKey, display, recs, tiles, lc_code, lc, rl) {
     flavours: esc(flavours),
     dishes: esc(dishNames.join(sep)),
   };
-  const planUrl = `${lc.dir}/`;
+  // Producer fix (8 iul): the hub CTA says "Build my weekly meal plan" but
+  // pointed at the SEO plans LISTING (lc.dir) — a reading page, not the
+  // builder. The label promises the app planner, so link the planner anchor
+  // on the app homepage instead.
+  const appBase = lc.appDir.endsWith('/') ? lc.appDir : `${lc.appDir}/`;
+  const planUrl = `${appBase}#planner-heading`;
   return `
   <section class="content-section cuisine-hub-prose">
     <div class="content-section-inner">
