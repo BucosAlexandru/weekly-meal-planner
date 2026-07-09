@@ -517,6 +517,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       cardsEl.dataset.pwActionsWired = '1';
     }
+
+    // Plan persistence: every week-card render starts from empty inputs, so
+    // re-hydrate from localStorage — this single hook covers initial load,
+    // language switch (applyTranslations → renderTable) and mode switch back
+    // to week. Deep-link precedence and the save-suppression flag live inside
+    // restorePlanFromStorage(). The promise is published so consumePlanCart()
+    // can pour the cart AFTER restore (cart fills only the remaining gaps).
+    window._pwRestorePromise = restorePlanFromStorage()
+      .catch(err => console.error('[plan-persist] restore failed:', err));
   }
 
   // Live stats: Week Overview strip + per-day cost in each card header.
@@ -2076,6 +2085,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Week-card stats (overview strip + per-day costs) share this exact
     // refresh path so they stay live on every input/generate/mode event.
     updateWeekOverview();
+    // Persist the plan on the same universal recalc path (cheap: 14 input
+    // reads + one JSON.stringify). Placed BEFORE the empty-shopping-list
+    // early return below, so a plan of unmatched free text still saves.
+    savePlanToStorage();
     const listEl = document.getElementById('shopping-list');
     if (!listEl) return;
     const meals   = collectMeals();
@@ -2230,6 +2243,108 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     updatePwClearBtn(); // §2b: same refresh pass that toggles .pw-filled
+  }
+
+  // ── Plan persistence (localStorage 'mp:plan') ─────────────────────────────
+  // North Star is "user returns next Monday" — until now the weekly plan lived
+  // only in the DOM inputs (d1l..d7c), so a refresh, tab close or language
+  // switch silently threw it away. Every mutation already funnels through
+  // updateShoppingList() (typing, picker, reroll, remove, clear, generate,
+  // undo, cart pour), so that is the single save hook; restore re-enters
+  // through the same pipeline the ?autoplan= deep link uses (direct input
+  // writes + one updateAllRecipeMeta + one updateShoppingList).
+  //
+  // Shape: { v: 1, savedAt: <ms>, slots: { d1l: { en, raw }, ... } } — only
+  // non-empty slots. `en` is the canonical EN recipe name (language-neutral
+  // key, so restore can re-localize via getRecipeText in the ACTIVE language);
+  // `raw` is the literal input value, kept as the fallback for free text and
+  // for recipes that can't be resolved at restore time (e.g. a budget recipe
+  // before recipes-budget.js has lazy-loaded). No expiry: a week-old plan is
+  // exactly what a returning user wants to see.
+  function savePlanToStorage() {
+    // Only the week plan is persisted. 'meal'/'day' table modes reuse the same
+    // d1l/d1c input ids, so saving there would clobber the stored week plan.
+    if ((window._planMode || 'week') !== 'week') return;
+    if (!document.getElementById('plan-cards')) return;
+    // A restore is in flight: the freshly re-rendered cards are transiently
+    // empty (mode switch back to week, language switch) — saving now would
+    // wipe the very plan we're about to restore.
+    if (window._pwRestorePending) return;
+    const slots = {};
+    let any = false;
+    for (let d = 1; d <= 7; d++) {
+      ['l', 'c'].forEach(sfx => {
+        const id = `d${d}${sfx}`;
+        const val = document.getElementById(id)?.value.trim() || '';
+        if (!val) return;
+        any = true;
+        const rec = getRecipeByInput(val);
+        slots[id] = rec ? { en: rec.name?.en || rec.name?.ro, raw: val } : { raw: val };
+      });
+    }
+    try {
+      if (!any) {
+        // Deep links (?autoplan= / ?meal=) apply on a 200–300 ms timer; the
+        // early empty-slot recalcs before they land must not erase storage.
+        // Once applied they replaceState-clean the URL, re-enabling removal.
+        const p = new URLSearchParams(window.location.search);
+        if (p.get('autoplan') || p.get('meal')) return;
+        localStorage.removeItem('mp:plan'); // empty plan = clean storage
+      } else {
+        localStorage.setItem('mp:plan', JSON.stringify({ v: 1, savedAt: Date.now(), slots }));
+      }
+    } catch (_) { /* storage unavailable (private mode/quota) — plan stays DOM-only */ }
+  }
+
+  // Restore the stored plan into the (freshly rendered, empty) week-card
+  // inputs. Called from renderWeekCards(), which covers all three entry
+  // points with one hook: initial page load, language switch re-render and
+  // mode switch back to week. Silent by design — no toast; the plan is
+  // simply there, as the user expects.
+  async function restorePlanFromStorage() {
+    // Deep links win: ?autoplan= / ?meal= build a fresh plan which then gets
+    // saved naturally through updateShoppingList — don't fight over slots.
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('autoplan') || params.get('meal')) return;
+    let data = null;
+    try { data = JSON.parse(localStorage.getItem('mp:plan') || 'null'); } catch (_) {}
+    if (!data || data.v !== 1 || !data.slots || typeof data.slots !== 'object') return;
+    const entries = Object.entries(data.slots)
+      .filter(([id, s]) => /^d[1-7][lc]$/.test(id) && s && (s.en || s.raw));
+    if (!entries.length) return;
+    // Flag BEFORE the first await (async body runs sync until then): the
+    // mode-switch / observer recalcs that fire right after the re-render see
+    // it and skip saving the transiently-empty card state.
+    window._pwRestorePending = true;
+    let wrote = false;
+    try {
+      await ensureMainRecipes();
+      // Budget recipes resolve only if recipes-budget.js is already loaded
+      // (the toggle isn't persisted); otherwise the `raw` fallback shows the
+      // saved display text and the corpus match catches up once it loads.
+      const allSrc = [...recipesMain, ...recipesBudget];
+      const findByName = (name) => allSrc.find(r =>
+        Object.values(r.name || {}).some(n =>
+          typeof n === 'string' && n.toLowerCase() === String(name).toLowerCase()));
+      for (const [id, slot] of entries) {
+        const inp = document.getElementById(id);
+        if (!inp || inp.value.trim()) continue; // never clobber a live value
+        const rec = slot.en ? findByName(slot.en) : null;
+        // Resolved → re-localized display name in the ACTIVE language (this is
+        // what turns the old "language switch wipes the plan" bug into "the
+        // plan follows the language"); unresolved → literal saved text.
+        const value = rec ? getRecipeText(rec, lang) : (typeof slot.raw === 'string' ? slot.raw : '');
+        if (!value) continue;
+        inp.value = value; // direct write, same pattern as the ?autoplan= handler
+        wrote = true;
+      }
+    } finally {
+      window._pwRestorePending = false;
+    }
+    if (wrote) {
+      updateAllRecipeMeta();   // card display layer: name buttons, .pw-filled, clear btn
+      updateShoppingList();    // recalc + re-save (normalizes raw to the new language)
+    }
   }
 
   // ── Cost estimate display ─────────────────────────────────────
@@ -5701,6 +5816,10 @@ if (verifyBtn && emailInput && resultDiv) {
     if (!Array.isArray(items) || items.length === 0) return;
     setTimeout(async () => { // wait for renderTable, like the deep links above
       await ensureMainRecipes();
+      // Plan persistence: the stored week plan re-hydrates these same slots
+      // (kicked off by renderWeekCards). Wait for it so the pour sees the
+      // TRUE empty slots — composition is restore first, cart fills the gaps.
+      if (window._pwRestorePromise) { try { await window._pwRestorePromise; } catch (_) {} }
       const allSrc = [...recipesMain, ...recipesBudget];
       // Same resolution as the ?meal= handler: the stored EN name is matched
       // against every name locale, so older carts (or hand-edited storage)
