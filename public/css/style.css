@@ -2472,8 +2472,12 @@ body.theme-winter .app-header { position: relative; z-index: 2; }
 body.pdf-exporting.theme-winter::before,
 body.pdf-exporting.theme-winter::after { display: none !important; }
 
-/* ── Grouped shopping list (normalization-engine output on screen) ── */
-.shopping-list { margin: 0; padding: 0; }
+/* ── Grouped shopping list (normalization-engine output on screen) ──
+   display:block overrides the legacy 175px item grid (line ~848), which was
+   written for flat <li> items; with .shopping-group children it crams whole
+   categories into 175px cells and the text overlaps. Groups stack vertically;
+   .shopping-group-items provides its own 2-column grid at ≥640px. */
+.shopping-list { display: block; margin: 0; padding: 12px 16px 16px; }
 .shopping-group { list-style: none; margin: 0 0 1rem; }
 .shopping-group-title {
   display: flex;
