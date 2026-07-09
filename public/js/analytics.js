@@ -11,8 +11,8 @@
   'use strict';
 
   var ENDPOINT = '/api/event';
-  // Whitelist mirrors the server. subscription_active is server-only.
-  var ALLOWED = { page_view: 1, plan_generated: 1, pdf_click: 1, email_submitted: 1, checkout_started: 1 };
+  // Whitelist mirrors the server (api/event.js). subscription_active is server-only.
+  var ALLOWED = { page_view: 1, plan_generated: 1, shopping_list_viewed: 1, premium_viewed: 1, pdf_click: 1, email_submitted: 1, checkout_started: 1 };
 
   function anonId() {
     try {
