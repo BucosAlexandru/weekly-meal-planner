@@ -2524,29 +2524,29 @@ body.pdf-exporting.theme-winter::after { display: none !important; }
    the undo toast is the safety net, the button stays quiet. */
 .pw-plan-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 2px;
 }
-/* Feedback producător (8 iul): varianta text-link era nedescoperibilă.
-   Buton secundar conturat, cu icon — vizibil, dar sub Generate ca pondere. */
+/* Feedback producător (8 iul, v2): centrat, culoare cărămizie (terracotta) —
+   sare în ochi când apare, fără agresivitatea roșului. */
 .pw-clear-plan {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid var(--line, #e5e7eb);
-  background: var(--surface, #fff);
-  padding: 8px 14px;
+  border: 1px solid #e3b8a5;
+  background: #fdf4ef;
+  padding: 8px 16px;
   font-size: .82rem;
   font-weight: 600;
-  color: var(--ink-2, #374151);
+  color: #b04a2f;
   cursor: pointer;
   border-radius: 999px;
   transition: border-color .12s, color .12s, background .12s;
 }
 .pw-clear-plan:hover {
-  border-color: var(--color-brand, #24712A);
-  color: var(--color-brand, #24712A);
-  background: var(--color-brand-light, #f0fdf4);
+  border-color: #b04a2f;
+  color: #8f3a23;
+  background: #f9e7dd;
 }
 .pw-clear-plan:focus-visible { outline: 2px solid var(--color-brand, #24712A); outline-offset: 2px; }
 @media (pointer: coarse) {
