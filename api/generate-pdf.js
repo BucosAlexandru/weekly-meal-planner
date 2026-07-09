@@ -873,7 +873,7 @@ export function MealPlanDocument(plan) {
     h(Text, { style: styles.sectionTitle }, L.sectionShop || 'Shopping list'),
     h(View, { style: styles.sectionRule }),
   );
-  const tipEl = groups.length ? h(View, { style: styles.tipBox, wrap: false },
+  const tipEl = groups.length ? h(View, { style: [styles.tipBox, { width: 360 }], wrap: false },
     h(Text, { style: styles.tipLabel }, L.tipLabel || 'PRO TIP'),
     h(Text, { style: styles.tipText },
       L.tipText || 'Items are grouped by supermarket aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.'),
@@ -898,18 +898,9 @@ export function MealPlanDocument(plan) {
     cols[minIdx].groups.push(g);
     cols[minIdx].total += itemCount;
   }
-  // PRO TIP rides at the bottom of the shortest column, integrating into
-  // the grid instead of dangling under it as a full-width strip that often
-  // pushed onto a near-empty trailing page.
-  const tipColIdx = cols.reduce(
-    (min, c, i) => (c.total < cols[min].total ? i : min),
-    0,
-  );
-
   const colEls = cols.map((col, i) => {
     const isLast = i === COLUMNS - 1;
     const children = col.groups.map((g, gi) => shopGroup(g, `${i}-${gi}`, styles));
-    if (i === tipColIdx && tipEl) children.push(tipEl);
     return h(View,
       { key: `c${i}`, style: [styles.shopColumn, isLast ? styles.shopColumnLast : null] },
       ...children,
@@ -920,6 +911,10 @@ export function MealPlanDocument(plan) {
     h(View, { key: 'sh', style: styles.shopSection },
       shopHeadingEl,
       h(View, { style: styles.shopGrid }, ...colEls),
+      // PRO TIP: centered under the whole list, always in the same place
+      // (producer feedback, 9 iul — riding a column made it land left or
+      // right depending on the plan, which read as random).
+      tipEl ? h(View, { style: { alignItems: 'center', marginTop: 14 }, wrap: false }, tipEl) : null,
     ),
   ] : [];
 
