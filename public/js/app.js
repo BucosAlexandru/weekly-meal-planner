@@ -2651,7 +2651,10 @@ function renderProductPreview() {
   document.getElementById(ID)?.remove();
 
   const ro = lang === 'ro';
-  const menusUrl = (i18n[lang] && i18n[lang].menusUrl) || `/${lang}/meniu-saptamanal/`;
+  // Per-language weekly-plan index. MUST use the localized slug table
+  // (en→weekly-meal-plan, de→wochenplan…); the old `/${lang}/meniu-saptamanal/`
+  // fallback hardcoded the Romanian slug and 404'd on every non-RO locale.
+  const menusUrl = (NAV_CONTENT_LINKS[lang] || NAV_CONTENT_LINKS.en).plans.href;
 
   // Per-language copy
   const copy = {
@@ -2865,7 +2868,7 @@ function renderDiscovery() {
   document.getElementById(ID)?.remove();
 
   const ro = lang === 'ro';
-  const menusUrl   = `/${lang}/${ro ? 'meniu-saptamanal' : 'weekly-menu'}/`;
+  const menusUrl   = (NAV_CONTENT_LINKS[lang] || NAV_CONTENT_LINKS.en).plans.href;
   const recipesUrl = `/${lang}/${ro ? 'retete' : 'recipes'}/`;
 
   // Correct URL per language — these MUST match the actual generated route
