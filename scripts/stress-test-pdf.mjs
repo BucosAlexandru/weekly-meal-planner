@@ -28,7 +28,8 @@
 //   - empty       (no meals selected — empty payload)
 //   - huge-shop   (very large shopping list — 12+ groups)
 
-import handler from '../api/generate-pdf.js';
+import handler, { MealPlanDocument } from '../api/generate-pdf.js';
+import { renderToBuffer as rpdfRenderToBuffer } from '@react-pdf/renderer';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
@@ -42,7 +43,24 @@ let exitCode = 0;
 function ok(msg)  { console.log(`  ✓ ${msg}`); }
 function fail(msg){ console.log(`  ✗ ${msg}`); exitCode = 1; }
 
-async function renderToBuffer(plan) {
+// scenarioIdx feeds a unique x-forwarded-for per scenario: all scenarios run
+// in ONE process, so without distinct IPs the free-tier rate limit
+// (FREE_PDF_LIMIT per hour, keyed by email/IP) trips on the 9th render and
+// later scenarios fail with 429 — an artifact of the harness, not the API.
+async function renderToBuffer(plan, scenarioIdx = 0, direct = false) {
+  const t0 = Date.now();
+  if (direct) {
+    // Premium-equivalent render through the exported pure document builder.
+    // Used for pagination stress on payload shapes (7-day plans) that the
+    // handler would clamp to the 2-day free preview without a real premium
+    // email — Supabase isn't available in this harness. Gating itself is
+    // exercised by the handler-path scenarios below.
+    const body = await Promise.race([
+      rpdfRenderToBuffer(MealPlanDocument(plan)),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('render timeout')), STRESS_TIMEOUT_MS)),
+    ]);
+    return { body, status: 200, headers: { 'content-type': 'application/pdf' }, ms: Date.now() - t0 };
+  }
   let body, status = 200, headers = {};
   const res = {
     setHeader: (k, v) => { headers[k.toLowerCase()] = v; },
@@ -50,9 +68,13 @@ async function renderToBuffer(plan) {
     send:   (b) => { body = b; },
     json:   (j) => { body = JSON.stringify(j); },
   };
-  const t0 = Date.now();
+  const req = {
+    method: 'POST',
+    body: plan,
+    headers: { 'x-forwarded-for': `10.99.0.${scenarioIdx + 1}` },
+  };
   await Promise.race([
-    handler({ method: 'POST', body: plan }, res),
+    handler(req, res),
     new Promise((_, rej) => setTimeout(() => rej(new Error('render timeout')), STRESS_TIMEOUT_MS)),
   ]);
   return { body, status, headers, ms: Date.now() - t0 };
@@ -105,15 +127,27 @@ const SCENARIOS = [
   },
   {
     name: 'full-7-day',
-    expectPagesMin: 2, expectPagesMax: 5,
+    // Premium-shaped payload: rendered via the exported document builder
+    // (direct), since the handler clamps >2-day plans without a premium
+    // email — this scenario stresses 7-day pagination, not gating.
+    direct: true,
+    expectPagesMin: 2, expectPagesMax: 6,
     keywords: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun','SHOPPING LIST'],
     plan: {
       title: 'Premium Full Week',
       weekLabel: 'Stress: full 7-day',
+      weekCost: '~€62',
       days: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d => ({
         day: d,
-        lunch:  basicMeal(`${d} Lunch`, 6),
-        dinner: basicMeal(`${d} Dinner`, 6),
+        lunch:  Object.assign(basicMeal(`${d} Lunch`, 6), {
+          // Full ingredient lines with quantities — stresses the new
+          // 2-column per-meal layout (step 1 of the PDF overhaul).
+          ingredientsFull: Array.from({length:12},(_,i)=>`${(i+1)*25} g ingredient number ${i+1}, prepared some way`),
+        }),
+        dinner: Object.assign(basicMeal(`${d} Dinner`, 6), {
+          ingredientsFull: Array.from({length:9},(_,i)=>`${(i+1)*50} ml component ${i+1}`),
+        }),
+        costLabel: '~€9',
       })),
       shoppingGroups: Array.from({length:8},(_,i)=>({
         id: `g${i}`, label: `Group ${i+1}`,
@@ -297,11 +331,11 @@ function checkPDF(name, body, expectMin, expectMax, keywords) {
 
 (async () => {
   console.log(`══ PDFv2 pagination stress tests ══\n  tmpdir: ${TMP}\n`);
-  for (const s of SCENARIOS) {
+  for (const [si, s] of SCENARIOS.entries()) {
     console.log(`\n── ${s.name} ──`);
     let resp;
     try {
-      resp = await renderToBuffer(s.plan);
+      resp = await renderToBuffer(s.plan, si, !!s.direct);
     } catch (e) {
       fail(`render error: ${e.message}`);
       RESULTS.push({ name: s.name, pass: false, error: e.message });

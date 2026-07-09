@@ -304,6 +304,29 @@ function makeStyles(fontFamily) { return StyleSheet.create({
     marginBottom: 3,
   },
 
+  // ── Week-at-a-glance grid (section 01, "fridge moment") ─────────────────
+  // Compact 7-row table: day abbrev | lunch name · time | dinner name · time.
+  // Thin rules between rows; the whole grid stays under ~1/3 of a page.
+  glanceGrid: { marginBottom: 12 },
+  glanceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 2.6, paddingBottom: 2.2,
+    borderBottomWidth: 0.5,
+    borderBottomColor: HAIRLINE_2,
+  },
+  glanceDay: {
+    width: 34,
+    fontSize: 7,
+    fontFamily, fontWeight: 700,
+    color: BRAND_DARK,
+    letterSpacing: 0.8,
+  },
+  glanceCell: { flex: 1, paddingRight: 8 },
+  glanceName: { fontSize: 8.2, color: INK, fontFamily, fontWeight: 700, lineHeight: 1.2 },
+  glanceMeta: { fontSize: 6.6, color: INK_MUTED, fontFamily, fontWeight: 400 },
+  glanceEmpty: { fontSize: 8.2, color: INK_FAINT },
+
   // ── Day block (one per day) ──────────────────────────────────────────────
   dayBlock: { marginBottom: 7 },
 
@@ -412,6 +435,17 @@ function makeStyles(fontFamily) { return StyleSheet.create({
     fontSize: 7.4,
     color: INK_SOFT,
     lineHeight: 1.4,
+  },
+  // Full ingredient lines (with quantities), 2 columns per meal — the
+  // "kitchen moment": everything needed to cook the recipe, small and tight.
+  mealIngrCols: { flexDirection: 'row', marginTop: 1 },
+  mealIngrCol: { flex: 1, paddingRight: 7 },
+  mealIngrColLast: { paddingRight: 0 },
+  mealIngrLine: {
+    fontSize: 7.5,
+    color: INK_SOFT,
+    lineHeight: 1.3,
+    marginBottom: 1,
   },
   mealEmpty: { fontSize: 7.8, color: INK_FAINT, fontStyle: 'italic' },
 
@@ -584,6 +618,10 @@ function mealCell(meal, kind, L, styles) {
     );
   }
   const ingr = Array.isArray(meal.ingredients) ? meal.ingredients : [];
+  // Complete localized ingredient lines WITH quantities (the "kitchen
+  // moment") — a cook must be able to make the recipe from the PDF alone.
+  const full = Array.isArray(meal.ingredientsFull) && meal.ingredientsFull.length
+    ? meal.ingredientsFull : null;
   const MAX = 5;
   const moreWord = L.moreSuffix || 'more';
   const ingrShort = ingr.length
@@ -601,7 +639,21 @@ function mealCell(meal, kind, L, styles) {
   if (meal.servings) chips.push(h(Text, { key: 'cs', style: styles.mealMetaChip }, `${meal.servings} ${L.servingsWord || 'servings'}`));
   if (meal.cost)     chips.push(h(Text, { key: 'cc', style: [styles.mealMetaChip, styles.mealMetaChipCost] }, String(meal.cost)));
   if (chips.length)  children.push(h(View, { key: 'm', style: styles.mealMeta }, ...chips));
-  if (ingrShort) {
+  if (full) {
+    // ALL ingredient lines, quantities included, laid out in 2 tight columns.
+    const mid = Math.ceil(full.length / 2);
+    const colA = full.slice(0, mid);
+    const colB = full.slice(mid);
+    children.push(h(Text, { key: 'il', style: styles.mealIngrLabel }, L.ingredients || 'INGREDIENTS'));
+    children.push(h(View, { key: 'ic', style: styles.mealIngrCols },
+      h(View, { style: styles.mealIngrCol },
+        ...colA.map((line, i) => h(Text, { key: `a${i}`, style: styles.mealIngrLine }, String(line)))),
+      h(View, { style: [styles.mealIngrCol, styles.mealIngrColLast] },
+        ...colB.map((line, i) => h(Text, { key: `b${i}`, style: styles.mealIngrLine }, String(line)))),
+    ));
+  } else if (ingrShort) {
+    // Backward compat: old payloads without ingredientsFull keep the compact
+    // noun-list preview.
     children.push(h(Text, { key: 'il', style: styles.mealIngrLabel }, L.ingredients || 'INGREDIENTS'));
     children.push(h(Text, { key: 'i',  style: styles.mealIngr }, ingrShort));
   }
@@ -615,18 +667,42 @@ function dayBlock(d, idx, L, styles) {
   const metaBits = [];
   if (meals)    metaBits.push(`${meals} ${L.mealsSuffix || 'meals'}`);
   if (totalMin) metaBits.push(`${totalMin} ${L.minTotal || 'min total'}`);
-  return h(View, { key: idx, style: styles.dayBlock, wrap: false },
-    h(View, { style: styles.dayHeader },
+  // Real cost of the day (sum of the two meals), computed client-side.
+  if (d.costLabel) metaBits.push(String(d.costLabel));
+  // Pagination: the day block itself may flow to the next page (full
+  // ingredient lists make 7 days taller than one page), but a meal pair
+  // must never split mid-recipe — the mealRow is the atomic unit and the
+  // header uses minPresenceAhead so it can't orphan at a page bottom.
+  return h(View, { key: idx, style: styles.dayBlock },
+    h(View, { style: styles.dayHeader, minPresenceAhead: 60 },
       h(Text, { style: styles.dayBadge }, String(idx + 1)),
       h(Text, { style: styles.dayName }, (d.day || `Day ${idx + 1}`).toUpperCase()),
       metaBits.length ? h(View, { style: styles.dayDot }) : null,
       metaBits.length ? h(Text, { style: styles.dayMeta }, metaBits.join(' · ')) : null,
       h(View, { style: styles.dayRule }),
     ),
-    h(View, { style: styles.mealRow },
+    h(View, { style: styles.mealRow, wrap: false },
       h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch',  L, styles)),
       h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner', L, styles)),
     ),
+  );
+}
+
+// One row of the week-at-a-glance grid: day abbrev | lunch | dinner.
+function glanceRow(d, idx, L, styles) {
+  const cell = (meal) => {
+    if (!meal || !meal.name) return h(View, { style: styles.glanceCell }, h(Text, { style: styles.glanceEmpty }, ' '));
+    return h(View, { style: styles.glanceCell },
+      h(Text, { style: styles.glanceName },
+        String(meal.name),
+        meal.time ? h(Text, { style: styles.glanceMeta }, `  ·  ${meal.time} min`) : null,
+      ),
+    );
+  };
+  return h(View, { key: `g${idx}`, style: styles.glanceRow },
+    h(Text, { style: styles.glanceDay }, String(d.day || idx + 1).toUpperCase()),
+    cell(d.lunch),
+    cell(d.dinner),
   );
 }
 
@@ -651,7 +727,11 @@ function shopGroup(g, gi, styles) {
   );
 }
 
-function MealPlanDocument(plan) {
+// Exported for local tooling (scripts/preview-pdf.mjs, stress-test-pdf.mjs)
+// so they can render the FULL premium view of a plan without going through
+// the HTTP handler. This is a pure render function — access control lives in
+// the default handler (isPremiumEmail + gatePlanForAccess) and is unchanged.
+export function MealPlanDocument(plan) {
   const days   = Array.isArray(plan.days) ? plan.days : [];
   const groups = Array.isArray(plan.shoppingGroups) ? plan.shoppingGroups : [];
   // Resolve the font family for this locale. Latin/Cyrillic → Roboto;
@@ -693,28 +773,25 @@ function MealPlanDocument(plan) {
   );
 
   // ── Hero block (page 1) — title left, stats right ──
+  // A stat has to EARN its box: unknown/zero values are dropped entirely
+  // (no '—' placeholders). The real weekly cost joins when the client
+  // computed one.
+  const statDefs = [];
+  statDefs.push([String(days.length || 0), LStats.days || 'DAYS']);
+  statDefs.push([String(mealCount), LStats.meals || 'MEALS']);
+  if (avgMin)   statDefs.push([`${avgMin}'`, LStats.avg || 'AVG']);
+  if (cuisines) statDefs.push([String(cuisines), LStats.cuisines || 'CUISINES']);
+  if (plan.weekCost) statDefs.push([String(plan.weekCost), LStats.cost || 'BUDGET']);
   const heroStats = [];
-  heroStats.push(
-    h(View, { key: 's1', style: styles.heroStat },
-      h(Text, { style: styles.heroStatNum }, String(days.length || 0)),
-      h(Text, { style: styles.heroStatLabel }, LStats.days || 'DAYS'),
-    ),
-    h(View, { key: 'd1', style: styles.heroStatDivider }),
-    h(View, { key: 's2', style: styles.heroStat },
-      h(Text, { style: styles.heroStatNum }, String(mealCount)),
-      h(Text, { style: styles.heroStatLabel }, LStats.meals || 'MEALS'),
-    ),
-    h(View, { key: 'd2', style: styles.heroStatDivider }),
-    h(View, { key: 's3', style: styles.heroStat },
-      h(Text, { style: styles.heroStatNum }, avgMin ? `${avgMin}'` : '—'),
-      h(Text, { style: styles.heroStatLabel }, LStats.avg || 'AVG'),
-    ),
-    h(View, { key: 'd3', style: styles.heroStatDivider }),
-    h(View, { key: 's4', style: styles.heroStat },
-      h(Text, { style: styles.heroStatNum }, cuisines ? String(cuisines) : '—'),
-      h(Text, { style: styles.heroStatLabel }, LStats.cuisines || 'CUISINES'),
-    ),
-  );
+  statDefs.forEach(([num, label], i) => {
+    if (i) heroStats.push(h(View, { key: `d${i}`, style: styles.heroStatDivider }));
+    heroStats.push(
+      h(View, { key: `s${i}`, style: styles.heroStat },
+        h(Text, { style: styles.heroStatNum }, num),
+        h(Text, { style: styles.heroStatLabel }, label),
+      ),
+    );
+  });
 
   const heroEl = h(View, { style: styles.hero },
     h(View, { style: styles.heroLeft },
@@ -725,10 +802,23 @@ function MealPlanDocument(plan) {
     h(View, { style: styles.heroRight }, ...heroStats),
   );
 
-  // ── Section heading: THE PLAN ──
-  const planHeadingEl = h(View, { style: styles.sectionHead },
-    h(Text, { style: styles.sectionEyebrow }, '01'),
-    h(Text, { style: styles.sectionTitle }, L.sectionPlan || 'The week, day by day'),
+  // ── Section 01: THE WEEK AT A GLANCE (fridge moment) ──
+  // Compact grid answering "what are we eating today?" — one row per day.
+  const glanceEls = days.length ? [
+    h(View, { key: 'gh', style: styles.sectionHead, minPresenceAhead: 60 },
+      h(Text, { style: styles.sectionEyebrow }, '01'),
+      h(Text, { style: styles.sectionTitle }, L.weekAtGlance || 'The week at a glance'),
+      h(View, { style: styles.sectionRule }),
+    ),
+    h(View, { key: 'gg', style: styles.glanceGrid, wrap: false },
+      ...days.map((d, i) => glanceRow(d, i, L, styles)),
+    ),
+  ] : [];
+
+  // ── Section 02: DAY BY DAY (kitchen moment) ──
+  const planHeadingEl = h(View, { style: styles.sectionHead, minPresenceAhead: 80 },
+    h(Text, { style: styles.sectionEyebrow }, '02'),
+    h(Text, { style: styles.sectionTitle }, L.dayByDay || L.sectionPlan || 'Day by day'),
     h(View, { style: styles.sectionRule }),
   );
 
@@ -769,8 +859,9 @@ function MealPlanDocument(plan) {
   // (small) day grid and the whole document fits on one page.
   // Individual shopGroup views remain wrap:false so a category never
   // splits mid-list; the parent grid wraps freely between groups.
+  // ── Section 03: SHOPPING LIST (store moment) ──
   const shopHeadingEl = h(View, { style: styles.sectionHead, minPresenceAhead: 80 },
-    h(Text, { style: styles.sectionEyebrow }, '02'),
+    h(Text, { style: styles.sectionEyebrow }, '03'),
     h(Text, { style: styles.sectionTitle }, L.sectionShop || 'Shopping list'),
     h(View, { style: styles.sectionRule }),
   );
@@ -842,6 +933,7 @@ function MealPlanDocument(plan) {
     topAccent,
     mastheadEl,
     heroEl,
+    ...glanceEls,
     planHeadingEl,
     ...dayEls,
     lockedEl,

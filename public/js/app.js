@@ -1516,9 +1516,25 @@ document.addEventListener('DOMContentLoaded', () => {
         name: displayName,
         time: r?.time || null,
         servings: r?.servings || null,
-        cost: r?.costRon ? (lang === 'ro' ? `~${r.costRon} RON` : `~€${Math.round(r.costRon / 4.97)}`) : null,
+        cost: r?.costRon ? fmtCost(r.costRon) : null,
         ingredients: shortIngredients(rawIngr),
+        // Full localized ingredient lines WITH quantities — the "kitchen
+        // moment" of the PDF: a cook must be able to make the recipe from
+        // the PDF alone. Lightly cleaned (trim), quantities preserved.
+        // The short `ingredients` list above stays for backward compat
+        // (server falls back to it when ingredientsFull is absent).
+        ingredientsFull: rawIngr.map(s => String(s).trim()).filter(Boolean),
       };
+    }
+    // Shared cost formatter — same convention the per-meal chip always used:
+    // RON for the RO locale, EUR (4.97 RON/€) everywhere else.
+    function fmtCost(ron) {
+      if (!ron) return null;
+      return lang === 'ro' ? `~${Math.round(ron)} RON` : `~€${Math.round(ron / 4.97)}`;
+    }
+    function costRonOf(mealText) {
+      const r = findRecipe(mealText);
+      return (r && r.costRon) || 0;
     }
 
     // Localized 3-letter weekday labels — used as the day header inside
@@ -1532,11 +1548,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const abbrev = (s) => String(s || '').trim().slice(0, 3);
     const localizedDays = fullDays.map(abbrev);
 
-    const days = visibleMeals.map((m, i) => ({
-      day: localizedDays[i] || `Day ${i + 1}`,
-      lunch: mealPayload(m.lunch),
-      dinner: mealPayload(m.dinner),
-    })).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
+    // Per-day real cost (sum of the two meals' costRon) + weekly total for
+    // the hero — replaces the uniform "~€5 everywhere" impression with the
+    // actual budget of the plan.
+    let weekCostRon = 0;
+    const days = visibleMeals.map((m, i) => {
+      const dayRon = costRonOf(m.lunch) + costRonOf(m.dinner);
+      weekCostRon += dayRon;
+      return {
+        day: localizedDays[i] || `Day ${i + 1}`,
+        lunch: mealPayload(m.lunch),
+        dinner: mealPayload(m.dinner),
+        costLabel: fmtCost(dayRon),
+      };
+    }).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
 
     // Hybrid-B: pass aligned { en, loc } pairs, not a flat EN list. The EN
     // string drives parsing/canonical/category/quantity math (English-only
@@ -1604,112 +1629,126 @@ document.addEventListener('DOMContentLoaded', () => {
     const PDF_LABELS = {
       ro: {
         sectionPlan:'Săptămâna, zi cu zi',
+        weekAtGlance:'Săptămâna dintr-o privire', dayByDay:'Zi cu zi',
         lunch:'PRÂNZ', dinner:'CINĂ',
-        stats:{ days:'ZILE', meals:'MESE', avg:'MED', cuisines:'BUCĂTĂRII' },
+        stats:{ days:'ZILE', meals:'MESE', avg:'MED', cuisines:'BUCĂTĂRII', cost:'COST' },
         mealsSuffix:'mese', minTotal:'min total', moreSuffix:'altele',
         tipLabel:'SFAT', tipText:'Ingredientele sunt grupate pe rafturi — bifează pe măsură ce cumperi. Produsele proaspete și carnea la final pentru a păstra prospețimea.',
         pageOf:'Pagina {n} din {t}', servingsWord:'porții',
       },
       en: {
         sectionPlan:'The week, day by day',
+        weekAtGlance:'The week at a glance', dayByDay:'Day by day',
         lunch:'LUNCH', dinner:'DINNER',
-        stats:{ days:'DAYS', meals:'MEALS', avg:'AVG', cuisines:'CUISINES' },
+        stats:{ days:'DAYS', meals:'MEALS', avg:'AVG', cuisines:'CUISINES', cost:'BUDGET' },
         mealsSuffix:'meals', minTotal:'min total', moreSuffix:'more',
         tipLabel:'PRO TIP', tipText:'Items grouped by aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.',
         pageOf:'Page {n} of {t}', servingsWord:'servings',
       },
       es: {
         sectionPlan:'La semana, día a día',
+        weekAtGlance:'La semana de un vistazo', dayByDay:'Día a día',
         lunch:'ALMUERZO', dinner:'CENA',
-        stats:{ days:'DÍAS', meals:'COMIDAS', avg:'MED', cuisines:'COCINAS' },
+        stats:{ days:'DÍAS', meals:'COMIDAS', avg:'MED', cuisines:'COCINAS', cost:'COSTE' },
         mealsSuffix:'comidas', minTotal:'min total', moreSuffix:'más',
         tipLabel:'CONSEJO', tipText:'Ingredientes agrupados por pasillo — marca al comprar. Productos frescos y proteínas al final mantienen todo fresco.',
         pageOf:'Página {n} de {t}', servingsWord:'raciones',
       },
       fr: {
         sectionPlan:'La semaine, jour par jour',
+        weekAtGlance:'La semaine en un coup d\'œil', dayByDay:'Jour par jour',
         lunch:'DÉJEUNER', dinner:'DÎNER',
-        stats:{ days:'JOURS', meals:'REPAS', avg:'MOY', cuisines:'CUISINES' },
+        stats:{ days:'JOURS', meals:'REPAS', avg:'MOY', cuisines:'CUISINES', cost:'COÛT' },
         mealsSuffix:'repas', minTotal:'min total', moreSuffix:'autres',
         tipLabel:'ASTUCE', tipText:'Ingrédients regroupés par rayon — cochez en faisant les courses. Légumes frais et protéines en dernier pour la fraîcheur.',
         pageOf:'Page {n} sur {t}', servingsWord:'portions',
       },
       de: {
         sectionPlan:'Die Woche, Tag für Tag',
+        weekAtGlance:'Die Woche auf einen Blick', dayByDay:'Tag für Tag',
         lunch:'MITTAG', dinner:'ABEND',
-        stats:{ days:'TAGE', meals:'MAHLZ.', avg:'Ø', cuisines:'KÜCHEN' },
+        stats:{ days:'TAGE', meals:'MAHLZ.', avg:'Ø', cuisines:'KÜCHEN', cost:'KOSTEN' },
         mealsSuffix:'Mahlzeiten', minTotal:'Min gesamt', moreSuffix:'weitere',
         tipLabel:'TIPP', tipText:'Zutaten nach Supermarkt-Gang gruppiert — beim Einkauf abhaken. Frisches und Eiweiß zuletzt für maximale Frische.',
         pageOf:'Seite {n} von {t}', servingsWord:'Portionen',
       },
       pt: {
         sectionPlan:'A semana, dia a dia',
+        weekAtGlance:'A semana num relance', dayByDay:'Dia a dia',
         lunch:'ALMOÇO', dinner:'JANTAR',
-        stats:{ days:'DIAS', meals:'REFEIÇÕES', avg:'MED', cuisines:'COZINHAS' },
+        stats:{ days:'DIAS', meals:'REFEIÇÕES', avg:'MED', cuisines:'COZINHAS', cost:'CUSTO' },
         mealsSuffix:'refeições', minTotal:'min total', moreSuffix:'mais',
         tipLabel:'DICA', tipText:'Ingredientes agrupados por corredor — marque ao comprar. Frescos e proteínas por último para máxima frescura.',
         pageOf:'Página {n} de {t}', servingsWord:'porções',
       },
       ru: {
         sectionPlan:'Неделя, день за днём',
+        weekAtGlance:'Неделя одним взглядом', dayByDay:'День за днём',
         lunch:'ОБЕД', dinner:'УЖИН',
-        stats:{ days:'ДНИ', meals:'БЛЮДА', avg:'СРЕД', cuisines:'КУХНИ' },
+        stats:{ days:'ДНИ', meals:'БЛЮДА', avg:'СРЕД', cuisines:'КУХНИ', cost:'БЮДЖЕТ' },
         mealsSuffix:'блюд', minTotal:'мин всего', moreSuffix:'ещё',
         tipLabel:'СОВЕТ', tipText:'Продукты сгруппированы по отделам — отмечайте при покупке. Свежие и белки в конце для максимальной свежести.',
         pageOf:'Стр. {n} из {t}', servingsWord:'порций',
       },
       it: {
         sectionPlan:'La settimana, giorno per giorno',
+        weekAtGlance:'La settimana a colpo d\'occhio', dayByDay:'Giorno per giorno',
         lunch:'PRANZO', dinner:'CENA',
-        stats:{ days:'GIORNI', meals:'PASTI', avg:'MED', cuisines:'CUCINE' },
+        stats:{ days:'GIORNI', meals:'PASTI', avg:'MED', cuisines:'CUCINE', cost:'COSTO' },
         mealsSuffix:'pasti', minTotal:'min totali', moreSuffix:'altri',
         tipLabel:'CONSIGLIO', tipText:'Ingredienti raggruppati per corsia — spunta mentre fai la spesa. Freschi e proteine per ultimi per la massima freschezza.',
         pageOf:'Pagina {n} di {t}', servingsWord:'porzioni',
       },
       tr: {
         sectionPlan:'Hafta, gün gün',
+        weekAtGlance:'Bir bakışta hafta', dayByDay:'Gün gün',
         lunch:'ÖĞLE', dinner:'AKŞAM',
-        stats:{ days:'GÜN', meals:'YEMEK', avg:'ORT', cuisines:'MUTFAK' },
+        stats:{ days:'GÜN', meals:'YEMEK', avg:'ORT', cuisines:'MUTFAK', cost:'MALİYET' },
         mealsSuffix:'yemek', minTotal:'dk toplam', moreSuffix:'daha',
         tipLabel:'İPUCU', tipText:'Malzemeler reyon bazlı gruplandı — alışveriş ederken işaretle. Taze ürünler ve protein en son için maksimum tazelik.',
         pageOf:'Sayfa {n} / {t}', servingsWord:'porsiyon',
       },
       ar: {
         sectionPlan:'الأسبوع، يوم بيوم',
+        weekAtGlance:'الأسبوع في لمحة', dayByDay:'يومًا بيوم',
         lunch:'الغداء', dinner:'العشاء',
-        stats:{ days:'أيام', meals:'وجبات', avg:'متوسط', cuisines:'مطابخ' },
+        stats:{ days:'أيام', meals:'وجبات', avg:'متوسط', cuisines:'مطابخ', cost:'التكلفة' },
         mealsSuffix:'وجبات', minTotal:'دقيقة إجمالًا', moreSuffix:'أخرى',
         tipLabel:'نصيحة', tipText:'المكونات مُجمَّعة حسب رواق المتجر — اشطب أثناء التسوق. الطازج والبروتين في الأخير للحفاظ على النضارة.',
         pageOf:'صفحة {n} من {t}', servingsWord:'حصص',
       },
       zh: {
         sectionPlan:'一周食谱',
+        weekAtGlance:'一周概览', dayByDay:'逐日安排',
         lunch:'午餐', dinner:'晚餐',
-        stats:{ days:'天', meals:'餐', avg:'均', cuisines:'菜系' },
+        stats:{ days:'天', meals:'餐', avg:'均', cuisines:'菜系', cost:'花费' },
         mealsSuffix:'餐', minTotal:'分钟总计', moreSuffix:'更多',
         tipLabel:'小贴士', tipText:'食材按超市货架分组——边购物边打勾。生鲜和蛋白类最后买，保证新鲜。',
         pageOf:'第 {n} / {t} 页', servingsWord:'份',
       },
       ja: {
         sectionPlan:'今週の献立',
+        weekAtGlance:'今週の一覧', dayByDay:'日ごとの献立',
         lunch:'昼食', dinner:'夕食',
-        stats:{ days:'日', meals:'食', avg:'平均', cuisines:'料理' },
+        stats:{ days:'日', meals:'食', avg:'平均', cuisines:'料理', cost:'費用' },
         mealsSuffix:'食', minTotal:'分合計', moreSuffix:'その他',
         tipLabel:'ヒント', tipText:'食材は売場別にグループ化。買い物中にチェック。生鮮品とタンパク質は最後で鮮度キープ。',
         pageOf:'{n} / {t} ページ', servingsWord:'人分',
       },
       hi: {
         sectionPlan:'सप्ताह, दिन-प्रतिदिन',
+        weekAtGlance:'एक नज़र में सप्ताह', dayByDay:'दिन-प्रतिदिन',
         lunch:'दोपहर', dinner:'रात्रि',
-        stats:{ days:'दिन', meals:'भोजन', avg:'औसत', cuisines:'व्यंजन' },
+        stats:{ days:'दिन', meals:'भोजन', avg:'औसत', cuisines:'व्यंजन', cost:'लागत' },
         mealsSuffix:'भोजन', minTotal:'मि कुल', moreSuffix:'और',
         tipLabel:'सुझाव', tipText:'सामग्री अलमारी के अनुसार समूहित — खरीदते समय निशान लगाएँ। ताज़ा सामान और प्रोटीन अंत में लें ताकि सब ताज़ा रहे।',
         pageOf:'पृष्ठ {n} / {t}', servingsWord:'सर्विंग',
       },
       ko: {
         sectionPlan:'한 주 식단',
+        weekAtGlance:'한눈에 보는 한 주', dayByDay:'하루하루',
         lunch:'점심', dinner:'저녁',
-        stats:{ days:'일', meals:'식사', avg:'평균', cuisines:'요리' },
+        stats:{ days:'일', meals:'식사', avg:'평균', cuisines:'요리', cost:'비용' },
         mealsSuffix:'식', minTotal:'분 합계', moreSuffix:'개 더',
         tipLabel:'팁', tipText:'재료는 매대별로 그룹화 — 장보면서 체크. 신선식품과 단백질은 마지막에 담으면 신선도 유지.',
         pageOf:'{n} / {t} 페이지', servingsWord:'인분',
@@ -1718,6 +1757,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const L = PDF_LABELS[lang] || PDF_LABELS.en;
     const labels = {
       sectionPlan:    L.sectionPlan,
+      weekAtGlance:   L.weekAtGlance,
+      dayByDay:       L.dayByDay,
       sectionShop:    lcStrings.shoppingList || 'Shopping list',
       lunch:          L.lunch,
       dinner:         L.dinner,
@@ -1747,6 +1788,9 @@ document.addEventListener('DOMContentLoaded', () => {
       title:     lcStrings.title || 'Weekly Meal Plan',
       weekLabel: `${WEEK_OF[lang] || WEEK_OF.en} ${dateStr}`,
       days,
+      // Real weekly total for the hero stat strip (sum of the visible days'
+      // meal costs). Null when no matched recipe carries a cost.
+      weekCost: fmtCost(weekCostRon),
       shoppingGroups,
       labels,
       locked,
