@@ -104,7 +104,14 @@ Nimic nu așteaptă refresh. Nivelul 1 din straturi („pot să-mi fac planul?")
    - **Strat 1 — swap prin click** (~1 zi, merge pe touch și desktop identic): gest „mută" pe masă → sloturile devin ținte evidențiate → click pe destinație → mesele fac schimb + toast cu Anulează. Recalculare completă.
    - **Strat 2 — drag & drop ca îmbunătățire de desktop** (1-2 zile + QA): peste ACEEAȘI funcție de swap. Pe touch NU se face DnD nativ (conflict cu scroll, API HTML5 nefuncțional pe mobil) — telefonul rămâne pe click-swap.
    - **Validare întâi**: în testele cu utilizatori se observă dacă oamenii încearcă instinctiv să tragă cardurile (rând dedicat în fișa de observație). 3+/5 încearcă → prioritate; 0 → economisită o săptămână.
-1d. **Generatorul disponibil oriunde — modelul „coș de plan"** (feedback producător, 8 iul ×2). NU se încorporează plannerul în paginile statice (scump arhitectural). În schimb: „Add to my meal plan" pe rețete/hub-uri adaugă rețeta într-un coș persistat (localStorage) FĂRĂ să părăsești pagina; badge plutitor discret „🥗 N rețete în plan → Deschide plannerul"; la deschiderea plannerului, coșul se varsă în sloturi (+ toast cu Anulează). Transformă cele ~3000 pagini SEO în puncte de culegere pentru planner. DnD de pe cardul de rețetă spre badge = polish de desktop, după. Post-22.
+1d. **Generatorul disponibil oriunde — modelul „coș de plan"** (feedback producător, 8 iul ×2). NU se încorporează plannerul în paginile statice (scump arhitectural). În schimb: „Add to my meal plan" pe rețete/hub-uri adaugă rețeta într-un coș persistat (localStorage) FĂRĂ să părăsești pagina; badge plutitor „🥗 N" jos-dreapta (zona degetului mare); la deschiderea plannerului, coșul se varsă în primele sloturi libere (+ toast cu Anulează). Transformă cele ~3000 pagini SEO în puncte de culegere pentru planner. DnD de pe cardul de rețetă spre badge = polish de desktop, după. Post-22.
+
+   **Regulile de intuitivitate (decise 8 iul)** — pattern-ul e coșul de e-commerce, singurul limbaj UI pe care îl știe deja toată lumea; NU se inventează metaforă nouă:
+   - Feedback < 1s la adăugare: butonul devine „✓ În plan", pastila saltă, contorul crește. Fără feedback vizibil, gestul nu există.
+   - Pastila NU apare când coșul e gol (informația își câștigă dreptul); prima apariție = momentul de învățare.
+   - Tap pe pastilă → mini-listă (nume + ✕ per rețetă) + CTA „Construiește planul (N) →".
+   - La sosirea în planner: intrare automată în sloturi libere, fără dialoguri — corectura se face cu gesturile existente (🎲/✕/swap); toast cu Anulează.
+   - Criteriu de reușită la testare: nimeni nu întreabă „ce face asta?" — dacă pare cumpărături, e intuitiv.
 2. Favorite ❤️ (localStorage; devine și sursă de date pentru recomandări reale).
 3. kcal/proteine pe zi — după auditul câmpului `nutrition` din recipes.js (acoperire + corectitudine). Faza 2 din roadmap.
 4. Reroll cu criterii de proteină/bucătărie — după completarea metadatei.
