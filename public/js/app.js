@@ -1302,7 +1302,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return result;
   }
 
-  async function generateRandomMenu() {
+  // keepFilled: true = fill ONLY empty slots (used by the ?meal= deep link,
+  // which pins a recipe to Monday lunch and builds the week AROUND it).
+  // Default false = fresh full week (§2b.1) with the bulk-undo leash.
+  async function generateRandomMenu({ keepFilled = false } = {}) {
   // Pool building is shared with the per-slot reroll (Day 2) — see
   // getGenerationPool(): active filter / budget corpus / non-main exclusion.
   const pool = await getGenerationPool();
@@ -1343,8 +1346,8 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 7; i++) {
       const l = document.getElementById(`d${i+1}l`);
       const c = document.getElementById(`d${i+1}c`);
-      if (l) emptySlots.push(l);
-      if (c) emptySlots.push(c);
+      if (l && (!keepFilled || !l.value.trim())) emptySlots.push(l);
+      if (c && (!keepFilled || !c.value.trim())) emptySlots.push(c);
     }
     // Feasibility: keep very-long recipes off weekday slots (days 1–5) so the
     // default week is realistic for an average household; allow them only on
@@ -5636,16 +5639,16 @@ if (verifyBtn && emailInput && resultDiv) {
         Object.values(r.name || {}).some(n => n.toLowerCase() === mealParam.toLowerCase())
       );
       // Pin the chosen recipe to Monday lunch, then build a COMPLETE week
-      // around it. generateRandomMenu() (week mode) only fills empty slots, so
-      // the pinned recipe is preserved while the other 13 slots are generated.
-      // This avoids dropping the user into an almost-empty planner.
+      // AROUND it. Regression fix (8 iul): Generate now fills ALL slots by
+      // default (§2b.1 fresh week), which overwrote the pinned recipe —
+      // keepFilled:true restores the fill-only-empty behaviour for this flow.
       const anchor = document.getElementById('d1l');
       if (anchor) {
         anchor.value = rec ? getRecipeText(rec, lang) : mealParam;
-        anchor.dispatchEvent(new Event('input'));
+        anchor.dispatchEvent(new Event('input', { bubbles: true }));
       }
       window._planMode = 'week';
-      try { await generateRandomMenu(); } catch (_) { /* anchor still placed */ }
+      try { await generateRandomMenu({ keepFilled: true }); } catch (_) { /* anchor still placed */ }
       updateShoppingList();
       window.history.replaceState({}, '', window.location.pathname);
       document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior:'smooth', block:'start' });

@@ -4113,7 +4113,7 @@ ${bridgeHtml}
       <h3>${ui.ctaTitle}</h3>
       <p>${ui.ctaDesc}</p>
     </div>
-    <a href="${appUrl}" class="btn-cta-banner">${ui.ctaBtn}</a>
+    <a href="${appUrl}#planner-heading" class="btn-cta-banner">${ui.ctaBtn}</a>
   </div>
 
 </div><!-- /.recipe-page-wrap -->
