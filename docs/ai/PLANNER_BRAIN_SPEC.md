@@ -100,8 +100,11 @@ Nimic nu așteaptă refresh. Nivelul 1 din straturi („pot să-mi fac planul?")
 
 1. **Istoric / „Folosește planul de săptămâna trecută"** — cel mai puternic răspuns la „de ce revin luni dimineață?"; localStorage, ieftin. Primul după deadline.
 1b. **Panou lateral de detaliu rețetă** (poză, ingrediente, Înlocuiește / Vezi rețeta — fără a părăsi plannerul). Schimbă centrul de greutate al aplicației de pe pagina de rețetă pe planner. Candidat puternic post-22, dar în v1 click pe nume = picker (acțiunea frecventă e înlocuirea → regula celor 2 secunde); detaliul e acțiune rară și își așteaptă rândul.
-1c. **Swap/mutare între sloturi** (feedback producător, 8 iul, la testul Day 1): „cina de joi îmi place, o vreau luni la prânz". Fără drag-and-drop (exclus explicit din v1) — varianta click: acțiune „mută" în picker sau pe slot, alegi destinația, cele două mese fac schimb. Costurile și lista se recalculează.
-1d. **Generatorul disponibil oriunde** — de pe paginile de rețete poți trimite rețeta direct într-un slot din plan („Adaugă în planul meu → alege ziua/masa"). Transformă cele 2450 pagini SEO în puncte de intrare spre planner. Post-22.
+1c. **Swap/mutare între sloturi** (feedback producător, 8 iul ×2). Design în două straturi:
+   - **Strat 1 — swap prin click** (~1 zi, merge pe touch și desktop identic): gest „mută" pe masă → sloturile devin ținte evidențiate → click pe destinație → mesele fac schimb + toast cu Anulează. Recalculare completă.
+   - **Strat 2 — drag & drop ca îmbunătățire de desktop** (1-2 zile + QA): peste ACEEAȘI funcție de swap. Pe touch NU se face DnD nativ (conflict cu scroll, API HTML5 nefuncțional pe mobil) — telefonul rămâne pe click-swap.
+   - **Validare întâi**: în testele cu utilizatori se observă dacă oamenii încearcă instinctiv să tragă cardurile (rând dedicat în fișa de observație). 3+/5 încearcă → prioritate; 0 → economisită o săptămână.
+1d. **Generatorul disponibil oriunde — modelul „coș de plan"** (feedback producător, 8 iul ×2). NU se încorporează plannerul în paginile statice (scump arhitectural). În schimb: „Add to my meal plan" pe rețete/hub-uri adaugă rețeta într-un coș persistat (localStorage) FĂRĂ să părăsești pagina; badge plutitor discret „🥗 N rețete în plan → Deschide plannerul"; la deschiderea plannerului, coșul se varsă în sloturi (+ toast cu Anulează). Transformă cele ~3000 pagini SEO în puncte de culegere pentru planner. DnD de pe cardul de rețetă spre badge = polish de desktop, după. Post-22.
 2. Favorite ❤️ (localStorage; devine și sursă de date pentru recomandări reale).
 3. kcal/proteine pe zi — după auditul câmpului `nutrition` din recipes.js (acoperire + corectitudine). Faza 2 din roadmap.
 4. Reroll cu criterii de proteină/bucătărie — după completarea metadatei.

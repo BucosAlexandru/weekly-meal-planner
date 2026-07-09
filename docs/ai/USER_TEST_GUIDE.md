@@ -23,6 +23,7 @@ Nu explici. Nu arăți. Nu salvezi omul când ezită — ezitarea e exact datele
 | **A căutat după ingredient?** | da (ce a scris: ___) / nu i-a trecut prin cap |
 | **A folosit ✕ / Anulează?** | da / nu |
 | **Ezitări > 5 secunde** | UNDE exact (cel mai valoros câmp!) |
+| **A încercat să TRAGĂ un card/rețetă?** | da / nu — decide prioritatea drag & drop (backlog 1c/1d) |
 | Citate spontane | cuvintele lor exacte, mai ales negative |
 | **„Ai avea încredere să folosești asta săptămâna viitoare?"** | da / nu / de ce (SINGURA întrebare pusă de tine, la final) |
 
