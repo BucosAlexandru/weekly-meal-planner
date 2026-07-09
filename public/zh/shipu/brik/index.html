@@ -96,7 +96,11 @@
         <div class="recipe-meta-item"><i class="bi bi-currency-dollar"></i><span class="recipe-meta-label">费用</span><span class="recipe-meta-value">$</span></div>
       </div>
       <div class="recipe-cta-row">
-        <a href="/?meal=%E7%AA%81%E5%B0%BC%E6%96%AF%E8%9B%8B%E9%A5%BC" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> 加入我的计划</a>
+        <!-- ?meal= carries the EN name (locale-stable): it is both the no-JS
+             deep-link value (app.js matches every name locale, EN included)
+             and the plan-cart storage key. data-display feeds the localized
+             name to the cart badge panel (plan-cart.js). -->
+        <a href="/?meal=Brik" class="btn-recipe-primary" data-display="突尼斯蛋饼"><i class="bi bi-plus-circle-fill"></i> 加入我的计划</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="保存PDF：共享(⬆) → 打印 → 存储为PDF (iPhone/iPad)"><i class="bi bi-printer"></i> 导出PDF</button>
       </div>
     </div>
@@ -244,4 +248,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script><div id="plan-cart-config" hidden data-app="/" data-added="✓ 已加入计划" data-open="创建我的计划" data-yours="你的食谱"></div><script src="/js/plan-cart.min.js" defer></script></body></html>

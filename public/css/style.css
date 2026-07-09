@@ -2990,3 +2990,145 @@ body.pw-noscroll {
   color: var(--ink-4, #9ca3af);
   font-size: .88rem;
 }
+
+/* ── Plan cart (BRAIN §9.1d): floating badge + mini-panel on recipe/hub pages ─
+   DOM is created by plan-cart.min.js ONLY while the cart is non-empty (the
+   badge earns its existence). e-commerce cart pattern: add → the recipe
+   button flips to "✓ In plan", the badge bounces, the count grows.
+   inset-inline-end keeps the pill bottom-right in LTR / bottom-left in RTL
+   (thumb zone either way). Colors reuse the design-system variables. */
+.pw-cart-badge {
+  position: fixed;
+  inset-inline-end: max(16px, env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--r-full, 9999px);
+  background: var(--color-brand, #24712A);
+  color: #fff;
+  font-family: var(--font, system-ui);
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, .18));
+  cursor: pointer;
+  z-index: 1300;
+}
+.pw-cart-badge:hover { background: var(--color-brand-hover, #16551b); }
+.pw-cart-badge:focus-visible,
+.pw-cart-remove:focus-visible,
+.pw-cart-cta:focus-visible {
+  outline: 2px solid var(--color-brand, #24712A);
+  outline-offset: 2px;
+}
+/* Add feedback: quick bounce on count change; static for reduced motion. */
+@keyframes pw-cart-bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.18) translateY(-4px); }
+  60%  { transform: scale(.96); }
+  100% { transform: scale(1); }
+}
+.pw-cart-bounce { animation: pw-cart-bounce .45s var(--ease, ease); }
+@media (prefers-reduced-motion: reduce) {
+  .pw-cart-bounce { animation: none; }
+}
+
+/* Mini-panel: same visual family as .pw-toast (surface, line, shadow). */
+.pw-cart-panel {
+  position: fixed;
+  inset-inline-end: max(16px, env(safe-area-inset-right, 0px));
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  width: min(92vw, 320px);
+  background: var(--surface, #fff);
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: var(--r-md, 12px);
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, .14));
+  padding: 12px;
+  display: none;
+  z-index: 1300;
+}
+.pw-cart-panel.pw-cart-open { display: block; }
+.pw-cart-title {
+  margin: 0 2px 4px;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink-3, #6b7280);
+}
+.pw-cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.pw-cart-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--line, #e5e7eb);
+}
+.pw-cart-list li:last-child { border-bottom: 0; }
+.pw-cart-item-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .9rem;
+  color: var(--ink, #111827);
+}
+.pw-cart-remove {
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  background: none;
+  border-radius: var(--r-sm, 6px);
+  color: var(--ink-3, #6b7280);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.pw-cart-remove:hover { color: #b91c1c; background: var(--bg, #f5f9f5); }
+.pw-cart-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 0 14px;
+  border-radius: var(--r-md, 12px);
+  background: var(--color-brand, #24712A);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.pw-cart-cta:hover { background: var(--color-brand-hover, #16551b); color: #fff; }
+
+/* "In plan" state of the recipe-page add button. Written as a compound
+   selector (element + 2 classes, + :hover variant) so it outranks the
+   .recipe-main .btn-recipe-primary theme in content.css. */
+a.btn-recipe-primary.pw-cart-in,
+a.btn-recipe-primary.pw-cart-in:hover {
+  background: var(--color-brand-soft, #dcfce7);
+  color: var(--color-brand-dark, #1f5e22);
+  box-shadow: none;
+  transform: none;
+}
+
+/* RTL mobile: the floating back pill (content.css) is pinned to the PHYSICAL
+   bottom-left, which is exactly where inset-inline-end puts the badge on RTL
+   pages — lift the badge (and its panel) above the pill there. */
+@media (max-width: 768px) {
+  [dir="rtl"] .pw-cart-badge { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+  [dir="rtl"] .pw-cart-panel { bottom: calc(120px + env(safe-area-inset-bottom, 0px)); }
+}

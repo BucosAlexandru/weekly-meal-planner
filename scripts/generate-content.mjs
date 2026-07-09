@@ -2303,6 +2303,7 @@ const RECIPE_LANG = {
         breadHome:'Acasă', breadLabel:'Rețete',
         ingredientsH:'🛒 Ingrediente', howToH:'👨‍🍳 Mod de preparare',
         addBtn: n=>`Adaugă în planul meu`, relatedH: o=>`Alte rețete din ${esc(o)}`,
+        cartAdded:'✓ În plan', cartOpen:'Construiește planul', cartYours:'Rețetele tale',
         seoP: n=>`Adaugă <strong>${esc(n)}</strong> în planul tău săptămânal cu <a href="/ro/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Rețetă ${esc(n)} – Ingrediente și Mod de Preparare | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Rețeta de ${n}: ingrediente, mod de preparare pas cu pas. Adaugă în planificator gratuit.`,
@@ -2315,6 +2316,7 @@ const RECIPE_LANG = {
         breadHome:'Home', breadLabel:'Recipes',
         ingredientsH:'🛒 Ingredients', howToH:'👨‍🍳 How to make it',
         addBtn: n=>`Add to my meal plan`, relatedH: o=>`More recipes from ${esc(o)}`,
+        cartAdded:'✓ In plan', cartOpen:'Build my plan', cartYours:'Your recipes',
         seoP: n=>`Add <strong>${esc(n)}</strong> to your weekly plan with the <a href="/en/">free Meal-Planner.ro app</a>.`,
         pageTitle: n=>`${esc(n)} Recipe – Ingredients & How to Make | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} recipe: ingredients, step-by-step instructions. Add to your free meal planner.`,
@@ -2327,6 +2329,7 @@ const RECIPE_LANG = {
         breadHome:'Inicio', breadLabel:'Recetas',
         ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Cómo prepararlo',
         addBtn: n=>`Añadir a mi plan`, relatedH: o=>`Más recetas de ${esc(o)}`,
+        cartAdded:'✓ En el plan', cartOpen:'Crear mi plan', cartYours:'Tus recetas',
         seoP: n=>`Añade <strong>${esc(n)}</strong> a tu plan semanal con <a href="/es/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Receta de ${esc(n)} – Ingredientes y Preparación | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receta de ${n} de ${o}: ingredientes e instrucciones paso a paso.`,
@@ -2339,6 +2342,7 @@ const RECIPE_LANG = {
         breadHome:'Accueil', breadLabel:'Recettes',
         ingredientsH:'🛒 Ingrédients', howToH:'👨‍🍳 Comment préparer',
         addBtn: n=>`Ajouter à mon plan`, relatedH: o=>`Plus de recettes de ${esc(o)}`,
+        cartAdded:'✓ Dans le plan', cartOpen:'Construire mon plan', cartYours:'Vos recettes',
         seoP: n=>`Ajoutez <strong>${esc(n)}</strong> à votre plan hebdomadaire avec <a href="/fr/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Recette ${esc(n)} – Ingrédients et Préparation | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Recette de ${n} de ${o}: ingrédients et instructions étape par étape.`,
@@ -2351,6 +2355,7 @@ const RECIPE_LANG = {
         breadHome:'Startseite', breadLabel:'Rezepte',
         ingredientsH:'🛒 Zutaten', howToH:'👨‍🍳 Zubereitung',
         addBtn: n=>`Zu meinem Plan hinzufügen`, relatedH: o=>`Weitere Rezepte aus ${esc(o)}`,
+        cartAdded:'✓ Im Plan', cartOpen:'Plan erstellen', cartYours:'Deine Rezepte',
         seoP: n=>`Füge <strong>${esc(n)}</strong> zu deinem Wochenplan mit <a href="/de/">Meal-Planner.ro</a> hinzu.`,
         pageTitle: n=>`${esc(n)} Rezept – Zutaten & Zubereitung | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} Rezept aus ${o}: Zutaten und Schritt-für-Schritt-Anleitung.`,
@@ -2363,6 +2368,7 @@ const RECIPE_LANG = {
         breadHome:'Início', breadLabel:'Receitas',
         ingredientsH:'🛒 Ingredientes', howToH:'👨‍🍳 Como preparar',
         addBtn: n=>`Adicionar ao meu plano`, relatedH: o=>`Mais receitas de ${esc(o)}`,
+        cartAdded:'✓ No plano', cartOpen:'Montar meu plano', cartYours:'Suas receitas',
         seoP: n=>`Adicione <strong>${esc(n)}</strong> ao seu plano semanal com <a href="/pt/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Receita de ${esc(n)} – Ingredientes e Preparo | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receita de ${n} de ${o}: ingredientes e instruções passo a passo.`,
@@ -2375,6 +2381,7 @@ const RECIPE_LANG = {
         breadHome:'Главная', breadLabel:'Рецепты',
         ingredientsH:'🛒 Ингредиенты', howToH:'👨‍🍳 Как приготовить',
         addBtn: n=>`Добавить в мой план`, relatedH: o=>`Ещё рецепты из ${esc(o)}`,
+        cartAdded:'✓ В плане', cartOpen:'Собрать план', cartYours:'Ваши рецепты',
         seoP: n=>`Добавьте <strong>${esc(n)}</strong> в свой план на неделю с <a href="/ru/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Рецепт ${esc(n)} – Ингредиенты и приготовление | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Рецепт ${n} из ${o}: ингредиенты и пошаговые инструкции.`,
@@ -2387,6 +2394,7 @@ const RECIPE_LANG = {
         breadHome:'الرئيسية', breadLabel:'وصفات',
         ingredientsH:'🛒 المكونات', howToH:'👨‍🍳 طريقة التحضير',
         addBtn: n=>`أضف إلى خطتي`, relatedH: o=>`المزيد من وصفات ${esc(o)}`,
+        cartAdded:'✓ في الخطة', cartOpen:'أنشئ خطتي', cartYours:'وصفاتك',
         seoP: n=>`أضف <strong>${esc(n)}</strong> إلى خطتك الأسبوعية مع <a href="/ar/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`وصفة ${esc(n)} – المكونات وطريقة التحضير | Meal-Planner.ro`,
         pageDesc: (n,o)=>`وصفة ${n} من ${o}: مكونات وتعليمات خطوة بخطوة.`,
@@ -2399,6 +2407,7 @@ const RECIPE_LANG = {
         breadHome:'首页', breadLabel:'食谱',
         ingredientsH:'🛒 食材', howToH:'👨‍🍳 做法',
         addBtn: n=>`加入我的计划`, relatedH: o=>`更多来自${esc(o)}的食谱`,
+        cartAdded:'✓ 已加入计划', cartOpen:'创建我的计划', cartYours:'你的食谱',
         seoP: n=>`将<strong>${esc(n)}</strong>添加到您的每周计划 <a href="/zh/">Meal-Planner.ro</a>。`,
         pageTitle: n=>`${esc(n)}食谱 – 食材和做法 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n}食谱来自${o}：食材和步骤说明。`,
@@ -2411,6 +2420,7 @@ const RECIPE_LANG = {
         breadHome:'ホーム', breadLabel:'レシピ',
         ingredientsH:'🛒 材料', howToH:'👨‍🍳 作り方',
         addBtn: n=>`プランに追加`, relatedH: o=>`${esc(o)}のその他のレシピ`,
+        cartAdded:'✓ プランに追加済み', cartOpen:'プランを作る', cartYours:'あなたのレシピ',
         seoP: n=>`<strong>${esc(n)}</strong>を<a href="/ja/">Meal-Planner.ro</a>の週間プランに追加しましょう。`,
         pageTitle: n=>`${esc(n)}のレシピ – 材料と作り方 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}の${n}レシピ：材料とステップごとの作り方。`,
@@ -2423,6 +2433,7 @@ const RECIPE_LANG = {
         breadHome:'होम', breadLabel:'रेसिपी',
         ingredientsH:'🛒 सामग्री', howToH:'👨‍🍳 बनाने का तरीका',
         addBtn: n=>`मेरी योजना में जोड़ें`, relatedH: o=>`${esc(o)} की और रेसिपी`,
+        cartAdded:'✓ योजना में', cartOpen:'योजना बनाएं', cartYours:'आपकी रेसिपी',
         seoP: n=>`<strong>${esc(n)}</strong> को <a href="/hi/">Meal-Planner.ro</a> के साथ अपनी साप्ताहिक योजना में जोड़ें।`,
         pageTitle: n=>`${esc(n)} रेसिपी – सामग्री और बनाने का तरीका | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o} से ${n} रेसिपी: सामग्री और चरण-दर-चरण निर्देश।`,
@@ -2435,6 +2446,7 @@ const RECIPE_LANG = {
         breadHome:'Ana Sayfa', breadLabel:'Tarifler',
         ingredientsH:'🛒 Malzemeler', howToH:'👨‍🍳 Nasıl yapılır',
         addBtn: n=>`Planıma ekle`, relatedH: o=>`${esc(o)} tarihinden daha fazla tarif`,
+        cartAdded:'✓ Planda', cartOpen:'Planımı oluştur', cartYours:'Tarifleriniz',
         seoP: n=>`<strong>${esc(n)}</strong>'ı <a href="/tr/">Meal-Planner.ro</a> ile haftalık planınıza ekleyin.`,
         pageTitle: n=>`${esc(n)} Tarifi – Malzemeler ve Yapılışı | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}'dan ${n} tarifi: malzemeler ve adım adım talimatlar.`,
@@ -2447,6 +2459,7 @@ const RECIPE_LANG = {
         breadHome:'Home', breadLabel:'Ricette',
         ingredientsH:'🛒 Ingredienti', howToH:'👨‍🍳 Come preparare',
         addBtn: n=>`Aggiungi al mio piano`, relatedH: o=>`Altre ricette da ${esc(o)}`,
+        cartAdded:'✓ Nel piano', cartOpen:'Costruisci il piano', cartYours:'Le tue ricette',
         seoP: n=>`Aggiungi <strong>${esc(n)}</strong> al tuo piano settimanale con <a href="/it/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Ricetta ${esc(n)} – Ingredienti e Preparazione | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Ricetta di ${n} da ${o}: ingredienti e istruzioni passo dopo passo.`,
@@ -2459,6 +2472,7 @@ const RECIPE_LANG = {
         breadHome:'홈', breadLabel:'레시피',
         ingredientsH:'🛒 재료', howToH:'👨‍🍳 만드는 법',
         addBtn: n=>`내 플랜에 추가`, relatedH: o=>`${esc(o)}의 더 많은 레시피`,
+        cartAdded:'✓ 플랜에 추가됨', cartOpen:'플랜 만들기', cartYours:'내 레시피',
         seoP: n=>`<strong>${esc(n)}</strong>을(를) <a href="/ko/">Meal-Planner.ro</a>의 주간 플랜에 추가하세요.`,
         pageTitle: n=>`${esc(n)} 레시피 – 재료 및 만드는 법 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}의 ${n} 레시피: 재료와 단계별 지침.`,
@@ -2473,6 +2487,16 @@ Object.entries(RECIPE_LANG).forEach(([code, rl]) => {
     zh:'🍽️ 食谱',ja:'🍽️ レシピ',hi:'🍽️ व्यंजन',tr:'🍽️ Tarifler',it:'🍽️ Ricette',ko:'🍽️ 레시피'}[code] || '🍽️ Recipes';
   RECIPES_NAV[code] = { href: `${rl.dir}/`, label };
 });
+
+/* Plan cart (BRAIN spec §9.1d) — config element + script tag emitted on
+   recipe pages (add buttons + badge) and cuisine hub pages (badge only, so
+   the cart stays visible while browsing tiles). plan-cart.min.js is fully
+   standalone — it imports neither recipes.js nor i18n.js — so the three
+   labels and the app URL are baked here, per language, as data attributes. */
+function planCartTags(rl) {
+  const appUrl = rl.appDir ? `${rl.appDir}/` : '/';
+  return `<div id="plan-cart-config" hidden data-app="${appUrl}" data-added="${esc(rl.cartAdded)}" data-open="${esc(rl.cartOpen)}" data-yours="${esc(rl.cartYours)}"></div><script src="/js/plan-cart.min.js" defer></script>`;
+}
 
 /* ════════════════════════════════════════════════════════════════
    RECIPE UI STRINGS — premium redesign labels for all 14 languages
@@ -4054,7 +4078,11 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
         <div class="recipe-meta-item"><i class="bi bi-currency-dollar"></i><span class="recipe-meta-label">${ui.cost}</span><span class="recipe-meta-value">${meta.cost}</span></div>
       </div>
       <div class="recipe-cta-row">
-        <a href="${appUrl}?meal=${encodeURIComponent(n)}" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
+        <!-- ?meal= carries the EN name (locale-stable): it is both the no-JS
+             deep-link value (app.js matches every name locale, EN included)
+             and the plan-cart storage key. data-display feeds the localized
+             name to the cart badge panel (plan-cart.js). -->
+        <a href="${appUrl}?meal=${encodeURIComponent(enName)}" class="btn-recipe-primary" data-display="${esc(n)}"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
       </div>
     </div>
@@ -4134,7 +4162,7 @@ ${bridgeHtml}
   <span class="rmb-label">${esc(hubHref ? o : rl.breadLabel)}</span>
 </a>
 
-</main>${makeFooter(lc, NAV_URL_FOR.recipe(rslug))}<script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipe(rslug))}<script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script>${planCartTags(rl)}</body></html>`;
 }
 
 /* EN-origin → flag emoji. Multi-region origins ("Asia", "Middle East")
@@ -5118,7 +5146,7 @@ ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuis
   <span class="rmb-label">${esc(CUISINE_HUB_INDEX_LANG[lc_code]?.pill || 'All cuisines')}</span>
 </a>
 
-${makeFooter(lc, NAV_URL_FOR.cuisineHub(originSlug))}<script src="/js/analytics.min.js" data-page-type="hub" defer></script><script src="/js/content.js" defer></script></body></html>`;
+${makeFooter(lc, NAV_URL_FOR.cuisineHub(originSlug))}<script src="/js/analytics.min.js" data-page-type="hub" defer></script><script src="/js/content.js" defer></script>${planCartTags(rl)}</body></html>`;
 }
 
 // Phase 5: cuisineHubIndexPage() was removed. Its responsibility (cuisine

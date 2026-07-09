@@ -5655,6 +5655,59 @@ if (verifyBtn && emailInput && resultDiv) {
     }, 300);
   }
 
+  // ---------- plan cart (BRAIN spec §9.1d — filled on recipe/hub pages) ------
+  // plan-cart.min.js (recipe + cuisine hub pages) persists picked recipes in
+  // localStorage as [{ en: <EN name>, display: <localized name> }]. On planner
+  // load the cart "pours" into the first EMPTY slots in day order (d1l, d1c,
+  // d2l, …) — auto, no dialogs; the bulk-undo toast (§2b) is the safety net.
+  // ?meal= / ?autoplan= deep links take precedence: if either is present we
+  // skip pouring this load so the two flows never fight over the same slots
+  // (the cart stays intact for the next plain visit).
+  (function consumePlanCart() {
+    if (mealParam || autoplanParam) return;
+    if ((window._planMode || 'week') !== 'week') return;
+    let items;
+    try { items = JSON.parse(localStorage.getItem('mp:plan-cart')); } catch (_) { return; }
+    if (!Array.isArray(items) || items.length === 0) return;
+    setTimeout(async () => { // wait for renderTable, like the deep links above
+      await ensureMainRecipes();
+      const allSrc = [...recipesMain, ...recipesBudget];
+      // Same resolution as the ?meal= handler: the stored EN name is matched
+      // against every name locale, so older carts (or hand-edited storage)
+      // holding a localized name still resolve.
+      const findByName = (name) => allSrc.find(r =>
+        Object.values(r.name || {}).some(n =>
+          typeof n === 'string' && n.toLowerCase() === String(name).toLowerCase())
+      );
+      const emptySlots = [];
+      for (let d = 1; d <= 7; d++) {
+        ['l', 'c'].forEach(sfx => {
+          const inp = document.getElementById(`d${d}${sfx}`);
+          if (inp && !inp.value.trim()) emptySlots.push(inp);
+        });
+      }
+      const snapshot = pwSnapshotPlan(); // BEFORE pouring — bulk undo (§2b)
+      const leftover = []; // unresolved names / no free slot → stay in the cart
+      let poured = 0;
+      for (const item of items) {
+        const rec = item && item.en ? findByName(item.en) : null;
+        if (!rec) { if (item && item.en) leftover.push(item); continue; }
+        const slot = emptySlots.shift();
+        if (!slot) { leftover.push(item); continue; }
+        setSlotValue(slot, getRecipeText(rec, lang)); // full recalc chain (§7)
+        poured++;
+      }
+      try {
+        if (leftover.length) localStorage.setItem('mp:plan-cart', JSON.stringify(leftover));
+        else localStorage.removeItem('mp:plan-cart');
+      } catch (_) { /* storage unavailable — nothing to clear */ }
+      if (!poured) return;
+      showChangeToast({ bulk: snapshot, text: `${poured} ${t('pw.fromCart')}` });
+      updateShoppingList();
+      document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
+  })();
+
   // ---------- EXPORT SECTION VISIBILITY (week only) ----------
   function updateExportSectionVisibility() {
     const exportSection = document.querySelector('.export-section');

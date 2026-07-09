@@ -96,7 +96,11 @@ Pepian wird mit weißem Reis, Kartoffeln und Tortillas serviert. Das Rezept wird
         <div class="recipe-meta-item"><i class="bi bi-currency-dollar"></i><span class="recipe-meta-label">Kosten</span><span class="recipe-meta-value">$</span></div>
       </div>
       <div class="recipe-cta-row">
-        <a href="/?meal=Pepian" class="btn-recipe-primary"><i class="bi bi-plus-circle-fill"></i> Zu meinem Plan hinzufügen</a>
+        <!-- ?meal= carries the EN name (locale-stable): it is both the no-JS
+             deep-link value (app.js matches every name locale, EN included)
+             and the plan-cart storage key. data-display feeds the localized
+             name to the cart badge panel (plan-cart.js). -->
+        <a href="/?meal=Pepian" class="btn-recipe-primary" data-display="Pepian"><i class="bi bi-plus-circle-fill"></i> Zu meinem Plan hinzufügen</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="Als PDF: Teilen (⬆) → Drucken → Als PDF sichern (iPhone/iPad)"><i class="bi bi-printer"></i> PDF exportieren</button>
       </div>
     </div>
@@ -241,4 +245,4 @@ Pepian wird mit weißem Reis, Kartoffeln und Tortillas serviert. Das Rezept wird
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe" defer></script><script src="/js/content.js" defer></script><div id="plan-cart-config" hidden data-app="/" data-added="✓ Im Plan" data-open="Plan erstellen" data-yours="Deine Rezepte"></div><script src="/js/plan-cart.min.js" defer></script></body></html>
