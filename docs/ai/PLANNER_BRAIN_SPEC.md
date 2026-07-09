@@ -32,6 +32,15 @@ Onigiri → Bibimbap   ·   +7 RON   ·   [Anulează]
 
 Acesta e Nivelul 3 (încredere): utilizatorul vede exact ce s-a schimbat și poate repara instant orice greșeală.
 
+## 2b. Mutații în masă — „lesa" generatorului (adăugat 8 iul, bug găsit de producător)
+
+Problema: Generate peste un plan existent suprascria tot fără avertisment și fără undo, iar golirea planului nu exista ca gest (14 × ✕ sau refresh — inacceptabil).
+
+Decizia — **orice mutație în masă primește același tratament ca una măruntă** (§2):
+1. **Generate peste plan ne-gol** → se execută direct (fără dialog de confirmare — confirmarea E undo-ul), cu toast „Plan nou generat · Anulează" care restaurează integral planul anterior (snapshot al tuturor sloturilor).
+2. **„Golește planul"** — buton discret în header-ul plannerului, doar în modul săptămână, vizibil doar când planul are măcar o masă → golește tot + toast „Plan golit · Anulează".
+3. Undo-ul rămâne un pas: o mutație nouă (măruntă sau în masă) înlocuiește snapshot-ul.
+
 ## 3. Search în picker — ordinea rezultatelor (decisă)
 
 Trei niveluri de potrivire, afișate în această ordine, fără scoruri inventate:

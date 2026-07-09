@@ -467,7 +467,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const ovCard = (id, labelKey) =>
       `<div class="pw-ov-card"><div class="pw-ov-num" id="${id}">—</div><div class="pw-ov-label">${t(labelKey)}</div></div>`;
 
+    // Plan header row (§2b.2): discreet "Golește planul" text button, end-
+    // aligned (flex-end follows direction → RTL-safe), sitting between the
+    // "Planul săptămânii" heading and the overview strip. Starts hidden;
+    // updatePwClearBtn() shows it as soon as ≥1 slot is filled.
     cardsEl.innerHTML = `
+      <div class="pw-plan-header">
+        <button type="button" id="pw-clear-plan" class="pw-clear-plan pw-hidden">${t('pw.clearPlan')}</button>
+      </div>
       <div class="pw-overview" aria-live="polite">
         ${ovCard('pw-ov-days', 'pw.ovDays')}
         ${ovCard('pw-ov-time', 'pw.ovTime')}
@@ -497,9 +504,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // wiring. Name button → picker in replace mode; empty slot → add mode.
     if (!cardsEl.dataset.pwActionsWired) {
       cardsEl.addEventListener('click', (e) => {
-        const btn = e.target.closest ? e.target.closest('.pw-btn, .pw-meal-name, .pw-empty-slot') : null;
+        const btn = e.target.closest ? e.target.closest('.pw-btn, .pw-meal-name, .pw-empty-slot, .pw-clear-plan') : null;
         if (!btn) return;
-        if (btn.classList.contains('pw-btn')) {
+        if (btn.classList.contains('pw-clear-plan')) {
+          clearWeekPlan(); // §2b: no confirm dialog — the undo toast is it
+        } else if (btn.classList.contains('pw-btn')) {
           if (btn.dataset.act === 'reroll') rerollMeal(btn.dataset.input, btn);
           else if (btn.dataset.act === 'remove') removeMealSlot(btn.dataset.input);
         } else {
@@ -540,6 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
     set('pw-ov-time', timeCount ? `~${Math.round(totalTime / timeCount)} min` : '—');
     set('pw-ov-cost', totalCost > 0 ? formatCost(totalCost) : '—');
     set('pw-ov-cuisines', cuisines.size ? String(cuisines.size) : '—');
+    updatePwClearBtn(); // §2b: clear button visible only when plan non-empty
   }
 
   // ── Day 2: meal mutations — reroll 🎲 / remove ✕ + change toast with undo ──
@@ -682,6 +692,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // §2b.2: "Golește planul" — clears every slot with NO confirmation dialog;
+  // the undo toast IS the confirmation. Snapshot first, clear through
+  // setSlotValue() (each clear dispatches 'input' → shopping list, overview,
+  // day costs and slot displays all recalculate via the existing wiring).
+  function clearWeekPlan() {
+    const snapshot = pwSnapshotPlan();
+    if (!snapshot.some(s => s.prevValue.trim())) return; // nothing to clear
+    snapshot.forEach(({ inputId, prevValue }) => {
+      if (!prevValue) return;
+      const input = document.getElementById(inputId);
+      if (input) setSlotValue(input, '');
+    });
+    showChangeToast({ bulk: snapshot, text: t('pw.cleared') });
+  }
+
+  // Visibility of the clear button: only when ≥1 slot is filled. Hooked into
+  // the same refresh passes that toggle .pw-filled (updateAllRecipeMeta) and
+  // repaint the overview (updateWeekOverview), so every fill/clear path —
+  // typing, picker, generate, deep links, undo — updates it. `.pw-hidden`
+  // (display:none !important) does the hiding; week-mode-only is free because
+  // the button only exists inside the week cards markup.
+  function updatePwClearBtn() {
+    const btn = document.getElementById('pw-clear-plan');
+    if (!btn) return;
+    let hasAny = false;
+    for (let d = 1; d <= 7 && !hasAny; d++) {
+      hasAny = ['l', 'c'].some(sfx =>
+        !!document.getElementById(`d${d}${sfx}`)?.value.trim());
+    }
+    btn.classList.toggle('pw-hidden', !hasAny);
+  }
+
   // Pool exhausted (§1: everything in the filter is already planned): brief
   // pulse + tooltip swap on the button itself — no alert(), no error state.
   function pwPoolEmptyFeedback(btn) {
@@ -695,9 +737,27 @@ document.addEventListener('DOMContentLoaded', () => {
     btn._pwTitleTimer = setTimeout(() => { btn.title = btn.dataset.origTitle; }, 2500);
   }
 
-  // ── Change toast (brain spec §2): one at a time, single-step undo ──
+  // ── Change toast (brain spec §2 + §2b): one at a time, single-step undo ──
+  // _pwUndo holds either a single-slot change { inputId, prevValue } (§2:
+  // reroll/remove/picker) or a bulk snapshot { bulk: [{ inputId, prevValue },
+  // …] } (§2b: Generate over a non-empty plan, "Golește planul"). One
+  // mechanism, one toast, one step: any new mutation replaces the snapshot.
   let _pwToastHideTimer = null;
-  let _pwUndo = null; // { inputId, prevValue } — replaced by every new change
+  let _pwUndo = null; // { inputId, prevValue } | { bulk: [...] } — replaced by every new change
+
+  // §2b: snapshot of every slot input that exists in the DOM (d1l..d7c in week
+  // mode; d1l/d1c in meal/day). Taken BEFORE a bulk mutation so undo can
+  // restore the whole plan through the normal setSlotValue() → 'input' chain.
+  function pwSnapshotPlan() {
+    const snap = [];
+    for (let d = 1; d <= 7; d++) {
+      ['l', 'c'].forEach(sfx => {
+        const input = document.getElementById(`d${d}${sfx}`);
+        if (input) snap.push({ inputId: input.id, prevValue: input.value });
+      });
+    }
+    return snap;
+  }
 
   // Created once at init (not lazily) so the aria-live region exists in the
   // DOM before its first announcement. No HTML file edits — JS-built.
@@ -719,9 +779,14 @@ document.addEventListener('DOMContentLoaded', () => {
       _pwUndo = null;
       hidePwToast();
       if (!undo) return;
-      const input = document.getElementById(undo.inputId);
-      // Same set-value+dispatch mechanism → full recalculation chain (§7).
-      if (input) setSlotValue(input, undo.prevValue);
+      // Single change (§2) and bulk snapshot (§2b) restore through the SAME
+      // set-value+dispatch mechanism → full recalculation chain (§7):
+      // shopping list, Week Overview, day costs, meta chips, slot display.
+      const entries = undo.bulk || [undo];
+      entries.forEach(({ inputId, prevValue }) => {
+        const input = document.getElementById(inputId);
+        if (input && input.value !== prevValue) setSlotValue(input, prevValue);
+      });
     });
     el.appendChild(txt);
     el.appendChild(undoBtn);
@@ -734,9 +799,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('pw-toast')?.classList.remove('pw-toast-show');
   }
 
-  function showChangeToast({ inputId, prevValue, text }) {
+  function showChangeToast({ inputId, prevValue, bulk, text }) {
     const el = ensurePwToast();
-    _pwUndo = { inputId, prevValue }; // new change replaces the pending undo
+    // New change replaces the pending undo (§2b.3: undo stays one step, a
+    // bulk snapshot and a single-slot change overwrite each other).
+    _pwUndo = bulk ? { bulk } : { inputId, prevValue };
     el.querySelector('.pw-toast-text').textContent = text;
     el.querySelector('.pw-toast-undo').textContent = t('pw.undo');
     el.classList.add('pw-toast-show');
@@ -1245,6 +1312,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return false; // signal failure so plan_generated is NOT counted
   }
 
+  // §2b.1 "the generator's leash": snapshot every slot BEFORE filling. If the
+  // plan wasn't empty, the post-fill toast offers a bulk undo that restores
+  // this snapshot integrally — Generate executes directly, no confirm dialog.
+  const pwSnapshot = pwSnapshotPlan();
+  const pwHadMeals = pwSnapshot.some(s => s.prevValue.trim());
+
   const mode = window._planMode;
 
   if (mode === 'meal') {
@@ -1279,6 +1352,19 @@ document.addEventListener('DOMContentLoaded', () => {
     emptySlots.forEach((inp, i) => {
       if (picks[i]) inp.value = getRecipeText(picks[i], lang);
     });
+  }
+
+  // §2b.1: the plan wasn't empty before Generate → something may have been
+  // lost/overwritten, so offer the leash. Skipped when the snapshot was all-
+  // empty (nothing lost) or when no slot actually changed (e.g. week mode
+  // with all 14 slots already filled — Generate fills only empty slots).
+  // NOTE: the fills above write input.value DIRECTLY (no 'input' events);
+  // callers run updateShoppingList() right after, which recalculates
+  // everything. The bulk undo, however, goes through setSlotValue() so each
+  // restore dispatches a real 'input' event and the whole chain re-runs.
+  if (pwHadMeals && pwSnapshot.some(s =>
+        document.getElementById(s.inputId)?.value !== s.prevValue)) {
+    showChangeToast({ bulk: pwSnapshot, text: t('pw.regenerated') });
   }
 
   setTimeout(() => updateAllRecipeMeta(), 50);
@@ -2106,6 +2192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+    updatePwClearBtn(); // §2b: same refresh pass that toggles .pw-filled
   }
 
   // ── Cost estimate display ─────────────────────────────────────
