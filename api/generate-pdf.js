@@ -86,6 +86,33 @@ Font.register({
     { src: path.join(FONTS_DIR, 'Roboto-Italic.ttf'),  fontWeight: 400, fontStyle: 'italic' },
   ],
 });
+// PER-LOCALE Roboto aliases — SAME font files, one registration per locale.
+// NOT redundant: @react-pdf keeps ONE shared fontkit font object per
+// registered (family, weight, style), and laying out text MUTATES state
+// inside that object. Documents rendered later in the SAME process (warm
+// serverless instance!) drop glyphs whose identity collides with what a
+// previous document laid out: a ru render made every later Latin render
+// lose the Latin homoglyphs of Cyrillic letters ("Hafta"→"afta", Н→H, е→e,
+// к→k), and even Latin-only predecessors made a later tr render lose the
+// "kı" pair ("kırmızı"→"ırmızı") — both reproduced deterministically and
+// both P0s in the release audit. Two renders NEVER cross-corrupt when they
+// use different registered families (verified), and same-locale sequences
+// are stable (tr,tr / ru,ru clean). So: every Roboto locale gets its own
+// alias; the Noto families below are already single-locale. Do NOT
+// "simplify" these back into one shared Roboto family.
+// 'Roboto' (no suffix) stays registered as the fallback for unknown locales
+// (fontFor() falls back to it) — same files, one more isolated object.
+const ROBOTO_LOCALES = ['ro', 'en', 'es', 'fr', 'de', 'pt', 'it', 'tr', 'ru', ''];
+for (const lc of ROBOTO_LOCALES) {
+  Font.register({
+    family: lc ? `Roboto-${lc}` : 'Roboto',
+    fonts: [
+      { src: path.join(FONTS_DIR, 'Roboto-Regular.ttf'), fontWeight: 400 },
+      { src: path.join(FONTS_DIR, 'Roboto-Bold.ttf'),    fontWeight: 700 },
+      { src: path.join(FONTS_DIR, 'Roboto-Italic.ttf'),  fontWeight: 400, fontStyle: 'italic' },
+    ],
+  });
+}
 Font.register({
   family: 'NotoSansArabic',
   fonts: [
@@ -138,8 +165,10 @@ Font.registerHyphenationCallback(word => [word]);
 // Per-locale font family resolver. Latin/Cyrillic locales (most of the
 // catalogue) use Roboto. Non-Latin scripts get their own Noto Sans.
 const FONT_FOR_LOCALE = {
-  ro: 'Roboto', en: 'Roboto', es: 'Roboto', fr: 'Roboto', de: 'Roboto',
-  pt: 'Roboto', it: 'Roboto', tr: 'Roboto', ru: 'Roboto',
+  // Per-locale aliases — see the state-poisoning note at the registrations.
+  ro: 'Roboto-ro', en: 'Roboto-en', es: 'Roboto-es', fr: 'Roboto-fr',
+  de: 'Roboto-de', pt: 'Roboto-pt', it: 'Roboto-it', tr: 'Roboto-tr',
+  ru: 'Roboto-ru',
   ar: 'NotoSansArabic',
   hi: 'NotoSansDevanagari',
   zh: 'NotoSansSC',
@@ -994,6 +1023,19 @@ export default async function handler(req, res) {
       if (body && (Array.isArray(body.days) || Array.isArray(body.shoppingGroups))) {
         plan = body;
       }
+    }
+
+    // GUARD: Arabic rendering crashes @react-pdf/textkit's bidi pass
+    // (reorderLine → undefined run.id, textkit 6.3). Worse than the 500
+    // itself: the crash poisons shared fontkit state in a warm instance and
+    // corrupts glyphs in SUBSEQUENT renders for OTHER languages (reproduced:
+    // TR loses characters — "Hafta"→"afta" — when rendered after an ar crash
+    // in the same process; TR alone renders perfectly). Reject BEFORE any
+    // layout work. The client blocks ar too (localized message); this is the
+    // backstop for direct POSTs. Remove when the upstream bidi fix lands —
+    // see docs/ai/PRODUCT_RELEASE_AUDIT.md §2.1.
+    if (plan && plan.lang === 'ar') {
+      return res.status(422).json({ error: 'pdf_unavailable_for_language', lang: 'ar' });
     }
 
     // SECURITY: server decides the entitlement, not the browser. Validate the
