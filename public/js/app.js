@@ -1545,8 +1545,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullDays = Array.isArray(lcStrings.weekdays) && lcStrings.weekdays.length === 7
       ? lcStrings.weekdays
       : ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    // Per-language OVERRIDES where naive 3-letter truncation produces wrong
+    // or ambiguous labels. Turkish: slice(0,3) turns Pazartesi(Mon) AND
+    // Pazar(Sun) into "Paz", Cuma(Fri) AND Cumartesi(Sat) into "Cum" — the
+    // PDF showed duplicate day headers (release audit P0). Official Turkish
+    // short forms disambiguate: Pzt/Sal/Çar/Per/Cum/Cmt/Paz.
+    const DAY_ABBREV = {
+      tr: ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'],
+    };
     const abbrev = (s) => String(s || '').trim().slice(0, 3);
-    const localizedDays = fullDays.map(abbrev);
+    const localizedDays = DAY_ABBREV[lang] || fullDays.map(abbrev);
 
     // Per-day real cost (sum of the two meals' costRon) + weekly total for
     // the hero — replaces the uniform "~€5 everywhere" impression with the
@@ -1837,7 +1845,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof lang === 'string' && lang === 'ar') {
       _logTelemetry({ engine:'pdfv2', status:'blocked', durationMs:0,
                       errorMessage:'lang=ar (textkit bidi bug)' });
-      try { alert('PDF generation for Arabic is temporarily unavailable. We are tracking the upstream fix and will re-enable it as soon as it lands.'); } catch (_) {}
+      // Fully localized (Arabic) message — the button is already disabled with
+      // a visible note (updateButtonState); this alert is the belt-and-braces
+      // path for any other entry point into the exporter.
+      try {
+        alert((i18n[lang] && i18n[lang]['pdf.tempUnavailable'])
+           || (i18n['en'] && i18n['en']['pdf.tempUnavailable'])
+           || 'PDF export is temporarily unavailable for this language.');
+      } catch (_) {}
       return;
     }
     try {
@@ -2609,6 +2624,14 @@ document.addEventListener('DOMContentLoaded', () => {
           exportShoppingListToPDF();
         };
         paidBtn.dataset.attached = '1';
+        // Arabic: same temporary block as the free button (see updateButtonState).
+        if (lang === 'ar') {
+          paidBtn.disabled = true;
+          paidBtn.setAttribute('aria-disabled', 'true');
+          paidBtn.style.opacity = '.55';
+          paidBtn.style.cursor = 'not-allowed';
+          paidBtn.title = (i18n[lang] && i18n[lang]['pdf.tempUnavailable']) || '';
+        }
       }
     });
     obs.observe(resultDiv, { childList: true, subtree: true });
@@ -2627,6 +2650,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const t = k => (i18n[lang] && i18n[lang][k]) || (i18n['en'] && i18n['en'][k]) || k;
     generateBtn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i> ' + t('btn.generate')
       + ` <span style="font-size:0.72em; opacity:0.75; font-weight:400;">(${t('pdf.free.label')})</span>`;
+  }
+
+  // Arabic: PDF export is blocked (textkit bidi crash — see exportShoppingListToPDF
+  // guard + the server-side 422 in api/generate-pdf.js). Commercial handling:
+  // button stays visible but disabled, with a fully localized notice right under
+  // it so the user understands the export is TEMPORARILY unavailable and the
+  // rest of the product keeps working. Remove together with the other ar guards.
+  if (lang === 'ar') {
+    const msg = (i18n[lang] && i18n[lang]['pdf.tempUnavailable'])
+             || (i18n['en'] && i18n['en']['pdf.tempUnavailable']) || '';
+    generateBtn.disabled = true;
+    generateBtn.setAttribute('aria-disabled', 'true');
+    generateBtn.style.opacity = '.55';
+    generateBtn.style.cursor = 'not-allowed';
+    generateBtn.title = msg;
+    let note = document.getElementById('pdf-lang-note');
+    if (!note) {
+      note = document.createElement('div');
+      note.id = 'pdf-lang-note';
+      note.style.cssText = 'font-size:.85rem;color:#8f3a23;margin-top:6px;max-width:420px;';
+      generateBtn.insertAdjacentElement('afterend', note);
+    }
+    note.textContent = msg;
   }
 
   // Premium upgrade button: show for non-premium users (as secondary CTA alongside free)
