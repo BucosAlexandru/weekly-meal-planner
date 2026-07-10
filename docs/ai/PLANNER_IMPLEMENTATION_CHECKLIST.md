@@ -65,15 +65,44 @@ Analytics Plan v2 (neimplementat deloc — whitelist-ul are tot cele 7 eveniment
       sitemap 4006 URL-uri, node --check OK, 0 curly quotes, 0 secrete
 - [x] Min-files byte-identice cu sursele (zero drift)
 
-### 4b. QA manual (fișă pentru producător — nu se poate automatiza de aici)
+### 4b. QA vizual în browser — RULAT 2026-07-10 în Chrome, pe producție (== branch)
 
-- [ ] Safari macOS + iOS: bottom sheet, tastatura nu acoperă rezultatele, focus după închidere
-- [ ] Chrome: Lighthouse fără regresii vs. main; CLS la încărcare
+Interacțiune (desktop ~1280+): TOATE PASS ✅
+- [x] Reroll 🎲: instant, toast „Moqueca → Manti · Undo", desc + chips actualizate
+- [x] Remove ✕: toast cu delta („Manti removed · −~€5"), slot gol cu copy-ul din BRAIN §8,
+      cost zi €7→€2, overview €54→€49, cuisines 13→12 — recalculare instant ✓
+- [x] Picker modal centrat: titlu „Monday · Lunch", search autofocus, recomandări
+      „Quick & cheap" (add) / „Fits your plan" (replace, ±timp/cost corect vs rețeta curentă)
+- [x] Search ingredient: „lemon" → nume întâi (Avgolemono), apoi tier ingredient cu badge
+      „contains lemon" ✓; hint duplicate „already planned · Tuesday" ✓
+- [x] Tastatură: ↓↑ evidențiere, Enter selectează, Esc închide, focus revine pe slot ✓
+- [x] Shopping list instant: 74 itemi, ingredientele rețetei noi apar imediat ✓
+- [x] Persistență: planul supraviețuiește schimbării de mod și de limbă ✓
+- [x] Consolă: zero erori pe toată sesiunea de interacțiuni
+
+Responsive (iframe same-origin — media queries reale): TOATE PASS ✅
+- [x] 390px: 1 coloană, overview 2×2, header fără overflow (375<390)
+- [x] Prag exact: 699px=1 col / 700px=2 col / 768px=2 col + overview 4-across ✓
+- [x] Bottom sheet <700px: full-width, ancorat jos, ≤85vh, grip, search sticky focusat ✓
+- [x] RTL (ar) la 390px: acțiuni pe STÂNGA (proprietăți logice ✓), chips inversate,
+      zero overflow orizontal ✓
+- [x] Nume lungi la ~340px card: de (40ch) și ru (53ch) → 2 rânduri, zero overflow ✓
+
+Probleme reale găsite (ordonate după severitate) — NICIUNA Critical/Major:
+- **Minor 1**: unitatea „min" netradusă în chips (apare „min 20" latin în context ar);
+  de decis dacă e asumat sau intră la banda rapidă i18n
+- **Minor 2 (observație produs, în afara spec)**: modurile One Meal / One Day păstrează
+  UI-ul vechi (tabel + inputuri ingrediente) — contrast de calitate vs. modul One Week
+  redesenat; poate deruta la testarea cu utilizatori
+- **Minor 3 (cosmetic)**: la mutații rapide, frame-uri de tranziție pot arăta scurt
+  chips/descrieri vechi (DOM-ul final e corect); de urmărit pe device-uri lente
+
+### 4c. Rămâne manual (nu se poate rula de aici)
+
+- [ ] Safari macOS + **iOS: tastatura vs bottom sheet** (risc istoric #1), focus după închidere
 - [ ] Firefox + Edge: smoke vizual (planner, picker, toast)
-- [ ] RTL (ar) vizual: acțiunile pe partea corectă, sheet simetric — https://meal-planner.ro/ar/
-- [ ] Nume lungi de/ru la 320px lățime de card (cele mai lungi: „Rumänische gegrillte
-      Hackfleischröllchen" 40ch / „Салата де беф…" 53ch) — wrap acceptat, fără overflow orizontal
-- [ ] Test pe telefon real: ținte 44px simțite, scroll blocat sub picker
+- [ ] Lighthouse/CLS vs. main; test pe telefon real la 360-390px fizic
+- [ ] Print fizic (planul pe frigider — DoD din PRODUCT SPEC §4)
 
 ## Ziua 5 — Preview + testare ⚠️ (parțial: producția e deja live)
 
