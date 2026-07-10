@@ -5317,7 +5317,7 @@ function applyTranslations() {
           const emailField = document.getElementById('emailInput');
           if (emailField && !emailField.value) emailField.value = email;
           if (typeof revealSwitchAccount === 'function') revealSwitchAccount();
-          const manage = document.getElementById('manage-sub-btn');
+          const manage = document.getElementById('manage-subscription');
           if (manage) manage.style.display = 'inline-block';
         })
         .catch(() => { /* the manual Verify Email path still works */ });
