@@ -46,25 +46,34 @@ Analytics Plan v2 (neimplementat deloc — whitelist-ul are tot cele 7 eveniment
 - [x] Keyboard: Esc / ↑↓ / Enter, focus trap, focus revine pe slot — `pwPickerKeydown()` ~1156
 - [x] Duplicate manuale permise cu hint „• deja luni" — BRAIN §5
 
-## Ziua 4 — QA ⚠️ (făcut parțial pe 9 iul; DE RE-RULAT — commit-uri noi după QA)
+## Ziua 4 — QA ⚠️ (re-rulat automat 2026-07-10 pe `9e2bcffb`; partea manuală rămâne)
 
-Contra acceptance checklist-ului din Responsive Spec §8:
+### 4a. QA automatizabil — RULAT 2026-07-10, TOATE PASS ✅
 
-- [ ] QA desktop (≥960px): hover-reveal atenuat, 2 coloane, container 860px
-- [ ] QA tabletă (700-959px): 2 coloane, acțiuni după capabilitate touch/pointer
-- [ ] QA mobil (<700px): 1 coloană, bottom sheet, ținte ≥44px, tastatura nu acoperă
-- [ ] QA Safari (macOS + iOS) — manual, pe device real
-- [ ] QA Chrome — manual + Lighthouse fără regresii
-- [ ] QA Firefox — manual
-- [ ] QA Edge — manual
-- [ ] QA RTL (ar): acțiuni pe partea corectă, sheet simetric
-- [ ] QA 14 limbi: chei noi ×14 (grep), nume lungi de/ru la 320px, fără overflow
-- [ ] Integrare: `collectMeals()`/PDF/gating neschimbate; analytics vechi încă emit
-- [ ] CI verde: count HTML ~3250, node --check, fără secrete, fără curly quotes
+- [x] i18n: 26 chei `pw.*`, fiecare prezentă în toate cele 14 limbi (verificat per-limbă, nu doar count)
+- [x] RTL: zero `right/left` fizice în zona `pw-` (singurul `left:50%` = centrare toast, simetric)
+- [x] Touch targets: `.pw-btn` 44px bază / 30px doar pe `(hover:hover) and (pointer:fine)`;
+      `.pw-pick-item` min-height 44px; `.pw-clear-plan` 44px pe `pointer:coarse`
+- [x] Breakpoints: 1 col → 2 col la 700px; overview 2×2 → 4-across (spec §1)
+- [x] Fără ellipsis/nowrap pe numele rețetei (spec §2 — wrap, nu ascundem)
+- [x] Hover-reveal atenuat (opacity .55 → 1), nu opacity 0 (amendament 8 iul)
+- [x] Analytics: toate cele 7 evenimente vechi prezente în bundle-urile minificate;
+      `data-page-type` pe paginile generate (recipe ✓, pricing ✓)
+- [x] Accesibilitate statică: 19 aria-label în app.js, aria-modal/selected/live/activedescendant prezente
+- [x] `@media print` există (planul se poate printa)
+- [x] Integrare: smoke-analytics 79/79 PASS; build verde: 3962 pagini (CI: 3800-4050),
+      sitemap 4006 URL-uri, node --check OK, 0 curly quotes, 0 secrete
+- [x] Min-files byte-identice cu sursele (zero drift)
 
-_Verificabil automat de aici: grep i18n ×14, build + count, node --check, smoke
-analytics, curly quotes. Verificabil doar manual/pe device: Safari/Firefox/Edge/iOS,
-Lighthouse, tastatura mobilă. Cele manuale primesc fișă de QA, nu bifă automată._
+### 4b. QA manual (fișă pentru producător — nu se poate automatiza de aici)
+
+- [ ] Safari macOS + iOS: bottom sheet, tastatura nu acoperă rezultatele, focus după închidere
+- [ ] Chrome: Lighthouse fără regresii vs. main; CLS la încărcare
+- [ ] Firefox + Edge: smoke vizual (planner, picker, toast)
+- [ ] RTL (ar) vizual: acțiunile pe partea corectă, sheet simetric — https://meal-planner.ro/ar/
+- [ ] Nume lungi de/ru la 320px lățime de card (cele mai lungi: „Rumänische gegrillte
+      Hackfleischröllchen" 40ch / „Салата де беф…" 53ch) — wrap acceptat, fără overflow orizontal
+- [ ] Test pe telefon real: ținte 44px simțite, scroll blocat sub picker
 
 ## Ziua 5 — Preview + testare ⚠️ (parțial: producția e deja live)
 
