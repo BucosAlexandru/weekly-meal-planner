@@ -1,14 +1,41 @@
 // public/js/checkout.js
 const PRICE_EUR = 'price_1RvvfCH2AzHMl4LgJDB1QS8O';
 
+// ── Locale plumbing (P1, real-payment validation findings F3/F4) ──────────
+// The old successUrl ('/?success=true') hit the root redirect, which DROPPED
+// the query string: paying users landed on /en/ with no confirmation at all
+// (observed live). We now return the buyer to THEIR language's homepage with
+// success + session_id intact, cancel back to the exact page they left, and
+// tell Stripe which locale to render Checkout in (it showed RO chrome to EN
+// visitors before).
+const MP_LANGS = ['ro','en','es','fr','de','pt','ru','ar','zh','ja','hi','tr','it','ko'];
+// Stripe Checkout locales — everything we support except 'hi' (not offered
+// by Stripe; those buyers get 'auto' = Stripe's own detection).
+const STRIPE_LOCALES = { ro:'ro', en:'en', es:'es', fr:'fr', de:'de', pt:'pt',
+                         ru:'ru', ar:'ar', zh:'zh', ja:'ja', tr:'tr', it:'it', ko:'ko' };
+function mpUiLang() {
+  const seg = (window.location.pathname.split('/')[1] || '').toLowerCase();
+  if (MP_LANGS.includes(seg)) return seg;
+  try {
+    const saved = localStorage.getItem('lastLang');
+    if (MP_LANGS.includes(saved)) return saved;
+  } catch (_) {}
+  return 'ro'; // the bare root serves the RO app
+}
+
 async function startSubscriptionCheckout({ email, priceId, customerId, anonId }) {
+  const lang = mpUiLang();
   const r = await fetch('/api/create-checkout-session', {
     method: 'POST',
     headers: { 'Content-Type':'application/json' },
     body: JSON.stringify({
       email, priceId, customerId, anonId,
-      successUrl: window.location.origin + '/?success=true',
-      cancelUrl: window.location.origin + '/'
+      locale: STRIPE_LOCALES[lang] || 'auto',
+      // {CHECKOUT_SESSION_ID} is substituted BY STRIPE at redirect time; the
+      // success handler in app.js uses it to auto-restore premium without
+      // asking the buyer to re-type their email.
+      successUrl: `${window.location.origin}/${lang}/?success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancelUrl: window.location.origin + window.location.pathname,
     }),
   });
   const data = await r.json();

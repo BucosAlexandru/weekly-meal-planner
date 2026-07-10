@@ -2669,7 +2669,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!note) {
       note = document.createElement('div');
       note.id = 'pdf-lang-note';
-      note.style.cssText = 'font-size:.85rem;color:#8f3a23;margin-top:6px;max-width:420px;';
+      // Self-contained light chip so the text stays readable on ANY host
+      // background — the PDF card is dark green and the first version's
+      // plain dark-red text was barely legible there (deploy validation).
+      note.style.cssText = 'font-size:.85rem;color:#8f3a23;background:#fff7f2;'
+        + 'border:1px solid #f0d9cf;border-radius:8px;padding:8px 12px;'
+        + 'margin-top:8px;max-width:420px;display:inline-block;';
       generateBtn.insertAdjacentElement('afterend', note);
     }
     note.textContent = msg;
@@ -5294,6 +5299,29 @@ function applyTranslations() {
     if (typeof refreshStickyUpgrade === 'function') refreshStickyUpgrade();
     // Phase 9 — one-shot celebration on first Stripe success redirect.
     if (typeof celebratePremium === 'function') celebratePremium();
+    // P1 (session_id propagation, real-payment finding F3): the buyer typed
+    // their email at STRIPE, not on the site, so mp:lastEmail is empty and
+    // neither restorePremiumFromHint() nor the access card can unlock without
+    // making them re-type it. Resolve the email server-side from the Checkout
+    // Session and persist it — from then on every reload restores silently.
+    const stripeSessionId = params.get('session_id');
+    let knownEmail = null;
+    try { knownEmail = localStorage.getItem('mp:lastEmail'); } catch (_) {}
+    if (stripeSessionId && !knownEmail) {
+      fetch(`/api/check-access?session_id=${encodeURIComponent(stripeSessionId)}`)
+        .then(r => r.json())
+        .then(({ active, email }) => {
+          if (!active || !email) return;
+          try { localStorage.setItem('mp:lastEmail', email); } catch (_) {}
+          window.verifiedEmail = email;
+          const emailField = document.getElementById('emailInput');
+          if (emailField && !emailField.value) emailField.value = email;
+          if (typeof revealSwitchAccount === 'function') revealSwitchAccount();
+          const manage = document.getElementById('manage-sub-btn');
+          if (manage) manage.style.display = 'inline-block';
+        })
+        .catch(() => { /* the manual Verify Email path still works */ });
+    }
     window.history.replaceState({}, '', window.location.pathname);
   }
 

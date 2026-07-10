@@ -87,6 +87,16 @@ export default async function handler(req, res) {
             console.warn('Could not fetch subscription:', e.message);
           }
         }
+        // REVENUE GUARD (real-payment validation, finding F1): check-access
+        // treats a null expires_at as LIFETIME. If the subscription fetch
+        // fails (or yields no period end), writing null grants permanent
+        // access for a single month's payment — observed in production on
+        // 2026-07-10. Fall back to month + grace; the customer.subscription.*
+        // sync events (and every renewal) overwrite it with the exact date.
+        if (subId && !expiresAt) {
+          expiresAt = Date.now() + 35 * 24 * 60 * 60 * 1000;
+          console.error('[webhook] expires_at fallback used — subscription fetch failed; verify Stripe webhook event config (customer.subscription.*)');
+        }
 
         if (customerId) {
           // First try to update an existing row that already has this customer id

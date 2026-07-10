@@ -9,13 +9,22 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { email, priceId, customerId, successUrl, cancelUrl, anonId } = req.body || {};
+    const { email, priceId, customerId, successUrl, cancelUrl, anonId, locale } = req.body || {};
     if (!priceId) return res.status(400).json({ error: 'Missing priceId' });
 
     const origin = req.headers.origin || 'http://localhost:3000';
 
+    // Stripe Checkout locale — whitelist against the locales Stripe actually
+    // supports from our 14 (hi is not supported → 'auto'). Without this the
+    // checkout rendered in a language unrelated to the page the buyer came
+    // from (observed: RO chrome for an EN visitor — trust killer at the most
+    // sensitive step). See docs/ai/REAL_PAYMENT_VALIDATION.md F4.
+    const STRIPE_LOCALES = new Set(['ro','en','es','fr','de','pt','ru','ar','zh','ja','tr','it','ko','auto']);
+    const safeLocale = (typeof locale === 'string' && STRIPE_LOCALES.has(locale)) ? locale : 'auto';
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
+      locale: safeLocale,
       // dacă ai deja customerId, îl treci; altfel pasezi email:
       customer: customerId || undefined,
       customer_email: customerId ? undefined : (email || undefined),

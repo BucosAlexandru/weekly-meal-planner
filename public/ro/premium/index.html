@@ -175,7 +175,12 @@
       <p><i class="bi bi-gem"></i> <strong>Ai deja un abonament?</strong></p>
       <div class="access-mini-form">
         <input type="email" id="emailInput" placeholder="your@email.com" autocomplete="email" aria-label="Email" />
-        <a href="/#access-card" class="btn btn-verify">Activează →</a>
+        <!-- P1 trust fix (real-payment finding F5): the Activate link jumps to
+             the homepage access card, which used to arrive with an EMPTY email
+             field — whatever the user typed here was silently lost. Stash it in
+             mp:lastEmail so restorePremiumFromHint() verifies it on arrival. -->
+        <a href="/#access-card" class="btn btn-verify"
+           onclick="try{var v=document.getElementById('emailInput').value.trim();if(v)localStorage.setItem('mp:lastEmail',v);}catch(e){}">Activează →</a>
       </div>
     </div>
 
