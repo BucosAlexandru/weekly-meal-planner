@@ -46,8 +46,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Rebuild content for the new week
-        run: npm run build
+      - name: Regenerate content for the new week
+        # Only content changes weekly (HTML pages + plan-meals.generated.js +
+        # sitemap). JS/CSS bundles are untouched, so `content` — not the full
+        # `build` — is the correct step and avoids cosmetic bundle churn.
+        run: npm run content
 
       - name: Validate open-in-app deep links
         run: npm run validate:plans
