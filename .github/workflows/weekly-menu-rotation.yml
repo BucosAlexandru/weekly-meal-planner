@@ -1,0 +1,66 @@
+name: Weekly menu rotation
+
+# Rotates every weekly meal-plan menu (all 11 plans × 14 languages) for the
+# new week and pushes the regenerated static pages so Vercel redeploys them.
+#
+# HOW IT WORKS
+#   The menus are NOT hand-edited. scripts/generate-content.mjs seeds its
+#   deterministic recipe picker with a week index (see currentMenuWeek()), so
+#   simply rebuilding after the week rolls over produces a fresh — but fully
+#   reproducible — combination for every plan. This job does that rebuild and
+#   commits the result. A push by GITHUB_TOKEN does not re-trigger CI, but
+#   Vercel's own Git integration deploys the commit regardless.
+#
+# SCHEDULE
+#   Cron is UTC. '59 21 * * 0' = Sunday 21:59 UTC, which is:
+#     • Sunday 23:59 in Romania during winter (EET, UTC+2)
+#     • Monday   00:59 in Romania during summer (EEST, UTC+3)
+#   Either way it lands on the week boundary; generate-content.mjs also shifts
+#   +6h internally so a late-Sunday run already resolves to the upcoming week.
+#   Use the manual trigger below to roll the menus at any time.
+
+on:
+  schedule:
+    - cron: '59 21 * * 0'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Never let two rotations overlap.
+concurrency:
+  group: weekly-menu-rotation
+  cancel-in-progress: false
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild content for the new week
+        run: npm run build
+
+      - name: Validate open-in-app deep links
+        run: npm run validate:plans
+
+      - name: Commit & push if the menus changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No menu changes this week — nothing to commit."
+          else
+            git commit -m "Weekly menu rotation ($(date -u +'%G-W%V'))"
+            git push
+            echo "Pushed rotated menus for $(date -u +'%G-W%V')."
+          fi

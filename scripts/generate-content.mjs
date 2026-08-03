@@ -590,34 +590,74 @@ function planHash(s) {
 const planSeedSort = (planId, arr, salt = '') =>
   arr.slice().sort((a, b) => planHash(planId + salt + ':' + a.id) - planHash(planId + salt + ':' + b.id));
 
+/* ════════════════════════════════════════════════════════════════
+   WEEKLY MENU ROTATION.
+
+   The menus rotate every calendar week: the seed feeding the deterministic
+   recipe picker (planSeedSort) includes a week index, so each Monday the 14
+   picks reshuffle into a fresh — but still fully reproducible — combination.
+   A build within the same week always yields the same menus (no churn); the
+   Sunday-night automation (.github/workflows/weekly-menu-rotation.yml) is
+   what rebuilds + commits when the week rolls over.
+
+   Override with MENU_WEEK=<int> for testing or to pin a specific week.
+   ════════════════════════════════════════════════════════════════ */
+function currentMenuWeek() {
+  if (process.env.MENU_WEEK != null && process.env.MENU_WEEK !== '')
+    return parseInt(process.env.MENU_WEEK, 10) || 0;
+  // Shift +6h so a Sunday 23:59 run has already rolled into the week that
+  // starts Monday 00:00 — the week the visitor is actually planning for.
+  const shifted = new Date(Date.now() + 6 * 3600 * 1000);
+  const epoch = Date.UTC(2024, 0, 1); // 2024-01-01 was a Monday
+  const dayUTC = Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate());
+  return Math.floor((dayUTC - epoch) / (7 * 86400000));
+}
+const MENU_WEEK = currentMenuWeek();
+console.log(`[menus] weekly rotation index = ${MENU_WEEK}`);
+
+// Categories that are never a lunch/dinner main and must not land in a plan:
+// desserts (Tiramisu, Papanași…), breakfast items, snacks, appetizers, sides.
+// Salads stay eligible — they ARE the meal in the Mediterranean / summer-light
+// plans. Mirrors the app's runtime NON_MAIN_MEAL guard (minus Salad).
+const NON_MEAL_CATEGORIES = new Set(['Dessert', 'Breakfast', 'Snack', 'Appetizer', 'Side dish']);
+const isMainMeal = r => !NON_MEAL_CATEGORIES.has(r.category?.en || '');
+
 function autoPlanMeals(plan) {
   const sel = PLAN_PICK[plan.id];
-  if (!sel) return null;
+  // Rotation-aware seed: same plan, different week ⇒ different picks.
+  const seed = plan.id + 'w' + MENU_WEEK;
   const originEn = r => (r.origin?.en || r.origin?.ro || '').trim();
   const tagsOf   = r => (recipesMeta?.[r.id]?.tags) || [];
+  // Budget rotates from its own cheaper corpus; everything else from recipes.
+  const topupSrc = plan.isBudget ? budgetRecipes : recipes;
 
   let pool;
-  if (sel.diverse) {
+  if (plan.isBudget) {
+    pool = budgetRecipes.filter(isMainMeal);
+  } else if (!sel) {
+    return null;
+  } else if (sel.diverse) {
     const seen = new Set(); pool = [];
-    for (const r of planSeedSort(plan.id, recipes)) {
+    for (const r of planSeedSort(seed, recipes)) {
       const o = originEn(r);
-      if (o && !seen.has(o)) { seen.add(o); pool.push(r); }
+      if (o && isMainMeal(r) && !seen.has(o)) { seen.add(o); pool.push(r); }
     }
   } else if (sel.cuisines) {
-    pool = recipes.filter(r => sel.cuisines.includes(originEn(r)));
+    pool = recipes.filter(r => isMainMeal(r) && sel.cuisines.includes(originEn(r)));
   } else if (sel.tags) {
-    pool = recipes.filter(r => tagsOf(r).some(t => sel.tags.includes(t)));
+    pool = recipes.filter(r => isMainMeal(r) && tagsOf(r).some(t => sel.tags.includes(t)));
   } else {
-    pool = recipes.slice();
+    pool = recipes.filter(isMainMeal);
   }
-  pool = planSeedSort(plan.id, pool);
+  pool = planSeedSort(seed, pool);
 
   // Safety: guarantee 14 distinct meals even if a pool is short — top up
-  // deterministically from the whole corpus.
+  // deterministically from the corpus (budget stays within budget recipes),
+  // still excluding non-meal categories so no dessert slips in as filler.
   if (pool.length < 14) {
     const have = new Set(pool.map(r => r.id));
-    for (const r of planSeedSort(plan.id, recipes, '#')) {
-      if (!have.has(r.id)) { pool.push(r); have.add(r.id); }
+    for (const r of planSeedSort(seed, topupSrc, '#')) {
+      if (!have.has(r.id) && isMainMeal(r)) { pool.push(r); have.add(r.id); }
       if (pool.length >= 14) break;
     }
   }
