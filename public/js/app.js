@@ -2793,6 +2793,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Clear old "maxed" message — no longer needed since free is always allowed
   statusEl.innerHTML = '';
+
+  // Keep the gold upsell strip in sync with premium state (removed once paid).
+  if (typeof enhanceExportSection === 'function') enhanceExportSection();
 }
 (function setSeasonTheme(){
   const now = new Date();
@@ -3286,9 +3289,9 @@ function renderPremiumHero() {
   const copy = {
     ro: {
       badge: 'Gratuit · Fără înregistrare · 14 limbi',
-      line1: 'Mâncă bine,',
-      line2: 'în fiecare',
-      line3: 'săptămână.',
+      line1: 'Planifică',
+      line2: 'inteligent.',
+      line3: 'Mănâncă mai bine.',
       sub: 'Plan complet în câteva secunde.\nListă de cumpărături automată. PDF gratuit.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Rețete',
       stat2n:'14',   stat2l:'Limbi',
@@ -3760,6 +3763,82 @@ function renderTrustSignals() {
   document.querySelector('.hero')?.insertAdjacentHTML('afterend', html);
 }
 
+// Localized "featured" ribbon for the premium preview card that leads the
+// upsell (the budget menu). One short label per language.
+const PREVIEW_FEATURED_BADGE = {
+  ro:'Cel mai căutat', en:'Most popular', es:'Más popular', fr:'Le plus prisé',
+  de:'Am beliebtesten', pt:'Mais popular', ru:'Популярное', it:'Più richiesto',
+  tr:'En popüler', ar:'الأكثر طلبًا', zh:'最受欢迎', ja:'一番人気',
+  ko:'가장 인기', hi:'सबसे लोकप्रिय',
+};
+
+// ── Export-block upgrade line (relevant to the PDF download action) ─────────
+// The unified export block is about downloading THE PLAN the user just made,
+// so its upsell line stays on-topic: free = 2 of 7 days, Premium = the full
+// 7-day PDF. (The separate budget-menu upsell lives in the premium preview
+// cards.) The HTML is authored here (trusted) → rendered via innerHTML so the
+// key phrases can be emphasized.
+const EXPORT_UPGRADE_LINE = {
+  ro: 'Gratuit vezi <strong>2 din 7 zile</strong>. Premium deblochează <strong>planul complet pe 7 zile</strong> — €3/lună, anulezi oricând.',
+  en: 'Free preview: <strong>2 of 7 days</strong>. Premium unlocks the <strong>full 7-day plan</strong> — €3/month, cancel anytime.',
+  es: 'Vista previa gratis: <strong>2 de 7 días</strong>. Premium desbloquea el <strong>plan completo de 7 días</strong> — €3/mes, cancela cuando quieras.',
+  fr: 'Aperçu gratuit : <strong>2 jours sur 7</strong>. Premium débloque le <strong>plan complet de 7 jours</strong> — €3/mois, annulez à tout moment.',
+  de: 'Kostenlose Vorschau: <strong>2 von 7 Tagen</strong>. Premium schaltet den <strong>vollständigen 7-Tage-Plan</strong> frei — €3/Monat, jederzeit kündbar.',
+  pt: 'Prévia grátis: <strong>2 de 7 dias</strong>. O Premium desbloqueia o <strong>plano completo de 7 dias</strong> — €3/mês, cancele quando quiser.',
+  ru: 'Бесплатно: <strong>2 из 7 дней</strong>. Premium открывает <strong>полный план на 7 дней</strong> — €3/месяц, отмена в любое время.',
+  it: 'Anteprima gratis: <strong>2 di 7 giorni</strong>. Premium sblocca il <strong>piano completo di 7 giorni</strong> — €3/mese, disdici quando vuoi.',
+  tr: 'Ücretsiz önizleme: <strong>7 günün 2 günü</strong>. Premium <strong>7 günlük tam planı</strong> açar — €3/ay, dilediğin zaman iptal et.',
+  ar: 'معاينة مجانية: <strong>يومان من 7</strong>. يفتح Premium <strong>الخطة الكاملة لـ7 أيام</strong> — €3/شهر، ألغِ في أي وقت.',
+  zh: '免费预览：<strong>7 天中的 2 天</strong>。高级版解锁<strong>完整 7 天计划</strong> —— €3/月，随时取消。',
+  ja: '無料プレビュー：<strong>7日中2日</strong>。プレミアムで<strong>7日間の完全プラン</strong>を解除 —— 月€3、いつでもキャンセル可。',
+  ko: '무료 미리보기: <strong>7일 중 2일</strong>. 프리미엄은 <strong>전체 7일 플랜</strong>을 잠금 해제 — 월 €3, 언제든 취소.',
+  hi: 'मुफ़्त झलक: <strong>7 में से 2 दिन</strong>। Premium <strong>पूरा 7-दिन प्लान</strong> अनलॉक करता है — €3/माह, कभी भी रद्द करें।',
+};
+
+// Unified "Export + Upgrade" block. Funnel analysis (Aug 2026): three separate
+// premium surfaces stacked near the page bottom (upsell banner, preview cards,
+// PDF block) read as redundant. So the PDF export block absorbs the budget-menu
+// upsell as a gold highlight strip and moves UP to the value moment — right
+// before the shopping list — instead of a separate banner.
+function placeUnifiedExportBlock() {
+  const sec = document.querySelector('.export-section');
+  const shopping = document.querySelector('.app-section--shopping');
+  // Move the export/upgrade block to just above the shopping list (idempotent).
+  if (sec && shopping && sec.nextElementSibling !== shopping) {
+    shopping.parentNode.insertBefore(sec, shopping);
+  }
+}
+
+function enhanceExportSection() {
+  const sec = document.querySelector('.export-section');
+  if (!sec) return;
+  const left = sec.querySelector('.export-left');
+  // Wrap .export-left in a left column so the gold strip stacks under the title
+  // while the buttons stay on the right (runs once).
+  let main = sec.querySelector('.export-main');
+  if (!main && left) {
+    main = document.createElement('div');
+    main.className = 'export-main';
+    left.parentNode.insertBefore(main, left);
+    main.appendChild(left);
+    sec.classList.add('export-upgrade');
+  }
+  // The relevant upsell line lives under the subtitle, inside the text column.
+  const textWrap = sec.querySelector('.export-title')?.parentElement;
+  // Premium users: no upsell line (mirrors the hidden pay button).
+  if (window.hasUnlimited || !textWrap) {
+    sec.querySelector('.export-upgrade-line')?.remove();
+    return;
+  }
+  let line = sec.querySelector('.export-upgrade-line');
+  if (!line) {
+    line = document.createElement('div');
+    line.className = 'export-upgrade-line';
+    textWrap.appendChild(line);
+  }
+  line.innerHTML = EXPORT_UPGRADE_LINE[lang] || EXPORT_UPGRADE_LINE.en;
+}
+
 function renderPremiumPreview() {
   // Don't show the upsell to users who already have Premium.
   if (window.hasUnlimited) {
@@ -3899,8 +3978,20 @@ function renderPremiumPreview() {
   };
   const s = copy[lang] || copy.en;
 
-  const cardsHTML = s.cards.map(c => `
-      <div class="hp-preview-card">
+  // The budget menu is the single Premium benefit the free on-screen experience
+  // can't reproduce, so it leads the upsell as the featured card (funnel
+  // analysis, Aug 2026). Partition keeps source order for the other two.
+  const ordered = [
+    ...s.cards.filter(c => c.ico === '💰'),
+    ...s.cards.filter(c => c.ico !== '💰'),
+  ];
+  const badge = PREVIEW_FEATURED_BADGE[lang] || PREVIEW_FEATURED_BADGE.en;
+
+  const cardsHTML = ordered.map(c => {
+    const featured = c.ico === '💰';
+    return `
+      <div class="hp-preview-card${featured ? ' hp-preview-card--featured' : ''}">
+        ${featured ? `<span class="hp-preview-card-badge">${safeText(badge)}</span>` : ''}
         <div class="hp-preview-card-icon" aria-hidden="true">${safeText(c.ico, '⭐')}</div>
         <h3 class="hp-preview-card-title">${safeText(fillRecipeCount(c.title))}</h3>
         <p class="hp-preview-card-desc">${safeText(fillRecipeCount(c.desc))}</p>
@@ -3908,7 +3999,8 @@ function renderPremiumPreview() {
           <span class="hp-preview-card-mock-lock" aria-hidden="true">🔒</span>
           ${safeText(c.mock)}
         </div>
-      </div>`).join('');
+      </div>`;
+  }).join('');
 
   const html = `
     <section id="${ID}" class="hp-premium-preview hp-fade-in no-print" aria-labelledby="hp-premium-preview-title">
@@ -3924,14 +4016,15 @@ function renderPremiumPreview() {
     </section>`;
 
   // Insert right before the pricing section so the visual upsell leads
-  // directly into the actual pricing cards.
+  // directly into the actual pricing cards. On the homepage there's no
+  // pricing section and the export block now sits ABOVE the shopping list, so
+  // anchor to the premium-access card — that keeps these preview cards below
+  // the list on both first render and language switches.
   const pricingEl = document.getElementById('pricing-section');
-  if (pricingEl) {
-    pricingEl.insertAdjacentHTML('beforebegin', html);
-  } else {
-    // Fallback: append before the export section.
-    document.querySelector('.export-section')?.insertAdjacentHTML('beforebegin', html);
-  }
+  const anchor = pricingEl
+    || document.getElementById('access-card')
+    || document.querySelector('.export-section');
+  anchor?.insertAdjacentHTML('beforebegin', html);
 }
 
 // Phase 12 — Hand-coded SVG ornaments used as section decorations
@@ -5363,6 +5456,10 @@ function applyTranslations() {
   renderFAQ();
   updateStickyUpgradeText();
   refreshStickyUpgrade();
+  // Unified export/upgrade block: move it above the shopping list and (re)build
+  // its localized gold upsell strip. Both are idempotent.
+  placeUnifiedExportBlock();
+  enhanceExportSection();
   // Phase 8 — tag new section wrappers + write stagger indices BEFORE the
   // observer kicks so the reveal animation plays from the first frame.
   applyStaggerAndFadeMarkers();

@@ -150,6 +150,52 @@
 }
 .hp-preview-cta-btn:hover { transform: translateY(-2px); }
 
+/* ── Featured preview card (budget menu leads the upsell) ──── */
+.hp-preview-card--featured {
+  border: 2px solid #d4a017;
+  background: linear-gradient(180deg, #fffdf5, #ffffff);
+  box-shadow: 0 12px 34px rgba(212, 160, 23, 0.20);
+}
+.hp-preview-card--featured .hp-preview-card-icon { font-size: 2rem; }
+.hp-preview-card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #d4a017, #f5c243);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.62rem;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(212, 160, 23, 0.35);
+}
+
+/* ── Unified export/upgrade block — gold upsell strip + left column ── */
+.export-section.export-upgrade { align-items: center; }
+.export-main {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+/* Relevant upgrade line under the export subtitle (free 2/7 → full 7-day PDF).
+   Inline, no box; key phrases emphasized in the discovery-card green. */
+.export-upgrade-line {
+  margin-top: 6px;
+  color: #5f6b54;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 640px;
+}
+.export-upgrade-line strong { color: #1a5c21; font-weight: 700; }
+@media (max-width: 700px) {
+  .export-upgrade-strip { max-width: none; }
+}
+[dir="rtl"] .hp-preview-card-badge { right: auto; left: 12px; }
+
 /* ── FAQ accordion ─────────────────────────────────────────── */
 .hp-faq {
   max-width: 820px;

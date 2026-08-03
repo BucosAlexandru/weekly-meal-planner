@@ -1239,7 +1239,11 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
    EXPORT / PDF SECTION
    ================================================ */
 .export-section {
-  background: linear-gradient(145deg, var(--color-brand) 0%, var(--color-brand-dark) 100%);
+  /* Soft light-green card, same palette as the discovery cards (#f7fbf5 /
+     #d4e9cc), so it blends with the homepage instead of being a heavy
+     solid-green block. */
+  background: #f7fbf5;
+  border: 1.5px solid #d4e9cc;
   border-radius: var(--r-lg);
   padding: 26px 28px;
   margin-bottom: 20px;
@@ -1250,7 +1254,7 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
   gap: 18px;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-brand);
+  box-shadow: 0 4px 18px rgba(36, 113, 42, 0.06);
 }
 
 .export-section::after {
@@ -1261,7 +1265,7 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: rgba(255,255,255,.06);
+  background: rgba(36,113,42,.05);
   pointer-events: none;
 }
 
@@ -1269,11 +1273,11 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
   display: flex;
   align-items: center;
   gap: 16px;
-  color: #fff;
+  color: #1a1a1a;
 }
 .export-icon    { font-size: 2.4rem; line-height: 1; }
-.export-title   { font-weight: 700; font-size: 1.05rem; margin-bottom: 3px; color: #fff; }
-.export-sub     { font-size: 0.83rem; opacity: .82; }
+.export-title   { font-weight: 700; font-size: 1.05rem; margin-bottom: 3px; color: #1a1a1a; }
+.export-sub     { font-size: 0.83rem; color: #7a6a4a; }
 
 .export-right {
   display: flex;
@@ -1285,9 +1289,9 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
 }
 
 .currency-select {
-  border: 1.5px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.15);
-  color: #fff;
+  border: 1.5px solid #d9cfb5;
+  background: #fff;
+  color: #5a4a1f;
   border-radius: var(--r-full);
   padding: 8px 30px 8px 16px;
   font-size: 0.85rem;
@@ -1296,26 +1300,26 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%235a4a1f' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
   transition: background var(--t-fast);
 }
 .currency-select:focus { outline: none; }
-.currency-select option { background: var(--color-brand-dark); color: #fff; }
+.currency-select option { background: #fff; color: #5a4a1f; }
 
 .payment-status-msg {
   width: 100%;
   font-size: 0.88rem;
-  color: rgba(255,255,255,.9);
+  color: #5a4a1f;
   margin-top: 2px;
   text-align: center;
 }
 
 /* Bootstrap overrides for payment-status inside export section */
 #payment-status {
-  color: rgba(255,255,255,.9);
+  color: #5a4a1f;
   font-size: 0.88rem;
   margin-top: 4px;
   width: 100%;
@@ -1339,21 +1343,21 @@ body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__bo
 }
 .btn:active { transform: translateY(1px); }
 
-/* Generate PDF — white on green bg */
+/* Generate PDF — green fill on the light export card */
 .btn-generate,
 button#generate-btn {
-  background: rgba(255,255,255,.96);
-  color: var(--color-brand);
-  border: 2px solid rgba(255,255,255,.5);
+  background: var(--color-brand);
+  color: #fff;
+  border: none;
   padding: 9px 22px;
   font-size: 0.88rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  box-shadow: 0 4px 14px rgba(36,113,42,.28);
 }
 .btn-generate:hover,
 button#generate-btn:hover {
-  background: #fff;
-  color: var(--color-brand-dark);
-  box-shadow: 0 4px 14px rgba(0,0,0,.14);
+  background: var(--color-brand-dark);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(36,113,42,.36);
   transform: translateY(-1px);
 }
 
