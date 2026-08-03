@@ -703,6 +703,35 @@ body {
   color: #fff;
   box-shadow: 0 2px 8px var(--color-brand-glow);
 }
+/* Cap reached: unselected chips dim to signal "no more room" (still
+   clickable to deselect others, and 'all'/'budget' are never capped). */
+.filter-chip.is-capped {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.filter-chip.is-capped:hover {
+  border-color: var(--line);
+  color: var(--ink-2);
+  background: var(--surface);
+}
+/* "Pick up to N categories" nudge shown when a 5th chip is tapped. */
+.filter-cap-hint {
+  display: none;
+  justify-content: center;
+  text-align: center;
+  margin: -6px auto 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-brand);
+}
+.filter-cap-hint.show {
+  display: block;
+  animation: capHintPop 0.2s ease;
+}
+@keyframes capHintPop {
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ── Cost estimate bar ── */
 .cost-estimate-bar {

@@ -604,12 +604,22 @@ document.addEventListener('DOMContentLoaded', () => {
       await ensureBudgetRecipes();
       pool = recipesBudget;
     } else {
-      const filterDef = typeof FILTER_DEFS !== 'undefined'
-        ? FILTER_DEFS.find(f => f.id === (window._activeFilter || 'all'))
-        : null;
-      const test = filterDef && filterDef.id !== 'all' ? filterDef.test : () => true;
-      pool = recipesMain.filter(test);
-      if (pool.length < 2) pool = recipesMain; // fallback
+      // Multi-select: a recipe qualifies if it matches ANY selected
+      // category (union / OR). No selection (or only 'all') = no filter.
+      const activeIds = getActiveFilterIds().filter(id => id !== 'budget');
+      if (!activeIds.length) {
+        pool = recipesMain;
+      } else {
+        const tests = activeIds
+          .map(id => (typeof FILTER_DEFS !== 'undefined'
+            ? FILTER_DEFS.find(f => f.id === id) : null))
+          .filter(f => f && typeof f.test === 'function')
+          .map(f => f.test);
+        pool = tests.length
+          ? recipesMain.filter(r => tests.some(test => test(r)))
+          : recipesMain;
+        if (pool.length < 2) pool = recipesMain; // fallback
+      }
     }
     // Exclude non-main categories (Dessert / Snack / Salad / Breakfast /
     // Appetizer / Side dish) from lunch/dinner slots. Category EN values are
@@ -1882,6 +1892,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 // (legacy html2pdf helpers buildCleanPdfNode/maybeCompactToTwoPages/paginateCleanNode removed)
   // ── Filter definitions ────────────────────────────────────────
+  // Multi-select cap for the smart generator. Chips combine as a UNION
+  // (OR): each extra category widens the pool, so past ~4 it collapses
+  // into "Toate". Change this single constant to adjust the limit.
+  const MAX_ACTIVE_FILTERS = 4;
+
+  // The currently selected ingredient/style chips, excluding the two
+  // exclusive specials ('all' = no filter, 'budget' = swaps the corpus).
+  function getActiveFilterIds() {
+    const arr = Array.isArray(window._activeFilters) ? window._activeFilters : [];
+    return arr.filter(id => id && id !== 'all');
+  }
+
   const FILTER_DEFS = [
     { id: 'all',       labelKey: 'filter.all',  emoji: '🌍',
       test: () => true },
@@ -2127,7 +2149,14 @@ document.addEventListener('DOMContentLoaded', () => {
       'filter.family':'Family',
     },
   };
-  window._activeFilter = window._activeFilter || 'all';
+  // Multi-select state: an array of chip ids. 'all' (no filter) and
+  // 'budget' (corpus swap) stay exclusive; every other chip is additive
+  // up to MAX_ACTIVE_FILTERS. window._activeFilter is kept as a legacy
+  // single-value mirror for the analytics call sites that still read it.
+  window._activeFilters = Array.isArray(window._activeFilters) && window._activeFilters.length
+    ? window._activeFilters
+    : (window._activeFilter ? [window._activeFilter] : ['all']);
+  window._activeFilter = getActiveFilterIds()[0] || 'all';
 
   // ── Live shopping list renderer ───────────────────────────────
   // Renders the SAME normalization-engine output the PDF uses
@@ -2438,7 +2467,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const bar = document.getElementById('auto-menu-bar');
       if (bar) bar.appendChild(costBar);
     }
-    const weeklyRon = COST_RON[filterId] || 200;
+    // Multi-select: average the per-filter guesses across the selected
+    // chips (budget uses its own corpus figure). filterId is ignored now —
+    // the source of truth is window._activeFilters.
+    const costIds = getActiveFilterIds().filter(id => id !== 'budget');
+    let weeklyRon;
+    if (window.isBudgetMenu) {
+      weeklyRon = COST_RON.budget || 130;
+    } else if (!costIds.length) {
+      weeklyRon = COST_RON.all || 200;
+    } else {
+      const vals = costIds.map(id => COST_RON[id]).filter(v => typeof v === 'number');
+      weeklyRon = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : 200;
+    }
     const mode = window._planMode || 'week';
     // 14 meals/week → 1 meal ≈ 1/14, 1 day (lunch+dinner) ≈ 1/7
     const ron = mode === 'meal' ? Math.round(weeklyRon / 14)
@@ -2522,25 +2563,91 @@ document.addEventListener('DOMContentLoaded', () => {
       : (lang === 'ro' ? 'Generator inteligent' : 'Smart generator');
     header.innerHTML = `<span class="header-icon" aria-hidden="true">✨</span><span>${headerLabel}</span>`;
     const labels = FILTER_LABELS[lang] || FILTER_LABELS.default;
-    chipRow.innerHTML = FILTER_DEFS.map(f =>
-      `<button class="filter-chip${window._activeFilter===f.id?' active':''}" data-filter="${f.id}" type="button" aria-pressed="${window._activeFilter===f.id}">
+    chipRow.innerHTML = FILTER_DEFS.map(f => {
+      const on = (window._activeFilters || []).includes(f.id);
+      return `<button class="filter-chip${on ? ' active' : ''}" data-filter="${f.id}" type="button" aria-pressed="${on}">
          ${f.emoji} ${labels[f.labelKey] || f.id}
-       </button>`
-    ).join('');
+       </button>`;
+    }).join('');
+
+    // "Poți alege maxim N categorii" nudge, shown when the cap is hit.
+    const capHintText = () => {
+      const N = MAX_ACTIVE_FILTERS;
+      const map = {
+        ro: `Poți alege maxim ${N} categorii`,   en: `Pick up to ${N} categories`,
+        es: `Elige hasta ${N} categorías`,        fr: `Choisis jusqu'à ${N} catégories`,
+        de: `Wähle bis zu ${N} Kategorien`,        pt: `Escolhe até ${N} categorias`,
+        ru: `Выберите до ${N} категорий`,          ar: `اختر حتى ${N} فئات`,
+        zh: `最多选择 ${N} 个类别`,                 ja: `カテゴリーは最大 ${N} 個まで`,
+        hi: `अधिकतम ${N} श्रेणियाँ चुनें`,           tr: `En fazla ${N} kategori seçin`,
+        it: `Scegli fino a ${N} categorie`,        ko: `최대 ${N}개 카테고리 선택`,
+      };
+      return map[lang] || map.en;
+    };
+    let capHintTimer = null;
+    const flashCapHint = () => {
+      let hint = document.getElementById('filter-cap-hint');
+      if (!hint) {
+        hint = document.createElement('div');
+        hint.id = 'filter-cap-hint';
+        hint.className = 'filter-cap-hint';
+        hint.setAttribute('role', 'status');
+        chipRow.insertAdjacentElement('afterend', hint);
+      }
+      hint.textContent = capHintText();
+      hint.classList.add('show');
+      if (capHintTimer) clearTimeout(capHintTimer);
+      capHintTimer = setTimeout(() => hint.classList.remove('show'), 2200);
+    };
+
+    // Repaint active/capped state on every chip from window._activeFilters.
+    const refreshChipStates = () => {
+      const active = getActiveFilterIds().filter(id => id !== 'budget');
+      const atMax = active.length >= MAX_ACTIVE_FILTERS;
+      chipRow.querySelectorAll('.filter-chip').forEach(b => {
+        const id = b.dataset.filter;
+        const on = (window._activeFilters || []).includes(id);
+        const isMulti = id !== 'all' && id !== 'budget';
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on);
+        // Dim only unselected multi chips once the cap is reached — 'all'
+        // and 'budget' always stay clickable (they reset the selection).
+        b.classList.toggle('is-capped', atMax && isMulti && !on);
+      });
+    };
+
     chipRow.querySelectorAll('.filter-chip').forEach(btn => {
       btn.addEventListener('click', () => {
-        window._activeFilter = btn.dataset.filter;
-        const isBudget = FILTER_DEFS.find(f => f.id === window._activeFilter)?.isBudget || false;
-        window.isBudgetMenu = isBudget;
+        const id = btn.dataset.filter;
+        if (id === 'all') {
+          window._activeFilters = ['all'];
+          window.isBudgetMenu = false;
+        } else if (id === 'budget') {
+          // Budget swaps the whole recipe corpus → keep it exclusive.
+          window._activeFilters = ['budget'];
+          window.isBudgetMenu = true;
+        } else {
+          let next = getActiveFilterIds().filter(x => x !== 'budget');
+          if (next.includes(id)) {
+            next = next.filter(x => x !== id);              // toggle off
+          } else if (next.length < MAX_ACTIVE_FILTERS) {
+            next = next.concat(id);                          // toggle on
+          } else {
+            flashCapHint();                                  // at cap → nudge
+            return;
+          }
+          window._activeFilters = next.length ? next : ['all'];
+          window.isBudgetMenu = false;
+        }
+        // Keep the hidden budget checkbox + legacy single mirror in sync.
         const cbEl = document.getElementById('budget-menu-toggle');
-        if (cbEl) cbEl.checked = isBudget;
-        chipRow.querySelectorAll('.filter-chip').forEach(b => {
-          b.classList.toggle('active', b.dataset.filter === window._activeFilter);
-          b.setAttribute('aria-pressed', b.dataset.filter === window._activeFilter);
-        });
-        showCostEstimate(window._activeFilter);
+        if (cbEl) cbEl.checked = !!window.isBudgetMenu;
+        window._activeFilter = getActiveFilterIds()[0] || 'all';
+        refreshChipStates();
+        showCostEstimate();
       });
     });
+    refreshChipStates();
 
     // ── Generate button ───────────────────────────────────────
     let autoBtn = document.getElementById('auto-menu-btn');
@@ -2564,7 +2671,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ok = await generateRandomMenu();
         updateShoppingList();
         showCostEstimate(window._activeFilter);
-        if (ok && window.mpTrack) window.mpTrack('plan_generated', { filter: window._activeFilter || 'all' });
+        if (ok && window.mpTrack) window.mpTrack('plan_generated', { filter: (getActiveFilterIds().join('+')) || 'all' });
       } finally {
         autoBtn._generating = false;
       }
@@ -5716,7 +5823,7 @@ if (verifyBtn && emailInput && resultDiv) {
     if (window.mpTrack && !(wasPremium && active)) window.mpTrack('email_submitted', {
       source: 'pdf_gate',
       access: active ? 'active' : found ? 'found' : 'none',
-      filter: window._activeFilter || 'all',
+      filter: (getActiveFilterIds().join('+')) || 'all',
       isBudget: !!window.isBudgetMenu,
       tier_intent: active ? 'premium' : 'free',
     });
