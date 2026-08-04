@@ -10,6 +10,7 @@
     "build:css": "esbuild public/css/style.css --minify --outfile=public/css/style.min.css",
     "content": "node scripts/generate-content.mjs",
     "validate:plans": "node scripts/validate-open-in-app.mjs",
+    "validate:budget": "node scripts/validate-budget-recipes.mjs",
     "build": "npm run content && npm run build:js && npm run build:css"
   },
   "repository": {
