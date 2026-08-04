@@ -304,8 +304,11 @@ const PLANS = [
       ko:'주 €30 미만 예산으로 2인 건강하고 맛있는 식사를 즐기는 한 주.'
     },
     isBudget: true,
-    lunches: budgetRecipes.slice(0,7).map(r=>r.name?.ro||r.name?.en),
-    dinners: budgetRecipes.slice(7,14).map(r=>r.name?.ro||r.name?.en),
+    // Cycle the available budget recipes across the 14 weekly slots. The set is
+    // now a curated 10 (see recipes-budget.js rebuild) — cycling keeps all 14
+    // slots filled without empty days. Repeats disappear once the set grows.
+    lunches: Array.from({ length: 7 }, (_, i) => budgetRecipes[i % budgetRecipes.length]).map(r => r.name?.ro || r.name?.en),
+    dinners: Array.from({ length: 7 }, (_, i) => budgetRecipes[(i + 7) % budgetRecipes.length]).map(r => r.name?.ro || r.name?.en),
   },
   {
     id: 'est-european', idEn: 'eastern-european', emoji: '🥟',
