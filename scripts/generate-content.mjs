@@ -664,6 +664,14 @@ function autoPlanMeals(plan) {
       if (pool.length >= 14) break;
     }
   }
+  // Small corpus (e.g. the budget set): once the distinct top-up is exhausted,
+  // cycle the available recipes so all 14 slots are filled instead of leaving
+  // empty days. Repeats are unavoidable below 14 distinct recipes and vanish
+  // as the set grows.
+  if (pool.length && pool.length < 14) {
+    const base = pool.slice();
+    for (let i = 0; pool.length < 14; i++) pool.push(base[i % base.length]);
+  }
   // Weekend plans cover only Saturday + Sunday → 2 lunches + 2 dinners.
   const nDays = plan.weekend ? 2 : 7;
   // Single selection → derive both display names and recipe IDs from the
