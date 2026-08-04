@@ -12,6 +12,7 @@ import { recipes }                    from '../public/js/recipes.js';
 import { recipes as budgetRecipes }   from '../public/js/recipes-budget.js';
 import { i18n }                       from '../public/js/i18n.js';
 import { recipeImages }               from '../public/js/recipe-images.js';
+import { budgetImages }               from '../public/js/budget-images.js';
 import { recipesMeta, TAG_LABELS, READY_IN } from '../public/js/recipes-meta.js';
 import { buildShoppingListV2 }        from '../public/js/shopping-list.js';
 import { CUISINE_INTRO }              from './cuisine-intros.mjs';
@@ -77,7 +78,7 @@ function resolveRecipeImage(recipe, rslug) {
   if (fs.existsSync(localPng)) {
     return { src: `/images/${rslug}.png`, ogUrl: `${PROD_ORIGIN}/images/${rslug}.png` };
   }
-  const mapped = recipeImages[recipe.id];
+  const mapped = recipeImages[recipe.id] || budgetImages[recipe.id];
   if (mapped) return { src: mapped, ogUrl: mapped };
   if (!_imgWarnSeen.has(recipe.id)) {
     _imgWarnSeen.add(recipe.id);
