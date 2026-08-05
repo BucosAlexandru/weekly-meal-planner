@@ -2208,7 +2208,7 @@ ${makeFooter(lc, NAV_URL_FOR.plan(plan))}
   } catch (e) {}
 })();
 </script>
-<style>/* Auto-zoom the meal photo on hover — pointer/mouse devices only, so it never misfires on touch (all plan pages). */@media (hover:hover) and (pointer:fine){.plan-meal-thumb{position:relative;transition:transform .18s ease,box-shadow .18s ease,border-radius .18s ease}.plan-meal-thumb:hover{transform:scale(3.4);z-index:60;border-radius:8px;box-shadow:0 10px 34px rgba(0,0,0,.45)}}</style>
+<style>/* Auto-zoom the meal photo on hover — pointer/mouse devices only, so it never misfires on touch (all plan pages). The last two rows grow upward so the enlarged photo isn't clipped at the table's bottom edge. */@media (hover:hover) and (pointer:fine){.plan-meal-thumb{position:relative;transition:transform .18s ease,box-shadow .18s ease,border-radius .18s ease}.plan-meal-thumb:hover{transform:scale(3.4);z-index:60;border-radius:8px;box-shadow:0 10px 34px rgba(0,0,0,.45)}tr:nth-last-child(-n+2) .plan-meal-thumb:hover{transform-origin:center bottom}}</style>
 <script src="/js/analytics.min.js" data-page-type="plan" defer></script>
 </body></html>`;
 }
