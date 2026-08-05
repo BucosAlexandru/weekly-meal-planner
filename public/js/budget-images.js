@@ -8,5 +8,10 @@ export const budgetImages = {
   budget_003: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Baked_beans_in_tomato_sauce.jpg/500px-Baked_beans_in_tomato_sauce.jpg',              // Iahnie de fasole (meatless beans in sauce)
   budget_004: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Salat%C4%83_de_vinete.jpg/500px-Salat%C4%83_de_vinete.jpg',                          // Salată de vinete
   budget_005: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/T%C3%BCrl%C3%BC_in_a_g%C3%BCve%C3%A7.jpg/500px-T%C3%BCrl%C3%BC_in_a_g%C3%BCve%C3%A7.jpg',   // Ghiveci de legume (türlü — mixed vegetable stew in a pot)
+  budget_006: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Fasole_batuta.png/500px-Fasole_batuta.png',                                          // Fasole bătută (bean paste topped with fried onions)
+  budget_007: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MamaligaBranza.JPG/500px-MamaligaBranza.JPG',                                        // Mămăligă cu brânză și smântână
+  budget_008: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Stuffed_paprikas_%28Hercegovacke_Punjene_paprike%29.JPG/500px-Stuffed_paprikas_%28Hercegovacke_Punjene_paprike%29.JPG', // Ardei umpluți (stuffed peppers in tomato sauce)
+  budget_009: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Zacusc%C4%83.jpg/500px-Zacusc%C4%83.jpg',                                            // Zacuscă (roasted vegetable spread on bread)
+  budget_010: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Postna_sarma_%28vegetarian_sarma%2C_Cuisine_of_Serbia%29.jpg/500px-Postna_sarma_%28vegetarian_sarma%2C_Cuisine_of_Serbia%29.jpg', // Sarmale de post (vegan cabbage rolls)
 };
 export default budgetImages;
