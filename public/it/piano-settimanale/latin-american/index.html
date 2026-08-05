@@ -418,8 +418,27 @@
     if (f === '1') localStorage.setItem('pdfV2', '1');
     else if (f === '0') localStorage.setItem('pdfV2', '0');
   } catch (e) {}
+  /* Touch devices have no hover — give them tap-to-zoom (a full-screen photo)
+     instead of the hover-zoom that pointer devices get below. */
+  try {
+    if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+      var lb = document.createElement('div');
+      lb.className = 'pm-lightbox';
+      lb.setAttribute('role', 'dialog');
+      lb.innerHTML = '<img alt="">';
+      var lbst = document.createElement('style');
+      lbst.textContent = '.pm-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px}.pm-lightbox.open{display:flex}.pm-lightbox img{max-width:94vw;max-height:90vh;border-radius:10px}';
+      document.head.appendChild(lbst);
+      document.body.appendChild(lb);
+      var lbimg = lb.querySelector('img');
+      document.querySelectorAll('.plan-meal-thumb img').forEach(function(im){
+        im.addEventListener('click', function(){ lbimg.src = im.currentSrc || im.src; lb.classList.add('open'); });
+      });
+      lb.addEventListener('click', function(){ lb.classList.remove('open'); lbimg.removeAttribute('src'); });
+    }
+  } catch (e) {}
 })();
 </script>
-
+<style>/* Auto-zoom the meal photo on hover — pointer/mouse devices only, so it never misfires on touch (all plan pages). */@media (hover:hover) and (pointer:fine){.plan-meal-thumb{position:relative;transition:transform .18s ease,box-shadow .18s ease,border-radius .18s ease}.plan-meal-thumb:hover{transform:scale(3.4);z-index:60;border-radius:8px;box-shadow:0 10px 34px rgba(0,0,0,.45)}}</style>
 <script src="/js/analytics.min.js" data-page-type="plan" defer></script>
 </body></html>
