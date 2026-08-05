@@ -2188,6 +2188,26 @@ ${makeFooter(lc, NAV_URL_FOR.plan(plan))}
     else if (f === '0') localStorage.setItem('pdfV2', '0');
   } catch (e) {}
 })();
+/* Click-to-zoom lightbox for meal photos. Budget recipes have no detail
+   page, so at least let every plan thumbnail open the photo full-size. */
+(function(){
+  var box = document.createElement('div');
+  box.className = 'pm-lightbox';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-label', 'Photo');
+  box.innerHTML = '<img alt="">';
+  var st = document.createElement('style');
+  st.textContent = '.plan-meal-thumb img{cursor:zoom-in}.pm-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px}.pm-lightbox.open{display:flex}.pm-lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 12px 44px rgba(0,0,0,.55)}';
+  document.head.appendChild(st);
+  document.body.appendChild(box);
+  var big = box.querySelector('img');
+  function close(){ box.classList.remove('open'); big.removeAttribute('src'); }
+  document.querySelectorAll('.plan-meal-thumb img').forEach(function(im){
+    im.addEventListener('click', function(){ big.src = im.currentSrc || im.src; box.classList.add('open'); });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+})();
 </script>
 <script src="/js/analytics.min.js" data-page-type="plan" defer></script>
 </body></html>`;
