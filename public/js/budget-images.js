@@ -18,5 +18,10 @@ export const budgetImages = {
   budget_013: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Zelje_z_paradajzom.jpg/500px-Zelje_z_paradajzom.jpg',                                // Varză călită (cabbage braised in tomato)
   budget_014: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Turkish_egg_dish_Menemen.jpg/500px-Turkish_egg_dish_Menemen.jpg',                     // Menemen (eggs cooked in tomato & pepper)
   budget_015: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Baked_noodles_with_cottage_cheese_DSC04375.JPG/500px-Baked_noodles_with_cottage_cheese_DSC04375.JPG', // Macaroane cu brânză (pasta with white cheese)
+  budget_016: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Vegetable_soup_and_bread_at_the_office.jpg/500px-Vegetable_soup_and_bread_at_the_office.jpg', // Supă-cremă de legume (vegetable soup)
+  budget_017: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Sauteed_Garlic_Green_Beans_1_2017-02-22.jpg/500px-Sauteed_Garlic_Green_Beans_1_2017-02-22.jpg', // Păstăi cu usturoi (garlic green beans)
+  budget_018: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Roasted_Potato_Wedges_with_Shallots_and_Rosemary_%285706897999%29.jpg/500px-Roasted_Potato_Wedges_with_Shallots_and_Rosemary_%285706897999%29.jpg', // Cartofi la cuptor cu rozmarin (roasted potatoes)
+  budget_019: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Perkedel_kentang.JPG/500px-Perkedel_kentang.JPG', // Chiftele de cartofi (potato patties)
+  budget_020: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rice_pudding_bowl.jpg/500px-Rice_pudding_bowl.jpg', // Orez cu lapte (rice pudding)
 };
 export default budgetImages;
