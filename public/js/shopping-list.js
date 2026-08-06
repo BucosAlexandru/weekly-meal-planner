@@ -2180,6 +2180,96 @@ function combineItems(items) {
    LOCALIZED LABEL HELPERS (hybrid-B)
    ============================================================ */
 
+/* ── Per-locale quantity vocabulary for the Hybrid-B label path ──
+   parseIngredient strips the ENGLISH quantity grammar (numbers + tbsp/tsp/
+   cloves/…). The recipe's own translation, however, carries the LOCAL measure
+   words ("2 EL", "c.à.s. de", "ст.л.", "大さじ2") that the English parser
+   leaves attached to the noun. These tables let _localizedLabelFrom trim them
+   so the displayed label is the clean localized noun instead of an English
+   fallback. Deliberately generous: an over-strip is safer than leaking English.
+   RO keeps its own dedicated block below (already tuned) and is not routed here. */
+const L10N_UNITS = {
+  de: 'el|essl(?:öffel)?|tl|teel(?:öffel)?|msp|messerspitze[n]?|prise[n]?|dose[n]?|glas|gläser|becher|bund|bündel|zehe[n]?|stück[e]?|stk|scheibe[n]?|blatt|blätter|tasse[n]?|handvoll|päckchen|packung(?:en)?|kugel[n]?|stange[n]?|knolle[n]?|tropfen|spritzer|schuss|kopf|köpfe|dl',
+  fr: 'c\\.?\\s?à\\.?\\s?soupe|c\\.?\\s?à\\.?\\s?caf[ée]|cuill[eè]re?s?\\s?à\\s?(?:soupe|caf[ée]|th[ée])|à\\s?(?:soupe|caf[ée])|c\\.?\\s?à\\.?\\s?s\\.?|c\\.?\\s?à\\.?\\s?c\\.?|cuill[eè]r?e?e?s?|gousse[s]?|pinc[ée]e[s]?|botte[s]?|brin[s]?|tranche[s]?|feuille[s]?|tasse[s]?|bo[iî]te[s]?|sachet[s]?|pot[s]?|verre[s]?|tige[s]?|poign[ée]e[s]?|noix|filet[s]?|t[êe]te[s]?|branche[s]?|goutte[s]?|trait|bouquet[s]?',
+  es: 'cda[s]?|cdta[s]?|cucharad(?:it)?a[s]?|diente[s]?|pizca[s]?|manojo[s]?|rama[s]?|ramita[s]?|rebanada[s]?|hoja[s]?|taza[s]?|lata[s]?|sobre[s]?|frasco[s]?|vaso[s]?|pu[ñn]ado[s]?|rodaja[s]?|cabeza[s]?|chorrito[s]?|gota[s]?|tallo[s]?|ramillete[s]?',
+  it: 'cucchia(?:i|io|ino|ini)|spicch[io]+|pizzich[io]+|pizzico|mazz[io]|ramett[io]|fett[ae]|foglia|foglie|tazz[ae]|lattin[ae]|bustin[ae]|barattol[io]|bicchier[io]|manciat[ae]|gamb[io]|test[ae]|cespi|ciuff[io]|gocc[ie]|filo|noce|rondelle',
+  pt: 'colher(?:es)?|c\\.?\\s?de\\s?sopa|c\\.?\\s?de\\s?ch[áa]|dente[s]?|pitada[s]?|ramo[s]?|raminho[s]?|fatia[s]?|folha[s]?|x[íi]cara[s]?|lata[s]?|saquinho[s]?|pote[s]?|copo[s]?|punhado[s]?|ma[çc]o[s]?|talo[s]?|cabe[çc]a[s]?|fio[s]?|gota[s]?',
+  tr: 'yemek\\s?ka[şs][ıi][ğg][ıi]|tatl[ıi]\\s?ka[şs][ıi][ğg][ıi]|[çc]ay\\s?ka[şs][ıi][ğg][ıi]|su\\s?barda[ğg][ıi]|bardak|di[şs]|tutam|demet|dilim|yaprak|paket|kutu|kase|avu[çc]|ba[şs]|salk[ıi]m|damla|fincan|tutam',
+  ru: 'г|гр|кг|мл|л|ст\\.?\\s?л\\.?|ч\\.?\\s?л\\.?|столов\\w*\\s?ложк\\w*|чайн\\w*\\s?ложк\\w*|зубчик\\w*|пучок|пучк\\w+|щепотк\\w*|стакан\\w*|банк\\w*|пакет\\w*|веточк\\w*|долек|долька|долькам?и?|горст\\w*|ломтик\\w*|голов(?:ка|ки|ок)|кочан\\w*|капл\\w+|пласт\\w*|стеб\\w+|лист(?:ик|а|ьев)?|штук\\w*|шт',
+  ar: 'غ|جم|كغ|كجم|مل|ل|ملعقة\\s?كبيرة|ملعقة\\s?صغيرة|ملاعق|ملعقة|فص|فصوص|رشة|رشات|حزمة|حزم|شريحة|شرائح|ورقة|أوراق|كوب|أكواب|علبة|علب|حفنة|عود|أعواد|رأس|رؤوس|قطرة|قطرات|كأس|حبة|حبات',
+  hi: 'ग्राम|किलो(?:ग्राम)?|किग्रा|मिली(?:लीटर)?|लीटर|सेमी|सेंटीमीटर|मिमी|बड़[ेाी]?\\s?चम्मच|छोट[ेाी]?\\s?चम्मच|चम्मच|कली|कलियाँ|कलियां|चुटकी|गुच्छा|गुच्छे|टुकड़े?|पत्ते?|पत्ता|कप|डिब्बा|डिब्बे|मुट्ठी|सिर|बूँदें?|बूंदे?|डंठल',
+};
+const L10N_CONN = {
+  fr: "d['’]|de|des|du", es: 'de|del', it: "d['’]|di|del|della|dello|dei|degli|delle|dell['’]",
+  pt: 'de|do|da|dos|das', ar: 'من', de: 'von', hi: 'का|के|की',
+};
+const L10N_OR = {
+  de: 'oder', fr: 'ou', es: 'o|u', it: 'o|oppure', pt: 'ou', tr: 'veya|ya\\s?da',
+  ru: 'или', ar: 'أو', hi: 'या',
+};
+/* CJK (ja/zh/ko): the quantity trails the noun with no separating space
+   ("卵2個", "鱼露2大勺", "オイスターソース大さじ1"). Strip parentheticals + a
+   trailing comma clause, then peel trailing number/unit runs (either order)
+   until stable. */
+function _stripCjkQty(s) {
+  s = String(s)
+    .replace(/[（(][^）)]*[）)]?/g, '')                 // parentheticals
+    .replace(/[、，,].*$/, '')                          // trailing clause after a CJK/ASCII comma
+    .split(/または|もしくは|あるいは|或者|或|또는|아니면/)[0]  // "or" → first alternative
+    .replace(/^.{1,12}?用[：:]/, '');                    // "…用：" purpose label prefix
+  const U = '個|个|克|千克|公斤|ｇ|kg|cm|mm|厘米|公分|センチメートル|センチ|ml|ｍｌ|リットル|大さじ|小さじ|カップ|本|枚|かけ|かけら|片|束|つまみ|缶|杯|丁|株|節|房|玉|袋|パック|少々|適量|毫升|公克|大勺|小勺|大匙|茶匙|汤匙|湯匙|瓣|粒|颗|顆|根|把|撮|罐|张|張|滴|棵|块|塊|匹|尾|羽|頭|头|봉지|큰술|작은술|컵|톨|줌|장|쪽|알|마리|그램|밀리리터|리터|숟가락|줄기|대';
+  // Arabic/fullwidth digits only — CJK numerals (五香粉, 十三香) are never
+  // quantities in this data, so leaving them protects real ingredient names.
+  const NUM = '(?:[0-9０-９]+(?:[.．/／][0-9０-９]+)?(?:\\s*[–—~〜～-]\\s*[0-9０-９]+)?|[½¼¾⅓⅔⅕⅖⅗⅘])';
+  // Peel every "number(+unit)" and "unit+number" run anywhere in the string —
+  // the qty sits before OR after the noun depending on the recipe.
+  s = s.replace(new RegExp(NUM + '\\s*(?:' + U + ')?', 'g'), '')
+       .replace(new RegExp('(?:' + U + ')\\s*' + NUM, 'g'), '')
+       .replace(new RegExp('(?:' + U + ')+$'), '')
+       .replace(/[gG]$/, '')
+       .replace(/^[\s・·、。,和と＋+]+|[\s・·、。,和と＋+]+$/g, '');
+  return s.trim();
+}
+/* Non-RO Latin/Cyrillic/Arabic/Devanagari pre-strip: protect decimal commas,
+   drop parentheticals, and cut at the first "or"-style alternative. */
+function _preStripLocalized(s, lang) {
+  s = s.replace(/(\d),(\d)/g, '$1.$2')                 // protect decimal commas
+       .replace(/[،؛]/g, ',').replace(/।/g, ',')       // Arabic / Hindi punctuation → ASCII comma
+       .replace(/\s*\([^)]*\)/g, '').replace(/\s*\([^)]*$/, '');
+  const or = L10N_OR[lang];
+  if (or) s = s.split(new RegExp('\\s+(?:' + or + ')\\s+', 'i'))[0];
+  return s;
+}
+/* Peel leading fraction / number / local measure word / connector particle
+   left behind after parseIngredient's English-only extraction. */
+function _postStripLocalized(n, lang) {
+  const unit = L10N_UNITS[lang];
+  const conn = L10N_CONN[lang];
+  let prev;
+  do {
+    prev = n;
+    // Leading fraction / number / local unit / connector particle
+    n = n.replace(/^[½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]\s*/, '')
+         .replace(/^\d+([.,]\d+)?\s*/, '');
+    // "cm/mm" residue in any script left after the number is stripped
+    // ("2 cm Ingwer" → "cm ingwer", "3سم" → "سم"): drop it leading or trailing.
+    n = n.replace(/^(?:cm|mm|см|мм|سم|مم|सेमी|मिमी)\.?(?=\s|$)\s*/i, '')
+         .replace(/\s*\d*\s*(?:cm|mm|см|мм|سم|مم|सेमी|मिमी)\.?$/i, '');
+    // Romance elisions attach directly to the noun with no space (d'ail,
+    // l'huile, dell'olio) so the connector rule below (which needs a space)
+    // misses them.
+    n = n.replace(/^(?:d|l|dell|nell|dall|all|un)['’]\s*/i, '');
+    if (unit) n = n.replace(new RegExp('^(?:' + unit + ')\\.?(?=\\s|$)\\s*', 'i'), '');
+    if (conn) n = n.replace(new RegExp('^(?:' + conn + ')(?=\\s)\\s*', 'i'), '');
+    // Trailing "number (+ unit)" — some locales place the qty after the noun
+    // ("आलू 100 ग्राम", "بصل 3سم"), plus dimension tails ("× 5 سم").
+    if (unit) n = n.replace(new RegExp('\\s*\\d+([.,]\\d+)?\\s*(?:' + unit + ')\\.?$', 'i'), '');
+    n = n.replace(/\s*[×xX*]\s*\d+([.,]\d+)?\s*$/, '')                  // trailing dimension tail
+         .replace(/\s+\d+([.,]\d+)?(\s*[–—~-]\s*\d+)?\s*$/, '');        // trailing bare count ("बैंगन 4")
+  } while (n !== prev);
+  return n.trim();
+}
+
 /* Derive a clean, title-cased display label from a recipe's localized
    ingredient string. Reuses parseIngredient's language-neutral stripping
    (parentheses, comma clauses, leading qty/unit, " — " editorial notes) to
@@ -2194,6 +2284,13 @@ function _localizedLabelFrom(raw, langCode) {
     .replace(/[（｟［【〔]/g, '(')
     .replace(/[）｠］】〕]/g, ')')
     .replace(/[，、]/g, ',');
+  // CJK: the quantity trails the noun with no separating space, so the
+  // English parser can't find the boundary — peel it here and return the
+  // localized noun directly.
+  if (langCode === 'ja' || langCode === 'zh' || langCode === 'ko') {
+    const c = _stripCjkQty(norm);
+    return c ? c.charAt(0).toUpperCase() + c.slice(1) : null;
+  }
   // Minimal RO clause stripper. parseIngredient's clause/prep stripping is
   // English-only; these mirror its EN rules for the Romanian markers observed
   // in production labels. Gated to RO so no other locale's text is touched —
@@ -2226,6 +2323,8 @@ function _localizedLabelFrom(raw, langCode) {
     // "chefir simplu, bine răcit" (NOT end-anchored — a ", clause" may follow;
     // parseIngredient's comma split then trims the rest).
     norm = norm.replace(/\s+\d+(?:\.\d+)?\s*%(\s+gr[ăa]sime)?/gi, '');
+  } else {
+    norm = _preStripLocalized(norm, langCode);
   }
   const p = parseIngredient(norm);
   if (!p || !p.name) return null;
@@ -2237,6 +2336,8 @@ function _localizedLabelFrom(raw, langCode) {
   if (langCode === 'ro') {
     n = n.replace(/^[½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]\s*/, '')
          .replace(/^(linguri[țt][ăae]?|lingur[ăai]|c[ăa]n[ăai]|ce[șs]ti|cea[șs]c[ăa]|c[ăa][țt]e[il]|felii?|felie|buc[ăa][țt][iă]|bucat[ăa]|crengu[țt][ăae]|fire?|leg[ăa]tur[ăai]|plicuri?|plic|borcane?|conserve?|cutii?|cutie|pachete?|litri|litru|grame?|gram|kilograme?|kilogram|mililitri|mililitru)\s+((?:mic[ăi]?|mici|mare|mari|mijlocie|mijlocii|mijlociu|gros|groase|sub[țt]iri|sub[țt]ire)\s+)?(de\s+)?/i, '').trim();
+  } else {
+    n = _postStripLocalized(n, langCode);
   }
   if (!n) return null;
   // Capitalize first letter only; preserve internal accents / scripts
@@ -2293,13 +2394,15 @@ export function buildShoppingListV2(plan, langCode, allRecipes, budgetRecipes) {
   //    plain-EN path for that whole recipe — labels then resolve via
   //    ITEM_LABELS exactly as before.
   //
-  //    RO-ONLY for now: _localizedLabelFrom's clause/measure-word stripping
-  //    knows English + Romanian. Feeding the other locales through it leaves
-  //    orphaned unit words ("Мл говяжьего бульона", "De guanciale") and
-  //    CJK labels with embedded quantities that contradict the qty column —
-  //    verified on the regenerated pages. Each locale gets enabled here as
-  //    its stripper rules land (ticket #6, pass-4 follow-up).
-  const HYBRID_B_LOCALES = new Set(['ro']);
+  //    ALL LOCALES: _localizedLabelFrom now carries per-language quantity
+  //    grammar — RO keeps its dedicated block; the Latin/Cyrillic/Arabic/
+  //    Devanagari locales run through _pre/_postStripLocalized (measure words,
+  //    connectors, cm tails); CJK runs through _stripCjkQty (qty peels off the
+  //    noun with no space). Anything the strippers can't reduce still falls
+  //    back to ITEM_LABELS → English title-case. Verified with _i18n_harness:
+  //    every locale now leaks only true loanwords (Mozzarella, Sake, Tahini…),
+  //    the same floor as RO.
+  const HYBRID_B_LOCALES = new Set(['ro','en','de','fr','es','it','pt','ru','ja','zh','ar','hi','tr','ko']);
   const allIngr = [];
   for (const r of recipesUsed) {
     const en = r.ingredients?.en || r.ingredients?.ro || [];
