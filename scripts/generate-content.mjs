@@ -2030,15 +2030,20 @@ function planPage(plan, lc) {
   // if the engine produces nothing (e.g. for budget plans with sparse data).
   let shoppingGroups = [];
   try { shoppingGroups = buildShoppingListV2(plan, lc_code, recipes, budgetRecipes); } catch (e) { shoppingGroups = []; }
+  // Category emoji — mirrors SHOPPING_CATEGORY_EMOJI in app.js so the static
+  // plan-page list renders with the same markup/classes as the live homepage
+  // list and inherits the shared global CSS (checkbox rows, 2-col group grid,
+  // cost bar). Keep in sync if either side changes.
+  const SHOP_CAT_EMOJI = { vegetables:'🥬', meat:'🥩', dairy:'🥛', dry:'🌾', sauces:'🫙', bakery:'🍞', misc:'🧺', pantry:'🧂' };
+  const shopItemLi = (name, qty) =>
+    `<li class="shopping-item"><label class="shopping-label"><input type="checkbox" class="shopping-check"><span class="shopping-name">${esc(capFirst(name))}</span>${qty ? `<span class="shopping-qty">${esc(qty)}</span>` : ''}</label></li>`;
   const shoppingItems = shoppingGroups.length > 0
-    ? shoppingGroups.map(g => `
-      <section class="shopping-group" data-group="${g.id}">
-        <h3 class="shopping-group-h">${esc(g.label)}</h3>
-        <ul class="shopping-group-list">
-          ${g.items.map(it => `<li><span class="shop-name">${esc(it.name)}</span>${it.qty ? `<span class="shop-qty">${esc(it.qty)}</span>` : ''}</li>`).join('')}
-        </ul>
-      </section>`).join('')
-    : shopping.map(i => `<li><i class="bi bi-check2-square"></i> ${esc(capFirst(i))}</li>`).join('\n');
+    ? shoppingGroups.map(g => {
+        const emoji = SHOP_CAT_EMOJI[g.id] || '🛒';
+        const items = (g.items || []).map(it => shopItemLi(it.name, it.qty)).join('');
+        return `<li class="shopping-group"><div class="shopping-group-title"><span class="sg-emoji" aria-hidden="true">${emoji}</span><span>${esc(g.label)}</span></div><ul class="shopping-group-items list-unstyled">${items}</ul></li>`;
+      }).join('')
+    : shopping.map(i => shopItemLi(i, '')).join('');
   const shoppingIsGrouped = shoppingGroups.length > 0;
   const otherPlans = PLANS.filter(p => p.id !== plan.id).slice(0, 4).map(p =>
     `<a href="${lc.dir}/${lc.planIdFn(p)}/" class="content-card-mini">
@@ -2121,9 +2126,12 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
         </summary>
         <div class="shopping-collapsible__body">
           <p class="section-intro">${lc.shoppingIntro(plan, shopping.length)}</p>
-          ${shoppingIsGrouped
-            ? `<div class="shopping-groups">${shoppingItems}</div>`
-            : `<ul class="shopping-grid">${shoppingItems}</ul>`}
+          <div class="shopping-cost-summary">
+            <span class="cost-icon">💰</span>
+            <span><strong>~${costDisplay} ${lc.costUnit}</strong></span>
+            <span class="cost-sub">${lc.ingredientsLabel(shopping.length)}</span>
+          </div>
+          <ul class="shopping-list list-unstyled">${shoppingItems}</ul>
         </div>
       </details>
       <div class="shopping-cta">
