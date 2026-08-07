@@ -111,7 +111,7 @@ function mk(s) {
   });
   return {
     id: s.id, name: s.name, origin: RO_ORIGIN, category: CAT,
-    servings: s.servings, time: { prepMin: s.prep, cookMin: s.cook },
+    servings: s.servings, time: s.prep + s.cook,
     costRon: s.costRon, nutrition: s.nut, tags: s.tags,
     ingredients, howIsMade: s.steps,
   };

@@ -7,7 +7,7 @@
  * legacy file is EXPECTED to fail; do NOT weaken the rules to make it pass.
  *
  * Target schema (post-rebuild, "fix the mapping" — metadata is self-contained):
- *   { id, name{14}, origin{14}, category{14}, servings, time{prepMin,cookMin},
+ *   { id, name{14}, origin{14}, category{14}, servings, time (total minutes),
  *     costRon, nutrition{cal,prot,carb,fat,fib}, tags[], ingredients{14:[str]},
  *     howIsMade{14:str} }
  *
@@ -62,9 +62,10 @@ for (const r of RECIPES) {
 
   // ── numeric metadata (self-contained per the mapping fix) ──
   if (!inRange(r?.servings, R.servings)) add(id, 'invalid-servings', `servings=${r?.servings} (want ${R.servings.join('–')})`);
-  const total = (r?.time?.prepMin || 0) + (r?.time?.cookMin || 0);
-  if (!r?.time || !isNum(r.time.prepMin) || !isNum(r.time.cookMin) || !inRange(total, R.timeTotal))
-    add(id, 'invalid-time', `time=${JSON.stringify(r?.time)} total=${total}`);
+  // Canonical time is a NUMBER of total minutes (prep+cook), matching main
+  // recipes (recipesMeta[id].time). mk() emits s.prep + s.cook.
+  if (!isNum(r?.time) || !inRange(r.time, R.timeTotal))
+    add(id, 'invalid-time', `time=${JSON.stringify(r?.time)} (expected finite total minutes in ${R.timeTotal[0]}–${R.timeTotal[1]})`);
   if (!inRange(r?.costRon, R.costRon)) add(id, 'invalid-cost', `costRon=${r?.costRon} (want ${R.costRon.join('–')})`);
   const n = r?.nutrition;
   if (!n || !inRange(n.cal, R.cal) || !inRange(n.prot, R.prot) || !inRange(n.carb, R.carb) || !inRange(n.fat, R.fat) || !inRange(n.fib, R.fib))
