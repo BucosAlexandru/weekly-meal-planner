@@ -2166,7 +2166,16 @@ button#manage-subscription:hover {
   .app-main          { padding: 20px 14px 44px; }
 
   .export-section    { flex-direction: column; padding: 20px; }
+  /* In the column layout the desktop `flex: 1 1 340px` basis becomes a 340px
+     HEIGHT, leaving a large empty gap before the buttons — reset to content.
+     Extra specificity so it beats premium-polish.css's later .export-main rule. */
+  .export-section .export-main { flex: 0 0 auto; }
   .export-right      { width: 100%; justify-content: flex-start; }
+  /* Buttons: full width and allow the "(free preview…)" sub-label to wrap so it
+     never runs past the card edge (the card is overflow:hidden and would clip). */
+  #generate-btn,
+  #pay-btn,
+  .export-right .btn { width: 100%; white-space: normal; justify-content: center; }
 
   /* Mobile card layout — each row becomes a self-contained card */
   .table-wrap        { overflow-x: visible; }
