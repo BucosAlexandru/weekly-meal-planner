@@ -3312,9 +3312,9 @@ function renderPremiumHero() {
     },
     en: {
       badge: 'Free · No signup · 14 languages',
-      line1: 'Eat well,',
-      line2: 'every single',
-      line3: 'week.',
+      line1: 'Plan',
+      line2: 'smart.',
+      line3: 'Eat better.',
       sub: 'Full plan in seconds.\nAuto shopping list. Free PDF download.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Recipes',
       stat2n:'14',   stat2l:'Languages',
@@ -3335,9 +3335,9 @@ function renderPremiumHero() {
     },
     es: {
       badge: 'Gratis · Sin registro · 14 idiomas',
-      line1: 'Come bien,',
-      line2: 'cada',
-      line3: 'semana.',
+      line1: 'Planifica',
+      line2: 'con cabeza.',
+      line3: 'Come mejor.',
       sub: 'Plan completo en segundos.\nLista de compras automática. PDF gratis.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Recetas',
       stat2n:'14',   stat2l:'Idiomas',
@@ -3358,9 +3358,9 @@ function renderPremiumHero() {
     },
     fr: {
       badge: 'Gratuit · Sans inscription · 14 langues',
-      line1: 'Mangez bien,',
-      line2: 'chaque',
-      line3: 'semaine.',
+      line1: 'Planifiez',
+      line2: 'malin.',
+      line3: 'Mangez mieux.',
       sub: 'Plan complet en quelques secondes.\nListe de courses automatique. PDF gratuit.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Recettes',
       stat2n:'14',   stat2l:'Langues',
@@ -3381,9 +3381,9 @@ function renderPremiumHero() {
     },
     de: {
       badge: 'Kostenlos · Keine Anmeldung · 14 Sprachen',
-      line1: 'Gut essen,',
-      line2: 'jede',
-      line3: 'Woche.',
+      line1: 'Klug',
+      line2: 'planen.',
+      line3: 'Besser essen.',
       sub: 'Vollständiger Plan in Sekunden.\nEinkaufsliste automatisch. PDF kostenlos.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Rezepte',
       stat2n:'14',   stat2l:'Sprachen',
@@ -3404,9 +3404,9 @@ function renderPremiumHero() {
     },
     pt: {
       badge: 'Gratuito · Sem cadastro · 14 idiomas',
-      line1: 'Coma bem,',
-      line2: 'todas as',
-      line3: 'semanas.',
+      line1: 'Planeie',
+      line2: 'com cabeça.',
+      line3: 'Coma melhor.',
       sub: 'Plano completo em segundos.\nLista de compras automática. PDF gratuito.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Receitas',
       stat2n:'14',   stat2l:'Idiomas',
@@ -3427,9 +3427,9 @@ function renderPremiumHero() {
     },
     ru: {
       badge: 'Бесплатно · Без регистрации · 14 языков',
-      line1: 'Питайтесь',
-      line2: 'хорошо',
-      line3: 'каждую неделю.',
+      line1: 'Планируй',
+      line2: 'с умом.',
+      line3: 'Ешь лучше.',
       sub: 'Полный план за секунды.\nСписок покупок автоматически. PDF бесплатно.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Рецептов',
       stat2n:'14',   stat2l:'Языков',
@@ -3450,9 +3450,9 @@ function renderPremiumHero() {
     },
     it: {
       badge: 'Gratuito · Senza registrazione · 14 lingue',
-      line1: 'Mangia bene,',
-      line2: 'ogni',
-      line3: 'settimana.',
+      line1: 'Pianifica',
+      line2: 'con testa.',
+      line3: 'Mangia meglio.',
       sub: 'Piano completo in pochi secondi.\nLista della spesa automatica. PDF gratuito.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Ricette',
       stat2n:'14',   stat2l:'Lingue',
@@ -3473,9 +3473,9 @@ function renderPremiumHero() {
     },
     tr: {
       badge: 'Ücretsiz · Kayıt yok · 14 dil',
-      line1: 'Her hafta',
-      line2: 'iyi',
-      line3: 'yiyin.',
+      line1: 'Akıllı',
+      line2: 'planla.',
+      line3: 'Daha iyi ye.',
       sub: 'Saniyeler içinde tam plan.\nOtomatik alışveriş listesi. Ücretsiz PDF.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'Tarif',
       stat2n:'14',   stat2l:'Dil',
@@ -3496,9 +3496,9 @@ function renderPremiumHero() {
     },
     ar: {
       badge: 'مجاني · بدون تسجيل · 14 لغة',
-      line1: 'تناول طعاماً',
-      line2: 'صحياً كل',
-      line3: 'أسبوع.',
+      line1: 'خطّط',
+      line2: 'بذكاء.',
+      line3: 'كُل أفضل.',
       sub: 'خطة كاملة في ثوانٍ.\nقائمة تسوق تلقائية. PDF مجاني.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'وصفة',
       stat2n:'14',   stat2l:'لغة',
@@ -3519,9 +3519,9 @@ function renderPremiumHero() {
     },
     zh: {
       badge: '免费 · 无需注册 · 14种语言',
-      line1: '每周',
-      line2: '吃得',
-      line3: '好。',
+      line1: '聪明',
+      line2: '规划。',
+      line3: '吃得更好。',
       sub: '几秒内生成完整计划。\n自动购物清单。免费PDF下载。',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'食谱',
       stat2n:'14',   stat2l:'语言',
@@ -3542,9 +3542,9 @@ function renderPremiumHero() {
     },
     ja: {
       badge: '無料 · 登録不要 · 14言語',
-      line1: '毎週、',
-      line2: 'おいしく',
-      line3: '食べよう。',
+      line1: '賢く',
+      line2: '計画。',
+      line3: 'おいしく食べよう。',
       sub: '数秒でフルプラン完成。\n買い物リスト自動生成。PDF無料ダウンロード。',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'レシピ',
       stat2n:'14',   stat2l:'言語',
@@ -3565,9 +3565,9 @@ function renderPremiumHero() {
     },
     ko: {
       badge: '무료 · 가입 불필요 · 14개 언어',
-      line1: '매주,',
-      line2: '잘',
-      line3: '먹으세요.',
+      line1: '똑똑하게',
+      line2: '계획하세요.',
+      line3: '더 잘 드세요.',
       sub: '몇 초 만에 전체 플랜 완성.\n자동 장보기 목록. 무료 PDF 다운로드.',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'레시피',
       stat2n:'14',   stat2l:'언어',
@@ -3588,9 +3588,9 @@ function renderPremiumHero() {
     },
     hi: {
       badge: 'मुफ़्त · बिना पंजीकरण · 14 भाषाएं',
-      line1: 'हर हफ्ते',
-      line2: 'अच्छा',
-      line3: 'खाएं।',
+      line1: 'समझदारी से',
+      line2: 'प्लान करें।',
+      line3: 'बेहतर खाएं।',
       sub: 'कुछ सेकंड में पूरी योजना।\nस्वचालित खरीदारी सूची। मुफ़्त PDF डाउनलोड।',
       stat1n:`${RECIPE_COUNT_ROUND}+`, stat1l:'व्यंजन',
       stat2n:'14',   stat2l:'भाषाएं',
@@ -3624,17 +3624,20 @@ function renderPremiumHero() {
           ${safeText(s.badge)}
         </div>
         <h1 class="hero-premium-title">${
-          // Phase 12 — wrap each word in a .hp-reveal-word span carrying
-          // a --reveal-index so CSS can stagger the fade-up. Line breaks
-          // are preserved between line1/2/3 so the editorial layout still
-          // breathes the way the typography was designed for.
+          // Phase 12 — wrap each word in a .hp-reveal-word span carrying a
+          // --reveal-index so CSS can stagger the fade-up.
+          // Responsive composition: sentence 1 (line1+line2) flows as ONE
+          // naturally-wrapping unit; sentence 2 (line3, italic) sits on its own
+          // line. Only ONE hard break, between the two sentences — so on a wide
+          // hero it renders 2 lines and wraps down gracefully as width shrinks
+          // (text-wrap: balance evens each sentence's wrap), in every locale.
           (() => {
             let idx = 0;
             const wrap = (text, italic) => safeText(text).split(/\s+/).filter(Boolean).map(w => {
               const span = `<span class="hp-reveal-word" style="--reveal-index:${idx++}">${italic ? '<em>' + w + '</em>' : w}</span>`;
               return span;
             }).join(' ');
-            return [wrap(s.line1, false), wrap(s.line2, false), wrap(s.line3, true)].join('<br>');
+            return [wrap((s.line1 + ' ' + s.line2).trim(), false), wrap(s.line3, true)].join('<br>');
           })()
         }</h1>
         <p class="hero-premium-sub">${safeText(s.sub).replace('\n','<br>')}</p>

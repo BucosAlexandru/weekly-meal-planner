@@ -824,9 +824,15 @@ html { scrollbar-color: #d4a017 rgba(255, 255, 255, 0.5); }
 .hero-premium-title {
   font-family: 'Fraunces', serif;
   font-weight: 500;
-  font-size: clamp(2.8rem, 7.5vw, 6.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.025em;
+  /* Sized so sentence 1 ("Planifică inteligent." and its translations) fits the
+     ~1fr text column on ONE line at full width — the hero then reads as 2 lines
+     and wraps down responsively as the viewport narrows (the builder joins
+     line1+line2 into one flowing unit; only sentence 2 gets a hard break).
+     text-wrap: balance evens each sentence's wrap. */
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
   margin: 1.5rem 0 1.5rem;
   color: var(--hp-cream);
   background: none;
