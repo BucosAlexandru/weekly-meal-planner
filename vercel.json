@@ -1857,6 +1857,136 @@
       "source": "/it/ricette/pepi-n/",
       "destination": "/it/ricette/pepian/",
       "permanent": true
+    },
+    {
+      "source": "/en/meniu-saptamanal",
+      "destination": "/en/weekly-meal-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/en/meniu-saptamanal/:path*",
+      "destination": "/en/weekly-meal-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/es/meniu-saptamanal",
+      "destination": "/es/plan-semanal/",
+      "permanent": true
+    },
+    {
+      "source": "/es/meniu-saptamanal/:path*",
+      "destination": "/es/plan-semanal/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/meniu-saptamanal",
+      "destination": "/fr/plan-semaine/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/meniu-saptamanal/:path*",
+      "destination": "/fr/plan-semaine/",
+      "permanent": true
+    },
+    {
+      "source": "/de/meniu-saptamanal",
+      "destination": "/de/wochenplan/",
+      "permanent": true
+    },
+    {
+      "source": "/de/meniu-saptamanal/:path*",
+      "destination": "/de/wochenplan/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/meniu-saptamanal",
+      "destination": "/pt/plano-semanal/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/meniu-saptamanal/:path*",
+      "destination": "/pt/plano-semanal/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/meniu-saptamanal",
+      "destination": "/ru/nedelnoe-menyu/",
+      "permanent": true
+    },
+    {
+      "source": "/ru/meniu-saptamanal/:path*",
+      "destination": "/ru/nedelnoe-menyu/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/meniu-saptamanal",
+      "destination": "/ar/khitat-usbuiya/",
+      "permanent": true
+    },
+    {
+      "source": "/ar/meniu-saptamanal/:path*",
+      "destination": "/ar/khitat-usbuiya/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/meniu-saptamanal",
+      "destination": "/zh/zhoujicaidan/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/meniu-saptamanal/:path*",
+      "destination": "/zh/zhoujicaidan/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/meniu-saptamanal",
+      "destination": "/ja/weekly-menu/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/meniu-saptamanal/:path*",
+      "destination": "/ja/weekly-menu/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/meniu-saptamanal",
+      "destination": "/hi/weekly-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/hi/meniu-saptamanal/:path*",
+      "destination": "/hi/weekly-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/meniu-saptamanal",
+      "destination": "/tr/haftalik-menu/",
+      "permanent": true
+    },
+    {
+      "source": "/tr/meniu-saptamanal/:path*",
+      "destination": "/tr/haftalik-menu/",
+      "permanent": true
+    },
+    {
+      "source": "/it/meniu-saptamanal",
+      "destination": "/it/piano-settimanale/",
+      "permanent": true
+    },
+    {
+      "source": "/it/meniu-saptamanal/:path*",
+      "destination": "/it/piano-settimanale/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/meniu-saptamanal",
+      "destination": "/ko/jugan-menu/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/meniu-saptamanal/:path*",
+      "destination": "/ko/jugan-menu/",
+      "permanent": true
     }
   ]
 }
