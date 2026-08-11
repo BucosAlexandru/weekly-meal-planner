@@ -40,13 +40,13 @@ function unitStr(key, qty, lang) {
 
 // 14-language ingredient names.
 const I = {
-  onion:      { ro:'Ceapă', en:'Onion', es:'Cebolla', fr:'Oignon', de:'Zwiebel', pt:'Cebola', ru:'Лук', ar:'بصل', zh:'洋葱', ja:'玉ねぎ', hi:'प्याज़', tr:'Soğan', it:'Cipolla', ko:'양파' },
+  onion:      { ro:'Ceapă', en:'Onion', es:'Cebolla', fr:'Oignon', de:'Zwiebel', pt:'Cebola', ru:'Лук', ar:'بصل', zh:'洋葱', ja:'玉ねぎ', hi:'प्याज़', tr:'Soğan', it:'Cipolla', ko:'양파', plural:{ ro:'Cepe' } },
   garlic:     { ro:'Usturoi', en:'Garlic', es:'Ajo', fr:'Ail', de:'Knoblauch', pt:'Alho', ru:'Чеснок', ar:'ثوم', zh:'大蒜', ja:'にんにく', hi:'लहसुन', tr:'Sarımsak', it:'Aglio', ko:'마늘' },
   oil:        { ro:'Ulei', en:'Oil', es:'Aceite', fr:'Huile', de:'Öl', pt:'Óleo', ru:'Масло', ar:'زيت', zh:'食用油', ja:'油', hi:'तेल', tr:'Yağ', it:'Olio', ko:'식용유' },
   salt:       { ro:'Sare', en:'Salt', es:'Sal', fr:'Sel', de:'Salz', pt:'Sal', ru:'Соль', ar:'ملح', zh:'盐', ja:'塩', hi:'नमक', tr:'Tuz', it:'Sale', ko:'소금' },
   water:      { ro:'Apă', en:'Water', es:'Agua', fr:'Eau', de:'Wasser', pt:'Água', ru:'Вода', ar:'ماء', zh:'水', ja:'水', hi:'पानी', tr:'Su', it:'Acqua', ko:'물' },
   potatoes:   { ro:'Cartofi', en:'Potatoes', es:'Patatas', fr:'Pommes de terre', de:'Kartoffeln', pt:'Batatas', ru:'Картофель', ar:'بطاطس', zh:'土豆', ja:'じゃがいも', hi:'आलू', tr:'Patates', it:'Patate', ko:'감자' },
-  carrot:     { ro:'Morcov', en:'Carrot', es:'Zanahoria', fr:'Carotte', de:'Karotte', pt:'Cenoura', ru:'Морковь', ar:'جزر', zh:'胡萝卜', ja:'にんじん', hi:'गाजर', tr:'Havuç', it:'Carota', ko:'당근' },
+  carrot:     { ro:'Morcov', en:'Carrot', es:'Zanahoria', fr:'Carotte', de:'Karotte', pt:'Cenoura', ru:'Морковь', ar:'جزر', zh:'胡萝卜', ja:'にんじん', hi:'गाजर', tr:'Havuç', it:'Carota', ko:'당근', plural:{ ro:'Morcovi' } },
   passata:    { ro:'Roșii pasate', en:'Tomato passata', es:'Tomate triturado', fr:'Tomates passées', de:'Passierte Tomaten', pt:'Tomate passata', ru:'Томаты протёртые', ar:'طماطم مهروسة', zh:'番茄泥', ja:'トマトピューレ', hi:'टमाटर प्यूरी', tr:'Domates püresi', it:'Passata di pomodoro', ko:'토마토 퓌레' },
   beans:      { ro:'Fasole la conservă', en:'Canned beans', es:'Frijoles en lata', fr:'Haricots en boîte', de:'Bohnen (Dose)', pt:'Feijão enlatado', ru:'Фасоль (консервы)', ar:'فاصوليا معلبة', zh:'罐装豆类', ja:'豆の缶詰', hi:'डिब्बाबंद बीन्स', tr:'Konserve fasulye', it:'Fagioli in scatola', ko:'통조림 콩' },
   whiteBeans: { ro:'Fasole albă uscată', en:'Dried white beans', es:'Alubias blancas secas', fr:'Haricots blancs secs', de:'Getrocknete weiße Bohnen', pt:'Feijão branco seco', ru:'Белая фасоль (сухая)', ar:'فاصوليا بيضاء جافة', zh:'干白豆', ja:'乾燥白いんげん豆', hi:'सूखी सफेद बीन्स', tr:'Kuru beyaz fasulye', it:'Fagioli bianchi secchi', ko:'말린 흰콩' },
@@ -56,7 +56,7 @@ const I = {
   lemon:      { ro:'Lămâie', en:'Lemon', es:'Limón', fr:'Citron', de:'Zitrone', pt:'Limão', ru:'Лимон', ar:'ليمون', zh:'柠檬', ja:'レモン', hi:'नींबू', tr:'Limon', it:'Limone', ko:'레몬' },
   parsley:    { ro:'Pătrunjel verde', en:'Parsley', es:'Perejil', fr:'Persil', de:'Petersilie', pt:'Salsa', ru:'Петрушка', ar:'بقدونس', zh:'欧芹', ja:'パセリ', hi:'हरा धनिया', tr:'Maydanoz', it:'Prezzemolo', ko:'파슬리' },
   eggplant:   { ro:'Vinete', en:'Eggplant', es:'Berenjena', fr:'Aubergine', de:'Aubergine', pt:'Beringela', ru:'Баклажан', ar:'باذنجان', zh:'茄子', ja:'なす', hi:'बैंगन', tr:'Patlıcan', it:'Melanzana', ko:'가지' },
-  bellPepper: { ro:'Ardei gras', en:'Bell pepper', es:'Pimiento', fr:'Poivron', de:'Paprika (Gemüse)', pt:'Pimentão', ru:'Болгарский перец', ar:'فلفل حلو', zh:'甜椒', ja:'パプリカ', hi:'शिमला मिर्च', tr:'Dolmalık biber', it:'Peperone', ko:'파프리카' },
+  bellPepper: { ro:'Ardei gras', en:'Bell pepper', es:'Pimiento', fr:'Poivron', de:'Paprika (Gemüse)', pt:'Pimentão', ru:'Болгарский перец', ar:'فلفل حلو', zh:'甜椒', ja:'パプリカ', hi:'शिमला मिर्च', tr:'Dolmalık biber', it:'Peperone', ko:'파프리카', plural:{ ro:'Ardei grași' } },
   zucchini:   { ro:'Dovlecel', en:'Zucchini', es:'Calabacín', fr:'Courgette', de:'Zucchini', pt:'Courgette', ru:'Кабачок', ar:'كوسة', zh:'西葫芦', ja:'ズッキーニ', hi:'तोरी', tr:'Kabak', it:'Zucchina', ko:'애호박' },
   rice:       { ro:'Orez', en:'Rice', es:'Arroz', fr:'Riz', de:'Reis', pt:'Arroz', ru:'Рис', ar:'أرز', zh:'米饭', ja:'米', hi:'चावल', tr:'Pirinç', it:'Riso', ko:'쌀' },
   cornmeal:   { ro:'Mălai', en:'Cornmeal', es:'Harina de maíz', fr:'Semoule de maïs', de:'Maisgrieß', pt:'Fubá', ru:'Кукурузная крупа', ar:'دقيق الذرة', zh:'玉米粉', ja:'コーンミール', hi:'मक्के का आटा', tr:'Mısır unu', it:'Farina di mais', ko:'옥수수가루' },
@@ -64,7 +64,7 @@ const I = {
   sourCream:  { ro:'Smântână', en:'Sour cream', es:'Crema agria', fr:'Crème aigre', de:'Schmand', pt:'Natas azedas', ru:'Сметана', ar:'قشدة حامضة', zh:'酸奶油', ja:'サワークリーム', hi:'खट्टी क्रीम', tr:'Ekşi krema', it:'Panna acida', ko:'사워크림' },
   cabbage:    { ro:'Varză', en:'Cabbage', es:'Repollo', fr:'Chou', de:'Kohl', pt:'Repolho', ru:'Капуста', ar:'ملفوف', zh:'卷心菜', ja:'キャベツ', hi:'पत्ता गोभी', tr:'Lahana', it:'Cavolo', ko:'양배추' },
   lentils:    { ro:'Linte', en:'Lentils', es:'Lentejas', fr:'Lentilles', de:'Linsen', pt:'Lentilhas', ru:'Чечевица', ar:'عدس', zh:'扁豆', ja:'レンズ豆', hi:'मसूर दाल', tr:'Mercimek', it:'Lenticchie', ko:'렌틸콩' },
-  eggs:       { ro:'Ouă', en:'Eggs', es:'Huevos', fr:'Œufs', de:'Eier', pt:'Ovos', ru:'Яйца', ar:'بيض', zh:'鸡蛋', ja:'卵', hi:'अंडे', tr:'Yumurta', it:'Uova', ko:'달걀' },
+  eggs:       { ro:'Ou', en:'Eggs', es:'Huevos', fr:'Œufs', de:'Eier', pt:'Ovos', ru:'Яйца', ar:'بيض', zh:'鸡蛋', ja:'卵', hi:'अंडे', tr:'Yumurta', it:'Uova', ko:'달걀', plural:{ ro:'Ouă' } },
   tomatoes:   { ro:'Roșii', en:'Tomatoes', es:'Tomates', fr:'Tomates', de:'Tomaten', pt:'Tomates', ru:'Помидоры', ar:'طماطم', zh:'番茄', ja:'トマト', hi:'टमाटर', tr:'Domates', it:'Pomodori', ko:'토마토' },
   pasta:      { ro:'Macaroane', en:'Macaroni', es:'Macarrones', fr:'Macaronis', de:'Makkaroni', pt:'Macarrão', ru:'Макароны', ar:'معكرونة', zh:'通心粉', ja:'マカロニ', hi:'मैकरोनी', tr:'Makarna', it:'Maccheroni', ko:'마카로니' },
   butter:     { ro:'Unt', en:'Butter', es:'Mantequilla', fr:'Beurre', de:'Butter', pt:'Manteiga', ru:'Сливочное масло', ar:'زبدة', zh:'黄油', ja:'バター', hi:'मक्खन', tr:'Tereyağı', it:'Burro', ko:'버터' },
@@ -106,7 +106,13 @@ function mk(s) {
     ingredients[l] = s.ing.map(it => {
       const qty = it.q != null ? String(it.q) : '';
       const unit = it.u ? unitStr(it.u, it.q, l) : '';
-      return [qty, unit, it.n[l] || it.n.en].filter(Boolean).join(' ');
+      // Piece-counted nouns (a count with no mass/volume unit) take the plural
+      // when qty>1: "2 Ceapă" → "2 Cepe". Only locales with a plural override
+      // switch; every other locale — and English, whose text drives the
+      // shopping-list parser — keeps the singular base.
+      const plural = it.q > 1 && !it.u && it.n.plural && it.n.plural[l];
+      const name = plural || it.n[l] || it.n.en;
+      return [qty, unit, name].filter(Boolean).join(' ');
     });
   });
   return {

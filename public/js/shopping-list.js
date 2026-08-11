@@ -2141,12 +2141,22 @@ function formatVolume(ml) {
   return `${Math.round(ml / 25) * 25} ml`;
 }
 
-function combineItems(items) {
+// Fresh leafy herbs are bought by the bunch, never measured by volume on a
+// shopping list. A recipe's "2 tbsp chopped parsley" is a valid cooking
+// measure, but must NOT surface in the aggregated list as "50 ml parsley" —
+// suppress the volume for these canonicals entirely so only the name (or a
+// mass, if the recipe gave one) shows. Dried oregano/thyme/etc. route to the
+// PANTRY category, which never calls combineItems, so matching them here only
+// affects their FRESH (vegetables-category) uses.
+const FRESH_HERB = /^(fresh\s+)?(flat[- ]?leaf\s+|italian\s+|curly\s+|thai\s+)?(parsley|coriander|cilantro|basil|mint|dill|chives?|tarragon|chervil|marjoram|lovage|oregano|thyme|rosemary|sage|herbs?)$/i;
+
+function combineItems(items, canonical) {
   // items: [{ qty, unit, name, raw }, ...] — already filtered by same canonical
   let totalGrams = 0, totalMl = 0;
   let countPieces = 0;
   let sizeCount = { large: 0, medium: 0, small: 0 };
   let hasUntyped = false;
+  const isHerb = !!(canonical && FRESH_HERB.test(canonical));
 
   for (const it of items) {
     if (!it.qty || !it.unit) { hasUntyped = true; continue; }
@@ -2157,13 +2167,18 @@ function combineItems(items) {
     else countPieces += it.qty;
   }
 
+  // Show a volume only when it's meaningful: never for a fresh herb, and not as
+  // a tbsp-scale residue (< 50 ml) tacked onto a bulk mass — that turned
+  // "1.3 kg tomato passata" into the confusing "1.3 kg · 25 ml".
+  const showMl = totalMl > 0 && !isHerb && !(totalGrams > 0 && totalMl < 50);
+
   const parts = [];
   if (totalGrams > 0) parts.push(formatQty(totalGrams));
-  if (totalMl > 0)    parts.push(formatVolume(totalMl));
+  if (showMl)         parts.push(formatVolume(totalMl));
   // If we already have a mass or volume, residual size-pieces ("1 large") are
   // usually redundant (the recipe gave both forms) — suppress them. Only show
   // size pieces when mass/volume is absent.
-  if (countPieces > 0 && totalGrams === 0 && totalMl === 0) {
+  if (countPieces > 0 && totalGrams === 0 && !showMl) {
     if (sizeCount.large > 0 || sizeCount.medium > 0 || sizeCount.small > 0) {
       const sizes = ['large', 'medium', 'small']
         .filter(s => sizeCount[s] > 0)
@@ -2488,7 +2503,7 @@ function _groupAndRender(allIngr, langCode) {
       // shopping list scales with content (no per-ingredient dictionary
       // upkeep). ITEM_LABELS / title-case only cover the no-alignment path.
       const label = localized || labelMap[canonical] || titleCase;
-      categoryItems[cat].push({ name: label, qty: combineItems(items) });
+      categoryItems[cat].push({ name: label, qty: combineItems(items, canonical) });
     }
   }
 
