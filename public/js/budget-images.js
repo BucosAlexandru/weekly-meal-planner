@@ -23,5 +23,10 @@ export const budgetImages = {
   budget_018: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Roasted_Potato_Wedges_with_Shallots_and_Rosemary_%285706897999%29.jpg/500px-Roasted_Potato_Wedges_with_Shallots_and_Rosemary_%285706897999%29.jpg', // Cartofi la cuptor cu rozmarin (roasted potatoes)
   budget_019: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Perkedel_kentang.JPG/500px-Perkedel_kentang.JPG', // Chiftele de cartofi (potato patties)
   budget_020: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rice_pudding_bowl.jpg/500px-Rice_pudding_bowl.jpg', // Orez cu lapte (rice pudding)
+  budget_021: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Carrot_and_Peas_Bhaji.jpg/500px-Carrot_and_Peas_Bhaji.jpg', // Mâncare de mazăre (green peas & carrot in tomato sauce)
+  budget_022: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sauteed_spinach_and_tomatoes_%2841368303650%29.jpg/500px-Sauteed_spinach_and_tomatoes_%2841368303650%29.jpg', // Mâncare de spanac cu usturoi (sautéed spinach)
+  budget_023: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Smoked_and_sauteed_squash_and_zucchini_with_tomatoes.jpg/500px-Smoked_and_sauteed_squash_and_zucchini_with_tomatoes.jpg', // Dovlecei cu usturoi și mărar (sautéed zucchini with tomato)
+  budget_024: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mushroom_cutlet.jpg/500px-Mushroom_cutlet.jpg', // Chiftele de ciuperci (breaded mushroom patties)
+  budget_025: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cooked_oatmeal_in_bowl_3.jpg/500px-Cooked_oatmeal_in_bowl_3.jpg', // Terci de ovăz (oat porridge)
 };
 export default budgetImages;
