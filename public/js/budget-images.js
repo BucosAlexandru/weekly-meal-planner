@@ -26,7 +26,7 @@ export const budgetImages = {
   budget_021: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Carrot_and_Peas_Bhaji.jpg/500px-Carrot_and_Peas_Bhaji.jpg', // Mâncare de mazăre (green peas & carrot in tomato sauce)
   budget_022: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sauteed_spinach_and_tomatoes_%2841368303650%29.jpg/500px-Sauteed_spinach_and_tomatoes_%2841368303650%29.jpg', // Mâncare de spanac cu usturoi (sautéed spinach)
   budget_023: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Smoked_and_sauteed_squash_and_zucchini_with_tomatoes.jpg/500px-Smoked_and_sauteed_squash_and_zucchini_with_tomatoes.jpg', // Dovlecei cu usturoi și mărar (sautéed zucchini with tomato)
-  budget_024: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mushroom_cutlet.jpg/500px-Mushroom_cutlet.jpg', // Chiftele de ciuperci (breaded mushroom patties)
+  budget_024: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Thyme_roasted_mushrooms.jpg/500px-Thyme_roasted_mushrooms.jpg', // Chiftele de ciuperci (mushrooms with garlic & herbs)
   budget_025: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cooked_oatmeal_in_bowl_3.jpg/500px-Cooked_oatmeal_in_bowl_3.jpg', // Terci de ovăz (oat porridge)
 };
 export default budgetImages;
