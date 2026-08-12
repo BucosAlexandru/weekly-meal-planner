@@ -33,5 +33,10 @@ export const budgetImages = {
   budget_028: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bamia-Ocras_tomate_%28cropped%29.JPG/500px-Bamia-Ocras_tomate_%28cropped%29.JPG', // Mâncare de bame (okra in tomato sauce)
   budget_029: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/S%C4%B1cak_bakla_yeme%C4%9Fi.jpg/500px-S%C4%B1cak_bakla_yeme%C4%9Fi.jpg', // Mâncare de bob (fava beans in tomato)
   budget_030: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/A_potato_omelette.jpg/500px-A_potato_omelette.jpg', // Omletă țărănească (potato & herb omelette)
+  budget_031: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Pasta_al_pomodoro_2.jpg/500px-Pasta_al_pomodoro_2.jpg', // Paste cu sos de roșii și usturoi (pasta in tomato sauce)
+  budget_032: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Grilled_chicken_wings%2C_Turkish_style.jpg/500px-Grilled_chicken_wings%2C_Turkish_style.jpg', // Aripioare de pui cu usturoi (golden chicken wings)
+  budget_033: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Skinned_Roast_Pumpkin_01.jpg/500px-Skinned_Roast_Pumpkin_01.jpg', // Dovleac copt cu scorțișoară (roasted pumpkin)
+  budget_034: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Lemon_Barley_Pilaf.jpg/500px-Lemon_Barley_Pilaf.jpg', // Arpacaș cu legume (cooked pearl barley)
+  budget_035: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Pimientos_rojos%2C_asados_al_horno_%28Espa%C3%B1a%29.jpg/500px-Pimientos_rojos%2C_asados_al_horno_%28Espa%C3%B1a%29.jpg', // Ardei copți cu usturoi (roasted red peppers)
 };
 export default budgetImages;
