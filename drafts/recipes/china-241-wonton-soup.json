@@ -4,17 +4,52 @@
   "tipType": "soup",
   "pairingsType": "soup",
   "origin": {
-    "ro": "China", "en": "China", "es": "China", "fr": "Chine", "de": "China", "pt": "China",
-    "ru": "Китай", "ar": "الصين", "zh": "中国", "ja": "中国", "tr": "Çin", "it": "Cina", "ko": "중국", "hi": "चीन"
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
   },
   "name": {
-    "ro": "Supă Wonton", "en": "Wonton Soup", "es": "Sopa wonton", "fr": "Soupe wonton", "de": "Wan-Tan-Suppe",
-    "pt": "Sopa wonton", "ru": "Суп вонтон", "ar": "شوربة الونتون", "zh": "云吞汤", "ja": "ワンタンスープ",
-    "tr": "Wonton çorbası", "it": "Zuppa di wonton", "ko": "완탕 국", "hi": "वॉन्टन सूप"
+    "ro": "Supă Wonton",
+    "en": "Wonton Soup",
+    "es": "Sopa wonton",
+    "fr": "Soupe wonton",
+    "de": "Wan-Tan-Suppe",
+    "pt": "Sopa wonton",
+    "ru": "Суп вонтон",
+    "ar": "شوربة الونتون",
+    "zh": "云吞汤",
+    "ja": "ワンタンスープ",
+    "tr": "Wonton çorbası",
+    "it": "Zuppa di wonton",
+    "ko": "완탕 국",
+    "hi": "वॉन्टन सूप"
   },
   "category": {
-    "ro": "Supă", "en": "Soup", "es": "Sopa", "fr": "Soupe", "de": "Suppe", "pt": "Sopa",
-    "ru": "Суп", "ar": "شوربة", "zh": "汤", "ja": "スープ", "tr": "Çorba", "it": "Zuppa", "ko": "수프", "hi": "सूप"
+    "ro": "Supă",
+    "en": "Soup",
+    "es": "Sopa",
+    "fr": "Soupe",
+    "de": "Suppe",
+    "pt": "Sopa",
+    "ru": "Суп",
+    "ar": "شوربة",
+    "zh": "汤",
+    "ja": "スープ",
+    "tr": "Çorba",
+    "it": "Zuppa",
+    "ko": "수프",
+    "hi": "सूप"
   },
   "ingredients": {
     "en": [
@@ -263,7 +298,10 @@
   "meta": {
     "time": 40,
     "costRon": 20,
-    "tags": ["family", "light"],
+    "tags": [
+      "family",
+      "light"
+    ],
     "desc": {
       "ro": "Supă wonton — găluște delicate de porc și creveți într-o supă limpede și savuroasă cu bok choy. Gata în 40 min.",
       "en": "Wonton soup — delicate pork-and-shrimp dumplings in a clear, savoury broth with bok choy. Ready in 40 min.",
@@ -280,5 +318,315 @@
       "ko": "완탕 국 — 돼지고기와 새우로 빚은 섬세한 만두를 맑고 감칠맛 나는 국물과 청경채로. 40분 완성.",
       "hi": "वॉन्टन सूप — सूअर और झींगे की नाज़ुक पकौड़ियाँ साफ़, स्वादिष्ट शोरबे में बोक चॉय के साथ। 40 मिनट में तैयार।"
     }
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🥟",
+        "t": "Porc și creveți",
+        "d": "Găluște elastice pliate manual"
+      },
+      {
+        "icon": "🍲",
+        "t": "Supă limpede",
+        "d": "Wontonurile fierbe separat de supă"
+      },
+      {
+        "icon": "🌿",
+        "t": "Ușoară și delicată",
+        "d": "Arome blânde, reconfortante"
+      },
+      {
+        "icon": "👐",
+        "t": "Le pliezi singur",
+        "d": "Un pliu simplu, fără dexteritate"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🥟",
+        "t": "Pork & shrimp",
+        "d": "Springy hand-folded dumplings"
+      },
+      {
+        "icon": "🍲",
+        "t": "Crystal-clear broth",
+        "d": "Wontons boiled apart from the soup"
+      },
+      {
+        "icon": "🌿",
+        "t": "Light and delicate",
+        "d": "Gentle, comforting flavours"
+      },
+      {
+        "icon": "👐",
+        "t": "Fold your own",
+        "d": "A simple pleat, no special skill"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🥟",
+        "t": "Cerdo y camarón",
+        "d": "Empanadillas elásticas dobladas a mano"
+      },
+      {
+        "icon": "🍲",
+        "t": "Caldo cristalino",
+        "d": "Los wonton se hierven aparte del caldo"
+      },
+      {
+        "icon": "🌿",
+        "t": "Ligera y delicada",
+        "d": "Sabores suaves y reconfortantes"
+      },
+      {
+        "icon": "👐",
+        "t": "Dóblalos tú",
+        "d": "Un pliegue simple, sin técnica"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🥟",
+        "t": "Porc et crevette",
+        "d": "Bouchées rebondies pliées à la main"
+      },
+      {
+        "icon": "🍲",
+        "t": "Bouillon limpide",
+        "d": "Les wonton bouillent à part du bouillon"
+      },
+      {
+        "icon": "🌿",
+        "t": "Légère et délicate",
+        "d": "Saveurs douces et réconfortantes"
+      },
+      {
+        "icon": "👐",
+        "t": "Pliez les vôtres",
+        "d": "Un pli simple, sans technique"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🥟",
+        "t": "Schwein & Garnele",
+        "d": "Federnde, handgefaltete Teigtaschen"
+      },
+      {
+        "icon": "🍲",
+        "t": "Kristallklare Brühe",
+        "d": "Wan Tan getrennt von der Suppe gekocht"
+      },
+      {
+        "icon": "🌿",
+        "t": "Leicht und zart",
+        "d": "Sanfte, wohltuende Aromen"
+      },
+      {
+        "icon": "👐",
+        "t": "Selbst falten",
+        "d": "Eine einfache Falte, kein Können nötig"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🥟",
+        "t": "Porco e camarão",
+        "d": "Pastéis elásticos dobrados à mão"
+      },
+      {
+        "icon": "🍲",
+        "t": "Caldo cristalino",
+        "d": "Os wonton fervem à parte do caldo"
+      },
+      {
+        "icon": "🌿",
+        "t": "Leve e delicada",
+        "d": "Sabores suaves e reconfortantes"
+      },
+      {
+        "icon": "👐",
+        "t": "Dobra os teus",
+        "d": "Uma dobra simples, sem técnica"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🥟",
+        "t": "Свинина и креветка",
+        "d": "Упругие пельмешки, слепленные вручную"
+      },
+      {
+        "icon": "🍲",
+        "t": "Прозрачный бульон",
+        "d": "Вонтоны варятся отдельно от супа"
+      },
+      {
+        "icon": "🌿",
+        "t": "Лёгкий и нежный",
+        "d": "Мягкие, уютные вкусы"
+      },
+      {
+        "icon": "👐",
+        "t": "Слепи сам",
+        "d": "Простая складка, без навыка"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🥟",
+        "t": "خنزير وروبيان",
+        "d": "فطائر مطاطية مطويّة باليد"
+      },
+      {
+        "icon": "🍲",
+        "t": "مرق صافٍ",
+        "d": "يُسلق الونتون بعيدًا عن المرق"
+      },
+      {
+        "icon": "🌿",
+        "t": "خفيفة ورقيقة",
+        "d": "نكهات لطيفة مريحة"
+      },
+      {
+        "icon": "👐",
+        "t": "اطوِها بنفسك",
+        "d": "طيّة بسيطة بلا مهارة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🥟",
+        "t": "猪肉鲜虾",
+        "d": "手包的弹牙馄饨"
+      },
+      {
+        "icon": "🍲",
+        "t": "清汤见底",
+        "d": "馄饨另锅煮，不混汤"
+      },
+      {
+        "icon": "🌿",
+        "t": "清淡雅致",
+        "d": "温柔抚慰的味道"
+      },
+      {
+        "icon": "👐",
+        "t": "自己包",
+        "d": "简单一捏，无需手艺"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🥟",
+        "t": "豚とえび",
+        "d": "コシのある手包みワンタン"
+      },
+      {
+        "icon": "🍲",
+        "t": "澄んだだし",
+        "d": "ワンタンは別鍋でゆでる"
+      },
+      {
+        "icon": "🌿",
+        "t": "軽やかで繊細",
+        "d": "やさしく落ち着く味"
+      },
+      {
+        "icon": "👐",
+        "t": "自分で包む",
+        "d": "ひとつまみ、技いらず"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🥟",
+        "t": "Domuz ve karides",
+        "d": "Elde katlanmış diri mantılar"
+      },
+      {
+        "icon": "🍲",
+        "t": "Berrak et suyu",
+        "d": "Wontonlar çorbadan ayrı haşlanır"
+      },
+      {
+        "icon": "🌿",
+        "t": "Hafif ve narin",
+        "d": "Yumuşak, rahatlatan tatlar"
+      },
+      {
+        "icon": "👐",
+        "t": "Kendin katla",
+        "d": "Basit bir kıvrım, ustalık gerekmez"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🥟",
+        "t": "Maiale e gambero",
+        "d": "Fagottini elastici piegati a mano"
+      },
+      {
+        "icon": "🍲",
+        "t": "Brodo cristallino",
+        "d": "I wonton bollono a parte dal brodo"
+      },
+      {
+        "icon": "🌿",
+        "t": "Leggera e delicata",
+        "d": "Sapori gentili e confortanti"
+      },
+      {
+        "icon": "👐",
+        "t": "Piegali tu",
+        "d": "Una piega semplice, senza abilità"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🥟",
+        "t": "돼지고기와 새우",
+        "d": "손으로 빚은 탱탱한 만두"
+      },
+      {
+        "icon": "🍲",
+        "t": "맑은 국물",
+        "d": "완탕은 국과 따로 삶는다"
+      },
+      {
+        "icon": "🌿",
+        "t": "가볍고 섬세한",
+        "d": "부드럽고 편안한 맛"
+      },
+      {
+        "icon": "👐",
+        "t": "직접 빚기",
+        "d": "간단한 주름, 기술 필요 없음"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🥟",
+        "t": "सूअर और झींगा",
+        "d": "हाथ से मोड़ी लचीली पकौड़ियाँ"
+      },
+      {
+        "icon": "🍲",
+        "t": "साफ़ शोरबा",
+        "d": "वॉन्टन शोरबे से अलग उबलते हैं"
+      },
+      {
+        "icon": "🌿",
+        "t": "हल्का और नाज़ुक",
+        "d": "कोमल, सुकून देने वाले स्वाद"
+      },
+      {
+        "icon": "👐",
+        "t": "खुद मोड़ें",
+        "d": "एक सरल चुन्नट, कोई कौशल नहीं"
+      }
+    ]
   }
 }

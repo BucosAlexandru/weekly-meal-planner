@@ -4,19 +4,52 @@
   "tipType": "meat",
   "pairingsType": "asian",
   "origin": {
-    "ro": "China", "en": "China", "es": "China", "fr": "Chine", "de": "China", "pt": "China",
-    "ru": "Китай", "ar": "الصين", "zh": "中国", "ja": "中国", "tr": "Çin", "it": "Cina", "ko": "중국", "hi": "चीन"
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
   },
   "name": {
-    "ro": "Rață la cuptor cantoneză", "en": "Cantonese Roast Duck", "es": "Pato asado cantonés",
-    "fr": "Canard rôti cantonais", "de": "Kantonesische Knusperente", "pt": "Pato assado cantonês",
-    "ru": "Утка по-кантонски", "ar": "بط مشوي كانتوني", "zh": "广式烧鸭", "ja": "広東式ローストダック",
-    "tr": "Kanton usulü fırın ördeği", "it": "Anatra arrosto cantonese", "ko": "광둥식 오리 구이", "hi": "कैंटोनी रोस्ट डक"
+    "ro": "Rață la cuptor cantoneză",
+    "en": "Cantonese Roast Duck",
+    "es": "Pato asado cantonés",
+    "fr": "Canard rôti cantonais",
+    "de": "Kantonesische Knusperente",
+    "pt": "Pato assado cantonês",
+    "ru": "Утка по-кантонски",
+    "ar": "بط مشوي كانتوني",
+    "zh": "广式烧鸭",
+    "ja": "広東式ローストダック",
+    "tr": "Kanton usulü fırın ördeği",
+    "it": "Anatra arrosto cantonese",
+    "ko": "광둥식 오리 구이",
+    "hi": "कैंटोनी रोस्ट डक"
   },
   "category": {
-    "ro": "Fel principal", "en": "Main", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
-    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي", "zh": "主菜", "ja": "主菜",
-    "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+    "ro": "Fel principal",
+    "en": "Main",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "主菜",
+    "tr": "Ana yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
   },
   "ingredients": {
     "en": [
@@ -293,7 +326,10 @@
   "meta": {
     "time": 100,
     "costRon": 45,
-    "tags": ["family", "high-protein"],
+    "tags": [
+      "family",
+      "high-protein"
+    ],
     "desc": {
       "ro": "Rață la cuptor cantoneză — piele crocantă, lăcuită cu maltoză, și carne parfumată cu cinci arome. La cuptor acasă (plus uscare peste noapte).",
       "en": "Cantonese roast duck — crackling maltose-glazed skin over five-spice-scented meat. Home-oven method (plus overnight drying).",
@@ -310,5 +346,315 @@
       "ko": "광둥식 오리 구이 — 맥아당으로 윤낸 바삭한 껍질과 오향 향이 밴 고기. 가정용 오븐 방식(하룻밤 건조 별도).",
       "hi": "कैंटोनी रोस्ट डक — माल्टोज़ से चमकाई कुरकुरी त्वचा, पाँच-मसाले की महक वाले मांस पर। घरेलू ओवन विधि (रातभर सुखाना अलग से)।"
     }
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🦆",
+        "t": "Piele crocantă",
+        "d": "Sticloasă, mahon, crocantă la mușcătură"
+      },
+      {
+        "icon": "🍯",
+        "t": "Lac de maltoză",
+        "d": "Piele uscată la aer, glazurată, cu bășici"
+      },
+      {
+        "icon": "🌿",
+        "t": "Aromă de cinci arome",
+        "d": "Marinată parfumată închisă înăuntru"
+      },
+      {
+        "icon": "🔥",
+        "t": "Fript mic-apoi-mare",
+        "d": "Topești grăsimea, apoi faci pielea crocantă"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🦆",
+        "t": "Crackling skin",
+        "d": "Glassy, mahogany, shatteringly crisp"
+      },
+      {
+        "icon": "🍯",
+        "t": "Maltose lacquer",
+        "d": "Air-dried skin, glazed and blistered"
+      },
+      {
+        "icon": "🌿",
+        "t": "Five-spice aroma",
+        "d": "Fragrant marinade sealed inside"
+      },
+      {
+        "icon": "🔥",
+        "t": "Low-then-high roast",
+        "d": "Render the fat, then crisp the skin"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🦆",
+        "t": "Piel crujiente",
+        "d": "Vítrea, caoba, quebradiza al morder"
+      },
+      {
+        "icon": "🍯",
+        "t": "Laca de maltosa",
+        "d": "Piel secada al aire, glaseada y ampollada"
+      },
+      {
+        "icon": "🌿",
+        "t": "Aroma de cinco especias",
+        "d": "Adobo perfumado sellado dentro"
+      },
+      {
+        "icon": "🔥",
+        "t": "Asado bajo y luego fuerte",
+        "d": "Derrite la grasa, luego crujiente la piel"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🦆",
+        "t": "Peau craquante",
+        "d": "Vitreuse, acajou, cassante sous la dent"
+      },
+      {
+        "icon": "🍯",
+        "t": "Laque au maltose",
+        "d": "Peau séchée à l'air, glacée et cloquée"
+      },
+      {
+        "icon": "🌿",
+        "t": "Arôme de cinq-épices",
+        "d": "Marinade parfumée enfermée à l'intérieur"
+      },
+      {
+        "icon": "🔥",
+        "t": "Rôti doux puis vif",
+        "d": "Fondre la graisse, puis rendre la peau croustillante"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🦆",
+        "t": "Knusprige Haut",
+        "d": "Glasig, mahagoni, splitternd knusprig"
+      },
+      {
+        "icon": "🍯",
+        "t": "Malzzucker-Lack",
+        "d": "Luftgetrocknete Haut, glasiert und blasig"
+      },
+      {
+        "icon": "🌿",
+        "t": "Fünf-Gewürze-Aroma",
+        "d": "Duftende Marinade im Inneren versiegelt"
+      },
+      {
+        "icon": "🔥",
+        "t": "Niedrig, dann heiß braten",
+        "d": "Fett auslassen, dann Haut knusprig"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🦆",
+        "t": "Pele estaladiça",
+        "d": "Vítrea, cor de mogno, quebradiça na mordida"
+      },
+      {
+        "icon": "🍯",
+        "t": "Laca de maltose",
+        "d": "Pele seca ao ar, glaceada e com bolhas"
+      },
+      {
+        "icon": "🌿",
+        "t": "Aroma de cinco especiarias",
+        "d": "Marinada perfumada selada por dentro"
+      },
+      {
+        "icon": "🔥",
+        "t": "Assado baixo depois forte",
+        "d": "Derrete a gordura, depois torna a pele estaladiça"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🦆",
+        "t": "Хрустящая кожа",
+        "d": "Стеклянная, махагоновая, хрустит на укус"
+      },
+      {
+        "icon": "🍯",
+        "t": "Мальтозный лак",
+        "d": "Подсушенная кожа, в глазури и пузырьках"
+      },
+      {
+        "icon": "🌿",
+        "t": "Аромат пяти специй",
+        "d": "Душистый маринад запечатан внутри"
+      },
+      {
+        "icon": "🔥",
+        "t": "Запекание низкое, потом сильное",
+        "d": "Вытопить жир, затем сделать кожу хрустящей"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🦆",
+        "t": "جلد مقرمش",
+        "d": "زجاجي بلون الماهوغني يتشظّى عند القضم"
+      },
+      {
+        "icon": "🍯",
+        "t": "طلاء المالتوز",
+        "d": "جلد مجفّف بالهواء، ملمّع ومنفّط"
+      },
+      {
+        "icon": "🌿",
+        "t": "عبق البهارات الخمس",
+        "d": "تتبيلة عطرية مغلقة في الداخل"
+      },
+      {
+        "icon": "🔥",
+        "t": "شيّ منخفض ثم عالٍ",
+        "d": "أذِب الدهن ثم اجعل الجلد مقرمشًا"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🦆",
+        "t": "脆皮",
+        "d": "玻璃般、枣红色、一咬即碎"
+      },
+      {
+        "icon": "🍯",
+        "t": "麦芽糖上光",
+        "d": "风干鸭皮，上光起泡"
+      },
+      {
+        "icon": "🌿",
+        "t": "五香之气",
+        "d": "香料腌料封在腹中"
+      },
+      {
+        "icon": "🔥",
+        "t": "先低温后高温",
+        "d": "先逼出脂肪，再把皮烤脆"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🦆",
+        "t": "パリパリの皮",
+        "d": "ガラスのよう、マホガニー色、噛めば砕ける"
+      },
+      {
+        "icon": "🍯",
+        "t": "麦芽糖の照り",
+        "d": "風干しの皮、照りをつけふくらむ"
+      },
+      {
+        "icon": "🌿",
+        "t": "五香の香り",
+        "d": "香りの漬けだれを腹に封じ込める"
+      },
+      {
+        "icon": "🔥",
+        "t": "低温のち高温で焼く",
+        "d": "脂を落とし、次に皮をパリッと"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🦆",
+        "t": "Çıtır deri",
+        "d": "Cam gibi, maun renginde, ısırınca dağılan"
+      },
+      {
+        "icon": "🍯",
+        "t": "Maltoz lakesi",
+        "d": "Havada kurutulmuş deri, sırlı ve kabarcıklı"
+      },
+      {
+        "icon": "🌿",
+        "t": "Beş baharat kokusu",
+        "d": "Kokulu terbiye içeride kapatılmış"
+      },
+      {
+        "icon": "🔥",
+        "t": "Önce düşük sonra yüksek",
+        "d": "Yağı erit, sonra deriyi çıtırlaştır"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🦆",
+        "t": "Pelle croccante",
+        "d": "Vetrosa, color mogano, croccante al morso"
+      },
+      {
+        "icon": "🍯",
+        "t": "Lacca al maltosio",
+        "d": "Pelle asciugata all'aria, glassata e bollata"
+      },
+      {
+        "icon": "🌿",
+        "t": "Aroma di cinque spezie",
+        "d": "Marinata profumata sigillata all'interno"
+      },
+      {
+        "icon": "🔥",
+        "t": "Arrosto basso poi alto",
+        "d": "Sciogli il grasso, poi rendi croccante la pelle"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🦆",
+        "t": "바삭한 껍질",
+        "d": "유리 같고 마호가니색이며 깨물면 바스러지는"
+      },
+      {
+        "icon": "🍯",
+        "t": "맥아당 광택",
+        "d": "바람에 말린 껍질, 윤내고 부풀린"
+      },
+      {
+        "icon": "🌿",
+        "t": "오향의 향",
+        "d": "향긋한 양념을 뱃속에 봉해"
+      },
+      {
+        "icon": "🔥",
+        "t": "저온 후 고온 굽기",
+        "d": "지방을 빼고 껍질을 바삭하게"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🦆",
+        "t": "कुरकुरी त्वचा",
+        "d": "काँच-सी, महोगनी, काटते ही चटखती"
+      },
+      {
+        "icon": "🍯",
+        "t": "माल्टोज़ लाख",
+        "d": "हवा में सुखाई त्वचा, चमकाई और फूली"
+      },
+      {
+        "icon": "🌿",
+        "t": "पाँच-मसाले की महक",
+        "d": "सुगंधित मैरिनेड भीतर बंद"
+      },
+      {
+        "icon": "🔥",
+        "t": "पहले कम फिर तेज़ भूनना",
+        "d": "चर्बी निकालें, फिर त्वचा कुरकुरी करें"
+      }
+    ]
   }
 }

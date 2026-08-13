@@ -1,0 +1,647 @@
+{
+  "id": 239,
+  "servings": 4,
+  "tipType": "asian",
+  "pairingsType": "asian",
+  "origin": {
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
+  },
+  "name": {
+    "ro": "Orez prăjit Yangzhou",
+    "en": "Yangzhou Fried Rice",
+    "es": "Arroz frito de Yangzhou",
+    "fr": "Riz sauté de Yangzhou",
+    "de": "Yangzhou gebratener Reis",
+    "pt": "Arroz frito de Yangzhou",
+    "ru": "Жареный рис по-янчжоуски",
+    "ar": "أرز يانغتشو المقلي",
+    "zh": "扬州炒饭",
+    "ja": "揚州チャーハン",
+    "tr": "Yangzhou usulü kızarmış pirinç",
+    "it": "Riso saltato di Yangzhou",
+    "ko": "양저우 볶음밥",
+    "hi": "यांगझोउ भुना चावल"
+  },
+  "category": {
+    "ro": "Fel principal",
+    "en": "Main",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "主菜",
+    "tr": "Ana yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🍚",
+        "t": "Orez de o zi",
+        "d": "Boabele reci și uscate se prăjesc, nu aburesc"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "Focul mare dă gustul afumat"
+      },
+      {
+        "icon": "🥢",
+        "t": "Clasic Huaiyang",
+        "d": "Rafinat și echilibrat, nu iute"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Cină în 25 min",
+        "d": "Rapid și mereu adaptabil"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🍚",
+        "t": "Day-old rice",
+        "d": "Cold, dry grains fry instead of steaming"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "High heat gives a smoky char"
+      },
+      {
+        "icon": "🥢",
+        "t": "Huaiyang classic",
+        "d": "Refined and balanced, not fiery"
+      },
+      {
+        "icon": "⏱️",
+        "t": "25-minute dinner",
+        "d": "Fast and endlessly adaptable"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🍚",
+        "t": "Arroz del día anterior",
+        "d": "Los granos fríos y secos se fríen, no se cuecen al vapor"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "El fuego alto da un toque ahumado"
+      },
+      {
+        "icon": "🥢",
+        "t": "Clásico huaiyang",
+        "d": "Refinado y equilibrado, no picante"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Cena en 25 min",
+        "d": "Rápido y siempre adaptable"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🍚",
+        "t": "Riz de la veille",
+        "d": "Les grains froids et secs sautent au lieu de cuire à la vapeur"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "Le feu vif donne un goût fumé"
+      },
+      {
+        "icon": "🥢",
+        "t": "Classique huaiyang",
+        "d": "Raffiné et équilibré, pas piquant"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Dîner en 25 min",
+        "d": "Rapide et toujours adaptable"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🍚",
+        "t": "Reis vom Vortag",
+        "d": "Kalte, trockene Körner braten statt zu dämpfen"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok Hei",
+        "d": "Starke Hitze gibt rauchige Röstaromen"
+      },
+      {
+        "icon": "🥢",
+        "t": "Huaiyang-Klassiker",
+        "d": "Fein und ausgewogen, nicht scharf"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Abendessen in 25 Min",
+        "d": "Schnell und endlos anpassbar"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🍚",
+        "t": "Arroz do dia anterior",
+        "d": "Grãos frios e secos fritam em vez de cozer a vapor"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "O lume forte dá um toque fumado"
+      },
+      {
+        "icon": "🥢",
+        "t": "Clássico huaiyang",
+        "d": "Requintado e equilibrado, não picante"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Jantar em 25 min",
+        "d": "Rápido e sempre adaptável"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🍚",
+        "t": "Вчерашний рис",
+        "d": "Холодные сухие зёрна жарятся, а не парятся"
+      },
+      {
+        "icon": "🔥",
+        "t": "Вок хей",
+        "d": "Сильный огонь даёт дымный аромат"
+      },
+      {
+        "icon": "🥢",
+        "t": "Классика хуайян",
+        "d": "Утончённо и сбалансированно, не остро"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Ужин за 25 мин",
+        "d": "Быстро и всегда универсально"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🍚",
+        "t": "أرز اليوم السابق",
+        "d": "الحبات الباردة الجافة تُقلى ولا تتبخّر"
+      },
+      {
+        "icon": "🔥",
+        "t": "ووك هي",
+        "d": "النار العالية تمنح نكهة مدخّنة"
+      },
+      {
+        "icon": "🥢",
+        "t": "كلاسيكية هوايانغ",
+        "d": "راقٍ ومتوازن لا حار"
+      },
+      {
+        "icon": "⏱️",
+        "t": "عشاء في 25 دقيقة",
+        "d": "سريع وقابل للتكيّف دائمًا"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🍚",
+        "t": "隔夜饭",
+        "d": "凉而干的米粒是炒香而非蒸软"
+      },
+      {
+        "icon": "🔥",
+        "t": "锅气",
+        "d": "旺火带来烟火焦香"
+      },
+      {
+        "icon": "🥢",
+        "t": "淮扬经典",
+        "d": "精致均衡，不辣"
+      },
+      {
+        "icon": "⏱️",
+        "t": "25分钟晚餐",
+        "d": "快手，百搭"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🍚",
+        "t": "前日のご飯",
+        "d": "冷たく乾いた米は蒸れず炒まる"
+      },
+      {
+        "icon": "🔥",
+        "t": "鑊気",
+        "d": "強火が香ばしさを生む"
+      },
+      {
+        "icon": "🥢",
+        "t": "淮揚の定番",
+        "d": "洗練と均衡、辛くない"
+      },
+      {
+        "icon": "⏱️",
+        "t": "25分の夕食",
+        "d": "手早く、何にでも合う"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🍚",
+        "t": "Bir günlük pirinç",
+        "d": "Soğuk kuru taneler buğulanmaz, kavrulur"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "Yüksek ateş dumanlı bir tat verir"
+      },
+      {
+        "icon": "🥢",
+        "t": "Huaiyang klasiği",
+        "d": "Zarif ve dengeli, acı değil"
+      },
+      {
+        "icon": "⏱️",
+        "t": "25 dakikada akşam yemeği",
+        "d": "Hızlı ve her zaman uyarlanabilir"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🍚",
+        "t": "Riso del giorno prima",
+        "d": "I chicchi freddi e asciutti saltano invece di cuocere a vapore"
+      },
+      {
+        "icon": "🔥",
+        "t": "Wok hei",
+        "d": "La fiamma alta dà un tocco affumicato"
+      },
+      {
+        "icon": "🥢",
+        "t": "Classico huaiyang",
+        "d": "Raffinato ed equilibrato, non piccante"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Cena in 25 min",
+        "d": "Veloce e sempre adattabile"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🍚",
+        "t": "하루 지난 밥",
+        "d": "차갑고 마른 밥알은 찌지 않고 볶인다"
+      },
+      {
+        "icon": "🔥",
+        "t": "웍헤이",
+        "d": "센 불이 불맛을 낸다"
+      },
+      {
+        "icon": "🥢",
+        "t": "화이양 고전",
+        "d": "세련되고 균형 잡힌, 맵지 않은"
+      },
+      {
+        "icon": "⏱️",
+        "t": "25분 저녁",
+        "d": "빠르고 무엇에나 어울리는"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🍚",
+        "t": "एक दिन पुराना चावल",
+        "d": "ठंडे सूखे दाने भाप नहीं, भुनते हैं"
+      },
+      {
+        "icon": "🔥",
+        "t": "वॉक हेइ",
+        "d": "तेज़ आँच धुएँदार महक देती है"
+      },
+      {
+        "icon": "🥢",
+        "t": "हुआयांग क्लासिक",
+        "d": "सुरुचिपूर्ण और संतुलित, तीखा नहीं"
+      },
+      {
+        "icon": "⏱️",
+        "t": "25 मिनट का डिनर",
+        "d": "तेज़ और हर चीज़ के साथ"
+      }
+    ]
+  },
+  "ingredients": {
+    "ro": [
+      "600 g orez jasmine fiert, rece — ideal fiert cu o zi înainte și răcit neacoperit ca boabele să se usuce și să se separe; orezul proaspăt aburește și se lipește",
+      "3 ouă mari, bătute cu un praf de sare",
+      "150 g char siu (porc chinezesc la grătar), tăiat în cuburi de 1 cm — sau înlocuiește cu șuncă fiartă ori lap cheong (cârnat chinezesc)",
+      "120 g creveți mici cruzi, curățați, devenați și tamponați uscat — sau creveți mici fierți",
+      "80 g mazăre congelată",
+      "80 g morcov, tăiat în cuburi de 5 mm",
+      "4 cepe verzi: partea albă feliată fin pentru gătit, partea verde pentru finisare (ține-le separat)",
+      "2 căței de usturoi, tocați fin",
+      "3 linguri de ulei neutru (rapiță sau arahide), împărțit",
+      "1,5 linguri de sos de soia deschis",
+      "1 linguriță de vin Shaoxing (sau sherry sec)",
+      "0,5 linguriță de piper alb",
+      "0,5 linguriță de sare, după gust",
+      "1 linguriță de ulei de susan prăjit, pentru stropitul final"
+    ],
+    "en": [
+      "600 g cooked jasmine rice, cold — ideally cooked the day before and chilled uncovered so the grains dry and separate; fresh rice steams and clumps",
+      "3 large eggs, beaten with a pinch of salt",
+      "150 g char siu (Chinese BBQ pork), cut into 1 cm dice — or substitute cooked ham or lap cheong (Chinese sausage)",
+      "120 g small raw shrimp, peeled, deveined and patted dry — or cooked baby shrimp",
+      "80 g frozen peas",
+      "80 g carrot, cut into 5 mm dice",
+      "4 spring onions: white parts finely sliced for cooking, green tops for finishing (keep separate)",
+      "2 garlic cloves, finely minced",
+      "3 tbsp neutral oil (rapeseed or peanut), divided",
+      "1.5 tbsp light soy sauce",
+      "1 tsp Shaoxing wine (or dry sherry)",
+      "0.5 tsp white pepper",
+      "0.5 tsp salt, to taste",
+      "1 tsp toasted sesame oil, for the last drizzle"
+    ],
+    "es": [
+      "600 g de arroz jazmín cocido, frío — idealmente cocido el día anterior y enfriado sin tapar para que los granos se sequen y se separen; el arroz recién hecho suelta vapor y se apelmaza",
+      "3 huevos grandes, batidos con una pizca de sal",
+      "150 g de char siu (cerdo chino a la barbacoa), cortado en dados de 1 cm — o sustituye por jamón cocido o lap cheong (salchicha china)",
+      "120 g de camarones pequeños crudos, pelados, desvenados y secados — o camarones pequeños cocidos",
+      "80 g de guisantes congelados",
+      "80 g de zanahoria, cortada en dados de 5 mm",
+      "4 cebolletas: la parte blanca en rodajas finas para cocinar, la parte verde para terminar (mantener separadas)",
+      "2 dientes de ajo, picados finos",
+      "3 cucharadas de aceite neutro (colza o cacahuete), dividido",
+      "1,5 cucharadas de salsa de soja clara",
+      "1 cucharadita de vino de Shaoxing (o jerez seco)",
+      "0,5 cucharadita de pimienta blanca",
+      "0,5 cucharadita de sal, al gusto",
+      "1 cucharadita de aceite de sésamo tostado, para el último chorrito"
+    ],
+    "fr": [
+      "600 g de riz jasmin cuit, froid — idéalement cuit la veille et refroidi à découvert pour que les grains sèchent et se séparent; le riz frais dégage de la vapeur et s'agglomère",
+      "3 gros œufs, battus avec une pincée de sel",
+      "150 g de char siu (porc grillé chinois), coupé en dés de 1 cm — ou remplacer par du jambon cuit ou du lap cheong (saucisse chinoise)",
+      "120 g de petites crevettes crues, décortiquées, déveinées et épongées — ou de petites crevettes cuites",
+      "80 g de petits pois surgelés",
+      "80 g de carotte, coupée en dés de 5 mm",
+      "4 oignons nouveaux : le blanc finement émincé pour la cuisson, le vert pour la finition (garder séparés)",
+      "2 gousses d'ail, finement hachées",
+      "3 cuillères à soupe d'huile neutre (colza ou arachide), séparées",
+      "1,5 cuillère à soupe de sauce soja claire",
+      "1 cuillère à café de vin de Shaoxing (ou xérès sec)",
+      "0,5 cuillère à café de poivre blanc",
+      "0,5 cuillère à café de sel, selon le goût",
+      "1 cuillère à café d'huile de sésame grillé, pour le filet final"
+    ],
+    "de": [
+      "600 g gekochter Jasminreis, kalt — idealerweise am Vortag gekocht und unbedeckt gekühlt, damit die Körner trocknen und sich lösen; frischer Reis dampft und klumpt",
+      "3 große Eier, mit einer Prise Salz verquirlt",
+      "150 g Char Siu (chinesischer BBQ-Schweinebraten), in 1 cm Würfel geschnitten — oder gekochten Schinken bzw. Lap Cheong (chinesische Wurst)",
+      "120 g kleine rohe Garnelen, geschält, entdarmt und trocken getupft — oder gekochte kleine Garnelen",
+      "80 g tiefgekühlte Erbsen",
+      "80 g Karotte, in 5 mm Würfel geschnitten",
+      "4 Frühlingszwiebeln: die weißen Teile fein geschnitten zum Kochen, das Grün zum Garnieren (getrennt halten)",
+      "2 Knoblauchzehen, fein gehackt",
+      "3 EL neutrales Öl (Raps oder Erdnuss), geteilt",
+      "1,5 EL helle Sojasauce",
+      "1 TL Shaoxing-Wein (oder trockener Sherry)",
+      "0,5 TL weißer Pfeffer",
+      "0,5 TL Salz, nach Geschmack",
+      "1 TL geröstetes Sesamöl, für den letzten Spritzer"
+    ],
+    "pt": [
+      "600 g de arroz jasmim cozido, frio — idealmente cozido no dia anterior e arrefecido destapado para os grãos secarem e soltarem; o arroz fresco solta vapor e empelota",
+      "3 ovos grandes, batidos com uma pitada de sal",
+      "150 g de char siu (porco chinês grelhado), cortado em cubos de 1 cm — ou substitua por fiambre cozido ou lap cheong (chouriço chinês)",
+      "120 g de camarão pequeno cru, descascado, limpo e seco — ou camarão pequeno cozido",
+      "80 g de ervilhas congeladas",
+      "80 g de cenoura, cortada em cubos de 5 mm",
+      "4 cebolinhas: a parte branca fatiada fina para cozinhar, a parte verde para finalizar (manter separadas)",
+      "2 dentes de alho, picados finos",
+      "3 colheres de sopa de óleo neutro (colza ou amendoim), dividido",
+      "1,5 colher de sopa de molho de soja claro",
+      "1 colher de chá de vinho de Shaoxing (ou xerez seco)",
+      "0,5 colher de chá de pimenta branca",
+      "0,5 colher de chá de sal, a gosto",
+      "1 colher de chá de óleo de gergelim torrado, para o fio final"
+    ],
+    "ru": [
+      "600 г варёного риса жасмин, холодного — лучше сваренного накануне и охлаждённого без крышки, чтобы зёрна подсохли и рассыпались; свежий рис парит и слипается",
+      "3 крупных яйца, взбитых со щепоткой соли",
+      "150 г чар сиу (китайская свинина барбекю), нарезать кубиками 1 см — или заменить варёной ветчиной либо лап чонг (китайская колбаса)",
+      "120 г мелких сырых креветок, очищенных и обсушенных — или варёных мелких креветок",
+      "80 г замороженного зелёного горошка",
+      "80 г моркови, нарезать кубиками 5 мм",
+      "4 зелёных лука: белую часть тонко нарезать для жарки, зелёную — для подачи (держать отдельно)",
+      "2 зубчика чеснока, мелко порубить",
+      "3 ст. л. нейтрального масла (рапсовое или арахисовое), разделить",
+      "1,5 ст. л. светлого соевого соуса",
+      "1 ч. л. вина Шаосин (или сухого хереса)",
+      "0,5 ч. л. белого перца",
+      "0,5 ч. л. соли, по вкусу",
+      "1 ч. л. поджаренного кунжутного масла, для финальной струйки"
+    ],
+    "ar": [
+      "600 غ أرز ياسمين مطبوخ وبارد — يُفضّل طبخه قبل يوم وتبريده مكشوفًا لتجف الحبات وتنفصل؛ الأرز الطازج يطلق البخار ويتكتّل",
+      "3 بيضات كبيرة، مخفوقة مع رشة ملح",
+      "150 غ تشار سيو (لحم خنزير صيني مشوي)، مقطّع مكعبات 1 سم — أو استبدله بلحم مطبوخ أو لاب تشونغ (نقانق صينية)",
+      "120 غ روبيان صغير نيء، مقشّر ومنظّف ومجفّف — أو روبيان صغير مطبوخ",
+      "80 غ بازلاء مجمّدة",
+      "80 غ جزر، مقطّع مكعبات 5 ملم",
+      "4 بصل أخضر: الجزء الأبيض مقطّع رفيعًا للطهي، والأخضر للتزيين (يُحفظان منفصلين)",
+      "فصّان من الثوم، مفرومان ناعمًا",
+      "3 م.ك زيت محايد (كانولا أو فول سوداني)، مقسّم",
+      "1.5 م.ك صلصة صويا فاتحة",
+      "1 م.ص نبيذ شاوشينغ (أو شيري جاف)",
+      "0.5 م.ص فلفل أبيض",
+      "0.5 م.ص ملح، حسب الرغبة",
+      "1 م.ص زيت سمسم محمّص، للرشّة الأخيرة"
+    ],
+    "zh": [
+      "600 克 熟茉莉香米，放凉——最好前一天煮好并敞开冷藏，让米粒变干散开；新煮的米会冒汽结块",
+      "3 个 大鸡蛋，加一撮盐打散",
+      "150 克 叉烧，切成 1 厘米小丁——或用熟火腿、腊肠代替",
+      "120 克 小生虾，去壳去虾线并拭干——或用煮熟的小虾",
+      "80 克 冷冻青豆",
+      "80 克 胡萝卜，切成 5 毫米小丁",
+      "4 根 葱：葱白切细用于翻炒，葱绿留作点缀（分开放）",
+      "2 瓣 蒜，切末",
+      "3 汤匙 中性油（菜籽或花生），分次使用",
+      "1.5 汤匙 生抽",
+      "1 茶匙 绍兴酒（或干雪利酒）",
+      "0.5 茶匙 白胡椒",
+      "0.5 茶匙 盐，按口味",
+      "1 茶匙 烤香的芝麻油，最后淋上"
+    ],
+    "ja": [
+      "炊いたジャスミンライス600g、冷やしたもの——前日に炊いて蓋をせず冷蔵し、米粒を乾かしてほぐすのが理想；炊きたては蒸気が出て固まる",
+      "大きい卵3個、塩ひとつまみで溶く",
+      "チャーシュー150g、1cm角に切る——またはハムや腊腸（中華ソーセージ）で代用",
+      "小さい生えび120g、殻と背わたを取り水気を拭く——または茹でた小えび",
+      "冷凍グリーンピース80g",
+      "にんじん80g、5mm角に切る",
+      "青ねぎ4本：白い部分は炒め用に細切り、緑の部分は仕上げ用（分けておく）",
+      "にんにく2かけ、みじん切り",
+      "クセのない油大さじ3（菜種または落花生）、分けて使う",
+      "薄口しょうゆ大さじ1.5",
+      "紹興酒小さじ1（またはドライシェリー）",
+      "白こしょう小さじ0.5",
+      "塩小さじ0.5、好みで",
+      "香りの出た ごま油小さじ1、最後にひと回し"
+    ],
+    "tr": [
+      "600 g pişmiş yasemin pirinci, soğuk — ideal olarak bir gün önce pişirilip üstü açık soğutulmuş, taneler kurusun ve ayrılsın diye; taze pirinç buhar verir ve topaklanır",
+      "3 büyük yumurta, bir tutam tuzla çırpılmış",
+      "150 g char siu (Çin usulü barbekü domuz), 1 cm küpler halinde — ya da haşlanmış jambon veya lap cheong (Çin sucuğu)",
+      "120 g küçük çiğ karides, ayıklanmış ve kurulanmış — ya da haşlanmış küçük karides",
+      "80 g dondurulmuş bezelye",
+      "80 g havuç, 5 mm küpler halinde",
+      "4 taze soğan: beyaz kısmı pişirmek için ince, yeşil kısmı süslemek için (ayrı tutun)",
+      "2 diş sarımsak, ince kıyılmış",
+      "3 yemek kaşığı nötr yağ (kanola veya yer fıstığı), bölünmüş",
+      "1,5 yemek kaşığı açık soya sosu",
+      "1 tatlı kaşığı Shaoxing şarabı (veya kuru şeri)",
+      "0,5 tatlı kaşığı beyaz biber",
+      "0,5 tatlı kaşığı tuz, damak tadına göre",
+      "1 tatlı kaşığı kavrulmuş susam yağı, son gezdirme için"
+    ],
+    "it": [
+      "600 g di riso jasmine cotto, freddo — meglio se cotto il giorno prima e raffreddato scoperto così i chicchi asciugano e si separano; il riso fresco fa vapore e si impasta",
+      "3 uova grandi, sbattute con un pizzico di sale",
+      "150 g di char siu (maiale cinese alla brace), tagliato a cubetti di 1 cm — oppure prosciutto cotto o lap cheong (salsiccia cinese)",
+      "120 g di gamberetti piccoli crudi, sgusciati, puliti e asciugati — oppure gamberetti piccoli cotti",
+      "80 g di piselli surgelati",
+      "80 g di carota, tagliata a cubetti di 5 mm",
+      "4 cipollotti: la parte bianca affettata fine per cuocere, la parte verde per rifinire (tenere separate)",
+      "2 spicchi d'aglio, tritati fini",
+      "3 cucchiai di olio neutro (colza o arachide), divisi",
+      "1,5 cucchiai di salsa di soia chiara",
+      "1 cucchiaino di vino di Shaoxing (o sherry secco)",
+      "0,5 cucchiaino di pepe bianco",
+      "0,5 cucchiaino di sale, a piacere",
+      "1 cucchiaino di olio di sesamo tostato, per il filo finale"
+    ],
+    "ko": [
+      "식힌 재스민 밥 600 g — 전날 지어 뚜껑 없이 냉장해 밥알을 말려 흩어지게 하는 것이 이상적; 갓 지은 밥은 김이 올라 뭉친다",
+      "큰 달걀 3개, 소금 한 꼬집과 함께 풀기",
+      "차슈(중국식 바비큐 돼지고기) 150 g, 1 cm 크기로 깍둑썰기 — 또는 익힌 햄이나 랍청(중국식 소시지)으로 대체",
+      "작은 생새우 120 g, 껍질과 내장을 제거하고 물기 제거 — 또는 익힌 작은 새우",
+      "냉동 완두콩 80 g",
+      "당근 80 g, 5 mm 크기로 깍둑썰기",
+      "쪽파 4대: 흰 부분은 볶음용으로 얇게, 초록 부분은 마무리용 (따로 둔다)",
+      "마늘 2쪽, 곱게 다지기",
+      "향이 약한 기름(유채 또는 땅콩) 3큰술, 나눠 사용",
+      "연한 간장 1.5큰술",
+      "소흥주 1작은술 (또는 드라이 셰리)",
+      "흰 후추 0.5작은술",
+      "소금 0.5작은술, 기호에 따라",
+      "볶은 참기름 1작은술, 마지막에 두르기"
+    ],
+    "hi": [
+      "600 g पका हुआ चमेली चावल, ठंडा — आदर्श रूप से एक दिन पहले पकाकर बिना ढके ठंडा किया हुआ ताकि दाने सूखकर अलग हो जाएँ; ताज़ा चावल भाप छोड़ता और चिपकता है",
+      "3 बड़े अंडे, एक चुटकी नमक के साथ फेंटे हुए",
+      "150 g चार सियू (चीनी बारबेक्यू सूअर), 1 cm के टुकड़ों में कटा — या पका हुआ हैम या लैप चोंग (चीनी सॉसेज)",
+      "120 g छोटे कच्चे झींगे, छीलकर और पोंछकर सुखाए हुए — या पके छोटे झींगे",
+      "80 g जमे हुए मटर",
+      "80 g गाजर, 5 mm के टुकड़ों में कटी",
+      "4 हरे प्याज: सफ़ेद भाग पकाने के लिए बारीक कटा, हरा भाग सजाने के लिए (अलग रखें)",
+      "लहसुन की 2 कलियाँ, बारीक कटी",
+      "3 बड़े चम्मच सादा तेल (सरसों या मूँगफली), बाँटकर",
+      "1.5 बड़े चम्मच हल्की सोया सॉस",
+      "1 छोटा चम्मच शाओशिंग वाइन (या ड्राई शेरी)",
+      "0.5 छोटा चम्मच सफ़ेद मिर्च",
+      "0.5 छोटा चम्मच नमक, स्वादानुसार",
+      "1 छोटा चम्मच भुना तिल का तेल, अंत में डालने के लिए"
+    ]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE TOTUL ÎNTÂI: orezul prăjit se gătește în câteva minute la foc mare, așa că măsoară fiecare ingredient și ține-l la îndemână înainte să pui wok-ul pe foc — nu ai timp să tai nimic după ce începi. DESFĂ OREZUL: cu mâinile ude, freacă orezul rece între degete ca să desfaci cocoloașele în boabe individuale; orezul rece, uscat, de o zi este factorul cel mai important — se prăjește și se rumenește în loc să se facă terci. GĂTEȘTE OUĂLE: încinge 1 lingură de ulei în wok la foc mare până lucește; toarnă ouăle bătute, lasă-le să se umfle 5 secunde, apoi amestecă-le în fulgi moi, abia legați, 30-40 de secunde; scoate-le pe o farfurie cât încă sunt ușor umede. RUMENEȘTE PROTEINELE: adaugă 1 lingură de ulei și creveții; sotează 60-90 de secunde până devin roz și abia opaci, adaugă char siu și amestecă 30 de secunde ca să se încălzească; mută-le pe farfuria cu ouă. AROME ȘI LEGUME: adaugă ultima lingură de ulei cu partea albă de ceapă verde și usturoiul; sotează 20 de secunde până devin aromate, apoi adaugă morcovul și mazărea și amestecă 90 de secunde până rămân crocante. PRĂJEȘTE OREZUL: dă focul la maximum, adaugă orezul și presează-l și întoarce-l pe wok-ul fierbinte, întinzându-l și răsturnându-l 2-3 minute până boabele sunt fierbinți, separate și ușor rumenite — vrei să le auzi trosnind. CONDIMENTEAZĂ: toarnă sosul de soia și vinul Shaoxing pe marginea wok-ului (nu pe orez) ca să sfârâie și să se caramelizeze, apoi amestecă să acopere tot; asezonează cu piper alb și sare. ADU TOTUL LAOLALTĂ: pune înapoi ouăle, creveții și char siu, adaugă partea verde de ceapă și amestecă 30-60 de secunde până totul e uniform și fierbinte. FINISEAZĂ: ia de pe foc, stropește cu uleiul de susan prăjit, un ultim amestec și servește imediat — orezul prăjit nu așteaptă pe nimeni.",
+    "en": "PREP EVERYTHING FIRST: fried rice cooks in minutes over high heat, so measure every ingredient and keep it within reach before the wok goes on — there is no time to chop once you start. BREAK UP THE RICE: with wet hands, rub the cold rice between your fingers to separate any clumps into individual grains; cold, dry, day-old rice is the single most important factor — it fries and toasts instead of turning to mush. COOK THE EGGS: heat 1 tbsp oil in a wok over high heat until shimmering; pour in the beaten eggs, let them puff 5 seconds, then scramble into soft, just-set curds, 30-40 seconds; tip onto a plate while still slightly wet. SEAR THE PROTEINS: add 1 tbsp oil and the shrimp; stir-fry 60-90 seconds until pink and just opaque, add the char siu and toss 30 seconds to warm; move to the egg plate. AROMATICS AND VEG: add the last 1 tbsp oil with the white spring-onion and garlic; stir-fry 20 seconds until fragrant, then add carrot and peas and toss 90 seconds until tender-crisp. FRY THE RICE: crank the heat to maximum, add the rice, and press-toss it against the hot wok, spreading and flipping for 2-3 minutes until the grains are hot, separate and lightly toasted — you want to hear them crackle. SEASON: drizzle the soy sauce and Shaoxing wine around the edge of the wok (not on the rice) so they sizzle and caramelise, then toss to coat; season with white pepper and salt. BRING IT TOGETHER: return the eggs, shrimp and char siu, add the green spring-onion tops, and toss 30-60 seconds until evenly mixed and piping hot. FINISH: off the heat, drizzle the toasted sesame oil, one last toss, and serve immediately — fried rice waits for no one.",
+    "es": "PREPARA TODO PRIMERO: el arroz frito se cocina en minutos a fuego alto, así que mide cada ingrediente y tenlo a mano antes de poner el wok — no hay tiempo de picar una vez que empiezas. SEPARA EL ARROZ: con las manos húmedas, frota el arroz frío entre los dedos para deshacer los grumos en granos sueltos; el arroz frío, seco y del día anterior es el factor más importante — se fríe y se tuesta en vez de volverse papilla. HAZ LOS HUEVOS: calienta 1 cucharada de aceite en el wok a fuego alto hasta que brille; echa los huevos batidos, déjalos inflar 5 segundos y revuélvelos en grumos suaves apenas cuajados, 30-40 segundos; pásalos a un plato cuando aún estén algo húmedos. SELLA LAS PROTEÍNAS: añade 1 cucharada de aceite y los camarones; saltea 60-90 segundos hasta que estén rosados y apenas opacos, añade el char siu y saltea 30 segundos para calentar; pásalos al plato de los huevos. AROMÁTICOS Y VERDURA: añade la última cucharada de aceite con la parte blanca de la cebolleta y el ajo; saltea 20 segundos hasta que aromen, luego añade la zanahoria y los guisantes y saltea 90 segundos hasta que queden al dente. FRÍE EL ARROZ: sube el fuego al máximo, añade el arroz y presiónalo y voltéalo contra el wok caliente, extendiéndolo y girándolo 2-3 minutos hasta que los granos estén calientes, sueltos y ligeramente tostados — quieres oírlos crepitar. SAZONA: vierte la salsa de soja y el vino de Shaoxing por el borde del wok (no sobre el arroz) para que chisporroteen y se caramelicen, luego mezcla; sazona con pimienta blanca y sal. ÚNELO TODO: devuelve los huevos, los camarones y el char siu, añade la parte verde de la cebolleta y saltea 30-60 segundos hasta que esté todo homogéneo y muy caliente. TERMINA: fuera del fuego, echa el aceite de sésamo tostado, una última vuelta y sirve enseguida — el arroz frito no espera a nadie.",
+    "fr": "TOUT PRÉPARER D'ABORD : le riz sauté cuit en quelques minutes à feu vif, alors mesurez chaque ingrédient et gardez-le à portée avant de mettre le wok — pas le temps de couper une fois lancé. DÉFAIRE LE RIZ : avec les mains humides, frottez le riz froid entre vos doigts pour défaire les amas en grains individuels; le riz froid, sec, de la veille est le facteur le plus important — il sauté et grille au lieu de tourner en bouillie. CUIRE LES ŒUFS : chauffez 1 cuillère à soupe d'huile dans le wok à feu vif jusqu'à ce qu'elle brille; versez les œufs battus, laissez-les gonfler 5 secondes, puis brouillez-les en petits caillots souples à peine pris, 30-40 secondes; débarrassez sur une assiette encore un peu humides. SAISIR LES PROTÉINES : ajoutez 1 cuillère à soupe d'huile et les crevettes; sautez 60-90 secondes jusqu'à ce qu'elles soient roses et juste opaques, ajoutez le char siu et sautez 30 secondes pour réchauffer; réservez avec les œufs. AROMATES ET LÉGUMES : ajoutez la dernière cuillère d'huile avec le blanc d'oignon nouveau et l'ail; sautez 20 secondes jusqu'aux arômes, puis ajoutez la carotte et les petits pois et sautez 90 secondes jusqu'à tendre-croquant. FAIRE SAUTER LE RIZ : montez le feu au maximum, ajoutez le riz et pressez-le et retournez-le contre le wok chaud, en l'étalant et le retournant 2-3 minutes jusqu'à ce que les grains soient chauds, détachés et légèrement grillés — vous devez les entendre crépiter. ASSAISONNER : versez la sauce soja et le vin de Shaoxing sur le bord du wok (pas sur le riz) pour qu'ils grésillent et caramélisent, puis mélangez; assaisonnez de poivre blanc et de sel. TOUT RÉUNIR : remettez les œufs, les crevettes et le char siu, ajoutez le vert d'oignon et sautez 30-60 secondes jusqu'à ce que tout soit homogène et brûlant. FINIR : hors du feu, versez l'huile de sésame grillé, un dernier tour et servez aussitôt — le riz sauté n'attend personne.",
+    "de": "ALLES ZUERST VORBEREITEN: Gebratener Reis gart in Minuten bei starker Hitze, also miss jede Zutat ab und halte sie griffbereit, bevor der Wok auf den Herd kommt — zum Schneiden bleibt keine Zeit, sobald es losgeht. DEN REIS TRENNEN: mit feuchten Händen den kalten Reis zwischen den Fingern reiben, um Klumpen in einzelne Körner zu lösen; kalter, trockener Reis vom Vortag ist der wichtigste Faktor — er brät und röstet, statt matschig zu werden. DIE EIER GAREN: 1 EL Öl im Wok bei starker Hitze erhitzen, bis es glänzt; die verquirlten Eier hineingießen, 5 Sekunden aufgehen lassen, dann in weiche, gerade gestockte Flocken rühren, 30-40 Sekunden; noch leicht feucht auf einen Teller geben. DIE PROTEINE ANBRATEN: 1 EL Öl und die Garnelen zugeben; 60-90 Sekunden anbraten, bis sie rosa und gerade undurchsichtig sind, das Char Siu zugeben und 30 Sekunden erwärmen; zu den Eiern geben. AROMATEN UND GEMÜSE: den letzten EL Öl mit dem weißen Teil der Frühlingszwiebel und dem Knoblauch zugeben; 20 Sekunden anbraten, bis es duftet, dann Karotte und Erbsen zugeben und 90 Sekunden schwenken, bis sie bissfest sind. DEN REIS BRATEN: die Hitze auf Maximum stellen, den Reis zugeben und gegen den heißen Wok drücken und wenden, 2-3 Minuten ausbreiten und umwälzen, bis die Körner heiß, locker und leicht geröstet sind — du sollst sie knistern hören. WÜRZEN: die Sojasauce und den Shaoxing-Wein am Rand des Woks (nicht auf den Reis) angießen, damit sie zischen und karamellisieren, dann durchschwenken; mit weißem Pfeffer und Salz würzen. ALLES VEREINEN: die Eier, Garnelen und das Char Siu zurückgeben, den grünen Teil der Frühlingszwiebel zugeben und 30-60 Sekunden schwenken, bis alles gleichmäßig und sehr heiß ist. ABSCHLUSS: vom Herd nehmen, das geröstete Sesamöl darüberträufeln, ein letztes Mal schwenken und sofort servieren — gebratener Reis wartet auf niemanden.",
+    "pt": "PREPARA TUDO PRIMEIRO: o arroz frito faz-se em minutos em lume forte, por isso mede cada ingrediente e deixa-o à mão antes de pôr o wok — não há tempo para cortar depois de começar. SOLTA O ARROZ: com as mãos húmidas, esfrega o arroz frio entre os dedos para desfazer os grumos em grãos soltos; o arroz frio, seco e do dia anterior é o fator mais importante — frita e tosta em vez de virar papa. FAZ OS OVOS: aquece 1 colher de sopa de óleo no wok em lume forte até brilhar; deita os ovos batidos, deixa-os inchar 5 segundos e mexe-os em flocos macios acabados de coalhar, 30-40 segundos; passa para um prato ainda um pouco húmidos. SELA AS PROTEÍNAS: junta 1 colher de sopa de óleo e o camarão; salteia 60-90 segundos até ficar rosado e apenas opaco, junta o char siu e salteia 30 segundos para aquecer; passa para o prato dos ovos. AROMÁTICOS E LEGUMES: junta a última colher de óleo com a parte branca da cebolinha e o alho; salteia 20 segundos até libertar aroma, depois junta a cenoura e as ervilhas e salteia 90 segundos até ficarem estaladiças. FRITA O ARROZ: põe o lume no máximo, junta o arroz e pressiona-o e vira-o contra o wok quente, espalhando e revolvendo 2-3 minutos até os grãos estarem quentes, soltos e levemente tostados — queres ouvi-los estalar. TEMPERA: verte o molho de soja e o vinho de Shaoxing pela borda do wok (não sobre o arroz) para chiarem e caramelizarem, depois envolve; tempera com pimenta branca e sal. JUNTA TUDO: devolve os ovos, o camarão e o char siu, junta a parte verde da cebolinha e salteia 30-60 segundos até ficar tudo uniforme e bem quente. FINALIZA: fora do lume, rega com o óleo de gergelim torrado, uma última envolvida e serve já — o arroz frito não espera por ninguém.",
+    "ru": "СНАЧАЛА ВСЁ ПОДГОТОВЬ: жареный рис готовится за минуты на сильном огне, поэтому отмерь каждый ингредиент и держи под рукой до того, как поставишь вок — резать во время готовки будет некогда. РАЗБЕРИ РИС: влажными руками разотри холодный рис между пальцами, разбивая комки на отдельные зёрна; холодный, сухой, вчерашний рис — самый важный фактор: он жарится и подрумянивается, а не превращается в кашу. ПРИГОТОВЬ ЯЙЦА: разогрей 1 ст. л. масла в воке на сильном огне до блеска; влей взбитые яйца, дай им вздуться 5 секунд, затем разбей в мягкие, едва схватившиеся хлопья за 30-40 секунд; переложи на тарелку, пока они ещё слегка влажные. ОБЖАРЬ БЕЛОК: добавь 1 ст. л. масла и креветки; жарь 60-90 секунд до розового и едва непрозрачного цвета, добавь чар сиу и помешивай 30 секунд, чтобы прогреть; переложи к яйцам. АРОМАТЫ И ОВОЩИ: добавь последнюю ложку масла с белой частью зелёного лука и чесноком; жарь 20 секунд до аромата, затем добавь морковь и горошек и помешивай 90 секунд до состояния аль денте. ЖАРЬ РИС: поставь огонь на максимум, добавь рис и прижимай и переворачивай его о горячий вок, распределяя и подбрасывая 2-3 минуты, пока зёрна не станут горячими, рассыпчатыми и слегка поджаренными — ты должен слышать, как они потрескивают. ПРИПРАВЬ: влей соевый соус и вино Шаосин по краю вока (не на рис), чтобы они зашипели и карамелизовались, затем перемешай; приправь белым перцем и солью. СОБЕРИ ВСЁ ВМЕСТЕ: верни яйца, креветки и чар сиу, добавь зелёную часть лука и помешивай 30-60 секунд, пока всё не станет однородным и очень горячим. ЗАВЕРШИ: сними с огня, сбрызни поджаренным кунжутным маслом, последний раз перемешай и сразу подавай — жареный рис никого не ждёт.",
+    "ar": "حضّر كل شيء أولًا: الأرز المقلي ينضج في دقائق على نار عالية، لذا قِس كل مكوّن واجعله في المتناول قبل وضع الووك — لا وقت للتقطيع بعد البدء. فكّك الأرز: بيدين مبلّلتين، افرك الأرز البارد بين أصابعك لتفكيك التكتّلات إلى حبات منفصلة؛ الأرز البارد الجاف من اليوم السابق هو العامل الأهم — يُقلى ويحمّر بدل أن يصير عجينة. اطبخ البيض: سخّن 1 م.ك زيت في الووك على نار عالية حتى يلمع؛ اسكب البيض المخفوق، اتركه ينتفخ 5 ثوانٍ، ثم حرّكه إلى كتل طرية بالكاد متماسكة، 30-40 ثانية؛ انقله إلى طبق وهو ما زال رطبًا قليلًا. حمّر البروتين: أضف 1 م.ك زيت والروبيان؛ قلّبه 60-90 ثانية حتى يصير ورديًا وبالكاد معتمًا، أضف التشار سيو وقلّب 30 ثانية ليسخن؛ انقله إلى طبق البيض. النكهات والخضار: أضف آخر ملعقة زيت مع الجزء الأبيض من البصل الأخضر والثوم؛ قلّب 20 ثانية حتى تفوح الرائحة، ثم أضف الجزر والبازلاء وقلّب 90 ثانية حتى يصيرا مقرمشين طريّين. اقلِ الأرز: ارفع النار إلى أقصاها، أضف الأرز واضغطه وقلّبه على الووك الساخن، افرده وقلّبه 2-3 دقائق حتى تصير الحبات ساخنة ومنفصلة ومحمّرة قليلًا — يجب أن تسمعها تُطقطق. تبّل: اسكب صلصة الصويا ونبيذ شاوشينغ على حافة الووك (لا على الأرز) ليُقرقعا ويتكرملا، ثم قلّب ليتغطى؛ تبّل بالفلفل الأبيض والملح. اجمع كل شيء: أعِد البيض والروبيان والتشار سيو، أضف الجزء الأخضر من البصل وقلّب 30-60 ثانية حتى يتجانس كل شيء ويسخن جدًا. الإنهاء: ارفعه عن النار، رشّ زيت السمسم المحمّص، قلبة أخيرة وقدّمه فورًا — الأرز المقلي لا ينتظر أحدًا.",
+    "zh": "先把一切备齐：炒饭在大火上几分钟就好，所以下锅前把每样材料都量好、放在手边——开炒后没时间再切。把米抓散：手蘸水，把凉米在指间搓开，把结块搓成一粒粒；隔夜的凉而干的米是最关键的一点——它会被炒香而不是变成糊。炒蛋：大火把锅里1汤匙油烧到发亮，倒入蛋液，让它鼓起5秒，再炒成柔软、刚凝的蛋块，30-40秒；在还略湿时盛出。煎炒荤料：加1汤匙油和虾，翻炒60-90秒至变粉、刚转不透明，加叉烧翻炒30秒热透，盛到蛋盘里。爆香与蔬菜：加最后1汤匙油、葱白和蒜，翻炒20秒出香，再下胡萝卜和青豆炒90秒至脆嫩。炒饭：把火开到最大，下米饭，用锅铲压散并翻拌，摊开翻面2-3分钟至米粒滚烫、松散、微微焦香——要能听到噼啪声。调味：沿锅边（不要浇在饭上）淋入生抽和绍兴酒，让它们嗤地一声焦化，再翻拌均匀；用白胡椒和盐调味。合到一起：把蛋、虾和叉烧倒回锅，加入葱绿，翻拌30-60秒至均匀滚烫。收尾：离火，淋上烤香的芝麻油，最后翻一下，立刻上桌——炒饭不等人。",
+    "ja": "まず全部そろえる：チャーハンは強火で数分で仕上がるので、鍋を火にかける前に材料をすべて計って手元に置く——始めてから切る時間はない。ご飯をほぐす：手を濡らし、冷やご飯を指でこすって塊を一粒ずつにほぐす；冷たく乾いた前日のご飯が一番大事——ベチャッとせず、炒まって香ばしくなる。卵を焼く：鍋に油大さじ1を強火で熱してきらめいたら溶き卵を流し入れ、5秒ふくらませてから、やわらかく半熟の塊に30-40秒でかき混ぜ、まだ少し湿ったうちに皿に取る。たんぱく質を焼く：油大さじ1とえびを加え、60-90秒炒めてピンクに色づき不透明になったらチャーシューを加えて30秒温め、卵の皿へ移す。香味と野菜：最後の油大さじ1に葱白とにんにくを加え、20秒炒めて香りを出し、にんじんとグリーンピースを加えて90秒、歯ごたえが残る程度に炒める。ご飯を炒める：火を最強にしてご飯を入れ、熱い鍋に押しつけては返し、2-3分広げてあおり、米粒が熱く、パラパラで、軽く香ばしくなるまで——パチパチ鳴る音がする。味つけ：しょうゆと紹興酒を鍋肌（ご飯の上ではなく）から回し入れてジュッと焦がし、混ぜてなじませ、白こしょうと塩で味を調える。ひとつにまとめる：卵、えび、チャーシューを戻し、葱の緑を加えて30-60秒、全体が均一で熱々になるまであおる。仕上げ：火を止めてごま油を回しかけ、最後にひとあおりしてすぐに供する——チャーハンは待ってくれない。",
+    "tr": "ÖNCE HER ŞEYİ HAZIRLA: kızarmış pirinç yüksek ateşte dakikalar içinde pişer, bu yüzden wok ateşe gitmeden her malzemeyi ölç ve elinin altında tut — başladıktan sonra doğramaya vakit yok. PİRİNCİ AYIR: ıslak ellerle soğuk pirinci parmaklarının arasında ovarak topakları tek tek tanelere ayır; soğuk, kuru, bir günlük pirinç en önemli etken — lapaya dönmek yerine kızarır ve kavrulur. YUMURTALARI PİŞİR: wokta 1 yemek kaşığı yağı yüksek ateşte parlayana dek ısıt; çırpılmış yumurtaları dök, 5 saniye kabarmasını bekle, sonra yumuşak, yeni tutmuş parçalar hâlinde 30-40 saniye karıştır; hâlâ hafif nemliyken tabağa al. PROTEİNLERİ MÜHÜRLE: 1 yemek kaşığı yağ ve karidesi ekle; 60-90 saniye, pembeleşip yeni matlaşana dek sotele, char siu ekleyip 30 saniye ısıtmak için karıştır; yumurta tabağına al. AROMATİKLER VE SEBZE: son 1 kaşık yağı beyaz taze soğan ve sarımsakla ekle; 20 saniye kokusu çıkana dek sotele, sonra havuç ve bezelyeyi ekleyip 90 saniye diri kalacak şekilde karıştır. PİRİNCİ KAVUR: ateşi sonuna aç, pirinci ekle ve sıcak woka bastırıp çevir, 2-3 dakika yayıp altüst ederek taneler sıcak, ayrı ayrı ve hafif kavrulmuş olana dek — çıtırtısını duymalısın. TATLANDIR: soya sosunu ve Shaoxing şarabını wokun kenarından (pirincin üstüne değil) gezdir ki cızırdayıp karamelize olsun, sonra karıştır; beyaz biber ve tuzla tatlandır. HEPSİNİ BİRLEŞTİR: yumurtayı, karidesi ve char siu'yu geri koy, yeşil soğanı ekle ve 30-60 saniye her şey eşit ve kızgın olana dek karıştır. BİTİR: ocaktan al, kavrulmuş susam yağını gezdir, son bir kez karıştır ve hemen servis et — kızarmış pirinç kimseyi beklemez.",
+    "it": "PREPARA TUTTO PRIMA: il riso saltato cuoce in pochi minuti a fiamma alta, quindi misura ogni ingrediente e tienilo a portata prima di mettere il wok — non c'è tempo di tagliare una volta iniziato. SGRANA IL RISO: con le mani umide, sfrega il riso freddo tra le dita per separare i grumi in chicchi singoli; il riso freddo, asciutto, del giorno prima è il fattore più importante — si salta e si tosta invece di diventare poltiglia. CUOCI LE UOVA: scalda 1 cucchiaio d'olio nel wok a fiamma alta finché brilla; versa le uova sbattute, lasciale gonfiare 5 secondi, poi strapazzale in fiocchi morbidi appena rappresi, 30-40 secondi; togli su un piatto ancora un po' umide. ROSOLA LE PROTEINE: aggiungi 1 cucchiaio d'olio e i gamberetti; salta 60-90 secondi finché rosati e appena opachi, aggiungi il char siu e salta 30 secondi per scaldare; sposta nel piatto delle uova. AROMI E VERDURE: aggiungi l'ultimo cucchiaio d'olio con la parte bianca del cipollotto e l'aglio; salta 20 secondi finché profuma, poi aggiungi carota e piselli e salta 90 secondi finché restano croccanti. SALTA IL RISO: alza la fiamma al massimo, aggiungi il riso e premilo e rigiralo contro il wok caldo, stendendolo e rivoltandolo 2-3 minuti finché i chicchi sono caldi, separati e leggermente tostati — devi sentirli crepitare. CONDISCI: versa la salsa di soia e il vino di Shaoxing sul bordo del wok (non sul riso) così sfrigolano e caramellano, poi mescola; condisci con pepe bianco e sale. UNISCI TUTTO: rimetti le uova, i gamberetti e il char siu, aggiungi la parte verde del cipollotto e salta 30-60 secondi finché tutto è uniforme e bollente. RIFINISCI: fuori dal fuoco, versa l'olio di sesamo tostato, un ultimo salto e servi subito — il riso saltato non aspetta nessuno.",
+    "ko": "먼저 모든 것을 준비하라: 볶음밥은 센 불에서 몇 분이면 되므로, 웍을 올리기 전에 모든 재료를 계량해 손 닿는 곳에 둔다 — 시작하면 썰 시간이 없다. 밥을 푼다: 젖은 손으로 식은 밥을 손가락 사이에서 비벼 덩어리를 한 알씩 흩는다; 차갑고 마른 전날 밥이 가장 중요한 요소다 — 질척해지지 않고 볶여서 고소해진다. 달걀을 익힌다: 웍에 기름 1큰술을 센 불로 반짝일 때까지 달군 뒤 푼 달걀을 붓고 5초간 부풀린 다음, 부드럽고 막 엉긴 덩어리로 30-40초 저어 아직 약간 촉촉할 때 접시에 덜어낸다. 단백질을 지진다: 기름 1큰술과 새우를 넣고 60-90초 볶아 분홍빛에 막 불투명해지면 차슈를 넣고 30초 데운 뒤 달걀 접시로 옮긴다. 향신 채소: 마지막 기름 1큰술에 대파 흰 부분과 마늘을 넣고 20초 볶아 향을 낸 뒤 당근과 완두콩을 넣고 90초, 아삭하게 볶는다. 밥을 볶는다: 불을 최대로 올리고 밥을 넣어 뜨거운 웍에 눌러가며 뒤집고, 2-3분 펼치고 뒤집어 밥알이 뜨겁고 고슬고슬하며 살짝 고소해질 때까지 — 탁탁 튀는 소리가 나야 한다. 간을 한다: 간장과 소흥주를 웍 가장자리로(밥 위가 아니라) 둘러 지글지글 카라멜화되게 한 뒤 고루 섞고, 흰 후추와 소금으로 간한다. 하나로 모은다: 달걀과 새우와 차슈를 되돌리고 대파 초록 부분을 넣어 30-60초, 전체가 고르고 뜨거워질 때까지 볶는다. 마무리: 불을 끄고 볶은 참기름을 두른 뒤 마지막으로 한 번 섞어 바로 낸다 — 볶음밥은 아무도 기다려 주지 않는다.",
+    "hi": "पहले सब कुछ तैयार करें: भुना चावल तेज़ आँच पर मिनटों में बनता है, इसलिए वॉक चढ़ाने से पहले हर सामग्री नाप कर पास रखें — शुरू करने के बाद काटने का समय नहीं। चावल अलग करें: गीले हाथों से ठंडे चावल को उँगलियों के बीच रगड़ कर गुठलियाँ अलग-अलग दानों में तोड़ें; ठंडा, सूखा, एक दिन पुराना चावल सबसे अहम बात है — यह भाप छोड़ने के बजाय भुनता और कुरकुराता है। अंडे पकाएँ: वॉक में 1 बड़ा चम्मच तेल तेज़ आँच पर चमकने तक गरम करें; फेंटे अंडे डालें, 5 सेकंड फूलने दें, फिर नरम, बस जमे हुए टुकड़ों में 30-40 सेकंड चलाएँ; हल्के गीले रहते हुए प्लेट में निकालें। प्रोटीन सेकें: 1 बड़ा चम्मच तेल और झींगे डालें; 60-90 सेकंड भूनें जब तक गुलाबी और बस अपारदर्शी हों, चार सियू डालकर 30 सेकंड गरम करें; अंडे की प्लेट में ले जाएँ। सुगंध और सब्ज़ी: आख़िरी 1 चम्मच तेल में हरे प्याज का सफ़ेद भाग और लहसुन डालें; 20 सेकंड खुशबू आने तक भूनें, फिर गाजर और मटर डालकर 90 सेकंड कुरकुरा रहने तक चलाएँ। चावल भूनें: आँच पूरी तेज़ करें, चावल डालें और गरम वॉक पर दबा-दबा कर पलटें, 2-3 मिनट फैलाते-पलटते रहें जब तक दाने गरम, अलग और हल्के भुने हों — इनकी चटचट सुनाई देनी चाहिए। मसाला डालें: सोया सॉस और शाओशिंग वाइन वॉक के किनारे से (चावल पर नहीं) डालें ताकि वे छनछनाएँ और कैरामेलाइज़ हों, फिर मिलाएँ; सफ़ेद मिर्च और नमक डालें। सब मिलाएँ: अंडे, झींगे और चार सियू लौटाएँ, हरे प्याज का हरा भाग डालें और 30-60 सेकंड तब तक चलाएँ जब तक सब एक-सा और खूब गरम हो। अंत: आँच से उतार कर भुना तिल का तेल डालें, आख़िरी बार मिलाएँ और तुरंत परोसें — भुना चावल किसी का इंतज़ार नहीं करता।"
+  },
+  "originText": {
+    "ro": "Orezul prăjit Yangzhou își ia numele de la orașul Yangzhou din provincia Jiangsu, inima bucătăriei Huaiyang — una dintre cele patru mari tradiții culinare ale Chinei, prețuită pentru rafinament și echilibru, nu pentru iuțeală. Spre deosebire de un orez prăjit oarecare, versiunea autentică este o compoziție gândită: orez rece de o zi prăjit bob cu bob, împletit cu ou moale, char siu dulce, creveți și un confetti de legume, asezonat ușor ca fiecare element să-și păstreze gustul propriu.\n\nPreparatul se sprijină pe tehnică, nu pe liste lungi de ingrediente. Focul mare și mișcarea continuă dau orezului prețuitul wok hei — „suflarea afumată a wok-ului\" — în timp ce orezul de o zi ține boabele uscate și separate. O rafinare clasică învelește fiecare bob în ou bătut pentru aspectul de „boabe aurii\"; metoda de casă folosită aici — ouăle amestecate separat și adăugate la final — este mai simplă și la fel de bună.",
+    "en": "Yangzhou fried rice takes its name from the city of Yangzhou in Jiangsu province, the heart of Huaiyang cuisine — one of China's four great culinary traditions, prized for refinement and balance rather than heat. Unlike a catch-all fried rice, the authentic version is a deliberate composition: cold day-old rice fried grain by grain, folded with soft egg, sweet char siu, shrimp and a confetti of vegetables, seasoned lightly so each element still tastes of itself.\n\nThe dish is built on technique, not long ingredient lists. High heat and constant motion give the rice its prized wok hei — the smoky \"breath of the wok\" — while day-old rice keeps the grains dry and separate. A classic refinement coats each grain in beaten egg for the \"golden grains\" look; the everyday home method here — scrambling the egg separately and folding it back in — is simpler and just as good.",
+    "es": "El arroz frito de Yangzhou toma su nombre de la ciudad de Yangzhou, en la provincia de Jiangsu, corazón de la cocina huaiyang — una de las cuatro grandes tradiciones culinarias de China, apreciada por su refinamiento y equilibrio más que por el picante. A diferencia de un arroz frito cualquiera, la versión auténtica es una composición pensada: arroz frío del día anterior salteado grano a grano, unido a huevo suave, char siu dulce, camarones y un confeti de verduras, sazonado con ligereza para que cada elemento conserve su sabor.\n\nEl plato se basa en la técnica, no en listas largas de ingredientes. El fuego alto y el movimiento constante dan al arroz su apreciado wok hei — el ahumado \"aliento del wok\" — mientras que el arroz del día anterior mantiene los granos secos y sueltos. Un refinamiento clásico cubre cada grano de huevo batido para el aspecto de \"granos dorados\"; el método casero de aquí — revolver el huevo aparte y unirlo al final — es más sencillo e igual de bueno.",
+    "fr": "Le riz sauté de Yangzhou tire son nom de la ville de Yangzhou, dans la province du Jiangsu, cœur de la cuisine huaiyang — l'une des quatre grandes traditions culinaires de Chine, prisée pour son raffinement et son équilibre plutôt que pour le piquant. Loin d'un riz sauté fourre-tout, la version authentique est une composition réfléchie : riz froid de la veille sauté grain par grain, mêlé d'œuf tendre, de char siu sucré, de crevettes et d'un confetti de légumes, assaisonné légèrement pour que chaque élément garde son goût.\n\nLe plat repose sur la technique, non sur de longues listes d'ingrédients. Le feu vif et le mouvement constant donnent au riz son précieux wok hei — le fumé \"souffle du wok\" — tandis que le riz de la veille garde les grains secs et détachés. Un raffinement classique enrobe chaque grain d'œuf battu pour l'aspect \"grains dorés\" ; la méthode maison utilisée ici — brouiller l'œuf à part et l'incorporer à la fin — est plus simple et tout aussi bonne.",
+    "de": "Der Yangzhou gebratene Reis trägt den Namen der Stadt Yangzhou in der Provinz Jiangsu, dem Herzen der Huaiyang-Küche — einer der vier großen kulinarischen Traditionen Chinas, geschätzt für Feinheit und Balance statt für Schärfe. Anders als ein beliebiger gebratener Reis ist die authentische Version eine bewusste Komposition: kalter Reis vom Vortag, Korn für Korn gebraten, verbunden mit weichem Ei, süßem Char Siu, Garnelen und einem Konfetti aus Gemüse, leicht gewürzt, damit jedes Element seinen eigenen Geschmack behält.\n\nDas Gericht baut auf Technik, nicht auf langen Zutatenlisten. Starke Hitze und ständige Bewegung geben dem Reis sein geschätztes Wok Hei — den rauchigen \"Atem des Woks\" — während der Reis vom Vortag die Körner trocken und locker hält. Eine klassische Verfeinerung umhüllt jedes Korn mit verquirltem Ei für den Look \"goldener Körner\"; die hier verwendete Alltagsmethode — das Ei separat zu rühren und zum Schluss unterzuheben — ist einfacher und ebenso gut.",
+    "pt": "O arroz frito de Yangzhou deve o nome à cidade de Yangzhou, na província de Jiangsu, coração da cozinha huaiyang — uma das quatro grandes tradições culinárias da China, valorizada pelo requinte e equilíbrio, não pelo picante. Ao contrário de um arroz frito qualquer, a versão autêntica é uma composição pensada: arroz frio do dia anterior salteado grão a grão, envolvido com ovo macio, char siu doce, camarão e um confete de legumes, temperado com leveza para cada elemento manter o seu sabor.\n\nO prato assenta na técnica, não em longas listas de ingredientes. O lume forte e o movimento constante dão ao arroz o cobiçado wok hei — o fumado \"sopro do wok\" — enquanto o arroz do dia anterior mantém os grãos secos e soltos. Um requinte clássico envolve cada grão em ovo batido para o aspeto de \"grãos dourados\"; o método caseiro aqui — mexer o ovo à parte e juntá-lo no fim — é mais simples e igualmente bom.",
+    "ru": "Жареный рис по-янчжоуски назван в честь города Янчжоу в провинции Цзянсу — сердца хуайянской кухни, одной из четырёх великих кулинарных традиций Китая, ценимой за утончённость и равновесие, а не за остроту. В отличие от «сборного» жареного риса, аутентичный вариант — продуманная композиция: холодный вчерашний рис, обжаренный зёрнышко за зёрнышком, соединённый с мягким яйцом, сладким чар сиу, креветками и конфетти из овощей, приправленный легко, чтобы каждый элемент сохранял свой вкус.\n\nБлюдо держится на технике, а не на длинных списках. Сильный огонь и постоянное движение придают рису ценный вок хей — дымный «вдох вока», — а вчерашний рис сохраняет зёрна сухими и рассыпчатыми. Классическое усовершенствование обволакивает каждое зерно взбитым яйцом ради вида «золотых зёрен»; домашний способ здесь — взбить яйцо отдельно и вмешать в конце — проще и не хуже.",
+    "ar": "يأخذ أرز يانغتشو المقلي اسمه من مدينة يانغتشو في مقاطعة جيانغسو، قلب مطبخ هوايانغ — أحد التقاليد الطهوية الأربعة الكبرى في الصين، المُقدَّر للرقيّ والتوازن لا للحرارة. وخلافًا لأي أرز مقلي عابر، النسخة الأصيلة تركيبة مدروسة: أرز بارد من اليوم السابق يُقلى حبة حبة، ممزوج ببيض طري وتشار سيو حلو المذاق وروبيان وقصاصات من الخضار، متبّل بخفّة ليحتفظ كل عنصر بطعمه.\n\nيقوم الطبق على التقنية لا على قوائم مكوّنات طويلة. النار العالية والحركة الدائمة تمنحان الأرز الـ«ووك هي» المرغوب — «نَفَس الووك» المدخّن — بينما يبقي أرز اليوم السابق الحبات جافة منفصلة. ثمة تحسين كلاسيكي يغلّف كل حبة ببيض مخفوق لمظهر «الحبات الذهبية»؛ أما الطريقة المنزلية هنا — خفق البيض على حدة وإضافته في النهاية — فأبسط وبالجودة نفسها.",
+    "zh": "扬州炒饭得名于江苏省的扬州，淮扬菜的中心——中国四大烹饪传统之一，讲求精致与平衡，而非辣味。与随手一炒的炒饭不同，正宗做法是一道用心的组合：隔夜凉饭一粒粒炒开，与嫩蛋、微甜的叉烧、虾仁和五彩缤纷的蔬菜拌在一起，调味清淡，让每样食材都保有本味。\n\n这道菜靠的是技法，而非长长的配料表。旺火与不停翻动赋予米饭珍贵的锅气——那烟火气的\"锅之呼吸\"——而隔夜饭让米粒干爽松散。有一种经典做法把每粒米都裹上蛋液，做出\"金裹银\"的效果；这里用的家常做法——把蛋单独炒好再拌回去——更简单，同样好吃。",
+    "ja": "揚州チャーハンは、江蘇省の揚州にちなんで名づけられた。淮揚料理の中心地であり、辛さよりも洗練と均衡を尊ぶ、中国四大料理のひとつだ。ありあわせのチャーハンとは違い、本格的な一皿は考え抜かれた構成——前日の冷やご飯を一粒ずつ炒め、やわらかい卵、ほんのり甘いチャーシュー、えび、彩り豊かな野菜と合わせ、薄めに味つけして、それぞれの素材の味を生かす。\n\nこの料理は長い材料表ではなく技術で成り立つ。強火と絶え間ない動きが、米に尊ばれる鑊気（ウォックヘイ）——香ばしい「鍋の息づかい」——を与え、前日のご飯が米粒を乾いてパラパラに保つ。一粒ずつ卵液をまとわせて「黄金の粒」に仕上げる古典的な技もあるが、ここで使う家庭のやり方——卵を別に炒めて後から混ぜ戻す——のほうが手軽で、同じくらいおいしい。",
+    "tr": "Yangzhou usulü kızarmış pirinç, adını Jiangsu eyaletindeki Yangzhou şehrinden alır; huaiyang mutfağının kalbi olan bu şehir, acıdan çok incelik ve dengeyle övülen Çin'in dört büyük mutfak geleneğinden birinin merkezidir. Gelişigüzel bir kızarmış pirinçten farklı olarak özgün hâli düşünülmüş bir bileşimdir: bir günlük soğuk pirinç tane tane kavrulur, yumuşak yumurta, tatlı char siu, karides ve rengârenk sebzelerle birleşir, her öğe kendi tadını korusun diye hafifçe tatlandırılır.\n\nYemek uzun malzeme listelerine değil, tekniğe dayanır. Yüksek ateş ve sürekli hareket, pirince kıymetli wok hei'yi — dumanlı \"wok nefesi\"ni — verirken, bir günlük pirinç taneleri kuru ve ayrı tutar. Klasik bir incelik her taneyi çırpılmış yumurtayla kaplayıp \"altın taneler\" görünümü verir; buradaki günlük ev yöntemi — yumurtayı ayrı pişirip sonradan karıştırmak — daha basit ve bir o kadar lezzetlidir.",
+    "it": "Il riso saltato di Yangzhou prende il nome dalla città di Yangzhou, nella provincia del Jiangsu, cuore della cucina huaiyang — una delle quattro grandi tradizioni culinarie della Cina, apprezzata per raffinatezza ed equilibrio più che per il piccante. A differenza di un riso saltato qualsiasi, la versione autentica è una composizione pensata: riso freddo del giorno prima saltato chicco per chicco, unito a uovo morbido, char siu dolce, gamberetti e un coriandolo di verdure, condito con leggerezza perché ogni elemento mantenga il proprio sapore.\n\nIl piatto si fonda sulla tecnica, non su lunghe liste di ingredienti. Fiamma alta e movimento costante danno al riso il pregiato wok hei — l'affumicato \"respiro del wok\" — mentre il riso del giorno prima tiene i chicchi asciutti e separati. Un raffinamento classico avvolge ogni chicco nell'uovo sbattuto per l'effetto \"chicchi dorati\"; il metodo casalingo usato qui — strapazzare l'uovo a parte e reincorporarlo alla fine — è più semplice e altrettanto buono.",
+    "ko": "양저우 볶음밥은 장쑤성의 도시 양저우에서 이름을 따왔다. 화이양 요리의 중심지인 이곳은 매움보다 세련미와 균형으로 이름난 중국 4대 요리 전통 중 하나다. 아무렇게나 만든 볶음밥과 달리 정통 방식은 의도된 구성이다 — 전날의 식은 밥을 한 알씩 볶아 부드러운 달걀, 살짝 단 차슈, 새우, 알록달록한 채소와 어우러지게 하고, 각 재료가 제 맛을 지키도록 간을 가볍게 한다.\n\n이 요리는 긴 재료 목록이 아니라 기술로 완성된다. 센 불과 끊임없는 움직임이 밥에 귀한 웍헤이 — 불맛 나는 \"웍의 숨결\" — 를 주고, 전날 밥이 밥알을 마르고 고슬고슬하게 지킨다. 밥알마다 달걀물을 입혀 \"황금 알\" 모양을 내는 고전 기법도 있지만, 여기서 쓰는 가정식 방법 — 달걀을 따로 볶아 나중에 섞는 방식 — 이 더 간단하고 못지않게 맛있다.",
+    "hi": "यांगझोउ भुना चावल का नाम जियांगसू प्रांत के यांगझोउ शहर से आया है, जो हुआयांग व्यंजन का केंद्र है — चीन की चार महान पाक परंपराओं में से एक, जो तीखेपन से अधिक शालीनता और संतुलन के लिए सराही जाती है। किसी भी साधारण भुने चावल के विपरीत, असली रूप एक सोची-समझी रचना है: एक दिन पुराना ठंडा चावल दाना-दाना भूना जाता है, नरम अंडे, हल्के मीठे चार सियू, झींगे और रंग-बिरंगी सब्ज़ियों के साथ मिलाया जाता है, हल्का मसाला ताकि हर तत्व अपना स्वाद बनाए रखे।\n\nयह व्यंजन लंबी सामग्री सूची पर नहीं, तकनीक पर टिका है। तेज़ आँच और लगातार चलाना चावल को बहुमूल्य वॉक हेइ देते हैं — धुएँदार \"वॉक की साँस\" — जबकि एक दिन पुराना चावल दानों को सूखा और अलग रखता है। एक क्लासिक तरीका हर दाने को फेंटे अंडे में लपेट कर \"सुनहरे दाने\" रूप देता है; यहाँ इस्तेमाल घरेलू तरीका — अंडे को अलग भून कर अंत में मिलाना — आसान और उतना ही अच्छा है।"
+  },
+  "meta": {
+    "time": 25,
+    "costRon": 24,
+    "tags": [
+      "quick",
+      "family",
+      "high-protein"
+    ],
+    "desc": {
+      "ro": "Orez prăjit Yangzhou — orez rece de o zi sotat cu ou, char siu, creveți și mazăre la foc mare. Gata în 25 min.",
+      "en": "Yangzhou fried rice — cold day-old rice tossed with egg, char siu, shrimp and peas over high heat. Ready in 25 min.",
+      "es": "Arroz frito de Yangzhou — arroz frío del día anterior salteado con huevo, char siu, camarones y guisantes a fuego alto. Listo en 25 min.",
+      "fr": "Riz sauté de Yangzhou — riz froid de la veille sauté avec œuf, char siu, crevettes et petits pois à feu vif. Prêt en 25 min.",
+      "de": "Yangzhou gebratener Reis — kalter Reis vom Vortag mit Ei, Char Siu, Garnelen und Erbsen bei starker Hitze. Fertig in 25 Min.",
+      "pt": "Arroz frito de Yangzhou — arroz frio do dia anterior salteado com ovo, char siu, camarão e ervilhas em lume forte. Pronto em 25 min.",
+      "ru": "Жареный рис по-янчжоуски — холодный вчерашний рис с яйцом, чар сиу, креветками и горошком на сильном огне. Готово за 25 мин.",
+      "ar": "أرز يانغتشو المقلي — أرز بارد من اليوم السابق مع البيض والتشار سيو والروبيان والبازلاء على نار عالية. جاهز في 25 دقيقة.",
+      "zh": "扬州炒饭——隔夜凉饭大火翻炒，配鸡蛋、叉烧、虾仁和青豆。25分钟完成。",
+      "ja": "揚州チャーハン——前日の冷やご飯を強火で炒め、卵、チャーシュー、えび、グリーンピースと。25分で完成。",
+      "tr": "Yangzhou usulü kızarmış pirinç — bir günlük soğuk pirinç yumurta, char siu, karides ve bezelyeyle yüksek ateşte. 25 dakikada hazır.",
+      "it": "Riso saltato di Yangzhou — riso freddo del giorno prima con uovo, char siu, gamberetti e piselli a fiamma alta. Pronto in 25 min.",
+      "ko": "양저우 볶음밥 — 전날 식은 밥을 달걀, 차슈, 새우, 완두콩과 센 불에 볶아. 25분 완성.",
+      "hi": "यांगझोउ भुना चावल — एक दिन पुराना ठंडा चावल अंडे, चार सियू, झींगे और मटर के साथ तेज़ आँच पर। 25 मिनट में तैयार।"
+    }
+  }
+}

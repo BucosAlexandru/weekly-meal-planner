@@ -4,19 +4,52 @@
   "tipType": "meat",
   "pairingsType": "asian",
   "origin": {
-    "ro": "China", "en": "China", "es": "China", "fr": "Chine", "de": "China", "pt": "China",
-    "ru": "Китай", "ar": "الصين", "zh": "中国", "ja": "中国", "tr": "Çin", "it": "Cina", "ko": "중국", "hi": "चीन"
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
   },
   "name": {
-    "ro": "Pui General Tso", "en": "General Tso's Chicken", "es": "Pollo del General Tso",
-    "fr": "Poulet du Général Tso", "de": "General-Tso-Hähnchen", "pt": "Frango do General Tso",
-    "ru": "Курица генерала Цо", "ar": "دجاج الجنرال تسو", "zh": "左宗棠鸡", "ja": "ジェネラルソウチキン",
-    "tr": "General Tso Tavuğu", "it": "Pollo del Generale Tso", "ko": "제너럴 쏘 치킨", "hi": "जनरल त्सो चिकन"
+    "ro": "Pui General Tso",
+    "en": "General Tso's Chicken",
+    "es": "Pollo del General Tso",
+    "fr": "Poulet du Général Tso",
+    "de": "General-Tso-Hähnchen",
+    "pt": "Frango do General Tso",
+    "ru": "Курица генерала Цо",
+    "ar": "دجاج الجنرال تسو",
+    "zh": "左宗棠鸡",
+    "ja": "ジェネラルソウチキン",
+    "tr": "General Tso Tavuğu",
+    "it": "Pollo del Generale Tso",
+    "ko": "제너럴 쏘 치킨",
+    "hi": "जनरल त्सो चिकन"
   },
   "category": {
-    "ro": "Fel principal", "en": "Main", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
-    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي", "zh": "主菜", "ja": "主菜",
-    "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+    "ro": "Fel principal",
+    "en": "Main",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "主菜",
+    "tr": "Ana yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
   },
   "ingredients": {
     "en": [
@@ -321,7 +354,10 @@
   "meta": {
     "time": 45,
     "costRon": 28,
-    "tags": ["spicy", "family"],
+    "tags": [
+      "spicy",
+      "family"
+    ],
     "desc": {
       "ro": "Pui General Tso — pui prăjit de două ori în glazură lucioasă dulce-acrișoară cu ardei uscați. Gata în 45 min.",
       "en": "General Tso's chicken — twice-fried chicken in a glossy sweet-and-sour glaze with dried chillies. Ready in 45 min.",
@@ -338,5 +374,315 @@
       "ko": "제너럴 쏘 치킨 — 두 번 튀긴 닭고기를 마른 고추 넣은 윤기 나는 새콤달콤 소스에. 45분 완성.",
       "hi": "जनरल त्सो चिकन — दो बार तला चिकन, सूखी मिर्च वाले चमकदार खट्टे-मीठे ग्लेज़ में। 45 मिनट में तैयार।"
     }
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🍗",
+        "t": "Prăjit de două ori",
+        "d": "Crustă care rezistă sub sos"
+      },
+      {
+        "icon": "🍯",
+        "t": "Dulce-acru-picant",
+        "d": "Glazură echilibrată cu ardei uscați"
+      },
+      {
+        "icon": "🥢",
+        "t": "Clasic de la pachet",
+        "d": "Favoritul occidental, mai bun acasă"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Iuțeală caldă",
+        "d": "Ardei înfloriți în ulei"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🍗",
+        "t": "Double-fried",
+        "d": "A shell that survives the sauce"
+      },
+      {
+        "icon": "🍯",
+        "t": "Sweet-sour-spicy",
+        "d": "Balanced glaze with dried chillies"
+      },
+      {
+        "icon": "🥢",
+        "t": "Takeout classic",
+        "d": "The Western favourite, better at home"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Warming heat",
+        "d": "Chillies bloomed in oil"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🍗",
+        "t": "Frito dos veces",
+        "d": "Una capa que aguanta bajo la salsa"
+      },
+      {
+        "icon": "🍯",
+        "t": "Agridulce y picante",
+        "d": "Glaseado equilibrado con chiles secos"
+      },
+      {
+        "icon": "🥢",
+        "t": "Clásico para llevar",
+        "d": "El favorito occidental, mejor en casa"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Calor que abraza",
+        "d": "Chiles avivados en aceite"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🍗",
+        "t": "Frit deux fois",
+        "d": "Une croûte qui tient sous la sauce"
+      },
+      {
+        "icon": "🍯",
+        "t": "Aigre-doux-piquant",
+        "d": "Glaçage équilibré aux piments séchés"
+      },
+      {
+        "icon": "🥢",
+        "t": "Classique à emporter",
+        "d": "Le favori occidental, meilleur maison"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Chaleur réconfortante",
+        "d": "Piments réveillés dans l'huile"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🍗",
+        "t": "Zweifach frittiert",
+        "d": "Eine Kruste, die unter der Sauce hält"
+      },
+      {
+        "icon": "🍯",
+        "t": "Süß-sauer-scharf",
+        "d": "Ausgewogene Glasur mit getrockneten Chilis"
+      },
+      {
+        "icon": "🥢",
+        "t": "Imbiss-Klassiker",
+        "d": "Der Westfavorit, zu Hause besser"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Wärmende Schärfe",
+        "d": "In Öl entfaltete Chilis"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🍗",
+        "t": "Frito duas vezes",
+        "d": "Uma casca que aguenta sob o molho"
+      },
+      {
+        "icon": "🍯",
+        "t": "Agridoce e picante",
+        "d": "Vidrado equilibrado com malaguetas secas"
+      },
+      {
+        "icon": "🥢",
+        "t": "Clássico de take-away",
+        "d": "O favorito ocidental, melhor em casa"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Calor reconfortante",
+        "d": "Malaguetas avivadas no óleo"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🍗",
+        "t": "Дважды обжарено",
+        "d": "Корочка, что держится под соусом"
+      },
+      {
+        "icon": "🍯",
+        "t": "Кисло-сладко-остро",
+        "d": "Сбалансированная глазурь с сушёным перцем"
+      },
+      {
+        "icon": "🥢",
+        "t": "Классика навынос",
+        "d": "Западный фаворит, дома вкуснее"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Согревающая острота",
+        "d": "Перец, раскрытый в масле"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🍗",
+        "t": "مقلي مرتين",
+        "d": "قشرة تصمد تحت الصلصة"
+      },
+      {
+        "icon": "🍯",
+        "t": "حلو حامض حار",
+        "d": "طلاء متوازن مع فلفل مجفّف"
+      },
+      {
+        "icon": "🥢",
+        "t": "كلاسيكية طلبات",
+        "d": "مفضّل الغرب، أفضل في البيت"
+      },
+      {
+        "icon": "🌶️",
+        "t": "حرارة دافئة",
+        "d": "فلفل مُفتّح في الزيت"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🍗",
+        "t": "二次油炸",
+        "d": "浇上酱汁仍酥脆的外壳"
+      },
+      {
+        "icon": "🍯",
+        "t": "酸甜微辣",
+        "d": "均衡芡汁配干辣椒"
+      },
+      {
+        "icon": "🥢",
+        "t": "外卖经典",
+        "d": "西方最爱，家里更好"
+      },
+      {
+        "icon": "🌶️",
+        "t": "暖心辣度",
+        "d": "辣椒在油里爆香"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🍗",
+        "t": "二度揚げ",
+        "d": "たれの下でも保つ衣"
+      },
+      {
+        "icon": "🍯",
+        "t": "甘酸っぱ辛い",
+        "d": "乾燥唐辛子入りの均衡したたれ"
+      },
+      {
+        "icon": "🥢",
+        "t": "テイクアウトの定番",
+        "d": "欧米の人気、家でこそ旨い"
+      },
+      {
+        "icon": "🌶️",
+        "t": "温まる辛さ",
+        "d": "油で開かせた唐辛子"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🍗",
+        "t": "İki kez kızartılmış",
+        "d": "Sosun altında dayanan bir kabuk"
+      },
+      {
+        "icon": "🍯",
+        "t": "Tatlı-ekşi-acı",
+        "d": "Kuru biberli dengeli sır"
+      },
+      {
+        "icon": "🥢",
+        "t": "Paket klasiği",
+        "d": "Batı'nın gözdesi, evde daha iyi"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Isıtan acılık",
+        "d": "Yağda açılmış biberler"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🍗",
+        "t": "Fritto due volte",
+        "d": "Una crosta che regge sotto la salsa"
+      },
+      {
+        "icon": "🍯",
+        "t": "Agrodolce e piccante",
+        "d": "Glassa equilibrata con peperoncini secchi"
+      },
+      {
+        "icon": "🥢",
+        "t": "Classico da asporto",
+        "d": "Il preferito occidentale, meglio a casa"
+      },
+      {
+        "icon": "🌶️",
+        "t": "Calore avvolgente",
+        "d": "Peperoncini risvegliati nell'olio"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🍗",
+        "t": "두 번 튀김",
+        "d": "소스 아래에서도 견디는 껍질"
+      },
+      {
+        "icon": "🍯",
+        "t": "새콤달콤매콤",
+        "d": "마른 고추 넣은 균형 잡힌 소스"
+      },
+      {
+        "icon": "🥢",
+        "t": "테이크아웃 고전",
+        "d": "서양의 인기, 집에서 더 낫다"
+      },
+      {
+        "icon": "🌶️",
+        "t": "따뜻한 매움",
+        "d": "기름에 향낸 고추"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🍗",
+        "t": "दो बार तला",
+        "d": "सॉस के नीचे टिकने वाली परत"
+      },
+      {
+        "icon": "🍯",
+        "t": "खट्टा-मीठा-तीखा",
+        "d": "सूखी मिर्च वाला संतुलित ग्लेज़"
+      },
+      {
+        "icon": "🥢",
+        "t": "टेकअवे क्लासिक",
+        "d": "पश्चिम का पसंदीदा, घर पर बेहतर"
+      },
+      {
+        "icon": "🌶️",
+        "t": "गर्माती तीक्ष्णता",
+        "d": "तेल में खिली मिर्च"
+      }
+    ]
   }
 }

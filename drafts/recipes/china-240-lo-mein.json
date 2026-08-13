@@ -4,17 +4,52 @@
   "tipType": "asian",
   "pairingsType": "asian",
   "origin": {
-    "ro": "China", "en": "China", "es": "China", "fr": "Chine", "de": "China", "pt": "China",
-    "ru": "Китай", "ar": "الصين", "zh": "中国", "ja": "中国", "tr": "Çin", "it": "Cina", "ko": "중국", "hi": "चीन"
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
   },
   "name": {
-    "ro": "Lo Mein", "en": "Lo Mein", "es": "Lo Mein", "fr": "Lo Mein", "de": "Lo Mein", "pt": "Lo Mein",
-    "ru": "Ло мейн", "ar": "لو مين", "zh": "捞面", "ja": "ローメン", "tr": "Lo Mein", "it": "Lo Mein", "ko": "로우 메인", "hi": "लो मेन"
+    "ro": "Lo Mein",
+    "en": "Lo Mein",
+    "es": "Lo Mein",
+    "fr": "Lo Mein",
+    "de": "Lo Mein",
+    "pt": "Lo Mein",
+    "ru": "Ло мейн",
+    "ar": "لو مين",
+    "zh": "捞面",
+    "ja": "ローメン",
+    "tr": "Lo Mein",
+    "it": "Lo Mein",
+    "ko": "로우 메인",
+    "hi": "लो मेन"
   },
   "category": {
-    "ro": "Fel principal", "en": "Main", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
-    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي", "zh": "主菜", "ja": "主菜",
-    "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+    "ro": "Fel principal",
+    "en": "Main",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "主菜",
+    "tr": "Ana yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
   },
   "ingredients": {
     "en": [
@@ -305,7 +340,10 @@
   "meta": {
     "time": 25,
     "costRon": 22,
-    "tags": ["quick", "family"],
+    "tags": [
+      "quick",
+      "family"
+    ],
     "desc": {
       "ro": "Lo Mein — tăiței elastici cu ou, sotați cu pui, legume crocante și sos savuros de soia și stridii. Gata în 25 min.",
       "en": "Lo mein — springy egg noodles tossed with chicken, crisp vegetables and a savoury soy-oyster sauce. Ready in 25 min.",
@@ -322,5 +360,315 @@
       "ko": "로우 메인 — 탱탱한 달걀면을 닭고기, 아삭한 채소, 감칠맛 나는 간장·굴소스와 볶아. 25분 완성.",
       "hi": "लो मेन — लचीले अंडे वाले नूडल चिकन, कुरकुरी सब्ज़ियों और स्वादिष्ट सोया-ऑयस्टर सॉस के साथ। 25 मिनट में तैयार।"
     }
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🍜",
+        "t": "Săltați, nu prăjiți",
+        "d": "Tăiței fierți, pliați într-un sos lucios"
+      },
+      {
+        "icon": "🥡",
+        "t": "Cantonez de la pachet",
+        "d": "Rapid, savuros, adaptabil"
+      },
+      {
+        "icon": "🔥",
+        "t": "Un wok fierbinte",
+        "d": "Totul gata în câteva minute"
+      },
+      {
+        "icon": "🥬",
+        "t": "Legume crocante",
+        "d": "Gătite doar cât să rămână crocante"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🍜",
+        "t": "Tossed, not fried",
+        "d": "Boiled noodles folded through a glossy sauce"
+      },
+      {
+        "icon": "🥡",
+        "t": "Cantonese takeaway",
+        "d": "Fast, savoury and adaptable"
+      },
+      {
+        "icon": "🔥",
+        "t": "One hot wok",
+        "d": "Everything cooked in minutes"
+      },
+      {
+        "icon": "🥬",
+        "t": "Crisp vegetables",
+        "d": "Cooked just to tender-crisp"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🍜",
+        "t": "Salteados, no fritos",
+        "d": "Fideos hervidos envueltos en salsa brillante"
+      },
+      {
+        "icon": "🥡",
+        "t": "Para llevar cantonés",
+        "d": "Rápido, sabroso y adaptable"
+      },
+      {
+        "icon": "🔥",
+        "t": "Un wok caliente",
+        "d": "Todo listo en minutos"
+      },
+      {
+        "icon": "🥬",
+        "t": "Verduras crujientes",
+        "d": "Cocinadas al punto justo"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🍜",
+        "t": "Sautées, pas frites",
+        "d": "Nouilles bouillies enrobées d'une sauce brillante"
+      },
+      {
+        "icon": "🥡",
+        "t": "À emporter cantonais",
+        "d": "Rapide, savoureux et adaptable"
+      },
+      {
+        "icon": "🔥",
+        "t": "Un wok chaud",
+        "d": "Tout cuit en quelques minutes"
+      },
+      {
+        "icon": "🥬",
+        "t": "Légumes croquants",
+        "d": "Cuits juste tendres-croquants"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🍜",
+        "t": "Geschwenkt, nicht gebraten",
+        "d": "Gekochte Nudeln in glänzender Sauce gewendet"
+      },
+      {
+        "icon": "🥡",
+        "t": "Kantonesischer Imbiss",
+        "d": "Schnell, herzhaft und anpassbar"
+      },
+      {
+        "icon": "🔥",
+        "t": "Ein heißer Wok",
+        "d": "Alles in Minuten gegart"
+      },
+      {
+        "icon": "🥬",
+        "t": "Knackiges Gemüse",
+        "d": "Gerade bissfest gegart"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🍜",
+        "t": "Saltados, não fritos",
+        "d": "Noodles cozidos envolvidos em molho brilhante"
+      },
+      {
+        "icon": "🥡",
+        "t": "Take-away cantonês",
+        "d": "Rápido, saboroso e adaptável"
+      },
+      {
+        "icon": "🔥",
+        "t": "Um wok quente",
+        "d": "Tudo pronto em minutos"
+      },
+      {
+        "icon": "🥬",
+        "t": "Legumes estaladiços",
+        "d": "Cozidos no ponto certo"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🍜",
+        "t": "Перемешанные, не жареные",
+        "d": "Отварная лапша в глянцевом соусе"
+      },
+      {
+        "icon": "🥡",
+        "t": "Кантонский стрит-фуд",
+        "d": "Быстро, насыщенно, гибко"
+      },
+      {
+        "icon": "🔥",
+        "t": "Один горячий вок",
+        "d": "Всё готово за минуты"
+      },
+      {
+        "icon": "🥬",
+        "t": "Хрустящие овощи",
+        "d": "Приготовлены до аль денте"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🍜",
+        "t": "مُقلّبة لا مقليّة",
+        "d": "نودلز مسلوقة مطويّة في صلصة لامعة"
+      },
+      {
+        "icon": "🥡",
+        "t": "طلبات كانتونية",
+        "d": "سريع وشهي وقابل للتكيّف"
+      },
+      {
+        "icon": "🔥",
+        "t": "ووك ساخن واحد",
+        "d": "كل شيء يجهز في دقائق"
+      },
+      {
+        "icon": "🥬",
+        "t": "خضار مقرمشة",
+        "d": "مطبوخة حتى القرمشة الطريّة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🍜",
+        "t": "是拌不是炸",
+        "d": "煮好的面裹上油亮酱汁"
+      },
+      {
+        "icon": "🥡",
+        "t": "粤式外卖",
+        "d": "快手、咸香、百搭"
+      },
+      {
+        "icon": "🔥",
+        "t": "一口热锅",
+        "d": "几分钟全部搞定"
+      },
+      {
+        "icon": "🥬",
+        "t": "脆爽蔬菜",
+        "d": "炒到脆嫩刚好"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🍜",
+        "t": "炒めず和える",
+        "d": "ゆで麺をつやのあるたれで和える"
+      },
+      {
+        "icon": "🥡",
+        "t": "広東のテイクアウト",
+        "d": "手早く、うま味、応用自在"
+      },
+      {
+        "icon": "🔥",
+        "t": "熱い鍋ひとつ",
+        "d": "数分で全部仕上がる"
+      },
+      {
+        "icon": "🥬",
+        "t": "シャキッと野菜",
+        "d": "歯ごたえを残して炒める"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🍜",
+        "t": "Harmanlanmış, kızarmamış",
+        "d": "Haşlanmış erişte parlak sosa sarılır"
+      },
+      {
+        "icon": "🥡",
+        "t": "Kanton paket yemeği",
+        "d": "Hızlı, lezzetli ve uyarlanabilir"
+      },
+      {
+        "icon": "🔥",
+        "t": "Tek sıcak wok",
+        "d": "Her şey dakikalar içinde"
+      },
+      {
+        "icon": "🥬",
+        "t": "Gevrek sebzeler",
+        "d": "Tam diri kalacak kadar pişmiş"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🍜",
+        "t": "Saltati, non fritti",
+        "d": "Noodles lessati avvolti in salsa lucida"
+      },
+      {
+        "icon": "🥡",
+        "t": "Da asporto cantonese",
+        "d": "Veloce, saporito e adattabile"
+      },
+      {
+        "icon": "🔥",
+        "t": "Un wok caldo",
+        "d": "Tutto pronto in pochi minuti"
+      },
+      {
+        "icon": "🥬",
+        "t": "Verdure croccanti",
+        "d": "Cotte al punto giusto"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🍜",
+        "t": "볶지 않고 버무린다",
+        "d": "삶은 면을 윤기 나는 소스에 버무려"
+      },
+      {
+        "icon": "🥡",
+        "t": "광둥식 포장",
+        "d": "빠르고 감칠맛 나고 응용 자유"
+      },
+      {
+        "icon": "🔥",
+        "t": "뜨거운 웍 하나",
+        "d": "몇 분이면 다 된다"
+      },
+      {
+        "icon": "🥬",
+        "t": "아삭한 채소",
+        "d": "아삭하게만 볶아"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🍜",
+        "t": "मिलाए, तले नहीं",
+        "d": "उबले नूडल चमकदार सॉस में लिपटे"
+      },
+      {
+        "icon": "🥡",
+        "t": "कैंटोनी टेकअवे",
+        "d": "तेज़, स्वादिष्ट और लचीला"
+      },
+      {
+        "icon": "🔥",
+        "t": "एक गरम वॉक",
+        "d": "सब कुछ मिनटों में"
+      },
+      {
+        "icon": "🥬",
+        "t": "कुरकुरी सब्ज़ियाँ",
+        "d": "बस कुरकुरी रहने तक पकी"
+      }
+    ]
   }
 }

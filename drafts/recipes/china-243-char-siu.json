@@ -4,17 +4,52 @@
   "tipType": "meat",
   "pairingsType": "asian",
   "origin": {
-    "ro": "China", "en": "China", "es": "China", "fr": "Chine", "de": "China", "pt": "China",
-    "ru": "Китай", "ar": "الصين", "zh": "中国", "ja": "中国", "tr": "Çin", "it": "Cina", "ko": "중국", "hi": "चीन"
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
   },
   "name": {
-    "ro": "Char Siu", "en": "Char Siu", "es": "Char Siu", "fr": "Char Siu", "de": "Char Siu", "pt": "Char Siu",
-    "ru": "Чар сиу", "ar": "تشار سيو", "zh": "叉烧", "ja": "チャーシュー", "tr": "Char Siu", "it": "Char Siu", "ko": "차슈", "hi": "चार सियू"
+    "ro": "Char Siu",
+    "en": "Char Siu",
+    "es": "Char Siu",
+    "fr": "Char Siu",
+    "de": "Char Siu",
+    "pt": "Char Siu",
+    "ru": "Чар сиу",
+    "ar": "تشار سيو",
+    "zh": "叉烧",
+    "ja": "チャーシュー",
+    "tr": "Char Siu",
+    "it": "Char Siu",
+    "ko": "차슈",
+    "hi": "चार सियू"
   },
   "category": {
-    "ro": "Fel principal", "en": "Main", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
-    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي", "zh": "主菜", "ja": "主菜",
-    "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+    "ro": "Fel principal",
+    "en": "Main",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "主菜",
+    "tr": "Ana yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
   },
   "ingredients": {
     "en": [
@@ -263,7 +298,10 @@
   "meta": {
     "time": 60,
     "costRon": 30,
-    "tags": ["family", "high-protein"],
+    "tags": [
+      "family",
+      "high-protein"
+    ],
     "desc": {
       "ro": "Char siu — porc chinezesc la cuptor, glazurat cu hoisin, miere și cinci arome, cu margini caramelizate. Gata în 60 min (plus marinare).",
       "en": "Char siu — oven-roasted Chinese barbecue pork glazed with hoisin, honey and five-spice, with caramelised edges. Ready in 60 min (plus marinating).",
@@ -280,5 +318,315 @@
       "ko": "차슈 — 오븐에 구운 중국식 바비큐 돼지고기, 하이신·꿀·오향으로 윤을 내고 가장자리는 캐러멜화. 60분 완성(재움 시간 별도).",
       "hi": "चार सियू — ओवन में भुना चीनी बारबेक्यू सूअर, होइसिन, शहद और पाँच-मसाले से ग्लेज़, कैरामलाइज़ किनारों के साथ। 60 मिनट में तैयार (मैरिनेट अलग से)।"
     }
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🍖",
+        "t": "Porc la grătar",
+        "d": "Porc cantonez roșu și lucios"
+      },
+      {
+        "icon": "🍯",
+        "t": "Glazură de maltoză",
+        "d": "Margini lipicioase, caramelizate, ușor arse"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Marinare lungă",
+        "d": "Aromă adâncă din odihna peste noapte"
+      },
+      {
+        "icon": "🍚",
+        "t": "Nesfârșit de util",
+        "d": "Pe orez, în tăiței sau într-o chiflă"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🍖",
+        "t": "BBQ pork",
+        "d": "Glossy red Cantonese roast pork"
+      },
+      {
+        "icon": "🍯",
+        "t": "Maltose glaze",
+        "d": "Sticky, caramelised, faintly charred edges"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Long marinade",
+        "d": "Deep flavour from an overnight rest"
+      },
+      {
+        "icon": "🍚",
+        "t": "Endlessly useful",
+        "d": "Over rice, in noodles or in a bun"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🍖",
+        "t": "Cerdo a la barbacoa",
+        "d": "Cerdo asado cantonés rojo y brillante"
+      },
+      {
+        "icon": "🍯",
+        "t": "Glaseado de maltosa",
+        "d": "Bordes pegajosos, caramelizados, algo chamuscados"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Adobo largo",
+        "d": "Sabor profundo del reposo nocturno"
+      },
+      {
+        "icon": "🍚",
+        "t": "Infinitamente útil",
+        "d": "Sobre arroz, en fideos o en un bollo"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🍖",
+        "t": "Porc barbecue",
+        "d": "Porc rôti cantonais rouge et brillant"
+      },
+      {
+        "icon": "🍯",
+        "t": "Glaçage au maltose",
+        "d": "Bords collants, caramélisés, un peu brûlés"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Longue marinade",
+        "d": "Saveur profonde d'un repos d'une nuit"
+      },
+      {
+        "icon": "🍚",
+        "t": "Infiniment utile",
+        "d": "Sur du riz, en nouilles ou dans un pain"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🍖",
+        "t": "BBQ-Schwein",
+        "d": "Glänzend rotes kantonesisches Bratenschwein"
+      },
+      {
+        "icon": "🍯",
+        "t": "Malzzucker-Glasur",
+        "d": "Klebrige, karamellisierte, leicht verkohlte Ränder"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Lange Marinade",
+        "d": "Tiefer Geschmack durch nächtliches Ruhen"
+      },
+      {
+        "icon": "🍚",
+        "t": "Endlos vielseitig",
+        "d": "Auf Reis, in Nudeln oder im Brötchen"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🍖",
+        "t": "Porco de churrasco",
+        "d": "Porco assado cantonês vermelho e brilhante"
+      },
+      {
+        "icon": "🍯",
+        "t": "Glaceado de maltose",
+        "d": "Bordas pegajosas, caramelizadas, levemente queimadas"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Marinada longa",
+        "d": "Sabor profundo do repouso de um dia"
+      },
+      {
+        "icon": "🍚",
+        "t": "Infinitamente útil",
+        "d": "Sobre arroz, em noodles ou num pão"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🍖",
+        "t": "Свинина барбекю",
+        "d": "Глянцевая красная свинина по-кантонски"
+      },
+      {
+        "icon": "🍯",
+        "t": "Мальтозная глазурь",
+        "d": "Липкие, карамельные, чуть обугленные края"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Долгий маринад",
+        "d": "Глубокий вкус после ночной выдержки"
+      },
+      {
+        "icon": "🍚",
+        "t": "Бесконечно универсальна",
+        "d": "На рисе, в лапше или в булочке"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🍖",
+        "t": "خنزير مشوي",
+        "d": "خنزير كانتوني أحمر لامع"
+      },
+      {
+        "icon": "🍯",
+        "t": "طلاء مالتوز",
+        "d": "حواف لزجة متكرملة محروقة قليلًا"
+      },
+      {
+        "icon": "⏲️",
+        "t": "تتبيلة طويلة",
+        "d": "نكهة عميقة من الراحة ليلة كاملة"
+      },
+      {
+        "icon": "🍚",
+        "t": "مفيد بلا حدود",
+        "d": "على الأرز أو مع النودلز أو في خبزة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🍖",
+        "t": "烧烤猪肉",
+        "d": "油亮泛红的粤式烧肉"
+      },
+      {
+        "icon": "🍯",
+        "t": "麦芽糖上光",
+        "d": "黏亮、焦糖化、边缘微焦"
+      },
+      {
+        "icon": "⏲️",
+        "t": "长时间腌制",
+        "d": "过夜静置带来深味"
+      },
+      {
+        "icon": "🍚",
+        "t": "用途无穷",
+        "d": "盖饭、拌面或夹馒头"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🍖",
+        "t": "焼き豚",
+        "d": "つやのある赤い広東のロースト"
+      },
+      {
+        "icon": "🍯",
+        "t": "麦芽糖の照り",
+        "d": "べたつき、カラメル、ほのかに焦げた縁"
+      },
+      {
+        "icon": "⏲️",
+        "t": "長い漬け込み",
+        "d": "一晩寝かせて生まれる深い味"
+      },
+      {
+        "icon": "🍚",
+        "t": "使い道は無限",
+        "d": "ご飯に、麺に、パンに"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🍖",
+        "t": "Barbekü domuz",
+        "d": "Parlak kırmızı Kanton kızartması"
+      },
+      {
+        "icon": "🍯",
+        "t": "Maltoz sırı",
+        "d": "Yapışkan, karamelize, hafif yanık kenarlar"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Uzun marine",
+        "d": "Bir gecelik dinlenmeden derin lezzet"
+      },
+      {
+        "icon": "🍚",
+        "t": "Sonsuz kullanışlı",
+        "d": "Pilav üstünde, erişte içinde ya da ekmekte"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🍖",
+        "t": "Maiale barbecue",
+        "d": "Maiale arrosto cantonese rosso e lucido"
+      },
+      {
+        "icon": "🍯",
+        "t": "Glassa al maltosio",
+        "d": "Bordi appiccicosi, caramellati, un po' bruciati"
+      },
+      {
+        "icon": "⏲️",
+        "t": "Lunga marinatura",
+        "d": "Sapore profondo dal riposo notturno"
+      },
+      {
+        "icon": "🍚",
+        "t": "Infinitamente utile",
+        "d": "Su riso, nei noodles o in un panino"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🍖",
+        "t": "바비큐 돼지고기",
+        "d": "윤기 나는 붉은 광둥식 구이"
+      },
+      {
+        "icon": "🍯",
+        "t": "맥아당 윤기",
+        "d": "끈적하고 캐러멜화된, 살짝 탄 가장자리"
+      },
+      {
+        "icon": "⏲️",
+        "t": "긴 재움",
+        "d": "하룻밤 재워 얻는 깊은 맛"
+      },
+      {
+        "icon": "🍚",
+        "t": "쓰임새 무궁",
+        "d": "밥에, 국수에, 빵에"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🍖",
+        "t": "बारबेक्यू सूअर",
+        "d": "चमकदार लाल कैंटोनी रोस्ट"
+      },
+      {
+        "icon": "🍯",
+        "t": "माल्टोज़ ग्लेज़",
+        "d": "चिपचिपे, कैरामलाइज़, हल्के जले किनारे"
+      },
+      {
+        "icon": "⏲️",
+        "t": "लंबा मैरिनेट",
+        "d": "रातभर के विश्राम से गहरा स्वाद"
+      },
+      {
+        "icon": "🍚",
+        "t": "असीम उपयोगी",
+        "d": "चावल पर, नूडल में या बन में"
+      }
+    ]
   }
 }

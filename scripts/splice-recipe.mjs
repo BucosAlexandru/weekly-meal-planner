@@ -24,6 +24,10 @@ const q = s => JSON.stringify(s);
 const langObj = (o, arr=false) =>
   '{\n' + ORDER.map(l => `      ${l}: ${arr ? JSON.stringify(o[l]) : q(o[l])}`).join(',\n') + '\n    }';
 
+const fcLine = draft.featureCards
+  ? '\n    featureCards: {\n' + ORDER.map(l => `      ${l}: ${JSON.stringify(draft.featureCards[l])}`).join(',\n') + '\n    },'
+  : '';
+
 const lit = `  {
     id: ${id},
     servings: ${servings},
@@ -31,7 +35,7 @@ const lit = `  {
     pairingsType: ${q(pairingsType)},
     origin: ${langObj(origin)},
     name: ${langObj(name)},
-    category: ${langObj(category)},
+    category: ${langObj(category)},${fcLine}
     ingredients: ${langObj(ingredients, true)},
     howIsMade: ${langObj(howIsMade)},
     originText: ${langObj(originText)}

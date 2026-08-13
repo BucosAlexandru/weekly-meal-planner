@@ -4,17 +4,52 @@
   "tipType": "soup",
   "pairingsType": "soup",
   "origin": {
-    "ro": "China", "en": "China", "es": "China", "fr": "Chine", "de": "China", "pt": "China",
-    "ru": "Китай", "ar": "الصين", "zh": "中国", "ja": "中国", "tr": "Çin", "it": "Cina", "ko": "중국", "hi": "चीन"
+    "ro": "China",
+    "en": "China",
+    "es": "China",
+    "fr": "Chine",
+    "de": "China",
+    "pt": "China",
+    "ru": "Китай",
+    "ar": "الصين",
+    "zh": "中国",
+    "ja": "中国",
+    "tr": "Çin",
+    "it": "Cina",
+    "ko": "중국",
+    "hi": "चीन"
   },
   "name": {
-    "ro": "Supă acră-picantă", "en": "Hot and Sour Soup", "es": "Sopa agripicante", "fr": "Soupe aigre-piquante",
-    "de": "Sauer-scharfe Suppe", "pt": "Sopa agripicante", "ru": "Кисло-острый суп", "ar": "الشوربة الحارّة الحامضة",
-    "zh": "酸辣汤", "ja": "酸辣湯（サンラータン）", "tr": "Ekşi-acı çorba", "it": "Zuppa agropiccante", "ko": "쏸라탕", "hi": "हॉट एंड सॉर सूप"
+    "ro": "Supă acră-picantă",
+    "en": "Hot and Sour Soup",
+    "es": "Sopa agripicante",
+    "fr": "Soupe aigre-piquante",
+    "de": "Sauer-scharfe Suppe",
+    "pt": "Sopa agripicante",
+    "ru": "Кисло-острый суп",
+    "ar": "الشوربة الحارّة الحامضة",
+    "zh": "酸辣汤",
+    "ja": "酸辣湯（サンラータン）",
+    "tr": "Ekşi-acı çorba",
+    "it": "Zuppa agropiccante",
+    "ko": "쏸라탕",
+    "hi": "हॉट एंड सॉर सूप"
   },
   "category": {
-    "ro": "Supă", "en": "Soup", "es": "Sopa", "fr": "Soupe", "de": "Suppe", "pt": "Sopa",
-    "ru": "Суп", "ar": "شوربة", "zh": "汤", "ja": "スープ", "tr": "Çorba", "it": "Zuppa", "ko": "수프", "hi": "सूप"
+    "ro": "Supă",
+    "en": "Soup",
+    "es": "Sopa",
+    "fr": "Soupe",
+    "de": "Suppe",
+    "pt": "Sopa",
+    "ru": "Суп",
+    "ar": "شوربة",
+    "zh": "汤",
+    "ja": "スープ",
+    "tr": "Çorba",
+    "it": "Zuppa",
+    "ko": "수프",
+    "hi": "सूप"
   },
   "ingredients": {
     "en": [
@@ -305,7 +340,10 @@
   "meta": {
     "time": 35,
     "costRon": 18,
-    "tags": ["family", "light"],
+    "tags": [
+      "family",
+      "light"
+    ],
     "desc": {
       "ro": "Supă acră-picantă — tofu, ciuperci și fire de ou într-un bulion cu oțet negru și mult piper alb. Gata în 35 min.",
       "en": "Hot and sour soup — tofu, mushrooms and egg ribbons in a black-vinegar broth with plenty of white pepper. Ready in 35 min.",
@@ -322,5 +360,315 @@
       "ko": "쏸라탕 — 두부, 버섯, 달걀 실을 흑초 국물에 흰 후추 듬뿍 넣어. 35분 완성.",
       "hi": "हॉट एंड सॉर सूप — टोफू, मशरूम और अंडे की लच्छियाँ, काले सिरके के शोरबे में ढेर सारी सफ़ेद मिर्च के साथ। 35 मिनट में तैयार।"
     }
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🌶️",
+        "t": "Piperată, nu de foc",
+        "d": "Iuțeală de piper alb care limpezește"
+      },
+      {
+        "icon": "🍋",
+        "t": "Acru de oțet negru",
+        "d": "Aciditate tonică, tăioasă"
+      },
+      {
+        "icon": "🥚",
+        "t": "Fire de ou mătăsoase",
+        "d": "Turnate luate de pe foc, fire fine"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu și ciuperci",
+        "d": "Corp pământiu, texturi satisfăcătoare"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🌶️",
+        "t": "Peppery, not fiery",
+        "d": "White-pepper heat that clears the head"
+      },
+      {
+        "icon": "🍋",
+        "t": "Black-vinegar tang",
+        "d": "Sharp, bracing sourness"
+      },
+      {
+        "icon": "🥚",
+        "t": "Silky egg ribbons",
+        "d": "Poured off the heat into fine threads"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu & mushrooms",
+        "d": "Earthy body, satisfying textures"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🌶️",
+        "t": "De pimienta, no de fuego",
+        "d": "Calor de pimienta blanca que despeja"
+      },
+      {
+        "icon": "🍋",
+        "t": "Acidez de vinagre negro",
+        "d": "Ácido punzante y vigorizante"
+      },
+      {
+        "icon": "🥚",
+        "t": "Hebras de huevo sedosas",
+        "d": "Vertidas fuera del fuego, hilos finos"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu y setas",
+        "d": "Cuerpo terroso, texturas ricas"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🌶️",
+        "t": "Poivrée, pas brûlante",
+        "d": "Chaleur de poivre blanc qui dégage"
+      },
+      {
+        "icon": "🍋",
+        "t": "Acidité de vinaigre noir",
+        "d": "Une aigreur vive et tonique"
+      },
+      {
+        "icon": "🥚",
+        "t": "Rubans d'œuf soyeux",
+        "d": "Versés hors du feu en fils fins"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu et champignons",
+        "d": "Corps terreux, textures généreuses"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🌶️",
+        "t": "Pfeffrig, nicht feurig",
+        "d": "Weißer-Pfeffer-Schärfe, die den Kopf frei macht"
+      },
+      {
+        "icon": "🍋",
+        "t": "Schwarzessig-Säure",
+        "d": "Scharfe, belebende Säure"
+      },
+      {
+        "icon": "🥚",
+        "t": "Seidige Eierfäden",
+        "d": "Vom Herd in feine Fäden gegossen"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu & Pilze",
+        "d": "Erdiger Körper, reiche Texturen"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🌶️",
+        "t": "Apimentada, não de fogo",
+        "d": "Calor de pimenta branca que desanuvia"
+      },
+      {
+        "icon": "🍋",
+        "t": "Acidez de vinagre preto",
+        "d": "Uma acidez viva e revigorante"
+      },
+      {
+        "icon": "🥚",
+        "t": "Fios de ovo sedosos",
+        "d": "Vertidos fora do lume em fios finos"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu e cogumelos",
+        "d": "Corpo terroso, texturas ricas"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🌶️",
+        "t": "Перечный, не огненный",
+        "d": "Острота белого перца, что проясняет"
+      },
+      {
+        "icon": "🍋",
+        "t": "Кислота чёрного уксуса",
+        "d": "Резкая, бодрящая кислинка"
+      },
+      {
+        "icon": "🥚",
+        "t": "Шелковистые нити яйца",
+        "d": "Влиты при выключенном огне тонкими нитями"
+      },
+      {
+        "icon": "🍄",
+        "t": "Тофу и грибы",
+        "d": "Землистое тело, приятные текстуры"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🌶️",
+        "t": "فلفلية لا لاهبة",
+        "d": "حرارة فلفل أبيض تفتح الرأس"
+      },
+      {
+        "icon": "🍋",
+        "t": "حموضة الخل الأسود",
+        "d": "حموضة حادّة منعشة"
+      },
+      {
+        "icon": "🥚",
+        "t": "خيوط بيض حريرية",
+        "d": "تُسكب بعد إطفاء النار خيوطًا رفيعة"
+      },
+      {
+        "icon": "🍄",
+        "t": "توفو وفطر",
+        "d": "قوام ترابي وملمس مُرضٍ"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🌶️",
+        "t": "胡椒辣，不灼口",
+        "d": "白胡椒的辣，通头暖身"
+      },
+      {
+        "icon": "🍋",
+        "t": "黑醋之酸",
+        "d": "爽利提神的酸"
+      },
+      {
+        "icon": "🥚",
+        "t": "丝滑蛋花",
+        "d": "离火细线倒入，凝成细丝"
+      },
+      {
+        "icon": "🍄",
+        "t": "豆腐与菌菇",
+        "d": "土香身骨，层层口感"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🌶️",
+        "t": "こしょうの辛さ",
+        "d": "頭がすっきりする白こしょうの辛み"
+      },
+      {
+        "icon": "🍋",
+        "t": "黒酢の酸味",
+        "d": "きりっと爽快な酸っぱさ"
+      },
+      {
+        "icon": "🥚",
+        "t": "絹のかき玉",
+        "d": "火を止め細い糸に流し入れる"
+      },
+      {
+        "icon": "🍄",
+        "t": "豆腐ときのこ",
+        "d": "土の香りとこくのある食感"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🌶️",
+        "t": "Biberli, ateşli değil",
+        "d": "Başı açan beyaz biber sıcaklığı"
+      },
+      {
+        "icon": "🍋",
+        "t": "Siyah sirke ekşiliği",
+        "d": "Keskin, canlandıran bir ekşilik"
+      },
+      {
+        "icon": "🥚",
+        "t": "İpeksi yumurta telleri",
+        "d": "Ocaktan alınıp ince tellere dökülür"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu ve mantar",
+        "d": "Topraksı gövde, doyurucu dokular"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🌶️",
+        "t": "Pepata, non di fuoco",
+        "d": "Calore di pepe bianco che schiarisce"
+      },
+      {
+        "icon": "🍋",
+        "t": "Acidità d'aceto nero",
+        "d": "Un'acidità viva e tonificante"
+      },
+      {
+        "icon": "🥚",
+        "t": "Fili d'uovo setosi",
+        "d": "Versati fuori dal fuoco in fili fini"
+      },
+      {
+        "icon": "🍄",
+        "t": "Tofu e funghi",
+        "d": "Corpo terroso, consistenze appaganti"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🌶️",
+        "t": "매움은 후추",
+        "d": "머리를 맑게 하는 흰 후추의 매움"
+      },
+      {
+        "icon": "🍋",
+        "t": "흑초의 새콤함",
+        "d": "날카롭고 상쾌한 신맛"
+      },
+      {
+        "icon": "🥚",
+        "t": "비단 달걀 실",
+        "d": "불을 끄고 가는 실로 흘려 넣어"
+      },
+      {
+        "icon": "🍄",
+        "t": "두부와 버섯",
+        "d": "흙 향 몸집, 만족스러운 식감"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🌶️",
+        "t": "मिर्च की, आग की नहीं",
+        "d": "सिर खोलती सफ़ेद मिर्च की गर्मी"
+      },
+      {
+        "icon": "🍋",
+        "t": "काले सिरके की खटास",
+        "d": "तीखी, स्फूर्तिदायक खटास"
+      },
+      {
+        "icon": "🥚",
+        "t": "रेशमी अंडे की लच्छियाँ",
+        "d": "आँच से उतारकर पतली धार में"
+      },
+      {
+        "icon": "🍄",
+        "t": "टोफू और मशरूम",
+        "d": "मिट्टी-सा शरीर, भरपूर बनावट"
+      }
+    ]
   }
 }
