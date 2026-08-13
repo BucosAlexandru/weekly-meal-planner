@@ -88,7 +88,7 @@ export const PLAN_MEALS = {
       53,
       52,
       231,
-      239,
+      244,
       110,
       111,
       112
@@ -157,22 +157,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      240,
       226,
       227,
       239,
       216,
       215,
-      211,
-      19
+      211
     ],
     "dinnerIds": [
+      19,
       41,
       114,
       8,
       107,
       158,
-      7,
-      1
+      7
     ]
   },
   "iarna-confort": {
