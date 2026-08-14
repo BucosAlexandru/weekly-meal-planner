@@ -19,6 +19,7 @@ import { CUISINE_INTRO }              from './cuisine-intros.mjs';
 import { REGION_FLAVOURS, CUISINE_HUB_PROSE } from './cuisine-hub-prose.mjs';
 import { RELATED_CUISINES, MAX_RELATED_CUISINES,
          enrichCatalog, selectByTagMix, resolveDiscoveryTarget } from './discovery-config.mjs';
+import { MEAL_TYPE_IDS, MEAL_TYPE_LABELS } from './taxonomy/meal-types.mjs';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -4466,6 +4467,34 @@ function cuisineTileData(recipe, lc_code, recipeBaseDir) {
   };
 }
 
+// Phase 3B — Recipe Explorer UI strings. Cart/fav labels reuse RECIPE_LANG
+// (rl.cartAdded/cartOpen/cartYours/favAdd/favAdded); meal labels come from
+// MEAL_TYPE_LABELS and tag labels from TAG_LABELS — so these are only the
+// Explorer-specific strings.
+const EXPLORER_I18N = {
+  ro:{ searchPh:'Caută rețetă, ingredient sau bucătărie…', cuisineAll:'Toate bucătăriile', mealAll:'Toate mesele', timeAll:'Orice durată', clear:'Șterge', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Adaugă în plan', noResults:'Nicio rețetă găsită. Încearcă alt ingredient sau scoate un filtru.', resultsCount:'{n} rețete', loadError:'Căutarea nu s-a încărcat. Explorează bucătăriile mai jos.', min:'min', h:'h', filters:'Filtre' },
+  en:{ searchPh:'Search recipe, ingredient or cuisine…', cuisineAll:'All cuisines', mealAll:'All meals', timeAll:'Any time', clear:'Clear', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Add to plan', noResults:'No recipes found. Try another ingredient or remove a filter.', resultsCount:'{n} recipes', loadError:'Couldn’t load search. Browse cuisines below.', min:'min', h:'h', filters:'Filters' },
+  es:{ searchPh:'Busca receta, ingrediente o cocina…', cuisineAll:'Todas las cocinas', mealAll:'Todas las comidas', timeAll:'Cualquier tiempo', clear:'Limpiar', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Añadir al plan', noResults:'No se encontraron recetas. Prueba otro ingrediente o quita un filtro.', resultsCount:'{n} recetas', loadError:'No se pudo cargar la búsqueda. Explora las cocinas abajo.', min:'min', h:'h', filters:'Filtros' },
+  fr:{ searchPh:'Cherchez une recette, un ingrédient ou une cuisine…', cuisineAll:'Toutes les cuisines', mealAll:'Tous les repas', timeAll:'Toute durée', clear:'Effacer', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Ajouter au plan', noResults:'Aucune recette trouvée. Essayez un autre ingrédient ou retirez un filtre.', resultsCount:'{n} recettes', loadError:'Recherche indisponible. Parcourez les cuisines ci-dessous.', min:'min', h:'h', filters:'Filtres' },
+  de:{ searchPh:'Rezept, Zutat oder Küche suchen…', cuisineAll:'Alle Küchen', mealAll:'Alle Mahlzeiten', timeAll:'Beliebige Zeit', clear:'Zurücksetzen', t30:'≤ 30 Min.', t3060:'31–60 Min.', t60:'60+ Min.', addToPlan:'Zum Plan', noResults:'Keine Rezepte gefunden. Versuche eine andere Zutat oder entferne einen Filter.', resultsCount:'{n} Rezepte', loadError:'Suche nicht geladen. Durchstöbere die Küchen unten.', min:'Min.', h:'Std.', filters:'Filter' },
+  pt:{ searchPh:'Pesquise receita, ingrediente ou cozinha…', cuisineAll:'Todas as cozinhas', mealAll:'Todas as refeições', timeAll:'Qualquer tempo', clear:'Limpar', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Adicionar ao plano', noResults:'Nenhuma receita encontrada. Tente outro ingrediente ou remova um filtro.', resultsCount:'{n} receitas', loadError:'Não foi possível carregar a busca. Explore as cozinhas abaixo.', min:'min', h:'h', filters:'Filtros' },
+  ru:{ searchPh:'Поиск рецепта, ингредиента или кухни…', cuisineAll:'Все кухни', mealAll:'Все приёмы пищи', timeAll:'Любое время', clear:'Сбросить', t30:'≤ 30 мин', t3060:'31–60 мин', t60:'60+ мин', addToPlan:'В план', noResults:'Рецептов не найдено. Попробуйте другой ингредиент или снимите фильтр.', resultsCount:'Рецептов: {n}', loadError:'Поиск не загрузился. Смотрите кухни ниже.', min:'мин', h:'ч', filters:'Фильтры' },
+  ar:{ searchPh:'ابحث عن وصفة أو مكوّن أو مطبخ…', cuisineAll:'كل المطابخ', mealAll:'كل الوجبات', timeAll:'أي وقت', clear:'مسح', t30:'≤ 30 دقيقة', t3060:'31–60 دقيقة', t60:'+60 دقيقة', addToPlan:'أضف إلى الخطة', noResults:'لا توجد وصفات. جرّب مكوّناً آخر أو أزل مرشّحاً.', resultsCount:'{n} وصفة', loadError:'تعذّر تحميل البحث. تصفّح المطابخ أدناه.', min:'دقيقة', h:'س', filters:'مرشّحات' },
+  zh:{ searchPh:'搜索菜谱、食材或菜系…', cuisineAll:'所有菜系', mealAll:'所有餐类', timeAll:'任何时长', clear:'清除', t30:'≤ 30 分钟', t3060:'31–60 分钟', t60:'60+ 分钟', addToPlan:'加入计划', noResults:'未找到菜谱。换个食材或去掉一个筛选条件。', resultsCount:'{n} 个菜谱', loadError:'搜索加载失败。请浏览下方菜系。', min:'分钟', h:'小时', filters:'筛选' },
+  ja:{ searchPh:'レシピ・食材・料理ジャンルを検索…', cuisineAll:'すべての料理', mealAll:'すべての食事', timeAll:'すべての時間', clear:'クリア', t30:'30 分以内', t3060:'31–60 分', t60:'60 分以上', addToPlan:'プランに追加', noResults:'レシピが見つかりません。別の食材を試すかフィルターを外してください。', resultsCount:'{n} 件のレシピ', loadError:'検索を読み込めません。下の料理ジャンルをご覧ください。', min:'分', h:'時間', filters:'フィルター' },
+  hi:{ searchPh:'रेसिपी, सामग्री या व्यंजन खोजें…', cuisineAll:'सभी व्यंजन', mealAll:'सभी भोजन', timeAll:'कोई भी समय', clear:'साफ़ करें', t30:'≤ 30 मिनट', t3060:'31–60 मिनट', t60:'60+ मिनट', addToPlan:'प्लान में जोड़ें', noResults:'कोई रेसिपी नहीं मिली। दूसरी सामग्री आज़माएँ या फ़िल्टर हटाएँ।', resultsCount:'{n} रेसिपी', loadError:'खोज लोड नहीं हुई। नीचे व्यंजन ब्राउज़ करें।', min:'मिनट', h:'घं', filters:'फ़िल्टर' },
+  tr:{ searchPh:'Tarif, malzeme veya mutfak ara…', cuisineAll:'Tüm mutfaklar', mealAll:'Tüm öğünler', timeAll:'Herhangi bir süre', clear:'Temizle', t30:'≤ 30 dk', t3060:'31–60 dk', t60:'60+ dk', addToPlan:'Plana ekle', noResults:'Tarif bulunamadı. Başka bir malzeme deneyin veya bir filtreyi kaldırın.', resultsCount:'{n} tarif', loadError:'Arama yüklenemedi. Aşağıdaki mutfakları keşfedin.', min:'dk', h:'sa', filters:'Filtreler' },
+  it:{ searchPh:'Cerca ricetta, ingrediente o cucina…', cuisineAll:'Tutte le cucine', mealAll:'Tutti i pasti', timeAll:'Qualsiasi durata', clear:'Cancella', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Aggiungi al piano', noResults:'Nessuna ricetta trovata. Prova un altro ingrediente o togli un filtro.', resultsCount:'{n} ricette', loadError:'Ricerca non caricata. Sfoglia le cucine qui sotto.', min:'min', h:'h', filters:'Filtri' },
+  ko:{ searchPh:'레시피, 재료 또는 요리 검색…', cuisineAll:'모든 요리', mealAll:'모든 식사', timeAll:'모든 시간', clear:'지우기', t30:'30분 이하', t3060:'31–60분', t60:'60분 이상', addToPlan:'플랜에 추가', noResults:'레시피가 없습니다. 다른 재료를 시도하거나 필터를 제거하세요.', resultsCount:'레시피 {n}개', loadError:'검색을 불러오지 못했습니다. 아래 요리를 둘러보세요.', min:'분', h:'시간', filters:'필터' },
+};
+// Idle-state divider between the search and the static cuisine cards.
+const EXPLORE_BY_CUISINE = {
+  ro:'Sau explorează după bucătărie', en:'Or explore by cuisine', es:'O explora por cocina',
+  fr:'Ou explorez par cuisine', de:'Oder nach Küche entdecken', pt:'Ou explore por cozinha',
+  ru:'Или выберите по кухне', ar:'أو استكشف حسب المطبخ', zh:'或按菜系浏览', ja:'または料理ジャンルで探す',
+  hi:'या व्यंजन के अनुसार खोजें', tr:'Ya da mutfağa göre keşfedin', it:'Oppure esplora per cucina', ko:'또는 요리별로 둘러보기',
+};
+
 function recipeIndex(rl) {
   const lc   = rl.lc;
   const code = lc.code;
@@ -4587,6 +4616,36 @@ function recipeIndex(rl) {
     "hasPart": { "@type": "ItemList", "numberOfItems": eligible.length, "itemListElement": items }
   });
 
+  // ── Recipe Explorer (progressive enhancement) ───────────────────────────
+  // The static cuisine cards below stay in the HTML (SEO + no-JS). The module
+  // enhances the page: search/filter is client-side UI state only — no
+  // crawlable filter URLs. Only the ACTIVE-locale index is fetched, lazily.
+  const X = EXPLORER_I18N[code] || EXPLORER_I18N.en;
+  const mealOpts = MEAL_TYPE_IDS.map(id => `<option value="${id}">${esc(MEAL_TYPE_LABELS[id][code] || MEAL_TYPE_LABELS[id].en)}</option>`).join('');
+  const cfgObj = {
+    addToPlan: X.addToPlan, inPlan: rl.cartAdded, favorite: rl.favAdd, favorited: rl.favAdded,
+    buildPlan: rl.cartOpen, yourRecipes: rl.cartYours, noResults: X.noResults,
+    resultsCount: X.resultsCount, loadError: X.loadError, min: X.min, h: X.h,
+    tags: Object.fromEntries(Object.entries(TAG_LABELS).map(([k, v]) => [k, v[code] || v.en])),
+  };
+  const cfgAttr = JSON.stringify(cfgObj).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  const appHref = `${rl.appDir || ('/' + code)}/`;
+  const explorer = `
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">${esc(X.searchPh)}</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="${esc(X.searchPh)}" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">${esc(X.clear)}</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="${esc(X.filters)}">
+      <select id="filter-cuisine" class="ex-filter" aria-label="${esc(X.cuisineAll)}"><option value="">${esc(X.cuisineAll)}</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="${esc(X.mealAll)}"><option value="">${esc(X.mealAll)}</option>${mealOpts}</select>
+      <select id="filter-time" class="ex-filter" aria-label="${esc(X.timeAll)}"><option value="">${esc(X.timeAll)}</option><option value="0-30">${esc(X.t30)}</option><option value="31-60">${esc(X.t3060)}</option><option value="61-0">${esc(X.t60)}</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="${appHref}" data-index="/data/recipe-search-index.${code}.json" data-i18n="${cfgAttr}"></div>`;
+
   return `${withHreflang(HEAD(rl.indexTitle, descPlain, `${rl.dir}/`, code, dir_attr), recipeIndexHreflangs())}
 ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
@@ -4595,11 +4654,14 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-i
     <div class="content-hero-desc">${rl.indexDesc(recipes.length)}</div>
     <p class="content-hero-kicker">${rl.indexKicker}</p>
   </div></section>
+  ${explorer}
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">${esc(EXPLORE_BY_CUISINE[code] || EXPLORE_BY_CUISINE.en)}</p>
     <div class="recipe-groups-grid">${cards}</div>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
-</main>${makeFooter(lc, NAV_URL_FOR.recipeIndex())}<script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>`;
+</main>${makeFooter(lc, NAV_URL_FOR.recipeIndex())}<script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>`;
 }
 
 /* ════════════════════════════════════════════════════════════════

@@ -3223,3 +3223,100 @@ a.btn-recipe-primary.pw-cart-in:hover {
 
 /* Picker "Your favorites" section: the small ♥ before the name (aria-hidden). */
 .pw-pick-fav-mark { color: #b04a2f; }
+
+/* ==========================================================================
+   Recipe Explorer (Phase 3B) — progressive enhancement of /recipes/.
+   Mobile-first. Reuses the site palette + the existing .pw-cart-* badge.
+   ========================================================================== */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+/* Search + filter toolbar: compact, centered, elegant (constrained width;
+   the results grid below stays full-width). */
+/* Compact, centered toolbar. The inner container keeps the site's wide
+   max-width (the results grid needs it); only the toolbar is constrained. */
+.explorer { padding: 2px 0; }
+.explorer .content-section-inner { display:flex; flex-direction:column; align-items:center; gap:10px; }
+.ex-searchrow { width:100%; max-width:760px; display:flex; gap:8px; align-items:center; }
+.ex-search {
+  flex:1 1 auto; min-width:0; font-size:15px;
+  padding:10px 18px 10px 42px; border:1.5px solid var(--color-brand-soft); border-radius:999px;
+  color:var(--ink); box-shadow:var(--shadow-sm); -webkit-appearance:none;
+  background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%239aa3af' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='5'/%3E%3Cline x1='11' y1='11' x2='15' y2='15'/%3E%3C/svg%3E") no-repeat 16px center;
+}
+[dir="rtl"] .ex-search { padding:10px 42px 10px 18px; background-position:right 16px center; }
+.ex-search::placeholder { color:#9aa3af; }
+.ex-search:focus-visible { outline:none; border-color:var(--color-brand); box-shadow:0 0 0 3px var(--color-brand-glow); }
+.ex-clear {
+  flex:0 0 auto; padding:8px 12px; border:0; border-radius:999px; font-size:13px;
+  background:transparent; color:var(--color-brand-dark); font-weight:600; cursor:pointer; white-space:nowrap;
+}
+.ex-clear:hover { background:var(--color-brand-light); }
+/* Clear is only meaningful once something is active. */
+.explorer[data-explorer-state="idle"] .ex-clear,
+.explorer[data-explorer-state="ready"] .ex-clear,
+.explorer[data-explorer-state="error"] .ex-clear { display:none; }
+/* Compact auto-width filter dropdowns (custom chevron), centered. */
+.ex-filters { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+.ex-filter {
+  flex:0 1 auto; min-width:0; font-size:13px; padding:7px 30px 7px 14px; cursor:pointer;
+  border:1.5px solid var(--color-brand-soft); border-radius:999px; background-color:var(--surface); color:var(--ink);
+  -webkit-appearance:none; appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%2324712A' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 12px center;
+}
+[dir="rtl"] .ex-filter { padding:7px 14px 7px 30px; background-position:left 12px center; }
+.ex-filter:focus-visible { outline:none; border-color:var(--color-brand); box-shadow:0 0 0 3px var(--color-brand-glow); }
+.ex-status { min-height:1.1em; margin:0; text-align:center; font-size:12.5px; color:#6b7280; }
+/* Idle divider before the cuisine cards; hidden once search/filters are active. */
+.ex-divider { text-align:center; margin:10px 0 18px; font-size:.85rem; color:#9aa3af; font-style:italic; }
+.explorer[data-explorer-state="active"] ~ .content-section .ex-divider { display:none; }
+
+/* Idle: no results grid, cuisine cards shown. Active: dense results grid. */
+.explorer[data-explorer-state="idle"] ~ .content-section .ex-results,
+.explorer[data-explorer-state="ready"] ~ .content-section .ex-results { display:none; }
+/* Uniform tiles: every card identical height — fixed media ratio, reserved
+   name/tag space, actions pinned to the bottom. */
+.ex-results { display:grid; gap:18px; align-items:stretch;
+  grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); margin:6px 0 28px; }
+
+.ex-card { display:flex; flex-direction:column; height:100%; background:var(--surface);
+  border:1px solid var(--color-brand-soft); border-radius:14px; overflow:hidden;
+  box-shadow:var(--shadow-xs); transition:box-shadow .15s, transform .15s; }
+.ex-card:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.ex-card-media { position:relative; display:block; aspect-ratio:4/3; flex:0 0 auto; overflow:hidden; background:var(--color-brand-light); }
+/* Absolute-fill so a global `img{height:auto}` can't stretch the tile — every
+   media box is exactly the 4/3 aspect, images cropped to cover. */
+.ex-card-media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.ex-card-fallback { position:absolute; inset:0; display:none; align-items:center; justify-content:center; font-size:2rem; }
+.ex-card-media.ex-noimg { background:linear-gradient(135deg,var(--color-brand-soft),var(--color-brand-light)); }
+.ex-card-media.ex-noimg .ex-card-fallback { display:flex; }
+.ex-card-body { flex:1 1 auto; display:flex; flex-direction:column; gap:5px; padding:10px 12px 12px; }
+.ex-card-title { font-weight:700; font-size:.9rem; line-height:1.25; height:2.5em; color:var(--ink); text-decoration:none;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:break-word; }
+.ex-card-title:hover { color:var(--color-brand); }
+/* One line always (long cuisines ellipsis) so every tile is identical height. */
+.ex-card-meta { display:flex; flex-wrap:nowrap; gap:10px; align-items:baseline; margin:0; min-height:1.1em; font-size:.76rem; color:#6b7280; }
+.ex-cuisine { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+.ex-time { flex:0 0 auto; white-space:nowrap; }
+.ex-card-tags { display:flex; flex-wrap:wrap; gap:4px; min-height:1.55em; max-height:1.55em; overflow:hidden; }
+.ex-tag { font-size:.66rem; font-weight:600; padding:2px 7px; border-radius:999px;
+  background:var(--color-brand-light); color:var(--color-brand-dark); white-space:nowrap; }
+.ex-card-actions { display:flex; gap:6px; margin-top:auto; padding-top:4px; align-items:stretch; }
+.ex-fav { flex:0 0 auto; width:38px; font-size:1.15rem; line-height:1; cursor:pointer;
+  border:1.5px solid var(--color-brand-soft); border-radius:10px; background:var(--surface); color:#b04a2f; }
+.ex-fav[aria-pressed="true"] { background:#fff0ec; border-color:#f0c9bd; }
+.ex-fav:focus-visible, .ex-add:focus-visible { outline:none; box-shadow:0 0 0 3px var(--color-brand-glow); }
+.ex-add { flex:1 1 auto; min-width:0; padding:8px 10px; font-size:.8rem; font-weight:700; cursor:pointer;
+  line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  border:1.5px solid var(--color-brand); border-radius:10px; background:var(--color-brand); color:#fff; }
+.ex-add:hover { background:var(--color-brand-hover); }
+.ex-add.ex-add-in { background:var(--color-brand-light); color:var(--color-brand-dark); }
+.ex-empty { grid-column:1/-1; padding:32px 12px; text-align:center; color:#6b7280; }
+
+@media (max-width:560px){ .ex-results { grid-template-columns:repeat(2, 1fr); gap:12px; } }
+@media (max-width:359px){ .ex-results { grid-template-columns:1fr; } }
+
+@media (prefers-color-scheme: dark){
+  .ex-status, .ex-card-meta, .ex-empty { color:#9aa4b2; }
+}

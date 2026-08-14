@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>Des tables familiales aux traditions transmises de génération en génération.</p><p>232 recettes de 46 cuisines, en 14 langues.</p><p>Choisissez où commence le dîner d'aujourd'hui.</p></div>
     <p class="content-hero-kicker">À Naples, on roule des gnocchis.<br>À Tokyo, un bouillon mijote.<br>À Lyon, le beurre rissole.<br><strong>Quarante-six cuisines sont vivantes en ce moment.</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">Cherchez une recette, un ingrédient ou une cuisine…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="Cherchez une recette, un ingrédient ou une cuisine…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">Effacer</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="Filtres">
+      <select id="filter-cuisine" class="ex-filter" aria-label="Toutes les cuisines"><option value="">Toutes les cuisines</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="Tous les repas"><option value="">Tous les repas</option><option value="breakfast">Petit-déjeuner</option><option value="lunch">Déjeuner</option><option value="dinner">Dîner</option><option value="snack">En-cas</option><option value="appetizer">Entrée</option><option value="side">Accompagnement</option><option value="dessert">Dessert</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="Toute durée"><option value="">Toute durée</option><option value="0-30">≤ 30 min</option><option value="31-60">31–60 min</option><option value="61-0">60+ min</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/fr/" data-index="/data/recipe-search-index.fr.json" data-i18n="{&quot;addToPlan&quot;:&quot;Ajouter au plan&quot;,&quot;inPlan&quot;:&quot;✓ Dans le plan&quot;,&quot;favorite&quot;:&quot;Ajouter aux favoris&quot;,&quot;favorited&quot;:&quot;Dans les favoris&quot;,&quot;buildPlan&quot;:&quot;Construire mon plan&quot;,&quot;yourRecipes&quot;:&quot;Vos recettes&quot;,&quot;noResults&quot;:&quot;Aucune recette trouvée. Essayez un autre ingrédient ou retirez un filtre.&quot;,&quot;resultsCount&quot;:&quot;{n} recettes&quot;,&quot;loadError&quot;:&quot;Recherche indisponible. Parcourez les cuisines ci-dessous.&quot;,&quot;min&quot;:&quot;min&quot;,&quot;h&quot;:&quot;h&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;Rapide&quot;,&quot;budget&quot;:&quot;Économique&quot;,&quot;vegetarian&quot;:&quot;Végétarien&quot;,&quot;vegan&quot;:&quot;Végétalien&quot;,&quot;high-protein&quot;:&quot;Riche en prot.&quot;,&quot;family&quot;:&quot;Familial&quot;,&quot;healthy&quot;:&quot;Sain&quot;,&quot;spicy&quot;:&quot;Épicé&quot;,&quot;one-pot&quot;:&quot;Un seul plat&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">Ou explorez par cuisine</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/fr/recettes/france/" aria-label="France"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>

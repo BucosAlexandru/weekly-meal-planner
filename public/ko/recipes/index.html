@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>가족의 식탁에서 대대로 이어진 전통까지.</p><p>46개 주방의 232가지 레시피, 14개 언어로.</p><p>오늘의 저녁이 어디서 시작될지 선택하세요.</p></div>
     <p class="content-hero-kicker">나폴리에서 누군가 뇨키를 말고 있다.<br>도쿄에서 육수가 끓고 있다.<br>리옹에서 버터가 노릇해진다.<br><strong>마흔여섯 개의 주방이 지금 살아 있다.</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">레시피, 재료 또는 요리 검색…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="레시피, 재료 또는 요리 검색…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">지우기</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="필터">
+      <select id="filter-cuisine" class="ex-filter" aria-label="모든 요리"><option value="">모든 요리</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="모든 식사"><option value="">모든 식사</option><option value="breakfast">아침</option><option value="lunch">점심</option><option value="dinner">저녁</option><option value="snack">간식</option><option value="appetizer">전채</option><option value="side">반찬</option><option value="dessert">디저트</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="모든 시간"><option value="">모든 시간</option><option value="0-30">30분 이하</option><option value="31-60">31–60분</option><option value="61-0">60분 이상</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/ko/" data-index="/data/recipe-search-index.ko.json" data-i18n="{&quot;addToPlan&quot;:&quot;플랜에 추가&quot;,&quot;inPlan&quot;:&quot;✓ 플랜에 추가됨&quot;,&quot;favorite&quot;:&quot;즐겨찾기에 저장&quot;,&quot;favorited&quot;:&quot;즐겨찾기됨&quot;,&quot;buildPlan&quot;:&quot;플랜 만들기&quot;,&quot;yourRecipes&quot;:&quot;내 레시피&quot;,&quot;noResults&quot;:&quot;레시피가 없습니다. 다른 재료를 시도하거나 필터를 제거하세요.&quot;,&quot;resultsCount&quot;:&quot;레시피 {n}개&quot;,&quot;loadError&quot;:&quot;검색을 불러오지 못했습니다. 아래 요리를 둘러보세요.&quot;,&quot;min&quot;:&quot;분&quot;,&quot;h&quot;:&quot;시간&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;빠른&quot;,&quot;budget&quot;:&quot;절약&quot;,&quot;vegetarian&quot;:&quot;채식&quot;,&quot;vegan&quot;:&quot;완전채식&quot;,&quot;high-protein&quot;:&quot;고단백&quot;,&quot;family&quot;:&quot;가족&quot;,&quot;healthy&quot;:&quot;건강&quot;,&quot;spicy&quot;:&quot;매운&quot;,&quot;one-pot&quot;:&quot;원팟&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">또는 요리별로 둘러보기</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/ko/recipes/france/" aria-label="프랑스"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>

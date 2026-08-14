@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>从家庭餐桌到代代相传的传统。</p><p>来自46个厨房的232道食谱，14种语言。</p><p>选择今天晚餐从哪里开始。</p></div>
     <p class="content-hero-kicker">那不勒斯，有人在卷意大利团子。<br>东京，高汤正在沸腾。<br>里昂，黄油在焦化。<br><strong>此刻，四十六个厨房都在运转。</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">搜索菜谱、食材或菜系…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="搜索菜谱、食材或菜系…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">清除</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="筛选">
+      <select id="filter-cuisine" class="ex-filter" aria-label="所有菜系"><option value="">所有菜系</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="所有餐类"><option value="">所有餐类</option><option value="breakfast">早餐</option><option value="lunch">午餐</option><option value="dinner">晚餐</option><option value="snack">小吃</option><option value="appetizer">开胃菜</option><option value="side">配菜</option><option value="dessert">甜点</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="任何时长"><option value="">任何时长</option><option value="0-30">≤ 30 分钟</option><option value="31-60">31–60 分钟</option><option value="61-0">60+ 分钟</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/zh/" data-index="/data/recipe-search-index.zh.json" data-i18n="{&quot;addToPlan&quot;:&quot;加入计划&quot;,&quot;inPlan&quot;:&quot;✓ 已加入计划&quot;,&quot;favorite&quot;:&quot;收藏&quot;,&quot;favorited&quot;:&quot;已收藏&quot;,&quot;buildPlan&quot;:&quot;创建我的计划&quot;,&quot;yourRecipes&quot;:&quot;你的食谱&quot;,&quot;noResults&quot;:&quot;未找到菜谱。换个食材或去掉一个筛选条件。&quot;,&quot;resultsCount&quot;:&quot;{n} 个菜谱&quot;,&quot;loadError&quot;:&quot;搜索加载失败。请浏览下方菜系。&quot;,&quot;min&quot;:&quot;分钟&quot;,&quot;h&quot;:&quot;小时&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;快手菜&quot;,&quot;budget&quot;:&quot;省钱&quot;,&quot;vegetarian&quot;:&quot;素食&quot;,&quot;vegan&quot;:&quot;纯素&quot;,&quot;high-protein&quot;:&quot;高蛋白&quot;,&quot;family&quot;:&quot;家庭&quot;,&quot;healthy&quot;:&quot;健康&quot;,&quot;spicy&quot;:&quot;辛辣&quot;,&quot;one-pot&quot;:&quot;一锅出&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">或按菜系浏览</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/zh/shipu/france/" aria-label="法国"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>

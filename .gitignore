@@ -54,3 +54,7 @@ sources/
 data/image-batch.json
 __pycache__/
 *.pyc
+
+# Phase 2-3B build scratch / artifacts
+scratch_phase2/
+scripts/taxonomy/generated/

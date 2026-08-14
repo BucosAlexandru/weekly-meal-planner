@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>家族の食卓から、世代を超えて受け継がれる伝統まで。</p><p>46の厨房から232のレシピ、14言語で。</p><p>今日の食事をどこから始めるか選びましょう。</p></div>
     <p class="content-hero-kicker">ナポリでは、ニョッキが丸まっている。<br>東京では、出汁が沸いている。<br>リヨンでは、バターが色づいている。<br><strong>四十六の厨房が今、生きている。</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">レシピ・食材・料理ジャンルを検索…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="レシピ・食材・料理ジャンルを検索…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">クリア</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="フィルター">
+      <select id="filter-cuisine" class="ex-filter" aria-label="すべての料理"><option value="">すべての料理</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="すべての食事"><option value="">すべての食事</option><option value="breakfast">朝食</option><option value="lunch">昼食</option><option value="dinner">夕食</option><option value="snack">軽食</option><option value="appetizer">前菜</option><option value="side">副菜</option><option value="dessert">デザート</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="すべての時間"><option value="">すべての時間</option><option value="0-30">30 分以内</option><option value="31-60">31–60 分</option><option value="61-0">60 分以上</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/ja/" data-index="/data/recipe-search-index.ja.json" data-i18n="{&quot;addToPlan&quot;:&quot;プランに追加&quot;,&quot;inPlan&quot;:&quot;✓ プランに追加済み&quot;,&quot;favorite&quot;:&quot;お気に入りに保存&quot;,&quot;favorited&quot;:&quot;お気に入り済み&quot;,&quot;buildPlan&quot;:&quot;プランを作る&quot;,&quot;yourRecipes&quot;:&quot;あなたのレシピ&quot;,&quot;noResults&quot;:&quot;レシピが見つかりません。別の食材を試すかフィルターを外してください。&quot;,&quot;resultsCount&quot;:&quot;{n} 件のレシピ&quot;,&quot;loadError&quot;:&quot;検索を読み込めません。下の料理ジャンルをご覧ください。&quot;,&quot;min&quot;:&quot;分&quot;,&quot;h&quot;:&quot;時間&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;時短&quot;,&quot;budget&quot;:&quot;節約&quot;,&quot;vegetarian&quot;:&quot;ベジタリアン&quot;,&quot;vegan&quot;:&quot;ヴィーガン&quot;,&quot;high-protein&quot;:&quot;高タンパク&quot;,&quot;family&quot;:&quot;ファミリー&quot;,&quot;healthy&quot;:&quot;ヘルシー&quot;,&quot;spicy&quot;:&quot;スパイシー&quot;,&quot;one-pot&quot;:&quot;ワンポット&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">または料理ジャンルで探す</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/ja/reshipi/france/" aria-label="フランス"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>

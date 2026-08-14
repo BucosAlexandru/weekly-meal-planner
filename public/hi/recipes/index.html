@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>परिवार की मेज़ से लेकर पीढ़ी दर पीढ़ी चली आ रही परंपराओं तक।</p><p>46 रसोइयों की 232 रेसिपी, 14 भाषाओं में।</p><p>आज का खाना कहां से शुरू होगा, चुनें।</p></div>
     <p class="content-hero-kicker">नेपल्स में, कोई ग्नोकी बेल रहा है।<br>टोक्यो में, शोरबा उबल रहा है।<br>ल्यों में, मक्खन सुनहरा हो रहा है।<br><strong>छियालीस रसोइयाँ अभी ज़िंदा हैं।</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">रेसिपी, सामग्री या व्यंजन खोजें…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="रेसिपी, सामग्री या व्यंजन खोजें…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">साफ़ करें</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="फ़िल्टर">
+      <select id="filter-cuisine" class="ex-filter" aria-label="सभी व्यंजन"><option value="">सभी व्यंजन</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="सभी भोजन"><option value="">सभी भोजन</option><option value="breakfast">नाश्ता</option><option value="lunch">दोपहर का खाना</option><option value="dinner">रात का खाना</option><option value="snack">नाश्ता</option><option value="appetizer">क्षुधावर्धक</option><option value="side">साइड डिश</option><option value="dessert">मिठाई</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="कोई भी समय"><option value="">कोई भी समय</option><option value="0-30">≤ 30 मिनट</option><option value="31-60">31–60 मिनट</option><option value="61-0">60+ मिनट</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/hi/" data-index="/data/recipe-search-index.hi.json" data-i18n="{&quot;addToPlan&quot;:&quot;प्लान में जोड़ें&quot;,&quot;inPlan&quot;:&quot;✓ योजना में&quot;,&quot;favorite&quot;:&quot;पसंदीदा में सहेजें&quot;,&quot;favorited&quot;:&quot;पसंदीदा में&quot;,&quot;buildPlan&quot;:&quot;योजना बनाएं&quot;,&quot;yourRecipes&quot;:&quot;आपकी रेसिपी&quot;,&quot;noResults&quot;:&quot;कोई रेसिपी नहीं मिली। दूसरी सामग्री आज़माएँ या फ़िल्टर हटाएँ।&quot;,&quot;resultsCount&quot;:&quot;{n} रेसिपी&quot;,&quot;loadError&quot;:&quot;खोज लोड नहीं हुई। नीचे व्यंजन ब्राउज़ करें।&quot;,&quot;min&quot;:&quot;मिनट&quot;,&quot;h&quot;:&quot;घं&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;जल्दी&quot;,&quot;budget&quot;:&quot;सस्ता&quot;,&quot;vegetarian&quot;:&quot;शाकाहारी&quot;,&quot;vegan&quot;:&quot;शुद्ध शाकाहारी&quot;,&quot;high-protein&quot;:&quot;उच्च प्रोटीन&quot;,&quot;family&quot;:&quot;परिवार&quot;,&quot;healthy&quot;:&quot;स्वस्थ&quot;,&quot;spicy&quot;:&quot;मसालेदार&quot;,&quot;one-pot&quot;:&quot;एक बर्तन&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">या व्यंजन के अनुसार खोजें</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/hi/recipes/france/" aria-label="फ्रांस"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>

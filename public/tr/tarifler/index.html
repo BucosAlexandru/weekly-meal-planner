@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>Aile sofralarından nesilden nesle aktarılan geleneklere.</p><p>46 mutfaktan 232 tarif, 14 dilde.</p><p>Bugünkü akşam yemeğinin nereden başlayacağını seç.</p></div>
     <p class="content-hero-kicker">Napoli'de biri gnocchi yuvarlıyor.<br>Tokyo'da et suyu kaynıyor.<br>Lyon'da tereyağı kavruluyor.<br><strong>Kırk altı mutfak şu an canlı.</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">Tarif, malzeme veya mutfak ara…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="Tarif, malzeme veya mutfak ara…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">Temizle</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="Filtreler">
+      <select id="filter-cuisine" class="ex-filter" aria-label="Tüm mutfaklar"><option value="">Tüm mutfaklar</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="Tüm öğünler"><option value="">Tüm öğünler</option><option value="breakfast">Kahvaltı</option><option value="lunch">Öğle yemeği</option><option value="dinner">Akşam yemeği</option><option value="snack">Atıştırmalık</option><option value="appetizer">Meze</option><option value="side">Garnitür</option><option value="dessert">Tatlı</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="Herhangi bir süre"><option value="">Herhangi bir süre</option><option value="0-30">≤ 30 dk</option><option value="31-60">31–60 dk</option><option value="61-0">60+ dk</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/tr/" data-index="/data/recipe-search-index.tr.json" data-i18n="{&quot;addToPlan&quot;:&quot;Plana ekle&quot;,&quot;inPlan&quot;:&quot;✓ Planda&quot;,&quot;favorite&quot;:&quot;Favorilere kaydet&quot;,&quot;favorited&quot;:&quot;Favorilerde&quot;,&quot;buildPlan&quot;:&quot;Planımı oluştur&quot;,&quot;yourRecipes&quot;:&quot;Tarifleriniz&quot;,&quot;noResults&quot;:&quot;Tarif bulunamadı. Başka bir malzeme deneyin veya bir filtreyi kaldırın.&quot;,&quot;resultsCount&quot;:&quot;{n} tarif&quot;,&quot;loadError&quot;:&quot;Arama yüklenemedi. Aşağıdaki mutfakları keşfedin.&quot;,&quot;min&quot;:&quot;dk&quot;,&quot;h&quot;:&quot;sa&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;Hızlı&quot;,&quot;budget&quot;:&quot;Ekonomik&quot;,&quot;vegetarian&quot;:&quot;Vejetaryen&quot;,&quot;vegan&quot;:&quot;Vegan&quot;,&quot;high-protein&quot;:&quot;Yüksek protein&quot;,&quot;family&quot;:&quot;Aile&quot;,&quot;healthy&quot;:&quot;Sağlıklı&quot;,&quot;spicy&quot;:&quot;Acılı&quot;,&quot;one-pot&quot;:&quot;Tek tencere&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">Ya da mutfağa göre keşfedin</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/tr/tarifler/france/" aria-label="Fransa"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>

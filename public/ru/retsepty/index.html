@@ -67,7 +67,24 @@
     <div class="content-hero-desc"><p>От семейных столов до традиций, передаваемых из поколения в поколение.</p><p>232 рецептов из 46 кухонь, на 14 языках.</p><p>Выберите, где начнётся сегодняшний ужин.</p></div>
     <p class="content-hero-kicker">В Неаполе раскатывают ньокки.<br>В Токио кипит бульон.<br>В Лионе румянится масло.<br><strong>Сорок шесть кухонь живы прямо сейчас.</strong></p>
   </div></section>
+  
+  <section class="explorer" id="explorer" data-explorer-state="idle"><div class="content-section-inner">
+    <div class="ex-searchrow">
+      <label class="sr-only" for="explorer-search">Поиск рецепта, ингредиента или кухни…</label>
+      <input id="explorer-search" type="search" class="ex-search" placeholder="Поиск рецепта, ингредиента или кухни…" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="explorer-clear" class="ex-clear">Сбросить</button>
+    </div>
+    <div class="ex-filters" role="group" aria-label="Фильтры">
+      <select id="filter-cuisine" class="ex-filter" aria-label="Все кухни"><option value="">Все кухни</option></select>
+      <select id="filter-meal" class="ex-filter" aria-label="Все приёмы пищи"><option value="">Все приёмы пищи</option><option value="breakfast">Завтрак</option><option value="lunch">Обед</option><option value="dinner">Ужин</option><option value="snack">Перекус</option><option value="appetizer">Закуска</option><option value="side">Гарнир</option><option value="dessert">Десерт</option></select>
+      <select id="filter-time" class="ex-filter" aria-label="Любое время"><option value="">Любое время</option><option value="0-30">≤ 30 мин</option><option value="31-60">31–60 мин</option><option value="61-0">60+ мин</option></select>
+    </div>
+    <p class="ex-status" id="explorer-status" role="status" aria-live="polite"></p>
+  </div></section>
+  <div id="explorer-config" hidden data-app="/ru/" data-index="/data/recipe-search-index.ru.json" data-i18n="{&quot;addToPlan&quot;:&quot;В план&quot;,&quot;inPlan&quot;:&quot;✓ В плане&quot;,&quot;favorite&quot;:&quot;В избранное&quot;,&quot;favorited&quot;:&quot;В избранном&quot;,&quot;buildPlan&quot;:&quot;Собрать план&quot;,&quot;yourRecipes&quot;:&quot;Ваши рецепты&quot;,&quot;noResults&quot;:&quot;Рецептов не найдено. Попробуйте другой ингредиент или снимите фильтр.&quot;,&quot;resultsCount&quot;:&quot;Рецептов: {n}&quot;,&quot;loadError&quot;:&quot;Поиск не загрузился. Смотрите кухни ниже.&quot;,&quot;min&quot;:&quot;мин&quot;,&quot;h&quot;:&quot;ч&quot;,&quot;tags&quot;:{&quot;quick&quot;:&quot;Быстро&quot;,&quot;budget&quot;:&quot;Бюджет&quot;,&quot;vegetarian&quot;:&quot;Вегетарианск&quot;,&quot;vegan&quot;:&quot;Веган&quot;,&quot;high-protein&quot;:&quot;Белковый&quot;,&quot;family&quot;:&quot;Семейный&quot;,&quot;healthy&quot;:&quot;Здоровый&quot;,&quot;spicy&quot;:&quot;Острый&quot;,&quot;one-pot&quot;:&quot;Одна кастрюля&quot;}}"></div>
   <section class="content-section"><div class="content-section-inner">
+    <div class="ex-results" id="explorer-results" aria-live="polite"></div>
+    <p class="ex-divider">Или выберите по кухне</p>
     <div class="recipe-groups-grid">
     <article class="cuisine-card cuisine-card--preview" data-cuisine-atmosphere="mediterranean">
       <a class="cuisine-card-link" href="/ru/retsepty/france/" aria-label="Франция"></a>
@@ -977,4 +994,4 @@
       <span>© 2026</span>
     </div>
   </div>
-</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script></body></html>
+</footer><script src="/js/analytics.min.js" data-page-type="recipe_index" defer></script><script src="/js/content.js" defer></script><script type="module" src="/js/recipe-explorer.js"></script></body></html>
