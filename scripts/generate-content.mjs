@@ -4657,7 +4657,6 @@ ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-i
   ${explorer}
   <section class="content-section"><div class="content-section-inner">
     <div class="ex-results" id="explorer-results" aria-live="polite"></div>
-    <p class="ex-divider">${esc(EXPLORE_BY_CUISINE[code] || EXPLORE_BY_CUISINE.en)}</p>
     <div class="recipe-groups-grid">${cards}</div>
   </div></section>
   <script type="application/ld+json">${jsonLd}</script>
