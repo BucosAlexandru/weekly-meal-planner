@@ -220,7 +220,7 @@ export const PLAN_MEALS = {
       194,
       228,
       227,
-      226
+      246
     ]
   },
   "duminica-familie": {
