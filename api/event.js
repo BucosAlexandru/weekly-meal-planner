@@ -2,7 +2,7 @@
 // Funnel Analytics MVP — ingestion endpoint for the CLIENT-side funnel events.
 //
 //   page_view · plan_generated · shopping_list_viewed · premium_viewed
-//   · pdf_click · email_submitted · checkout_started
+//   · pdf_click · email_submitted · checkout_started · recipe_added_to_plan
 //
 // `subscription_active` is intentionally NOT accepted here — it is written
 // server-side by api/stripe-webhook.js, the only place the (hashed) email is
@@ -27,6 +27,9 @@ const CLIENT_EVENTS = new Set([
   'pdf_click',
   'email_submitted',
   'checkout_started',
+  // Sprint 1 — Funnel Measurement Foundation. Props: { recipe_id, source }
+  // where source ∈ 'recipe_page' | 'recipe_hub' | 'recipe_explorer'.
+  'recipe_added_to_plan',
 ]);
 
 export default async function handler(req, res) {

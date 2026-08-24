@@ -61,6 +61,21 @@
     return -1;
   }
 
+  /* ── analytics: recipe_added_to_plan (Sprint 1 — Funnel Measurement) ────
+     source is derived from the SAME data-page-type attribute analytics.js
+     itself reads (set by generate-content.mjs on the analytics <script>
+     tag): 'hub' → cuisine hub listing, anything else (normally 'recipe')
+     → single recipe page. This file only ever loads on recipe/hub pages
+     (guarded by #plan-cart-config above), never on the Explorer, so
+     'recipe_page' is a safe fallback if the attribute is ever missing. */
+  function pageSource() {
+    try {
+      var el = document.querySelector('script[data-page-type][src*="/js/analytics"]');
+      var t = el && el.getAttribute('data-page-type');
+      return t === 'hub' ? 'recipe_hub' : 'recipe_page';
+    } catch (_) { return 'recipe_page'; }
+  }
+
   /* ── favorites (❤️, BRAIN spec §9 item 2) ─────────────────────────────
      Same { en, display } shape as the cart (en = stable cross-language
      key), deduped by en case-insensitively, but NO cap and never consumed:
@@ -145,6 +160,12 @@
           items.push({ en: en, display: a.getAttribute('data-display') || en });
           writeCart(items);
           render(items, true); // < 1s feedback: ✓ button + badge bounce
+          // Fires exactly once, only on a real add (not remove, not the
+          // 'full' no-op above, not the initial restore from localStorage —
+          // that path calls render() directly, never this click handler).
+          if (typeof window.mpTrack === 'function') {
+            window.mpTrack('recipe_added_to_plan', { recipe_id: en, source: pageSource() });
+          }
         }
       });
     });

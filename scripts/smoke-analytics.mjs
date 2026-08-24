@@ -193,6 +193,51 @@ check('built checkout.min.js carries _checkoutInFlight guard',
       checkoutMin.includes('_checkoutInFlight'));
 
 // ═════════════════════════════════════════════════════════════════════════════
+console.log('\n[6] recipe_added_to_plan — Sprint 1 (Funnel Measurement Foundation)\n');
+const planCartSrc = read(p('public/js/plan-cart.js'));
+const planCartMin = read(p('public/js/plan-cart.min.js'));
+const explorerSrc = read(p('public/js/recipe-explorer.js'));
+
+check('analytics.js ALLOWED includes recipe_added_to_plan', /recipe_added_to_plan:\s*1/.test(read(p('public/js/analytics.js'))));
+check('api/event.js CLIENT_EVENTS includes recipe_added_to_plan', /'recipe_added_to_plan'/.test(read(p('api/event.js'))));
+
+// plan-cart.js: the track call must live in the real-add branch (after the
+// items.push/writeCart pair that follows the `else {` of the add/remove/full
+// toggle), NOT anywhere near the remove branch (items.splice) above it.
+{
+  const addBranch = planCartSrc.split('items.push({ en: en, display:')[1] || '';
+  check('plan-cart.js: recipe_added_to_plan fires in the add branch',
+        addBranch.includes("mpTrack('recipe_added_to_plan'"));
+  const removeBranch = (planCartSrc.split('items.splice(at, 1);')[1] || '').split('items.length >= CAP')[0];
+  check('plan-cart.js: recipe_added_to_plan does NOT fire in the remove branch',
+        !removeBranch.includes("mpTrack('recipe_added_to_plan'"));
+  check('plan-cart.js: recipe_id uses the stable EN name (not a new identity)',
+        addBranch.includes('recipe_id: en'));
+  check('plan-cart.js: source is derived, not hard-coded to one value',
+        planCartSrc.includes("function pageSource()") && planCartSrc.includes("t === 'hub' ? 'recipe_hub' : 'recipe_page'"));
+  check('plan-cart.js: guarded by typeof window.mpTrack === function',
+        addBranch.includes("typeof window.mpTrack === 'function'"));
+}
+check('plan-cart.min.js (built) carries recipe_added_to_plan', planCartMin.includes('recipe_added_to_plan'));
+
+// recipe-explorer.js: the track call must be gated on `on` (res === 'added'),
+// i.e. textually after the `on ? L.inPlan` line and inside an `if (on ...)`.
+{
+  const addGuard = explorerSrc.split("b.textContent = on ? L.inPlan : L.addToPlan;")[1] || '';
+  check("recipe-explorer.js: recipe_added_to_plan gated on res === 'added'",
+        /if\s*\(\s*on\s*&&\s*typeof window\.mpTrack/.test(addGuard));
+  check('recipe-explorer.js: recipe_id uses r.en (same join key as plan-cart.js), not r.id',
+        addGuard.includes('recipe_id: r.en'));
+  check("recipe-explorer.js: source is the literal 'recipe_explorer'",
+        addGuard.includes("source: 'recipe_explorer'"));
+}
+
+// No parallel cart/analytics system: still the one shared mp:plan-cart key,
+// still the one /api/event ingestion endpoint.
+check('plan-cart.js still uses the single shared mp:plan-cart key', planCartSrc.includes("var KEY = 'mp:plan-cart'"));
+check('recipe-explorer.js still uses the single shared mp:plan-cart key', explorerSrc.includes("CART_KEY = 'mp:plan-cart'"));
+
+// ═════════════════════════════════════════════════════════════════════════════
 console.log(`\n──────────────────────────────────────────\n${pass} passed, ${fail} failed\n`);
 if (fail) {
   console.log('FAILURES:');

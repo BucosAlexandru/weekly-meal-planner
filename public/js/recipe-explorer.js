@@ -122,6 +122,15 @@ async function init(cfg) {
       const b = el.querySelector('.ex-add');
       b.classList.toggle('ex-add-in', on); b.setAttribute('aria-pressed', String(on));
       b.textContent = on ? L.inPlan : L.addToPlan;
+      // Sprint 1 — Funnel Measurement Foundation. Fires exactly once, only
+      // when this click is a real add (res === 'added'), never on remove
+      // ('removed') or a full cart ('full', handled by the early return
+      // above). recipe_id = r.en, the same stable EN-name join key used by
+      // plan-cart.js on recipe/hub pages — not r.id (the Explorer's own
+      // search-index id), so recipe_id is comparable across all 3 sources.
+      if (on && typeof window.mpTrack === 'function') {
+        window.mpTrack('recipe_added_to_plan', { recipe_id: r.en, source: 'recipe_explorer' });
+      }
     });
     return el;
   }
