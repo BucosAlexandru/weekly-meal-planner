@@ -1,0 +1,85 @@
+name: Recipe content sync
+
+# Closes the gap that causes production drift: recipes.js (and the other
+# recipe data sources) are sometimes edited directly on GitHub — e.g. a raw
+# "Add files via upload" commit, or a manual edit in the web UI — WITHOUT
+# running `npm run build` locally first. Since Vercel deploys public/ as-is
+# (@vercel/static, no build step — see vercel.json), anything the local build
+# would have regenerated (HTML pages, sitemap, the 14 search indexes, the
+# hand-mirrored RECIPE_COUNT constant in app.js) stays stale in production
+# until someone happens to rebuild and push again.
+#
+# This job watches the recipe SOURCE files. Whenever one changes on `main`
+# it runs the full build (content + search index + RECIPE_COUNT sync + JS/CSS
+# bundles) and commits back whatever the build regenerates, so a single
+# recipe edit — however it was made — becomes fully consistent everywhere
+# within minutes, without a human remembering to run anything.
+#
+# Same pattern as weekly-menu-rotation.yml: a push by GITHUB_TOKEN does not
+# re-trigger this workflow (or build-check.yml's `push` trigger loops on
+# itself), so there is no risk of an infinite loop.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/js/recipes.js'
+      - 'public/js/recipes-budget.js'
+      - 'public/js/recipe-images.js'
+      - 'public/js/budget-images.js'
+      - 'public/js/recipes-meta.js'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# Never let two syncs race each other.
+concurrency:
+  group: recipe-content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check recipes.js for curly quotes (U+2018 / U+2019)
+        # Same pre-commit invariant as build-check.yml — catches a bad edit
+        # before it gets baked into a regenerated (and auto-committed) build.
+        run: |
+          COUNT=$(python3 -c "s=open('public/js/recipes.js',encoding='utf-8').read(); print(s.count('‘')+s.count('’'))")
+          if [ "$COUNT" -ne 0 ]; then
+            echo "ERROR: recipes.js contains $COUNT curly quote(s) (U+2018/U+2019) — fix before this can regenerate content."
+            exit 1
+          fi
+
+      - name: Full build (content + search index + RECIPE_COUNT sync + JS/CSS)
+        run: npm run build
+
+      - name: Verify corpus counts (pages + sitemap)
+        run: node scripts/verify-corpus-counts.mjs
+
+      - name: Validate Open-in-app plan parity
+        run: npm run validate:plans
+
+      - name: Commit & push regenerated content if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Build is already in sync with the recipe source change — nothing to commit."
+          else
+            git commit -m "Auto-sync generated content after recipe data change"
+            git push
+            echo "Pushed regenerated content (pages, sitemap, search index, RECIPE_COUNT, bundles)."
+          fi
