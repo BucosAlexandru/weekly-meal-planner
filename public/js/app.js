@@ -5760,6 +5760,10 @@ function applyTranslations() {
       lang = next;
       localStorage.setItem('lastLang', lang);
       applyTranslations();
+      // applyTranslations() just rebuilt #hp-premium-preview from scratch —
+      // the old node the funnel observer was watching is gone. Re-attach so
+      // an in-page language switch doesn't silently kill premium_viewed.
+      if (typeof initFunnelObservers === 'function') initFunnelObservers();
       updateButtonState();
       attachPdfListeners();
       attachAutoMenuBtn();
@@ -6239,11 +6243,17 @@ if (verifyBtn && emailInput && resultDiv) {
       io.observe(premiumEl);
     }
   }
-  initFunnelObservers();
+  // NOTE: called after applyTranslations() below, not here — #pricing-section
+  // and #hp-premium-preview are created by renderPricingSection() /
+  // renderPremiumPreview(), which run INSIDE applyTranslations(). Attaching
+  // the observer before that renders left premium_viewed permanently dead
+  // (querySelector found nothing to observe on the very first paint, and
+  // nothing re-runs initFunnelObservers() afterwards).
 
   // ---------- INIT UI ----------
   resetPdfQuotaIfNeeded();
   applyTranslations();
+  initFunnelObservers();
   attachPdfListeners();
   updateButtonState();
   wireInputsToShoppingList();
