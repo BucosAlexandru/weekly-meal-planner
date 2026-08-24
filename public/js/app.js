@@ -681,6 +681,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const from = similar.length ? similar : valid;
     const pick = from[Math.floor(Math.random() * from.length)];
     setSlotValue(input, getRecipeText(pick, lang));
+    // Sprint 2 — Final analytics completion. Fires only after a real reroll
+    // (both early returns above — empty slot, exhausted pool — already
+    // exited before this point, so this line is reached only on success).
+    if (window.mpTrack) window.mpTrack('planner_reroll', { slot_type: inputId.endsWith('l') ? 'lunch' : 'dinner' });
     const oldName = getRecipeText(current, lang) || extractRecipeName(prevValue) || prevValue;
     showChangeToast({
       inputId,
@@ -700,6 +704,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevValue = input.value;
     const rec = getRecipeByInput(prevValue);
     setSlotValue(input, '');
+    // Sprint 2 — Final analytics completion. Fires only when a filled slot
+    // was actually cleared (the empty-slot early return above already exited).
+    if (window.mpTrack) window.mpTrack('planner_recipe_removed', { slot_type: inputId.endsWith('l') ? 'lunch' : 'dinner' });
     const name = getRecipeText(rec, lang) || extractRecipeName(prevValue) || prevValue;
     showChangeToast({
       inputId,
@@ -1207,6 +1214,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (newText && newText !== prevValue) {
       setSlotValue(input, newText);
       if (wasFilled) {
+        // Sprint 2 — Final analytics completion. Fires only on a genuine
+        // replace of an already-filled slot (guarded by wasFilled above and
+        // the newText !== prevValue check on the outer if).
+        if (window.mpTrack) window.mpTrack('planner_recipe_changed', { slot_type: st.inputId.endsWith('l') ? 'lunch' : 'dinner' });
         // Replace: old → new with honest deltas (brain spec §2).
         const oldName = getRecipeText(prevRec, lang) || extractRecipeName(prevValue) || prevValue;
         showChangeToast({
@@ -1220,6 +1231,9 @@ document.addEventListener('DOMContentLoaded', () => {
           ].filter(Boolean).join(' · '),
         });
       } else {
+        // Sprint 2 — Final analytics completion. Fires only when a
+        // previously-empty slot is genuinely filled for the first time.
+        if (window.mpTrack) window.mpTrack('planner_empty_slot_added', { slot_type: st.inputId.endsWith('l') ? 'lunch' : 'dinner' });
         // Add: name + cost added — no new i18n key needed; undo (prevValue
         // '') restores the empty slot through the same mechanism.
         showChangeToast({
@@ -2671,7 +2685,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ok = await generateRandomMenu();
         updateShoppingList();
         showCostEstimate(window._activeFilter);
-        if (ok && window.mpTrack) window.mpTrack('plan_generated', { filter: (getActiveFilterIds().join('+')) || 'all' });
+        if (ok && window.mpTrack) window.mpTrack('plan_generated', { filter: (getActiveFilterIds().join('+')) || 'all', source: 'generator_button' });
       } finally {
         autoBtn._generating = false;
       }
@@ -6066,7 +6080,12 @@ if (verifyBtn && emailInput && resultDiv) {
         await ensureMainRecipes();
         if (plan.isBudget) {
           window.isBudgetMenu = true;
-          generateRandomMenu();
+          // Sprint 2 — Final analytics completion. Same success/failure
+          // contract as the Generate button: only count a genuine plan.
+          // generateRandomMenu is async — must await it to get the real
+          // boolean; without await, `ok` would be a Promise (always truthy).
+          const ok = await generateRandomMenu();
+          if (ok && window.mpTrack) window.mpTrack('plan_generated', { source: 'autoplan_deeplink' });
         } else {
           const byId = new Map([...recipesMain, ...recipesBudget].map(r => [r.id, r]));
           const unresolved = [];
@@ -6096,6 +6115,10 @@ if (verifyBtn && emailInput && resultDiv) {
               `Re-run "npm run content" to regenerate plan-meals.generated.js.`
             );
           }
+          // Sprint 2 — Final analytics completion. plan exists (checked
+          // above) and slots were just filled from it — a real usable plan
+          // was created even if a handful of drifted ids were skipped.
+          if (window.mpTrack) window.mpTrack('plan_generated', { source: 'autoplan_deeplink' });
         }
         updateShoppingList();
         // clean up URL
@@ -6125,7 +6148,12 @@ if (verifyBtn && emailInput && resultDiv) {
         anchor.dispatchEvent(new Event('input', { bubbles: true }));
       }
       window._planMode = 'week';
-      try { await generateRandomMenu({ keepFilled: true }); } catch (_) { /* anchor still placed */ }
+      // Sprint 2 — Final analytics completion. Only a genuine successful
+      // generation counts; a caught failure leaves the pinned anchor but
+      // must not emit plan_generated.
+      let mealPlanOk = false;
+      try { mealPlanOk = await generateRandomMenu({ keepFilled: true }); } catch (_) { /* anchor still placed */ }
+      if (mealPlanOk && window.mpTrack) window.mpTrack('plan_generated', { source: 'meal_deeplink' });
       updateShoppingList();
       window.history.replaceState({}, '', window.location.pathname);
       document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior:'smooth', block:'start' });
@@ -6183,6 +6211,14 @@ if (verifyBtn && emailInput && resultDiv) {
         else localStorage.removeItem('mp:plan-cart');
       } catch (_) { /* storage unavailable — nothing to clear */ }
       if (!poured) return;
+      // Sprint 2 — Final analytics completion (Task 3 semantic audit).
+      // consumePlanCart() only pours cart items into the EMPTY slots it
+      // finds in the CURRENT grid (up to items.length, never more) — it
+      // does not call generateRandomMenu() and does not guarantee a
+      // complete week. That is not the same claim as plan_generated (a
+      // full, ready-to-use weekly plan), so this is the minimal bridge
+      // event instead: it measures cart→planner transfer, not "generated".
+      if (window.mpTrack) window.mpTrack('plan_cart_consumed', { items_poured: poured });
       showChangeToast({ bulk: snapshot, text: `${poured} ${t('pw.fromCart')}` });
       updateShoppingList();
       document.getElementById('plan-table')?.closest('section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -30,6 +30,20 @@ const CLIENT_EVENTS = new Set([
   // Sprint 1 — Funnel Measurement Foundation. Props: { recipe_id, source }
   // where source ∈ 'recipe_page' | 'recipe_hub' | 'recipe_explorer'.
   'recipe_added_to_plan',
+  // Sprint 2 — Final analytics completion. Props: { slot_type } where
+  // slot_type ∈ 'lunch' | 'dinner'. Fire only on a genuine successful
+  // planner customization (no restore/no-op/failure — see app.js).
+  'planner_reroll',
+  'planner_recipe_changed',
+  'planner_recipe_removed',
+  'planner_empty_slot_added',
+  // Sprint 2 — plan_generated's `source` prop (generator_button |
+  // autoplan_deeplink | meal_deeplink) needs no whitelist change; it was
+  // already allowed. plan_cart_consumed is the new minimal bridge event
+  // for consumePlanCart() — NOT plan_generated, since the cart pour does
+  // not guarantee a complete usable week (see app.js consumePlanCart()).
+  // Props: { items_poured }.
+  'plan_cart_consumed',
 ]);
 
 export default async function handler(req, res) {

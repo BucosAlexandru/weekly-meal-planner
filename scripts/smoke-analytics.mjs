@@ -238,6 +238,94 @@ check('plan-cart.js still uses the single shared mp:plan-cart key', planCartSrc.
 check('recipe-explorer.js still uses the single shared mp:plan-cart key', explorerSrc.includes("CART_KEY = 'mp:plan-cart'"));
 
 // ═════════════════════════════════════════════════════════════════════════════
+console.log('\n[7] Sprint 2 — Final analytics completion (planner_*, plan_generated source, plan_cart_consumed)\n');
+{
+  const analyticsSrc = read(p('public/js/analytics.js'));
+  const eventSrc = read(p('api/event.js'));
+  const NEW_EVENTS = ['planner_reroll', 'planner_recipe_changed', 'planner_recipe_removed', 'planner_empty_slot_added', 'plan_cart_consumed'];
+  for (const ev of NEW_EVENTS) {
+    check(`analytics.js ALLOWED includes ${ev}`, new RegExp(`\\b${ev}\\s*:\\s*1\\b`).test(analyticsSrc));
+    check(`api/event.js CLIENT_EVENTS includes '${ev}'`, new RegExp(`'${ev}'`).test(eventSrc));
+  }
+
+  // rerollMeal(): the track call must sit AFTER setSlotValue (i.e. after the
+  // two early-return no-ops — empty slot, exhausted pool — have already
+  // exited), so it can only fire on a genuine reroll.
+  {
+    const fn = (appSrc.split('async function rerollMeal(inputId, btn) {')[1] || '').split('\n  function removeMealSlot')[0];
+    const setIdx = fn.indexOf('setSlotValue(input, getRecipeText(pick, lang));');
+    const trackIdx = fn.indexOf("mpTrack('planner_reroll'");
+    check('rerollMeal(): planner_reroll fires only after setSlotValue (past both early returns)',
+          setIdx !== -1 && trackIdx !== -1 && trackIdx > setIdx);
+    check("rerollMeal(): slot_type derived via the existing inputId.endsWith('l') convention",
+          fn.includes("inputId.endsWith('l') ? 'lunch' : 'dinner'"));
+  }
+
+  // removeMealSlot(): track call after setSlotValue(input, '') — past the
+  // empty-slot early return.
+  {
+    const fn = (appSrc.split('function removeMealSlot(inputId) {')[1] || '').split('\n  // §2b.2')[0];
+    const setIdx = fn.indexOf("setSlotValue(input, '');");
+    const trackIdx = fn.indexOf("mpTrack('planner_recipe_removed'");
+    check("removeMealSlot(): planner_recipe_removed fires only after setSlotValue(input, '')",
+          setIdx !== -1 && trackIdx !== -1 && trackIdx > setIdx);
+  }
+
+  // pwPickItem(): planner_recipe_changed inside the wasFilled branch,
+  // planner_empty_slot_added inside the else branch — both nested inside the
+  // outer `if (newText && newText !== prevValue)` no-op guard.
+  {
+    const fn = (appSrc.split('function pwPickItem(idx) {')[1] || '').split('\n  function startDictation')[0];
+    const guardIdx = fn.indexOf('if (newText && newText !== prevValue)');
+    const ifWasFilledIdx = fn.indexOf('if (wasFilled) {');
+    const changedIdx = fn.indexOf("mpTrack('planner_recipe_changed'");
+    const elseIdx = fn.indexOf('} else {');
+    const addedIdx = fn.indexOf("mpTrack('planner_empty_slot_added'");
+    check('pwPickItem(): both new events are nested inside the newText!==prevValue no-op guard',
+          guardIdx !== -1 && guardIdx < ifWasFilledIdx && changedIdx > ifWasFilledIdx && addedIdx > elseIdx);
+    check('pwPickItem(): planner_recipe_changed is in the wasFilled (replace) branch, before planner_empty_slot_added',
+          changedIdx !== -1 && changedIdx < elseIdx);
+    check('pwPickItem(): planner_empty_slot_added is in the else (add) branch',
+          addedIdx !== -1 && addedIdx > elseIdx);
+  }
+
+  // plan_generated: three call sites, one `source` value each.
+  {
+    check("Generate button: plan_generated carries source:'generator_button'",
+          /mpTrack\('plan_generated',\s*\{\s*filter:.*source:\s*'generator_button'/.test(appSrc));
+    const autoplanBlock = (appSrc.split('// ---------- ?autoplan= deep link')[1] || '').split('// ---------- ?meal= deep link')[0];
+    check("?autoplan= (budget branch): awaits generateRandomMenu() before gating plan_generated",
+          /const ok = await generateRandomMenu\(\);\s*\n\s*if \(ok && window\.mpTrack\) window\.mpTrack\('plan_generated', \{ source: 'autoplan_deeplink' \}\);/.test(autoplanBlock));
+    check("?autoplan= (non-budget branch): plan_generated carries source:'autoplan_deeplink'",
+          /mpTrack\('plan_generated',\s*\{\s*source:\s*'autoplan_deeplink'\s*\}\);\s*\n\s*}\s*\n\s*updateShoppingList/.test(autoplanBlock));
+    const mealBlock = (appSrc.split('// ---------- ?meal= deep link')[1] || '').split('// ---------- plan cart')[0];
+    check("?meal= deep link: awaits generateRandomMenu before gating plan_generated with source:'meal_deeplink'",
+          /let mealPlanOk = false;[\s\S]*mealPlanOk = await generateRandomMenu\(\{ keepFilled: true \}\)[\s\S]*if \(mealPlanOk && window\.mpTrack\) window\.mpTrack\('plan_generated', \{ source: 'meal_deeplink' \}\);/.test(mealBlock));
+  }
+
+  // consumePlanCart(): plan_cart_consumed (NOT plan_generated) gated on
+  // `poured` (past the `if (!poured) return;` no-op guard), with the
+  // items_poured count as the sole minimal prop.
+  {
+    const fn = (appSrc.split('(function consumePlanCart() {')[1] || '').split('\n  // ---------- EXPORT SECTION')[0];
+    check('consumePlanCart(): does NOT emit plan_generated', !fn.includes("mpTrack('plan_generated'"));
+    check('consumePlanCart(): emits plan_cart_consumed', fn.includes("mpTrack('plan_cart_consumed'"));
+    const noopIdx = fn.indexOf('if (!poured) return;');
+    const trackIdx = fn.indexOf("mpTrack('plan_cart_consumed'");
+    check('consumePlanCart(): plan_cart_consumed fires only after the !poured no-op guard',
+          noopIdx !== -1 && trackIdx !== -1 && trackIdx > noopIdx);
+    check('consumePlanCart(): props carry items_poured (minimal, matches the actual pour count)',
+          /plan_cart_consumed',\s*\{\s*items_poured:\s*poured\s*\}/.test(fn));
+  }
+
+  // No parallel analytics system: every new call still routes through the
+  // single window.mpTrack, guarded exactly like the rest of the file.
+  const newTrackCalls = (appSrc.match(/window\.mpTrack\('(planner_reroll|planner_recipe_changed|planner_recipe_removed|planner_empty_slot_added|plan_cart_consumed)'/g) || []);
+  check('all 5 new Sprint 2 events fire via the single window.mpTrack (no parallel system)',
+        newTrackCalls.length === 5);
+}
+
+// ═════════════════════════════════════════════════════════════════════════════
 console.log(`\n──────────────────────────────────────────\n${pass} passed, ${fail} failed\n`);
 if (fail) {
   console.log('FAILURES:');
