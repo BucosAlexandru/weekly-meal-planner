@@ -4,67 +4,478 @@
   "tipType": "french",
   "pairingsType": "french",
   "origin": {
-    "ro": "Franța", "en": "France", "es": "Francia", "fr": "France", "de": "Frankreich",
-    "pt": "França", "ru": "Франция", "ar": "فرنسا", "zh": "法国", "ja": "フランス",
-    "tr": "Fransa", "it": "Francia", "ko": "프랑스", "hi": "फ़्रांस"
+    "ro": "Franța",
+    "en": "France",
+    "es": "Francia",
+    "fr": "France",
+    "de": "Frankreich",
+    "pt": "França",
+    "ru": "Франция",
+    "ar": "فرنسا",
+    "zh": "法国",
+    "ja": "フランス",
+    "tr": "Fransa",
+    "it": "Francia",
+    "ko": "프랑스",
+    "hi": "फ़्रांस"
   },
   "name": {
-    "ro": "Crème Brûlée", "en": "Crème Brûlée", "es": "Crème Brûlée", "fr": "Crème Brûlée",
-    "de": "Crème Brûlée", "pt": "Crème Brûlée", "ru": "Крем-брюле", "ar": "كريم بروليه",
-    "zh": "焦糖布丁", "ja": "クレームブリュレ", "tr": "Crème Brûlée", "it": "Crème Brûlée",
-    "ko": "크렘 브륄레", "hi": "क्रेम ब्रूले"
+    "ro": "Crème Brûlée",
+    "en": "Crème Brûlée",
+    "es": "Crème Brûlée",
+    "fr": "Crème Brûlée",
+    "de": "Crème Brûlée",
+    "pt": "Crème Brûlée",
+    "ru": "Крем-брюле",
+    "ar": "كريم بروليه",
+    "zh": "焦糖布丁",
+    "ja": "クレームブリュレ",
+    "tr": "Crème Brûlée",
+    "it": "Crème Brûlée",
+    "ko": "크렘 브륄레",
+    "hi": "क्रेम ब्रूले"
   },
   "category": {
-    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert",
-    "pt": "Sobremesa", "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "tr": "Tatlı", "it": "Dolce", "ko": "디저트", "hi": "मिठाई"
+    "ro": "Desert",
+    "en": "Dessert",
+    "es": "Postre",
+    "fr": "Dessert",
+    "de": "Dessert",
+    "pt": "Sobremesa",
+    "ru": "Десерт",
+    "ar": "حلوى",
+    "zh": "甜点",
+    "ja": "デザート",
+    "tr": "Tatlı",
+    "it": "Dolce",
+    "ko": "디저트",
+    "hi": "मिठाई"
   },
   "featureCards": {
-    "ro": [{"icon":"🌡️","t":"Coacere în baie de apă","d":"Căldură blândă și uniformă, fără să se taie crema"},{"icon":"🥚","t":"Doar gălbenușuri","d":"Fără albuș, pentru o textură densă și catifelată"},{"icon":"🔥","t":"Caramelizare chiar înainte de servire","d":"Zahărul se arde cu torța, nu se coace"},{"icon":"🥄","t":"Se sparge cu o lingură","d":"O crustă subțire și crocantă peste crema rece"}],
-    "en": [{"icon":"🌡️","t":"Baked in a water bath","d":"Gentle, even heat so the custard never curdles"},{"icon":"🥚","t":"Yolks only","d":"No whites, for a dense, velvety texture"},{"icon":"🔥","t":"Caramelised right before serving","d":"Sugar is torched, not baked"},{"icon":"🥄","t":"Cracks under a spoon","d":"A thin, crisp shell over the cold custard"}],
-    "es": [{"icon":"🌡️","t":"Horneada al baño maría","d":"Calor suave y uniforme para que la crema no se corte"},{"icon":"🥚","t":"Solo yemas","d":"Sin claras, para una textura densa y aterciopelada"},{"icon":"🔥","t":"Caramelizada justo antes de servir","d":"El azúcar se quema con soplete, no se hornea"},{"icon":"🥄","t":"Se rompe con la cuchara","d":"Una capa fina y crujiente sobre la crema fría"}],
-    "fr": [{"icon":"🌡️","t":"Cuite au bain-marie","d":"Chaleur douce et régulière pour que la crème ne tranche jamais"},{"icon":"🥚","t":"Jaunes seulement","d":"Pas de blancs, pour une texture dense et veloutée"},{"icon":"🔥","t":"Caramélisée juste avant de servir","d":"Le sucre est brûlé au chalumeau, pas cuit au four"},{"icon":"🥄","t":"Se craque sous la cuillère","d":"Une fine couche croustillante sur la crème froide"}],
-    "de": [{"icon":"🌡️","t":"Im Wasserbad gebacken","d":"Sanfte, gleichmäßige Hitze, damit die Creme nie gerinnt"},{"icon":"🥚","t":"Nur Eigelb","d":"Kein Eiweiß, für eine dichte, samtige Textur"},{"icon":"🔥","t":"Kurz vor dem Servieren karamellisiert","d":"Der Zucker wird abgeflämmt, nicht gebacken"},{"icon":"🥄","t":"Knackt unter dem Löffel","d":"Eine dünne, knusprige Schicht auf der kalten Creme"}],
-    "pt": [{"icon":"🌡️","t":"Cozida em banho-maria","d":"Calor suave e uniforme para o creme nunca talhar"},{"icon":"🥚","t":"Só gemas","d":"Sem claras, para uma textura densa e aveludada"},{"icon":"🔥","t":"Caramelizada mesmo antes de servir","d":"O açúcar é queimado com maçarico, não no forno"},{"icon":"🥄","t":"Parte-se com a colher","d":"Uma camada fina e estaladiça sobre o creme frio"}],
-    "ru": [{"icon":"🌡️","t":"Запекается на водяной бане","d":"Мягкий, равномерный жар, чтобы крем не свернулся"},{"icon":"🥚","t":"Только желтки","d":"Без белков, для плотной бархатистой текстуры"},{"icon":"🔥","t":"Карамелизируется перед подачей","d":"Сахар обжигают горелкой, а не запекают"},{"icon":"🥄","t":"Трескается под ложкой","d":"Тонкая хрустящая корочка поверх холодного крема"}],
-    "ar": [{"icon":"🌡️","t":"يُخبَز في حمام مائي","d":"حرارة لطيفة ومتساوية حتى لا يتخثر الكريم أبدًا"},{"icon":"🥚","t":"صفار البيض فقط","d":"بلا بياض، لقوام كثيف ومخملي"},{"icon":"🔥","t":"يُكرمل قبل التقديم مباشرة","d":"يُحرق السكر بالشعلة، لا يُخبَز"},{"icon":"🥄","t":"يتكسر تحت الملعقة","d":"طبقة رقيقة ومقرمشة فوق الكريم البارد"}],
-    "zh": [{"icon":"🌡️","t":"隔水烘烤","d":"温和均匀的热度，让蛋奶糊不会结块"},{"icon":"🥚","t":"只用蛋黄","d":"不加蛋白，质地更浓郁丝滑"},{"icon":"🔥","t":"上桌前才焦糖化","d":"用喷枪烧焦糖，而不是烘烤"},{"icon":"🥄","t":"用勺子敲开","d":"冷藏后的蛋奶糊上覆着一层薄脆外壳"}],
-    "ja": [{"icon":"🌡️","t":"湯煎で焼く","d":"優しく均一な熱でカスタードが分離しない"},{"icon":"🥚","t":"卵黄のみ使用","d":"卵白を使わず、濃厚でなめらかな食感に"},{"icon":"🔥","t":"提供直前にキャラメリゼ","d":"砂糖はバーナーで焦がす、オーブンでは焼かない"},{"icon":"🥄","t":"スプーンでパリッと割れる","d":"冷たいカスタードの上に薄くパリパリの層"}],
-    "tr": [{"icon":"🌡️","t":"Benmari usulü pişirilir","d":"Kremanın kesilmemesi için nazik, eşit ısı"},{"icon":"🥚","t":"Sadece sarısı","d":"Beyazı yok, yoğun ve kadifemsi doku için"},{"icon":"🔥","t":"Servisten hemen önce karamelize edilir","d":"Şeker alevle yakılır, fırında pişirilmez"},{"icon":"🥄","t":"Kaşıkla çatlar","d":"Soğuk kremanın üzerinde ince, çıtır bir tabaka"}],
-    "it": [{"icon":"🌡️","t":"Cotta a bagnomaria","d":"Calore delicato e uniforme perché la crema non stracci mai"},{"icon":"🥚","t":"Solo tuorli","d":"Niente albumi, per una consistenza densa e vellutata"},{"icon":"🔥","t":"Caramellata appena prima di servire","d":"Lo zucchero si brucia col cannello, non si cuoce in forno"},{"icon":"🥄","t":"Si rompe col cucchiaio","d":"Uno strato sottile e croccante sulla crema fredda"}],
-    "ko": [{"icon":"🌡️","t":"중탕으로 굽기","d":"부드럽고 고른 열로 커스터드가 절대 뭉치지 않게"},{"icon":"🥚","t":"노른자만 사용","d":"흰자 없이, 진하고 벨벳처럼 부드러운 질감으로"},{"icon":"🔥","t":"서빙 직전에 캐러멜라이즈","d":"설탕은 토치로 굽는 것이지 오븐에 굽지 않는다"},{"icon":"🥄","t":"숟가락으로 톡 깨지는","d":"차가운 커스터드 위에 얇고 바삭한 막"}],
-    "hi": [{"icon":"🌡️","t":"वॉटर बाथ में बेक करें","d":"हल्की, एकसमान आंच ताकि कस्टर्ड कभी न फटे"},{"icon":"🥚","t":"सिर्फ अंडे की ज़र्दी","d":"सफेदी नहीं, गाढ़ी, मखमली बनावट के लिए"},{"icon":"🔥","t":"परोसने से ठीक पहले कैरामलाइज़","d":"चीनी को टॉर्च से जलाया जाता है, बेक नहीं किया जाता"},{"icon":"🥄","t":"चम्मच से टूटती है","d":"ठंडे कस्टर्ड के ऊपर एक पतली, कुरकुरी परत"}]
+    "ro": [
+      {
+        "icon": "🌡️",
+        "t": "Coacere în baie de apă",
+        "d": "Căldură blândă și uniformă, fără să se taie crema"
+      },
+      {
+        "icon": "🥚",
+        "t": "Doar gălbenușuri",
+        "d": "Fără albuș, pentru o textură densă și catifelată"
+      },
+      {
+        "icon": "🔥",
+        "t": "Caramelizare chiar înainte de servire",
+        "d": "Zahărul se arde cu torța, nu se coace"
+      },
+      {
+        "icon": "🥄",
+        "t": "Se sparge cu o lingură",
+        "d": "O crustă subțire și crocantă peste crema rece"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🌡️",
+        "t": "Baked in a water bath",
+        "d": "Gentle, even heat so the custard never curdles"
+      },
+      {
+        "icon": "🥚",
+        "t": "Yolks only",
+        "d": "No whites, for a dense, velvety texture"
+      },
+      {
+        "icon": "🔥",
+        "t": "Caramelised right before serving",
+        "d": "Sugar is torched, not baked"
+      },
+      {
+        "icon": "🥄",
+        "t": "Cracks under a spoon",
+        "d": "A thin, crisp shell over the cold custard"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🌡️",
+        "t": "Horneada al baño maría",
+        "d": "Calor suave y uniforme para que la crema no se corte"
+      },
+      {
+        "icon": "🥚",
+        "t": "Solo yemas",
+        "d": "Sin claras, para una textura densa y aterciopelada"
+      },
+      {
+        "icon": "🔥",
+        "t": "Caramelizada justo antes de servir",
+        "d": "El azúcar se quema con soplete, no se hornea"
+      },
+      {
+        "icon": "🥄",
+        "t": "Se rompe con la cuchara",
+        "d": "Una capa fina y crujiente sobre la crema fría"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🌡️",
+        "t": "Cuite au bain-marie",
+        "d": "Chaleur douce et régulière pour que la crème ne tranche jamais"
+      },
+      {
+        "icon": "🥚",
+        "t": "Jaunes seulement",
+        "d": "Pas de blancs, pour une texture dense et veloutée"
+      },
+      {
+        "icon": "🔥",
+        "t": "Caramélisée juste avant de servir",
+        "d": "Le sucre est brûlé au chalumeau, pas cuit au four"
+      },
+      {
+        "icon": "🥄",
+        "t": "Se craque sous la cuillère",
+        "d": "Une fine couche croustillante sur la crème froide"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🌡️",
+        "t": "Im Wasserbad gebacken",
+        "d": "Sanfte, gleichmäßige Hitze, damit die Creme nie gerinnt"
+      },
+      {
+        "icon": "🥚",
+        "t": "Nur Eigelb",
+        "d": "Kein Eiweiß, für eine dichte, samtige Textur"
+      },
+      {
+        "icon": "🔥",
+        "t": "Kurz vor dem Servieren karamellisiert",
+        "d": "Der Zucker wird abgeflämmt, nicht gebacken"
+      },
+      {
+        "icon": "🥄",
+        "t": "Knackt unter dem Löffel",
+        "d": "Eine dünne, knusprige Schicht auf der kalten Creme"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🌡️",
+        "t": "Cozida em banho-maria",
+        "d": "Calor suave e uniforme para o creme nunca talhar"
+      },
+      {
+        "icon": "🥚",
+        "t": "Só gemas",
+        "d": "Sem claras, para uma textura densa e aveludada"
+      },
+      {
+        "icon": "🔥",
+        "t": "Caramelizada mesmo antes de servir",
+        "d": "O açúcar é queimado com maçarico, não no forno"
+      },
+      {
+        "icon": "🥄",
+        "t": "Parte-se com a colher",
+        "d": "Uma camada fina e estaladiça sobre o creme frio"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🌡️",
+        "t": "Запекается на водяной бане",
+        "d": "Мягкий, равномерный жар, чтобы крем не свернулся"
+      },
+      {
+        "icon": "🥚",
+        "t": "Только желтки",
+        "d": "Без белков, для плотной бархатистой текстуры"
+      },
+      {
+        "icon": "🔥",
+        "t": "Карамелизируется перед подачей",
+        "d": "Сахар обжигают горелкой, а не запекают"
+      },
+      {
+        "icon": "🥄",
+        "t": "Трескается под ложкой",
+        "d": "Тонкая хрустящая корочка поверх холодного крема"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🌡️",
+        "t": "يُخبَز في حمام مائي",
+        "d": "حرارة لطيفة ومتساوية حتى لا يتخثر الكريم أبدًا"
+      },
+      {
+        "icon": "🥚",
+        "t": "صفار البيض فقط",
+        "d": "بلا بياض، لقوام كثيف ومخملي"
+      },
+      {
+        "icon": "🔥",
+        "t": "يُكرمل قبل التقديم مباشرة",
+        "d": "يُحرق السكر بالشعلة، لا يُخبَز"
+      },
+      {
+        "icon": "🥄",
+        "t": "يتكسر تحت الملعقة",
+        "d": "طبقة رقيقة ومقرمشة فوق الكريم البارد"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🌡️",
+        "t": "隔水烘烤",
+        "d": "温和均匀的热度，让蛋奶糊不会结块"
+      },
+      {
+        "icon": "🥚",
+        "t": "只用蛋黄",
+        "d": "不加蛋白，质地更浓郁丝滑"
+      },
+      {
+        "icon": "🔥",
+        "t": "上桌前才焦糖化",
+        "d": "用喷枪烧焦糖，而不是烘烤"
+      },
+      {
+        "icon": "🥄",
+        "t": "用勺子敲开",
+        "d": "冷藏后的蛋奶糊上覆着一层薄脆外壳"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🌡️",
+        "t": "湯煎で焼く",
+        "d": "優しく均一な熱でカスタードが分離しない"
+      },
+      {
+        "icon": "🥚",
+        "t": "卵黄のみ使用",
+        "d": "卵白を使わず、濃厚でなめらかな食感に"
+      },
+      {
+        "icon": "🔥",
+        "t": "提供直前にキャラメリゼ",
+        "d": "砂糖はバーナーで焦がす、オーブンでは焼かない"
+      },
+      {
+        "icon": "🥄",
+        "t": "スプーンでパリッと割れる",
+        "d": "冷たいカスタードの上に薄くパリパリの層"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🌡️",
+        "t": "Benmari usulü pişirilir",
+        "d": "Kremanın kesilmemesi için nazik, eşit ısı"
+      },
+      {
+        "icon": "🥚",
+        "t": "Sadece sarısı",
+        "d": "Beyazı yok, yoğun ve kadifemsi doku için"
+      },
+      {
+        "icon": "🔥",
+        "t": "Servisten hemen önce karamelize edilir",
+        "d": "Şeker alevle yakılır, fırında pişirilmez"
+      },
+      {
+        "icon": "🥄",
+        "t": "Kaşıkla çatlar",
+        "d": "Soğuk kremanın üzerinde ince, çıtır bir tabaka"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🌡️",
+        "t": "Cotta a bagnomaria",
+        "d": "Calore delicato e uniforme perché la crema non stracci mai"
+      },
+      {
+        "icon": "🥚",
+        "t": "Solo tuorli",
+        "d": "Niente albumi, per una consistenza densa e vellutata"
+      },
+      {
+        "icon": "🔥",
+        "t": "Caramellata appena prima di servire",
+        "d": "Lo zucchero si brucia col cannello, non si cuoce in forno"
+      },
+      {
+        "icon": "🥄",
+        "t": "Si rompe col cucchiaio",
+        "d": "Uno strato sottile e croccante sulla crema fredda"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🌡️",
+        "t": "중탕으로 굽기",
+        "d": "부드럽고 고른 열로 커스터드가 절대 뭉치지 않게"
+      },
+      {
+        "icon": "🥚",
+        "t": "노른자만 사용",
+        "d": "흰자 없이, 진하고 벨벳처럼 부드러운 질감으로"
+      },
+      {
+        "icon": "🔥",
+        "t": "서빙 직전에 캐러멜라이즈",
+        "d": "설탕은 토치로 굽는 것이지 오븐에 굽지 않는다"
+      },
+      {
+        "icon": "🥄",
+        "t": "숟가락으로 톡 깨지는",
+        "d": "차가운 커스터드 위에 얇고 바삭한 막"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🌡️",
+        "t": "वॉटर बाथ में बेक करें",
+        "d": "हल्की, एकसमान आंच ताकि कस्टर्ड कभी न फटे"
+      },
+      {
+        "icon": "🥚",
+        "t": "सिर्फ अंडे की ज़र्दी",
+        "d": "सफेदी नहीं, गाढ़ी, मखमली बनावट के लिए"
+      },
+      {
+        "icon": "🔥",
+        "t": "परोसने से ठीक पहले कैरामलाइज़",
+        "d": "चीनी को टॉर्च से जलाया जाता है, बेक नहीं किया जाता"
+      },
+      {
+        "icon": "🥄",
+        "t": "चम्मच से टूटती है",
+        "d": "ठंडे कस्टर्ड के ऊपर एक पतली, कुरकुरी परत"
+      }
+    ]
   },
   "ingredients": {
-    "ro": ["500ml smântână lichidă pentru frișcă (min. 30% grăsime)", "1 păstaie de vanilie (sau 1 linguriță extract)", "6 gălbenușuri", "80g zahăr (plus zahăr brut pentru caramelizat)", "un praf de sare"],
-    "en": ["500ml heavy cream (min. 30% fat)", "1 vanilla pod (or 1 tsp extract)", "6 egg yolks", "80g sugar (plus raw sugar for caramelising)", "a pinch of salt"],
-    "es": ["500ml de nata para montar (mín. 30% grasa)", "1 vaina de vainilla (o 1 cdta de extracto)", "6 yemas de huevo", "80g de azúcar (más azúcar moreno para caramelizar)", "una pizca de sal"],
-    "fr": ["500ml de crème liquide entière (min. 30% MG)", "1 gousse de vanille (ou 1 c. à café d'extrait)", "6 jaunes d'œufs", "80g de sucre (plus cassonade pour caraméliser)", "une pincée de sel"],
-    "de": ["500ml Sahne (mind. 30% Fett)", "1 Vanilleschote (oder 1 TL Extrakt)", "6 Eigelb", "80g Zucker (plus brauner Zucker zum Karamellisieren)", "eine Prise Salz"],
-    "pt": ["500ml de natas para bater (mín. 30% gordura)", "1 vagem de baunilha (ou 1 col. chá de extrato)", "6 gemas de ovo", "80g de açúcar (mais açúcar amarelo para caramelizar)", "uma pitada de sal"],
-    "ru": ["500мл жирных сливок (мин. 30% жирности)", "1 стручок ванили (или 1 ч.л. экстракта)", "6 яичных желтков", "80г сахара (плюс тростниковый сахар для карамелизации)", "щепотка соли"],
-    "ar": ["500مل كريمة خفق دسمة (30% دهون على الأقل)", "قرن فانيليا واحد (أو ملعقة صغيرة خلاصة)", "6 صفار بيض", "80غ سكر (بالإضافة إلى سكر خام للتكريمل)", "رشة ملح"],
-    "zh": ["500毫升淡奶油（脂肪含量不低于30%）", "1根香草荚（或1茶匙香草精）", "6个蛋黄", "80克糖（另加原蔗糖用于焦糖化）", "一小撮盐"],
-    "ja": ["生クリーム500ml（乳脂肪分30%以上）", "バニラビーンズ1本（またはエキス小さじ1）", "卵黄6個", "砂糖80g（キャラメリゼ用にきび砂糖を追加）", "塩ひとつまみ"],
-    "tr": ["500ml krema (min. %30 yağ)", "1 vanilya çubuğu (veya 1 tatlı kaşığı özüt)", "6 yumurta sarısı", "80g şeker (karamelize etmek için ham şeker ilaveten)", "bir tutam tuz"],
-    "it": ["500ml di panna fresca (min. 30% di grassi)", "1 baccello di vaniglia (o 1 cucchiaino di estratto)", "6 tuorli d'uovo", "80g di zucchero (più zucchero di canna per caramellare)", "un pizzico di sale"],
-    "ko": ["생크림 500ml (지방 함량 최소 30%)", "바닐라빈 1개 (또는 바닐라 익스트랙트 1작은술)", "달걀노른자 6개", "설탕 80g (캐러멜라이즈용 황설탕 별도)", "소금 한 꼬집"],
-    "hi": ["500मिली हैवी क्रीम (न्यूनतम 30% वसा)", "1 वनीला फली (या 1 छोटा चम्मच एक्सट्रैक्ट)", "6 अंडे की ज़र्दी", "80ग्राम चीनी (कैरामलाइज़ करने के लिए ब्राउन शुगर अलग से)", "एक चुटकी नमक"]
+    "ro": [
+      "500ml smântână lichidă pentru frișcă (min. 30% grăsime)",
+      "1 păstaie de vanilie (sau 1 linguriță extract)",
+      "6 gălbenușuri",
+      "80g zahăr (plus zahăr brut pentru caramelizat)",
+      "un praf de sare"
+    ],
+    "en": [
+      "500ml heavy cream (min. 30% fat)",
+      "1 vanilla pod (or 1 tsp extract)",
+      "6 egg yolks",
+      "80g sugar (plus raw sugar for caramelising)",
+      "a pinch of salt"
+    ],
+    "es": [
+      "500ml de nata para montar (mín. 30% grasa)",
+      "1 vaina de vainilla (o 1 cdta de extracto)",
+      "6 yemas de huevo",
+      "80g de azúcar (más azúcar moreno para caramelizar)",
+      "una pizca de sal"
+    ],
+    "fr": [
+      "500ml de crème liquide entière (min. 30% MG)",
+      "1 gousse de vanille (ou 1 c. à café d'extrait)",
+      "6 jaunes d'œufs",
+      "80g de sucre (plus cassonade pour caraméliser)",
+      "une pincée de sel"
+    ],
+    "de": [
+      "500ml Sahne (mind. 30% Fett)",
+      "1 Vanilleschote (oder 1 TL Extrakt)",
+      "6 Eigelb",
+      "80g Zucker (plus brauner Zucker zum Karamellisieren)",
+      "eine Prise Salz"
+    ],
+    "pt": [
+      "500ml de natas para bater (mín. 30% gordura)",
+      "1 vagem de baunilha (ou 1 col. chá de extrato)",
+      "6 gemas de ovo",
+      "80g de açúcar (mais açúcar amarelo para caramelizar)",
+      "uma pitada de sal"
+    ],
+    "ru": [
+      "500мл жирных сливок (мин. 30% жирности)",
+      "1 стручок ванили (или 1 ч.л. экстракта)",
+      "6 яичных желтков",
+      "80г сахара (плюс тростниковый сахар для карамелизации)",
+      "щепотка соли"
+    ],
+    "ar": [
+      "500مل كريمة خفق دسمة (30% دهون على الأقل)",
+      "قرن فانيليا واحد (أو ملعقة صغيرة خلاصة)",
+      "6 صفار بيض",
+      "80غ سكر (بالإضافة إلى سكر خام للتكريمل)",
+      "رشة ملح"
+    ],
+    "zh": [
+      "500毫升淡奶油（脂肪含量不低于30%）",
+      "1根香草荚（或1茶匙香草精）",
+      "6个蛋黄",
+      "80克糖（另加原蔗糖用于焦糖化）",
+      "一小撮盐"
+    ],
+    "ja": [
+      "生クリーム500ml（乳脂肪分30%以上）",
+      "バニラビーンズ1本（またはエキス小さじ1）",
+      "卵黄6個",
+      "砂糖80g（キャラメリゼ用にきび砂糖を追加）",
+      "塩ひとつまみ"
+    ],
+    "tr": [
+      "500ml krema (min. %30 yağ)",
+      "1 vanilya çubuğu (veya 1 tatlı kaşığı özüt)",
+      "6 yumurta sarısı",
+      "80g şeker (karamelize etmek için ham şeker ilaveten)",
+      "bir tutam tuz"
+    ],
+    "it": [
+      "500ml di panna fresca (min. 30% di grassi)",
+      "1 baccello di vaniglia (o 1 cucchiaino di estratto)",
+      "6 tuorli d'uovo",
+      "80g di zucchero (più zucchero di canna per caramellare)",
+      "un pizzico di sale"
+    ],
+    "ko": [
+      "생크림 500ml (지방 함량 최소 30%)",
+      "바닐라빈 1개 (또는 바닐라 익스트랙트 1작은술)",
+      "달걀노른자 6개",
+      "설탕 80g (캐러멜라이즈용 황설탕 별도)",
+      "소금 한 꼬집"
+    ],
+    "hi": [
+      "500मिली हैवी क्रीम (न्यूनतम 30% वसा)",
+      "1 वनीला फली (या 1 छोटा चम्मच एक्सट्रैक्ट)",
+      "6 अंडे की ज़र्दी",
+      "80ग्राम चीनी (कैरामलाइज़ करने के लिए ब्राउन शुगर अलग से)",
+      "एक चुटकी नमक"
+    ]
   },
   "howIsMade": {
-    "ro": ["ÎNCĂLZEȘTE ÎN CUPTOR: pornește cuptorul la 150°C.", "INFUZEAZĂ SMÂNTÂNA: pune smântâna, semințele răzuite din păstaia de vanilie și păstaia goală într-o cratiță, încălzește aproape de fierbere, apoi ia de pe foc și lasă 10 minute să se infuzeze. Scoate păstaia.", "AMESTECĂ GĂLBENUȘURILE: bate gălbenușurile cu zahărul și sarea într-un bol, doar până se omogenizează — fără să incorporezi aer în exces.", "COMBINĂ TREPTAT: toarnă smântâna caldă peste gălbenușuri în fir subțire, amestecând continuu, ca să nu se coaguleze ouăle.", "STRECOARĂ ȘI TURNĂ: trece compoziția printr-o sită fină, apoi împarte în 4 forme (ramekin-uri).", "COACE ÎN BAIE DE APĂ: așază formele într-o tavă, toarnă apă fierbinte până la jumătatea înălțimii lor și coace 35-40 minute, până când marginile s-au legat, dar centrul încă tremură ușor.", "RĂCEȘTE: lasă la temperatura camerei, apoi la frigider minimum 3 ore, ideal peste noapte.", "CARAMELIZEAZĂ ȘI SERVEȘTE: presară un strat subțire de zahăr brut deasupra fiecărei creme și caramelizează cu torța de bucătărie până devine auriu-crocant. Servește imediat, cât crusta e încă fierbinte."],
-    "en": ["PREHEAT THE OVEN: set the oven to 150°C.", "INFUSE THE CREAM: put the cream, the seeds scraped from the vanilla pod and the empty pod into a saucepan, heat until nearly boiling, then remove from heat and let infuse for 10 minutes. Discard the pod.", "WHISK THE YOLKS: whisk the egg yolks with the sugar and salt in a bowl, just until combined — avoid whisking in excess air.", "COMBINE GRADUALLY: pour the warm cream over the yolks in a thin stream, whisking constantly so the eggs don't scramble.", "STRAIN AND POUR: pass the mixture through a fine sieve, then divide between 4 ramekins.", "BAKE IN A WATER BATH: place the ramekins in a roasting tray, pour hot water halfway up their sides and bake for 35-40 minutes, until the edges are set but the centre still has a slight wobble.", "CHILL: let cool to room temperature, then refrigerate for at least 3 hours, ideally overnight.", "CARAMELISE AND SERVE: sprinkle a thin layer of raw sugar over each custard and torch until golden and crisp. Serve immediately, while the shell is still hot."],
-    "es": ["PRECALIENTA EL HORNO: pon el horno a 150°C.", "INFUSIONA LA NATA: pon la nata, las semillas raspadas de la vaina de vainilla y la vaina vacía en un cazo, calienta casi hasta el hervor, retira del fuego y deja infusionar 10 minutos. Retira la vaina.", "BATE LAS YEMAS: bate las yemas con el azúcar y la sal en un bol, solo hasta integrar — sin incorporar aire en exceso.", "COMBINA POCO A POCO: vierte la nata caliente sobre las yemas en un hilo fino, batiendo sin parar para que los huevos no cuajen.", "COLA Y VIERTE: pasa la mezcla por un colador fino, luego reparte entre 4 moldes individuales.", "HORNEA AL BAÑO MARÍA: coloca los moldes en una bandeja, vierte agua caliente hasta la mitad de su altura y hornea 35-40 minutos, hasta que los bordes cuajen pero el centro tiemble ligeramente.", "ENFRÍA: deja enfriar a temperatura ambiente, luego refrigera al menos 3 horas, idealmente toda la noche.", "CARAMELIZA Y SIRVE: espolvorea una capa fina de azúcar moreno sobre cada crema y quema con el soplete hasta dorar y quedar crujiente. Sirve enseguida, mientras la capa aún está caliente."],
-    "fr": ["PRÉCHAUFFE LE FOUR: règle le four à 150°C.", "INFUSE LA CRÈME: mets la crème, les graines grattées de la gousse de vanille et la gousse vide dans une casserole, chauffe presque jusqu'à ébullition, puis retire du feu et laisse infuser 10 minutes. Retire la gousse.", "FOUETTE LES JAUNES: fouette les jaunes d'œufs avec le sucre et le sel dans un bol, juste jusqu'à homogénéité — sans trop incorporer d'air.", "COMBINE PROGRESSIVEMENT: verse la crème chaude sur les jaunes en filet fin, en fouettant sans cesse pour que les œufs ne cuisent pas.", "FILTRE ET VERSE: passe la préparation au tamis fin, puis répartis dans 4 ramequins.", "CUIS AU BAIN-MARIE: place les ramequins dans un plat, verse de l'eau chaude jusqu'à mi-hauteur et fais cuire 35-40 minutes, jusqu'à ce que les bords soient pris mais le centre encore légèrement tremblotant.", "RÉFRIGÈRE: laisse refroidir à température ambiante, puis réfrigère au moins 3 heures, idéalement toute la nuit.", "CARAMÉLISE ET SERS: saupoudre une fine couche de cassonade sur chaque crème et caramélise au chalumeau jusqu'à ce qu'elle soit dorée et croustillante. Sers aussitôt, pendant que la croûte est encore chaude."],
-    "de": ["OFEN VORHEIZEN: den Ofen auf 150°C vorheizen.", "SAHNE AROMATISIEREN: Sahne, das ausgekratzte Mark der Vanilleschote und die leere Schote in einen Topf geben, fast bis zum Kochen erhitzen, dann vom Herd nehmen und 10 Minuten ziehen lassen. Die Schote entfernen.", "EIGELB VERQUIRLEN: Eigelb mit Zucker und Salz in einer Schüssel verquirlen, nur bis alles vermischt ist — nicht zu viel Luft einschlagen.", "SCHRITTWEISE VERBINDEN: die warme Sahne in dünnem Strahl unter ständigem Rühren zum Eigelb gießen, damit die Eier nicht stocken.", "SIEBEN UND EINFÜLLEN: die Masse durch ein feines Sieb gießen, dann auf 4 Förmchen verteilen.", "IM WASSERBAD BACKEN: die Förmchen in eine Bratform stellen, heißes Wasser bis zur Hälfte der Förmchenhöhe eingießen und 35-40 Minuten backen, bis die Ränder fest sind, die Mitte aber noch leicht wackelt.", "KÜHLEN: auf Zimmertemperatur abkühlen lassen, dann mindestens 3 Stunden, idealerweise über Nacht, kaltstellen.", "KARAMELLISIEREN UND SERVIEREN: eine dünne Schicht braunen Zucker über jede Creme streuen und mit dem Küchenbrenner abflämmen, bis sie goldbraun und knusprig ist. Sofort servieren, solange die Kruste noch heiß ist."],
-    "pt": ["PRÉ-AQUECE O FORNO: leva o forno a 150°C.", "INFUSIONA AS NATAS: coloca as natas, as sementes raspadas da vagem de baunilha e a vagem vazia num tacho, aquece quase até ferver, retira do lume e deixa infusionar 10 minutos. Retira a vagem.", "BATE AS GEMAS: bate as gemas com o açúcar e o sal numa taça, só até ficar homogéneo — sem incorporar ar em excesso.", "COMBINA GRADUALMENTE: verta as natas quentes sobre as gemas em fio fino, batendo sem parar para os ovos não talharem.", "CÔA E VERTE: passa a mistura por um passador fino, depois divide por 4 formas individuais.", "COZE EM BANHO-MARIA: coloca as formas num tabuleiro, verte água quente até meia altura e coze 35-40 minutos, até as bordas firmarem mas o centro ainda tremer ligeiramente.", "LEVA AO FRIO: deixa arrefecer à temperatura ambiente, depois refrigera pelo menos 3 horas, idealmente de um dia para o outro.", "CARAMELIZA E SERVE: polvilha uma camada fina de açúcar amarelo sobre cada creme e caramelize com o maçarico até dourar e ficar estaladiço. Serve de imediato, enquanto a crosta ainda está quente."],
-    "ru": ["РАЗОГРЕЙ ДУХОВКУ: разогрей духовку до 150°C.", "НАСТОЙ СЛИВОК: положи сливки, семена, выскобленные из стручка ванили, и сам стручок в сотейник, нагрей почти до кипения, сними с огня и оставь настояться 10 минут. Убери стручок.", "ВЗБЕЙ ЖЕЛТКИ: взбей желтки с сахаром и солью в миске, только до однородности — не взбивай слишком много воздуха.", "СОЕДИНИ ПОСТЕПЕННО: влей тёплые сливки в желтки тонкой струйкой, постоянно помешивая, чтобы яйца не свернулись.", "ПРОЦЕДИ И РАЗЛЕЙ: пропусти смесь через мелкое сито, затем раздели на 4 порционные формы.", "ЗАПЕКАЙ НА ВОДЯНОЙ БАНЕ: поставь формы в противень, налей горячую воду до половины высоты форм и запекай 35-40 минут, пока края не схватятся, а центр останется слегка дрожащим.", "ОХЛАДИ: остуди до комнатной температуры, затем убери в холодильник минимум на 3 часа, лучше на ночь.", "КАРАМЕЛИЗИРУЙ И ПОДАЙ: посыпь тонкий слой тростникового сахара на каждый крем и обожги горелкой до золотистой хрустящей корочки. Подавай сразу, пока корочка ещё горячая."],
-    "ar": ["سخّن الفرن: اضبط الفرن على 150 درجة مئوية.", "انقع الكريمة بالنكهة: ضع الكريمة وبذور الفانيليا المكشوطة من القرن مع القرن الفارغ في قدر، سخّن حتى يقارب الغليان، ثم ارفع عن النار واترك 10 دقائق للنقع. تخلّص من القرن.", "اخفق الصفار: اخفق صفار البيض مع السكر والملح في وعاء، فقط حتى يتجانس — تجنب خفق الهواء الزائد.", "ادمج تدريجيًا: اسكب الكريمة الدافئة على الصفار في خيط رفيع، مع الخفق المستمر حتى لا يتخثر البيض.", "صفِّ واسكب: مرّر الخليط عبر مصفاة ناعمة، ثم وزّعه على 4 قوالب فردية.", "اخبز في حمام مائي: ضع القوالب في صينية، اسكب ماء ساخنًا حتى منتصف ارتفاعها واخبز 35-40 دقيقة، حتى تتماسك الحواف بينما يبقى الوسط يهتز قليلًا.", "برّد: اترك يبرد في درجة حرارة الغرفة، ثم ضعه في الثلاجة 3 ساعات على الأقل، ويفضل طوال الليل.", "كرمِل وقدّم: انثر طبقة رقيقة من السكر الخام فوق كل كريمة واحرقها بالشعلة حتى تصبح ذهبية ومقرمشة. قدّم فورًا، بينما القشرة لا تزال ساخنة."],
-    "zh": ["预热烤箱：将烤箱预热至150°C。", "为奶油增添香气：将淡奶油、从香草荚中刮出的籽和空荚一起放入锅中，加热至接近沸腾，离火后静置10分钟让香气融入。取出香草荚。", "打发蛋黄：将蛋黄与糖和盐在碗中搅打，仅打至混合均匀即可——避免打入过多空气。", "逐步混合：将温热的奶油以细流状倒入蛋黄中，同时不断搅拌，防止鸡蛋结块。", "过滤并倒入：将混合物过细筛，然后平均分装到4个小烤盅中。", "隔水烘烤：将烤盅放入烤盘中，倒入热水至烤盅高度的一半，烘烤35-40分钟，直到边缘凝固但中心仍微微晃动。", "冷藏：先放至室温，再冷藏至少3小时，最好过夜。", "焦糖化并享用：在每份蛋奶糊上撒一层薄薄的原蔗糖，用喷枪烧至金黄酥脆。趁外壳还热时立即享用。"],
-    "ja": ["オーブンを予熱する：オーブンを150°Cに設定する。", "生クリームに香りを移す：鍋に生クリーム、バニラビーンズからこそげ取った種、さやを入れ、沸騰直前まで温めてから火を止め、10分置いて香りを移す。さやは取り除く。", "卵黄を混ぜる：ボウルで卵黄に砂糖と塩を加え、なじむ程度に軽く混ぜる——泡立てすぎないこと。", "少しずつ合わせる：温かい生クリームを細く注ぎながら卵黄に加え、絶えず混ぜて卵が固まらないようにする。", "こして流し入れる：混ぜたものを目の細かいざるでこし、4個の型に均等に分ける。", "湯煎で焼く：型を天板に並べ、型の高さの半分まで熱湯を注ぎ、35〜40分焼く。縁が固まり中心が少し揺れる程度が目安。", "冷やす：室温まで冷まし、その後冷蔵庫で最低3時間、できれば一晩冷やす。", "キャラメリゼして提供する：それぞれのカスタードにきび砂糖を薄く振りかけ、バーナーできつね色になるまで焦がす。表面がまだ熱いうちにすぐに提供する。"],
-    "tr": ["FIRINI ISITIN: fırını 150°C'ye ayarlayın.", "KREMAYA AROMA VERİN: kremayı, vanilya çubuğundan kazınan taneleri ve boş çubuğu bir tencereye koyun, kaynamaya yakın bir noktaya kadar ısıtın, ardından ateşten alıp 10 dakika demlenmeye bırakın. Çubuğu çıkarın.", "SARILARI ÇIRPIN: yumurta sarılarını şeker ve tuzla bir kasede, sadece karışana kadar çırpın — fazla hava katmaktan kaçının.", "AZAR AZAR BİRLEŞTİRİN: ılık kremayı ince bir akışla sarıların üzerine dökün, yumurtaların pişmemesi için sürekli çırpın.", "SÜZÜN VE DÖKÜN: karışımı ince bir süzgeçten geçirin, ardından 4 tekli kaba paylaştırın.", "BENMARİDE PİŞİRİN: kapları bir fırın tepsisine yerleştirin, kenarlarının yarısına kadar sıcak su dökün ve kenarları sertleşip ortası hafif titreyene kadar 35-40 dakika pişirin.", "SOĞUTUN: oda sıcaklığına gelmesini bekleyin, ardından en az 3 saat, tercihen bir gece buzdolabında bekletin.", "KARAMELİZE EDİN VE SERVİS YAPIN: her kremanın üzerine ince bir katman ham şeker serpin ve alevle altın rengi ve çıtır olana kadar yakın. Kabuk hâlâ sıcakken hemen servis yapın."],
-    "it": ["PRERISCALDA IL FORNO: porta il forno a 150°C.", "INFONDI LA PANNA: metti la panna, i semi raschiati dal baccello di vaniglia e il baccello vuoto in un pentolino, scalda quasi fino al bollore, poi togli dal fuoco e lascia in infusione 10 minuti. Elimina il baccello.", "SBATTI I TUORLI: sbatti i tuorli con lo zucchero e il sale in una ciotola, solo fino ad amalgamare — senza incorporare troppa aria.", "UNISCI GRADUALMENTE: versa la panna calda sui tuorli a filo, mescolando continuamente perché le uova non si rapprendano.", "FILTRA E VERSA: passa il composto attraverso un colino fine, poi dividilo in 4 stampini.", "CUOCI A BAGNOMARIA: metti gli stampini in una teglia, versa acqua calda fino a metà della loro altezza e cuoci per 35-40 minuti, finché i bordi sono rappresi ma il centro trema ancora leggermente.", "RAFFREDDA: lascia raffreddare a temperatura ambiente, poi metti in frigo per almeno 3 ore, idealmente tutta la notte.", "CARAMELLA E SERVI: cospargi un sottile strato di zucchero di canna su ogni crema e brucia col cannello finché dorato e croccante. Servi subito, mentre la crosta è ancora calda."],
-    "ko": ["오븐 예열하기: 오븐을 150°C로 예열한다.", "생크림에 향 우려내기: 냄비에 생크림, 바닐라빈에서 긁어낸 씨앗, 빈 깍지를 넣고 끓기 직전까지 데운 후 불에서 내려 10분간 향을 우려낸다. 깍지는 건져낸다.", "노른자 섞기: 볼에 달걀노른자와 설탕, 소금을 넣고 섞일 정도로만 젓는다 — 공기가 많이 들어가지 않도록 한다.", "천천히 합치기: 따뜻한 생크림을 가는 줄기로 붓듯이 노른자에 넣으며 계속 저어 달걀이 익지 않게 한다.", "체에 걸러 붓기: 혼합물을 고운 체에 걸러 4개의 개별 용기에 나누어 붓는다.", "중탕으로 굽기: 용기들을 팬에 놓고 용기 높이의 절반까지 뜨거운 물을 부은 뒤, 가장자리는 굳고 중앙은 살짝 흔들릴 때까지 35-40분간 굽는다.", "식히기: 실온에서 식힌 후 냉장고에서 최소 3시간, 가능하면 하룻밤 둔다.", "캐러멜라이즈하여 서빙하기: 각 커스터드 위에 황설탕을 얇게 뿌리고 토치로 황금빛이 나고 바삭해질 때까지 그을린다. 겉면이 아직 뜨거울 때 바로 서빙한다."],
-    "hi": ["ओवन गरम करें: ओवन को 150°C पर सेट करें।", "क्रीम में स्वाद घोलें: क्रीम, वनीला फली से खुरचे हुए बीज और खाली फली एक पैन में डालें, उबाल आने के करीब तक गरम करें, फिर आंच से उतारकर 10 मिनट तक स्वाद घुलने दें। फली निकाल दें।", "ज़र्दी फेंटें: एक कटोरे में अंडे की ज़र्दी को चीनी और नमक के साथ तब तक फेंटें जब तक मिल न जाए — ज़्यादा हवा न भरें।", "धीरे-धीरे मिलाएं: गरम क्रीम को पतली धार में ज़र्दी पर डालते हुए लगातार फेंटें ताकि अंडे न फटें।", "छानकर डालें: मिश्रण को महीन छलनी से छानें, फिर 4 अलग-अलग सांचों में बांटें।", "वॉटर बाथ में बेक करें: सांचों को एक ट्रे में रखें, उनकी ऊंचाई के आधे तक गरम पानी डालें और 35-40 मिनट बेक करें, जब तक किनारे जम जाएं पर बीच हल्का सा हिलता रहे।", "ठंडा करें: कमरे के तापमान तक ठंडा होने दें, फिर फ्रिज में कम से कम 3 घंटे, आदर्श रूप से रातभर रखें।", "कैरामलाइज़ करें और परोसें: हर कस्टर्ड पर ब्राउन शुगर की पतली परत छिड़कें और टॉर्च से सुनहरा और कुरकुरा होने तक जलाएं। तुरंत परोसें, जब तक परत अभी भी गरम हो।"]
+    "ro": "ÎNCĂLZEȘTE ÎN CUPTOR: pornește cuptorul la 150°C. INFUZEAZĂ SMÂNTÂNA: pune smântâna, semințele răzuite din păstaia de vanilie și păstaia goală într-o cratiță, încălzește aproape de fierbere, apoi ia de pe foc și lasă 10 minute să se infuzeze. Scoate păstaia. AMESTECĂ GĂLBENUȘURILE: bate gălbenușurile cu zahărul și sarea într-un bol, doar până se omogenizează — fără să incorporezi aer în exces. COMBINĂ TREPTAT: toarnă smântâna caldă peste gălbenușuri în fir subțire, amestecând continuu, ca să nu se coaguleze ouăle. STRECOARĂ ȘI TURNĂ: trece compoziția printr-o sită fină, apoi împarte în 4 forme (ramekin-uri). COACE ÎN BAIE DE APĂ: așază formele într-o tavă, toarnă apă fierbinte până la jumătatea înălțimii lor și coace 35-40 minute, până când marginile s-au legat, dar centrul încă tremură ușor. RĂCEȘTE: lasă la temperatura camerei, apoi la frigider minimum 3 ore, ideal peste noapte. CARAMELIZEAZĂ ȘI SERVEȘTE: presară un strat subțire de zahăr brut deasupra fiecărei creme și caramelizează cu torța de bucătărie până devine auriu-crocant. Servește imediat, cât crusta e încă fierbinte.",
+    "en": "PREHEAT THE OVEN: set the oven to 150°C. INFUSE THE CREAM: put the cream, the seeds scraped from the vanilla pod and the empty pod into a saucepan, heat until nearly boiling, then remove from heat and let infuse for 10 minutes. Discard the pod. WHISK THE YOLKS: whisk the egg yolks with the sugar and salt in a bowl, just until combined — avoid whisking in excess air. COMBINE GRADUALLY: pour the warm cream over the yolks in a thin stream, whisking constantly so the eggs don't scramble. STRAIN AND POUR: pass the mixture through a fine sieve, then divide between 4 ramekins. BAKE IN A WATER BATH: place the ramekins in a roasting tray, pour hot water halfway up their sides and bake for 35-40 minutes, until the edges are set but the centre still has a slight wobble. CHILL: let cool to room temperature, then refrigerate for at least 3 hours, ideally overnight. CARAMELISE AND SERVE: sprinkle a thin layer of raw sugar over each custard and torch until golden and crisp. Serve immediately, while the shell is still hot.",
+    "es": "PRECALIENTA EL HORNO: pon el horno a 150°C. INFUSIONA LA NATA: pon la nata, las semillas raspadas de la vaina de vainilla y la vaina vacía en un cazo, calienta casi hasta el hervor, retira del fuego y deja infusionar 10 minutos. Retira la vaina. BATE LAS YEMAS: bate las yemas con el azúcar y la sal en un bol, solo hasta integrar — sin incorporar aire en exceso. COMBINA POCO A POCO: vierte la nata caliente sobre las yemas en un hilo fino, batiendo sin parar para que los huevos no cuajen. COLA Y VIERTE: pasa la mezcla por un colador fino, luego reparte entre 4 moldes individuales. HORNEA AL BAÑO MARÍA: coloca los moldes en una bandeja, vierte agua caliente hasta la mitad de su altura y hornea 35-40 minutos, hasta que los bordes cuajen pero el centro tiemble ligeramente. ENFRÍA: deja enfriar a temperatura ambiente, luego refrigera al menos 3 horas, idealmente toda la noche. CARAMELIZA Y SIRVE: espolvorea una capa fina de azúcar moreno sobre cada crema y quema con el soplete hasta dorar y quedar crujiente. Sirve enseguida, mientras la capa aún está caliente.",
+    "fr": "PRÉCHAUFFE LE FOUR: règle le four à 150°C. INFUSE LA CRÈME: mets la crème, les graines grattées de la gousse de vanille et la gousse vide dans une casserole, chauffe presque jusqu'à ébullition, puis retire du feu et laisse infuser 10 minutes. Retire la gousse. FOUETTE LES JAUNES: fouette les jaunes d'œufs avec le sucre et le sel dans un bol, juste jusqu'à homogénéité — sans trop incorporer d'air. COMBINE PROGRESSIVEMENT: verse la crème chaude sur les jaunes en filet fin, en fouettant sans cesse pour que les œufs ne cuisent pas. FILTRE ET VERSE: passe la préparation au tamis fin, puis répartis dans 4 ramequins. CUIS AU BAIN-MARIE: place les ramequins dans un plat, verse de l'eau chaude jusqu'à mi-hauteur et fais cuire 35-40 minutes, jusqu'à ce que les bords soient pris mais le centre encore légèrement tremblotant. RÉFRIGÈRE: laisse refroidir à température ambiante, puis réfrigère au moins 3 heures, idéalement toute la nuit. CARAMÉLISE ET SERS: saupoudre une fine couche de cassonade sur chaque crème et caramélise au chalumeau jusqu'à ce qu'elle soit dorée et croustillante. Sers aussitôt, pendant que la croûte est encore chaude.",
+    "de": "OFEN VORHEIZEN: den Ofen auf 150°C vorheizen. SAHNE AROMATISIEREN: Sahne, das ausgekratzte Mark der Vanilleschote und die leere Schote in einen Topf geben, fast bis zum Kochen erhitzen, dann vom Herd nehmen und 10 Minuten ziehen lassen. Die Schote entfernen. EIGELB VERQUIRLEN: Eigelb mit Zucker und Salz in einer Schüssel verquirlen, nur bis alles vermischt ist — nicht zu viel Luft einschlagen. SCHRITTWEISE VERBINDEN: die warme Sahne in dünnem Strahl unter ständigem Rühren zum Eigelb gießen, damit die Eier nicht stocken. SIEBEN UND EINFÜLLEN: die Masse durch ein feines Sieb gießen, dann auf 4 Förmchen verteilen. IM WASSERBAD BACKEN: die Förmchen in eine Bratform stellen, heißes Wasser bis zur Hälfte der Förmchenhöhe eingießen und 35-40 Minuten backen, bis die Ränder fest sind, die Mitte aber noch leicht wackelt. KÜHLEN: auf Zimmertemperatur abkühlen lassen, dann mindestens 3 Stunden, idealerweise über Nacht, kaltstellen. KARAMELLISIEREN UND SERVIEREN: eine dünne Schicht braunen Zucker über jede Creme streuen und mit dem Küchenbrenner abflämmen, bis sie goldbraun und knusprig ist. Sofort servieren, solange die Kruste noch heiß ist.",
+    "pt": "PRÉ-AQUECE O FORNO: leva o forno a 150°C. INFUSIONA AS NATAS: coloca as natas, as sementes raspadas da vagem de baunilha e a vagem vazia num tacho, aquece quase até ferver, retira do lume e deixa infusionar 10 minutos. Retira a vagem. BATE AS GEMAS: bate as gemas com o açúcar e o sal numa taça, só até ficar homogéneo — sem incorporar ar em excesso. COMBINA GRADUALMENTE: verta as natas quentes sobre as gemas em fio fino, batendo sem parar para os ovos não talharem. CÔA E VERTE: passa a mistura por um passador fino, depois divide por 4 formas individuais. COZE EM BANHO-MARIA: coloca as formas num tabuleiro, verte água quente até meia altura e coze 35-40 minutos, até as bordas firmarem mas o centro ainda tremer ligeiramente. LEVA AO FRIO: deixa arrefecer à temperatura ambiente, depois refrigera pelo menos 3 horas, idealmente de um dia para o outro. CARAMELIZA E SERVE: polvilha uma camada fina de açúcar amarelo sobre cada creme e caramelize com o maçarico até dourar e ficar estaladiço. Serve de imediato, enquanto a crosta ainda está quente.",
+    "ru": "РАЗОГРЕЙ ДУХОВКУ: разогрей духовку до 150°C. НАСТОЙ СЛИВОК: положи сливки, семена, выскобленные из стручка ванили, и сам стручок в сотейник, нагрей почти до кипения, сними с огня и оставь настояться 10 минут. Убери стручок. ВЗБЕЙ ЖЕЛТКИ: взбей желтки с сахаром и солью в миске, только до однородности — не взбивай слишком много воздуха. СОЕДИНИ ПОСТЕПЕННО: влей тёплые сливки в желтки тонкой струйкой, постоянно помешивая, чтобы яйца не свернулись. ПРОЦЕДИ И РАЗЛЕЙ: пропусти смесь через мелкое сито, затем раздели на 4 порционные формы. ЗАПЕКАЙ НА ВОДЯНОЙ БАНЕ: поставь формы в противень, налей горячую воду до половины высоты форм и запекай 35-40 минут, пока края не схватятся, а центр останется слегка дрожащим. ОХЛАДИ: остуди до комнатной температуры, затем убери в холодильник минимум на 3 часа, лучше на ночь. КАРАМЕЛИЗИРУЙ И ПОДАЙ: посыпь тонкий слой тростникового сахара на каждый крем и обожги горелкой до золотистой хрустящей корочки. Подавай сразу, пока корочка ещё горячая.",
+    "ar": "سخّن الفرن: اضبط الفرن على 150 درجة مئوية. انقع الكريمة بالنكهة: ضع الكريمة وبذور الفانيليا المكشوطة من القرن مع القرن الفارغ في قدر، سخّن حتى يقارب الغليان، ثم ارفع عن النار واترك 10 دقائق للنقع. تخلّص من القرن. اخفق الصفار: اخفق صفار البيض مع السكر والملح في وعاء، فقط حتى يتجانس — تجنب خفق الهواء الزائد. ادمج تدريجيًا: اسكب الكريمة الدافئة على الصفار في خيط رفيع، مع الخفق المستمر حتى لا يتخثر البيض. صفِّ واسكب: مرّر الخليط عبر مصفاة ناعمة، ثم وزّعه على 4 قوالب فردية. اخبز في حمام مائي: ضع القوالب في صينية، اسكب ماء ساخنًا حتى منتصف ارتفاعها واخبز 35-40 دقيقة، حتى تتماسك الحواف بينما يبقى الوسط يهتز قليلًا. برّد: اترك يبرد في درجة حرارة الغرفة، ثم ضعه في الثلاجة 3 ساعات على الأقل، ويفضل طوال الليل. كرمِل وقدّم: انثر طبقة رقيقة من السكر الخام فوق كل كريمة واحرقها بالشعلة حتى تصبح ذهبية ومقرمشة. قدّم فورًا، بينما القشرة لا تزال ساخنة.",
+    "zh": "预热烤箱：将烤箱预热至150°C。 为奶油增添香气：将淡奶油、从香草荚中刮出的籽和空荚一起放入锅中，加热至接近沸腾，离火后静置10分钟让香气融入。取出香草荚。 打发蛋黄：将蛋黄与糖和盐在碗中搅打，仅打至混合均匀即可——避免打入过多空气。 逐步混合：将温热的奶油以细流状倒入蛋黄中，同时不断搅拌，防止鸡蛋结块。 过滤并倒入：将混合物过细筛，然后平均分装到4个小烤盅中。 隔水烘烤：将烤盅放入烤盘中，倒入热水至烤盅高度的一半，烘烤35-40分钟，直到边缘凝固但中心仍微微晃动。 冷藏：先放至室温，再冷藏至少3小时，最好过夜。 焦糖化并享用：在每份蛋奶糊上撒一层薄薄的原蔗糖，用喷枪烧至金黄酥脆。趁外壳还热时立即享用。",
+    "ja": "オーブンを予熱する：オーブンを150°Cに設定する。 生クリームに香りを移す：鍋に生クリーム、バニラビーンズからこそげ取った種、さやを入れ、沸騰直前まで温めてから火を止め、10分置いて香りを移す。さやは取り除く。 卵黄を混ぜる：ボウルで卵黄に砂糖と塩を加え、なじむ程度に軽く混ぜる——泡立てすぎないこと。 少しずつ合わせる：温かい生クリームを細く注ぎながら卵黄に加え、絶えず混ぜて卵が固まらないようにする。 こして流し入れる：混ぜたものを目の細かいざるでこし、4個の型に均等に分ける。 湯煎で焼く：型を天板に並べ、型の高さの半分まで熱湯を注ぎ、35〜40分焼く。縁が固まり中心が少し揺れる程度が目安。 冷やす：室温まで冷まし、その後冷蔵庫で最低3時間、できれば一晩冷やす。 キャラメリゼして提供する：それぞれのカスタードにきび砂糖を薄く振りかけ、バーナーできつね色になるまで焦がす。表面がまだ熱いうちにすぐに提供する。",
+    "tr": "FIRINI ISITIN: fırını 150°C'ye ayarlayın. KREMAYA AROMA VERİN: kremayı, vanilya çubuğundan kazınan taneleri ve boş çubuğu bir tencereye koyun, kaynamaya yakın bir noktaya kadar ısıtın, ardından ateşten alıp 10 dakika demlenmeye bırakın. Çubuğu çıkarın. SARILARI ÇIRPIN: yumurta sarılarını şeker ve tuzla bir kasede, sadece karışana kadar çırpın — fazla hava katmaktan kaçının. AZAR AZAR BİRLEŞTİRİN: ılık kremayı ince bir akışla sarıların üzerine dökün, yumurtaların pişmemesi için sürekli çırpın. SÜZÜN VE DÖKÜN: karışımı ince bir süzgeçten geçirin, ardından 4 tekli kaba paylaştırın. BENMARİDE PİŞİRİN: kapları bir fırın tepsisine yerleştirin, kenarlarının yarısına kadar sıcak su dökün ve kenarları sertleşip ortası hafif titreyene kadar 35-40 dakika pişirin. SOĞUTUN: oda sıcaklığına gelmesini bekleyin, ardından en az 3 saat, tercihen bir gece buzdolabında bekletin. KARAMELİZE EDİN VE SERVİS YAPIN: her kremanın üzerine ince bir katman ham şeker serpin ve alevle altın rengi ve çıtır olana kadar yakın. Kabuk hâlâ sıcakken hemen servis yapın.",
+    "it": "PRERISCALDA IL FORNO: porta il forno a 150°C. INFONDI LA PANNA: metti la panna, i semi raschiati dal baccello di vaniglia e il baccello vuoto in un pentolino, scalda quasi fino al bollore, poi togli dal fuoco e lascia in infusione 10 minuti. Elimina il baccello. SBATTI I TUORLI: sbatti i tuorli con lo zucchero e il sale in una ciotola, solo fino ad amalgamare — senza incorporare troppa aria. UNISCI GRADUALMENTE: versa la panna calda sui tuorli a filo, mescolando continuamente perché le uova non si rapprendano. FILTRA E VERSA: passa il composto attraverso un colino fine, poi dividilo in 4 stampini. CUOCI A BAGNOMARIA: metti gli stampini in una teglia, versa acqua calda fino a metà della loro altezza e cuoci per 35-40 minuti, finché i bordi sono rappresi ma il centro trema ancora leggermente. RAFFREDDA: lascia raffreddare a temperatura ambiente, poi metti in frigo per almeno 3 ore, idealmente tutta la notte. CARAMELLA E SERVI: cospargi un sottile strato di zucchero di canna su ogni crema e brucia col cannello finché dorato e croccante. Servi subito, mentre la crosta è ancora calda.",
+    "ko": "오븐 예열하기: 오븐을 150°C로 예열한다. 생크림에 향 우려내기: 냄비에 생크림, 바닐라빈에서 긁어낸 씨앗, 빈 깍지를 넣고 끓기 직전까지 데운 후 불에서 내려 10분간 향을 우려낸다. 깍지는 건져낸다. 노른자 섞기: 볼에 달걀노른자와 설탕, 소금을 넣고 섞일 정도로만 젓는다 — 공기가 많이 들어가지 않도록 한다. 천천히 합치기: 따뜻한 생크림을 가는 줄기로 붓듯이 노른자에 넣으며 계속 저어 달걀이 익지 않게 한다. 체에 걸러 붓기: 혼합물을 고운 체에 걸러 4개의 개별 용기에 나누어 붓는다. 중탕으로 굽기: 용기들을 팬에 놓고 용기 높이의 절반까지 뜨거운 물을 부은 뒤, 가장자리는 굳고 중앙은 살짝 흔들릴 때까지 35-40분간 굽는다. 식히기: 실온에서 식힌 후 냉장고에서 최소 3시간, 가능하면 하룻밤 둔다. 캐러멜라이즈하여 서빙하기: 각 커스터드 위에 황설탕을 얇게 뿌리고 토치로 황금빛이 나고 바삭해질 때까지 그을린다. 겉면이 아직 뜨거울 때 바로 서빙한다.",
+    "hi": "ओवन गरम करें: ओवन को 150°C पर सेट करें। क्रीम में स्वाद घोलें: क्रीम, वनीला फली से खुरचे हुए बीज और खाली फली एक पैन में डालें, उबाल आने के करीब तक गरम करें, फिर आंच से उतारकर 10 मिनट तक स्वाद घुलने दें। फली निकाल दें। ज़र्दी फेंटें: एक कटोरे में अंडे की ज़र्दी को चीनी और नमक के साथ तब तक फेंटें जब तक मिल न जाए — ज़्यादा हवा न भरें। धीरे-धीरे मिलाएं: गरम क्रीम को पतली धार में ज़र्दी पर डालते हुए लगातार फेंटें ताकि अंडे न फटें। छानकर डालें: मिश्रण को महीन छलनी से छानें, फिर 4 अलग-अलग सांचों में बांटें। वॉटर बाथ में बेक करें: सांचों को एक ट्रे में रखें, उनकी ऊंचाई के आधे तक गरम पानी डालें और 35-40 मिनट बेक करें, जब तक किनारे जम जाएं पर बीच हल्का सा हिलता रहे। ठंडा करें: कमरे के तापमान तक ठंडा होने दें, फिर फ्रिज में कम से कम 3 घंटे, आदर्श रूप से रातभर रखें। कैरामलाइज़ करें और परोसें: हर कस्टर्ड पर ब्राउन शुगर की पतली परत छिड़कें और टॉर्च से सुनहरा और कुरकुरा होने तक जलाएं। तुरंत परोसें, जब तक परत अभी भी गरम हो।"
   },
   "originText": {
     "ro": "Crème brûlée înseamnă literalmente 'cremă arsă' și descrie exact ultimul pas: un strat de zahăr topit rapid până devine o crustă de sticlă deasupra unei creme reci de vanilie. Rețeta apare în cărți de bucate franțuzești încă din secolul XVII, deși dulciuri asemănătoare cu crustă caramelizată există și în bucătăria catalană (crema catalana) și engleză (Trinity cream), fiecare susținând că a inventat tehnica prima.\n\nSecretul stă în contrastul de textură, nu doar de gust: crema de dedesubt trebuie să rămână complet rece și fină, în timp ce stratul de zahăr e caramelizat chiar înainte de servire, cât mai aproape posibil de momentul în care ajunge la masă. Dacă e făcută cu ore înainte, umezeala din cremă înmoaie zahărul și crusta își pierde acel sunet caracteristic de sticlă spartă sub lingură.",
@@ -85,7 +496,10 @@
   "meta": {
     "time": 55,
     "costRon": 18,
-    "tags": ["family", "vegetarian"],
+    "tags": [
+      "family",
+      "vegetarian"
+    ],
     "desc": {
       "ro": "Cremă catifelată de vanilie coaptă în baie de apă, cu un strat de zahăr caramelizat crocant deasupra.",
       "en": "Silky vanilla custard baked in a water bath, topped with a crisp caramelised sugar shell.",

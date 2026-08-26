@@ -4,67 +4,534 @@
   "tipType": "romanian",
   "pairingsType": "romanian",
   "origin": {
-    "ro": "România", "en": "Romania", "es": "Rumanía", "fr": "Roumanie", "de": "Rumänien",
-    "pt": "Roménia", "ru": "Румыния", "ar": "رومانيا", "zh": "罗马尼亚", "ja": "ルーマニア",
-    "tr": "Romanya", "it": "Romania", "ko": "루마니아", "hi": "रोमानिया"
+    "ro": "România",
+    "en": "Romania",
+    "es": "Rumanía",
+    "fr": "Roumanie",
+    "de": "Rumänien",
+    "pt": "Roménia",
+    "ru": "Румыния",
+    "ar": "رومانيا",
+    "zh": "罗马尼亚",
+    "ja": "ルーマニア",
+    "tr": "Romanya",
+    "it": "Romania",
+    "ko": "루마니아",
+    "hi": "रोमानिया"
   },
   "name": {
-    "ro": "Plăcintă cu brânză", "en": "Romanian Cheese Plăcintă (Hand Pie)", "es": "Plăcintă Rumana de Queso (Empanada)", "fr": "Plăcintă Roumaine au Fromage (Chausson)",
-    "de": "Rumänische Plăcintă mit Käse (Handpastete)", "pt": "Plăcintă Romena de Queijo (Empada)", "ru": "Румынская плацинта с сыром", "ar": "بلاتشينتا رومانية بالجبن",
-    "zh": "罗马尼亚芝士手抓派", "ja": "ルーマニア風チーズプラチンタ（手包みパイ）", "tr": "Romanya Usulü Peynirli Plăcintă (El Böreği)", "it": "Plăcintă Rumena al Formaggio (Fagottino)",
-    "ko": "루마니아식 치즈 플러친터 (손파이)", "hi": "रोमानियाई चीज़ प्लाचिन्ता (हैंड पाई)"
+    "ro": "Plăcintă cu brânză",
+    "en": "Romanian Cheese Plăcintă (Hand Pie)",
+    "es": "Plăcintă Rumana de Queso (Empanada)",
+    "fr": "Plăcintă Roumaine au Fromage (Chausson)",
+    "de": "Rumänische Plăcintă mit Käse (Handpastete)",
+    "pt": "Plăcintă Romena de Queijo (Empada)",
+    "ru": "Румынская плацинта с сыром",
+    "ar": "بلاتشينتا رومانية بالجبن",
+    "zh": "罗马尼亚芝士手抓派",
+    "ja": "ルーマニア風チーズプラチンタ（手包みパイ）",
+    "tr": "Romanya Usulü Peynirli Plăcintă (El Böreği)",
+    "it": "Plăcintă Rumena al Formaggio (Fagottino)",
+    "ko": "루마니아식 치즈 플러친터 (손파이)",
+    "hi": "रोमानियाई चीज़ प्लाचिन्ता (हैंड पाई)"
   },
   "category": {
-    "ro": "Patiserie", "en": "Pastry", "es": "Bollería", "fr": "Viennoiserie", "de": "Gebäck",
-    "pt": "Pastelaria", "ru": "Выпечка", "ar": "معجنات", "zh": "糕点", "ja": "ペイストリー", "tr": "Hamur İşi", "it": "Pasticceria", "ko": "베이커리", "hi": "बेकरी"
+    "ro": "Patiserie",
+    "en": "Pastry",
+    "es": "Bollería",
+    "fr": "Viennoiserie",
+    "de": "Gebäck",
+    "pt": "Pastelaria",
+    "ru": "Выпечка",
+    "ar": "معجنات",
+    "zh": "糕点",
+    "ja": "ペイストリー",
+    "tr": "Hamur İşi",
+    "it": "Pasticceria",
+    "ko": "베이커리",
+    "hi": "बेकरी"
   },
   "featureCards": {
-    "ro": [{"icon":"🧀","t":"Brânză de vaci scursă bine","d":"Fără zer în exces, umplutura nu înmoaie aluatul"},{"icon":"🥚","t":"Ou și puțină griș în umplutură","d":"Leagă brânza fără să o lase apoasă la copt"},{"icon":"📐","t":"Marginile presate cu furculița","d":"Sigilează bine, ca umplutura să nu iasă la copt"},{"icon":"🍳","t":"Prăjite în ulei, nu coapte","d":"Crustă crocantă pe ambele părți, în câteva minute"}],
-    "en": [{"icon":"🧀","t":"Well-drained cottage cheese","d":"Without excess whey, the filling won't soften the dough"},{"icon":"🥚","t":"Egg and a little semolina in the filling","d":"Binds the cheese without letting it turn watery when baked"},{"icon":"📐","t":"Edges pressed shut with a fork","d":"Seals well so the filling can't leak out while cooking"},{"icon":"🍳","t":"Fried in oil, not baked","d":"Crisp crust on both sides in just a few minutes"}],
-    "es": [{"icon":"🧀","t":"Requesón bien escurrido","d":"Sin exceso de suero, el relleno no ablanda la masa"},{"icon":"🥚","t":"Huevo y un poco de sémola en el relleno","d":"Liga el queso sin que quede aguado al cocinarse"},{"icon":"📐","t":"Bordes sellados con un tenedor","d":"Sella bien para que el relleno no se salga al freír"},{"icon":"🍳","t":"Fritas en aceite, no horneadas","d":"Costra crujiente por ambos lados en pocos minutos"}],
-    "fr": [{"icon":"🧀","t":"Fromage blanc bien égoutté","d":"Sans excès de petit-lait, la farce ne ramollit pas la pâte"},{"icon":"🥚","t":"Œuf et un peu de semoule dans la farce","d":"Lie le fromage sans qu'il devienne aqueux à la cuisson"},{"icon":"📐","t":"Bords scellés à la fourchette","d":"Ferme bien pour que la farce ne s'échappe pas à la cuisson"},{"icon":"🍳","t":"Frites à l'huile, pas cuites au four","d":"Croûte croustillante des deux côtés en quelques minutes"}],
-    "de": [{"icon":"🧀","t":"Gut abgetropfter Quark","d":"Ohne überschüssige Molke weicht die Füllung den Teig nicht auf"},{"icon":"🥚","t":"Ei und etwas Grieß in der Füllung","d":"Bindet den Käse, ohne dass er beim Braten wässrig wird"},{"icon":"📐","t":"Ränder mit der Gabel zugedrückt","d":"Versiegelt gut, damit die Füllung beim Garen nicht austritt"},{"icon":"🍳","t":"In Öl gebraten, nicht gebacken","d":"Knusprige Kruste auf beiden Seiten in wenigen Minuten"}],
-    "pt": [{"icon":"🧀","t":"Queijo fresco bem escorrido","d":"Sem soro em excesso, o recheio não amolece a massa"},{"icon":"🥚","t":"Ovo e um pouco de sêmola no recheio","d":"Liga o queijo sem o deixar aguado ao cozinhar"},{"icon":"📐","t":"Bordas fechadas com um garfo","d":"Sela bem para o recheio não escapar ao fritar"},{"icon":"🍳","t":"Fritas em óleo, não assadas","d":"Crosta estaladiça dos dois lados em poucos minutos"}],
-    "ru": [{"icon":"🧀","t":"Хорошо отжатый творог","d":"Без лишней сыворотки начинка не размягчит тесто"},{"icon":"🥚","t":"Яйцо и немного манки в начинке","d":"Связывает творог, не давая ему стать водянистым при жарке"},{"icon":"📐","t":"Края защипаны вилкой","d":"Хорошо запечатывает, чтобы начинка не вытекла при готовке"},{"icon":"🍳","t":"Жарятся в масле, а не запекаются","d":"Хрустящая корочка с обеих сторон за несколько минут"}],
-    "ar": [{"icon":"🧀","t":"جبن قريش مصفّى جيدًا","d":"دون مصل زائد، لا تُلين الحشوة العجين"},{"icon":"🥚","t":"بيضة وقليل من السميد في الحشوة","d":"تربط الجبن دون أن تصبح مائية عند الطهي"},{"icon":"📐","t":"الحواف مضغوطة بالشوكة","d":"تُغلق جيدًا حتى لا تتسرب الحشوة أثناء الطهي"},{"icon":"🍳","t":"تُقلى بالزيت، لا تُخبَز","d":"قشرة مقرمشة على الجانبين خلال دقائق قليلة"}],
-    "zh": [{"icon":"🧀","t":"沥干的农家奶酪","d":"没有多余乳清，馅料不会让面皮变软"},{"icon":"🥚","t":"馅料中加鸡蛋和少许粗粒小麦粉","d":"能黏合奶酪，煎制时也不会出水"},{"icon":"📐","t":"边缘用叉子压紧","d":"封口牢固，煎制时馅料不会漏出"},{"icon":"🍳","t":"油煎而非烘烤","d":"几分钟内两面都煎出酥脆外皮"}],
-    "ja": [{"icon":"🧀","t":"しっかり水切りしたカッテージチーズ","d":"余分なホエーがないので生地がふやけない"},{"icon":"🥚","t":"詰め物に卵とセモリナ粉少々","d":"焼いても水っぽくならずチーズをまとめる"},{"icon":"📐","t":"端をフォークで押さえて閉じる","d":"しっかり閉じることで調理中に具がもれない"},{"icon":"🍳","t":"焼かずに油で揚げ焼き","d":"数分で両面がパリッとした皮になる"}],
-    "tr": [{"icon":"🧀","t":"İyice süzülmüş lor peyniri","d":"Fazla peynir suyu olmadan harç hamuru yumuşatmaz"},{"icon":"🥚","t":"Harçta yumurta ve biraz irmik","d":"Peyniri pişerken sulanmadan bir arada tutar"},{"icon":"📐","t":"Kenarları çatalla bastırılır","d":"İyice kapanır, pişerken harç dışarı sızmaz"},{"icon":"🍳","t":"Fırında değil yağda kızartılır","d":"Birkaç dakikada iki tarafı da çıtır kabuk olur"}],
-    "it": [{"icon":"🧀","t":"Ricotta ben scolata","d":"Senza siero in eccesso, il ripieno non ammorbidisce l'impasto"},{"icon":"🥚","t":"Uovo e un po' di semolino nel ripieno","d":"Lega il formaggio senza farlo diventare acquoso in cottura"},{"icon":"📐","t":"Bordi sigillati con una forchetta","d":"Chiude bene perché il ripieno non fuoriesca durante la cottura"},{"icon":"🍳","t":"Fritte in olio, non cotte al forno","d":"Crosta croccante su entrambi i lati in pochi minuti"}],
-    "ko": [{"icon":"🧀","t":"물기 잘 뺀 코티지치즈","d":"유청이 남지 않아야 반죽이 눅눅해지지 않는다"},{"icon":"🥚","t":"속재료에 달걀과 약간의 세몰리나","d":"치즈를 결합시키고 구울 때 물기가 생기지 않게 한다"},{"icon":"📐","t":"포크로 눌러 가장자리 봉하기","d":"조리 중 속이 새지 않도록 단단히 봉한다"},{"icon":"🍳","t":"굽지 않고 기름에 튀기듯 조리","d":"몇 분 안에 양면이 바삭한 껍질이 된다"}],
-    "hi": [{"icon":"🧀","t":"अच्छी तरह निचोड़ा हुआ पनीर","d":"अतिरिक्त मट्ठे के बिना, भरावन आटे को नरम नहीं करता"},{"icon":"🥚","t":"भरावन में अंडा और थोड़ा सूजी","d":"पकते समय पनीर को पानीदार हुए बिना बांधता है"},{"icon":"📐","t":"किनारे कांटे से दबाकर बंद किए गए","d":"अच्छी तरह सील करता है ताकि पकते समय भरावन बाहर न निकले"},{"icon":"🍳","t":"तेल में तली गई, बेक नहीं","d":"कुछ ही मिनटों में दोनों तरफ कुरकुरी परत"}]
+    "ro": [
+      {
+        "icon": "🧀",
+        "t": "Brânză de vaci scursă bine",
+        "d": "Fără zer în exces, umplutura nu înmoaie aluatul"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ou și puțină griș în umplutură",
+        "d": "Leagă brânza fără să o lase apoasă la copt"
+      },
+      {
+        "icon": "📐",
+        "t": "Marginile presate cu furculița",
+        "d": "Sigilează bine, ca umplutura să nu iasă la copt"
+      },
+      {
+        "icon": "🍳",
+        "t": "Prăjite în ulei, nu coapte",
+        "d": "Crustă crocantă pe ambele părți, în câteva minute"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🧀",
+        "t": "Well-drained cottage cheese",
+        "d": "Without excess whey, the filling won't soften the dough"
+      },
+      {
+        "icon": "🥚",
+        "t": "Egg and a little semolina in the filling",
+        "d": "Binds the cheese without letting it turn watery when baked"
+      },
+      {
+        "icon": "📐",
+        "t": "Edges pressed shut with a fork",
+        "d": "Seals well so the filling can't leak out while cooking"
+      },
+      {
+        "icon": "🍳",
+        "t": "Fried in oil, not baked",
+        "d": "Crisp crust on both sides in just a few minutes"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🧀",
+        "t": "Requesón bien escurrido",
+        "d": "Sin exceso de suero, el relleno no ablanda la masa"
+      },
+      {
+        "icon": "🥚",
+        "t": "Huevo y un poco de sémola en el relleno",
+        "d": "Liga el queso sin que quede aguado al cocinarse"
+      },
+      {
+        "icon": "📐",
+        "t": "Bordes sellados con un tenedor",
+        "d": "Sella bien para que el relleno no se salga al freír"
+      },
+      {
+        "icon": "🍳",
+        "t": "Fritas en aceite, no horneadas",
+        "d": "Costra crujiente por ambos lados en pocos minutos"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🧀",
+        "t": "Fromage blanc bien égoutté",
+        "d": "Sans excès de petit-lait, la farce ne ramollit pas la pâte"
+      },
+      {
+        "icon": "🥚",
+        "t": "Œuf et un peu de semoule dans la farce",
+        "d": "Lie le fromage sans qu'il devienne aqueux à la cuisson"
+      },
+      {
+        "icon": "📐",
+        "t": "Bords scellés à la fourchette",
+        "d": "Ferme bien pour que la farce ne s'échappe pas à la cuisson"
+      },
+      {
+        "icon": "🍳",
+        "t": "Frites à l'huile, pas cuites au four",
+        "d": "Croûte croustillante des deux côtés en quelques minutes"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🧀",
+        "t": "Gut abgetropfter Quark",
+        "d": "Ohne überschüssige Molke weicht die Füllung den Teig nicht auf"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ei und etwas Grieß in der Füllung",
+        "d": "Bindet den Käse, ohne dass er beim Braten wässrig wird"
+      },
+      {
+        "icon": "📐",
+        "t": "Ränder mit der Gabel zugedrückt",
+        "d": "Versiegelt gut, damit die Füllung beim Garen nicht austritt"
+      },
+      {
+        "icon": "🍳",
+        "t": "In Öl gebraten, nicht gebacken",
+        "d": "Knusprige Kruste auf beiden Seiten in wenigen Minuten"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🧀",
+        "t": "Queijo fresco bem escorrido",
+        "d": "Sem soro em excesso, o recheio não amolece a massa"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ovo e um pouco de sêmola no recheio",
+        "d": "Liga o queijo sem o deixar aguado ao cozinhar"
+      },
+      {
+        "icon": "📐",
+        "t": "Bordas fechadas com um garfo",
+        "d": "Sela bem para o recheio não escapar ao fritar"
+      },
+      {
+        "icon": "🍳",
+        "t": "Fritas em óleo, não assadas",
+        "d": "Crosta estaladiça dos dois lados em poucos minutos"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🧀",
+        "t": "Хорошо отжатый творог",
+        "d": "Без лишней сыворотки начинка не размягчит тесто"
+      },
+      {
+        "icon": "🥚",
+        "t": "Яйцо и немного манки в начинке",
+        "d": "Связывает творог, не давая ему стать водянистым при жарке"
+      },
+      {
+        "icon": "📐",
+        "t": "Края защипаны вилкой",
+        "d": "Хорошо запечатывает, чтобы начинка не вытекла при готовке"
+      },
+      {
+        "icon": "🍳",
+        "t": "Жарятся в масле, а не запекаются",
+        "d": "Хрустящая корочка с обеих сторон за несколько минут"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🧀",
+        "t": "جبن قريش مصفّى جيدًا",
+        "d": "دون مصل زائد، لا تُلين الحشوة العجين"
+      },
+      {
+        "icon": "🥚",
+        "t": "بيضة وقليل من السميد في الحشوة",
+        "d": "تربط الجبن دون أن تصبح مائية عند الطهي"
+      },
+      {
+        "icon": "📐",
+        "t": "الحواف مضغوطة بالشوكة",
+        "d": "تُغلق جيدًا حتى لا تتسرب الحشوة أثناء الطهي"
+      },
+      {
+        "icon": "🍳",
+        "t": "تُقلى بالزيت، لا تُخبَز",
+        "d": "قشرة مقرمشة على الجانبين خلال دقائق قليلة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🧀",
+        "t": "沥干的农家奶酪",
+        "d": "没有多余乳清，馅料不会让面皮变软"
+      },
+      {
+        "icon": "🥚",
+        "t": "馅料中加鸡蛋和少许粗粒小麦粉",
+        "d": "能黏合奶酪，煎制时也不会出水"
+      },
+      {
+        "icon": "📐",
+        "t": "边缘用叉子压紧",
+        "d": "封口牢固，煎制时馅料不会漏出"
+      },
+      {
+        "icon": "🍳",
+        "t": "油煎而非烘烤",
+        "d": "几分钟内两面都煎出酥脆外皮"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🧀",
+        "t": "しっかり水切りしたカッテージチーズ",
+        "d": "余分なホエーがないので生地がふやけない"
+      },
+      {
+        "icon": "🥚",
+        "t": "詰め物に卵とセモリナ粉少々",
+        "d": "焼いても水っぽくならずチーズをまとめる"
+      },
+      {
+        "icon": "📐",
+        "t": "端をフォークで押さえて閉じる",
+        "d": "しっかり閉じることで調理中に具がもれない"
+      },
+      {
+        "icon": "🍳",
+        "t": "焼かずに油で揚げ焼き",
+        "d": "数分で両面がパリッとした皮になる"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🧀",
+        "t": "İyice süzülmüş lor peyniri",
+        "d": "Fazla peynir suyu olmadan harç hamuru yumuşatmaz"
+      },
+      {
+        "icon": "🥚",
+        "t": "Harçta yumurta ve biraz irmik",
+        "d": "Peyniri pişerken sulanmadan bir arada tutar"
+      },
+      {
+        "icon": "📐",
+        "t": "Kenarları çatalla bastırılır",
+        "d": "İyice kapanır, pişerken harç dışarı sızmaz"
+      },
+      {
+        "icon": "🍳",
+        "t": "Fırında değil yağda kızartılır",
+        "d": "Birkaç dakikada iki tarafı da çıtır kabuk olur"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🧀",
+        "t": "Ricotta ben scolata",
+        "d": "Senza siero in eccesso, il ripieno non ammorbidisce l'impasto"
+      },
+      {
+        "icon": "🥚",
+        "t": "Uovo e un po' di semolino nel ripieno",
+        "d": "Lega il formaggio senza farlo diventare acquoso in cottura"
+      },
+      {
+        "icon": "📐",
+        "t": "Bordi sigillati con una forchetta",
+        "d": "Chiude bene perché il ripieno non fuoriesca durante la cottura"
+      },
+      {
+        "icon": "🍳",
+        "t": "Fritte in olio, non cotte al forno",
+        "d": "Crosta croccante su entrambi i lati in pochi minuti"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🧀",
+        "t": "물기 잘 뺀 코티지치즈",
+        "d": "유청이 남지 않아야 반죽이 눅눅해지지 않는다"
+      },
+      {
+        "icon": "🥚",
+        "t": "속재료에 달걀과 약간의 세몰리나",
+        "d": "치즈를 결합시키고 구울 때 물기가 생기지 않게 한다"
+      },
+      {
+        "icon": "📐",
+        "t": "포크로 눌러 가장자리 봉하기",
+        "d": "조리 중 속이 새지 않도록 단단히 봉한다"
+      },
+      {
+        "icon": "🍳",
+        "t": "굽지 않고 기름에 튀기듯 조리",
+        "d": "몇 분 안에 양면이 바삭한 껍질이 된다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🧀",
+        "t": "अच्छी तरह निचोड़ा हुआ पनीर",
+        "d": "अतिरिक्त मट्ठे के बिना, भरावन आटे को नरम नहीं करता"
+      },
+      {
+        "icon": "🥚",
+        "t": "भरावन में अंडा और थोड़ा सूजी",
+        "d": "पकते समय पनीर को पानीदार हुए बिना बांधता है"
+      },
+      {
+        "icon": "📐",
+        "t": "किनारे कांटे से दबाकर बंद किए गए",
+        "d": "अच्छी तरह सील करता है ताकि पकते समय भरावन बाहर न निकले"
+      },
+      {
+        "icon": "🍳",
+        "t": "तेल में तली गई, बेक नहीं",
+        "d": "कुछ ही मिनटों में दोनों तरफ कुरकुरी परत"
+      }
+    ]
   },
   "ingredients": {
-    "ro": ["300g făină", "1 ou", "150ml apă călduță", "1 linguriță sare", "2 linguri ulei, plus pentru prăjit", "400g brânză de vaci, scursă bine", "1 ou pentru umplutură", "2 linguri griș", "un praf de sare"],
-    "en": ["300g flour", "1 egg", "150ml lukewarm water", "1 tsp salt", "2 tbsp oil, plus extra for frying", "400g cottage cheese, well drained", "1 egg, for the filling", "2 tbsp semolina", "a pinch of salt"],
-    "es": ["300g de harina", "1 huevo", "150ml de agua tibia", "1 cdta de sal", "2 cdas de aceite, más extra para freír", "400g de requesón, bien escurrido", "1 huevo, para el relleno", "2 cdas de sémola", "una pizca de sal"],
-    "fr": ["300g de farine", "1 œuf", "150ml d'eau tiède", "1 c. à café de sel", "2 c. à soupe d'huile, plus un peu pour la friture", "400g de fromage blanc, bien égoutté", "1 œuf, pour la farce", "2 c. à soupe de semoule", "une pincée de sel"],
-    "de": ["300g Mehl", "1 Ei", "150ml lauwarmes Wasser", "1 TL Salz", "2 EL Öl, plus extra zum Braten", "400g Quark, gut abgetropft", "1 Ei, für die Füllung", "2 EL Grieß", "eine Prise Salz"],
-    "pt": ["300g de farinha", "1 ovo", "150ml de água morna", "1 col. chá de sal", "2 col. sopa de óleo, mais extra para fritar", "400g de queijo fresco, bem escorrido", "1 ovo, para o recheio", "2 col. sopa de sêmola", "uma pitada de sal"],
-    "ru": ["300г муки", "1 яйцо", "150мл тёплой воды", "1 ч.л. соли", "2 ст.л. масла, плюс дополнительно для жарки", "400г творога, хорошо отжатого", "1 яйцо, для начинки", "2 ст.л. манной крупы", "щепотка соли"],
-    "ar": ["300غ دقيق", "بيضة واحدة", "150مل ماء فاتر", "ملعقة صغيرة ملح", "2 ملعقة كبيرة زيت، بالإضافة إلى كمية للقلي", "400غ جبن قريش، مصفّى جيدًا", "بيضة واحدة، للحشوة", "2 ملعقة كبيرة سميد", "رشة ملح"],
-    "zh": ["300克面粉", "1个鸡蛋", "150毫升温水", "1茶匙盐", "2汤匙油，另加适量用于煎炸", "400克农家奶酪，充分沥干", "1个鸡蛋，用于馅料", "2汤匙粗粒小麦粉", "一小撮盐"],
-    "ja": ["小麦粉300g", "卵1個", "ぬるま湯150ml", "塩小さじ1", "油大さじ2（揚げ焼き用に追加分も）", "カッテージチーズ400g（よく水切りしたもの）", "卵1個（詰め物用）", "セモリナ粉大さじ2", "塩ひとつまみ"],
-    "tr": ["300g un", "1 yumurta", "150ml ılık su", "1 tatlı kaşığı tuz", "2 yemek kaşığı yağ, kızartmak için ilaveten", "400g lor peyniri, iyice süzülmüş", "1 yumurta, harç için", "2 yemek kaşığı irmik", "bir tutam tuz"],
-    "it": ["300g di farina", "1 uovo", "150ml di acqua tiepida", "1 cucchiaino di sale", "2 cucchiai di olio, più extra per friggere", "400g di ricotta, ben scolata", "1 uovo, per il ripieno", "2 cucchiai di semolino", "un pizzico di sale"],
-    "ko": ["밀가루 300g", "달걀 1개", "미지근한 물 150ml", "소금 1작은술", "기름 2큰술 (튀기듯 굽는 용도로 추가)", "코티지치즈 400g, 물기 잘 뺀 것", "달걀 1개, 속재료용", "세몰리나 2큰술", "소금 한 꼬집"],
-    "hi": ["300ग्राम आटा", "1 अंडा", "150मिली गुनगुना पानी", "1 छोटा चम्मच नमक", "2 बड़े चम्मच तेल, तलने के लिए अतिरिक्त सहित", "400ग्राम पनीर, अच्छी तरह निचोड़ा हुआ", "1 अंडा, भरावन के लिए", "2 बड़े चम्मच सूजी", "एक चुटकी नमक"]
+    "ro": [
+      "300g făină",
+      "1 ou",
+      "150ml apă călduță",
+      "1 linguriță sare",
+      "2 linguri ulei, plus pentru prăjit",
+      "400g brânză de vaci, scursă bine",
+      "1 ou pentru umplutură",
+      "2 linguri griș",
+      "un praf de sare"
+    ],
+    "en": [
+      "300g flour",
+      "1 egg",
+      "150ml lukewarm water",
+      "1 tsp salt",
+      "2 tbsp oil, plus extra for frying",
+      "400g cottage cheese, well drained",
+      "1 egg, for the filling",
+      "2 tbsp semolina",
+      "a pinch of salt"
+    ],
+    "es": [
+      "300g de harina",
+      "1 huevo",
+      "150ml de agua tibia",
+      "1 cdta de sal",
+      "2 cdas de aceite, más extra para freír",
+      "400g de requesón, bien escurrido",
+      "1 huevo, para el relleno",
+      "2 cdas de sémola",
+      "una pizca de sal"
+    ],
+    "fr": [
+      "300g de farine",
+      "1 œuf",
+      "150ml d'eau tiède",
+      "1 c. à café de sel",
+      "2 c. à soupe d'huile, plus un peu pour la friture",
+      "400g de fromage blanc, bien égoutté",
+      "1 œuf, pour la farce",
+      "2 c. à soupe de semoule",
+      "une pincée de sel"
+    ],
+    "de": [
+      "300g Mehl",
+      "1 Ei",
+      "150ml lauwarmes Wasser",
+      "1 TL Salz",
+      "2 EL Öl, plus extra zum Braten",
+      "400g Quark, gut abgetropft",
+      "1 Ei, für die Füllung",
+      "2 EL Grieß",
+      "eine Prise Salz"
+    ],
+    "pt": [
+      "300g de farinha",
+      "1 ovo",
+      "150ml de água morna",
+      "1 col. chá de sal",
+      "2 col. sopa de óleo, mais extra para fritar",
+      "400g de queijo fresco, bem escorrido",
+      "1 ovo, para o recheio",
+      "2 col. sopa de sêmola",
+      "uma pitada de sal"
+    ],
+    "ru": [
+      "300г муки",
+      "1 яйцо",
+      "150мл тёплой воды",
+      "1 ч.л. соли",
+      "2 ст.л. масла, плюс дополнительно для жарки",
+      "400г творога, хорошо отжатого",
+      "1 яйцо, для начинки",
+      "2 ст.л. манной крупы",
+      "щепотка соли"
+    ],
+    "ar": [
+      "300غ دقيق",
+      "بيضة واحدة",
+      "150مل ماء فاتر",
+      "ملعقة صغيرة ملح",
+      "2 ملعقة كبيرة زيت، بالإضافة إلى كمية للقلي",
+      "400غ جبن قريش، مصفّى جيدًا",
+      "بيضة واحدة، للحشوة",
+      "2 ملعقة كبيرة سميد",
+      "رشة ملح"
+    ],
+    "zh": [
+      "300克面粉",
+      "1个鸡蛋",
+      "150毫升温水",
+      "1茶匙盐",
+      "2汤匙油，另加适量用于煎炸",
+      "400克农家奶酪，充分沥干",
+      "1个鸡蛋，用于馅料",
+      "2汤匙粗粒小麦粉",
+      "一小撮盐"
+    ],
+    "ja": [
+      "小麦粉300g",
+      "卵1個",
+      "ぬるま湯150ml",
+      "塩小さじ1",
+      "油大さじ2（揚げ焼き用に追加分も）",
+      "カッテージチーズ400g（よく水切りしたもの）",
+      "卵1個（詰め物用）",
+      "セモリナ粉大さじ2",
+      "塩ひとつまみ"
+    ],
+    "tr": [
+      "300g un",
+      "1 yumurta",
+      "150ml ılık su",
+      "1 tatlı kaşığı tuz",
+      "2 yemek kaşığı yağ, kızartmak için ilaveten",
+      "400g lor peyniri, iyice süzülmüş",
+      "1 yumurta, harç için",
+      "2 yemek kaşığı irmik",
+      "bir tutam tuz"
+    ],
+    "it": [
+      "300g di farina",
+      "1 uovo",
+      "150ml di acqua tiepida",
+      "1 cucchiaino di sale",
+      "2 cucchiai di olio, più extra per friggere",
+      "400g di ricotta, ben scolata",
+      "1 uovo, per il ripieno",
+      "2 cucchiai di semolino",
+      "un pizzico di sale"
+    ],
+    "ko": [
+      "밀가루 300g",
+      "달걀 1개",
+      "미지근한 물 150ml",
+      "소금 1작은술",
+      "기름 2큰술 (튀기듯 굽는 용도로 추가)",
+      "코티지치즈 400g, 물기 잘 뺀 것",
+      "달걀 1개, 속재료용",
+      "세몰리나 2큰술",
+      "소금 한 꼬집"
+    ],
+    "hi": [
+      "300ग्राम आटा",
+      "1 अंडा",
+      "150मिली गुनगुना पानी",
+      "1 छोटा चम्मच नमक",
+      "2 बड़े चम्मच तेल, तलने के लिए अतिरिक्त सहित",
+      "400ग्राम पनीर, अच्छी तरह निचोड़ा हुआ",
+      "1 अंडा, भरावन के लिए",
+      "2 बड़े चम्मच सूजी",
+      "एक चुटकी नमक"
+    ]
   },
   "howIsMade": {
-    "ro": ["FRĂMÂNTĂ ALUATUL: combină făina, oul, apa călduță, sarea și uleiul într-un bol și frământă 8-10 minute, până devine elastic și neted.", "LASĂ LA ODIHNĂ: acoperă aluatul și lasă-l la temperatura camerei 30 minute, ca glutenul să se relaxeze.", "PREGĂTEȘTE UMPLUTURA: amestecă brânza scursă bine cu oul, grișul și un praf de sare, până obții o compoziție omogenă, nu prea moale.", "ÎMPARTE ALUATUL: taie aluatul în 8 bucăți egale și întinde fiecare bucată subțire, în formă de cerc, pe o suprafață făinată.", "UMPLE ȘI ÎNCHIDE: pune 2-3 linguri de umplutură pe jumătatea fiecărui cerc de aluat, pliază cealaltă jumătate peste și presează marginile cu furculița să se lipească bine.", "ÎNCĂLZEȘTE ULEIUL: toarnă ulei într-o tigaie mare, până la o adâncime de 1cm, și încălzește la foc mediu.", "PRĂJEȘTE: pune plăcintele în tigaie fără să le aglomerezi și prăjește 3-4 minute pe fiecare parte, până devin aurii și crocante.", "SCURGE ȘI SERVEȘTE: scoate pe hârtie absorbantă, apoi servește calde."],
-    "en": ["MAKE THE DOUGH: combine the flour, egg, lukewarm water, salt and oil in a bowl and knead for 8-10 minutes, until elastic and smooth.", "LET IT REST: cover the dough and let it sit at room temperature for 30 minutes, so the gluten relaxes.", "PREPARE THE FILLING: mix the well-drained cheese with the egg, semolina and a pinch of salt, until you get an even mixture, not too soft.", "DIVIDE THE DOUGH: cut the dough into 8 equal pieces and roll each one thin into a circle on a floured surface.", "FILL AND CLOSE: place 2-3 tablespoons of filling on one half of each dough circle, fold the other half over and press the edges with a fork to seal well.", "HEAT THE OIL: pour oil into a large pan to a depth of 1cm and heat over medium heat.", "FRY: add the plăcinte to the pan without crowding and fry for 3-4 minutes per side, until golden and crisp.", "DRAIN AND SERVE: transfer to paper towel, then serve hot."],
-    "es": ["HAZ LA MASA: combina la harina, el huevo, el agua tibia, la sal y el aceite en un bol y amasa 8-10 minutos, hasta que quede elástica y lisa.", "DEJA REPOSAR: tapa la masa y déjala a temperatura ambiente 30 minutos, para que el gluten se relaje.", "PREPARA EL RELLENO: mezcla el queso bien escurrido con el huevo, la sémola y una pizca de sal, hasta obtener una mezcla uniforme, no demasiado blanda.", "DIVIDE LA MASA: corta la masa en 8 trozos iguales y estira cada uno fino en forma de círculo sobre una superficie enharinada.", "RELLENA Y CIERRA: pon 2-3 cucharadas de relleno en la mitad de cada círculo de masa, dobla la otra mitad encima y presiona los bordes con un tenedor para sellar bien.", "CALIENTA EL ACEITE: vierte aceite en una sartén grande hasta una profundidad de 1cm y calienta a fuego medio.", "FRÍE: añade las plăcinte a la sartén sin apiñarlas y fríe 3-4 minutos por cada lado, hasta que estén doradas y crujientes.", "ESCURRE Y SIRVE: pasa a papel absorbente, luego sirve calientes."],
-    "fr": ["FAIS LA PÂTE: mélange la farine, l'œuf, l'eau tiède, le sel et l'huile dans un bol et pétris 8-10 minutes, jusqu'à ce qu'elle soit élastique et lisse.", "LAISSE REPOSER: couvre la pâte et laisse-la à température ambiante 30 minutes, pour que le gluten se détende.", "PRÉPARE LA FARCE: mélange le fromage bien égoutté avec l'œuf, la semoule et une pincée de sel, jusqu'à obtenir un mélange homogène, pas trop mou.", "DIVISE LA PÂTE: coupe la pâte en 8 morceaux égaux et étale chacun finement en cercle sur une surface farinée.", "FARCIS ET FERME: place 2-3 cuillerées de farce sur une moitié de chaque cercle de pâte, replie l'autre moitié dessus et presse les bords à la fourchette pour bien sceller.", "CHAUFFE L'HUILE: verse de l'huile dans une grande poêle sur une profondeur de 1cm et chauffe à feu moyen.", "FAIS FRIRE: ajoute les plăcinte dans la poêle sans les surcharger et fais frire 3-4 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes.", "ÉGOUTTE ET SERS: transfère sur du papier absorbant, puis sers chaud."],
-    "de": ["TEIG HERSTELLEN: Mehl, Ei, lauwarmes Wasser, Salz und Öl in einer Schüssel vermengen und 8-10 Minuten kneten, bis er elastisch und glatt ist.", "RUHEN LASSEN: den Teig abdecken und 30 Minuten bei Zimmertemperatur ruhen lassen, damit sich das Gluten entspannt.", "FÜLLUNG VORBEREITEN: den gut abgetropften Quark mit dem Ei, dem Grieß und einer Prise Salz vermischen, bis eine gleichmäßige, nicht zu weiche Masse entsteht.", "TEIG TEILEN: den Teig in 8 gleiche Stücke schneiden und jedes auf einer bemehlten Fläche dünn zu einem Kreis ausrollen.", "FÜLLEN UND SCHLIESSEN: 2-3 Esslöffel Füllung auf eine Hälfte jedes Teigkreises geben, die andere Hälfte darüberklappen und die Ränder mit einer Gabel gut zudrücken.", "ÖL ERHITZEN: Öl in eine große Pfanne geben, etwa 1cm hoch, und bei mittlerer Hitze erhitzen.", "BRATEN: die Plăcinte ohne Überfüllen in die Pfanne geben und 3-4 Minuten pro Seite braten, bis sie goldbraun und knusprig sind.", "ABTROPFEN UND SERVIEREN: auf Küchenpapier legen, dann heiß servieren."],
-    "pt": ["FAZ A MASSA: combina a farinha, o ovo, a água morna, o sal e o óleo numa taça e amassa 8-10 minutos, até ficar elástica e lisa.", "DEIXA REPOUSAR: tapa a massa e deixa-a à temperatura ambiente 30 minutos, para o glúten relaxar.", "PREPARA O RECHEIO: mistura o queijo bem escorrido com o ovo, a sêmola e uma pitada de sal, até obteres uma mistura homogénea, não demasiado mole.", "DIVIDE A MASSA: corta a massa em 8 pedaços iguais e estende cada um fino em círculo numa superfície enfarinhada.", "RECHEIA E FECHA: coloca 2-3 colheres de recheio em metade de cada círculo de massa, dobra a outra metade por cima e pressiona as bordas com um garfo para selar bem.", "AQUECE O ÓLEO: verte óleo numa frigideira grande até 1cm de profundidade e aquece em lume médio.", "FRITA: junta as plăcinte à frigideira sem sobrelotar e frita 3-4 minutos de cada lado, até dourarem e ficarem estaladiças.", "ESCORRE E SERVE: transfere para papel absorvente, depois serve quentes."],
-    "ru": ["ЗАМЕСИ ТЕСТО: смешай муку, яйцо, тёплую воду, соль и масло в миске и вымешивай 8-10 минут, пока не станет эластичным и гладким.", "ДАЙ НАСТОЯТЬСЯ: накрой тесто и оставь при комнатной температуре на 30 минут, чтобы клейковина расслабилась.", "ПРИГОТОВЬ НАЧИНКУ: смешай хорошо отжатый творог с яйцом, манкой и щепоткой соли, пока не получится однородная, не слишком мягкая масса.", "РАЗДЕЛИ ТЕСТО: раздели тесто на 8 равных частей и раскатай каждую тонко в круг на подпыленной мукой поверхности.", "НАПОЛНИ И ЗАКРОЙ: положи 2-3 столовые ложки начинки на половину каждого круга теста, накрой другой половиной и защипни края вилкой, чтобы хорошо запечатать.", "РАЗОГРЕЙ МАСЛО: налей масло в большую сковороду на глубину 1см и разогрей на среднем огне.", "ОБЖАРЬ: выложи плацинды на сковороду, не перегружая её, и жарь 3-4 минуты с каждой стороны, пока не подрумянятся и не станут хрустящими.", "ОТЦЕДИ И ПОДАЙ: переложи на бумажное полотенце, затем подавай горячими."],
-    "ar": ["اعجن العجين: اخلط الدقيق والبيضة والماء الفاتر والملح والزيت في وعاء واعجن 8-10 دقائق حتى يصبح مرنًا وناعمًا.", "دعه يرتاح: غطِّ العجين واتركه في درجة حرارة الغرفة 30 دقيقة حتى يرتاح الغلوتين.", "جهّز الحشوة: اخلط الجبن المصفّى جيدًا مع البيضة والسميد ورشة ملح حتى تحصل على خليط متجانس وليس طريًا جدًا.", "قسّم العجين: قطّع العجين إلى 8 قطع متساوية وافرد كل قطعة رقيقة على شكل دائرة على سطح مرشوش بالدقيق.", "احشُ وأغلق: ضع 2-3 ملاعق كبيرة من الحشوة على نصف كل دائرة عجين، اطوِ النصف الآخر فوقها واضغط الحواف بشوكة لتُغلق جيدًا.", "سخّن الزيت: اسكب الزيت في مقلاة كبيرة حتى عمق 1سم وسخّن على نار متوسطة.", "اقلِ: ضع البلاتشينتا في المقلاة دون ازدحام واقلِ 3-4 دقائق لكل جانب حتى تصبح ذهبية ومقرمشة.", "صفِّ وقدّم: انقل إلى منشفة ورقية، ثم قدّم ساخنة."],
-    "zh": ["制作面团：将面粉、鸡蛋、温水、盐和油放入碗中，揉8-10分钟，直到面团有弹性且光滑。", "醒面：盖好面团，在室温下静置30分钟，让面筋松弛。", "准备馅料：将充分沥干的奶酪与鸡蛋、粗粒小麦粉和一小撮盐混合，直到形成均匀、不过软的馅料。", "分割面团：将面团切成8等份，每份在撒了面粉的台面上擀成薄薄的圆形。", "填馅并封口：在每个面皮圆的一半上放2-3汤匙馅料，将另一半折过来盖上，用叉子把边缘压紧封口。", "加热油：在大平底锅中倒入约1厘米深的油，中火加热。", "煎制：将派饼放入锅中，不要挤在一起，每面煎3-4分钟，直至金黄酥脆。", "沥油享用：转移到厨房纸上吸油，然后趁热享用。"],
-    "ja": ["生地を作る：ボウルに小麦粉、卵、ぬるま湯、塩、油を合わせ、弾力が出てなめらかになるまで8〜10分こねる。", "生地を休ませる：生地に蓋をして室温で30分置き、グルテンをリラックスさせる。", "詰め物を準備する：よく水切りしたチーズに卵、セモリナ粉、塩ひとつまみを混ぜ、柔らかすぎない均一な生地にする。", "生地を分ける：生地を8等分し、それぞれ打ち粉をした台の上で薄い円形に伸ばす。", "詰めて閉じる：生地の円の半分に詰め物を大さじ2〜3のせ、もう半分を折りかぶせ、フォークで端を押さえてしっかり閉じる。", "油を熱する：大きなフライパンに1cmの深さまで油を注ぎ、中火で熱する。", "揚げ焼きにする：プラチンタを重ならないようにフライパンに入れ、両面をそれぞれ3〜4分、きつね色でパリッとするまで焼く。", "油を切って提供する：キッチンペーパーに移し、熱いうちに提供する。"],
-    "tr": ["HAMURU YAPIN: unu, yumurtayı, ılık suyu, tuzu ve yağı bir kasede birleştirin ve esnek ve pürüzsüz olana kadar 8-10 dakika yoğurun.", "DİNLENDİRİN: hamuru örtün ve glüten gevşemesi için oda sıcaklığında 30 dakika bekletin.", "HARCI HAZIRLAYIN: iyice süzülmüş peyniri yumurta, irmik ve bir tutam tuzla, çok yumuşak olmayan eşit bir karışım elde edene kadar karıştırın.", "HAMURU BÖLÜN: hamuru 8 eşit parçaya bölün ve her birini unlanmış bir yüzeyde ince bir daire şeklinde açın.", "DOLDURUN VE KAPATIN: her hamur dairesinin yarısına 2-3 yemek kaşığı harç koyun, diğer yarısını üzerine katlayın ve iyice kapanması için kenarları çatalla bastırın.", "YAĞI ISITIN: büyük bir tavaya 1cm derinliğinde yağ dökün ve orta ateşte ısıtın.", "KIZARTIN: plăcinte'leri sıkışık olmadan tavaya ekleyin ve altın rengi ve çıtır olana kadar her tarafta 3-4 dakika kızartın.", "SÜZÜN VE SERVİS YAPIN: kağıt havluya alın, ardından sıcak servis yapın."],
-    "it": ["PREPARA L'IMPASTO: unisci farina, uovo, acqua tiepida, sale e olio in una ciotola e impasta 8-10 minuti, finché elastico e liscio.", "LASCIA RIPOSARE: copri l'impasto e lascialo a temperatura ambiente 30 minuti, perché il glutine si rilassi.", "PREPARA IL RIPIENO: mescola la ricotta ben scolata con l'uovo, il semolino e un pizzico di sale, finché ottieni un composto omogeneo, non troppo morbido.", "DIVIDI L'IMPASTO: taglia l'impasto in 8 pezzi uguali e stendi ciascuno sottile in un cerchio su una superficie infarinata.", "RIEMPI E CHIUDI: metti 2-3 cucchiai di ripieno su metà di ogni cerchio di impasto, piega l'altra metà sopra e premi i bordi con una forchetta per sigillare bene.", "SCALDA L'OLIO: versa l'olio in una padella grande fino a uno spessore di 1cm e scalda a fuoco medio.", "FRIGGI: aggiungi le plăcinte in padella senza sovraffollarla e friggi 3-4 minuti per lato, finché dorate e croccanti.", "SCOLA E SERVI: trasferisci su carta assorbente, poi servi calde."],
-    "ko": ["반죽 만들기: 볼에 밀가루, 달걀, 미지근한 물, 소금, 기름을 넣고 탄력 있고 매끄러워질 때까지 8-10분간 반죽한다.", "휴지시키기: 반죽을 덮고 실온에서 30분간 두어 글루텐이 이완되게 한다.", "속재료 준비하기: 물기 잘 뺀 치즈에 달걀, 세몰리나, 소금 한 꼬집을 섞어 너무 무르지 않은 고른 혼합물을 만든다.", "반죽 나누기: 반죽을 8등분하고 밀가루를 뿌린 작업대에서 각각 얇은 원형으로 민다.", "채우고 봉하기: 각 반죽 원의 절반에 속재료 2-3큰술을 놓고 나머지 절반을 접어 덮은 뒤 포크로 가장자리를 눌러 단단히 봉한다.", "기름 데우기: 큰 팬에 1cm 깊이로 기름을 붓고 중불로 데운다.", "튀기듯 굽기: 플러친터를 겹치지 않게 팬에 넣고 겉이 황금빛으로 바삭해질 때까지 각 면을 3-4분씩 굽는다.", "기름 빼고 서빙하기: 키친타월에 옮긴 뒤 뜨거울 때 서빙한다."],
-    "hi": ["आटा गूंधें: एक कटोरे में आटा, अंडा, गुनगुना पानी, नमक और तेल मिलाएं और 8-10 मिनट तक गूंधें, जब तक लचीला और चिकना न हो जाए।", "आराम दें: आटे को ढकें और ग्लूटेन को आराम देने के लिए कमरे के तापमान पर 30 मिनट रखें।", "भरावन तैयार करें: अच्छी तरह निचोड़े पनीर को अंडे, सूजी और एक चुटकी नमक के साथ मिलाएं, जब तक एकसमान, ज़्यादा नरम न मिश्रण न बन जाए।", "आटा बांटें: आटे को 8 बराबर टुकड़ों में काटें और हर टुकड़े को आटे लगी सतह पर पतला गोल बेलें।", "भरें और बंद करें: हर आटे के गोले के आधे हिस्से पर 2-3 बड़े चम्मच भरावन रखें, दूसरा आधा ऊपर मोड़ें और किनारों को कांटे से दबाकर अच्छी तरह सील करें।", "तेल गरम करें: एक बड़े पैन में 1सेमी गहराई तक तेल डालें और मध्यम आंच पर गरम करें।", "तलें: प्लाचिन्ता को बिना भीड़ किए पैन में डालें और सुनहरी और कुरकुरी होने तक हर तरफ 3-4 मिनट तलें।", "छानें और परोसें: कागज़ के तौलिये पर रखें, फिर गरम परोसें।"]
+    "ro": "FRĂMÂNTĂ ALUATUL: combină făina, oul, apa călduță, sarea și uleiul într-un bol și frământă 8-10 minute, până devine elastic și neted. LASĂ LA ODIHNĂ: acoperă aluatul și lasă-l la temperatura camerei 30 minute, ca glutenul să se relaxeze. PREGĂTEȘTE UMPLUTURA: amestecă brânza scursă bine cu oul, grișul și un praf de sare, până obții o compoziție omogenă, nu prea moale. ÎMPARTE ALUATUL: taie aluatul în 8 bucăți egale și întinde fiecare bucată subțire, în formă de cerc, pe o suprafață făinată. UMPLE ȘI ÎNCHIDE: pune 2-3 linguri de umplutură pe jumătatea fiecărui cerc de aluat, pliază cealaltă jumătate peste și presează marginile cu furculița să se lipească bine. ÎNCĂLZEȘTE ULEIUL: toarnă ulei într-o tigaie mare, până la o adâncime de 1cm, și încălzește la foc mediu. PRĂJEȘTE: pune plăcintele în tigaie fără să le aglomerezi și prăjește 3-4 minute pe fiecare parte, până devin aurii și crocante. SCURGE ȘI SERVEȘTE: scoate pe hârtie absorbantă, apoi servește calde.",
+    "en": "MAKE THE DOUGH: combine the flour, egg, lukewarm water, salt and oil in a bowl and knead for 8-10 minutes, until elastic and smooth. LET IT REST: cover the dough and let it sit at room temperature for 30 minutes, so the gluten relaxes. PREPARE THE FILLING: mix the well-drained cheese with the egg, semolina and a pinch of salt, until you get an even mixture, not too soft. DIVIDE THE DOUGH: cut the dough into 8 equal pieces and roll each one thin into a circle on a floured surface. FILL AND CLOSE: place 2-3 tablespoons of filling on one half of each dough circle, fold the other half over and press the edges with a fork to seal well. HEAT THE OIL: pour oil into a large pan to a depth of 1cm and heat over medium heat. FRY: add the plăcinte to the pan without crowding and fry for 3-4 minutes per side, until golden and crisp. DRAIN AND SERVE: transfer to paper towel, then serve hot.",
+    "es": "HAZ LA MASA: combina la harina, el huevo, el agua tibia, la sal y el aceite en un bol y amasa 8-10 minutos, hasta que quede elástica y lisa. DEJA REPOSAR: tapa la masa y déjala a temperatura ambiente 30 minutos, para que el gluten se relaje. PREPARA EL RELLENO: mezcla el queso bien escurrido con el huevo, la sémola y una pizca de sal, hasta obtener una mezcla uniforme, no demasiado blanda. DIVIDE LA MASA: corta la masa en 8 trozos iguales y estira cada uno fino en forma de círculo sobre una superficie enharinada. RELLENA Y CIERRA: pon 2-3 cucharadas de relleno en la mitad de cada círculo de masa, dobla la otra mitad encima y presiona los bordes con un tenedor para sellar bien. CALIENTA EL ACEITE: vierte aceite en una sartén grande hasta una profundidad de 1cm y calienta a fuego medio. FRÍE: añade las plăcinte a la sartén sin apiñarlas y fríe 3-4 minutos por cada lado, hasta que estén doradas y crujientes. ESCURRE Y SIRVE: pasa a papel absorbente, luego sirve calientes.",
+    "fr": "FAIS LA PÂTE: mélange la farine, l'œuf, l'eau tiède, le sel et l'huile dans un bol et pétris 8-10 minutes, jusqu'à ce qu'elle soit élastique et lisse. LAISSE REPOSER: couvre la pâte et laisse-la à température ambiante 30 minutes, pour que le gluten se détende. PRÉPARE LA FARCE: mélange le fromage bien égoutté avec l'œuf, la semoule et une pincée de sel, jusqu'à obtenir un mélange homogène, pas trop mou. DIVISE LA PÂTE: coupe la pâte en 8 morceaux égaux et étale chacun finement en cercle sur une surface farinée. FARCIS ET FERME: place 2-3 cuillerées de farce sur une moitié de chaque cercle de pâte, replie l'autre moitié dessus et presse les bords à la fourchette pour bien sceller. CHAUFFE L'HUILE: verse de l'huile dans une grande poêle sur une profondeur de 1cm et chauffe à feu moyen. FAIS FRIRE: ajoute les plăcinte dans la poêle sans les surcharger et fais frire 3-4 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes. ÉGOUTTE ET SERS: transfère sur du papier absorbant, puis sers chaud.",
+    "de": "TEIG HERSTELLEN: Mehl, Ei, lauwarmes Wasser, Salz und Öl in einer Schüssel vermengen und 8-10 Minuten kneten, bis er elastisch und glatt ist. RUHEN LASSEN: den Teig abdecken und 30 Minuten bei Zimmertemperatur ruhen lassen, damit sich das Gluten entspannt. FÜLLUNG VORBEREITEN: den gut abgetropften Quark mit dem Ei, dem Grieß und einer Prise Salz vermischen, bis eine gleichmäßige, nicht zu weiche Masse entsteht. TEIG TEILEN: den Teig in 8 gleiche Stücke schneiden und jedes auf einer bemehlten Fläche dünn zu einem Kreis ausrollen. FÜLLEN UND SCHLIESSEN: 2-3 Esslöffel Füllung auf eine Hälfte jedes Teigkreises geben, die andere Hälfte darüberklappen und die Ränder mit einer Gabel gut zudrücken. ÖL ERHITZEN: Öl in eine große Pfanne geben, etwa 1cm hoch, und bei mittlerer Hitze erhitzen. BRATEN: die Plăcinte ohne Überfüllen in die Pfanne geben und 3-4 Minuten pro Seite braten, bis sie goldbraun und knusprig sind. ABTROPFEN UND SERVIEREN: auf Küchenpapier legen, dann heiß servieren.",
+    "pt": "FAZ A MASSA: combina a farinha, o ovo, a água morna, o sal e o óleo numa taça e amassa 8-10 minutos, até ficar elástica e lisa. DEIXA REPOUSAR: tapa a massa e deixa-a à temperatura ambiente 30 minutos, para o glúten relaxar. PREPARA O RECHEIO: mistura o queijo bem escorrido com o ovo, a sêmola e uma pitada de sal, até obteres uma mistura homogénea, não demasiado mole. DIVIDE A MASSA: corta a massa em 8 pedaços iguais e estende cada um fino em círculo numa superfície enfarinhada. RECHEIA E FECHA: coloca 2-3 colheres de recheio em metade de cada círculo de massa, dobra a outra metade por cima e pressiona as bordas com um garfo para selar bem. AQUECE O ÓLEO: verte óleo numa frigideira grande até 1cm de profundidade e aquece em lume médio. FRITA: junta as plăcinte à frigideira sem sobrelotar e frita 3-4 minutos de cada lado, até dourarem e ficarem estaladiças. ESCORRE E SERVE: transfere para papel absorvente, depois serve quentes.",
+    "ru": "ЗАМЕСИ ТЕСТО: смешай муку, яйцо, тёплую воду, соль и масло в миске и вымешивай 8-10 минут, пока не станет эластичным и гладким. ДАЙ НАСТОЯТЬСЯ: накрой тесто и оставь при комнатной температуре на 30 минут, чтобы клейковина расслабилась. ПРИГОТОВЬ НАЧИНКУ: смешай хорошо отжатый творог с яйцом, манкой и щепоткой соли, пока не получится однородная, не слишком мягкая масса. РАЗДЕЛИ ТЕСТО: раздели тесто на 8 равных частей и раскатай каждую тонко в круг на подпыленной мукой поверхности. НАПОЛНИ И ЗАКРОЙ: положи 2-3 столовые ложки начинки на половину каждого круга теста, накрой другой половиной и защипни края вилкой, чтобы хорошо запечатать. РАЗОГРЕЙ МАСЛО: налей масло в большую сковороду на глубину 1см и разогрей на среднем огне. ОБЖАРЬ: выложи плацинды на сковороду, не перегружая её, и жарь 3-4 минуты с каждой стороны, пока не подрумянятся и не станут хрустящими. ОТЦЕДИ И ПОДАЙ: переложи на бумажное полотенце, затем подавай горячими.",
+    "ar": "اعجن العجين: اخلط الدقيق والبيضة والماء الفاتر والملح والزيت في وعاء واعجن 8-10 دقائق حتى يصبح مرنًا وناعمًا. دعه يرتاح: غطِّ العجين واتركه في درجة حرارة الغرفة 30 دقيقة حتى يرتاح الغلوتين. جهّز الحشوة: اخلط الجبن المصفّى جيدًا مع البيضة والسميد ورشة ملح حتى تحصل على خليط متجانس وليس طريًا جدًا. قسّم العجين: قطّع العجين إلى 8 قطع متساوية وافرد كل قطعة رقيقة على شكل دائرة على سطح مرشوش بالدقيق. احشُ وأغلق: ضع 2-3 ملاعق كبيرة من الحشوة على نصف كل دائرة عجين، اطوِ النصف الآخر فوقها واضغط الحواف بشوكة لتُغلق جيدًا. سخّن الزيت: اسكب الزيت في مقلاة كبيرة حتى عمق 1سم وسخّن على نار متوسطة. اقلِ: ضع البلاتشينتا في المقلاة دون ازدحام واقلِ 3-4 دقائق لكل جانب حتى تصبح ذهبية ومقرمشة. صفِّ وقدّم: انقل إلى منشفة ورقية، ثم قدّم ساخنة.",
+    "zh": "制作面团：将面粉、鸡蛋、温水、盐和油放入碗中，揉8-10分钟，直到面团有弹性且光滑。 醒面：盖好面团，在室温下静置30分钟，让面筋松弛。 准备馅料：将充分沥干的奶酪与鸡蛋、粗粒小麦粉和一小撮盐混合，直到形成均匀、不过软的馅料。 分割面团：将面团切成8等份，每份在撒了面粉的台面上擀成薄薄的圆形。 填馅并封口：在每个面皮圆的一半上放2-3汤匙馅料，将另一半折过来盖上，用叉子把边缘压紧封口。 加热油：在大平底锅中倒入约1厘米深的油，中火加热。 煎制：将派饼放入锅中，不要挤在一起，每面煎3-4分钟，直至金黄酥脆。 沥油享用：转移到厨房纸上吸油，然后趁热享用。",
+    "ja": "生地を作る：ボウルに小麦粉、卵、ぬるま湯、塩、油を合わせ、弾力が出てなめらかになるまで8〜10分こねる。 生地を休ませる：生地に蓋をして室温で30分置き、グルテンをリラックスさせる。 詰め物を準備する：よく水切りしたチーズに卵、セモリナ粉、塩ひとつまみを混ぜ、柔らかすぎない均一な生地にする。 生地を分ける：生地を8等分し、それぞれ打ち粉をした台の上で薄い円形に伸ばす。 詰めて閉じる：生地の円の半分に詰め物を大さじ2〜3のせ、もう半分を折りかぶせ、フォークで端を押さえてしっかり閉じる。 油を熱する：大きなフライパンに1cmの深さまで油を注ぎ、中火で熱する。 揚げ焼きにする：プラチンタを重ならないようにフライパンに入れ、両面をそれぞれ3〜4分、きつね色でパリッとするまで焼く。 油を切って提供する：キッチンペーパーに移し、熱いうちに提供する。",
+    "tr": "HAMURU YAPIN: unu, yumurtayı, ılık suyu, tuzu ve yağı bir kasede birleştirin ve esnek ve pürüzsüz olana kadar 8-10 dakika yoğurun. DİNLENDİRİN: hamuru örtün ve glüten gevşemesi için oda sıcaklığında 30 dakika bekletin. HARCI HAZIRLAYIN: iyice süzülmüş peyniri yumurta, irmik ve bir tutam tuzla, çok yumuşak olmayan eşit bir karışım elde edene kadar karıştırın. HAMURU BÖLÜN: hamuru 8 eşit parçaya bölün ve her birini unlanmış bir yüzeyde ince bir daire şeklinde açın. DOLDURUN VE KAPATIN: her hamur dairesinin yarısına 2-3 yemek kaşığı harç koyun, diğer yarısını üzerine katlayın ve iyice kapanması için kenarları çatalla bastırın. YAĞI ISITIN: büyük bir tavaya 1cm derinliğinde yağ dökün ve orta ateşte ısıtın. KIZARTIN: plăcinte'leri sıkışık olmadan tavaya ekleyin ve altın rengi ve çıtır olana kadar her tarafta 3-4 dakika kızartın. SÜZÜN VE SERVİS YAPIN: kağıt havluya alın, ardından sıcak servis yapın.",
+    "it": "PREPARA L'IMPASTO: unisci farina, uovo, acqua tiepida, sale e olio in una ciotola e impasta 8-10 minuti, finché elastico e liscio. LASCIA RIPOSARE: copri l'impasto e lascialo a temperatura ambiente 30 minuti, perché il glutine si rilassi. PREPARA IL RIPIENO: mescola la ricotta ben scolata con l'uovo, il semolino e un pizzico di sale, finché ottieni un composto omogeneo, non troppo morbido. DIVIDI L'IMPASTO: taglia l'impasto in 8 pezzi uguali e stendi ciascuno sottile in un cerchio su una superficie infarinata. RIEMPI E CHIUDI: metti 2-3 cucchiai di ripieno su metà di ogni cerchio di impasto, piega l'altra metà sopra e premi i bordi con una forchetta per sigillare bene. SCALDA L'OLIO: versa l'olio in una padella grande fino a uno spessore di 1cm e scalda a fuoco medio. FRIGGI: aggiungi le plăcinte in padella senza sovraffollarla e friggi 3-4 minuti per lato, finché dorate e croccanti. SCOLA E SERVI: trasferisci su carta assorbente, poi servi calde.",
+    "ko": "반죽 만들기: 볼에 밀가루, 달걀, 미지근한 물, 소금, 기름을 넣고 탄력 있고 매끄러워질 때까지 8-10분간 반죽한다. 휴지시키기: 반죽을 덮고 실온에서 30분간 두어 글루텐이 이완되게 한다. 속재료 준비하기: 물기 잘 뺀 치즈에 달걀, 세몰리나, 소금 한 꼬집을 섞어 너무 무르지 않은 고른 혼합물을 만든다. 반죽 나누기: 반죽을 8등분하고 밀가루를 뿌린 작업대에서 각각 얇은 원형으로 민다. 채우고 봉하기: 각 반죽 원의 절반에 속재료 2-3큰술을 놓고 나머지 절반을 접어 덮은 뒤 포크로 가장자리를 눌러 단단히 봉한다. 기름 데우기: 큰 팬에 1cm 깊이로 기름을 붓고 중불로 데운다. 튀기듯 굽기: 플러친터를 겹치지 않게 팬에 넣고 겉이 황금빛으로 바삭해질 때까지 각 면을 3-4분씩 굽는다. 기름 빼고 서빙하기: 키친타월에 옮긴 뒤 뜨거울 때 서빙한다.",
+    "hi": "आटा गूंधें: एक कटोरे में आटा, अंडा, गुनगुना पानी, नमक और तेल मिलाएं और 8-10 मिनट तक गूंधें, जब तक लचीला और चिकना न हो जाए। आराम दें: आटे को ढकें और ग्लूटेन को आराम देने के लिए कमरे के तापमान पर 30 मिनट रखें। भरावन तैयार करें: अच्छी तरह निचोड़े पनीर को अंडे, सूजी और एक चुटकी नमक के साथ मिलाएं, जब तक एकसमान, ज़्यादा नरम न मिश्रण न बन जाए। आटा बांटें: आटे को 8 बराबर टुकड़ों में काटें और हर टुकड़े को आटे लगी सतह पर पतला गोल बेलें। भरें और बंद करें: हर आटे के गोले के आधे हिस्से पर 2-3 बड़े चम्मच भरावन रखें, दूसरा आधा ऊपर मोड़ें और किनारों को कांटे से दबाकर अच्छी तरह सील करें। तेल गरम करें: एक बड़े पैन में 1सेमी गहराई तक तेल डालें और मध्यम आंच पर गरम करें। तलें: प्लाचिन्ता को बिना भीड़ किए पैन में डालें और सुनहरी और कुरकुरी होने तक हर तरफ 3-4 मिनट तलें। छानें और परोसें: कागज़ के तौलिये पर रखें, फिर गरम परोसें।"
   },
   "originText": {
     "ro": "Plăcinta e categoria generică pentru aluaturile umplute din bucătăria românească, cu variații de la o regiune la alta — cu brânză, cu mere, cu varză, cu dovleac, coapte sau prăjite. Versiunea cu brânză, prăjită în tigaie, e cea mai comună gustare stradală și de casă, vândută tradițional la chioșcuri și piețe încă din perioada interbelică.\n\nCe deosebește o plăcintă reușită de una mediocră e echilibrul umidității în umplutură: brânza trebuie scursă bine în prealabil, altfel zerul rămas fierbe în timpul prăjirii și înmoaie aluatul din interior înainte ca exteriorul să apuce să se rumenească. Sigilarea marginilor contează la fel de mult — o plăcintă prost lipită se deschide în ulei și pierde toată umplutura din ea.",
@@ -85,7 +552,11 @@
   "meta": {
     "time": 60,
     "costRon": 12,
-    "tags": ["budget", "vegetarian", "family"],
+    "tags": [
+      "budget",
+      "vegetarian",
+      "family"
+    ],
     "desc": {
       "ro": "Aluat umplut cu brânză scursă, sigilat cu furculița și prăjit în tigaie până devine crocant.",
       "en": "Dough filled with drained cheese, sealed with a fork and pan-fried until crisp.",

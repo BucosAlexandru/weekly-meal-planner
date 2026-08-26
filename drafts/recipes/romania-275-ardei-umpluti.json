@@ -4,67 +4,562 @@
   "tipType": "romanian",
   "pairingsType": "romanian",
   "origin": {
-    "ro": "România", "en": "Romania", "es": "Rumanía", "fr": "Roumanie", "de": "Rumänien",
-    "pt": "Roménia", "ru": "Румыния", "ar": "رومانيا", "zh": "罗马尼亚", "ja": "ルーマニア",
-    "tr": "Romanya", "it": "Romania", "ko": "루마니아", "hi": "रोमानिया"
+    "ro": "România",
+    "en": "Romania",
+    "es": "Rumanía",
+    "fr": "Roumanie",
+    "de": "Rumänien",
+    "pt": "Roménia",
+    "ru": "Румыния",
+    "ar": "رومانيا",
+    "zh": "罗马尼亚",
+    "ja": "ルーマニア",
+    "tr": "Romanya",
+    "it": "Romania",
+    "ko": "루마니아",
+    "hi": "रोमानिया"
   },
   "name": {
-    "ro": "Ardei umpluți", "en": "Romanian Stuffed Peppers", "es": "Pimientos Rellenos Rumanos", "fr": "Poivrons Farcis Roumains",
-    "de": "Rumänische Gefüllte Paprika", "pt": "Pimentos Recheados Romenos", "ru": "Румынский фаршированный перец", "ar": "الفلفل المحشو الروماني",
-    "zh": "罗马尼亚酿甜椒", "ja": "ルーマニア風パプリカの肉詰め", "tr": "Romanya Usulü Dolma Biber", "it": "Peperoni Ripieni alla Rumena",
-    "ko": "루마니아식 속을 채운 피망", "hi": "रोमानियाई भरवां शिमला मिर्च"
+    "ro": "Ardei umpluți",
+    "en": "Romanian Stuffed Peppers",
+    "es": "Pimientos Rellenos Rumanos",
+    "fr": "Poivrons Farcis Roumains",
+    "de": "Rumänische Gefüllte Paprika",
+    "pt": "Pimentos Recheados Romenos",
+    "ru": "Румынский фаршированный перец",
+    "ar": "الفلفل المحشو الروماني",
+    "zh": "罗马尼亚酿甜椒",
+    "ja": "ルーマニア風パプリカの肉詰め",
+    "tr": "Romanya Usulü Dolma Biber",
+    "it": "Peperoni Ripieni alla Rumena",
+    "ko": "루마니아식 속을 채운 피망",
+    "hi": "रोमानियाई भरवां शिमला मिर्च"
   },
   "category": {
-    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
-    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي", "zh": "主菜", "ja": "メイン料理", "tr": "Ana Yemek", "it": "Piatto principale", "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "tr": "Ana Yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
   },
   "featureCards": {
-    "ro": [{"icon":"🌶️","t":"Ardei rotunzi, cu capacul păstrat","d":"Suficient de mici cât să stea în picioare într-o oală"},{"icon":"🍚","t":"Orez adăugat crud în umplutură","d":"Absoarbe zeama de roșii cât fierbe și se umflă în interior"},{"icon":"🍅","t":"Acoperiți complet cu sos de roșii","d":"Fierb înăbușit, nu la cuptor, ca să rămână fragezi"},{"icon":"🥛","t":"Servit cu smântână deasupra","d":"Echilibrează aciditatea sosului de roșii"}],
-    "en": [{"icon":"🌶️","t":"Round peppers with the tops kept as lids","d":"Small enough to stand upright in a pot"},{"icon":"🍚","t":"Raw rice added to the filling","d":"Absorbs the tomato juice as it cooks and swells inside"},{"icon":"🍅","t":"Fully covered in tomato sauce","d":"Simmered on the stove, not baked, to stay tender"},{"icon":"🥛","t":"Served with sour cream on top","d":"Balances the acidity of the tomato sauce"}],
-    "es": [{"icon":"🌶️","t":"Pimientos redondos con la tapa reservada","d":"Suficientemente pequeños para mantenerse de pie en una olla"},{"icon":"🍚","t":"Arroz crudo añadido al relleno","d":"Absorbe el jugo de tomate mientras cuece y se hincha por dentro"},{"icon":"🍅","t":"Cubiertos por completo de salsa de tomate","d":"Cocidos a fuego lento, no al horno, para que queden tiernos"},{"icon":"🥛","t":"Servido con nata agria por encima","d":"Equilibra la acidez de la salsa de tomate"}],
-    "fr": [{"icon":"🌶️","t":"Poivrons ronds avec le chapeau conservé","d":"Assez petits pour tenir debout dans une marmite"},{"icon":"🍚","t":"Riz cru ajouté à la farce","d":"Absorbe le jus de tomate en cuisant et gonfle à l'intérieur"},{"icon":"🍅","t":"Entièrement recouverts de sauce tomate","d":"Mijotés sur la cuisinière, pas au four, pour rester fondants"},{"icon":"🥛","t":"Servi avec de la crème aigre dessus","d":"Équilibre l'acidité de la sauce tomate"}],
-    "de": [{"icon":"🌶️","t":"Runde Paprika mit aufbewahrtem Deckel","d":"Klein genug, um aufrecht im Topf zu stehen"},{"icon":"🍚","t":"Roher Reis in die Füllung gegeben","d":"Nimmt beim Garen den Tomatensaft auf und quillt im Inneren"},{"icon":"🍅","t":"Vollständig mit Tomatensauce bedeckt","d":"Auf dem Herd geschmort, nicht gebacken, um zart zu bleiben"},{"icon":"🥛","t":"Mit saurer Sahne obenauf serviert","d":"Gleicht die Säure der Tomatensauce aus"}],
-    "pt": [{"icon":"🌶️","t":"Pimentos redondos com a tampa guardada","d":"Pequenos o suficiente para ficarem de pé numa panela"},{"icon":"🍚","t":"Arroz cru adicionado ao recheio","d":"Absorve o suco de tomate enquanto coze e incha por dentro"},{"icon":"🍅","t":"Totalmente cobertos com molho de tomate","d":"Cozinhados no fogão, não no forno, para ficarem tenros"},{"icon":"🥛","t":"Servido com natas azedas por cima","d":"Equilibra a acidez do molho de tomate"}],
-    "ru": [{"icon":"🌶️","t":"Круглые перцы с сохранённой крышечкой","d":"Достаточно маленькие, чтобы стоять вертикально в кастрюле"},{"icon":"🍚","t":"Сырой рис добавляется в начинку","d":"Впитывает томатный сок при варке и разбухает внутри"},{"icon":"🍅","t":"Полностью залиты томатным соусом","d":"Тушатся на плите, а не запекаются, чтобы остаться нежными"},{"icon":"🥛","t":"Подаётся со сметаной сверху","d":"Уравновешивает кислотность томатного соуса"}],
-    "ar": [{"icon":"🌶️","t":"فلفل مستدير مع الاحتفاظ بالغطاء","d":"صغير بما يكفي ليقف مستقيمًا في القدر"},{"icon":"🍚","t":"أرز نيء يُضاف إلى الحشوة","d":"يمتص عصير الطماطم أثناء الطهي وينتفخ من الداخل"},{"icon":"🍅","t":"مغطى بالكامل بصلصة الطماطم","d":"يُطهى على الموقد، لا في الفرن، ليبقى طريًا"},{"icon":"🥛","t":"يُقدَّم مع القشدة الحامضة فوقه","d":"يوازن حموضة صلصة الطماطم"}],
-    "zh": [{"icon":"🌶️","t":"圆形甜椒，保留蒂盖","d":"个头小到能在锅中直立站稳"},{"icon":"🍚","t":"生米直接加入馅料","d":"在烹煮时吸收番茄汁并在内部膨胀"},{"icon":"🍅","t":"完全被番茄酱汁覆盖","d":"炉灶上炖煮而非烤箱烘烤，保持鲜嫩"},{"icon":"🥛","t":"上桌前淋上酸奶油","d":"平衡番茄酱汁的酸度"}],
-    "ja": [{"icon":"🌶️","t":"丸いパプリカでヘタを蓋として使う","d":"鍋の中で立てられる小さめのサイズ"},{"icon":"🍚","t":"生米を詰め物にそのまま加える","d":"煮ている間にトマトの汁を吸って内側で膨らむ"},{"icon":"🍅","t":"トマトソースで完全に覆う","d":"オーブンでなくコンロで煮込み柔らかく仕上げる"},{"icon":"🥛","t":"サワークリームをのせて提供","d":"トマトソースの酸味を和らげる"}],
-    "tr": [{"icon":"🌶️","t":"Kapağı saklanan yuvarlak biberler","d":"Tencerede dik durabilecek kadar küçük"},{"icon":"🍚","t":"Harca çiğ pirinç eklenir","d":"Pişerken domates suyunu emer ve içeride kabarır"},{"icon":"🍅","t":"Tamamen domates sosuyla kaplı","d":"Fırında değil ocakta pişirilir, yumuşak kalması için"},{"icon":"🥛","t":"Üzerinde ekşi kremayla servis edilir","d":"Domates sosunun ekşiliğini dengeler"}],
-    "it": [{"icon":"🌶️","t":"Peperoni tondi con il tappo conservato","d":"Abbastanza piccoli da stare in piedi in una pentola"},{"icon":"🍚","t":"Riso crudo aggiunto al ripieno","d":"Assorbe il succo di pomodoro mentre cuoce e si gonfia dentro"},{"icon":"🍅","t":"Completamente ricoperti di salsa di pomodoro","d":"Cotti sul fornello, non al forno, per restare teneri"},{"icon":"🥛","t":"Serviti con panna acida sopra","d":"Bilancia l'acidità della salsa di pomodoro"}],
-    "ko": [{"icon":"🌶️","t":"둥근 피망, 꼭지는 뚜껑으로 보관","d":"냄비 안에 똑바로 설 수 있을 만큼 작은 크기"},{"icon":"🍚","t":"생쌀을 그대로 속재료에 넣기","d":"익으면서 토마토즙을 흡수해 속에서 부풀어 오른다"},{"icon":"🍅","t":"토마토소스로 완전히 덮기","d":"오븐이 아닌 불 위에서 뭉근히 끓여 부드럽게 유지"},{"icon":"🥛","t":"사워크림을 얹어 서빙","d":"토마토소스의 산미를 중화시킨다"}],
-    "hi": [{"icon":"🌶️","t":"गोल शिमला मिर्च, ढक्कन सुरक्षित रखा गया","d":"बर्तन में सीधी खड़ी रहने जितनी छोटी"},{"icon":"🍚","t":"भरावन में कच्चे चावल डाले गए","d":"पकते समय टमाटर का रस सोखकर अंदर फूलते हैं"},{"icon":"🍅","t":"पूरी तरह टमाटर सॉस से ढकी","d":"ओवन में नहीं, चूल्हे पर धीमी आंच पर पकाई गई ताकि नरम रहे"},{"icon":"🥛","t":"ऊपर खट्टी क्रीम के साथ परोसी गई","d":"टमाटर सॉस की खटास को संतुलित करती है"}]
+    "ro": [
+      {
+        "icon": "🌶️",
+        "t": "Ardei rotunzi, cu capacul păstrat",
+        "d": "Suficient de mici cât să stea în picioare într-o oală"
+      },
+      {
+        "icon": "🍚",
+        "t": "Orez adăugat crud în umplutură",
+        "d": "Absoarbe zeama de roșii cât fierbe și se umflă în interior"
+      },
+      {
+        "icon": "🍅",
+        "t": "Acoperiți complet cu sos de roșii",
+        "d": "Fierb înăbușit, nu la cuptor, ca să rămână fragezi"
+      },
+      {
+        "icon": "🥛",
+        "t": "Servit cu smântână deasupra",
+        "d": "Echilibrează aciditatea sosului de roșii"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🌶️",
+        "t": "Round peppers with the tops kept as lids",
+        "d": "Small enough to stand upright in a pot"
+      },
+      {
+        "icon": "🍚",
+        "t": "Raw rice added to the filling",
+        "d": "Absorbs the tomato juice as it cooks and swells inside"
+      },
+      {
+        "icon": "🍅",
+        "t": "Fully covered in tomato sauce",
+        "d": "Simmered on the stove, not baked, to stay tender"
+      },
+      {
+        "icon": "🥛",
+        "t": "Served with sour cream on top",
+        "d": "Balances the acidity of the tomato sauce"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🌶️",
+        "t": "Pimientos redondos con la tapa reservada",
+        "d": "Suficientemente pequeños para mantenerse de pie en una olla"
+      },
+      {
+        "icon": "🍚",
+        "t": "Arroz crudo añadido al relleno",
+        "d": "Absorbe el jugo de tomate mientras cuece y se hincha por dentro"
+      },
+      {
+        "icon": "🍅",
+        "t": "Cubiertos por completo de salsa de tomate",
+        "d": "Cocidos a fuego lento, no al horno, para que queden tiernos"
+      },
+      {
+        "icon": "🥛",
+        "t": "Servido con nata agria por encima",
+        "d": "Equilibra la acidez de la salsa de tomate"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🌶️",
+        "t": "Poivrons ronds avec le chapeau conservé",
+        "d": "Assez petits pour tenir debout dans une marmite"
+      },
+      {
+        "icon": "🍚",
+        "t": "Riz cru ajouté à la farce",
+        "d": "Absorbe le jus de tomate en cuisant et gonfle à l'intérieur"
+      },
+      {
+        "icon": "🍅",
+        "t": "Entièrement recouverts de sauce tomate",
+        "d": "Mijotés sur la cuisinière, pas au four, pour rester fondants"
+      },
+      {
+        "icon": "🥛",
+        "t": "Servi avec de la crème aigre dessus",
+        "d": "Équilibre l'acidité de la sauce tomate"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🌶️",
+        "t": "Runde Paprika mit aufbewahrtem Deckel",
+        "d": "Klein genug, um aufrecht im Topf zu stehen"
+      },
+      {
+        "icon": "🍚",
+        "t": "Roher Reis in die Füllung gegeben",
+        "d": "Nimmt beim Garen den Tomatensaft auf und quillt im Inneren"
+      },
+      {
+        "icon": "🍅",
+        "t": "Vollständig mit Tomatensauce bedeckt",
+        "d": "Auf dem Herd geschmort, nicht gebacken, um zart zu bleiben"
+      },
+      {
+        "icon": "🥛",
+        "t": "Mit saurer Sahne obenauf serviert",
+        "d": "Gleicht die Säure der Tomatensauce aus"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🌶️",
+        "t": "Pimentos redondos com a tampa guardada",
+        "d": "Pequenos o suficiente para ficarem de pé numa panela"
+      },
+      {
+        "icon": "🍚",
+        "t": "Arroz cru adicionado ao recheio",
+        "d": "Absorve o suco de tomate enquanto coze e incha por dentro"
+      },
+      {
+        "icon": "🍅",
+        "t": "Totalmente cobertos com molho de tomate",
+        "d": "Cozinhados no fogão, não no forno, para ficarem tenros"
+      },
+      {
+        "icon": "🥛",
+        "t": "Servido com natas azedas por cima",
+        "d": "Equilibra a acidez do molho de tomate"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🌶️",
+        "t": "Круглые перцы с сохранённой крышечкой",
+        "d": "Достаточно маленькие, чтобы стоять вертикально в кастрюле"
+      },
+      {
+        "icon": "🍚",
+        "t": "Сырой рис добавляется в начинку",
+        "d": "Впитывает томатный сок при варке и разбухает внутри"
+      },
+      {
+        "icon": "🍅",
+        "t": "Полностью залиты томатным соусом",
+        "d": "Тушатся на плите, а не запекаются, чтобы остаться нежными"
+      },
+      {
+        "icon": "🥛",
+        "t": "Подаётся со сметаной сверху",
+        "d": "Уравновешивает кислотность томатного соуса"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🌶️",
+        "t": "فلفل مستدير مع الاحتفاظ بالغطاء",
+        "d": "صغير بما يكفي ليقف مستقيمًا في القدر"
+      },
+      {
+        "icon": "🍚",
+        "t": "أرز نيء يُضاف إلى الحشوة",
+        "d": "يمتص عصير الطماطم أثناء الطهي وينتفخ من الداخل"
+      },
+      {
+        "icon": "🍅",
+        "t": "مغطى بالكامل بصلصة الطماطم",
+        "d": "يُطهى على الموقد، لا في الفرن، ليبقى طريًا"
+      },
+      {
+        "icon": "🥛",
+        "t": "يُقدَّم مع القشدة الحامضة فوقه",
+        "d": "يوازن حموضة صلصة الطماطم"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🌶️",
+        "t": "圆形甜椒，保留蒂盖",
+        "d": "个头小到能在锅中直立站稳"
+      },
+      {
+        "icon": "🍚",
+        "t": "生米直接加入馅料",
+        "d": "在烹煮时吸收番茄汁并在内部膨胀"
+      },
+      {
+        "icon": "🍅",
+        "t": "完全被番茄酱汁覆盖",
+        "d": "炉灶上炖煮而非烤箱烘烤，保持鲜嫩"
+      },
+      {
+        "icon": "🥛",
+        "t": "上桌前淋上酸奶油",
+        "d": "平衡番茄酱汁的酸度"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🌶️",
+        "t": "丸いパプリカでヘタを蓋として使う",
+        "d": "鍋の中で立てられる小さめのサイズ"
+      },
+      {
+        "icon": "🍚",
+        "t": "生米を詰め物にそのまま加える",
+        "d": "煮ている間にトマトの汁を吸って内側で膨らむ"
+      },
+      {
+        "icon": "🍅",
+        "t": "トマトソースで完全に覆う",
+        "d": "オーブンでなくコンロで煮込み柔らかく仕上げる"
+      },
+      {
+        "icon": "🥛",
+        "t": "サワークリームをのせて提供",
+        "d": "トマトソースの酸味を和らげる"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🌶️",
+        "t": "Kapağı saklanan yuvarlak biberler",
+        "d": "Tencerede dik durabilecek kadar küçük"
+      },
+      {
+        "icon": "🍚",
+        "t": "Harca çiğ pirinç eklenir",
+        "d": "Pişerken domates suyunu emer ve içeride kabarır"
+      },
+      {
+        "icon": "🍅",
+        "t": "Tamamen domates sosuyla kaplı",
+        "d": "Fırında değil ocakta pişirilir, yumuşak kalması için"
+      },
+      {
+        "icon": "🥛",
+        "t": "Üzerinde ekşi kremayla servis edilir",
+        "d": "Domates sosunun ekşiliğini dengeler"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🌶️",
+        "t": "Peperoni tondi con il tappo conservato",
+        "d": "Abbastanza piccoli da stare in piedi in una pentola"
+      },
+      {
+        "icon": "🍚",
+        "t": "Riso crudo aggiunto al ripieno",
+        "d": "Assorbe il succo di pomodoro mentre cuoce e si gonfia dentro"
+      },
+      {
+        "icon": "🍅",
+        "t": "Completamente ricoperti di salsa di pomodoro",
+        "d": "Cotti sul fornello, non al forno, per restare teneri"
+      },
+      {
+        "icon": "🥛",
+        "t": "Serviti con panna acida sopra",
+        "d": "Bilancia l'acidità della salsa di pomodoro"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🌶️",
+        "t": "둥근 피망, 꼭지는 뚜껑으로 보관",
+        "d": "냄비 안에 똑바로 설 수 있을 만큼 작은 크기"
+      },
+      {
+        "icon": "🍚",
+        "t": "생쌀을 그대로 속재료에 넣기",
+        "d": "익으면서 토마토즙을 흡수해 속에서 부풀어 오른다"
+      },
+      {
+        "icon": "🍅",
+        "t": "토마토소스로 완전히 덮기",
+        "d": "오븐이 아닌 불 위에서 뭉근히 끓여 부드럽게 유지"
+      },
+      {
+        "icon": "🥛",
+        "t": "사워크림을 얹어 서빙",
+        "d": "토마토소스의 산미를 중화시킨다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🌶️",
+        "t": "गोल शिमला मिर्च, ढक्कन सुरक्षित रखा गया",
+        "d": "बर्तन में सीधी खड़ी रहने जितनी छोटी"
+      },
+      {
+        "icon": "🍚",
+        "t": "भरावन में कच्चे चावल डाले गए",
+        "d": "पकते समय टमाटर का रस सोखकर अंदर फूलते हैं"
+      },
+      {
+        "icon": "🍅",
+        "t": "पूरी तरह टमाटर सॉस से ढकी",
+        "d": "ओवन में नहीं, चूल्हे पर धीमी आंच पर पकाई गई ताकि नरम रहे"
+      },
+      {
+        "icon": "🥛",
+        "t": "ऊपर खट्टी क्रीम के साथ परोसी गई",
+        "d": "टमाटर सॉस की खटास को संतुलित करती है"
+      }
+    ]
   },
   "ingredients": {
-    "ro": ["8 ardei grași rotunzi (kapia sau gogoșar), cu capac", "500g carne tocată de porc și vită, amestecată", "100g orez crud", "1 ceapă, tocată fin", "1 morcov, ras", "2 linguri pătrunjel tocat", "sare și piper, după gust", "800g roșii pasate (bulion)", "500ml apă sau supă de legume", "1 lingură boia dulce", "smântână, pentru servire"],
-    "en": ["8 round bell peppers (kapia or similar), with lids kept", "500g mixed pork and beef mince", "100g raw rice", "1 onion, finely chopped", "1 carrot, grated", "2 tbsp chopped parsley", "salt and pepper, to taste", "800g tomato passata", "500ml water or vegetable stock", "1 tbsp sweet paprika", "sour cream, to serve"],
-    "es": ["8 pimientos redondos (kapia o similar), con tapa reservada", "500g de carne picada mixta de cerdo y ternera", "100g de arroz crudo", "1 cebolla, finamente picada", "1 zanahoria, rallada", "2 cdas de perejil picado", "sal y pimienta, al gusto", "800g de tomate triturado (passata)", "500ml de agua o caldo de verduras", "1 cda de pimentón dulce", "nata agria, para servir"],
-    "fr": ["8 poivrons ronds (kapia ou similaire), avec chapeau conservé", "500g de viande hachée mixte porc et bœuf", "100g de riz cru", "1 oignon, haché finement", "1 carotte, râpée", "2 c. à soupe de persil haché", "sel et poivre, selon le goût", "800g de purée de tomates (passata)", "500ml d'eau ou de bouillon de légumes", "1 c. à soupe de paprika doux", "crème aigre, pour servir"],
-    "de": ["8 runde Paprikaschoten (Kapia oder ähnlich), mit aufbewahrtem Deckel", "500g gemischtes Hackfleisch (Schwein und Rind)", "100g roher Reis", "1 Zwiebel, fein gehackt", "1 Karotte, gerieben", "2 EL gehackte Petersilie", "Salz und Pfeffer, nach Geschmack", "800g passierte Tomaten (Passata)", "500ml Wasser oder Gemüsebrühe", "1 EL süßes Paprikapulver", "saure Sahne, zum Servieren"],
-    "pt": ["8 pimentos redondos (kapia ou similar), com tampa guardada", "500g de carne picada mista de porco e vaca", "100g de arroz cru", "1 cebola, picada finamente", "1 cenoura, ralada", "2 col. sopa de salsa picada", "sal e pimenta, a gosto", "800g de polpa de tomate (passata)", "500ml de água ou caldo de legumes", "1 col. sopa de colorau doce", "natas azedas, para servir"],
-    "ru": ["8 круглых сладких перцев (капия или похожие), с сохранённой крышечкой", "500г смешанного фарша из свинины и говядины", "100г сырого риса", "1 луковица, мелко нарезанная", "1 морковь, тёртая", "2 ст.л. рубленой петрушки", "соль и перец по вкусу", "800г томатного пюре (пассата)", "500мл воды или овощного бульона", "1 ст.л. сладкой паприки", "сметана, для подачи"],
-    "ar": ["8 فلفل حلو مستدير (كابيا أو مشابه)، مع الاحتفاظ بالغطاء", "500غ لحم مفروم مخلوط من الخنزير والبقر", "100غ أرز نيء", "1 بصلة، مفرومة ناعمة", "1 جزرة، مبشورة", "2 ملعقة كبيرة بقدونس مفروم", "ملح وفلفل، حسب الرغبة", "800غ طماطم مهروسة (باساتا)", "500مل ماء أو مرق خضار", "1 ملعقة كبيرة بابريكا حلوة", "قشدة حامضة، للتقديم"],
-    "zh": ["8个圆形甜椒（卡皮亚椒或类似品种），保留蒂盖", "500克猪牛混合肉末", "100克生米", "1个洋葱，切碎", "1根胡萝卜，擦丝", "2汤匙欧芹碎", "盐和胡椒，适量", "800克番茄泥", "500毫升水或蔬菜高汤", "1汤匙甜味红椒粉", "酸奶油，用于装饰"],
-    "ja": ["丸いパプリカ8個（カピア種など）、ヘタを蓋として保管", "豚肉と牛肉の合いびき肉500g", "生米100g", "玉ねぎ1個（みじん切り）", "にんじん1本（すりおろし）", "パセリのみじん切り大さじ2", "塩とこしょう（お好みで）", "トマトピューレ800g", "水または野菜だし500ml", "甘いパプリカパウダー大さじ1", "サワークリーム（添える用）"],
-    "tr": ["8 yuvarlak dolmalık biber (kapya veya benzeri), kapağı saklanmış", "500g karışık domuz ve dana kıyma", "100g çiğ pirinç", "1 soğan, ince doğranmış", "1 havuç, rendelenmiş", "2 yemek kaşığı doğranmış maydanoz", "tuz ve karabiber, damak zevkine göre", "800g domates püresi (passata)", "500ml su veya sebze suyu", "1 yemek kaşığı tatlı kırmızı biber", "servis için ekşi krema"],
-    "it": ["8 peperoni tondi (kapia o simili), con il tappo conservato", "500g di carne macinata mista di maiale e manzo", "100g di riso crudo", "1 cipolla, tritata finemente", "1 carota, grattugiata", "2 cucchiai di prezzemolo tritato", "sale e pepe, quanto basta", "800g di passata di pomodoro", "500ml di acqua o brodo vegetale", "1 cucchiaio di paprika dolce", "panna acida, per servire"],
-    "ko": ["둥근 파프리카 8개 (카피아 또는 비슷한 품종), 꼭지는 보관", "돼지고기와 소고기 혼합 다짐육 500g", "생쌀 100g", "양파 1개, 잘게 다짐", "당근 1개, 채썰기", "다진 파슬리 2큰술", "소금과 후추, 취향껏", "토마토 퓌레 800g", "물 또는 채소 육수 500ml", "달콤한 파프리카 가루 1큰술", "곁들임용 사워크림"],
-    "hi": ["8 गोल शिमला मिर्च (कापिया या समान), ढक्कन सुरक्षित रखा", "500ग्राम मिश्रित सूअर और गोमांस कीमा", "100ग्राम कच्चे चावल", "1 प्याज़, बारीक कटा", "1 गाजर, कद्दूकस की हुई", "2 बड़े चम्मच कटा अजमोद", "नमक और काली मिर्च, स्वादानुसार", "800ग्राम टमाटर प्यूरी (पासाता)", "500मिली पानी या सब्ज़ी शोरबा", "1 बड़ा चम्मच मीठी पैप्रिका", "परोसने के लिए खट्टी क्रीम"]
+    "ro": [
+      "8 ardei grași rotunzi (kapia sau gogoșar), cu capac",
+      "500g carne tocată de porc și vită, amestecată",
+      "100g orez crud",
+      "1 ceapă, tocată fin",
+      "1 morcov, ras",
+      "2 linguri pătrunjel tocat",
+      "sare și piper, după gust",
+      "800g roșii pasate (bulion)",
+      "500ml apă sau supă de legume",
+      "1 lingură boia dulce",
+      "smântână, pentru servire"
+    ],
+    "en": [
+      "8 round bell peppers (kapia or similar), with lids kept",
+      "500g mixed pork and beef mince",
+      "100g raw rice",
+      "1 onion, finely chopped",
+      "1 carrot, grated",
+      "2 tbsp chopped parsley",
+      "salt and pepper, to taste",
+      "800g tomato passata",
+      "500ml water or vegetable stock",
+      "1 tbsp sweet paprika",
+      "sour cream, to serve"
+    ],
+    "es": [
+      "8 pimientos redondos (kapia o similar), con tapa reservada",
+      "500g de carne picada mixta de cerdo y ternera",
+      "100g de arroz crudo",
+      "1 cebolla, finamente picada",
+      "1 zanahoria, rallada",
+      "2 cdas de perejil picado",
+      "sal y pimienta, al gusto",
+      "800g de tomate triturado (passata)",
+      "500ml de agua o caldo de verduras",
+      "1 cda de pimentón dulce",
+      "nata agria, para servir"
+    ],
+    "fr": [
+      "8 poivrons ronds (kapia ou similaire), avec chapeau conservé",
+      "500g de viande hachée mixte porc et bœuf",
+      "100g de riz cru",
+      "1 oignon, haché finement",
+      "1 carotte, râpée",
+      "2 c. à soupe de persil haché",
+      "sel et poivre, selon le goût",
+      "800g de purée de tomates (passata)",
+      "500ml d'eau ou de bouillon de légumes",
+      "1 c. à soupe de paprika doux",
+      "crème aigre, pour servir"
+    ],
+    "de": [
+      "8 runde Paprikaschoten (Kapia oder ähnlich), mit aufbewahrtem Deckel",
+      "500g gemischtes Hackfleisch (Schwein und Rind)",
+      "100g roher Reis",
+      "1 Zwiebel, fein gehackt",
+      "1 Karotte, gerieben",
+      "2 EL gehackte Petersilie",
+      "Salz und Pfeffer, nach Geschmack",
+      "800g passierte Tomaten (Passata)",
+      "500ml Wasser oder Gemüsebrühe",
+      "1 EL süßes Paprikapulver",
+      "saure Sahne, zum Servieren"
+    ],
+    "pt": [
+      "8 pimentos redondos (kapia ou similar), com tampa guardada",
+      "500g de carne picada mista de porco e vaca",
+      "100g de arroz cru",
+      "1 cebola, picada finamente",
+      "1 cenoura, ralada",
+      "2 col. sopa de salsa picada",
+      "sal e pimenta, a gosto",
+      "800g de polpa de tomate (passata)",
+      "500ml de água ou caldo de legumes",
+      "1 col. sopa de colorau doce",
+      "natas azedas, para servir"
+    ],
+    "ru": [
+      "8 круглых сладких перцев (капия или похожие), с сохранённой крышечкой",
+      "500г смешанного фарша из свинины и говядины",
+      "100г сырого риса",
+      "1 луковица, мелко нарезанная",
+      "1 морковь, тёртая",
+      "2 ст.л. рубленой петрушки",
+      "соль и перец по вкусу",
+      "800г томатного пюре (пассата)",
+      "500мл воды или овощного бульона",
+      "1 ст.л. сладкой паприки",
+      "сметана, для подачи"
+    ],
+    "ar": [
+      "8 فلفل حلو مستدير (كابيا أو مشابه)، مع الاحتفاظ بالغطاء",
+      "500غ لحم مفروم مخلوط من الخنزير والبقر",
+      "100غ أرز نيء",
+      "1 بصلة، مفرومة ناعمة",
+      "1 جزرة، مبشورة",
+      "2 ملعقة كبيرة بقدونس مفروم",
+      "ملح وفلفل، حسب الرغبة",
+      "800غ طماطم مهروسة (باساتا)",
+      "500مل ماء أو مرق خضار",
+      "1 ملعقة كبيرة بابريكا حلوة",
+      "قشدة حامضة، للتقديم"
+    ],
+    "zh": [
+      "8个圆形甜椒（卡皮亚椒或类似品种），保留蒂盖",
+      "500克猪牛混合肉末",
+      "100克生米",
+      "1个洋葱，切碎",
+      "1根胡萝卜，擦丝",
+      "2汤匙欧芹碎",
+      "盐和胡椒，适量",
+      "800克番茄泥",
+      "500毫升水或蔬菜高汤",
+      "1汤匙甜味红椒粉",
+      "酸奶油，用于装饰"
+    ],
+    "ja": [
+      "丸いパプリカ8個（カピア種など）、ヘタを蓋として保管",
+      "豚肉と牛肉の合いびき肉500g",
+      "生米100g",
+      "玉ねぎ1個（みじん切り）",
+      "にんじん1本（すりおろし）",
+      "パセリのみじん切り大さじ2",
+      "塩とこしょう（お好みで）",
+      "トマトピューレ800g",
+      "水または野菜だし500ml",
+      "甘いパプリカパウダー大さじ1",
+      "サワークリーム（添える用）"
+    ],
+    "tr": [
+      "8 yuvarlak dolmalık biber (kapya veya benzeri), kapağı saklanmış",
+      "500g karışık domuz ve dana kıyma",
+      "100g çiğ pirinç",
+      "1 soğan, ince doğranmış",
+      "1 havuç, rendelenmiş",
+      "2 yemek kaşığı doğranmış maydanoz",
+      "tuz ve karabiber, damak zevkine göre",
+      "800g domates püresi (passata)",
+      "500ml su veya sebze suyu",
+      "1 yemek kaşığı tatlı kırmızı biber",
+      "servis için ekşi krema"
+    ],
+    "it": [
+      "8 peperoni tondi (kapia o simili), con il tappo conservato",
+      "500g di carne macinata mista di maiale e manzo",
+      "100g di riso crudo",
+      "1 cipolla, tritata finemente",
+      "1 carota, grattugiata",
+      "2 cucchiai di prezzemolo tritato",
+      "sale e pepe, quanto basta",
+      "800g di passata di pomodoro",
+      "500ml di acqua o brodo vegetale",
+      "1 cucchiaio di paprika dolce",
+      "panna acida, per servire"
+    ],
+    "ko": [
+      "둥근 파프리카 8개 (카피아 또는 비슷한 품종), 꼭지는 보관",
+      "돼지고기와 소고기 혼합 다짐육 500g",
+      "생쌀 100g",
+      "양파 1개, 잘게 다짐",
+      "당근 1개, 채썰기",
+      "다진 파슬리 2큰술",
+      "소금과 후추, 취향껏",
+      "토마토 퓌레 800g",
+      "물 또는 채소 육수 500ml",
+      "달콤한 파프리카 가루 1큰술",
+      "곁들임용 사워크림"
+    ],
+    "hi": [
+      "8 गोल शिमला मिर्च (कापिया या समान), ढक्कन सुरक्षित रखा",
+      "500ग्राम मिश्रित सूअर और गोमांस कीमा",
+      "100ग्राम कच्चे चावल",
+      "1 प्याज़, बारीक कटा",
+      "1 गाजर, कद्दूकस की हुई",
+      "2 बड़े चम्मच कटा अजमोद",
+      "नमक और काली मिर्च, स्वादानुसार",
+      "800ग्राम टमाटर प्यूरी (पासाता)",
+      "500मिली पानी या सब्ज़ी शोरबा",
+      "1 बड़ा चम्मच मीठी पैप्रिका",
+      "परोसने के लिए खट्टी क्रीम"
+    ]
   },
   "howIsMade": {
-    "ro": ["PREGĂTEȘTE ARDEII: taie capacul fiecărui ardei aproape de codiță și păstrează-l. Scoate semințele și membranele din interior.", "COMBINĂ UMPLUTURA: amestecă în bol carnea tocată, orezul crud, ceapa, morcovul, pătrunjelul, sare și piper, până se omogenizează.", "UMPLE ARDEII: umple fiecare ardei cu compoziția de carne, lăsând un spațiu de 1-2cm sub margine, ca orezul să aibă loc să se umfle. Acoperă cu capacul păstrat.", "AȘAZĂ ÎN OALĂ: pune ardeii umpluți în picioare, strâns unul lângă altul, într-o oală mare și adâncă.", "PREGĂTEȘTE SOSUL: amestecă roșiile pasate cu apa sau supa de legume și boiaua, apoi toarnă peste ardei până sunt aproape complet acoperiți.", "FIERBE ÎNĂBUȘIT: adu la fierbere, apoi acoperă și fierbe la foc mic 45-55 minute, până orezul e complet fiert și ardeii sunt fragezi.", "VERIFICĂ ȘI ASEZONEAZĂ: gustă sosul și mai adaugă sare dacă e nevoie. Lasă să se odihnească 5 minute înainte de servire.", "SERVEȘTE: pune câte 1-2 ardei în farfurie cu sos din belșug și adaugă o lingură generoasă de smântână deasupra."],
-    "en": ["PREPARE THE PEPPERS: cut off the top of each pepper near the stem and keep it. Remove the seeds and membranes from inside.", "COMBINE THE FILLING: mix the minced meat, raw rice, onion, carrot, parsley, salt and pepper together in a bowl until even.", "STUFF THE PEPPERS: fill each pepper with the meat mixture, leaving a 1-2cm gap below the rim so the rice has room to swell. Cover with the reserved top.", "STAND THEM IN THE POT: place the stuffed peppers upright, packed close together, in a large deep pot.", "MAKE THE SAUCE: mix the tomato passata with the water or vegetable stock and paprika, then pour it over the peppers until almost completely covered.", "SIMMER: bring to a boil, then cover and simmer over low heat for 45-55 minutes, until the rice is fully cooked and the peppers are tender.", "CHECK AND SEASON: taste the sauce and add more salt if needed. Let it rest for 5 minutes before serving.", "SERVE: place 1-2 peppers on each plate with plenty of sauce and top with a generous spoonful of sour cream."],
-    "es": ["PREPARA LOS PIMIENTOS: corta la parte superior de cada pimiento cerca del tallo y consérvala. Retira las semillas y membranas del interior.", "COMBINA EL RELLENO: mezcla en un bol la carne picada, el arroz crudo, la cebolla, la zanahoria, el perejil, sal y pimienta hasta que quede uniforme.", "RELLENA LOS PIMIENTOS: rellena cada pimiento con la mezcla de carne, dejando un hueco de 1-2cm bajo el borde para que el arroz tenga espacio para hincharse. Tapa con la parte superior reservada.", "COLÓCALOS DE PIE EN LA OLLA: coloca los pimientos rellenos de pie, bien juntos, en una olla grande y honda.", "PREPARA LA SALSA: mezcla el tomate triturado con el agua o el caldo de verduras y el pimentón, luego viértela sobre los pimientos hasta que queden casi totalmente cubiertos.", "COCINA A FUEGO LENTO: lleva a ebullición, luego tapa y cuece a fuego bajo 45-55 minutos, hasta que el arroz esté totalmente cocido y los pimientos tiernos.", "COMPRUEBA Y SAZONA: prueba la salsa y añade más sal si hace falta. Deja reposar 5 minutos antes de servir.", "SIRVE: pon 1-2 pimientos en cada plato con abundante salsa y añade una cucharada generosa de nata agria por encima."],
-    "fr": ["PRÉPARE LES POIVRONS: coupe le haut de chaque poivron près de la tige et conserve-le. Retire les graines et les membranes à l'intérieur.", "COMBINE LA FARCE: mélange dans un bol la viande hachée, le riz cru, l'oignon, la carotte, le persil, le sel et le poivre jusqu'à homogénéité.", "FARCIS LES POIVRONS: remplis chaque poivron du mélange de viande, en laissant un espace de 1-2cm sous le bord pour que le riz ait la place de gonfler. Recouvre avec le chapeau conservé.", "PLACE-LES DEBOUT DANS LA MARMITE: place les poivrons farcis debout, bien serrés les uns contre les autres, dans une grande marmite profonde.", "PRÉPARE LA SAUCE: mélange la purée de tomates avec l'eau ou le bouillon de légumes et le paprika, puis verse-la sur les poivrons jusqu'à ce qu'ils soient presque entièrement recouverts.", "LAISSE MIJOTER: porte à ébullition, puis couvre et laisse mijoter à feu doux 45-55 minutes, jusqu'à ce que le riz soit complètement cuit et les poivrons tendres.", "VÉRIFIE ET ASSAISONNE: goûte la sauce et ajoute du sel si nécessaire. Laisse reposer 5 minutes avant de servir.", "SERS: dispose 1-2 poivrons dans chaque assiette avec beaucoup de sauce et ajoute une cuillerée généreuse de crème aigre dessus."],
-    "de": ["PAPRIKA VORBEREITEN: die Oberseite jeder Paprika nahe dem Stiel abschneiden und aufbewahren. Kerne und Trennwände im Inneren entfernen.", "FÜLLUNG ZUSAMMENSTELLEN: das Hackfleisch, den rohen Reis, die Zwiebel, die Karotte, die Petersilie, Salz und Pfeffer in einer Schüssel vermengen, bis alles gleichmäßig ist.", "PAPRIKA FÜLLEN: jede Paprika mit der Fleischmischung füllen, dabei 1-2cm Platz unter dem Rand lassen, damit der Reis quellen kann. Mit dem aufbewahrten Deckel abdecken.", "AUFRECHT IN DEN TOPF STELLEN: die gefüllten Paprika aufrecht, eng aneinander, in einen großen, tiefen Topf stellen.", "SAUCE ZUBEREITEN: die passierten Tomaten mit dem Wasser oder der Gemüsebrühe und dem Paprikapulver vermischen, dann über die Paprika gießen, bis sie fast vollständig bedeckt sind.", "SCHMOREN: zum Kochen bringen, dann abdecken und bei niedriger Hitze 45-55 Minuten köcheln lassen, bis der Reis vollständig gegart und die Paprika zart sind.", "PRÜFEN UND ABSCHMECKEN: die Sauce probieren und bei Bedarf mehr Salz zugeben. Vor dem Servieren 5 Minuten ruhen lassen.", "SERVIEREN: 1-2 Paprika mit reichlich Sauce auf jeden Teller legen und mit einem großzügigen Löffel saurer Sahne toppen."],
-    "pt": ["PREPARA OS PIMENTOS: corta o topo de cada pimento perto do talo e guarda-o. Retira as sementes e membranas de dentro.", "COMBINA O RECHEIO: mistura numa taça a carne picada, o arroz cru, a cebola, a cenoura, a salsa, sal e pimenta até ficar homogéneo.", "RECHEIA OS PIMENTOS: enche cada pimento com a mistura de carne, deixando um espaço de 1-2cm abaixo do rebordo para o arroz ter espaço para inchar. Tapa com a tampa guardada.", "COLOCA-OS DE PÉ NA PANELA: coloca os pimentos recheados de pé, bem juntos, numa panela grande e funda.", "PREPARA O MOLHO: mistura a polpa de tomate com a água ou o caldo de legumes e o colorau, depois verte sobre os pimentos até ficarem quase totalmente cobertos.", "DEIXA COZINHAR EM LUME BRANDO: leva a ferver, depois tapa e coze em lume baixo 45-55 minutos, até o arroz estar totalmente cozido e os pimentos tenros.", "VERIFICA E TEMPERA: prova o molho e junta mais sal se necessário. Deixa repousar 5 minutos antes de servir.", "SERVE: coloca 1-2 pimentos em cada prato com bastante molho e junta uma colherada generosa de natas azedas por cima."],
-    "ru": ["ПОДГОТОВЬ ПЕРЦЫ: срежь верхушку каждого перца рядом с плодоножкой и сохрани её. Удали семена и перегородки изнутри.", "СОЕДИНИ НАЧИНКУ: смешай в миске фарш, сырой рис, лук, морковь, петрушку, соль и перец до однородности.", "НАФАРШИРУЙ ПЕРЦЫ: наполни каждый перец мясной смесью, оставляя 1-2см до края, чтобы рис имел место для набухания. Накрой сохранённой верхушкой.", "ПОСТАВЬ В КАСТРЮЛЮ: поставь фаршированные перцы вертикально, плотно друг к другу, в большую глубокую кастрюлю.", "ПРИГОТОВЬ СОУС: смешай томатное пюре с водой или овощным бульоном и паприкой, затем залей перцы так, чтобы они были почти полностью покрыты.", "ТУШИ: доведи до кипения, затем накрой и туши на медленном огне 45-55 минут, пока рис полностью не сварится, а перцы не станут мягкими.", "ПРОВЕРЬ И ПРИПРАВЬ: попробуй соус и добавь соли при необходимости. Дай постоять 5 минут перед подачей.", "ПОДАЙ: положи 1-2 перца на каждую тарелку с большим количеством соуса и добавь щедрую ложку сметаны сверху."],
-    "ar": ["جهّز الفلفل: قطّع الجزء العلوي من كل فلفلة قرب الساق واحتفظ به. أزل البذور والأغشية من الداخل.", "امزج الحشوة: اخلط في وعاء اللحم المفروم والأرز النيء والبصل والجزر والبقدونس والملح والفلفل حتى يتجانس.", "احشُ الفلفل: املأ كل فلفلة بخليط اللحم، مع ترك مسافة 1-2سم تحت الحافة ليتمدد الأرز. غطِّ بالجزء العلوي المحفوظ.", "ضعها واقفة في القدر: ضع الفلفل المحشو واقفًا، متلاصقًا، في قدر كبير وعميق.", "جهّز الصلصة: اخلط الطماطم المهروسة مع الماء أو مرق الخضار والبابريكا، ثم اسكبها فوق الفلفل حتى يُغطى تقريبًا بالكامل.", "اطبخ على نار هادئة: اغلِ، ثم غطِّ واطبخ على نار هادئة 45-55 دقيقة، حتى ينضج الأرز تمامًا ويصبح الفلفل طريًا.", "تحقق وتبّل: تذوق الصلصة وأضف المزيد من الملح إذا لزم الأمر. اتركها ترتاح 5 دقائق قبل التقديم.", "قدّم: ضع 1-2 فلفلة في كل طبق مع الكثير من الصلصة وأضف ملعقة سخية من القشدة الحامضة فوقها."],
-    "zh": ["处理甜椒：在靠近蒂部的地方切开每个甜椒的顶部并保留。去除内部的籽和白膜。", "拌匀馅料：将肉末、生米、洋葱、胡萝卜、欧芹、盐和胡椒在碗中拌匀至均匀。", "填入馅料：将肉馅填入每个甜椒中，边缘下方留出1-2厘米的空间，好让米粒有膨胀的余地。盖上保留的蒂盖。", "立入锅中：将酿好的甜椒紧密地竖立摆放在一个大而深的锅中。", "调制酱汁：将番茄泥与水或蔬菜高汤及红椒粉混合，然后倒入锅中，直到几乎完全没过甜椒。", "小火慢炖：煮沸后加盖，转小火慢炖45-55分钟，直到米饭完全熟透、甜椒变软。", "检查调味：尝一下酱汁，如有需要再加盐。上桌前静置5分钟。", "享用：每份盘中放1-2个甜椒，淋上大量酱汁，再舀上一大勺酸奶油。"],
-    "ja": ["パプリカを準備する：それぞれのパプリカの茎の近くの上部を切り取り、取っておく。中の種とワタを取り除く。", "詰め物を合わせる：ボウルにひき肉、生米、玉ねぎ、にんじん、パセリ、塩、こしょうを入れ、均一になるまで混ぜる。", "パプリカに詰める：それぞれのパプリカに肉だねを詰め、米が膨らむ余地を残すため縁の下1〜2cmは空けておく。取っておいた蓋をかぶせる。", "鍋に立てて並べる：詰めたパプリカを大きく深い鍋に、ぴったりと寄せ合わせて立てて並べる。", "ソースを作る：トマトピューレを水または野菜だし、パプリカパウダーと混ぜ、パプリカがほぼ完全に浸かるまで注ぐ。", "煮込む：沸騰させたら蓋をして弱火で45〜55分、米が完全に炊けてパプリカが柔らかくなるまで煮込む。", "確認して味を調える：ソースを味見し、必要なら塩を足す。提供前に5分休ませる。", "盛り付ける：各皿にパプリカを1〜2個、たっぷりのソースとともに盛り、サワークリームをたっぷりのせる。"],
-    "tr": ["BİBERLERİ HAZIRLAYIN: her biberin sapına yakın üst kısmını kesip saklayın. İçindeki çekirdekleri ve zarları çıkarın.", "HARCI HAZIRLAYIN: kıymayı, çiğ pirinci, soğanı, havucu, maydanozu, tuz ve karabiberi bir kasede eşit olana kadar karıştırın.", "BİBERLERİ DOLDURUN: her biberi et karışımıyla doldurun, pirincin şişmesi için kenardan 1-2cm boşluk bırakın. Saklanan kapakla örtün.", "TENCEREYE DİK YERLEŞTİRİN: doldurulmuş biberleri büyük ve derin bir tencereye sıkıca bitişik, dik olarak yerleştirin.", "SOSU HAZIRLAYIN: domates püresini su veya sebze suyu ve kırmızı biberle karıştırın, ardından biberler neredeyse tamamen kaplanana kadar üzerine dökün.", "YAVAŞÇA PİŞİRİN: kaynatın, ardından örtüp kısık ateşte pirinç tamamen pişip biberler yumuşayana kadar 45-55 dakika pişirin.", "KONTROL EDİN VE TATLANDIRIN: sosu tadın ve gerekirse tuz ekleyin. Servis yapmadan önce 5 dakika dinlendirin.", "SERVİS YAPIN: her tabağa 1-2 biber koyup bol sosla birlikte, üzerine cömert bir kaşık ekşi krema ekleyin."],
-    "it": ["PREPARA I PEPERONI: taglia la parte superiore di ogni peperone vicino al gambo e conservala. Rimuovi semi e membrane interne.", "COMBINA IL RIPIENO: mescola in una ciotola la carne macinata, il riso crudo, la cipolla, la carota, il prezzemolo, sale e pepe finché è uniforme.", "RIEMPI I PEPERONI: riempi ogni peperone con il composto di carne, lasciando 1-2cm di spazio sotto il bordo perché il riso possa gonfiarsi. Copri con il tappo conservato.", "METTILI IN PIEDI NELLA PENTOLA: metti i peperoni ripieni in piedi, ben stretti tra loro, in una pentola grande e profonda.", "PREPARA LA SALSA: mescola la passata di pomodoro con l'acqua o il brodo vegetale e la paprika, poi versala sui peperoni finché sono quasi completamente coperti.", "FAI SOBBOLLIRE: porta a bollore, poi copri e cuoci a fuoco basso 45-55 minuti, finché il riso è completamente cotto e i peperoni sono teneri.", "CONTROLLA E CONDISCI: assaggia la salsa e aggiungi altro sale se necessario. Lascia riposare 5 minuti prima di servire.", "SERVI: metti 1-2 peperoni in ogni piatto con abbondante salsa e aggiungi un cucchiaio generoso di panna acida sopra."],
-    "ko": ["파프리카 준비하기: 각 파프리카의 꼭지 부근을 잘라내고 보관한다. 안쪽의 씨와 막을 제거한다.", "속재료 섞기: 볼에 다짐육, 생쌀, 양파, 당근, 파슬리, 소금, 후추를 넣고 고르게 섞는다.", "파프리카 채우기: 쌀이 부풀 공간을 위해 테두리 아래 1-2cm를 남기고 각 파프리카에 고기 혼합물을 채운다. 보관해둔 꼭지로 덮는다.", "냄비에 세워 담기: 속을 채운 파프리카를 크고 깊은 냄비에 서로 바짝 붙여 똑바로 세운다.", "소스 만들기: 토마토 퓌레를 물이나 채소 육수, 파프리카 가루와 섞은 뒤 파프리카가 거의 완전히 잠기도록 붓는다.", "뭉근히 끓이기: 끓어오르면 뚜껑을 덮고 약불로 45-55분간, 쌀이 완전히 익고 파프리카가 부드러워질 때까지 끓인다.", "확인하고 간하기: 소스를 맛보고 필요하면 소금을 더한다. 서빙 전 5분간 둔다.", "서빙하기: 접시마다 파프리카 1-2개를 소스와 함께 담고 사워크림을 듬뿍 올린다."],
-    "hi": ["शिमला मिर्च तैयार करें: हर मिर्च का ऊपरी हिस्सा डंठल के पास काटें और सुरक्षित रखें। अंदर से बीज और झिल्ली निकालें।", "भरावन मिलाएं: एक कटोरे में कीमा, कच्चे चावल, प्याज़, गाजर, अजमोद, नमक और काली मिर्च को तब तक मिलाएं जब तक एकसमान न हो जाए।", "मिर्च भरें: हर मिर्च को मांस मिश्रण से भरें, किनारे के नीचे 1-2सेमी जगह छोड़ें ताकि चावल फूलने के लिए जगह हो। सुरक्षित रखे ढक्कन से ढकें।", "बर्तन में सीधी रखें: भरी हुई मिर्च को एक बड़े गहरे बर्तन में एक-दूसरे से सटाकर सीधी खड़ी रखें।", "सॉस तैयार करें: टमाटर प्यूरी को पानी या सब्ज़ी शोरबे और पैप्रिका के साथ मिलाएं, फिर मिर्च के ऊपर तब तक डालें जब तक लगभग पूरी तरह ढक न जाएं।", "धीमी आंच पर पकाएं: उबाल लाएं, फिर ढककर धीमी आंच पर 45-55 मिनट पकाएं, जब तक चावल पूरी तरह पक न जाए और मिर्च नरम न हो जाएं।", "जांचें और स्वाद अनुसार डालें: सॉस चखें और ज़रूरत पड़ने पर और नमक डालें। परोसने से पहले 5 मिनट आराम दें।", "परोसें: हर थाली में 1-2 मिर्च ढेर सारे सॉस के साथ रखें और ऊपर से खट्टी क्रीम का एक बड़ा चम्मच डालें।"]
+    "ro": "PREGĂTEȘTE ARDEII: taie capacul fiecărui ardei aproape de codiță și păstrează-l. Scoate semințele și membranele din interior. COMBINĂ UMPLUTURA: amestecă în bol carnea tocată, orezul crud, ceapa, morcovul, pătrunjelul, sare și piper, până se omogenizează. UMPLE ARDEII: umple fiecare ardei cu compoziția de carne, lăsând un spațiu de 1-2cm sub margine, ca orezul să aibă loc să se umfle. Acoperă cu capacul păstrat. AȘAZĂ ÎN OALĂ: pune ardeii umpluți în picioare, strâns unul lângă altul, într-o oală mare și adâncă. PREGĂTEȘTE SOSUL: amestecă roșiile pasate cu apa sau supa de legume și boiaua, apoi toarnă peste ardei până sunt aproape complet acoperiți. FIERBE ÎNĂBUȘIT: adu la fierbere, apoi acoperă și fierbe la foc mic 45-55 minute, până orezul e complet fiert și ardeii sunt fragezi. VERIFICĂ ȘI ASEZONEAZĂ: gustă sosul și mai adaugă sare dacă e nevoie. Lasă să se odihnească 5 minute înainte de servire. SERVEȘTE: pune câte 1-2 ardei în farfurie cu sos din belșug și adaugă o lingură generoasă de smântână deasupra.",
+    "en": "PREPARE THE PEPPERS: cut off the top of each pepper near the stem and keep it. Remove the seeds and membranes from inside. COMBINE THE FILLING: mix the minced meat, raw rice, onion, carrot, parsley, salt and pepper together in a bowl until even. STUFF THE PEPPERS: fill each pepper with the meat mixture, leaving a 1-2cm gap below the rim so the rice has room to swell. Cover with the reserved top. STAND THEM IN THE POT: place the stuffed peppers upright, packed close together, in a large deep pot. MAKE THE SAUCE: mix the tomato passata with the water or vegetable stock and paprika, then pour it over the peppers until almost completely covered. SIMMER: bring to a boil, then cover and simmer over low heat for 45-55 minutes, until the rice is fully cooked and the peppers are tender. CHECK AND SEASON: taste the sauce and add more salt if needed. Let it rest for 5 minutes before serving. SERVE: place 1-2 peppers on each plate with plenty of sauce and top with a generous spoonful of sour cream.",
+    "es": "PREPARA LOS PIMIENTOS: corta la parte superior de cada pimiento cerca del tallo y consérvala. Retira las semillas y membranas del interior. COMBINA EL RELLENO: mezcla en un bol la carne picada, el arroz crudo, la cebolla, la zanahoria, el perejil, sal y pimienta hasta que quede uniforme. RELLENA LOS PIMIENTOS: rellena cada pimiento con la mezcla de carne, dejando un hueco de 1-2cm bajo el borde para que el arroz tenga espacio para hincharse. Tapa con la parte superior reservada. COLÓCALOS DE PIE EN LA OLLA: coloca los pimientos rellenos de pie, bien juntos, en una olla grande y honda. PREPARA LA SALSA: mezcla el tomate triturado con el agua o el caldo de verduras y el pimentón, luego viértela sobre los pimientos hasta que queden casi totalmente cubiertos. COCINA A FUEGO LENTO: lleva a ebullición, luego tapa y cuece a fuego bajo 45-55 minutos, hasta que el arroz esté totalmente cocido y los pimientos tiernos. COMPRUEBA Y SAZONA: prueba la salsa y añade más sal si hace falta. Deja reposar 5 minutos antes de servir. SIRVE: pon 1-2 pimientos en cada plato con abundante salsa y añade una cucharada generosa de nata agria por encima.",
+    "fr": "PRÉPARE LES POIVRONS: coupe le haut de chaque poivron près de la tige et conserve-le. Retire les graines et les membranes à l'intérieur. COMBINE LA FARCE: mélange dans un bol la viande hachée, le riz cru, l'oignon, la carotte, le persil, le sel et le poivre jusqu'à homogénéité. FARCIS LES POIVRONS: remplis chaque poivron du mélange de viande, en laissant un espace de 1-2cm sous le bord pour que le riz ait la place de gonfler. Recouvre avec le chapeau conservé. PLACE-LES DEBOUT DANS LA MARMITE: place les poivrons farcis debout, bien serrés les uns contre les autres, dans une grande marmite profonde. PRÉPARE LA SAUCE: mélange la purée de tomates avec l'eau ou le bouillon de légumes et le paprika, puis verse-la sur les poivrons jusqu'à ce qu'ils soient presque entièrement recouverts. LAISSE MIJOTER: porte à ébullition, puis couvre et laisse mijoter à feu doux 45-55 minutes, jusqu'à ce que le riz soit complètement cuit et les poivrons tendres. VÉRIFIE ET ASSAISONNE: goûte la sauce et ajoute du sel si nécessaire. Laisse reposer 5 minutes avant de servir. SERS: dispose 1-2 poivrons dans chaque assiette avec beaucoup de sauce et ajoute une cuillerée généreuse de crème aigre dessus.",
+    "de": "PAPRIKA VORBEREITEN: die Oberseite jeder Paprika nahe dem Stiel abschneiden und aufbewahren. Kerne und Trennwände im Inneren entfernen. FÜLLUNG ZUSAMMENSTELLEN: das Hackfleisch, den rohen Reis, die Zwiebel, die Karotte, die Petersilie, Salz und Pfeffer in einer Schüssel vermengen, bis alles gleichmäßig ist. PAPRIKA FÜLLEN: jede Paprika mit der Fleischmischung füllen, dabei 1-2cm Platz unter dem Rand lassen, damit der Reis quellen kann. Mit dem aufbewahrten Deckel abdecken. AUFRECHT IN DEN TOPF STELLEN: die gefüllten Paprika aufrecht, eng aneinander, in einen großen, tiefen Topf stellen. SAUCE ZUBEREITEN: die passierten Tomaten mit dem Wasser oder der Gemüsebrühe und dem Paprikapulver vermischen, dann über die Paprika gießen, bis sie fast vollständig bedeckt sind. SCHMOREN: zum Kochen bringen, dann abdecken und bei niedriger Hitze 45-55 Minuten köcheln lassen, bis der Reis vollständig gegart und die Paprika zart sind. PRÜFEN UND ABSCHMECKEN: die Sauce probieren und bei Bedarf mehr Salz zugeben. Vor dem Servieren 5 Minuten ruhen lassen. SERVIEREN: 1-2 Paprika mit reichlich Sauce auf jeden Teller legen und mit einem großzügigen Löffel saurer Sahne toppen.",
+    "pt": "PREPARA OS PIMENTOS: corta o topo de cada pimento perto do talo e guarda-o. Retira as sementes e membranas de dentro. COMBINA O RECHEIO: mistura numa taça a carne picada, o arroz cru, a cebola, a cenoura, a salsa, sal e pimenta até ficar homogéneo. RECHEIA OS PIMENTOS: enche cada pimento com a mistura de carne, deixando um espaço de 1-2cm abaixo do rebordo para o arroz ter espaço para inchar. Tapa com a tampa guardada. COLOCA-OS DE PÉ NA PANELA: coloca os pimentos recheados de pé, bem juntos, numa panela grande e funda. PREPARA O MOLHO: mistura a polpa de tomate com a água ou o caldo de legumes e o colorau, depois verte sobre os pimentos até ficarem quase totalmente cobertos. DEIXA COZINHAR EM LUME BRANDO: leva a ferver, depois tapa e coze em lume baixo 45-55 minutos, até o arroz estar totalmente cozido e os pimentos tenros. VERIFICA E TEMPERA: prova o molho e junta mais sal se necessário. Deixa repousar 5 minutos antes de servir. SERVE: coloca 1-2 pimentos em cada prato com bastante molho e junta uma colherada generosa de natas azedas por cima.",
+    "ru": "ПОДГОТОВЬ ПЕРЦЫ: срежь верхушку каждого перца рядом с плодоножкой и сохрани её. Удали семена и перегородки изнутри. СОЕДИНИ НАЧИНКУ: смешай в миске фарш, сырой рис, лук, морковь, петрушку, соль и перец до однородности. НАФАРШИРУЙ ПЕРЦЫ: наполни каждый перец мясной смесью, оставляя 1-2см до края, чтобы рис имел место для набухания. Накрой сохранённой верхушкой. ПОСТАВЬ В КАСТРЮЛЮ: поставь фаршированные перцы вертикально, плотно друг к другу, в большую глубокую кастрюлю. ПРИГОТОВЬ СОУС: смешай томатное пюре с водой или овощным бульоном и паприкой, затем залей перцы так, чтобы они были почти полностью покрыты. ТУШИ: доведи до кипения, затем накрой и туши на медленном огне 45-55 минут, пока рис полностью не сварится, а перцы не станут мягкими. ПРОВЕРЬ И ПРИПРАВЬ: попробуй соус и добавь соли при необходимости. Дай постоять 5 минут перед подачей. ПОДАЙ: положи 1-2 перца на каждую тарелку с большим количеством соуса и добавь щедрую ложку сметаны сверху.",
+    "ar": "جهّز الفلفل: قطّع الجزء العلوي من كل فلفلة قرب الساق واحتفظ به. أزل البذور والأغشية من الداخل. امزج الحشوة: اخلط في وعاء اللحم المفروم والأرز النيء والبصل والجزر والبقدونس والملح والفلفل حتى يتجانس. احشُ الفلفل: املأ كل فلفلة بخليط اللحم، مع ترك مسافة 1-2سم تحت الحافة ليتمدد الأرز. غطِّ بالجزء العلوي المحفوظ. ضعها واقفة في القدر: ضع الفلفل المحشو واقفًا، متلاصقًا، في قدر كبير وعميق. جهّز الصلصة: اخلط الطماطم المهروسة مع الماء أو مرق الخضار والبابريكا، ثم اسكبها فوق الفلفل حتى يُغطى تقريبًا بالكامل. اطبخ على نار هادئة: اغلِ، ثم غطِّ واطبخ على نار هادئة 45-55 دقيقة، حتى ينضج الأرز تمامًا ويصبح الفلفل طريًا. تحقق وتبّل: تذوق الصلصة وأضف المزيد من الملح إذا لزم الأمر. اتركها ترتاح 5 دقائق قبل التقديم. قدّم: ضع 1-2 فلفلة في كل طبق مع الكثير من الصلصة وأضف ملعقة سخية من القشدة الحامضة فوقها.",
+    "zh": "处理甜椒：在靠近蒂部的地方切开每个甜椒的顶部并保留。去除内部的籽和白膜。 拌匀馅料：将肉末、生米、洋葱、胡萝卜、欧芹、盐和胡椒在碗中拌匀至均匀。 填入馅料：将肉馅填入每个甜椒中，边缘下方留出1-2厘米的空间，好让米粒有膨胀的余地。盖上保留的蒂盖。 立入锅中：将酿好的甜椒紧密地竖立摆放在一个大而深的锅中。 调制酱汁：将番茄泥与水或蔬菜高汤及红椒粉混合，然后倒入锅中，直到几乎完全没过甜椒。 小火慢炖：煮沸后加盖，转小火慢炖45-55分钟，直到米饭完全熟透、甜椒变软。 检查调味：尝一下酱汁，如有需要再加盐。上桌前静置5分钟。 享用：每份盘中放1-2个甜椒，淋上大量酱汁，再舀上一大勺酸奶油。",
+    "ja": "パプリカを準備する：それぞれのパプリカの茎の近くの上部を切り取り、取っておく。中の種とワタを取り除く。 詰め物を合わせる：ボウルにひき肉、生米、玉ねぎ、にんじん、パセリ、塩、こしょうを入れ、均一になるまで混ぜる。 パプリカに詰める：それぞれのパプリカに肉だねを詰め、米が膨らむ余地を残すため縁の下1〜2cmは空けておく。取っておいた蓋をかぶせる。 鍋に立てて並べる：詰めたパプリカを大きく深い鍋に、ぴったりと寄せ合わせて立てて並べる。 ソースを作る：トマトピューレを水または野菜だし、パプリカパウダーと混ぜ、パプリカがほぼ完全に浸かるまで注ぐ。 煮込む：沸騰させたら蓋をして弱火で45〜55分、米が完全に炊けてパプリカが柔らかくなるまで煮込む。 確認して味を調える：ソースを味見し、必要なら塩を足す。提供前に5分休ませる。 盛り付ける：各皿にパプリカを1〜2個、たっぷりのソースとともに盛り、サワークリームをたっぷりのせる。",
+    "tr": "BİBERLERİ HAZIRLAYIN: her biberin sapına yakın üst kısmını kesip saklayın. İçindeki çekirdekleri ve zarları çıkarın. HARCI HAZIRLAYIN: kıymayı, çiğ pirinci, soğanı, havucu, maydanozu, tuz ve karabiberi bir kasede eşit olana kadar karıştırın. BİBERLERİ DOLDURUN: her biberi et karışımıyla doldurun, pirincin şişmesi için kenardan 1-2cm boşluk bırakın. Saklanan kapakla örtün. TENCEREYE DİK YERLEŞTİRİN: doldurulmuş biberleri büyük ve derin bir tencereye sıkıca bitişik, dik olarak yerleştirin. SOSU HAZIRLAYIN: domates püresini su veya sebze suyu ve kırmızı biberle karıştırın, ardından biberler neredeyse tamamen kaplanana kadar üzerine dökün. YAVAŞÇA PİŞİRİN: kaynatın, ardından örtüp kısık ateşte pirinç tamamen pişip biberler yumuşayana kadar 45-55 dakika pişirin. KONTROL EDİN VE TATLANDIRIN: sosu tadın ve gerekirse tuz ekleyin. Servis yapmadan önce 5 dakika dinlendirin. SERVİS YAPIN: her tabağa 1-2 biber koyup bol sosla birlikte, üzerine cömert bir kaşık ekşi krema ekleyin.",
+    "it": "PREPARA I PEPERONI: taglia la parte superiore di ogni peperone vicino al gambo e conservala. Rimuovi semi e membrane interne. COMBINA IL RIPIENO: mescola in una ciotola la carne macinata, il riso crudo, la cipolla, la carota, il prezzemolo, sale e pepe finché è uniforme. RIEMPI I PEPERONI: riempi ogni peperone con il composto di carne, lasciando 1-2cm di spazio sotto il bordo perché il riso possa gonfiarsi. Copri con il tappo conservato. METTILI IN PIEDI NELLA PENTOLA: metti i peperoni ripieni in piedi, ben stretti tra loro, in una pentola grande e profonda. PREPARA LA SALSA: mescola la passata di pomodoro con l'acqua o il brodo vegetale e la paprika, poi versala sui peperoni finché sono quasi completamente coperti. FAI SOBBOLLIRE: porta a bollore, poi copri e cuoci a fuoco basso 45-55 minuti, finché il riso è completamente cotto e i peperoni sono teneri. CONTROLLA E CONDISCI: assaggia la salsa e aggiungi altro sale se necessario. Lascia riposare 5 minuti prima di servire. SERVI: metti 1-2 peperoni in ogni piatto con abbondante salsa e aggiungi un cucchiaio generoso di panna acida sopra.",
+    "ko": "파프리카 준비하기: 각 파프리카의 꼭지 부근을 잘라내고 보관한다. 안쪽의 씨와 막을 제거한다. 속재료 섞기: 볼에 다짐육, 생쌀, 양파, 당근, 파슬리, 소금, 후추를 넣고 고르게 섞는다. 파프리카 채우기: 쌀이 부풀 공간을 위해 테두리 아래 1-2cm를 남기고 각 파프리카에 고기 혼합물을 채운다. 보관해둔 꼭지로 덮는다. 냄비에 세워 담기: 속을 채운 파프리카를 크고 깊은 냄비에 서로 바짝 붙여 똑바로 세운다. 소스 만들기: 토마토 퓌레를 물이나 채소 육수, 파프리카 가루와 섞은 뒤 파프리카가 거의 완전히 잠기도록 붓는다. 뭉근히 끓이기: 끓어오르면 뚜껑을 덮고 약불로 45-55분간, 쌀이 완전히 익고 파프리카가 부드러워질 때까지 끓인다. 확인하고 간하기: 소스를 맛보고 필요하면 소금을 더한다. 서빙 전 5분간 둔다. 서빙하기: 접시마다 파프리카 1-2개를 소스와 함께 담고 사워크림을 듬뿍 올린다.",
+    "hi": "शिमला मिर्च तैयार करें: हर मिर्च का ऊपरी हिस्सा डंठल के पास काटें और सुरक्षित रखें। अंदर से बीज और झिल्ली निकालें। भरावन मिलाएं: एक कटोरे में कीमा, कच्चे चावल, प्याज़, गाजर, अजमोद, नमक और काली मिर्च को तब तक मिलाएं जब तक एकसमान न हो जाए। मिर्च भरें: हर मिर्च को मांस मिश्रण से भरें, किनारे के नीचे 1-2सेमी जगह छोड़ें ताकि चावल फूलने के लिए जगह हो। सुरक्षित रखे ढक्कन से ढकें। बर्तन में सीधी रखें: भरी हुई मिर्च को एक बड़े गहरे बर्तन में एक-दूसरे से सटाकर सीधी खड़ी रखें। सॉस तैयार करें: टमाटर प्यूरी को पानी या सब्ज़ी शोरबे और पैप्रिका के साथ मिलाएं, फिर मिर्च के ऊपर तब तक डालें जब तक लगभग पूरी तरह ढक न जाएं। धीमी आंच पर पकाएं: उबाल लाएं, फिर ढककर धीमी आंच पर 45-55 मिनट पकाएं, जब तक चावल पूरी तरह पक न जाए और मिर्च नरम न हो जाएं। जांचें और स्वाद अनुसार डालें: सॉस चखें और ज़रूरत पड़ने पर और नमक डालें। परोसने से पहले 5 मिनट आराम दें। परोसें: हर थाली में 1-2 मिर्च ढेर सारे सॉस के साथ रखें और ऊपर से खट्टी क्रीम का एक बड़ा चम्मच डालें।"
   },
   "originText": {
     "ro": "Ardeii umpluți sunt un fel de mâncare comun în toate bucătăriile din sud-estul Europei, fiecare țară având propria variantă — ce distinge versiunea românească e sosul de roșii în care se fierb ardeii, gros și abundent, în loc de o cantitate mică folosită doar la asezonat. Orezul crud din umplutură, nu cel precocut, e alegerea tradițională: se umflă în interiorul ardeiului absorbind zeama de roșii, legând întreaga umplutură.\n\nCe desparte o oală reușită de una mediocră e echilibrul dintre cantitatea de sos și timpul de fierbere: prea puțin sos și orezul din interior rămâne crud în timp ce exteriorul ardeiului s-a înmuiat deja; fiert prea repede la foc iute, ardeii crapă înainte ca orezul să apuce să se gătească. Smântâna adăugată la servire nu e opțională — taie din aciditatea sosului de roșii concentrat prin fierbere îndelungată.",
@@ -85,7 +580,9 @@
   "meta": {
     "time": 75,
     "costRon": 20,
-    "tags": ["family"],
+    "tags": [
+      "family"
+    ],
     "desc": {
       "ro": "Ardei umpluți cu carne și orez crud, fierți în sos gros de roșii, serviți cu smântână deasupra.",
       "en": "Peppers stuffed with meat and raw rice, simmered in a thick tomato sauce, served with sour cream on top.",

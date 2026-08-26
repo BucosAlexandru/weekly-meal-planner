@@ -4,67 +4,534 @@
   "tipType": "french",
   "pairingsType": "french",
   "origin": {
-    "ro": "Franța", "en": "France", "es": "Francia", "fr": "France", "de": "Frankreich",
-    "pt": "França", "ru": "Франция", "ar": "فرنسا", "zh": "法国", "ja": "フランス",
-    "tr": "Fransa", "it": "Francia", "ko": "프랑스", "hi": "फ़्रांस"
+    "ro": "Franța",
+    "en": "France",
+    "es": "Francia",
+    "fr": "France",
+    "de": "Frankreich",
+    "pt": "França",
+    "ru": "Франция",
+    "ar": "فرنسا",
+    "zh": "法国",
+    "ja": "フランス",
+    "tr": "Fransa",
+    "it": "Francia",
+    "ko": "프랑스",
+    "hi": "फ़्रांस"
   },
   "name": {
-    "ro": "Soufflé au Fromage", "en": "Soufflé au Fromage (Cheese Soufflé)", "es": "Soufflé au Fromage (Suflé de Queso)", "fr": "Soufflé au Fromage",
-    "de": "Soufflé au Fromage (Käsesoufflé)", "pt": "Soufflé au Fromage (Suflê de Queijo)", "ru": "Сырное суфле", "ar": "سوفليه بالجبن",
-    "zh": "芝士舒芙蕾", "ja": "スフレ・オ・フロマージュ（チーズスフレ）", "tr": "Soufflé au Fromage (Peynirli Sufle)", "it": "Soufflé au Fromage (Sformato di Formaggio)",
-    "ko": "수플레 오 프로마주 (치즈 수플레)", "hi": "सूफ़ले औ फ़्रोमाज (चीज़ सूफ़ले)"
+    "ro": "Soufflé au Fromage",
+    "en": "Soufflé au Fromage (Cheese Soufflé)",
+    "es": "Soufflé au Fromage (Suflé de Queso)",
+    "fr": "Soufflé au Fromage",
+    "de": "Soufflé au Fromage (Käsesoufflé)",
+    "pt": "Soufflé au Fromage (Suflê de Queijo)",
+    "ru": "Сырное суфле",
+    "ar": "سوفليه بالجبن",
+    "zh": "芝士舒芙蕾",
+    "ja": "スフレ・オ・フロマージュ（チーズスフレ）",
+    "tr": "Soufflé au Fromage (Peynirli Sufle)",
+    "it": "Soufflé au Fromage (Sformato di Formaggio)",
+    "ko": "수플레 오 프로마주 (치즈 수플레)",
+    "hi": "सूफ़ले औ फ़्रोमाज (चीज़ सूफ़ले)"
   },
   "category": {
-    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
-    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي", "zh": "主菜", "ja": "メイン料理", "tr": "Ana Yemek", "it": "Piatto principale", "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "tr": "Ana Yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
   },
   "featureCards": {
-    "ro": [{"icon":"🧀","t":"Sos béchamel ca bază","d":"O bază groasă care susține greutatea albușurilor bătute"},{"icon":"🥚","t":"Albușuri bătute tari","d":"Aerul din ele face suflé-ul să crească, nu praful de copt"},{"icon":"🍽️","t":"Formă unsă și tapetată cu parmezan","d":"Ajută aluatul să se agațe și să urce drept pe margini"},{"icon":"⏱️","t":"Servit imediat din cuptor","d":"Se lasă în interior 2-3 minute, altfel se lasă"}],
-    "en": [{"icon":"🧀","t":"Béchamel as the base","d":"A thick base that can support the weight of whipped egg whites"},{"icon":"🥚","t":"Stiffly whipped egg whites","d":"The air trapped inside makes the soufflé rise, not baking powder"},{"icon":"🍽️","t":"Dish buttered and dusted with parmesan","d":"Helps the batter grip and climb straight up the sides"},{"icon":"⏱️","t":"Served straight from the oven","d":"Sinks within 2-3 minutes, so it can't wait"}],
-    "es": [{"icon":"🧀","t":"Bechamel como base","d":"Una base espesa que soporta el peso de las claras montadas"},{"icon":"🥚","t":"Claras montadas a punto de nieve firme","d":"El aire atrapado es lo que hace subir el suflé, no la levadura"},{"icon":"🍽️","t":"Molde engrasado y espolvoreado con parmesano","d":"Ayuda a que la masa se agarre y suba recta por los lados"},{"icon":"⏱️","t":"Servido directo del horno","d":"Se baja en 2-3 minutos, así que no puede esperar"}],
-    "fr": [{"icon":"🧀","t":"Béchamel comme base","d":"Une base épaisse capable de soutenir le poids des blancs montés"},{"icon":"🥚","t":"Blancs montés en neige ferme","d":"L'air emprisonné fait gonfler le soufflé, pas la levure"},{"icon":"🍽️","t":"Moule beurré et saupoudré de parmesan","d":"Aide la pâte à accrocher et à monter droit le long des parois"},{"icon":"⏱️","t":"Servi tout droit sorti du four","d":"Retombe en 2-3 minutes, il ne peut donc pas attendre"}],
-    "de": [{"icon":"🧀","t":"Béchamel als Basis","d":"Eine dicke Basis, die das Gewicht des geschlagenen Eiweißes trägt"},{"icon":"🥚","t":"Steif geschlagenes Eiweiß","d":"Die eingeschlossene Luft lässt das Soufflé aufgehen, nicht Backpulver"},{"icon":"🍽️","t":"Form gebuttert und mit Parmesan bestäubt","d":"Hilft dem Teig, Halt zu finden und gerade an den Wänden aufzusteigen"},{"icon":"⏱️","t":"Direkt aus dem Ofen serviert","d":"Fällt innerhalb von 2-3 Minuten zusammen, kann also nicht warten"}],
-    "pt": [{"icon":"🧀","t":"Bechamel como base","d":"Uma base espessa que suporta o peso das claras batidas"},{"icon":"🥚","t":"Claras batidas em castelo firme","d":"O ar preso é o que faz o suflê subir, não o fermento"},{"icon":"🍽️","t":"Forma untada e polvilhada com parmesão","d":"Ajuda a massa a agarrar-se e subir direita pelas paredes"},{"icon":"⏱️","t":"Servido direto do forno","d":"Baixa em 2-3 minutos, por isso não pode esperar"}],
-    "ru": [{"icon":"🧀","t":"Бешамель как основа","d":"Густая основа, способная удержать вес взбитых белков"},{"icon":"🥚","t":"Взбитые до плотной пены белки","d":"Именно воздух внутри поднимает суфле, а не разрыхлитель"},{"icon":"🍽️","t":"Форма смазана маслом и обсыпана пармезаном","d":"Помогает тесту цепляться и подниматься прямо вдоль стенок"},{"icon":"⏱️","t":"Подаётся прямо из духовки","d":"Оседает за 2-3 минуты, поэтому не может ждать"}],
-    "ar": [{"icon":"🧀","t":"البشاميل كأساس","d":"قاعدة سميكة تتحمل وزن بياض البيض المخفوق"},{"icon":"🥚","t":"بياض بيض مخفوق حتى التماسك","d":"الهواء المحبوس بداخله هو ما يجعل السوفليه يرتفع، لا مسحوق الخبز"},{"icon":"🍽️","t":"طبق مدهون بالزبدة ومرشوش بالبارميزان","d":"يساعد الخليط على التماسك والصعود مستقيمًا على الجوانب"},{"icon":"⏱️","t":"يُقدَّم مباشرة من الفرن","d":"يهبط خلال 2-3 دقائق، لذا لا يمكنه الانتظار"}],
-    "zh": [{"icon":"🧀","t":"以白酱为基底","d":"浓稠的酱底能撑起打发蛋白的重量"},{"icon":"🥚","t":"打发至坚挺的蛋白","d":"是蛋白中锁住的空气让舒芙蕾膨起，而非泡打粉"},{"icon":"🍽️","t":"模具刷黄油并撒帕玛森芝士粉","d":"帮助面糊附着并沿模壁笔直升起"},{"icon":"⏱️","t":"出炉即刻享用","d":"2-3分钟内就会塌陷，容不得等待"}],
-    "ja": [{"icon":"🧀","t":"ベシャメルソースが土台","d":"泡立てた卵白の重さを支える濃厚な土台"},{"icon":"🥚","t":"しっかり泡立てた卵白","d":"膨らませるのはベーキングパウダーではなく卵白の中の空気"},{"icon":"🍽️","t":"型にバターを塗りパルメザンをまぶす","d":"生地が型の側面をまっすぐ登るのを助ける"},{"icon":"⏱️","t":"オーブンから出してすぐに提供","d":"2〜3分でしぼんでしまうため待てない"}],
-    "tr": [{"icon":"🧀","t":"Béchamel taban olarak","d":"Çırpılmış yumurta akının ağırlığını taşıyabilen kalın bir taban"},{"icon":"🥚","t":"Sert çırpılmış yumurta akı","d":"Sufleyi kabartan içindeki hava, kabartma tozu değil"},{"icon":"🍽️","t":"Yağlanmış ve parmesan serpilmiş kap","d":"Karışımın kenarlara tutunup dümdüz yükselmesine yardımcı olur"},{"icon":"⏱️","t":"Fırından çıkar çıkmaz servis edilir","d":"2-3 dakika içinde söner, bu yüzden bekleyemez"}],
-    "it": [{"icon":"🧀","t":"Besciamella come base","d":"Una base densa che sostiene il peso degli albumi montati"},{"icon":"🥚","t":"Albumi montati a neve ferma","d":"È l'aria intrappolata a far gonfiare il soufflé, non il lievito"},{"icon":"🍽️","t":"Stampo imburrato e cosparso di parmigiano","d":"Aiuta l'impasto ad aggrapparsi e salire dritto lungo i bordi"},{"icon":"⏱️","t":"Servito appena sfornato","d":"Si sgonfia in 2-3 minuti, quindi non può aspettare"}],
-    "ko": [{"icon":"🧀","t":"베샤멜 소스가 베이스","d":"휘핑한 흰자의 무게를 지탱하는 걸쭉한 베이스"},{"icon":"🥚","t":"단단하게 휘핑한 달걀흰자","d":"수플레를 부풀리는 건 베이킹파우더가 아니라 흰자 속 공기"},{"icon":"🍽️","t":"버터 바르고 파르메산 뿌린 용기","d":"반죽이 벽면을 타고 곧게 올라가도록 돕는다"},{"icon":"⏱️","t":"오븐에서 바로 서빙","d":"2-3분 안에 꺼지므로 기다릴 수 없다"}],
-    "hi": [{"icon":"🧀","t":"आधार के रूप में बेशामेल","d":"एक गाढ़ा आधार जो फेंटी हुई अंडे की सफेदी का वज़न सह सके"},{"icon":"🥚","t":"कड़ी फेंटी अंडे की सफेदी","d":"अंदर फंसी हवा ही सूफ़ले को फुलाती है, बेकिंग पाउडर नहीं"},{"icon":"🍽️","t":"मक्खन लगा और परमेज़ान छिड़का बर्तन","d":"मिश्रण को किनारों पर सीधा चढ़ने में मदद करता है"},{"icon":"⏱️","t":"ओवन से सीधे परोसा जाता है","d":"2-3 मिनट में बैठ जाता है, इसलिए इंतज़ार नहीं कर सकता"}]
+    "ro": [
+      {
+        "icon": "🧀",
+        "t": "Sos béchamel ca bază",
+        "d": "O bază groasă care susține greutatea albușurilor bătute"
+      },
+      {
+        "icon": "🥚",
+        "t": "Albușuri bătute tari",
+        "d": "Aerul din ele face suflé-ul să crească, nu praful de copt"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Formă unsă și tapetată cu parmezan",
+        "d": "Ajută aluatul să se agațe și să urce drept pe margini"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Servit imediat din cuptor",
+        "d": "Se lasă în interior 2-3 minute, altfel se lasă"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🧀",
+        "t": "Béchamel as the base",
+        "d": "A thick base that can support the weight of whipped egg whites"
+      },
+      {
+        "icon": "🥚",
+        "t": "Stiffly whipped egg whites",
+        "d": "The air trapped inside makes the soufflé rise, not baking powder"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Dish buttered and dusted with parmesan",
+        "d": "Helps the batter grip and climb straight up the sides"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Served straight from the oven",
+        "d": "Sinks within 2-3 minutes, so it can't wait"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🧀",
+        "t": "Bechamel como base",
+        "d": "Una base espesa que soporta el peso de las claras montadas"
+      },
+      {
+        "icon": "🥚",
+        "t": "Claras montadas a punto de nieve firme",
+        "d": "El aire atrapado es lo que hace subir el suflé, no la levadura"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Molde engrasado y espolvoreado con parmesano",
+        "d": "Ayuda a que la masa se agarre y suba recta por los lados"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Servido directo del horno",
+        "d": "Se baja en 2-3 minutos, así que no puede esperar"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🧀",
+        "t": "Béchamel comme base",
+        "d": "Une base épaisse capable de soutenir le poids des blancs montés"
+      },
+      {
+        "icon": "🥚",
+        "t": "Blancs montés en neige ferme",
+        "d": "L'air emprisonné fait gonfler le soufflé, pas la levure"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Moule beurré et saupoudré de parmesan",
+        "d": "Aide la pâte à accrocher et à monter droit le long des parois"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Servi tout droit sorti du four",
+        "d": "Retombe en 2-3 minutes, il ne peut donc pas attendre"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🧀",
+        "t": "Béchamel als Basis",
+        "d": "Eine dicke Basis, die das Gewicht des geschlagenen Eiweißes trägt"
+      },
+      {
+        "icon": "🥚",
+        "t": "Steif geschlagenes Eiweiß",
+        "d": "Die eingeschlossene Luft lässt das Soufflé aufgehen, nicht Backpulver"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Form gebuttert und mit Parmesan bestäubt",
+        "d": "Hilft dem Teig, Halt zu finden und gerade an den Wänden aufzusteigen"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Direkt aus dem Ofen serviert",
+        "d": "Fällt innerhalb von 2-3 Minuten zusammen, kann also nicht warten"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🧀",
+        "t": "Bechamel como base",
+        "d": "Uma base espessa que suporta o peso das claras batidas"
+      },
+      {
+        "icon": "🥚",
+        "t": "Claras batidas em castelo firme",
+        "d": "O ar preso é o que faz o suflê subir, não o fermento"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Forma untada e polvilhada com parmesão",
+        "d": "Ajuda a massa a agarrar-se e subir direita pelas paredes"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Servido direto do forno",
+        "d": "Baixa em 2-3 minutos, por isso não pode esperar"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🧀",
+        "t": "Бешамель как основа",
+        "d": "Густая основа, способная удержать вес взбитых белков"
+      },
+      {
+        "icon": "🥚",
+        "t": "Взбитые до плотной пены белки",
+        "d": "Именно воздух внутри поднимает суфле, а не разрыхлитель"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Форма смазана маслом и обсыпана пармезаном",
+        "d": "Помогает тесту цепляться и подниматься прямо вдоль стенок"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Подаётся прямо из духовки",
+        "d": "Оседает за 2-3 минуты, поэтому не может ждать"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🧀",
+        "t": "البشاميل كأساس",
+        "d": "قاعدة سميكة تتحمل وزن بياض البيض المخفوق"
+      },
+      {
+        "icon": "🥚",
+        "t": "بياض بيض مخفوق حتى التماسك",
+        "d": "الهواء المحبوس بداخله هو ما يجعل السوفليه يرتفع، لا مسحوق الخبز"
+      },
+      {
+        "icon": "🍽️",
+        "t": "طبق مدهون بالزبدة ومرشوش بالبارميزان",
+        "d": "يساعد الخليط على التماسك والصعود مستقيمًا على الجوانب"
+      },
+      {
+        "icon": "⏱️",
+        "t": "يُقدَّم مباشرة من الفرن",
+        "d": "يهبط خلال 2-3 دقائق، لذا لا يمكنه الانتظار"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🧀",
+        "t": "以白酱为基底",
+        "d": "浓稠的酱底能撑起打发蛋白的重量"
+      },
+      {
+        "icon": "🥚",
+        "t": "打发至坚挺的蛋白",
+        "d": "是蛋白中锁住的空气让舒芙蕾膨起，而非泡打粉"
+      },
+      {
+        "icon": "🍽️",
+        "t": "模具刷黄油并撒帕玛森芝士粉",
+        "d": "帮助面糊附着并沿模壁笔直升起"
+      },
+      {
+        "icon": "⏱️",
+        "t": "出炉即刻享用",
+        "d": "2-3分钟内就会塌陷，容不得等待"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🧀",
+        "t": "ベシャメルソースが土台",
+        "d": "泡立てた卵白の重さを支える濃厚な土台"
+      },
+      {
+        "icon": "🥚",
+        "t": "しっかり泡立てた卵白",
+        "d": "膨らませるのはベーキングパウダーではなく卵白の中の空気"
+      },
+      {
+        "icon": "🍽️",
+        "t": "型にバターを塗りパルメザンをまぶす",
+        "d": "生地が型の側面をまっすぐ登るのを助ける"
+      },
+      {
+        "icon": "⏱️",
+        "t": "オーブンから出してすぐに提供",
+        "d": "2〜3分でしぼんでしまうため待てない"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🧀",
+        "t": "Béchamel taban olarak",
+        "d": "Çırpılmış yumurta akının ağırlığını taşıyabilen kalın bir taban"
+      },
+      {
+        "icon": "🥚",
+        "t": "Sert çırpılmış yumurta akı",
+        "d": "Sufleyi kabartan içindeki hava, kabartma tozu değil"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Yağlanmış ve parmesan serpilmiş kap",
+        "d": "Karışımın kenarlara tutunup dümdüz yükselmesine yardımcı olur"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Fırından çıkar çıkmaz servis edilir",
+        "d": "2-3 dakika içinde söner, bu yüzden bekleyemez"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🧀",
+        "t": "Besciamella come base",
+        "d": "Una base densa che sostiene il peso degli albumi montati"
+      },
+      {
+        "icon": "🥚",
+        "t": "Albumi montati a neve ferma",
+        "d": "È l'aria intrappolata a far gonfiare il soufflé, non il lievito"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Stampo imburrato e cosparso di parmigiano",
+        "d": "Aiuta l'impasto ad aggrapparsi e salire dritto lungo i bordi"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Servito appena sfornato",
+        "d": "Si sgonfia in 2-3 minuti, quindi non può aspettare"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🧀",
+        "t": "베샤멜 소스가 베이스",
+        "d": "휘핑한 흰자의 무게를 지탱하는 걸쭉한 베이스"
+      },
+      {
+        "icon": "🥚",
+        "t": "단단하게 휘핑한 달걀흰자",
+        "d": "수플레를 부풀리는 건 베이킹파우더가 아니라 흰자 속 공기"
+      },
+      {
+        "icon": "🍽️",
+        "t": "버터 바르고 파르메산 뿌린 용기",
+        "d": "반죽이 벽면을 타고 곧게 올라가도록 돕는다"
+      },
+      {
+        "icon": "⏱️",
+        "t": "오븐에서 바로 서빙",
+        "d": "2-3분 안에 꺼지므로 기다릴 수 없다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🧀",
+        "t": "आधार के रूप में बेशामेल",
+        "d": "एक गाढ़ा आधार जो फेंटी हुई अंडे की सफेदी का वज़न सह सके"
+      },
+      {
+        "icon": "🥚",
+        "t": "कड़ी फेंटी अंडे की सफेदी",
+        "d": "अंदर फंसी हवा ही सूफ़ले को फुलाती है, बेकिंग पाउडर नहीं"
+      },
+      {
+        "icon": "🍽️",
+        "t": "मक्खन लगा और परमेज़ान छिड़का बर्तन",
+        "d": "मिश्रण को किनारों पर सीधा चढ़ने में मदद करता है"
+      },
+      {
+        "icon": "⏱️",
+        "t": "ओवन से सीधे परोसा जाता है",
+        "d": "2-3 मिनट में बैठ जाता है, इसलिए इंतज़ार नहीं कर सकता"
+      }
+    ]
   },
   "ingredients": {
-    "ro": ["40g unt (plus în plus pentru uns forma)", "40g făină", "300ml lapte cald", "150g brânză gruyère rasă (plus pentru tapetat forma)", "40g parmezan ras", "4 gălbenușuri", "5 albușuri", "un praf de nucșoară", "sare și piper"],
-    "en": ["40g butter (plus extra for greasing the dish)", "40g flour", "300ml warm milk", "150g grated gruyère (plus extra for dusting the dish)", "40g grated parmesan", "4 egg yolks", "5 egg whites", "a pinch of nutmeg", "salt and pepper"],
-    "es": ["40g de mantequilla (más extra para engrasar el molde)", "40g de harina", "300ml de leche caliente", "150g de queso gruyère rallado (más extra para espolvorear el molde)", "40g de parmesano rallado", "4 yemas de huevo", "5 claras de huevo", "una pizca de nuez moscada", "sal y pimienta"],
-    "fr": ["40g de beurre (plus un peu pour beurrer le moule)", "40g de farine", "300ml de lait chaud", "150g de gruyère râpé (plus un peu pour le moule)", "40g de parmesan râpé", "4 jaunes d'œufs", "5 blancs d'œufs", "une pincée de noix de muscade", "sel et poivre"],
-    "de": ["40g Butter (plus extra zum Einfetten der Form)", "40g Mehl", "300ml warme Milch", "150g geriebener Gruyère (plus extra zum Ausstreuen der Form)", "40g geriebener Parmesan", "4 Eigelb", "5 Eiweiß", "eine Prise Muskatnuss", "Salz und Pfeffer"],
-    "pt": ["40g de manteiga (mais extra para untar a forma)", "40g de farinha", "300ml de leite quente", "150g de queijo gruyère ralado (mais extra para polvilhar a forma)", "40g de parmesão ralado", "4 gemas de ovo", "5 claras de ovo", "uma pitada de noz-moscada", "sal e pimenta"],
-    "ru": ["40г масла (плюс дополнительно для смазывания формы)", "40г муки", "300мл тёплого молока", "150г тёртого сыра грюйер (плюс дополнительно для обсыпки формы)", "40г тёртого пармезана", "4 яичных желтка", "5 яичных белков", "щепотка мускатного ореха", "соль и перец"],
-    "ar": ["40غ زبدة (بالإضافة إلى كمية إضافية لدهن الطبق)", "40غ دقيق", "300مل حليب دافئ", "150غ جبن غرويير مبشور (بالإضافة إلى كمية إضافية لرش الطبق)", "40غ بارميزان مبشور", "4 صفار بيض", "5 بياض بيض", "رشة جوزة الطيب", "ملح وفلفل"],
-    "zh": ["40克黄油（另加适量涂抹模具）", "40克面粉", "300毫升温牛奶", "150克格鲁耶尔奶酪碎（另加适量撒在模具上）", "40克帕玛森芝士碎", "4个蛋黄", "5个蛋白", "一小撮肉豆蔻粉", "盐和胡椒"],
-    "ja": ["バター40g（型に塗る分は別途）", "小麦粉40g", "温めた牛乳300ml", "すりおろしたグリュイエールチーズ150g（型にまぶす分は別途）", "すりおろしたパルメザンチーズ40g", "卵黄4個", "卵白5個", "ナツメグひとつまみ", "塩とこしょう"],
-    "tr": ["40g tereyağı (kabı yağlamak için ilaveten)", "40g un", "300ml ılık süt", "150g rendelenmiş gruyère peyniri (kabı kaplamak için ilaveten)", "40g rendelenmiş parmesan", "4 yumurta sarısı", "5 yumurta akı", "bir tutam muskat", "tuz ve karabiber"],
-    "it": ["40g di burro (più extra per imburrare lo stampo)", "40g di farina", "300ml di latte caldo", "150g di groviera grattugiato (più extra per lo stampo)", "40g di parmigiano grattugiato", "4 tuorli d'uovo", "5 albumi d'uovo", "un pizzico di noce moscata", "sale e pepe"],
-    "ko": ["버터 40g (틀에 바를 여분 포함)", "밀가루 40g", "따뜻한 우유 300ml", "간 그뤼에르 치즈 150g (틀에 뿌릴 여분 포함)", "간 파르메산 치즈 40g", "달걀노른자 4개", "달걀흰자 5개", "육두구 가루 한 꼬집", "소금과 후추"],
-    "hi": ["40ग्राम मक्खन (बर्तन चिकना करने के लिए अतिरिक्त सहित)", "40ग्राम आटा", "300मिली गरम दूध", "150ग्राम कद्दूकस किया ग्रुयेर चीज़ (बर्तन पर छिड़कने के लिए अतिरिक्त सहित)", "40ग्राम कद्दूकस किया परमेज़ान", "4 अंडे की ज़र्दी", "5 अंडे की सफेदी", "एक चुटकी जायफल", "नमक और काली मिर्च"]
+    "ro": [
+      "40g unt (plus în plus pentru uns forma)",
+      "40g făină",
+      "300ml lapte cald",
+      "150g brânză gruyère rasă (plus pentru tapetat forma)",
+      "40g parmezan ras",
+      "4 gălbenușuri",
+      "5 albușuri",
+      "un praf de nucșoară",
+      "sare și piper"
+    ],
+    "en": [
+      "40g butter (plus extra for greasing the dish)",
+      "40g flour",
+      "300ml warm milk",
+      "150g grated gruyère (plus extra for dusting the dish)",
+      "40g grated parmesan",
+      "4 egg yolks",
+      "5 egg whites",
+      "a pinch of nutmeg",
+      "salt and pepper"
+    ],
+    "es": [
+      "40g de mantequilla (más extra para engrasar el molde)",
+      "40g de harina",
+      "300ml de leche caliente",
+      "150g de queso gruyère rallado (más extra para espolvorear el molde)",
+      "40g de parmesano rallado",
+      "4 yemas de huevo",
+      "5 claras de huevo",
+      "una pizca de nuez moscada",
+      "sal y pimienta"
+    ],
+    "fr": [
+      "40g de beurre (plus un peu pour beurrer le moule)",
+      "40g de farine",
+      "300ml de lait chaud",
+      "150g de gruyère râpé (plus un peu pour le moule)",
+      "40g de parmesan râpé",
+      "4 jaunes d'œufs",
+      "5 blancs d'œufs",
+      "une pincée de noix de muscade",
+      "sel et poivre"
+    ],
+    "de": [
+      "40g Butter (plus extra zum Einfetten der Form)",
+      "40g Mehl",
+      "300ml warme Milch",
+      "150g geriebener Gruyère (plus extra zum Ausstreuen der Form)",
+      "40g geriebener Parmesan",
+      "4 Eigelb",
+      "5 Eiweiß",
+      "eine Prise Muskatnuss",
+      "Salz und Pfeffer"
+    ],
+    "pt": [
+      "40g de manteiga (mais extra para untar a forma)",
+      "40g de farinha",
+      "300ml de leite quente",
+      "150g de queijo gruyère ralado (mais extra para polvilhar a forma)",
+      "40g de parmesão ralado",
+      "4 gemas de ovo",
+      "5 claras de ovo",
+      "uma pitada de noz-moscada",
+      "sal e pimenta"
+    ],
+    "ru": [
+      "40г масла (плюс дополнительно для смазывания формы)",
+      "40г муки",
+      "300мл тёплого молока",
+      "150г тёртого сыра грюйер (плюс дополнительно для обсыпки формы)",
+      "40г тёртого пармезана",
+      "4 яичных желтка",
+      "5 яичных белков",
+      "щепотка мускатного ореха",
+      "соль и перец"
+    ],
+    "ar": [
+      "40غ زبدة (بالإضافة إلى كمية إضافية لدهن الطبق)",
+      "40غ دقيق",
+      "300مل حليب دافئ",
+      "150غ جبن غرويير مبشور (بالإضافة إلى كمية إضافية لرش الطبق)",
+      "40غ بارميزان مبشور",
+      "4 صفار بيض",
+      "5 بياض بيض",
+      "رشة جوزة الطيب",
+      "ملح وفلفل"
+    ],
+    "zh": [
+      "40克黄油（另加适量涂抹模具）",
+      "40克面粉",
+      "300毫升温牛奶",
+      "150克格鲁耶尔奶酪碎（另加适量撒在模具上）",
+      "40克帕玛森芝士碎",
+      "4个蛋黄",
+      "5个蛋白",
+      "一小撮肉豆蔻粉",
+      "盐和胡椒"
+    ],
+    "ja": [
+      "バター40g（型に塗る分は別途）",
+      "小麦粉40g",
+      "温めた牛乳300ml",
+      "すりおろしたグリュイエールチーズ150g（型にまぶす分は別途）",
+      "すりおろしたパルメザンチーズ40g",
+      "卵黄4個",
+      "卵白5個",
+      "ナツメグひとつまみ",
+      "塩とこしょう"
+    ],
+    "tr": [
+      "40g tereyağı (kabı yağlamak için ilaveten)",
+      "40g un",
+      "300ml ılık süt",
+      "150g rendelenmiş gruyère peyniri (kabı kaplamak için ilaveten)",
+      "40g rendelenmiş parmesan",
+      "4 yumurta sarısı",
+      "5 yumurta akı",
+      "bir tutam muskat",
+      "tuz ve karabiber"
+    ],
+    "it": [
+      "40g di burro (più extra per imburrare lo stampo)",
+      "40g di farina",
+      "300ml di latte caldo",
+      "150g di groviera grattugiato (più extra per lo stampo)",
+      "40g di parmigiano grattugiato",
+      "4 tuorli d'uovo",
+      "5 albumi d'uovo",
+      "un pizzico di noce moscata",
+      "sale e pepe"
+    ],
+    "ko": [
+      "버터 40g (틀에 바를 여분 포함)",
+      "밀가루 40g",
+      "따뜻한 우유 300ml",
+      "간 그뤼에르 치즈 150g (틀에 뿌릴 여분 포함)",
+      "간 파르메산 치즈 40g",
+      "달걀노른자 4개",
+      "달걀흰자 5개",
+      "육두구 가루 한 꼬집",
+      "소금과 후추"
+    ],
+    "hi": [
+      "40ग्राम मक्खन (बर्तन चिकना करने के लिए अतिरिक्त सहित)",
+      "40ग्राम आटा",
+      "300मिली गरम दूध",
+      "150ग्राम कद्दूकस किया ग्रुयेर चीज़ (बर्तन पर छिड़कने के लिए अतिरिक्त सहित)",
+      "40ग्राम कद्दूकस किया परमेज़ान",
+      "4 अंडे की ज़र्दी",
+      "5 अंडे की सफेदी",
+      "एक चुटकी जायफल",
+      "नमक और काली मिर्च"
+    ]
   },
   "howIsMade": {
-    "ro": ["PREGĂTEȘTE FORMA: unge generos o formă de suflé cu unt, apoi tapetează interiorul cu parmezan, scuturând excesul. Pune la frigider.", "FĂ SOSUL BÉCHAMEL: topește untul într-o cratiță, adaugă făina și amestecă 1-2 minute la foc mic. Toarnă laptele cald treptat, amestecând continuu, până obții un sos gros și neted. Ia de pe foc.", "ADAUGĂ BRÂNZA ȘI GĂLBENUȘURILE: încorporează brânza gruyère, sare, piper și nucșoară în sos cât e încă cald, apoi adaugă gălbenușurile unul câte unul, amestecând bine după fiecare.", "BATE ALBUȘURILE: bate albușurile cu un praf de sare până devin tari și lucioase, formând vârfuri ferme.", "ÎNCORPOREAZĂ CU GRIJĂ: adaugă o treime din albușuri în sos și amestecă viguros ca să-l subțieze. Încorporează restul albușurilor cu mișcări largi, de jos în sus, fără să le lași să se lase.", "TOARNĂ ȘI NIVELEAZĂ: toarnă compoziția în forma pregătită până aproape de margine și netezește suprafața cu o spatulă. Trece degetul mare pe marginea interioară a formei pentru a ajuta suflé-ul să crească drept.", "COACE IMEDIAT: coace la 190°C timp de 25-30 minute, fără să deschizi ușa cuptorului, până se umflă bine și devine auriu deasupra.", "SERVEȘTE PE LOC: scoate din cuptor și servește imediat, cât mai e încă umflat."],
-    "en": ["PREPARE THE DISH: generously butter a soufflé dish, then dust the inside with parmesan, shaking out the excess. Chill in the fridge.", "MAKE THE BÉCHAMEL: melt the butter in a saucepan, add the flour and stir for 1-2 minutes over low heat. Pour in the warm milk gradually, stirring constantly, until you get a thick, smooth sauce. Remove from heat.", "ADD THE CHEESE AND YOLKS: stir the gruyère, salt, pepper and nutmeg into the sauce while still warm, then add the egg yolks one at a time, mixing well after each.", "WHIP THE EGG WHITES: whip the egg whites with a pinch of salt until stiff and glossy, forming firm peaks.", "FOLD IN CAREFULLY: fold a third of the egg whites into the sauce and mix vigorously to loosen it. Fold in the remaining whites with wide, bottom-to-top strokes, without letting them deflate.", "POUR AND LEVEL: pour the mixture into the prepared dish almost to the rim and smooth the surface with a spatula. Run your thumb around the inside edge of the dish to help the soufflé rise straight.", "BAKE IMMEDIATELY: bake at 190°C for 25-30 minutes, without opening the oven door, until well risen and golden on top.", "SERVE AT ONCE: remove from the oven and serve immediately, while still puffed up."],
-    "es": ["PREPARA EL MOLDE: engrasa generosamente un molde para suflé con mantequilla, luego espolvorea el interior con parmesano, sacudiendo el exceso. Enfría en la nevera.", "HAZ LA BECHAMEL: derrite la mantequilla en un cazo, añade la harina y remueve 1-2 minutos a fuego bajo. Vierte la leche caliente poco a poco, removiendo sin parar, hasta obtener una salsa espesa y lisa. Retira del fuego.", "AÑADE EL QUESO Y LAS YEMAS: incorpora el gruyère, la sal, la pimienta y la nuez moscada a la salsa mientras aún está caliente, luego añade las yemas de una en una, mezclando bien después de cada una.", "MONTA LAS CLARAS: bate las claras con una pizca de sal hasta que estén firmes y brillantes, formando picos firmes.", "INCORPORA CON CUIDADO: incorpora un tercio de las claras a la salsa y mezcla enérgicamente para aligerarla. Incorpora el resto de las claras con movimientos amplios, de abajo hacia arriba, sin dejar que bajen.", "VIERTE Y NIVELA: vierte la mezcla en el molde preparado casi hasta el borde y alisa la superficie con una espátula. Pasa el pulgar por el borde interior del molde para ayudar a que el suflé suba recto.", "HORNEA DE INMEDIATO: hornea a 190°C durante 25-30 minutos, sin abrir la puerta del horno, hasta que suba bien y quede dorado por encima.", "SIRVE ENSEGUIDA: saca del horno y sirve de inmediato, mientras aún está hinchado."],
-    "fr": ["PRÉPARE LE MOULE: beurre généreusement un moule à soufflé, puis saupoudre l'intérieur de parmesan, en secouant l'excédent. Réfrigère.", "FAIS LA BÉCHAMEL: fais fondre le beurre dans une casserole, ajoute la farine et remue 1-2 minutes à feu doux. Verse le lait chaud petit à petit, en remuant sans cesse, jusqu'à obtenir une sauce épaisse et lisse. Retire du feu.", "AJOUTE LE FROMAGE ET LES JAUNES: incorpore le gruyère, le sel, le poivre et la muscade à la sauce encore chaude, puis ajoute les jaunes d'œufs un à un, en mélangeant bien après chacun.", "MONTE LES BLANCS: fouette les blancs d'œufs avec une pincée de sel jusqu'à ce qu'ils soient fermes et brillants, formant des pics fermes.", "INCORPORE DÉLICATEMENT: incorpore un tiers des blancs à la sauce et mélange vigoureusement pour l'alléger. Incorpore le reste des blancs avec des mouvements amples, du bas vers le haut, sans les laisser retomber.", "VERSE ET NIVELLE: verse la préparation dans le moule préparé presque jusqu'au bord et lisse la surface avec une spatule. Passe le pouce sur le bord intérieur du moule pour aider le soufflé à monter droit.", "CUIS IMMÉDIATEMENT: fais cuire à 190°C pendant 25-30 minutes, sans ouvrir la porte du four, jusqu'à ce qu'il soit bien monté et doré dessus.", "SERS AUSSITÔT: sors du four et sers immédiatement, tant qu'il est encore gonflé."],
-    "de": ["FORM VORBEREITEN: eine Souffléform großzügig buttern, dann das Innere mit Parmesan bestäuben und Überschuss abschütteln. In den Kühlschrank stellen.", "BÉCHAMEL ZUBEREITEN: die Butter in einem Topf schmelzen, das Mehl zugeben und 1-2 Minuten bei niedriger Hitze rühren. Die warme Milch nach und nach unter ständigem Rühren zugießen, bis eine dicke, glatte Sauce entsteht. Vom Herd nehmen.", "KÄSE UND EIGELB ZUGEBEN: den Gruyère, Salz, Pfeffer und Muskat in die noch warme Sauce rühren, dann das Eigelb nacheinander zugeben und nach jedem gut vermischen.", "EIWEISS SCHLAGEN: das Eiweiß mit einer Prise Salz steif und glänzend schlagen, bis feste Spitzen entstehen.", "VORSICHTIG UNTERHEBEN: ein Drittel des Eiweißes unter die Sauce heben und kräftig verrühren, um sie zu lockern. Den Rest des Eiweißes mit weiten Bewegungen von unten nach oben unterheben, ohne es zusammenfallen zu lassen.", "EINFÜLLEN UND GLÄTTEN: die Mischung fast bis zum Rand in die vorbereitete Form gießen und die Oberfläche mit einem Spatel glätten. Mit dem Daumen am inneren Rand der Form entlangfahren, damit das Soufflé gerade aufgeht.", "SOFORT BACKEN: bei 190°C 25-30 Minuten backen, ohne die Ofentür zu öffnen, bis es gut aufgegangen und oben goldbraun ist.", "SOFORT SERVIEREN: aus dem Ofen nehmen und sofort servieren, solange es noch aufgegangen ist."],
-    "pt": ["PREPARA A FORMA: unta generosamente uma forma de suflê com manteiga, depois polvilha o interior com parmesão, sacudindo o excesso. Leva ao frio.", "FAZ O BECHAMEL: derrete a manteiga num tacho, junta a farinha e mexe 1-2 minutos em lume baixo. Verta o leite quente aos poucos, mexendo sempre, até obter um molho espesso e liso. Retira do lume.", "JUNTA O QUEIJO E AS GEMAS: incorpora o gruyère, o sal, a pimenta e a noz-moscada no molho ainda quente, depois junta as gemas uma a uma, misturando bem após cada uma.", "BATE AS CLARAS: bate as claras com uma pitada de sal até ficarem firmes e brilhantes, formando picos firmes.", "INCORPORA COM CUIDADO: incorpora um terço das claras no molho e mistura vigorosamente para o soltar. Incorpora as restantes claras com movimentos amplos, de baixo para cima, sem as deixar baixar.", "VERTE E NIVELA: verte a mistura na forma preparada quase até à borda e alisa a superfície com uma espátula. Passa o polegar pela borda interior da forma para ajudar o suflê a subir direito.", "COZE DE IMEDIATO: coze a 190°C durante 25-30 minutos, sem abrir a porta do forno, até subir bem e dourar por cima.", "SERVE NA HORA: retira do forno e serve imediatamente, enquanto ainda está bem alto."],
-    "ru": ["ПОДГОТОВЬ ФОРМУ: щедро смажь маслом форму для суфле, затем обсыпь изнутри пармезаном, стряхнув излишки. Убери в холодильник.", "ПРИГОТОВЬ БЕШАМЕЛЬ: растопи масло в сотейнике, добавь муку и мешай 1-2 минуты на слабом огне. Постепенно влей тёплое молоко, постоянно помешивая, пока не получится густой, гладкий соус. Сними с огня.", "ДОБАВЬ СЫР И ЖЕЛТКИ: вмешай грюйер, соль, перец и мускатный орех в ещё тёплый соус, затем добавляй желтки по одному, хорошо перемешивая после каждого.", "ВЗБЕЙ БЕЛКИ: взбей белки со щепоткой соли до плотности и глянца, до устойчивых пиков.", "АККУРАТНО ВВЕДИ: введи треть белков в соус и энергично перемешай, чтобы разжижить его. Аккуратно введи оставшиеся белки широкими движениями снизу вверх, не давая им осесть.", "ВЫЛЕЙ И ВЫРОВНЯЙ: вылей смесь в подготовленную форму почти до края и разровняй поверхность лопаткой. Проведи большим пальцем по внутреннему краю формы, чтобы суфле поднялось ровно.", "СРАЗУ ВЫПЕКАЙ: выпекай при 190°C 25-30 минут, не открывая дверцу духовки, пока хорошо не поднимется и не подрумянится сверху.", "ПОДАВАЙ СРАЗУ: достань из духовки и подавай немедленно, пока ещё пышное."],
-    "ar": ["جهّز الطبق: ادهن طبق السوفليه بالزبدة بسخاء، ثم رشّ الداخل بالبارميزان، مع نفض الزائد. برّده في الثلاجة.", "اصنع البشاميل: أذب الزبدة في قدر، أضف الدقيق وحرّك 1-2 دقيقة على نار هادئة. اسكب الحليب الدافئ تدريجيًا مع التحريك المستمر حتى تحصل على صلصة سميكة وناعمة. ارفع عن النار.", "أضف الجبن والصفار: حرّك جبن الغرويير والملح والفلفل وجوزة الطيب في الصلصة وهي لا تزال دافئة، ثم أضف صفار البيض واحدة تلو الأخرى مع التحريك جيدًا بعد كل واحدة.", "اخفق البياض: اخفق بياض البيض مع رشة ملح حتى يصبح متماسكًا ولامعًا، مكونًا قمما ثابتة.", "اطوِ بعناية: اطوِ ثلث البياض في الصلصة واخلط بقوة لتخفيفها. اطوِ باقي البياض بحركات واسعة من الأسفل للأعلى، دون أن يفقد تماسكه.", "اسكب وسوِّ: اسكب الخليط في الطبق المجهز حتى يقارب الحافة وسوِّ السطح بملعقة مسطحة. مرّر إبهامك على الحافة الداخلية للطبق لمساعدة السوفليه على الارتفاع مستقيمًا.", "اخبز فورًا: اخبز على 190 درجة مئوية لمدة 25-30 دقيقة، دون فتح باب الفرن، حتى يرتفع جيدًا ويصبح ذهبيًا من الأعلى.", "قدّم على الفور: أخرجه من الفرن وقدّمه فورًا، بينما لا يزال منتفخًا."],
-    "zh": ["准备模具：在舒芙蕾模具内壁涂满黄油，再撒上帕玛森芝士粉，抖掉多余部分。放入冰箱冷藏。", "制作白酱：在锅中融化黄油，加入面粉，小火搅拌1-2分钟。慢慢倒入温牛奶，同时不断搅拌，直到形成浓稠顺滑的酱汁。离火。", "加入芝士和蛋黄：趁酱汁还温热时拌入格鲁耶尔奶酪、盐、胡椒和肉豆蔻，再逐个加入蛋黄，每次都要充分搅拌。", "打发蛋白：将蛋白加一小撮盐打发至坚挺有光泽，形成硬性发泡。", "小心拌入：先将三分之一的蛋白拌入酱汁中，用力搅拌使其变稀。再将剩余蛋白以从下往上的大幅度手法拌入，注意不要消泡。", "倒入并抹平：将混合物倒入准备好的模具中，接近边缘处，用刮刀抹平表面。用拇指沿模具内壁边缘划一圈，帮助舒芙蕾垂直膨起。", "立即烘烤：以190°C烘烤25-30分钟，中途不要打开烤箱门，直到充分膨起且顶部呈金黄色。", "即刻享用：从烤箱取出后立即享用，趁它还蓬松的时候。"],
-    "ja": ["型を準備する：スフレ型にたっぷりバターを塗り、内側にパルメザンチーズをまぶして余分を落とす。冷蔵庫で冷やす。", "ベシャメルソースを作る：鍋でバターを溶かし、小麦粉を加えて弱火で1〜2分混ぜる。温めた牛乳を少しずつ加えながら絶えずかき混ぜ、とろみのあるなめらかなソースにする。火から下ろす。", "チーズと卵黄を加える：まだ温かいソースにグリュイエールチーズ、塩、こしょう、ナツメグを混ぜ込み、卵黄を一個ずつ加えてよく混ぜる。", "卵白を泡立てる：卵白に塩をひとつまみ加え、しっかりとした角が立つまで泡立てる。", "丁寧に混ぜ込む：卵白の3分の1をソースに加えて力強く混ぜてなじませる。残りの卵白は下から上へ大きく動かして、しぼませないように混ぜ込む。", "流し込んで平らにする：混合物を型の縁近くまで流し入れ、ヘラで表面を平らにする。型の内側の縁に沿って親指をなぞらせ、スフレがまっすぐ膨らむのを助ける。", "すぐに焼く：オーブンの扉を開けずに190°Cで25〜30分焼き、しっかり膨らんで表面がきつね色になるまで焼く。", "すぐに提供する：オーブンから出したらすぐに、膨らんでいるうちに提供する。"],
-    "tr": ["KABI HAZIRLAYIN: bir sufle kabını bolca tereyağlayın, ardından içini parmesanla kaplayıp fazlasını silkeleyin. Buzdolabında soğutun.", "BÉCHAMEL YAPIN: tereyağını bir tencerede eritin, unu ekleyip kısık ateşte 1-2 dakika karıştırın. Ilık sütü yavaş yavaş, sürekli karıştırarak ekleyip kalın, pürüzsüz bir sos elde edin. Ateşten alın.", "PEYNİR VE SARILARI EKLEYİN: gruyère peynirini, tuzu, karabiberi ve muskatı sos hâlâ sıcakken karıştırın, ardından yumurta sarılarını birer birer ekleyip her seferinde iyice karıştırın.", "AKLARI ÇIRPIN: yumurta aklarını bir tutam tuzla sert ve parlak tepecikler oluşana kadar çırpın.", "DİKKATLİCE KATIN: akların üçte birini sosa katıp sosu inceltmek için kuvvetlice karıştırın. Kalan akları söndürmeden alttan üste geniş hareketlerle katın.", "DÖKÜN VE DÜZLEŞTİRİN: karışımı hazırlanmış kaba neredeyse kenarına kadar dökün ve yüzeyini bir spatula ile düzleştirin. Suflenin dümdüz yükselmesine yardımcı olmak için başparmağınızı kabın iç kenarında gezdirin.", "HEMEN PİŞİRİN: fırın kapağını açmadan 190°C'de 25-30 dakika, iyice kabarıp üstü altın rengi olana kadar pişirin.", "ANINDA SERVİS YAPIN: fırından çıkarın ve hâlâ kabarıkken hemen servis yapın."],
-    "it": ["PREPARA LO STAMPO: imburra generosamente uno stampo da soufflé, poi cospargi l'interno di parmigiano, scuotendo l'eccesso. Metti in frigo.", "PREPARA LA BESCIAMELLA: sciogli il burro in un pentolino, aggiungi la farina e mescola 1-2 minuti a fuoco basso. Versa il latte caldo poco alla volta, mescolando continuamente, finché ottieni una salsa densa e liscia. Togli dal fuoco.", "AGGIUNGI IL FORMAGGIO E I TUORLI: incorpora il groviera, sale, pepe e noce moscata nella salsa ancora calda, poi aggiungi i tuorli uno alla volta, mescolando bene dopo ciascuno.", "MONTA GLI ALBUMI: monta gli albumi con un pizzico di sale finché sono fermi e lucidi, formando picchi fermi.", "INCORPORA CON DELICATEZZA: incorpora un terzo degli albumi nella salsa e mescola energicamente per alleggerirla. Incorpora il resto degli albumi con movimenti ampi, dal basso verso l'alto, senza farli smontare.", "VERSA E LIVELLA: versa il composto nello stampo preparato quasi fino al bordo e livella la superficie con una spatola. Passa il pollice lungo il bordo interno dello stampo per aiutare il soufflé a salire dritto.", "CUOCI SUBITO: cuoci a 190°C per 25-30 minuti, senza aprire il forno, finché ben gonfio e dorato in superficie.", "SERVI ALL'ISTANTE: togli dal forno e servi immediatamente, mentre è ancora gonfio."],
-    "ko": ["틀 준비하기: 수플레 틀에 버터를 넉넉히 바르고 안쪽에 파르메산 치즈를 뿌린 뒤 여분을 털어낸다. 냉장고에 넣어 차갑게 한다.", "베샤멜 소스 만들기: 냄비에 버터를 녹이고 밀가루를 넣어 약불에서 1-2분간 젓는다. 따뜻한 우유를 조금씩 부으며 계속 저어 걸쭉하고 매끄러운 소스를 만든다. 불에서 내린다.", "치즈와 노른자 넣기: 소스가 아직 따뜻할 때 그뤼에르 치즈, 소금, 후추, 육두구를 섞고, 달걀노른자를 하나씩 넣으며 매번 잘 섞는다.", "흰자 휘핑하기: 흰자에 소금 한 꼬집을 넣고 단단하고 윤기 나는 뿔이 설 때까지 휘핑한다.", "조심스럽게 섞기: 흰자의 3분의 1을 소스에 넣고 힘차게 섞어 소스를 묽게 만든다. 나머지 흰자는 밑에서 위로 크게 저으며 꺼지지 않게 섞는다.", "붓고 정리하기: 혼합물을 준비한 틀에 가장자리 가까이까지 붓고 주걱으로 표면을 평평하게 한다. 엄지손가락으로 틀 안쪽 가장자리를 한 바퀴 훑어 수플레가 곧게 부풀도록 돕는다.", "즉시 굽기: 오븐 문을 열지 않고 190°C에서 25-30분간 잘 부풀고 윗면이 황금빛이 될 때까지 굽는다.", "바로 서빙하기: 오븐에서 꺼내 아직 부풀어 있을 때 즉시 서빙한다."],
-    "hi": ["बर्तन तैयार करें: सूफ़ले के बर्तन को अच्छी तरह मक्खन से चिकना करें, फिर अंदर परमेज़ान छिड़कें, अतिरिक्त झाड़ दें। फ्रिज में ठंडा करें।", "बेशामेल बनाएं: एक पैन में मक्खन पिघलाएं, आटा डालें और धीमी आंच पर 1-2 मिनट चलाएं। गरम दूध थोड़ा-थोड़ा करके डालें, लगातार हिलाते हुए, जब तक गाढ़ी, चिकनी चटनी न बन जाए। आंच से उतारें।", "चीज़ और ज़र्दी डालें: चटनी के गरम रहते हुए उसमें ग्रुयेर चीज़, नमक, काली मिर्च और जायफल मिलाएं, फिर अंडे की ज़र्दी एक-एक करके डालें, हर बार अच्छी तरह मिलाते हुए।", "सफेदी फेंटें: अंडे की सफेदी को एक चुटकी नमक के साथ तब तक फेंटें जब तक कड़ी और चमकदार न हो जाए, मज़बूत चोटियां बनें।", "सावधानी से मिलाएं: एक-तिहाई सफेदी को चटनी में मिलाकर ज़ोर से मिलाएं ताकि वह पतली हो जाए। बाकी सफेदी को नीचे से ऊपर की ओर चौड़ी गतियों से मिलाएं, बिना बैठने दिए।", "डालें और समतल करें: मिश्रण को तैयार बर्तन में किनारे के करीब तक डालें और स्पैचुला से सतह समतल करें। सूफ़ले को सीधा उठने में मदद के लिए बर्तन के अंदरूनी किनारे पर अंगूठा फिराएं।", "तुरंत बेक करें: ओवन का दरवाज़ा खोले बिना 190°C पर 25-30 मिनट तक बेक करें, जब तक अच्छी तरह फूल न जाए और ऊपर से सुनहरा न हो जाए।", "तुरंत परोसें: ओवन से निकालें और फूला रहते हुए ही तुरंत परोसें।"]
+    "ro": "PREGĂTEȘTE FORMA: unge generos o formă de suflé cu unt, apoi tapetează interiorul cu parmezan, scuturând excesul. Pune la frigider. FĂ SOSUL BÉCHAMEL: topește untul într-o cratiță, adaugă făina și amestecă 1-2 minute la foc mic. Toarnă laptele cald treptat, amestecând continuu, până obții un sos gros și neted. Ia de pe foc. ADAUGĂ BRÂNZA ȘI GĂLBENUȘURILE: încorporează brânza gruyère, sare, piper și nucșoară în sos cât e încă cald, apoi adaugă gălbenușurile unul câte unul, amestecând bine după fiecare. BATE ALBUȘURILE: bate albușurile cu un praf de sare până devin tari și lucioase, formând vârfuri ferme. ÎNCORPOREAZĂ CU GRIJĂ: adaugă o treime din albușuri în sos și amestecă viguros ca să-l subțieze. Încorporează restul albușurilor cu mișcări largi, de jos în sus, fără să le lași să se lase. TOARNĂ ȘI NIVELEAZĂ: toarnă compoziția în forma pregătită până aproape de margine și netezește suprafața cu o spatulă. Trece degetul mare pe marginea interioară a formei pentru a ajuta suflé-ul să crească drept. COACE IMEDIAT: coace la 190°C timp de 25-30 minute, fără să deschizi ușa cuptorului, până se umflă bine și devine auriu deasupra. SERVEȘTE PE LOC: scoate din cuptor și servește imediat, cât mai e încă umflat.",
+    "en": "PREPARE THE DISH: generously butter a soufflé dish, then dust the inside with parmesan, shaking out the excess. Chill in the fridge. MAKE THE BÉCHAMEL: melt the butter in a saucepan, add the flour and stir for 1-2 minutes over low heat. Pour in the warm milk gradually, stirring constantly, until you get a thick, smooth sauce. Remove from heat. ADD THE CHEESE AND YOLKS: stir the gruyère, salt, pepper and nutmeg into the sauce while still warm, then add the egg yolks one at a time, mixing well after each. WHIP THE EGG WHITES: whip the egg whites with a pinch of salt until stiff and glossy, forming firm peaks. FOLD IN CAREFULLY: fold a third of the egg whites into the sauce and mix vigorously to loosen it. Fold in the remaining whites with wide, bottom-to-top strokes, without letting them deflate. POUR AND LEVEL: pour the mixture into the prepared dish almost to the rim and smooth the surface with a spatula. Run your thumb around the inside edge of the dish to help the soufflé rise straight. BAKE IMMEDIATELY: bake at 190°C for 25-30 minutes, without opening the oven door, until well risen and golden on top. SERVE AT ONCE: remove from the oven and serve immediately, while still puffed up.",
+    "es": "PREPARA EL MOLDE: engrasa generosamente un molde para suflé con mantequilla, luego espolvorea el interior con parmesano, sacudiendo el exceso. Enfría en la nevera. HAZ LA BECHAMEL: derrite la mantequilla en un cazo, añade la harina y remueve 1-2 minutos a fuego bajo. Vierte la leche caliente poco a poco, removiendo sin parar, hasta obtener una salsa espesa y lisa. Retira del fuego. AÑADE EL QUESO Y LAS YEMAS: incorpora el gruyère, la sal, la pimienta y la nuez moscada a la salsa mientras aún está caliente, luego añade las yemas de una en una, mezclando bien después de cada una. MONTA LAS CLARAS: bate las claras con una pizca de sal hasta que estén firmes y brillantes, formando picos firmes. INCORPORA CON CUIDADO: incorpora un tercio de las claras a la salsa y mezcla enérgicamente para aligerarla. Incorpora el resto de las claras con movimientos amplios, de abajo hacia arriba, sin dejar que bajen. VIERTE Y NIVELA: vierte la mezcla en el molde preparado casi hasta el borde y alisa la superficie con una espátula. Pasa el pulgar por el borde interior del molde para ayudar a que el suflé suba recto. HORNEA DE INMEDIATO: hornea a 190°C durante 25-30 minutos, sin abrir la puerta del horno, hasta que suba bien y quede dorado por encima. SIRVE ENSEGUIDA: saca del horno y sirve de inmediato, mientras aún está hinchado.",
+    "fr": "PRÉPARE LE MOULE: beurre généreusement un moule à soufflé, puis saupoudre l'intérieur de parmesan, en secouant l'excédent. Réfrigère. FAIS LA BÉCHAMEL: fais fondre le beurre dans une casserole, ajoute la farine et remue 1-2 minutes à feu doux. Verse le lait chaud petit à petit, en remuant sans cesse, jusqu'à obtenir une sauce épaisse et lisse. Retire du feu. AJOUTE LE FROMAGE ET LES JAUNES: incorpore le gruyère, le sel, le poivre et la muscade à la sauce encore chaude, puis ajoute les jaunes d'œufs un à un, en mélangeant bien après chacun. MONTE LES BLANCS: fouette les blancs d'œufs avec une pincée de sel jusqu'à ce qu'ils soient fermes et brillants, formant des pics fermes. INCORPORE DÉLICATEMENT: incorpore un tiers des blancs à la sauce et mélange vigoureusement pour l'alléger. Incorpore le reste des blancs avec des mouvements amples, du bas vers le haut, sans les laisser retomber. VERSE ET NIVELLE: verse la préparation dans le moule préparé presque jusqu'au bord et lisse la surface avec une spatule. Passe le pouce sur le bord intérieur du moule pour aider le soufflé à monter droit. CUIS IMMÉDIATEMENT: fais cuire à 190°C pendant 25-30 minutes, sans ouvrir la porte du four, jusqu'à ce qu'il soit bien monté et doré dessus. SERS AUSSITÔT: sors du four et sers immédiatement, tant qu'il est encore gonflé.",
+    "de": "FORM VORBEREITEN: eine Souffléform großzügig buttern, dann das Innere mit Parmesan bestäuben und Überschuss abschütteln. In den Kühlschrank stellen. BÉCHAMEL ZUBEREITEN: die Butter in einem Topf schmelzen, das Mehl zugeben und 1-2 Minuten bei niedriger Hitze rühren. Die warme Milch nach und nach unter ständigem Rühren zugießen, bis eine dicke, glatte Sauce entsteht. Vom Herd nehmen. KÄSE UND EIGELB ZUGEBEN: den Gruyère, Salz, Pfeffer und Muskat in die noch warme Sauce rühren, dann das Eigelb nacheinander zugeben und nach jedem gut vermischen. EIWEISS SCHLAGEN: das Eiweiß mit einer Prise Salz steif und glänzend schlagen, bis feste Spitzen entstehen. VORSICHTIG UNTERHEBEN: ein Drittel des Eiweißes unter die Sauce heben und kräftig verrühren, um sie zu lockern. Den Rest des Eiweißes mit weiten Bewegungen von unten nach oben unterheben, ohne es zusammenfallen zu lassen. EINFÜLLEN UND GLÄTTEN: die Mischung fast bis zum Rand in die vorbereitete Form gießen und die Oberfläche mit einem Spatel glätten. Mit dem Daumen am inneren Rand der Form entlangfahren, damit das Soufflé gerade aufgeht. SOFORT BACKEN: bei 190°C 25-30 Minuten backen, ohne die Ofentür zu öffnen, bis es gut aufgegangen und oben goldbraun ist. SOFORT SERVIEREN: aus dem Ofen nehmen und sofort servieren, solange es noch aufgegangen ist.",
+    "pt": "PREPARA A FORMA: unta generosamente uma forma de suflê com manteiga, depois polvilha o interior com parmesão, sacudindo o excesso. Leva ao frio. FAZ O BECHAMEL: derrete a manteiga num tacho, junta a farinha e mexe 1-2 minutos em lume baixo. Verta o leite quente aos poucos, mexendo sempre, até obter um molho espesso e liso. Retira do lume. JUNTA O QUEIJO E AS GEMAS: incorpora o gruyère, o sal, a pimenta e a noz-moscada no molho ainda quente, depois junta as gemas uma a uma, misturando bem após cada uma. BATE AS CLARAS: bate as claras com uma pitada de sal até ficarem firmes e brilhantes, formando picos firmes. INCORPORA COM CUIDADO: incorpora um terço das claras no molho e mistura vigorosamente para o soltar. Incorpora as restantes claras com movimentos amplos, de baixo para cima, sem as deixar baixar. VERTE E NIVELA: verte a mistura na forma preparada quase até à borda e alisa a superfície com uma espátula. Passa o polegar pela borda interior da forma para ajudar o suflê a subir direito. COZE DE IMEDIATO: coze a 190°C durante 25-30 minutos, sem abrir a porta do forno, até subir bem e dourar por cima. SERVE NA HORA: retira do forno e serve imediatamente, enquanto ainda está bem alto.",
+    "ru": "ПОДГОТОВЬ ФОРМУ: щедро смажь маслом форму для суфле, затем обсыпь изнутри пармезаном, стряхнув излишки. Убери в холодильник. ПРИГОТОВЬ БЕШАМЕЛЬ: растопи масло в сотейнике, добавь муку и мешай 1-2 минуты на слабом огне. Постепенно влей тёплое молоко, постоянно помешивая, пока не получится густой, гладкий соус. Сними с огня. ДОБАВЬ СЫР И ЖЕЛТКИ: вмешай грюйер, соль, перец и мускатный орех в ещё тёплый соус, затем добавляй желтки по одному, хорошо перемешивая после каждого. ВЗБЕЙ БЕЛКИ: взбей белки со щепоткой соли до плотности и глянца, до устойчивых пиков. АККУРАТНО ВВЕДИ: введи треть белков в соус и энергично перемешай, чтобы разжижить его. Аккуратно введи оставшиеся белки широкими движениями снизу вверх, не давая им осесть. ВЫЛЕЙ И ВЫРОВНЯЙ: вылей смесь в подготовленную форму почти до края и разровняй поверхность лопаткой. Проведи большим пальцем по внутреннему краю формы, чтобы суфле поднялось ровно. СРАЗУ ВЫПЕКАЙ: выпекай при 190°C 25-30 минут, не открывая дверцу духовки, пока хорошо не поднимется и не подрумянится сверху. ПОДАВАЙ СРАЗУ: достань из духовки и подавай немедленно, пока ещё пышное.",
+    "ar": "جهّز الطبق: ادهن طبق السوفليه بالزبدة بسخاء، ثم رشّ الداخل بالبارميزان، مع نفض الزائد. برّده في الثلاجة. اصنع البشاميل: أذب الزبدة في قدر، أضف الدقيق وحرّك 1-2 دقيقة على نار هادئة. اسكب الحليب الدافئ تدريجيًا مع التحريك المستمر حتى تحصل على صلصة سميكة وناعمة. ارفع عن النار. أضف الجبن والصفار: حرّك جبن الغرويير والملح والفلفل وجوزة الطيب في الصلصة وهي لا تزال دافئة، ثم أضف صفار البيض واحدة تلو الأخرى مع التحريك جيدًا بعد كل واحدة. اخفق البياض: اخفق بياض البيض مع رشة ملح حتى يصبح متماسكًا ولامعًا، مكونًا قمما ثابتة. اطوِ بعناية: اطوِ ثلث البياض في الصلصة واخلط بقوة لتخفيفها. اطوِ باقي البياض بحركات واسعة من الأسفل للأعلى، دون أن يفقد تماسكه. اسكب وسوِّ: اسكب الخليط في الطبق المجهز حتى يقارب الحافة وسوِّ السطح بملعقة مسطحة. مرّر إبهامك على الحافة الداخلية للطبق لمساعدة السوفليه على الارتفاع مستقيمًا. اخبز فورًا: اخبز على 190 درجة مئوية لمدة 25-30 دقيقة، دون فتح باب الفرن، حتى يرتفع جيدًا ويصبح ذهبيًا من الأعلى. قدّم على الفور: أخرجه من الفرن وقدّمه فورًا، بينما لا يزال منتفخًا.",
+    "zh": "准备模具：在舒芙蕾模具内壁涂满黄油，再撒上帕玛森芝士粉，抖掉多余部分。放入冰箱冷藏。 制作白酱：在锅中融化黄油，加入面粉，小火搅拌1-2分钟。慢慢倒入温牛奶，同时不断搅拌，直到形成浓稠顺滑的酱汁。离火。 加入芝士和蛋黄：趁酱汁还温热时拌入格鲁耶尔奶酪、盐、胡椒和肉豆蔻，再逐个加入蛋黄，每次都要充分搅拌。 打发蛋白：将蛋白加一小撮盐打发至坚挺有光泽，形成硬性发泡。 小心拌入：先将三分之一的蛋白拌入酱汁中，用力搅拌使其变稀。再将剩余蛋白以从下往上的大幅度手法拌入，注意不要消泡。 倒入并抹平：将混合物倒入准备好的模具中，接近边缘处，用刮刀抹平表面。用拇指沿模具内壁边缘划一圈，帮助舒芙蕾垂直膨起。 立即烘烤：以190°C烘烤25-30分钟，中途不要打开烤箱门，直到充分膨起且顶部呈金黄色。 即刻享用：从烤箱取出后立即享用，趁它还蓬松的时候。",
+    "ja": "型を準備する：スフレ型にたっぷりバターを塗り、内側にパルメザンチーズをまぶして余分を落とす。冷蔵庫で冷やす。 ベシャメルソースを作る：鍋でバターを溶かし、小麦粉を加えて弱火で1〜2分混ぜる。温めた牛乳を少しずつ加えながら絶えずかき混ぜ、とろみのあるなめらかなソースにする。火から下ろす。 チーズと卵黄を加える：まだ温かいソースにグリュイエールチーズ、塩、こしょう、ナツメグを混ぜ込み、卵黄を一個ずつ加えてよく混ぜる。 卵白を泡立てる：卵白に塩をひとつまみ加え、しっかりとした角が立つまで泡立てる。 丁寧に混ぜ込む：卵白の3分の1をソースに加えて力強く混ぜてなじませる。残りの卵白は下から上へ大きく動かして、しぼませないように混ぜ込む。 流し込んで平らにする：混合物を型の縁近くまで流し入れ、ヘラで表面を平らにする。型の内側の縁に沿って親指をなぞらせ、スフレがまっすぐ膨らむのを助ける。 すぐに焼く：オーブンの扉を開けずに190°Cで25〜30分焼き、しっかり膨らんで表面がきつね色になるまで焼く。 すぐに提供する：オーブンから出したらすぐに、膨らんでいるうちに提供する。",
+    "tr": "KABI HAZIRLAYIN: bir sufle kabını bolca tereyağlayın, ardından içini parmesanla kaplayıp fazlasını silkeleyin. Buzdolabında soğutun. BÉCHAMEL YAPIN: tereyağını bir tencerede eritin, unu ekleyip kısık ateşte 1-2 dakika karıştırın. Ilık sütü yavaş yavaş, sürekli karıştırarak ekleyip kalın, pürüzsüz bir sos elde edin. Ateşten alın. PEYNİR VE SARILARI EKLEYİN: gruyère peynirini, tuzu, karabiberi ve muskatı sos hâlâ sıcakken karıştırın, ardından yumurta sarılarını birer birer ekleyip her seferinde iyice karıştırın. AKLARI ÇIRPIN: yumurta aklarını bir tutam tuzla sert ve parlak tepecikler oluşana kadar çırpın. DİKKATLİCE KATIN: akların üçte birini sosa katıp sosu inceltmek için kuvvetlice karıştırın. Kalan akları söndürmeden alttan üste geniş hareketlerle katın. DÖKÜN VE DÜZLEŞTİRİN: karışımı hazırlanmış kaba neredeyse kenarına kadar dökün ve yüzeyini bir spatula ile düzleştirin. Suflenin dümdüz yükselmesine yardımcı olmak için başparmağınızı kabın iç kenarında gezdirin. HEMEN PİŞİRİN: fırın kapağını açmadan 190°C'de 25-30 dakika, iyice kabarıp üstü altın rengi olana kadar pişirin. ANINDA SERVİS YAPIN: fırından çıkarın ve hâlâ kabarıkken hemen servis yapın.",
+    "it": "PREPARA LO STAMPO: imburra generosamente uno stampo da soufflé, poi cospargi l'interno di parmigiano, scuotendo l'eccesso. Metti in frigo. PREPARA LA BESCIAMELLA: sciogli il burro in un pentolino, aggiungi la farina e mescola 1-2 minuti a fuoco basso. Versa il latte caldo poco alla volta, mescolando continuamente, finché ottieni una salsa densa e liscia. Togli dal fuoco. AGGIUNGI IL FORMAGGIO E I TUORLI: incorpora il groviera, sale, pepe e noce moscata nella salsa ancora calda, poi aggiungi i tuorli uno alla volta, mescolando bene dopo ciascuno. MONTA GLI ALBUMI: monta gli albumi con un pizzico di sale finché sono fermi e lucidi, formando picchi fermi. INCORPORA CON DELICATEZZA: incorpora un terzo degli albumi nella salsa e mescola energicamente per alleggerirla. Incorpora il resto degli albumi con movimenti ampi, dal basso verso l'alto, senza farli smontare. VERSA E LIVELLA: versa il composto nello stampo preparato quasi fino al bordo e livella la superficie con una spatola. Passa il pollice lungo il bordo interno dello stampo per aiutare il soufflé a salire dritto. CUOCI SUBITO: cuoci a 190°C per 25-30 minuti, senza aprire il forno, finché ben gonfio e dorato in superficie. SERVI ALL'ISTANTE: togli dal forno e servi immediatamente, mentre è ancora gonfio.",
+    "ko": "틀 준비하기: 수플레 틀에 버터를 넉넉히 바르고 안쪽에 파르메산 치즈를 뿌린 뒤 여분을 털어낸다. 냉장고에 넣어 차갑게 한다. 베샤멜 소스 만들기: 냄비에 버터를 녹이고 밀가루를 넣어 약불에서 1-2분간 젓는다. 따뜻한 우유를 조금씩 부으며 계속 저어 걸쭉하고 매끄러운 소스를 만든다. 불에서 내린다. 치즈와 노른자 넣기: 소스가 아직 따뜻할 때 그뤼에르 치즈, 소금, 후추, 육두구를 섞고, 달걀노른자를 하나씩 넣으며 매번 잘 섞는다. 흰자 휘핑하기: 흰자에 소금 한 꼬집을 넣고 단단하고 윤기 나는 뿔이 설 때까지 휘핑한다. 조심스럽게 섞기: 흰자의 3분의 1을 소스에 넣고 힘차게 섞어 소스를 묽게 만든다. 나머지 흰자는 밑에서 위로 크게 저으며 꺼지지 않게 섞는다. 붓고 정리하기: 혼합물을 준비한 틀에 가장자리 가까이까지 붓고 주걱으로 표면을 평평하게 한다. 엄지손가락으로 틀 안쪽 가장자리를 한 바퀴 훑어 수플레가 곧게 부풀도록 돕는다. 즉시 굽기: 오븐 문을 열지 않고 190°C에서 25-30분간 잘 부풀고 윗면이 황금빛이 될 때까지 굽는다. 바로 서빙하기: 오븐에서 꺼내 아직 부풀어 있을 때 즉시 서빙한다.",
+    "hi": "बर्तन तैयार करें: सूफ़ले के बर्तन को अच्छी तरह मक्खन से चिकना करें, फिर अंदर परमेज़ान छिड़कें, अतिरिक्त झाड़ दें। फ्रिज में ठंडा करें। बेशामेल बनाएं: एक पैन में मक्खन पिघलाएं, आटा डालें और धीमी आंच पर 1-2 मिनट चलाएं। गरम दूध थोड़ा-थोड़ा करके डालें, लगातार हिलाते हुए, जब तक गाढ़ी, चिकनी चटनी न बन जाए। आंच से उतारें। चीज़ और ज़र्दी डालें: चटनी के गरम रहते हुए उसमें ग्रुयेर चीज़, नमक, काली मिर्च और जायफल मिलाएं, फिर अंडे की ज़र्दी एक-एक करके डालें, हर बार अच्छी तरह मिलाते हुए। सफेदी फेंटें: अंडे की सफेदी को एक चुटकी नमक के साथ तब तक फेंटें जब तक कड़ी और चमकदार न हो जाए, मज़बूत चोटियां बनें। सावधानी से मिलाएं: एक-तिहाई सफेदी को चटनी में मिलाकर ज़ोर से मिलाएं ताकि वह पतली हो जाए। बाकी सफेदी को नीचे से ऊपर की ओर चौड़ी गतियों से मिलाएं, बिना बैठने दिए। डालें और समतल करें: मिश्रण को तैयार बर्तन में किनारे के करीब तक डालें और स्पैचुला से सतह समतल करें। सूफ़ले को सीधा उठने में मदद के लिए बर्तन के अंदरूनी किनारे पर अंगूठा फिराएं। तुरंत बेक करें: ओवन का दरवाज़ा खोले बिना 190°C पर 25-30 मिनट तक बेक करें, जब तक अच्छी तरह फूल न जाए और ऊपर से सुनहरा न हो जाए। तुरंत परोसें: ओवन से निकालें और फूला रहते हुए ही तुरंत परोसें।"
   },
   "originText": {
     "ro": "Cuvântul soufflé vine de la verbul francez 'a sufla' — o descriere directă a ceea ce face preparatul: se umflă cu aer în cuptor. Rețeta apare în bucătăria franceză din secolul XVIII, dar și-a câștigat reputația de test suprem al abilității unui bucătar în secolul XX, când suflé-ul căzut a devenit un clișeu comic pentru mesele care merg prost.\n\nCe desparte un suflé reușit de unul ratat nu e un ingredient secret, ci sincronizarea: albușurile trebuie încorporate imediat înainte de coacere, iar suflé-ul trebuie mâncat în minutele de după ce iese din cuptor. Structura care îl ține umflat e pur mecanică — aerul din albușuri se dilată la căldură — și începe să se prăbușească în clipa în care se răcește și aerul se contractă din nou.",
@@ -85,7 +552,10 @@
   "meta": {
     "time": 50,
     "costRon": 20,
-    "tags": ["family", "vegetarian"],
+    "tags": [
+      "family",
+      "vegetarian"
+    ],
     "desc": {
       "ro": "Suflé pufos pe bază de sos béchamel și brânză gruyère, servit imediat din cuptor.",
       "en": "Airy soufflé built on a béchamel and gruyère base, served straight from the oven.",

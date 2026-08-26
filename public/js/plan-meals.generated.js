@@ -61,22 +61,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      273,
+      275,
+      274,
+      276,
       99,
       14,
-      76,
+      76
+    ],
+    "dinnerIds": [
       40,
       148,
       146,
-      144
-    ],
-    "dinnerIds": [
+      144,
       171,
       2,
-      223,
-      235,
-      231,
-      230,
-      232
+      223
     ]
   },
   "tur-mondial": {
@@ -98,9 +98,9 @@ export const PLAN_MEALS = {
       10,
       246,
       141,
+      265,
       142,
-      145,
-      144
+      276
     ]
   },
   "latin": {

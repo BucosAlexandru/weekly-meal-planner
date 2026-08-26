@@ -4,67 +4,534 @@
   "tipType": "french",
   "pairingsType": "french",
   "origin": {
-    "ro": "Franța", "en": "France", "es": "Francia", "fr": "France", "de": "Frankreich",
-    "pt": "França", "ru": "Франция", "ar": "فرنسا", "zh": "法国", "ja": "フランス",
-    "tr": "Fransa", "it": "Francia", "ko": "프랑스", "hi": "फ़्रांस"
+    "ro": "Franța",
+    "en": "France",
+    "es": "Francia",
+    "fr": "France",
+    "de": "Frankreich",
+    "pt": "França",
+    "ru": "Франция",
+    "ar": "فرنسا",
+    "zh": "法国",
+    "ja": "フランス",
+    "tr": "Fransa",
+    "it": "Francia",
+    "ko": "프랑스",
+    "hi": "फ़्रांस"
   },
   "name": {
-    "ro": "Pain Perdu", "en": "Pain Perdu (French Toast)", "es": "Pain Perdu (Torrija Francesa)", "fr": "Pain Perdu",
-    "de": "Pain Perdu (Armer Ritter)", "pt": "Pain Perdu (Rabanadas)", "ru": "Пен-пердю (французские тосты)", "ar": "بان بيردو (توست فرنسي)",
-    "zh": "法式吐司", "ja": "パン・ペルデュ（フレンチトースト）", "tr": "Pain Perdu (Fransız Tostu)", "it": "Pain Perdu (Toast Francese)",
-    "ko": "팽 페르뒤 (프렌치토스트)", "hi": "पेन पेर्दू (फ्रेंच टोस्ट)"
+    "ro": "Pain Perdu",
+    "en": "Pain Perdu (French Toast)",
+    "es": "Pain Perdu (Torrija Francesa)",
+    "fr": "Pain Perdu",
+    "de": "Pain Perdu (Armer Ritter)",
+    "pt": "Pain Perdu (Rabanadas)",
+    "ru": "Пен-пердю (французские тосты)",
+    "ar": "بان بيردو (توست فرنسي)",
+    "zh": "法式吐司",
+    "ja": "パン・ペルデュ（フレンチトースト）",
+    "tr": "Pain Perdu (Fransız Tostu)",
+    "it": "Pain Perdu (Toast Francese)",
+    "ko": "팽 페르뒤 (프렌치토스트)",
+    "hi": "पेन पेर्दू (फ्रेंच टोस्ट)"
   },
   "category": {
-    "ro": "Mic dejun", "en": "Breakfast", "es": "Desayuno", "fr": "Petit-déjeuner", "de": "Frühstück",
-    "pt": "Pequeno-almoço", "ru": "Завтрак", "ar": "فطور", "zh": "早餐", "ja": "朝食", "tr": "Kahvaltı", "it": "Colazione", "ko": "아침 식사", "hi": "नाश्ता"
+    "ro": "Mic dejun",
+    "en": "Breakfast",
+    "es": "Desayuno",
+    "fr": "Petit-déjeuner",
+    "de": "Frühstück",
+    "pt": "Pequeno-almoço",
+    "ru": "Завтрак",
+    "ar": "فطور",
+    "zh": "早餐",
+    "ja": "朝食",
+    "tr": "Kahvaltı",
+    "it": "Colazione",
+    "ko": "아침 식사",
+    "hi": "नाश्ता"
   },
   "featureCards": {
-    "ro": [{"icon":"🍞","t":"Pâine veche de o zi","d":"Absoarbe compoziția fără să se destrame"},{"icon":"🥛","t":"Muiată, nu doar trecută prin ou","d":"Câteva minute pe fiecare parte pentru a pătrunde până la mijloc"},{"icon":"🧈","t":"Prăjită în unt la foc mediu","d":"Crustă aurie fără să ardă înainte să se încălzească interiorul"},{"icon":"🍯","t":"Servit imediat, cald","d":"Cu zahăr pudră, sirop de arțar sau fructe"}],
-    "en": [{"icon":"🍞","t":"Day-old bread","d":"Absorbs the custard without falling apart"},{"icon":"🥛","t":"Soaked, not just dipped","d":"A few minutes per side so it soaks through to the middle"},{"icon":"🧈","t":"Fried in butter over medium heat","d":"Golden crust without burning before the inside warms"},{"icon":"🍯","t":"Served immediately, hot","d":"With icing sugar, maple syrup or fruit"}],
-    "es": [{"icon":"🍞","t":"Pan del día anterior","d":"Absorbe la mezcla sin desmoronarse"},{"icon":"🥛","t":"Empapado, no solo mojado","d":"Unos minutos por cada lado para que llegue hasta el centro"},{"icon":"🧈","t":"Frito en mantequilla a fuego medio","d":"Costra dorada sin quemarse antes de que se caliente por dentro"},{"icon":"🍯","t":"Servido de inmediato, caliente","d":"Con azúcar glas, sirope de arce o fruta"}],
-    "fr": [{"icon":"🍞","t":"Pain de la veille","d":"Absorbe l'appareil sans se désagréger"},{"icon":"🥛","t":"Trempé, pas juste passé","d":"Quelques minutes de chaque côté pour imbiber jusqu'au centre"},{"icon":"🧈","t":"Doré au beurre à feu moyen","d":"Croûte dorée sans brûler avant que l'intérieur ne chauffe"},{"icon":"🍯","t":"Servi aussitôt, bien chaud","d":"Avec sucre glace, sirop d'érable ou fruits"}],
-    "de": [{"icon":"🍞","t":"Altbackenes Brot","d":"Saugt die Eiermilch auf, ohne auseinanderzufallen"},{"icon":"🥛","t":"Eingeweicht, nicht nur getaucht","d":"Ein paar Minuten pro Seite, damit es bis zur Mitte durchzieht"},{"icon":"🧈","t":"In Butter bei mittlerer Hitze gebraten","d":"Goldbraune Kruste, ohne dass sie verbrennt, bevor das Innere warm wird"},{"icon":"🍯","t":"Sofort heiß serviert","d":"Mit Puderzucker, Ahornsirup oder Früchten"}],
-    "pt": [{"icon":"🍞","t":"Pão do dia anterior","d":"Absorve a mistura sem se desfazer"},{"icon":"🥛","t":"Ensopado, não só molhado","d":"Alguns minutos de cada lado para embeber até ao centro"},{"icon":"🧈","t":"Frito em manteiga em lume médio","d":"Crosta dourada sem queimar antes de o interior aquecer"},{"icon":"🍯","t":"Servido de imediato, quente","d":"Com açúcar em pó, xarope de ácer ou fruta"}],
-    "ru": [{"icon":"🍞","t":"Черствый хлеб","d":"Впитывает смесь, не разваливаясь"},{"icon":"🥛","t":"Пропитанный, а не просто обмакнутый","d":"По несколько минут с каждой стороны, чтобы пропитался до середины"},{"icon":"🧈","t":"Обжаренный на масле на среднем огне","d":"Золотистая корочка без подгорания, пока середина не прогреется"},{"icon":"🍯","t":"Подаётся сразу, горячим","d":"С сахарной пудрой, кленовым сиропом или фруктами"}],
-    "ar": [{"icon":"🍞","t":"خبز من اليوم السابق","d":"يمتص الخليط دون أن يتفكك"},{"icon":"🥛","t":"منقوع، وليس مغموسًا فقط","d":"بضع دقائق لكل جانب حتى ينقع حتى المنتصف"},{"icon":"🧈","t":"مقلي بالزبدة على نار متوسطة","d":"قشرة ذهبية دون احتراق قبل أن يسخن الداخل"},{"icon":"🍯","t":"يُقدَّم فورًا، ساخنًا","d":"مع سكر بودرة أو شراب القيقب أو الفاكهة"}],
-    "zh": [{"icon":"🍞","t":"隔夜面包","d":"能吸收蛋奶液而不散架"},{"icon":"🥛","t":"充分浸泡，而不只是蘸一下","d":"每面浸泡几分钟，让蛋奶液渗透到中心"},{"icon":"🧈","t":"用黄油中火煎","d":"外皮金黄不焦，同时内部也充分加热"},{"icon":"🍯","t":"趁热立即享用","d":"配糖粉、枫糖浆或水果"}],
-    "ja": [{"icon":"🍞","t":"一日置いたパン","d":"崩れずに卵液を吸い込む"},{"icon":"🥛","t":"浸すだけでなく漬け込む","d":"中心まで染み込むよう片面数分ずつ"},{"icon":"🧈","t":"中火でバター焼き","d":"中まで温まる前に焦げないきつね色の焼き色"},{"icon":"🍯","t":"熱いうちにすぐ提供","d":"粉砂糖、メープルシロップ、フルーツを添えて"}],
-    "tr": [{"icon":"🍞","t":"Bayat ekmek","d":"Dağılmadan karışımı emer"},{"icon":"🥛","t":"Sadece daldırılmaz, iyice ıslatılır","d":"Ortasına kadar iyice işlemesi için her tarafta birkaç dakika"},{"icon":"🧈","t":"Orta ateşte tereyağında kızartılır","d":"İç ısınmadan önce yanmadan altın rengi kabuk"},{"icon":"🍯","t":"Hemen sıcak servis edilir","d":"Pudra şekeri, akçaağaç şurubu veya meyveyle"}],
-    "it": [{"icon":"🍞","t":"Pane raffermo","d":"Assorbe il composto senza sfaldarsi"},{"icon":"🥛","t":"Inzuppato, non solo passato","d":"Qualche minuto per lato perché arrivi fino al centro"},{"icon":"🧈","t":"Dorato nel burro a fuoco medio","d":"Crosta dorata senza bruciare prima che l'interno si scaldi"},{"icon":"🍯","t":"Servito subito, caldo","d":"Con zucchero a velo, sciroppo d'acero o frutta"}],
-    "ko": [{"icon":"🍞","t":"하루 지난 빵","d":"부서지지 않고 달걀물을 흡수한다"},{"icon":"🥛","t":"살짝 담그는 게 아니라 충분히 적신다","d":"중심까지 스며들도록 각 면을 몇 분씩"},{"icon":"🧈","t":"중불에서 버터에 부치기","d":"속이 데워지기 전에 타지 않는 황금빛 겉면"},{"icon":"🍯","t":"뜨거울 때 바로 서빙","d":"슈거파우더, 메이플 시럽 또는 과일과 함께"}],
-    "hi": [{"icon":"🍞","t":"एक दिन पुरानी ब्रेड","d":"बिना टूटे मिश्रण को सोख लेती है"},{"icon":"🥛","t":"सिर्फ डुबोई नहीं, भिगोई जाती है","d":"बीच तक भीगने के लिए हर तरफ कुछ मिनट"},{"icon":"🧈","t":"मध्यम आंच पर मक्खन में तली जाती है","d":"अंदर गरम होने से पहले जले बिना सुनहरी परत"},{"icon":"🍯","t":"तुरंत, गरम परोसी जाती है","d":"पिसी चीनी, मेपल सिरप या फल के साथ"}]
+    "ro": [
+      {
+        "icon": "🍞",
+        "t": "Pâine veche de o zi",
+        "d": "Absoarbe compoziția fără să se destrame"
+      },
+      {
+        "icon": "🥛",
+        "t": "Muiată, nu doar trecută prin ou",
+        "d": "Câteva minute pe fiecare parte pentru a pătrunde până la mijloc"
+      },
+      {
+        "icon": "🧈",
+        "t": "Prăjită în unt la foc mediu",
+        "d": "Crustă aurie fără să ardă înainte să se încălzească interiorul"
+      },
+      {
+        "icon": "🍯",
+        "t": "Servit imediat, cald",
+        "d": "Cu zahăr pudră, sirop de arțar sau fructe"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🍞",
+        "t": "Day-old bread",
+        "d": "Absorbs the custard without falling apart"
+      },
+      {
+        "icon": "🥛",
+        "t": "Soaked, not just dipped",
+        "d": "A few minutes per side so it soaks through to the middle"
+      },
+      {
+        "icon": "🧈",
+        "t": "Fried in butter over medium heat",
+        "d": "Golden crust without burning before the inside warms"
+      },
+      {
+        "icon": "🍯",
+        "t": "Served immediately, hot",
+        "d": "With icing sugar, maple syrup or fruit"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🍞",
+        "t": "Pan del día anterior",
+        "d": "Absorbe la mezcla sin desmoronarse"
+      },
+      {
+        "icon": "🥛",
+        "t": "Empapado, no solo mojado",
+        "d": "Unos minutos por cada lado para que llegue hasta el centro"
+      },
+      {
+        "icon": "🧈",
+        "t": "Frito en mantequilla a fuego medio",
+        "d": "Costra dorada sin quemarse antes de que se caliente por dentro"
+      },
+      {
+        "icon": "🍯",
+        "t": "Servido de inmediato, caliente",
+        "d": "Con azúcar glas, sirope de arce o fruta"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🍞",
+        "t": "Pain de la veille",
+        "d": "Absorbe l'appareil sans se désagréger"
+      },
+      {
+        "icon": "🥛",
+        "t": "Trempé, pas juste passé",
+        "d": "Quelques minutes de chaque côté pour imbiber jusqu'au centre"
+      },
+      {
+        "icon": "🧈",
+        "t": "Doré au beurre à feu moyen",
+        "d": "Croûte dorée sans brûler avant que l'intérieur ne chauffe"
+      },
+      {
+        "icon": "🍯",
+        "t": "Servi aussitôt, bien chaud",
+        "d": "Avec sucre glace, sirop d'érable ou fruits"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🍞",
+        "t": "Altbackenes Brot",
+        "d": "Saugt die Eiermilch auf, ohne auseinanderzufallen"
+      },
+      {
+        "icon": "🥛",
+        "t": "Eingeweicht, nicht nur getaucht",
+        "d": "Ein paar Minuten pro Seite, damit es bis zur Mitte durchzieht"
+      },
+      {
+        "icon": "🧈",
+        "t": "In Butter bei mittlerer Hitze gebraten",
+        "d": "Goldbraune Kruste, ohne dass sie verbrennt, bevor das Innere warm wird"
+      },
+      {
+        "icon": "🍯",
+        "t": "Sofort heiß serviert",
+        "d": "Mit Puderzucker, Ahornsirup oder Früchten"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🍞",
+        "t": "Pão do dia anterior",
+        "d": "Absorve a mistura sem se desfazer"
+      },
+      {
+        "icon": "🥛",
+        "t": "Ensopado, não só molhado",
+        "d": "Alguns minutos de cada lado para embeber até ao centro"
+      },
+      {
+        "icon": "🧈",
+        "t": "Frito em manteiga em lume médio",
+        "d": "Crosta dourada sem queimar antes de o interior aquecer"
+      },
+      {
+        "icon": "🍯",
+        "t": "Servido de imediato, quente",
+        "d": "Com açúcar em pó, xarope de ácer ou fruta"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🍞",
+        "t": "Черствый хлеб",
+        "d": "Впитывает смесь, не разваливаясь"
+      },
+      {
+        "icon": "🥛",
+        "t": "Пропитанный, а не просто обмакнутый",
+        "d": "По несколько минут с каждой стороны, чтобы пропитался до середины"
+      },
+      {
+        "icon": "🧈",
+        "t": "Обжаренный на масле на среднем огне",
+        "d": "Золотистая корочка без подгорания, пока середина не прогреется"
+      },
+      {
+        "icon": "🍯",
+        "t": "Подаётся сразу, горячим",
+        "d": "С сахарной пудрой, кленовым сиропом или фруктами"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🍞",
+        "t": "خبز من اليوم السابق",
+        "d": "يمتص الخليط دون أن يتفكك"
+      },
+      {
+        "icon": "🥛",
+        "t": "منقوع، وليس مغموسًا فقط",
+        "d": "بضع دقائق لكل جانب حتى ينقع حتى المنتصف"
+      },
+      {
+        "icon": "🧈",
+        "t": "مقلي بالزبدة على نار متوسطة",
+        "d": "قشرة ذهبية دون احتراق قبل أن يسخن الداخل"
+      },
+      {
+        "icon": "🍯",
+        "t": "يُقدَّم فورًا، ساخنًا",
+        "d": "مع سكر بودرة أو شراب القيقب أو الفاكهة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🍞",
+        "t": "隔夜面包",
+        "d": "能吸收蛋奶液而不散架"
+      },
+      {
+        "icon": "🥛",
+        "t": "充分浸泡，而不只是蘸一下",
+        "d": "每面浸泡几分钟，让蛋奶液渗透到中心"
+      },
+      {
+        "icon": "🧈",
+        "t": "用黄油中火煎",
+        "d": "外皮金黄不焦，同时内部也充分加热"
+      },
+      {
+        "icon": "🍯",
+        "t": "趁热立即享用",
+        "d": "配糖粉、枫糖浆或水果"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🍞",
+        "t": "一日置いたパン",
+        "d": "崩れずに卵液を吸い込む"
+      },
+      {
+        "icon": "🥛",
+        "t": "浸すだけでなく漬け込む",
+        "d": "中心まで染み込むよう片面数分ずつ"
+      },
+      {
+        "icon": "🧈",
+        "t": "中火でバター焼き",
+        "d": "中まで温まる前に焦げないきつね色の焼き色"
+      },
+      {
+        "icon": "🍯",
+        "t": "熱いうちにすぐ提供",
+        "d": "粉砂糖、メープルシロップ、フルーツを添えて"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🍞",
+        "t": "Bayat ekmek",
+        "d": "Dağılmadan karışımı emer"
+      },
+      {
+        "icon": "🥛",
+        "t": "Sadece daldırılmaz, iyice ıslatılır",
+        "d": "Ortasına kadar iyice işlemesi için her tarafta birkaç dakika"
+      },
+      {
+        "icon": "🧈",
+        "t": "Orta ateşte tereyağında kızartılır",
+        "d": "İç ısınmadan önce yanmadan altın rengi kabuk"
+      },
+      {
+        "icon": "🍯",
+        "t": "Hemen sıcak servis edilir",
+        "d": "Pudra şekeri, akçaağaç şurubu veya meyveyle"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🍞",
+        "t": "Pane raffermo",
+        "d": "Assorbe il composto senza sfaldarsi"
+      },
+      {
+        "icon": "🥛",
+        "t": "Inzuppato, non solo passato",
+        "d": "Qualche minuto per lato perché arrivi fino al centro"
+      },
+      {
+        "icon": "🧈",
+        "t": "Dorato nel burro a fuoco medio",
+        "d": "Crosta dorata senza bruciare prima che l'interno si scaldi"
+      },
+      {
+        "icon": "🍯",
+        "t": "Servito subito, caldo",
+        "d": "Con zucchero a velo, sciroppo d'acero o frutta"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🍞",
+        "t": "하루 지난 빵",
+        "d": "부서지지 않고 달걀물을 흡수한다"
+      },
+      {
+        "icon": "🥛",
+        "t": "살짝 담그는 게 아니라 충분히 적신다",
+        "d": "중심까지 스며들도록 각 면을 몇 분씩"
+      },
+      {
+        "icon": "🧈",
+        "t": "중불에서 버터에 부치기",
+        "d": "속이 데워지기 전에 타지 않는 황금빛 겉면"
+      },
+      {
+        "icon": "🍯",
+        "t": "뜨거울 때 바로 서빙",
+        "d": "슈거파우더, 메이플 시럽 또는 과일과 함께"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🍞",
+        "t": "एक दिन पुरानी ब्रेड",
+        "d": "बिना टूटे मिश्रण को सोख लेती है"
+      },
+      {
+        "icon": "🥛",
+        "t": "सिर्फ डुबोई नहीं, भिगोई जाती है",
+        "d": "बीच तक भीगने के लिए हर तरफ कुछ मिनट"
+      },
+      {
+        "icon": "🧈",
+        "t": "मध्यम आंच पर मक्खन में तली जाती है",
+        "d": "अंदर गरम होने से पहले जले बिना सुनहरी परत"
+      },
+      {
+        "icon": "🍯",
+        "t": "तुरंत, गरम परोसी जाती है",
+        "d": "पिसी चीनी, मेपल सिरप या फल के साथ"
+      }
+    ]
   },
   "ingredients": {
-    "ro": ["8 felii de pâine veche de o zi (brioșă sau baghetă)", "3 ouă", "250ml lapte", "50ml smântână lichidă", "40g zahăr", "1 linguriță extract de vanilie", "un praf de scorțișoară", "unt pentru prăjit", "zahăr pudră și sirop de arțar, pentru servire"],
-    "en": ["8 slices day-old bread (brioche or baguette)", "3 eggs", "250ml milk", "50ml heavy cream", "40g sugar", "1 tsp vanilla extract", "a pinch of cinnamon", "butter, for frying", "icing sugar and maple syrup, to serve"],
-    "es": ["8 rebanadas de pan del día anterior (brioche o baguette)", "3 huevos", "250ml de leche", "50ml de nata líquida", "40g de azúcar", "1 cdta de extracto de vainilla", "una pizca de canela", "mantequilla, para freír", "azúcar glas y sirope de arce, para servir"],
-    "fr": ["8 tranches de pain de la veille (brioche ou baguette)", "3 œufs", "250ml de lait", "50ml de crème liquide", "40g de sucre", "1 c. à café d'extrait de vanille", "une pincée de cannelle", "beurre, pour la cuisson", "sucre glace et sirop d'érable, pour servir"],
-    "de": ["8 Scheiben altbackenes Brot (Brioche oder Baguette)", "3 Eier", "250ml Milch", "50ml Sahne", "40g Zucker", "1 TL Vanilleextrakt", "eine Prise Zimt", "Butter, zum Braten", "Puderzucker und Ahornsirup, zum Servieren"],
-    "pt": ["8 fatias de pão do dia anterior (brioche ou baguete)", "3 ovos", "250ml de leite", "50ml de natas líquidas", "40g de açúcar", "1 col. chá de extrato de baunilha", "uma pitada de canela", "manteiga, para fritar", "açúcar em pó e xarope de ácer, para servir"],
-    "ru": ["8 ломтиков черствого хлеба (бриошь или багет)", "3 яйца", "250мл молока", "50мл жирных сливок", "40г сахара", "1 ч.л. ванильного экстракта", "щепотка корицы", "масло, для жарки", "сахарная пудра и кленовый сироп, для подачи"],
-    "ar": ["8 شرائح خبز من اليوم السابق (بريوش أو باغيت)", "3 بيضات", "250مل حليب", "50مل كريمة سائلة", "40غ سكر", "ملعقة صغيرة خلاصة فانيليا", "رشة قرفة", "زبدة، للقلي", "سكر بودرة وشراب القيقب، للتقديم"],
-    "zh": ["隔夜面包8片（布里欧修或法棍）", "3个鸡蛋", "250毫升牛奶", "50毫升淡奶油", "40克糖", "1茶匙香草精", "一小撮肉桂粉", "黄油，用于煎制", "糖粉和枫糖浆，用于装饰"],
-    "ja": ["一日置いたパン8枚（ブリオッシュまたはバゲット）", "卵3個", "牛乳250ml", "生クリーム50ml", "砂糖40g", "バニラエキス小さじ1", "シナモンひとつまみ", "バター（焼く用）", "粉砂糖とメープルシロップ（添える用）"],
-    "tr": ["8 dilim bayat ekmek (brioche veya baget)", "3 yumurta", "250ml süt", "50ml krema", "40g şeker", "1 tatlı kaşığı vanilya özütü", "bir tutam tarçın", "kızartmak için tereyağı", "servis için pudra şekeri ve akçaağaç şurubu"],
-    "it": ["8 fette di pane raffermo (brioche o baguette)", "3 uova", "250ml di latte", "50ml di panna fresca", "40g di zucchero", "1 cucchiaino di estratto di vaniglia", "un pizzico di cannella", "burro, per friggere", "zucchero a velo e sciroppo d'acero, per servire"],
-    "ko": ["하루 지난 빵 8장 (브리오슈 또는 바게트)", "달걀 3개", "우유 250ml", "생크림 50ml", "설탕 40g", "바닐라 익스트랙트 1작은술", "계피가루 한 꼬집", "버터, 굽는 용", "슈거파우더와 메이플 시럽, 곁들임용"],
-    "hi": ["8 स्लाइस एक दिन पुरानी ब्रेड (ब्रियोश या बैगेट)", "3 अंडे", "250मिली दूध", "50मिली हैवी क्रीम", "40ग्राम चीनी", "1 छोटा चम्मच वनीला एक्सट्रैक्ट", "एक चुटकी दालचीनी", "तलने के लिए मक्खन", "परोसने के लिए पिसी चीनी और मेपल सिरप"]
+    "ro": [
+      "8 felii de pâine veche de o zi (brioșă sau baghetă)",
+      "3 ouă",
+      "250ml lapte",
+      "50ml smântână lichidă",
+      "40g zahăr",
+      "1 linguriță extract de vanilie",
+      "un praf de scorțișoară",
+      "unt pentru prăjit",
+      "zahăr pudră și sirop de arțar, pentru servire"
+    ],
+    "en": [
+      "8 slices day-old bread (brioche or baguette)",
+      "3 eggs",
+      "250ml milk",
+      "50ml heavy cream",
+      "40g sugar",
+      "1 tsp vanilla extract",
+      "a pinch of cinnamon",
+      "butter, for frying",
+      "icing sugar and maple syrup, to serve"
+    ],
+    "es": [
+      "8 rebanadas de pan del día anterior (brioche o baguette)",
+      "3 huevos",
+      "250ml de leche",
+      "50ml de nata líquida",
+      "40g de azúcar",
+      "1 cdta de extracto de vainilla",
+      "una pizca de canela",
+      "mantequilla, para freír",
+      "azúcar glas y sirope de arce, para servir"
+    ],
+    "fr": [
+      "8 tranches de pain de la veille (brioche ou baguette)",
+      "3 œufs",
+      "250ml de lait",
+      "50ml de crème liquide",
+      "40g de sucre",
+      "1 c. à café d'extrait de vanille",
+      "une pincée de cannelle",
+      "beurre, pour la cuisson",
+      "sucre glace et sirop d'érable, pour servir"
+    ],
+    "de": [
+      "8 Scheiben altbackenes Brot (Brioche oder Baguette)",
+      "3 Eier",
+      "250ml Milch",
+      "50ml Sahne",
+      "40g Zucker",
+      "1 TL Vanilleextrakt",
+      "eine Prise Zimt",
+      "Butter, zum Braten",
+      "Puderzucker und Ahornsirup, zum Servieren"
+    ],
+    "pt": [
+      "8 fatias de pão do dia anterior (brioche ou baguete)",
+      "3 ovos",
+      "250ml de leite",
+      "50ml de natas líquidas",
+      "40g de açúcar",
+      "1 col. chá de extrato de baunilha",
+      "uma pitada de canela",
+      "manteiga, para fritar",
+      "açúcar em pó e xarope de ácer, para servir"
+    ],
+    "ru": [
+      "8 ломтиков черствого хлеба (бриошь или багет)",
+      "3 яйца",
+      "250мл молока",
+      "50мл жирных сливок",
+      "40г сахара",
+      "1 ч.л. ванильного экстракта",
+      "щепотка корицы",
+      "масло, для жарки",
+      "сахарная пудра и кленовый сироп, для подачи"
+    ],
+    "ar": [
+      "8 شرائح خبز من اليوم السابق (بريوش أو باغيت)",
+      "3 بيضات",
+      "250مل حليب",
+      "50مل كريمة سائلة",
+      "40غ سكر",
+      "ملعقة صغيرة خلاصة فانيليا",
+      "رشة قرفة",
+      "زبدة، للقلي",
+      "سكر بودرة وشراب القيقب، للتقديم"
+    ],
+    "zh": [
+      "隔夜面包8片（布里欧修或法棍）",
+      "3个鸡蛋",
+      "250毫升牛奶",
+      "50毫升淡奶油",
+      "40克糖",
+      "1茶匙香草精",
+      "一小撮肉桂粉",
+      "黄油，用于煎制",
+      "糖粉和枫糖浆，用于装饰"
+    ],
+    "ja": [
+      "一日置いたパン8枚（ブリオッシュまたはバゲット）",
+      "卵3個",
+      "牛乳250ml",
+      "生クリーム50ml",
+      "砂糖40g",
+      "バニラエキス小さじ1",
+      "シナモンひとつまみ",
+      "バター（焼く用）",
+      "粉砂糖とメープルシロップ（添える用）"
+    ],
+    "tr": [
+      "8 dilim bayat ekmek (brioche veya baget)",
+      "3 yumurta",
+      "250ml süt",
+      "50ml krema",
+      "40g şeker",
+      "1 tatlı kaşığı vanilya özütü",
+      "bir tutam tarçın",
+      "kızartmak için tereyağı",
+      "servis için pudra şekeri ve akçaağaç şurubu"
+    ],
+    "it": [
+      "8 fette di pane raffermo (brioche o baguette)",
+      "3 uova",
+      "250ml di latte",
+      "50ml di panna fresca",
+      "40g di zucchero",
+      "1 cucchiaino di estratto di vaniglia",
+      "un pizzico di cannella",
+      "burro, per friggere",
+      "zucchero a velo e sciroppo d'acero, per servire"
+    ],
+    "ko": [
+      "하루 지난 빵 8장 (브리오슈 또는 바게트)",
+      "달걀 3개",
+      "우유 250ml",
+      "생크림 50ml",
+      "설탕 40g",
+      "바닐라 익스트랙트 1작은술",
+      "계피가루 한 꼬집",
+      "버터, 굽는 용",
+      "슈거파우더와 메이플 시럽, 곁들임용"
+    ],
+    "hi": [
+      "8 स्लाइस एक दिन पुरानी ब्रेड (ब्रियोश या बैगेट)",
+      "3 अंडे",
+      "250मिली दूध",
+      "50मिली हैवी क्रीम",
+      "40ग्राम चीनी",
+      "1 छोटा चम्मच वनीला एक्सट्रैक्ट",
+      "एक चुटकी दालचीनी",
+      "तलने के लिए मक्खन",
+      "परोसने के लिए पिसी चीनी और मेपल सिरप"
+    ]
   },
   "howIsMade": {
-    "ro": ["PREGĂTEȘTE COMPOZIȚIA: bate ouăle cu laptele, smântâna, zahărul, vanilia și scorțișoara într-un vas larg și plat.", "MUIAȚĂ PÂINEA: așază feliile de pâine în compoziție și lasă 2-3 minute pe fiecare parte, apăsând ușor, până se îmbibă complet până la mijloc.", "ÎNCĂLZEȘTE TIGAIA: topește unt într-o tigaie mare la foc mediu, până spumează ușor.", "PRĂJEȘTE FELIILE: pune feliile îmbibate în tigaie fără să le aglomerezi și prăjește 3-4 minute pe fiecare parte, până devin aurii și crocante la exterior.", "VERIFICĂ INTERIORUL: presează ușor centrul feliei — trebuie să fie moale și cald, nu umed sau crud.", "SERVEȘTE IMEDIAT: presară zahăr pudră deasupra și adaugă sirop de arțar sau fructe proaspete, cât e încă fierbinte."],
-    "en": ["MAKE THE CUSTARD: whisk the eggs with the milk, cream, sugar, vanilla and cinnamon in a wide, shallow dish.", "SOAK THE BREAD: place the bread slices in the custard and let sit for 2-3 minutes per side, pressing gently, until soaked through to the middle.", "HEAT THE PAN: melt butter in a large pan over medium heat, until lightly foaming.", "FRY THE SLICES: add the soaked slices to the pan without crowding and fry for 3-4 minutes per side, until golden and crisp on the outside.", "CHECK THE CENTRE: press the middle of a slice gently — it should feel soft and warm, not wet or raw.", "SERVE IMMEDIATELY: dust with icing sugar and add maple syrup or fresh fruit while still hot."],
-    "es": ["HAZ LA MEZCLA: bate los huevos con la leche, la nata, el azúcar, la vainilla y la canela en un plato ancho y poco hondo.", "EMPAPA EL PAN: coloca las rebanadas en la mezcla y deja 2-3 minutos por cada lado, presionando suavemente, hasta que se empapen hasta el centro.", "CALIENTA LA SARTÉN: derrite mantequilla en una sartén grande a fuego medio, hasta que espume ligeramente.", "FRÍE LAS REBANADAS: añade las rebanadas empapadas sin apiñarlas y fríe 3-4 minutos por cada lado, hasta que estén doradas y crujientes por fuera.", "COMPRUEBA EL CENTRO: presiona suavemente el centro de una rebanada — debe sentirse blando y caliente, no húmedo ni crudo.", "SIRVE DE INMEDIATO: espolvorea azúcar glas y añade sirope de arce o fruta fresca mientras aún está caliente."],
-    "fr": ["PRÉPARE L'APPAREIL: fouette les œufs avec le lait, la crème, le sucre, la vanille et la cannelle dans un plat large et peu profond.", "TREMPE LE PAIN: place les tranches de pain dans l'appareil et laisse 2-3 minutes de chaque côté, en appuyant doucement, jusqu'à ce qu'elles soient imbibées jusqu'au centre.", "CHAUFFE LA POÊLE: fais fondre du beurre dans une grande poêle à feu moyen, jusqu'à ce qu'il mousse légèrement.", "FAIS DORER LES TRANCHES: ajoute les tranches imbibées sans surcharger la poêle et fais dorer 3-4 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes à l'extérieur.", "VÉRIFIE LE CENTRE: presse doucement le milieu d'une tranche — il doit être moelleux et chaud, ni humide ni cru.", "SERS AUSSITÔT: saupoudre de sucre glace et ajoute sirop d'érable ou fruits frais tant que c'est encore chaud."],
-    "de": ["EIERMILCH ZUBEREITEN: die Eier mit Milch, Sahne, Zucker, Vanille und Zimt in einer breiten, flachen Schale verquirlen.", "BROT EINWEICHEN: die Brotscheiben in die Eiermilch legen und 2-3 Minuten pro Seite ruhen lassen, dabei leicht andrücken, bis sie bis zur Mitte durchgezogen sind.", "PFANNE ERHITZEN: Butter in einer großen Pfanne bei mittlerer Hitze schmelzen, bis sie leicht schäumt.", "SCHEIBEN BRATEN: die eingeweichten Scheiben ohne zu überfüllen in die Pfanne geben und 3-4 Minuten pro Seite braten, bis sie außen goldbraun und knusprig sind.", "MITTE PRÜFEN: die Mitte einer Scheibe leicht andrücken — sie sollte weich und warm sein, nicht nass oder roh.", "SOFORT SERVIEREN: mit Puderzucker bestäuben und mit Ahornsirup oder frischem Obst servieren, solange es noch heiß ist."],
-    "pt": ["PREPARA A MISTURA: bate os ovos com o leite, as natas, o açúcar, a baunilha e a canela numa tigela larga e rasa.", "ENSOPA O PÃO: coloca as fatias de pão na mistura e deixa 2-3 minutos de cada lado, pressionando suavemente, até embeberem até ao centro.", "AQUECE A FRIGIDEIRA: derrete manteiga numa frigideira grande em lume médio, até espumar ligeiramente.", "FRITA AS FATIAS: junta as fatias ensopadas sem sobrelotar a frigideira e frita 3-4 minutos de cada lado, até dourarem e ficarem estaladiças por fora.", "VERIFICA O CENTRO: pressiona suavemente o centro de uma fatia — deve estar macio e quente, não húmido ou cru.", "SERVE DE IMEDIATO: polvilha com açúcar em pó e junta xarope de ácer ou fruta fresca enquanto ainda está quente."],
-    "ru": ["ПРИГОТОВЬ СМЕСЬ: взбей яйца с молоком, сливками, сахаром, ванилью и корицей в широкой неглубокой миске.", "ПРОПИТАЙ ХЛЕБ: положи ломтики хлеба в смесь и оставь на 2-3 минуты с каждой стороны, слегка прижимая, пока не пропитаются до середины.", "РАЗОГРЕЙ СКОВОРОДУ: растопи масло на большой сковороде на среднем огне, пока не начнёт слегка пениться.", "ОБЖАРЬ ЛОМТИКИ: выложи пропитанные ломтики на сковороду, не перегружая её, и жарь 3-4 минуты с каждой стороны, пока не станут золотистыми и хрустящими снаружи.", "ПРОВЕРЬ СЕРЕДИНУ: слегка прижми центр ломтика — он должен быть мягким и тёплым, не мокрым и не сырым.", "ПОДАВАЙ СРАЗУ: посыпь сахарной пудрой и добавь кленовый сироп или свежие фрукты, пока ещё горячее."],
-    "ar": ["حضّر الخليط: اخفق البيض مع الحليب والكريمة والسكر والفانيليا والقرفة في طبق واسع وضحل.", "انقع الخبز: ضع شرائح الخبز في الخليط واتركها 2-3 دقائق لكل جانب، مع الضغط برفق، حتى تنقع حتى المنتصف.", "سخّن المقلاة: أذب الزبدة في مقلاة كبيرة على نار متوسطة حتى تبدأ بالرغوة قليلًا.", "اقلِ الشرائح: ضع الشرائح المنقوعة في المقلاة دون ازدحام واقلِها 3-4 دقائق لكل جانب حتى تصبح ذهبية ومقرمشة من الخارج.", "تحقق من المنتصف: اضغط برفق على منتصف الشريحة — يجب أن تكون طرية ودافئة، لا رطبة أو نيئة.", "قدّم فورًا: انثر سكر بودرة فوقها وأضف شراب القيقب أو الفاكهة الطازجة وهي لا تزال ساخنة."],
-    "zh": ["准备蛋奶液：在一个宽而浅的容器中，将鸡蛋与牛奶、淡奶油、糖、香草精和肉桂粉搅打均匀。", "浸泡面包：将面包片放入蛋奶液中，每面浸泡2-3分钟，轻轻按压，直到浸透至中心。", "加热平底锅：在大平底锅中融化黄油，中火加热至微微起泡。", "煎面包片：将浸泡好的面包片放入锅中，不要挤在一起，每面煎3-4分钟，直到外皮金黄酥脆。", "检查中心：轻轻按压面包片的中心——应该柔软温热，而不是湿润或未熟。", "立即享用：撒上糖粉，趁热淋上枫糖浆或搭配新鲜水果。"],
-    "ja": ["卵液を作る：卵、牛乳、生クリーム、砂糖、バニラ、シナモンを浅く広い容器で混ぜ合わせる。", "パンを浸す：パンのスライスを卵液に入れ、軽く押さえながら片面2〜3分ずつ中心まで染み込むまで浸す。", "フライパンを熱する：大きめのフライパンにバターを溶かし、中火で軽く泡立つまで加熱する。", "スライスを焼く：浸したパンを重ならないようにフライパンに入れ、外側がきつね色でパリッとするまで片面3〜4分ずつ焼く。", "中心を確認する：スライスの中心を軽く押してみる——柔らかく温かければよく、べたついたり生っぽかったりしてはいけない。", "すぐに提供する：熱いうちに粉砂糖を振りかけ、メープルシロップやフレッシュフルーツを添える。"],
-    "tr": ["KARIŞIMI HAZIRLAYIN: yumurtaları süt, krema, şeker, vanilya ve tarçınla geniş, sığ bir kapta çırpın.", "EKMEĞİ ISLATIN: ekmek dilimlerini karışıma yerleştirin ve ortasına kadar iyice ıslanana kadar her tarafta 2-3 dakika hafifçe bastırarak bekletin.", "TAVAYI ISITIN: büyük bir tavada orta ateşte tereyağını hafifçe köpürene kadar eritin.", "DİLİMLERİ KIZARTIN: ıslatılmış dilimleri sıkışık olmadan tavaya ekleyin ve dışı altın rengi ve çıtır olana kadar her tarafta 3-4 dakika kızartın.", "ORTASINI KONTROL EDİN: bir dilimin ortasına hafifçe bastırın — yumuşak ve sıcak hissetmeli, ıslak veya çiğ değil.", "HEMEN SERVİS YAPIN: sıcakken üzerine pudra şekeri serpin ve akçaağaç şurubu veya taze meyve ekleyin."],
-    "it": ["PREPARA IL COMPOSTO: sbatti le uova con il latte, la panna, lo zucchero, la vaniglia e la cannella in un piatto largo e poco profondo.", "INZUPPA IL PANE: metti le fette di pane nel composto e lascia 2-3 minuti per lato, premendo delicatamente, finché si inzuppano fino al centro.", "SCALDA LA PADELLA: sciogli il burro in una padella grande a fuoco medio, finché spumeggia leggermente.", "DORA LE FETTE: aggiungi le fette inzuppate senza sovraffollare la padella e dora 3-4 minuti per lato, finché sono dorate e croccanti fuori.", "CONTROLLA IL CENTRO: premi delicatamente il centro di una fetta — deve essere morbido e caldo, non bagnato o crudo.", "SERVI SUBITO: spolvera con zucchero a velo e aggiungi sciroppo d'acero o frutta fresca mentre è ancora caldo."],
-    "ko": ["달걀물 만들기: 넓고 얕은 그릇에 달걀, 우유, 생크림, 설탕, 바닐라, 계피를 넣고 잘 섞는다.", "빵 담그기: 빵 조각을 달걀물에 넣고 살짝 눌러가며 각 면을 2-3분씩, 중심까지 스며들 때까지 담근다.", "팬 달구기: 큰 팬에 버터를 녹여 중불에서 살짝 거품이 일 때까지 데운다.", "빵 조각 굽기: 담근 빵을 겹치지 않게 팬에 올려 겉면이 황금빛으로 바삭해질 때까지 각 면을 3-4분씩 굽는다.", "중심 확인하기: 조각의 중심을 살짝 눌러본다 — 축축하거나 날것이 아니라 부드럽고 따뜻해야 한다.", "바로 서빙하기: 뜨거울 때 슈거파우더를 뿌리고 메이플 시럽이나 신선한 과일을 곁들인다."],
-    "hi": ["मिश्रण तैयार करें: एक चौड़े, उथले बर्तन में अंडे, दूध, क्रीम, चीनी, वनीला और दालचीनी को फेंटें।", "ब्रेड को भिगोएं: ब्रेड स्लाइस को मिश्रण में रखें और हल्के से दबाते हुए हर तरफ 2-3 मिनट तक रखें, जब तक बीच तक न भीग जाए।", "पैन गरम करें: एक बड़े पैन में मक्खन को मध्यम आंच पर पिघलाएं, जब तक हल्का झाग न आए।", "स्लाइस तलें: भीगी हुई स्लाइसों को बिना भीड़ किए पैन में डालें और बाहर से सुनहरा और कुरकुरा होने तक हर तरफ 3-4 मिनट तलें।", "बीच की जांच करें: स्लाइस के बीच को हल्के से दबाएं — यह नरम और गरम महसूस होना चाहिए, गीला या कच्चा नहीं।", "तुरंत परोसें: गरम रहते हुए पिसी चीनी छिड़कें और मेपल सिरप या ताज़े फल डालें।"]
+    "ro": "PREGĂTEȘTE COMPOZIȚIA: bate ouăle cu laptele, smântâna, zahărul, vanilia și scorțișoara într-un vas larg și plat. MUIAȚĂ PÂINEA: așază feliile de pâine în compoziție și lasă 2-3 minute pe fiecare parte, apăsând ușor, până se îmbibă complet până la mijloc. ÎNCĂLZEȘTE TIGAIA: topește unt într-o tigaie mare la foc mediu, până spumează ușor. PRĂJEȘTE FELIILE: pune feliile îmbibate în tigaie fără să le aglomerezi și prăjește 3-4 minute pe fiecare parte, până devin aurii și crocante la exterior. VERIFICĂ INTERIORUL: presează ușor centrul feliei — trebuie să fie moale și cald, nu umed sau crud. SERVEȘTE IMEDIAT: presară zahăr pudră deasupra și adaugă sirop de arțar sau fructe proaspete, cât e încă fierbinte.",
+    "en": "MAKE THE CUSTARD: whisk the eggs with the milk, cream, sugar, vanilla and cinnamon in a wide, shallow dish. SOAK THE BREAD: place the bread slices in the custard and let sit for 2-3 minutes per side, pressing gently, until soaked through to the middle. HEAT THE PAN: melt butter in a large pan over medium heat, until lightly foaming. FRY THE SLICES: add the soaked slices to the pan without crowding and fry for 3-4 minutes per side, until golden and crisp on the outside. CHECK THE CENTRE: press the middle of a slice gently — it should feel soft and warm, not wet or raw. SERVE IMMEDIATELY: dust with icing sugar and add maple syrup or fresh fruit while still hot.",
+    "es": "HAZ LA MEZCLA: bate los huevos con la leche, la nata, el azúcar, la vainilla y la canela en un plato ancho y poco hondo. EMPAPA EL PAN: coloca las rebanadas en la mezcla y deja 2-3 minutos por cada lado, presionando suavemente, hasta que se empapen hasta el centro. CALIENTA LA SARTÉN: derrite mantequilla en una sartén grande a fuego medio, hasta que espume ligeramente. FRÍE LAS REBANADAS: añade las rebanadas empapadas sin apiñarlas y fríe 3-4 minutos por cada lado, hasta que estén doradas y crujientes por fuera. COMPRUEBA EL CENTRO: presiona suavemente el centro de una rebanada — debe sentirse blando y caliente, no húmedo ni crudo. SIRVE DE INMEDIATO: espolvorea azúcar glas y añade sirope de arce o fruta fresca mientras aún está caliente.",
+    "fr": "PRÉPARE L'APPAREIL: fouette les œufs avec le lait, la crème, le sucre, la vanille et la cannelle dans un plat large et peu profond. TREMPE LE PAIN: place les tranches de pain dans l'appareil et laisse 2-3 minutes de chaque côté, en appuyant doucement, jusqu'à ce qu'elles soient imbibées jusqu'au centre. CHAUFFE LA POÊLE: fais fondre du beurre dans une grande poêle à feu moyen, jusqu'à ce qu'il mousse légèrement. FAIS DORER LES TRANCHES: ajoute les tranches imbibées sans surcharger la poêle et fais dorer 3-4 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes à l'extérieur. VÉRIFIE LE CENTRE: presse doucement le milieu d'une tranche — il doit être moelleux et chaud, ni humide ni cru. SERS AUSSITÔT: saupoudre de sucre glace et ajoute sirop d'érable ou fruits frais tant que c'est encore chaud.",
+    "de": "EIERMILCH ZUBEREITEN: die Eier mit Milch, Sahne, Zucker, Vanille und Zimt in einer breiten, flachen Schale verquirlen. BROT EINWEICHEN: die Brotscheiben in die Eiermilch legen und 2-3 Minuten pro Seite ruhen lassen, dabei leicht andrücken, bis sie bis zur Mitte durchgezogen sind. PFANNE ERHITZEN: Butter in einer großen Pfanne bei mittlerer Hitze schmelzen, bis sie leicht schäumt. SCHEIBEN BRATEN: die eingeweichten Scheiben ohne zu überfüllen in die Pfanne geben und 3-4 Minuten pro Seite braten, bis sie außen goldbraun und knusprig sind. MITTE PRÜFEN: die Mitte einer Scheibe leicht andrücken — sie sollte weich und warm sein, nicht nass oder roh. SOFORT SERVIEREN: mit Puderzucker bestäuben und mit Ahornsirup oder frischem Obst servieren, solange es noch heiß ist.",
+    "pt": "PREPARA A MISTURA: bate os ovos com o leite, as natas, o açúcar, a baunilha e a canela numa tigela larga e rasa. ENSOPA O PÃO: coloca as fatias de pão na mistura e deixa 2-3 minutos de cada lado, pressionando suavemente, até embeberem até ao centro. AQUECE A FRIGIDEIRA: derrete manteiga numa frigideira grande em lume médio, até espumar ligeiramente. FRITA AS FATIAS: junta as fatias ensopadas sem sobrelotar a frigideira e frita 3-4 minutos de cada lado, até dourarem e ficarem estaladiças por fora. VERIFICA O CENTRO: pressiona suavemente o centro de uma fatia — deve estar macio e quente, não húmido ou cru. SERVE DE IMEDIATO: polvilha com açúcar em pó e junta xarope de ácer ou fruta fresca enquanto ainda está quente.",
+    "ru": "ПРИГОТОВЬ СМЕСЬ: взбей яйца с молоком, сливками, сахаром, ванилью и корицей в широкой неглубокой миске. ПРОПИТАЙ ХЛЕБ: положи ломтики хлеба в смесь и оставь на 2-3 минуты с каждой стороны, слегка прижимая, пока не пропитаются до середины. РАЗОГРЕЙ СКОВОРОДУ: растопи масло на большой сковороде на среднем огне, пока не начнёт слегка пениться. ОБЖАРЬ ЛОМТИКИ: выложи пропитанные ломтики на сковороду, не перегружая её, и жарь 3-4 минуты с каждой стороны, пока не станут золотистыми и хрустящими снаружи. ПРОВЕРЬ СЕРЕДИНУ: слегка прижми центр ломтика — он должен быть мягким и тёплым, не мокрым и не сырым. ПОДАВАЙ СРАЗУ: посыпь сахарной пудрой и добавь кленовый сироп или свежие фрукты, пока ещё горячее.",
+    "ar": "حضّر الخليط: اخفق البيض مع الحليب والكريمة والسكر والفانيليا والقرفة في طبق واسع وضحل. انقع الخبز: ضع شرائح الخبز في الخليط واتركها 2-3 دقائق لكل جانب، مع الضغط برفق، حتى تنقع حتى المنتصف. سخّن المقلاة: أذب الزبدة في مقلاة كبيرة على نار متوسطة حتى تبدأ بالرغوة قليلًا. اقلِ الشرائح: ضع الشرائح المنقوعة في المقلاة دون ازدحام واقلِها 3-4 دقائق لكل جانب حتى تصبح ذهبية ومقرمشة من الخارج. تحقق من المنتصف: اضغط برفق على منتصف الشريحة — يجب أن تكون طرية ودافئة، لا رطبة أو نيئة. قدّم فورًا: انثر سكر بودرة فوقها وأضف شراب القيقب أو الفاكهة الطازجة وهي لا تزال ساخنة.",
+    "zh": "准备蛋奶液：在一个宽而浅的容器中，将鸡蛋与牛奶、淡奶油、糖、香草精和肉桂粉搅打均匀。 浸泡面包：将面包片放入蛋奶液中，每面浸泡2-3分钟，轻轻按压，直到浸透至中心。 加热平底锅：在大平底锅中融化黄油，中火加热至微微起泡。 煎面包片：将浸泡好的面包片放入锅中，不要挤在一起，每面煎3-4分钟，直到外皮金黄酥脆。 检查中心：轻轻按压面包片的中心——应该柔软温热，而不是湿润或未熟。 立即享用：撒上糖粉，趁热淋上枫糖浆或搭配新鲜水果。",
+    "ja": "卵液を作る：卵、牛乳、生クリーム、砂糖、バニラ、シナモンを浅く広い容器で混ぜ合わせる。 パンを浸す：パンのスライスを卵液に入れ、軽く押さえながら片面2〜3分ずつ中心まで染み込むまで浸す。 フライパンを熱する：大きめのフライパンにバターを溶かし、中火で軽く泡立つまで加熱する。 スライスを焼く：浸したパンを重ならないようにフライパンに入れ、外側がきつね色でパリッとするまで片面3〜4分ずつ焼く。 中心を確認する：スライスの中心を軽く押してみる——柔らかく温かければよく、べたついたり生っぽかったりしてはいけない。 すぐに提供する：熱いうちに粉砂糖を振りかけ、メープルシロップやフレッシュフルーツを添える。",
+    "tr": "KARIŞIMI HAZIRLAYIN: yumurtaları süt, krema, şeker, vanilya ve tarçınla geniş, sığ bir kapta çırpın. EKMEĞİ ISLATIN: ekmek dilimlerini karışıma yerleştirin ve ortasına kadar iyice ıslanana kadar her tarafta 2-3 dakika hafifçe bastırarak bekletin. TAVAYI ISITIN: büyük bir tavada orta ateşte tereyağını hafifçe köpürene kadar eritin. DİLİMLERİ KIZARTIN: ıslatılmış dilimleri sıkışık olmadan tavaya ekleyin ve dışı altın rengi ve çıtır olana kadar her tarafta 3-4 dakika kızartın. ORTASINI KONTROL EDİN: bir dilimin ortasına hafifçe bastırın — yumuşak ve sıcak hissetmeli, ıslak veya çiğ değil. HEMEN SERVİS YAPIN: sıcakken üzerine pudra şekeri serpin ve akçaağaç şurubu veya taze meyve ekleyin.",
+    "it": "PREPARA IL COMPOSTO: sbatti le uova con il latte, la panna, lo zucchero, la vaniglia e la cannella in un piatto largo e poco profondo. INZUPPA IL PANE: metti le fette di pane nel composto e lascia 2-3 minuti per lato, premendo delicatamente, finché si inzuppano fino al centro. SCALDA LA PADELLA: sciogli il burro in una padella grande a fuoco medio, finché spumeggia leggermente. DORA LE FETTE: aggiungi le fette inzuppate senza sovraffollare la padella e dora 3-4 minuti per lato, finché sono dorate e croccanti fuori. CONTROLLA IL CENTRO: premi delicatamente il centro di una fetta — deve essere morbido e caldo, non bagnato o crudo. SERVI SUBITO: spolvera con zucchero a velo e aggiungi sciroppo d'acero o frutta fresca mentre è ancora caldo.",
+    "ko": "달걀물 만들기: 넓고 얕은 그릇에 달걀, 우유, 생크림, 설탕, 바닐라, 계피를 넣고 잘 섞는다. 빵 담그기: 빵 조각을 달걀물에 넣고 살짝 눌러가며 각 면을 2-3분씩, 중심까지 스며들 때까지 담근다. 팬 달구기: 큰 팬에 버터를 녹여 중불에서 살짝 거품이 일 때까지 데운다. 빵 조각 굽기: 담근 빵을 겹치지 않게 팬에 올려 겉면이 황금빛으로 바삭해질 때까지 각 면을 3-4분씩 굽는다. 중심 확인하기: 조각의 중심을 살짝 눌러본다 — 축축하거나 날것이 아니라 부드럽고 따뜻해야 한다. 바로 서빙하기: 뜨거울 때 슈거파우더를 뿌리고 메이플 시럽이나 신선한 과일을 곁들인다.",
+    "hi": "मिश्रण तैयार करें: एक चौड़े, उथले बर्तन में अंडे, दूध, क्रीम, चीनी, वनीला और दालचीनी को फेंटें। ब्रेड को भिगोएं: ब्रेड स्लाइस को मिश्रण में रखें और हल्के से दबाते हुए हर तरफ 2-3 मिनट तक रखें, जब तक बीच तक न भीग जाए। पैन गरम करें: एक बड़े पैन में मक्खन को मध्यम आंच पर पिघलाएं, जब तक हल्का झाग न आए। स्लाइस तलें: भीगी हुई स्लाइसों को बिना भीड़ किए पैन में डालें और बाहर से सुनहरा और कुरकुरा होने तक हर तरफ 3-4 मिनट तलें। बीच की जांच करें: स्लाइस के बीच को हल्के से दबाएं — यह नरम और गरम महसूस होना चाहिए, गीला या कच्चा नहीं। तुरंत परोसें: गरम रहते हुए पिसी चीनी छिड़कें और मेपल सिरप या ताज़े फल डालें।"
   },
   "originText": {
     "ro": "Pain perdu înseamnă literalmente 'pâine pierdută', iar numele descrie exact motivul pentru care există rețeta: pâine veche, prea tare pentru a mai fi mâncată simplă, salvată prin înmuierea în ouă și lapte și prăjirea în unt. E o rețetă anti-risipă mai degrabă decât un desert conceput de la zero, cu variante documentate în bucătăria franceză din Evul Mediu, mult înainte ca 'French toast' să devină numele englezesc pentru aceeași tehnică.\n\nDiferența dintre o felie reușită și una ratată stă în timpul de înmuiere: dacă pâinea stă prea puțin în amestec, centrul rămâne uscat și crud după prăjire; dacă stă prea mult, se destramă înainte să ajungă în tigaie. Pâinea ușor veche funcționează mai bine decât cea proaspătă tocmai pentru că absoarbe lichidul uniform, fără să se transforme într-o pastă.",
@@ -85,7 +552,12 @@
   "meta": {
     "time": 20,
     "costRon": 12,
-    "tags": ["quick", "budget", "family", "vegetarian"],
+    "tags": [
+      "quick",
+      "budget",
+      "family",
+      "vegetarian"
+    ],
     "desc": {
       "ro": "Felii de pâine veche muiate în ou și lapte, prăjite în unt până devin aurii, servite cu sirop de arțar.",
       "en": "Day-old bread soaked in egg and milk, fried in butter until golden, served with maple syrup.",
