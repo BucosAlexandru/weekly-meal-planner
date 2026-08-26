@@ -198,16 +198,20 @@ export const recipeImages = {
   // 214-229: added with meal-plan-coverage batch.
 
   // 247-262: Korea batch (16 recipes). Local files uploaded to public/images/.
+  // 248/251/256 aren't listed here on purpose: their files were renamed to
+  // match the recipe slug exactly (japchae.jpg, haemul-pajeon.jpg,
+  // bibim-naengmyeon.jpg), so resolveRecipeImage()'s local-slug lookup
+  // (priority 1, ahead of this map) finds them directly. They used to be
+  // Japchae.jpg/Haemul-pajeon.jpg/Bibim-naengmyeon.jpg — fs.existsSync()
+  // matched those case-insensitively on macOS at build time, but Vercel's
+  // case-sensitive filesystem 404'd on the lowercase guess in production.
   247: 'https://meal-planner.ro/images/Korean_barbeque-Bulgogi-16.jpg',
-  248: 'https://meal-planner.ro/images/Japchae.jpg',
   249: 'https://meal-planner.ro/images/Korean_stew_dish_-_Kimchi-jjigae_Kimchi_Stew_2019_%2801%29.jpg',
   250: 'https://meal-planner.ro/images/Samgye_tang.jpg',
-  251: 'https://meal-planner.ro/images/Haemul-pajeon.jpg',
   252: 'https://meal-planner.ro/images/Dak-gangjeong_1.jpg',
   253: 'https://meal-planner.ro/images/Korean_beef_short_ribs.jpg',
   254: 'https://meal-planner.ro/images/Korean_cuisine-Kimchi_bokkeumbap-01.jpg',
   255: 'https://meal-planner.ro/images/Sundubu_jjigae_stew.jpg',
-  256: 'https://meal-planner.ro/images/Bibim-naengmyeon.jpg',
   257: 'https://meal-planner.ro/images/Korean_mandu_dumplings.jpg',
   258: 'https://meal-planner.ro/images/Corn_cheese_1.jpg',
   259: 'https://meal-planner.ro/images/960px-Tteokguk.jpg',
