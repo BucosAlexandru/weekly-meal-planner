@@ -1,0 +1,577 @@
+{
+  "id": 274,
+  "servings": 4,
+  "tipType": "romanian",
+  "pairingsType": "romanian",
+  "origin": {
+    "ro": "România",
+    "en": "Romania",
+    "es": "Rumanía",
+    "fr": "Roumanie",
+    "de": "Rumänien",
+    "pt": "Roménia",
+    "ru": "Румыния",
+    "ar": "رومانيا",
+    "zh": "罗马尼亚",
+    "ja": "ルーマニア",
+    "tr": "Romanya",
+    "it": "Romania",
+    "ko": "루마니아",
+    "hi": "रोमानिया"
+  },
+  "name": {
+    "ro": "Colțunași cu brânză de vaci",
+    "en": "Colțunași (Romanian Cheese Dumplings)",
+    "es": "Colțunași (Empanadillas Rumanas de Queso)",
+    "fr": "Colțunași (Raviolis Roumains au Fromage)",
+    "de": "Colțunași (Rumänische Käseknödel)",
+    "pt": "Colțunași (Pastéis Romenos de Queijo)",
+    "ru": "Колцунаш (румынские творожные вареники)",
+    "ar": "كولتوناشي (عجينة الجبن الرومانية)",
+    "zh": "罗马尼亚芝士饺子",
+    "ja": "コルツナシ（ルーマニア風チーズ餃子）",
+    "tr": "Colțunași (Romanya Usulü Peynirli Mantı)",
+    "it": "Colțunași (Ravioli Rumeni al Formaggio)",
+    "ko": "콜추나시 (루마니아식 치즈 만두)",
+    "hi": "कोल्तुनाशी (रोमानियाई चीज़ पकौड़ी)"
+  },
+  "category": {
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "tr": "Ana Yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🧀",
+        "t": "Brânză de vaci scursă bine",
+        "d": "Fără zer, umplutura rămâne fermă și nu udă aluatul"
+      },
+      {
+        "icon": "🥟",
+        "t": "Marginile presate, nu lipite cu apă",
+        "d": "Aluatul subțire se lipește singur când e proaspăt"
+      },
+      {
+        "icon": "💧",
+        "t": "Fierte în apă clocotită, nu aburite",
+        "d": "Ridicarea la suprafață arată exact când sunt gata"
+      },
+      {
+        "icon": "🧈",
+        "t": "Servite cu unt topit și smântână",
+        "d": "Grăsimea echilibrează gustul ușor acrișor al brânzei"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🧀",
+        "t": "Well-drained cottage cheese",
+        "d": "No whey left, so the filling stays firm and won't soak the dough"
+      },
+      {
+        "icon": "🥟",
+        "t": "Edges pinched shut, not sealed with water",
+        "d": "Fresh thin dough sticks to itself on its own"
+      },
+      {
+        "icon": "💧",
+        "t": "Boiled in water, not steamed",
+        "d": "Floating to the surface shows exactly when they're done"
+      },
+      {
+        "icon": "🧈",
+        "t": "Served with melted butter and sour cream",
+        "d": "The fat balances the cheese's slightly tangy edge"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🧀",
+        "t": "Requesón bien escurrido",
+        "d": "Sin suero, el relleno queda firme y no empapa la masa"
+      },
+      {
+        "icon": "🥟",
+        "t": "Bordes pellizcados, no sellados con agua",
+        "d": "La masa fina fresca se pega sola por sí misma"
+      },
+      {
+        "icon": "💧",
+        "t": "Hervidas en agua, no al vapor",
+        "d": "Cuando flotan a la superficie indica que están listas"
+      },
+      {
+        "icon": "🧈",
+        "t": "Servidas con mantequilla derretida y nata agria",
+        "d": "La grasa equilibra el toque ácido del queso"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🧀",
+        "t": "Fromage blanc bien égoutté",
+        "d": "Sans petit-lait, la farce reste ferme et ne détrempe pas la pâte"
+      },
+      {
+        "icon": "🥟",
+        "t": "Bords pincés, pas scellés à l'eau",
+        "d": "La pâte fine fraîche colle toute seule"
+      },
+      {
+        "icon": "💧",
+        "t": "Bouillis dans l'eau, pas à la vapeur",
+        "d": "Remonter à la surface indique exactement qu'ils sont prêts"
+      },
+      {
+        "icon": "🧈",
+        "t": "Servis avec du beurre fondu et de la crème aigre",
+        "d": "Le gras équilibre le côté légèrement acidulé du fromage"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🧀",
+        "t": "Gut abgetropfter Quark",
+        "d": "Ohne Molke bleibt die Füllung fest und weicht den Teig nicht auf"
+      },
+      {
+        "icon": "🥟",
+        "t": "Ränder zusammengedrückt, nicht mit Wasser versiegelt",
+        "d": "Frischer dünner Teig klebt von selbst zusammen"
+      },
+      {
+        "icon": "💧",
+        "t": "In Wasser gekocht, nicht gedämpft",
+        "d": "Das Aufsteigen an die Oberfläche zeigt genau, wann sie fertig sind"
+      },
+      {
+        "icon": "🧈",
+        "t": "Mit zerlassener Butter und saurer Sahne serviert",
+        "d": "Das Fett gleicht die leicht säuerliche Note des Käses aus"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🧀",
+        "t": "Queijo fresco bem escorrido",
+        "d": "Sem soro, o recheio fica firme e não encharca a massa"
+      },
+      {
+        "icon": "🥟",
+        "t": "Bordas apertadas, não seladas com água",
+        "d": "A massa fina fresca cola sozinha"
+      },
+      {
+        "icon": "💧",
+        "t": "Cozidos em água, não a vapor",
+        "d": "Subirem à superfície mostra exatamente quando estão prontos"
+      },
+      {
+        "icon": "🧈",
+        "t": "Servidos com manteiga derretida e natas azedas",
+        "d": "A gordura equilibra o toque ligeiramente ácido do queijo"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🧀",
+        "t": "Хорошо отжатый творог",
+        "d": "Без сыворотки начинка остаётся плотной и не размягчает тесто"
+      },
+      {
+        "icon": "🥟",
+        "t": "Края защипаны, не смочены водой",
+        "d": "Свежее тонкое тесто склеивается само по себе"
+      },
+      {
+        "icon": "💧",
+        "t": "Варятся в воде, а не на пару",
+        "d": "Всплытие на поверхность точно показывает готовность"
+      },
+      {
+        "icon": "🧈",
+        "t": "Подаются с растопленным маслом и сметаной",
+        "d": "Жир уравновешивает лёгкую кислинку творога"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🧀",
+        "t": "جبن قريش مصفّى جيدًا",
+        "d": "دون مصل، تبقى الحشوة متماسكة ولا تُبلل العجين"
+      },
+      {
+        "icon": "🥟",
+        "t": "الحواف مضغوطة، لا مغلقة بالماء",
+        "d": "العجين الرقيق الطازج يلتصق ببعضه من تلقاء نفسه"
+      },
+      {
+        "icon": "💧",
+        "t": "تُسلق في الماء، لا تُطهى بالبخار",
+        "d": "طفوها على السطح يُظهر بالضبط متى تصبح جاهزة"
+      },
+      {
+        "icon": "🧈",
+        "t": "تُقدَّم مع زبدة مذابة وقشدة حامضة",
+        "d": "الدهن يوازن حموضة الجبن الخفيفة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🧀",
+        "t": "沥干的农家奶酪",
+        "d": "没有乳清残留，馅料紧实不会浸湿面皮"
+      },
+      {
+        "icon": "🥟",
+        "t": "边缘捏紧，而非用水粘合",
+        "d": "新鲜的薄面皮本身就能自然黏合"
+      },
+      {
+        "icon": "💧",
+        "t": "水煮而非蒸制",
+        "d": "浮到水面就是煮熟的准确信号"
+      },
+      {
+        "icon": "🧈",
+        "t": "配融化黄油和酸奶油享用",
+        "d": "油脂能平衡奶酪微酸的口感"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🧀",
+        "t": "しっかり水切りしたカッテージチーズ",
+        "d": "ホエーが残らず生地をふやけさせない、しっかりした詰め物に"
+      },
+      {
+        "icon": "🥟",
+        "t": "端をつまんで閉じる、水で貼り付けない",
+        "d": "新鮮な薄い生地は自然にくっつく"
+      },
+      {
+        "icon": "💧",
+        "t": "蒸さずに湯で茹でる",
+        "d": "浮き上がってくれば茹で上がりの合図"
+      },
+      {
+        "icon": "🧈",
+        "t": "溶かしバターとサワークリームを添えて",
+        "d": "脂がチーズのほのかな酸味とバランスを取る"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🧀",
+        "t": "İyice süzülmüş lor peyniri",
+        "d": "Peynir suyu kalmaz, harç sıkı kalır ve hamuru ıslatmaz"
+      },
+      {
+        "icon": "🥟",
+        "t": "Kenarlar sıkıştırılır, suyla kapatılmaz",
+        "d": "Taze ince hamur kendiliğinden birbirine yapışır"
+      },
+      {
+        "icon": "💧",
+        "t": "Buharda değil suda haşlanır",
+        "d": "Yüzeye çıkması tam olarak hazır olduklarını gösterir"
+      },
+      {
+        "icon": "🧈",
+        "t": "Eritilmiş tereyağı ve ekşi kremayla servis edilir",
+        "d": "Yağ, peynirin hafif ekşi tadını dengeler"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🧀",
+        "t": "Ricotta ben scolata",
+        "d": "Senza siero, il ripieno resta sodo e non inzuppa l'impasto"
+      },
+      {
+        "icon": "🥟",
+        "t": "Bordi pizzicati, non sigillati con acqua",
+        "d": "L'impasto sottile fresco si attacca da solo"
+      },
+      {
+        "icon": "💧",
+        "t": "Bolliti in acqua, non cotti al vapore",
+        "d": "Il galleggiamento in superficie indica esattamente quando sono pronti"
+      },
+      {
+        "icon": "🧈",
+        "t": "Serviti con burro fuso e panna acida",
+        "d": "Il grasso bilancia la nota leggermente acidula del formaggio"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🧀",
+        "t": "물기 잘 뺀 코티지치즈",
+        "d": "유청이 없어 속재료가 단단하고 반죽을 눅눅하게 하지 않는다"
+      },
+      {
+        "icon": "🥟",
+        "t": "물이 아닌 손끝으로 눌러 봉한 가장자리",
+        "d": "신선하고 얇은 반죽은 저절로 잘 붙는다"
+      },
+      {
+        "icon": "💧",
+        "t": "찌지 않고 물에 삶기",
+        "d": "수면에 떠오르면 정확히 다 익었다는 신호"
+      },
+      {
+        "icon": "🧈",
+        "t": "녹인 버터와 사워크림을 곁들여 서빙",
+        "d": "지방이 치즈의 은은한 새콤함과 균형을 이룬다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🧀",
+        "t": "अच्छी तरह निचोड़ा हुआ पनीर",
+        "d": "बिना मट्ठे के, भरावन ठोस रहता है और आटे को गीला नहीं करता"
+      },
+      {
+        "icon": "🥟",
+        "t": "किनारे दबाकर बंद किए गए, पानी से नहीं",
+        "d": "ताज़ा पतला आटा खुद-ब-खुद चिपक जाता है"
+      },
+      {
+        "icon": "💧",
+        "t": "भाप में नहीं, पानी में उबाला गया",
+        "d": "सतह पर तैरना बताता है कि ये ठीक कब तैयार हैं"
+      },
+      {
+        "icon": "🧈",
+        "t": "पिघले मक्खन और खट्टी क्रीम के साथ परोसे गए",
+        "d": "चिकनाई पनीर के हल्के खट्टेपन को संतुलित करती है"
+      }
+    ]
+  },
+  "ingredients": {
+    "ro": [
+      "300g făină",
+      "1 ou",
+      "120ml apă călduță",
+      "un praf de sare",
+      "400g brânză de vaci, scursă bine",
+      "1 gălbenuș",
+      "2 linguri mărar tocat",
+      "sare, după gust",
+      "unt topit și smântână, pentru servire"
+    ],
+    "en": [
+      "300g flour",
+      "1 egg",
+      "120ml lukewarm water",
+      "a pinch of salt",
+      "400g cottage cheese, well drained",
+      "1 egg yolk",
+      "2 tbsp chopped dill",
+      "salt, to taste",
+      "melted butter and sour cream, to serve"
+    ],
+    "es": [
+      "300g de harina",
+      "1 huevo",
+      "120ml de agua tibia",
+      "una pizca de sal",
+      "400g de requesón, bien escurrido",
+      "1 yema de huevo",
+      "2 cdas de eneldo picado",
+      "sal, al gusto",
+      "mantequilla derretida y nata agria, para servir"
+    ],
+    "fr": [
+      "300g de farine",
+      "1 œuf",
+      "120ml d'eau tiède",
+      "une pincée de sel",
+      "400g de fromage blanc, bien égoutté",
+      "1 jaune d'œuf",
+      "2 c. à soupe d'aneth haché",
+      "sel, selon le goût",
+      "beurre fondu et crème aigre, pour servir"
+    ],
+    "de": [
+      "300g Mehl",
+      "1 Ei",
+      "120ml lauwarmes Wasser",
+      "eine Prise Salz",
+      "400g Quark, gut abgetropft",
+      "1 Eigelb",
+      "2 EL gehackter Dill",
+      "Salz, nach Geschmack",
+      "zerlassene Butter und saure Sahne, zum Servieren"
+    ],
+    "pt": [
+      "300g de farinha",
+      "1 ovo",
+      "120ml de água morna",
+      "uma pitada de sal",
+      "400g de queijo fresco, bem escorrido",
+      "1 gema de ovo",
+      "2 col. sopa de endro picado",
+      "sal, a gosto",
+      "manteiga derretida e natas azedas, para servir"
+    ],
+    "ru": [
+      "300г муки",
+      "1 яйцо",
+      "120мл тёплой воды",
+      "щепотка соли",
+      "400г творога, хорошо отжатого",
+      "1 яичный желток",
+      "2 ст.л. рубленого укропа",
+      "соль по вкусу",
+      "растопленное масло и сметана, для подачи"
+    ],
+    "ar": [
+      "300غ دقيق",
+      "بيضة واحدة",
+      "120مل ماء فاتر",
+      "رشة ملح",
+      "400غ جبن قريش، مصفّى جيدًا",
+      "صفار بيضة واحدة",
+      "2 ملعقة كبيرة شبت مفروم",
+      "ملح، حسب الرغبة",
+      "زبدة مذابة وقشدة حامضة، للتقديم"
+    ],
+    "zh": [
+      "300克面粉",
+      "1个鸡蛋",
+      "120毫升温水",
+      "一小撮盐",
+      "400克农家奶酪，充分沥干",
+      "1个蛋黄",
+      "2汤匙莳萝碎",
+      "盐，适量",
+      "融化黄油和酸奶油，用于装饰"
+    ],
+    "ja": [
+      "小麦粉300g",
+      "卵1個",
+      "ぬるま湯120ml",
+      "塩ひとつまみ",
+      "カッテージチーズ400g（よく水切りしたもの）",
+      "卵黄1個",
+      "ディルのみじん切り大さじ2",
+      "塩（お好みで）",
+      "溶かしバターとサワークリーム（添える用）"
+    ],
+    "tr": [
+      "300g un",
+      "1 yumurta",
+      "120ml ılık su",
+      "bir tutam tuz",
+      "400g lor peyniri, iyice süzülmüş",
+      "1 yumurta sarısı",
+      "2 yemek kaşığı doğranmış dereotu",
+      "tuz, damak zevkine göre",
+      "servis için eritilmiş tereyağı ve ekşi krema"
+    ],
+    "it": [
+      "300g di farina",
+      "1 uovo",
+      "120ml di acqua tiepida",
+      "un pizzico di sale",
+      "400g di ricotta, ben scolata",
+      "1 tuorlo d'uovo",
+      "2 cucchiai di aneto tritato",
+      "sale, quanto basta",
+      "burro fuso e panna acida, per servire"
+    ],
+    "ko": [
+      "밀가루 300g",
+      "달걀 1개",
+      "미지근한 물 120ml",
+      "소금 한 꼬집",
+      "코티지치즈 400g, 물기 잘 뺀 것",
+      "달걀노른자 1개",
+      "다진 딜 2큰술",
+      "소금, 취향껏",
+      "녹인 버터와 사워크림, 곁들임용"
+    ],
+    "hi": [
+      "300ग्राम आटा",
+      "1 अंडा",
+      "120मिली गुनगुना पानी",
+      "एक चुटकी नमक",
+      "400ग्राम पनीर, अच्छी तरह निचोड़ा हुआ",
+      "1 अंडे की ज़र्दी",
+      "2 बड़े चम्मच कटा सोआ",
+      "नमक, स्वादानुसार",
+      "पिघला मक्खन और खट्टी क्रीम, परोसने के लिए"
+    ]
+  },
+  "howIsMade": {
+    "ro": "FRĂMÂNTĂ ALUATUL: combină făina, oul, apa călduță și sarea într-un bol și frământă 8-10 minute, până devine neted și elastic. Acoperă și lasă la odihnă 20-30 minute la temperatura camerei. PREGĂTEȘTE UMPLUTURA: amestecă brânza scursă bine cu gălbenușul, mărarul și sare, până obții o compoziție fermă, nu apoasă. ÎNTINDE ALUATUL: pe o suprafață făinată, întinde aluatul foarte subțire, aproape translucid, cu sucitorul sau la mașina de paste. TAIE PĂTRATE: taie aluatul în pătrate de 5-6cm folosind un cuțit sau o rotiță de tăiat pastă. UMPLE ȘI ÎNCHIDE: pune câte o linguriță de umplutură în centrul fiecărui pătrat, apoi pliază colț în colț pentru a forma un triunghi și presează bine marginile cu degetele ca să se lipească, fără apă. FORMEAZĂ COLȚUNAȘII: adu cele două colțuri opuse ale triunghiului împreună și presează-le, dând formă tradițională curbată. FIERBE: adu la fiert o oală mare de apă sărată, adaugă colțunașii fără să aglomerezi oala și fierbe 4-5 minute, până se ridică la suprafață și rămân acolo încă un minut. SCURGE ȘI SERVEȘTE: scoate colțunașii cu o lingură cu găuri, așază-i în boluri și toarnă unt topit deasupra. Servește cu smântână alături.",
+    "en": "MAKE THE DOUGH: combine the flour, egg, lukewarm water and salt in a bowl and knead for 8-10 minutes, until smooth and elastic. Cover and let rest for 20-30 minutes at room temperature. PREPARE THE FILLING: mix the well-drained cheese with the egg yolk, dill and salt, until you get a firm mixture, not watery. ROLL OUT THE DOUGH: on a floured surface, roll the dough out very thin, almost translucent, with a rolling pin or pasta machine. CUT SQUARES: cut the dough into 5-6cm squares using a knife or pasta wheel. FILL AND CLOSE: place a teaspoon of filling in the centre of each square, then fold corner to corner to form a triangle and press the edges firmly with your fingers to seal, without water. SHAPE THE DUMPLINGS: bring the two opposite corners of the triangle together and press them, giving the traditional curved shape. BOIL: bring a large pot of salted water to a boil, add the dumplings without crowding the pot and boil for 4-5 minutes, until they float to the surface and stay there for another minute. DRAIN AND SERVE: lift the dumplings out with a slotted spoon, place them in bowls and pour melted butter over them. Serve with sour cream on the side.",
+    "es": "HAZ LA MASA: combina la harina, el huevo, el agua tibia y la sal en un bol y amasa 8-10 minutos, hasta que quede lisa y elástica. Tapa y deja reposar 20-30 minutos a temperatura ambiente. PREPARA EL RELLENO: mezcla el queso bien escurrido con la yema, el eneldo y sal, hasta obtener una mezcla firme, no aguada. ESTIRA LA MASA: sobre una superficie enharinada, estira la masa muy fina, casi translúcida, con rodillo o máquina de pasta. CORTA CUADRADOS: corta la masa en cuadrados de 5-6cm con un cuchillo o cortapastas. RELLENA Y CIERRA: pon una cucharadita de relleno en el centro de cada cuadrado, dobla de esquina a esquina para formar un triángulo y presiona bien los bordes con los dedos para sellar, sin agua. FORMA LAS EMPANADILLAS: junta las dos esquinas opuestas del triángulo y presiónalas, dando la forma curva tradicional. HIERVE: lleva a ebullición una olla grande de agua con sal, añade las empanadillas sin apiñar la olla y hierve 4-5 minutos, hasta que floten a la superficie y se queden ahí un minuto más. ESCURRE Y SIRVE: saca las empanadillas con una espumadera, colócalas en boles y vierte mantequilla derretida encima. Sirve con nata agria aparte.",
+    "fr": "FAIS LA PÂTE: mélange la farine, l'œuf, l'eau tiède et le sel dans un bol et pétris 8-10 minutes, jusqu'à ce qu'elle soit lisse et élastique. Couvre et laisse reposer 20-30 minutes à température ambiante. PRÉPARE LA FARCE: mélange le fromage bien égoutté avec le jaune d'œuf, l'aneth et le sel, jusqu'à obtenir un mélange ferme, pas aqueux. ÉTALE LA PÂTE: sur une surface farinée, étale la pâte très finement, presque translucide, au rouleau ou à la machine à pâtes. DÉCOUPE DES CARRÉS: découpe la pâte en carrés de 5-6cm avec un couteau ou une roulette. FARCIS ET FERME: place une cuillerée de farce au centre de chaque carré, puis replie coin à coin pour former un triangle et presse fermement les bords avec les doigts pour sceller, sans eau. FORME LES RAVIOLIS: rapproche les deux coins opposés du triangle et presse-les, donnant la forme courbée traditionnelle. FAIS BOUILLIR: porte à ébullition une grande marmite d'eau salée, ajoute les raviolis sans surcharger la marmite et fais bouillir 4-5 minutes, jusqu'à ce qu'ils remontent à la surface et y restent encore une minute. ÉGOUTTE ET SERS: sors les raviolis avec une écumoire, place-les dans des bols et verse du beurre fondu dessus. Sers avec de la crème aigre à côté.",
+    "de": "TEIG HERSTELLEN: Mehl, Ei, lauwarmes Wasser und Salz in einer Schüssel vermengen und 8-10 Minuten kneten, bis er glatt und elastisch ist. Abdecken und 20-30 Minuten bei Zimmertemperatur ruhen lassen. FÜLLUNG VORBEREITEN: den gut abgetropften Quark mit dem Eigelb, dem Dill und Salz vermischen, bis eine feste, nicht wässrige Masse entsteht. TEIG AUSROLLEN: auf einer bemehlten Fläche den Teig sehr dünn, fast durchscheinend, mit dem Nudelholz oder der Nudelmaschine ausrollen. QUADRATE SCHNEIDEN: den Teig mit einem Messer oder Teigrädchen in 5-6cm große Quadrate schneiden. FÜLLEN UND SCHLIESSEN: einen Teelöffel Füllung in die Mitte jedes Quadrats geben, dann von Ecke zu Ecke zu einem Dreieck falten und die Ränder mit den Fingern fest zudrücken, ohne Wasser. KNÖDEL FORMEN: die beiden gegenüberliegenden Ecken des Dreiecks zusammenführen und zusammendrücken, um die traditionelle gebogene Form zu erhalten. KOCHEN: einen großen Topf Salzwasser zum Kochen bringen, die Knödel ohne den Topf zu überfüllen zugeben und 4-5 Minuten kochen, bis sie an die Oberfläche steigen und dort noch eine Minute bleiben. ABTROPFEN UND SERVIEREN: die Knödel mit einem Schaumlöffel herausheben, in Schalen geben und mit zerlassener Butter beträufeln. Mit saurer Sahne dazu servieren.",
+    "pt": "FAZ A MASSA: combina a farinha, o ovo, a água morna e o sal numa taça e amassa 8-10 minutos, até ficar lisa e elástica. Tapa e deixa repousar 20-30 minutos à temperatura ambiente. PREPARA O RECHEIO: mistura o queijo bem escorrido com a gema, o endro e sal, até obteres uma mistura firme, não aguada. ESTENDE A MASSA: numa superfície enfarinhada, estende a massa muito fina, quase translúcida, com o rolo ou a máquina de massa. CORTA QUADRADOS: corta a massa em quadrados de 5-6cm com uma faca ou roda de cortar massa. RECHEIA E FECHA: coloca uma colher de chá de recheio no centro de cada quadrado, depois dobra de canto a canto para formar um triângulo e pressiona bem as bordas com os dedos para selar, sem água. MOLDA OS PASTÉIS: junta os dois cantos opostos do triângulo e pressiona-os, dando a forma curva tradicional. FERVE: leva a ferver uma panela grande de água com sal, junta os pastéis sem sobrelotar a panela e ferve 4-5 minutos, até subirem à superfície e ficarem lá mais um minuto. ESCORRE E SERVE: retira os pastéis com uma escumadeira, coloca-os em tigelas e verta manteiga derretida por cima. Serve com natas azedas ao lado.",
+    "ru": "ЗАМЕСИ ТЕСТО: смешай муку, яйцо, тёплую воду и соль в миске и вымешивай 8-10 минут, пока не станет гладким и эластичным. Накрой и оставь на 20-30 минут при комнатной температуре. ПРИГОТОВЬ НАЧИНКУ: смешай хорошо отжатый творог с желтком, укропом и солью, пока не получится плотная, не водянистая масса. РАСКАТАЙ ТЕСТО: на подпыленной мукой поверхности раскатай тесто очень тонко, почти прозрачно, скалкой или на паста-машине. НАРЕЖЬ КВАДРАТЫ: нарежь тесто на квадраты 5-6см ножом или колёсиком для теста. НАПОЛНИ И ЗАКРОЙ: положи чайную ложку начинки в центр каждого квадрата, затем сложи угол к углу, формируя треугольник, и плотно защипни края пальцами, без воды. СФОРМИРУЙ ВАРЕНИКИ: сведи два противоположных угла треугольника вместе и прижми их, придавая традиционную изогнутую форму. СВАРИ: доведи до кипения большую кастрюлю подсоленной воды, добавь вареники, не перегружая кастрюлю, и вари 4-5 минут, пока не всплывут на поверхность и не останутся там ещё минуту. ОТЦЕДИ И ПОДАЙ: достань вареники шумовкой, разложи по мискам и полей растопленным маслом. Подавай со сметаной отдельно.",
+    "ar": "اعجن العجين: اخلط الدقيق والبيضة والماء الفاتر والملح في وعاء واعجن 8-10 دقائق حتى يصبح ناعمًا ومرنًا. غطِّه واتركه يرتاح 20-30 دقيقة في درجة حرارة الغرفة. جهّز الحشوة: اخلط الجبن المصفّى جيدًا مع صفار البيض والشبت والملح حتى تحصل على خليط متماسك وليس مائيًا. افرد العجين: على سطح مرشوش بالدقيق، افرد العجين رقيقًا جدًا، شبه شفاف، بشوبك أو ماكينة معكرونة. قطّع مربعات: قطّع العجين إلى مربعات 5-6سم بسكين أو عجلة تقطيع. احشُ وأغلق: ضع ملعقة صغيرة من الحشوة في وسط كل مربع، ثم اطوِ زاوية لزاوية لتشكيل مثلث واضغط الحواف بإحكام بأصابعك لتُغلق، دون ماء. شكّل القطع: اجمع الزاويتين المتقابلتين للمثلث واضغطهما معًا، مانحًا الشكل المنحني التقليدي. اسلق: اغلِ قدرًا كبيرًا من الماء المملح، أضف القطع دون ازدحام القدر واسلق 4-5 دقائق حتى تطفو على السطح وتبقى هناك دقيقة إضافية. صفِّ وقدّم: أخرج القطع بملعقة مثقبة، ضعها في أوعية واسكب الزبدة المذابة فوقها. قدّم مع القشدة الحامضة جانبًا.",
+    "zh": "制作面团：将面粉、鸡蛋、温水和盐放入碗中，揉8-10分钟至光滑有弹性。盖好后在室温下静置20-30分钟。准备馅料：将充分沥干的奶酪与蛋黄、莳萝和盐混合，直到形成紧实、不水的馅料。擀开面团：在撒了面粉的台面上，用擀面杖或制面机将面团擀得极薄，几乎透明。切成方块：用刀或切面滚轮将面团切成5-6厘米见方的方块。填馅并封口：在每个方块中心放一茶匙馅料，然后对角折起形成三角形，用手指用力捏紧边缘密封，不用水。整形：将三角形的两个对角捏合在一起，形成传统的弯曲形状。煮制：将一大锅盐水煮沸，放入饺子（不要挤在一起），煮4-5分钟，直到浮到水面并再停留一分钟。沥干装盘：用漏勺捞出饺子，装入碗中，淋上融化的黄油。搭配酸奶油享用。",
+    "ja": "生地を作る：ボウルに小麦粉、卵、ぬるま湯、塩を合わせ、なめらかで弾力が出るまで8〜10分こねる。覆って室温で20〜30分休ませる。詰め物を準備する：よく水切りしたチーズに卵黄、ディル、塩を混ぜ、水っぽくならない硬めの生地にする。生地を伸ばす：打ち粉をした台の上で、めん棒かパスタマシンでほぼ透けるほど薄く伸ばす。四角に切る：ナイフかパスタカッターで生地を5〜6cmの正方形に切る。詰めて閉じる：それぞれの正方形の中心に小さじ1杯の詰め物をのせ、角と角を合わせて三角形に折り、水を使わず指でしっかり端を押さえて閉じる。成形する：三角形の対角の二つの角を合わせて押さえ、伝統的な湾曲した形にする。茹でる：大鍋に塩水を沸かし、鍋が混みすぎないように餃子を入れ、浮き上がってさらに1分そのままにするまで4〜5分茹でる。水を切って提供する：穴あきお玉で取り出し、器に盛って溶かしバターをかける。サワークリームを添えて提供する。",
+    "tr": "HAMURU YAPIN: unu, yumurtayı, ılık suyu ve tuzu bir kasede birleştirin ve pürüzsüz ve esnek olana kadar 8-10 dakika yoğurun. Örtün ve oda sıcaklığında 20-30 dakika dinlendirin. HARCI HAZIRLAYIN: iyice süzülmüş peyniri yumurta sarısı, dereotu ve tuzla, sulu olmayan sıkı bir karışım elde edene kadar karıştırın. HAMURU AÇIN: unlanmış bir yüzeyde hamuru oklava veya makarna makinesiyle neredeyse şeffaf olacak kadar ince açın. KARELER KESİN: hamuru bıçak veya hamur kesici tekerlekle 5-6cm'lik karelere kesin. DOLDURUN VE KAPATIN: her karenin ortasına bir çay kaşığı harç koyun, ardından köşeden köşeye katlayarak üçgen oluşturun ve kenarları su kullanmadan parmaklarınızla sıkıca bastırarak kapatın. MANTILARI ŞEKİLLENDİRİN: üçgenin karşılıklı iki köşesini bir araya getirip bastırarak geleneksel kavisli şekli verin. HAŞLAYIN: büyük bir tencerede tuzlu suyu kaynatın, mantıları tencereyi sıkıştırmadan ekleyin ve yüzeye çıkıp bir dakika daha orada kalana kadar 4-5 dakika haşlayın. SÜZÜN VE SERVİS YAPIN: mantıları delikli bir kaşıkla çıkarın, kaselere yerleştirin ve üzerine eritilmiş tereyağı dökün. Yanında ekşi kremayla servis yapın.",
+    "it": "PREPARA L'IMPASTO: unisci farina, uovo, acqua tiepida e sale in una ciotola e impasta 8-10 minuti, finché liscio ed elastico. Copri e lascia riposare 20-30 minuti a temperatura ambiente. PREPARA IL RIPIENO: mescola la ricotta ben scolata con il tuorlo, l'aneto e il sale, finché ottieni un composto sodo, non acquoso. STENDI L'IMPASTO: su una superficie infarinata, stendi l'impasto molto sottile, quasi trasparente, con il matterello o la macchina per la pasta. TAGLIA QUADRATI: taglia l'impasto in quadrati di 5-6cm con un coltello o una rotella tagliapasta. RIEMPI E CHIUDI: metti un cucchiaino di ripieno al centro di ogni quadrato, poi piega angolo su angolo per formare un triangolo e premi bene i bordi con le dita per sigillare, senza acqua. FORMA I RAVIOLI: unisci i due angoli opposti del triangolo e premili, dando la forma curva tradizionale. FAI BOLLIRE: porta a bollore una pentola grande di acqua salata, aggiungi i ravioli senza sovraffollare la pentola e fai bollire 4-5 minuti, finché salgono a galla e restano lì ancora un minuto. SCOLA E SERVI: tira su i ravioli con una schiumarola, mettili in ciotole e versaci sopra il burro fuso. Servi con panna acida a parte.",
+    "ko": "반죽 만들기: 볼에 밀가루, 달걀, 미지근한 물, 소금을 넣고 매끄럽고 탄력 있어질 때까지 8-10분간 반죽한다. 덮어서 실온에서 20-30분간 휴지시킨다. 속재료 준비하기: 물기 잘 뺀 치즈에 달걀노른자, 딜, 소금을 섞어 질지 않고 단단한 혼합물을 만든다. 반죽 밀기: 밀가루를 뿌린 작업대에서 밀대나 파스타 기계로 거의 비칠 정도로 얇게 민다. 정사각형으로 자르기: 칼이나 파스타 커터로 반죽을 5-6cm 정사각형으로 자른다. 채우고 봉하기: 각 정사각형 중앙에 속재료 1작은술을 놓고 모서리와 모서리를 맞대어 삼각형으로 접은 뒤, 물 없이 손가락으로 가장자리를 단단히 눌러 봉한다. 모양 만들기: 삼각형의 마주보는 두 꼭짓점을 모아 눌러 전통적인 곡선 모양을 만든다. 삶기: 큰 냄비에 소금물을 끓이고 만두를 겹치지 않게 넣어 수면에 떠오른 뒤 1분 더 기다리며 4-5분간 삶는다. 건져서 서빙하기: 구멍 뚫린 국자로 만두를 건져 그릇에 담고 녹인 버터를 뿌린다. 사워크림을 곁들여 서빙한다.",
+    "hi": "आटा गूंधें: एक कटोरे में आटा, अंडा, गुनगुना पानी और नमक मिलाएं और चिकना व लचीला होने तक 8-10 मिनट गूंधें। ढकें और कमरे के तापमान पर 20-30 मिनट आराम दें। भरावन तैयार करें: अच्छी तरह निचोड़े पनीर को अंडे की ज़र्दी, सोआ और नमक के साथ मिलाएं, जब तक एक ठोस, पानीदार न मिश्रण न बन जाए। आटा बेलें: आटे लगी सतह पर, बेलन या पास्ता मशीन से आटे को बहुत पतला, लगभग पारदर्शी बेलें। चौकोर काटें: चाकू या पास्ता कटर से आटे को 5-6सेमी के चौकोर टुकड़ों में काटें। भरें और बंद करें: हर चौकोर के बीच में एक छोटा चम्मच भरावन रखें, फिर कोने से कोने तक मोड़कर त्रिकोण बनाएं और बिना पानी के उंगलियों से किनारों को मज़बूती से दबाकर सील करें। आकार दें: त्रिकोण के दो विपरीत कोनों को एक साथ लाएं और दबाएं, पारंपरिक घुमावदार आकार देते हुए। उबालें: एक बड़े बर्तन में नमकीन पानी उबालें, बिना भीड़ किए पकौड़ियां डालें और सतह पर तैरने और एक मिनट और वहां रहने तक 4-5 मिनट उबालें। छानें और परोसें: छिद्रित चम्मच से पकौड़ियां निकालें, कटोरों में रखें और ऊपर से पिघला मक्खन डालें। साथ में खट्टी क्रीम परोसें।"
+  },
+  "originText": {
+    "ro": "Colțunașii sunt varianta românească a unei familii mari de aluaturi umplute și fierte, întâlnite sub diverse nume în toată Europa Centrală și de Est; numele lor vine din turcă, prin filieră balcanică, ca și în cazul multor termeni culinari românești pentru mâncăruri de aluat. Umplutura cu brânză de vaci și mărar e cea mai comună variantă de zi cu zi, deși la sate se fac și cu cartofi sau varză, în funcție de ce era disponibil.\n\nCe deosebește colțunași reușiți de unii care se desfac la fiert e două lucruri: brânza trebuie scursă foarte bine în prealabil, altfel umezeala ei înmoaie aluatul din interior înainte să apuce să fiarbă; și aluatul se lipește doar prin presare cu degetele, fără apă, pentru că apa adăugată la margine se subțiază la fiert și lasă loc de scăpat pentru umplutură. Fierberea propriu-zisă nu are nevoie de cronometru — colțunașii anunță singuri când sunt gata, ridicându-se la suprafața apei.",
+    "en": "Colțunași are the Romanian variant of a large family of filled, boiled doughs found under different names across Central and Eastern Europe; their name comes from Turkish, by way of the Balkans, as with many Romanian culinary terms for stuffed dough dishes. The cottage cheese and dill filling is the most common everyday version, though in villages they're also made with potato or cabbage, depending on what was on hand.\n\nWhat separates successful colțunași from ones that fall apart while boiling is two things: the cheese has to be very well drained beforehand, otherwise its moisture softens the dough from the inside before it even gets to boil; and the dough is sealed only by pressing with fingers, never water, because water added at the edge thins out during boiling and leaves an opening for the filling to escape. The boiling itself needs no timer — the dumplings announce on their own when they're ready, rising to the surface of the water.",
+    "es": "Los colțunași son la variante rumana de una gran familia de masas rellenas y hervidas que se encuentran bajo diferentes nombres en toda Europa Central y del Este; su nombre viene del turco, por vía balcánica, como muchos términos culinarios rumanos para platos de masa rellena. El relleno de requesón y eneldo es la versión cotidiana más común, aunque en los pueblos también se hacen con patata o col, según lo que hubiera disponible.\n\nLo que separa unos colțunași logrados de otros que se deshacen al hervir es dos cosas: el queso debe escurrirse muy bien de antemano, de lo contrario su humedad ablanda la masa desde dentro antes incluso de que llegue a hervir; y la masa se sella solo presionando con los dedos, nunca con agua, porque el agua añadida en el borde se diluye al hervir y deja un hueco por donde escapa el relleno. La cocción en sí no necesita cronómetro — las empanadillas avisan solas cuando están listas, subiendo a la superficie del agua.",
+    "fr": "Les colțunași sont la variante roumaine d'une grande famille de pâtes farcies et bouillies que l'on trouve sous différents noms à travers l'Europe centrale et orientale ; leur nom vient du turc, par la voie balkanique, comme beaucoup de termes culinaires roumains pour les plats de pâte farcie. La farce au fromage blanc et à l'aneth est la version quotidienne la plus courante, bien qu'à la campagne on les fasse aussi avec de la pomme de terre ou du chou, selon ce qui était disponible.\n\nCe qui distingue des colțunași réussis de ceux qui se défont à la cuisson tient à deux choses : le fromage doit être très bien égoutté au préalable, sinon son humidité ramollit la pâte de l'intérieur avant même qu'elle n'ait le temps de bouillir ; et la pâte n'est scellée qu'en pressant avec les doigts, jamais à l'eau, car l'eau ajoutée au bord s'amincit à la cuisson et laisse une ouverture par laquelle la farce s'échappe. La cuisson elle-même ne nécessite pas de minuteur — les raviolis annoncent d'eux-mêmes quand ils sont prêts, en remontant à la surface de l'eau.",
+    "de": "Colțunași sind die rumänische Variante einer großen Familie gefüllter, gekochter Teigtaschen, die unter verschiedenen Namen in ganz Mittel- und Osteuropa zu finden sind; ihr Name stammt aus dem Türkischen, über die Balkanroute, wie viele rumänische Küchenbegriffe für gefüllte Teiggerichte. Die Füllung aus Quark und Dill ist die gängigste Alltagsversion, obwohl sie auf dem Land je nach Verfügbarkeit auch mit Kartoffel oder Kohl gemacht werden.\n\nWas gelungene Colțunași von solchen unterscheidet, die beim Kochen aufplatzen, sind zwei Dinge: Der Käse muss vorher sehr gut abgetropft sein, sonst weicht seine Feuchtigkeit den Teig von innen auf, noch bevor er überhaupt zu kochen beginnt; und der Teig wird nur durch Fingerdruck versiegelt, nie mit Wasser, denn an den Rändern zugegebenes Wasser verdünnt sich beim Kochen und hinterlässt eine Öffnung, durch die die Füllung entweichen kann. Das Kochen selbst braucht keine Uhr — die Knödel melden sich von selbst, wenn sie fertig sind, indem sie an die Wasseroberfläche steigen.",
+    "pt": "Os colțunași são a variante romena de uma grande família de massas recheadas e fervidas encontradas sob nomes diferentes por toda a Europa Central e de Leste; o seu nome vem do turco, pela via balcânica, como acontece com muitos termos culinários romenos para pratos de massa recheada. O recheio de queijo fresco e endro é a versão do dia a dia mais comum, embora nas aldeias também se façam com batata ou couve, consoante o que houvesse disponível.\n\nO que separa uns colțunași bem-sucedidos de outros que se desfazem a ferver é duas coisas: o queijo tem de ser muito bem escorrido antes, senão a sua humidade amolece a massa por dentro antes mesmo de chegar a ferver; e a massa é selada apenas apertando com os dedos, nunca com água, porque a água adicionada na borda se dilui ao ferver e deixa uma abertura por onde o recheio escapa. A fervura em si não precisa de cronómetro — os pastéis avisam sozinhos quando estão prontos, subindo à superfície da água.",
+    "ru": "Колцунаш — румынский вариант большого семейства начинённых варёных изделий из теста, встречающихся под разными названиями по всей Центральной и Восточной Европе; их название пришло из турецкого, через балканский путь, как и многие румынские кулинарные термины для блюд из начинённого теста. Начинка из творога и укропа — самый распространённый повседневный вариант, хотя в деревнях их также делают с картофелем или капустой, в зависимости от того, что было под рукой.\n\nЧто отличает удавшиеся колцунаш от тех, что разваливаются при варке, — это два момента: творог нужно очень хорошо отжать заранее, иначе его влага размягчит тесто изнутри ещё до того, как оно успеет свариться; и тесто запечатывают только пальцами, никогда водой, потому что вода, добавленная по краю, при варке разжижается и оставляет отверстие, через которое вытекает начинка. Сама варка не требует таймера — вареники сами сообщают о готовности, всплывая на поверхность воды.",
+    "ar": "الكولتوناشي هي النسخة الرومانية من عائلة كبيرة من العجائن المحشوة المسلوقة الموجودة بأسماء مختلفة في جميع أنحاء وسط وشرق أوروبا؛ يأتي اسمها من التركية، عبر الطريق البلقاني، كما هو الحال مع العديد من المصطلحات الطهوية الرومانية لأطباق العجين المحشو. حشوة الجبن القريش والشبت هي النسخة اليومية الأكثر شيوعًا، رغم أنها تُصنع في القرى أيضًا بالبطاطس أو الملفوف، حسب المتوفر.\n\nما يفصل كولتوناشي ناجحة عن أخرى تتفكك أثناء السلق هو أمران: يجب تصفية الجبن جيدًا جدًا مسبقًا، وإلا فإن رطوبتها تُلين العجين من الداخل قبل أن يبدأ حتى في الغليان؛ والعجين يُغلق فقط بالضغط بالأصابع، أبدًا بالماء، لأن الماء المُضاف عند الحافة يتخفف أثناء السلق ويترك فتحة تهرب منها الحشوة. السلق نفسه لا يحتاج إلى مؤقت — تعلن القطع بنفسها عن جاهزيتها بالطفو على سطح الماء.",
+    "zh": "Colțunași是罗马尼亚版本的一大类包馅水煮面食，在整个中东欧地区以不同名字出现；它的名字经巴尔干半岛传入，源自土耳其语，就像许多罗马尼亚语中关于包馅面食的烹饪词汇一样。农家奶酪配莳萝的馅料是最常见的日常做法，不过在乡村地区，人们也会根据手头有什么食材，用土豆或卷心菜来做馅。\n\n区分成功的colțunași与煮破的关键在于两点：奶酪必须事先充分沥干，否则其水分会在还没开始煮之前就把面皮从内部泡软；而且面皮只能靠手指按压封口，绝不能用水，因为边缘加的水在煮的过程中会变稀，留下缝隙让馅料漏出。煮的过程本身不需要计时——饺子浮到水面就是它们自己发出的熟了的信号。",
+    "ja": "コルツナシは、中央ヨーロッパから東ヨーロッパ全域でさまざまな名前で見られる、詰め物をして茹でる生地料理の大きな系統に属するルーマニア版だ。その名前は、多くのルーマニアの詰め物生地料理の名称と同様に、バルカン半島経由でトルコ語に由来する。カッテージチーズとディルの詰め物が最も一般的な日常版だが、農村部では手元にあるものによってじゃがいもやキャベツで作ることもある。\n\n成功したコルツナシと茹でている間に崩れてしまうものを分けるのは二つのことだ。まず、チーズは事前に非常によく水切りしなければならない。そうしないと、茹で始める前からその水分が内側から生地をふやけさせてしまう。そして生地は指で押さえるだけで閉じ、決して水を使わない。端に加えた水は茹でている間に薄まり、詰め物が漏れ出る隙間を残してしまうからだ。茹でること自体にタイマーは不要だ——団子は水面に浮かび上がることで、自ら茹で上がりを知らせてくれる。",
+    "tr": "Colțunași, Orta ve Doğu Avrupa'nın her yerinde farklı isimlerle bulunan büyük bir doldurulmuş, haşlanmış hamur ailesinin Romen versiyonudur; ismi, birçok Romen mutfak teriminde olduğu gibi Balkan yolu üzerinden Türkçeden gelir. Lor peyniri ve dereotu harcı en yaygın günlük versiyondur, ancak köylerde elde ne varsa ona göre patates veya lahana ile de yapılırlar.\n\nBaşarılı colțunași'yi haşlanırken dağılanlardan ayıran iki şey vardır: peynir önceden çok iyi süzülmelidir, aksi halde nemi hamuru haşlanmaya bile başlamadan içeriden yumuşatır; ve hamur yalnızca parmaklarla bastırılarak kapatılır, asla suyla değil, çünkü kenara eklenen su haşlanırken incelir ve harcın kaçabileceği bir açıklık bırakır. Haşlamanın kendisi kronometre gerektirmez — mantılar hazır olduklarını suyun yüzeyine çıkarak kendileri haber verir.",
+    "it": "I colțunași sono la variante rumena di una grande famiglia di paste ripiene e bollite presenti con nomi diversi in tutta l'Europa centrale e orientale; il loro nome deriva dal turco, tramite la via balcanica, come molti termini culinari rumeni per i piatti di pasta ripiena. Il ripieno di ricotta e aneto è la versione quotidiana più comune, anche se nei villaggi si fanno anche con patate o cavolo, a seconda di cosa fosse disponibile.\n\nCiò che separa dei colțunași riusciti da quelli che si sfaldano in cottura è due cose: il formaggio deve essere ben scolato in anticipo, altrimenti la sua umidità ammorbidisce l'impasto dall'interno ancora prima che inizi a bollire; e l'impasto viene sigillato solo premendo con le dita, mai con l'acqua, perché l'acqua aggiunta al bordo si diluisce in cottura e lascia un'apertura da cui il ripieno può fuoriuscire. La bollitura in sé non richiede un cronometro — i ravioli annunciano da soli quando sono pronti, risalendo in superficie.",
+    "ko": "콜추나시는 중부 및 동유럽 전역에서 다양한 이름으로 발견되는 속을 채운 삶은 반죽 요리 계열의 루마니아 버전이다. 그 이름은 다른 많은 루마니아 요리 용어와 마찬가지로 발칸 경로를 통해 튀르키예어에서 왔다. 코티지치즈와 딜 속은 가장 흔한 일상 버전이지만, 시골에서는 구할 수 있는 재료에 따라 감자나 양배추로도 만든다.\n\n성공한 콜추나시와 삶다가 터지는 것을 가르는 것은 두 가지다: 치즈는 미리 매우 잘 물기를 빼야 하며, 그렇지 않으면 끓기도 전에 그 수분이 반죽을 안쪽부터 눅눅하게 만든다. 그리고 반죽은 물이 아니라 오직 손가락으로 눌러서만 봉해야 한다. 가장자리에 물을 바르면 삶는 동안 묽어져 속재료가 새어나갈 틈을 남기기 때문이다. 삶는 과정 자체는 타이머가 필요 없다 — 만두는 수면 위로 떠오르며 스스로 익었음을 알려준다.",
+    "hi": "कोल्तुनाशी मध्य और पूर्वी यूरोप में विभिन्न नामों से पाए जाने वाले भरे हुए, उबले आटे के बड़े परिवार का रोमानियाई संस्करण है; इसका नाम, कई रोमानियाई पाक शब्दों की तरह, बाल्कन रास्ते से तुर्की से आया है। पनीर और सोआ का भरावन सबसे आम रोज़मर्रा का संस्करण है, हालांकि गांवों में जो भी उपलब्ध हो उसके अनुसार आलू या पत्तागोभी से भी बनाए जाते हैं।\n\nसफल कोल्तुनाशी और उबलते समय टूट जाने वाले के बीच का अंतर दो बातों का है: पनीर को पहले बहुत अच्छी तरह निचोड़ना चाहिए, वरना उसकी नमी उबलने से पहले ही आटे को अंदर से नरम कर देती है; और आटा केवल उंगलियों से दबाकर सील किया जाता है, कभी पानी से नहीं, क्योंकि किनारे पर लगाया पानी उबलते समय पतला हो जाता है और भरावन के निकलने के लिए जगह छोड़ देता है। उबालने में ही कोई टाइमर नहीं चाहिए — पकौड़ियां खुद बता देती हैं कि वे कब तैयार हैं, पानी की सतह पर तैरकर।"
+  },
+  "meta": {
+    "time": 50,
+    "costRon": 14,
+    "tags": [
+      "budget",
+      "vegetarian",
+      "family"
+    ],
+    "desc": {
+      "ro": "Aluat subțire umplut cu brânză de vaci și mărar, fiert în apă și servit cu unt topit și smântână.",
+      "en": "Thin dough filled with cottage cheese and dill, boiled and served with melted butter and sour cream.",
+      "es": "Masa fina rellena de requesón y eneldo, hervida y servida con mantequilla derretida y nata agria.",
+      "fr": "Pâte fine farcie au fromage blanc et à l'aneth, bouillie et servie avec du beurre fondu et de la crème aigre.",
+      "de": "Dünner Teig gefüllt mit Quark und Dill, gekocht und mit zerlassener Butter und saurer Sahne serviert.",
+      "pt": "Massa fina recheada com queijo fresco e endro, fervida e servida com manteiga derretida e natas azedas.",
+      "ru": "Тонкое тесто с начинкой из творога и укропа, отваренное и поданное с растопленным маслом и сметаной.",
+      "ar": "عجين رقيق محشو بالجبن القريش والشبت، مسلوق ويُقدَّم مع زبدة مذابة وقشدة حامضة.",
+      "zh": "包裹农家奶酪和莳萝馅料的薄面皮，水煮后配融化黄油和酸奶油享用。",
+      "ja": "カッテージチーズとディルを詰めた薄い生地を茹で、溶かしバターとサワークリームを添えた一皿。",
+      "tr": "Lor peyniri ve dereotuyla doldurulmuş ince hamur, haşlanıp eritilmiş tereyağı ve ekşi kremayla servis edilir.",
+      "it": "Impasto sottile ripieno di ricotta e aneto, bollito e servito con burro fuso e panna acida.",
+      "ko": "코티지치즈와 딜을 채운 얇은 반죽을 삶아 녹인 버터와 사워크림을 곁들인 요리.",
+      "hi": "पनीर और सोआ से भरा पतला आटा, उबाला गया और पिघले मक्खन व खट्टी क्रीम के साथ परोसा गया।"
+    }
+  }
+}
