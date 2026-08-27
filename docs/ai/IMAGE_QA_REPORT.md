@@ -126,7 +126,7 @@ or 2 (so the SSR renders an actual `<img>`):
 | 246 | Storceag | Romania | local-jpg | OVERSIZED:511KB | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 268 | Crème Brûlée | France | local-jpg | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
 | 270 | Pain Perdu (French Toast) | France | local-jpg | UNUSUAL_AR | **P1** | Re-crop local file (target ~4:3 or 16:9) |
-| 274 | Tochitură (Romanian Pork Stew) | Romania | local-png | OVERSIZED:1828KB | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
+| 274 | Romanian Pork Stew | Romania | local-png | OVERSIZED:1828KB | **P1** | Re-encode local file (target ≤150 KB, 1200px wide, WebP if possible) |
 | 1 | Spaghetti Carbonara | Italy | wikipedia | FLAGSHIP | **P3** | — |
 | 8 | Tacos | Mexico | spoonacular | FLAGSHIP | **P3** | — |
 | 9 | Chicken Curry | India | local-webp | FLAGSHIP | **P3** | — |
@@ -344,10 +344,10 @@ or 2 (so the SSR renders an actual `<img>`):
 | 269 | Croissant | France | local-jpg | — | **P3** | — |
 | 271 | Confit de Canard (Duck Confit) | France | local-jpg | — | **P3** | — |
 | 272 | Soufflé au Fromage (Cheese Soufflé) | France | local-jpg | — | **P3** | — |
-| 273 | Piftie (Romanian Jellied Pork) | Romania | local-jpg | — | **P3** | — |
-| 275 | Colțunași (Romanian Cheese Dumplings) | Romania | local-webp | — | **P3** | — |
-| 276 | Drob de Miel (Romanian Lamb Pâté) | Romania | local-jpg | — | **P3** | — |
-| 277 | Romanian Potato Musaca | Romania | local-jpg | — | **P3** | — |
+| 273 | Romanian Pork Aspic | Romania | local-jpg | — | **P3** | — |
+| 275 | Romanian Cheese Dumplings | Romania | local-webp | — | **P3** | — |
+| 276 | Romanian Lamb Pâté | Romania | local-jpg | — | **P3** | — |
+| 277 | Romanian Potato Moussaka | Romania | local-jpg | — | **P3** | — |
 
 ## Constraints
 
