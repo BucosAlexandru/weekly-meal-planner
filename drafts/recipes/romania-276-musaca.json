@@ -1,0 +1,590 @@
+{
+  "id": 277,
+  "servings": 6,
+  "tipType": "romanian",
+  "pairingsType": "romanian",
+  "origin": {
+    "ro": "România",
+    "en": "Romania",
+    "es": "Rumanía",
+    "fr": "Roumanie",
+    "de": "Rumänien",
+    "pt": "Roménia",
+    "ru": "Румыния",
+    "ar": "رومانيا",
+    "zh": "罗马尼亚",
+    "ja": "ルーマニア",
+    "tr": "Romanya",
+    "it": "Romania",
+    "ko": "루마니아",
+    "hi": "रोमानिया"
+  },
+  "name": {
+    "ro": "Musaca de cartofi",
+    "en": "Romanian Potato Musaca",
+    "es": "Musaca Rumana de Patatas",
+    "fr": "Moussaka Roumaine de Pommes de Terre",
+    "de": "Rumänische Kartoffel-Musaka",
+    "pt": "Musaca Romena de Batata",
+    "ru": "Румынская картофельная мусака",
+    "ar": "موساكا البطاطس الرومانية",
+    "zh": "罗马尼亚土豆肉派",
+    "ja": "ルーマニア風ポテトムサカ",
+    "tr": "Romanya Usulü Patatesli Musakka",
+    "it": "Musaca Rumena di Patate",
+    "ko": "루마니아식 감자 무사카",
+    "hi": "रोमानियाई आलू मुसाका"
+  },
+  "category": {
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "tr": "Ana Yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🥔",
+        "t": "Cartofi feliați subțire, pre-prăjiți",
+        "d": "Se rumenesc puțin înainte, ca să nu iasă apoși la copt"
+      },
+      {
+        "icon": "🥩",
+        "t": "Carne tocată călită separat cu ceapă",
+        "d": "Umezeala se evaporă înainte de a intra în straturi"
+      },
+      {
+        "icon": "🥛",
+        "t": "Sos de ouă bătute cu smântână deasupra",
+        "d": "Se coagulează la cuptor într-o crustă fermă, nu lichidă"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Lăsată la odihnă înainte de tăiat",
+        "d": "Straturile se țin bine doar după ce se răcește puțin"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🥔",
+        "t": "Thinly sliced potatoes, pre-fried",
+        "d": "Lightly browned first so they don't turn watery when baked"
+      },
+      {
+        "icon": "🥩",
+        "t": "Minced meat cooked separately with onion",
+        "d": "Moisture evaporates before it goes into the layers"
+      },
+      {
+        "icon": "🥛",
+        "t": "Beaten egg and sour cream topping",
+        "d": "Sets into a firm crust in the oven, not a liquid one"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Rested before slicing",
+        "d": "The layers only hold together once it cools slightly"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🥔",
+        "t": "Patatas en láminas finas, prefritas",
+        "d": "Doradas ligeramente antes para que no queden aguadas al hornear"
+      },
+      {
+        "icon": "🥩",
+        "t": "Carne picada cocinada aparte con cebolla",
+        "d": "La humedad se evapora antes de entrar en las capas"
+      },
+      {
+        "icon": "🥛",
+        "t": "Cobertura de huevo batido y nata agria",
+        "d": "Cuaja en una costra firme en el horno, no líquida"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Reposada antes de cortar",
+        "d": "Las capas solo se mantienen firmes tras enfriarse un poco"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🥔",
+        "t": "Pommes de terre en fines tranches, préfrites",
+        "d": "Légèrement dorées d'abord pour qu'elles ne deviennent pas aqueuses à la cuisson"
+      },
+      {
+        "icon": "🥩",
+        "t": "Viande hachée cuite séparément avec l'oignon",
+        "d": "L'humidité s'évapore avant d'entrer dans les couches"
+      },
+      {
+        "icon": "🥛",
+        "t": "Nappage d'œuf battu et de crème aigre",
+        "d": "Prend en une croûte ferme au four, pas liquide"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Reposée avant de trancher",
+        "d": "Les couches ne tiennent qu'une fois légèrement refroidie"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🥔",
+        "t": "Dünn geschnittene Kartoffeln, vorgebraten",
+        "d": "Zuerst leicht angebräunt, damit sie beim Backen nicht wässrig werden"
+      },
+      {
+        "icon": "🥩",
+        "t": "Hackfleisch separat mit Zwiebel gebraten",
+        "d": "Feuchtigkeit verdampft, bevor es in die Schichten kommt"
+      },
+      {
+        "icon": "🥛",
+        "t": "Verquirltes Ei mit saurer Sahne obenauf",
+        "d": "Stockt im Ofen zu einer festen Kruste, nicht flüssig"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Vor dem Anschneiden ruhen lassen",
+        "d": "Die Schichten halten erst nach leichtem Abkühlen zusammen"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🥔",
+        "t": "Batatas em fatias finas, pré-fritas",
+        "d": "Levemente douradas antes para não ficarem aguadas ao assar"
+      },
+      {
+        "icon": "🥩",
+        "t": "Carne picada cozinhada à parte com cebola",
+        "d": "A humidade evapora antes de entrar nas camadas"
+      },
+      {
+        "icon": "🥛",
+        "t": "Cobertura de ovo batido com natas azedas",
+        "d": "Solidifica numa crosta firme no forno, não líquida"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Repousada antes de cortar",
+        "d": "As camadas só se mantêm depois de arrefecer um pouco"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🥔",
+        "t": "Тонко нарезанный картофель, обжаренный заранее",
+        "d": "Слегка подрумянен, чтобы не стал водянистым при запекании"
+      },
+      {
+        "icon": "🥩",
+        "t": "Фарш, обжаренный отдельно с луком",
+        "d": "Влага испаряется до того, как попадёт в слои"
+      },
+      {
+        "icon": "🥛",
+        "t": "Заливка из взбитого яйца со сметаной сверху",
+        "d": "Застывает в духовке плотной корочкой, а не жидкой"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Настаивается перед нарезкой",
+        "d": "Слои держатся только после того, как немного остынет"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🥔",
+        "t": "بطاطس مقطعة رقيقة، مقلية مسبقًا",
+        "d": "محمّرة قليلًا أولًا حتى لا تصبح مائية عند الخبز"
+      },
+      {
+        "icon": "🥩",
+        "t": "لحم مفروم مطهو منفصلًا مع البصل",
+        "d": "الرطوبة تتبخر قبل أن يدخل الطبقات"
+      },
+      {
+        "icon": "🥛",
+        "t": "طبقة من البيض المخفوق مع القشدة الحامضة فوقها",
+        "d": "تتماسك في الفرن إلى قشرة متينة، لا سائلة"
+      },
+      {
+        "icon": "🍽️",
+        "t": "تُترك ترتاح قبل التقطيع",
+        "d": "تتماسك الطبقات فقط بعد أن تبرد قليلًا"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🥔",
+        "t": "薄切土豆片，预先煎过",
+        "d": "先轻煎上色，避免烘烤时出水"
+      },
+      {
+        "icon": "🥩",
+        "t": "肉末与洋葱分开炒制",
+        "d": "水分在铺层前先蒸发掉"
+      },
+      {
+        "icon": "🥛",
+        "t": "打散的鸡蛋和酸奶油浇面",
+        "d": "在烤箱中凝固成结实的外壳，而非液状"
+      },
+      {
+        "icon": "🍽️",
+        "t": "切块前静置片刻",
+        "d": "稍微放凉后各层才能定型"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🥔",
+        "t": "薄切りにして下揚げしたじゃがいも",
+        "d": "先に軽く焼き色をつけて焼いたときに水っぽくならないように"
+      },
+      {
+        "icon": "🥩",
+        "t": "玉ねぎと別に炒めたひき肉",
+        "d": "層に重ねる前に水分を飛ばしておく"
+      },
+      {
+        "icon": "🥛",
+        "t": "溶き卵とサワークリームのトッピング",
+        "d": "オーブンで液状ではなくしっかりした層に固まる"
+      },
+      {
+        "icon": "🍽️",
+        "t": "切る前に少し休ませる",
+        "d": "少し冷めてから初めて層がしっかりまとまる"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🥔",
+        "t": "İnce dilimlenmiş, önceden kızartılmış patates",
+        "d": "Fırınlanınca sulanmaması için önce hafifçe kızartılır"
+      },
+      {
+        "icon": "🥩",
+        "t": "Soğanla ayrı pişirilmiş kıyma",
+        "d": "Nem, katmanlara girmeden önce buharlaşır"
+      },
+      {
+        "icon": "🥛",
+        "t": "Üzerinde çırpılmış yumurta ve ekşi krema",
+        "d": "Fırında sıvı değil sıkı bir kabuk halinde katılaşır"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Dilimlemeden önce dinlendirilir",
+        "d": "Katmanlar ancak hafifçe soğuduktan sonra bir arada durur"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🥔",
+        "t": "Patate a fette sottili, pre-fritte",
+        "d": "Rosolate leggermente prima perché non diventino acquose in cottura"
+      },
+      {
+        "icon": "🥩",
+        "t": "Carne macinata cotta a parte con cipolla",
+        "d": "L'umidità evapora prima di entrare negli strati"
+      },
+      {
+        "icon": "🥛",
+        "t": "Copertura di uovo sbattuto e panna acida",
+        "d": "Si rapprende in forno in una crosta soda, non liquida"
+      },
+      {
+        "icon": "🍽️",
+        "t": "Riposata prima di tagliare",
+        "d": "Gli strati si tengono solo dopo un leggero raffreddamento"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🥔",
+        "t": "얇게 썰어 미리 구운 감자",
+        "d": "먼저 살짝 구워야 오븐에서 물기가 생기지 않는다"
+      },
+      {
+        "icon": "🥩",
+        "t": "양파와 따로 볶은 다짐육",
+        "d": "켜켜이 쌓기 전에 수분이 먼저 날아간다"
+      },
+      {
+        "icon": "🥛",
+        "t": "풀어놓은 달걀과 사워크림 토핑",
+        "d": "오븐에서 묽지 않고 단단한 막으로 굳는다"
+      },
+      {
+        "icon": "🍽️",
+        "t": "썰기 전에 잠시 휴지",
+        "d": "살짝 식어야 층이 비로소 자리를 잡는다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🥔",
+        "t": "पतले कटे आलू, पहले से तले हुए",
+        "d": "पहले हल्के भूरे किए ताकि बेक होने पर पनीले न हों"
+      },
+      {
+        "icon": "🥩",
+        "t": "प्याज़ के साथ अलग से पका कीमा",
+        "d": "परतों में जाने से पहले नमी उड़ जाती है"
+      },
+      {
+        "icon": "🥛",
+        "t": "ऊपर फेंटे अंडे और खट्टी क्रीम की परत",
+        "d": "ओवन में तरल नहीं, ठोस परत में जमती है"
+      },
+      {
+        "icon": "🍽️",
+        "t": "काटने से पहले आराम दिया गया",
+        "d": "परतें हल्का ठंडा होने के बाद ही टिकती हैं"
+      }
+    ]
+  },
+  "ingredients": {
+    "ro": [
+      "1,2kg cartofi, curățați și tăiați rondele subțiri",
+      "500g carne tocată de porc și vită, amestecată",
+      "1 ceapă mare, tocată fin",
+      "2 linguri ulei, plus pentru prăjit cartofii",
+      "sare și piper, după gust",
+      "1 linguriță boia dulce",
+      "3 ouă",
+      "200ml smântână",
+      "100ml lapte",
+      "50g cașcaval ras"
+    ],
+    "en": [
+      "1.2kg potatoes, peeled and sliced into thin rounds",
+      "500g mixed pork and beef mince",
+      "1 large onion, finely chopped",
+      "2 tbsp oil, plus extra for frying the potatoes",
+      "salt and pepper, to taste",
+      "1 tsp sweet paprika",
+      "3 eggs",
+      "200ml sour cream",
+      "100ml milk",
+      "50g grated cheese"
+    ],
+    "es": [
+      "1,2kg de patatas, peladas y cortadas en rodajas finas",
+      "500g de carne picada mixta de cerdo y ternera",
+      "1 cebolla grande, finamente picada",
+      "2 cdas de aceite, más extra para freír las patatas",
+      "sal y pimienta, al gusto",
+      "1 cdta de pimentón dulce",
+      "3 huevos",
+      "200ml de nata agria",
+      "100ml de leche",
+      "50g de queso rallado"
+    ],
+    "fr": [
+      "1,2kg de pommes de terre, épluchées et coupées en fines rondelles",
+      "500g de viande hachée mixte porc et bœuf",
+      "1 gros oignon, haché finement",
+      "2 c. à soupe d'huile, plus un peu pour frire les pommes de terre",
+      "sel et poivre, selon le goût",
+      "1 c. à café de paprika doux",
+      "3 œufs",
+      "200ml de crème aigre",
+      "100ml de lait",
+      "50g de fromage râpé"
+    ],
+    "de": [
+      "1,2kg Kartoffeln, geschält und in dünne Scheiben geschnitten",
+      "500g gemischtes Hackfleisch (Schwein und Rind)",
+      "1 große Zwiebel, fein gehackt",
+      "2 EL Öl, plus extra zum Braten der Kartoffeln",
+      "Salz und Pfeffer, nach Geschmack",
+      "1 TL süßes Paprikapulver",
+      "3 Eier",
+      "200ml saure Sahne",
+      "100ml Milch",
+      "50g geriebener Käse"
+    ],
+    "pt": [
+      "1,2kg de batatas, descascadas e cortadas em rodelas finas",
+      "500g de carne picada mista de porco e vaca",
+      "1 cebola grande, picada finamente",
+      "2 col. sopa de óleo, mais extra para fritar as batatas",
+      "sal e pimenta, a gosto",
+      "1 col. chá de colorau doce",
+      "3 ovos",
+      "200ml de natas azedas",
+      "100ml de leite",
+      "50g de queijo ralado"
+    ],
+    "ru": [
+      "1,2кг картофеля, очищенного и нарезанного тонкими кружками",
+      "500г смешанного фарша из свинины и говядины",
+      "1 крупная луковица, мелко нарезанная",
+      "2 ст.л. масла, плюс дополнительно для жарки картофеля",
+      "соль и перец по вкусу",
+      "1 ч.л. сладкой паприки",
+      "3 яйца",
+      "200мл сметаны",
+      "100мл молока",
+      "50г тёртого сыра"
+    ],
+    "ar": [
+      "1.2كغ بطاطس، مقشرة ومقطعة إلى شرائح رقيقة",
+      "500غ لحم مفروم مخلوط من الخنزير والبقر",
+      "1 بصلة كبيرة، مفرومة ناعمة",
+      "2 ملعقة كبيرة زيت، بالإضافة إلى كمية لقلي البطاطس",
+      "ملح وفلفل، حسب الرغبة",
+      "ملعقة صغيرة بابريكا حلوة",
+      "3 بيضات",
+      "200مل قشدة حامضة",
+      "100مل حليب",
+      "50غ جبن مبشور"
+    ],
+    "zh": [
+      "1.2公斤土豆，去皮切成薄圆片",
+      "500克猪牛混合肉末",
+      "1个大洋葱，切碎",
+      "2汤匙油，另加适量用于煎土豆",
+      "盐和胡椒，适量",
+      "1茶匙甜味红椒粉",
+      "3个鸡蛋",
+      "200毫升酸奶油",
+      "100毫升牛奶",
+      "50克奶酪碎"
+    ],
+    "ja": [
+      "じゃがいも1.2kg（皮をむき薄い輪切りに）",
+      "豚肉と牛肉の合いびき肉500g",
+      "大玉ねぎ1個（みじん切り）",
+      "油大さじ2（じゃがいもを揚げる分は別途）",
+      "塩とこしょう（お好みで）",
+      "甘いパプリカパウダー小さじ1",
+      "卵3個",
+      "サワークリーム200ml",
+      "牛乳100ml",
+      "すりおろしチーズ50g"
+    ],
+    "tr": [
+      "1,2kg patates, soyulmuş ve ince dilimlenmiş",
+      "500g karışık domuz ve dana kıyma",
+      "1 büyük soğan, ince doğranmış",
+      "2 yemek kaşığı yağ, patatesleri kızartmak için ilaveten",
+      "tuz ve karabiber, damak zevkine göre",
+      "1 tatlı kaşığı tatlı kırmızı biber",
+      "3 yumurta",
+      "200ml ekşi krema",
+      "100ml süt",
+      "50g rendelenmiş peynir"
+    ],
+    "it": [
+      "1,2kg di patate, sbucciate e tagliate a fette sottili",
+      "500g di carne macinata mista di maiale e manzo",
+      "1 cipolla grande, tritata finemente",
+      "2 cucchiai di olio, più extra per friggere le patate",
+      "sale e pepe, quanto basta",
+      "1 cucchiaino di paprika dolce",
+      "3 uova",
+      "200ml di panna acida",
+      "100ml di latte",
+      "50g di formaggio grattugiato"
+    ],
+    "ko": [
+      "감자 1.2kg, 껍질 벗겨 얇게 썰기",
+      "돼지고기와 소고기 혼합 다짐육 500g",
+      "큰 양파 1개, 잘게 다짐",
+      "기름 2큰술, 감자 튀길 여분 포함",
+      "소금과 후추, 취향껏",
+      "달콤한 파프리카 가루 1작은술",
+      "달걀 3개",
+      "사워크림 200ml",
+      "우유 100ml",
+      "간 치즈 50g"
+    ],
+    "hi": [
+      "1.2किग्रा आलू, छिले और पतले गोल कटे",
+      "500ग्राम मिश्रित सूअर और गोमांस कीमा",
+      "1 बड़ा प्याज़, बारीक कटा",
+      "2 बड़े चम्मच तेल, आलू तलने के लिए अतिरिक्त सहित",
+      "नमक और काली मिर्च, स्वादानुसार",
+      "1 छोटा चम्मच मीठी पैप्रिका",
+      "3 अंडे",
+      "200मिली खट्टी क्रीम",
+      "100मिली दूध",
+      "50ग्राम कद्दूकस किया चीज़"
+    ]
+  },
+  "howIsMade": {
+    "ro": "PRE-PRĂJEȘTE CARTOFII: încinge puțin ulei într-o tigaie mare la foc mediu și prăjește rondelele de cartofi în tranșe, 2-3 minute pe fiecare parte, doar cât să capete o culoare aurie ușoară, nu să se gătească complet. Așază-le pe hârtie absorbantă. CĂLEȘTE CARNEA: în aceeași tigaie, călește ceapa tocată 3-4 minute, până se înmoaie, apoi adaugă carnea tocată și rumenește-o bine, sfărâmând-o cu lingura, 8-10 minute, până se evaporă toată umezeala. Asezonează cu sare, piper și boia. PREGĂTEȘTE SOSUL: bate ouăle cu smântâna, laptele, sare și piper într-un bol, până se omogenizează. ASAMBLEAZĂ STRATURILE: unge o tavă cu ulei, pune un strat de cartofi prăjiți pe fund, apoi jumătate din carnea călită deasupra, apoi alt strat de cartofi, restul de carne, și încheie cu un ultim strat de cartofi. TOARNĂ SOSUL: toarnă sosul de ouă și smântână uniform peste tavă, lăsându-l să pătrundă printre straturi. PRESARĂ CAȘCAVALUL: presară cașcavalul ras deasupra, uniform. COACE: coace la 190°C timp de 40-45 minute, până sosul se leagă complet și suprafața devine aurie și ușor crocantă. LASĂ LA ODIHNĂ ȘI SERVEȘTE: lasă musacaua să se odihnească 10-15 minute înainte de a o tăia în pătrate, ca straturile să se așeze și feliile să iasă curate.",
+    "en": "PRE-FRY THE POTATOES: heat a little oil in a large pan over medium heat and fry the potato rounds in batches, 2-3 minutes per side, just until lightly golden, not fully cooked through. Set them on paper towel. COOK THE MEAT: in the same pan, cook the chopped onion for 3-4 minutes, until softened, then add the minced meat and brown it well, breaking it up with a spoon, 8-10 minutes, until all the moisture has evaporated. Season with salt, pepper and paprika. MAKE THE TOPPING: whisk the eggs with the sour cream, milk, salt and pepper in a bowl, until smooth. LAYER IT: grease a baking dish with oil, place a layer of fried potatoes on the bottom, then half the cooked meat on top, then another layer of potatoes, the rest of the meat, and finish with a final layer of potatoes. POUR THE TOPPING: pour the egg and sour cream mixture evenly over the dish, letting it seep down between the layers. SPRINKLE THE CHEESE: sprinkle the grated cheese evenly on top. BAKE: bake at 190°C for 40-45 minutes, until the topping has fully set and the surface is golden and slightly crisp. REST AND SERVE: let the musaca rest for 10-15 minutes before cutting it into squares, so the layers settle and the slices come out clean.",
+    "es": "PREFRÍE LAS PATATAS: calienta un poco de aceite en una sartén grande a fuego medio y fríe las rodajas de patata en tandas, 2-3 minutos por cada lado, solo hasta dorar ligeramente, sin cocerlas del todo. Déjalas en papel absorbente. COCINA LA CARNE: en la misma sartén, sofríe la cebolla picada 3-4 minutos, hasta que se ablande, luego añade la carne picada y dórala bien, desmenuzándola con una cuchara, 8-10 minutos, hasta que se evapore toda la humedad. Sazona con sal, pimienta y pimentón. HAZ LA COBERTURA: bate los huevos con la nata agria, la leche, sal y pimienta en un bol, hasta que quede homogéneo. MONTA LAS CAPAS: engrasa una fuente para hornear con aceite, pon una capa de patatas fritas en el fondo, luego la mitad de la carne cocida encima, luego otra capa de patatas, el resto de la carne, y termina con una última capa de patatas. VIERTE LA COBERTURA: vierte la mezcla de huevo y nata agria uniformemente sobre la fuente, dejando que se filtre entre las capas. ESPOLVOREA EL QUESO: espolvorea el queso rallado uniformemente por encima. HORNEA: hornea a 190°C durante 40-45 minutos, hasta que la cobertura cuaje completamente y la superficie quede dorada y ligeramente crujiente. DEJA REPOSAR Y SIRVE: deja reposar la musaca 10-15 minutos antes de cortarla en cuadrados, para que las capas se asienten y las porciones salgan limpias.",
+    "fr": "PRÉFRIS LES POMMES DE TERRE: chauffe un peu d'huile dans une grande poêle à feu moyen et fais frire les rondelles de pommes de terre par lots, 2-3 minutes de chaque côté, juste jusqu'à ce qu'elles soient légèrement dorées, sans être entièrement cuites. Dépose-les sur du papier absorbant. CUIS LA VIANDE: dans la même poêle, fais revenir l'oignon haché 3-4 minutes, jusqu'à ce qu'il ramollisse, puis ajoute la viande hachée et fais-la bien dorer, en l'émiettant à la cuillère, 8-10 minutes, jusqu'à ce que toute l'humidité se soit évaporée. Assaisonne de sel, poivre et paprika. FAIS LE NAPPAGE: fouette les œufs avec la crème aigre, le lait, le sel et le poivre dans un bol, jusqu'à ce que ce soit lisse. MONTE LES COUCHES: graisse un plat à gratin avec de l'huile, place une couche de pommes de terre frites au fond, puis la moitié de la viande cuite dessus, puis une autre couche de pommes de terre, le reste de la viande, et termine par une dernière couche de pommes de terre. VERSE LE NAPPAGE: verse le mélange d'œuf et de crème aigre uniformément sur le plat, en le laissant s'infiltrer entre les couches. SAUPOUDRE LE FROMAGE: saupoudre le fromage râpé uniformément dessus. CUIS: fais cuire à 190°C pendant 40-45 minutes, jusqu'à ce que le nappage soit entièrement pris et que la surface soit dorée et légèrement croustillante. LAISSE REPOSER ET SERS: laisse la moussaka reposer 10-15 minutes avant de la découper en carrés, pour que les couches se stabilisent et que les parts sortent nettes.",
+    "de": "KARTOFFELN VORBRATEN: etwas Öl in einer großen Pfanne bei mittlerer Hitze erhitzen und die Kartoffelscheiben portionsweise 2-3 Minuten pro Seite braten, nur bis sie leicht goldbraun sind, nicht vollständig gar. Auf Küchenpapier legen. FLEISCH GAREN: in derselben Pfanne die gehackte Zwiebel 3-4 Minuten braten, bis sie weich ist, dann das Hackfleisch zugeben und gut anbraten, dabei mit einem Löffel zerkleinern, 8-10 Minuten, bis alle Feuchtigkeit verdampft ist. Mit Salz, Pfeffer und Paprika würzen. TOPPING ZUBEREITEN: die Eier mit der sauren Sahne, Milch, Salz und Pfeffer in einer Schüssel verquirlen, bis glatt. SCHICHTEN: eine Auflaufform mit Öl einfetten, eine Schicht gebratener Kartoffeln auf den Boden legen, dann die Hälfte des gegarten Fleisches darauf, dann eine weitere Schicht Kartoffeln, den Rest des Fleisches, und mit einer letzten Kartoffelschicht abschließen. ÜBERZUG EINGIESSEN: die Ei-Sahne-Mischung gleichmäßig über die Form gießen und zwischen die Schichten sickern lassen. KÄSE STREUEN: den geriebenen Käse gleichmäßig darüberstreuen. BACKEN: bei 190°C 40-45 Minuten backen, bis der Überzug vollständig gestockt und die Oberfläche goldbraun und leicht knusprig ist. RUHEN LASSEN UND SERVIEREN: die Musaka 10-15 Minuten ruhen lassen, bevor sie in Quadrate geschnitten wird, damit sich die Schichten setzen und die Stücke sauber herauskommen.",
+    "pt": "PRÉ-FRITA AS BATATAS: aquece um pouco de óleo numa frigideira grande em lume médio e frita as rodelas de batata em lotes, 2-3 minutos de cada lado, só até dourar ligeiramente, sem cozer por completo. Coloca-as em papel absorvente. COZINHA A CARNE: na mesma frigideira, refoga a cebola picada 3-4 minutos, até amolecer, depois junta a carne picada e aloura-a bem, desfazendo-a com uma colher, 8-10 minutos, até evaporar toda a humidade. Tempera com sal, pimenta e colorau. FAZ A COBERTURA: bate os ovos com as natas azedas, o leite, sal e pimenta numa taça, até ficar homogéneo. MONTA AS CAMADAS: unta um tabuleiro com óleo, coloca uma camada de batatas fritas no fundo, depois metade da carne cozinhada por cima, depois outra camada de batatas, o resto da carne, e termina com uma última camada de batatas. VERTE A COBERTURA: verte a mistura de ovo e natas azedas uniformemente sobre o tabuleiro, deixando-a infiltrar-se entre as camadas. POLVILHA O QUEIJO: polvilha o queijo ralado uniformemente por cima. COZE: coze a 190°C durante 40-45 minutos, até a cobertura solidificar por completo e a superfície ficar dourada e ligeiramente estaladiça. DEIXA REPOUSAR E SERVE: deixa a musaca repousar 10-15 minutos antes de a cortar em quadrados, para as camadas assentarem e as fatias saírem limpas.",
+    "ru": "ОБЖАРЬ КАРТОФЕЛЬ ЗАРАНЕЕ: разогрей немного масла в большой сковороде на среднем огне и обжарь кружки картофеля партиями, по 2-3 минуты с каждой стороны, лишь до лёгкой золотистости, не до полной готовности. Выложи на бумажное полотенце. ПРИГОТОВЬ МЯСО: на той же сковороде обжарь нарезанный лук 3-4 минуты, пока не станет мягким, затем добавь фарш и хорошо обжарь, разминая ложкой, 8-10 минут, пока вся влага не испарится. Приправь солью, перцем и паприкой. ПРИГОТОВЬ ЗАЛИВКУ: взбей яйца со сметаной, молоком, солью и перцем в миске до однородности. СОБЕРИ СЛОИ: смажь форму для запекания маслом, выложи слой обжаренного картофеля на дно, затем половину готового мяса сверху, затем ещё слой картофеля, оставшееся мясо, и закончи последним слоем картофеля. ЗАЛЕЙ ЗАЛИВКОЙ: равномерно вылей яично-сметанную смесь по всей форме, дав ей просочиться между слоями. ПОСЫПЬ СЫРОМ: равномерно посыпь тёртым сыром сверху. ЗАПЕКАЙ: запекай при 190°C 40-45 минут, пока заливка полностью не схватится, а поверхность не станет золотистой и слегка хрустящей. ДАЙ НАСТОЯТЬСЯ И ПОДАЙ: дай мусаке настояться 10-15 минут перед нарезкой на квадраты, чтобы слои улеглись и порции получились аккуратными.",
+    "ar": "اقلِ البطاطس مسبقًا: سخّن القليل من الزيت في مقلاة كبيرة على نار متوسطة واقلِ شرائح البطاطس على دفعات، 2-3 دقائق لكل جانب، فقط حتى تكتسب لونًا ذهبيًا خفيفًا، دون أن تنضج تمامًا. ضعها على منشفة ورقية. اطبخ اللحم: في نفس المقلاة، اطبخ البصل المفروم 3-4 دقائق حتى يلين، ثم أضف اللحم المفروم وحمّره جيدًا، مع تفتيته بملعقة، 8-10 دقائق، حتى تتبخر كل الرطوبة. تبّل بالملح والفلفل والبابريكا. جهّز الطبقة العلوية: اخفق البيض مع القشدة الحامضة والحليب والملح والفلفل في وعاء حتى يتجانس. رتّب الطبقات: ادهن طبقًا للخبز بالزيت، ضع طبقة من البطاطس المقلية في القاع، ثم نصف اللحم المطهو فوقها، ثم طبقة أخرى من البطاطس، وباقي اللحم، وأنهِ بطبقة أخيرة من البطاطس. اسكب الطبقة العلوية: اسكب خليط البيض والقشدة الحامضة بالتساوي فوق الطبق، تاركًا إياه يتسرب بين الطبقات. رشّ الجبن: رشّ الجبن المبشور بالتساوي فوقه. اخبز: اخبز على 190 درجة مئوية لمدة 40-45 دقيقة، حتى تتماسك الطبقة العلوية تمامًا ويصبح السطح ذهبيًا ومقرمشًا قليلًا. اترك ترتاح وقدّم: اترك الموساكا ترتاح 10-15 دقيقة قبل تقطيعها إلى مربعات، حتى تستقر الطبقات وتخرج الشرائح نظيفة.",
+    "zh": "预炸土豆：在大平底锅中用中火加热少量油，分批煎土豆片，每面2-3分钟，煎至微微金黄即可，不要完全熟透。放在厨房纸上备用。炒制肉料：在同一锅中，炒洋葱碎3-4分钟至变软，然后加入肉末，用勺子把肉末压散炒香，炒8-10分钟，直到水分完全蒸发。加盐、胡椒和红椒粉调味。制作浇面：在碗中将鸡蛋与酸奶油、牛奶、盐和胡椒搅打均匀。叠层：在烤盘中刷油，底部铺一层煎好的土豆，再铺一半炒好的肉料，再铺一层土豆，剩下的肉料，最后以一层土豆收尾。倒入浇面：将蛋液和酸奶油混合物均匀倒在烤盘上，让它渗入各层之间。撒上奶酪：均匀撒上奶酪碎。烘烤：以190°C烘烤40-45分钟，直到浇面完全凝固、表面呈金黄色并略带酥脆。静置享用：让土豆肉派静置10-15分钟后再切成方块，好让各层定型，切出的块才干净利落。",
+    "ja": "じゃがいもを下揚げする：大きなフライパンに少量の油を熱し、じゃがいもの輪切りを数回に分けて片面2〜3分ずつ、軽くきつね色になる程度に、完全に火を通さずに揚げ焼きする。キッチンペーパーの上に取り出す。肉を調理する：同じフライパンで玉ねぎを3〜4分、柔らかくなるまで炒め、次にひき肉を加えてスプーンでほぐしながらよく炒め、水分が完全に飛ぶまで8〜10分焼く。塩、こしょう、パプリカで味を調える。トッピングを作る：ボウルで卵を生クリーム、牛乳、塩、こしょうと合わせ、なめらかになるまで泡立てる。層を重ねる：耐熱皿に油を塗り、底に揚げたじゃがいもを一層敷き、その上に炒めた肉の半量、さらにじゃがいもの層、残りの肉、最後にじゃがいもの層で仕上げる。トッピングを注ぐ：卵と生クリームの混合液を全体に均一に注ぎ、層の間に染み込ませる。チーズを振りかける：すりおろしたチーズを均一に振りかける。焼く：190°Cで40〜45分、トッピングが完全に固まり表面がきつね色で少しパリッとするまで焼く。休ませて盛り付ける：層が落ち着き切り分けがきれいになるよう、切る前に10〜15分休ませる。",
+    "tr": "PATATESLERİ ÖN KIZARTIN: büyük bir tavada biraz yağı orta ateşte ısıtın ve patates dilimlerini gruplar halinde her tarafını hafif altın rengi olana kadar, tam pişirmeden 2-3 dakika kızartın. Kağıt havluya alın. ETİ PİŞİRİN: aynı tavada doğranmış soğanı yumuşayana kadar 3-4 dakika pişirin, ardından kıymayı ekleyip kaşıkla parçalayarak, tüm nem buharlaşana kadar 8-10 dakika iyice kızartın. Tuz, karabiber ve kırmızı biberle tatlandırın. ÜST KATMANI HAZIRLAYIN: yumurtaları ekşi krema, süt, tuz ve karabiberle bir kasede pürüzsüz olana kadar çırpın. KATMANLARI OLUŞTURUN: bir fırın tepsisini yağla yağlayın, altına bir kat kızarmış patates koyun, üzerine pişmiş etin yarısını, sonra başka bir kat patates, kalan eti ve son olarak bir kat daha patatesle bitirin. ÜST KATMANI DÖKÜN: yumurta ve ekşi krema karışımını tepsinin üzerine eşit şekilde dökün, katmanların arasına sızmasına izin verin. PEYNİRİ SERPİN: rendelenmiş peyniri üzerine eşit şekilde serpin. PİŞİRİN: üst katman tamamen katılaşıp yüzeyi altın rengi ve hafif çıtır olana kadar 190°C'de 40-45 dakika pişirin. DİNLENDİRİN VE SERVİS YAPIN: katmanların oturması ve dilimlerin temiz çıkması için karelere kesmeden önce musakayı 10-15 dakika dinlendirin.",
+    "it": "PRE-FRIGGI LE PATATE: scalda un po' d'olio in una padella grande a fuoco medio e friggi le fette di patate a lotti, 2-3 minuti per lato, solo finché dorate leggermente, senza cuocerle del tutto. Mettile su carta assorbente. CUOCI LA CARNE: nella stessa padella, rosola la cipolla tritata 3-4 minuti, finché si ammorbidisce, poi aggiungi la carne macinata e rosolala bene, sminuzzandola con un cucchiaio, 8-10 minuti, finché tutta l'umidità è evaporata. Condisci con sale, pepe e paprika. PREPARA LA COPERTURA: sbatti le uova con la panna acida, il latte, sale e pepe in una ciotola, finché liscio. COMPONI GLI STRATI: ungi una teglia con olio, metti uno strato di patate fritte sul fondo, poi metà della carne cotta sopra, poi un altro strato di patate, il resto della carne, e finisci con un ultimo strato di patate. VERSA LA COPERTURA: versa il composto di uova e panna acida uniformemente sulla teglia, lasciandolo filtrare tra gli strati. COSPARGI IL FORMAGGIO: cospargi il formaggio grattugiato uniformemente sopra. CUOCI: cuoci a 190°C per 40-45 minuti, finché la copertura si è rappresa completamente e la superficie è dorata e leggermente croccante. LASCIA RIPOSARE E SERVI: lascia riposare la musaca 10-15 minuti prima di tagliarla a quadrotti, così gli strati si assestano e le fette escono pulite.",
+    "ko": "감자 미리 튀기기: 큰 팬에 기름을 약간 두르고 중불로 달군 뒤, 감자 조각을 여러 번에 나눠 각 면을 2-3분씩, 완전히 익히지 않고 살짝 황금빛이 날 때까지 튀긴다. 키친타월에 옮겨둔다. 고기 익히기: 같은 팬에 다진 양파를 부드러워질 때까지 3-4분간 볶은 뒤, 다짐육을 넣고 숟가락으로 부수며 수분이 모두 날아갈 때까지 8-10분간 노릇하게 볶는다. 소금, 후추, 파프리카로 간한다. 토핑 만들기: 볼에 달걀을 사워크림, 우유, 소금, 후추와 함께 매끄러워질 때까지 푼다. 층 쌓기: 오븐용 그릇에 기름을 바르고 바닥에 튀긴 감자 한 층을 깔고, 그 위에 익힌 고기의 절반을 올린 뒤 다시 감자 한 층, 남은 고기, 마지막으로 감자 한 층으로 마무리한다. 토핑 붓기: 달걀과 사워크림 혼합물을 고르게 부어 층 사이로 스며들게 한다. 치즈 뿌리기: 간 치즈를 고르게 뿌린다. 굽기: 190°C에서 토핑이 완전히 굳고 표면이 황금빛으로 살짝 바삭해질 때까지 40-45분간 굽는다. 휴지 후 서빙하기: 층이 자리 잡고 깔끔하게 잘리도록 정사각형으로 자르기 전 10-15분간 휴지시킨다.",
+    "hi": "आलू पहले तलें: एक बड़े पैन में थोड़ा तेल मध्यम आंच पर गरम करें और आलू के गोल टुकड़ों को बैचों में हर तरफ 2-3 मिनट तलें, बस हल्का सुनहरा होने तक, पूरी तरह पके बिना। कागज़ के तौलिये पर रखें। मांस पकाएं: उसी पैन में कटा प्याज़ 3-4 मिनट तक नरम होने तक पकाएं, फिर कीमा डालें और चम्मच से तोड़ते हुए 8-10 मिनट तक अच्छी तरह भूरा करें, जब तक सारी नमी उड़ न जाए। नमक, काली मिर्च और पैप्रिका से स्वाद अनुसार डालें। ऊपरी परत तैयार करें: एक कटोरे में अंडों को खट्टी क्रीम, दूध, नमक और काली मिर्च के साथ चिकना होने तक फेंटें। परतें बनाएं: एक बेकिंग डिश को तेल से चिकना करें, तले आलू की एक परत तले में रखें, फिर आधा पका मांस ऊपर, फिर आलू की एक और परत, बाकी मांस, और आलू की आख़िरी परत के साथ समाप्त करें। ऊपरी परत डालें: अंडे और खट्टी क्रीम का मिश्रण डिश पर समान रूप से डालें, इसे परतों के बीच रिसने दें। चीज़ छिड़कें: कद्दूकस किया चीज़ ऊपर समान रूप से छिड़कें। बेक करें: 190°C पर 40-45 मिनट बेक करें, जब तक ऊपरी परत पूरी तरह जम न जाए और सतह सुनहरी और थोड़ी कुरकुरी न हो जाए। आराम दें और परोसें: परतों के जमने और साफ़ टुकड़े निकलने के लिए मुसाका को चौकोर काटने से पहले 10-15 मिनट आराम दें।"
+  },
+  "originText": {
+    "ro": "Musacaua de cartofi e felul de zi cu zi din bucătăria românească, apărut prin adaptarea locală a unei familii mari de mâncăruri similare din sud-estul Europei — versiunea românească se distinge prin folosirea aproape exclusivă a cartofilor ca strat de bază, în locul vinetelor mai des întâlnite în alte bucătării din regiune. E felul pe care îl gătesc majoritatea familiilor din ce au deja în cămară, fără ingrediente speciale.\n\nCe deosebește o musaca reușită de una apoasă și moale e pre-prăjirea cartofilor: feliile crude, puse direct în tavă, eliberează prea multă umezeală la copt și transformă stratul de sos într-o baltă în loc de crustă fermă. La fel, carnea trebuie călită separat, până se evaporă toată zeama, altfel adaugă și ea umezeală suplimentară straturilor. Musacaua tăiată imediat, cât e fierbinte, se destramă pe farfurie — răcirea de câteva minute e ceea ce permite sosului de ouă să se întărească suficient cât să țină straturile împreună la tăiere.",
+    "en": "Potato musaca is the everyday dish of Romanian home cooking, born from a local adaptation of a large family of similar dishes across southeastern Europe — the Romanian version stands out for using almost exclusively potatoes as the base layer, instead of the eggplant more common in other regional kitchens. It's the dish most families cook from whatever is already in the pantry, with no special ingredients required.\n\nWhat separates a successful musaca from a watery, soggy one is pre-frying the potatoes: raw slices placed straight into the dish release too much moisture during baking and turn the topping layer into a puddle instead of a firm crust. Likewise, the meat has to be cooked separately until all its liquid has evaporated, otherwise it adds its own extra moisture to the layers. A musaca cut immediately, while still hot, falls apart on the plate — a few minutes of cooling is what lets the egg topping firm up enough to hold the layers together when sliced.",
+    "es": "La musaca de patatas es el plato cotidiano de la cocina casera rumana, nacido de una adaptación local de una gran familia de platos similares en el sureste de Europa — la versión rumana destaca por usar casi exclusivamente patatas como capa base, en lugar de la berenjena más común en otras cocinas de la región. Es el plato que cocina la mayoría de las familias con lo que ya hay en la despensa, sin ingredientes especiales.\n\nLo que separa una musaca lograda de una acuosa y blanda es freír previamente las patatas: las rodajas crudas puestas directamente en la fuente liberan demasiada humedad al hornear y convierten la capa de cobertura en un charco en lugar de una costra firme. Del mismo modo, la carne debe cocinarse aparte hasta que se evapore todo su líquido, o añadirá su propia humedad extra a las capas. Una musaca cortada de inmediato, aún caliente, se deshace en el plato — unos minutos de enfriamiento son lo que permite que la cobertura de huevo cuaje lo suficiente para mantener las capas unidas al cortar.",
+    "fr": "La moussaka de pommes de terre est le plat quotidien de la cuisine familiale roumaine, né d'une adaptation locale d'une grande famille de plats similaires en Europe du Sud-Est — la version roumaine se distingue par l'utilisation presque exclusive des pommes de terre comme couche de base, au lieu de l'aubergine plus courante dans d'autres cuisines régionales. C'est le plat que la plupart des familles cuisinent avec ce qu'il y a déjà dans le garde-manger, sans ingrédients spéciaux.\n\nCe qui distingue une moussaka réussie d'une autre aqueuse et détrempée, c'est le préfriture des pommes de terre : des tranches crues placées directement dans le plat libèrent trop d'humidité à la cuisson et transforment la couche de nappage en flaque au lieu d'une croûte ferme. De même, la viande doit être cuite séparément jusqu'à ce que tout son liquide s'évapore, sinon elle ajoute sa propre humidité supplémentaire aux couches. Une moussaka découpée immédiatement, encore chaude, se défait dans l'assiette — quelques minutes de refroidissement sont ce qui permet au nappage d'œuf de prendre suffisamment pour tenir les couches ensemble à la découpe.",
+    "de": "Kartoffel-Musaka ist das Alltagsgericht der rumänischen Hausmannskost, entstanden aus einer lokalen Anpassung einer großen Familie ähnlicher Gerichte in Südosteuropa — die rumänische Version zeichnet sich dadurch aus, dass sie fast ausschließlich Kartoffeln als Grundschicht verwendet, anstelle der in anderen regionalen Küchen häufigeren Aubergine. Es ist das Gericht, das die meisten Familien aus dem kochen, was gerade in der Speisekammer ist, ohne besondere Zutaten.\n\nWas eine gelungene Musaka von einer wässrigen, matschigen unterscheidet, ist das Vorbraten der Kartoffeln: rohe Scheiben, direkt in die Form gelegt, geben beim Backen zu viel Feuchtigkeit ab und verwandeln die Überzugsschicht in eine Pfütze statt in eine feste Kruste. Ebenso muss das Fleisch separat gegart werden, bis alle Flüssigkeit verdampft ist, sonst fügt es den Schichten seine eigene zusätzliche Feuchtigkeit hinzu. Eine sofort, noch heiß geschnittene Musaka zerfällt auf dem Teller — ein paar Minuten Abkühlen sind es, die das Ei-Überzug fest genug werden lassen, um die Schichten beim Schneiden zusammenzuhalten.",
+    "pt": "A musaca de batata é o prato do dia a dia da cozinha caseira romena, nascido de uma adaptação local de uma grande família de pratos semelhantes no sudeste da Europa — a versão romena destaca-se por usar quase exclusivamente batata como camada base, em vez da beringela mais comum noutras cozinhas da região. É o prato que a maioria das famílias cozinha com o que já tem na despensa, sem ingredientes especiais.\n\nO que separa uma musaca bem-sucedida de uma aguada e mole é a pré-fritura das batatas: fatias cruas colocadas diretamente no tabuleiro libertam demasiada humidade ao assar e transformam a camada de cobertura numa poça em vez de uma crosta firme. Da mesma forma, a carne tem de ser cozinhada à parte até todo o líquido evaporar, senão junta a sua própria humidade extra às camadas. Uma musaca cortada imediatamente, ainda quente, desfaz-se no prato — alguns minutos de arrefecimento são o que permite à cobertura de ovo firmar o suficiente para manter as camadas unidas ao cortar.",
+    "ru": "Картофельная мусака — повседневное блюдо румынской домашней кухни, возникшее из местной адаптации большого семейства похожих блюд юго-восточной Европы — румынская версия выделяется тем, что использует почти исключительно картофель как основной слой, вместо баклажанов, более распространённых в других кухнях региона. Это блюдо, которое большинство семей готовят из того, что уже есть в кладовой, без особых ингредиентов.\n\nЧто отличает удавшуюся мусаку от водянистой и рыхлой — это предварительная обжарка картофеля: сырые ломтики, положенные прямо в форму, выделяют слишком много влаги при запекании и превращают верхний слой в лужу вместо плотной корочки. Точно так же мясо нужно готовить отдельно, пока вся жидкость не испарится, иначе оно добавит слоям собственную лишнюю влагу. Мусака, нарезанная сразу же, ещё горячей, разваливается на тарелке — именно несколько минут остывания позволяют яичной заливке застыть достаточно, чтобы удержать слои вместе при нарезке.",
+    "ar": "موساكا البطاطس هي الطبق اليومي في المطبخ المنزلي الروماني، وُلدت من تكييف محلي لعائلة كبيرة من الأطباق المشابهة في جنوب شرق أوروبا — تتميز النسخة الرومانية باستخدام البطاطس بشكل شبه حصري كطبقة أساسية، بدلًا من الباذنجان الأكثر شيوعًا في مطابخ إقليمية أخرى. إنه الطبق الذي تطهوه معظم العائلات مما هو متوفر بالفعل في المخزن، دون مكونات خاصة.\n\nما يفصل موساكا ناجحة عن أخرى مائية ورخوة هو قلي البطاطس مسبقًا: الشرائح النيئة الموضوعة مباشرة في الطبق تُطلق رطوبة زائدة عند الخبز وتحوّل طبقة الغطاء إلى بركة بدلًا من قشرة متينة. وبالمثل، يجب طهي اللحم منفصلًا حتى يتبخر كل سائله، وإلا فإنه يضيف رطوبته الخاصة الزائدة إلى الطبقات. موساكا تُقطَّع فورًا وهي لا تزال ساخنة تتفكك في الطبق — بضع دقائق من التبريد هي ما يسمح لطبقة البيض بالتماسك بما يكفي للحفاظ على الطبقات معًا عند التقطيع.",
+    "zh": "土豆肉派是罗马尼亚家常菜中的日常菜肴，是东南欧一大类相似菜品经当地改良而来——罗马尼亚版本的特别之处在于几乎只用土豆作为底层，而不是该地区其他菜系中更常见的茄子。这是大多数家庭用储藏室里现成食材就能做出的一道菜，无需特殊配料。\n\n区分成功与水乎乎、软塌塌的土豆肉派的关键，在于土豆要先煎过：生土豆片直接铺进烤盘，烘烤时会释放过多水分，让上层浇面变成一滩水而不是结实的外壳。同样，肉末也必须单独炒制，直到所有汁水蒸发，否则也会给各层带来多余的水分。刚出炉趁热切开的土豆肉派会在盘子里散架——正是稍微放凉的那几分钟，才让蛋液浇面凝固得足够结实，切开时才能把各层固定在一起。",
+    "ja": "ポテトムサカはルーマニアの家庭料理の日常的な一皿で、南東ヨーロッパ全域に見られる似た料理の大きな系統を地元流にアレンジしたものだ——ルーマニア版は、他の地域の料理でより一般的なナスの代わりに、ほぼじゃがいもだけを土台の層として使う点が際立っている。特別な材料を必要とせず、多くの家庭が食料庫にあるものだけで作る料理だ。\n\n成功したムサカと水っぽく崩れたムサカを分けるのは、じゃがいもの下揚げだ。生のスライスをそのまま型に入れると、焼いているときに水分が出すぎてしまい、トッピングの層がしっかりした皮ではなく水たまりになってしまう。同様に、肉も水分がすべて飛ぶまで別に調理しなければならず、そうしないと層に余分な水分を加えてしまう。すぐに熱いうちに切り分けたムサカは皿の上で崩れてしまう——数分冷ますことで卵のトッピングが十分に固まり、切り分けたときに層をしっかりまとめてくれるのだ。",
+    "tr": "Patatesli musakka, Romen ev mutfağının günlük yemeğidir; güneydoğu Avrupa'da bulunan büyük bir benzer yemekler ailesinin yerel bir uyarlamasından doğmuştur — Romanya versiyonu, bölgedeki diğer mutfaklarda daha yaygın olan patlıcan yerine neredeyse yalnızca patatesi taban katmanı olarak kullanmasıyla öne çıkar. Çoğu ailenin özel malzeme gerektirmeden kilerde zaten olanlardan pişirdiği bir yemektir.\n\nBaşarılı bir musakka'yı sulu ve yumuşak birinden ayıran şey, patatesleri önceden kızartmaktır: kaba doğrudan konan çiğ dilimler pişirme sırasında çok fazla nem bırakır ve üst katmanı sıkı bir kabuk yerine bir gölete dönüştürür. Aynı şekilde, et de tüm sıvısı buharlaşana kadar ayrı pişirilmelidir, aksi halde katmanlara kendi fazladan nemini ekler. Hemen, hâlâ sıcakken kesilen bir musakka tabakta dağılır — yumurta üst katmanının kesildiğinde katmanları bir arada tutacak kadar sertleşmesini sağlayan şey, birkaç dakikalık soğumadır.",
+    "it": "La musaca di patate è il piatto quotidiano della cucina casalinga rumena, nato da un adattamento locale di una grande famiglia di piatti simili nel sud-est Europa — la versione rumena si distingue per l'uso quasi esclusivo delle patate come strato base, invece delle melanzane più comuni in altre cucine regionali. È il piatto che la maggior parte delle famiglie cucina con quello che c'è già in dispensa, senza ingredienti speciali.\n\nCiò che separa una musaca riuscita da una acquosa e molle è la pre-frittura delle patate: le fette crude messe direttamente nella teglia rilasciano troppa umidità in cottura e trasformano lo strato di copertura in una pozza invece che in una crosta soda. Allo stesso modo, la carne deve essere cotta a parte finché tutto il suo liquido evapora, altrimenti aggiunge la propria umidità extra agli strati. Una musaca tagliata subito, ancora calda, si sfalda nel piatto — sono i pochi minuti di raffreddamento a permettere alla copertura d'uovo di rapprendersi abbastanza da tenere insieme gli strati al taglio.",
+    "ko": "감자 무사카는 루마니아 가정식의 일상적인 요리로, 동남부 유럽 전역에 퍼진 비슷한 요리들이 현지화되며 탄생했다 — 루마니아 버전은 다른 지역 요리에서 더 흔한 가지 대신 거의 전적으로 감자를 기본 층으로 쓴다는 점이 특징이다. 특별한 재료 없이 대부분의 가정이 찬장에 있는 것으로 만드는 요리다.\n\n성공한 무사카와 물기 많고 흐물흐물한 무사카를 가르는 것은 감자를 미리 튀기는 것이다: 생감자 조각을 바로 틀에 넣으면 굽는 동안 너무 많은 수분이 나와 윗층이 단단한 막 대신 물웅덩이가 되어버린다. 마찬가지로 고기도 모든 수분이 증발할 때까지 따로 익혀야 하며, 그렇지 않으면 층에 여분의 수분을 더하게 된다. 뜨거울 때 바로 자른 무사카는 접시 위에서 흐트러진다 — 몇 분간 식히는 것이야말로 달걀 토핑이 충분히 굳어 자를 때 층을 하나로 붙잡아 주게 만드는 비결이다.",
+    "hi": "आलू मुसाका रोमानियाई घरेलू खाना पकाने का रोज़मर्रा का व्यंजन है, जो दक्षिण-पूर्वी यूरोप के समान व्यंजनों के एक बड़े परिवार के स्थानीय रूपांतरण से जन्मा है — रोमानियाई संस्करण अन्य क्षेत्रीय रसोइयों में अधिक आम बैंगन के बजाय लगभग विशेष रूप से आलू को आधार परत के रूप में उपयोग करने के लिए अलग खड़ा है। यह वह व्यंजन है जिसे अधिकांश परिवार बिना किसी खास सामग्री के, पहले से रसोई में जो है उससे बनाते हैं।\n\nएक सफल मुसाका और एक पनीले, नरम मुसाका के बीच का अंतर आलू को पहले तलने का है: सीधे बर्तन में रखे कच्चे टुकड़े बेक होते समय बहुत अधिक नमी छोड़ते हैं और ऊपरी परत को ठोस परत के बजाय एक तालाब में बदल देते हैं। इसी तरह, मांस को अलग से तब तक पकाना चाहिए जब तक उसका सारा तरल वाष्पित न हो जाए, वरना यह परतों में अपनी अतिरिक्त नमी जोड़ता है। तुरंत, गरम रहते हुए काटा गया मुसाका थाली पर बिखर जाता है — कुछ मिनटों का ठंडा होना ही अंडे की ऊपरी परत को इतना मज़बूत होने देता है कि काटते समय परतें एक साथ टिकी रहें।"
+  },
+  "meta": {
+    "time": 70,
+    "costRon": 16,
+    "tags": [
+      "family",
+      "budget"
+    ],
+    "desc": {
+      "ro": "Cartofi pre-prăjiți în straturi cu carne tocată, acoperiți cu sos de ouă și smântână, copți la cuptor.",
+      "en": "Pre-fried potatoes layered with minced meat, topped with an egg and sour cream mixture, baked until set.",
+      "es": "Patatas prefritas en capas con carne picada, cubiertas con una mezcla de huevo y nata agria, horneadas hasta cuajar.",
+      "fr": "Pommes de terre préfrites en couches avec viande hachée, nappées d'un mélange d'œuf et de crème aigre, cuites au four.",
+      "de": "Vorgebratene Kartoffeln in Schichten mit Hackfleisch, mit Ei-Sahne-Mischung überzogen und im Ofen gebacken.",
+      "pt": "Batatas pré-fritas em camadas com carne picada, cobertas com mistura de ovo e natas azedas, assadas até solidificar.",
+      "ru": "Предварительно обжаренный картофель слоями с фаршем, залитый яично-сметанной смесью и запечённый до готовности.",
+      "ar": "بطاطس مقلية مسبقًا بطبقات مع لحم مفروم، مغطاة بخليط بيض وقشدة حامضة، تُخبَز حتى تتماسك.",
+      "zh": "预炸土豆与肉末层层叠加，浇上蛋液酸奶油混合物，烘烤至凝固定型。",
+      "ja": "下揚げしたじゃがいもとひき肉を層にして卵とサワークリームの液をかけ、固まるまで焼き上げた一品。",
+      "tr": "Kıymayla katmanlanmış önceden kızartılmış patatesler, yumurta ve ekşi krema karışımıyla kaplanıp katılaşana kadar fırınlanır.",
+      "it": "Patate pre-fritte a strati con carne macinata, ricoperte da un composto di uovo e panna acida, cotte al forno.",
+      "ko": "다짐육과 켜켜이 쌓은 미리 튀긴 감자에 달걀과 사워크림 혼합물을 부어 굳을 때까지 구운 요리.",
+      "hi": "कीमे के साथ परतों में पहले से तले आलू, अंडे और खट्टी क्रीम के मिश्रण से ढके, जमने तक बेक किए गए।"
+    }
+  }
+}

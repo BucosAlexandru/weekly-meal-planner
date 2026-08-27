@@ -1,0 +1,575 @@
+{
+  "id": 273,
+  "servings": 6,
+  "tipType": "romanian",
+  "pairingsType": "romanian",
+  "origin": {
+    "ro": "România",
+    "en": "Romania",
+    "es": "Rumanía",
+    "fr": "Roumanie",
+    "de": "Rumänien",
+    "pt": "Roménia",
+    "ru": "Румыния",
+    "ar": "رومانيا",
+    "zh": "罗马尼亚",
+    "ja": "ルーマニア",
+    "tr": "Romanya",
+    "it": "Romania",
+    "ko": "루마니아",
+    "hi": "रोमानिया"
+  },
+  "name": {
+    "ro": "Piftie de porc",
+    "en": "Piftie (Romanian Jellied Pork)",
+    "es": "Piftie (Gelatina de Cerdo Rumana)",
+    "fr": "Piftie (Aspic de Porc Roumain)",
+    "de": "Piftie (Rumänischer Schweinesulz)",
+    "pt": "Piftie (Gelatina de Porco Romena)",
+    "ru": "Пифтие (румынский холодец из свинины)",
+    "ar": "بيفتي (هلام لحم الخنزير الروماني)",
+    "zh": "罗马尼亚猪肉冻",
+    "ja": "ピフティエ（ルーマニア風豚肉の煮こごり）",
+    "tr": "Piftie (Romanya Usulü Domuz Jölesi)",
+    "it": "Piftie (Gelatina di Maiale Rumena)",
+    "ko": "피프티에 (루마니아식 돼지고기 육수 젤리)",
+    "hi": "पिफ़्ती (रोमानियाई पोर्क जेली)"
+  },
+  "category": {
+    "ro": "Aperitiv",
+    "en": "Appetizer",
+    "es": "Entrante",
+    "fr": "Entrée",
+    "de": "Vorspeise",
+    "pt": "Entrada",
+    "ru": "Закуска",
+    "ar": "مقبلات",
+    "zh": "开胃菜",
+    "ja": "前菜",
+    "tr": "Meze",
+    "it": "Antipasto",
+    "ko": "애피타이저",
+    "hi": "स्टार्टर"
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🦴",
+        "t": "Ciolane și picioare de porc",
+        "d": "Colagenul din ele e ceea ce leagă zeama la rece"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Fierbere lentă, ore întregi",
+        "d": "Extrage gelatina naturală fără să adaugi plicuri"
+      },
+      {
+        "icon": "🧄",
+        "t": "Usturoi adăugat la final",
+        "d": "Nu fierbe, ca să rămână aromă crudă și puternică"
+      },
+      {
+        "icon": "❄️",
+        "t": "Se leagă natural la frigider",
+        "d": "Fără gelatină cumpărată, doar zeama concentrată"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🦴",
+        "t": "Pork knuckles and trotters",
+        "d": "Their collagen is what sets the broth when it cools"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Slow-simmered for hours",
+        "d": "Draws out natural gelatin without powdered packets"
+      },
+      {
+        "icon": "🧄",
+        "t": "Garlic stirred in at the end",
+        "d": "Never boiled, so its raw bite stays sharp"
+      },
+      {
+        "icon": "❄️",
+        "t": "Sets naturally in the fridge",
+        "d": "No shop-bought gelatin, just the concentrated broth"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🦴",
+        "t": "Codillo y patas de cerdo",
+        "d": "Su colágeno es lo que cuaja el caldo al enfriarse"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Cocción lenta durante horas",
+        "d": "Extrae gelatina natural sin sobres en polvo"
+      },
+      {
+        "icon": "🧄",
+        "t": "Ajo añadido al final",
+        "d": "Nunca hervido, para que conserve su mordiente crudo"
+      },
+      {
+        "icon": "❄️",
+        "t": "Cuaja de forma natural en la nevera",
+        "d": "Sin gelatina comprada, solo el caldo concentrado"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🦴",
+        "t": "Jarret et pieds de porc",
+        "d": "Leur collagène est ce qui fige le bouillon en refroidissant"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Mijoté longuement pendant des heures",
+        "d": "Extrait la gélatine naturelle sans sachet en poudre"
+      },
+      {
+        "icon": "🧄",
+        "t": "Ail incorporé à la fin",
+        "d": "Jamais bouilli, pour garder son mordant cru"
+      },
+      {
+        "icon": "❄️",
+        "t": "Prend naturellement au réfrigérateur",
+        "d": "Sans gélatine du commerce, juste le bouillon concentré"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🦴",
+        "t": "Eisbein und Schweinepfoten",
+        "d": "Ihr Kollagen lässt die Brühe beim Abkühlen fest werden"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Stundenlang langsam gekocht",
+        "d": "Zieht natürliche Gelatine heraus, ganz ohne Pulver"
+      },
+      {
+        "icon": "🧄",
+        "t": "Knoblauch erst am Ende zugegeben",
+        "d": "Nie gekocht, damit seine rohe Schärfe erhalten bleibt"
+      },
+      {
+        "icon": "❄️",
+        "t": "Wird im Kühlschrank von selbst fest",
+        "d": "Keine gekaufte Gelatine, nur die konzentrierte Brühe"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🦴",
+        "t": "Chispe e patas de porco",
+        "d": "O colagénio delas é o que solidifica o caldo ao arrefecer"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Cozedura lenta durante horas",
+        "d": "Extrai gelatina natural sem saquetas em pó"
+      },
+      {
+        "icon": "🧄",
+        "t": "Alho adicionado no final",
+        "d": "Nunca fervido, para manter o seu ardor cru"
+      },
+      {
+        "icon": "❄️",
+        "t": "Solidifica naturalmente no frigorífico",
+        "d": "Sem gelatina comprada, só o caldo concentrado"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🦴",
+        "t": "Свиные рульки и ножки",
+        "d": "Их коллаген застывает бульон при охлаждении"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Медленная варка часами",
+        "d": "Извлекает природный желатин без пакетиков"
+      },
+      {
+        "icon": "🧄",
+        "t": "Чеснок добавляется в конце",
+        "d": "Никогда не варится, чтобы сохранить сырую остроту"
+      },
+      {
+        "icon": "❄️",
+        "t": "Застывает естественно в холодильнике",
+        "d": "Без покупного желатина, только концентрированный бульон"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🦴",
+        "t": "مفاصل وأرجل الخنزير",
+        "d": "الكولاجين فيها هو ما يجمد المرق عند التبريد"
+      },
+      {
+        "icon": "⏱️",
+        "t": "طهي بطيء لساعات",
+        "d": "يستخلص الجيلاتين الطبيعي دون أكياس بودرة"
+      },
+      {
+        "icon": "🧄",
+        "t": "الثوم يُضاف في النهاية",
+        "d": "لا يُغلى أبدًا، ليبقى مذاقه النيء حادًا"
+      },
+      {
+        "icon": "❄️",
+        "t": "يتماسك طبيعيًا في الثلاجة",
+        "d": "دون جيلاتين مشترى، فقط المرق المركّز"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🦴",
+        "t": "猪肘和猪蹄",
+        "d": "其中的胶原蛋白让汤汁冷却后自然凝固"
+      },
+      {
+        "icon": "⏱️",
+        "t": "数小时慢炖",
+        "d": "熬出天然明胶，无需袋装明胶粉"
+      },
+      {
+        "icon": "🧄",
+        "t": "最后才加入大蒜",
+        "d": "绝不煮沸，保留其生辣的锐利味道"
+      },
+      {
+        "icon": "❄️",
+        "t": "在冰箱中自然凝结",
+        "d": "无需购买的明胶，只靠浓缩的汤汁"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🦴",
+        "t": "豚すね肉と豚足",
+        "d": "そのコラーゲンが冷えたときにスープを固める"
+      },
+      {
+        "icon": "⏱️",
+        "t": "何時間も弱火でじっくり煮る",
+        "d": "粉末不使用で天然のゼラチンを引き出す"
+      },
+      {
+        "icon": "🧄",
+        "t": "にんにくは最後に加える",
+        "d": "決して煮込まず、生の鋭い風味を残す"
+      },
+      {
+        "icon": "❄️",
+        "t": "冷蔵庫で自然に固まる",
+        "d": "市販のゼラチン不使用、濃縮したスープだけで"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🦴",
+        "t": "Domuz incik ve paça",
+        "d": "İçlerindeki kolajen soğuyunca suyu katılaştırır"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Saatlerce yavaş pişirme",
+        "d": "Toz paket kullanmadan doğal jelatini çeker"
+      },
+      {
+        "icon": "🧄",
+        "t": "Sarımsak sona eklenir",
+        "d": "Asla kaynatılmaz, ham keskinliği korunur"
+      },
+      {
+        "icon": "❄️",
+        "t": "Buzdolabında doğal olarak katılaşır",
+        "d": "Satın alınan jelatin yok, sadece yoğunlaşmış su"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🦴",
+        "t": "Zampetti e stinco di maiale",
+        "d": "Il loro collagene è ciò che rapprende il brodo raffreddandosi"
+      },
+      {
+        "icon": "⏱️",
+        "t": "Cottura lenta per ore",
+        "d": "Estrae la gelatina naturale senza bustine in polvere"
+      },
+      {
+        "icon": "🧄",
+        "t": "Aglio aggiunto alla fine",
+        "d": "Mai bollito, per mantenere il suo sapore crudo e deciso"
+      },
+      {
+        "icon": "❄️",
+        "t": "Si rapprende naturalmente in frigo",
+        "d": "Senza gelatina comprata, solo il brodo concentrato"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🦴",
+        "t": "돼지 사태와 족발",
+        "d": "그 안의 콜라겐이 식으면서 육수를 굳힌다"
+      },
+      {
+        "icon": "⏱️",
+        "t": "몇 시간의 저온 장시간 끓임",
+        "d": "가루 젤라틴 없이 천연 젤라틴을 우려낸다"
+      },
+      {
+        "icon": "🧄",
+        "t": "마늘은 마지막에 넣기",
+        "d": "끓이지 않아 매운 생마늘 맛이 살아있다"
+      },
+      {
+        "icon": "❄️",
+        "t": "냉장고에서 자연스럽게 굳는다",
+        "d": "시판 젤라틴 없이 오직 농축된 육수만으로"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🦴",
+        "t": "सूअर की नली की हड्डी और पैर",
+        "d": "उनका कोलेजन ठंडा होने पर शोरबे को जमाता है"
+      },
+      {
+        "icon": "⏱️",
+        "t": "घंटों धीमी आंच पर पकाना",
+        "d": "बिना पाउडर पैकेट के प्राकृतिक जिलेटिन निकालता है"
+      },
+      {
+        "icon": "🧄",
+        "t": "लहसुन अंत में डाला जाता है",
+        "d": "कभी नहीं उबाला जाता, ताकि इसका तीखापन बना रहे"
+      },
+      {
+        "icon": "❄️",
+        "t": "फ्रिज में स्वाभाविक रूप से जमता है",
+        "d": "बिना खरीदे जिलेटिन के, सिर्फ गाढ़े शोरबे से"
+      }
+    ]
+  },
+  "ingredients": {
+    "ro": [
+      "1,2kg ciolane de porc (picioare și rulou)",
+      "1 morcov",
+      "1 rădăcină de păstârnac",
+      "1 ceapă întreagă, nedecojită",
+      "2 foi de dafin",
+      "1 linguriță boabe de piper",
+      "6 căței de usturoi, zdrobiți",
+      "sare, după gust",
+      "oțet, pentru servire"
+    ],
+    "en": [
+      "1.2kg pork knuckles (trotters and hock)",
+      "1 carrot",
+      "1 parsnip root",
+      "1 whole onion, unpeeled",
+      "2 bay leaves",
+      "1 tsp peppercorns",
+      "6 garlic cloves, crushed",
+      "salt, to taste",
+      "vinegar, to serve"
+    ],
+    "es": [
+      "1,2kg de codillo y manitas de cerdo",
+      "1 zanahoria",
+      "1 raíz de chirivía",
+      "1 cebolla entera, sin pelar",
+      "2 hojas de laurel",
+      "1 cdta de granos de pimienta",
+      "6 dientes de ajo, machacados",
+      "sal, al gusto",
+      "vinagre, para servir"
+    ],
+    "fr": [
+      "1,2kg de jarret et pieds de porc",
+      "1 carotte",
+      "1 racine de panais",
+      "1 oignon entier, non pelé",
+      "2 feuilles de laurier",
+      "1 c. à café de grains de poivre",
+      "6 gousses d'ail, écrasées",
+      "sel, selon le goût",
+      "vinaigre, pour servir"
+    ],
+    "de": [
+      "1,2kg Schweinehaxen und -pfoten",
+      "1 Karotte",
+      "1 Petersilienwurzel",
+      "1 ganze Zwiebel, ungeschält",
+      "2 Lorbeerblätter",
+      "1 TL Pfefferkörner",
+      "6 Knoblauchzehen, zerdrückt",
+      "Salz, nach Geschmack",
+      "Essig, zum Servieren"
+    ],
+    "pt": [
+      "1,2kg de chispe e patas de porco",
+      "1 cenoura",
+      "1 raiz de chirívia",
+      "1 cebola inteira, com casca",
+      "2 folhas de louro",
+      "1 col. chá de grãos de pimenta",
+      "6 dentes de alho, esmagados",
+      "sal, a gosto",
+      "vinagre, para servir"
+    ],
+    "ru": [
+      "1,2кг свиных ножек и рульки",
+      "1 морковь",
+      "1 корень пастернака",
+      "1 целая луковица, неочищенная",
+      "2 лавровых листа",
+      "1 ч.л. горошин перца",
+      "6 зубчиков чеснока, раздавленных",
+      "соль по вкусу",
+      "уксус, для подачи"
+    ],
+    "ar": [
+      "1.2كغ أرجل ومفاصل خنزير",
+      "1 جزرة",
+      "1 جذر جزر أبيض",
+      "1 بصلة كاملة، غير مقشرة",
+      "ورقتا غار",
+      "ملعقة صغيرة حبوب فلفل",
+      "6 فصوص ثوم، مهروسة",
+      "ملح، حسب الرغبة",
+      "خل، للتقديم"
+    ],
+    "zh": [
+      "1.2公斤猪蹄和猪肘",
+      "1根胡萝卜",
+      "1根欧防风根",
+      "1个带皮整洋葱",
+      "2片月桂叶",
+      "1茶匙胡椒粒",
+      "6瓣大蒜，压碎",
+      "盐，适量",
+      "醋，用于蘸食"
+    ],
+    "ja": [
+      "豚足と豚すね肉1.2kg",
+      "にんじん1本",
+      "パースニップの根1本",
+      "皮つきの玉ねぎ丸ごと1個",
+      "ローリエ2枚",
+      "粒こしょう小さじ1",
+      "にんにく6片（つぶす）",
+      "塩（お好みで）",
+      "酢（添える用）"
+    ],
+    "tr": [
+      "1,2kg domuz paçası ve incik",
+      "1 havuç",
+      "1 yaban havucu kökü",
+      "1 bütün soğan, kabuğuyla",
+      "2 defne yaprağı",
+      "1 tatlı kaşığı tane karabiber",
+      "6 diş sarımsak, ezilmiş",
+      "tuz, damak zevkine göre",
+      "servis için sirke"
+    ],
+    "it": [
+      "1,2kg di zampetti e stinco di maiale",
+      "1 carota",
+      "1 radice di pastinaca",
+      "1 cipolla intera, non sbucciata",
+      "2 foglie di alloro",
+      "1 cucchiaino di grani di pepe",
+      "6 spicchi d'aglio, schiacciati",
+      "sale, quanto basta",
+      "aceto, per servire"
+    ],
+    "ko": [
+      "돼지 족발과 사태 1.2kg",
+      "당근 1개",
+      "파스닙 뿌리 1개",
+      "껍질째 통양파 1개",
+      "월계수잎 2장",
+      "통후추 1작은술",
+      "으깬 마늘 6쪽",
+      "소금, 취향껏",
+      "곁들임용 식초"
+    ],
+    "hi": [
+      "1.2किग्रा सूअर की नली की हड्डी और पैर",
+      "1 गाजर",
+      "1 पार्सनिप जड़",
+      "1 पूरा प्याज़, बिना छिला",
+      "2 तेजपत्ते",
+      "1 छोटा चम्मच काली मिर्च के दाने",
+      "6 लहसुन की कलियां, कुचली हुई",
+      "नमक, स्वादानुसार",
+      "परोसने के लिए सिरका"
+    ]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE CARNEA: pune ciolanele de porc într-o oală mare, acoperă cu apă rece și adu la fiert la foc mediu. SPUMEAZĂ: îndepărtează constant spuma cenușie de la suprafață în primele 15-20 minute, până zeama devine limpede. FIERBE LENT: coboară focul la mic, adaugă morcovul, păstârnacul, ceapa întreagă, dafinul și piperul boabe. Fierbe fără clocot, cu capacul întredeschis, 3-3,5 ore, până carnea se desprinde ușor de os. SEZONEAZĂ: adaugă sare spre finalul fierberii, gustând zeama — trebuie să fie ceva mai sărată decât normal, pentru că gustul se domolește la rece. STRECOARĂ ȘI SEPARĂ: scoate carnea din zeamă, dezosează-o și taie-o în bucăți mici, îndepărtând pielea groasă și cartilajele mari. Strecoară zeama printr-o sită fină. ADAUGĂ USTUROIUL: amestecă usturoiul zdrobit direct în zeama caldă, fără să mai fiarbă — căldura reziduală e suficientă pentru a-i domoli iuțeala fără să-i piardă din tărie. ASAMBLEAZĂ: împarte bucățile de carne în boluri sau forme individuale, apoi toarnă zeama caldă deasupra până le acoperă complet. RĂCEȘTE ȘI SERVEȘTE: lasă la temperatura camerei să se răcească puțin, apoi dă la frigider minimum 6 ore sau peste noapte, până zeama se leagă complet într-un gel ferm. Servește rece, direct din formă sau răsturnată pe farfurie, cu oțet și pâine proaspătă.",
+    "en": "PREPARE THE MEAT: put the pork knuckles in a large pot, cover with cold water and bring to a boil over medium heat. SKIM: constantly remove the grey foam from the surface for the first 15-20 minutes, until the broth turns clear. SIMMER SLOWLY: lower the heat, add the carrot, parsnip, whole onion, bay leaves and peppercorns. Simmer without boiling, partly covered, for 3-3.5 hours, until the meat pulls easily from the bone. SEASON: add salt near the end of cooking, tasting the broth — it should be slightly saltier than usual, since the flavour mellows once chilled. STRAIN AND SEPARATE: remove the meat from the broth, debone it and cut it into small pieces, discarding the thick skin and large cartilage. Strain the broth through a fine sieve. ADD THE GARLIC: stir the crushed garlic straight into the warm broth without boiling it again — the residual heat is enough to soften its bite without losing its strength. ASSEMBLE: divide the meat pieces between bowls or individual moulds, then pour the warm broth over them until fully covered. CHILL AND SERVE: let cool at room temperature briefly, then refrigerate for at least 6 hours or overnight, until the broth sets into a firm gel. Serve cold, straight from the mould or unmoulded onto a plate, with vinegar and fresh bread.",
+    "es": "PREPARA LA CARNE: pon los codillos de cerdo en una olla grande, cubre con agua fría y lleva a ebullición a fuego medio. RETIRA LA ESPUMA: elimina constantemente la espuma gris de la superficie durante los primeros 15-20 minutos, hasta que el caldo quede claro. COCINA A FUEGO LENTO: baja el fuego, añade la zanahoria, la chirivía, la cebolla entera, el laurel y los granos de pimienta. Cuece sin hervir, parcialmente tapado, 3-3,5 horas, hasta que la carne se separe fácilmente del hueso. SAZONA: añade sal hacia el final de la cocción, probando el caldo — debe quedar algo más salado de lo normal, ya que el sabor se suaviza al enfriarse. COLA Y SEPARA: retira la carne del caldo, deshuésala y córtala en trozos pequeños, descartando la piel gruesa y el cartílago grande. Cuela el caldo por un colador fino. AÑADE EL AJO: mezcla el ajo machacado directamente en el caldo caliente sin volver a hervirlo — el calor residual basta para suavizar su punzada sin perder fuerza. MONTA: reparte los trozos de carne entre boles o moldes individuales, luego vierte el caldo caliente encima hasta cubrirlos por completo. ENFRÍA Y SIRVE: deja enfriar brevemente a temperatura ambiente, luego refrigera al menos 6 horas o toda la noche, hasta que el caldo cuaje en un gel firme. Sirve frío, directo del molde o desmoldado en un plato, con vinagre y pan fresco.",
+    "fr": "PRÉPARE LA VIANDE: mets les jarrets de porc dans une grande marmite, couvre d'eau froide et porte à ébullition à feu moyen. ÉCUME: retire constamment l'écume grise à la surface pendant les 15-20 premières minutes, jusqu'à ce que le bouillon devienne clair. LAISSE MIJOTER DOUCEMENT: baisse le feu, ajoute la carotte, le panais, l'oignon entier, le laurier et les grains de poivre. Fais mijoter sans bouillir, partiellement couvert, 3-3h30, jusqu'à ce que la viande se détache facilement de l'os. ASSAISONNE: ajoute du sel vers la fin de la cuisson, en goûtant le bouillon — il doit être un peu plus salé que d'habitude, car le goût s'adoucit au froid. FILTRE ET SÉPARE: retire la viande du bouillon, désosse-la et coupe-la en petits morceaux, en jetant la peau épaisse et le gros cartilage. Filtre le bouillon au tamis fin. AJOUTE L'AIL: incorpore l'ail écrasé directement dans le bouillon chaud sans le faire rebouillir — la chaleur résiduelle suffit à adoucir son mordant sans perdre sa force. ASSEMBLE: répartis les morceaux de viande dans des bols ou des moules individuels, puis verse le bouillon chaud dessus jusqu'à les recouvrir entièrement. RÉFRIGÈRE ET SERS: laisse refroidir brièvement à température ambiante, puis réfrigère au moins 6 heures ou toute la nuit, jusqu'à ce que le bouillon prenne en un gel ferme. Sers froid, directement du moule ou démoulé sur une assiette, avec du vinaigre et du pain frais.",
+    "de": "BEREITE DAS FLEISCH VOR: die Schweinehaxen in einen großen Topf geben, mit kaltem Wasser bedecken und bei mittlerer Hitze zum Kochen bringen. SCHAUM ABSCHÖPFEN: in den ersten 15-20 Minuten ständig den grauen Schaum von der Oberfläche entfernen, bis die Brühe klar wird. LANGSAM KÖCHELN: die Hitze reduzieren, Karotte, Petersilienwurzel, ganze Zwiebel, Lorbeer und Pfefferkörner zugeben. Ohne zu kochen, halb bedeckt, 3-3,5 Stunden köcheln lassen, bis sich das Fleisch leicht vom Knochen löst. ABSCHMECKEN: gegen Ende der Garzeit salzen, dabei die Brühe probieren — sie sollte etwas salziger als üblich sein, da der Geschmack beim Kühlen milder wird. SIEBEN UND TRENNEN: das Fleisch aus der Brühe nehmen, entbeinen und in kleine Stücke schneiden, dabei die dicke Haut und großen Knorpel entfernen. Die Brühe durch ein feines Sieb gießen. KNOBLAUCH ZUGEBEN: den zerdrückten Knoblauch direkt in die warme Brühe rühren, ohne sie erneut zu kochen — die Restwärme reicht aus, um seine Schärfe zu mildern, ohne seine Stärke zu verlieren. ANRICHTEN: die Fleischstücke auf Schalen oder einzelne Förmchen verteilen, dann die warme Brühe darübergießen, bis sie vollständig bedeckt sind. KÜHLEN UND SERVIEREN: kurz bei Zimmertemperatur abkühlen lassen, dann mindestens 6 Stunden oder über Nacht kühlstellen, bis die Brühe zu einem festen Gel erstarrt. Kalt servieren, direkt aus der Form oder auf einen Teller gestürzt, mit Essig und frischem Brot.",
+    "pt": "PREPARA A CARNE: coloca os chispes de porco numa panela grande, cobre com água fria e leva a ferver em lume médio. ESCUMA: remove constantemente a espuma cinzenta da superfície nos primeiros 15-20 minutos, até o caldo ficar límpido. DEIXA COZINHAR LENTAMENTE: baixa o lume, junta a cenoura, a chirívia, a cebola inteira, o louro e os grãos de pimenta. Coze sem ferver, parcialmente tapado, 3-3,5 horas, até a carne se soltar facilmente do osso. TEMPERA: junta sal perto do final da cozedura, provando o caldo — deve ficar um pouco mais salgado do que o normal, pois o sabor suaviza ao arrefecer. CÔA E SEPARA: retira a carne do caldo, desossa-a e corta-a em pedaços pequenos, descartando a pele grossa e a cartilagem grande. Côa o caldo por um passador fino. JUNTA O ALHO: mistura o alho esmagado diretamente no caldo quente sem o voltar a ferver — o calor residual chega para suavizar o seu ardor sem perder força. MONTA: divide os pedaços de carne por tigelas ou formas individuais, depois verte o caldo quente por cima até os cobrir por completo. LEVA AO FRIO E SERVE: deixa arrefecer brevemente à temperatura ambiente, depois refrigera pelo menos 6 horas ou de um dia para o outro, até o caldo firmar num gel consistente. Serve frio, diretamente da forma ou desenformado num prato, com vinagre e pão fresco.",
+    "ru": "ПОДГОТОВЬ МЯСО: положи свиные ножки в большую кастрюлю, залей холодной водой и доведи до кипения на среднем огне. СНИМИ ПЕНУ: в первые 15-20 минут постоянно снимай серую пену с поверхности, пока бульон не станет прозрачным. ТУШИ МЕДЛЕННО: убавь огонь, добавь морковь, пастернак, целую луковицу, лавровый лист и перец горошком. Вари без кипения, слегка прикрыв крышкой, 3-3,5 часа, пока мясо не начнёт легко отделяться от кости. ПРИПРАВЬ: добавь соль ближе к концу варки, пробуя бульон — он должен быть чуть солонее обычного, поскольку вкус смягчается при охлаждении. ПРОЦЕДИ И РАЗДЕЛИ: достань мясо из бульона, отдели от костей и нарежь мелкими кусочками, удаляя толстую кожу и крупный хрящ. Процеди бульон через мелкое сито. ДОБАВЬ ЧЕСНОК: вмешай раздавленный чеснок прямо в тёплый бульон, не давая ему снова закипеть — остаточного тепла достаточно, чтобы смягчить его остроту, не потеряв силу. СОБЕРИ: раздели кусочки мяса по мискам или порционным формам, затем залей тёплым бульоном, пока не покроет полностью. ОХЛАДИ И ПОДАЙ: дай немного остыть при комнатной температуре, затем убери в холодильник минимум на 6 часов или на ночь, пока бульон не застынет в плотный студень. Подавай холодным, прямо из формы или выложенным на тарелку, с уксусом и свежим хлебом.",
+    "ar": "جهّز اللحم: ضع مفاصل الخنزير في قدر كبير، غطّها بماء بارد وأغلِ على نار متوسطة. أزل الرغوة: أزل الرغوة الرمادية باستمرار من السطح خلال أول 15-20 دقيقة حتى يصبح المرق صافيًا. اطبخ ببطء: خفّف النار، أضف الجزر والجزر الأبيض والبصلة الكاملة وورق الغار وحبوب الفلفل. اطبخ دون غليان، مغطى جزئيًا، لمدة 3-3.5 ساعات، حتى ينفصل اللحم بسهولة عن العظم. تبّل: أضف الملح قرب نهاية الطهي، مع تذوق المرق — يجب أن يكون أكثر ملوحة قليلًا من المعتاد، لأن النكهة تخف عند التبريد. صفِّ وافصل: أخرج اللحم من المرق، انزع العظم وقطّعه إلى قطع صغيرة، متخلصًا من الجلد السميك والغضروف الكبير. صفِّ المرق عبر مصفاة ناعمة. أضف الثوم: حرّك الثوم المهروس مباشرة في المرق الدافئ دون إعادة غليه — الحرارة المتبقية كافية لتخفيف حدته دون أن يفقد قوته. جهّز الطبق: وزّع قطع اللحم على أوعية أو قوالب فردية، ثم اسكب المرق الدافئ فوقها حتى تغطيها بالكامل. برّد وقدّم: اتركها تبرد قليلًا في درجة حرارة الغرفة، ثم ضعها في الثلاجة 6 ساعات على الأقل أو طوال الليل، حتى يتماسك المرق في هلام متين. قدّم باردًا، مباشرة من القالب أو مقلوبًا على طبق، مع الخل والخبز الطازج.",
+    "zh": "准备肉料：将猪蹄放入大锅中，倒入冷水没过，中火煮沸。撇去浮沫：前15-20分钟持续撇去表面的灰色浮沫，直到汤汁变清澈。慢炖：调小火，加入胡萝卜、欧防风、整个洋葱、月桂叶和胡椒粒。不要煮沸，半盖锅盖炖3-3.5小时，直到肉能轻松脱骨。调味：在快煮好时加盐，边尝边调整——味道应该比平时稍咸一些，因为冷却后味道会变淡。过滤并分开：从汤中取出肉，去骨切成小块，去掉厚厚的皮和大块软骨。将汤汁过细筛。加入大蒜：把压碎的大蒜直接拌入温热的汤汁中，不再加热——余温足以柔化其辛辣而不失其力度。装盘：把肉块分装到碗或单独的模具中，倒入温热的汤汁没过肉块。冷藏享用：先在室温下稍微放凉，再冷藏至少6小时或过夜，直到汤汁完全凝固成结实的冻。冷食，可直接从模具中取出或倒扣装盘，配醋和新鲜面包享用。",
+    "ja": "肉を準備する：豚足を大きな鍋に入れ、冷水をひたひたに注ぎ、中火で沸騰させる。アクを取る：最初の15〜20分間、表面の灰色のアクを絶えず取り除き、スープが澄むまで続ける。じっくり煮込む：火を弱め、にんじん、パースニップ、皮つきの玉ねぎ丸ごと、ローリエ、粒こしょうを加える。沸騰させず、半分蓋をして3〜3時間半煮込み、肉が骨から簡単に外れるようにする。味を調える：仕上げに近づいたら塩を加え、スープを味見する——冷えると味がまろやかになるため、普段より少し塩気を強めにする。こして分ける：スープから肉を取り出し、骨を外して小さく切り、厚い皮と大きな軟骨を取り除く。スープを目の細かいざるでこす。にんにくを加える：つぶしたにんにくを温かいスープに直接混ぜ込み、再加熱はしない——余熱だけで生の刺激が和らぎつつ風味は失われない。盛り付ける：肉を器や個別の型に分け入れ、温かいスープを完全に浸るまで注ぐ。冷やして提供する：室温で少し冷ましてから、冷蔵庫で最低6時間、または一晩冷やしてスープがしっかり固まるまで置く。型から出すか型のまま、冷たいまま酢と新鮮なパンを添えて提供する。",
+    "tr": "ETİ HAZIRLAYIN: domuz paçalarını büyük bir tencereye koyun, soğuk suyla örtün ve orta ateşte kaynatın. KÖPÜĞÜ ALIN: ilk 15-20 dakika boyunca yüzeydeki gri köpüğü sürekli alın, su berraklaşana kadar. YAVAŞÇA PİŞİRİN: ateşi kısın, havuç, yaban havucu, bütün soğan, defne yaprağı ve tane karabiber ekleyin. Kaynatmadan, kısmen kapalı olarak 3-3,5 saat pişirin, et kemikten kolayca ayrılana kadar. TATLANDIRIN: pişirmenin sonuna doğru tuz ekleyin, suyu tadarak — soğuduğunda tat yumuşayacağı için normalden biraz daha tuzlu olmalı. SÜZÜN VE AYIRIN: eti sudan çıkarın, kemiğini ayırın ve küçük parçalara kesin, kalın deri ve büyük kıkırdakları atın. Suyu ince bir süzgeçten geçirin. SARIMSAK EKLEYİN: ezilmiş sarımsağı tekrar kaynatmadan doğrudan sıcak suya karıştırın — kalan ısı, gücünü kaybetmeden keskinliğini yumuşatmaya yeter. HAZIRLAYIN: et parçalarını kaselere veya tekli kalıplara paylaştırın, ardından tamamen kaplayana kadar üzerine sıcak suyu dökün. SOĞUTUN VE SERVİS YAPIN: oda sıcaklığında kısa süre soğumaya bırakın, ardından su sıkı bir jöle haline gelene kadar en az 6 saat ya da bir gece buzdolabında bekletin. Kalıptan çıkarıp ya da kalıpta soğuk olarak, sirke ve taze ekmekle servis yapın.",
+    "it": "PREPARA LA CARNE: metti gli zampetti di maiale in una pentola grande, copri con acqua fredda e porta a bollore a fuoco medio. SCHIUMA: rimuovi costantemente la schiuma grigia dalla superficie nei primi 15-20 minuti, finché il brodo diventa limpido. FAI SOBBOLLIRE LENTAMENTE: abbassa il fuoco, aggiungi la carota, la pastinaca, la cipolla intera, l'alloro e i grani di pepe. Fai sobbollire senza bollire, parzialmente coperto, per 3-3,5 ore, finché la carne si stacca facilmente dall'osso. CONDISCI: aggiungi sale verso la fine della cottura, assaggiando il brodo — deve risultare leggermente più salato del solito, perché il sapore si attenua una volta freddo. FILTRA E SEPARA: togli la carne dal brodo, disossala e tagliala a pezzetti, eliminando la pelle spessa e la cartilagine grossa. Filtra il brodo con un colino fine. AGGIUNGI L'AGLIO: mescola l'aglio schiacciato direttamente nel brodo caldo senza farlo ribollire — il calore residuo basta ad ammorbidire la sua piccantezza senza perdere forza. COMPONI: dividi i pezzi di carne in ciotole o stampini individuali, poi versa il brodo caldo sopra finché li copre completamente. RAFFREDDA E SERVI: lascia raffreddare brevemente a temperatura ambiente, poi metti in frigo per almeno 6 ore o tutta la notte, finché il brodo si rapprende in un gel compatto. Servi freddo, direttamente dallo stampo o sformato su un piatto, con aceto e pane fresco.",
+    "ko": "고기 준비하기: 돼지 족발을 큰 냄비에 넣고 찬물을 부어 잠기게 한 뒤 중불로 끓인다. 거품 걷어내기: 처음 15-20분간 표면의 회색 거품을 계속 걷어내 육수가 맑아질 때까지 한다. 천천히 끓이기: 불을 줄이고 당근, 파스닙, 통양파, 월계수잎, 통후추를 넣는다. 끓이지 않고 뚜껑을 살짝 덮은 채 3-3.5시간, 고기가 뼈에서 쉽게 떨어질 때까지 익힌다. 간하기: 조리가 끝나갈 무렵 소금을 넣고 육수를 맛본다 — 차게 식으면 맛이 순해지므로 평소보다 약간 짜게 맞춘다. 건져서 분리하기: 육수에서 고기를 꺼내 뼈를 발라내고 잘게 썰며, 두꺼운 껍질과 큰 연골은 버린다. 육수를 고운 체에 거른다. 마늘 넣기: 다시 끓이지 않고 으깬 마늘을 따뜻한 육수에 바로 섞는다 — 남은 열만으로도 강한 맛은 유지하면서 매운맛이 부드러워진다. 담아내기: 고기 조각을 그릇이나 개별 틀에 나누어 담고, 완전히 잠기도록 따뜻한 육수를 붓는다. 식혀서 서빙하기: 실온에서 잠시 식힌 뒤 냉장고에서 최소 6시간, 가능하면 하룻밤 두어 육수가 단단한 젤리로 굳을 때까지 기다린다. 틀에서 꺼내거나 그대로 차갑게, 식초와 신선한 빵을 곁들여 서빙한다.",
+    "hi": "मांस तैयार करें: सूअर की नली की हड्डियों को एक बड़े बर्तन में रखें, ठंडे पानी से ढकें और मध्यम आंच पर उबाल लाएं। झाग हटाएं: पहले 15-20 मिनट तक सतह से भूरा झाग लगातार हटाएं, जब तक शोरबा साफ न हो जाए। धीमी आंच पर पकाएं: आंच धीमी करें, गाजर, पार्सनिप, पूरा प्याज़, तेजपत्ते और काली मिर्च के दाने डालें। बिना उबाले, आधा ढककर 3-3.5 घंटे पकाएं, जब तक मांस हड्डी से आसानी से अलग न हो जाए। स्वाद अनुसार डालें: पकाने के अंत में नमक डालें, शोरबा चखते हुए — यह सामान्य से थोड़ा ज़्यादा नमकीन होना चाहिए, क्योंकि ठंडा होने पर स्वाद हल्का हो जाता है। छानें और अलग करें: शोरबे से मांस निकालें, हड्डी निकालकर छोटे टुकड़ों में काटें, मोटी खाल और बड़ी उपास्थि हटाते हुए। शोरबे को महीन छलनी से छानें। लहसुन डालें: कुचला लहसुन बिना दोबारा उबाले सीधे गरम शोरबे में मिलाएं — बचा हुआ ताप उसकी तीखी धार को कम करने के लिए पर्याप्त है, बिना उसकी ताकत खोए। तैयार करें: मांस के टुकड़ों को कटोरों या अलग-अलग सांचों में बांटें, फिर पूरी तरह ढकने तक गरम शोरबा ऊपर डालें। ठंडा करें और परोसें: कमरे के तापमान पर थोड़ी देर ठंडा होने दें, फिर कम से कम 6 घंटे या रातभर फ्रिज में रखें, जब तक शोरबा ठोस जेल में न जम जाए। सांचे से निकालकर या सांचे में ही ठंडा, सिरके और ताज़ी ब्रेड के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Piftia e felul care apare pe masa românească aproape exclusiv iarna, în special de Crăciun și Anul Nou, când frigul de afară ține gelatina fermă fără efort. Numele vine din slavă, prin filieră balcanică, dar tehnica de bază — fierberea lentă a oaselor bogate în colagen până se transformă zeama într-un gel natural — e comună multor bucătării din regiune, fiecare cu propriile ei condimente și tăieturi de carne preferate.\n\nCe deosebește o piftie reușită de una ratată e chiar acest colagen: fără suficiente ciolane sau picioare de porc în oală, zeama rămâne lichidă oricât ai ține-o la frigider, pentru că nu există gelatină de adăugat ulterior în rețeta tradițională. Usturoiul, la rândul lui, se adaugă întotdeauna la final, în zeama caldă, nu fiartă — dacă ar fierbe alături de carne ore în șir, și-ar pierde tăria și ar lăsa doar un iz difuz, în loc de acea mușcătură ascuțită care echilibrează grăsimea din piftie.",
+    "en": "Piftie is the dish that appears on the Romanian table almost exclusively in winter, especially at Christmas and New Year, when the cold outside keeps the jelly firm with no extra effort. The name comes from Slavic, by way of the Balkans, but the underlying technique — slowly simmering collagen-rich bones until the broth turns into a natural gel — is shared by many kitchens across the region, each with its own preferred cuts and seasonings.\n\nWhat separates a successful piftie from a failed one is that very collagen: without enough pork knuckles or trotters in the pot, the broth stays liquid no matter how long it sits in the fridge, since the traditional recipe has no gelatin to add afterward. The garlic, in turn, is always stirred in at the end, into the warm broth, never boiled — if it simmered alongside the meat for hours, it would lose its strength and leave only a muted trace instead of the sharp bite that balances the richness of the piftie.",
+    "es": "La piftie es el plato que aparece en la mesa rumana casi exclusivamente en invierno, especialmente en Navidad y Año Nuevo, cuando el frío exterior mantiene la gelatina firme sin esfuerzo. El nombre viene del eslavo, por vía balcánica, pero la técnica de base — cocer lentamente huesos ricos en colágeno hasta que el caldo se convierte en un gel natural — es compartida por muchas cocinas de la región, cada una con sus propios cortes y condimentos preferidos.\n\nLo que separa una piftie lograda de una fallida es precisamente ese colágeno: sin suficientes codillos o manitas de cerdo en la olla, el caldo permanece líquido por mucho que esté en la nevera, ya que la receta tradicional no lleva gelatina añadida después. El ajo, a su vez, siempre se incorpora al final, en el caldo caliente, nunca hervido — si cociera junto a la carne durante horas, perdería su fuerza y dejaría solo un rastro difuso en lugar del punzante mordiente que equilibra la grasa de la piftie.",
+    "fr": "La piftie est le plat qui apparaît sur la table roumaine presque exclusivement en hiver, en particulier à Noël et au Nouvel An, quand le froid extérieur maintient la gelée ferme sans effort. Le nom vient du slave, par la voie balkanique, mais la technique de base — mijoter longuement des os riches en collagène jusqu'à ce que le bouillon se transforme en gel naturel — est partagée par de nombreuses cuisines de la région, chacune avec ses propres morceaux et assaisonnements préférés.\n\nCe qui distingue une piftie réussie d'une ratée, c'est justement ce collagène : sans assez de jarrets ou de pieds de porc dans la marmite, le bouillon reste liquide, quel que soit le temps passé au réfrigérateur, car la recette traditionnelle ne prévoit pas d'ajouter de la gélatine après coup. L'ail, lui, est toujours incorporé à la fin, dans le bouillon chaud, jamais bouilli — s'il mijotait des heures avec la viande, il perdrait sa force et ne laisserait qu'une trace diffuse au lieu du mordant vif qui équilibre le gras de la piftie.",
+    "de": "Piftie ist das Gericht, das fast ausschließlich im Winter auf den rumänischen Tisch kommt, besonders zu Weihnachten und Neujahr, wenn die Kälte draußen die Sulz mühelos fest hält. Der Name stammt aus dem Slawischen, über die Balkanroute, doch die zugrunde liegende Technik — kollagenreiche Knochen langsam köcheln lassen, bis die Brühe zu einem natürlichen Gel wird — teilen viele Küchen der Region, jede mit ihren eigenen bevorzugten Fleischstücken und Gewürzen.\n\nWas eine gelungene Piftie von einer misslungenen unterscheidet, ist eben dieses Kollagen: ohne genug Schweinehaxen oder -pfoten im Topf bleibt die Brühe flüssig, egal wie lange sie im Kühlschrank steht, denn das traditionelle Rezept sieht keine nachträglich zugesetzte Gelatine vor. Der Knoblauch wiederum wird immer erst am Ende in die warme Brühe eingerührt, nie mitgekocht — würde er stundenlang neben dem Fleisch köcheln, verlöre er seine Kraft und hinterließe nur eine matte Spur statt des scharfen Bisses, der die Fülle der Piftie ausgleicht.",
+    "pt": "A piftie é o prato que surge na mesa romena quase exclusivamente no inverno, especialmente no Natal e Ano Novo, quando o frio lá fora mantém a gelatina firme sem esforço. O nome vem do eslavo, pela via balcânica, mas a técnica de base — cozinhar lentamente ossos ricos em colagénio até o caldo se transformar num gel natural — é partilhada por muitas cozinhas da região, cada uma com os seus cortes e temperos preferidos.\n\nO que separa uma piftie bem-sucedida de uma falhada é precisamente esse colagénio: sem chispes ou patas de porco suficientes na panela, o caldo permanece líquido por mais tempo que fique no frigorífico, pois a receita tradicional não leva gelatina adicionada depois. O alho, por sua vez, é sempre incorporado no final, no caldo quente, nunca fervido — se cozinhasse junto com a carne durante horas, perderia a força e deixaria apenas um vestígio ténue em vez do ardor vivo que equilibra a riqueza da piftie.",
+    "ru": "Пифтие — блюдо, которое появляется на румынском столе почти исключительно зимой, особенно на Рождество и Новый год, когда холод на улице легко удерживает желе застывшим. Название происходит из славянского, через балканский путь, но основная техника — долгое томление богатых коллагеном костей, пока бульон не превратится в естественный гель — общая для многих кухонь региона, у каждой свои предпочтительные куски мяса и специи.\n\nЧто отличает удавшееся пифтие от неудавшегося — именно этот коллаген: без достаточного количества свиных ножек или рульки в кастрюле бульон остаётся жидким, сколько бы он ни стоял в холодильнике, ведь традиционный рецепт не предусматривает добавления желатина впоследствии. Чеснок, в свою очередь, всегда вмешивают в конце, в тёплый бульон, никогда не варят — если бы он томился вместе с мясом часами, он потерял бы силу и оставил бы лишь смутный след вместо той острой резкости, что уравновешивает наваристость пифтие.",
+    "ar": "البيفتي هو الطبق الذي يظهر على المائدة الرومانية بشكل شبه حصري في الشتاء، خاصة في عيد الميلاد ورأس السنة، عندما يحافظ البرد الخارجي على تماسك الهلام دون جهد. يأتي الاسم من السلافية، عبر الطريق البلقاني، لكن التقنية الأساسية — طهي العظام الغنية بالكولاجين ببطء حتى يتحول المرق إلى هلام طبيعي — مشتركة بين مطابخ عديدة في المنطقة، ولكل منها قطعها وتوابلها المفضلة.\n\nما يفصل بيفتي ناجح عن آخر فاشل هو هذا الكولاجين تحديدًا: دون وجود ما يكفي من مفاصل أو أرجل الخنزير في القدر، يبقى المرق سائلًا مهما طال بقاؤه في الثلاجة، لأن الوصفة التقليدية لا تتضمن إضافة جيلاتين لاحقًا. أما الثوم، فيُضاف دائمًا في النهاية، إلى المرق الدافئ، ولا يُغلى أبدًا — فلو طُهي مع اللحم لساعات، لفقد قوته وترك أثرًا باهتًا فقط بدلًا من تلك الحدة الحادة التي توازن دسامة البيفتي.",
+    "zh": "Piftie（猪肉冻）是一道几乎只在冬季出现在罗马尼亚餐桌上的菜，尤其是圣诞节和新年期间，因为室外的寒冷能毫不费力地让肉冻保持凝固。这个名字源自斯拉夫语，经巴尔干半岛传入，但其基本技法——将富含胶原蛋白的骨头慢炖，直到汤汁变成天然的凝胶——是该地区许多菜系共有的，只是各自偏好的肉块和调味料不同。\n\n区分成功与失败猪肉冻的关键正是这种胶原蛋白：如果锅里没有足够的猪蹄或猪肘，无论在冰箱里放多久，汤汁都会保持液态，因为传统食谱里并不会事后添加明胶。而大蒜则始终在最后才拌入温热的汤汁中，绝不与肉一起煮——如果和肉一起炖上几个小时，大蒜就会失去力道，只留下一丝模糊的余味，而不是那种能中和猪肉冻浓郁油脂的辛辣锐利感。",
+    "ja": "ピフティエは、外の寒さが労せずしてゼリーを固く保ってくれる冬、特にクリスマスと新年にほぼ限って、ルーマニアの食卓に登場する料理だ。名前はバルカン半島を経由してスラブ語に由来するが、その基本技法——コラーゲンの豊富な骨をじっくり煮込み、スープが自然にゲル状になるまで煮る——はこの地域の多くの台所で共有されており、それぞれが好みの部位と味付けを持っている。\n\n成功したピフティエと失敗したものを分けるのは、まさにこのコラーゲンだ。鍋に十分な豚足や豚すね肉が入っていなければ、冷蔵庫にどれだけ長く置いてもスープは液体のままだ。伝統的なレシピには後からゼラチンを加える工程がないからだ。一方、にんにくは常に最後に、温かいスープに混ぜ込まれ、決して煮込まれることはない——もし何時間も肉と一緒に煮込まれれば、その力を失い、ピフティエのコクを引き締める鋭い辛味の代わりに、ぼんやりとした痕跡しか残らないだろう。",
+    "tr": "Piftie, dışarıdaki soğuğun jölenin zahmetsizce katı kalmasını sağladığı kışın, özellikle Noel ve Yılbaşı'nda neredeyse yalnızca Romen sofrasında görülen bir yemektir. İsim Slavcadan, Balkan yolu üzerinden gelir, ancak temel teknik — kolajen açısından zengin kemikleri, su doğal bir jöle haline gelene kadar yavaşça pişirmek — bölgedeki birçok mutfakta ortaktır, her biri kendi tercih ettiği et parçaları ve baharatlarla.\n\nBaşarılı bir piftie'yi başarısız olandan ayıran şey tam da bu kolajendir: tencerede yeterli domuz paçası veya incik yoksa, buzdolabında ne kadar beklerse beklesin su sıvı kalır, çünkü geleneksel tarifte sonradan eklenen jelatin yoktur. Sarımsak ise her zaman sona, sıcak suya karıştırılır, asla kaynatılmaz — etle birlikte saatlerce pişseydi gücünü kaybeder ve piftinin yoğunluğunu dengeleyen keskin ısırığı yerine sadece belli belirsiz bir iz bırakırdı.",
+    "it": "La piftie è il piatto che compare sulla tavola rumena quasi esclusivamente d'inverno, soprattutto a Natale e Capodanno, quando il freddo esterno mantiene la gelatina soda senza sforzo. Il nome viene dallo slavo, tramite la via balcanica, ma la tecnica di base — far sobbollire lentamente ossa ricche di collagene finché il brodo si trasforma in un gel naturale — è condivisa da molte cucine della regione, ciascuna con i propri tagli e condimenti preferiti.\n\nCiò che separa una piftie riuscita da una fallita è proprio quel collagene: senza abbastanza zampetti o stinco di maiale nella pentola, il brodo resta liquido non importa quanto stia in frigo, perché la ricetta tradizionale non prevede di aggiungere gelatina in seguito. L'aglio, a sua volta, viene sempre incorporato alla fine, nel brodo caldo, mai bollito — se cuocesse insieme alla carne per ore, perderebbe la sua forza e lascerebbe solo una traccia sbiadita invece del morso deciso che bilancia la ricchezza della piftie.",
+    "ko": "피프티에는 바깥의 추위가 힘들이지 않고 젤리를 단단하게 유지해주는 겨울, 특히 크리스마스와 새해에 거의 전적으로 루마니아 식탁에 오르는 요리다. 이름은 발칸 경로를 통해 슬라브어에서 왔지만, 콜라겐이 풍부한 뼈를 천천히 끓여 육수가 천연 젤로 변할 때까지 익히는 기본 기법은 이 지역 여러 부엌에서 공유되며, 각자 선호하는 부위와 양념이 다를 뿐이다.\n\n성공한 피프티에와 실패한 피프티에를 가르는 것은 바로 이 콜라겐이다: 냄비에 충분한 돼지 족발이나 사태가 없으면, 냉장고에 아무리 오래 두어도 육수는 액체 상태로 남는다. 전통 레시피에는 나중에 젤라틴을 추가하는 과정이 없기 때문이다. 마늘은 항상 마지막에, 따뜻한 육수에 넣으며 절대 끓이지 않는다 — 몇 시간 동안 고기와 함께 끓였다면 그 힘을 잃고, 피프티에의 진한 맛을 중화시키는 날카로운 매운맛 대신 흐릿한 흔적만 남겼을 것이다.",
+    "hi": "पिफ़्ती वह व्यंजन है जो लगभग विशेष रूप से सर्दियों में रोमानियाई मेज़ पर दिखता है, खासकर क्रिसमस और नए साल पर, जब बाहर की ठंड बिना किसी मेहनत के जेली को जमाए रखती है। नाम स्लाविक से आया है, बाल्कन रास्ते से, लेकिन मूल तकनीक — कोलेजन से भरपूर हड्डियों को तब तक धीमी आंच पर पकाना जब तक शोरबा प्राकृतिक जेल में न बदल जाए — इस क्षेत्र की कई रसोइयों में साझा है, हर एक की अपनी पसंदीदा कतरनें और मसाले हैं।\n\nएक सफल पिफ़्ती और असफल पिफ़्ती के बीच का अंतर ठीक यही कोलेजन है: बर्तन में पर्याप्त सूअर की नली की हड्डियां या पैर न हों, तो शोरबा फ्रिज में चाहे जितनी देर रहे, तरल ही रहता है, क्योंकि पारंपरिक रेसिपी में बाद में जिलेटिन मिलाने का कोई प्रावधान नहीं है। लहसुन, बदले में, हमेशा अंत में, गरम शोरबे में मिलाया जाता है, कभी उबाला नहीं जाता — अगर वह घंटों मांस के साथ पकता, तो अपनी ताकत खो देता और पिफ़्ती की चिकनाई को संतुलित करने वाले तीखे स्वाद के बजाय बस एक धुंधला निशान छोड़ देता।"
+  },
+  "meta": {
+    "time": 240,
+    "costRon": 22,
+    "tags": [
+      "family"
+    ],
+    "desc": {
+      "ro": "Ciolane de porc fierte lent până zeama devine gelatinoasă, cu usturoi crud amestecat la final, legată la frigider.",
+      "en": "Pork knuckles slow-simmered until the broth turns gelatinous, raw garlic stirred in at the end, set cold in the fridge.",
+      "es": "Codillo de cerdo cocido a fuego lento hasta que el caldo se vuelve gelatinoso, con ajo crudo al final, cuajado en frío.",
+      "fr": "Jarret de porc mijoté lentement jusqu'à ce que le bouillon devienne gélatineux, avec de l'ail cru incorporé à la fin, pris au froid.",
+      "de": "Langsam gekochte Schweinehaxen, bis die Brühe gallertartig wird, mit rohem Knoblauch am Ende, kalt gestockt.",
+      "pt": "Chispe de porco cozido lentamente até o caldo ficar gelatinoso, com alho cru no final, solidificado no frio.",
+      "ru": "Свиные рульки, медленно сваренные до желейного бульона, с сырым чесноком в конце, застывшие на холоде.",
+      "ar": "مفاصل خنزير مطهوة ببطء حتى يصبح المرق هلاميًا، مع ثوم نيء في النهاية، متماسكة في البرودة.",
+      "zh": "猪肘慢炖至汤汁呈胶质状，最后拌入生蒜，冷藏凝固而成。",
+      "ja": "スープがゼラチン状になるまでじっくり煮た豚すね肉に、最後に生にんにくを加え、冷やして固めた一品。",
+      "tr": "Su jölemsi hale gelene kadar yavaşça pişirilen domuz incik, sonunda çiğ sarımsak katılarak soğukta katılaştırılır.",
+      "it": "Stinco di maiale cotto lentamente finché il brodo diventa gelatinoso, con aglio crudo aggiunto alla fine, rappreso in freddo.",
+      "ko": "육수가 젤리처럼 될 때까지 천천히 끓인 돼지 사태에 마지막에 생마늘을 섞어 차갑게 굳힌 요리.",
+      "hi": "सूअर की हड्डियां तब तक धीमी आंच पर पकाई गईं जब तक शोरबा जिलेटिनस न हो जाए, अंत में कच्चा लहसुन मिलाया गया, ठंडा जमाया गया।"
+    }
+  }
+}

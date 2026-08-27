@@ -116,12 +116,14 @@ function auditRecipe(r) {
   const mappingSrc = classifyMapping(mappingUrl);
 
   // Local overrides take precedence at build time. Order matches
-  // resolveRecipeImage() in generate-content.mjs: .webp first, then .jpg.
+  // resolveRecipeImage() in generate-content.mjs: .webp, then .jpg, then .png.
   const localWebp = path.join(IMG_DIR, `${rslug}.webp`);
   const localJpg  = path.join(IMG_DIR, `${rslug}.jpg`);
+  const localPng  = path.join(IMG_DIR, `${rslug}.png`);
   let localFile = null, localDims = null;
   if (fs.existsSync(localWebp)) { localFile = localWebp; localDims = imageDimensions(localWebp); }
   else if (fs.existsSync(localJpg)) { localFile = localJpg; localDims = imageDimensions(localJpg); }
+  else if (fs.existsSync(localPng)) { localFile = localPng; localDims = imageDimensions(localPng); }
 
   // Effective source the SSR-rendered <img> + OG meta image use. Note:
   // content.js's runtime IMG map injects images client-side AFTER the page
@@ -131,7 +133,7 @@ function auditRecipe(r) {
   const contentKey = nameEn.toLowerCase();
   const contentUrl = CONTENT_JS_IMG[contentKey];
   let effective;
-  if (localFile) effective = localFile.endsWith('.webp') ? 'local-webp' : 'local-jpg';
+  if (localFile) effective = localFile.endsWith('.webp') ? 'local-webp' : localFile.endsWith('.png') ? 'local-png' : 'local-jpg';
   else if (mappingUrl) effective = mappingSrc;
   else if (contentUrl) effective = 'client-only';     // visible but OG=cover2
   else effective = 'fallback';                         // emoji + OG=cover2

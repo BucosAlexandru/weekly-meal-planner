@@ -1,0 +1,589 @@
+{
+  "id": 276,
+  "servings": 8,
+  "tipType": "romanian",
+  "pairingsType": "romanian",
+  "origin": {
+    "ro": "România",
+    "en": "Romania",
+    "es": "Rumanía",
+    "fr": "Roumanie",
+    "de": "Rumänien",
+    "pt": "Roménia",
+    "ru": "Румыния",
+    "ar": "رومانيا",
+    "zh": "罗马尼亚",
+    "ja": "ルーマニア",
+    "tr": "Romanya",
+    "it": "Romania",
+    "ko": "루마니아",
+    "hi": "रोमानिया"
+  },
+  "name": {
+    "ro": "Drob de miel",
+    "en": "Drob de Miel (Romanian Lamb Pâté)",
+    "es": "Drob de Miel (Paté de Cordero Rumano)",
+    "fr": "Drob de Miel (Pâté d'Agneau Roumain)",
+    "de": "Drob de Miel (Rumänische Lamm-Pastete)",
+    "pt": "Drob de Miel (Paté de Borrego Romeno)",
+    "ru": "Дроб (румынский паштет из ягнёнка)",
+    "ar": "دروب دي ميل (باتيه لحم الحمل الروماني)",
+    "zh": "罗马尼亚羊肉肉派",
+    "ja": "ドロブ・デ・ミエル（ルーマニア風ラムのパテ）",
+    "tr": "Drob de Miel (Romanya Usulü Kuzu Terrini)",
+    "it": "Drob de Miel (Terrina d'Agnello Rumena)",
+    "ko": "드로브 데 미엘 (루마니아식 양고기 파테)",
+    "hi": "द्रोब दे मील (रोमानियाई लैंब पेट)"
+  },
+  "category": {
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "tr": "Ana Yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🫀",
+        "t": "Organe de miel tocate mărunt",
+        "d": "Ficat, inimă și plămâni, fierte scurt înainte"
+      },
+      {
+        "icon": "🥬",
+        "t": "Verdeață proaspătă din belșug",
+        "d": "Mărar, pătrunjel și ceapă verde, nu doar condiment"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ouă fierte întregi în mijloc",
+        "d": "Se taie felii cu un cerc galben perfect în centru"
+      },
+      {
+        "icon": "🍞",
+        "t": "Copt învelit, nu în tavă descoperită",
+        "d": "Membrana subțire ține totul compact la tăiere"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🫀",
+        "t": "Finely chopped lamb offal",
+        "d": "Liver, heart and lungs, briefly boiled beforehand"
+      },
+      {
+        "icon": "🥬",
+        "t": "Fresh herbs in generous amounts",
+        "d": "Dill, parsley and spring onion, not just a garnish"
+      },
+      {
+        "icon": "🥚",
+        "t": "Whole boiled eggs through the centre",
+        "d": "Slices reveal a perfect yellow ring in the middle"
+      },
+      {
+        "icon": "🍞",
+        "t": "Baked wrapped, not in an open tray",
+        "d": "The thin membrane keeps everything compact when sliced"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🫀",
+        "t": "Vísceras de cordero finamente picadas",
+        "d": "Hígado, corazón y pulmón, hervidos brevemente antes"
+      },
+      {
+        "icon": "🥬",
+        "t": "Hierbas frescas en abundancia",
+        "d": "Eneldo, perejil y cebolleta, no solo decoración"
+      },
+      {
+        "icon": "🥚",
+        "t": "Huevos cocidos enteros en el centro",
+        "d": "Las lonchas muestran un anillo amarillo perfecto en medio"
+      },
+      {
+        "icon": "🍞",
+        "t": "Horneado envuelto, no en bandeja abierta",
+        "d": "La fina membrana mantiene todo compacto al cortar"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🫀",
+        "t": "Abats d'agneau finement hachés",
+        "d": "Foie, cœur et poumon, brièvement bouillis avant"
+      },
+      {
+        "icon": "🥬",
+        "t": "Herbes fraîches en abondance",
+        "d": "Aneth, persil et oignon nouveau, pas juste une garniture"
+      },
+      {
+        "icon": "🥚",
+        "t": "Œufs durs entiers au centre",
+        "d": "Les tranches révèlent un anneau jaune parfait au milieu"
+      },
+      {
+        "icon": "🍞",
+        "t": "Cuit enveloppé, pas dans un moule ouvert",
+        "d": "La fine membrane garde tout compact à la découpe"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🫀",
+        "t": "Fein gehacktes Lamminnereien",
+        "d": "Leber, Herz und Lunge, vorher kurz gekocht"
+      },
+      {
+        "icon": "🥬",
+        "t": "Reichlich frische Kräuter",
+        "d": "Dill, Petersilie und Frühlingszwiebel, nicht nur Garnitur"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ganze gekochte Eier in der Mitte",
+        "d": "Scheiben zeigen einen perfekten gelben Ring in der Mitte"
+      },
+      {
+        "icon": "🍞",
+        "t": "Umwickelt gebacken, nicht in offener Form",
+        "d": "Die dünne Membran hält beim Anschneiden alles kompakt"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🫀",
+        "t": "Miúdos de borrego finamente picados",
+        "d": "Fígado, coração e pulmão, previamente fervidos por pouco tempo"
+      },
+      {
+        "icon": "🥬",
+        "t": "Ervas frescas em abundância",
+        "d": "Endro, salsa e cebolinho, não apenas decoração"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ovos cozidos inteiros no centro",
+        "d": "As fatias revelam um anel amarelo perfeito no meio"
+      },
+      {
+        "icon": "🍞",
+        "t": "Assado enrolado, não em tabuleiro aberto",
+        "d": "A membrana fina mantém tudo compacto ao cortar"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🫀",
+        "t": "Мелко нарезанные субпродукты ягнёнка",
+        "d": "Печень, сердце и лёгкие, предварительно недолго сваренные"
+      },
+      {
+        "icon": "🥬",
+        "t": "Щедрое количество свежей зелени",
+        "d": "Укроп, петрушка и зелёный лук, а не просто украшение"
+      },
+      {
+        "icon": "🥚",
+        "t": "Целые варёные яйца в середине",
+        "d": "На срезе видно идеальное жёлтое кольцо в центре"
+      },
+      {
+        "icon": "🍞",
+        "t": "Запекается обёрнутым, а не в открытой форме",
+        "d": "Тонкая плёнка держит всё компактным при нарезке"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🫀",
+        "t": "أحشاء حمل مفرومة ناعمًا",
+        "d": "كبد وقلب ورئة، مسلوقة لفترة وجيزة مسبقًا"
+      },
+      {
+        "icon": "🥬",
+        "t": "أعشاب طازجة بكميات سخية",
+        "d": "شبت وبقدونس وبصل أخضر، لا مجرد زينة"
+      },
+      {
+        "icon": "🥚",
+        "t": "بيض مسلوق كامل في الوسط",
+        "d": "الشرائح تكشف عن حلقة صفراء مثالية في المنتصف"
+      },
+      {
+        "icon": "🍞",
+        "t": "يُخبَز ملفوفًا، لا في صينية مفتوحة",
+        "d": "الغشاء الرقيق يحافظ على تماسك كل شيء عند التقطيع"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🫀",
+        "t": "细切的羊内脏",
+        "d": "肝、心和肺，事先短暂煮过"
+      },
+      {
+        "icon": "🥬",
+        "t": "大量新鲜香草",
+        "d": "莳萝、欧芹和青葱，而不只是点缀"
+      },
+      {
+        "icon": "🥚",
+        "t": "整颗水煮蛋置于中心",
+        "d": "切片后能看到中间完美的金黄色蛋环"
+      },
+      {
+        "icon": "🍞",
+        "t": "包裹后烘烤，而非在敞开的烤盘中",
+        "d": "薄薄的网膜让切片时保持紧实"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🫀",
+        "t": "細かく刻んだ子羊のもつ",
+        "d": "レバー、ハツ、肺をあらかじめ短時間茹でておく"
+      },
+      {
+        "icon": "🥬",
+        "t": "たっぷりの生ハーブ",
+        "d": "ディル、パセリ、万能ねぎは飾りではなくたっぷりと"
+      },
+      {
+        "icon": "🥚",
+        "t": "中心に丸ごとゆで卵",
+        "d": "切ると中央にきれいな黄色い輪が現れる"
+      },
+      {
+        "icon": "🍞",
+        "t": "開いた型ではなく包んで焼く",
+        "d": "薄い網脂が切ったときに形をまとめる"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🫀",
+        "t": "İnce kıyılmış kuzu sakatatı",
+        "d": "Karaciğer, kalp ve akciğer, önceden kısa süre haşlanır"
+      },
+      {
+        "icon": "🥬",
+        "t": "Bolca taze yeşillik",
+        "d": "Dereotu, maydanoz ve taze soğan, sadece süsleme değil"
+      },
+      {
+        "icon": "🥚",
+        "t": "Ortasında bütün haşlanmış yumurta",
+        "d": "Dilimlerde ortada mükemmel sarı bir halka görünür"
+      },
+      {
+        "icon": "🍞",
+        "t": "Açık tepside değil, sarılarak pişirilir",
+        "d": "İnce zar dilimlenirken her şeyi bir arada tutar"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🫀",
+        "t": "Frattaglie d'agnello tritate finemente",
+        "d": "Fegato, cuore e polmone, brevemente bolliti prima"
+      },
+      {
+        "icon": "🥬",
+        "t": "Erbe fresche in abbondanza",
+        "d": "Aneto, prezzemolo e cipollotto, non solo guarnizione"
+      },
+      {
+        "icon": "🥚",
+        "t": "Uova sode intere al centro",
+        "d": "Le fette rivelano un anello giallo perfetto nel mezzo"
+      },
+      {
+        "icon": "🍞",
+        "t": "Cotto avvolto, non in una teglia aperta",
+        "d": "La sottile membrana mantiene tutto compatto al taglio"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🫀",
+        "t": "잘게 다진 양 내장",
+        "d": "간, 심장, 폐를 미리 짧게 삶아 준비"
+      },
+      {
+        "icon": "🥬",
+        "t": "넉넉한 생허브",
+        "d": "딜, 파슬리, 실파는 장식이 아니라 듬뿍"
+      },
+      {
+        "icon": "🥚",
+        "t": "중심에 통째로 넣은 삶은 달걀",
+        "d": "썰면 가운데 완벽한 노란 원이 나타난다"
+      },
+      {
+        "icon": "🍞",
+        "t": "열린 틀이 아닌 감싸서 굽기",
+        "d": "얇은 막이 썰었을 때 모양을 단단히 잡아준다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🫀",
+        "t": "बारीक कटा भेड़ का ऑफल",
+        "d": "जिगर, दिल और फेफड़े, पहले थोड़ी देर उबाले गए"
+      },
+      {
+        "icon": "🥬",
+        "t": "भरपूर ताज़ी जड़ी-बूटियां",
+        "d": "सोआ, अजमोद और हरा प्याज़, सिर्फ सजावट नहीं"
+      },
+      {
+        "icon": "🥚",
+        "t": "बीच में पूरे उबले अंडे",
+        "d": "कटे हुए टुकड़े में बीच में एक सटीक पीला घेरा दिखता है"
+      },
+      {
+        "icon": "🍞",
+        "t": "खुली ट्रे में नहीं, लपेटकर बेक किया गया",
+        "d": "पतली झिल्ली काटते समय सब कुछ मज़बूती से जकड़े रखती है"
+      }
+    ]
+  },
+  "ingredients": {
+    "ro": [
+      "600g organe de miel (ficat, inimă, plămâni)",
+      "300g carne de miel, tocată",
+      "150g membrană/pântecă de miel (sau folie de copt, ca înlocuitor)",
+      "1 legătură mărar, tocat",
+      "1 legătură pătrunjel, tocat",
+      "3 fire ceapă verde, tocate",
+      "4 ouă fierte tari, întregi",
+      "2 ouă crude",
+      "sare și piper, după gust",
+      "unt, pentru uns forma"
+    ],
+    "en": [
+      "600g lamb offal (liver, heart, lungs)",
+      "300g lamb meat, minced",
+      "150g lamb caul fat (or baking parchment, as a substitute)",
+      "1 bunch dill, chopped",
+      "1 bunch parsley, chopped",
+      "3 spring onions, chopped",
+      "4 eggs, hard-boiled and whole",
+      "2 raw eggs",
+      "salt and pepper, to taste",
+      "butter, for greasing the dish"
+    ],
+    "es": [
+      "600g de vísceras de cordero (hígado, corazón, pulmón)",
+      "300g de carne de cordero, picada",
+      "150g de redaño de cordero (o papel de horno, como sustituto)",
+      "1 manojo de eneldo, picado",
+      "1 manojo de perejil, picado",
+      "3 cebolletas, picadas",
+      "4 huevos, cocidos duros y enteros",
+      "2 huevos crudos",
+      "sal y pimienta, al gusto",
+      "mantequilla, para engrasar el molde"
+    ],
+    "fr": [
+      "600g d'abats d'agneau (foie, cœur, poumon)",
+      "300g de viande d'agneau, hachée",
+      "150g de crépine d'agneau (ou papier cuisson, en substitut)",
+      "1 botte d'aneth, haché",
+      "1 botte de persil, haché",
+      "3 oignons nouveaux, hachés",
+      "4 œufs, durs et entiers",
+      "2 œufs crus",
+      "sel et poivre, selon le goût",
+      "beurre, pour graisser le moule"
+    ],
+    "de": [
+      "600g Lamminnereien (Leber, Herz, Lunge)",
+      "300g Lammfleisch, gehackt",
+      "150g Lammnetzfett (oder Backpapier als Ersatz)",
+      "1 Bund Dill, gehackt",
+      "1 Bund Petersilie, gehackt",
+      "3 Frühlingszwiebeln, gehackt",
+      "4 Eier, hartgekocht und ganz",
+      "2 rohe Eier",
+      "Salz und Pfeffer, nach Geschmack",
+      "Butter, zum Einfetten der Form"
+    ],
+    "pt": [
+      "600g de miúdos de borrego (fígado, coração, pulmão)",
+      "300g de carne de borrego, picada",
+      "150g de rede de borrego (ou papel vegetal, como substituto)",
+      "1 molho de endro, picado",
+      "1 molho de salsa, picado",
+      "3 cebolinhas, picadas",
+      "4 ovos, cozidos duros e inteiros",
+      "2 ovos crus",
+      "sal e pimenta, a gosto",
+      "manteiga, para untar a forma"
+    ],
+    "ru": [
+      "600г субпродуктов ягнёнка (печень, сердце, лёгкие)",
+      "300г мяса ягнёнка, рубленого",
+      "150г сальника ягнёнка (или пергамент для выпечки, как замена)",
+      "1 пучок укропа, нарезанного",
+      "1 пучок петрушки, нарезанной",
+      "3 стебля зелёного лука, нарезанного",
+      "4 яйца, сваренных вкрутую и целых",
+      "2 сырых яйца",
+      "соль и перец по вкусу",
+      "масло, для смазывания формы"
+    ],
+    "ar": [
+      "600غ أحشاء حمل (كبد، قلب، رئة)",
+      "300غ لحم حمل، مفروم",
+      "150غ شبكة دهن حمل (أو ورق خبز، كبديل)",
+      "حزمة شبت واحدة، مفرومة",
+      "حزمة بقدونس واحدة، مفرومة",
+      "3 أعواد بصل أخضر، مفرومة",
+      "4 بيضات، مسلوقة كاملة وصلبة",
+      "2 بيضة نيئة",
+      "ملح وفلفل، حسب الرغبة",
+      "زبدة، لدهن الطبق"
+    ],
+    "zh": [
+      "600克羊内脏（肝、心、肺）",
+      "300克羊肉，绞碎",
+      "150克羊网油（或用烘焙纸代替）",
+      "1把莳萝，切碎",
+      "1把欧芹，切碎",
+      "3根青葱，切碎",
+      "4个鸡蛋，煮熟去壳整颗",
+      "2个生鸡蛋",
+      "盐和胡椒，适量",
+      "黄油，用于涂抹模具"
+    ],
+    "ja": [
+      "子羊のもつ600g（レバー、ハツ、肺）",
+      "子羊肉300g（ひき肉）",
+      "子羊の網脂150g（またはオーブンシートで代用）",
+      "ディル1束（みじん切り）",
+      "パセリ1束（みじん切り）",
+      "万能ねぎ3本（みじん切り）",
+      "固ゆで卵丸ごと4個",
+      "生卵2個",
+      "塩とこしょう（お好みで）",
+      "型に塗るバター"
+    ],
+    "tr": [
+      "600g kuzu sakatatı (karaciğer, kalp, akciğer)",
+      "300g kuzu eti, kıyılmış",
+      "150g kuzu file yağı (veya yerine fırın kağıdı)",
+      "1 demet dereotu, doğranmış",
+      "1 demet maydanoz, doğranmış",
+      "3 taze soğan, doğranmış",
+      "4 yumurta, katı haşlanmış ve bütün",
+      "2 çiğ yumurta",
+      "tuz ve karabiber, damak zevkine göre",
+      "kabı yağlamak için tereyağı"
+    ],
+    "it": [
+      "600g di frattaglie d'agnello (fegato, cuore, polmone)",
+      "300g di carne d'agnello, macinata",
+      "150g di rete d'agnello (o carta forno, come sostituto)",
+      "1 mazzetto di aneto, tritato",
+      "1 mazzetto di prezzemolo, tritato",
+      "3 cipollotti, tritati",
+      "4 uova, sode e intere",
+      "2 uova crude",
+      "sale e pepe, quanto basta",
+      "burro, per imburrare lo stampo"
+    ],
+    "ko": [
+      "양 내장 600g (간, 심장, 폐)",
+      "간 양고기 300g",
+      "양 망사 지방 150g (또는 대체용 유산지)",
+      "딜 1단, 다진 것",
+      "파슬리 1단, 다진 것",
+      "실파 3대, 다진 것",
+      "완숙으로 삶은 통달걀 4개",
+      "생달걀 2개",
+      "소금과 후추, 취향껏",
+      "틀에 바를 버터"
+    ],
+    "hi": [
+      "600ग्राम भेड़ का ऑफल (जिगर, दिल, फेफड़े)",
+      "300ग्राम भेड़ का मांस, कीमा",
+      "150ग्राम भेड़ की काउल फैट (या विकल्प के रूप में बेकिंग पेपर)",
+      "1 गुच्छा सोआ, कटा हुआ",
+      "1 गुच्छा अजमोद, कटा हुआ",
+      "3 हरे प्याज़, कटे हुए",
+      "4 अंडे, पूरे उबले हुए",
+      "2 कच्चे अंडे",
+      "नमक और काली मिर्च, स्वादानुसार",
+      "बर्तन चिकना करने के लिए मक्खन"
+    ]
+  },
+  "howIsMade": {
+    "ro": "FIERBE ORGANELE: pune organele de miel într-o oală cu apă sărată și fierbe 15-20 minute, până se gătesc complet dar rămân ferme. Scurge-le și lasă-le să se răcească. TOACĂ MĂRUNT: toacă organele fierte și carnea crudă de miel mărunt, cu cuțitul sau prin mașina de tocat, până obții o textură fină și omogenă. AMESTECĂ COMPOZIȚIA: pune carnea tocată într-un vas mare, adaugă mărarul, pătrunjelul, ceapa verde, ouăle crude, sare și piper, și amestecă bine cu mâna până se leagă totul. PREGĂTEȘTE FORMA: unge o formă de chec cu unt și tapetează interiorul cu membrana de miel întinsă, lăsând destul să atârne peste margini pentru a acoperi ulterior. UMPLE PE JUMĂTATE: pune jumătate din compoziție în formă și nivelează cu spatula. AȘAZĂ OUĂLE: pune ouăle fierte întregi în șir, unul lângă altul, de-a lungul centrului formei. ACOPERĂ COMPLET: adaugă restul compoziției peste ouă, apăsând ușor ca să nu rămână goluri, apoi împăturește membrana peste ea, sigilând complet. COACE: coace la 180°C timp de 55-65 minute, până se rumenește frumos la suprafață și un cuțit introdus în mijloc iese curat. RĂCEȘTE ȘI SERVEȘTE: lasă drobul să se răcească complet la temperatura camerei, apoi la frigider minimum 2 ore înainte de a-l tăia felii — se taie mult mai curat rece decât cald.",
+    "en": "BOIL THE OFFAL: put the lamb offal in a pot of salted water and boil for 15-20 minutes, until fully cooked but still firm. Drain and let it cool. CHOP FINELY: chop the boiled offal and the raw lamb meat finely, with a knife or through a mincer, until you get a fine, even texture. MIX THE FILLING: put the minced mixture in a large bowl, add the dill, parsley, spring onion, raw eggs, salt and pepper, and mix well by hand until everything binds together. PREPARE THE MOULD: butter a loaf tin and line the inside with the stretched-out caul fat, leaving enough hanging over the edges to fold over later. FILL HALFWAY: put half the mixture into the mould and level it with a spatula. LAY THE EGGS: place the whole boiled eggs in a row, end to end, along the centre of the mould. COVER COMPLETELY: add the rest of the mixture over the eggs, pressing gently so there are no gaps, then fold the caul fat over it, sealing completely. BAKE: bake at 180°C for 55-65 minutes, until nicely browned on top and a knife inserted in the centre comes out clean. COOL AND SERVE: let the pâté cool completely at room temperature, then refrigerate for at least 2 hours before slicing — it cuts much more cleanly cold than warm.",
+    "es": "HIERVE LAS VÍSCERAS: pon las vísceras de cordero en una olla con agua salada y hierve 15-20 minutos, hasta que estén completamente cocidas pero firmes. Escúrrelas y déjalas enfriar. PICA FINAMENTE: pica las vísceras hervidas y la carne cruda de cordero finamente, con cuchillo o picadora, hasta obtener una textura fina y uniforme. MEZCLA EL RELLENO: pon la mezcla picada en un bol grande, añade el eneldo, el perejil, la cebolleta, los huevos crudos, sal y pimienta, y mezcla bien a mano hasta que todo se ligue. PREPARA EL MOLDE: engrasa un molde alargado con mantequilla y forra el interior con el redaño estirado, dejando suficiente colgando por los bordes para doblarlo después. RELLENA A LA MITAD: pon la mitad de la mezcla en el molde y nivélala con una espátula. COLOCA LOS HUEVOS: pon los huevos cocidos enteros en fila, uno tras otro, a lo largo del centro del molde. CUBRE POR COMPLETO: añade el resto de la mezcla sobre los huevos, presionando suavemente para que no queden huecos, luego dobla el redaño encima, sellando por completo. HORNEA: hornea a 180°C durante 55-65 minutos, hasta que se dore bien por encima y un cuchillo insertado en el centro salga limpio. ENFRÍA Y SIRVE: deja que el paté se enfríe por completo a temperatura ambiente, luego refrigera al menos 2 horas antes de cortarlo en lonchas — corta mucho más limpio frío que caliente.",
+    "fr": "FAIS BOUILLIR LES ABATS: mets les abats d'agneau dans une marmite d'eau salée et fais bouillir 15-20 minutes, jusqu'à ce qu'ils soient bien cuits mais encore fermes. Égoutte-les et laisse-les refroidir. HACHE FINEMENT: hache les abats bouillis et la viande crue d'agneau finement, au couteau ou au hachoir, jusqu'à obtenir une texture fine et régulière. MÉLANGE LA FARCE: mets le mélange haché dans un grand bol, ajoute l'aneth, le persil, l'oignon nouveau, les œufs crus, le sel et le poivre, et mélange bien à la main jusqu'à ce que tout se lie. PRÉPARE LE MOULE: beurre un moule à cake et tapisse l'intérieur avec la crépine étalée, en laissant assez déborder des bords pour la replier plus tard. REMPLIS À MOITIÉ: mets la moitié du mélange dans le moule et nivelle avec une spatule. DISPOSE LES ŒUFS: place les œufs durs entiers en rangée, bout à bout, le long du centre du moule. RECOUVRE COMPLÈTEMENT: ajoute le reste du mélange sur les œufs, en pressant doucement pour qu'il n'y ait pas de vide, puis replie la crépine dessus, en scellant complètement. FAIS CUIRE: fais cuire à 180°C pendant 55-65 minutes, jusqu'à ce que ce soit joliment doré dessus et qu'un couteau inséré au centre ressorte propre. LAISSE REFROIDIR ET SERS: laisse le pâté refroidir complètement à température ambiante, puis réfrigère au moins 2 heures avant de le trancher — il se coupe bien plus proprement froid que chaud.",
+    "de": "INNEREIEN KOCHEN: die Lamminnereien in einen Topf mit Salzwasser geben und 15-20 Minuten kochen, bis sie durchgegart, aber noch fest sind. Abgießen und abkühlen lassen. FEIN HACKEN: die gekochten Innereien und das rohe Lammfleisch mit einem Messer oder Fleischwolf fein hacken, bis eine feine, gleichmäßige Textur entsteht. FÜLLUNG MISCHEN: die gehackte Mischung in eine große Schüssel geben, Dill, Petersilie, Frühlingszwiebel, rohe Eier, Salz und Pfeffer zugeben und von Hand gut vermischen, bis alles bindet. FORM VORBEREITEN: eine Kastenform mit Butter einfetten und innen mit dem ausgebreiteten Netzfett auslegen, dabei genug über die Ränder hängen lassen, um es später umzuschlagen. HALB FÜLLEN: die Hälfte der Mischung in die Form geben und mit einem Spatel glattstreichen. EIER EINLEGEN: die ganzen gekochten Eier hintereinander in einer Reihe entlang der Mitte der Form legen. VOLLSTÄNDIG BEDECKEN: den Rest der Mischung über die Eier geben, leicht andrücken, damit keine Lücken bleiben, dann das Netzfett darüberklappen und vollständig verschließen. BACKEN: bei 180°C 55-65 Minuten backen, bis die Oberseite schön gebräunt ist und ein in die Mitte gestecktes Messer sauber herauskommt. ABKÜHLEN UND SERVIEREN: die Pastete vollständig bei Zimmertemperatur abkühlen lassen, dann mindestens 2 Stunden kühlstellen, bevor sie in Scheiben geschnitten wird — kalt lässt sie sich viel sauberer schneiden als warm.",
+    "pt": "FERVE OS MIÚDOS: coloca os miúdos de borrego numa panela de água com sal e ferve 15-20 minutos, até ficarem totalmente cozidos mas ainda firmes. Escorre-os e deixa-os arrefecer. PICA FINAMENTE: pica os miúdos fervidos e a carne crua de borrego finamente, com faca ou picadora, até obteres uma textura fina e uniforme. MISTURA O RECHEIO: coloca a mistura picada numa taça grande, junta o endro, a salsa, a cebolinha, os ovos crus, sal e pimenta, e mistura bem à mão até tudo ligar. PREPARA A FORMA: unta uma forma de bolo inglês com manteiga e forra o interior com a rede esticada, deixando o suficiente a pender pelas bordas para dobrar depois. ENCHE ATÉ METADE: coloca metade da mistura na forma e nivela com uma espátula. COLOCA OS OVOS: coloca os ovos cozidos inteiros em fila, um a seguir ao outro, ao longo do centro da forma. COBRE POR COMPLETO: junta o resto da mistura por cima dos ovos, pressionando suavemente para não ficarem espaços vazios, depois dobra a rede por cima, selando por completo. COZE: coze a 180°C durante 55-65 minutos, até dourar bem por cima e uma faca inserida no centro sair limpa. ARREFECE E SERVE: deixa o paté arrefecer completamente à temperatura ambiente, depois refrigera pelo menos 2 horas antes de cortar em fatias — corta muito mais limpo frio do que quente.",
+    "ru": "СВАРИ СУБПРОДУКТЫ: положи субпродукты ягнёнка в кастрюлю с подсоленной водой и вари 15-20 минут, пока полностью не приготовятся, оставаясь при этом плотными. Слей воду и дай остыть. МЕЛКО ПОРУБИ: мелко поруби варёные субпродукты и сырое мясо ягнёнка ножом или через мясорубку, пока не получится тонкая, однородная текстура. СМЕШАЙ НАЧИНКУ: положи рубленую смесь в большую миску, добавь укроп, петрушку, зелёный лук, сырые яйца, соль и перец и хорошо перемешай руками, пока всё не свяжется. ПОДГОТОВЬ ФОРМУ: смажь маслом форму для выпечки хлеба и выложи внутри растянутым сальником, оставив достаточно свисающего по краям, чтобы позже завернуть. ЗАПОЛНИ НАПОЛОВИНУ: положи половину смеси в форму и разровняй лопаткой. ВЫЛОЖИ ЯЙЦА: положи целые варёные яйца в ряд, одно за другим, вдоль центра формы. ПОЛНОСТЬЮ НАКРОЙ: добавь оставшуюся смесь поверх яиц, слегка прижимая, чтобы не осталось пустот, затем заверни сальник сверху, полностью запечатав. ЗАПЕКАЙ: запекай при 180°C 55-65 минут, пока сверху хорошо не подрумянится, а нож, вставленный в центр, не будет выходить чистым. ОХЛАДИ И ПОДАЙ: дай паштету полностью остыть при комнатной температуре, затем убери в холодильник минимум на 2 часа перед нарезкой — холодным он режется гораздо чище, чем тёплым.",
+    "ar": "اسلق الأحشاء: ضع أحشاء الحمل في قدر من الماء المملح واسلق 15-20 دقيقة حتى تنضج تمامًا مع بقائها متماسكة. صفِّها واتركها تبرد. افرم ناعمًا: افرم الأحشاء المسلوقة ولحم الحمل النيء ناعمًا، بسكين أو مفرمة، حتى تحصل على قوام ناعم ومتجانس. اخلط الحشوة: ضع الخليط المفروم في وعاء كبير، أضف الشبت والبقدونس والبصل الأخضر والبيض النيء والملح والفلفل، واخلط جيدًا باليد حتى يتماسك كل شيء. جهّز القالب: ادهن قالب كيك بالزبدة وبطّن الداخل بشبكة الدهن المفرودة، تاركًا ما يكفي متدليًا فوق الحواف لطيه لاحقًا. املأ نصفه: ضع نصف الخليط في القالب وسوِّه بملعقة مسطحة. رتّب البيض: ضع البيض المسلوق كاملًا في صف، واحدة تلو الأخرى، على طول وسط القالب. غطِّ بالكامل: أضف باقي الخليط فوق البيض، مع الضغط برفق حتى لا تبقى فجوات، ثم اطوِ شبكة الدهن فوقه، مُغلقًا بالكامل. اخبز: اخبز على 180 درجة مئوية لمدة 55-65 دقيقة، حتى يتحمّر جيدًا من الأعلى وتخرج سكين مغروسة في الوسط نظيفة. برّد وقدّم: اترك الباتيه يبرد تمامًا في درجة حرارة الغرفة، ثم ضعه في الثلاجة ساعتين على الأقل قبل تقطيعه إلى شرائح — يُقطع أنظف بكثير باردًا من ساخنًا.",
+    "zh": "煮内脏：将羊内脏放入一锅盐水中，煮15-20分钟，直到完全熟透但仍保持紧实。沥干后放凉。细切：用刀或绞肉机将煮好的内脏和生羊肉切碎，直到质地细腻均匀。搅拌馅料：将切碎的混合物放入大碗中，加入莳萝、欧芹、青葱、生鸡蛋、盐和胡椒，用手充分搅拌至全部黏合。准备模具：给一个长条模具涂抹黄油，用铺开的网油铺在内部，边缘留出足够的部分以便之后折叠覆盖。填入一半：将一半混合物放入模具中，用抹刀抹平。摆放鸡蛋：将整颗煮蛋一字排开，沿模具中心放置。完全覆盖：将剩余混合物盖在鸡蛋上，轻轻按压不留缝隙，然后把网油折叠覆盖上去，完全封住。烘烤：以180°C烘烤55-65分钟，直到表面漂亮上色，用刀插入中心拔出时干净无粘连。冷却享用：让肉派在室温下完全冷却，再冷藏至少2小时后切片——冷切比热切更整齐利落。",
+    "ja": "もつを茹でる：子羊のもつを塩水を入れた鍋に入れ、完全に火が通りつつも締まりが残るまで15〜20分茹でる。水を切って冷ます。細かく刻む：茹でたもつと生の子羊肉を、包丁またはミンサーで、なめらかで均一な食感になるまで細かく刻む。詰め物を混ぜる：刻んだ混合物を大きなボウルに入れ、ディル、パセリ、万能ねぎ、生卵、塩、こしょうを加え、すべてがまとまるまで手でよく混ぜる。型を準備する：パウンド型にバターを塗り、内側に伸ばした網脂を敷き、後で折りたたむために縁に十分な余りを残す。半分詰める：混合物の半分を型に入れ、ヘラで平らにならす。卵を並べる：殻をむいたゆで卵を丸ごと、型の中心に沿って端から端まで一列に並べる。完全に覆う：残りの混合物を卵の上にのせ、隙間ができないよう軽く押さえ、その上に網脂を折りたたんで完全に包む。焼く：180°Cで55〜65分焼き、表面がきれいに色づき、中心に刺したナイフがきれいに抜けるまで焼く。冷まして提供する：パテを室温で完全に冷まし、切り分ける前に冷蔵庫で最低2時間冷やす——冷たい方が温かい状態よりずっときれいに切れる。",
+    "tr": "SAKATATLARI HAŞLAYIN: kuzu sakatatını tuzlu su dolu bir tencereye koyun ve tamamen pişmiş ama hâlâ sıkı kalana kadar 15-20 dakika haşlayın. Süzün ve soğumaya bırakın. İNCE DOĞRAYIN: haşlanmış sakatatı ve çiğ kuzu etini bıçak veya kıyma makinesiyle, ince ve düzgün bir doku elde edene kadar ince doğrayın. HARCI KARIŞTIRIN: kıyılmış karışımı büyük bir kaseye koyun, dereotu, maydanoz, taze soğan, çiğ yumurta, tuz ve karabiber ekleyin ve her şey bir arada tutana kadar elle iyice karıştırın. KABI HAZIRLAYIN: bir kek kalıbını tereyağıyla yağlayın ve içini açılmış file yağıyla kaplayın, sonra üzerine katlamak için kenarlarda yeterince sarkacak şekilde bırakın. YARISINI DOLDURUN: karışımın yarısını kalıba koyun ve spatulayla düzleştirin. YUMURTALARI YERLEŞTİRİN: haşlanmış bütün yumurtaları kalıbın ortası boyunca uç uca sıra halinde dizin. TAMAMEN ÖRTÜN: kalan karışımı yumurtaların üzerine ekleyin, boşluk kalmaması için hafifçe bastırın, ardından file yağını üzerine katlayarak tamamen kapatın. PİŞİRİN: üstü güzelce kızarana ve ortasına batırılan bıçak temiz çıkana kadar 180°C'de 55-65 dakika pişirin. SOĞUTUN VE SERVİS YAPIN: terrinin oda sıcaklığında tamamen soğumasını bekleyin, ardından dilimlemeden önce en az 2 saat buzdolabında bekletin — soğukken sıcaktan çok daha temiz dilimlenir.",
+    "it": "BOLLI LE FRATTAGLIE: metti le frattaglie d'agnello in una pentola d'acqua salata e bolli 15-20 minuti, finché sono cotte completamente ma ancora sode. Scolale e lasciale raffreddare. TRITA FINEMENTE: trita finemente le frattaglie bollite e la carne cruda d'agnello, con un coltello o un tritacarne, finché ottieni una consistenza fine e omogenea. MESCOLA IL RIPIENO: metti il composto tritato in una ciotola grande, aggiungi l'aneto, il prezzemolo, il cipollotto, le uova crude, sale e pepe, e mescola bene a mano finché tutto si lega. PREPARA LO STAMPO: imburra uno stampo da plumcake e foderalo internamente con la rete stesa, lasciandone abbastanza a penzoloni sui bordi da ripiegare dopo. RIEMPI A METÀ: metti metà del composto nello stampo e livellalo con una spatola. DISPONI LE UOVA: metti le uova sode intere in fila, una dopo l'altra, lungo il centro dello stampo. COPRI COMPLETAMENTE: aggiungi il resto del composto sopra le uova, premendo delicatamente perché non restino vuoti, poi ripiega la rete sopra, sigillando completamente. CUOCI: cuoci a 180°C per 55-65 minuti, finché è bello dorato in superficie e un coltello inserito al centro esce pulito. RAFFREDDA E SERVI: lascia raffreddare completamente il paté a temperatura ambiente, poi mettilo in frigo per almeno 2 ore prima di affettarlo — si taglia molto più pulito freddo che caldo.",
+    "ko": "내장 삶기: 양 내장을 소금물이 담긴 냄비에 넣고 완전히 익되 여전히 단단함이 남을 때까지 15-20분간 삶는다. 물기를 빼고 식힌다. 잘게 다지기: 삶은 내장과 생 양고기를 칼이나 분쇄기로 곱고 고른 질감이 될 때까지 잘게 다진다. 속재료 섞기: 다진 혼합물을 큰 볼에 담고 딜, 파슬리, 실파, 생달걀, 소금, 후추를 넣어 모두 뭉칠 때까지 손으로 잘 섞는다. 틀 준비하기: 파운드 틀에 버터를 바르고 안쪽에 펼친 망사 지방을 깔되, 나중에 접어 덮을 수 있도록 가장자리에 충분히 늘어뜨린다. 절반 채우기: 혼합물의 절반을 틀에 넣고 주걱으로 평평하게 편다. 달걀 놓기: 삶은 통달걀을 틀 중앙을 따라 일렬로 나란히 놓는다. 완전히 덮기: 나머지 혼합물을 달걀 위에 올리고 빈틈이 없도록 살짝 눌러준 뒤, 망사 지방을 그 위로 접어 완전히 봉한다. 굽기: 180°C에서 표면이 먹음직스럽게 갈색이 되고 중심에 칼을 찔러 넣었을 때 깨끗이 나올 때까지 55-65분간 굽는다. 식혀서 서빙하기: 파테를 실온에서 완전히 식힌 뒤 썰기 전에 냉장고에서 최소 2시간 둔다 — 따뜻할 때보다 차가울 때 훨씬 깔끔하게 썰린다.",
+    "hi": "ऑफल उबालें: भेड़ के ऑफल को नमकीन पानी के बर्तन में डालें और तब तक उबालें जब तक पूरी तरह पक न जाए लेकिन ठोस बना रहे, 15-20 मिनट। छानें और ठंडा होने दें। बारीक काटें: उबले ऑफल और कच्चे भेड़ के मांस को चाकू या मिन्सर से बारीक काटें, जब तक एक महीन, एकसमान बनावट न मिल जाए। भरावन मिलाएं: कटे हुए मिश्रण को एक बड़े कटोरे में रखें, सोआ, अजमोद, हरा प्याज़, कच्चे अंडे, नमक और काली मिर्च डालें, और हाथ से अच्छी तरह मिलाएं जब तक सब कुछ बंध न जाए। सांचा तैयार करें: एक लोफ टिन को मक्खन से चिकना करें और अंदर फैलाई गई काउल फैट से ढकें, बाद में मोड़ने के लिए किनारों पर पर्याप्त लटकने दें। आधा भरें: मिश्रण का आधा हिस्सा सांचे में डालें और स्पैचुला से समतल करें। अंडे रखें: पूरे उबले अंडों को सांचे के केंद्र में एक पंक्ति में, एक के बाद एक रखें। पूरी तरह ढकें: बाकी मिश्रण अंडों के ऊपर डालें, हल्के से दबाते हुए ताकि कोई खाली जगह न रहे, फिर काउल फैट को ऊपर मोड़ें, पूरी तरह सील करते हुए। बेक करें: 180°C पर 55-65 मिनट बेक करें, जब तक ऊपर से अच्छी तरह भूरा न हो जाए और बीच में डाली चाकू साफ न निकले। ठंडा करें और परोसें: पेट को कमरे के तापमान पर पूरी तरह ठंडा होने दें, फिर काटने से पहले कम से कम 2 घंटे फ्रिज में रखें — यह गरम की तुलना में ठंडा होने पर कहीं ज़्यादा साफ़ कटता है।"
+  },
+  "originText": {
+    "ro": "Drobul e felul de neocolit al mesei de Paște în casele românești, gătit special din organele mielului sacrificat pentru masa de sărbătoare — o rețetă născută din obiceiul de a nu arunca nimic dintr-un animal întreg. Structura lui, cu un rând de ouă întregi prin mijloc, are propria ei simbolistică pascală, iar tăierea felie cu felie dezvăluie inelul galben ca un mic soare în centrul fiecărei bucăți.\n\nCe deosebește un drob reușit de unul mediocru ține de două lucruri: fierberea scurtă a organelor înainte de tocare, suficientă cât să se gătească dar nu atât încât să devină cauciucate; și membrana subțire în care e învelit — fără ea, drobul se sfărâmă la tăiere, oricât de bine ar fi legată compoziția pe dinăuntru. Servirea rece, nu caldă, nu e o simplă preferință: la cald, feliile își pierd forma și se destramă imediat ce ajung pe farfurie.",
+    "en": "Drob is the unavoidable dish of the Romanian Easter table, made specifically from the offal of the lamb slaughtered for the holiday meal — a recipe born from the custom of wasting nothing from a whole animal. Its structure, with a row of whole eggs running through the middle, carries its own Easter symbolism, and slicing it reveals the yellow ring like a small sun at the centre of each piece.\n\nWhat separates a successful drob from a mediocre one comes down to two things: briefly boiling the offal before chopping it, just enough to cook it through without turning it rubbery; and the thin membrane it's wrapped in — without it, the pâté crumbles when sliced, no matter how well the filling is bound on the inside. Serving it cold rather than warm isn't a simple preference: warm, the slices lose their shape and fall apart the moment they hit the plate.",
+    "es": "El drob es el plato ineludible de la mesa de Pascua rumana, hecho específicamente con las vísceras del cordero sacrificado para la comida festiva — una receta nacida de la costumbre de no desperdiciar nada de un animal entero. Su estructura, con una fila de huevos enteros atravesando el centro, tiene su propio simbolismo pascual, y al cortarlo se revela el anillo amarillo como un pequeño sol en el centro de cada trozo.\n\nLo que separa un drob logrado de uno mediocre depende de dos cosas: hervir brevemente las vísceras antes de picarlas, lo justo para cocinarlas sin que se vuelvan gomosas; y la fina membrana en la que se envuelve — sin ella, el paté se desmorona al cortarlo, por muy bien ligado que esté el relleno por dentro. Servirlo frío, no caliente, no es una simple preferencia: caliente, las lonchas pierden su forma y se deshacen en cuanto llegan al plato.",
+    "fr": "Le drob est le plat incontournable de la table pascale roumaine, préparé spécifiquement avec les abats de l'agneau sacrifié pour le repas de fête — une recette née de la coutume de ne rien gaspiller d'un animal entier. Sa structure, avec une rangée d'œufs entiers traversant le centre, porte son propre symbolisme pascal, et le trancher révèle l'anneau jaune comme un petit soleil au centre de chaque morceau.\n\nCe qui distingue un drob réussi d'un médiocre tient à deux choses : faire brièvement bouillir les abats avant de les hacher, juste assez pour les cuire sans les rendre caoutchouteux ; et la fine membrane dans laquelle il est enveloppé — sans elle, le pâté s'effrite à la découpe, quelle que soit la qualité de la liaison de la farce à l'intérieur. Le servir froid plutôt que chaud n'est pas une simple préférence : chaud, les tranches perdent leur forme et se défont dès qu'elles touchent l'assiette.",
+    "de": "Drob ist das unvermeidliche Gericht des rumänischen Ostertisches, eigens aus den Innereien des für das Festmahl geschlachteten Lamms zubereitet — ein Rezept, das aus der Gewohnheit entstand, von einem ganzen Tier nichts zu verschwenden. Seine Struktur, mit einer Reihe ganzer Eier in der Mitte, trägt ihre eigene österliche Symbolik, und beim Aufschneiden zeigt sich der gelbe Ring wie eine kleine Sonne im Zentrum jedes Stücks.\n\nWas eine gelungene Drob von einer mittelmäßigen unterscheidet, hängt von zwei Dingen ab: den Innereien vor dem Hacken kurz zu kochen, gerade genug, um sie durchzugaren, ohne sie zäh werden zu lassen; und der dünnen Membran, in die sie eingewickelt wird — ohne sie zerfällt die Pastete beim Anschneiden, egal wie gut die Füllung innen gebunden ist. Sie kalt statt warm zu servieren, ist keine bloße Vorliebe: warm verlieren die Scheiben ihre Form und zerfallen, sobald sie auf dem Teller landen.",
+    "pt": "O drob é o prato incontornável da mesa de Páscoa romena, feito especificamente com os miúdos do borrego abatido para a refeição festiva — uma receita nascida do costume de não desperdiçar nada de um animal inteiro. A sua estrutura, com uma fila de ovos inteiros a atravessar o centro, tem o seu próprio simbolismo pascal, e ao cortá-lo revela-se o anel amarelo como um pequeno sol no centro de cada pedaço.\n\nO que separa um drob bem-sucedido de um medíocre depende de duas coisas: ferver brevemente os miúdos antes de os picar, o suficiente para os cozinhar sem os deixar borrachudos; e a membrana fina em que é envolvido — sem ela, o paté esfarela-se ao cortar, por melhor que esteja ligado o recheio por dentro. Servi-lo frio em vez de quente não é uma simples preferência: quente, as fatias perdem a forma e desfazem-se assim que chegam ao prato.",
+    "ru": "Дроб — неизбежное блюдо на румынском пасхальном столе, приготовленное специально из субпродуктов ягнёнка, забитого для праздничной трапезы, — рецепт, рождённый из обычая не выбрасывать ничего от целого животного. Его структура, с рядом целых яиц посередине, несёт собственную пасхальную символику, а нарезка открывает жёлтое кольцо, похожее на маленькое солнце в центре каждого кусочка.\n\nЧто отличает удавшийся дроб от посредственного, зависит от двух вещей: краткого отваривания субпродуктов перед рубкой — ровно настолько, чтобы они приготовились, не став резиновыми; и тонкой плёнки, в которую его заворачивают — без неё паштет крошится при нарезке, как бы хорошо ни была связана начинка внутри. Подача холодным, а не тёплым — не просто предпочтение: тёплые ломтики теряют форму и разваливаются, едва оказавшись на тарелке.",
+    "ar": "الدروب هو الطبق الذي لا مفر منه على مائدة عيد الفصح الرومانية، يُصنع خصيصًا من أحشاء الحمل المذبوح لوجبة العيد — وصفة وُلدت من عادة عدم إهدار أي شيء من الحيوان بأكمله. بنيته، مع صف من البيض الكامل يمر عبر المنتصف، تحمل رمزيتها الفصحية الخاصة، وتقطيعه يكشف عن الحلقة الصفراء كشمس صغيرة في وسط كل قطعة.\n\nما يفصل دروبًا ناجحًا عن آخر متوسط يعتمد على أمرين: سلق الأحشاء لفترة وجيزة قبل فرمها، بما يكفي لطهيها دون أن تصبح مطاطية؛ والغشاء الرقيق الذي يُلف به — فبدونه ينهار الباتيه عند التقطيع، مهما كانت الحشوة متماسكة من الداخل. تقديمه باردًا لا ساخنًا ليس مجرد تفضيل: ساخنًا، تفقد الشرائح شكلها وتتفكك بمجرد وصولها إلى الطبق.",
+    "zh": "Drob是罗马尼亚复活节餐桌上不可或缺的一道菜，专门用为节日大餐宰杀的羊羔内脏制作——这道食谱源自不浪费整只动物任何部分的习俗。它的结构中，一排整颗鸡蛋贯穿中心，本身就带有复活节的象征意义，切开后每一片的中心都会露出黄色的蛋圈，像一轮小小的太阳。\n\n区分成功与平庸drob的关键在于两点：内脏在切碎前要短暂煮过，火候恰好让它熟透而不至于变得像橡胶；以及包裹它的那层薄薄的网膜——没有它，无论内部馅料黏合得多好，切开时肉派都会散开。冷食而非热食并非单纯的喜好：趁热切片会失去形状，一放上盘子就散架。",
+    "ja": "ドロブはルーマニアの復活祭の食卓に欠かせない料理で、祝いの食事のために屠られた子羊のもつを使って特別に作られる——動物一頭から何も無駄にしないという習慣から生まれたレシピだ。中央に丸ごとの卵が一列に並ぶその構造には独自の復活祭の象徴性があり、切り分けると各一切れの中心に、小さな太陽のような黄色い輪が現れる。\n\n成功したドロブと平凡なものを分けるのは二つのことにかかっている。一つは、もつを刻む前に短時間茹でること——ゴムのようにならない程度に、しっかり火を通すのに十分な時間だけ。もう一つは、それを包む薄い網脂だ——それがなければ、中の詰め物がどれほどしっかりまとまっていても、切ったときにパテが崩れてしまう。温かくではなく冷たいまま提供するのは単なる好みではない——温かいと切り分けたスライスは形を失い、皿にのせた瞬間に崩れてしまうのだ。",
+    "tr": "Drob, Romanya Paskalya sofrasının vazgeçilmez yemeğidir, özellikle bayram yemeği için kesilen kuzunun sakatatından yapılır — bütün bir hayvandan hiçbir şeyi israf etmeme geleneğinden doğan bir tariftir. Ortasından geçen bir sıra bütün yumurtayla yapısı kendi Paskalya sembolizmini taşır ve dilimlemek her parçanın merkezinde küçük bir güneş gibi sarı bir halka ortaya çıkarır.\n\nBaşarılı bir drob'u vasat olandan ayıran şey iki şeye bağlıdır: sakatatı doğramadan önce kısa süre haşlamak, lastik gibi olmadan tam pişmesine yetecek kadar; ve sarıldığı ince zar — o olmadan, iç harç ne kadar iyi bağlanmış olursa olsun terrin dilimlenirken dağılır. Sıcak yerine soğuk servis etmek basit bir tercih değildir: sıcakken dilimler şeklini kaybeder ve tabağa değer değmez dağılır.",
+    "it": "Il drob è il piatto immancabile della tavola pasquale rumena, preparato appositamente con le frattaglie dell'agnello macellato per il pasto festivo — una ricetta nata dall'usanza di non sprecare nulla di un animale intero. La sua struttura, con una fila di uova intere che attraversa il centro, porta un proprio simbolismo pasquale, e affettarla rivela l'anello giallo come un piccolo sole al centro di ogni fetta.\n\nCiò che separa un drob riuscito da uno mediocre dipende da due cose: bollire brevemente le frattaglie prima di tritarle, quanto basta per cuocerle senza renderle gommose; e la sottile membrana in cui è avvolto — senza di essa, il paté si sbriciola al taglio, per quanto bene sia legato il ripieno all'interno. Servirlo freddo anziché caldo non è una semplice preferenza: caldo, le fette perdono la forma e si sfaldano non appena toccano il piatto.",
+    "ko": "드로브는 루마니아 부활절 식탁에서 빠질 수 없는 요리로, 명절 식사를 위해 도축된 어린 양의 내장으로 특별히 만든다 — 동물 한 마리에서 아무것도 버리지 않는 관습에서 탄생한 레시피다. 중앙을 관통하는 통달걀 한 줄로 이루어진 구조는 그 자체로 부활절의 상징을 담고 있으며, 썰면 각 조각의 중심에 작은 태양 같은 노란 원이 드러난다.\n\n성공한 드로브와 평범한 드로브를 가르는 것은 두 가지다: 내장을 다지기 전에 짧게 삶는 것 — 질겨지지 않으면서도 충분히 익을 정도로만; 그리고 그것을 감싸는 얇은 막 — 이것이 없으면 속재료가 안에서 아무리 잘 뭉쳐 있어도 썰 때 파테가 부서진다. 따뜻하게가 아니라 차갑게 내는 것은 단순한 취향이 아니다: 따뜻하면 조각들이 모양을 잃고 접시에 닿는 순간 흐트러진다.",
+    "hi": "द्रोब रोमानियाई ईस्टर की मेज़ का अनिवार्य व्यंजन है, जो त्योहार के भोजन के लिए काटे गए भेड़ के ऑफल से विशेष रूप से बनाया जाता है — यह एक ऐसी रेसिपी है जो पूरे जानवर से कुछ भी बर्बाद न करने की परंपरा से जन्मी है। इसकी संरचना, बीच से गुज़रती पूरे अंडों की एक कतार के साथ, अपना ही ईस्टर प्रतीकवाद रखती है, और इसे काटने पर हर टुकड़े के केंद्र में एक छोटे सूरज जैसा पीला घेरा दिखाई देता है।\n\nएक सफल द्रोब और औसत द्रोब के बीच का अंतर दो बातों पर निर्भर करता है: काटने से पहले ऑफल को थोड़ी देर उबालना, इतना ही कि पूरी तरह पक जाए बिना रबरी हुए; और वह पतली झिल्ली जिसमें इसे लपेटा जाता है — इसके बिना, चाहे अंदर का भरावन कितना भी अच्छी तरह बंधा हो, काटते समय पेट टूट जाता है। इसे गरम की बजाय ठंडा परोसना सिर्फ पसंद की बात नहीं है: गरम रहने पर टुकड़े अपना आकार खो देते हैं और थाली पर पहुंचते ही बिखर जाते हैं।"
+  },
+  "meta": {
+    "time": 120,
+    "costRon": 28,
+    "tags": [
+      "family"
+    ],
+    "desc": {
+      "ro": "Organe de miel tocate cu verdeață, învelite în membrană cu un rând de ouă fierte în mijloc, coapte și servite reci.",
+      "en": "Chopped lamb offal with fresh herbs, wrapped in caul fat around a row of boiled eggs, baked and served cold.",
+      "es": "Vísceras de cordero picadas con hierbas frescas, envueltas en redaño con una fila de huevos cocidos en el centro, horneadas y servidas frías.",
+      "fr": "Abats d'agneau hachés aux herbes fraîches, enveloppés dans une crépine avec une rangée d'œufs durs au centre, cuits et servis froids.",
+      "de": "Gehackte Lamminnereien mit frischen Kräutern, in Netzfett gewickelt um eine Reihe gekochter Eier, gebacken und kalt serviert.",
+      "pt": "Miúdos de borrego picados com ervas frescas, envolvidos em rede com uma fila de ovos cozidos no centro, assados e servidos frios.",
+      "ru": "Рубленые субпродукты ягнёнка со свежей зеленью, завёрнутые в сальник вокруг ряда варёных яиц, запечённые и поданные холодными.",
+      "ar": "أحشاء حمل مفرومة بالأعشاب الطازجة، ملفوفة بشبكة دهن حول صف من البيض المسلوق، تُخبَز وتُقدَّم باردة.",
+      "zh": "羊内脏碎拌新鲜香草，用网油包裹住一排水煮蛋，烘烤后冷食享用。",
+      "ja": "生ハーブと混ぜた子羊のもつを、ゆで卵の列を囲むように網脂で包んで焼き、冷やして提供する一品。",
+      "tr": "Taze yeşilliklerle karıştırılmış kıyılmış kuzu sakatatı, ortasında bir sıra haşlanmış yumurtayla file yağına sarılıp pişirilir ve soğuk servis edilir.",
+      "it": "Frattaglie d'agnello tritate con erbe fresche, avvolte nella rete attorno a una fila di uova sode, cotte e servite fredde.",
+      "ko": "생허브와 섞은 다진 양 내장을 삶은 달걀 한 줄 주위로 망사 지방에 싸서 구운 뒤 차갑게 서빙하는 요리.",
+      "hi": "ताज़ी जड़ी-बूटियों के साथ कटा भेड़ का ऑफल, उबले अंडों की कतार के चारों ओर झिल्ली में लपेटा, बेक किया और ठंडा परोसा गया।"
+    }
+  }
+}

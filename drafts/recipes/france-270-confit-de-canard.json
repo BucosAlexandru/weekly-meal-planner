@@ -1,0 +1,547 @@
+{
+  "id": 271,
+  "servings": 4,
+  "tipType": "french",
+  "pairingsType": "french",
+  "origin": {
+    "ro": "Franța",
+    "en": "France",
+    "es": "Francia",
+    "fr": "France",
+    "de": "Frankreich",
+    "pt": "França",
+    "ru": "Франция",
+    "ar": "فرنسا",
+    "zh": "法国",
+    "ja": "フランス",
+    "tr": "Fransa",
+    "it": "Francia",
+    "ko": "프랑스",
+    "hi": "फ़्रांस"
+  },
+  "name": {
+    "ro": "Confit de Canard",
+    "en": "Confit de Canard (Duck Confit)",
+    "es": "Confit de Canard (Confit de Pato)",
+    "fr": "Confit de Canard",
+    "de": "Confit de Canard (Entenconfit)",
+    "pt": "Confit de Canard (Confit de Pato)",
+    "ru": "Утиный конфи",
+    "ar": "كونفي البط",
+    "zh": "油封鸭腿",
+    "ja": "コンフィ・ド・カナール（鴨のコンフィ）",
+    "tr": "Confit de Canard (Ördek Konfi)",
+    "it": "Confit de Canard (Anatra Confit)",
+    "ko": "콩피 드 카나르 (오리 콩피)",
+    "hi": "कॉन्फी दे कनार्द (डक कॉन्फी)"
+  },
+  "category": {
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "tr": "Ana Yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리",
+    "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {
+        "icon": "🧂",
+        "t": "Sărare peste noapte",
+        "d": "Extrage umezeala și concentrează gustul înainte de gătit"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Gătire lentă în grăsime, nu în ulei fierbinte",
+        "d": "Sub punctul de fierbere, ore întregi, pentru textură fragedă"
+      },
+      {
+        "icon": "🦆",
+        "t": "Grăsime de rață proprie",
+        "d": "Pulpele se gătesc scufundate complet în propria grăsime"
+      },
+      {
+        "icon": "🔥",
+        "t": "Pielea crocantă la final",
+        "d": "Se prăjește separat, chiar înainte de servire"
+      }
+    ],
+    "en": [
+      {
+        "icon": "🧂",
+        "t": "Overnight salting",
+        "d": "Draws out moisture and concentrates flavour before cooking"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Slow-cooked in fat, not hot oil",
+        "d": "Below a simmer, for hours, for a tender texture"
+      },
+      {
+        "icon": "🦆",
+        "t": "Rendered duck fat",
+        "d": "Legs cook fully submerged in their own fat"
+      },
+      {
+        "icon": "🔥",
+        "t": "Crisp skin at the end",
+        "d": "Fried separately, right before serving"
+      }
+    ],
+    "es": [
+      {
+        "icon": "🧂",
+        "t": "Salazón toda la noche",
+        "d": "Extrae la humedad y concentra el sabor antes de cocinar"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Cocción lenta en grasa, no en aceite caliente",
+        "d": "Por debajo del hervor, durante horas, para una textura tierna"
+      },
+      {
+        "icon": "🦆",
+        "t": "Grasa de pato propia",
+        "d": "Los muslos se cocinan totalmente sumergidos en su propia grasa"
+      },
+      {
+        "icon": "🔥",
+        "t": "Piel crujiente al final",
+        "d": "Se fríe por separado, justo antes de servir"
+      }
+    ],
+    "fr": [
+      {
+        "icon": "🧂",
+        "t": "Salage toute une nuit",
+        "d": "Extrait l'humidité et concentre la saveur avant la cuisson"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Cuisson lente dans la graisse, pas dans l'huile chaude",
+        "d": "En dessous du frémissement, pendant des heures, pour une texture fondante"
+      },
+      {
+        "icon": "🦆",
+        "t": "Graisse de canard propre",
+        "d": "Les cuisses cuisent entièrement immergées dans leur propre graisse"
+      },
+      {
+        "icon": "🔥",
+        "t": "Peau croustillante à la fin",
+        "d": "Dorée séparément, juste avant de servir"
+      }
+    ],
+    "de": [
+      {
+        "icon": "🧂",
+        "t": "Über Nacht gesalzen",
+        "d": "Entzieht Feuchtigkeit und konzentriert den Geschmack vor dem Garen"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Langsam in Fett gegart, nicht in heißem Öl",
+        "d": "Unter dem Siedepunkt, stundenlang, für zarte Textur"
+      },
+      {
+        "icon": "🦆",
+        "t": "Ausgelassenes Entenfett",
+        "d": "Die Keulen garen vollständig in ihrem eigenen Fett untergetaucht"
+      },
+      {
+        "icon": "🔥",
+        "t": "Knusprige Haut am Ende",
+        "d": "Separat angebraten, kurz vor dem Servieren"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "🧂",
+        "t": "Salga durante a noite",
+        "d": "Extrai a humidade e concentra o sabor antes de cozinhar"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Cozedura lenta em gordura, não em óleo quente",
+        "d": "Abaixo do ponto de fervura, durante horas, para uma textura tenra"
+      },
+      {
+        "icon": "🦆",
+        "t": "Gordura de pato própria",
+        "d": "As coxas cozem totalmente submersas na sua própria gordura"
+      },
+      {
+        "icon": "🔥",
+        "t": "Pele estaladiça no final",
+        "d": "Frita separadamente, mesmo antes de servir"
+      }
+    ],
+    "ru": [
+      {
+        "icon": "🧂",
+        "t": "Засолка на ночь",
+        "d": "Вытягивает влагу и концентрирует вкус перед готовкой"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Медленное томление в жире, а не в горячем масле",
+        "d": "Ниже точки кипения, часами, для нежной текстуры"
+      },
+      {
+        "icon": "🦆",
+        "t": "Вытопленный утиный жир",
+        "d": "Ножки готовятся полностью погружёнными в собственный жир"
+      },
+      {
+        "icon": "🔥",
+        "t": "Хрустящая кожица в конце",
+        "d": "Обжаривается отдельно, прямо перед подачей"
+      }
+    ],
+    "ar": [
+      {
+        "icon": "🧂",
+        "t": "تمليح طوال الليل",
+        "d": "يسحب الرطوبة ويركّز النكهة قبل الطهي"
+      },
+      {
+        "icon": "🌡️",
+        "t": "طهي بطيء في الدهن، لا في الزيت الساخن",
+        "d": "تحت درجة الغليان، لساعات، لقوام طري"
+      },
+      {
+        "icon": "🦆",
+        "t": "دهن البط المذاب",
+        "d": "تُطهى الأفخاذ مغمورة بالكامل في دهنها الخاص"
+      },
+      {
+        "icon": "🔥",
+        "t": "جلد مقرمش في النهاية",
+        "d": "يُقلى بشكل منفصل، قبل التقديم مباشرة"
+      }
+    ],
+    "zh": [
+      {
+        "icon": "🧂",
+        "t": "隔夜腌盐",
+        "d": "烹饪前排出水分并浓缩风味"
+      },
+      {
+        "icon": "🌡️",
+        "t": "用油脂慢煮，而非热油炸",
+        "d": "低于沸点，数小时慢煮，成就细嫩质地"
+      },
+      {
+        "icon": "🦆",
+        "t": "自身鸭油",
+        "d": "鸭腿完全浸没在自身的油脂中烹煮"
+      },
+      {
+        "icon": "🔥",
+        "t": "最后煎出脆皮",
+        "d": "上桌前单独煎制"
+      }
+    ],
+    "ja": [
+      {
+        "icon": "🧂",
+        "t": "一晩塩漬け",
+        "d": "調理前に水分を引き出し旨味を凝縮する"
+      },
+      {
+        "icon": "🌡️",
+        "t": "熱い油ではなく脂でじっくり煮る",
+        "d": "沸騰以下の温度で何時間も、柔らかい食感のために"
+      },
+      {
+        "icon": "🦆",
+        "t": "自家製の鴨脂",
+        "d": "もも肉は自身の脂に完全に浸かった状態で調理する"
+      },
+      {
+        "icon": "🔥",
+        "t": "最後にパリッと焼いた皮",
+        "d": "提供直前に別途焼き上げる"
+      }
+    ],
+    "tr": [
+      {
+        "icon": "🧂",
+        "t": "Bir gece tuzlama",
+        "d": "Pişirmeden önce nemi çeker ve lezzeti yoğunlaştırır"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Sıcak yağda değil, yağda yavaş pişirme",
+        "d": "Kaynamanın altında, saatlerce, yumuşak doku için"
+      },
+      {
+        "icon": "🦆",
+        "t": "Kendi ördek yağı",
+        "d": "But kısımları kendi yağlarına tamamen batmış halde pişer"
+      },
+      {
+        "icon": "🔥",
+        "t": "Sonunda çıtır deri",
+        "d": "Servisten hemen önce ayrı kızartılır"
+      }
+    ],
+    "it": [
+      {
+        "icon": "🧂",
+        "t": "Salatura per una notte",
+        "d": "Estrae l'umidità e concentra il sapore prima della cottura"
+      },
+      {
+        "icon": "🌡️",
+        "t": "Cottura lenta nel grasso, non in olio caldo",
+        "d": "Sotto il punto di bollore, per ore, per una consistenza tenera"
+      },
+      {
+        "icon": "🦆",
+        "t": "Grasso d'anatra proprio",
+        "d": "Le cosce cuociono completamente immerse nel loro stesso grasso"
+      },
+      {
+        "icon": "🔥",
+        "t": "Pelle croccante alla fine",
+        "d": "Rosolata separatamente, appena prima di servire"
+      }
+    ],
+    "ko": [
+      {
+        "icon": "🧂",
+        "t": "하룻밤 소금 절임",
+        "d": "조리 전 수분을 빼고 맛을 응축시킨다"
+      },
+      {
+        "icon": "🌡️",
+        "t": "뜨거운 기름이 아닌 지방에 저온 조리",
+        "d": "끓는점 아래에서 몇 시간 동안, 부드러운 식감을 위해"
+      },
+      {
+        "icon": "🦆",
+        "t": "녹여낸 오리 기름",
+        "d": "다리살이 자신의 기름에 완전히 잠긴 채로 익는다"
+      },
+      {
+        "icon": "🔥",
+        "t": "마지막에 바삭한 껍질",
+        "d": "서빙 직전에 따로 구워낸다"
+      }
+    ],
+    "hi": [
+      {
+        "icon": "🧂",
+        "t": "रातभर नमक लगाना",
+        "d": "पकाने से पहले नमी निकालता है और स्वाद गाढ़ा करता है"
+      },
+      {
+        "icon": "🌡️",
+        "t": "गरम तेल में नहीं, चर्बी में धीमी आंच पर पकाना",
+        "d": "उबाल से नीचे, घंटों तक, नरम बनावट के लिए"
+      },
+      {
+        "icon": "🦆",
+        "t": "अपनी ही बत्तख की चर्बी",
+        "d": "टांगें अपनी ही चर्बी में पूरी तरह डूबी हुई पकती हैं"
+      },
+      {
+        "icon": "🔥",
+        "t": "अंत में कुरकुरी खाल",
+        "d": "परोसने से ठीक पहले अलग से तली जाती है"
+      }
+    ]
+  },
+  "ingredients": {
+    "ro": [
+      "4 pulpe de rață (pulpă superioară + inferioară)",
+      "40g sare grunjoasă",
+      "4 căței de usturoi zdrobiți",
+      "2 frunze de dafin",
+      "4 crenguțe de cimbru",
+      "1 linguriță boabe de piper negru zdrobite",
+      "800ml-1kg grăsime de rață (suficient să acopere pulpele)"
+    ],
+    "en": [
+      "4 duck legs (thigh + drumstick)",
+      "40g coarse salt",
+      "4 garlic cloves, crushed",
+      "2 bay leaves",
+      "4 sprigs thyme",
+      "1 tsp crushed black peppercorns",
+      "800ml-1kg duck fat (enough to fully submerge the legs)"
+    ],
+    "es": [
+      "4 muslos de pato (contramuslo + muslo)",
+      "40g de sal gruesa",
+      "4 dientes de ajo, machacados",
+      "2 hojas de laurel",
+      "4 ramitas de tomillo",
+      "1 cdta de granos de pimienta negra machacados",
+      "800ml-1kg de grasa de pato (suficiente para sumergir los muslos)"
+    ],
+    "fr": [
+      "4 cuisses de canard (haut de cuisse + pilon)",
+      "40g de gros sel",
+      "4 gousses d'ail, écrasées",
+      "2 feuilles de laurier",
+      "4 brins de thym",
+      "1 c. à café de baies de poivre noir concassées",
+      "800ml-1kg de graisse de canard (assez pour immerger complètement les cuisses)"
+    ],
+    "de": [
+      "4 Entenkeulen (Ober- und Unterschenkel)",
+      "40g grobes Salz",
+      "4 Knoblauchzehen, zerdrückt",
+      "2 Lorbeerblätter",
+      "4 Zweige Thymian",
+      "1 TL zerstoßene schwarze Pfefferkörner",
+      "800ml-1kg Entenfett (genug, um die Keulen vollständig zu bedecken)"
+    ],
+    "pt": [
+      "4 coxas de pato (coxa + perna)",
+      "40g de sal grosso",
+      "4 dentes de alho, esmagados",
+      "2 folhas de louro",
+      "4 raminhos de tomilho",
+      "1 col. chá de grãos de pimenta preta esmagados",
+      "800ml-1kg de gordura de pato (suficiente para submergir as coxas)"
+    ],
+    "ru": [
+      "4 утиные ножки (бедро + голень)",
+      "40г крупной соли",
+      "4 зубчика чеснока, раздавленных",
+      "2 лавровых листа",
+      "4 веточки тимьяна",
+      "1 ч.л. раздробленного чёрного перца горошком",
+      "800мл-1кг утиного жира (достаточно, чтобы полностью покрыть ножки)"
+    ],
+    "ar": [
+      "4 أفخاذ بط (فخذ علوي وسفلي)",
+      "40غ ملح خشن",
+      "4 فصوص ثوم مهروسة",
+      "ورقتا غار",
+      "4 أغصان زعتر",
+      "ملعقة صغيرة حبوب فلفل أسود مجروشة",
+      "800مل-1كغ دهن بط (بما يكفي لتغطية الأفخاذ بالكامل)"
+    ],
+    "zh": [
+      "4只鸭腿（大腿加小腿）",
+      "40克粗盐",
+      "4瓣大蒜，压碎",
+      "2片月桂叶",
+      "4根百里香枝",
+      "1茶匙压碎的黑胡椒粒",
+      "800毫升至1公斤鸭油（足以完全淹没鸭腿）"
+    ],
+    "ja": [
+      "鴨もも肉4本（もも+すね）",
+      "粗塩40g",
+      "にんにく4片（つぶす）",
+      "ローリエ2枚",
+      "タイム4本",
+      "黒粒こしょう（つぶす）小さじ1",
+      "鴨脂800ml〜1kg（もも肉が完全に浸る量）"
+    ],
+    "tr": [
+      "4 ördek but (üst but + baget)",
+      "40g kaba tuz",
+      "4 diş sarımsak, ezilmiş",
+      "2 defne yaprağı",
+      "4 dal kekik",
+      "1 tatlı kaşığı ezilmiş kara biber tanesi",
+      "800ml-1kg ördek yağı (butları tamamen kaplayacak kadar)"
+    ],
+    "it": [
+      "4 cosce d'anatra (coscia + fuso)",
+      "40g di sale grosso",
+      "4 spicchi d'aglio, schiacciati",
+      "2 foglie di alloro",
+      "4 rametti di timo",
+      "1 cucchiaino di pepe nero in grani schiacciati",
+      "800ml-1kg di grasso d'anatra (abbastanza da coprire completamente le cosce)"
+    ],
+    "ko": [
+      "오리 다리 4개 (허벅지+정강이 부위)",
+      "굵은 소금 40g",
+      "으깬 마늘 4쪽",
+      "월계수잎 2장",
+      "타임 4줄기",
+      "으깬 검은 통후추 1작은술",
+      "오리 기름 800ml-1kg (다리가 완전히 잠길 만큼)"
+    ],
+    "hi": [
+      "4 बत्तख की टांगें (जांघ + पिंडली)",
+      "40ग्राम मोटा नमक",
+      "4 लहसुन की कलियां, कुचली हुई",
+      "2 तेजपत्ते",
+      "4 टहनी थाइम",
+      "1 छोटा चम्मच कुचली हुई काली मिर्च",
+      "800मिली-1किग्रा बत्तख की चर्बी (टांगों को पूरी तरह डुबोने के लिए पर्याप्त)"
+    ]
+  },
+  "howIsMade": {
+    "ro": "SĂRĂ PULPELE: freacă fiecare pulpă cu sare, usturoi zdrobit, dafin mărunțit și piper zdrobit. Așază într-un vas, acoperă și lasă la frigider 12-24 ore. CLĂTEȘTE ȘI USUCĂ: scoate pulpele din frigider, șterge sarea și condimentele cu prosop de hârtie, apoi tamponează bine ca să fie uscate la suprafață. TOPEȘTE GRĂSIMEA: încălzește grăsimea de rață într-o cratiță largă la foc mic, până se topește complet și devine limpede. SCUFUNDĂ PULPELE: așază pulpele într-un vas potrivit pentru cuptor și toarnă grăsimea topită deasupra, până sunt complet acoperite. Adaugă cimbru proaspăt. GĂTEȘTE LENT: pune vasul în cuptor la 130°C, fără capac, timp de 2,5-3 ore, până carnea se desprinde ușor de os, dar rămâne intactă. RĂCEȘTE ȘI PĂSTREAZĂ: lasă pulpele să se răcească în grăsime, apoi păstrează-le acoperite complet de grăsime la frigider — se pot ține săptămâni așa. PRĂJEȘTE PIELEA: scoate pulpele din grăsime, șterge excesul și prăjește cu pielea în jos într-o tigaie încinsă, 5-7 minute, până devine crocantă și aurie. SERVEȘTE: transferă pe farfurie cu pielea în sus și servește imediat, cât pielea e încă crocantă.",
+    "en": "SALT THE LEGS: rub each leg with salt, crushed garlic, crumbled bay leaf and crushed pepper. Place in a dish, cover and refrigerate for 12-24 hours. RINSE AND DRY: remove the legs from the fridge, wipe off the salt and seasonings with paper towel, then pat well to dry the surface. MELT THE FAT: heat the duck fat in a wide pot over low heat until fully melted and clear. SUBMERGE THE LEGS: place the legs in an ovenproof dish and pour the melted fat over them until fully covered. Add fresh thyme. COOK SLOWLY: put the dish in the oven at 130°C, uncovered, for 2.5-3 hours, until the meat pulls easily from the bone but stays intact. COOL AND STORE: let the legs cool in the fat, then keep them fully submerged in the fat in the fridge — they'll keep for weeks this way. CRISP THE SKIN: remove the legs from the fat, wipe off the excess and fry skin-side down in a hot pan for 5-7 minutes, until crisp and golden. SERVE: transfer to a plate skin-side up and serve immediately, while the skin is still crisp.",
+    "es": "SALA LOS MUSLOS: frota cada muslo con sal, ajo machacado, laurel desmenuzado y pimienta machacada. Coloca en una fuente, tapa y refrigera 12-24 horas. ENJUAGA Y SECA: saca los muslos de la nevera, retira la sal y las especias con papel de cocina, luego seca bien la superficie. DERRITE LA GRASA: calienta la grasa de pato en una olla ancha a fuego bajo hasta que esté completamente derretida y clara. SUMERGE LOS MUSLOS: coloca los muslos en una fuente apta para horno y vierte la grasa derretida sobre ellos hasta cubrirlos por completo. Añade tomillo fresco. COCINA LENTAMENTE: pon la fuente en el horno a 130°C, sin tapar, durante 2,5-3 horas, hasta que la carne se separe fácilmente del hueso pero siga entera. ENFRÍA Y CONSERVA: deja que los muslos se enfríen en la grasa, luego guárdalos totalmente cubiertos de grasa en la nevera — se conservan semanas así. DORA LA PIEL: saca los muslos de la grasa, retira el exceso y fríe con la piel hacia abajo en una sartén caliente 5-7 minutos, hasta que quede crujiente y dorada. SIRVE: pasa a un plato con la piel hacia arriba y sirve de inmediato, mientras la piel sigue crujiente.",
+    "fr": "SALE LES CUISSES: frotte chaque cuisse avec du sel, de l'ail écrasé, du laurier émietté et du poivre concassé. Place dans un plat, couvre et réfrigère 12-24 heures. RINCE ET SÈCHE: sors les cuisses du réfrigérateur, retire le sel et les épices avec du papier absorbant, puis tamponne bien pour sécher la surface. FAIS FONDRE LA GRAISSE: chauffe la graisse de canard dans une marmite large à feu doux jusqu'à ce qu'elle soit entièrement fondue et claire. IMMERGE LES CUISSES: place les cuisses dans un plat allant au four et verse la graisse fondue par-dessus jusqu'à ce qu'elles soient entièrement recouvertes. Ajoute du thym frais. CUIS LENTEMENT: mets le plat au four à 130°C, sans couvercle, pendant 2h30-3 heures, jusqu'à ce que la viande se détache facilement de l'os tout en restant entière. REFROIDIS ET CONSERVE: laisse les cuisses refroidir dans la graisse, puis conserve-les entièrement immergées dans la graisse au réfrigérateur — elles se gardent des semaines ainsi. FAIS CROUSTILLER LA PEAU: sors les cuisses de la graisse, essuie l'excédent et fais dorer côté peau dans une poêle chaude pendant 5-7 minutes, jusqu'à ce qu'elle soit croustillante et dorée. SERS: transfère dans une assiette côté peau vers le haut et sers aussitôt, pendant que la peau est encore croustillante.",
+    "de": "KEULEN SALZEN: jede Keule mit Salz, zerdrücktem Knoblauch, zerbröckeltem Lorbeer und zerstoßenem Pfeffer einreiben. In eine Schale legen, abdecken und 12-24 Stunden kühlstellen. ABSPÜLEN UND TROCKNEN: die Keulen aus dem Kühlschrank nehmen, Salz und Gewürze mit Küchenpapier abwischen, dann die Oberfläche gut trocken tupfen. FETT SCHMELZEN: das Entenfett in einem breiten Topf bei niedriger Hitze schmelzen, bis es vollständig flüssig und klar ist. KEULEN EINTAUCHEN: die Keulen in eine ofenfeste Form legen und das geschmolzene Fett darübergießen, bis sie vollständig bedeckt sind. Frischen Thymian zugeben. LANGSAM GAREN: die Form ohne Deckel bei 130°C für 2,5-3 Stunden in den Ofen geben, bis sich das Fleisch leicht vom Knochen löst, aber intakt bleibt. ABKÜHLEN UND AUFBEWAHREN: die Keulen im Fett abkühlen lassen, dann vollständig im Fett bedeckt im Kühlschrank aufbewahren — so halten sie sich wochenlang. HAUT KNUSPRIG BRATEN: die Keulen aus dem Fett nehmen, Überschuss abwischen und mit der Hautseite nach unten in einer heißen Pfanne 5-7 Minuten braten, bis sie knusprig und goldbraun ist. SERVIEREN: mit der Hautseite nach oben auf einen Teller geben und sofort servieren, solange die Haut noch knusprig ist.",
+    "pt": "TEMPERA AS COXAS: esfrega cada coxa com sal, alho esmagado, louro esfarelado e pimenta esmagada. Coloca num recipiente, tapa e leva ao frio 12-24 horas. ENXAGUA E SECA: retira as coxas do frigorífico, limpa o sal e os temperos com papel de cozinha, depois seca bem a superfície. DERRETE A GORDURA: aquece a gordura de pato numa panela larga em lume baixo até derreter completamente e ficar límpida. SUBMERGE AS COXAS: coloca as coxas num recipiente próprio para forno e verte a gordura derretida por cima até ficarem totalmente cobertas. Adiciona tomilho fresco. COZINHA LENTAMENTE: leva o recipiente ao forno a 130°C, sem tapar, durante 2,5-3 horas, até a carne se soltar facilmente do osso mas continuar intacta. ARREFECE E CONSERVA: deixa as coxas arrefecerem na gordura, depois guarda-as totalmente submersas na gordura no frigorífico — conservam-se semanas assim. TORNA A PELE ESTALADIÇA: retira as coxas da gordura, limpa o excesso e frita com a pele para baixo numa frigideira quente durante 5-7 minutos, até ficar estaladiça e dourada. SERVE: transfere para um prato com a pele para cima e serve de imediato, enquanto a pele ainda está estaladiça.",
+    "ru": "ЗАСОЛИ НОЖКИ: натри каждую ножку солью, раздавленным чесноком, раскрошенным лавровым листом и раздробленным перцем. Уложи в форму, накрой и убери в холодильник на 12-24 часа. ОПОЛОСНИ И ОБСУШИ: достань ножки из холодильника, сотри соль и специи бумажным полотенцем, затем хорошо промокни поверхность досуха. РАСТОПИ ЖИР: разогрей утиный жир в широкой кастрюле на слабом огне до полного растворения и прозрачности. ПОГРУЗИ НОЖКИ: уложи ножки в форму для запекания и залей растопленным жиром так, чтобы они были полностью покрыты. Добавь свежий тимьян. ГОТОВЬ МЕДЛЕННО: поставь форму в духовку при 130°C без крышки на 2,5-3 часа, пока мясо не начнёт легко отделяться от кости, оставаясь при этом целым. ОХЛАДИ И ХРАНИ: дай ножкам остыть в жире, затем храни их полностью погружёнными в жир в холодильнике — так они хранятся неделями. ПОДРУМЯНЬ КОЖУ: достань ножки из жира, сотри излишки и обжарь кожей вниз на горячей сковороде 5-7 минут, пока кожа не станет хрустящей и золотистой. ПОДАЙ: переложи на тарелку кожей вверх и подавай сразу, пока кожа ещё хрустящая.",
+    "ar": "مَلِّح الأفخاذ: افرك كل فخذ بالملح والثوم المهروس وورق الغار المفتت والفلفل المجروش. ضعها في طبق، غطِّها وبرّدها 12-24 ساعة. اشطف وجفف: أخرج الأفخاذ من الثلاجة، امسح الملح والتوابل بمنشفة ورقية، ثم جفف السطح جيدًا. أذب الدهن: سخّن دهن البط في قدر واسع على نار هادئة حتى يذوب تمامًا ويصبح صافيًا. اغمر الأفخاذ: ضع الأفخاذ في طبق يتحمل الفرن واسكب الدهن المذاب فوقها حتى تُغطى بالكامل. أضف الزعتر الطازج. اطبخ ببطء: ضع الطبق في الفرن على 130 درجة مئوية، دون غطاء، لمدة 2.5-3 ساعات، حتى ينفصل اللحم بسهولة عن العظم مع بقائه متماسكًا. برّد واحفظ: اترك الأفخاذ تبرد في الدهن، ثم احفظها مغمورة بالكامل في الدهن في الثلاجة — تدوم أسابيع بهذه الطريقة. قرمش الجلد: أخرج الأفخاذ من الدهن، امسح الزائد واقلِ بالجلد لأسفل في مقلاة ساخنة 5-7 دقائق حتى يصبح مقرمشًا وذهبيًا. قدّم: انقل إلى طبق بالجلد لأعلى وقدّم فورًا، بينما الجلد لا يزال مقرمشًا.",
+    "zh": "腌制鸭腿：用盐、压碎的大蒜、捏碎的月桂叶和压碎的胡椒揉搓每只鸭腿。放入容器中，盖好后冷藏12-24小时。 冲洗擦干：从冰箱取出鸭腿，用厨房纸擦去盐分和调料，再仔细擦干表面。 融化油脂：在宽口锅中用小火加热鸭油，直到完全融化且清澈。 浸没鸭腿：将鸭腿放入耐烤容器中，倒入融化的油脂直至完全没过。加入新鲜百里香。 慢煮：将容器不加盖放入130°C的烤箱中煮2.5-3小时，直到肉能轻松脱骨但仍保持完整。 冷却保存：让鸭腿在油脂中冷却，然后完全浸没在油脂中冷藏保存——这样可以保存数周。 煎脆鸭皮：从油脂中取出鸭腿，擦去多余油脂，鸭皮朝下放入热锅煎5-7分钟，直至酥脆金黄。 装盘享用：鸭皮朝上装盘，趁鸭皮仍酥脆时立即享用。",
+    "ja": "もも肉に塩をする：もも肉一本ずつに塩、つぶしたにんにく、砕いたローリエ、つぶした黒こしょうをすり込む。容器に入れて覆い、冷蔵庫で12〜24時間置く。 洗って水気を拭く：もも肉を冷蔵庫から出し、塩と香辛料をキッチンペーパーで拭き取り、表面をよく乾かす。 脂を溶かす：広めの鍋で鴨脂を弱火にかけ、完全に溶けて透明になるまで加熱する。 もも肉を浸す：もも肉を耐熱容器に入れ、完全に浸かるまで溶かした脂を注ぐ。フレッシュタイムを加える。 じっくり火を通す：容器を蓋をせずに130°Cのオーブンに入れ、2時間半〜3時間、肉が骨から簡単に外れるがまとまりを保つ程度まで加熱する。 冷まして保存する：もも肉を脂の中で冷まし、その後脂に完全に浸けたまま冷蔵保存する——この状態なら数週間もつ。 皮をパリッと焼く：もも肉を脂から取り出し余分な脂を拭き取り、皮を下にして熱したフライパンで5〜7分、パリッと黄金色になるまで焼く。 盛り付ける：皮を上にして皿に移し、皮がまだパリパリのうちにすぐに提供する。",
+    "tr": "BUTLARI TUZLAYIN: her butu tuz, ezilmiş sarımsak, ufalanmış defne yaprağı ve ezilmiş biberle ovun. Bir kaba yerleştirin, örtün ve 12-24 saat buzdolabında bekletin. DURULAYIN VE KURULAYIN: butları buzdolabından çıkarın, tuz ve baharatları kağıt havluyla silin, ardından yüzeyi iyice kurulayın. YAĞI ERİTİN: ördek yağını geniş bir tencerede kısık ateşte tamamen erimiş ve berrak olana kadar ısıtın. BUTLARI BATIRIN: butları fırına dayanıklı bir kaba yerleştirin ve tamamen kaplanana kadar üzerlerine erimiş yağı dökün. Taze kekik ekleyin. YAVAŞÇA PİŞİRİN: kabı kapaksız olarak 130°C fırında 2,5-3 saat, et kemikten kolayca ayrılıp bütünlüğünü koruyana kadar pişirin. SOĞUTUN VE SAKLAYIN: butların yağın içinde soğumasını bekleyin, ardından yağa tamamen batmış halde buzdolabında saklayın — böylece haftalarca dayanır. DERİYİ ÇITIRLATIN: butları yağdan çıkarın, fazlasını silin ve derisi altta olacak şekilde sıcak bir tavada 5-7 dakika, çıtır ve altın rengi olana kadar kızartın. SERVİS YAPIN: derisi üstte olacak şekilde tabağa alın ve deri hâlâ çıtırken hemen servis yapın.",
+    "it": "SALA LE COSCE: strofina ogni coscia con sale, aglio schiacciato, alloro sbriciolato e pepe schiacciato. Metti in un contenitore, copri e metti in frigo per 12-24 ore. SCIACQUA E ASCIUGA: togli le cosce dal frigo, elimina sale e spezie con carta assorbente, poi asciuga bene la superficie. SCIOGLI IL GRASSO: scalda il grasso d'anatra in una pentola larga a fuoco basso finché è completamente sciolto e limpido. IMMERGI LE COSCE: metti le cosce in un contenitore da forno e versa il grasso sciolto sopra finché sono completamente coperte. Aggiungi timo fresco. CUOCI LENTAMENTE: metti il contenitore in forno a 130°C, senza coperchio, per 2,5-3 ore, finché la carne si stacca facilmente dall'osso ma resta intatta. RAFFREDDA E CONSERVA: lascia raffreddare le cosce nel grasso, poi conservale completamente immerse nel grasso in frigo — così si conservano per settimane. RENDI CROCCANTE LA PELLE: togli le cosce dal grasso, elimina l'eccesso e rosola con la pelle rivolta verso il basso in una padella calda per 5-7 minuti, finché croccante e dorata. SERVI: trasferisci su un piatto con la pelle verso l'alto e servi subito, mentre la pelle è ancora croccante.",
+    "ko": "다리에 소금 뿌리기: 각 다리에 소금, 으깬 마늘, 부순 월계수잎, 으깬 후추를 문질러 바른다. 용기에 담아 덮고 냉장고에서 12-24시간 재운다. 헹구고 말리기: 다리를 냉장고에서 꺼내 키친타월로 소금과 양념을 닦아내고, 표면을 잘 두드려 말린다. 기름 녹이기: 넓은 냄비에 오리 기름을 약불로 완전히 녹아 투명해질 때까지 데운다. 다리 담그기: 다리를 오븐용 용기에 넣고 완전히 잠기도록 녹인 기름을 붓는다. 신선한 타임을 넣는다. 천천히 익히기: 용기를 뚜껑 없이 130°C 오븐에 넣고 2.5-3시간, 고기가 뼈에서 쉽게 떨어지되 형태는 유지될 때까지 익힌다. 식혀서 보관하기: 다리를 기름 속에서 식힌 뒤, 기름에 완전히 잠긴 채로 냉장 보관한다 — 이렇게 하면 몇 주간 보관할 수 있다. 껍질 바삭하게 굽기: 다리를 기름에서 꺼내 여분을 닦아내고, 껍질 면을 아래로 하여 달군 팬에서 5-7분간 바삭하고 황금빛이 날 때까지 굽는다. 서빙하기: 껍질이 위로 오도록 접시에 옮겨 담고, 껍질이 아직 바삭할 때 바로 서빙한다.",
+    "hi": "टांगों को नमक लगाएं: हर टांग को नमक, कुचला लहसुन, टूटा हुआ तेजपत्ता और कुचली काली मिर्च से रगड़ें। एक बर्तन में रखें, ढकें और 12-24 घंटे फ्रिज में रखें। धोएं और सुखाएं: टांगों को फ्रिज से निकालें, नमक और मसालों को कागज़ के तौलिये से पोंछें, फिर सतह को अच्छी तरह सुखाएं। चर्बी पिघलाएं: बत्तख की चर्बी को एक चौड़े बर्तन में धीमी आंच पर तब तक गरम करें जब तक पूरी तरह पिघल कर साफ न हो जाए। टांगों को डुबोएं: टांगों को ओवनप्रूफ बर्तन में रखें और पिघली चर्बी उनके ऊपर पूरी तरह डूबने तक डालें। ताज़ा थाइम डालें। धीमी आंच पर पकाएं: बर्तन को बिना ढके 130°C पर ओवन में 2.5-3 घंटे तक पकाएं, जब तक मांस हड्डी से आसानी से अलग न होने लगे लेकिन साबुत बना रहे। ठंडा करें और रखें: टांगों को चर्बी में ठंडा होने दें, फिर उन्हें चर्बी में पूरी तरह डूबा हुआ फ्रिज में रखें — इस तरह ये हफ्तों तक टिकती हैं। खाल कुरकुरी करें: टांगों को चर्बी से निकालें, अतिरिक्त पोंछें और गरम पैन में खाल नीचे की ओर रखकर 5-7 मिनट तक कुरकुरी और सुनहरी होने तक तलें। परोसें: खाल ऊपर की ओर रखते हुए थाली में रखें और खाल के कुरकुरी रहते ही तुरंत परोसें।"
+  },
+  "originText": {
+    "ro": "Confit înseamnă literalmente 'conservat', iar tehnica a apărut cu mult înaintea frigiderelor, în sud-vestul Franței, ca metodă de a păstra carnea de rață și gâscă pentru lunile de iarnă. Sarea usucă suprafața cărnii, iar gătirea și păstrarea în propria grăsime creează un mediu în care bacteriile nu se pot dezvolta — carnea rezistă săptămâni întregi la frigider, complet scufundată.\n\nCe deosebește un confit reușit de unul ratat e temperatura de gătire: grăsimea trebuie să rămână constant sub punctul de fierbere, altfel carnea se usucă și devine fibroasă în loc să rămână fragedă. Pielea crocantă e adăugată abia la servire — dacă ar fi prăjită dinainte și păstrată așa, ar înmuia din nou în timpul depozitării în grăsime.",
+    "en": "Confit literally means 'preserved,' and the technique predates refrigeration by centuries, originating in southwestern France as a way to keep duck and goose meat through the winter months. Salt draws moisture out of the meat's surface, and cooking and storing it in its own fat creates an environment where bacteria can't grow — the meat keeps for weeks in the fridge, fully submerged.\n\nWhat separates a successful confit from a failed one is cooking temperature: the fat must stay consistently below a simmer, otherwise the meat dries out and turns stringy instead of staying tender. The crisp skin is added only at serving time — if it were fried beforehand and stored that way, it would soften again during storage in the fat.",
+    "es": "Confit significa literalmente 'conservado', y la técnica es anterior a la refrigeración por siglos, originada en el suroeste de Francia como forma de conservar la carne de pato y ganso durante los meses de invierno. La sal extrae la humedad de la superficie de la carne, y cocinarla y guardarla en su propia grasa crea un ambiente donde las bacterias no pueden crecer — la carne se conserva semanas en la nevera, totalmente sumergida.\n\nLo que separa un confit logrado de uno fallido es la temperatura de cocción: la grasa debe mantenerse constantemente por debajo del hervor, de lo contrario la carne se seca y queda fibrosa en lugar de tierna. La piel crujiente se añade solo al momento de servir — si se friera antes y se guardara así, volvería a ablandarse durante el almacenamiento en la grasa.",
+    "fr": "Confit signifie littéralement « conservé », et la technique précède la réfrigération de plusieurs siècles, originaire du sud-ouest de la France comme moyen de conserver la viande de canard et d'oie pendant les mois d'hiver. Le sel extrait l'humidité de la surface de la viande, et la cuisson et la conservation dans sa propre graisse créent un environnement où les bactéries ne peuvent pas se développer — la viande se conserve des semaines au réfrigérateur, entièrement immergée.\n\nCe qui distingue un confit réussi d'un raté, c'est la température de cuisson : la graisse doit rester constamment en dessous du frémissement, sinon la viande se dessèche et devient filandreuse au lieu de rester fondante. La peau croustillante n'est ajoutée qu'au moment de servir — si elle était dorée à l'avance et conservée ainsi, elle ramollirait de nouveau pendant le stockage dans la graisse.",
+    "de": "Confit bedeutet wörtlich 'konserviert', und die Technik geht der Kühlung um Jahrhunderte voraus, ursprünglich aus dem Südwesten Frankreichs als Methode, Enten- und Gänsefleisch über die Wintermonate haltbar zu machen. Salz entzieht der Fleischoberfläche Feuchtigkeit, und das Garen und Aufbewahren im eigenen Fett schafft eine Umgebung, in der sich Bakterien nicht vermehren können — das Fleisch hält sich wochenlang im Kühlschrank, vollständig untergetaucht.\n\nWas ein gelungenes Confit von einem misslungenen unterscheidet, ist die Gartemperatur: Das Fett muss durchgehend unter dem Siedepunkt bleiben, sonst trocknet das Fleisch aus und wird zäh, statt zart zu bleiben. Die knusprige Haut wird erst zum Servieren zubereitet — würde sie vorher angebraten und so aufbewahrt, würde sie während der Lagerung im Fett wieder weich werden.",
+    "pt": "Confit significa literalmente 'conservado', e a técnica é anterior à refrigeração em séculos, originária do sudoeste de França como forma de conservar a carne de pato e de ganso durante os meses de inverno. O sal extrai a humidade da superfície da carne, e cozinhá-la e guardá-la na sua própria gordura cria um ambiente onde as bactérias não conseguem crescer — a carne conserva-se semanas no frigorífico, totalmente submersa.\n\nO que separa um confit bem-sucedido de um falhado é a temperatura de cozedura: a gordura tem de se manter sempre abaixo do ponto de fervura, caso contrário a carne seca e fica fibrosa em vez de tenra. A pele estaladiça só é adicionada na altura de servir — se fosse frita antes e guardada assim, amoleceria de novo durante o armazenamento na gordura.",
+    "ru": "Конфи буквально означает 'консервированный', и эта техника появилась за столетия до холодильников, зародившись на юго-западе Франции как способ сохранить мясо утки и гуся на зимние месяцы. Соль вытягивает влагу с поверхности мяса, а приготовление и хранение в собственном жире создают среду, где бактерии не могут развиваться — мясо хранится неделями в холодильнике, полностью погружённое в жир.\n\nЧто отличает удавшееся конфи от неудавшегося — это температура готовки: жир должен постоянно оставаться ниже точки кипения, иначе мясо пересохнет и станет волокнистым вместо нежного. Хрустящая кожа добавляется только перед подачей — если бы её обжарили заранее и хранили в таком виде, она снова размягчилась бы при хранении в жире.",
+    "ar": "كونفي تعني حرفيًا 'محفوظ'، وتسبق هذه التقنية التبريد بقرون، نشأت في جنوب غرب فرنسا كوسيلة لحفظ لحم البط والإوز خلال أشهر الشتاء. يسحب الملح الرطوبة من سطح اللحم، ويخلق طهيه وحفظه في دهنه الخاص بيئة لا يمكن للبكتيريا أن تنمو فيها — يبقى اللحم لأسابيع في الثلاجة، مغمورًا بالكامل.\n\nما يفصل بين كونفي ناجح وآخر فاشل هو درجة حرارة الطهي: يجب أن يبقى الدهن دائمًا تحت درجة الغليان، وإلا جف اللحم وأصبح ليفيًا بدلًا من أن يبقى طريًا. تُضاف القشرة المقرمشة فقط عند التقديم — فلو قُليت مسبقًا وحُفظت بهذه الطريقة، لَلانت مجددًا أثناء التخزين في الدهن.",
+    "zh": "Confit字面意思是「腌渍保存」，这项技法早在冰箱出现前几个世纪就已存在，起源于法国西南部，是一种在冬季保存鸭肉和鹅肉的方法。盐分能把肉表面的水分吸出，而用肉自身的油脂来烹煮并保存，则创造出细菌无法滋生的环境——完全浸没在油脂中的肉可以在冰箱里保存数周。\n\n区分成功与失败油封鸭腿的关键在于烹煮温度：油脂必须始终保持在沸点以下，否则肉会变干变柴，而不是保持细嫩。酥脆的鸭皮只在上桌前才处理——如果提前煎好再这样保存，在油脂中储存时又会重新变软。",
+    "ja": "コンフィは文字どおり「保存された」を意味し、この技法は冷蔵よりも何世紀も前に、フランス南西部で冬の間に鴨や鵞鳥の肉を保存する方法として生まれた。塩は肉の表面から水分を引き出し、自身の脂で調理して保存することで、細菌が繁殖できない環境をつくる——完全に脂に浸かった肉は冷蔵庫で数週間もつ。\n\n成功したコンフィと失敗したコンフィを分けるのは調理温度だ。脂は常に沸騰以下の温度を保たなければならず、そうでなければ肉が乾いて筋っぽくなり、柔らかいままではいられない。パリパリの皮は提供する直前にだけ加えられる——もし事前に焼いてそのまま保存すれば、脂の中で保管している間にまた柔らかくなってしまう。",
+    "tr": "Confit kelimenin tam anlamıyla 'korunmuş' demektir ve bu teknik soğutmadan yüzyıllar önce, kış aylarında ördek ve kaz etini saklamanın bir yolu olarak güneybatı Fransa'da ortaya çıkmıştır. Tuz, etin yüzeyinden nemi çeker; kendi yağında pişirilip saklanması, bakterilerin üreyemeyeceği bir ortam yaratır — et, tamamen yağa batmış halde buzdolabında haftalarca dayanır.\n\nBaşarılı bir confit'i başarısız olandan ayıran şey pişirme sıcaklığıdır: yağ sürekli olarak kaynamanın altında kalmalıdır, aksi halde et kurur ve yumuşak kalmak yerine lifli hale gelir. Çıtır deri sadece servis anında eklenir — önceden kızartılıp bu şekilde saklansaydı, yağda depolama sırasında tekrar yumuşardı.",
+    "it": "Confit significa letteralmente 'conservato', e la tecnica precede la refrigerazione di secoli, originaria del sud-ovest della Francia come modo per conservare la carne di anatra e oca durante i mesi invernali. Il sale estrae l'umidità dalla superficie della carne, e cuocerla e conservarla nel proprio grasso crea un ambiente in cui i batteri non possono crescere — la carne si conserva per settimane in frigo, completamente immersa.\n\nCiò che separa un confit riuscito da uno fallito è la temperatura di cottura: il grasso deve restare costantemente sotto il punto di bollore, altrimenti la carne si secca e diventa filamentosa invece di restare tenera. La pelle croccante viene aggiunta solo al momento di servire — se fosse rosolata in anticipo e conservata così, si ammorbidirebbe di nuovo durante la conservazione nel grasso.",
+    "ko": "콩피는 말 그대로 '보존된'을 뜻하며, 이 기법은 냉장 기술보다 수 세기 앞서 프랑스 남서부에서 겨울 동안 오리와 거위 고기를 보관하는 방법으로 생겨났다. 소금은 고기 표면의 수분을 빼내고, 이를 자신의 기름에 익혀 보관하면 세균이 자랄 수 없는 환경이 만들어진다 — 완전히 기름에 잠긴 고기는 냉장고에서 몇 주간 보관된다.\n\n성공한 콩피와 실패한 콩피를 가르는 것은 조리 온도다: 기름은 항상 끓는점 아래로 유지되어야 하며, 그렇지 않으면 고기가 마르고 부드러운 대신 질겨진다. 바삭한 껍질은 서빙 시점에만 만든다 — 미리 구워서 그렇게 보관하면 기름 속 보관 중에 다시 눅눅해지기 때문이다.",
+    "hi": "कॉन्फी का शाब्दिक अर्थ है 'सुरक्षित रखा हुआ', और यह तकनीक फ्रिज से सदियों पहले की है, जिसकी शुरुआत दक्षिण-पश्चिम फ्रांस में सर्दियों के महीनों में बत्तख और हंस के मांस को सुरक्षित रखने के तरीके के रूप में हुई। नमक मांस की सतह से नमी खींच लेता है, और इसे अपनी ही चर्बी में पकाना और रखना एक ऐसा वातावरण बनाता है जहां बैक्टीरिया नहीं पनप सकते — मांस पूरी तरह डूबा हुआ फ्रिज में हफ्तों तक टिकता है।\n\nएक सफल कॉन्फी और असफल कॉन्फी के बीच अंतर पकाने के तापमान का है: चर्बी हमेशा उबाल से नीचे रहनी चाहिए, वरना मांस सूख जाता है और नरम रहने के बजाय रेशेदार हो जाता है। कुरकुरी खाल केवल परोसने के समय ही डाली जाती है — अगर इसे पहले तला जाता और इसी तरह रखा जाता, तो चर्बी में भंडारण के दौरान यह फिर से नरम हो जाती।"
+  },
+  "meta": {
+    "time": 240,
+    "costRon": 42,
+    "tags": [
+      "family"
+    ],
+    "desc": {
+      "ro": "Pulpe de rață sărate și gătite lent în propria grăsime, cu pielea prăjită crocant la final.",
+      "en": "Salt-cured duck legs slow-cooked in their own fat, with the skin crisped at the end.",
+      "es": "Muslos de pato curados con sal y cocinados lentamente en su propia grasa, con la piel crujiente al final.",
+      "fr": "Cuisses de canard salées et cuites lentement dans leur propre graisse, avec la peau dorée et croustillante à la fin.",
+      "de": "Gesalzene Entenkeulen, langsam im eigenen Fett gegart, mit knusprig gebratener Haut zum Schluss.",
+      "pt": "Coxas de pato curadas em sal e cozinhadas lentamente na sua própria gordura, com a pele estaladiça no final.",
+      "ru": "Утиные ножки, засоленные и медленно приготовленные в собственном жире, с хрустящей кожей в конце.",
+      "ar": "أفخاذ بط مملحة ومطهوة ببطء في دهنها الخاص، مع جلد مقرمش في النهاية.",
+      "zh": "腌盐鸭腿在自身油脂中慢煮，最后煎出酥脆鸭皮。",
+      "ja": "塩漬けした鴨もも肉を自身の脂でじっくり煮込み、最後に皮をパリパリに焼き上げる。",
+      "tr": "Kendi yağında yavaşça pişirilen tuzlanmış ördek butları, sonunda çıtır kızartılmış deriyle.",
+      "it": "Cosce d'anatra salate e cotte lentamente nel proprio grasso, con la pelle rosolata croccante alla fine.",
+      "ko": "소금에 절인 오리 다리를 자신의 기름에 천천히 익혀 마지막에 껍질을 바삭하게 구운 요리.",
+      "hi": "नमक में सुखाई गई बत्तख की टांगें अपनी ही चर्बी में धीमी आंच पर पकाई गईं, अंत में खाल कुरकुरी की गई।"
+    }
+  }
+}
