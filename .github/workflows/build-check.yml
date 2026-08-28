@@ -65,6 +65,7 @@ jobs:
             api/stripe-webhook.js \
             api/create-checkout-session.js \
             api/create-portal-session.js \
+            api/delete-my-data.js \
             api/_lib/requirePremium.js; do
             if [ -f "$file" ]; then
               node --check "$file" && echo "OK: $file" || { echo "SYNTAX ERROR: $file"; exit 1; }
