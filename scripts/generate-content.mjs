@@ -1168,7 +1168,7 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website'
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="/css/bi-subset.css" rel="stylesheet"/>
   <link rel="stylesheet" href="/css/style.min.css"/>
   <link rel="stylesheet" href="/css/content.css"/>
 </head>
@@ -1760,7 +1760,7 @@ ${PRICING_HREFLANGS_FULL}
 
   <!-- Bootstrap + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="/css/bi-subset.css" rel="stylesheet" />
 
   <!-- App styles -->
   <link rel="stylesheet" href="/css/style.min.css">
