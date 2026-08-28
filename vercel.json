@@ -24,6 +24,12 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.meal-planner.ro" }],
+      "destination": "https://meal-planner.ro/:path*",
+      "permanent": true
+    },
+    {
       "source": "/",
       "destination": "/en/",
       "permanent": true
