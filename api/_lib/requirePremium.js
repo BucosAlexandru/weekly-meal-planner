@@ -25,7 +25,12 @@ const supabase = createClient(
  * @returns {Promise<string|null>}
  */
 export async function requirePremium(req, res) {
-  const email = req.body?.email?.trim() || null;
+  // Lowercased so a subscriber who typed "John@Gmail.com" at checkout still
+  // matches when they later verify as "john@gmail.com" — email addresses are
+  // case-insensitive in practice and users don't remember what casing they
+  // used. Every write path (stripe-webhook.js) normalizes the same way, so
+  // stored rows and lookups always agree.
+  const email = req.body?.email?.trim().toLowerCase() || null;
   if (!email) {
     res.status(401).json({ error: 'Missing email. Premium access required.' });
     return null;
@@ -72,7 +77,7 @@ export async function requirePremium(req, res) {
  * @returns {Promise<boolean>}
  */
 export async function isPremiumEmail(email) {
-  const e = typeof email === 'string' ? email.trim() : '';
+  const e = typeof email === 'string' ? email.trim().toLowerCase() : '';
   if (!e) return false;
   try {
     const { data: rows, error } = await supabase

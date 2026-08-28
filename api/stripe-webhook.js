@@ -75,6 +75,11 @@ export default async function handler(req, res) {
             if (!c.deleted) email = c.email || null;
           } catch {}
         }
+        // Normalize once here so every row this handler writes/matches is
+        // lowercase — check-access.js and requirePremium.js lowercase their
+        // incoming lookups the same way, so a buyer who typed "John@Gmail.com"
+        // in Stripe's checkout still matches later as "john@gmail.com".
+        if (email) email = email.trim().toLowerCase();
 
         // Fetch the subscription right away to get current_period_end
         let expiresAt = null;
@@ -202,8 +207,9 @@ export default async function handler(req, res) {
           try {
             const c = await stripe.customers.retrieve(sub.customer);
             if (!c.deleted) {
+              const email = c.email ? c.email.trim().toLowerCase() : null;
               await supabase.from('tokens').upsert(
-                { email: c.email || null, stripe_customer_id: sub.customer, ...payload },
+                { email, stripe_customer_id: sub.customer, ...payload },
                 { onConflict: 'stripe_customer_id' }
               );
             }

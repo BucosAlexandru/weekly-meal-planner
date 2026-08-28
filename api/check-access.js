@@ -14,6 +14,10 @@ const supabase = createClient(
 
 export default async function handler(req, res) {
   let { email } = req.query;
+  // Case-insensitive: a user who checked out as "John@Gmail.com" but later
+  // types "john@gmail.com" (or vice versa) must still match. Every write
+  // path (stripe-webhook.js) lowercases too, so stored rows always agree.
+  if (typeof email === 'string') email = email.trim().toLowerCase() || undefined;
   const { session_id: sessionId } = req.query;
 
   // P1 (session_id propagation): right after Stripe redirects back, the buyer
@@ -27,7 +31,8 @@ export default async function handler(req, res) {
       const { default: Stripe } = await import('stripe');
       const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
       const session = await stripe.checkout.sessions.retrieve(String(sessionId));
-      email = session?.customer_details?.email || session?.customer_email || null;
+      const rawEmail = session?.customer_details?.email || session?.customer_email || null;
+      email = rawEmail ? rawEmail.trim().toLowerCase() : null;
     } catch (e) {
       console.warn('[check-access] session_id lookup failed:', e.message);
     }

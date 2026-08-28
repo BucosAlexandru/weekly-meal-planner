@@ -16,7 +16,10 @@ export default async function handler(req, res) {
     // `returnUrl` (legacy key used by app.js) from the client. Fallback to the
     // production homepage — never `/account` (no such route, would 404 on
     // Stripe Portal "Return to MEALPLANNER.RO" click).
-    const { customerId, email } = req.body || {};
+    const { customerId } = req.body || {};
+    // Lowercased so this matches whatever casing stripe-webhook.js stored
+    // (it normalizes the same way) regardless of how the user typed it here.
+    const email = (req.body?.email || '').trim().toLowerCase() || null;
     const clientReturn = req.body?.return_url || req.body?.returnUrl;
     const origin = req.headers.origin || 'https://meal-planner.ro';
     const safeReturnUrl = clientReturn || `${origin}/`;
@@ -24,14 +27,19 @@ export default async function handler(req, res) {
 
     // 1) Dacă n-ai primit customerId, caută-l în Supabase după email
     if (!cid && email) {
-      const { data } = await supabase
+      // Do NOT use .single() — a user can have multiple rows (e.g. a
+      // renewed subscription), which makes .single() throw PGRST116 and
+      // silently discard `data`, masking a real match and falling through
+      // to the (slower, extra-API-calls) Stripe lookup below for no reason.
+      const { data: rows } = await supabase
         .from('tokens')
-        .select('stripe_customer_id')
+        .select('stripe_customer_id, expires_at')
         .eq('email', email)
-        .single();
+        .order('expires_at', { ascending: false });
 
-      if (data?.stripe_customer_id) {
-        cid = data.stripe_customer_id;
+      const withCustomer = (rows || []).find(r => r.stripe_customer_id);
+      if (withCustomer) {
+        cid = withCustomer.stripe_customer_id;
       }
 
       // 2) Fallback: caută în Stripe după email și preferă customerii cu abonament activ
