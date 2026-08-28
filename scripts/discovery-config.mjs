@@ -211,12 +211,32 @@ export function selectByDishKind(catalog, kind, { exclude = [], max = 8 } = {}) 
     .slice(0, max);
 }
 
+// Multiplicative mixer for deterministic-but-varied tie-breaking. Same
+// technique as the same-cuisine `relWeight` mixer in generate-content.mjs
+// (line ~4022) — kept here as a near-duplicate rather than shared/imported
+// so this module stays a pure, dependency-free leaf. Math.imul keeps the
+// 32-bit multiplication exact; shifting by 7 mixes high/low bits so the
+// hash doesn't degenerate into ~sort-by-id.
+function bridgeWeight(currentId, candidateId) {
+  return Math.imul((candidateId + 1) ^ ((currentId + 1) << 7) ^ ((currentId + 1) >>> 3), 2654435761) >>> 0;
+}
+
 // Cross-cuisine bridge: items sharing tags with `currentItem` but from a
-// different origin. Ranked by overlap count desc, then id asc (stable).
+// different origin. Ranked by overlap count desc, tied broken by a
+// deterministic per-(current,candidate) hash — NOT ascending id. An
+// id-ascending tiebreak meant that any recipe sharing just one generic tag
+// (e.g. "family", "quick" — carried by a large fraction of the catalog)
+// always lost the tie to the same handful of lowest-id recipes: audited
+// pre-fix, Cheeseburger (id 7) and Spaghetti Carbonara (id 1) each showed
+// up as a "similar dish" on 167 of 274 recipes (61% of the whole site),
+// Tacos on 153, regardless of whether they had anything to do with the
+// current recipe. The hash spreads which candidate wins a tie across many
+// different current recipes while staying stable across rebuilds.
 export function selectByTagMix(catalog, currentItem, { exclude = [], max = 4 } = {}) {
   if (!currentItem || !Array.isArray(currentItem.tags) || currentItem.tags.length === 0) return [];
   const wantTags = new Set(currentItem.tags);
   const currentOrigin = originKeyEn(currentItem);
+  const currentId = currentItem.id || 0;
   const skip = new Set([currentItem.id, ...exclude]);
   const scored = [];
   for (const it of catalog) {
@@ -224,9 +244,9 @@ export function selectByTagMix(catalog, currentItem, { exclude = [], max = 4 } =
     if (originKeyEn(it) === currentOrigin) continue;
     let overlap = 0;
     for (const t of it.tags) if (wantTags.has(t)) overlap++;
-    if (overlap > 0) scored.push({ it, overlap });
+    if (overlap > 0) scored.push({ it, overlap, w: bridgeWeight(currentId, it.id || 0) });
   }
-  scored.sort((a, b) => b.overlap - a.overlap || a.it.id - b.it.id);
+  scored.sort((a, b) => b.overlap - a.overlap || a.w - b.w);
   return scored.slice(0, max).map(s => s.it);
 }
 
