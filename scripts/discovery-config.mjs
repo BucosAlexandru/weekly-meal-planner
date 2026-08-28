@@ -35,9 +35,28 @@ export const DISH_KIND = {
   pasta:   new Set(['pasta']),
   meat:    new Set(['meat']),
   veg:     new Set(['veg']),
-  seafood: new Set(['seafood']),
+  seafood: new Set(['seafood', 'fish']),
   asian:   new Set(['japanese', 'asian']),
+  dessert: new Set(['dessert']),
+  salad:   new Set(['salad']),
 };
+
+// Reverse lookup (raw tipType/pairingsType value → bucket key), built once
+// from DISH_KIND so the two never drift apart. `tipType` is meant to be a
+// dish-kind field, but several past batches wrote the cuisine name into it
+// instead (e.g. 'korean', 'italian', 'french', 'romanian') or left a stray
+// 'def' placeholder — those simply aren't in DISH_KIND, so they resolve to
+// `null` below and get no dish-kind bonus, same as before this change
+// (pure tag-overlap ranking). Fixing that mislabeled data is a separate,
+// recipe-by-recipe content task, not something this lookup should guess at.
+const DISH_KIND_BY_RAW = new Map();
+for (const [kind, raws] of Object.entries(DISH_KIND)) {
+  for (const raw of raws) DISH_KIND_BY_RAW.set(raw, kind);
+}
+
+function dishKindOf(item) {
+  return DISH_KIND_BY_RAW.get(item.tipType) || DISH_KIND_BY_RAW.get(item.pairingsType) || null;
+}
 
 // Hand-curated marquee bias for "popular cuisines" to keep the homepage strip
 // stable across builds even when recipe counts shift. Higher score wins ties
@@ -221,22 +240,33 @@ function bridgeWeight(currentId, candidateId) {
   return Math.imul((candidateId + 1) ^ ((currentId + 1) << 7) ^ ((currentId + 1) >>> 3), 2654435761) >>> 0;
 }
 
-// Cross-cuisine bridge: items sharing tags with `currentItem` but from a
-// different origin. Ranked by overlap count desc, tied broken by a
-// deterministic per-(current,candidate) hash — NOT ascending id. An
-// id-ascending tiebreak meant that any recipe sharing just one generic tag
-// (e.g. "family", "quick" — carried by a large fraction of the catalog)
-// always lost the tie to the same handful of lowest-id recipes: audited
-// pre-fix, Cheeseburger (id 7) and Spaghetti Carbonara (id 1) each showed
-// up as a "similar dish" on 167 of 274 recipes (61% of the whole site),
-// Tacos on 153, regardless of whether they had anything to do with the
-// current recipe. The hash spreads which candidate wins a tie across many
-// different current recipes while staying stable across rebuilds.
+// Cross-cuisine bridge: items from a different origin that are actually
+// similar to `currentItem` — same kind of dish first (soup↔soup,
+// seafood↔seafood, dessert↔dessert...), then diet/practicality tag overlap
+// as a secondary signal, then a deterministic per-(current,candidate) hash
+// to break remaining ties — NOT ascending id.
+//
+// Ranking on tags alone was too weak a similarity signal on its own: tags
+// are just 9 broad diet/practicality labels (quick, family, vegetarian...),
+// so e.g. Miso Soup (a soup) matched Menemen (scrambled eggs) and Tzatziki
+// (a yoghurt dip) purely because all three happen to be "quick" and
+// "vegetarian" — nothing about them is actually alike. Layering in
+// dishKindOf() (derived from tipType/pairingsType) means a soup is ranked
+// against other soups before an unrelated dish that merely shares a tag.
+//
+// Separately, an earlier id-ascending tiebreak meant any recipe sharing
+// just one generic tag always lost the tie to the same handful of
+// lowest-id recipes: audited pre-fix, Cheeseburger (id 7) and Spaghetti
+// Carbonara (id 1) each showed up as a "similar dish" on 167 of 274
+// recipes (61% of the whole site), Tacos on 153 — regardless of relevance.
+// The hash spreads which candidate wins a tie across many different
+// current recipes while staying stable across rebuilds.
 export function selectByTagMix(catalog, currentItem, { exclude = [], max = 4 } = {}) {
   if (!currentItem || !Array.isArray(currentItem.tags) || currentItem.tags.length === 0) return [];
   const wantTags = new Set(currentItem.tags);
   const currentOrigin = originKeyEn(currentItem);
   const currentId = currentItem.id || 0;
+  const currentKind = dishKindOf(currentItem);
   const skip = new Set([currentItem.id, ...exclude]);
   const scored = [];
   for (const it of catalog) {
@@ -244,9 +274,13 @@ export function selectByTagMix(catalog, currentItem, { exclude = [], max = 4 } =
     if (originKeyEn(it) === currentOrigin) continue;
     let overlap = 0;
     for (const t of it.tags) if (wantTags.has(t)) overlap++;
-    if (overlap > 0) scored.push({ it, overlap, w: bridgeWeight(currentId, it.id || 0) });
+    const kindMatch = currentKind !== null && dishKindOf(it) === currentKind;
+    if (overlap > 0 || kindMatch) {
+      scored.push({ it, overlap, kindMatch, w: bridgeWeight(currentId, it.id || 0) });
+    }
   }
-  scored.sort((a, b) => b.overlap - a.overlap || a.w - b.w);
+  scored.sort((a, b) =>
+    (b.kindMatch - a.kindMatch) || (b.overlap - a.overlap) || (a.w - b.w));
   return scored.slice(0, max).map(s => s.it);
 }
 
