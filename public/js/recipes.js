@@ -539,7 +539,7 @@ export const recipes = [
   {
     id: 3,
     servings: 6,
-    tipType: 'def',
+    tipType: 'meat',
     pairingsType: 'def',
     nutrition: { cal: 770, prot: 21, carb: 27, fat: 62, fib: 1 },
     featureCards: {
@@ -5756,7 +5756,7 @@ export const recipes = [
   {
     id: 23,
     servings: 4,
-    tipType: 'def',
+    tipType: 'asian',
     pairingsType: 'korean',
     origin: {
       ro: "Coreea de Sud",
@@ -7075,7 +7075,7 @@ export const recipes = [
   {
     id: 30,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'mediterranean',
     origin: {
       ro: "Grecia",
@@ -7381,7 +7381,7 @@ export const recipes = [
   {
     id: 33,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'middle-eastern',
     origin: {
       ro: "Egipt",
@@ -7891,7 +7891,7 @@ export const recipes = [
   {
     id: 39,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'def',
     pairings: {
       ro: [
@@ -8079,7 +8079,7 @@ export const recipes = [
   {
     id: 40,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'def',
     origin: {
       ro: "Polonia",
@@ -8282,7 +8282,7 @@ export const recipes = [
   {
     id: 42,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'def',
     origin: {
       ro: "Elveția",
@@ -8484,7 +8484,7 @@ export const recipes = [
   {
     id: 44,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'middle-eastern',
     origin: {
       ro: "Israel",
@@ -10481,7 +10481,7 @@ export const recipes = [
   {
     id: 62,
     servings: 4,
-    tipType: 'def',
+    tipType: 'seafood',
     pairingsType: 'middle-eastern',
     origin: {
       ro: "Tunisia",
@@ -10583,7 +10583,7 @@ export const recipes = [
   {
     id: 63,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'def',
     pairings: {
       ro: [
@@ -10975,7 +10975,7 @@ export const recipes = [
   {
     id: 66,
     servings: 8,
-    tipType: 'korean',
+    tipType: 'veg',
     pairingsType: 'korean',
     origin: {
       ro: "Coreea de Sud",
@@ -11384,7 +11384,7 @@ export const recipes = [
   {
     id: 70,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'mexican',
     origin: {
       ro: "El Salvador",
@@ -12696,7 +12696,7 @@ export const recipes = [
   {
     id: 83,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'middle-eastern',
     origin: {
       ro: "Siria",
@@ -12798,7 +12798,7 @@ export const recipes = [
   {
     id: 84,
     servings: 4,
-    tipType: 'def',
+    tipType: 'seafood',
     pairingsType: 'def',
     pairings: {
       ro: [
@@ -13034,7 +13034,7 @@ export const recipes = [
       hi: "रात का खाना"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'asian',
     timeMins: { total: 600, active: 60 },
     pairingsType: 'korean',
     ingredients: {
@@ -13444,7 +13444,7 @@ export const recipes = [
       hi: "नाश्ता"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'middle-eastern',
     ingredients: {
       ro: ["4 lipii pita mari", "1 vânătă mare (~400 g), tăiată în felii de 1 cm", "4 linguri ulei pentru prăjit", "4 ouă", "300 g cartofi galbeni, fierți până sunt moi și feliați la 1 cm grosime", "4 linguri pastă de tahini", "1 lămâie, sucul", "1 cățel de usturoi, zdrobit", "4 linguri sos amba (sos din mango murat)", "2 roșii (~200 g), tăiate mărunt", "1 castravete (~150 g), tăiat mărunt", "1 linguriță sare", "4 felii castraveți murați și pătrunjel proaspăt, pentru servire"],
@@ -14347,7 +14347,7 @@ export const recipes = [
       hi: "दोपहर का खाना"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'def',
     ingredients: {
       ro: ["400g orez cu bob lung parboiled (sau basmati), spălat până apa rămâne limpede", "6 roșii Roma coapte, tăiate grosier (sau 400g roșii din conservă)", "2 ardei kapia roșii mari, fără semințe și tăiați grosier", "1 ardei scotch bonnet sau ardei iute roșu, fără semințe", "2 cepe mari (una mixată, una feliată)", "4 căței de usturoi, curățați", "30g ghimbir proaspăt, curățat", "3 linguri pastă de roșii", "120ml ulei vegetal (tradițional, ulei de arahide)", "750ml supă fierbinte de pui sau legume", "2 foi de dafin", "1 linguriță pudră de curry", "1 linguriță cimbru uscat", "1 linguriță boia afumată", "sare și piper negru proaspăt măcinat după gust"],
@@ -14755,7 +14755,7 @@ export const recipes = [
       hi: "स्नैक"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'asian',
     pairingsType: 'korean',
     ingredients: {
       ro: ["500g tteok cilindric (garae-tteok) proaspăt sau dezghețat", "150g eomuk (prăjitură de pește coreeană), tăiat în triunghiuri", "3 linguri gochujang (pastă de ardei iute fermentat)", "1 lingură gochugaru (fulgi de ardei iute coreean)", "1 lingură zahăr", "1 linguriță sos de soia", "500ml supă de hamsii (sau apă cu dashi)", "2 cepe verzi, tăiate în bucăți de 5 cm", "2 ouă fierte tari, decojite", "1 linguriță ulei de susan", "1 linguriță semințe de susan prăjite"],
@@ -14959,7 +14959,7 @@ export const recipes = [
       hi: "दोपहर का खाना"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'meat',
     pairingsType: 'latin',
     ingredients: {
       ro: ["400g orez cu bob lung alb", "250g fasole roșie uscată (sau 800g fasole gătită)", "600g pulpe de pui cu os sau pulpă de vită, tăiată cuburi de 4 cm", "2 banane plantain verzi mari, decojite, tăiate rondele de 1 cm", "1 ardei gras verde mediu, tăiat cuburi mici", "1 ardei gras roșu mic, tăiat cuburi mici", "1 ceapă mare, tocată fin", "4 căței de usturoi, tocați", "30g coriandru proaspăt, tocat (sau culantro)", "2 roșii coapte, tăiate cuburi (sau 200g roșii din conservă)", "2 linguri pastă de roșii", "60ml ulei vegetal (plus mai mult pentru prăjit)", "1 linguriță oregano uscat", "zeamă de la 1 lime", "sare și piper negru proaspăt măcinat"],
@@ -15367,7 +15367,7 @@ export const recipes = [
       hi: "रात का खाना"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'asian',
     pairingsType: 'latin',
     ingredients: {
       ro: ["500g orez cu bob lung fiert și răcit (preferabil de o zi)", "300g piept de pui sau pulpă de porc, tăiat cuburi de 1,5 cm", "3 ouă mari, bătute", "1 ardei kapia roșu, tăiat cuburi mici", "6 cepe verzi, partea albă tăiată fin, verdele păstrat", "3 căței de usturoi, tocați", "20g ghimbir proaspăt, tocat fin", "60ml sos de soia", "1 lingură sos de stridii", "1 lingură ulei de susan", "60ml ulei vegetal neutru", "1 linguriță aji amarillo pastă (sau 1/2 linguriță pudră de chili)", "sare și piper alb după gust"],
@@ -15571,7 +15571,7 @@ export const recipes = [
       hi: "रात का खाना"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'meat',
     pairingsType: 'mexican',
     ingredients: {
       ro: ["20–24 foi de porumb uscate (chiote)", "500g masa harina (făină de porumb nixtamalizată)", "250g untură de porc, la temperatura camerei", "500ml supă de pui caldă", "1 lingură praf de copt", "2 lingurițe sare", "Pentru umplutură:", "500g pulpă de porc dezosată, fiartă și mărunțită", "4 ardei iuți guajillo uscați, fără semințe", "2 ardei iuți ancho uscați, fără semințe", "1 ceapă mică, tăiată sferturi", "3 căței de usturoi", "1 linguriță chimion măcinat", "1 linguriță oregano mexican", "2 linguri ulei vegetal", "sare după gust", "salsă roșie sau verde, pentru servit"],
@@ -15672,7 +15672,7 @@ export const recipes = [
       ko: "점심"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'soup',
     pairingsType: 'thai',
     ingredients: {
       ro: ["1 L supă de pui sau stoc de fructe de mare", "300g creveți cruzi, curățați", "2 tulpini lemongrass, secționate în bucăți de 3 cm și zdrobite", "30g galangal (sau ghimbir), felii subțiri", "6 frunze de kaffir lime", "3–4 ardei iuți roșii thailandezi, tăiați pe jumătate", "200g ciuperci pleurotus sau champignon, feliate", "3 linguri sos de pește", "2 linguri suc proaspăt de lime", "1 lingură zahăr de palmier", "2 linguri pastă tom yum (opțional)", "1 tulpină ceapă verde, pentru servire", "Coriandru proaspăt, pentru servire"],
@@ -19924,7 +19924,7 @@ export const recipes = [
       hi: "दोपहर का खाना"
     },
     servings: 4,
-    tipType: 'def',
+    tipType: 'asian',
     pairingsType: 'korean',
     ingredients: {
       ro: ["360 g (2 căni) orez cu bob scurt necopt, pentru ~4 rulouri", "540 ml (2¼ căni) apă rece pentru fierberea orezului", "4 foi de nori prăjit (gim, 20 × 18 cm)", "4 fâșii de danmuji (ridiche galbenă murată), tăiate la lungimea norii, grosime ~1 cm", "100 g spanac baby (sau 1 mănunchi mic de spanac obișnuit)", "2 morcovi medii (~150 g), tăiați julien 0,5 × 0,5 × 8 cm", "3 ouă mari, bătute", "200 g bețe de crab imitație (sau șuncă fiartă sau ton conservat amestecat cu maioneză)", "100 g castraveți (1 mic castravete coreean sau 1/3 castravete englezesc), fără sâmburi, tăiat fâșii lungi", "3 linguri ulei de susan prăjit (1,5 lingură pentru orez, 0,5 linguriță pentru spanac, restul pentru exterior)", "1,5 linguriță sare fină (1 linguriță pentru orez, restul pentru legume)", "2 lingurițe semințe de susan prăjite", "1 lingură ulei neutru pentru gătit ouăle și sotat morcovii", "0,5 linguriță piper alb măcinat", "Covoraș de bambus (kimbal) + folie alimentară"],
@@ -20387,7 +20387,7 @@ export const recipes = [
   {
     id: 161,
     servings: 4,
-    tipType: 'def',
+    tipType: 'soup',
     pairingsType: 'mediterranean',
     origin: {
       ro: "Grecia",
@@ -20693,7 +20693,7 @@ export const recipes = [
   {
     id: 164,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'def',
     pairings: {
       ro: [
@@ -23260,7 +23260,7 @@ export const recipes = [
   {
     id: 187,
     servings: 4,
-    tipType: 'def',
+    tipType: 'meat',
     pairingsType: 'mexican',
     nutrition: { cal: 520, prot: 38, carb: 22, fat: 28, fib: 6 },
     origin: {
@@ -23379,7 +23379,7 @@ export const recipes = [
   {
     id: 188,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'mexican',
     nutrition: { cal: 480, prot: 18, carb: 38, fat: 28, fib: 6 },
     origin: {
@@ -24624,7 +24624,7 @@ export const recipes = [
   {
     id: 199,
     servings: 4,
-    tipType: 'def',
+    tipType: 'veg',
     pairingsType: 'italian',
     nutrition: { cal: 740, prot: 28, carb: 88, fat: 30, fib: 4 },
     origin: {
@@ -30968,7 +30968,7 @@ export const recipes = [
   {
     id: 247,
     servings: 4,
-    tipType: "korean",
+    tipType: "meat",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31086,7 +31086,7 @@ export const recipes = [
   {
     id: 248,
     servings: 4,
-    tipType: "korean",
+    tipType: "asian",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31204,7 +31204,7 @@ export const recipes = [
   {
     id: 249,
     servings: 4,
-    tipType: "korean",
+    tipType: "soup",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31322,7 +31322,7 @@ export const recipes = [
   {
     id: 250,
     servings: 4,
-    tipType: "korean",
+    tipType: "soup",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31440,7 +31440,7 @@ export const recipes = [
   {
     id: 251,
     servings: 4,
-    tipType: "korean",
+    tipType: "seafood",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31558,7 +31558,7 @@ export const recipes = [
   {
     id: 252,
     servings: 4,
-    tipType: "korean",
+    tipType: "meat",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31676,7 +31676,7 @@ export const recipes = [
   {
     id: 253,
     servings: 4,
-    tipType: "korean",
+    tipType: "meat",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31794,7 +31794,7 @@ export const recipes = [
   {
     id: 254,
     servings: 4,
-    tipType: "korean",
+    tipType: "asian",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -31912,7 +31912,7 @@ export const recipes = [
   {
     id: 255,
     servings: 4,
-    tipType: "korean",
+    tipType: "soup",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32030,7 +32030,7 @@ export const recipes = [
   {
     id: 256,
     servings: 4,
-    tipType: "korean",
+    tipType: "asian",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32148,7 +32148,7 @@ export const recipes = [
   {
     id: 257,
     servings: 4,
-    tipType: "korean",
+    tipType: "asian",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32266,7 +32266,7 @@ export const recipes = [
   {
     id: 258,
     servings: 4,
-    tipType: "korean",
+    tipType: "veg",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32384,7 +32384,7 @@ export const recipes = [
   {
     id: 259,
     servings: 4,
-    tipType: "korean",
+    tipType: "soup",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32502,7 +32502,7 @@ export const recipes = [
   {
     id: 260,
     servings: 4,
-    tipType: "korean",
+    tipType: "soup",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32620,7 +32620,7 @@ export const recipes = [
   {
     id: 261,
     servings: 4,
-    tipType: "korean",
+    tipType: "meat",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32738,7 +32738,7 @@ export const recipes = [
   {
     id: 262,
     servings: 4,
-    tipType: "korean",
+    tipType: "soup",
     pairingsType: "korean",
     origin: {
       ro: "Coreea de Sud",
@@ -32856,7 +32856,7 @@ export const recipes = [
   {
     id: 263,
     servings: 4,
-    tipType: "italian",
+    tipType: "pasta",
     pairingsType: "italian",
     origin: {
       ro: "Italia",
@@ -32974,7 +32974,7 @@ export const recipes = [
   {
     id: 264,
     servings: 4,
-    tipType: "italian",
+    tipType: "pasta",
     pairingsType: "italian",
     origin: {
       ro: "Italia",
@@ -33092,7 +33092,7 @@ export const recipes = [
   {
     id: 265,
     servings: 4,
-    tipType: "italian",
+    tipType: "veg",
     pairingsType: "italian",
     origin: {
       ro: "Italia",
@@ -33210,7 +33210,7 @@ export const recipes = [
   {
     id: 266,
     servings: 6,
-    tipType: "italian",
+    tipType: "soup",
     pairingsType: "italian",
     origin: {
       ro: "Italia",
@@ -33328,7 +33328,7 @@ export const recipes = [
   {
     id: 267,
     servings: 6,
-    tipType: "italian",
+    tipType: "dessert",
     pairingsType: "italian",
     origin: {
       ro: "Italia",
@@ -33446,7 +33446,7 @@ export const recipes = [
   {
     id: 268,
     servings: 4,
-    tipType: "french",
+    tipType: "dessert",
     pairingsType: "french",
     origin: {
       ro: "Franța",
@@ -33564,7 +33564,7 @@ export const recipes = [
   {
     id: 269,
     servings: 8,
-    tipType: "french",
+    tipType: "dessert",
     pairingsType: "french",
     origin: {
       ro: "Franța",
@@ -33682,7 +33682,7 @@ export const recipes = [
   {
     id: 270,
     servings: 4,
-    tipType: "french",
+    tipType: "dessert",
     pairingsType: "french",
     origin: {
       ro: "Franța",
@@ -33800,7 +33800,7 @@ export const recipes = [
   {
     id: 271,
     servings: 4,
-    tipType: "french",
+    tipType: "meat",
     pairingsType: "french",
     origin: {
       ro: "Franța",
@@ -33918,7 +33918,7 @@ export const recipes = [
   {
     id: 272,
     servings: 4,
-    tipType: "french",
+    tipType: "veg",
     pairingsType: "french",
     origin: {
       ro: "Franța",
@@ -34036,7 +34036,7 @@ export const recipes = [
   {
     id: 273,
     servings: 6,
-    tipType: "romanian",
+    tipType: "meat",
     pairingsType: "romanian",
     origin: {
       ro: "România",
@@ -34154,7 +34154,7 @@ export const recipes = [
   {
     id: 274,
     servings: 4,
-    tipType: "romanian",
+    tipType: "meat",
     pairingsType: "romanian",
     origin: {
       ro: "România",
@@ -34272,7 +34272,7 @@ export const recipes = [
   {
     id: 275,
     servings: 4,
-    tipType: "romanian",
+    tipType: "veg",
     pairingsType: "romanian",
     origin: {
       ro: "România",
@@ -34390,7 +34390,7 @@ export const recipes = [
   {
     id: 276,
     servings: 8,
-    tipType: "romanian",
+    tipType: "meat",
     pairingsType: "romanian",
     origin: {
       ro: "România",
@@ -34508,7 +34508,7 @@ export const recipes = [
   {
     id: 277,
     servings: 6,
-    tipType: "romanian",
+    tipType: "meat",
     pairingsType: "romanian",
     origin: {
       ro: "România",
