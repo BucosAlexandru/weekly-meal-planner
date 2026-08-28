@@ -3991,6 +3991,21 @@ function recipePage(recipe, rl) {
     || /\bbulion\b|\bstock\b|\bbroth\b|\bbouillon\b/i.test(ingr.join(' '));
   const nutritionPer = isSoupRecipe ? ui.nutritionPer.replace(/~?\d+\s*g/i,'~350 ml') : ui.nutritionPer.replace(/~?\d+\s*ml/i,'~350 g');
 
+  // recipeCuisine / keywords — Search Console "Recipes > Improve item
+  // appearance" enhancement (both fields are optional; missing them never
+  // blocked indexing). Neither introduces a new data source:
+  //  - recipeCuisine reuses `o`, the same recipe.origin[code] value already
+  //    used two lines above for the meta description (rl.pageDesc(n,o)).
+  //    `recipe.origin` is the canonical field; `o` is just its localized
+  //    display form for this page's language, not a separate mapping.
+  //  - keywords reuses recipesMeta[id].tags through the exact TAG_LABELS
+  //    translation already established for recipe tiles (see the tags
+  //    line in recipeTile(), ~L4454) — same tags, same lookup table.
+  const recipeTags = recipesMeta[recipe.id]?.tags || [];
+  const keywords = recipeTags
+    .map(t => TAG_LABELS[t]?.[code] || TAG_LABELS[t]?.en || t)
+    .join(', ');
+
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
     "image":[recipeImgUrl],
@@ -3998,12 +4013,14 @@ function recipePage(recipe, rl) {
     "recipeIngredient":ingr,
     "recipeInstructions":steps.map(s=>({ "@type":"HowToStep","text":s })),
     "recipeCategory":cat,
+    "recipeCuisine":o,
     "prepTime":meta.isoPrepTime,
     "totalTime":meta.isoTotalTime,
     "recipeYield":`${meta.servings}`,
     "nutrition":{"@type":"NutritionInformation","calories":`${nutri.cal} kcal`},
     "author":{"@type":"Organization","name":"Meal-Planner.ro"},
-    "url":pageUrl
+    "url":pageUrl,
+    ...(keywords ? { "keywords": keywords } : {})
   });
 
   // Related recipes — same origin, different name, up to 5. The order is a
