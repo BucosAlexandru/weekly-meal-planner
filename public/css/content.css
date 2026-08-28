@@ -2880,8 +2880,18 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
   }
   .servings-badge { display: none; }
 
-  /* ── Ingredient list (2 columns) ── */
-  .recipe-ingr-list-new {
+  /* ── Ingredient list (2 columns) ──
+     `body .recipe-main` prefix is deliberate, not decorative: the always-on
+     screen rules at ~L3690 (`.recipe-main .recipe-ingr-list-new li`, 2
+     classes) and ~L3710 (`.recipe-main .recipe-ingr-dot`) are NOT scoped to
+     @media screen, so they compete with these print rules during printing
+     too. A bare `.recipe-ingr-list-new li` here (1 class) loses that fight
+     on specificity regardless of source order, which zeroed out
+     padding-left and let the absolutely-positioned dot sit on top of the
+     first letter of every ingredient — the reported "bullet overlaps text"
+     bug. Adding the `body` element selector pushes this rule's specificity
+     past the 2-class screen rule without touching what it matches. */
+  body .recipe-main .recipe-ingr-list-new {
     columns: 2;
     column-gap: 2rem;
     list-style: none;
@@ -2889,13 +2899,13 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
     margin: 0;
     column-fill: balance;
   }
-  .recipe-ingr-list-new li {
+  body .recipe-main .recipe-ingr-list-new li {
     font-size: 9.5pt;
     padding: .12rem 0 .12rem .75rem;
     position: relative;
     break-inside: avoid;
   }
-  .recipe-ingr-dot {
+  body .recipe-main .recipe-ingr-dot {
     position: absolute;
     left: 0;
     top: .42em;
@@ -2906,29 +2916,42 @@ body.pdf-exporting .mp-back-pill { display: none !important; }
     display: inline-block;
   }
 
-  /* ── Steps ── */
-  .recipe-steps-new {
+  /* ── Steps ── same specificity issue: `.recipe-main .recipe-steps-new
+     .step-num` (3 classes, screen rule) hides the literal step-num span in
+     favour of a ::before counter, and `.recipe-main .recipe-steps-new li`
+     (2 classes) overrides this block's sizing — both unscoped, so both
+     applied during print too, hiding the print circle-badge design and
+     leaving an oversized, mis-spaced counter in its place. */
+  body .recipe-main .recipe-steps-new {
     padding-left: 0;
     list-style: none;
     margin: 0;
   }
-  .recipe-steps-new li {
+  body .recipe-main .recipe-steps-new li {
     display: flex;
     gap: .55rem;
     align-items: flex-start;
+    padding: 0;
     margin-bottom: .55rem;
     font-size: 9.5pt;
+    border-bottom: none;
     page-break-inside: avoid;
     break-inside: avoid;
   }
-  .step-num {
+  /* The screen ::before counter (decimal-leading-zero) must stay hidden in
+     print — the print design uses the literal <span class="step-num"> text
+     inside a circle badge instead; showing both would double-number. */
+  body .recipe-main .recipe-steps-new li::before {
+    content: none !important;
+  }
+  body .recipe-main .recipe-steps-new .step-num {
+    display: flex;
     flex-shrink: 0;
     width: 15pt;
     height: 15pt;
     border-radius: 50%;
     background: #1a5620 !important;
     color: #fff !important;
-    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 7.5pt;
