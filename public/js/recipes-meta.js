@@ -1248,7 +1248,13 @@ export const recipesMeta = {
   const BUDGET_IDS = new Set([12,14,15,24,25,30,33,39,40,44,52,58,70,76,95,97,120,121,122,123,128,130,132,133,147,161,164,165,170,173,179]);
   const VEG_IDS = new Set([4,10,12,13,14,15,24,25,30,33,35,38,39,40,42,44,58,63,66,70,76,83,89,92,93,95,96,97,102,120,121,122,123,127,128,130,131,132,147,153,159,161,164,170,179]);
 
-  for (let id = 1; id <= 183; id++) {
+  // Bound was a hard-coded 183, which silently left any recipe added past
+  // that id (with no explicit entry above) permanently without tags — e.g.
+  // ids 247-262 (the South Korea batch), which broke the "similar dishes
+  // from other cuisines" strip on their pages. Derive the bound from the
+  // highest id actually present so future additions are covered too.
+  const maxKnownId = Math.max(183, ...Object.keys(recipesMeta).map(Number));
+  for (let id = 1; id <= maxKnownId; id++) {
     if (recipesMeta[id]) continue; // already defined above
     const isVeg = VEG_IDS.has(id);
     const isQuick = QUICK_IDS.has(id);
