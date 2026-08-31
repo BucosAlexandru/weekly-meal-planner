@@ -91,7 +91,6 @@ jobs:
         run: |
           FAIL=0
           for f in \
-            public/js/app.min.js \
             public/js/checkout.min.js \
             public/js/portal.min.js \
             public/css/style.min.css; do

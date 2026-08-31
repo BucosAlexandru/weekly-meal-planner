@@ -11,10 +11,10 @@
 //
 // This script is idempotent and safe to run on every build: it reads the
 // true count from recipes.js and rewrites the app.js literal only if it
-// differs. Wired into `npm run build` (before build:js, so the corrected
-// value gets bundled into app.min.js) and into a CI job that runs whenever
-// recipes.js/recipes-budget.js change on push — see
-// .github/workflows/recipe-content-sync.yml.
+// differs. app.js is loaded directly by every production page (no bundling
+// step), so this write is the deployed value. Wired into `npm run build`
+// and into a CI job that runs whenever recipes.js/recipes-budget.js change
+// on push — see .github/workflows/recipe-content-sync.yml.
 //
 //   node scripts/sync-recipe-count.mjs        (writes; prints what changed)
 //   node scripts/sync-recipe-count.mjs --check (exits 1 if out of sync, no write)

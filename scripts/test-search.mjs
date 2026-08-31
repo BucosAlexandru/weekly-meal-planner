@@ -183,7 +183,7 @@ console.log('\n=== 2F. Performance ===');
   const jsSearch = fs.statSync(path.join(__dirname, '..', 'public', 'js', 'recipe-search.js')).size;
   const jsRef = fs.statSync(path.join(__dirname, '..', 'public', 'js', 'recipe-ref.js')).size;
   console.log(`  extra JS on /recipes/ (lazy, raw): recipe-search.js ${jsSearch} B + recipe-ref.js ${jsRef} B = ${jsSearch + jsRef} B`);
-  console.log('  (index is fetched only on the Explorer page — NOT in app.min.js)');
+  console.log('  (index is fetched only on the Explorer page — NOT bundled into app.js)');
 }
 
 // ─────────────────────────────────────────────────────────────────────────

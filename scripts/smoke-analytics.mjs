@@ -177,7 +177,6 @@ console.log('\n[5] Double-count guards present\n');
 // `wasPremium` away, but object-property guards survive) …
 const appSrc = read(p('public/js/app.js'));
 const checkoutSrc = read(p('public/js/checkout.js'));
-const appMin = read(p('public/js/app.min.js'));
 check('plan_generated: re-entry guard + fires on success only (source)',
       appSrc.includes('_generating') && /if\s*\(\s*ok\s*&&\s*window\.mpTrack\)/.test(appSrc));
 check('email_submitted: in-flight guard + skip already-premium re-verify (source)',
@@ -186,9 +185,10 @@ check('checkout_started: in-flight guard on pay button (source)',
       checkoutSrc.includes('_checkoutInFlight'));
 check('checkout_started: button stays locked once redirecting (no reset on success)',
       checkoutSrc.includes('if (!redirecting)') && /return true;\s*}\s*\/\/ redirecting/.test(checkoutSrc));
-// … and the built bundles must carry the property-named guards through minify.
-check('built app.min.js carries _generating + _verifying guards',
-      appMin.includes('_generating') && appMin.includes('_verifying'));
+// app.js is loaded directly (as an ES module) by every production page —
+// there is no minified app.min.js bundle in the deployed path, so there's
+// nothing to check post-minification here. checkout.min.js IS the deployed
+// bundle for checkout pages, so its guard still needs the post-build check.
 check('built checkout.min.js carries _checkoutInFlight guard',
       checkoutMin.includes('_checkoutInFlight'));
 
