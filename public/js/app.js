@@ -6002,7 +6002,7 @@ if (verifyBtn && emailInput && resultDiv) {
         feedbackStatus.innerHTML = `<span class="text-danger">${i18n[lang]["feedback.error"]}</span>`;
         return;
       }
-      const email = "bucosalexandrubogdan@gmail.com";
+      const email = "contact@meal-planner.ro";
       const subject = encodeURIComponent('Meal Planner Feedback');
       const body = encodeURIComponent(msg + '\n\nLang: ' + lang);
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
