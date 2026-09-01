@@ -70,13 +70,13 @@ export const PLAN_MEALS = {
       116
     ],
     "dinnerIds": [
+      297,
+      294,
       238,
+      293,
       230,
       231,
-      232,
-      223,
-      235,
-      219
+      232
     ]
   },
   "tur-mondial": {
@@ -100,7 +100,7 @@ export const PLAN_MEALS = {
       219,
       235,
       261,
-      223
+      289
     ]
   },
   "latin": {

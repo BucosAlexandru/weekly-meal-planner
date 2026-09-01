@@ -1,0 +1,177 @@
+{
+  "id": 291,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Vietnam", "en": "Vietnam", "es": "Vietnam", "fr": "Vietnam", "de": "Vietnam",
+    "pt": "Vietnã", "ru": "Вьетнам", "ar": "فيتنام", "zh": "越南", "ja": "ベトナム",
+    "tr": "Vietnam", "it": "Vietnam", "ko": "베트남", "hi": "वियतनाम"
+  },
+  "name": {
+    "ro": "Thịt Kho Trứng", "en": "Thịt Kho Trứng", "es": "Thịt Kho Trứng", "fr": "Thịt Kho Trứng", "de": "Thịt Kho Trứng",
+    "pt": "Thịt Kho Trứng", "ru": "Тхить Кхо Чынг", "ar": "تيت خو ترونغ", "zh": "越南红烧肉炖蛋", "ja": "ティットコートリン",
+    "tr": "Thịt Kho Trứng", "it": "Thịt Kho Trứng", "ko": "팃꼬쯩", "hi": "थित खो चुंग"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal",
+    "de": "Hauptgericht", "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي",
+    "zh": "主菜", "ja": "メイン料理", "tr": "Ana Yemek", "it": "Piatto principale",
+    "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍯","t":"Caramelul de zahăr se face separat, până la culoare chihlimbar închis","d":"Dă preparatului culoarea maro-roșcată caracteristică, fără să adauge dulceață excesivă"},
+      {"icon":"🥥","t":"Se fierbe în apă de cocos, nu apă simplă","d":"Aduce o dulceață naturală, discretă, care se combină cu sosul de pește"},
+      {"icon":"🥚","t":"Ouăle fierte intră abia în ultima parte a fierberii","d":"Absorb aroma sosului fără să devină cauciucate"},
+      {"icon":"⏰","t":"Devine mai bun a doua zi, reîncălzit","d":"Sosul se îngroașă și aromele se leagă mai bine peste noapte"}
+    ],
+    "en": [
+      {"icon":"🍯","t":"The sugar caramel is made separately, cooked to a deep amber","d":"Gives the dish its signature reddish-brown color without adding excess sweetness"},
+      {"icon":"🥥","t":"It simmers in coconut water, not plain water","d":"Brings a subtle natural sweetness that blends with the fish sauce"},
+      {"icon":"🥚","t":"The boiled eggs go in only during the last stretch of braising","d":"They soak up the sauce's flavor without turning rubbery"},
+      {"icon":"⏰","t":"It gets better the next day, reheated","d":"The sauce thickens and the flavors settle in overnight"}
+    ],
+    "es": [
+      {"icon":"🍯","t":"El caramelo de azúcar se hace aparte, hasta un ámbar oscuro","d":"Da al plato su característico color rojizo-marrón sin añadir dulzor excesivo"},
+      {"icon":"🥥","t":"Se cuece a fuego lento en agua de coco, no agua normal","d":"Aporta un dulzor natural sutil que se combina con la salsa de pescado"},
+      {"icon":"🥚","t":"Los huevos duros entran solo en el último tramo de la cocción","d":"Absorben el sabor de la salsa sin quedar gomosos"},
+      {"icon":"⏰","t":"Mejora al día siguiente, recalentado","d":"La salsa espesa y los sabores se asientan durante la noche"}
+    ],
+    "fr": [
+      {"icon":"🍯","t":"Le caramel de sucre se prépare à part, jusqu'à un ambre foncé","d":"Donne au plat sa couleur brun-rougeâtre caractéristique sans trop sucrer"},
+      {"icon":"🥥","t":"Il mijote dans l'eau de coco, pas de l'eau ordinaire","d":"Apporte une douceur naturelle subtile qui se marie à la sauce de poisson"},
+      {"icon":"🥚","t":"Les œufs durs n'entrent que sur la fin de la cuisson","d":"Ils absorbent la saveur de la sauce sans devenir caoutchouteux"},
+      {"icon":"⏰","t":"Il est meilleur le lendemain, réchauffé","d":"La sauce épaissit et les saveurs se lient mieux pendant la nuit"}
+    ],
+    "de": [
+      {"icon":"🍯","t":"Der Zuckerkaramell wird getrennt zubereitet, bis tief bernsteinfarben","d":"Gibt dem Gericht seine typische rotbraune Farbe, ohne übermäßige Süße"},
+      {"icon":"🥥","t":"Es köchelt in Kokoswasser, nicht in normalem Wasser","d":"Bringt eine subtile natürliche Süße, die sich mit der Fischsauce verbindet"},
+      {"icon":"🥚","t":"Die gekochten Eier kommen erst in der letzten Schmorphase dazu","d":"Nehmen den Geschmack der Sauce auf, ohne gummiartig zu werden"},
+      {"icon":"⏰","t":"Es wird am nächsten Tag, aufgewärmt, noch besser","d":"Die Sauce dickt ein und die Aromen verbinden sich über Nacht"}
+    ],
+    "pt": [
+      {"icon":"🍯","t":"O caramelo de açúcar é feito à parte, até um âmbar escuro","d":"Dá ao prato a sua cor castanho-avermelhada característica sem adoçar em excesso"},
+      {"icon":"🥥","t":"Cozinha em lume brando em água de coco, não água simples","d":"Traz um doçor natural subtil que se mistura com o molho de peixe"},
+      {"icon":"🥚","t":"Os ovos cozidos entram só na parte final da cozedura","d":"Absorvem o sabor do molho sem ficarem borrachudos"},
+      {"icon":"⏰","t":"Fica melhor no dia seguinte, reaquecido","d":"O molho engrossa e os sabores assentam durante a noite"}
+    ],
+    "ru": [
+      {"icon":"🍯","t":"Сахарная карамель готовится отдельно, до тёмно-янтарного цвета","d":"Придаёт блюду характерный красно-коричневый цвет без лишней сладости"},
+      {"icon":"🥥","t":"Тушится в кокосовой воде, а не в обычной","d":"Придаёт тонкую натуральную сладость, сочетающуюся с рыбным соусом"},
+      {"icon":"🥚","t":"Варёные яйца добавляются только на последнем этапе тушения","d":"Впитывают вкус соуса, не становясь резиновыми"},
+      {"icon":"⏰","t":"На следующий день, подогретое, становится ещё вкуснее","d":"Соус загустевает, а вкусы за ночь лучше соединяются"}
+    ],
+    "ar": [
+      {"icon":"🍯","t":"كراميل السكر يُحضّر منفصلًا حتى لون كهرماني داكن","d":"يمنح الطبق لونه البني المحمر المميز دون حلاوة زائدة"},
+      {"icon":"🥥","t":"يُطهى على نار هادئة في ماء جوز الهند لا الماء العادي","d":"يمنح حلاوة طبيعية خفيفة تمتزج مع صلصة السمك"},
+      {"icon":"🥚","t":"البيض المسلوق يُضاف فقط في المرحلة الأخيرة من الطهي","d":"يمتص نكهة الصلصة دون أن يصبح مطاطيًا"},
+      {"icon":"⏰","t":"يصبح ألذ في اليوم التالي بعد التسخين","d":"الصلصة تتكاثف والنكهات تترابط أكثر بين عشية وضحاها"}
+    ],
+    "zh": [
+      {"icon":"🍯","t":"糖色单独炒制，炒至深琥珀色","d":"赋予这道菜标志性的红棕色，而不会过甜"},
+      {"icon":"🥥","t":"用椰子水而非清水炖煮","d":"带来与鱼露相融的淡淡天然甜味"},
+      {"icon":"🥚","t":"水煮蛋只在炖煮最后阶段加入","d":"充分吸收酱汁风味而不会变得橡胶般韧"},
+      {"icon":"⏰","t":"隔夜回锅后味道更好","d":"过夜后酱汁变浓稠，味道也更加融合"}
+    ],
+    "ja": [
+      {"icon":"🍯","t":"砂糖のカラメルは別に作り、濃い琥珀色まで炒める","d":"甘くなりすぎずに、この料理特有の赤褐色を生み出す"},
+      {"icon":"🥥","t":"普通の水ではなくココナッツウォーターで煮込む","d":"ナンプラーと調和する控えめな自然な甘みをもたらす"},
+      {"icon":"🥚","t":"ゆで卵は煮込みの最後の段階でのみ加える","d":"ゴムのようにならずにタレの風味を吸い込む"},
+      {"icon":"⏰","t":"翌日温め直すとさらに美味しくなる","d":"一晩置くとタレがとろみを増し、味がよくなじむ"}
+    ],
+    "tr": [
+      {"icon":"🍯","t":"Şeker karameli ayrı hazırlanır, koyu kehribar rengine kadar","d":"Yemeğe aşırı tatlılık katmadan karakteristik kızıl-kahverengi rengini verir"},
+      {"icon":"🥥","t":"Sade su yerine hindistancevizi suyunda kaynatılır","d":"Balık sosuyla harmanlanan hafif doğal bir tatlılık katar"},
+      {"icon":"🥚","t":"Haşlanmış yumurtalar sadece pişirmenin son bölümünde eklenir","d":"Lastiksi olmadan sosun lezzetini emerler"},
+      {"icon":"⏰","t":"Ertesi gün ısıtılınca daha da lezzetlenir","d":"Sos koyulaşır ve lezzetler gece boyunca daha iyi kaynaşır"}
+    ],
+    "it": [
+      {"icon":"🍯","t":"Il caramello di zucchero si prepara a parte, fino ad ambra scura","d":"Dà al piatto il suo caratteristico colore bruno-rossastro senza troppa dolcezza"},
+      {"icon":"🥥","t":"Sobbolle in acqua di cocco, non acqua semplice","d":"Porta una dolcezza naturale sottile che si fonde con la salsa di pesce"},
+      {"icon":"🥚","t":"Le uova sode entrano solo nell'ultima fase della cottura","d":"Assorbono il sapore della salsa senza diventare gommose"},
+      {"icon":"⏰","t":"Migliora il giorno dopo, riscaldato","d":"La salsa si addensa e i sapori si legano meglio durante la notte"}
+    ],
+    "ko": [
+      {"icon":"🍯","t":"설탕 캐러멜은 따로 만들어 짙은 호박색까지 볶는다","d":"과하게 달지 않으면서 이 요리 특유의 붉은 갈색을 낸다"},
+      {"icon":"🥥","t":"맹물이 아닌 코코넛워터에 조린다","d":"피시 소스와 어우러지는 은은한 자연스러운 단맛을 준다"},
+      {"icon":"🥚","t":"삶은 달걀은 조림 마지막 단계에만 넣는다","d":"질겨지지 않으면서 소스의 맛을 흡수한다"},
+      {"icon":"⏰","t":"다음 날 데워 먹으면 더 맛있다","d":"밤새 소스가 걸쭉해지고 맛이 더 잘 어우러진다"}
+    ],
+    "hi": [
+      {"icon":"🍯","t":"चीनी का कैरामेल अलग से गहरे एम्बर रंग तक बनाया जाता है","d":"बिना अधिक मिठास डाले व्यंजन को खास लाल-भूरा रंग देता है"},
+      {"icon":"🥥","t":"सादे पानी की बजाय नारियल पानी में उबाला जाता है","d":"फिश सॉस के साथ मिलने वाली हल्की प्राकृतिक मिठास लाता है"},
+      {"icon":"🥚","t":"उबले अंडे पकाने के अंतिम हिस्से में ही डाले जाते हैं","d":"रबड़ जैसे बने बिना सॉस का स्वाद सोखते हैं"},
+      {"icon":"⏰","t":"अगले दिन गरम करके खाने पर और स्वादिष्ट लगता है","d":"रातभर में सॉस गाढ़ा होता है और स्वाद बेहतर घुलते हैं"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g burtă de porc, tăiată cuburi mari","6 ouă fierte tari, curățate","3 șalote tocate","3 căței de usturoi tocați","3 linguri zahăr, pentru caramel","4 linguri sos de pește","500ml apă de cocos","1 linguriță piper negru","ceapă verde, tăiată, pentru decor","orez fiert, pentru servire"],
+    "en": ["600g pork belly, cut into large chunks","6 hard-boiled eggs, peeled","3 shallots, minced","3 garlic cloves, minced","3 tbsp sugar, for the caramel","4 tbsp fish sauce","500ml coconut water","1 tsp black pepper","scallions, sliced, for garnish","steamed rice, for serving"],
+    "es": ["600g de panceta de cerdo, en trozos grandes","6 huevos duros, pelados","3 chalotas picadas","3 dientes de ajo picados","3 cdas de azúcar, para el caramelo","4 cdas de salsa de pescado","500ml de agua de coco","1 cdta de pimienta negra","cebolleta, en rodajas, para decorar","arroz cocido, para servir"],
+    "fr": ["600g de poitrine de porc, en gros morceaux","6 œufs durs, écalés","3 échalotes hachées","3 gousses d'ail hachées","3 c. à soupe de sucre, pour le caramel","4 c. à soupe de sauce de poisson","500ml d'eau de coco","1 c. à café de poivre noir","ciboule, émincée, pour décorer","riz cuit, pour servir"],
+    "de": ["600g Schweinebauch, in große Stücke geschnitten","6 hartgekochte Eier, geschält","3 Schalotten, gehackt","3 Knoblauchzehen, gehackt","3 EL Zucker, für den Karamell","4 EL Fischsauce","500ml Kokoswasser","1 TL schwarzer Pfeffer","Frühlingszwiebeln, geschnitten, zum Garnieren","gedämpfter Reis, zum Servieren"],
+    "pt": ["600g de barriga de porco, em pedaços grandes","6 ovos cozidos, descascados","3 chalotas picadas","3 dentes de alho picados","3 col. sopa de açúcar, para o caramelo","4 col. sopa de molho de peixe","500ml de água de coco","1 col. chá de pimenta preta","cebolinha, fatiada, para decorar","arroz cozido, para servir"],
+    "ru": ["600г свиной грудинки, крупными кусками","6 яиц, сваренных вкрутую, очищенных","3 лука-шалот, измельчённого","3 зубчика чеснока, измельчённого","3 ст.л. сахара, для карамели","4 ст.л. рыбного соуса","500мл кокосовой воды","1 ч.л. чёрного перца","зелёный лук, нарезанный, для украшения","отварной рис, для подачи"],
+    "ar": ["600غ صدر خنزير، مقطع قطعًا كبيرة","6 بيضات مسلوقة، مقشرة","3 كراث مفروم","3 فصوص ثوم مفرومة","3 ملاعق كبيرة سكر، للكراميل","4 ملاعق كبيرة صلصة السمك","500مل ماء جوز الهند","ملعقة صغيرة فلفل أسود","بصل أخضر، مقطع، للتزيين","أرز مطهو، للتقديم"],
+    "zh": ["600克五花肉，切大块","6个水煮蛋，剥壳","3瓣红葱头切碎","3瓣大蒜切碎","3汤匙糖，用于炒糖色","4汤匙鱼露","500毫升椰子水","1茶匙黑胡椒","葱，切段，装饰用","米饭，配餐用"],
+    "ja": ["豚バラ肉600g、大きめのぶつ切り","ゆで卵6個、殻をむく","エシャロット3個、みじん切り","にんにく3片、みじん切り","砂糖大さじ3、カラメル用","ナンプラー大さじ4","ココナッツウォーター500ml","黒こしょう小さじ1","小ねぎ、刻む、飾り用","ご飯、添える用"],
+    "tr": ["600g domuz göğüs eti, büyük parçalar halinde","6 haşlanmış yumurta, kabukları soyulmuş","3 arpacık soğan, doğranmış","3 diş sarımsak, doğranmış","3 yemek kaşığı şeker, karamel için","4 yemek kaşığı balık sosu","500ml hindistancevizi suyu","1 çay kaşığı karabiber","taze soğan, dilimlenmiş, süslemek için","haşlanmış pirinç, servis için"],
+    "it": ["600g di pancetta di maiale, a pezzi grandi","6 uova sode, sgusciate","3 scalogni tritati","3 spicchi d'aglio tritati","3 cucchiai di zucchero, per il caramello","4 cucchiai di salsa di pesce","500ml di acqua di cocco","1 cucchiaino di pepe nero","cipollotti, affettati, per guarnire","riso cotto al vapore, per servire"],
+    "ko": ["삼겹살 600g, 큼직하게 썬 것","삶은 달걀 6개, 껍질 벗긴 것","샬롯 3개, 다진 것","마늘 3쪽, 다진 것","설탕 3큰술, 캐러멜용","피시 소스 4큰술","코코넛워터 500ml","흑후추 1작은술","쪽파, 썬 것, 고명용","밥, 곁들임용"],
+    "hi": ["600ग्राम पोर्क बेली, बड़े टुकड़ों में कटी हुई","6 उबले अंडे, छिले हुए","3 shallots कटे हुए","3 लहसुन की कलियां कटी हुई","3 बड़े चम्मच चीनी, कैरामेल के लिए","4 बड़े चम्मच फिश सॉस","500मिली नारियल पानी","1 छोटा चम्मच काली मिर्च","हरा प्याज़, कटा हुआ, सजावट के लिए","उबले चावल, परोसने के लिए"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE CARAMELUL: topește zahărul într-o oală la foc mediu, fără să amesteci, până capătă o culoare chihlimbar închis. RUMENEȘTE CARNEA: adaugă imediat bucățile de burtă de porc în caramel, amestecă să se învelească, prăjește câteva minute până se rumenesc. ADAUGĂ AROMELE: adaugă șalota și usturoiul, călește până devin parfumate. FIERBE ÎNĂBUȘIT: toarnă apa de cocos și sosul de pește, adu la fierbere, apoi acoperă și fierbe la foc mic 1-1,5 ore, până carnea devine fragedă. ADAUGĂ OUĂLE: adaugă ouăle fierte curățate în ultimele 20-30 de minute, ca să prindă din aroma sosului. REDU SOSUL: descoperă spre final și lasă sosul să se reducă până devine lucios și consistent. SERVEȘTE: presară piper negru și ceapă verde deasupra, servește fierbinte peste orez.",
+    "en": "MAKE THE CARAMEL: melt the sugar in a pot over medium heat, without stirring, until it turns a deep amber. SEAR THE PORK: immediately add the pork belly chunks to the caramel, stir to coat, sear for a few minutes until browned. ADD THE AROMATICS: add the shallot and garlic, sauté until fragrant. BRAISE: pour in the coconut water and fish sauce, bring to a boil, then cover and simmer on low for 1-1.5 hours, until the pork is tender. ADD THE EGGS: add the peeled boiled eggs in the last 20-30 minutes, so they pick up the sauce's flavor. REDUCE THE SAUCE: uncover toward the end and let the sauce reduce until glossy and thick. SERVE: sprinkle with black pepper and scallions, serve hot over rice.",
+    "es": "PREPARA EL CARAMELO: derrite el azúcar en una olla a fuego medio, sin remover, hasta que tome un ámbar oscuro. SELLA LA CARNE: añade de inmediato los trozos de panceta al caramelo, remueve para cubrirlos, sella unos minutos hasta que se doren. AÑADE LOS AROMÁTICOS: añade la chalota y el ajo, sofríe hasta que estén aromáticos. COCINA A FUEGO LENTO: vierte el agua de coco y la salsa de pescado, lleva a ebullición, luego tapa y cocina a fuego bajo 1-1,5 horas, hasta que la carne esté tierna. AÑADE LOS HUEVOS: añade los huevos duros pelados en los últimos 20-30 minutos, para que cojan el sabor de la salsa. REDUCE LA SALSA: destapa hacia el final y deja que la salsa se reduzca hasta quedar brillante y espesa. SIRVE: espolvorea con pimienta negra y cebolleta, sirve caliente sobre arroz.",
+    "fr": "PRÉPARE LE CARAMEL: fais fondre le sucre dans une casserole à feu moyen, sans remuer, jusqu'à obtenir un ambre foncé. SAISIS LA VIANDE: ajoute aussitôt les morceaux de poitrine de porc au caramel, remue pour bien les enrober, saisis quelques minutes jusqu'à ce qu'ils dorent. AJOUTE LES AROMATES: ajoute l'échalote et l'ail, fais revenir jusqu'à ce qu'ils embaument. MIJOTE: verse l'eau de coco et la sauce de poisson, porte à ébullition, puis couvre et laisse mijoter à feu doux 1 à 1h30, jusqu'à ce que la viande soit tendre. AJOUTE LES ŒUFS: ajoute les œufs durs écalés dans les 20-30 dernières minutes, pour qu'ils s'imprègnent de la sauce. RÉDUIS LA SAUCE: découvre vers la fin et laisse la sauce réduire jusqu'à devenir brillante et épaisse. SERS: saupoudre de poivre noir et de ciboule, sers chaud sur du riz.",
+    "de": "BEREITE DEN KARAMELL ZU: den Zucker in einem Topf bei mittlerer Hitze schmelzen, ohne zu rühren, bis er tief bernsteinfarben wird. BRÄTE DAS FLEISCH AN: sofort die Schweinebauchstücke in den Karamell geben, umrühren zum Überziehen, ein paar Minuten anbraten bis gebräunt. FÜGE DIE AROMATEN HINZU: Schalotte und Knoblauch zugeben, anschwitzen bis duftend. SCHMORE: Kokoswasser und Fischsauce einfüllen, aufkochen, dann abdecken und bei niedriger Hitze 1-1,5 Stunden köcheln lassen, bis das Fleisch zart ist. FÜGE DIE EIER HINZU: die geschälten gekochten Eier in den letzten 20-30 Minuten zugeben, damit sie den Geschmack der Sauce aufnehmen. REDUZIERE DIE SAUCE: gegen Ende den Deckel abnehmen und die Sauce einkochen lassen, bis sie glänzend und dick ist. SERVIEREN: mit schwarzem Pfeffer und Frühlingszwiebeln bestreuen, heiß über Reis servieren.",
+    "pt": "PREPARE O CARAMELO: derreta o açúcar numa panela em fogo médio, sem mexer, até ficar num âmbar escuro. SELE A CARNE: junte imediatamente os pedaços de barriga de porco ao caramelo, mexa para envolver, sele por alguns minutos até dourarem. JUNTE OS AROMÁTICOS: junte a chalota e o alho, refogue até ficarem perfumados. COZINHE EM LUME BRANDO: despeje a água de coco e o molho de peixe, leve a ferver, depois tape e cozinhe em lume brando por 1-1,5 horas, até a carne ficar macia. JUNTE OS OVOS: junte os ovos cozidos descascados nos últimos 20-30 minutos, para que absorvam o sabor do molho. REDUZA O MOLHO: destape perto do final e deixe o molho reduzir até ficar brilhante e espesso. SIRVA: polvilhe com pimenta preta e cebolinha, sirva quente sobre arroz.",
+    "ru": "ПРИГОТОВЬ КАРАМЕЛЬ: раствори сахар в кастрюле на среднем огне, не помешивая, пока не станет тёмно-янтарным. ОБЖАРЬ МЯСО: сразу добавь куски свиной грудинки в карамель, перемешай, чтобы покрылись, обжаривай несколько минут до подрумянивания. ДОБАВЬ АРОМАТИКУ: добавь лук-шалот и чеснок, обжаривай до появления аромата. ТУШИ: влей кокосовую воду и рыбный соус, доведи до кипения, затем накрой крышкой и туши на слабом огне 1-1,5 часа, пока мясо не станет мягким. ДОБАВЬ ЯЙЦА: добавь очищенные варёные яйца в последние 20-30 минут, чтобы они впитали вкус соуса. УВАРИ СОУС: ближе к концу сними крышку и дай соусу увариться до глянцевой густоты. ПОДАЙ: посыпь чёрным перцем и зелёным луком, подавай горячим с рисом.",
+    "ar": "جهّز الكراميل: أذب السكر في قدر على نار متوسطة دون تحريك حتى يصبح كهرمانيًا داكنًا. اقلِ اللحم: أضف فورًا قطع صدر الخنزير إلى الكراميل، قلّب لتغطيتها، اقلِها بضع دقائق حتى تتحمّر. أضف النكهات العطرية: أضف الكراث والثوم، قلّب حتى تفوح رائحتهما. اطهُ على نار هادئة: اسكب ماء جوز الهند وصلصة السمك، اجلب إلى الغليان، ثم غطِّ واطهُ على نار هادئة لمدة 1-1.5 ساعة حتى يصبح اللحم طريًا. أضف البيض: أضف البيض المسلوق المقشر في آخر 20-30 دقيقة ليكتسب نكهة الصلصة. قلّل الصلصة: اكشف القدر قرب النهاية ودع الصلصة تتقلص حتى تصبح لامعة وسميكة. قدّم: رشّ الفلفل الأسود والبصل الأخضر فوقه، وقدّمه ساخنًا مع الأرز.",
+    "zh": "炒糖色：将糖放入锅中中火加热，不要搅拌，直到变成深琥珀色。煎肉：立即将五花肉块放入糖色中，翻拌使其均匀裹上，煎几分钟至上色。加入香料：加入红葱头和大蒜，炒香。炖煮：倒入椰子水和鱼露，煮沸后加盖转小火炖1-1.5小时，直至猪肉变软烂。加入鸡蛋：在最后20-30分钟加入剥壳的水煮蛋，让其吸收酱汁风味。收汁：接近尾声时揭盖，让酱汁收浓至油亮浓稠。上桌：撒上黑胡椒和葱花，配米饭趁热享用。",
+    "ja": "カラメルを作る：鍋に砂糖を入れ中火にかけ、かき混ぜずに濃い琥珀色になるまで熱する。肉を焼く：すぐに豚バラ肉をカラメルに加え、絡めるように混ぜ、数分焼き色がつくまで焼く。香味野菜を加える：エシャロットとにんにくを加え、香りが立つまで炒める。煮込む：ココナッツウォーターとナンプラーを注ぎ、沸騰させたら蓋をして弱火で1〜1時間半、肉が柔らかくなるまで煮る。卵を加える：殻をむいたゆで卵を煮込みの最後の20〜30分に加え、タレの風味を吸わせる。タレを煮詰める：仕上げに蓋を外し、タレがつやよくとろみが出るまで煮詰める。盛り付ける：黒こしょうと小ねぎを散らし、熱々をご飯にかけて提供する。",
+    "tr": "KARAMELİ HAZIRLAYIN: şekeri bir tencerede orta ateşte karıştırmadan koyu kehribar rengine gelene kadar eritin. ETİ KIZARTIN: domuz göğüs eti parçalarını hemen karamele ekleyin, kaplanacak şekilde karıştırın, birkaç dakika kararana kadar kızartın. AROMALARI EKLEYİN: arpacık soğan ve sarımsağı ekleyin, kokusu çıkana kadar soteleyin. YAVAŞ PİŞİRİN: hindistancevizi suyunu ve balık sosunu ekleyin, kaynatın, ardından kapatıp kısık ateşte 1-1,5 saat, et yumuşayana kadar pişirin. YUMURTALARI EKLEYİN: soyulmuş haşlanmış yumurtaları son 20-30 dakikada ekleyin, böylece sosun lezzetini alsınlar. SOSU KOYULAŞTIRIN: sona doğru kapağı açın ve sos parlak ve koyu kıvama gelene kadar azaltın. SERVİS YAPIN: üzerine karabiber ve taze soğan serpin, sıcak pirinç üzerinde servis edin.",
+    "it": "PREPARA IL CARAMELLO: sciogli lo zucchero in una pentola a fuoco medio, senza mescolare, finché diventa ambra scuro. ROSOLA LA CARNE: aggiungi subito i pezzi di pancetta al caramello, mescola per ricoprirli, rosola per qualche minuto finché dorati. AGGIUNGI GLI AROMI: aggiungi lo scalogno e l'aglio, soffriggi finché profumati. BRASA: versa l'acqua di cocco e la salsa di pesce, porta a bollore, poi copri e cuoci a fuoco basso per 1-1,5 ore, finché la carne è tenera. AGGIUNGI LE UOVA: aggiungi le uova sode sgusciate negli ultimi 20-30 minuti, così assorbono il sapore della salsa. RIDUCI LA SALSA: verso la fine scopri e lascia ridurre la salsa finché lucida e densa. SERVI: cospargi con pepe nero e cipollotti, servi caldo su riso.",
+    "ko": "캐러멜 만들기: 냄비에 설탕을 넣고 중불에서 젓지 않고 짙은 호박색이 될 때까지 녹인다. 고기 굽기: 삼겹살을 바로 캐러멜에 넣고 골고루 묻도록 저으며 몇 분간 볶아 색을 낸다. 향신료 추가하기: 샬롯과 마늘을 넣고 향이 날 때까지 볶는다. 조리기: 코코넛워터와 피시 소스를 붓고 끓인 뒤 뚜껑을 덮고 약불에서 1-1.5시간, 고기가 부드러워질 때까지 조린다. 달걀 넣기: 마지막 20-30분에 껍질 벗긴 삶은 달걀을 넣어 소스 맛이 배게 한다. 소스 졸이기: 마지막에 뚜껑을 열고 소스가 윤기 나고 걸쭉해질 때까지 졸인다. 서빙하기: 흑후추와 쪽파를 뿌려 뜨거운 밥과 함께 낸다.",
+    "hi": "कैरामेल तैयार करें: एक बर्तन में चीनी को मध्यम आंच पर बिना हिलाए गहरे एम्बर रंग तक पिघलाएं। मांस सेकें: तुरंत पोर्क बेली के टुकड़े कैरामेल में डालें, कोट करने के लिए हिलाएं, कुछ मिनट सेकें जब तक भूरे न हो जाएं। खुशबूदार चीज़ें डालें: shallot और लहसुन डालें, खुशबू आने तक भूनें। धीमी आंच पर पकाएं: नारियल पानी और फिश सॉस डालें, उबाल लाएं, फिर ढककर धीमी आंच पर 1-1.5 घंटे, मांस नरम होने तक पकाएं। अंडे डालें: छिले उबले अंडे अंतिम 20-30 मिनट में डालें ताकि वे सॉस का स्वाद सोख लें। सॉस गाढ़ा करें: अंत की ओर ढक्कन हटाएं और सॉस को चमकदार और गाढ़ा होने तक कम करें। परोसें: ऊपर से काली मिर्च और हरा प्याज़ छिड़कें, गरम-गरम चावल के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Thịt kho trứng este unul dintre preparatele de bază ale mesei de Tết, Anul Nou lunar vietnamez, tocmai pentru că se păstrează bine câteva zile și devine mai bun cu fiecare reîncălzire. În familiile din sud, o oală mare din acest preparat se gătește cu zile înainte de sărbătoare, pentru ca mesele din primele zile ale anului nou să nu ceară gătit — o tradiție practică, dar și un semn de belșug la masa de sărbătoare.\n\nCaramelul de zahăr (nước màu) e coloana tehnicii vietnameze de fierbere înăbușită, folosit în zeci de preparate similare, nu doar în acesta. Diferența acestui fel stă în apa de cocos, care înlocuiește apa simplă și adaugă o dulceață naturală discretă, fără să domine sosul de pește. Bucățile mari de burtă de porc, fierte îndelung, devin fragede și translucide, iar ouăle, adăugate abia spre final, rămân ferme, dar impregnate de aroma întregii oale.",
+    "en": "Thịt kho trứng is one of the staple dishes of Tết, the Vietnamese Lunar New Year, precisely because it keeps well for days and gets better with each reheating. In southern families, a big pot of it is cooked days ahead of the holiday, so that meals during the first days of the new year don't require cooking — a practical tradition, but also a sign of abundance at the holiday table.\n\nSugar caramel (nước màu) is the backbone technique of Vietnamese braising, used in dozens of similar dishes, not just this one. What sets this dish apart is the coconut water, which replaces plain water and adds a subtle natural sweetness without overpowering the fish sauce. The large pork belly chunks, braised for a long time, turn tender and translucent, while the eggs, added only toward the end, stay firm but soak up the flavor of the whole pot.",
+    "es": "El thịt kho trứng es uno de los platos básicos del Tết, el Año Nuevo lunar vietnamita, precisamente porque se conserva bien durante días y mejora con cada recalentada. En las familias del sur, se cocina una olla grande días antes de la festividad, para que las comidas de los primeros días del año nuevo no requieran cocinar — una tradición práctica, pero también una señal de abundancia en la mesa festiva.\n\nEl caramelo de azúcar (nước màu) es la técnica base de la cocción a fuego lento vietnamita, usado en docenas de platos similares, no solo en este. Lo que distingue a este plato es el agua de coco, que sustituye al agua normal y aporta un dulzor natural sutil sin dominar la salsa de pescado. Los grandes trozos de panceta de cerdo, cocinados a fuego lento durante mucho tiempo, quedan tiernos y translúcidos, mientras que los huevos, añadidos solo hacia el final, se mantienen firmes pero impregnados del sabor de toda la olla.",
+    "fr": "Le thịt kho trứng est l'un des plats incontournables du Tết, le Nouvel An lunaire vietnamien, précisément parce qu'il se conserve bien plusieurs jours et s'améliore à chaque réchauffage. Dans les familles du sud, une grande marmite en est préparée des jours avant la fête, pour que les repas des premiers jours de l'année n'exigent pas de cuisine — une tradition pratique, mais aussi un signe d'abondance sur la table de fête.\n\nLe caramel de sucre (nước màu) est la technique de base de la cuisson mijotée vietnamienne, utilisé dans des dizaines de plats similaires, pas seulement celui-ci. Ce qui distingue ce plat, c'est l'eau de coco, qui remplace l'eau ordinaire et apporte une douceur naturelle subtile sans dominer la sauce de poisson. Les gros morceaux de poitrine de porc, mijotés longuement, deviennent tendres et translucides, tandis que les œufs, ajoutés seulement vers la fin, restent fermes mais imprégnés de la saveur de toute la marmite.",
+    "de": "Thịt kho trứng ist eines der Grundgerichte von Tết, dem vietnamesischen Mondneujahr, gerade weil es sich tagelang gut hält und mit jedem Aufwärmen besser wird. In südlichen Familien wird Tage vor dem Fest ein großer Topf davon gekocht, damit die Mahlzeiten in den ersten Tagen des neuen Jahres kein Kochen erfordern — eine praktische Tradition, aber auch ein Zeichen von Überfluss am Festtisch.\n\nZuckerkaramell (nước màu) ist die Kerntechnik der vietnamesischen Schmorküche, verwendet in Dutzenden ähnlicher Gerichte, nicht nur in diesem. Was dieses Gericht auszeichnet, ist das Kokoswasser, das normales Wasser ersetzt und eine subtile natürliche Süße hinzufügt, ohne die Fischsauce zu überdecken. Die großen, lange geschmorten Schweinebauchstücke werden zart und durchscheinend, während die Eier, erst gegen Ende hinzugefügt, fest bleiben, aber vom Geschmack des ganzen Topfes durchdrungen sind.",
+    "pt": "O thịt kho trứng é um dos pratos básicos do Tết, o Ano Novo lunar vietnamita, precisamente porque se conserva bem por dias e melhora a cada aquecida. Nas famílias do sul, uma panela grande é cozinhada dias antes do feriado, para que as refeições dos primeiros dias do ano novo não exijam cozinhar — uma tradição prática, mas também um sinal de fartura na mesa festiva.\n\nO caramelo de açúcar (nước màu) é a técnica base da cozedura lenta vietnamita, usado em dezenas de pratos semelhantes, não só neste. O que distingue este prato é a água de coco, que substitui a água comum e traz um doçor natural subtil sem dominar o molho de peixe. Os grandes pedaços de barriga de porco, cozinhados lentamente por muito tempo, ficam macios e translúcidos, enquanto os ovos, adicionados só perto do fim, mantêm-se firmes mas impregnados com o sabor de toda a panela.",
+    "ru": "Тхить кхо чынг — одно из основных блюд Тет, вьетнамского лунного Нового года, именно потому, что оно хорошо хранится несколько дней и становится лучше с каждым подогревом. В южных семьях большую кастрюлю этого блюда готовят за несколько дней до праздника, чтобы в первые дни нового года не нужно было готовить — практичная традиция, но также знак изобилия на праздничном столе.\n\nСахарная карамель (nước màu) — базовая техника вьетнамского тушения, используемая в десятках похожих блюд, а не только в этом. Отличие этого блюда — кокосовая вода, которая заменяет обычную и добавляет тонкую натуральную сладость, не заглушая рыбный соус. Крупные куски свиной грудинки, долго тушённые, становятся мягкими и полупрозрачными, а яйца, добавленные лишь ближе к концу, остаются плотными, но пропитываются вкусом всей кастрюли.",
+    "ar": "تيت خو ترونغ هو أحد الأطباق الأساسية في عيد التت، رأس السنة القمرية الفيتنامية، تحديدًا لأنه يحتفظ بجودته أيامًا ويصبح ألذ مع كل تسخين. في العائلات الجنوبية، يُطهى قدر كبير منه قبل العيد بأيام، حتى لا تتطلب وجبات الأيام الأولى من العام الجديد طهيًا — تقليد عملي، لكنه أيضًا علامة على الوفرة في مائدة العيد.\n\nكراميل السكر (nước màu) هو تقنية أساسية في الطهي البطيء الفيتنامي، تُستخدم في عشرات الأطباق المشابهة، وليس فقط في هذا الطبق. ما يميز هذا الطبق هو ماء جوز الهند، الذي يحل محل الماء العادي ويضيف حلاوة طبيعية خفيفة دون أن يطغى على صلصة السمك. قطع صدر الخنزير الكبيرة، المطهوة طويلًا، تصبح طرية وشبه شفافة، بينما البيض المضاف قرب النهاية فقط يبقى متماسكًا لكنه مشبع بنكهة القدر بأكمله.",
+    "zh": "红烧肉炖蛋是越南春节（农历新年）的主食之一，正因为它能存放数日，且每次回锅味道更好。在南方家庭中，节前几天就会煮上一大锅，这样新年头几天就不用再做饭了——既是实用的传统，也是节日餐桌丰盛的象征。\n\n炒糖色（nước màu）是越南炖煮技艺的核心技巧，用于许多类似菜肴，并非这道菜独有。这道菜的独特之处在于用椰子水代替清水，带来一种不会盖过鱼露的淡淡天然甜味。大块的五花肉经长时间炖煮变得软嫩透亮，而鸡蛋则只在快煮好时加入，保持紧实的口感，同时吸满了整锅的味道。",
+    "ja": "ティットコートリンはテト（ベトナムの旧正月）の定番料理の一つで、それはまさに数日間しっかり保存でき、温め直すたびに美味しくなるからだ。南部の家庭では、正月の最初の数日間は料理をしなくて済むよう、祝日の数日前に大鍋で作られる――実用的な伝統であると同時に、祝いの食卓の豊かさの象徴でもある。\n\n砂糖のカラメル（ヌォックマウ）はベトナムの煮込み料理の根幹をなす技法で、この料理だけでなく数多くの類似料理に使われる。この料理を特別にしているのはココナッツウォーターで、普通の水の代わりに使うことで、ナンプラーを圧倒しない控えめな自然の甘みを加える。長時間煮込んだ大きな豚バラ肉は柔らかく透明感が出て、仕上げの段階でのみ加えられる卵は、しっかりとした食感を保ちながら鍋全体の風味を吸い込む。",
+    "tr": "Thịt kho trứng, Tết yani Vietnam Ay Yılbaşı'nın temel yemeklerinden biridir, tam da günlerce iyi saklanabildiği ve her ısıtmada daha da lezzetlendiği için. Güneydeki ailelerde, yeni yılın ilk günlerinde yemek pişirmeye gerek kalmasın diye bayramdan günler önce büyük bir tencere dolusu hazırlanır — pratik bir gelenek olmasının yanı sıra, bayram sofrasında bolluğun bir işareti.\n\nŞeker karameli (nước màu), sadece bu yemekte değil, benzer düzinelerce yemekte kullanılan Vietnam yavaş pişirme tekniğinin temelidir. Bu yemeği farklı kılan, sade suyun yerini alan ve balık sosunu bastırmadan hafif doğal bir tatlılık katan hindistancevizi suyudur. Uzun süre pişen büyük domuz göğüs eti parçaları yumuşak ve yarı saydam hale gelirken, sadece sona doğru eklenen yumurtalar sıkı kalır ama tüm tencerenin lezzetini emer.",
+    "it": "Il thịt kho trứng è uno dei piatti fondamentali del Tết, il capodanno lunare vietnamita, proprio perché si conserva bene per giorni e migliora a ogni riscaldata. Nelle famiglie del sud, una grande pentola viene cucinata giorni prima della festa, così i pasti dei primi giorni dell'anno nuovo non richiedono cottura — una tradizione pratica, ma anche un segno di abbondanza sulla tavola delle feste.\n\nIl caramello di zucchero (nước màu) è la tecnica di base della cottura brasata vietnamita, usato in decine di piatti simili, non solo in questo. Ciò che distingue questo piatto è l'acqua di cocco, che sostituisce l'acqua semplice e aggiunge una dolcezza naturale sottile senza sovrastare la salsa di pesce. I grandi pezzi di pancetta di maiale, brasati a lungo, diventano teneri e traslucidi, mentre le uova, aggiunte solo verso la fine, restano sode ma impregnate del sapore di tutta la pentola.",
+    "ko": "팃꼬쯩은 베트남 음력설인 뗏의 대표 음식 중 하나인데, 며칠 동안 잘 보관되고 데울 때마다 맛이 더 좋아지기 때문이다. 남부 가정에서는 명절 며칠 전부터 큰 냄비 가득 이 요리를 만들어, 새해 첫날들은 요리할 필요가 없도록 한다 — 실용적인 전통이면서 명절 상차림의 풍성함을 상징하기도 한다.\n\n설탕 캐러멜(느억마우)은 이 요리뿐 아니라 수십 가지 비슷한 요리에 쓰이는 베트남식 조림 요리의 핵심 기법이다. 이 요리를 특별하게 만드는 것은 맹물 대신 쓰는 코코넛워터로, 피시 소스를 압도하지 않는 은은한 천연 단맛을 더한다. 오래 조린 큼직한 삼겹살은 부드럽고 반투명해지며, 마지막에서야 넣는 달걀은 단단함을 유지하면서도 냄비 전체의 맛을 흡수한다.",
+    "hi": "थित खो चुंग तेत, वियतनामी चंद्र नववर्ष, के मुख्य व्यंजनों में से एक है, ठीक इसलिए कि यह कई दिनों तक अच्छी तरह टिकता है और हर बार गरम करने पर और बेहतर होता जाता है। दक्षिणी परिवारों में, त्योहार से कई दिन पहले इसका एक बड़ा बर्तन पकाया जाता है, ताकि नए साल के पहले दिनों में खाना पकाने की ज़रूरत न पड़े — एक व्यावहारिक परंपरा, लेकिन त्योहारी मेज़ पर समृद्धि का प्रतीक भी।\n\nचीनी का कैरामेल (nước màu) वियतनामी धीमी पकाने की तकनीक की रीढ़ है, जो सिर्फ इस व्यंजन में ही नहीं बल्कि दर्जनों समान व्यंजनों में इस्तेमाल होता है। इस व्यंजन को अलग बनाता है नारियल पानी, जो सादे पानी की जगह लेता है और फिश सॉस पर हावी हुए बिना हल्की प्राकृतिक मिठास जोड़ता है। लंबे समय तक पकाए गए पोर्क बेली के बड़े टुकड़े नरम और पारभासी हो जाते हैं, जबकि अंत की ओर ही डाले गए अंडे मज़बूत रहते हैं लेकिन पूरे बर्तन के स्वाद से भीग जाते हैं।"
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 18,
+    "tags": ["family"],
+    "desc": {
+      "ro": "Burtă de porc și ouă fierte, gătite înăbușit în apă de cocos cu caramel și sos de pește, până devin fragede și lucioase.",
+      "en": "Pork belly and boiled eggs, braised in coconut water with caramel and fish sauce until tender and glossy.",
+      "es": "Panceta de cerdo y huevos duros, cocidos a fuego lento en agua de coco con caramelo y salsa de pescado hasta quedar tiernos y brillantes.",
+      "fr": "Poitrine de porc et œufs durs, mijotés dans l'eau de coco avec caramel et sauce de poisson jusqu'à devenir tendres et brillants.",
+      "de": "Schweinebauch und gekochte Eier, geschmort in Kokoswasser mit Karamell und Fischsauce, bis zart und glänzend.",
+      "pt": "Barriga de porco e ovos cozidos, cozinhados em água de coco com caramelo e molho de peixe até ficarem macios e brilhantes.",
+      "ru": "Свиная грудинка и варёные яйца, тушённые в кокосовой воде с карамелью и рыбным соусом до мягкости и глянца.",
+      "ar": "صدر خنزير وبيض مسلوق، مطهوان في ماء جوز الهند مع الكراميل وصلصة السمك حتى يصبحا طريين ولامعين.",
+      "zh": "五花肉与水煮蛋，用椰子水、糖色和鱼露炖至软嫩油亮。",
+      "ja": "豚バラ肉とゆで卵を、カラメルとナンプラーを加えたココナッツウォーターで柔らかくつやが出るまで煮込んだ一品。",
+      "tr": "Domuz göğüs eti ve haşlanmış yumurtalar, karamel ve balık sosuyla hindistancevizi suyunda yumuşak ve parlak olana kadar pişirilir.",
+      "it": "Pancetta di maiale e uova sode, brasate in acqua di cocco con caramello e salsa di pesce finché tenere e lucide.",
+      "ko": "삼겹살과 삶은 달걀을 캐러멜과 피시 소스를 넣은 코코넛워터에 부드럽고 윤기 나게 조린 요리.",
+      "hi": "पोर्क बेली और उबले अंडे, नारियल पानी में कैरामेल और फिश सॉस के साथ नरम और चमकदार होने तक पकाए जाते हैं।"
+    }
+  }
+}

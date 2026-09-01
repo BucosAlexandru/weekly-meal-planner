@@ -1,0 +1,177 @@
+{
+  "id": 294,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Georgia", "en": "Georgia", "es": "Georgia", "fr": "Géorgie", "de": "Georgien",
+    "pt": "Geórgia", "ru": "Грузия", "ar": "جورجيا", "zh": "格鲁吉亚", "ja": "ジョージア",
+    "tr": "Gürcistan", "it": "Georgia", "ko": "조지아", "hi": "जॉर्जिया"
+  },
+  "name": {
+    "ro": "Mtsvadi", "en": "Mtsvadi", "es": "Mtsvadi", "fr": "Mtsvadi", "de": "Mzvadi",
+    "pt": "Mtsvadi", "ru": "Мцвади", "ar": "متسفادي", "zh": "格鲁吉亚烤肉串", "ja": "ムツヴァディ",
+    "tr": "Mtsvadi", "it": "Mtsvadi", "ko": "츠바디", "hi": "म्त्सवादी"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal",
+    "de": "Hauptgericht", "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي",
+    "zh": "主菜", "ja": "メイン料理", "tr": "Ana Yemek", "it": "Piatto principale",
+    "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🧂","t":"Fără marinată grea — doar sare, piper și ceapă","d":"Carnea bună nu are nevoie de acoperit gustul, doar de condimentare simplă"},
+      {"icon":"🍇","t":"Tradițional, se frige pe cărbuni de viță de vie","d":"Lemnul de viță arde uniform și dă un fum discret, floral"},
+      {"icon":"🔪","t":"Bucățile mari, tăiate cu un strat de grăsime","d":"Grăsimea se topește pe grătar și ține carnea suculentă"},
+      {"icon":"🫓","t":"Se servește înfășurat în lavaș, cu roșii și ceapă crudă","d":"Pâinea absoarbe sucurile, iar prospețimea taie din bogăția cărnii"}
+    ],
+    "en": [
+      {"icon":"🧂","t":"No heavy marinade — just salt, pepper and onion","d":"Good meat doesn't need its flavor masked, only simple seasoning"},
+      {"icon":"🍇","t":"Traditionally grilled over grapevine wood embers","d":"The vine wood burns evenly and gives a subtle, floral smoke"},
+      {"icon":"🔪","t":"Large chunks, cut with a layer of fat left on","d":"The fat renders on the grill and keeps the meat juicy"},
+      {"icon":"🫓","t":"Served wrapped in lavash, with tomatoes and raw onion","d":"The bread soaks up the juices, and the freshness cuts through the richness"}
+    ],
+    "es": [
+      {"icon":"🧂","t":"Sin marinada pesada — solo sal, pimienta y cebolla","d":"La carne buena no necesita disfrazar su sabor, solo un aliño sencillo"},
+      {"icon":"🍇","t":"Tradicionalmente asado sobre brasas de sarmiento de vid","d":"La madera de vid arde de forma pareja y da un humo sutil y floral"},
+      {"icon":"🔪","t":"Trozos grandes, cortados con una capa de grasa","d":"La grasa se derrite en la parrilla y mantiene la carne jugosa"},
+      {"icon":"🫓","t":"Se sirve envuelto en lavash, con tomate y cebolla cruda","d":"El pan absorbe los jugos, y la frescura corta la riqueza de la carne"}
+    ],
+    "fr": [
+      {"icon":"🧂","t":"Sans marinade lourde — juste sel, poivre et oignon","d":"Une bonne viande n'a pas besoin de masquer son goût, juste un assaisonnement simple"},
+      {"icon":"🍇","t":"Traditionnellement grillé sur des braises de sarments de vigne","d":"Le bois de vigne brûle uniformément et donne une fumée subtile et florale"},
+      {"icon":"🔪","t":"Gros morceaux, coupés avec une couche de gras","d":"Le gras fond sur le grill et garde la viande juteuse"},
+      {"icon":"🫓","t":"Servi enroulé dans du lavash, avec tomates et oignon cru","d":"Le pain absorbe les sucs, et la fraîcheur tranche la richesse de la viande"}
+    ],
+    "de": [
+      {"icon":"🧂","t":"Ohne schwere Marinade — nur Salz, Pfeffer und Zwiebel","d":"Gutes Fleisch muss seinen Geschmack nicht verstecken, nur einfach gewürzt werden"},
+      {"icon":"🍇","t":"Traditionell über Weinreben-Glut gegrillt","d":"Das Rebholz brennt gleichmäßig und gibt einen dezenten, blumigen Rauch"},
+      {"icon":"🔪","t":"Große Stücke, mit einer Fettschicht geschnitten","d":"Das Fett zerläuft auf dem Grill und hält das Fleisch saftig"},
+      {"icon":"🫓","t":"Wird in Lavash gewickelt serviert, mit Tomaten und roher Zwiebel","d":"Das Brot saugt die Säfte auf, und die Frische durchbricht die Fülle des Fleischs"}
+    ],
+    "pt": [
+      {"icon":"🧂","t":"Sem marinada pesada — só sal, pimenta e cebola","d":"Carne boa não precisa disfarçar o sabor, só um tempero simples"},
+      {"icon":"🍇","t":"Tradicionalmente grelhado sobre brasas de sarmentos de videira","d":"A madeira de videira queima de forma uniforme e dá um fumo sutil e floral"},
+      {"icon":"🔪","t":"Pedaços grandes, cortados com uma camada de gordura","d":"A gordura derrete na grelha e mantém a carne suculenta"},
+      {"icon":"🫓","t":"Servido enrolado em lavash, com tomate e cebola crua","d":"O pão absorve os sucos, e a frescura corta a riqueza da carne"}
+    ],
+    "ru": [
+      {"icon":"🧂","t":"Без тяжёлого маринада — только соль, перец и лук","d":"Хорошему мясу не нужно маскировать вкус, только простая приправа"},
+      {"icon":"🍇","t":"Традиционно жарится на углях виноградной лозы","d":"Лозовая древесина горит ровно и даёт лёгкий, цветочный дым"},
+      {"icon":"🔪","t":"Крупные куски, нарезанные со слоем жира","d":"Жир вытапливается на гриле и удерживает сочность мяса"},
+      {"icon":"🫓","t":"Подаётся завёрнутым в лаваш с помидорами и сырым луком","d":"Хлеб впитывает соки, а свежесть уравновешивает насыщенность мяса"}
+    ],
+    "ar": [
+      {"icon":"🧂","t":"بدون تتبيل ثقيل — فقط ملح وفلفل وبصل","d":"اللحم الجيد لا يحتاج لإخفاء نكهته، فقط تتبيل بسيط"},
+      {"icon":"🍇","t":"تقليديًا يُشوى على جمر خشب كروم العنب","d":"خشب الكرمة يحترق بانتظام ويمنح دخانًا خفيفًا وزهريًا"},
+      {"icon":"🔪","t":"قطع كبيرة، مقطعة مع طبقة من الدهن","d":"الدهن يذوب على الشواية ويحافظ على طراوة اللحم"},
+      {"icon":"🫓","t":"يُقدَّم ملفوفًا في اللافاش مع الطماطم والبصل النيء","d":"يمتص الخبز العصارة، والنكهة الطازجة توازن دسامة اللحم"}
+    ],
+    "zh": [
+      {"icon":"🧂","t":"无需重口味腌料——只用盐、胡椒和洋葱","d":"好的肉不需要掩盖味道，只需简单调味"},
+      {"icon":"🍇","t":"传统上用葡萄藤炭火烤制","d":"葡萄藤木燃烧均匀，带来淡淡的花香烟熏味"},
+      {"icon":"🔪","t":"切成带一层肥肉的大块","d":"肥肉在烤架上融化，让肉保持多汁"},
+      {"icon":"🫓","t":"用拉瓦什薄饼卷起配番茄和生洋葱食用","d":"面饼吸收肉汁，新鲜配菜化解肉的油腻感"}
+    ],
+    "ja": [
+      {"icon":"🧂","t":"重いマリネなし——塩、こしょう、玉ねぎだけ","d":"良い肉は味を隠す必要がなく、シンプルな下味だけでよい"},
+      {"icon":"🍇","t":"伝統的にはブドウの木の炭火で焼く","d":"ブドウの木は均一に燃え、控えめで花のような香りの煙を出す"},
+      {"icon":"🔪","t":"脂身を残した大きめのぶつ切りにする","d":"脂が網の上で溶け出し、肉のジューシーさを保つ"},
+      {"icon":"🫓","t":"ラヴァッシュに包み、トマトと生の玉ねぎとともに提供","d":"パンが肉汁を吸い込み、新鮮な野菜が肉のこってり感を和らげる"}
+    ],
+    "tr": [
+      {"icon":"🧂","t":"Ağır marine yok — sadece tuz, karabiber ve soğan","d":"İyi et lezzetini gizlemeye ihtiyaç duymaz, sadece sade bir baharatlama yeterlidir"},
+      {"icon":"🍇","t":"Geleneksel olarak asma odunu közünde pişirilir","d":"Asma odunu eşit yanar ve hafif, çiçeksi bir duman verir"},
+      {"icon":"🔪","t":"Bir tabaka yağ bırakılarak büyük parçalar halinde kesilir","d":"Yağ ızgarada eriyerek eti sulu tutar"},
+      {"icon":"🫓","t":"Domates ve çiğ soğanla lavaşa sarılarak servis edilir","d":"Ekmek suyu emer, tazelik etin yoğunluğunu dengeler"}
+    ],
+    "it": [
+      {"icon":"🧂","t":"Senza marinata pesante — solo sale, pepe e cipolla","d":"La buona carne non ha bisogno di mascherare il sapore, solo un condimento semplice"},
+      {"icon":"🍇","t":"Tradizionalmente grigliata su braci di legno di vite","d":"Il legno di vite brucia uniformemente e dà un fumo sottile e floreale"},
+      {"icon":"🔪","t":"Pezzi grandi, tagliati con uno strato di grasso","d":"Il grasso si scioglie sulla griglia e mantiene la carne succosa"},
+      {"icon":"🫓","t":"Servita avvolta nel lavash, con pomodori e cipolla cruda","d":"Il pane assorbe i succhi, e la freschezza taglia la ricchezza della carne"}
+    ],
+    "ko": [
+      {"icon":"🧂","t":"진한 양념 없이 — 소금, 후추, 양파만","d":"좋은 고기는 맛을 감출 필요 없이 간단한 양념이면 충분하다"},
+      {"icon":"🍇","t":"전통적으로 포도나무 숯불에 굽는다","d":"포도나무는 고르게 타며 은은하고 화사한 훈연 향을 낸다"},
+      {"icon":"🔪","t":"지방층을 남긴 큼직한 덩어리로 썬다","d":"불판 위에서 지방이 녹아내려 고기를 촉촉하게 유지한다"},
+      {"icon":"🫓","t":"라바시에 싸서 토마토와 생양파와 함께 낸다","d":"빵이 육즙을 흡수하고, 신선함이 고기의 진한 맛을 잡아준다"}
+    ],
+    "hi": [
+      {"icon":"🧂","t":"भारी मैरिनेड नहीं — बस नमक, काली मिर्च और प्याज़","d":"अच्छे मांस को स्वाद छिपाने की ज़रूरत नहीं, बस सादा मसाला काफी है"},
+      {"icon":"🍇","t":"पारंपरिक रूप से अंगूर की लकड़ी के अंगारों पर ग्रिल किया जाता है","d":"बेल की लकड़ी समान रूप से जलती है और हल्का, फूलों जैसा धुआं देती है"},
+      {"icon":"🔪","t":"चर्बी की परत छोड़कर बड़े टुकड़ों में काटा जाता है","d":"ग्रिल पर चर्बी पिघलती है और मांस को रसीला रखती है"},
+      {"icon":"🫓","t":"लवाश में लपेटकर टमाटर और कच्चे प्याज़ के साथ परोसा जाता है","d":"ब्रेड रस सोखती है, और ताज़गी मांस की भारीपन को संतुलित करती है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg mușchi de porc (spată sau ceafă), tăiat cuburi mari","2 cepe, tăiate rondele, împărțite","2 lingurițe sare","1 linguriță piper negru măcinat","3-4 foi de dafin","frigărui metalice sau de lemn înmuiate","lavaș sau lipie, pentru servire","2 roșii, feliate, pentru servire","sos tkemali, pentru servire"],
+    "en": ["1kg pork shoulder or neck, cut into large chunks","2 onions, sliced into rings, divided","2 tsp salt","1 tsp ground black pepper","3-4 bay leaves","metal or soaked wooden skewers","lavash or flatbread, for serving","2 tomatoes, sliced, for serving","tkemali sauce, for serving"],
+    "es": ["1kg de paletilla o cuello de cerdo, en trozos grandes","2 cebollas, en aros, repartidas","2 cdtas de sal","1 cdta de pimienta negra molida","3-4 hojas de laurel","brochetas de metal o de madera remojadas","lavash o pan plano, para servir","2 tomates, en rodajas, para servir","salsa tkemali, para servir"],
+    "fr": ["1kg d'épaule ou de collier de porc, en gros morceaux","2 oignons, en rondelles, répartis","2 c. à café de sel","1 c. à café de poivre noir moulu","3-4 feuilles de laurier","brochettes en métal ou en bois trempées","lavash ou pain plat, pour servir","2 tomates, en tranches, pour servir","sauce tkemali, pour servir"],
+    "de": ["1kg Schweineschulter oder -nacken, in große Stücke geschnitten","2 Zwiebeln, in Ringe geschnitten, aufgeteilt","2 TL Salz","1 TL gemahlener schwarzer Pfeffer","3-4 Lorbeerblätter","Metall- oder eingeweichte Holzspieße","Lavash oder Fladenbrot, zum Servieren","2 Tomaten, in Scheiben, zum Servieren","Tkemali-Sauce, zum Servieren"],
+    "pt": ["1kg de pá ou pescoço de porco, em pedaços grandes","2 cebolas, em rodelas, divididas","2 col. chá de sal","1 col. chá de pimenta preta moída","3-4 folhas de louro","espetos de metal ou de madeira hidratados","lavash ou pão achatado, para servir","2 tomates, fatiados, para servir","molho tkemali, para servir"],
+    "ru": ["1кг свиной лопатки или шеи, крупными кусками","2 луковицы, кольцами, разделённых","2 ч.л. соли","1 ч.л. молотого чёрного перца","3-4 лавровых листа","металлические или замоченные деревянные шампуры","лаваш или лепёшка, для подачи","2 помидора, нарезанных, для подачи","соус ткемали, для подачи"],
+    "ar": ["1كغ كتف أو رقبة خنزير، مقطعة قطعًا كبيرة","2 بصلة، مقطعة حلقات، مقسّمة","2 ملعقة صغيرة ملح","ملعقة صغيرة فلفل أسود مطحون","3-4 ورقات غار","أسياخ معدنية أو خشبية منقوعة","لافاش أو خبز مسطح، للتقديم","2 طماطم، مقطعة شرائح، للتقديم","صلصة تكيمالي، للتقديم"],
+    "zh": ["1公斤猪肩肉或颈肉，切大块","2个洋葱，切圈，分次使用","2茶匙盐","1茶匙黑胡椒粉","3-4片月桂叶","金属或泡水的木签","拉瓦什薄饼或饼皮，配餐用","2个番茄，切片，配餐用","tkemali酸李子酱，配餐用"],
+    "ja": ["豚肩肉または首肉1kg、大きめのぶつ切り","玉ねぎ2個、輪切り、分けて使用","塩小さじ2","黒こしょう小さじ1","ローリエ3〜4枚","金属または水に浸した木製の串","ラヴァッシュまたはフラットブレッド、添える用","トマト2個、輪切り、添える用","トケマリソース、添える用"],
+    "tr": ["1kg domuz kürek eti veya boyun eti, büyük parçalar halinde","2 soğan, halka doğranmış, bölünmüş","2 çay kaşığı tuz","1 çay kaşığı öğütülmüş karabiber","3-4 defne yaprağı","metal veya ıslatılmış tahta şişler","lavaş veya pide, servis için","2 domates, dilimlenmiş, servis için","tkemali sosu, servis için"],
+    "it": ["1kg di spalla o collo di maiale, a pezzi grandi","2 cipolle, ad anelli, divise","2 cucchiaini di sale","1 cucchiaino di pepe nero macinato","3-4 foglie di alloro","spiedini di metallo o di legno ammollati","lavash o pane piatto, per servire","2 pomodori, a fette, per servire","salsa tkemali, per servire"],
+    "ko": ["돼지 앞다리살 또는 목살 1kg, 큼직하게 썬 것","양파 2개, 링으로 썬 것, 나눠 사용","소금 2작은술","간 흑후추 1작은술","월계수잎 3-4장","금속 또는 물에 불린 나무 꼬치","라바시 또는 납작빵, 곁들임용","토마토 2개, 썬 것, 곁들임용","트케말리 소스, 곁들임용"],
+    "hi": ["1किलो पोर्क शोल्डर या गर्दन, बड़े टुकड़ों में कटा हुआ","2 प्याज़, छल्लों में कटे हुए, बांटे हुए","2 छोटे चम्मच नमक","1 छोटा चम्मच पिसी काली मिर्च","3-4 तेज़पत्ते","धातु या भीगी लकड़ी की सीखें","लवाश या फ्लैटब्रेड, परोसने के लिए","2 टमाटर, कटे हुए, परोसने के लिए","त्केमाली सॉस, परोसने के लिए"]
+  },
+  "howIsMade": {
+    "ro": "TAIE CARNEA: taie mușchiul de porc în cuburi mari, uniforme, păstrând un strat de grăsime pentru suculentă. CONDIMENTEAZĂ SIMPLU: amestecă bucățile de carne cu sarea, piperul, jumătate din ceapă și foile de dafin, lasă la temperatura camerei 1-2 ore, sau la frigider peste noapte. ÎNȘIRĂ PE FRIGĂRUI: înșiră bucățile de carne strâns pe frigărui, alternând ocazional cu inele de ceapă. FRIGE PE JĂRATIC: frige pe cărbuni fierbinți de lemn (tradițional viță de vie), întorcând des, până se rumenesc la exterior și rămân suculente în interior, circa 15-20 de minute. LASĂ SĂ SE ODIHNEASCĂ: lasă câteva minute pe frigărui înainte de a servi. SERVEȘTE: servește înfășurat în lavaș, cu roșii feliate, ceapă crudă și sos tkemali.",
+    "en": "CUT THE MEAT: cut the pork into large, even chunks, keeping a layer of fat on for juiciness. SEASON SIMPLY: mix the meat with the salt, pepper, half the onion and the bay leaves, let sit at room temperature 1-2 hours, or refrigerate overnight. THREAD THE SKEWERS: thread the meat chunks tightly onto the skewers, alternating occasionally with onion rings. GRILL OVER EMBERS: grill over hot wood embers (traditionally grapevine wood), turning often, until charred outside and juicy inside, about 15-20 minutes. LET IT REST: let rest a few minutes on the skewer before serving. SERVE: serve wrapped in lavash, with sliced tomatoes, raw onion and tkemali sauce.",
+    "es": "CORTA LA CARNE: corta la paletilla de cerdo en trozos grandes y uniformes, dejando una capa de grasa para la jugosidad. SAZONA SIN COMPLICACIONES: mezcla la carne con la sal, la pimienta, la mitad de la cebolla y las hojas de laurel, deja reposar a temperatura ambiente 1-2 horas, o refrigera toda la noche. ENSARTA LAS BROCHETAS: ensarta los trozos de carne apretados en las brochetas, alternando de vez en cuando con aros de cebolla. ASA SOBRE BRASAS: asa sobre brasas de madera caliente (tradicionalmente de sarmiento de vid), dando vuelta a menudo, hasta que se doren por fuera y queden jugosas por dentro, unos 15-20 minutos. DEJA REPOSAR: deja reposar unos minutos en la brocheta antes de servir. SIRVE: sirve envuelto en lavash, con tomate en rodajas, cebolla cruda y salsa tkemali.",
+    "fr": "COUPE LA VIANDE: coupe l'épaule de porc en gros morceaux réguliers, en laissant une couche de gras pour le moelleux. ASSAISONNE SIMPLEMENT: mélange la viande avec le sel, le poivre, la moitié de l'oignon et les feuilles de laurier, laisse reposer à température ambiante 1-2 heures, ou au réfrigérateur toute une nuit. ENFILE LES BROCHETTES: enfile les morceaux de viande serrés sur les brochettes, en alternant parfois avec des rondelles d'oignon. GRILLE SUR LES BRAISES: fais griller sur des braises de bois chaudes (traditionnellement du sarment de vigne), en retournant souvent, jusqu'à ce que ce soit doré à l'extérieur et juteux à l'intérieur, environ 15-20 minutes. LAISSE REPOSER: laisse reposer quelques minutes sur la brochette avant de servir. SERS: sers enroulé dans du lavash, avec des tranches de tomate, de l'oignon cru et de la sauce tkemali.",
+    "de": "SCHNEIDE DAS FLEISCH: die Schweineschulter in große, gleichmäßige Stücke schneiden, dabei eine Fettschicht für die Saftigkeit belassen. WÜRZE EINFACH: das Fleisch mit Salz, Pfeffer, der Hälfte der Zwiebel und den Lorbeerblättern mischen, 1-2 Stunden bei Zimmertemperatur ruhen lassen oder über Nacht kühlstellen. STECKE DIE SPIESSE: die Fleischstücke eng auf die Spieße stecken, gelegentlich mit Zwiebelringen abwechselnd. GRILLE ÜBER GLUT: über heißer Holzglut grillen (traditionell Weinrebenholz), oft wenden, bis außen gebräunt und innen saftig, etwa 15-20 Minuten. LASS ES RUHEN: ein paar Minuten am Spieß ruhen lassen, bevor serviert wird. SERVIEREN: in Lavash gewickelt servieren, mit Tomatenscheiben, roher Zwiebel und Tkemali-Sauce.",
+    "pt": "CORTE A CARNE: corte a pá de porco em pedaços grandes e uniformes, deixando uma camada de gordura para suculência. TEMPERE SIMPLES: misture a carne com o sal, a pimenta, metade da cebola e as folhas de louro, deixe descansar à temperatura ambiente por 1-2 horas, ou no frigorífico durante a noite. ENFIE NOS ESPETOS: enfie os pedaços de carne apertados nos espetos, alternando ocasionalmente com rodelas de cebola. GRELHE SOBRE BRASAS: grelhe sobre brasas de madeira quentes (tradicionalmente de sarmentos de videira), virando com frequência, até dourar por fora e ficar suculento por dentro, cerca de 15-20 minutos. DEIXE DESCANSAR: deixe descansar alguns minutos no espeto antes de servir. SIRVA: sirva enrolado em lavash, com tomate fatiado, cebola crua e molho tkemali.",
+    "ru": "НАРЕЖЬ МЯСО: нарежь свиную лопатку крупными ровными кусками, оставив слой жира для сочности. ПРИПРАВЬ ПРОСТО: смешай мясо с солью, перцем, половиной лука и лавровым листом, оставь при комнатной температуре на 1-2 часа или в холодильнике на ночь. НАНИЖИ НА ШАМПУРЫ: плотно нанижи куски мяса на шампуры, изредка чередуя с кольцами лука. ЖАРЬ НА УГЛЯХ: жарь на горячих древесных углях (традиционно из виноградной лозы), часто переворачивая, пока снаружи не подрумянится, а внутри останется сочным, около 15-20 минут. ДАЙ ОТДОХНУТЬ: дай постоять несколько минут на шампуре перед подачей. ПОДАЙ: подавай завёрнутым в лаваш, с нарезанными помидорами, сырым луком и соусом ткемали.",
+    "ar": "قطّع اللحم: قطّع كتف الخنزير إلى قطع كبيرة ومتساوية، مع ترك طبقة من الدهن للحفاظ على الطراوة. تبّل ببساطة: اخلط اللحم مع الملح والفلفل ونصف البصل وأوراق الغار، اتركه في حرارة الغرفة 1-2 ساعة، أو في الثلاجة طوال الليل. أدخل الأسياخ: أدخل قطع اللحم بإحكام في الأسياخ، مع التناوب أحيانًا مع حلقات البصل. اشوِ على الجمر: اشوِ على جمر خشب ساخن (تقليديًا خشب كروم العنب)، مع التقليب كثيرًا، حتى يتحمّر من الخارج ويبقى طريًا من الداخل، حوالي 15-20 دقيقة. دعه يرتاح: دعه يرتاح بضع دقائق على السيخ قبل التقديم. قدّم: قدّمه ملفوفًا في اللافاش مع شرائح الطماطم والبصل النيء وصلصة تكيمالي.",
+    "zh": "切肉：将猪肩肉切成大小均匀的大块，保留一层肥肉以保持多汁。简单调味：将肉与盐、胡椒、一半洋葱和月桂叶拌匀，室温静置1-2小时，或冷藏过夜。穿签：将肉块紧密穿在签子上，偶尔穿插洋葱圈。炭火烤制：在热炭火上烤制（传统用葡萄藤木），频繁翻动，直至外层焦香、内部多汁，约15-20分钟。静置：取下前在签子上静置几分钟。上桌：用拉瓦什薄饼卷起，配番茄片、生洋葱和tkemali酱食用。",
+    "ja": "肉を切る：豚肩肉をジューシーさを保つため脂身を残しつつ、大きさの揃った大きなぶつ切りにする。シンプルに下味をつける：肉に塩、こしょう、玉ねぎの半量、ローリエを混ぜ、室温で1〜2時間、または冷蔵庫で一晩置く。串に刺す：肉を串にぎっしりと刺し、時々玉ねぎの輪切りを挟む。炭火で焼く：熱い木炭（伝統的にはブドウの木）の上で頻繁に返しながら、外側が焦げ目がつき中がジューシーになるまで約15〜20分焼く。休ませる：提供前に串のまま数分休ませる。盛り付ける：ラヴァッシュに包み、輪切りトマト、生の玉ねぎ、トケマリソースとともに提供する。",
+    "tr": "ETİ KESİN: domuz kürek etini büyük, eşit parçalar halinde kesin, sululuk için bir tabaka yağ bırakın. SADE BAHARATLAYIN: eti tuz, karabiber, soğanın yarısı ve defne yapraklarıyla karıştırın, oda sıcaklığında 1-2 saat veya buzdolabında bir gece dinlendirin. ŞİŞLERE DİZİN: et parçalarını sıkıca şişlere dizin, arada soğan halkalarıyla değiştirerek. KÖZDE PİŞİRİN: sıcak odun közünde (geleneksel olarak asma odunu), sık sık çevirerek, dışı kararıp içi sulu kalana kadar yaklaşık 15-20 dakika pişirin. DİNLENDİRİN: servis etmeden önce birkaç dakika şişte dinlendirin. SERVİS YAPIN: lavaşa sarılmış, dilimlenmiş domates, çiğ soğan ve tkemali sosuyla servis edin.",
+    "it": "TAGLIA LA CARNE: taglia la spalla di maiale in pezzi grandi e uniformi, lasciando uno strato di grasso per la succosità. CONDISCI IN MODO SEMPLICE: mescola la carne con il sale, il pepe, metà della cipolla e le foglie di alloro, lascia riposare a temperatura ambiente 1-2 ore, o in frigo tutta la notte. INFILA GLI SPIEDINI: infila i pezzi di carne stretti sugli spiedini, alternando ogni tanto con anelli di cipolla. GRIGLIA SULLA BRACE: griglia su brace di legno calda (tradizionalmente di vite), girando spesso, finché dorata fuori e succosa dentro, circa 15-20 minuti. LASCIA RIPOSARE: lascia riposare qualche minuto sullo spiedino prima di servire. SERVI: servi avvolta nel lavash, con pomodori a fette, cipolla cruda e salsa tkemali.",
+    "ko": "고기 자르기: 돼지 앞다리살을 즙이 많게 하기 위해 지방층을 남기고 크고 고르게 썬다. 간단히 밑간하기: 고기를 소금, 후추, 양파 절반, 월계수잎과 섞어 실온에서 1-2시간 또는 냉장고에서 하룻밤 재운다. 꼬치에 꽂기: 고기를 꼬치에 빽빽하게 꽂고 가끔 양파 링을 끼운다. 숯불에 굽기: 뜨거운 나무 숯불(전통적으로 포도나무)에서 자주 뒤집으며 겉은 그을리고 속은 촉촉해질 때까지 약 15-20분 굽는다. 휴지시키기: 서빙 전 꼬치째로 몇 분 휴지시킨다. 서빙하기: 라바시에 싸서 썬 토마토, 생양파, 트케말리 소스와 함께 낸다.",
+    "hi": "मांस काटें: पोर्क शोल्डर को रसीलेपन के लिए चर्बी की परत छोड़कर बड़े, समान टुकड़ों में काटें। सादा मसाला लगाएं: मांस को नमक, काली मिर्च, आधे प्याज़ और तेज़पत्तों के साथ मिलाएं, कमरे के तापमान पर 1-2 घंटे या फ्रिज में रातभर रखें। सीखों में पिरोएं: मांस के टुकड़ों को सीखों में कसकर पिरोएं, बीच-बीच में प्याज़ के छल्ले डालें। अंगारों पर ग्रिल करें: गरम लकड़ी के अंगारों (पारंपरिक रूप से अंगूर की लकड़ी) पर बार-बार पलटते हुए, बाहर से भूरा और अंदर से रसीला होने तक लगभग 15-20 मिनट ग्रिल करें। आराम दें: परोसने से पहले सीख पर कुछ मिनट आराम दें। परोसें: लवाश में लपेटकर कटे टमाटर, कच्चे प्याज़ और त्केमाली सॉस के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Mtsvadi e considerat, în Georgia, forma originară a fripturii pe frigare, cu rădăcini care ar putea preceda cu mult termenul rusesc „șașlîk\", răspândit ulterior din regiunile caucaziene. La o masă tradițională georgiană, supra, mtsvadi ocupă un loc central — nu ca o simplă garnitură de carne, ci ca punctul culminant al mesei, adesea însoțit de toasturi ritualice conduse de tamada, maestrul de ceremonii al mesei.\n\nSimplitatea preparării e considerată, în Georgia, un semn de respect față de carne, nu o lipsă de efort. Georgienii insistă adesea că o carne bună nu are nevoie de marinată complicată, ci doar de sare, piper și un foc potrivit — de obicei jăratic din lemn de viță de vie, folosit tocmai pentru că țara are o tradiție viticolă veche de mii de ani, iar lemnul rămas după tăierea viilor era oricum disponibil din abundență.",
+    "en": "In Georgia, mtsvadi is considered the original form of skewered grilled meat, with roots that may well predate the Russian term \"shashlik,\" which later spread from Caucasian regions. At a traditional Georgian feast, the supra, mtsvadi holds a central place — not as a simple meat side, but as the meal's centerpiece, often accompanied by ritual toasts led by the tamada, the toastmaster of the table.\n\nThe simplicity of the preparation is seen in Georgia as a sign of respect for the meat, not a lack of effort. Georgians often insist that good meat doesn't need a complicated marinade, just salt, pepper and the right fire — usually embers of grapevine wood, used precisely because the country has a winemaking tradition thousands of years old, and the wood left over from pruning vines was abundantly available anyway.",
+    "es": "En Georgia, el mtsvadi se considera la forma original de la carne asada en brocheta, con raíces que probablemente sean anteriores al término ruso \"shashlik\", que se extendió más tarde desde las regiones caucásicas. En un banquete tradicional georgiano, la supra, el mtsvadi ocupa un lugar central — no como una simple guarnición de carne, sino como el plato principal de la comida, a menudo acompañado de brindis rituales dirigidos por el tamada, el maestro de brindis de la mesa.\n\nLa sencillez de la preparación se ve en Georgia como una señal de respeto hacia la carne, no como falta de esfuerzo. Los georgianos suelen insistir en que la buena carne no necesita una marinada complicada, solo sal, pimienta y el fuego adecuado — normalmente brasas de sarmiento de vid, usadas precisamente porque el país tiene una tradición vinícola de miles de años, y la madera sobrante de la poda de las viñas estaba de todos modos disponible en abundancia.",
+    "fr": "En Géorgie, le mtsvadi est considéré comme la forme originelle de la viande grillée à la broche, avec des racines qui pourraient bien précéder le terme russe « chachlik », qui s'est répandu plus tard depuis les régions caucasiennes. Lors d'un festin géorgien traditionnel, la supra, le mtsvadi occupe une place centrale — non comme un simple accompagnement de viande, mais comme le point culminant du repas, souvent accompagné de toasts rituels menés par le tamada, le maître des toasts de la table.\n\nLa simplicité de la préparation est perçue en Géorgie comme un signe de respect envers la viande, pas un manque d'effort. Les Géorgiens insistent souvent sur le fait qu'une bonne viande n'a pas besoin de marinade compliquée, juste de sel, de poivre et d'un feu adapté — généralement des braises de sarments de vigne, utilisées précisément parce que le pays a une tradition viticole vieille de plusieurs milliers d'années, et le bois issu de la taille des vignes était de toute façon disponible en abondance.",
+    "de": "In Georgien gilt Mtsvadi als die ursprüngliche Form des gegrillten Spießfleischs, mit Wurzeln, die möglicherweise weit vor dem russischen Begriff „Schaschlik\" liegen, der sich später von kaukasischen Regionen aus verbreitete. Bei einem traditionellen georgischen Festmahl, der Supra, nimmt Mtsvadi einen zentralen Platz ein — nicht als einfache Fleischbeilage, sondern als Höhepunkt der Mahlzeit, oft begleitet von rituellen Trinksprüchen, angeführt vom Tamada, dem Tischmeister.\n\nDie Einfachheit der Zubereitung gilt in Georgien als Zeichen des Respekts gegenüber dem Fleisch, nicht als mangelnder Aufwand. Georgier bestehen oft darauf, dass gutes Fleisch keine komplizierte Marinade braucht, nur Salz, Pfeffer und das richtige Feuer — meist Glut aus Weinrebenholz, gerade deshalb verwendet, weil das Land eine jahrtausendealte Weinbautradition hat und das beim Rebschnitt anfallende Holz ohnehin reichlich vorhanden war.",
+    "pt": "Na Geórgia, o mtsvadi é considerado a forma original da carne grelhada em espeto, com raízes que provavelmente antecedem o termo russo \"shashlik\", que se espalhou depois a partir das regiões caucasianas. Numa festa tradicional georgiana, a supra, o mtsvadi ocupa um lugar central — não como um simples acompanhamento de carne, mas como o ponto alto da refeição, muitas vezes acompanhado de brindes rituais conduzidos pelo tamada, o mestre de cerimónias da mesa.\n\nA simplicidade da preparação é vista na Geórgia como sinal de respeito pela carne, não falta de esforço. Os georgianos costumam insistir que uma carne boa não precisa de uma marinada complicada, apenas sal, pimenta e o fogo certo — normalmente brasas de sarmentos de videira, usadas precisamente porque o país tem uma tradição vinícola milenar, e a madeira sobrante da poda das vinhas estava de qualquer forma disponível em abundância.",
+    "ru": "В Грузии мцвади считается изначальной формой жареного на вертеле мяса, чьи корни, возможно, предшествуют русскому термину «шашлык», который позже распространился из кавказских регионов. На традиционном грузинском застолье, супре, мцвади занимает центральное место — не как простой мясной гарнир, а как кульминация трапезы, часто сопровождаемая ритуальными тостами под руководством тамады, распорядителя стола.\n\nПростота приготовления считается в Грузии знаком уважения к мясу, а не отсутствием усилий. Грузины часто настаивают, что хорошему мясу не нужен сложный маринад, только соль, перец и правильный огонь — обычно угли из виноградной лозы, используемые именно потому, что страна обладает многотысячелетней виноделческой традицией, а дерево, оставшееся после обрезки лоз, было в любом случае в изобилии.",
+    "ar": "في جورجيا، يُعتبر المتسفادي الشكل الأصلي للحم المشوي على السيخ، بجذور قد تسبق المصطلح الروسي «شاشليك» الذي انتشر لاحقًا من مناطق القوقاز. في وليمة جورجية تقليدية، السوپرا، يحتل المتسفادي مكانة مركزية — ليس كطبق جانبي بسيط من اللحم، بل كذروة الوجبة، غالبًا ما يرافقه نخب طقسي يقوده التامادا، رئيس المراسم في المائدة.\n\nتُعتبر بساطة التحضير في جورجيا علامة احترام للحم، لا نقصًا في الجهد. يصرّ الجورجيون غالبًا على أن اللحم الجيد لا يحتاج تتبيلًا معقدًا، فقط ملحًا وفلفلًا والنار المناسبة — عادة جمر خشب كروم العنب، المستخدم تحديدًا لأن البلاد تملك تقليدًا في صناعة النبيذ يعود لآلاف السنين، وكان الخشب المتبقي من تقليم الكروم متوفرًا بكثرة على أي حال.",
+    "zh": "在格鲁吉亚，姆茨瓦迪被认为是烤肉串的原始形态，其渊源很可能早于后来从高加索地区传开的俄语词「shashlik」。在传统的格鲁吉亚宴席「苏普拉」上，姆茨瓦迪占据核心地位——不是简单的肉类配菜，而是这顿饭的高潮，通常伴随着由塔玛达（宴会祝酒主持人）主持的仪式性祝酒。\n\n这种简单的做法在格鲁吉亚被视为对肉的尊重，而非偷懒。格鲁吉亚人常常坚持认为，好的肉不需要复杂的腌料，只需要盐、胡椒和恰到好处的火——通常是葡萄藤木的余烬，之所以特意使用它，是因为这个国家有着数千年的酿酒传统，修剪葡萄藤剩下的木材本来就十分充足。",
+    "ja": "ジョージアでは、ムツヴァディは串焼き肉の原型と考えられており、そのルーツは後にコーカサス地方から広まったロシア語の「シャシリク」よりもずっと古い可能性がある。伝統的なジョージアの宴会「スプラ」において、ムツヴァディは中心的な位置を占める——単なる肉の付け合わせではなく、食事のクライマックスとして、しばしばタマダ（乾杯の司会役）が率いる儀式的な乾杯を伴う。\n\nこの調理法のシンプルさは、ジョージアでは肉への敬意の表れとされ、手抜きとは見なされない。ジョージアの人々はしばしば、良い肉には複雑なマリネは不要で、塩とこしょう、そして適切な火だけでよいと主張する——通常は使われるのはブドウの木の炭火で、それはこの国が数千年に及ぶワイン造りの伝統を持ち、剪定後に残るブドウの木材がもともと豊富にあったからにほかならない。",
+    "tr": "Gürcistan'da mtsvadi, daha sonra Kafkas bölgelerinden yayılan Rusça \"şaşlık\" teriminden çok daha eskiye dayanan köklere sahip, şişte ızgara etin özgün biçimi sayılır. Geleneksel bir Gürcü ziyafetinde, supra'da, mtsvadi merkezi bir yer tutar — sıradan bir et garnitürü olarak değil, sofranın tamadası, yani tost ustası tarafından yönetilen ritüel kadehler eşliğinde yemeğin doruk noktası olarak.\n\nHazırlığın sadeliği Gürcistan'da çaba eksikliği değil, ete duyulan saygının bir işareti olarak görülür. Gürcüler sıklıkla iyi bir etin karmaşık bir marineye ihtiyaç duymadığını, sadece tuz, karabiber ve doğru ateşe ihtiyaç duyduğunu — genellikle bağ budamasından kalan ve zaten bolca bulunan asma odununun közüne — ısrar eder, çünkü ülkenin binlerce yıllık bir şarapçılık geleneği vardır.",
+    "it": "In Georgia, il mtsvadi è considerato la forma originaria della carne grigliata allo spiedo, con radici che potrebbero precedere di molto il termine russo \"shashlik\", diffusosi in seguito dalle regioni caucasiche. In un banchetto georgiano tradizionale, la supra, il mtsvadi occupa un posto centrale — non come semplice contorno di carne, ma come piatto forte del pasto, spesso accompagnato da brindisi rituali guidati dal tamada, il maestro dei brindisi della tavola.\n\nLa semplicità della preparazione è vista in Georgia come segno di rispetto verso la carne, non come mancanza di impegno. I georgiani insistono spesso sul fatto che una buona carne non ha bisogno di una marinata complicata, solo sale, pepe e il fuoco giusto — di solito braci di legno di vite, usate proprio perché il paese ha una tradizione vinicola millenaria, e il legno avanzato dalla potatura delle viti era comunque disponibile in abbondanza.",
+    "ko": "조지아에서 츠바디는 꼬치구이의 원형으로 여겨지며, 나중에 캅카스 지역에서 퍼져나간 러시아어 단어 '샤슬릭'보다도 훨씬 오래된 뿌리를 가지고 있을 가능성이 크다. 전통적인 조지아식 연회인 수프라에서 츠바디는 중심적인 위치를 차지한다 — 단순한 고기 사이드 메뉴가 아니라 식사의 하이라이트로서, 종종 연회의 건배사를 이끄는 타마다가 주도하는 의례적인 건배와 함께한다.\n\n조리법의 단순함은 조지아에서 노력 부족이 아니라 고기에 대한 존중의 표시로 여겨진다. 조지아 사람들은 좋은 고기는 복잡한 양념이 필요 없고 소금, 후추, 그리고 적절한 불만 있으면 된다고 자주 주장한다 — 보통 포도나무 숯을 쓰는데, 이는 이 나라가 수천 년에 걸친 와인 양조 전통을 가지고 있어 포도나무 가지치기 후 남은 목재가 어차피 풍부했기 때문이다.",
+    "hi": "जॉर्जिया में, म्त्सवादी को सीख पर भुने मांस का मूल रूप माना जाता है, जिसकी जड़ें रूसी शब्द \"शश्लिक\" से भी पहले की हो सकती हैं, जो बाद में कॉकेशस क्षेत्रों से फैला। पारंपरिक जॉर्जियाई भोज, सुप्रा, में म्त्सवादी केंद्रीय स्थान रखता है — एक साधारण मांस साइड डिश के रूप में नहीं, बल्कि भोजन के चरमोत्कर्ष के रूप में, अक्सर तमादा, मेज़ के टोस्ट मास्टर, द्वारा संचालित औपचारिक टोस्ट के साथ।\n\nजॉर्जिया में तैयारी की सादगी को मांस के प्रति सम्मान का प्रतीक माना जाता है, न कि प्रयास की कमी। जॉर्जियाई लोग अक्सर ज़ोर देते हैं कि अच्छे मांस को जटिल मैरिनेड की ज़रूरत नहीं होती, बस नमक, काली मिर्च और सही आग की — आमतौर पर अंगूर की लकड़ी के अंगारे, जिनका उपयोग ठीक इसलिए किया जाता है क्योंकि देश में हज़ारों साल पुरानी शराब बनाने की परंपरा है, और बेलों की छंटाई के बाद बची लकड़ी वैसे भी प्रचुर मात्रा में उपलब्ध थी।"
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 21,
+    "tags": ["family"],
+    "desc": {
+      "ro": "Frigărui de porc condimentate simplu cu sare și piper, frigărui pe jăratic, servite în lavaș cu roșii și ceapă.",
+      "en": "Simply seasoned pork skewers, grilled over embers, served in lavash with tomatoes and onion.",
+      "es": "Brochetas de cerdo sazonadas de forma sencilla, asadas sobre brasas, servidas en lavash con tomate y cebolla.",
+      "fr": "Brochettes de porc simplement assaisonnées, grillées sur braises, servies dans du lavash avec tomate et oignon.",
+      "de": "Einfach gewürzte Schweinespieße, über Glut gegrillt, serviert in Lavash mit Tomaten und Zwiebel.",
+      "pt": "Espetos de porco simplesmente temperados, grelhados sobre brasas, servidos em lavash com tomate e cebola.",
+      "ru": "Просто приправленные шашлыки из свинины, жаренные на углях, подаются в лаваше с помидорами и луком.",
+      "ar": "أسياخ لحم خنزير متبلة ببساطة، مشوية على الجمر، تُقدَّم في اللافاش مع الطماطم والبصل.",
+      "zh": "简单调味的猪肉串，炭火烤制，用拉瓦什薄饼配番茄和洋葱包裹食用。",
+      "ja": "シンプルに味付けした豚肉串を炭火で焼き、トマトと玉ねぎとともにラヴァッシュで包んで提供。",
+      "tr": "Sade baharatlanmış domuz eti şişleri, közde ızgara yapılır, domates ve soğanla lavaşta servis edilir.",
+      "it": "Spiedini di maiale semplicemente insaporiti, grigliati sulla brace, serviti nel lavash con pomodori e cipolla.",
+      "ko": "소금과 후추로만 간단히 양념한 돼지고기 꼬치를 숯불에 구워 토마토와 양파를 곁들여 라바시에 싸서 낸다.",
+      "hi": "सादा मसाला लगे पोर्क सीख, अंगारों पर ग्रिल किए गए, टमाटर और प्याज़ के साथ लवाश में परोसे जाते हैं।"
+    }
+  }
+}

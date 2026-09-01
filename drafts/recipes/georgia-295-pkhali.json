@@ -1,0 +1,176 @@
+{
+  "id": 295,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Georgia", "en": "Georgia", "es": "Georgia", "fr": "Géorgie", "de": "Georgien",
+    "pt": "Geórgia", "ru": "Грузия", "ar": "جورجيا", "zh": "格鲁吉亚", "ja": "ジョージア",
+    "tr": "Gürcistan", "it": "Georgia", "ko": "조지아", "hi": "जॉर्जिया"
+  },
+  "name": {
+    "ro": "Pkhali", "en": "Pkhali", "es": "Pkhali", "fr": "Pkhali", "de": "Pchali",
+    "pt": "Pkhali", "ru": "Пхали", "ar": "بخالي", "zh": "菠菜核桃泥", "ja": "プハリ",
+    "tr": "Pkhali", "it": "Pkhali", "ko": "프칼리", "hi": "प्खाली"
+  },
+  "category": {
+    "ro": "Aperitiv", "en": "Appetizer", "es": "Aperitivo", "fr": "Apéritif", "de": "Vorspeise",
+    "pt": "Aperitivo", "ru": "Закуска", "ar": "مقبلات", "zh": "开胃菜", "ja": "前菜",
+    "tr": "Başlangıç", "it": "Antipasto", "ko": "전채", "hi": "ऐपेटाइज़र"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🥬","t":"Spanacul se stoarce complet de lichid după blanșare","d":"Fără acest pas, pasta rămâne apoasă și nu se leagă"},
+      {"icon":"🌰","t":"Pasta de nucă e liantul, nu ouăle sau smântâna","d":"Nucă măcinată cu usturoi și oțet dă structura, nu doar aroma"},
+      {"icon":"🌸","t":"Puțină șofrănel imeretin pentru culoare","d":"O urmă de galben cald, tipic bucătăriei georgiene, nu neapărat gust intens"},
+      {"icon":"🌱","t":"Boabe de rodie presărate deasupra, la servire","d":"Acresc textura cu pocnituri dulci-acrișoare, contrastând cu pasta cremoasă"}
+    ],
+    "en": [
+      {"icon":"🥬","t":"The spinach is squeezed completely dry after blanching","d":"Without this step, the paste stays watery and won't hold together"},
+      {"icon":"🌰","t":"Walnut paste is the binder, not eggs or cream","d":"Ground walnuts with garlic and vinegar give the structure, not just flavor"},
+      {"icon":"🌸","t":"A pinch of Imeretian marigold for color","d":"A touch of warm yellow typical of Georgian cooking, not for intense flavor"},
+      {"icon":"🌱","t":"Pomegranate seeds scattered on top, when serving","d":"Add a sweet-tart pop of texture that contrasts with the creamy paste"}
+    ],
+    "es": [
+      {"icon":"🥬","t":"La espinaca se exprime por completo tras escaldarla","d":"Sin este paso, la pasta queda aguada y no se une"},
+      {"icon":"🌰","t":"La pasta de nuez es el ligante, no huevos ni nata","d":"La nuez molida con ajo y vinagre da la estructura, no solo el sabor"},
+      {"icon":"🌸","t":"Una pizca de caléndula imeretiana para el color","d":"Un toque de amarillo cálido típico de la cocina georgiana, no para sabor intenso"},
+      {"icon":"🌱","t":"Semillas de granada esparcidas encima, al servir","d":"Añaden un toque dulce-ácido y crujiente que contrasta con la pasta cremosa"}
+    ],
+    "fr": [
+      {"icon":"🥬","t":"Les épinards sont pressés à sec après avoir été blanchis","d":"Sans cette étape, la pâte reste aqueuse et ne se tient pas"},
+      {"icon":"🌰","t":"La pâte de noix est le liant, pas des œufs ni de la crème","d":"Les noix moulues avec ail et vinaigre donnent la structure, pas juste la saveur"},
+      {"icon":"🌸","t":"Une pincée de souci iméréthien pour la couleur","d":"Une touche de jaune chaud typique de la cuisine géorgienne, pas pour un goût intense"},
+      {"icon":"🌱","t":"Des graines de grenade parsemées dessus, au moment de servir","d":"Apportent un croquant doux-acidulé qui contraste avec la pâte crémeuse"}
+    ],
+    "de": [
+      {"icon":"🥬","t":"Der Spinat wird nach dem Blanchieren vollständig ausgedrückt","d":"Ohne diesen Schritt bleibt die Paste wässrig und hält nicht zusammen"},
+      {"icon":"🌰","t":"Walnusspaste ist das Bindemittel, nicht Ei oder Sahne","d":"Gemahlene Walnüsse mit Knoblauch und Essig geben die Struktur, nicht nur den Geschmack"},
+      {"icon":"🌸","t":"Eine Prise imeretische Ringelblume für die Farbe","d":"Ein Hauch warmes Gelb, typisch für die georgische Küche, nicht für intensiven Geschmack"},
+      {"icon":"🌱","t":"Granatapfelkerne beim Servieren obenauf gestreut","d":"Geben einen süß-säuerlichen Knuspereffekt, der mit der cremigen Paste kontrastiert"}
+    ],
+    "pt": [
+      {"icon":"🥬","t":"O espinafre é bem espremido depois de escaldado","d":"Sem este passo, a pasta fica aguada e não liga"},
+      {"icon":"🌰","t":"A pasta de noz é o ligante, não ovos ou natas","d":"A noz moída com alho e vinagre dá a estrutura, não só o sabor"},
+      {"icon":"🌸","t":"Uma pitada de calêndula imeretiana para a cor","d":"Um toque de amarelo quente típico da culinária georgiana, não para sabor intenso"},
+      {"icon":"🌱","t":"Sementes de romã espalhadas por cima, ao servir","d":"Trazem um toque doce-ácido e crocante que contrasta com a pasta cremosa"}
+    ],
+    "ru": [
+      {"icon":"🥬","t":"Шпинат полностью отжимается после бланширования","d":"Без этого шага паста остаётся водянистой и не держит форму"},
+      {"icon":"🌰","t":"Ореховая паста — связующее, а не яйца или сливки","d":"Молотые орехи с чесноком и уксусом дают структуру, а не только вкус"},
+      {"icon":"🌸","t":"Щепотка имеретинского шафрана для цвета","d":"Тёплый жёлтый оттенок, типичный для грузинской кухни, а не для яркого вкуса"},
+      {"icon":"🌱","t":"Зёрна граната посыпаются сверху при подаче","d":"Добавляют сладко-кислую хрусткость, контрастирующую с кремовой пастой"}
+    ],
+    "ar": [
+      {"icon":"🥬","t":"السبانخ تُعصر تمامًا بعد السلق","d":"دون هذه الخطوة تبقى العجينة مائية ولا تتماسك"},
+      {"icon":"🌰","t":"عجينة الجوز هي الرابط، لا البيض أو القشدة","d":"الجوز المطحون مع الثوم والخل يمنح القوام، لا النكهة فقط"},
+      {"icon":"🌸","t":"رشة من زهرة القطيفة الإيميرتية للون","d":"لمسة صفراء دافئة مميزة للمطبخ الجورجي، لا لنكهة قوية"},
+      {"icon":"🌱","t":"بذور الرمان تُرش فوقها عند التقديم","d":"تضيف قرمشة حلوة حامضة تتباين مع العجينة الكريمية"}
+    ],
+    "zh": [
+      {"icon":"🥬","t":"菠菜焯水后要彻底挤干水分","d":"若省略此步骤，酱料会过于稀水且无法成型"},
+      {"icon":"🌰","t":"核桃酱是黏合剂，而非鸡蛋或奶油","d":"核桃碎配大蒜和醋赋予结构，而不仅仅是风味"},
+      {"icon":"🌸","t":"少许伊梅列蒂万寿菊粉增添颜色","d":"格鲁吉亚菜特有的暖黄色调，而非追求浓烈味道"},
+      {"icon":"🌱","t":"上桌前撒上石榴籽","d":"增添与奶油质地形成对比的酸甜爽脆口感"}
+    ],
+    "ja": [
+      {"icon":"🥬","t":"ほうれん草は下茹で後にしっかり水気を絞る","d":"この工程を省くとペーストが水っぽくなり形が保てない"},
+      {"icon":"🌰","t":"卵やクリームではなく、くるみペーストがつなぎになる","d":"にんにくと酢を合わせたくるみの粉末が風味だけでなく食感の要となる"},
+      {"icon":"🌸","t":"色付けにイメレティ産マリーゴールドを少量加える","d":"ジョージア料理特有の温かみのある黄色を出すためで、強い風味のためではない"},
+      {"icon":"🌱","t":"盛り付け時にザクロの実を散らす","d":"クリーミーなペーストと対照的な甘酸っぱい食感を加える"}
+    ],
+    "tr": [
+      {"icon":"🥬","t":"Ispanak haşlandıktan sonra tamamen sıkılarak kurutulur","d":"Bu adım olmadan macun sulu kalır ve bir arada durmaz"},
+      {"icon":"🌰","t":"Bağlayıcı yumurta ya da krema değil ceviz macunudur","d":"Sarımsak ve sirkeyle öğütülmüş ceviz sadece lezzet değil, yapıyı da verir"},
+      {"icon":"🌸","t":"Renk için bir tutam İmereti kadife çiçeği","d":"Gürcü mutfağına özgü sıcak bir sarı ton verir, yoğun tat için değil"},
+      {"icon":"🌱","t":"Servis sırasında üzerine nar taneleri serpilir","d":"Kremamsı macunla tezat oluşturan tatlı-ekşi bir çıtırlık katar"}
+    ],
+    "it": [
+      {"icon":"🥬","t":"Gli spinaci vengono strizzati completamente dopo la sbollentatura","d":"Senza questo passaggio la pasta resta acquosa e non si compatta"},
+      {"icon":"🌰","t":"La pasta di noci è il legante, non uova o panna","d":"Le noci macinate con aglio e aceto danno la struttura, non solo il sapore"},
+      {"icon":"🌸","t":"Un pizzico di calendula imeretina per il colore","d":"Un tocco di giallo caldo tipico della cucina georgiana, non per sapore intenso"},
+      {"icon":"🌱","t":"Semi di melograno sparsi sopra al momento di servire","d":"Aggiungono una croccantezza dolce-acidula che contrasta con la pasta cremosa"}
+    ],
+    "ko": [
+      {"icon":"🥬","t":"시금치는 데친 후 물기를 완전히 짜낸다","d":"이 과정 없이는 페이스트가 질척해지고 형태가 잡히지 않는다"},
+      {"icon":"🌰","t":"달걀이나 크림이 아닌 호두 페이스트가 결합제 역할을 한다","d":"마늘과 식초를 넣어 간 호두가 맛뿐 아니라 질감의 구조를 만든다"},
+      {"icon":"🌸","t":"색을 위해 이메레티산 메리골드를 약간 넣는다","d":"강한 맛보다는 조지아 요리 특유의 따뜻한 노란빛을 위한 것이다"},
+      {"icon":"🌱","t":"서빙할 때 위에 석류알을 뿌린다","d":"크리미한 페이스트와 대비되는 새콤달콤하고 톡톡 터지는 식감을 더한다"}
+    ],
+    "hi": [
+      {"icon":"🥬","t":"पालक को ब्लांच करने के बाद पूरी तरह निचोड़ा जाता है","d":"इस कदम के बिना पेस्ट पानी जैसा रहता है और बंधता नहीं"},
+      {"icon":"🌰","t":"अंडे या क्रीम नहीं, अखरोट पेस्ट ही बाइंडर है","d":"लहसुन और सिरके के साथ पिसा अखरोट सिर्फ स्वाद नहीं, बनावट भी देता है"},
+      {"icon":"🌸","t":"रंग के लिए इमेरेती गेंदे की चुटकी भर मात्रा","d":"जॉर्जियाई रसोई की खास गरम पीली छटा के लिए, तेज़ स्वाद के लिए नहीं"},
+      {"icon":"🌱","t":"परोसते समय ऊपर अनार के दाने बिखेरे जाते हैं","d":"मलाईदार पेस्ट के विपरीत मीठा-खट्टा कुरकुरापन जोड़ते हैं"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g spanac proaspăt","150g nuci","3 căței de usturoi","1 ceapă mică, tocată fin","1 lingură oțet de vin roșu","1 linguriță coriandru măcinat","1/2 linguriță schinduf albastru măcinat (utskho-suneli) sau khmeli-suneli","un praf de șofrănel imeretin măcinat (opțional, pentru culoare)","sare, după gust","boabe de rodie, pentru decor"],
+    "en": ["500g fresh spinach","150g walnuts","3 garlic cloves","1 small onion, finely chopped","1 tbsp red wine vinegar","1 tsp ground coriander","1/2 tsp ground blue fenugreek (utskho-suneli) or khmeli-suneli","a pinch of ground Imeretian marigold (optional, for color)","salt, to taste","pomegranate seeds, for garnish"],
+    "es": ["500g de espinacas frescas","150g de nueces","3 dientes de ajo","1 cebolla pequeña, picada fina","1 cda de vinagre de vino tinto","1 cdta de cilantro molido","1/2 cdta de fenogreco azul molido (utskho-suneli) o khmeli-suneli","una pizca de caléndula imeretiana molida (opcional, para el color)","sal, al gusto","semillas de granada, para decorar"],
+    "fr": ["500g d'épinards frais","150g de noix","3 gousses d'ail","1 petit oignon, haché fin","1 c. à soupe de vinaigre de vin rouge","1 c. à café de coriandre moulue","1/2 c. à café de fenugrec bleu moulu (utskho-suneli) ou khmeli-suneli","une pincée de souci iméréthien moulu (facultatif, pour la couleur)","sel, selon le goût","graines de grenade, pour décorer"],
+    "de": ["500g frischer Spinat","150g Walnüsse","3 Knoblauchzehen","1 kleine Zwiebel, fein gehackt","1 EL Rotweinessig","1 TL gemahlener Koriander","1/2 TL gemahlenes blaues Bockshornklee (Utskho-Suneli) oder Khmeli-Suneli","eine Prise gemahlene imeretische Ringelblume (optional, für die Farbe)","Salz, nach Geschmack","Granatapfelkerne, zum Garnieren"],
+    "pt": ["500g de espinafre fresco","150g de nozes","3 dentes de alho","1 cebola pequena, picada fina","1 col. sopa de vinagre de vinho tinto","1 col. chá de coentro moído","1/2 col. chá de feno-grego azul moído (utskho-suneli) ou khmeli-suneli","uma pitada de calêndula imeretiana moída (opcional, para a cor)","sal, a gosto","sementes de romã, para decorar"],
+    "ru": ["500г свежего шпината","150г грецких орехов","3 зубчика чеснока","1 маленькая луковица, мелко нарезанная","1 ст.л. красного винного уксуса","1 ч.л. молотого кориандра","1/2 ч.л. молотого голубого пажитника (уцхо-сунели) или хмели-сунели","щепотка молотого имеретинского шафрана (по желанию, для цвета)","соль, по вкусу","зёрна граната, для украшения"],
+    "ar": ["500غ سبانخ طازجة","150غ جوز","3 فصوص ثوم","بصلة صغيرة، مفرومة ناعمًا","ملعقة كبيرة خل النبيذ الأحمر","ملعقة صغيرة كزبرة مطحونة","نصف ملعقة صغيرة حلبة زرقاء مطحونة (أوتسخو سونيلي) أو خميلي سونيلي","رشة من زهرة القطيفة الإيميرتية المطحونة (اختياري، للون)","ملح، حسب الرغبة","بذور رمان، للتزيين"],
+    "zh": ["500克新鲜菠菜","150克核桃","3瓣大蒜","1个小洋葱，切细","1汤匙红酒醋","1茶匙芫荽籽粉","1/2茶匙蓝葫芦巴粉（utskho-suneli）或khmeli-suneli","少许伊梅列蒂万寿菊粉（可选，用于上色）","盐，适量","石榴籽，装饰用"],
+    "ja": ["新鮮なほうれん草500g","くるみ150g","にんにく3片","小さめの玉ねぎ1個、細かく刻む","赤ワインビネガー大さじ1","挽いたコリアンダー小さじ1","青フェヌグリーク（ウツホスネリ）またはフメリスネリ小さじ1/2","挽いたイメレティ産マリーゴールド少々（お好みで、色付け用）","塩、お好みで","ザクロの実、飾り用"],
+    "tr": ["500g taze ıspanak","150g ceviz","3 diş sarımsak","1 küçük soğan, ince doğranmış","1 yemek kaşığı kırmızı şarap sirkesi","1 çay kaşığı öğütülmüş kişniş","1/2 çay kaşığı öğütülmüş mavi çemen otu (utskho-suneli) veya khmeli-suneli","bir tutam öğütülmüş İmereti kadife çiçeği (isteğe bağlı, renk için)","tuz, damak zevkine göre","nar taneleri, süslemek için"],
+    "it": ["500g di spinaci freschi","150g di noci","3 spicchi d'aglio","1 cipolla piccola, tritata fine","1 cucchiaio di aceto di vino rosso","1 cucchiaino di coriandro macinato","1/2 cucchiaino di fieno greco blu macinato (utskho-suneli) o khmeli-suneli","un pizzico di calendula imeretina macinata (facoltativo, per il colore)","sale, a piacere","semi di melograno, per guarnire"],
+    "ko": ["신선한 시금치 500g","호두 150g","마늘 3쪽","작은 양파 1개, 잘게 다진 것","레드와인 식초 1큰술","간 고수씨 1작은술","간 블루 페누그릭(우츠호수넬리) 또는 흐멜리수넬리 1/2작은술","간 이메레티산 메리골드 약간(선택, 색을 위해)","소금, 입맛에 맞게","석류알, 고명용"],
+    "hi": ["500ग्राम ताज़ा पालक","150ग्राम अखरोट","3 लहसुन की कलियां","1 छोटा प्याज़, बारीक कटा हुआ","1 बड़ा चम्मच रेड वाइन सिरका","1 छोटा चम्मच पिसा धनिया","1/2 छोटा चम्मच पिसी नीली मेथी (उत्स्खो-सुनेली) या ख्मेली-सुनेली","पिसे इमेरेती गेंदे की चुटकी (वैकल्पिक, रंग के लिए)","नमक, स्वादानुसार","अनार के दाने, सजावट के लिए"]
+  },
+  "howIsMade": {
+    "ro": "BLANȘEAZĂ SPANACUL: fierbe spanacul câteva minute în apă clocotită, scurge-l și treci-l prin apă rece. STOARCE BINE: stoarce spanacul cu mâinile, cu putere, până iese toată apa, apoi tocă-l mărunt. PREGĂTEȘTE PASTA DE NUCĂ: macină nucile, usturoiul, ceapa, oțetul, coriandrul, schinduful și șofrănelul într-o pastă grosieră, cu robotul sau în piuă. COMBINĂ: amestecă bine pasta de nucă cu spanacul tocat, condimentează cu sare, după gust. MODELEAZĂ: formează amestecul în bile mici sau o movilă turtită pe o farfurie. LASĂ LA RECE: lasă la frigider minim 30 de minute, ca aromele să se combine. SERVEȘTE: decorează cu boabe de rodie și servește rece, ca aperitiv, alături de pâine.",
+    "en": "BLANCH THE SPINACH: boil the spinach for a few minutes in boiling water, drain it, and run it under cold water. SQUEEZE IT DRY: squeeze the spinach firmly by hand until all the water comes out, then chop it finely. MAKE THE WALNUT PASTE: grind the walnuts, garlic, onion, vinegar, coriander, fenugreek and marigold into a coarse paste, in a food processor or mortar. COMBINE: mix the walnut paste thoroughly with the chopped spinach, season with salt to taste. SHAPE IT: form the mixture into small balls or a flattened mound on a plate. CHILL: refrigerate at least 30 minutes so the flavors meld. SERVE: garnish with pomegranate seeds and serve cold, as an appetizer, alongside bread.",
+    "es": "ESCALDA LAS ESPINACAS: hierve las espinacas unos minutos en agua hirviendo, escúrrelas y pásalas por agua fría. EXPRÍMELAS BIEN: exprime las espinacas con firmeza a mano hasta que salga toda el agua, luego pícalas finas. PREPARA LA PASTA DE NUEZ: muele las nueces, el ajo, la cebolla, el vinagre, el cilantro, el fenogreco y la caléndula hasta obtener una pasta gruesa, con robot de cocina o mortero. COMBINA: mezcla bien la pasta de nuez con las espinacas picadas, sazona con sal al gusto. DALE FORMA: forma la mezcla en bolitas pequeñas o un montículo aplanado en un plato. ENFRÍA: refrigera al menos 30 minutos para que los sabores se integren. SIRVE: decora con semillas de granada y sirve frío, como aperitivo, junto con pan.",
+    "fr": "BLANCHIS LES ÉPINARDS: fais bouillir les épinards quelques minutes dans de l'eau bouillante, égoutte-les et passe-les sous l'eau froide. PRESSE-LES BIEN: presse les épinards fermement à la main jusqu'à ce que toute l'eau sorte, puis hache-les finement. PRÉPARE LA PÂTE DE NOIX: broie les noix, l'ail, l'oignon, le vinaigre, la coriandre, le fenugrec et le souci en une pâte grossière, au robot ou au mortier. COMBINE: mélange bien la pâte de noix avec les épinards hachés, assaisonne de sel selon le goût. FAÇONNE: forme le mélange en petites boules ou en un monticule aplati sur une assiette. LAISSE REFROIDIR: réfrigère au moins 30 minutes pour que les saveurs se lient. SERS: décore de graines de grenade et sers froid, en entrée, avec du pain.",
+    "de": "BLANCHIERE DEN SPINAT: den Spinat einige Minuten in kochendem Wasser kochen, abgießen und mit kaltem Wasser abschrecken. DRÜCKE IHN GUT AUS: den Spinat kräftig von Hand ausdrücken, bis alles Wasser austritt, dann fein hacken. BEREITE DIE WALNUSSPASTE ZU: die Walnüsse, den Knoblauch, die Zwiebel, den Essig, den Koriander, den Bockshornklee und die Ringelblume im Mixer oder Mörser zu einer groben Paste verarbeiten. VERBINDE: die Walnusspaste gründlich mit dem gehackten Spinat mischen, mit Salz nach Geschmack würzen. FORME ES: die Mischung zu kleinen Kugeln oder einem flachen Hügel auf einem Teller formen. KÜHLE ES: mindestens 30 Minuten kühlstellen, damit sich die Aromen verbinden. SERVIEREN: mit Granatapfelkernen garnieren und kalt als Vorspeise mit Brot servieren.",
+    "pt": "ESCALDE O ESPINAFRE: ferva o espinafre por alguns minutos em água a ferver, escorra-o e passe-o por água fria. ESPREMA BEM: esprema o espinafre com firmeza à mão até sair toda a água, depois pique-o fino. PREPARE A PASTA DE NOZ: triture as nozes, o alho, a cebola, o vinagre, o coentro, o feno-grego e a calêndula até formar uma pasta grossa, no robô de cozinha ou almofariz. COMBINE: misture bem a pasta de noz com o espinafre picado, tempere com sal a gosto. MODELE: forme a mistura em bolinhas pequenas ou um monte achatado num prato. DEIXE ARREFECER: refrigere pelo menos 30 minutos para os sabores se combinarem. SIRVA: decore com sementes de romã e sirva frio, como aperitivo, com pão.",
+    "ru": "БЛАНШИРУЙ ШПИНАТ: свари шпинат несколько минут в кипящей воде, слей воду и промой холодной водой. ХОРОШО ОТЖМИ: отожми шпинат руками, крепко, пока не выйдет вся вода, затем мелко нарежь. ПРИГОТОВЬ ОРЕХОВУЮ ПАСТУ: измельчи грецкие орехи, чеснок, лук, уксус, кориандр, пажитник и шафран в грубую пасту, в блендере или ступке. СОЕДИНИ: тщательно смешай ореховую пасту с нарезанным шпинатом, приправь солью по вкусу. СФОРМИРУЙ: сформируй из смеси маленькие шарики или плоский холмик на тарелке. ОХЛАДИ: убери в холодильник минимум на 30 минут, чтобы вкусы соединились. ПОДАЙ: укрась зёрнами граната и подавай холодным, как закуску, с хлебом.",
+    "ar": "اسلق السبانخ: اسلق السبانخ لبضع دقائق في ماء مغلي، صفّها ومرّرها بماء بارد. اعصرها جيدًا: اعصر السبانخ بقوة باليد حتى يخرج كل الماء، ثم اقطّعها ناعمًا. جهّز عجينة الجوز: اطحن الجوز والثوم والبصل والخل والكزبرة والحلبة والقطيفة إلى عجينة خشنة، بمعالج الطعام أو الهاون. اجمع: اخلط عجينة الجوز جيدًا مع السبانخ المقطعة، تبّل بالملح حسب الرغبة. شكّل: شكّل الخليط إلى كرات صغيرة أو كومة مسطحة على طبق. برّد: برّده في الثلاجة 30 دقيقة على الأقل حتى تتمازج النكهات. قدّم: زيّنه ببذور الرمان وقدّمه باردًا، كمقبلات، مع الخبز.",
+    "zh": "焯菠菜：将菠菜在沸水中煮几分钟，捞出沥干并过冷水。彻底挤干：用手用力挤出菠菜中的所有水分，然后切碎。调制核桃酱：将核桃、大蒜、洋葱、醋、芫荽籽粉、葫芦巴和万寿菊粉用食物料理机或臼捣成粗酱。混合：将核桃酱与切碎的菠菜充分混合，用盐调味。塑形：将混合物捏成小球或在盘中堆成扁平状。冷藏：冷藏至少30分钟让风味融合。上桌：撒上石榴籽，作为开胃菜配面包冷食。",
+    "ja": "ほうれん草を下茹でする：ほうれん草を沸騰したお湯で数分茹で、ザルにあげて冷水で洗う。しっかり絞る：ほうれん草を手でしっかりと水気が出なくなるまで絞り、細かく刻む。くるみペーストを作る：くるみ、にんにく、玉ねぎ、酢、コリアンダー、フェヌグリーク、マリーゴールドをフードプロセッサーかすり鉢で粗いペースト状にする。混ぜ合わせる：くるみペーストを刻んだほうれん草としっかり混ぜ、塩で味を調える。成形する：生地を小さな団子か、皿の上で平たい山型に形作る。冷やす：風味がなじむよう最低30分冷蔵する。盛り付ける：ザクロの実を飾り、前菜として冷たいままパンとともに提供する。",
+    "tr": "ISPANAK HAŞLAYIN: ıspanağı birkaç dakika kaynar suda haşlayın, süzün ve soğuk suyla durulayın. İYİCE SIKIN: ıspanağı elle sıkıca, tüm suyu çıkana kadar sıkın, sonra ince doğrayın. CEVİZ MACUNUNU HAZIRLAYIN: cevizi, sarımsağı, soğanı, sirkeyi, kişnişi, çemen otunu ve kadife çiçeğini mutfak robotunda veya havanda kaba bir macun haline getirin. BİRLEŞTİRİN: ceviz macununu doğranmış ıspanakla iyice karıştırın, damak zevkinize göre tuzla tatlandırın. ŞEKİLLENDİRİN: karışımı küçük toplar veya bir tabakta yassı bir tepecik haline getirin. SOĞUTUN: lezzetler kaynaşsın diye en az 30 dakika buzdolabında bekletin. SERVİS YAPIN: nar taneleriyle süsleyin ve soğuk, başlangıç olarak, ekmekle servis edin.",
+    "it": "SBOLLENTA GLI SPINACI: fai bollire gli spinaci per qualche minuto in acqua bollente, scolali e passali sotto acqua fredda. STRIZZALI BENE: strizza gli spinaci con forza a mano finché esce tutta l'acqua, poi tritali finemente. PREPARA LA PASTA DI NOCI: macina le noci, l'aglio, la cipolla, l'aceto, il coriandro, il fieno greco e la calendula fino a ottenere una pasta grossolana, con il robot da cucina o il mortaio. UNISCI: mescola bene la pasta di noci con gli spinaci tritati, condisci con sale a piacere. DAI FORMA: forma il composto in palline piccole o un cumulo appiattito su un piatto. RAFFREDDA: metti in frigo almeno 30 minuti perché i sapori si amalgamino. SERVI: guarnisci con semi di melograno e servi freddo, come antipasto, con pane.",
+    "ko": "시금치 데치기: 시금치를 끓는 물에 몇 분간 데친 뒤 건져 찬물에 헹군다. 꽉 짜기: 시금치를 손으로 물기가 완전히 빠질 때까지 세게 짠 다음 잘게 다진다. 호두 페이스트 만들기: 호두, 마늘, 양파, 식초, 고수씨, 페누그릭, 메리골드를 푸드프로세서나 절구에 넣고 거칠게 갈아 페이스트를 만든다. 합치기: 호두 페이스트를 다진 시금치와 잘 섞고 소금으로 간한다. 모양 만들기: 반죽을 작은 공 모양이나 접시에 납작한 언덕 모양으로 빚는다. 차게 식히기: 맛이 어우러지도록 최소 30분간 냉장한다. 서빙하기: 석류알로 장식하고 전채요리로 빵과 함께 차게 낸다.",
+    "hi": "पालक ब्लांच करें: पालक को उबलते पानी में कुछ मिनट उबालें, छानें और ठंडे पानी से धोएं। अच्छी तरह निचोड़ें: पालक को हाथों से मज़बूती से तब तक निचोड़ें जब तक सारा पानी न निकल जाए, फिर बारीक काटें। अखरोट पेस्ट तैयार करें: अखरोट, लहसुन, प्याज़, सिरका, धनिया, मेथी और गेंदा को फूड प्रोसेसर या ओखली में मोटा पेस्ट बनने तक पीसें। मिलाएं: अखरोट पेस्ट को कटे पालक के साथ अच्छी तरह मिलाएं, स्वादानुसार नमक डालें। आकार दें: मिश्रण को छोटी गेंदों या थाली पर चपटे टीले के आकार में ढालें। ठंडा करें: स्वाद घुलने के लिए कम से कम 30 मिनट फ्रिज में रखें। परोसें: अनार के दानों से सजाएं और ठंडा, ऐपेटाइज़र के रूप में, ब्रेड के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Pkhali nu e o rețetă unică, ci o tehnică folosită pentru zeci de legume diferite — spanac, sfeclă, varză, vinete, fasole verde — toate transformate în paste asemănătoare, legate cu nucă măcinată. La o masă tradițională georgiană, supra, se servesc de obicei mai multe tipuri de pkhali deodată, aranjate în farfurii mici, colorate diferit în funcție de legumă, ca parte a mesei reci de aperitive care deschide ospățul.\n\nPasul cel mai ușor de greșit e stoarcerea legumelor: dacă rămâne prea multă apă în frunzele blanșate, pasta nu se leagă și rămâne apoasă, în loc de compactă și cremoasă. Nuca măcinată, prezentă în aproape toate variantele de pkhali, e liantul universal al bucătăriei georgiene — aceeași tehnică apare și în satsivi sau în alte sosuri, o dovadă a cât de central e nucul în identitatea culinară a țării.",
+    "en": "Pkhali isn't a single recipe but a technique applied to dozens of different vegetables — spinach, beets, cabbage, eggplant, green beans — all turned into similar pastes, bound with ground walnuts. At a traditional Georgian feast, the supra, several kinds of pkhali are usually served at once, arranged on small plates, each a different color depending on the vegetable, as part of the cold appetizer spread that opens the meal.\n\nThe step easiest to get wrong is squeezing the vegetables: if too much water remains in the blanched leaves, the paste won't bind and stays watery instead of compact and creamy. Ground walnuts, present in nearly every version of pkhali, are the universal binder of Georgian cuisine — the same technique shows up in satsivi and other sauces, proof of how central the walnut is to the country's culinary identity.",
+    "es": "El pkhali no es una receta única, sino una técnica aplicada a docenas de verduras distintas — espinacas, remolacha, col, berenjena, judías verdes — todas convertidas en pastas similares, ligadas con nuez molida. En un banquete tradicional georgiano, la supra, suelen servirse varios tipos de pkhali a la vez, dispuestos en platitos, cada uno de un color distinto según la verdura, como parte del surtido de aperitivos fríos que abre la comida.\n\nEl paso que más fácilmente se falla es exprimir las verduras: si queda demasiada agua en las hojas escaldadas, la pasta no liga y queda aguada en vez de compacta y cremosa. La nuez molida, presente en casi todas las versiones de pkhali, es el ligante universal de la cocina georgiana — la misma técnica aparece en el satsivi y otras salsas, prueba de lo central que es la nuez para la identidad culinaria del país.",
+    "fr": "Le pkhali n'est pas une recette unique, mais une technique appliquée à des dizaines de légumes différents — épinards, betteraves, chou, aubergine, haricots verts — tous transformés en pâtes similaires, liées avec des noix moulues. Lors d'un festin géorgien traditionnel, la supra, plusieurs types de pkhali sont généralement servis à la fois, disposés sur de petites assiettes, chacun d'une couleur différente selon le légume, dans le cadre de l'assortiment d'entrées froides qui ouvre le repas.\n\nL'étape la plus facile à rater est le pressage des légumes : si trop d'eau reste dans les feuilles blanchies, la pâte ne se lie pas et reste aqueuse au lieu d'être compacte et crémeuse. Les noix moulues, présentes dans presque toutes les versions de pkhali, sont le liant universel de la cuisine géorgienne — la même technique apparaît dans le satsivi et d'autres sauces, preuve de la place centrale de la noix dans l'identité culinaire du pays.",
+    "de": "Pchali ist kein einzelnes Rezept, sondern eine Technik, die auf Dutzende verschiedener Gemüsesorten angewendet wird — Spinat, Rote Bete, Kohl, Aubergine, grüne Bohnen — alle werden zu ähnlichen Pasten verarbeitet, gebunden mit gemahlenen Walnüssen. Bei einem traditionellen georgischen Festmahl, der Supra, werden meist mehrere Arten von Pchali gleichzeitig serviert, auf kleinen Tellern angeordnet, jede in einer anderen Farbe je nach Gemüse, als Teil der kalten Vorspeisenauswahl, die das Essen eröffnet.\n\nDer Schritt, bei dem am leichtesten Fehler passieren, ist das Auspressen des Gemüses: Bleibt zu viel Wasser in den blanchierten Blättern, bindet die Paste nicht und bleibt wässrig statt kompakt und cremig. Gemahlene Walnüsse, in fast jeder Pchali-Version vorhanden, sind das universelle Bindemittel der georgischen Küche — dieselbe Technik taucht in Satsivi und anderen Saucen auf, ein Beweis dafür, wie zentral die Walnuss für die kulinarische Identität des Landes ist.",
+    "pt": "O pkhali não é uma receita única, mas uma técnica aplicada a dezenas de vegetais diferentes — espinafre, beterraba, couve, beringela, feijão verde — todos transformados em pastas semelhantes, ligadas com noz moída. Numa festa tradicional georgiana, a supra, servem-se geralmente vários tipos de pkhali ao mesmo tempo, dispostos em pratos pequenos, cada um de uma cor diferente consoante o vegetal, como parte do conjunto de aperitivos frios que abre a refeição.\n\nO passo mais fácil de errar é espremer os vegetais: se sobrar água a mais nas folhas escaldadas, a pasta não liga e fica aguada em vez de compacta e cremosa. A noz moída, presente em quase todas as versões de pkhali, é o ligante universal da culinária georgiana — a mesma técnica aparece no satsivi e noutros molhos, prova de quão central é a noz para a identidade culinária do país.",
+    "ru": "Пхали — это не отдельный рецепт, а техника, применяемая к десяткам разных овощей — шпинату, свёкле, капусте, баклажанам, зелёной фасоли — все они превращаются в похожие пасты, скреплённые молотыми грецкими орехами. На традиционном грузинском застолье, супре, обычно подают сразу несколько видов пхали, разложенных по маленьким тарелкам, каждая своего цвета в зависимости от овоща, как часть холодной закусочной подборки, открывающей трапезу.\n\nШаг, в котором легче всего ошибиться, — отжим овощей: если в бланшированных листьях остаётся слишком много воды, паста не схватится и останется водянистой вместо плотной и кремовой. Молотые грецкие орехи, присутствующие почти во всех версиях пхали, — универсальное связующее грузинской кухни: та же техника встречается в сациви и других соусах, доказывая, насколько центральное место орех занимает в кулинарной идентичности страны.",
+    "ar": "البخالي ليس وصفة واحدة، بل تقنية تُطبَّق على عشرات الخضروات المختلفة — السبانخ والشمندر والملفوف والباذنجان والفاصولياء الخضراء — كلها تتحول إلى عجائن متشابهة، مرتبطة بالجوز المطحون. في وليمة جورجية تقليدية، السوپرا، تُقدَّم عادة عدة أنواع من البخالي في وقت واحد، مرتبة على أطباق صغيرة، كل منها بلون مختلف حسب الخضار، كجزء من تشكيلة المقبلات الباردة التي تفتتح الوجبة.\n\nالخطوة الأسهل للخطأ فيها هي عصر الخضار: إذا بقي الكثير من الماء في الأوراق المسلوقة، لن تتماسك العجينة وستبقى مائية بدلاً من متماسكة وكريمية. الجوز المطحون، الموجود في كل نسخ البخالي تقريبًا، هو الرابط العالمي للمطبخ الجورجي — نفس التقنية تظهر في الساتسيفي وصلصات أخرى، دليلًا على مدى مركزية الجوز في الهوية الطهوية للبلاد.",
+    "zh": "菠菜核桃泥并非单一食谱，而是一种适用于数十种不同蔬菜的技法——菠菜、甜菜、卷心菜、茄子、四季豆——都能变成类似的酱料，用核桃碎黏合。在传统的格鲁吉亚宴席「苏普拉」上，通常会同时端上好几种pkhali，分装在小盘中，各因蔬菜不同而呈现不同颜色，是开启整场宴席的冷开胃菜拼盘的一部分。\n\n最容易出错的一步是挤菜：如果焯过水的叶菜里留存太多水分，酱料就无法黏合成型，会显得稀水而非紧实奶滑。核桃碎几乎出现在每种pkhali版本中，是格鲁吉亚料理通用的黏合剂——同样的技法也出现在萨齐维酱及其他酱汁中，证明核桃在这个国家的饮食身份中占据着核心地位。",
+    "ja": "プハリは単一のレシピではなく、ほうれん草、ビーツ、キャベツ、ナス、いんげんなど、何十種類もの異なる野菜に応用される技法であり、それらすべてがくるみの粉末でつなぎとめられた似たようなペーストに変わる。伝統的なジョージアの宴会「スプラ」では、通常複数の種類のプハリが一度に、小皿に盛られ、それぞれ野菜によって異なる色で提供され、食事を開始する冷たい前菜の盛り合わせの一部を成す。\n\n最も失敗しやすい工程は野菜を絞ることだ。下茹でした葉に水分が多く残りすぎると、ペーストがまとまらず、なめらかで濃厚な仕上がりにならず水っぽくなってしまう。ほぼすべてのプハリのversionに使われるくるみの粉末は、ジョージア料理の万能のつなぎであり、同じ技法はサツィヴィや他のソースにも登場する。それはこの国の食文化のアイデンティティにおいてくるみがいかに中心的存在であるかの証だ。",
+    "tr": "Pkhali tek bir tarif değil, düzinelerce farklı sebzeye uygulanan bir tekniktir — ıspanak, pancar, lahana, patlıcan, taze fasulye — hepsi öğütülmüş cevizle bağlanmış benzer macunlara dönüştürülür. Geleneksel bir Gürcü ziyafetinde, supra'da, genellikle birkaç çeşit pkhali aynı anda, küçük tabaklarda düzenlenmiş, her biri sebzeye göre farklı renkte, yemeği açan soğuk mezeler tabağının bir parçası olarak servis edilir.\n\nEn kolay hata yapılan adım sebzeleri sıkmaktır: haşlanmış yapraklarda çok fazla su kalırsa, macun bağlanmaz ve yoğun ve kremamsı olmak yerine sulu kalır. Neredeyse her pkhali türünde bulunan öğütülmüş ceviz, Gürcü mutfağının evrensel bağlayıcısıdır — aynı teknik satsivi'de ve diğer soslarda da karşımıza çıkar, cevizin ülkenin mutfak kimliğinde ne kadar merkezi olduğunun kanıtıdır.",
+    "it": "Il pkhali non è una singola ricetta, ma una tecnica applicata a decine di verdure diverse — spinaci, barbabietole, cavolo, melanzane, fagiolini — tutte trasformate in paste simili, legate con noci macinate. In un banchetto georgiano tradizionale, la supra, di solito vengono serviti più tipi di pkhali insieme, disposti in piattini, ciascuno di un colore diverso a seconda della verdura, come parte dell'assortimento di antipasti freddi che apre il pasto.\n\nIl passaggio più facile da sbagliare è strizzare le verdure: se rimane troppa acqua nelle foglie sbollentate, la pasta non lega e resta acquosa invece che compatta e cremosa. Le noci macinate, presenti in quasi ogni versione di pkhali, sono il legante universale della cucina georgiana — la stessa tecnica compare nel satsivi e in altre salse, prova di quanto la noce sia centrale nell'identità culinaria del paese.",
+    "ko": "프칼리는 단일 레시피가 아니라 시금치, 비트, 양배추, 가지, 그린빈 등 수십 가지 채소에 적용되는 조리법으로, 모두 간 호두로 결합된 비슷한 페이스트로 변한다. 전통적인 조지아식 연회 수프라에서는 보통 여러 종류의 프칼리가 한 번에 나오는데, 작은 접시에 채소에 따라 각기 다른 색으로 담겨, 식사를 여는 차가운 전채 구성의 일부를 이룬다.\n\n가장 실수하기 쉬운 단계는 채소를 짜는 것이다: 데친 잎에 물기가 너무 많이 남으면 페이스트가 뭉치지 않고 되직하고 크리미하게 되는 대신 질척해진다. 거의 모든 프칼리 버전에 들어가는 간 호두는 조지아 요리의 보편적인 결합제다 — 같은 기법이 사치비와 다른 소스에도 등장하며, 호두가 이 나라의 음식 정체성에서 얼마나 핵심적인지를 보여준다.",
+    "hi": "प्खाली कोई एक रेसिपी नहीं बल्कि दर्जनों अलग-अलग सब्ज़ियों — पालक, चुकंदर, पत्तागोभी, बैंगन, हरी फलियां — पर लागू होने वाली एक तकनीक है, जो सभी को पिसे अखरोट से बांधे गए समान पेस्ट में बदल देती है। पारंपरिक जॉर्जियाई भोज, सुप्रा, में आमतौर पर कई प्रकार के प्खाली एक साथ परोसे जाते हैं, छोटी थालियों में सजाए गए, प्रत्येक सब्ज़ी के अनुसार अलग रंग का, भोज शुरू करने वाले ठंडे स्टार्टर स्प्रेड के हिस्से के रूप में।\n\nसबसे आसानी से गलत होने वाला कदम है सब्ज़ियों को निचोड़ना: अगर ब्लांच किए पत्तों में बहुत ज़्यादा पानी रह जाए, तो पेस्ट नहीं बंधता और सघन व मलाईदार होने के बजाय पानी जैसा रह जाता है। पिसा अखरोट, जो लगभग हर प्खाली version में मौजूद है, जॉर्जियाई रसोई का सार्वभौमिक बाइंडर है — यही तकनीक सत्सिवी और अन्य सॉस में भी दिखती है, यह साबित करते हुए कि अखरोट देश की पाक पहचान में कितना केंद्रीय है।"
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 12,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Pastă rece de spanac și nucă măcinată cu usturoi, decorată cu boabe de rodie.",
+      "en": "Cold spinach and ground walnut paste with garlic, garnished with pomegranate seeds.",
+      "es": "Pasta fría de espinacas y nuez molida con ajo, decorada con semillas de granada.",
+      "fr": "Pâte froide d'épinards et de noix moulues à l'ail, décorée de graines de grenade.",
+      "de": "Kalte Spinat-Walnuss-Paste mit Knoblauch, garniert mit Granatapfelkernen.",
+      "pt": "Pasta fria de espinafre e noz moída com alho, decorada com sementes de romã.",
+      "ru": "Холодная паста из шпината и молотых грецких орехов с чесноком, украшенная зёрнами граната.",
+      "ar": "عجينة باردة من السبانخ والجوز المطحون مع الثوم، مزينة ببذور الرمان.",
+      "zh": "冷菠菜核桃蒜泥，配石榴籽装饰。",
+      "ja": "にんにくを効かせたほうれん草とくるみの冷製ペースト、ザクロの実を添えて。",
+      "tr": "Sarımsaklı soğuk ıspanak ve öğütülmüş ceviz macunu, nar taneleriyle süslenmiş.",
+      "it": "Pasta fredda di spinaci e noci macinate con aglio, guarnita con semi di melograno.",
+      "ko": "마늘을 넣은 차가운 시금치 호두 페이스트, 석류알로 장식.",
+      "hi": "लहसुन के साथ ठंडा पालक और पिसा अखरोट पेस्ट, अनार के दानों से सजाया गया।"
+    }
+  }
+}

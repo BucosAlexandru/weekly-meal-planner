@@ -1,0 +1,176 @@
+{
+  "id": 293,
+  "servings": 4,
+  "tipType": "soup",
+  "pairingsType": "soup",
+  "origin": {
+    "ro": "Georgia", "en": "Georgia", "es": "Georgia", "fr": "Géorgie", "de": "Georgien",
+    "pt": "Geórgia", "ru": "Грузия", "ar": "جورجيا", "zh": "格鲁吉亚", "ja": "ジョージア",
+    "tr": "Gürcistan", "it": "Georgia", "ko": "조지아", "hi": "जॉर्जिया"
+  },
+  "name": {
+    "ro": "Kharcho", "en": "Kharcho", "es": "Kharcho", "fr": "Kharcho", "de": "Charcho",
+    "pt": "Kharcho", "ru": "Харчо", "ar": "خارتشو", "zh": "哈尔乔汤", "ja": "ハルチョー",
+    "tr": "Harço", "it": "Kharcho", "ko": "하르초", "hi": "खार्चो"
+  },
+  "category": {
+    "ro": "Supă", "en": "Soup", "es": "Sopa", "fr": "Soupe", "de": "Suppe", "pt": "Sopa",
+    "ru": "Суп", "ar": "شوربة", "zh": "汤", "ja": "スープ", "tr": "Çorba", "it": "Zuppa",
+    "ko": "수프", "hi": "सूप"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🌰","t":"Nucă măcinată amestecată cu usturoi într-o pastă","d":"Îngroașă supa și îi dă acea catifelare specifică bucătăriei georgiene"},
+      {"icon":"🍋","t":"Sosul de prune acre (tkemali) dă acreala caracteristică","d":"Nu oțet, nu lămâie — acreala vine special din fructul fermentat"},
+      {"icon":"🍚","t":"Orezul se fierbe direct în supă, nu separat","d":"Eliberează amidon care contribuie la textura groasă a supei"},
+      {"icon":"🌿","t":"Khmeli-suneli, amestecul de condimente georgian, la final","d":"Dă acea aromă complexă, imposibil de reprodus cu un singur condiment"}
+    ],
+    "en": [
+      {"icon":"🌰","t":"Ground walnuts blended with garlic into a paste","d":"Thickens the soup and gives it that velvety texture typical of Georgian cooking"},
+      {"icon":"🍋","t":"Sour plum sauce (tkemali) gives the signature tang","d":"Not vinegar, not lemon — the sourness comes specifically from the fermented fruit"},
+      {"icon":"🍚","t":"The rice cooks directly in the soup, not separately","d":"Releases starch that contributes to the soup's thick texture"},
+      {"icon":"🌿","t":"Khmeli-suneli, the Georgian spice blend, goes in at the end","d":"Gives that complex aroma no single spice could replicate"}
+    ],
+    "es": [
+      {"icon":"🌰","t":"Nuez molida mezclada con ajo en una pasta","d":"Espesa la sopa y le da esa textura aterciopelada típica de la cocina georgiana"},
+      {"icon":"🍋","t":"La salsa de ciruela ácida (tkemali) da el toque ácido característico","d":"No es vinagre ni limón — la acidez viene específicamente de la fruta fermentada"},
+      {"icon":"🍚","t":"El arroz se cuece directo en la sopa, no aparte","d":"Libera almidón que contribuye a la textura espesa de la sopa"},
+      {"icon":"🌿","t":"El khmeli-suneli, la mezcla de especias georgiana, va al final","d":"Da ese aroma complejo que ninguna especia sola podría igualar"}
+    ],
+    "fr": [
+      {"icon":"🌰","t":"Noix moulues mélangées à l'ail en une pâte","d":"Épaissit la soupe et lui donne cette texture veloutée typique de la cuisine géorgienne"},
+      {"icon":"🍋","t":"La sauce de prunes acides (tkemali) donne l'acidité caractéristique","d":"Ni vinaigre, ni citron — l'acidité vient spécifiquement du fruit fermenté"},
+      {"icon":"🍚","t":"Le riz cuit directement dans la soupe, pas à part","d":"Libère de l'amidon qui contribue à la texture épaisse de la soupe"},
+      {"icon":"🌿","t":"Le khmeli-suneli, le mélange d'épices géorgien, est ajouté à la fin","d":"Donne cet arôme complexe qu'aucune épice seule ne pourrait reproduire"}
+    ],
+    "de": [
+      {"icon":"🌰","t":"Gemahlene Walnüsse mit Knoblauch zu einer Paste vermischt","d":"Dickt die Suppe ein und verleiht ihr die samtige Textur der georgischen Küche"},
+      {"icon":"🍋","t":"Sauerpflaumensauce (Tkemali) sorgt für die charakteristische Säure","d":"Kein Essig, keine Zitrone — die Säure kommt gezielt von der fermentierten Frucht"},
+      {"icon":"🍚","t":"Der Reis kocht direkt in der Suppe, nicht separat","d":"Setzt Stärke frei, die zur dicken Textur der Suppe beiträgt"},
+      {"icon":"🌿","t":"Khmeli-suneli, die georgische Gewürzmischung, kommt am Ende dazu","d":"Verleiht jenes komplexe Aroma, das kein einzelnes Gewürz nachbilden könnte"}
+    ],
+    "pt": [
+      {"icon":"🌰","t":"Noz moída misturada com alho numa pasta","d":"Engrossa a sopa e dá-lhe aquela textura aveludada típica da culinária georgiana"},
+      {"icon":"🍋","t":"O molho de ameixa azeda (tkemali) dá o toque ácido característico","d":"Não é vinagre nem limão — a acidez vem especificamente da fruta fermentada"},
+      {"icon":"🍚","t":"O arroz cozinha diretamente na sopa, não à parte","d":"Liberta amido que contribui para a textura espessa da sopa"},
+      {"icon":"🌿","t":"O khmeli-suneli, a mistura de especiarias georgiana, entra no final","d":"Dá aquele aroma complexo que nenhuma especiaria sozinha conseguiria replicar"}
+    ],
+    "ru": [
+      {"icon":"🌰","t":"Молотые грецкие орехи смешиваются с чесноком в пасту","d":"Загущает суп и придаёт ту бархатистую текстуру, характерную для грузинской кухни"},
+      {"icon":"🍋","t":"Соус ткемали даёт фирменную кислинку","d":"Не уксус и не лимон — кислинка идёт именно от ферментированного фрукта"},
+      {"icon":"🍚","t":"Рис варится прямо в супе, а не отдельно","d":"Выделяет крахмал, который придаёт супу густую текстуру"},
+      {"icon":"🌿","t":"Хмели-сунели, грузинская смесь специй, добавляется в конце","d":"Даёт тот сложный аромат, который не воспроизвести одной специей"}
+    ],
+    "ar": [
+      {"icon":"🌰","t":"جوز مطحون يُخلط مع الثوم في عجينة","d":"يُثخّن الشوربة ويمنحها ذلك الملمس المخملي المميز للمطبخ الجورجي"},
+      {"icon":"🍋","t":"صلصة البرقوق الحامض (تكيمالي) تمنح الحموضة المميزة","d":"ليس خلًا ولا ليمونًا — الحموضة تأتي تحديدًا من الفاكهة المخمّرة"},
+      {"icon":"🍚","t":"الأرز يُطهى مباشرة في الشوربة لا بشكل منفصل","d":"يُطلق نشا يساهم في القوام السميك للشوربة"},
+      {"icon":"🌿","t":"خميلي سونيلي، مزيج التوابل الجورجي، يُضاف في النهاية","d":"يمنح تلك النكهة المعقدة التي لا يمكن لتوابل واحدة تقليدها"}
+    ],
+    "zh": [
+      {"icon":"🌰","t":"核桃碎与大蒜混合成酱","d":"使汤变浓稠，赋予格鲁吉亚菜特有的丝滑口感"},
+      {"icon":"🍋","t":"酸李子酱（tkemali）带来标志性的酸味","d":"不是醋也不是柠檬——酸味专门来自发酵水果"},
+      {"icon":"🍚","t":"大米直接在汤中煮，而非分开煮","d":"释放淀粉，让汤变得浓稠"},
+      {"icon":"🌿","t":"格鲁吉亚香料混合物khmeli-suneli最后加入","d":"赋予单一香料无法复制的复杂香气"}
+    ],
+    "ja": [
+      {"icon":"🌰","t":"すりつぶしたクルミとにんにくを混ぜてペーストにする","d":"スープにとろみをつけ、ジョージア料理特有のビロードのような舌触りを与える"},
+      {"icon":"🍋","t":"酸っぱいプラムソース（トケマリ）が特有の酸味を出す","d":"酢でもレモンでもなく、発酵させた果実からくる特別な酸味"},
+      {"icon":"🍚","t":"米は別茹でせずスープの中で直接炊く","d":"デンプンが溶け出し、スープにとろみを加える"},
+      {"icon":"🌿","t":"ジョージアのスパイスミックス、フメリスネリを最後に加える","d":"単一のスパイスでは再現できない複雑な香りを与える"}
+    ],
+    "tr": [
+      {"icon":"🌰","t":"Öğütülmüş ceviz sarımsakla karıştırılarak macun yapılır","d":"Çorbayı koyulaştırır ve Gürcü mutfağına özgü kadifemsi dokuyu verir"},
+      {"icon":"🍋","t":"Ekşi erik sosu (tkemali) karakteristik ekşiliği verir","d":"Sirke değil, limon değil — ekşilik özellikle fermente meyveden gelir"},
+      {"icon":"🍚","t":"Pirinç ayrı değil doğrudan çorbanın içinde pişer","d":"Çorbanın koyu kıvamına katkıda bulunan nişasta salar"},
+      {"icon":"🌿","t":"Gürcü baharat karışımı khmeli-suneli sona eklenir","d":"Tek bir baharatın taklit edemeyeceği karmaşık bir aroma verir"}
+    ],
+    "it": [
+      {"icon":"🌰","t":"Noci macinate mescolate con aglio in una pasta","d":"Addensa la zuppa e le dà quella consistenza vellutata tipica della cucina georgiana"},
+      {"icon":"🍋","t":"La salsa di prugne acide (tkemali) dà l'acidità caratteristica","d":"Non aceto, non limone — l'acidità viene specificamente dal frutto fermentato"},
+      {"icon":"🍚","t":"Il riso cuoce direttamente nella zuppa, non a parte","d":"Rilascia amido che contribuisce alla consistenza densa della zuppa"},
+      {"icon":"🌿","t":"Il khmeli-suneli, la miscela di spezie georgiana, va aggiunto alla fine","d":"Dà quell'aroma complesso che nessuna spezia singola potrebbe replicare"}
+    ],
+    "ko": [
+      {"icon":"🌰","t":"간 호두를 마늘과 섞어 페이스트로 만든다","d":"수프를 걸쭉하게 하고 조지아 요리 특유의 부드러운 질감을 준다"},
+      {"icon":"🍋","t":"신맛 자두 소스(트케말리)가 특유의 신맛을 낸다","d":"식초도 레몬도 아닌, 발효 과일에서만 나오는 신맛이다"},
+      {"icon":"🍚","t":"쌀은 따로 삶지 않고 수프 안에서 바로 익힌다","d":"전분이 나와 수프를 걸쭉하게 만드는 데 기여한다"},
+      {"icon":"🌿","t":"조지아 향신료 혼합물 흐멜리수넬리를 마지막에 넣는다","d":"단일 향신료로는 재현할 수 없는 복합적인 향을 준다"}
+    ],
+    "hi": [
+      {"icon":"🌰","t":"पिसा अखरोट लहसुन के साथ पेस्ट में मिलाया जाता है","d":"सूप को गाढ़ा करता है और जॉर्जियाई रसोई की खास मखमली बनावट देता है"},
+      {"icon":"🍋","t":"खट्टा आलूबुखारा सॉस (त्केमाली) खास खट्टापन देता है","d":"न सिरका, न नीबू — खट्टापन विशेष रूप से किण्वित फल से आता है"},
+      {"icon":"🍚","t":"चावल अलग से नहीं, सीधे सूप में पकता है","d":"स्टार्च छोड़ता है जो सूप की गाढ़ी बनावट में योगदान देता है"},
+      {"icon":"🌿","t":"ख्मेली-सुनेली, जॉर्जियाई मसाला मिश्रण, अंत में डाला जाता है","d":"वह जटिल सुगंध देता है जिसे कोई अकेला मसाला दोहरा नहीं सकता"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g rasol de vită, tăiat cuburi","1,5L apă sau supă de vită","1 ceapă, tocată fin","3 linguri orez","4 linguri nucă măcinată","2 linguri sos de prune acre (tkemali) sau pastă de roșii cu zeamă de lămâie","3 căței de usturoi, tocați","1 lingură khmeli-suneli (amestec georgian de condimente)","1 linguriță coriandru măcinat","coriandru proaspăt tocat, pentru decor","sare și piper, după gust"],
+    "en": ["600g beef shank, cut into chunks","1.5L water or beef stock","1 onion, finely chopped","3 tbsp rice","4 tbsp ground walnuts","2 tbsp sour plum sauce (tkemali) or tomato paste with lemon juice","3 garlic cloves, minced","1 tbsp khmeli-suneli (Georgian spice blend)","1 tsp ground coriander","fresh cilantro, chopped, for garnish","salt and pepper, to taste"],
+    "es": ["600g de jarrete de ternera, en trozos","1,5L de agua o caldo de ternera","1 cebolla, picada fina","3 cdas de arroz","4 cdas de nuez molida","2 cdas de salsa de ciruela ácida (tkemali) o pasta de tomate con zumo de limón","3 dientes de ajo picados","1 cda de khmeli-suneli (mezcla de especias georgiana)","1 cdta de cilantro molido","cilantro fresco picado, para decorar","sal y pimienta, al gusto"],
+    "fr": ["600g de jarret de bœuf, en morceaux","1,5L d'eau ou de bouillon de bœuf","1 oignon, haché fin","3 c. à soupe de riz","4 c. à soupe de noix moulues","2 c. à soupe de sauce de prunes acides (tkemali) ou pâte de tomate avec jus de citron","3 gousses d'ail hachées","1 c. à soupe de khmeli-suneli (mélange d'épices géorgien)","1 c. à café de coriandre moulue","coriandre fraîche hachée, pour décorer","sel et poivre, selon le goût"],
+    "de": ["600g Rinderbeinscheibe, in Stücke geschnitten","1,5L Wasser oder Rinderbrühe","1 Zwiebel, fein gehackt","3 EL Reis","4 EL gemahlene Walnüsse","2 EL Sauerpflaumensauce (Tkemali) oder Tomatenmark mit Zitronensaft","3 Knoblauchzehen, gehackt","1 EL Khmeli-Suneli (georgische Gewürzmischung)","1 TL gemahlener Koriander","frischer Koriander, gehackt, zum Garnieren","Salz und Pfeffer, nach Geschmack"],
+    "pt": ["600g de músculo de vaca, em pedaços","1,5L de água ou caldo de carne","1 cebola, picada fina","3 col. sopa de arroz","4 col. sopa de noz moída","2 col. sopa de molho de ameixa azeda (tkemali) ou massa de tomate com suco de limão","3 dentes de alho picados","1 col. sopa de khmeli-suneli (mistura de especiarias georgiana)","1 col. chá de coentro moído","coentro fresco picado, para decorar","sal e pimenta, a gosto"],
+    "ru": ["600г говяжьей голяшки, кусками","1,5л воды или говяжьего бульона","1 луковица, мелко нарезанная","3 ст.л. риса","4 ст.л. молотых грецких орехов","2 ст.л. соуса ткемали или томатной пасты с лимонным соком","3 зубчика чеснока, измельчённого","1 ст.л. хмели-сунели (грузинская смесь специй)","1 ч.л. молотого кориандра","свежая кинза, нарезанная, для украшения","соль и перец, по вкусу"],
+    "ar": ["600غ ساق لحم بقري، مقطع قطعًا","1.5 لتر ماء أو مرق لحم بقري","بصلة واحدة، مفرومة ناعمًا","3 ملاعق كبيرة أرز","4 ملاعق كبيرة جوز مطحون","2 ملعقة كبيرة صلصة برقوق حامض (تكيمالي) أو معجون طماطم مع عصير ليمون","3 فصوص ثوم مفرومة","ملعقة كبيرة خميلي سونيلي (مزيج توابل جورجي)","ملعقة صغيرة كزبرة مطحونة","كزبرة طازجة مفرومة، للتزيين","ملح وفلفل، حسب الرغبة"],
+    "zh": ["600克牛腱，切块","1.5升水或牛高汤","1个洋葱，切细","3汤匙大米","4汤匙核桃碎","2汤匙酸李子酱（tkemali）或番茄酱加柠檬汁","3瓣大蒜切碎","1汤匙khmeli-suneli（格鲁吉亚香料混合物）","1茶匙芫荽籽粉","新鲜香菜切碎，装饰用","盐和胡椒，适量"],
+    "ja": ["牛すね肉600g、ぶつ切り","水または牛だし1.5L","玉ねぎ1個、細かく刻む","米大さじ3","くるみの粉末大さじ4","酸っぱいプラムソース（トケマリ）大さじ2、またはトマトペーストとレモン汁","にんにく3片、みじん切り","フメリスネリ大さじ1（ジョージアのスパイスミックス）","挽いたコリアンダー小さじ1","刻んだ新鮮なパクチー、飾り用","塩とこしょう、お好みで"],
+    "tr": ["600g sığır incik eti, parçalar halinde","1,5L su veya sığır et suyu","1 soğan, ince doğranmış","3 yemek kaşığı pirinç","4 yemek kaşığı öğütülmüş ceviz","2 yemek kaşığı ekşi erik sosu (tkemali) veya limon suyuyla domates salçası","3 diş sarımsak, doğranmış","1 yemek kaşığı khmeli-suneli (Gürcü baharat karışımı)","1 çay kaşığı öğütülmüş kişniş","taze kişniş, doğranmış, süslemek için","tuz ve karabiber, damak zevkine göre"],
+    "it": ["600g di stinco di manzo, a pezzi","1,5L di acqua o brodo di manzo","1 cipolla, tritata fine","3 cucchiai di riso","4 cucchiai di noci macinate","2 cucchiai di salsa di prugne acide (tkemali) o concentrato di pomodoro con succo di limone","3 spicchi d'aglio tritati","1 cucchiaio di khmeli-suneli (miscela di spezie georgiana)","1 cucchiaino di coriandro macinato","coriandro fresco tritato, per guarnire","sale e pepe, a piacere"],
+    "ko": ["소고기 정강이 600g, 큼직하게 썬 것","물 또는 소고기 육수 1.5L","양파 1개, 잘게 다진 것","쌀 3큰술","간 호두 4큰술","신맛 자두 소스(트케말리) 2큰술 또는 토마토 페이스트와 레몬즙","마늘 3쪽, 다진 것","흐멜리수넬리 1큰술(조지아 향신료 혼합물)","간 고수씨 1작은술","다진 신선한 고수, 고명용","소금과 후추, 입맛에 맞게"],
+    "hi": ["600ग्राम बीफ़ शैंक, टुकड़ों में कटा हुआ","1.5 लीटर पानी या बीफ़ स्टॉक","1 प्याज़, बारीक कटा हुआ","3 बड़े चम्मच चावल","4 बड़े चम्मच पिसा अखरोट","2 बड़े चम्मच खट्टा आलूबुखारा सॉस (त्केमाली) या टमाटर पेस्ट और नीबू रस","3 लहसुन की कलियां कटी हुई","1 बड़ा चम्मच ख्मेली-सुनेली (जॉर्जियाई मसाला मिश्रण)","1 छोटा चम्मच पिसा धनिया","ताज़ा कटा धनिया, सजावट के लिए","नमक और काली मिर्च, स्वादानुसार"]
+  },
+  "howIsMade": {
+    "ro": "FIERBE VITA: pune bucățile de vită în apă sau supă, adu la fierbere, spumează, apoi fierbe la foc mic 1-1,5 ore, până devine fragedă. CĂLEȘTE CEAPA: călește ceapa tocată într-o tigaie, până devine translucidă. ADAUGĂ OREZUL: adaugă orezul și ceapa călită în oala cu vită, fierbe încă 15-20 de minute, până orezul se înmoaie. PREGĂTEȘTE PASTA DE NUCĂ: amestecă nuca măcinată, usturoiul și khmeli-suneli cu puțină supă caldă, până devine o pastă. COMBINĂ: adaugă pasta de nucă și sosul de prune acre în supă, amestecă bine, fierbe încă 10 minute, ca aromele să se lege. POTRIVEȘTE GUSTUL: adaugă sare, piper și coriandru măcinat, după gust. SERVEȘTE: presară coriandru proaspăt deasupra și servește fierbinte.",
+    "en": "COOK THE BEEF: put the beef chunks in water or stock, bring to a boil, skim the foam, then simmer on low for 1-1.5 hours, until tender. SAUTÉ THE ONION: sauté the chopped onion in a pan until translucent. ADD THE RICE: add the rice and sautéed onion to the pot with the beef, simmer another 15-20 minutes, until the rice is soft. MAKE THE WALNUT PASTE: mix the ground walnuts, garlic and khmeli-suneli with a little warm broth, into a paste. COMBINE: stir the walnut paste and sour plum sauce into the soup, mix well, simmer another 10 minutes so the flavors meld. ADJUST THE SEASONING: add salt, pepper and ground coriander, to taste. SERVE: sprinkle fresh cilantro on top and serve hot.",
+    "es": "COCINA LA TERNERA: pon los trozos de ternera en agua o caldo, lleva a ebullición, retira la espuma, luego cocina a fuego lento 1-1,5 horas, hasta que esté tierna. SOFRÍE LA CEBOLLA: sofríe la cebolla picada en una sartén hasta que quede translúcida. AÑADE EL ARROZ: añade el arroz y la cebolla sofrita a la olla con la ternera, cocina otros 15-20 minutos, hasta que el arroz esté blando. PREPARA LA PASTA DE NUEZ: mezcla la nuez molida, el ajo y el khmeli-suneli con un poco de caldo caliente, hasta formar una pasta. COMBINA: incorpora la pasta de nuez y la salsa de ciruela ácida a la sopa, mezcla bien, cocina otros 10 minutos para que los sabores se integren. AJUSTA EL SABOR: añade sal, pimienta y cilantro molido, al gusto. SIRVE: espolvorea cilantro fresco encima y sirve caliente.",
+    "fr": "CUIS LE BŒUF: mets les morceaux de bœuf dans l'eau ou le bouillon, porte à ébullition, écume, puis laisse mijoter à feu doux 1 à 1h30, jusqu'à tendreté. FAIS REVENIR L'OIGNON: fais revenir l'oignon haché dans une poêle jusqu'à ce qu'il devienne translucide. AJOUTE LE RIZ: ajoute le riz et l'oignon revenu dans la marmite avec le bœuf, laisse mijoter encore 15-20 minutes, jusqu'à ce que le riz soit tendre. PRÉPARE LA PÂTE DE NOIX: mélange les noix moulues, l'ail et le khmeli-suneli avec un peu de bouillon chaud, en une pâte. COMBINE: incorpore la pâte de noix et la sauce de prunes acides à la soupe, mélange bien, laisse mijoter encore 10 minutes pour que les saveurs se lient. AJUSTE L'ASSAISONNEMENT: ajoute sel, poivre et coriandre moulue, selon le goût. SERS: parsème de coriandre fraîche et sers chaud.",
+    "de": "KOCHE DAS RINDFLEISCH: die Rindfleischstücke in Wasser oder Brühe geben, aufkochen, den Schaum abschöpfen, dann bei niedriger Hitze 1-1,5 Stunden köcheln, bis zart. SCHWITZE DIE ZWIEBEL AN: die gehackte Zwiebel in einer Pfanne anschwitzen, bis sie glasig ist. FÜGE DEN REIS HINZU: den Reis und die angeschwitzte Zwiebel zum Topf mit dem Rindfleisch geben, weitere 15-20 Minuten köcheln, bis der Reis weich ist. BEREITE DIE WALNUSSPASTE ZU: die gemahlenen Walnüsse, den Knoblauch und Khmeli-Suneli mit etwas warmer Brühe zu einer Paste verrühren. VERBINDE: die Walnusspaste und die Sauerpflaumensauce in die Suppe einrühren, gut vermischen, weitere 10 Minuten köcheln, damit sich die Aromen verbinden. WÜRZE ABSCHMECKEN: Salz, Pfeffer und gemahlenen Koriander nach Geschmack zugeben. SERVIEREN: mit frischem Koriander bestreuen und heiß servieren.",
+    "pt": "COZINHE A CARNE: coloque os pedaços de carne em água ou caldo, leve a ferver, retire a espuma, depois cozinhe em lume brando por 1-1,5 horas, até ficar macia. REFOGUE A CEBOLA: refogue a cebola picada numa frigideira até ficar translúcida. JUNTE O ARROZ: junte o arroz e a cebola refogada à panela com a carne, cozinhe mais 15-20 minutos, até o arroz ficar macio. PREPARE A PASTA DE NOZ: misture a noz moída, o alho e o khmeli-suneli com um pouco de caldo quente, até formar uma pasta. COMBINE: incorpore a pasta de noz e o molho de ameixa azeda na sopa, misture bem, cozinhe mais 10 minutos para os sabores se combinarem. AJUSTE O TEMPERO: junte sal, pimenta e coentro moído, a gosto. SIRVA: polvilhe coentro fresco por cima e sirva quente.",
+    "ru": "СВАРИ ГОВЯДИНУ: положи куски говядины в воду или бульон, доведи до кипения, сними пену, затем туши на слабом огне 1-1,5 часа, пока не станет мягкой. ОБЖАРЬ ЛУК: обжарь нарезанный лук на сковороде до прозрачности. ДОБАВЬ РИС: добавь рис и обжаренный лук в кастрюлю с говядиной, вари ещё 15-20 минут, пока рис не станет мягким. ПРИГОТОВЬ ОРЕХОВУЮ ПАСТУ: смешай молотые грецкие орехи, чеснок и хмели-сунели с небольшим количеством тёплого бульона до пасты. СОЕДИНИ: вмешай ореховую пасту и соус ткемали в суп, хорошо перемешай, вари ещё 10 минут, чтобы вкусы соединились. ОТРЕГУЛИРУЙ ВКУС: добавь соль, перец и молотый кориандр по вкусу. ПОДАЙ: посыпь свежей кинзой и подавай горячим.",
+    "ar": "اطهُ اللحم: ضع قطع اللحم في الماء أو المرق، اجلب إلى الغليان، أزل الرغوة، ثم اطهُ على نار هادئة 1-1.5 ساعة حتى يصبح طريًا. قلّب البصل: قلّب البصل المفروم في مقلاة حتى يصبح شفافًا. أضف الأرز: أضف الأرز والبصل المقلي إلى القدر مع اللحم، اطهُ 15-20 دقيقة أخرى حتى يلين الأرز. جهّز عجينة الجوز: اخلط الجوز المطحون والثوم وخميلي سونيلي مع القليل من المرق الدافئ حتى تصبح عجينة. اجمع: قلّب عجينة الجوز وصلصة البرقوق الحامض في الشوربة، امزج جيدًا، اطهُ 10 دقائق أخرى حتى تتمازج النكهات. اضبط النكهة: أضف الملح والفلفل والكزبرة المطحونة حسب الرغبة. قدّم: رُشّ الكزبرة الطازجة فوقها وقدّمها ساخنة.",
+    "zh": "煮牛肉：将牛肉块放入水或高汤中，煮沸后撇去浮沫，转小火炖1-1.5小时至软烂。炒洋葱：将洋葱碎放入锅中炒至透明。加入大米：将大米和炒好的洋葱加入牛肉锅中，再煮15-20分钟至米粒变软。调制核桃酱：将核桃碎、大蒜和khmeli-suneli与少许温热高汤混合成酱。融合：将核桃酱和酸李子酱拌入汤中，充分搅拌，再煮10分钟使风味融合。调味：根据口味加盐、胡椒和芫荽籽粉。上桌：撒上新鲜香菜，趁热享用。",
+    "ja": "牛肉を煮る：牛肉を水またはだしに入れ、沸騰させてアクを取り、弱火で1〜1時間半、柔らかくなるまで煮る。玉ねぎを炒める：刻んだ玉ねぎを透明になるまでフライパンで炒める。米を加える：米と炒めた玉ねぎを牛肉の鍋に加え、さらに15〜20分、米が柔らかくなるまで煮る。くるみペーストを作る：くるみの粉末、にんにく、フメリスネリを少量の温かいスープと混ぜてペースト状にする。合わせる：くるみペーストと酸っぱいプラムソースをスープに混ぜ込み、よく混ぜてさらに10分煮て風味をなじませる。味を整える：好みで塩、こしょう、挽いたコリアンダーを加える。盛り付ける：新鮮なパクチーを散らして熱々を提供する。",
+    "tr": "ETİ PİŞİRİN: sığır eti parçalarını su veya et suyuna koyun, kaynatın, köpüğü alın, ardından kısık ateşte 1-1,5 saat, yumuşayana kadar pişirin. SOĞANI SOTELEYIN: doğranmış soğanı bir tavada yarı saydam olana kadar soteleyin. PİRİNCİ EKLEYİN: pirinci ve sotelenmiş soğanı sığır etli tencereye ekleyin, 15-20 dakika daha, pirinç yumuşayana kadar pişirin. CEVİZ MACUNUNU HAZIRLAYIN: öğütülmüş cevizi, sarımsağı ve khmeli-suneli'yi biraz ılık et suyuyla macun haline getirin. BİRLEŞTİRİN: ceviz macununu ve ekşi erik sosunu çorbaya karıştırın, iyice karıştırın, lezzetler kaynaşsın diye 10 dakika daha pişirin. TADI AYARLAYIN: damak zevkinize göre tuz, karabiber ve öğütülmüş kişniş ekleyin. SERVİS YAPIN: üzerine taze kişniş serpin ve sıcak servis edin.",
+    "it": "CUOCI IL MANZO: metti i pezzi di manzo in acqua o brodo, porta a bollore, schiuma, poi cuoci a fuoco basso per 1-1,5 ore, finché tenero. SOFFRIGGI LA CIPOLLA: soffriggi la cipolla tritata in padella finché traslucida. AGGIUNGI IL RISO: aggiungi il riso e la cipolla soffritta alla pentola con il manzo, cuoci altri 15-20 minuti, finché il riso è morbido. PREPARA LA PASTA DI NOCI: mescola le noci macinate, l'aglio e il khmeli-suneli con un po' di brodo caldo, fino a formare una pasta. UNISCI: incorpora la pasta di noci e la salsa di prugne acide nella zuppa, mescola bene, cuoci altri 10 minuti perché i sapori si amalgamino. REGOLA IL SAPORE: aggiungi sale, pepe e coriandro macinato, a piacere. SERVI: cospargi con coriandro fresco e servi caldo.",
+    "ko": "소고기 끓이기: 소고기 덩어리를 물이나 육수에 넣고 끓여 거품을 걷어낸 뒤 약불에서 1-1.5시간, 부드러워질 때까지 끓인다. 양파 볶기: 다진 양파를 팬에서 투명해질 때까지 볶는다. 쌀 넣기: 쌀과 볶은 양파를 소고기 냄비에 넣고 15-20분 더, 쌀이 부드러워질 때까지 끓인다. 호두 페이스트 만들기: 간 호두, 마늘, 흐멜리수넬리를 따뜻한 육수 약간과 섞어 페이스트로 만든다. 합치기: 호두 페이스트와 신맛 자두 소스를 수프에 넣고 잘 섞은 뒤 맛이 어우러지도록 10분 더 끓인다. 간 맞추기: 취향에 따라 소금, 후추, 간 고수씨를 넣는다. 서빙하기: 신선한 고수를 뿌려 뜨겁게 낸다.",
+    "hi": "बीफ़ पकाएं: बीफ़ के टुकड़ों को पानी या स्टॉक में डालें, उबाल लाएं, झाग हटाएं, फिर धीमी आंच पर 1-1.5 घंटे, नरम होने तक पकाएं। प्याज़ भूनें: कटे प्याज़ को पारदर्शी होने तक पैन में भूनें। चावल डालें: चावल और भुना प्याज़ बीफ़ वाले बर्तन में डालें, 15-20 मिनट और पकाएं, चावल नरम होने तक। अखरोट का पेस्ट तैयार करें: पिसा अखरोट, लहसुन और ख्मेली-सुनेली को थोड़े गरम शोरबे के साथ पेस्ट बनाएं। मिलाएं: अखरोट पेस्ट और खट्टा आलूबुखारा सॉस सूप में मिलाएं, अच्छी तरह मिलाएं, स्वाद घुलने के लिए 10 मिनट और पकाएं। स्वाद समायोजित करें: स्वादानुसार नमक, काली मिर्च और पिसा धनिया डालें। परोसें: ऊपर से ताज़ा धनिया छिड़कें और गरम-गरम परोसें।"
+  },
+  "originText": {
+    "ro": "Kharcho provine din Samegrelo, o regiune din vestul Georgiei renumită pentru bucătăria intens condimentată și acrișoară. În Georgia autentică, supa se bazează pe sosul de prune acre tkemali și pe pasta de nucă, nu pe roșii — o distincție importantă, pentru că versiunea răspândită în fosta Uniune Sovietică, adesea pe bază de roșii sau pastă de roșii, s-a îndepărtat mult de original, devenind aproape un fel diferit sub același nume.\n\nCe rămâne constant e tehnica: orezul se fierbe direct în supă, nu separat, ca să elibereze amidon și să îngroașe lichidul, iar nuca măcinată amestecată cu usturoi și khmeli-suneli se adaugă abia spre final, ca aromele complexe să nu se piardă prin fierbere îndelungată. Rezultatul e o supă groasă, acrișoară și ușor picantă, foarte diferită de supele clare, limpezi, din restul bucătăriei georgiene.",
+    "en": "Kharcho comes from Samegrelo, a region in western Georgia known for intensely spiced, sour cooking. In authentic Georgian cooking, the soup is built on sour plum sauce (tkemali) and walnut paste, not tomatoes — an important distinction, because the version that spread across the former Soviet Union, often tomato-based, drifted far from the original, becoming almost a different dish under the same name.\n\nWhat stays constant is the technique: the rice cooks directly in the soup, not separately, so it releases starch and thickens the liquid, and the ground walnuts mixed with garlic and khmeli-suneli are added only toward the end, so the complex aromas don't get lost through prolonged boiling. The result is a thick, tangy, mildly spicy soup, quite different from the clear, light soups found elsewhere in Georgian cooking.",
+    "es": "El kharcho viene de Samegrelo, una región del oeste de Georgia conocida por su cocina intensamente especiada y ácida. En la cocina georgiana auténtica, la sopa se construye sobre la salsa de ciruela ácida (tkemali) y la pasta de nuez, no sobre tomates — una distinción importante, porque la versión que se extendió por la antigua Unión Soviética, a menudo a base de tomate, se alejó mucho del original, convirtiéndose casi en otro plato bajo el mismo nombre.\n\nLo que se mantiene constante es la técnica: el arroz se cuece directamente en la sopa, no aparte, para que libere almidón y espese el líquido, y la nuez molida mezclada con ajo y khmeli-suneli se añade solo hacia el final, para que los aromas complejos no se pierdan por la cocción prolongada. El resultado es una sopa espesa, ácida y ligeramente picante, bastante diferente de las sopas claras y ligeras que se encuentran en el resto de la cocina georgiana.",
+    "fr": "Le kharcho vient de Samegrelo, une région de l'ouest de la Géorgie connue pour sa cuisine intensément épicée et acidulée. Dans la cuisine géorgienne authentique, la soupe repose sur la sauce de prunes acides (tkemali) et la pâte de noix, pas sur des tomates — une distinction importante, car la version répandue dans l'ancienne Union soviétique, souvent à base de tomate, s'est beaucoup éloignée de l'original, devenant presque un plat différent sous le même nom.\n\nCe qui reste constant, c'est la technique : le riz cuit directement dans la soupe, pas à part, pour libérer son amidon et épaissir le liquide, et les noix moulues mélangées à l'ail et au khmeli-suneli ne sont ajoutées que vers la fin, pour que les arômes complexes ne se perdent pas lors d'une cuisson prolongée. Le résultat est une soupe épaisse, acidulée et légèrement épicée, bien différente des soupes claires et légères que l'on trouve ailleurs dans la cuisine géorgienne.",
+    "de": "Kharcho stammt aus Samegrelo, einer Region im Westen Georgiens, bekannt für ihre intensiv gewürzte, säuerliche Küche. In der authentischen georgischen Küche baut die Suppe auf Sauerpflaumensauce (Tkemali) und Walnusspaste auf, nicht auf Tomaten — ein wichtiger Unterschied, denn die Version, die sich in der ehemaligen Sowjetunion verbreitete, oft auf Tomatenbasis, entfernte sich weit vom Original und wurde unter demselben Namen fast zu einem anderen Gericht.\n\nWas konstant bleibt, ist die Technik: Der Reis kocht direkt in der Suppe, nicht separat, damit er Stärke abgibt und die Flüssigkeit eindickt, und die mit Knoblauch und Khmeli-Suneli vermischten gemahlenen Walnüsse werden erst gegen Ende zugegeben, damit die komplexen Aromen nicht durch langes Kochen verloren gehen. Das Ergebnis ist eine dicke, säuerliche, mild scharfe Suppe, ganz anders als die klaren, leichten Suppen, die man sonst in der georgischen Küche findet.",
+    "pt": "O kharcho vem de Samegrelo, uma região do oeste da Geórgia conhecida pela sua culinária intensamente condimentada e ácida. Na culinária georgiana autêntica, a sopa é construída sobre o molho de ameixa azeda (tkemali) e a pasta de noz, não sobre tomate — uma distinção importante, porque a versão que se espalhou pela antiga União Soviética, muitas vezes à base de tomate, afastou-se muito do original, tornando-se quase um prato diferente sob o mesmo nome.\n\nO que se mantém constante é a técnica: o arroz cozinha diretamente na sopa, não à parte, para libertar amido e engrossar o líquido, e a noz moída misturada com alho e khmeli-suneli é adicionada só perto do fim, para que os aromas complexos não se percam com a fervura prolongada. O resultado é uma sopa espessa, ácida e ligeiramente picante, bem diferente das sopas claras e leves encontradas no resto da culinária georgiana.",
+    "ru": "Харчо происходит из Самегрело, региона на западе Грузии, известного своей острой, кислой кухней. В аутентичной грузинской кухне суп готовится на основе соуса ткемали и ореховой пасты, а не помидоров — важное отличие, ведь версия, распространившаяся по бывшему Советскому Союзу, часто на томатной основе, сильно отошла от оригинала, превратившись почти в другое блюдо под тем же названием.\n\nНеизменной остаётся техника: рис варится прямо в супе, а не отдельно, чтобы выделить крахмал и загустить жидкость, а молотые грецкие орехи с чесноком и хмели-сунели добавляются лишь ближе к концу, чтобы сложные ароматы не терялись при долгом кипении. В результате получается густой, кисловатый, слегка острый суп, сильно отличающийся от прозрачных, лёгких супов, характерных для остальной грузинской кухни.",
+    "ar": "يأتي الخارتشو من ساميغريلو، منطقة في غرب جورجيا معروفة بمطبخها الحار الحامض. في الطبخ الجورجي الأصيل، تُبنى الشوربة على صلصة البرقوق الحامض (تكيمالي) وعجينة الجوز، لا الطماطم — وهو فرق مهم، لأن النسخة التي انتشرت في الاتحاد السوفيتي السابق، والقائمة غالبًا على الطماطم، ابتعدت كثيرًا عن الأصل، لتصبح طبقًا مختلفًا تقريبًا تحت الاسم نفسه.\n\nما يبقى ثابتًا هو التقنية: الأرز يُطهى مباشرة في الشوربة لا بشكل منفصل، ليُطلق النشا ويُثخّن السائل، والجوز المطحون الممزوج بالثوم وخميلي سونيلي يُضاف فقط قرب النهاية، حتى لا تضيع النكهات المعقدة بالغليان الطويل. النتيجة شوربة سميكة حامضة وحارة قليلًا، مختلفة تمامًا عن الشوربات الصافية الخفيفة الموجودة في بقية المطبخ الجورجي.",
+    "zh": "哈尔乔汤源自萨梅格列罗，格鲁吉亚西部一个以浓香酸辣饮食闻名的地区。在正宗的格鲁吉亚做法中，这道汤以酸李子酱（tkemali）和核桃酱为基础，而非番茄——这是一个重要的区别，因为在前苏联广泛流传的版本常以番茄为基础，与原版相去甚远，几乎成了同名却完全不同的菜肴。\n\n不变的是烹饪技艺：大米直接在汤中煮，而不是分开煮，以释放淀粉使汤汁变浓稠；而核桃碎与大蒜和khmeli-suneli混合而成的酱料只在快煮好时加入，以免长时间煮沸使复杂的香气流失。最终成品是一道浓稠、酸香、略带辣味的汤，与格鲁吉亚菜系中常见的清澈清汤大不相同。",
+    "ja": "ハルチョーは、濃厚な香辛料と酸味の効いた料理で知られるジョージア西部の地域、サメグレロに由来する。本場のジョージア料理では、このスープはトマトではなく酸っぱいプラムソース（トケマリ）とくるみペーストを基本とする——これは重要な違いで、旧ソビエト連邦全域に広まったトマトベースのことが多いversionはオリジナルから大きく離れ、同じ名前のもとでほぼ別の料理になってしまった。\n\n変わらないのはその技法である。米は別茹でせずスープの中で直接炊かれ、デンプンを出して煮汁にとろみをつける。にんにくとフメリスネリを混ぜたくるみの粉末は仕上げの段階でのみ加えられ、長時間の煮込みによって複雑な香りが失われないようにする。出来上がるのは濃厚で酸味があり、ほんのりスパイシーなスープで、ジョージア料理の他の澄んだ軽やかなスープとはかなり異なる。",
+    "tr": "Harço, yoğun baharatlı ve ekşi mutfağıyla bilinen Batı Gürcistan'daki bir bölge olan Samegrelo'dan gelir. Otantik Gürcü mutfağında çorba, domates değil ekşi erik sosu (tkemali) ve ceviz macunu üzerine kuruludur — bu önemli bir ayrımdır, çünkü eski Sovyetler Birliği'nde yayılan ve genellikle domates bazlı olan versiyon orijinalden uzaklaşarak aynı isim altında neredeyse farklı bir yemeğe dönüşmüştür.\n\nSabit kalan şey tekniktir: pirinç ayrı değil doğrudan çorbanın içinde pişer, böylece nişasta salıp sıvıyı koyulaştırır, sarımsak ve khmeli-suneli ile karıştırılan öğütülmüş ceviz ise sadece sona doğru eklenir, böylece karmaşık aromalar uzun kaynatmayla kaybolmaz. Sonuç, Gürcü mutfağının geri kalanındaki berrak, hafif çorbalardan oldukça farklı, koyu, ekşi ve hafif baharatlı bir çorbadır.",
+    "it": "Il kharcho viene da Samegrelo, una regione della Georgia occidentale nota per la sua cucina intensamente speziata e acidula. Nella cucina georgiana autentica, la zuppa si basa sulla salsa di prugne acide (tkemali) e sulla pasta di noci, non sui pomodori — una distinzione importante, perché la versione diffusasi nell'ex Unione Sovietica, spesso a base di pomodoro, si è allontanata molto dall'originale, diventando quasi un piatto diverso sotto lo stesso nome.\n\nCiò che resta costante è la tecnica: il riso cuoce direttamente nella zuppa, non a parte, così rilascia amido e addensa il liquido, e le noci macinate mescolate con aglio e khmeli-suneli vengono aggiunte solo verso la fine, perché gli aromi complessi non si perdano con una bollitura prolungata. Il risultato è una zuppa densa, acidula e leggermente piccante, molto diversa dalle zuppe chiare e leggere che si trovano nel resto della cucina georgiana.",
+    "ko": "하르초는 강렬한 향신료와 신맛이 특징인 요리로 유명한 조지아 서부 지역 사메그렐로에서 비롯되었다. 정통 조지아 요리에서 이 수프는 토마토가 아닌 신맛 자두 소스(트케말리)와 호두 페이스트를 기본으로 한다 — 이는 중요한 차이인데, 옛 소비에트 연방 전역으로 퍼진 버전은 흔히 토마토 기반이었고 원형에서 크게 벗어나 같은 이름 아래 거의 다른 요리가 되어버렸기 때문이다.\n\n변하지 않는 것은 조리법이다: 쌀은 따로 삶지 않고 수프 안에서 바로 익혀 전분을 내고 국물을 걸쭉하게 만들며, 마늘과 흐멜리수넬리를 섞은 간 호두는 마지막에서야 넣어 오래 끓이는 동안 복합적인 향이 사라지지 않게 한다. 그 결과 조지아 요리의 다른 맑고 가벼운 수프들과는 사뭇 다른, 걸쭉하고 새콤하며 살짝 매콤한 수프가 완성된다.",
+    "hi": "खार्चो जॉर्जिया के पश्चिमी क्षेत्र सामेग्रेलो से आता है, जो तीखे मसालेदार, खट्टे व्यंजनों के लिए जाना जाता है। प्रामाणिक जॉर्जियाई खाना पकाने में, यह सूप टमाटर पर नहीं बल्कि खट्टा आलूबुखारा सॉस (त्केमाली) और अखरोट पेस्ट पर आधारित होता है — यह एक महत्वपूर्ण अंतर है, क्योंकि पूर्व सोवियत संघ में फैली version, जो अक्सर टमाटर-आधारित थी, मूल से बहुत दूर चली गई, और उसी नाम के तहत लगभग एक अलग व्यंजन बन गई।\n\nजो स्थिर रहता है वह है तकनीक: चावल अलग से नहीं बल्कि सीधे सूप में पकता है, ताकि स्टार्च छोड़े और तरल को गाढ़ा करे, और लहसुन तथा ख्मेली-सुनेली के साथ मिला पिसा अखरोट अंत की ओर ही डाला जाता है, ताकि लंबे उबाल से जटिल सुगंध न खो जाए। नतीजा एक गाढ़ा, खट्टा, हल्का तीखा सूप होता है, जो जॉर्जियाई व्यंजनों के बाकी साफ, हल्के सूप से काफी अलग है।"
+  },
+  "meta": {
+    "time": 100,
+    "costRon": 17,
+    "tags": ["family"],
+    "desc": {
+      "ro": "Supă groasă de vită cu orez, pastă de nucă și sos de prune acre, aromată cu khmeli-suneli.",
+      "en": "Thick beef and rice soup with walnut paste and sour plum sauce, seasoned with khmeli-suneli.",
+      "es": "Sopa espesa de ternera y arroz con pasta de nuez y salsa de ciruela ácida, sazonada con khmeli-suneli.",
+      "fr": "Soupe épaisse de bœuf et riz à la pâte de noix et à la sauce de prunes acides, parfumée au khmeli-suneli.",
+      "de": "Dicke Rind-Reis-Suppe mit Walnusspaste und Sauerpflaumensauce, gewürzt mit Khmeli-Suneli.",
+      "pt": "Sopa espessa de carne e arroz com pasta de noz e molho de ameixa azeda, temperada com khmeli-suneli.",
+      "ru": "Густой суп из говядины и риса с ореховой пастой и соусом ткемали, приправленный хмели-сунели.",
+      "ar": "شوربة سميكة من اللحم والأرز مع عجينة الجوز وصلصة البرقوق الحامض، منكهة بخميلي سونيلي.",
+      "zh": "浓稠的牛肉大米汤，配核桃酱与酸李子酱，用khmeli-suneli调味。",
+      "ja": "くるみペーストと酸っぱいプラムソースを合わせた濃厚な牛肉と米のスープ、フメリスネリで香り付け。",
+      "tr": "Ceviz macunu ve ekşi erik sosuyla hazırlanan koyu sığır eti ve pirinç çorbası, khmeli-suneli ile tatlandırılmış.",
+      "it": "Zuppa densa di manzo e riso con pasta di noci e salsa di prugne acide, insaporita con khmeli-suneli.",
+      "ko": "호두 페이스트와 신맛 자두 소스를 넣은 걸쭉한 소고기 쌀 수프, 흐멜리수넬리로 향을 낸다.",
+      "hi": "अखरोट पेस्ट और खट्टे आलूबुखारा सॉस वाला गाढ़ा बीफ़ और चावल का सूप, ख्मेली-सुनेली से महकाया गया।"
+    }
+  }
+}

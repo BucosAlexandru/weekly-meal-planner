@@ -1,0 +1,176 @@
+{
+  "id": 296,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Georgia", "en": "Georgia", "es": "Georgia", "fr": "Géorgie", "de": "Georgien",
+    "pt": "Geórgia", "ru": "Грузия", "ar": "جورجيا", "zh": "格鲁吉亚", "ja": "ジョージア",
+    "tr": "Gürcistan", "it": "Georgia", "ko": "조지아", "hi": "जॉर्जिया"
+  },
+  "name": {
+    "ro": "Ajapsandali", "en": "Ajapsandali", "es": "Ajapsandali", "fr": "Ajapsandali", "de": "Adschapsandali",
+    "pt": "Ajapsandali", "ru": "Аджапсандали", "ar": "أجابسندالي", "zh": "格鲁吉亚蔬菜杂烩", "ja": "アジャプサンダリ",
+    "tr": "Acapsandal", "it": "Ajapsandali", "ko": "아자프산달리", "hi": "अजाप्संदाली"
+  },
+  "category": {
+    "ro": "Garnitură", "en": "Side dish", "es": "Guarnición", "fr": "Accompagnement", "de": "Beilage",
+    "pt": "Acompanhamento", "ru": "Гарнир", "ar": "طبق جانبي", "zh": "配菜", "ja": "副菜",
+    "hi": "साइड डिश", "tr": "Yan yemek", "it": "Contorno", "ko": "반찬"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍆","t":"Vinetele se sărează și se lasă la scurs înainte de gătit","d":"Elimină gustul amărui și excesul de apă, ca să se rumenească, nu să fiarbă în ulei"},
+      {"icon":"🌶️","t":"Legumele se gătesc separat, apoi se combină","d":"Fiecare legumă capătă propria textură, în loc să se transforme într-un terci uniform"},
+      {"icon":"🌿","t":"Khmeli-suneli se adaugă abia la final","d":"Păstrează aroma condimentelor, care s-ar pierde prin fierbere prelungită"},
+      {"icon":"🥗","t":"Se servește cald sau la temperatura camerei","d":"Gustul se așază și se intensifică pe măsură ce se răcește ușor"}
+    ],
+    "en": [
+      {"icon":"🍆","t":"The eggplant is salted and drained before cooking","d":"Removes bitterness and excess water, so it browns instead of steaming in the oil"},
+      {"icon":"🌶️","t":"The vegetables are cooked separately, then combined","d":"Each vegetable keeps its own texture, instead of turning into a uniform mush"},
+      {"icon":"🌿","t":"Khmeli-suneli goes in only at the end","d":"Preserves the spice aroma, which would fade with prolonged simmering"},
+      {"icon":"🥗","t":"Served warm or at room temperature","d":"The flavor settles and deepens as it cools slightly"}
+    ],
+    "es": [
+      {"icon":"🍆","t":"La berenjena se sala y se escurre antes de cocinar","d":"Elimina el amargor y el exceso de agua, para que se dore en vez de cocerse al vapor en el aceite"},
+      {"icon":"🌶️","t":"Las verduras se cocinan por separado y luego se combinan","d":"Cada verdura conserva su propia textura, en vez de volverse un puré uniforme"},
+      {"icon":"🌿","t":"El khmeli-suneli se añade solo al final","d":"Preserva el aroma de la especia, que se perdería con una cocción prolongada"},
+      {"icon":"🥗","t":"Se sirve caliente o a temperatura ambiente","d":"El sabor se asienta y se intensifica a medida que se enfría un poco"}
+    ],
+    "fr": [
+      {"icon":"🍆","t":"L'aubergine est salée et égouttée avant cuisson","d":"Élimine l'amertume et l'excès d'eau, pour qu'elle dore au lieu de cuire à la vapeur dans l'huile"},
+      {"icon":"🌶️","t":"Les légumes cuisent séparément, puis sont combinés","d":"Chaque légume garde sa propre texture, au lieu de devenir une bouillie uniforme"},
+      {"icon":"🌿","t":"Le khmeli-suneli n'est ajouté qu'à la fin","d":"Préserve l'arôme des épices, qui s'estomperait à la cuisson prolongée"},
+      {"icon":"🥗","t":"Servi chaud ou à température ambiante","d":"La saveur se stabilise et s'intensifie en refroidissant légèrement"}
+    ],
+    "de": [
+      {"icon":"🍆","t":"Die Aubergine wird vor dem Kochen gesalzen und abgetropft","d":"Entfernt Bitterstoffe und überschüssiges Wasser, damit sie bräunt statt im Öl zu dünsten"},
+      {"icon":"🌶️","t":"Das Gemüse wird getrennt gekocht und dann vereint","d":"Jedes Gemüse behält seine eigene Textur, statt zu einem gleichförmigen Brei zu werden"},
+      {"icon":"🌿","t":"Khmeli-suneli kommt erst am Ende dazu","d":"Bewahrt das Gewürzaroma, das bei langem Köcheln verblassen würde"},
+      {"icon":"🥗","t":"Wird warm oder bei Zimmertemperatur serviert","d":"Der Geschmack setzt sich und vertieft sich, während es leicht abkühlt"}
+    ],
+    "pt": [
+      {"icon":"🍆","t":"A beringela é salgada e escorrida antes de cozinhar","d":"Remove o amargor e o excesso de água, para dourar em vez de cozinhar a vapor no óleo"},
+      {"icon":"🌶️","t":"Os vegetais são cozinhados separadamente e depois combinados","d":"Cada vegetal mantém a sua própria textura, em vez de virar um purê uniforme"},
+      {"icon":"🌿","t":"O khmeli-suneli entra só no final","d":"Preserva o aroma da especiaria, que se perderia com fervura prolongada"},
+      {"icon":"🥗","t":"Servido quente ou à temperatura ambiente","d":"O sabor assenta e intensifica-se à medida que arrefece um pouco"}
+    ],
+    "ru": [
+      {"icon":"🍆","t":"Баклажаны солятся и стекают перед готовкой","d":"Убирает горечь и лишнюю воду, чтобы они жарились, а не тушились в масле"},
+      {"icon":"🌶️","t":"Овощи готовятся раздельно, затем соединяются","d":"Каждый овощ сохраняет свою текстуру, вместо однородного пюре"},
+      {"icon":"🌿","t":"Хмели-сунели добавляется только в конце","d":"Сохраняет аромат специй, который исчез бы при долгом тушении"},
+      {"icon":"🥗","t":"Подаётся тёплым или при комнатной температуре","d":"Вкус устаканивается и углубляется, пока блюдо слегка остывает"}
+    ],
+    "ar": [
+      {"icon":"🍆","t":"يُملّح الباذنجان ويُصفّى قبل الطهي","d":"يزيل المرارة والماء الزائد ليتحمّر بدلاً من أن يُطهى بالبخار في الزيت"},
+      {"icon":"🌶️","t":"الخضار تُطهى منفصلة ثم تُجمع","d":"كل خضار يحتفظ بقوامه الخاص بدلاً من التحول إلى هريس موحّد"},
+      {"icon":"🌿","t":"خميلي سونيلي يُضاف فقط في النهاية","d":"يحافظ على نكهة التوابل التي قد تتلاشى مع الطهي الطويل"},
+      {"icon":"🥗","t":"يُقدَّم دافئًا أو بحرارة الغرفة","d":"النكهة تستقر وتزداد عمقًا مع برودته قليلًا"}
+    ],
+    "zh": [
+      {"icon":"🍆","t":"茄子在烹饪前先腌盐沥水","d":"去除苦味和多余水分，让茄子煎香而不是在油里被闷软"},
+      {"icon":"🌶️","t":"蔬菜分开烹制后再混合","d":"每种蔬菜保持各自的口感，不会煮成一团糊状"},
+      {"icon":"🌿","t":"khmeli-suneli只在最后加入","d":"保留香料的香气，长时间炖煮会使其香味流失"},
+      {"icon":"🥗","t":"温热或室温食用","d":"随着稍微冷却，风味会沉淀并变得更浓郁"}
+    ],
+    "ja": [
+      {"icon":"🍆","t":"なすは調理前に塩をして水気を切る","d":"苦味と余分な水分を取り除き、油で蒸れずにこんがり焼ける"},
+      {"icon":"🌶️","t":"野菜は別々に調理してから合わせる","d":"それぞれの野菜が均一などろどろにならず、独自の食感を保つ"},
+      {"icon":"🌿","t":"フメリスネリは仕上げにのみ加える","d":"長く煮込むと薄れてしまうスパイスの香りを保つ"},
+      {"icon":"🥗","t":"温かいまま、または常温で提供する","d":"少し冷めることで味がなじみ、より深まる"}
+    ],
+    "tr": [
+      {"icon":"🍆","t":"Patlıcan pişirmeden önce tuzlanıp süzülür","d":"Acılığı ve fazla suyu giderir, böylece yağda buğulanmak yerine kızarır"},
+      {"icon":"🌶️","t":"Sebzeler ayrı ayrı pişirilip sonra birleştirilir","d":"Her sebze homojen bir püreye dönüşmek yerine kendi dokusunu korur"},
+      {"icon":"🌿","t":"Khmeli-suneli sadece sona eklenir","d":"Uzun pişirmede kaybolacak baharat aromasını korur"},
+      {"icon":"🥗","t":"Sıcak veya oda sıcaklığında servis edilir","d":"Hafifçe soğudukça lezzet oturur ve derinleşir"}
+    ],
+    "it": [
+      {"icon":"🍆","t":"La melanzana viene salata e scolata prima della cottura","d":"Elimina l'amaro e l'acqua in eccesso, così rosola invece di stufare nell'olio"},
+      {"icon":"🌶️","t":"Le verdure vengono cotte separatamente, poi unite","d":"Ogni verdura mantiene la propria consistenza, invece di diventare un purè uniforme"},
+      {"icon":"🌿","t":"Il khmeli-suneli va aggiunto solo alla fine","d":"Preserva l'aroma delle spezie, che svanirebbe con una cottura prolungata"},
+      {"icon":"🥗","t":"Si serve calda o a temperatura ambiente","d":"Il sapore si assesta e si intensifica mentre si raffredda leggermente"}
+    ],
+    "ko": [
+      {"icon":"🍆","t":"가지는 요리 전 소금에 절여 물기를 뺀다","d":"쓴맛과 여분의 수분을 제거해 기름에서 찌지 않고 노릇하게 익게 한다"},
+      {"icon":"🌶️","t":"채소는 따로 익힌 후 합친다","d":"각 채소가 뭉개지지 않고 저마다의 식감을 유지한다"},
+      {"icon":"🌿","t":"흐멜리수넬리는 마지막에만 넣는다","d":"오래 끓이면 사라질 향신료의 향을 지켜준다"},
+      {"icon":"🥗","t":"따뜻하거나 실온으로 낸다","d":"약간 식으면서 맛이 자리 잡고 더 깊어진다"}
+    ],
+    "hi": [
+      {"icon":"🍆","t":"पकाने से पहले बैंगन को नमक लगाकर छाना जाता है","d":"कड़वापन और अतिरिक्त पानी हटाता है, ताकि तेल में भाप बनने के बजाय भूरा हो"},
+      {"icon":"🌶️","t":"सब्ज़ियां अलग-अलग पकाई जाती हैं, फिर मिलाई जाती हैं","d":"हर सब्ज़ी एकसमान गूदे में बदलने के बजाय अपनी बनावट बनाए रखती है"},
+      {"icon":"🌿","t":"ख्मेली-सुनेली केवल अंत में डाला जाता है","d":"मसाले की खुशबू बचाता है, जो लंबे समय तक पकाने से खो जाती"},
+      {"icon":"🥗","t":"गरम या कमरे के तापमान पर परोसा जाता है","d":"हल्का ठंडा होते ही स्वाद जमता और गहरा होता है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["2 vinete mari, tăiate cuburi","2 ardei grași, feliați","3 roșii, tocate","1 ceapă, tocată","4 căței de usturoi, tocați","4 linguri ulei vegetal","1 linguriță khmeli-suneli","coriandru și busuioc proaspăt, tocate","1 ardei iute roșu, tocat (opțional)","sare, după gust"],
+    "en": ["2 large eggplants, cubed","2 bell peppers, sliced","3 tomatoes, chopped","1 onion, chopped","4 garlic cloves, minced","4 tbsp vegetable oil","1 tsp khmeli-suneli","fresh cilantro and basil, chopped","1 red chili, chopped (optional)","salt, to taste"],
+    "es": ["2 berenjenas grandes, en cubos","2 pimientos morrones, en tiras","3 tomates, picados","1 cebolla, picada","4 dientes de ajo picados","4 cdas de aceite vegetal","1 cdta de khmeli-suneli","cilantro y albahaca frescos, picados","1 chile rojo, picado (opcional)","sal, al gusto"],
+    "fr": ["2 grosses aubergines, en cubes","2 poivrons, en lanières","3 tomates, hachées","1 oignon, haché","4 gousses d'ail hachées","4 c. à soupe d'huile végétale","1 c. à café de khmeli-suneli","coriandre et basilic frais, hachés","1 piment rouge, haché (facultatif)","sel, selon le goût"],
+    "de": ["2 große Auberginen, gewürfelt","2 Paprikaschoten, in Streifen","3 Tomaten, gehackt","1 Zwiebel, gehackt","4 Knoblauchzehen, gehackt","4 EL Pflanzenöl","1 TL Khmeli-Suneli","frischer Koriander und Basilikum, gehackt","1 rote Chili, gehackt (optional)","Salz, nach Geschmack"],
+    "pt": ["2 beringelas grandes, em cubos","2 pimentões, em tiras","3 tomates, picados","1 cebola, picada","4 dentes de alho picados","4 col. sopa de óleo vegetal","1 col. chá de khmeli-suneli","coentro e manjericão frescos, picados","1 pimenta vermelha, picada (opcional)","sal, a gosto"],
+    "ru": ["2 крупных баклажана, кубиками","2 болгарских перца, полосками","3 помидора, нарезанных","1 луковица, нарезанная","4 зубчика чеснока, измельчённого","4 ст.л. растительного масла","1 ч.л. хмели-сунели","свежая кинза и базилик, нарезанные","1 красный перец чили, нарезанный (по желанию)","соль, по вкусу"],
+    "ar": ["2 باذنجانة كبيرة، مقطعة مكعبات","2 فلفل رومي، مقطع شرائح","3 طماطم، مفرومة","بصلة واحدة، مفرومة","4 فصوص ثوم مفرومة","4 ملاعق كبيرة زيت نباتي","ملعقة صغيرة خميلي سونيلي","كزبرة وريحان طازجان، مفرومان","فلفل أحمر حار واحد، مفروم (اختياري)","ملح، حسب الرغبة"],
+    "zh": ["2个大茄子，切块","2个甜椒，切条","3个番茄，切碎","1个洋葱，切碎","4瓣大蒜切碎","4汤匙植物油","1茶匙khmeli-suneli","新鲜香菜和罗勒，切碎","1个红辣椒，切碎（可选）","盐，适量"],
+    "ja": ["大きめのなす2本、角切り","パプリカ2個、細切り","トマト3個、みじん切り","玉ねぎ1個、みじん切り","にんにく4片、みじん切り","植物油大さじ4","フメリスネリ小さじ1","新鮮なパクチーとバジル、刻む","赤唐辛子1本、刻む（お好みで）","塩、お好みで"],
+    "tr": ["2 büyük patlıcan, küp doğranmış","2 dolmalık biber, dilimlenmiş","3 domates, doğranmış","1 soğan, doğranmış","4 diş sarımsak, doğranmış","4 yemek kaşığı bitkisel yağ","1 çay kaşığı khmeli-suneli","taze kişniş ve fesleğen, doğranmış","1 kırmızı biber, doğranmış (isteğe bağlı)","tuz, damak zevkine göre"],
+    "it": ["2 melanzane grandi, a cubetti","2 peperoni, a strisce","3 pomodori, tritati","1 cipolla, tritata","4 spicchi d'aglio tritati","4 cucchiai di olio vegetale","1 cucchiaino di khmeli-suneli","coriandro e basilico freschi, tritati","1 peperoncino rosso, tritato (facoltativo)","sale, a piacere"],
+    "ko": ["큰 가지 2개, 깍둑썬 것","피망 2개, 썬 것","토마토 3개, 다진 것","양파 1개, 다진 것","마늘 4쪽, 다진 것","식용유 4큰술","흐멜리수넬리 1작은술","신선한 고수와 바질, 다진 것","홍고추 1개, 다진 것(선택)","소금, 입맛에 맞게"],
+    "hi": ["2 बड़े बैंगन, टुकड़ों में कटे हुए","2 शिमला मिर्च, कटी हुई","3 टमाटर, कटे हुए","1 प्याज़, कटा हुआ","4 लहसुन की कलियां कटी हुई","4 बड़े चम्मच वनस्पति तेल","1 छोटा चम्मच ख्मेली-सुनेली","ताज़ा धनिया और तुलसी, कटी हुई","1 लाल मिर्च, कटी हुई (वैकल्पिक)","नमक, स्वादानुसार"]
+  },
+  "howIsMade": {
+    "ro": "SĂREAZĂ VINETELE: presară sare peste cuburile de vinete, lasă 20-30 de minute la scurs, apoi șterge-le bine cu un prosop de bucătărie. RUMENEȘTE VINETELE: prăjește vinetele în ulei, până se rumenesc pe toate părțile, apoi dă-le deoparte. CĂLEȘTE LEGUMELE: în aceeași tigaie, călește ceapa până se înmoaie, adaugă ardeiul gras, gătește câteva minute. ADAUGĂ USTUROIUL ȘI ROȘIILE: adaugă usturoiul, călește scurt, apoi adaugă roșiile tocate, fierbe până se descompun. COMBINĂ: readu vinetele în tigaie, adaugă khmeli-suneli și ardeiul iute, fierbe împreună 10-15 minute, ca aromele să se lege. FINALIZEAZĂ: amestecă verdețurile proaspete la final. SERVEȘTE: servește cald sau la temperatura camerei.",
+    "en": "SALT THE EGGPLANT: sprinkle salt over the eggplant cubes, let drain 20-30 minutes, then pat dry with a kitchen towel. BROWN THE EGGPLANT: fry the eggplant in oil until browned on all sides, then set aside. SAUTÉ THE VEGETABLES: in the same pan, sauté the onion until soft, add the bell pepper, cook a few minutes. ADD THE GARLIC AND TOMATOES: add the garlic, sauté briefly, then add the chopped tomatoes, simmer until they break down. COMBINE: return the eggplant to the pan, add the khmeli-suneli and chili, simmer together 10-15 minutes, so the flavors meld. FINISH: stir in the fresh herbs at the end. SERVE: serve warm or at room temperature.",
+    "es": "SALA LA BERENJENA: espolvorea sal sobre los cubos de berenjena, deja escurrir 20-30 minutos, luego sécalos bien con un paño de cocina. DORA LA BERENJENA: fríe la berenjena en aceite hasta que se dore por todos lados, luego resérvala. SOFRÍE LAS VERDURAS: en la misma sartén, sofríe la cebolla hasta que se ablande, añade el pimiento, cocina unos minutos. AÑADE EL AJO Y LOS TOMATES: añade el ajo, sofríe brevemente, luego añade los tomates picados, cocina hasta que se deshagan. COMBINA: devuelve la berenjena a la sartén, añade el khmeli-suneli y el chile, cocina junto 10-15 minutos, para que los sabores se integren. TERMINA: incorpora las hierbas frescas al final. SIRVE: sirve caliente o a temperatura ambiente.",
+    "fr": "SALE L'AUBERGINE: saupoudre de sel les cubes d'aubergine, laisse égoutter 20-30 minutes, puis éponge-les bien avec un torchon. FAIS DORER L'AUBERGINE: fais frire l'aubergine dans l'huile jusqu'à ce qu'elle dore de tous côtés, puis réserve. FAIS REVENIR LES LÉGUMES: dans la même poêle, fais revenir l'oignon jusqu'à ce qu'il ramollisse, ajoute le poivron, cuis quelques minutes. AJOUTE L'AIL ET LES TOMATES: ajoute l'ail, fais revenir brièvement, puis ajoute les tomates hachées, laisse mijoter jusqu'à ce qu'elles se défassent. COMBINE: remets l'aubergine dans la poêle, ajoute le khmeli-suneli et le piment, laisse mijoter ensemble 10-15 minutes, pour que les saveurs se lient. FINALISE: incorpore les herbes fraîches à la fin. SERS: sers chaud ou à température ambiante.",
+    "de": "SALZE DIE AUBERGINE: die Auberginenwürfel mit Salz bestreuen, 20-30 Minuten abtropfen lassen, dann mit einem Küchentuch trocken tupfen. BRÄUNE DIE AUBERGINE: die Aubergine in Öl von allen Seiten goldbraun braten, dann beiseitestellen. SCHWITZE DAS GEMÜSE AN: in derselben Pfanne die Zwiebel anschwitzen, bis sie weich ist, die Paprika zugeben, einige Minuten garen. FÜGE KNOBLAUCH UND TOMATEN HINZU: den Knoblauch zugeben, kurz anschwitzen, dann die gehackten Tomaten zugeben, köcheln bis sie zerfallen. VERBINDE: die Aubergine zurück in die Pfanne geben, Khmeli-Suneli und Chili zugeben, zusammen 10-15 Minuten köcheln, damit sich die Aromen verbinden. VOLLENDE: die frischen Kräuter am Ende unterrühren. SERVIEREN: warm oder bei Zimmertemperatur servieren.",
+    "pt": "SALGUE A BERINGELA: polvilhe sal sobre os cubos de beringela, deixe escorrer 20-30 minutos, depois seque bem com um pano de cozinha. DOURE A BERINGELA: frite a beringela em óleo até dourar por todos os lados, depois reserve. REFOGUE OS VEGETAIS: na mesma frigideira, refogue a cebola até amolecer, junte o pimentão, cozinhe alguns minutos. JUNTE O ALHO E OS TOMATES: junte o alho, refogue brevemente, depois junte os tomates picados, cozinhe até se desfazerem. COMBINE: devolva a beringela à frigideira, junte o khmeli-suneli e a pimenta, cozinhe junto por 10-15 minutos, para os sabores se combinarem. FINALIZE: misture as ervas frescas no final. SIRVA: sirva quente ou à temperatura ambiente.",
+    "ru": "ПОСОЛИ БАКЛАЖАНЫ: посыпь солью кубики баклажана, дай стечь 20-30 минут, затем промокни насухо кухонным полотенцем. ОБЖАРЬ БАКЛАЖАНЫ: обжарь баклажаны в масле со всех сторон до румяности, затем отложи. ОБЖАРЬ ОВОЩИ: в той же сковороде обжарь лук до мягкости, добавь болгарский перец, готовь несколько минут. ДОБАВЬ ЧЕСНОК И ПОМИДОРЫ: добавь чеснок, обжарь недолго, затем добавь нарезанные помидоры, туши, пока не разварятся. СОЕДИНИ: верни баклажаны в сковороду, добавь хмели-сунели и перец чили, туши вместе 10-15 минут, чтобы вкусы соединились. ЗАВЕРШИ: вмешай свежую зелень в конце. ПОДАЙ: подавай тёплым или при комнатной температуре.",
+    "ar": "مَلِّح الباذنجان: رُشّ الملح فوق مكعبات الباذنجان، اتركها تصفّى 20-30 دقيقة، ثم جفّفها جيدًا بمنشفة مطبخ. حمّر الباذنجان: اقلِ الباذنجان في الزيت حتى يتحمّر من كل الجهات، ثم ضعه جانبًا. قلّب الخضار: في نفس المقلاة، قلّب البصل حتى يلين، أضف الفلفل الرومي، اطهُ بضع دقائق. أضف الثوم والطماطم: أضف الثوم، قلّب لفترة قصيرة، ثم أضف الطماطم المفرومة، اطهُ حتى تتفكك. اجمع: أعد الباذنجان إلى المقلاة، أضف خميلي سونيلي والفلفل الحار، اطهُ معًا 10-15 دقيقة حتى تتمازج النكهات. أنهِ الطبق: قلّب الأعشاب الطازجة في النهاية. قدّم: قدّمه دافئًا أو بحرارة الغرفة.",
+    "zh": "腌茄子：在茄子块上撒盐，静置20-30分钟沥水，然后用厨房纸巾擦干。煎茄子：将茄子放入油中煎至各面金黄，取出备用。炒蔬菜：用同一锅炒香洋葱至变软，加入甜椒，炒几分钟。加入大蒜和番茄：加入大蒜略炒，再加入番茄碎，炖煮至软烂。融合：将茄子放回锅中，加入khmeli-suneli和辣椒，一起炖煮10-15分钟使风味融合。收尾：最后拌入新鲜香草。上桌：温热或室温享用。",
+    "ja": "なすに塩をふる：角切りにしたなすに塩をふり、20〜30分置いて水分を出し、キッチンタオルでしっかり拭き取る。なすを焼く：油でなすを全面が色づくまで焼き、取り出しておく。野菜を炒める：同じフライパンで玉ねぎがしんなりするまで炒め、パプリカを加えて数分炒める。にんにくとトマトを加える：にんにくを加えてさっと炒め、トマトを加えて崩れるまで煮る。合わせる：なすをフライパンに戻し、フメリスネリと唐辛子を加えて10〜15分一緒に煮て風味をなじませる。仕上げる：最後に新鮮なハーブを混ぜ込む。盛り付ける：温かいまま、または常温で提供する。",
+    "tr": "PATLICANI TUZLAYIN: patlıcan küplerine tuz serpin, 20-30 dakika süzülmeye bırakın, sonra bir mutfak havlusuyla kurulayın. PATLICANI KIZARTIN: patlıcanı yağda her tarafı kararana kadar kızartın, sonra kenara alın. SEBZELERİ SOTELEYIN: aynı tavada soğanı yumuşayana kadar soteleyin, biberi ekleyin, birkaç dakika pişirin. SARIMSAK VE DOMATESİ EKLEYİN: sarımsağı ekleyin, kısaca soteleyin, sonra doğranmış domatesleri ekleyin, dağılana kadar pişirin. BİRLEŞTİRİN: patlıcanı tavaya geri koyun, khmeli-suneli ve biberi ekleyin, lezzetler kaynaşsın diye birlikte 10-15 dakika pişirin. TAMAMLAYIN: sona doğru taze otları karıştırın. SERVİS YAPIN: sıcak veya oda sıcaklığında servis edin.",
+    "it": "SALA LE MELANZANE: cospargi di sale i cubetti di melanzana, lascia scolare 20-30 minuti, poi tamponale bene con un canovaccio. ROSOLA LE MELANZANE: friggi le melanzane nell'olio finché dorate su tutti i lati, poi mettile da parte. SOFFRIGGI LE VERDURE: nella stessa padella, soffriggi la cipolla finché morbida, aggiungi il peperone, cuoci qualche minuto. AGGIUNGI AGLIO E POMODORI: aggiungi l'aglio, soffriggi brevemente, poi aggiungi i pomodori tritati, cuoci finché si disfano. UNISCI: rimetti le melanzane in padella, aggiungi il khmeli-suneli e il peperoncino, cuoci insieme 10-15 minuti, perché i sapori si amalgamino. COMPLETA: incorpora le erbe fresche alla fine. SERVI: servi calda o a temperatura ambiente.",
+    "ko": "가지 소금에 절이기: 가지 큐브에 소금을 뿌려 20-30분간 물기를 뺀 뒤 키친타월로 물기를 닦아낸다. 가지 노릇하게 굽기: 가지를 기름에 모든 면이 노릇해질 때까지 튀기듯 구운 뒤 따로 둔다. 채소 볶기: 같은 팬에 양파를 부드러워질 때까지 볶고 피망을 넣어 몇 분 더 볶는다. 마늘과 토마토 넣기: 마늘을 넣고 살짝 볶은 뒤 다진 토마토를 넣어 뭉개질 때까지 끓인다. 합치기: 가지를 팬에 다시 넣고 흐멜리수넬리와 고추를 넣어 맛이 어우러지도록 10-15분 함께 끓인다. 마무리하기: 마지막에 신선한 허브를 섞는다. 서빙하기: 따뜻하거나 실온으로 낸다.",
+    "hi": "बैंगन को नमक लगाएं: बैंगन के टुकड़ों पर नमक छिड़कें, 20-30 मिनट छानने दें, फिर किचन तौलिये से अच्छी तरह पोंछें। बैंगन भूरा करें: बैंगन को तेल में सभी तरफ से भूरा होने तक तलें, फिर अलग रखें। सब्ज़ियां भूनें: उसी पैन में प्याज़ को नरम होने तक भूनें, शिमला मिर्च डालें, कुछ मिनट पकाएं। लहसुन और टमाटर डालें: लहसुन डालें, थोड़ा भूनें, फिर कटे टमाटर डालें, गलने तक पकाएं। मिलाएं: बैंगन वापस पैन में डालें, ख्मेली-सुनेली और मिर्च डालें, स्वाद घुलने के लिए साथ में 10-15 मिनट पकाएं। पूरा करें: अंत में ताज़ी जड़ी-बूटियां मिलाएं। परोसें: गरम या कमरे के तापमान पर परोसें।"
+  },
+  "originText": {
+    "ro": "Ajapsandali e unul dintre cele mai cunoscute feluri de post din Georgia, gătit tradițional în perioadele de abstinență de la carne din calendarul creștin ortodox georgian. Într-o bucătărie adesea asociată cu grătarul de carne și brânzeturile bogate, ajapsandali arată o altă latură a Georgiei — cea a legumelor de vară, coapte la soare, transformate într-un fel plin de savoare fără să aibă nevoie de carne sau produse lactate.\n\nDetaliul tehnic esențial e sărarea vinetelor înainte de gătit: fără acest pas, vinetele absorb prea mult ulei și rămân amare. La fel de important e să se gătească legumele separat — vinetele, ceapa cu ardeiul, apoi roșiile — înainte de a le combina, astfel încât fiecare să-și păstreze propria textură, în loc să se transforme într-un terci uniform. Khmeli-suneli, adăugat abia la final, e semnătura aromatică ce leagă preparatul de restul bucătăriei georgiene.",
+    "en": "Ajapsandali is one of Georgia's best-known fasting dishes, traditionally cooked during the meat-free periods of the Georgian Orthodox Christian calendar. In a cuisine often associated with grilled meat and rich cheeses, ajapsandali shows another side of Georgia — that of sun-ripened summer vegetables, turned into a dish full of flavor without needing meat or dairy.\n\nThe essential technical detail is salting the eggplant before cooking: without this step, the eggplant soaks up too much oil and stays bitter. Just as important is cooking the vegetables separately — eggplant, then onion with pepper, then tomatoes — before combining them, so each keeps its own texture instead of turning into a uniform mush. Khmeli-suneli, added only at the end, is the aromatic signature that ties the dish to the rest of Georgian cuisine.",
+    "es": "El ajapsandali es uno de los platos de ayuno más conocidos de Georgia, cocinado tradicionalmente durante los periodos sin carne del calendario cristiano ortodoxo georgiano. En una cocina a menudo asociada con carne a la parrilla y quesos ricos, el ajapsandali muestra otra cara de Georgia — la de las verduras de verano maduradas al sol, convertidas en un plato lleno de sabor sin necesitar carne ni lácteos.\n\nEl detalle técnico esencial es salar la berenjena antes de cocinarla: sin este paso, la berenjena absorbe demasiado aceite y queda amarga. Igual de importante es cocinar las verduras por separado — berenjena, luego cebolla con pimiento, luego tomates — antes de combinarlas, para que cada una conserve su propia textura en vez de volverse un puré uniforme. El khmeli-suneli, añadido solo al final, es la firma aromática que conecta el plato con el resto de la cocina georgiana.",
+    "fr": "L'ajapsandali est l'un des plats de jeûne les plus connus de Géorgie, traditionnellement cuisiné pendant les périodes sans viande du calendrier chrétien orthodoxe géorgien. Dans une cuisine souvent associée à la viande grillée et aux fromages riches, l'ajapsandali montre une autre facette de la Géorgie — celle des légumes d'été mûris au soleil, transformés en un plat plein de saveur sans avoir besoin de viande ni de laitages.\n\nLe détail technique essentiel est de saler l'aubergine avant cuisson : sans cette étape, l'aubergine absorbe trop d'huile et reste amère. Tout aussi important, cuire les légumes séparément — l'aubergine, puis l'oignon avec le poivron, puis les tomates — avant de les combiner, pour que chacun garde sa propre texture au lieu de devenir une bouillie uniforme. Le khmeli-suneli, ajouté seulement à la fin, est la signature aromatique qui relie ce plat au reste de la cuisine géorgienne.",
+    "de": "Adschapsandali ist eines der bekanntesten Fastengerichte Georgiens, traditionell zubereitet während der fleischfreien Zeiten des georgisch-orthodoxen christlichen Kalenders. In einer Küche, die oft mit gegrilltem Fleisch und reichhaltigem Käse assoziiert wird, zeigt Adschapsandali eine andere Seite Georgiens — die der sonnengereiften Sommergemüse, verwandelt in ein geschmackvolles Gericht ganz ohne Fleisch oder Milchprodukte.\n\nDas wesentliche technische Detail ist das Salzen der Aubergine vor dem Kochen: Ohne diesen Schritt saugt sich die Aubergine zu voll mit Öl und bleibt bitter. Ebenso wichtig ist es, das Gemüse getrennt zu garen — Aubergine, dann Zwiebel mit Paprika, dann Tomaten — bevor man sie vereint, damit jedes seine eigene Textur behält, statt zu einem gleichförmigen Brei zu werden. Khmeli-Suneli, erst am Ende zugegeben, ist die aromatische Signatur, die das Gericht mit dem Rest der georgischen Küche verbindet.",
+    "pt": "O ajapsandali é um dos pratos de jejum mais conhecidos da Geórgia, cozinhado tradicionalmente durante os períodos sem carne do calendário cristão ortodoxo georgiano. Numa culinária muitas vezes associada a carne grelhada e queijos ricos, o ajapsandali mostra outro lado da Geórgia — o dos vegetais de verão amadurecidos ao sol, transformados num prato cheio de sabor sem precisar de carne ou laticínios.\n\nO detalhe técnico essencial é salgar a beringela antes de cozinhar: sem este passo, a beringela absorve óleo a mais e fica amarga. Igualmente importante é cozinhar os vegetais separadamente — beringela, depois cebola com pimentão, depois tomates — antes de os combinar, para que cada um mantenha a sua própria textura em vez de se tornar um puré uniforme. O khmeli-suneli, adicionado só no final, é a assinatura aromática que liga o prato ao resto da culinária georgiana.",
+    "ru": "Аджапсандали — одно из самых известных постных блюд Грузии, традиционно готовившееся в безмясные периоды грузинского православного календаря. В кухне, часто ассоциирующейся с жареным мясом и насыщенными сырами, аджапсандали показывает другую сторону Грузии — сторону созревших на солнце летних овощей, превращённых в насыщенное вкусом блюдо без мяса и молочных продуктов.\n\nКлючевая техническая деталь — засолка баклажанов перед готовкой: без этого шага баклажаны впитывают слишком много масла и остаются горькими. Не менее важно готовить овощи раздельно — баклажаны, затем лук с перцем, затем помидоры — прежде чем их соединить, чтобы каждый сохранил свою текстуру, а не превратился в однородное пюре. Хмели-сунели, добавляемое лишь в конце, — та ароматическая подпись, что связывает блюдо с остальной грузинской кухней.",
+    "ar": "الأجابسندالي هو أحد أشهر أطباق الصيام في جورجيا، يُطهى تقليديًا خلال فترات الامتناع عن اللحم في التقويم المسيحي الأرثوذكسي الجورجي. في مطبخ كثيرًا ما يُربط باللحم المشوي والأجبان الغنية، يُظهر الأجابسندالي جانبًا آخر من جورجيا — جانب خضروات الصيف الناضجة تحت الشمس، المتحولة إلى طبق مليء بالنكهة دون حاجة للحم أو الألبان.\n\nالتفصيل التقني الأساسي هو تمليح الباذنجان قبل الطهي: دون هذه الخطوة، يمتص الباذنجان زيتًا أكثر مما ينبغي ويبقى مرًّا. لا يقل أهمية طهي الخضار منفصلة — الباذنجان، ثم البصل مع الفلفل، ثم الطماطم — قبل دمجها، حتى يحتفظ كل منها بقوامه الخاص بدلاً من التحول إلى هريس موحّد. خميلي سونيلي، المضاف فقط في النهاية، هو التوقيع العطري الذي يربط الطبق ببقية المطبخ الجورجي.",
+    "zh": "阿加普桑达利是格鲁吉亚最著名的斋戒菜肴之一，传统上在格鲁吉亚东正教历法中的无肉斋戒期烹制。在一个常与烤肉和浓郁奶酪联系在一起的菜系中，阿加普桑达利展现了格鲁吉亚的另一面——阳光晒熟的夏季蔬菜，无需肉类或乳制品即可变成一道风味十足的菜肴。\n\n关键的技术细节是烹饪前先给茄子腌盐：若省略此步骤，茄子会吸收过多油分且保留苦味。同样重要的是将蔬菜分开烹制——先茄子，再洋葱配甜椒，然后番茄——再混合，这样每种蔬菜都能保持各自的口感，而不是煮成一团糊状。只在最后加入的khmeli-suneli，是将这道菜与格鲁吉亚菜系其余部分相连的标志性香气。",
+    "ja": "アジャプサンダリはジョージアで最もよく知られた精進料理の一つで、伝統的にジョージア正教の暦における肉食禁止期間に作られる。焼き肉や濃厚なチーズと結びつけられがちな料理体系の中で、アジャプサンダリはジョージアの別の一面を見せる——太陽の下で熟した夏野菜が、肉や乳製品を必要とせずとも風味豊かな一皿に変わる様である。\n\n重要な技術的ポイントは、調理前になすに塩をすることだ。この工程を省くと、なすは油を吸いすぎて苦味が残ってしまう。同様に重要なのは、野菜を別々に調理すること——なす、次に玉ねぎとパプリカ、それからトマト——を合わせる前に行うことで、それぞれが均一などろどろになる代わりに独自の食感を保つ。仕上げにのみ加えられるフメリスネリは、この料理をジョージア料理の他の部分と結びつける香りの署名である。",
+    "tr": "Acapsandal, Gürcistan'ın en bilinen oruç yemeklerinden biridir, geleneksel olarak Gürcü Ortodoks Hristiyan takvimindeki etsiz dönemlerde pişirilir. Genellikle ızgara et ve zengin peynirlerle ilişkilendirilen bir mutfakta, acapsandal Gürcistan'ın başka bir yüzünü gösterir — güneşte olgunlaşmış yaz sebzelerinin, et veya süt ürünü gerektirmeden lezzet dolu bir yemeğe dönüştüğü yüzünü.\n\nTemel teknik ayrıntı, patlıcanı pişirmeden önce tuzlamaktır: bu adım olmadan patlıcan çok fazla yağ emer ve acı kalır. Aynı derecede önemli olan, sebzeleri birleştirmeden önce ayrı ayrı pişirmektir — önce patlıcan, sonra biberle soğan, sonra domates — böylece her biri homojen bir püreye dönüşmek yerine kendi dokusunu korur. Sadece sona eklenen khmeli-suneli, bu yemeği Gürcü mutfağının geri kalanına bağlayan aromatik imzadır.",
+    "it": "L'ajapsandali è uno dei piatti di digiuno più conosciuti della Georgia, tradizionalmente cucinato durante i periodi senza carne del calendario cristiano ortodosso georgiano. In una cucina spesso associata a carne alla griglia e formaggi ricchi, l'ajapsandali mostra un altro lato della Georgia — quello delle verdure estive maturate al sole, trasformate in un piatto pieno di sapore senza bisogno di carne o latticini.\n\nIl dettaglio tecnico essenziale è salare le melanzane prima della cottura: senza questo passaggio, le melanzane assorbono troppo olio e restano amare. Altrettanto importante è cuocere le verdure separatamente — melanzane, poi cipolla con peperone, poi pomodori — prima di combinarle, così ognuna mantiene la propria consistenza invece di diventare un purè uniforme. Il khmeli-suneli, aggiunto solo alla fine, è la firma aromatica che lega il piatto al resto della cucina georgiana.",
+    "ko": "아자프산달리는 조지아에서 가장 잘 알려진 금식 요리 중 하나로, 전통적으로 조지아 정교회 달력에서 육류를 먹지 않는 기간에 만들어졌다. 흔히 구운 고기와 풍부한 치즈와 연관되는 요리 체계에서, 아자프산달리는 조지아의 또 다른 면모를 보여준다 — 고기나 유제품 없이도 풍미 가득한 요리로 변신하는, 햇볕에 잘 익은 여름 채소의 모습이다.\n\n핵심적인 조리 기법은 요리 전 가지를 소금에 절이는 것이다: 이 단계 없이는 가지가 기름을 너무 많이 흡수해 쓴맛이 남는다. 마찬가지로 중요한 것은 채소를 합치기 전 따로따로 익히는 것이다 — 가지, 그다음 양파와 피망, 그다음 토마토 순으로 — 그래야 각각이 뭉개진 죽처럼 되지 않고 고유의 식감을 유지한다. 마지막에만 넣는 흐멜리수넬리는 이 요리를 조지아 요리 전체와 이어주는 향의 서명과도 같다.",
+    "hi": "अजाप्संदाली जॉर्जिया के सबसे प्रसिद्ध उपवास व्यंजनों में से एक है, जो पारंपरिक रूप से जॉर्जियाई रूढ़िवादी ईसाई कैलेंडर के मांस-रहित अवधि के दौरान पकाया जाता है। एक ऐसे व्यंजन में जो अक्सर ग्रिल किए मांस और भरपूर पनीर से जुड़ा होता है, अजाप्संदाली जॉर्जिया का एक और पहलू दिखाता है — धूप में पकी गर्मियों की सब्ज़ियों का, जो बिना मांस या डेयरी के स्वाद से भरपूर व्यंजन में बदल जाती हैं।\n\nमुख्य तकनीकी विवरण है पकाने से पहले बैंगन को नमक लगाना: इस कदम के बिना, बैंगन बहुत ज़्यादा तेल सोख लेता है और कड़वा रहता है। उतना ही महत्वपूर्ण है सब्ज़ियों को मिलाने से पहले अलग-अलग पकाना — बैंगन, फिर शिमला मिर्च के साथ प्याज़, फिर टमाटर — ताकि हर एक एकसमान गूदे में बदलने के बजाय अपनी बनावट बनाए रखे। केवल अंत में डाला गया ख्मेली-सुनेली वह सुगंधित हस्ताक्षर है जो इस व्यंजन को बाकी जॉर्जियाई रसोई से जोड़ता है।"
+  },
+  "meta": {
+    "time": 55,
+    "costRon": 13,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Tocană de vinete, ardei și roșii, aromată cu khmeli-suneli și verdețuri proaspete.",
+      "en": "Stewed eggplant, peppers and tomatoes, seasoned with khmeli-suneli and fresh herbs.",
+      "es": "Guiso de berenjena, pimiento y tomate, sazonado con khmeli-suneli y hierbas frescas.",
+      "fr": "Ragoût d'aubergine, poivron et tomate, parfumé au khmeli-suneli et aux herbes fraîches.",
+      "de": "Geschmorte Aubergine mit Paprika und Tomaten, gewürzt mit Khmeli-Suneli und frischen Kräutern.",
+      "pt": "Guisado de beringela, pimentão e tomate, temperado com khmeli-suneli e ervas frescas.",
+      "ru": "Тушёные баклажаны с перцем и помидорами, приправленные хмели-сунели и свежей зеленью.",
+      "ar": "يخنة الباذنجان والفلفل والطماطم، منكهة بخميلي سونيلي والأعشاب الطازجة.",
+      "zh": "茄子、甜椒与番茄炖菜，用khmeli-suneli和新鲜香草调味。",
+      "ja": "なす、パプリカ、トマトの煮込み、フメリスネリと新鮮なハーブで香り付け。",
+      "tr": "Khmeli-suneli ve taze otlarla tatlandırılmış patlıcan, biber ve domates yahnisi.",
+      "it": "Stufato di melanzane, peperoni e pomodori, insaporito con khmeli-suneli ed erbe fresche.",
+      "ko": "흐멜리수넬리와 신선한 허브로 향을 낸 가지, 피망, 토마토 스튜.",
+      "hi": "ख्मेली-सुनेली और ताज़ी जड़ी-बूटियों से महकाया बैंगन, शिमला मिर्च और टमाटर का स्टू।"
+    }
+  }
+}
