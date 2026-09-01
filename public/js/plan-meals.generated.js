@@ -120,11 +120,11 @@ export const PLAN_MEALS = {
     "dinnerIds": [
       113,
       111,
+      310,
+      313,
       94,
       8,
-      88,
-      90,
-      74
+      88
     ]
   },
   "vegetarian": {

@@ -1,0 +1,176 @@
+{
+  "id": 311,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Cuba", "en": "Cuba", "es": "Cuba", "fr": "Cuba", "de": "Kuba",
+    "pt": "Cuba", "ru": "Куба", "ar": "كوبا", "zh": "古巴", "ja": "キューバ",
+    "tr": "Küba", "it": "Cuba", "ko": "쿠바", "hi": "क्यूबा"
+  },
+  "name": {
+    "ro": "Sandviș Cubanez", "en": "Cuban Sandwich", "es": "Sándwich Cubano", "fr": "Sandwich cubain", "de": "Kubanisches Sandwich",
+    "pt": "Sanduíche Cubano", "ru": "Кубинский сэндвич", "ar": "ساندويتش كوبي", "zh": "古巴三明治", "ja": "キューバサンド",
+    "tr": "Küba Sandviçi", "it": "Panino cubano", "ko": "쿠바 샌드위치", "hi": "क्यूबा सैंडविच"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "En-cas", "de": "Snack",
+    "pt": "Lanche", "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "スナック",
+    "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🥖","t":"Pâinea folosită e pan cubano, o franzelă subțire cu untură","d":"Coaja e mai fină decât la o baghetă franceză, așa că se aplatizează și se rumenește uniform la presare, fără să crape"},
+      {"icon":"🧈","t":"Fața exterioară a pâinii se unge cu unt sau untură, nu interiorul","d":"Doar suprafața care atinge placa fierbinte trebuie să se rumenească și să devină crocantă"},
+      {"icon":"🥒","t":"Castraveciorii murați se taie felii lungi, pe orez","d":"Zeama lor acrișoară se răspândește prin sandviș pe măsură ce se presează, echilibrând grăsimea cărnii"},
+      {"icon":"⚖️","t":"Sandvișul se presează cu o placă fierbinte, nu doar se prăjește pe o parte","d":"Presiunea topește brânza uniform prin toate straturile și lipește feliile de pâine una de cealaltă"}
+    ],
+    "en": [
+      {"icon":"🥖","t":"The bread used is pan cubano, a thin loaf made with lard","d":"Its crust is finer than a French baguette's, so it flattens and browns evenly under pressing without cracking"},
+      {"icon":"🧈","t":"Only the outside of the bread gets buttered, not the inside","d":"Just the surface touching the hot press needs to brown and turn crisp"},
+      {"icon":"🥒","t":"The dill pickles are sliced lengthwise, into long spears","d":"Their tangy juice spreads through the sandwich as it's pressed, balancing the richness of the meats"},
+      {"icon":"⚖️","t":"The sandwich is pressed under a hot plate, not just griddled on one side","d":"The pressure melts the cheese evenly through every layer and seals the bread slices to each other"}
+    ],
+    "es": [
+      {"icon":"🥖","t":"El pan usado es pan cubano, una hogaza fina hecha con manteca","d":"Su corteza es más fina que la de una baguette francesa, así que se aplana y dora parejo al prensarlo sin agrietarse"},
+      {"icon":"🧈","t":"Solo el exterior del pan se unta con mantequilla, no el interior","d":"Solo la superficie que toca la plancha caliente necesita dorarse y quedar crujiente"},
+      {"icon":"🥒","t":"Los pepinillos se cortan a lo largo, en tiras","d":"Su jugo agrio se esparce por el sándwich al prensarlo, equilibrando la riqueza de las carnes"},
+      {"icon":"⚖️","t":"El sándwich se prensa con una plancha caliente, no solo se dora de un lado","d":"La presión derrite el queso parejo en cada capa y sella las rebanadas de pan entre sí"}
+    ],
+    "fr": [
+      {"icon":"🥖","t":"Le pain utilisé est le pan cubano, une miche fine à base de saindoux","d":"Sa croûte est plus fine que celle d'une baguette française, donc elle s'aplatit et dore uniformément sous la presse sans craquer"},
+      {"icon":"🧈","t":"Seul l'extérieur du pain est beurré, pas l'intérieur","d":"Seule la surface en contact avec la presse chaude doit dorer et devenir croustillante"},
+      {"icon":"🥒","t":"Les cornichons à l'aneth sont coupés en long, en lamelles","d":"Leur jus acidulé se répand dans le sandwich à la pression, équilibrant la richesse des viandes"},
+      {"icon":"⚖️","t":"Le sandwich est pressé sous une plaque chaude, pas juste grillé d'un côté","d":"La pression fait fondre le fromage uniformément à travers chaque couche et scelle les tranches de pain entre elles"}
+    ],
+    "de": [
+      {"icon":"🥖","t":"Verwendet wird pan cubano, ein dünnes Brot mit Schmalz","d":"Seine Kruste ist feiner als die eines französischen Baguettes, sodass es sich beim Pressen gleichmäßig platt drückt und bräunt, ohne zu reißen"},
+      {"icon":"🧈","t":"Nur die Außenseite des Brotes wird gebuttert, nicht die Innenseite","d":"Nur die Fläche, die die heiße Presse berührt, muss bräunen und knusprig werden"},
+      {"icon":"🥒","t":"Die Dillgurken werden der Länge nach in Spalten geschnitten","d":"Ihr säuerlicher Saft verteilt sich beim Pressen im Sandwich und gleicht die Fettigkeit des Fleisches aus"},
+      {"icon":"⚖️","t":"Das Sandwich wird unter einer heißen Platte gepresst, nicht nur einseitig gegrillt","d":"Der Druck schmilzt den Käse gleichmäßig durch alle Schichten und verbindet die Brotscheiben miteinander"}
+    ],
+    "pt": [
+      {"icon":"🥖","t":"O pão usado é o pan cubano, um pão fino feito com banha","d":"A sua crosta é mais fina do que a de uma baguete francesa, por isso achata e doura por igual ao ser prensado sem rachar"},
+      {"icon":"🧈","t":"Só o exterior do pão leva manteiga, não o interior","d":"Só a superfície que toca a chapa quente precisa de dourar e ficar crocante"},
+      {"icon":"🥒","t":"Os picles de pepino são cortados ao comprido, em tiras","d":"O seu suco ácido espalha-se pelo sanduíche à medida que é prensado, equilibrando a riqueza das carnes"},
+      {"icon":"⚖️","t":"O sanduíche é prensado sob uma chapa quente, não só grelhado de um lado","d":"A pressão derrete o queijo por igual em todas as camadas e sela as fatias de pão entre si"}
+    ],
+    "ru": [
+      {"icon":"🥖","t":"Используется pan cubano — тонкий батон, выпеченный на сале","d":"Его корка тоньше, чем у французского багета, поэтому под прессом он равномерно расплющивается и подрумянивается, не растрескиваясь"},
+      {"icon":"🧈","t":"Маслом смазывается только внешняя сторона хлеба, не внутренняя","d":"Подрумяниться и стать хрустящей должна только поверхность, касающаяся горячего пресса"},
+      {"icon":"🥒","t":"Маринованные огурцы нарезаются вдоль, длинными дольками","d":"Их кисловатый сок пропитывает сэндвич при прессовке, уравновешивая жирность мяса"},
+      {"icon":"⚖️","t":"Сэндвич прессуется горячей плитой, а не просто обжаривается с одной стороны","d":"Давление равномерно плавит сыр во всех слоях и скрепляет ломтики хлеба между собой"}
+    ],
+    "ar": [
+      {"icon":"🥖","t":"الخبز المستخدم هو pan cubano، رغيف رفيع مصنوع بالشحم","d":"قشرته أنعم من الباغيت الفرنسي، فيتسطح ويتحمّر بانتظام تحت الضغط دون أن يتشقق"},
+      {"icon":"🧈","t":"يُدهن الخارج فقط من الخبز بالزبدة، لا الداخل","d":"فقط السطح الملامس للمكواة الساخنة يحتاج إلى أن يتحمّر ويصبح مقرمشًا"},
+      {"icon":"🥒","t":"المخلل يُقطّع طوليًا إلى شرائح طويلة","d":"عصيره الحامض ينتشر في الساندويتش أثناء الضغط، موازنًا دسامة اللحوم"},
+      {"icon":"⚖️","t":"يُضغط الساندويتش تحت لوح ساخن، لا يُشوى من جهة واحدة فقط","d":"الضغط يذيب الجبن بانتظام عبر كل الطبقات ويلصق شرائح الخبز ببعضها"}
+    ],
+    "zh": [
+      {"icon":"🥖","t":"使用的面包是pan cubano，一种用猪油制作的薄皮长棍面包","d":"它的外皮比法棍更细薄，因此压制时能均匀压扁上色而不会裂开"},
+      {"icon":"🧈","t":"只在面包外侧涂黄油，内侧不涂","d":"只有接触热压板的表面才需要变得金黄酥脆"},
+      {"icon":"🥒","t":"腌黄瓜纵切成长条","d":"压制过程中，酸爽的汁水渗入三明治，中和肉类的油腻感"},
+      {"icon":"⚖️","t":"三明治用热压板压制，而不只是单面煎烤","d":"压力使奶酪在每一层中均匀融化，并将面包片粘合在一起"}
+    ],
+    "ja": [
+      {"icon":"🥖","t":"使うパンはパン・クバーノ、ラードで作る薄いパン","d":"皮はフランスパンより薄いので、プレスすると割れずに均一に平たく色づく"},
+      {"icon":"🧈","t":"バターはパンの外側だけに塗り、内側には塗らない","d":"熱いプレス板に触れる面だけが色づいてパリッとする必要がある"},
+      {"icon":"🥒","t":"ディルピクルスは縦に長く切る","d":"プレスされる間に酸味のある汁がサンドイッチ全体に広がり、肉の濃厚さと釣り合う"},
+      {"icon":"⚖️","t":"サンドイッチは熱いプレートで押しつぶすように焼き、片面だけ焼くのではない","d":"圧力がチーズを全ての層にわたって均一に溶かし、パンの断面同士を密着させる"}
+    ],
+    "tr": [
+      {"icon":"🥖","t":"Kullanılan ekmek, domuz yağıyla yapılan ince bir somun olan pan cubano'dur","d":"Kabuğu Fransız baget ekmeğinden daha incedir, bu yüzden preslendiğinde çatlamadan eşit şekilde yassılaşıp kararır"},
+      {"icon":"🧈","t":"Sadece ekmeğin dışı yağlanır, içi değil","d":"Sadece sıcak prese değen yüzeyin kararıp gevrekleşmesi gerekir"},
+      {"icon":"🥒","t":"Turşu salatalıklar uzunlamasına, ince dilimler halinde kesilir","d":"Preslenirken keskin suyu sandviçe yayılır, etlerin yoğunluğunu dengeler"},
+      {"icon":"⚖️","t":"Sandviç sıcak bir plakayla preslenir, sadece tek taraflı ızgara yapılmaz","d":"Basınç, peyniri tüm katmanlar boyunca eşit eritir ve ekmek dilimlerini birbirine yapıştırır"}
+    ],
+    "it": [
+      {"icon":"🥖","t":"Il pane usato è il pan cubano, una pagnotta sottile fatta con lo strutto","d":"La sua crosta è più fine di quella di una baguette francese, così si appiattisce e dora uniformemente sotto pressatura senza spaccarsi"},
+      {"icon":"🧈","t":"Solo l'esterno del pane viene imburrato, non l'interno","d":"Solo la superficie a contatto con la piastra calda deve dorarsi e diventare croccante"},
+      {"icon":"🥒","t":"I sottaceti vengono tagliati per il lungo, a listarelle","d":"Il loro succo acidulo si diffonde nel panino durante la pressatura, bilanciando la ricchezza delle carni"},
+      {"icon":"⚖️","t":"Il panino viene pressato sotto una piastra calda, non solo grigliato da un lato","d":"La pressione scioglie il formaggio uniformemente in ogni strato e sigilla le fette di pane tra loro"}
+    ],
+    "ko": [
+      {"icon":"🥖","t":"라드로 만든 얇은 빵인 판 쿠바노를 사용한다","d":"프랑스 바게트보다 껍질이 얇아, 눌러도 갈라지지 않고 고르게 납작해지며 노릇해진다"},
+      {"icon":"🧈","t":"버터는 빵의 겉면에만 바르고 속에는 바르지 않는다","d":"뜨거운 프레스에 닿는 면만 노릇하고 바삭해지면 된다"},
+      {"icon":"🥒","t":"딜 피클은 길게 채 썬다","d":"눌리는 동안 새콤한 즙이 샌드위치 전체에 퍼지며 고기의 진한 맛과 균형을 이룬다"},
+      {"icon":"⚖️","t":"샌드위치는 한쪽만 굽는 게 아니라 뜨거운 판으로 눌러 익힌다","d":"압력이 모든 층에 걸쳐 치즈를 고르게 녹이고 빵 단면끼리 서로 밀착시킨다"}
+    ],
+    "hi": [
+      {"icon":"🥖","t":"इस्तेमाल की जाने वाली ब्रेड पान कुबानो है, जो चरबी से बनी पतली रोटी है","d":"इसकी परत फ्रेंच बैगेट से पतली होती है, इसलिए दबाने पर यह बिना फटे समान रूप से चपटी और भूरी होती है"},
+      {"icon":"🧈","t":"मक्खन केवल ब्रेड के बाहरी हिस्से पर लगाया जाता है, अंदर नहीं","d":"केवल गरम प्रेस को छूने वाली सतह को ही भूरा और कुरकुरा होना है"},
+      {"icon":"🥒","t":"डिल अचार को लंबाई में, लंबी पट्टियों में काटा जाता है","d":"दबाने पर इसका खट्टा रस पूरे सैंडविच में फैलता है, मांस की चिकनाई को संतुलित करता है"},
+      {"icon":"⚖️","t":"सैंडविच को गरम प्लेट के नीचे दबाया जाता है, सिर्फ एक तरफ से ग्रिल नहीं किया जाता","d":"दबाव हर परत में पनीर को समान रूप से पिघलाता है और ब्रेड के टुकड़ों को आपस में जोड़ता है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1 franzelă lungă (tip baghetă subțire)","unt moale, pentru uns exteriorul pâinii","2 linguri muștar galben","200g șuncă feliată subțire","200g mușchi de porc fript, feliat subțire","150g cașcaval elvețian, feliat","4-5 castraveciori murați, tăiați lung"],
+    "en": ["1 long, thin loaf (baguette-style)","soft butter, for spreading on the outside of the bread","2 tbsp yellow mustard","200g thinly sliced ham","200g roast pork, thinly sliced","150g Swiss cheese, sliced","4-5 dill pickles, sliced lengthwise"],
+    "es": ["1 hogaza larga y fina (tipo baguette)","mantequilla blanda, para untar el exterior del pan","2 cdas de mostaza amarilla","200g de jamón en lonchas finas","200g de lomo de cerdo asado, en lonchas finas","150g de queso suizo, en lonchas","4-5 pepinillos en vinagre, cortados a lo largo"],
+    "fr": ["1 miche longue et fine (type baguette)","beurre mou, pour tartiner l'extérieur du pain","2 c. à soupe de moutarde jaune","200g de jambon en tranches fines","200g de porc rôti, en tranches fines","150g de fromage suisse, en tranches","4-5 cornichons à l'aneth, coupés en long"],
+    "de": ["1 langes, dünnes Brot (baguetteartig)","weiche Butter, zum Bestreichen der Brotaußenseite","2 EL gelber Senf","200g dünn geschnittener Schinken","200g gebratenes Schweinefleisch, dünn geschnitten","150g Schweizer Käse, in Scheiben","4-5 Dillgurken, längs geschnitten"],
+    "pt": ["1 pão longo e fino (tipo baguete)","manteiga mole, para barrar o exterior do pão","2 col. sopa de mostarda amarela","200g de fiambre em fatias finas","200g de lombo de porco assado, em fatias finas","150g de queijo suíço, em fatias","4-5 pepinos em conserva, cortados ao comprido"],
+    "ru": ["1 длинный тонкий батон (типа багета)","мягкое масло, для смазывания хлеба снаружи","2 ст.л. жёлтой горчицы","200г тонко нарезанной ветчины","200г жареной свинины, тонко нарезанной","150г швейцарского сыра, нарезанного","4-5 маринованных огурцов, нарезанных вдоль"],
+    "ar": ["رغيف طويل رفيع (على طراز الباغيت)","زبدة طرية، لدهن خارج الخبز","ملعقتان كبيرتان خردل أصفر","200غ لحم خنزير مقدد مقطع شرائح رفيعة","200غ لحم خنزير مشوي، مقطع شرائح رفيعة","150غ جبن سويسري، مقطع شرائح","4-5 مخللات شبت، مقطعة طوليًا"],
+    "zh": ["1条细长面包（法棍式）","软化黄油，用于涂抹面包外侧","2汤匙黄芥末","200克薄切火腿","200克烤猪肉，薄切","150克瑞士奶酪，切片","4-5根莳萝腌黄瓜，纵切"],
+    "ja": ["細長いパン1本（バゲット風）","柔らかいバター、パンの外側に塗る用","マスタード（イエロー）大さじ2","薄切りハム200g","ローストポーク（薄切り）200g","スイスチーズ（スライス）150g","ディルピクルス4〜5本、縦切り"],
+    "tr": ["1 uzun, ince somun (baget tarzı)","yumuşak tereyağı, ekmeğin dışına sürmek için","2 yemek kaşığı sarı hardal","200g ince dilimlenmiş jambon","200g ince dilimlenmiş kızarmış domuz eti","150g İsviçre peyniri, dilimlenmiş","4-5 dereotlu turşu, uzunlamasına dilimlenmiş"],
+    "it": ["1 pagnotta lunga e sottile (tipo baguette)","burro morbido, da spalmare all'esterno del pane","2 cucchiai di senape gialla","200g di prosciutto cotto a fette sottili","200g di arrosto di maiale, a fette sottili","150g di formaggio svizzero, a fette","4-5 sottaceti all'aneto, tagliati per il lungo"],
+    "ko": ["긴 얇은 빵 1개(바게트 스타일)","부드러운 버터, 빵 겉면에 바를 용도","황겨자 2큰술","얇게 썬 햄 200g","얇게 썬 로스트 포크 200g","스위스 치즈 150g, 슬라이스","딜 피클 4-5개, 길게 썬 것"],
+    "hi": ["1 लंबी, पतली रोटी (बैगेट जैसी)","नरम मक्खन, ब्रेड के बाहर लगाने के लिए","2 बड़े चम्मच पीली सरसों","200 ग्राम पतला कटा हैम","200 ग्राम भुना सुअर का मांस, पतला कटा","150 ग्राम स्विस चीज़, कटा हुआ","4-5 डिल अचार, लंबाई में कटे हुए"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE PÂINEA: taie franzela pe lungime, fără să o desparți complet. UNGE ȘI ASAMBLEAZĂ: unge interiorul cu muștar pe ambele fețe, așază șunca, mușchiul de porc feliat, cașcavalul și castraveciorii murați în straturi. UNGE EXTERIORUL: unge fața exterioară a pâinii cu unt, pe ambele părți. ÎNCINGE PLITA: încinge o tigaie sau un grătar-presă la foc mediu. PRESEAZĂ: pune sandvișul pe plită, apasă-l cu o placă grea sau cu o altă tigaie deasupra, gătește 3-4 minute pe fiecare parte, până pâinea devine aurie și crocantă, iar brânza se topește. TAIE ȘI SERVEȘTE: taie în diagonală și servește imediat, cât e fierbinte.",
+    "en": "PREPARE THE BREAD: slice the loaf lengthwise, without cutting all the way through. SPREAD AND LAYER: spread mustard on both inner faces, layer on the ham, sliced roast pork, cheese and pickles. BUTTER THE OUTSIDE: butter the outer sides of the bread, on both faces. HEAT THE PAN: heat a skillet or a griddle press over medium heat. PRESS: place the sandwich in the pan, press it down with a heavy plate or another skillet on top, cook 3-4 minutes per side, until the bread turns golden and crisp and the cheese melts. SLICE AND SERVE: cut diagonally and serve immediately, while hot.",
+    "es": "PREPARA EL PAN: corta la hogaza a lo largo, sin separarla del todo. UNTA Y ARMA: unta mostaza en ambas caras interiores, coloca en capas el jamón, el lomo en lonchas, el queso y los pepinillos. UNTA EL EXTERIOR: unta con mantequilla las caras exteriores del pan. CALIENTA LA PLANCHA: calienta una sartén o una plancha prensadora a fuego medio. PRENSA: coloca el sándwich en la plancha, presiónalo con un plato pesado u otra sartén encima, cocina 3-4 minutos por lado, hasta que el pan dore y quede crujiente y el queso se derrita. CORTA Y SIRVE: corta en diagonal y sirve de inmediato, mientras esté caliente.",
+    "fr": "PRÉPARE LE PAIN: incise la miche dans le sens de la longueur, sans la séparer complètement. TARTINE ET GARNIS: tartine de moutarde les deux faces intérieures, superpose le jambon, le porc rôti en tranches, le fromage et les cornichons. BEURRE L'EXTÉRIEUR: beurre les faces extérieures du pain. FAIS CHAUFFER LA POÊLE: fais chauffer une poêle ou un gril-presse à feu moyen. PRESSE: place le sandwich dans la poêle, presse-le avec une assiette lourde ou une autre poêle dessus, cuis 3-4 minutes de chaque côté, jusqu'à ce que le pain dore et croustille et que le fromage fonde. COUPE ET SERS: coupe en diagonale et sers immédiatement, tant que c'est chaud.",
+    "de": "BEREITE DAS BROT VOR: schneide das Brot der Länge nach ein, ohne es ganz zu teilen. BESTREICHEN UND SCHICHTEN: bestreiche beide Innenseiten mit Senf, schichte Schinken, geschnittenes Schweinefleisch, Käse und Gurken auf. BUTTERE DIE AUSSENSEITE: bestreiche die Außenseiten des Brotes mit Butter. PFANNE ERHITZEN: erhitze eine Pfanne oder eine Grillpresse bei mittlerer Hitze. PRESSEN: das Sandwich in die Pfanne legen, mit einem schweren Teller oder einer anderen Pfanne beschweren, 3-4 Minuten pro Seite garen, bis das Brot golden und knusprig ist und der Käse schmilzt. SCHNEIDEN UND SERVIEREN: diagonal schneiden und sofort heiß servieren.",
+    "pt": "PREPARE O PÃO: corte o pão ao comprido, sem o separar completamente. BARRE E MONTE: barre mostarda em ambas as faces interiores, coloque em camadas o fiambre, o lombo em fatias, o queijo e os pepinos. UNTE O EXTERIOR: unte com manteiga as faces exteriores do pão. AQUEÇA A FRIGIDEIRA: aqueça uma frigideira ou uma chapa prensadora em fogo médio. PRENSE: coloque o sanduíche na frigideira, prense-o com um prato pesado ou outra frigideira em cima, cozinhe 3-4 minutos de cada lado, até o pão dourar e ficar crocante e o queijo derreter. CORTE E SIRVA: corte na diagonal e sirva imediatamente, ainda quente.",
+    "ru": "ПОДГОТОВЬ ХЛЕБ: разрежь батон вдоль, не разделяя полностью. НАМАЖЬ И СЛОЖИ: намажь горчицей обе внутренние стороны, выложи слоями ветчину, нарезанную свинину, сыр и огурцы. НАМАЖЬ СНАРУЖИ: смажь маслом внешние стороны хлеба. РАЗОГРЕЙ СКОВОРОДУ: разогрей сковороду или пресс-гриль на среднем огне. ПРЕССУЙ: положи сэндвич на сковороду, прижми тяжёлой тарелкой или другой сковородой сверху, готовь 3-4 минуты с каждой стороны, пока хлеб не станет золотистым и хрустящим, а сыр не расплавится. НАРЕЖЬ И ПОДАЙ: нарежь по диагонали и подавай сразу, пока горячий.",
+    "ar": "جهّز الخبز: اشقّ الرغيف على طوله، دون فصله تمامًا. ادهن ورتّب: ادهن الخردل على الوجهين الداخليين، رتّب لحم الخنزير المقدد ولحم الخنزير المشوي المقطع والجبن والمخلل طبقات. ادهن الخارج: ادهن الوجهين الخارجيين للخبز بالزبدة. سخّن المقلاة: سخّن مقلاة أو مكواة شواء على نار متوسطة. اضغط: ضع الساندويتش في المقلاة، اضغط عليه بطبق ثقيل أو مقلاة أخرى فوقه، اطهُ 3-4 دقائق لكل جانب حتى يتحمّر الخبز ويصبح مقرمشًا ويذوب الجبن. قطّع وقدّم: قطّعه بشكل قطري وقدّمه فورًا وهو ساخن.",
+    "zh": "准备面包：将面包纵向切开，不完全切断。涂抹并夹馅：在两个内侧面上涂抹芥末，依次铺上火腿、切片烤猪肉、奶酪和腌黄瓜。涂抹外侧：在面包外侧两面涂上黄油。加热平底锅：中火加热平底锅或帕尼尼压板。压制：将三明治放入锅中，用一个重盘子或另一个平底锅压在上面，每面煎3-4分钟，直到面包变得金黄酥脆、奶酪融化。切开上桌：斜切后趁热立即享用。",
+    "ja": "パンを準備する：パンを縦に切り込みを入れ、完全には切り離さない。塗ってはさむ：内側の両面にマスタードを塗り、ハム、薄切りローストポーク、チーズ、ピクルスを重ねる。外側にバターを塗る：パンの外側両面にバターを塗る。フライパンを熱する：フライパンまたはパニーニプレスを中火で熱する。押し焼きにする：サンドイッチをフライパンに置き、重い皿や別のフライパンで上から押さえ、パンが金色でパリッとしチーズが溶けるまで両面をそれぞれ3〜4分焼く。切って盛り付ける：斜めに切り、熱いうちにすぐ提供する。",
+    "tr": "EKMEĞİ HAZIRLAYIN: somunu boyuna, tamamen ayırmadan yarın. SÜRÜN VE KATMANLAYIN: her iki iç yüzeye hardal sürün, jambonu, dilimlenmiş kızarmış domuz etini, peyniri ve turşuları katman katman dizin. DIŞINI YAĞLAYIN: ekmeğin dış yüzeylerini tereyağıyla yağlayın. TAVAYI ISITIN: bir tavayı veya ızgara presi orta ateşte ısıtın. PRESLEYİN: sandviçi tavaya koyun, üzerine ağır bir tabak veya başka bir tava koyarak bastırın, ekmek altın rengi ve gevrek olana, peynir eriyene kadar her tarafı 3-4 dakika pişirin. DİLİMLEYİN VE SERVİS YAPIN: çapraz kesin ve sıcakken hemen servis edin.",
+    "it": "PREPARA IL PANE: taglia la pagnotta per il lungo, senza separarla del tutto. SPALMA E FARCISCI: spalma la senape su entrambe le facce interne, disponi a strati il prosciutto, l'arrosto di maiale a fette, il formaggio e i sottaceti. IMBURRA L'ESTERNO: spalma il burro sulle facce esterne del pane. SCALDA LA PADELLA: scalda una padella o una piastra pressa a fuoco medio. PRESSA: metti il panino in padella, premilo con un piatto pesante o un'altra padella sopra, cuoci 3-4 minuti per lato, finché il pane dora e croccante e il formaggio fonde. TAGLIA E SERVI: taglia in diagonale e servi subito, mentre è caldo.",
+    "ko": "빵 준비하기: 빵을 완전히 자르지 않고 길게 칼집을 낸다. 바르고 채우기: 안쪽 양면에 겨자를 바르고, 햄, 슬라이스한 로스트 포크, 치즈, 피클을 차례로 얹는다. 겉면에 버터 바르기: 빵의 바깥쪽 양면에 버터를 바른다. 팬 달구기: 팬이나 그릴 프레스를 중불로 달군다. 눌러 굽기: 샌드위치를 팬에 올리고 무거운 접시나 다른 팬으로 위에서 눌러, 빵이 노릇하고 바삭해지고 치즈가 녹을 때까지 양면 각각 3-4분씩 굽는다. 잘라서 서빙하기: 대각선으로 잘라 뜨거울 때 바로 낸다.",
+    "hi": "ब्रेड तैयार करें: रोटी को लंबाई में काटें, पूरी तरह अलग किए बिना। लगाएं और परतें बनाएं: दोनों अंदरूनी सतहों पर सरसों लगाएं, हैम, कटा भुना सुअर का मांस, चीज़ और अचार परतों में रखें। बाहर मक्खन लगाएं: ब्रेड की बाहरी सतहों पर मक्खन लगाएं। पैन गरम करें: पैन या ग्रिल-प्रेस को मध्यम आंच पर गरम करें। दबाएं: सैंडविच को पैन में रखें, ऊपर से भारी प्लेट या दूसरे पैन से दबाएं, हर तरफ 3-4 मिनट पकाएं जब तक ब्रेड सुनहरी और कुरकुरी न हो जाए और चीज़ न पिघल जाए। काटें और परोसें: तिरछा काटें और गरम-गरम तुरंत परोसें।"
+  },
+  "originText": {
+    "ro": "Sandvișul cubanez s-a născut nu în Cuba, ci în comunitățile de muncitori cubanezi din fabricile de trabucuri din Ybor City și Key West, Florida, la sfârșitul secolului al XIX-lea, unde imigranți cubanezi, spanioli și italieni lucrau umăr la umăr. Combinația de șuncă, mușchi de porc, brânză elvețiană, muștar și castraveciori murați, între feliile de pan cubano, reflectă direct amestecul acelor comunități — șunca spaniolă, cașcavalul central-european, castraveciorii aduși de coloniile evreiești din zonă.\n\nCe deosebește un sandviș cubanez adevărat de o simplă combinație de mezeluri e presarea: sandvișul se apasă cu o placă fierbinte (plancha), nu doar se prăjește pe o tigaie. Presiunea uniformă topește brânza prin toate straturile deodată și lipește straturile de pâine unele de altele, în timp ce coaja subțire a pan cubano se aplatizează și se rumenește fără să crape — un detaliu pentru care mulți cubanezi din Florida insistă că pâinea obișnuită, cu coajă groasă, pur și simplu nu funcționează.",
+    "en": "The Cuban sandwich was not born in Cuba, but in the Cuban worker communities of the cigar factories of Ybor City and Key West, Florida, in the late 19th century, where Cuban, Spanish and Italian immigrants worked side by side. The combination of ham, roast pork, Swiss cheese, mustard and pickles between slices of pan cubano directly reflects the mix of those communities — Spanish ham, Central European cheese, pickles brought by the area's Jewish colonies.\n\nWhat sets a true Cuban sandwich apart from a simple cold-cut combination is the pressing: the sandwich is pressed under a hot plate (a plancha), not just griddled in a pan. The even pressure melts the cheese through every layer at once and seals the layers of bread to each other, while the thin crust of pan cubano flattens and browns without cracking — a detail many Cubans in Florida insist ordinary, thick-crusted bread simply can't achieve.",
+    "es": "El sándwich cubano no nació en Cuba, sino en las comunidades de trabajadores cubanos de las fábricas de puros de Ybor City y Cayo Hueso, Florida, a finales del siglo XIX, donde inmigrantes cubanos, españoles e italianos trabajaban codo con codo. La combinación de jamón, lomo asado, queso suizo, mostaza y pepinillos entre rebanadas de pan cubano refleja directamente la mezcla de aquellas comunidades — jamón español, queso centroeuropeo, pepinillos traídos por las colonias judías de la zona.\n\nLo que distingue a un verdadero sándwich cubano de una simple combinación de fiambres es el prensado: el sándwich se prensa bajo una plancha caliente, no solo se dora en una sartén. La presión pareja derrite el queso en todas las capas a la vez y sella las capas de pan entre sí, mientras la fina corteza del pan cubano se aplana y dora sin agrietarse — un detalle por el cual muchos cubanos de Florida insisten en que el pan común, de corteza gruesa, simplemente no funciona.",
+    "fr": "Le sandwich cubain n'est pas né à Cuba, mais dans les communautés d'ouvriers cubains des fabriques de cigares d'Ybor City et de Key West, en Floride, à la fin du XIXe siècle, où immigrants cubains, espagnols et italiens travaillaient côte à côte. La combinaison de jambon, porc rôti, fromage suisse, moutarde et cornichons entre des tranches de pan cubano reflète directement le mélange de ces communautés — jambon espagnol, fromage d'Europe centrale, cornichons apportés par les colonies juives de la région.\n\nCe qui distingue un vrai sandwich cubain d'une simple combinaison de charcuteries, c'est le pressage : le sandwich est pressé sous une plaque chaude (une plancha), pas simplement grillé dans une poêle. La pression uniforme fait fondre le fromage dans toutes les couches à la fois et scelle les couches de pain entre elles, tandis que la fine croûte du pan cubano s'aplatit et dore sans craquer — un détail pour lequel de nombreux Cubains de Floride insistent que le pain ordinaire, à croûte épaisse, ne fonctionne tout simplement pas.",
+    "de": "Das kubanische Sandwich wurde nicht in Kuba geboren, sondern in den kubanischen Arbeitergemeinschaften der Zigarrenfabriken von Ybor City und Key West, Florida, Ende des 19. Jahrhunderts, wo kubanische, spanische und italienische Einwanderer Seite an Seite arbeiteten. Die Kombination aus Schinken, gebratenem Schweinefleisch, Schweizer Käse, Senf und Gurken zwischen Scheiben von pan cubano spiegelt direkt die Mischung dieser Gemeinschaften wider — spanischer Schinken, mitteleuropäischer Käse, Gurken, die von den jüdischen Kolonien der Gegend mitgebracht wurden.\n\nWas ein echtes kubanisches Sandwich von einer einfachen Aufschnittkombination unterscheidet, ist das Pressen: Das Sandwich wird unter einer heißen Platte (einer Plancha) gepresst, nicht nur in einer Pfanne gebraten. Der gleichmäßige Druck schmilzt den Käse in allen Schichten gleichzeitig und verbindet die Brotschichten miteinander, während die dünne Kruste des pan cubano sich plattdrückt und bräunt, ohne zu reißen — ein Detail, bei dem viele Kubaner in Florida darauf bestehen, dass gewöhnliches, dickkrustiges Brot einfach nicht funktioniert.",
+    "pt": "O sanduíche cubano não nasceu em Cuba, mas nas comunidades de trabalhadores cubanos das fábricas de charutos de Ybor City e Key West, na Flórida, no final do século XIX, onde imigrantes cubanos, espanhóis e italianos trabalhavam lado a lado. A combinação de fiambre, lombo assado, queijo suíço, mostarda e pepinos entre fatias de pan cubano reflete diretamente a mistura dessas comunidades — presunto espanhol, queijo centro-europeu, pepinos trazidos pelas colónias judaicas da região.\n\nO que distingue um verdadeiro sanduíche cubano de uma simples combinação de frios é a prensagem: o sanduíche é prensado sob uma chapa quente (uma plancha), não apenas grelhado numa frigideira. A pressão uniforme derrete o queijo em todas as camadas ao mesmo tempo e sela as camadas de pão entre si, enquanto a crosta fina do pan cubano achata e doura sem rachar — um detalhe pelo qual muitos cubanos da Flórida insistem que o pão comum, de crosta grossa, simplesmente não funciona.",
+    "ru": "Кубинский сэндвич появился не на Кубе, а в рабочих кубинских общинах сигарных фабрик Айбор-Сити и Ки-Уэста, Флорида, в конце XIX века, где кубинские, испанские и итальянские иммигранты работали бок о бок. Сочетание ветчины, жареной свинины, швейцарского сыра, горчицы и огурцов между ломтиками pan cubano прямо отражает смешение этих общин — испанская ветчина, центральноевропейский сыр, огурцы, привезённые еврейскими колониями региона.\n\nЧто отличает настоящий кубинский сэндвич от простого сочетания колбасных изделий — это прессование: сэндвич прижимается горячей плитой (планчей), а не просто обжаривается на сковороде. Равномерное давление плавит сыр во всех слоях одновременно и скрепляет слои хлеба между собой, а тонкая корка pan cubano расплющивается и подрумянивается, не растрескиваясь — деталь, из-за которой многие кубинцы во Флориде настаивают, что обычный хлеб с толстой коркой попросту не подходит.",
+    "ar": "لم يولد الساندويتش الكوبي في كوبا، بل في مجتمعات العمال الكوبيين في مصانع السيجار في أيبور سيتي وكي ويست بفلوريدا، في أواخر القرن التاسع عشر، حيث عمل المهاجرون الكوبيون والإسبان والإيطاليون جنبًا إلى جنب. مزيج لحم الخنزير المقدد ولحم الخنزير المشوي والجبن السويسري والخردل والمخلل بين شرائح pan cubano يعكس مباشرة خليط تلك المجتمعات — لحم مقدد إسباني، جبن أوروبي وسطي، مخلل جلبته المستعمرات اليهودية في المنطقة.\n\nما يميّز الساندويتش الكوبي الحقيقي عن مجرد مزيج من اللحوم الباردة هو الضغط: يُضغط الساندويتش تحت لوح ساخن (بلانشا)، لا يُشوى فقط في مقلاة. الضغط المنتظم يذيب الجبن في كل الطبقات دفعة واحدة ويلحم طبقات الخبز ببعضها، بينما تتسطح قشرة pan cubano الرقيقة وتتحمّر دون أن تتشقق — تفصيل يصرّ كثير من الكوبيين في فلوريدا على أن الخبز العادي ذا القشرة السميكة لا يحققه ببساطة.",
+    "zh": "古巴三明治并非诞生于古巴，而是诞生于19世纪末佛罗里达州伊博尔城和基韦斯特雪茄工厂的古巴工人社区，那里古巴、西班牙和意大利移民并肩劳作。夹在pan cubano面包片之间的火腿、烤猪肉、瑞士奶酪、芥末和腌黄瓜的组合，直接体现了那些社区的融合——西班牙火腿、中欧奶酪、当地犹太移民带来的腌黄瓜。\n\n真正的古巴三明治与简单冷切肉组合的区别在于压制：三明治要在热压板（plancha）下压制，而不只是在平底锅里单面煎烤。均匀的压力能同时让每一层奶酪融化，并将各层面包紧紧粘合在一起，而pan cubano薄薄的外皮在压制下能均匀压扁上色而不开裂——许多佛罗里达的古巴人坚持认为，普通厚皮面包根本无法做到这一点。",
+    "ja": "キューバサンドはキューバではなく、19世紀末のフロリダ州イボール・シティとキーウェストの葉巻工場で働くキューバ人労働者コミュニティで生まれた。そこではキューバ、スペイン、イタリアからの移民が肩を並べて働いていた。ハム、ローストポーク、スイスチーズ、マスタード、ピクルスをパン・クバーノの間に挟んだこの組み合わせは、まさにそれらのコミュニティの混成を反映している——スペインのハム、中欧のチーズ、地域のユダヤ人コミュニティがもたらしたピクルス。\n\n本物のキューバサンドを単なる冷肉の組み合わせと分けるのは、プレスすることだ。サンドイッチはフライパンで片面だけ焼くのではなく、熱い鉄板（プランチャ）で押しつぶすように焼かれる。均一な圧力によってすべての層のチーズが一度に溶け、パンの層同士が密着する一方で、パン・クバーノの薄い皮は割れることなく平たく色づく——この点について、フロリダの多くのキューバ人は、皮の厚い普通のパンでは単純に再現できないと主張する。",
+    "tr": "Küba sandviçi Küba'da değil, 19. yüzyılın sonlarında Florida'daki Ybor City ve Key West puro fabrikalarının Kübalı işçi topluluklarında doğdu; burada Kübalı, İspanyol ve İtalyan göçmenler omuz omuza çalışıyordu. Pan cubano dilimleri arasındaki jambon, kızarmış domuz eti, İsviçre peyniri, hardal ve turşu birleşimi, o toplulukların karışımını doğrudan yansıtır — İspanyol jambonu, Orta Avrupa peyniri, bölgenin Yahudi kolonilerinin getirdiği turşular.\n\nGerçek bir Küba sandviçini basit bir şarküteri kombinasyonundan ayıran şey preslemedir: sandviç sadece tavada tek taraflı ızgara yapılmaz, sıcak bir plakayla (plancha) preslenir. Eşit basınç, peyniri tüm katmanlarda aynı anda eritir ve ekmek katmanlarını birbirine kaynaştırırken, pan cubano'nun ince kabuğu çatlamadan yassılaşıp kararır — Florida'daki birçok Kübalının, kalın kabuklu sıradan ekmeğin bunu asla başaramayacağı konusunda ısrar ettiği bir ayrıntı.",
+    "it": "Il panino cubano non è nato a Cuba, ma nelle comunità di lavoratori cubani delle fabbriche di sigari di Ybor City e Key West, in Florida, alla fine del XIX secolo, dove immigrati cubani, spagnoli e italiani lavoravano fianco a fianco. La combinazione di prosciutto, arrosto di maiale, formaggio svizzero, senape e sottaceti tra fette di pan cubano riflette direttamente il mix di quelle comunità — prosciutto spagnolo, formaggio centroeuropeo, sottaceti portati dalle colonie ebraiche della zona.\n\nCiò che distingue un vero panino cubano da una semplice combinazione di salumi è la pressatura: il panino viene pressato sotto una piastra calda (una plancha), non semplicemente grigliato in padella. La pressione uniforme scioglie il formaggio in tutti gli strati contemporaneamente e sigilla gli strati di pane tra loro, mentre la sottile crosta del pan cubano si appiattisce e dora senza spaccarsi — un dettaglio per cui molti cubani della Florida insistono che il pane comune, dalla crosta spessa, semplicemente non funzioni.",
+    "ko": "쿠바 샌드위치는 쿠바가 아니라, 19세기 말 플로리다 이보르 시티와 키웨스트의 시가 공장에서 일하던 쿠바 노동자 공동체에서 탄생했다. 그곳에서는 쿠바, 스페인, 이탈리아 이민자들이 어깨를 나란히 하고 일했다. 판 쿠바노 빵 사이에 햄, 로스트 포크, 스위스 치즈, 겨자, 피클을 넣은 이 조합은 그 공동체들의 융합을 그대로 반영한다 — 스페인식 햄, 중부 유럽식 치즈, 그 지역 유대인 이민자들이 들여온 피클.\n\n진짜 쿠바 샌드위치를 단순한 냉육 조합과 구별 짓는 것은 압착이다: 샌드위치는 팬에서 한쪽만 굽는 것이 아니라 뜨거운 철판(플란차) 아래에서 눌러 익힌다. 고른 압력이 모든 층의 치즈를 동시에 녹이고 빵 층끼리 서로 밀착시키는 반면, 판 쿠바노의 얇은 껍질은 갈라지지 않고 납작하게 눌려 노릇해진다 — 플로리다의 많은 쿠바인들은 두꺼운 껍질의 일반 빵으로는 이를 결코 재현할 수 없다고 주장하는 부분이다.",
+    "hi": "क्यूबा सैंडविच का जन्म क्यूबा में नहीं, बल्कि 19वीं सदी के अंत में फ्लोरिडा के यबोर सिटी और की वेस्ट के सिगार कारखानों के क्यूबाई मज़दूर समुदायों में हुआ, जहां क्यूबाई, स्पेनिश और इतालवी प्रवासी कंधे से कंधा मिलाकर काम करते थे। पान कुबानो के टुकड़ों के बीच हैम, भुना सुअर का मांस, स्विस चीज़, सरसों और अचार का मेल उन समुदायों के मिश्रण को सीधे दर्शाता है — स्पेनिश हैम, मध्य-यूरोपीय चीज़, उस क्षेत्र के यहूदी समुदायों द्वारा लाया गया अचार।\n\nजो चीज़ असली क्यूबा सैंडविच को साधारण मांस के मेल से अलग करती है वह है दबाना: सैंडविच को केवल पैन में एक तरफ ग्रिल नहीं किया जाता, बल्कि गरम प्लेट (प्लांचा) के नीचे दबाया जाता है। समान दबाव हर परत में चीज़ को एक साथ पिघलाता है और ब्रेड की परतों को आपस में जोड़ता है, जबकि पान कुबानो की पतली परत बिना फटे चपटी होकर भूरी हो जाती है — एक ऐसी बारीकी जिसके लिए फ्लोरिडा के कई क्यूबाई ज़ोर देकर कहते हैं कि मोटी परत वाली सामान्य ब्रेड से यह संभव ही नहीं है।"
+  },
+  "meta": {
+    "time": 20,
+    "costRon": 14,
+    "tags": ["quick"],
+    "desc": {
+      "ro": "Șuncă, mușchi de porc, cașcaval și castraveciori murați, presate între felii de franzelă până devin crocante.",
+      "en": "Ham, roast pork, Swiss cheese and pickles, pressed between bread slices until crisp.",
+      "es": "Jamón, lomo asado, queso suizo y pepinillos, prensados entre rebanadas de pan hasta quedar crujientes.",
+      "fr": "Jambon, porc rôti, fromage suisse et cornichons, pressés entre des tranches de pain jusqu'à devenir croustillants.",
+      "de": "Schinken, gebratenes Schweinefleisch, Schweizer Käse und Gurken, zwischen Brotscheiben knusprig gepresst.",
+      "pt": "Fiambre, lombo assado, queijo suíço e pepinos, prensados entre fatias de pão até ficarem crocantes.",
+      "ru": "Ветчина, жареная свинина, швейцарский сыр и огурцы, спрессованные между ломтиками хлеба до хруста.",
+      "ar": "لحم خنزير مقدد ولحم خنزير مشوي وجبن سويسري ومخلل، مضغوطة بين شرائح الخبز حتى تصبح مقرمشة.",
+      "zh": "火腿、烤猪肉、瑞士奶酪和腌黄瓜，压在面包片间烤至酥脆。",
+      "ja": "ハム、ローストポーク、スイスチーズ、ピクルスをパンの間に挟み、パリッとするまで押し焼きにしたもの。",
+      "tr": "Jambon, kızarmış domuz eti, İsviçre peyniri ve turşu, ekmek dilimleri arasında gevrekleşene kadar preslenmiş.",
+      "it": "Prosciutto, arrosto di maiale, formaggio svizzero e sottaceti, pressati tra fette di pane fino a diventare croccanti.",
+      "ko": "햄, 로스트 포크, 스위스 치즈, 피클을 빵 사이에 넣고 바삭해질 때까지 눌러 구운 샌드위치.",
+      "hi": "हैम, भुना सुअर का मांस, स्विस चीज़ और अचार, ब्रेड के टुकड़ों के बीच कुरकुरा होने तक दबाया गया।"
+    }
+  }
+}

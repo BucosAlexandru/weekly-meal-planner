@@ -1,0 +1,176 @@
+{
+  "id": 309,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Cuba", "en": "Cuba", "es": "Cuba", "fr": "Cuba", "de": "Kuba",
+    "pt": "Cuba", "ru": "Куба", "ar": "كوبا", "zh": "古巴", "ja": "キューバ",
+    "tr": "Küba", "it": "Cuba", "ko": "쿠바", "hi": "क्यूबा"
+  },
+  "name": {
+    "ro": "Tostones", "en": "Tostones", "es": "Tostones", "fr": "Tostones", "de": "Tostones",
+    "pt": "Tostones", "ru": "Тостонес", "ar": "توستونيس", "zh": "古巴炸青香蕉片", "ja": "トストネス",
+    "tr": "Tostones", "it": "Tostones", "ko": "토스토네스", "hi": "तोस्तोनेस"
+  },
+  "category": {
+    "ro": "Garnitură", "en": "Side dish", "es": "Guarnición", "fr": "Accompagnement", "de": "Beilage",
+    "pt": "Acompanhamento", "ru": "Гарнир", "ar": "طبق جانبي", "zh": "配菜", "ja": "副菜",
+    "hi": "साइड डिश", "tr": "Yan yemek", "it": "Contorno", "ko": "반찬"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍌","t":"Se folosesc banane plantain verzi, necoapte","d":"Amidonul lor, nu zahărul, e ce dă crocanța specifică — o banană coaptă s-ar caramelizat și ars"},
+      {"icon":"🔨","t":"Feliile se prăjesc, se strivesc, apoi se prăjesc a doua oară","d":"Prima prăjire fierbe interiorul, a doua creează crusta subțire și crocantă"},
+      {"icon":"🧊","t":"Feliile strivite se lasă puțin la răcit înainte de a doua prăjire","d":"Amidonul se leagă din nou, ca discul să nu se destrame în ulei"},
+      {"icon":"🧂","t":"Se sărează imediat ce ies din ulei, cât sunt fierbinți","d":"Sarea aderă doar pe suprafața încă umedă de ulei, nu pe una răcită"}
+    ],
+    "en": [
+      {"icon":"🍌","t":"Green, unripe plantains are used","d":"Their starch, not sugar, is what gives the signature crunch — a ripe plantain would caramelize and burn"},
+      {"icon":"🔨","t":"The slices are fried, smashed, then fried a second time","d":"The first fry cooks the inside through, the second builds the thin, crisp crust"},
+      {"icon":"🧊","t":"The smashed slices rest briefly before the second fry","d":"The starch firms back up, so the disc doesn't fall apart in the oil"},
+      {"icon":"🧂","t":"Salted the moment they come out of the oil, while hot","d":"Salt only sticks to a surface still glossy with oil, not one that's cooled"}
+    ],
+    "es": [
+      {"icon":"🍌","t":"Se usan plátanos verdes, sin madurar","d":"Su almidón, no el azúcar, es lo que da el crujido característico — un plátano maduro se caramelizaría y quemaría"},
+      {"icon":"🔨","t":"Las rodajas se fríen, se aplastan y se fríen una segunda vez","d":"La primera fritura cocina el interior, la segunda crea la costra fina y crujiente"},
+      {"icon":"🧊","t":"Las rodajas aplastadas reposan brevemente antes de la segunda fritura","d":"El almidón se recompone, para que el disco no se deshaga en el aceite"},
+      {"icon":"🧂","t":"Se salan en el momento en que salen del aceite, calientes","d":"La sal solo se adhiere a una superficie aún brillante de aceite, no a una ya fría"}
+    ],
+    "fr": [
+      {"icon":"🍌","t":"On utilise des bananes plantains vertes, non mûres","d":"C'est leur amidon, pas leur sucre, qui donne le croquant caractéristique — une plantain mûre caramélisait et brûlerait"},
+      {"icon":"🔨","t":"Les tranches sont frites, écrasées, puis frites une seconde fois","d":"La première friture cuit l'intérieur, la seconde crée la croûte fine et croustillante"},
+      {"icon":"🧊","t":"Les tranches écrasées reposent brièvement avant la seconde friture","d":"L'amidon se raffermit, pour que le disque ne se défasse pas dans l'huile"},
+      {"icon":"🧂","t":"Salées dès la sortie de l'huile, encore chaudes","d":"Le sel n'adhère qu'à une surface encore luisante d'huile, pas à une surface refroidie"}
+    ],
+    "de": [
+      {"icon":"🍌","t":"Es werden grüne, unreife Kochbananen verwendet","d":"Ihre Stärke, nicht Zucker, sorgt für die charakteristische Knusprigkeit — eine reife Kochbanane würde karamellisieren und verbrennen"},
+      {"icon":"🔨","t":"Die Scheiben werden frittiert, plattgedrückt, dann ein zweites Mal frittiert","d":"Der erste Frittiergang gart das Innere durch, der zweite baut die dünne, knusprige Kruste auf"},
+      {"icon":"🧊","t":"Die plattgedrückten Scheiben ruhen kurz vor dem zweiten Frittieren","d":"Die Stärke festigt sich wieder, damit die Scheibe im Öl nicht auseinanderfällt"},
+      {"icon":"🧂","t":"Gesalzen, sobald sie heiß aus dem Öl kommen","d":"Salz haftet nur an einer noch öligen Oberfläche, nicht an einer abgekühlten"}
+    ],
+    "pt": [
+      {"icon":"🍌","t":"Usam-se bananas-da-terra verdes, não maduras","d":"É o amido delas, não o açúcar, que dá a crocância característica — uma banana madura caramelizaria e queimaria"},
+      {"icon":"🔨","t":"As rodelas são fritas, achatadas e fritas uma segunda vez","d":"A primeira fritura cozinha o interior, a segunda cria a crosta fina e crocante"},
+      {"icon":"🧊","t":"As rodelas achatadas repousam brevemente antes da segunda fritura","d":"O amido firma-se novamente, para o disco não se desfazer no óleo"},
+      {"icon":"🧂","t":"Salgadas assim que saem do óleo, ainda quentes","d":"O sal só adere a uma superfície ainda brilhante de óleo, não a uma já fria"}
+    ],
+    "ru": [
+      {"icon":"🍌","t":"Используются зелёные, незрелые платано","d":"Именно их крахмал, а не сахар, даёт характерную хрусткость — спелый платано карамелизовался бы и подгорел"},
+      {"icon":"🔨","t":"Ломтики жарятся, расплющиваются, затем жарятся второй раз","d":"Первая жарка проваривает середину, вторая создаёт тонкую хрустящую корочку"},
+      {"icon":"🧊","t":"Расплющенные ломтики немного отдыхают перед второй жаркой","d":"Крахмал снова схватывается, чтобы диск не развалился в масле"},
+      {"icon":"🧂","t":"Солятся сразу же, горячими, как только вынуты из масла","d":"Соль пристаёт только к ещё лоснящейся от масла поверхности, а не к остывшей"}
+    ],
+    "ar": [
+      {"icon":"🍌","t":"تُستخدم موزة الجنة الخضراء غير الناضجة","d":"نشاؤها لا سكرها هو ما يمنحها القرمشة المميزة — الموزة الناضجة كانت ستتكرمل وتحترق"},
+      {"icon":"🔨","t":"تُقلى الشرائح، تُهرس، ثم تُقلى مرة ثانية","d":"القلي الأول يطهو الداخل، والثاني يبني القشرة الرقيقة المقرمشة"},
+      {"icon":"🧊","t":"الشرائح المهروسة ترتاح قليلاً قبل القلي الثاني","d":"النشا يتماسك من جديد حتى لا يتفكك القرص في الزيت"},
+      {"icon":"🧂","t":"تُملَّح فور خروجها من الزيت، وهي ساخنة","d":"الملح يلتصق فقط بسطح لا يزال لامعًا بالزيت، لا بسطح بارد"}
+    ],
+    "zh": [
+      {"icon":"🍌","t":"使用未成熟的青色大蕉","d":"是它的淀粉而非糖分带来标志性的酥脆——熟透的大蕉会焦糖化并烧焦"},
+      {"icon":"🔨","t":"先炸一次、压扁，再炸第二次","d":"第一次油炸把内部炸熟，第二次炸出薄而酥脆的外壳"},
+      {"icon":"🧊","t":"压扁的薄片在第二次油炸前稍微静置","d":"淀粉重新凝固，让薄片下锅时不会散开"},
+      {"icon":"🧂","t":"出锅趁热立刻撒盐","d":"盐只能附着在还带油光的表面上，冷却后就粘不住了"}
+    ],
+    "ja": [
+      {"icon":"🍌","t":"熟していない青いプランテンを使う","d":"独特のパリパリ感を生むのは糖分ではなくでんぷんで、熟したプランテンではカラメル化して焦げてしまう"},
+      {"icon":"🔨","t":"一度揚げて潰し、もう一度揚げる","d":"一度目の揚げで中まで火を通し、二度目で薄くパリッとした表面を作る"},
+      {"icon":"🧊","t":"潰した後、二度目に揚げる前に少し休ませる","d":"でんぷんが再び固まり、油の中で崩れないようにする"},
+      {"icon":"🧂","t":"油から出した瞬間、熱いうちに塩をふる","d":"塩は油でまだつやのある表面にしか付かず、冷めた表面には付かない"}
+    ],
+    "tr": [
+      {"icon":"🍌","t":"Yeşil, olgunlaşmamış tostones muzu kullanılır","d":"Karakteristik gevrekliği veren şekeri değil nişastasıdır — olgun bir muz karamelize olup yanardı"},
+      {"icon":"🔨","t":"Dilimler kızartılır, ezilir, sonra ikinci kez kızartılır","d":"İlk kızartma içini pişirir, ikincisi ince ve gevrek kabuğu oluşturur"},
+      {"icon":"🧊","t":"Ezilmiş dilimler ikinci kızartmadan önce kısa süre dinlenir","d":"Nişasta yeniden sertleşir, böylece disk yağda dağılmaz"},
+      {"icon":"🧂","t":"Yağdan çıkar çıkmaz, sıcakken tuzlanır","d":"Tuz yalnızca yağla hâlâ parlak yüzeye yapışır, soğumuş yüzeye değil"}
+    ],
+    "it": [
+      {"icon":"🍌","t":"Si usano platani verdi, non maturi","d":"È il loro amido, non lo zucchero, a dare la croccantezza caratteristica — un platano maturo caramellizerebbe e brucerebbe"},
+      {"icon":"🔨","t":"Le fette vengono fritte, schiacciate, poi fritte una seconda volta","d":"La prima frittura cuoce l'interno, la seconda crea la crosta sottile e croccante"},
+      {"icon":"🧊","t":"Le fette schiacciate riposano brevemente prima della seconda frittura","d":"L'amido si rassoda di nuovo, così il disco non si sfalda nell'olio"},
+      {"icon":"🧂","t":"Salate appena escono dall'olio, ancora calde","d":"Il sale aderisce solo a una superficie ancora lucida d'olio, non a una raffreddata"}
+    ],
+    "ko": [
+      {"icon":"🍌","t":"덜 익은 초록색 플랜테인을 사용한다","d":"특유의 바삭함을 만드는 것은 당분이 아니라 전분이다 — 익은 플랜테인은 캐러멜화되어 타버린다"},
+      {"icon":"🔨","t":"조각을 한 번 튀기고, 눌러 으깬 뒤, 두 번째로 튀긴다","d":"첫 번째 튀김은 속을 익히고, 두 번째는 얇고 바삭한 겉면을 만든다"},
+      {"icon":"🧊","t":"으깬 조각은 두 번째 튀기기 전 잠시 휴지시킨다","d":"전분이 다시 굳어져 기름 속에서 조각이 부서지지 않는다"},
+      {"icon":"🧂","t":"기름에서 꺼내는 즉시, 뜨거울 때 소금을 뿌린다","d":"소금은 기름기로 반들거리는 표면에만 붙고, 식은 표면에는 붙지 않는다"}
+    ],
+    "hi": [
+      {"icon":"🍌","t":"हरे, बिना पके प्लांटेन इस्तेमाल होते हैं","d":"इनकी कुरकुराहट चीनी से नहीं, स्टार्च से आती है — पका हुआ प्लांटेन कैरेमलाइज़ होकर जल जाता"},
+      {"icon":"🔨","t":"टुकड़ों को तला जाता है, चपटा किया जाता है, फिर दोबारा तला जाता है","d":"पहली तलाई अंदर तक पकाती है, दूसरी पतली कुरकुरी परत बनाती है"},
+      {"icon":"🧊","t":"चपटे टुकड़े दूसरी तलाई से पहले थोड़ी देर आराम करते हैं","d":"स्टार्च फिर से जम जाता है, ताकि टुकड़ा तेल में बिखरे नहीं"},
+      {"icon":"🧂","t":"तेल से निकलते ही, गरम-गरम नमक लगाया जाता है","d":"नमक केवल तेल से चमकती सतह पर चिपकता है, ठंडी सतह पर नहीं"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["3 banane plantain verzi","ulei vegetal, pentru prăjit (cantitate generoasă)","apă rece cu sare, pentru înmuiat","sare, după gust","1 cățel de usturoi zdrobit (opțional, pentru apa de înmuiat)","suc de lime, pentru servit (opțional)"],
+    "en": ["3 green plantains","vegetable oil, for frying (a generous amount)","cold salted water, for soaking","salt, to taste","1 garlic clove, crushed (optional, for the soaking water)","lime juice, for serving (optional)"],
+    "es": ["3 plátanos verdes","aceite vegetal, para freír (cantidad generosa)","agua fría con sal, para remojar","sal, al gusto","1 diente de ajo machacado (opcional, para el agua de remojo)","jugo de lima, para servir (opcional)"],
+    "fr": ["3 bananes plantains vertes","huile végétale, pour la friture (quantité généreuse)","eau froide salée, pour tremper","sel, selon le goût","1 gousse d'ail écrasée (facultatif, pour l'eau de trempage)","jus de citron vert, pour servir (facultatif)"],
+    "de": ["3 grüne Kochbananen","Pflanzenöl, zum Frittieren (großzügige Menge)","kaltes Salzwasser, zum Einweichen","Salz, nach Geschmack","1 Knoblauchzehe, zerdrückt (optional, für das Einweichwasser)","Limettensaft, zum Servieren (optional)"],
+    "pt": ["3 bananas-da-terra verdes","óleo vegetal, para fritar (quantidade generosa)","água fria com sal, para demolhar","sal, a gosto","1 dente de alho esmagado (opcional, para a água de demolhar)","suco de limão, para servir (opcional)"],
+    "ru": ["3 зелёных платано","растительное масло, для жарки (щедрое количество)","холодная подсоленная вода, для замачивания","соль, по вкусу","1 зубчик чеснока, раздавленный (по желанию, для воды для замачивания)","сок лайма, для подачи (по желанию)"],
+    "ar": ["3 موزات جنة خضراء","زيت نباتي، للقلي (كمية سخية)","ماء بارد مملح، للنقع","ملح، حسب الرغبة","فص ثوم مهروس واحد (اختياري، لماء النقع)","عصير ليمون أخضر، للتقديم (اختياري)"],
+    "zh": ["3根青色大蕉","植物油，用于油炸（大量）","冷盐水，用于浸泡","盐，适量","1瓣大蒜，压碎（可选，用于浸泡水）","青柠汁，用于食用时淋上（可选）"],
+    "ja": ["青いプランテン3本","植物油、揚げ用（たっぷり）","冷たい塩水、浸す用","塩、お好みで","にんにく1片、潰したもの（お好みで、浸す水用）","ライム果汁、仕上げ用（お好みで）"],
+    "tr": ["3 yeşil tostones muzu","bitkisel yağ, kızartmak için (bol miktarda)","soğuk tuzlu su, ıslatmak için","tuz, damak zevkine göre","1 diş sarımsak, ezilmiş (isteğe bağlı, ıslatma suyu için)","misket limonu suyu, servis için (isteğe bağlı)"],
+    "it": ["3 platani verdi","olio vegetale, per friggere (quantità abbondante)","acqua fredda salata, per l'ammollo","sale, a piacere","1 spicchio d'aglio schiacciato (facoltativo, per l'acqua dell'ammollo)","succo di lime, per servire (facoltativo)"],
+    "ko": ["초록색 플랜테인 3개","식용유, 튀김용(넉넉하게)","차가운 소금물, 담가둘 용도","소금, 입맛에 맞게","마늘 1쪽, 으깬 것(선택, 담가둘 물용)","라임즙, 곁들임용(선택)"],
+    "hi": ["3 हरे प्लांटेन (कच्चे केले)","वनस्पति तेल, तलने के लिए (भरपूर मात्रा में)","ठंडा नमकीन पानी, भिगोने के लिए","नमक, स्वादानुसार","1 लहसुन की कली, कुचली हुई (वैकल्पिक, भिगोने के पानी के लिए)","नींबू का रस, परोसने के लिए (वैकल्पिक)"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE BANANELE: taie capetele bananelor plantain, crestă coaja pe lungime și dezvelește-le, apoi taie-le în felii de 3-4cm grosime. PRIMA PRĂJIRE: încinge uleiul la foc mediu, prăjește feliile 2-3 minute pe fiecare parte, până se îngălbenesc ușor, dar rămân moi în interior. STRIVEȘTE: scoate feliile, lasă-le să se răcească puțin, apoi strivește-le cu fundul unui pahar sau al unei tigăi, până ajung la 1cm grosime. ÎNMOAIE (OPȚIONAL): scufundă discurile strivite câteva secunde în apa rece cu sare și usturoi, apoi scurge-le. A DOUA PRĂJIRE: prăjește din nou discurile în ulei fierbinte, 2-3 minute pe fiecare parte, până devin aurii și crocante. SĂREAZĂ ȘI SERVEȘTE: scoate pe hârtie absorbantă, sărează imediat cât sunt fierbinți și servește cu suc de lime.",
+    "en": "PREPARE THE PLANTAINS: cut off the ends of the plantains, score the peel lengthwise and remove it, then cut into 3-4cm thick slices. FIRST FRY: heat the oil over medium heat, fry the slices 2-3 minutes per side, until lightly golden but still soft inside. SMASH: remove the slices, let them cool slightly, then flatten each one with the bottom of a glass or a pan, down to about 1cm thick. SOAK (OPTIONAL): dip the smashed discs briefly in the cold salted garlic water, then drain. SECOND FRY: fry the discs again in hot oil, 2-3 minutes per side, until golden and crisp. SALT AND SERVE: drain on paper towels, salt immediately while hot, and serve with lime juice.",
+    "es": "PREPARA LOS PLÁTANOS: corta los extremos de los plátanos, marca la cáscara a lo largo y retírala, luego corta en rodajas de 3-4cm de grosor. PRIMERA FRITURA: calienta el aceite a fuego medio, fríe las rodajas 2-3 minutos por lado, hasta que doren ligeramente pero sigan blandas por dentro. APLASTA: retira las rodajas, déjalas enfriar un poco, luego aplana cada una con el fondo de un vaso o una sartén, hasta 1cm de grosor. REMOJA (OPCIONAL): sumerge los discos aplastados unos segundos en el agua fría con sal y ajo, luego escurre. SEGUNDA FRITURA: fríe de nuevo los discos en aceite caliente, 2-3 minutos por lado, hasta que doren y queden crujientes. SALA Y SIRVE: escurre sobre papel absorbente, sala de inmediato mientras están calientes y sirve con jugo de lima.",
+    "fr": "PRÉPARE LES PLANTAINS: coupe les extrémités des plantains, incise la peau dans le sens de la longueur et retire-la, puis coupe en tranches de 3-4cm d'épaisseur. PREMIÈRE FRITURE: fais chauffer l'huile à feu moyen, fais frire les tranches 2-3 minutes de chaque côté, jusqu'à ce qu'elles dorent légèrement mais restent tendres à l'intérieur. ÉCRASE: retire les tranches, laisse-les refroidir un peu, puis aplatis chacune avec le fond d'un verre ou d'une poêle, jusqu'à environ 1cm d'épaisseur. TREMPE (FACULTATIF): plonge brièvement les disques écrasés dans l'eau froide salée à l'ail, puis égoutte. SECONDE FRITURE: fais frire à nouveau les disques dans l'huile chaude, 2-3 minutes de chaque côté, jusqu'à ce qu'ils dorent et deviennent croustillants. SALE ET SERS: égoutte sur du papier absorbant, sale immédiatement à chaud et sers avec du jus de citron vert.",
+    "de": "BEREITE DIE KOCHBANANEN VOR: die Enden der Kochbananen abschneiden, die Schale der Länge nach einritzen und entfernen, dann in 3-4cm dicke Scheiben schneiden. ERSTES FRITTIEREN: das Öl bei mittlerer Hitze erhitzen, die Scheiben 2-3 Minuten pro Seite frittieren, bis sie leicht golden, aber innen noch weich sind. ZERDRÜCKEN: die Scheiben herausnehmen, kurz abkühlen lassen, dann jede mit dem Boden eines Glases oder einer Pfanne auf etwa 1cm flach drücken. EINWEICHEN (OPTIONAL): die zerdrückten Scheiben kurz in das kalte Salz-Knoblauch-Wasser tauchen, dann abtropfen lassen. ZWEITES FRITTIEREN: die Scheiben erneut in heißem Öl frittieren, 2-3 Minuten pro Seite, bis sie golden und knusprig sind. SALZEN UND SERVIEREN: auf Küchenpapier abtropfen lassen, sofort heiß salzen und mit Limettensaft servieren.",
+    "pt": "PREPARE AS BANANAS: corte as pontas das bananas-da-terra, corte a casca ao comprido e retire-a, depois corte em rodelas de 3-4cm de espessura. PRIMEIRA FRITURA: aqueça o óleo em fogo médio, frite as rodelas 2-3 minutos de cada lado, até dourarem levemente mas ficarem macias por dentro. ACHATE: retire as rodelas, deixe arrefecer um pouco, depois achate cada uma com o fundo de um copo ou frigideira, até cerca de 1cm de espessura. DEMOLHE (OPCIONAL): mergulhe os discos achatados brevemente na água fria com sal e alho, depois escorra. SEGUNDA FRITURA: frite novamente os discos em óleo quente, 2-3 minutos de cada lado, até dourarem e ficarem crocantes. TEMPERE E SIRVA: escorra em papel absorvente, tempere com sal imediatamente enquanto estão quentes e sirva com suco de limão.",
+    "ru": "ПОДГОТОВЬ ПЛАТАНО: срежь концы платано, надрежь кожуру вдоль и сними её, затем нарежь ломтиками толщиной 3-4см. ПЕРВАЯ ЖАРКА: разогрей масло на среднем огне, жарь ломтики 2-3 минуты с каждой стороны, пока слегка не подрумянятся, но останутся мягкими внутри. РАСПЛЮЩИ: достань ломтики, дай немного остыть, затем расплющи каждый дном стакана или сковороды до толщины около 1см. ЗАМОЧИ (ПО ЖЕЛАНИЮ): окуни расплющенные диски на несколько секунд в холодную подсоленную воду с чесноком, затем слей воду. ВТОРАЯ ЖАРКА: снова обжарь диски в горячем масле, 2-3 минуты с каждой стороны, пока не станут золотистыми и хрустящими. ПОСОЛИ И ПОДАЙ: обсуши на бумажном полотенце, сразу посоли, пока горячие, и подавай с соком лайма.",
+    "ar": "جهّز الموز: اقطع طرفي موزة الجنة، اشقّ القشرة على طولها وأزلها، ثم قطّعها إلى شرائح بسمك 3-4سم. القلي الأول: سخّن الزيت على نار متوسطة، اقلِ الشرائح 2-3 دقائق لكل جانب، حتى تصفرّ قليلاً وتبقى طرية من الداخل. اهرس: أخرج الشرائح، اتركها تبرد قليلاً، ثم افرد كل واحدة بقاع كوب أو مقلاة حتى سمك 1سم تقريبًا. انقع (اختياري): اغمس الأقراص المهروسة لثوانٍ في الماء البارد المملح بالثوم، ثم صفّها. القلي الثاني: اقلِ الأقراص مجددًا في زيت ساخن، 2-3 دقائق لكل جانب، حتى تصبح ذهبية ومقرمشة. مَلِّح وقدّم: صفّها على منشفة ورقية، مَلِّحها فورًا وهي ساخنة، وقدّمها مع عصير الليمون الأخضر.",
+    "zh": "处理大蕉：切去大蕉两端，沿长边划开表皮并剥除，然后切成3-4厘米厚的片。第一次油炸：中火加热油，将蕉片每面炸2-3分钟，至微微金黄但内部仍软。压扁：取出蕉片，稍微放凉，再用杯底或平底锅底把每片压至约1厘米厚。浸泡（可选）：将压扁的蕉片在加了大蒜的冷盐水中快速浸一下，然后沥干。第二次油炸：将蕉片再次放入热油中炸2-3分钟每面，至金黄酥脆。撒盐并上桌：捞出沥油纸吸油，趁热立刻撒盐，配青柠汁享用。",
+    "ja": "プランテンを準備する：プランテンの両端を切り落とし、皮に縦に切り込みを入れて剥き、3〜4cm厚に切る。一度目に揚げる：中火で油を熱し、スライスを両面2〜3分ずつ、薄く色づくが中はまだ柔らかい状態まで揚げる。潰す：スライスを取り出して少し冷まし、コップの底やフライパンで1cm厚ほどに潰す。浸す（お好みで）：潰した円盤をにんにく入りの冷たい塩水に数秒浸し、水気を切る。二度目に揚げる：円盤を再び熱い油で両面2〜3分ずつ、金色でパリッとするまで揚げる。塩をふって盛り付ける：キッチンペーパーで油を切り、熱いうちにすぐ塩をふり、ライム果汁を添えて提供する。",
+    "tr": "MUZLARI HAZIRLAYIN: muzların uçlarını kesin, kabuğu boyuna çizip soyun, sonra 3-4cm kalınlığında dilimleyin. İLK KIZARTMA: yağı orta ateşte ısıtın, dilimleri her tarafı hafif altın rengi olana ama içi hâlâ yumuşak kalana kadar 2-3'er dakika kızartın. EZİN: dilimleri çıkarın, biraz soğumaya bırakın, sonra her birini bir bardağın veya tavanın dibiyle yaklaşık 1cm kalınlığa kadar ezin. ISLATIN (İSTEĞE BAĞLI): ezilmiş diskleri sarımsaklı soğuk tuzlu suya birkaç saniye batırın, sonra süzün. İKİNCİ KIZARTMA: diskleri sıcak yağda tekrar, her tarafı altın rengi ve gevrek olana kadar 2-3'er dakika kızartın. TUZLAYIN VE SERVİS YAPIN: kağıt havluda süzün, sıcakken hemen tuzlayın ve misket limonu suyuyla servis edin.",
+    "it": "PREPARA I PLATANI: taglia le estremità dei platani, incidi la buccia per il lungo e rimuovila, poi taglia a fette spesse 3-4cm. PRIMA FRITTURA: scalda l'olio a fuoco medio, friggi le fette 2-3 minuti per lato, finché leggermente dorate ma ancora morbide all'interno. SCHIACCIA: togli le fette, lasciale raffreddare un po', poi schiaccia ognuna con il fondo di un bicchiere o di una padella fino a circa 1cm di spessore. AMMOLLO (FACOLTATIVO): immergi i dischi schiacciati per qualche secondo nell'acqua fredda salata all'aglio, poi scola. SECONDA FRITTURA: friggi di nuovo i dischi in olio caldo, 2-3 minuti per lato, finché dorati e croccanti. SALA E SERVI: scola su carta assorbente, sala subito mentre sono caldi e servi con succo di lime.",
+    "ko": "플랜테인 준비하기: 플랜테인의 양 끝을 자르고, 껍질을 세로로 칼집 내어 벗긴 뒤 3-4cm 두께로 썬다. 첫 번째 튀기기: 중불로 기름을 데워 조각을 각 면 2-3분씩, 살짝 노릇해지지만 속은 여전히 부드럽게 튀긴다. 으깨기: 조각을 꺼내 살짝 식힌 뒤, 컵 바닥이나 팬으로 약 1cm 두께가 되도록 각각 눌러 으깬다. 담그기(선택): 으깬 조각을 마늘 넣은 차가운 소금물에 몇 초 담갔다가 물기를 뺀다. 두 번째 튀기기: 조각을 뜨거운 기름에 다시 각 면 2-3분씩, 황금빛에 바삭해질 때까지 튀긴다. 소금 뿌려 서빙하기: 키친타월에 올려 기름기를 빼고, 뜨거울 때 바로 소금을 뿌려 라임즙과 함께 낸다.",
+    "hi": "प्लांटेन तैयार करें: प्लांटेन के दोनों सिरे काटें, छिलके पर लंबाई में चीरा लगाकर हटाएं, फिर 3-4 सेमी मोटे टुकड़ों में काटें। पहली तलाई: मध्यम आंच पर तेल गरम करें, टुकड़ों को हर तरफ 2-3 मिनट तलें, जब तक हल्के सुनहरे न हो जाएं पर अंदर से नरम रहें। चपटा करें: टुकड़े निकालें, थोड़ा ठंडा होने दें, फिर गिलास या पैन के तले से हर टुकड़े को लगभग 1 सेमी मोटाई तक चपटा करें। भिगोएं (वैकल्पिक): चपटे टुकड़ों को कुछ सेकंड लहसुन वाले ठंडे नमकीन पानी में डुबाएं, फिर छान लें। दूसरी तलाई: टुकड़ों को गरम तेल में दोबारा, हर तरफ 2-3 मिनट, सुनहरा और कुरकुरा होने तक तलें। नमक लगाएं और परोसें: कागज़ के तौलिये पर छानें, गरम-गरम तुरंत नमक लगाएं और नींबू के रस के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Tostones sunt, alături de orez și fasole, una dintre cele mai omniprezente garnituri din bucătăria cubaneză, prezente pe orice masă de zi cu zi, de la gustările stradale până la mesele festive. Numele vine de la verbul spaniol \"tostar\", a prăji, iar tehnica dublei prăjiri s-a răspândit din Caraibe în toată America Latină, sub nume diferite — patacones în Columbia și Venezuela, chatinos în alte zone.\n\nCheia preparatului stă în alegerea bananei: doar bananele plantain verzi, complet necoapte, au amidonul necesar pentru textura crocantă pe exterior și pufoasă pe interior. O banană coaptă, cu zahăr acumulat, s-ar arde la a doua prăjire în loc să se rumenească uniform. Strivirea feliilor între cele două prăjiri nu e doar o chestiune de formă — subțiază bucata suficient cât să se prăjească rapid și uniform, fără ca interiorul să rămână crud sau exteriorul să se ardă.",
+    "en": "Tostones, alongside rice and beans, are one of the most omnipresent side dishes in Cuban cuisine, present on any everyday table, from street snacks to festive meals. The name comes from the Spanish verb \"tostar\", to toast or fry, and the double-frying technique spread from the Caribbean across Latin America under different names — patacones in Colombia and Venezuela, chatinos in other regions.\n\nThe key to the dish lies in choosing the right banana: only green, completely unripe plantains have the starch needed for a texture that's crisp outside and soft inside. A ripe plantain, with sugar already built up, would burn on the second fry instead of browning evenly. Smashing the slices between the two fries isn't just about shape — it thins the piece enough to fry quickly and evenly, without the inside staying raw or the outside burning.",
+    "es": "Los tostones, junto con el arroz y los frijoles, son una de las guarniciones más omnipresentes de la cocina cubana, presentes en cualquier mesa cotidiana, desde los antojitos callejeros hasta las comidas festivas. El nombre viene del verbo español \"tostar\", y la técnica de la doble fritura se extendió desde el Caribe por toda Latinoamérica con nombres distintos — patacones en Colombia y Venezuela, chatinos en otras zonas.\n\nLa clave del plato está en elegir el plátano correcto: solo los plátanos verdes, completamente sin madurar, tienen el almidón necesario para una textura crujiente por fuera y suave por dentro. Un plátano maduro, con azúcar ya acumulado, se quemaría en la segunda fritura en vez de dorarse de manera pareja. Aplastar las rodajas entre las dos frituras no es solo cuestión de forma — adelgaza la pieza lo suficiente para que fría rápido y parejo, sin que el interior quede crudo ni el exterior se queme.",
+    "fr": "Les tostones, avec le riz et les haricots, font partie des accompagnements les plus omniprésents de la cuisine cubaine, présents sur toute table du quotidien, des en-cas de rue aux repas de fête. Le nom vient du verbe espagnol \"tostar\", griller ou frire, et la technique de la double friture s'est répandue depuis les Caraïbes dans toute l'Amérique latine sous des noms différents — patacones en Colombie et au Venezuela, chatinos ailleurs.\n\nLa clé du plat réside dans le choix de la banane : seules les plantains vertes, complètement non mûres, ont l'amidon nécessaire pour une texture croustillante à l'extérieur et moelleuse à l'intérieur. Une plantain mûre, avec du sucre déjà accumulé, brûlerait à la seconde friture au lieu de dorer uniformément. Écraser les tranches entre les deux fritures n'est pas qu'une question de forme — cela amincit le morceau assez pour qu'il frise rapidement et uniformément, sans que l'intérieur reste cru ni que l'extérieur brûle.",
+    "de": "Tostones sind, neben Reis und Bohnen, eine der allgegenwärtigsten Beilagen der kubanischen Küche, auf jedem Alltagstisch vertreten, von Straßensnacks bis zu Festessen. Der Name kommt vom spanischen Verb \"tostar\", rösten oder braten, und die Technik des doppelten Frittierens verbreitete sich von der Karibik aus in ganz Lateinamerika unter verschiedenen Namen — Patacones in Kolumbien und Venezuela, Chatinos anderswo.\n\nDer Schlüssel des Gerichts liegt in der Wahl der richtigen Banane: Nur grüne, völlig unreife Kochbananen haben die nötige Stärke für eine außen knusprige, innen weiche Textur. Eine reife Kochbanane, mit bereits angesammeltem Zucker, würde beim zweiten Frittieren verbrennen, statt gleichmäßig zu bräunen. Das Zerdrücken der Scheiben zwischen den beiden Frittiergängen ist nicht nur eine Formfrage — es macht das Stück dünn genug, um schnell und gleichmäßig zu garen, ohne dass das Innere roh bleibt oder das Äußere verbrennt.",
+    "pt": "Os tostones, junto com o arroz e o feijão, são um dos acompanhamentos mais onipresentes da culinária cubana, presentes em qualquer mesa do dia a dia, desde petiscos de rua até refeições festivas. O nome vem do verbo espanhol \"tostar\", e a técnica da fritura dupla espalhou-se do Caribe por toda a América Latina sob nomes diferentes — patacones na Colômbia e na Venezuela, chatinos noutras regiões.\n\nA chave do prato está na escolha da banana certa: só as bananas-da-terra verdes, totalmente por amadurecer, têm o amido necessário para uma textura crocante por fora e macia por dentro. Uma banana madura, com açúcar já acumulado, queimaria na segunda fritura em vez de dourar uniformemente. Achatar as rodelas entre as duas fritutas não é só uma questão de forma — afina a peça o suficiente para fritar depressa e por igual, sem que o interior fique cru nem o exterior queime.",
+    "ru": "Тостонес, наряду с рисом и фасолью, — одно из самых распространённых гарниров кубинской кухни, присутствующее на любом повседневном столе, от уличных закусок до праздничных обедов. Название происходит от испанского глагола \"tostar\" — жарить, а техника двойной обжарки распространилась из Карибского бассейна по всей Латинской Америке под разными названиями — патаконес в Колумбии и Венесуэле, чатинос в других регионах.\n\nКлюч блюда — в выборе правильного банана: только зелёные, совершенно незрелые платано содержат крахмал, необходимый для текстуры, хрустящей снаружи и мягкой внутри. Спелый платано с уже накопленным сахаром подгорел бы при второй жарке вместо равномерного подрумянивания. Расплющивание ломтиков между двумя обжарками — не просто вопрос формы: это утончает кусок настолько, чтобы он прожарился быстро и равномерно, не оставляя сырую середину и не подгорая снаружи.",
+    "ar": "التوستونيس، إلى جانب الأرز والفاصولياء، من أكثر الأطباق الجانبية شيوعًا في المطبخ الكوبي، حاضرة على أي مائدة يومية، من الوجبات الخفيفة في الشارع إلى الولائم. يأتي الاسم من الفعل الإسباني \"tostar\"، أي القلي أو التحمير، وانتشرت تقنية القلي المزدوج من منطقة الكاريبي إلى جميع أنحاء أمريكا اللاتينية تحت أسماء مختلفة — باتاكونيس في كولومبيا وفنزويلا، تشاتينوس في مناطق أخرى.\n\nمفتاح الطبق هو اختيار الموزة الصحيحة: فقط موز الجنة الأخضر غير الناضج على الإطلاق يحتوي على النشا اللازم لقوام مقرمش من الخارج وطري من الداخل. الموزة الناضجة، بسكرها المتراكم بالفعل، كانت ستحترق في القلي الثاني بدلاً من أن تتحمّر بانتظام. هرس الشرائح بين مرحلتي القلي ليس مسألة شكل فقط — بل يُرقق القطعة بما يكفي لتُقلى بسرعة وانتظام، دون أن يبقى الداخل نيئًا أو يحترق الخارج.",
+    "zh": "Tostones与米饭和豆子一样，是古巴菜中最常见的配菜之一，从街头小吃到节庆大餐的日常餐桌上都能见到。这个名字源自西班牙语动词\"tostar\"，意为烘烤或油炸，而两次油炸的技法从加勒比地区传遍整个拉丁美洲，并以不同名称流传——在哥伦比亚和委内瑞拉叫patacones，在其他地区叫chatinos。\n\n这道菜的关键在于选对香蕉：只有完全未成熟的青色大蕉才含有形成外脆内软口感所需的淀粉。已经积累糖分的成熟大蕉，在第二次油炸时会烧焦，而不是均匀上色。在两次油炸之间压扁蕉片，不仅仅是为了造型——它把厚度减薄到足以快速均匀受热的程度，既不会内部生硬，也不会外部烧焦。",
+    "ja": "トストネスは、米と豆と並んで、キューバ料理で最もよく見られる付け合わせの一つで、屋台の軽食から祝いの席の料理まで、日常のあらゆる食卓に登場する。名前はスペイン語の動詞「tostar（焼く、揚げる）」に由来し、二度揚げの技法はカリブ海からラテンアメリカ全域に広まり、地域によって異なる名前で呼ばれている——コロンビアやベネズエラではパタコネス、他の地域ではチャティノスと呼ばれる。\n\nこの料理の鍵はバナナの選び方にある。外はパリッと中は柔らかい食感に必要なでんぷんを持つのは、完全に熟していない青いプランテンだけだ。すでに糖分が蓄積した熟したプランテンでは、二度目に揚げる際に均一に色づく代わりに焦げてしまう。二回の揚げの間にスライスを潰すのは単に見た目のためだけではない——素早く均一に火が通るように十分薄くし、中が生のまま残ったり外側が焦げたりしないようにするためである。",
+    "tr": "Tostones, pirinç ve fasulyeyle birlikte, Küba mutfağının en yaygın yan yemeklerinden biridir; sokak atıştırmalıklarından bayram sofralarına kadar her gündelik masada bulunur. Adı İspanyolca \"tostar\" fiilinden gelir ve çift kızartma tekniği Karayipler'den Latin Amerika'nın geneline farklı isimlerle yayılmıştır — Kolombiya ve Venezuela'da patacones, diğer bölgelerde chatinos.\n\nYemeğin sırrı doğru muzu seçmekte yatar: yalnızca yeşil, tamamen olgunlaşmamış tostones muzları, dışı gevrek içi yumuşak bir doku için gereken nişastaya sahiptir. Şekeri birikmiş olgun bir muz, ikinci kızartmada düzgünce kararmak yerine yanardı. Dilimleri iki kızartma arasında ezmek yalnızca şekil meselesi değildir — parçayı, içi çiğ kalmadan veya dışı yanmadan hızlı ve eşit pişecek kadar inceltir.",
+    "it": "I tostones, insieme a riso e fagioli, sono uno dei contorni più onnipresenti della cucina cubana, presenti su ogni tavola quotidiana, dagli snack di strada ai pasti di festa. Il nome deriva dal verbo spagnolo \"tostar\", tostare o friggere, e la tecnica della doppia frittura si è diffusa dai Caraibi in tutta l'America Latina con nomi diversi — patacones in Colombia e Venezuela, chatinos in altre zone.\n\nLa chiave del piatto sta nella scelta della banana giusta: solo i platani verdi, del tutto non maturi, hanno l'amido necessario per una consistenza croccante fuori e morbida dentro. Un platano maturo, con lo zucchero già accumulato, brucerebbe nella seconda frittura invece di dorarsi in modo uniforme. Schiacciare le fette tra le due fritture non è solo una questione di forma — assottiglia il pezzo abbastanza da farlo friggere rapidamente e uniformemente, senza che l'interno resti crudo o l'esterno bruci.",
+    "ko": "토스토네스는 쌀, 콩과 더불어 쿠바 요리에서 가장 흔한 곁들임 요리 중 하나로, 길거리 간식부터 명절 상차림까지 일상의 모든 식탁에 오른다. 이름은 스페인어 동사 \"tostar\"(굽다, 튀기다)에서 왔으며, 두 번 튀기는 기법은 카리브해에서 라틴아메리카 전역으로 퍼지며 지역마다 다른 이름으로 불린다 — 콜롬비아와 베네수엘라에서는 파타코네스, 다른 지역에서는 차티노스라 불린다.\n\n이 요리의 핵심은 올바른 바나나를 고르는 데 있다: 겉은 바삭하고 속은 부드러운 식감을 내는 데 필요한 전분은 완전히 익지 않은 초록색 플랜테인에만 있다. 이미 당분이 쌓인 익은 플랜테인은 두 번째로 튀길 때 고르게 노릇해지는 대신 타버린다. 두 번의 튀김 사이에 조각을 으깨는 것은 단순히 모양을 위한 것이 아니다 — 속이 설익거나 겉이 타지 않고 빠르고 고르게 익을 만큼 조각을 얇게 만드는 과정이다.",
+    "hi": "तोस्तोनेस, चावल और बीन्स के साथ, क्यूबा के खान-पान का सबसे सर्वव्यापी साइड डिश है, जो सड़क के नाश्ते से लेकर उत्सव के भोजन तक हर रोज़मर्रा की मेज़ पर मौजूद रहता है। नाम स्पेनिश क्रिया \"tostar\" से आया है, भूनना या तलना, और दोहरी तलाई की तकनीक कैरिबियन से पूरे लैटिन अमेरिका में अलग-अलग नामों से फैली — कोलंबिया और वेनेज़ुएला में पाटाकोनेस, अन्य क्षेत्रों में चातिनोस।\n\nव्यंजन की कुंजी सही केला चुनने में है: केवल हरे, पूरी तरह बिना पके प्लांटेन में ही वह स्टार्च होता है जो बाहर से कुरकुरी और अंदर से नरम बनावट के लिए ज़रूरी है। पहले से जमी चीनी वाला पका केला दूसरी तलाई में समान रूप से सुनहरा होने के बजाय जल जाता। दोनों तलाइयों के बीच टुकड़ों को चपटा करना सिर्फ आकार की बात नहीं है — यह टुकड़े को इतना पतला कर देता है कि वह तेज़ी से और समान रूप से पके, बिना अंदर कच्चा रहे या बाहर जले।"
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 6,
+    "tags": ["vegetarian", "quick"],
+    "desc": {
+      "ro": "Felii de banană plantain verde, prăjite de două ori, până devin crocante pe exterior și pufoase pe interior.",
+      "en": "Green plantain slices, fried twice until crisp outside and soft inside.",
+      "es": "Rodajas de plátano verde, fritas dos veces hasta quedar crujientes por fuera y suaves por dentro.",
+      "fr": "Tranches de plantain vert, frites deux fois jusqu'à devenir croustillantes dehors et moelleuses dedans.",
+      "de": "Grüne Kochbananenscheiben, zweimal frittiert, bis außen knusprig und innen weich.",
+      "pt": "Rodelas de banana-da-terra verde, fritas duas vezes até ficarem crocantes por fora e macias por dentro.",
+      "ru": "Ломтики зелёного платано, дважды обжаренные до хрустящей корочки снаружи и мягкости внутри.",
+      "ar": "شرائح موز الجنة الأخضر، مقلية مرتين حتى تصبح مقرمشة من الخارج وطرية من الداخل.",
+      "zh": "青色大蕉片，炸两次至外脆内软。",
+      "ja": "青いプランテンのスライスを、外はパリッと中は柔らかくなるまで二度揚げしたもの。",
+      "tr": "Dışı gevrek, içi yumuşak olana kadar iki kez kızartılmış yeşil muz dilimleri.",
+      "it": "Fette di platano verde, fritte due volte fino a diventare croccanti fuori e morbide dentro.",
+      "ko": "겉은 바삭하고 속은 부드럽게, 두 번 튀긴 초록색 플랜테인 조각.",
+      "hi": "हरे प्लांटेन के टुकड़े, बाहर से कुरकुरे और अंदर से नरम होने तक दो बार तले गए।"
+    }
+  }
+}
