@@ -5277,7 +5277,7 @@ function renderCuisineDiscover() {
   // to a recent real snapshot (same rule: min 2 recipes, count DESC, origin
   // alpha ASC) so the teaser is never wrong-shaped while the corpus loads.
   const TOP6_FALLBACK = [
-    ['South Korea', 20], ['France', 13], ['Italy', 12], ['Romania', 12], ['Greece', 11], ['China', 10],
+    ['South Korea', 20], ['France', 18], ['Italy', 17], ['Romania', 17], ['China', 15], ['Japan', 15],
   ];
   const top6 = recipesMain.length
     ? Object.entries(
