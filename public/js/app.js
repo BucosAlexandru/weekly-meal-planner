@@ -5279,6 +5279,16 @@ function renderCuisineDiscover() {
   const TOP6_FALLBACK = [
     ['South Korea', 20], ['France', 18], ['Italy', 17], ['Romania', 17], ['China', 15], ['Japan', 15],
   ];
+  // Localized names for the 6 fallback origins above, since the fallback
+  // path has no recipe object to read origin[lang] from (see `rep` below).
+  const TOP6_FALLBACK_NAMES = {
+    'South Korea': { ro:'Coreea de Sud', en:'South Korea', es:'Corea del Sur', fr:'Corée du Sud', de:'Südkorea', pt:'Coreia do Sul', ru:'Южная Корея', ar:'كوريا الجنوبية', zh:'韩国', ja:'韓国', tr:'Güney Kore', it:'Corea del Sud', ko:'대한민국', hi:'दक्षिण कोरिया' },
+    'France': { ro:'Franța', en:'France', es:'Francia', fr:'France', de:'Frankreich', pt:'França', ru:'Франция', ar:'فرنسا', zh:'法国', ja:'フランス', tr:'Fransa', it:'Francia', ko:'프랑스', hi:'फ्रांस' },
+    'Italy': { ro:'Italia', en:'Italy', es:'Italia', fr:'Italie', de:'Italien', pt:'Itália', ru:'Италия', ar:'إيطاليا', zh:'意大利', ja:'イタリア', tr:'İtalya', it:'Italia', ko:'이탈리아', hi:'इटली' },
+    'Romania': { ro:'România', en:'Romania', es:'Rumanía', fr:'Roumanie', de:'Rumänien', pt:'Romênia', ru:'Румыния', ar:'رومانيا', zh:'罗马尼亚', ja:'ルーマニア', tr:'Romanya', it:'Romania', ko:'루마니아', hi:'रोमानिया' },
+    'China': { ro:'China', en:'China', es:'China', fr:'Chine', de:'China', pt:'China', ru:'Китай', ar:'الصين', zh:'中国', ja:'中国', tr:'Çin', it:'Cina', ko:'중국', hi:'चीन' },
+    'Japan': { ro:'Japonia', en:'Japan', es:'Japón', fr:'Japon', de:'Japan', pt:'Japão', ru:'Япония', ar:'اليابان', zh:'日本', ja:'日本', tr:'Japonya', it:'Giappone', ko:'일본', hi:'जापान' },
+  };
   const top6 = recipesMain.length
     ? Object.entries(
         recipesMain.reduce((by, r) => {
@@ -5302,7 +5312,7 @@ function renderCuisineDiscover() {
       flag: COUNTRY_FLAG[originEn] || '🌍',
       count: recs.length,
       atmosphere: CUISINE_ATMOSPHERE[originEn] || 'global',
-      name: (rep && rep.origin && rep.origin[lang]) || originEn,
+      name: (rep && rep.origin && rep.origin[lang]) || TOP6_FALLBACK_NAMES[originEn]?.[lang] || originEn,
       dishes: sampleRecs.slice(0, 3)
         .map(r => (r.name && (r.name[lang] || r.name.en || r.name.ro)) || '')
         .filter(Boolean).join(' · '),
