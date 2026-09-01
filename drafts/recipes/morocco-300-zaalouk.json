@@ -1,0 +1,176 @@
+{
+  "id": 300,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Maroc", "en": "Morocco", "es": "Marruecos", "fr": "Maroc", "de": "Marokko",
+    "pt": "Marrocos", "ru": "Марокко", "ar": "المغرب", "zh": "摩洛哥", "ja": "モロッコ",
+    "tr": "Fas", "it": "Marocco", "ko": "모로코", "hi": "मोरक्को"
+  },
+  "name": {
+    "ro": "Zaalouk", "en": "Zaalouk", "es": "Zaalouk", "fr": "Zaalouk", "de": "Zaalouk",
+    "pt": "Zaalouk", "ru": "Заалук", "ar": "زعلوك", "zh": "摩洛哥茄子沙拉", "ja": "ザアルーク",
+    "tr": "Zaalouk", "it": "Zaalouk", "ko": "자알루크", "hi": "ज़ालूक"
+  },
+  "category": {
+    "ro": "Aperitiv", "en": "Appetizer", "es": "Aperitivo", "fr": "Apéritif", "de": "Vorspeise",
+    "pt": "Aperitivo", "ru": "Закуска", "ar": "مقبلات", "zh": "开胃菜", "ja": "前菜",
+    "tr": "Başlangıç", "it": "Antipasto", "ko": "전채", "hi": "ऐपेटाइज़र"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍆","t":"Vinetele se coc întregi, nu se taie crude","d":"Coacerea le dă un gust afumat, discret, imposibil de obținut prin prăjire"},
+      {"icon":"🥄","t":"Se zdrobesc cu furculița, nu se pasează","d":"Textura rămâne rustică, cu bucăți mici, nu un piure fin"},
+      {"icon":"🍅","t":"Roșiile se gătesc separat, până se descompun complet","d":"Formează o bază groasă înainte să se amestece cu vinetele"},
+      {"icon":"🌡️","t":"Se servește la temperatura camerei, nu fierbinte","d":"Aromele se așază pe măsură ce se răcește, ca la majoritatea salatelor marocane"}
+    ],
+    "en": [
+      {"icon":"🍆","t":"The eggplants roast whole, not sliced raw","d":"Roasting gives them a subtle smoky flavor impossible to get by frying"},
+      {"icon":"🥄","t":"They're mashed with a fork, not blended smooth","d":"The texture stays rustic, with small chunks, not a fine purée"},
+      {"icon":"🍅","t":"The tomatoes cook separately, until fully broken down","d":"They form a thick base before being mixed with the eggplant"},
+      {"icon":"🌡️","t":"Served at room temperature, not hot","d":"The flavors settle as it cools, like most Moroccan salads"}
+    ],
+    "es": [
+      {"icon":"🍆","t":"Las berenjenas se asan enteras, no se cortan crudas","d":"Asarlas les da un sabor ahumado sutil imposible de lograr friendo"},
+      {"icon":"🥄","t":"Se machacan con tenedor, no se trituran hasta quedar lisas","d":"La textura queda rústica, con trocitos, no un puré fino"},
+      {"icon":"🍅","t":"Los tomates se cocinan aparte, hasta deshacerse por completo","d":"Forman una base espesa antes de mezclarse con la berenjena"},
+      {"icon":"🌡️","t":"Se sirve a temperatura ambiente, no caliente","d":"Los sabores se asientan al enfriarse, como en la mayoría de ensaladas marroquíes"}
+    ],
+    "fr": [
+      {"icon":"🍆","t":"Les aubergines rôtissent entières, pas coupées crues","d":"Le rôtissage leur donne un goût fumé subtil impossible à obtenir en les faisant frire"},
+      {"icon":"🥄","t":"Elles sont écrasées à la fourchette, pas mixées lisses","d":"La texture reste rustique, avec de petits morceaux, pas une purée fine"},
+      {"icon":"🍅","t":"Les tomates cuisent à part, jusqu'à se défaire complètement","d":"Elles forment une base épaisse avant d'être mélangées à l'aubergine"},
+      {"icon":"🌡️","t":"Servi à température ambiante, pas chaud","d":"Les saveurs se stabilisent en refroidissant, comme la plupart des salades marocaines"}
+    ],
+    "de": [
+      {"icon":"🍆","t":"Die Auberginen werden ganz geröstet, nicht roh geschnitten","d":"Das Rösten gibt ihnen einen dezenten rauchigen Geschmack, unmöglich durch Braten zu erreichen"},
+      {"icon":"🥄","t":"Sie werden mit der Gabel zerdrückt, nicht glatt püriert","d":"Die Textur bleibt rustikal, mit kleinen Stücken, kein feines Püree"},
+      {"icon":"🍅","t":"Die Tomaten kochen getrennt, bis sie vollständig zerfallen","d":"Sie bilden eine dicke Basis, bevor sie mit der Aubergine vermischt werden"},
+      {"icon":"🌡️","t":"Wird bei Zimmertemperatur serviert, nicht heiß","d":"Die Aromen setzen sich beim Abkühlen, wie bei den meisten marokkanischen Salaten"}
+    ],
+    "pt": [
+      {"icon":"🍆","t":"As beringelas assam inteiras, não cortadas cruas","d":"Assar dá-lhes um sabor fumado subtil impossível de obter fritando"},
+      {"icon":"🥄","t":"São esmagadas com garfo, não trituradas lisas","d":"A textura mantém-se rústica, com pedacinhos, não um puré fino"},
+      {"icon":"🍅","t":"Os tomates cozinham à parte, até se desfazerem por completo","d":"Formam uma base espessa antes de serem misturados com a beringela"},
+      {"icon":"🌡️","t":"Servido à temperatura ambiente, não quente","d":"Os sabores assentam ao arrefecer, como na maioria das saladas marroquinas"}
+    ],
+    "ru": [
+      {"icon":"🍆","t":"Баклажаны запекаются целиком, а не режутся сырыми","d":"Запекание даёт им тонкий дымный вкус, недостижимый жаркой"},
+      {"icon":"🥄","t":"Их разминают вилкой, а не измельчают в пюре","d":"Текстура остаётся деревенской, с небольшими кусочками, не гладким пюре"},
+      {"icon":"🍅","t":"Помидоры готовятся отдельно, пока полностью не разварятся","d":"Они образуют густую основу перед смешиванием с баклажаном"},
+      {"icon":"🌡️","t":"Подаётся при комнатной температуре, не горячим","d":"Вкусы устаканиваются по мере остывания, как у большинства марокканских салатов"}
+    ],
+    "ar": [
+      {"icon":"🍆","t":"الباذنجان يُشوى كاملًا، لا يُقطّع نيئًا","d":"الشوي يمنحه نكهة دخانية خفيفة يستحيل الحصول عليها بالقلي"},
+      {"icon":"🥄","t":"يُهرس بالشوكة، لا يُخلط ناعمًا","d":"يبقى القوام ريفيًا، بقطع صغيرة، لا هريسًا ناعمًا"},
+      {"icon":"🍅","t":"الطماطم تُطهى منفصلة حتى تتفكك تمامًا","d":"تُشكّل قاعدة سميكة قبل مزجها مع الباذنجان"},
+      {"icon":"🌡️","t":"يُقدَّم بحرارة الغرفة، لا ساخنًا","d":"النكهات تستقر مع برودته، مثل معظم السلطات المغربية"}
+    ],
+    "zh": [
+      {"icon":"🍆","t":"茄子整个烤制，而非生切","d":"烘烤赋予它煎炸无法获得的淡淡烟熏味"},
+      {"icon":"🥄","t":"用叉子压碎，而非搅打光滑","d":"口感保持粗犷，带有小块，而非细腻泥状"},
+      {"icon":"🍅","t":"番茄单独煮至完全化开","d":"在与茄子混合前先形成浓稠的底料"},
+      {"icon":"🌡️","t":"室温享用，而非趁热","d":"随着冷却风味会沉淀，与大多数摩洛哥沙拉一样"}
+    ],
+    "ja": [
+      {"icon":"🍆","t":"なすは丸ごと焼き、生のまま切らない","d":"焼くことで揚げては出せない控えめな燻製風味が生まれる"},
+      {"icon":"🥄","t":"フォークでつぶし、なめらかにミキサーにかけない","d":"食感は粗く、小さな塊が残る素朴な仕上がりになる"},
+      {"icon":"🍅","t":"トマトは別に完全に崩れるまで煮る","d":"なすと合わせる前に濃厚なベースを作る"},
+      {"icon":"🌡️","t":"熱々ではなく常温で提供する","d":"モロッコのサラダの多くと同様、冷めるにつれ味がなじむ"}
+    ],
+    "tr": [
+      {"icon":"🍆","t":"Patlıcanlar bütün kavrulur, çiğ dilimlenmez","d":"Kavurma, kızartmayla asla elde edilemeyecek hafif dumanlı bir tat verir"},
+      {"icon":"🥄","t":"Çatalla ezilir, pürüzsüz olana kadar karıştırılmaz","d":"Doku ince bir püre yerine küçük parçalarla rustik kalır"},
+      {"icon":"🍅","t":"Domatesler tamamen dağılana kadar ayrı pişirilir","d":"Patlıcanla karıştırılmadan önce koyu bir taban oluştururlar"},
+      {"icon":"🌡️","t":"Sıcak değil, oda sıcaklığında servis edilir","d":"Çoğu Fas salatası gibi, soğudukça lezzetler oturur"}
+    ],
+    "it": [
+      {"icon":"🍆","t":"Le melanzane si arrostiscono intere, non tagliate crude","d":"Arrostirle dà un sapore affumicato sottile impossibile da ottenere friggendo"},
+      {"icon":"🥄","t":"Vengono schiacciate con la forchetta, non frullate lisce","d":"La consistenza resta rustica, con piccoli pezzi, non una purea fine"},
+      {"icon":"🍅","t":"I pomodori cuociono a parte, finché non si disfano completamente","d":"Formano una base densa prima di essere uniti alla melanzana"},
+      {"icon":"🌡️","t":"Si serve a temperatura ambiente, non caldo","d":"I sapori si assestano raffreddandosi, come nella maggior parte delle insalate marocchine"}
+    ],
+    "ko": [
+      {"icon":"🍆","t":"가지는 통째로 구우며 생으로 썰지 않는다","d":"굽는 과정에서 튀길 때는 낼 수 없는 은은한 훈연 향이 생긴다"},
+      {"icon":"🥄","t":"포크로 으깨며 곱게 갈지 않는다","d":"고운 퓨레가 아닌, 작은 덩어리가 남은 투박한 질감을 유지한다"},
+      {"icon":"🍅","t":"토마토는 완전히 뭉개질 때까지 따로 익힌다","d":"가지와 섞기 전에 걸쭉한 베이스를 만든다"},
+      {"icon":"🌡️","t":"뜨겁지 않고 실온으로 낸다","d":"대부분의 모로코 샐러드처럼 식으면서 맛이 자리를 잡는다"}
+    ],
+    "hi": [
+      {"icon":"🍆","t":"बैंगन साबुत भूने जाते हैं, कच्चा काटा नहीं जाता","d":"भूनने से तलने से न मिलने वाला हल्का धुएंदार स्वाद आता है"},
+      {"icon":"🥄","t":"कांटे से मसला जाता है, चिकना ब्लेंड नहीं किया जाता","d":"बनावट देहाती रहती है, छोटे टुकड़ों के साथ, महीन प्यूरी नहीं"},
+      {"icon":"🍅","t":"टमाटर अलग से पूरी तरह गलने तक पकाए जाते हैं","d":"बैंगन के साथ मिलाने से पहले गाढ़ा आधार बनाते हैं"},
+      {"icon":"🌡️","t":"कमरे के तापमान पर परोसा जाता है, गरम नहीं","d":"ज़्यादातर मोरक्कन सलाद की तरह, ठंडा होते ही स्वाद जमता है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["2 vinete mari","4 roșii, rase sau tocate mărunt","4 căței de usturoi, tocați","4 linguri ulei de măsline","1 linguriță chimen măcinat","1 linguriță boia dulce","un praf de piper cayenne (opțional)","coriandru și pătrunjel proaspăt, tocate","1 lingură zeamă de lămâie","sare, după gust"],
+    "en": ["2 large eggplants","4 tomatoes, grated or finely chopped","4 garlic cloves, minced","4 tbsp olive oil","1 tsp ground cumin","1 tsp sweet paprika","a pinch of cayenne pepper (optional)","fresh cilantro and parsley, chopped","1 tbsp lemon juice","salt, to taste"],
+    "es": ["2 berenjenas grandes","4 tomates, rallados o picados finos","4 dientes de ajo picados","4 cdas de aceite de oliva","1 cdta de comino molido","1 cdta de pimentón dulce","una pizca de pimienta de cayena (opcional)","cilantro y perejil frescos, picados","1 cda de zumo de limón","sal, al gusto"],
+    "fr": ["2 grosses aubergines","4 tomates, râpées ou hachées fin","4 gousses d'ail hachées","4 c. à soupe d'huile d'olive","1 c. à café de cumin moulu","1 c. à café de paprika doux","une pincée de piment de Cayenne (facultatif)","coriandre et persil frais, hachés","1 c. à soupe de jus de citron","sel, selon le goût"],
+    "de": ["2 große Auberginen","4 Tomaten, gerieben oder fein gehackt","4 Knoblauchzehen, gehackt","4 EL Olivenöl","1 TL gemahlener Kreuzkümmel","1 TL süßes Paprikapulver","eine Prise Cayennepfeffer (optional)","frischer Koriander und Petersilie, gehackt","1 EL Zitronensaft","Salz, nach Geschmack"],
+    "pt": ["2 beringelas grandes","4 tomates, ralados ou picados finos","4 dentes de alho picados","4 col. sopa de azeite","1 col. chá de cominho moído","1 col. chá de colorau doce","uma pitada de pimenta caiena (opcional)","coentro e salsa frescos, picados","1 col. sopa de suco de limão","sal, a gosto"],
+    "ru": ["2 крупных баклажана","4 помидора, натёртых или мелко нарезанных","4 зубчика чеснока, измельчённого","4 ст.л. оливкового масла","1 ч.л. молотого тмина","1 ч.л. сладкой паприки","щепотка кайенского перца (по желанию)","свежая кинза и петрушка, нарезанные","1 ст.л. лимонного сока","соль, по вкусу"],
+    "ar": ["2 باذنجانة كبيرة","4 طماطم، مبشورة أو مفرومة ناعمًا","4 فصوص ثوم مفرومة","4 ملاعق كبيرة زيت زيتون","ملعقة صغيرة كمون مطحون","ملعقة صغيرة بابريكا حلوة","رشة فلفل كايين (اختياري)","كزبرة وبقدونس طازجان، مفرومان","ملعقة كبيرة عصير ليمون","ملح، حسب الرغبة"],
+    "zh": ["2个大茄子","4个番茄，擦碎或切碎","4瓣大蒜切碎","4汤匙橄榄油","1茶匙孜然粉","1茶匙甜红椒粉","少许卡宴辣椒粉（可选）","新鲜香菜和欧芹，切碎","1汤匙柠檬汁","盐，适量"],
+    "ja": ["大きめのなす2本","トマト4個、すりおろすか細かく刻む","にんにく4片、みじん切り","オリーブオイル大さじ4","クミン粉小さじ1","甘いパプリカパウダー小さじ1","カイエンペッパー少々（お好みで）","新鮮なパクチーとパセリ、刻む","レモン汁大さじ1","塩、お好みで"],
+    "tr": ["2 büyük patlıcan","4 domates, rendelenmiş veya ince doğranmış","4 diş sarımsak, doğranmış","4 yemek kaşığı zeytinyağı","1 çay kaşığı öğütülmüş kimyon","1 çay kaşığı tatlı kırmızı biber","bir tutam kırmızı toz biber (isteğe bağlı)","taze kişniş ve maydanoz, doğranmış","1 yemek kaşığı limon suyu","tuz, damak zevkine göre"],
+    "it": ["2 melanzane grandi","4 pomodori, grattugiati o tritati fini","4 spicchi d'aglio tritati","4 cucchiai di olio d'oliva","1 cucchiaino di cumino macinato","1 cucchiaino di paprika dolce","un pizzico di pepe di Cayenna (facoltativo)","coriandolo e prezzemolo freschi, tritati","1 cucchiaio di succo di limone","sale, a piacere"],
+    "ko": ["큰 가지 2개","토마토 4개, 갈거나 잘게 다진 것","마늘 4쪽, 다진 것","올리브오일 4큰술","커민가루 1작은술","단맛 파프리카가루 1작은술","카이엔페퍼 약간(선택)","신선한 고수와 파슬리, 다진 것","레몬즙 1큰술","소금, 입맛에 맞게"],
+    "hi": ["2 बड़े बैंगन","4 टमाटर, कद्दूकस या बारीक कटे हुए","4 लहसुन की कलियां कटी हुई","4 बड़े चम्मच जैतून का तेल","1 छोटा चम्मच पिसा जीरा","1 छोटा चम्मच मीठी पैप्रिका","कैयेन मिर्च की चुटकी (वैकल्पिक)","ताज़ा धनिया और अजमोद, कटे हुए","1 बड़ा चम्मच नीबू रस","नमक, स्वादानुसार"]
+  },
+  "howIsMade": {
+    "ro": "COACE VINETELE: coace sau fierbe vinetele întregi, până devin foarte moi, apoi curăță-le de coajă și zdrobește-le grosier. GĂTEȘTE BAZA: încinge uleiul de măsline, călește usturoiul scurt, adaugă roșiile, chimenul, boiaua și piperul cayenne, gătește până roșiile se descompun într-un sos gros. COMBINĂ: adaugă vinetele zdrobite în amestecul de roșii, zdrobește și amestecă la foc mic, până devine o pastă groasă, ca de dulceață. CONDIMENTEAZĂ: adaugă zeama de lămâie, sarea și cea mai mare parte din verdețuri, gătește câteva minute în plus, ca aromele să se lege. LASĂ SĂ SE RĂCEASCĂ: lasă să ajungă la temperatura camerei. SERVEȘTE: decorează cu verdețurile rămase și un fir de ulei de măsline, servește cu pâine pentru înmuiat.",
+    "en": "ROAST THE EGGPLANT: roast or boil the eggplants whole until very soft, then peel and mash them coarsely. COOK THE BASE: heat the olive oil, sauté the garlic briefly, add the tomatoes, cumin, paprika and cayenne, cook until the tomatoes break down into a thick sauce. COMBINE: add the mashed eggplant to the tomato mixture, mash and stir together over low heat until it turns into a thick, jam-like paste. SEASON: stir in the lemon juice, salt and most of the fresh herbs, cook a few more minutes so the flavors meld. LET IT COOL: let it come down to room temperature. SERVE: garnish with the remaining herbs and a drizzle of olive oil, serve with bread for scooping.",
+    "es": "ASA LA BERENJENA: asa o hierve las berenjenas enteras hasta que estén muy blandas, luego pélalas y machácalas de forma gruesa. PREPARA LA BASE: calienta el aceite de oliva, sofríe el ajo brevemente, añade los tomates, el comino, el pimentón y la cayena, cocina hasta que los tomates se deshagan en una salsa espesa. COMBINA: añade la berenjena machacada a la mezcla de tomate, machaca y remueve a fuego bajo hasta que se convierta en una pasta espesa, tipo mermelada. SAZONA: incorpora el zumo de limón, la sal y la mayoría de las hierbas frescas, cocina unos minutos más para que los sabores se integren. DEJA ENFRIAR: deja que llegue a temperatura ambiente. SIRVE: decora con las hierbas restantes y un chorrito de aceite de oliva, sirve con pan para mojar.",
+    "fr": "FAIS RÔTIR L'AUBERGINE: fais rôtir ou bouillir les aubergines entières jusqu'à ce qu'elles soient très tendres, puis épluche-les et écrase-les grossièrement. PRÉPARE LA BASE: chauffe l'huile d'olive, fais revenir l'ail brièvement, ajoute les tomates, le cumin, le paprika et le cayenne, cuis jusqu'à ce que les tomates se défassent en une sauce épaisse. COMBINE: ajoute l'aubergine écrasée au mélange de tomates, écrase et remue à feu doux jusqu'à obtenir une pâte épaisse, façon confiture. ASSAISONNE: incorpore le jus de citron, le sel et la majorité des herbes fraîches, cuis encore quelques minutes pour que les saveurs se lient. LAISSE REFROIDIR: laisse revenir à température ambiante. SERS: décore avec les herbes restantes et un filet d'huile d'olive, sers avec du pain pour tremper.",
+    "de": "RÖSTE DIE AUBERGINE: die Auberginen ganz rösten oder kochen, bis sie sehr weich sind, dann schälen und grob zerdrücken. BEREITE DIE BASIS ZU: das Olivenöl erhitzen, den Knoblauch kurz anschwitzen, Tomaten, Kreuzkümmel, Paprika und Cayennepfeffer zugeben, kochen bis die Tomaten zu einer dicken Sauce zerfallen. VERBINDE: die zerdrückte Aubergine zur Tomatenmischung geben, bei niedriger Hitze zerdrücken und verrühren, bis eine dicke, marmeladenartige Paste entsteht. WÜRZE: Zitronensaft, Salz und den Großteil der frischen Kräuter unterrühren, ein paar Minuten weiterkochen, damit sich die Aromen verbinden. LASS ES ABKÜHLEN: auf Zimmertemperatur abkühlen lassen. SERVIEREN: mit den restlichen Kräutern und einem Schuss Olivenöl garnieren, mit Brot zum Eintunken servieren.",
+    "pt": "ASSE A BERINGELA: asse ou ferva as beringelas inteiras até ficarem muito macias, depois descasque-as e amasse-as grosseiramente. PREPARE A BASE: aqueça o azeite, refogue o alho brevemente, junte os tomates, o cominho, o colorau e a caiena, cozinhe até os tomates se desfazerem num molho espesso. COMBINE: junte a beringela amassada à mistura de tomate, amasse e mexa em lume brando até formar uma pasta espessa, tipo compota. TEMPERE: incorpore o suco de limão, o sal e a maior parte das ervas frescas, cozinhe mais alguns minutos para os sabores se combinarem. DEIXE ARREFECER: deixe atingir a temperatura ambiente. SIRVA: decore com as ervas restantes e um fio de azeite, sirva com pão para molhar.",
+    "ru": "ЗАПЕКИ БАКЛАЖАНЫ: запеки или отвари баклажаны целиком до очень мягкого состояния, затем очисти и грубо разомни. ПРИГОТОВЬ ОСНОВУ: разогрей оливковое масло, кратко обжарь чеснок, добавь помидоры, тмин, паприку и кайенский перец, готовь, пока помидоры не разварятся в густой соус. СОЕДИНИ: добавь размятые баклажаны в томатную смесь, разминай и перемешивай на слабом огне, пока не получится густая, похожая на джем паста. ПРИПРАВЬ: вмешай лимонный сок, соль и большую часть свежей зелени, готовь ещё несколько минут, чтобы вкусы соединились. ДАЙ ОСТЫТЬ: дай остыть до комнатной температуры. ПОДАЙ: укрась оставшейся зеленью и оливковым маслом, подавай с хлебом для макания.",
+    "ar": "اشوِ الباذنجان: اشوِ أو اسلق الباذنجان كاملًا حتى يصبح طريًا جدًا، ثم قشّره واهرسه بخشونة. جهّز القاعدة: سخّن زيت الزيتون، قلّب الثوم قليلًا، أضف الطماطم والكمون والبابريكا والكايين، اطهُ حتى تتفكك الطماطم في صلصة سميكة. اجمع: أضف الباذنجان المهروس إلى خليط الطماطم، اهرس وقلّب على نار هادئة حتى يصبح عجينة سميكة أشبه بالمربى. تبّل: أضف عصير الليمون والملح ومعظم الأعشاب الطازجة، اطهُ بضع دقائق أخرى حتى تتمازج النكهات. دعه يبرد: دعه يصل إلى حرارة الغرفة. قدّم: زيّنه بالأعشاب المتبقية وقليل من زيت الزيتون، قدّمه مع الخبز للغمس.",
+    "zh": "烤茄子：将茄子整个烤或煮至非常软烂，然后去皮粗略压碎。制作底料：将橄榄油烧热，快速炒香大蒜，加入番茄、孜然、红椒粉和卡宴辣椒粉，煮至番茄化开成浓稠酱汁。混合：将压碎的茄子加入番茄混合物中，小火边压边搅拌，直至变成浓稠如果酱的酱料。调味：拌入柠檬汁、盐和大部分新鲜香草，再煮几分钟使风味融合。放凉：放至室温。上桌：撒上剩余香草并淋上橄榄油，配面包蘸食。",
+    "ja": "なすを焼く：なすを丸ごと焼くか茹でて非常に柔らかくし、皮をむいて粗くつぶす。ベースを作る：オリーブオイルを熱し、にんにくをさっと炒め、トマト、クミン、パプリカ、カイエンペッパーを加え、トマトが崩れて濃厚なソースになるまで煮る。合わせる：つぶしたなすをトマトの混合物に加え、弱火でつぶしながら混ぜ、ジャムのような濃厚なペーストになるまで火を通す。味付けする：レモン汁、塩、香草の大部分を加え、風味がなじむようさらに数分煮る。冷ます：常温になるまで冷ます。盛り付ける：残りの香草とオリーブオイルを少量かけ、パンを添えてすくって食べる。",
+    "tr": "PATLICANI KAVURUN: patlıcanları çok yumuşayana kadar bütün olarak kavurun veya haşlayın, sonra soyup kabaca ezin. TABANI HAZIRLAYIN: zeytinyağını ısıtın, sarımsağı kısaca soteleyin, domatesleri, kimyonu, kırmızı biberi ve kırmızı toz biberi ekleyin, domatesler koyu bir sosa dönüşene kadar pişirin. BİRLEŞTİRİN: ezilmiş patlıcanı domates karışımına ekleyin, kısık ateşte ezip karıştırarak reçel kıvamında koyu bir macun olana kadar pişirin. BAHARATLAYIN: limon suyunu, tuzu ve taze otların çoğunu karıştırın, lezzetler kaynaşsın diye birkaç dakika daha pişirin. SOĞUTUN: oda sıcaklığına gelmesini bekleyin. SERVİS YAPIN: kalan otlarla ve bir tutam zeytinyağıyla süsleyin, batırmak için ekmekle servis edin.",
+    "it": "ARROSTISCI LE MELANZANE: arrostisci o bollisci le melanzane intere finché molto morbide, poi sbucciale e schiacciale grossolanamente. PREPARA LA BASE: scalda l'olio d'oliva, soffriggi l'aglio brevemente, aggiungi i pomodori, il cumino, la paprika e il cayenna, cuoci finché i pomodori si disfano in una salsa densa. UNISCI: aggiungi la melanzana schiacciata al composto di pomodoro, schiaccia e mescola a fuoco basso finché diventa una pasta densa, simile a una marmellata. INSAPORISCI: incorpora il succo di limone, il sale e la maggior parte delle erbe fresche, cuoci ancora qualche minuto perché i sapori si amalgamino. LASCIA RAFFREDDARE: lascia raggiungere la temperatura ambiente. SERVI: guarnisci con le erbe rimaste e un filo d'olio d'oliva, servi con pane per fare la scarpetta.",
+    "ko": "가지 굽기: 가지를 통째로 아주 부드러워질 때까지 굽거나 삶은 뒤 껍질을 벗기고 거칠게 으깬다. 베이스 만들기: 올리브오일을 달궈 마늘을 살짝 볶고 토마토, 커민, 파프리카, 카이엔페퍼를 넣어 토마토가 걸쭉한 소스로 뭉개질 때까지 익힌다. 합치기: 으깬 가지를 토마토 혼합물에 넣고 약불에서 으깨며 저어 잼처럼 걸쭉한 페이스트가 될 때까지 익힌다. 양념하기: 레몬즙, 소금, 신선한 허브 대부분을 넣고 맛이 어우러지도록 몇 분 더 끓인다. 식히기: 실온이 될 때까지 둔다. 서빙하기: 남은 허브와 올리브오일을 살짝 뿌려 장식하고 찍어 먹을 빵과 함께 낸다.",
+    "hi": "बैंगन भूनें: बैंगन को साबुत तब तक भूनें या उबालें जब तक बहुत नरम न हो जाएं, फिर छीलकर मोटा मसल लें। आधार तैयार करें: जैतून तेल गरम करें, लहसुन थोड़ा भूनें, टमाटर, जीरा, पैप्रिका और कैयेन डालें, टमाटर के गाढ़े सॉस में गलने तक पकाएं। मिलाएं: मसले बैंगन को टमाटर मिश्रण में डालें, धीमी आंच पर मसलते और हिलाते हुए तब तक पकाएं जब तक जैम जैसा गाढ़ा पेस्ट न बन जाए। मसाला डालें: नीबू रस, नमक और अधिकांश ताज़ी जड़ी-बूटियां मिलाएं, स्वाद घुलने के लिए कुछ मिनट और पकाएं। ठंडा होने दें: कमरे के तापमान तक ठंडा होने दें। परोसें: बची जड़ी-बूटियों और थोड़े जैतून तेल से सजाएं, डुबोने के लिए ब्रेड के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Zaalouk face parte din familia de salate marocane gătite, servite la începutul mesei alături de alte câteva salate similare, în porții mici pe farfurii separate — o tradiție culinară distinctă de salatele crude occidentale. Spre deosebire de un platou de mezeluri, aceste salate sunt toate gătite, unele minute în șir, pentru a concentra aromele legumelor de sezon.\n\nTehnica de zdrobire manuală, nu de pasare la blender, e ceea ce dă zaaloukului textura sa recognoscibilă — bucățele mici de vânătă și roșie rămase intacte, nu un piure omogen. E un fel de zi cu zi în casele marocane, nu unul festiv, gătit adesea în cantități mari și păstrat câteva zile, gustul devenind mai bogat pe măsură ce stă.",
+    "en": "Zaalouk belongs to the family of cooked Moroccan salads, served at the start of a meal alongside several similar salads, in small portions on separate plates — a culinary tradition distinct from Western raw salads. Unlike a platter of cold cuts, all these salads are cooked, some for many minutes, to concentrate the flavors of seasonal vegetables.\n\nThe technique of mashing by hand, not puréeing in a blender, is what gives zaalouk its recognizable texture — small chunks of eggplant and tomato left intact, not a uniform purée. It's an everyday dish in Moroccan homes, not a festive one, often cooked in large batches and kept for several days, the flavor deepening as it sits.",
+    "es": "El zaalouk pertenece a la familia de ensaladas marroquíes cocinadas, que se sirven al inicio de una comida junto a varias ensaladas similares, en porciones pequeñas en platos separados — una tradición culinaria distinta de las ensaladas crudas occidentales. A diferencia de una tabla de fiambres, todas estas ensaladas están cocinadas, algunas durante muchos minutos, para concentrar los sabores de las verduras de temporada.\n\nLa técnica de machacar a mano, no triturar en batidora, es lo que da al zaalouk su textura reconocible — trocitos de berenjena y tomate que quedan intactos, no un puré uniforme. Es un plato cotidiano en las casas marroquíes, no festivo, a menudo cocinado en grandes cantidades y conservado varios días, con el sabor haciéndose más intenso con el tiempo.",
+    "fr": "Le zaalouk appartient à la famille des salades marocaines cuites, servies en début de repas aux côtés de plusieurs salades similaires, en petites portions sur des assiettes séparées — une tradition culinaire distincte des salades crues occidentales. Contrairement à un plateau de charcuterie, toutes ces salades sont cuites, certaines pendant de longues minutes, pour concentrer les saveurs des légumes de saison.\n\nLa technique de l'écrasement à la main, plutôt qu'à la mixette, est ce qui donne au zaalouk sa texture reconnaissable — de petits morceaux d'aubergine et de tomate restant intacts, pas une purée uniforme. C'est un plat du quotidien dans les foyers marocains, pas un plat de fête, souvent préparé en grande quantité et conservé plusieurs jours, la saveur s'intensifiant avec le temps.",
+    "de": "Zaalouk gehört zur Familie der gekochten marokkanischen Salate, die zu Beginn einer Mahlzeit neben mehreren ähnlichen Salaten serviert werden, in kleinen Portionen auf separaten Tellern — eine kulinarische Tradition, die sich von westlichen Rohkostsalaten unterscheidet. Anders als eine Aufschnittplatte werden all diese Salate gekocht, manche über viele Minuten, um die Aromen des Saisongemüses zu konzentrieren.\n\nDie Technik des händischen Zerdrückens, statt des Pürierens im Mixer, verleiht Zaalouk seine erkennbare Textur — kleine, intakte Stücke von Aubergine und Tomate statt eines gleichförmigen Pürees. Es ist ein Alltagsgericht in marokkanischen Haushalten, kein festliches, oft in großen Mengen gekocht und mehrere Tage aufbewahrt, wobei der Geschmack mit der Zeit intensiver wird.",
+    "pt": "O zaalouk pertence à família das saladas marroquinas cozinhadas, servidas no início de uma refeição junto a várias saladas semelhantes, em pequenas porções em pratos separados — uma tradição culinária distinta das saladas cruas ocidentais. Ao contrário de uma tábua de frios, todas estas saladas são cozinhadas, algumas por muitos minutos, para concentrar os sabores dos vegetais da época.\n\nA técnica de amassar à mão, não triturar na liquidificadora, é o que dá ao zaalouk a sua textura reconhecível — pedacinhos de beringela e tomate que permanecem intactos, não um puré uniforme. É um prato do dia a dia nas casas marroquinas, não festivo, frequentemente cozinhado em grandes quantidades e guardado durante vários dias, o sabor intensificando-se com o tempo.",
+    "ru": "Заалук относится к семейству приготовленных марокканских салатов, которые подают в начале трапезы вместе с несколькими похожими салатами, небольшими порциями на отдельных тарелках — кулинарная традиция, отличная от западных салатов из сырых овощей. В отличие от тарелки холодных закусок, все эти салаты готовятся, некоторые многие минуты, чтобы концентрировать вкус сезонных овощей.\n\nТехника ручного разминания, а не измельчения в блендере, придаёт заалуку его узнаваемую текстуру — небольшие кусочки баклажана и помидора остаются целыми, а не превращаются в однородное пюре. Это повседневное блюдо в марокканских домах, а не праздничное, часто готовится большими партиями и хранится несколько дней, вкус становится насыщеннее со временем.",
+    "ar": "ينتمي الزعلوك إلى عائلة السلطات المغربية المطهوة، تُقدَّم في بداية الوجبة إلى جانب عدة سلطات مشابهة، في حصص صغيرة على أطباق منفصلة — تقليد طهوي مختلف عن السلطات النيئة الغربية. على عكس طبق المقبلات الباردة، كل هذه السلطات مطهوة، بعضها لدقائق طويلة، لتركيز نكهات خضار الموسم.\n\nتقنية الهرس اليدوي، لا الخلط الناعم، هي ما يمنح الزعلوك قوامه المميز — قطع صغيرة من الباذنجان والطماطم تبقى سليمة، لا هريسًا موحّدًا. إنه طبق يومي في البيوت المغربية، لا احتفالي، يُطهى غالبًا بكميات كبيرة ويُحفظ لعدة أيام، إذ يزداد النكهة عمقًا مع مرور الوقت.",
+    "zh": "扎鲁克属于摩洛哥熟制沙拉家族，通常在正餐开始时与其他几种类似沙拉一起以小份分装在不同盘中上桌——这是一种与西方生食沙拉截然不同的饮食传统。与冷盘拼盘不同，这些沙拉都是熟制的，有些要煮上很长时间，以浓缩时令蔬菜的风味。\n\n手工压碎而非用搅拌机打成泥的技法，正是赋予扎鲁克其标志性口感的原因——茄子和番茄留有完整的小块，而非均匀的泥状。它是摩洛哥家庭的日常菜肴，而非节庆菜肴，常常大批量制作并保存数日，随着时间推移风味愈发浓郁。",
+    "ja": "ザアルークは、食事の始めに他の似たようなサラダとともに、小さなポーションで別々の皿に盛って提供される、加熱調理されたモロッコサラダの一群に属する——これは西洋の生野菜サラダとは異なる料理の伝統である。冷製の盛り合わせとは異なり、これらのサラダはすべて加熱調理されており、中には何分も煮込まれるものもあり、旬の野菜の風味を凝縮させている。\n\nミキサーでなめらかにするのではなく手でつぶす技法こそが、ザアルークに特有の食感を与えている——なすとトマトの小さな塊がそのまま残り、均一なピューレにはならない。これはモロッコの家庭では祝祭料理ではなく日常の一品であり、しばしば大量に作られて数日間保存され、時間が経つほど味わいが深まっていく。",
+    "tr": "Zaalouk, bir yemeğin başında birkaç benzer salatayla birlikte, ayrı tabaklarda küçük porsiyonlar halinde servis edilen pişmiş Fas salataları ailesine aittir — bu, Batı'nın çiğ salatalarından farklı bir mutfak geleneğidir. Bir soğuk mezeler tabağının aksine, tüm bu salatalar pişirilir, bazıları uzun dakikalar boyunca, mevsim sebzelerinin lezzetlerini yoğunlaştırmak için.\n\nBlenderde pürüzsüzleştirmek yerine elle ezme tekniği, zaalouk'a tanınabilir dokusunu veren şeydir — patlıcan ve domatesin küçük parçaları sağlam kalır, homojen bir püre olmaz. Fas evlerinde bayramlık değil günlük bir yemektir, genellikle büyük partiler halinde pişirilir ve birkaç gün saklanır, lezzet zamanla derinleşir.",
+    "it": "Lo zaalouk appartiene alla famiglia delle insalate marocchine cotte, servite all'inizio di un pasto insieme a diverse insalate simili, in piccole porzioni su piatti separati — una tradizione culinaria distinta dalle insalate crude occidentali. A differenza di un tagliere di affettati, tutte queste insalate sono cotte, alcune per molti minuti, per concentrare i sapori delle verdure di stagione.\n\nLa tecnica di schiacciare a mano, non di frullare fino a renderla liscia, è ciò che dà allo zaalouk la sua consistenza riconoscibile — piccoli pezzi di melanzana e pomodoro rimangono intatti, non una purea uniforme. È un piatto quotidiano nelle case marocchine, non festivo, spesso cucinato in grandi quantità e conservato per diversi giorni, con il sapore che si intensifica col tempo.",
+    "ko": "자알루크는 식사 초반에 여러 비슷한 샐러드와 함께 작은 접시에 소량씩 나뉘어 나오는, 익힌 모로코 샐러드 계열에 속한다 — 서양식 생채소 샐러드와는 다른 요리 전통이다. 냉육 모둠과 달리, 이 모든 샐러드는 익힌 것이며 일부는 몇 분 넘게 조리해 제철 채소의 풍미를 응축시킨다.\n\n블렌더로 곱게 갈지 않고 손으로 으깨는 기법이야말로 자알루크 특유의 질감을 만든다 — 가지와 토마토의 작은 덩어리가 그대로 남아 균일한 퓨레가 되지 않는다. 이는 축제 음식이 아닌 모로코 가정의 일상 요리로, 흔히 대량으로 만들어 며칠간 보관하며, 시간이 지날수록 맛이 더 깊어진다.",
+    "hi": "ज़ालूक पकाई गई मोरक्कन सलादों के परिवार से है, जो भोजन की शुरुआत में कई समान सलादों के साथ, अलग-अलग थालियों में छोटे हिस्सों में परोसी जाती है — यह पश्चिमी कच्ची सलादों से अलग एक पाक परंपरा है। कोल्ड कट्स की थाली के विपरीत, ये सभी सलाद पकाई जाती हैं, कुछ कई मिनटों तक, ताकि मौसमी सब्ज़ियों का स्वाद गाढ़ा हो जाए।\n\nहाथ से मसलने की तकनीक, ब्लेंडर में प्यूरी बनाने की नहीं, वही है जो ज़ालूक को उसकी पहचानी बनावट देती है — बैंगन और टमाटर के छोटे टुकड़े बरकरार रहते हैं, एकसमान प्यूरी नहीं। यह मोरक्कन घरों में रोज़ का व्यंजन है, उत्सव का नहीं, अक्सर बड़ी मात्रा में पकाया और कई दिनों तक रखा जाता है, समय के साथ स्वाद और गहरा होता जाता है।"
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 10,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Pastă rustică de vinete și roșii coapte, aromată cu chimen și boia, servită la temperatura camerei.",
+      "en": "Rustic paste of roasted eggplant and tomato, seasoned with cumin and paprika, served at room temperature.",
+      "es": "Pasta rústica de berenjena y tomate asados, sazonada con comino y pimentón, servida a temperatura ambiente.",
+      "fr": "Pâte rustique d'aubergine et tomate rôties, parfumée au cumin et au paprika, servie à température ambiante.",
+      "de": "Rustikale Paste aus gerösteter Aubergine und Tomate, gewürzt mit Kreuzkümmel und Paprika, bei Zimmertemperatur serviert.",
+      "pt": "Pasta rústica de beringela e tomate assados, temperada com cominho e colorau, servida à temperatura ambiente.",
+      "ru": "Деревенская паста из запечённых баклажанов и помидоров, приправленная тмином и паприкой, подаётся при комнатной температуре.",
+      "ar": "عجينة ريفية من الباذنجان والطماطم المشوية، منكهة بالكمون والبابريكا، تُقدَّم بحرارة الغرفة.",
+      "zh": "烤茄子番茄泥，用孜然和红椒粉调味，室温享用。",
+      "ja": "焼きなすとトマトの素朴なペースト、クミンとパプリカで香り付け、常温で提供。",
+      "tr": "Kimyon ve kırmızı biberle tatlandırılmış, kavrulmuş patlıcan ve domatesten yapılan rustik ezme, oda sıcaklığında servis edilir.",
+      "it": "Pasta rustica di melanzane e pomodori arrostiti, insaporita con cumino e paprika, servita a temperatura ambiente.",
+      "ko": "커민과 파프리카로 향을 낸 구운 가지와 토마토의 투박한 페이스트, 실온으로 낸다.",
+      "hi": "भुने बैंगन और टमाटर का देहाती पेस्ट, जीरा और पैप्रिका से महकाया गया, कमरे के तापमान पर परोसा जाता है।"
+    }
+  }
+}

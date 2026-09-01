@@ -1,0 +1,176 @@
+{
+  "id": 307,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Brazilia", "en": "Brazil", "es": "Brasil", "fr": "Brésil", "de": "Brasilien",
+    "pt": "Brasil", "ru": "Бразилия", "ar": "البرازيل", "zh": "巴西", "ja": "ブラジル",
+    "hi": "ब्राज़ील", "tr": "Brezilya", "it": "Brasile", "ko": "브라질"
+  },
+  "name": {
+    "ro": "Açaí na Tigela", "en": "Açaí na Tigela", "es": "Açaí na Tigela", "fr": "Açaí na Tigela", "de": "Açaí na Tigela",
+    "pt": "Açaí na Tigela", "ru": "Асаи на Тижела", "ar": "أساي نا تيجيلا", "zh": "巴西莓碗", "ja": "アサイーボウル",
+    "tr": "Açaí na Tigela", "it": "Açaí na Tigela", "ko": "아사이 나 티젤라", "hi": "अकाई ना तिजेला"
+  },
+  "category": {
+    "ro": "Mic dejun", "en": "Breakfast", "es": "Desayuno", "fr": "Petit-déjeuner", "de": "Frühstück",
+    "pt": "Café da manhã", "ru": "Завтрак", "ar": "فطور", "zh": "早餐", "ja": "朝食",
+    "hi": "नाश्ता", "tr": "Kahvaltı", "it": "Colazione", "ko": "아침"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍨","t":"Pulpa de açaí congelată se amestecă minim, nu se lichefiază","d":"Trebuie să rămână groasă, ca o înghețată moale, nu ca un smoothie subțire"},
+      {"icon":"🍌","t":"Banana se adaugă la mixer pentru cremozitate, nu doar deasupra","d":"Leagă textura și rotunjește acreala naturală a fructului de açaí"},
+      {"icon":"🥣","t":"Consistența groasă e semnul unui açaí de calitate","d":"Un açaí subțire, care curge, e de obicei diluat cu prea mult lichid sau gheață"},
+      {"icon":"🌾","t":"Granola și fructele se adaugă abia la servire, deasupra","d":"Așa rămân crocante, în loc să se înmoaie în crema rece"}
+    ],
+    "en": [
+      {"icon":"🍨","t":"The frozen açaí pulp is blended minimally, not liquefied","d":"It needs to stay thick, like soft-serve ice cream, not a thin smoothie"},
+      {"icon":"🍌","t":"Banana goes into the blender for creaminess, not just on top","d":"It binds the texture and rounds out the açaí fruit's natural tartness"},
+      {"icon":"🥣","t":"The thick consistency is the mark of quality açaí","d":"A thin, runny açaí is usually diluted with too much liquid or ice"},
+      {"icon":"🌾","t":"Granola and fruit go on only at serving time, on top","d":"That way they stay crunchy, instead of softening into the cold base"}
+    ],
+    "es": [
+      {"icon":"🍨","t":"La pulpa de açaí congelada se bate mínimamente, no se licúa","d":"Debe quedar espesa, como un helado suave, no un batido líquido"},
+      {"icon":"🍌","t":"El plátano va en la batidora para dar cremosidad, no solo encima","d":"Une la textura y suaviza la acidez natural del fruto del açaí"},
+      {"icon":"🥣","t":"La consistencia espesa es la señal de un açaí de calidad","d":"Un açaí líquido y aguado suele estar diluido con demasiado líquido o hielo"},
+      {"icon":"🌾","t":"La granola y la fruta se añaden solo al servir, encima","d":"Así quedan crujientes, en vez de ablandarse en la base fría"}
+    ],
+    "fr": [
+      {"icon":"🍨","t":"La pulpe d'açaï congelée est mixée au minimum, pas liquéfiée","d":"Elle doit rester épaisse, comme une glace molle, pas un smoothie liquide"},
+      {"icon":"🍌","t":"La banane va dans le mixeur pour la crémeuse, pas juste dessus","d":"Elle lie la texture et adoucit l'acidité naturelle du fruit d'açaï"},
+      {"icon":"🥣","t":"La consistance épaisse est le signe d'un açaï de qualité","d":"Un açaï fin et coulant est généralement dilué avec trop de liquide ou de glace"},
+      {"icon":"🌾","t":"Le granola et les fruits sont ajoutés seulement au service, dessus","d":"Ainsi ils restent croquants, au lieu de ramollir dans la base froide"}
+    ],
+    "de": [
+      {"icon":"🍨","t":"Das gefrorene Açaí-Fruchtfleisch wird minimal püriert, nicht verflüssigt","d":"Es muss dick bleiben, wie Softeis, nicht wie ein dünner Smoothie"},
+      {"icon":"🍌","t":"Die Banane kommt für Cremigkeit in den Mixer, nicht nur obenauf","d":"Sie bindet die Textur und mildert die natürliche Säure der Açaí-Frucht"},
+      {"icon":"🥣","t":"Die dicke Konsistenz ist das Zeichen hochwertigen Açaís","d":"Ein dünnflüssiges Açaí ist meist mit zu viel Flüssigkeit oder Eis verdünnt"},
+      {"icon":"🌾","t":"Granola und Obst kommen erst beim Servieren obenauf","d":"So bleiben sie knusprig, statt in der kalten Basis weich zu werden"}
+    ],
+    "pt": [
+      {"icon":"🍨","t":"A polpa de açaí congelada é batida ao mínimo, não liquefeita","d":"Precisa ficar espessa, como um sorvete cremoso, não um batido fino"},
+      {"icon":"🍌","t":"A banana vai no liquidificador para dar cremosidade, não só por cima","d":"Liga a textura e suaviza a acidez natural do fruto do açaí"},
+      {"icon":"🥣","t":"A consistência espessa é a marca de um açaí de qualidade","d":"Um açaí fino e líquido costuma estar diluído com líquido ou gelo demais"},
+      {"icon":"🌾","t":"A granola e as frutas vão só na hora de servir, por cima","d":"Assim ficam crocantes, em vez de amolecerem na base gelada"}
+    ],
+    "ru": [
+      {"icon":"🍨","t":"Замороженная мякоть асаи взбивается минимально, не разжижается","d":"Она должна оставаться густой, как мягкое мороженое, а не жидким смузи"},
+      {"icon":"🍌","t":"Банан добавляется в блендер для кремовости, а не только сверху","d":"Он связывает текстуру и смягчает природную кислинку плода асаи"},
+      {"icon":"🥣","t":"Густая консистенция — признак качественного асаи","d":"Жидкое, текучее асаи обычно разбавлено слишком большим количеством жидкости или льда"},
+      {"icon":"🌾","t":"Гранола и фрукты добавляются только при подаче, сверху","d":"Так они остаются хрустящими, а не размокают в холодной основе"}
+    ],
+    "ar": [
+      {"icon":"🍨","t":"لُبّ الأساي المجمّد يُخلط بأقل قدر، لا يُسال","d":"يجب أن يبقى سميكًا، كالآيس كريم الطري، لا مثل عصير رقيق"},
+      {"icon":"🍌","t":"الموز يُضاف في الخلاط للنعومة، لا فوقه فقط","d":"يربط القوام ويلطّف الحموضة الطبيعية لفاكهة الأساي"},
+      {"icon":"🥣","t":"القوام السميك هو علامة الأساي الجيد","d":"الأساي الرقيق السائل عادة ما يكون مخففًا بماء أو ثلج زائد"},
+      {"icon":"🌾","t":"الغرانولا والفواكه تُضاف فقط عند التقديم، فوقه","d":"بهذا تبقى مقرمشة بدلاً من أن تلين في القاعدة الباردة"}
+    ],
+    "zh": [
+      {"icon":"🍨","t":"冷冻巴西莓果泥只做最少的搅拌，而非打成液体","d":"必须保持浓稠，像软冰淇淋一样，而非稀薄的思慕雪"},
+      {"icon":"🍌","t":"香蕉要放入搅拌机增添绵滑感，而不只是撒在上面","d":"能凝聚口感，中和巴西莓天然的酸味"},
+      {"icon":"🥣","t":"浓稠的质地是优质巴西莓的标志","d":"稀薄流动的巴西莓通常是加了太多水或冰稀释而成"},
+      {"icon":"🌾","t":"格兰诺拉麦片和水果只在上桌时铺在最上面","d":"这样能保持酥脆，而不是在冷底料中变软"}
+    ],
+    "ja": [
+      {"icon":"🍨","t":"冷凍アサイーピューレは最小限に混ぜ、液状にはしない","d":"薄いスムージーではなく、ソフトクリームのような濃さを保つ必要がある"},
+      {"icon":"🍌","t":"バナナは上に乗せるだけでなくミキサーに入れてクリーミーさを出す","d":"食感をまとめ、アサイーの実の自然な酸味を和らげる"},
+      {"icon":"🥣","t":"濃厚な仕上がりが良質なアサイーの証","d":"水っぽくサラサラのアサイーは大抵、液体や氷で薄めすぎている"},
+      {"icon":"🌾","t":"グラノーラとフルーツは提供直前に上にのせるだけ","d":"そうすることで冷たいベースでふやけずカリカリのまま保たれる"}
+    ],
+    "tr": [
+      {"icon":"🍨","t":"Dondurulmuş açaí püresi minimum düzeyde karıştırılır, sıvılaştırılmaz","d":"İnce bir smoothie değil, yumuşak dondurma gibi koyu kalmalıdır"},
+      {"icon":"🍌","t":"Muz sadece üstüne değil, kremamsılık için blendera eklenir","d":"Dokuyu birleştirir ve açaí meyvesinin doğal ekşiliğini yumuşatır"},
+      {"icon":"🥣","t":"Koyu kıvam kaliteli açaí'nin işaretidir","d":"İnce, akışkan açaí genellikle fazla sıvı veya buzla sulandırılmıştır"},
+      {"icon":"🌾","t":"Granola ve meyveler sadece servis anında üzerine eklenir","d":"Böylece soğuk tabanda yumuşamak yerine çıtır kalırlar"}
+    ],
+    "it": [
+      {"icon":"🍨","t":"La polpa di açaí congelata viene frullata al minimo, non liquefatta","d":"Deve restare densa, come un gelato soft, non uno smoothie liquido"},
+      {"icon":"🍌","t":"La banana va nel frullatore per la cremosità, non solo sopra","d":"Lega la consistenza e ammorbidisce l'acidità naturale del frutto dell'açaí"},
+      {"icon":"🥣","t":"La consistenza densa è il segno di un açaí di qualità","d":"Un açaí sottile e liquido è di solito diluito con troppo liquido o ghiaccio"},
+      {"icon":"🌾","t":"La granola e la frutta si aggiungono solo al momento di servire, sopra","d":"Così restano croccanti, invece di ammorbidirsi nella base fredda"}
+    ],
+    "ko": [
+      {"icon":"🍨","t":"냉동 아사이 과육은 최소한으로만 갈아 액체 상태로 만들지 않는다","d":"묽은 스무디가 아닌 소프트아이스크림처럼 걸쭉해야 한다"},
+      {"icon":"🍌","t":"바나나는 위에 얹기만 하는 게 아니라 믹서에도 넣어 크리미함을 더한다","d":"질감을 잡아주고 아사이 열매 본연의 신맛을 부드럽게 만든다"},
+      {"icon":"🥣","t":"걸쭉한 농도가 좋은 아사이의 증표다","d":"묽고 흘러내리는 아사이는 대개 물이나 얼음을 너무 많이 넣어 희석된 것이다"},
+      {"icon":"🌾","t":"그래놀라와 과일은 서빙할 때만 맨 위에 올린다","d":"그래야 차가운 베이스에서 눅눅해지지 않고 바삭함을 유지한다"}
+    ],
+    "hi": [
+      {"icon":"🍨","t":"जमी हुई अकाई पल्प को न्यूनतम ब्लेंड किया जाता है, तरल नहीं बनाया जाता","d":"इसे सॉफ्ट-सर्व आइसक्रीम जैसा गाढ़ा रहना चाहिए, पतली स्मूदी जैसा नहीं"},
+      {"icon":"🍌","t":"केला मलाईदारपन के लिए ब्लेंडर में डाला जाता है, सिर्फ ऊपर नहीं","d":"बनावट को बांधता है और अकाई फल के प्राकृतिक खट्टेपन को नरम करता है"},
+      {"icon":"🥣","t":"गाढ़ी बनावट अच्छी गुणवत्ता वाली अकाई की पहचान है","d":"पतली, बहती अकाई आमतौर पर बहुत ज़्यादा तरल या बर्फ से पतली की गई होती है"},
+      {"icon":"🌾","t":"ग्रेनोला और फल परोसते समय ही ऊपर डाले जाते हैं","d":"इस तरह वे ठंडे आधार में नरम होने के बजाय कुरकुरे रहते हैं"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g pulpă de açaí congelată, neîndulcită","2 banane, una pentru mixat, una feliată pentru decor","100ml suc de mere sau guaraná, un strop","granola, pentru decor","căpșuni feliate, pentru decor","miere sau lapte condensat, un fir, opțional"],
+    "en": ["400g frozen açaí pulp, unsweetened","2 bananas, one for blending, one sliced for topping","100ml apple juice or guaraná soda, a splash","granola, for topping","sliced strawberries, for topping","honey or condensed milk, a drizzle, optional"],
+    "es": ["400g de pulpa de açaí congelada, sin azúcar","2 plátanos, uno para batir, uno en rodajas para decorar","100ml de zumo de manzana o guaraná, un chorrito","granola, para decorar","fresas en rodajas, para decorar","miel o leche condensada, un chorrito, opcional"],
+    "fr": ["400g de pulpe d'açaï congelée, non sucrée","2 bananes, une pour mixer, une en rondelles pour garnir","100ml de jus de pomme ou de guaraná, un trait","granola, pour garnir","fraises en tranches, pour garnir","miel ou lait concentré, un filet, facultatif"],
+    "de": ["400g gefrorenes Açaí-Fruchtfleisch, ungesüßt","2 Bananen, eine zum Mixen, eine in Scheiben zum Garnieren","100ml Apfelsaft oder Guaraná-Limonade, ein Schuss","Granola, zum Garnieren","Erdbeeren in Scheiben, zum Garnieren","Honig oder Kondensmilch, ein Schuss, optional"],
+    "pt": ["400g de polpa de açaí congelada, sem açúcar","2 bananas, uma para bater, uma fatiada para cobrir","100ml de suco de maçã ou guaraná, um pouco","granola, para cobrir","morangos fatiados, para cobrir","mel ou leite condensado, um fio, opcional"],
+    "ru": ["400г замороженной мякоти асаи без сахара","2 банана, один для смешивания, один нарезанный для украшения","100мл яблочного сока или гуараны, немного","гранола, для украшения","нарезанная клубника, для украшения","мёд или сгущённое молоко, немного, по желанию"],
+    "ar": ["400غ لبّ أساي مجمّد، غير محلى","2 موزة، واحدة للخلط وواحدة مقطعة للتزيين","100مل عصير تفاح أو مشروب غوارانا، رشة","غرانولا، للتزيين","فراولة مقطعة، للتزيين","عسل أو حليب مكثف، رشة، اختياري"],
+    "zh": ["400克冷冻巴西莓果泥，无糖","2根香蕉，1根搅拌用，1根切片装饰用","100毫升苹果汁或瓜拉纳汽水，少许","格兰诺拉麦片，装饰用","切片草莓，装饰用","蜂蜜或炼乳，淋一点，可选"],
+    "ja": ["冷凍アサイーピューレ400g、無糖","バナナ2本、1本はミキサー用、1本は輪切りにしてトッピング用","りんごジュースまたはガラナソーダ100ml、少々","グラノーラ、トッピング用","輪切りイチゴ、トッピング用","蜂蜜または練乳、少々、お好みで"],
+    "tr": ["400g dondurulmuş açaí püresi, şekersiz","2 muz, biri karıştırmak için, biri süslemek için dilimlenmiş","100ml elma suyu veya guaraná gazozu, birazcık","granola, süslemek için","dilimlenmiş çilek, süslemek için","bal veya koyulaştırılmış süt, birazcık, isteğe bağlı"],
+    "it": ["400g di polpa di açaí congelata, non zuccherata","2 banane, una da frullare, una a fette per guarnire","100ml di succo di mela o guaraná, un goccio","granola, per guarnire","fragole a fette, per guarnire","miele o latte condensato, un filo, facoltativo"],
+    "ko": ["냉동 아사이 과육 400g, 무가당","바나나 2개, 하나는 갈기용, 하나는 토핑용으로 썬 것","사과주스 또는 과라나 소다 100ml, 약간","그래놀라, 토핑용","썬 딸기, 토핑용","꿀 또는 연유, 약간, 선택"],
+    "hi": ["400ग्राम जमी हुई अकाई पल्प, बिना मीठी","2 केले, एक ब्लेंड करने के लिए, एक टॉपिंग के लिए कटा हुआ","100मिली सेब का रस या गुआराना सोडा, थोड़ा सा","ग्रेनोला, टॉपिंग के लिए","कटी स्ट्रॉबेरी, टॉपिंग के लिए","शहद या कंडेंस्ड मिल्क, थोड़ा, वैकल्पिक"]
+  },
+  "howIsMade": {
+    "ro": "AMESTECĂ BAZA: sparge pulpa de açaí congelată în bucăți, amestecă în mixer cu o banană și un strop de lichid, doar cât să pornească, ținând amestecul gros, aproape ca o înghețată moale, nu ca un smoothie subțire. VERIFICĂ CONSISTENȚA: oprește mixerul imediat ce devine neted; mixarea excesivă sau prea mult lichid îl fac prea subțire. ASAMBLEAZĂ BOLUL: toarnă açaí-ul gros într-un bol. DECOREAZĂ: aranjează granola, banana feliată și căpșunile deasupra. PICURĂ: încheie cu un fir de miere sau lapte condensat, dacă folosești. SERVEȘTE: servește imediat cu o linguriță, cât încă e foarte rece.",
+    "en": "BLEND THE BASE: break the frozen açaí pulp into chunks, blend with one banana and a small splash of liquid, just enough to get it moving, keeping the mixture thick, almost like soft-serve, not a thin smoothie. CHECK THE CONSISTENCY: stop blending as soon as it's smooth; over-blending or adding too much liquid makes it too thin. ASSEMBLE THE BOWL: pour the thick açaí into a bowl. TOP IT: arrange the granola, sliced banana and strawberries on top. DRIZZLE: finish with a drizzle of honey or condensed milk, if using. SERVE: serve immediately with a spoon, while still very cold.",
+    "es": "BATE LA BASE: rompe la pulpa de açaí congelada en trozos, bátela con un plátano y un chorrito de líquido, solo lo suficiente para que se mueva, manteniendo la mezcla espesa, casi como un helado suave, no un batido líquido. COMPRUEBA LA CONSISTENCIA: deja de batir en cuanto quede lisa; batir demasiado o añadir mucho líquido la vuelve demasiado líquida. ARMA EL BOL: vierte el açaí espeso en un bol. DECORA: coloca la granola, el plátano en rodajas y las fresas encima. AÑADE UN CHORRITO: termina con un chorrito de miel o leche condensada, si lo usas. SIRVE: sirve de inmediato con una cuchara, mientras aún está muy frío.",
+    "fr": "MIXE LA BASE: casse la pulpe d'açaï congelée en morceaux, mixe avec une banane et un léger trait de liquide, juste assez pour que ça tourne, en gardant le mélange épais, presque comme une glace molle, pas un smoothie liquide. VÉRIFIE LA CONSISTANCE: arrête de mixer dès que c'est lisse ; trop mixer ou ajouter trop de liquide le rend trop liquide. ASSEMBLE LE BOL: verse l'açaï épais dans un bol. GARNIS: dispose le granola, la banane en rondelles et les fraises dessus. AJOUTE UN FILET: termine avec un filet de miel ou de lait concentré, si utilisé. SERS: sers immédiatement avec une cuillère, tant que c'est encore très froid.",
+    "de": "MIXE DIE BASIS: das gefrorene Açaí-Fruchtfleisch in Stücke brechen, mit einer Banane und einem kleinen Schuss Flüssigkeit mixen, gerade genug, damit es sich bewegt, die Mischung dick halten, fast wie Softeis, kein dünner Smoothie. PRÜFE DIE KONSISTENZ: das Mixen stoppen, sobald es glatt ist; zu langes Mixen oder zu viel Flüssigkeit machen es zu dünn. RICHTE DIE SCHÜSSEL AN: das dicke Açaí in eine Schüssel gießen. GARNIERE: Granola, Bananenscheiben und Erdbeeren obenauf anrichten. BETRÄUFELE: mit einem Schuss Honig oder Kondensmilch abschließen, falls verwendet. SERVIEREN: sofort mit einem Löffel servieren, solange noch sehr kalt.",
+    "pt": "BATA A BASE: parta a polpa de açaí congelada em pedaços, bata com uma banana e um pouco de líquido, apenas o suficiente para começar a mexer, mantendo a mistura espessa, quase como um sorvete cremoso, não um batido fino. VERIFIQUE A CONSISTÊNCIA: pare de bater assim que ficar liso; bater demais ou adicionar líquido demais deixa muito fino. MONTE A TIGELA: despeje o açaí espesso numa tigela. COBRA: disponha a granola, a banana fatiada e os morangos por cima. REGUE: termine com um fio de mel ou leite condensado, se usar. SIRVA: sirva imediatamente com uma colher, enquanto ainda está bem gelado.",
+    "ru": "ВЗБЕЙ ОСНОВУ: разломай замороженную мякоть асаи на куски, взбей с одним бананом и небольшим количеством жидкости, ровно столько, чтобы блендер справился, сохраняя смесь густой, почти как мягкое мороженое, не жидким смузи. ПРОВЕРЬ КОНСИСТЕНЦИЮ: прекрати взбивать, как только станет гладкой; чрезмерное взбивание или слишком много жидкости делают её слишком жидкой. СОБЕРИ ЧАШУ: вылей густое асаи в миску. УКРАСЬ: разложи гранолу, нарезанный банан и клубнику сверху. ПОЛЕЙ: заверши струйкой мёда или сгущённого молока, если используешь. ПОДАЙ: подавай сразу с ложкой, пока ещё очень холодное.",
+    "ar": "اخلط القاعدة: كسّر لُبّ الأساي المجمّد إلى قطع، اخلطه مع موزة واحدة ورشة صغيرة من السائل، بقدر ما يكفي لتحريكه، مع إبقاء الخليط سميكًا، أشبه بالآيس كريم الطري، لا مثل عصير رقيق. تحقق من القوام: توقف عن الخلط بمجرد أن يصبح ناعمًا؛ الإفراط في الخلط أو إضافة سائل كثير يجعله رقيقًا جدًا. جهّز الوعاء: اسكب الأساي السميك في وعاء. زيّن: رتّب الغرانولا والموز المقطع والفراولة فوقه. رُشّ: أنهِ برشة من العسل أو الحليب المكثف، إن استُخدم. قدّم: قدّمه فورًا بملعقة، وهو لا يزال باردًا جدًا.",
+    "zh": "搅打底料：将冷冻巴西莓果泥掰成小块，与一根香蕉和少许液体一起搅打，只需让机器转动即可，保持混合物浓稠，几乎像软冰淇淋，而不是稀薄的思慕雪。检查浓稠度：一旦变顺滑就立即停止搅打；搅打过度或加太多液体会让它变得太稀。装碗：将浓稠的巴西莓倒入碗中。装饰：在上面摆放格兰诺拉麦片、香蕉片和草莓。淋汁：最后淋上蜂蜜或炼乳（可选）。上桌：趁还非常冰凉时立即用勺子享用。",
+    "ja": "ベースを混ぜる：冷凍アサイーピューレを砕いてブレンダーに入れ、バナナ1本と少量の液体を加えて、動くだけの最小限で混ぜ、薄いスムージーではなくソフトクリームに近い濃さを保つ。濃度を確認する：なめらかになったらすぐに止める。混ぜすぎたり液体を入れすぎたりすると薄くなりすぎる。ボウルに盛る：濃厚なアサイーをボウルに注ぐ。トッピングする：グラノーラ、輪切りバナナ、イチゴを上に並べる。かける：使う場合は蜂蜜または練乳を少々かけて仕上げる。盛り付ける：まだとても冷たいうちに、スプーンを添えてすぐに提供する。",
+    "tr": "TABANI KARIŞTIRIN: dondurulmuş açaí püresini parçalara bölün, bir muz ve azıcık sıvıyla, sadece hareket etmesi için yeterli miktarda karıştırın, karışımı ince bir smoothie yerine yumuşak dondurmaya yakın koyu tutun. KIVAMI KONTROL EDİN: pürüzsüz olur olmaz karıştırmayı bırakın; fazla karıştırmak veya çok fazla sıvı eklemek onu fazla inceltir. KÂSEYİ HAZIRLAYIN: koyu açaí'yi bir kâseye dökün. SÜSLEYİN: granola, dilimlenmiş muz ve çilekleri üzerine dizin. GEZDİRİN: kullanıyorsanız bal veya koyulaştırılmış sütle bitirin. SERVİS YAPIN: hâlâ çok soğukken hemen bir kaşıkla servis edin.",
+    "it": "FRULLA LA BASE: rompi la polpa di açaí congelata a pezzi, frulla con una banana e un goccio di liquido, giusto quanto basta per farla muovere, mantenendo il composto denso, quasi come un gelato soft, non uno smoothie liquido. VERIFICA LA CONSISTENZA: smetti di frullare appena diventa liscio; frullare troppo o aggiungere troppo liquido lo rende troppo sottile. COMPONI LA CIOTOLA: versa l'açaí denso in una ciotola. GUARNISCI: disponi la granola, la banana a fette e le fragole sopra. IRRORA: termina con un filo di miele o latte condensato, se usato. SERVI: servi subito con un cucchiaio, mentre è ancora molto freddo.",
+    "ko": "베이스 갈기: 냉동 아사이 과육을 조각내어 바나나 한 개와 소량의 액체와 함께 갈되, 갈리는 데 필요한 만큼만 넣어 묽은 스무디가 아닌 소프트아이스크림에 가까운 걸쭉함을 유지한다. 농도 확인하기: 매끄러워지면 즉시 멈춘다; 너무 오래 갈거나 액체를 너무 많이 넣으면 묽어진다. 그릇에 담기: 걸쭉한 아사이를 그릇에 붓는다. 토핑하기: 그래놀라, 썬 바나나, 딸기를 위에 올린다. 뿌리기: 사용한다면 꿀이나 연유를 살짝 뿌려 마무리한다. 서빙하기: 아직 매우 차가울 때 숟가락과 함께 바로 낸다.",
+    "hi": "आधार ब्लेंड करें: जमी हुई अकाई पल्प को टुकड़ों में तोड़ें, एक केले और थोड़े तरल के साथ ब्लेंड करें, बस इतना कि चलने लगे, मिश्रण को गाढ़ा रखते हुए, लगभग सॉफ्ट-सर्व आइसक्रीम जैसा, पतली स्मूदी नहीं। गाढ़ापन जांचें: चिकना होते ही ब्लेंड करना बंद करें; ज़्यादा ब्लेंड करने या ज़्यादा तरल डालने से यह बहुत पतला हो जाता है। कटोरा तैयार करें: गाढ़ी अकाई को कटोरे में डालें। टॉपिंग करें: ग्रेनोला, कटा केला और स्ट्रॉबेरी ऊपर सजाएं। ऊपर से डालें: उपयोग करें तो शहद या कंडेंस्ड मिल्क की धार से खत्म करें। परोसें: अभी बहुत ठंडा रहते हुए चम्मच के साथ तुरंत परोसें।"
+  },
+  "originText": {
+    "ro": "Açaí provine din pădurea amazoniană, din statul Pará, unde comunitățile indigene și riverane îl consumă de secole, dar tradițional în forma sărată, neîndulcită, alături de pește și făină de manioc, ca aliment de bază, nu ca desert. Versiunea dulce, servită rece în bol, cu granola și fructe, s-a născut abia în anii 1980-1990, în Rio de Janeiro, printre surferi, care căutau o gustare energizantă, densă în calorii, după antrenamente.\n\nDe atunci, açaí na tigela a devenit un simbol global al alimentației sănătoase, exportat mult dincolo de originile sale amazoniene modeste. Consistența groasă rămâne semnul distinctiv al calității — un açaí care curge ușor din bol e aproape întotdeauna un semn că a fost diluat cu prea multă apă sau gheață, o practică frecventă în variantele comerciale ieftine, departe de reperul tehnic al versiunii autentice, groase.",
+    "en": "Açaí comes from the Amazon rainforest, from the state of Pará, where indigenous and riverside communities have eaten it for centuries, but traditionally in its savory, unsweetened form, alongside fish and cassava flour, as a staple food, not a dessert. The sweet version, served cold in a bowl with granola and fruit, only emerged in the 1980s and 1990s, in Rio de Janeiro, among surfers looking for a calorie-dense, energizing snack after training.\n\nSince then, açaí na tigela has become a global symbol of healthy eating, exported far beyond its humble Amazonian origins. The thick consistency remains the mark of quality — an açaí that flows easily out of the bowl is almost always a sign it was diluted with too much water or ice, a common practice in cheap commercial versions, far from the technical standard of the authentic, thick version.",
+    "es": "El açaí viene de la selva amazónica, del estado de Pará, donde las comunidades indígenas y ribereñas lo consumen desde hace siglos, pero tradicionalmente en su forma salada, sin azúcar, junto a pescado y harina de mandioca, como alimento básico, no como postre. La versión dulce, servida fría en un bol con granola y fruta, surgió recién en los años 1980 y 1990, en Río de Janeiro, entre surfistas que buscaban un tentempié denso en calorías y energizante después de entrenar.\n\nDesde entonces, el açaí na tigela se ha convertido en un símbolo global de alimentación saludable, exportado mucho más allá de sus humildes orígenes amazónicos. La consistencia espesa sigue siendo la señal de calidad — un açaí que fluye fácilmente fuera del bol es casi siempre señal de que se diluyó con demasiada agua o hielo, una práctica común en versiones comerciales baratas, lejos del estándar técnico de la versión auténtica y espesa.",
+    "fr": "L'açaï vient de la forêt amazonienne, de l'état du Pará, où les communautés indigènes et riveraines le consomment depuis des siècles, mais traditionnellement sous sa forme salée, non sucrée, accompagné de poisson et de farine de manioc, comme aliment de base, pas comme dessert. La version sucrée, servie froide dans un bol avec du granola et des fruits, n'est apparue que dans les années 1980-1990, à Rio de Janeiro, chez les surfeurs cherchant un en-cas dense en calories et énergisant après l'entraînement.\n\nDepuis, l'açaï na tigela est devenu un symbole mondial de l'alimentation saine, exporté bien au-delà de ses modestes origines amazoniennes. La consistance épaisse reste le signe de qualité — un açaï qui coule facilement hors du bol est presque toujours le signe qu'il a été dilué avec trop d'eau ou de glace, une pratique courante dans les versions commerciales bon marché, loin de la norme technique de la version authentique et épaisse.",
+    "de": "Açaí stammt aus dem Amazonas-Regenwald, aus dem Bundesstaat Pará, wo indigene und Flussuferngemeinschaften ihn seit Jahrhunderten essen, aber traditionell in seiner herzhaften, ungesüßten Form, zusammen mit Fisch und Maniokmehl, als Grundnahrungsmittel, nicht als Dessert. Die süße Version, kalt in einer Schüssel mit Granola und Obst serviert, entstand erst in den 1980er und 1990er Jahren in Rio de Janeiro unter Surfern, die nach dem Training einen kalorienreichen, energiereichen Snack suchten.\n\nSeitdem ist Açaí na tigela zu einem globalen Symbol gesunder Ernährung geworden, weit über seine bescheidenen amazonischen Ursprünge hinaus exportiert. Die dicke Konsistenz bleibt das Zeichen der Qualität — ein Açaí, das leicht aus der Schüssel fließt, ist fast immer ein Zeichen dafür, dass es mit zu viel Wasser oder Eis verdünnt wurde, eine gängige Praxis bei billigen kommerziellen Versionen, weit entfernt vom technischen Standard der authentischen, dicken Version.",
+    "pt": "O açaí vem da floresta amazônica, do estado do Pará, onde comunidades indígenas e ribeirinhas o consomem há séculos, mas tradicionalmente na sua forma salgada, sem açúcar, acompanhado de peixe e farinha de mandioca, como alimento básico, não como sobremesa. A versão doce, servida gelada numa tigela com granola e frutas, só surgiu nos anos 1980 e 1990, no Rio de Janeiro, entre surfistas à procura de um lanche denso em calorias e energizante após o treino.\n\nDesde então, o açaí na tigela tornou-se um símbolo global de alimentação saudável, exportado muito além das suas humildes origens amazônicas. A consistência espessa continua a ser o sinal de qualidade — um açaí que escorre facilmente da tigela é quase sempre sinal de que foi diluído com água ou gelo a mais, uma prática comum em versões comerciais baratas, longe do padrão técnico da versão autêntica e espessa.",
+    "ru": "Асаи родом из амазонских тропических лесов, из штата Пара, где коренные и прибрежные общины едят его веками, но традиционно в солёном, несладком виде, вместе с рыбой и мукой маниоки, как основной продукт питания, а не десерт. Сладкая версия, подаваемая холодной в чаше с гранолой и фруктами, появилась лишь в 1980-1990-х годах в Рио-де-Жанейро среди серферов, искавших калорийную, заряжающую энергией закуску после тренировок.\n\nС тех пор асаи на тижела стало глобальным символом здорового питания, экспортируемым далеко за пределы своего скромного амазонского происхождения. Густая консистенция остаётся признаком качества — асаи, легко вытекающее из чаши, почти всегда сигнализирует о разбавлении слишком большим количеством воды или льда — распространённая практика в дешёвых коммерческих версиях, далёкая от технического стандарта аутентичной, густой версии.",
+    "ar": "يأتي الأساي من غابات الأمازون المطيرة، من ولاية بارا، حيث تستهلكه المجتمعات الأصلية والنهرية منذ قرون، لكن تقليديًا بشكله المالح غير المحلى، إلى جانب السمك ودقيق الكسافا، كغذاء أساسي لا كتحلية. النسخة الحلوة، المقدَّمة باردة في وعاء مع الغرانولا والفاكهة، ظهرت فقط في الثمانينيات والتسعينيات في ريو دي جانيرو، بين متزلجي الأمواج الباحثين عن وجبة خفيفة غنية بالسعرات ومنشّطة بعد التمرين.\n\nمنذ ذلك الحين، أصبح أساي نا تيجيلا رمزًا عالميًا للأكل الصحي، يُصدَّر إلى ما هو أبعد بكثير من أصوله الأمازونية المتواضعة. يبقى القوام السميك علامة الجودة — الأساي الذي يسيل بسهولة من الوعاء يكون دائمًا تقريبًا علامة على أنه خُفف بماء أو ثلج زائد، وهي ممارسة شائعة في النسخ التجارية الرخيصة، بعيدة عن المعيار التقني للنسخة الأصيلة السميكة.",
+    "zh": "巴西莓来自亚马逊雨林，产自帕拉州，那里的原住民和沿河社区食用它已有数百年历史，但传统上是咸味、无糖的吃法，配鱼和木薯粉，作为主食而非甜点。如今流行的甜味版本——冷食、盛在碗中配格兰诺拉麦片和水果——直到20世纪80、90年代才在里约热内卢的冲浪者中兴起，他们需要一种训练后高热量、提神的小吃。\n\n从那以后，巴西莓碗成为健康饮食的全球象征，远远走出了它谦逊的亚马逊起源。浓稠的质地依然是品质的标志——如果巴西莓能轻易从碗中流出，几乎总说明它被过多的水或冰稀释了，这在廉价的商业版本中很常见，与正宗浓稠版本的技艺标准相去甚远。",
+    "ja": "アサイーはアマゾンの熱帯雨林、パラ州に由来し、先住民や川辺のコミュニティが何世紀にもわたって食してきたが、伝統的には塩味の無糖の形で、魚やキャッサバ粉とともに、デザートではなく主食として食べられてきた。今日知られる甘いバージョン、つまりグラノーラやフルーツを添えて冷たいままボウルで提供するスタイルは、1980年代から90年代にかけてリオデジャネイロで、トレーニング後にカロリー密度の高い元気の出るおやつを求めていたサーファーたちの間で生まれたにすぎない。\n\nそれ以来、アサイーボウルは健康食の世界的な象徴となり、その控えめなアマゾン起源をはるかに超えて輸出されるようになった。濃厚な質感は今も品質の証であり続けている——ボウルから簡単に流れ出るようなアサイーは、ほぼ常に水や氷で薄めすぎたことを意味し、これは本格的な濃厚バージョンの技術基準からかけ離れた、安価な市販品によく見られる手法である。",
+    "tr": "Açaí, Amazon yağmur ormanlarından, Pará eyaletinden gelir; burada yerli ve nehir kıyısı toplulukları onu yüzyıllardır tüketir, ama geleneksel olarak tuzlu, şekersiz haliyle, balık ve manyok unuyla birlikte, tatlı olarak değil temel bir besin olarak. Granola ve meyveyle bir kâsede soğuk servis edilen tatlı versiyon, ancak 1980'ler ve 1990'larda, Rio de Janeiro'da, antrenman sonrası kalori yoğun, enerji verici bir atıştırmalık arayan sörfçüler arasında ortaya çıktı.\n\nO zamandan beri açaí na tigela, mütevazı Amazon köklerinin çok ötesine ihraç edilen, sağlıklı beslenmenin küresel bir simgesi haline geldi. Koyu kıvam hâlâ kalitenin işaretidir — kâseden kolayca akan bir açaí, neredeyse her zaman fazla su veya buzla sulandırıldığının bir işaretidir; bu, otantik koyu versiyonun teknik standardından uzak, ucuz ticari versiyonlarda yaygın bir uygulamadır.",
+    "it": "L'açaí proviene dalla foresta amazzonica, dallo stato del Pará, dove le comunità indigene e rivierasche lo consumano da secoli, ma tradizionalmente nella sua forma salata, non zuccherata, insieme a pesce e farina di manioca, come alimento base, non come dessert. La versione dolce, servita fredda in una ciotola con granola e frutta, è emersa solo negli anni '80 e '90, a Rio de Janeiro, tra surfisti in cerca di uno spuntino denso di calorie ed energizzante dopo l'allenamento.\n\nDa allora, l'açaí na tigela è diventato un simbolo globale di alimentazione sana, esportato ben oltre le sue umili origini amazzoniche. La consistenza densa resta il segno della qualità — un açaí che scorre facilmente fuori dalla ciotola è quasi sempre segno che è stato diluito con troppa acqua o ghiaccio, una pratica comune nelle versioni commerciali economiche, lontana dallo standard tecnico della versione autentica e densa.",
+    "ko": "아사이는 아마존 열대우림, 파라 주에서 유래했으며, 그곳 원주민과 강가 공동체는 수 세기 동안 이를 먹어왔지만 전통적으로는 짭짤하고 무가당인 형태로 생선과 카사바 가루와 함께, 디저트가 아닌 주식으로 먹었다. 그래놀라와 과일을 곁들여 그릇에 차갑게 담아내는 달콤한 버전은 1980~90년대 리우데자네이루에서, 훈련 후 칼로리가 높고 활력을 주는 간식을 찾던 서퍼들 사이에서 비로소 등장했다.\n\n그 이후로 아사이 나 티젤라는 소박한 아마존 기원을 훨씬 뛰어넘어 수출되며 건강식의 세계적 상징이 되었다. 걸쭉한 농도는 여전히 품질의 척도로 남아 있다 — 그릇에서 쉽게 흘러나오는 아사이는 거의 항상 물이나 얼음을 너무 많이 넣어 희석되었다는 신호이며, 이는 정통 걸쭉한 버전의 기술적 기준과는 거리가 먼, 저렴한 상업용 버전에서 흔히 볼 수 있는 관행이다.",
+    "hi": "अकाई अमेज़न वर्षावन से आता है, पारा राज्य से, जहां स्वदेशी और नदी किनारे के समुदाय इसे सदियों से खाते आ रहे हैं, लेकिन पारंपरिक रूप से इसके नमकीन, बिना मीठे रूप में, मछली और कसावा आटे के साथ, एक मुख्य भोजन के रूप में, मिठाई के रूप में नहीं। मीठी version, कटोरे में ठंडी परोसी जाती है ग्रेनोला और फल के साथ, केवल 1980 और 1990 के दशक में उभरी, रियो डी जनेरियो में, सर्फरों के बीच जो प्रशिक्षण के बाद कैलोरी-घनी, ऊर्जावान नाश्ते की तलाश में थे।\n\nतब से, अकाई ना तिजेला स्वस्थ भोजन का एक वैश्विक प्रतीक बन गया है, अपनी विनम्र अमेज़न उत्पत्ति से बहुत आगे निर्यात किया गया। गाढ़ी बनावट अभी भी गुणवत्ता की पहचान बनी हुई है — एक अकाई जो कटोरे से आसानी से बह जाती है, लगभग हमेशा एक संकेत है कि इसे बहुत ज़्यादा पानी या बर्फ से पतला किया गया है, सस्ते व्यावसायिक versions में एक आम प्रथा, प्रामाणिक गाढ़ी version के तकनीकी मानक से बहुत दूर।"
+  },
+  "meta": {
+    "time": 10,
+    "costRon": 14,
+    "tags": ["vegetarian","quick"],
+    "desc": {
+      "ro": "Bol gros și cremos de açaí, cu banană, granola și fructe proaspete deasupra.",
+      "en": "Thick, creamy açaí bowl, topped with banana, granola and fresh fruit.",
+      "es": "Bol espeso y cremoso de açaí, con plátano, granola y fruta fresca encima.",
+      "fr": "Bol épais et crémeux d'açaï, garni de banane, granola et fruits frais.",
+      "de": "Dicke, cremige Açaí-Schüssel, mit Banane, Granola und frischem Obst obenauf.",
+      "pt": "Tigela espessa e cremosa de açaí, com banana, granola e frutas frescas por cima.",
+      "ru": "Густая, кремовая чаша асаи с бананом, гранолой и свежими фруктами сверху.",
+      "ar": "وعاء أساي سميك وكريمي، مع الموز والغرانولا والفواكه الطازجة فوقه.",
+      "zh": "浓稠绵滑的巴西莓碗，配香蕉、格兰诺拉麦片和新鲜水果。",
+      "ja": "バナナ、グラノーラ、新鮮なフルーツをのせた濃厚でクリーミーなアサイーボウル。",
+      "tr": "Muz, granola ve taze meyvelerle süslenmiş koyu, kremamsı açaí kâsesi.",
+      "it": "Ciotola densa e cremosa di açaí, guarnita con banana, granola e frutta fresca.",
+      "ko": "바나나, 그래놀라, 신선한 과일을 올린 걸쭉하고 크리미한 아사이 볼.",
+      "hi": "गाढ़ा, मलाईदार अकाई कटोरा, ऊपर केला, ग्रेनोला और ताज़े फल के साथ।"
+    }
+  }
+}

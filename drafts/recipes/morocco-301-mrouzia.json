@@ -1,0 +1,177 @@
+{
+  "id": 301,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Maroc", "en": "Morocco", "es": "Marruecos", "fr": "Maroc", "de": "Marokko",
+    "pt": "Marrocos", "ru": "Марокко", "ar": "المغرب", "zh": "摩洛哥", "ja": "モロッコ",
+    "tr": "Fas", "it": "Marocco", "ko": "모로코", "hi": "मोरक्को"
+  },
+  "name": {
+    "ro": "Mrouzia", "en": "Mrouzia", "es": "Mrouzia", "fr": "Mrouzia", "de": "Mrouzia",
+    "pt": "Mrouzia", "ru": "Мрузия", "ar": "المروزية", "zh": "摩洛哥蜜汁羊肉", "ja": "ムルージア",
+    "tr": "Mrouzia", "it": "Mrouzia", "ko": "므루지아", "hi": "म्रूज़िया"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal",
+    "de": "Hauptgericht", "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي",
+    "zh": "主菜", "ja": "メイン料理", "tr": "Ana Yemek", "it": "Piatto principale",
+    "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍯","t":"Mierea intră la final, la foc stins","d":"Adăugată prea devreme, s-ar carameliza și ar arde, dând un gust amărui"},
+      {"icon":"🍇","t":"Stafidele se pun în ultimele 30 de minute de fierbere","d":"Se umflă și se îndulcesc, dar nu se transformă în piure"},
+      {"icon":"🌰","t":"Migdalele se prăjesc separat, nu se fierb în tocană","d":"Rămân crocante, un contrast necesar în fața cărnii moi și dulci"},
+      {"icon":"🕌","t":"Fel tradițional de Eid al-Adha, gătit din carnea animalului sacrificat","d":"Mierea din belșug avea inițial și rol de conservant, înainte de frigidere"}
+    ],
+    "en": [
+      {"icon":"🍯","t":"The honey goes in at the very end, off the heat","d":"Added too early, it would caramelize and burn, turning bitter"},
+      {"icon":"🍇","t":"The raisins go in during the last 30 minutes of simmering","d":"They plump up and sweeten the sauce, without turning to mush"},
+      {"icon":"🌰","t":"The almonds fry separately, never simmered in the stew","d":"They stay crunchy, a needed contrast against the soft, sweet meat"},
+      {"icon":"🕌","t":"A traditional Eid al-Adha dish, cooked from the sacrificed animal's meat","d":"The generous honey originally also acted as a preservative, before refrigerators"}
+    ],
+    "es": [
+      {"icon":"🍯","t":"La miel entra al final, con el fuego apagado","d":"Añadida demasiado pronto, se caramelizaría y se quemaría, dando un sabor amargo"},
+      {"icon":"🍇","t":"Las pasas entran en los últimos 30 minutos de cocción","d":"Se hinchan y endulzan la salsa, sin deshacerse en puré"},
+      {"icon":"🌰","t":"Las almendras se fríen aparte, nunca se cuecen en el guiso","d":"Quedan crujientes, un contraste necesario frente a la carne blanda y dulce"},
+      {"icon":"🕌","t":"Plato tradicional del Eid al-Adha, cocinado con la carne del animal sacrificado","d":"La abundante miel también servía originalmente de conservante, antes de los frigoríficos"}
+    ],
+    "fr": [
+      {"icon":"🍯","t":"Le miel entre à la toute fin, hors du feu","d":"Ajouté trop tôt, il caramélise et brûle, devenant amer"},
+      {"icon":"🍇","t":"Les raisins secs entrent dans les 30 dernières minutes de cuisson","d":"Ils gonflent et sucrent la sauce, sans se réduire en purée"},
+      {"icon":"🌰","t":"Les amandes frient à part, jamais mijotées dans le ragoût","d":"Elles restent croquantes, un contraste nécessaire face à la viande tendre et sucrée"},
+      {"icon":"🕌","t":"Un plat traditionnel de l'Aïd al-Adha, cuisiné avec la viande de l'animal sacrifié","d":"Le miel généreux servait aussi de conservateur, avant les réfrigérateurs"}
+    ],
+    "de": [
+      {"icon":"🍯","t":"Der Honig kommt erst ganz am Ende dazu, vom Herd genommen","d":"Zu früh zugegeben, würde er karamellisieren und verbrennen, bitter werden"},
+      {"icon":"🍇","t":"Die Rosinen kommen in den letzten 30 Minuten des Köchelns dazu","d":"Sie quellen auf und versüßen die Sauce, ohne zu Brei zu werden"},
+      {"icon":"🌰","t":"Die Mandeln werden getrennt gebraten, nie im Eintopf mitgekocht","d":"Sie bleiben knusprig, ein nötiger Kontrast zum weichen, süßen Fleisch"},
+      {"icon":"🕌","t":"Ein traditionelles Eid-al-Adha-Gericht, aus dem Fleisch des geopferten Tieres gekocht","d":"Der reichliche Honig diente ursprünglich auch als Konservierungsmittel, vor Kühlschränken"}
+    ],
+    "pt": [
+      {"icon":"🍯","t":"O mel entra no fim, com o fogo apagado","d":"Adicionado cedo demais, caramelizaria e queimaria, ficando amargo"},
+      {"icon":"🍇","t":"As passas entram nos últimos 30 minutos de cozedura","d":"Incham e adoçam o molho, sem se desfazerem em puré"},
+      {"icon":"🌰","t":"As amêndoas fritam à parte, nunca cozidas no guisado","d":"Ficam crocantes, um contraste necessário frente à carne macia e doce"},
+      {"icon":"🕌","t":"Prato tradicional do Eid al-Adha, cozinhado com a carne do animal sacrificado","d":"O mel abundante também servia originalmente de conservante, antes dos frigoríficos"}
+    ],
+    "ru": [
+      {"icon":"🍯","t":"Мёд добавляется в самом конце, при выключенном огне","d":"Добавленный слишком рано, он карамелизуется и подгорит, придав горечь"},
+      {"icon":"🍇","t":"Изюм добавляется в последние 30 минут тушения","d":"Он набухает и подслащивает соус, не превращаясь в кашу"},
+      {"icon":"🌰","t":"Миндаль жарится отдельно, никогда не тушится в рагу","d":"Остаётся хрустящим — необходимый контраст мягкому сладкому мясу"},
+      {"icon":"🕌","t":"Традиционное блюдо праздника Курбан-байрам, готовится из мяса жертвенного животного","d":"Обилие мёда изначально служило и консервантом, до появления холодильников"}
+    ],
+    "ar": [
+      {"icon":"🍯","t":"العسل يُضاف في النهاية تمامًا، بعد إطفاء النار","d":"إذا أُضيف مبكرًا جدًا، سيتكرمل ويحترق، مانحًا مرارة"},
+      {"icon":"🍇","t":"الزبيب يُضاف في آخر 30 دقيقة من الطهي","d":"ينتفخ ويحلّي الصلصة دون أن يتفتت"},
+      {"icon":"🌰","t":"اللوز يُقلى منفصلًا، لا يُطهى أبدًا في اليخنة","d":"يبقى مقرمشًا، تباين ضروري أمام اللحم الطري الحلو"},
+      {"icon":"🕌","t":"طبق تقليدي لعيد الأضحى، يُطهى من لحم الأضحية","d":"العسل الوفير كان في الأصل يعمل أيضًا كمادة حافظة، قبل الثلاجات"}
+    ],
+    "zh": [
+      {"icon":"🍯","t":"蜂蜜要在离火后最后加入","d":"太早加入会焦糖化并烧焦，产生苦味"},
+      {"icon":"🍇","t":"葡萄干在炖煮最后30分钟加入","d":"变得饱满并为酱汁增添甜味，而不会煮成糊状"},
+      {"icon":"🌰","t":"杏仁单独炸制，绝不与炖菜一起煮","d":"保持酥脆，与软嫩香甜的肉形成必要的对比"},
+      {"icon":"🕌","t":"传统的宰牲节菜肴，用献祭动物的肉烹制","d":"丰富的蜂蜜最初也起到防腐作用，那时还没有冰箱"}
+    ],
+    "ja": [
+      {"icon":"🍯","t":"蜂蜜は火を止めた最後の段階でのみ加える","d":"早く加えすぎるとカラメル化して焦げ、苦みが出てしまう"},
+      {"icon":"🍇","t":"レーズンは煮込みの最後30分に加える","d":"ふっくらとしてタレに甘みを加えるが、崩れて糊状にはならない"},
+      {"icon":"🌰","t":"アーモンドは別に揚げ、決して煮込みには入れない","d":"柔らかく甘い肉との対比として必要なカリッとした食感を保つ"},
+      {"icon":"🕌","t":"犠牲祭の伝統料理で、犠牲にした動物の肉から作られる","d":"たっぷりの蜂蜜はもともと、冷蔵庫がなかった時代の保存料としての役割も果たしていた"}
+    ],
+    "tr": [
+      {"icon":"🍯","t":"Bal en sonda, ocaktan alındıktan sonra eklenir","d":"Çok erken eklenirse karamelize olup yanar, acı bir tat verir"},
+      {"icon":"🍇","t":"Kuru üzümler pişirmenin son 30 dakikasında eklenir","d":"Kabarır ve sosu tatlandırır, ama ezilip püre olmaz"},
+      {"icon":"🌰","t":"Bademler ayrı kızartılır, asla yahnide pişirilmez","d":"Yumuşak tatlı etin karşısında gereken çıtırlığı korurlar"},
+      {"icon":"🕌","t":"Kurban Bayramı'nın geleneksel yemeği, kurban edilen hayvanın etinden yapılır","d":"Bol bal aslen buzdolaplarından önce koruyucu görevi de görürdü"}
+    ],
+    "it": [
+      {"icon":"🍯","t":"Il miele si aggiunge alla fine, a fuoco spento","d":"Aggiunto troppo presto, si caramellizzerebbe e brucerebbe, diventando amaro"},
+      {"icon":"🍇","t":"L'uvetta si aggiunge negli ultimi 30 minuti di cottura","d":"Si gonfia e addolcisce la salsa, senza sfaldarsi in purea"},
+      {"icon":"🌰","t":"Le mandorle si friggono a parte, mai cotte nello stufato","d":"Restano croccanti, un contrasto necessario alla carne morbida e dolce"},
+      {"icon":"🕌","t":"Piatto tradizionale dell'Eid al-Adha, cucinato con la carne dell'animale sacrificato","d":"Il miele abbondante fungeva anche da conservante, prima dei frigoriferi"}
+    ],
+    "ko": [
+      {"icon":"🍯","t":"꿀은 불을 끈 뒤 맨 마지막에 넣는다","d":"너무 일찍 넣으면 캐러멜화되어 타면서 쓴맛이 난다"},
+      {"icon":"🍇","t":"건포도는 조리 마지막 30분에 넣는다","d":"통통하게 부풀어 소스를 달콤하게 하지만 뭉개지지 않는다"},
+      {"icon":"🌰","t":"아몬드는 따로 튀기며 스튜에서 함께 끓이지 않는다","d":"부드럽고 달콤한 고기와 대비되는 바삭함을 유지한다"},
+      {"icon":"🕌","t":"희생된 동물의 고기로 만드는 전통 희생제(이드 알아드하) 음식","d":"넉넉한 꿀은 냉장고가 없던 시절 보존제 역할도 했다"}
+    ],
+    "hi": [
+      {"icon":"🍯","t":"शहद बिल्कुल अंत में, आंच बंद करके डाला जाता है","d":"जल्दी डालने पर यह कैरामेलाइज़ होकर जल जाता है और कड़वा स्वाद देता है"},
+      {"icon":"🍇","t":"किशमिश पकाने के अंतिम 30 मिनट में डाली जाती है","d":"फूलकर सॉस को मीठा करती है, बिना गूदा बने"},
+      {"icon":"🌰","t":"बादाम अलग से तले जाते हैं, कभी स्टू में नहीं पकाए जाते","d":"नरम मीठे मांस के सामने ज़रूरी कुरकुरापन बनाए रखते हैं"},
+      {"icon":"🕌","t":"ईद-उल-अज़हा का पारंपरिक व्यंजन, बलि किए जानवर के मांस से बनाया जाता है","d":"भरपूर शहद मूल रूप से फ्रिज से पहले परिरक्षक का काम भी करता था"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg mușchi de miel, tăiat cuburi mari","2 cepe, rase","4 linguri ulei vegetal","1 linguriță ghimbir măcinat","1 linguriță scorțișoară măcinată, plus un baton","1/2 linguriță piper negru măcinat","un praf de fire de șofran","200g stafide","100g migdale albe întregi","4 linguri miere","susan prăjit, pentru decor","sare, după gust"],
+    "en": ["1kg lamb shoulder, cut into large chunks","2 onions, grated","4 tbsp vegetable oil","1 tsp ground ginger","1 tsp ground cinnamon, plus a stick","1/2 tsp ground black pepper","a pinch of saffron threads","200g raisins","100g whole blanched almonds","4 tbsp honey","toasted sesame seeds, for garnish","salt, to taste"],
+    "es": ["1kg de paletilla de cordero, en trozos grandes","2 cebollas, ralladas","4 cdas de aceite vegetal","1 cdta de jengibre molido","1 cdta de canela molida, más una rama","1/2 cdta de pimienta negra molida","una pizca de hebras de azafrán","200g de pasas","100g de almendras blancas enteras","4 cdas de miel","semillas de sésamo tostadas, para decorar","sal, al gusto"],
+    "fr": ["1kg d'épaule d'agneau, en gros morceaux","2 oignons, râpés","4 c. à soupe d'huile végétale","1 c. à café de gingembre moulu","1 c. à café de cannelle moulue, plus un bâton","1/2 c. à café de poivre noir moulu","une pincée de filaments de safran","200g de raisins secs","100g d'amandes blanches entières","4 c. à soupe de miel","graines de sésame grillées, pour décorer","sel, selon le goût"],
+    "de": ["1kg Lammschulter, in große Stücke geschnitten","2 Zwiebeln, gerieben","4 EL Pflanzenöl","1 TL gemahlener Ingwer","1 TL gemahlener Zimt, plus eine Stange","1/2 TL gemahlener schwarzer Pfeffer","eine Prise Safranfäden","200g Rosinen","100g ganze weiße Mandeln","4 EL Honig","geröstete Sesamsamen, zum Garnieren","Salz, nach Geschmack"],
+    "pt": ["1kg de pá de cordeiro, em pedaços grandes","2 cebolas, raladas","4 col. sopa de óleo vegetal","1 col. chá de gengibre moído","1 col. chá de canela moída, mais um pau","1/2 col. chá de pimenta preta moída","uma pitada de fios de açafrão","200g de passas","100g de amêndoas brancas inteiras","4 col. sopa de mel","sementes de gergelim tostadas, para decorar","sal, a gosto"],
+    "ru": ["1кг бараньей лопатки, крупными кусками","2 луковицы, натёртых","4 ст.л. растительного масла","1 ч.л. молотого имбиря","1 ч.л. молотой корицы, плюс палочка","1/2 ч.л. молотого чёрного перца","щепотка нитей шафрана","200г изюма","100г целого бланшированного миндаля","4 ст.л. мёда","обжаренный кунжут, для украшения","соль, по вкусу"],
+    "ar": ["1كغ كتف خروف، مقطع قطعًا كبيرة","2 بصلة، مبشورة","4 ملاعق كبيرة زيت نباتي","ملعقة صغيرة زنجبيل مطحون","ملعقة صغيرة قرفة مطحونة، إضافة عود واحد","نصف ملعقة صغيرة فلفل أسود مطحون","رشة من خيوط الزعفران","200غ زبيب","100غ لوز أبيض كامل","4 ملاعق كبيرة عسل","سمسم محمّص، للتزيين","ملح، حسب الرغبة"],
+    "zh": ["1公斤羊肩肉，切大块","2个洋葱，擦碎","4汤匙植物油","1茶匙姜粉","1茶匙肉桂粉，另加1根肉桂棒","1/2茶匙黑胡椒粉","少许番红花丝","200克葡萄干","100克整颗去皮杏仁","4汤匙蜂蜜","烤芝麻，装饰用","盐，适量"],
+    "ja": ["羊肩肉1kg、大きめのぶつ切り","玉ねぎ2個、すりおろす","植物油大さじ4","生姜粉小さじ1","シナモン粉小さじ1、さらにスティック1本","黒こしょう小さじ1/2","サフラン少々","レーズン200g","皮なしアーモンド（丸ごと）100g","蜂蜜大さじ4","炒りごま、飾り用","塩、お好みで"],
+    "tr": ["1kg kuzu kürek eti, büyük parçalar halinde","2 soğan, rendelenmiş","4 yemek kaşığı bitkisel yağ","1 çay kaşığı öğütülmüş zencefil","1 çay kaşığı öğütülmüş tarçın, artı bir çubuk","1/2 çay kaşığı öğütülmüş karabiber","bir tutam safran teli","200g kuru üzüm","100g kabuksuz tam badem","4 yemek kaşığı bal","kavrulmuş susam, süslemek için","tuz, damak zevkine göre"],
+    "it": ["1kg di spalla di agnello, a pezzi grandi","2 cipolle, grattugiate","4 cucchiai di olio vegetale","1 cucchiaino di zenzero macinato","1 cucchiaino di cannella macinata, più una stecca","1/2 cucchiaino di pepe nero macinato","un pizzico di zafferano in fili","200g di uvetta","100g di mandorle bianche intere","4 cucchiai di miele","semi di sesamo tostati, per guarnire","sale, a piacere"],
+    "ko": ["양 어깨살 1kg, 큼직하게 썬 것","양파 2개, 간 것","식용유 4큰술","간 생강 1작은술","계핏가루 1작은술, 스틱 1개 추가","흑후추 1/2작은술","사프란실 약간","건포도 200g","껍질 벗긴 통아몬드 100g","꿀 4큰술","볶은 참깨, 고명용","소금, 입맛에 맞게"],
+    "hi": ["1किलो भेड़ का मांस, बड़े टुकड़ों में कटा हुआ","2 प्याज़, कद्दूकस किए हुए","4 बड़े चम्मच वनस्पति तेल","1 छोटा चम्मच पिसी अदरक","1 छोटा चम्मच पिसी दालचीनी, साथ में एक छड़ी","1/2 छोटा चम्मच पिसी काली मिर्च","केसर के धागों की चुटकी","200ग्राम किशमिश","100ग्राम साबुत छिले बादाम","4 बड़े चम्मच शहद","भुना तिल, सजावट के लिए","नमक, स्वादानुसार"]
+  },
+  "howIsMade": {
+    "ro": "RUMENEȘTE MIELUL: rumenește bucățile de miel în ulei, adaugă ceapa rasă, ghimbirul, scorțișoara, piperul, șofranul și sarea. FIERBE ÎNĂBUȘIT: acoperă cu apă, adu la fierbere, acoperă și fierbe la foc mic 1,5 ore, până carnea devine fragedă. ADAUGĂ STAFIDELE: adaugă stafidele în ultimele 30 de minute, lasă sosul să se reducă și să se îngroașe. PRĂJEȘTE MIGDALELE: separat, prăjește migdalele întregi în puțin ulei, până se rumenesc, scurge-le. ÎNCHEIE CU MIERE: amestecă mierea în sos la final, cu focul stins, ca să nu se caramelizeze, potrivește gustul. SERVEȘTE: presară migdalele prăjite și susanul deasupra, servește cu pâine.",
+    "en": "BROWN THE LAMB: brown the lamb chunks in oil, add the grated onion, ginger, cinnamon, pepper, saffron and salt. BRAISE: cover with water, bring to a boil, cover and simmer on low for 1.5 hours, until the meat is tender. ADD THE RAISINS: add the raisins in the last 30 minutes, let the sauce reduce and thicken. FRY THE ALMONDS: separately, fry the whole almonds in a little oil until golden, drain them. FINISH WITH HONEY: stir the honey into the sauce at the end, with the heat off, so it doesn't caramelize, adjust the seasoning. SERVE: sprinkle the fried almonds and sesame seeds on top, serve with bread.",
+    "es": "SELLA EL CORDERO: sella los trozos de cordero en aceite, añade la cebolla rallada, el jengibre, la canela, la pimienta, el azafrán y la sal. COCINA A FUEGO LENTO: cubre con agua, lleva a ebullición, tapa y cocina a fuego bajo 1,5 horas, hasta que la carne esté tierna. AÑADE LAS PASAS: añade las pasas en los últimos 30 minutos, deja que la salsa reduzca y espese. FRÍE LAS ALMENDRAS: aparte, fríe las almendras enteras en un poco de aceite hasta dorarlas, escúrrelas. TERMINA CON MIEL: incorpora la miel a la salsa al final, con el fuego apagado, para que no se caramelice, ajusta el sabor. SIRVE: espolvorea las almendras fritas y el sésamo encima, sirve con pan.",
+    "fr": "SAISIS L'AGNEAU: fais dorer les morceaux d'agneau dans l'huile, ajoute l'oignon râpé, le gingembre, la cannelle, le poivre, le safran et le sel. MIJOTE: couvre d'eau, porte à ébullition, couvre et laisse mijoter à feu doux 1h30, jusqu'à tendreté de la viande. AJOUTE LES RAISINS SECS: ajoute les raisins secs dans les 30 dernières minutes, laisse la sauce réduire et épaissir. FAIS FRIRE LES AMANDES: à part, fais frire les amandes entières dans un peu d'huile jusqu'à dorer, égoutte-les. TERMINE AU MIEL: incorpore le miel à la sauce en fin de cuisson, feu éteint, pour qu'il ne caramélise pas, ajuste l'assaisonnement. SERS: parsème d'amandes frites et de graines de sésame, sers avec du pain.",
+    "de": "BRÄTE DAS LAMM AN: das Lamm in Öl anbraten, die geriebene Zwiebel, Ingwer, Zimt, Pfeffer, Safran und Salz zugeben. SCHMORE: mit Wasser bedecken, aufkochen, abdecken und bei niedriger Hitze 1,5 Stunden köcheln, bis das Fleisch zart ist. FÜGE DIE ROSINEN HINZU: die Rosinen in den letzten 30 Minuten zugeben, die Sauce einkochen und eindicken lassen. BRATE DIE MANDELN: getrennt die ganzen Mandeln in etwas Öl goldbraun braten, abtropfen lassen. VOLLENDE MIT HONIG: den Honig am Ende bei ausgeschaltetem Herd unterrühren, damit er nicht karamellisiert, abschmecken. SERVIEREN: mit gebratenen Mandeln und Sesam bestreuen, mit Brot servieren.",
+    "pt": "SELE O CORDEIRO: sele os pedaços de cordeiro em óleo, junte a cebola ralada, o gengibre, a canela, a pimenta, o açafrão e o sal. COZINHE EM LUME BRANDO: cubra com água, leve a ferver, tape e cozinhe em lume brando 1,5 horas, até a carne ficar macia. JUNTE AS PASSAS: junte as passas nos últimos 30 minutos, deixe o molho reduzir e engrossar. FRITE AS AMÊNDOAS: à parte, frite as amêndoas inteiras em pouco óleo até dourarem, escorra-as. TERMINE COM MEL: incorpore o mel ao molho no final, com o fogo apagado, para não caramelizar, ajuste o tempero. SIRVA: polvilhe as amêndoas fritas e as sementes de gergelim por cima, sirva com pão.",
+    "ru": "ОБЖАРЬ БАРАНИНУ: обжарь куски баранины в масле, добавь тёртый лук, имбирь, корицу, перец, шафран и соль. ТУШИ: залей водой, доведи до кипения, накрой крышкой и туши на слабом огне 1,5 часа, пока мясо не станет мягким. ДОБАВЬ ИЗЮМ: добавь изюм в последние 30 минут, дай соусу увариться и загустеть. ОБЖАРЬ МИНДАЛЬ: отдельно обжарь целый миндаль в небольшом количестве масла до золотистого цвета, слей масло. ЗАВЕРШИ МЁДОМ: вмешай мёд в соус в самом конце, при выключенном огне, чтобы он не карамелизовался, отрегулируй вкус. ПОДАЙ: посыпь жареным миндалём и кунжутом, подавай с хлебом.",
+    "ar": "حمّر الخروف: حمّر قطع الخروف في الزيت، أضف البصل المبشور والزنجبيل والقرفة والفلفل والزعفران والملح. اطهُ على نار هادئة: غطِّ بالماء، اجلب إلى الغليان، غطِّ واطهُ على نار هادئة 1.5 ساعة حتى يصبح اللحم طريًا. أضف الزبيب: أضف الزبيب في آخر 30 دقيقة، دع الصلصة تتقلص وتتكاثف. اقلِ اللوز: منفصلًا، اقلِ اللوز الكامل بقليل من الزيت حتى يتحمّر، صفّه. أنهِ بالعسل: قلّب العسل في الصلصة في النهاية والنار مطفأة حتى لا يتكرمل، اضبط النكهة. قدّم: رُشّ اللوز المقلي والسمسم فوقها، قدّمها مع الخبز.",
+    "zh": "煎羊肉：将羊肉块放入油中煎上色，加入擦碎的洋葱、姜、肉桂、胡椒、番红花和盐。炖煮：加水没过，煮沸后加盖转小火炖1.5小时，直至肉变软烂。加入葡萄干：在最后30分钟加入葡萄干，让酱汁收浓变稠。炸杏仁：另起锅用少许油将整颗杏仁炸至金黄，沥干。最后加蜂蜜：离火后将蜂蜜拌入酱汁中，以免焦糖化，调整咸淡。上桌：撒上炸杏仁和芝麻，配面包享用。",
+    "ja": "羊肉を焼く：油で羊肉のぶつ切りを焼き色をつけ、すりおろした玉ねぎ、生姜、シナモン、こしょう、サフラン、塩を加える。煮込む：水を注いで沸騰させ、蓋をして弱火で1時間半、肉が柔らかくなるまで煮る。レーズンを加える：最後の30分にレーズンを加え、タレを煮詰めてとろみをつける。アーモンドを揚げる：別に、少量の油で丸ごとのアーモンドをきつね色になるまで揚げ、油を切る。蜂蜜で仕上げる：火を止めてからタレに蜂蜜を混ぜ、カラメル化しないようにし、味を調える。盛り付ける：揚げたアーモンドとごまを散らし、パンを添えて提供する。",
+    "tr": "KUZUYU KIZARTIN: kuzu parçalarını yağda kızartın, rendelenmiş soğanı, zencefili, tarçını, karabiberi, safranı ve tuzu ekleyin. YAVAŞ PİŞİRİN: suyla örtün, kaynatın, kapatıp kısık ateşte 1,5 saat, et yumuşayana kadar pişirin. KURU ÜZÜMLERİ EKLEYİN: son 30 dakikada kuru üzümleri ekleyin, sosun azalıp koyulaşmasını bekleyin. BADEMLERİ KIZARTIN: ayrı olarak, tam bademleri biraz yağda altın rengi olana kadar kızartın, süzün. BALLA TAMAMLAYIN: balı sona doğru ocak kapalıyken sosa karıştırın, karamelize olmasın diye, tadı ayarlayın. SERVİS YAPIN: kızarmış badem ve susamı üzerine serpin, ekmekle servis edin.",
+    "it": "ROSOLA L'AGNELLO: rosola i pezzi di agnello nell'olio, aggiungi la cipolla grattugiata, lo zenzero, la cannella, il pepe, lo zafferano e il sale. BRASA: copri d'acqua, porta a bollore, copri e cuoci a fuoco basso per 1,5 ore, finché la carne è tenera. AGGIUNGI L'UVETTA: aggiungi l'uvetta negli ultimi 30 minuti, lascia che la salsa si riduca e si addensi. FRIGGI LE MANDORLE: a parte, friggi le mandorle intere in poco olio finché dorate, scolale. COMPLETA CON IL MIELE: incorpora il miele nella salsa alla fine, a fuoco spento, così non caramellizza, aggiusta il sapore. SERVI: cospargi con le mandorle fritte e i semi di sesamo, servi con pane.",
+    "ko": "양고기 굽기: 양고기 덩어리를 기름에 갈색이 나도록 굽고, 간 양파, 생강, 계피, 후추, 사프란, 소금을 넣는다. 조리기: 물을 부어 끓인 뒤 뚜껑을 덮고 약불에서 1.5시간, 고기가 부드러워질 때까지 끓인다. 건포도 넣기: 마지막 30분에 건포도를 넣고 소스가 졸아 걸쭉해지게 둔다. 아몬드 튀기기: 따로 통아몬드를 약간의 기름에 황금빛이 될 때까지 튀겨 기름을 뺀다. 꿀로 마무리하기: 불을 끈 뒤 꿀을 소스에 섞어 캐러멜화되지 않게 하고 간을 맞춘다. 서빙하기: 튀긴 아몬드와 참깨를 뿌려 빵과 함께 낸다.",
+    "hi": "भेड़ का मांस सेकें: भेड़ के मांस के टुकड़ों को तेल में भूरा करें, कद्दूकस किया प्याज़, अदरक, दालचीनी, काली मिर्च, केसर और नमक डालें। धीमी आंच पर पकाएं: पानी से ढकें, उबाल लाएं, ढककर धीमी आंच पर 1.5 घंटे, मांस नरम होने तक पकाएं। किशमिश डालें: अंतिम 30 मिनट में किशमिश डालें, सॉस को गाढ़ा होने दें। बादाम तलें: अलग से, साबुत बादाम को थोड़े तेल में सुनहरा होने तक तलें, छान लें। शहद से पूरा करें: अंत में आंच बंद करके शहद सॉस में मिलाएं ताकि कैरामेलाइज़ न हो, स्वाद समायोजित करें। परोसें: ऊपर तले बादाम और तिल छिड़कें, ब्रेड के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Mrouzia e felul emblematic al sărbătorii Eid al-Adha, gătit tradițional din carnea animalului sacrificat pentru ocazie. Combinația de miel, stafide, migdale și miere e printre cele mai dulci preparate din carne ale bucătăriei marocane, o trăsătură care surprinde adesea vizitatorii obișnuiți cu tocănițe sărate.\n\nÎn trecut, cantitatea generoasă de miere nu era doar pentru gust — zahărul din miere acționa ca un conservant natural, permițând mrouziei să se păstreze săptămâni întregi fără frigider, într-o perioadă în care sacrificiul de Eid producea mai multă carne decât putea fi consumată imediat. Astăzi, chiar dacă frigiderele au eliminat această nevoie practică, rețeta a rămas neschimbată, iar dulceața intensă continuă să definească felul ca pe unul special, rezervat sărbătorilor.",
+    "en": "Mrouzia is the emblematic dish of Eid al-Adha, traditionally cooked from the meat of the animal sacrificed for the occasion. The combination of lamb, raisins, almonds and honey is among the sweetest meat dishes in Moroccan cuisine, a trait that often surprises visitors used to savory stews.\n\nIn the past, the generous amount of honey wasn't just for flavor — the sugar in honey acted as a natural preservative, allowing mrouzia to keep for weeks without a refrigerator, at a time when the Eid sacrifice produced more meat than could be eaten right away. Today, even though refrigerators have removed that practical need, the recipe has stayed unchanged, and its intense sweetness still marks the dish as a special one, reserved for celebrations.",
+    "es": "El mrouzia es el plato emblemático del Eid al-Adha, cocinado tradicionalmente con la carne del animal sacrificado para la ocasión. La combinación de cordero, pasas, almendras y miel está entre los platos de carne más dulces de la cocina marroquí, un rasgo que a menudo sorprende a los visitantes acostumbrados a guisos salados.\n\nEn el pasado, la generosa cantidad de miel no era solo por sabor — el azúcar de la miel actuaba como conservante natural, permitiendo que el mrouzia se conservara semanas sin frigorífico, en una época en la que el sacrificio del Eid producía más carne de la que se podía comer de inmediato. Hoy, aunque los frigoríficos han eliminado esa necesidad práctica, la receta se ha mantenido igual, y su intenso dulzor sigue marcando el plato como uno especial, reservado para las celebraciones.",
+    "fr": "Le mrouzia est le plat emblématique de l'Aïd al-Adha, traditionnellement cuisiné avec la viande de l'animal sacrifié pour l'occasion. Le mélange d'agneau, de raisins secs, d'amandes et de miel figure parmi les plats de viande les plus sucrés de la cuisine marocaine, un trait qui surprend souvent les visiteurs habitués aux ragoûts salés.\n\nAutrefois, la généreuse quantité de miel n'était pas qu'une question de goût — le sucre du miel agissait comme conservateur naturel, permettant au mrouzia de se conserver des semaines sans réfrigérateur, à une époque où le sacrifice de l'Aïd produisait plus de viande qu'on ne pouvait en manger immédiatement. Aujourd'hui, même si les réfrigérateurs ont supprimé ce besoin pratique, la recette est restée inchangée, et sa douceur intense continue de marquer le plat comme spécial, réservé aux fêtes.",
+    "de": "Mrouzia ist das emblematische Gericht des Eid al-Adha, traditionell aus dem Fleisch des für den Anlass geschlachteten Tieres zubereitet. Die Kombination aus Lamm, Rosinen, Mandeln und Honig gehört zu den süßesten Fleischgerichten der marokkanischen Küche, ein Merkmal, das Besucher, die an herzhafte Eintöpfe gewöhnt sind, oft überrascht.\n\nFrüher diente die reichliche Honigmenge nicht nur dem Geschmack — der Zucker im Honig wirkte als natürliches Konservierungsmittel, wodurch sich Mrouzia wochenlang ohne Kühlschrank hielt, zu einer Zeit, als das Eid-Opfer mehr Fleisch lieferte, als sofort gegessen werden konnte. Heute, obwohl Kühlschränke diese praktische Notwendigkeit beseitigt haben, ist das Rezept unverändert geblieben, und die intensive Süße kennzeichnet das Gericht weiterhin als etwas Besonderes, das für Feste reserviert ist.",
+    "pt": "O mrouzia é o prato emblemático do Eid al-Adha, tradicionalmente cozinhado com a carne do animal sacrificado para a ocasião. A combinação de cordeiro, passas, amêndoas e mel está entre os pratos de carne mais doces da culinária marroquina, um traço que muitas vezes surpreende visitantes habituados a guisados salgados.\n\nNo passado, a quantidade generosa de mel não era apenas para sabor — o açúcar do mel funcionava como conservante natural, permitindo que o mrouzia se conservasse durante semanas sem frigorífico, numa época em que o sacrifício do Eid produzia mais carne do que podia ser comida de imediato. Hoje, embora os frigoríficos tenham eliminado essa necessidade prática, a receita permaneceu inalterada, e a sua doçura intensa continua a marcar o prato como especial, reservado para celebrações.",
+    "ru": "Мрузия — знаковое блюдо праздника Курбан-байрам, традиционно готовится из мяса животного, принесённого в жертву по этому случаю. Сочетание баранины, изюма, миндаля и мёда — одно из самых сладких мясных блюд марокканской кухни, черта, которая часто удивляет гостей, привыкших к солёным рагу.\n\nВ прошлом щедрое количество мёда служило не только вкусу — сахар в мёде действовал как естественный консервант, позволяя мрузии храниться неделями без холодильника, в те времена, когда жертвоприношение на Курбан-байрам давало больше мяса, чем можно было съесть сразу. Сегодня, хотя холодильники устранили эту практическую необходимость, рецепт остался неизменным, а насыщенная сладость по-прежнему отмечает это блюдо как особое, предназначенное для праздников.",
+    "ar": "المروزية هي الطبق الرمزي لعيد الأضحى، يُطهى تقليديًا من لحم الأضحية التي تُذبح لهذه المناسبة. مزيج الخروف والزبيب واللوز والعسل من بين أحلى أطباق اللحم في المطبخ المغربي، سمة كثيرًا ما تفاجئ الزوار المعتادين على اليخنات المالحة.\n\nفي الماضي، لم تكن الكمية الوفيرة من العسل من أجل النكهة فقط — كان السكر في العسل يعمل كمادة حافظة طبيعية، مما يسمح للمروزية بالبقاء أسابيع دون ثلاجة، في زمن كان فيه ذبح عيد الأضحى ينتج لحمًا أكثر مما يمكن أكله فورًا. اليوم، رغم أن الثلاجات ألغت هذه الحاجة العملية، بقيت الوصفة دون تغيير، ولا تزال حلاوتها المكثفة تميّز الطبق كطبق خاص، مخصص للاحتفالات.",
+    "zh": "姆鲁齐亚是宰牲节的标志性菜肴，传统上用为此节日宰杀的牲畜之肉烹制。羊肉、葡萄干、杏仁和蜂蜜的组合，是摩洛哥菜系中最甜的肉类菜肴之一，这一特点常常令习惯了咸味炖菜的访客感到惊讶。\n\n过去，慷慨用量的蜂蜜不仅仅是为了味道——蜂蜜中的糖分起到天然防腐剂的作用，让姆鲁齐亚在没有冰箱的情况下也能保存数周，而那时宰牲节的宰杀量往往超出了立即能吃完的份量。如今，尽管冰箱已经消除了这种实际需求，配方却一直未变，浓郁的甜味依然标志着这是一道特殊的菜肴，专为节庆场合而留。",
+    "ja": "ムルージアは犠牲祭（イード・アル＝アドハー）を象徴する料理で、伝統的にはその機会のために犠牲にされた動物の肉から作られる。羊肉、レーズン、アーモンド、蜂蜜の組み合わせは、モロッコ料理の中でも最も甘い肉料理の一つであり、しょっぱい煮込み料理に慣れた訪問者をしばしば驚かせる特徴である。\n\nかつて、たっぷりの蜂蜜は味だけのためではなかった——蜂蜜の糖分は天然の保存料として働き、冷蔵庫がなかった時代に犠牲祭の犠牲がすぐに食べきれないほどの肉を生み出していた頃、ムルージアを何週間も保存できるようにしていた。今日、冷蔵庫がその実用的な必要性をなくしたにもかかわらず、レシピは変わらないままであり、その強い甘さは今も祝祭専用の特別な料理としてこの料理を特徴づけている。",
+    "tr": "Mrouzia, Kurban Bayramı'nın simgesel yemeğidir, geleneksel olarak bu vesileyle kurban edilen hayvanın etinden pişirilir. Kuzu eti, kuru üzüm, badem ve balın birleşimi, Fas mutfağının en tatlı et yemekleri arasındadır, bu özellik tuzlu yahnilere alışkın ziyaretçileri sıkça şaşırtır.\n\nGeçmişte, cömert bal miktarı sadece lezzet için değildi — baldaki şeker doğal bir koruyucu görevi görürdü, bu da mrouzia'nın buzdolabı olmadan haftalarca saklanabilmesini sağlardı, o dönemde Kurban Bayramı'nın kurbanı hemen yenebilecekten daha fazla et üretirdi. Bugün, buzdolapları bu pratik ihtiyacı ortadan kaldırmış olsa da, tarif değişmeden kalmıştır ve yoğun tatlılığı bu yemeği hâlâ bayramlara özgü, özel bir yemek olarak işaretlemeye devam eder.",
+    "it": "Il mrouzia è il piatto emblematico dell'Eid al-Adha, tradizionalmente cucinato con la carne dell'animale sacrificato per l'occasione. La combinazione di agnello, uvetta, mandorle e miele è tra i piatti di carne più dolci della cucina marocchina, un tratto che spesso sorprende i visitatori abituati agli stufati salati.\n\nIn passato, la generosa quantità di miele non era solo per il sapore — lo zucchero nel miele agiva come conservante naturale, permettendo al mrouzia di conservarsi per settimane senza frigorifero, in un'epoca in cui il sacrificio dell'Eid produceva più carne di quanta se ne potesse mangiare subito. Oggi, anche se i frigoriferi hanno eliminato questa necessità pratica, la ricetta è rimasta invariata, e la sua intensa dolcezza continua a segnare il piatto come speciale, riservato alle festività.",
+    "ko": "므루지아는 이드 알아드하(희생제)를 상징하는 요리로, 전통적으로 이 명절을 위해 희생된 동물의 고기로 만든다. 양고기, 건포도, 아몬드, 꿀의 조합은 모로코 요리 중 가장 달콤한 육류 요리에 속하며, 짭짤한 스튜에 익숙한 방문객들을 종종 놀라게 하는 특징이다.\n\n과거에는 넉넉한 꿀의 양이 단순히 맛을 위한 것만은 아니었다 — 꿀 속의 당분이 천연 방부제 역할을 해, 냉장고 없이도 므루지아를 몇 주 동안 보관할 수 있게 해주었는데, 당시 이드 희생제는 즉시 다 먹을 수 없을 만큼 많은 고기를 만들어냈다. 오늘날 냉장고가 이 실용적 필요성을 없앴음에도 불구하고 레시피는 변하지 않았으며, 강렬한 단맛은 여전히 이 요리를 명절을 위한 특별한 음식으로 자리매김하게 한다.",
+    "hi": "म्रूज़िया ईद-उल-अज़हा का प्रतीकात्मक व्यंजन है, जो पारंपरिक रूप से इस अवसर के लिए बलि किए गए जानवर के मांस से बनाया जाता है। भेड़ के मांस, किशमिश, बादाम और शहद का मेल मोरक्कन व्यंजनों में सबसे मीठे मांस के व्यंजनों में से एक है, यह खासियत अक्सर नमकीन स्टू के आदी आगंतुकों को चौंका देती है।\n\nअतीत में, शहद की भरपूर मात्रा केवल स्वाद के लिए नहीं थी — शहद में मौजूद चीनी एक प्राकृतिक परिरक्षक का काम करती थी, जिससे म्रूज़िया बिना फ्रिज के हफ्तों तक टिकता था, उस समय जब ईद की बलि तुरंत खाई जा सकने वाली मात्रा से अधिक मांस पैदा करती थी। आज, हालांकि फ्रिज ने यह व्यावहारिक ज़रूरत खत्म कर दी है, रेसिपी अपरिवर्तित रही है, और इसकी तीव्र मिठास अभी भी इस व्यंजन को उत्सवों के लिए आरक्षित, खास व्यंजन के रूप में चिह्नित करती है।"
+  },
+  "meta": {
+    "time": 120,
+    "costRon": 26,
+    "tags": ["family"],
+    "desc": {
+      "ro": "Miel înăbușit dulce cu stafide, migdale prăjite și miere, aromat cu ghimbir și scorțișoară.",
+      "en": "Sweet braised lamb with raisins, fried almonds and honey, seasoned with ginger and cinnamon.",
+      "es": "Cordero estofado dulce con pasas, almendras fritas y miel, sazonado con jengibre y canela.",
+      "fr": "Agneau mijoté sucré aux raisins secs, amandes frites et miel, parfumé au gingembre et à la cannelle.",
+      "de": "Süß geschmortes Lamm mit Rosinen, gebratenen Mandeln und Honig, gewürzt mit Ingwer und Zimt.",
+      "pt": "Cordeiro estufado doce com passas, amêndoas fritas e mel, temperado com gengibre e canela.",
+      "ru": "Сладкая тушёная баранина с изюмом, жареным миндалём и мёдом, приправленная имбирём и корицей.",
+      "ar": "خروف مطهو حلو بالزبيب واللوز المقلي والعسل، منكه بالزنجبيل والقرفة.",
+      "zh": "甜味炖羊肉，配葡萄干、炸杏仁与蜂蜜，以姜和肉桂调味。",
+      "ja": "レーズン、揚げアーモンド、蜂蜜を加えた甘い羊肉の煮込み、生姜とシナモンで香り付け。",
+      "tr": "Kuru üzüm, kızarmış badem ve balla hazırlanan tatlı kuzu yahnisi, zencefil ve tarçınla tatlandırılmış.",
+      "it": "Agnello brasato dolce con uvetta, mandorle fritte e miele, insaporito con zenzero e cannella.",
+      "ko": "건포도, 튀긴 아몬드, 꿀을 넣은 달콤한 양고기 조림, 생강과 계피로 향을 냈다.",
+      "hi": "किशमिश, तले बादाम और शहद वाला मीठा भेड़ का मांस, अदरक और दालचीनी से महकाया गया।"
+    }
+  }
+}

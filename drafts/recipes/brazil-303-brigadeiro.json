@@ -1,0 +1,176 @@
+{
+  "id": 303,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Brazilia", "en": "Brazil", "es": "Brasil", "fr": "Brésil", "de": "Brasilien",
+    "pt": "Brasil", "ru": "Бразилия", "ar": "البرازيل", "zh": "巴西", "ja": "ブラジル",
+    "hi": "ब्राज़ील", "tr": "Brezilya", "it": "Brasile", "ko": "브라질"
+  },
+  "name": {
+    "ro": "Brigadeiro", "en": "Brigadeiro", "es": "Brigadeiro", "fr": "Brigadeiro", "de": "Brigadeiro",
+    "pt": "Brigadeiro", "ru": "Бригадейро", "ar": "بريغاديرو", "zh": "巴西巧克力球", "ja": "ブリガデイロ",
+    "tr": "Brigadeiro", "it": "Brigadeiro", "ko": "브리가데이루", "hi": "ब्रिगाडेरो"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Nachtisch",
+    "pt": "Sobremesa", "ru": "Десерт", "ar": "تحلية", "zh": "甜点", "ja": "デザート",
+    "hi": "मिठाई", "tr": "Tatlı", "it": "Dessert", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🥄","t":"Amestecul se gătește amestecând continuu, fără pauză","d":"Dacă se oprește amestecatul chiar și un minut, laptele condensat se prinde de fund și se arde"},
+      {"icon":"🧈","t":"Punctul exact se verifică trăgând lingura prin amestec","d":"Când fundul cratiței rămâne vizibil o clipă, brigadeiro-ul e gata"},
+      {"icon":"🧊","t":"Amestecul se răcește complet înainte de a fi rulat","d":"Cald fiind, e prea moale pentru a forma bile care își țin forma"},
+      {"icon":"🎉","t":"Prezent la aproape orice petrecere de zi de naștere braziliană","d":"E la fel de omniprezent la sărbătorile braziliene cum e tortul în alte culturi"}
+    ],
+    "en": [
+      {"icon":"🥄","t":"The mixture cooks while stirring nonstop, no breaks","d":"If you stop stirring even for a minute, the condensed milk sticks to the bottom and scorches"},
+      {"icon":"🧈","t":"The exact point is checked by dragging a spoon through the mixture","d":"When the pan's bottom stays visible for a moment, the brigadeiro is ready"},
+      {"icon":"🧊","t":"The mixture cools completely before being rolled","d":"Warm, it's too soft to form balls that hold their shape"},
+      {"icon":"🎉","t":"Present at nearly every Brazilian birthday party","d":"It's as omnipresent at Brazilian celebrations as cake is elsewhere"}
+    ],
+    "es": [
+      {"icon":"🥄","t":"La mezcla se cocina removiendo sin parar, sin pausas","d":"Si dejas de remover aunque sea un minuto, la leche condensada se pega al fondo y se quema"},
+      {"icon":"🧈","t":"El punto exacto se comprueba pasando una cuchara por la mezcla","d":"Cuando el fondo de la olla queda visible un instante, el brigadeiro está listo"},
+      {"icon":"🧊","t":"La mezcla se enfría por completo antes de enrollarla","d":"Caliente, está demasiado blanda para formar bolas que mantengan su forma"},
+      {"icon":"🎉","t":"Presente en casi toda fiesta de cumpleaños brasileña","d":"Es tan omnipresente en las celebraciones brasileñas como la tarta en otras culturas"}
+    ],
+    "fr": [
+      {"icon":"🥄","t":"Le mélange cuit en remuant sans arrêt, sans pause","d":"Si on arrête de remuer même une minute, le lait concentré colle au fond et brûle"},
+      {"icon":"🧈","t":"Le point exact se vérifie en traçant une cuillère dans le mélange","d":"Quand le fond de la casserole reste visible un instant, le brigadeiro est prêt"},
+      {"icon":"🧊","t":"Le mélange refroidit complètement avant d'être roulé","d":"Chaud, il est trop mou pour former des boules qui gardent leur forme"},
+      {"icon":"🎉","t":"Présent à presque tous les anniversaires brésiliens","d":"Il est aussi omniprésent aux fêtes brésiliennes que le gâteau ailleurs"}
+    ],
+    "de": [
+      {"icon":"🥄","t":"Die Mischung kocht unter ständigem Rühren, ohne Pause","d":"Hört man auch nur eine Minute mit Rühren auf, brennt die Kondensmilch am Boden an"},
+      {"icon":"🧈","t":"Der genaue Punkt wird geprüft, indem man mit dem Löffel durch die Mischung fährt","d":"Wenn der Topfboden kurz sichtbar bleibt, ist der Brigadeiro fertig"},
+      {"icon":"🧊","t":"Die Mischung kühlt vollständig ab, bevor sie gerollt wird","d":"Warm ist sie zu weich, um Kugeln zu formen, die ihre Form halten"},
+      {"icon":"🎉","t":"Auf fast jeder brasilianischen Geburtstagsfeier vertreten","d":"Er ist bei brasilianischen Feiern so allgegenwärtig wie Kuchen anderswo"}
+    ],
+    "pt": [
+      {"icon":"🥄","t":"A mistura cozinha mexendo sem parar, sem pausas","d":"Se parar de mexer nem que seja um minuto, o leite condensado gruda no fundo e queima"},
+      {"icon":"🧈","t":"O ponto certo verifica-se passando uma colher pela mistura","d":"Quando o fundo da panela fica visível por um instante, o brigadeiro está pronto"},
+      {"icon":"🧊","t":"A mistura arrefece completamente antes de ser enrolada","d":"Quente, fica mole demais para formar bolinhas que mantêm a forma"},
+      {"icon":"🎉","t":"Presente em quase toda festa de aniversário brasileira","d":"É tão onipresente nas festas brasileiras quanto o bolo em outras culturas"}
+    ],
+    "ru": [
+      {"icon":"🥄","t":"Смесь варится при непрерывном помешивании, без пауз","d":"Если перестать мешать хотя бы на минуту, сгущёнка прилипнет ко дну и подгорит"},
+      {"icon":"🧈","t":"Точный момент готовности проверяют, проведя ложкой по смеси","d":"Когда дно кастрюли на мгновение остаётся видимым, бригадейро готово"},
+      {"icon":"🧊","t":"Смесь полностью остывает перед скатыванием в шарики","d":"Тёплая, она слишком мягкая, чтобы шарики держали форму"},
+      {"icon":"🎉","t":"Присутствует почти на каждом бразильском дне рождения","d":"На бразильских праздниках оно так же вездесуще, как торт в других культурах"}
+    ],
+    "ar": [
+      {"icon":"🥄","t":"الخليط يُطهى مع التحريك المستمر دون توقف","d":"إذا توقفت عن التحريك ولو لدقيقة، سيلتصق الحليب المكثف بالقاع ويحترق"},
+      {"icon":"🧈","t":"النقطة المثالية تُختبر بسحب ملعقة عبر الخليط","d":"عندما تبقى قاعدة القدر مرئية للحظة، يكون البريغاديرو جاهزًا"},
+      {"icon":"🧊","t":"الخليط يبرد تمامًا قبل تشكيله كرات","d":"وهو ساخن، يكون طريًا جدًا ليُشكّل كرات تحافظ على شكلها"},
+      {"icon":"🎉","t":"حاضر في كل عيد ميلاد برازيلي تقريبًا","d":"إنه منتشر في الاحتفالات البرازيلية بقدر انتشار الكعك في ثقافات أخرى"}
+    ],
+    "zh": [
+      {"icon":"🥄","t":"混合物需持续搅拌煮制，不能停顿","d":"哪怕停搅一分钟，炼乳都会粘锅底并烧焦"},
+      {"icon":"🧈","t":"用勺子划过混合物来判断确切火候","d":"当锅底短暂露出时，巧克力球糊就做好了"},
+      {"icon":"🧊","t":"混合物需完全冷却后才能搓成球","d":"温热时太软，无法搓出保持形状的球"},
+      {"icon":"🎉","t":"几乎出现在每一场巴西生日派对上","d":"在巴西庆典上它无处不在，就像其他文化中的蛋糕一样"}
+    ],
+    "ja": [
+      {"icon":"🥄","t":"混ぜ続けながら休みなく加熱する","d":"1分でも混ぜるのをやめると、練乳が鍋底にくっついて焦げてしまう"},
+      {"icon":"🧈","t":"スプーンで混ぜた跡を見て正確な仕上がりを確認する","d":"鍋の底が一瞬見えるようになったらブリガデイロの完成"},
+      {"icon":"🧊","t":"丸める前に生地を完全に冷ます","d":"温かいままだと柔らかすぎて形を保つ球にならない"},
+      {"icon":"🎉","t":"ブラジルの誕生日パーティーのほぼすべてに登場する","d":"他の文化のケーキと同じくらい、ブラジルの祝い事に欠かせない存在だ"}
+    ],
+    "tr": [
+      {"icon":"🥄","t":"Karışım durmaksızın karıştırılarak pişirilir, ara verilmez","d":"Bir dakika bile karıştırmayı bırakırsanız, yoğunlaştırılmış süt dibe yapışıp yanar"},
+      {"icon":"🧈","t":"Tam kıvam, kaşığı karışımın içinden çekerek kontrol edilir","d":"Tencerenin dibi bir an için görünür hale geldiğinde brigadeiro hazırdır"},
+      {"icon":"🧊","t":"Karışım yuvarlanmadan önce tamamen soğutulur","d":"Sıcakken, şeklini koruyan toplar oluşturmak için çok yumuşaktır"},
+      {"icon":"🎉","t":"Neredeyse her Brezilya doğum günü partisinde bulunur","d":"Brezilya kutlamalarında, başka kültürlerdeki pasta kadar her yerdedir"}
+    ],
+    "it": [
+      {"icon":"🥄","t":"Il composto cuoce mescolando senza sosta, senza pause","d":"Se smetti di mescolare anche solo per un minuto, il latte condensato si attacca al fondo e brucia"},
+      {"icon":"🧈","t":"Il punto esatto si verifica passando un cucchiaio nel composto","d":"Quando il fondo della pentola resta visibile per un istante, il brigadeiro è pronto"},
+      {"icon":"🧊","t":"Il composto si raffredda completamente prima di essere formato in palline","d":"Caldo, è troppo morbido per formare palline che mantengono la forma"},
+      {"icon":"🎉","t":"Presente in quasi ogni festa di compleanno brasiliana","d":"È onnipresente alle feste brasiliane quanto la torta lo è altrove"}
+    ],
+    "ko": [
+      {"icon":"🥄","t":"혼합물은 쉬지 않고 계속 저으며 끓인다","d":"단 1분이라도 젓기를 멈추면 연유가 바닥에 눌어붙어 탄다"},
+      {"icon":"🧈","t":"숟가락으로 혼합물을 갈라보며 정확한 시점을 확인한다","d":"냄비 바닥이 잠깐 보이면 브리가데이루가 완성된 것이다"},
+      {"icon":"🧊","t":"굴리기 전에 혼합물을 완전히 식힌다","d":"따뜻하면 너무 물러서 모양을 유지하는 공 모양을 만들 수 없다"},
+      {"icon":"🎉","t":"거의 모든 브라질 생일 파티에 등장한다","d":"다른 문화의 케이크만큼이나 브라질 축하 자리에서 빠지지 않는다"}
+    ],
+    "hi": [
+      {"icon":"🥄","t":"मिश्रण को बिना रुके लगातार हिलाते हुए पकाया जाता है","d":"अगर एक मिनट के लिए भी हिलाना रोका जाए, तो कंडेंस्ड मिल्क तले से चिपककर जल जाता है"},
+      {"icon":"🧈","t":"सही बिंदु चम्मच को मिश्रण से खींचकर जांचा जाता है","d":"जब पैन का तल एक पल के लिए दिखे, तो ब्रिगाडेरो तैयार है"},
+      {"icon":"🧊","t":"बेलने से पहले मिश्रण पूरी तरह ठंडा किया जाता है","d":"गरम रहने पर यह इतना नरम होता है कि गेंदें अपना आकार नहीं रखतीं"},
+      {"icon":"🎉","t":"लगभग हर ब्राज़ीलियाई जन्मदिन पार्टी में मौजूद","d":"यह ब्राज़ीलियाई उत्सवों में उतना ही आम है जितना अन्य संस्कृतियों में केक"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1 conservă (395g) lapte condensat îndulcit","3 linguri cacao praf neîndulcită","1 lingură unt, plus în plus pentru uns mâinile","granule de ciocolată, pentru acoperit","un praf de sare"],
+    "en": ["1 can (395g) sweetened condensed milk","3 tbsp unsweetened cocoa powder","1 tbsp butter, plus extra for greasing hands","chocolate sprinkles, for coating","a pinch of salt"],
+    "es": ["1 lata (395g) de leche condensada azucarada","3 cdas de cacao en polvo sin azúcar","1 cda de mantequilla, más extra para engrasar las manos","granas de chocolate, para cubrir","una pizca de sal"],
+    "fr": ["1 boîte (395g) de lait concentré sucré","3 c. à soupe de cacao en poudre non sucré","1 c. à soupe de beurre, plus pour graisser les mains","vermicelles de chocolat, pour enrober","une pincée de sel"],
+    "de": ["1 Dose (395g) gezuckerte Kondensmilch","3 EL ungesüßtes Kakaopulver","1 EL Butter, plus extra zum Einfetten der Hände","Schokostreusel, zum Ummanteln","eine Prise Salz"],
+    "pt": ["1 lata (395g) de leite condensado","3 col. sopa de cacau em pó sem açúcar","1 col. sopa de manteiga, mais extra para untar as mãos","granulado de chocolate, para cobrir","uma pitada de sal"],
+    "ru": ["1 банка (395г) сгущённого молока с сахаром","3 ст.л. какао-порошка без сахара","1 ст.л. сливочного масла, плюс ещё для смазывания рук","шоколадная посыпка, для обваливания","щепотка соли"],
+    "ar": ["1 علبة (395غ) حليب مكثف محلى","3 ملاعق كبيرة كاكاو بودرة غير محلى","ملعقة كبيرة زبدة، إضافة لدهن اليدين","رشّات شوكولاتة، للتغطية","رشة ملح"],
+    "zh": ["1罐（395克）甜炼乳","3汤匙无糖可可粉","1汤匙黄油，另备涂手用","巧克力米，裹面用","少许盐"],
+    "ja": ["加糖練乳1缶（395g）","無糖ココアパウダー大さじ3","バター大さじ1、手に塗る用に追加","チョコレートスプレー、コーティング用","塩少々"],
+    "tr": ["1 kutu (395g) şekerli koyulaştırılmış süt","3 yemek kaşığı şekersiz kakao tozu","1 yemek kaşığı tereyağı, elleri yağlamak için ekstra","çikolata süsleme, kaplamak için","bir tutam tuz"],
+    "it": ["1 lattina (395g) di latte condensato zuccherato","3 cucchiai di cacao amaro in polvere","1 cucchiaio di burro, più extra per ungere le mani","codette di cioccolato, per ricoprire","un pizzico di sale"],
+    "ko": ["가당 연유 1캔(395g)","무가당 코코아파우더 3큰술","버터 1큰술, 손에 바를 추가분","초콜릿 스프링클, 코팅용","소금 약간"],
+    "hi": ["1 कैन (395ग्राम) मीठा कंडेंस्ड मिल्क","3 बड़े चम्मच बिना मीठा कोको पाउडर","1 बड़ा चम्मच मक्खन, हाथों पर लगाने के लिए अतिरिक्त","चॉकलेट स्प्रिंकल्स, कोटिंग के लिए","नमक की चुटकी"]
+  },
+  "howIsMade": {
+    "ro": "GĂTEȘTE AMESTECUL: combină laptele condensat, cacao, untul și sarea într-o cratiță, gătește la foc mediu-mic, amestecând continuu. VERIFICĂ CONSISTENȚA: continuă să amesteci până amestecul se îngroașă și se desprinde de fundul cratiței când tragi lingura prin el, circa 10-15 minute. LASĂ SĂ SE RĂCEASCĂ: transferă pe o farfurie unsă, lasă să se răcească complet, minim 1 oră (sau la frigider). MODELEAZĂ: unge-ți mâinile cu unt, rulează amestecul în bile mici. ACOPERĂ: rulează fiecare bilă în granule de ciocolată, până se acoperă complet. SERVEȘTE: pune în hârtii mini pentru bomboane, servește la temperatura camerei.",
+    "en": "COOK THE MIXTURE: combine the condensed milk, cocoa, butter and salt in a saucepan, cook over medium-low heat, stirring continuously. CHECK THE CONSISTENCY: keep stirring until the mixture thickens and pulls away from the bottom of the pan when you drag a spoon through it, about 10-15 minutes. LET IT COOL: transfer to a greased plate, let cool completely, at least 1 hour (or in the fridge). SHAPE: grease your hands with butter, roll the mixture into small balls. COAT: roll each ball in chocolate sprinkles until fully covered. SERVE: place in mini candy cups, serve at room temperature.",
+    "es": "COCINA LA MEZCLA: combina la leche condensada, el cacao, la mantequilla y la sal en una cacerola, cocina a fuego medio-bajo, removiendo continuamente. COMPRUEBA LA CONSISTENCIA: sigue removiendo hasta que la mezcla espese y se despegue del fondo de la cacerola al pasar la cuchara, unos 10-15 minutos. DEJA ENFRIAR: pasa a un plato engrasado, deja enfriar por completo, al menos 1 hora (o en la nevera). MOLDEA: engrasa tus manos con mantequilla, enrolla la mezcla en bolitas. CUBRE: pasa cada bola por granas de chocolate hasta cubrirla por completo. SIRVE: coloca en cápsulas de dulces, sirve a temperatura ambiente.",
+    "fr": "CUIS LE MÉLANGE: mélange le lait concentré, le cacao, le beurre et le sel dans une casserole, cuis à feu doux-moyen en remuant continuellement. VÉRIFIE LA CONSISTANCE: continue de remuer jusqu'à ce que le mélange épaississe et se détache du fond de la casserole quand on y passe une cuillère, environ 10-15 minutes. LAISSE REFROIDIR: transfère sur une assiette graissée, laisse refroidir complètement, au moins 1 heure (ou au réfrigérateur). FAÇONNE: graisse tes mains avec du beurre, roule le mélange en petites boules. ENROBE: roule chaque boule dans les vermicelles de chocolat jusqu'à ce qu'elle soit bien couverte. SERS: dépose dans des caissettes à bonbons, sers à température ambiante.",
+    "de": "KOCHE DIE MISCHUNG: Kondensmilch, Kakao, Butter und Salz in einem Topf vermischen, bei mittel-niedriger Hitze unter ständigem Rühren kochen. PRÜFE DIE KONSISTENZ: weiter rühren, bis die Mischung eindickt und sich vom Topfboden löst, wenn man mit dem Löffel durchzieht, etwa 10-15 Minuten. LASS SIE ABKÜHLEN: auf einen gefetteten Teller geben, vollständig abkühlen lassen, mindestens 1 Stunde (oder im Kühlschrank). FORME: die Hände mit Butter einfetten, die Mischung zu kleinen Kugeln rollen. UMHÜLLE: jede Kugel in Schokostreuseln wälzen, bis sie ganz bedeckt ist. SERVIEREN: in kleine Pralinenförmchen geben, bei Zimmertemperatur servieren.",
+    "pt": "COZINHE A MISTURA: combine o leite condensado, o cacau, a manteiga e o sal numa panela, cozinhe em fogo médio-baixo, mexendo continuamente. VERIFIQUE A CONSISTÊNCIA: continue mexendo até a mistura engrossar e se soltar do fundo da panela ao passar a colher, cerca de 10-15 minutos. DEIXE ARREFECER: transfira para um prato untado, deixe arrefecer completamente, pelo menos 1 hora (ou na geladeira). MODELE: unte as mãos com manteiga, enrole a mistura em bolinhas. COBRA: passe cada bolinha no granulado de chocolate até cobrir bem. SIRVA: coloque em forminhas de doce, sirva à temperatura ambiente.",
+    "ru": "ПРИГОТОВЬ СМЕСЬ: соедини сгущённое молоко, какао, масло и соль в кастрюле, вари на средне-слабом огне, непрерывно помешивая. ПРОВЕРЬ КОНСИСТЕНЦИЮ: продолжай мешать, пока смесь не загустеет и не начнёт отставать от дна кастрюли при проведении ложкой, около 10-15 минут. ДАЙ ОСТЫТЬ: переложи на смазанную маслом тарелку, дай полностью остыть, минимум 1 час (или в холодильнике). СФОРМИРУЙ: смажь руки маслом, скатай смесь в маленькие шарики. ОБВАЛЯЙ: обваляй каждый шарик в шоколадной посыпке до полного покрытия. ПОДАЙ: разложи по бумажным конфетным формочкам, подавай при комнатной температуре.",
+    "ar": "اطهُ الخليط: اخلط الحليب المكثف والكاكاو والزبدة والملح في قدر، اطهُ على نار متوسطة إلى هادئة مع التحريك المستمر. تحقق من القوام: واصل التحريك حتى يتكاثف الخليط وينفصل عن قاع القدر عند سحب ملعقة عبره، حوالي 10-15 دقيقة. دعه يبرد: انقله إلى طبق مدهون، دعه يبرد تمامًا، ساعة على الأقل (أو في الثلاجة). شكّل: ادهن يديك بالزبدة، شكّل الخليط إلى كرات صغيرة. غطِّ: لفّ كل كرة في رشّات الشوكولاتة حتى تُغطّى تمامًا. قدّم: ضعها في أكواب حلوى صغيرة، قدّمها بحرارة الغرفة.",
+    "zh": "煮混合物：将炼乳、可可粉、黄油和盐放入锅中，中小火加热，不断搅拌。检查浓稠度：持续搅拌直至混合物变浓稠，用勺子划过锅底时能露出锅底，约10-15分钟。放凉：倒在涂了油的盘子上，完全放凉，至少1小时（或放入冰箱）。塑形：用黄油涂抹双手，将混合物搓成小球。裹面：将每个小球滚上巧克力米，直至完全裹匀。上桌：放入迷你糖果纸杯中，室温享用。",
+    "ja": "混合物を煮る：練乳、ココア、バター、塩を鍋に合わせ、中弱火で絶えずかき混ぜながら加熱する。濃度を確認する：スプーンで混ぜた跡が鍋底に見えるくらいとろみがつくまでかき混ぜ続ける、約10〜15分。冷ます：バターを塗った皿に移し、完全に冷ます、最低1時間（または冷蔵庫で）。成形する：手にバターを塗り、生地を小さな団子状に丸める。コーティングする：各団子をチョコレートスプレーでしっかりとまぶす。盛り付ける：ミニカップに入れ、常温で提供する。",
+    "tr": "KARIŞIMI PİŞİRİN: koyulaştırılmış sütü, kakaoyu, tereyağını ve tuzu bir tencerede birleştirin, orta-düşük ateşte sürekli karıştırarak pişirin. KIVAMI KONTROL EDİN: kaşığı karışımın içinden çektiğinizde tencerenin dibinden ayrılana kadar karıştırmaya devam edin, yaklaşık 10-15 dakika. SOĞUTUN: yağlanmış bir tabağa aktarın, tamamen soğumaya bırakın, en az 1 saat (veya buzdolabında). ŞEKİLLENDİRİN: ellerinizi tereyağıyla yağlayın, karışımı küçük toplar halinde yuvarlayın. KAPLAYIN: her topu tamamen kaplanana kadar çikolata süslemede yuvarlayın. SERVİS YAPIN: mini şeker kaplarına yerleştirin, oda sıcaklığında servis edin.",
+    "it": "CUOCI IL COMPOSTO: unisci il latte condensato, il cacao, il burro e il sale in una pentola, cuoci a fuoco medio-basso, mescolando continuamente. VERIFICA LA CONSISTENZA: continua a mescolare finché il composto si addensa e si stacca dal fondo della pentola quando ci passi un cucchiaio, circa 10-15 minuti. LASCIA RAFFREDDARE: trasferisci su un piatto imburrato, lascia raffreddare completamente, almeno 1 ora (o in frigo). FORMA: ungi le mani con burro, arrotola il composto in palline piccole. RICOPRI: fai rotolare ogni pallina nelle codette di cioccolato finché completamente ricoperta. SERVI: metti in pirottini, servi a temperatura ambiente.",
+    "ko": "혼합물 끓이기: 연유, 코코아, 버터, 소금을 냄비에 넣고 중약불에서 계속 저으며 끓인다. 농도 확인하기: 숟가락으로 저었을 때 냄비 바닥이 드러날 만큼 걸쭉해질 때까지 계속 저으며 약 10-15분간 끓인다. 식히기: 버터 바른 접시로 옮겨 최소 1시간(또는 냉장고에서) 완전히 식힌다. 모양 만들기: 손에 버터를 바르고 혼합물을 작은 공 모양으로 굴린다. 코팅하기: 각 공을 초콜릿 스프링클에 완전히 덮이도록 굴린다. 서빙하기: 미니 캔디컵에 담아 실온으로 낸다.",
+    "hi": "मिश्रण पकाएं: कंडेंस्ड मिल्क, कोको, मक्खन और नमक एक पैन में मिलाएं, मध्यम-धीमी आंच पर लगातार हिलाते हुए पकाएं। गाढ़ापन जांचें: तब तक हिलाते रहें जब तक मिश्रण गाढ़ा न हो जाए और चम्मच खींचने पर पैन के तले से अलग न हो जाए, लगभग 10-15 मिनट। ठंडा होने दें: चिकनाई लगी थाली में डालें, कम से कम 1 घंटा (या फ्रिज में) पूरी तरह ठंडा होने दें। आकार दें: हाथों पर मक्खन लगाएं, मिश्रण को छोटी गेंदों में बेलें। कोट करें: हर गेंद को चॉकलेट स्प्रिंकल्स में तब तक लपेटें जब तक पूरी तरह ढक न जाए। परोसें: मिनी कैंडी कप में रखें, कमरे के तापमान पर परोसें।"
+  },
+  "originText": {
+    "ro": "Brigadeiro poartă numele brigadierului Eduardo Gomes, candidat la președinția Braziliei în 1945 și 1946. Susținătoarele lui, în lipsa fondurilor de campanie din alte surse, au gătit și au vândut aceste bomboane de ciocolată pentru a strânge bani — Gomes a pierdut alegerile, dar dulciul care îi purta numele a devenit nemuritor mult după ce cariera lui politică s-a încheiat.\n\nAstăzi, brigadeiro e prezent la aproape orice petrecere braziliană de zi de naștere, la fel de omniprezent cum e tortul în alte culturi. Reperul tehnic esențial e ceea ce brazilienii numesc ponto de brigadeiro, punctul exact — amestecul trebuie amestecat continuu, fără pauză, până se desprinde vizibil de fundul cratiței la trecerea lingurii, semn că e suficient de gătit pentru a se întări corect la răcire, fără a fi ars pe fund.",
+    "en": "Brigadeiro is named after Brigadier Eduardo Gomes, a Brazilian presidential candidate in 1945 and 1946. His supporters, lacking campaign funds from other sources, cooked and sold these chocolate candies to raise money — Gomes lost the election, but the sweet bearing his name became immortal long after his political career ended.\n\nToday, brigadeiro is present at nearly every Brazilian birthday party, as omnipresent as cake is in other cultures. The essential technical marker is what Brazilians call the ponto de brigadeiro, the exact point — the mixture must be stirred continuously, without pause, until it visibly pulls away from the bottom of the pan as the spoon passes through, a sign it's cooked enough to set properly once cooled, without having scorched on the bottom.",
+    "es": "El brigadeiro lleva el nombre del brigadier Eduardo Gomes, candidato presidencial brasileño en 1945 y 1946. Sus partidarias, sin fondos de campaña de otras fuentes, cocinaron y vendieron estos dulces de chocolate para recaudar dinero — Gomes perdió las elecciones, pero el dulce que llevaba su nombre se volvió inmortal mucho después de que su carrera política terminara.\n\nHoy, el brigadeiro está presente en casi toda fiesta de cumpleaños brasileña, tan omnipresente como la tarta en otras culturas. El indicador técnico esencial es lo que los brasileños llaman el ponto de brigadeiro, el punto exacto — la mezcla debe removerse continuamente, sin pausa, hasta que se despegue visiblemente del fondo de la olla al pasar la cuchara, señal de que está lo bastante cocida para cuajar bien al enfriarse, sin haberse quemado en el fondo.",
+    "fr": "Le brigadeiro porte le nom du brigadier Eduardo Gomes, candidat à la présidence brésilienne en 1945 et 1946. Ses partisanes, faute de fonds de campagne provenant d'autres sources, ont cuisiné et vendu ces bonbons au chocolat pour lever des fonds — Gomes a perdu l'élection, mais la douceur portant son nom est devenue immortelle bien après la fin de sa carrière politique.\n\nAujourd'hui, le brigadeiro est présent à presque toutes les fêtes d'anniversaire brésiliennes, aussi omniprésent que le gâteau ailleurs. Le repère technique essentiel est ce que les Brésiliens appellent le ponto de brigadeiro, le point exact — le mélange doit être remué continuellement, sans pause, jusqu'à se détacher visiblement du fond de la casserole au passage de la cuillère, signe qu'il est assez cuit pour bien prendre en refroidissant, sans avoir brûlé au fond.",
+    "de": "Brigadeiro ist nach Brigadier Eduardo Gomes benannt, einem brasilianischen Präsidentschaftskandidaten von 1945 und 1946. Seine Unterstützerinnen, denen Wahlkampfmittel aus anderen Quellen fehlten, kochten und verkauften diese Schokoladenbonbons, um Geld zu sammeln — Gomes verlor die Wahl, aber die nach ihm benannte Süßigkeit wurde lange nach dem Ende seiner politischen Karriere unsterblich.\n\nHeute ist Brigadeiro auf fast jeder brasilianischen Geburtstagsfeier präsent, so allgegenwärtig wie in anderen Kulturen der Kuchen. Das wesentliche technische Merkmal ist das, was Brasilianer ponto de brigadeiro nennen, den genauen Punkt — die Mischung muss ununterbrochen gerührt werden, bis sie sich beim Durchziehen des Löffels sichtbar vom Topfboden löst, ein Zeichen, dass sie genug gekocht ist, um beim Abkühlen richtig fest zu werden, ohne am Boden angebrannt zu sein.",
+    "pt": "O brigadeiro tem o nome do brigadeiro Eduardo Gomes, candidato à presidência do Brasil em 1945 e 1946. As suas apoiantes, sem fundos de campanha de outras fontes, cozinharam e venderam estes doces de chocolate para angariar dinheiro — Gomes perdeu a eleição, mas o doce que levava o seu nome tornou-se imortal muito depois de a sua carreira política ter terminado.\n\nHoje, o brigadeiro está presente em quase toda festa de aniversário brasileira, tão onipresente quanto o bolo é noutras culturas. O marcador técnico essencial é o que os brasileiros chamam de ponto de brigadeiro, o ponto exato — a mistura tem de ser mexida continuamente, sem pausa, até se soltar visivelmente do fundo da panela ao passar a colher, sinal de que está cozida o suficiente para assentar bem ao arrefecer, sem ter queimado no fundo.",
+    "ru": "Бригадейро назван в честь бригадира Эдуарду Гомеса, кандидата в президенты Бразилии в 1945 и 1946 годах. Его сторонницы, не имея средств на кампанию из других источников, готовили и продавали эти шоколадные конфеты, чтобы собрать деньги — Гомес проиграл выборы, но сладость, носящая его имя, стала бессмертной задолго после окончания его политической карьеры.\n\nСегодня бригадейро присутствует почти на каждом бразильском дне рождения, столь же вездесуще, как торт в других культурах. Ключевой технический ориентир — то, что бразильцы называют ponto de brigadeiro, точная точка готовности: смесь нужно мешать непрерывно, без пауз, пока она заметно не начнёт отставать от дна кастрюли при проведении ложкой — признак того, что она достаточно уварена, чтобы правильно застыть при остывании, не подгорев на дне.",
+    "ar": "سُمّي البريغاديرو تيمنًا بالعميد إدواردو غوميز، مرشح الرئاسة البرازيلية عامي 1945 و1946. طهت مؤيداته، لعدم توفر أموال حملة من مصادر أخرى، هذه الحلويات الشوكولاتية وبعنها لجمع المال — خسر غوميز الانتخابات، لكن الحلوى التي تحمل اسمه أصبحت خالدة بعد فترة طويلة من انتهاء مسيرته السياسية.\n\nاليوم، يحضر البريغاديرو في كل عيد ميلاد برازيلي تقريبًا، بانتشار يضاهي انتشار الكعك في ثقافات أخرى. المعيار التقني الأساسي هو ما يسميه البرازيليون بونتو دي بريغاديرو، النقطة الدقيقة — يجب تحريك الخليط باستمرار دون توقف حتى ينفصل بوضوح عن قاع القدر عند مرور الملعقة، علامة على أنه طُهي بما يكفي ليتماسك جيدًا عند التبريد، دون أن يحترق من الأسفل.",
+    "zh": "巧克力球（brigadeiro）以巴西1945年和1946年总统候选人爱德华多·戈梅斯准将（Brigadier Eduardo Gomes）命名。当时缺乏其他竞选资金来源，他的支持者们制作并出售这种巧克力糖果来筹款——戈梅斯输掉了选举，但以他名字命名的甜点却在他政治生涯结束很久之后依然长盛不衰。\n\n如今，巧克力球几乎出现在每一场巴西生日派对上，其普及程度堪比其他文化中的蛋糕。关键的技艺标志是巴西人所说的「巧克力球临界点」（ponto de brigadeiro）：混合物必须不停搅拌，直到用勺子划过时能明显看到脱离锅底，这标志着它已经煮到足以在冷却后正确定型，同时锅底又没有烧焦。",
+    "ja": "ブリガデイロは、1945年と1946年のブラジル大統領選候補だった准将エドゥアルド・ゴメスにちなんで名付けられた。他に選挙資金源がなかった彼の支持者たちは、資金を集めるためにこのチョコレート菓子を作って販売した——ゴメスは選挙に敗れたが、彼の名を冠したこの菓子は、政治家としてのキャリアが終わってからずっと後まで不滅の存在となった。\n\n今日、ブリガデイロはほぼすべてのブラジルの誕生日パーティーに登場し、他の文化におけるケーキと同じくらい欠かせないものとなっている。この菓子作りの核心となる技術的目安は、ブラジル人が「ポント・ジ・ブリガデイロ」と呼ぶ、正確な仕上がりのポイントだ——混合物は絶え間なくかき混ぜ続けなければならず、スプーンを通したときに鍋底がはっきりと見えるようになれば、底を焦がすことなく冷めたときにきちんと固まるだけ十分に加熱された合図である。",
+    "tr": "Brigadeiro, 1945 ve 1946'da Brezilya cumhurbaşkanlığı adayı olan Tuğgeneral Eduardo Gomes'in adını taşır. Başka kaynaklardan kampanya fonu bulunmayan destekçileri, para toplamak için bu çikolatalı şekerlemeleri pişirip sattı — Gomes seçimi kaybetti, ama onun adını taşıyan tatlı, siyasi kariyeri sona erdikten çok sonra bile ölümsüzleşti.\n\nBugün brigadeiro, neredeyse her Brezilya doğum günü partisinde bulunur, diğer kültürlerdeki pasta kadar her yerdedir. Temel teknik gösterge, Brezilyalıların ponto de brigadeiro dediği, tam kıvam noktasıdır — karışım, kaşık geçtiğinde tencerenin dibinden görülür şekilde ayrılana kadar durmaksızın karıştırılmalıdır; bu, dibi yanmadan soğuduğunda düzgünce sertleşecek kadar pişmiş olduğunun işaretidir.",
+    "it": "Il brigadeiro prende il nome dal brigadiere Eduardo Gomes, candidato alla presidenza brasiliana nel 1945 e nel 1946. Le sue sostenitrici, prive di fondi elettorali da altre fonti, cucinavano e vendevano questi dolcetti al cioccolato per raccogliere denaro — Gomes perse le elezioni, ma il dolce che portava il suo nome divenne immortale molto dopo la fine della sua carriera politica.\n\nOggi il brigadeiro è presente in quasi ogni festa di compleanno brasiliana, onnipresente quanto la torta lo è in altre culture. Il segno tecnico essenziale è ciò che i brasiliani chiamano ponto de brigadeiro, il punto esatto — il composto va mescolato di continuo, senza pause, finché non si stacca visibilmente dal fondo della pentola al passaggio del cucchiaio, segno che è cotto abbastanza da rapprendersi correttamente una volta raffreddato, senza essersi bruciato sul fondo.",
+    "ko": "브리가데이루는 1945년과 1946년 브라질 대통령 후보였던 준장 에두아르두 고메스의 이름을 딴 것이다. 다른 자금원이 없었던 그의 지지자들은 이 초콜릿 과자를 만들어 팔아 선거 자금을 모았다 — 고메스는 선거에서 패했지만, 그의 이름을 딴 이 디저트는 정치 경력이 끝난 지 한참 후에도 불멸의 존재가 되었다.\n\n오늘날 브리가데이루는 거의 모든 브라질 생일 파티에 등장하며, 다른 문화의 케이크만큼이나 어디에나 있는 존재다. 핵심적인 조리 기준은 브라질 사람들이 '폰투 지 브리가데이루'라고 부르는 정확한 지점이다 — 혼합물은 숟가락이 지나갈 때 냄비 바닥이 눈에 띄게 드러날 때까지 쉬지 않고 계속 저어야 하며, 이는 바닥이 타지 않으면서도 식었을 때 제대로 굳을 만큼 충분히 익었다는 신호다.",
+    "hi": "ब्रिगाडेरो का नाम ब्रिगेडियर एडुआर्डो गोम्स के नाम पर रखा गया है, जो 1945 और 1946 में ब्राज़ीलियाई राष्ट्रपति पद के उम्मीदवार थे। उनकी समर्थकों ने, अन्य स्रोतों से चुनाव प्रचार निधि न होने के कारण, पैसे जुटाने के लिए ये चॉकलेट मिठाइयां बनाईं और बेचीं — गोम्स चुनाव हार गए, लेकिन उनके नाम की यह मिठाई उनके राजनीतिक करियर के खत्म होने के बहुत बाद तक अमर बनी रही।\n\nआज, ब्रिगाडेरो लगभग हर ब्राज़ीलियाई जन्मदिन पार्टी में मौजूद है, उतना ही सर्वव्यापी जितना अन्य संस्कृतियों में केक। मुख्य तकनीकी संकेत वह है जिसे ब्राज़ीलियाई लोग पोंतो दे ब्रिगाडेरो, यानी सटीक बिंदु कहते हैं — मिश्रण को लगातार बिना रुके हिलाना चाहिए, जब तक चम्मच खींचने पर वह स्पष्ट रूप से पैन के तले से अलग न हो जाए, यह संकेत कि यह ठंडा होने पर सही तरीके से जमने के लिए पर्याप्त पका है, बिना तले पर जले।"
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 8,
+    "tags": ["dessert","vegetarian","quick"],
+    "desc": {
+      "ro": "Bomboane braziliene de ciocolată din lapte condensat și cacao, rulate în granule de ciocolată.",
+      "en": "Brazilian chocolate truffles made from condensed milk and cocoa, rolled in chocolate sprinkles.",
+      "es": "Trufas de chocolate brasileñas hechas con leche condensada y cacao, cubiertas de granas de chocolate.",
+      "fr": "Truffes au chocolat brésiliennes à base de lait concentré et cacao, roulées dans des vermicelles de chocolat.",
+      "de": "Brasilianische Schokoladentrüffel aus Kondensmilch und Kakao, in Schokostreuseln gewälzt.",
+      "pt": "Trufas de chocolate brasileiras feitas com leite condensado e cacau, envoltas em granulado de chocolate.",
+      "ru": "Бразильские шоколадные трюфели из сгущённого молока и какао, обваленные в шоколадной посыпке.",
+      "ar": "كمأة شوكولاتة برازيلية من الحليب المكثف والكاكاو، ملفوفة برشّات الشوكولاتة.",
+      "zh": "巴西炼乳可可巧克力球，滚上巧克力米。",
+      "ja": "練乳とココアで作るブラジルのチョコレートトリュフ、チョコレートスプレーをまぶして。",
+      "tr": "Koyulaştırılmış süt ve kakaodan yapılan, çikolata süslemede yuvarlanmış Brezilya çikolata truflü.",
+      "it": "Tartufini di cioccolato brasiliani fatti con latte condensato e cacao, ricoperti di codette di cioccolato.",
+      "ko": "연유와 코코아로 만든 브라질식 초콜릿 트러플, 초콜릿 스프링클을 입힌다.",
+      "hi": "कंडेंस्ड मिल्क और कोको से बनी ब्राज़ीलियाई चॉकलेट ट्रफल, चॉकलेट स्प्रिंकल्स में लपेटी गई।"
+    }
+  }
+}

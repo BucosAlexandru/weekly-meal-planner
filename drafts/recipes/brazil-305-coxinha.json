@@ -1,0 +1,176 @@
+{
+  "id": 305,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Brazilia", "en": "Brazil", "es": "Brasil", "fr": "Brésil", "de": "Brasilien",
+    "pt": "Brasil", "ru": "Бразилия", "ar": "البرازيل", "zh": "巴西", "ja": "ブラジル",
+    "hi": "ब्राज़ील", "tr": "Brezilya", "it": "Brasile", "ko": "브라질"
+  },
+  "name": {
+    "ro": "Coxinha", "en": "Coxinha", "es": "Coxinha", "fr": "Coxinha", "de": "Coxinha",
+    "pt": "Coxinha", "ru": "Кошинья", "ar": "كوشينيا", "zh": "巴西鸡肉饺", "ja": "コシーニャ",
+    "tr": "Coxinha", "it": "Coxinha", "ko": "코시냐", "hi": "कॉक्सिन्या"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "En-cas", "de": "Snack",
+    "pt": "Lanche", "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "スナック",
+    "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍗","t":"Forma clasică imită un pulpe de pui, în miniatură","d":"Capătul îngust, alungit, e o trăsătură definitorie, nu doar o formă estetică"},
+      {"icon":"🥣","t":"Aluatul se face fierbând făina în supă de pui, nu apă","d":"Devine un aluat gros, elastic, asemănător cu cel de eclere, nu unul frământat clasic"},
+      {"icon":"🧀","t":"Umplutura conține adesea și cremă de brânză, nu doar pui","d":"Dă o cremozitate care echilibrează textura destrămată a cărnii"},
+      {"icon":"🍞","t":"Se pane de două ori — în ou, apoi în pesmet — înainte de prăjit","d":"Crusta groasă rezultată rămâne crocantă mult timp după prăjire"}
+    ],
+    "en": [
+      {"icon":"🍗","t":"The classic shape mimics a chicken drumstick, in miniature","d":"The narrow, elongated tip is a defining feature, not just an aesthetic choice"},
+      {"icon":"🥣","t":"The dough is made by boiling flour in chicken broth, not water","d":"It becomes a thick, elastic dough, similar to choux pastry, not a classic kneaded one"},
+      {"icon":"🧀","t":"The filling often includes cream cheese, not just chicken","d":"Adds a creaminess that balances the shredded texture of the meat"},
+      {"icon":"🍞","t":"It's double-breaded — in egg, then breadcrumbs — before frying","d":"The resulting thick crust stays crunchy long after frying"}
+    ],
+    "es": [
+      {"icon":"🍗","t":"La forma clásica imita un muslo de pollo, en miniatura","d":"La punta estrecha y alargada es un rasgo definitorio, no solo una elección estética"},
+      {"icon":"🥣","t":"La masa se hace hirviendo harina en caldo de pollo, no agua","d":"Se convierte en una masa espesa y elástica, similar a la de las profiteroles, no una amasada clásica"},
+      {"icon":"🧀","t":"El relleno suele incluir queso crema, no solo pollo","d":"Añade una cremosidad que equilibra la textura deshilachada de la carne"},
+      {"icon":"🍞","t":"Se empaniza dos veces — en huevo y luego en pan rallado — antes de freír","d":"La costra gruesa resultante se mantiene crujiente mucho después de freír"}
+    ],
+    "fr": [
+      {"icon":"🍗","t":"La forme classique imite un pilon de poulet, en miniature","d":"La pointe étroite et allongée est une caractéristique déterminante, pas juste esthétique"},
+      {"icon":"🥣","t":"La pâte se fait en faisant bouillir la farine dans du bouillon de poulet, pas de l'eau","d":"Elle devient une pâte épaisse et élastique, semblable à la pâte à choux, pas une pâte pétrie classique"},
+      {"icon":"🧀","t":"La farce contient souvent aussi du fromage à la crème, pas seulement du poulet","d":"Apporte un moelleux qui équilibre la texture effilochée de la viande"},
+      {"icon":"🍞","t":"Elle est panée deux fois — dans l'œuf puis la chapelure — avant la friture","d":"La croûte épaisse qui en résulte reste croustillante longtemps après la friture"}
+    ],
+    "de": [
+      {"icon":"🍗","t":"Die klassische Form ahmt eine Hähnchenkeule im Miniaturformat nach","d":"Die schmale, längliche Spitze ist ein prägendes Merkmal, keine bloße Ästhetik"},
+      {"icon":"🥣","t":"Der Teig entsteht durch Kochen von Mehl in Hühnerbrühe, nicht in Wasser","d":"Er wird zu einem dicken, elastischen Teig, ähnlich Brandteig, nicht klassisch geknetet"},
+      {"icon":"🧀","t":"Die Füllung enthält oft auch Frischkäse, nicht nur Hähnchen","d":"Gibt eine Cremigkeit, die die zerpflückte Textur des Fleischs ausgleicht"},
+      {"icon":"🍞","t":"Sie wird vor dem Frittieren doppelt paniert — in Ei, dann Semmelbrösel","d":"Die resultierende dicke Kruste bleibt lange nach dem Frittieren knusprig"}
+    ],
+    "pt": [
+      {"icon":"🍗","t":"O formato clássico imita uma coxa de frango, em miniatura","d":"A ponta estreita e alongada é uma característica definidora, não só estética"},
+      {"icon":"🥣","t":"A massa é feita fervendo farinha em caldo de galinha, não água","d":"Torna-se uma massa espessa e elástica, parecida com massa choux, não uma massa sovada clássica"},
+      {"icon":"🧀","t":"O recheio frequentemente inclui catupiry, não só frango","d":"Adiciona uma cremosidade que equilibra a textura desfiada da carne"},
+      {"icon":"🍞","t":"É empanada duas vezes — em ovo, depois farinha de rosca — antes de fritar","d":"A crosta espessa resultante fica crocante muito depois de frita"}
+    ],
+    "ru": [
+      {"icon":"🍗","t":"Классическая форма имитирует куриную ножку в миниатюре","d":"Узкий, вытянутый кончик — определяющая черта, а не просто эстетика"},
+      {"icon":"🥣","t":"Тесто готовится варкой муки в курином бульоне, а не в воде","d":"Получается густое, эластичное тесто, похожее на заварное, а не классическое замешанное"},
+      {"icon":"🧀","t":"Начинка часто содержит и сливочный сыр, не только курицу","d":"Добавляет кремовость, уравновешивающую волокнистую текстуру мяса"},
+      {"icon":"🍞","t":"Дважды панируется — в яйце, потом в панировочных сухарях — перед жаркой","d":"Получившаяся толстая корочка остаётся хрустящей ещё долго после жарки"}
+    ],
+    "ar": [
+      {"icon":"🍗","t":"الشكل التقليدي يحاكي فخذ دجاج مصغّرًا","d":"الطرف الضيق الممدود سمة أساسية، لا مجرد اختيار جمالي"},
+      {"icon":"🥣","t":"العجين يُصنع بغلي الدقيق في مرق الدجاج لا الماء","d":"يصبح عجينًا سميكًا مطاطيًا يشبه عجين الشو، لا العجين المعجون التقليدي"},
+      {"icon":"🧀","t":"الحشوة غالبًا ما تحتوي على جبن كريمي أيضًا لا الدجاج فقط","d":"يضيف نعومة توازن قوام اللحم المفكك"},
+      {"icon":"🍞","t":"تُغطى مرتين — بالبيض ثم فتات الخبز — قبل القلي","d":"القشرة السميكة الناتجة تبقى مقرمشة طويلًا بعد القلي"}
+    ],
+    "zh": [
+      {"icon":"🍗","t":"经典造型模仿迷你鸡腿的形状","d":"细长的尖端是标志性特征，而非仅仅是美观选择"},
+      {"icon":"🥣","t":"面团是用鸡汤而非清水煮面粉制成的","d":"变成浓稠有弹性的面团，类似泡芙面糊，而非传统揉制面团"},
+      {"icon":"🧀","t":"馅料常加入奶油奶酪，而不只是鸡肉","d":"增添的绵滑感能平衡撕碎鸡肉的口感"},
+      {"icon":"🍞","t":"油炸前要裹两层——先蘸蛋液，再裹面包糠","d":"由此形成的厚外壳炸后长时间保持酥脆"}
+    ],
+    "ja": [
+      {"icon":"🍗","t":"伝統的な形はミニチュアの鶏の骨付きもも肉を模している","d":"細長い先端は美的な選択ではなく、決定的な特徴である"},
+      {"icon":"🥣","t":"生地は水ではなく鶏だしで小麦粉を煮て作る","d":"シュー生地に似た、厚みのある弾力ある生地になり、普通のこねる生地とは異なる"},
+      {"icon":"🧀","t":"具には鶏肉だけでなくクリームチーズが入ることが多い","d":"ほぐした肉の食感を和らげるクリーミーさを加える"},
+      {"icon":"🍞","t":"揚げる前に卵、次にパン粉と二度衣をつける","d":"できあがる厚い衣は揚げた後も長くカリカリのまま"}
+    ],
+    "tr": [
+      {"icon":"🍗","t":"Klasik şekli minyatür bir tavuk budunu andırır","d":"İnce, uzun uç tanımlayıcı bir özelliktir, sadece estetik bir tercih değil"},
+      {"icon":"🥣","t":"Hamur, su yerine tavuk suyunda un kaynatılarak yapılır","d":"Klasik yoğrulmuş hamurdan farklı, ekler hamuruna benzer koyu, elastik bir hamur olur"},
+      {"icon":"🧀","t":"İç harç genellikle sadece tavuk değil, krem peynir de içerir","d":"Etin didiklenmiş dokusunu dengeleyen bir kremamsılık katar"},
+      {"icon":"🍞","t":"Kızartmadan önce çift kaplanır — yumurta, sonra galeta unu","d":"Ortaya çıkan kalın kabuk kızartmadan uzun süre sonra bile çıtır kalır"}
+    ],
+    "it": [
+      {"icon":"🍗","t":"La forma classica imita una coscia di pollo in miniatura","d":"La punta stretta e allungata è una caratteristica distintiva, non solo estetica"},
+      {"icon":"🥣","t":"L'impasto si fa bollendo la farina nel brodo di pollo, non acqua","d":"Diventa un impasto denso ed elastico, simile alla pasta choux, non un impasto classico lavorato"},
+      {"icon":"🧀","t":"Il ripieno spesso include anche formaggio cremoso, non solo pollo","d":"Aggiunge una cremosità che bilancia la consistenza sfilacciata della carne"},
+      {"icon":"🍞","t":"Viene impanata due volte — nell'uovo, poi nel pangrattato — prima di friggere","d":"La crosta spessa risultante resta croccante a lungo dopo la frittura"}
+    ],
+    "ko": [
+      {"icon":"🍗","t":"고전적인 모양은 미니어처 닭다리를 본뜬 것이다","d":"좁고 길쭉한 끝부분은 단순한 미적 선택이 아니라 핵심적인 특징이다"},
+      {"icon":"🥣","t":"반죽은 물이 아닌 닭 육수에 밀가루를 끓여 만든다","d":"슈 반죽처럼 걸쭉하고 탄력 있는 반죽이 되며, 일반적으로 치대는 반죽과는 다르다"},
+      {"icon":"🧀","t":"소에는 닭고기뿐 아니라 크림치즈가 자주 들어간다","d":"찢은 고기의 질감을 부드럽게 균형 잡아주는 크리미함을 더한다"},
+      {"icon":"🍞","t":"튀기기 전 달걀, 그다음 빵가루로 두 번 옷을 입힌다","d":"이렇게 생긴 두꺼운 튀김옷은 튀긴 후에도 오래 바삭함을 유지한다"}
+    ],
+    "hi": [
+      {"icon":"🍗","t":"क्लासिक आकार लघु चिकन के पंजे जैसा होता है","d":"संकरी, लंबी नोक एक परिभाषित विशेषता है, केवल सौंदर्य चुनाव नहीं"},
+      {"icon":"🥣","t":"आटा पानी नहीं बल्कि चिकन शोरबे में आटा उबालकर बनाया जाता है","d":"यह एक गाढ़ा, इलास्टिक आटा बन जाता है, choux पेस्ट्री जैसा, क्लासिक गूंधे आटे जैसा नहीं"},
+      {"icon":"🧀","t":"भरावन में अक्सर सिर्फ चिकन नहीं, क्रीम चीज़ भी होती है","d":"मलाईदारपन जोड़ता है जो मांस की टूटी बनावट को संतुलित करता है"},
+      {"icon":"🍞","t":"तलने से पहले दो बार ब्रेड किया जाता है — अंडे में, फिर ब्रेडक्रम्ब में","d":"बनी मोटी परत तलने के बाद लंबे समय तक कुरकुरी रहती है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500ml supă de pui","300g pui fiert, destrămat","1 ceapă, tocată","2 căței de usturoi, tocați","2 linguri pastă de roșii","300g făină de grâu, plus în plus pentru presărat","2 linguri unt","pătrunjel proaspăt, tocat","100g cremă de brânză","2 ouă, bătute, pentru pane","pesmet, pentru pane","ulei vegetal, pentru prăjit","sare și piper, după gust"],
+    "en": ["500ml chicken broth","300g cooked chicken, shredded","1 onion, chopped","2 garlic cloves, minced","2 tbsp tomato paste","300g wheat flour, plus extra for dusting","2 tbsp butter","fresh parsley, chopped","100g cream cheese","2 eggs, beaten, for breading","breadcrumbs, for coating","vegetable oil, for deep frying","salt and pepper, to taste"],
+    "es": ["500ml de caldo de pollo","300g de pollo cocido, deshilachado","1 cebolla, picada","2 dientes de ajo picados","2 cdas de pasta de tomate","300g de harina de trigo, más extra para espolvorear","2 cdas de mantequilla","perejil fresco, picado","100g de queso crema","2 huevos, batidos, para empanizar","pan rallado, para cubrir","aceite vegetal, para freír","sal y pimienta, al gusto"],
+    "fr": ["500ml de bouillon de poulet","300g de poulet cuit, effiloché","1 oignon, haché","2 gousses d'ail hachées","2 c. à soupe de purée de tomate","300g de farine de blé, plus pour saupoudrer","2 c. à soupe de beurre","persil frais, haché","100g de fromage à la crème","2 œufs, battus, pour paner","chapelure, pour enrober","huile végétale, pour la friture","sel et poivre, selon le goût"],
+    "de": ["500ml Hühnerbrühe","300g gekochtes Hähnchen, zerpflückt","1 Zwiebel, gehackt","2 Knoblauchzehen, gehackt","2 EL Tomatenmark","300g Weizenmehl, plus extra zum Bestäuben","2 EL Butter","frische Petersilie, gehackt","100g Frischkäse","2 Eier, verquirlt, zum Panieren","Semmelbrösel, zum Panieren","Pflanzenöl, zum Frittieren","Salz und Pfeffer, nach Geschmack"],
+    "pt": ["500ml de caldo de galinha","300g de frango cozido, desfiado","1 cebola, picada","2 dentes de alho picados","2 col. sopa de extrato de tomate","300g de farinha de trigo, mais extra para polvilhar","2 col. sopa de manteiga","salsa fresca, picada","100g de catupiry ou cream cheese","2 ovos, batidos, para empanar","farinha de rosca, para empanar","óleo vegetal, para fritar","sal e pimenta, a gosto"],
+    "ru": ["500мл куриного бульона","300г отварной курицы, разобранной на волокна","1 луковица, нарезанная","2 зубчика чеснока, измельчённого","2 ст.л. томатной пасты","300г пшеничной муки, плюс ещё для присыпки","2 ст.л. сливочного масла","свежая петрушка, нарезанная","100г сливочного сыра","2 яйца, взбитых, для панировки","панировочные сухари, для обваливания","растительное масло, для фритюра","соль и перец, по вкусу"],
+    "ar": ["500مل مرق دجاج","300غ دجاج مطهو، مفكك","بصلة واحدة، مفرومة","2 فصوص ثوم مفرومة","2 ملعقة كبيرة معجون طماطم","300غ دقيق قمح، إضافة للرش","2 ملعقة كبيرة زبدة","بقدونس طازج، مفروم","100غ جبن كريمي","بيضتان، مخفوقتان، للتغطية","فتات خبز، للتغطية","زيت نباتي، للقلي","ملح وفلفل، حسب الرغبة"],
+    "zh": ["500毫升鸡高汤","300克熟鸡肉，撕碎","1个洋葱，切碎","2瓣大蒜切碎","2汤匙番茄膏","300克小麦粉，另备撒粉用","2汤匙黄油","新鲜欧芹，切碎","100克奶油奶酪","2个鸡蛋，打散，裹粉用","面包糠，裹面用","植物油，用于油炸","盐和胡椒，适量"],
+    "ja": ["鶏だし500ml","鶏肉（調理済み）300g、ほぐす","玉ねぎ1個、みじん切り","にんにく2片、みじん切り","トマトペースト大さじ2","小麦粉300g、打ち粉用に追加","バター大さじ2","新鮮なパセリ、刻む","クリームチーズ100g","卵2個、溶く、衣用","パン粉、衣用","植物油、揚げ油用","塩とこしょう、お好みで"],
+    "tr": ["500ml tavuk suyu","300g pişmiş tavuk, didiklenmiş","1 soğan, doğranmış","2 diş sarımsak, doğranmış","2 yemek kaşığı domates salçası","300g buğday unu, üzerine serpmek için ekstra","2 yemek kaşığı tereyağı","taze maydanoz, doğranmış","100g krem peynir","2 yumurta, çırpılmış, kaplama için","galeta unu, kaplama için","bitkisel yağ, derin yağda kızartmak için","tuz ve karabiber, damak zevkine göre"],
+    "it": ["500ml di brodo di pollo","300g di pollo cotto, sfilacciato","1 cipolla, tritata","2 spicchi d'aglio tritati","2 cucchiai di concentrato di pomodoro","300g di farina di grano, più extra per spolverare","2 cucchiai di burro","prezzemolo fresco, tritato","100g di formaggio cremoso","2 uova, sbattute, per impanare","pangrattato, per impanare","olio vegetale, per friggere","sale e pepe, a piacere"],
+    "ko": ["닭 육수 500ml","익힌 닭고기 300g, 찢은 것","양파 1개, 다진 것","마늘 2쪽, 다진 것","토마토 페이스트 2큰술","밀가루 300g, 덧가루용 추가","버터 2큰술","신선한 파슬리, 다진 것","크림치즈 100g","달걀 2개, 푼 것, 튀김옷용","빵가루, 튀김옷용","식용유, 튀김용","소금과 후추, 입맛에 맞게"],
+    "hi": ["500मिली चिकन शोरबा","300ग्राम पका चिकन, टुकड़ों में तोड़ा हुआ","1 प्याज़, कटा हुआ","2 लहसुन की कलियां कटी हुई","2 बड़े चम्मच टमाटर पेस्ट","300ग्राम गेहूं का आटा, छिड़कने के लिए अतिरिक्त","2 बड़े चम्मच मक्खन","ताज़ा अजमोद, कटा हुआ","100ग्राम क्रीम चीज़","2 अंडे, फेंटे हुए, ब्रेडिंग के लिए","ब्रेडक्रम्ब, कोटिंग के लिए","वनस्पति तेल, तलने के लिए","नमक और काली मिर्च, स्वादानुसार"]
+  },
+  "howIsMade": {
+    "ro": "GĂTEȘTE UMPLUTURA: călește ceapa și usturoiul, adaugă puiul destrămat, pasta de roșii, pătrunjelul, sarea și piperul, gătește până se combină bine; amestecă crema de brânză, lasă să se răcească. PREGĂTEȘTE ALUATUL: adu la fierbere supa de pui și untul, adaugă făina dintr-odată, amestecă viguros cu focul stins, până se formează un aluat neted și gros, lasă să se răcească suficient cât să poți lucra cu mâinile. MODELEAZĂ: ia o porție de aluat, aplatizează în palmă, pune umplutura la mijloc, învelește și dă formă clasică, alungită, sigilând bine. PANE: înmoaie fiecare coxinha în ou bătut, apoi tăvălește prin pesmet. PRĂJEȘTE: prăjește în ulei fierbinte, până devin aurii-închise și crocante. SERVEȘTE: servește fierbinte.",
+    "en": "COOK THE FILLING: sauté the onion and garlic, add the shredded chicken, tomato paste, parsley, salt and pepper, cook until well combined; stir in the cream cheese, let cool. MAKE THE DOUGH: bring the chicken broth and butter to a boil, add the flour all at once, stir vigorously off the heat until a smooth, thick dough forms, let it cool enough to handle. SHAPE: take a portion of dough, flatten in your palm, place the filling in the center, wrap and shape into the classic elongated shape, sealing well. BREAD: dip each coxinha in beaten egg, then roll in breadcrumbs. FRY: deep-fry in hot oil until deep golden and crisp. SERVE: serve hot.",
+    "es": "COCINA EL RELLENO: sofríe la cebolla y el ajo, añade el pollo deshilachado, la pasta de tomate, el perejil, la sal y la pimienta, cocina hasta que se combine bien; incorpora el queso crema, deja enfriar. PREPARA LA MASA: lleva a ebullición el caldo de pollo y la mantequilla, añade la harina de una vez, remueve enérgicamente con el fuego apagado hasta formar una masa lisa y espesa, deja enfriar lo suficiente para manejarla. MOLDEA: toma una porción de masa, aplánala en la palma, coloca el relleno en el centro, envuelve y dale la forma clásica alargada, sellando bien. EMPANIZA: sumerge cada coxinha en huevo batido, luego pásala por pan rallado. FRÍE: fríe en aceite caliente hasta que estén doradas oscuras y crujientes. SIRVE: sirve caliente.",
+    "fr": "CUIS LA FARCE: fais revenir l'oignon et l'ail, ajoute le poulet effiloché, la purée de tomate, le persil, le sel et le poivre, cuis jusqu'à bien combiner; incorpore le fromage à la crème, laisse refroidir. PRÉPARE LA PÂTE: porte le bouillon de poulet et le beurre à ébullition, ajoute la farine d'un coup, remue vigoureusement hors du feu jusqu'à former une pâte lisse et épaisse, laisse refroidir suffisamment pour être manipulée. FAÇONNE: prends une portion de pâte, aplatis dans la paume, place la farce au centre, enveloppe et donne la forme classique allongée, en scellant bien. PANE: trempe chaque coxinha dans l'œuf battu, puis roule dans la chapelure. FAIS FRIRE: fais frire dans l'huile chaude jusqu'à ce qu'elles soient bien dorées et croustillantes. SERS: sers chaud.",
+    "de": "BEREITE DIE FÜLLUNG ZU: Zwiebel und Knoblauch anschwitzen, das zerpflückte Hähnchen, Tomatenmark, Petersilie, Salz und Pfeffer zugeben, kochen bis gut vermischt; den Frischkäse unterrühren, abkühlen lassen. BEREITE DEN TEIG ZU: Hühnerbrühe und Butter aufkochen, das Mehl auf einmal zugeben, kräftig vom Herd genommen rühren, bis ein glatter, dicker Teig entsteht, so weit abkühlen lassen, dass man ihn anfassen kann. FORME: eine Portion Teig nehmen, in der Handfläche flach drücken, die Füllung in die Mitte geben, einwickeln und in die klassische längliche Form bringen, gut verschließen. PANIERE: jede Coxinha in verquirltes Ei tauchen, dann in Semmelbröseln wälzen. FRITTIERE: in heißem Öl frittieren, bis tief goldbraun und knusprig. SERVIEREN: heiß servieren.",
+    "pt": "COZINHE O RECHEIO: refogue a cebola e o alho, junte o frango desfiado, o extrato de tomate, a salsa, o sal e a pimenta, cozinhe até combinar bem; misture o catupiry, deixe arrefecer. PREPARE A MASSA: leve o caldo de galinha e a manteiga a ferver, junte a farinha de uma vez, mexa vigorosamente com o fogo apagado até formar uma massa lisa e espessa, deixe arrefecer o suficiente para mexer. MODELE: pegue uma porção de massa, achate na palma da mão, coloque o recheio no centro, envolva e dê o formato clássico alongado, selando bem. EMPANE: mergulhe cada coxinha no ovo batido, depois passe na farinha de rosca. FRITE: frite em óleo quente até dourarem bem e ficarem estaladiças. SIRVA: sirva quente.",
+    "ru": "ПРИГОТОВЬ НАЧИНКУ: обжарь лук и чеснок, добавь разобранную курицу, томатную пасту, петрушку, соль и перец, готовь до однородности; вмешай сливочный сыр, дай остыть. ПРИГОТОВЬ ТЕСТО: доведи куриный бульон и масло до кипения, добавь всю муку сразу, энергично размешай при выключенном огне до гладкого, густого теста, дай остыть настолько, чтобы можно было работать руками. СФОРМИРУЙ: возьми порцию теста, расплющи в ладони, положи начинку в центр, заверни и придай классическую вытянутую форму, хорошо запечатав. ОБВАЛЯЙ: обмакни каждую кошинью во взбитое яйцо, затем в панировочные сухари. ОБЖАРЬ: жарь во фритюре в горячем масле до тёмно-золотистого цвета и хрустящей корочки. ПОДАЙ: подавай горячим.",
+    "ar": "اطهُ الحشوة: قلّب البصل والثوم، أضف الدجاج المفكك ومعجون الطماطم والبقدونس والملح والفلفل، اطهُ حتى يتمازج جيدًا؛ قلّب الجبن الكريمي، دعه يبرد. جهّز العجين: اجلب مرق الدجاج والزبدة إلى الغليان، أضف الدقيق دفعة واحدة، قلّب بقوة والنار مطفأة حتى يتكوّن عجين ناعم وسميك، دعه يبرد بما يكفي للمس. شكّل: خذ جزءًا من العجين، افرده في راحة يدك، ضع الحشوة في المنتصف، لُفّه وشكّله بالشكل الممدود الكلاسيكي، مع إغلاقه جيدًا. غطِّ: اغمس كل كوشينيا في البيض المخفوق ثم في فتات الخبز. اقلِ: اقلِ في زيت ساخن حتى تصبح ذهبية داكنة ومقرمشة. قدّم: قدّمها ساخنة.",
+    "zh": "烹制馅料：炒香洋葱和大蒜，加入撕碎的鸡肉、番茄膏、欧芹、盐和胡椒，炒至融合；拌入奶油奶酪，放凉。调制面团：将鸡高汤和黄油煮沸，一次性加入面粉，离火用力搅拌直至形成光滑浓稠的面团，放凉至可用手操作。塑形：取一份面团，在掌心压扁，中间放入馅料，包裹并整形成经典的细长形状，封口要牢。裹粉：将每个鸡肉饺蘸蛋液，再裹上面包糠。油炸：放入热油中炸至深金色酥脆。上桌：趁热食用。",
+    "ja": "具を作る：玉ねぎとにんにくを炒め、ほぐした鶏肉、トマトペースト、パセリ、塩、こしょうを加えてよく混ざるまで炒める。クリームチーズを混ぜ込み、冷ます。生地を作る：鶏だしとバターを沸騰させ、小麦粉を一度に加え、火を止めてなめらかで濃厚な生地になるまで力強くかき混ぜ、手で扱えるくらいまで冷ます。成形する：生地を一部取り、手のひらで平らにし、中央に具を置き、包んで古典的な細長い形に整え、しっかり閉じる。衣をつける：各コシーニャを溶き卵にくぐらせ、パン粉をまぶす。揚げる：熱した油できつね色でカリッとするまで揚げる。盛り付ける：熱々を提供する。",
+    "tr": "İÇ HARCI PİŞİRİN: soğan ve sarımsağı soteleyin, didiklenmiş tavuğu, domates salçasını, maydanozu, tuzu ve karabiberi ekleyin, iyice karışana kadar pişirin; krem peyniri karıştırın, soğumaya bırakın. HAMURU HAZIRLAYIN: tavuk suyu ve tereyağını kaynatın, unu bir kerede ekleyin, ocaktan alıp pürüzsüz koyu bir hamur oluşana kadar kuvvetlice karıştırın, elle tutulabilecek kadar soğumaya bırakın. ŞEKİLLENDİRİN: bir parça hamur alın, avucunuzda düzleştirin, ortasına iç harcı yerleştirin, sarıp klasik uzun şekli verin, iyice kapatın. KAPLAYIN: her coxinha'yı çırpılmış yumurtaya batırın, sonra galeta ununa bulayın. KIZARTIN: sıcak yağda koyu altın rengi ve çıtır olana kadar kızartın. SERVİS YAPIN: sıcak servis edin.",
+    "it": "CUOCI IL RIPIENO: soffriggi la cipolla e l'aglio, aggiungi il pollo sfilacciato, il concentrato di pomodoro, il prezzemolo, il sale e il pepe, cuoci finché ben amalgamato; incorpora il formaggio cremoso, lascia raffreddare. PREPARA L'IMPASTO: porta a bollore il brodo di pollo e il burro, aggiungi la farina tutta insieme, mescola energicamente a fuoco spento finché si forma un impasto liscio e denso, lascia raffreddare abbastanza da poterlo maneggiare. FORMA: prendi una porzione di impasto, appiattiscila nel palmo, metti il ripieno al centro, avvolgi e dai la classica forma allungata, sigillando bene. IMPANA: immergi ogni coxinha nell'uovo sbattuto, poi passala nel pangrattato. FRIGGI: friggi in olio caldo finché ben dorate e croccanti. SERVI: servi calda.",
+    "ko": "속 만들기: 양파와 마늘을 볶고 찢은 닭고기, 토마토 페이스트, 파슬리, 소금, 후추를 넣어 잘 어우러지도록 볶는다. 크림치즈를 섞고 식힌다. 반죽 만들기: 닭 육수와 버터를 끓이고 밀가루를 한 번에 넣어 불을 끈 상태에서 매끄럽고 걸쭉한 반죽이 될 때까지 힘차게 저은 뒤 손으로 다룰 수 있을 만큼 식힌다. 모양 만들기: 반죽 한 덩이를 손바닥에서 납작하게 펴고 가운데 속을 넣은 뒤 감싸서 고전적인 길쭉한 모양으로 만들고 잘 봉한다. 튀김옷 입히기: 각 코시냐를 푼 달걀에 담갔다가 빵가루를 입힌다. 튀기기: 뜨거운 기름에 진한 황금빛이 나고 바삭해질 때까지 튀긴다. 서빙하기: 뜨겁게 낸다.",
+    "hi": "भरावन पकाएं: प्याज़ और लहसुन भूनें, टूटा चिकन, टमाटर पेस्ट, अजमोद, नमक और काली मिर्च डालें, अच्छी तरह मिलने तक पकाएं; क्रीम चीज़ मिलाएं, ठंडा होने दें। आटा तैयार करें: चिकन शोरबा और मक्खन उबाल लाएं, आटा एक साथ डालें, आंच बंद करके ज़ोर से हिलाएं जब तक चिकना गाढ़ा आटा न बन जाए, हाथ से संभालने लायक ठंडा होने दें। आकार दें: आटे का एक हिस्सा लें, हथेली में चपटा करें, बीच में भरावन रखें, लपेटें और क्लासिक लंबा आकार दें, अच्छी तरह बंद करें। ब्रेड करें: हर कॉक्सिन्या को फेंटे अंडे में डुबोएं, फिर ब्रेडक्रम्ब में लपेटें। तलें: गरम तेल में गहरा सुनहरा और कुरकुरा होने तक तलें। परोसें: गरम-गरम परोसें।"
+  },
+  "originText": {
+    "ro": "Coxinha, al cărei nume înseamnă coapsă micuță în portugheza braziliană, ar fi apărut, potrivit legendei, la curtea imperială din secolul XIX, gătită pentru un prinț bolnav care refuza să mănânce decât carnea de la pulpa de pui. Bucătăria palatului ar fi ambalat carnea destrămată în aluat, dându-i forma pulpei originale, ca soluție de compromis.\n\nAdevărată sau nu, povestea explică de ce forma alungită, îngustă la un capăt, rămâne trăsătura definitorie a felului, chiar și acolo unde umplutura modernă include cremă de brânză alături de pui. Astăzi, coxinha e nelipsită din barurile și tarabele stradale braziliene, un fel simbol al gustărilor de tip botequim, alături de bere rece — tehnic diferită de o empanadă obișnuită tocmai prin aluatul ei gros, fiert în supă, nu frământat clasic din făină și apă.",
+    "en": "Coxinha, whose name means little thigh in Brazilian Portuguese, is said, according to legend, to have appeared at the imperial court in the 19th century, cooked for a sick prince who refused to eat anything but the meat from the chicken thigh. The palace kitchen supposedly wrapped the shredded meat in dough, shaping it like the original thigh, as a compromise solution.\n\nTrue or not, the story explains why the elongated shape, narrow at one end, remains the dish's defining feature, even where the modern filling includes cream cheese alongside chicken. Today, coxinha is inseparable from Brazilian bars and street food stalls, a symbol dish of botequim-style snacking, paired with cold beer — technically different from a regular empanada precisely because of its thick dough, boiled in broth rather than classically kneaded from flour and water.",
+    "es": "La coxinha, cuyo nombre significa muslito en portugués brasileño, según cuenta la leyenda, habría aparecido en la corte imperial en el siglo XIX, cocinada para un príncipe enfermo que se negaba a comer otra cosa que no fuera la carne del muslo de pollo. La cocina del palacio supuestamente envolvió la carne deshilachada en masa, dándole la forma del muslo original, como solución de compromiso.\n\nVerdadera o no, la historia explica por qué la forma alargada, estrecha en un extremo, sigue siendo el rasgo definitorio del plato, incluso donde el relleno moderno incluye queso crema junto al pollo. Hoy, la coxinha es inseparable de los bares y puestos callejeros brasileños, un plato símbolo de la comida tipo botequim, junto con cerveza fría — técnicamente distinta de una empanada normal precisamente por su masa espesa, hervida en caldo en vez de amasada clásicamente con harina y agua.",
+    "fr": "La coxinha, dont le nom signifie petite cuisse en portugais brésilien, serait apparue, selon la légende, à la cour impériale au XIXe siècle, cuisinée pour un prince malade qui refusait de manger autre chose que la viande de la cuisse de poulet. La cuisine du palais aurait alors enveloppé la viande effilochée dans de la pâte, en lui donnant la forme de la cuisse d'origine, comme solution de compromis.\n\nVraie ou non, l'histoire explique pourquoi la forme allongée, étroite à une extrémité, reste la caractéristique déterminante du plat, même là où la farce moderne inclut du fromage à la crème aux côtés du poulet. Aujourd'hui, la coxinha est indissociable des bars et des étals de rue brésiliens, un plat symbole du grignotage de type botequim, accompagné d'une bière fraîche — techniquement différente d'une empanada classique justement par sa pâte épaisse, bouillie dans du bouillon plutôt que pétrie de façon classique avec de la farine et de l'eau.",
+    "de": "Coxinha, deren Name kleiner Schenkel im brasilianischen Portugiesisch bedeutet, soll der Legende nach im 19. Jahrhundert am kaiserlichen Hof entstanden sein, gekocht für einen kranken Prinzen, der nur Fleisch von der Hähnchenkeule essen wollte. Die Palastküche soll das zerpflückte Fleisch in Teig gewickelt und ihm die Form der ursprünglichen Keule gegeben haben, als Kompromisslösung.\n\nOb wahr oder nicht, die Geschichte erklärt, warum die längliche, an einem Ende schmale Form das prägende Merkmal des Gerichts bleibt, selbst dort, wo die moderne Füllung neben Hähnchen auch Frischkäse enthält. Heute ist Coxinha untrennbar mit brasilianischen Bars und Straßenständen verbunden, ein Symbolgericht des Botequim-Snackens, gepaart mit kaltem Bier — technisch anders als eine gewöhnliche Empanada, gerade wegen ihres dicken, in Brühe gekochten Teigs statt klassisch aus Mehl und Wasser geknetet.",
+    "pt": "A coxinha, cujo nome significa coxa pequena, teria surgido, segundo a lenda, na corte imperial no século XIX, cozinhada para um príncipe doente que se recusava a comer outra coisa que não fosse a carne da coxa de frango. A cozinha do palácio teria então envolvido a carne desfiada em massa, dando-lhe o formato da coxa original, como solução de compromisso.\n\nVerdadeira ou não, a história explica por que o formato alongado, estreito numa ponta, continua a ser a característica definidora do prato, mesmo onde o recheio moderno inclui catupiry ao lado do frango. Hoje, a coxinha é inseparável dos bares e barracas de rua brasileiras, um prato símbolo dos petiscos de botequim, acompanhado de cerveja gelada — tecnicamente diferente de uma empada comum precisamente pela sua massa espessa, fervida em caldo em vez de sovada classicamente com farinha e água.",
+    "ru": "Кошинья, чьё название означает маленькое бедро на бразильском португальском, по легенде, появилась при императорском дворе в XIX веке, приготовленная для больного принца, который отказывался есть что-либо, кроме мяса с куриной ножки. Дворцовая кухня якобы завернула разобранное на волокна мясо в тесто, придав ему форму исходной ножки, в качестве компромиссного решения.\n\nПравда это или нет, история объясняет, почему вытянутая форма, узкая с одного конца, остаётся определяющей чертой блюда, даже там, где современная начинка включает сливочный сыр наряду с курицей. Сегодня кошинья неотделима от бразильских баров и уличных лотков — символичное блюдо закусок в стиле ботекин, в паре с холодным пивом — технически отличающееся от обычной эмпанады именно своим густым тестом, сваренным в бульоне, а не классически замешанным из муки и воды.",
+    "ar": "يُقال إن الكوشينيا، التي يعني اسمها الفخذ الصغير بالبرتغالية البرازيلية، ظهرت، وفقًا للأسطورة، في البلاط الإمبراطوري في القرن التاسع عشر، طُهيت لأمير مريض رفض أن يأكل شيئًا سوى لحم فخذ الدجاج. يُقال إن مطبخ القصر لفّ اللحم المفكك بالعجين، مانحًا إياه شكل الفخذ الأصلي، كحل توفيقي.\n\nصحيحة كانت القصة أم لا، فهي تفسر لماذا يبقى الشكل الممدود، الضيق من أحد طرفيه، السمة المميزة للطبق، حتى حيث تحتوي الحشوة الحديثة على جبن كريمي إلى جانب الدجاج. اليوم، الكوشينيا لا تنفصل عن الحانات والأكشاك الشعبية البرازيلية، طبق رمزي لوجبات البوتيكين الخفيفة، تُقدَّم مع البيرة الباردة — مختلفة تقنيًا عن الإمبانادا العادية تحديدًا بفضل عجينها السميك، المسلوق في المرق لا المعجون تقليديًا من الدقيق والماء.",
+    "zh": "巴西鸡肉饺（coxinha）在巴西葡萄牙语中意为「小鸡腿」，据传说，它诞生于19世纪的帝国宫廷，是为一位只肯吃鸡腿肉的生病王子而做的。据说宫廷厨房把撕碎的鸡肉包进面团，塑造成原本鸡腿的形状，作为一种折中方案。\n\n不论传说真假，它解释了为何这种一端细长的造型至今仍是这道菜的标志性特征，即便现代馅料常常在鸡肉之外还加入奶油奶酪。如今，巴西鸡肉饺是巴西酒吧和街边小摊不可或缺的存在，是「小酒馆」式小吃的象征菜肴，常配冷啤酒享用——它与普通的恩帕纳达饼技术上的区别，正在于其厚重的面团是用高汤煮制而成，而非用面粉和水传统揉制。",
+    "ja": "その名がブラジルポルトガル語で小さな腿を意味するコシーニャは、伝説によれば19世紀に宮廷で生まれたとされ、鶏の腿肉以外は食べようとしなかった病弱な王子のために作られた。宮廷の厨房はほぐした肉を生地で包み、元の腿の形を模したとされ、これが妥協案だったという。\n\nこの話が真実かどうかはさておき、現代の具材が鶏肉に加えてクリームチーズを含む場合でも、一端が細くなった細長い形状がこの料理を特徴づける理由を説明している。今日、コシーニャはブラジルのバルや屋台に欠かせない存在であり、冷えたビールとともに、ボテキン（大衆酒場）風のおつまみを象徴する料理となっている——小麦粉と水で古典的にこねる代わりに、だしで煮て作る厚い生地こそが、普通のエンパナーダとは技術的に異なる点だ。",
+    "tr": "Brezilya Portekizcesinde küçük but anlamına gelen coxinha, efsaneye göre 19. yüzyılda saray sarayında, tavuk budu etinden başka bir şey yemeyi reddeden hasta bir prens için pişirilmiş olarak ortaya çıkmıştır. Saray mutfağının, uzlaşma çözümü olarak didiklenmiş eti hamura sarıp orijinal budun şeklini verdiği söylenir.\n\nDoğru olsun ya da olmasın, bu hikâye, modern iç harçların tavuğun yanı sıra krem peynir içerdiği durumlarda bile, bir ucu dar olan uzun şeklin neden yemeğin tanımlayıcı özelliği olarak kaldığını açıklar. Bugün coxinha, Brezilya barlarından ve sokak tezgahlarından ayrılamaz, soğuk birayla eşleştirilen botequim tarzı atıştırmalıkların simgesi bir yemektir — un ve suyla klasik olarak yoğrulmak yerine et suyunda kaynatılan kalın hamuru sayesinde teknik olarak sıradan bir emanadadan farklıdır.",
+    "it": "La coxinha, il cui nome significa piccola coscia in portoghese brasiliano, sarebbe apparsa, secondo la leggenda, alla corte imperiale nel XIX secolo, cucinata per un principe malato che rifiutava di mangiare altro che la carne della coscia di pollo. La cucina di palazzo avrebbe avvolto la carne sfilacciata nella pasta, dandole la forma della coscia originale, come soluzione di compromesso.\n\nVera o no, la storia spiega perché la forma allungata, stretta a un'estremità, resti la caratteristica distintiva del piatto, anche dove il ripieno moderno include formaggio cremoso accanto al pollo. Oggi la coxinha è inseparabile dai bar e dalle bancarelle di strada brasiliane, un piatto simbolo degli snack in stile botequim, abbinato a birra fredda — tecnicamente diversa da una comune empanada proprio per il suo impasto denso, bollito nel brodo anziché lavorato classicamente con farina e acqua.",
+    "ko": "브라질 포르투갈어로 '작은 넓적다리'를 뜻하는 코시냐는, 전설에 따르면 19세기 황실 궁정에서 닭 넓적다리 살 외에는 아무것도 먹으려 하지 않던 병약한 왕자를 위해 만들어졌다고 한다. 궁정 주방은 타협책으로 찢은 고기를 반죽으로 감싸 원래의 넓적다리 모양으로 빚었다고 전해진다.\n\n사실이든 아니든, 이 이야기는 왜 한쪽 끝이 좁아지는 길쭉한 모양이 이 요리의 정체성으로 남아있는지 설명해준다. 현대의 소가 닭고기와 함께 크림치즈를 포함하는 경우에도 마찬가지다. 오늘날 코시냐는 브라질의 술집과 노점을 상징하는 존재로, 차가운 맥주와 곁들이는 보테킹(선술집) 스타일 안주를 상징하는 요리다 — 밀가루와 물로 고전적으로 치대는 대신 육수에 끓여 만드는 두꺼운 반죽 덕분에 일반 엠파나다와는 기술적으로 다르다.",
+    "hi": "कॉक्सिन्या, जिसका नाम ब्राज़ीलियाई पुर्तगाली में छोटा जांघ है, किंवदंती के अनुसार, 19वीं सदी के शाही दरबार में उभरा, एक बीमार राजकुमार के लिए पकाया गया जो सिर्फ चिकन की जांघ का मांस खाने से इनकार करता था। महल की रसोई ने कथित तौर पर टूटे मांस को आटे में लपेटा, इसे मूल जांघ का आकार देते हुए, एक समझौता समाधान के रूप में।\n\nसच हो या न हो, कहानी बताती है कि लंबा आकार, एक सिरे पर संकरा, व्यंजन की परिभाषित विशेषता क्यों बना हुआ है, यहां तक कि जहां आधुनिक भरावन में चिकन के साथ क्रीम चीज़ भी शामिल है। आज, कॉक्सिन्या ब्राज़ीलियाई बार और सड़क के ठेलों से अविभाज्य है, ठंडी बीयर के साथ बोतेकिन-शैली के नाश्ते का प्रतीकात्मक व्यंजन — तकनीकी रूप से एक सामान्य एम्पानादा से अलग ठीक इसके गाढ़े आटे के कारण, जो शोरबे में उबाला जाता है, आटे और पानी से क्लासिक रूप से गूंधा नहीं जाता।"
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 16,
+    "tags": ["family"],
+    "desc": {
+      "ro": "Gustare braziliană cu pui destrămat și cremă de brânză, în aluat gros, panată și prăjită.",
+      "en": "Brazilian snack of shredded chicken and cream cheese in thick dough, breaded and fried.",
+      "es": "Aperitivo brasileño de pollo deshilachado y queso crema en masa espesa, empanizado y frito.",
+      "fr": "En-cas brésilien de poulet effiloché et fromage à la crème dans une pâte épaisse, pané et frit.",
+      "de": "Brasilianischer Snack aus zerpflücktem Hähnchen und Frischkäse in dickem Teig, paniert und frittiert.",
+      "pt": "Lanche brasileiro de frango desfiado e catupiry em massa espessa, empanado e frito.",
+      "ru": "Бразильская закуска из курицы и сливочного сыра в густом тесте, в панировке, обжаренная.",
+      "ar": "وجبة برازيلية خفيفة من الدجاج المفكك والجبن الكريمي في عجين سميك، مغطاة ومقلية.",
+      "zh": "巴西小吃，鸡肉丝与奶油奶酪包在厚面团中，裹粉油炸。",
+      "ja": "鶏肉とクリームチーズを厚い生地で包み、衣をつけて揚げたブラジルのスナック。",
+      "tr": "Kalın hamur içinde didiklenmiş tavuk ve krem peynirden yapılan, galeta ununa bulanıp kızartılmış Brezilya atıştırmalığı.",
+      "it": "Snack brasiliano di pollo sfilacciato e formaggio cremoso in pasta densa, impanato e fritto.",
+      "ko": "두꺼운 반죽에 찢은 닭고기와 크림치즈를 넣고 빵가루를 입혀 튀긴 브라질 간식.",
+      "hi": "गाढ़े आटे में टूटे चिकन और क्रीम चीज़ वाला ब्राज़ीलियाई नाश्ता, ब्रेडेड और तला हुआ।"
+    }
+  }
+}

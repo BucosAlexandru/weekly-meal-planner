@@ -22,7 +22,7 @@ const PLAN_COUNT = 11;
 // The corpus is lazy-loaded so it can't be read synchronously at module init —
 // bump this one line when the count crosses (same convention as PLAN_COUNT).
 // The "X+" hero/discovery copy keeps using RECIPE_COUNT_ROUND and is untouched.
-const RECIPE_COUNT = 284;
+const RECIPE_COUNT = 294;
 const fillRecipeCount = (s) => String(s).replace(/\{\{RECIPE_COUNT\}\}/g, String(RECIPE_COUNT));
 
 // ===== Lazy-load budget recipes (not bundled → saves ~1.7 MB initial load) ===

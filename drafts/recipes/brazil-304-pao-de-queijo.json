@@ -1,0 +1,176 @@
+{
+  "id": 304,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Brazilia", "en": "Brazil", "es": "Brasil", "fr": "Brésil", "de": "Brasilien",
+    "pt": "Brasil", "ru": "Бразилия", "ar": "البرازيل", "zh": "巴西", "ja": "ブラジル",
+    "hi": "ब्राज़ील", "tr": "Brezilya", "it": "Brasile", "ko": "브라질"
+  },
+  "name": {
+    "ro": "Pão de Queijo", "en": "Pão de Queijo", "es": "Pão de Queijo", "fr": "Pão de Queijo", "de": "Pão de Queijo",
+    "pt": "Pão de Queijo", "ru": "Пан-де-кейжу", "ar": "باو دي كيجو", "zh": "巴西奶酪面包", "ja": "パオンジケイジョ",
+    "tr": "Pão de Queijo", "it": "Pão de Queijo", "ko": "빵 지 케이주", "hi": "पाओ दे केइजो"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "En-cas", "de": "Snack",
+    "pt": "Lanche", "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "スナック",
+    "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🌾","t":"Amidonul de tapioca se opărește cu lichid fierbinte","d":"Se gelatinizează parțial, ceea ce dă textura elastică, filantă a miezului"},
+      {"icon":"🧀","t":"Nu conține gluten deloc, prin însăși natura ingredientelor","d":"Nu e o adaptare modernă, ci rețeta tradițională originală din Minas Gerais"},
+      {"icon":"🥚","t":"Ouăle se frământă abia după ce aluatul se răcește puțin","d":"Adăugate în aluatul fierbinte, s-ar coagula parțial înainte de vreme"},
+      {"icon":"🔥","t":"Se coace până se umflă și se rumenește doar la exterior","d":"Interiorul rămâne moale, elastic, contrastând cu coaja subțire și crocantă"}
+    ],
+    "en": [
+      {"icon":"🌾","t":"The tapioca starch gets scalded with hot liquid","d":"It partially gelatinizes, which gives the inside its stretchy, elastic texture"},
+      {"icon":"🧀","t":"It's naturally gluten-free, by the nature of its ingredients","d":"Not a modern adaptation, but the original traditional recipe from Minas Gerais"},
+      {"icon":"🥚","t":"The eggs are kneaded in only once the dough has cooled a bit","d":"Added to hot dough, they'd partially cook before their time"},
+      {"icon":"🔥","t":"It bakes until puffed and browned only on the outside","d":"The inside stays soft and elastic, contrasting with the thin, crisp crust"}
+    ],
+    "es": [
+      {"icon":"🌾","t":"El almidón de tapioca se escalda con líquido caliente","d":"Se gelatiniza parcialmente, lo que da al interior su textura elástica y filante"},
+      {"icon":"🧀","t":"Es naturalmente sin gluten, por la propia naturaleza de sus ingredientes","d":"No es una adaptación moderna, sino la receta tradicional original de Minas Gerais"},
+      {"icon":"🥚","t":"Los huevos se amasan solo cuando la masa se ha enfriado un poco","d":"Añadidos a la masa caliente, se cocinarían parcialmente antes de tiempo"},
+      {"icon":"🔥","t":"Se hornea hasta inflarse y dorarse solo por fuera","d":"El interior queda blando y elástico, en contraste con la corteza fina y crujiente"}
+    ],
+    "fr": [
+      {"icon":"🌾","t":"La fécule de tapioca est ébouillantée avec du liquide chaud","d":"Elle gélatinise partiellement, ce qui donne à l'intérieur sa texture élastique et filante"},
+      {"icon":"🧀","t":"Il est naturellement sans gluten, de par la nature de ses ingrédients","d":"Ce n'est pas une adaptation moderne, mais la recette traditionnelle d'origine du Minas Gerais"},
+      {"icon":"🥚","t":"Les œufs ne sont incorporés qu'une fois la pâte un peu refroidie","d":"Ajoutés à la pâte chaude, ils cuiraient partiellement avant l'heure"},
+      {"icon":"🔥","t":"Il cuit jusqu'à gonfler et dorer seulement à l'extérieur","d":"L'intérieur reste moelleux et élastique, en contraste avec la croûte fine et croustillante"}
+    ],
+    "de": [
+      {"icon":"🌾","t":"Die Tapiokastärke wird mit heißer Flüssigkeit abgebrüht","d":"Sie geliert teilweise, was dem Inneren die dehnbare, elastische Textur verleiht"},
+      {"icon":"🧀","t":"Es ist von Natur aus glutenfrei, durch die Beschaffenheit seiner Zutaten","d":"Keine moderne Anpassung, sondern das ursprüngliche traditionelle Rezept aus Minas Gerais"},
+      {"icon":"🥚","t":"Die Eier werden erst eingeknetet, wenn der Teig etwas abgekühlt ist","d":"In heißen Teig gegeben, würden sie vorzeitig teilweise gerinnen"},
+      {"icon":"🔥","t":"Es wird gebacken, bis es aufgeht und nur außen bräunt","d":"Das Innere bleibt weich und elastisch, im Kontrast zur dünnen, knusprigen Kruste"}
+    ],
+    "pt": [
+      {"icon":"🌾","t":"O polvilho é escaldado com líquido quente","d":"Gelatiniza parcialmente, o que dá ao miolo a sua textura elástica e filante"},
+      {"icon":"🧀","t":"É naturalmente sem glúten, pela própria natureza dos ingredientes","d":"Não é uma adaptação moderna, mas a receita tradicional original de Minas Gerais"},
+      {"icon":"🥚","t":"Os ovos só são sovados depois de a massa arrefecer um pouco","d":"Adicionados à massa quente, cozinhariam parcialmente antes da hora"},
+      {"icon":"🔥","t":"Assa até inchar e dourar apenas por fora","d":"O interior fica macio e elástico, em contraste com a casca fina e crocante"}
+    ],
+    "ru": [
+      {"icon":"🌾","t":"Крахмал тапиоки заваривается горячей жидкостью","d":"Он частично клейстеризуется, что даёт мякишу тягучую, эластичную текстуру"},
+      {"icon":"🧀","t":"Он естественно без глютена, по самой природе ингредиентов","d":"Это не современная адаптация, а исходный традиционный рецепт из штата Минас-Жерайс"},
+      {"icon":"🥚","t":"Яйца вмешиваются только после того, как тесто немного остынет","d":"Добавленные в горячее тесто, они бы частично сварились раньше времени"},
+      {"icon":"🔥","t":"Выпекается, пока не поднимется и не подрумянится только снаружи","d":"Внутри остаётся мягким и эластичным, контрастируя с тонкой хрустящей корочкой"}
+    ],
+    "ar": [
+      {"icon":"🌾","t":"نشا التابيوكا يُسلق بسائل ساخن","d":"يتغلظن جزئيًا، مما يمنح الداخل قوامه المطاطي القابل للتمدد"},
+      {"icon":"🧀","t":"خالٍ من الغلوتين بطبيعته، بحكم طبيعة مكوناته","d":"ليس تكيفًا حديثًا، بل الوصفة التقليدية الأصلية من ميناس جيرايس"},
+      {"icon":"🥚","t":"البيض يُعجن فقط بعد أن يبرد العجين قليلًا","d":"لو أُضيف إلى عجين ساخن، لنضج جزئيًا قبل أوانه"},
+      {"icon":"🔥","t":"يُخبز حتى ينتفخ ويتحمّر من الخارج فقط","d":"يبقى الداخل طريًا ومطاطيًا، بتباين مع القشرة الرقيقة المقرمشة"}
+    ],
+    "zh": [
+      {"icon":"🌾","t":"木薯淀粉用热液体烫熟","d":"部分糊化后，赋予内部拉丝般的弹性口感"},
+      {"icon":"🧀","t":"天然不含麸质，源于食材本身的特性","d":"这不是现代改良版，而是米纳斯吉拉斯州最初的传统做法"},
+      {"icon":"🥚","t":"面团稍微放凉后才揉入鸡蛋","d":"若加入滚烫的面团中，鸡蛋会过早部分凝固"},
+      {"icon":"🔥","t":"烘烤至外部膨胀上色","d":"内部保持柔软有弹性，与薄脆外皮形成对比"}
+    ],
+    "ja": [
+      {"icon":"🌾","t":"タピオカ澱粉は熱い液体で湯通しされる","d":"部分的に糊化することで、内部にもちもちと伸びる弾力食感が生まれる"},
+      {"icon":"🧀","t":"材料そのものの性質から自然にグルテンフリー","d":"現代的なアレンジではなく、ミナスジェライス州発祥の元来の伝統レシピである"},
+      {"icon":"🥚","t":"卵は生地が少し冷めてから練り込む","d":"熱い生地に入れると、時期尚早に部分的に火が通ってしまう"},
+      {"icon":"🔥","t":"外側だけが膨らんで焼き色がつくまで焼く","d":"内部は柔らかく弾力を保ち、薄くパリッとした皮と対照的になる"}
+    ],
+    "tr": [
+      {"icon":"🌾","t":"Tapyoka nişastası sıcak sıvıyla haşlanır","d":"Kısmen jelleşir, bu da iç kısma esnek, elastik dokusunu verir"},
+      {"icon":"🧀","t":"Malzemelerinin doğası gereği doğal olarak glütensizdir","d":"Modern bir uyarlama değil, Minas Gerais'ten gelen özgün geleneksel tariftir"},
+      {"icon":"🥚","t":"Yumurtalar sadece hamur biraz soğuduktan sonra yoğrulur","d":"Sıcak hamura eklenirse, vaktinden önce kısmen pişerler"},
+      {"icon":"🔥","t":"Sadece dışı kabarıp kızarana kadar pişirilir","d":"İçi yumuşak ve elastik kalır, ince ve çıtır kabuğuyla tezat oluşturur"}
+    ],
+    "it": [
+      {"icon":"🌾","t":"L'amido di tapioca viene scottato con liquido caldo","d":"Gelatinizza parzialmente, il che dà all'interno la sua consistenza elastica e filante"},
+      {"icon":"🧀","t":"È naturalmente senza glutine, per la natura stessa dei suoi ingredienti","d":"Non è un adattamento moderno, ma la ricetta tradizionale originale del Minas Gerais"},
+      {"icon":"🥚","t":"Le uova vengono impastate solo dopo che l'impasto si è un po' raffreddato","d":"Aggiunte all'impasto caldo, cuocerebbero parzialmente prima del tempo"},
+      {"icon":"🔥","t":"Cuoce finché si gonfia e dora solo all'esterno","d":"L'interno resta morbido ed elastico, in contrasto con la crosta sottile e croccante"}
+    ],
+    "ko": [
+      {"icon":"🌾","t":"타피오카 전분을 뜨거운 액체로 데친다","d":"부분적으로 호화되어 속을 쫄깃하고 탄력 있게 만든다"},
+      {"icon":"🧀","t":"재료 자체의 특성상 천연 글루텐프리다","d":"현대적인 변형이 아니라 미나스제라이스에서 유래한 원래의 전통 레시피다"},
+      {"icon":"🥚","t":"달걀은 반죽이 살짝 식은 뒤에만 반죽에 넣는다","d":"뜨거운 반죽에 넣으면 때 이르게 부분적으로 익어버린다"},
+      {"icon":"🔥","t":"겉만 부풀고 노릇해질 때까지 굽는다","d":"속은 부드럽고 쫄깃하게 남아 얇고 바삭한 겉면과 대비를 이룬다"}
+    ],
+    "hi": [
+      {"icon":"🌾","t":"टैपिओका स्टार्च को गरम तरल से उबाला जाता है","d":"आंशिक रूप से जेल जैसा बन जाता है, जो अंदर को लचीली, इलास्टिक बनावट देता है"},
+      {"icon":"🧀","t":"यह स्वाभाविक रूप से ग्लूटेन-मुक्त है, इसकी सामग्री की प्रकृति के कारण","d":"यह आधुनिक बदलाव नहीं, बल्कि मिनास जेराइस की मूल पारंपरिक रेसिपी है"},
+      {"icon":"🥚","t":"अंडे केवल आटा थोड़ा ठंडा होने के बाद ही गूंधे जाते हैं","d":"गरम आटे में डालने पर वे समय से पहले आंशिक रूप से पक जाते"},
+      {"icon":"🔥","t":"केवल बाहर से फूलने और भूरा होने तक बेक किया जाता है","d":"अंदर नरम और इलास्टिक रहता है, पतली कुरकुरी परत के विपरीत"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g amidon de tapioca (polvilho dulce)","250ml lapte","125ml ulei vegetal","1 linguriță sare","2 ouă","200g cașcaval ras (parmezan sau amestec cu brânză minas)"],
+    "en": ["500g sweet tapioca starch (polvilho doce)","250ml milk","125ml vegetable oil","1 tsp salt","2 eggs","200g grated cheese (parmesan or a mix with minas cheese)"],
+    "es": ["500g de almidón de tapioca dulce (polvilho doce)","250ml de leche","125ml de aceite vegetal","1 cdta de sal","2 huevos","200g de queso rallado (parmesano o mezcla con queso minas)"],
+    "fr": ["500g de fécule de tapioca douce (polvilho doce)","250ml de lait","125ml d'huile végétale","1 c. à café de sel","2 œufs","200g de fromage râpé (parmesan ou mélange avec du fromage minas)"],
+    "de": ["500g süße Tapiokastärke (polvilho doce)","250ml Milch","125ml Pflanzenöl","1 TL Salz","2 Eier","200g geriebener Käse (Parmesan oder Mischung mit Minas-Käse)"],
+    "pt": ["500g de polvilho doce","250ml de leite","125ml de óleo vegetal","1 col. chá de sal","2 ovos","200g de queijo ralado (parmesão ou mistura com queijo minas)"],
+    "ru": ["500г сладкого крахмала тапиоки (полвильо доси)","250мл молока","125мл растительного масла","1 ч.л. соли","2 яйца","200г тёртого сыра (пармезан или смесь с сыром минас)"],
+    "ar": ["500غ نشا تابيوكا حلو (بولفيلو دوسي)","250مل حليب","125مل زيت نباتي","ملعقة صغيرة ملح","بيضتان","200غ جبن مبشور (بارميزان أو مزيج مع جبن ميناس)"],
+    "zh": ["500克甜木薯淀粉（polvilho doce）","250毫升牛奶","125毫升植物油","1茶匙盐","2个鸡蛋","200克磨碎的奶酪（帕玛森或与米纳斯奶酪混合）"],
+    "ja": ["甘いタピオカ澱粉500g（ポルヴィリョ・ドース）","牛乳250ml","植物油125ml","塩小さじ1","卵2個","おろしチーズ200g（パルメザンまたはミナスチーズとのミックス）"],
+    "tr": ["500g tatlı tapyoka nişastası (polvilho doce)","250ml süt","125ml bitkisel yağ","1 çay kaşığı tuz","2 yumurta","200g rendelenmiş peynir (parmesan veya minas peyniriyle karışım)"],
+    "it": ["500g di amido di tapioca dolce (polvilho doce)","250ml di latte","125ml di olio vegetale","1 cucchiaino di sale","2 uova","200g di formaggio grattugiato (parmigiano o mix con formaggio minas)"],
+    "ko": ["단맛 타피오카 전분 500g(폴빌류 도시)","우유 250ml","식용유 125ml","소금 1작은술","달걀 2개","간 치즈 200g(파르메산 또는 미나스 치즈와 섞은 것)"],
+    "hi": ["500ग्राम मीठा टैपिओका स्टार्च (पोल्विल्यो दोसे)","250मिली दूध","125मिली वनस्पति तेल","1 छोटा चम्मच नमक","2 अंडे","200ग्राम कद्दूकस किया पनीर (परमेज़ान या मिनास चीज़ के साथ मिश्रण)"]
+  },
+  "howIsMade": {
+    "ro": "ÎNCĂLZEȘTE LICHIDUL: adu la fierbere laptele, uleiul și sarea. OPĂREȘTE AMIDONUL: toarnă lichidul fierbinte peste amidonul de tapioca într-un bol, amestecă până se formează un aluat grunjos, parțial gătit, lasă să se răcească puțin. ADAUGĂ OUĂLE ȘI BRÂNZA: odată răcit suficient cât să poți lucra cu mâinile, frământă ouăle unul câte unul, apoi brânza rasă, până se formează un aluat neted, lipicios, dar ușor de manevrat. MODELEAZĂ: rulează în bile mici, cu mâinile unse cu ulei sau făinate. COACE: coace până se umflă și se rumenește la exterior, cu interiorul elastic, filant. SERVEȘTE: servește cald, ideal proaspăt scos din cuptor.",
+    "en": "HEAT THE LIQUID: bring the milk, oil and salt to a boil. SCALD THE STARCH: pour the hot liquid over the tapioca starch in a bowl, stir until it forms a shaggy, partially cooked dough, let cool slightly. ADD THE EGGS AND CHEESE: once cool enough to handle, knead in the eggs one at a time, then the grated cheese, until a smooth, sticky but workable dough forms. SHAPE: roll into small balls with oiled or floured hands. BAKE: bake until puffed and browned on the outside, with a stretchy, chewy interior. SERVE: serve warm, ideally fresh from the oven.",
+    "es": "CALIENTA EL LÍQUIDO: lleva a ebullición la leche, el aceite y la sal. ESCALDA EL ALMIDÓN: vierte el líquido caliente sobre el almidón de tapioca en un bol, remueve hasta formar una masa grumosa, parcialmente cocida, deja enfriar un poco. AÑADE LOS HUEVOS Y EL QUESO: cuando esté lo bastante fría para manejarla, amasa los huevos uno a uno, luego el queso rallado, hasta obtener una masa lisa, pegajosa pero manejable. MOLDEA: forma bolitas con las manos untadas de aceite o harina. HORNEA: hornea hasta que se infle y dore por fuera, con el interior elástico y filante. SIRVE: sirve caliente, idealmente recién salido del horno.",
+    "fr": "CHAUFFE LE LIQUIDE: porte le lait, l'huile et le sel à ébullition. ÉBOUILLANTE LA FÉCULE: verse le liquide chaud sur la fécule de tapioca dans un bol, remue jusqu'à former une pâte grumeleuse, partiellement cuite, laisse refroidir un peu. AJOUTE LES ŒUFS ET LE FROMAGE: une fois assez froide pour être manipulée, pétris les œufs un par un, puis le fromage râpé, jusqu'à obtenir une pâte lisse, collante mais maniable. FAÇONNE: roule en petites boules avec les mains huilées ou farinées. FAIS CUIRE: fais cuire au four jusqu'à ce que ça gonfle et dore à l'extérieur, avec un intérieur élastique et filant. SERS: sers chaud, idéalement tout juste sorti du four.",
+    "de": "ERHITZE DIE FLÜSSIGKEIT: Milch, Öl und Salz aufkochen. BRÜHE DIE STÄRKE AB: die heiße Flüssigkeit über die Tapiokastärke in einer Schüssel gießen, rühren bis ein krümeliger, teilweise gegarter Teig entsteht, leicht abkühlen lassen. FÜGE EIER UND KÄSE HINZU: sobald er kühl genug zum Anfassen ist, die Eier einzeln einkneten, dann den geriebenen Käse, bis ein glatter, klebriger, aber formbarer Teig entsteht. FORME: mit geölten oder bemehlten Händen zu kleinen Kugeln rollen. BACKE: backen bis außen aufgegangen und gebräunt, mit dehnbarem, zähem Inneren. SERVIEREN: warm servieren, idealerweise frisch aus dem Ofen.",
+    "pt": "AQUEÇA O LÍQUIDO: leve o leite, o óleo e o sal a ferver. ESCALDE O POLVILHO: despeje o líquido quente sobre o polvilho numa tigela, mexa até formar uma massa grumosa, parcialmente cozida, deixe arrefecer um pouco. JUNTE OS OVOS E O QUEIJO: quando estiver fria o suficiente para mexer, sove os ovos um a um, depois o queijo ralado, até formar uma massa lisa, pegajosa mas maleável. MODELE: enrole em bolinhas com as mãos untadas de óleo ou farinha. ASSE: asse até inchar e dourar por fora, com o interior elástico e filante. SIRVA: sirva quente, idealmente recém-saído do forno.",
+    "ru": "РАЗОГРЕЙ ЖИДКОСТЬ: доведи молоко, масло и соль до кипения. ЗАВАРИ КРАХМАЛ: вылей горячую жидкость на крахмал тапиоки в миске, размешай до образования комковатого, частично сваренного теста, дай немного остыть. ДОБАВЬ ЯЙЦА И СЫР: когда остынет достаточно, чтобы работать руками, вмеси яйца по одному, затем тёртый сыр, до образования гладкого, липкого, но пригодного для лепки теста. СФОРМИРУЙ: скатай в маленькие шарики смазанными маслом или мукой руками. ВЫПЕКАЙ: выпекай, пока не поднимется и не подрумянится снаружи, с тягучей, эластичной серединой. ПОДАЙ: подавай тёплым, в идеале прямо из духовки.",
+    "ar": "سخّن السائل: اجلب الحليب والزيت والملح إلى الغليان. اسلق النشا: اسكب السائل الساخن فوق نشا التابيوكا في وعاء، قلّب حتى يتكوّن عجين متكتل نصف مطهو، دعه يبرد قليلًا. أضف البيض والجبن: بمجرد أن يبرد بما يكفي للمس، اعجن البيض واحدة تلو الأخرى، ثم الجبن المبشور، حتى يتكوّن عجين ناعم ولزج لكن قابل للتشكيل. شكّل: شكّله كرات صغيرة بأيدٍ مدهونة بالزيت أو مرشوشة بالدقيق. اخبز: اخبز حتى ينتفخ ويتحمّر من الخارج، مع داخل مطاطي متماسك. قدّم: قدّمه دافئًا، ويُفضّل طازجًا من الفرن.",
+    "zh": "加热液体：将牛奶、油和盐煮沸。烫木薯粉：将热液体倒入碗中的木薯淀粉里，搅拌成粗糙的、部分熟化的面团，稍微放凉。加入鸡蛋和奶酪：待其冷却到可以用手操作时，逐个揉入鸡蛋，再加入磨碎的奶酪，直至形成光滑、粘稠但可塑形的面团。塑形：用抹了油或撒了面粉的手揉成小球。烘烤：烤至外部膨胀上色，内部保持有嚼劲的拉丝状态。上桌：趁热食用，最好是刚出炉的。",
+    "ja": "液体を加熱する：牛乳、油、塩を沸騰させる。澱粉を湯通しする：熱い液体をボウルのタピオカ澱粉に注ぎ、ざらついた半調理の生地になるまで混ぜ、少し冷ます。卵とチーズを加える：手で扱えるくらい冷めたら、卵を一つずつ練り込み、次におろしチーズを加え、なめらかで粘り気のある扱いやすい生地にする。成形する：油または粉をつけた手で小さな団子状に丸める。焼く：外側が膨らんで焼き色がつくまで焼き、内部は伸びる弾力を保つ。盛り付ける：温かいうちに、できればオーブンから出したてを提供する。",
+    "tr": "SIVIYI ISITIN: sütü, yağı ve tuzu kaynatın. NİŞASTAYI HAŞLAYIN: sıcak sıvıyı bir kasedeki tapyoka nişastasının üzerine dökün, dağınık, kısmen pişmiş bir hamur oluşana kadar karıştırın, biraz soğumaya bırakın. YUMURTA VE PEYNİRİ EKLEYİN: elle tutulabilecek kadar soğuyunca, yumurtaları teker teker yoğurun, ardından rendelenmiş peyniri, pürüzsüz, yapışkan ama şekillendirilebilir bir hamur oluşana kadar. ŞEKİLLENDİRİN: yağlanmış veya unlanmış ellerle küçük toplar halinde yuvarlayın. PİŞİRİN: dışı kabarıp kızarana kadar fırınlayın, içi esnek ve elastik kalır. SERVİS YAPIN: sıcak, tercihen fırından yeni çıkmış olarak servis edin.",
+    "it": "SCALDA IL LIQUIDO: porta a bollore il latte, l'olio e il sale. SCOTTA L'AMIDO: versa il liquido caldo sull'amido di tapioca in una ciotola, mescola finché si forma un impasto grumoso, parzialmente cotto, lascia raffreddare leggermente. AGGIUNGI LE UOVA E IL FORMAGGIO: una volta abbastanza freddo da poter essere maneggiato, impasta le uova una alla volta, poi il formaggio grattugiato, finché si forma un impasto liscio, appiccicoso ma lavorabile. FORMA: arrotola in palline piccole con le mani unte d'olio o infarinate. INFORNA: inforna finché gonfio e dorato all'esterno, con l'interno elastico e filante. SERVI: servi caldo, idealmente appena sfornato.",
+    "ko": "액체 데우기: 우유, 기름, 소금을 끓인다. 전분 데치기: 뜨거운 액체를 그릇에 담긴 타피오카 전분에 붓고, 거칠고 반쯤 익은 반죽이 될 때까지 저은 뒤 살짝 식힌다. 달걀과 치즈 넣기: 손으로 다룰 수 있을 만큼 식으면 달걀을 하나씩 반죽에 넣고, 이어서 간 치즈를 넣어 매끄럽고 끈적하지만 다루기 쉬운 반죽이 될 때까지 치댄다. 모양 만들기: 기름이나 밀가루를 바른 손으로 작은 공 모양으로 굴린다. 굽기: 겉이 부풀고 노릇해질 때까지 구우며, 속은 쫄깃하고 탄력 있게 유지한다. 서빙하기: 따뜻하게, 이상적으로는 오븐에서 갓 꺼내어 낸다.",
+    "hi": "तरल गरम करें: दूध, तेल और नमक को उबाल लाएं। स्टार्च उबालें: गरम तरल को एक कटोरे में टैपिओका स्टार्च पर डालें, हिलाकर एक खुरदरा, आंशिक रूप से पका आटा बनाएं, थोड़ा ठंडा होने दें। अंडे और चीज़ डालें: हाथ से संभालने लायक ठंडा होने पर, अंडे एक-एक करके गूंधें, फिर कद्दूकस किया चीज़, जब तक चिकना, चिपचिपा लेकिन काम करने योग्य आटा न बन जाए। आकार दें: तेल या आटा लगे हाथों से छोटी गेंदों में बेलें। बेक करें: बाहर से फूलने और भूरा होने तक बेक करें, अंदर लचीला और इलास्टिक रहे। परोसें: गरम-गरम, आदर्श रूप से ओवन से ताज़ा निकालकर परोसें।"
+  },
+  "originText": {
+    "ro": "Pão de queijo își are rădăcinile în statul Minas Gerais, unde manioca, planta din care se extrage amidonul de tapioca, era un ingredient de bază cu mult înainte de colonizarea portugheză. Sclavii din fermele coloniale foloseau resturile de amidon de manioc pentru a face pâinici simple, care au evoluat de-a lungul secolelor, odată cu adăugarea brânzei și a ouălor, în felul cunoscut astăzi.\n\nSpre deosebire de multe pâini fără gluten din bucătăria modernă, pão de queijo nu e o adaptare recentă — e naturală fără gluten de la origini, pentru că amidonul de tapioca nu conține deloc grâu. Tehnica de opărire, în care amidonul e stropit cu lichid fierbinte înainte de a fi frământat, e ceea ce dă miezului acea textură elastică, filantă, atât de caracteristică — un pas care gelatinizează parțial amidonul, imposibil de reprodus doar prin amestecarea ingredientelor crude.",
+    "en": "Pão de queijo has its roots in the state of Minas Gerais, where cassava, the plant from which tapioca starch is extracted, was a staple ingredient long before Portuguese colonization. Enslaved people on colonial farms used leftover cassava starch to make simple flatbreads, which evolved over the centuries, with the addition of cheese and eggs, into the dish known today.\n\nUnlike many gluten-free breads in modern cooking, pão de queijo isn't a recent adaptation — it's naturally gluten-free from its origins, since tapioca starch contains no wheat at all. The scalding technique, in which the starch is doused with hot liquid before being kneaded, is what gives the inside that stretchy, elastic texture so characteristic of it — a step that partially gelatinizes the starch, impossible to reproduce by simply mixing raw ingredients.",
+    "es": "El pão de queijo tiene sus raíces en el estado de Minas Gerais, donde la mandioca, la planta de la que se extrae el almidón de tapioca, era un ingrediente básico mucho antes de la colonización portuguesa. Las personas esclavizadas en las haciendas coloniales usaban restos de almidón de mandioca para hacer panes planos simples, que evolucionaron a lo largo de los siglos, con la adición de queso y huevos, hasta el plato conocido hoy.\n\nA diferencia de muchos panes sin gluten de la cocina moderna, el pão de queijo no es una adaptación reciente — es naturalmente sin gluten desde su origen, ya que el almidón de tapioca no contiene trigo en absoluto. La técnica de escaldado, en la que el almidón se riega con líquido caliente antes de amasarlo, es lo que da al interior esa textura elástica y filante tan característica — un paso que gelatiniza parcialmente el almidón, imposible de reproducir con solo mezclar ingredientes crudos.",
+    "fr": "Le pão de queijo trouve ses racines dans l'état du Minas Gerais, où le manioc, la plante dont on extrait la fécule de tapioca, était un ingrédient de base bien avant la colonisation portugaise. Les personnes réduites en esclavage dans les fermes coloniales utilisaient les restes de fécule de manioc pour faire de simples galettes, qui ont évolué au fil des siècles, avec l'ajout de fromage et d'œufs, vers le plat connu aujourd'hui.\n\nContrairement à de nombreux pains sans gluten de la cuisine moderne, le pão de queijo n'est pas une adaptation récente — il est naturellement sans gluten depuis ses origines, car la fécule de tapioca ne contient aucun blé. La technique d'ébouillantage, où la fécule est arrosée de liquide chaud avant d'être pétrie, est ce qui donne à l'intérieur cette texture élastique et filante si caractéristique — une étape qui gélatinise partiellement la fécule, impossible à reproduire en mélangeant simplement des ingrédients crus.",
+    "de": "Pão de queijo hat seine Wurzeln im Bundesstaat Minas Gerais, wo Maniok, die Pflanze, aus der Tapiokastärke gewonnen wird, lange vor der portugiesischen Kolonisierung ein Grundnahrungsmittel war. Versklavte Menschen auf Kolonialfarmen nutzten übrig gebliebene Maniokstärke, um einfache Fladenbrote herzustellen, die sich im Laufe der Jahrhunderte mit der Zugabe von Käse und Eiern zu dem heute bekannten Gericht entwickelten.\n\nAnders als viele glutenfreie Brote der modernen Küche ist Pão de queijo keine neue Anpassung — es ist von Ursprung an natürlich glutenfrei, da Tapiokastärke überhaupt keinen Weizen enthält. Die Abbrühtechnik, bei der die Stärke vor dem Kneten mit heißer Flüssigkeit übergossen wird, verleiht dem Inneren diese so charakteristische dehnbare, elastische Textur — ein Schritt, der die Stärke teilweise geliert, unmöglich durch bloßes Mischen roher Zutaten zu erreichen.",
+    "pt": "O pão de queijo tem raízes no estado de Minas Gerais, onde a mandioca, a planta da qual se extrai o polvilho, era um ingrediente básico muito antes da colonização portuguesa. Pessoas escravizadas nas fazendas coloniais usavam sobras de polvilho para fazer pães achatados simples, que evoluíram ao longo dos séculos, com a adição de queijo e ovos, para o prato hoje conhecido.\n\nAo contrário de muitos pães sem glúten da culinária moderna, o pão de queijo não é uma adaptação recente — é naturalmente sem glúten desde a origem, já que o polvilho não contém trigo algum. A técnica de escaldar, em que o polvilho é regado com líquido quente antes de ser sovado, é o que dá ao miolo aquela textura elástica e filante tão característica — um passo que gelatiniza parcialmente o polvilho, impossível de reproduzir apenas misturando ingredientes crus.",
+    "ru": "Пан-де-кейжу уходит корнями в штат Минас-Жерайс, где маниок, растение, из которого добывают крахмал тапиоки, был основным продуктом задолго до португальской колонизации. Порабощённые люди на колониальных фермах использовали остатки крахмала маниока для приготовления простых лепёшек, которые за столетия эволюционировали, обогатившись сыром и яйцами, в известное сегодня блюдо.\n\nВ отличие от многих безглютеновых хлебов современной кухни, пан-де-кейжу — не недавняя адаптация: он безглютеновый по своей природе с самого начала, поскольку крахмал тапиоки вообще не содержит пшеницы. Техника заваривания, при которой крахмал поливают горячей жидкостью перед замешиванием, придаёт мякишу ту самую тягучую, эластичную текстуру — этап, частично клейстеризующий крахмал, который невозможно воспроизвести простым смешиванием сырых ингредиентов.",
+    "ar": "يعود باو دي كيجو بجذوره إلى ولاية ميناس جيرايس، حيث كان الكسافا، النبات الذي يُستخرج منه نشا التابيوكا، مكونًا أساسيًا قبل الاستعمار البرتغالي بوقت طويل. استخدم العبيد في المزارع الاستعمارية بقايا نشا الكسافا لصنع خبز مسطح بسيط، تطور على مر القرون، بإضافة الجبن والبيض، إلى الطبق المعروف اليوم.\n\nخلافًا للعديد من الخبزات الخالية من الغلوتين في الطبخ الحديث، باو دي كيجو ليس تكيفًا حديثًا — فهو خالٍ من الغلوتين بطبيعته منذ الأصل، لأن نشا التابيوكا لا يحتوي على قمح إطلاقًا. تقنية السلق، حيث يُرش النشا بسائل ساخن قبل عجنه، هي ما يمنح الداخل ذلك القوام المطاطي القابل للتمدد المميز — خطوة تُغلظن النشا جزئيًا، يستحيل تكرارها بمجرد خلط المكونات النيئة.",
+    "zh": "巴西奶酪面包的根源可追溯至米纳斯吉拉斯州，在葡萄牙殖民之前很久，木薯——提取木薯淀粉的植物——就已是当地的主食。殖民地农场里的奴隶用剩余的木薯淀粉制作简单的薄饼，数百年间随着奶酪和鸡蛋的加入，逐渐演变成如今为人熟知的这道菜。\n\n与现代烹饪中许多无麸质面包不同，巴西奶酪面包并非近代改良的产物——它从起源上就天然不含麸质，因为木薯淀粉根本不含小麦成分。烫粉技法，即在揉面前用热液体浇淋淀粉，正是赋予其内部那种标志性拉丝弹性口感的关键——这一步能让淀粉部分糊化，仅靠简单混合生料是无法复制的。",
+    "ja": "パオンジケイジョはミナスジェライス州にルーツを持ち、そこではタピオカ澱粉が採れる植物であるキャッサバが、ポルトガルによる植民地化よりずっと以前から主食であった。植民地農場で奴隷とされた人々は、余ったキャッサバ澱粉を使ってシンプルなフラットブレッドを作り、それが何世紀にもわたってチーズと卵が加えられ、今日知られる料理へと発展した。\n\n現代料理における多くのグルテンフリーパンとは異なり、パオンジケイジョは最近の改良版ではない——タピオカ澱粉には小麦がまったく含まれないため、起源からして自然にグルテンフリーなのだ。練る前に熱い液体で澱粉を湯通しする技法こそが、内部にあの特徴的な伸びる弾力食感を与える——この工程は澱粉を部分的に糊化させるもので、生の材料を混ぜるだけでは決して再現できない。",
+    "tr": "Pão de queijo, tapyoka nişastasının elde edildiği bitki olan manyoğun, Portekiz sömürgeciliğinden çok önce temel bir malzeme olduğu Minas Gerais eyaletinde köklerini bulur. Sömürge çiftliklerindeki köleleştirilmiş insanlar, artan manyok nişastasını basit yassı ekmekler yapmak için kullanırdı; bunlar yüzyıllar boyunca peynir ve yumurta eklenerek bugün bilinen yemeğe dönüştü.\n\nModern mutfaktaki birçok glütensiz ekmeğin aksine, pão de queijo yakın zamanda yapılmış bir uyarlama değildir — tapyoka nişastası hiç buğday içermediği için, kökeninden itibaren doğal olarak glütensizdir. Yoğrulmadan önce nişastanın sıcak sıvıyla haşlandığı teknik, iç kısma o kadar karakteristik esnek, elastik dokuyu veren şeydir — bu adım nişastayı kısmen jelleştirir, ki bu sadece çiğ malzemeleri karıştırarak asla elde edilemez.",
+    "it": "Il pão de queijo affonda le sue radici nello stato di Minas Gerais, dove la manioca, la pianta da cui si estrae l'amido di tapioca, era un ingrediente base ben prima della colonizzazione portoghese. Le persone rese schiave nelle fattorie coloniali usavano gli avanzi di amido di manioca per fare semplici pani piatti, che nel corso dei secoli, con l'aggiunta di formaggio e uova, si sono evoluti nel piatto conosciuto oggi.\n\nA differenza di molti pani senza glutine della cucina moderna, il pão de queijo non è un adattamento recente — è naturalmente senza glutine fin dalle origini, poiché l'amido di tapioca non contiene affatto grano. La tecnica della scottatura, in cui l'amido viene bagnato con liquido caldo prima di essere impastato, è ciò che dà all'interno quella consistenza elastica e filante così caratteristica — un passaggio che gelatinizza parzialmente l'amido, impossibile da riprodurre semplicemente mescolando ingredienti crudi.",
+    "ko": "빵 지 케이주는 미나스제라이스 주에 그 뿌리를 두고 있는데, 이곳에서는 타피오카 전분을 추출하는 식물인 카사바가 포르투갈 식민지화 훨씬 이전부터 주식이었다. 식민지 농장의 노예들은 남은 카사바 전분으로 간단한 플랫브레드를 만들었고, 이는 수 세기에 걸쳐 치즈와 달걀이 더해지며 오늘날 알려진 요리로 발전했다.\n\n현대 요리의 많은 글루텐프리 빵과 달리, 빵 지 케이주는 최근에 만들어진 변형이 아니다 — 타피오카 전분에는 밀이 전혀 들어있지 않기 때문에 그 기원부터 자연스럽게 글루텐프리였다. 반죽하기 전 전분에 뜨거운 액체를 부어 데치는 기법이야말로 그 특유의 쫄깃하고 탄력 있는 속을 만들어내는 것으로 — 이 단계는 전분을 부분적으로 호화시키는데, 단순히 생재료를 섞는 것만으로는 결코 재현할 수 없다.",
+    "hi": "पाओ दे केइजो की जड़ें मिनास जेराइस राज्य में हैं, जहां कसावा, वह पौधा जिससे टैपिओका स्टार्च निकाला जाता है, पुर्तगाली उपनिवेशीकरण से बहुत पहले एक मुख्य सामग्री थी। औपनिवेशिक खेतों में गुलाम बनाए गए लोग बचे हुए कसावा स्टार्च का उपयोग साधारण फ्लैटब्रेड बनाने के लिए करते थे, जो सदियों में, चीज़ और अंडे जोड़े जाने के साथ, आज ज्ञात व्यंजन में विकसित हुआ।\n\nआधुनिक रसोई के कई ग्लूटेन-मुक्त ब्रेड के विपरीत, पाओ दे केइजो कोई हालिया बदलाव नहीं है — यह अपनी उत्पत्ति से ही स्वाभाविक रूप से ग्लूटेन-मुक्त है, क्योंकि टैपिओका स्टार्च में बिल्कुल भी गेहूं नहीं होता। उबालने की तकनीक, जिसमें स्टार्च को गूंधने से पहले गरम तरल से भिगोया जाता है, वही है जो अंदर को वह इतनी विशिष्ट लचीली, इलास्टिक बनावट देती है — एक कदम जो स्टार्च को आंशिक रूप से जेल जैसा बनाता है, जिसे केवल कच्ची सामग्री मिलाकर दोहराना असंभव है।"
+  },
+  "meta": {
+    "time": 45,
+    "costRon": 12,
+    "tags": ["vegetarian","family"],
+    "desc": {
+      "ro": "Pâinici braziliene din amidon de tapioca și brânză, cu crustă crocantă și miez elastic, filant.",
+      "en": "Brazilian rolls made from tapioca starch and cheese, with a crisp crust and stretchy, elastic inside.",
+      "es": "Panecillos brasileños de almidón de tapioca y queso, con corteza crujiente e interior elástico y filante.",
+      "fr": "Petits pains brésiliens à la fécule de tapioca et au fromage, à la croûte croustillante et à l'intérieur filant.",
+      "de": "Brasilianische Brötchen aus Tapiokastärke und Käse, mit knuspriger Kruste und dehnbarem, elastischem Inneren.",
+      "pt": "Pãezinhos brasileiros de polvilho e queijo, com casca crocante e interior elástico e filante.",
+      "ru": "Бразильские булочки из крахмала тапиоки и сыра, с хрустящей корочкой и тягучей серединой.",
+      "ar": "خبيزات برازيلية من نشا التابيوكا والجبن، بقشرة مقرمشة وداخل مطاطي متماسك.",
+      "zh": "巴西木薯淀粉奶酪小面包，外皮酥脆，内部拉丝有弹性。",
+      "ja": "タピオカ澱粉とチーズで作るブラジルの小さなパン、外はパリッと中はもちもち。",
+      "tr": "Tapyoka nişastası ve peynirden yapılan, çıtır kabuklu, esnek elastik içli Brezilya ekmekleri.",
+      "it": "Panini brasiliani di amido di tapioca e formaggio, con crosta croccante e interno elastico e filante.",
+      "ko": "타피오카 전분과 치즈로 만든 브라질식 롤빵, 바삭한 겉면과 쫄깃한 속.",
+      "hi": "टैपिओका स्टार्च और चीज़ से बने ब्राज़ीलियाई रोल, कुरकुरी परत और लचीले इलास्टिक अंदरूनी भाग के साथ।"
+    }
+  }
+}

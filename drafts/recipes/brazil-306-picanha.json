@@ -1,0 +1,177 @@
+{
+  "id": 306,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Brazilia", "en": "Brazil", "es": "Brasil", "fr": "Brésil", "de": "Brasilien",
+    "pt": "Brasil", "ru": "Бразилия", "ar": "البرازيل", "zh": "巴西", "ja": "ブラジル",
+    "hi": "ब्राज़ील", "tr": "Brezilya", "it": "Brasile", "ko": "브라질"
+  },
+  "name": {
+    "ro": "Picanha", "en": "Picanha", "es": "Picanha", "fr": "Picanha", "de": "Picanha",
+    "pt": "Picanha", "ru": "Пиканья", "ar": "بيكانيا", "zh": "巴西烤臀肉", "ja": "ピカーニャ",
+    "tr": "Picanha", "it": "Picanha", "ko": "피카냐", "hi": "पिकान्या"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal",
+    "de": "Hauptgericht", "pt": "Prato principal", "ru": "Основное блюдо", "ar": "طبق رئيسي",
+    "zh": "主菜", "ja": "メイン料理", "tr": "Ana Yemek", "it": "Piatto principale",
+    "ko": "메인 요리", "hi": "मुख्य व्यंजन"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🧂","t":"Se condimentează doar cu sare grunjoasă, nimic altceva","d":"Calitatea cărnii e considerată suficientă, fără marinate care i-ar masca gustul"},
+      {"icon":"🔪","t":"Stratul de grăsime se crestează în carouri, fără a tăia carnea","d":"Ajută grăsimea să se topească uniform, fără să se contracte și să curbeze bucata"},
+      {"icon":"🍢","t":"Tradițional, se înșiră pe frigare curbă, în formă de evantai","d":"Forma urmează curbura naturală a bucății, pentru o frigere uniformă la rotisor"},
+      {"icon":"🔥","t":"Grăsimea intră spre jar prima, ca să se topească și să aromatizeze","d":"Fumul de grăsime picurată pe cărbuni parfumează carnea în timp ce se frige"}
+    ],
+    "en": [
+      {"icon":"🧂","t":"Seasoned with only coarse salt, nothing else","d":"The quality of the meat is considered enough, no marinade to mask its flavor"},
+      {"icon":"🔪","t":"The fat cap is scored in a crosshatch, without cutting into the meat","d":"Helps the fat render evenly, without the piece contracting and curling up"},
+      {"icon":"🍢","t":"Traditionally threaded onto a curved skewer, fan-shaped","d":"The shape follows the cut's natural curve, for even rotisserie grilling"},
+      {"icon":"🔥","t":"The fat side goes toward the coals first, to render and flavor","d":"Fat dripping onto the coals smokes and perfumes the meat as it grills"}
+    ],
+    "es": [
+      {"icon":"🧂","t":"Se sazona solo con sal gruesa, nada más","d":"La calidad de la carne se considera suficiente, sin marinada que enmascare su sabor"},
+      {"icon":"🔪","t":"La capa de grasa se marca en rejilla, sin cortar la carne","d":"Ayuda a que la grasa se derrita de forma uniforme, sin que la pieza se contraiga y curve"},
+      {"icon":"🍢","t":"Tradicionalmente se ensarta en una brocheta curva, en forma de abanico","d":"La forma sigue la curva natural de la pieza, para un asado uniforme en el rotisor"},
+      {"icon":"🔥","t":"El lado graso va primero hacia las brasas, para derretirse y dar sabor","d":"La grasa que gotea sobre las brasas ahúma y perfuma la carne mientras se asa"}
+    ],
+    "fr": [
+      {"icon":"🧂","t":"Assaisonnée uniquement avec du gros sel, rien d'autre","d":"La qualité de la viande est jugée suffisante, sans marinade pour masquer son goût"},
+      {"icon":"🔪","t":"La couche de gras est quadrillée, sans entamer la viande","d":"Aide la graisse à fondre uniformément, sans que le morceau ne se contracte et ne s'enroule"},
+      {"icon":"🍢","t":"Traditionnellement enfilée sur une brochette courbe, en éventail","d":"La forme suit la courbe naturelle du morceau, pour une cuisson uniforme à la rôtissoire"},
+      {"icon":"🔥","t":"Le côté gras est placé d'abord vers les braises, pour fondre et parfumer","d":"La graisse qui goutte sur les braises fume et parfume la viande pendant la cuisson"}
+    ],
+    "de": [
+      {"icon":"🧂","t":"Nur mit grobem Salz gewürzt, sonst nichts","d":"Die Fleischqualität gilt als ausreichend, keine Marinade soll den Geschmack überdecken"},
+      {"icon":"🔪","t":"Die Fettschicht wird rautenförmig eingeritzt, ohne ins Fleisch zu schneiden","d":"Hilft dem Fett, gleichmäßig auszulassen, ohne dass sich das Stück zusammenzieht und wölbt"},
+      {"icon":"🍢","t":"Traditionell fächerförmig auf einen gebogenen Spieß gesteckt","d":"Die Form folgt der natürlichen Krümmung des Stücks, für gleichmäßiges Rotisserie-Grillen"},
+      {"icon":"🔥","t":"Die Fettseite kommt zuerst zur Glut, um auszulassen und Aroma zu geben","d":"Auf die Glut tropfendes Fett räuchert und parfümiert das Fleisch beim Grillen"}
+    ],
+    "pt": [
+      {"icon":"🧂","t":"Temperada só com sal grosso, nada mais","d":"A qualidade da carne é considerada suficiente, sem marinada que mascare o sabor"},
+      {"icon":"🔪","t":"A capa de gordura é marcada em grade, sem cortar a carne","d":"Ajuda a gordura a derreter uniformemente, sem que a peça se contraia e enrole"},
+      {"icon":"🍢","t":"Tradicionalmente enfiada num espeto curvo, em leque","d":"O formato segue a curva natural da peça, para assar uniformemente no rodízio"},
+      {"icon":"🔥","t":"O lado da gordura vai primeiro para as brasas, para derreter e dar sabor","d":"A gordura pingando nas brasas defuma e perfuma a carne enquanto assa"}
+    ],
+    "ru": [
+      {"icon":"🧂","t":"Приправляется только крупной солью, больше ничем","d":"Качество мяса считается достаточным, без маринада, скрывающего вкус"},
+      {"icon":"🔪","t":"Жировой слой надрезается сеткой, не задевая мясо","d":"Помогает жиру равномерно вытапливаться, не давая куску сжиматься и скручиваться"},
+      {"icon":"🍢","t":"Традиционно нанизывается на изогнутый шампур веером","d":"Форма следует естественному изгибу куска для равномерной жарки на вертеле"},
+      {"icon":"🔥","t":"Жирная сторона идёт к углям первой, чтобы вытопиться и придать аромат","d":"Капающий на угли жир дымит и ароматизирует мясо во время жарки"}
+    ],
+    "ar": [
+      {"icon":"🧂","t":"يُتبّل فقط بملح خشن، لا شيء آخر","d":"جودة اللحم تُعتبر كافية، دون تتبيل يخفي نكهته"},
+      {"icon":"🔪","t":"طبقة الدهن تُخدّش بشكل شبكي دون قطع اللحم","d":"يساعد الدهن على الذوبان بانتظام دون أن تنكمش القطعة وتتقوّس"},
+      {"icon":"🍢","t":"تقليديًا تُنظم على سيخ منحنٍ بشكل مروحة","d":"يتبع الشكل الانحناء الطبيعي للقطعة لشوي منتظم على السيخ الدوّار"},
+      {"icon":"🔥","t":"جانب الدهن يتجه أولًا نحو الجمر ليذوب ويمنح النكهة","d":"الدهن المتساقط على الجمر يدخّن ويعطّر اللحم أثناء الشوي"}
+    ],
+    "zh": [
+      {"icon":"🧂","t":"只用粗盐调味，不加其他","d":"肉质本身的品质被认为已足够，无需腌料掩盖风味"},
+      {"icon":"🔪","t":"脂肪层划出交叉花纹，不切到肉","d":"帮助脂肪均匀融化，避免肉块收缩卷曲"},
+      {"icon":"🍢","t":"传统上以扇形穿在弯曲的烤肉签上","d":"造型顺应肉块的自然弧度，方便在烤肉架上均匀转烤"},
+      {"icon":"🔥","t":"脂肪面先朝向炭火，以便融化并增添香气","d":"滴落在炭火上的油脂产生烟熏味，为烤制中的肉增香"}
+    ],
+    "ja": [
+      {"icon":"🧂","t":"味付けは粗塩のみ、それ以外は何もしない","d":"肉自体の質が十分と考えられ、風味を隠すマリネは使わない"},
+      {"icon":"🔪","t":"脂身は肉を切らずに格子状に切れ込みを入れる","d":"肉が縮んで丸まらないよう、脂が均一に溶け出すのを助ける"},
+      {"icon":"🍢","t":"伝統的には扇形に曲がった串に刺す","d":"形は肉の自然な曲線に沿い、回転焼きで均一に火を通す"},
+      {"icon":"🔥","t":"脂身側を先に炭火に向けて溶かし風味をつける","d":"炭に滴る脂が煙を出し、焼いている間に肉に香りを移す"}
+    ],
+    "tr": [
+      {"icon":"🧂","t":"Sadece kaba tuzla tatlandırılır, başka hiçbir şeyle değil","d":"Etin kalitesi yeterli sayılır, lezzetini gizleyecek marine yapılmaz"},
+      {"icon":"🔪","t":"Yağ tabakası eti kesmeden çapraz çizilir","d":"Parçanın büzülüp kıvrılmadan yağın eşit şekilde erimesine yardımcı olur"},
+      {"icon":"🍢","t":"Geleneksel olarak yelpaze şeklinde eğri bir şişe dizilir","d":"Şekil, döner ızgarada eşit pişme için parçanın doğal eğrisini takip eder"},
+      {"icon":"🔥","t":"Yağlı taraf önce köze doğru döner, erimesi ve tat vermesi için","d":"Köre damlayan yağ, pişerken eti dumanla tatlandırır"}
+    ],
+    "it": [
+      {"icon":"🧂","t":"Condita solo con sale grosso, nient'altro","d":"La qualità della carne è ritenuta sufficiente, senza marinatura che ne mascheri il sapore"},
+      {"icon":"🔪","t":"Lo strato di grasso viene inciso a losanghe, senza tagliare la carne","d":"Aiuta il grasso a sciogliersi uniformemente, senza che il pezzo si contragga e si arricci"},
+      {"icon":"🍢","t":"Tradizionalmente infilata su uno spiedo curvo, a ventaglio","d":"La forma segue la curva naturale del pezzo, per una cottura uniforme allo spiedo"},
+      {"icon":"🔥","t":"Il lato grasso va prima verso la brace, per sciogliersi e insaporire","d":"Il grasso che gocciola sulla brace affumica e profuma la carne durante la cottura"}
+    ],
+    "ko": [
+      {"icon":"🧂","t":"굵은 소금으로만 간을 하며 다른 것은 넣지 않는다","d":"고기 자체의 품질로 충분하다고 여겨, 맛을 가리는 양념은 하지 않는다"},
+      {"icon":"🔪","t":"지방층은 고기를 자르지 않고 격자무늬로 칼집을 낸다","d":"고기가 오그라들거나 말리지 않고 지방이 고르게 녹아내리도록 돕는다"},
+      {"icon":"🍢","t":"전통적으로 부채꼴 모양의 휜 꼬치에 꽂는다","d":"고기의 자연스러운 곡선을 따라 회전 구이에서 고르게 익도록 한다"},
+      {"icon":"🔥","t":"지방 면을 먼저 숯불 쪽으로 향하게 하여 녹이고 향을 낸다","d":"숯불에 떨어지는 기름이 연기를 내며 굽는 동안 고기에 향을 입힌다"}
+    ],
+    "hi": [
+      {"icon":"🧂","t":"केवल मोटे नमक से मसाला लगाया जाता है, कुछ और नहीं","d":"मांस की गुणवत्ता ही काफी मानी जाती है, स्वाद छिपाने वाला कोई मैरिनेड नहीं"},
+      {"icon":"🔪","t":"चर्बी की परत को मांस काटे बिना जाली पैटर्न में चीरा जाता है","d":"चर्बी को समान रूप से पिघलने में मदद करता है, टुकड़ा सिकुड़कर मुड़ता नहीं"},
+      {"icon":"🍢","t":"पारंपरिक रूप से पंखे के आकार में घुमावदार सीख पर पिरोया जाता है","d":"आकार टुकड़े के प्राकृतिक मोड़ का अनुसरण करता है, रोटिसरी में समान भुनाई के लिए"},
+      {"icon":"🔥","t":"चर्बी वाला हिस्सा पहले अंगारों की ओर जाता है, पिघलने और स्वाद के लिए","d":"अंगारों पर टपकती चर्बी धुआं छोड़ती है और भुनते समय मांस को महकाती है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1,2kg picanha (mușchi de vită cu capac de grăsime), bucată întreagă","sare grunjoasă, pentru condimentat","frigărui curbe (dacă se folosește metoda tradițională)","farofa (făină de manioc prăjită), pentru servire","vinagrete brazilian (roșii, ceapă, ardei, oțet, ulei), pentru servire"],
+    "en": ["1.2kg picanha (beef top sirloin cap), whole piece, fat cap intact","coarse rock salt, for seasoning","curved skewers (if using the traditional method)","farofa (toasted cassava flour), for serving","Brazilian vinagrete (chopped tomato, onion, pepper, vinegar, oil), for serving"],
+    "es": ["1,2kg de picanha (tapa de cuadril de ternera), pieza entera, con la capa de grasa","sal gruesa, para sazonar","brochetas curvas (si se usa el método tradicional)","farofa (harina de mandioca tostada), para servir","vinagrete brasileño (tomate, cebolla, pimiento, vinagre, aceite picados), para servir"],
+    "fr": ["1,2kg de picanha (culotte de bœuf avec sa couche de gras), pièce entière","gros sel, pour assaisonner","brochettes courbes (si méthode traditionnelle)","farofa (farine de manioc grillée), pour servir","vinagrete brésilien (tomate, oignon, poivron, vinaigre, huile hachés), pour servir"],
+    "de": ["1,2kg Picanha (Rinder-Tafelspitzdeckel mit Fettschicht), am Stück","grobes Salz, zum Würzen","gebogene Spieße (bei traditioneller Methode)","Farofa (geröstetes Maniokmehl), zum Servieren","brasilianisches Vinagrete (gehackte Tomate, Zwiebel, Paprika, Essig, Öl), zum Servieren"],
+    "pt": ["1,2kg de picanha, peça inteira, com a capa de gordura","sal grosso, para temperar","espetos curvos (se usar o método tradicional)","farofa, para servir","vinagrete brasileiro (tomate, cebola, pimentão, vinagre, óleo picados), para servir"],
+    "ru": ["1,2кг пиканьи (говяжий колпак с жировой прослойкой), цельным куском","крупная соль, для приправы","изогнутые шампуры (при традиционном способе)","фарофа (обжаренная мука маниоки), для подачи","бразильский винагрете (нарезанные помидор, лук, перец, уксус, масло), для подачи"],
+    "ar": ["1.2كغ بيكانيا (طبقة الردف العلوية من لحم البقر مع الدهن)، قطعة كاملة","ملح خشن، للتتبيل","أسياخ منحنية (عند استخدام الطريقة التقليدية)","فاروفا (دقيق الكسافا المحمّص)، للتقديم","فيناغريتي برازيلي (طماطم وبصل وفلفل وخل وزيت مفرومة)، للتقديم"],
+    "zh": ["1.2公斤picanha牛臀肉（带脂肪盖），整块","粗盐，调味用","弯曲烤肉签（如用传统方法）","farofa（烤木薯粉），配餐用","巴西vinagrete（切碎的番茄、洋葱、彩椒、醋、油），配餐用"],
+    "ja": ["ピカーニャ（牛のイチボ、脂身付き）1.2kg、丸ごと1本","粗塩、味付け用","曲がった串（伝統的な方法を使う場合）","ファロファ（炒ったキャッサバ粉）、添える用","ブラジル風ヴィナグレッチ（刻んだトマト、玉ねぎ、ピーマン、酢、油）、添える用"],
+    "tr": ["1,2kg picanha (yağ kapaklı sığır but eti), bütün parça","kaba tuz, tatlandırmak için","eğri şişler (geleneksel yöntem kullanılıyorsa)","farofa (kavrulmuş manyok unu), servis için","Brezilya usulü vinagrete (doğranmış domates, soğan, biber, sirke, yağ), servis için"],
+    "it": ["1,2kg di picanha (codone di manzo con cappello di grasso), pezzo intero","sale grosso, per condire","spiedi curvi (se si usa il metodo tradizionale)","farofa (farina di manioca tostata), per servire","vinagrete brasiliano (pomodoro, cipolla, peperone, aceto, olio tritati), per servire"],
+    "ko": ["피카냐(소 우둔살, 지방층 포함) 1.2kg, 통째로","굵은 소금, 간용","휜 꼬치(전통 방식 사용 시)","파로파(볶은 카사바 가루), 곁들임용","브라질식 비나그레치(다진 토마토, 양파, 피망, 식초, 기름), 곁들임용"],
+    "hi": ["1.2किलो पिकान्या (गोमांस टॉप सिरलॉइन कैप), साबुत टुकड़ा, चर्बी की परत सहित","मोटा नमक, मसाला लगाने के लिए","घुमावदार सीखें (अगर पारंपरिक तरीका इस्तेमाल करें)","फारोफा (भुना कसावा आटा), परोसने के लिए","ब्राज़ीलियाई विनाग्रेते (कटे टमाटर, प्याज़, शिमला मिर्च, सिरका, तेल), परोसने के लिए"]
+  },
+  "howIsMade": {
+    "ro": "CRESTEAZĂ GRĂSIMEA: crestează stratul de grăsime în carouri, fără a tăia în carne. TAIE PORȚII: dacă nu folosești metoda tradițională la frigare întreagă, taie picanha contra fibrei în felii groase, urmând curbura naturală. SĂREAZĂ GENEROS: acoperă generos cu sare grunjoasă chiar înainte de a frige, nu cu ore înainte. ÎNȘIRĂ SAU AȘAZĂ: înșiră pe frigărui în formă de evantai (metoda tradițională) sau așază feliile direct pe grătar, cu grăsimea în jos prima dată. FRIGE LA FOC MARE: frige pe jar foarte fierbinte, cu grăsimea în jos prima dată, ca să se topească, apoi întoarce, rumenind fiecare parte bine. LASĂ SĂ SE ODIHNEASCĂ: lasă câteva minute înainte de a tăia. TAIE ȘI SERVEȘTE: taie contra fibrei în bucăți groase, servește cu farofa și vinagrete.",
+    "en": "SCORE THE FAT: score the fat cap in a crosshatch pattern, without cutting into the meat. CUT INTO PORTIONS: if not using the traditional whole-skewer method, cut the picanha across the grain into thick steaks, following the natural curve. SALT GENEROUSLY: coat generously with coarse salt just before grilling, not hours ahead. SKEWER OR PLACE: thread onto skewers in a fan shape (traditional method) or place the steaks directly on the grill, fat side down first. GRILL OVER HIGH HEAT: grill over very hot coals, fat side down first to render, then flip, searing each side to a deep crust. LET IT REST: let rest a few minutes before slicing. SLICE AND SERVE: slice against the grain into thick pieces, serve with farofa and vinagrete.",
+    "es": "MARCA LA GRASA: marca la capa de grasa en rejilla, sin cortar la carne. CORTA EN PORCIONES: si no usas el método tradicional de brocheta entera, corta la picanha a contrahílo en filetes gruesos, siguiendo la curva natural. SAZONA GENEROSAMENTE: cubre generosamente con sal gruesa justo antes de asar, no horas antes. ENSARTA O COLOCA: ensarta en brochetas en forma de abanico (método tradicional) o coloca los filetes directo en la parrilla, con la grasa hacia abajo primero. ASA A FUEGO FUERTE: asa sobre brasas muy calientes, con la grasa hacia abajo primero para derretirla, luego voltea, sellando bien cada lado. DEJA REPOSAR: deja reposar unos minutos antes de cortar. CORTA Y SIRVE: corta a contrahílo en trozos gruesos, sirve con farofa y vinagrete.",
+    "fr": "QUADRILLE LE GRAS: quadrille la couche de gras, sans entamer la viande. DÉCOUPE EN PORTIONS: si tu n'utilises pas la méthode traditionnelle de la brochette entière, coupe la picanha à contre-fibre en tranches épaisses, en suivant la courbe naturelle. SALE GÉNÉREUSEMENT: enrobe généreusement de gros sel juste avant de griller, pas des heures avant. ENFILE OU DISPOSE: enfile sur des brochettes en éventail (méthode traditionnelle) ou dispose les tranches directement sur le grill, côté gras vers le bas d'abord. GRILLE À FEU VIF: fais griller sur des braises très chaudes, côté gras vers le bas d'abord pour fondre, puis retourne, en saisissant bien chaque côté. LAISSE REPOSER: laisse reposer quelques minutes avant de trancher. TRANCHE ET SERS: tranche à contre-fibre en morceaux épais, sers avec farofa et vinagrete.",
+    "de": "RITZE DAS FETT EIN: die Fettschicht rautenförmig einritzen, ohne ins Fleisch zu schneiden. SCHNEIDE IN PORTIONEN: wenn nicht die traditionelle Ganzstück-Spieß-Methode verwendet wird, die Picanha gegen die Faser in dicke Steaks schneiden, der natürlichen Krümmung folgend. WÜRZE GROSSZÜGIG: großzügig mit grobem Salz bedecken, direkt vor dem Grillen, nicht Stunden vorher. SPIESSE ODER LEGE: fächerförmig auf Spieße stecken (traditionelle Methode) oder die Steaks direkt auf den Grill legen, zuerst mit der Fettseite nach unten. GRILLE BEI STARKER HITZE: über sehr heißer Glut grillen, zuerst mit der Fettseite nach unten zum Auslassen, dann wenden, jede Seite kräftig anbraten. LASS ES RUHEN: ein paar Minuten ruhen lassen, bevor angeschnitten wird. SCHNEIDE UND SERVIERE: gegen die Faser in dicke Stücke schneiden, mit Farofa und Vinagrete servieren.",
+    "pt": "MARQUE A GORDURA: marque a capa de gordura em grade, sem cortar a carne. CORTE EM PORÇÕES: se não usar o método tradicional do espeto inteiro, corte a picanha contra as fibras em bifes grossos, seguindo a curva natural. TEMPERE GENEROSAMENTE: cubra generosamente com sal grosso pouco antes de assar, não horas antes. ENFIE OU COLOQUE: enfie em espetos em formato de leque (método tradicional) ou coloque os bifes diretamente na grelha, com a gordura para baixo primeiro. ASSE EM FOGO ALTO: asse sobre brasas bem quentes, com a gordura para baixo primeiro para derreter, depois vire, selando bem cada lado. DEIXE DESCANSAR: deixe descansar alguns minutos antes de fatiar. FATIE E SIRVA: fatie contra as fibras em pedaços grossos, sirva com farofa e vinagrete.",
+    "ru": "НАДРЕЖЬ ЖИР: сделай сеточку надрезов на жировом слое, не задевая мясо. НАРЕЖЬ ПОРЦИЯМИ: если не используешь традиционный способ с цельным куском на шампуре, нарежь пиканью поперёк волокон толстыми стейками, следуя естественному изгибу. ПОСОЛИ ЩЕДРО: щедро обваляй в крупной соли прямо перед жаркой, а не за часы до этого. НАНИЖИ ИЛИ ВЫЛОЖИ: нанижи на шампуры веером (традиционный способ) или выложи стейки прямо на гриль, сначала жиром вниз. ЖАРЬ НА СИЛЬНОМ ОГНЕ: жарь на очень горячих углях, сначала жиром вниз, чтобы вытопился, затем переверни, хорошо обжарив каждую сторону. ДАЙ ОТДОХНУТЬ: дай постоять несколько минут перед нарезкой. НАРЕЖЬ И ПОДАЙ: нарежь поперёк волокон толстыми кусками, подавай с фарофой и винагрете.",
+    "ar": "اخدش الدهن: اخدش طبقة الدهن بشكل شبكي دون قطع اللحم. قطّع إلى أجزاء: إن لم تستخدم طريقة السيخ الكامل التقليدية، قطّع البيكانيا عكس الألياف إلى شرائح سميكة، متبعًا الانحناء الطبيعي. مَلِّح بسخاء: غطِّها بسخاء بالملح الخشن قبل الشواء مباشرة، لا قبل ساعات. أدخل السيخ أو ضعها: أدخلها في أسياخ على شكل مروحة (الطريقة التقليدية) أو ضع الشرائح مباشرة على الشواية، مع جعل جانب الدهن للأسفل أولًا. اشوِ على نار عالية: اشوِ على جمر ساخن جدًا، مع جانب الدهن للأسفل أولًا ليذوب، ثم اقلبها، محمّرًا كل جانب جيدًا. دعها ترتاح: دعها ترتاح بضع دقائق قبل التقطيع. قطّع وقدّم: قطّعها عكس الألياف إلى قطع سميكة، قدّمها مع الفاروفا والفيناغريتي.",
+    "zh": "划脂肪层：在脂肪层划出交叉花纹，不要切到肉。切分：如不采用传统整块烤肉签方式，则将picanha逆纹切成厚牛排，顺着天然弧度切。大方撒盐：烤制前才大方撒上粗盐，而非提前几小时。穿签或摆放：以扇形穿在烤肉签上（传统方法）或将牛排直接放在烤架上，先脂肪面朝下。大火烤制：在非常炽热的炭火上烤制，先脂肪面朝下使其融化，再翻面，将每面煎出深色外壳。静置：切片前静置几分钟。切片上桌：逆纹切成厚片，配farofa和vinagrete享用。",
+    "ja": "脂身に切れ込みを入れる：肉を切らずに脂身の層に格子状の切れ込みを入れる。ポーションに切り分ける：伝統的な丸ごと串焼きの方法を使わない場合は、ピカーニャを自然な曲線に沿って繊維に逆らって厚いステーキに切る。たっぷり塩をする：焼く直前にたっぷりの粗塩をまぶす、数時間前ではなく。串に刺すか置く：扇形に串に刺す（伝統的な方法）か、脂身を下にしてステーキを直接グリルに置く。強火で焼く：非常に熱い炭火の上で、まず脂身側を下にして脂を溶かし、その後裏返して各面をしっかり焼き色をつける。休ませる：切る前に数分休ませる。切って提供する：繊維に逆らって厚切りにし、ファロファとヴィナグレッチを添えて提供する。",
+    "tr": "YAĞI ÇİZİN: yağ tabakasını eti kesmeden çapraz olarak çizin. PORSİYONLARA KESİN: geleneksel bütün şiş yöntemini kullanmıyorsanız, picanha'yı doğal eğrisini takip ederek liflerine ters kalın biftekler halinde kesin. BOLCA TUZLAYIN: ızgaraya koymadan hemen önce bol miktarda kaba tuzla kaplayın, saatler öncesinden değil. ŞİŞE DİZİN VEYA YERLEŞTİRİN: yelpaze şeklinde şişlere dizin (geleneksel yöntem) veya biftekleri doğrudan ızgaraya, önce yağlı taraf alta gelecek şekilde yerleştirin. YÜKSEK ATEŞTE PİŞİRİN: çok sıcak közde, önce yağlı taraf altta erisin diye, sonra çevirip her tarafı iyice kızartarak pişirin. DİNLENDİRİN: dilimlemeden önce birkaç dakika dinlendirin. DİLİMLEYİN VE SERVİS YAPIN: liflerine ters kalın parçalar halinde dilimleyin, farofa ve vinagrete ile servis edin.",
+    "it": "INCIDI IL GRASSO: incidi lo strato di grasso a losanghe, senza tagliare la carne. TAGLIA IN PORZIONI: se non usi il metodo tradizionale a spiedo intero, taglia la picanha contro fibra in bistecche spesse, seguendo la curva naturale. SALA GENEROSAMENTE: ricopri generosamente di sale grosso appena prima di grigliare, non ore prima. INFILZA O DISPONI: infilza su spiedi a ventaglio (metodo tradizionale) o disponi le bistecche direttamente sulla griglia, prima con il lato grasso verso il basso. GRIGLIA A FUOCO ALTO: griglia su brace molto calda, prima con il lato grasso verso il basso per sciogliersi, poi gira, rosolando bene ogni lato. LASCIA RIPOSARE: lascia riposare qualche minuto prima di affettare. AFFETTA E SERVI: affetta contro fibra in pezzi spessi, servi con farofa e vinagrete.",
+    "ko": "지방에 칼집 내기: 고기를 자르지 않고 지방층에 격자무늬로 칼집을 낸다. 부분으로 자르기: 전통적인 통째 꼬치 방식을 쓰지 않는다면, 피카냐를 자연스러운 곡선을 따라 결 반대로 두꺼운 스테이크로 자른다. 넉넉히 소금 뿌리기: 굽기 직전에 굵은 소금을 넉넉히 묻힌다, 몇 시간 전이 아니라. 꼬치에 꽂거나 놓기: 부채꼴로 꼬치에 꽂거나(전통 방식) 스테이크를 그릴에 바로 놓되 지방 면이 먼저 아래로 가게 한다. 센 불에 굽기: 매우 뜨거운 숯불에서 지방 면을 먼저 아래로 하여 녹인 뒤 뒤집어 각 면을 깊게 그을린다. 휴지시키기: 썰기 전 몇 분간 휴지시킨다. 썰어서 서빙하기: 결 반대로 두껍게 썰어 파로파와 비나그레치를 곁들여 낸다.",
+    "hi": "चर्बी पर चीरा लगाएं: चर्बी की परत को मांस काटे बिना जाली पैटर्न में चीरा लगाएं। भागों में काटें: अगर पारंपरिक साबुत सीख तरीका इस्तेमाल न करें, तो पिकान्या को प्राकृतिक मोड़ का अनुसरण करते हुए रेशे के विपरीत मोटे स्टेक में काटें। भरपूर नमक लगाएं: ग्रिल करने से ठीक पहले भरपूर मोटा नमक लगाएं, घंटों पहले नहीं। सीख में पिरोएं या रखें: पंखे के आकार में सीखों में पिरोएं (पारंपरिक तरीका) या स्टेक सीधे ग्रिल पर रखें, पहले चर्बी वाला हिस्सा नीचे। तेज़ आंच पर ग्रिल करें: बहुत गरम अंगारों पर, पहले चर्बी वाला हिस्सा नीचे पिघलने के लिए, फिर पलटें, हर तरफ अच्छी तरह सेकें। आराम दें: काटने से पहले कुछ मिनट आराम दें। काटें और परोसें: रेशे के विपरीत मोटे टुकड़ों में काटें, फारोफा और विनाग्रेते के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Picanha e vedeta absolută a culturii churrasco și rodizio braziliene, o tăietură de vită aproape necunoscută sub acest nume în tradițiile de măcelărie ale altor țări, unde e adesea lăsată atașată de alte tăieturi din zona pulpei, în loc să fie tranșată separat. În Brazilia, capacul de grăsime, considerat de mulți drept partea cea mai râvnită, rămâne intact în timpul frigerii, exact opusul obiceiului de a-l îndepărta din alte bucătării.\n\nSimplitatea condimentării — doar sare grunjoasă, fără marinate, fără mirodenii — e o chestiune de mândrie tehnică, nu de lipsă de efort: o picanha de calitate nu are nevoie de nimic care să-i mascheze gustul. Metoda tradițională de frigere pe frigare curbă, în formă de evantai, urmărită de rotisor, permite grăsimii să se topească uniform și să picure pe jar, aromatizând carnea cu fum în timp ce se frige — o tehnică rar întâlnită în afara churrascariilor braziliene.",
+    "en": "Picanha is the absolute star of Brazilian churrasco and rodizio culture, a beef cut almost unknown under this name in other countries' butchery traditions, where it's often left attached to other cuts from the rump area rather than being trimmed off separately. In Brazil, the fat cap, considered by many the most prized part, stays intact during grilling — the exact opposite of the habit of removing it in other cuisines.\n\nThe simplicity of the seasoning — just coarse salt, no marinade, no spices — is a point of technical pride, not a lack of effort: a quality picanha needs nothing to mask its flavor. The traditional method of grilling on a curved, fan-shaped skewer, turned on a rotisserie, lets the fat render evenly and drip onto the coals, smoking and flavoring the meat as it cooks — a technique rarely seen outside Brazilian churrascarias.",
+    "es": "La picanha es la estrella absoluta de la cultura del churrasco y el rodizio brasileño, un corte de ternera casi desconocido bajo este nombre en las tradiciones de carnicería de otros países, donde a menudo se deja unido a otros cortes de la zona de la grupa en lugar de separarse. En Brasil, la capa de grasa, considerada por muchos la parte más apreciada, se mantiene intacta durante el asado — justo lo contrario de la costumbre de retirarla en otras cocinas.\n\nLa sencillez del sazonado —solo sal gruesa, sin marinada, sin especias— es motivo de orgullo técnico, no de falta de esfuerzo: una picanha de calidad no necesita nada que enmascare su sabor. El método tradicional de asado en brocheta curva, en forma de abanico, girada en un rotisor, permite que la grasa se derrita de forma uniforme y gotee sobre las brasas, ahumando y dando sabor a la carne mientras se cocina — una técnica raramente vista fuera de las churrascarías brasileñas.",
+    "fr": "La picanha est l'étoile absolue de la culture du churrasco et du rodizio brésilien, une découpe de bœuf presque inconnue sous ce nom dans les traditions bouchères d'autres pays, où elle est souvent laissée attachée à d'autres découpes de la zone de la culotte plutôt que d'être détaillée séparément. Au Brésil, la couche de gras, considérée par beaucoup comme la partie la plus prisée, reste intacte pendant la cuisson — exactement l'inverse de l'habitude de la retirer dans d'autres cuisines.\n\nLa simplicité de l'assaisonnement — juste du gros sel, pas de marinade, pas d'épices — est une fierté technique, pas un manque d'effort : une picanha de qualité n'a besoin de rien pour masquer son goût. La méthode traditionnelle de cuisson sur brochette courbe, en éventail, tournée à la rôtissoire, laisse le gras fondre uniformément et goutter sur les braises, fumant et parfumant la viande pendant la cuisson — une technique rarement vue en dehors des churrascarias brésiliennes.",
+    "de": "Picanha ist der absolute Star der brasilianischen Churrasco- und Rodizio-Kultur, ein Rindfleischstück, das unter diesem Namen in den Metzgereitraditionen anderer Länder kaum bekannt ist, wo es oft an anderen Stücken aus dem Hüftbereich hängen bleibt, statt separat ausgelöst zu werden. In Brasilien bleibt die Fettschicht, von vielen als der begehrteste Teil angesehen, beim Grillen intakt — genau das Gegenteil der Gewohnheit, sie in anderen Küchen zu entfernen.\n\nDie Einfachheit der Würzung — nur grobes Salz, keine Marinade, keine Gewürze — ist eine Frage technischen Stolzes, kein Mangel an Aufwand: Eine hochwertige Picanha braucht nichts, was ihren Geschmack überdeckt. Die traditionelle Methode, sie auf einem gebogenen, fächerförmigen Spieß am Drehgrill zu garen, lässt das Fett gleichmäßig auslassen und auf die Glut tropfen, wobei es das Fleisch beim Garen räuchert und aromatisiert — eine Technik, die man außerhalb brasilianischer Churrascarias selten sieht.",
+    "pt": "A picanha é a estrela absoluta da cultura do churrasco e rodízio brasileiro, um corte de carne quase desconhecido sob esse nome nas tradições de açougue de outros países, onde muitas vezes fica presa a outros cortes da região do quarto traseiro em vez de ser retirada separadamente. No Brasil, a capa de gordura, considerada por muitos a parte mais cobiçada, permanece intacta durante o assado — exatamente o oposto do hábito de retirá-la noutras culinárias.\n\nA simplicidade do tempero — só sal grosso, sem marinada, sem especiarias — é uma questão de orgulho técnico, não de falta de esforço: uma picanha de qualidade não precisa de nada que mascare o seu sabor. O método tradicional de assar num espeto curvo, em leque, girado no rodízio, deixa a gordura derreter uniformemente e pingar nas brasas, defumando e perfumando a carne enquanto assa — uma técnica raramente vista fora das churrascarias brasileiras.",
+    "ru": "Пиканья — абсолютная звезда бразильской культуры чурраско и родизио, отруб говядины, почти неизвестный под этим названием в мясницких традициях других стран, где его часто оставляют прикреплённым к другим отрубам из области огузка, а не вырезают отдельно. В Бразилии жировой слой, считающийся многими самой ценной частью, остаётся нетронутым во время жарки — прямая противоположность обычаю удалять его в других кухнях.\n\nПростота приправы — только крупная соль, без маринада, без специй — предмет технической гордости, а не отсутствия усилий: качественной пиканье не нужно ничего, чтобы скрыть её вкус. Традиционный способ жарки на изогнутом, веерообразном шампуре, вращающемся на вертеле, позволяет жиру равномерно вытапливаться и капать на угли, придавая мясу дымный аромат во время готовки — техника, редко встречающаяся за пределами бразильских чурраскарий.",
+    "ar": "البيكانيا هي النجمة المطلقة لثقافة الشوراسكو والروديزيو البرازيلية، قطعة لحم بقري تكاد تكون غير معروفة بهذا الاسم في تقاليد الجزارة في بلدان أخرى، حيث تُترك غالبًا متصلة بقطع أخرى من منطقة الردف بدلًا من فصلها. في البرازيل، تبقى طبقة الدهن، التي يعتبرها كثيرون الجزء الأكثر تقديرًا، سليمة أثناء الشوي — عكس عادة إزالتها تمامًا في مطابخ أخرى.\n\nبساطة التتبيل — ملح خشن فقط، دون تتبيل ودون توابل — مسألة فخر تقني، لا نقص في الجهد: البيكانيا الجيدة لا تحتاج إلى شيء يخفي نكهتها. الطريقة التقليدية للشوي على سيخ منحنٍ بشكل مروحة، يُدار على شواية دوّارة، تسمح للدهن بالذوبان بانتظام والتساقط على الجمر، مما يدخّن ويعطّر اللحم أثناء الطهي — تقنية نادرًا ما تُرى خارج مطاعم الشوراسكو البرازيلية.",
+    "zh": "皮坎娅是巴西烤肉（churrasco）与轮转式烤肉（rodizio）文化中当之无愧的明星，这一牛肉部位在其他国家的屠宰传统中几乎不以此名单独存在，往往连着臀部区域的其他部位一起，而非单独分割。在巴西，许多人认为最珍贵的部分正是那层脂肪，烤制时会完整保留——这与其他菜系中常见的去脂做法恰恰相反。\n\n调味的极简——只用粗盐，不腌不加香料——是一种技艺上的自豪，而非偷懒：优质的皮坎娅无需任何东西来掩盖其风味。传统的扇形弯曲烤肉签在旋转烤架上转烤的做法，让脂肪均匀融化并滴落在炭火上，烹烤过程中为肉增添烟熏香气——这种技法在巴西烤肉餐厅之外很少见到。",
+    "ja": "ピカーニャは、ブラジルのシュラスコおよびロジージオ文化における紛れもない主役であり、他国の精肉伝統ではこの名前ではほとんど知られていない牛肉の部位で、多くの場合、単独で切り出されるのではなく臀部周辺の他の部位に付いたまま残される。ブラジルでは、多くの人が最も珍重する部分とされる脂身は、焼く際にそのまま残される——他の料理でそれを取り除く習慣とは正反対だ。\n\n味付けのシンプルさ——粗塩のみ、マリネなし、スパイスなし——は手抜きではなく、技術的な誇りの表れである。上質なピカーニャは、風味を隠す必要が一切ない。回転焼き台で回される扇形の曲がった串で焼く伝統的な方法は、脂身を均一に溶かし炭に滴らせ、調理中に肉を燻して香り付けする——この技法はブラジルのシュラスカリア以外ではめったに見られない。",
+    "tr": "Picanha, Brezilya churrasco ve rodizio kültürünün mutlak yıldızıdır; diğer ülkelerin kasaplık geleneklerinde bu isimle neredeyse hiç bilinmeyen, genellikle ayrı ayrılmak yerine but bölgesindeki diğer parçalara bağlı bırakılan bir sığır eti parçasıdır. Brezilya'da, birçoklarının en değerli parça saydığı yağ tabakası, ızgarada bütünlüğünü korur — bu, diğer mutfaklarda onu çıkarma alışkanlığının tam tersidir.\n\nBaharatlamanın sadeliği — sadece kaba tuz, marine yok, baharat yok — çaba eksikliği değil, teknik bir gurur meselesidir: kaliteli bir picanha, tadını gizleyecek hiçbir şeye ihtiyaç duymaz. Döner ızgarada çevrilen, yelpaze şeklinde eğri bir şişte pişirmenin geleneksel yöntemi, yağın eşit şekilde erimesine ve köre damlamasına izin vererek pişerken eti dumanla tatlandırır — bu teknik Brezilya churrascaria'ları dışında nadiren görülür.",
+    "it": "La picanha è la stella assoluta della cultura del churrasco e del rodizio brasiliano, un taglio di manzo quasi sconosciuto sotto questo nome nelle tradizioni di macelleria di altri paesi, dove viene spesso lasciato attaccato ad altri tagli della zona della coscia invece di essere separato. In Brasile, il cappello di grasso, considerato da molti la parte più pregiata, resta intatto durante la cottura — esattamente l'opposto dell'abitudine di rimuoverlo in altre cucine.\n\nLa semplicità della condimentazione — solo sale grosso, niente marinatura, niente spezie — è motivo di orgoglio tecnico, non mancanza di impegno: una picanha di qualità non ha bisogno di nulla per mascherare il suo sapore. Il metodo tradizionale di cottura su uno spiedo curvo a ventaglio, girato su una rosticceria, lascia sciogliere il grasso uniformemente e gocciolare sulla brace, affumicando e insaporendo la carne durante la cottura — una tecnica raramente vista fuori dalle churrascarias brasiliane.",
+    "ko": "피카냐는 브라질 슈하스코와 호지지오 문화의 절대적인 스타로, 다른 나라의 정육 전통에서는 이 이름으로 거의 알려지지 않은 소고기 부위이며, 따로 분리되기보다는 엉덩이 부위의 다른 부분에 붙은 채로 남겨지는 경우가 많다. 브라질에서는 많은 이들이 가장 귀하게 여기는 부분으로 꼽는 지방층이 굽는 동안 그대로 유지된다 — 다른 요리에서 이를 제거하는 관습과는 정반대다.\n\n간단한 양념 — 굵은 소금뿐, 마리네이드도 향신료도 없음 — 은 노력 부족이 아니라 기술적 자부심의 문제다: 품질 좋은 피카냐는 맛을 가릴 것이 필요 없다. 회전 그릴에서 돌아가는 부채꼴의 휜 꼬치에 굽는 전통 방식은 지방이 고르게 녹아 숯불에 떨어지게 하여, 조리하는 동안 고기에 훈연 향을 입힌다 — 브라질식 슈하스카리아 밖에서는 좀처럼 볼 수 없는 기법이다.",
+    "hi": "पिकान्या ब्राज़ीलियाई शुहास्को और रोडिज़ियो संस्कृति का पूर्ण सितारा है, एक बीफ़ कट जो अन्य देशों की कसाई परंपराओं में इस नाम से लगभग अज्ञात है, जहां इसे अक्सर अलग से काटने के बजाय जांघ क्षेत्र के अन्य टुकड़ों से जुड़ा छोड़ दिया जाता है। ब्राज़ील में, चर्बी की परत, जिसे कई लोग सबसे प्रिय हिस्सा मानते हैं, ग्रिलिंग के दौरान बरकरार रहती है — अन्य व्यंजनों में इसे हटाने की आदत के बिल्कुल विपरीत।\n\nमसाला लगाने की सादगी — सिर्फ मोटा नमक, कोई मैरिनेड नहीं, कोई मसाले नहीं — प्रयास की कमी नहीं बल्कि तकनीकी गर्व की बात है: एक गुणवत्तापूर्ण पिकान्या को अपना स्वाद छिपाने के लिए किसी चीज़ की ज़रूरत नहीं। रोटिसरी पर घुमाई जाने वाली, पंखे के आकार की घुमावदार सीख पर भूनने की पारंपरिक विधि चर्बी को समान रूप से पिघलने और अंगारों पर टपकने देती है, जो पकने के दौरान मांस को धुएं से महकाती है — यह तकनीक ब्राज़ीलियाई शुहास्कारिया के बाहर शायद ही कहीं देखी जाती है।"
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 32,
+    "tags": ["quick"],
+    "desc": {
+      "ro": "Vită braziliană la grătar, condimentată doar cu sare grunjoasă, servită cu farofa și vinagrete.",
+      "en": "Brazilian grilled beef, seasoned with only coarse salt, served with farofa and vinagrete.",
+      "es": "Ternera brasileña a la parrilla, sazonada solo con sal gruesa, servida con farofa y vinagrete.",
+      "fr": "Bœuf grillé brésilien, assaisonné uniquement de gros sel, servi avec farofa et vinagrete.",
+      "de": "Brasilianisches gegrilltes Rind, nur mit grobem Salz gewürzt, serviert mit Farofa und Vinagrete.",
+      "pt": "Carne brasileira grelhada, temperada só com sal grosso, servida com farofa e vinagrete.",
+      "ru": "Бразильская говядина на гриле, приправленная только крупной солью, подаётся с фарофой и винагрете.",
+      "ar": "لحم بقري برازيلي مشوي، متبل بالملح الخشن فقط، يُقدَّم مع الفاروفا والفيناغريتي.",
+      "zh": "巴西烤牛肉，仅以粗盐调味，配farofa和vinagrete享用。",
+      "ja": "粗塩のみで味付けしたブラジル風グリルビーフ、ファロファとヴィナグレッチを添えて。",
+      "tr": "Sadece kaba tuzla tatlandırılmış Brezilya usulü ızgara sığır eti, farofa ve vinagrete ile servis edilir.",
+      "it": "Manzo brasiliano alla griglia, condito solo con sale grosso, servito con farofa e vinagrete.",
+      "ko": "굵은 소금으로만 간한 브라질식 구운 소고기, 파로파와 비나그레치를 곁들인다.",
+      "hi": "केवल मोटे नमक से मसालेदार ब्राज़ीलियाई ग्रिल बीफ़, फारोफा और विनाग्रेते के साथ परोसा जाता है।"
+    }
+  }
+}
