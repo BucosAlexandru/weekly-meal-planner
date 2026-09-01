@@ -9,12 +9,13 @@ import { PLAN_MEALS } from './plan-meals.generated.js';
 
 // ===== Live counts (single source of truth for discovery/FAQ/stats copy)
 // Round recipes down to the nearest 25 so the "X+" marketing copy stays
-// stable across small additions (204 → "200+"). Plans count must match the
+// stable across small additions (204 → "300+"). Plans count must match the
 // PLANS array in scripts/generate-content.mjs — update both together.
 // Hard-coded (not derived from recipesMain.length) because the corpus is now
-// lazy-loaded and empty at module init. Round down to nearest 25; bump when
-// the recipes.js count crosses a 25-boundary (currently 216 → 200).
-const RECIPE_COUNT_ROUND = 200;
+// lazy-loaded and empty at module init. Round down to nearest 25 of the free
+// total (main + budget corpus); bump when that crosses a 25-boundary
+// (currently 294 main + 35 budget = 329 → 300).
+const RECIPE_COUNT_ROUND = 300;
 const PLAN_COUNT = 11;
 // Exact catalogue size for copy that must state the precise number (premium
 // preview cards, homepage FAQ, premium feature list). Single source of truth,
@@ -4527,7 +4528,7 @@ function renderFAQ() {
       title: 'Răspunsuri rapide',
       items: [
         { q: 'Planificatorul este cu adevărat gratuit?',
-          a: 'Da. Planificarea săptămânală, lista de cumpărături și cele 200+ rețete sunt gratuite, fără înregistrare. PDF-ul gratuit oferă o previzualizare de 2 zile din 7.' },
+          a: 'Da. Planificarea săptămânală, lista de cumpărături și cele 300+ rețete sunt gratuite, fără înregistrare. PDF-ul gratuit oferă o previzualizare de 2 zile din 7.' },
         { q: 'Ce primesc în plus cu Premium?',
           a: 'PDF complet pentru toate cele 7 zile, meniu buget săptămânal, acces la toate cele {{RECIPE_COUNT}} rețete și rețete noi adăugate regulat. €3/lună, fără angajament.' },
         { q: 'Pot anula abonamentul oricând?',
@@ -4545,7 +4546,7 @@ function renderFAQ() {
       title: 'Quick answers',
       items: [
         { q: 'Is the planner really free?',
-          a: 'Yes. The weekly planner, shopping list, and 200+ recipes are free with no signup. The free PDF gives you a 2-of-7-day preview.' },
+          a: 'Yes. The weekly planner, shopping list, and 300+ recipes are free with no signup. The free PDF gives you a 2-of-7-day preview.' },
         { q: 'What do I get with Premium?',
           a: 'Full PDF for all 7 days, a weekly budget menu, access to all {{RECIPE_COUNT}} recipes from 46 countries, and new recipes added regularly. €3/month, no commitment.' },
         { q: 'Can I cancel anytime?',
@@ -4563,7 +4564,7 @@ function renderFAQ() {
       title: 'Respuestas rápidas',
       items: [
         { q: '¿El planificador es realmente gratis?',
-          a: 'Sí. El planificador semanal, la lista de compras y las 200+ recetas son gratuitas sin registro. El PDF gratuito ofrece una vista previa de 2 de 7 días.' },
+          a: 'Sí. El planificador semanal, la lista de compras y las 300+ recetas son gratuitas sin registro. El PDF gratuito ofrece una vista previa de 2 de 7 días.' },
         { q: '¿Qué incluye Premium?',
           a: 'PDF completo de los 7 días, menú económico semanal, acceso a todas las {{RECIPE_COUNT}} recetas de 46 países y nuevas recetas regularmente. €3/mes, sin compromiso.' },
         { q: '¿Puedo cancelar cuando quiera?',
@@ -4581,7 +4582,7 @@ function renderFAQ() {
       title: 'Réponses rapides',
       items: [
         { q: 'Le planificateur est-il vraiment gratuit ?',
-          a: 'Oui. Le planificateur hebdomadaire, la liste de courses et les 200+ recettes sont gratuits sans inscription. Le PDF gratuit offre un aperçu de 2 jours sur 7.' },
+          a: 'Oui. Le planificateur hebdomadaire, la liste de courses et les 300+ recettes sont gratuits sans inscription. Le PDF gratuit offre un aperçu de 2 jours sur 7.' },
         { q: 'Que comprend Premium ?',
           a: 'PDF complet 7 jours, menu budget hebdomadaire, accès aux {{RECIPE_COUNT}} recettes de 46 pays et nouvelles recettes ajoutées régulièrement. €3/mois, sans engagement.' },
         { q: 'Puis-je annuler à tout moment ?',
@@ -4599,7 +4600,7 @@ function renderFAQ() {
       title: 'Schnelle Antworten',
       items: [
         { q: 'Ist der Planer wirklich kostenlos?',
-          a: 'Ja. Wochenplaner, Einkaufsliste und 200+ Rezepte sind ohne Anmeldung kostenlos. Das kostenlose PDF zeigt eine Vorschau von 2 von 7 Tagen.' },
+          a: 'Ja. Wochenplaner, Einkaufsliste und 300+ Rezepte sind ohne Anmeldung kostenlos. Das kostenlose PDF zeigt eine Vorschau von 2 von 7 Tagen.' },
         { q: 'Was bekomme ich mit Premium?',
           a: 'Vollständiges PDF für alle 7 Tage, wöchentliches Budget-Menü, Zugang zu allen {{RECIPE_COUNT}} Rezepten aus 46 Ländern und regelmäßig neue Rezepte. €3/Monat, ohne Bindung.' },
         { q: 'Kann ich jederzeit kündigen?',
@@ -4617,7 +4618,7 @@ function renderFAQ() {
       title: 'Respostas rápidas',
       items: [
         { q: 'O planificador é realmente gratuito?',
-          a: 'Sim. O planificador semanal, lista de compras e 200+ receitas são gratuitos sem cadastro. O PDF gratuito oferece uma pré-visualização de 2 de 7 dias.' },
+          a: 'Sim. O planificador semanal, lista de compras e 300+ receitas são gratuitos sem cadastro. O PDF gratuito oferece uma pré-visualização de 2 de 7 dias.' },
         { q: 'O que recebo com Premium?',
           a: 'PDF completo dos 7 dias, menu económico semanal, acesso às {{RECIPE_COUNT}} receitas de 46 países e novas receitas regularmente. €3/mês, sem compromisso.' },
         { q: 'Posso cancelar quando quiser?',
@@ -4635,7 +4636,7 @@ function renderFAQ() {
       title: 'Быстрые ответы',
       items: [
         { q: 'Планировщик действительно бесплатный?',
-          a: 'Да. Недельный план, список покупок и 200+ рецептов бесплатны без регистрации. Бесплатный PDF показывает превью 2 из 7 дней.' },
+          a: 'Да. Недельный план, список покупок и 300+ рецептов бесплатны без регистрации. Бесплатный PDF показывает превью 2 из 7 дней.' },
         { q: 'Что входит в Премиум?',
           a: 'Полный PDF на все 7 дней, недельное бюджетное меню, доступ ко всем {{RECIPE_COUNT}} рецептам из 46 стран и новые рецепты регулярно. €3/мес, без обязательств.' },
         { q: 'Могу ли я отменить в любое время?',
@@ -4653,7 +4654,7 @@ function renderFAQ() {
       title: 'Risposte rapide',
       items: [
         { q: 'Il pianificatore è davvero gratuito?',
-          a: 'Sì. Pianificatore settimanale, lista della spesa e 200+ ricette sono gratis senza registrazione. Il PDF gratuito offre un\'anteprima di 2 giorni su 7.' },
+          a: 'Sì. Pianificatore settimanale, lista della spesa e 300+ ricette sono gratis senza registrazione. Il PDF gratuito offre un\'anteprima di 2 giorni su 7.' },
         { q: 'Cosa include Premium?',
           a: 'PDF completo 7 giorni, menu economico settimanale, assistente IA ricette (chat) e assistente IA di pianificazione pasti. €3/mese, senza impegno.' },
         { q: 'Posso disdire quando voglio?',
@@ -4671,7 +4672,7 @@ function renderFAQ() {
       title: 'Hızlı yanıtlar',
       items: [
         { q: 'Planlayıcı gerçekten ücretsiz mi?',
-          a: 'Evet. Haftalık planlayıcı, alışveriş listesi ve 200+ tarif kayıt olmadan ücretsizdir. Ücretsiz PDF, 7 günden 2 günlük bir önizleme sunar.' },
+          a: 'Evet. Haftalık planlayıcı, alışveriş listesi ve 300+ tarif kayıt olmadan ücretsizdir. Ücretsiz PDF, 7 günden 2 günlük bir önizleme sunar.' },
         { q: 'Premium ile ne kazanırım?',
           a: 'Tüm 7 günler için tam PDF, haftalık bütçe menüsü, 46 ülkeden {{RECIPE_COUNT}} tarife erişim ve düzenli olarak yeni tarifler. €3/ay, taahhüt yok.' },
         { q: 'İstediğim zaman iptal edebilir miyim?',
@@ -4689,7 +4690,7 @@ function renderFAQ() {
       title: 'إجابات سريعة',
       items: [
         { q: 'هل المخطط مجاني بالفعل؟',
-          a: 'نعم. المخطط الأسبوعي وقائمة التسوق و200+ وصفة مجانية بدون تسجيل. ملف PDF المجاني يعرض معاينة 2 من 7 أيام.' },
+          a: 'نعم. المخطط الأسبوعي وقائمة التسوق و300+ وصفة مجانية بدون تسجيل. ملف PDF المجاني يعرض معاينة 2 من 7 أيام.' },
         { q: 'ماذا أحصل مع بريميوم؟',
           a: 'PDF كامل لجميع 7 أيام، قائمة ميزانية أسبوعية، الوصول إلى جميع {{RECIPE_COUNT}} وصفة من أكثر من 70 دولة، ووصفات جديدة بانتظام. €3/شهر، بدون التزام.' },
         { q: 'هل يمكنني الإلغاء في أي وقت؟',
@@ -4707,7 +4708,7 @@ function renderFAQ() {
       title: '快速解答',
       items: [
         { q: '规划器真的免费吗？',
-          a: '是的。每周规划器、购物清单和200+食谱免费且无需注册。免费PDF提供7天中2天的预览。' },
+          a: '是的。每周规划器、购物清单和300+食谱免费且无需注册。免费PDF提供7天中2天的预览。' },
         { q: '高级版包含什么？',
           a: '7天完整PDF、每周节俭菜单、访问来自46国家的{{RECIPE_COUNT}}道食谱，以及定期添加的新食谱。€3/月，无承诺。' },
         { q: '可以随时取消吗？',
@@ -4725,7 +4726,7 @@ function renderFAQ() {
       title: '簡単な回答',
       items: [
         { q: 'プランナーは本当に無料ですか？',
-          a: 'はい。週間プランナー、買い物リスト、200以上のレシピは登録不要で無料です。無料PDFは7日中2日のプレビューを提供します。' },
+          a: 'はい。週間プランナー、買い物リスト、300以上のレシピは登録不要で無料です。無料PDFは7日中2日のプレビューを提供します。' },
         { q: 'プレミアムには何が含まれますか？',
           a: '7日間フルPDF、週間節約メニュー、70カ国以上から{{RECIPE_COUNT}}のレシピへのアクセス、定期的に追加される新レシピ。€3/月、契約縛りなし。' },
         { q: 'いつでもキャンセルできますか？',
@@ -4743,7 +4744,7 @@ function renderFAQ() {
       title: '빠른 답변',
       items: [
         { q: '플래너가 정말 무료인가요?',
-          a: '네. 주간 플래너, 장보기 목록, 200개 이상의 레시피는 가입 없이 무료입니다. 무료 PDF는 7일 중 2일 미리보기를 제공합니다.' },
+          a: '네. 주간 플래너, 장보기 목록, 300개 이상의 레시피는 가입 없이 무료입니다. 무료 PDF는 7일 중 2일 미리보기를 제공합니다.' },
         { q: '프리미엄에는 무엇이 포함되나요?',
           a: '7일 전체 PDF, 주간 예산 메뉴, 46 국가의 {{RECIPE_COUNT}}개 레시피 모두 이용, 정기적으로 추가되는 새 레시피. €3/월, 약정 없음.' },
         { q: '언제든 취소할 수 있나요?',
@@ -4761,7 +4762,7 @@ function renderFAQ() {
       title: 'त्वरित उत्तर',
       items: [
         { q: 'क्या प्लानर वास्तव में मुफ्त है?',
-          a: 'हाँ। साप्ताहिक प्लानर, खरीदारी सूची और 200+ रेसिपी पंजीकरण के बिना मुफ्त हैं। मुफ्त PDF 7 में से 2 दिनों का पूर्वावलोकन प्रदान करता है।' },
+          a: 'हाँ। साप्ताहिक प्लानर, खरीदारी सूची और 300+ रेसिपी पंजीकरण के बिना मुफ्त हैं। मुफ्त PDF 7 में से 2 दिनों का पूर्वावलोकन प्रदान करता है।' },
         { q: 'प्रीमियम में क्या मिलता है?',
           a: 'सभी 7 दिनों के लिए पूर्ण PDF, साप्ताहिक बजट मेनू, 46 देशों से सभी {{RECIPE_COUNT}} रेसिपी तक पहुँच, और नियमित रूप से जोड़ी जाने वाली नई रेसिपी। €3/माह, कोई प्रतिबद्धता नहीं।' },
         { q: 'क्या मैं कभी भी रद्द कर सकता हूँ?',
@@ -5546,7 +5547,7 @@ function applyTranslations() {
             price:'€3/lună', sub:'', popular:'CEL MAI POPULAR',
             cta:'Obține Premium →', already:'Ai deja abonament? Activează mai jos ↓',
             freeFeats:['✅ Plan de mese 7 zile','✅ Listă de cumpărături automată',
-                       '✅ 200+ rețete din 46 țări','✅ Previzualizare gratuită — 2 zile din 7',
+                       '✅ 300+ rețete din 46 țări','✅ Previzualizare gratuită — 2 zile din 7',
                        '✗ PDF cu toate 7 zilele','✗ Meniu buget ieftin'],
             premFeats:['✅ Tot ce e gratuit, plus:','✅ PDF cu toate cele 7 zile',
                        '✅ Meniu buget săptămânal','✅ {{RECIPE_COUNT}} rețete din 46 țări',
@@ -5555,7 +5556,7 @@ function applyTranslations() {
             price:'€3/month', sub:'', popular:'MOST POPULAR',
             cta:'Get Premium →', already:'Already subscribed? Activate below ↓',
             freeFeats:['✅ 7-day meal plan','✅ Auto shopping list',
-                       '✅ 200+ recipes from 46 countries','✅ Free preview — 2 of 7 days',
+                       '✅ 300+ recipes from 46 countries','✅ Free preview — 2 of 7 days',
                        '✗ Full 7-day PDF','✗ Budget menu'],
             premFeats:['✅ Everything in Free, plus:','✅ Full PDF with all 7 days',
                        '✅ Weekly budget menu','✅ {{RECIPE_COUNT}} recipes from 46 countries',
@@ -5564,7 +5565,7 @@ function applyTranslations() {
             price:'€3/mes', sub:'', popular:'MÁS POPULAR',
             cta:'Obtener Premium →', already:'¿Ya suscrito? Activa abajo ↓',
             freeFeats:['✅ Plan de comidas 7 días','✅ Lista de compras automática',
-                       '✅ 200+ recetas de 46 países','✅ Vista previa gratuita — 2 de 7 días',
+                       '✅ 300+ recetas de 46 países','✅ Vista previa gratuita — 2 de 7 días',
                        '✗ PDF con los 7 días','✗ Menú económico'],
             premFeats:['✅ Todo lo gratis, más:','✅ PDF completo con 7 días',
                        '✅ Menú económico semanal','✅ {{RECIPE_COUNT}} recetas de 46 países',
@@ -5573,7 +5574,7 @@ function applyTranslations() {
             price:'€3/mois', sub:'', popular:'LE PLUS POPULAIRE',
             cta:'Obtenir Premium →', already:'Déjà abonné ? Activez ci-dessous ↓',
             freeFeats:['✅ Plan de repas 7 jours','✅ Liste de courses automatique',
-                       '✅ 200+ recettes de 46 pays','✅ Aperçu gratuit — 2 jours sur 7',
+                       '✅ 300+ recettes de 46 pays','✅ Aperçu gratuit — 2 jours sur 7',
                        '✗ PDF avec les 7 jours','✗ Menu budget'],
             premFeats:['✅ Tout le gratuit, plus :','✅ PDF complet sur 7 jours',
                        '✅ Menu budget hebdomadaire','✅ {{RECIPE_COUNT}} recettes de 46 pays',
@@ -5582,7 +5583,7 @@ function applyTranslations() {
             price:'€3/Monat', sub:'', popular:'AM BELIEBTESTEN',
             cta:'Premium holen →', already:'Bereits abonniert? Unten aktivieren ↓',
             freeFeats:['✅ 7-Tage-Mahlzeitenplan','✅ Automatische Einkaufsliste',
-                       '✅ 200+ Rezepte aus 46 Ländern','✅ Kostenlose Vorschau — 2 von 7 Tagen',
+                       '✅ 300+ Rezepte aus 46 Ländern','✅ Kostenlose Vorschau — 2 von 7 Tagen',
                        '✗ PDF mit allen 7 Tagen','✗ Budget-Menü'],
             premFeats:['✅ Alles Kostenlose, plus:','✅ PDF mit allen 7 Tagen',
                        '✅ Wöchentliches Budget-Menü','✅ {{RECIPE_COUNT}} Rezepte aus 46 Ländern',
@@ -5591,7 +5592,7 @@ function applyTranslations() {
             price:'€3/mês', sub:'', popular:'MAIS POPULAR',
             cta:'Obter Premium →', already:'Já assinante? Ative abaixo ↓',
             freeFeats:['✅ Plano de refeições 7 dias','✅ Lista de compras automática',
-                       '✅ 200+ receitas de 46 países','✅ Pré-visualização gratuita — 2 de 7 dias',
+                       '✅ 300+ receitas de 46 países','✅ Pré-visualização gratuita — 2 de 7 dias',
                        '✗ PDF com todos os 7 dias','✗ Menu económico'],
             premFeats:['✅ Tudo gratuito, mais:','✅ PDF completo com 7 dias',
                        '✅ Menu económico semanal','✅ {{RECIPE_COUNT}} receitas de 46 países',
@@ -5600,7 +5601,7 @@ function applyTranslations() {
             price:'€3/мес', sub:'', popular:'САМЫЙ ПОПУЛЯРНЫЙ',
             cta:'Получить Премиум →', already:'Уже подписаны? Активируйте ниже ↓',
             freeFeats:['✅ План питания на 7 дней','✅ Автоматический список покупок',
-                       '✅ 200+ рецептов из 46 стран','✅ Бесплатный просмотр — 2 из 7 дней',
+                       '✅ 300+ рецептов из 46 стран','✅ Бесплатный просмотр — 2 из 7 дней',
                        '✗ PDF на все 7 дней','✗ Бюджетное меню'],
             premFeats:['✅ Всё из бесплатного, плюс:','✅ Полный PDF на 7 дней',
                        '✅ Недельное бюджетное меню','✅ {{RECIPE_COUNT}} рецептов из 46 стран',
@@ -5609,7 +5610,7 @@ function applyTranslations() {
             price:'€3/شهر', sub:'', popular:'الأكثر شعبية',
             cta:'احصل على بريميوم →', already:'مشترك بالفعل؟ فعّل أدناه ↓',
             freeFeats:['✅ خطة وجبات 7 أيام','✅ قائمة تسوق تلقائية',
-                       '✅ 200+ وصفة من 46 دولة','✅ معاينة مجانية — يومان من أصل 7',
+                       '✅ 300+ وصفة من 46 دولة','✅ معاينة مجانية — يومان من أصل 7',
                        '✗ PDF كامل 7 أيام','✗ قائمة الميزانية'],
             premFeats:['✅ كل المجاني، بالإضافة:','✅ PDF كامل بجميع 7 أيام',
                        '✅ قائمة ميزانية أسبوعية','✅ {{RECIPE_COUNT}} وصفة من 46 دولة',
@@ -5618,7 +5619,7 @@ function applyTranslations() {
             price:'€3/月', sub:'', popular:'最受欢迎',
             cta:'获取高级版 →', already:'已订阅？在下方激活 ↓',
             freeFeats:['✅ 7天餐饮计划','✅ 自动购物清单',
-                       '✅ 46国200+道菜谱','✅ 免费预览 — 7天中的2天',
+                       '✅ 46国300+道菜谱','✅ 免费预览 — 7天中的2天',
                        '✗ 完整7天PDF','✗ 节俭菜单'],
             premFeats:['✅ 所有免费功能，加上：','✅ 完整7天PDF',
                        '✅ 每周节俭菜单','✅ 来自 46 国家的 {{RECIPE_COUNT}} 道食谱',
@@ -5627,7 +5628,7 @@ function applyTranslations() {
             price:'€3/月', sub:'', popular:'最人気',
             cta:'プレミアムを取得 →', already:'すでに購読済み？下でアクティブ化 ↓',
             freeFeats:['✅ 7日間の食事プラン','✅ 自動買い物リスト',
-                       '✅ 70カ国以上200+レシピ','✅ 無料プレビュー — 7日中2日',
+                       '✅ 70カ国以上300+レシピ','✅ 無料プレビュー — 7日中2日',
                        '✗ 7日分フルPDF','✗ 節約メニュー'],
             premFeats:['✅ 無料のすべて、プラス：','✅ 7日分フルPDF',
                        '✅ 週間節約メニュー','✅ 70カ国以上から{{RECIPE_COUNT}}のレシピ',
@@ -5636,7 +5637,7 @@ function applyTranslations() {
             price:'€3/ay', sub:'', popular:'EN POPÜLER',
             cta:'Premium Al →', already:'Zaten abone misiniz? Aşağıdan aktive edin ↓',
             freeFeats:['✅ 7 günlük yemek planı','✅ Otomatik alışveriş listesi',
-                       '✅ 46 ülkeden 200+ tarif','✅ Ücretsiz önizleme — 7 günden 2\'si',
+                       '✅ 46 ülkeden 300+ tarif','✅ Ücretsiz önizleme — 7 günden 2\'si',
                        '✗ 7 günlük tam PDF','✗ Bütçe menüsü'],
             premFeats:['✅ Ücretsizin her şeyi, artı:','✅ 7 günlük tam PDF',
                        '✅ Haftalık bütçe menüsü','✅ 46 ülkeden {{RECIPE_COUNT}} tarif',
@@ -5645,7 +5646,7 @@ function applyTranslations() {
             price:'€3/mese', sub:'', popular:'PIÙ POPOLARE',
             cta:'Ottieni Premium →', already:'Già abbonato? Attiva qui sotto ↓',
             freeFeats:['✅ Piano pasti 7 giorni','✅ Lista della spesa automatica',
-                       '✅ 200+ ricette da 46 paesi','✅ Anteprima gratuita — 2 giorni su 7',
+                       '✅ 300+ ricette da 46 paesi','✅ Anteprima gratuita — 2 giorni su 7',
                        '✗ PDF con tutti i 7 giorni','✗ Menu economico'],
             premFeats:['✅ Tutto il gratuito, più:','✅ PDF completo 7 giorni',
                        '✅ Menu economico settimanale','✅ {{RECIPE_COUNT}} ricette da 46 paesi',
@@ -5654,7 +5655,7 @@ function applyTranslations() {
             price:'€3/월', sub:'', popular:'가장 인기',
             cta:'프리미엄 이용 →', already:'이미 구독 중? 아래에서 활성화 ↓',
             freeFeats:['✅ 7일 식단 계획','✅ 자동 장보기 목록',
-                       '✅ 70개국 200+가지 레시피','✅ 무료 미리보기 — 7일 중 2일',
+                       '✅ 70개국 300+가지 레시피','✅ 무료 미리보기 — 7일 중 2일',
                        '✗ 7일 전체 PDF','✗ 예산 메뉴'],
             premFeats:['✅ 무료의 모든 것, 추가로:','✅ 7일 전체 PDF',
                        '✅ 주간 예산 메뉴','✅ 46 국가의 {{RECIPE_COUNT}}개 레시피',
@@ -5663,7 +5664,7 @@ function applyTranslations() {
             price:'€3/माह', sub:'', popular:'सबसे लोकप्रिय',
             cta:'प्रीमियम पाएं →', already:'पहले से सदस्य? नीचे सक्रिय करें ↓',
             freeFeats:['✅ 7 दिन का भोजन योजना','✅ स्वचालित खरीदारी सूची',
-                       '✅ 46 देशों की 200+ रेसिपी','✅ मुफ्त पूर्वावलोकन — 7 में से 2 दिन',
+                       '✅ 46 देशों की 300+ रेसिपी','✅ मुफ्त पूर्वावलोकन — 7 में से 2 दिन',
                        '✗ पूर्ण 7 दिन PDF','✗ बजट मेनू'],
             premFeats:['✅ सब कुछ मुफ्त में, साथ में:','✅ पूर्ण 7 दिन PDF',
                        '✅ साप्ताहिक बजट मेनू','✅ 46 देशों से {{RECIPE_COUNT}} रेसिपी',
