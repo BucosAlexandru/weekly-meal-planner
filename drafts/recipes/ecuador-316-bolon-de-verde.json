@@ -1,0 +1,176 @@
+{
+  "id": 316,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Ecuador", "en": "Ecuador", "es": "Ecuador", "fr": "Équateur", "de": "Ecuador",
+    "pt": "Equador", "ru": "Эквадор", "ar": "الإكوادور", "zh": "厄瓜多尔", "ja": "エクアドル",
+    "tr": "Ekvador", "it": "Ecuador", "ko": "에콰도르", "hi": "इक्वाडोर"
+  },
+  "name": {
+    "ro": "Bolón de Verde", "en": "Bolón de Verde", "es": "Bolón de Verde", "fr": "Bolón de Verde", "de": "Bolón de Verde",
+    "pt": "Bolón de Verde", "ru": "Болон де Верде", "ar": "بولون دي فيردي", "zh": "厄瓜多尔芭蕉团", "ja": "ボロン・デ・ベルデ",
+    "tr": "Bolón de Verde", "it": "Bolón de Verde", "ko": "볼론 데 베르데", "hi": "बोलोन दे वेर्दे"
+  },
+  "category": {
+    "ro": "Mic dejun", "en": "Breakfast", "es": "Desayuno", "fr": "Petit-déjeuner", "de": "Frühstück",
+    "pt": "Pequeno-almoço", "ru": "Завтрак", "ar": "فطور", "zh": "早餐", "ja": "朝食",
+    "tr": "Kahvaltı", "it": "Colazione", "ko": "아침 식사", "hi": "नाश्ता"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon":"🍌","t":"Bananele plantain verzi se fierb întâi, nu se prăjesc direct crude","d":"Fierberea le înmoaie suficient cât să se piureze ușor, fără să rămână bucăți tari în piure"},
+      {"icon":"👐","t":"Piureul de banană se frământă cu mâna, ca un aluat, nu se bate cu blenderul","d":"Frământarea manuală păstrează un pic de textură și leagă bine amidonul, ca bila să-și țină forma"},
+      {"icon":"🧀","t":"Brânza se îngroapă complet în centrul bilei, apoi se închide bine marginea","d":"O margine lăsată deschisă crapă la prăjit și lasă brânza topită să se scurgă în ulei"},
+      {"icon":"🔥","t":"Bila se prăjește sau se coace la foc mediu, rostogolită des pe toate părțile","d":"Coaja de amidon exterioară se rumenește uniform, în timp ce interiorul rămâne moale și cald"}
+    ],
+    "en": [
+      {"icon":"🍌","t":"The green plantains are boiled first, not fried straight from raw","d":"Boiling softens them enough to mash easily, without leaving hard chunks in the mixture"},
+      {"icon":"👐","t":"The mashed plantain is kneaded by hand, like dough, not blitzed in a blender","d":"Hand-kneading keeps a bit of texture and binds the starch well, so the ball holds its shape"},
+      {"icon":"🧀","t":"The cheese is buried fully in the center of the ball, then the edge is sealed tight","d":"A gap left open cracks open during frying and lets the melted cheese leak into the oil"},
+      {"icon":"🔥","t":"The ball fries or bakes over medium heat, turned often on all sides","d":"The starchy outer skin browns evenly, while the inside stays soft and warm"}
+    ],
+    "es": [
+      {"icon":"🍌","t":"Los plátanos verdes se hierven primero, no se fríen crudos directamente","d":"Hervirlos los ablanda lo suficiente para machacarlos fácilmente, sin dejar trozos duros en la mezcla"},
+      {"icon":"👐","t":"El puré de plátano se amasa a mano, como masa, no se procesa en licuadora","d":"Amasar a mano conserva algo de textura y une bien el almidón, para que la bola mantenga su forma"},
+      {"icon":"🧀","t":"El queso se entierra por completo en el centro de la bola, luego se sella bien el borde","d":"Un hueco abierto se agrieta al freír y deja escapar el queso derretido al aceite"},
+      {"icon":"🔥","t":"La bola se fríe o se hornea a fuego medio, girándola a menudo por todos lados","d":"La piel almidonada exterior dora parejo, mientras el interior queda suave y caliente"}
+    ],
+    "fr": [
+      {"icon":"🍌","t":"Les plantains vertes sont d'abord bouillies, pas frites directement crues","d":"L'ébullition les ramollit assez pour être facilement écrasées, sans laisser de morceaux durs dans le mélange"},
+      {"icon":"👐","t":"La purée de plantain est pétrie à la main, comme une pâte, pas mixée au blender","d":"Le pétrissage à la main conserve un peu de texture et lie bien l'amidon, pour que la boule garde sa forme"},
+      {"icon":"🧀","t":"Le fromage est enfoui complètement au centre de la boule, puis le bord est bien scellé","d":"Un écart laissé ouvert se fissure à la friture et laisse le fromage fondu s'échapper dans l'huile"},
+      {"icon":"🔥","t":"La boule frit ou cuit au four à feu moyen, tournée souvent sur tous les côtés","d":"La peau amylacée extérieure dore uniformément, tandis que l'intérieur reste moelleux et chaud"}
+    ],
+    "de": [
+      {"icon":"🍌","t":"Die grünen Kochbananen werden zuerst gekocht, nicht direkt roh frittiert","d":"Kochen weicht sie genug auf, um sie leicht zu zerdrücken, ohne harte Stücke in der Mischung zu lassen"},
+      {"icon":"👐","t":"Das Kochbananenpüree wird von Hand geknetet, wie ein Teig, nicht im Mixer püriert","d":"Handkneten behält etwas Textur und bindet die Stärke gut, damit der Ball seine Form hält"},
+      {"icon":"🧀","t":"Der Käse wird vollständig in der Mitte des Balls vergraben, dann der Rand fest verschlossen","d":"Eine offene Lücke reißt beim Frittieren auf und lässt den geschmolzenen Käse ins Öl auslaufen"},
+      {"icon":"🔥","t":"Der Ball wird bei mittlerer Hitze frittiert oder gebacken, oft auf allen Seiten gedreht","d":"Die stärkehaltige Außenhaut bräunt gleichmäßig, während das Innere weich und warm bleibt"}
+    ],
+    "pt": [
+      {"icon":"🍌","t":"As bananas-da-terra verdes são fervidas primeiro, não fritas diretamente cruas","d":"Ferver amolece-as o suficiente para as amassar facilmente, sem deixar pedaços duros na mistura"},
+      {"icon":"👐","t":"O puré de banana é amassado à mão, como massa, não processado no liquidificador","d":"Amassar à mão mantém alguma textura e liga bem o amido, para a bola manter a forma"},
+      {"icon":"🧀","t":"O queijo é enterrado completamente no centro da bola, depois a borda é bem selada","d":"Uma abertura deixada aberta racha ao fritar e deixa o queijo derretido escapar para o óleo"},
+      {"icon":"🔥","t":"A bola frita ou assa em fogo médio, virada com frequência de todos os lados","d":"A pele amilácea exterior doura por igual, enquanto o interior fica macio e quente"}
+    ],
+    "ru": [
+      {"icon":"🍌","t":"Зелёные платано сначала отвариваются, а не жарятся сырыми напрямую","d":"Варка достаточно размягчает их для лёгкого разминания, не оставляя твёрдых кусков в смеси"},
+      {"icon":"👐","t":"Пюре из платано вымешивается руками, как тесто, а не взбивается блендером","d":"Ручное вымешивание сохраняет немного текстуры и хорошо связывает крахмал, чтобы шарик держал форму"},
+      {"icon":"🧀","t":"Сыр полностью прячется в центре шарика, затем край плотно запечатывается","d":"Оставленный открытым зазор трескается при жарке и позволяет расплавленному сыру вытечь в масло"},
+      {"icon":"🔥","t":"Шарик жарится или запекается на среднем огне, часто переворачиваясь на все стороны","d":"Крахмалистая внешняя корочка равномерно подрумянивается, а середина остаётся мягкой и тёплой"}
+    ],
+    "ar": [
+      {"icon":"🍌","t":"موز الجنة الأخضر يُسلق أولاً، لا يُقلى نيئًا مباشرة","d":"السلق يليّنه بما يكفي ليُهرس بسهولة، دون ترك قطع صلبة في الخليط"},
+      {"icon":"👐","t":"هريس الموز يُعجن باليد، كالعجين، لا يُخفق بالخلاط","d":"العجن اليدوي يحافظ على بعض القوام ويربط النشا جيدًا، حتى تحافظ الكرة على شكلها"},
+      {"icon":"🧀","t":"الجبن يُدفن بالكامل في منتصف الكرة، ثم تُغلق الحافة بإحكام","d":"فجوة متروكة مفتوحة تتشقق أثناء القلي وتسمح للجبن الذائب بالتسرب إلى الزيت"},
+      {"icon":"🔥","t":"الكرة تُقلى أو تُخبز على نار متوسطة، وتُقلَّب كثيرًا على كل الجوانب","d":"القشرة النشوية الخارجية تتحمّر بانتظام، بينما يبقى الداخل طريًا ودافئًا"}
+    ],
+    "zh": [
+      {"icon":"🍌","t":"青香蕉先煮熟，而不是生的直接下锅炸","d":"煮熟能让它足够软，方便捣成泥，混合物中不会留有硬块"},
+      {"icon":"👐","t":"香蕉泥用手揉制，像揉面团一样，而不是用搅拌机打碎","d":"手工揉制能保留一些口感，并让淀粉充分粘合，使团子能够定型"},
+      {"icon":"🧀","t":"奶酪完全埋在团子中心，然后把边缘捏紧封口","d":"若留有缝隙，油炸时会裂开，让融化的奶酪流入油中"},
+      {"icon":"🔥","t":"团子用中火煎炸或烘烤，经常翻动使各面受热均匀","d":"外层富含淀粉的表皮均匀上色，而内部保持柔软温热"}
+    ],
+    "ja": [
+      {"icon":"🍌","t":"青いプランテンは生のまま揚げず、まず茹でる","d":"茹でることで十分柔らかくなり、混ぜても硬い塊が残らずに潰しやすくなる"},
+      {"icon":"👐","t":"潰したプランテンはミキサーではなく生地のように手でこねる","d":"手でこねることで少し食感が残り、でんぷんがよくまとまり、ボールが形を保つ"},
+      {"icon":"🧀","t":"チーズはボールの中心に完全に埋め込み、端をしっかり閉じる","d":"隙間が開いていると揚げる際に割れて、溶けたチーズが油に漏れ出てしまう"},
+      {"icon":"🔥","t":"ボールは中火で揚げるか焼き、頻繁に全面を返す","d":"でんぷん質の外皮が均一に色づき、中は柔らかく温かいまま保たれる"}
+    ],
+    "tr": [
+      {"icon":"🍌","t":"Yeşil muzlar önce haşlanır, çiğ halde doğrudan kızartılmaz","d":"Haşlamak, karışımda sert parçalar bırakmadan kolayca ezilecek kadar yumuşatır"},
+      {"icon":"👐","t":"Ezilmiş muz, blenderdan geçirilmez, hamur gibi elle yoğrulur","d":"Elle yoğurmak biraz doku bırakır ve nişastayı iyi bağlar, böylece top şeklini korur"},
+      {"icon":"🧀","t":"Peynir topun tam ortasına gömülür, sonra kenar sıkıca kapatılır","d":"Açık bırakılan bir boşluk kızartılırken çatlar ve erimiş peynirin yağa akmasına neden olur"},
+      {"icon":"🔥","t":"Top orta ateşte kızartılır veya pişirilir, sık sık her tarafı çevrilir","d":"Nişastalı dış kabuk eşit şekilde kararırken iç kısım yumuşak ve sıcak kalır"}
+    ],
+    "it": [
+      {"icon":"🍌","t":"I platani verdi vengono prima bolliti, non fritti crudi direttamente","d":"Bollirli li ammorbidisce abbastanza da schiacciarli facilmente, senza lasciare pezzi duri nel composto"},
+      {"icon":"👐","t":"Il purè di platano viene impastato a mano, come una pasta, non frullato","d":"Impastare a mano mantiene un po' di consistenza e lega bene l'amido, così la pallina mantiene la forma"},
+      {"icon":"🧀","t":"Il formaggio viene sepolto completamente al centro della pallina, poi il bordo viene sigillato bene","d":"Un'apertura lasciata aperta si spacca in frittura e lascia fuoriuscire il formaggio fuso nell'olio"},
+      {"icon":"🔥","t":"La pallina frigge o cuoce a fuoco medio, girata spesso su tutti i lati","d":"La buccia amidacea esterna dora in modo uniforme, mentre l'interno resta morbido e caldo"}
+    ],
+    "ko": [
+      {"icon":"🍌","t":"초록색 플랜테인은 생으로 바로 튀기지 않고 먼저 삶는다","d":"삶으면 충분히 부드러워져 쉽게 으깨지고, 반죽에 딱딱한 덩어리가 남지 않는다"},
+      {"icon":"👐","t":"으깬 플랜테인은 믹서에 갈지 않고 반죽처럼 손으로 치댄다","d":"손으로 치대면 약간의 식감이 남고 전분이 잘 결합되어 공 모양이 유지된다"},
+      {"icon":"🧀","t":"치즈는 공 중앙에 완전히 파묻은 뒤 가장자리를 꼼꼼히 봉한다","d":"틈이 남으면 튀길 때 갈라져 녹은 치즈가 기름으로 새어 나온다"},
+      {"icon":"🔥","t":"공은 중불에서 튀기거나 구우며, 모든 면이 골고루 되도록 자주 뒤집는다","d":"전분질의 겉껍질이 고르게 노릇해지는 동안 속은 부드럽고 따뜻하게 유지된다"}
+    ],
+    "hi": [
+      {"icon":"🍌","t":"हरे प्लांटेन को पहले उबाला जाता है, कच्चा सीधे तला नहीं जाता","d":"उबालना उन्हें इतना नरम कर देता है कि आसानी से मैश हो जाएं, मिश्रण में सख्त टुकड़े न रहें"},
+      {"icon":"👐","t":"मैश किया प्लांटेन आटे की तरह हाथ से गूंधा जाता है, ब्लेंडर में नहीं पीसा जाता","d":"हाथ से गूंधना थोड़ी बनावट बनाए रखता है और स्टार्च को अच्छी तरह बांधता है, ताकि गोला आकार बनाए रखे"},
+      {"icon":"🧀","t":"चीज़ को गोले के केंद्र में पूरी तरह दबाया जाता है, फिर किनारे को कसकर बंद किया जाता है","d":"खुला रह गया अंतर तलते समय फट जाता है और पिघला चीज़ तेल में रिसने देता है"},
+      {"icon":"🔥","t":"गोला मध्यम आंच पर तला या पकाया जाता है, बार-बार सभी तरफ पलटा जाता है","d":"बाहरी स्टार्ची परत समान रूप से भूरी होती है, जबकि अंदर नरम और गरम रहता है"}
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 banane plantain verzi, curățate și tăiate bucăți","1 linguriță sare","2 linguri unt sau ulei","150g cașcaval, mărunțit","ulei, pentru prăjit sau uns"],
+    "en": ["4 green plantains, peeled and cut into pieces","1 tsp salt","2 tbsp butter or oil","150g mild yellow cheese, crumbled","oil, for frying or greasing"],
+    "es": ["4 plátanos verdes, pelados y en trozos","1 cdta de sal","2 cdas de mantequilla o aceite","150g de queso fresco, desmenuzado","aceite, para freír o engrasar"],
+    "fr": ["4 bananes plantains vertes, épluchées et coupées en morceaux","1 c. à café de sel","2 c. à soupe de beurre ou d'huile","150g de fromage doux, émietté","huile, pour la friture ou pour graisser"],
+    "de": ["4 grüne Kochbananen, geschält und in Stücke geschnitten","1 TL Salz","2 EL Butter oder Öl","150g milder Käse, zerbröckelt","Öl, zum Frittieren oder Einfetten"],
+    "pt": ["4 bananas-da-terra verdes, descascadas e em pedaços","1 col. chá de sal","2 col. sopa de manteiga ou óleo","150g de queijo suave, esmigalhado","óleo, para fritar ou untar"],
+    "ru": ["4 зелёных платано, очищенных и нарезанных кусками","1 ч.л. соли","2 ст.л. сливочного масла или растительного","150г мягкого сыра, раскрошенного","масло, для жарки или смазывания"],
+    "ar": ["4 موزات جنة خضراء، مقشّرة ومقطّعة قطعًا","ملعقة صغيرة ملح","ملعقتان كبيرتان زبدة أو زيت","150غ جبن أصفر خفيف، مفتت","زيت، للقلي أو الدهن"],
+    "zh": ["4根青色大蕉，去皮切块","1茶匙盐","2汤匙黄油或油","150克淡味黄奶酪，捏碎","油，用于煎炸或涂抹"],
+    "ja": ["青いプランテン4本、皮をむいてぶつ切り","塩小さじ1","バターまたは油大さじ2","マイルドな黄色いチーズ150g、崩したもの","油、揚げるか塗る用"],
+    "tr": ["4 yeşil muz, soyulmuş ve parçalara kesilmiş","1 çay kaşığı tuz","2 yemek kaşığı tereyağı veya yağ","150g yumuşak sarı peynir, ufalanmış","yağ, kızartmak veya yağlamak için"],
+    "it": ["4 platani verdi, sbucciati e a pezzi","1 cucchiaino di sale","2 cucchiai di burro o olio","150g di formaggio dolce, sbriciolato","olio, per friggere o ungere"],
+    "ko": ["초록색 플랜테인 4개, 껍질 벗겨 조각낸 것","소금 1작은술","버터 또는 기름 2큰술","순한 노란 치즈 150g, 부순 것","기름, 튀기거나 바를 용도"],
+    "hi": ["4 हरे प्लांटेन, छीलकर टुकड़ों में कटे हुए","1 छोटा चम्मच नमक","2 बड़े चम्मच मक्खन या तेल","150 ग्राम हल्का पीला चीज़, टुकड़े किया हुआ","तेल, तलने या चिकनाई के लिए"]
+  },
+  "howIsMade": {
+    "ro": "FIERBE BANANELE: fierbe bucățile de banană plantain în apă cu sare, aproximativ 20 de minute, până devin fragede. FRĂMÂNTĂ: scurge bananele, adaugă untul, apoi frământă-le cu mâna, cât sunt calde, până obții un aluat neted, fără cocoloașe mari. IMPARTE ȘI UMPLE: împarte aluatul în 6-8 porții egale, aplatizează fiecare porție în palmă, pune o linguriță de brânză în mijloc. FORMEAZĂ BILE: închide bine marginile în jurul brânzei și rotunjește fiecare porție într-o bilă compactă. PRĂJEȘTE SAU COACE: prăjește bilele în ulei încins la foc mediu, rostogolindu-le des, până se rumenesc pe toate părțile, aproximativ 8-10 minute; alternativ, coace-le la 200°C timp de 20-25 de minute, întorcându-le la jumătate. SERVEȘTE: servește calde, ca parte a micului dejun, alături de cafea sau ciocolată caldă.",
+    "en": "BOIL THE PLANTAINS: boil the plantain pieces in salted water, about 20 minutes, until tender. KNEAD: drain the plantains, add the butter, then knead by hand while still warm, until you get a smooth dough, without large lumps. DIVIDE AND FILL: divide the dough into 6-8 equal portions, flatten each portion in your palm, place a teaspoon of cheese in the middle. SHAPE THE BALLS: seal the edges well around the cheese and roll each portion into a compact ball. FRY OR BAKE: fry the balls in hot oil over medium heat, turning them often, until browned on all sides, about 8-10 minutes; alternatively, bake at 200°C for 20-25 minutes, flipping halfway. SERVE: serve warm, as part of breakfast, alongside coffee or hot chocolate.",
+    "es": "HIERVE LOS PLÁTANOS: hierve los trozos de plátano en agua con sal, unos 20 minutos, hasta que estén tiernos. AMASA: escurre los plátanos, añade la mantequilla, luego amasa a mano mientras aún están calientes, hasta obtener una masa suave, sin grumos grandes. DIVIDE Y RELLENA: divide la masa en 6-8 porciones iguales, aplana cada porción en la palma, coloca una cucharadita de queso en el centro. FORMA LAS BOLAS: sella bien los bordes alrededor del queso y enrolla cada porción en una bola compacta. FRÍE U HORNEA: fríe las bolas en aceite caliente a fuego medio, girándolas a menudo, hasta que doren por todos lados, unos 8-10 minutos; alternativamente, hornea a 200°C durante 20-25 minutos, dándoles la vuelta a la mitad. SIRVE: sirve calientes, como parte del desayuno, junto con café o chocolate caliente.",
+    "fr": "FAIS BOUILLIR LES PLANTAINS: fais bouillir les morceaux de plantain dans de l'eau salée, environ 20 minutes, jusqu'à ce qu'ils soient tendres. PÉTRIS: égoutte les plantains, ajoute le beurre, puis pétris à la main pendant qu'ils sont encore chauds, jusqu'à obtenir une pâte lisse, sans gros grumeaux. DIVISE ET FARCIS: divise la pâte en 6-8 portions égales, aplatis chaque portion dans la paume, place une cuillère à café de fromage au centre. FORME LES BOULES: scelle bien les bords autour du fromage et roule chaque portion en boule compacte. FAIS FRIRE OU CUIS AU FOUR: fais frire les boules dans l'huile chaude à feu moyen, en les tournant souvent, jusqu'à ce qu'elles dorent de tous côtés, environ 8-10 minutes ; sinon, cuis au four à 200°C pendant 20-25 minutes, en retournant à mi-cuisson. SERS: sers chaud, dans le cadre du petit-déjeuner, avec du café ou du chocolat chaud.",
+    "de": "KOCHBANANEN KOCHEN: die Kochbananenstücke in Salzwasser garen, etwa 20 Minuten, bis sie weich sind. KNETEN: die Kochbananen abgießen, die Butter zugeben, dann von Hand kneten, während sie noch warm sind, bis ein glatter Teig ohne große Klumpen entsteht. TEILEN UND FÜLLEN: den Teig in 6-8 gleiche Portionen teilen, jede Portion in der Handfläche flach drücken, einen Teelöffel Käse in die Mitte geben. BÄLLE FORMEN: die Ränder um den Käse gut verschließen und jede Portion zu einer kompakten Kugel rollen. FRITTIEREN ODER BACKEN: die Bälle in heißem Öl bei mittlerer Hitze frittieren, oft wenden, bis sie auf allen Seiten gebräunt sind, etwa 8-10 Minuten; alternativ bei 200°C 20-25 Minuten backen, dabei einmal wenden. SERVIEREN: warm servieren, als Teil des Frühstücks, mit Kaffee oder heißer Schokolade.",
+    "pt": "FERVA AS BANANAS: ferva os pedaços de banana-da-terra em água com sal, cerca de 20 minutos, até ficarem macias. AMASSE: escorra as bananas, junte a manteiga, depois amasse à mão enquanto ainda estão quentes, até obter uma massa lisa, sem grumos grandes. DIVIDA E RECHEIE: divida a massa em 6-8 porções iguais, achate cada porção na palma da mão, coloque uma colher de chá de queijo no meio. MOLDE AS BOLAS: sele bem as bordas em torno do queijo e enrole cada porção numa bola compacta. FRITE OU ASSE: frite as bolas em óleo quente em fogo médio, virando-as com frequência, até dourarem de todos os lados, cerca de 8-10 minutos; alternativamente, asse a 200°C durante 20-25 minutos, virando a meio. SIRVA: sirva quentes, como parte do pequeno-almoço, junto com café ou chocolate quente.",
+    "ru": "СВАРИ ПЛАТАНО: свари кусочки платано в подсоленной воде, около 20 минут, до мягкости. ВЫМЕСИ: слей воду с платано, добавь масло, затем вымеси руками, пока ещё тёплое, до получения гладкого теста без крупных комков. РАЗДЕЛИ И НАПОЛНИ: раздели тесто на 6-8 равных порций, расплющи каждую порцию в ладони, положи чайную ложку сыра в середину. СФОРМИРУЙ ШАРИКИ: хорошо запечатай края вокруг сыра и скатай каждую порцию в плотный шарик. ОБЖАРЬ ИЛИ ЗАПЕКИ: обжарь шарики в горячем масле на среднем огне, часто переворачивая, пока не подрумянятся со всех сторон, около 8-10 минут; либо запеки при 200°C 20-25 минут, перевернув один раз. ПОДАЙ: подавай тёплыми, как часть завтрака, вместе с кофе или горячим шоколадом.",
+    "ar": "اسلق الموز: اسلق قطع موز الجنة في ماء مملح، حوالي 20 دقيقة، حتى تطرى. اعجن: صفّ الموز، أضف الزبدة، ثم اعجن باليد وهو لا يزال دافئًا حتى تحصل على عجينة ناعمة دون كتل كبيرة. قسّم واحشُ: قسّم العجينة إلى 6-8 أجزاء متساوية، افرد كل جزء في راحة يدك، ضع ملعقة صغيرة من الجبن في المنتصف. شكّل الكرات: أغلق الحواف جيدًا حول الجبن ودحرج كل جزء إلى كرة متماسكة. اقلِ أو اخبز: اقلِ الكرات في زيت ساخن على نار متوسطة، مع تقليبها كثيرًا حتى تتحمّر من كل الجهات، حوالي 8-10 دقائق؛ أو اخبزها على حرارة 200 درجة مئوية لمدة 20-25 دقيقة، مع قلبها في المنتصف. قدّم: قدّمها دافئة، كجزء من الفطور، مع القهوة أو الشوكولاتة الساخنة.",
+    "zh": "煮大蕉：将大蕉块放入盐水中煮约20分钟至变软。揉制：沥干大蕉，加入黄油，趁热用手揉制，直到形成没有大结块的顺滑面团。分份并包馅：将面团分成6-8等份，每份在掌心压扁，中间放一茶匙奶酪。团成球状：将奶酪周围的边缘紧紧封好，把每份揉成结实的球状。油炸或烘烤：中火将团子放入热油中炸，经常翻动，直到各面金黄，约8-10分钟；或以200°C烘烤20-25分钟，中途翻面。上桌：作为早餐的一部分趁热享用，可搭配咖啡或热巧克力。",
+    "ja": "プランテンを茹でる：プランテンの塊を塩水で約20分、柔らかくなるまで茹でる。こねる：プランテンの水気を切り、バターを加え、まだ温かいうちに手で大きな塊が残らないなめらかな生地になるまでこねる。分けて詰める：生地を6〜8等分し、それぞれを手のひらで平たく伸ばし、中央にチーズ小さじ1をのせる。丸める：チーズの周りをしっかりと閉じ、それぞれをしっかりとした丸い形に整える。揚げるか焼く：熱い油で中火にて、頻繁に転がしながら全面が色づくまで約8〜10分揚げる。または200°Cで20〜25分、途中で返しながら焼いてもよい。盛り付ける：温かいうちに、朝食の一部としてコーヒーやホットチョコレートと共に提供する。",
+    "tr": "MUZLARI HAŞLAYIN: muz parçalarını tuzlu suda yaklaşık 20 dakika, yumuşayana kadar haşlayın. YOĞURUN: muzları süzün, tereyağını ekleyin, sonra hâlâ sıcakken elle büyük topaklar kalmayan pürüzsüz bir hamur elde edene kadar yoğurun. BÖLÜN VE DOLDURUN: hamuru 6-8 eşit parçaya bölün, her parçayı avucunuzda yassılaştırın, ortasına bir çay kaşığı peynir koyun. TOP ŞEKLİ VERİN: peynirin etrafındaki kenarları iyice kapatın ve her parçayı sıkı bir top haline getirin. KIZARTIN VEYA PİŞİRİN: topları sıcak yağda orta ateşte, sık sık çevirerek her tarafı kararana kadar yaklaşık 8-10 dakika kızartın; alternatif olarak 200°C'de 20-25 dakika, yarısında çevirerek pişirin. SERVİS YAPIN: sıcakken, kahvaltının bir parçası olarak, kahve veya sıcak çikolatayla servis edin.",
+    "it": "LESSA I PLATANI: lessa i pezzi di platano in acqua salata, circa 20 minuti, finché teneri. IMPASTA: scola i platani, aggiungi il burro, poi impasta a mano mentre sono ancora caldi, finché ottieni un impasto liscio, senza grossi grumi. DIVIDI E FARCISCI: dividi l'impasto in 6-8 porzioni uguali, appiattisci ogni porzione nel palmo, metti un cucchiaino di formaggio al centro. FORMA LE PALLINE: sigilla bene i bordi attorno al formaggio e arrotola ogni porzione in una pallina compatta. FRIGGI O CUOCI AL FORNO: friggi le palline in olio caldo a fuoco medio, girandole spesso, finché dorate su tutti i lati, circa 8-10 minuti; in alternativa, cuoci a 200°C per 20-25 minuti, girando a metà. SERVI: servi calde, come parte della colazione, insieme a caffè o cioccolata calda.",
+    "ko": "플랜테인 삶기: 플랜테인 조각을 소금물에 약 20분간, 부드러워질 때까지 삶는다. 반죽하기: 물기를 뺀 뒤 버터를 넣고, 아직 따뜻할 때 큰 덩어리가 남지 않는 매끄러운 반죽이 될 때까지 손으로 치댄다. 나누고 채우기: 반죽을 6-8등분한 뒤 각각을 손바닥에서 납작하게 펴고, 가운데에 치즈 한 티스푼을 넣는다. 공 모양 만들기: 치즈 주위 가장자리를 꼼꼼히 봉하고 각 반죽을 단단한 공 모양으로 굴린다. 튀기거나 굽기: 공을 뜨거운 기름에 중불로 자주 굴려가며 각 면이 노릇해질 때까지 약 8-10분 튀긴다. 또는 200°C에서 20-25분간, 중간에 뒤집으며 굽는다. 서빙하기: 커피나 핫초콜릿과 함께 아침 식사로 따뜻하게 낸다.",
+    "hi": "प्लांटेन उबालें: प्लांटेन के टुकड़ों को नमकीन पानी में लगभग 20 मिनट, नरम होने तक उबालें। गूंधें: प्लांटेन को छान लें, मक्खन डालें, फिर गरम रहते हुए हाथ से गूंधें, जब तक बिना बड़ी गुठलियों वाला चिकना आटा न बन जाए। बांटें और भरें: आटे को 6-8 बराबर हिस्सों में बांटें, हर हिस्से को हथेली में चपटा करें, बीच में एक छोटा चम्मच चीज़ रखें। गोले बनाएं: चीज़ के चारों ओर किनारों को अच्छी तरह बंद करें और हर हिस्से को ठोस गोले में बेलें। तलें या बेक करें: गोलों को गरम तेल में मध्यम आंच पर, बार-बार पलटते हुए, सभी तरफ भूरा होने तक लगभग 8-10 मिनट तलें; या 200°C पर 20-25 मिनट बेक करें, बीच में पलटते हुए। परोसें: गरम-गरम, नाश्ते के हिस्से के रूप में, कॉफी या गरम चॉकलेट के साथ परोसें।"
+  },
+  "originText": {
+    "ro": "Bolón de verde e micul dejun tradițional al coastei Pacificului din Ecuador, unde banana plantain, nu porumbul sau grâul, e baza alimentației de zi cu zi. Numele descrie exact ce e felul — o \"bilă\" (bolón) de \"verde\" (banană plantain verde) — și e vândut de la ore mici ale dimineții în piețele din Guayaquil, adesea alături de o ceașcă de cafea sau un pahar de suc proaspăt.\n\nDiferența dintre un bolón reușit și unul care se destramă e în două momente cheie ale preparării: bananele trebuie fierte, nu prăjite crude, ca amidonul lor dur să se înmoaie suficient pentru a fi frământat, iar brânza trebuie sigilată complet în interior. O margine lăsată deschisă crapă la contactul cu uleiul fierbinte, iar brânza topită se scurge afară în loc să rămână cremoasă în centru, exact acolo unde ar trebui să surprindă la prima mușcătură.",
+    "en": "Bolón de verde is the traditional breakfast of Ecuador's Pacific coast, where plantain, not corn or wheat, is the base of everyday eating. The name describes exactly what the dish is — a \"ball\" (bolón) of \"green\" (green plantain) — and it's sold from early morning at markets in Guayaquil, often alongside a cup of coffee or a glass of fresh juice.\n\nThe difference between a bolón that holds together and one that falls apart lies in two key moments of preparation: the plantains must be boiled, not fried raw, so their tough starch softens enough to be kneaded, and the cheese must be fully sealed inside. A gap left open cracks on contact with the hot oil, and the melted cheese leaks out instead of staying creamy at the center, exactly where it should surprise you at the first bite.",
+    "es": "El bolón de verde es el desayuno tradicional de la costa pacífica de Ecuador, donde el plátano, no el maíz ni el trigo, es la base de la alimentación cotidiana. El nombre describe exactamente lo que es el plato — una \"bola\" (bolón) de \"verde\" (plátano verde) — y se vende desde temprano por la mañana en los mercados de Guayaquil, a menudo junto con una taza de café o un vaso de jugo fresco.\n\nLa diferencia entre un bolón que se mantiene entero y uno que se deshace está en dos momentos clave de la preparación: los plátanos deben hervirse, no freírse crudos, para que su almidón duro se ablande lo suficiente como para amasarse, y el queso debe quedar completamente sellado por dentro. Un hueco abierto se agrieta al contacto con el aceite caliente, y el queso derretido se escapa en vez de permanecer cremoso en el centro, exactamente donde debería sorprenderte en el primer bocado.",
+    "fr": "Le bolón de verde est le petit-déjeuner traditionnel de la côte pacifique de l'Équateur, où la plantain, et non le maïs ni le blé, est la base de l'alimentation quotidienne. Le nom décrit exactement ce qu'est le plat — une \"boule\" (bolón) de \"verte\" (plantain verte) — et il est vendu dès le petit matin sur les marchés de Guayaquil, souvent avec une tasse de café ou un verre de jus frais.\n\nLa différence entre un bolón qui tient et un qui s'effondre réside dans deux moments clés de la préparation : les plantains doivent être bouillies, pas frites crues, pour que leur amidon dur ramollisse assez pour être pétri, et le fromage doit être complètement scellé à l'intérieur. Un écart laissé ouvert se fissure au contact de l'huile chaude, et le fromage fondu s'échappe au lieu de rester crémeux au centre, exactement là où il devrait surprendre à la première bouchée.",
+    "de": "Bolón de verde ist das traditionelle Frühstück der Pazifikküste Ecuadors, wo die Kochbanane, nicht Mais oder Weizen, die Grundlage der täglichen Ernährung bildet. Der Name beschreibt genau, was das Gericht ist — ein \"Ball\" (Bolón) aus \"Grün\" (grüner Kochbanane) — und wird ab dem frühen Morgen auf den Märkten von Guayaquil verkauft, oft zusammen mit einer Tasse Kaffee oder einem Glas frischem Saft.\n\nDer Unterschied zwischen einem Bolón, der zusammenhält, und einem, der auseinanderfällt, liegt in zwei entscheidenden Momenten der Zubereitung: Die Kochbananen müssen gekocht, nicht roh frittiert werden, damit ihre zähe Stärke weich genug wird, um geknetet zu werden, und der Käse muss vollständig im Inneren versiegelt sein. Eine offen gelassene Lücke reißt beim Kontakt mit dem heißen Öl auf, und der geschmolzene Käse läuft aus, statt in der Mitte cremig zu bleiben — genau dort, wo er beim ersten Bissen überraschen sollte.",
+    "pt": "O bolón de verde é o pequeno-almoço tradicional da costa pacífica do Equador, onde a banana-da-terra, não o milho ou o trigo, é a base da alimentação diária. O nome descreve exatamente o que é o prato — uma \"bola\" (bolón) de \"verde\" (banana-da-terra verde) — e é vendido desde cedo nos mercados de Guayaquil, muitas vezes junto com uma chávena de café ou um copo de sumo fresco.\n\nA diferença entre um bolón que se mantém inteiro e um que se desfaz está em dois momentos-chave da preparação: as bananas têm de ser fervidas, não fritas cruas, para que o seu amido resistente amoleça o suficiente para ser amassado, e o queijo tem de ficar completamente selado por dentro. Uma abertura deixada aberta racha ao contacto com o óleo quente, e o queijo derretido escapa em vez de ficar cremoso no centro, exatamente onde deveria surpreender à primeira dentada.",
+    "ru": "Болон де верде — традиционный завтрак тихоокеанского побережья Эквадора, где платано, а не кукуруза или пшеница, — основа повседневного питания. Название точно описывает суть блюда — \"шарик\" (bolón) из \"зелени\" (зелёного платано) — и продаётся с раннего утра на рынках Гуаякиля, часто вместе с чашкой кофе или стаканом свежего сока.\n\nРазница между болоном, который держится, и тем, что разваливается, заключается в двух ключевых моментах приготовления: платано нужно отварить, а не жарить сырым, чтобы их жёсткий крахмал достаточно размягчился для замешивания, а сыр должен быть полностью запечатан внутри. Оставленный открытым зазор трескается при контакте с горячим маслом, и расплавленный сыр вытекает наружу вместо того, чтобы оставаться кремовым в центре — именно там, где он должен удивить при первом укусе.",
+    "ar": "بولون دي فيردي هو الفطور التقليدي لساحل المحيط الهادئ في الإكوادور، حيث يشكل موز الجنة، لا الذرة أو القمح، أساس الغذاء اليومي. يصف الاسم بالضبط ما هو الطبق — \"كرة\" (بولون) من \"الأخضر\" (موز الجنة الأخضر) — ويُباع منذ ساعات الصباح الباكر في أسواق غواياكيل، غالبًا مع فنجان قهوة أو كوب عصير طازج.\n\nالفرق بين بولون متماسك وآخر يتفكك يكمن في لحظتين أساسيتين في التحضير: يجب سلق الموز، لا قليه نيئًا، حتى يليّن نشاؤه الصلب بما يكفي للعجن، ويجب إغلاق الجبن بالكامل في الداخل. فجوة متروكة مفتوحة تتشقق عند ملامسة الزيت الساخن، ويتسرب الجبن الذائب بدلاً من أن يبقى كريميًا في المركز، بالضبط حيث يجب أن يفاجئك عند أول قضمة.",
+    "zh": "Bolón de verde是厄瓜多尔太平洋沿岸地区的传统早餐，在那里，大蕉而非玉米或小麦，是日常饮食的基础。这个名字准确描述了这道菜——一个\"绿色\"（verde，即青香蕉）的\"团子\"（bolón）——从清晨起就在瓜亚基尔的市场上出售，常常搭配一杯咖啡或一杯鲜榨果汁。\n\n一个团子能保持完整还是散开，关键在于两个准备阶段：大蕉必须先煮熟而不是生的直接油炸，这样坚硬的淀粉才能软化到足以揉制的程度；而奶酪必须完全封在内部。若留有缝隙，遇到热油就会裂开，融化的奶酪会流出来，而不是在中心保持绵密——那本该是第一口咬下去时的惊喜所在。",
+    "ja": "ボロン・デ・ベルデは、トウモロコシや小麦ではなくプランテンが日常の食事の基盤となっているエクアドル太平洋沿岸の伝統的な朝食である。その名前は料理そのものを的確に表しており——「緑（ベルデ、青いプランテン）」の「ボール（ボロン）」——グアヤキルの市場では朝早くから、しばしばコーヒー一杯や新鮮なジュース一杯とともに売られている。\n\n形を保つボロンと崩れてしまうボロンの違いは、調理の二つの重要な瞬間にある。プランテンは生のまま揚げるのではなく茹でなければならず、それによって硬いでんぷんが十分柔らかくなり、こねられるようになる。そしてチーズは内部で完全に密閉されなければならない。隙間が開いたままだと熱い油に触れた瞬間に割れてしまい、溶けたチーズは中心でクリーミーなまま留まる代わりに流れ出てしまう——本来なら最初の一口で驚かせるはずの場所なのに。",
+    "tr": "Bolón de verde, mısır veya buğdayın değil, muzun gündelik beslenmenin temeli olduğu Ekvador'un Pasifik kıyısının geleneksel kahvaltısıdır. Adı yemeğin tam olarak ne olduğunu tanımlar — \"yeşilin\" (verde, yeşil muz) \"topu\" (bolón) — ve Guayaquil pazarlarında sabahın erken saatlerinden itibaren, çoğunlukla bir fincan kahve veya bir bardak taze meyve suyuyla birlikte satılır.\n\nBir arada kalan bir bolón ile dağılan bir bolón arasındaki fark, hazırlığın iki kritik anındadır: muzlar çiğ kızartılmak yerine haşlanmalıdır, böylece sert nişastaları yoğrulacak kadar yumuşar ve peynir içeride tamamen mühürlenmelidir. Açık bırakılan bir boşluk sıcak yağla temas ettiğinde çatlar ve erimiş peynir, ilk ısırıkta sizi şaşırtması gereken tam o merkezde kremamsı kalmak yerine dışarı sızar.",
+    "it": "Il bolón de verde è la colazione tradizionale della costa pacifica dell'Ecuador, dove il platano, non il mais o il grano, è la base dell'alimentazione quotidiana. Il nome descrive esattamente cos'è il piatto — una \"pallina\" (bolón) di \"verde\" (platano verde) — ed è venduto fin dal primo mattino nei mercati di Guayaquil, spesso insieme a una tazza di caffè o un bicchiere di succo fresco.\n\nLa differenza tra un bolón che tiene insieme e uno che si sfalda sta in due momenti chiave della preparazione: i platani devono essere bolliti, non fritti crudi, così il loro amido duro si ammorbidisce abbastanza da essere impastato, e il formaggio deve essere completamente sigillato all'interno. Un'apertura lasciata aperta si spacca a contatto con l'olio caldo, e il formaggio fuso fuoriesce invece di restare cremoso al centro, esattamente dove dovrebbe sorprendere al primo morso.",
+    "ko": "볼론 데 베르데는 옥수수나 밀이 아닌 플랜테인이 일상 식사의 기반인 에콰도르 태평양 연안의 전통 아침 식사다. 이름은 이 요리가 무엇인지 정확히 설명한다 — \"초록색\"(베르데, 초록 플랜테인)의 \"공\"(볼론) — 이며, 과야킬 시장에서는 이른 아침부터 커피 한 잔이나 신선한 주스 한 잔과 함께 팔린다.\n\n형태를 유지하는 볼론과 부서지는 볼론의 차이는 준비 과정의 두 가지 핵심 순간에 있다: 플랜테인은 생으로 튀기지 않고 삶아야 하며, 그래야 단단한 전분이 반죽할 수 있을 만큼 부드러워진다. 그리고 치즈는 속에서 완전히 밀봉되어야 한다. 틈이 남으면 뜨거운 기름에 닿는 순간 갈라져, 첫 입에서 놀라움을 주어야 할 바로 그 중심에서 크리미하게 남는 대신 녹은 치즈가 흘러나온다.",
+    "hi": "बोलोन दे वेर्दे इक्वाडोर के प्रशांत तट का पारंपरिक नाश्ता है, जहां प्लांटेन, न कि मक्का या गेहूं, रोज़मर्रा के भोजन का आधार है। नाम बिल्कुल वही बताता है जो यह व्यंजन है — \"हरे\" (वेर्दे, हरा प्लांटेन) का \"गोला\" (बोलोन) — और यह ग्वायाकिल के बाज़ारों में सुबह जल्दी से बेचा जाता है, अक्सर एक कप कॉफी या ताज़ा जूस के गिलास के साथ।\n\nएक साबुत रहने वाले बोलोन और बिखर जाने वाले बोलोन के बीच का अंतर तैयारी के दो मुख्य क्षणों में है: प्लांटेन को कच्चा तलने के बजाय उबाला जाना चाहिए, ताकि उसका सख्त स्टार्च गूंधने लायक नरम हो जाए, और चीज़ को अंदर पूरी तरह सील किया जाना चाहिए। खुला रह गया अंतर गरम तेल के संपर्क में आते ही फट जाता है, और पिघला चीज़ केंद्र में मलाईदार रहने के बजाय बाहर रिस जाता है — ठीक वहीं जहां इसे पहले निवाले में चौंकाना चाहिए था।"
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 7,
+    "tags": ["vegetarian", "quick"],
+    "desc": {
+      "ro": "Bile de piure de banană plantain verde, umplute cu brânză și prăjite până se rumenesc.",
+      "en": "Green plantain dough balls, stuffed with cheese and fried until browned.",
+      "es": "Bolas de masa de plátano verde, rellenas de queso y fritas hasta dorar.",
+      "fr": "Boules de pâte de plantain vert, farcies au fromage et frites jusqu'à dorer.",
+      "de": "Kugeln aus grünem Kochbananenteig, mit Käse gefüllt und knusprig gebraten.",
+      "pt": "Bolas de massa de banana-da-terra verde, recheadas com queijo e fritas até dourarem.",
+      "ru": "Шарики из теста зелёного платано, начинённые сыром и обжаренные до румяности.",
+      "ar": "كرات من عجينة موز الجنة الأخضر، محشوة بالجبن ومقلية حتى تتحمّر.",
+      "zh": "青香蕉面团球，内馅奶酪，煎至金黄。",
+      "ja": "青いプランテンの生地ボール、チーズを詰めて色づくまで揚げたもの。",
+      "tr": "Peynirle doldurulmuş, kararana kadar kızartılmış yeşil muz hamuru topları.",
+      "it": "Palline di impasto di platano verde, farcite di formaggio e fritte fino a dorare.",
+      "ko": "치즈를 채운 초록 플랜테인 반죽 공을 노릇하게 튀긴 요리.",
+      "hi": "हरे प्लांटेन के आटे के गोले, चीज़ से भरे और भूरे होने तक तले गए।"
+    }
+  }
+}
