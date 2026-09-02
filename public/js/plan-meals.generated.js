@@ -147,8 +147,8 @@ export const PLAN_MEALS = {
       285,
       272,
       324,
-      319,
-      315
+      329,
+      319
     ]
   },
   "rapid": {
