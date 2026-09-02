@@ -1,0 +1,178 @@
+{
+  "id": 349,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Siria", "en": "Syria", "es": "Siria", "fr": "Syrie", "de": "Syrien",
+    "pt": "Síria", "ru": "Сирия", "ar": "سوريا", "zh": "叙利亚", "ja": "シリア",
+    "hi": "सीरिया", "tr": "Suriye", "it": "Siria", "ko": "시리아"
+  },
+  "name": {
+    "ro": "Shakriyeh (Tocană de miel cu iaurt)", "en": "Shakriyeh (Lamb in Yogurt Stew)", "es": "Shakriyeh (Cordero en yogur)",
+    "fr": "Shakriyeh (Agneau au yaourt)", "de": "Shakriyeh (Lamm in Joghurt)", "pt": "Shakriyeh (Borrego em iogurte)",
+    "ru": "Шакрия (Баранина в йогурте)", "ar": "شكرية (لحم بالّبن)", "zh": "叙利亚酸奶炖羊肉",
+    "ja": "シャクリーイェ（ラム肉のヨーグルト煮）", "hi": "शकरिया (दही में भेड़ का मांस)", "tr": "Şakriye (Yoğurtlu Kuzu)",
+    "it": "Shakriyeh (Agnello nello yogurt)", "ko": "샤크리예 (요거트 양고기 스튜)"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🐑", "t": "Miel fraged", "d": "Bucăți de miel fierte lent până se desprind ușor."},
+      {"icon": "🥣", "t": "Sos de iaurt", "d": "Iaurt gros stabilizat cu amidon, fiert fără să se taie."},
+      {"icon": "🍚", "t": "Servit cu orez", "d": "Orez alb pilaf, aromat cu unt și scorțișoară."},
+      {"icon": "🌿", "t": "Usturoi și coriandru", "d": "Sosul se finisează cu usturoi călit și coriandru uscat."}
+    ],
+    "en": [
+      {"icon": "🐑", "t": "Tender lamb", "d": "Lamb pieces slow-cooked until they fall apart easily."},
+      {"icon": "🥣", "t": "Yogurt sauce", "d": "Thick yogurt stabilized with cornstarch, simmered without curdling."},
+      {"icon": "🍚", "t": "Served with rice", "d": "White pilaf rice, scented with butter and cinnamon."},
+      {"icon": "🌿", "t": "Garlic and coriander", "d": "The sauce is finished with fried garlic and dried coriander."}
+    ],
+    "es": [
+      {"icon": "🐑", "t": "Cordero tierno", "d": "Trozos de cordero cocidos a fuego lento hasta desprenderse fácilmente."},
+      {"icon": "🥣", "t": "Salsa de yogur", "d": "Yogur espeso estabilizado con maicena, cocido sin cortarse."},
+      {"icon": "🍚", "t": "Servido con arroz", "d": "Arroz pilaf blanco, perfumado con mantequilla y canela."},
+      {"icon": "🌿", "t": "Ajo y cilantro", "d": "La salsa se termina con ajo frito y cilantro seco."}
+    ],
+    "fr": [
+      {"icon": "🐑", "t": "Agneau tendre", "d": "Morceaux d'agneau mijotés jusqu'à se détacher facilement."},
+      {"icon": "🥣", "t": "Sauce au yaourt", "d": "Yaourt épais stabilisé à la maïzena, mijoté sans cailler."},
+      {"icon": "🍚", "t": "Servi avec du riz", "d": "Riz pilaf blanc, parfumé au beurre et à la cannelle."},
+      {"icon": "🌿", "t": "Ail et coriandre", "d": "La sauce est finalisée avec de l'ail frit et de la coriandre séchée."}
+    ],
+    "de": [
+      {"icon": "🐑", "t": "Zartes Lamm", "d": "Lammstücke, langsam gegart, bis sie leicht zerfallen."},
+      {"icon": "🥣", "t": "Joghurtsauce", "d": "Dicker Joghurt mit Maisstärke stabilisiert, ohne zu gerinnen geköchelt."},
+      {"icon": "🍚", "t": "Mit Reis serviert", "d": "Weißer Pilaw-Reis, mit Butter und Zimt aromatisiert."},
+      {"icon": "🌿", "t": "Knoblauch und Koriander", "d": "Die Sauce wird mit gebratenem Knoblauch und getrocknetem Koriander abgerundet."}
+    ],
+    "pt": [
+      {"icon": "🐑", "t": "Borrego macio", "d": "Pedaços de borrego cozinhados lentamente até se desfazerem facilmente."},
+      {"icon": "🥣", "t": "Molho de iogurte", "d": "Iogurte espesso estabilizado com amido de milho, cozido sem talhar."},
+      {"icon": "🍚", "t": "Servido com arroz", "d": "Arroz pilaf branco, perfumado com manteiga e canela."},
+      {"icon": "🌿", "t": "Alho e coentro", "d": "O molho é finalizado com alho frito e coentro seco."}
+    ],
+    "ru": [
+      {"icon": "🐑", "t": "Нежная баранина", "d": "Куски баранины, тушённые медленно до лёгкого распадания."},
+      {"icon": "🥣", "t": "Йогуртовый соус", "d": "Густой йогурт со стабилизирующим крахмалом, готовится без сворачивания."},
+      {"icon": "🍚", "t": "Подаётся с рисом", "d": "Белый рис плов, ароматизированный маслом и корицей."},
+      {"icon": "🌿", "t": "Чеснок и кориандр", "d": "Соус завершается обжаренным чесноком и сушёным кориандром."}
+    ],
+    "ar": [
+      {"icon": "🐑", "t": "لحم غنم طري", "d": "قطع لحم غنم مطهية ببطء حتى تتفكك بسهولة."},
+      {"icon": "🥣", "t": "صلصة اللبن", "d": "لبن سميك مثبّت بالنشا، يُطهى دون أن يتخثر."},
+      {"icon": "🍚", "t": "يُقدَّم مع الأرز", "d": "أرز أبيض مفلفل، معطّر بالزبدة والقرفة."},
+      {"icon": "🌿", "t": "ثوم وكزبرة", "d": "تُنهى الصلصة بالثوم المقلي والكزبرة المجففة."}
+    ],
+    "zh": [
+      {"icon": "🐑", "t": "软嫩羊肉", "d": "羊肉块慢炖至轻松脱骨。"},
+      {"icon": "🥣", "t": "酸奶酱汁", "d": "用玉米淀粉稳定的浓稠酸奶，炖煮时不会凝结。"},
+      {"icon": "🍚", "t": "配米饭食用", "d": "白色抓饭，加入黄油和肉桂增香。"},
+      {"icon": "🌿", "t": "大蒜与香菜", "d": "酱汁最后加入炒蒜和干香菜调味。"}
+    ],
+    "ja": [
+      {"icon": "🐑", "t": "柔らかいラム肉", "d": "ラム肉を簡単にほぐれるまでじっくり煮込む。"},
+      {"icon": "🥣", "t": "ヨーグルトソース", "d": "コーンスターチで安定させた濃厚なヨーグルトを分離させずに煮る。"},
+      {"icon": "🍚", "t": "米飯と共に", "d": "バターとシナモンで香り付けした白いピラフ米。"},
+      {"icon": "🌿", "t": "にんにくとコリアンダー", "d": "ソースは揚げたにんにくと乾燥コリアンダーで仕上げる。"}
+    ],
+    "hi": [
+      {"icon": "🐑", "t": "कोमल भेड़ का मांस", "d": "भेड़ के मांस के टुकड़े धीरे पकाए गए जब तक आसानी से अलग न हो जाएं।"},
+      {"icon": "🥣", "t": "दही की चटनी", "d": "कॉर्नस्टार्च से स्थिर गाढ़ा दही, बिना फटे पकाया गया।"},
+      {"icon": "🍚", "t": "चावल के साथ परोसा गया", "d": "मक्खन और दालचीनी से सुगंधित सफेद पुलाव चावल।"},
+      {"icon": "🌿", "t": "लहसुन और धनिया", "d": "चटनी को तले लहसुन और सूखे धनिये से अंतिम रूप दिया जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🐑", "t": "Yumuşak kuzu eti", "d": "Kolayca dağılana kadar yavaşça pişirilmiş kuzu parçaları."},
+      {"icon": "🥣", "t": "Yoğurt sosu", "d": "Nişastayla stabilize edilmiş koyu yoğurt, kesilmeden pişirilir."},
+      {"icon": "🍚", "t": "Pirinçle servis edilir", "d": "Tereyağı ve tarçınla kokulandırılmış beyaz pilav."},
+      {"icon": "🌿", "t": "Sarımsak ve kişniş", "d": "Sos, kızarmış sarımsak ve kuru kişnişle tamamlanır."}
+    ],
+    "it": [
+      {"icon": "🐑", "t": "Agnello tenero", "d": "Pezzi di agnello cotti lentamente fino a sfaldarsi facilmente."},
+      {"icon": "🥣", "t": "Salsa allo yogurt", "d": "Yogurt denso stabilizzato con amido di mais, cotto senza cagliare."},
+      {"icon": "🍚", "t": "Servito con riso", "d": "Riso pilaf bianco, profumato con burro e cannella."},
+      {"icon": "🌿", "t": "Aglio e coriandolo", "d": "La salsa viene rifinita con aglio fritto e coriandolo secco."}
+    ],
+    "ko": [
+      {"icon": "🐑", "t": "부드러운 양고기", "d": "쉽게 부서질 때까지 천천히 익힌 양고기 조각."},
+      {"icon": "🥣", "t": "요거트 소스", "d": "옥수수 전분으로 안정시킨 진한 요거트, 분리되지 않게 끓인다."},
+      {"icon": "🍚", "t": "밥과 함께 제공", "d": "버터와 계피로 향을 낸 하얀 필라프 밥."},
+      {"icon": "🌿", "t": "마늘과 고수", "d": "소스는 볶은 마늘과 말린 고수로 마무리한다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["800g miel cu os, tăiat cuburi", "1kg iaurt gros", "2 linguri amidon de porumb", "1 ou", "4 căței de usturoi", "2 linguri unt", "1 linguriță coriandru uscat măcinat", "300g orez", "1 linguriță scorțișoară", "sare", "1 ceapă"],
+    "en": ["800g bone-in lamb, cubed", "1kg thick yogurt", "2 tbsp cornstarch", "1 egg", "4 garlic cloves", "2 tbsp butter", "1 tsp ground dried coriander", "300g rice", "1 tsp cinnamon", "salt", "1 onion"],
+    "es": ["800g de cordero con hueso, en cubos", "1kg de yogur espeso", "2 cdas de maicena", "1 huevo", "4 dientes de ajo", "2 cdas de mantequilla", "1 cdta de cilantro seco molido", "300g de arroz", "1 cdta de canela", "sal", "1 cebolla"],
+    "fr": ["800g d'agneau avec os, en cubes", "1kg de yaourt épais", "2 c. à s. de maïzena", "1 œuf", "4 gousses d'ail", "2 c. à s. de beurre", "1 c. à c. de coriandre séchée moulue", "300g de riz", "1 c. à c. de cannelle", "sel", "1 oignon"],
+    "de": ["800g Lamm mit Knochen, gewürfelt", "1kg dicker Joghurt", "2 EL Maisstärke", "1 Ei", "4 Knoblauchzehen", "2 EL Butter", "1 TL gemahlener getrockneter Koriander", "300g Reis", "1 TL Zimt", "Salz", "1 Zwiebel"],
+    "pt": ["800g de borrego com osso, em cubos", "1kg de iogurte espesso", "2 c. sopa de amido de milho", "1 ovo", "4 dentes de alho", "2 c. sopa de manteiga", "1 colher de chá de coentro seco moído", "300g de arroz", "1 colher de chá de canela", "sal", "1 cebola"],
+    "ru": ["800г баранины на кости, кубиками", "1кг густого йогурта", "2 ст.л. кукурузного крахмала", "1 яйцо", "4 зубчика чеснока", "2 ст.л. сливочного масла", "1 ч.л. молотого сушёного кориандра", "300г риса", "1 ч.л. корицы", "соль", "1 луковица"],
+    "ar": ["800غ لحم غنم بالعظم مقطّع مكعبات", "1كغ لبن سميك", "2 ملعقة كبيرة نشا ذرة", "بيضة واحدة", "4 فصوص ثوم", "2 ملعقة كبيرة زبدة", "ملعقة صغيرة كزبرة مجففة مطحونة", "300غ أرز", "ملعقة صغيرة قرفة", "ملح", "بصلة واحدة"],
+    "zh": ["带骨羊肉800克，切块", "浓稠酸奶1公斤", "玉米淀粉2汤匙", "鸡蛋1个", "大蒜4瓣", "黄油2汤匙", "干香菜粉1茶匙", "米饭300克", "肉桂1茶匙", "盐", "洋葱1个"],
+    "ja": ["骨付きラム肉 800g（角切り）", "濃厚なヨーグルト 1kg", "コーンスターチ 大さじ2", "卵 1個", "にんにく 4片", "バター 大さじ2", "乾燥コリアンダーパウダー 小さじ1", "米 300g", "シナモン 小さじ1", "塩", "玉ねぎ 1個"],
+    "hi": ["800 ग्राम हड्डी वाला भेड़ का मांस, क्यूब्स में", "1 किलो गाढ़ा दही", "2 बड़े चम्मच कॉर्नस्टार्च", "1 अंडा", "4 लहसुन की कलियाँ", "2 बड़े चम्मच मक्खन", "1 छोटा चम्मच पिसा सूखा धनिया", "300 ग्राम चावल", "1 छोटा चम्मच दालचीनी", "नमक", "1 प्याज़"],
+    "tr": ["800g kemikli kuzu eti, küp küp", "1kg koyu yoğurt", "2 yemek kaşığı mısır nişastası", "1 yumurta", "4 diş sarımsak", "2 yemek kaşığı tereyağı", "1 çay kaşığı öğütülmüş kuru kişniş", "300g pirinç", "1 çay kaşığı tarçın", "tuz", "1 soğan"],
+    "it": ["800g di agnello con osso, a cubetti", "1kg di yogurt denso", "2 cucchiai di amido di mais", "1 uovo", "4 spicchi d'aglio", "2 cucchiai di burro", "1 cucchiaino di coriandolo secco macinato", "300g di riso", "1 cucchiaino di cannella", "sale", "1 cipolla"],
+    "ko": ["뼈 있는 양고기 800g, 깍둑썰기", "진한 요거트 1kg", "옥수수 전분 2큰술", "달걀 1개", "마늘 4쪽", "버터 2큰술", "말린 고수 가루 1작은술", "쌀 300g", "계피 1작은술", "소금", "양파 1개"]
+  },
+  "howIsMade": {
+    "ro": "FIERBERE MIEL: Fierbe mielul cu ceapa și sare în apă timp de 1 oră, până devine fraged, apoi păstrează zeama. PREGĂTIRE IAURT: Amestecă iaurtul cu amidonul de porumb și oul bătut, pentru a preveni tăierea la fierbere. COMBINARE: Toarnă treptat zeama de miel caldă peste amestecul de iaurt, amestecând constant. FIERBERE SOS: Pune amestecul pe foc mic și fierbe, amestecând continuu într-o singură direcție, până se îngroașă. ADĂUGARE CARNE: Adaugă bucățile de miel fiert în sosul de iaurt și lasă să fiarbă ușor 10 minute. CĂLIRE USTUROI: Călește usturoiul zdrobit în unt până devine aromat, adaugă coriandrul măcinat. FINALIZARE: Toarnă amestecul de usturoi peste tocană chiar înainte de servire, alături de orez pilaf.",
+    "en": "BOIL LAMB: Boil the lamb with onion and salt in water for 1 hour until tender, then reserve the broth. PREPARE YOGURT: Mix the yogurt with cornstarch and beaten egg, to prevent curdling during cooking. COMBINE: Gradually pour the warm lamb broth over the yogurt mixture, stirring constantly. SIMMER SAUCE: Place the mixture over low heat and simmer, stirring continuously in one direction, until it thickens. ADD MEAT: Add the cooked lamb pieces to the yogurt sauce and let it simmer gently for 10 minutes. FRY GARLIC: Fry the crushed garlic in butter until fragrant, add the ground coriander. FINISH: Pour the garlic mixture over the stew right before serving, alongside pilaf rice.",
+    "es": "HERVIR EL CORDERO: Hierve el cordero con cebolla y sal en agua durante 1 hora hasta que esté tierno, luego reserva el caldo. PREPARAR EL YOGUR: Mezcla el yogur con la maicena y el huevo batido, para evitar que se corte al cocinar. COMBINAR: Vierte gradualmente el caldo tibio de cordero sobre la mezcla de yogur, removiendo constantemente. HERVIR LA SALSA: Coloca la mezcla a fuego lento y cocina, removiendo continuamente en una dirección, hasta que espese. AÑADIR LA CARNE: Añade los trozos de cordero cocido a la salsa de yogur y deja cocinar suavemente 10 minutos. FREÍR EL AJO: Fríe el ajo machacado en mantequilla hasta que esté aromático, añade el cilantro molido. TERMINAR: Vierte la mezcla de ajo sobre el guiso justo antes de servir, junto con arroz pilaf.",
+    "fr": "FAIRE BOUILLIR L'AGNEAU: Faites bouillir l'agneau avec l'oignon et le sel dans l'eau pendant 1 heure jusqu'à tendreté, puis réservez le bouillon. PRÉPARER LE YAOURT: Mélangez le yaourt avec la maïzena et l'œuf battu, pour éviter qu'il ne caille à la cuisson. COMBINER: Versez progressivement le bouillon d'agneau tiède sur le mélange de yaourt, en remuant constamment. MIJOTER LA SAUCE: Placez le mélange à feu doux et laissez mijoter, en remuant continuellement dans une direction, jusqu'à épaississement. AJOUTER LA VIANDE: Ajoutez les morceaux d'agneau cuit à la sauce au yaourt et laissez mijoter doucement 10 minutes. FRIRE L'AIL: Faites frire l'ail écrasé dans le beurre jusqu'à ce qu'il soit parfumé, ajoutez la coriandre moulue. FINALISER: Versez le mélange d'ail sur le ragoût juste avant de servir, avec du riz pilaf.",
+    "de": "LAMM KOCHEN: Das Lamm mit Zwiebel und Salz 1 Stunde in Wasser kochen, bis es zart ist, dann die Brühe aufbewahren. JOGHURT VORBEREITEN: Den Joghurt mit Maisstärke und verquirltem Ei vermischen, um das Gerinnen beim Kochen zu verhindern. VERBINDEN: Die warme Lammbrühe schrittweise über die Joghurtmischung gießen, dabei ständig rühren. SOSSE KÖCHELN: Die Mischung bei schwacher Hitze köcheln lassen, dabei ständig in eine Richtung rühren, bis sie eindickt. FLEISCH HINZUFÜGEN: Die gekochten Lammstücke zur Joghurtsauce geben und 10 Minuten sanft köcheln lassen. KNOBLAUCH BRATEN: Den zerdrückten Knoblauch in Butter braten, bis er duftet, den gemahlenen Koriander hinzufügen. FERTIGSTELLEN: Die Knoblauchmischung kurz vor dem Servieren über den Eintopf gießen, zusammen mit Pilaw-Reis.",
+    "pt": "FERVER O BORREGO: Ferva o borrego com cebola e sal em água durante 1 hora até ficar macio, depois reserve o caldo. PREPARAR O IOGURTE: Misture o iogurte com o amido de milho e o ovo batido, para evitar talhar durante o cozimento. COMBINAR: Deite gradualmente o caldo morno de borrego sobre a mistura de iogurte, mexendo constantemente. FERVER O MOLHO: Coloque a mistura em lume brando e cozinhe, mexendo continuamente numa direção, até engrossar. ADICIONAR A CARNE: Junte os pedaços de borrego cozido ao molho de iogurte e deixe cozinhar suavemente 10 minutos. FRITAR O ALHO: Frite o alho esmagado na manteiga até ficar aromático, junte o coentro moído. FINALIZAR: Deite a mistura de alho sobre o guisado antes de servir, com arroz pilaf.",
+    "ru": "ВАРКА БАРАНИНЫ: Варите баранину с луком и солью в воде 1 час до мягкости, затем сохраните бульон. ПРИГОТОВЛЕНИЕ ЙОГУРТА: Смешайте йогурт с кукурузным крахмалом и взбитым яйцом, чтобы предотвратить сворачивание при варке. СОЕДИНЕНИЕ: Постепенно влейте тёплый бараний бульон в йогуртовую смесь, постоянно помешивая. ВАРКА СОУСА: Поставьте смесь на слабый огонь и варите, непрерывно помешивая в одном направлении, пока не загустеет. ДОБАВЛЕНИЕ МЯСА: Добавьте варёные куски баранины в йогуртовый соус и дайте потомиться 10 минут. ОБЖАРКА ЧЕСНОКА: Обжарьте раздавленный чеснок в масле до аромата, добавьте молотый кориандр. ЗАВЕРШЕНИЕ: Полейте рагу чесночной смесью прямо перед подачей, вместе с рисом пилав.",
+    "ar": "سلق لحم الغنم: اسلق لحم الغنم مع البصل والملح في الماء لمدة ساعة حتى يصبح طريًا، ثم احتفظ بالمرق. تحضير اللبن: اخلط اللبن مع نشا الذرة والبيض المخفوق لمنع تخثره أثناء الطهي. الدمج: اسكب مرق اللحم الدافئ تدريجيًا فوق خليط اللبن مع التحريك المستمر. طهي الصلصة: ضع الخليط على نار هادئة واطهه مع التحريك المستمر في اتجاه واحد حتى يتماسك. إضافة اللحم: أضف قطع لحم الغنم المسلوق إلى صلصة اللبن واتركها تُطهى برفق لمدة 10 دقائق. تحمير الثوم: حمّر الثوم المهروس في الزبدة حتى تفوح رائحته، أضف الكزبرة المطحونة. اللمسات الأخيرة: اسكب خليط الثوم فوق اليخنة قبل التقديم مباشرة، مع أرز مفلفل.",
+    "zh": "煮羊肉：将羊肉与洋葱和盐一起煮1小时至软嫩，保留汤汁。准备酸奶：将酸奶与玉米淀粉和打散的鸡蛋混合，防止烹煮时凝结。混合：将温热的羊肉汤逐渐倒入酸奶混合物中，不断搅拌。炖煮酱汁：将混合物置于小火上，朝一个方向持续搅拌直至变浓稠。加入肉块：将煮好的羊肉块加入酸奶酱汁中，轻轻炖煮10分钟。炒蒜：将压碎的大蒜用黄油炒香，加入香菜粉。最后装饰：食用前将蒜香混合物淋在炖菜上，配抓饭食用。",
+    "ja": "ラム肉を煮る：ラム肉を玉ねぎと塩と共に水で1時間、柔らかくなるまで煮て出汁を取っておく。ヨーグルトを準備：ヨーグルトにコーンスターチと溶き卵を混ぜ、加熱時に分離しないようにする。合わせる：温かいラムの出汁をヨーグルトの混合物に少しずつ注ぎ、絶えずかき混ぜる。ソースを煮る：混合物を弱火にかけ、とろみがつくまで一方向に絶えずかき混ぜながら煮る。肉を加える：煮たラム肉をヨーグルトソースに加え、10分ほど優しく煮る。にんにくを炒める：つぶしたにんにくをバターで香りが出るまで炒め、コリアンダーパウダーを加える。仕上げ：提供直前ににんにく混合物を煮込みにかけ、ピラフ米と共に出す。",
+    "hi": "भेड़ का मांस उबालें: भेड़ के मांस को प्याज़ और नमक के साथ पानी में 1 घंटे नरम होने तक उबालें, फिर शोरबा बचाकर रखें। दही तैयार करें: दही को कॉर्नस्टार्च और फेंटे अंडे के साथ मिलाएं, ताकि पकाते समय फटे नहीं। मिलाएं: गरम भेड़ के शोरबे को धीरे-धीरे दही के मिश्रण में डालें, लगातार हिलाते रहें। चटनी उबालें: मिश्रण को धीमी आँच पर रखें और गाढ़ा होने तक एक दिशा में लगातार हिलाते हुए पकाएं। मांस डालें: पके भेड़ के मांस के टुकड़े दही की चटनी में डालें और 10 मिनट धीरे पकने दें। लहसुन भूनें: कुचले लहसुन को मक्खन में सुगंधित होने तक भूनें, पिसा धनिया डालें। अंतिम रूप दें: परोसने से ठीक पहले लहसुन का मिश्रण स्टू पर डालें, पुलाव चावल के साथ।",
+    "tr": "KUZU ETİNİ HAŞLAYIN: Kuzu etini soğan ve tuzla suda 1 saat yumuşayana kadar haşlayın, ardından suyunu ayırın. YOĞURDU HAZIRLAYIN: Pişirirken kesilmemesi için yoğurdu mısır nişastası ve çırpılmış yumurtayla karıştırın. BİRLEŞTİRİN: Ilık kuzu suyunu yavaşça yoğurt karışımına dökün, sürekli karıştırarak. SOSU PİŞİRİN: Karışımı kısık ateşe koyun ve koyulaşana kadar tek yönde sürekli karıştırarak pişirin. ETİ EKLEYİN: Pişmiş kuzu parçalarını yoğurt sosuna ekleyin ve 10 dakika hafifçe pişmeye bırakın. SARIMSAĞI KAVURUN: Ezilmiş sarımsağı tereyağında kokusu çıkana kadar kavurun, öğütülmüş kişniş ekleyin. SON DOKUNUŞ: Servisten hemen önce sarımsak karışımını güvecin üzerine dökün, pilav pirinciyle birlikte.",
+    "it": "LESSARE L'AGNELLO: Lessate l'agnello con cipolla e sale in acqua per 1 ora finché tenero, poi conservate il brodo. PREPARARE LO YOGURT: Mescolate lo yogurt con l'amido di mais e l'uovo sbattuto, per evitare che si cagli durante la cottura. COMBINARE: Versate gradualmente il brodo caldo di agnello nel composto di yogurt, mescolando costantemente. CUOCERE LA SALSA: Mettete il composto a fuoco basso e cuocete, mescolando continuamente in una direzione, finché si addensa. AGGIUNGERE LA CARNE: Aggiungete i pezzi di agnello cotto alla salsa di yogurt e lasciate cuocere delicatamente 10 minuti. SOFFRIGGERE L'AGLIO: Soffriggete l'aglio schiacciato nel burro finché profumato, aggiungete il coriandolo macinato. FINIRE: Versate il composto di aglio sullo stufato appena prima di servire, con riso pilaf.",
+    "ko": "양고기 끓이기: 양고기를 양파, 소금과 함께 물에 1시간 부드러워질 때까지 끓인 후 육수를 따로 둔다. 요거트 준비: 요거트에 옥수수 전분과 푼 달걀을 섞어 조리 중 분리되지 않도록 한다. 섞기: 따뜻한 양고기 육수를 요거트 혼합물에 조금씩 부으며 계속 젓는다. 소스 끓이기: 혼합물을 약불에 올려 한 방향으로 계속 저으며 걸쭉해질 때까지 끓인다. 고기 넣기: 익힌 양고기 조각을 요거트 소스에 넣고 10분간 부드럽게 끓인다. 마늘 볶기: 으깬 마늘을 버터에 향이 날 때까지 볶고 간 고수를 넣는다. 마무리: 제공 직전에 마늘 혼합물을 스튜 위에 부어 필라프 밥과 함께 낸다."
+  },
+  "originText": {
+    "ro": "Shakriyeh este o mâncare din bucătăria damascenă tradițională, în care iaurtul, nu roșiile, este baza sosului — un semn distinctiv al bucătăriei siriene față de vecinii mediteraneeni. Tehnica de a stabiliza iaurtul cu amidon și ou pentru a-l fierbe fără să se taie este o abilitate transmisă din generație în generație, considerată testul unei bucătărese siriene experimentate.\n\nNumele derivă din cuvântul arab pentru „recunoscător” sau „mulțumitor”, reflectând statutul mâncării ca fel de bază, cald și hrănitor, gătit adesea pentru oaspeți sau la ocazii de familie. Deși variante similare există în Liban și Iordania, versiunea siriană se distinge prin usturoiul călit generos și coriandrul măcinat presărat chiar înainte de servire.",
+    "en": "Shakriyeh is a dish from traditional Damascene cuisine, in which yogurt, not tomatoes, forms the base of the sauce — a distinctive mark of Syrian cuisine compared to its Mediterranean neighbors. The technique of stabilizing yogurt with cornstarch and egg so it can simmer without curdling is a skill passed down through generations, considered the test of an experienced Syrian cook.\n\nThe name derives from the Arabic word for \"grateful\" or \"thankful,\" reflecting the dish's status as a warm, nourishing staple, often cooked for guests or family occasions. While similar versions exist in Lebanon and Jordan, the Syrian version stands out for its generously fried garlic and ground coriander sprinkled right before serving.",
+    "es": "La shakriyeh es un plato de la cocina damascena tradicional, en el que el yogur, no los tomates, forma la base de la salsa — una marca distintiva de la cocina siria frente a sus vecinos mediterráneos. La técnica de estabilizar el yogur con maicena y huevo para que se pueda cocer sin cortarse es una habilidad transmitida de generación en generación, considerada la prueba de una cocinera siria experimentada.\n\nEl nombre deriva de la palabra árabe para «agradecido» o «reconocido», reflejando el estatus del plato como una comida cálida y nutritiva, cocinada a menudo para invitados u ocasiones familiares. Aunque existen versiones similares en Líbano y Jordania, la versión siria destaca por su ajo generosamente frito y cilantro molido espolvoreado justo antes de servir.",
+    "fr": "Le shakriyeh est un plat de la cuisine damascène traditionnelle, dans lequel le yaourt, et non les tomates, constitue la base de la sauce — une marque distinctive de la cuisine syrienne par rapport à ses voisins méditerranéens. La technique consistant à stabiliser le yaourt avec de la maïzena et de l'œuf pour qu'il puisse mijoter sans cailler est un savoir-faire transmis de génération en génération, considéré comme le test d'une cuisinière syrienne expérimentée.\n\nLe nom dérive du mot arabe pour « reconnaissant » ou « reconnaissant », reflétant le statut du plat comme aliment de base chaud et nourrissant, souvent cuisiné pour des invités ou des occasions familiales. Bien que des versions similaires existent au Liban et en Jordanie, la version syrienne se distingue par son ail généreusement frit et sa coriandre moulue saupoudrée juste avant de servir.",
+    "de": "Shakriyeh ist ein Gericht der traditionellen damaszenischen Küche, bei dem Joghurt, nicht Tomaten, die Basis der Sauce bildet — ein charakteristisches Merkmal der syrischen Küche im Vergleich zu ihren mediterranen Nachbarn. Die Technik, Joghurt mit Maisstärke und Ei zu stabilisieren, damit er ohne zu gerinnen köcheln kann, ist eine über Generationen weitergegebene Fähigkeit, die als Prüfstein einer erfahrenen syrischen Köchin gilt.\n\nDer Name leitet sich vom arabischen Wort für „dankbar” ab und spiegelt den Status des Gerichts als warmes, nahrhaftes Grundnahrungsmittel wider, das oft für Gäste oder Familienanlässe gekocht wird. Während ähnliche Versionen im Libanon und in Jordanien existieren, zeichnet sich die syrische Version durch großzügig gebratenen Knoblauch und gemahlenen Koriander aus, der kurz vor dem Servieren gestreut wird.",
+    "pt": "Shakriyeh é um prato da cozinha damascena tradicional, no qual o iogurte, não os tomates, forma a base do molho — uma marca distintiva da cozinha síria em relação aos seus vizinhos mediterrânicos. A técnica de estabilizar o iogurte com amido de milho e ovo para que possa cozinhar sem talhar é uma habilidade transmitida ao longo de gerações, considerada o teste de uma cozinheira síria experiente.\n\nO nome deriva da palavra árabe para «grato» ou «reconhecido», refletindo o estatuto do prato como um alimento quente e nutritivo, frequentemente cozinhado para convidados ou ocasiões familiares. Embora existam versões semelhantes no Líbano e na Jordânia, a versão síria distingue-se pelo alho generosamente frito e o coentro moído polvilhado mesmo antes de servir.",
+    "ru": "Шакрия — блюдо традиционной дамасской кухни, в котором йогурт, а не помидоры, составляет основу соуса — отличительная черта сирийской кухни по сравнению с её средиземноморскими соседями. Техника стабилизации йогурта кукурузным крахмалом и яйцом, чтобы его можно было варить без сворачивания, — навык, передаваемый из поколения в поколение, считающийся проверкой опытной сирийской кухарки.\n\nНазвание происходит от арабского слова, означающего «благодарный», отражая статус блюда как тёплого, питательного основного блюда, часто готовящегося для гостей или семейных мероприятий. Хотя похожие версии существуют в Ливане и Иордании, сирийская версия выделяется щедро обжаренным чесноком и молотым кориандром, посыпаемым прямо перед подачей.",
+    "ar": "الشكرية طبق من المطبخ الدمشقي التقليدي، حيث يشكل اللبن، وليس الطماطم، أساس الصلصة — سمة مميزة للمطبخ السوري مقارنة بجيرانه المتوسطيين. تقنية تثبيت اللبن بالنشا والبيض حتى يمكن طهيه دون أن يتخثر هي مهارة تنتقل عبر الأجيال، تُعتبر اختبارًا للطاهية السورية المتمرسة.\n\nيُشتق الاسم من الكلمة العربية التي تعني «شاكر» أو «ممتن»، مما يعكس مكانة الطبق كوجبة دافئة ومغذية، تُطهى غالبًا للضيوف أو المناسبات العائلية. رغم وجود نسخ مماثلة في لبنان والأردن، تتميز النسخة السورية بالثوم المقلي بسخاء والكزبرة المطحونة التي تُرش قبل التقديم مباشرة.",
+    "zh": "沙克里耶是大马士革传统菜肴中的一道菜，其酱汁以酸奶而非番茄为基底——这是叙利亚菜与地中海邻国菜肴相比的独特标志。用玉米淀粉和鸡蛋稳定酸奶使其在炖煮时不凝结的技艺，是代代相传的手艺，被视为检验一位经验丰富的叙利亚厨师的标准。\n\n这个名字源自阿拉伯语中「感恩」或「感谢」一词，反映了这道菜作为温暖、滋养的主食地位，常在招待客人或家庭聚会时烹制。虽然黎巴嫩和约旦也有类似的版本，叙利亚版本以慷慨炒香的大蒜和上桌前撒上的干香菜粉而独具特色。",
+    "ja": "シャクリーイェは伝統的なダマスカス料理の一つで、トマトではなくヨーグルトがソースの基盤となる――地中海沿岸の隣国と比べたシリア料理の特徴的な点である。ヨーグルトを分離させずに煮込めるようコーンスターチと卵で安定させる技術は、世代を超えて受け継がれる技であり、経験豊かなシリアの料理人を試すものとされている。\n\nこの名前は「感謝する」を意味するアラビア語に由来し、この料理が温かく滋養に富んだ定番料理として、客をもてなす際や家族の行事の際によく作られることを反映している。レバノンやヨルダンにも似たバージョンがあるが、シリア版は提供直前にたっぷりの揚げにんにくと乾燥コリアンダーの粉を振りかける点で際立っている。",
+    "hi": "शकरिया पारंपरिक दमिश्क व्यंजनों का एक व्यंजन है, जिसमें टमाटर नहीं बल्कि दही चटनी का आधार बनाता है — यह भूमध्यसागरीय पड़ोसियों की तुलना में सीरियाई व्यंजनों की एक विशिष्ट पहचान है। दही को कॉर्नस्टार्च और अंडे से स्थिर करने की तकनीक ताकि वह बिना फटे उबल सके, पीढ़ियों से चली आ रही एक कला है, जिसे एक अनुभवी सीरियाई रसोइए की परीक्षा माना जाता है।\n\nनाम अरबी शब्द “कृतज्ञ” या “आभारी” से निकला है, जो व्यंजन की स्थिति को एक गरम, पौष्टिक मुख्य भोजन के रूप में दर्शाता है, जो अक्सर मेहमानों या पारिवारिक अवसरों के लिए पकाया जाता है। हालांकि लेबनान और जॉर्डन में समान संस्करण मौजूद हैं, सीरियाई संस्करण अपने भरपूर तले लहसुन और परोसने से ठीक पहले छिड़के पिसे धनिये के लिए अलग है।",
+    "tr": "Şakriye, sosun temelini domates değil yoğurdun oluşturduğu geleneksel Şam mutfağından bir yemektir — bu, Suriye mutfağını Akdeniz komşularından ayıran belirgin bir özelliktir. Yoğurdu kesilmeden pişebilmesi için mısır nişastası ve yumurtayla stabilize etme tekniği, nesilden nesile aktarılan ve deneyimli bir Suriyeli aşçının sınavı olarak kabul edilen bir beceridir.\n\nAd, “minnettar” anlamına gelen Arapça bir kelimeden türer ve yemeğin sıcak, besleyici bir temel yemek olarak, sıklıkla misafirler veya aile toplantıları için pişirilen konumunu yansıtır. Lübnan ve Ürdün'de benzer versiyonlar bulunsa da, Suriye versiyonu, servisten hemen önce serpilen bolca kızarmış sarımsak ve öğütülmüş kişnişle öne çıkar.",
+    "it": "Lo shakriyeh è un piatto della cucina tradizionale damascena, in cui lo yogurt, non i pomodori, costituisce la base della salsa — un segno distintivo della cucina siriana rispetto ai vicini mediterranei. La tecnica di stabilizzare lo yogurt con amido di mais e uovo affinché possa cuocere senza cagliare è un'abilità tramandata di generazione in generazione, considerata il test di una cuoca siriana esperta.\n\nIl nome deriva dalla parola araba per «grato» o «riconoscente», riflettendo lo status del piatto come alimento base caldo e nutriente, spesso cucinato per ospiti o occasioni familiari. Sebbene versioni simili esistano in Libano e Giordania, la versione siriana si distingue per l'aglio generosamente fritto e il coriandolo macinato cosparso appena prima di servire.",
+    "ko": "샤크리예는 전통 다마스쿠스 요리의 한 음식으로, 토마토가 아닌 요거트가 소스의 기반을 이룬다 — 이는 지중해 인근 국가들과 비교했을 때 시리아 요리의 뚜렷한 특징이다. 요거트가 분리되지 않고 끓을 수 있도록 옥수수 전분과 달걀로 안정시키는 기술은 세대를 거쳐 전해 내려온 기술로, 경험 많은 시리아 요리사의 시험대로 여겨진다.\n\n이 이름은 “감사하는”을 뜻하는 아랍어 단어에서 유래했으며, 이 요리가 따뜻하고 영양가 있는 주식으로서 손님이나 가족 행사를 위해 자주 조리된다는 지위를 반영한다. 레바논과 요르단에도 비슷한 버전이 있지만, 시리아 버전은 제공 직전에 뿌려지는 넉넉하게 볶은 마늘과 간 고수로 두드러진다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 20,
+    "tags": [],
+    "desc": {
+      "ro": "Miel fraged într-un sos gros de iaurt, cu usturoi călit și coriandru, servit cu orez.",
+      "en": "Tender lamb in a thick yogurt sauce, with fried garlic and coriander, served with rice.",
+      "es": "Cordero tierno en una espesa salsa de yogur, con ajo frito y cilantro, servido con arroz.",
+      "fr": "Agneau tendre dans une épaisse sauce au yaourt, avec ail frit et coriandre, servi avec du riz.",
+      "de": "Zartes Lamm in dicker Joghurtsauce, mit gebratenem Knoblauch und Koriander, mit Reis serviert.",
+      "pt": "Borrego macio em molho espesso de iogurte, com alho frito e coentro, servido com arroz.",
+      "ru": "Нежная баранина в густом йогуртовом соусе, с жареным чесноком и кориандром, подаётся с рисом.",
+      "ar": "لحم غنم طري في صلصة لبن سميكة، مع ثوم مقلي وكزبرة، يُقدَّم مع الأرز.",
+      "zh": "软嫩羊肉配浓稠酸奶酱汁，配炒蒜和香菜，配米饭食用。",
+      "ja": "濃厚なヨーグルトソースの柔らかいラム肉、揚げにんにくとコリアンダー添え、米飯と共に。",
+      "hi": "गाढ़ी दही की चटनी में कोमल भेड़ का मांस, तले लहसुन और धनिये के साथ, चावल के साथ परोसा गया।",
+      "tr": "Kızarmış sarımsak ve kişnişli koyu yoğurt sosunda yumuşak kuzu eti, pirinçle servis edilir.",
+      "it": "Agnello tenero in una densa salsa di yogurt, con aglio fritto e coriandolo, servito con riso.",
+      "ko": "볶은 마늘과 고수를 곁들인 진한 요거트 소스의 부드러운 양고기, 밥과 함께 제공."
+    }
+  }
+}

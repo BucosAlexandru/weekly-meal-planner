@@ -1,0 +1,178 @@
+{
+  "id": 354,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Iran", "en": "Iran", "es": "Irán", "fr": "Iran", "de": "Iran",
+    "pt": "Irão", "ru": "Иран", "ar": "إيران", "zh": "伊朗", "ja": "イラン",
+    "hi": "ईरान", "tr": "İran", "it": "Iran", "ko": "이란"
+  },
+  "name": {
+    "ro": "Tahchin (Tort de orez cu șofran)", "en": "Tahchin (Saffron Rice Cake)", "es": "Tahchin (Pastel de arroz con azafrán)",
+    "fr": "Tahchin (Gâteau de riz au safran)", "de": "Tahchin (Safranreiskuchen)", "pt": "Tahchin (Bolo de arroz com açafrão)",
+    "ru": "Тахчин (Шафрановый рисовый пирог)", "ar": "تهچين", "zh": "波斯藏红花米饼",
+    "ja": "タフチン（サフランライスケーキ）", "hi": "तहचीन (केसर चावल केक)", "tr": "Tahçin (Safranlı Pirinç Keki)",
+    "it": "Tahchin (Torta di riso allo zafferano)", "ko": "타친 (샤프란 쌀 케이크)"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌾", "t": "Orez cu iaurt", "d": "Orezul se amestecă cu iaurt și gălbenușuri înainte de coacere."},
+      {"icon": "🟡", "t": "Aurit cu șofran", "d": "Șofranul infuzat dă culoarea aurie caracteristică."},
+      {"icon": "🍗", "t": "Pui în interior", "d": "Un strat de pui fraged e ascuns în mijlocul tortului."},
+      {"icon": "🥘", "t": "Crustă crocantă", "d": "Baza formează o crustă de orez crocantă, numită tahdig."}
+    ],
+    "en": [
+      {"icon": "🌾", "t": "Yogurt rice", "d": "Rice is mixed with yogurt and egg yolks before baking."},
+      {"icon": "🟡", "t": "Gilded with saffron", "d": "Infused saffron gives it the signature golden color."},
+      {"icon": "🍗", "t": "Chicken inside", "d": "A layer of tender chicken is hidden in the middle of the cake."},
+      {"icon": "🥘", "t": "Crispy crust", "d": "The base forms a crispy rice crust, called tahdig."}
+    ],
+    "es": [
+      {"icon": "🌾", "t": "Arroz con yogur", "d": "El arroz se mezcla con yogur y yemas antes de hornear."},
+      {"icon": "🟡", "t": "Dorado con azafrán", "d": "El azafrán infusionado le da el color dorado característico."},
+      {"icon": "🍗", "t": "Pollo en el interior", "d": "Una capa de pollo tierno se esconde en el medio del pastel."},
+      {"icon": "🥘", "t": "Costra crujiente", "d": "La base forma una costra de arroz crujiente, llamada tahdig."}
+    ],
+    "fr": [
+      {"icon": "🌾", "t": "Riz au yaourt", "d": "Le riz est mélangé avec du yaourt et des jaunes d'œufs avant cuisson."},
+      {"icon": "🟡", "t": "Doré au safran", "d": "Le safran infusé donne sa couleur dorée caractéristique."},
+      {"icon": "🍗", "t": "Poulet à l'intérieur", "d": "Une couche de poulet tendre est cachée au milieu du gâteau."},
+      {"icon": "🥘", "t": "Croûte croustillante", "d": "La base forme une croûte de riz croustillante, appelée tahdig."}
+    ],
+    "de": [
+      {"icon": "🌾", "t": "Joghurtreis", "d": "Reis wird vor dem Backen mit Joghurt und Eigelb vermischt."},
+      {"icon": "🟡", "t": "Vergoldet mit Safran", "d": "Aufgegossener Safran gibt die charakteristische goldene Farbe."},
+      {"icon": "🍗", "t": "Hähnchen im Inneren", "d": "Eine Schicht zartes Hähnchen versteckt sich in der Mitte des Kuchens."},
+      {"icon": "🥘", "t": "Knusprige Kruste", "d": "Der Boden bildet eine knusprige Reiskruste, genannt Tahdig."}
+    ],
+    "pt": [
+      {"icon": "🌾", "t": "Arroz com iogurte", "d": "O arroz é misturado com iogurte e gemas antes de assar."},
+      {"icon": "🟡", "t": "Dourado com açafrão", "d": "O açafrão infundido dá a cor dourada característica."},
+      {"icon": "🍗", "t": "Frango no interior", "d": "Uma camada de frango macio esconde-se no meio do bolo."},
+      {"icon": "🥘", "t": "Crosta crocante", "d": "A base forma uma crosta de arroz crocante, chamada tahdig."}
+    ],
+    "ru": [
+      {"icon": "🌾", "t": "Рис с йогуртом", "d": "Рис смешивается с йогуртом и желтками перед запеканием."},
+      {"icon": "🟡", "t": "Позолочен шафраном", "d": "Настоянный шафран придаёт характерный золотистый цвет."},
+      {"icon": "🍗", "t": "Курица внутри", "d": "Слой нежной курицы спрятан в середине пирога."},
+      {"icon": "🥘", "t": "Хрустящая корка", "d": "Основание образует хрустящую рисовую корку, называемую тахдиг."}
+    ],
+    "ar": [
+      {"icon": "🌾", "t": "أرز باللبن", "d": "يُخلط الأرز باللبن وصفار البيض قبل الخبز."},
+      {"icon": "🟡", "t": "مذهّب بالزعفران", "d": "الزعفران المنقوع يمنحه لونه الذهبي المميز."},
+      {"icon": "🍗", "t": "دجاج بالداخل", "d": "طبقة من الدجاج الطري مخفية في وسط الكعكة."},
+      {"icon": "🥘", "t": "قشرة مقرمشة", "d": "القاعدة تشكّل قشرة أرز مقرمشة تُسمى تهديغ."}
+    ],
+    "zh": [
+      {"icon": "🌾", "t": "酸奶米饭", "d": "烘烤前将米饭与酸奶和蛋黄混合。"},
+      {"icon": "🟡", "t": "藏红花镀金", "d": "浸泡的藏红花赋予其标志性金黄色。"},
+      {"icon": "🍗", "t": "内藏鸡肉", "d": "一层嫩鸡肉藏在饼的中间。"},
+      {"icon": "🥘", "t": "酥脆锅巴", "d": "底部形成酥脆米饭锅巴，称为塔迪格。"}
+    ],
+    "ja": [
+      {"icon": "🌾", "t": "ヨーグルトライス", "d": "焼く前に米をヨーグルトと卵黄と混ぜる。"},
+      {"icon": "🟡", "t": "サフランで黄金色に", "d": "浸したサフランが特徴的な黄金色を生む。"},
+      {"icon": "🍗", "t": "中に鶏肉", "d": "柔らかい鶏肉の層がケーキの中心に隠れている。"},
+      {"icon": "🥘", "t": "カリカリの底面", "d": "底がタフディグと呼ばれるカリカリの米の層になる。"}
+    ],
+    "hi": [
+      {"icon": "🌾", "t": "दही चावल", "d": "बेक करने से पहले चावल को दही और अंडे की जर्दी के साथ मिलाया जाता है।"},
+      {"icon": "🟡", "t": "केसर से सुनहरा", "d": "भिगोया केसर खास सुनहरा रंग देता है।"},
+      {"icon": "🍗", "t": "अंदर चिकन", "d": "कोमल चिकन की परत केक के बीच में छिपी होती है।"},
+      {"icon": "🥘", "t": "कुरकुरी परत", "d": "आधार एक कुरकुरी चावल की परत बनाता है, जिसे तहदीग कहते हैं।"}
+    ],
+    "tr": [
+      {"icon": "🌾", "t": "Yoğurtlu pirinç", "d": "Pişirmeden önce pirinç yoğurt ve yumurta sarısıyla karıştırılır."},
+      {"icon": "🟡", "t": "Safranla altınlaşmış", "d": "Demlenmiş safran karakteristik altın rengi verir."},
+      {"icon": "🍗", "t": "İçinde tavuk", "d": "Yumuşak tavuk katmanı keklerin ortasında saklıdır."},
+      {"icon": "🥘", "t": "Çıtır kabuk", "d": "Taban, tahdig adı verilen çıtır bir pirinç kabuğu oluşturur."}
+    ],
+    "it": [
+      {"icon": "🌾", "t": "Riso allo yogurt", "d": "Il riso viene mescolato con yogurt e tuorli prima della cottura."},
+      {"icon": "🟡", "t": "Dorato con zafferano", "d": "Lo zafferano infuso dà il caratteristico colore dorato."},
+      {"icon": "🍗", "t": "Pollo all'interno", "d": "Uno strato di pollo tenero è nascosto al centro della torta."},
+      {"icon": "🥘", "t": "Crosta croccante", "d": "La base forma una crosta di riso croccante, chiamata tahdig."}
+    ],
+    "ko": [
+      {"icon": "🌾", "t": "요거트 쌀밥", "d": "굽기 전 쌀을 요거트와 달걀노른자와 섞는다."},
+      {"icon": "🟡", "t": "샤프란으로 금빛", "d": "우려낸 샤프란이 특유의 황금빛을 낸다."},
+      {"icon": "🍗", "t": "속에 든 닭고기", "d": "케이크 중앙에 부드러운 닭고기 층이 숨겨져 있다."},
+      {"icon": "🥘", "t": "바삭한 바닥", "d": "바닥이 타흐디그라 불리는 바삭한 쌀 층을 형성한다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g orez basmati", "4 pulpe de pui dezosate", "300g iaurt gros", "3 gălbenușuri", "1 linguriță șofran măcinat", "100g unt topit", "1 ceapă", "sare, piper", "2 linguri boabe de barberis (opțional)"],
+    "en": ["400g basmati rice", "4 boneless chicken thighs", "300g thick yogurt", "3 egg yolks", "1 tsp ground saffron", "100g melted butter", "1 onion", "salt, pepper", "2 tbsp barberries (optional)"],
+    "es": ["400g de arroz basmati", "4 muslos de pollo deshuesados", "300g de yogur espeso", "3 yemas de huevo", "1 cdta de azafrán molido", "100g de mantequilla derretida", "1 cebolla", "sal, pimienta", "2 cdas de agracejo (opcional)"],
+    "fr": ["400g de riz basmati", "4 cuisses de poulet désossées", "300g de yaourt épais", "3 jaunes d'œufs", "1 c. à c. de safran moulu", "100g de beurre fondu", "1 oignon", "sel, poivre", "2 c. à s. de baies de berbéris (facultatif)"],
+    "de": ["400g Basmatireis", "4 entbeinte Hähnchenschenkel", "300g dicker Joghurt", "3 Eigelb", "1 TL gemahlener Safran", "100g geschmolzene Butter", "1 Zwiebel", "Salz, Pfeffer", "2 EL Berberitzen (optional)"],
+    "pt": ["400g de arroz basmati", "4 coxas de frango desossadas", "300g de iogurte espesso", "3 gemas de ovo", "1 colher de chá de açafrão moído", "100g de manteiga derretida", "1 cebola", "sal, pimenta", "2 c. sopa de agrião-do-Nepal (opcional)"],
+    "ru": ["400г риса басмати", "4 куриных бедра без костей", "300г густого йогурта", "3 яичных желтка", "1 ч.л. молотого шафрана", "100г растопленного сливочного масла", "1 луковица", "соль, перец", "2 ст.л. барбариса (по желанию)"],
+    "ar": ["400غ أرز بسمتي", "4 أفخاذ دجاج منزوعة العظم", "300غ لبن سميك", "3 صفار بيض", "ملعقة صغيرة زعفران مطحون", "100غ زبدة مذابة", "بصلة واحدة", "ملح، فلفل", "2 ملعقة كبيرة زرشك (اختياري)"],
+    "zh": ["印度香米400克", "去骨鸡腿4个", "浓稠酸奶300克", "蛋黄3个", "藏红花粉1茶匙", "融化黄油100克", "洋葱1个", "盐、胡椒", "小檗果2汤匙（可选）"],
+    "ja": ["バスマティライス 400g", "骨なし鶏もも肉 4本", "濃厚なヨーグルト 300g", "卵黄 3個", "サフランパウダー 小さじ1", "溶かしバター 100g", "玉ねぎ 1個", "塩、こしょう", "バーベリー 大さじ2（お好みで）"],
+    "hi": ["400 ग्राम बासमती चावल", "4 बिना हड्डी वाले चिकन थाई", "300 ग्राम गाढ़ा दही", "3 अंडे की जर्दी", "1 छोटा चम्मच पिसा केसर", "100 ग्राम पिघला मक्खन", "1 प्याज़", "नमक, काली मिर्च", "2 बड़े चम्मच बारबेरी (वैकल्पिक)"],
+    "tr": ["400g basmati pirinç", "4 kemiksiz tavuk but", "300g koyu yoğurt", "3 yumurta sarısı", "1 çay kaşığı öğütülmüş safran", "100g eritilmiş tereyağı", "1 soğan", "tuz, karabiber", "2 yemek kaşığı berberis (isteğe bağlı)"],
+    "it": ["400g di riso basmati", "4 cosce di pollo disossate", "300g di yogurt denso", "3 tuorli d'uovo", "1 cucchiaino di zafferano macinato", "100g di burro fuso", "1 cipolla", "sale, pepe", "2 cucchiai di crespino (opzionale)"],
+    "ko": ["바스마티 쌀 400g", "뼈 없는 닭 허벅지살 4개", "진한 요거트 300g", "달걀노른자 3개", "샤프란 가루 1작은술", "녹인 버터 100g", "양파 1개", "소금, 후추", "매자나무 열매 2큰술(선택사항)"]
+  },
+  "howIsMade": {
+    "ro": "FIERBERE OREZ: Fierbe orezul basmati în apă cu sare până e trei sferturi fiert, apoi scurge și clătește cu apă rece. INFUZARE ȘOFRAN: Amestecă șofranul măcinat cu 3 linguri apă fierbinte, lasă la infuzat 10 minute. GĂTIRE PUI: Călește ceapa tocată, adaugă pulpele de pui și gătește până sunt fierte, condimentează cu sare și piper. PREPARARE BAZĂ: Amestecă iaurtul, gălbenușurile, jumătate din șofranul infuzat și jumătate din unt cu orezul fiert. AȘEZARE ÎN TAVĂ: Unge o tavă rotundă cu unt, așază jumătate din orezul cu iaurt, apoi puiul, apoi restul orezului deasupra. COACERE: Acoperă cu folie și coace la 180°C timp de 50 minute, până se formează o crustă aurie la bază. RĂSTURNARE: Lasă să se răcească 10 minute, apoi răstoarnă pe un platou, dezvăluind crusta crocantă deasupra.",
+    "en": "BOIL RICE: Boil the basmati rice in salted water until three-quarters cooked, then drain and rinse with cold water. INFUSE SAFFRON: Mix the ground saffron with 3 tbsp hot water, let infuse for 10 minutes. COOK CHICKEN: Sauté the chopped onion, add the chicken thighs and cook until done, season with salt and pepper. PREPARE BASE: Mix the yogurt, egg yolks, half the infused saffron and half the butter with the cooked rice. LAYER IN PAN: Butter a round pan, arrange half the yogurt rice, then the chicken, then the remaining rice on top. BAKE: Cover with foil and bake at 180°C for 50 minutes, until a golden crust forms at the base. FLIP: Let cool for 10 minutes, then flip onto a platter, revealing the crispy crust on top.",
+    "es": "HERVIR EL ARROZ: Hierve el arroz basmati en agua con sal hasta que esté tres cuartas partes cocido, luego escurre y enjuaga con agua fría. INFUSIONAR EL AZAFRÁN: Mezcla el azafrán molido con 3 cdas de agua caliente, deja infusionar 10 minutos. COCINAR EL POLLO: Sofríe la cebolla picada, añade los muslos de pollo y cocina hasta que estén hechos, sazona con sal y pimienta. PREPARAR LA BASE: Mezcla el yogur, las yemas, la mitad del azafrán infusionado y la mitad de la mantequilla con el arroz cocido. MONTAR EN EL MOLDE: Unta un molde redondo con mantequilla, coloca la mitad del arroz con yogur, luego el pollo, luego el resto del arroz encima. HORNEAR: Cubre con papel de aluminio y hornea a 180°C durante 50 minutos, hasta que se forme una costra dorada en la base. VOLTEAR: Deja enfriar 10 minutos, luego voltea sobre una bandeja, revelando la costra crujiente arriba.",
+    "fr": "FAIRE BOUILLIR LE RIZ: Faites bouillir le riz basmati dans l'eau salée jusqu'à ce qu'il soit cuit aux trois quarts, puis égouttez et rincez à l'eau froide. INFUSER LE SAFRAN: Mélangez le safran moulu avec 3 c. à s. d'eau chaude, laissez infuser 10 minutes. CUIRE LE POULET: Faites revenir l'oignon haché, ajoutez les cuisses de poulet et cuisez jusqu'à cuisson complète, assaisonnez de sel et de poivre. PRÉPARER LA BASE: Mélangez le yaourt, les jaunes d'œufs, la moitié du safran infusé et la moitié du beurre avec le riz cuit. MONTER DANS LE MOULE: Beurrez un moule rond, disposez la moitié du riz au yaourt, puis le poulet, puis le reste du riz par-dessus. CUIRE: Couvrez de papier aluminium et faites cuire à 180°C pendant 50 minutes, jusqu'à ce qu'une croûte dorée se forme à la base. RETOURNER: Laissez refroidir 10 minutes, puis retournez sur un plat, révélant la croûte croustillante sur le dessus.",
+    "de": "REIS KOCHEN: Den Basmatireis in Salzwasser kochen, bis er zu drei Vierteln gar ist, dann abgießen und mit kaltem Wasser abspülen. SAFRAN AUFGIESSEN: Den gemahlenen Safran mit 3 EL heißem Wasser vermischen, 10 Minuten ziehen lassen. HÄHNCHEN GAREN: Die gehackte Zwiebel andünsten, die Hähnchenschenkel hinzufügen und gar kochen, mit Salz und Pfeffer würzen. BASIS ZUBEREITEN: Den Joghurt, die Eigelbe, die Hälfte des aufgegossenen Safrans und die Hälfte der Butter mit dem gekochten Reis vermischen. IN FORM SCHICHTEN: Eine runde Form buttern, die Hälfte des Joghurtreises einfüllen, dann das Hähnchen, dann den restlichen Reis obenauf. BACKEN: Mit Folie abdecken und bei 180°C 50 Minuten backen, bis sich eine goldene Kruste am Boden bildet. STÜRZEN: 10 Minuten abkühlen lassen, dann auf eine Platte stürzen, wobei die knusprige Kruste oben sichtbar wird.",
+    "pt": "FERVER O ARROZ: Ferva o arroz basmati em água com sal até ficar três quartos cozido, depois escorra e enxague com água fria. INFUNDIR O AÇAFRÃO: Misture o açafrão moído com 3 c. sopa de água quente, deixe infundir 10 minutos. COZINHAR O FRANGO: Refogue a cebola picada, junte as coxas de frango e cozinhe até estarem prontas, tempere com sal e pimenta. PREPARAR A BASE: Misture o iogurte, as gemas, metade do açafrão infundido e metade da manteiga com o arroz cozido. MONTAR NA FORMA: Unte uma forma redonda com manteiga, disponha metade do arroz com iogurte, depois o frango, depois o resto do arroz por cima. ASSAR: Cubra com papel de alumínio e asse a 180°C durante 50 minutos, até formar uma crosta dourada na base. VIRAR: Deixe arrefecer 10 minutos, depois vire numa travessa, revelando a crosta crocante por cima.",
+    "ru": "ВАРКА РИСА: Варите рис басмати в подсоленной воде до готовности на три четверти, затем слейте и промойте холодной водой. НАСТАИВАНИЕ ШАФРАНА: Смешайте молотый шафран с 3 ст.л. горячей воды, дайте настояться 10 минут. ПРИГОТОВЛЕНИЕ КУРИЦЫ: Обжарьте нарезанный лук, добавьте куриные бёдра и готовьте до готовности, приправьте солью и перцем. ПРИГОТОВЛЕНИЕ ОСНОВЫ: Смешайте йогурт, желтки, половину настоянного шафрана и половину масла с варёным рисом. СЛОИ В ФОРМЕ: Смажьте круглую форму маслом, выложите половину рисово-йогуртовой смеси, затем курицу, затем оставшийся рис сверху. ВЫПЕЧКА: Накройте фольгой и выпекайте при 180°C 50 минут, пока не образуется золотистая корка на дне. ПЕРЕВОРОТ: Дайте остыть 10 минут, затем переверните на блюдо, открывая хрустящую корку сверху.",
+    "ar": "سلق الأرز: اسلق أرز البسمتي في ماء مملح حتى ينضج ثلاثة أرباعه، ثم صفّه واشطفه بماء بارد. نقع الزعفران: اخلط الزعفران المطحون مع 3 ملاعق كبيرة ماء ساخن، اتركه ينقع 10 دقائق. طهي الدجاج: حمّر البصل المفروم، أضف أفخاذ الدجاج واطهها حتى تنضج، تبّل بالملح والفلفل. تحضير القاعدة: اخلط اللبن وصفار البيض ونصف الزعفران المنقوع ونصف الزبدة مع الأرز المطهو. الترتيب في الصينية: ادهن صينية مستديرة بالزبدة، رتّب نصف أرز اللبن، ثم الدجاج، ثم باقي الأرز فوقه. الخبز: غطِّ برقائق الألمنيوم واخبز على حرارة 180 درجة لمدة 50 دقيقة، حتى تتكوّن قشرة ذهبية في القاعدة. القلب: دعه يبرد 10 دقائق، ثم اقلبه على صينية، كاشفًا القشرة المقرمشة من الأعلى.",
+    "zh": "煮米饭：将印度香米在盐水中煮至七八分熟，然后沥干并用冷水冲洗。浸泡藏红花：将藏红花粉与3汤匙热水混合，浸泡10分钟。烹制鸡肉：将切碎的洋葱炒香，加入鸡腿煮熟，用盐和胡椒调味。准备底料：将酸奶、蛋黄、一半浸泡好的藏红花水和一半黄油与煮好的米饭混合。分层入模：将圆形烤盘涂上黄油，铺入一半酸奶米饭，再铺鸡肉，最后铺上剩余米饭。烘烤：盖上锡纸，180°C烘烤50分钟，直至底部形成金黄锅巴。倒扣：放凉10分钟后倒扣在盘子上，露出上方酥脆的锅巴。",
+    "ja": "米を炊く：バスマティライスを塩水で四分の三ほど火が通るまで炊き、水を切って冷水ですすぐ。サフランを浸す：粉末サフランを熱湯大さじ3と混ぜ、10分置く。鶏肉を調理する：刻んだ玉ねぎを炒め、鶏もも肉を加えて火が通るまで調理し、塩とこしょうで味付けする。ベースを準備する：ヨーグルト、卵黄、浸したサフランの半量、バターの半量を炊いた米と混ぜる。型に重ねる：丸い型にバターを塗り、ヨーグルトライスの半量を敷き、鶏肉をのせ、残りの米をその上に重ねる。焼く：アルミホイルで覆い、180°Cで50分焼き、底に黄金色の層ができるまで焼く。ひっくり返す：10分冷まし、皿にひっくり返して上部のカリカリした層を見せる。",
+    "hi": "चावल उबालें: बासमती चावल को नमकीन पानी में तीन-चौथाई पकने तक उबालें, फिर छानकर ठंडे पानी से धोएं। केसर भिगोएं: पिसे केसर को 3 बड़े चम्मच गरम पानी में मिलाएं, 10 मिनट भीगने दें। चिकन पकाएं: कटे प्याज़ को भूनें, चिकन थाई डालें और पकने तक पकाएं, नमक और काली मिर्च से मसाला डालें। आधार तैयार करें: दही, अंडे की जर्दी, आधा भिगोया केसर और आधा मक्खन पके चावल के साथ मिलाएं। बर्तन में परतें लगाएं: एक गोल पैन को मक्खन से चिकना करें, आधा दही चावल रखें, फिर चिकन, फिर बाकी चावल ऊपर रखें। बेक करें: फॉइल से ढकें और 180°C पर 50 मिनट बेक करें, जब तक आधार पर सुनहरी परत न बन जाए। पलटें: 10 मिनट ठंडा होने दें, फिर थाली पर पलटें, ऊपर कुरकुरी परत दिखाते हुए।",
+    "tr": "PİRİNCİ PİŞİRİN: Basmati pirinci tuzlu suda dörtte üç oranında pişene kadar kaynatın, sonra süzün ve soğuk suyla durulayın. SAFRANI DEMLEYİN: Öğütülmüş safranı 3 yemek kaşığı sıcak suyla karıştırın, 10 dakika demlenmeye bırakın. TAVUĞU PİŞİRİN: Doğranmış soğanı kavurun, tavuk butlarını ekleyip pişene kadar pişirin, tuz ve karabiberle tatlandırın. TABANI HAZIRLAYIN: Yoğurdu, yumurta sarılarını, demlenmiş safranın yarısını ve tereyağının yarısını pişmiş pirinçle karıştırın. KALIBA DİZİN: Yuvarlak bir kalıbı yağlayın, yoğurtlu pirincin yarısını dizin, sonra tavuğu, sonra kalan pirinci üstüne. PİŞİRİN: Folyoyla örtün ve 180°C'de 50 dakika pişirin, tabanda altın rengi bir kabuk oluşana kadar. ÇEVİRİN: 10 dakika soğumaya bırakın, sonra bir tabağa çevirin, üstteki çıtır kabuğu ortaya çıkararak.",
+    "it": "LESSARE IL RISO: Lessate il riso basmati in acqua salata finché è cotto per tre quarti, poi scolate e sciacquate con acqua fredda. INFONDERE LO ZAFFERANO: Mescolate lo zafferano macinato con 3 cucchiai di acqua calda, lasciate in infusione 10 minuti. CUOCERE IL POLLO: Soffriggete la cipolla tritata, aggiungete le cosce di pollo e cuocete finché cotte, condite con sale e pepe. PREPARARE LA BASE: Mescolate lo yogurt, i tuorli, metà dello zafferano infuso e metà del burro con il riso cotto. COMPORRE NELLA TEGLIA: Imburrate una teglia rotonda, disponete metà del riso allo yogurt, poi il pollo, poi il riso rimanente sopra. CUOCERE: Coprite con la carta stagnola e cuocete a 180°C per 50 minuti, finché si forma una crosta dorata sul fondo. ROVESCIARE: Lasciate raffreddare 10 minuti, poi rovesciate su un piatto, rivelando la crosta croccante sopra.",
+    "ko": "쌀 삶기: 바스마티 쌀을 소금물에 4분의 3 정도 익을 때까지 삶은 후 물기를 빼고 찬물에 헹군다. 샤프란 우리기: 간 샤프란을 뜨거운 물 3큰술과 섞어 10분간 우린다. 닭고기 익히기: 다진 양파를 볶고 닭 허벅지살을 넣어 익힌 후 소금과 후추로 간한다. 바닥재 준비: 요거트, 달걀노른자, 우려낸 샤프란 절반, 버터 절반을 익힌 쌀과 섞는다. 틀에 쌓기: 둥근 틀에 버터를 바르고 요거트 쌀밥 절반을 깔고, 닭고기를 올린 후 나머지 쌀밥을 위에 덮는다. 굽기: 포일로 덮고 180°C에서 50분 구워 바닥에 황금빛 층이 생기게 한다. 뒤집기: 10분간 식힌 후 접시에 뒤집어 위쪽의 바삭한 층을 드러낸다."
+  },
+  "originText": {
+    "ro": "Tahchin este unul dintre cele mai vechi și pretențioase feluri de orez din bucătăria persană, considerat piesa de rezistență a mesei atunci când e gătit corect. Numele înseamnă literal aranjat jos, referindu-se la tehnica de a construi straturi în vas înainte de coacere, ca la o prăjitură sărată.\n\nCea mai apreciată parte a tahchinului este tahdig-ul, crusta aurie și crocantă care se formează la baza vasului în timpul coacerii, considerată în cultura persană cea mai râvnită porție a mesei, adesea disputată între membrii familiei. Șofranul, unul dintre cele mai scumpe condimente din lume, cultivat pe scară largă în Iran, dă atât culoarea, cât și parfumul distinctiv al acestui fel de mâncare de sărbătoare.",
+    "en": "Tahchin is one of the oldest and most demanding rice dishes in Persian cuisine, considered the showpiece of the meal when made correctly. The name literally means arranged below, referring to the technique of building layers in the pot before baking, like a savory cake.\n\nThe most prized part of tahchin is the tahdig, the golden, crispy crust that forms at the bottom of the pot during baking, considered in Persian culture the most coveted portion of the meal, often fought over among family members. Saffron, one of the most expensive spices in the world, widely cultivated in Iran, gives both the color and the distinctive fragrance of this festive dish.",
+    "es": "El tahchin es uno de los platos de arroz más antiguos y exigentes de la cocina persa, considerado la pieza central de la comida cuando se prepara correctamente. El nombre significa literalmente dispuesto abajo, refiriéndose a la técnica de construir capas en la olla antes de hornear, como un pastel salado.\n\nLa parte más apreciada del tahchin es el tahdig, la costra dorada y crujiente que se forma en el fondo de la olla durante el horneado, considerada en la cultura persa la porción más codiciada de la comida, a menudo disputada entre los miembros de la familia. El azafrán, una de las especias más caras del mundo, cultivado ampliamente en Irán, da tanto el color como la fragancia distintiva de este plato festivo.",
+    "fr": "Le tahchin est l'un des plats de riz les plus anciens et les plus exigeants de la cuisine persane, considéré comme le clou du repas lorsqu'il est bien préparé. Le nom signifie littéralement arrangé en dessous, faisant référence à la technique consistant à construire des couches dans la marmite avant la cuisson, comme un gâteau salé.\n\nLa partie la plus prisée du tahchin est le tahdig, la croûte dorée et croustillante qui se forme au fond de la marmite pendant la cuisson, considérée dans la culture persane comme la portion la plus convoitée du repas, souvent disputée entre les membres de la famille. Le safran, l'une des épices les plus chères au monde, largement cultivé en Iran, donne à la fois la couleur et le parfum distinctif de ce plat festif.",
+    "de": "Tahchin ist eines der ältesten und anspruchsvollsten Reisgerichte der persischen Küche, das bei richtiger Zubereitung als Höhepunkt der Mahlzeit gilt. Der Name bedeutet wörtlich unten angeordnet und bezieht sich auf die Technik, vor dem Backen Schichten im Topf aufzubauen, wie bei einem herzhaften Kuchen.\n\nDer begehrteste Teil des Tahchin ist der Tahdig, die goldene, knusprige Kruste, die sich beim Backen am Boden des Topfes bildet und in der persischen Kultur als der begehrteste Teil der Mahlzeit gilt, um den oft unter Familienmitgliedern gestritten wird. Safran, eines der teuersten Gewürze der Welt, das im Iran weit verbreitet angebaut wird, verleiht diesem festlichen Gericht sowohl die Farbe als auch den unverwechselbaren Duft.",
+    "pt": "O tahchin é um dos pratos de arroz mais antigos e exigentes da cozinha persa, considerado o ponto alto da refeição quando bem preparado. O nome significa literalmente arranjado por baixo, referindo-se à técnica de construir camadas na panela antes de assar, como um bolo salgado.\n\nA parte mais apreciada do tahchin é o tahdig, a crosta dourada e crocante que se forma no fundo da panela durante o cozimento, considerada na cultura persa a porção mais cobiçada da refeição, muitas vezes disputada entre os membros da família. O açafrão, uma das especiarias mais caras do mundo, amplamente cultivado no Irão, dá tanto a cor como o aroma distintivo deste prato festivo.",
+    "ru": "Тахчин — одно из старейших и самых требовательных рисовых блюд персидской кухни, считающееся кульминацией трапезы при правильном приготовлении. Название буквально означает выложенный снизу, отсылая к технике выстраивания слоёв в кастрюле перед запеканием, как у пикантного торта.\n\nСамая ценимая часть тахчина — тахдиг, золотистая хрустящая корка, образующаяся на дне кастрюли во время запекания, считающаяся в персидской культуре самой желанной частью трапезы, за которую часто спорят члены семьи. Шафран, одна из самых дорогих специй в мире, широко выращиваемый в Иране, придаёт этому праздничному блюду как цвет, так и характерный аромат.",
+    "ar": "التهچين هو واحد من أقدم أطباق الأرز وأكثرها تطلبًا في المطبخ الفارسي، ويُعتبر تحفة الوجبة عند إعداده بشكل صحيح. يعني الاسم حرفيًا مرتَّب أسفل، في إشارة إلى تقنية بناء الطبقات في القدر قبل الخبز، مثل كعكة مالحة.\n\nأكثر جزء محبب في التهچين هو التهديغ، القشرة الذهبية المقرمشة التي تتشكل في قاع القدر أثناء الخبز، وتُعتبر في الثقافة الفارسية أكثر جزء مرغوب في الوجبة، وغالبًا ما يتنافس عليه أفراد العائلة. الزعفران، أحد أغلى التوابل في العالم، الذي يُزرع على نطاق واسع في إيران، يمنح هذا الطبق الاحتفالي لونه ورائحته المميزة.",
+    "zh": "塔钦是波斯菜肴中最古老、最考验技艺的米饭菜品之一，若制作得当，被视为整餐的压轴之作。这个名字字面意思是「安置在下方」，指的是烘烤前在锅中层层堆叠的技艺，就像制作一道咸味蛋糕。\n\n塔钦最受珍视的部分是塔迪格，即烘烤过程中在锅底形成的金黄酥脆锅巴，在波斯文化中被视为整餐中最令人垂涎的部分，常常成为家庭成员争抢的对象。藏红花是世界上最昂贵的香料之一，在伊朗被广泛种植，它赋予了这道节庆菜肴独特的色泽和香气。",
+    "ja": "タフチンはペルシャ料理の中でも最も古く、最も手間のかかる米料理の一つであり、正しく作られれば食事の目玉料理と見なされる。この名前は文字通り下に配置されたという意味で、焼く前に鍋の中に層を作る技法を指し、まるで塩味のケーキのようである。\n\nタフチンの最も珍重される部分はタフディグであり、焼いている間に鍋の底にできる黄金色でカリカリした層で、ペルシャ文化においては食事の中で最も渇望される部分とされ、しばしば家族の間で取り合いになる。世界で最も高価な香辛料の一つであるサフランは、イランで広く栽培されており、この祝祭料理に色と独特の香りの両方を与える。",
+    "hi": "तहचीन फ़ारसी व्यंजनों में सबसे पुराने और सबसे मांगलिक चावल व्यंजनों में से एक है, जिसे सही तरीके से बनाए जाने पर भोजन का मुख्य आकर्षण माना जाता है। नाम का शाब्दिक अर्थ है नीचे व्यवस्थित, जो बेक करने से पहले बर्तन में परतें बनाने की तकनीक को दर्शाता है, जैसे एक नमकीन केक।\n\nतहचीन का सबसे प्रिय हिस्सा तहदीग है, वह सुनहरी, कुरकुरी परत जो बेकिंग के दौरान बर्तन के तले में बनती है, जिसे फ़ारसी संस्कृति में भोजन का सबसे वांछित हिस्सा माना जाता है, जो अक्सर परिवार के सदस्यों के बीच झगड़े का कारण बनता है। केसर, दुनिया के सबसे महंगे मसालों में से एक, जो ईरान में व्यापक रूप से उगाया जाता है, इस उत्सवी व्यंजन को रंग और खास सुगंध दोनों देता है।",
+    "tr": "Tahçin, doğru yapıldığında yemeğin en gözde parçası sayılan, Fars mutfağının en eski ve en zahmetli pirinç yemeklerinden biridir. Ad, tam anlamıyla altta düzenlenmiş anlamına gelir ve pişirmeden önce tencerede tuzlu bir pasta gibi katmanlar oluşturma tekniğini ifade eder.\n\nTahçinin en değerli kısmı, pişirme sırasında tencerenin dibinde oluşan altın rengi, çıtır kabuk olan tahdigdir; Fars kültüründe yemeğin en çok arzu edilen kısmı olarak kabul edilir ve genellikle aile üyeleri arasında paylaşım kavgasına neden olur. Dünyanın en pahalı baharatlarından biri olan ve İran'da yaygın olarak yetiştirilen safran, bu bayramlık yemeğe hem rengini hem de kendine özgü kokusunu verir.",
+    "it": "Il tahchin è uno dei piatti di riso più antichi ed esigenti della cucina persiana, considerato il pezzo forte del pasto quando è preparato correttamente. Il nome significa letteralmente disposto sotto, riferendosi alla tecnica di costruire strati nella pentola prima della cottura, come una torta salata.\n\nLa parte più apprezzata del tahchin è il tahdig, la crosta dorata e croccante che si forma sul fondo della pentola durante la cottura, considerata nella cultura persiana la porzione più ambita del pasto, spesso contesa tra i membri della famiglia. Lo zafferano, una delle spezie più costose al mondo, ampiamente coltivato in Iran, dona sia il colore che la fragranza distintiva a questo piatto festivo.",
+    "ko": "타친은 페르시아 요리에서 가장 오래되고 까다로운 쌀 요리 중 하나로, 제대로 만들어지면 식사의 하이라이트로 여겨진다. 이 이름은 문자 그대로 아래에 배치된이라는 뜻으로, 굽기 전 냄비 안에 짭짤한 케이크처럼 층을 쌓는 기법을 가리킨다.\n\n타친에서 가장 소중히 여겨지는 부분은 타흐디그로, 굽는 동안 냄비 바닥에 형성되는 황금빛의 바삭한 층이며, 페르시아 문화에서는 식사 중 가장 탐나는 부분으로 여겨져 가족 구성원들 사이에서 종종 쟁탈전이 벌어진다. 세계에서 가장 비싼 향신료 중 하나이며 이란에서 널리 재배되는 샤프란은 이 축제 음식에 색과 독특한 향을 모두 부여한다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 24,
+    "tags": [],
+    "desc": {
+      "ro": "Tort de orez cu iaurt și șofran, cu pui în interior și crustă crocantă la bază.",
+      "en": "Saffron yogurt rice cake, with chicken hidden inside and a crispy base crust.",
+      "es": "Pastel de arroz con yogur y azafrán, con pollo en el interior y costra crujiente en la base.",
+      "fr": "Gâteau de riz au yaourt et safran, avec du poulet à l'intérieur et une croûte croustillante à la base.",
+      "de": "Safran-Joghurt-Reiskuchen mit versteckten Hähnchenstücken und knuspriger Bodenkruste.",
+      "pt": "Bolo de arroz com iogurte e açafrão, com frango no interior e crosta crocante na base.",
+      "ru": "Шафрановый рисовый пирог с йогуртом, с курицей внутри и хрустящей корочкой снизу.",
+      "ar": "كعكة أرز باللبن والزعفران، مع دجاج بالداخل وقشرة مقرمشة في القاعدة.",
+      "zh": "藏红花酸奶米饼，内藏鸡肉，底部酥脆。",
+      "ja": "サフランヨーグルトライスケーキ、中に鶏肉、底はカリカリの層。",
+      "hi": "दही और केसर से बना चावल केक, अंदर चिकन और तले में कुरकुरी परत के साथ।",
+      "tr": "Safranlı yoğurtlu pirinç keki, içinde tavuk ve altta çıtır kabukla.",
+      "it": "Torta di riso allo yogurt e zafferano, con pollo nascosto dentro e crosta croccante alla base.",
+      "ko": "샤프란 요거트 쌀 케이크, 안에 닭고기가 들었고 바닥이 바삭한 층."
+    }
+  }
+}

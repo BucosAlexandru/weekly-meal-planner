@@ -1,0 +1,177 @@
+{
+  "id": 356,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Iran", "en": "Iran", "es": "Irán", "fr": "Iran", "de": "Iran",
+    "pt": "Irão", "ru": "Иран", "ar": "إيران", "zh": "伊朗", "ja": "イラン",
+    "hi": "ईरान", "tr": "İran", "it": "Iran", "ko": "이란"
+  },
+  "name": {
+    "ro": "Ash-e Reshteh (Supă cu tăiței și verdeață)", "en": "Ash-e Reshteh (Noodle and Herb Soup)", "es": "Ash-e Reshteh (Sopa de fideos y hierbas)",
+    "fr": "Ash-e Reshteh (Soupe de nouilles aux herbes)", "de": "Ash-e Reshteh (Nudel-Kräutersuppe)", "pt": "Ash-e Reshteh (Sopa de macarrão e ervas)",
+    "ru": "Аш-э-Реште (Суп с лапшой и зеленью)", "ar": "آش رشته", "zh": "波斯香草面条汤",
+    "ja": "アーシュ・レシュテ（麺とハーブのスープ）", "hi": "आश-ए-रेश्ते (नूडल और जड़ी-बूटी सूप)", "tr": "Aşure Reşte (Erişteli Otlu Çorba)",
+    "it": "Ash-e Reshteh (Zuppa di tagliatelle ed erbe)", "ko": "아쉬 레슈테 (국수와 허브 수프)"
+  },
+  "category": {
+    "ro": "Supă", "en": "Soup", "es": "Sopa", "fr": "Soupe", "de": "Suppe", "pt": "Sopa",
+    "ru": "Суп", "ar": "حساء", "zh": "汤", "ja": "スープ", "hi": "सूप", "tr": "Çorba", "it": "Zuppa", "ko": "수프"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍜", "t": "Tăiței persani", "d": "Reshteh, tăiței plați, lați, specifici bucătăriei iraniene."},
+      {"icon": "🌿", "t": "Verdeață din belșug", "d": "Spanac, pătrunjel, mărar și ceapă verde, tocate mărunt."},
+      {"icon": "🫘", "t": "Amestec de fasole", "d": "Năut, fasole roșie și linte, gătite lent împreună."},
+      {"icon": "🥛", "t": "Kashk deasupra", "d": "Zer fermentat uscat, topit și stropit ca finisaj tradițional."}
+    ],
+    "en": [
+      {"icon": "🍜", "t": "Persian noodles", "d": "Reshteh, flat wide noodles specific to Iranian cuisine."},
+      {"icon": "🌿", "t": "Abundant herbs", "d": "Spinach, parsley, dill and green onion, finely chopped."},
+      {"icon": "🫘", "t": "Bean mix", "d": "Chickpeas, kidney beans and lentils, slow-cooked together."},
+      {"icon": "🥛", "t": "Kashk on top", "d": "Dried fermented whey, melted and drizzled as a traditional finish."}
+    ],
+    "es": [
+      {"icon": "🍜", "t": "Fideos persas", "d": "Reshteh, fideos planos y anchos específicos de la cocina iraní."},
+      {"icon": "🌿", "t": "Abundantes hierbas", "d": "Espinacas, perejil, eneldo y cebolleta, finamente picados."},
+      {"icon": "🫘", "t": "Mezcla de legumbres", "d": "Garbanzos, alubias rojas y lentejas, cocidos lentamente juntos."},
+      {"icon": "🥛", "t": "Kashk encima", "d": "Suero fermentado seco, derretido y rociado como toque tradicional."}
+    ],
+    "fr": [
+      {"icon": "🍜", "t": "Nouilles persanes", "d": "Reshteh, nouilles plates et larges spécifiques à la cuisine iranienne."},
+      {"icon": "🌿", "t": "Herbes abondantes", "d": "Épinards, persil, aneth et oignon vert, finement hachés."},
+      {"icon": "🫘", "t": "Mélange de légumineuses", "d": "Pois chiches, haricots rouges et lentilles, mijotés ensemble."},
+      {"icon": "🥛", "t": "Kashk par-dessus", "d": "Petit-lait fermenté séché, fondu et arrosé comme touche finale traditionnelle."}
+    ],
+    "de": [
+      {"icon": "🍜", "t": "Persische Nudeln", "d": "Reshteh, flache breite Nudeln, typisch für die iranische Küche."},
+      {"icon": "🌿", "t": "Reichlich Kräuter", "d": "Spinat, Petersilie, Dill und Frühlingszwiebel, fein gehackt."},
+      {"icon": "🫘", "t": "Bohnenmischung", "d": "Kichererbsen, Kidneybohnen und Linsen, langsam zusammen gegart."},
+      {"icon": "🥛", "t": "Kashk obendrauf", "d": "Getrocknete fermentierte Molke, geschmolzen als traditioneller Abschluss."}
+    ],
+    "pt": [
+      {"icon": "🍜", "t": "Macarrão persa", "d": "Reshteh, macarrão plano e largo específico da cozinha iraniana."},
+      {"icon": "🌿", "t": "Ervas em abundância", "d": "Espinafre, salsa, endro e cebolinha, finamente picados."},
+      {"icon": "🫘", "t": "Mistura de feijões", "d": "Grão-de-bico, feijão vermelho e lentilhas, cozinhados lentamente juntos."},
+      {"icon": "🥛", "t": "Kashk por cima", "d": "Soro fermentado seco, derretido e regado como toque final tradicional."}
+    ],
+    "ru": [
+      {"icon": "🍜", "t": "Персидская лапша", "d": "Реште — плоская широкая лапша, характерная для иранской кухни."},
+      {"icon": "🌿", "t": "Обилие зелени", "d": "Шпинат, петрушка, укроп и зелёный лук, мелко нарезанные."},
+      {"icon": "🫘", "t": "Смесь бобовых", "d": "Нут, красная фасоль и чечевица, тушённые вместе на медленном огне."},
+      {"icon": "🥛", "t": "Кашк сверху", "d": "Сушёная ферментированная сыворотка, растопленная как традиционный финиш."}
+    ],
+    "ar": [
+      {"icon": "🍜", "t": "شعيرية فارسية", "d": "رشته، شعيرية مسطحة عريضة خاصة بالمطبخ الإيراني."},
+      {"icon": "🌿", "t": "أعشاب وفيرة", "d": "سبانخ وبقدونس وشبت وبصل أخضر، مفرومة ناعمًا."},
+      {"icon": "🫘", "t": "خليط بقوليات", "d": "حمص وفاصولياء حمراء وعدس، مطهية معًا ببطء."},
+      {"icon": "🥛", "t": "كشك فوقها", "d": "مصل مخمر مجفف، يُذاب ويُرش كلمسة تقليدية أخيرة."}
+    ],
+    "zh": [
+      {"icon": "🍜", "t": "波斯宽面", "d": "雷什特，伊朗特有的扁宽面条。"},
+      {"icon": "🌿", "t": "丰富香草", "d": "菠菜、欧芹、莳萝和青葱，切碎使用。"},
+      {"icon": "🫘", "t": "豆类混合", "d": "鹰嘴豆、红豆和小扁豆一起慢炖。"},
+      {"icon": "🥛", "t": "上层卡什克", "d": "干燥发酵乳清，融化后作为传统装饰淋上。"}
+    ],
+    "ja": [
+      {"icon": "🍜", "t": "ペルシャの麺", "d": "レシュテ、イラン料理特有の平たく幅広い麺。"},
+      {"icon": "🌿", "t": "豊富なハーブ", "d": "ほうれん草、パセリ、ディル、青ねぎを細かく刻む。"},
+      {"icon": "🫘", "t": "豆のミックス", "d": "ひよこ豆、赤いんげん豆、レンズ豆を一緒にじっくり煮込む。"},
+      {"icon": "🥛", "t": "上にカシュク", "d": "乾燥発酵ホエーを溶かして伝統的な仕上げとしてかける。"}
+    ],
+    "hi": [
+      {"icon": "🍜", "t": "फ़ारसी नूडल्स", "d": "रेश्ते, ईरानी व्यंजनों की खास चपटी चौड़ी नूडल्स।"},
+      {"icon": "🌿", "t": "भरपूर जड़ी-बूटियां", "d": "पालक, अजमोद, सोआ और हरा प्याज़, बारीक कटे हुए।"},
+      {"icon": "🫘", "t": "बीन्स का मिश्रण", "d": "छोले, राजमा और मसूर, एक साथ धीरे पकाए गए।"},
+      {"icon": "🥛", "t": "ऊपर कश्क", "d": "सूखा किण्वित मट्ठा, पारंपरिक अंतिम स्पर्श के रूप में पिघलाकर डाला जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🍜", "t": "Fars eriştesi", "d": "Reşte, İran mutfağına özgü yassı geniş erişte."},
+      {"icon": "🌿", "t": "Bol otlar", "d": "Ispanak, maydanoz, dereotu ve yeşil soğan, ince doğranmış."},
+      {"icon": "🫘", "t": "Baklagil karışımı", "d": "Nohut, kırmızı fasulye ve mercimek, birlikte yavaşça pişirilir."},
+      {"icon": "🥛", "t": "Üzerinde kaşk", "d": "Kurutulmuş fermente peynir altı suyu, geleneksel son dokunuş olarak eritilip dökülür."}
+    ],
+    "it": [
+      {"icon": "🍜", "t": "Tagliatelle persiane", "d": "Reshteh, tagliatelle piatte e larghe specifiche della cucina iraniana."},
+      {"icon": "🌿", "t": "Erbe abbondanti", "d": "Spinaci, prezzemolo, aneto e cipollotto, tritati finemente."},
+      {"icon": "🫘", "t": "Mix di legumi", "d": "Ceci, fagioli rossi e lenticchie, cotti lentamente insieme."},
+      {"icon": "🥛", "t": "Kashk sopra", "d": "Siero di latte fermentato essiccato, sciolto come tocco finale tradizionale."}
+    ],
+    "ko": [
+      {"icon": "🍜", "t": "페르시아 국수", "d": "레슈테, 이란 요리 특유의 납작하고 넓은 국수."},
+      {"icon": "🌿", "t": "풍부한 허브", "d": "시금치, 파슬리, 딜, 파를 잘게 다진 것."},
+      {"icon": "🫘", "t": "콩류 혼합", "d": "병아리콩, 강낭콩, 렌틸콩을 함께 천천히 익힌다."},
+      {"icon": "🥛", "t": "카슈크 토핑", "d": "말린 발효 유청을 녹여 전통적인 마무리로 뿌린다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["200g reshteh (sau tăiței lați)", "100g năut fiert", "100g fasole roșie fiartă", "100g linte", "300g spanac tocat", "1 legătură pătrunjel tocat", "1 legătură mărar tocat", "2 cepe", "100g kashk (sau smântână acră)", "mentă uscată și usturoi pentru decor", "sare, piper"],
+    "en": ["200g reshteh (or wide noodles)", "100g cooked chickpeas", "100g cooked kidney beans", "100g lentils", "300g chopped spinach", "1 bunch chopped parsley", "1 bunch chopped dill", "2 onions", "100g kashk (or sour cream)", "dried mint and garlic for garnish", "salt, pepper"],
+    "es": ["200g de reshteh (o fideos anchos)", "100g de garbanzos cocidos", "100g de alubias rojas cocidas", "100g de lentejas", "300g de espinacas picadas", "1 manojo de perejil picado", "1 manojo de eneldo picado", "2 cebollas", "100g de kashk (o crema agria)", "menta seca y ajo para decorar", "sal, pimienta"],
+    "fr": ["200g de reshteh (ou nouilles larges)", "100g de pois chiches cuits", "100g de haricots rouges cuits", "100g de lentilles", "300g d'épinards hachés", "1 botte de persil haché", "1 botte d'aneth haché", "2 oignons", "100g de kashk (ou crème aigre)", "menthe séchée et ail pour la garniture", "sel, poivre"],
+    "de": ["200g Reshteh (oder breite Nudeln)", "100g gekochte Kichererbsen", "100g gekochte Kidneybohnen", "100g Linsen", "300g gehackter Spinat", "1 Bund gehackte Petersilie", "1 Bund gehackter Dill", "2 Zwiebeln", "100g Kashk (oder saure Sahne)", "getrocknete Minze und Knoblauch zum Garnieren", "Salz, Pfeffer"],
+    "pt": ["200g de reshteh (ou macarrão largo)", "100g de grão-de-bico cozido", "100g de feijão vermelho cozido", "100g de lentilhas", "300g de espinafre picado", "1 molho de salsa picada", "1 molho de endro picado", "2 cebolas", "100g de kashk (ou natas azedas)", "hortelã seca e alho para decorar", "sal, pimenta"],
+    "ru": ["200г реште (или широкая лапша)", "100г варёного нута", "100г варёной красной фасоли", "100г чечевицы", "300г нарезанного шпината", "1 пучок нарезанной петрушки", "1 пучок нарезанного укропа", "2 луковицы", "100г кашка (или сметана)", "сушёная мята и чеснок для украшения", "соль, перец"],
+    "ar": ["200غ رشته (أو شعيرية عريضة)", "100غ حمص مسلوق", "100غ فاصولياء حمراء مسلوقة", "100غ عدس", "300غ سبانخ مفرومة", "حزمة بقدونس مفروم", "حزمة شبت مفروم", "بصلتان", "100غ كشك (أو قشدة حامضة)", "نعناع مجفف وثوم للتزيين", "ملح، فلفل"],
+    "zh": ["雷什特面200克（或宽面）", "煮熟鹰嘴豆100克", "煮熟红豆100克", "小扁豆100克", "切碎菠菜300克", "欧芹1把，切碎", "莳萝1把，切碎", "洋葱2个", "卡什克100克（或酸奶油）", "干薄荷和大蒜（装饰用）", "盐、胡椒"],
+    "ja": ["レシュテ 200g（または幅広麺）", "茹でたひよこ豆 100g", "茹でた赤いんげん豆 100g", "レンズ豆 100g", "刻んだほうれん草 300g", "パセリ 1束（刻む）", "ディル 1束（刻む）", "玉ねぎ 2個", "カシュク 100g（またはサワークリーム）", "飾り用の乾燥ミントとにんにく", "塩、こしょう"],
+    "hi": ["200 ग्राम रेश्ते (या चौड़ी नूडल्स)", "100 ग्राम पके छोले", "100 ग्राम पकी राजमा", "100 ग्राम मसूर", "300 ग्राम कटा पालक", "1 गुच्छा कटा अजमोद", "1 गुच्छा कटा सोआ", "2 प्याज़", "100 ग्राम कश्क (या खट्टी क्रीम)", "सजावट के लिए सूखा पुदीना और लहसुन", "नमक, काली मिर्च"],
+    "tr": ["200g reşte (veya geniş erişte)", "100g pişmiş nohut", "100g pişmiş kırmızı fasulye", "100g mercimek", "300g doğranmış ıspanak", "1 demet doğranmış maydanoz", "1 demet doğranmış dereotu", "2 soğan", "100g kaşk (veya ekşi krema)", "süslemek için kuru nane ve sarımsak", "tuz, karabiber"],
+    "it": ["200g di reshteh (o tagliatelle larghe)", "100g di ceci cotti", "100g di fagioli rossi cotti", "100g di lenticchie", "300g di spinaci tritati", "1 mazzo di prezzemolo tritato", "1 mazzo di aneto tritato", "2 cipolle", "100g di kashk (o panna acida)", "menta secca e aglio per guarnire", "sale, pepe"],
+    "ko": ["레슈테 200g(또는 넓은 면)", "삶은 병아리콩 100g", "삶은 강낭콩 100g", "렌틸콩 100g", "다진 시금치 300g", "파슬리 1단, 다진 것", "딜 1단, 다진 것", "양파 2개", "카슈크 100g(또는 사워크림)", "장식용 말린 민트와 마늘", "소금, 후추"]
+  },
+  "howIsMade": {
+    "ro": "FIERBERE LEGUMINOASE: Fierbe năutul, fasolea roșie și lintea separat (dacă e nevoie) până sunt fragede, apoi pune-le deoparte. CĂLIRE CEAPĂ: Toacă fin o ceapă și călește-o în ulei până se rumenește bine, împarte în două — jumătate pentru supă, jumătate pentru decor. FIERBERE SUPĂ: Într-o oală mare, fierbe leguminoasele cu apă, ceapa călită și sare timp de 20 minute. ADĂUGARE VERDEAȚĂ: Adaugă spanacul, pătrunjelul și mărarul tocate, fierbe 15 minute la foc mic. ADĂUGARE TĂIȚEI: Adaugă tăițeii reshteh direct în supă, fierbe încă 10 minute până se înmoaie. ÎNCORPORARE KASHK: Amestecă jumătate din kashk direct în supă pentru cremozitate, gustă și ajustează sarea. SERVIRE: Servește fierbinte, cu restul de kashk, ceapa prăjită, mentă uscată și usturoi călit deasupra.",
+    "en": "BOIL LEGUMES: Boil the chickpeas, kidney beans and lentils separately (if needed) until tender, then set aside. FRY ONION: Finely chop one onion and fry it in oil until well browned, divide in half — one half for the soup, one half for garnish. SIMMER SOUP: In a large pot, simmer the legumes with water, the fried onion and salt for 20 minutes. ADD HERBS: Add the chopped spinach, parsley and dill, simmer for 15 minutes on low heat. ADD NOODLES: Add the reshteh noodles directly to the soup, simmer for another 10 minutes until soft. STIR IN KASHK: Mix half the kashk directly into the soup for creaminess, taste and adjust salt. SERVE: Serve hot, with the remaining kashk, fried onion, dried mint and fried garlic on top.",
+    "es": "HERVIR LAS LEGUMBRES: Hierve los garbanzos, las alubias rojas y las lentejas por separado (si es necesario) hasta que estén tiernos, luego reserva. FREÍR LA CEBOLLA: Pica finamente una cebolla y fríela en aceite hasta que esté bien dorada, divide en dos — una mitad para la sopa, otra para decorar. HERVIR LA SOPA: En una olla grande, cuece las legumbres con agua, la cebolla frita y sal durante 20 minutos. AÑADIR LAS HIERBAS: Añade las espinacas, el perejil y el eneldo picados, cocina 15 minutos a fuego lento. AÑADIR LOS FIDEOS: Añade los fideos reshteh directamente a la sopa, cocina otros 10 minutos hasta que estén blandos. INCORPORAR EL KASHK: Mezcla la mitad del kashk directamente en la sopa para dar cremosidad, prueba y ajusta la sal. SERVIR: Sirve caliente, con el resto del kashk, la cebolla frita, menta seca y ajo frito por encima.",
+    "fr": "FAIRE BOUILLIR LES LÉGUMINEUSES: Faites bouillir les pois chiches, les haricots rouges et les lentilles séparément (si nécessaire) jusqu'à tendreté, puis réservez. FRIRE L'OIGNON: Hachez finement un oignon et faites-le frire dans l'huile jusqu'à ce qu'il soit bien doré, divisez en deux — une moitié pour la soupe, une moitié pour la garniture. MIJOTER LA SOUPE: Dans une grande marmite, laissez mijoter les légumineuses avec l'eau, l'oignon frit et le sel pendant 20 minutes. AJOUTER LES HERBES: Ajoutez les épinards, le persil et l'aneth hachés, laissez mijoter 15 minutes à feu doux. AJOUTER LES NOUILLES: Ajoutez les nouilles reshteh directement dans la soupe, laissez mijoter encore 10 minutes jusqu'à ce qu'elles soient tendres. INCORPORER LE KASHK: Mélangez la moitié du kashk directement dans la soupe pour la crémosité, goûtez et ajustez le sel. SERVIR: Servez chaud, avec le reste du kashk, l'oignon frit, la menthe séchée et l'ail frit par-dessus.",
+    "de": "HÜLSENFRÜCHTE KOCHEN: Die Kichererbsen, Kidneybohnen und Linsen bei Bedarf getrennt kochen, bis sie zart sind, dann beiseitestellen. ZWIEBEL BRATEN: Eine Zwiebel fein hacken und in Öl gut bräunen, in zwei Hälften teilen — eine für die Suppe, eine zum Garnieren. SUPPE KÖCHELN: In einem großen Topf die Hülsenfrüchte mit Wasser, der gebratenen Zwiebel und Salz 20 Minuten köcheln lassen. KRÄUTER HINZUFÜGEN: Den gehackten Spinat, Petersilie und Dill hinzufügen, 15 Minuten bei schwacher Hitze köcheln. NUDELN HINZUFÜGEN: Die Reshteh-Nudeln direkt in die Suppe geben, weitere 10 Minuten köcheln, bis sie weich sind. KASHK EINRÜHREN: Die Hälfte des Kashk direkt in die Suppe einrühren für Cremigkeit, abschmecken und Salz anpassen. SERVIEREN: Heiß servieren, mit dem restlichen Kashk, gebratener Zwiebel, getrockneter Minze und gebratenem Knoblauch obendrauf.",
+    "pt": "FERVER AS LEGUMINOSAS: Ferva o grão-de-bico, o feijão vermelho e as lentilhas separadamente (se necessário) até ficarem macios, depois reserve. FRITAR A CEBOLA: Pique finamente uma cebola e frite-a em óleo até dourar bem, divida em duas — metade para a sopa, metade para decorar. FERVER A SOPA: Numa panela grande, cozinhe as leguminosas com água, a cebola frita e sal durante 20 minutos. ADICIONAR AS ERVAS: Junte o espinafre, a salsa e o endro picados, cozinhe 15 minutos em lume brando. ADICIONAR O MACARRÃO: Junte o macarrão reshteh diretamente à sopa, cozinhe mais 10 minutos até ficar macio. INCORPORAR O KASHK: Misture metade do kashk diretamente na sopa para dar cremosidade, prove e ajuste o sal. SERVIR: Sirva quente, com o restante kashk, cebola frita, hortelã seca e alho frito por cima.",
+    "ru": "ВАРКА БОБОВЫХ: Отварите нут, красную фасоль и чечевицу отдельно (при необходимости) до мягкости, затем отложите. ОБЖАРКА ЛУКА: Мелко нарежьте одну луковицу и обжарьте в масле до хорошего румянца, разделите пополам — половину для супа, половину для украшения. ВАРКА СУПА: В большой кастрюле варите бобовые с водой, обжаренным луком и солью 20 минут. ДОБАВЛЕНИЕ ЗЕЛЕНИ: Добавьте нарезанный шпинат, петрушку и укроп, варите 15 минут на слабом огне. ДОБАВЛЕНИЕ ЛАПШИ: Добавьте лапшу реште прямо в суп, варите ещё 10 минут до мягкости. ВМЕШИВАНИЕ КАШКА: Вмешайте половину кашка прямо в суп для кремовости, попробуйте и отрегулируйте соль. ПОДАЧА: Подавайте горячим, с оставшимся кашком, жареным луком, сушёной мятой и жареным чесноком сверху.",
+    "ar": "سلق البقوليات: اسلق الحمص والفاصولياء الحمراء والعدس منفصلين (إذا لزم الأمر) حتى تنضج، ثم ضعها جانبًا. تحمير البصل: قطّع بصلة ناعمًا وحمّرها في الزيت حتى تصبح ذهبية جيدًا، قسّمها إلى نصفين — نصف للحساء ونصف للتزيين. طهي الحساء: في قدر كبير، اطهِ البقوليات مع الماء والبصل المحمّر والملح لمدة 20 دقيقة. إضافة الأعشاب: أضف السبانخ والبقدونس والشبت المفرومين، اطهِ على نار هادئة لمدة 15 دقيقة. إضافة الشعيرية: أضف شعيرية الرشته مباشرة إلى الحساء، اطهِ 10 دقائق أخرى حتى تلين. إضافة الكشك: اخلط نصف الكشك مباشرة في الحساء لإضفاء القوام الكريمي، تذوق واضبط الملح. التقديم: قدّمه ساخنًا، مع باقي الكشك والبصل المحمّر والنعناع المجفف والثوم المقلي فوقه.",
+    "zh": "煮豆类：分别煮鹰嘴豆、红豆和小扁豆（如有需要）至软嫩，然后放在一旁。炒洋葱：将一个洋葱切碎并用油炒至充分金黄，分成两份——一半用于汤，一半用于装饰。炖汤：在大锅中，将豆类与水、炒洋葱和盐一起炖20分钟。加入香草：加入切碎的菠菜、欧芹和莳萝，小火炖15分钟。加入面条：将雷什特面直接加入汤中，再炖10分钟至变软。拌入卡什克：将一半卡什克直接拌入汤中增加浓稠度，品尝并调整咸度。装盘：趁热食用，上面撒上剩余的卡什克、炸洋葱、干薄荷和炒蒜。",
+    "ja": "豆類を煮る：ひよこ豆、赤いんげん豆、レンズ豆を（必要なら）別々に柔らかくなるまで煮て、取り置く。玉ねぎを炒める：玉ねぎ1個を細かく刻んで油できつね色になるまで炒め、半分に分ける――半分はスープ用、半分は飾り用。スープを煮る：大きな鍋で豆類を水、炒めた玉ねぎ、塩と共に20分煮る。ハーブを加える：刻んだほうれん草、パセリ、ディルを加え、弱火で15分煮る。麺を加える：レシュテの麺を直接スープに加え、柔らかくなるまでさらに10分煮る。カシュクを混ぜる：カシュクの半量をスープに直接混ぜてクリーミーにし、味見して塩を調整する。盛り付け：熱いうちに、残りのカシュク、炒めた玉ねぎ、乾燥ミント、炒めたにんにくをのせて提供する。",
+    "hi": "दालें उबालें: छोले, राजमा और मसूर को अलग-अलग (यदि आवश्यक हो) नरम होने तक उबालें, फिर अलग रखें। प्याज़ भूनें: एक प्याज़ को बारीक काटें और तेल में अच्छी तरह सुनहरा होने तक भूनें, दो भागों में बांटें — आधा सूप के लिए, आधा सजावट के लिए। सूप उबालें: एक बड़े बर्तन में, दालों को पानी, भुने प्याज़ और नमक के साथ 20 मिनट पकाएं। जड़ी-बूटियां डालें: कटा पालक, अजमोद और सोआ डालें, धीमी आँच पर 15 मिनट पकाएं। नूडल्स डालें: रेश्ते नूडल्स को सीधे सूप में डालें, नरम होने तक 10 मिनट और पकाएं। कश्क मिलाएं: मलाईदार बनावट के लिए आधा कश्क सीधे सूप में मिलाएं, चखें और नमक समायोजित करें। परोसें: गरमागरम, बाकी कश्क, भुना प्याज़, सूखा पुदीना और भुना लहसुन ऊपर डालकर परोसें।",
+    "tr": "BAKLAGİLLERİ HAŞLAYIN: Nohut, kırmızı fasulye ve mercimeği gerekirse ayrı ayrı yumuşayana kadar haşlayın, sonra bir kenara koyun. SOĞANI KIZARTIN: Bir soğanı ince doğrayın ve yağda iyice kızarana kadar kavurun, ikiye bölün — yarısı çorba için, yarısı süsleme için. ÇORBAYI PİŞİRİN: Büyük bir tencerede baklagilleri su, kızarmış soğan ve tuzla 20 dakika pişirin. OTLARI EKLEYİN: Doğranmış ıspanak, maydanoz ve dereotunu ekleyin, kısık ateşte 15 dakika pişirin. ERİŞTEYİ EKLEYİN: Reşte eriştesini doğrudan çorbaya ekleyin, yumuşayana kadar 10 dakika daha pişirin. KAŞKI KARIŞTIRIN: Kremamsı kıvam için kaşkın yarısını doğrudan çorbaya karıştırın, tadına bakın ve tuzu ayarlayın. SERVİS EDİN: Sıcak servis edin, kalan kaşk, kızarmış soğan, kuru nane ve kızarmış sarımsakla üzerine.",
+    "it": "LESSARE I LEGUMI: Lessate i ceci, i fagioli rossi e le lenticchie separatamente (se necessario) finché teneri, poi mettete da parte. FRIGGERE LA CIPOLLA: Tritate finemente una cipolla e friggetela nell'olio finché ben dorata, dividete a metà — una metà per la zuppa, una metà per guarnire. CUOCERE LA ZUPPA: In una pentola grande, cuocete i legumi con acqua, la cipolla fritta e sale per 20 minuti. AGGIUNGERE LE ERBE: Aggiungete gli spinaci, il prezzemolo e l'aneto tritati, cuocete 15 minuti a fuoco basso. AGGIUNGERE LE TAGLIATELLE: Aggiungete le tagliatelle reshteh direttamente nella zuppa, cuocete altri 10 minuti finché morbide. INCORPORARE IL KASHK: Mescolate metà del kashk direttamente nella zuppa per cremosità, assaggiate e regolate il sale. SERVIRE: Servite caldo, con il kashk rimanente, cipolla fritta, menta secca e aglio fritto sopra.",
+    "ko": "콩류 삶기: 병아리콩, 강낭콩, 렌틸콩을 필요하면 따로따로 부드러워질 때까지 삶은 후 따로 둔다. 양파 볶기: 양파 1개를 잘게 썰어 기름에 충분히 노릇하게 볶고 반으로 나눈다 — 절반은 수프용, 절반은 장식용. 수프 끓이기: 큰 냄비에 콩류를 물, 볶은 양파, 소금과 함께 20분간 끓인다. 허브 넣기: 다진 시금치, 파슬리, 딜을 넣고 약불에서 15분간 끓인다. 국수 넣기: 레슈테 국수를 수프에 바로 넣고 부드러워질 때까지 10분 더 끓인다. 카슈크 섞기: 카슈크 절반을 수프에 직접 섞어 크리미하게 만들고 맛을 보아 소금을 조절한다. 담아내기: 뜨거울 때 남은 카슈크, 볶은 양파, 말린 민트, 볶은 마늘을 얹어 낸다."
+  },
+  "originText": {
+    "ro": "Ash-e reshteh este una dintre cele mai vechi și mai simbolice supe din bucătăria persană, gătită tradițional de Norouz, Anul Nou persan, când tăițeii reprezintă firele vieții pe care oamenii speră să le urmeze de-a lungul anului care vine. Practica de a mânca supă cu tăiței lungi la începutul unei călătorii sau al unui nou capitol de viață e legată de o veche superstiție persană despre a găsi drumul corect.\n\nKashk-ul, ingredientul care definește gustul final al supei, este un produs lactat fermentat unic bucătăriei iraniene, fabricat din zer uscat și rehidratat. Textura sa acrișoară, aproape brânzoasă, contrastează cu dulceața leguminoaselor și prospețimea verdețurilor, creând un echilibru de gusturi considerat esența bucătăriei persane tradiționale — sofisticată în simplitatea ei aparentă.",
+    "en": "Ash-e reshteh is one of the oldest and most symbolic soups in Persian cuisine, traditionally cooked for Nowruz, the Persian New Year, when the noodles represent the threads of life people hope to follow throughout the coming year. The practice of eating noodle soup at the start of a journey or a new chapter in life is tied to an old Persian superstition about finding the right path.\n\nKashk, the ingredient that defines the soup's final taste, is a fermented dairy product unique to Iranian cuisine, made from dried and rehydrated whey. Its tangy, almost cheesy texture contrasts with the sweetness of the legumes and the freshness of the herbs, creating a balance of flavors considered the essence of traditional Persian cooking — sophisticated in its apparent simplicity.",
+    "es": "El ash-e reshteh es una de las sopas más antiguas y simbólicas de la cocina persa, cocinada tradicionalmente para el Nowruz, el Año Nuevo persa, cuando los fideos representan los hilos de la vida que la gente espera seguir durante el año venidero. La práctica de comer sopa de fideos al inicio de un viaje o un nuevo capítulo de la vida está ligada a una vieja superstición persa sobre encontrar el camino correcto.\n\nEl kashk, el ingrediente que define el sabor final de la sopa, es un producto lácteo fermentado único de la cocina iraní, hecho de suero seco y rehidratado. Su textura ácida, casi quesuda, contrasta con la dulzura de las legumbres y la frescura de las hierbas, creando un equilibrio de sabores considerado la esencia de la cocina persa tradicional — sofisticada en su aparente simplicidad.",
+    "fr": "L'ash-e reshteh est l'une des soupes les plus anciennes et symboliques de la cuisine persane, traditionnellement préparée pour Norouz, le Nouvel An persan, où les nouilles représentent les fils de la vie que l'on espère suivre tout au long de l'année à venir. La pratique de manger une soupe de nouilles au début d'un voyage ou d'un nouveau chapitre de la vie est liée à une vieille superstition persane sur le fait de trouver le bon chemin.\n\nLe kashk, l'ingrédient qui définit le goût final de la soupe, est un produit laitier fermenté unique à la cuisine iranienne, fait de petit-lait séché et réhydraté. Sa texture acidulée, presque fromagère, contraste avec la douceur des légumineuses et la fraîcheur des herbes, créant un équilibre de saveurs considéré comme l'essence de la cuisine persane traditionnelle — sophistiquée dans sa simplicité apparente.",
+    "de": "Ash-e Reshteh ist eine der ältesten und symbolträchtigsten Suppen der persischen Küche, traditionell für Norouz, das persische Neujahr, gekocht, wenn die Nudeln die Lebensfäden darstellen, denen man im kommenden Jahr zu folgen hofft. Die Praxis, zu Beginn einer Reise oder eines neuen Lebensabschnitts Nudelsuppe zu essen, ist mit einem alten persischen Aberglauben über das Finden des richtigen Weges verbunden.\n\nKashk, die Zutat, die den endgültigen Geschmack der Suppe bestimmt, ist ein fermentiertes Milchprodukt, einzigartig für die iranische Küche, hergestellt aus getrockneter und rehydrierter Molke. Seine säuerliche, fast käsige Textur kontrastiert mit der Süße der Hülsenfrüchte und der Frische der Kräuter und schafft eine Geschmacksbalance, die als Essenz der traditionellen persischen Küche gilt — raffiniert in ihrer scheinbaren Einfachheit.",
+    "pt": "O ash-e reshteh é uma das sopas mais antigas e simbólicas da cozinha persa, tradicionalmente cozinhada para o Nowruz, o Ano Novo persa, quando o macarrão representa os fios da vida que se espera seguir ao longo do ano que vem. A prática de comer sopa de macarrão no início de uma viagem ou de um novo capítulo de vida está ligada a uma antiga superstição persa sobre encontrar o caminho certo.\n\nO kashk, o ingrediente que define o sabor final da sopa, é um produto lácteo fermentado único da cozinha iraniana, feito de soro de leite seco e reidratado. A sua textura ácida, quase parecida com queijo, contrasta com a doçura das leguminosas e a frescura das ervas, criando um equilíbrio de sabores considerado a essência da cozinha persa tradicional — sofisticada na sua aparente simplicidade.",
+    "ru": "Аш-э-реште — один из старейших и наиболее символичных супов персидской кухни, традиционно готовящийся к Ноурузу, персидскому Новому году, когда лапша символизирует нити жизни, которым люди надеются следовать в наступающем году. Обычай есть суп с лапшой в начале путешествия или новой главы жизни связан со старым персидским поверьем о поиске верного пути.\n\nКашк, ингредиент, определяющий итоговый вкус супа, — это ферментированный молочный продукт, уникальный для иранской кухни, изготовленный из высушенной и восстановленной сыворотки. Его терпкая, почти сырная текстура контрастирует со сладостью бобовых и свежестью зелени, создавая баланс вкусов, считающийся сутью традиционной персидской кухни — изысканной в своей кажущейся простоте.",
+    "ar": "آش رشته هو أحد أقدم الحساءات وأكثرها رمزية في المطبخ الفارسي، يُطهى تقليديًا لنوروز، رأس السنة الفارسية، حين تمثل الشعيرية خيوط الحياة التي يأمل الناس اتباعها طوال العام القادم. ترتبط ممارسة أكل حساء الشعيرية في بداية رحلة أو فصل جديد من الحياة بخرافة فارسية قديمة حول إيجاد الطريق الصحيح.\n\nالكشك، المكوّن الذي يحدد الطعم النهائي للحساء، منتج ألبان مخمر فريد للمطبخ الإيراني، مصنوع من مصل مجفف ومُرطَّب. قوامه الحامض شبه الجبني يتباين مع حلاوة البقوليات ونضارة الأعشاب، مكوّنًا توازنًا في النكهات يُعتبر جوهر المطبخ الفارسي التقليدي — راقٍ في بساطته الظاهرة.",
+    "zh": "阿什雷什特汤是波斯菜肴中最古老、最具象征意义的汤品之一，传统上在诺鲁孜节（波斯新年）烹制，此时面条象征着人们希望在新的一年中遵循的生命之线。在旅程开始或人生新篇章之际食用面条汤的习俗，与一个古老的波斯迷信有关，即找到正确的道路。\n\n卡什克是决定汤最终风味的关键食材，是伊朗菜肴特有的发酵乳制品，由干燥后再复水的乳清制成。它带有微酸、近似奶酪的口感，与豆类的甜味和香草的清新形成对比，营造出被视为传统波斯烹饪精髓的味觉平衡——在看似简单中蕴含精妙。",
+    "ja": "アーシュ・レシュテは、ペルシャ料理の中で最も古く、最も象徴的なスープの一つであり、伝統的にはノウルーズ、つまりペルシャの新年に作られ、麺は人々が来る一年を通じて辿りたいと願う人生の糸を表している。旅の始まりや人生の新たな章の始まりに麺のスープを食べる習慣は、正しい道を見つけることに関する古いペルシャの迷信に結びついている。\n\nスープの最終的な味を決定づける材料であるカシュクは、イラン料理独特の発酵乳製品で、乾燥させて水で戻したホエーから作られる。そのピリッとした、ほとんどチーズのような食感は、豆類の甘さとハーブの新鮮さと対照をなし、伝統的なペルシャ料理の真髄――一見シンプルながら洗練されている――と見なされる味のバランスを生み出す。",
+    "hi": "आश-ए-रेश्ते फ़ारसी व्यंजनों के सबसे पुराने और सबसे प्रतीकात्मक सूपों में से एक है, जो पारंपरिक रूप से नौरोज़, फ़ारसी नए साल के लिए पकाया जाता है, जब नूडल्स जीवन के उन धागों का प्रतिनिधित्व करते हैं जिनका लोग आने वाले साल भर पालन करने की उम्मीद करते हैं। यात्रा या जीवन के नए अध्याय की शुरुआत में नूडल सूप खाने की प्रथा सही रास्ता खोजने के बारे में एक पुरानी फ़ारसी अंधविश्वास से जुड़ी है।\n\nकश्क, वह सामग्री जो सूप के अंतिम स्वाद को परिभाषित करती है, ईरानी व्यंजनों के लिए अनोखा एक किण्वित डेयरी उत्पाद है, जो सूखे और पुनर्जलित मट्ठे से बनाया जाता है। इसकी तीखी, लगभग पनीर जैसी बनावट दालों की मिठास और जड़ी-बूटियों की ताज़गी के साथ विरोधाभास पैदा करती है, जो पारंपरिक फ़ारसी खाना पकाने का सार माना जाने वाला स्वादों का संतुलन बनाती है — इसकी स्पष्ट सादगी में परिष्कृत।",
+    "tr": "Aşure reşte, Fars mutfağının en eski ve en sembolik çorbalarından biridir; geleneksel olarak Fars Yeni Yılı Nevruz için pişirilir ve erişteler insanların gelecek yıl boyunca izlemeyi umduğu yaşam ipliklerini temsil eder. Bir yolculuğun veya yaşamın yeni bir bölümünün başında erişteli çorba yeme pratiği, doğru yolu bulmakla ilgili eski bir Fars batıl inancına bağlıdır.\n\nÇorbanın son tadını belirleyen malzeme olan kaşk, kurutulmuş ve yeniden nemlendirilmiş peynir altı suyundan yapılan, İran mutfağına özgü fermente bir süt ürünüdür. Ekşi, neredeyse peynirimsi dokusu, baklagillerin tatlılığı ve otların tazeliğiyle tezat oluşturarak geleneksel Fars mutfağının özü sayılan bir lezzet dengesi yaratır — görünürdeki sadeliğinde sofistike.",
+    "it": "L'ash-e reshteh è una delle zuppe più antiche e simboliche della cucina persiana, tradizionalmente cucinata per il Norouz, il Capodanno persiano, quando le tagliatelle rappresentano i fili della vita che le persone sperano di seguire durante l'anno a venire. La pratica di mangiare zuppa di tagliatelle all'inizio di un viaggio o di un nuovo capitolo della vita è legata a un'antica superstizione persiana sul trovare la strada giusta.\n\nIl kashk, l'ingrediente che definisce il sapore finale della zuppa, è un prodotto lattiero-caseario fermentato unico della cucina iraniana, fatto con siero di latte essiccato e reidratato. La sua consistenza aspra, quasi formaggiosa, contrasta con la dolcezza dei legumi e la freschezza delle erbe, creando un equilibrio di sapori considerato l'essenza della cucina persiana tradizionale — sofisticata nella sua apparente semplicità.",
+    "ko": "아쉬 레슈테는 페르시아 요리 중 가장 오래되고 상징적인 수프 중 하나로, 전통적으로 페르시아 신년인 노루즈를 위해 조리되며, 이때 국수는 사람들이 다가오는 한 해 동안 따르고자 하는 삶의 실을 상징한다. 여정이나 인생의 새로운 장을 시작할 때 국수 수프를 먹는 관습은 올바른 길을 찾는 것에 관한 오래된 페르시아 미신과 관련이 있다.\n\n수프의 최종 맛을 결정짓는 재료인 카슈크는 건조 후 다시 수분을 공급한 유청으로 만든, 이란 요리에만 있는 발효 유제품이다. 새콤하고 거의 치즈 같은 질감은 콩류의 단맛과 허브의 신선함과 대조를 이루며, 전통 페르시아 요리의 정수로 여겨지는 맛의 균형을 만들어낸다 — 겉보기에는 단순하지만 세련된."
+  },
+  "meta": {
+    "time": 75,
+    "costRon": 14,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Supă cu tăiței lați, verdețuri, năut și fasole, finisată cu kashk fermentat.",
+      "en": "Wide noodle soup with herbs, chickpeas and beans, finished with fermented kashk.",
+      "es": "Sopa de fideos anchos con hierbas, garbanzos y alubias, terminada con kashk fermentado.",
+      "fr": "Soupe de nouilles larges aux herbes, pois chiches et haricots, finie au kashk fermenté.",
+      "de": "Breite Nudelsuppe mit Kräutern, Kichererbsen und Bohnen, mit fermentiertem Kashk verfeinert.",
+      "pt": "Sopa de macarrão largo com ervas, grão-de-bico e feijão, finalizada com kashk fermentado.",
+      "ru": "Суп с широкой лапшой, зеленью, нутом и фасолью, с ферментированным кашком.",
+      "ar": "حساء الشعيرية العريضة بالأعشاب والحمص والفاصولياء، مع كشك مخمر.",
+      "zh": "宽面配香草、鹰嘴豆和红豆汤，配发酵卡什克。",
+      "ja": "ハーブ、ひよこ豆、豆の入った幅広麺スープ、発酵カシュク添え。",
+      "hi": "जड़ी-बूटियों, छोले और बीन्स के साथ चौड़े नूडल का सूप, किण्वित कश्क के साथ।",
+      "tr": "Otlu, nohutlu ve fasulyeli geniş erişte çorbası, fermente kaşkla tamamlanmış.",
+      "it": "Zuppa di tagliatelle larghe con erbe, ceci e fagioli, rifinita con kashk fermentato.",
+      "ko": "허브, 병아리콩, 콩을 넣은 넓은 면 수프, 발효 카슈크로 마무리."
+    }
+  }
+}

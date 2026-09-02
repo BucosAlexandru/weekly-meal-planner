@@ -1,0 +1,177 @@
+{
+  "id": 351,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Siria", "en": "Syria", "es": "Siria", "fr": "Syrie", "de": "Syrien",
+    "pt": "Síria", "ru": "Сирия", "ar": "سوريا", "zh": "叙利亚", "ja": "シリア",
+    "hi": "सीरिया", "tr": "Suriye", "it": "Siria", "ko": "시리아"
+  },
+  "name": {
+    "ro": "Freekeh cu pui", "en": "Freekeh with Chicken", "es": "Freekeh con pollo", "fr": "Freekeh au poulet",
+    "de": "Freekeh mit Hähnchen", "pt": "Freekeh com frango", "ru": "Фрике с курицей",
+    "ar": "فريكة بالدجاج", "zh": "叙利亚烤麦鸡肉饭", "ja": "フリーカのチキン添え",
+    "hi": "फ्रीकेह चिकन के साथ", "tr": "Tavuklu Firik", "it": "Freekeh con pollo", "ko": "치킨 프리케"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌾", "t": "Grâu afumat verde", "d": "Freekeh este grâu tânăr, prăjit la foc, cu gust afumat distinct."},
+      {"icon": "🍗", "t": "Pui fraged", "d": "Bucăți de pui fierte în bulionul care aromatizează și grâul."},
+      {"icon": "🥜", "t": "Migdale și scorțișoară", "d": "Migdale prăjite și un praf de scorțișoară dau profunzime."},
+      {"icon": "🍲", "t": "Bogat în fibre", "d": "Grâul verde crud e mai bogat în fibre decât orezul obișnuit."}
+    ],
+    "en": [
+      {"icon": "🌾", "t": "Smoky green wheat", "d": "Freekeh is young wheat, roasted over fire, with a distinct smoky taste."},
+      {"icon": "🍗", "t": "Tender chicken", "d": "Chicken pieces cooked in the broth that also flavors the wheat."},
+      {"icon": "🥜", "t": "Almonds and cinnamon", "d": "Toasted almonds and a touch of cinnamon add depth."},
+      {"icon": "🍲", "t": "Rich in fiber", "d": "Raw green wheat is higher in fiber than regular rice."}
+    ],
+    "es": [
+      {"icon": "🌾", "t": "Trigo verde ahumado", "d": "El freekeh es trigo joven, tostado al fuego, con un sabor ahumado distintivo."},
+      {"icon": "🍗", "t": "Pollo tierno", "d": "Trozos de pollo cocidos en el caldo que también aromatiza el trigo."},
+      {"icon": "🥜", "t": "Almendras y canela", "d": "Almendras tostadas y un toque de canela añaden profundidad."},
+      {"icon": "🍲", "t": "Rico en fibra", "d": "El trigo verde crudo tiene más fibra que el arroz común."}
+    ],
+    "fr": [
+      {"icon": "🌾", "t": "Blé vert fumé", "d": "Le freekeh est du blé jeune, torréfié au feu, avec un goût fumé distinct."},
+      {"icon": "🍗", "t": "Poulet tendre", "d": "Morceaux de poulet cuits dans le bouillon qui parfume aussi le blé."},
+      {"icon": "🥜", "t": "Amandes et cannelle", "d": "Des amandes grillées et une touche de cannelle ajoutent de la profondeur."},
+      {"icon": "🍲", "t": "Riche en fibres", "d": "Le blé vert cru est plus riche en fibres que le riz classique."}
+    ],
+    "de": [
+      {"icon": "🌾", "t": "Rauchiger grüner Weizen", "d": "Freekeh ist junger Weizen, über Feuer geröstet, mit unverkennbarem rauchigem Geschmack."},
+      {"icon": "🍗", "t": "Zartes Hähnchen", "d": "Hähnchenstücke, gegart in der Brühe, die auch den Weizen aromatisiert."},
+      {"icon": "🥜", "t": "Mandeln und Zimt", "d": "Geröstete Mandeln und eine Prise Zimt sorgen für Tiefe."},
+      {"icon": "🍲", "t": "Ballaststoffreich", "d": "Roher grüner Weizen enthält mehr Ballaststoffe als normaler Reis."}
+    ],
+    "pt": [
+      {"icon": "🌾", "t": "Trigo verde defumado", "d": "O freekeh é trigo jovem, tostado no fogo, com um sabor defumado distinto."},
+      {"icon": "🍗", "t": "Frango macio", "d": "Pedaços de frango cozinhados no caldo que também aromatiza o trigo."},
+      {"icon": "🥜", "t": "Amêndoas e canela", "d": "Amêndoas tostadas e um toque de canela adicionam profundidade."},
+      {"icon": "🍲", "t": "Rico em fibras", "d": "O trigo verde cru tem mais fibra do que o arroz comum."}
+    ],
+    "ru": [
+      {"icon": "🌾", "t": "Копчёная зелёная пшеница", "d": "Фрике — это молодая пшеница, обжаренная на огне, с характерным дымным вкусом."},
+      {"icon": "🍗", "t": "Нежная курица", "d": "Куски курицы, приготовленные в бульоне, который также ароматизирует пшеницу."},
+      {"icon": "🥜", "t": "Миндаль и корица", "d": "Обжаренный миндаль и щепотка корицы добавляют глубину вкуса."},
+      {"icon": "🍲", "t": "Богат клетчаткой", "d": "Сырая зелёная пшеница содержит больше клетчатки, чем обычный рис."}
+    ],
+    "ar": [
+      {"icon": "🌾", "t": "قمح أخضر مدخن", "d": "الفريكة هي قمح غض محمص على النار، بنكهة مدخنة مميزة."},
+      {"icon": "🍗", "t": "دجاج طري", "d": "قطع دجاج مطهية في المرق الذي ينكّه القمح أيضًا."},
+      {"icon": "🥜", "t": "لوز وقرفة", "d": "اللوز المحمص ولمسة من القرفة تضيف عمقًا للنكهة."},
+      {"icon": "🍲", "t": "غني بالألياف", "d": "القمح الأخضر النيء أغنى بالألياف من الأرز العادي."}
+    ],
+    "zh": [
+      {"icon": "🌾", "t": "烟熏绿麦", "d": "烤麦是经火烤的青麦，带有独特的烟熏风味。"},
+      {"icon": "🍗", "t": "嫩鸡肉", "d": "鸡肉块在同样为麦粒增香的高汤中煮熟。"},
+      {"icon": "🥜", "t": "杏仁与肉桂", "d": "烤杏仁和一点肉桂增添层次感。"},
+      {"icon": "🍲", "t": "富含纤维", "d": "生青麦的纤维含量高于普通米饭。"}
+    ],
+    "ja": [
+      {"icon": "🌾", "t": "スモーキーな青麦", "d": "フリーカは若い小麦を火であぶった、独特の燻製風味を持つ食材。"},
+      {"icon": "🍗", "t": "柔らかい鶏肉", "d": "小麦にも風味をつける出汁で煮込んだ鶏肉。"},
+      {"icon": "🥜", "t": "アーモンドとシナモン", "d": "炒ったアーモンドとひとつまみのシナモンが深みを加える。"},
+      {"icon": "🍲", "t": "食物繊維が豊富", "d": "生の青麦は普通の米より食物繊維が多い。"}
+    ],
+    "hi": [
+      {"icon": "🌾", "t": "धुएँदार हरा गेहूं", "d": "फ्रीकेह आग पर भुना युवा गेहूं है, खास धुएँदार स्वाद के साथ।"},
+      {"icon": "🍗", "t": "कोमल चिकन", "d": "चिकन के टुकड़े उसी शोरबे में पकाए गए जो गेहूं को भी स्वाद देता है।"},
+      {"icon": "🥜", "t": "बादाम और दालचीनी", "d": "भुने बादाम और थोड़ी दालचीनी गहराई जोड़ते हैं।"},
+      {"icon": "🍲", "t": "फाइबर से भरपूर", "d": "कच्चा हरा गेहूं सामान्य चावल से अधिक फाइबर वाला होता है।"}
+    ],
+    "tr": [
+      {"icon": "🌾", "t": "Dumanlı yeşil buğday", "d": "Firik, ateşte kavrulmuş genç buğdaydır, belirgin dumanlı tada sahiptir."},
+      {"icon": "🍗", "t": "Yumuşak tavuk", "d": "Buğdaya da lezzet veren suda pişirilen tavuk parçaları."},
+      {"icon": "🥜", "t": "Badem ve tarçın", "d": "Kavrulmuş badem ve bir tutam tarçın derinlik katar."},
+      {"icon": "🍲", "t": "Lif açısından zengin", "d": "Çiğ yeşil buğday, normal pirinçten daha fazla lif içerir."}
+    ],
+    "it": [
+      {"icon": "🌾", "t": "Grano verde affumicato", "d": "Il freekeh è grano giovane, tostato sul fuoco, con un sapore affumicato distintivo."},
+      {"icon": "🍗", "t": "Pollo tenero", "d": "Pezzi di pollo cotti nel brodo che aromatizza anche il grano."},
+      {"icon": "🥜", "t": "Mandorle e cannella", "d": "Mandorle tostate e un pizzico di cannella aggiungono profondità."},
+      {"icon": "🍲", "t": "Ricco di fibre", "d": "Il grano verde crudo è più ricco di fibre del riso comune."}
+    ],
+    "ko": [
+      {"icon": "🌾", "t": "훈연 향 초록 밀", "d": "프리케는 불에 볶은 어린 밀로, 독특한 훈연 향을 지닌다."},
+      {"icon": "🍗", "t": "부드러운 닭고기", "d": "밀에도 풍미를 더하는 육수에 끓인 닭고기 조각."},
+      {"icon": "🥜", "t": "아몬드와 계피", "d": "볶은 아몬드와 약간의 계피가 깊은 맛을 더한다."},
+      {"icon": "🍲", "t": "식이섬유 풍부", "d": "생 초록 밀은 일반 쌀보다 식이섬유가 더 많다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["300g freekeh (grâu verde afumat)", "4 pulpe de pui cu os", "1 ceapă mare", "50g migdale", "2 linguri unt", "1 linguriță scorțișoară", "1 linguriță chimen măcinat", "1 litru bulion de pui", "sare, piper", "2 linguri ulei"],
+    "en": ["300g freekeh (smoked green wheat)", "4 bone-in chicken thighs", "1 large onion", "50g almonds", "2 tbsp butter", "1 tsp cinnamon", "1 tsp ground cumin", "1 liter chicken broth", "salt, pepper", "2 tbsp oil"],
+    "es": ["300g de freekeh (trigo verde ahumado)", "4 muslos de pollo con hueso", "1 cebolla grande", "50g de almendras", "2 cdas de mantequilla", "1 cdta de canela", "1 cdta de comino molido", "1 litro de caldo de pollo", "sal, pimienta", "2 cdas de aceite"],
+    "fr": ["300g de freekeh (blé vert fumé)", "4 cuisses de poulet avec os", "1 gros oignon", "50g d'amandes", "2 c. à s. de beurre", "1 c. à c. de cannelle", "1 c. à c. de cumin moulu", "1 litre de bouillon de poulet", "sel, poivre", "2 c. à s. d'huile"],
+    "de": ["300g Freekeh (geräucherter grüner Weizen)", "4 Hähnchenschenkel mit Knochen", "1 große Zwiebel", "50g Mandeln", "2 EL Butter", "1 TL Zimt", "1 TL gemahlener Kreuzkümmel", "1 Liter Hühnerbrühe", "Salz, Pfeffer", "2 EL Öl"],
+    "pt": ["300g de freekeh (trigo verde defumado)", "4 coxas de frango com osso", "1 cebola grande", "50g de amêndoas", "2 c. sopa de manteiga", "1 colher de chá de canela", "1 colher de chá de cominho moído", "1 litro de caldo de galinha", "sal, pimenta", "2 c. sopa de óleo"],
+    "ru": ["300г фрике (копчёная зелёная пшеница)", "4 куриных бедра на кости", "1 крупная луковица", "50г миндаля", "2 ст.л. сливочного масла", "1 ч.л. корицы", "1 ч.л. молотого тмина", "1 литр куриного бульона", "соль, перец", "2 ст.л. масла"],
+    "ar": ["300غ فريكة (قمح أخضر مدخن)", "4 أفخاذ دجاج بالعظم", "بصلة كبيرة واحدة", "50غ لوز", "2 ملعقة كبيرة زبدة", "ملعقة صغيرة قرفة", "ملعقة صغيرة كمون مطحون", "1 لتر مرق دجاج", "ملح، فلفل", "2 ملعقة كبيرة زيت"],
+    "zh": ["烤麦300克（烟熏青麦）", "带骨鸡腿4个", "大洋葱1个", "杏仁50克", "黄油2汤匙", "肉桂1茶匙", "孜然粉1茶匙", "鸡汤1升", "盐、胡椒", "油2汤匙"],
+    "ja": ["フリーカ 300g（スモーク青麦）", "骨付き鶏もも肉 4本", "大きめの玉ねぎ 1個", "アーモンド 50g", "バター 大さじ2", "シナモン 小さじ1", "クミンパウダー 小さじ1", "鶏だし 1リットル", "塩、こしょう", "油 大さじ2"],
+    "hi": ["300 ग्राम फ्रीकेह (स्मोक्ड हरा गेहूं)", "4 हड्डी वाले चिकन थाई", "1 बड़ा प्याज़", "50 ग्राम बादाम", "2 बड़े चम्मच मक्खन", "1 छोटा चम्मच दालचीनी", "1 छोटा चम्मच पिसा जीरा", "1 लीटर चिकन शोरबा", "नमक, काली मिर्च", "2 बड़े चम्मच तेल"],
+    "tr": ["300g firik (füme yeşil buğday)", "4 kemikli tavuk but", "1 büyük soğan", "50g badem", "2 yemek kaşığı tereyağı", "1 çay kaşığı tarçın", "1 çay kaşığı öğütülmüş kimyon", "1 litre tavuk suyu", "tuz, karabiber", "2 yemek kaşığı yağ"],
+    "it": ["300g di freekeh (grano verde affumicato)", "4 cosce di pollo con osso", "1 cipolla grande", "50g di mandorle", "2 cucchiai di burro", "1 cucchiaino di cannella", "1 cucchiaino di cumino macinato", "1 litro di brodo di pollo", "sale, pepe", "2 cucchiai di olio"],
+    "ko": ["프리케 300g(훈제 초록 밀)", "뼈 있는 닭 허벅지살 4개", "큰 양파 1개", "아몬드 50g", "버터 2큰술", "계피 1작은술", "커민 가루 1작은술", "닭 육수 1리터", "소금, 후추", "기름 2큰술"]
+  },
+  "howIsMade": {
+    "ro": "CLĂTIRE FREEKEH: Clătește freekeh sub apă rece pentru a îndepărta praful, apoi lasă la scurs. FRIGERE PUI: Rumenește pulpele de pui în ulei pe toate părțile, apoi scoate-le deoparte. CĂLIRE CEAPĂ: Călește ceapa tocată în aceeași oală până devine translucidă. ADĂUGARE FREEKEH: Adaugă freekeh clătit, scorțișoara și chimenul, călește 2 minute amestecând. FIERBERE: Pune pulpele de pui înapoi în oală, toarnă bulionul fierbinte și fierbe la foc mic, cu capac, 30 minute. PRĂJIRE MIGDALE: Prăjește migdalele în unt până devin aurii și crocante. SERVIRE: Servește freekeh cu pui deasupra, presărat cu migdalele prăjite.",
+    "en": "RINSE FREEKEH: Rinse the freekeh under cold water to remove dust, then drain. BROWN CHICKEN: Brown the chicken thighs in oil on all sides, then set aside. SAUTÉ ONION: Sauté the chopped onion in the same pot until translucent. ADD FREEKEH: Add the rinsed freekeh, cinnamon and cumin, sauté for 2 minutes stirring. SIMMER: Return the chicken thighs to the pot, pour in the hot broth and simmer covered for 30 minutes. TOAST ALMONDS: Toast the almonds in butter until golden and crisp. SERVE: Serve the freekeh with chicken on top, sprinkled with the toasted almonds.",
+    "es": "ENJUAGAR EL FREEKEH: Enjuaga el freekeh bajo agua fría para eliminar el polvo, luego escurre. DORAR EL POLLO: Dora los muslos de pollo en aceite por todos lados, luego reserva. SOFREÍR LA CEBOLLA: Sofríe la cebolla picada en la misma olla hasta que quede translúcida. AÑADIR EL FREEKEH: Añade el freekeh enjuagado, la canela y el comino, sofríe 2 minutos removiendo. HERVIR: Devuelve los muslos de pollo a la olla, vierte el caldo caliente y cocina tapado a fuego lento 30 minutos. TOSTAR LAS ALMENDRAS: Tuesta las almendras en mantequilla hasta que estén doradas y crujientes. SERVIR: Sirve el freekeh con el pollo encima, espolvoreado con las almendras tostadas.",
+    "fr": "RINCER LE FREEKEH: Rincez le freekeh à l'eau froide pour enlever la poussière, puis égouttez. FAIRE DORER LE POULET: Faites dorer les cuisses de poulet dans l'huile de tous côtés, puis réservez. FAIRE REVENIR L'OIGNON: Faites revenir l'oignon haché dans la même marmite jusqu'à ce qu'il soit translucide. AJOUTER LE FREEKEH: Ajoutez le freekeh rincé, la cannelle et le cumin, faites revenir 2 minutes en remuant. MIJOTER: Remettez les cuisses de poulet dans la marmite, versez le bouillon chaud et laissez mijoter couvert 30 minutes. GRILLER LES AMANDES: Faites griller les amandes dans le beurre jusqu'à ce qu'elles soient dorées et croustillantes. SERVIR: Servez le freekeh avec le poulet dessus, saupoudré des amandes grillées.",
+    "de": "FREEKEH ABSPÜLEN: Den Freekeh unter kaltem Wasser abspülen, um Staub zu entfernen, dann abtropfen lassen. HÄHNCHEN ANBRATEN: Die Hähnchenschenkel in Öl von allen Seiten anbraten, dann beiseitestellen. ZWIEBEL ANDÜNSTEN: Die gehackte Zwiebel im selben Topf andünsten, bis sie glasig ist. FREEKEH HINZUFÜGEN: Den abgespülten Freekeh, Zimt und Kreuzkümmel hinzufügen, 2 Minuten unter Rühren andünsten. KÖCHELN: Die Hähnchenschenkel zurück in den Topf geben, die heiße Brühe angießen und zugedeckt 30 Minuten köcheln lassen. MANDELN RÖSTEN: Die Mandeln in Butter goldbraun und knusprig rösten. SERVIEREN: Den Freekeh mit dem Hähnchen obendrauf servieren, mit den gerösteten Mandeln bestreut.",
+    "pt": "ENXAGUAR O FREEKEH: Enxague o freekeh em água fria para remover o pó, depois escorra. DOURAR O FRANGO: Doure as coxas de frango em óleo de todos os lados, depois reserve. REFOGAR A CEBOLA: Refogue a cebola picada na mesma panela até ficar translúcida. ADICIONAR O FREEKEH: Junte o freekeh enxaguado, a canela e o cominho, refogue 2 minutos mexendo. FERVER: Devolva as coxas de frango à panela, deite o caldo quente e cozinhe tapado em lume brando 30 minutos. TOSTAR AS AMÊNDOAS: Toste as amêndoas na manteiga até dourarem e ficarem estaladiças. SERVIR: Sirva o freekeh com o frango por cima, polvilhado com as amêndoas tostadas.",
+    "ru": "ПРОМЫВКА ФРИКЕ: Промойте фрике под холодной водой, чтобы удалить пыль, затем слейте воду. ОБЖАРКА КУРИЦЫ: Обжарьте куриные бёдра в масле со всех сторон, затем отложите. ОБЖАРКА ЛУКА: Обжарьте нарезанный лук в той же кастрюле до прозрачности. ДОБАВЛЕНИЕ ФРИКЕ: Добавьте промытый фрике, корицу и тмин, обжаривайте 2 минуты, помешивая. ВАРКА: Верните куриные бёдра в кастрюлю, влейте горячий бульон и варите под крышкой на слабом огне 30 минут. ОБЖАРКА МИНДАЛЯ: Обжарьте миндаль в масле до золотистого хруста. ПОДАЧА: Подавайте фрике с курицей сверху, посыпав обжаренным миндалём.",
+    "ar": "شطف الفريكة: اشطف الفريكة تحت الماء البارد لإزالة الغبار ثم صفّها. تحمير الدجاج: حمّر أفخاذ الدجاج في الزيت من جميع الجوانب ثم ضعها جانبًا. تحمير البصل: حمّر البصل المفروم في نفس القدر حتى يصبح شفافًا. إضافة الفريكة: أضف الفريكة المشطوفة والقرفة والكمون، حمّر لمدة دقيقتين مع التحريك. الطهي: أعد أفخاذ الدجاج إلى القدر، اسكب المرق الساخن واطهِ مغطى على نار هادئة لمدة 30 دقيقة. تحميص اللوز: حمّص اللوز في الزبدة حتى يصبح ذهبيًا ومقرمشًا. التقديم: قدّم الفريكة مع الدجاج فوقها، مرشوشة باللوز المحمص.",
+    "zh": "冲洗烤麦：将烤麦用冷水冲洗去除灰尘，然后沥干。煎鸡腿：将鸡腿在油中各面煎至金黄，取出备用。炒洋葱：在同一锅中将切碎的洋葱炒至透明。加入烤麦：加入冲洗好的烤麦、肉桂和孜然，翻炒2分钟。炖煮：将鸡腿放回锅中，倒入热鸡汤，盖上盖子小火炖30分钟。烤杏仁：将杏仁用黄油煎至金黄酥脆。装盘：将鸡肉放在烤麦上，撒上烤杏仁食用。",
+    "ja": "フリーカをすすぐ：フリーカを冷水ですすいでほこりを取り除き、水を切る。鶏肉を焼く：鶏もも肉を油で全面きつね色に焼き、取り置く。玉ねぎを炒める：同じ鍋で刻んだ玉ねぎを透明になるまで炒める。フリーカを加える：すすいだフリーカ、シナモン、クミンを加え、混ぜながら2分炒める。煮込む：鶏もも肉を鍋に戻し、熱い出汁を注いでふたをして弱火で30分煮込む。アーモンドを炒る：アーモンドをバターできつね色でカリカリになるまで炒る。盛り付け：フリーカの上に鶏肉をのせ、炒ったアーモンドを振りかけて提供する。",
+    "hi": "फ्रीकेह धोएं: फ्रीकेह को ठंडे पानी में धोकर धूल हटाएं, फिर छान लें। चिकन भूरा करें: चिकन थाई को तेल में सभी तरफ से भूरा करें, फिर अलग रखें। प्याज़ भूनें: उसी बर्तन में कटा प्याज़ पारदर्शी होने तक भूनें। फ्रीकेह डालें: धुला फ्रीकेह, दालचीनी और जीरा डालें, हिलाते हुए 2 मिनट भूनें। उबालें: चिकन थाई को वापस बर्तन में डालें, गरम शोरबा डालें और ढककर धीमी आँच पर 30 मिनट पकाएं। बादाम भूनें: बादाम को मक्खन में सुनहरा और कुरकुरा होने तक भूनें। परोसें: फ्रीकेह के ऊपर चिकन रखकर, भुने बादाम छिड़ककर परोसें।",
+    "tr": "FİRİĞİ DURULAYIN: Toz almak için firiği soğuk suda durulayın, sonra süzün. TAVUĞU KIZARTIN: Tavuk butlarını yağda her tarafından kızartın, sonra bir kenara koyun. SOĞANI KAVURUN: Aynı tencerede doğranmış soğanı şeffaflaşana kadar kavurun. FİRİĞİ EKLEYİN: Durulanmış firiği, tarçını ve kimyonu ekleyin, karıştırarak 2 dakika kavurun. PİŞİRİN: Tavuk butlarını tencereye geri koyun, sıcak suyu dökün ve kapaklı olarak kısık ateşte 30 dakika pişirin. BADEMLERİ KAVURUN: Bademleri tereyağında altın rengi ve çıtır olana kadar kavurun. SERVİS EDİN: Firiği üzerinde tavukla, kavrulmuş badem serperek servis edin.",
+    "it": "SCIACQUARE IL FREEKEH: Sciacquate il freekeh sotto acqua fredda per rimuovere la polvere, poi scolate. ROSOLARE IL POLLO: Rosolate le cosce di pollo nell'olio da tutti i lati, poi mettete da parte. SOFFRIGGERE LA CIPOLLA: Soffriggete la cipolla tritata nella stessa pentola finché diventa traslucida. AGGIUNGERE IL FREEKEH: Aggiungete il freekeh sciacquato, la cannella e il cumino, soffriggete 2 minuti mescolando. CUOCERE: Rimettete le cosce di pollo nella pentola, versate il brodo caldo e cuocete coperto a fuoco basso per 30 minuti. TOSTARE LE MANDORLE: Tostate le mandorle nel burro finché dorate e croccanti. SERVIRE: Servite il freekeh con il pollo sopra, cosparso con le mandorle tostate.",
+    "ko": "프리케 헹구기: 프리케를 찬물에 헹궈 먼지를 제거한 후 물기를 뺀다. 닭고기 굽기: 닭 허벅지살을 기름에 모든 면이 노릇해지도록 구운 후 따로 둔다. 양파 볶기: 같은 냄비에 다진 양파를 투명해질 때까지 볶는다. 프리케 넣기: 헹군 프리케, 계피, 커민을 넣고 저으며 2분간 볶는다. 끓이기: 닭고기를 냄비에 다시 넣고 뜨거운 육수를 부어 뚜껑을 덮고 약불에서 30분간 끓인다. 아몬드 볶기: 아몬드를 버터에 황금빛으로 바삭해질 때까지 볶는다. 담아내기: 프리케 위에 닭고기를 얹고 볶은 아몬드를 뿌려 낸다."
+  },
+  "originText": {
+    "ro": "Freekeh este unul dintre cele mai vechi cereale procesate cunoscute, cu origini care datează cu mii de ani în urmă în regiunea Levantului. Tehnica sa unică de preparare — recoltarea grâului cât încă e verde, urmată de arderea controlată a paielor și pleavei, lăsând boabele intacte dar afumate — a fost, potrivit legendei, descoperită accidental când un sat sirian antic și-a văzut câmpul de grâu ars de un incendiu neintenționat și a descoperit că boabele rămase erau totuși comestibile și delicioase.\n\nSpre deosebire de bulgur, care e făcut din grâu copt complet, freekeh păstrează o parte din clorofila grâului tânăr, oferindu-i o culoare verzuie și un profil nutrițional mai bogat în proteine și fibre. În bucătăria siriană, se gătește adesea în bulion de pui sau de miel, aromat cu scorțișoară și migdale prăjite, ca fel principal de sărbătoare.",
+    "en": "Freekeh is one of the oldest known processed grains, with origins dating back thousands of years in the Levant region. Its unique preparation technique — harvesting the wheat while still green, followed by controlled burning of the straw and chaff, leaving the grains intact but smoky — was, according to legend, discovered by accident when an ancient Syrian village saw its wheat field burned by an unintended fire and found that the remaining grains were still edible and delicious.\n\nUnlike bulgur, which is made from fully ripened wheat, freekeh retains some of the young wheat's chlorophyll, giving it a greenish color and a nutritional profile richer in protein and fiber. In Syrian cuisine, it's often cooked in chicken or lamb broth, scented with cinnamon and toasted almonds, as a festive main course.",
+    "es": "El freekeh es uno de los granos procesados más antiguos conocidos, con orígenes que se remontan miles de años en la región del Levante. Su técnica única de preparación — cosechar el trigo mientras aún está verde, seguida de la quema controlada de la paja y la cascarilla, dejando los granos intactos pero ahumados — fue, según la leyenda, descubierta por accidente cuando un antiguo pueblo sirio vio su campo de trigo quemado por un incendio no intencionado y descubrió que los granos restantes seguían siendo comestibles y deliciosos.\n\nA diferencia del bulgur, hecho de trigo completamente maduro, el freekeh conserva parte de la clorofila del trigo joven, dándole un color verdoso y un perfil nutricional más rico en proteínas y fibra. En la cocina siria, se cocina a menudo en caldo de pollo o cordero, perfumado con canela y almendras tostadas, como plato principal festivo.",
+    "fr": "Le freekeh est l'un des plus anciens grains transformés connus, avec des origines remontant à des milliers d'années dans la région du Levant. Sa technique de préparation unique — récolter le blé encore vert, suivie d'un brûlage contrôlé de la paille et de la balle, laissant les grains intacts mais fumés — a été, selon la légende, découverte par accident lorsqu'un ancien village syrien a vu son champ de blé brûlé par un incendie involontaire et a découvert que les grains restants étaient toujours comestibles et délicieux.\n\nContrairement au boulgour, fait de blé pleinement mûr, le freekeh conserve une partie de la chlorophylle du blé jeune, lui donnant une couleur verdâtre et un profil nutritionnel plus riche en protéines et en fibres. Dans la cuisine syrienne, il est souvent cuisiné dans un bouillon de poulet ou d'agneau, parfumé à la cannelle et aux amandes grillées, comme plat principal de fête.",
+    "de": "Freekeh ist eines der ältesten bekannten verarbeiteten Getreide, mit Ursprüngen, die Tausende von Jahren in der Levante-Region zurückreichen. Seine einzigartige Zubereitungstechnik — Ernte des Weizens, während er noch grün ist, gefolgt von kontrolliertem Abbrennen von Stroh und Spreu, wobei die Körner intakt, aber rauchig bleiben — wurde der Legende nach zufällig entdeckt, als ein altes syrisches Dorf sein Weizenfeld durch ein unbeabsichtigtes Feuer verbrannt sah und feststellte, dass die übrig gebliebenen Körner immer noch essbar und köstlich waren.\n\nIm Gegensatz zu Bulgur, der aus voll ausgereiftem Weizen hergestellt wird, behält Freekeh einen Teil des Chlorophylls des jungen Weizens, was ihm eine grünliche Farbe und ein an Protein und Ballaststoffen reicheres Nährwertprofil verleiht. In der syrischen Küche wird es oft in Hühner- oder Lammbrühe gekocht, mit Zimt und gerösteten Mandeln aromatisiert, als festliches Hauptgericht.",
+    "pt": "O freekeh é um dos grãos processados mais antigos conhecidos, com origens que remontam a milhares de anos na região do Levante. A sua técnica única de preparação — colher o trigo ainda verde, seguida de queima controlada da palha e do farelo, deixando os grãos intactos mas defumados — foi, segundo a lenda, descoberta por acidente quando uma antiga aldeia síria viu o seu campo de trigo queimado por um incêndio não intencional e descobriu que os grãos restantes ainda eram comestíveis e deliciosos.\n\nAo contrário do bulgur, feito de trigo totalmente maduro, o freekeh retém parte da clorofila do trigo jovem, dando-lhe uma cor esverdeada e um perfil nutricional mais rico em proteína e fibra. Na cozinha síria, é frequentemente cozinhado em caldo de galinha ou borrego, perfumado com canela e amêndoas tostadas, como prato principal festivo.",
+    "ru": "Фрике — одно из старейших известных обработанных зёрен, происхождение которого насчитывает тысячи лет в регионе Леванта. Его уникальная техника приготовления — сбор пшеницы, пока она ещё зелёная, с последующим контролируемым сжиганием соломы и шелухи, оставляющим зёрна целыми, но с дымным ароматом — согласно легенде, была открыта случайно, когда древняя сирийская деревня увидела своё пшеничное поле, охваченное непреднамеренным пожаром, и обнаружила, что оставшиеся зёрна всё ещё съедобны и вкусны.\n\nВ отличие от булгура, изготовленного из полностью созревшей пшеницы, фрике сохраняет часть хлорофилла молодой пшеницы, придавая ему зеленоватый цвет и более богатый белком и клетчаткой пищевой профиль. В сирийской кухне его часто готовят в курином или бараньем бульоне, ароматизированном корицей и обжаренным миндалём, как праздничное основное блюдо.",
+    "ar": "الفريكة واحدة من أقدم الحبوب المعالجة المعروفة، وتعود أصولها إلى آلاف السنين في منطقة بلاد الشام. تقنية تحضيرها الفريدة — حصاد القمح وهو لا يزال أخضر، يتبعه حرق مضبوط للقش والتبن، مع بقاء الحبوب سليمة لكن مدخنة — اكتُشفت، وفقًا للأسطورة، بالصدفة عندما شهدت قرية سورية قديمة احتراق حقل قمحها بحريق غير مقصود واكتشفت أن الحبوب المتبقية لا تزال صالحة للأكل ولذيذة.\n\nخلافًا للبرغل، المصنوع من قمح ناضج تمامًا، تحتفظ الفريكة بجزء من كلوروفيل القمح الغض، مما يمنحها لونًا مخضرًا وقيمة غذائية أغنى بالبروتين والألياف. في المطبخ السوري، تُطهى غالبًا في مرق الدجاج أو الغنم، معطّرة بالقرفة واللوز المحمص، كطبق رئيسي احتفالي.",
+    "zh": "烤麦是已知最古老的加工谷物之一，其起源可追溯到黎凡特地区数千年前。它独特的制作技艺——在小麦仍呈青绿色时收割，随后经过可控燃烧去除麦秆和麦壳，使麦粒保持完整但带有烟熏味——据传说是偶然发现的：一个古代叙利亚村庄的麦田意外遭遇火灾，人们发现残留的麦粒依然可以食用且味道鲜美。\n\n与用完全成熟小麦制成的布格麦不同，烤麦保留了部分青麦的叶绿素，赋予其淡绿色泽，营养成分中蛋白质和纤维含量也更高。在叙利亚菜肴中，它常以鸡汤或羊肉汤炖煮，加入肉桂和烤杏仁调味，作为节庆主菜享用。",
+    "ja": "フリーカは知られている中で最も古い加工穀物の一つであり、その起源はレバント地方で数千年前にまでさかのぼる。まだ青いうちに小麦を収穫し、その後わらともみ殻を制御しながら焼き、粒は無傷のまま燻製状態にするという独特の調理技法は、伝説によれば、古代シリアの村が意図せぬ火事で小麦畑を焼失させた際、残った粒がそれでも食べられて美味しいことを発見したことから偶然生まれたとされる。\n\n完全に熟した小麦から作られるブルグルとは異なり、フリーカは若い小麦のクロロフィルの一部を保持しており、緑がかった色合いと、タンパク質と食物繊維がより豊富な栄養プロファイルを持つ。シリア料理では、しばしば鶏肉やラム肉の出汁で調理され、シナモンと炒ったアーモンドで香り付けされた、祝祭のメイン料理として提供される。",
+    "hi": "फ्रीकेह ज्ञात सबसे पुराने संसाधित अनाजों में से एक है, जिसकी उत्पत्ति लेवांत क्षेत्र में हज़ारों साल पहले हुई थी। इसकी अनूठी तैयारी तकनीक — गेहूं को हरा रहते हुए काटना, फिर पुआल और भूसी को नियंत्रित तरीके से जलाना, जिससे दाने बरकरार लेकिन धुएँदार रह जाते हैं — किंवदंती के अनुसार, दुर्घटनावश खोजी गई थी जब एक प्राचीन सीरियाई गांव ने अनजाने में लगी आग से अपना गेहूं का खेत जलते देखा और पाया कि बचे हुए दाने अभी भी खाने योग्य और स्वादिष्ट थे।\n\nबुल्गुर के विपरीत, जो पूरी तरह पके गेहूं से बनता है, फ्रीकेह युवा गेहूं का कुछ क्लोरोफिल बरकरार रखता है, जो इसे हरापन रंग और प्रोटीन व फाइबर से समृद्ध पोषण प्रोफ़ाइल देता है। सीरियाई व्यंजनों में, इसे अक्सर चिकन या भेड़ के शोरबे में पकाया जाता है, दालचीनी और भुने बादाम से सुगंधित, एक उत्सवी मुख्य व्यंजन के रूप में।",
+    "tr": "Firik, kökleri Levant bölgesinde binlerce yıl öncesine dayanan bilinen en eski işlenmiş tahıllardan biridir. Kendine özgü hazırlama tekniği — buğdayı hâlâ yeşilken hasat etmek, ardından saman ve kepeği kontrollü şekilde yakarak taneleri sağlam ama dumanlı bırakmak — efsaneye göre, eski bir Suriye köyünün buğday tarlasının istem dışı bir yangında yanmasıyla ve kalan tanelerin hâlâ yenilebilir ve lezzetli olduğunun keşfedilmesiyle tesadüfen bulunmuştur.\n\nTam olgunlaşmış buğdaydan yapılan bulgurun aksine, firik genç buğdayın klorofilinin bir kısmını korur, ona yeşilimsi bir renk ve protein ile lif açısından daha zengin bir besin profili verir. Suriye mutfağında, genellikle tarçın ve kavrulmuş bademle kokulandırılmış tavuk veya kuzu suyunda pişirilir, bayramlık ana yemek olarak.",
+    "it": "Il freekeh è uno dei più antichi cereali lavorati conosciuti, con origini che risalgono a migliaia di anni fa nella regione del Levante. La sua tecnica di preparazione unica — raccogliere il grano ancora verde, seguita dalla combustione controllata di paglia e pula, lasciando i chicchi intatti ma affumicati — fu, secondo la leggenda, scoperta per caso quando un antico villaggio siriano vide il proprio campo di grano bruciato da un incendio involontario e scoprì che i chicchi rimasti erano ancora commestibili e deliziosi.\n\nA differenza del bulgur, fatto da grano completamente maturo, il freekeh conserva parte della clorofilla del grano giovane, dandogli un colore verdastro e un profilo nutrizionale più ricco di proteine e fibre. Nella cucina siriana, viene spesso cucinato in brodo di pollo o agnello, profumato con cannella e mandorle tostate, come piatto principale festivo.",
+    "ko": "프리케는 레반트 지역에서 수천 년 전으로 거슬러 올라가는 기원을 가진, 알려진 가장 오래된 가공 곡물 중 하나다. 밀이 아직 푸를 때 수확한 후 짚과 겨를 통제된 방식으로 태워 알갱이는 온전히 남기되 훈연 향을 입히는 독특한 조리 기법은, 전설에 따르면 고대 시리아 마을에서 의도치 않은 화재로 밀밭이 불탔을 때 남은 알갱이가 여전히 먹을 수 있고 맛있다는 것을 발견하면서 우연히 발견되었다고 한다.\n\n완전히 익은 밀로 만드는 불구르와 달리, 프리케는 어린 밀의 엽록소 일부를 보존하여 녹색을 띠며, 단백질과 식이섬유가 더 풍부한 영양 성분을 지닌다. 시리아 요리에서는 종종 계피와 볶은 아몬드로 향을 낸 닭고기나 양고기 육수에 조리하여 축제의 메인 요리로 낸다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 18,
+    "tags": [],
+    "desc": {
+      "ro": "Grâu verde afumat fiert în bulion de pui, cu scorțișoară și migdale prăjite.",
+      "en": "Smoky green wheat cooked in chicken broth, with cinnamon and toasted almonds.",
+      "es": "Trigo verde ahumado cocido en caldo de pollo, con canela y almendras tostadas.",
+      "fr": "Blé vert fumé cuit dans un bouillon de poulet, à la cannelle et aux amandes grillées.",
+      "de": "Rauchiger grüner Weizen in Hühnerbrühe gegart, mit Zimt und gerösteten Mandeln.",
+      "pt": "Trigo verde defumado cozinhado em caldo de galinha, com canela e amêndoas tostadas.",
+      "ru": "Копчёная зелёная пшеница, приготовленная в курином бульоне, с корицей и миндалём.",
+      "ar": "قمح أخضر مدخن مطهو في مرق الدجاج، مع القرفة واللوز المحمص.",
+      "zh": "在鸡汤中炖煮的烟熏青麦，配肉桂和烤杏仁。",
+      "ja": "鶏だしで煮たスモーキーな青麦、シナモンと炒りアーモンド添え。",
+      "hi": "चिकन शोरबे में पका धुएँदार हरा गेहूं, दालचीनी और भुने बादाम के साथ।",
+      "tr": "Tavuk suyunda pişmiş dumanlı yeşil buğday, tarçın ve kavrulmuş bademle.",
+      "it": "Grano verde affumicato cotto nel brodo di pollo, con cannella e mandorle tostate.",
+      "ko": "닭 육수에 끓인 훈연 향 초록 밀, 계피와 볶은 아몬드를 곁들임."
+    }
+  }
+}

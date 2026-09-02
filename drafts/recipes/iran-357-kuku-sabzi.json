@@ -1,0 +1,178 @@
+{
+  "id": 357,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Iran", "en": "Iran", "es": "Irán", "fr": "Iran", "de": "Iran",
+    "pt": "Irão", "ru": "Иран", "ar": "إيران", "zh": "伊朗", "ja": "イラン",
+    "hi": "ईरान", "tr": "İran", "it": "Iran", "ko": "이란"
+  },
+  "name": {
+    "ro": "Kuku Sabzi (Omletă persană cu verdețuri)", "en": "Kuku Sabzi (Persian Herb Frittata)", "es": "Kuku Sabzi (Frittata persa de hierbas)",
+    "fr": "Kuku Sabzi (Frittata persane aux herbes)", "de": "Kuku Sabzi (Persisches Kräuter-Omelett)", "pt": "Kuku Sabzi (Fritada persa de ervas)",
+    "ru": "Куку сабзи (Персидский зелёный омлет)", "ar": "كوكو سبزي", "zh": "波斯香草蛋饼",
+    "ja": "クク・サブジ（ペルシャ風ハーブオムレツ）", "hi": "कुकु सब्ज़ी (फ़ारसी हर्ब फ्रिटाटा)", "tr": "Kuku Sebzi (Fars Otlu Omleti)",
+    "it": "Kuku Sabzi (Frittata persiana alle erbe)", "ko": "쿠쿠 사브지 (페르시아 허브 프리타타)"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥚", "t": "Mai mult verdeață decât ou", "d": "Verdețurile domină cantitativ, oul doar le leagă."},
+      {"icon": "🌿", "t": "Cinci ierburi verzi", "d": "Pătrunjel, mărar, coriandru, ceapă verde și schinduf."},
+      {"icon": "🌰", "t": "Nuci și barberis", "d": "Nuci pisate și barberis presărate pentru textură și acrișor."},
+      {"icon": "🍽️", "t": "Servită rece", "d": "Se servește adesea rece, feliată, ca parte din platoul de meze."}
+    ],
+    "en": [
+      {"icon": "🥚", "t": "More herbs than egg", "d": "Herbs dominate by volume, egg just binds them together."},
+      {"icon": "🌿", "t": "Five green herbs", "d": "Parsley, dill, cilantro, green onion and fenugreek."},
+      {"icon": "🌰", "t": "Walnuts and barberries", "d": "Crushed walnuts and barberries add texture and tartness."},
+      {"icon": "🍽️", "t": "Served cold", "d": "Often served cold, sliced, as part of a meze spread."}
+    ],
+    "es": [
+      {"icon": "🥚", "t": "Más hierbas que huevo", "d": "Las hierbas dominan en volumen, el huevo solo las une."},
+      {"icon": "🌿", "t": "Cinco hierbas verdes", "d": "Perejil, eneldo, cilantro, cebolleta y fenogreco."},
+      {"icon": "🌰", "t": "Nueces y agracejo", "d": "Nueces trituradas y agracejo añaden textura y acidez."},
+      {"icon": "🍽️", "t": "Servida fría", "d": "A menudo se sirve fría, en rodajas, como parte de un mezze."}
+    ],
+    "fr": [
+      {"icon": "🥚", "t": "Plus d'herbes que d'œuf", "d": "Les herbes dominent en volume, l'œuf ne fait que les lier."},
+      {"icon": "🌿", "t": "Cinq herbes vertes", "d": "Persil, aneth, coriandre, oignon vert et fenugrec."},
+      {"icon": "🌰", "t": "Noix et baies de berbéris", "d": "Noix concassées et baies de berbéris ajoutent texture et acidité."},
+      {"icon": "🍽️", "t": "Servie froide", "d": "Souvent servie froide, tranchée, dans un assortiment de mezze."}
+    ],
+    "de": [
+      {"icon": "🥚", "t": "Mehr Kräuter als Ei", "d": "Kräuter dominieren mengenmäßig, Ei bindet sie nur."},
+      {"icon": "🌿", "t": "Fünf grüne Kräuter", "d": "Petersilie, Dill, Koriander, Frühlingszwiebel und Bockshornklee."},
+      {"icon": "🌰", "t": "Walnüsse und Berberitzen", "d": "Zerstoßene Walnüsse und Berberitzen für Textur und Säure."},
+      {"icon": "🍽️", "t": "Kalt serviert", "d": "Oft kalt, in Scheiben, als Teil einer Mezze-Platte serviert."}
+    ],
+    "pt": [
+      {"icon": "🥚", "t": "Mais ervas do que ovo", "d": "As ervas dominam em volume, o ovo apenas as liga."},
+      {"icon": "🌿", "t": "Cinco ervas verdes", "d": "Salsa, endro, coentro, cebolinha e fenacho."},
+      {"icon": "🌰", "t": "Nozes e agrião-do-Nepal", "d": "Nozes trituradas e agrião-do-Nepal adicionam textura e acidez."},
+      {"icon": "🍽️", "t": "Servida fria", "d": "Frequentemente servida fria, fatiada, como parte de um mezze."}
+    ],
+    "ru": [
+      {"icon": "🥚", "t": "Больше зелени, чем яиц", "d": "Зелень преобладает по объёму, яйцо лишь скрепляет её."},
+      {"icon": "🌿", "t": "Пять зелёных трав", "d": "Петрушка, укроп, кинза, зелёный лук и пажитник."},
+      {"icon": "🌰", "t": "Орехи и барбарис", "d": "Дроблёные грецкие орехи и барбарис придают текстуру и кислинку."},
+      {"icon": "🍽️", "t": "Подаётся холодным", "d": "Часто подаётся холодным, нарезанным, как часть мезе."}
+    ],
+    "ar": [
+      {"icon": "🥚", "t": "أعشاب أكثر من البيض", "d": "تهيمن الأعشاب من حيث الكمية، والبيض يربطها فقط."},
+      {"icon": "🌿", "t": "خمس أعشاب خضراء", "d": "بقدونس وشبت وكزبرة وبصل أخضر وحلبة."},
+      {"icon": "🌰", "t": "جوز وزرشك", "d": "جوز مطحون وزرشك يضيفان قوامًا وحموضة."},
+      {"icon": "🍽️", "t": "تُقدَّم باردة", "d": "غالبًا ما تُقدَّم باردة ومقطعة كجزء من طبق مازة."}
+    ],
+    "zh": [
+      {"icon": "🥚", "t": "香草多于鸡蛋", "d": "香草在分量上占主导，鸡蛋只是起黏合作用。"},
+      {"icon": "🌿", "t": "五种绿色香草", "d": "欧芹、莳萝、香菜、青葱和葫芦巴。"},
+      {"icon": "🌰", "t": "核桃与小檗果", "d": "碎核桃和小檗果增添口感和酸味。"},
+      {"icon": "🍽️", "t": "冷食", "d": "常切片冷食，作为什锦冷盘的一部分。"}
+    ],
+    "ja": [
+      {"icon": "🥚", "t": "卵よりハーブが多い", "d": "ハーブが量的に主体で、卵はそれをつなぐだけ。"},
+      {"icon": "🌿", "t": "5種類の緑のハーブ", "d": "パセリ、ディル、コリアンダー、青ねぎ、フェヌグリーク。"},
+      {"icon": "🌰", "t": "くるみとバーベリー", "d": "砕いたくるみとバーベリーが食感と酸味を加える。"},
+      {"icon": "🍽️", "t": "冷やして提供", "d": "しばしば冷やしてスライスし、メゼの一品として提供される。"}
+    ],
+    "hi": [
+      {"icon": "🥚", "t": "अंडे से ज़्यादा जड़ी-बूटियां", "d": "जड़ी-बूटियां मात्रा में हावी होती हैं, अंडा उन्हें सिर्फ बांधता है।"},
+      {"icon": "🌿", "t": "पांच हरी जड़ी-बूटियां", "d": "अजमोद, सोआ, धनिया, हरा प्याज़ और मेथी।"},
+      {"icon": "🌰", "t": "अखरोट और बारबेरी", "d": "कुचले अखरोट और बारबेरी बनावट और खट्टापन जोड़ते हैं।"},
+      {"icon": "🍽️", "t": "ठंडा परोसा गया", "d": "अक्सर ठंडा, कटा हुआ, मेज़े की थाली के हिस्से के रूप में परोसा जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🥚", "t": "Yumurtadan çok ot", "d": "Otlar hacimce baskındır, yumurta onları sadece bağlar."},
+      {"icon": "🌿", "t": "Beş yeşil ot", "d": "Maydanoz, dereotu, kişniş, yeşil soğan ve çemen otu."},
+      {"icon": "🌰", "t": "Ceviz ve berberis", "d": "Ezilmiş ceviz ve berberis doku ve ekşilik katar."},
+      {"icon": "🍽️", "t": "Soğuk servis edilir", "d": "Sıklıkla soğuk, dilimlenmiş, bir meze tabağının parçası olarak servis edilir."}
+    ],
+    "it": [
+      {"icon": "🥚", "t": "Più erbe che uova", "d": "Le erbe dominano in volume, l'uovo le lega soltanto."},
+      {"icon": "🌿", "t": "Cinque erbe verdi", "d": "Prezzemolo, aneto, coriandolo, cipollotto e fieno greco."},
+      {"icon": "🌰", "t": "Noci e crespino", "d": "Noci schiacciate e crespino aggiungono consistenza e acidità."},
+      {"icon": "🍽️", "t": "Servita fredda", "d": "Spesso servita fredda, a fette, come parte di un piatto di mezze."}
+    ],
+    "ko": [
+      {"icon": "🥚", "t": "달걀보다 허브가 많음", "d": "허브가 양적으로 주를 이루고, 달걀은 그저 이들을 엮어준다."},
+      {"icon": "🌿", "t": "다섯 가지 녹색 허브", "d": "파슬리, 딜, 고수, 파, 호로파."},
+      {"icon": "🌰", "t": "호두와 매자 열매", "d": "으깬 호두와 매자 열매가 식감과 새콤함을 더한다."},
+      {"icon": "🍽️", "t": "차갑게 제공", "d": "종종 차갑게 썰어서 메제 플래터의 일부로 제공된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["6 ouă", "150g pătrunjel tocat", "100g mărar tocat", "100g coriandru tocat", "3 fire ceapă verde tocate", "1 linguriță schinduf uscat", "50g nuci pisate", "2 linguri barberis", "1 linguriță praf de copt", "sare, piper", "ulei pentru prăjit"],
+    "en": ["6 eggs", "150g chopped parsley", "100g chopped dill", "100g chopped cilantro", "3 green onions, chopped", "1 tsp dried fenugreek leaves", "50g crushed walnuts", "2 tbsp barberries", "1 tsp baking powder", "salt, pepper", "oil for frying"],
+    "es": ["6 huevos", "150g de perejil picado", "100g de eneldo picado", "100g de cilantro picado", "3 cebolletas picadas", "1 cdta de hojas de fenogreco secas", "50g de nueces trituradas", "2 cdas de agracejo", "1 cdta de polvo de hornear", "sal, pimienta", "aceite para freír"],
+    "fr": ["6 œufs", "150g de persil haché", "100g d'aneth haché", "100g de coriandre hachée", "3 oignons verts hachés", "1 c. à c. de feuilles de fenugrec séchées", "50g de noix concassées", "2 c. à s. de baies de berbéris", "1 c. à c. de levure chimique", "sel, poivre", "huile pour frire"],
+    "de": ["6 Eier", "150g gehackte Petersilie", "100g gehackter Dill", "100g gehackter Koriander", "3 Frühlingszwiebeln, gehackt", "1 TL getrocknete Bockshornkleeblätter", "50g zerstoßene Walnüsse", "2 EL Berberitzen", "1 TL Backpulver", "Salz, Pfeffer", "Öl zum Braten"],
+    "pt": ["6 ovos", "150g de salsa picada", "100g de endro picado", "100g de coentro picado", "3 cebolinhas picadas", "1 colher de chá de folhas de fenacho secas", "50g de nozes trituradas", "2 c. sopa de agrião-do-Nepal", "1 colher de chá de fermento em pó", "sal, pimenta", "óleo para fritar"],
+    "ru": ["6 яиц", "150г нарезанной петрушки", "100г нарезанного укропа", "100г нарезанной кинзы", "3 стебля зелёного лука, нарезанного", "1 ч.л. сушёных листьев пажитника", "50г дроблёных грецких орехов", "2 ст.л. барбариса", "1 ч.л. разрыхлителя", "соль, перец", "масло для жарки"],
+    "ar": ["6 بيضات", "150غ بقدونس مفروم", "100غ شبت مفروم", "100غ كزبرة مفرومة", "3 أعواد بصل أخضر مفروم", "ملعقة صغيرة أوراق حلبة مجففة", "50غ جوز مطحون", "2 ملعقة كبيرة زرشك", "ملعقة صغيرة بيكنج بودر", "ملح، فلفل", "زيت للقلي"],
+    "zh": ["鸡蛋6个", "切碎欧芹150克", "切碎莳萝100克", "切碎香菜100克", "青葱3根，切碎", "干葫芦巴叶1茶匙", "碎核桃50克", "小檗果2汤匙", "泡打粉1茶匙", "盐、胡椒", "煎制用油"],
+    "ja": ["卵 6個", "刻んだパセリ 150g", "刻んだディル 100g", "刻んだコリアンダー 100g", "青ねぎ 3本（刻む）", "乾燥フェヌグリークの葉 小さじ1", "砕いたくるみ 50g", "バーベリー 大さじ2", "ベーキングパウダー 小さじ1", "塩、こしょう", "揚げ焼き用の油"],
+    "hi": ["6 अंडे", "150 ग्राम कटा अजमोद", "100 ग्राम कटा सोआ", "100 ग्राम कटा धनिया", "3 हरे प्याज़, कटे हुए", "1 छोटा चम्मच सूखी मेथी की पत्तियां", "50 ग्राम कुचले अखरोट", "2 बड़े चम्मच बारबेरी", "1 छोटा चम्मच बेकिंग पाउडर", "नमक, काली मिर्च", "तलने के लिए तेल"],
+    "tr": ["6 yumurta", "150g doğranmış maydanoz", "100g doğranmış dereotu", "100g doğranmış kişniş", "3 yeşil soğan, doğranmış", "1 çay kaşığı kuru çemen otu yaprağı", "50g ezilmiş ceviz", "2 yemek kaşığı berberis", "1 çay kaşığı kabartma tozu", "tuz, karabiber", "kızartmak için yağ"],
+    "it": ["6 uova", "150g di prezzemolo tritato", "100g di aneto tritato", "100g di coriandolo tritato", "3 cipollotti tritati", "1 cucchiaino di foglie di fieno greco essiccate", "50g di noci tritate", "2 cucchiai di crespino", "1 cucchiaino di lievito in polvere", "sale, pepe", "olio per friggere"],
+    "ko": ["달걀 6개", "다진 파슬리 150g", "다진 딜 100g", "다진 고수 100g", "파 3대, 다진 것", "말린 호로파 잎 1작은술", "으깬 호두 50g", "매자 열매 2큰술", "베이킹파우더 1작은술", "소금, 후추", "튀김용 기름"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE VERDEAȚĂ: Toacă mărunt toate ierburile — pătrunjel, mărar, coriandru și ceapă verde — și amestecă-le într-un bol mare. BATERE OUĂ: Bate ouăle separat cu sare, piper și praful de copt, până devin spumoase. COMBINARE: Toarnă ouăle bătute peste verdețurile tocate, adaugă schinduful și amestecă bine până se omogenizează. ÎNCĂLZIRE TIGAIE: Încălzește ulei din belșug într-o tigaie antiaderentă, la foc mediu-mic. TURNARE COMPOZIȚIE: Toarnă amestecul de verdeață și ou în tigaie, nivelează suprafața, presară nucile și barberis-ul deasupra. GĂTIRE LENTĂ: Acoperă cu capac și lasă să se gătească la foc mic 15-20 minute, până se leagă bine la bază. ÎNTOARCERE: Întoarce omleta cu grijă pe o farfurie, apoi alunecă-o înapoi în tigaie pentru a găti și cealaltă parte 5-10 minute.",
+    "en": "PREPARE HERBS: Finely chop all the herbs — parsley, dill, cilantro and green onion — and mix them in a large bowl. BEAT EGGS: Beat the eggs separately with salt, pepper and baking powder, until foamy. COMBINE: Pour the beaten eggs over the chopped herbs, add the fenugreek and mix well until combined. HEAT PAN: Heat plenty of oil in a non-stick pan over medium-low heat. POUR MIXTURE: Pour the herb and egg mixture into the pan, level the surface, sprinkle the walnuts and barberries on top. COOK SLOWLY: Cover with a lid and let cook on low heat for 15-20 minutes, until well set at the base. FLIP: Carefully flip the frittata onto a plate, then slide it back into the pan to cook the other side for 5-10 minutes.",
+    "es": "PREPARAR LAS HIERBAS: Pica finamente todas las hierbas — perejil, eneldo, cilantro y cebolleta — y mézclalas en un bol grande. BATIR LOS HUEVOS: Bate los huevos por separado con sal, pimienta y polvo de hornear, hasta que estén espumosos. COMBINAR: Vierte los huevos batidos sobre las hierbas picadas, añade el fenogreco y mezcla bien hasta combinar. CALENTAR LA SARTÉN: Calienta abundante aceite en una sartén antiadherente a fuego medio-bajo. VERTER LA MEZCLA: Vierte la mezcla de hierbas y huevo en la sartén, nivela la superficie, espolvorea las nueces y el agracejo por encima. COCINAR LENTAMENTE: Tapa y deja cocinar a fuego lento 15-20 minutos, hasta que cuaje bien en la base. VOLTEAR: Voltea la frittata con cuidado sobre un plato, luego deslízala de nuevo en la sartén para cocinar el otro lado 5-10 minutos.",
+    "fr": "PRÉPARER LES HERBES: Hachez finement toutes les herbes — persil, aneth, coriandre et oignon vert — et mélangez-les dans un grand bol. BATTRE LES ŒUFS: Battez les œufs séparément avec le sel, le poivre et la levure chimique, jusqu'à ce qu'ils soient mousseux. COMBINER: Versez les œufs battus sur les herbes hachées, ajoutez le fenugrec et mélangez bien jusqu'à homogénéité. CHAUFFER LA POÊLE: Faites chauffer beaucoup d'huile dans une poêle antiadhésive à feu moyen-doux. VERSER LE MÉLANGE: Versez le mélange d'herbes et d'œufs dans la poêle, nivelez la surface, saupoudrez les noix et les baies de berbéris dessus. CUIRE LENTEMENT: Couvrez d'un couvercle et laissez cuire à feu doux 15-20 minutes, jusqu'à ce que ce soit bien pris à la base. RETOURNER: Retournez délicatement la frittata sur une assiette, puis faites-la glisser à nouveau dans la poêle pour cuire l'autre côté 5-10 minutes.",
+    "de": "KRÄUTER VORBEREITEN: Alle Kräuter — Petersilie, Dill, Koriander und Frühlingszwiebel — fein hacken und in einer großen Schüssel vermischen. EIER SCHLAGEN: Die Eier separat mit Salz, Pfeffer und Backpulver schaumig schlagen. VERBINDEN: Die geschlagenen Eier über die gehackten Kräuter gießen, den Bockshornklee hinzufügen und gut vermischen. PFANNE ERHITZEN: Reichlich Öl in einer beschichteten Pfanne bei mittlerer bis niedriger Hitze erhitzen. MISCHUNG EINFÜLLEN: Die Kräuter-Ei-Mischung in die Pfanne gießen, die Oberfläche glätten, die Walnüsse und Berberitzen darüberstreuen. LANGSAM GAREN: Mit einem Deckel abdecken und bei schwacher Hitze 15-20 Minuten garen, bis es am Boden gut fest ist. WENDEN: Das Omelett vorsichtig auf einen Teller stürzen, dann zurück in die Pfanne gleiten lassen, um die andere Seite 5-10 Minuten zu garen.",
+    "pt": "PREPARAR AS ERVAS: Pique finamente todas as ervas — salsa, endro, coentro e cebolinha — e misture-as numa tigela grande. BATER OS OVOS: Bata os ovos separadamente com sal, pimenta e fermento em pó, até ficarem espumosos. COMBINAR: Deite os ovos batidos sobre as ervas picadas, junte o fenacho e misture bem até combinar. AQUECER A FRIGIDEIRA: Aqueça bastante óleo numa frigideira antiaderente em lume médio-baixo. VERTER A MISTURA: Deite a mistura de ervas e ovo na frigideira, nivele a superfície, polvilhe as nozes e o agrião-do-Nepal por cima. COZINHAR LENTAMENTE: Tape e deixe cozinhar em lume brando 15-20 minutos, até estar bem firme na base. VIRAR: Vire a fritada com cuidado num prato, depois deslize-a de volta para a frigideira para cozinhar o outro lado 5-10 minutos.",
+    "ru": "ПОДГОТОВКА ЗЕЛЕНИ: Мелко нарежьте всю зелень — петрушку, укроп, кинзу и зелёный лук — и смешайте в большой миске. ВЗБИВАНИЕ ЯИЦ: Взбейте яйца отдельно с солью, перцем и разрыхлителем до пены. СОЕДИНЕНИЕ: Влейте взбитые яйца в нарезанную зелень, добавьте пажитник и хорошо перемешайте до однородности. РАЗОГРЕВ СКОВОРОДЫ: Разогрейте много масла на антипригарной сковороде на среднем-слабом огне. ЗАЛИВКА СМЕСИ: Вылейте смесь зелени и яиц на сковороду, разровняйте поверхность, посыпьте сверху орехами и барбарисом. МЕДЛЕННОЕ ПРИГОТОВЛЕНИЕ: Накройте крышкой и готовьте на слабом огне 15-20 минут, пока хорошо не схватится у основания. ПЕРЕВОРОТ: Аккуратно переверните фриттату на тарелку, затем сдвиньте обратно на сковороду, чтобы приготовить другую сторону 5-10 минут.",
+    "ar": "تحضير الأعشاب: افرم جميع الأعشاب ناعمًا — البقدونس والشبت والكزبرة والبصل الأخضر — واخلطها في وعاء كبير. خفق البيض: اخفق البيض منفصلًا مع الملح والفلفل وبيكنج بودر حتى يصبح رغويًا. الدمج: اسكب البيض المخفوق فوق الأعشاب المفرومة، أضف الحلبة واخلط جيدًا حتى يتجانس. تسخين المقلاة: سخّن كمية وافرة من الزيت في مقلاة غير لاصقة على نار متوسطة إلى هادئة. سكب الخليط: اسكب خليط الأعشاب والبيض في المقلاة، سوِّ السطح، رشّ الجوز والزرشك فوقه. الطهي البطيء: غطِّ واترك يُطهى على نار هادئة لمدة 15-20 دقيقة حتى يتماسك جيدًا في القاعدة. القلب: اقلب الكوكو بحذر على طبق، ثم أعده إلى المقلاة لطهي الجانب الآخر لمدة 5-10 دقائق.",
+    "zh": "准备香草：将所有香草——欧芹、莳萝、香菜和青葱——切碎，放入大碗中混合。打蛋：将鸡蛋与盐、胡椒和泡打粉分开打发至起泡。混合：将打好的鸡蛋倒入切碎的香草中，加入葫芦巴，搅拌均匀。加热平底锅：在不粘锅中用中小火加热大量油。倒入混合物：将香草蛋液倒入锅中，抹平表面，撒上核桃和小檗果。慢煮：盖上锅盖，小火煮15-20分钟，直至底部凝固良好。翻面：小心将蛋饼翻到盘子上，然后滑回锅中煎另一面5-10分钟。",
+    "ja": "ハーブを準備する：すべてのハーブ――パセリ、ディル、コリアンダー、青ねぎ――を細かく刻み、大きなボウルで混ぜる。卵を泡立てる：卵を塩、こしょう、ベーキングパウダーと共に別に泡立てて泡状にする。合わせる：泡立てた卵を刻んだハーブの上に注ぎ、フェヌグリークを加えてよく混ぜて合わせる。フライパンを熱する：油をたっぷりとフッ素樹脂加工のフライパンで中弱火で熱する。混合物を注ぐ：ハーブと卵の混合物をフライパンに注ぎ、表面を均し、くるみとバーベリーを上に振りかける。じっくり焼く：ふたをして弱火で15〜20分、底がしっかり固まるまで焼く。ひっくり返す：フリッタータを慎重に皿にひっくり返し、フライパンに戻して反対側を5〜10分焼く。",
+    "hi": "जड़ी-बूटियां तैयार करें: सभी जड़ी-बूटियों — अजमोद, सोआ, धनिया और हरा प्याज़ — को बारीक काटें और एक बड़े कटोरे में मिलाएं। अंडे फेंटें: अंडों को नमक, काली मिर्च और बेकिंग पाउडर के साथ अलग से फूला होने तक फेंटें। मिलाएं: फेंटे अंडों को कटी जड़ी-बूटियों पर डालें, मेथी डालें और अच्छी तरह मिलाएं। पैन गरम करें: नॉन-स्टिक पैन में मध्यम-धीमी आँच पर भरपूर तेल गरम करें। मिश्रण डालें: जड़ी-बूटी और अंडे का मिश्रण पैन में डालें, सतह समतल करें, ऊपर अखरोट और बारबेरी छिड़कें। धीरे पकाएं: ढककर धीमी आँच पर 15-20 मिनट पकने दें, जब तक तले में अच्छी तरह जम न जाए। पलटें: फ्रिटाटा को सावधानी से थाली पर पलटें, फिर दूसरी तरफ 5-10 मिनट पकाने के लिए वापस पैन में डालें।",
+    "tr": "OTLARI HAZIRLAYIN: Tüm otları — maydanoz, dereotu, kişniş ve yeşil soğan — ince doğrayın ve büyük bir kasede karıştırın. YUMURTALARI ÇIRPIN: Yumurtaları ayrı ayrı tuz, karabiber ve kabartma tozuyla köpürene kadar çırpın. BİRLEŞTİRİN: Çırpılmış yumurtaları doğranmış otların üzerine dökün, çemen otunu ekleyin ve iyice karıştırın. TAVAYI ISITIN: Yapışmaz bir tavada orta-düşük ateşte bolca yağ ısıtın. KARIŞIMI DÖKÜN: Ot ve yumurta karışımını tavaya dökün, yüzeyi düzleştirin, üzerine ceviz ve berberis serpin. YAVAŞÇA PİŞİRİN: Kapağını kapatın ve tabanı iyice pişene kadar kısık ateşte 15-20 dakika pişirin. ÇEVİRİN: Omleti dikkatlice bir tabağa çevirin, sonra diğer tarafını 5-10 dakika pişirmek için tavaya geri kaydırın.",
+    "it": "PREPARARE LE ERBE: Tritate finemente tutte le erbe — prezzemolo, aneto, coriandolo e cipollotto — e mescolatele in una ciotola grande. SBATTERE LE UOVA: Sbattete le uova separatamente con sale, pepe e lievito in polvere, finché spumose. COMBINARE: Versate le uova sbattute sulle erbe tritate, aggiungete il fieno greco e mescolate bene fino ad amalgamare. SCALDARE LA PADELLA: Scaldate abbondante olio in una padella antiaderente a fuoco medio-basso. VERSARE IL COMPOSTO: Versate il composto di erbe e uova nella padella, livellate la superficie, cospargete le noci e il crespino sopra. CUOCERE LENTAMENTE: Coprite con un coperchio e lasciate cuocere a fuoco basso 15-20 minuti, finché ben rappreso alla base. GIRARE: Capovolgete con attenzione la frittata su un piatto, poi fatela scivolare di nuovo in padella per cuocere l'altro lato 5-10 minuti.",
+    "ko": "허브 준비: 모든 허브—파슬리, 딜, 고수, 파—를 잘게 다져 큰 그릇에 섞는다. 달걀 풀기: 달걀을 소금, 후추, 베이킹파우더와 함께 따로 거품이 나게 푼다. 섞기: 푼 달걀을 다진 허브 위에 붓고 호로파를 넣어 잘 섞는다. 팬 예열: 코팅 팬에 중약불로 기름을 넉넉히 예열한다. 반죽 붓기: 허브와 달걀 혼합물을 팬에 붓고 표면을 고른 후 호두와 매자 열매를 위에 뿌린다. 천천히 익히기: 뚜껑을 덮고 약불에서 15~20분간 바닥이 잘 익을 때까지 익힌다. 뒤집기: 프리타타를 조심스럽게 접시에 뒤집은 후 다시 팬에 밀어 넣어 반대쪽을 5~10분 더 익힌다."
+  },
+  "originText": {
+    "ro": "Kuku sabzi este mâncarea de bază a mesei de Norouz, Anul Nou persan, unde verdele intens al ierburilor simbolizează renașterea și prospețimea primăverii. Spre deosebire de omletele occidentale, unde oul e ingredientul principal, în kuku sabzi rolul oului se inversează — devine un simplu liant pentru o cantitate impresionantă de verdețuri proaspete.\n\nFiecare familie iraniană are propria combinație preferată de ierburi, dar cele cinci de bază — pătrunjel, mărar, coriandru, ceapă verde și schinduf — rămân relativ constante. Kuku sabzi se gătește adesea în cantități mari și se păstrează la frigider zile întregi, fiind la fel de gustoasă rece, ceea ce o face o alegere populară pentru mesele de familie extinse sau pentru sandvișuri.",
+    "en": "Kuku sabzi is the staple dish of the Norouz table, the Persian New Year, where the intense green of the herbs symbolizes rebirth and the freshness of spring. Unlike Western omelets, where egg is the main ingredient, in kuku sabzi the role of the egg is reversed — it becomes a simple binder for an impressive amount of fresh herbs.\n\nEvery Iranian family has its own favorite herb combination, but the five basics — parsley, dill, cilantro, green onion and fenugreek — remain relatively constant. Kuku sabzi is often cooked in large quantities and kept in the fridge for days, tasting just as good cold, which makes it a popular choice for extended family meals or sandwiches.",
+    "es": "El kuku sabzi es el plato básico de la mesa de Norouz, el Año Nuevo persa, donde el verde intenso de las hierbas simboliza el renacimiento y la frescura de la primavera. A diferencia de las tortillas occidentales, donde el huevo es el ingrediente principal, en el kuku sabzi el papel del huevo se invierte — se convierte en un simple aglutinante para una cantidad impresionante de hierbas frescas.\n\nCada familia iraní tiene su propia combinación favorita de hierbas, pero las cinco básicas — perejil, eneldo, cilantro, cebolleta y fenogreco — permanecen relativamente constantes. El kuku sabzi se cocina a menudo en grandes cantidades y se guarda en la nevera durante días, sabiendo igual de bien fría, lo que la convierte en una opción popular para comidas familiares extensas o bocadillos.",
+    "fr": "Le kuku sabzi est le plat de base de la table du Norouz, le Nouvel An persan, où le vert intense des herbes symbolise la renaissance et la fraîcheur du printemps. Contrairement aux omelettes occidentales, où l'œuf est l'ingrédient principal, dans le kuku sabzi le rôle de l'œuf est inversé — il devient un simple liant pour une quantité impressionnante d'herbes fraîches.\n\nChaque famille iranienne a sa propre combinaison d'herbes préférée, mais les cinq de base — persil, aneth, coriandre, oignon vert et fenugrec — restent relativement constantes. Le kuku sabzi est souvent cuisiné en grandes quantités et conservé au réfrigérateur pendant des jours, étant tout aussi bon froid, ce qui en fait un choix populaire pour les repas familiaux étendus ou les sandwichs.",
+    "de": "Kuku Sabzi ist das Grundgericht der Norouz-Tafel, dem persischen Neujahr, bei dem das intensive Grün der Kräuter Wiedergeburt und die Frische des Frühlings symbolisiert. Anders als bei westlichen Omeletts, wo das Ei die Hauptzutat ist, kehrt sich die Rolle des Eies bei Kuku Sabzi um — es wird zu einem einfachen Bindemittel für eine beeindruckende Menge frischer Kräuter.\n\nJede iranische Familie hat ihre eigene bevorzugte Kräuterkombination, aber die fünf Grundkräuter — Petersilie, Dill, Koriander, Frühlingszwiebel und Bockshornklee — bleiben relativ konstant. Kuku Sabzi wird oft in großen Mengen gekocht und tagelang im Kühlschrank aufbewahrt, wobei es kalt genauso gut schmeckt, was es zu einer beliebten Wahl für große Familienmahlzeiten oder Sandwiches macht.",
+    "pt": "O kuku sabzi é o prato base da mesa de Nowruz, o Ano Novo persa, onde o verde intenso das ervas simboliza o renascimento e a frescura da primavera. Ao contrário das omeletas ocidentais, onde o ovo é o ingrediente principal, no kuku sabzi o papel do ovo é invertido — torna-se um simples aglutinante para uma quantidade impressionante de ervas frescas.\n\nCada família iraniana tem a sua própria combinação favorita de ervas, mas as cinco básicas — salsa, endro, coentro, cebolinha e fenacho — permanecem relativamente constantes. O kuku sabzi é frequentemente cozinhado em grandes quantidades e guardado no frigorífico durante dias, sabendo igualmente bem frio, o que o torna uma escolha popular para refeições de família alargada ou sandes.",
+    "ru": "Куку сабзи — основное блюдо стола Ноуруза, персидского Нового года, где насыщенная зелень трав символизирует возрождение и свежесть весны. В отличие от западных омлетов, где яйцо — главный ингредиент, в куку сабзи роль яйца меняется на противоположную — оно становится простым связующим для впечатляющего количества свежей зелени.\n\nУ каждой иранской семьи есть своё любимое сочетание трав, но пять основных — петрушка, укроп, кинза, зелёный лук и пажитник — остаются относительно постоянными. Куку сабзи часто готовится в больших количествах и хранится в холодильнике несколько дней, будучи столь же вкусным холодным, что делает его популярным выбором для больших семейных застолий или бутербродов.",
+    "ar": "الكوكو سبزي هو الطبق الأساسي في مائدة نوروز، رأس السنة الفارسية، حيث يرمز اللون الأخضر النابض للأعشاب إلى الولادة الجديدة ونضارة الربيع. خلافًا للعجة الغربية، حيث يكون البيض المكوّن الرئيسي، في الكوكو سبزي ينعكس دور البيض — يصبح مجرد رابط لكمية مذهلة من الأعشاب الطازجة.\n\nلكل عائلة إيرانية مزيجها المفضل من الأعشاب، لكن الأعشاب الخمسة الأساسية — البقدونس والشبت والكزبرة والبصل الأخضر والحلبة — تظل ثابتة نسبيًا. غالبًا ما يُطهى الكوكو سبزي بكميات كبيرة ويُحفظ في الثلاجة لأيام، وهو لذيذ باردًا بنفس القدر، مما يجعله خيارًا شائعًا لوجبات العائلة الممتدة أو السندويشات.",
+    "zh": "库库萨布齐是诺鲁孜节（波斯新年）餐桌上的主打菜肴，浓郁的绿色香草象征着重生与春天的清新。与西式煎蛋饼不同，鸡蛋是主要食材，而在库库萨布齐中，鸡蛋的角色被颠倒——它只是大量新鲜香草的简单黏合剂。\n\n每个伊朗家庭都有自己偏爱的香草组合，但五种基本香草——欧芹、莳萝、香菜、青葱和葫芦巴——始终相对固定。库库萨布齐常常大量制作并冷藏保存数天，冷食同样美味，这使它成为大家庭聚餐或三明治的热门选择。",
+    "ja": "クク・サブジは、ハーブの濃い緑が再生と春の新鮮さを象徴する、ペルシャの新年ノウルーズの食卓に欠かせない料理である。卵が主材料である西洋のオムレツとは異なり、クク・サブジでは卵の役割が逆転している――卵は驚くほどの量の新鮮なハーブをつなぐ単なる結着材となる。\n\nイランの各家庭はそれぞれお気に入りのハーブの組み合わせを持っているが、基本の5種類――パセリ、ディル、コリアンダー、青ねぎ、フェヌグリーク――は比較的一定している。クク・サブジはしばしば大量に調理され、何日も冷蔵庫で保存されるが、冷たくても同じくらい美味しく、大家族の食事やサンドイッチに人気の選択肢となっている。",
+    "hi": "कुकु सब्ज़ी नौरोज़, फ़ारसी नए साल की मेज़ का मुख्य व्यंजन है, जहां जड़ी-बूटियों का गहरा हरा रंग पुनर्जन्म और वसंत की ताज़गी का प्रतीक है। पश्चिमी ऑमलेट के विपरीत, जहां अंडा मुख्य सामग्री है, कुकु सब्ज़ी में अंडे की भूमिका उलट जाती है — यह ताज़ी जड़ी-बूटियों की प्रभावशाली मात्रा के लिए एक साधारण बंधनकर्ता बन जाता है।\n\nहर ईरानी परिवार की अपनी पसंदीदा जड़ी-बूटी संयोजन है, लेकिन पांच मूल — अजमोद, सोआ, धनिया, हरा प्याज़ और मेथी — अपेक्षाकृत स्थिर रहते हैं। कुकु सब्ज़ी अक्सर बड़ी मात्रा में पकाई जाती है और फ्रिज में दिनों तक रखी जाती है, ठंडी भी उतनी ही स्वादिष्ट होती है, जो इसे विस्तारित पारिवारिक भोजन या सैंडविच के लिए एक लोकप्रिय विकल्प बनाती है।",
+    "tr": "Kuku sebzi, otların yoğun yeşilinin yeniden doğuşu ve baharın tazeliğini simgelediği Nevruz sofrasının, Fars Yeni Yılının, temel yemeğidir. Yumurtanın ana malzeme olduğu Batı omletlerinin aksine, kuku sebzide yumurtanın rolü tersine döner — etkileyici miktarda taze otu bir arada tutan basit bir bağlayıcı haline gelir.\n\nHer İran ailesinin kendi favori ot kombinasyonu vardır, ancak beş temel — maydanoz, dereotu, kişniş, yeşil soğan ve çemen otu — nispeten sabit kalır. Kuku sebzi genellikle büyük miktarlarda pişirilir ve günlerce buzdolabında saklanır, soğukken de aynı derecede lezzetlidir, bu da onu geniş aile yemekleri veya sandviçler için popüler bir seçim haline getirir.",
+    "it": "Il kuku sabzi è il piatto base della tavola di Norouz, il Capodanno persiano, dove il verde intenso delle erbe simboleggia la rinascita e la freschezza della primavera. A differenza delle frittate occidentali, dove l'uovo è l'ingrediente principale, nel kuku sabzi il ruolo dell'uovo è invertito — diventa un semplice legante per una quantità impressionante di erbe fresche.\n\nOgni famiglia iraniana ha la propria combinazione preferita di erbe, ma le cinque di base — prezzemolo, aneto, coriandolo, cipollotto e fieno greco — rimangono relativamente costanti. Il kuku sabzi viene spesso cucinato in grandi quantità e conservato in frigorifero per giorni, essendo altrettanto buono freddo, il che lo rende una scelta popolare per pasti in famiglia allargata o panini.",
+    "ko": "쿠쿠 사브지는 허브의 짙은 초록빛이 재생과 봄의 신선함을 상징하는, 페르시아 신년 노루즈 식탁의 기본 요리다. 달걀이 주재료인 서양식 오믈렛과 달리, 쿠쿠 사브지에서는 달걀의 역할이 뒤바뀐다 — 인상적인 양의 신선한 허브를 엮어주는 단순한 결합제가 된다.\n\n이란의 모든 가정마다 좋아하는 허브 조합이 있지만, 다섯 가지 기본 허브 — 파슬리, 딜, 고수, 파, 호로파 — 는 비교적 일정하게 유지된다. 쿠쿠 사브지는 종종 많은 양으로 조리되어 냉장고에 며칠씩 보관되며, 차갑게 먹어도 똑같이 맛있어서 대가족 식사나 샌드위치용으로 인기 있는 선택이다."
+  },
+  "meta": {
+    "time": 45,
+    "costRon": 14,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Omletă groasă din verdețuri proaspete, nuci și barberis, servită caldă sau rece.",
+      "en": "Thick frittata of fresh herbs, walnuts and barberries, served warm or cold.",
+      "es": "Frittata espesa de hierbas frescas, nueces y agracejo, servida caliente o fría.",
+      "fr": "Frittata épaisse aux herbes fraîches, noix et baies de berbéris, servie chaude ou froide.",
+      "de": "Dickes Omelett aus frischen Kräutern, Walnüssen und Berberitzen, warm oder kalt serviert.",
+      "pt": "Fritada espessa de ervas frescas, nozes e agrião-do-Nepal, servida quente ou fria.",
+      "ru": "Густой омлет из свежей зелени, орехов и барбариса, подаётся тёплым или холодным.",
+      "ar": "عجة سميكة من الأعشاب الطازجة والجوز والزرشك، تُقدَّم دافئة أو باردة.",
+      "zh": "新鲜香草、核桃和小檗果做成的厚蛋饼，冷热皆宜。",
+      "ja": "新鮮なハーブ、くるみ、バーベリーの濃厚なオムレツ、温かくても冷たくても。",
+      "hi": "ताज़ी जड़ी-बूटियों, अखरोट और बारबेरी से बना गाढ़ा फ्रिटाटा, गरम या ठंडा परोसा गया।",
+      "tr": "Taze ot, ceviz ve berberisli kalın omlet, sıcak veya soğuk servis edilir.",
+      "it": "Frittata densa di erbe fresche, noci e crespino, servita calda o fredda.",
+      "ko": "신선한 허브, 호두, 매자 열매로 만든 두꺼운 프리타타, 따뜻하거나 차갑게 제공."
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": 350,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Siria", "en": "Syria", "es": "Siria", "fr": "Syrie", "de": "Syrien",
+    "pt": "Síria", "ru": "Сирия", "ar": "سوريا", "zh": "叙利亚", "ja": "シリア",
+    "hi": "सीरिया", "tr": "Suriye", "it": "Siria", "ko": "시리아"
+  },
+  "name": {
+    "ro": "Muhammara (Pastă de ardei și nuci)", "en": "Muhammara (Walnut Pepper Dip)", "es": "Muhammara (Salsa de nueces y pimiento)",
+    "fr": "Muhammara (Tartinade de noix et poivrons)", "de": "Muhammara (Walnuss-Paprika-Dip)", "pt": "Muhammara (Pasta de noz e pimentão)",
+    "ru": "Мухаммара (Ореховая паста с перцем)", "ar": "محمرة", "zh": "穆哈马拉核桃辣椒酱",
+    "ja": "ムハンマラ（クルミとパプリカのディップ）", "hi": "मुहम्मरा (अखरोट मिर्च डिप)", "tr": "Muhammara (Cevizli Biber Ezmesi)",
+    "it": "Muhammara (Salsa di noci e peperoni)", "ko": "무함마라 (호두 고추 딥)"
+  },
+  "category": {
+    "ro": "Aperitiv", "en": "Appetizer", "es": "Entrante", "fr": "Entrée", "de": "Vorspeise", "pt": "Entrada",
+    "ru": "Закуска", "ar": "مقبلات", "zh": "开胃菜", "ja": "前菜", "hi": "स्टार्टर", "tr": "Meze", "it": "Antipasto", "ko": "전채"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌶️", "t": "Ardei copt", "d": "Ardei roșii copți și decojiți, dulci și afumați."},
+      {"icon": "🌰", "t": "Nuci prăjite", "d": "Nuci pisate mărunt, dau textura groasă și aroma bogată."},
+      {"icon": "🍯", "t": "Melasă de rodie", "d": "O notă acrișoară-dulce definitorie, din siropul de rodie."},
+      {"icon": "🥖", "t": "Servit ca dip", "d": "Se întinde pe pâine lipie sau se folosește ca sos."}
+    ],
+    "en": [
+      {"icon": "🌶️", "t": "Roasted peppers", "d": "Red bell peppers roasted and peeled, sweet and smoky."},
+      {"icon": "🌰", "t": "Toasted walnuts", "d": "Finely crushed walnuts give the thick texture and rich flavor."},
+      {"icon": "🍯", "t": "Pomegranate molasses", "d": "A defining tart-sweet note from pomegranate syrup."},
+      {"icon": "🥖", "t": "Served as a dip", "d": "Spread on flatbread or used as a sauce."}
+    ],
+    "es": [
+      {"icon": "🌶️", "t": "Pimientos asados", "d": "Pimientos rojos asados y pelados, dulces y ahumados."},
+      {"icon": "🌰", "t": "Nueces tostadas", "d": "Nueces trituradas finamente dan la textura espesa y el sabor rico."},
+      {"icon": "🍯", "t": "Melaza de granada", "d": "Una nota agridulce definitoria del sirope de granada."},
+      {"icon": "🥖", "t": "Servida como dip", "d": "Se unta en pan de pita o se usa como salsa."}
+    ],
+    "fr": [
+      {"icon": "🌶️", "t": "Poivrons rôtis", "d": "Poivrons rouges rôtis et pelés, doux et fumés."},
+      {"icon": "🌰", "t": "Noix grillées", "d": "Des noix finement broyées donnent la texture épaisse et la saveur riche."},
+      {"icon": "🍯", "t": "Mélasse de grenade", "d": "Une note aigre-douce caractéristique du sirop de grenade."},
+      {"icon": "🥖", "t": "Servie en dip", "d": "Tartinée sur du pain plat ou utilisée comme sauce."}
+    ],
+    "de": [
+      {"icon": "🌶️", "t": "Geröstete Paprika", "d": "Rote Paprikaschoten geröstet und geschält, süß und rauchig."},
+      {"icon": "🌰", "t": "Geröstete Walnüsse", "d": "Fein zerkleinerte Walnüsse geben die dicke Textur und den reichen Geschmack."},
+      {"icon": "🍯", "t": "Granatapfelmelasse", "d": "Eine prägende süßsäuerliche Note vom Granatapfelsirup."},
+      {"icon": "🥖", "t": "Als Dip serviert", "d": "Auf Fladenbrot gestrichen oder als Sauce verwendet."}
+    ],
+    "pt": [
+      {"icon": "🌶️", "t": "Pimentos assados", "d": "Pimentos vermelhos assados e descascados, doces e defumados."},
+      {"icon": "🌰", "t": "Nozes tostadas", "d": "Nozes finamente trituradas dão a textura espessa e o sabor rico."},
+      {"icon": "🍯", "t": "Melaço de romã", "d": "Uma nota agridoce definidora do xarope de romã."},
+      {"icon": "🥖", "t": "Servida como dip", "d": "Espalhada em pão pita ou usada como molho."}
+    ],
+    "ru": [
+      {"icon": "🌶️", "t": "Запечённый перец", "d": "Красный болгарский перец запечённый и очищенный, сладкий и дымный."},
+      {"icon": "🌰", "t": "Обжаренные грецкие орехи", "d": "Мелко измельчённые орехи придают густую текстуру и насыщенный вкус."},
+      {"icon": "🍯", "t": "Гранатовая патока", "d": "Определяющая кисло-сладкая нотка из гранатового сиропа."},
+      {"icon": "🥖", "t": "Подаётся как дип", "d": "Намазывается на лаваш или используется как соус."}
+    ],
+    "ar": [
+      {"icon": "🌶️", "t": "فلفل مشوي", "d": "فلفل أحمر مشوي ومقشر، حلو ومدخن."},
+      {"icon": "🌰", "t": "جوز محمّص", "d": "جوز مطحون ناعمًا يمنح القوام السميك والنكهة الغنية."},
+      {"icon": "🍯", "t": "دبس الرمان", "d": "لمسة حامضة حلوة مميزة من شراب الرمان."},
+      {"icon": "🥖", "t": "تُقدَّم كغموس", "d": "تُدهن على الخبز أو تُستخدم كصلصة."}
+    ],
+    "zh": [
+      {"icon": "🌶️", "t": "烤辣椒", "d": "烤过并去皮的红甜椒，香甜带烟熏味。"},
+      {"icon": "🌰", "t": "烤核桃", "d": "细碎核桃赋予浓稠口感和丰富风味。"},
+      {"icon": "🍯", "t": "石榴糖浆", "d": "石榴糖浆带来标志性的酸甜味。"},
+      {"icon": "🥖", "t": "作为蘸酱食用", "d": "涂抹在薄饼上或用作酱料。"}
+    ],
+    "ja": [
+      {"icon": "🌶️", "t": "焼きパプリカ", "d": "焼いて皮をむいた赤パプリカ、甘くスモーキー。"},
+      {"icon": "🌰", "t": "炒りくるみ", "d": "細かく砕いたくるみが濃厚な食感と豊かな風味を生む。"},
+      {"icon": "🍯", "t": "ザクロ糖蜜", "d": "ザクロシロップによる特徴的な甘酸っぱい風味。"},
+      {"icon": "🥖", "t": "ディップとして", "d": "フラットブレッドに塗るかソースとして使う。"}
+    ],
+    "hi": [
+      {"icon": "🌶️", "t": "भुनी हुई मिर्च", "d": "भुनी और छिली लाल शिमला मिर्च, मीठी और धुएँदार।"},
+      {"icon": "🌰", "t": "भुने अखरोट", "d": "बारीक कुचले अखरोट गाढ़ी बनावट और गहरा स्वाद देते हैं।"},
+      {"icon": "🍯", "t": "अनार की चाशनी", "d": "अनार के शरबत से खट्टा-मीठा खास स्वाद।"},
+      {"icon": "🥖", "t": "डिप के रूप में परोसा गया", "d": "फ्लैटब्रेड पर लगाया या सॉस के रूप में उपयोग किया जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🌶️", "t": "Kavrulmuş biber", "d": "Kavrulmuş ve soyulmuş kırmızı biber, tatlı ve dumanlı."},
+      {"icon": "🌰", "t": "Kavrulmuş ceviz", "d": "İnce çekilmiş ceviz koyu doku ve zengin lezzet verir."},
+      {"icon": "🍯", "t": "Nar ekşisi", "d": "Nar şurubundan gelen belirgin ekşi-tatlı bir not."},
+      {"icon": "🥖", "t": "Meze olarak servis edilir", "d": "Yassı ekmeğe sürülür veya sos olarak kullanılır."}
+    ],
+    "it": [
+      {"icon": "🌶️", "t": "Peperoni arrostiti", "d": "Peperoni rossi arrostiti e pelati, dolci e affumicati."},
+      {"icon": "🌰", "t": "Noci tostate", "d": "Noci tritate finemente danno la consistenza densa e il sapore ricco."},
+      {"icon": "🍯", "t": "Melassa di melograno", "d": "Una nota agrodolce caratteristica dello sciroppo di melograno."},
+      {"icon": "🥖", "t": "Servita come dip", "d": "Spalmata sul pane piatto o usata come salsa."}
+    ],
+    "ko": [
+      {"icon": "🌶️", "t": "구운 피망", "d": "구워서 껍질을 벗긴 빨간 피망, 달콤하고 훈연 향이 난다."},
+      {"icon": "🌰", "t": "볶은 호두", "d": "곱게 부순 호두가 진한 질감과 풍부한 맛을 낸다."},
+      {"icon": "🍯", "t": "석류당밀", "d": "석류 시럽에서 나오는 새콤달콤한 특징적인 맛."},
+      {"icon": "🥖", "t": "딥으로 제공", "d": "플랫브레드에 발라 먹거나 소스로 사용한다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 ardei roșii grași", "200g nuci", "50g pesmet", "2 linguri melasă de rodie", "1 linguriță chimen măcinat", "1/2 linguriță fulgi de ardei iute (aleppo)", "2 linguri ulei de măsline", "1 cățel de usturoi", "sare", "zeamă de lămâie"],
+    "en": ["4 large red bell peppers", "200g walnuts", "50g breadcrumbs", "2 tbsp pomegranate molasses", "1 tsp ground cumin", "1/2 tsp Aleppo pepper flakes", "2 tbsp olive oil", "1 garlic clove", "salt", "lemon juice"],
+    "es": ["4 pimientos rojos grandes", "200g de nueces", "50g de pan rallado", "2 cdas de melaza de granada", "1 cdta de comino molido", "1/2 cdta de hojuelas de pimiento de Alepo", "2 cdas de aceite de oliva", "1 diente de ajo", "sal", "zumo de limón"],
+    "fr": ["4 gros poivrons rouges", "200g de noix", "50g de chapelure", "2 c. à s. de mélasse de grenade", "1 c. à c. de cumin moulu", "1/2 c. à c. de flocons de piment d'Alep", "2 c. à s. d'huile d'olive", "1 gousse d'ail", "sel", "jus de citron"],
+    "de": ["4 große rote Paprikaschoten", "200g Walnüsse", "50g Semmelbrösel", "2 EL Granatapfelmelasse", "1 TL gemahlener Kreuzkümmel", "1/2 TL Aleppo-Pfefferflocken", "2 EL Olivenöl", "1 Knoblauchzehe", "Salz", "Zitronensaft"],
+    "pt": ["4 pimentos vermelhos grandes", "200g de nozes", "50g de pão ralado", "2 c. sopa de melaço de romã", "1 colher de chá de cominho moído", "1/2 colher de chá de flocos de pimenta de Alepo", "2 c. sopa de azeite", "1 dente de alho", "sal", "sumo de limão"],
+    "ru": ["4 крупных красных болгарских перца", "200г грецких орехов", "50г панировочных сухарей", "2 ст.л. гранатовой патоки", "1 ч.л. молотого тмина", "1/2 ч.л. хлопьев алеппского перца", "2 ст.л. оливкового масла", "1 зубчик чеснока", "соль", "лимонный сок"],
+    "ar": ["4 فلفل أحمر كبير", "200غ جوز", "50غ فتات الخبز", "2 ملعقة كبيرة دبس رمان", "ملعقة صغيرة كمون مطحون", "نصف ملعقة صغيرة رقائق فلفل حلبي", "2 ملعقة كبيرة زيت زيتون", "فص ثوم واحد", "ملح", "عصير ليمون"],
+    "zh": ["大红甜椒4个", "核桃200克", "面包糠50克", "石榴糖浆2汤匙", "孜然粉1茶匙", "阿勒颇辣椒碎半茶匙", "橄榄油2汤匙", "大蒜1瓣", "盐", "柠檬汁"],
+    "ja": ["大きめの赤パプリカ 4個", "くるみ 200g", "パン粉 50g", "ザクロ糖蜜 大さじ2", "クミンパウダー 小さじ1", "アレッポペッパーフレーク 小さじ1/2", "オリーブオイル 大さじ2", "にんにく 1片", "塩", "レモン汁"],
+    "hi": ["4 बड़ी लाल शिमला मिर्च", "200 ग्राम अखरोट", "50 ग्राम ब्रेडक्रम्ब्स", "2 बड़े चम्मच अनार की चाशनी", "1 छोटा चम्मच पिसा जीरा", "1/2 छोटा चम्मच अलेप्पो मिर्च के टुकड़े", "2 बड़े चम्मच जैतून का तेल", "1 लहसुन की कली", "नमक", "नींबू का रस"],
+    "tr": ["4 büyük kırmızı dolmalık biber", "200g ceviz", "50g galeta unu", "2 yemek kaşığı nar ekşisi", "1 çay kaşığı öğütülmüş kimyon", "1/2 çay kaşığı Halep biberi pulu", "2 yemek kaşığı zeytinyağı", "1 diş sarımsak", "tuz", "limon suyu"],
+    "it": ["4 grandi peperoni rossi", "200g di noci", "50g di pangrattato", "2 cucchiai di melassa di melograno", "1 cucchiaino di cumino macinato", "1/2 cucchiaino di fiocchi di peperoncino di Aleppo", "2 cucchiai di olio d'oliva", "1 spicchio d'aglio", "sale", "succo di limone"],
+    "ko": ["큰 빨간 피망 4개", "호두 200g", "빵가루 50g", "석류당밀 2큰술", "커민 가루 1작은술", "알레포 고춧가루 1/2작은술", "올리브 오일 2큰술", "마늘 1쪽", "소금", "레몬즙"]
+  },
+  "howIsMade": {
+    "ro": "COACERE ARDEI: Coace ardeii întregi direct pe flacără sau la cuptor la 220°C, întorcându-i, până se înnegresc la exterior. CURĂȚARE: Pune ardeii într-o pungă închisă 10 minute pentru a se aburi, apoi curăță coaja și semințele. PRĂJIRE NUCI: Prăjește ușor nucile într-o tigaie uscată, la foc mic, până devin aromate. AMESTECARE INGREDIENTE: Pune ardeii curățați, nucile prăjite, pesmetul, usturoiul, chimenul și fulgii de ardei în robot. PROCESARE: Mixează totul până obții o pastă groasă, dar cu bucățele vizibile de nucă. ADĂUGARE LICHID: Adaugă melasa de rodie, uleiul de măsline, zeama de lămâie și sare, mixează scurt să se omogenizeze. SERVIRE: Servește la temperatura camerei, stropit cu ulei de măsline, alături de pâine lipie caldă.",
+    "en": "ROAST PEPPERS: Roast the whole peppers directly over a flame or in the oven at 220°C, turning them, until blackened on the outside. PEEL: Place the peppers in a closed bag for 10 minutes to steam, then peel off the skin and remove the seeds. TOAST WALNUTS: Lightly toast the walnuts in a dry pan over low heat until fragrant. COMBINE INGREDIENTS: Put the peeled peppers, toasted walnuts, breadcrumbs, garlic, cumin and pepper flakes into a food processor. PROCESS: Blend everything until you get a thick paste, but with visible bits of walnut. ADD LIQUID: Add the pomegranate molasses, olive oil, lemon juice and salt, blend briefly to combine. SERVE: Serve at room temperature, drizzled with olive oil, alongside warm flatbread.",
+    "es": "ASAR LOS PIMIENTOS: Asa los pimientos enteros directamente al fuego o en el horno a 220°C, girándolos, hasta que se ennegrezcan por fuera. PELAR: Coloca los pimientos en una bolsa cerrada 10 minutos para que suden, luego pela la piel y quita las semillas. TOSTAR LAS NUECES: Tuesta ligeramente las nueces en una sartén seca a fuego lento hasta que estén aromáticas. COMBINAR LOS INGREDIENTES: Pon los pimientos pelados, las nueces tostadas, el pan rallado, el ajo, el comino y las hojuelas de pimiento en un procesador. PROCESAR: Mezcla todo hasta obtener una pasta espesa, pero con trozos visibles de nuez. AÑADIR EL LÍQUIDO: Añade la melaza de granada, el aceite de oliva, el zumo de limón y sal, mezcla brevemente para combinar. SERVIR: Sirve a temperatura ambiente, rociada con aceite de oliva, junto con pan de pita caliente.",
+    "fr": "RÔTIR LES POIVRONS: Faites rôtir les poivrons entiers directement sur une flamme ou au four à 220°C, en les tournant, jusqu'à ce qu'ils noircissent à l'extérieur. PELER: Placez les poivrons dans un sac fermé pendant 10 minutes pour qu'ils cuisent à la vapeur, puis retirez la peau et les graines. GRILLER LES NOIX: Faites légèrement griller les noix dans une poêle sèche à feu doux jusqu'à ce qu'elles soient parfumées. COMBINER LES INGRÉDIENTS: Mettez les poivrons pelés, les noix grillées, la chapelure, l'ail, le cumin et les flocons de piment dans un robot. MIXER: Mixez le tout jusqu'à obtenir une pâte épaisse, mais avec des morceaux de noix visibles. AJOUTER LE LIQUIDE: Ajoutez la mélasse de grenade, l'huile d'olive, le jus de citron et le sel, mixez brièvement pour combiner. SERVIR: Servez à température ambiante, arrosée d'huile d'olive, avec du pain plat chaud.",
+    "de": "PAPRIKA RÖSTEN: Die ganzen Paprikaschoten direkt über der Flamme oder im Ofen bei 220°C rösten, wenden, bis sie außen geschwärzt sind. SCHÄLEN: Die Paprika 10 Minuten in einem geschlossenen Beutel dämpfen lassen, dann Haut und Kerne entfernen. WALNÜSSE RÖSTEN: Die Walnüsse leicht in einer trockenen Pfanne bei schwacher Hitze rösten, bis sie duften. ZUTATEN VERBINDEN: Die geschälten Paprika, gerösteten Walnüsse, Semmelbrösel, Knoblauch, Kreuzkümmel und Pfefferflocken in eine Küchenmaschine geben. VERARBEITEN: Alles zu einer dicken Paste mixen, aber mit sichtbaren Walnussstückchen. FLÜSSIGKEIT HINZUFÜGEN: Granatapfelmelasse, Olivenöl, Zitronensaft und Salz hinzufügen, kurz mixen, um zu verbinden. SERVIEREN: Bei Zimmertemperatur servieren, mit Olivenöl beträufelt, zusammen mit warmem Fladenbrot.",
+    "pt": "ASSAR OS PIMENTOS: Asse os pimentos inteiros diretamente na chama ou no forno a 220°C, virando-os, até ficarem enegrecidos por fora. DESCASCAR: Coloque os pimentos num saco fechado por 10 minutos para suarem, depois retire a pele e as sementes. TOSTAR AS NOZES: Toste levemente as nozes numa frigideira seca em lume brando até ficarem aromáticas. COMBINAR OS INGREDIENTES: Coloque os pimentos descascados, as nozes tostadas, o pão ralado, o alho, o cominho e os flocos de pimenta num processador. PROCESSAR: Bata tudo até obter uma pasta espessa, mas com pedaços visíveis de noz. ADICIONAR O LÍQUIDO: Junte o melaço de romã, o azeite, o sumo de limão e o sal, bata brevemente para combinar. SERVIR: Sirva à temperatura ambiente, regada com azeite, ao lado de pão pita quente.",
+    "ru": "ЗАПЕКАНИЕ ПЕРЦА: Запеките целые перцы прямо на огне или в духовке при 220°C, переворачивая, пока кожица не почернеет снаружи. ОЧИСТКА: Поместите перцы в закрытый пакет на 10 минут, чтобы они пропарились, затем очистите кожицу и удалите семена. ОБЖАРКА ОРЕХОВ: Слегка обжарьте грецкие орехи на сухой сковороде на слабом огне до появления аромата. СОЕДИНЕНИЕ ИНГРЕДИЕНТОВ: Положите очищенный перец, обжаренные орехи, панировочные сухари, чеснок, тмин и хлопья перца в кухонный комбайн. ОБРАБОТКА: Взбейте всё до густой пасты, но с заметными кусочками орехов. ДОБАВЛЕНИЕ ЖИДКОСТИ: Добавьте гранатовую патоку, оливковое масло, лимонный сок и соль, кратко взбейте для соединения. ПОДАЧА: Подавайте при комнатной температуре, сбрызнув оливковым маслом, с тёплым лавашом.",
+    "ar": "شوي الفلفل: اشوِ الفلفل كاملًا مباشرة على النار أو في الفرن على حرارة 220 درجة، مع التقليب، حتى يسود من الخارج. التقشير: ضع الفلفل في كيس مغلق لمدة 10 دقائق ليتبخر، ثم أزل القشرة والبذور. تحميص الجوز: حمّص الجوز قليلًا في مقلاة جافة على نار هادئة حتى تفوح رائحته. دمج المكونات: ضع الفلفل المقشر والجوز المحمص وفتات الخبز والثوم والكمون ورقائق الفلفل في محضر طعام. المعالجة: اخلط كل شيء حتى تحصل على عجينة سميكة، مع وجود قطع جوز مرئية. إضافة السائل: أضف دبس الرمان وزيت الزيتون وعصير الليمون والملح، اخلط قليلًا للدمج. التقديم: قدّمه بحرارة الغرفة، مرشوشًا بزيت الزيتون، مع خبز دافئ.",
+    "zh": "烤辣椒：将整个辣椒直接在火上或220°C烤箱中烘烤，翻动至外皮变黑。去皮：将辣椒放入密封袋中焖10分钟，然后剥去外皮并去籽。烤核桃：将核桃在干锅中小火轻烤至散发香气。混合食材：将去皮辣椒、烤核桃、面包糠、大蒜、孜然和辣椒碎放入食物加工机。搅打：将所有材料搅打成浓稠糊状，但保留可见的核桃碎块。加入液体：加入石榴糖浆、橄榄油、柠檬汁和盐，短暂搅打混合均匀。装盘：常温食用，淋上橄榄油，配温热的薄饼享用。",
+    "ja": "パプリカを焼く：パプリカを丸ごと直火またはオーブン220°Cで、外側が黒くなるまで返しながら焼く。皮をむく：パプリカを閉じた袋に10分間入れて蒸らし、皮と種を取り除く。くるみを炒る：乾いたフライパンでくるみを弱火で香りが出るまで軽く炒る。材料を合わせる：皮をむいたパプリカ、炒ったくるみ、パン粉、にんにく、クミン、唐辛子フレークをフードプロセッサーに入れる。攪拌する：くるみの粒が見える程度の濃厚なペーストになるまで攪拌する。液体を加える：ザクロ糖蜜、オリーブオイル、レモン汁、塩を加え、短時間攪拌して混ぜる。盛り付け：室温でオリーブオイルをかけ、温かいフラットブレッドと共に提供する。",
+    "hi": "मिर्च भूनें: पूरी मिर्च को सीधे आंच पर या 220°C ओवन में पलटते हुए तब तक भूनें जब तक बाहर से काली न हो जाए। छीलें: मिर्च को बंद थैले में 10 मिनट भाप में रखें, फिर छिलका और बीज निकाल दें। अखरोट भूनें: सूखे पैन में धीमी आँच पर अखरोट को सुगंधित होने तक हल्का भूनें। सामग्री मिलाएं: छिली मिर्च, भुने अखरोट, ब्रेडक्रम्ब्स, लहसुन, जीरा और मिर्च के टुकड़े फूड प्रोसेसर में डालें। प्रोसेस करें: सब कुछ तब तक मिलाएं जब तक गाढ़ा पेस्ट न बन जाए, लेकिन अखरोट के टुकड़े दिखने चाहिए। तरल डालें: अनार की चाशनी, जैतून का तेल, नींबू का रस और नमक डालें, मिलाने के लिए थोड़ी देर मिलाएं। परोसें: कमरे के तापमान पर, जैतून के तेल के साथ छिड़ककर, गरम फ्लैटब्रेड के साथ परोसें।",
+    "tr": "BİBERLERİ KAVURUN: Bütün biberleri doğrudan ateşte veya 220°C fırında, dışı karararana kadar çevirerek kavurun. SOYUN: Biberleri buharlaşmaları için 10 dakika kapalı bir torbaya koyun, sonra kabuğunu ve çekirdeklerini çıkarın. CEVİZLERİ KAVURUN: Cevizleri kuru bir tavada kısık ateşte kokusu çıkana kadar hafifçe kavurun. MALZEMELERİ BİRLEŞTİRİN: Soyulmuş biberleri, kavrulmuş cevizleri, galeta ununu, sarımsağı, kimyonu ve biber pullarını bir mutfak robotuna koyun. İŞLEYİN: Görünür ceviz parçaları kalacak şekilde her şeyi koyu bir ezme haline gelene kadar karıştırın. SIVI EKLEYİN: Nar ekşisini, zeytinyağını, limon suyunu ve tuzu ekleyin, birleştirmek için kısaca karıştırın. SERVİS EDİN: Oda sıcaklığında, zeytinyağı gezdirerek, sıcak yassı ekmekle servis edin.",
+    "it": "ARROSTIRE I PEPERONI: Arrostite i peperoni interi direttamente sulla fiamma o in forno a 220°C, girandoli, finché anneriscono all'esterno. SBUCCIARE: Mettete i peperoni in un sacchetto chiuso per 10 minuti a vaporizzare, poi togliete la pelle e i semi. TOSTARE LE NOCI: Tostate leggermente le noci in una padella asciutta a fuoco basso finché profumate. COMBINARE GLI INGREDIENTI: Mettete i peperoni sbucciati, le noci tostate, il pangrattato, l'aglio, il cumino e i fiocchi di peperoncino in un robot da cucina. FRULLARE: Frullate tutto fino a ottenere una pasta densa, ma con pezzetti di noce visibili. AGGIUNGERE IL LIQUIDO: Aggiungete la melassa di melograno, l'olio d'oliva, il succo di limone e il sale, frullate brevemente per amalgamare. SERVIRE: Servite a temperatura ambiente, irrorata con olio d'oliva, con pane piatto caldo.",
+    "ko": "피망 굽기: 피망을 통째로 직화나 220°C 오븐에서 겉면이 검게 될 때까지 뒤집으며 굽는다. 껍질 벗기기: 피망을 밀폐된 봉지에 10분간 넣어 김을 낸 후 껍질과 씨를 제거한다. 호두 볶기: 마른 팬에 호두를 약불에서 향이 날 때까지 살짝 볶는다. 재료 섞기: 껍질 벗긴 피망, 볶은 호두, 빵가루, 마늘, 커민, 고춧가루를 푸드프로세서에 넣는다. 갈기: 호두 조각이 보일 정도로 걸쭉한 페이스트가 될 때까지 간다. 액체 넣기: 석류당밀, 올리브 오일, 레몬즙, 소금을 넣고 짧게 갈아 섞는다. 담아내기: 실온에서 올리브 오일을 뿌려 따뜻한 플랫브레드와 함께 낸다."
+  },
+  "originText": {
+    "ro": "Muhammara are rădăcini în orașul Aleppo, considerat capitala culinară a Siriei și una dintre cele mai vechi bucătării continue documentate din istorie. Numele provine dintr-un cuvânt arab care înseamnă înroșit, referindu-se la culoarea intensă dată de ardeii copți și pasta de ardei iute folosită tradițional.\n\nÎnainte de vremea roșiilor aduse din Lumea Nouă, ardeii și melasa de rodie erau printre puținele surse de aciditate și dulceață disponibile bucătarilor sirieni, ceea ce explică rolul lor central în această pastă. Astăzi, muhammara face parte din mezze-ul tradițional sirian și libanez, servită alături de alte antreuri reci la începutul mesei, adesea alături de labneh și măsline.",
+    "en": "Muhammara has roots in the city of Aleppo, considered Syria's culinary capital and one of the oldest continuously documented cuisines in history. The name comes from an Arabic word meaning reddened, referring to the intense color given by the roasted peppers and hot pepper paste traditionally used.\n\nBefore tomatoes arrived from the New World, peppers and pomegranate molasses were among the few sources of acidity and sweetness available to Syrian cooks, which explains their central role in this dip. Today, muhammara is part of the traditional Syrian and Lebanese mezze, served alongside other cold starters at the beginning of a meal, often paired with labneh and olives.",
+    "es": "La muhammara tiene raíces en la ciudad de Alepo, considerada la capital culinaria de Siria y una de las cocinas continuamente documentadas más antiguas de la historia. El nombre proviene de una palabra árabe que significa enrojecido, refiriéndose al color intenso dado por los pimientos asados y la pasta de pimiento picante usada tradicionalmente.\n\nAntes de que llegaran los tomates del Nuevo Mundo, los pimientos y la melaza de granada estaban entre las pocas fuentes de acidez y dulzura disponibles para los cocineros sirios, lo que explica su papel central en esta pasta. Hoy en día, la muhammara forma parte del mezze tradicional sirio y libanés, servida junto con otras entradas frías al comienzo de una comida, a menudo acompañada de labneh y aceitunas.",
+    "fr": "La muhammara a des racines dans la ville d'Alep, considérée comme la capitale culinaire de la Syrie et l'une des cuisines les plus anciennes continuellement documentées de l'histoire. Le nom vient d'un mot arabe signifiant rougi, faisant référence à la couleur intense donnée par les poivrons rôtis et la pâte de piment traditionnellement utilisée.\n\nAvant l'arrivée des tomates du Nouveau Monde, les poivrons et la mélasse de grenade figuraient parmi les rares sources d'acidité et de douceur disponibles pour les cuisiniers syriens, ce qui explique leur rôle central dans cette tartinade. Aujourd'hui, la muhammara fait partie du mezze traditionnel syrien et libanais, servie avec d'autres entrées froides au début du repas, souvent accompagnée de labné et d'olives.",
+    "de": "Muhammara hat ihre Wurzeln in der Stadt Aleppo, die als kulinarische Hauptstadt Syriens gilt und eine der ältesten durchgehend dokumentierten Küchen der Geschichte besitzt. Der Name stammt von einem arabischen Wort, das gerötet bedeutet und sich auf die intensive Farbe bezieht, die von den gerösteten Paprika und der traditionell verwendeten scharfen Paprikapaste stammt.\n\nBevor Tomaten aus der Neuen Welt ankamen, gehörten Paprika und Granatapfelmelasse zu den wenigen Säure- und Süßequellen, die syrischen Köchen zur Verfügung standen, was ihre zentrale Rolle in diesem Dip erklärt. Heute ist Muhammara Teil der traditionellen syrischen und libanesischen Mezze, serviert zusammen mit anderen kalten Vorspeisen zu Beginn einer Mahlzeit, oft zusammen mit Labneh und Oliven.",
+    "pt": "A muhammara tem raízes na cidade de Alepo, considerada a capital culinária da Síria e uma das cozinhas continuamente documentadas mais antigas da história. O nome vem de uma palavra árabe que significa avermelhado, referindo-se à cor intensa dada pelos pimentos assados e a pasta de pimenta picante tradicionalmente usada.\n\nAntes de os tomates chegarem do Novo Mundo, os pimentos e o melaço de romã estavam entre as poucas fontes de acidez e doçura disponíveis para os cozinheiros sírios, o que explica o seu papel central nesta pasta. Hoje, a muhammara faz parte do mezze tradicional sírio e libanês, servida ao lado de outras entradas frias no início de uma refeição, frequentemente acompanhada de labneh e azeitonas.",
+    "ru": "Мухаммара уходит корнями в город Алеппо, считающийся кулинарной столицей Сирии и обладающий одной из старейших непрерывно документированных кухонь в истории. Название происходит от арабского слова, означающего покрасневший, отсылающего к насыщенному цвету, придаваемому запечённым перцем и традиционно используемой острой перечной пастой.\n\nДо появления помидоров из Нового Света перец и гранатовая патока были одними из немногих источников кислоты и сладости, доступных сирийским поварам, что объясняет их центральную роль в этой пасте. Сегодня мухаммара — часть традиционного сирийского и ливанского мезе, подаётся вместе с другими холодными закусками в начале трапезы, часто в паре с лабне и оливками.",
+    "ar": "تعود جذور المحمرة إلى مدينة حلب، التي تُعتبر العاصمة الطهوية لسوريا وواحدة من أقدم المطابخ الموثقة باستمرار في التاريخ. يأتي الاسم من كلمة تصف اللون الأحمر المكتسب، في إشارة إلى اللون الغني الذي يمنحه الفلفل المشوي ومعجون الفلفل الحار المستخدم تقليديًا.\n\nقبل وصول الطماطم من العالم الجديد، كان الفلفل ودبس الرمان من بين المصادر القليلة للحموضة والحلاوة المتاحة للطهاة السوريين، مما يفسر دورهما المحوري في هذه المعجونة. اليوم، تُعد المحمرة جزءًا من المازة السورية واللبنانية التقليدية، تُقدَّم إلى جانب مقبلات باردة أخرى في بداية الوجبة، غالبًا مع اللبنة والزيتون.",
+    "zh": "穆哈马拉起源于阿勒颇市，这座城市被视为叙利亚的美食之都，拥有历史上持续记录最悠久的菜系之一。这个名字源自阿拉伯语中意为变红的词语，指的是烤辣椒和传统使用的辣椒酱赋予的浓烈色泽。\n\n在新大陆的番茄传入之前，辣椒和石榴糖浆是叙利亚厨师少数可用的酸味与甜味来源，这解释了它们在这道酱料中的核心地位。如今，穆哈马拉是叙利亚和黎巴嫩传统开胃菜拼盘（mezze）的一部分，通常与拉巴内奶酪和橄榄一起作为餐前冷盘上桌。",
+    "ja": "ムハンマラはシリアの美食の首都と見なされ、歴史上最も古く継続的に記録された料理の一つであるアレッポの街にルーツを持つ。この名前は赤くなったという意味のアラビア語に由来し、焼いたパプリカと伝統的に使われる辛い唐辛子ペーストが与える濃い色を指している。\n\n新大陸からトマトが伝わる以前、パプリカとザクロ糖蜜はシリアの料理人が利用できた数少ない酸味と甘味の供給源であり、このディップにおける中心的な役割を説明している。今日、ムハンマラは伝統的なシリアおよびレバノンのメゼの一部であり、食事の始めに他の冷たい前菜と共に、しばしばラブネやオリーブと共に提供される。",
+    "hi": "मुहम्मरा की जड़ें अलेप्पो शहर में हैं, जिसे सीरिया की पाक राजधानी और इतिहास के सबसे पुराने लगातार दर्ज व्यंजनों में से एक माना जाता है। नाम एक अरबी शब्द से आता है जिसका अर्थ है लाल किया गया, जो भुनी मिर्च और पारंपरिक रूप से उपयोग किए जाने वाले तीखे मिर्च के पेस्ट से मिलने वाले गहरे रंग को दर्शाता है।\n\nनई दुनिया से टमाटर आने से पहले, मिर्च और अनार की चाशनी सीरियाई रसोइयों के लिए उपलब्ध खट्टेपन और मिठास के कुछ स्रोतों में से थे, जो इस डिप में उनकी केंद्रीय भूमिका बताता है। आज, मुहम्मरा पारंपरिक सीरियाई और लेबनानी मेज़े का हिस्सा है, जो भोजन की शुरुआत में अन्य ठंडे स्टार्टर के साथ परोसा जाता है, अक्सर लब्ने और जैतून के साथ।",
+    "tr": "Muhammara, Suriye'nin mutfak başkenti sayılan ve tarihte sürekli belgelenen en eski mutfaklardan birine sahip olan Halep şehrinde köklenir. Ad, kızarmış anlamına gelen Arapça bir kelimeden gelir ve geleneksel olarak kullanılan kavrulmuş biberler ve acı biber ezmesinin verdiği yoğun rengi ifade eder.\n\nYeni Dünya'dan domates gelmeden önce, biber ve nar ekşisi, Suriyeli aşçıların erişebildiği az sayıdaki asitlik ve tatlılık kaynağından biriydi, bu da bu ezmedeki merkezi rollerini açıklar. Bugün muhammara, geleneksel Suriye ve Lübnan mezesinin bir parçasıdır, öğünün başında diğer soğuk başlangıçlarla birlikte, genellikle labne ve zeytinle sunulur.",
+    "it": "La muhammara ha radici nella città di Aleppo, considerata la capitale culinaria della Siria e una delle cucine continuamente documentate più antiche della storia. Il nome deriva da una parola araba che significa arrossato, riferendosi al colore intenso dato dai peperoni arrostiti e dalla pasta di peperoncino tradizionalmente utilizzata.\n\nPrima che i pomodori arrivassero dal Nuovo Mondo, i peperoni e la melassa di melograno erano tra le poche fonti di acidità e dolcezza disponibili per i cuochi siriani, il che spiega il loro ruolo centrale in questa salsa. Oggi, la muhammara fa parte del mezze tradizionale siriano e libanese, servita insieme ad altri antipasti freddi all'inizio di un pasto, spesso abbinata a labneh e olive.",
+    "ko": "무함마라는 시리아의 요리 수도로 여겨지며 역사상 가장 오래도록 지속적으로 기록된 요리 중 하나를 지닌 알레포 시에 뿌리를 두고 있다. 이 이름은 붉어진이라는 뜻의 아랍어 단어에서 유래했으며, 구운 피망과 전통적으로 사용되는 매운 고추 페이스트가 만들어내는 짙은 색을 가리킨다.\n\n신대륙에서 토마토가 들어오기 전, 피망과 석류당밀은 시리아 요리사들이 이용할 수 있었던 몇 안 되는 산미와 단맛의 공급원이었으며, 이는 이 딥에서 이들의 핵심적인 역할을 설명해준다. 오늘날 무함마라는 전통적인 시리아와 레바논 메제의 일부로, 식사 시작 시 다른 차가운 전채와 함께 제공되며 종종 라브네와 올리브를 곁들인다."
+  },
+  "meta": {
+    "time": 45,
+    "costRon": 14,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Pastă groasă din ardei copți și nuci, cu melasă de rodie acrișoară-dulce.",
+      "en": "Thick dip of roasted peppers and walnuts, with tart-sweet pomegranate molasses.",
+      "es": "Pasta espesa de pimientos asados y nueces, con melaza de granada agridulce.",
+      "fr": "Tartinade épaisse de poivrons rôtis et de noix, avec mélasse de grenade aigre-douce.",
+      "de": "Dicker Dip aus gerösteter Paprika und Walnüssen, mit süßsäuerlicher Granatapfelmelasse.",
+      "pt": "Pasta espessa de pimentos assados e nozes, com melaço de romã agridoce.",
+      "ru": "Густая паста из запечённого перца и грецких орехов, с кисло-сладкой гранатовой патокой.",
+      "ar": "معجون سميك من الفلفل المشوي والجوز، مع دبس رمان حامض حلو.",
+      "zh": "烤辣椒和核桃制成的浓稠酱，配酸甜石榴糖浆。",
+      "ja": "焼きパプリカとくるみの濃厚なディップ、甘酸っぱいザクロ糖蜜添え。",
+      "hi": "भुनी मिर्च और अखरोट का गाढ़ा पेस्ट, खट्टी-मीठी अनार की चाशनी के साथ।",
+      "tr": "Kavrulmuş biber ve cevizden yapılan koyu ezme, ekşi-tatlı nar ekşisiyle.",
+      "it": "Salsa densa di peperoni arrostiti e noci, con melassa di melograno agrodolce.",
+      "ko": "구운 피망과 호두로 만든 진한 딥, 새콤달콤한 석류당밀을 곁들임."
+    }
+  }
+}

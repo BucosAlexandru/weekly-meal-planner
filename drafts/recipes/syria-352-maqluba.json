@@ -1,0 +1,178 @@
+{
+  "id": 352,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Siria", "en": "Syria", "es": "Siria", "fr": "Syrie", "de": "Syrien",
+    "pt": "Síria", "ru": "Сирия", "ar": "سوريا", "zh": "叙利亚", "ja": "シリア",
+    "hi": "सीरिया", "tr": "Suriye", "it": "Siria", "ko": "시리아"
+  },
+  "name": {
+    "ro": "Maqluba (Orez răsturnat)", "en": "Maqluba (Upside-Down Rice)", "es": "Maqluba (Arroz volteado)",
+    "fr": "Maqluba (Riz renversé)", "de": "Maqluba (Umgedrehter Reis)", "pt": "Maqluba (Arroz virado)",
+    "ru": "Маклуба (Перевёрнутый рис)", "ar": "مقلوبة", "zh": "叙利亚倒扣饭",
+    "ja": "マクルーバ（ひっくり返しご飯）", "hi": "मक़लूबा (उल्टा चावल)", "tr": "Maklube (Ters Çevrilmiş Pilav)",
+    "it": "Maqluba (Riso rovesciato)", "ko": "마클루바 (뒤집힌 밥)"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍆", "t": "Vinete prăjite", "d": "Straturi de vinete prăjite aurii, care se topesc în orez."},
+      {"icon": "🍚", "t": "Orez cu boia", "d": "Orez lung aromat cu boia, scorțișoară și cardamom."},
+      {"icon": "🍗", "t": "Pui sau miel", "d": "Bucăți de carne fierte în bulion, așezate la baza oalei."},
+      {"icon": "🔄", "t": "Servit răsturnat", "d": "Oala se răstoarnă dintr-o mișcare pe platou, dezvăluind straturile."}
+    ],
+    "en": [
+      {"icon": "🍆", "t": "Fried eggplant", "d": "Layers of golden fried eggplant that melt into the rice."},
+      {"icon": "🍚", "t": "Paprika rice", "d": "Long-grain rice scented with paprika, cinnamon and cardamom."},
+      {"icon": "🍗", "t": "Chicken or lamb", "d": "Meat pieces cooked in broth, placed at the bottom of the pot."},
+      {"icon": "🔄", "t": "Served upside down", "d": "The pot is flipped in one motion onto a platter, revealing the layers."}
+    ],
+    "es": [
+      {"icon": "🍆", "t": "Berenjena frita", "d": "Capas de berenjena frita dorada que se funden en el arroz."},
+      {"icon": "🍚", "t": "Arroz con pimentón", "d": "Arroz de grano largo perfumado con pimentón, canela y cardamomo."},
+      {"icon": "🍗", "t": "Pollo o cordero", "d": "Trozos de carne cocidos en caldo, colocados en la base de la olla."},
+      {"icon": "🔄", "t": "Servido volteado", "d": "La olla se voltea de un solo movimiento sobre una bandeja, revelando las capas."}
+    ],
+    "fr": [
+      {"icon": "🍆", "t": "Aubergine frite", "d": "Des couches d'aubergine frite dorée qui fondent dans le riz."},
+      {"icon": "🍚", "t": "Riz au paprika", "d": "Riz long parfumé au paprika, à la cannelle et à la cardamome."},
+      {"icon": "🍗", "t": "Poulet ou agneau", "d": "Morceaux de viande cuits dans le bouillon, placés au fond de la marmite."},
+      {"icon": "🔄", "t": "Servi renversé", "d": "La marmite est retournée d'un seul geste sur un plat, révélant les couches."}
+    ],
+    "de": [
+      {"icon": "🍆", "t": "Frittierte Aubergine", "d": "Schichten aus goldbraun frittierter Aubergine, die im Reis zergehen."},
+      {"icon": "🍚", "t": "Paprikareis", "d": "Langkornreis, aromatisiert mit Paprika, Zimt und Kardamom."},
+      {"icon": "🍗", "t": "Hähnchen oder Lamm", "d": "Fleischstücke, in Brühe gegart, am Boden des Topfes platziert."},
+      {"icon": "🔄", "t": "Umgedreht serviert", "d": "Der Topf wird in einer Bewegung auf eine Platte gestürzt, die Schichten werden sichtbar."}
+    ],
+    "pt": [
+      {"icon": "🍆", "t": "Beringela frita", "d": "Camadas de beringela frita dourada que se derretem no arroz."},
+      {"icon": "🍚", "t": "Arroz com colorau", "d": "Arroz de grão longo perfumado com colorau, canela e cardamomo."},
+      {"icon": "🍗", "t": "Frango ou borrego", "d": "Pedaços de carne cozinhados em caldo, colocados no fundo da panela."},
+      {"icon": "🔄", "t": "Servido virado", "d": "A panela é virada num só movimento sobre uma travessa, revelando as camadas."}
+    ],
+    "ru": [
+      {"icon": "🍆", "t": "Жареные баклажаны", "d": "Слои золотисто обжаренных баклажанов, тающих в рисе."},
+      {"icon": "🍚", "t": "Рис с паприкой", "d": "Длиннозёрный рис, ароматизированный паприкой, корицей и кардамоном."},
+      {"icon": "🍗", "t": "Курица или баранина", "d": "Куски мяса, приготовленные в бульоне, помещённые на дно кастрюли."},
+      {"icon": "🔄", "t": "Подаётся перевёрнутым", "d": "Кастрюлю переворачивают одним движением на блюдо, открывая слои."}
+    ],
+    "ar": [
+      {"icon": "🍆", "t": "باذنجان مقلي", "d": "طبقات من الباذنجان المقلي الذهبي التي تذوب في الأرز."},
+      {"icon": "🍚", "t": "أرز بالبابريكا", "d": "أرز طويل الحبة معطّر بالبابريكا والقرفة والهيل."},
+      {"icon": "🍗", "t": "دجاج أو غنم", "d": "قطع لحم مطهية في المرق، توضع في قاع القدر."},
+      {"icon": "🔄", "t": "يُقدَّم مقلوبًا", "d": "يُقلب القدر بحركة واحدة على صينية، كاشفًا عن الطبقات."}
+    ],
+    "zh": [
+      {"icon": "🍆", "t": "炸茄子", "d": "金黄炸茄子层层叠入米饭中融化。"},
+      {"icon": "🍚", "t": "红椒粉米饭", "d": "长粒米饭以红椒粉、肉桂和小豆蔻调香。"},
+      {"icon": "🍗", "t": "鸡肉或羊肉", "d": "肉块在高汤中煮熟，铺在锅底。"},
+      {"icon": "🔄", "t": "倒扣上桌", "d": "锅一气呵成倒扣在盘子上，露出层层叠叠的食材。"}
+    ],
+    "ja": [
+      {"icon": "🍆", "t": "揚げなす", "d": "米に溶け込む黄金色に揚げたなすの層。"},
+      {"icon": "🍚", "t": "パプリカライス", "d": "パプリカ、シナモン、カルダモンで香り付けした長粒米。"},
+      {"icon": "🍗", "t": "鶏肉またはラム肉", "d": "出汁で煮込んだ肉を鍋の底に敷く。"},
+      {"icon": "🔄", "t": "ひっくり返して提供", "d": "鍋を一気に皿にひっくり返し、層を披露する。"}
+    ],
+    "hi": [
+      {"icon": "🍆", "t": "तला बैंगन", "d": "सुनहरे तले बैंगन की परतें जो चावल में घुल जाती हैं।"},
+      {"icon": "🍚", "t": "पपरिका चावल", "d": "पपरिका, दालचीनी और इलायची से सुगंधित लंबे दाने वाला चावल।"},
+      {"icon": "🍗", "t": "चिकन या भेड़ का मांस", "d": "शोरबे में पके मांस के टुकड़े बर्तन के तले में रखे जाते हैं।"},
+      {"icon": "🔄", "t": "उल्टा परोसा गया", "d": "बर्तन को एक झटके में थाली पर पलटा जाता है, परतें दिखाते हुए।"}
+    ],
+    "tr": [
+      {"icon": "🍆", "t": "Kızarmış patlıcan", "d": "Pirince karışan altın rengi kızarmış patlıcan katmanları."},
+      {"icon": "🍚", "t": "Paprikalı pirinç", "d": "Paprika, tarçın ve kakuleyle kokulandırılmış uzun taneli pirinç."},
+      {"icon": "🍗", "t": "Tavuk veya kuzu", "d": "Suda pişirilmiş, tencerenin dibine yerleştirilmiş et parçaları."},
+      {"icon": "🔄", "t": "Ters çevrilerek servis edilir", "d": "Tencere tek hareketle tabağa çevrilir, katmanları ortaya çıkarır."}
+    ],
+    "it": [
+      {"icon": "🍆", "t": "Melanzane fritte", "d": "Strati di melanzane fritte dorate che si sciolgono nel riso."},
+      {"icon": "🍚", "t": "Riso alla paprika", "d": "Riso a grani lunghi profumato con paprika, cannella e cardamomo."},
+      {"icon": "🍗", "t": "Pollo o agnello", "d": "Pezzi di carne cotti nel brodo, posti sul fondo della pentola."},
+      {"icon": "🔄", "t": "Servito capovolto", "d": "La pentola viene rovesciata in un unico movimento su un piatto, rivelando gli strati."}
+    ],
+    "ko": [
+      {"icon": "🍆", "t": "튀긴 가지", "d": "밥에 녹아드는 황금빛 튀긴 가지 층."},
+      {"icon": "🍚", "t": "파프리카 밥", "d": "파프리카, 계피, 카다멈으로 향을 낸 장립종 쌀."},
+      {"icon": "🍗", "t": "닭고기 또는 양고기", "d": "육수에 익힌 고기 조각을 냄비 바닥에 깐다."},
+      {"icon": "🔄", "t": "뒤집어서 제공", "d": "냄비를 한 번에 접시로 뒤집어 층을 드러낸다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 pulpe de pui cu os", "2 vinete mari", "400g orez cu bob lung", "2 linguri boia dulce", "1 linguriță scorțișoară", "1/2 linguriță cardamom măcinat", "2 morcovi", "1 conopidă mică", "ulei pentru prăjit vinetele", "sare", "1 litru bulion de pui", "iaurt și migdale pentru servire"],
+    "en": ["4 bone-in chicken thighs", "2 large eggplants", "400g long-grain rice", "2 tbsp sweet paprika", "1 tsp cinnamon", "1/2 tsp ground cardamom", "2 carrots", "1 small cauliflower", "oil for frying the eggplant", "salt", "1 liter chicken broth", "yogurt and almonds for serving"],
+    "es": ["4 muslos de pollo con hueso", "2 berenjenas grandes", "400g de arroz de grano largo", "2 cdas de pimentón dulce", "1 cdta de canela", "1/2 cdta de cardamomo molido", "2 zanahorias", "1 coliflor pequeña", "aceite para freír la berenjena", "sal", "1 litro de caldo de pollo", "yogur y almendras para servir"],
+    "fr": ["4 cuisses de poulet avec os", "2 grosses aubergines", "400g de riz long", "2 c. à s. de paprika doux", "1 c. à c. de cannelle", "1/2 c. à c. de cardamome moulue", "2 carottes", "1 petit chou-fleur", "huile pour frire l'aubergine", "sel", "1 litre de bouillon de poulet", "yaourt et amandes pour servir"],
+    "de": ["4 Hähnchenschenkel mit Knochen", "2 große Auberginen", "400g Langkornreis", "2 EL süßes Paprikapulver", "1 TL Zimt", "1/2 TL gemahlener Kardamom", "2 Karotten", "1 kleiner Blumenkohl", "Öl zum Frittieren der Aubergine", "Salz", "1 Liter Hühnerbrühe", "Joghurt und Mandeln zum Servieren"],
+    "pt": ["4 coxas de frango com osso", "2 beringelas grandes", "400g de arroz de grão longo", "2 c. sopa de colorau doce", "1 colher de chá de canela", "1/2 colher de chá de cardamomo moído", "2 cenouras", "1 couve-flor pequena", "óleo para fritar a beringela", "sal", "1 litro de caldo de galinha", "iogurte e amêndoas para servir"],
+    "ru": ["4 куриных бедра на кости", "2 крупных баклажана", "400г длиннозёрного риса", "2 ст.л. сладкой паприки", "1 ч.л. корицы", "1/2 ч.л. молотого кардамона", "2 моркови", "1 небольшая цветная капуста", "масло для жарки баклажанов", "соль", "1 литр куриного бульона", "йогурт и миндаль для подачи"],
+    "ar": ["4 أفخاذ دجاج بالعظم", "باذنجانتان كبيرتان", "400غ أرز طويل الحبة", "2 ملعقة كبيرة بابريكا حلوة", "ملعقة صغيرة قرفة", "نصف ملعقة صغيرة هيل مطحون", "جزرتان", "قرنبيط صغير واحد", "زيت لقلي الباذنجان", "ملح", "1 لتر مرق دجاج", "لبن ولوز للتقديم"],
+    "zh": ["带骨鸡腿4个", "大茄子2个", "长粒米400克", "甜红椒粉2汤匙", "肉桂1茶匙", "小豆蔻粉半茶匙", "胡萝卜2根", "小花椰菜1个", "炸茄子用油", "盐", "鸡汤1升", "配食用酸奶和杏仁"],
+    "ja": ["骨付き鶏もも肉 4本", "大きめのなす 2本", "長粒米 400g", "甘いパプリカパウダー 大さじ2", "シナモン 小さじ1", "カルダモンパウダー 小さじ1/2", "にんじん 2本", "小さめのカリフラワー 1個", "なすを揚げる油", "塩", "鶏だし 1リットル", "提供用のヨーグルトとアーモンド"],
+    "hi": ["4 हड्डी वाले चिकन थाई", "2 बड़े बैंगन", "400 ग्राम लंबे दाने वाला चावल", "2 बड़े चम्मच मीठी पपरिका", "1 छोटा चम्मच दालचीनी", "1/2 छोटा चम्मच पिसी इलायची", "2 गाजर", "1 छोटा फूलगोभी", "बैंगन तलने के लिए तेल", "नमक", "1 लीटर चिकन शोरबा", "परोसने के लिए दही और बादाम"],
+    "tr": ["4 kemikli tavuk but", "2 büyük patlıcan", "400g uzun taneli pirinç", "2 yemek kaşığı tatlı paprika", "1 çay kaşığı tarçın", "1/2 çay kaşığı öğütülmüş kakule", "2 havuç", "1 küçük karnabahar", "patlıcanı kızartmak için yağ", "tuz", "1 litre tavuk suyu", "servis için yoğurt ve badem"],
+    "it": ["4 cosce di pollo con osso", "2 melanzane grandi", "400g di riso a grani lunghi", "2 cucchiai di paprika dolce", "1 cucchiaino di cannella", "1/2 cucchiaino di cardamomo macinato", "2 carote", "1 piccolo cavolfiore", "olio per friggere le melanzane", "sale", "1 litro di brodo di pollo", "yogurt e mandorle per servire"],
+    "ko": ["뼈 있는 닭 허벅지살 4개", "큰 가지 2개", "장립종 쌀 400g", "단맛 파프리카 가루 2큰술", "계피 1작은술", "카다멈 가루 1/2작은술", "당근 2개", "작은 콜리플라워 1개", "가지 튀김용 기름", "소금", "닭 육수 1리터", "곁들일 요거트와 아몬드"]
+  },
+  "howIsMade": {
+    "ro": "FELIERE VINETE: Taie vinetele felii groase, sărează-le și lasă-le 20 minute să elimine amăreala, apoi șterge-le. PRĂJIRE VINETE: Prăjește feliile de vinete în ulei încins până devin aurii pe ambele părți, scurge pe hârtie. FIERBERE PUI: Fierbe pulpele de pui în apă cu sare 30 minute, apoi scoate-le și păstrează bulionul. AȘEZARE STRATURI: Așază pulpele de pui la baza unei oale mari, apoi un strat de morcovi și conopidă, apoi vinetele prăjite. ADĂUGARE OREZ: Amestecă orezul crud cu boia, scorțișoara și cardamomul, presară deasupra legumelor. TURNARE BULION: Toarnă bulionul cald peste orez, până acoperă cu 2cm, fierbe cu capac la foc mic 35 minute. RĂSTURNARE: Lasă oala să se odihnească 10 minute, apoi așază un platou mare peste ea și răstoarnă rapid dintr-o mișcare fermă.",
+    "en": "SLICE EGGPLANT: Cut the eggplants into thick slices, salt them and let sit for 20 minutes to remove bitterness, then wipe dry. FRY EGGPLANT: Fry the eggplant slices in hot oil until golden on both sides, drain on paper. BOIL CHICKEN: Boil the chicken thighs in salted water for 30 minutes, then remove and reserve the broth. LAYER: Arrange the chicken thighs at the bottom of a large pot, then a layer of carrots and cauliflower, then the fried eggplant. ADD RICE: Mix the raw rice with paprika, cinnamon and cardamom, sprinkle over the vegetables. POUR BROTH: Pour the hot broth over the rice, until it covers by 2cm, simmer covered on low heat for 35 minutes. FLIP: Let the pot rest for 10 minutes, then place a large platter over it and flip quickly in one firm motion.",
+    "es": "CORTAR LA BERENJENA: Corta las berenjenas en rodajas gruesas, sálalas y déjalas 20 minutos para eliminar el amargor, luego sécalas. FREÍR LA BERENJENA: Fríe las rodajas de berenjena en aceite caliente hasta que estén doradas por ambos lados, escurre en papel. HERVIR EL POLLO: Hierve los muslos de pollo en agua con sal durante 30 minutos, luego retira y reserva el caldo. MONTAR: Coloca los muslos de pollo en la base de una olla grande, luego una capa de zanahorias y coliflor, luego la berenjena frita. AÑADIR EL ARROZ: Mezcla el arroz crudo con pimentón, canela y cardamomo, espolvorea sobre las verduras. VERTER EL CALDO: Vierte el caldo caliente sobre el arroz, hasta cubrir 2cm, cocina tapado a fuego lento 35 minutos. VOLTEAR: Deja reposar la olla 10 minutos, luego coloca una bandeja grande encima y voltea rápidamente de un movimiento firme.",
+    "fr": "TRANCHER L'AUBERGINE: Coupez les aubergines en tranches épaisses, salez-les et laissez reposer 20 minutes pour enlever l'amertume, puis essuyez-les. FRIRE L'AUBERGINE: Faites frire les tranches d'aubergine dans l'huile chaude jusqu'à ce qu'elles soient dorées des deux côtés, égouttez sur du papier. FAIRE BOUILLIR LE POULET: Faites bouillir les cuisses de poulet dans l'eau salée pendant 30 minutes, puis retirez et réservez le bouillon. MONTER: Disposez les cuisses de poulet au fond d'une grande marmite, puis une couche de carottes et de chou-fleur, puis l'aubergine frite. AJOUTER LE RIZ: Mélangez le riz cru avec le paprika, la cannelle et la cardamome, saupoudrez sur les légumes. VERSER LE BOUILLON: Versez le bouillon chaud sur le riz, jusqu'à couvrir de 2cm, laissez mijoter couvert à feu doux 35 minutes. RETOURNER: Laissez reposer la marmite 10 minutes, puis placez un grand plat dessus et retournez rapidement d'un mouvement ferme.",
+    "de": "AUBERGINE SCHNEIDEN: Die Auberginen in dicke Scheiben schneiden, salzen und 20 Minuten stehen lassen, um Bitterkeit zu entfernen, dann trocken tupfen. AUBERGINE FRITTIEREN: Die Auberginenscheiben in heißem Öl auf beiden Seiten goldbraun frittieren, auf Papier abtropfen lassen. HÄHNCHEN KOCHEN: Die Hähnchenschenkel 30 Minuten in Salzwasser kochen, dann herausnehmen und die Brühe aufbewahren. SCHICHTEN: Die Hähnchenschenkel am Boden eines großen Topfes anordnen, dann eine Schicht Karotten und Blumenkohl, dann die frittierte Aubergine. REIS HINZUFÜGEN: Den rohen Reis mit Paprika, Zimt und Kardamom vermischen, über das Gemüse streuen. BRÜHE ANGIESSEN: Die heiße Brühe über den Reis gießen, bis er 2cm bedeckt ist, zugedeckt bei schwacher Hitze 35 Minuten köcheln. STÜRZEN: Den Topf 10 Minuten ruhen lassen, dann eine große Platte darüber legen und in einer entschlossenen Bewegung schnell stürzen.",
+    "pt": "CORTAR A BERINGELA: Corte as beringelas em fatias grossas, tempere com sal e deixe 20 minutos para retirar o amargor, depois seque. FRITAR A BERINGELA: Frite as fatias de beringela em óleo quente até dourarem dos dois lados, escorra em papel. FERVER O FRANGO: Ferva as coxas de frango em água com sal durante 30 minutos, depois retire e reserve o caldo. MONTAR: Disponha as coxas de frango no fundo de uma panela grande, depois uma camada de cenouras e couve-flor, depois a beringela frita. ADICIONAR O ARROZ: Misture o arroz cru com colorau, canela e cardamomo, polvilhe sobre os legumes. DEITAR O CALDO: Deite o caldo quente sobre o arroz, até cobrir 2cm, cozinhe tapado em lume brando 35 minutos. VIRAR: Deixe a panela repousar 10 minutos, depois coloque uma travessa grande sobre ela e vire rapidamente num movimento firme.",
+    "ru": "НАРЕЗКА БАКЛАЖАНОВ: Нарежьте баклажаны толстыми ломтиками, посолите и оставьте на 20 минут, чтобы убрать горечь, затем протрите насухо. ЖАРКА БАКЛАЖАНОВ: Обжарьте ломтики баклажанов в горячем масле до золотистого цвета с обеих сторон, обсушите на бумаге. ВАРКА КУРИЦЫ: Варите куриные бёдра в подсоленной воде 30 минут, затем выньте и сохраните бульон. СБОРКА СЛОЁВ: Разложите куриные бёдра на дне большой кастрюли, затем слой моркови и цветной капусты, затем жареные баклажаны. ДОБАВЛЕНИЕ РИСА: Смешайте сырой рис с паприкой, корицей и кардамоном, посыпьте поверх овощей. ЗАЛИВКА БУЛЬОНОМ: Влейте горячий бульон поверх риса, чтобы покрыть на 2см, варите под крышкой на слабом огне 35 минут. ПЕРЕВОРОТ: Дайте кастрюле отдохнуть 10 минут, затем накройте большим блюдом и быстро переверните одним уверенным движением.",
+    "ar": "تقطيع الباذنجان: قطّع الباذنجان إلى شرائح سميكة، رشّه بالملح واتركه 20 دقيقة لإزالة المرارة، ثم جففه. قلي الباذنجان: اقلِ شرائح الباذنجان في زيت ساخن حتى تصبح ذهبية من الجانبين، صفّها على ورق. سلق الدجاج: اسلق أفخاذ الدجاج في ماء مملح لمدة 30 دقيقة، ثم أخرجها واحتفظ بالمرق. ترتيب الطبقات: رتّب أفخاذ الدجاج في قاع قدر كبير، ثم طبقة من الجزر والقرنبيط، ثم الباذنجان المقلي. إضافة الأرز: اخلط الأرز النيء بالبابريكا والقرفة والهيل، رشّه فوق الخضار. سكب المرق: اسكب المرق الساخن فوق الأرز حتى يغطيه بارتفاع 2سم، اطهِ مغطى على نار هادئة 35 دقيقة. القلب: اترك القدر يرتاح 10 دقائق، ثم ضع صينية كبيرة فوقه واقلبه بسرعة بحركة واحدة حازمة.",
+    "zh": "切茄子：将茄子切成厚片，撒盐静置20分钟去除苦味，然后擦干。炸茄子：将茄子片在热油中炸至两面金黄，捞出沥油。煮鸡肉：将鸡腿在盐水中煮30分钟，取出并保留汤汁。分层摆放：将鸡腿铺在大锅底部，再铺一层胡萝卜和花椰菜，最后铺上炸茄子。加入米饭：将生米与红椒粉、肉桂和小豆蔻混合，撒在蔬菜上。倒入汤汁：将热汤倒在米饭上，没过约2厘米，盖上盖子小火炖35分钟。倒扣：让锅静置10分钟，然后将大盘子盖在锅上，用一个坚定的动作快速倒扣。",
+    "ja": "なすを切る：なすを厚切りにし、塩をふって20分置いて苦味を抜き、水気を拭き取る。なすを揚げる：なすのスライスを熱した油で両面きつね色になるまで揚げ、ペーパーで油を切る。鶏肉を煮る：鶏もも肉を塩水で30分煮て、取り出して出汁を取っておく。層を重ねる：大きな鍋の底に鶏もも肉を並べ、次ににんじんとカリフラワーの層、その上に揚げなすをのせる。米を加える：生米にパプリカ、シナモン、カルダモンを混ぜ、野菜の上に振りかける。出汁を注ぐ：熱い出汁を米の上に2cmほど覆うまで注ぎ、ふたをして弱火で35分煮る。ひっくり返す：鍋を10分休ませ、大きな皿を鍋にかぶせて素早く一気にひっくり返す。",
+    "hi": "बैंगन काटें: बैंगन को मोटे टुकड़ों में काटें, नमक लगाकर 20 मिनट रखें ताकि कड़वाहट निकल जाए, फिर पोंछ लें। बैंगन तलें: बैंगन के टुकड़ों को गरम तेल में दोनों तरफ सुनहरा होने तक तलें, कागज़ पर निकालें। चिकन उबालें: चिकन थाई को नमकीन पानी में 30 मिनट उबालें, फिर निकालकर शोरबा बचाकर रखें। परतें लगाएं: चिकन थाई को बड़े बर्तन के तले में रखें, फिर गाजर और फूलगोभी की परत, फिर तले बैंगन। चावल डालें: कच्चे चावल को पपरिका, दालचीनी और इलायची के साथ मिलाएं, सब्ज़ियों के ऊपर छिड़कें। शोरबा डालें: गरम शोरबा चावल के ऊपर 2cm तक डालें, ढककर धीमी आँच पर 35 मिनट पकाएं। पलटें: बर्तन को 10 मिनट आराम दें, फिर एक बड़ी थाली उस पर रखें और एक ठोस झटके से तेज़ी से पलटें।",
+    "tr": "PATLICANI DİLİMLEYİN: Patlıcanları kalın dilimler halinde kesin, tuzlayın ve acılığı gidermesi için 20 dakika bekletin, sonra kurulayın. PATLICANI KIZARTIN: Patlıcan dilimlerini sıcak yağda her iki tarafı altın rengi olana kadar kızartın, kağıt üzerinde süzün. TAVUĞU HAŞLAYIN: Tavuk butlarını tuzlu suda 30 dakika haşlayın, sonra çıkarın ve suyunu ayırın. KATMANLAYIN: Tavuk butlarını büyük bir tencerenin dibine yerleştirin, sonra havuç ve karnabahar katmanı, sonra kızarmış patlıcan. PİRİNCİ EKLEYİN: Çiğ pirinci paprika, tarçın ve kakuleyle karıştırın, sebzelerin üzerine serpin. SUYU DÖKÜN: Sıcak suyu pirincin üzerine 2cm örtene kadar dökün, kapaklı olarak kısık ateşte 35 dakika pişirin. ÇEVİRİN: Tencereyi 10 dakika dinlendirin, sonra üzerine büyük bir tabak koyun ve kararlı bir hareketle hızlıca çevirin.",
+    "it": "AFFETTARE LE MELANZANE: Tagliate le melanzane a fette spesse, salatele e lasciate riposare 20 minuti per rimuovere l'amaro, poi asciugatele. FRIGGERE LE MELANZANE: Friggete le fette di melanzana in olio caldo finché dorate su entrambi i lati, scolate su carta. LESSARE IL POLLO: Lessate le cosce di pollo in acqua salata per 30 minuti, poi togliete e conservate il brodo. COMPORRE GLI STRATI: Disponete le cosce di pollo sul fondo di una pentola grande, poi uno strato di carote e cavolfiore, poi le melanzane fritte. AGGIUNGERE IL RISO: Mescolate il riso crudo con paprika, cannella e cardamomo, cospargete sulle verdure. VERSARE IL BRODO: Versate il brodo caldo sul riso, fino a coprire di 2cm, cuocete coperto a fuoco basso 35 minuti. ROVESCIARE: Lasciate riposare la pentola 10 minuti, poi mettete un piatto grande sopra e rovesciate rapidamente con un movimento deciso.",
+    "ko": "가지 썰기: 가지를 두껍게 썰어 소금을 뿌리고 20분간 두어 쓴맛을 제거한 후 물기를 닦는다. 가지 튀기기: 가지 조각을 뜨거운 기름에 양면이 황금빛이 될 때까지 튀겨 종이에 기름을 뺀다. 닭고기 삶기: 닭 허벅지살을 소금물에 30분간 삶은 후 꺼내고 육수를 따로 둔다. 층 쌓기: 큰 냄비 바닥에 닭고기를 놓고, 당근과 콜리플라워 층, 그다음 튀긴 가지를 올린다. 쌀 넣기: 생쌀을 파프리카, 계피, 카다멈과 섞어 채소 위에 뿌린다. 육수 붓기: 뜨거운 육수를 쌀 위로 2cm 덮이게 붓고, 뚜껑을 덮어 약불에서 35분간 끓인다. 뒤집기: 냄비를 10분간 두었다가 큰 접시를 위에 올리고 단호한 동작으로 재빨리 뒤집는다."
+  },
+  "originText": {
+    "ro": "Maqluba, care înseamnă literal răsturnat în arabă, este unul dintre cele mai teatrale feluri de mâncare din bucătăria levantină, comun în Siria, Palestina, Iordania și Liban, fiecare regiune revendicând propria versiune ca fiind cea originală. Momentul răsturnării oalei este un adevărat spectacol culinar — dacă straturile sunt bine construite, orezul, legumele și carnea rămân intacte, dezvăluind un tort savuros perfect stratificat.\n\nRețeta variază semnificativ de la o familie la alta, unele folosind vinete, altele conopidă sau dovlecel, dar principiul rămâne constant: legume prăjite, carne fiartă și orez aromat, gătite împreună într-o singură oală. Este considerată o mâncare festivă, gătită adesea pentru mese de duminică sau ocazii importante, când reușita răsturnării fără să se destrame este privită ca un semn de bun augur pentru bucătar.",
+    "en": "Maqluba, which literally means upside-down in Arabic, is one of the most theatrical dishes in Levantine cuisine, common in Syria, Palestine, Jordan and Lebanon, with each region claiming its own version as the original. The moment of flipping the pot is a true culinary spectacle — if the layers are well constructed, the rice, vegetables and meat stay intact, revealing a perfectly layered savory cake.\n\nThe recipe varies significantly from family to family, some using eggplant, others cauliflower or zucchini, but the principle stays constant: fried vegetables, cooked meat and scented rice, all cooked together in a single pot. It's considered a festive dish, often cooked for Sunday meals or important occasions, when a successful flip without falling apart is seen as a good omen for the cook.",
+    "es": "La maqluba, que literalmente significa volteado en árabe, es uno de los platos más teatrales de la cocina levantina, común en Siria, Palestina, Jordania y Líbano, con cada región reclamando su propia versión como la original. El momento de voltear la olla es un verdadero espectáculo culinario — si las capas están bien construidas, el arroz, las verduras y la carne permanecen intactos, revelando un pastel salado perfectamente estratificado.\n\nLa receta varía significativamente de una familia a otra, algunas usan berenjena, otras coliflor o calabacín, pero el principio se mantiene constante: verduras fritas, carne cocida y arroz perfumado, todo cocinado junto en una sola olla. Se considera un plato festivo, cocinado a menudo para comidas dominicales u ocasiones importantes, cuando un volteo exitoso sin desmoronarse se ve como un buen augurio para el cocinero.",
+    "fr": "La maqluba, qui signifie littéralement renversé en arabe, est l'un des plats les plus théâtraux de la cuisine levantine, courant en Syrie, en Palestine, en Jordanie et au Liban, chaque région revendiquant sa propre version comme l'originale. Le moment de retourner la marmite est un véritable spectacle culinaire — si les couches sont bien construites, le riz, les légumes et la viande restent intacts, révélant un gâteau salé parfaitement stratifié.\n\nLa recette varie considérablement d'une famille à l'autre, certaines utilisant de l'aubergine, d'autres du chou-fleur ou de la courgette, mais le principe reste constant : légumes frits, viande cuite et riz parfumé, tous cuits ensemble dans une seule marmite. C'est considéré comme un plat festif, souvent cuisiné pour les repas du dimanche ou des occasions importantes, où un renversement réussi sans s'effondrer est vu comme un bon présage pour le cuisinier.",
+    "de": "Maqluba, was auf Arabisch wörtlich umgedreht bedeutet, ist eines der theatralischsten Gerichte der levantinischen Küche, verbreitet in Syrien, Palästina, Jordanien und dem Libanon, wobei jede Region ihre eigene Version als die ursprüngliche beansprucht. Der Moment des Stürzens des Topfes ist ein wahres kulinarisches Spektakel — wenn die Schichten gut aufgebaut sind, bleiben Reis, Gemüse und Fleisch intakt und enthüllen einen perfekt geschichteten herzhaften Kuchen.\n\nDas Rezept variiert erheblich von Familie zu Familie, manche verwenden Aubergine, andere Blumenkohl oder Zucchini, aber das Prinzip bleibt konstant: gebratenes Gemüse, gegartes Fleisch und aromatisierter Reis, alles zusammen in einem einzigen Topf gegart. Es gilt als festliches Gericht, oft für Sonntagsmahlzeiten oder wichtige Anlässe gekocht, bei dem ein erfolgreicher Sturz ohne Zerfallen als gutes Omen für den Koch gilt.",
+    "pt": "A maqluba, que literalmente significa virado em árabe, é um dos pratos mais teatrais da cozinha levantina, comum na Síria, Palestina, Jordânia e Líbano, com cada região a reivindicar a sua própria versão como a original. O momento de virar a panela é um verdadeiro espetáculo culinário — se as camadas estiverem bem construídas, o arroz, os legumes e a carne permanecem intactos, revelando um bolo salgado perfeitamente estratificado.\n\nA receita varia significativamente de família para família, algumas usando beringela, outras couve-flor ou courgette, mas o princípio mantém-se constante: legumes fritos, carne cozinhada e arroz perfumado, tudo cozinhado junto numa única panela. É considerado um prato festivo, frequentemente cozinhado para refeições de domingo ou ocasiões importantes, quando uma reviravolta bem-sucedida sem desmoronar é vista como um bom presságio para o cozinheiro.",
+    "ru": "Маклуба, что буквально означает перевёрнутая по-арабски, — одно из самых театральных блюд левантийской кухни, распространённое в Сирии, Палестине, Иордании и Ливане, причём каждый регион считает свою версию оригинальной. Момент переворачивания кастрюли — настоящее кулинарное представление: если слои выложены хорошо, рис, овощи и мясо остаются целыми, открывая идеально послойный пикантный торт.\n\nРецепт значительно варьируется от семьи к семье — одни используют баклажаны, другие цветную капусту или цукини, но принцип остаётся неизменным: жареные овощи, приготовленное мясо и ароматизированный рис, всё это готовится вместе в одной кастрюле. Считается праздничным блюдом, часто готовится для воскресных трапез или важных событий, когда успешный переворот без разваливания считается хорошим предзнаменованием для повара.",
+    "ar": "المقلوبة، التي تعني حرفيًا مقلوبة بالعربية، هي واحدة من أكثر الأطباق دراميةً في المطبخ الشامي، شائعة في سوريا وفلسطين والأردن ولبنان، حيث تدّعي كل منطقة أن نسختها هي الأصلية. لحظة قلب القدر هي عرض طهوي حقيقي — إذا كانت الطبقات مبنية جيدًا، يبقى الأرز والخضار واللحم سليمين، كاشفين عن كعكة مالحة مرتبة الطبقات بشكل مثالي.\n\nتختلف الوصفة بشكل كبير من عائلة إلى أخرى، بعضها يستخدم الباذنجان وأخرى القرنبيط أو الكوسا، لكن المبدأ يبقى ثابتًا: خضار مقلية ولحم مطهو وأرز معطّر، جميعها تُطهى معًا في قدر واحد. تُعتبر طبقًا احتفاليًا، يُطهى غالبًا لوجبات الأحد أو المناسبات المهمة، حيث يُنظر إلى نجاح القلب دون تفكك على أنه فأل حسن للطاهي.",
+    "zh": "马克鲁巴（意为倒扣）在阿拉伯语中字面意思是「颠倒」，是黎凡特菜肴中最富戏剧性的一道菜，在叙利亚、巴勒斯坦、约旦和黎巴嫩都很常见，每个地区都声称自己的版本才是正宗的。倒扣锅的那一刻堪称一场真正的烹饪表演——如果各层堆叠得当，米饭、蔬菜和肉块会保持完整，呈现出一座层次分明的美味「蛋糕」。\n\n这道食谱在不同家庭之间差异显著，有的用茄子，有的用花椰菜或西葫芦，但原理始终不变：炸蔬菜、炖肉和调味米饭，一起在一个锅中烹制。它被视为一道节庆菜肴，常在周日聚餐或重要场合烹制，若能成功倒扣而不散架，则被视为对厨师的好兆头。",
+    "ja": "マクルーバは、アラビア語で文字通り「ひっくり返した」を意味し、シリア、パレスチナ、ヨルダン、レバノンで一般的なレバント料理の中でも最も演劇的な料理の一つであり、それぞれの地域が自分たちのバージョンこそが本物だと主張している。鍋をひっくり返す瞬間はまさに料理の見せ場である――層がうまく作られていれば、米、野菜、肉は崩れずに、完璧に層をなした風味豊かなケーキのような姿を現す。\n\nレシピは家庭ごとに大きく異なり、なすを使う家庭もあれば、カリフラワーやズッキーニを使う家庭もあるが、原則は変わらない。揚げた野菜、調理した肉、香り付けした米を、すべて一つの鍋で一緒に調理する。これは祝祭の料理とされ、日曜の食事や重要な機会によく作られ、崩れずにひっくり返すことに成功すると、料理人にとって良い前兆と見なされる。",
+    "hi": "मक़लूबा, जिसका अरबी में शाब्दिक अर्थ है उल्टा, लेवांतीन व्यंजनों में सबसे नाटकीय व्यंजनों में से एक है, जो सीरिया, फिलिस्तीन, जॉर्डन और लेबनान में आम है, हर क्षेत्र अपने संस्करण को मूल होने का दावा करता है। बर्तन पलटने का पल एक सच्चा पाक तमाशा है — यदि परतें अच्छी तरह से बनी हों, तो चावल, सब्ज़ियाँ और मांस बरकरार रहते हैं, एक पूरी तरह से परत-दर-परत बना स्वादिष्ट केक दिखाते हुए।\n\nनुस्खा परिवार-दर-परिवार काफी भिन्न होता है, कुछ बैंगन इस्तेमाल करते हैं, कुछ फूलगोभी या तोरी, लेकिन सिद्धांत स्थिर रहता है: तली सब्ज़ियाँ, पका मांस और सुगंधित चावल, सभी एक ही बर्तन में एक साथ पकाए जाते हैं। इसे एक उत्सवी व्यंजन माना जाता है, जो अक्सर रविवार के भोजन या महत्वपूर्ण अवसरों के लिए पकाया जाता है, जब बिना टूटे सफल पलटाव को रसोइए के लिए शुभ शगुन माना जाता है।",
+    "tr": "Arapçada tam anlamıyla ters çevrilmiş anlamına gelen maklube, Suriye, Filistin, Ürdün ve Lübnan'da yaygın olan, her bölgenin kendi versiyonunu orijinal olarak iddia ettiği Levant mutfağının en teatral yemeklerinden biridir. Tencereyi çevirme anı gerçek bir mutfak gösterisidir — katmanlar iyi inşa edilmişse, pirinç, sebzeler ve et sağlam kalır ve mükemmel katmanlı, lezzetli bir kek ortaya çıkar.\n\nTarif ailelere göre önemli ölçüde değişir, bazıları patlıcan, bazıları karnabahar veya kabak kullanır, ancak prensip sabit kalır: kızarmış sebzeler, pişmiş et ve kokulandırılmış pirinç, hepsi tek bir tencerede birlikte pişirilir. Bayramlık bir yemek olarak kabul edilir, genellikle Pazar yemekleri veya önemli vesileler için pişirilir; dağılmadan başarılı bir çevirme, aşçı için iyi bir alamet olarak görülür.",
+    "it": "La maqluba, che letteralmente significa capovolto in arabo, è uno dei piatti più teatrali della cucina levantina, comune in Siria, Palestina, Giordania e Libano, con ogni regione che rivendica la propria versione come originale. Il momento di rovesciare la pentola è un vero spettacolo culinario — se gli strati sono ben costruiti, il riso, le verdure e la carne rimangono intatti, rivelando una torta salata perfettamente stratificata.\n\nLa ricetta varia notevolmente da famiglia a famiglia, alcune usano le melanzane, altre il cavolfiore o le zucchine, ma il principio rimane costante: verdure fritte, carne cotta e riso profumato, tutti cotti insieme in un'unica pentola. È considerato un piatto festivo, spesso cucinato per i pasti domenicali o le occasioni importanti, quando un capovolgimento riuscito senza sfaldarsi è visto come un buon auspicio per il cuoco.",
+    "ko": "아랍어로 문자 그대로 뒤집힌이라는 뜻의 마클루바는 시리아, 팔레스타인, 요르단, 레바논에서 흔히 볼 수 있는 레반트 요리 중 가장 극적인 음식 중 하나로, 각 지역마다 자신의 버전이 원조라고 주장한다. 냄비를 뒤집는 순간은 진정한 요리의 볼거리다 — 층이 잘 쌓였다면 밥, 채소, 고기가 그대로 유지되어 완벽하게 층진 짭짤한 케이크가 드러난다.\n\n레시피는 가정마다 크게 다른데, 어떤 곳은 가지를 쓰고 다른 곳은 콜리플라워나 애호박을 쓰지만, 원칙은 변하지 않는다: 튀긴 채소, 익힌 고기, 향을 낸 밥을 모두 한 냄비에 함께 조리한다. 이는 축제 음식으로 여겨지며 주로 일요일 식사나 중요한 행사를 위해 조리되는데, 무너지지 않고 성공적으로 뒤집는 것은 요리사에게 좋은 징조로 여겨진다."
+  },
+  "meta": {
+    "time": 100,
+    "costRon": 22,
+    "tags": [],
+    "desc": {
+      "ro": "Straturi de pui, legume prăjite și orez cu boia, răsturnate dintr-o singură mișcare.",
+      "en": "Layers of chicken, fried vegetables and paprika rice, flipped in one motion.",
+      "es": "Capas de pollo, verduras fritas y arroz con pimentón, volteadas de un movimiento.",
+      "fr": "Couches de poulet, légumes frits et riz au paprika, renversées en un geste.",
+      "de": "Schichten aus Hähnchen, frittiertem Gemüse und Paprikareis, in einer Bewegung gestürzt.",
+      "pt": "Camadas de frango, legumes fritos e arroz com colorau, viradas num só movimento.",
+      "ru": "Слои курицы, жареных овощей и риса с паприкой, перевёрнутые одним движением.",
+      "ar": "طبقات من الدجاج والخضار المقلية وأرز البابريكا، تُقلب بحركة واحدة.",
+      "zh": "鸡肉、炸蔬菜和红椒粉米饭分层叠放，一气呵成倒扣。",
+      "ja": "鶏肉、揚げ野菜、パプリカライスの層を一気にひっくり返す。",
+      "hi": "चिकन, तली सब्ज़ियों और पपरिका चावल की परतें, एक झटके में पलटी गई।",
+      "tr": "Tavuk, kızarmış sebze ve paprikalı pirinç katmanları, tek hareketle çevrilmiş.",
+      "it": "Strati di pollo, verdure fritte e riso alla paprika, rovesciati in un unico movimento.",
+      "ko": "닭고기, 튀긴 채소, 파프리카 밥을 층층이 쌓아 한 번에 뒤집은 요리."
+    }
+  }
+}

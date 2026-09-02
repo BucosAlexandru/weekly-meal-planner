@@ -1,0 +1,177 @@
+{
+  "id": 353,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Siria", "en": "Syria", "es": "Siria", "fr": "Syrie", "de": "Syrien",
+    "pt": "Síria", "ru": "Сирия", "ar": "سوريا", "zh": "叙利亚", "ja": "シリア",
+    "hi": "सीरिया", "tr": "Suriye", "it": "Siria", "ko": "시리아"
+  },
+  "name": {
+    "ro": "Yalanji (Foi de viță umplute de post)", "en": "Yalanji (Vegetarian Stuffed Grape Leaves)", "es": "Yalanji (Hojas de parra vegetarianas)",
+    "fr": "Yalanji (Feuilles de vigne végétariennes)", "de": "Yalanji (Vegetarische Weinblätter)", "pt": "Yalanji (Folhas de vinha vegetarianas)",
+    "ru": "Ялангач (Постные виноградные листья)", "ar": "يلنجي", "zh": "叙利亚素酿葡萄叶卷",
+    "ja": "ヤランジ（精進の詰め物ブドウの葉）", "hi": "यालांजी (शाकाहारी भरवां अंगूर के पत्ते)", "tr": "Yalancı Sarma",
+    "it": "Yalanji (Foglie di vite vegetariane)", "ko": "얄란지 (채식 포도잎 쌈)"
+  },
+  "category": {
+    "ro": "Aperitiv", "en": "Appetizer", "es": "Entrante", "fr": "Entrée", "de": "Vorspeise", "pt": "Entrada",
+    "ru": "Закуска", "ar": "مقبلات", "zh": "开胃菜", "ja": "前菜", "hi": "स्टार्टर", "tr": "Meze", "it": "Antipasto", "ko": "전채"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍇", "t": "Foi de viță", "d": "Frunze de viță murate, rulate strâns în sulișoare mici."},
+      {"icon": "🍚", "t": "Umplutură de post", "d": "Orez cu roșii, ceapă, mentă și pătrunjel, fără carne."},
+      {"icon": "🍋", "t": "Zeamă de lămâie", "d": "Servite reci, stropite generos cu lămâie."},
+      {"icon": "🕌", "t": "Mâncare de Ramadan", "d": "Fel tradițional servit la iftar și la ocazii religioase."}
+    ],
+    "en": [
+      {"icon": "🍇", "t": "Grape leaves", "d": "Pickled vine leaves, tightly rolled into small parcels."},
+      {"icon": "🍚", "t": "Meatless filling", "d": "Rice with tomatoes, onion, mint and parsley, no meat."},
+      {"icon": "🍋", "t": "Lemon juice", "d": "Served cold, generously drizzled with lemon."},
+      {"icon": "🕌", "t": "Ramadan food", "d": "A traditional dish served at iftar and religious occasions."}
+    ],
+    "es": [
+      {"icon": "🍇", "t": "Hojas de parra", "d": "Hojas de vid en salmuera, enrolladas apretadamente en pequeños paquetitos."},
+      {"icon": "🍚", "t": "Relleno sin carne", "d": "Arroz con tomate, cebolla, menta y perejil, sin carne."},
+      {"icon": "🍋", "t": "Zumo de limón", "d": "Servidas frías, rociadas generosamente con limón."},
+      {"icon": "🕌", "t": "Comida de Ramadán", "d": "Plato tradicional servido en el iftar y ocasiones religiosas."}
+    ],
+    "fr": [
+      {"icon": "🍇", "t": "Feuilles de vigne", "d": "Feuilles de vigne en saumure, roulées serré en petits paquets."},
+      {"icon": "🍚", "t": "Farce sans viande", "d": "Riz avec tomates, oignon, menthe et persil, sans viande."},
+      {"icon": "🍋", "t": "Jus de citron", "d": "Servies froides, généreusement arrosées de citron."},
+      {"icon": "🕌", "t": "Plat du Ramadan", "d": "Plat traditionnel servi à l'iftar et lors d'occasions religieuses."}
+    ],
+    "de": [
+      {"icon": "🍇", "t": "Weinblätter", "d": "Eingelegte Weinblätter, fest zu kleinen Röllchen gerollt."},
+      {"icon": "🍚", "t": "Fleischlose Füllung", "d": "Reis mit Tomaten, Zwiebel, Minze und Petersilie, ohne Fleisch."},
+      {"icon": "🍋", "t": "Zitronensaft", "d": "Kalt serviert, großzügig mit Zitrone beträufelt."},
+      {"icon": "🕌", "t": "Ramadan-Speise", "d": "Traditionelles Gericht, serviert beim Iftar und religiösen Anlässen."}
+    ],
+    "pt": [
+      {"icon": "🍇", "t": "Folhas de vinha", "d": "Folhas de vinha em salmoura, enroladas apertadas em pequenos pacotes."},
+      {"icon": "🍚", "t": "Recheio sem carne", "d": "Arroz com tomate, cebola, hortelã e salsa, sem carne."},
+      {"icon": "🍋", "t": "Sumo de limão", "d": "Servidas frias, regadas generosamente com limão."},
+      {"icon": "🕌", "t": "Comida do Ramadão", "d": "Prato tradicional servido no iftar e em ocasiões religiosas."}
+    ],
+    "ru": [
+      {"icon": "🍇", "t": "Виноградные листья", "d": "Маринованные виноградные листья, плотно свёрнутые в маленькие рулетики."},
+      {"icon": "🍚", "t": "Постная начинка", "d": "Рис с помидорами, луком, мятой и петрушкой, без мяса."},
+      {"icon": "🍋", "t": "Лимонный сок", "d": "Подаётся холодным, щедро сбрызнутым лимоном."},
+      {"icon": "🕌", "t": "Рамаданская еда", "d": "Традиционное блюдо, подаваемое на ифтар и религиозные праздники."}
+    ],
+    "ar": [
+      {"icon": "🍇", "t": "ورق عنب", "d": "أوراق عنب مخللة، ملفوفة بإحكام في لفائف صغيرة."},
+      {"icon": "🍚", "t": "حشوة صيامية", "d": "أرز بالطماطم والبصل والنعناع والبقدونس، بدون لحم."},
+      {"icon": "🍋", "t": "عصير ليمون", "d": "تُقدَّم باردة، مرشوشة بسخاء بالليمون."},
+      {"icon": "🕌", "t": "طعام رمضاني", "d": "طبق تقليدي يُقدَّم في الإفطار والمناسبات الدينية."}
+    ],
+    "zh": [
+      {"icon": "🍇", "t": "葡萄叶", "d": "腌制葡萄叶，紧紧卷成小卷。"},
+      {"icon": "🍚", "t": "无肉馅料", "d": "米饭配番茄、洋葱、薄荷和欧芹，不含肉。"},
+      {"icon": "🍋", "t": "柠檬汁", "d": "冷食，淋上大量柠檬汁。"},
+      {"icon": "🕌", "t": "斋月食物", "d": "开斋和宗教场合上桌的传统菜肴。"}
+    ],
+    "ja": [
+      {"icon": "🍇", "t": "ブドウの葉", "d": "酢漬けのブドウの葉を小さく固く巻いたもの。"},
+      {"icon": "🍚", "t": "肉なしの詰め物", "d": "トマト、玉ねぎ、ミント、パセリを使った米、肉不使用。"},
+      {"icon": "🍋", "t": "レモン汁", "d": "冷やして提供し、たっぷりのレモンをかける。"},
+      {"icon": "🕌", "t": "ラマダンの食事", "d": "イフタールや宗教的な行事で提供される伝統料理。"}
+    ],
+    "hi": [
+      {"icon": "🍇", "t": "अंगूर के पत्ते", "d": "अचारी बेल के पत्ते, छोटे बंडलों में कसकर लपेटे गए।"},
+      {"icon": "🍚", "t": "मांस-रहित भराई", "d": "टमाटर, प्याज़, पुदीना और अजमोद के साथ चावल, बिना मांस।"},
+      {"icon": "🍋", "t": "नींबू का रस", "d": "ठंडा परोसा गया, भरपूर नींबू के साथ छिड़का हुआ।"},
+      {"icon": "🕌", "t": "रमज़ान का भोजन", "d": "इफ्तार और धार्मिक अवसरों पर परोसा जाने वाला पारंपरिक व्यंजन।"}
+    ],
+    "tr": [
+      {"icon": "🍇", "t": "Asma yaprakları", "d": "Turşu asma yaprakları, küçük paketler halinde sıkıca sarılmış."},
+      {"icon": "🍚", "t": "Etsiz iç harç", "d": "Domates, soğan, nane ve maydanozlu pirinç, etsiz."},
+      {"icon": "🍋", "t": "Limon suyu", "d": "Soğuk servis edilir, bolca limonla gezdirilerek."},
+      {"icon": "🕌", "t": "Ramazan yemeği", "d": "İftarda ve dini vesilelerle servis edilen geleneksel bir yemek."}
+    ],
+    "it": [
+      {"icon": "🍇", "t": "Foglie di vite", "d": "Foglie di vite in salamoia, arrotolate strette in piccoli involtini."},
+      {"icon": "🍚", "t": "Ripieno senza carne", "d": "Riso con pomodori, cipolla, menta e prezzemolo, senza carne."},
+      {"icon": "🍋", "t": "Succo di limone", "d": "Servite fredde, irrorate generosamente di limone."},
+      {"icon": "🕌", "t": "Cibo del Ramadan", "d": "Piatto tradizionale servito all'iftar e nelle occasioni religiose."}
+    ],
+    "ko": [
+      {"icon": "🍇", "t": "포도잎", "d": "절인 포도잎을 작은 꾸러미로 단단히 만다."},
+      {"icon": "🍚", "t": "고기 없는 속", "d": "토마토, 양파, 민트, 파슬리를 넣은 쌀, 고기 없음."},
+      {"icon": "🍋", "t": "레몬즙", "d": "차갑게 제공되며 레몬을 듬뿍 뿌린다."},
+      {"icon": "🕌", "t": "라마단 음식", "d": "이프타르와 종교 행사에서 제공되는 전통 음식."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["40 foi de viță murate", "300g orez cu bob mediu", "2 roșii mari, tocate", "1 ceapă mare, tocată fin", "1 legătură pătrunjel tocat", "1 legătură mentă proaspătă tocată", "100ml ulei de măsline", "zeamă de la 2 lămâi", "sare, piper", "1 linguriță boia dulce"],
+    "en": ["40 pickled grape leaves", "300g medium-grain rice", "2 large tomatoes, diced", "1 large onion, finely chopped", "1 bunch parsley, chopped", "1 bunch fresh mint, chopped", "100ml olive oil", "juice of 2 lemons", "salt, pepper", "1 tsp sweet paprika"],
+    "es": ["40 hojas de parra en salmuera", "300g de arroz de grano medio", "2 tomates grandes, en cubos", "1 cebolla grande, finamente picada", "1 manojo de perejil, picado", "1 manojo de menta fresca, picada", "100ml de aceite de oliva", "zumo de 2 limones", "sal, pimienta", "1 cdta de pimentón dulce"],
+    "fr": ["40 feuilles de vigne en saumure", "300g de riz à grain moyen", "2 grosses tomates, en dés", "1 gros oignon, finement haché", "1 botte de persil, haché", "1 botte de menthe fraîche, hachée", "100ml d'huile d'olive", "jus de 2 citrons", "sel, poivre", "1 c. à c. de paprika doux"],
+    "de": ["40 eingelegte Weinblätter", "300g mittelkörniger Reis", "2 große Tomaten, gewürfelt", "1 große Zwiebel, fein gehackt", "1 Bund Petersilie, gehackt", "1 Bund frische Minze, gehackt", "100ml Olivenöl", "Saft von 2 Zitronen", "Salz, Pfeffer", "1 TL süßes Paprikapulver"],
+    "pt": ["40 folhas de vinha em salmoura", "300g de arroz de grão médio", "2 tomates grandes, em cubos", "1 cebola grande, picada fina", "1 molho de salsa, picada", "1 molho de hortelã fresca, picada", "100ml de azeite", "sumo de 2 limões", "sal, pimenta", "1 colher de chá de colorau doce"],
+    "ru": ["40 маринованных виноградных листьев", "300г риса среднего зерна", "2 крупных помидора, кубиками", "1 крупная луковица, мелко нарезанная", "1 пучок петрушки, нарезанной", "1 пучок свежей мяты, нарезанной", "100мл оливкового масла", "сок 2 лимонов", "соль, перец", "1 ч.л. сладкой паприки"],
+    "ar": ["40 ورقة عنب مخللة", "300غ أرز متوسط الحبة", "طماطمتان كبيرتان مقطعتان مكعبات", "بصلة كبيرة مفرومة ناعمًا", "حزمة بقدونس مفروم", "حزمة نعناع طازج مفروم", "100مل زيت زيتون", "عصير ليمونتين", "ملح، فلفل", "ملعقة صغيرة بابريكا حلوة"],
+    "zh": ["腌制葡萄叶40片", "中粒米300克", "大番茄2个，切丁", "大洋葱1个，切碎", "欧芹1把，切碎", "新鲜薄荷1把，切碎", "橄榄油100毫升", "柠檬汁2个柠檬量", "盐、胡椒", "甜红椒粉1茶匙"],
+    "ja": ["酢漬けブドウの葉 40枚", "中粒米 300g", "大きめのトマト 2個（角切り）", "大きめの玉ねぎ 1個（みじん切り）", "パセリ 1束（刻む）", "新鮮なミント 1束（刻む）", "オリーブオイル 100ml", "レモン2個分の果汁", "塩、こしょう", "甘いパプリカパウダー 小さじ1"],
+    "hi": ["40 अचारी अंगूर के पत्ते", "300 ग्राम मध्यम दाने वाला चावल", "2 बड़े टमाटर, कटे हुए", "1 बड़ा प्याज़, बारीक कटा", "1 गुच्छा अजमोद, कटा हुआ", "1 गुच्छा ताज़ा पुदीना, कटा हुआ", "100 मिली जैतून का तेल", "2 नींबू का रस", "नमक, काली मिर्च", "1 छोटा चम्मच मीठी पपरिका"],
+    "tr": ["40 turşu asma yaprağı", "300g orta taneli pirinç", "2 büyük domates, küp küp", "1 büyük soğan, ince doğranmış", "1 demet maydanoz, doğranmış", "1 demet taze nane, doğranmış", "100ml zeytinyağı", "2 limonun suyu", "tuz, karabiber", "1 çay kaşığı tatlı paprika"],
+    "it": ["40 foglie di vite in salamoia", "300g di riso a grana media", "2 pomodori grandi, a cubetti", "1 cipolla grande, tritata finemente", "1 mazzo di prezzemolo, tritato", "1 mazzo di menta fresca, tritata", "100ml di olio d'oliva", "succo di 2 limoni", "sale, pepe", "1 cucchiaino di paprika dolce"],
+    "ko": ["절인 포도잎 40장", "중립종 쌀 300g", "큰 토마토 2개, 깍둑썰기", "큰 양파 1개, 잘게 썬 것", "파슬리 1단, 다진 것", "신선한 민트 1단, 다진 것", "올리브 오일 100ml", "레몬 2개분 즙", "소금, 후추", "단맛 파프리카 가루 1작은술"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE FOI: Clătește foile de viță murate în apă rece pentru a îndepărta excesul de sare, apoi scurge-le. PREPARARE UMPLUTURĂ: Amestecă orezul crud cu roșiile tocate, ceapa, pătrunjelul, menta, boia, jumătate din ulei, sare și piper. UMPLERE FOI: Așază câte o lingură de umplutură pe fiecare foaie de viță, la baza acesteia, aproape de tulpină. RULARE: Pliază marginile laterale peste umplutură și rulează strâns spre vârf, formând un sulișor compact. AȘEZARE ÎN OALĂ: Tapetează fundul unei oale cu foi de viță rupte sau resturi, apoi așază sulișoarele strâns, în straturi. FIERBERE: Toarnă restul de ulei, zeama de lămâie și apă cât să acopere, pune o farfurie deasupra pentru greutate, fierbe 45 minute la foc mic. RĂCIRE ȘI SERVIRE: Lasă să se răcească complet, apoi servește rece sau la temperatura camerei, cu lămâie suplimentară alături.",
+    "en": "PREPARE LEAVES: Rinse the pickled grape leaves in cold water to remove excess salt, then drain. MAKE FILLING: Mix the raw rice with the diced tomatoes, onion, parsley, mint, paprika, half the oil, salt and pepper. FILL LEAVES: Place a spoonful of filling on each grape leaf, at its base near the stem. ROLL: Fold the side edges over the filling and roll tightly toward the tip, forming a compact parcel. LAYER IN POT: Line the bottom of a pot with torn grape leaves or scraps, then arrange the rolls tightly in layers. SIMMER: Pour in the remaining oil, lemon juice and enough water to cover, place a plate on top for weight, simmer for 45 minutes on low heat. COOL AND SERVE: Let cool completely, then serve cold or at room temperature, with extra lemon on the side.",
+    "es": "PREPARAR LAS HOJAS: Enjuaga las hojas de parra en salmuera con agua fría para eliminar el exceso de sal, luego escúrrelas. PREPARAR EL RELLENO: Mezcla el arroz crudo con los tomates en cubos, la cebolla, el perejil, la menta, el pimentón, la mitad del aceite, sal y pimienta. RELLENAR LAS HOJAS: Coloca una cucharada de relleno en cada hoja de parra, en su base cerca del tallo. ENROLLAR: Dobla los bordes laterales sobre el relleno y enrolla apretadamente hacia la punta, formando un paquete compacto. COLOCAR EN LA OLLA: Cubre el fondo de una olla con hojas rotas o restos, luego coloca los rollos apretados en capas. HERVIR: Vierte el aceite restante, el zumo de limón y suficiente agua para cubrir, coloca un plato encima como peso, cocina 45 minutos a fuego lento. ENFRIAR Y SERVIR: Deja enfriar completamente, luego sirve frío o a temperatura ambiente, con limón extra al lado.",
+    "fr": "PRÉPARER LES FEUILLES: Rincez les feuilles de vigne en saumure à l'eau froide pour enlever l'excès de sel, puis égouttez-les. PRÉPARER LA FARCE: Mélangez le riz cru avec les tomates en dés, l'oignon, le persil, la menthe, le paprika, la moitié de l'huile, le sel et le poivre. FARCIR LES FEUILLES: Placez une cuillerée de farce sur chaque feuille de vigne, à sa base près de la tige. ROULER: Repliez les bords latéraux sur la farce et roulez fermement vers la pointe, formant un paquet compact. DISPOSER DANS LA MARMITE: Tapissez le fond d'une marmite de feuilles déchirées ou de restes, puis disposez les rouleaux serrés en couches. MIJOTER: Versez l'huile restante, le jus de citron et assez d'eau pour couvrir, placez une assiette dessus comme poids, laissez mijoter 45 minutes à feu doux. REFROIDIR ET SERVIR: Laissez refroidir complètement, puis servez froid ou à température ambiante, avec du citron supplémentaire à côté.",
+    "de": "BLÄTTER VORBEREITEN: Die eingelegten Weinblätter in kaltem Wasser abspülen, um überschüssiges Salz zu entfernen, dann abtropfen lassen. FÜLLUNG ZUBEREITEN: Den rohen Reis mit den gewürfelten Tomaten, Zwiebel, Petersilie, Minze, Paprika, der Hälfte des Öls, Salz und Pfeffer vermischen. BLÄTTER FÜLLEN: Einen Löffel Füllung auf jedes Weinblatt legen, an seiner Basis nahe dem Stiel. ROLLEN: Die Seitenränder über die Füllung falten und fest zur Spitze hin rollen, ein kompaktes Päckchen formen. IN TOPF SCHICHTEN: Den Topfboden mit zerrissenen Weinblättern oder Resten auslegen, dann die Röllchen fest in Schichten anordnen. KÖCHELN: Das restliche Öl, den Zitronensaft und genug Wasser zum Bedecken angießen, einen Teller als Gewicht obenauf legen, 45 Minuten bei schwacher Hitze köcheln. ABKÜHLEN UND SERVIEREN: Vollständig abkühlen lassen, dann kalt oder bei Zimmertemperatur mit zusätzlicher Zitrone servieren.",
+    "pt": "PREPARAR AS FOLHAS: Enxague as folhas de vinha em salmoura com água fria para remover o excesso de sal, depois escorra. PREPARAR O RECHEIO: Misture o arroz cru com os tomates em cubos, a cebola, a salsa, a hortelã, o colorau, metade do azeite, sal e pimenta. RECHEAR AS FOLHAS: Coloque uma colher de recheio em cada folha de vinha, na base perto do talo. ENROLAR: Dobre as bordas laterais sobre o recheio e enrole apertado em direção à ponta, formando um pacote compacto. DISPOR NA PANELA: Forre o fundo de uma panela com folhas rasgadas ou restos, depois disponha os rolos apertados em camadas. FERVER: Deite o azeite restante, o sumo de limão e água suficiente para cobrir, coloque um prato por cima como peso, cozinhe 45 minutos em lume brando. ARREFECER E SERVIR: Deixe arrefecer completamente, depois sirva frio ou à temperatura ambiente, com limão extra ao lado.",
+    "ru": "ПОДГОТОВКА ЛИСТЬЕВ: Промойте маринованные виноградные листья в холодной воде, чтобы убрать лишнюю соль, затем слейте воду. ПРИГОТОВЛЕНИЕ НАЧИНКИ: Смешайте сырой рис с нарезанными помидорами, луком, петрушкой, мятой, паприкой, половиной масла, солью и перцем. НАЧИНЯЙТЕ ЛИСТЬЯ: Положите ложку начинки на каждый виноградный лист, у основания рядом со стеблем. СВОРАЧИВАНИЕ: Заверните боковые края поверх начинки и плотно сверните к кончику, формируя компактный рулетик. УКЛАДКА В КАСТРЮЛЮ: Выстелите дно кастрюли рваными листьями или обрезками, затем плотно уложите рулетики слоями. ВАРКА: Влейте оставшееся масло, лимонный сок и достаточно воды, чтобы покрыть, положите сверху тарелку в качестве груза, варите 45 минут на слабом огне. ОХЛАЖДЕНИЕ И ПОДАЧА: Дайте полностью остыть, затем подавайте холодным или при комнатной температуре с дополнительным лимоном сбоку.",
+    "ar": "تحضير الأوراق: اشطف أوراق العنب المخللة بماء بارد لإزالة الملح الزائد ثم صفّها. تحضير الحشوة: اخلط الأرز النيء مع الطماطم المقطعة والبصل والبقدونس والنعناع والبابريكا ونصف الزيت والملح والفلفل. حشو الأوراق: ضع ملعقة من الحشوة على كل ورقة عنب، عند قاعدتها بالقرب من الساق. اللف: اطوِ الحواف الجانبية فوق الحشوة والفّها بإحكام نحو الطرف، مكوّنة لفافة مدمجة. الترتيب في القدر: بطّن قاع القدر بأوراق ممزقة أو بواقٍ، ثم رتّب اللفائف بإحكام في طبقات. الطهي: اسكب الزيت المتبقي وعصير الليمون وماءً كافيًا للتغطية، ضع طبقًا فوقها كثقل، اطهِ على نار هادئة لمدة 45 دقيقة. التبريد والتقديم: دعها تبرد تمامًا ثم قدّمها باردة أو بحرارة الغرفة، مع ليمون إضافي بجانبها.",
+    "zh": "准备葡萄叶：将腌制葡萄叶用冷水冲洗去除多余盐分，然后沥干。准备馅料：将生米与番茄丁、洋葱、欧芹、薄荷、红椒粉、一半的橄榄油、盐和胡椒混合。填馅：将一勺馅料放在每片葡萄叶靠近叶柄的底部。卷起：将两侧边缘折叠盖住馅料，向尖端紧紧卷起，形成紧实的小卷。摆入锅中：用撕碎的葡萄叶或边角料铺锅底，然后将葡萄叶卷紧密分层摆放。炖煮：倒入剩余橄榄油、柠檬汁和足量的水没过食材，上面压一个盘子加重，小火炖45分钟。冷却装盘：完全冷却后，冷食或常温食用，旁边配额外的柠檬。",
+    "ja": "葉の準備：酢漬けのブドウの葉を冷水ですすいで余分な塩を落とし、水を切る。詰め物の準備：生米に角切りのトマト、玉ねぎ、パセリ、ミント、パプリカ、油の半量、塩、こしょうを混ぜる。葉に詰める：それぞれのブドウの葉の茎に近い根元にスプーン一杯の詰め物をのせる。巻く：詰め物の上に両端を折りたたみ、先端に向かってしっかり巻いてコンパクトな包みにする。鍋に並べる：鍋の底に破れた葉やくずを敷き、巻いたものをしっかりと層状に並べる。煮る：残りの油、レモン汁、覆うのに十分な水を注ぎ、重し代わりに皿をのせ、弱火で45分煮る。冷まして提供：完全に冷ましてから、冷たいまま、または室温で、追加のレモンを添えて提供する。",
+    "hi": "पत्ते तैयार करें: अचारी अंगूर के पत्तों को ठंडे पानी में धोकर अतिरिक्त नमक हटाएं, फिर छान लें। भराई तैयार करें: कच्चे चावल को कटे टमाटर, प्याज़, अजमोद, पुदीना, पपरिका, आधा तेल, नमक और काली मिर्च के साथ मिलाएं। पत्ते भरें: हर अंगूर के पत्ते के आधार पर, डंठल के पास, एक चम्मच भराई रखें। रोल करें: भराई के ऊपर किनारों को मोड़ें और सिरे की ओर कसकर रोल करें, एक कॉम्पैक्ट बंडल बनाते हुए। बर्तन में रखें: बर्तन के तले को फटे पत्तों या बचे हुए टुकड़ों से बिछाएं, फिर रोल को कसकर परतों में रखें। उबालें: बचा हुआ तेल, नींबू का रस और ढकने लायक पानी डालें, वज़न के लिए ऊपर एक प्लेट रखें, धीमी आँच पर 45 मिनट पकाएं। ठंडा करें और परोसें: पूरी तरह ठंडा होने दें, फिर ठंडा या कमरे के तापमान पर, अतिरिक्त नींबू के साथ परोसें।",
+    "tr": "YAPRAKLARI HAZIRLAYIN: Turşu asma yapraklarını fazla tuzu gidermek için soğuk suda durulayın, sonra süzün. İÇİ HAZIRLAYIN: Çiğ pirinci küp doğranmış domates, soğan, maydanoz, nane, paprika, yağın yarısı, tuz ve karabiberle karıştırın. YAPRAKLARI DOLDURUN: Her asma yaprağının sap ucundaki tabanına bir kaşık iç harç yerleştirin. SARIN: Kenarları iç harcın üzerine katlayın ve ucuna doğru sıkıca sararak kompakt bir paket oluşturun. TENCEREYE DİZİN: Tencerenin dibini yırtık yapraklar veya artıklarla döşeyin, sonra sarmaları sıkıca katmanlar halinde dizin. PİŞİRİN: Kalan yağı, limon suyunu ve örtecek kadar suyu dökün, ağırlık için üzerine bir tabak koyun, kısık ateşte 45 dakika pişirin. SOĞUTUN VE SERVİS EDİN: Tamamen soğumaya bırakın, sonra soğuk veya oda sıcaklığında, yanında ekstra limonla servis edin.",
+    "it": "PREPARARE LE FOGLIE: Sciacquate le foglie di vite in salamoia in acqua fredda per rimuovere il sale in eccesso, poi scolate. PREPARARE IL RIPIENO: Mescolate il riso crudo con i pomodori a cubetti, la cipolla, il prezzemolo, la menta, la paprika, metà dell'olio, sale e pepe. RIEMPIRE LE FOGLIE: Mettete un cucchiaio di ripieno su ogni foglia di vite, alla base vicino al gambo. ARROTOLARE: Piegate i bordi laterali sul ripieno e arrotolate strettamente verso la punta, formando un involtino compatto. DISPORRE NELLA PENTOLA: Foderate il fondo di una pentola con foglie strappate o scarti, poi disponete gli involtini stretti a strati. CUOCERE: Versate l'olio rimanente, il succo di limone e acqua sufficiente a coprire, mettete un piatto sopra come peso, cuocete 45 minuti a fuoco basso. RAFFREDDARE E SERVIRE: Lasciate raffreddare completamente, poi servite freddo o a temperatura ambiente, con limone extra a lato.",
+    "ko": "잎 준비: 절인 포도잎을 찬물에 헹궈 여분의 소금을 제거한 후 물기를 뺀다. 속 만들기: 생쌀을 깍둑썬 토마토, 양파, 파슬리, 민트, 파프리카, 기름 절반, 소금, 후추와 섞는다. 잎에 채우기: 각 포도잎의 줄기 쪽 밑부분에 한 숟갈의 속을 놓는다. 말기: 양옆을 속 위로 접고 끝을 향해 단단히 말아 촘촘한 꾸러미를 만든다. 냄비에 담기: 냄비 바닥에 찢어진 잎이나 자투리를 깔고 롤을 층층이 촘촘히 배열한다. 끓이기: 남은 기름, 레몬즙, 덮을 만큼의 물을 붓고 무게를 위해 접시를 위에 올린 후 약불에서 45분간 끓인다. 식혀서 제공: 완전히 식힌 후 차갑게 또는 실온에서 여분의 레몬과 함께 낸다."
+  },
+  "originText": {
+    "ro": "Yalanji, care înseamnă în turcă mincinos sau fals, este versiunea vegetariană a sarmalelor din foi de viță, numită astfel deoarece imită vizual varianta cu carne fără a conține niciuna. Rețeta reflectă practicile alimentare siriene tradiționale legate de perioadele de post religios, atât creștin, cât și musulman, când carnea era evitată dar mesele trebuiau totuși să fie hrănitoare și sățioase.\n\nSpre deosebire de versiunea cu carne, care se servește de obicei caldă, yalanji se servesc reci sau la temperatura camerei, cu mult ulei de măsline și zeamă de lămâie, ceea ce le face potrivite ca aperitiv de vară sau parte din platoul de mezze. Menta proaspătă din umplutură le diferențiază aromatic de vecinele lor cu carne, care folosesc de obicei doar pătrunjel și mărar.",
+    "en": "Yalanji, which means liar or fake in Turkish, is the vegetarian version of stuffed grape leaves, named this way because it visually mimics the meat version without containing any. The recipe reflects traditional Syrian dietary practices tied to religious fasting periods, both Christian and Muslim, when meat was avoided but meals still needed to be nourishing and filling.\n\nUnlike the meat version, which is usually served warm, yalanji is served cold or at room temperature, with plenty of olive oil and lemon juice, making it suitable as a summer appetizer or part of a mezze platter. The fresh mint in the filling sets it apart aromatically from its meat-filled cousins, which typically use only parsley and dill.",
+    "es": "Yalanji, que significa mentiroso o falso en turco, es la versión vegetariana de las hojas de parra rellenas, llamada así porque imita visualmente la versión con carne sin contener ninguna. La receta refleja las prácticas alimentarias sirias tradicionales ligadas a los períodos de ayuno religioso, tanto cristiano como musulmán, cuando se evitaba la carne pero las comidas aún debían ser nutritivas y saciantes.\n\nA diferencia de la versión con carne, que suele servirse caliente, la yalanji se sirve fría o a temperatura ambiente, con abundante aceite de oliva y zumo de limón, lo que la hace apta como entrante de verano o parte de una bandeja de mezze. La menta fresca del relleno la distingue aromáticamente de sus primas con carne, que suelen usar solo perejil y eneldo.",
+    "fr": "Yalanji, qui signifie menteur ou faux en turc, est la version végétarienne des feuilles de vigne farcies, nommée ainsi car elle imite visuellement la version à la viande sans en contenir. La recette reflète les pratiques alimentaires syriennes traditionnelles liées aux périodes de jeûne religieux, chrétien comme musulman, où la viande était évitée mais les repas devaient rester nourrissants et rassasiants.\n\nContrairement à la version à la viande, généralement servie chaude, le yalanji est servi froid ou à température ambiante, avec beaucoup d'huile d'olive et de jus de citron, ce qui le rend adapté comme entrée d'été ou partie d'un plateau de mezze. La menthe fraîche dans la farce la distingue aromatiquement de ses cousines à la viande, qui utilisent généralement uniquement du persil et de l'aneth.",
+    "de": "Yalanji, was auf Türkisch Lügner oder Falsch bedeutet, ist die vegetarische Version der gefüllten Weinblätter, so genannt, weil sie optisch die Fleischversion nachahmt, ohne welches zu enthalten. Das Rezept spiegelt traditionelle syrische Ernährungspraktiken wider, die mit religiösen Fastenzeiten verbunden sind, sowohl christlichen als auch muslimischen, in denen Fleisch vermieden wurde, Mahlzeiten aber dennoch nahrhaft und sättigend sein mussten.\n\nAnders als die Fleischversion, die meist warm serviert wird, wird Yalanji kalt oder bei Zimmertemperatur serviert, mit viel Olivenöl und Zitronensaft, was sie als sommerliche Vorspeise oder Teil einer Mezze-Platte geeignet macht. Die frische Minze in der Füllung unterscheidet sie aromatisch von ihren fleischgefüllten Verwandten, die meist nur Petersilie und Dill verwenden.",
+    "pt": "Yalanji, que significa mentiroso ou falso em turco, é a versão vegetariana das folhas de vinha recheadas, assim chamada porque imita visualmente a versão com carne sem conter nenhuma. A receita reflete práticas alimentares sírias tradicionais ligadas a períodos de jejum religioso, tanto cristão como muçulmano, quando a carne era evitada mas as refeições ainda precisavam de ser nutritivas e saciantes.\n\nAo contrário da versão com carne, geralmente servida quente, a yalanji é servida fria ou à temperatura ambiente, com bastante azeite e sumo de limão, o que a torna adequada como entrada de verão ou parte de uma travessa de mezze. A hortelã fresca no recheio distingue-a aromaticamente das suas primas com carne, que normalmente usam apenas salsa e endro.",
+    "ru": "Ялангач, что по-турецки означает лжец или поддельный, — это вегетарианская версия голубцов из виноградных листьев, названная так потому, что визуально имитирует мясную версию, не содержа мяса. Рецепт отражает традиционные сирийские пищевые практики, связанные с религиозными постами — как христианскими, так и мусульманскими, — когда мясо избегали, но еда всё равно должна была быть питательной и сытной.\n\nВ отличие от мясной версии, которую обычно подают тёплой, ялангач подаётся холодным или при комнатной температуре, с большим количеством оливкового масла и лимонного сока, что делает его подходящим летним блюдом или частью мезе. Свежая мята в начинке ароматически отличает его от мясных родственников, которые обычно используют только петрушку и укроп.",
+    "ar": "يلنجي، والتي تعني كاذب أو مزيف بالتركية، هي النسخة النباتية من ورق العنب المحشو، سُميت كذلك لأنها تحاكي بصريًا نسخة اللحم دون احتوائها على أي منه. تعكس الوصفة الممارسات الغذائية السورية التقليدية المرتبطة بفترات الصيام الديني، المسيحي والإسلامي على حد سواء، حين كان يُتجنب اللحم لكن الوجبات كان لا بد أن تظل مغذية ومشبعة.\n\nخلافًا لنسخة اللحم التي تُقدَّم عادة دافئة، يُقدَّم اليلنجي باردًا أو بحرارة الغرفة، مع الكثير من زيت الزيتون وعصير الليمون، مما يجعله مناسبًا كمقبلات صيفية أو جزءًا من طبق المازة. يميّز النعناع الطازج في الحشوة نكهته عن أقاربه المحشوة باللحم، والتي تستخدم عادة البقدونس والشبت فقط.",
+    "zh": "亚兰吉在土耳其语中意为骗子或假的，是葡萄叶卷的素食版本，之所以取这个名字，是因为它在外观上模仿肉馅版本却不含任何肉类。这道食谱反映了叙利亚传统饮食习俗中与宗教斋戒期相关的做法——无论是基督教还是伊斯兰教的斋戒期，人们都要避免食用肉类，但餐食仍需营养丰富且饱腹。\n\n与通常趁热食用的肉馅版本不同，亚兰吉冷食或常温食用，淋上大量橄榄油和柠檬汁，使其适合作为夏季开胃菜或什锦冷盘的一部分。馅料中的新鲜薄荷使其在风味上区别于通常只用欧芹和莳萝的肉馅版本。",
+    "ja": "トルコ語で嘘つきや偽物を意味するヤランジは、ブドウの葉の詰め物料理の菜食バージョンであり、肉を含まないのに肉入りバージョンを見た目で模倣していることからこの名がついた。このレシピは、キリスト教とイスラム教双方の宗教的な断食期間に関連するシリアの伝統的な食習慣を反映しており、その期間は肉を避けながらも食事は栄養価が高く満足感のあるものである必要があった。\n\n通常温かく提供される肉入りバージョンとは異なり、ヤランジは冷たいまま、または室温で、たっぷりのオリーブオイルとレモン汁と共に提供され、夏の前菜やメゼの盛り合わせの一部として適している。詰め物に使われる新鮮なミントが、通常パセリとディルのみを使う肉入りの親戚とは香りの面で一線を画している。",
+    "hi": "यालांजी, जिसका तुर्की में अर्थ है झूठा या नकली, भरवां अंगूर के पत्तों का शाकाहारी संस्करण है, जिसका यह नाम इसलिए रखा गया क्योंकि यह दृश्य रूप से मांस संस्करण की नकल करता है बिना कोई मांस रखे। यह नुस्खा पारंपरिक सीरियाई आहार प्रथाओं को दर्शाता है जो धार्मिक उपवास अवधियों से जुड़ी हैं, ईसाई और मुस्लिम दोनों, जब मांस से परहेज़ किया जाता था लेकिन भोजन फिर भी पौष्टिक और तृप्तिदायक होना चाहिए था।\n\nमांस संस्करण के विपरीत, जो आमतौर पर गरम परोसा जाता है, यालांजी को ठंडा या कमरे के तापमान पर परोसा जाता है, भरपूर जैतून के तेल और नींबू के रस के साथ, जो इसे गर्मी के स्टार्टर या मेज़े की थाली के हिस्से के रूप में उपयुक्त बनाता है। भराई में ताज़ा पुदीना इसे अपने मांस-भरे रिश्तेदारों से सुगंध में अलग करता है, जो आमतौर पर केवल अजमोद और सोआ का उपयोग करते हैं।",
+    "tr": "Türkçede yalancı anlamına gelen yalancı sarma, doldurulmuş asma yapraklarının etsiz versiyonudur ve bu şekilde adlandırılmıştır çünkü hiç et içermeden etli versiyonu görsel olarak taklit eder. Tarif, hem Hristiyan hem de Müslüman geleneksel dini oruç dönemleriyle bağlantılı Suriye beslenme alışkanlıklarını yansıtır; bu dönemlerde etten kaçınılırdı ama yemekler yine de besleyici ve doyurucu olmalıydı.\n\nGenellikle sıcak servis edilen etli versiyonun aksine, yalancı sarma soğuk veya oda sıcaklığında, bol zeytinyağı ve limon suyuyla servis edilir, bu da onu yaz mezesi veya meze tabağının bir parçası olarak uygun kılar. İç harçtaki taze nane, genellikle sadece maydanoz ve dereotu kullanan etli akrabalarından onu aromatik olarak ayırır.",
+    "it": "Yalanji, che significa bugiardo o falso in turco, è la versione vegetariana delle foglie di vite ripiene, chiamata così perché imita visivamente la versione con la carne senza contenerne. La ricetta riflette le pratiche alimentari siriane tradizionali legate ai periodi di digiuno religioso, sia cristiano che musulmano, quando la carne veniva evitata ma i pasti dovevano comunque essere nutrienti e sazianti.\n\nA differenza della versione con carne, solitamente servita calda, lo yalanji viene servito freddo o a temperatura ambiente, con abbondante olio d'oliva e succo di limone, rendendolo adatto come antipasto estivo o parte di un piatto di mezze. La menta fresca nel ripieno lo distingue aromaticamente dai suoi cugini ripieni di carne, che tipicamente usano solo prezzemolo e aneto.",
+    "ko": "터키어로 거짓말쟁이 또는 가짜를 뜻하는 얄란지는 속을 채운 포도잎의 채식 버전으로, 고기를 전혀 넣지 않고도 고기 버전을 시각적으로 흉내 낸다는 이유로 이런 이름이 붙었다. 이 레시피는 기독교와 이슬람 모두의 종교적 금식 기간과 관련된 전통적인 시리아 식습관을 반영하는데, 이 기간에는 고기를 피하면서도 식사는 여전히 영양가 있고 든든해야 했다.\n\n보통 따뜻하게 제공되는 고기 버전과 달리, 얄란지는 차갑거나 실온에서 넉넉한 올리브 오일과 레몬즙과 함께 제공되어 여름 전채나 메제 플래터의 일부로 적합하다. 속에 든 신선한 민트는 보통 파슬리와 딜만 사용하는 고기 버전 친척과 향에서 차별화된다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 14,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Foi de viță umplute cu orez, roșii și mentă, fără carne, servite reci cu lămâie.",
+      "en": "Grape leaves stuffed with rice, tomatoes and mint, meatless, served cold with lemon.",
+      "es": "Hojas de parra rellenas de arroz, tomate y menta, sin carne, servidas frías con limón.",
+      "fr": "Feuilles de vigne farcies de riz, tomates et menthe, sans viande, servies froides au citron.",
+      "de": "Weinblätter gefüllt mit Reis, Tomaten und Minze, fleischlos, kalt mit Zitrone serviert.",
+      "pt": "Folhas de vinha recheadas com arroz, tomate e hortelã, sem carne, servidas frias com limão.",
+      "ru": "Виноградные листья с начинкой из риса, помидоров и мяты, без мяса, подаются холодными с лимоном.",
+      "ar": "ورق عنب محشو بالأرز والطماطم والنعناع، بدون لحم، يُقدَّم باردًا مع الليمون.",
+      "zh": "米饭、番茄和薄荷馅料的无肉葡萄叶卷，冷食配柠檬。",
+      "ja": "米、トマト、ミントを詰めた肉不使用のブドウの葉、冷やしてレモンと共に。",
+      "hi": "चावल, टमाटर और पुदीने से भरे अंगूर के पत्ते, बिना मांस, ठंडे नींबू के साथ परोसे गए।",
+      "tr": "Pirinç, domates ve naneyle doldurulmuş etsiz asma yaprağı, soğuk limonla servis edilir.",
+      "it": "Foglie di vite ripiene di riso, pomodori e menta, senza carne, servite fredde con limone.",
+      "ko": "쌀, 토마토, 민트로 속을 채운 고기 없는 포도잎 쌈, 차갑게 레몬을 곁들여 제공."
+    }
+  }
+}

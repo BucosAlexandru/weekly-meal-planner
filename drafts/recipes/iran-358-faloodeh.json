@@ -1,0 +1,177 @@
+{
+  "id": 358,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Iran", "en": "Iran", "es": "Irán", "fr": "Iran", "de": "Iran",
+    "pt": "Irão", "ru": "Иран", "ar": "إيران", "zh": "伊朗", "ja": "イラン",
+    "hi": "ईरान", "tr": "İran", "it": "Iran", "ko": "이란"
+  },
+  "name": {
+    "ro": "Faloodeh (Șerbet cu tăiței de amidon)", "en": "Faloodeh (Vermicelli Sorbet)", "es": "Faloodeh (Sorbete con fideos de almidón)",
+    "fr": "Faloodeh (Sorbet aux vermicelles)", "de": "Faloodeh (Stärkevermicelli-Sorbet)", "pt": "Faloodeh (Sorvete de vermicelli)",
+    "ru": "Фалуде (Шербет с вермишелью)", "ar": "فالوده", "zh": "波斯粉丝雪泥",
+    "ja": "ファールーデ（春雨シャーベット）", "hi": "फालूदेह (वर्मीसेली शर्बत)", "tr": "Faluda (Nişasta Şehriyeli Şerbet)",
+    "it": "Faloodeh (Sorbetto con vermicelli)", "ko": "팔루데 (버미첼리 셔벗)"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍧", "t": "Șerbet înghețat", "d": "Considerat unul dintre cele mai vechi deserturi înghețate din lume."},
+      {"icon": "🍝", "t": "Tăiței fini de amidon", "d": "Fire subțiri de amidon de orez, cu textură elastică-crocantă."},
+      {"icon": "🌹", "t": "Sirop de trandafiri", "d": "Aromat cu apă de trandafiri și zeamă de lămâie."},
+      {"icon": "🍒", "t": "Servit cu vișine", "d": "Se servește adesea cu sirop de vișine sau zeamă de lime."}
+    ],
+    "en": [
+      {"icon": "🍧", "t": "Frozen sorbet", "d": "Considered one of the oldest frozen desserts in the world."},
+      {"icon": "🍝", "t": "Thin starch noodles", "d": "Fine rice starch strands, with an elastic-crunchy texture."},
+      {"icon": "🌹", "t": "Rosewater syrup", "d": "Scented with rosewater and lemon juice."},
+      {"icon": "🍒", "t": "Served with sour cherries", "d": "Often served with sour cherry syrup or lime juice."}
+    ],
+    "es": [
+      {"icon": "🍧", "t": "Sorbete helado", "d": "Considerado uno de los postres helados más antiguos del mundo."},
+      {"icon": "🍝", "t": "Finos fideos de almidón", "d": "Hebras finas de almidón de arroz, con textura elástica-crujiente."},
+      {"icon": "🌹", "t": "Jarabe de rosas", "d": "Perfumado con agua de rosas y zumo de limón."},
+      {"icon": "🍒", "t": "Servido con guindas", "d": "A menudo servido con jarabe de guindas o zumo de lima."}
+    ],
+    "fr": [
+      {"icon": "🍧", "t": "Sorbet glacé", "d": "Considéré comme l'un des plus anciens desserts glacés au monde."},
+      {"icon": "🍝", "t": "Fins vermicelles d'amidon", "d": "Fils fins d'amidon de riz, à la texture élastique-croquante."},
+      {"icon": "🌹", "t": "Sirop de rose", "d": "Parfumé à l'eau de rose et au jus de citron."},
+      {"icon": "🍒", "t": "Servi avec des griottes", "d": "Souvent servi avec du sirop de griotte ou du jus de citron vert."}
+    ],
+    "de": [
+      {"icon": "🍧", "t": "Gefrorenes Sorbet", "d": "Gilt als eines der ältesten gefrorenen Desserts der Welt."},
+      {"icon": "🍝", "t": "Feine Stärkefäden", "d": "Feine Reisstärkefäden mit elastisch-knuspriger Textur."},
+      {"icon": "🌹", "t": "Rosenwassersirup", "d": "Aromatisiert mit Rosenwasser und Zitronensaft."},
+      {"icon": "🍒", "t": "Mit Sauerkirschen serviert", "d": "Oft mit Sauerkirschsirup oder Limettensaft serviert."}
+    ],
+    "pt": [
+      {"icon": "🍧", "t": "Sorvete congelado", "d": "Considerado uma das sobremesas congeladas mais antigas do mundo."},
+      {"icon": "🍝", "t": "Finos vermicelli de amido", "d": "Fios finos de amido de arroz, com textura elástica-crocante."},
+      {"icon": "🌹", "t": "Calda de rosas", "d": "Perfumada com água de rosas e sumo de limão."},
+      {"icon": "🍒", "t": "Servido com cerejas ácidas", "d": "Frequentemente servido com calda de cereja ácida ou sumo de lima."}
+    ],
+    "ru": [
+      {"icon": "🍧", "t": "Замороженный шербет", "d": "Считается одним из старейших замороженных десертов в мире."},
+      {"icon": "🍝", "t": "Тонкая крахмальная лапша", "d": "Тонкие нити рисового крахмала с упруго-хрустящей текстурой."},
+      {"icon": "🌹", "t": "Сироп из розовой воды", "d": "Ароматизирован розовой водой и лимонным соком."},
+      {"icon": "🍒", "t": "Подаётся с вишней", "d": "Часто подаётся с вишнёвым сиропом или соком лайма."}
+    ],
+    "ar": [
+      {"icon": "🍧", "t": "شربات مثلج", "d": "يُعتبر واحدًا من أقدم الحلويات المثلجة في العالم."},
+      {"icon": "🍝", "t": "شعيرية نشا رفيعة", "d": "خيوط رفيعة من نشا الأرز، بقوام مطاطي مقرمش."},
+      {"icon": "🌹", "t": "شراب ماء الورد", "d": "معطّر بماء الورد وعصير الليمون."},
+      {"icon": "🍒", "t": "يُقدَّم مع الكرز", "d": "غالبًا ما يُقدَّم مع شراب الكرز أو عصير الليمون الحامض."}
+    ],
+    "zh": [
+      {"icon": "🍧", "t": "冰冻雪泥", "d": "被认为是世界上最古老的冰冻甜点之一。"},
+      {"icon": "🍝", "t": "细淀粉丝", "d": "细米淀粉丝，口感弹脆。"},
+      {"icon": "🌹", "t": "玫瑰糖浆", "d": "以玫瑰水和柠檬汁调香。"},
+      {"icon": "🍒", "t": "配酸樱桃", "d": "常搭配酸樱桃糖浆或青柠汁食用。"}
+    ],
+    "ja": [
+      {"icon": "🍧", "t": "冷凍シャーベット", "d": "世界最古の冷凍デザートの一つとされる。"},
+      {"icon": "🍝", "t": "細い春雨", "d": "弾力とパリパリ感のある細い米デンプンの糸。"},
+      {"icon": "🌹", "t": "ローズウォーターシロップ", "d": "ローズウォーターとレモン汁で香り付け。"},
+      {"icon": "🍒", "t": "サワーチェリー添え", "d": "サワーチェリーシロップやライム汁と共に提供されることが多い。"}
+    ],
+    "hi": [
+      {"icon": "🍧", "t": "जमा हुआ शर्बत", "d": "दुनिया की सबसे पुरानी जमी हुई मिठाइयों में से एक माना जाता है।"},
+      {"icon": "🍝", "t": "पतली स्टार्च नूडल्स", "d": "चावल के स्टार्च के महीन धागे, लचीली-कुरकुरी बनावट के साथ।"},
+      {"icon": "🌹", "t": "गुलाब जल की चाशनी", "d": "गुलाब जल और नींबू के रस से सुगंधित।"},
+      {"icon": "🍒", "t": "खट्टी चेरी के साथ परोसा गया", "d": "अक्सर खट्टी चेरी सिरप या नींबू के रस के साथ परोसा जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🍧", "t": "Dondurulmuş şerbet", "d": "Dünyanın en eski dondurulmuş tatlılarından biri sayılır."},
+      {"icon": "🍝", "t": "İnce nişasta şehriyesi", "d": "Elastik-çıtır dokulu ince pirinç nişastası telleri."},
+      {"icon": "🌹", "t": "Gül suyu şurubu", "d": "Gül suyu ve limon suyuyla kokulandırılmış."},
+      {"icon": "🍒", "t": "Vişneyle servis edilir", "d": "Sıklıkla vişne şurubu veya limon suyuyla servis edilir."}
+    ],
+    "it": [
+      {"icon": "🍧", "t": "Sorbetto ghiacciato", "d": "Considerato uno dei dolci ghiacciati più antichi al mondo."},
+      {"icon": "🍝", "t": "Sottili vermicelli di amido", "d": "Sottili fili di amido di riso, dalla consistenza elastico-croccante."},
+      {"icon": "🌹", "t": "Sciroppo di rose", "d": "Profumato con acqua di rose e succo di limone."},
+      {"icon": "🍒", "t": "Servito con amarene", "d": "Spesso servito con sciroppo di amarena o succo di lime."}
+    ],
+    "ko": [
+      {"icon": "🍧", "t": "얼린 셔벗", "d": "세계에서 가장 오래된 냉동 디저트 중 하나로 여겨진다."},
+      {"icon": "🍝", "t": "가는 전분 국수", "d": "탄력 있고 아삭한 가는 쌀 전분 가닥."},
+      {"icon": "🌹", "t": "장미수 시럽", "d": "장미수와 레몬즙으로 향을 낸다."},
+      {"icon": "🍒", "t": "체리를 곁들여 제공", "d": "종종 체리 시럽이나 라임즙과 함께 제공된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["150g tăiței subțiri de amidon de orez", "300g zahăr", "500ml apă", "3 linguri apă de trandafiri", "zeamă de la 2 lămâi", "sirop de vișine pentru servire (opțional)"],
+    "en": ["150g thin rice starch vermicelli", "300g sugar", "500ml water", "3 tbsp rosewater", "juice of 2 lemons", "sour cherry syrup for serving (optional)"],
+    "es": ["150g de fideos finos de almidón de arroz", "300g de azúcar", "500ml de agua", "3 cdas de agua de rosas", "zumo de 2 limones", "jarabe de guindas para servir (opcional)"],
+    "fr": ["150g de vermicelles fins d'amidon de riz", "300g de sucre", "500ml d'eau", "3 c. à s. d'eau de rose", "jus de 2 citrons", "sirop de griotte pour servir (facultatif)"],
+    "de": ["150g dünne Reisstärke-Vermicelli", "300g Zucker", "500ml Wasser", "3 EL Rosenwasser", "Saft von 2 Zitronen", "Sauerkirschsirup zum Servieren (optional)"],
+    "pt": ["150g de vermicelli fino de amido de arroz", "300g de açúcar", "500ml de água", "3 c. sopa de água de rosas", "sumo de 2 limões", "calda de cereja ácida para servir (opcional)"],
+    "ru": ["150г тонкой рисовой крахмальной вермишели", "300г сахара", "500мл воды", "3 ст.л. розовой воды", "сок 2 лимонов", "вишнёвый сироп для подачи (по желанию)"],
+    "ar": ["150غ شعيرية رفيعة من نشا الأرز", "300غ سكر", "500مل ماء", "3 ملاعق كبيرة ماء ورد", "عصير ليمونتين", "شراب كرز للتقديم (اختياري)"],
+    "zh": ["细米淀粉丝150克", "糖300克", "水500毫升", "玫瑰水3汤匙", "柠檬汁2个柠檬量", "配食用酸樱桃糖浆（可选）"],
+    "ja": ["細い米デンプンの春雨 150g", "砂糖 300g", "水 500ml", "ローズウォーター 大さじ3", "レモン2個分の果汁", "提供用のサワーチェリーシロップ（お好みで）"],
+    "hi": ["150 ग्राम पतली चावल स्टार्च वर्मीसेली", "300 ग्राम चीनी", "500 मिली पानी", "3 बड़े चम्मच गुलाब जल", "2 नींबू का रस", "परोसने के लिए खट्टी चेरी सिरप (वैकल्पिक)"],
+    "tr": ["150g ince pirinç nişastası şehriyesi", "300g şeker", "500ml su", "3 yemek kaşığı gül suyu", "2 limonun suyu", "servis için vişne şurubu (isteğe bağlı)"],
+    "it": ["150g di vermicelli sottili di amido di riso", "300g di zucchero", "500ml di acqua", "3 cucchiai di acqua di rose", "succo di 2 limoni", "sciroppo di amarena per servire (opzionale)"],
+    "ko": ["가는 쌀 전분 버미첼리 150g", "설탕 300g", "물 500ml", "장미수 3큰술", "레몬 2개분 즙", "곁들일 체리 시럽(선택사항)"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE SIROP: Fierbe zahărul cu apa la foc mediu până se dizolvă complet, formând un sirop simplu. RĂCIRE SIROP: Lasă siropul să se răcească, apoi adaugă apa de trandafiri și zeama de lămâie. FIERBERE TĂIȚEI: Fierbe tăițeii de amidon în apă clocotită 2-3 minute, doar până devin translucizi, apoi scurge și clătește cu apă rece. COMBINARE: Amestecă tăițeii răciți cu siropul de trandafiri, asigurându-te că se distribuie uniform. CONGELARE: Toarnă amestecul într-o tavă plată și pune la congelator, amestecând cu o furculiță la fiecare 30 minute timp de 3 ore, pentru textură granuloasă tip șerbet. VERIFICARE TEXTURĂ: Faloodeh e gata când are consistență de gheață zdrobită, nu bloc solid. SERVIRE: Servește imediat în boluri reci, cu sirop de vișine turnat deasupra.",
+    "en": "MAKE SYRUP: Boil the sugar with water over medium heat until fully dissolved, forming a simple syrup. COOL SYRUP: Let the syrup cool, then add the rosewater and lemon juice. BOIL NOODLES: Boil the starch noodles in boiling water for 2-3 minutes, just until translucent, then drain and rinse with cold water. COMBINE: Mix the cooled noodles with the rosewater syrup, making sure it's evenly distributed. FREEZE: Pour the mixture into a flat tray and freeze, stirring with a fork every 30 minutes for 3 hours, for a granular sorbet-like texture. CHECK TEXTURE: Faloodeh is ready when it has a crushed-ice consistency, not a solid block. SERVE: Serve immediately in cold bowls, with sour cherry syrup poured on top.",
+    "es": "PREPARAR EL ALMÍBAR: Hierve el azúcar con el agua a fuego medio hasta que se disuelva por completo, formando un almíbar simple. ENFRIAR EL ALMÍBAR: Deja enfriar el almíbar, luego añade el agua de rosas y el zumo de limón. HERVIR LOS FIDEOS: Hierve los fideos de almidón en agua hirviendo 2-3 minutos, solo hasta que estén translúcidos, luego escurre y enjuaga con agua fría. COMBINAR: Mezcla los fideos enfriados con el almíbar de rosas, asegurándote de que se distribuya uniformemente. CONGELAR: Vierte la mezcla en una bandeja plana y congela, removiendo con un tenedor cada 30 minutos durante 3 horas, para una textura granulada tipo sorbete. COMPROBAR LA TEXTURA: El faloodeh está listo cuando tiene consistencia de hielo picado, no un bloque sólido. SERVIR: Sirve de inmediato en boles fríos, con jarabe de guindas vertido encima.",
+    "fr": "PRÉPARER LE SIROP: Faites bouillir le sucre avec l'eau à feu moyen jusqu'à dissolution complète, formant un sirop simple. REFROIDIR LE SIROP: Laissez refroidir le sirop, puis ajoutez l'eau de rose et le jus de citron. FAIRE BOUILLIR LES VERMICELLES: Faites bouillir les vermicelles d'amidon dans l'eau bouillante 2-3 minutes, juste jusqu'à ce qu'ils soient translucides, puis égouttez et rincez à l'eau froide. COMBINER: Mélangez les vermicelles refroidis avec le sirop de rose, en veillant à une répartition homogène. CONGELER: Versez le mélange dans un plateau plat et congelez, en remuant à la fourchette toutes les 30 minutes pendant 3 heures, pour une texture granuleuse type sorbet. VÉRIFIER LA TEXTURE: Le faloodeh est prêt quand il a une consistance de glace pilée, pas un bloc solide. SERVIR: Servez immédiatement dans des bols froids, avec du sirop de griotte versé dessus.",
+    "de": "SIRUP ZUBEREITEN: Den Zucker mit Wasser bei mittlerer Hitze vollständig auflösen, um einen einfachen Sirup zu bilden. SIRUP ABKÜHLEN: Den Sirup abkühlen lassen, dann Rosenwasser und Zitronensaft hinzufügen. VERMICELLI KOCHEN: Die Stärke-Vermicelli 2-3 Minuten in kochendem Wasser kochen, nur bis sie durchscheinend sind, dann abgießen und mit kaltem Wasser abspülen. VERBINDEN: Die abgekühlten Vermicelli mit dem Rosensirup vermischen, gleichmäßig verteilen. EINFRIEREN: Die Mischung in eine flache Schale gießen und einfrieren, dabei alle 30 Minuten 3 Stunden lang mit einer Gabel umrühren, für eine körnige Sorbet-Textur. TEXTUR PRÜFEN: Faloodeh ist fertig, wenn es die Konsistenz von zerstoßenem Eis hat, kein fester Block. SERVIEREN: Sofort in kalten Schalen servieren, mit Sauerkirschsirup obendrauf.",
+    "pt": "PREPARAR A CALDA: Ferva o açúcar com a água em lume médio até dissolver completamente, formando uma calda simples. ARREFECER A CALDA: Deixe a calda arrefecer, depois junte a água de rosas e o sumo de limão. FERVER O VERMICELLI: Ferva o vermicelli de amido em água a ferver por 2-3 minutos, apenas até ficar translúcido, depois escorra e enxague com água fria. COMBINAR: Misture o vermicelli arrefecido com a calda de rosas, garantindo distribuição uniforme. CONGELAR: Deite a mistura num tabuleiro plano e congele, mexendo com um garfo a cada 30 minutos durante 3 horas, para uma textura granulada tipo sorvete. VERIFICAR A TEXTURA: O faloodeh está pronto quando tem consistência de gelo picado, não um bloco sólido. SERVIR: Sirva imediatamente em taças frias, com calda de cereja ácida por cima.",
+    "ru": "ПРИГОТОВЛЕНИЕ СИРОПА: Вскипятите сахар с водой на среднем огне до полного растворения, образуя простой сироп. ОХЛАЖДЕНИЕ СИРОПА: Дайте сиропу остыть, затем добавьте розовую воду и лимонный сок. ВАРКА ЛАПШИ: Варите крахмальную вермишель в кипящей воде 2-3 минуты, только до прозрачности, затем слейте и промойте холодной водой. СОЕДИНЕНИЕ: Смешайте остывшую вермишель с розовым сиропом, обеспечивая равномерное распределение. ЗАМОРОЗКА: Вылейте смесь в плоский лоток и заморозьте, помешивая вилкой каждые 30 минут в течение 3 часов, для зернистой шербетной текстуры. ПРОВЕРКА ТЕКСТУРЫ: Фалуде готов, когда имеет консистенцию колотого льда, а не твёрдого блока. ПОДАЧА: Подавайте немедленно в холодных мисках, полив вишнёвым сиропом сверху.",
+    "ar": "تحضير الشراب: اغلِ السكر مع الماء على نار متوسطة حتى يذوب تمامًا، مكوّنًا شرابًا بسيطًا. تبريد الشراب: دع الشراب يبرد، ثم أضف ماء الورد وعصير الليمون. سلق الشعيرية: اسلق شعيرية النشا في ماء مغلي لمدة 2-3 دقائق فقط حتى تصبح شفافة، ثم صفّها واشطفها بماء بارد. الدمج: اخلط الشعيرية المبردة مع شراب الورد، مع التأكد من توزيعه بالتساوي. التجميد: اسكب الخليط في صينية مسطحة وجمّده، مع التحريك بشوكة كل 30 دقيقة لمدة 3 ساعات، للحصول على قوام حبيبي شبيه بالشربات. التحقق من القوام: يكون الفالوده جاهزًا عندما يصبح بقوام الثلج المجروش، وليس كتلة صلبة. التقديم: قدّمه فورًا في أوعية باردة، مع شراب الكرز مسكوبًا فوقه.",
+    "zh": "制作糖浆：将糖与水中火煮至完全溶解，制成简单糖浆。冷却糖浆：让糖浆冷却，然后加入玫瑰水和柠檬汁。煮粉丝：将淀粉丝在沸水中煮2-3分钟，煮至透明即可，然后沥干并用冷水冲洗。混合：将冷却的粉丝与玫瑰糖浆混合，确保均匀分布。冷冻：将混合物倒入浅盘中冷冻，每30分钟用叉子搅拌一次，持续3小时，形成颗粒状雪泥质地。检查质地：当法鲁德呈碎冰状而非固体块时即为完成。装盘：立即盛入冷碗中，淋上酸樱桃糖浆食用。",
+    "ja": "シロップを作る：砂糖を水と共に中火で完全に溶けるまで煮て、シンプルシロップを作る。シロップを冷ます：シロップを冷まし、ローズウォーターとレモン汁を加える。春雨を茹でる：デンプンの春雨を沸騰したお湯で2〜3分、透明になるまでだけ茹で、水を切って冷水ですすぐ。合わせる：冷ました春雨をローズシロップと混ぜ、均等に行き渡らせる。冷凍する：混合物を平らなトレイに注ぎ、30分ごとにフォークでかき混ぜながら3時間冷凍し、シャーベット状の粒状の食感にする。食感を確認する：ファールーデは砕いた氷のような食感になったら完成で、固い塊にはしない。盛り付け：冷たいボウルにすぐに盛り、上にサワーチェリーシロップをかける。",
+    "hi": "चाशनी बनाएं: चीनी को पानी के साथ मध्यम आँच पर पूरी तरह घुलने तक उबालें, एक साधारण चाशनी बनाते हुए। चाशनी ठंडी करें: चाशनी को ठंडा होने दें, फिर गुलाब जल और नींबू का रस मिलाएं। नूडल्स उबालें: स्टार्च नूडल्स को उबलते पानी में 2-3 मिनट, बस पारदर्शी होने तक उबालें, फिर छानकर ठंडे पानी से धोएं। मिलाएं: ठंडे नूडल्स को गुलाब की चाशनी के साथ मिलाएं, समान रूप से वितरित करना सुनिश्चित करें। जमाएं: मिश्रण को एक चपटी ट्रे में डालें और फ्रीज करें, दानेदार शर्बत जैसी बनावट के लिए हर 30 मिनट में 3 घंटे तक कांटे से हिलाते रहें। बनावट जांचें: फालूदेह तैयार है जब इसमें कुचली बर्फ जैसी बनावट हो, ठोस ब्लॉक नहीं। परोसें: तुरंत ठंडे कटोरों में, ऊपर खट्टी चेरी सिरप डालकर परोसें।",
+    "tr": "ŞERBETİ HAZIRLAYIN: Şekeri suyla orta ateşte tamamen eriyene kadar kaynatarak sade bir şerbet oluşturun. ŞERBETİ SOĞUTUN: Şerbeti soğumaya bırakın, sonra gül suyu ve limon suyunu ekleyin. ŞEHRİYEYİ HAŞLAYIN: Nişasta şehriyesini kaynayan suda sadece yarı saydam olana kadar 2-3 dakika haşlayın, sonra süzün ve soğuk suyla durulayın. BİRLEŞTİRİN: Soğutulmuş şehriyeyi gül şerbetiyle karıştırın, eşit dağılmasını sağlayın. DONDURUN: Karışımı düz bir tepsiye dökün ve dondurun, taneli bir şerbet dokusu için 3 saat boyunca her 30 dakikada bir çatalla karıştırarak. DOKUYU KONTROL EDİN: Faluda, kırık buz kıvamına geldiğinde hazırdır, katı bir blok değil. SERVİS EDİN: Soğuk kaselerde hemen servis edin, üzerine vişne şurubu dökerek.",
+    "it": "PREPARARE LO SCIROPPO: Fate bollire lo zucchero con l'acqua a fuoco medio finché completamente sciolto, formando uno sciroppo semplice. RAFFREDDARE LO SCIROPPO: Lasciate raffreddare lo sciroppo, poi aggiungete l'acqua di rose e il succo di limone. LESSARE I VERMICELLI: Lessate i vermicelli di amido in acqua bollente per 2-3 minuti, solo finché traslucidi, poi scolate e sciacquate con acqua fredda. COMBINARE: Mescolate i vermicelli raffreddati con lo sciroppo di rose, assicurandovi che sia distribuito uniformemente. CONGELARE: Versate il composto in una teglia piatta e congelate, mescolando con una forchetta ogni 30 minuti per 3 ore, per una consistenza granulosa da sorbetto. CONTROLLARE LA CONSISTENZA: Il faloodeh è pronto quando ha la consistenza del ghiaccio tritato, non un blocco solido. SERVIRE: Servite subito in ciotole fredde, con sciroppo di amarena versato sopra.",
+    "ko": "시럽 만들기: 설탕을 물과 함께 중불에서 완전히 녹을 때까지 끓여 단순 시럽을 만든다. 시럽 식히기: 시럽을 식힌 후 장미수와 레몬즙을 넣는다. 국수 삶기: 전분 국수를 끓는 물에 2~3분, 반투명해질 때까지만 삶은 후 물기를 빼고 찬물에 헹군다. 섞기: 식힌 국수를 장미 시럽과 섞어 고르게 분산시킨다. 얼리기: 혼합물을 납작한 트레이에 부어 얼리며, 3시간 동안 30분마다 포크로 저어 셔벗 같은 알갱이 질감을 만든다. 질감 확인: 팔루데는 단단한 덩어리가 아니라 부순 얼음 같은 농도가 되면 완성이다. 담아내기: 차가운 그릇에 즉시 담고 위에 체리 시럽을 부어 낸다."
+  },
+  "originText": {
+    "ro": "Faloodeh este considerat de mulți istorici culinari drept unul dintre cele mai vechi deserturi înghețate documentate din lume, cu origini care datează din Persia antică, cu peste 2000 de ani în urmă. Persanii antici perfecționaseră o metodă ingenioasă de a păstra zăpada de la munte în gropi izolate, numite yakhchal, folosind-o pentru a răci siropuri și deserturi cu mult înainte de inventarea refrigerării moderne.\n\nOrașul Shiraz este considerat locul de naștere al faloodeh-ului modern și rămâne cel mai renumit centru pentru acest desert, unde rețeta tradițională se transmite din generație în generație aproape neschimbată. Faloodeh diferă fundamental de înghețata occidentală prin textura sa — nu e cremos, ci granulos, cu tăiței subțiri care oferă o senzație unică la mestecat, complet diferită de orice alt desert înghețat.",
+    "en": "Faloodeh is considered by many food historians to be one of the oldest documented frozen desserts in the world, with origins dating back to ancient Persia, over 2000 years ago. The ancient Persians had perfected an ingenious method of preserving mountain snow in insulated pits called yakhchal, using it to chill syrups and desserts long before the invention of modern refrigeration.\n\nThe city of Shiraz is considered the birthplace of modern faloodeh and remains the most renowned center for this dessert, where the traditional recipe is passed down through generations almost unchanged. Faloodeh differs fundamentally from Western ice cream in its texture — it's not creamy but granular, with thin noodles that offer a unique chewing sensation, completely different from any other frozen dessert.",
+    "es": "Muchos historiadores culinarios consideran el faloodeh uno de los postres helados documentados más antiguos del mundo, con orígenes que se remontan a la antigua Persia, hace más de 2000 años. Los antiguos persas habían perfeccionado un ingenioso método para conservar la nieve de las montañas en fosos aislados llamados yakhchal, usándolo para enfriar almíbares y postres mucho antes de la invención de la refrigeración moderna.\n\nLa ciudad de Shiraz se considera el lugar de nacimiento del faloodeh moderno y sigue siendo el centro más renombrado para este postre, donde la receta tradicional se transmite de generación en generación casi sin cambios. El faloodeh difiere fundamentalmente del helado occidental en su textura — no es cremoso sino granulado, con finos fideos que ofrecen una sensación única al masticar, completamente diferente de cualquier otro postre helado.",
+    "fr": "Le faloodeh est considéré par de nombreux historiens de la gastronomie comme l'un des plus anciens desserts glacés documentés au monde, avec des origines remontant à la Perse antique, il y a plus de 2000 ans. Les anciens Perses avaient perfectionné une méthode ingénieuse pour conserver la neige des montagnes dans des fosses isolées appelées yakhchal, l'utilisant pour rafraîchir sirops et desserts bien avant l'invention de la réfrigération moderne.\n\nLa ville de Chiraz est considérée comme le berceau du faloodeh moderne et reste le centre le plus renommé pour ce dessert, où la recette traditionnelle se transmet de génération en génération presque inchangée. Le faloodeh diffère fondamentalement de la crème glacée occidentale par sa texture — il n'est pas crémeux mais granuleux, avec de fines vermicelles offrant une sensation unique en bouche, totalement différente de tout autre dessert glacé.",
+    "de": "Faloodeh gilt bei vielen Kulinarikhistorikern als eines der ältesten dokumentierten gefrorenen Desserts der Welt, mit Ursprüngen im antiken Persien vor über 2000 Jahren. Die alten Perser hatten eine geniale Methode perfektioniert, Bergschnee in isolierten Gruben namens Yakhchal zu konservieren, um damit Sirupe und Desserts lange vor der Erfindung der modernen Kühlung zu kühlen.\n\nDie Stadt Shiraz gilt als Geburtsort des modernen Faloodeh und bleibt das renommierteste Zentrum für dieses Dessert, wo das traditionelle Rezept fast unverändert über Generationen weitergegeben wird. Faloodeh unterscheidet sich grundlegend von westlichem Eis in seiner Textur — es ist nicht cremig, sondern körnig, mit dünnen Nudeln, die ein einzigartiges Kaugefühl bieten, völlig anders als jedes andere gefrorene Dessert.",
+    "pt": "O faloodeh é considerado por muitos historiadores culinários uma das sobremesas congeladas documentadas mais antigas do mundo, com origens que remontam à Pérsia antiga, há mais de 2000 anos. Os antigos persas tinham aperfeiçoado um método engenhoso de preservar neve da montanha em poços isolados chamados yakhchal, usando-a para arrefecer caldas e sobremesas muito antes da invenção da refrigeração moderna.\n\nA cidade de Xiraz é considerada o local de nascimento do faloodeh moderno e continua a ser o centro mais renomado para esta sobremesa, onde a receita tradicional é transmitida de geração em geração quase inalterada. O faloodeh difere fundamentalmente do gelado ocidental na sua textura — não é cremoso mas granulado, com finos vermicelli que oferecem uma sensação única ao mastigar, completamente diferente de qualquer outra sobremesa congelada.",
+    "ru": "Многие историки кулинарии считают фалуде одним из старейших задокументированных замороженных десертов в мире, с происхождением в древней Персии более 2000 лет назад. Древние персы усовершенствовали хитроумный метод сохранения горного снега в изолированных ямах, называемых яхчал, используя его для охлаждения сиропов и десертов задолго до изобретения современного холодильника.\n\nГород Шираз считается родиной современного фалуде и остаётся самым известным центром этого десерта, где традиционный рецепт передаётся из поколения в поколение почти без изменений. Фалуде принципиально отличается от западного мороженого своей текстурой — он не кремовый, а зернистый, с тонкой лапшой, придающей уникальное ощущение при жевании, полностью отличное от любого другого замороженного десерта.",
+    "ar": "يُعتبر الفالوده من قبل العديد من مؤرخي الطهي واحدًا من أقدم الحلويات المثلجة الموثقة في العالم، بأصول تعود إلى فارس القديمة، قبل أكثر من 2000 عام. أتقن الفرس القدماء طريقة مبتكرة لحفظ ثلج الجبال في حفر معزولة تُسمى ياخچال، مستخدمينها لتبريد الشراب والحلويات قبل وقت طويل من اختراع التبريد الحديث.\n\nتُعتبر مدينة شيراز مسقط رأس الفالوده الحديث وتظل المركز الأشهر لهذه الحلوى، حيث تُنقل الوصفة التقليدية عبر الأجيال دون تغيير يُذكر. يختلف الفالوده جوهريًا عن الآيس كريم الغربي في قوامه — فهو ليس كريميًا بل حبيبيًا، مع شعيرية رفيعة تمنح إحساسًا فريدًا عند المضغ، مختلفًا تمامًا عن أي حلوى مثلجة أخرى.",
+    "zh": "许多饮食历史学家认为，法鲁德是世界上有记载的最古老的冰冻甜点之一，起源可追溯到2000多年前的古波斯。古波斯人完善了一种巧妙的方法，将山间积雪储存在名为「亚赫恰勒」的隔热坑中，早在现代制冷技术发明之前就用它来冰镇糖浆和甜点。\n\n设拉子市被认为是现代法鲁德的发源地，至今仍是这道甜点最负盛名的产地，传统配方几乎原封不动地代代相传。法鲁德在口感上与西式冰淇淋有本质区别——它不是绵密的，而是颗粒状的，细细的粉丝带来独特的咀嚼感，与任何其他冰冻甜点都截然不同。",
+    "ja": "ファールーデは、多くの食文化史家によって、2000年以上前の古代ペルシャにまで遡る起源を持つ、世界で最も古い記録に残る冷凍デザートの一つとされている。古代ペルシャ人は、現代の冷蔵技術が発明されるずっと以前から、シロップやデザートを冷やすために、ヤフチャルと呼ばれる断熱された穴に山の雪を保存する巧妙な方法を確立していた。\n\nシラーズ市は現代のファールーデの発祥地とされ、今日でもこのデザートの最も有名な中心地であり続けており、伝統的なレシピはほぼ変わることなく世代を超えて受け継がれている。ファールーデは食感の面で西洋のアイスクリームと根本的に異なる――クリーミーではなく粒状で、細い春雨が他のどの冷凍デザートとも完全に異なる独特の噛み応えを与える。",
+    "hi": "फालूदेह को कई पाक इतिहासकार दुनिया की सबसे पुरानी दर्ज जमी हुई मिठाइयों में से एक मानते हैं, जिसकी उत्पत्ति 2000 साल से भी पहले प्राचीन फारस में हुई थी। प्राचीन फारसियों ने याखचल नामक इंसुलेटेड गड्ढों में पहाड़ी बर्फ को संरक्षित करने की एक चतुर विधि विकसित की थी, जिसका उपयोग वे आधुनिक रेफ्रिजरेशन के आविष्कार से बहुत पहले चाशनी और मिठाइयों को ठंडा करने के लिए करते थे।\n\nशिराज शहर को आधुनिक फालूदेह का जन्मस्थान माना जाता है और यह इस मिठाई के लिए सबसे प्रसिद्ध केंद्र बना हुआ है, जहां पारंपरिक नुस्खा पीढ़ी-दर-पीढ़ी लगभग अपरिवर्तित चला आ रहा है। फालूदेह अपनी बनावट में पश्चिमी आइसक्रीम से मौलिक रूप से अलग है — यह मलाईदार नहीं बल्कि दानेदार है, पतली नूडल्स के साथ जो चबाने में एक अनोखा एहसास देती हैं, जो किसी भी अन्य जमी हुई मिठाई से पूरी तरह अलग है।",
+    "tr": "Faluda, birçok yemek tarihçisi tarafından dünyanın en eski belgelenmiş dondurulmuş tatlılarından biri olarak kabul edilir; kökenleri 2000 yılı aşkın süre önce antik Pers'e dayanır. Antik Persler, modern soğutmanın icadından çok önce şerbet ve tatlıları soğutmak için kullandıkları, yakhchal adı verilen izole çukurlarda dağ karını koruma konusunda ustaca bir yöntem geliştirmişlerdi.\n\nŞiraz şehri, modern faludanın doğum yeri olarak kabul edilir ve bu tatlı için en ünlü merkez olmaya devam etmektedir; burada geleneksel tarif nesiller boyunca neredeyse hiç değişmeden aktarılır. Faluda, batı dondurmasından dokusu bakımından temelde farklıdır — kremamsı değil tanelidir, çiğnemede benzersiz bir his veren, diğer herhangi bir dondurulmuş tatlıdan tamamen farklı ince şehriyeler içerir.",
+    "it": "Il faloodeh è considerato da molti storici della gastronomia uno dei dolci ghiacciati documentati più antichi al mondo, con origini che risalgono all'antica Persia, oltre 2000 anni fa. Gli antichi persiani avevano perfezionato un metodo ingegnoso per conservare la neve di montagna in fosse isolate chiamate yakhchal, usandola per raffreddare sciroppi e dolci molto prima dell'invenzione della refrigerazione moderna.\n\nLa città di Shiraz è considerata il luogo di nascita del faloodeh moderno e rimane il centro più rinomato per questo dolce, dove la ricetta tradizionale viene tramandata di generazione in generazione quasi immutata. Il faloodeh differisce fondamentalmente dal gelato occidentale nella sua consistenza — non è cremoso ma granuloso, con sottili vermicelli che offrono una sensazione unica alla masticazione, completamente diversa da qualsiasi altro dolce ghiacciato.",
+    "ko": "팔루데는 많은 음식 역사가들에 의해 2000년 이상 전 고대 페르시아까지 거슬러 올라가는 기원을 가진, 세계에서 가장 오래된 기록된 냉동 디저트 중 하나로 여겨진다. 고대 페르시아인들은 현대식 냉장 기술이 발명되기 훨씬 전부터 시럽과 디저트를 차게 만들기 위해 야흐찰이라 불리는 단열된 구덩이에 산의 눈을 보존하는 기발한 방법을 완성했다.\n\n시라즈 시는 현대 팔루데의 발상지로 여겨지며, 전통 레시피가 세대를 거쳐 거의 변하지 않고 전해지는 이 디저트의 가장 유명한 중심지로 남아 있다. 팔루데는 질감에서 서양 아이스크림과 근본적으로 다르다 — 크리미하지 않고 알갱이가 있으며, 씹을 때 독특한 느낌을 주는 가는 국수가 들어가 다른 어떤 냉동 디저트와도 완전히 다르다."
+  },
+  "meta": {
+    "time": 210,
+    "costRon": 12,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Șerbet granulos cu tăiței de amidon, sirop de trandafiri și vișine.",
+      "en": "Granular sorbet with starch noodles, rosewater syrup and sour cherries.",
+      "es": "Sorbete granulado con fideos de almidón, jarabe de rosas y guindas.",
+      "fr": "Sorbet granuleux aux vermicelles d'amidon, sirop de rose et griottes.",
+      "de": "Körniges Sorbet mit Stärkenudeln, Rosensirup und Sauerkirschen.",
+      "pt": "Sorvete granulado com vermicelli de amido, calda de rosas e cerejas ácidas.",
+      "ru": "Зернистый шербет с крахмальной лапшой, розовым сиропом и вишней.",
+      "ar": "شربات حبيبي بشعيرية النشا وشراب الورد والكرز.",
+      "zh": "颗粒状雪泥，配淀粉丝、玫瑰糖浆和酸樱桃。",
+      "ja": "デンプンの春雨、ローズシロップ、サワーチェリーの粒状シャーベット。",
+      "hi": "स्टार्च नूडल्स, गुलाब की चाशनी और खट्टी चेरी के साथ दानेदार शर्बत।",
+      "tr": "Nişasta şehriyesi, gül şerbeti ve vişneli taneli şerbet.",
+      "it": "Sorbetto granuloso con vermicelli di amido, sciroppo di rose e amarene.",
+      "ko": "전분 국수, 장미 시럽, 체리를 곁들인 알갱이 셔벗."
+    }
+  }
+}
