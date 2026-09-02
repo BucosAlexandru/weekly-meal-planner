@@ -1,0 +1,177 @@
+{
+  "id": 368,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Malaysia", "en": "Malaysia", "es": "Malasia", "fr": "Malaisie", "de": "Malaysia",
+    "pt": "Malásia", "ru": "Малайзия", "ar": "ماليزيا", "zh": "马来西亚", "ja": "マレーシア",
+    "hi": "मलेशिया", "tr": "Malezya", "it": "Malesia", "ko": "말레이시아"
+  },
+  "name": {
+    "ro": "Kaya Toast cu ouă moi", "en": "Kaya Toast with Soft Eggs", "es": "Kaya Toast con huevos blandos",
+    "fr": "Kaya Toast aux œufs mollets", "de": "Kaya Toast mit weichen Eiern", "pt": "Kaya Toast com ovos moles",
+    "ru": "Кайя тост с мягкими яйцами", "ar": "توست الكايا بالبيض الطري", "zh": "咖椰吐司配溏心蛋",
+    "ja": "カヤトースト（半熟卵添え）", "hi": "कया टोस्ट नरम अंडों के साथ", "tr": "Yumuşak Yumurtalı Kaya Tost",
+    "it": "Kaya Toast con uova morbide", "ko": "카야 토스트와 반숙 계란"
+  },
+  "category": {
+    "ro": "Mic dejun", "en": "Breakfast", "es": "Desayuno", "fr": "Petit-déjeuner", "de": "Frühstück", "pt": "Pequeno-almoço",
+    "ru": "Завтрак", "ar": "فطور", "zh": "早餐", "ja": "朝食", "hi": "नाश्ता", "tr": "Kahvaltı", "it": "Colazione", "ko": "아침 식사"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍞", "t": "Pâine prăjită crocantă", "d": "Felii subțiri de pâine prăjite până devin crocante și aurii."},
+      {"icon": "🥥", "t": "Dulceață kaya", "d": "Dulceață cremoasă de cocos și ouă, cu aromă de pandan."},
+      {"icon": "🧈", "t": "Unt rece", "d": "O felie groasă de unt rece pusă între straturile de kaya."},
+      {"icon": "🥚", "t": "Ouă moi cu sos de soia", "d": "Ouă fierte moi, servite cu sos de soia dulce și piper."}
+    ],
+    "en": [
+      {"icon": "🍞", "t": "Crispy toast", "d": "Thin bread slices toasted until crisp and golden."},
+      {"icon": "🥥", "t": "Kaya jam", "d": "Creamy coconut and egg jam, scented with pandan."},
+      {"icon": "🧈", "t": "Cold butter", "d": "A thick slab of cold butter placed between the kaya layers."},
+      {"icon": "🥚", "t": "Soft eggs with soy sauce", "d": "Soft-boiled eggs, served with sweet soy sauce and pepper."}
+    ],
+    "es": [
+      {"icon": "🍞", "t": "Tostada crujiente", "d": "Rebanadas finas de pan tostadas hasta quedar crujientes y doradas."},
+      {"icon": "🥥", "t": "Mermelada kaya", "d": "Mermelada cremosa de coco y huevo, perfumada con pandan."},
+      {"icon": "🧈", "t": "Mantequilla fría", "d": "Una gruesa lonja de mantequilla fría entre las capas de kaya."},
+      {"icon": "🥚", "t": "Huevos blandos con salsa de soja", "d": "Huevos pasados por agua, servidos con salsa de soja dulce y pimienta."}
+    ],
+    "fr": [
+      {"icon": "🍞", "t": "Toast croustillant", "d": "Fines tranches de pain grillées jusqu'à devenir croustillantes et dorées."},
+      {"icon": "🥥", "t": "Confiture kaya", "d": "Confiture crémeuse de noix de coco et d'œuf, parfumée au pandan."},
+      {"icon": "🧈", "t": "Beurre froid", "d": "Une épaisse tranche de beurre froid placée entre les couches de kaya."},
+      {"icon": "🥚", "t": "Œufs mollets à la sauce soja", "d": "Œufs mollets, servis avec de la sauce soja sucrée et du poivre."}
+    ],
+    "de": [
+      {"icon": "🍞", "t": "Knuspriger Toast", "d": "Dünne Brotscheiben, geröstet bis knusprig und golden."},
+      {"icon": "🥥", "t": "Kaya-Konfitüre", "d": "Cremige Kokos-Ei-Konfitüre, mit Pandan aromatisiert."},
+      {"icon": "🧈", "t": "Kalte Butter", "d": "Eine dicke Scheibe kalte Butter zwischen den Kaya-Schichten."},
+      {"icon": "🥚", "t": "Weiche Eier mit Sojasauce", "d": "Weich gekochte Eier, serviert mit süßer Sojasauce und Pfeffer."}
+    ],
+    "pt": [
+      {"icon": "🍞", "t": "Torrada estaladiça", "d": "Fatias finas de pão torradas até ficarem crocantes e douradas."},
+      {"icon": "🥥", "t": "Doce kaya", "d": "Doce cremoso de coco e ovo, perfumado com pandan."},
+      {"icon": "🧈", "t": "Manteiga fria", "d": "Uma fatia grossa de manteiga fria entre as camadas de kaya."},
+      {"icon": "🥚", "t": "Ovos moles com molho de soja", "d": "Ovos escalfados moles, servidos com molho de soja doce e pimenta."}
+    ],
+    "ru": [
+      {"icon": "🍞", "t": "Хрустящий тост", "d": "Тонкие ломтики хлеба, поджаренные до хруста и золотистости."},
+      {"icon": "🥥", "t": "Джем кайя", "d": "Кремовый кокосово-яичный джем с ароматом пандана."},
+      {"icon": "🧈", "t": "Холодное масло", "d": "Толстый ломтик холодного масла между слоями кайя."},
+      {"icon": "🥚", "t": "Мягкие яйца с соевым соусом", "d": "Яйца всмятку, поданные со сладким соевым соусом и перцем."}
+    ],
+    "ar": [
+      {"icon": "🍞", "t": "توست مقرمش", "d": "شرائح خبز رفيعة محمّصة حتى تصبح مقرمشة وذهبية."},
+      {"icon": "🥥", "t": "مربى الكايا", "d": "مربى كريمي من جوز الهند والبيض، معطّر بالباندان."},
+      {"icon": "🧈", "t": "زبدة باردة", "d": "شريحة سميكة من الزبدة الباردة بين طبقات الكايا."},
+      {"icon": "🥚", "t": "بيض طري بصلصة الصويا", "d": "بيض مسلوق طري، يُقدَّم مع صلصة صويا حلوة وفلفل."}
+    ],
+    "zh": [
+      {"icon": "🍞", "t": "酥脆吐司", "d": "薄面包片烤至酥脆金黄。"},
+      {"icon": "🥥", "t": "咖椰酱", "d": "带香兰叶香气的浓郁椰蛋酱。"},
+      {"icon": "🧈", "t": "冷黄油", "d": "咖椰酱层之间夹一块厚厚的冷黄油。"},
+      {"icon": "🥚", "t": "溏心蛋配酱油", "d": "溏心蛋配甜酱油和胡椒。"}
+    ],
+    "ja": [
+      {"icon": "🍞", "t": "カリカリのトースト", "d": "薄切りパンをカリッと黄金色に焼く。"},
+      {"icon": "🥥", "t": "カヤジャム", "d": "パンダンの香り高い濃厚なココナッツと卵のジャム。"},
+      {"icon": "🧈", "t": "冷たいバター", "d": "カヤの層の間に挟む厚切りの冷たいバター。"},
+      {"icon": "🥚", "t": "醤油をかけた半熟卵", "d": "半熟卵を甘い醤油とこしょうと共に提供。"}
+    ],
+    "hi": [
+      {"icon": "🍞", "t": "कुरकुरा टोस्ट", "d": "पतले ब्रेड के टुकड़े कुरकुरे और सुनहरे होने तक टोस्ट किए गए।"},
+      {"icon": "🥥", "t": "कया जैम", "d": "पांडन की खुशबू वाला मलाईदार नारियल और अंडे का जैम।"},
+      {"icon": "🧈", "t": "ठंडा मक्खन", "d": "कया की परतों के बीच रखा मोटा ठंडा मक्खन का टुकड़ा।"},
+      {"icon": "🥚", "t": "सोया सॉस के साथ नरम अंडे", "d": "नरम उबले अंडे, मीठी सोया सॉस और काली मिर्च के साथ परोसे गए।"}
+    ],
+    "tr": [
+      {"icon": "🍞", "t": "Çıtır tost", "d": "İnce ekmek dilimleri çıtır ve altın rengi olana kadar kızartılır."},
+      {"icon": "🥥", "t": "Kaya reçeli", "d": "Pandan kokulu kremamsı hindistan cevizi ve yumurta reçeli."},
+      {"icon": "🧈", "t": "Soğuk tereyağı", "d": "Kaya katmanları arasına konan kalın bir soğuk tereyağı dilimi."},
+      {"icon": "🥚", "t": "Soya soslu yumuşak yumurta", "d": "Rafadan yumurtalar, tatlı soya sosu ve karabiberle servis edilir."}
+    ],
+    "it": [
+      {"icon": "🍞", "t": "Toast croccante", "d": "Fette sottili di pane tostate finché croccanti e dorate."},
+      {"icon": "🥥", "t": "Marmellata kaya", "d": "Marmellata cremosa di cocco e uovo, profumata al pandan."},
+      {"icon": "🧈", "t": "Burro freddo", "d": "Una fetta spessa di burro freddo posta tra gli strati di kaya."},
+      {"icon": "🥚", "t": "Uova morbide con salsa di soia", "d": "Uova alla coque, servite con salsa di soia dolce e pepe."}
+    ],
+    "ko": [
+      {"icon": "🍞", "t": "바삭한 토스트", "d": "얇은 빵을 바삭하고 황금빛이 될 때까지 굽는다."},
+      {"icon": "🥥", "t": "카야 잼", "d": "판단 향이 나는 진한 코코넛 달걀 잼."},
+      {"icon": "🧈", "t": "차가운 버터", "d": "카야 층 사이에 넣는 두꺼운 차가운 버터 조각."},
+      {"icon": "🥚", "t": "간장을 곁들인 반숙 계란", "d": "반숙 계란을 달콤한 간장과 후추와 함께 낸다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["8 felii de pâine albă", "150g dulceață kaya (cocos și ouă)", "50g unt rece", "8 ouă", "4 linguri sos de soia dulce (kecap manis)", "piper alb măcinat"],
+    "en": ["8 slices white bread", "150g kaya jam (coconut and egg)", "50g cold butter", "8 eggs", "4 tbsp sweet soy sauce (kecap manis)", "ground white pepper"],
+    "es": ["8 rebanadas de pan blanco", "150g de mermelada kaya (coco y huevo)", "50g de mantequilla fría", "8 huevos", "4 cdas de salsa de soja dulce (kecap manis)", "pimienta blanca molida"],
+    "fr": ["8 tranches de pain blanc", "150g de confiture kaya (noix de coco et œuf)", "50g de beurre froid", "8 œufs", "4 c. à s. de sauce soja sucrée (kecap manis)", "poivre blanc moulu"],
+    "de": ["8 Scheiben Weißbrot", "150g Kaya-Konfitüre (Kokos und Ei)", "50g kalte Butter", "8 Eier", "4 EL süße Sojasauce (Kecap Manis)", "gemahlener weißer Pfeffer"],
+    "pt": ["8 fatias de pão branco", "150g de doce kaya (coco e ovo)", "50g de manteiga fria", "8 ovos", "4 c. sopa de molho de soja doce (kecap manis)", "pimenta branca moída"],
+    "ru": ["8 ломтиков белого хлеба", "150г джема кайя (кокос и яйцо)", "50г холодного сливочного масла", "8 яиц", "4 ст.л. сладкого соевого соуса (кечап манис)", "молотый белый перец"],
+    "ar": ["8 شرائح خبز أبيض", "150غ مربى الكايا (جوز الهند والبيض)", "50غ زبدة باردة", "8 بيضات", "4 ملاعق كبيرة صلصة صويا حلوة (كيتشاب مانيس)", "فلفل أبيض مطحون"],
+    "zh": ["白面包8片", "咖椰酱150克（椰子与鸡蛋）", "冷黄油50克", "鸡蛋8个", "甜酱油4汤匙（甜酱油）", "白胡椒粉"],
+    "ja": ["白パン 8枚", "カヤジャム 150g（ココナッツと卵）", "冷たいバター 50g", "卵 8個", "甘い醤油（ケチャップマニス） 大さじ4", "白こしょうパウダー"],
+    "hi": ["8 सफेद ब्रेड के टुकड़े", "150 ग्राम कया जैम (नारियल और अंडा)", "50 ग्राम ठंडा मक्खन", "8 अंडे", "4 बड़े चम्मच मीठी सोया सॉस (केचप मानिस)", "पिसी सफेद मिर्च"],
+    "tr": ["8 dilim beyaz ekmek", "150g kaya reçeli (hindistan cevizi ve yumurta)", "50g soğuk tereyağı", "8 yumurta", "4 yemek kaşığı tatlı soya sosu (kecap manis)", "öğütülmüş beyaz biber"],
+    "it": ["8 fette di pane bianco", "150g di marmellata kaya (cocco e uovo)", "50g di burro freddo", "8 uova", "4 cucchiai di salsa di soia dolce (kecap manis)", "pepe bianco macinato"],
+    "ko": ["흰 식빵 8장", "카야 잼 150g(코코넛과 달걀)", "차가운 버터 50g", "달걀 8개", "달콤한 간장(케찹 마니스) 4큰술", "흰 후추 가루"]
+  },
+  "howIsMade": {
+    "ro": "PRĂJIRE PÂINE: Prăjește feliile de pâine pe grătar sau în toaster până devin crocante și ușor aurii pe ambele părți. UNGERE KAYA: Unge generos o parte a fiecărei felii cu dulceață kaya, cât timp pâinea e încă fierbinte pentru ca dulceața să se topească ușor. ADĂUGARE UNT: Așază o felie subțire de unt rece direct pe dulceața kaya de pe o felie. ASAMBLARE SANDVIȘ: Acoperă cu a doua felie de pâine, cu partea unsă cu kaya în interior, apoi taie în două pe diagonală. PREPARARE OUĂ: Fierbe ouăle în apă clocotită exact 5-6 minute pentru un gălbenuș moale, curgător. SPARGERE OUĂ: Sparge fiecare ou într-un bol mic, presară sos de soia dulce și piper alb deasupra. SERVIRE: Servește sandvișurile kaya calde alături de ouăle moi, muindu-le pentru un mic dejun tradițional.",
+    "en": "TOAST BREAD: Toast the bread slices on a grill or in a toaster until crisp and lightly golden on both sides. SPREAD KAYA: Generously spread one side of each slice with kaya jam while the bread is still hot so the jam softens slightly. ADD BUTTER: Place a thin slice of cold butter directly on the kaya jam of one slice. ASSEMBLE SANDWICH: Cover with the second slice of bread, kaya side in, then cut diagonally in half. PREPARE EGGS: Boil the eggs in boiling water for exactly 5-6 minutes for a soft, runny yolk. CRACK EGGS: Crack each egg into a small bowl, sprinkle with sweet soy sauce and white pepper on top. SERVE: Serve the warm kaya toast alongside the soft eggs, dipping the toast in for a traditional breakfast.",
+    "es": "TOSTAR EL PAN: Tuesta las rebanadas de pan a la parrilla o en la tostadora hasta que estén crujientes y ligeramente doradas por ambos lados. UNTAR EL KAYA: Unta generosamente un lado de cada rebanada con mermelada kaya mientras el pan aún está caliente para que la mermelada se ablande un poco. AÑADIR MANTEQUILLA: Coloca una fina lonja de mantequilla fría directamente sobre la mermelada kaya de una rebanada. MONTAR EL SÁNDWICH: Cubre con la segunda rebanada de pan, con el lado del kaya hacia adentro, luego corta en diagonal por la mitad. PREPARAR LOS HUEVOS: Hierve los huevos en agua hirviendo exactamente 5-6 minutos para una yema blanda y líquida. ROMPER LOS HUEVOS: Rompe cada huevo en un bol pequeño, espolvorea con salsa de soja dulce y pimienta blanca encima. SERVIR: Sirve el kaya toast caliente junto a los huevos blandos, mojándolo para un desayuno tradicional.",
+    "fr": "GRILLER LE PAIN: Faites griller les tranches de pain au gril ou au grille-pain jusqu'à ce qu'elles soient croustillantes et légèrement dorées des deux côtés. TARTINER LE KAYA: Tartinez généreusement un côté de chaque tranche de confiture kaya pendant que le pain est encore chaud pour que la confiture ramollisse légèrement. AJOUTER LE BEURRE: Placez une fine tranche de beurre froid directement sur la confiture kaya d'une tranche. MONTER LE SANDWICH: Couvrez avec la seconde tranche de pain, côté kaya à l'intérieur, puis coupez en deux en diagonale. PRÉPARER LES ŒUFS: Faites bouillir les œufs dans l'eau bouillante exactement 5-6 minutes pour un jaune mollet et coulant. CASSER LES ŒUFS: Cassez chaque œuf dans un petit bol, saupoudrez de sauce soja sucrée et de poivre blanc dessus. SERVIR: Servez le kaya toast chaud à côté des œufs mollets, en trempant le toast pour un petit-déjeuner traditionnel.",
+    "de": "BROT TOASTEN: Die Brotscheiben auf dem Grill oder im Toaster rösten, bis sie auf beiden Seiten knusprig und leicht golden sind. KAYA STREICHEN: Eine Seite jeder Scheibe großzügig mit Kaya-Konfitüre bestreichen, solange das Brot noch heiß ist, damit die Konfitüre leicht weich wird. BUTTER HINZUFÜGEN: Eine dünne Scheibe kalte Butter direkt auf die Kaya-Konfitüre einer Scheibe legen. SANDWICH ZUSAMMENSETZEN: Mit der zweiten Brotscheibe bedecken, Kaya-Seite innen, dann diagonal halbieren. EIER ZUBEREITEN: Die Eier genau 5-6 Minuten in kochendem Wasser kochen für ein weiches, flüssiges Eigelb. EIER AUFSCHLAGEN: Jedes Ei in eine kleine Schale schlagen, mit süßer Sojasauce und weißem Pfeffer bestreuen. SERVIEREN: Den warmen Kaya-Toast neben den weichen Eiern servieren, zum Eintunken für ein traditionelles Frühstück.",
+    "pt": "TORRAR O PÃO: Torre as fatias de pão na grelha ou na torradeira até ficarem crocantes e levemente douradas dos dois lados. BARRAR O KAYA: Barre generosamente um lado de cada fatia com doce kaya enquanto o pão ainda está quente para o doce amolecer ligeiramente. ADICIONAR MANTEIGA: Coloque uma fatia fina de manteiga fria diretamente sobre o doce kaya de uma fatia. MONTAR A SANDES: Cubra com a segunda fatia de pão, com o lado do kaya para dentro, depois corte na diagonal ao meio. PREPARAR OS OVOS: Ferva os ovos em água a ferver exatamente 5-6 minutos para uma gema mole e líquida. PARTIR OS OVOS: Parta cada ovo numa tigela pequena, polvilhe com molho de soja doce e pimenta branca por cima. SERVIR: Sirva a sandes kaya quente ao lado dos ovos moles, mergulhando-a para um pequeno-almoço tradicional.",
+    "ru": "ПОДЖАРКА ХЛЕБА: Поджарьте ломтики хлеба на гриле или в тостере до хруста и лёгкой золотистости с обеих сторон. НАМАЗЫВАНИЕ КАЙЯ: Щедро намажьте одну сторону каждого ломтика джемом кайя, пока хлеб ещё горячий, чтобы джем слегка размягчился. ДОБАВЛЕНИЕ МАСЛА: Положите тонкий ломтик холодного масла прямо на джем кайя одного ломтика. СБОРКА БУТЕРБРОДА: Накройте вторым ломтиком хлеба, стороной с кайя внутрь, затем разрежьте по диагонали пополам. ПРИГОТОВЛЕНИЕ ЯИЦ: Варите яйца в кипящей воде ровно 5-6 минут для мягкого, текучего желтка. РАЗБИВАНИЕ ЯИЦ: Разбейте каждое яйцо в маленькую миску, посыпьте сверху сладким соевым соусом и белым перцем. ПОДАЧА: Подавайте тёплый кайя тост рядом с мягкими яйцами, обмакивая тост для традиционного завтрака.",
+    "ar": "تحميص الخبز: حمّص شرائح الخبز على الشواية أو في محمصة الخبز حتى تصبح مقرمشة وذهبية خفيفة من الجانبين. دهن الكايا: ادهن جانبًا من كل شريحة بسخاء بمربى الكايا بينما الخبز لا يزال ساخنًا حتى يلين المربى قليلًا. إضافة الزبدة: ضع شريحة رفيعة من الزبدة الباردة مباشرة فوق مربى الكايا على شريحة واحدة. تجميع الساندويتش: غطِّ بشريحة الخبز الثانية، مع جعل جانب الكايا للداخل، ثم قطّع قطريًا إلى نصفين. تحضير البيض: اسلق البيض في ماء مغلي لمدة 5-6 دقائق بالضبط للحصول على صفار طري وسائل. كسر البيض: اكسر كل بيضة في وعاء صغير، رشّ صلصة الصويا الحلوة والفلفل الأبيض فوقها. التقديم: قدّم توست الكايا الدافئ إلى جانب البيض الطري، مع غمسه للحصول على فطور تقليدي.",
+    "zh": "烤面包：将面包片在烤架或烤面包机上烤至两面酥脆微金黄。涂咖椰酱：趁面包还热时在每片一面慷慨涂抹咖椰酱，使酱料稍微融化。加黄油：在一片的咖椰酱上直接放一片薄薄的冷黄油。组装三明治：盖上另一片面包，咖椰酱一面朝内，然后对角切成两半。准备鸡蛋：将鸡蛋在沸水中煮恰好5-6分钟，使蛋黄呈溏心状。打开鸡蛋：将每个鸡蛋打入小碗中，撒上甜酱油和白胡椒粉。装盘：将温热的咖椰吐司与溏心蛋一起食用，蘸食享用传统早餐。",
+    "ja": "パンを焼く：パンをグリルまたはトースターで両面がカリッと軽く黄金色になるまで焼く。カヤを塗る：パンがまだ熱いうちに、片面にたっぷりとカヤジャムを塗り、ジャムが少し柔らかくなるようにする。バターを加える：一枚のカヤジャムの上に薄切りの冷たいバターを直接置く。サンドイッチを組み立てる：カヤ側を内側にしてもう一枚のパンで覆い、対角線に半分に切る。卵を準備する：卵を沸騰したお湯で正確に5〜6分茹で、柔らかくとろりとした黄身にする。卵を割る：それぞれの卵を小さなボウルに割り入れ、甘い醤油と白こしょうを振りかける。盛り付け：温かいカヤトーストを半熟卵と共に提供し、伝統的な朝食として浸して食べる。",
+    "hi": "ब्रेड टोस्ट करें: ब्रेड के टुकड़ों को ग्रिल या टोस्टर पर दोनों तरफ कुरकुरा और हल्का सुनहरा होने तक टोस्ट करें। कया लगाएं: ब्रेड के गरम रहते हुए हर टुकड़े के एक तरफ भरपूर कया जैम लगाएं ताकि जैम थोड़ा नरम हो जाए। मक्खन डालें: एक टुकड़े के कया जैम पर सीधे ठंडे मक्खन का पतला टुकड़ा रखें। सैंडविच असेंबल करें: कया वाला भाग अंदर रखते हुए दूसरे टुकड़े से ढकें, फिर तिरछा आधा काटें। अंडे तैयार करें: अंडों को उबलते पानी में ठीक 5-6 मिनट उबालें ताकि जर्दी नरम और बहती रहे। अंडे फोड़ें: हर अंडे को एक छोटे कटोरे में फोड़ें, ऊपर मीठी सोया सॉस और सफेद मिर्च छिड़कें। परोसें: गरम कया टोस्ट को नरम अंडों के साथ परोसें, पारंपरिक नाश्ते के लिए डुबोकर खाएं।",
+    "tr": "EKMEĞİ KIZARTIN: Ekmek dilimlerini ızgarada veya tost makinesinde her iki tarafı çıtır ve hafif altın rengi olana kadar kızartın. KAYA SÜRÜN: Ekmek hâlâ sıcakken her dilimin bir tarafına reçelin hafifçe yumuşaması için bolca kaya reçeli sürün. TEREYAĞI EKLEYİN: Bir dilimin kaya reçelinin üzerine doğrudan ince bir soğuk tereyağı dilimi koyun. SANDVİÇİ BİRLEŞTİRİN: Kaya tarafı içeride kalacak şekilde ikinci ekmek dilimiyle kapatın, sonra çapraz olarak ikiye kesin. YUMURTALARI HAZIRLAYIN: Yumurtaları yumuşak, akışkan bir sarı için tam olarak 5-6 dakika kaynayan suda haşlayın. YUMURTALARI KIRIN: Her yumurtayı küçük bir kaseye kırın, üzerine tatlı soya sosu ve beyaz biber serpin. SERVİS EDİN: Sıcak kaya tostu yumuşak yumurtaların yanında servis edin, geleneksel bir kahvaltı için batırarak yiyin.",
+    "it": "TOSTARE IL PANE: Tostate le fette di pane alla griglia o nel tostapane finché croccanti e leggermente dorate su entrambi i lati. SPALMARE IL KAYA: Spalmate generosamente un lato di ogni fetta con marmellata kaya mentre il pane è ancora caldo affinché la marmellata si ammorbidisca leggermente. AGGIUNGERE IL BURRO: Mettete una fetta sottile di burro freddo direttamente sulla marmellata kaya di una fetta. COMPORRE IL PANINO: Coprite con la seconda fetta di pane, lato kaya all'interno, poi tagliate in diagonale a metà. PREPARARE LE UOVA: Lessate le uova in acqua bollente esattamente 5-6 minuti per un tuorlo morbido e colante. ROMPERE LE UOVA: Rompete ogni uovo in una ciotolina, cospargete con salsa di soia dolce e pepe bianco sopra. SERVIRE: Servite il kaya toast caldo accanto alle uova morbide, intingendo per una colazione tradizionale.",
+    "ko": "빵 굽기: 빵 조각을 그릴이나 토스터에서 양면이 바삭하고 살짝 황금빛이 될 때까지 굽는다. 카야 바르기: 빵이 아직 뜨거울 때 한쪽 면에 카야 잼을 듬뿍 발라 잼이 살짝 부드러워지게 한다. 버터 넣기: 한 조각의 카야 잼 위에 차가운 버터 얇은 조각을 바로 올린다. 샌드위치 조립: 카야 면이 안쪽을 향하게 다른 빵으로 덮고 대각선으로 반으로 자른다. 달걀 준비: 달걀을 끓는 물에 정확히 5~6분간 삶아 부드럽고 흐르는 노른자를 만든다. 달걀 깨기: 각 달걀을 작은 그릇에 깨뜨려 넣고 위에 달콤한 간장과 흰 후추를 뿌린다. 담아내기: 따뜻한 카야 토스트를 반숙 달걀과 함께 내어, 전통적인 아침 식사로 찍어 먹는다."
+  },
+  "originText": {
+    "ro": "Kaya toast a apărut din întâlnirea culturală dintre migranții chinezi hainanezi și bucătăria colonială britanică din Malaya secolelor XIX-XX. Bucătarii hainanezi, angajați adesea ca ajutoare de bucătărie în casele familiilor britanice colonizatoare, au adaptat dulceața cu ouă și lapte europeană, înlocuind laptele de vacă cu lapte de cocos și adăugând frunze de pandan, planta aromatică omniprezentă în bucătăria sud-est asiatică, creând astfel dulceața kaya.\n\nCombinația de pâine prăjită cu kaya, unt rece și ouă moi servite cu sos de soia a devenit micul dejun definitoriu al comunităților hainaneze din Malaysia și Singapore, servit tradițional în cafenele numite kopitiam, unde vârstnicii se adună dimineața pentru cafea și conversație. Ritualul de a înmuia pâinea prăjită în gălbenușul moale rămâne un obicei aproape sacru pentru mulți malaezieni, transmis din generație în generație.",
+    "en": "Kaya toast emerged from the cultural encounter between Hainanese Chinese migrants and British colonial cuisine in 19th-20th century Malaya. Hainanese cooks, often employed as kitchen help in the households of colonizing British families, adapted the European egg-and-milk jam, replacing cow's milk with coconut milk and adding pandan leaves, the aromatic plant ubiquitous in Southeast Asian cuisine, thus creating kaya jam.\n\nThe combination of kaya toast, cold butter and soft eggs served with soy sauce became the defining breakfast of Hainanese communities in Malaysia and Singapore, traditionally served in cafés called kopitiam, where elders gather in the morning for coffee and conversation. The ritual of dipping the toast into the soft yolk remains an almost sacred custom for many Malaysians, passed down through generations.",
+    "es": "El kaya toast surgió del encuentro cultural entre migrantes chinos hainaneses y la cocina colonial británica en Malaya de los siglos XIX-XX. Los cocineros hainaneses, a menudo empleados como ayuda de cocina en los hogares de las familias colonizadoras británicas, adaptaron la mermelada europea de huevo y leche, reemplazando la leche de vaca por leche de coco y añadiendo hojas de pandan, la planta aromática omnipresente en la cocina del sudeste asiático, creando así la mermelada kaya.\n\nLa combinación de kaya toast, mantequilla fría y huevos blandos servidos con salsa de soja se convirtió en el desayuno definitorio de las comunidades hainanesas en Malasia y Singapur, servido tradicionalmente en cafés llamados kopitiam, donde los mayores se reúnen por la mañana para tomar café y conversar. El ritual de mojar la tostada en la yema blanda sigue siendo una costumbre casi sagrada para muchos malayos, transmitida de generación en generación.",
+    "fr": "Le kaya toast est né de la rencontre culturelle entre les migrants chinois hainanais et la cuisine coloniale britannique en Malaisie des XIXe-XXe siècles. Les cuisiniers hainanais, souvent employés comme aide de cuisine dans les foyers des familles colonisatrices britanniques, ont adapté la confiture européenne aux œufs et au lait, remplaçant le lait de vache par du lait de coco et ajoutant des feuilles de pandan, la plante aromatique omniprésente dans la cuisine d'Asie du Sud-Est, créant ainsi la confiture kaya.\n\nLa combinaison de kaya toast, de beurre froid et d'œufs mollets servis avec de la sauce soja est devenue le petit-déjeuner emblématique des communautés hainanaises en Malaisie et à Singapour, traditionnellement servi dans des cafés appelés kopitiam, où les aînés se réunissent le matin pour prendre un café et discuter. Le rituel de tremper le toast dans le jaune mollet reste une coutume presque sacrée pour de nombreux Malaisiens, transmise de génération en génération.",
+    "de": "Kaya Toast entstand aus der kulturellen Begegnung zwischen hainanesisch-chinesischen Migranten und der britischen Kolonialküche im Malaya des 19.-20. Jahrhunderts. Hainanesische Köche, oft als Küchenhilfen in den Haushalten der kolonisierenden britischen Familien beschäftigt, passten die europäische Ei-Milch-Konfitüre an, ersetzten Kuhmilch durch Kokosmilch und fügten Pandanblätter hinzu, die in der südostasiatischen Küche allgegenwärtige aromatische Pflanze, und schufen so die Kaya-Konfitüre.\n\nDie Kombination aus Kaya Toast, kalter Butter und weichen, mit Sojasauce servierten Eiern wurde zum prägenden Frühstück der hainanesischen Gemeinschaften in Malaysia und Singapur, traditionell serviert in Cafés namens Kopitiam, wo sich Ältere morgens zu Kaffee und Gesprächen versammeln. Das Ritual, den Toast in das weiche Eigelb zu tauchen, bleibt für viele Malaysier ein fast heiliger Brauch, über Generationen weitergegeben.",
+    "pt": "O kaya toast surgiu do encontro cultural entre migrantes chineses hainaneses e a cozinha colonial britânica na Malásia dos séculos XIX-XX. Os cozinheiros hainaneses, frequentemente empregados como ajuda de cozinha nas casas das famílias colonizadoras britânicas, adaptaram o doce europeu de ovo e leite, substituindo o leite de vaca por leite de coco e adicionando folhas de pandan, a planta aromática omnipresente na cozinha do sudeste asiático, criando assim o doce kaya.\n\nA combinação de kaya toast, manteiga fria e ovos moles servidos com molho de soja tornou-se o pequeno-almoço definidor das comunidades hainanesas na Malásia e em Singapura, tradicionalmente servido em cafés chamados kopitiam, onde os mais velhos se reúnem de manhã para café e conversa. O ritual de mergulhar a torrada na gema mole continua a ser um costume quase sagrado para muitos malaios, transmitido de geração em geração.",
+    "ru": "Кайя тост возник из культурной встречи хайнаньских китайских мигрантов и британской колониальной кухни в Малайе XIX-XX веков. Хайнаньские повара, часто работавшие помощниками на кухнях домов колонизировавших британских семей, адаптировали европейский яично-молочный джем, заменив коровье молоко кокосовым и добавив листья пандана — ароматное растение, повсеместное в кухне Юго-Восточной Азии, — так создав джем кайя.\n\nСочетание кайя тоста, холодного масла и мягких яиц с соевым соусом стало определяющим завтраком хайнаньских общин в Малайзии и Сингапуре, традиционно подаваемым в кафе, называемых копитиам, где пожилые люди собираются по утрам за кофе и разговорами. Ритуал обмакивания тоста в мягкий желток остаётся почти священным обычаем для многих малайзийцев, передаваемым из поколения в поколение.",
+    "ar": "نشأ توست الكايا من اللقاء الثقافي بين المهاجرين الصينيين من هاينان والمطبخ الاستعماري البريطاني في مالايا في القرنين التاسع عشر والعشرين. كيّف الطهاة من هاينان، الذين كانوا يُوظَّفون غالبًا كمساعدين في مطابخ العائلات البريطانية المستعمِرة، مربى البيض والحليب الأوروبي، مستبدلين حليب البقر بحليب جوز الهند ومضيفين أوراق الباندان، النبتة العطرية المنتشرة في مطبخ جنوب شرق آسيا، مبتكرين بذلك مربى الكايا.\n\nأصبح مزيج توست الكايا والزبدة الباردة والبيض الطري المقدَّم مع صلصة الصويا فطور مجتمعات هاينان المميز في ماليزيا وسنغافورة، يُقدَّم تقليديًا في مقاهٍ تُسمى كوبيتيام، حيث يجتمع كبار السن صباحًا لتناول القهوة والحديث. تبقى طقوس غمس التوست في الصفار الطري عادة شبه مقدسة للعديد من الماليزيين، تنتقل عبر الأجيال.",
+    "zh": "咖椰吐司源于19至20世纪马来亚地区海南华人移民与英国殖民饮食文化的交汇。海南厨师常受雇于英国殖民家庭担任厨房帮工，他们改良了欧式蛋奶酱——用椰浆替代牛奶，并加入东南亚菜肴中随处可见的香料植物香兰叶，由此创造出咖椰酱。\n\n咖椰吐司搭配冷黄油和配酱油的溏心蛋，成为马来西亚和新加坡海南人社群标志性的早餐组合，传统上在被称为「咖啡店」（kopitiam）的场所供应，老一辈人清晨在此聚集喝咖啡、聊天。将吐司蘸入溏心蛋黄的仪式，对许多马来西亚人来说几乎是一种代代相传的神圣习俗。",
+    "ja": "カヤトーストは、19〜20世紀のマラヤにおける海南系中国人移民とイギリス植民地料理の文化的出会いから生まれた。海南出身の料理人は、植民地時代のイギリス人家庭の台所手伝いとして雇われることが多く、ヨーロッパの卵とミルクのジャムを応用し、牛乳をココナッツミルクに置き換え、東南アジア料理に欠かせない香り高い植物であるパンダンの葉を加えることで、カヤジャムを生み出した。\n\nカヤトースト、冷たいバター、醤油を添えた半熟卵の組み合わせは、マレーシアとシンガポールの海南系コミュニティを象徴する朝食となり、コピティアムと呼ばれるカフェで伝統的に提供され、そこでは年配者が朝にコーヒーと会話のために集まる。トーストを柔らかい黄身に浸す儀式は、多くのマレーシア人にとって世代を超えて受け継がれるほとんど神聖な習慣であり続けている。",
+    "hi": "कया टोस्ट की उत्पत्ति 19वीं-20वीं सदी के मलाया में हैनानी चीनी प्रवासियों और ब्रिटिश औपनिवेशिक व्यंजनों के सांस्कृतिक मिलन से हुई। हैनानी रसोइए, जो अक्सर उपनिवेश बनाने वाले ब्रिटिश परिवारों के घरों में रसोई सहायक के रूप में काम करते थे, ने यूरोपीय अंडा-दूध जैम को अपनाया, गाय के दूध को नारियल के दूध से बदला और पांडन के पत्ते जोड़े, जो दक्षिण पूर्व एशियाई व्यंजनों में सर्वव्यापी सुगंधित पौधा है, इस प्रकार कया जैम बनाया।\n\nकया टोस्ट, ठंडे मक्खन और सोया सॉस के साथ परोसे गए नरम अंडों का संयोजन मलेशिया और सिंगापुर में हैनानी समुदायों का प्रमुख नाश्ता बन गया, जो परंपरागत रूप से कोपितियम नामक कैफे में परोसा जाता है, जहां बुज़ुर्ग सुबह कॉफी और बातचीत के लिए इकट्ठा होते हैं। टोस्ट को नरम जर्दी में डुबाने की रस्म कई मलेशियाई लोगों के लिए एक लगभग पवित्र रिवाज बनी हुई है, जो पीढ़ी-दर-पीढ़ी चली आ रही है।",
+    "tr": "Kaya tost, 19.-20. yüzyıl Malaya'sında Hainanlı Çinli göçmenler ile İngiliz sömürge mutfağı arasındaki kültürel karşılaşmadan doğdu. Genellikle sömürgeci İngiliz ailelerin evlerinde mutfak yardımcısı olarak çalıştırılan Hainanlı aşçılar, Avrupa'nın yumurta ve süt reçelini uyarladılar; inek sütünü hindistan cevizi sütüyle değiştirip Güneydoğu Asya mutfağında her yerde bulunan aromatik bitki olan pandan yapraklarını ekleyerek kaya reçelini yarattılar.\n\nKaya tost, soğuk tereyağı ve soya sosuyla servis edilen yumuşak yumurtaların birleşimi, Malezya ve Singapur'daki Hainanlı toplulukların temel kahvaltısı haline geldi ve geleneksel olarak yaşlıların sabahları kahve içip sohbet etmek için toplandığı kopitiam adı verilen kafelerde servis edildi. Tostu yumuşak sarıya batırma ritüeli, birçok Malezyalı için nesilden nesile aktarılan neredeyse kutsal bir gelenek olmaya devam ediyor.",
+    "it": "Il kaya toast è nato dall'incontro culturale tra i migranti cinesi hainanesi e la cucina coloniale britannica nella Malaya dei secoli XIX-XX. I cuochi hainanesi, spesso impiegati come aiuto cucina nelle case delle famiglie coloniali britanniche, hanno adattato la marmellata europea a base di uova e latte, sostituendo il latte vaccino con il latte di cocco e aggiungendo foglie di pandano, la pianta aromatica onnipresente nella cucina del sud-est asiatico, creando così la marmellata kaya.\n\nLa combinazione di kaya toast, burro freddo e uova morbide servite con salsa di soia è diventata la colazione distintiva delle comunità hainanesi in Malesia e Singapore, tradizionalmente servita in caffè chiamati kopitiam, dove gli anziani si riuniscono al mattino per caffè e conversazione. Il rituale di intingere il toast nel tuorlo morbido rimane un'usanza quasi sacra per molti malesi, tramandata di generazione in generazione.",
+    "ko": "카야 토스트는 19~20세기 말라야에서 하이난계 중국인 이민자들과 영국 식민지 요리 문화가 만나면서 탄생했다. 식민지 시대 영국 가정에서 주방 보조로 자주 고용되었던 하이난 출신 요리사들은 유럽식 달걀-우유 잼을 응용해 우유 대신 코코넛 밀크를 사용하고 동남아시아 요리에서 흔히 쓰이는 향긋한 식물인 판단 잎을 넣어 카야 잼을 만들어냈다.\n\n카야 토스트와 차가운 버터, 간장을 곁들인 반숙 달걀의 조합은 말레이시아와 싱가포르 하이난 공동체를 대표하는 아침 식사가 되었으며, 전통적으로 코피티암이라 불리는 카페에서 제공되어 노인들이 아침마다 커피와 대화를 나누기 위해 모이는 장소가 되었다. 토스트를 부드러운 노른자에 찍어 먹는 의식은 많은 말레이시아인들에게 세대를 거쳐 전해지는 거의 신성한 관습으로 남아 있다."
+  },
+  "meta": {
+    "time": 20,
+    "costRon": 10,
+    "tags": ["vegetarian", "quick"],
+    "desc": {
+      "ro": "Pâine prăjită cu dulceață kaya și unt rece, servită cu ouă moi și sos de soia.",
+      "en": "Toast with kaya jam and cold butter, served with soft eggs and soy sauce.",
+      "es": "Tostada con mermelada kaya y mantequilla fría, con huevos blandos y salsa de soja.",
+      "fr": "Toast à la confiture kaya et au beurre froid, avec œufs mollets et sauce soja.",
+      "de": "Toast mit Kaya-Konfitüre und kalter Butter, mit weichen Eiern und Sojasauce.",
+      "pt": "Torrada com doce kaya e manteiga fria, com ovos moles e molho de soja.",
+      "ru": "Тост с джемом кайя и холодным маслом, с мягкими яйцами и соевым соусом.",
+      "ar": "توست بمربى الكايا والزبدة الباردة، مع بيض طري وصلصة الصويا.",
+      "zh": "咖椰酱冷黄油吐司，配溏心蛋和酱油。",
+      "ja": "カヤジャムと冷たいバターのトースト、半熟卵と醤油添え。",
+      "hi": "कया जैम और ठंडे मक्खन का टोस्ट, नरम अंडों और सोया सॉस के साथ।",
+      "tr": "Kaya reçeli ve soğuk tereyağlı tost, yumuşak yumurta ve soya sosuyla.",
+      "it": "Toast con marmellata kaya e burro freddo, con uova morbide e salsa di soia.",
+      "ko": "카야 잼과 차가운 버터를 바른 토스트, 반숙 달걀과 간장을 곁들임."
+    }
+  }
+}

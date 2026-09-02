@@ -1,0 +1,175 @@
+{
+  "id": 359,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Liban", "en": "Lebanon", "es": "Líbano", "fr": "Liban", "de": "Libanon",
+    "pt": "Líbano", "ru": "Ливан", "ar": "لبنان", "zh": "黎巴嫩", "ja": "レバノン",
+    "hi": "लेबनान", "tr": "Lübnan", "it": "Libano", "ko": "레바논"
+  },
+  "name": {
+    "ro": "Fattoush", "en": "Fattoush", "es": "Fattoush", "fr": "Fattouche", "de": "Fattoush",
+    "pt": "Fattoush", "ru": "Фаттуш", "ar": "فتوش", "zh": "黎巴嫩面包沙拉", "ja": "ファトゥーシュ",
+    "hi": "फ़त्तूश", "tr": "Fattuş", "it": "Fattoush", "ko": "파투시"
+  },
+  "category": {
+    "ro": "Salată", "en": "Salad", "es": "Ensalada", "fr": "Salade", "de": "Salat", "pt": "Salada",
+    "ru": "Салат", "ar": "سلطة", "zh": "沙拉", "ja": "サラダ", "hi": "सलाद", "tr": "Salata", "it": "Insalata", "ko": "샐러드"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥖", "t": "Pâine crocantă prăjită", "d": "Lipie prăjită sau coaptă, ruptă în bucăți crocante."},
+      {"icon": "🥬", "t": "Legume proaspete tocate", "d": "Castraveți, roșii, ridichi și salată verde tăiate mărunt."},
+      {"icon": "🍋", "t": "Sos cu sumac", "d": "Dressing acrișor cu sumac, zeamă de lămâie și melasă de rodie."},
+      {"icon": "🌿", "t": "Mentă proaspătă", "d": "Frunze de mentă tocate care dau prospețime aromei."}
+    ],
+    "en": [
+      {"icon": "🥖", "t": "Crispy fried bread", "d": "Toasted or fried flatbread, torn into crunchy pieces."},
+      {"icon": "🥬", "t": "Chopped fresh vegetables", "d": "Cucumbers, tomatoes, radishes and lettuce, finely diced."},
+      {"icon": "🍋", "t": "Sumac dressing", "d": "Tart dressing with sumac, lemon juice and pomegranate molasses."},
+      {"icon": "🌿", "t": "Fresh mint", "d": "Chopped mint leaves that bring freshness to the flavor."}
+    ],
+    "es": [
+      {"icon": "🥖", "t": "Pan frito crujiente", "d": "Pan de pita tostado o frito, roto en trozos crujientes."},
+      {"icon": "🥬", "t": "Verduras frescas picadas", "d": "Pepinos, tomates, rábanos y lechuga, finamente picados."},
+      {"icon": "🍋", "t": "Aderezo de zumaque", "d": "Aliño ácido con zumaque, zumo de limón y melaza de granada."},
+      {"icon": "🌿", "t": "Menta fresca", "d": "Hojas de menta picadas que aportan frescura al sabor."}
+    ],
+    "fr": [
+      {"icon": "🥖", "t": "Pain frit croustillant", "d": "Pain plat grillé ou frit, déchiré en morceaux croustillants."},
+      {"icon": "🥬", "t": "Légumes frais hachés", "d": "Concombres, tomates, radis et laitue, finement coupés."},
+      {"icon": "🍋", "t": "Vinaigrette au sumac", "d": "Assaisonnement acidulé au sumac, jus de citron et mélasse de grenade."},
+      {"icon": "🌿", "t": "Menthe fraîche", "d": "Feuilles de menthe hachées qui apportent de la fraîcheur à la saveur."}
+    ],
+    "de": [
+      {"icon": "🥖", "t": "Knuspriges gebratenes Brot", "d": "Geröstetes oder frittiertes Fladenbrot, in knusprige Stücke gerissen."},
+      {"icon": "🥬", "t": "Gehacktes frisches Gemüse", "d": "Gurken, Tomaten, Radieschen und Salat, fein gewürfelt."},
+      {"icon": "🍋", "t": "Sumach-Dressing", "d": "Säuerliches Dressing mit Sumach, Zitronensaft und Granatapfelmelasse."},
+      {"icon": "🌿", "t": "Frische Minze", "d": "Gehackte Minzblätter, die dem Geschmack Frische verleihen."}
+    ],
+    "pt": [
+      {"icon": "🥖", "t": "Pão frito estaladiço", "d": "Pão pita tostado ou frito, rasgado em pedaços crocantes."},
+      {"icon": "🥬", "t": "Legumes frescos picados", "d": "Pepinos, tomates, rabanetes e alface, finamente picados."},
+      {"icon": "🍋", "t": "Molho de sumagre", "d": "Tempero ácido com sumagre, sumo de limão e melaço de romã."},
+      {"icon": "🌿", "t": "Hortelã fresca", "d": "Folhas de hortelã picadas que trazem frescor ao sabor."}
+    ],
+    "ru": [
+      {"icon": "🥖", "t": "Хрустящий жареный хлеб", "d": "Обжаренный или запечённый лаваш, разорванный на хрустящие кусочки."},
+      {"icon": "🥬", "t": "Нарезанные свежие овощи", "d": "Огурцы, помидоры, редис и салат, мелко нарезанные."},
+      {"icon": "🍋", "t": "Заправка из сумаха", "d": "Кислая заправка из сумаха, лимонного сока и гранатовой патоки."},
+      {"icon": "🌿", "t": "Свежая мята", "d": "Нарезанные листья мяты, придающие свежесть вкусу."}
+    ],
+    "ar": [
+      {"icon": "🥖", "t": "خبز مقلي مقرمش", "d": "خبز محمّص أو مقلي، ممزّق إلى قطع مقرمشة."},
+      {"icon": "🥬", "t": "خضار طازجة مفرومة", "d": "خيار وطماطم وفجل وخس، مقطعة ناعمًا."},
+      {"icon": "🍋", "t": "صلصة السماق", "d": "تتبيلة حامضة بالسماق وعصير الليمون ودبس الرمان."},
+      {"icon": "🌿", "t": "نعناع طازج", "d": "أوراق نعناع مفرومة تمنح النكهة نضارة."}
+    ],
+    "zh": [
+      {"icon": "🥖", "t": "酥脆炸面包", "d": "烤或炸过的薄饼，撕成酥脆小块。"},
+      {"icon": "🥬", "t": "切碎新鲜蔬菜", "d": "黄瓜、番茄、萝卜和生菜切成细丁。"},
+      {"icon": "🍋", "t": "漆树粉调料", "d": "由漆树粉、柠檬汁和石榴糖浆制成的酸味调料。"},
+      {"icon": "🌿", "t": "新鲜薄荷", "d": "切碎的薄荷叶为风味带来清新感。"}
+    ],
+    "ja": [
+      {"icon": "🥖", "t": "カリカリの揚げパン", "d": "焼くか揚げたフラットブレッドをカリカリに割ったもの。"},
+      {"icon": "🥬", "t": "刻んだ新鮮野菜", "d": "きゅうり、トマト、ラディッシュ、レタスを細かく刻む。"},
+      {"icon": "🍋", "t": "スマックドレッシング", "d": "スマック、レモン汁、ザクロ糖蜜の酸味のあるドレッシング。"},
+      {"icon": "🌿", "t": "新鮮なミント", "d": "刻んだミントの葉が風味に爽やかさを加える。"}
+    ],
+    "hi": [
+      {"icon": "🥖", "t": "कुरकुरी तली ब्रेड", "d": "टोस्ट या तली फ्लैटब्रेड, कुरकुरे टुकड़ों में तोड़ी गई।"},
+      {"icon": "🥬", "t": "कटी ताज़ी सब्ज़ियां", "d": "खीरा, टमाटर, मूली और सलाद पत्ता, बारीक कटे।"},
+      {"icon": "🍋", "t": "सुमाक ड्रेसिंग", "d": "सुमाक, नींबू के रस और अनार की चाशनी से बनी खट्टी ड्रेसिंग।"},
+      {"icon": "🌿", "t": "ताज़ा पुदीना", "d": "कटे पुदीने के पत्ते जो स्वाद में ताज़गी लाते हैं।"}
+    ],
+    "tr": [
+      {"icon": "🥖", "t": "Çıtır kızarmış ekmek", "d": "Kızartılmış veya fırınlanmış yassı ekmek, çıtır parçalar halinde yırtılmış."},
+      {"icon": "🥬", "t": "Doğranmış taze sebzeler", "d": "Salatalık, domates, turp ve marul, ince doğranmış."},
+      {"icon": "🍋", "t": "Sumak sosu", "d": "Sumak, limon suyu ve nar ekşisiyle ekşi sos."},
+      {"icon": "🌿", "t": "Taze nane", "d": "Lezzete tazelik katan doğranmış nane yaprakları."}
+    ],
+    "it": [
+      {"icon": "🥖", "t": "Pane fritto croccante", "d": "Pane piatto tostato o fritto, spezzettato in pezzi croccanti."},
+      {"icon": "🥬", "t": "Verdure fresche tritate", "d": "Cetrioli, pomodori, ravanelli e lattuga, tagliati finemente."},
+      {"icon": "🍋", "t": "Condimento al sommacco", "d": "Condimento aspro con sommacco, succo di limone e melassa di melograno."},
+      {"icon": "🌿", "t": "Menta fresca", "d": "Foglie di menta tritate che portano freschezza al sapore."}
+    ],
+    "ko": [
+      {"icon": "🥖", "t": "바삭하게 튀긴 빵", "d": "구운 플랫브레드를 바삭한 조각으로 찢은 것."},
+      {"icon": "🥬", "t": "다진 신선 채소", "d": "오이, 토마토, 무, 상추를 잘게 썰었다."},
+      {"icon": "🍋", "t": "수맥 드레싱", "d": "수맥, 레몬즙, 석류당밀로 만든 새콤한 드레싱."},
+      {"icon": "🌿", "t": "신선한 민트", "d": "다진 민트 잎이 맛에 신선함을 더한다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["2 lipii libaneze", "2 castraveți", "3 roșii", "5 ridichi", "1 salată romană", "4 fire ceapă verde", "1 legătură pătrunjel", "1 legătură mentă", "2 linguri sumac", "100ml ulei de măsline", "zeamă de la 2 lămâi", "1 lingură melasă de rodie", "ulei pentru prăjit"],
+    "en": ["2 Lebanese flatbreads", "2 cucumbers", "3 tomatoes", "5 radishes", "1 romaine lettuce", "4 green onions", "1 bunch parsley", "1 bunch mint", "2 tbsp sumac", "100ml olive oil", "juice of 2 lemons", "1 tbsp pomegranate molasses", "oil for frying"],
+    "es": ["2 panes libaneses planos", "2 pepinos", "3 tomates", "5 rábanos", "1 lechuga romana", "4 cebolletas", "1 manojo de perejil", "1 manojo de menta", "2 cdas de zumaque", "100ml de aceite de oliva", "zumo de 2 limones", "1 cda de melaza de granada", "aceite para freír"],
+    "fr": ["2 pains plats libanais", "2 concombres", "3 tomates", "5 radis", "1 laitue romaine", "4 oignons verts", "1 botte de persil", "1 botte de menthe", "2 c. à s. de sumac", "100ml d'huile d'olive", "jus de 2 citrons", "1 c. à s. de mélasse de grenade", "huile pour frire"],
+    "de": ["2 libanesische Fladenbrote", "2 Gurken", "3 Tomaten", "5 Radieschen", "1 Römersalat", "4 Frühlingszwiebeln", "1 Bund Petersilie", "1 Bund Minze", "2 EL Sumach", "100ml Olivenöl", "Saft von 2 Zitronen", "1 EL Granatapfelmelasse", "Öl zum Frittieren"],
+    "pt": ["2 pães pita libaneses", "2 pepinos", "3 tomates", "5 rabanetes", "1 alface romana", "4 cebolinhas", "1 molho de salsa", "1 molho de hortelã", "2 c. sopa de sumagre", "100ml de azeite", "sumo de 2 limões", "1 c. sopa de melaço de romã", "óleo para fritar"],
+    "ru": ["2 ливанские лепёшки", "2 огурца", "3 помидора", "5 редисок", "1 салат ромэн", "4 стебля зелёного лука", "1 пучок петрушки", "1 пучок мяты", "2 ст.л. сумаха", "100мл оливкового масла", "сок 2 лимонов", "1 ст.л. гранатовой патоки", "масло для жарки"],
+    "ar": ["2 خبز لبناني", "خياران", "3 طماطم", "5 حبات فجل", "خس روماني واحد", "4 أعواد بصل أخضر", "حزمة بقدونس", "حزمة نعناع", "2 ملعقة كبيرة سماق", "100مل زيت زيتون", "عصير ليمونتين", "ملعقة كبيرة دبس رمان", "زيت للقلي"],
+    "zh": ["黎巴嫩薄饼2张", "黄瓜2根", "番茄3个", "萝卜5个", "罗马生菜1棵", "青葱4根", "欧芹1把", "薄荷1把", "漆树粉2汤匙", "橄榄油100毫升", "柠檬汁2个柠檬量", "石榴糖浆1汤匙", "炸制用油"],
+    "ja": ["レバノン風フラットブレッド 2枚", "きゅうり 2本", "トマト 3個", "ラディッシュ 5個", "ロメインレタス 1個", "青ねぎ 4本", "パセリ 1束", "ミント 1束", "スマック 大さじ2", "オリーブオイル 100ml", "レモン2個分の果汁", "ザクロ糖蜜 大さじ1", "揚げ油"],
+    "hi": ["2 लेबनानी फ्लैटब्रेड", "2 खीरे", "3 टमाटर", "5 मूली", "1 रोमेन लेट्यूस", "4 हरे प्याज़", "1 गुच्छा अजमोद", "1 गुच्छा पुदीना", "2 बड़े चम्मच सुमाक", "100 मिली जैतून का तेल", "2 नींबू का रस", "1 बड़ा चम्मच अनार की चाशनी", "तलने के लिए तेल"],
+    "tr": ["2 Lübnan yassı ekmeği", "2 salatalık", "3 domates", "5 turp", "1 marul", "4 yeşil soğan", "1 demet maydanoz", "1 demet nane", "2 yemek kaşığı sumak", "100ml zeytinyağı", "2 limonun suyu", "1 yemek kaşığı nar ekşisi", "kızartmak için yağ"],
+    "it": ["2 pani piatti libanesi", "2 cetrioli", "3 pomodori", "5 ravanelli", "1 lattuga romana", "4 cipollotti", "1 mazzo di prezzemolo", "1 mazzo di menta", "2 cucchiai di sommacco", "100ml di olio d'oliva", "succo di 2 limoni", "1 cucchiaio di melassa di melograno", "olio per friggere"],
+    "ko": ["레바논 플랫브레드 2장", "오이 2개", "토마토 3개", "무 5개", "로메인 상추 1포기", "파 4대", "파슬리 1단", "민트 1단", "수맥 2큰술", "올리브 오일 100ml", "레몬 2개분 즙", "석류당밀 1큰술", "튀김용 기름"]
+  },
+  "howIsMade": {
+    "ro": "PRĂJIRE PÂINE: Taie lipia în bucăți neregulate și prăjește-le în ulei încins până devin crocante și aurii, sau coace-le la cuptor. TOCARE LEGUME: Taie cuburi mici castraveții, roșiile, ridichile și salata romană. TOCARE VERDEAȚĂ: Toacă mărunt ceapa verde, pătrunjelul și menta. PREPARARE SOS: Amestecă uleiul de măsline cu zeama de lămâie, sumacul și melasa de rodie, într-un bol separat. COMBINARE: Amestecă toate legumele tocate într-un bol mare, adaugă sosul și amestecă bine. ADĂUGARE PÂINE: Adaugă bucățile de pâine prăjită chiar înainte de servire, pentru a-și păstra crocanța. SERVIRE: Servește imediat, presărat cu sumac suplimentar deasupra.",
+    "en": "FRY BREAD: Cut the flatbread into irregular pieces and fry them in hot oil until crisp and golden, or bake them in the oven. CHOP VEGETABLES: Dice the cucumbers, tomatoes, radishes and romaine lettuce into small pieces. CHOP HERBS: Finely chop the green onion, parsley and mint. MAKE DRESSING: Mix the olive oil with lemon juice, sumac and pomegranate molasses in a separate bowl. COMBINE: Mix all the chopped vegetables in a large bowl, add the dressing and mix well. ADD BREAD: Add the fried bread pieces right before serving, to keep them crisp. SERVE: Serve immediately, sprinkled with extra sumac on top.",
+    "es": "FREÍR EL PAN: Corta el pan plano en trozos irregulares y fríelos en aceite caliente hasta que estén crujientes y dorados, u hornéalos. PICAR LAS VERDURAS: Corta en cubitos los pepinos, tomates, rábanos y lechuga romana. PICAR LAS HIERBAS: Pica finamente la cebolleta, el perejil y la menta. PREPARAR EL ADEREZO: Mezcla el aceite de oliva con el zumo de limón, el zumaque y la melaza de granada en un bol aparte. COMBINAR: Mezcla todas las verduras picadas en un bol grande, añade el aderezo y mezcla bien. AÑADIR EL PAN: Añade los trozos de pan frito justo antes de servir, para mantenerlos crujientes. SERVIR: Sirve de inmediato, espolvoreado con zumaque extra encima.",
+    "fr": "FRIRE LE PAIN: Coupez le pain plat en morceaux irréguliers et faites-les frire dans l'huile chaude jusqu'à ce qu'ils soient croustillants et dorés, ou faites-les cuire au four. HACHER LES LÉGUMES: Coupez en dés les concombres, tomates, radis et laitue romaine. HACHER LES HERBES: Hachez finement l'oignon vert, le persil et la menthe. PRÉPARER LA VINAIGRETTE: Mélangez l'huile d'olive avec le jus de citron, le sumac et la mélasse de grenade dans un bol séparé. COMBINER: Mélangez tous les légumes hachés dans un grand bol, ajoutez la vinaigrette et mélangez bien. AJOUTER LE PAIN: Ajoutez les morceaux de pain frit juste avant de servir, pour qu'ils restent croustillants. SERVIR: Servez immédiatement, saupoudré de sumac supplémentaire dessus.",
+    "de": "BROT BRATEN: Das Fladenbrot in unregelmäßige Stücke schneiden und in heißem Öl knusprig und golden braten oder im Ofen backen. GEMÜSE HACKEN: Gurken, Tomaten, Radieschen und Römersalat in kleine Würfel schneiden. KRÄUTER HACKEN: Frühlingszwiebel, Petersilie und Minze fein hacken. DRESSING ZUBEREITEN: Olivenöl mit Zitronensaft, Sumach und Granatapfelmelasse in einer separaten Schüssel vermischen. VERBINDEN: Alle gehackten Gemüse in einer großen Schüssel vermischen, das Dressing hinzufügen und gut vermengen. BROT HINZUFÜGEN: Die gebratenen Brotstücke kurz vor dem Servieren hinzufügen, damit sie knusprig bleiben. SERVIEREN: Sofort servieren, mit zusätzlichem Sumach obendrauf bestreut.",
+    "pt": "FRITAR O PÃO: Corte o pão pita em pedaços irregulares e frite-os em óleo quente até ficarem crocantes e dourados, ou asse-os no forno. PICAR OS LEGUMES: Corte em cubos os pepinos, tomates, rabanetes e alface romana. PICAR AS ERVAS: Pique finamente a cebolinha, a salsa e a hortelã. PREPARAR O MOLHO: Misture o azeite com o sumo de limão, o sumagre e o melaço de romã numa tigela à parte. COMBINAR: Misture todos os legumes picados numa tigela grande, junte o molho e misture bem. ADICIONAR O PÃO: Junte os pedaços de pão frito mesmo antes de servir, para se manterem crocantes. SERVIR: Sirva imediatamente, polvilhado com sumagre extra por cima.",
+    "ru": "ЖАРКА ХЛЕБА: Разрежьте лепёшку на неровные куски и обжарьте их в горячем масле до хрустящей золотистой корочки, или запеките в духовке. НАРЕЗКА ОВОЩЕЙ: Нарежьте кубиками огурцы, помидоры, редис и салат ромэн. НАРЕЗКА ЗЕЛЕНИ: Мелко нарежьте зелёный лук, петрушку и мяту. ПРИГОТОВЛЕНИЕ ЗАПРАВКИ: Смешайте оливковое масло с лимонным соком, сумахом и гранатовой патокой в отдельной миске. СОЕДИНЕНИЕ: Смешайте все нарезанные овощи в большой миске, добавьте заправку и хорошо перемешайте. ДОБАВЛЕНИЕ ХЛЕБА: Добавьте кусочки жареного хлеба непосредственно перед подачей, чтобы они остались хрустящими. ПОДАЧА: Подавайте немедленно, посыпав сверху дополнительным сумахом.",
+    "ar": "قلي الخبز: قطّع الخبز إلى قطع غير منتظمة واقليها في زيت ساخن حتى تصبح مقرمشة وذهبية، أو اخبزها في الفرن. تقطيع الخضار: قطّع الخيار والطماطم والفجل والخس الروماني مكعبات صغيرة. تقطيع الأعشاب: افرم البصل الأخضر والبقدونس والنعناع ناعمًا. تحضير الصلصة: اخلط زيت الزيتون مع عصير الليمون والسماق ودبس الرمان في وعاء منفصل. الدمج: اخلط جميع الخضار المفرومة في وعاء كبير، أضف الصلصة واخلط جيدًا. إضافة الخبز: أضف قطع الخبز المقلي قبل التقديم مباشرة للحفاظ على قرمشتها. التقديم: قدّمه فورًا مع رش سماق إضافي فوقه.",
+    "zh": "炸面包：将薄饼切成不规则块状，用热油炸至酥脆金黄，或用烤箱烤制。切蔬菜：将黄瓜、番茄、萝卜和罗马生菜切成小块。切香草：将青葱、欧芹和薄荷切碎。制作调料：在另一个碗中将橄榄油与柠檬汁、漆树粉和石榴糖浆混合。混合：将所有切碎的蔬菜放入大碗中，加入调料拌匀。加入面包：食用前加入炸好的面包块以保持酥脆。装盘：立即食用，撒上额外的漆树粉。",
+    "ja": "パンを揚げる：フラットブレッドを不揃いに切り、熱した油でカリッと黄金色になるまで揚げるか、オーブンで焼く。野菜を切る：きゅうり、トマト、ラディッシュ、ロメインレタスを角切りにする。ハーブを刻む：青ねぎ、パセリ、ミントを細かく刻む。ドレッシングを作る：別のボウルでオリーブオイルにレモン汁、スマック、ザクロ糖蜜を混ぜる。合わせる：刻んだ野菜をすべて大きなボウルに入れ、ドレッシングを加えてよく混ぜる。パンを加える：カリカリさを保つため、提供直前に揚げたパンを加える。盛り付け：すぐに、上に追加のスマックを振りかけて提供する。",
+    "hi": "ब्रेड तलें: फ्लैटब्रेड को अनियमित टुकड़ों में काटें और गरम तेल में कुरकुरा व सुनहरा होने तक तलें, या ओवन में बेक करें। सब्ज़ियां काटें: खीरे, टमाटर, मूली और रोमेन लेट्यूस को छोटे टुकड़ों में काटें। जड़ी-बूटियां काटें: हरे प्याज़, अजमोद और पुदीने को बारीक काटें। ड्रेसिंग बनाएं: एक अलग कटोरे में जैतून के तेल को नींबू के रस, सुमाक और अनार की चाशनी के साथ मिलाएं। मिलाएं: सभी कटी सब्ज़ियों को एक बड़े कटोरे में मिलाएं, ड्रेसिंग डालें और अच्छी तरह मिलाएं। ब्रेड डालें: कुरकुरापन बनाए रखने के लिए परोसने से ठीक पहले तली ब्रेड के टुकड़े डालें। परोसें: तुरंत, ऊपर अतिरिक्त सुमाक छिड़ककर परोसें।",
+    "tr": "EKMEĞİ KIZARTIN: Yassı ekmeği düzensiz parçalara kesin ve sıcak yağda çıtır ve altın rengi olana kadar kızartın veya fırında pişirin. SEBZELERİ DOĞRAYIN: Salatalık, domates, turp ve marulu küçük parçalar halinde doğrayın. OTLARI DOĞRAYIN: Yeşil soğan, maydanoz ve naneyi ince doğrayın. SOSU HAZIRLAYIN: Ayrı bir kasede zeytinyağını limon suyu, sumak ve nar ekşisiyle karıştırın. BİRLEŞTİRİN: Tüm doğranmış sebzeleri büyük bir kasede karıştırın, sosu ekleyin ve iyice karıştırın. EKMEĞİ EKLEYİN: Çıtırlığını korumak için servisten hemen önce kızarmış ekmek parçalarını ekleyin. SERVİS EDİN: Üzerine ekstra sumak serperek hemen servis edin.",
+    "it": "FRIGGERE IL PANE: Tagliate il pane piatto in pezzi irregolari e friggeteli in olio caldo finché croccanti e dorati, oppure cuoceteli in forno. TAGLIARE LE VERDURE: Tagliate a cubetti cetrioli, pomodori, ravanelli e lattuga romana. TAGLIARE LE ERBE: Tritate finemente cipollotto, prezzemolo e menta. PREPARARE IL CONDIMENTO: Mescolate l'olio d'oliva con succo di limone, sommacco e melassa di melograno in una ciotola a parte. COMBINARE: Mescolate tutte le verdure tritate in una ciotola grande, aggiungete il condimento e mescolate bene. AGGIUNGERE IL PANE: Aggiungete i pezzi di pane fritto appena prima di servire, per mantenerli croccanti. SERVIRE: Servite subito, cosparso di sommacco extra sopra.",
+    "ko": "빵 튀기기: 플랫브레드를 불규칙한 조각으로 잘라 뜨거운 기름에 바삭하고 황금빛이 될 때까지 튀기거나 오븐에 굽는다. 채소 썰기: 오이, 토마토, 무, 로메인 상추를 작게 썬다. 허브 썰기: 파, 파슬리, 민트를 잘게 썬다. 드레싱 만들기: 별도의 그릇에 올리브 오일, 레몬즙, 수맥, 석류당밀을 섞는다. 섞기: 썬 채소를 모두 큰 그릇에 넣고 드레싱을 넣어 잘 섞는다. 빵 넣기: 바삭함을 유지하기 위해 제공 직전에 튀긴 빵을 넣는다. 담아내기: 즉시, 위에 수맥을 추가로 뿌려 낸다."
+  },
+  "originText": {
+    "ro": "Fattoush face parte din categoria mai largă a salatelor fattet, mese care refolosesc pâinea uscată sau învechită, o practică veche și eficientă de a evita risipa alimentară în bucătăriile levantine. Numele derivă din cuvântul arab fatt, care înseamnă a rupe sau a sfărâma, referindu-se direct la modul în care lipia este ruptă manual în bucăți neregulate.\n\nCeea ce distinge fattoush de alte salate similare din regiune este utilizarea sumacului, un condiment roșu-violet cu gust acrișor extras din boabele unui arbust sălbatic, o alternativă tradițională la lămâie în perioadele în care citricele nu erau ușor disponibile. Deși unele rețete moderne includ roșii de la sosirea lor din Lumea Nouă, versiunile mai vechi se bazau exclusiv pe legume tradiționale levantine și pe sumac pentru aciditate.",
+    "en": "Fattoush belongs to the broader category of fattet dishes, meals that reuse dry or stale bread, an old and efficient practice for avoiding food waste in Levantine kitchens. The name derives from the Arabic word fatt, meaning to break or crumble, referring directly to how the flatbread is torn by hand into irregular pieces.\n\nWhat sets fattoush apart from other similar salads in the region is the use of sumac, a red-purple spice with a tart taste extracted from the berries of a wild shrub, a traditional alternative to lemon in periods when citrus wasn't readily available. While some modern recipes include tomatoes after their arrival from the New World, older versions relied exclusively on traditional Levantine vegetables and sumac for acidity.",
+    "es": "El fattoush pertenece a la categoría más amplia de platos fattet, comidas que reutilizan pan seco o duro, una práctica antigua y eficiente para evitar el desperdicio de alimentos en las cocinas levantinas. El nombre deriva de la palabra árabe fatt, que significa romper o desmenuzar, refiriéndose directamente a cómo se rompe el pan plano a mano en trozos irregulares.\n\nLo que distingue al fattoush de otras ensaladas similares de la región es el uso del zumaque, una especia roja-violeta de sabor ácido extraída de las bayas de un arbusto silvestre, una alternativa tradicional al limón en épocas en que los cítricos no estaban fácilmente disponibles. Aunque algunas recetas modernas incluyen tomate tras su llegada del Nuevo Mundo, las versiones más antiguas se basaban exclusivamente en verduras tradicionales levantinas y zumaque para la acidez.",
+    "fr": "Le fattouche appartient à la catégorie plus large des plats fattet, des repas qui réutilisent du pain sec ou rassis, une pratique ancienne et efficace pour éviter le gaspillage alimentaire dans les cuisines levantines. Le nom dérive du mot arabe fatt, signifiant briser ou émietter, faisant directement référence à la façon dont le pain plat est déchiré à la main en morceaux irréguliers.\n\nCe qui distingue le fattouche des autres salades similaires de la région est l'utilisation du sumac, une épice rouge-violet au goût acidulé extraite des baies d'un arbuste sauvage, une alternative traditionnelle au citron aux époques où les agrumes n'étaient pas facilement disponibles. Bien que certaines recettes modernes incluent des tomates après leur arrivée du Nouveau Monde, les versions plus anciennes reposaient exclusivement sur des légumes levantins traditionnels et le sumac pour l'acidité.",
+    "de": "Fattoush gehört zur breiteren Kategorie der Fattet-Gerichte, Mahlzeiten, die trockenes oder altbackenes Brot wiederverwenden — eine alte und effiziente Praxis, um Lebensmittelverschwendung in levantinischen Küchen zu vermeiden. Der Name leitet sich vom arabischen Wort fatt ab, was brechen oder zerkrümeln bedeutet und sich direkt darauf bezieht, wie das Fladenbrot von Hand in unregelmäßige Stücke gerissen wird.\n\nWas Fattoush von anderen ähnlichen Salaten der Region unterscheidet, ist die Verwendung von Sumach, einem rot-violetten Gewürz mit säuerlichem Geschmack, das aus den Beeren eines wilden Strauchs gewonnen wird — eine traditionelle Alternative zu Zitrone in Zeiten, in denen Zitrusfrüchte nicht leicht verfügbar waren. Während einige moderne Rezepte Tomaten nach ihrer Ankunft aus der Neuen Welt einbeziehen, verließen sich ältere Versionen ausschließlich auf traditionelles levantinisches Gemüse und Sumach für Säure.",
+    "pt": "O fattoush pertence à categoria mais ampla dos pratos fattet, refeições que reutilizam pão seco ou velho, uma prática antiga e eficiente para evitar o desperdício alimentar nas cozinhas levantinas. O nome deriva da palavra árabe fatt, que significa quebrar ou esfarelar, referindo-se diretamente à forma como o pão pita é rasgado à mão em pedaços irregulares.\n\nO que distingue o fattoush de outras saladas semelhantes da região é o uso do sumagre, uma especiaria vermelho-violeta de sabor ácido extraída das bagas de um arbusto selvagem, uma alternativa tradicional ao limão em períodos em que os citrinos não estavam facilmente disponíveis. Embora algumas receitas modernas incluam tomate após a sua chegada do Novo Mundo, as versões mais antigas baseavam-se exclusivamente em legumes levantinos tradicionais e sumagre para a acidez.",
+    "ru": "Фаттуш относится к более широкой категории блюд фаттет — трапез, повторно использующих сухой или чёрствый хлеб, старой и эффективной практики предотвращения пищевых отходов в левантийских кухнях. Название происходит от арабского слова fatt, означающего ломать или крошить, напрямую отсылая к тому, как лепёшка разрывается вручную на неровные куски.\n\nЧто отличает фаттуш от других похожих салатов региона, так это использование сумаха — красно-фиолетовой пряности с кислым вкусом, извлекаемой из ягод дикого кустарника, традиционной альтернативы лимону в периоды, когда цитрусовые были труднодоступны. Хотя некоторые современные рецепты включают помидоры после их появления из Нового Света, более старые версии полагались исключительно на традиционные левантийские овощи и сумах для кислинки.",
+    "ar": "ينتمي الفتوش إلى فئة أوسع من أطباق الفتّة، وهي وجبات تعيد استخدام الخبز الجاف أو القديم، وهي ممارسة قديمة وفعالة لتجنب هدر الطعام في مطابخ بلاد الشام. يُشتق الاسم من الكلمة العربية فتّ، التي تعني كسر أو تفتيت، في إشارة مباشرة إلى كيفية تمزيق الخبز يدويًا إلى قطع غير منتظمة.\n\nما يميز الفتوش عن السلطات المماثلة الأخرى في المنطقة هو استخدام السماق، وهو توابل حمراء بنفسجية ذات طعم حامض تُستخرج من ثمار شجيرة برية، بديل تقليدي عن الليمون في الفترات التي لم تكن فيها الحمضيات متاحة بسهولة. رغم أن بعض الوصفات الحديثة تشمل الطماطم بعد وصولها من العالم الجديد، اعتمدت النسخ الأقدم حصريًا على الخضروات الشامية التقليدية والسماق للحصول على الحموضة.",
+    "zh": "法图什属于更广泛的法特特类菜肴，这类餐食会重新利用干硬或不新鲜的面包，是黎凡特厨房中一种古老而高效的避免食物浪费的做法。这个名字源自阿拉伯语中的fatt一词，意为「打碎」或「撕碎」，直接指的是薄饼被手工撕成不规则块状的方式。\n\n使法图什区别于该地区其他类似沙拉的关键，在于使用了漆树粉——一种从野生灌木浆果中提取的红紫色酸味香料，是在柑橘类水果不易获得的年代中柠檬的传统替代品。尽管一些现代食谱在番茄从新大陆传入后加入了番茄，但更古老的版本完全依赖传统的黎凡特蔬菜和漆树粉来提供酸味。",
+    "ja": "ファトゥーシュは、乾いた古いパンを再利用する料理であるファッテと呼ばれるより広いカテゴリーに属し、レバント地方の台所における食品廃棄を避ける古くて効率的な習慣である。この名前は「壊す」や「崩す」を意味するアラビア語のfattに由来し、フラットブレッドが手で不揃いな形に引き裂かれる様子を直接表している。\n\nファトゥーシュを地域の他の類似したサラダと一線を画すのは、野生の低木の実から抽出された酸味のある赤紫色の香辛料であるスマックの使用である。これは柑橘類が入手しにくかった時代のレモンの伝統的な代替品であった。現代のレシピの中には新大陸からトマトが到来した後にトマトを加えるものもあるが、古いバージョンは酸味を出すために伝統的なレバントの野菜とスマックのみに頼っていた。",
+    "hi": "फ़त्तूश फ़त्तेत व्यंजनों की व्यापक श्रेणी से संबंधित है, ऐसे भोजन जो सूखी या बासी ब्रेड का पुनः उपयोग करते हैं, यह लेवांतीन रसोई में खाद्य अपव्यय से बचने की एक पुरानी और कुशल प्रथा है। नाम अरबी शब्द फ़त्त से निकला है, जिसका अर्थ है तोड़ना या चूरा करना, जो सीधे तौर पर उस तरीके को दर्शाता है जिसमें फ्लैटब्रेड को हाथ से अनियमित टुकड़ों में तोड़ा जाता है।\n\nजो चीज़ फ़त्तूश को क्षेत्र के अन्य समान सलादों से अलग करती है वह है सुमाक का उपयोग, एक जंगली झाड़ी के जामुन से निकाला गया लाल-बैंगनी मसाला जिसका स्वाद खट्टा होता है, यह उन समयों में नींबू का पारंपरिक विकल्प था जब खट्टे फल आसानी से उपलब्ध नहीं थे। हालांकि कुछ आधुनिक व्यंजनों में नई दुनिया से टमाटर आने के बाद टमाटर शामिल किए जाते हैं, पुराने संस्करण खट्टेपन के लिए विशेष रूप से पारंपरिक लेवांतीन सब्ज़ियों और सुमाक पर निर्भर थे।",
+    "tr": "Fattuş, kuru veya bayat ekmeği yeniden kullanan yemekler olan fattet yemeklerinin daha geniş kategorisine aittir; bu, Levant mutfaklarında gıda israfını önlemek için eski ve verimli bir uygulamadır. Ad, kırmak veya ufalamak anlamına gelen Arapça fatt kelimesinden gelir ve yassı ekmeğin elle düzensiz parçalara nasıl yırtıldığına doğrudan atıfta bulunur.\n\nFattuşu bölgedeki diğer benzer salatalardan ayıran şey, narenciye kolayca bulunamadığı dönemlerde limona geleneksel bir alternatif olan, yabani bir çalının meyvelerinden elde edilen ekşi tatlı kırmızı-mor bir baharat olan sumak kullanımıdır. Bazı modern tarifler domatesin Yeni Dünya'dan gelişinden sonra domatesi içerse de, daha eski versiyonlar asitlik için yalnızca geleneksel Levant sebzelerine ve sumaka güveniyordu.",
+    "it": "Il fattoush appartiene alla categoria più ampia dei piatti fattet, pasti che riutilizzano pane secco o raffermo, una pratica antica ed efficiente per evitare lo spreco alimentare nelle cucine levantine. Il nome deriva dalla parola araba fatt, che significa rompere o sbriciolare, riferendosi direttamente al modo in cui il pane piatto viene strappato a mano in pezzi irregolari.\n\nCiò che distingue il fattoush da altre insalate simili della regione è l'uso del sommacco, una spezia rosso-viola dal sapore aspro estratta dalle bacche di un arbusto selvatico, un'alternativa tradizionale al limone nei periodi in cui gli agrumi non erano facilmente disponibili. Sebbene alcune ricette moderne includano i pomodori dopo il loro arrivo dal Nuovo Mondo, le versioni più antiche si basavano esclusivamente su verdure levantine tradizionali e sommacco per l'acidità.",
+    "ko": "파투시는 마르거나 오래된 빵을 재활용하는 요리인 파테트 요리의 더 넓은 범주에 속하며, 이는 레반트 지역 부엌에서 음식 낭비를 막기 위한 오래되고 효율적인 관행이다. 이 이름은 부수다 또는 부서뜨리다를 뜻하는 아랍어 fatt에서 유래했으며, 플랫브레드를 손으로 불규칙한 조각으로 찢는 방식을 직접적으로 가리킨다.\n\n파투시를 이 지역의 다른 유사한 샐러드와 구별 짓는 것은 야생 관목의 열매에서 추출한 새콤한 맛의 붉은 보라색 향신료인 수맥의 사용으로, 이는 감귤류를 쉽게 구할 수 없던 시절 레몬의 전통적인 대체재였다. 일부 현대 레시피는 신대륙에서 토마토가 도착한 이후 토마토를 포함하지만, 더 오래된 버전은 신맛을 위해 전통적인 레반트 채소와 수맥에만 의존했다."
+  },
+  "meta": {
+    "time": 25,
+    "costRon": 12,
+    "tags": ["vegetarian", "quick"],
+    "desc": {
+      "ro": "Salată crocantă cu pâine prăjită, legume proaspete și dressing acrișor cu sumac.",
+      "en": "Crunchy salad with fried bread, fresh vegetables and tart sumac dressing.",
+      "es": "Ensalada crujiente con pan frito, verduras frescas y aderezo ácido de zumaque.",
+      "fr": "Salade croquante au pain frit, légumes frais et vinaigrette acidulée au sumac.",
+      "de": "Knackiger Salat mit gebratenem Brot, frischem Gemüse und säuerlichem Sumach-Dressing.",
+      "pt": "Salada crocante com pão frito, legumes frescos e molho ácido de sumagre.",
+      "ru": "Хрустящий салат с жареным хлебом, свежими овощами и кислой заправкой из сумаха.",
+      "ar": "سلطة مقرمشة بخبز مقلي وخضار طازجة وصلصة سماق حامضة.",
+      "zh": "酥脆炸面包配新鲜蔬菜和酸味漆树粉调料沙拉。",
+      "ja": "揚げパン、新鮮な野菜、酸味のあるスマックドレッシングのカリカリサラダ。",
+      "hi": "तली ब्रेड, ताज़ी सब्ज़ियों और खट्टी सुमाक ड्रेसिंग के साथ कुरकुरा सलाद।",
+      "tr": "Kızarmış ekmek, taze sebzeler ve ekşi sumak sosuyla çıtır salata.",
+      "it": "Insalata croccante con pane fritto, verdure fresche e condimento aspro al sommacco.",
+      "ko": "튀긴 빵, 신선한 채소, 새콤한 수맥 드레싱을 곁들인 아삭한 샐러드."
+    }
+  }
+}

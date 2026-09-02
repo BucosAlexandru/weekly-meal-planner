@@ -1,0 +1,175 @@
+{
+  "id": 365,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Malaysia", "en": "Malaysia", "es": "Malasia", "fr": "Malaisie", "de": "Malaysia",
+    "pt": "Malásia", "ru": "Малайзия", "ar": "ماليزيا", "zh": "马来西亚", "ja": "マレーシア",
+    "hi": "मलेशिया", "tr": "Malezya", "it": "Malesia", "ko": "말레이시아"
+  },
+  "name": {
+    "ro": "Roti Canai", "en": "Roti Canai", "es": "Roti Canai", "fr": "Roti Canai",
+    "de": "Roti Canai", "pt": "Roti Canai", "ru": "Роти чанай", "ar": "روتي تشاناي", "zh": "印度煎饼",
+    "ja": "ロティ・チャナイ", "hi": "रोटी चनाई", "tr": "Roti Canai", "it": "Roti Canai", "ko": "로티 차나이"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "Collation", "de": "Snack", "pt": "Lanche",
+    "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "軽食", "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥞", "t": "Aluat cu multe straturi", "d": "Aluat întins extrem de subțire și pliat de multe ori."},
+      {"icon": "🧈", "t": "Unt ghee generos", "d": "Fiecare strat este uns cu unt clarifiat pentru crocanță."},
+      {"icon": "🍛", "t": "Sos de curry", "d": "Se servește tradițional cu curry de pui sau linte."},
+      {"icon": "👐", "t": "Aruncat cu mâna", "d": "Aluatul se întinde și se aruncă în aer pentru a se subția."}
+    ],
+    "en": [
+      {"icon": "🥞", "t": "Many-layered dough", "d": "Dough stretched extremely thin and folded many times."},
+      {"icon": "🧈", "t": "Generous ghee", "d": "Each layer is brushed with clarified butter for crispiness."},
+      {"icon": "🍛", "t": "Curry sauce", "d": "Traditionally served with chicken or lentil curry."},
+      {"icon": "👐", "t": "Hand-tossed", "d": "The dough is stretched and tossed in the air to thin it out."}
+    ],
+    "es": [
+      {"icon": "🥞", "t": "Masa de muchas capas", "d": "Masa estirada extremadamente fina y plegada muchas veces."},
+      {"icon": "🧈", "t": "Ghee generoso", "d": "Cada capa se unta con mantequilla clarificada para lograr crujiente."},
+      {"icon": "🍛", "t": "Salsa de curry", "d": "Se sirve tradicionalmente con curry de pollo o lentejas."},
+      {"icon": "👐", "t": "Lanzada a mano", "d": "La masa se estira y se lanza al aire para adelgazarla."}
+    ],
+    "fr": [
+      {"icon": "🥞", "t": "Pâte multicouche", "d": "Pâte étirée extrêmement fine et pliée à plusieurs reprises."},
+      {"icon": "🧈", "t": "Ghee généreux", "d": "Chaque couche est badigeonnée de beurre clarifié pour le croustillant."},
+      {"icon": "🍛", "t": "Sauce curry", "d": "Traditionnellement servie avec un curry de poulet ou de lentilles."},
+      {"icon": "👐", "t": "Lancée à la main", "d": "La pâte est étirée et lancée en l'air pour l'amincir."}
+    ],
+    "de": [
+      {"icon": "🥞", "t": "Vielschichtiger Teig", "d": "Teig extrem dünn ausgezogen und mehrmals gefaltet."},
+      {"icon": "🧈", "t": "Reichlich Ghee", "d": "Jede Schicht wird für Knusprigkeit mit geklärter Butter bepinselt."},
+      {"icon": "🍛", "t": "Currysauce", "d": "Traditionell mit Hähnchen- oder Linsen-Curry serviert."},
+      {"icon": "👐", "t": "Von Hand geworfen", "d": "Der Teig wird ausgezogen und in die Luft geworfen, um ihn dünner zu machen."}
+    ],
+    "pt": [
+      {"icon": "🥞", "t": "Massa de muitas camadas", "d": "Massa esticada extremamente fina e dobrada muitas vezes."},
+      {"icon": "🧈", "t": "Ghee generoso", "d": "Cada camada é pincelada com manteiga clarificada para crocância."},
+      {"icon": "🍛", "t": "Molho de caril", "d": "Servido tradicionalmente com caril de frango ou lentilhas."},
+      {"icon": "👐", "t": "Lançada à mão", "d": "A massa é esticada e lançada ao ar para a afinar."}
+    ],
+    "ru": [
+      {"icon": "🥞", "t": "Многослойное тесто", "d": "Тесто растягивается очень тонко и складывается много раз."},
+      {"icon": "🧈", "t": "Обильное топлёное масло", "d": "Каждый слой смазывается топлёным маслом для хрусткости."},
+      {"icon": "🍛", "t": "Соус карри", "d": "Традиционно подаётся с куриным или чечевичным карри."},
+      {"icon": "👐", "t": "Растянуто вручную", "d": "Тесто растягивается и подбрасывается в воздух, чтобы утончить его."}
+    ],
+    "ar": [
+      {"icon": "🥞", "t": "عجين متعدد الطبقات", "d": "عجين مفرود رقيقًا جدًا ومطوي عدة مرات."},
+      {"icon": "🧈", "t": "سمن غني", "d": "تُدهن كل طبقة بالزبدة المصفاة للحصول على القرمشة."},
+      {"icon": "🍛", "t": "صلصة كاري", "d": "تُقدَّم تقليديًا مع كاري الدجاج أو العدس."},
+      {"icon": "👐", "t": "يُقذف باليد", "d": "يُفرد العجين ويُقذف في الهواء لترقيقه."}
+    ],
+    "zh": [
+      {"icon": "🥞", "t": "多层面团", "d": "面团擀得极薄并多次折叠。"},
+      {"icon": "🧈", "t": "丰富酥油", "d": "每层都刷上澄清黄油以增加酥脆感。"},
+      {"icon": "🍛", "t": "咖喱酱", "d": "传统上配鸡肉或扁豆咖喱食用。"},
+      {"icon": "👐", "t": "手工抛甩", "d": "面团被拉伸并抛向空中以使其变薄。"}
+    ],
+    "ja": [
+      {"icon": "🥞", "t": "何層もの生地", "d": "極薄に伸ばした生地を何度も折りたたむ。"},
+      {"icon": "🧈", "t": "たっぷりのギー", "d": "各層にサクサク感を出すため澄ましバターを塗る。"},
+      {"icon": "🍛", "t": "カレーソース", "d": "伝統的に鶏肉またはレンズ豆のカレーと共に提供される。"},
+      {"icon": "👐", "t": "手で投げて伸ばす", "d": "生地を伸ばし、薄くするために空中に投げる。"}
+    ],
+    "hi": [
+      {"icon": "🥞", "t": "कई परतों वाला आटा", "d": "आटा बेहद पतला बेला और कई बार मोड़ा गया।"},
+      {"icon": "🧈", "t": "भरपूर घी", "d": "कुरकुरेपन के लिए हर परत पर घी लगाया जाता है।"},
+      {"icon": "🍛", "t": "करी सॉस", "d": "परंपरागत रूप से चिकन या दाल की करी के साथ परोसा जाता है।"},
+      {"icon": "👐", "t": "हाथ से उछाला गया", "d": "आटे को पतला करने के लिए खींचा और हवा में उछाला जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🥞", "t": "Çok katmanlı hamur", "d": "Son derece ince açılan ve defalarca katlanan hamur."},
+      {"icon": "🧈", "t": "Bol sadeyağ", "d": "Çıtırlık için her katmana sadeyağ sürülür."},
+      {"icon": "🍛", "t": "Köri sosu", "d": "Geleneksel olarak tavuk veya mercimek körisiyle servis edilir."},
+      {"icon": "👐", "t": "Elle fırlatılır", "d": "Hamur inceltmek için gerilir ve havaya fırlatılır."}
+    ],
+    "it": [
+      {"icon": "🥞", "t": "Impasto a molti strati", "d": "Impasto steso estremamente sottile e piegato molte volte."},
+      {"icon": "🧈", "t": "Ghee generoso", "d": "Ogni strato è spennellato con burro chiarificato per la croccantezza."},
+      {"icon": "🍛", "t": "Salsa al curry", "d": "Servita tradizionalmente con curry di pollo o lenticchie."},
+      {"icon": "👐", "t": "Lanciata a mano", "d": "L'impasto viene steso e lanciato in aria per assottigliarlo."}
+    ],
+    "ko": [
+      {"icon": "🥞", "t": "여러 겹의 반죽", "d": "매우 얇게 늘려 여러 번 접은 반죽."},
+      {"icon": "🧈", "t": "넉넉한 기 버터", "d": "바삭함을 위해 각 층에 정제 버터를 바른다."},
+      {"icon": "🍛", "t": "카레 소스", "d": "전통적으로 치킨이나 렌틸콩 카레와 함께 제공된다."},
+      {"icon": "👐", "t": "손으로 던져 늘림", "d": "반죽을 얇게 만들기 위해 늘리고 공중에 던진다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g făină", "1 ou", "250ml apă călduță", "1 linguriță sare", "1 lingură zahăr", "100g unt clarificat (ghee)", "ulei pentru întins aluatul", "sos de curry pentru servire"],
+    "en": ["500g flour", "1 egg", "250ml warm water", "1 tsp salt", "1 tbsp sugar", "100g clarified butter (ghee)", "oil for stretching the dough", "curry sauce for serving"],
+    "es": ["500g de harina", "1 huevo", "250ml de agua tibia", "1 cdta de sal", "1 cda de azúcar", "100g de mantequilla clarificada (ghee)", "aceite para estirar la masa", "salsa de curry para servir"],
+    "fr": ["500g de farine", "1 œuf", "250ml d'eau tiède", "1 c. à c. de sel", "1 c. à s. de sucre", "100g de beurre clarifié (ghee)", "huile pour étirer la pâte", "sauce curry pour servir"],
+    "de": ["500g Mehl", "1 Ei", "250ml warmes Wasser", "1 TL Salz", "1 EL Zucker", "100g geklärte Butter (Ghee)", "Öl zum Ausziehen des Teigs", "Curry-Sauce zum Servieren"],
+    "pt": ["500g de farinha", "1 ovo", "250ml de água morna", "1 colher de chá de sal", "1 c. sopa de açúcar", "100g de manteiga clarificada (ghee)", "óleo para esticar a massa", "molho de caril para servir"],
+    "ru": ["500г муки", "1 яйцо", "250мл тёплой воды", "1 ч.л. соли", "1 ст.л. сахара", "100г топлёного масла (ги)", "масло для растягивания теста", "соус карри для подачи"],
+    "ar": ["500غ دقيق", "بيضة واحدة", "250مل ماء دافئ", "ملعقة صغيرة ملح", "ملعقة كبيرة سكر", "100غ زبدة مصفاة (سمن)", "زيت لفرد العجين", "صلصة كاري للتقديم"],
+    "zh": ["面粉500克", "鸡蛋1个", "温水250毫升", "盐1茶匙", "糖1汤匙", "澄清黄油（酥油）100克", "擀面用油", "配食用咖喱酱"],
+    "ja": ["小麦粉 500g", "卵 1個", "温水 250ml", "塩 小さじ1", "砂糖 大さじ1", "澄ましバター（ギー） 100g", "生地を伸ばす油", "提供用のカレーソース"],
+    "hi": ["500 ग्राम आटा", "1 अंडा", "250 मिली गुनगुना पानी", "1 छोटा चम्मच नमक", "1 बड़ा चम्मच चीनी", "100 ग्राम घी", "आटा खींचने के लिए तेल", "परोसने के लिए करी सॉस"],
+    "tr": ["500g un", "1 yumurta", "250ml ılık su", "1 çay kaşığı tuz", "1 yemek kaşığı şeker", "100g sadeyağ (ghee)", "hamuru germek için yağ", "servis için köri sosu"],
+    "it": ["500g di farina", "1 uovo", "250ml di acqua tiepida", "1 cucchiaino di sale", "1 cucchiaio di zucchero", "100g di burro chiarificato (ghee)", "olio per stendere l'impasto", "salsa al curry per servire"],
+    "ko": ["밀가루 500g", "달걀 1개", "따뜻한 물 250ml", "소금 1작은술", "설탕 1큰술", "정제 버터(기) 100g", "반죽을 늘릴 기름", "곁들일 카레 소스"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE ALUAT: Amestecă făina cu oul, apa, sarea și zahărul, frământă 10 minute până devine elastic și neted. ODIHNĂ INIȚIALĂ: Acoperă aluatul cu ulei și lasă-l 30 minute la temperatura camerei. FORMARE BILE: Împarte aluatul în 8 bile egale, unge-le bine cu ulei și lasă-le la odihnă minimum 4 ore, acoperite. ÎNTINDERE: Întinde fiecare bilă foarte subțire pe o suprafață unsă cu ulei, aproape transparentă. PLIERE: Pliază aluatul întins în straturi, formând un pătrat sau un dreptunghi compact. PRĂJIRE: Prăjește fiecare roti pe o plită unsă cu ghee, la foc mediu, 2-3 minute pe fiecare parte, până devine auriu și crocant. FRĂMÂNTARE ȘI SERVIRE: Strânge ușor roti cu mâinile pentru a-i evidenția straturile, servește fierbinte cu sos de curry.",
+    "en": "PREPARE DOUGH: Mix the flour with the egg, water, salt and sugar, knead for 10 minutes until elastic and smooth. INITIAL REST: Coat the dough with oil and let it rest for 30 minutes at room temperature. FORM BALLS: Divide the dough into 8 equal balls, coat them well with oil and let them rest for at least 4 hours, covered. STRETCH: Stretch each ball very thin on an oiled surface, almost transparent. FOLD: Fold the stretched dough into layers, forming a compact square or rectangle. FRY: Fry each roti on a ghee-greased griddle over medium heat, 2-3 minutes per side, until golden and crisp. CRUMPLE AND SERVE: Gently crumple the roti with your hands to reveal the layers, serve hot with curry sauce.",
+    "es": "PREPARAR LA MASA: Mezcla la harina con el huevo, el agua, la sal y el azúcar, amasa 10 minutos hasta que quede elástica y lisa. REPOSO INICIAL: Cubre la masa con aceite y déjala reposar 30 minutos a temperatura ambiente. FORMAR BOLAS: Divide la masa en 8 bolas iguales, cúbrelas bien con aceite y déjalas reposar al menos 4 horas, tapadas. ESTIRAR: Estira cada bola muy fina sobre una superficie engrasada, casi transparente. PLEGAR: Pliega la masa estirada en capas, formando un cuadrado o rectángulo compacto. FREÍR: Fríe cada roti en una plancha engrasada con ghee, a fuego medio, 2-3 minutos por cada lado, hasta que quede dorada y crujiente. ESTRUJAR Y SERVIR: Estruja suavemente el roti con las manos para revelar las capas, sirve caliente con salsa de curry.",
+    "fr": "PRÉPARER LA PÂTE: Mélangez la farine avec l'œuf, l'eau, le sel et le sucre, pétrissez 10 minutes jusqu'à ce qu'elle soit élastique et lisse. REPOS INITIAL: Enduisez la pâte d'huile et laissez-la reposer 30 minutes à température ambiante. FORMER DES BOULES: Divisez la pâte en 8 boules égales, enduisez-les bien d'huile et laissez-les reposer au moins 4 heures, couvertes. ÉTIRER: Étirez chaque boule très finement sur une surface huilée, presque transparente. PLIER: Pliez la pâte étirée en couches, formant un carré ou un rectangle compact. FRIRE: Faites frire chaque roti sur une plaque graissée au ghee, à feu moyen, 2-3 minutes de chaque côté, jusqu'à doré et croustillant. FROISSER ET SERVIR: Froissez délicatement le roti avec les mains pour révéler les couches, servez chaud avec la sauce curry.",
+    "de": "TEIG ZUBEREITEN: Das Mehl mit Ei, Wasser, Salz und Zucker vermischen, 10 Minuten kneten, bis er elastisch und glatt ist. ERSTE RUHEZEIT: Den Teig mit Öl bestreichen und 30 Minuten bei Zimmertemperatur ruhen lassen. KUGELN FORMEN: Den Teig in 8 gleiche Kugeln teilen, gut mit Öl bestreichen und mindestens 4 Stunden zugedeckt ruhen lassen. AUSZIEHEN: Jede Kugel auf einer geölten Oberfläche sehr dünn ausziehen, fast transparent. FALTEN: Den ausgezogenen Teig in Schichten falten, ein kompaktes Quadrat oder Rechteck formen. BRATEN: Jedes Roti auf einer mit Ghee gefetteten Platte bei mittlerer Hitze 2-3 Minuten pro Seite braten, bis golden und knusprig. ZERKNITTERN UND SERVIEREN: Das Roti sanft mit den Händen zerknittern, um die Schichten zu zeigen, heiß mit Curry-Sauce servieren.",
+    "pt": "PREPARAR A MASSA: Misture a farinha com o ovo, a água, o sal e o açúcar, amasse 10 minutos até ficar elástica e lisa. DESCANSO INICIAL: Cubra a massa com óleo e deixe descansar 30 minutos à temperatura ambiente. FORMAR BOLAS: Divida a massa em 8 bolas iguais, cubra-as bem com óleo e deixe-as descansar pelo menos 4 horas, tapadas. ESTICAR: Estique cada bola muito fina numa superfície untada, quase transparente. DOBRAR: Dobre a massa esticada em camadas, formando um quadrado ou retângulo compacto. FRITAR: Frite cada roti numa chapa untada com ghee, em lume médio, 2-3 minutos de cada lado, até dourar e ficar crocante. AMASSAR E SERVIR: Amasse suavemente o roti com as mãos para revelar as camadas, sirva quente com molho de caril.",
+    "ru": "ПРИГОТОВЛЕНИЕ ТЕСТА: Смешайте муку с яйцом, водой, солью и сахаром, замесите 10 минут до эластичности и гладкости. НАЧАЛЬНЫЙ ОТДЫХ: Смажьте тесто маслом и дайте ему отдохнуть 30 минут при комнатной температуре. ФОРМИРОВАНИЕ ШАРИКОВ: Разделите тесто на 8 равных шариков, хорошо смажьте маслом и дайте им отдохнуть минимум 4 часа под крышкой. РАСТЯГИВАНИЕ: Растяните каждый шарик очень тонко на смазанной маслом поверхности, почти прозрачно. СКЛАДЫВАНИЕ: Сложите растянутое тесто слоями, формируя компактный квадрат или прямоугольник. ЖАРКА: Жарьте каждый роти на смазанной ги сковороде на среднем огне 2-3 минуты с каждой стороны до золотистости и хруста. СМИНАНИЕ И ПОДАЧА: Слегка сомните роти руками, чтобы раскрыть слои, подавайте горячим с соусом карри.",
+    "ar": "تحضير العجين: اخلط الدقيق مع البيضة والماء والملح والسكر، اعجن لمدة 10 دقائق حتى يصبح مرنًا وناعمًا. الراحة الأولى: ادهن العجين بالزيت واتركه يرتاح 30 دقيقة في درجة حرارة الغرفة. تشكيل الكرات: قسّم العجين إلى 8 كرات متساوية، ادهنها جيدًا بالزيت واتركها ترتاح لمدة 4 ساعات على الأقل، مغطاة. الفرد: افرد كل كرة رقيقة جدًا على سطح مدهون بالزيت، تقريبًا شفافة. الطي: اطوِ العجين المفرود إلى طبقات، مكوّنًا مربعًا أو مستطيلًا مدمجًا. القلي: اقلِ كل روتي على صاج مدهون بالسمن على نار متوسطة، 2-3 دقائق لكل جانب، حتى يصبح ذهبيًا ومقرمشًا. التجعيد والتقديم: جعّد الروتي برفق بيديك لإظهار الطبقات، قدّمه ساخنًا مع صلصة الكاري.",
+    "zh": "准备面团：将面粉与鸡蛋、水、盐和糖混合，揉10分钟至有弹性且光滑。初次静置：给面团刷油，室温静置30分钟。分成小团：将面团分成8个等量小团，充分刷油，盖好静置至少4小时。擀薄：在涂油的表面将每个面团擀得极薄，几乎透明。折叠：将擀薄的面团折叠成层，形成紧实的方形或长方形。煎制：在涂酥油的平底锅上中火煎每张饼，每面2-3分钟，直至金黄酥脆。揉皱与装盘：用手轻轻揉皱煎饼以展现层次，配咖喱酱趁热食用。",
+    "ja": "生地を準備：小麦粉に卵、水、塩、砂糖を混ぜ、弾力が出て滑らかになるまで10分こねる。最初の休ませ：生地に油を塗り、常温で30分休ませる。ボールを作る：生地を8等分し、よく油を塗って覆い、最低4時間休ませる。伸ばす：油を塗った面の上でそれぞれのボールをほぼ透明になるまで薄く伸ばす。折りたたむ：伸ばした生地を層状に折りたたみ、コンパクトな四角形または長方形にする。焼く：ギーを塗った鉄板で各ロティを中火で片面2〜3分、黄金色でパリッとするまで焼く。もみほぐして提供：手で優しくもみほぐして層を見せ、カレーソースと共に熱いうちに提供する。",
+    "hi": "आटा तैयार करें: आटे को अंडे, पानी, नमक और चीनी के साथ मिलाएं, लचीला और चिकना होने तक 10 मिनट गूंधें। पहला आराम: आटे को तेल से ढकें और कमरे के तापमान पर 30 मिनट आराम दें। गोले बनाएं: आटे को 8 बराबर गोलों में बांटें, अच्छी तरह तेल लगाएं और ढककर कम से कम 4 घंटे आराम दें। खींचें: हर गोले को तेल लगी सतह पर बहुत पतला, लगभग पारदर्शी खींचें। मोड़ें: खींचे आटे को परतों में मोड़ें, एक कॉम्पैक्ट वर्ग या आयत बनाते हुए। तलें: हर रोटी को घी लगे तवे पर मध्यम आंच पर हर तरफ 2-3 मिनट तलें, जब तक सुनहरी और कुरकुरी न हो जाए। मसलें और परोसें: परतें दिखाने के लिए रोटी को हाथों से हल्के से मसलें, करी सॉस के साथ गरमागरम परोसें।",
+    "tr": "HAMURU HAZIRLAYIN: Unu yumurta, su, tuz ve şekerle karıştırın, elastik ve pürüzsüz olana kadar 10 dakika yoğurun. İLK DİNLENDİRME: Hamuru yağla kaplayın ve oda sıcaklığında 30 dakika dinlendirin. TOPLAR OLUŞTURUN: Hamuru 8 eşit topa bölün, iyice yağlayın ve örtülü olarak en az 4 saat dinlendirin. GERİN: Her topu yağlanmış bir yüzeyde neredeyse şeffaf olana kadar çok ince gerin. KATLAYIN: Gerilmiş hamuru katmanlar halinde katlayarak kompakt bir kare veya dikdörtgen oluşturun. KIZARTIN: Her rotiyi ghee ile yağlanmış bir tavada orta ateşte her tarafını 2-3 dakika, altın rengi ve çıtır olana kadar kızartın. BURUŞTURUN VE SERVİS EDİN: Katmanları ortaya çıkarmak için rotiyi elinizle hafifçe buruşturun, sıcak köri sosuyla servis edin.",
+    "it": "PREPARARE L'IMPASTO: Mescolate la farina con l'uovo, l'acqua, il sale e lo zucchero, impastate 10 minuti finché elastico e liscio. RIPOSO INIZIALE: Rivestite l'impasto con olio e lasciatelo riposare 30 minuti a temperatura ambiente. FORMARE LE PALLINE: Dividete l'impasto in 8 palline uguali, ricopritele bene di olio e lasciatele riposare almeno 4 ore, coperte. STENDERE: Stendete ogni pallina molto sottile su una superficie oliata, quasi trasparente. PIEGARE: Piegate l'impasto steso a strati, formando un quadrato o rettangolo compatto. FRIGGERE: Friggete ogni roti su una piastra unta di ghee a fuoco medio, 2-3 minuti per lato, finché dorato e croccante. SGUALCIRE E SERVIRE: Sgualcite delicatamente il roti con le mani per rivelare gli strati, servite caldo con salsa al curry.",
+    "ko": "반죽 준비: 밀가루를 달걀, 물, 소금, 설탕과 섞어 탄력이 생기고 매끄러워질 때까지 10분간 반죽한다. 첫 휴지: 반죽에 기름을 바르고 실온에서 30분간 휴지시킨다. 공 모양 만들기: 반죽을 8개의 균등한 공으로 나누고 기름을 잘 바른 후 덮어서 최소 4시간 휴지시킨다. 늘리기: 기름칠한 표면에서 각 공을 거의 투명해질 정도로 아주 얇게 늘린다. 접기: 늘린 반죽을 층층이 접어 촘촘한 사각형이나 직사각형으로 만든다. 굽기: 기 버터를 바른 철판에서 중불로 각 로티를 양면 2~3분씩 황금빛으로 바삭해질 때까지 굽는다. 구겨서 담기: 층을 드러내기 위해 손으로 부드럽게 구긴 후 카레 소스와 함께 뜨겁게 낸다."
+  },
+  "originText": {
+    "ro": "Roti canai a fost adus în Malaysia de imigranții indieni tamili, în special de comunitatea mamak, o denumire folosită pentru musulmanii de origine indiană sud-estică care s-au stabilit în Peninsula Malaeziană începând din secolul al XIX-lea. Numele canai se referă probabil la orașul indian Chennai sau la tehnica de întindere a aluatului, deși originea exactă rămâne dezbătută printre istoricii culinari locali.\n\nCe transformă un simplu aluat de făină în roti canai este tehnica de întindere manuală — aluatul e aruncat repetat în aer și rotit, subțiindu-se progresiv până devine aproape transparent, apoi pliat pentru a crea sute de straturi minuscule care se separă la prăjire. Gustările mamak, restaurante deschise non-stop specializate în roti canai, au devenit instituții sociale esențiale în Malaysia, locuri unde oamenii de toate etniile se adună la orice oră din zi sau din noapte pentru o masă rapidă și ieftină.",
+    "en": "Roti canai was brought to Malaysia by Tamil Indian immigrants, particularly the mamak community, a term used for Muslims of South Indian descent who settled in the Malay Peninsula starting in the 19th century. The name canai likely refers either to the Indian city of Chennai or to the dough-stretching technique, though the exact origin remains debated among local culinary historians.\n\nWhat turns simple flour dough into roti canai is the hand-stretching technique — the dough is repeatedly tossed in the air and spun, progressively thinning until it's nearly transparent, then folded to create hundreds of tiny layers that separate during frying. Mamak stalls, 24-hour restaurants specializing in roti canai, have become essential social institutions in Malaysia, places where people of all ethnicities gather at any hour of the day or night for a quick, cheap meal.",
+    "es": "El roti canai fue traído a Malasia por inmigrantes tamiles indios, especialmente la comunidad mamak, un término usado para musulmanes de ascendencia india del sur que se establecieron en la península malaya a partir del siglo XIX. El nombre canai probablemente se refiera a la ciudad india de Chennai o a la técnica de estirar la masa, aunque el origen exacto sigue siendo debatido entre los historiadores culinarios locales.\n\nLo que convierte una simple masa de harina en roti canai es la técnica de estirado a mano — la masa se lanza repetidamente al aire y se gira, adelgazándose progresivamente hasta que queda casi transparente, luego se pliega para crear cientos de capas diminutas que se separan al freír. Los puestos mamak, restaurantes abiertos 24 horas especializados en roti canai, se han convertido en instituciones sociales esenciales en Malasia, lugares donde personas de todas las etnias se reúnen a cualquier hora del día o de la noche para una comida rápida y barata.",
+    "fr": "Le roti canai a été apporté en Malaisie par des immigrants indiens tamouls, en particulier la communauté mamak, un terme désignant les musulmans d'origine sud-indienne qui se sont installés dans la péninsule malaise à partir du XIXe siècle. Le nom canai fait probablement référence soit à la ville indienne de Chennai, soit à la technique d'étirement de la pâte, bien que l'origine exacte reste débattue parmi les historiens culinaires locaux.\n\nCe qui transforme une simple pâte de farine en roti canai est la technique d'étirement à la main — la pâte est lancée à plusieurs reprises en l'air et tournée, s'amincissant progressivement jusqu'à devenir presque transparente, puis pliée pour créer des centaines de minuscules couches qui se séparent à la friture. Les stands mamak, restaurants ouverts 24h/24 spécialisés dans le roti canai, sont devenus des institutions sociales essentielles en Malaisie, des lieux où des personnes de toutes ethnies se rassemblent à toute heure du jour ou de la nuit pour un repas rapide et bon marché.",
+    "de": "Roti Canai wurde von tamilisch-indischen Einwanderern nach Malaysia gebracht, insbesondere von der Mamak-Gemeinschaft, einem Begriff für Muslime südindischer Abstammung, die sich ab dem 19. Jahrhundert auf der malaiischen Halbinsel niederließen. Der Name canai bezieht sich wahrscheinlich entweder auf die indische Stadt Chennai oder auf die Technik des Teigausziehens, obwohl der genaue Ursprung unter lokalen Kulinarikhistorikern umstritten bleibt.\n\nWas einfachen Mehlteig zu Roti Canai macht, ist die Handausziehtechnik — der Teig wird wiederholt in die Luft geworfen und gedreht, wird dabei fortschreitend dünner, bis er fast durchsichtig ist, dann gefaltet, um Hunderte winziger Schichten zu erzeugen, die sich beim Braten trennen. Mamak-Stände, rund um die Uhr geöffnete Restaurants, die auf Roti Canai spezialisiert sind, sind zu wesentlichen sozialen Institutionen in Malaysia geworden, Orte, an denen Menschen aller Ethnien zu jeder Tages- und Nachtzeit für eine schnelle, günstige Mahlzeit zusammenkommen.",
+    "pt": "O roti canai foi trazido para a Malásia por imigrantes indianos tâmiles, particularmente pela comunidade mamak, um termo usado para muçulmanos de ascendência sul-indiana que se estabeleceram na Península Malaia a partir do século XIX. O nome canai provavelmente se refere à cidade indiana de Chennai ou à técnica de esticar a massa, embora a origem exata permaneça debatida entre historiadores culinários locais.\n\nO que transforma uma simples massa de farinha em roti canai é a técnica de esticar à mão — a massa é lançada repetidamente ao ar e girada, afinando progressivamente até ficar quase transparente, depois dobrada para criar centenas de camadas minúsculas que se separam durante a fritura. As bancas mamak, restaurantes abertos 24 horas especializados em roti canai, tornaram-se instituições sociais essenciais na Malásia, lugares onde pessoas de todas as etnias se reúnem a qualquer hora do dia ou da noite para uma refeição rápida e barata.",
+    "ru": "Роти чанай был привезён в Малайзию тамильскими индийскими иммигрантами, особенно общиной мамак — термином, обозначающим мусульман южноиндийского происхождения, поселившихся на Малайском полуострове начиная с XIX века. Название canai, вероятно, отсылает либо к индийскому городу Ченнаи, либо к технике растягивания теста, хотя точное происхождение остаётся предметом споров среди местных историков кулинарии.\n\nЧто превращает простое мучное тесто в роти чанай, так это техника ручного растягивания — тесто многократно подбрасывается в воздух и вращается, постепенно утончаясь, пока не станет почти прозрачным, затем складывается, создавая сотни крошечных слоёв, которые разделяются при жарке. Ларьки мамак, круглосуточные рестораны, специализирующиеся на роти чанай, стали важнейшими общественными институтами в Малайзии — местами, где люди всех этнических групп собираются в любое время дня и ночи ради быстрой и дешёвой еды.",
+    "ar": "جاء الروتي تشاناي إلى ماليزيا مع المهاجرين الهنود التاميل، خاصة مجتمع الممق، وهو مصطلح يُستخدم للمسلمين من أصل جنوب هندي الذين استقروا في شبه الجزيرة الملايوية بدءًا من القرن التاسع عشر. ربما يشير اسم تشاناي إلى المدينة الهندية تشيناي أو إلى تقنية فرد العجين، رغم أن الأصل الدقيق لا يزال محل نقاش بين مؤرخي الطهي المحليين.\n\nما يحوّل عجين الدقيق البسيط إلى روتي تشاناي هو تقنية الفرد اليدوية — يُقذف العجين مرارًا في الهواء ويُدار، ويرقّ تدريجيًا حتى يصبح شفافًا تقريبًا، ثم يُطوى لخلق مئات الطبقات الدقيقة التي تنفصل أثناء القلي. أصبحت أكشاك الممق، وهي مطاعم مفتوحة على مدار الساعة متخصصة في الروتي تشاناي، مؤسسات اجتماعية أساسية في ماليزيا، أماكن يتجمع فيها أناس من جميع الأعراق في أي ساعة من النهار أو الليل لتناول وجبة سريعة ورخيصة.",
+    "zh": "煎饼由泰米尔印度移民带入马来西亚，尤其是被称为「嘛嘛」的社群——这个词指代19世纪起定居马来半岛的南印度裔穆斯林。canai这个名字很可能指的是印度城市金奈，或指擀薄面团的技艺，不过确切起源在当地饮食历史学家中仍有争议。\n\n将普通面团变成煎饼的关键在于手工拉伸技艺——面团被反复抛向空中并旋转，逐渐变薄直至几乎透明，然后折叠形成数百层细密的薄层，在煎炸时相互分离。专营煎饼的嘛嘛档口是24小时营业的餐馆，已成为马来西亚不可或缺的社交场所，各种族的人们在一天中的任何时刻都会聚集在此享用一顿快捷实惠的餐食。",
+    "ja": "ロティ・チャナイは、タミル系インド人移民、特に19世紀からマレー半島に定住した南インド系ムスリムを指すママックと呼ばれる共同体によってマレーシアにもたらされた。canaiという名前はおそらくインドの都市チェンナイ、または生地を伸ばす技法のいずれかを指していると考えられるが、正確な起源は地元の食文化史家の間でも議論が続いている。\n\n単純な小麦粉の生地をロティ・チャナイに変えるのは、手で伸ばす技法である――生地は繰り返し空中に投げられ回転させられ、ほぼ透明になるまで徐々に薄くされ、その後折りたたまれて何百もの微細な層を作り、揚げる際にそれらが分離する。ロティ・チャナイを専門とする24時間営業のレストランであるママック屋台は、マレーシアにおいて不可欠な社会的存在となり、あらゆる民族の人々が昼夜を問わずいつでも集まり、手早く安価な食事を楽しむ場所となっている。",
+    "hi": "रोटी चनाई मलेशिया में तमिल भारतीय अप्रवासियों द्वारा लाई गई, विशेष रूप से मामक समुदाय द्वारा, यह शब्द दक्षिण भारतीय मूल के मुसलमानों के लिए उपयोग किया जाता है जो 19वीं सदी से मलय प्रायद्वीप में बस गए। चनाई नाम शायद भारतीय शहर चेन्नई या आटा खींचने की तकनीक को संदर्भित करता है, हालांकि सटीक उत्पत्ति स्थानीय पाक इतिहासकारों के बीच बहस का विषय बनी हुई है।\n\nजो चीज़ साधारण आटे को रोटी चनाई में बदलती है वह है हाथ से खींचने की तकनीक — आटे को बार-बार हवा में उछाला और घुमाया जाता है, धीरे-धीरे पतला होकर लगभग पारदर्शी बन जाता है, फिर सैकड़ों छोटी परतें बनाने के लिए मोड़ा जाता है जो तलते समय अलग हो जाती हैं। रोटी चनाई में विशेषज्ञता रखने वाले 24 घंटे खुले रहने वाले मामक स्टॉल मलेशिया में आवश्यक सामाजिक संस्थान बन गए हैं, ऐसी जगहें जहां सभी जातियों के लोग दिन या रात के किसी भी समय तेज़, सस्ते भोजन के लिए इकट्ठा होते हैं।",
+    "tr": "Roti canai, Malezya'ya Tamil Hint göçmenler, özellikle 19. yüzyıldan itibaren Malay Yarımadası'na yerleşen Güney Hint kökenli Müslümanlar için kullanılan bir terim olan mamak topluluğu tarafından getirildi. Canai adı muhtemelen Hindistan'ın Chennai şehrine veya hamur germe tekniğine atıfta bulunur, ancak kesin köken yerel mutfak tarihçileri arasında hâlâ tartışılmaktadır.\n\nBasit bir un hamurunu roti canai'ye dönüştüren şey elle germe tekniğidir — hamur tekrar tekrar havaya fırlatılır ve döndürülür, kademeli olarak neredeyse şeffaf olana kadar incelir, sonra kızartma sırasında ayrılan yüzlerce minik katman oluşturmak için katlanır. Roti canai konusunda uzmanlaşmış 24 saat açık restoranlar olan mamak tezgahları, Malezya'da temel sosyal kurumlar haline gelmiştir; her etnisiteden insanların günün veya gecenin herhangi bir saatinde hızlı, ucuz bir yemek için toplandığı yerlerdir.",
+    "it": "Il roti canai fu portato in Malesia da immigrati indiani tamil, in particolare dalla comunità mamak, un termine usato per i musulmani di origine sudindiana che si stabilirono nella penisola malese a partire dal XIX secolo. Il nome canai probabilmente si riferisce alla città indiana di Chennai o alla tecnica di stendere l'impasto, sebbene l'origine esatta rimanga dibattuta tra gli storici della gastronomia locali.\n\nCiò che trasforma un semplice impasto di farina in roti canai è la tecnica di stiratura a mano — l'impasto viene ripetutamente lanciato in aria e ruotato, assottigliandosi progressivamente fino a diventare quasi trasparente, poi piegato per creare centinaia di strati minuscoli che si separano durante la frittura. Le bancarelle mamak, ristoranti aperti 24 ore specializzati in roti canai, sono diventate istituzioni sociali essenziali in Malesia, luoghi dove persone di tutte le etnie si riuniscono a qualsiasi ora del giorno o della notte per un pasto veloce ed economico.",
+    "ko": "로티 차나이는 타밀 인도 이민자들, 특히 19세기부터 말레이 반도에 정착한 남인도계 무슬림을 가리키는 마막 공동체에 의해 말레이시아에 전해졌다. canai라는 이름은 아마도 인도 도시 첸나이를 가리키거나 반죽을 늘리는 기법을 가리키는 것으로 추정되지만, 정확한 기원은 현지 음식 역사가들 사이에서도 여전히 논쟁거리다.\n\n단순한 밀가루 반죽을 로티 차나이로 바꾸는 것은 손으로 늘리는 기법이다 — 반죽을 반복해서 공중에 던지고 돌려 점차 얇게 만들어 거의 투명해질 때까지 늘린 후, 접어서 튀길 때 서로 분리되는 수백 개의 미세한 층을 만든다. 로티 차나이를 전문으로 하는 24시간 영업 식당인 마막 노점은 말레이시아에서 필수적인 사회적 기관이 되었으며, 모든 민족의 사람들이 하루 중 언제든 빠르고 저렴한 식사를 위해 모이는 장소다."
+  },
+  "meta": {
+    "time": 300,
+    "costRon": 10,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Aluat cu multe straturi, întins subțire și prăjit crocant, servit cu sos de curry.",
+      "en": "Many-layered dough, stretched thin and fried crisp, served with curry sauce.",
+      "es": "Masa de muchas capas, estirada fina y frita crujiente, con salsa de curry.",
+      "fr": "Pâte multicouche, étirée finement et frite croustillante, avec sauce curry.",
+      "de": "Vielschichtiger Teig, dünn ausgezogen und knusprig gebraten, mit Curry-Sauce.",
+      "pt": "Massa de muitas camadas, esticada fina e frita crocante, com molho de caril.",
+      "ru": "Многослойное тесто, тонко растянутое и хрустяще обжаренное, с соусом карри.",
+      "ar": "عجين متعدد الطبقات، مفرود رقيقًا ومقلي مقرمش، مع صلصة الكاري.",
+      "zh": "多层面团擀薄煎至酥脆，配咖喱酱食用。",
+      "ja": "薄く伸ばしてパリッと焼いた多層生地、カレーソース添え。",
+      "hi": "पतली बेली और कुरकुरी तली कई परतों वाली रोटी, करी सॉस के साथ।",
+      "tr": "İnce açılıp çıtır kızartılmış çok katmanlı hamur, köri sosuyla.",
+      "it": "Impasto a molti strati, steso sottile e fritto croccante, con salsa al curry.",
+      "ko": "얇게 늘려 바삭하게 구운 여러 겹 반죽, 카레 소스를 곁들임."
+    }
+  }
+}

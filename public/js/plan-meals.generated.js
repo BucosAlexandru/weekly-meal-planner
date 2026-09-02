@@ -8,22 +8,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      362,
+      361,
       301,
+      359,
       266,
       264,
-      263,
-      271,
-      272,
-      269
+      263
     ],
     "dinnerIds": [
+      271,
+      272,
+      269,
       200,
       201,
       203,
-      161,
-      95,
-      167,
-      199
+      161
     ]
   },
   "asia": {
@@ -157,22 +157,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      359,
       174,
       107,
       176,
       114,
       109,
-      124,
-      41
+      124
     ],
     "dinnerIds": [
+      41,
       25,
       59,
       7,
       1,
       8,
-      240,
-      263
+      240
     ]
   },
   "iarna-confort": {

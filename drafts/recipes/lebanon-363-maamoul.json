@@ -1,0 +1,177 @@
+{
+  "id": 363,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Liban", "en": "Lebanon", "es": "Líbano", "fr": "Liban", "de": "Libanon",
+    "pt": "Líbano", "ru": "Ливан", "ar": "لبنان", "zh": "黎巴嫩", "ja": "レバノン",
+    "hi": "लेबनान", "tr": "Lübnan", "it": "Libano", "ko": "레바논"
+  },
+  "name": {
+    "ro": "Ma'amoul cu curmale", "en": "Ma'amoul (Date-Filled Cookies)", "es": "Ma'amoul (Galletas rellenas de dátiles)",
+    "fr": "Ma'amoul (Biscuits fourrés aux dattes)", "de": "Ma'amoul (Dattelgefüllte Kekse)", "pt": "Ma'amoul (Biscoitos recheados com tâmaras)",
+    "ru": "Маамуль (Печенье с финиками)", "ar": "معمول بالتمر", "zh": "黎巴嫩椰枣夹心饼",
+    "ja": "マアムール（デーツ詰めクッキー）", "hi": "मामूल (खजूर भरी कुकीज़)", "tr": "Hurma Dolgulu Ma'amoul",
+    "it": "Ma'amoul (Biscotti ripieni di datteri)", "ko": "마아물 (대추야자 쿠키)"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌾", "t": "Aluat de griș", "d": "Griș fin amestecat cu unt topit, odihnit peste noapte."},
+      {"icon": "🌰", "t": "Umplutură de curmale", "d": "Pastă densă de curmale, cu scorțișoară și nucșoară."},
+      {"icon": "🎨", "t": "Model imprimat", "d": "Modele decorative presate cu formă de lemn tradițională."},
+      {"icon": "🕌", "t": "Desert de sărbători", "d": "Nelipsit de Paște și Eid, pregătit în familie."}
+    ],
+    "en": [
+      {"icon": "🌾", "t": "Semolina dough", "d": "Fine semolina mixed with melted butter, rested overnight."},
+      {"icon": "🌰", "t": "Date filling", "d": "Dense date paste, with cinnamon and nutmeg."},
+      {"icon": "🎨", "t": "Stamped pattern", "d": "Decorative patterns pressed with a traditional wooden mold."},
+      {"icon": "🕌", "t": "Holiday dessert", "d": "A staple at Easter and Eid, prepared as a family."}
+    ],
+    "es": [
+      {"icon": "🌾", "t": "Masa de sémola", "d": "Sémola fina mezclada con mantequilla derretida, reposada toda la noche."},
+      {"icon": "🌰", "t": "Relleno de dátiles", "d": "Pasta densa de dátiles, con canela y nuez moscada."},
+      {"icon": "🎨", "t": "Diseño estampado", "d": "Diseños decorativos presionados con un molde de madera tradicional."},
+      {"icon": "🕌", "t": "Postre festivo", "d": "Infaltable en Pascua y Eid, preparado en familia."}
+    ],
+    "fr": [
+      {"icon": "🌾", "t": "Pâte de semoule", "d": "Semoule fine mélangée à du beurre fondu, reposée toute la nuit."},
+      {"icon": "🌰", "t": "Farce aux dattes", "d": "Pâte de dattes dense, à la cannelle et à la muscade."},
+      {"icon": "🎨", "t": "Motif imprimé", "d": "Motifs décoratifs pressés avec un moule en bois traditionnel."},
+      {"icon": "🕌", "t": "Dessert de fête", "d": "Incontournable à Pâques et à l'Aïd, préparé en famille."}
+    ],
+    "de": [
+      {"icon": "🌾", "t": "Grießteig", "d": "Feiner Grieß, gemischt mit geschmolzener Butter, über Nacht geruht."},
+      {"icon": "🌰", "t": "Dattelfüllung", "d": "Dichte Dattelpaste mit Zimt und Muskatnuss."},
+      {"icon": "🎨", "t": "Geprägtes Muster", "d": "Dekorative Muster, mit traditioneller Holzform geprägt."},
+      {"icon": "🕌", "t": "Feiertagsdessert", "d": "Ein Muss an Ostern und Eid, gemeinsam als Familie zubereitet."}
+    ],
+    "pt": [
+      {"icon": "🌾", "t": "Massa de sêmola", "d": "Sêmola fina misturada com manteiga derretida, descansada durante a noite."},
+      {"icon": "🌰", "t": "Recheio de tâmaras", "d": "Pasta densa de tâmaras, com canela e noz-moscada."},
+      {"icon": "🎨", "t": "Padrão estampado", "d": "Padrões decorativos pressionados com um molde de madeira tradicional."},
+      {"icon": "🕌", "t": "Sobremesa festiva", "d": "Presença obrigatória na Páscoa e no Eid, preparada em família."}
+    ],
+    "ru": [
+      {"icon": "🌾", "t": "Тесто из манки", "d": "Мелкая манка, смешанная с растопленным маслом, настоянная ночь."},
+      {"icon": "🌰", "t": "Финиковая начинка", "d": "Густая финиковая паста с корицей и мускатным орехом."},
+      {"icon": "🎨", "t": "Тиснёный узор", "d": "Декоративные узоры, оттиснутые традиционной деревянной формой."},
+      {"icon": "🕌", "t": "Праздничный десерт", "d": "Неотъемлемая часть Пасхи и Ид, готовится всей семьёй."}
+    ],
+    "ar": [
+      {"icon": "🌾", "t": "عجين السميد", "d": "سميد ناعم ممزوج بزبدة مذابة، يُترك ليرتاح طوال الليل."},
+      {"icon": "🌰", "t": "حشوة التمر", "d": "معجون تمر كثيف مع قرفة وجوزة الطيب."},
+      {"icon": "🎨", "t": "نقش مطبوع", "d": "نقوش زخرفية مطبوعة بقالب خشبي تقليدي."},
+      {"icon": "🕌", "t": "حلوى الأعياد", "d": "لا غنى عنها في عيد الفصح والعيد، تُحضَّر عائليًا."}
+    ],
+    "zh": [
+      {"icon": "🌾", "t": "粗麦粉面团", "d": "细粗麦粉与融化黄油混合，静置一夜。"},
+      {"icon": "🌰", "t": "椰枣馅", "d": "浓稠椰枣泥，配肉桂和肉豆蔻。"},
+      {"icon": "🎨", "t": "印花图案", "d": "用传统木模压制出装饰图案。"},
+      {"icon": "🕌", "t": "节庆甜点", "d": "复活节和开斋节必备，全家一起制作。"}
+    ],
+    "ja": [
+      {"icon": "🌾", "t": "セモリナ生地", "d": "細かいセモリナ粉を溶かしバターと混ぜ、一晩寝かせる。"},
+      {"icon": "🌰", "t": "デーツの詰め物", "d": "シナモンとナツメグを効かせた濃厚なデーツペースト。"},
+      {"icon": "🎨", "t": "型押し模様", "d": "伝統的な木型で押した装飾模様。"},
+      {"icon": "🕌", "t": "祝祭のデザート", "d": "復活祭やイードに欠かせない、家族で作る菓子。"}
+    ],
+    "hi": [
+      {"icon": "🌾", "t": "सूजी का आटा", "d": "पिघले मक्खन के साथ मिलाई महीन सूजी, रात भर आराम दी गई।"},
+      {"icon": "🌰", "t": "खजूर की भराई", "d": "दालचीनी और जायफल के साथ गाढ़ा खजूर पेस्ट।"},
+      {"icon": "🎨", "t": "उभरा हुआ डिज़ाइन", "d": "पारंपरिक लकड़ी के सांचे से दबाए सजावटी डिज़ाइन।"},
+      {"icon": "🕌", "t": "त्योहारी मिठाई", "d": "ईस्टर और ईद पर हमेशा मौजूद, परिवार में तैयार की जाती है।"}
+    ],
+    "tr": [
+      {"icon": "🌾", "t": "İrmik hamuru", "d": "İnce irmik, eritilmiş tereyağıyla karıştırılıp bir gece dinlendirilir."},
+      {"icon": "🌰", "t": "Hurma dolgusu", "d": "Tarçın ve muskat cevizli yoğun hurma ezmesi."},
+      {"icon": "🎨", "t": "Baskılı desen", "d": "Geleneksel ahşap kalıpla basılmış dekoratif desenler."},
+      {"icon": "🕌", "t": "Bayram tatlısı", "d": "Paskalya ve Bayram'da vazgeçilmez, ailece hazırlanır."}
+    ],
+    "it": [
+      {"icon": "🌾", "t": "Impasto di semolino", "d": "Semolino fine mescolato con burro fuso, riposato durante la notte."},
+      {"icon": "🌰", "t": "Ripieno di datteri", "d": "Pasta densa di datteri, con cannella e noce moscata."},
+      {"icon": "🎨", "t": "Motivo stampato", "d": "Motivi decorativi pressati con uno stampo di legno tradizionale."},
+      {"icon": "🕌", "t": "Dolce delle feste", "d": "Immancabile a Pasqua e all'Eid, preparato in famiglia."}
+    ],
+    "ko": [
+      {"icon": "🌾", "t": "세몰리나 반죽", "d": "고운 세몰리나를 녹인 버터와 섞어 밤새 휴지시킨다."},
+      {"icon": "🌰", "t": "대추야자 속", "d": "계피와 육두구를 넣은 진한 대추야자 페이스트."},
+      {"icon": "🎨", "t": "찍어낸 무늬", "d": "전통 나무 틀로 찍어낸 장식 무늬."},
+      {"icon": "🕌", "t": "명절 디저트", "d": "부활절과 이드에 빠질 수 없는, 가족이 함께 만드는 디저트."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g griș fin", "250g unt topit", "100ml apă de trandafiri", "1 linguriță drojdie uscată", "50ml lapte călduț", "1 linguriță zahăr", "300g curmale fără sâmburi", "1 linguriță scorțișoară", "un praf de nucșoară", "zahăr pudră pentru decor"],
+    "en": ["500g fine semolina", "250g melted butter", "100ml rosewater", "1 tsp dry yeast", "50ml warm milk", "1 tsp sugar", "300g pitted dates", "1 tsp cinnamon", "a pinch of nutmeg", "powdered sugar for decoration"],
+    "es": ["500g de sémola fina", "250g de mantequilla derretida", "100ml de agua de rosas", "1 cdta de levadura seca", "50ml de leche tibia", "1 cdta de azúcar", "300g de dátiles sin hueso", "1 cdta de canela", "una pizca de nuez moscada", "azúcar glas para decorar"],
+    "fr": ["500g de semoule fine", "250g de beurre fondu", "100ml d'eau de rose", "1 c. à c. de levure sèche", "50ml de lait tiède", "1 c. à c. de sucre", "300g de dattes dénoyautées", "1 c. à c. de cannelle", "une pincée de muscade", "sucre glace pour décorer"],
+    "de": ["500g feiner Grieß", "250g geschmolzene Butter", "100ml Rosenwasser", "1 TL Trockenhefe", "50ml warme Milch", "1 TL Zucker", "300g entsteinte Datteln", "1 TL Zimt", "eine Prise Muskatnuss", "Puderzucker zum Dekorieren"],
+    "pt": ["500g de sêmola fina", "250g de manteiga derretida", "100ml de água de rosas", "1 colher de chá de fermento seco", "50ml de leite morno", "1 colher de chá de açúcar", "300g de tâmaras sem caroço", "1 colher de chá de canela", "uma pitada de noz-moscada", "açúcar em pó para decorar"],
+    "ru": ["500г мелкой манки", "250г растопленного сливочного масла", "100мл розовой воды", "1 ч.л. сухих дрожжей", "50мл тёплого молока", "1 ч.л. сахара", "300г фиников без косточек", "1 ч.л. корицы", "щепотка мускатного ореха", "сахарная пудра для украшения"],
+    "ar": ["500غ سميد ناعم", "250غ زبدة مذابة", "100مل ماء ورد", "ملعقة صغيرة خميرة جافة", "50مل حليب دافئ", "ملعقة صغيرة سكر", "300غ تمر منزوع النوى", "ملعقة صغيرة قرفة", "رشة جوزة الطيب", "سكر بودرة للتزيين"],
+    "zh": ["细粗麦粉500克", "融化黄油250克", "玫瑰水100毫升", "干酵母1茶匙", "温牛奶50毫升", "糖1茶匙", "去核椰枣300克", "肉桂1茶匙", "肉豆蔻一小撮", "装饰用糖粉"],
+    "ja": ["細かいセモリナ粉 500g", "溶かしバター 250g", "ローズウォーター 100ml", "ドライイースト 小さじ1", "温めた牛乳 50ml", "砂糖 小さじ1", "種を取ったデーツ 300g", "シナモン 小さじ1", "ナツメグ ひとつまみ", "飾り用の粉砂糖"],
+    "hi": ["500 ग्राम महीन सूजी", "250 ग्राम पिघला मक्खन", "100 मिली गुलाब जल", "1 छोटा चम्मच सूखा खमीर", "50 मिली गुनगुना दूध", "1 छोटा चम्मच चीनी", "300 ग्राम बीज रहित खजूर", "1 छोटा चम्मच दालचीनी", "एक चुटकी जायफल", "सजावट के लिए पिसी चीनी"],
+    "tr": ["500g ince irmik", "250g eritilmiş tereyağı", "100ml gül suyu", "1 çay kaşığı kuru maya", "50ml ılık süt", "1 çay kaşığı şeker", "300g çekirdeksiz hurma", "1 çay kaşığı tarçın", "bir tutam muskat cevizi", "süslemek için pudra şekeri"],
+    "it": ["500g di semolino fine", "250g di burro fuso", "100ml di acqua di rose", "1 cucchiaino di lievito secco", "50ml di latte tiepido", "1 cucchiaino di zucchero", "300g di datteri denocciolati", "1 cucchiaino di cannella", "un pizzico di noce moscata", "zucchero a velo per decorare"],
+    "ko": ["고운 세몰리나 500g", "녹인 버터 250g", "장미수 100ml", "드라이 이스트 1작은술", "따뜻한 우유 50ml", "설탕 1작은술", "씨 없는 대추야자 300g", "계피 1작은술", "육두구 한 꼬집", "장식용 슈가파우더"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE ALUAT: Amestecă grișul cu untul topit, frecând bine cu mâinile până se absoarbe complet. ODIHNĂ: Acoperă aluatul și lasă-l la temperatura camerei minimum 4 ore, ideal peste noapte. ACTIVARE DROJDIE: Dizolvă drojdia și zahărul în laptele călduț, lasă 10 minute. FINALIZARE ALUAT: Adaugă drojdia activată și apa de trandafiri la griș, frământă ușor până devine omogen și maleabil. PREPARARE UMPLUTURĂ: Tochează curmalele fin, amestecă cu scorțișoara și nucșoara până devin o pastă densă. MODELARE: Ia bucăți de aluat, formează o adâncitură, umple cu pastă de curmale și închide bine, presează în forma decorativă de lemn. COACERE: Coace la 180°C timp de 15-20 minute, până baza devine ușor aurie, fără să se rumenească prea tare. FINISARE: Lasă să se răcească complet, apoi pudrează generos cu zahăr pudră înainte de servire.",
+    "en": "PREPARE DOUGH: Mix the semolina with the melted butter, rubbing well with your hands until fully absorbed. REST: Cover the dough and let it rest at room temperature for at least 4 hours, ideally overnight. ACTIVATE YEAST: Dissolve the yeast and sugar in the warm milk, let sit for 10 minutes. FINISH DOUGH: Add the activated yeast and rosewater to the semolina, knead gently until smooth and pliable. MAKE FILLING: Finely chop the dates, mix with cinnamon and nutmeg until a dense paste forms. SHAPE: Take pieces of dough, form an indentation, fill with date paste and seal well, press into the decorative wooden mold. BAKE: Bake at 180°C for 15-20 minutes, until the base turns lightly golden, without browning too much. FINISH: Let cool completely, then dust generously with powdered sugar before serving.",
+    "es": "PREPARAR LA MASA: Mezcla la sémola con la mantequilla derretida, frotando bien con las manos hasta que se absorba por completo. REPOSAR: Cubre la masa y déjala reposar a temperatura ambiente al menos 4 horas, idealmente toda la noche. ACTIVAR LA LEVADURA: Disuelve la levadura y el azúcar en la leche tibia, deja reposar 10 minutos. TERMINAR LA MASA: Añade la levadura activada y el agua de rosas a la sémola, amasa suavemente hasta que quede lisa y maleable. PREPARAR EL RELLENO: Pica finamente los dátiles, mezcla con la canela y la nuez moscada hasta formar una pasta densa. MOLDEAR: Toma trozos de masa, forma una hendidura, rellena con la pasta de dátiles y sella bien, presiona en el molde decorativo de madera. HORNEAR: Hornea a 180°C durante 15-20 minutos, hasta que la base quede ligeramente dorada, sin dorarse demasiado. TERMINAR: Deja enfriar completamente, luego espolvorea generosamente con azúcar glas antes de servir.",
+    "fr": "PRÉPARER LA PÂTE: Mélangez la semoule avec le beurre fondu, en frottant bien avec les mains jusqu'à absorption complète. LAISSER REPOSER: Couvrez la pâte et laissez-la reposer à température ambiante au moins 4 heures, idéalement toute la nuit. ACTIVER LA LEVURE: Dissolvez la levure et le sucre dans le lait tiède, laissez reposer 10 minutes. FINALISER LA PÂTE: Ajoutez la levure activée et l'eau de rose à la semoule, pétrissez doucement jusqu'à ce qu'elle soit lisse et malléable. PRÉPARER LA FARCE: Hachez finement les dattes, mélangez avec la cannelle et la muscade jusqu'à obtenir une pâte dense. FORMER: Prenez des morceaux de pâte, formez un creux, remplissez de pâte de dattes et scellez bien, pressez dans le moule décoratif en bois. CUIRE: Faites cuire à 180°C pendant 15-20 minutes, jusqu'à ce que la base soit légèrement dorée, sans trop colorer. FINALISER: Laissez refroidir complètement, puis saupoudrez généreusement de sucre glace avant de servir.",
+    "de": "TEIG ZUBEREITEN: Den Grieß mit der geschmolzenen Butter vermischen, gut mit den Händen einreiben, bis er vollständig aufgenommen ist. RUHEN LASSEN: Den Teig abdecken und mindestens 4 Stunden bei Zimmertemperatur ruhen lassen, idealerweise über Nacht. HEFE AKTIVIEREN: Hefe und Zucker in der warmen Milch auflösen, 10 Minuten ruhen lassen. TEIG FERTIGSTELLEN: Die aktivierte Hefe und das Rosenwasser zum Grieß geben, sanft kneten, bis er glatt und formbar ist. FÜLLUNG ZUBEREITEN: Die Datteln fein hacken, mit Zimt und Muskatnuss vermischen, bis eine dichte Paste entsteht. FORMEN: Teigstücke nehmen, eine Vertiefung formen, mit Dattelpaste füllen und gut verschließen, in die dekorative Holzform pressen. BACKEN: Bei 180°C 15-20 Minuten backen, bis der Boden leicht golden wird, ohne zu stark zu bräunen. FERTIGSTELLEN: Vollständig abkühlen lassen, dann vor dem Servieren großzügig mit Puderzucker bestäuben.",
+    "pt": "PREPARAR A MASSA: Misture a sêmola com a manteiga derretida, esfregando bem com as mãos até absorver completamente. DESCANSAR: Cubra a massa e deixe descansar à temperatura ambiente por pelo menos 4 horas, idealmente durante a noite. ATIVAR O FERMENTO: Dissolva o fermento e o açúcar no leite morno, deixe repousar 10 minutos. FINALIZAR A MASSA: Junte o fermento ativado e a água de rosas à sêmola, amasse suavemente até ficar lisa e maleável. PREPARAR O RECHEIO: Pique finamente as tâmaras, misture com a canela e a noz-moscada até formar uma pasta densa. MOLDAR: Pegue pedaços de massa, forme uma cavidade, recheie com pasta de tâmaras e feche bem, pressione no molde decorativo de madeira. ASSAR: Asse a 180°C por 15-20 minutos, até a base ficar levemente dourada, sem escurecer demais. FINALIZAR: Deixe arrefecer completamente, depois polvilhe generosamente com açúcar em pó antes de servir.",
+    "ru": "ПРИГОТОВЛЕНИЕ ТЕСТА: Смешайте манку с растопленным маслом, хорошо растирая руками, пока полностью не впитается. ОТДЫХ: Накройте тесто и дайте ему отдохнуть при комнатной температуре минимум 4 часа, идеально на ночь. АКТИВАЦИЯ ДРОЖЖЕЙ: Растворите дрожжи и сахар в тёплом молоке, оставьте на 10 минут. ЗАВЕРШЕНИЕ ТЕСТА: Добавьте активированные дрожжи и розовую воду в манку, мягко замесите до гладкости и пластичности. ПРИГОТОВЛЕНИЕ НАЧИНКИ: Мелко нарежьте финики, смешайте с корицей и мускатным орехом до густой пасты. ФОРМИРОВАНИЕ: Возьмите кусочки теста, сформируйте углубление, наполните финиковой пастой и хорошо запечатайте, прижмите в декоративную деревянную форму. ВЫПЕЧКА: Выпекайте при 180°C 15-20 минут, пока основание не станет слегка золотистым, не подрумянивая слишком сильно. ЗАВЕРШЕНИЕ: Дайте полностью остыть, затем щедро посыпьте сахарной пудрой перед подачей.",
+    "ar": "تحضير العجين: اخلط السميد مع الزبدة المذابة، مع الفرك جيدًا باليدين حتى يُمتص تمامًا. الراحة: غطِّ العجين واتركه في درجة حرارة الغرفة لمدة 4 ساعات على الأقل، ويفضل طوال الليل. تنشيط الخميرة: أذب الخميرة والسكر في الحليب الدافئ، اتركها 10 دقائق. إنهاء العجين: أضف الخميرة المنشطة وماء الورد إلى السميد، اعجن برفق حتى يصبح ناعمًا وطيّعًا. تحضير الحشوة: افرم التمر ناعمًا، اخلطه مع القرفة وجوزة الطيب حتى يتشكل معجون كثيف. التشكيل: خذ قطعًا من العجين، شكّل تجويفًا، احشُ بمعجون التمر وأغلقه جيدًا، اضغطه في القالب الخشبي الزخرفي. الخبز: اخبز على حرارة 180 درجة لمدة 15-20 دقيقة حتى تصبح القاعدة ذهبية خفيفة دون أن تحمّر كثيرًا. اللمسات الأخيرة: دعه يبرد تمامًا ثم انثر عليه سكر بودرة بسخاء قبل التقديم.",
+    "zh": "准备面团：将粗麦粉与融化黄油混合，用手充分揉搓直至完全吸收。静置：盖好面团在室温下静置至少4小时，最好过夜。激活酵母：将酵母和糖溶于温牛奶中，静置10分钟。完成面团：将激活的酵母和玫瑰水加入粗麦粉中，轻轻揉至光滑柔韧。准备馅料：将椰枣切碎，与肉桂和肉豆蔻混合成浓稠的糊状。塑形：取一块面团，压出凹陷，填入椰枣馅并封好，压入装饰性木模中定型。烘烤：180°C烘烤15-20分钟，直至底部略呈金黄，不要烤得太深。最后装饰：完全冷却后，食用前撒上大量糖粉。",
+    "ja": "生地を準備：セモリナ粉を溶かしバターと混ぜ、手でよくすり込んで完全に吸収させる。休ませる：生地を覆い、常温で最低4時間、理想的には一晩休ませる。イーストを活性化：イーストと砂糖を温めた牛乳に溶かし、10分置く。生地を仕上げる：活性化したイーストとローズウォーターをセモリナ粉に加え、なめらかで扱いやすくなるまで優しくこねる。詰め物を準備：デーツを細かく刻み、シナモンとナツメグと混ぜて濃厚なペーストにする。成形する：生地の一部を取り、くぼみを作り、デーツペーストを詰めてしっかり閉じ、装飾用の木型に押し付ける。焼く：180°Cで15〜20分、底が軽く黄金色になるまで、焼きすぎないように焼く。仕上げ：完全に冷ましてから、提供前にたっぷりの粉砂糖をまぶす。",
+    "hi": "आटा तैयार करें: सूजी को पिघले मक्खन के साथ मिलाएं, हाथों से अच्छी तरह मलें जब तक पूरी तरह अवशोषित न हो जाए। आराम दें: आटे को ढककर कमरे के तापमान पर कम से कम 4 घंटे, आदर्श रूप से रात भर आराम दें। खमीर सक्रिय करें: खमीर और चीनी को गुनगुने दूध में घोलें, 10 मिनट रखें। आटा पूरा करें: सक्रिय खमीर और गुलाब जल सूजी में डालें, चिकना और लचीला होने तक हल्के से गूंधें। भराई तैयार करें: खजूर को बारीक काटें, दालचीनी और जायफल के साथ मिलाकर गाढ़ा पेस्ट बनाएं। आकार दें: आटे के टुकड़े लें, एक गड्ढा बनाएं, खजूर पेस्ट से भरें और अच्छी तरह बंद करें, सजावटी लकड़ी के सांचे में दबाएं। बेक करें: 180°C पर 15-20 मिनट बेक करें, जब तक आधार हल्का सुनहरा न हो जाए, ज़्यादा भूरा न होने दें। अंतिम रूप दें: पूरी तरह ठंडा होने दें, फिर परोसने से पहले भरपूर पिसी चीनी छिड़कें।",
+    "tr": "HAMURU HAZIRLAYIN: İrmiği eritilmiş tereyağıyla karıştırın, tamamen emilene kadar elle iyice ovun. DİNLENDİRİN: Hamuru örtün ve oda sıcaklığında en az 4 saat, tercihen bir gece dinlendirin. MAYAYI AKTİVE EDİN: Mayayı ve şekeri ılık sütte eritin, 10 dakika bekletin. HAMURU TAMAMLAYIN: Aktive edilmiş mayayı ve gül suyunu irmiğe ekleyin, pürüzsüz ve şekillendirilebilir olana kadar nazikçe yoğurun. İÇİ HAZIRLAYIN: Hurmaları ince doğrayın, tarçın ve muskat ceviziyle koyu bir ezme haline gelene kadar karıştırın. ŞEKİL VERİN: Hamur parçaları alın, bir çukur oluşturun, hurma ezmesiyle doldurun ve iyice kapatın, dekoratif ahşap kalıba bastırın. PİŞİRİN: 180°C'de 15-20 dakika, taban hafif altın rengi olana kadar, fazla kızartmadan pişirin. SON DOKUNUŞ: Tamamen soğumaya bırakın, sonra servisten önce bolca pudra şekeri serpin.",
+    "it": "PREPARARE L'IMPASTO: Mescolate il semolino con il burro fuso, strofinando bene con le mani finché completamente assorbito. RIPOSARE: Coprite l'impasto e lasciatelo riposare a temperatura ambiente per almeno 4 ore, idealmente durante la notte. ATTIVARE IL LIEVITO: Sciogliete il lievito e lo zucchero nel latte tiepido, lasciate riposare 10 minuti. FINIRE L'IMPASTO: Aggiungete il lievito attivato e l'acqua di rose al semolino, impastate delicatamente finché liscio e malleabile. PREPARARE IL RIPIENO: Tritate finemente i datteri, mescolate con cannella e noce moscata finché si forma una pasta densa. MODELLARE: Prendete pezzi di impasto, formate un'incavatura, riempite con la pasta di datteri e sigillate bene, premete nello stampo di legno decorativo. CUOCERE: Cuocete a 180°C per 15-20 minuti, finché la base diventa leggermente dorata, senza scurire troppo. FINIRE: Lasciate raffreddare completamente, poi cospargete generosamente di zucchero a velo prima di servire.",
+    "ko": "반죽 준비: 세몰리나를 녹인 버터와 섞어 완전히 흡수될 때까지 손으로 잘 문지른다. 휴지: 반죽을 덮어 실온에서 최소 4시간, 가능하면 하룻밤 휴지시킨다. 이스트 활성화: 이스트와 설탕을 따뜻한 우유에 녹여 10분간 둔다. 반죽 마무리: 활성화된 이스트와 장미수를 세몰리나에 넣고 매끄럽고 유연해질 때까지 부드럽게 반죽한다. 속 준비: 대추야자를 잘게 썰어 계피, 육두구와 섞어 진한 페이스트를 만든다. 모양 만들기: 반죽 조각을 떼어 오목하게 만든 후 대추야자 페이스트를 채우고 잘 봉하여 장식용 나무 틀에 눌러 찍는다. 굽기: 180°C에서 15~20분, 바닥이 살짝 황금빛이 될 때까지 너무 진하게 굽지 않는다. 마무리: 완전히 식힌 후 제공 전 슈가파우더를 듬뿍 뿌린다."
+  },
+  "originText": {
+    "ro": "Ma'amoul are o istorie de peste 1000 de ani, considerat de mulți istorici culinari drept precursorul care a inspirat multe alte dulciuri umplute din regiune. Prăjiturica este strâns legată de sărbătorile religioase din Liban, gătită deopotrivă de creștini de Paște și de musulmani de Eid al-Fitr, un exemplu rar de tradiție culinară comună celor două comunități religioase majore ale țării.\n\nFormele de lemn folosite pentru a imprima modele decorative pe suprafața fiecărei prăjituri sunt adesea moștenite din generație în generație, unele familii păstrându-le sute de ani. Modelul imprimat nu este doar decorativ — tradițional, forma și modelul indică și tipul de umplutură din interior, astfel încât cineva familiarizat cu tradiția poate distinge ma'amoul cu curmale de cele cu nuci sau fistic doar privind exteriorul.",
+    "en": "Ma'amoul has a history of over 1000 years and is considered by many culinary historians to be the precursor that inspired many other stuffed sweets in the region. The cookie is closely tied to religious holidays in Lebanon, made by Christians for Easter and by Muslims for Eid al-Fitr alike, a rare example of a shared culinary tradition between the country's two major religious communities.\n\nThe wooden molds used to stamp decorative patterns onto each cookie's surface are often passed down through generations, some families keeping them for hundreds of years. The stamped pattern isn't purely decorative — traditionally, the shape and design also indicate the type of filling inside, so someone familiar with the tradition can distinguish date-filled ma'amoul from those with walnuts or pistachios just by looking at the exterior.",
+    "es": "El ma'amoul tiene una historia de más de 1000 años y es considerado por muchos historiadores culinarios como el precursor que inspiró muchos otros dulces rellenos de la región. La galleta está estrechamente ligada a las festividades religiosas en el Líbano, preparada tanto por cristianos en Pascua como por musulmanes en el Eid al-Fitr, un raro ejemplo de tradición culinaria compartida entre las dos principales comunidades religiosas del país.\n\nLos moldes de madera usados para imprimir diseños decorativos en la superficie de cada galleta a menudo se transmiten de generación en generación, algunas familias los conservan durante cientos de años. El diseño estampado no es puramente decorativo — tradicionalmente, la forma y el diseño también indican el tipo de relleno interior, de modo que alguien familiarizado con la tradición puede distinguir el ma'amoul de dátiles de los de nueces o pistachos con solo mirar el exterior.",
+    "fr": "Le ma'amoul a une histoire de plus de 1000 ans et est considéré par de nombreux historiens de la gastronomie comme le précurseur qui a inspiré de nombreuses autres douceurs fourrées de la région. Le biscuit est étroitement lié aux fêtes religieuses au Liban, préparé aussi bien par les chrétiens à Pâques que par les musulmans pour l'Aïd al-Fitr, un rare exemple de tradition culinaire partagée entre les deux principales communautés religieuses du pays.\n\nLes moules en bois utilisés pour imprimer des motifs décoratifs sur la surface de chaque biscuit sont souvent transmis de génération en génération, certaines familles les conservant depuis des centaines d'années. Le motif imprimé n'est pas purement décoratif — traditionnellement, la forme et le motif indiquent également le type de farce à l'intérieur, de sorte qu'une personne familière avec la tradition peut distinguer le ma'amoul aux dattes de ceux aux noix ou aux pistaches simplement en regardant l'extérieur.",
+    "de": "Ma'amoul hat eine über 1000-jährige Geschichte und gilt bei vielen Kulinarikhistorikern als Vorläufer, der viele andere gefüllte Süßigkeiten der Region inspirierte. Der Keks ist eng mit religiösen Feiertagen im Libanon verbunden, sowohl von Christen zu Ostern als auch von Muslimen zum Eid al-Fitr zubereitet — ein seltenes Beispiel einer gemeinsamen kulinarischen Tradition zwischen den beiden großen religiösen Gemeinschaften des Landes.\n\nDie Holzformen, mit denen dekorative Muster auf die Oberfläche jedes Kekses geprägt werden, werden oft über Generationen weitergegeben, manche Familien bewahren sie seit Hunderten von Jahren auf. Das geprägte Muster ist nicht nur dekorativ — traditionell zeigen Form und Muster auch die Art der Füllung im Inneren an, sodass jemand, der mit der Tradition vertraut ist, dattelgefüllte Ma'amoul allein am Äußeren von solchen mit Walnüssen oder Pistazien unterscheiden kann.",
+    "pt": "O ma'amoul tem uma história de mais de 1000 anos e é considerado por muitos historiadores culinários como o precursor que inspirou muitos outros doces recheados da região. O biscoito está intimamente ligado às festividades religiosas no Líbano, feito tanto por cristãos na Páscoa como por muçulmanos no Eid al-Fitr, um raro exemplo de tradição culinária partilhada entre as duas principais comunidades religiosas do país.\n\nOs moldes de madeira usados para imprimir padrões decorativos na superfície de cada biscoito são frequentemente transmitidos ao longo de gerações, algumas famílias guardam-nos há centenas de anos. O padrão estampado não é puramente decorativo — tradicionalmente, a forma e o desenho também indicam o tipo de recheio no interior, de modo que alguém familiarizado com a tradição pode distinguir o ma'amoul de tâmaras dos de nozes ou pistácios apenas olhando para o exterior.",
+    "ru": "Маамуль имеет более чем 1000-летнюю историю и считается многими историками кулинарии предшественником, вдохновившим множество других начинённых сладостей региона. Печенье тесно связано с религиозными праздниками в Ливане, готовится как христианами на Пасху, так и мусульманами на Ид аль-Фитр — редкий пример общей кулинарной традиции двух крупнейших религиозных общин страны.\n\nДеревянные формы, используемые для тиснения декоративных узоров на поверхности каждого печенья, часто передаются из поколения в поколение, некоторые семьи хранят их сотни лет. Тиснёный узор не только декоративен — традиционно форма и рисунок также указывают на тип начинки внутри, так что знакомый с традицией человек может отличить маамуль с финиками от печенья с орехами или фисташками просто по внешнему виду.",
+    "ar": "يعود تاريخ المعمول إلى أكثر من 1000 عام، ويُعتبره العديد من مؤرخي الطهي السلف الذي ألهم العديد من الحلويات المحشوة الأخرى في المنطقة. ترتبط هذه الكعكة ارتباطًا وثيقًا بالأعياد الدينية في لبنان، حيث يُحضّرها المسيحيون في عيد الفصح والمسلمون في عيد الفطر على حد سواء، وهو مثال نادر على تقليد طهوي مشترك بين الطائفتين الدينيتين الرئيسيتين في البلاد.\n\nغالبًا ما تُتوارث القوالب الخشبية المستخدمة لطبع النقوش الزخرفية على سطح كل كعكة عبر الأجيال، وتحتفظ بها بعض العائلات لمئات السنين. النقش المطبوع ليس زخرفيًا بحتًا — تقليديًا، يشير الشكل والتصميم أيضًا إلى نوع الحشوة بالداخل، بحيث يمكن لمن هو مطّلع على التقليد التمييز بين معمول التمر ومعمول الجوز أو الفستق بمجرد النظر إلى الخارج.",
+    "zh": "马阿姆勒的历史已超过1000年，许多美食历史学家认为它是启发该地区众多其他夹心甜点的先驱。这种饼干与黎巴嫩的宗教节日紧密相连，基督徒在复活节和穆斯林在开斋节都会制作它，是该国两大宗教社群共享烹饪传统的罕见例子。\n\n用于在每块饼干表面压印装饰图案的木模具，常常代代相传，有些家庭甚至保存了数百年。压印的图案并非纯粹装饰性的——传统上，形状和图案也表明内部馅料的种类，因此熟悉这一传统的人仅凭外观就能分辨出椰枣馅的马阿姆勒与核桃馅或开心果馅的区别。",
+    "ja": "マアムールは1000年以上の歴史を持ち、多くの食文化史家によって、この地域の他の多くの詰め物入り菓子にインスピレーションを与えた先駆けと見なされている。このクッキーはレバノンの宗教的祝祭と密接に結びついており、キリスト教徒は復活祭に、イスラム教徒はイード・アル＝フィトルに同様に作る、国内の二大宗教共同体が共有する珍しい料理の伝統の例である。\n\n各クッキーの表面に装飾模様を型押しするために使われる木型は、しばしば何世代にもわたって受け継がれ、数百年間保管している家庭もある。型押しされた模様は単なる装飾ではない――伝統的に、形とデザインは中の詰め物の種類も示しており、この伝統に精通している人は外見だけでデーツ詰めのマアムールとくるみやピスタチオ入りのものを区別できる。",
+    "hi": "मामूल का इतिहास 1000 साल से अधिक पुराना है और इसे कई पाक इतिहासकार क्षेत्र की कई अन्य भरवां मिठाइयों को प्रेरित करने वाला अग्रदूत मानते हैं। यह कुकी लेबनान के धार्मिक त्योहारों से गहराई से जुड़ी है, ईस्टर पर ईसाइयों और ईद अल-फ़ित्र पर मुसलमानों दोनों द्वारा बनाई जाती है, जो देश के दो प्रमुख धार्मिक समुदायों के बीच साझा पाक परंपरा का एक दुर्लभ उदाहरण है।\n\nप्रत्येक कुकी की सतह पर सजावटी डिज़ाइन उभारने के लिए उपयोग किए जाने वाले लकड़ी के सांचे अक्सर पीढ़ी-दर-पीढ़ी चले आ रहे हैं, कुछ परिवार इन्हें सैकड़ों वर्षों से रखे हुए हैं। उभरा हुआ डिज़ाइन केवल सजावटी नहीं है — परंपरागत रूप से, आकार और डिज़ाइन अंदर की भराई का प्रकार भी दर्शाते हैं, ताकि परंपरा से परिचित कोई व्यक्ति केवल बाहर देखकर खजूर वाले मामूल को अखरोट या पिस्ता वाले से अलग बता सके।",
+    "tr": "Ma'amoul, 1000 yılı aşkın bir geçmişe sahiptir ve birçok yemek tarihçisi tarafından bölgedeki diğer birçok dolgulu tatlıya ilham veren öncü olarak kabul edilir. Bu kurabiye Lübnan'daki dini bayramlarla yakından bağlantılıdır; Paskalya'da Hristiyanlar ve Ramazan Bayramı'nda Müslümanlar tarafından aynı şekilde yapılır, ülkenin iki büyük dini topluluğu arasında paylaşılan nadir bir mutfak geleneği örneğidir.\n\nHer kurabiyenin yüzeyine dekoratif desenler basmak için kullanılan ahşap kalıplar genellikle nesillerden nesillere aktarılır, bazı aileler bunları yüzyıllardır saklar. Basılmış desen tamamen dekoratif değildir — geleneksel olarak, şekil ve tasarım içindeki dolgu türünü de belirtir, böylece gelenekle tanışık biri sadece dış görünüşe bakarak hurma dolgulu ma'amoul'u ceviz veya fıstık dolgulu olanlardan ayırt edebilir.",
+    "it": "Il ma'amoul ha una storia di oltre 1000 anni ed è considerato da molti storici della gastronomia il precursore che ha ispirato molti altri dolci ripieni della regione. Il biscotto è strettamente legato alle festività religiose in Libano, preparato sia dai cristiani a Pasqua che dai musulmani per l'Eid al-Fitr, un raro esempio di tradizione culinaria condivisa tra le due principali comunità religiose del paese.\n\nGli stampi di legno usati per imprimere motivi decorativi sulla superficie di ogni biscotto vengono spesso tramandati di generazione in generazione, alcune famiglie li conservano da centinaia di anni. Il motivo stampato non è puramente decorativo — tradizionalmente, la forma e il disegno indicano anche il tipo di ripieno all'interno, così che chi conosce la tradizione può distinguere il ma'amoul ai datteri da quelli alle noci o ai pistacchi semplicemente guardando l'esterno.",
+    "ko": "마아물은 1000년이 넘는 역사를 지니고 있으며, 많은 음식 역사가들은 이를 이 지역의 다른 여러 속을 채운 단 과자에 영감을 준 선구자로 여긴다. 이 쿠키는 레바논의 종교 명절과 밀접하게 연관되어 있어, 부활절에는 기독교인들이, 이드 알피트르에는 무슬림들이 똑같이 만들며, 이는 이 나라의 두 주요 종교 공동체가 공유하는 드문 요리 전통의 예다.\n\n각 쿠키 표면에 장식 무늬를 찍는 데 사용되는 나무 틀은 종종 여러 세대에 걸쳐 전해지며, 일부 가정은 수백 년 동안 이를 보관해왔다. 찍어낸 무늬는 단순히 장식적인 것만이 아니다 — 전통적으로 모양과 디자인은 내부 속의 종류도 나타내므로, 이 전통에 익숙한 사람은 겉모습만 보고도 대추야자 마아물과 호두나 피스타치오가 든 것을 구별할 수 있다."
+  },
+  "meta": {
+    "time": 300,
+    "costRon": 16,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Biscuiți de griș cu model presat, umpluți cu pastă densă de curmale.",
+      "en": "Stamped semolina cookies filled with a dense date paste.",
+      "es": "Galletas de sémola estampadas rellenas de pasta densa de dátiles.",
+      "fr": "Biscuits de semoule imprimés, farcis de pâte de dattes dense.",
+      "de": "Geprägte Grießkekse mit dichter Dattelpaste gefüllt.",
+      "pt": "Biscoitos de sêmola estampados recheados com pasta densa de tâmaras.",
+      "ru": "Печенье из манки с тиснёным узором, начинённое густой финиковой пастой.",
+      "ar": "بسكويت سميد منقوش محشو بمعجون تمر كثيف.",
+      "zh": "印花粗麦粉饼干，内馅为浓稠椰枣泥。",
+      "ja": "型押しセモリナクッキー、濃厚なデーツペース入り。",
+      "hi": "उभरे डिज़ाइन वाली सूजी की कुकीज़, गाढ़े खजूर पेस्ट से भरी।",
+      "tr": "Baskılı irmik kurabiyesi, yoğun hurma ezmesiyle doldurulmuş.",
+      "it": "Biscotti di semolino stampati, farciti con pasta densa di datteri.",
+      "ko": "무늬를 찍은 세몰리나 쿠키, 진한 대추야자 페이스트로 속을 채움."
+    }
+  }
+}

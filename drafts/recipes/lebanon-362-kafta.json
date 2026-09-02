@@ -1,0 +1,176 @@
+{
+  "id": 362,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Liban", "en": "Lebanon", "es": "Líbano", "fr": "Liban", "de": "Libanon",
+    "pt": "Líbano", "ru": "Ливан", "ar": "لبنان", "zh": "黎巴嫩", "ja": "レバノン",
+    "hi": "लेबनान", "tr": "Lübnan", "it": "Libano", "ko": "레바논"
+  },
+  "name": {
+    "ro": "Kafta la grătar", "en": "Grilled Kafta", "es": "Kafta a la parrilla", "fr": "Kafta grillée",
+    "de": "Gegrillte Kafta", "pt": "Kafta grelhada", "ru": "Кафта на гриле", "ar": "كفتة مشوية", "zh": "黎巴嫩烤肉丸串",
+    "ja": "グリルカフタ", "hi": "ग्रिल्ड काफ़्ता", "tr": "Izgara Köfte", "it": "Kafta alla griglia", "ko": "그릴 카프타"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥩", "t": "Carne tocată condimentată", "d": "Amestec de vită și miel, cu ceapă și pătrunjel tocate fin."},
+      {"icon": "🌶️", "t": "Condimente calde", "d": "Chimen, scorțișoară și piper negru dau savoare adâncă."},
+      {"icon": "🔥", "t": "Formă alungită", "d": "Modelată în formă de cârnat lung, direct pe frigare."},
+      {"icon": "🍅", "t": "Servit cu roșii", "d": "Adesea gătit cu roșii și ceapă în același vas."}
+    ],
+    "en": [
+      {"icon": "🥩", "t": "Spiced ground meat", "d": "A mix of beef and lamb, with finely chopped onion and parsley."},
+      {"icon": "🌶️", "t": "Warm spices", "d": "Cumin, cinnamon and black pepper give deep flavor."},
+      {"icon": "🔥", "t": "Elongated shape", "d": "Shaped into a long sausage form, right on the skewer."},
+      {"icon": "🍅", "t": "Served with tomatoes", "d": "Often cooked with tomatoes and onion in the same pan."}
+    ],
+    "es": [
+      {"icon": "🥩", "t": "Carne picada especiada", "d": "Mezcla de vaca y cordero, con cebolla y perejil finamente picados."},
+      {"icon": "🌶️", "t": "Especias cálidas", "d": "El comino, la canela y la pimienta negra dan un sabor profundo."},
+      {"icon": "🔥", "t": "Forma alargada", "d": "Moldeada en forma de salchicha larga, directamente en la brocheta."},
+      {"icon": "🍅", "t": "Servida con tomate", "d": "A menudo cocinada con tomate y cebolla en la misma sartén."}
+    ],
+    "fr": [
+      {"icon": "🥩", "t": "Viande hachée épicée", "d": "Mélange de bœuf et d'agneau, avec oignon et persil finement hachés."},
+      {"icon": "🌶️", "t": "Épices chaudes", "d": "Cumin, cannelle et poivre noir donnent une saveur profonde."},
+      {"icon": "🔥", "t": "Forme allongée", "d": "Façonnée en forme de saucisse longue, directement sur la brochette."},
+      {"icon": "🍅", "t": "Servie avec des tomates", "d": "Souvent cuisinée avec des tomates et de l'oignon dans le même plat."}
+    ],
+    "de": [
+      {"icon": "🥩", "t": "Gewürztes Hackfleisch", "d": "Eine Mischung aus Rind und Lamm, mit fein gehackter Zwiebel und Petersilie."},
+      {"icon": "🌶️", "t": "Warme Gewürze", "d": "Kreuzkümmel, Zimt und schwarzer Pfeffer geben tiefen Geschmack."},
+      {"icon": "🔥", "t": "Längliche Form", "d": "Zu einer langen Wurstform geformt, direkt am Spieß."},
+      {"icon": "🍅", "t": "Mit Tomaten serviert", "d": "Oft mit Tomaten und Zwiebeln in derselben Pfanne gegart."}
+    ],
+    "pt": [
+      {"icon": "🥩", "t": "Carne picada temperada", "d": "Mistura de vaca e borrego, com cebola e salsa finamente picadas."},
+      {"icon": "🌶️", "t": "Especiarias quentes", "d": "Cominho, canela e pimenta preta dão sabor profundo."},
+      {"icon": "🔥", "t": "Forma alongada", "d": "Moldada em forma de salsicha longa, diretamente no espeto."},
+      {"icon": "🍅", "t": "Servida com tomate", "d": "Frequentemente cozinhada com tomate e cebola na mesma panela."}
+    ],
+    "ru": [
+      {"icon": "🥩", "t": "Пряный фарш", "d": "Смесь говядины и баранины с мелко нарезанным луком и петрушкой."},
+      {"icon": "🌶️", "t": "Тёплые специи", "d": "Тмин, корица и чёрный перец придают глубокий вкус."},
+      {"icon": "🔥", "t": "Удлинённая форма", "d": "Формируется в виде длинной колбаски прямо на шампуре."},
+      {"icon": "🍅", "t": "Подаётся с помидорами", "d": "Часто готовится с помидорами и луком в одной посуде."}
+    ],
+    "ar": [
+      {"icon": "🥩", "t": "لحم مفروم متبّل", "d": "خليط من لحم البقر والغنم، مع بصل وبقدونس مفرومين ناعمًا."},
+      {"icon": "🌶️", "t": "توابل دافئة", "d": "الكمون والقرفة والفلفل الأسود تمنح نكهة عميقة."},
+      {"icon": "🔥", "t": "شكل مستطيل", "d": "تُشكَّل على هيئة نقانق طويلة مباشرة على السيخ."},
+      {"icon": "🍅", "t": "تُقدَّم مع الطماطم", "d": "غالبًا ما تُطهى مع الطماطم والبصل في نفس الإناء."}
+    ],
+    "zh": [
+      {"icon": "🥩", "t": "调味肉末", "d": "牛肉与羊肉混合，加入细切洋葱和欧芹。"},
+      {"icon": "🌶️", "t": "温暖香料", "d": "孜然、肉桂和黑胡椒赋予深层风味。"},
+      {"icon": "🔥", "t": "长条形状", "d": "直接在扦子上塑成长条香肠状。"},
+      {"icon": "🍅", "t": "配番茄食用", "d": "常与番茄和洋葱一起在同一锅中烹制。"}
+    ],
+    "ja": [
+      {"icon": "🥩", "t": "スパイシーなひき肉", "d": "牛肉と羊肉のミックスに細かく刻んだ玉ねぎとパセリを加えたもの。"},
+      {"icon": "🌶️", "t": "温かみのあるスパイス", "d": "クミン、シナモン、黒こしょうが深みのある風味を与える。"},
+      {"icon": "🔥", "t": "細長い形", "d": "串の上で直接長いソーセージ状に成形する。"},
+      {"icon": "🍅", "t": "トマトと共に", "d": "しばしば同じ鍋でトマトと玉ねぎと共に調理される。"}
+    ],
+    "hi": [
+      {"icon": "🥩", "t": "मसालेदार कीमा", "d": "बीफ और भेड़ के मांस का मिश्रण, बारीक कटे प्याज़ और अजमोद के साथ।"},
+      {"icon": "🌶️", "t": "गरम मसाले", "d": "जीरा, दालचीनी और काली मिर्च गहरा स्वाद देते हैं।"},
+      {"icon": "🔥", "t": "लंबा आकार", "d": "सीधे सींक पर लंबे सॉसेज के आकार में बनाया गया।"},
+      {"icon": "🍅", "t": "टमाटर के साथ परोसा गया", "d": "अक्सर उसी बर्तन में टमाटर और प्याज़ के साथ पकाया जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🥩", "t": "Baharatlı kıyma", "d": "İnce doğranmış soğan ve maydanozla dana ve kuzu eti karışımı."},
+      {"icon": "🌶️", "t": "Sıcak baharatlar", "d": "Kimyon, tarçın ve karabiber derin bir lezzet verir."},
+      {"icon": "🔥", "t": "Uzun şekil", "d": "Doğrudan şişin üzerinde uzun sosis şeklinde şekillendirilir."},
+      {"icon": "🍅", "t": "Domatesle servis edilir", "d": "Genellikle aynı tencerede domates ve soğanla pişirilir."}
+    ],
+    "it": [
+      {"icon": "🥩", "t": "Carne macinata speziata", "d": "Un mix di manzo e agnello, con cipolla e prezzemolo tritati finemente."},
+      {"icon": "🌶️", "t": "Spezie calde", "d": "Cumino, cannella e pepe nero danno un sapore profondo."},
+      {"icon": "🔥", "t": "Forma allungata", "d": "Modellata a forma di salsiccia lunga, direttamente sullo spiedo."},
+      {"icon": "🍅", "t": "Servita con pomodori", "d": "Spesso cotta con pomodori e cipolla nella stessa pentola."}
+    ],
+    "ko": [
+      {"icon": "🥩", "t": "향신료를 넣은 다진 고기", "d": "잘게 썬 양파와 파슬리를 넣은 소고기와 양고기 혼합물."},
+      {"icon": "🌶️", "t": "따뜻한 향신료", "d": "커민, 계피, 검은 후추가 깊은 풍미를 낸다."},
+      {"icon": "🔥", "t": "길쭉한 모양", "d": "꼬치 위에서 바로 긴 소시지 모양으로 빚는다."},
+      {"icon": "🍅", "t": "토마토와 함께 제공", "d": "종종 같은 팬에서 토마토, 양파와 함께 조리된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g vită tocată", "200g miel tocat", "1 ceapă mare", "1 legătură pătrunjel", "1 linguriță chimen măcinat", "1/2 linguriță scorțișoară", "sare, piper negru", "2 roșii mari", "1 ceapă pentru gătit", "ulei de măsline"],
+    "en": ["600g ground beef", "200g ground lamb", "1 large onion", "1 bunch parsley", "1 tsp ground cumin", "1/2 tsp cinnamon", "salt, black pepper", "2 large tomatoes", "1 onion for cooking", "olive oil"],
+    "es": ["600g de carne de vaca picada", "200g de cordero picado", "1 cebolla grande", "1 manojo de perejil", "1 cdta de comino molido", "1/2 cdta de canela", "sal, pimienta negra", "2 tomates grandes", "1 cebolla para cocinar", "aceite de oliva"],
+    "fr": ["600g de bœuf haché", "200g d'agneau haché", "1 gros oignon", "1 botte de persil", "1 c. à c. de cumin moulu", "1/2 c. à c. de cannelle", "sel, poivre noir", "2 grosses tomates", "1 oignon pour la cuisson", "huile d'olive"],
+    "de": ["600g Rinderhackfleisch", "200g Lammhackfleisch", "1 große Zwiebel", "1 Bund Petersilie", "1 TL gemahlener Kreuzkümmel", "1/2 TL Zimt", "Salz, schwarzer Pfeffer", "2 große Tomaten", "1 Zwiebel zum Kochen", "Olivenöl"],
+    "pt": ["600g de carne de vaca picada", "200g de borrego picado", "1 cebola grande", "1 molho de salsa", "1 colher de chá de cominho moído", "1/2 colher de chá de canela", "sal, pimenta preta", "2 tomates grandes", "1 cebola para cozinhar", "azeite"],
+    "ru": ["600г говяжьего фарша", "200г бараньего фарша", "1 крупная луковица", "1 пучок петрушки", "1 ч.л. молотого тмина", "1/2 ч.л. корицы", "соль, чёрный перец", "2 крупных помидора", "1 луковица для готовки", "оливковое масло"],
+    "ar": ["600غ لحم بقري مفروم", "200غ لحم غنم مفروم", "بصلة كبيرة واحدة", "حزمة بقدونس", "ملعقة صغيرة كمون مطحون", "نصف ملعقة صغيرة قرفة", "ملح، فلفل أسود", "طماطمتان كبيرتان", "بصلة للطهي", "زيت زيتون"],
+    "zh": ["牛肉末600克", "羊肉末200克", "大洋葱1个", "欧芹1把", "孜然粉1茶匙", "肉桂半茶匙", "盐、黑胡椒", "大番茄2个", "烹饪用洋葱1个", "橄榄油"],
+    "ja": ["牛ひき肉 600g", "羊ひき肉 200g", "大きめの玉ねぎ 1個", "パセリ 1束", "クミンパウダー 小さじ1", "シナモン 小さじ1/2", "塩、黒こしょう", "大きめのトマト 2個", "調理用玉ねぎ 1個", "オリーブオイル"],
+    "hi": ["600 ग्राम कीमा बीफ", "200 ग्राम कीमा भेड़ का मांस", "1 बड़ा प्याज़", "1 गुच्छा अजमोद", "1 छोटा चम्मच पिसा जीरा", "1/2 छोटा चम्मच दालचीनी", "नमक, काली मिर्च", "2 बड़े टमाटर", "पकाने के लिए 1 प्याज़", "जैतून का तेल"],
+    "tr": ["600g dana kıyma", "200g kuzu kıyma", "1 büyük soğan", "1 demet maydanoz", "1 çay kaşığı öğütülmüş kimyon", "1/2 çay kaşığı tarçın", "tuz, karabiber", "2 büyük domates", "pişirmek için 1 soğan", "zeytinyağı"],
+    "it": ["600g di manzo macinato", "200g di agnello macinato", "1 cipolla grande", "1 mazzo di prezzemolo", "1 cucchiaino di cumino macinato", "1/2 cucchiaino di cannella", "sale, pepe nero", "2 pomodori grandi", "1 cipolla per cucinare", "olio d'oliva"],
+    "ko": ["소고기 다짐육 600g", "양고기 다짐육 200g", "큰 양파 1개", "파슬리 1단", "커민 가루 1작은술", "계피 1/2작은술", "소금, 검은 후추", "큰 토마토 2개", "조리용 양파 1개", "올리브 오일"]
+  },
+  "howIsMade": {
+    "ro": "TOCARE FIN: Toacă mărunt ceapa și pătrunjelul, aproape până devin pastă. AMESTECARE COMPOZIȚIE: Amestecă vita și mielul tocate cu ceapa, pătrunjelul, chimenul, scorțișoara, sare și piper, până se omogenizează bine. FRĂMÂNTARE: Frământă compoziția câteva minute cu mâna, pentru a se lega bine și a deveni elastică. MODELARE: Ia porții din compoziție și modelează-le în formă alungită, direct pe frigărui plate de metal. FRIGERE: Frige kafta pe grătar la foc mediu-mare, întorcând cu grijă, 10-12 minute până se rumenește uniform. PREGĂTIRE ROȘII: În paralel, călește ceapa tăiată felii cu roșiile tăiate cuburi în puțin ulei. SERVIRE: Servește kafta fierbinte peste roșiile călite, cu pâine lipie și salată alături.",
+    "en": "CHOP FINELY: Finely chop the onion and parsley, almost to a paste. MIX MIXTURE: Combine the ground beef and lamb with the onion, parsley, cumin, cinnamon, salt and pepper, mixing well. KNEAD: Knead the mixture by hand for a few minutes, so it binds well and becomes elastic. SHAPE: Take portions of the mixture and shape them into an elongated form, directly on flat metal skewers. GRILL: Grill the kafta over medium-high heat, turning carefully, for 10-12 minutes until evenly browned. PREPARE TOMATOES: Meanwhile, sauté the sliced onion with the diced tomatoes in a little oil. SERVE: Serve the kafta hot over the sautéed tomatoes, with flatbread and salad on the side.",
+    "es": "PICAR FINAMENTE: Pica finamente la cebolla y el perejil, casi hasta hacer una pasta. MEZCLAR: Combina la carne de vaca y el cordero picados con la cebolla, el perejil, el comino, la canela, sal y pimienta, mezclando bien. AMASAR: Amasa la mezcla a mano durante unos minutos para que se ligue bien y quede elástica. MOLDEAR: Toma porciones de la mezcla y dales forma alargada, directamente en brochetas planas de metal. ASAR: Asa la kafta a fuego medio-alto, dándole vuelta con cuidado, 10-12 minutos hasta que se dore uniformemente. PREPARAR LOS TOMATES: Mientras tanto, saltea la cebolla en rodajas con los tomates en cubos en un poco de aceite. SERVIR: Sirve la kafta caliente sobre los tomates salteados, con pan de pita y ensalada al lado.",
+    "fr": "HACHER FINEMENT: Hachez finement l'oignon et le persil, presque jusqu'à obtenir une pâte. MÉLANGER: Combinez le bœuf et l'agneau hachés avec l'oignon, le persil, le cumin, la cannelle, le sel et le poivre, en mélangeant bien. PÉTRIR: Pétrissez le mélange à la main pendant quelques minutes, pour qu'il se lie bien et devienne élastique. FORMER: Prenez des portions du mélange et façonnez-les en forme allongée, directement sur des brochettes métalliques plates. GRILLER: Faites griller la kafta à feu moyen-vif, en tournant avec précaution, 10-12 minutes jusqu'à dorure uniforme. PRÉPARER LES TOMATES: Pendant ce temps, faites revenir l'oignon émincé avec les tomates en dés dans un peu d'huile. SERVIR: Servez la kafta chaude sur les tomates sautées, avec du pain plat et de la salade à côté.",
+    "de": "FEIN HACKEN: Zwiebel und Petersilie fein hacken, fast bis zu einer Paste. MISCHUNG VERBINDEN: Rinder- und Lammhack mit Zwiebel, Petersilie, Kreuzkümmel, Zimt, Salz und Pfeffer gut vermischen. KNETEN: Die Mischung einige Minuten von Hand kneten, damit sie gut bindet und elastisch wird. FORMEN: Portionen der Mischung nehmen und direkt auf flachen Metallspießen zu einer länglichen Form formen. GRILLEN: Die Kafta bei mittlerer bis hoher Hitze grillen, vorsichtig wenden, 10-12 Minuten bis gleichmäßig gebräunt. TOMATEN VORBEREITEN: Währenddessen die geschnittene Zwiebel mit den gewürfelten Tomaten in etwas Öl andünsten. SERVIEREN: Die Kafta heiß über den gedünsteten Tomaten servieren, mit Fladenbrot und Salat dazu.",
+    "pt": "PICAR FINAMENTE: Pique finamente a cebola e a salsa, quase até formar uma pasta. MISTURAR: Combine a carne de vaca e o borrego picados com a cebola, a salsa, o cominho, a canela, sal e pimenta, misturando bem. AMASSAR: Amasse a mistura à mão por alguns minutos, para que se ligue bem e fique elástica. MOLDAR: Pegue porções da mistura e molde-as em forma alongada, diretamente em espetos metálicos planos. GRELHAR: Grelhe a kafta em lume médio-alto, virando com cuidado, 10-12 minutos até dourar uniformemente. PREPARAR OS TOMATES: Entretanto, refogue a cebola em rodelas com os tomates em cubos em pouco óleo. SERVIR: Sirva a kafta quente sobre os tomates refogados, com pão pita e salada ao lado.",
+    "ru": "МЕЛКАЯ НАРЕЗКА: Мелко нарежьте лук и петрушку, почти до состояния пасты. СМЕШИВАНИЕ: Соедините говяжий и бараний фарш с луком, петрушкой, тмином, корицей, солью и перцем, хорошо перемешивая. ЗАМЕС: Вымесите смесь руками несколько минут, чтобы она хорошо связалась и стала эластичной. ФОРМИРОВАНИЕ: Возьмите порции смеси и сформируйте их в удлинённую форму прямо на плоских металлических шампурах. ЖАРКА: Жарьте кафту на среднем-сильном огне, осторожно переворачивая, 10-12 минут до равномерной румяности. ПРИГОТОВЛЕНИЕ ПОМИДОРОВ: Тем временем обжарьте нарезанный лук с нарезанными кубиками помидорами в небольшом количестве масла. ПОДАЧА: Подавайте кафту горячей поверх тушёных помидоров, с лавашом и салатом на гарнир.",
+    "ar": "الفرم الناعم: افرم البصل والبقدونس ناعمًا حتى يصبحا شبه عجينة. الخلط: اخلط لحم البقر والغنم المفروم مع البصل والبقدونس والكمون والقرفة والملح والفلفل، مع الخلط جيدًا. العجن: اعجن الخليط باليد لبضع دقائق حتى يتماسك ويصبح مرنًا. التشكيل: خذ أجزاء من الخليط وشكّلها بشكل مستطيل، مباشرة على أسياخ معدنية مسطحة. الشوي: اشوِ الكفتة على نار متوسطة إلى عالية، مع القلب بحذر، لمدة 10-12 دقيقة حتى تحمّر بالتساوي. تحضير الطماطم: في الأثناء، حمّر البصل المقطّع شرائح مع الطماطم المقطعة مكعبات في القليل من الزيت. التقديم: قدّم الكفتة ساخنة فوق الطماطم المحمّرة، مع الخبز والسلطة جانبًا.",
+    "zh": "细切：将洋葱和欧芹切碎，几乎成糊状。混合：将牛肉末和羊肉末与洋葱、欧芹、孜然、肉桂、盐和胡椒混合均匀。揉捏：用手揉捏混合物几分钟，使其充分黏合并有弹性。塑形：取出部分混合物，直接在扁平金属扦子上塑成长条形。烤制：中大火烤制卡夫塔，小心翻动，10-12分钟至均匀焦黄。准备番茄：同时，将切片洋葱与切块番茄用少许油炒香。装盘：将热卡夫塔盛在炒番茄上，配薄饼和沙拉食用。",
+    "ja": "細かく刻む：玉ねぎとパセリをほぼペースト状になるまで細かく刻む。混ぜる：牛ひき肉と羊ひき肉を玉ねぎ、パセリ、クミン、シナモン、塩、こしょうとよく混ぜ合わせる。こねる：混合物を手で数分こね、よくまとまり弾力が出るようにする。成形する：混合物の一部を取り、平らな金属串の上で直接細長い形に成形する。焼く：中強火でカフタを、慎重に返しながら均等に焦げ目がつくまで10〜12分焼く。トマトを準備する：その間に、スライスした玉ねぎと角切りトマトを少量の油で炒める。盛り付け：熱いカフタを炒めたトマトの上にのせ、フラットブレッドとサラダを添えて提供する。",
+    "hi": "बारीक काटें: प्याज़ और अजमोद को लगभग पेस्ट होने तक बारीक काटें। मिश्रण मिलाएं: कीमा बीफ और भेड़ के मांस को प्याज़, अजमोद, जीरा, दालचीनी, नमक और काली मिर्च के साथ अच्छी तरह मिलाएं। गूंधें: मिश्रण को हाथ से कुछ मिनट गूंधें ताकि यह अच्छी तरह बंधे और लचीला हो जाए। आकार दें: मिश्रण के हिस्से लें और सीधे चपटी धातु की सींकों पर लंबे आकार में ढालें। ग्रिल करें: काफ़्ता को मध्यम-तेज़ आंच पर, सावधानी से पलटते हुए, 10-12 मिनट तक समान रूप से भूरा होने तक ग्रिल करें। टमाटर तैयार करें: इस बीच, कटे प्याज़ को कटे टमाटर के साथ थोड़े तेल में भूनें। परोसें: गरम काफ़्ता को भुने टमाटर के ऊपर, फ्लैटब्रेड और सलाद के साथ परोसें।",
+    "tr": "İNCE DOĞRAYIN: Soğan ve maydanozu neredeyse ezme kıvamına gelene kadar ince doğrayın. KARIŞTIRIN: Dana ve kuzu kıymayı soğan, maydanoz, kimyon, tarçın, tuz ve karabiberle iyice karıştırın. YOĞURUN: Karışımı birkaç dakika elle yoğurun, iyice bağlanıp elastik olması için. ŞEKİL VERİN: Karışımdan porsiyonlar alın ve doğrudan düz metal şişler üzerinde uzun bir şekil verin. IZGARA YAPIN: Köfteyi orta-yüksek ateşte, dikkatlice çevirerek, eşit şekilde kızarana kadar 10-12 dakika ızgara yapın. DOMATESLERİ HAZIRLAYIN: Bu arada, dilimlenmiş soğanı küp doğranmış domateslerle birlikte az yağda kavurun. SERVİS EDİN: Köfteyi sıcak, kavrulmuş domateslerin üzerinde, yanında yassı ekmek ve salatayla servis edin.",
+    "it": "TRITARE FINEMENTE: Tritate finemente la cipolla e il prezzemolo, quasi fino a formare una pasta. MESCOLARE: Unite il manzo e l'agnello macinati con la cipolla, il prezzemolo, il cumino, la cannella, sale e pepe, mescolando bene. IMPASTARE: Impastate il composto a mano per qualche minuto, in modo che si leghi bene e diventi elastico. MODELLARE: Prendete porzioni del composto e modellatele a forma allungata, direttamente su spiedini di metallo piatti. GRIGLIARE: Grigliate la kafta a fuoco medio-alto, girando con attenzione, per 10-12 minuti finché dorata uniformemente. PREPARARE I POMODORI: Nel frattempo, soffriggete la cipolla affettata con i pomodori a cubetti in poco olio. SERVIRE: Servite la kafta calda sopra i pomodori saltati, con pane piatto e insalata a lato.",
+    "ko": "잘게 썰기: 양파와 파슬리를 거의 페이스트가 될 정도로 잘게 썬다. 섞기: 소고기와 양고기 다짐육을 양파, 파슬리, 커민, 계피, 소금, 후추와 잘 섞는다. 반죽하기: 손으로 몇 분간 반죽해 잘 뭉치고 탄력이 생기게 한다. 모양 만들기: 반죽을 덜어 평평한 금속 꼬치에 바로 길쭉한 모양으로 빚는다. 굽기: 중강불에서 조심스럽게 뒤집으며 10~12분간 고르게 노릇해질 때까지 굽는다. 토마토 준비: 그동안 썬 양파와 깍둑썬 토마토를 약간의 기름에 볶는다. 담아내기: 뜨거운 카프타를 볶은 토마토 위에 올려 플랫브레드와 샐러드를 곁들여 낸다."
+  },
+  "originText": {
+    "ro": "Kafta este cuvântul folosit în toată bucătăria levantină pentru carne tocată condimentată modelată în diverse forme, de la chiftele rotunde la sulișoare alungite pe frigare. Rădăcina cuvântului provine din persanul kufta, care înseamnă a zdrobi sau a tăia mărunt, reflectând tehnica esențială de pregătire prin tocare fină, aproape până la textură de pastă.\n\nÎn Liban, kafta pe frigare, gătită direct pe flacără, este cea mai populară variantă, adesea servită alături de roșii coapte la aceeași temperatură. Familiile libaneze au fiecare propria rețetă de condimente, unele adăugând mentă uscată, altele piper Alep, dar combinația de bază — ceapă, pătrunjel, chimen — rămâne remarcabil de constantă în toată țara, transformând kafta într-una dintre mâncărurile care unesc identitatea culinară națională.",
+    "en": "Kafta is the word used throughout Levantine cuisine for spiced ground meat shaped into various forms, from round meatballs to elongated skewer logs. The word's root comes from the Persian kufta, meaning to crush or finely chop, reflecting the essential preparation technique of fine chopping, almost to a paste-like texture.\n\nIn Lebanon, skewered kafta, cooked directly over flame, is the most popular version, often served alongside tomatoes roasted at the same temperature. Lebanese families each have their own spice recipe, some adding dried mint, others Aleppo pepper, but the base combination — onion, parsley, cumin — remains remarkably constant across the country, making kafta one of the dishes that unites national culinary identity.",
+    "es": "Kafta es la palabra usada en toda la cocina levantina para la carne picada especiada moldeada en diversas formas, desde albóndigas redondas hasta rollos alargados en brocheta. La raíz de la palabra proviene del persa kufta, que significa aplastar o picar finamente, reflejando la técnica esencial de preparación mediante un picado fino, casi hasta una textura de pasta.\n\nEn el Líbano, la kafta en brocheta, cocinada directamente al fuego, es la versión más popular, a menudo servida junto a tomates asados a la misma temperatura. Cada familia libanesa tiene su propia receta de especias, algunas añadiendo menta seca, otras pimienta de Alepo, pero la combinación base — cebolla, perejil, comino — permanece notablemente constante en todo el país, convirtiendo a la kafta en uno de los platos que unen la identidad culinaria nacional.",
+    "fr": "Kafta est le mot utilisé dans toute la cuisine levantine pour la viande hachée épicée façonnée sous diverses formes, des boulettes rondes aux rouleaux allongés en brochette. La racine du mot vient du persan kufta, signifiant écraser ou hacher finement, reflétant la technique de préparation essentielle du hachage fin, presque jusqu'à une texture de pâte.\n\nAu Liban, la kafta en brochette, cuite directement au feu, est la version la plus populaire, souvent servie avec des tomates rôties à la même température. Chaque famille libanaise a sa propre recette d'épices, certaines ajoutant de la menthe séchée, d'autres du piment d'Alep, mais la combinaison de base — oignon, persil, cumin — reste remarquablement constante dans tout le pays, faisant de la kafta l'un des plats qui unissent l'identité culinaire nationale.",
+    "de": "Kafta ist das Wort, das in der gesamten levantinischen Küche für gewürztes Hackfleisch verwendet wird, das in verschiedene Formen gebracht wird, von runden Fleischbällchen bis zu länglichen Spießrollen. Die Wortwurzel stammt aus dem persischen kufta, was zerdrücken oder fein hacken bedeutet, und spiegelt die wesentliche Zubereitungstechnik des feinen Hackens wider, fast bis zu einer pastaartigen Textur.\n\nIm Libanon ist Kafta am Spieß, direkt über Flamme gegart, die beliebteste Version, oft serviert mit Tomaten, die bei derselben Temperatur geröstet werden. Libanesische Familien haben jeweils ihr eigenes Gewürzrezept, manche fügen getrocknete Minze hinzu, andere Aleppo-Pfeffer, doch die Grundkombination — Zwiebel, Petersilie, Kreuzkümmel — bleibt im ganzen Land bemerkenswert konstant und macht Kafta zu einem der Gerichte, die die nationale kulinarische Identität vereinen.",
+    "pt": "Kafta é a palavra usada em toda a cozinha levantina para carne picada temperada moldada em várias formas, desde almôndegas redondas até rolos alongados em espeto. A raiz da palavra vem do persa kufta, que significa esmagar ou picar finamente, refletindo a técnica essencial de preparação por picagem fina, quase até uma textura de pasta.\n\nNo Líbano, a kafta em espeto, cozinhada diretamente na chama, é a versão mais popular, frequentemente servida ao lado de tomates assados à mesma temperatura. Cada família libanesa tem a sua própria receita de especiarias, algumas adicionando hortelã seca, outras pimenta de Alepo, mas a combinação base — cebola, salsa, cominho — permanece notavelmente constante em todo o país, tornando a kafta um dos pratos que unem a identidade culinária nacional.",
+    "ru": "Кафта — слово, используемое во всей левантийской кухне для пряного мясного фарша, формируемого в различные формы, от круглых котлет до удлинённых шампуров-колбасок. Корень слова происходит от персидского kufta, означающего давить или мелко рубить, отражая важнейшую технику приготовления — мелкую рубку, почти до пастообразной текстуры.\n\nВ Ливане кафта на шампуре, приготовленная прямо на огне, — самая популярная версия, часто подаваемая вместе с помидорами, запечёнными при той же температуре. У каждой ливанской семьи свой рецепт специй — одни добавляют сушёную мяту, другие алеппский перец, но базовая комбинация — лук, петрушка, тмин — остаётся удивительно постоянной по всей стране, делая кафту одним из блюд, объединяющих национальную кулинарную идентичность.",
+    "ar": "الكفتة كلمة تُستخدم في جميع أنحاء المطبخ الشامي للحم المفروم المتبّل المشكَّل بأشكال متنوعة، من كرات مستديرة إلى لفائف مستطيلة على السيخ. يعود أصل الكلمة إلى الفارسية كوفتة، والتي تعني السحق أو الفرم الناعم، مما يعكس تقنية التحضير الأساسية بالفرم الناعم، حتى تقارب قوام العجينة.\n\nفي لبنان، تُعد الكفتة على السيخ، المطهية مباشرة على النار، النسخة الأكثر شعبية، وتُقدَّم غالبًا إلى جانب طماطم مشوية على نفس الحرارة. لكل عائلة لبنانية وصفتها الخاصة من التوابل، بعضها يضيف النعناع المجفف وأخرى فلفل حلبي، لكن المزيج الأساسي — البصل والبقدونس والكمون — يبقى ثابتًا بشكل ملحوظ في جميع أنحاء البلاد، مما يجعل الكفتة أحد الأطباق التي توحّد الهوية الطهوية الوطنية.",
+    "zh": "卡夫塔一词在整个黎凡特菜肴中用来指代调味肉末塑成的各种形状，从圆形肉丸到扦子上的长条卷。这个词的词根来自波斯语kufta，意为「压碎」或「细切」，反映了细切几乎至糊状质地的核心制作工艺。\n\n在黎巴嫩，直接在明火上烤制的扦子卡夫塔是最受欢迎的版本，常与同温度烤制的番茄一同上桌。每个黎巴嫩家庭都有自己的香料配方，有的加入干薄荷，有的加入阿勒颇辣椒，但基本组合——洋葱、欧芹、孜然——在全国各地都出奇地一致，使卡夫塔成为凝聚民族饮食文化认同的菜肴之一。",
+    "ja": "カフタは、丸いミートボールから串の上の細長いロール状のものまで、様々な形に成形された香辛料入りひき肉を指すレバント料理全体で使われる言葉である。この言葉の語源は、砕く、または細かく刻むという意味を持つペルシャ語のkuftaに由来し、ペースト状に近いほど細かく刻むという本質的な調理技法を反映している。\n\nレバノンでは、直火で調理される串カフタが最も人気のあるバージョンであり、しばしば同じ温度で焼いたトマトと共に提供される。レバノンの各家庭にはそれぞれ独自の香辛料のレシピがあり、乾燥ミントを加える家庭もあれば、アレッポペッパーを加える家庭もあるが、基本の組み合わせ――玉ねぎ、パセリ、クミン――は国中で驚くほど一定しており、カフタは国家の料理アイデンティティを結びつける料理の一つとなっている。",
+    "hi": "काफ़्ता वह शब्द है जिसका उपयोग पूरे लेवांतीन व्यंजनों में मसालेदार कीमा मांस के लिए किया जाता है, जिसे विभिन्न आकारों में ढाला जाता है, गोल कोफ्ते से लेकर सींक पर लंबे रोल तक। शब्द की जड़ फ़ारसी कुफ़्ता से आती है, जिसका अर्थ है कुचलना या बारीक काटना, जो लगभग पेस्ट जैसी बनावट तक बारीक काटने की आवश्यक तैयारी तकनीक को दर्शाता है।\n\nलेबनान में, सींक काफ़्ता, जो सीधे आंच पर पकाया जाता है, सबसे लोकप्रिय संस्करण है, जो अक्सर उसी तापमान पर भुने टमाटर के साथ परोसा जाता है। हर लेबनानी परिवार का अपना मसाला नुस्खा होता है, कुछ सूखा पुदीना जोड़ते हैं, कुछ अलेप्पो मिर्च, लेकिन मूल संयोजन — प्याज़, अजमोद, जीरा — पूरे देश में उल्लेखनीय रूप से स्थिर रहता है, जो काफ़्ता को राष्ट्रीय पाक पहचान को एकजुट करने वाले व्यंजनों में से एक बनाता है।",
+    "tr": "Köfte, yuvarlak köftelerden şişte uzun ruloya kadar çeşitli şekillerde şekillendirilen baharatlı kıyma için tüm Levant mutfağında kullanılan kelimedir. Kelimenin kökü, ezmek veya ince doğramak anlamına gelen Farsça kufta'dan gelir ve neredeyse ezme kıvamına gelene kadar ince doğramanın temel hazırlık tekniğini yansıtır.\n\nLübnan'da, doğrudan ateşte pişirilen şiş köfte en popüler versiyondur ve genellikle aynı sıcaklıkta kızartılmış domateslerle servis edilir. Her Lübnanlı ailenin kendi baharat tarifi vardır, bazıları kuru nane ekler, bazıları Halep biberi, ancak temel kombinasyon — soğan, maydanoz, kimyon — ülke genelinde dikkat çekici derecede sabit kalır ve köfteyi ulusal mutfak kimliğini birleştiren yemeklerden biri haline getirir.",
+    "it": "Kafta è la parola usata in tutta la cucina levantina per la carne macinata speziata modellata in varie forme, dalle polpette rotonde ai rotoli allungati su spiedo. La radice della parola deriva dal persiano kufta, che significa schiacciare o tritare finemente, riflettendo la tecnica di preparazione essenziale del tritare fine, quasi fino a una consistenza simile a una pasta.\n\nIn Libano, la kafta allo spiedo, cotta direttamente sulla fiamma, è la versione più popolare, spesso servita insieme a pomodori arrostiti alla stessa temperatura. Ogni famiglia libanese ha la propria ricetta di spezie, alcune aggiungendo menta secca, altre peperoncino di Aleppo, ma la combinazione base — cipolla, prezzemolo, cumino — rimane notevolmente costante in tutto il paese, rendendo la kafta uno dei piatti che unisce l'identità culinaria nazionale.",
+    "ko": "카프타는 레반트 요리 전역에서 둥근 미트볼부터 꼬치 위의 길쭉한 롤까지 다양한 형태로 빚어진 향신료 다진 고기를 가리키는 단어다. 이 단어의 어원은 으깨다 또는 잘게 썰다를 뜻하는 페르시아어 kufta에서 왔으며, 거의 페이스트 같은 질감이 될 정도로 잘게 써는 필수 조리 기법을 반영한다.\n\n레바논에서는 불 위에서 직접 조리하는 꼬치 카프타가 가장 인기 있는 버전으로, 같은 온도로 구운 토마토와 함께 제공되는 경우가 많다. 레바논의 각 가정마다 자신만의 향신료 레시피가 있어 어떤 곳은 말린 민트를, 어떤 곳은 알레포 고추를 추가하지만, 기본 조합인 양파, 파슬리, 커민은 전국적으로 놀라울 정도로 일정하게 유지되어 카프타를 국가 요리 정체성을 하나로 묶는 요리 중 하나로 만든다."
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 18,
+    "tags": [],
+    "desc": {
+      "ro": "Carne tocată condimentată la grătar, servită peste roșii călite și pâine lipie.",
+      "en": "Grilled spiced ground meat, served over sautéed tomatoes with flatbread.",
+      "es": "Carne picada especiada a la parrilla, servida sobre tomate salteado con pan plano.",
+      "fr": "Viande hachée épicée grillée, servie sur des tomates sautées avec du pain plat.",
+      "de": "Gegrilltes gewürztes Hackfleisch, über gedünsteten Tomaten mit Fladenbrot serviert.",
+      "pt": "Carne picada temperada grelhada, servida sobre tomate refogado com pão pita.",
+      "ru": "Жареный пряный фарш, подаётся поверх тушёных помидоров с лавашом.",
+      "ar": "لحم مفروم متبّل مشوي، يُقدَّم فوق طماطم محمّرة مع الخبز.",
+      "zh": "烤调味肉末，配炒番茄和薄饼食用。",
+      "ja": "グリルしたスパイシーなひき肉、炒めたトマトとフラットブレッドを添えて。",
+      "hi": "ग्रिल्ड मसालेदार कीमा, भुने टमाटर के ऊपर फ्लैटब्रेड के साथ परोसा गया।",
+      "tr": "Izgara baharatlı kıyma, kavrulmuş domates üzerinde yassı ekmekle servis edilir.",
+      "it": "Carne macinata speziata grigliata, servita su pomodori saltati con pane piatto.",
+      "ko": "구운 향신료 다진 고기, 볶은 토마토 위에 플랫브레드와 함께 제공."
+    }
+  }
+}

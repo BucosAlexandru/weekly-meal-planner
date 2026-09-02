@@ -1,0 +1,176 @@
+{
+  "id": 364,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Malaysia", "en": "Malaysia", "es": "Malasia", "fr": "Malaisie", "de": "Malaysia",
+    "pt": "Malásia", "ru": "Малайзия", "ar": "ماليزيا", "zh": "马来西亚", "ja": "マレーシア",
+    "hi": "मलेशिया", "tr": "Malezya", "it": "Malesia", "ko": "말레이시아"
+  },
+  "name": {
+    "ro": "Char Kway Teow", "en": "Char Kway Teow", "es": "Char Kway Teow", "fr": "Char Kway Teow",
+    "de": "Char Kway Teow", "pt": "Char Kway Teow", "ru": "Чар квай тео", "ar": "تشار كواي تيو", "zh": "炒粿条",
+    "ja": "チャークイティオ", "hi": "चार क्वे तेओ", "tr": "Char Kway Teow", "it": "Char Kway Teow", "ko": "차 퀘이 티아우"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍜", "t": "Tăiței plați de orez", "d": "Kway teow lați, prăjiți rapid la foc foarte mare."},
+      {"icon": "🦐", "t": "Creveți și cârnați", "d": "Creveți proaspeți și felii de cârnați chinezești dulci."},
+      {"icon": "🥚", "t": "Ou amestecat", "d": "Un ou spart direct în tigaie, amestecat printre tăiței."},
+      {"icon": "🔥", "t": "Wok hei intens", "d": "Aroma afumată caracteristică prăjirii rapide în wok fierbinte."}
+    ],
+    "en": [
+      {"icon": "🍜", "t": "Flat rice noodles", "d": "Wide kway teow noodles, stir-fried fast over very high heat."},
+      {"icon": "🦐", "t": "Prawns and sausage", "d": "Fresh prawns and slices of sweet Chinese sausage."},
+      {"icon": "🥚", "t": "Scrambled egg", "d": "An egg cracked straight into the wok, scrambled through the noodles."},
+      {"icon": "🔥", "t": "Intense wok hei", "d": "The signature smoky aroma from fast stir-frying in a scorching wok."}
+    ],
+    "es": [
+      {"icon": "🍜", "t": "Fideos planos de arroz", "d": "Fideos kway teow anchos, salteados rápido a fuego muy alto."},
+      {"icon": "🦐", "t": "Camarones y embutido", "d": "Camarones frescos y rodajas de embutido chino dulce."},
+      {"icon": "🥚", "t": "Huevo revuelto", "d": "Un huevo roto directamente en el wok, mezclado entre los fideos."},
+      {"icon": "🔥", "t": "Wok hei intenso", "d": "El aroma ahumado característico del salteado rápido en un wok muy caliente."}
+    ],
+    "fr": [
+      {"icon": "🍜", "t": "Nouilles de riz plates", "d": "Larges nouilles kway teow, sautées rapidement à feu très vif."},
+      {"icon": "🦐", "t": "Crevettes et saucisse", "d": "Crevettes fraîches et tranches de saucisse chinoise sucrée."},
+      {"icon": "🥚", "t": "Œuf brouillé", "d": "Un œuf cassé directement dans le wok, mélangé aux nouilles."},
+      {"icon": "🔥", "t": "Wok hei intense", "d": "L'arôme fumé caractéristique du sauté rapide dans un wok brûlant."}
+    ],
+    "de": [
+      {"icon": "🍜", "t": "Flache Reisnudeln", "d": "Breite Kway-Teow-Nudeln, schnell bei sehr hoher Hitze gebraten."},
+      {"icon": "🦐", "t": "Garnelen und Wurst", "d": "Frische Garnelen und Scheiben süßer chinesischer Wurst."},
+      {"icon": "🥚", "t": "Verrührtes Ei", "d": "Ein direkt in den Wok geschlagenes Ei, unter die Nudeln gerührt."},
+      {"icon": "🔥", "t": "Intensiver Wok Hei", "d": "Das charakteristische rauchige Aroma vom schnellen Braten im glühenden Wok."}
+    ],
+    "pt": [
+      {"icon": "🍜", "t": "Macarrão de arroz plano", "d": "Macarrão kway teow largo, salteado rapidamente em lume muito alto."},
+      {"icon": "🦐", "t": "Camarão e chouriço", "d": "Camarão fresco e fatias de chouriço chinês doce."},
+      {"icon": "🥚", "t": "Ovo mexido", "d": "Um ovo partido diretamente no wok, misturado entre o macarrão."},
+      {"icon": "🔥", "t": "Wok hei intenso", "d": "O aroma defumado característico do refogado rápido num wok escaldante."}
+    ],
+    "ru": [
+      {"icon": "🍜", "t": "Плоская рисовая лапша", "d": "Широкая лапша квай тео, быстро обжаренная на очень сильном огне."},
+      {"icon": "🦐", "t": "Креветки и колбаски", "d": "Свежие креветки и ломтики сладкой китайской колбасы."},
+      {"icon": "🥚", "t": "Взбитое яйцо", "d": "Яйцо, разбитое прямо в вок, перемешанное с лапшой."},
+      {"icon": "🔥", "t": "Насыщенный вок хей", "d": "Характерный дымный аромат от быстрого жарения в раскалённом воке."}
+    ],
+    "ar": [
+      {"icon": "🍜", "t": "شعيرية أرز مسطحة", "d": "شعيرية كواي تيو عريضة، تُقلى بسرعة على نار عالية جدًا."},
+      {"icon": "🦐", "t": "روبيان ونقانق", "d": "روبيان طازج وشرائح نقانق صينية حلوة."},
+      {"icon": "🥚", "t": "بيض مخفوق", "d": "بيضة تُكسر مباشرة في الووك وتُخلط مع الشعيرية."},
+      {"icon": "🔥", "t": "نكهة ووك هاي قوية", "d": "الرائحة المدخنة المميزة من القلي السريع في ووك ساخن جدًا."}
+    ],
+    "zh": [
+      {"icon": "🍜", "t": "扁平米粉", "d": "宽粿条，用极高的火快速翻炒。"},
+      {"icon": "🦐", "t": "虾与腊肠", "d": "新鲜虾和甜味中式腊肠片。"},
+      {"icon": "🥚", "t": "炒蛋", "d": "鸡蛋直接打入炒锅中，与粿条一同翻炒。"},
+      {"icon": "🔥", "t": "浓郁镬气", "d": "在滚烫铁镬中快炒产生的标志性烟熏香气。"}
+    ],
+    "ja": [
+      {"icon": "🍜", "t": "平たい米麺", "d": "幅広のクイティオ麺を非常に強火で手早く炒める。"},
+      {"icon": "🦐", "t": "エビとソーセージ", "d": "新鮮なエビと甘い中国風ソーセージのスライス。"},
+      {"icon": "🥚", "t": "溶き卵", "d": "卵をウォックに直接割り入れ、麺と一緒に混ぜる。"},
+      {"icon": "🔥", "t": "強烈なウォックヘイ", "d": "灼熱のウォックで手早く炒めることで生まれる独特の香ばしさ。"}
+    ],
+    "hi": [
+      {"icon": "🍜", "t": "चपटी चावल की नूडल्स", "d": "चौड़ी क्वे तेओ नूडल्स, बहुत तेज़ आंच पर तेज़ी से भूनी गई।"},
+      {"icon": "🦐", "t": "झींगा और सॉसेज", "d": "ताज़ा झींगा और मीठे चीनी सॉसेज के टुकड़े।"},
+      {"icon": "🥚", "t": "फेंटा अंडा", "d": "वोक में सीधे तोड़ा अंडा, नूडल्स के साथ मिलाया गया।"},
+      {"icon": "🔥", "t": "तीव्र वोक हे", "d": "बेहद गरम वोक में तेज़ी से भूनने से बनी खास धुएँदार सुगंध।"}
+    ],
+    "tr": [
+      {"icon": "🍜", "t": "Düz pirinç eriştesi", "d": "Çok yüksek ateşte hızlıca kavrulan geniş kway teow eriştesi."},
+      {"icon": "🦐", "t": "Karides ve sosis", "d": "Taze karides ve tatlı Çin sosisi dilimleri."},
+      {"icon": "🥚", "t": "Karıştırılmış yumurta", "d": "Doğrudan wokta kırılan bir yumurta, eriştelerle karıştırılır."},
+      {"icon": "🔥", "t": "Yoğun wok hei", "d": "Kızgın wokta hızlı kavurmadan gelen karakteristik dumanlı aroma."}
+    ],
+    "it": [
+      {"icon": "🍜", "t": "Tagliatelle piatte di riso", "d": "Larghe tagliatelle kway teow, saltate velocemente a fuoco molto alto."},
+      {"icon": "🦐", "t": "Gamberi e salsiccia", "d": "Gamberi freschi e fette di salsiccia cinese dolce."},
+      {"icon": "🥚", "t": "Uovo strapazzato", "d": "Un uovo rotto direttamente nel wok, mescolato tra le tagliatelle."},
+      {"icon": "🔥", "t": "Wok hei intenso", "d": "L'aroma affumicato caratteristico della saltatura veloce in un wok rovente."}
+    ],
+    "ko": [
+      {"icon": "🍜", "t": "납작한 쌀국수", "d": "매우 센 불에서 빠르게 볶는 넓은 퀘이 티아우 국수."},
+      {"icon": "🦐", "t": "새우와 소시지", "d": "신선한 새우와 달콤한 중국식 소시지 조각."},
+      {"icon": "🥚", "t": "스크램블 에그", "d": "웍에 바로 깨뜨린 달걀을 국수와 함께 섞는다."},
+      {"icon": "🔥", "t": "강렬한 웍헤이", "d": "뜨거운 웍에서 빠르게 볶아 생기는 특유의 훈연 향."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g tăiței kway teow (proaspeți)", "150g creveți curățați", "100g cârnați chinezești, feliați", "2 ouă", "150g muguri de fasole", "3 fire ceapă verde, tăiate", "3 linguri sos de soia dulce", "1 lingură sos de soia deschis", "1 linguriță pastă de crevete (opțional)", "3 căței de usturoi tocați", "3 linguri ulei"],
+    "en": ["400g kway teow noodles (fresh)", "150g peeled prawns", "100g Chinese sausage, sliced", "2 eggs", "150g bean sprouts", "3 green onions, cut", "3 tbsp sweet soy sauce", "1 tbsp light soy sauce", "1 tsp shrimp paste (optional)", "3 garlic cloves, minced", "3 tbsp oil"],
+    "es": ["400g de fideos kway teow (frescos)", "150g de camarones pelados", "100g de embutido chino, en rodajas", "2 huevos", "150g de brotes de soja", "3 cebolletas, cortadas", "3 cdas de salsa de soja dulce", "1 cda de salsa de soja clara", "1 cdta de pasta de camarones (opcional)", "3 dientes de ajo picados", "3 cdas de aceite"],
+    "fr": ["400g de nouilles kway teow (fraîches)", "150g de crevettes décortiquées", "100g de saucisse chinoise, tranchée", "2 œufs", "150g de pousses de soja", "3 oignons verts, coupés", "3 c. à s. de sauce soja sucrée", "1 c. à s. de sauce soja claire", "1 c. à c. de pâte de crevettes (facultatif)", "3 gousses d'ail hachées", "3 c. à s. d'huile"],
+    "de": ["400g Kway-Teow-Nudeln (frisch)", "150g geschälte Garnelen", "100g chinesische Wurst, in Scheiben", "2 Eier", "150g Sojasprossen", "3 Frühlingszwiebeln, geschnitten", "3 EL süße Sojasauce", "1 EL helle Sojasauce", "1 TL Garnelenpaste (optional)", "3 Knoblauchzehen, gehackt", "3 EL Öl"],
+    "pt": ["400g de macarrão kway teow (fresco)", "150g de camarão descascado", "100g de chouriço chinês, fatiado", "2 ovos", "150g de brotos de feijão", "3 cebolinhas, cortadas", "3 c. sopa de molho de soja doce", "1 c. sopa de molho de soja claro", "1 colher de chá de pasta de camarão (opcional)", "3 dentes de alho picados", "3 c. sopa de óleo"],
+    "ru": ["400г лапши квай тео (свежей)", "150г очищенных креветок", "100г китайской колбасы, нарезанной", "2 яйца", "150г ростков фасоли", "3 стебля зелёного лука, нарезанного", "3 ст.л. сладкого соевого соуса", "1 ст.л. светлого соевого соуса", "1 ч.л. креветочной пасты (по желанию)", "3 зубчика чеснока, измельчённого", "3 ст.л. масла"],
+    "ar": ["400غ شعيرية كواي تيو (طازجة)", "150غ روبيان مقشر", "100غ نقانق صينية مقطعة شرائح", "بيضتان", "150غ براعم الفول", "3 أعواد بصل أخضر مقطعة", "3 ملاعق كبيرة صلصة صويا حلوة", "ملعقة كبيرة صلصة صويا فاتحة", "ملعقة صغيرة معجون روبيان (اختياري)", "3 فصوص ثوم مفروم", "3 ملاعق كبيرة زيت"],
+    "zh": ["粿条400克（新鲜）", "去壳虾150克", "中式腊肠100克，切片", "鸡蛋2个", "豆芽150克", "青葱3根，切段", "甜酱油3汤匙", "生抽1汤匙", "虾酱1茶匙（可选）", "大蒜3瓣，切碎", "油3汤匙"],
+    "ja": ["クイティオ麺 400g（生）", "殻をむいたエビ 150g", "中華ソーセージ 100g（スライス）", "卵 2個", "もやし 150g", "青ねぎ 3本（切る）", "甘い醤油 大さじ3", "薄口醤油 大さじ1", "エビペースト 小さじ1（お好みで）", "にんにく 3片（みじん切り）", "油 大さじ3"],
+    "hi": ["400 ग्राम क्वे तेओ नूडल्स (ताज़ी)", "150 ग्राम छिला झींगा", "100 ग्राम चीनी सॉसेज, कटा हुआ", "2 अंडे", "150 ग्राम बीन स्प्राउट्स", "3 हरे प्याज़, कटे", "3 बड़े चम्मच मीठी सोया सॉस", "1 बड़ा चम्मच हल्की सोया सॉस", "1 छोटा चम्मच झींगा पेस्ट (वैकल्पिक)", "3 लहसुन की कलियाँ, कटी", "3 बड़े चम्मच तेल"],
+    "tr": ["400g kway teow eriştesi (taze)", "150g soyulmuş karides", "100g Çin sosisi, dilimlenmiş", "2 yumurta", "150g fasulye filizi", "3 yeşil soğan, doğranmış", "3 yemek kaşığı tatlı soya sosu", "1 yemek kaşığı açık soya sosu", "1 çay kaşığı karides ezmesi (isteğe bağlı)", "3 diş sarımsak, kıyılmış", "3 yemek kaşığı yağ"],
+    "it": ["400g di tagliatelle kway teow (fresche)", "150g di gamberi sgusciati", "100g di salsiccia cinese, affettata", "2 uova", "150g di germogli di soia", "3 cipollotti, tagliati", "3 cucchiai di salsa di soia dolce", "1 cucchiaio di salsa di soia chiara", "1 cucchiaino di pasta di gamberetti (opzionale)", "3 spicchi d'aglio tritati", "3 cucchiai di olio"],
+    "ko": ["퀘이 티아우 국수 400g(생면)", "껍질 벗긴 새우 150g", "중국식 소시지 100g, 썬 것", "달걀 2개", "숙주 150g", "파 3대, 썬 것", "달콤한 간장 3큰술", "연한 간장 1큰술", "새우 페이스트 1작은술(선택사항)", "마늘 3쪽, 다진 것", "기름 3큰술"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE INGREDIENTE: Taie cârnații felii subțiri, curăță creveții și taie ceapa verde. ÎNCĂLZIRE WOK: Încălzește wokul la foc foarte mare până începe să fumege ușor, adaugă uleiul. CĂLIRE USTUROI: Călește usturoiul tocat rapid, 15 secunde, până devine aromat, fără să se ardă. ADĂUGARE CREVEȚI: Adaugă creveții și cârnații, prăjește 2 minute până creveții își schimbă culoarea. ADĂUGARE TĂIȚEI: Adaugă tăițeii kway teow și sosurile de soia, amestecă rapid și continuu la foc mare. FACERE LOC PENTRU OU: Împinge tăițeii într-o parte, sparge ouăle în spațiul liber, amestecă-le rapid, apoi combină cu tăițeii. FINALIZARE: Adaugă mugurii de fasole și ceapa verde, prăjește încă 1 minut la foc maxim, servește imediat fierbinte.",
+    "en": "PREPARE INGREDIENTS: Slice the sausage thin, clean the prawns and cut the green onion. HEAT WOK: Heat the wok over very high heat until it starts to lightly smoke, add the oil. FRY GARLIC: Fry the minced garlic quickly, 15 seconds, until fragrant, without burning. ADD PRAWNS: Add the prawns and sausage, stir-fry for 2 minutes until the prawns change color. ADD NOODLES: Add the kway teow noodles and soy sauces, stir quickly and continuously over high heat. MAKE ROOM FOR EGG: Push the noodles to one side, crack the eggs into the empty space, scramble quickly, then combine with the noodles. FINISH: Add the bean sprouts and green onion, stir-fry for another minute over maximum heat, serve immediately hot.",
+    "es": "PREPARAR LOS INGREDIENTES: Corta el embutido en rodajas finas, limpia los camarones y corta la cebolleta. CALENTAR EL WOK: Calienta el wok a fuego muy alto hasta que empiece a humear ligeramente, añade el aceite. FREÍR EL AJO: Fríe el ajo picado rápidamente, 15 segundos, hasta que esté aromático, sin quemarse. AÑADIR LOS CAMARONES: Añade los camarones y el embutido, saltea 2 minutos hasta que los camarones cambien de color. AÑADIR LOS FIDEOS: Añade los fideos kway teow y las salsas de soja, remueve rápida y continuamente a fuego alto. HACER ESPACIO PARA EL HUEVO: Empuja los fideos hacia un lado, rompe los huevos en el espacio vacío, revuelve rápido, luego combina con los fideos. TERMINAR: Añade los brotes de soja y la cebolleta, saltea otro minuto a fuego máximo, sirve caliente de inmediato.",
+    "fr": "PRÉPARER LES INGRÉDIENTS: Coupez la saucisse en fines tranches, nettoyez les crevettes et coupez l'oignon vert. CHAUFFER LE WOK: Faites chauffer le wok à feu très vif jusqu'à ce qu'il fume légèrement, ajoutez l'huile. FRIRE L'AIL: Faites frire l'ail haché rapidement, 15 secondes, jusqu'à ce qu'il soit parfumé, sans brûler. AJOUTER LES CREVETTES: Ajoutez les crevettes et la saucisse, faites sauter 2 minutes jusqu'à ce que les crevettes changent de couleur. AJOUTER LES NOUILLES: Ajoutez les nouilles kway teow et les sauces soja, remuez rapidement et continuellement à feu vif. FAIRE DE LA PLACE POUR L'ŒUF: Poussez les nouilles d'un côté, cassez les œufs dans l'espace vide, brouillez rapidement, puis combinez avec les nouilles. FINALISER: Ajoutez les pousses de soja et l'oignon vert, faites sauter encore une minute à feu maximum, servez immédiatement chaud.",
+    "de": "ZUTATEN VORBEREITEN: Die Wurst dünn schneiden, die Garnelen putzen und die Frühlingszwiebel schneiden. WOK ERHITZEN: Den Wok bei sehr hoher Hitze erhitzen, bis er leicht zu rauchen beginnt, das Öl hinzufügen. KNOBLAUCH BRATEN: Den gehackten Knoblauch schnell 15 Sekunden braten, bis er duftet, ohne zu verbrennen. GARNELEN HINZUFÜGEN: Die Garnelen und die Wurst hinzufügen, 2 Minuten braten, bis die Garnelen die Farbe wechseln. NUDELN HINZUFÜGEN: Die Kway-Teow-Nudeln und die Sojasaucen hinzufügen, schnell und kontinuierlich bei hoher Hitze rühren. PLATZ FÜR EI SCHAFFEN: Die Nudeln zur Seite schieben, die Eier in den leeren Raum schlagen, schnell verrühren, dann mit den Nudeln vermischen. FERTIGSTELLEN: Die Sojasprossen und die Frühlingszwiebel hinzufügen, eine weitere Minute bei maximaler Hitze braten, sofort heiß servieren.",
+    "pt": "PREPARAR OS INGREDIENTES: Corte o chouriço em fatias finas, limpe o camarão e corte a cebolinha. AQUECER O WOK: Aqueça o wok em lume muito alto até começar a fumegar levemente, junte o óleo. FRITAR O ALHO: Frite o alho picado rapidamente, 15 segundos, até ficar aromático, sem queimar. ADICIONAR O CAMARÃO: Junte o camarão e o chouriço, salteie 2 minutos até o camarão mudar de cor. ADICIONAR O MACARRÃO: Junte o macarrão kway teow e os molhos de soja, mexa rápida e continuamente em lume alto. ABRIR ESPAÇO PARA O OVO: Empurre o macarrão para um lado, parta os ovos no espaço vazio, mexa rapidamente, depois combine com o macarrão. FINALIZAR: Junte os brotos de feijão e a cebolinha, salteie mais um minuto em lume máximo, sirva imediatamente quente.",
+    "ru": "ПОДГОТОВКА ИНГРЕДИЕНТОВ: Нарежьте колбасу тонкими ломтиками, очистите креветки и нарежьте зелёный лук. РАЗОГРЕВ ВОКА: Разогрейте вок на очень сильном огне, пока не начнёт слегка дымиться, добавьте масло. ОБЖАРКА ЧЕСНОКА: Быстро обжарьте измельчённый чеснок 15 секунд до аромата, не подгорая. ДОБАВЛЕНИЕ КРЕВЕТОК: Добавьте креветки и колбасу, жарьте 2 минуты, пока креветки не изменят цвет. ДОБАВЛЕНИЕ ЛАПШИ: Добавьте лапшу квай тео и соевые соусы, быстро и непрерывно помешивайте на сильном огне. МЕСТО ДЛЯ ЯЙЦА: Отодвиньте лапшу в сторону, разбейте яйца в пустое пространство, быстро взбейте, затем смешайте с лапшой. ЗАВЕРШЕНИЕ: Добавьте ростки фасоли и зелёный лук, жарьте ещё минуту на максимальном огне, подавайте немедленно горячим.",
+    "ar": "تحضير المكونات: قطّع النقانق شرائح رفيعة، نظّف الروبيان وقطّع البصل الأخضر. تسخين الووك: سخّن الووك على نار عالية جدًا حتى يبدأ بالتدخين خفيفًا، أضف الزيت. تحمير الثوم: حمّر الثوم المفروم بسرعة لمدة 15 ثانية حتى تفوح رائحته دون أن يحترق. إضافة الروبيان: أضف الروبيان والنقانق، قلّب لمدة دقيقتين حتى يتغير لون الروبيان. إضافة الشعيرية: أضف شعيرية الكواي تيو وصلصات الصويا، قلّب بسرعة واستمرارية على نار عالية. إفساح مكان للبيض: ادفع الشعيرية إلى جانب، اكسر البيض في المساحة الفارغة، قلّبه بسرعة، ثم ادمجه مع الشعيرية. اللمسات الأخيرة: أضف براعم الفول والبصل الأخضر، قلّب لمدة دقيقة أخرى على أقصى حرارة، قدّمه ساخنًا فورًا.",
+    "zh": "准备食材：将腊肠切薄片，清理虾，切好青葱。加热炒锅：将炒锅用极高火加热至微微冒烟，加入油。炒蒜：快速炒切碎的大蒜15秒至香气四溢，不要炒焦。加入虾：加入虾和腊肠，翻炒2分钟直至虾变色。加入粿条：加入粿条和酱油，大火快速持续翻炒。留出空间打蛋：将粿条推到一边，在空出的地方打入鸡蛋，快速炒散后与粿条混合。最后完成：加入豆芽和青葱，大火再翻炒1分钟，立即趁热食用。",
+    "ja": "材料を準備する：ソーセージを薄切りにし、エビを掃除し、青ねぎを切る。ウォックを熱する：ウォックを非常に強火で軽く煙が出るまで熱し、油を加える。にんにくを炒める：みじん切りにんにくを焦がさないよう15秒素早く炒め、香りを出す。エビを加える：エビとソーセージを加え、エビの色が変わるまで2分炒める。麺を加える：クイティオ麺と醤油類を加え、強火で素早く絶えずかき混ぜる。卵のスペースを作る：麺を片側に寄せ、空いたスペースに卵を割り入れて素早くかき混ぜ、麺と合わせる。仕上げ：もやしと青ねぎを加え、最大火力でさらに1分炒め、すぐに熱いうちに提供する。",
+    "hi": "सामग्री तैयार करें: सॉसेज को पतले टुकड़ों में काटें, झींगे साफ करें और हरा प्याज़ काटें। वोक गरम करें: वोक को बहुत तेज़ आंच पर हल्का धुआं निकलने तक गरम करें, तेल डालें। लहसुन भूनें: कटे लहसुन को तेज़ी से 15 सेकंड भूनें जब तक सुगंधित न हो, जले नहीं। झींगे डालें: झींगे और सॉसेज डालें, 2 मिनट भूनें जब तक झींगे का रंग न बदल जाए। नूडल्स डालें: क्वे तेओ नूडल्स और सोया सॉस डालें, तेज़ आंच पर तेज़ी से लगातार हिलाएं। अंडे के लिए जगह बनाएं: नूडल्स को एक तरफ धकेलें, खाली जगह में अंडे तोड़ें, तेज़ी से फेंटें, फिर नूडल्स के साथ मिलाएं। अंतिम रूप दें: बीन स्प्राउट्स और हरा प्याज़ डालें, अधिकतम आंच पर एक और मिनट भूनें, तुरंत गरमागरम परोसें।",
+    "tr": "MALZEMELERİ HAZIRLAYIN: Sosisi ince dilimleyin, karidesleri temizleyin ve yeşil soğanı doğrayın. WOKU ISITIN: Woku çok yüksek ateşte hafifçe tütmeye başlayana kadar ısıtın, yağı ekleyin. SARIMSAĞI KAVURUN: Kıyılmış sarımsağı yanmadan kokusu çıkana kadar 15 saniye hızlıca kavurun. KARİDESLERİ EKLEYİN: Karidesleri ve sosisi ekleyin, karidesler renk değiştirene kadar 2 dakika kavurun. ERİŞTEYİ EKLEYİN: Kway teow eriştesini ve soya soslarını ekleyin, yüksek ateşte hızlı ve sürekli karıştırın. YUMURTA İÇİN YER AÇIN: Eriştelerşi bir kenara itin, boş alana yumurtaları kırın, hızlıca karıştırın, sonra eriştelerle birleştirin. SON DOKUNUŞ: Fasulye filizlerini ve yeşil soğanı ekleyin, maksimum ateşte bir dakika daha kavurun, hemen sıcak servis edin.",
+    "it": "PREPARARE GLI INGREDIENTI: Tagliate la salsiccia a fette sottili, pulite i gamberi e tagliate il cipollotto. SCALDARE IL WOK: Scaldate il wok a fuoco molto alto finché inizia a fumare leggermente, aggiungete l'olio. SOFFRIGGERE L'AGLIO: Soffriggete l'aglio tritato rapidamente, 15 secondi, finché profumato, senza bruciarlo. AGGIUNGERE I GAMBERI: Aggiungete i gamberi e la salsiccia, saltate 2 minuti finché i gamberi cambiano colore. AGGIUNGERE LE TAGLIATELLE: Aggiungete le tagliatelle kway teow e le salse di soia, mescolate rapidamente e continuamente a fuoco alto. FARE SPAZIO PER L'UOVO: Spingete le tagliatelle da un lato, rompete le uova nello spazio vuoto, mescolate rapidamente, poi unite alle tagliatelle. FINIRE: Aggiungete i germogli di soia e il cipollotto, saltate ancora un minuto a fuoco massimo, servite subito caldo.",
+    "ko": "재료 준비: 소시지를 얇게 썰고 새우를 손질하고 파를 썬다. 웍 예열: 웍을 매우 센 불로 살짝 연기가 날 때까지 달군 후 기름을 넣는다. 마늘 볶기: 다진 마늘을 타지 않게 15초간 빠르게 볶아 향을 낸다. 새우 넣기: 새우와 소시지를 넣고 새우 색이 변할 때까지 2분간 볶는다. 국수 넣기: 퀘이 티아우 국수와 간장을 넣고 센 불에서 빠르고 지속적으로 저어준다. 달걀 공간 만들기: 국수를 한쪽으로 밀고 빈 공간에 달걀을 깨뜨려 빠르게 스크램블한 후 국수와 섞는다. 마무리: 숙주와 파를 넣고 최대 화력으로 1분 더 볶은 후 즉시 뜨겁게 낸다."
+  },
+  "originText": {
+    "ro": "Char kway teow înseamnă literal tăiței de orez prăjiți în dialectul hokkien, vorbit de mulți dintre migranții chinezi care s-au stabilit în Penang și Singapore în secolele XIX-XX, aducând cu ei tradițiile bucătăriei prăjite rapid la foc mare. Rețeta reflectă originile modeste ale felului de mâncare — inițial, era o gustare ieftină, plină de calorii, pentru muncitorii docherilor și pescarilor, făcută cu untură de porc și organe.\n\nÎn Penang, considerat locul de naștere al felului, competiția dintre vânzătorii stradali pentru cel mai bun char kway teow este legendară, fiecare având propriul secret pentru wok hei — aroma afumată distinctă care apare doar când tăițeii sunt prăjiți suficient de rapid și la o temperatură suficient de mare într-un wok de fier bătut manual, o abilitate care necesită ani de exersare pentru a fi stăpânită corect.",
+    "en": "Char kway teow literally means stir-fried rice noodles in Hokkien dialect, spoken by many of the Chinese migrants who settled in Penang and Singapore in the 19th-20th centuries, bringing with them the traditions of fast, high-heat stir-frying. The recipe reflects the dish's humble origins — it was originally a cheap, calorie-dense snack for dockworkers and fishermen, made with pork lard and offal.\n\nIn Penang, considered the dish's birthplace, competition among street vendors for the best char kway teow is legendary, each having their own secret for wok hei — the distinctive smoky aroma that only appears when the noodles are stir-fried fast enough and hot enough in a hand-hammered iron wok, a skill that takes years of practice to master properly.",
+    "es": "Char kway teow significa literalmente fideos de arroz salteados en dialecto hokkien, hablado por muchos de los migrantes chinos que se establecieron en Penang y Singapur en los siglos XIX-XX, trayendo consigo las tradiciones del salteado rápido a fuego alto. La receta refleja los humildes orígenes del plato — originalmente era un tentempié barato y calórico para estibadores y pescadores, hecho con manteca de cerdo y vísceras.\n\nEn Penang, considerada la cuna del plato, la competencia entre vendedores callejeros por el mejor char kway teow es legendaria, cada uno con su propio secreto para el wok hei — el distintivo aroma ahumado que solo aparece cuando los fideos se saltean lo bastante rápido y a suficiente temperatura en un wok de hierro forjado a mano, una habilidad que requiere años de práctica para dominar correctamente.",
+    "fr": "Char kway teow signifie littéralement nouilles de riz sautées en dialecte hokkien, parlé par beaucoup de migrants chinois installés à Penang et Singapour aux XIXe-XXe siècles, apportant avec eux les traditions du sauté rapide à feu vif. La recette reflète les origines modestes du plat — c'était à l'origine une collation bon marché et calorique pour les dockers et pêcheurs, faite de saindoux et d'abats.\n\nÀ Penang, considérée comme le berceau du plat, la compétition entre vendeurs de rue pour le meilleur char kway teow est légendaire, chacun ayant son propre secret pour le wok hei — l'arôme fumé caractéristique qui n'apparaît que lorsque les nouilles sont sautées assez rapidement et à une température assez élevée dans un wok en fer forgé à la main, une compétence nécessitant des années de pratique pour être correctement maîtrisée.",
+    "de": "Char Kway Teow bedeutet wörtlich gebratene Reisnudeln im Hokkien-Dialekt, gesprochen von vielen der chinesischen Migranten, die sich im 19.-20. Jahrhundert in Penang und Singapur niederließen und die Traditionen des schnellen Bratens bei hoher Hitze mitbrachten. Das Rezept spiegelt die bescheidenen Ursprünge des Gerichts wider — ursprünglich war es ein billiger, kalorienreicher Snack für Hafenarbeiter und Fischer, hergestellt aus Schweineschmalz und Innereien.\n\nIn Penang, das als Geburtsort des Gerichts gilt, ist der Wettbewerb unter Straßenverkäufern um das beste Char Kway Teow legendär, jeder mit seinem eigenen Geheimnis für Wok Hei — das charakteristische rauchige Aroma, das nur entsteht, wenn die Nudeln schnell genug und heiß genug in einem handgehämmerten Eisenwok gebraten werden, eine Fähigkeit, die Jahre der Übung erfordert, um sie richtig zu meistern.",
+    "pt": "Char kway teow significa literalmente macarrão de arroz salteado em dialeto hokkien, falado por muitos dos migrantes chineses que se estabeleceram em Penang e Singapura nos séculos XIX-XX, trazendo consigo as tradições do salteado rápido em fogo alto. A receita reflete as origens humildes do prato — originalmente era um lanche barato e calórico para estivadores e pescadores, feito com banha de porco e miudezas.\n\nEm Penang, considerada o berço do prato, a competição entre vendedores ambulantes pelo melhor char kway teow é lendária, cada um com o seu próprio segredo para o wok hei — o aroma defumado distinto que só aparece quando o macarrão é salteado rápido e quente o suficiente num wok de ferro forjado à mão, uma habilidade que requer anos de prática para dominar corretamente.",
+    "ru": "Чар квай тео буквально означает жареная рисовая лапша на диалекте хоккиен, на котором говорили многие китайские мигранты, поселившиеся в Пенанге и Сингапуре в XIX-XX веках, принёсшие с собой традиции быстрого жарения на сильном огне. Рецепт отражает скромное происхождение блюда — изначально это была дешёвая, калорийная закуска для докеров и рыбаков, приготовленная на свином сале с субпродуктами.\n\nВ Пенанге, считающемся родиной блюда, соперничество уличных торговцев за лучший чар квай тео легендарно, у каждого свой секрет вок хей — характерного дымного аромата, появляющегося только когда лапша жарится достаточно быстро и достаточно горячо в кованом железном воке, — навык, требующий лет практики для правильного овладения.",
+    "ar": "تشار كواي تيو تعني حرفيًا شعيرية الأرز المقلية بلهجة هوكيين، التي يتحدثها الكثير من المهاجرين الصينيين الذين استقروا في بينانج وسنغافورة في القرنين التاسع عشر والعشرين، جالبين معهم تقاليد القلي السريع على نار عالية. تعكس الوصفة الأصول المتواضعة للطبق — كانت في الأصل وجبة خفيفة رخيصة وعالية السعرات للعمال في الموانئ والصيادين، مصنوعة من دهن الخنزير والأحشاء.\n\nفي بينانج، التي تُعتبر مسقط رأس الطبق، المنافسة بين الباعة المتجولين على أفضل تشار كواي تيو أسطورية، ولكل منهم سره الخاص لتحقيق ووك هاي — الرائحة المدخنة المميزة التي لا تظهر إلا عندما تُقلى الشعيرية بسرعة كافية وحرارة كافية في ووك حديدي مطروق يدويًا، وهي مهارة تتطلب سنوات من الممارسة لإتقانها بشكل صحيح.",
+    "zh": "炒粿条在福建方言中字面意思是「炒米粉」，这一方言由19至20世纪定居于槟城和新加坡的许多华人移民所说，他们带来了大火快炒的传统。这道食谱反映了这道菜谦逊的起源——它最初是码头工人和渔民的廉价高热量小吃，用猪油和内脏制成。\n\n在被视为这道菜发源地的槟城，街头小贩之间争夺最佳炒粿条的竞争堪称传奇，每个人都有自己保持镬气的秘诀——这种独特的烟熏香气只有在手工锻打的铁镬中，以足够快的速度和足够高的温度快炒时才会产生，这项技艺需要多年练习才能真正掌握。",
+    "ja": "チャークイティオは、19〜20世紀にペナンとシンガポールに定住した多くの中国系移民が話していた福建語で「炒めた米麺」を文字通り意味し、彼らは強火で素早く炒める伝統を持ち込んだ。このレシピはこの料理の質素な起源を反映している――もともとは港湾労働者や漁師のための、豚の脂と内臓を使った安価で高カロリーな軽食だった。\n\nこの料理の発祥地とされるペナンでは、最高のチャークイティオをめぐる屋台商人同士の競争が伝説的であり、それぞれがウォックヘイのための独自の秘訣を持っている――これは、手打ちの鉄製ウォックで麺が十分な速さと十分な熱で炒められたときにのみ現れる特徴的な燻製のような香りであり、この技術を正しく習得するには何年もの練習が必要である。",
+    "hi": "चार क्वे तेओ का शाब्दिक अर्थ है हक्कीन बोली में तली चावल की नूडल्स, जो 19वीं-20वीं सदी में पेनांग और सिंगापुर में बसे कई चीनी प्रवासियों द्वारा बोली जाती थी, जो अपने साथ तेज़ आंच पर तेज़ी से भूनने की परंपराएं लाए। यह नुस्खा व्यंजन की विनम्र उत्पत्ति को दर्शाता है — यह मूल रूप से डॉकवर्कर्स और मछुआरों के लिए सस्ता, उच्च-कैलोरी नाश्ता था, जो सुअर की चर्बी और अंग मांस से बनाया जाता था।\n\nपेनांग में, जिसे व्यंजन का जन्मस्थान माना जाता है, सबसे अच्छे चार क्वे तेओ के लिए सड़क विक्रेताओं के बीच प्रतिस्पर्धा प्रसिद्ध है, हर एक के पास वोक हे के लिए अपना खुद का रहस्य है — वह विशिष्ट धुएँदार सुगंध जो तभी दिखाई देती है जब नूडल्स को हाथ से गढ़े लोहे के वोक में पर्याप्त तेज़ और पर्याप्त गरम भूना जाता है, एक कौशल जिसे सही तरीके से महारत हासिल करने के लिए वर्षों के अभ्यास की आवश्यकता होती है।",
+    "tr": "Char kway teow, Hokkien lehçesinde tam anlamıyla kızartılmış pirinç eriştesi anlamına gelir; bu lehçe, 19.-20. yüzyıllarda Penang ve Singapur'a yerleşen ve beraberlerinde hızlı, yüksek ısıda kavurma geleneklerini getiren birçok Çinli göçmen tarafından konuşulurdu. Tarif, yemeğin mütevazı köklerini yansıtır — başlangıçta domuz yağı ve sakatatla yapılan, liman işçileri ve balıkçılar için ucuz, yüksek kalorili bir atıştırmalıktı.\n\nYemeğin doğum yeri sayılan Penang'da, en iyi char kway teow için sokak satıcıları arasındaki rekabet efsanevidir; her birinin wok hei için kendi sırrı vardır — eriştelerin el yapımı demir bir wokta yeterince hızlı ve yeterince sıcak kavrulduğunda ortaya çıkan karakteristik dumanlı aroma, doğru ustalaşmak için yıllarca pratik gerektiren bir beceridir.",
+    "it": "Char kway teow significa letteralmente tagliatelle di riso saltate nel dialetto hokkien, parlato da molti dei migranti cinesi che si stabilirono a Penang e Singapore nei secoli XIX-XX, portando con sé le tradizioni della saltatura veloce ad alta temperatura. La ricetta riflette le umili origini del piatto — originariamente era uno spuntino economico e calorico per portuali e pescatori, fatto con strutto di maiale e frattaglie.\n\nA Penang, considerata la culla del piatto, la competizione tra venditori ambulanti per il miglior char kway teow è leggendaria, ognuno con il proprio segreto per il wok hei — l'aroma affumicato distintivo che appare solo quando le tagliatelle vengono saltate abbastanza velocemente e a temperatura sufficientemente alta in un wok di ferro battuto a mano, un'abilità che richiede anni di pratica per essere padroneggiata correttamente.",
+    "ko": "차 퀘이 티아우는 19~20세기 페낭과 싱가포르에 정착한 많은 중국계 이민자들이 사용하던 호키엔 방언으로 문자 그대로 볶은 쌀국수를 의미하며, 이들은 빠르고 강한 불에 볶는 전통을 가져왔다. 이 레시피는 요리의 소박한 기원을 반영한다 — 원래는 부두 노동자와 어부들을 위한 값싸고 칼로리가 높은 간식으로, 돼지기름과 내장으로 만들어졌다.\n\n이 요리의 발상지로 여겨지는 페낭에서는 최고의 차 퀘이 티아우를 두고 벌이는 노점상들의 경쟁이 전설적이며, 각자 웍헤이를 위한 자신만의 비법을 가지고 있다 — 이는 손으로 두드려 만든 철제 웍에서 국수를 충분히 빠르고 뜨겁게 볶을 때만 나타나는 독특한 훈연 향으로, 제대로 숙달하려면 수년의 연습이 필요한 기술이다."
+  },
+  "meta": {
+    "time": 25,
+    "costRon": 18,
+    "tags": ["quick"],
+    "desc": {
+      "ro": "Tăiței de orez prăjiți la foc mare cu creveți, cârnați și ou, aromă intensă de wok.",
+      "en": "High-heat stir-fried rice noodles with prawns, sausage and egg, intense wok aroma.",
+      "es": "Fideos de arroz salteados a fuego alto con camarones, embutido y huevo, aroma intenso de wok.",
+      "fr": "Nouilles de riz sautées à feu vif avec crevettes, saucisse et œuf, arôme intense de wok.",
+      "de": "Bei hoher Hitze gebratene Reisnudeln mit Garnelen, Wurst und Ei, intensives Wok-Aroma.",
+      "pt": "Macarrão de arroz salteado em fogo alto com camarão, chouriço e ovo, aroma intenso de wok.",
+      "ru": "Рисовая лапша, жаренная на сильном огне с креветками, колбасой и яйцом, насыщенный аромат вока.",
+      "ar": "شعيرية أرز مقلية على نار عالية مع الروبيان والنقانق والبيض، برائحة ووك مكثفة.",
+      "zh": "大火快炒米粉，配虾、腊肠和鸡蛋，镬气浓郁。",
+      "ja": "強火で炒めたエビ、ソーセージ、卵入りの米麺、濃厚なウォックの香り。",
+      "hi": "झींगा, सॉसेज और अंडे के साथ तेज़ आंच पर भुनी चावल की नूडल्स, तीव्र वोक सुगंध।",
+      "tr": "Karides, sosis ve yumurtayla yüksek ateşte kavrulmuş pirinç eriştesi, yoğun wok aroması.",
+      "it": "Tagliatelle di riso saltate ad alta temperatura con gamberi, salsiccia e uovo, aroma intenso di wok.",
+      "ko": "새우, 소시지, 달걀을 넣고 센 불에 볶은 쌀국수, 강렬한 웍 향."
+    }
+  }
+}

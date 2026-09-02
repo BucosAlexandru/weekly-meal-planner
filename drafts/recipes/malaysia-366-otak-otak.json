@@ -1,0 +1,177 @@
+{
+  "id": 366,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Malaysia", "en": "Malaysia", "es": "Malasia", "fr": "Malaisie", "de": "Malaysia",
+    "pt": "Malásia", "ru": "Малайзия", "ar": "ماليزيا", "zh": "马来西亚", "ja": "マレーシア",
+    "hi": "मलेशिया", "tr": "Malezya", "it": "Malesia", "ko": "말레이시아"
+  },
+  "name": {
+    "ro": "Otak-Otak (Pastă de pește la grătar)", "en": "Otak-Otak (Grilled Fish Paste)", "es": "Otak-Otak (Pasta de pescado a la parrilla)",
+    "fr": "Otak-Otak (Pâte de poisson grillée)", "de": "Otak-Otak (Gegrillte Fischpaste)", "pt": "Otak-Otak (Pasta de peixe grelhada)",
+    "ru": "Отак-отак (Рыбная паста на гриле)", "ar": "أوتاك أوتاك", "zh": "马来烤鱼糕",
+    "ja": "オタオタ（焼き魚のすり身）", "hi": "ओटक-ओटक (ग्रिल्ड मछली पेस्ट)", "tr": "Otak-Otak (Izgara Balık Ezmesi)",
+    "it": "Otak-Otak (Pasta di pesce alla griglia)", "ko": "오탁오탁 (구운 생선 페이스트)"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "Collation", "de": "Snack", "pt": "Lanche",
+    "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "軽食", "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🐟", "t": "Pastă de pește albă", "d": "Carne de pește macră, tocată fin, amestecată cu pastă de curry."},
+      {"icon": "🌿", "t": "Frunze de banană", "d": "Amestecul se înfășoară în frunze de banană pentru gătit."},
+      {"icon": "🔥", "t": "Copt pe cărbuni", "d": "Pachetul se frige pe grătar, aromatizat de frunza afumată."},
+      {"icon": "🥥", "t": "Lapte de cocos", "d": "Adaugă cremozitate și îndulcește ușor amestecul picant."}
+    ],
+    "en": [
+      {"icon": "🐟", "t": "White fish paste", "d": "Lean fish flesh, finely minced, mixed with curry paste."},
+      {"icon": "🌿", "t": "Banana leaves", "d": "The mixture is wrapped in banana leaves for cooking."},
+      {"icon": "🔥", "t": "Charcoal-grilled", "d": "The parcel is grilled over coals, flavored by the smoky leaf."},
+      {"icon": "🥥", "t": "Coconut milk", "d": "Adds creaminess and gently sweetens the spicy mixture."}
+    ],
+    "es": [
+      {"icon": "🐟", "t": "Pasta de pescado blanco", "d": "Carne de pescado magro, picada fina, mezclada con pasta de curry."},
+      {"icon": "🌿", "t": "Hojas de plátano", "d": "La mezcla se envuelve en hojas de plátano para cocinar."},
+      {"icon": "🔥", "t": "Asado en carbón", "d": "El paquete se asa a la parrilla, aromatizado por la hoja ahumada."},
+      {"icon": "🥥", "t": "Leche de coco", "d": "Añade cremosidad y endulza suavemente la mezcla picante."}
+    ],
+    "fr": [
+      {"icon": "🐟", "t": "Pâte de poisson blanc", "d": "Chair de poisson maigre, finement hachée, mélangée à de la pâte de curry."},
+      {"icon": "🌿", "t": "Feuilles de bananier", "d": "Le mélange est enveloppé dans des feuilles de bananier pour la cuisson."},
+      {"icon": "🔥", "t": "Grillé au charbon", "d": "Le paquet est grillé sur des braises, parfumé par la feuille fumée."},
+      {"icon": "🥥", "t": "Lait de coco", "d": "Ajoute de l'onctuosité et adoucit légèrement le mélange épicé."}
+    ],
+    "de": [
+      {"icon": "🐟", "t": "Weiße Fischpaste", "d": "Mageres Fischfleisch, fein gehackt, mit Currypaste vermischt."},
+      {"icon": "🌿", "t": "Bananenblätter", "d": "Die Mischung wird zum Garen in Bananenblätter gewickelt."},
+      {"icon": "🔥", "t": "Auf Holzkohle gegrillt", "d": "Das Päckchen wird über Kohlen gegrillt, aromatisiert vom rauchigen Blatt."},
+      {"icon": "🥥", "t": "Kokosmilch", "d": "Verleiht Cremigkeit und mildert sanft die scharfe Mischung."}
+    ],
+    "pt": [
+      {"icon": "🐟", "t": "Pasta de peixe branco", "d": "Carne de peixe magra, picada fina, misturada com pasta de caril."},
+      {"icon": "🌿", "t": "Folhas de bananeira", "d": "A mistura é enrolada em folhas de bananeira para cozinhar."},
+      {"icon": "🔥", "t": "Grelhado no carvão", "d": "O pacote é grelhado sobre brasas, aromatizado pela folha defumada."},
+      {"icon": "🥥", "t": "Leite de coco", "d": "Adiciona cremosidade e adoça suavemente a mistura picante."}
+    ],
+    "ru": [
+      {"icon": "🐟", "t": "Белая рыбная паста", "d": "Постное филе рыбы, мелко измельчённое, смешанное с пастой карри."},
+      {"icon": "🌿", "t": "Банановые листья", "d": "Смесь заворачивается в банановые листья для приготовления."},
+      {"icon": "🔥", "t": "Жарится на углях", "d": "Свёрток жарится на углях, ароматизируясь дымным листом."},
+      {"icon": "🥥", "t": "Кокосовое молоко", "d": "Добавляет кремовость и слегка подслащивает острую смесь."}
+    ],
+    "ar": [
+      {"icon": "🐟", "t": "معجون سمك أبيض", "d": "لحم سمك قليل الدهن، مفروم ناعمًا، ممزوج بمعجون الكاري."},
+      {"icon": "🌿", "t": "أوراق الموز", "d": "يُلف الخليط في أوراق الموز للطهي."},
+      {"icon": "🔥", "t": "مشوي على الفحم", "d": "تُشوى اللفافة على الجمر، وتكتسب نكهة من الورقة المدخنة."},
+      {"icon": "🥥", "t": "حليب جوز الهند", "d": "يضيف قوامًا كريميًا ويحلّي الخليط الحار برفق."}
+    ],
+    "zh": [
+      {"icon": "🐟", "t": "白鱼肉糊", "d": "精瘦鱼肉细切后与咖喱酱混合。"},
+      {"icon": "🌿", "t": "香蕉叶", "d": "混合料用香蕉叶包裹后烹制。"},
+      {"icon": "🔥", "t": "炭火烤制", "d": "包裹好的鱼糕在炭火上烤制，带有烟熏叶香。"},
+      {"icon": "🥥", "t": "椰浆", "d": "增添奶香并轻微调和辛辣的混合料。"}
+    ],
+    "ja": [
+      {"icon": "🐟", "t": "白身魚のすり身", "d": "細かく刻んだ脂肪の少ない魚肉をカレーペーストと混ぜる。"},
+      {"icon": "🌿", "t": "バナナの葉", "d": "調理のため混合物をバナナの葉で包む。"},
+      {"icon": "🔥", "t": "炭火焼き", "d": "包みを炭火で焼き、燻された葉の香りをつける。"},
+      {"icon": "🥥", "t": "ココナッツミルク", "d": "コクを加え、辛い混合物をやさしく甘くする。"}
+    ],
+    "hi": [
+      {"icon": "🐟", "t": "सफेद मछली का पेस्ट", "d": "पतली मछली का मांस, बारीक कीमा, करी पेस्ट के साथ मिलाया गया।"},
+      {"icon": "🌿", "t": "केले के पत्ते", "d": "पकाने के लिए मिश्रण को केले के पत्तों में लपेटा जाता है।"},
+      {"icon": "🔥", "t": "कोयले पर ग्रिल किया", "d": "पैकेट अंगारों पर ग्रिल किया जाता है, धुएँदार पत्ते से स्वादित।"},
+      {"icon": "🥥", "t": "नारियल का दूध", "d": "मलाई जोड़ता है और तीखे मिश्रण को हल्का मीठा करता है।"}
+    ],
+    "tr": [
+      {"icon": "🐟", "t": "Beyaz balık ezmesi", "d": "İnce kıyılmış yağsız balık eti, köri ezmesiyle karıştırılmış."},
+      {"icon": "🌿", "t": "Muz yaprakları", "d": "Karışım pişirmek için muz yapraklarına sarılır."},
+      {"icon": "🔥", "t": "Kömürde ızgara", "d": "Paket, dumanlı yaprağın lezzet kattığı korlarda ızgara edilir."},
+      {"icon": "🥥", "t": "Hindistan cevizi sütü", "d": "Kremamsılık katar ve acı karışımı hafifçe tatlandırır."}
+    ],
+    "it": [
+      {"icon": "🐟", "t": "Pasta di pesce bianco", "d": "Carne di pesce magra, tritata finemente, mescolata con pasta di curry."},
+      {"icon": "🌿", "t": "Foglie di banana", "d": "Il composto viene avvolto in foglie di banana per la cottura."},
+      {"icon": "🔥", "t": "Grigliato sulla brace", "d": "Il pacchetto viene grigliato sulla brace, aromatizzato dalla foglia affumicata."},
+      {"icon": "🥥", "t": "Latte di cocco", "d": "Aggiunge cremosità e addolcisce delicatamente il composto piccante."}
+    ],
+    "ko": [
+      {"icon": "🐟", "t": "흰살 생선 페이스트", "d": "지방이 적은 생선살을 곱게 다져 카레 페이스트와 섞는다."},
+      {"icon": "🌿", "t": "바나나 잎", "d": "조리를 위해 혼합물을 바나나 잎으로 감싼다."},
+      {"icon": "🔥", "t": "숯불 구이", "d": "훈연 향이 배어드는 잎에 싸서 숯불에 굽는다."},
+      {"icon": "🥥", "t": "코코넛 밀크", "d": "크리미함을 더하고 매운 혼합물을 부드럽게 단맛으로 조화시킨다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g file de pește alb (macrou sau merlan)", "3 linguri pastă de curry roșie", "150ml lapte de cocos gros", "2 ouă", "3 linguri frunze de kaffir tocate", "1 linguriță zahăr", "sare", "frunze de banană pentru înfășurat", "scobitori pentru fixare"],
+    "en": ["600g white fish fillet (mackerel or whiting)", "3 tbsp red curry paste", "150ml thick coconut milk", "2 eggs", "3 tbsp chopped kaffir lime leaves", "1 tsp sugar", "salt", "banana leaves for wrapping", "toothpicks for securing"],
+    "es": ["600g de filete de pescado blanco (caballa o merlán)", "3 cdas de pasta de curry roja", "150ml de leche de coco espesa", "2 huevos", "3 cdas de hojas de lima kaffir picadas", "1 cdta de azúcar", "sal", "hojas de plátano para envolver", "palillos para asegurar"],
+    "fr": ["600g de filet de poisson blanc (maquereau ou merlan)", "3 c. à s. de pâte de curry rouge", "150ml de lait de coco épais", "2 œufs", "3 c. à s. de feuilles de combava hachées", "1 c. à c. de sucre", "sel", "feuilles de bananier pour envelopper", "cure-dents pour fixer"],
+    "de": ["600g Weißfischfilet (Makrele oder Weißling)", "3 EL rote Currypaste", "150ml dicke Kokosmilch", "2 Eier", "3 EL gehackte Kaffirlimettenblätter", "1 TL Zucker", "Salz", "Bananenblätter zum Einwickeln", "Zahnstocher zum Befestigen"],
+    "pt": ["600g de filete de peixe branco (cavala ou badejo)", "3 c. sopa de pasta de caril vermelha", "150ml de leite de coco espesso", "2 ovos", "3 c. sopa de folhas de lima kaffir picadas", "1 colher de chá de açúcar", "sal", "folhas de bananeira para envolver", "palitos para fixar"],
+    "ru": ["600г филе белой рыбы (скумбрия или мерланг)", "3 ст.л. красной пасты карри", "150мл густого кокосового молока", "2 яйца", "3 ст.л. нарезанных листьев каффир-лайма", "1 ч.л. сахара", "соль", "банановые листья для обёртывания", "зубочистки для закрепления"],
+    "ar": ["600غ فيليه سمك أبيض (ماكريل أو وايتنغ)", "3 ملاعق كبيرة معجون كاري أحمر", "150مل حليب جوز هند سميك", "بيضتان", "3 ملاعق كبيرة أوراق ليمون الكافير مفرومة", "ملعقة صغيرة سكر", "ملح", "أوراق موز للف", "أعواد أسنان للتثبيت"],
+    "zh": ["白鱼柳600克（鲭鱼或牙鳕）", "红咖喱酱3汤匙", "浓椰浆150毫升", "鸡蛋2个", "切碎青柠叶3汤匙", "糖1茶匙", "盐", "包裹用香蕉叶", "固定用牙签"],
+    "ja": ["白身魚のフィレ 600g（サバまたはメルルーサ）", "レッドカレーペースト 大さじ3", "濃いココナッツミルク 150ml", "卵 2個", "刻んだコブミカンの葉 大さじ3", "砂糖 小さじ1", "塩", "包む用のバナナの葉", "留める用のつまようじ"],
+    "hi": ["600 ग्राम सफेद मछली का फिलेट (मैकेरल या व्हाइटिंग)", "3 बड़े चम्मच लाल करी पेस्ट", "150 मिली गाढ़ा नारियल का दूध", "2 अंडे", "3 बड़े चम्मच कटे कैफिर लाइम के पत्ते", "1 छोटा चम्मच चीनी", "नमक", "लपेटने के लिए केले के पत्ते", "बांधने के लिए टूथपिक"],
+    "tr": ["600g beyaz balık filetosu (uskumru veya mezgit)", "3 yemek kaşığı kırmızı köri ezmesi", "150ml koyu hindistan cevizi sütü", "2 yumurta", "3 yemek kaşığı doğranmış kafir misket limonu yaprağı", "1 çay kaşığı şeker", "tuz", "sarmak için muz yaprağı", "sabitlemek için kürdan"],
+    "it": ["600g di filetto di pesce bianco (sgombro o merlano)", "3 cucchiai di pasta di curry rossa", "150ml di latte di cocco denso", "2 uova", "3 cucchiai di foglie di kaffir lime tritate", "1 cucchiaino di zucchero", "sale", "foglie di banana per avvolgere", "stuzzicadenti per fissare"],
+    "ko": ["흰살 생선 필레 600g(고등어 또는 메를루사)", "레드 커리 페이스트 3큰술", "진한 코코넛 밀크 150ml", "달걀 2개", "다진 카피르 라임 잎 3큰술", "설탕 1작은술", "소금", "감쌀 바나나 잎", "고정용 이쑤시개"]
+  },
+  "howIsMade": {
+    "ro": "TOCARE PEȘTE: Tocă fileul de pește foarte fin, aproape până devine pastă, folosind un robot sau cuțit ascuțit. AMESTECARE: Combină peștele tocat cu pasta de curry, laptele de cocos, ouăle, frunzele de kaffir tocate, zahăr și sare. OMOGENIZARE: Amestecă bine până obții o compoziție cremoasă și omogenă. PREGĂTIRE FRUNZE: Trece frunzele de banană rapid peste flacără pentru a le face mai flexibile și ușor de îndoit. ÎNFĂȘURARE: Pune câteva linguri din amestec pe fiecare frunză, plisează marginile și fixează cu scobitori. GĂTIRE LA GRĂTAR: Frige pachetele pe grătar la cărbuni, la foc mediu, 15-20 minute, întorcând ocazional, până frunza se rumenește și amestecul se solidifică. SERVIRE: Servește fierbinte, direct în frunza de banană, cu orez alb alături.",
+    "en": "MINCE FISH: Mince the fish fillet very finely, almost to a paste, using a food processor or sharp knife. COMBINE: Combine the minced fish with the curry paste, coconut milk, eggs, chopped kaffir lime leaves, sugar and salt. BLEND: Mix well until you get a creamy, homogeneous mixture. PREPARE LEAVES: Pass the banana leaves quickly over a flame to make them more pliable and easy to fold. WRAP: Put a few spoonfuls of the mixture on each leaf, fold the edges and secure with toothpicks. GRILL: Grill the parcels over charcoal on medium heat, 15-20 minutes, turning occasionally, until the leaf browns and the mixture sets. SERVE: Serve hot, directly in the banana leaf, with white rice on the side.",
+    "es": "PICAR EL PESCADO: Pica el filete de pescado muy finamente, casi hasta hacer una pasta, usando un robot de cocina o un cuchillo afilado. COMBINAR: Combina el pescado picado con la pasta de curry, la leche de coco, los huevos, las hojas de lima kaffir picadas, azúcar y sal. MEZCLAR: Mezcla bien hasta obtener una composición cremosa y homogénea. PREPARAR LAS HOJAS: Pasa las hojas de plátano rápidamente sobre una llama para hacerlas más flexibles y fáciles de doblar. ENVOLVER: Pon unas cucharadas de la mezcla en cada hoja, pliega los bordes y asegura con palillos. ASAR A LA PARRILLA: Asa los paquetes sobre carbón a fuego medio, 15-20 minutos, dándoles vuelta ocasionalmente, hasta que la hoja se dore y la mezcla cuaje. SERVIR: Sirve caliente, directamente en la hoja de plátano, con arroz blanco al lado.",
+    "fr": "HACHER LE POISSON: Hachez le filet de poisson très finement, presque jusqu'à obtenir une pâte, à l'aide d'un robot ou d'un couteau bien aiguisé. COMBINER: Combinez le poisson haché avec la pâte de curry, le lait de coco, les œufs, les feuilles de combava hachées, le sucre et le sel. MÉLANGER: Mélangez bien jusqu'à obtenir une composition crémeuse et homogène. PRÉPARER LES FEUILLES: Passez les feuilles de bananier rapidement sur une flamme pour les rendre plus souples et faciles à plier. ENVELOPPER: Mettez quelques cuillerées du mélange sur chaque feuille, repliez les bords et fixez avec des cure-dents. GRILLER: Faites griller les paquets sur du charbon à feu moyen, 15-20 minutes, en les retournant occasionnellement, jusqu'à ce que la feuille dore et que le mélange prenne. SERVIR: Servez chaud, directement dans la feuille de bananier, avec du riz blanc à côté.",
+    "de": "FISCH HACKEN: Das Fischfilet sehr fein hacken, fast bis zu einer Paste, mit einer Küchenmaschine oder einem scharfen Messer. VERBINDEN: Den gehackten Fisch mit der Currypaste, der Kokosmilch, den Eiern, den gehackten Kaffirlimettenblättern, Zucker und Salz verbinden. VERMISCHEN: Gut vermischen, bis eine cremige, homogene Mischung entsteht. BLÄTTER VORBEREITEN: Die Bananenblätter schnell über eine Flamme ziehen, damit sie geschmeidiger und leichter zu falten sind. EINWICKELN: Ein paar Löffel der Mischung auf jedes Blatt geben, die Ränder falten und mit Zahnstochern befestigen. GRILLEN: Die Päckchen bei mittlerer Hitze über Holzkohle 15-20 Minuten grillen, gelegentlich wenden, bis das Blatt bräunt und die Mischung fest wird. SERVIEREN: Heiß servieren, direkt im Bananenblatt, mit weißem Reis dazu.",
+    "pt": "PICAR O PEIXE: Pique o filete de peixe muito finamente, quase até formar uma pasta, usando um processador ou faca afiada. COMBINAR: Combine o peixe picado com a pasta de caril, o leite de coco, os ovos, as folhas de lima kaffir picadas, açúcar e sal. MISTURAR: Misture bem até obter uma composição cremosa e homogénea. PREPARAR AS FOLHAS: Passe as folhas de bananeira rapidamente sobre uma chama para as tornar mais flexíveis e fáceis de dobrar. ENROLAR: Coloque algumas colheres da mistura em cada folha, dobre as bordas e fixe com palitos. GRELHAR: Grelhe os pacotes sobre carvão em lume médio, 15-20 minutos, virando ocasionalmente, até a folha dourar e a mistura solidificar. SERVIR: Sirva quente, diretamente na folha de bananeira, com arroz branco ao lado.",
+    "ru": "ИЗМЕЛЬЧЕНИЕ РЫБЫ: Измельчите филе рыбы очень мелко, почти до пасты, используя кухонный комбайн или острый нож. СОЕДИНЕНИЕ: Соедините измельчённую рыбу с пастой карри, кокосовым молоком, яйцами, нарезанными листьями каффир-лайма, сахаром и солью. СМЕШИВАНИЕ: Хорошо перемешайте до получения кремовой однородной массы. ПОДГОТОВКА ЛИСТЬЕВ: Быстро проведите банановые листья над пламенем, чтобы сделать их более гибкими и легко сгибаемыми. ЗАВОРАЧИВАНИЕ: Положите несколько ложек смеси на каждый лист, сложите края и закрепите зубочистками. ЖАРКА НА ГРИЛЕ: Жарьте свёртки на углях на среднем огне 15-20 минут, периодически переворачивая, пока лист не подрумянится, а смесь не застынет. ПОДАЧА: Подавайте горячим прямо в банановом листе с белым рисом на гарнир.",
+    "ar": "فرم السمك: افرم فيليه السمك ناعمًا جدًا حتى يقارب قوام المعجون، باستخدام محضر طعام أو سكين حاد. الدمج: ادمج السمك المفروم مع معجون الكاري وحليب جوز الهند والبيض وأوراق ليمون الكافير المفرومة والسكر والملح. الخلط: اخلط جيدًا حتى تحصل على مزيج كريمي ومتجانس. تحضير الأوراق: مرّر أوراق الموز بسرعة فوق اللهب لجعلها أكثر مرونة وسهلة الطي. اللف: ضع بضع ملاعق من الخليط على كل ورقة، اطوِ الحواف وثبّتها بأعواد أسنان. الشوي: اشوِ اللفائف على الفحم على نار متوسطة، لمدة 15-20 دقيقة، مع التقليب أحيانًا، حتى تحمّر الورقة ويتماسك الخليط. التقديم: قدّمه ساخنًا مباشرة في ورقة الموز، مع الأرز الأبيض جانبًا.",
+    "zh": "剁鱼肉：用食物加工机或利刀将鱼柳剁得极细，几乎成糊状。混合：将鱼肉糊与咖喱酱、椰浆、鸡蛋、切碎的青柠叶、糖和盐混合。搅拌：充分搅拌至质地绵密均匀。准备叶子：将香蕉叶快速过火，使其更柔韧易折。包裹：在每片叶子上放几勺混合料，折起边缘并用牙签固定。炭火烤制：将包裹好的鱼糕在炭火上中火烤15-20分钟，偶尔翻动，直至叶子焦黄、混合料凝固。装盘：趁热直接在香蕉叶中食用，配白米饭。",
+    "ja": "魚をひく：フードプロセッサーまたは鋭いナイフで魚のフィレをほぼペースト状になるまで細かくひく。合わせる：ひいた魚をカレーペースト、ココナッツミルク、卵、刻んだコブミカンの葉、砂糖、塩と合わせる。混ぜる：クリーミーで均一な状態になるまでよく混ぜる。葉を準備する：バナナの葉を火に素早く通してしなやかにし、折りやすくする。包む：それぞれの葉に混合物を数さじ置き、端を折りたたんでつまようじで留める。炭火で焼く：包みを炭火で中火で15〜20分、時々返しながら、葉に焦げ目がつき中身が固まるまで焼く。盛り付け：バナナの葉に包んだまま熱いうちに白米と共に提供する。",
+    "hi": "मछली कीमा बनाएं: फूड प्रोसेसर या तेज़ चाकू का उपयोग करके मछली के फिलेट को बहुत बारीक, लगभग पेस्ट होने तक कीमा करें। मिलाएं: कीमा मछली को करी पेस्ट, नारियल के दूध, अंडे, कटे कैफिर लाइम के पत्ते, चीनी और नमक के साथ मिलाएं। फेंटें: मलाईदार और एक जैसा मिश्रण बनने तक अच्छी तरह मिलाएं। पत्ते तैयार करें: केले के पत्तों को लचीला और मोड़ने में आसान बनाने के लिए आंच पर तेज़ी से घुमाएं। लपेटें: हर पत्ते पर मिश्रण के कुछ चम्मच रखें, किनारे मोड़ें और टूथपिक से बांधें। कोयले पर ग्रिल करें: पैकेट को कोयले पर मध्यम आंच पर 15-20 मिनट, कभी-कभी पलटते हुए, जब तक पत्ता भूरा न हो जाए और मिश्रण जम न जाए। परोसें: सफेद चावल के साथ, केले के पत्ते में सीधे गरमागरम परोसें।",
+    "tr": "BALIĞI KIYIN: Balık filetosunu bir mutfak robotu veya keskin bıçak kullanarak neredeyse ezme kıvamına gelene kadar çok ince kıyın. BİRLEŞTİRİN: Kıyılmış balığı köri ezmesi, hindistan cevizi sütü, yumurtalar, doğranmış kafir misket limonu yaprağı, şeker ve tuzla birleştirin. KARIŞTIRIN: Kremamsı, homojen bir karışım elde edene kadar iyice karıştırın. YAPRAKLARI HAZIRLAYIN: Muz yapraklarını daha esnek ve katlanması kolay hale getirmek için alevin üzerinden hızlıca geçirin. SARIN: Her yaprağa birkaç kaşık karışım koyun, kenarları katlayın ve kürdanla sabitleyin. KÖMÜRDE IZGARA YAPIN: Paketleri orta ateşte kömürde, ara sıra çevirerek, yaprak kararıp karışım katılaşana kadar 15-20 dakika ızgara yapın. SERVİS EDİN: Sıcak, doğrudan muz yaprağında, yanında beyaz pirinçle servis edin.",
+    "it": "TRITARE IL PESCE: Tritate il filetto di pesce molto finemente, quasi fino a formare una pasta, usando un robot da cucina o un coltello affilato. COMBINARE: Combinate il pesce tritato con la pasta di curry, il latte di cocco, le uova, le foglie di kaffir lime tritate, lo zucchero e il sale. MESCOLARE: Mescolate bene fino a ottenere un composto cremoso e omogeneo. PREPARARE LE FOGLIE: Passate le foglie di banana rapidamente sopra una fiamma per renderle più flessibili e facili da piegare. AVVOLGERE: Mettete alcuni cucchiai di composto su ogni foglia, piegate i bordi e fissate con stuzzicadenti. GRIGLIARE: Grigliate i pacchetti sulla brace a fuoco medio, 15-20 minuti, girando occasionalmente, finché la foglia si dora e il composto si rapprende. SERVIRE: Servite caldo, direttamente nella foglia di banana, con riso bianco a lato.",
+    "ko": "생선 다지기: 푸드프로세서나 날카로운 칼로 생선 필레를 거의 페이스트가 될 정도로 아주 곱게 다진다. 섞기: 다진 생선을 커리 페이스트, 코코넛 밀크, 달걀, 다진 카피르 라임 잎, 설탕, 소금과 섞는다. 혼합하기: 크리미하고 균일해질 때까지 잘 섞는다. 잎 준비: 바나나 잎을 불에 재빨리 지나가게 하여 더 유연하고 접기 쉽게 만든다. 감싸기: 각 잎에 혼합물을 몇 숟갈 올리고 가장자리를 접어 이쑤시개로 고정한다. 숯불 굽기: 꾸러미를 숯불에 중불로 15~20분, 가끔 뒤집으며 잎이 갈색이 되고 혼합물이 굳을 때까지 굽는다. 담아내기: 바나나 잎째로 뜨겁게, 흰쌀밥과 함께 낸다."
+  },
+  "originText": {
+    "ro": "Otak-otak, care înseamnă literal creier în malaeziană — o referință glumeață la textura moale, cremoasă a pastei — este un exemplu clasic al bucătăriei peranakan, care combină tehnici culinare chinezești cu ingrediente și condimente malaeziene, dezvoltată de comunitățile chineze stabilite de secole pe coasta Peninsulei Malaeziene. Rețeta variază semnificativ de la o regiune la alta — cea din Melaka e adesea mai groasă și mai dulce, în timp ce cea din Muar folosește mai mult ardei iute.\n\nÎnfășurarea în frunze de banană nu este doar un ambalaj tradițional, ci un element esențial de gătit — frunza sigilează aburul înăuntru, gătind pasta de pește uniform, în timp ce clorofila și uleiurile naturale ale frunzei impregnează amestecul cu o aromă vegetală subtilă, imposibil de replicat prin alte metode de gătit. Otak-otak se vinde tradițional în piețele de noapte și pe malurile râurilor, adesea alături de satay și alte gustări la grătar.",
+    "en": "Otak-otak, which literally means brain in Malay — a joking reference to the soft, creamy texture of the paste — is a classic example of Peranakan cuisine, which combines Chinese cooking techniques with Malay ingredients and spices, developed by Chinese communities settled for centuries along the Malay Peninsula coast. The recipe varies significantly from region to region — the Melaka version is often thicker and sweeter, while the Muar version uses more chili.\n\nWrapping it in banana leaves isn't merely traditional packaging but an essential cooking element — the leaf seals in the steam, cooking the fish paste evenly, while the leaf's chlorophyll and natural oils infuse the mixture with a subtle vegetal aroma impossible to replicate through other cooking methods. Otak-otak is traditionally sold at night markets and along riverbanks, often alongside satay and other grilled snacks.",
+    "es": "Otak-otak, que literalmente significa cerebro en malayo — una referencia jocosa a la textura suave y cremosa de la pasta — es un ejemplo clásico de la cocina peranakan, que combina técnicas culinarias chinas con ingredientes y especias malayas, desarrollada por comunidades chinas asentadas durante siglos a lo largo de la costa de la península malaya. La receta varía significativamente de una región a otra — la versión de Melaka suele ser más espesa y dulce, mientras que la de Muar usa más chile.\n\nEnvolverlo en hojas de plátano no es simplemente un envoltorio tradicional sino un elemento de cocción esencial — la hoja sella el vapor dentro, cocinando la pasta de pescado uniformemente, mientras que la clorofila y los aceites naturales de la hoja impregnan la mezcla con un sutil aroma vegetal imposible de replicar con otros métodos de cocción. El otak-otak se vende tradicionalmente en los mercados nocturnos y a orillas de los ríos, a menudo junto al satay y otros bocadillos a la parrilla.",
+    "fr": "Otak-otak, qui signifie littéralement cerveau en malais — une référence humoristique à la texture douce et crémeuse de la pâte — est un exemple classique de la cuisine peranakan, qui combine des techniques culinaires chinoises avec des ingrédients et épices malais, développée par les communautés chinoises établies depuis des siècles le long de la côte de la péninsule malaise. La recette varie considérablement d'une région à l'autre — la version de Melaka est souvent plus épaisse et plus sucrée, tandis que celle de Muar utilise plus de piment.\n\nL'envelopper dans des feuilles de bananier n'est pas seulement un emballage traditionnel mais un élément de cuisson essentiel — la feuille scelle la vapeur à l'intérieur, cuisant la pâte de poisson uniformément, tandis que la chlorophylle et les huiles naturelles de la feuille imprègnent le mélange d'un arôme végétal subtil impossible à reproduire par d'autres méthodes de cuisson. L'otak-otak se vend traditionnellement dans les marchés nocturnes et le long des rives des rivières, souvent aux côtés du satay et d'autres collations grillées.",
+    "de": "Otak-otak, was auf Malaiisch wörtlich Gehirn bedeutet — eine scherzhafte Anspielung auf die weiche, cremige Textur der Paste — ist ein klassisches Beispiel der Peranakan-Küche, die chinesische Kochtechniken mit malaiischen Zutaten und Gewürzen kombiniert, entwickelt von chinesischen Gemeinschaften, die sich seit Jahrhunderten an der Küste der malaiischen Halbinsel niedergelassen haben. Das Rezept variiert erheblich von Region zu Region — die Melaka-Version ist oft dicker und süßer, während die Muar-Version mehr Chili verwendet.\n\nDas Einwickeln in Bananenblätter ist nicht nur traditionelle Verpackung, sondern ein wesentliches Kochelement — das Blatt schließt den Dampf ein und gart die Fischpaste gleichmäßig, während das Chlorophyll und die natürlichen Öle des Blattes der Mischung ein subtiles pflanzliches Aroma verleihen, das durch andere Kochmethoden unmöglich zu reproduzieren ist. Otak-otak wird traditionell auf Nachtmärkten und entlang von Flussufern verkauft, oft zusammen mit Satay und anderen gegrillten Snacks.",
+    "pt": "Otak-otak, que literalmente significa cérebro em malaio — uma referência jocosa à textura macia e cremosa da pasta — é um exemplo clássico da cozinha peranakan, que combina técnicas culinárias chinesas com ingredientes e especiarias malaias, desenvolvida por comunidades chinesas estabelecidas há séculos ao longo da costa da Península Malaia. A receita varia significativamente de região para região — a versão de Melaka é frequentemente mais espessa e doce, enquanto a de Muar usa mais pimenta.\n\nEnvolvê-lo em folhas de bananeira não é apenas embalagem tradicional, mas um elemento essencial de cozedura — a folha sela o vapor dentro, cozinhando a pasta de peixe uniformemente, enquanto a clorofila e os óleos naturais da folha impregnam a mistura com um aroma vegetal subtil impossível de replicar por outros métodos de cozedura. O otak-otak é tradicionalmente vendido em mercados noturnos e ao longo das margens dos rios, frequentemente ao lado de satay e outros petiscos grelhados.",
+    "ru": "Отак-отак, что буквально означает мозг по-малайски — шутливая отсылка к мягкой, кремовой текстуре пасты — классический пример перанаканской кухни, сочетающей китайские кулинарные техники с малайскими ингредиентами и специями, разработанной китайскими общинами, поселившимися веками вдоль побережья Малайского полуострова. Рецепт значительно варьируется от региона к региону — версия из Малакки часто гуще и слаще, тогда как версия из Муара использует больше перца чили.\n\nОбёртывание в банановые листья — не просто традиционная упаковка, а важнейший элемент приготовления: лист удерживает пар внутри, равномерно проваривая рыбную пасту, а хлорофилл и природные масла листа пропитывают смесь тонким растительным ароматом, невозможным для воспроизведения другими методами готовки. Отак-отак традиционно продаётся на ночных рынках и вдоль берегов рек, часто рядом с сатэ и другими закусками на гриле.",
+    "ar": "أوتاك أوتاك، التي تعني حرفيًا دماغ بالملايوية — إشارة فكاهية إلى القوام الناعم الكريمي للمعجون — هي مثال كلاسيكي على المطبخ البيرانكاني، الذي يجمع بين تقنيات الطهي الصينية والمكونات والتوابل الملايوية، طوّرته المجتمعات الصينية المستقرة منذ قرون على ساحل شبه الجزيرة الملايوية. تختلف الوصفة بشكل كبير من منطقة إلى أخرى — نسخة ملقا غالبًا ما تكون أكثر سماكة وحلاوة، بينما نسخة موار تستخدم فلفلًا حارًا أكثر.\n\nلفه في أوراق الموز ليس مجرد تغليف تقليدي بل عنصر أساسي في الطهي — تحبس الورقة البخار بالداخل، مما يطهو معجون السمك بالتساوي، بينما يشرّب الكلوروفيل والزيوت الطبيعية في الورقة الخليط برائحة نباتية خفيفة يستحيل تكرارها بطرق طهي أخرى. يُباع الأوتاك أوتاك تقليديًا في الأسواق الليلية وعلى ضفاف الأنهار، غالبًا إلى جانب الساتيه ووجبات خفيفة مشوية أخرى.",
+    "zh": "奥塔克-奥塔克在马来语中字面意思是「脑子」——这是对鱼糕柔软绵密口感的戏谑说法——是娘惹菜的经典代表，这种菜系将中式烹饪技艺与马来食材和香料相结合，由数百年来定居在马来半岛沿海地区的华人社群发展而来。这道食谱因地区而异——马六甲版本通常更浓稠、更甜，而麻坡版本则用更多辣椒。\n\n用香蕉叶包裹不仅仅是传统的包装方式，更是烹饪的关键要素——叶子将蒸汽锁在内部，使鱼糕均匀受热，同时叶子的叶绿素和天然油脂为混合料注入一种淡淡的植物清香，是其他烹饪方法无法复制的。奥塔克-奥塔克传统上在夜市和河岸边售卖，常与沙嗲和其他烤制小吃一同出售。",
+    "ja": "オタオタは、マレー語で文字通り「脳」を意味する――すり身の柔らかくクリーミーな食感をユーモラスに表現したものだ――マレー半島の沿岸部に何世紀にもわたって定住してきた中国系コミュニティによって発展した、中国の調理技法とマレーの食材・香辛料を組み合わせたプラナカン料理の典型的な例である。このレシピは地域によって大きく異なり、マラッカ版はより濃厚で甘めであることが多く、ムアール版はより多くの唐辛子を使う。\n\nバナナの葉で包むことは単なる伝統的な包装ではなく、調理に欠かせない要素である――葉が蒸気を内部に閉じ込め、魚のすり身を均一に加熱し、同時に葉の葉緑素と天然の油分が混合物に他の調理法では再現できない繊細な植物性の香りを染み込ませる。オタオタは伝統的に夜市や川岸で売られ、しばしばサテーや他の焼き軽食と一緒に提供される。",
+    "hi": "ओटक-ओटक, जिसका मलय में शाब्दिक अर्थ है मस्तिष्क — पेस्ट की नरम, मलाईदार बनावट का एक मज़ाकिया संदर्भ — पेरानाकान व्यंजनों का एक क्लासिक उदाहरण है, जो चीनी पाक तकनीकों को मलय सामग्री और मसालों के साथ जोड़ता है, जिसे मलय प्रायद्वीप के तट पर सदियों से बसे चीनी समुदायों द्वारा विकसित किया गया। नुस्खा क्षेत्र-दर-क्षेत्र काफी भिन्न होता है — मेलाका संस्करण अक्सर गाढ़ा और मीठा होता है, जबकि मुआर संस्करण में अधिक मिर्च का उपयोग होता है।\n\nइसे केले के पत्तों में लपेटना केवल पारंपरिक पैकेजिंग नहीं बल्कि एक आवश्यक पाक तत्व है — पत्ता भाप को अंदर सील करता है, मछली के पेस्ट को समान रूप से पकाता है, जबकि पत्ते का क्लोरोफिल और प्राकृतिक तेल मिश्रण को एक सूक्ष्म वनस्पति सुगंध से भर देते हैं जिसे अन्य पाक विधियों से दोहराना असंभव है। ओटक-ओटक पारंपरिक रूप से रात के बाज़ारों और नदी किनारों पर बेचा जाता है, अक्सर सते और अन्य ग्रिल्ड नाश्तों के साथ।",
+    "tr": "Malayca'da tam anlamıyla beyin anlamına gelen otak-otak — ezmenin yumuşak, kremamsı dokusuna şaka yollu bir gönderme — Malay Yarımadası kıyısına yüzyıllardır yerleşmiş Çinli topluluklar tarafından geliştirilen, Çin pişirme tekniklerini Malay malzemeleri ve baharatlarıyla birleştiren Peranakan mutfağının klasik bir örneğidir. Tarif bölgeden bölgeye önemli ölçüde değişir — Melaka versiyonu genellikle daha koyu ve tatlıdır, Muar versiyonu ise daha fazla biber kullanır.\n\nMuz yapraklarına sarmak sadece geleneksel bir ambalaj değil, temel bir pişirme unsurudur — yaprak buharı içeride tutarak balık ezmesinin eşit şekilde pişmesini sağlar, yaprağın klorofili ve doğal yağları ise karışıma başka pişirme yöntemleriyle taklit edilemeyen ince bir bitkisel aroma katar. Otak-otak geleneksel olarak gece pazarlarında ve nehir kenarlarında, genellikle satay ve diğer ızgara atıştırmalıklarla birlikte satılır.",
+    "it": "Otak-otak, che significa letteralmente cervello in malese — un riferimento scherzoso alla consistenza morbida e cremosa della pasta — è un classico esempio della cucina peranakan, che combina tecniche culinarie cinesi con ingredienti e spezie malesi, sviluppata dalle comunità cinesi stabilitesi da secoli lungo la costa della penisola malese. La ricetta varia notevolmente da regione a regione — la versione di Melaka è spesso più densa e dolce, mentre quella di Muar usa più peperoncino.\n\nAvvolgerlo in foglie di banana non è semplicemente un imballaggio tradizionale ma un elemento di cottura essenziale — la foglia sigilla il vapore all'interno, cuocendo la pasta di pesce uniformemente, mentre la clorofilla e gli oli naturali della foglia impregnano il composto di un sottile aroma vegetale impossibile da replicare con altri metodi di cottura. L'otak-otak viene tradizionalmente venduto nei mercati notturni e lungo le rive dei fiumi, spesso accanto al satay e ad altri spuntini alla griglia.",
+    "ko": "말레이어로 문자 그대로 뇌를 뜻하는 오탁오탁은 — 페이스트의 부드럽고 크리미한 질감에 대한 농담 섞인 표현으로 — 중국 요리 기법과 말레이 재료 및 향신료를 결합한 프라나칸 요리의 전형적인 예로, 말레이 반도 해안에 수 세기 동안 정착한 중국계 공동체가 발전시켰다. 이 레시피는 지역마다 크게 다른데, 믈라카 버전은 종종 더 걸쭉하고 달콤하며 무아르 버전은 고추를 더 많이 사용한다.\n\n바나나 잎으로 감싸는 것은 단순한 전통 포장이 아니라 필수적인 조리 요소다 — 잎이 증기를 안에 가두어 생선 페이스트를 고르게 익히고, 잎의 엽록소와 천연 오일이 다른 조리법으로는 재현할 수 없는 은은한 식물성 향을 혼합물에 스며들게 한다. 오탁오탁은 전통적으로 야시장과 강둑에서 판매되며, 종종 사테와 다른 구운 간식들과 함께 팔린다."
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 16,
+    "tags": [],
+    "desc": {
+      "ro": "Pastă de pește picantă cu lapte de cocos, gătită în frunze de banană pe grătar.",
+      "en": "Spicy fish paste with coconut milk, grilled in banana leaves.",
+      "es": "Pasta de pescado picante con leche de coco, asada en hojas de plátano.",
+      "fr": "Pâte de poisson épicée au lait de coco, grillée dans des feuilles de bananier.",
+      "de": "Scharfe Fischpaste mit Kokosmilch, in Bananenblättern gegrillt.",
+      "pt": "Pasta de peixe picante com leite de coco, grelhada em folhas de bananeira.",
+      "ru": "Острая рыбная паста с кокосовым молоком, приготовленная в банановых листьях на гриле.",
+      "ar": "معجون سمك حار بحليب جوز الهند، مشوي في أوراق الموز.",
+      "zh": "椰浆辣鱼糕，香蕉叶包裹烤制。",
+      "ja": "ココナッツミルクの辛い魚のすり身、バナナの葉で焼いたもの。",
+      "hi": "नारियल के दूध के साथ तीखा मछली का पेस्ट, केले के पत्तों में ग्रिल किया गया।",
+      "tr": "Hindistan cevizi sütlü acı balık ezmesi, muz yapraklarında ızgara edilmiş.",
+      "it": "Pasta di pesce piccante al latte di cocco, grigliata in foglie di banana.",
+      "ko": "코코넛 밀크를 넣은 매운 생선 페이스트, 바나나 잎에 싸서 구움."
+    }
+  }
+}

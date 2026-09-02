@@ -1,0 +1,177 @@
+{
+  "id": 360,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Liban", "en": "Lebanon", "es": "Líbano", "fr": "Liban", "de": "Libanon",
+    "pt": "Líbano", "ru": "Ливан", "ar": "لبنان", "zh": "黎巴嫩", "ja": "レバノン",
+    "hi": "लेबनान", "tr": "Lübnan", "it": "Libano", "ko": "레바논"
+  },
+  "name": {
+    "ro": "Manakish cu za'atar", "en": "Manakish (Za'atar Flatbread)", "es": "Manakish (Pan plano con za'atar)",
+    "fr": "Manakish (Galette au za'atar)", "de": "Manakish (Za'atar-Fladenbrot)", "pt": "Manakish (Pão plano com za'atar)",
+    "ru": "Манакиш (Лепёшка с заатаром)", "ar": "مناقيش بالزعتر", "zh": "扎塔香草薄饼",
+    "ja": "マナキーシュ（ザアタルフラットブレッド）", "hi": "मनाकीश (ज़ातर फ्लैटब्रेड)", "tr": "Zahterli Manakış",
+    "it": "Manakish (Focaccia allo za'atar)", "ko": "마나키시 (자타르 플랫브레드)"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "Collation", "de": "Snack", "pt": "Lanche",
+    "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "軽食", "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍞", "t": "Aluat pufos", "d": "Aluat simplu de pâine, întins subțire înainte de coacere."},
+      {"icon": "🌿", "t": "Amestec de za'atar", "d": "Cimbru uscat, susan prăjit, sumac și ulei de măsline."},
+      {"icon": "🔥", "t": "Copt rapid", "d": "Coace rapid la temperatură mare, aproape ca o pizza."},
+      {"icon": "🍅", "t": "Servit cu legume", "d": "Însoțit tradițional de roșii, castraveți și mentă proaspătă."}
+    ],
+    "en": [
+      {"icon": "🍞", "t": "Fluffy dough", "d": "Simple bread dough, rolled thin before baking."},
+      {"icon": "🌿", "t": "Za'atar blend", "d": "Dried thyme, toasted sesame, sumac and olive oil."},
+      {"icon": "🔥", "t": "Quick baked", "d": "Bakes fast at high heat, almost like a pizza."},
+      {"icon": "🍅", "t": "Served with vegetables", "d": "Traditionally paired with tomatoes, cucumber and fresh mint."}
+    ],
+    "es": [
+      {"icon": "🍞", "t": "Masa esponjosa", "d": "Masa de pan simple, estirada fina antes de hornear."},
+      {"icon": "🌿", "t": "Mezcla de za'atar", "d": "Tomillo seco, sésamo tostado, zumaque y aceite de oliva."},
+      {"icon": "🔥", "t": "Horneado rápido", "d": "Se hornea rápido a temperatura alta, casi como una pizza."},
+      {"icon": "🍅", "t": "Servido con verduras", "d": "Tradicionalmente acompañado de tomate, pepino y menta fresca."}
+    ],
+    "fr": [
+      {"icon": "🍞", "t": "Pâte moelleuse", "d": "Pâte à pain simple, étalée finement avant cuisson."},
+      {"icon": "🌿", "t": "Mélange de za'atar", "d": "Thym séché, sésame grillé, sumac et huile d'olive."},
+      {"icon": "🔥", "t": "Cuisson rapide", "d": "Cuit rapidement à haute température, presque comme une pizza."},
+      {"icon": "🍅", "t": "Servie avec des légumes", "d": "Traditionnellement accompagnée de tomates, concombre et menthe fraîche."}
+    ],
+    "de": [
+      {"icon": "🍞", "t": "Lockerer Teig", "d": "Einfacher Brotteig, vor dem Backen dünn ausgerollt."},
+      {"icon": "🌿", "t": "Za'atar-Mischung", "d": "Getrockneter Thymian, gerösteter Sesam, Sumach und Olivenöl."},
+      {"icon": "🔥", "t": "Schnell gebacken", "d": "Backt schnell bei hoher Hitze, fast wie eine Pizza."},
+      {"icon": "🍅", "t": "Mit Gemüse serviert", "d": "Traditionell mit Tomaten, Gurke und frischer Minze serviert."}
+    ],
+    "pt": [
+      {"icon": "🍞", "t": "Massa fofa", "d": "Massa de pão simples, esticada fina antes de assar."},
+      {"icon": "🌿", "t": "Mistura de za'atar", "d": "Tomilho seco, sésamo tostado, sumagre e azeite."},
+      {"icon": "🔥", "t": "Assado rapidamente", "d": "Assa rápido em alta temperatura, quase como uma pizza."},
+      {"icon": "🍅", "t": "Servido com legumes", "d": "Tradicionalmente acompanhado de tomate, pepino e hortelã fresca."}
+    ],
+    "ru": [
+      {"icon": "🍞", "t": "Пышное тесто", "d": "Простое хлебное тесто, тонко раскатанное перед выпечкой."},
+      {"icon": "🌿", "t": "Смесь заатар", "d": "Сушёный тимьян, обжаренный кунжут, сумах и оливковое масло."},
+      {"icon": "🔥", "t": "Быстрая выпечка", "d": "Быстро выпекается при высокой температуре, почти как пицца."},
+      {"icon": "🍅", "t": "Подаётся с овощами", "d": "Традиционно подаётся с помидорами, огурцом и свежей мятой."}
+    ],
+    "ar": [
+      {"icon": "🍞", "t": "عجين طري", "d": "عجين خبز بسيط، مفرود رقيقًا قبل الخبز."},
+      {"icon": "🌿", "t": "خلطة الزعتر", "d": "زعتر مجفف وسمسم محمّص وسماق وزيت زيتون."},
+      {"icon": "🔥", "t": "خبز سريع", "d": "يُخبز بسرعة على حرارة عالية، تقريبًا مثل البيتزا."},
+      {"icon": "🍅", "t": "تُقدَّم مع الخضار", "d": "تُقدَّم تقليديًا مع الطماطم والخيار والنعناع الطازج."}
+    ],
+    "zh": [
+      {"icon": "🍞", "t": "松软面团", "d": "简单的面包面团，烘烤前擀薄。"},
+      {"icon": "🌿", "t": "扎塔混合料", "d": "干百里香、烤芝麻、漆树粉和橄榄油。"},
+      {"icon": "🔥", "t": "快速烘烤", "d": "高温快速烘烤，几乎像披萨一样。"},
+      {"icon": "🍅", "t": "配蔬菜食用", "d": "传统上搭配番茄、黄瓜和新鲜薄荷。"}
+    ],
+    "ja": [
+      {"icon": "🍞", "t": "ふんわりした生地", "d": "焼く前に薄く伸ばしたシンプルなパン生地。"},
+      {"icon": "🌿", "t": "ザアタルミックス", "d": "乾燥タイム、炒りごま、スマック、オリーブオイル。"},
+      {"icon": "🔥", "t": "素早く焼く", "d": "高温で素早く焼く、まるでピザのように。"},
+      {"icon": "🍅", "t": "野菜と共に", "d": "伝統的にトマト、きゅうり、新鮮なミントを添える。"}
+    ],
+    "hi": [
+      {"icon": "🍞", "t": "फूला हुआ आटा", "d": "बेक करने से पहले पतला बेला साधारण ब्रेड का आटा।"},
+      {"icon": "🌿", "t": "ज़ातर मिश्रण", "d": "सूखा अजवायन, भुना तिल, सुमाक और जैतून का तेल।"},
+      {"icon": "🔥", "t": "तेज़ी से बेक किया", "d": "तेज़ आंच पर तेज़ी से बेक होता है, लगभग पिज़्ज़ा की तरह।"},
+      {"icon": "🍅", "t": "सब्ज़ियों के साथ परोसा गया", "d": "परंपरागत रूप से टमाटर, खीरे और ताज़े पुदीने के साथ।"}
+    ],
+    "tr": [
+      {"icon": "🍞", "t": "Kabarık hamur", "d": "Pişirmeden önce ince açılmış basit ekmek hamuru."},
+      {"icon": "🌿", "t": "Zahter karışımı", "d": "Kuru kekik, kavrulmuş susam, sumak ve zeytinyağı."},
+      {"icon": "🔥", "t": "Hızlı pişirme", "d": "Yüksek ısıda hızlıca pişer, neredeyse pizza gibi."},
+      {"icon": "🍅", "t": "Sebzelerle servis edilir", "d": "Geleneksel olarak domates, salatalık ve taze naneyle sunulur."}
+    ],
+    "it": [
+      {"icon": "🍞", "t": "Impasto soffice", "d": "Impasto per pane semplice, steso sottile prima della cottura."},
+      {"icon": "🌿", "t": "Miscela di za'atar", "d": "Timo essiccato, sesamo tostato, sommacco e olio d'oliva."},
+      {"icon": "🔥", "t": "Cottura veloce", "d": "Cuoce velocemente ad alta temperatura, quasi come una pizza."},
+      {"icon": "🍅", "t": "Servita con verdure", "d": "Tradizionalmente accompagnata da pomodoro, cetriolo e menta fresca."}
+    ],
+    "ko": [
+      {"icon": "🍞", "t": "폭신한 반죽", "d": "굽기 전 얇게 편 단순한 빵 반죽."},
+      {"icon": "🌿", "t": "자타르 믹스", "d": "말린 백리향, 볶은 참깨, 수맥, 올리브 오일."},
+      {"icon": "🔥", "t": "빠르게 구움", "d": "고온에서 빠르게 구워지며 거의 피자와 비슷하다."},
+      {"icon": "🍅", "t": "채소와 함께 제공", "d": "전통적으로 토마토, 오이, 신선한 민트를 곁들인다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g făină", "1 plic drojdie uscată", "250ml apă călduță", "1 linguriță zahăr", "1 linguriță sare", "3 linguri ulei de măsline", "80g za'atar", "60ml ulei de măsline extra pentru za'atar", "roșii, castraveți și mentă pentru servire"],
+    "en": ["400g flour", "1 packet dry yeast", "250ml warm water", "1 tsp sugar", "1 tsp salt", "3 tbsp olive oil", "80g za'atar", "60ml extra olive oil for the za'atar", "tomatoes, cucumber and mint for serving"],
+    "es": ["400g de harina", "1 sobre de levadura seca", "250ml de agua tibia", "1 cdta de azúcar", "1 cdta de sal", "3 cdas de aceite de oliva", "80g de za'atar", "60ml de aceite de oliva extra para el za'atar", "tomate, pepino y menta para servir"],
+    "fr": ["400g de farine", "1 sachet de levure sèche", "250ml d'eau tiède", "1 c. à c. de sucre", "1 c. à c. de sel", "3 c. à s. d'huile d'olive", "80g de za'atar", "60ml d'huile d'olive supplémentaire pour le za'atar", "tomates, concombre et menthe pour servir"],
+    "de": ["400g Mehl", "1 Päckchen Trockenhefe", "250ml warmes Wasser", "1 TL Zucker", "1 TL Salz", "3 EL Olivenöl", "80g Za'atar", "60ml zusätzliches Olivenöl für den Za'atar", "Tomaten, Gurke und Minze zum Servieren"],
+    "pt": ["400g de farinha", "1 saqueta de fermento seco", "250ml de água morna", "1 colher de chá de açúcar", "1 colher de chá de sal", "3 c. sopa de azeite", "80g de za'atar", "60ml de azeite extra para o za'atar", "tomate, pepino e hortelã para servir"],
+    "ru": ["400г муки", "1 пакетик сухих дрожжей", "250мл тёплой воды", "1 ч.л. сахара", "1 ч.л. соли", "3 ст.л. оливкового масла", "80г заатара", "60мл дополнительного оливкового масла для заатара", "помидоры, огурец и мята для подачи"],
+    "ar": ["400غ دقيق", "كيس خميرة جافة", "250مل ماء دافئ", "ملعقة صغيرة سكر", "ملعقة صغيرة ملح", "3 ملاعق كبيرة زيت زيتون", "80غ زعتر", "60مل زيت زيتون إضافي للزعتر", "طماطم وخيار ونعناع للتقديم"],
+    "zh": ["面粉400克", "干酵母1包", "温水250毫升", "糖1茶匙", "盐1茶匙", "橄榄油3汤匙", "扎塔80克", "额外橄榄油60毫升（拌扎塔用）", "番茄、黄瓜和薄荷（配食用）"],
+    "ja": ["小麦粉 400g", "ドライイースト 1袋", "温水 250ml", "砂糖 小さじ1", "塩 小さじ1", "オリーブオイル 大さじ3", "ザアタル 80g", "ザアタル用の追加オリーブオイル 60ml", "提供用のトマト、きゅうり、ミント"],
+    "hi": ["400 ग्राम आटा", "1 पैकेट सूखा खमीर", "250 मिली गुनगुना पानी", "1 छोटा चम्मच चीनी", "1 छोटा चम्मच नमक", "3 बड़े चम्मच जैतून का तेल", "80 ग्राम ज़ातर", "ज़ातर के लिए 60 मिली अतिरिक्त जैतून का तेल", "परोसने के लिए टमाटर, खीरा और पुदीना"],
+    "tr": ["400g un", "1 paket kuru maya", "250ml ılık su", "1 çay kaşığı şeker", "1 çay kaşığı tuz", "3 yemek kaşığı zeytinyağı", "80g zahter", "zahter için 60ml ekstra zeytinyağı", "servis için domates, salatalık ve nane"],
+    "it": ["400g di farina", "1 bustina di lievito secco", "250ml di acqua tiepida", "1 cucchiaino di zucchero", "1 cucchiaino di sale", "3 cucchiai di olio d'oliva", "80g di za'atar", "60ml di olio d'oliva extra per lo za'atar", "pomodori, cetriolo e menta per servire"],
+    "ko": ["밀가루 400g", "드라이 이스트 1봉지", "따뜻한 물 250ml", "설탕 1작은술", "소금 1작은술", "올리브 오일 3큰술", "자타르 80g", "자타르용 추가 올리브 오일 60ml", "곁들일 토마토, 오이, 민트"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE ALUAT: Amestecă drojdia cu apa călduță și zahărul, lasă 10 minute să activeze. FRĂMÂNTARE: Amestecă făina cu sarea, uleiul și maiaua activată, frământă 8-10 minute până devine elastic. DOSPIRE: Lasă aluatul la loc cald 1 oră, până își dublează volumul. ÎMPĂRȚIRE: Împarte aluatul în 6-8 bile egale și lasă-le să se odihnească 10 minute. ÎNTINDERE: Întinde fiecare bilă într-un disc subțire, cu marginile puțin mai groase. PREPARARE ZA'ATAR: Amestecă za'atar cu uleiul de măsline extra, până obții o pastă groasă. UNGERE ȘI COACERE: Unge fiecare disc cu pasta de za'atar, coace la 220°C timp de 8-10 minute, până marginile devin aurii, servește cald cu legume proaspete.",
+    "en": "PREPARE DOUGH: Mix the yeast with warm water and sugar, let it activate for 10 minutes. KNEAD: Combine the flour with salt, oil and activated yeast, knead 8-10 minutes until elastic. PROOF: Let the dough rise in a warm place for 1 hour, until doubled in size. DIVIDE: Divide the dough into 6-8 equal balls and let them rest for 10 minutes. ROLL OUT: Roll out each ball into a thin disc, with slightly thicker edges. PREPARE ZA'ATAR: Mix the za'atar with the extra olive oil until you get a thick paste. BRUSH AND BAKE: Brush each disc with the za'atar paste, bake at 220°C for 8-10 minutes, until the edges turn golden, serve warm with fresh vegetables.",
+    "es": "PREPARAR LA MASA: Mezcla la levadura con el agua tibia y el azúcar, deja activar 10 minutos. AMASAR: Combina la harina con la sal, el aceite y la levadura activada, amasa 8-10 minutos hasta que quede elástica. LEUDAR: Deja levar la masa en un lugar cálido 1 hora, hasta que duplique su volumen. DIVIDIR: Divide la masa en 6-8 bolas iguales y déjalas reposar 10 minutos. ESTIRAR: Estira cada bola en un disco fino, con los bordes ligeramente más gruesos. PREPARAR EL ZA'ATAR: Mezcla el za'atar con el aceite de oliva extra hasta obtener una pasta espesa. UNTAR Y HORNEAR: Unta cada disco con la pasta de za'atar, hornea a 220°C durante 8-10 minutos, hasta que los bordes queden dorados, sirve caliente con verduras frescas.",
+    "fr": "PRÉPARER LA PÂTE: Mélangez la levure avec l'eau tiède et le sucre, laissez activer 10 minutes. PÉTRIR: Combinez la farine avec le sel, l'huile et la levure activée, pétrissez 8-10 minutes jusqu'à ce qu'elle soit élastique. LAISSER LEVER: Laissez la pâte lever dans un endroit chaud 1 heure, jusqu'à ce qu'elle double de volume. DIVISER: Divisez la pâte en 6-8 boules égales et laissez-les reposer 10 minutes. ÉTALER: Étalez chaque boule en un disque fin, avec des bords légèrement plus épais. PRÉPARER LE ZA'ATAR: Mélangez le za'atar avec l'huile d'olive supplémentaire jusqu'à obtenir une pâte épaisse. BADIGEONNER ET CUIRE: Badigeonnez chaque disque de pâte de za'atar, faites cuire à 220°C pendant 8-10 minutes, jusqu'à ce que les bords soient dorés, servez chaud avec des légumes frais.",
+    "de": "TEIG ZUBEREITEN: Die Hefe mit warmem Wasser und Zucker vermischen, 10 Minuten aktivieren lassen. KNETEN: Mehl mit Salz, Öl und aktivierter Hefe verbinden, 8-10 Minuten kneten, bis elastisch. GEHEN LASSEN: Den Teig 1 Stunde an einem warmen Ort gehen lassen, bis er sich verdoppelt hat. TEILEN: Den Teig in 6-8 gleiche Kugeln teilen und 10 Minuten ruhen lassen. AUSROLLEN: Jede Kugel zu einer dünnen Scheibe ausrollen, mit etwas dickeren Rändern. ZA'ATAR VORBEREITEN: Za'atar mit dem zusätzlichen Olivenöl vermischen, bis eine dicke Paste entsteht. BESTREICHEN UND BACKEN: Jede Scheibe mit der Za'atar-Paste bestreichen, bei 220°C 8-10 Minuten backen, bis die Ränder golden werden, warm mit frischem Gemüse servieren.",
+    "pt": "PREPARAR A MASSA: Misture o fermento com a água morna e o açúcar, deixe ativar 10 minutos. AMASSAR: Combine a farinha com o sal, o óleo e o fermento ativado, amasse 8-10 minutos até ficar elástica. LEVEDAR: Deixe a massa crescer em local quente por 1 hora, até dobrar de volume. DIVIDIR: Divida a massa em 6-8 bolas iguais e deixe-as descansar 10 minutos. ESTENDER: Estenda cada bola num disco fino, com as bordas ligeiramente mais grossas. PREPARAR O ZA'ATAR: Misture o za'atar com o azeite extra até obter uma pasta espessa. PINCELAR E ASSAR: Pincele cada disco com a pasta de za'atar, asse a 220°C por 8-10 minutos, até as bordas ficarem douradas, sirva quente com legumes frescos.",
+    "ru": "ПРИГОТОВЛЕНИЕ ТЕСТА: Смешайте дрожжи с тёплой водой и сахаром, дайте активироваться 10 минут. ЗАМЕС: Соедините муку с солью, маслом и активированными дрожжами, замесите 8-10 минут до эластичности. РАССТОЙКА: Дайте тесту подняться в тёплом месте 1 час, пока не удвоится в объёме. ДЕЛЕНИЕ: Разделите тесто на 6-8 равных шариков и дайте им отдохнуть 10 минут. РАСКАТКА: Раскатайте каждый шарик в тонкий диск, с чуть более толстыми краями. ПРИГОТОВЛЕНИЕ ЗААТАРА: Смешайте заатар с дополнительным оливковым маслом до густой пасты. СМАЗЫВАНИЕ И ВЫПЕЧКА: Смажьте каждый диск пастой заатара, выпекайте при 220°C 8-10 минут, пока края не станут золотистыми, подавайте тёплым со свежими овощами.",
+    "ar": "تحضير العجين: اخلط الخميرة مع الماء الدافئ والسكر، اتركها تنشط لمدة 10 دقائق. العجن: اخلط الدقيق مع الملح والزيت والخميرة المنشطة، اعجن 8-10 دقائق حتى يصبح مرنًا. التخمير: اترك العجين يرتاح في مكان دافئ لمدة ساعة حتى يتضاعف حجمه. التقسيم: قسّم العجين إلى 6-8 كرات متساوية واتركها ترتاح 10 دقائق. الفرد: افرد كل كرة إلى قرص رقيق، بحواف أكثر سماكة قليلًا. تحضير الزعتر: اخلط الزعتر مع زيت الزيتون الإضافي حتى تحصل على عجينة سميكة. الدهن والخبز: ادهن كل قرص بعجينة الزعتر، اخبز على حرارة 220 درجة لمدة 8-10 دقائق حتى تصبح الحواف ذهبية، قدّمها دافئة مع الخضار الطازجة.",
+    "zh": "准备面团：将酵母与温水和糖混合，静置10分钟激活。揉面：将面粉与盐、油和激活的酵母混合，揉8-10分钟至有弹性。发酵：将面团放在温暖处发酵1小时，直至体积翻倍。分割：将面团分成6-8个等量面团，静置10分钟。擀开：将每个面团擀成薄圆饼，边缘略厚。准备扎塔：将扎塔与额外橄榄油混合成浓稠糊状。涂抹烘烤：在每个饼上涂抹扎塔糊，220°C烘烤8-10分钟，直至边缘金黄，配新鲜蔬菜温热食用。",
+    "ja": "生地を準備：イーストを温水と砂糖と混ぜ、10分間活性化させる。こねる：小麦粉に塩、油、活性化したイーストを合わせ、弾力が出るまで8〜10分こねる。発酵：温かい場所で生地を1時間、2倍の大きさになるまで発酵させる。分割：生地を6〜8等分し、10分休ませる。伸ばす：それぞれを薄い円盤状に伸ばし、縁を少し厚めにする。ザアタルを準備：ザアタルを追加のオリーブオイルと混ぜて濃厚なペーストにする。塗って焼く：各円盤にザアタルペーストを塗り、220°Cで8〜10分、縁が黄金色になるまで焼き、新鮮な野菜と共に温かいうちに提供する。",
+    "hi": "आटा तैयार करें: खमीर को गुनगुने पानी और चीनी के साथ मिलाएं, 10 मिनट सक्रिय होने दें। गूंधें: आटे को नमक, तेल और सक्रिय खमीर के साथ मिलाएं, लचीला होने तक 8-10 मिनट गूंधें। फूलने दें: आटे को गरम जगह पर 1 घंटे के लिए फूलने दें, जब तक आकार दोगुना न हो जाए। बांटें: आटे को 6-8 बराबर गोलों में बांटें और 10 मिनट आराम दें। बेलें: हर गोले को पतले डिस्क में बेलें, किनारे थोड़े मोटे रखें। ज़ातर तैयार करें: ज़ातर को अतिरिक्त जैतून के तेल के साथ मिलाकर गाढ़ा पेस्ट बनाएं। लगाएं और बेक करें: हर डिस्क पर ज़ातर पेस्ट लगाएं, 220°C पर 8-10 मिनट बेक करें, जब तक किनारे सुनहरे न हों, ताज़ी सब्ज़ियों के साथ गरम परोसें।",
+    "tr": "HAMURU HAZIRLAYIN: Mayayı ılık su ve şekerle karıştırın, 10 dakika aktive olmasını bekleyin. YOĞURUN: Unu tuz, yağ ve aktive edilmiş mayayla birleştirin, elastik olana kadar 8-10 dakika yoğurun. MAYALANDIRIN: Hamuru sıcak bir yerde hacmi iki katına çıkana kadar 1 saat bekletin. BÖLÜN: Hamuru 6-8 eşit topa bölün ve 10 dakika dinlendirin. AÇIN: Her topu kenarları biraz daha kalın, ince bir daire halinde açın. ZAHTERİ HAZIRLAYIN: Zahteri ekstra zeytinyağıyla koyu bir ezme haline gelene kadar karıştırın. SÜRÜN VE PİŞİRİN: Her diski zahter ezmesiyle sıvayın, kenarlar altın rengi olana kadar 220°C'de 8-10 dakika pişirin, taze sebzelerle sıcak servis edin.",
+    "it": "PREPARARE L'IMPASTO: Mescolate il lievito con l'acqua tiepida e lo zucchero, lasciate attivare 10 minuti. IMPASTARE: Unite la farina con il sale, l'olio e il lievito attivato, impastate 8-10 minuti finché elastico. LIEVITARE: Lasciate lievitare l'impasto in un luogo caldo per 1 ora, finché raddoppia di volume. DIVIDERE: Dividete l'impasto in 6-8 palline uguali e lasciatele riposare 10 minuti. STENDERE: Stendete ogni pallina in un disco sottile, con i bordi leggermente più spessi. PREPARARE LO ZA'ATAR: Mescolate lo za'atar con l'olio d'oliva extra fino a ottenere una pasta densa. SPENNELLARE E CUOCERE: Spennellate ogni disco con la pasta di za'atar, cuocete a 220°C per 8-10 minuti, finché i bordi diventano dorati, servite caldo con verdure fresche.",
+    "ko": "반죽 준비: 이스트를 따뜻한 물, 설탕과 섞어 10분간 활성화시킨다. 반죽하기: 밀가루에 소금, 기름, 활성화된 이스트를 넣고 탄력이 생길 때까지 8~10분 반죽한다. 발효: 반죽을 따뜻한 곳에서 부피가 두 배가 될 때까지 1시간 발효시킨다. 나누기: 반죽을 6~8개의 균등한 공 모양으로 나누고 10분간 휴지시킨다. 밀기: 각 반죽을 가장자리가 약간 두꺼운 얇은 원판으로 민다. 자타르 준비: 자타르를 추가 올리브 오일과 섞어 진한 페이스트를 만든다. 바르고 굽기: 각 원판에 자타르 페이스트를 바르고 220°C에서 8~10분, 가장자리가 황금빛이 될 때까지 구워 신선한 채소와 함께 따뜻하게 낸다."
+  },
+  "originText": {
+    "ro": "Manakish este mâncarea de mic dejun definitorie a Levantului, vândută în fiecare colț de stradă din Beirut până în Damasc, cu roțile de aluat coapte pe loc în cuptoare cu tavan boltit, numite saj sau tabun. Amestecul de za'atar, format din cimbru uscat, susan prăjit, sumac și sare, variază de la o familie la alta și de la o regiune la alta, fiecare rețetă de za'atar fiind aproape la fel de personală ca o semnătură.\n\nDeși varianta cu za'atar rămâne cea mai populară și mai simplă, manakish se pot umple și cu brânză, carne tocată cu roșii sau pastă de ardei iute, transformându-se dintr-o gustare de dimineață într-o masă completă. Simplitatea metodei de coacere — aluat subțire, gata în câteva minute la temperatură mare — a făcut din manakish alegerea preferată pentru micul dejun rapid înainte de muncă în orașele libaneze.",
+    "en": "Manakish is the defining breakfast food of the Levant, sold on every street corner from Beirut to Damascus, with dough rounds baked on the spot in vaulted-ceiling ovens called saj or tabun. The za'atar blend, made of dried thyme, toasted sesame, sumac and salt, varies from family to family and region to region, each za'atar recipe being almost as personal as a signature.\n\nWhile the za'atar version remains the most popular and simplest, manakish can also be filled with cheese, minced meat with tomatoes, or hot pepper paste, transforming from a morning snack into a full meal. The simplicity of the baking method — thin dough, ready in minutes at high heat — has made manakish the preferred choice for a quick breakfast before work in Lebanese cities.",
+    "es": "El manakish es el alimento definitorio del desayuno en el Levante, vendido en cada esquina desde Beirut hasta Damasco, con discos de masa horneados al momento en hornos de techo abovedado llamados saj o tabun. La mezcla de za'atar, hecha de tomillo seco, sésamo tostado, zumaque y sal, varía de familia en familia y de región en región, siendo cada receta de za'atar casi tan personal como una firma.\n\nAunque la versión con za'atar sigue siendo la más popular y sencilla, el manakish también puede rellenarse con queso, carne picada con tomate o pasta de pimiento picante, transformándose de un tentempié matutino en una comida completa. La simplicidad del método de horneado — masa fina, lista en minutos a temperatura alta — ha hecho del manakish la opción preferida para un desayuno rápido antes del trabajo en las ciudades libanesas.",
+    "fr": "Le manakish est l'aliment de petit-déjeuner emblématique du Levant, vendu à chaque coin de rue de Beyrouth à Damas, avec des ronds de pâte cuits sur place dans des fours voûtés appelés saj ou tabun. Le mélange de za'atar, fait de thym séché, sésame grillé, sumac et sel, varie d'une famille et d'une région à l'autre, chaque recette de za'atar étant presque aussi personnelle qu'une signature.\n\nBien que la version au za'atar reste la plus populaire et la plus simple, le manakish peut aussi être garni de fromage, de viande hachée aux tomates ou de pâte de piment, se transformant d'une collation matinale en un repas complet. La simplicité de la méthode de cuisson — pâte fine, prête en quelques minutes à haute température — a fait du manakish le choix préféré pour un petit-déjeuner rapide avant le travail dans les villes libanaises.",
+    "de": "Manakish ist das prägende Frühstücksgericht der Levante, an jeder Straßenecke von Beirut bis Damaskus verkauft, mit Teigscheiben, die vor Ort in gewölbten Öfen namens Saj oder Tabun gebacken werden. Die Za'atar-Mischung aus getrocknetem Thymian, geröstetem Sesam, Sumach und Salz variiert von Familie zu Familie und Region zu Region, wobei jedes Za'atar-Rezept fast so persönlich ist wie eine Unterschrift.\n\nWährend die Za'atar-Version die beliebteste und einfachste bleibt, kann Manakish auch mit Käse, Hackfleisch mit Tomaten oder scharfer Paprikapaste gefüllt werden und sich so von einem Morgensnack in eine vollständige Mahlzeit verwandeln. Die Einfachheit der Backmethode — dünner Teig, in Minuten bei hoher Hitze fertig — hat Manakish zur bevorzugten Wahl für ein schnelles Frühstück vor der Arbeit in libanesischen Städten gemacht.",
+    "pt": "O manakish é o alimento de pequeno-almoço definidor do Levante, vendido em cada esquina de Beirute a Damasco, com discos de massa assados na hora em fornos de teto abobadado chamados saj ou tabun. A mistura de za'atar, feita de tomilho seco, sésamo tostado, sumagre e sal, varia de família para família e de região para região, sendo cada receita de za'atar quase tão pessoal quanto uma assinatura.\n\nEmbora a versão com za'atar continue a ser a mais popular e simples, o manakish também pode ser recheado com queijo, carne picada com tomate ou pasta de pimenta picante, transformando-se de um lanche matinal numa refeição completa. A simplicidade do método de cozedura — massa fina, pronta em minutos a alta temperatura — tornou o manakish a escolha preferida para um pequeno-almoço rápido antes do trabalho nas cidades libanesas.",
+    "ru": "Манакиш — определяющая завтрачная еда Леванта, продаваемая на каждом углу от Бейрута до Дамаска, с кружками теста, выпекаемыми на месте в сводчатых печах, называемых садж или табун. Смесь заатар, состоящая из сушёного тимьяна, обжаренного кунжута, сумаха и соли, варьируется от семьи к семье и от региона к региону, причём каждый рецепт заатара почти так же индивидуален, как подпись.\n\nХотя версия с заатаром остаётся самой популярной и простой, манакиш также можно начинить сыром, мясным фаршем с помидорами или острой перечной пастой, превращая его из утренней закуски в полноценную трапезу. Простота метода выпечки — тонкое тесто, готовое за минуты при высокой температуре — сделала манакиш предпочтительным выбором для быстрого завтрака перед работой в ливанских городах.",
+    "ar": "المناقيش هي طعام الإفطار المميز لبلاد الشام، تُباع في كل زاوية شارع من بيروت إلى دمشق، مع أقراص عجين تُخبز في الموقع في أفران ذات سقف مقبب تُسمى الصاج أو التنور. تختلف خلطة الزعتر، المكوّنة من الزعتر المجفف والسمسم المحمّص والسماق والملح، من عائلة إلى أخرى ومن منطقة إلى أخرى، حيث تكون كل وصفة زعتر شخصية تقريبًا مثل التوقيع.\n\nرغم أن نسخة الزعتر تظل الأكثر شعبية وبساطة، يمكن أيضًا حشو المناقيش بالجبن أو اللحم المفروم بالطماطم أو معجون الفلفل الحار، محوّلة إياها من وجبة خفيفة صباحية إلى وجبة كاملة. جعلت بساطة طريقة الخبز — عجين رقيق، جاهز في دقائق على حرارة عالية — المناقيش الخيار المفضل لإفطار سريع قبل العمل في المدن اللبنانية.",
+    "zh": "马纳基什是黎凡特地区标志性的早餐食品，从贝鲁特到大马士革的每个街角都有售卖，面团圆饼在被称为萨吉或塔努尔的拱顶烤炉中现场烘烤。由干百里香、烤芝麻、漆树粉和盐制成的扎塔混合料，因家庭和地区而异，每种扎塔配方几乎都像签名一样具有个人特色。\n\n虽然扎塔口味仍是最受欢迎、最简单的版本，马纳基什也可以填入奶酪、番茄肉末或辣椒酱，从早晨小吃变成一顿完整的餐食。制作方法的简单性——薄面团在高温下几分钟即可烤好——使马纳基什成为黎巴嫩城市上班前快速早餐的首选。",
+    "ja": "マナキーシュはレバント地方を象徴する朝食であり、ベイルートからダマスカスまであらゆる街角で売られ、サジまたはタヌールと呼ばれるドーム型の天井を持つオーブンでその場で焼かれる生地の円盤である。乾燥タイム、炒りごま、スマック、塩から作られるザアタルのブレンドは家庭や地域によって異なり、それぞれのザアタルレシピはほとんど署名のように個人的なものである。\n\nザアタル味が最も人気があり最もシンプルなバージョンであり続ける一方、マナキーシュはチーズ、トマト入りひき肉、または辛い唐辛子ペーストを詰めることもでき、朝の軽食から本格的な食事へと変わる。焼き方のシンプルさ――薄い生地が高温で数分で焼き上がる――により、マナキーシュはレバノンの都市で仕事前の手早い朝食として好まれる選択肢となっている。",
+    "hi": "मनाकीश लेवांत का प्रमुख नाश्ता भोजन है, जो बेरूत से दमिश्क तक हर सड़क के कोने पर बेचा जाता है, आटे के गोलों को साज या तनूर नामक गुंबददार छत वाले तंदूरों में तुरंत बेक किया जाता है। सूखी अजवायन, भुने तिल, सुमाक और नमक से बना ज़ातर मिश्रण, परिवार-दर-परिवार और क्षेत्र-दर-क्षेत्र अलग होता है, हर ज़ातर नुस्खा लगभग हस्ताक्षर जितना निजी होता है।\n\nहालांकि ज़ातर संस्करण सबसे लोकप्रिय और सरल बना हुआ है, मनाकीश को पनीर, टमाटर के साथ कीमा मांस, या तीखी मिर्च के पेस्ट से भी भरा जा सकता है, जो इसे सुबह के नाश्ते से एक पूर्ण भोजन में बदल देता है। बेकिंग विधि की सादगी — पतला आटा, तेज़ आंच पर मिनटों में तैयार — ने मनाकीश को लेबनानी शहरों में काम से पहले तेज़ नाश्ते के लिए पसंदीदा विकल्प बना दिया है।",
+    "tr": "Manakış, Beyrut'tan Şam'a kadar her sokak köşesinde satılan, saj veya tandır adı verilen kubbeli tavanlı fırınlarda yerinde pişirilen hamur yuvarlaklarıyla Levant'ın belirleyici kahvaltı yemeğidir. Kuru kekik, kavrulmuş susam, sumak ve tuzdan yapılan zahter karışımı aileden aileye ve bölgeden bölgeye değişir, her zahter tarifi neredeyse bir imza kadar kişiseldir.\n\nZahter versiyonu en popüler ve en basit olmaya devam etse de, manakış peynir, domatesli kıyma veya acı biber ezmesiyle de doldurulabilir, sabah atıştırmalığından tam bir öğüne dönüşür. Pişirme yönteminin basitliği — yüksek ısıda dakikalar içinde hazır olan ince hamur — manakışı Lübnan şehirlerinde işe gitmeden önce hızlı bir kahvaltı için tercih edilen seçim haline getirmiştir.",
+    "it": "Il manakish è il cibo per colazione per eccellenza del Levante, venduto in ogni angolo di strada da Beirut a Damasco, con dischi di pasta cotti sul posto in forni a soffitto a volta chiamati saj o tabun. La miscela di za'atar, fatta di timo essiccato, sesamo tostato, sommacco e sale, varia da famiglia a famiglia e da regione a regione, con ogni ricetta di za'atar quasi personale come una firma.\n\nSebbene la versione allo za'atar rimanga la più popolare e semplice, il manakish può anche essere farcito con formaggio, carne macinata con pomodori o pasta di peperoncino, trasformandosi da spuntino mattutino in un pasto completo. La semplicità del metodo di cottura — pasta sottile, pronta in pochi minuti ad alta temperatura — ha reso il manakish la scelta preferita per una colazione veloce prima del lavoro nelle città libanesi.",
+    "ko": "마나키시는 베이루트에서 다마스쿠스까지 모든 길모퉁이에서 팔리는 레반트 지역의 대표적인 아침 식사로, 사즈 또는 탄누르라 불리는 아치형 천장 화덕에서 즉석에서 구워지는 반죽 원판이다. 말린 백리향, 볶은 참깨, 수맥, 소금으로 만든 자타르 배합은 가정과 지역마다 다르며, 각 자타르 레시피는 거의 서명처럼 개인적이다.\n\n자타르 버전이 가장 인기 있고 가장 단순하지만, 마나키시는 치즈, 토마토를 곁들인 다진 고기, 또는 매운 고추 페이스트로도 채울 수 있어 아침 간식에서 완전한 식사로 변모한다. 굽는 방식의 단순함 — 얇은 반죽이 고온에서 몇 분 만에 준비됨 — 은 마나키시를 레바논 도시에서 출근 전 빠른 아침 식사로 선호되는 선택으로 만들었다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 10,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Lipie coaptă cu pastă de za'atar, servită caldă cu legume proaspete.",
+      "en": "Flatbread baked with za'atar paste, served warm with fresh vegetables.",
+      "es": "Pan plano horneado con pasta de za'atar, servido caliente con verduras frescas.",
+      "fr": "Galette cuite à la pâte de za'atar, servie chaude avec des légumes frais.",
+      "de": "Fladenbrot mit Za'atar-Paste gebacken, warm mit frischem Gemüse serviert.",
+      "pt": "Pão plano assado com pasta de za'atar, servido quente com legumes frescos.",
+      "ru": "Лепёшка, запечённая с пастой заатар, подаётся тёплой со свежими овощами.",
+      "ar": "خبز مخبوز بعجينة الزعتر، يُقدَّم دافئًا مع الخضار الطازجة.",
+      "zh": "涂抹扎塔糊烘烤的薄饼，温热配新鲜蔬菜食用。",
+      "ja": "ザアタルペーストで焼いたフラットブレッド、新鮮な野菜と共に温かく提供。",
+      "hi": "ज़ातर पेस्ट से बेक की फ्लैटब्रेड, ताज़ी सब्ज़ियों के साथ गरम परोसी गई।",
+      "tr": "Zahter ezmesiyle pişirilmiş yassı ekmek, taze sebzelerle sıcak servis edilir.",
+      "it": "Focaccia cotta con pasta di za'atar, servita calda con verdure fresche.",
+      "ko": "자타르 페이스트로 구운 플랫브레드, 신선한 채소와 함께 따뜻하게 제공."
+    }
+  }
+}

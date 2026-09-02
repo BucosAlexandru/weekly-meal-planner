@@ -1,0 +1,176 @@
+{
+  "id": 367,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Malaysia", "en": "Malaysia", "es": "Malasia", "fr": "Malaisie", "de": "Malaysia",
+    "pt": "Malásia", "ru": "Малайзия", "ar": "ماليزيا", "zh": "马来西亚", "ja": "マレーシア",
+    "hi": "मलेशिया", "tr": "Malezya", "it": "Malesia", "ko": "말레이시아"
+  },
+  "name": {
+    "ro": "Nasi Kandar", "en": "Nasi Kandar", "es": "Nasi Kandar", "fr": "Nasi Kandar",
+    "de": "Nasi Kandar", "pt": "Nasi Kandar", "ru": "Наси кандар", "ar": "ناسي كاندار", "zh": "槟城咖喱饭",
+    "ja": "ナシ・カンダール", "hi": "नासी कंडार", "tr": "Nasi Kandar", "it": "Nasi Kandar", "ko": "나시 칸다르"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍚", "t": "Orez alb simplu", "d": "Bază de orez fiert simplu, care absoarbe sosurile amestecate."},
+      {"icon": "🍛", "t": "Amestec de curry-uri", "d": "Mai multe sosuri de curry diferite turnate peste orez."},
+      {"icon": "🍗", "t": "Pui prăjit crocant", "d": "Bucată de pui marinată și prăjită, cu crustă crocantă."},
+      {"icon": "🥚", "t": "Ou fiert tare", "d": "Jumătate de ou fiert tare, înmuiat în sosurile de curry."}
+    ],
+    "en": [
+      {"icon": "🍚", "t": "Plain white rice", "d": "A base of simply boiled rice that soaks up the mixed sauces."},
+      {"icon": "🍛", "t": "Mix of curries", "d": "Several different curry sauces poured over the rice."},
+      {"icon": "🍗", "t": "Crispy fried chicken", "d": "A marinated, fried piece of chicken with a crunchy crust."},
+      {"icon": "🥚", "t": "Hard-boiled egg", "d": "Half a hard-boiled egg, soaked in the curry sauces."}
+    ],
+    "es": [
+      {"icon": "🍚", "t": "Arroz blanco simple", "d": "Una base de arroz hervido simple que absorbe las salsas mezcladas."},
+      {"icon": "🍛", "t": "Mezcla de curries", "d": "Varias salsas de curry diferentes vertidas sobre el arroz."},
+      {"icon": "🍗", "t": "Pollo frito crujiente", "d": "Un trozo de pollo marinado y frito con costra crujiente."},
+      {"icon": "🥚", "t": "Huevo duro", "d": "Medio huevo duro, empapado en las salsas de curry."}
+    ],
+    "fr": [
+      {"icon": "🍚", "t": "Riz blanc nature", "d": "Une base de riz simplement bouilli qui absorbe les sauces mélangées."},
+      {"icon": "🍛", "t": "Mélange de curries", "d": "Plusieurs sauces curry différentes versées sur le riz."},
+      {"icon": "🍗", "t": "Poulet frit croustillant", "d": "Un morceau de poulet mariné et frit à la croûte croustillante."},
+      {"icon": "🥚", "t": "Œuf dur", "d": "Un demi-œuf dur, trempé dans les sauces curry."}
+    ],
+    "de": [
+      {"icon": "🍚", "t": "Einfacher weißer Reis", "d": "Eine Basis aus einfach gekochtem Reis, der die gemischten Saucen aufnimmt."},
+      {"icon": "🍛", "t": "Curry-Mischung", "d": "Mehrere verschiedene Currysaucen über den Reis gegossen."},
+      {"icon": "🍗", "t": "Knuspriges Brathähnchen", "d": "Ein mariniertes, gebratenes Hähnchenstück mit knuspriger Kruste."},
+      {"icon": "🥚", "t": "Hartgekochtes Ei", "d": "Ein halbes hartgekochtes Ei, getränkt in den Currysaucen."}
+    ],
+    "pt": [
+      {"icon": "🍚", "t": "Arroz branco simples", "d": "Uma base de arroz simplesmente cozido que absorve os molhos misturados."},
+      {"icon": "🍛", "t": "Mistura de caris", "d": "Vários molhos de caril diferentes derramados sobre o arroz."},
+      {"icon": "🍗", "t": "Frango frito crocante", "d": "Um pedaço de frango marinado e frito com crosta crocante."},
+      {"icon": "🥚", "t": "Ovo cozido", "d": "Meio ovo cozido, embebido nos molhos de caril."}
+    ],
+    "ru": [
+      {"icon": "🍚", "t": "Простой белый рис", "d": "Основа из просто отварного риса, впитывающего смешанные соусы."},
+      {"icon": "🍛", "t": "Смесь карри", "d": "Несколько разных соусов карри, политых поверх риса."},
+      {"icon": "🍗", "t": "Хрустящая жареная курица", "d": "Маринованный, обжаренный кусок курицы с хрустящей корочкой."},
+      {"icon": "🥚", "t": "Яйцо вкрутую", "d": "Половина яйца вкрутую, пропитанная соусами карри."}
+    ],
+    "ar": [
+      {"icon": "🍚", "t": "أرز أبيض بسيط", "d": "قاعدة من الأرز المسلوق ببساطة الذي يمتص الصلصات المختلطة."},
+      {"icon": "🍛", "t": "خليط من الكاري", "d": "عدة صلصات كاري مختلفة تُسكب فوق الأرز."},
+      {"icon": "🍗", "t": "دجاج مقلي مقرمش", "d": "قطعة دجاج متبّلة ومقلية بقشرة مقرمشة."},
+      {"icon": "🥚", "t": "بيضة مسلوقة", "d": "نصف بيضة مسلوقة، منقوعة في صلصات الكاري."}
+    ],
+    "zh": [
+      {"icon": "🍚", "t": "简单白米饭", "d": "煮熟的白米饭吸收各种混合酱汁。"},
+      {"icon": "🍛", "t": "混合咖喱", "d": "多种不同咖喱酱汁浇在米饭上。"},
+      {"icon": "🍗", "t": "酥脆炸鸡", "d": "腌制炸鸡块，外皮酥脆。"},
+      {"icon": "🥚", "t": "水煮蛋", "d": "半个水煮蛋，浸泡在咖喱酱汁中。"}
+    ],
+    "ja": [
+      {"icon": "🍚", "t": "プレーンな白米", "d": "混ぜ合わせたソースを吸い込むシンプルな炊いた米。"},
+      {"icon": "🍛", "t": "カレーのミックス", "d": "いくつかの異なるカレーソースを米にかける。"},
+      {"icon": "🍗", "t": "カリカリの揚げ鶏", "d": "マリネして揚げたカリカリの衣の鶏肉。"},
+      {"icon": "🥚", "t": "固ゆで卵", "d": "カレーソースに浸した固ゆで卵の半分。"}
+    ],
+    "hi": [
+      {"icon": "🍚", "t": "साधारण सफेद चावल", "d": "मिश्रित सॉस सोखने वाला सादा उबला चावल का आधार।"},
+      {"icon": "🍛", "t": "करी का मिश्रण", "d": "चावल पर डाली गई कई अलग-अलग करी।"},
+      {"icon": "🍗", "t": "कुरकुरा तला चिकन", "d": "मैरीनेट और तला चिकन का टुकड़ा, कुरकुरी परत के साथ।"},
+      {"icon": "🥚", "t": "उबला अंडा", "d": "करी सॉस में भिगोया आधा उबला अंडा।"}
+    ],
+    "tr": [
+      {"icon": "🍚", "t": "Sade beyaz pirinç", "d": "Karışık sosları emen basit haşlanmış pirinç tabanı."},
+      {"icon": "🍛", "t": "Köri karışımı", "d": "Pirincin üzerine dökülen çeşitli köri sosları."},
+      {"icon": "🍗", "t": "Çıtır kızarmış tavuk", "d": "Marine edilmiş, çıtır kabuklu kızarmış tavuk parçası."},
+      {"icon": "🥚", "t": "Haşlanmış yumurta", "d": "Köri soslarına batırılmış yarım haşlanmış yumurta."}
+    ],
+    "it": [
+      {"icon": "🍚", "t": "Riso bianco semplice", "d": "Una base di riso semplicemente bollito che assorbe le salse miste."},
+      {"icon": "🍛", "t": "Mix di curry", "d": "Diverse salse al curry versate sul riso."},
+      {"icon": "🍗", "t": "Pollo fritto croccante", "d": "Un pezzo di pollo marinato e fritto con crosta croccante."},
+      {"icon": "🥚", "t": "Uovo sodo", "d": "Mezzo uovo sodo, inzuppato nelle salse al curry."}
+    ],
+    "ko": [
+      {"icon": "🍚", "t": "담백한 흰쌀밥", "d": "여러 소스를 흡수하는 단순히 삶은 밥 베이스."},
+      {"icon": "🍛", "t": "카레 혼합", "d": "밥 위에 여러 종류의 카레 소스를 붓는다."},
+      {"icon": "🍗", "t": "바삭한 튀긴 치킨", "d": "재워서 튀긴 바삭한 껍질의 닭고기 조각."},
+      {"icon": "🥚", "t": "삶은 달걀", "d": "카레 소스에 적신 반으로 자른 삶은 달걀."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g orez alb", "4 pulpe de pui cu os", "2 ouă fierte tari", "2 linguri pastă de curry", "200ml lapte de cocos", "1 vânătă mică, tăiată", "100g fasole verde", "1 ceapă", "2 căței de usturoi", "ulei pentru prăjit", "sare"],
+    "en": ["400g white rice", "4 bone-in chicken thighs", "2 hard-boiled eggs", "2 tbsp curry paste", "200ml coconut milk", "1 small eggplant, cut", "100g green beans", "1 onion", "2 garlic cloves", "oil for frying", "salt"],
+    "es": ["400g de arroz blanco", "4 muslos de pollo con hueso", "2 huevos duros", "2 cdas de pasta de curry", "200ml de leche de coco", "1 berenjena pequeña, cortada", "100g de judías verdes", "1 cebolla", "2 dientes de ajo", "aceite para freír", "sal"],
+    "fr": ["400g de riz blanc", "4 cuisses de poulet avec os", "2 œufs durs", "2 c. à s. de pâte de curry", "200ml de lait de coco", "1 petite aubergine, coupée", "100g de haricots verts", "1 oignon", "2 gousses d'ail", "huile pour frire", "sel"],
+    "de": ["400g weißer Reis", "4 Hähnchenschenkel mit Knochen", "2 hartgekochte Eier", "2 EL Currypaste", "200ml Kokosmilch", "1 kleine Aubergine, geschnitten", "100g grüne Bohnen", "1 Zwiebel", "2 Knoblauchzehen", "Öl zum Frittieren", "Salz"],
+    "pt": ["400g de arroz branco", "4 coxas de frango com osso", "2 ovos cozidos", "2 c. sopa de pasta de caril", "200ml de leite de coco", "1 beringela pequena, cortada", "100g de feijão verde", "1 cebola", "2 dentes de alho", "óleo para fritar", "sal"],
+    "ru": ["400г белого риса", "4 куриных бедра на кости", "2 яйца вкрутую", "2 ст.л. пасты карри", "200мл кокосового молока", "1 небольшой баклажан, нарезанный", "100г стручковой фасоли", "1 луковица", "2 зубчика чеснока", "масло для жарки", "соль"],
+    "ar": ["400غ أرز أبيض", "4 أفخاذ دجاج بالعظم", "بيضتان مسلوقتان", "2 ملعقة كبيرة معجون كاري", "200مل حليب جوز الهند", "باذنجانة صغيرة مقطعة", "100غ فاصولياء خضراء", "بصلة واحدة", "فصا ثوم", "زيت للقلي", "ملح"],
+    "zh": ["白米饭400克", "带骨鸡腿4个", "水煮蛋2个", "咖喱酱2汤匙", "椰浆200毫升", "小茄子1个，切块", "四季豆100克", "洋葱1个", "大蒜2瓣", "炸制用油", "盐"],
+    "ja": ["白米 400g", "骨付き鶏もも肉 4本", "固ゆで卵 2個", "カレーペースト 大さじ2", "ココナッツミルク 200ml", "小さめのなす 1本（切る）", "さやいんげん 100g", "玉ねぎ 1個", "にんにく 2片", "揚げ油", "塩"],
+    "hi": ["400 ग्राम सफेद चावल", "4 हड्डी वाले चिकन थाई", "2 उबले अंडे", "2 बड़े चम्मच करी पेस्ट", "200 मिली नारियल का दूध", "1 छोटा बैंगन, कटा", "100 ग्राम हरी बीन्स", "1 प्याज़", "2 लहसुन की कलियाँ", "तलने के लिए तेल", "नमक"],
+    "tr": ["400g beyaz pirinç", "4 kemikli tavuk but", "2 haşlanmış yumurta", "2 yemek kaşığı köri ezmesi", "200ml hindistan cevizi sütü", "1 küçük patlıcan, doğranmış", "100g yeşil fasulye", "1 soğan", "2 diş sarımsak", "kızartmak için yağ", "tuz"],
+    "it": ["400g di riso bianco", "4 cosce di pollo con osso", "2 uova sode", "2 cucchiai di pasta di curry", "200ml di latte di cocco", "1 piccola melanzana, tagliata", "100g di fagiolini", "1 cipolla", "2 spicchi d'aglio", "olio per friggere", "sale"],
+    "ko": ["흰쌀 400g", "뼈 있는 닭 허벅지살 4개", "삶은 달걀 2개", "커리 페이스트 2큰술", "코코넛 밀크 200ml", "작은 가지 1개, 썬 것", "껍질콩 100g", "양파 1개", "마늘 2쪽", "튀김용 기름", "소금"]
+  },
+  "howIsMade": {
+    "ro": "FIERBERE OREZ: Fierbe orezul alb simplu, cu puțină sare, până devine pufos și separat. PRĂJIRE PUI: Marinează pulpele de pui cu sare și puțin curry, prăjește-le în ulei încins până devin crocante și bine pătrunse. PREPARARE CURRY LEGUME: Călește ceapa și usturoiul, adaugă pasta de curry și călește 2 minute. ADĂUGARE LAPTE DE COCOS: Toarnă laptele de cocos, adaugă vânăta și fasolea verde, fierbe 15 minute până legumele se înmoaie. FIERBERE OU: Fierbe ouăle tari separat, curăță-le și taie-le în jumătate. ASAMBLARE: Așază o porție generoasă de orez pe farfurie, adaugă puiul prăjit deasupra. TURNARE SOSURI: Toarnă curry-ul de legume peste orez, adaugă jumătate de ou fiert și servește imediat.",
+    "en": "BOIL RICE: Boil the plain white rice with a little salt until fluffy and separate. FRY CHICKEN: Marinate the chicken thighs with salt and a little curry, fry them in hot oil until crisp and well cooked through. MAKE VEGETABLE CURRY: Sauté the onion and garlic, add the curry paste and sauté for 2 minutes. ADD COCONUT MILK: Pour in the coconut milk, add the eggplant and green beans, simmer for 15 minutes until the vegetables soften. BOIL EGG: Boil the eggs hard separately, peel them and cut in half. ASSEMBLE: Place a generous portion of rice on a plate, add the fried chicken on top. POUR SAUCES: Pour the vegetable curry over the rice, add half a boiled egg and serve immediately.",
+    "es": "HERVIR EL ARROZ: Hierve el arroz blanco simple con un poco de sal hasta que quede esponjoso y suelto. FREÍR EL POLLO: Marina los muslos de pollo con sal y un poco de curry, fríelos en aceite caliente hasta que estén crujientes y bien cocidos. PREPARAR EL CURRY DE VERDURAS: Sofríe la cebolla y el ajo, añade la pasta de curry y sofríe 2 minutos. AÑADIR LA LECHE DE COCO: Vierte la leche de coco, añade la berenjena y las judías verdes, cocina 15 minutos hasta que las verduras se ablanden. HERVIR EL HUEVO: Hierve los huevos duros por separado, pélalos y córtalos por la mitad. MONTAR: Coloca una porción generosa de arroz en un plato, añade el pollo frito encima. VERTER LAS SALSAS: Vierte el curry de verduras sobre el arroz, añade medio huevo hervido y sirve de inmediato.",
+    "fr": "FAIRE BOUILLIR LE RIZ: Faites bouillir le riz blanc nature avec un peu de sel jusqu'à ce qu'il soit moelleux et détaché. FRIRE LE POULET: Marinez les cuisses de poulet avec du sel et un peu de curry, faites-les frire dans l'huile chaude jusqu'à ce qu'elles soient croustillantes et bien cuites. PRÉPARER LE CURRY DE LÉGUMES: Faites revenir l'oignon et l'ail, ajoutez la pâte de curry et faites revenir 2 minutes. AJOUTER LE LAIT DE COCO: Versez le lait de coco, ajoutez l'aubergine et les haricots verts, laissez mijoter 15 minutes jusqu'à ce que les légumes ramollissent. FAIRE BOUILLIR L'ŒUF: Faites bouillir les œufs durs séparément, épluchez-les et coupez-les en deux. MONTER: Placez une portion généreuse de riz dans une assiette, ajoutez le poulet frit dessus. VERSER LES SAUCES: Versez le curry de légumes sur le riz, ajoutez un demi-œuf bouilli et servez immédiatement.",
+    "de": "REIS KOCHEN: Den einfachen weißen Reis mit etwas Salz kochen, bis er locker und getrennt ist. HÄHNCHEN BRATEN: Die Hähnchenschenkel mit Salz und etwas Curry marinieren, in heißem Öl braten, bis sie knusprig und gut durchgegart sind. GEMÜSECURRY ZUBEREITEN: Zwiebel und Knoblauch andünsten, die Currypaste hinzufügen und 2 Minuten andünsten. KOKOSMILCH HINZUFÜGEN: Die Kokosmilch angießen, Aubergine und grüne Bohnen hinzufügen, 15 Minuten köcheln, bis das Gemüse weich wird. EI KOCHEN: Die Eier separat hart kochen, schälen und halbieren. ANRICHTEN: Eine großzügige Portion Reis auf einen Teller geben, das gebratene Hähnchen obenauf legen. SAUCEN ANGIESSEN: Das Gemüsecurry über den Reis gießen, ein halbes gekochtes Ei hinzufügen und sofort servieren.",
+    "pt": "FERVER O ARROZ: Ferva o arroz branco simples com um pouco de sal até ficar fofo e solto. FRITAR O FRANGO: Marine as coxas de frango com sal e um pouco de caril, frite-as em óleo quente até ficarem crocantes e bem cozidas. PREPARAR O CARIL DE LEGUMES: Refogue a cebola e o alho, junte a pasta de caril e refogue 2 minutos. ADICIONAR O LEITE DE COCO: Deite o leite de coco, junte a beringela e o feijão verde, cozinhe 15 minutos até os legumes amolecerem. FERVER O OVO: Ferva os ovos cozidos separadamente, descasque-os e corte-os ao meio. MONTAR: Coloque uma porção generosa de arroz num prato, junte o frango frito por cima. DEITAR OS MOLHOS: Deite o caril de legumes sobre o arroz, junte meio ovo cozido e sirva imediatamente.",
+    "ru": "ВАРКА РИСА: Отварите простой белый рис с небольшим количеством соли до рассыпчатости. ЖАРКА КУРИЦЫ: Замаринуйте куриные бёдра с солью и небольшим количеством карри, обжарьте в горячем масле до хруста и полной готовности. ПРИГОТОВЛЕНИЕ ОВОЩНОГО КАРРИ: Обжарьте лук и чеснок, добавьте пасту карри и обжаривайте 2 минуты. ДОБАВЛЕНИЕ КОКОСОВОГО МОЛОКА: Влейте кокосовое молоко, добавьте баклажан и стручковую фасоль, варите 15 минут до мягкости овощей. ВАРКА ЯЙЦА: Отварите яйца вкрутую отдельно, очистите и разрежьте пополам. СБОРКА: Выложите щедрую порцию риса на тарелку, добавьте жареную курицу сверху. ПОЛИВКА СОУСАМИ: Полейте рис овощным карри, добавьте половину варёного яйца и подавайте немедленно.",
+    "ar": "سلق الأرز: اسلق الأرز الأبيض البسيط مع قليل من الملح حتى يصبح مفلفلًا ومنفصلًا. قلي الدجاج: تبّل أفخاذ الدجاج بالملح وقليل من الكاري، اقليها في زيت ساخن حتى تصبح مقرمشة ومطهية جيدًا. تحضير كاري الخضار: حمّر البصل والثوم، أضف معجون الكاري وحمّر لمدة دقيقتين. إضافة حليب جوز الهند: اسكب حليب جوز الهند، أضف الباذنجان والفاصولياء الخضراء، اطهِ 15 دقيقة حتى تلين الخضار. سلق البيض: اسلق البيض جيدًا بشكل منفصل، قشّره واقطعه إلى نصفين. التجميع: ضع كمية سخية من الأرز في طبق، أضف الدجاج المقلي فوقه. سكب الصلصات: اسكب كاري الخضار فوق الأرز، أضف نصف بيضة مسلوقة وقدّمه فورًا.",
+    "zh": "煮米饭：将白米饭加少许盐煮至松软颗粒分明。炸鸡：用盐和少许咖喱腌制鸡腿，热油炸至酥脆熟透。准备蔬菜咖喱：炒香洋葱和大蒜，加入咖喱酱翻炒2分钟。加入椰浆：倒入椰浆，加入茄子和四季豆，炖煮15分钟至蔬菜变软。煮蛋：另外将蛋煮熟，剥壳切半。装盘：将大份米饭盛入盘中，放上炸鸡。淋酱汁：将蔬菜咖喱淋在米饭上，加半个煮蛋，立即食用。",
+    "ja": "米を炊く：シンプルな白米を少量の塩でふんわりとほぐれるまで炊く。鶏肉を揚げる：鶏もも肉を塩と少量のカレーでマリネし、熱した油でカリカリになるまでしっかり揚げる。野菜カレーを準備する：玉ねぎとにんにくを炒め、カレーペーストを加えて2分炒める。ココナッツミルクを加える：ココナッツミルクを注ぎ、なすとさやいんげんを加えて野菜が柔らかくなるまで15分煮る。卵を茹でる：卵を別に固ゆでにし、殻をむいて半分に切る。盛り付け：たっぷりの米を皿に盛り、揚げた鶏肉をのせる。ソースをかける：野菜カレーを米にかけ、半分のゆで卵を添えてすぐに提供する。",
+    "hi": "चावल उबालें: सादे सफेद चावल को थोड़े नमक के साथ फूला और अलग होने तक उबालें। चिकन तलें: चिकन थाई को नमक और थोड़ी करी के साथ मैरीनेट करें, गरम तेल में कुरकुरा और अच्छी तरह पकने तक तलें। सब्ज़ी करी तैयार करें: प्याज़ और लहसुन भूनें, करी पेस्ट डालें और 2 मिनट भूनें। नारियल का दूध डालें: नारियल का दूध डालें, बैंगन और हरी बीन्स डालें, सब्ज़ियां नरम होने तक 15 मिनट पकाएं। अंडा उबालें: अंडों को अलग से कड़ा उबालें, छीलें और आधा काटें। असेंबल करें: थाली में भरपूर चावल रखें, ऊपर तला चिकन डालें। सॉस डालें: चावल पर सब्ज़ी करी डालें, आधा उबला अंडा डालें और तुरंत परोसें।",
+    "tr": "PİRİNCİ PİŞİRİN: Sade beyaz pirinci biraz tuzla kabarık ve taneli olana kadar pişirin. TAVUĞU KIZARTIN: Tavuk butlarını tuz ve biraz köriyle marine edin, sıcak yağda çıtır ve iyice pişene kadar kızartın. SEBZE KÖRİSİNİ HAZIRLAYIN: Soğan ve sarımsağı kavurun, köri ezmesini ekleyip 2 dakika kavurun. HİNDİSTAN CEVİZİ SÜTÜNÜ EKLEYİN: Hindistan cevizi sütünü dökün, patlıcan ve yeşil fasulyeyi ekleyin, sebzeler yumuşayana kadar 15 dakika pişirin. YUMURTAYI HAŞLAYIN: Yumurtaları ayrı ayrı sert haşlayın, soyun ve ikiye bölün. DÜZENLEYİN: Tabağa bol miktarda pirinç koyun, üzerine kızarmış tavuğu ekleyin. SOSLARI DÖKÜN: Sebze körisini pirincin üzerine dökün, yarım haşlanmış yumurta ekleyin ve hemen servis edin.",
+    "it": "LESSARE IL RISO: Lessate il riso bianco semplice con un po' di sale finché soffice e sgranato. FRIGGERE IL POLLO: Marinate le cosce di pollo con sale e un po' di curry, friggetele in olio caldo finché croccanti e ben cotte. PREPARARE IL CURRY DI VERDURE: Soffriggete cipolla e aglio, aggiungete la pasta di curry e soffriggete 2 minuti. AGGIUNGERE IL LATTE DI COCCO: Versate il latte di cocco, aggiungete la melanzana e i fagiolini, cuocete 15 minuti finché le verdure si ammorbidiscono. LESSARE L'UOVO: Lessate le uova sode separatamente, sgusciatele e tagliatele a metà. COMPORRE: Mettete una generosa porzione di riso su un piatto, aggiungete il pollo fritto sopra. VERSARE LE SALSE: Versate il curry di verdure sul riso, aggiungete mezzo uovo sodo e servite subito.",
+    "ko": "밥 짓기: 담백한 흰쌀에 소금을 약간 넣고 폭신하고 알알이 흩어지게 끓인다. 닭고기 튀기기: 닭 허벅지살을 소금과 약간의 커리로 재운 후 뜨거운 기름에 바삭하고 완전히 익을 때까지 튀긴다. 채소 커리 준비: 양파와 마늘을 볶고 커리 페이스트를 넣어 2분간 볶는다. 코코넛 밀크 넣기: 코코넛 밀크를 붓고 가지와 껍질콩을 넣어 채소가 부드러워질 때까지 15분간 끓인다. 달걀 삶기: 달걀을 따로 완숙으로 삶아 껍질을 벗기고 반으로 자른다. 담기: 접시에 넉넉한 밥을 담고 위에 튀긴 닭고기를 올린다. 소스 뿌리기: 채소 커리를 밥 위에 붓고 반으로 자른 삶은 달걀을 곁들여 바로 낸다."
+  },
+  "originText": {
+    "ro": "Nasi kandar are originea în Penang, unde vânzătorii indieni de stradă purtau odinioară două coșuri mari de mâncare atârnate la capetele unei prăjini de bambus purtate pe umeri, o metodă de transport numită kandar în tamilă. Aceștia parcurgeau străzile orașului, oprindu-se pentru a servi orez alb acoperit cu orice combinație de curry-uri doreau clienții, direct din coșuri.\n\nAstăzi, deși prăjinile de bambus au dispărut de mult, numele a rămas, iar conceptul de bază — orez alb ca fundal neutru pentru un amestec ales personal de curry-uri, carne prăjită și legume — a rămas neschimbat. Ceea ce distinge nasi kandar de alte feluri de orez cu curry este obiceiul de a amesteca sosurile direct pe farfurie, numit banjir, literalmente inundație, creând un amestec unic de arome la fiecare masă, diferit de fiecare dată.",
+    "en": "Nasi kandar originates in Penang, where Indian street vendors once carried two large food baskets hung at the ends of a bamboo pole balanced across their shoulders, a carrying method called kandar in Tamil. They walked the city streets, stopping to serve white rice topped with whatever combination of curries customers wanted, straight from the baskets.\n\nToday, although the bamboo poles have long disappeared, the name has stuck, and the core concept — white rice as a neutral canvas for a personally chosen mix of curries, fried meat and vegetables — has remained unchanged. What sets nasi kandar apart from other curry rice dishes is the custom of mixing the sauces directly on the plate, called banjir, literally flood, creating a unique blend of flavors at every meal, different every time.",
+    "es": "El nasi kandar se originó en Penang, donde los vendedores callejeros indios cargaban antaño dos grandes cestas de comida colgadas de los extremos de una vara de bambú equilibrada sobre los hombros, un método de transporte llamado kandar en tamil. Recorrían las calles de la ciudad, deteniéndose para servir arroz blanco cubierto con la combinación de curries que los clientes quisieran, directamente de las cestas.\n\nHoy en día, aunque las varas de bambú desaparecieron hace tiempo, el nombre se ha mantenido, y el concepto central — arroz blanco como lienzo neutro para una mezcla elegida personalmente de curries, carne frita y verduras — permanece inalterado. Lo que distingue al nasi kandar de otros platos de arroz con curry es la costumbre de mezclar las salsas directamente en el plato, llamada banjir, literalmente inundación, creando una mezcla única de sabores en cada comida, diferente cada vez.",
+    "fr": "Le nasi kandar trouve son origine à Penang, où les vendeurs de rue indiens portaient autrefois deux grands paniers de nourriture suspendus aux extrémités d'une perche en bambou équilibrée sur leurs épaules, une méthode de portage appelée kandar en tamoul. Ils parcouraient les rues de la ville, s'arrêtant pour servir du riz blanc garni de la combinaison de curries voulue par les clients, directement depuis les paniers.\n\nAujourd'hui, bien que les perches en bambou aient depuis longtemps disparu, le nom est resté, et le concept central — le riz blanc comme toile neutre pour un mélange choisi personnellement de curries, de viande frite et de légumes — est resté inchangé. Ce qui distingue le nasi kandar des autres plats de riz au curry est la coutume de mélanger les sauces directement sur l'assiette, appelée banjir, littéralement inondation, créant un mélange unique de saveurs à chaque repas, différent à chaque fois.",
+    "de": "Nasi Kandar hat seinen Ursprung in Penang, wo indische Straßenverkäufer einst zwei große Essenskörbe trugen, die an den Enden einer über den Schultern balancierten Bambusstange hingen — eine Trageweise, die auf Tamil kandar genannt wird. Sie gingen durch die Straßen der Stadt und hielten an, um weißen Reis mit einer beliebigen Kombination von Currys, die sich die Kunden wünschten, direkt aus den Körben zu servieren.\n\nHeute, obwohl die Bambusstangen längst verschwunden sind, ist der Name geblieben, und das Grundkonzept — weißer Reis als neutrale Leinwand für eine persönlich gewählte Mischung aus Currys, gebratenem Fleisch und Gemüse — ist unverändert geblieben. Was Nasi Kandar von anderen Curry-Reis-Gerichten unterscheidet, ist die Gewohnheit, die Saucen direkt auf dem Teller zu vermischen, genannt banjir, wörtlich Flut, wodurch bei jeder Mahlzeit eine einzigartige, jedes Mal andere Geschmacksmischung entsteht.",
+    "pt": "O nasi kandar tem origem em Penang, onde vendedores indianos de rua carregavam outrora dois grandes cestos de comida pendurados nas extremidades de uma vara de bambu equilibrada sobre os ombros, um método de transporte chamado kandar em tâmil. Percorriam as ruas da cidade, parando para servir arroz branco coberto com a combinação de caris que os clientes quisessem, diretamente dos cestos.\n\nHoje, embora as varas de bambu tenham há muito desaparecido, o nome ficou, e o conceito central — arroz branco como tela neutra para uma mistura escolhida pessoalmente de caris, carne frita e legumes — permaneceu inalterado. O que distingue o nasi kandar de outros pratos de arroz com caril é o costume de misturar os molhos diretamente no prato, chamado banjir, literalmente inundação, criando uma mistura única de sabores em cada refeição, diferente de cada vez.",
+    "ru": "Наси кандар зародился в Пенанге, где индийские уличные торговцы когда-то носили две большие корзины с едой, подвешенные на концах бамбукового шеста, уравновешенного на плечах, — способ переноски, называемый kandar на тамильском. Они ходили по улицам города, останавливаясь, чтобы подавать белый рис, покрытый любой комбинацией карри, которую хотели покупатели, прямо из корзин.\n\nСегодня, хотя бамбуковые шесты давно исчезли, название сохранилось, а основная концепция — белый рис как нейтральный холст для лично выбранной смеси карри, жареного мяса и овощей — осталась неизменной. Что отличает наси кандар от других блюд из риса с карри, так это обычай смешивать соусы прямо на тарелке, называемый banjir, буквально наводнение, создающий уникальное сочетание вкусов при каждом приёме пищи, каждый раз новое.",
+    "ar": "نشأ ناسي كاندار في بينانج، حيث كان الباعة الهنود المتجولون يحملون في السابق سلتين كبيرتين من الطعام معلقتين على طرفي عصا خيزران متوازنة على أكتافهم، وهي طريقة حمل تُسمى كاندار بالتاميلية. كانوا يمشون في شوارع المدينة، يتوقفون لتقديم الأرز الأبيض مغطى بأي مزيج من الكاري يريده الزبائن، مباشرة من السلال.\n\nاليوم، رغم أن عصي الخيزران اختفت منذ زمن طويل، بقي الاسم، وظل المفهوم الأساسي — الأرز الأبيض كقماش محايد لمزيج مختار شخصيًا من الكاري واللحم المقلي والخضار — دون تغيير. ما يميز ناسي كاندار عن أطباق أرز الكاري الأخرى هو عادة خلط الصلصات مباشرة على الطبق، تُسمى بانجير، وحرفيًا فيضان، مما يخلق مزيجًا فريدًا من النكهات في كل وجبة، مختلفًا في كل مرة.",
+    "zh": "槟城咖喱饭起源于槟城，那里的印度街头小贩曾经用一根平衡在肩上的竹竿挑着两个大食篮，这种挑担方式在泰米尔语中称为kandar。他们走街串巷，直接从篮子里为顾客盛上白米饭，配上顾客想要的任意咖喱组合。\n\n如今，尽管竹竿早已消失，这个名字却保留了下来，其核心理念——白米饭作为个人自选咖喱、炸肉和蔬菜混搭的中性画布——也始终未变。使槟城咖喱饭区别于其他咖喱米饭的是直接在盘中混合酱汁的习俗，称为banjir，字面意思是「洪水」，每次用餐都会创造出独一无二、每次都不同的风味组合。",
+    "ja": "ナシ・カンダールはペナンに起源を持ち、そこではインド系の露天商がかつて肩でバランスを取った竹の棒の両端に大きな食料かごを吊るして運んでいた――タミル語でカンダールと呼ばれる運搬方法である。彼らは街の通りを歩き回り、立ち止まって顧客が望むどんな組み合わせのカレーでも、かごから直接盛り付けた白米に添えて提供した。\n\n今日、竹の棒はとうに姿を消したが、名前は残り、白米を様々なカレー、揚げ肉、野菜を個人的に選んで組み合わせるための中立的なキャンバスとする中心的な考え方は変わっていない。ナシ・カンダールを他のカレーライス料理と一線を画すのは、皿の上で直接ソースを混ぜ合わせる習慣であり、これはバンジル、文字通り「洪水」と呼ばれ、食事のたびに毎回異なる独自の風味の組み合わせを生み出す。",
+    "hi": "नासी कंडार की उत्पत्ति पेनांग में हुई, जहां भारतीय सड़क विक्रेता कभी कंधों पर संतुलित बांस के डंडे के सिरों पर लटके दो बड़े भोजन के टोकरे ले जाते थे, तमिल में इस परिवहन विधि को कंडार कहा जाता था। वे शहर की सड़कों पर चलते थे, ग्राहकों की चाही गई किसी भी करी संयोजन के साथ सफेद चावल परोसने के लिए रुकते थे, सीधे टोकरियों से।\n\nआज, हालांकि बांस के डंडे बहुत पहले गायब हो गए हैं, नाम बना हुआ है, और मुख्य अवधारणा — करी, तला मांस और सब्ज़ियों के व्यक्तिगत रूप से चुने गए मिश्रण के लिए एक तटस्थ कैनवास के रूप में सफेद चावल — अपरिवर्तित रही है। जो चीज़ नासी कंडार को अन्य करी चावल व्यंजनों से अलग करती है वह है सीधे थाली में सॉस मिलाने की प्रथा, जिसे बंजिर कहा जाता है, शाब्दिक रूप से बाढ़, जो हर भोजन में स्वादों का एक अनोखा मिश्रण बनाती है, हर बार अलग।",
+    "tr": "Nasi kandar, Hint sokak satıcılarının bir zamanlar omuzlarında dengelenen bir bambu sırığın uçlarına asılı iki büyük yemek sepeti taşıdığı Penang'da doğdu; bu taşıma yöntemine Tamilcede kandar denir. Şehir sokaklarında yürür, müşterilerin istediği herhangi bir köri kombinasyonuyla kaplı beyaz pirinci doğrudan sepetlerden servis etmek için dururlardı.\n\nBugün, bambu sırıklar uzun zaman önce kaybolmuş olsa da isim kalıcı oldu ve temel kavram — köri, kızarmış et ve sebzelerin kişisel olarak seçilmiş bir karışımı için nötr bir tuval olarak beyaz pirinç — değişmeden kaldı. Nasi kandarı diğer köri pirinç yemeklerinden ayıran şey, sosları doğrudan tabakta karıştırma geleneğidir; buna Tamilcede tam anlamıyla sel anlamına gelen banjir denir ve her öğünde her seferinde farklı, eşsiz bir lezzet karışımı yaratır.",
+    "it": "Il nasi kandar ha origine a Penang, dove i venditori ambulanti indiani un tempo portavano due grandi cesti di cibo appesi alle estremità di un'asta di bambù bilanciata sulle spalle, un metodo di trasporto chiamato kandar in tamil. Percorrevano le strade della città, fermandosi per servire riso bianco condito con qualsiasi combinazione di curry i clienti desiderassero, direttamente dai cesti.\n\nOggi, sebbene le aste di bambù siano scomparse da tempo, il nome è rimasto, e il concetto centrale — riso bianco come tela neutra per un mix scelto personalmente di curry, carne fritta e verdure — è rimasto invariato. Ciò che distingue il nasi kandar da altri piatti di riso al curry è l'abitudine di mescolare le salse direttamente sul piatto, chiamata banjir, letteralmente alluvione, creando una miscela unica di sapori a ogni pasto, diversa ogni volta.",
+    "ko": "나시 칸다르는 페낭에서 유래했는데, 그곳에서 인도계 노점상들은 한때 어깨에 균형을 잡은 대나무 장대 양 끝에 매달린 두 개의 큰 음식 바구니를 짊어지고 다녔으며, 이 운반 방식을 타밀어로 칸다르라고 불렀다. 그들은 도시 거리를 걸으며 손님이 원하는 어떤 카레 조합이든 바구니에서 직접 흰쌀밥에 얹어 판매하기 위해 멈춰 섰다.\n\n오늘날 대나무 장대는 오래전에 사라졌지만 이름은 그대로 남았고, 카레, 튀긴 고기, 채소를 개인적으로 선택해 조합하는 중립적인 캔버스로서의 흰쌀밥이라는 핵심 개념은 변하지 않았다. 나시 칸다르를 다른 카레 밥 요리와 구별 짓는 것은 접시 위에서 직접 소스를 섞는 관습으로, 이를 문자 그대로 홍수를 뜻하는 반지르라고 부르며, 매번 다른 독특한 풍미의 조합을 매 끼니마다 만들어낸다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 20,
+    "tags": [],
+    "desc": {
+      "ro": "Orez alb cu amestec de curry-uri, pui prăjit crocant și ou fiert.",
+      "en": "White rice with mixed curries, crispy fried chicken and boiled egg.",
+      "es": "Arroz blanco con mezcla de curries, pollo frito crujiente y huevo hervido.",
+      "fr": "Riz blanc aux curries mélangés, poulet frit croustillant et œuf bouilli.",
+      "de": "Weißer Reis mit Curry-Mischung, knusprigem Brathähnchen und gekochtem Ei.",
+      "pt": "Arroz branco com mistura de caris, frango frito crocante e ovo cozido.",
+      "ru": "Белый рис со смесью карри, хрустящей жареной курицей и варёным яйцом.",
+      "ar": "أرز أبيض بخليط من الكاري ودجاج مقلي مقرمش وبيضة مسلوقة.",
+      "zh": "白米饭配混合咖喱、酥脆炸鸡和水煮蛋。",
+      "ja": "混合カレーとカリカリの揚げ鶏、ゆで卵の白米。",
+      "hi": "मिश्रित करी, कुरकुरे तले चिकन और उबले अंडे के साथ सफेद चावल।",
+      "tr": "Karışık köri, çıtır kızarmış tavuk ve haşlanmış yumurtayla beyaz pirinç.",
+      "it": "Riso bianco con mix di curry, pollo fritto croccante e uovo sodo.",
+      "ko": "혼합 카레, 바삭한 튀긴 치킨, 삶은 달걀을 곁들인 흰쌀밥."
+    }
+  }
+}

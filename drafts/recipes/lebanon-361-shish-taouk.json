@@ -1,0 +1,176 @@
+{
+  "id": 361,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Liban", "en": "Lebanon", "es": "Líbano", "fr": "Liban", "de": "Libanon",
+    "pt": "Líbano", "ru": "Ливан", "ar": "لبنان", "zh": "黎巴嫩", "ja": "レバノン",
+    "hi": "लेबनान", "tr": "Lübnan", "it": "Libano", "ko": "레바논"
+  },
+  "name": {
+    "ro": "Shish Taouk", "en": "Shish Taouk", "es": "Shish Taouk", "fr": "Chich Taouk",
+    "de": "Shish Taouk", "pt": "Shish Taouk", "ru": "Шиш тавук", "ar": "شيش طاووق", "zh": "黎巴嫩烤鸡肉串",
+    "ja": "シシ・タウーク", "hi": "शिश तौक़", "tr": "Şiş Tavuk", "it": "Shish Taouk", "ko": "쉬시 타욱"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍗", "t": "Piept de pui marinat", "d": "Cuburi de pui marinate ore întregi în iaurt și usturoi."},
+      {"icon": "🔥", "t": "Frigărui la grătar", "d": "Fripte pe frigărui la foc mare, până se rumenesc bine."},
+      {"icon": "🧄", "t": "Sos toum", "d": "Sos de usturoi persan, spumos, cremat, extrem de intens."},
+      {"icon": "🍋", "t": "Marinată acrișoară", "d": "Zeamă de lămâie, oțet și pastă de roșii dau savoare intensă."}
+    ],
+    "en": [
+      {"icon": "🍗", "t": "Marinated chicken breast", "d": "Chicken cubes marinated for hours in yogurt and garlic."},
+      {"icon": "🔥", "t": "Grilled skewers", "d": "Grilled over high heat until well browned."},
+      {"icon": "🧄", "t": "Toum sauce", "d": "Whipped, creamy Lebanese garlic sauce, extremely intense."},
+      {"icon": "🍋", "t": "Tangy marinade", "d": "Lemon juice, vinegar and tomato paste give intense flavor."}
+    ],
+    "es": [
+      {"icon": "🍗", "t": "Pechuga de pollo marinada", "d": "Cubos de pollo marinados durante horas en yogur y ajo."},
+      {"icon": "🔥", "t": "Brochetas a la parrilla", "d": "Asadas a fuego alto hasta que se doren bien."},
+      {"icon": "🧄", "t": "Salsa toum", "d": "Salsa de ajo libanesa batida y cremosa, extremadamente intensa."},
+      {"icon": "🍋", "t": "Adobo ácido", "d": "Zumo de limón, vinagre y pasta de tomate dan un sabor intenso."}
+    ],
+    "fr": [
+      {"icon": "🍗", "t": "Poitrine de poulet marinée", "d": "Cubes de poulet marinés pendant des heures dans du yaourt et de l'ail."},
+      {"icon": "🔥", "t": "Brochettes grillées", "d": "Grillées à feu vif jusqu'à ce qu'elles soient bien dorées."},
+      {"icon": "🧄", "t": "Sauce toum", "d": "Sauce libanaise à l'ail fouettée et crémeuse, extrêmement intense."},
+      {"icon": "🍋", "t": "Marinade acidulée", "d": "Jus de citron, vinaigre et concentré de tomate donnent une saveur intense."}
+    ],
+    "de": [
+      {"icon": "🍗", "t": "Marinierte Hähnchenbrust", "d": "Hähnchenwürfel, stundenlang in Joghurt und Knoblauch mariniert."},
+      {"icon": "🔥", "t": "Gegrillte Spieße", "d": "Bei hoher Hitze gegrillt, bis sie gut gebräunt sind."},
+      {"icon": "🧄", "t": "Toum-Sauce", "d": "Aufgeschlagene, cremige libanesische Knoblauchsauce, extrem intensiv."},
+      {"icon": "🍋", "t": "Säuerliche Marinade", "d": "Zitronensaft, Essig und Tomatenmark geben intensiven Geschmack."}
+    ],
+    "pt": [
+      {"icon": "🍗", "t": "Peito de frango marinado", "d": "Cubos de frango marinados por horas em iogurte e alho."},
+      {"icon": "🔥", "t": "Espetos grelhados", "d": "Grelhados em lume alto até ficarem bem dourados."},
+      {"icon": "🧄", "t": "Molho toum", "d": "Molho de alho libanês batido e cremoso, extremamente intenso."},
+      {"icon": "🍋", "t": "Marinada ácida", "d": "Sumo de limão, vinagre e polpa de tomate dão sabor intenso."}
+    ],
+    "ru": [
+      {"icon": "🍗", "t": "Маринованная куриная грудка", "d": "Кубики курицы, маринованные часами в йогурте и чесноке."},
+      {"icon": "🔥", "t": "Шашлычки на гриле", "d": "Обжаренные на сильном огне до хорошего румянца."},
+      {"icon": "🧄", "t": "Соус тум", "d": "Взбитый, кремовый ливанский чесночный соус, чрезвычайно насыщенный."},
+      {"icon": "🍋", "t": "Кислый маринад", "d": "Лимонный сок, уксус и томатная паста придают насыщенный вкус."}
+    ],
+    "ar": [
+      {"icon": "🍗", "t": "صدر دجاج متبّل", "d": "مكعبات دجاج متبّلة لساعات باللبن والثوم."},
+      {"icon": "🔥", "t": "أسياخ مشوية", "d": "تُشوى على نار عالية حتى تحمّر جيدًا."},
+      {"icon": "🧄", "t": "صلصة الثوم", "d": "صلصة ثوم لبنانية مخفوقة وكريمية، شديدة النكهة."},
+      {"icon": "🍋", "t": "تتبيلة حامضة", "d": "عصير الليمون والخل ومعجون الطماطم يمنحان نكهة قوية."}
+    ],
+    "zh": [
+      {"icon": "🍗", "t": "腌制鸡胸肉", "d": "鸡肉块用酸奶和大蒜腌制数小时。"},
+      {"icon": "🔥", "t": "烤肉串", "d": "大火烤至充分焦黄。"},
+      {"icon": "🧄", "t": "图姆蒜酱", "d": "打发的黎巴嫩奶油蒜酱，味道极其浓烈。"},
+      {"icon": "🍋", "t": "酸味腌料", "d": "柠檬汁、醋和番茄酱赋予浓郁风味。"}
+    ],
+    "ja": [
+      {"icon": "🍗", "t": "マリネした鶏胸肉", "d": "ヨーグルトとにんにくで何時間もマリネした鶏肉の角切り。"},
+      {"icon": "🔥", "t": "グリル串焼き", "d": "強火でよく焦げ目がつくまで焼く。"},
+      {"icon": "🧄", "t": "トゥムソース", "d": "泡立てたクリーミーなレバノン風にんにくソース、非常に濃厚。"},
+      {"icon": "🍋", "t": "酸味のあるマリネ", "d": "レモン汁、酢、トマトペーストが濃厚な風味を与える。"}
+    ],
+    "hi": [
+      {"icon": "🍗", "t": "मैरीनेट किया चिकन ब्रेस्ट", "d": "दही और लहसुन में घंटों मैरीनेट किए चिकन क्यूब्स।"},
+      {"icon": "🔥", "t": "ग्रिल किए स्केवर", "d": "तेज़ आंच पर अच्छी तरह भूरा होने तक ग्रिल किया।"},
+      {"icon": "🧄", "t": "तूम सॉस", "d": "फेंटी, मलाईदार लेबनानी लहसुन की चटनी, अत्यंत तीव्र।"},
+      {"icon": "🍋", "t": "खट्टा मैरिनेड", "d": "नींबू का रस, सिरका और टमाटर पेस्ट तीव्र स्वाद देते हैं।"}
+    ],
+    "tr": [
+      {"icon": "🍗", "t": "Marine edilmiş tavuk göğsü", "d": "Yoğurt ve sarımsakla saatlerce marine edilmiş tavuk küpleri."},
+      {"icon": "🔥", "t": "Izgara şişler", "d": "İyice kızarana kadar yüksek ateşte ızgara edilir."},
+      {"icon": "🧄", "t": "Tum sosu", "d": "Çırpılmış, kremamsı Lübnan sarımsak sosu, son derece yoğun."},
+      {"icon": "🍋", "t": "Ekşi marine", "d": "Limon suyu, sirke ve domates salçası yoğun lezzet verir."}
+    ],
+    "it": [
+      {"icon": "🍗", "t": "Petto di pollo marinato", "d": "Cubetti di pollo marinati per ore in yogurt e aglio."},
+      {"icon": "🔥", "t": "Spiedini grigliati", "d": "Grigliati a fuoco alto finché ben rosolati."},
+      {"icon": "🧄", "t": "Salsa toum", "d": "Salsa d'aglio libanese montata e cremosa, estremamente intensa."},
+      {"icon": "🍋", "t": "Marinata acidula", "d": "Succo di limone, aceto e concentrato di pomodoro danno un sapore intenso."}
+    ],
+    "ko": [
+      {"icon": "🍗", "t": "재운 닭가슴살", "d": "요거트와 마늘에 몇 시간 재운 닭고기 조각."},
+      {"icon": "🔥", "t": "그릴 꼬치", "d": "센 불에서 노릇하게 구운 것."},
+      {"icon": "🧄", "t": "툼 소스", "d": "휘핑한 크리미한 레바논식 마늘 소스, 매우 강렬한 맛."},
+      {"icon": "🍋", "t": "새콤한 마리네이드", "d": "레몬즙, 식초, 토마토 페이스트가 진한 풍미를 낸다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["800g piept de pui, cuburi", "200g iaurt gros", "4 căței de usturoi", "2 linguri pastă de roșii", "zeamă de la 2 lămâi", "2 linguri oțet", "1 linguriță boia dulce", "sare, piper", "300ml ulei vegetal (pentru toum)", "6 căței de usturoi (pentru toum)"],
+    "en": ["800g chicken breast, cubed", "200g thick yogurt", "4 garlic cloves", "2 tbsp tomato paste", "juice of 2 lemons", "2 tbsp vinegar", "1 tsp sweet paprika", "salt, pepper", "300ml vegetable oil (for toum)", "6 garlic cloves (for toum)"],
+    "es": ["800g de pechuga de pollo, en cubos", "200g de yogur espeso", "4 dientes de ajo", "2 cdas de pasta de tomate", "zumo de 2 limones", "2 cdas de vinagre", "1 cdta de pimentón dulce", "sal, pimienta", "300ml de aceite vegetal (para el toum)", "6 dientes de ajo (para el toum)"],
+    "fr": ["800g de blanc de poulet, en cubes", "200g de yaourt épais", "4 gousses d'ail", "2 c. à s. de concentré de tomate", "jus de 2 citrons", "2 c. à s. de vinaigre", "1 c. à c. de paprika doux", "sel, poivre", "300ml d'huile végétale (pour le toum)", "6 gousses d'ail (pour le toum)"],
+    "de": ["800g Hähnchenbrust, gewürfelt", "200g dicker Joghurt", "4 Knoblauchzehen", "2 EL Tomatenmark", "Saft von 2 Zitronen", "2 EL Essig", "1 TL süßes Paprikapulver", "Salz, Pfeffer", "300ml Pflanzenöl (für den Toum)", "6 Knoblauchzehen (für den Toum)"],
+    "pt": ["800g de peito de frango, em cubos", "200g de iogurte espesso", "4 dentes de alho", "2 c. sopa de polpa de tomate", "sumo de 2 limões", "2 c. sopa de vinagre", "1 colher de chá de colorau doce", "sal, pimenta", "300ml de óleo vegetal (para o toum)", "6 dentes de alho (para o toum)"],
+    "ru": ["800г куриной грудки, кубиками", "200г густого йогурта", "4 зубчика чеснока", "2 ст.л. томатной пасты", "сок 2 лимонов", "2 ст.л. уксуса", "1 ч.л. сладкой паприки", "соль, перец", "300мл растительного масла (для тум)", "6 зубчиков чеснока (для тум)"],
+    "ar": ["800غ صدر دجاج مقطّع مكعبات", "200غ لبن سميك", "4 فصوص ثوم", "2 ملعقة كبيرة معجون طماطم", "عصير ليمونتين", "2 ملعقة كبيرة خل", "ملعقة صغيرة بابريكا حلوة", "ملح، فلفل", "300مل زيت نباتي (للتوم)", "6 فصوص ثوم (للتوم)"],
+    "zh": ["鸡胸肉800克，切块", "浓稠酸奶200克", "大蒜4瓣", "番茄酱2汤匙", "柠檬汁2个柠檬量", "醋2汤匙", "甜红椒粉1茶匙", "盐、胡椒", "植物油300毫升（图姆蒜酱用）", "大蒜6瓣（图姆蒜酱用）"],
+    "ja": ["鶏胸肉 800g（角切り）", "濃厚なヨーグルト 200g", "にんにく 4片", "トマトペースト 大さじ2", "レモン2個分の果汁", "酢 大さじ2", "甘いパプリカパウダー 小さじ1", "塩、こしょう", "植物油 300ml（トゥム用）", "にんにく 6片（トゥム用）"],
+    "hi": ["800 ग्राम चिकन ब्रेस्ट, क्यूब्स में", "200 ग्राम गाढ़ा दही", "4 लहसुन की कलियाँ", "2 बड़े चम्मच टमाटर पेस्ट", "2 नींबू का रस", "2 बड़े चम्मच सिरका", "1 छोटा चम्मच मीठी पपरिका", "नमक, काली मिर्च", "300 मिली वनस्पति तेल (तूम के लिए)", "6 लहसुन की कलियाँ (तूम के लिए)"],
+    "tr": ["800g tavuk göğsü, küp küp", "200g koyu yoğurt", "4 diş sarımsak", "2 yemek kaşığı domates salçası", "2 limonun suyu", "2 yemek kaşığı sirke", "1 çay kaşığı tatlı paprika", "tuz, karabiber", "300ml bitkisel yağ (tum için)", "6 diş sarımsak (tum için)"],
+    "it": ["800g di petto di pollo, a cubetti", "200g di yogurt denso", "4 spicchi d'aglio", "2 cucchiai di concentrato di pomodoro", "succo di 2 limoni", "2 cucchiai di aceto", "1 cucchiaino di paprika dolce", "sale, pepe", "300ml di olio vegetale (per il toum)", "6 spicchi d'aglio (per il toum)"],
+    "ko": ["닭가슴살 800g, 깍둑썰기", "진한 요거트 200g", "마늘 4쪽", "토마토 페이스트 2큰술", "레몬 2개분 즙", "식초 2큰술", "단맛 파프리카 가루 1작은술", "소금, 후추", "식물성 기름 300ml(툼 소스용)", "마늘 6쪽(툼 소스용)"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE MARINATĂ: Amestecă iaurtul, usturoiul zdrobit, pasta de roșii, zeama de lămâie, oțetul, boia, sare și piper. MARINARE PUI: Adaugă cuburile de pui în marinată, acoperă și lasă la frigider minimum 4 ore, ideal peste noapte. FRIGARE: Înfige bucățile de pui pe frigărui de metal sau lemn înmuiate în apă. FRIGERE LA GRĂTAR: Frige frigăruile pe grătar la foc mare, întorcând des, 10-12 minute până sunt bine rumenite și pătrunse. PREPARARE TOUM: Mixează usturoiul cu puțină sare într-un robot, apoi adaugă uleiul foarte încet, în fir subțire, mixând continuu până se emulsionează într-un sos alb, gros. SERVIRE: Servește frigăruile fierbinți cu toum din belșug, pâine lipie și legume la grătar.",
+    "en": "MAKE MARINADE: Mix the yogurt, crushed garlic, tomato paste, lemon juice, vinegar, paprika, salt and pepper. MARINATE CHICKEN: Add the chicken cubes to the marinade, cover and refrigerate for at least 4 hours, ideally overnight. SKEWER: Thread the chicken pieces onto metal or water-soaked wooden skewers. GRILL: Grill the skewers over high heat, turning often, for 10-12 minutes until well browned and cooked through. MAKE TOUM: Blend the garlic with a little salt in a food processor, then add the oil very slowly in a thin stream, blending continuously until it emulsifies into a thick white sauce. SERVE: Serve the skewers hot with plenty of toum, flatbread and grilled vegetables.",
+    "es": "PREPARAR EL ADOBO: Mezcla el yogur, el ajo machacado, la pasta de tomate, el zumo de limón, el vinagre, el pimentón, sal y pimienta. MARINAR EL POLLO: Añade los cubos de pollo al adobo, cubre y refrigera al menos 4 horas, idealmente toda la noche. ENSARTAR: Ensarta los trozos de pollo en brochetas de metal o de madera remojadas en agua. ASAR A LA PARRILLA: Asa las brochetas a fuego alto, dándoles vuelta a menudo, 10-12 minutos hasta que estén bien doradas y cocidas. PREPARAR EL TOUM: Mezcla el ajo con un poco de sal en un robot de cocina, luego añade el aceite muy lentamente en un hilo fino, mezclando continuamente hasta que emulsione en una salsa blanca espesa. SERVIR: Sirve las brochetas calientes con abundante toum, pan de pita y verduras a la parrilla.",
+    "fr": "PRÉPARER LA MARINADE: Mélangez le yaourt, l'ail écrasé, le concentré de tomate, le jus de citron, le vinaigre, le paprika, le sel et le poivre. MARINER LE POULET: Ajoutez les cubes de poulet à la marinade, couvrez et réfrigérez au moins 4 heures, idéalement toute la nuit. EMBROCHER: Enfilez les morceaux de poulet sur des brochettes en métal ou en bois trempées dans l'eau. GRILLER: Faites griller les brochettes à feu vif, en les retournant souvent, 10-12 minutes jusqu'à ce qu'elles soient bien dorées et cuites. PRÉPARER LE TOUM: Mixez l'ail avec un peu de sel dans un robot, puis ajoutez l'huile très lentement en filet fin, en mixant continuellement jusqu'à émulsion en une sauce blanche épaisse. SERVIR: Servez les brochettes chaudes avec beaucoup de toum, du pain plat et des légumes grillés.",
+    "de": "MARINADE ZUBEREITEN: Joghurt, zerdrückten Knoblauch, Tomatenmark, Zitronensaft, Essig, Paprika, Salz und Pfeffer vermischen. HÄHNCHEN MARINIEREN: Die Hähnchenwürfel zur Marinade geben, abdecken und mindestens 4 Stunden, idealerweise über Nacht, kühlen. AUFSPIESSEN: Die Hähnchenstücke auf Metall- oder in Wasser eingeweichte Holzspieße stecken. GRILLEN: Die Spieße bei hoher Hitze grillen, oft wenden, 10-12 Minuten, bis sie gut gebräunt und durchgegart sind. TOUM ZUBEREITEN: Den Knoblauch mit etwas Salz in einer Küchenmaschine mixen, dann das Öl sehr langsam in dünnem Strahl hinzufügen, kontinuierlich mixen, bis es zu einer dicken weißen Sauce emulgiert. SERVIEREN: Die Spieße heiß mit reichlich Toum, Fladenbrot und gegrilltem Gemüse servieren.",
+    "pt": "PREPARAR A MARINADA: Misture o iogurte, o alho esmagado, a polpa de tomate, o sumo de limão, o vinagre, o colorau, sal e pimenta. MARINAR O FRANGO: Junte os cubos de frango à marinada, tape e leve à geladeira pelo menos 4 horas, idealmente durante a noite. ESPETAR: Enfie os pedaços de frango em espetos de metal ou madeira demolhados em água. GRELHAR: Grelhe os espetos em lume alto, virando frequentemente, 10-12 minutos até estarem bem dourados e cozidos. PREPARAR O TOUM: Bata o alho com um pouco de sal num processador, depois junte o óleo muito lentamente em fio fino, batendo continuamente até emulsionar num molho branco espesso. SERVIR: Sirva os espetos quentes com bastante toum, pão pita e legumes grelhados.",
+    "ru": "ПРИГОТОВЛЕНИЕ МАРИНАДА: Смешайте йогурт, раздавленный чеснок, томатную пасту, лимонный сок, уксус, паприку, соль и перец. МАРИНОВАНИЕ КУРИЦЫ: Добавьте кубики курицы в маринад, накройте и охладите минимум 4 часа, идеально на ночь. НАНИЗЫВАНИЕ: Нанижите куски курицы на металлические или замоченные в воде деревянные шампуры. ЖАРКА НА ГРИЛЕ: Жарьте шашлычки на сильном огне, часто переворачивая, 10-12 минут до хорошей румяности и готовности. ПРИГОТОВЛЕНИЕ ТУМ: Взбейте чеснок с небольшим количеством соли в кухонном комбайне, затем очень медленно добавляйте масло тонкой струйкой, непрерывно взбивая, пока не получится густой белый соус. ПОДАЧА: Подавайте шашлычки горячими с обилием тум, лавашом и овощами гриль.",
+    "ar": "تحضير التتبيلة: اخلط اللبن والثوم المهروس ومعجون الطماطم وعصير الليمون والخل والبابريكا والملح والفلفل. تتبيل الدجاج: أضف مكعبات الدجاج إلى التتبيلة، غطِّ وضعها في الثلاجة لمدة 4 ساعات على الأقل، ويفضل طوال الليل. التسييخ: أدخل قطع الدجاج في أسياخ معدنية أو خشبية منقوعة في الماء. الشوي: اشوِ الأسياخ على نار عالية، مع التقليب كثيرًا، لمدة 10-12 دقيقة حتى تحمّر جيدًا وتنضج. تحضير التوم: اخلط الثوم مع قليل من الملح في محضر طعام، ثم أضف الزيت ببطء شديد على شكل خيط رفيع مع الخلط المستمر حتى يستحلب إلى صلصة بيضاء سميكة. التقديم: قدّم الأسياخ ساخنة مع كمية وافرة من التوم والخبز والخضار المشوية.",
+    "zh": "制作腌料：将酸奶、压碎的大蒜、番茄酱、柠檬汁、醋、红椒粉、盐和胡椒混合。腌制鸡肉：将鸡肉块加入腌料中，盖好冷藏至少4小时，最好过夜。穿串：将鸡肉块穿在金属或浸水的木签上。烤制：大火烤肉串，勤翻动，10-12分钟至充分焦黄熟透。制作图姆蒜酱：将大蒜与少许盐在食物加工机中搅打，然后极缓慢地以细流加入油，持续搅打直至乳化成浓稠白色酱汁。装盘：趁热食用，配大量图姆蒜酱、薄饼和烤蔬菜。",
+    "ja": "マリネを作る：ヨーグルト、つぶしたにんにく、トマトペースト、レモン汁、酢、パプリカ、塩、こしょうを混ぜる。鶏肉をマリネする：鶏肉の角切りをマリネに加え、覆って冷蔵庫で最低4時間、理想的には一晩置く。串に刺す：鶏肉を金属または水に浸した木の串に刺す。グリルする：串を強火で頻繁に返しながら、よく焦げ目がつき中まで火が通るまで10〜12分焼く。トゥムを作る：にんにくを少量の塩と共にフードプロセッサーで混ぜ、次に油を細く垂らしながら非常にゆっくり加え、濃厚な白いソースに乳化するまで混ぜ続ける。盛り付け：串を熱いうちに、たっぷりのトゥム、フラットブレッド、グリル野菜と共に提供する。",
+    "hi": "मैरिनेड तैयार करें: दही, कुचला लहसुन, टमाटर पेस्ट, नींबू का रस, सिरका, पपरिका, नमक और काली मिर्च मिलाएं। चिकन मैरीनेट करें: चिकन क्यूब्स को मैरिनेड में डालें, ढककर कम से कम 4 घंटे, आदर्श रूप से रात भर फ्रिज में रखें। सींक में पिरोएं: चिकन के टुकड़ों को धातु या पानी में भिगोई लकड़ी की सीखों में पिरोएं। ग्रिल करें: सीखों को तेज़ आंच पर, बार-बार पलटते हुए, 10-12 मिनट तक अच्छी तरह भूरा और पकने तक ग्रिल करें। तूम तैयार करें: लहसुन को थोड़े नमक के साथ फूड प्रोसेसर में मिलाएं, फिर तेल को बहुत धीरे-धीरे पतली धार में डालें, लगातार मिलाते हुए जब तक गाढ़ी सफेद चटनी न बन जाए। परोसें: सीखों को गरमागरम भरपूर तूम, फ्लैटब्रेड और ग्रिल सब्ज़ियों के साथ परोसें।",
+    "tr": "MARİNEYİ HAZIRLAYIN: Yoğurt, ezilmiş sarımsak, domates salçası, limon suyu, sirke, paprika, tuz ve karabiberi karıştırın. TAVUĞU MARİNE EDİN: Tavuk küplerini marineye ekleyin, örtün ve en az 4 saat, tercihen bir gece buzdolabında bekletin. ŞİŞE DİZİN: Tavuk parçalarını metal veya suya batırılmış tahta şişlere dizin. IZGARA YAPIN: Şişleri yüksek ateşte, sık sık çevirerek, iyice kızarıp pişene kadar 10-12 dakika ızgara yapın. TUM HAZIRLAYIN: Sarımsağı biraz tuzla bir mutfak robotunda karıştırın, sonra yağı ince bir akışla çok yavaş ekleyin, koyu beyaz bir sos oluşana kadar sürekli karıştırın. SERVİS EDİN: Şişleri sıcak, bol tum, yassı ekmek ve ızgara sebzelerle servis edin.",
+    "it": "PREPARARE LA MARINATA: Mescolate lo yogurt, l'aglio schiacciato, il concentrato di pomodoro, il succo di limone, l'aceto, la paprika, sale e pepe. MARINARE IL POLLO: Aggiungete i cubetti di pollo alla marinata, coprite e refrigerate almeno 4 ore, idealmente durante la notte. INFILZARE: Infilzate i pezzi di pollo su spiedini di metallo o di legno ammollati in acqua. GRIGLIARE: Grigliate gli spiedini a fuoco alto, girando spesso, per 10-12 minuti finché ben rosolati e cotti. PREPARARE IL TOUM: Frullate l'aglio con un po' di sale in un robot da cucina, poi aggiungete l'olio molto lentamente a filo sottile, frullando continuamente finché emulsiona in una salsa bianca densa. SERVIRE: Servite gli spiedini caldi con abbondante toum, pane piatto e verdure grigliate.",
+    "ko": "마리네이드 만들기: 요거트, 으깬 마늘, 토마토 페이스트, 레몬즙, 식초, 파프리카, 소금, 후추를 섞는다. 닭고기 재우기: 닭고기 조각을 마리네이드에 넣고 덮어 최소 4시간, 가능하면 하룻밤 냉장 보관한다. 꼬치 꽂기: 닭고기 조각을 금속 또는 물에 담근 나무 꼬치에 꽂는다. 굽기: 꼬치를 센 불에서 자주 뒤집으며 10~12분간 충분히 노릇하고 익을 때까지 굽는다. 툼 소스 만들기: 마늘을 소금 약간과 함께 푸드프로세서에 갈고, 기름을 아주 가늘게 천천히 부으며 계속 갈아 걸쭉한 흰색 소스로 유화시킨다. 담아내기: 꼬치를 뜨거울 때 넉넉한 툼 소스, 플랫브레드, 구운 채소와 함께 낸다."
+  },
+  "originText": {
+    "ro": "Shish taouk face parte din familia largă de frigărui otomane care s-au răspândit în tot Levantul odată cu domnia Imperiului Otoman, adaptate de fiecare bucătărie locală cu propriile arome distincte. Cuvântul taouk înseamnă pur și simplu pui în turcă, iar libanezii au adăugat o marinată de iaurt specifică regiunii, care fragezește carnea și îi dă o aciditate blândă.\n\nCe distinge cu adevărat shish taouk-ul de alte frigărui similare din regiune este sosul toum care îl însoțește aproape întotdeauna — o emulsie pură de usturoi și ulei, fără ou, care necesită tehnică și răbdare pentru a nu se tăia. Restaurantele libaneze își apără cu strictețe rețetele de toum, unele fiind moștenite de generații, considerate parte esențială a identității culinare naționale la fel de mult ca și carnea în sine.",
+    "en": "Shish taouk belongs to the broader family of Ottoman-style skewers that spread across the Levant during the reign of the Ottoman Empire, adapted by each local cuisine with its own distinct flavors. The word taouk simply means chicken in Turkish, and the Lebanese added a region-specific yogurt marinade, which tenderizes the meat and gives it a gentle tartness.\n\nWhat truly sets shish taouk apart from other similar skewers in the region is the toum sauce that almost always accompanies it — a pure emulsion of garlic and oil, with no egg, requiring technique and patience to avoid breaking. Lebanese restaurants strictly guard their toum recipes, some passed down through generations, considered as essential to national culinary identity as the meat itself.",
+    "es": "El shish taouk pertenece a la amplia familia de brochetas de estilo otomano que se extendieron por todo el Levante durante el reinado del Imperio Otomano, adaptadas por cada cocina local con sus propios sabores distintivos. La palabra taouk simplemente significa pollo en turco, y los libaneses añadieron un adobo de yogur específico de la región, que ablanda la carne y le da una acidez suave.\n\nLo que realmente distingue al shish taouk de otras brochetas similares de la región es la salsa toum que casi siempre lo acompaña — una emulsión pura de ajo y aceite, sin huevo, que requiere técnica y paciencia para no cortarse. Los restaurantes libaneses protegen estrictamente sus recetas de toum, algunas transmitidas durante generaciones, consideradas tan esenciales para la identidad culinaria nacional como la carne misma.",
+    "fr": "Le chich taouk appartient à la vaste famille des brochettes de style ottoman qui se sont répandues dans tout le Levant sous le règne de l'Empire ottoman, adaptées par chaque cuisine locale avec ses propres saveurs distinctes. Le mot taouk signifie simplement poulet en turc, et les Libanais ont ajouté une marinade au yaourt spécifique à la région, qui attendrit la viande et lui donne une acidité douce.\n\nCe qui distingue vraiment le chich taouk des autres brochettes similaires de la région est la sauce toum qui l'accompagne presque toujours — une pure émulsion d'ail et d'huile, sans œuf, nécessitant technique et patience pour ne pas se casser. Les restaurants libanais protègent strictement leurs recettes de toum, certaines transmises depuis des générations, considérées comme essentielles à l'identité culinaire nationale autant que la viande elle-même.",
+    "de": "Shish Taouk gehört zur breiteren Familie osmanischer Spieße, die sich während der Herrschaft des Osmanischen Reiches in der gesamten Levante verbreiteten und von jeder lokalen Küche mit ihren eigenen unverwechselbaren Aromen angepasst wurden. Das Wort taouk bedeutet auf Türkisch einfach Huhn, und die Libanesen fügten eine regionsspezifische Joghurtmarinade hinzu, die das Fleisch zart macht und ihm eine milde Säure verleiht.\n\nWas Shish Taouk wirklich von anderen ähnlichen Spießen der Region unterscheidet, ist die Toum-Sauce, die ihn fast immer begleitet — eine reine Emulsion aus Knoblauch und Öl, ohne Ei, die Technik und Geduld erfordert, um nicht zu brechen. Libanesische Restaurants hüten ihre Toum-Rezepte streng, manche über Generationen weitergegeben, und betrachten sie als ebenso wesentlich für die nationale kulinarische Identität wie das Fleisch selbst.",
+    "pt": "O shish taouk pertence à ampla família de espetos de estilo otomano que se espalharam por todo o Levante durante o reinado do Império Otomano, adaptados por cada cozinha local com os seus próprios sabores distintos. A palavra taouk significa simplesmente frango em turco, e os libaneses acrescentaram uma marinada de iogurte específica da região, que amacia a carne e lhe dá uma acidez suave.\n\nO que realmente distingue o shish taouk de outros espetos semelhantes na região é o molho toum que quase sempre o acompanha — uma emulsão pura de alho e óleo, sem ovo, que requer técnica e paciência para não talhar. Os restaurantes libaneses guardam rigorosamente as suas receitas de toum, algumas transmitidas ao longo de gerações, consideradas tão essenciais para a identidade culinária nacional quanto a própria carne.",
+    "ru": "Шиш тавук принадлежит к более широкой семье шашлыков османского стиля, распространившихся по всему Леванту во времена правления Османской империи, адаптированных каждой местной кухней со своими особыми вкусами. Слово taouk по-турецки просто означает курица, а ливанцы добавили специфический для региона йогуртовый маринад, который делает мясо мягче и придаёт ему лёгкую кислинку.\n\nЧто действительно отличает шиш тавук от других похожих шашлыков региона, так это соус тум, который почти всегда его сопровождает — чистая эмульсия чеснока и масла без яйца, требующая техники и терпения, чтобы не разошлась. Ливанские рестораны строго хранят свои рецепты тум, некоторые передаются из поколения в поколение, считающиеся столь же важными для национальной кулинарной идентичности, как и само мясо.",
+    "ar": "ينتمي الشيش طاووق إلى العائلة الأوسع من الأسياخ العثمانية التي انتشرت في جميع أنحاء بلاد الشام خلال حكم الإمبراطورية العثمانية، وتكيّف مع كل مطبخ محلي بنكهاته المميزة. تعني كلمة طاووق ببساطة دجاج بالتركية، وأضاف اللبنانيون تتبيلة لبن خاصة بالمنطقة تُطري اللحم وتمنحه حموضة خفيفة.\n\nما يميز الشيش طاووق حقًا عن الأسياخ المماثلة الأخرى في المنطقة هو صلصة التوم التي ترافقه دائمًا تقريبًا — استحلاب نقي من الثوم والزيت دون بيض، يتطلب مهارة وصبرًا حتى لا ينفصل. تحرص المطاعم اللبنانية بشدة على وصفات التوم الخاصة بها، وبعضها موروث عبر الأجيال، وتُعتبر جزءًا أساسيًا من الهوية الطهوية الوطنية بقدر أهمية اللحم نفسه.",
+    "zh": "希什塔沃克属于奥斯曼帝国统治时期传遍黎凡特地区的更广泛的奥斯曼式烤肉串家族，每个地方菜系都以自己独特的风味对其进行了改良。土耳其语中taouk一词简单来说就是「鸡」的意思，而黎巴嫩人加入了具有地方特色的酸奶腌料，使肉质更嫩，并带来温和的酸味。\n\n真正使希什塔沃克有别于该地区其他类似烤串的，是几乎总是搭配食用的图姆蒜酱——一种由大蒜和油制成的纯乳化酱，不含鸡蛋，需要技巧和耐心才能避免分离。黎巴嫩餐厅严格守护着各自的图姆蒜酱配方，有些代代相传，被视为与肉类本身同样重要的民族饮食文化身份的核心组成部分。",
+    "ja": "シシ・タウークは、オスマン帝国の統治時代にレバント全域に広まったオスマン風串焼きの大きな系統に属し、各地の料理がそれぞれ独自の風味に適応させてきた。taouk（タウーク）という言葉はトルコ語で単に鶏を意味し、レバノン人は肉を柔らかくし穏やかな酸味を与える地域特有のヨーグルトマリネを加えた。\n\nシシ・タウークを地域の他の類似した串焼きと本当に一線を画すのは、ほとんど常に添えられるトゥムソースである――卵を使わない、にんにくと油の純粋な乳化ソースで、分離させないための技術と忍耐が必要である。レバノンのレストランは自分たちのトゥムのレシピを厳格に守っており、何世代にもわたって受け継がれてきたものもあり、肉そのものと同じくらい国家的な料理アイデンティティに不可欠なものと見なされている。",
+    "hi": "शिश तौक़ ऑटोमन साम्राज्य के शासनकाल में पूरे लेवांत में फैले ऑटोमन-शैली के सींक कबाबों के व्यापक परिवार से संबंधित है, जिसे हर स्थानीय व्यंजन ने अपने विशिष्ट स्वादों के साथ अपनाया। तौक़ शब्द का अर्थ तुर्की में केवल चिकन है, और लेबनानियों ने एक क्षेत्र-विशिष्ट दही मैरिनेड जोड़ा, जो मांस को कोमल बनाता है और उसे हल्का खट्टापन देता है।\n\nजो चीज़ शिश तौक़ को क्षेत्र के अन्य समान सींक कबाबों से वास्तव में अलग करती है वह है तूम सॉस जो लगभग हमेशा इसके साथ आती है — लहसुन और तेल का शुद्ध इमल्शन, बिना अंडे के, जिसे फटने से बचाने के लिए तकनीक और धैर्य चाहिए। लेबनानी रेस्तरां अपने तूम व्यंजनों की सख्ती से रक्षा करते हैं, कुछ पीढ़ियों से चले आ रहे हैं, जिन्हें मांस जितना ही राष्ट्रीय पाक पहचान के लिए आवश्यक माना जाता है।",
+    "tr": "Şiş tavuk, Osmanlı İmparatorluğu döneminde tüm Levant'a yayılan, her yerel mutfağın kendine özgü lezzetleriyle uyarladığı geniş Osmanlı tarzı şiş ailesine aittir. Taouk kelimesi Türkçede basitçe tavuk anlamına gelir ve Lübnanlılar, eti yumuşatan ve ona hafif bir ekşilik veren bölgeye özgü bir yoğurt marinesi eklediler.\n\nŞiş tavuğu bölgedeki diğer benzer şişlerden gerçekten ayıran şey, neredeyse her zaman eşlik eden tum sosudur — yumurtasız, sarımsak ve yağın saf bir emülsiyonu, kesilmemesi için teknik ve sabır gerektirir. Lübnan restoranları tum tariflerini sıkı sıkıya korur, bazıları nesillerden nesillere aktarılır ve etin kendisi kadar ulusal mutfak kimliği için gerekli görülür.",
+    "it": "Lo shish taouk appartiene alla più ampia famiglia degli spiedini in stile ottomano diffusisi in tutto il Levante durante il regno dell'Impero Ottomano, adattati da ogni cucina locale con i propri sapori distintivi. La parola taouk significa semplicemente pollo in turco, e i libanesi hanno aggiunto una marinata allo yogurt specifica della regione, che intenerisce la carne e le dà un'acidità delicata.\n\nCiò che distingue veramente lo shish taouk da altri spiedini simili della regione è la salsa toum che quasi sempre lo accompagna — un'emulsione pura di aglio e olio, senza uovo, che richiede tecnica e pazienza per non spezzarsi. I ristoranti libanesi custodiscono rigorosamente le loro ricette di toum, alcune tramandate per generazioni, considerate essenziali per l'identità culinaria nazionale quanto la carne stessa.",
+    "ko": "쉬시 타욱은 오스만 제국 통치 기간 동안 레반트 전역으로 퍼진 오스만식 꼬치 요리의 더 넓은 계열에 속하며, 각 지역 요리가 자신만의 독특한 풍미로 적응시켰다. 타욱이라는 단어는 터키어로 단순히 닭을 의미하며, 레바논인들은 고기를 부드럽게 하고 은은한 신맛을 주는 지역 특유의 요거트 마리네이드를 추가했다.\n\n쉬시 타욱을 이 지역의 다른 유사한 꼬치 요리와 진정으로 구별 짓는 것은 거의 항상 함께 나오는 툼 소스로, 달걀 없이 마늘과 기름만으로 만든 순수한 유화 소스이며, 분리되지 않게 하려면 기술과 인내심이 필요하다. 레바논 레스토랑들은 자신들의 툼 레시피를 엄격하게 지키며, 일부는 여러 세대에 걸쳐 전해져 왔고, 고기 자체만큼이나 국가적 요리 정체성에 필수적인 것으로 여겨진다."
+  },
+  "meta": {
+    "time": 270,
+    "costRon": 20,
+    "tags": [],
+    "desc": {
+      "ro": "Frigărui de pui marinat cu iaurt, la grătar, servite cu sos toum de usturoi.",
+      "en": "Yogurt-marinated grilled chicken skewers, served with creamy toum garlic sauce.",
+      "es": "Brochetas de pollo marinado en yogur, a la parrilla, con salsa toum de ajo.",
+      "fr": "Brochettes de poulet mariné au yaourt, grillées, avec sauce toum à l'ail.",
+      "de": "Joghurt-marinierte gegrillte Hähnchenspieße, mit cremiger Toum-Knoblauchsauce.",
+      "pt": "Espetos de frango marinado em iogurte, grelhados, com molho toum de alho.",
+      "ru": "Шашлычки из курицы, маринованной в йогурте, с чесночным соусом тум.",
+      "ar": "أسياخ دجاج متبّل باللبن ومشوي، مع صلصة التوم الثومية.",
+      "zh": "酸奶腌制烤鸡肉串，配奶油图姆蒜酱。",
+      "ja": "ヨーグルトマリネのグリルチキン串、クリーミーなトゥムにんにくソース添え。",
+      "hi": "दही में मैरीनेट ग्रिल किया चिकन स्केवर, मलाईदार तूम लहसुन चटनी के साथ।",
+      "tr": "Yoğurtla marine edilmiş ızgara tavuk şiş, kremamsı tum sarımsak sosuyla.",
+      "it": "Spiedini di pollo marinato allo yogurt, grigliati, con salsa toum all'aglio.",
+      "ko": "요거트에 재운 구운 닭고기 꼬치, 크리미한 마늘 소스 툼을 곁들임."
+    }
+  }
+}
