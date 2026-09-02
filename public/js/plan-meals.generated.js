@@ -146,9 +146,9 @@ export const PLAN_MEALS = {
       275,
       285,
       272,
+      319,
       315,
-      123,
-      147
+      123
     ]
   },
   "rapid": {
@@ -234,7 +234,7 @@ export const PLAN_MEALS = {
     ],
     "dinnerIds": [
       301,
-      191
+      319
     ]
   }
 };
