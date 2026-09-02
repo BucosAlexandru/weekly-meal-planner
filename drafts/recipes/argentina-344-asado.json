@@ -1,0 +1,177 @@
+{
+  "id": 344,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Argentina", "en": "Argentina", "es": "Argentina", "fr": "Argentine", "de": "Argentinien",
+    "pt": "Argentina", "ru": "Аргентина", "ar": "الأرجنتين", "zh": "阿根廷", "ja": "アルゼンチン",
+    "hi": "अर्जेंटीना", "tr": "Arjantin", "it": "Argentina", "ko": "아르헨티나"
+  },
+  "name": {
+    "ro": "Asado argentinian", "en": "Asado (Argentine Grill)", "es": "Asado argentino", "fr": "Asado argentin",
+    "de": "Argentinisches Asado", "pt": "Assado argentino", "ru": "Асадо (аргентинский гриль)",
+    "ar": "أسادو الأرجنتيني", "zh": "阿根廷烤肉", "ja": "アサード（アルゼンチン風グリル）",
+    "hi": "आसादो (अर्जेंटीनी ग्रिल)", "tr": "Arjantin Asadosu", "it": "Asado argentino", "ko": "아사도 (아르헨티나식 그릴)"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🔥", "t": "Grătar la jar lent", "d": "Carnea se frige la foc mic, departe de jar, ore în șir."},
+      {"icon": "🧂", "t": "Doar sare grunjoasă", "d": "Singurul condiment tradițional e sarea groasă, nimic altceva."},
+      {"icon": "🥩", "t": "Mai multe tăieturi", "d": "Coaste, cârnați și organe, servite pe rând, în etape."},
+      {"icon": "👨‍🍳", "t": "Ritual social", "d": "Gătit de asador, în jurul căruia se adună familia și prietenii."}
+    ],
+    "en": [
+      {"icon": "🔥", "t": "Slow grilled over embers", "d": "Meat cooks low and away from the coals for hours."},
+      {"icon": "🧂", "t": "Coarse salt only", "d": "The only traditional seasoning is coarse salt, nothing else."},
+      {"icon": "🥩", "t": "Multiple cuts", "d": "Ribs, sausages and offal, served in stages, one after another."},
+      {"icon": "👨‍🍳", "t": "Social ritual", "d": "Cooked by the asador, around whom family and friends gather."}
+    ],
+    "es": [
+      {"icon": "🔥", "t": "Asado a las brasas lentamente", "d": "La carne se cocina a fuego lento, alejada de las brasas, por horas."},
+      {"icon": "🧂", "t": "Solo sal gruesa", "d": "El único condimento tradicional es la sal gruesa, nada más."},
+      {"icon": "🥩", "t": "Varios cortes", "d": "Costillas, chorizos y achuras, servidos por etapas, uno tras otro."},
+      {"icon": "👨‍🍳", "t": "Ritual social", "d": "Cocinado por el asador, alrededor del cual se reúnen familia y amigos."}
+    ],
+    "fr": [
+      {"icon": "🔥", "t": "Grillé lentement sur braises", "d": "La viande cuit à feu doux, loin des braises, pendant des heures."},
+      {"icon": "🧂", "t": "Seulement du gros sel", "d": "Le seul assaisonnement traditionnel est le gros sel, rien d'autre."},
+      {"icon": "🥩", "t": "Plusieurs morceaux", "d": "Côtes, saucisses et abats, servis par étapes, l'un après l'autre."},
+      {"icon": "👨‍🍳", "t": "Rituel social", "d": "Cuisiné par l'asador, autour duquel se rassemblent famille et amis."}
+    ],
+    "de": [
+      {"icon": "🔥", "t": "Langsam über Glut gegrillt", "d": "Das Fleisch gart stundenlang bei niedriger Hitze, fern der Glut."},
+      {"icon": "🧂", "t": "Nur grobes Salz", "d": "Die einzige traditionelle Würze ist grobes Salz, sonst nichts."},
+      {"icon": "🥩", "t": "Mehrere Fleischstücke", "d": "Rippen, Würste und Innereien, nacheinander in Etappen serviert."},
+      {"icon": "👨‍🍳", "t": "Soziales Ritual", "d": "Vom Asador zubereitet, um den sich Familie und Freunde versammeln."}
+    ],
+    "pt": [
+      {"icon": "🔥", "t": "Assado lentamente nas brasas", "d": "A carne cozinha em lume brando, longe das brasas, por horas."},
+      {"icon": "🧂", "t": "Apenas sal grosso", "d": "O único tempero tradicional é o sal grosso, nada mais."},
+      {"icon": "🥩", "t": "Vários cortes", "d": "Costelas, chouriços e miudezas, servidos por etapas, um após o outro."},
+      {"icon": "👨‍🍳", "t": "Ritual social", "d": "Cozinhado pelo asador, à volta do qual se reúnem família e amigos."}
+    ],
+    "ru": [
+      {"icon": "🔥", "t": "Медленное жарение на углях", "d": "Мясо готовится на слабом огне вдали от углей часами."},
+      {"icon": "🧂", "t": "Только крупная соль", "d": "Единственная традиционная приправа — крупная соль, и больше ничего."},
+      {"icon": "🥩", "t": "Разные отрубы", "d": "Рёбра, колбаски и субпродукты подаются поэтапно, друг за другом."},
+      {"icon": "👨‍🍳", "t": "Социальный ритуал", "d": "Готовится асадором, вокруг которого собираются семья и друзья."}
+    ],
+    "ar": [
+      {"icon": "🔥", "t": "شواء بطيء على الجمر", "d": "يُطهى اللحم على نار هادئة بعيدًا عن الجمر لساعات."},
+      {"icon": "🧂", "t": "ملح خشن فقط", "d": "التوابل التقليدية الوحيدة هي الملح الخشن، لا شيء آخر."},
+      {"icon": "🥩", "t": "قطعيات متعددة", "d": "أضلاع ونقانق وأحشاء، تُقدَّم على مراحل، واحدة تلو الأخرى."},
+      {"icon": "👨‍🍳", "t": "طقس اجتماعي", "d": "يطهوه الأسادور، الذي تتجمع حوله العائلة والأصدقاء."}
+    ],
+    "zh": [
+      {"icon": "🔥", "t": "炭火慢烤", "d": "肉类远离炭火，用小火慢烤数小时。"},
+      {"icon": "🧂", "t": "只用粗盐", "d": "唯一的传统调味料是粗盐，别无其他。"},
+      {"icon": "🥩", "t": "多种部位", "d": "肋排、香肠和内脏，分阶段依次上桌。"},
+      {"icon": "👨‍🍳", "t": "社交仪式", "d": "由烤肉师傅烹制，家人朋友围聚一堂。"}
+    ],
+    "ja": [
+      {"icon": "🔥", "t": "炭火でじっくり焼く", "d": "肉を炭火から離して弱火で何時間もかけて焼く。"},
+      {"icon": "🧂", "t": "粗塩のみ", "d": "伝統的な調味料は粗塩だけで他には何も使わない。"},
+      {"icon": "🥩", "t": "複数の部位", "d": "リブ、ソーセージ、内臓を段階的に順番に提供する。"},
+      {"icon": "👨‍🍳", "t": "社交的な儀式", "d": "アサドールが焼き、その周りに家族や友人が集まる。"}
+    ],
+    "hi": [
+      {"icon": "🔥", "t": "अंगारों पर धीमी ग्रिलिंग", "d": "मांस अंगारों से दूर धीमी आँच पर घंटों पकाया जाता है।"},
+      {"icon": "🧂", "t": "केवल मोटा नमक", "d": "एकमात्र पारंपरिक मसाला मोटा नमक है, और कुछ नहीं।"},
+      {"icon": "🥩", "t": "कई कट", "d": "पसलियां, सॉसेज और अंग मांस, चरणों में एक के बाद एक परोसे जाते हैं।"},
+      {"icon": "👨‍🍳", "t": "सामाजिक अनुष्ठान", "d": "आसादोर द्वारा पकाया जाता है, जिसके चारों ओर परिवार और दोस्त इकट्ठा होते हैं।"}
+    ],
+    "tr": [
+      {"icon": "🔥", "t": "Korda yavaşça pişer", "d": "Et, kordan uzakta, saatlerce düşük ateşte pişer."},
+      {"icon": "🧂", "t": "Sadece kaba tuz", "d": "Tek geleneksel baharat kaba tuzdur, başka hiçbir şey değil."},
+      {"icon": "🥩", "t": "Birden fazla parça", "d": "Kaburga, sosis ve sakatat, aşamalar halinde birbiri ardına servis edilir."},
+      {"icon": "👨‍🍳", "t": "Sosyal ritüel", "d": "Ailenin ve arkadaşların etrafında toplandığı asador tarafından pişirilir."}
+    ],
+    "it": [
+      {"icon": "🔥", "t": "Grigliato lentamente sulla brace", "d": "La carne cuoce a fuoco basso, lontano dalla brace, per ore."},
+      {"icon": "🧂", "t": "Solo sale grosso", "d": "L'unico condimento tradizionale è il sale grosso, nient'altro."},
+      {"icon": "🥩", "t": "Diversi tagli", "d": "Costine, salsicce e frattaglie, servite a fasi, una dopo l'altra."},
+      {"icon": "👨‍🍳", "t": "Rituale sociale", "d": "Cucinato dall'asador, attorno al quale si riuniscono famiglia e amici."}
+    ],
+    "ko": [
+      {"icon": "🔥", "t": "숯불에 천천히 굽기", "d": "고기는 숯불에서 떨어져 약불로 몇 시간 동안 익힌다."},
+      {"icon": "🧂", "t": "굵은 소금만 사용", "d": "유일한 전통 양념은 굵은 소금뿐, 그 외에는 아무것도 없다."},
+      {"icon": "🥩", "t": "다양한 부위", "d": "갈비, 소시지, 내장이 단계별로 차례차례 제공된다."},
+      {"icon": "👨‍🍳", "t": "사회적 의식", "d": "아사도르가 굽고 그 주위로 가족과 친구들이 모인다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg coaste de vită", "500g cârnați chorizo", "500g cârnați morcilla", "sare grunjoasă din belșug", "cărbuni sau lemn pentru jar", "pâine pentru servire", "chimichurri pentru servire (opțional)"],
+    "en": ["1kg beef short ribs", "500g chorizo sausages", "500g morcilla (blood sausage)", "plenty of coarse salt", "charcoal or wood for the embers", "bread for serving", "chimichurri for serving (optional)"],
+    "es": ["1kg de costillas de vaca", "500g de chorizos", "500g de morcilla", "sal gruesa en abundancia", "carbón o leña para las brasas", "pan para servir", "chimichurri para servir (opcional)"],
+    "fr": ["1kg de côtes de bœuf", "500g de chorizos", "500g de boudin noir (morcilla)", "gros sel en abondance", "charbon ou bois pour les braises", "pain pour servir", "chimichurri pour servir (facultatif)"],
+    "de": ["1kg Rinderrippen", "500g Chorizo-Würste", "500g Morcilla (Blutwurst)", "reichlich grobes Salz", "Holzkohle oder Holz für die Glut", "Brot zum Servieren", "Chimichurri zum Servieren (optional)"],
+    "pt": ["1kg de costela de vaca", "500g de linguiça chourição", "500g de morcela", "sal grosso em abundância", "carvão ou lenha para as brasas", "pão para servir", "chimichurri para servir (opcional)"],
+    "ru": ["1кг говяжьих коротких рёбер", "500г колбасок чоризо", "500г кровяной колбасы морсилья", "крупная соль в изобилии", "уголь или дрова для углей", "хлеб для подачи", "чимичурри для подачи (по желанию)"],
+    "ar": ["1كغ أضلاع بقري", "500غ نقانق تشوريزو", "500غ نقانق دم (مورسيا)", "ملح خشن بكثرة", "فحم أو خشب للجمر", "خبز للتقديم", "شيمي تشوري للتقديم (اختياري)"],
+    "zh": ["牛肋排1公斤", "西班牙香肠500克", "血肠500克", "大量粗盐", "木炭或木柴（生火用）", "面包（配食用）", "阿根廷青酱（可选，配食用）"],
+    "ja": ["牛の短いリブ 1kg", "チョリソソーセージ 500g", "モルシージャ（ブラッドソーセージ）500g", "たっぷりの粗塩", "炭火用の炭または薪", "提供用のパン", "提供用チミチュリソース（お好みで）"],
+    "hi": ["1 किलो बीफ शॉर्ट रिब्स", "500 ग्राम चोरिज़ो सॉसेज", "500 ग्राम मोर्सिला (ब्लड सॉसेज)", "भरपूर मोटा नमक", "अंगारों के लिए कोयला या लकड़ी", "परोसने के लिए ब्रेड", "परोसने के लिए चिमिचुरी (वैकल्पिक)"],
+    "tr": ["1kg dana kısa kaburga", "500g chorizo sosis", "500g morcilla (kan sosisi)", "bolca kaba tuz", "kor için kömür veya odun", "servis için ekmek", "servis için chimichurri (isteğe bağlı)"],
+    "it": ["1kg di costine di manzo", "500g di chorizo", "500g di morcilla (sanguinaccio)", "sale grosso in abbondanza", "carbone o legna per la brace", "pane per servire", "chimichurri per servire (opzionale)"],
+    "ko": ["소고기 갈비 1kg", "초리소 소시지 500g", "모르시야(순대) 500g", "넉넉한 굵은 소금", "숯불용 목탄 또는 장작", "곁들일 빵", "곁들일 치미추리(선택사항)"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE JAR: Aprinde cărbunii sau lemnul într-o parte a grătarului și lasă-i să ardă până devin jar roșu, fără flacără. AȘEZARE CARNE: Așază coastele pe grătar, departe de sursa de căldură directă, cu grăsimea în sus. CONDIMENTARE: Presară generos sare grunjoasă pe carne, fără alte condimente. FRIGERE LENTĂ: Lasă carnea să se frigă la foc mic 2-3 ore, întorcând ocazional, până devine fragedă. ADĂUGARE CÂRNAȚI: Adaugă chorizo și morcilla pe grătar în ultima oră, întorcându-i des. VERIFICARE COACERE: Carnea e gata când se desprinde ușor de os și are o crustă maro-aurie. SERVIRE ÎN ETAPE: Servește mai întâi cârnații, apoi coastele, tăiate în bucăți, alături de pâine și chimichurri.",
+    "en": "PREPARE THE EMBERS: Light the charcoal or wood on one side of the grill and let it burn down to red embers, with no flame. PLACE THE MEAT: Arrange the ribs on the grill, away from direct heat, fat side up. SEASON: Sprinkle generously with coarse salt, no other seasoning. SLOW GRILL: Let the meat cook over low heat for 2-3 hours, turning occasionally, until tender. ADD SAUSAGES: Add the chorizo and morcilla to the grill in the final hour, turning often. CHECK DONENESS: The meat is ready when it pulls easily from the bone and has a golden-brown crust. SERVE IN STAGES: Serve the sausages first, then the ribs, cut into pieces, alongside bread and chimichurri.",
+    "es": "PREPARAR LAS BRASAS: Enciende el carbón o la leña a un lado de la parrilla y deja que se consuma hasta obtener brasas rojas, sin llama. COLOCAR LA CARNE: Coloca las costillas en la parrilla, alejadas del calor directo, con la grasa hacia arriba. SAZONAR: Espolvorea generosamente con sal gruesa, sin otro condimento. ASAR LENTAMENTE: Deja que la carne se cocine a fuego lento durante 2-3 horas, dándole la vuelta de vez en cuando, hasta que esté tierna. AÑADIR CHORIZOS: Añade el chorizo y la morcilla a la parrilla en la última hora, dándoles vuelta a menudo. COMPROBAR EL PUNTO: La carne está lista cuando se desprende fácilmente del hueso y tiene una costra dorada. SERVIR POR ETAPAS: Sirve primero los chorizos, luego las costillas, cortadas en trozos, junto con pan y chimichurri.",
+    "fr": "PRÉPARER LES BRAISES: Allumez le charbon ou le bois d'un côté du gril et laissez-le se consumer jusqu'à obtenir des braises rouges, sans flamme. PLACER LA VIANDE: Disposez les côtes sur le gril, loin de la chaleur directe, gras vers le haut. ASSAISONNER: Saupoudrez généreusement de gros sel, sans autre condiment. GRILLER LENTEMENT: Laissez la viande cuire à feu doux pendant 2-3 heures, en la retournant occasionnellement, jusqu'à ce qu'elle soit tendre. AJOUTER LES SAUCISSES: Ajoutez le chorizo et le boudin noir au gril dans la dernière heure, en les retournant souvent. VÉRIFIER LA CUISSON: La viande est prête quand elle se détache facilement de l'os et a une croûte dorée. SERVIR PAR ÉTAPES: Servez d'abord les saucisses, puis les côtes, coupées en morceaux, avec du pain et du chimichurri.",
+    "de": "GLUT VORBEREITEN: Zünden Sie Holzkohle oder Holz auf einer Seite des Grills an und lassen Sie sie zu roter Glut ohne Flamme abbrennen. FLEISCH PLATZIEREN: Die Rippen auf den Grill legen, fern von direkter Hitze, Fettseite nach oben. WÜRZEN: Großzügig mit grobem Salz bestreuen, keine weiteren Gewürze. LANGSAM GRILLEN: Das Fleisch 2-3 Stunden bei schwacher Hitze garen lassen, gelegentlich wenden, bis es zart ist. WÜRSTE HINZUFÜGEN: Chorizo und Morcilla in der letzten Stunde zum Grill hinzufügen, oft wenden. GARPROBE: Das Fleisch ist fertig, wenn es sich leicht vom Knochen löst und eine goldbraune Kruste hat. IN ETAPPEN SERVIEREN: Zuerst die Würste servieren, dann die Rippen, in Stücke geschnitten, mit Brot und Chimichurri.",
+    "pt": "PREPARAR AS BRASAS: Acenda o carvão ou a lenha de um lado da grelha e deixe queimar até obter brasas vermelhas, sem chama. COLOCAR A CARNE: Disponha as costelas na grelha, longe do calor direto, com a gordura para cima. TEMPERAR: Polvilhe generosamente com sal grosso, sem outro tempero. GRELHAR LENTAMENTE: Deixe a carne cozinhar em lume brando por 2-3 horas, virando ocasionalmente, até ficar macia. ADICIONAR AS LINGUIÇAS: Junte o chourição e a morcela à grelha na última hora, virando frequentemente. VERIFICAR O PONTO: A carne está pronta quando se solta facilmente do osso e tem uma crosta dourada. SERVIR EM ETAPAS: Sirva primeiro as linguiças, depois as costelas, cortadas em pedaços, com pão e chimichurri.",
+    "ru": "ПОДГОТОВКА УГЛЕЙ: Разожгите уголь или дрова с одной стороны гриля и дайте прогореть до красных углей без пламени. РАЗМЕЩЕНИЕ МЯСА: Разложите рёбра на гриле, вдали от прямого жара, жиром вверх. ПРИПРАВА: Щедро посыпьте крупной солью, без других приправ. МЕДЛЕННАЯ ЖАРКА: Дайте мясу готовиться на слабом огне 2-3 часа, время от времени переворачивая, пока не станет мягким. ДОБАВЛЕНИЕ КОЛБАСОК: Добавьте чоризо и морсилью на гриль в последний час, часто переворачивая. ПРОВЕРКА ГОТОВНОСТИ: Мясо готово, когда легко отделяется от кости и имеет золотисто-коричневую корку. ПОДАЧА ЭТАПАМИ: Подавайте сначала колбаски, затем рёбра, нарезанные на куски, с хлебом и чимичурри.",
+    "ar": "تحضير الجمر: أشعل الفحم أو الخشب على جانب واحد من الشواية واتركه يحترق حتى يصبح جمرًا أحمر بلا لهب. وضع اللحم: رتّب الأضلاع على الشواية بعيدًا عن الحرارة المباشرة، مع جعل الدهن للأعلى. التتبيل: رشّ بسخاء بالملح الخشن، دون أي توابل أخرى. الشواء البطيء: اترك اللحم يُطهى على نار هادئة لمدة 2-3 ساعات، مع التقليب أحيانًا، حتى يصبح طريًا. إضافة النقانق: أضف التشوريزو والمورسيا إلى الشواية في الساعة الأخيرة، مع التقليب كثيرًا. التحقق من النضج: يكون اللحم جاهزًا عندما ينفصل بسهولة عن العظم ويكون له قشرة ذهبية بنية. التقديم على مراحل: قدّم النقانق أولًا، ثم الأضلاع مقطعة إلى قطع، مع الخبز والشيمي تشوري.",
+    "zh": "准备炭火：在烤架一侧点燃木炭或木柴，任其燃烧至无明火的红炭状态。摆放肉类：将肋排放在烤架上，远离直接热源，脂肪面朝上。调味：慷慨撒上粗盐，不加其他调料。慢烤：让肉在小火上烤2-3小时，偶尔翻动，直至变软嫩。加入香肠：最后一小时将西班牙香肠和血肠放上烤架，勤翻动。检查熟度：当肉容易从骨头上脱离并呈现金棕色外皮时即为完成。分阶段上菜：先上香肠，再上切块的肋排，配面包和阿根廷青酱食用。",
+    "ja": "炭火の準備：グリルの片側で炭や薪に火をつけ、炎のない赤い炭になるまで燃やす。肉を置く：リブを直火から離してグリルに脂身を上にして並べる。味付け：粗塩をたっぷり振りかけ、他の調味料は使わない。じっくり焼く：肉を弱火で2〜3時間、時々返しながら柔らかくなるまで焼く。ソーセージを加える：最後の1時間でチョリソとモルシージャをグリルに加え、頻繁に返す。焼き加減の確認：骨から簡単に外れ、きつね色の焼き目がついたら完成。段階的に提供：まずソーセージを、次に切り分けたリブをパンとチミチュリソースと共に提供する。",
+    "hi": "अंगारे तैयार करें: ग्रिल के एक तरफ कोयला या लकड़ी जलाएं और उसे बिना लपट के लाल अंगारे बनने तक जलने दें। मांस रखें: पसलियों को सीधी आँच से दूर, चर्बी ऊपर की ओर करके ग्रिल पर रखें। मसाला डालें: भरपूर मोटा नमक छिड़कें, कोई अन्य मसाला नहीं। धीमी ग्रिलिंग: मांस को धीमी आँच पर 2-3 घंटे पकने दें, बीच-बीच में पलटते हुए, जब तक नरम न हो जाए। सॉसेज डालें: आखिरी घंटे में चोरिज़ो और मोर्सिला ग्रिल पर डालें, बार-बार पलटें। पकने की जांच: मांस तैयार है जब यह हड्डी से आसानी से अलग हो जाए और सुनहरी-भूरी परत हो। चरणों में परोसें: पहले सॉसेज, फिर टुकड़ों में कटी पसलियां, ब्रेड और चिमिचुरी के साथ परोसें।",
+    "tr": "KORU HAZIRLAYIN: Izgaranın bir tarafında kömür veya odunu yakın ve alevsiz kırmızı kor olana kadar yanmasını bekleyin. ETİ YERLEŞTİRİN: Kaburgaları doğrudan ısıdan uzakta, yağlı tarafı yukarı bakacak şekilde ızgaraya dizin. BAHARATLAYIN: Bolca kaba tuz serpin, başka baharat kullanmayın. YAVAŞÇA PİŞİRİN: Eti düşük ateşte 2-3 saat, ara sıra çevirerek yumuşayana kadar pişirin. SOSİSLERİ EKLEYİN: Son saatte chorizo ve morcilla'yı ızgaraya ekleyin, sık sık çevirin. PİŞME KONTROLÜ: Et kemikten kolayca ayrıldığında ve altın kahverengi bir kabuk oluştuğunda hazırdır. AŞAMALI SERVİS EDİN: Önce sosisleri, sonra parçalara ayrılmış kaburgaları ekmek ve chimichurri ile servis edin.",
+    "it": "PREPARARE LA BRACE: Accendete il carbone o la legna su un lato della griglia e lasciate bruciare fino a ottenere brace rossa, senza fiamma. POSIZIONARE LA CARNE: Disponete le costine sulla griglia, lontano dal calore diretto, con il grasso verso l'alto. INSAPORIRE: Cospargete generosamente con sale grosso, senza altri condimenti. GRIGLIARE LENTAMENTE: Lasciate cuocere la carne a fuoco basso per 2-3 ore, girando occasionalmente, finché diventa tenera. AGGIUNGERE LE SALSICCE: Aggiungete chorizo e morcilla alla griglia nell'ultima ora, girandoli spesso. CONTROLLARE LA COTTURA: La carne è pronta quando si stacca facilmente dall'osso e ha una crosta dorata. SERVIRE A FASI: Servite prima le salsicce, poi le costine tagliate a pezzi, con pane e chimichurri.",
+    "ko": "숯불 준비: 그릴 한쪽에 숯이나 장작을 피워 불꽃 없이 빨간 숯이 될 때까지 태운다. 고기 놓기: 갈비를 직화에서 떨어진 곳에 지방면이 위로 가게 그릴에 올린다. 간하기: 굵은 소금을 넉넉히 뿌리고 다른 양념은 넣지 않는다. 천천히 굽기: 고기를 약불에서 2~3시간, 가끔 뒤집으며 부드러워질 때까지 굽는다. 소시지 추가: 마지막 한 시간 동안 초리소와 모르시야를 그릴에 올리고 자주 뒤집는다. 익힘 확인: 고기가 뼈에서 쉽게 떨어지고 황금 갈색 껍질이 생기면 완성이다. 단계별로 제공: 소시지를 먼저 내고, 그다음 조각낸 갈비를 빵과 치미추리와 함께 낸다."
+  },
+  "originText": {
+    "ro": "Asado nu este doar o metodă de gătit în Argentina — este un ritual social esențial, moștenit de la gauchii care rătăceau pampasul argentinian în secolele XVIII-XIX, gătind carne de vită la foc deschis din abundența de vite care pășteau liber pe câmpiile nesfârșite. Tradiția s-a păstrat aproape neschimbată: carne de calitate, foc de lemn sau cărbune și răbdare.\n\nSpre deosebire de grătarul rapid occidental, asado este un proces lent, de ore întregi, condus de asador, persoana responsabilă exclusiv de foc și de carne, care nu se grăbește niciodată. Duminica, familiile argentiniene se adună în jurul grătarului ca eveniment central al săptămânii, iar ordinea de servire — mai întâi cârnații, apoi organele, în final coastele — este aproape la fel de importantă ca gustul.",
+    "en": "Asado is not just a cooking method in Argentina — it's an essential social ritual, inherited from the gauchos who roamed the Argentine pampas in the 18th-19th centuries, grilling beef over open fire from the abundant cattle grazing freely on the endless plains. The tradition has stayed nearly unchanged: quality meat, wood or charcoal fire, and patience.\n\nUnlike quick Western barbecuing, asado is a slow, hours-long process led by the asador, the person exclusively responsible for the fire and the meat, who never rushes. On Sundays, Argentine families gather around the grill as the week's central event, and the serving order — sausages first, then offal, finally the ribs — is nearly as important as the taste.",
+    "es": "El asado no es solo un método de cocción en Argentina — es un ritual social esencial, heredado de los gauchos que vagaban por la pampa argentina en los siglos XVIII-XIX, asando carne de vaca al fuego abierto con el abundante ganado que pastaba libremente en las llanuras interminables. La tradición se ha mantenido casi inalterada: carne de calidad, fuego de leña o carbón y paciencia.\n\nA diferencia de la parrillada rápida occidental, el asado es un proceso lento de horas, dirigido por el asador, la persona exclusivamente responsable del fuego y la carne, que nunca se apresura. Los domingos, las familias argentinas se reúnen alrededor de la parrilla como el evento central de la semana, y el orden de servicio — primero los chorizos, luego las achuras, finalmente las costillas — es casi tan importante como el sabor.",
+    "fr": "L'asado n'est pas seulement une méthode de cuisson en Argentine — c'est un rituel social essentiel, hérité des gauchos qui parcouraient la pampa argentine aux XVIIIe-XIXe siècles, grillant du bœuf au feu ouvert avec l'abondant bétail broutant librement dans les plaines infinies. La tradition est restée presque inchangée : viande de qualité, feu de bois ou de charbon, et patience.\n\nContrairement au barbecue occidental rapide, l'asado est un processus lent, de plusieurs heures, mené par l'asador, la personne exclusivement responsable du feu et de la viande, qui ne se précipite jamais. Le dimanche, les familles argentines se rassemblent autour du gril comme événement central de la semaine, et l'ordre de service — d'abord les saucisses, puis les abats, enfin les côtes — est presque aussi important que le goût.",
+    "de": "Asado ist in Argentinien nicht nur eine Kochmethode — es ist ein wesentliches soziales Ritual, geerbt von den Gauchos, die im 18.-19. Jahrhundert die argentinische Pampa durchstreiften und Rindfleisch über offenem Feuer grillten, dank des reichlichen Viehs, das frei auf den endlosen Ebenen weidete. Die Tradition ist fast unverändert geblieben: Qualitätsfleisch, Holz- oder Kohlefeuer und Geduld.\n\nAnders als das schnelle westliche Grillen ist Asado ein langsamer, stundenlanger Prozess, geleitet vom Asador, der Person, die ausschließlich für Feuer und Fleisch zuständig ist und sich nie beeilt. Sonntags versammeln sich argentinische Familien um den Grill als zentrales Ereignis der Woche, und die Servierreihenfolge — zuerst die Würste, dann die Innereien, schließlich die Rippen — ist fast so wichtig wie der Geschmack.",
+    "pt": "O assado não é apenas um método de cozinha na Argentina — é um ritual social essencial, herdado dos gaúchos que vagueavam pela pampa argentina nos séculos XVIII-XIX, grelhando carne de vaca ao fogo aberto com o abundante gado que pastava livremente nas planícies infinitas. A tradição manteve-se quase inalterada: carne de qualidade, fogo de lenha ou carvão e paciência.\n\nAo contrário do churrasco ocidental rápido, o assado é um processo lento, de horas, conduzido pelo asador, a pessoa exclusivamente responsável pelo fogo e pela carne, que nunca se apressa. Aos domingos, as famílias argentinas reúnem-se à volta da grelha como o evento central da semana, e a ordem de serviço — primeiro as linguiças, depois as miudezas, por fim as costelas — é quase tão importante quanto o sabor.",
+    "ru": "Асадо в Аргентине — это не просто способ приготовления пищи, это важнейший общественный ритуал, унаследованный от гаучо, бродивших по аргентинской пампе в XVIII-XIX веках и жаривших говядину на открытом огне из изобилия скота, свободно пасущегося на бескрайних равнинах. Традиция сохранилась почти неизменной: качественное мясо, огонь из дров или угля и терпение.\n\nВ отличие от быстрого западного барбекю, асадо — это медленный, многочасовой процесс, которым руководит асадор — человек, исключительно ответственный за огонь и мясо, который никогда не торопится. По воскресеньям аргентинские семьи собираются вокруг гриля как центральное событие недели, и порядок подачи — сначала колбаски, затем субпродукты, наконец рёбра — почти так же важен, как и вкус.",
+    "ar": "الأسادو ليس مجرد طريقة طهي في الأرجنتين — إنه طقس اجتماعي أساسي، موروث من الغاوتشو الذين تجولوا في السهول الأرجنتينية في القرنين الثامن عشر والتاسع عشر، يشوون لحم البقر على نار مكشوفة من الماشية الوفيرة التي ترعى بحرية في السهول اللامتناهية. ظلت التقاليد دون تغيير تقريبًا: لحم عالي الجودة، نار من الخشب أو الفحم، وصبر.\n\nخلافًا للشواء الغربي السريع، الأسادو عملية بطيئة تستغرق ساعات، يقودها الأسادور، الشخص المسؤول حصريًا عن النار واللحم، والذي لا يتعجل أبدًا. أيام الأحد، تجتمع العائلات الأرجنتينية حول الشواية كحدث مركزي في الأسبوع، وترتيب التقديم — النقانق أولًا، ثم الأحشاء، وأخيرًا الأضلاع — لا يقل أهمية عن الطعم تقريبًا.",
+    "zh": "在阿根廷，烤肉不仅仅是一种烹饪方式——它是一种重要的社交仪式，传承自18至19世纪漫游阿根廷潘帕斯草原的高乔人，他们利用在无垠草原上自由放牧的丰富牛群，在露天篝火上烤制牛肉。这一传统几乎原封不动地保留至今：优质肉类、木柴或木炭火，以及耐心。\n\n与西方快速烧烤不同，烤肉是一个耗时数小时的缓慢过程，由烤肉师傅主导——这个人专门负责火候和肉类，从不匆忙。周日，阿根廷家庭会围聚在烤架旁，这是一周中最重要的活动，而上菜顺序——先香肠，再内脏，最后肋排——几乎与味道同样重要。",
+    "ja": "アサードはアルゼンチンにおいて単なる調理法ではない――18〜19世紀にアルゼンチンのパンパを放浪し、果てしない平原で自由に放牧される豊富な牛から牛肉を焚き火で焼いていたガウチョから受け継がれた、不可欠な社会的儀式である。この伝統はほぼ変わらないまま受け継がれてきた。上質な肉、薪や炭の火、そして忍耐だ。\n\n西洋の手早いバーベキューとは異なり、アサードは何時間もかかる緩やかな過程であり、火と肉のみを担当し決して急がないアサドールによって導かれる。日曜日、アルゼンチンの家族はグリルの周りに集まり、それが一週間の中心的な出来事となる。そして、まずソーセージ、次に内臓、最後にリブという提供順序は、味とほぼ同じくらい重要である。",
+    "hi": "आसादो अर्जेंटीना में केवल एक खाना पकाने की विधि नहीं है — यह एक आवश्यक सामाजिक अनुष्ठान है, जो 18वीं-19वीं सदी में अर्जेंटीनी पम्पास में घूमने वाले गौचो से विरासत में मिला है, जो अंतहीन मैदानों पर स्वतंत्र रूप से चरने वाले प्रचुर मवेशियों से खुली आग पर बीफ ग्रिल करते थे। यह परंपरा लगभग अपरिवर्तित रही है: गुणवत्तापूर्ण मांस, लकड़ी या कोयले की आग, और धैर्य।\n\nतेज़ पश्चिमी बारबेक्यू के विपरीत, आसादो एक धीमी, घंटों लंबी प्रक्रिया है, जिसका नेतृत्व आसादोर करता है, वह व्यक्ति जो विशेष रूप से आग और मांस के लिए जिम्मेदार होता है और कभी जल्दबाज़ी नहीं करता। रविवार को, अर्जेंटीनी परिवार सप्ताह की केंद्रीय घटना के रूप में ग्रिल के चारों ओर इकट्ठा होते हैं, और परोसने का क्रम — पहले सॉसेज, फिर अंग मांस, अंत में पसलियां — स्वाद जितना ही महत्वपूर्ण है।",
+    "tr": "Asado, Arjantin'de sadece bir pişirme yöntemi değildir — 18.-19. yüzyıllarda Arjantin pampalarında dolaşan, sonsuz ovalarda özgürce otlayan bol sığırdan açık ateşte sığır eti pişiren gauchoslardan miras kalan temel bir sosyal ritüeldir. Gelenek neredeyse hiç değişmeden kalmıştır: kaliteli et, odun veya kömür ateşi ve sabır.\n\nHızlı Batı tarzı barbeküden farklı olarak, asado, sadece ateş ve etten sorumlu olan ve asla acele etmeyen asador tarafından yönetilen, saatler süren yavaş bir süreçtir. Pazar günleri, Arjantinli aileler haftanın merkezi etkinliği olarak ızgaranın etrafında toplanır ve servis sırası — önce sosisler, sonra sakatat, son olarak kaburgalar — neredeyse tat kadar önemlidir.",
+    "it": "L'asado non è solo un metodo di cottura in Argentina — è un rituale sociale essenziale, ereditato dai gaucho che vagavano per la pampa argentina nei secoli XVIII-XIX, grigliando manzo su fuoco aperto grazie all'abbondante bestiame che pascolava liberamente nelle pianure infinite. La tradizione è rimasta quasi invariata: carne di qualità, fuoco di legna o carbone e pazienza.\n\nA differenza del veloce barbecue occidentale, l'asado è un processo lento, di ore, guidato dall'asador, la persona esclusivamente responsabile del fuoco e della carne, che non ha mai fretta. La domenica, le famiglie argentine si riuniscono attorno alla griglia come evento centrale della settimana, e l'ordine di servizio — prima le salsicce, poi le frattaglie, infine le costine — è quasi importante quanto il sapore.",
+    "ko": "아사도는 아르헨티나에서 단순한 조리법이 아니다 — 18~19세기 아르헨티나 팜파스를 떠돌던 가우초들로부터 물려받은 필수적인 사회적 의식으로, 끝없는 평원에서 자유롭게 방목되는 풍부한 소 떼로부터 얻은 소고기를 노천 불에 구워 먹던 전통이다. 이 전통은 거의 변하지 않고 이어져 왔다: 좋은 품질의 고기, 장작이나 숯불, 그리고 인내심.\n\n빠르게 끝나는 서양식 바비큐와 달리, 아사도는 불과 고기만을 전담하며 결코 서두르지 않는 아사도르가 이끄는 몇 시간에 걸친 느린 과정이다. 일요일이면 아르헨티나 가족들은 한 주의 중심 행사로 그릴 주위에 모이며, 소시지를 먼저, 그다음 내장, 마지막으로 갈비를 내는 순서는 맛만큼이나 중요하다."
+  },
+  "meta": {
+    "time": 210,
+    "costRon": 32,
+    "tags": [],
+    "desc": {
+      "ro": "Coaste de vită și cârnați la jar lent, condimentate doar cu sare grunjoasă.",
+      "en": "Beef ribs and sausages slow-grilled over embers, seasoned only with coarse salt.",
+      "es": "Costillas de vaca y chorizos asados lentamente, sazonados solo con sal gruesa.",
+      "fr": "Côtes de bœuf et saucisses grillées lentement, assaisonnées uniquement de gros sel.",
+      "de": "Rinderrippen und Würste, langsam über Glut gegrillt, nur mit grobem Salz gewürzt.",
+      "pt": "Costela de vaca e linguiças grelhadas lentamente, temperadas apenas com sal grosso.",
+      "ru": "Говяжьи рёбра и колбаски, медленно приготовленные на углях, приправленные только крупной солью.",
+      "ar": "أضلاع بقري ونقانق مشوية ببطء على الجمر، متبّلة فقط بالملح الخشن.",
+      "zh": "牛肋排和香肠慢火炭烤，仅用粗盐调味。",
+      "ja": "牛リブとソーセージを炭火でじっくり焼き、粗塩だけで味付け。",
+      "hi": "बीफ पसलियां और सॉसेज अंगारों पर धीमे भुने, केवल मोटे नमक से।",
+      "tr": "Korda yavaşça pişirilen dana kaburga ve sosisler, sadece kaba tuzla tatlandırılmış.",
+      "it": "Costine di manzo e salsicce grigliate lentamente, condite solo con sale grosso.",
+      "ko": "숯불에 천천히 구운 소갈비와 소시지, 굵은 소금으로만 간을 함."
+    }
+  }
+}

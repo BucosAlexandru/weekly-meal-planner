@@ -1,0 +1,177 @@
+{
+  "id": 346,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Argentina", "en": "Argentina", "es": "Argentina", "fr": "Argentine", "de": "Argentinien",
+    "pt": "Argentina", "ru": "Аргентина", "ar": "الأرجنتين", "zh": "阿根廷", "ja": "アルゼンチン",
+    "hi": "अर्जेंटीना", "tr": "Arjantin", "it": "Argentina", "ko": "아르헨티나"
+  },
+  "name": {
+    "ro": "Locro argentinian", "en": "Argentine Locro", "es": "Locro argentino", "fr": "Locro argentin",
+    "de": "Argentinischer Locro", "pt": "Locro argentino", "ru": "Аргентинский локро",
+    "ar": "لوكرو الأرجنتيني", "zh": "阿根廷洛克罗炖菜", "ja": "アルゼンチン風ロクロ",
+    "hi": "अर्जेंटीनी लोक्रो", "tr": "Arjantin Locrosu", "it": "Locro argentino", "ko": "아르헨티나 로크로"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌽", "t": "Porumb alb întreg", "d": "Boabe de porumb alb hidratate și fierte ore întregi."},
+      {"icon": "🥩", "t": "Trei tipuri de carne", "d": "Vită, porc și cârnați, toate fierte împreună lent."},
+      {"icon": "🎃", "t": "Dovleac dulce", "d": "Dovleacul se topește în tocană, îngroșând zeama natural."},
+      {"icon": "🇦🇷", "t": "Mâncare națională", "d": "Servit tradițional de Ziua Independenței Argentinei."}
+    ],
+    "en": [
+      {"icon": "🌽", "t": "Whole white corn", "d": "White hominy corn kernels, soaked and simmered for hours."},
+      {"icon": "🥩", "t": "Three kinds of meat", "d": "Beef, pork and sausage, all slow-cooked together."},
+      {"icon": "🎃", "t": "Sweet squash", "d": "Squash melts into the stew, thickening the broth naturally."},
+      {"icon": "🇦🇷", "t": "National dish", "d": "Traditionally served on Argentina's Independence Day."}
+    ],
+    "es": [
+      {"icon": "🌽", "t": "Maíz blanco entero", "d": "Granos de maíz blanco remojados y cocidos por horas."},
+      {"icon": "🥩", "t": "Tres tipos de carne", "d": "Vaca, cerdo y chorizo, todos cocidos juntos lentamente."},
+      {"icon": "🎃", "t": "Zapallo dulce", "d": "El zapallo se derrite en el guiso, espesando el caldo naturalmente."},
+      {"icon": "🇦🇷", "t": "Plato nacional", "d": "Servido tradicionalmente en el Día de la Independencia argentina."}
+    ],
+    "fr": [
+      {"icon": "🌽", "t": "Maïs blanc entier", "d": "Grains de maïs blanc trempés et mijotés pendant des heures."},
+      {"icon": "🥩", "t": "Trois types de viande", "d": "Bœuf, porc et saucisse, tous mijotés ensemble lentement."},
+      {"icon": "🎃", "t": "Courge sucrée", "d": "La courge fond dans le ragoût, épaississant naturellement le bouillon."},
+      {"icon": "🇦🇷", "t": "Plat national", "d": "Traditionnellement servi le jour de l'Indépendance argentine."}
+    ],
+    "de": [
+      {"icon": "🌽", "t": "Ganzer weißer Mais", "d": "Weiße Maiskörner, eingeweicht und stundenlang geköchelt."},
+      {"icon": "🥩", "t": "Drei Fleischsorten", "d": "Rind, Schwein und Wurst, alle langsam zusammen gegart."},
+      {"icon": "🎃", "t": "Süßer Kürbis", "d": "Kürbis zerfällt im Eintopf und verdickt die Brühe auf natürliche Weise."},
+      {"icon": "🇦🇷", "t": "Nationalgericht", "d": "Traditionell am argentinischen Unabhängigkeitstag serviert."}
+    ],
+    "pt": [
+      {"icon": "🌽", "t": "Milho branco inteiro", "d": "Grãos de milho branco hidratados e cozidos por horas."},
+      {"icon": "🥩", "t": "Três tipos de carne", "d": "Vaca, porco e chouriço, todos cozidos juntos lentamente."},
+      {"icon": "🎃", "t": "Abóbora doce", "d": "A abóbora derrete no guisado, engrossando o caldo naturalmente."},
+      {"icon": "🇦🇷", "t": "Prato nacional", "d": "Servido tradicionalmente no Dia da Independência argentina."}
+    ],
+    "ru": [
+      {"icon": "🌽", "t": "Целая белая кукуруза", "d": "Зёрна белой кукурузы, замоченные и варившиеся часами."},
+      {"icon": "🥩", "t": "Три вида мяса", "d": "Говядина, свинина и колбаса — всё готовится вместе на медленном огне."},
+      {"icon": "🎃", "t": "Сладкая тыква", "d": "Тыква растворяется в рагу, естественно загущая бульон."},
+      {"icon": "🇦🇷", "t": "Национальное блюдо", "d": "Традиционно подаётся в День независимости Аргентины."}
+    ],
+    "ar": [
+      {"icon": "🌽", "t": "ذرة بيضاء كاملة", "d": "حبوب ذرة بيضاء منقوعة ومطهية لساعات."},
+      {"icon": "🥩", "t": "ثلاثة أنواع من اللحم", "d": "لحم بقري ولحم خنزير ونقانق، جميعها تُطهى معًا ببطء."},
+      {"icon": "🎃", "t": "قرع حلو", "d": "يذوب القرع في اليخنة، مما يزيد سماكة المرق طبيعيًا."},
+      {"icon": "🇦🇷", "t": "طبق وطني", "d": "يُقدَّم تقليديًا في يوم استقلال الأرجنتين."}
+    ],
+    "zh": [
+      {"icon": "🌽", "t": "整粒白玉米", "d": "白玉米粒浸泡后炖煮数小时。"},
+      {"icon": "🥩", "t": "三种肉类", "d": "牛肉、猪肉和香肠一起慢炖。"},
+      {"icon": "🎃", "t": "香甜南瓜", "d": "南瓜融入炖菜中，自然使汤汁变浓稠。"},
+      {"icon": "🇦🇷", "t": "国菜", "d": "传统上在阿根廷独立日食用。"}
+    ],
+    "ja": [
+      {"icon": "🌽", "t": "丸ごとの白いとうもろこし", "d": "白いとうもろこしの実を水で戻し何時間も煮込む。"},
+      {"icon": "🥩", "t": "3種類の肉", "d": "牛肉、豚肉、ソーセージを一緒にじっくり煮込む。"},
+      {"icon": "🎃", "t": "甘いカボチャ", "d": "カボチャが煮崩れてスープを自然にとろみづける。"},
+      {"icon": "🇦🇷", "t": "国民食", "d": "アルゼンチンの独立記念日に伝統的に食べられる。"}
+    ],
+    "hi": [
+      {"icon": "🌽", "t": "पूरा सफेद मक्का", "d": "सफेद मक्के के दाने, भिगोए और घंटों उबाले गए।"},
+      {"icon": "🥩", "t": "तीन प्रकार का मांस", "d": "बीफ, सुअर और सॉसेज, सभी एक साथ धीरे पकाए गए।"},
+      {"icon": "🎃", "t": "मीठा कद्दू", "d": "कद्दू स्टू में घुल जाता है, स्वाभाविक रूप से शोरबा गाढ़ा करता है।"},
+      {"icon": "🇦🇷", "t": "राष्ट्रीय व्यंजन", "d": "परंपरागत रूप से अर्जेंटीना के स्वतंत्रता दिवस पर परोसा जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🌽", "t": "Bütün beyaz mısır", "d": "Islatılıp saatlerce kaynatılan beyaz mısır taneleri."},
+      {"icon": "🥩", "t": "Üç tür et", "d": "Dana, domuz ve sosis, hepsi birlikte yavaşça pişirilir."},
+      {"icon": "🎃", "t": "Tatlı bal kabağı", "d": "Bal kabağı güveçte erir, suyu doğal olarak koyulaştırır."},
+      {"icon": "🇦🇷", "t": "Ulusal yemek", "d": "Geleneksel olarak Arjantin Bağımsızlık Günü'nde servis edilir."}
+    ],
+    "it": [
+      {"icon": "🌽", "t": "Mais bianco intero", "d": "Chicchi di mais bianco ammollati e cotti per ore."},
+      {"icon": "🥩", "t": "Tre tipi di carne", "d": "Manzo, maiale e salsiccia, tutti cotti lentamente insieme."},
+      {"icon": "🎃", "t": "Zucca dolce", "d": "La zucca si scioglie nello stufato, addensando naturalmente il brodo."},
+      {"icon": "🇦🇷", "t": "Piatto nazionale", "d": "Servito tradizionalmente il giorno dell'Indipendenza argentina."}
+    ],
+    "ko": [
+      {"icon": "🌽", "t": "통 백옥수수", "d": "불린 백옥수수 알갱이를 몇 시간 동안 끓인다."},
+      {"icon": "🥩", "t": "세 가지 고기", "d": "소고기, 돼지고기, 소시지를 함께 천천히 익힌다."},
+      {"icon": "🎃", "t": "달콤한 호박", "d": "호박이 스튜에 녹아들며 자연스럽게 국물을 걸쭉하게 만든다."},
+      {"icon": "🇦🇷", "t": "국민 요리", "d": "전통적으로 아르헨티나 독립기념일에 제공된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["300g porumb alb uscat", "300g piept de vită", "200g slănină de porc", "200g cârnați chorizo", "300g dovleac", "2 cartofi dulci", "1 ceapă", "2 linguri boia dulce", "sare", "2 litri apă", "ceapă verde pentru servire"],
+    "en": ["300g dried white hominy corn", "300g beef brisket", "200g pork belly", "200g chorizo sausage", "300g squash", "2 sweet potatoes", "1 onion", "2 tbsp sweet paprika", "salt", "2 liters water", "spring onion for serving"],
+    "es": ["300g de maíz blanco seco", "300g de falda de vaca", "200g de panceta de cerdo", "200g de chorizo", "300g de zapallo", "2 batatas", "1 cebolla", "2 cdas de pimentón dulce", "sal", "2 litros de agua", "cebolla de verdeo para servir"],
+    "fr": ["300g de maïs blanc séché", "300g de poitrine de bœuf", "200g de poitrine de porc", "200g de chorizo", "300g de courge", "2 patates douces", "1 oignon", "2 c. à s. de paprika doux", "sel", "2 litres d'eau", "oignon vert pour servir"],
+    "de": ["300g getrockneter weißer Maiskern", "300g Rinderbrust", "200g Schweinebauch", "200g Chorizo-Wurst", "300g Kürbis", "2 Süßkartoffeln", "1 Zwiebel", "2 EL süßes Paprikapulver", "Salz", "2 Liter Wasser", "Frühlingszwiebel zum Servieren"],
+    "pt": ["300g de milho branco seco", "300g de peito de vaca", "200g de barriga de porco", "200g de chouriço", "300g de abóbora", "2 batatas-doces", "1 cebola", "2 c. sopa de colorau doce", "sal", "2 litros de água", "cebolinha para servir"],
+    "ru": ["300г сушёной белой кукурузы", "300г говяжьей грудинки", "200г свиной грудинки", "200г колбасок чоризо", "300г тыквы", "2 сладких картофеля", "1 луковица", "2 ст.л. сладкой паприки", "соль", "2 литра воды", "зелёный лук для подачи"],
+    "ar": ["300غ ذرة بيضاء مجففة", "300غ صدر بقري", "200غ صدر خنزير", "200غ نقانق تشوريزو", "300غ قرع", "بطاطا حلوة اثنتان", "بصلة واحدة", "2 ملعقة كبيرة بابريكا حلوة", "ملح", "2 لتر ماء", "بصل أخضر للتقديم"],
+    "zh": ["干白玉米粒300克", "牛胸肉300克", "猪五花肉200克", "西班牙香肠200克", "南瓜300克", "红薯2个", "洋葱1个", "甜红椒粉2汤匙", "盐", "水2升", "青葱（配食用）"],
+    "ja": ["乾燥白とうもろこし 300g", "牛ブリスケット 300g", "豚バラ肉 200g", "チョリソソーセージ 200g", "カボチャ 300g", "さつまいも 2個", "玉ねぎ 1個", "甘いパプリカパウダー 大さじ2", "塩", "水 2リットル", "提供用の青ねぎ"],
+    "hi": ["300 ग्राम सूखा सफेद मक्का", "300 ग्राम बीफ ब्रिस्केट", "200 ग्राम पोर्क बेली", "200 ग्राम चोरिज़ो सॉसेज", "300 ग्राम कद्दू", "2 शकरकंद", "1 प्याज़", "2 बड़े चम्मच मीठी पपरिका", "नमक", "2 लीटर पानी", "परोसने के लिए हरा प्याज़"],
+    "tr": ["300g kuru beyaz mısır", "300g dana döş", "200g domuz göğsü", "200g chorizo sosis", "300g bal kabağı", "2 tatlı patates", "1 soğan", "2 yemek kaşığı tatlı paprika", "tuz", "2 litre su", "servis için yeşil soğan"],
+    "it": ["300g di mais bianco secco", "300g di punta di petto di manzo", "200g di pancetta di maiale", "200g di salsiccia chorizo", "300g di zucca", "2 patate dolci", "1 cipolla", "2 cucchiai di paprika dolce", "sale", "2 litri di acqua", "cipollotto per servire"],
+    "ko": ["말린 흰 옥수수 300g", "소고기 양지 300g", "돼지 삼겹살 200g", "초리소 소시지 200g", "호박 300g", "고구마 2개", "양파 1개", "단맛 파프리카 가루 2큰술", "소금", "물 2리터", "곁들일 파"]
+  },
+  "howIsMade": {
+    "ro": "ÎNMUIERE PORUMB: Pune porumbul alb la înmuiat în apă rece peste noapte, apoi scurge-l. FIERBERE CARNE: Fierbe pieptul de vită și slănina de porc în apă cu puțină sare, la foc mic, 1 oră. ADĂUGARE PORUMB: Adaugă porumbul scurs în oala cu carne și continuă fierberea la foc mic încă 1 oră, amestecând ocazional. ADĂUGARE LEGUME: Adaugă dovleacul și cartofii dulci tăiați cuburi, plus ceapa tocată, fierbe încă 45 minute. ADĂUGARE CÂRNAȚI: Adaugă cârnații chorizo tăiați felii și boia dulce, fierbe încă 20 minute până totul devine cremos. VERIFICARE CONSISTENȚĂ: Zdrobește ușor puțin din dovleac cu o lingură pentru a îngroșa zeama natural. SERVIRE: Servește fierbinte, presărat cu ceapă verde tocată deasupra.",
+    "en": "SOAK CORN: Soak the white hominy corn in cold water overnight, then drain. SIMMER MEAT: Simmer the beef brisket and pork belly in water with a little salt, over low heat, for 1 hour. ADD CORN: Add the drained corn to the pot with the meat and continue simmering for another hour, stirring occasionally. ADD VEGETABLES: Add the diced squash and sweet potatoes, plus the chopped onion, simmer for another 45 minutes. ADD SAUSAGE: Add the sliced chorizo and sweet paprika, simmer for another 20 minutes until everything turns creamy. CHECK CONSISTENCY: Lightly mash some of the squash with a spoon to naturally thicken the broth. SERVE: Serve hot, sprinkled with chopped spring onion on top.",
+    "es": "REMOJAR EL MAÍZ: Remoja el maíz blanco en agua fría durante toda la noche, luego escúrrelo. COCINAR LA CARNE: Cocina la falda de vaca y la panceta de cerdo en agua con un poco de sal, a fuego lento, durante 1 hora. AÑADIR EL MAÍZ: Añade el maíz escurrido a la olla con la carne y sigue cociendo a fuego lento otra hora, removiendo de vez en cuando. AÑADIR VERDURAS: Añade el zapallo y las batatas en cubos, más la cebolla picada, cocina otros 45 minutos. AÑADIR CHORIZO: Añade el chorizo en rodajas y el pimentón dulce, cocina otros 20 minutos hasta que todo quede cremoso. COMPROBAR LA CONSISTENCIA: Aplasta ligeramente algo de zapallo con una cuchara para espesar el caldo naturalmente. SERVIR: Sirve caliente, espolvoreado con cebolla de verdeo picada por encima.",
+    "fr": "TREMPER LE MAÏS: Faites tremper le maïs blanc dans l'eau froide toute la nuit, puis égouttez-le. MIJOTER LA VIANDE: Faites mijoter la poitrine de bœuf et la poitrine de porc dans l'eau avec un peu de sel, à feu doux, pendant 1 heure. AJOUTER LE MAÏS: Ajoutez le maïs égoutté à la marmite avec la viande et continuez à mijoter encore 1 heure, en remuant occasionnellement. AJOUTER LES LÉGUMES: Ajoutez la courge et les patates douces en dés, ainsi que l'oignon haché, laissez mijoter encore 45 minutes. AJOUTER LA SAUCISSE: Ajoutez le chorizo tranché et le paprika doux, laissez mijoter encore 20 minutes jusqu'à ce que tout devienne crémeux. VÉRIFIER LA CONSISTANCE: Écrasez légèrement un peu de courge avec une cuillère pour épaissir naturellement le bouillon. SERVIR: Servez chaud, saupoudré d'oignon vert haché dessus.",
+    "de": "MAIS EINWEICHEN: Den weißen Mais über Nacht in kaltem Wasser einweichen, dann abgießen. FLEISCH KÖCHELN: Rinderbrust und Schweinebauch in Wasser mit etwas Salz bei schwacher Hitze 1 Stunde köcheln. MAIS HINZUFÜGEN: Den abgegossenen Mais zum Topf mit dem Fleisch geben und weitere 1 Stunde köcheln lassen, gelegentlich umrühren. GEMÜSE HINZUFÜGEN: Den gewürfelten Kürbis und die Süßkartoffeln sowie die gehackte Zwiebel hinzufügen, weitere 45 Minuten köcheln. WURST HINZUFÜGEN: Die geschnittene Chorizo und süßes Paprikapulver hinzufügen, weitere 20 Minuten köcheln, bis alles cremig wird. KONSISTENZ PRÜFEN: Etwas Kürbis mit einem Löffel leicht zerdrücken, um die Brühe auf natürliche Weise einzudicken. SERVIEREN: Heiß servieren, mit gehackter Frühlingszwiebel bestreut.",
+    "pt": "DEMOLHAR O MILHO: Deixe o milho branco de molho em água fria durante a noite, depois escorra. COZINHAR A CARNE: Cozinhe o peito de vaca e a barriga de porco em água com um pouco de sal, em lume brando, por 1 hora. ADICIONAR O MILHO: Junte o milho escorrido à panela com a carne e continue a cozinhar em lume brando por mais 1 hora, mexendo ocasionalmente. ADICIONAR LEGUMES: Junte a abóbora e as batatas-doces em cubos, mais a cebola picada, cozinhe mais 45 minutos. ADICIONAR CHOURIÇO: Junte o chouriço fatiado e o colorau doce, cozinhe mais 20 minutos até tudo ficar cremoso. VERIFICAR A CONSISTÊNCIA: Esmague levemente um pouco da abóbora com uma colher para engrossar o caldo naturalmente. SERVIR: Sirva quente, polvilhado com cebolinha picada por cima.",
+    "ru": "ЗАМАЧИВАНИЕ КУКУРУЗЫ: Замочите белую кукурузу в холодной воде на ночь, затем слейте воду. ВАРКА МЯСА: Варите говяжью грудинку и свиную грудинку в воде с небольшим количеством соли на слабом огне 1 час. ДОБАВЛЕНИЕ КУКУРУЗЫ: Добавьте слитую кукурузу в кастрюлю с мясом и продолжайте варить на слабом огне ещё 1 час, периодически помешивая. ДОБАВЛЕНИЕ ОВОЩЕЙ: Добавьте нарезанные кубиками тыкву и сладкий картофель, а также нарезанный лук, варите ещё 45 минут. ДОБАВЛЕНИЕ КОЛБАСЫ: Добавьте нарезанное чоризо и сладкую паприку, варите ещё 20 минут, пока всё не станет кремообразным. ПРОВЕРКА КОНСИСТЕНЦИИ: Слегка разомните немного тыквы ложкой, чтобы естественно загустить бульон. ПОДАЧА: Подавайте горячим, посыпав сверху нарезанным зелёным луком.",
+    "ar": "نقع الذرة: انقع الذرة البيضاء في ماء بارد طوال الليل ثم صفّها. طهي اللحم: اطهُ صدر البقر وصدر الخنزير في ماء مع قليل من الملح على نار هادئة لمدة ساعة. إضافة الذرة: أضف الذرة المصفاة إلى القدر مع اللحم وواصل الطهي على نار هادئة لمدة ساعة أخرى، مع التحريك أحيانًا. إضافة الخضار: أضف القرع والبطاطا الحلوة المقطعين مكعبات، والبصل المفروم، اطهِ لمدة 45 دقيقة أخرى. إضافة النقانق: أضف التشوريزو المقطع شرائح والبابريكا الحلوة، اطهِ 20 دقيقة أخرى حتى يصبح كل شيء كريميًا. التحقق من القوام: اهرس قليلًا من القرع بملعقة لزيادة سماكة المرق طبيعيًا. التقديم: قدّمه ساخنًا، مرشوشًا بالبصل الأخضر المفروم فوقه.",
+    "zh": "浸泡玉米：将白玉米粒用冷水浸泡一夜，然后沥干。炖肉：将牛胸肉和猪五花肉用加了少许盐的水小火炖1小时。加入玉米：将沥干的玉米加入肉锅中，继续小火炖1小时，偶尔搅拌。加入蔬菜：加入切块的南瓜和红薯，以及切碎的洋葱，炖45分钟。加入香肠：加入切片的西班牙香肠和甜红椒粉，炖20分钟直至一切变得绵密。检查稠度：用勺子轻轻压碎一些南瓜以自然增稠汤汁。装盘：趁热食用，上面撒上切碎的青葱。",
+    "ja": "とうもろこしを戻す：白とうもろこしを一晩水に浸し、水を切る。肉を煮る：牛ブリスケットと豚バラ肉を少量の塩を加えた水で弱火で1時間煮る。とうもろこしを加える：水を切ったとうもろこしを肉の鍋に加え、時々かき混ぜながらさらに1時間煮る。野菜を加える：角切りにしたカボチャとさつまいも、刻んだ玉ねぎを加え、さらに45分煮る。ソーセージを加える：スライスしたチョリソと甘いパプリカパウダーを加え、全体がクリーミーになるまでさらに20分煮る。とろみを確認：スプーンでカボチャの一部を軽くつぶして自然にスープにとろみをつける。盛り付け：熱いうちに刻んだ青ねぎを振りかけて提供する。",
+    "hi": "मक्का भिगोएं: सफेद मक्के को रात भर ठंडे पानी में भिगोएं, फिर छान लें। मांस पकाएं: बीफ ब्रिस्केट और पोर्क बेली को थोड़े नमक के साथ पानी में धीमी आँच पर 1 घंटे पकाएं। मक्का डालें: छना हुआ मक्का मांस वाले बर्तन में डालें और बीच-बीच में हिलाते हुए एक और घंटे धीमी आँच पर पकाना जारी रखें। सब्ज़ियाँ डालें: कटे हुए कद्दू और शकरकंद, साथ ही कटा प्याज़ डालें, 45 मिनट और पकाएं। सॉसेज डालें: कटा हुआ चोरिज़ो और मीठी पपरिका डालें, तब तक 20 मिनट और पकाएं जब तक सब कुछ मलाईदार न हो जाए। गाढ़ापन जांचें: शोरबा को स्वाभाविक रूप से गाढ़ा करने के लिए चम्मच से थोड़ा कद्दू हल्के से मैश करें। परोसें: गरमागरम, ऊपर कटे हरे प्याज़ के साथ छिड़ककर परोसें।",
+    "tr": "MISIRI ISLATIN: Beyaz mısırı bir gece boyunca soğuk suda ıslatın, ardından süzün. ETİ PİŞİRİN: Dana döş ve domuz göğsünü biraz tuz eklenmiş suda düşük ateşte 1 saat pişirin. MISIRI EKLEYİN: Süzülmüş mısırı etli tencereye ekleyin ve ara sıra karıştırarak 1 saat daha kısık ateşte pişirmeye devam edin. SEBZELERİ EKLEYİN: Küp doğranmış bal kabağı ve tatlı patatesleri, doğranmış soğanla birlikte ekleyin, 45 dakika daha pişirin. SOSİSİ EKLEYİN: Dilimlenmiş chorizo ve tatlı paprikayı ekleyin, her şey kremamsı olana kadar 20 dakika daha pişirin. KIVAMI KONTROL EDİN: Suyu doğal olarak koyulaştırmak için biraz bal kabağını kaşıkla hafifçe ezin. SERVİS EDİN: Sıcak servis edin, üzerine doğranmış yeşil soğan serperek.",
+    "it": "AMMOLLARE IL MAIS: Mettete il mais bianco in ammollo in acqua fredda per una notte, poi scolatelo. CUOCERE LA CARNE: Cuocete la punta di petto di manzo e la pancetta di maiale in acqua con un po' di sale, a fuoco basso, per 1 ora. AGGIUNGERE IL MAIS: Aggiungete il mais scolato alla pentola con la carne e continuate a cuocere a fuoco basso per un'altra ora, mescolando di tanto in tanto. AGGIUNGERE LE VERDURE: Aggiungete la zucca e le patate dolci a cubetti, più la cipolla tritata, cuocete altri 45 minuti. AGGIUNGERE LA SALSICCIA: Aggiungete il chorizo affettato e la paprika dolce, cuocete altri 20 minuti finché tutto diventa cremoso. CONTROLLARE LA CONSISTENZA: Schiacciate leggermente un po' di zucca con un cucchiaio per addensare naturalmente il brodo. SERVIRE: Servite caldo, cosparso di cipollotto tritato sopra.",
+    "ko": "옥수수 불리기: 흰 옥수수를 찬물에 밤새 불린 후 물기를 뺀다. 고기 끓이기: 소고기 양지와 돼지 삼겹살을 소금을 약간 넣은 물에 약불로 1시간 끓인다. 옥수수 넣기: 물기 뺀 옥수수를 고기가 든 냄비에 넣고 가끔 저으며 1시간 더 약불로 끓인다. 채소 넣기: 깍둑썬 호박과 고구마, 다진 양파를 넣고 45분 더 끓인다. 소시지 넣기: 썬 초리소와 단맛 파프리카를 넣고 모든 것이 크리미해질 때까지 20분 더 끓인다. 농도 확인: 숟가락으로 호박을 살짝 으깨어 국물을 자연스럽게 걸쭉하게 만든다. 담아내기: 뜨거울 때 위에 다진 파를 뿌려 낸다."
+  },
+  "originText": {
+    "ro": "Locro este o tocană precolumbiană, cu rădăcini în bucătăria populațiilor indigene din regiunea Anzilor, care cultivau porumb, dovleac și cartofi dulci cu mult înainte de sosirea coloniștilor spanioli. Odată cu introducerea vitelor și porcilor de către europeni, rețeta s-a îmbogățit cu carne, transformându-se în tocana densă cunoscută astăzi.\n\nÎn Argentina, locro a devenit simbolul unității naționale, fiind mâncarea tradițională servită pe 25 mai (Ziua Revoluției de Mai) și 9 iulie (Ziua Independenței). Familiile îl gătesc în cantități mari, în oale uriașe, și îl împart cu vecinii — un gest de solidaritate socială la fel de important ca și gustul tocanei în sine.",
+    "en": "Locro is a pre-Columbian stew, rooted in the cuisine of the indigenous peoples of the Andean region, who grew corn, squash and sweet potatoes long before Spanish colonizers arrived. With the introduction of cattle and pigs by Europeans, the recipe was enriched with meat, evolving into the dense stew known today.\n\nIn Argentina, locro has become a symbol of national unity, the traditional dish served on May 25 (May Revolution Day) and July 9 (Independence Day). Families cook it in huge quantities, in giant pots, and share it with neighbors — a gesture of social solidarity just as important as the taste of the stew itself.",
+    "es": "El locro es un guiso precolombino, con raíces en la cocina de los pueblos indígenas de la región andina, que cultivaban maíz, zapallo y batatas mucho antes de la llegada de los colonizadores españoles. Con la introducción de vacas y cerdos por los europeos, la receta se enriqueció con carne, evolucionando hacia el denso guiso conocido hoy.\n\nEn Argentina, el locro se ha convertido en un símbolo de unidad nacional, el plato tradicional servido el 25 de mayo (Día de la Revolución de Mayo) y el 9 de julio (Día de la Independencia). Las familias lo cocinan en grandes cantidades, en ollas enormes, y lo comparten con los vecinos — un gesto de solidaridad social tan importante como el sabor del guiso mismo.",
+    "fr": "Le locro est un ragoût précolombien, enraciné dans la cuisine des peuples indigènes de la région andine, qui cultivaient maïs, courge et patates douces bien avant l'arrivée des colonisateurs espagnols. Avec l'introduction du bétail et des porcs par les Européens, la recette s'est enrichie de viande, évoluant vers le ragoût dense connu aujourd'hui.\n\nEn Argentine, le locro est devenu un symbole d'unité nationale, le plat traditionnel servi le 25 mai (jour de la Révolution de mai) et le 9 juillet (jour de l'Indépendance). Les familles le cuisinent en grandes quantités, dans d'immenses marmites, et le partagent avec les voisins — un geste de solidarité sociale tout aussi important que le goût du ragoût lui-même.",
+    "de": "Locro ist ein präkolumbianischer Eintopf, verwurzelt in der Küche der indigenen Völker der Andenregion, die lange vor der Ankunft der spanischen Kolonisatoren Mais, Kürbis und Süßkartoffeln anbauten. Mit der Einführung von Rindern und Schweinen durch die Europäer wurde das Rezept mit Fleisch angereichert und entwickelte sich zu dem dichten Eintopf, den man heute kennt.\n\nIn Argentinien ist Locro zu einem Symbol nationaler Einheit geworden, dem traditionellen Gericht, das am 25. Mai (Tag der Mairevolution) und am 9. Juli (Unabhängigkeitstag) serviert wird. Familien kochen ihn in riesigen Mengen, in gewaltigen Töpfen, und teilen ihn mit Nachbarn — eine Geste sozialer Solidarität, die genauso wichtig ist wie der Geschmack des Eintopfs selbst.",
+    "pt": "O locro é um ensopado pré-colombiano, com raízes na cozinha dos povos indígenas da região andina, que cultivavam milho, abóbora e batata-doce muito antes da chegada dos colonizadores espanhóis. Com a introdução de gado e porcos pelos europeus, a receita foi enriquecida com carne, evoluindo para o ensopado espesso conhecido hoje.\n\nNa Argentina, o locro tornou-se um símbolo de unidade nacional, o prato tradicional servido em 25 de maio (Dia da Revolução de Maio) e 9 de julho (Dia da Independência). As famílias cozinham-no em grandes quantidades, em panelas enormes, e partilham-no com os vizinhos — um gesto de solidariedade social tão importante quanto o sabor do próprio ensopado.",
+    "ru": "Локро — доколумбово рагу, уходящее корнями в кухню коренных народов Андского региона, которые выращивали кукурузу, тыкву и сладкий картофель задолго до прихода испанских колонизаторов. С введением европейцами скота и свиней рецепт обогатился мясом, превратившись в густое рагу, известное сегодня.\n\nВ Аргентине локро стало символом национального единства — традиционным блюдом, подаваемым 25 мая (День Майской революции) и 9 июля (День независимости). Семьи готовят его в огромных количествах, в гигантских котлах, и делятся с соседями — жест социальной солидарности, столь же важный, как и вкус самого рагу.",
+    "ar": "اللوكرو يخنة سابقة لكولومبوس، متجذرة في مطبخ الشعوب الأصلية في منطقة الأنديز، الذين زرعوا الذرة والقرع والبطاطا الحلوة قبل وقت طويل من وصول المستعمرين الإسبان. مع إدخال الأوروبيين للماشية والخنازير، أُثريت الوصفة باللحم، وتطورت إلى اليخنة الكثيفة المعروفة اليوم.\n\nفي الأرجنتين، أصبح اللوكرو رمزًا للوحدة الوطنية، الطبق التقليدي الذي يُقدَّم في 25 مايو (يوم ثورة مايو) و9 يوليو (يوم الاستقلال). تطهو العائلات كميات كبيرة منه في قدور ضخمة وتتشاركه مع الجيران — وهي لفتة تضامن اجتماعي لا تقل أهمية عن طعم اليخنة نفسها.",
+    "zh": "洛克罗炖菜是一道前哥伦布时期的炖菜，根植于安第斯地区原住民的饮食文化，他们早在西班牙殖民者到来之前就已种植玉米、南瓜和红薯。随着欧洲人引入牛和猪，这道食谱因加入肉类而更加丰富，演变成如今这道浓稠的炖菜。\n\n在阿根廷，洛克罗炖菜已成为民族团结的象征，是5月25日（五月革命日）和7月9日（独立日）传统食用的菜肴。家家户户用巨大的锅烹制大量洛克罗，并与邻居分享——这种社会团结的姿态与炖菜本身的味道同样重要。",
+    "ja": "ロクロはコロンブス以前の煮込み料理で、スペインの植民者が到来するずっと以前からとうもろこし、カボチャ、さつまいもを栽培していたアンデス地方の先住民族の料理に根ざしている。ヨーロッパ人によって牛や豚が持ち込まれると、レシピは肉で豊かになり、今日知られる濃厚な煮込み料理へと発展した。\n\nアルゼンチンでは、ロクロは国民の団結の象徴となり、5月25日（五月革命記念日）と7月9日（独立記念日）に提供される伝統料理である。家族は巨大な鍋で大量に調理し、近所の人々と分かち合う――これは煮込み料理そのものの味と同じくらい重要な社会的連帯の行為である。",
+    "hi": "लोक्रो एक पूर्व-कोलंबियाई स्टू है, जिसकी जड़ें एंडीज क्षेत्र के स्वदेशी लोगों के व्यंजनों में हैं, जो स्पेनिश उपनिवेशियों के आने से बहुत पहले मक्का, कद्दू और शकरकंद उगाते थे। यूरोपीयों द्वारा मवेशी और सुअर लाए जाने के साथ, नुस्खा मांस से समृद्ध हुआ, आज ज्ञात गाढ़े स्टू में विकसित हुआ।\n\nअर्जेंटीना में, लोक्रो राष्ट्रीय एकता का प्रतीक बन गया है, जो 25 मई (मई क्रांति दिवस) और 9 जुलाई (स्वतंत्रता दिवस) को परोसा जाने वाला पारंपरिक व्यंजन है। परिवार इसे विशाल बर्तनों में बड़ी मात्रा में पकाते हैं और पड़ोसियों के साथ बांटते हैं — सामाजिक एकजुटता का एक भाव जो स्टू के स्वाद जितना ही महत्वपूर्ण है।",
+    "tr": "Locro, İspanyol sömürgecilerin gelişinden çok önce mısır, bal kabağı ve tatlı patates yetiştiren And bölgesi yerli halklarının mutfağına dayanan, Kolomb öncesi bir güveçtir. Avrupalılar tarafından sığır ve domuzun tanıtılmasıyla, tarif etle zenginleştirildi ve bugün bilinen yoğun güveç haline geldi.\n\nArjantin'de locro, ulusal birliğin simgesi haline gelmiştir; 25 Mayıs'ta (Mayıs Devrimi Günü) ve 9 Temmuz'da (Bağımsızlık Günü) servis edilen geleneksel yemektir. Aileler onu devasa tencerelerde büyük miktarlarda pişirir ve komşularla paylaşır — bu, güvecin tadı kadar önemli bir sosyal dayanışma jestidir.",
+    "it": "Il locro è uno stufato precolombiano, radicato nella cucina dei popoli indigeni della regione andina, che coltivavano mais, zucca e patate dolci molto prima dell'arrivo dei colonizzatori spagnoli. Con l'introduzione di bovini e suini da parte degli europei, la ricetta fu arricchita con carne, evolvendosi nello stufato denso conosciuto oggi.\n\nIn Argentina, il locro è diventato un simbolo di unità nazionale, il piatto tradizionale servito il 25 maggio (Giorno della Rivoluzione di Maggio) e il 9 luglio (Giorno dell'Indipendenza). Le famiglie lo cucinano in grandi quantità, in pentoloni enormi, e lo condividono con i vicini — un gesto di solidarietà sociale importante quanto il sapore stesso dello stufato.",
+    "ko": "로크로는 스페인 식민지 개척자들이 도착하기 훨씬 전부터 옥수수, 호박, 고구마를 재배해온 안데스 지역 원주민들의 요리에 뿌리를 둔 콜럼버스 이전 시대의 스튜다. 유럽인들이 소와 돼지를 들여오면서 이 레시피는 고기로 풍성해져 오늘날 알려진 진한 스튜로 발전했다.\n\n아르헨티나에서 로크로는 국가 단결의 상징이 되었으며, 5월 25일(5월 혁명 기념일)과 7월 9일(독립기념일)에 제공되는 전통 요리다. 가정에서는 거대한 냄비에 많은 양을 요리해 이웃과 나누는데, 이는 스튜 자체의 맛만큼이나 중요한 사회적 연대의 몸짓이다."
+  },
+  "meta": {
+    "time": 180,
+    "costRon": 22,
+    "tags": [],
+    "desc": {
+      "ro": "Tocană densă din porumb alb, vită, porc și cârnați, cu dovleac topit în zeamă.",
+      "en": "Dense stew of white corn, beef, pork and sausage, with squash melted into the broth.",
+      "es": "Guiso denso de maíz blanco, vaca, cerdo y chorizo, con zapallo derretido en el caldo.",
+      "fr": "Ragoût dense de maïs blanc, bœuf, porc et saucisse, avec courge fondue dans le bouillon.",
+      "de": "Dichter Eintopf aus weißem Mais, Rind, Schwein und Wurst, mit im Sud geschmolzenem Kürbis.",
+      "pt": "Ensopado denso de milho branco, vaca, porco e chouriço, com abóbora derretida no caldo.",
+      "ru": "Густое рагу из белой кукурузы, говядины, свинины и колбасы, с растворённой в бульоне тыквой.",
+      "ar": "يخنة كثيفة من الذرة البيضاء ولحم البقر والخنزير والنقانق، مع قرع ذائب في المرق.",
+      "zh": "白玉米、牛肉、猪肉和香肠的浓稠炖菜，南瓜融入汤中。",
+      "ja": "白とうもろこし、牛肉、豚肉、ソーセージの濃厚な煮込み、カボチャがスープに溶け込む。",
+      "hi": "सफेद मक्का, बीफ, सुअर और सॉसेज का गाढ़ा स्टू, शोरबे में घुला कद्दू।",
+      "tr": "Beyaz mısır, dana, domuz ve sosisten yoğun güveç, suyunda erimiş bal kabağıyla.",
+      "it": "Stufato denso di mais bianco, manzo, maiale e salsiccia, con zucca sciolta nel brodo.",
+      "ko": "백옥수수, 소고기, 돼지고기, 소시지로 만든 진한 스튜, 국물에 녹아든 호박."
+    }
+  }
+}

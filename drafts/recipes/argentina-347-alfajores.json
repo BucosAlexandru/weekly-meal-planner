@@ -1,0 +1,176 @@
+{
+  "id": 347,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Argentina", "en": "Argentina", "es": "Argentina", "fr": "Argentine", "de": "Argentinien",
+    "pt": "Argentina", "ru": "Аргентина", "ar": "الأرجنتين", "zh": "阿根廷", "ja": "アルゼンチン",
+    "hi": "अर्जेंटीना", "tr": "Arjantin", "it": "Argentina", "ko": "아르헨티나"
+  },
+  "name": {
+    "ro": "Alfajores argentinieni", "en": "Argentine Alfajores", "es": "Alfajores argentinos", "fr": "Alfajores argentins",
+    "de": "Argentinische Alfajores", "pt": "Alfajores argentinos", "ru": "Аргентинские альфахорес",
+    "ar": "ألفاخوريس الأرجنتينية", "zh": "阿根廷阿尔法霍雷斯饼干", "ja": "アルゼンチン風アルファホーレス",
+    "hi": "अर्जेंटीनी अल्फाजोरेस", "tr": "Arjantin Alfajoresi", "it": "Alfajores argentini", "ko": "아르헨티나 알파호레스"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍪", "t": "Biscuiți fragezi", "d": "Aluat fin din făină de porumb și amidon, care se topește în gură."},
+      {"icon": "🍯", "t": "Dulce de leche gros", "d": "Umplutură groasă din lapte caramelizat lent."},
+      {"icon": "🥥", "t": "Rulați în cocos", "d": "Marginile se rulează prin nucă de cocos rasă."},
+      {"icon": "🎁", "t": "Cadou popular", "d": "Se vând în cutii ca suvenir tradițional argentinian."}
+    ],
+    "en": [
+      {"icon": "🍪", "t": "Tender cookies", "d": "Delicate dough of cornstarch and flour that melts in your mouth."},
+      {"icon": "🍯", "t": "Thick dulce de leche", "d": "A thick filling of slow-caramelized milk."},
+      {"icon": "🥥", "t": "Rolled in coconut", "d": "The edges are rolled through shredded coconut."},
+      {"icon": "🎁", "t": "Popular gift", "d": "Sold in boxes as a traditional Argentine souvenir."}
+    ],
+    "es": [
+      {"icon": "🍪", "t": "Galletas tiernas", "d": "Masa delicada de maicena y harina que se derrite en la boca."},
+      {"icon": "🍯", "t": "Dulce de leche espeso", "d": "Un relleno espeso de leche caramelizada lentamente."},
+      {"icon": "🥥", "t": "Enrollados en coco", "d": "Los bordes se pasan por coco rallado."},
+      {"icon": "🎁", "t": "Regalo popular", "d": "Se venden en cajas como souvenir tradicional argentino."}
+    ],
+    "fr": [
+      {"icon": "🍪", "t": "Biscuits tendres", "d": "Pâte délicate de maïzena et de farine qui fond dans la bouche."},
+      {"icon": "🍯", "t": "Dulce de leche épais", "d": "Une garniture épaisse de lait caramélisé lentement."},
+      {"icon": "🥥", "t": "Roulés dans la noix de coco", "d": "Les bords sont roulés dans de la noix de coco râpée."},
+      {"icon": "🎁", "t": "Cadeau populaire", "d": "Vendus en boîtes comme souvenir traditionnel argentin."}
+    ],
+    "de": [
+      {"icon": "🍪", "t": "Zarte Kekse", "d": "Feiner Teig aus Maisstärke und Mehl, der auf der Zunge zergeht."},
+      {"icon": "🍯", "t": "Dicker Dulce de Leche", "d": "Eine dicke Füllung aus langsam karamellisierter Milch."},
+      {"icon": "🥥", "t": "In Kokos gerollt", "d": "Die Ränder werden durch geraspelte Kokosnuss gerollt."},
+      {"icon": "🎁", "t": "Beliebtes Geschenk", "d": "In Schachteln verkauft als traditionelles argentinisches Souvenir."}
+    ],
+    "pt": [
+      {"icon": "🍪", "t": "Biscoitos macios", "d": "Massa delicada de amido de milho e farinha que derrete na boca."},
+      {"icon": "🍯", "t": "Doce de leite grosso", "d": "Um recheio espesso de leite caramelizado lentamente."},
+      {"icon": "🥥", "t": "Passados no coco", "d": "As bordas são passadas em coco ralado."},
+      {"icon": "🎁", "t": "Presente popular", "d": "Vendidos em caixas como souvenir tradicional argentino."}
+    ],
+    "ru": [
+      {"icon": "🍪", "t": "Нежное печенье", "d": "Тонкое тесто из кукурузного крахмала и муки, тающее во рту."},
+      {"icon": "🍯", "t": "Густой дульсе де лече", "d": "Густая начинка из медленно карамелизированного молока."},
+      {"icon": "🥥", "t": "Обваляно в кокосе", "d": "Края обваливают в тёртом кокосе."},
+      {"icon": "🎁", "t": "Популярный подарок", "d": "Продаётся в коробках как традиционный аргентинский сувенир."}
+    ],
+    "ar": [
+      {"icon": "🍪", "t": "بسكويت طري", "d": "عجين رقيق من نشا الذرة والدقيق يذوب في الفم."},
+      {"icon": "🍯", "t": "دولسي دي ليتشي سميك", "d": "حشوة سميكة من الحليب المكرمَل ببطء."},
+      {"icon": "🥥", "t": "مُغطى بجوز الهند", "d": "تُمرَّر الحواف على جوز الهند المبشور."},
+      {"icon": "🎁", "t": "هدية شعبية", "d": "تُباع في علب كتذكار أرجنتيني تقليدي."}
+    ],
+    "zh": [
+      {"icon": "🍪", "t": "细腻饼干", "d": "由玉米淀粉和面粉制成的入口即化细腻面团。"},
+      {"icon": "🍯", "t": "浓稠焦糖牛奶酱", "d": "由慢煮焦糖牛奶制成的浓厚夹心。"},
+      {"icon": "🥥", "t": "裹上椰丝", "d": "边缘裹上椰丝。"},
+      {"icon": "🎁", "t": "热门伴手礼", "d": "以礼盒形式出售，是阿根廷传统纪念品。"}
+    ],
+    "ja": [
+      {"icon": "🍪", "t": "柔らかいクッキー", "d": "コーンスターチと小麦粉の繊細な生地が口の中でとろける。"},
+      {"icon": "🍯", "t": "濃厚なドゥルセ・デ・レチェ", "d": "ゆっくりキャラメル化した牛乳の濃厚なフィリング。"},
+      {"icon": "🥥", "t": "ココナッツをまぶす", "d": "縁にすりおろしたココナッツをまぶす。"},
+      {"icon": "🎁", "t": "人気の贈り物", "d": "伝統的なアルゼンチンのお土産として箱で販売される。"}
+    ],
+    "hi": [
+      {"icon": "🍪", "t": "मुलायम बिस्किट", "d": "कॉर्नस्टार्च और आटे का नाज़ुक आटा जो मुंह में घुल जाता है।"},
+      {"icon": "🍯", "t": "गाढ़ा दुल्से दे लेचे", "d": "धीरे कारमेलाइज़्ड दूध की गाढ़ी भराई।"},
+      {"icon": "🥥", "t": "नारियल में लपेटा", "d": "किनारों को कद्दूकस किए नारियल में लपेटा जाता है।"},
+      {"icon": "🎁", "t": "लोकप्रिय उपहार", "d": "पारंपरिक अर्जेंटीनी स्मृति चिन्ह के रूप में डिब्बों में बेचा जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🍪", "t": "Yumuşak kurabiyeler", "d": "Ağızda eriyen mısır nişastası ve un karışımı ince hamur."},
+      {"icon": "🍯", "t": "Koyu dulce de leche", "d": "Yavaşça karamelize edilmiş sütten koyu bir iç harç."},
+      {"icon": "🥥", "t": "Hindistan cevizine bulanmış", "d": "Kenarları rendelenmiş hindistan cevizine bulanır."},
+      {"icon": "🎁", "t": "Popüler hediye", "d": "Geleneksel Arjantin hediyelik eşyası olarak kutularda satılır."}
+    ],
+    "it": [
+      {"icon": "🍪", "t": "Biscotti teneri", "d": "Impasto delicato di amido di mais e farina che si scioglie in bocca."},
+      {"icon": "🍯", "t": "Dulce de leche denso", "d": "Un ripieno denso di latte caramellato lentamente."},
+      {"icon": "🥥", "t": "Rotolati nel cocco", "d": "I bordi vengono rotolati nel cocco grattugiato."},
+      {"icon": "🎁", "t": "Regalo popolare", "d": "Venduti in scatole come souvenir tradizionale argentino."}
+    ],
+    "ko": [
+      {"icon": "🍪", "t": "부드러운 쿠키", "d": "입에서 녹는 옥수수 전분과 밀가루로 만든 섬세한 반죽."},
+      {"icon": "🍯", "t": "진한 둘세 데 레체", "d": "천천히 캐러멜화한 우유로 만든 진한 필링."},
+      {"icon": "🥥", "t": "코코넛에 굴림", "d": "가장자리를 채 썬 코코넛에 굴린다."},
+      {"icon": "🎁", "t": "인기 선물", "d": "전통 아르헨티나 기념품으로 상자에 담겨 판매된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["150g amidon de porumb", "100g făină", "100g unt moale", "70g zahăr pudră", "3 gălbenușuri", "1 linguriță praf de copt", "1 linguriță esență de vanilie", "400g dulce de leche", "150g nucă de cocos rasă", "un praf de sare"],
+    "en": ["150g cornstarch", "100g flour", "100g soft butter", "70g powdered sugar", "3 egg yolks", "1 tsp baking powder", "1 tsp vanilla extract", "400g dulce de leche", "150g shredded coconut", "a pinch of salt"],
+    "es": ["150g de maicena", "100g de harina", "100g de mantequilla blanda", "70g de azúcar glas", "3 yemas de huevo", "1 cdta de polvo de hornear", "1 cdta de esencia de vainilla", "400g de dulce de leche", "150g de coco rallado", "una pizca de sal"],
+    "fr": ["150g de maïzena", "100g de farine", "100g de beurre mou", "70g de sucre glace", "3 jaunes d'œufs", "1 c. à c. de levure chimique", "1 c. à c. d'extrait de vanille", "400g de dulce de leche", "150g de noix de coco râpée", "une pincée de sel"],
+    "de": ["150g Maisstärke", "100g Mehl", "100g weiche Butter", "70g Puderzucker", "3 Eigelb", "1 TL Backpulver", "1 TL Vanilleextrakt", "400g Dulce de Leche", "150g geraspelte Kokosnuss", "eine Prise Salz"],
+    "pt": ["150g de amido de milho", "100g de farinha", "100g de manteiga amolecida", "70g de açúcar em pó", "3 gemas de ovo", "1 colher de chá de fermento em pó", "1 colher de chá de essência de baunilha", "400g de doce de leite", "150g de coco ralado", "uma pitada de sal"],
+    "ru": ["150г кукурузного крахмала", "100г муки", "100г мягкого сливочного масла", "70г сахарной пудры", "3 яичных желтка", "1 ч.л. разрыхлителя", "1 ч.л. ванильного экстракта", "400г дульсе де лече", "150г тёртого кокоса", "щепотка соли"],
+    "ar": ["150غ نشا ذرة", "100غ دقيق", "100غ زبدة طرية", "70غ سكر بودرة", "3 صفار بيض", "ملعقة صغيرة بيكنج بودر", "ملعقة صغيرة خلاصة الفانيليا", "400غ دولسي دي ليتشي", "150غ جوز هند مبشور", "رشة ملح"],
+    "zh": ["玉米淀粉150克", "面粉100克", "软化黄油100克", "糖粉70克", "蛋黄3个", "泡打粉1茶匙", "香草精1茶匙", "焦糖牛奶酱400克", "椰丝150克", "盐一小撮"],
+    "ja": ["コーンスターチ 150g", "小麦粉 100g", "柔らかいバター 100g", "粉砂糖 70g", "卵黄 3個", "ベーキングパウダー 小さじ1", "バニラエッセンス 小さじ1", "ドゥルセ・デ・レチェ 400g", "すりおろしココナッツ 150g", "塩 ひとつまみ"],
+    "hi": ["150 ग्राम कॉर्नस्टार्च", "100 ग्राम आटा", "100 ग्राम नरम मक्खन", "70 ग्राम पिसी चीनी", "3 अंडे की जर्दी", "1 छोटा चम्मच बेकिंग पाउडर", "1 छोटा चम्मच वेनिला एसेंस", "400 ग्राम दुल्से दे लेचे", "150 ग्राम कद्दूकस किया नारियल", "एक चुटकी नमक"],
+    "tr": ["150g mısır nişastası", "100g un", "100g yumuşak tereyağı", "70g pudra şekeri", "3 yumurta sarısı", "1 çay kaşığı kabartma tozu", "1 çay kaşığı vanilya özütü", "400g dulce de leche", "150g rendelenmiş hindistan cevizi", "bir tutam tuz"],
+    "it": ["150g di amido di mais", "100g di farina", "100g di burro morbido", "70g di zucchero a velo", "3 tuorli d'uovo", "1 cucchiaino di lievito in polvere", "1 cucchiaino di estratto di vaniglia", "400g di dulce de leche", "150g di cocco grattugiato", "un pizzico di sale"],
+    "ko": ["옥수수 전분 150g", "밀가루 100g", "부드러운 버터 100g", "슈가파우더 70g", "달걀노른자 3개", "베이킹파우더 1작은술", "바닐라 추출물 1작은술", "둘세 데 레체 400g", "채 썬 코코넛 150g", "소금 한 꼬집"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE ALUAT: Amestecă untul moale cu zahărul pudră până devine cremos, adaugă gălbenușurile și vanilia. INCORPORARE USCATE: Adaugă amidonul, făina, praful de copt și sarea, amestecă până se formează un aluat omogen. ODIHNĂ ALUAT: Înfășoară aluatul în folie și lasă-l la frigider 30 minute. ÎNTINDERE ȘI DECUPARE: Întinde aluatul la grosime de 5mm și decupează cercuri cu un pahar sau formă rotundă. COACERE: Coace biscuiții 8-10 minute la 170°C, până marginile devin ușor aurii, fără să se rumenească prea tare. RĂCIRE: Lasă biscuiții să se răcească complet pe un grătar. ASAMBLARE: Unge jumătate din biscuiți cu un strat gros de dulce de leche și acoperă cu ceilalți biscuiți. FINISARE: Rulează marginile umplute prin nucă de cocos rasă înainte de servire.",
+    "en": "PREPARE DOUGH: Beat the soft butter with powdered sugar until creamy, add the egg yolks and vanilla. FOLD IN DRY INGREDIENTS: Add the cornstarch, flour, baking powder and salt, mix until a smooth dough forms. REST THE DOUGH: Wrap the dough in film and refrigerate for 30 minutes. ROLL AND CUT: Roll the dough to 5mm thickness and cut circles with a glass or round cutter. BAKE: Bake the cookies for 8-10 minutes at 170°C, until the edges turn lightly golden, without browning too much. COOL: Let the cookies cool completely on a rack. ASSEMBLE: Spread a thick layer of dulce de leche on half the cookies and cover with the remaining cookies. FINISH: Roll the filled edges through shredded coconut before serving.",
+    "es": "PREPARAR LA MASA: Bate la mantequilla blanda con el azúcar glas hasta que quede cremosa, añade las yemas y la vainilla. INCORPORAR LOS SECOS: Añade la maicena, la harina, el polvo de hornear y la sal, mezcla hasta formar una masa homogénea. REPOSAR LA MASA: Envuelve la masa en film y refrigera 30 minutos. ESTIRAR Y CORTAR: Estira la masa a 5mm de grosor y corta círculos con un vaso o cortador redondo. HORNEAR: Hornea las galletas 8-10 minutos a 170°C, hasta que los bordes queden ligeramente dorados, sin dorarse demasiado. ENFRIAR: Deja que las galletas se enfríen completamente sobre una rejilla. MONTAR: Unta una capa gruesa de dulce de leche en la mitad de las galletas y cubre con las demás. TERMINAR: Pasa los bordes rellenos por coco rallado antes de servir.",
+    "fr": "PRÉPARER LA PÂTE: Fouettez le beurre mou avec le sucre glace jusqu'à ce qu'il soit crémeux, ajoutez les jaunes d'œufs et la vanille. INCORPORER LES INGRÉDIENTS SECS: Ajoutez la maïzena, la farine, la levure et le sel, mélangez jusqu'à obtenir une pâte homogène. LAISSER REPOSER LA PÂTE: Enveloppez la pâte dans du film et réfrigérez 30 minutes. ÉTALER ET DÉCOUPER: Étalez la pâte sur 5mm d'épaisseur et découpez des cercles avec un verre ou un emporte-pièce. CUIRE: Faites cuire les biscuits 8-10 minutes à 170°C, jusqu'à ce que les bords soient légèrement dorés, sans trop colorer. REFROIDIR: Laissez les biscuits refroidir complètement sur une grille. MONTER: Étalez une épaisse couche de dulce de leche sur la moitié des biscuits et recouvrez avec les autres. FINALISER: Roulez les bords garnis dans de la noix de coco râpée avant de servir.",
+    "de": "TEIG ZUBEREITEN: Die weiche Butter mit Puderzucker cremig schlagen, Eigelb und Vanille hinzufügen. TROCKENE ZUTATEN UNTERHEBEN: Maisstärke, Mehl, Backpulver und Salz hinzufügen, zu einem glatten Teig verrühren. TEIG RUHEN LASSEN: Den Teig in Folie wickeln und 30 Minuten kühlen. AUSROLLEN UND AUSSTECHEN: Den Teig 5mm dick ausrollen und mit einem Glas oder Ausstecher Kreise ausstechen. BACKEN: Die Kekse 8-10 Minuten bei 170°C backen, bis die Ränder leicht golden werden, ohne zu stark zu bräunen. ABKÜHLEN: Die Kekse vollständig auf einem Gitter abkühlen lassen. ZUSAMMENSETZEN: Eine dicke Schicht Dulce de Leche auf die Hälfte der Kekse streichen und mit den restlichen Keksen bedecken. FERTIGSTELLEN: Die gefüllten Ränder vor dem Servieren durch geraspelte Kokosnuss rollen.",
+    "pt": "PREPARAR A MASSA: Bata a manteiga amolecida com o açúcar em pó até ficar cremosa, junte as gemas e a baunilha. INCORPORAR OS SECOS: Junte o amido de milho, a farinha, o fermento e o sal, misture até formar uma massa homogénea. DESCANSAR A MASSA: Envolva a massa em película e leve à geladeira por 30 minutos. ESTENDER E CORTAR: Estenda a massa a 5mm de espessura e corte círculos com um copo ou cortador redondo. ASSAR: Asse os biscoitos por 8-10 minutos a 170°C, até as bordas ficarem levemente douradas, sem escurecer demais. ARREFECER: Deixe os biscoitos arrefecerem completamente numa grelha. MONTAR: Espalhe uma camada grossa de doce de leite em metade dos biscoitos e cubra com os restantes. FINALIZAR: Passe as bordas recheadas em coco ralado antes de servir.",
+    "ru": "ПРИГОТОВЛЕНИЕ ТЕСТА: Взбейте мягкое масло с сахарной пудрой до кремообразности, добавьте желтки и ваниль. ВМЕШИВАНИЕ СУХИХ ИНГРЕДИЕНТОВ: Добавьте кукурузный крахмал, муку, разрыхлитель и соль, перемешайте до однородного теста. ОТДЫХ ТЕСТА: Заверните тесто в плёнку и охладите 30 минут. РАСКАТКА И ВЫРЕЗАНИЕ: Раскатайте тесто толщиной 5мм и вырежьте кружки стаканом или круглой формой. ВЫПЕЧКА: Выпекайте печенье 8-10 минут при 170°C, пока края не станут слегка золотистыми, не подрумянивая слишком сильно. ОХЛАЖДЕНИЕ: Дайте печенью полностью остыть на решётке. СБОРКА: Намажьте толстый слой дульсе де лече на половину печенья и накройте оставшимся печеньем. ЗАВЕРШЕНИЕ: Обваляйте наполненные края в тёртом кокосе перед подачей.",
+    "ar": "تحضير العجين: اخفق الزبدة الطرية مع السكر البودرة حتى تصبح كريمية، أضف صفار البيض والفانيليا. إضافة المكونات الجافة: أضف نشا الذرة والدقيق وبيكنج بودر والملح، اخلط حتى يتشكل عجين متجانس. ترك العجين يرتاح: لف العجين بغلاف بلاستيكي وضعه في الثلاجة لمدة 30 دقيقة. الفرد والتقطيع: افرد العجين بسماكة 5مم وقطّع دوائر بكوب أو قالب دائري. الخبز: اخبز البسكويت لمدة 8-10 دقائق على حرارة 170 درجة حتى تصبح الحواف ذهبية خفيفة دون أن تحمّر كثيرًا. التبريد: اترك البسكويت يبرد تمامًا على شبكة. التجميع: ادهن طبقة سميكة من دولسي دي ليتشي على نصف البسكويت وغطِّ بالنصف الآخر. اللمسات الأخيرة: مرّر الحواف المحشوة على جوز الهند المبشور قبل التقديم.",
+    "zh": "准备面团：将软化黄油与糖粉打发至绵密，加入蛋黄和香草精。加入干性材料：加入玉米淀粉、面粉、泡打粉和盐，搅拌至形成均匀面团。松弛面团：将面团用保鲜膜包好冷藏30分钟。擀开切割：将面团擀至5毫米厚，用杯子或圆形模具切出圆形。烘烤：将饼干在170°C下烤8-10分钟，直至边缘略呈金黄色，不要烤得太深。冷却：将饼干在架子上完全冷却。组装：在一半饼干上涂厚厚一层焦糖牛奶酱，盖上另一半饼干。最后装饰：食用前将夹心边缘裹上椰丝。",
+    "ja": "生地を準備：柔らかいバターを粉砂糖と共にクリーム状になるまで泡立て、卵黄とバニラを加える。粉類を混ぜる：コーンスターチ、小麦粉、ベーキングパウダー、塩を加え、なめらかな生地になるまで混ぜる。生地を休ませる：生地をラップで包み30分冷蔵する。伸ばして型抜き：生地を5mmの厚さに伸ばし、グラスや丸型で丸く型抜きする。焼く：170°Cで8〜10分、縁が軽く色づく程度に焼きすぎないように焼く。冷ます：クッキーを網の上で完全に冷ます。組み立てる：クッキーの半分に厚めのドゥルセ・デ・レチェを塗り、残りのクッキーで挟む。仕上げ：提供前に詰め物のはみ出た縁をすりおろしたココナッツにまぶす。",
+    "hi": "आटा तैयार करें: नरम मक्खन को पिसी चीनी के साथ मलाईदार होने तक फेंटें, अंडे की जर्दी और वेनिला डालें। सूखी सामग्री मिलाएं: कॉर्नस्टार्च, आटा, बेकिंग पाउडर और नमक डालें, चिकना आटा बनने तक मिलाएं। आटा आराम दें: आटे को फिल्म में लपेटें और 30 मिनट फ्रिज में रखें। बेलें और काटें: आटे को 5mm मोटाई में बेलें और गिलास या गोल कटर से गोले काटें। बेक करें: बिस्किट को 170°C पर 8-10 मिनट बेक करें, जब तक किनारे हल्के सुनहरे न हों, ज़्यादा भूरे न होने दें। ठंडा करें: बिस्किट को रैक पर पूरी तरह ठंडा होने दें। असेंबल करें: आधे बिस्किट पर दुल्से दे लेचे की मोटी परत लगाएं और बाकी बिस्किट से ढकें। अंतिम रूप दें: परोसने से पहले भरे किनारों को कद्दूकस किए नारियल में लपेटें।",
+    "tr": "HAMURU HAZIRLAYIN: Yumuşak tereyağını pudra şekeriyle kremamsı olana kadar çırpın, yumurta sarılarını ve vanilyayı ekleyin. KURU MALZEMELERİ KATIN: Mısır nişastası, un, kabartma tozu ve tuzu ekleyin, pürüzsüz bir hamur oluşana kadar karıştırın. HAMURU DİNLENDİRİN: Hamuru streç filme sarın ve 30 dakika buzdolabında bekletin. AÇIN VE KESİN: Hamuru 5mm kalınlığında açın ve bir bardak veya yuvarlak kalıpla daireler kesin. PİŞİRİN: Kurabiyeleri 170°C'de kenarları hafifçe altın rengi olana kadar, fazla kızartmadan 8-10 dakika pişirin. SOĞUTUN: Kurabiyeleri bir ızgara üzerinde tamamen soğumaya bırakın. BİRLEŞTİRİN: Kurabiyelerin yarısına kalın bir tabaka dulce de leche sürün ve kalanlarla kapatın. SON DOKUNUŞ: Servisten önce doldurulmuş kenarları rendelenmiş hindistan cevizine bulayın.",
+    "it": "PREPARARE L'IMPASTO: Montate il burro morbido con lo zucchero a velo fino a renderlo cremoso, aggiungete i tuorli e la vaniglia. INCORPORARE GLI INGREDIENTI SECCHI: Aggiungete l'amido di mais, la farina, il lievito e il sale, mescolate fino a ottenere un impasto omogeneo. FAR RIPOSARE L'IMPASTO: Avvolgete l'impasto nella pellicola e refrigerate per 30 minuti. STENDERE E TAGLIARE: Stendete l'impasto a 5mm di spessore e tagliate cerchi con un bicchiere o uno stampino rotondo. CUOCERE: Cuocete i biscotti per 8-10 minuti a 170°C, finché i bordi diventano leggermente dorati, senza scurire troppo. RAFFREDDARE: Lasciate raffreddare completamente i biscotti su una gratella. COMPORRE: Spalmate uno strato spesso di dulce de leche su metà dei biscotti e coprite con i restanti. FINIRE: Rotolate i bordi farciti nel cocco grattugiato prima di servire.",
+    "ko": "반죽 준비: 부드러운 버터를 슈가파우더와 함께 크림처럼 될 때까지 휘핑하고 달걀노른자와 바닐라를 넣는다. 마른 재료 섞기: 옥수수 전분, 밀가루, 베이킹파우더, 소금을 넣고 매끄러운 반죽이 될 때까지 섞는다. 반죽 휴지: 반죽을 랩으로 감싸 30분간 냉장 보관한다. 밀어서 자르기: 반죽을 5mm 두께로 밀어 컵이나 둥근 틀로 원형으로 자른다. 굽기: 170°C에서 8~10분, 가장자리가 살짝 황금빛이 될 때까지 너무 진하게 굽지 않고 굽는다. 식히기: 쿠키를 선반 위에서 완전히 식힌다. 조립하기: 쿠키 절반에 둘세 데 레체를 두껍게 바르고 나머지 쿠키로 덮는다. 마무리: 제공 전 채워진 가장자리를 채 썬 코코넛에 굴린다."
+  },
+  "originText": {
+    "ro": "Alfajores au origini arabe, cuvântul provenind din al-hasú, un termen din araba andaluză folosit pentru dulciuri umplute. Rețeta a călătorit din Spania musulmană spre Peninsula Iberică medievală, iar ulterior spre America de Sud odată cu colonizarea spaniolă, unde fiecare țară a adaptat-o cu propriul stil.\n\nÎn Argentina, alfajores au evoluat spre versiunea cu dulce de leche, o cremă de lapte caramelizat lent devenită simbol al identității culinare naționale. Fabricate industrial de zeci de branduri sau artizanal în cofetării de cartier, alfajores sunt considerați gustarea națională a argentinienilor, consumați anual în cantități uriașe și exportați ca suvenir tipic pentru turiști.",
+    "en": "Alfajores have Arabic origins, the word coming from al-hasú, an Andalusian Arabic term for stuffed sweets. The recipe traveled from Muslim Spain to the medieval Iberian Peninsula, and later to South America with Spanish colonization, where each country adapted it with its own style.\n\nIn Argentina, alfajores evolved into the dulce de leche version, a slow-caramelized milk cream that became a symbol of national culinary identity. Made industrially by dozens of brands or handcrafted in neighborhood bakeries, alfajores are considered Argentina's national snack, consumed annually in huge quantities and exported as a typical souvenir for tourists.",
+    "es": "Los alfajores tienen orígenes árabes, la palabra proviene de al-hasú, un término del árabe andalusí para dulces rellenos. La receta viajó desde la España musulmana hasta la península ibérica medieval, y luego a Sudamérica con la colonización española, donde cada país la adaptó con su propio estilo.\n\nEn Argentina, los alfajores evolucionaron hacia la versión con dulce de leche, una crema de leche caramelizada lentamente que se convirtió en símbolo de la identidad culinaria nacional. Fabricados industrialmente por decenas de marcas o de forma artesanal en pastelerías de barrio, los alfajores son considerados el bocado nacional de los argentinos, consumidos anualmente en cantidades enormes y exportados como souvenir típico para turistas.",
+    "fr": "Les alfajores ont des origines arabes, le mot venant d'al-hasú, un terme de l'arabe andalou pour des douceurs fourrées. La recette a voyagé de l'Espagne musulmane vers la péninsule ibérique médiévale, puis vers l'Amérique du Sud avec la colonisation espagnole, où chaque pays l'a adaptée à son propre style.\n\nEn Argentine, les alfajores ont évolué vers la version au dulce de leche, une crème de lait caramélisée lentement devenue symbole de l'identité culinaire nationale. Fabriqués industriellement par des dizaines de marques ou artisanalement dans les pâtisseries de quartier, les alfajores sont considérés comme la collation nationale des Argentins, consommés annuellement en énormes quantités et exportés comme souvenir typique pour les touristes.",
+    "de": "Alfajores haben arabische Wurzeln, das Wort stammt von al-hasú, einem andalusisch-arabischen Begriff für gefüllte Süßigkeiten. Das Rezept wanderte vom muslimischen Spanien zur mittelalterlichen iberischen Halbinsel und später mit der spanischen Kolonisierung nach Südamerika, wo jedes Land es mit eigenem Stil anpasste.\n\nIn Argentinien entwickelten sich die Alfajores zur Version mit Dulce de Leche, einer langsam karamellisierten Milchcreme, die zum Symbol der nationalen kulinarischen Identität wurde. Von Dutzenden Marken industriell hergestellt oder handwerklich in Stadtteilbäckereien, gelten Alfajores als der Nationalsnack der Argentinier, jährlich in riesigen Mengen konsumiert und als typisches Souvenir für Touristen exportiert.",
+    "pt": "Os alfajores têm origens árabes, a palavra vem de al-hasú, um termo do árabe andaluz para doces recheados. A receita viajou da Espanha muçulmana para a península ibérica medieval, e depois para a América do Sul com a colonização espanhola, onde cada país a adaptou ao seu próprio estilo.\n\nNa Argentina, os alfajores evoluíram para a versão com doce de leite, um creme de leite caramelizado lentamente que se tornou símbolo da identidade culinária nacional. Fabricados industrialmente por dezenas de marcas ou artesanalmente em pastelarias de bairro, os alfajores são considerados o lanche nacional dos argentinos, consumidos anualmente em quantidades enormes e exportados como souvenir típico para turistas.",
+    "ru": "Альфахорес имеют арабское происхождение, слово происходит от al-hasú, андалузско-арабского термина для начинённых сладостей. Рецепт путешествовал из мусульманской Испании на средневековый Пиренейский полуостров, а затем в Южную Америку вместе с испанской колонизацией, где каждая страна адаптировала его на свой лад.\n\nВ Аргентине альфахорес эволюционировали в версию с дульсе де лече — медленно карамелизированным молочным кремом, ставшим символом национальной кулинарной идентичности. Производимые промышленно десятками брендов или вручную в районных кондитерских, альфахорес считаются национальным лакомством аргентинцев, потребляемым ежегодно в огромных количествах и экспортируемым как типичный сувенир для туристов.",
+    "ar": "لألفاخوريس أصول عربية، حيث تأتي الكلمة من الحشو، مصطلح بالعربية الأندلسية للحلويات المحشوة. سافرت الوصفة من إسبانيا الإسلامية إلى شبه الجزيرة الأيبيرية في العصور الوسطى، ثم إلى أمريكا الجنوبية مع الاستعمار الإسباني، حيث كيّفتها كل دولة بأسلوبها الخاص.\n\nفي الأرجنتين، تطورت الألفاخوريس إلى نسخة الدولسي دي ليتشي، وهي كريمة حليب مكرمَلة ببطء أصبحت رمزًا للهوية الطهوية الوطنية. تُصنَّع صناعيًا من قبل عشرات العلامات التجارية أو يدويًا في مخابز الأحياء، وتُعتبر الألفاخوريس الوجبة الخفيفة الوطنية للأرجنتينيين، تُستهلك سنويًا بكميات هائلة وتُصدَّر كتذكار نموذجي للسياح.",
+    "zh": "阿尔法霍雷斯饼干起源于阿拉伯，其名称源自al-hasú，是安达卢西亚阿拉伯语中对夹心甜点的称呼。这道食谱从穆斯林统治时期的西班牙传入中世纪伊比利亚半岛，随后随西班牙殖民传入南美，每个国家都按自己的风格进行了改良。\n\n在阿根廷，阿尔法霍雷斯演变成了焦糖牛奶酱版本——一种慢煮焦糖化的奶油，已成为国家饮食文化认同的象征。这种饼干由数十个品牌工业化生产，或在街区糕点店手工制作，被视为阿根廷人的国民小吃，每年消费量巨大，并作为典型伴手礼出口给游客。",
+    "ja": "アルファホーレスはアラビア起源で、その名称はアンダルシア・アラビア語で詰め物入りの甘い菓子を意味するal-hasúに由来する。このレシピはイスラム統治下のスペインから中世イベリア半島へ、その後スペインの植民地化とともに南米へと伝わり、各国がそれぞれの様式に合わせて改良した。\n\nアルゼンチンでは、アルファホーレスはゆっくりキャラメル化したミルククリームであるドゥルセ・デ・レチェのバージョンへと進化し、国家的な料理アイデンティティの象徴となった。数十のブランドによって工業生産されるか、あるいは地元の菓子店で手作りされ、アルファホーレスはアルゼンチン人の国民的なおやつとされ、毎年膨大な量が消費され、観光客向けの定番土産として輸出されている。",
+    "hi": "अल्फाजोरेस की उत्पत्ति अरबी है, यह शब्द अल-हसू से आया है, जो अंडालूसी अरबी में भरवां मिठाइयों के लिए एक शब्द है। यह नुस्खा मुस्लिम स्पेन से मध्यकालीन इबेरियन प्रायद्वीप तक और बाद में स्पेनिश उपनिवेशीकरण के साथ दक्षिण अमेरिका तक पहुंचा, जहां हर देश ने इसे अपनी शैली में ढाला।\n\nअर्जेंटीना में, अल्फाजोरेस दुल्से दे लेचे संस्करण में विकसित हुए, जो धीरे कारमेलाइज़्ड दूध की क्रीम है जो राष्ट्रीय पाक पहचान का प्रतीक बन गई। दर्जनों ब्रांडों द्वारा औद्योगिक रूप से या मोहल्ले की बेकरी में हस्तनिर्मित, अल्फाजोरेस को अर्जेंटीना का राष्ट्रीय नाश्ता माना जाता है, जो हर साल भारी मात्रा में खाया जाता है और पर्यटकों के लिए विशिष्ट स्मृति चिन्ह के रूप में निर्यात किया जाता है।",
+    "tr": "Alfajores'in kökeni Arapçadır, kelime dolgulu tatlılar için Endülüs Arapçası bir terim olan al-hasú'dan gelir. Tarif, Müslüman İspanya'dan ortaçağ İberya Yarımadası'na ve daha sonra İspanyol sömürgeciliğiyle Güney Amerika'ya seyahat etti; her ülke onu kendi tarzıyla uyarladı.\n\nArjantin'de alfajores, ulusal mutfak kimliğinin simgesi haline gelen yavaşça karamelize edilmiş süt kreması dulce de leche versiyonuna evrildi. Onlarca marka tarafından endüstriyel olarak veya mahalle pastanelerinde el yapımı olarak üretilen alfajores, Arjantinlilerin ulusal atıştırmalığı olarak kabul edilir, her yıl devasa miktarlarda tüketilir ve turistler için tipik bir hediyelik eşya olarak ihraç edilir.",
+    "it": "Gli alfajores hanno origini arabe, la parola deriva da al-hasú, un termine dell'arabo andaluso per dolci ripieni. La ricetta viaggiò dalla Spagna musulmana verso la penisola iberica medievale, e successivamente verso il Sud America con la colonizzazione spagnola, dove ogni paese la adattò con il proprio stile.\n\nIn Argentina, gli alfajores si sono evoluti nella versione al dulce de leche, una crema di latte caramellato lentamente diventata simbolo dell'identità culinaria nazionale. Prodotti industrialmente da decine di marchi o artigianalmente nelle pasticcerie di quartiere, gli alfajores sono considerati lo spuntino nazionale degli argentini, consumati annualmente in quantità enormi ed esportati come souvenir tipico per i turisti.",
+    "ko": "알파호레스는 아랍에서 기원했으며, 이 단어는 속을 채운 단 과자를 뜻하는 안달루시아 아랍어 al-hasú에서 유래했다. 이 레시피는 무슬림 스페인에서 중세 이베리아 반도로, 이후 스페인 식민지화와 함께 남미로 전해졌으며, 각 나라가 자신만의 방식으로 변형했다.\n\n아르헨티나에서 알파호레스는 천천히 캐러멜화한 우유 크림인 둘세 데 레체 버전으로 발전했으며, 이는 국가적 요리 정체성의 상징이 되었다. 수십 개 브랜드에 의해 공장 생산되거나 동네 제과점에서 수제로 만들어지는 알파호레스는 아르헨티나인들의 국민 간식으로 여겨지며, 매년 엄청난 양이 소비되고 관광객들을 위한 전형적인 기념품으로 수출된다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 16,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Biscuiți fragezi umpluți cu dulce de leche gros, cu marginile rulate în cocos.",
+      "en": "Tender cookies filled with thick dulce de leche, edges rolled in coconut.",
+      "es": "Galletas tiernas rellenas de dulce de leche espeso, con los bordes en coco.",
+      "fr": "Biscuits tendres fourrés de dulce de leche épais, bords roulés dans la noix de coco.",
+      "de": "Zarte Kekse mit dickem Dulce de Leche gefüllt, Ränder in Kokos gerollt.",
+      "pt": "Biscoitos macios recheados com doce de leite grosso, bordas passadas em coco.",
+      "ru": "Нежное печенье с густым дульсе де лече, края обвалены в кокосе.",
+      "ar": "بسكويت طري محشو بدولسي دي ليتشي سميك، حواف مغطاة بجوز الهند.",
+      "zh": "夹厚焦糖牛奶酱的细腻饼干，边缘裹椰丝。",
+      "ja": "濃厚なドゥルセ・デ・レチェを挟んだ柔らかいクッキー、縁にココナッツ。",
+      "hi": "गाढ़े दुल्से दे लेचे से भरे मुलायम बिस्किट, किनारे नारियल में लिपटे।",
+      "tr": "Koyu dulce de leche dolgulu yumuşak kurabiye, kenarları hindistan cevizine bulanmış.",
+      "it": "Biscotti teneri farciti con dulce de leche denso, bordi rotolati nel cocco.",
+      "ko": "진한 둘세 데 레체를 채운 부드러운 쿠키, 가장자리에 코코넛을 묻힘."
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": 339,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Ungaria", "en": "Hungary", "es": "Hungría", "fr": "Hongrie", "de": "Ungarn",
+    "pt": "Hungria", "ru": "Венгрия", "ar": "المجر", "zh": "匈牙利", "ja": "ハンガリー",
+    "hi": "हंगरी", "tr": "Macaristan", "it": "Ungheria", "ko": "헝가리"
+  },
+  "name": {
+    "ro": "Halászlé (Supă de pescar)", "en": "Halászlé (Fisherman's Soup)", "es": "Halászlé (Sopa de pescador)",
+    "fr": "Halászlé (Soupe du pêcheur)", "de": "Halászlé (Fischersuppe)", "pt": "Halászlé (Sopa do pescador)",
+    "ru": "Халасле (Рыбацкий суп)", "ar": "هالاسليه (حساء الصياد)", "zh": "匈牙利渔夫汤", "ja": "ハラースレー（漁師のスープ）",
+    "hi": "हलासले (मछुआरे का सूप)", "tr": "Halászlé (Balıkçı Çorbası)", "it": "Halászlé (Zuppa del pescatore)", "ko": "할라슬레 (어부의 수프)"
+  },
+  "category": {
+    "ro": "Supă", "en": "Soup", "es": "Sopa", "fr": "Soupe", "de": "Suppe", "pt": "Sopa",
+    "ru": "Суп", "ar": "حساء", "zh": "汤", "ja": "スープ", "hi": "सूप", "tr": "Çorba", "it": "Zuppa", "ko": "수프"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🐟", "t": "Bulion de crap", "d": "Bază intensă din oase și capete de pește fierte ore întregi."},
+      {"icon": "🌶️", "t": "Roșu de boia", "d": "Cantități generoase de boia dulce dau culoarea și gustul specific."},
+      {"icon": "🎣", "t": "Tradiție de pescar", "d": "Rețetă născută pe malurile Dunării și Tisei."},
+      {"icon": "🍞", "t": "Servit cu pâine", "d": "Se mănâncă alături de pâine proaspătă și ardei iute."}
+    ],
+    "en": [
+      {"icon": "🐟", "t": "Carp broth", "d": "Intense base made from bones and fish heads simmered for hours."},
+      {"icon": "🌶️", "t": "Paprika red", "d": "Generous amounts of sweet paprika give its signature color and taste."},
+      {"icon": "🎣", "t": "Fisherman's tradition", "d": "A recipe born on the banks of the Danube and Tisza."},
+      {"icon": "🍞", "t": "Served with bread", "d": "Eaten alongside fresh bread and hot peppers."}
+    ],
+    "es": [
+      {"icon": "🐟", "t": "Caldo de carpa", "d": "Base intensa hecha con espinas y cabezas de pescado cocidas por horas."},
+      {"icon": "🌶️", "t": "Rojo de pimentón", "d": "Generosas cantidades de pimentón dulce le dan su color y sabor característicos."},
+      {"icon": "🎣", "t": "Tradición de pescadores", "d": "Una receta nacida en las orillas del Danubio y el Tisza."},
+      {"icon": "🍞", "t": "Servida con pan", "d": "Se come junto a pan fresco y chiles picantes."}
+    ],
+    "fr": [
+      {"icon": "🐟", "t": "Bouillon de carpe", "d": "Base intense faite d'arêtes et de têtes de poisson mijotées pendant des heures."},
+      {"icon": "🌶️", "t": "Rouge paprika", "d": "De généreuses quantités de paprika doux donnent sa couleur et son goût caractéristiques."},
+      {"icon": "🎣", "t": "Tradition de pêcheur", "d": "Une recette née sur les rives du Danube et de la Tisza."},
+      {"icon": "🍞", "t": "Servie avec du pain", "d": "Se mange accompagnée de pain frais et de piments forts."}
+    ],
+    "de": [
+      {"icon": "🐟", "t": "Karpfensud", "d": "Intensive Basis aus stundenlang gekochten Fischgräten und -köpfen."},
+      {"icon": "🌶️", "t": "Paprikarot", "d": "Großzügige Mengen süßes Paprikapulver geben Farbe und typischen Geschmack."},
+      {"icon": "🎣", "t": "Fischertradition", "d": "Ein Rezept, geboren an den Ufern von Donau und Theiß."},
+      {"icon": "🍞", "t": "Mit Brot serviert", "d": "Wird zusammen mit frischem Brot und scharfen Paprika gegessen."}
+    ],
+    "pt": [
+      {"icon": "🐟", "t": "Caldo de carpa", "d": "Base intensa feita de espinhas e cabeças de peixe cozidas por horas."},
+      {"icon": "🌶️", "t": "Vermelho de colorau", "d": "Quantidades generosas de colorau doce dão a cor e o sabor característicos."},
+      {"icon": "🎣", "t": "Tradição de pescadores", "d": "Uma receita nascida nas margens do Danúbio e do Tisza."},
+      {"icon": "🍞", "t": "Servida com pão", "d": "Comida com pão fresco e pimentas picantes."}
+    ],
+    "ru": [
+      {"icon": "🐟", "t": "Бульон из карпа", "d": "Насыщенная основа из костей и голов рыбы, варившихся часами."},
+      {"icon": "🌶️", "t": "Красный от паприки", "d": "Щедрое количество сладкой паприки придаёт характерный цвет и вкус."},
+      {"icon": "🎣", "t": "Рыбацкая традиция", "d": "Рецепт, рождённый на берегах Дуная и Тисы."},
+      {"icon": "🍞", "t": "Подаётся с хлебом", "d": "Едят вместе со свежим хлебом и острым перцем."}
+    ],
+    "ar": [
+      {"icon": "🐟", "t": "مرق الكارب", "d": "قاعدة غنية من عظام ورؤوس السمك المطهية لساعات."},
+      {"icon": "🌶️", "t": "أحمر البابريكا", "d": "كميات سخية من البابريكا الحلوة تمنحها لونها ونكهتها المميزة."},
+      {"icon": "🎣", "t": "تقاليد الصيادين", "d": "وصفة وُلدت على ضفاف نهري الدانوب والتيسا."},
+      {"icon": "🍞", "t": "تُقدَّم مع الخبز", "d": "تؤكل مع الخبز الطازج والفلفل الحار."}
+    ],
+    "zh": [
+      {"icon": "🐟", "t": "鲤鱼高汤", "d": "用鱼骨和鱼头长时间熬煮出的浓郁底汤。"},
+      {"icon": "🌶️", "t": "红椒色泽", "d": "大量甜红椒粉赋予其标志性色泽与风味。"},
+      {"icon": "🎣", "t": "渔夫传统", "d": "诞生于多瑙河与蒂萨河畔的传统汤品。"},
+      {"icon": "🍞", "t": "配面包食用", "d": "搭配新鲜面包和辣椒一起享用。"}
+    ],
+    "ja": [
+      {"icon": "🐟", "t": "鯉の出汁", "d": "骨と魚の頭を何時間も煮込んだ濃厚な出汁。"},
+      {"icon": "🌶️", "t": "パプリカの赤", "d": "たっぷりの甘いパプリカが特徴的な色と味を生む。"},
+      {"icon": "🎣", "t": "漁師の伝統", "d": "ドナウ川とティサ川のほとりで生まれた料理。"},
+      {"icon": "🍞", "t": "パンと共に", "d": "焼きたてのパンと辛い唐辛子と共に食べる。"}
+    ],
+    "hi": [
+      {"icon": "🐟", "t": "कार्प शोरबा", "d": "मछली की हड्डियों और सिर से घंटों उबालकर बना गाढ़ा आधार।"},
+      {"icon": "🌶️", "t": "पपरिका लाल", "d": "मीठी पपरिका की भरपूर मात्रा इसे खास रंग और स्वाद देती है।"},
+      {"icon": "🎣", "t": "मछुआरों की परंपरा", "d": "डेन्यूब और टिसा नदी के किनारे जन्मा एक नुस्खा।"},
+      {"icon": "🍞", "t": "ब्रेड के साथ परोसा गया", "d": "ताज़ी ब्रेड और तीखी मिर्च के साथ खाया जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🐟", "t": "Sazan suyu", "d": "Saatlerce kaynatılan balık kemikleri ve başlarından yoğun bir taban."},
+      {"icon": "🌶️", "t": "Paprika kırmızısı", "d": "Bol miktarda tatlı paprika kendine özgü renk ve tadını verir."},
+      {"icon": "🎣", "t": "Balıkçı geleneği", "d": "Tuna ve Tisza nehri kıyılarında doğan bir tarif."},
+      {"icon": "🍞", "t": "Ekmekle servis edilir", "d": "Taze ekmek ve acı biberle birlikte yenir."}
+    ],
+    "it": [
+      {"icon": "🐟", "t": "Brodo di carpa", "d": "Base intensa fatta con lische e teste di pesce cotte per ore."},
+      {"icon": "🌶️", "t": "Rosso di paprika", "d": "Generose quantità di paprika dolce danno il colore e il sapore caratteristici."},
+      {"icon": "🎣", "t": "Tradizione dei pescatori", "d": "Una ricetta nata sulle rive del Danubio e del Tibisco."},
+      {"icon": "🍞", "t": "Servita con pane", "d": "Si mangia insieme a pane fresco e peperoncini piccanti."}
+    ],
+    "ko": [
+      {"icon": "🐟", "t": "잉어 육수", "d": "생선 뼈와 머리를 몇 시간 동안 끓여낸 진한 육수."},
+      {"icon": "🌶️", "t": "파프리카의 붉은빛", "d": "듬뿍 넣은 단맛 파프리카가 특유의 색과 맛을 낸다."},
+      {"icon": "🎣", "t": "어부의 전통", "d": "다뉴브강과 티서강 강변에서 탄생한 요리."},
+      {"icon": "🍞", "t": "빵과 함께 제공", "d": "신선한 빵과 매운 고추와 함께 먹는다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg crap (sau amestec de pești de apă dulce)", "500g cap și oase de pește", "3 cepe mari", "4 linguri boia dulce", "1 lingură boia iute", "2 roșii", "1 ardei gras", "sare", "1 litru apă", "ardei iute proaspăt (opțional)", "pâine proaspătă pentru servire"],
+    "en": ["1kg carp (or mixed freshwater fish)", "500g fish head and bones", "3 large onions", "4 tbsp sweet paprika", "1 tbsp hot paprika", "2 tomatoes", "1 bell pepper", "salt", "1 liter water", "fresh hot pepper (optional)", "fresh bread for serving"],
+    "es": ["1kg de carpa (o mezcla de pescado de agua dulce)", "500g de cabeza y espinas de pescado", "3 cebollas grandes", "4 cdas de pimentón dulce", "1 cda de pimentón picante", "2 tomates", "1 pimiento", "sal", "1 litro de agua", "chile fresco (opcional)", "pan fresco para servir"],
+    "fr": ["1kg de carpe (ou mélange de poissons d'eau douce)", "500g de tête et arêtes de poisson", "3 gros oignons", "4 c. à s. de paprika doux", "1 c. à s. de paprika fort", "2 tomates", "1 poivron", "sel", "1 litre d'eau", "piment frais (facultatif)", "pain frais pour servir"],
+    "de": ["1kg Karpfen (oder gemischter Süßwasserfisch)", "500g Fischkopf und -gräten", "3 große Zwiebeln", "4 EL süßes Paprikapulver", "1 EL scharfes Paprikapulver", "2 Tomaten", "1 Paprikaschote", "Salz", "1 Liter Wasser", "frische scharfe Paprika (optional)", "frisches Brot zum Servieren"],
+    "pt": ["1kg de carpa (ou mistura de peixes de água doce)", "500g de cabeça e espinhas de peixe", "3 cebolas grandes", "4 c. sopa de colorau doce", "1 c. sopa de colorau picante", "2 tomates", "1 pimento", "sal", "1 litro de água", "pimenta fresca (opcional)", "pão fresco para servir"],
+    "ru": ["1кг карпа (или смесь пресноводной рыбы)", "500г рыбьих голов и костей", "3 крупные луковицы", "4 ст.л. сладкой паприки", "1 ст.л. острой паприки", "2 помидора", "1 болгарский перец", "соль", "1 литр воды", "свежий острый перец (по желанию)", "свежий хлеб для подачи"],
+    "ar": ["1كغ من سمك الكارب (أو خليط أسماك المياه العذبة)", "500غ رأس وعظام سمك", "3 بصلات كبيرة", "4 ملاعق كبيرة بابريكا حلوة", "ملعقة كبيرة بابريكا حارة", "طماطمتان", "فلفل حلو واحد", "ملح", "1 لتر ماء", "فلفل حار طازج (اختياري)", "خبز طازج للتقديم"],
+    "zh": ["鲤鱼1公斤（或混合淡水鱼）", "鱼头鱼骨500克", "大洋葱3个", "甜红椒粉4汤匙", "辣红椒粉1汤匙", "番茄2个", "甜椒1个", "盐", "水1升", "新鲜辣椒（可选）", "新鲜面包（配食用）"],
+    "ja": ["鯉 1kg（または淡水魚のミックス）", "魚の頭と骨 500g", "大きめの玉ねぎ 3個", "甘いパプリカパウダー 大さじ4", "辛いパプリカパウダー 大さじ1", "トマト 2個", "パプリカ 1個", "塩", "水 1リットル", "生の唐辛子（お好みで）", "提供用の新鮮なパン"],
+    "hi": ["1 किलो कार्प मछली (या मीठे पानी की मिश्रित मछली)", "500 ग्राम मछली का सिर और हड्डियाँ", "3 बड़े प्याज़", "4 बड़े चम्मच मीठी पपरिका", "1 बड़ा चम्मच तीखी पपरिका", "2 टमाटर", "1 शिमला मिर्च", "नमक", "1 लीटर पानी", "ताज़ी तीखी मिर्च (वैकल्पिक)", "परोसने के लिए ताज़ी ब्रेड"],
+    "tr": ["1kg sazan balığı (veya karışık tatlı su balığı)", "500g balık başı ve kemikleri", "3 büyük soğan", "4 yemek kaşığı tatlı paprika", "1 yemek kaşığı acı paprika", "2 domates", "1 dolmalık biber", "tuz", "1 litre su", "taze acı biber (isteğe bağlı)", "servis için taze ekmek"],
+    "it": ["1kg di carpa (o mix di pesce d'acqua dolce)", "500g di testa e lische di pesce", "3 cipolle grandi", "4 cucchiai di paprika dolce", "1 cucchiaio di paprika piccante", "2 pomodori", "1 peperone", "sale", "1 litro d'acqua", "peperoncino fresco (opzionale)", "pane fresco per servire"],
+    "ko": ["잉어 1kg(또는 민물고기 혼합)", "생선 머리와 뼈 500g", "큰 양파 3개", "단맛 파프리카 가루 4큰술", "매운 파프리카 가루 1큰술", "토마토 2개", "피망 1개", "소금", "물 1리터", "생 고추(선택사항)", "곁들일 신선한 빵"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE BULION: Fierbe capul și oasele de pește cu o ceapă și sare timp de 45 de minute, apoi strecoară. CĂLIRE CEAPĂ: Toacă mărunt cepele rămase și călește-le ușor în puțină apă, fără să se rumenească. ADĂUGARE BOIA: Ia oala de pe foc și adaugă boia dulce și iute, amestecând rapid pentru a nu se arde. FIERBERE LEGUME: Adaugă roșiile și ardeiul gras tăiate cuburi, toarnă bulionul strecurat și fierbe 20 de minute. ADĂUGARE PEȘTE: Adaugă bucățile de crap curățat și fierbe încă 20 de minute la foc mic, fără să amesteci cu lingura ca să nu se destrame peștele. ASEZONARE: Gustă și ajustează sarea și iuțeala cu ardei iute proaspăt tăiat. SERVIRE: Servește fierbinte, cu pâine proaspătă alături.",
+    "en": "PREPARE BROTH: Boil the fish head and bones with one onion and salt for 45 minutes, then strain. SAUTÉ ONION: Finely chop the remaining onions and soften them gently in a little water, without browning. ADD PAPRIKA: Remove the pot from heat and stir in the sweet and hot paprika quickly so it doesn't burn. SIMMER VEGETABLES: Add the diced tomatoes and bell pepper, pour in the strained broth, and simmer for 20 minutes. ADD FISH: Add the cleaned carp pieces and simmer for another 20 minutes on low heat, without stirring with a spoon so the fish doesn't fall apart. SEASON: Taste and adjust salt and heat with fresh chopped hot pepper. SERVE: Serve hot, with fresh bread on the side.",
+    "es": "PREPARAR CALDO: Hierve la cabeza y las espinas de pescado con una cebolla y sal durante 45 minutos, luego cuela. SOFREÍR CEBOLLA: Pica finamente las cebollas restantes y ablándalas suavemente en un poco de agua, sin dorarlas. AÑADIR PIMENTÓN: Retira la olla del fuego e incorpora el pimentón dulce y picante rápidamente para que no se queme. HERVIR VERDURAS: Añade los tomates y el pimiento en cubos, vierte el caldo colado y hierve 20 minutos. AÑADIR PESCADO: Añade los trozos de carpa limpia y hierve otros 20 minutos a fuego lento, sin remover con cuchara para que el pescado no se deshaga. SAZONAR: Prueba y ajusta la sal y el picante con chile fresco picado. SERVIR: Sirve caliente, con pan fresco al lado.",
+    "fr": "PRÉPARER LE BOUILLON: Faites bouillir la tête et les arêtes de poisson avec un oignon et du sel pendant 45 minutes, puis filtrez. FAIRE REVENIR L'OIGNON: Hachez finement les oignons restants et faites-les attendrir doucement dans un peu d'eau, sans les colorer. AJOUTER LE PAPRIKA: Retirez la marmite du feu et incorporez rapidement le paprika doux et fort pour qu'il ne brûle pas. MIJOTER LES LÉGUMES: Ajoutez les tomates et le poivron en dés, versez le bouillon filtré et laissez mijoter 20 minutes. AJOUTER LE POISSON: Ajoutez les morceaux de carpe nettoyée et laissez mijoter encore 20 minutes à feu doux, sans remuer à la cuillère pour ne pas défaire le poisson. ASSAISONNER: Goûtez et ajustez le sel et le piquant avec du piment frais haché. SERVIR: Servez chaud, avec du pain frais à côté.",
+    "de": "BRÜHE ZUBEREITEN: Fischkopf und -gräten mit einer Zwiebel und Salz 45 Minuten kochen, dann abseihen. ZWIEBEL ANDÜNSTEN: Die restlichen Zwiebeln fein hacken und in etwas Wasser sanft weich dünsten, ohne sie zu bräunen. PAPRIKA HINZUFÜGEN: Den Topf vom Herd nehmen und schnell süßes und scharfes Paprikapulver einrühren, damit es nicht verbrennt. GEMÜSE KÖCHELN: Die gewürfelten Tomaten und Paprika hinzufügen, die abgeseihte Brühe angießen und 20 Minuten köcheln lassen. FISCH HINZUFÜGEN: Die geputzten Karpfenstücke hinzufügen und weitere 20 Minuten bei schwacher Hitze köcheln, ohne mit dem Löffel zu rühren, damit der Fisch nicht zerfällt. ABSCHMECKEN: Salz und Schärfe mit frisch gehackter scharfer Paprika abschmecken. SERVIEREN: Heiß servieren, mit frischem Brot dazu.",
+    "pt": "PREPARAR CALDO: Ferva a cabeça e as espinhas de peixe com uma cebola e sal durante 45 minutos, depois coe. REFOGAR CEBOLA: Pique finamente as cebolas restantes e amoleça-as suavemente em pouca água, sem deixar dourar. ADICIONAR COLORAU: Retire a panela do lume e junte rapidamente o colorau doce e picante para não queimar. FERVER LEGUMES: Junte os tomates e o pimento em cubos, deite o caldo coado e ferva 20 minutos. ADICIONAR PEIXE: Junte os pedaços de carpa limpa e ferva mais 20 minutos em lume brando, sem mexer com colher para o peixe não desfazer. TEMPERAR: Prove e ajuste o sal e o picante com pimenta fresca picada. SERVIR: Sirva quente, com pão fresco ao lado.",
+    "ru": "ПРИГОТОВЛЕНИЕ БУЛЬОНА: Варите голову и кости рыбы с одной луковицей и солью 45 минут, затем процедите. ОБЖАРКА ЛУКА: Мелко нарежьте оставшийся лук и слегка размягчите в небольшом количестве воды, не подрумянивая. ДОБАВЛЕНИЕ ПАПРИКИ: Снимите кастрюлю с огня и быстро всыпьте сладкую и острую паприку, чтобы не подгорела. ВАРКА ОВОЩЕЙ: Добавьте нарезанные кубиками помидоры и перец, влейте процеженный бульон и варите 20 минут. ДОБАВЛЕНИЕ РЫБЫ: Добавьте куски очищенного карпа и варите ещё 20 минут на слабом огне, не помешивая ложкой, чтобы рыба не развалилась. ПРИПРАВА: Попробуйте и отрегулируйте соль и остроту свежим нарезанным острым перцем. ПОДАЧА: Подавайте горячим, со свежим хлебом.",
+    "ar": "تحضير المرق: اسلق رأس وعظام السمك مع بصلة واحدة والملح لمدة 45 دقيقة ثم صفّه. تحمير البصل: قطّع البصل المتبقي ناعمًا ولينه برفق في القليل من الماء دون تحميره. إضافة البابريكا: ارفع القدر عن النار وأضف البابريكا الحلوة والحارة بسرعة حتى لا تحترق. سلق الخضار: أضف الطماطم والفلفل المقطعين مكعبات، اسكب المرق المصفى واترك على نار هادئة 20 دقيقة. إضافة السمك: أضف قطع الكارب المنظفة واترك على نار هادئة 20 دقيقة أخرى دون التحريك بالملعقة حتى لا يتفتت السمك. التتبيل: تذوق واضبط الملح والحرارة بالفلفل الحار الطازج المفروم. التقديم: قدّمه ساخنًا مع الخبز الطازج.",
+    "zh": "熬制高汤：将鱼头鱼骨与一个洋葱和盐一起煮45分钟，然后过滤。炒洋葱：将剩余洋葱切碎，用少量水轻轻软化，不要变色。加入红椒粉：将锅从火上移开，迅速拌入甜辣红椒粉以防烧焦。炖煮蔬菜：加入切块的番茄和甜椒，倒入过滤好的高汤，炖煮20分钟。加入鱼肉：加入处理好的鲤鱼块，小火再炖20分钟，不要用勺子搅拌以免鱼肉散开。调味：品尝并用新鲜辣椒碎调整咸度和辣度。装盘：趁热配新鲜面包食用。",
+    "ja": "出汁を作る：魚の頭と骨を玉ねぎ1個と塩と共に45分煮て濾す。玉ねぎを炒める：残りの玉ねぎを細かく刻み、色づけずに少量の水でやさしく柔らかくする。パプリカを加える：鍋を火から下ろし、甘いパプリカと辛いパプリカを焦げないよう素早く混ぜる。野菜を煮る：角切りにしたトマトとパプリカを加え、濾した出汁を注いで20分煮る。魚を加える：処理した鯉を加え、魚が崩れないようスプーンでかき混ぜずに弱火でさらに20分煮る。味付け：味見をして刻んだ生の唐辛子で塩加減と辛さを調整する。盛り付け：熱いうちに新鮮なパンと共に提供する。",
+    "hi": "शोरबा तैयार करें: मछली के सिर और हड्डियों को एक प्याज़ और नमक के साथ 45 मिनट उबालें, फिर छान लें। प्याज़ भूनें: बचे हुए प्याज़ को बारीक काटें और बिना रंग बदले थोड़े पानी में धीरे-धीरे नरम करें। पपरिका डालें: बर्तन को आँच से हटाएं और जलने से बचाने के लिए मीठी और तीखी पपरिका तेज़ी से मिलाएं। सब्ज़ियाँ उबालें: कटे हुए टमाटर और शिमला मिर्च डालें, छना हुआ शोरबा डालें और 20 मिनट उबालें। मछली डालें: साफ की हुई कार्प मछली के टुकड़े डालें और धीमी आँच पर बिना चम्मच से हिलाए 20 मिनट और उबालें ताकि मछली टूटे नहीं। मसाला जांचें: स्वाद चखें और ताज़ी कटी मिर्च से नमक और तीखापन समायोजित करें। परोसें: गरमागरम, ताज़ी ब्रेड के साथ परोसें।",
+    "tr": "SUYU HAZIRLAYIN: Balık başı ve kemiklerini bir soğan ve tuzla 45 dakika kaynatın, ardından süzün. SOĞANI KAVURUN: Kalan soğanları ince doğrayın ve renklendirmeden az miktarda suda yumuşatın. PAPRİKA EKLEYİN: Tencereyi ateşten alın ve yanmaması için tatlı ve acı paprikayı hızlıca karıştırın. SEBZELERİ PİŞİRİN: Küp doğranmış domates ve dolmalık biberi ekleyin, süzülmüş suyu dökün ve 20 dakika kaynatın. BALIĞI EKLEYİN: Temizlenmiş sazan parçalarını ekleyin ve balık dağılmasın diye kaşıkla karıştırmadan kısık ateşte 20 dakika daha pişirin. TATLANDIRIN: Tadına bakın ve taze doğranmış acı biberle tuz ve acılığı ayarlayın. SERVİS EDİN: Sıcak servis edin, yanında taze ekmekle.",
+    "it": "PREPARARE IL BRODO: Fate bollire testa e lische di pesce con una cipolla e sale per 45 minuti, poi filtrate. SOFFRIGGERE LA CIPOLLA: Tritate finemente le cipolle rimanenti e ammorbiditele delicatamente in poca acqua, senza farle colorire. AGGIUNGERE LA PAPRIKA: Togliete la pentola dal fuoco e incorporate rapidamente la paprika dolce e piccante perché non bruci. CUOCERE LE VERDURE: Aggiungete i pomodori e il peperone a cubetti, versate il brodo filtrato e cuocete 20 minuti. AGGIUNGERE IL PESCE: Aggiungete i pezzi di carpa pulita e cuocete altri 20 minuti a fuoco basso, senza mescolare con il cucchiaio perché il pesce non si sfaldi. INSAPORIRE: Assaggiate e regolate sale e piccantezza con peperoncino fresco tritato. SERVIRE: Servite caldo, con pane fresco a lato.",
+    "ko": "육수 준비: 생선 머리와 뼈를 양파 1개, 소금과 함께 45분간 끓인 후 걸러낸다. 양파 볶기: 남은 양파를 잘게 썰어 색이 나지 않게 약간의 물에서 부드럽게 익힌다. 파프리카 넣기: 냄비를 불에서 내려 타지 않도록 단맛과 매운맛 파프리카를 재빨리 섞는다. 채소 끓이기: 깍둑썬 토마토와 피망을 넣고 거른 육수를 부어 20분간 끓인다. 생선 넣기: 손질한 잉어 조각을 넣고 생선이 부서지지 않도록 숟가락으로 젓지 않으면서 약불에서 20분 더 끓인다. 간 맞추기: 맛을 보고 다진 생고추로 소금과 매운맛을 조절한다. 담아내기: 뜨거울 때 신선한 빵과 함께 낸다."
+  },
+  "originText": {
+    "ro": "Halászlé, sau supa de pescar, este unul dintre cele mai vechi feluri de mâncare din bucătăria ungurească, cu rădăcini în comunitățile de pescari care lucrau de-a lungul Dunării și Tisei. Fiecare regiune are propria variantă — de la Szeged la Baja — dar toate păstrează ideea centrală: un bulion intens roșu de boia, făcut din pește de apă dulce fiert lent cu capul și oasele incluse pentru textură și savoare.\n\nSpre deosebire de multe supe de pește occidentale, halászlé nu conține legume îngroșătoare precum cartofii sau făina — culoarea și consistența vin exclusiv din boia și din colagenul natural al peștelui. Este o mâncare de sărbătoare, gătită tradițional în cazane mari la foc deschis, în special de Crăciun sau la evenimente comunitare de-a lungul râurilor.",
+    "en": "Halászlé, or fisherman's soup, is one of the oldest dishes in Hungarian cuisine, rooted in the fishing communities that worked along the Danube and Tisza rivers. Every region has its own version — from Szeged to Baja — but all share the same core idea: an intensely red paprika broth made from freshwater fish slowly simmered with head and bones for texture and flavor.\n\nUnlike many Western fish soups, halászlé contains no thickening vegetables like potatoes or flour — its color and body come entirely from paprika and the fish's own natural collagen. It's a festive dish, traditionally cooked in large cauldrons over open fire, especially at Christmas or at riverside community gatherings.",
+    "es": "Halászlé, o sopa de pescador, es uno de los platos más antiguos de la cocina húngara, arraigado en las comunidades pesqueras que trabajaban a lo largo del Danubio y el Tisza. Cada región tiene su propia versión — desde Szeged hasta Baja — pero todas comparten la misma idea central: un caldo intensamente rojo de pimentón hecho con pescado de agua dulce cocido lentamente con cabeza y espinas para lograr textura y sabor.\n\nA diferencia de muchas sopas de pescado occidentales, la halászlé no contiene verduras espesantes como patatas o harina — su color y cuerpo provienen enteramente del pimentón y del colágeno natural del pescado. Es un plato festivo, cocinado tradicionalmente en grandes calderos a fuego abierto, especialmente en Navidad o en reuniones comunitarias junto al río.",
+    "fr": "Le halászlé, ou soupe du pêcheur, est l'un des plats les plus anciens de la cuisine hongroise, enraciné dans les communautés de pêcheurs travaillant le long du Danube et de la Tisza. Chaque région a sa propre version — de Szeged à Baja — mais toutes partagent la même idée centrale : un bouillon intensément rouge au paprika, fait de poisson d'eau douce mijoté lentement avec la tête et les arêtes pour la texture et la saveur.\n\nContrairement à de nombreuses soupes de poisson occidentales, le halászlé ne contient aucun légume épaississant comme des pommes de terre ou de la farine — sa couleur et son corps proviennent entièrement du paprika et du collagène naturel du poisson. C'est un plat festif, traditionnellement cuisiné dans de grands chaudrons à feu ouvert, notamment à Noël ou lors de rassemblements communautaires au bord des rivières.",
+    "de": "Halászlé, oder Fischersuppe, ist eines der ältesten Gerichte der ungarischen Küche, verwurzelt in den Fischergemeinschaften entlang der Donau und der Theiß. Jede Region hat ihre eigene Version — von Szeged bis Baja — doch alle teilen dieselbe Grundidee: eine intensiv rote Paprikabrühe aus Süßwasserfisch, langsam mit Kopf und Gräten für Textur und Geschmack geköchelt.\n\nAnders als viele westliche Fischsuppen enthält Halászlé kein verdickendes Gemüse wie Kartoffeln oder Mehl — Farbe und Körper stammen ausschließlich von Paprika und dem natürlichen Kollagen des Fisches. Es ist ein festliches Gericht, traditionell in großen Kesseln über offenem Feuer gekocht, besonders zu Weihnachten oder bei Gemeinschaftstreffen am Flussufer.",
+    "pt": "Halászlé, ou sopa do pescador, é um dos pratos mais antigos da cozinha húngara, com raízes nas comunidades pesqueiras que trabalhavam ao longo do Danúbio e do Tisza. Cada região tem a sua própria versão — de Szeged a Baja — mas todas partilham a mesma ideia central: um caldo intensamente vermelho de colorau feito com peixe de água doce cozinhado lentamente com cabeça e espinhas para textura e sabor.\n\nAo contrário de muitas sopas de peixe ocidentais, a halászlé não contém vegetais espessantes como batatas ou farinha — a sua cor e corpo vêm inteiramente do colorau e do colagénio natural do peixe. É um prato festivo, tradicionalmente cozinhado em grandes caldeirões ao fogo aberto, especialmente no Natal ou em encontros comunitários à beira-rio.",
+    "ru": "Халасле, или рыбацкий суп, — одно из старейших блюд венгерской кухни, уходящее корнями в рыбацкие общины, работавшие вдоль Дуная и Тисы. У каждого региона свой вариант — от Сегеда до Байи — но все они разделяют одну идею: насыщенно-красный бульон на паприке из пресноводной рыбы, медленно томившейся с головой и костями ради текстуры и вкуса.\n\nВ отличие от многих западных рыбных супов, халасле не содержит загущающих овощей вроде картофеля или муки — его цвет и густота исходят исключительно от паприки и естественного коллагена рыбы. Это праздничное блюдо, традиционно готовившееся в больших котлах на открытом огне, особенно на Рождество или на общинных встречах у реки.",
+    "ar": "الهالاسليه، أو حساء الصياد، هو أحد أقدم الأطباق في المطبخ المجري، متجذر في مجتمعات الصيادين الذين عملوا على ضفاف نهري الدانوب والتيسا. لكل منطقة نسختها الخاصة — من سيغيد إلى بايا — لكنها جميعًا تشترك في الفكرة الأساسية: مرق أحمر داكن بالبابريكا مصنوع من سمك المياه العذبة المطهو ببطء مع الرأس والعظام للحصول على القوام والنكهة.\n\nخلافًا للعديد من حساءات السمك الغربية، لا يحتوي الهالاسليه على خضروات تكثيف مثل البطاطا أو الدقيق — يأتي لونه وقوامه بالكامل من البابريكا والكولاجين الطبيعي للسمك. إنه طبق احتفالي، يُطهى تقليديًا في مراجل كبيرة على نار مكشوفة، خاصة في عيد الميلاد أو في التجمعات المجتمعية على ضفاف الأنهار.",
+    "zh": "匈牙利渔夫汤是匈牙利菜中最古老的菜肴之一，起源于沿多瑙河与蒂萨河劳作的渔民社区。每个地区都有自己的版本——从塞格德到巴亚——但都共享同一个核心理念：用淡水鱼连同鱼头鱼骨慢炖出的浓郁红椒高汤，以获得口感和风味。\n\n与许多西式鱼汤不同，渔夫汤不含土豆或面粉等增稠蔬菜——它的色泽和浓稠度完全来自红椒粉和鱼本身的天然胶原蛋白。这是一道节庆菜肴，传统上在露天大锅中烹制，尤其常见于圣诞节或河畔的社区聚会。",
+    "ja": "ハラースレー（漁師のスープ）は、ドナウ川とティサ川沿いで働いていた漁師コミュニティに根ざした、ハンガリー料理の中でも最も古い料理の一つである。セゲドからバヤまで、地域ごとに独自のバージョンがあるが、すべてに共通する核心は同じである。頭と骨を含めて食感と風味のためにじっくり煮込んだ淡水魚から作られる、鮮やかな赤いパプリカのスープだ。\n\n多くの西洋の魚スープと異なり、ハラースレーにはじゃがいもや小麦粉のようなとろみをつける野菜は使われない――その色と濃度はすべてパプリカと魚自体の天然コラーゲンから生まれる。これは祝祭の料理であり、伝統的に屋外の火にかけた大きな鍋で調理され、特にクリスマスや川辺の地域の集まりで振る舞われる。",
+    "hi": "हलासले, या मछुआरे का सूप, हंगेरियन व्यंजनों में सबसे पुराने व्यंजनों में से एक है, जिसकी जड़ें डेन्यूब और टिसा नदियों के किनारे काम करने वाले मछुआरा समुदायों में हैं। हर क्षेत्र का अपना संस्करण है — सेगेड से बाया तक — लेकिन सभी एक ही मूल विचार साझा करते हैं: मीठे पानी की मछली से बना गहरा लाल पपरिका शोरबा, जिसे बनावट और स्वाद के लिए सिर और हड्डियों के साथ धीरे-धीरे उबाला जाता है।\n\nकई पश्चिमी मछली सूपों के विपरीत, हलासले में आलू या आटे जैसी गाढ़ी करने वाली सब्ज़ियाँ नहीं होतीं — इसका रंग और गाढ़ापन पूरी तरह से पपरिका और मछली के प्राकृतिक कोलेजन से आता है। यह एक उत्सवी व्यंजन है, जो परंपरागत रूप से खुली आग पर बड़े कड़ाहों में पकाया जाता है, खासकर क्रिसमस पर या नदी किनारे के सामुदायिक समारोहों में।",
+    "tr": "Halászlé, yani balıkçı çorbası, Tuna ve Tisza nehirleri boyunca çalışan balıkçı topluluklarına dayanan, Macar mutfağının en eski yemeklerinden biridir. Her bölgenin kendi versiyonu vardır — Szeged'den Baja'ya kadar — ancak hepsi aynı temel fikri paylaşır: doku ve lezzet için başı ve kemikleriyle yavaşça pişirilmiş tatlı su balığından yapılan yoğun kırmızı paprika suyu.\n\nBirçok Batılı balık çorbasının aksine, halászlé patates veya un gibi koyulaştırıcı sebzeler içermez — rengi ve kıvamı tamamen paprikadan ve balığın doğal kolajeninden gelir. Bu, geleneksel olarak açık ateşte büyük kazanlarda pişirilen, özellikle Noel'de veya nehir kenarındaki topluluk buluşmalarında hazırlanan bayramlık bir yemektir.",
+    "it": "L'halászlé, o zuppa del pescatore, è uno dei piatti più antichi della cucina ungherese, radicato nelle comunità di pescatori che lavoravano lungo il Danubio e il Tibisco. Ogni regione ha la propria versione — da Szeged a Baja — ma tutte condividono la stessa idea centrale: un brodo intensamente rosso di paprika fatto con pesce d'acqua dolce cotto lentamente con testa e lische per consistenza e sapore.\n\nA differenza di molte zuppe di pesce occidentali, l'halászlé non contiene verdure addensanti come patate o farina — il suo colore e la sua consistenza derivano interamente dalla paprika e dal collagene naturale del pesce. È un piatto festivo, tradizionalmente cucinato in grandi calderoni a fuoco aperto, specialmente a Natale o durante le riunioni comunitarie lungo i fiumi.",
+    "ko": "할라슬레, 즉 어부의 수프는 다뉴브강과 티서강을 따라 일했던 어업 공동체에 뿌리를 둔 헝가리 요리 중 가장 오래된 음식 중 하나다. 세게드부터 바여까지 지역마다 각자의 버전이 있지만, 모두 같은 핵심 개념을 공유한다. 식감과 풍미를 위해 머리와 뼈를 함께 넣고 천천히 끓인 민물고기로 만든 진한 빨간 파프리카 육수다.\n\n많은 서양식 생선 수프와 달리, 할라슬레에는 감자나 밀가루 같은 걸쭉하게 만드는 채소가 들어가지 않는다 — 그 색과 농도는 전적으로 파프리카와 생선 자체의 천연 콜라겐에서 나온다. 이것은 전통적으로 야외 불 위 큰 가마솥에서 조리되는 축제 음식으로, 특히 크리스마스나 강가의 공동체 모임에서 즐겨 먹는다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 20,
+    "tags": [],
+    "desc": {
+      "ro": "Supă roșie de crap din boia, cu bulion intens de la capul și oasele peștelui.",
+      "en": "Red carp soup made with paprika, its broth intensified by fish head and bones.",
+      "es": "Sopa roja de carpa hecha con pimentón, con caldo intenso de cabeza y espinas.",
+      "fr": "Soupe rouge de carpe au paprika, au bouillon intensifié par la tête et les arêtes.",
+      "de": "Rote Karpfensuppe mit Paprika, mit intensiver Brühe aus Kopf und Gräten.",
+      "pt": "Sopa vermelha de carpa com colorau, com caldo intenso de cabeça e espinhas.",
+      "ru": "Красный суп из карпа с паприкой, с насыщенным бульоном из головы и костей.",
+      "ar": "حساء أحمر من الكارب بالبابريكا، بمرق غني من الرأس والعظام.",
+      "zh": "用红椒粉制成的红色鲤鱼汤，鱼头鱼骨熬出浓郁高汤。",
+      "ja": "パプリカで作る赤い鯉のスープ、頭と骨で濃厚な出汁。",
+      "hi": "पपरिका से बना लाल कार्प सूप, सिर और हड्डियों से गाढ़ा शोरबा।",
+      "tr": "Paprikayla yapılan kırmızı sazan çorbası, baş ve kemiklerle yoğunlaştırılmış su.",
+      "it": "Zuppa rossa di carpa alla paprika, con brodo intensificato da testa e lische.",
+      "ko": "파프리카로 만든 빨간 잉어 수프, 머리와 뼈로 진하게 우려낸 육수."
+    }
+  }
+}

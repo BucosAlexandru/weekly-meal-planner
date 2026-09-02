@@ -1,0 +1,175 @@
+{
+  "id": 348,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "vegetarian",
+  "origin": {
+    "ro": "Argentina", "en": "Argentina", "es": "Argentina", "fr": "Argentine", "de": "Argentinien",
+    "pt": "Argentina", "ru": "Аргентина", "ar": "الأرجنتين", "zh": "阿根廷", "ja": "アルゼンチン",
+    "hi": "अर्जेंटीना", "tr": "Arjantin", "it": "Argentina", "ko": "아르헨티나"
+  },
+  "name": {
+    "ro": "Provoleta", "en": "Provoleta", "es": "Provoleta", "fr": "Provoleta", "de": "Provoleta",
+    "pt": "Provoleta", "ru": "Проволета", "ar": "بروفوليتا", "zh": "普罗沃莱塔烤奶酪", "ja": "プロヴォレータ",
+    "hi": "प्रोवोलेटा", "tr": "Provoleta", "it": "Provoleta", "ko": "프로볼레타"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "Collation", "de": "Snack", "pt": "Lanche",
+    "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "軽食", "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🧀", "t": "Brânză provolone", "d": "Felie groasă de provolone semitare, friptă direct pe grătar."},
+      {"icon": "🔥", "t": "Crustă crocantă", "d": "Exteriorul se caramelizează crocant, interiorul rămâne topit."},
+      {"icon": "🌿", "t": "Oregano și ardei", "d": "Presărată cu oregano uscat și fulgi de ardei iute."},
+      {"icon": "🍷", "t": "Aperitiv de asado", "d": "Servit tradițional ca antreu înaintea grătarului principal."}
+    ],
+    "en": [
+      {"icon": "🧀", "t": "Provolone cheese", "d": "A thick slice of semi-hard provolone, grilled directly on the fire."},
+      {"icon": "🔥", "t": "Crispy crust", "d": "The outside caramelizes crisp while the inside stays melted."},
+      {"icon": "🌿", "t": "Oregano and chili", "d": "Sprinkled with dried oregano and red pepper flakes."},
+      {"icon": "🍷", "t": "Asado starter", "d": "Traditionally served as a starter before the main grill."}
+    ],
+    "es": [
+      {"icon": "🧀", "t": "Queso provolone", "d": "Una rodaja gruesa de provolone semiduro, asada directamente al fuego."},
+      {"icon": "🔥", "t": "Costra crujiente", "d": "El exterior se caramela crujiente mientras el interior queda fundido."},
+      {"icon": "🌿", "t": "Orégano y ají", "d": "Espolvoreada con orégano seco y hojuelas de ají picante."},
+      {"icon": "🍷", "t": "Entrada del asado", "d": "Servida tradicionalmente como entrada antes de la parrillada principal."}
+    ],
+    "fr": [
+      {"icon": "🧀", "t": "Fromage provolone", "d": "Une épaisse tranche de provolone semi-dur, grillée directement au feu."},
+      {"icon": "🔥", "t": "Croûte croustillante", "d": "L'extérieur se caramélise en croustillant tandis que l'intérieur reste fondu."},
+      {"icon": "🌿", "t": "Origan et piment", "d": "Saupoudrée d'origan séché et de flocons de piment."},
+      {"icon": "🍷", "t": "Entrée de l'asado", "d": "Traditionnellement servie en entrée avant le grill principal."}
+    ],
+    "de": [
+      {"icon": "🧀", "t": "Provolone-Käse", "d": "Eine dicke Scheibe halbfester Provolone, direkt auf dem Feuer gegrillt."},
+      {"icon": "🔥", "t": "Knusprige Kruste", "d": "Die Außenseite karamellisiert knusprig, während das Innere geschmolzen bleibt."},
+      {"icon": "🌿", "t": "Oregano und Chili", "d": "Mit getrocknetem Oregano und Chiliflocken bestreut."},
+      {"icon": "🍷", "t": "Asado-Vorspeise", "d": "Traditionell als Vorspeise vor dem Hauptgrill serviert."}
+    ],
+    "pt": [
+      {"icon": "🧀", "t": "Queijo provolone", "d": "Uma fatia grossa de provolone meio-duro, grelhada diretamente no fogo."},
+      {"icon": "🔥", "t": "Crosta estaladiça", "d": "O exterior carameliza estaladiço enquanto o interior fica derretido."},
+      {"icon": "🌿", "t": "Orégão e pimenta", "d": "Polvilhada com orégão seco e flocos de pimenta."},
+      {"icon": "🍷", "t": "Entrada do assado", "d": "Servida tradicionalmente como entrada antes da grelha principal."}
+    ],
+    "ru": [
+      {"icon": "🧀", "t": "Сыр проволоне", "d": "Толстый ломтик полутвёрдого проволоне, обжаренный прямо на огне."},
+      {"icon": "🔥", "t": "Хрустящая корка", "d": "Снаружи карамелизируется до хруста, внутри остаётся расплавленным."},
+      {"icon": "🌿", "t": "Орегано и перец", "d": "Посыпается сушёным орегано и хлопьями острого перца."},
+      {"icon": "🍷", "t": "Закуска перед асадо", "d": "Традиционно подаётся как закуска перед основным грилем."}
+    ],
+    "ar": [
+      {"icon": "🧀", "t": "جبنة بروفولون", "d": "شريحة سميكة من جبنة بروفولون نصف الصلبة، تُشوى مباشرة على النار."},
+      {"icon": "🔥", "t": "قشرة مقرمشة", "d": "يتكرمل الخارج بشكل مقرمش بينما يبقى الداخل ذائبًا."},
+      {"icon": "🌿", "t": "أوريغانو وفلفل حار", "d": "تُرش بالأوريغانو المجفف ورقائق الفلفل الحار."},
+      {"icon": "🍷", "t": "مقبلات الأسادو", "d": "تُقدَّم تقليديًا كمقبلات قبل الشواء الرئيسي."}
+    ],
+    "zh": [
+      {"icon": "🧀", "t": "普罗沃洛内奶酪", "d": "厚切半硬质普罗沃洛内奶酪，直接在火上烤制。"},
+      {"icon": "🔥", "t": "酥脆外壳", "d": "外表焦糖化酥脆，内部保持融化状态。"},
+      {"icon": "🌿", "t": "牛至与辣椒", "d": "撒上干牛至和辣椒碎。"},
+      {"icon": "🍷", "t": "烤肉开胃菜", "d": "传统上作为主烤肉之前的开胃菜食用。"}
+    ],
+    "ja": [
+      {"icon": "🧀", "t": "プロヴォローネチーズ", "d": "厚切りのセミハードなプロヴォローネを直火で焼く。"},
+      {"icon": "🔥", "t": "カリカリの表面", "d": "外側はカリッとキャラメル化し、内側は溶けたまま。"},
+      {"icon": "🌿", "t": "オレガノと唐辛子", "d": "乾燥オレガノと唐辛子フレークを振りかける。"},
+      {"icon": "🍷", "t": "アサードの前菜", "d": "伝統的にメインのグリルの前に前菜として提供される。"}
+    ],
+    "hi": [
+      {"icon": "🧀", "t": "प्रोवोलोन चीज़", "d": "अर्ध-कठोर प्रोवोलोन का मोटा टुकड़ा, सीधे आग पर ग्रिल किया गया।"},
+      {"icon": "🔥", "t": "कुरकुरी परत", "d": "बाहर कुरकुरा कारमेलाइज़ होता है जबकि अंदर पिघला रहता है।"},
+      {"icon": "🌿", "t": "अजवायन और मिर्च", "d": "सूखी अजवायन और लाल मिर्च के टुकड़ों से छिड़का हुआ।"},
+      {"icon": "🍷", "t": "आसादो की शुरुआत", "d": "परंपरागत रूप से मुख्य ग्रिल से पहले स्टार्टर के रूप में परोसा जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🧀", "t": "Provolone peyniri", "d": "Doğrudan ateşte ızgara edilen kalın bir dilim yarı sert provolone."},
+      {"icon": "🔥", "t": "Çıtır kabuk", "d": "Dışı çıtır karamelize olurken içi erimiş kalır."},
+      {"icon": "🌿", "t": "Kekik ve biber", "d": "Kuru kekik ve acı biber pullarıyla serpilir."},
+      {"icon": "🍷", "t": "Asado başlangıcı", "d": "Geleneksel olarak ana ızgaradan önce başlangıç olarak servis edilir."}
+    ],
+    "it": [
+      {"icon": "🧀", "t": "Formaggio provolone", "d": "Una fetta spessa di provolone semiduro, grigliata direttamente sul fuoco."},
+      {"icon": "🔥", "t": "Crosta croccante", "d": "L'esterno si carammella croccante mentre l'interno resta fuso."},
+      {"icon": "🌿", "t": "Origano e peperoncino", "d": "Cosparso con origano secco e fiocchi di peperoncino."},
+      {"icon": "🍷", "t": "Antipasto dell'asado", "d": "Servito tradizionalmente come antipasto prima della griglia principale."}
+    ],
+    "ko": [
+      {"icon": "🧀", "t": "프로볼로네 치즈", "d": "직접 불에 구운 두꺼운 반경질 프로볼로네 조각."},
+      {"icon": "🔥", "t": "바삭한 겉면", "d": "겉은 바삭하게 캐러멜화되고 속은 녹은 상태를 유지한다."},
+      {"icon": "🌿", "t": "오레가노와 고추", "d": "말린 오레가노와 고춧가루 플레이크를 뿌린다."},
+      {"icon": "🍷", "t": "아사도 전채", "d": "전통적으로 메인 그릴 전에 전채로 제공된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 felii groase de provolone semitare (2cm)", "2 linguri ulei de măsline", "2 lingurițe oregano uscat", "1 linguriță fulgi de ardei iute", "1 cățel de usturoi", "pâine pentru servire"],
+    "en": ["4 thick slices of semi-hard provolone cheese (2cm)", "2 tbsp olive oil", "2 tsp dried oregano", "1 tsp red pepper flakes", "1 garlic clove", "bread for serving"],
+    "es": ["4 rodajas gruesas de queso provolone semiduro (2cm)", "2 cdas de aceite de oliva", "2 cdtas de orégano seco", "1 cdta de hojuelas de ají picante", "1 diente de ajo", "pan para servir"],
+    "fr": ["4 épaisses tranches de provolone semi-dur (2cm)", "2 c. à s. d'huile d'olive", "2 c. à c. d'origan séché", "1 c. à c. de flocons de piment", "1 gousse d'ail", "pain pour servir"],
+    "de": ["4 dicke Scheiben halbfester Provolone (2cm)", "2 EL Olivenöl", "2 TL getrockneter Oregano", "1 TL Chiliflocken", "1 Knoblauchzehe", "Brot zum Servieren"],
+    "pt": ["4 fatias grossas de queijo provolone meio-duro (2cm)", "2 c. sopa de azeite", "2 colheres de chá de orégão seco", "1 colher de chá de flocos de pimenta", "1 dente de alho", "pão para servir"],
+    "ru": ["4 толстых ломтика полутвёрдого проволоне (2см)", "2 ст.л. оливкового масла", "2 ч.л. сушёного орегано", "1 ч.л. хлопьев острого перца", "1 зубчик чеснока", "хлеб для подачи"],
+    "ar": ["4 شرائح سميكة من جبنة بروفولون نصف صلبة (2سم)", "2 ملعقة كبيرة زيت زيتون", "2 ملعقة صغيرة أوريغانو مجفف", "ملعقة صغيرة رقائق فلفل حار", "فص ثوم واحد", "خبز للتقديم"],
+    "zh": ["半硬质普罗沃洛内奶酪厚片4片（2厘米）", "橄榄油2汤匙", "干牛至2茶匙", "辣椒碎1茶匙", "大蒜1瓣", "面包（配食用）"],
+    "ja": ["セミハードプロヴォローネチーズの厚切り 4枚（2cm）", "オリーブオイル 大さじ2", "乾燥オレガノ 小さじ2", "唐辛子フレーク 小さじ1", "にんにく 1片", "提供用のパン"],
+    "hi": ["4 मोटे टुकड़े अर्ध-कठोर प्रोवोलोन चीज़ (2cm)", "2 बड़े चम्मच जैतून का तेल", "2 छोटे चम्मच सूखी अजवायन", "1 छोटा चम्मच लाल मिर्च के टुकड़े", "1 लहसुन की कली", "परोसने के लिए ब्रेड"],
+    "tr": ["4 kalın dilim yarı sert provolone peyniri (2cm)", "2 yemek kaşığı zeytinyağı", "2 çay kaşığı kuru kekik", "1 çay kaşığı acı biber pulu", "1 diş sarımsak", "servis için ekmek"],
+    "it": ["4 fette spesse di provolone semiduro (2cm)", "2 cucchiai di olio d'oliva", "2 cucchiaini di origano secco", "1 cucchiaino di fiocchi di peperoncino", "1 spicchio d'aglio", "pane per servire"],
+    "ko": ["반경질 프로볼로네 치즈 두꺼운 조각 4개(2cm)", "올리브 오일 2큰술", "말린 오레가노 2작은술", "고춧가루 플레이크 1작은술", "마늘 1쪽", "곁들일 빵"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE TIGAIE: Încălzește o tigaie mică de fontă sau o tăviță rezistentă la foc direct pe grătar. AȘEZARE BRÂNZĂ: Așază felia groasă de provolone direct în tigaia încinsă, fără ulei. CONDIMENTARE: Presară deasupra oregano uscat, fulgi de ardei iute și usturoiul tocat mărunt. FRIGERE PRIMA PARTE: Lasă brânza să se frigă 3-4 minute până partea de jos devine crocantă și aurie. ÎNTOARCERE: Întoarce cu grijă folosind o spatulă, având grijă să nu se rupă. FRIGERE A DOUA PARTE: Frige și cealaltă parte încă 2-3 minute, până brânza e topită complet, dar formă își păstrează. SERVIRE IMEDIATĂ: Servește direct din tigaie, cât e fierbinte, cu pâine proaspătă pentru a înmuia în brânza topită.",
+    "en": "PREPARE THE PAN: Heat a small cast-iron skillet or a heatproof dish directly on the grill. PLACE THE CHEESE: Put the thick slice of provolone directly in the hot pan, no oil needed. SEASON: Sprinkle dried oregano, chili flakes and finely chopped garlic on top. GRILL ONE SIDE: Let the cheese cook for 3-4 minutes until the bottom turns crisp and golden. FLIP: Carefully flip using a spatula, being careful not to break it. GRILL THE OTHER SIDE: Grill the other side for another 2-3 minutes, until the cheese is fully melted but holds its shape. SERVE IMMEDIATELY: Serve straight from the pan while hot, with fresh bread to dip into the melted cheese.",
+    "es": "PREPARAR LA SARTÉN: Calienta una sartén pequeña de hierro fundido o un recipiente resistente al fuego directamente en la parrilla. COLOCAR EL QUESO: Pon la rodaja gruesa de provolone directamente en la sartén caliente, sin aceite. SAZONAR: Espolvorea orégano seco, hojuelas de ají picante y ajo finamente picado encima. ASAR UN LADO: Deja que el queso se cocine 3-4 minutos hasta que la parte de abajo quede crujiente y dorada. VOLTEAR: Voltea con cuidado usando una espátula, teniendo cuidado de no romperlo. ASAR EL OTRO LADO: Asa el otro lado otros 2-3 minutos, hasta que el queso esté completamente fundido pero mantenga su forma. SERVIR DE INMEDIATO: Sirve directamente de la sartén mientras esté caliente, con pan fresco para mojar en el queso fundido.",
+    "fr": "PRÉPARER LA POÊLE: Faites chauffer une petite poêle en fonte ou un plat résistant au feu directement sur le gril. PLACER LE FROMAGE: Mettez l'épaisse tranche de provolone directement dans la poêle chaude, sans huile. ASSAISONNER: Saupoudrez d'origan séché, de flocons de piment et d'ail finement haché dessus. GRILLER UN CÔTÉ: Laissez le fromage cuire 3-4 minutes jusqu'à ce que le dessous soit croustillant et doré. RETOURNER: Retournez délicatement à l'aide d'une spatule, en faisant attention de ne pas le casser. GRILLER L'AUTRE CÔTÉ: Faites griller l'autre côté encore 2-3 minutes, jusqu'à ce que le fromage soit entièrement fondu mais garde sa forme. SERVIR IMMÉDIATEMENT: Servez directement de la poêle pendant qu'il est chaud, avec du pain frais pour tremper dans le fromage fondu.",
+    "de": "PFANNE VORBEREITEN: Eine kleine Gusseisenpfanne oder eine feuerfeste Schale direkt auf dem Grill erhitzen. KÄSE PLATZIEREN: Die dicke Provolone-Scheibe direkt in die heiße Pfanne legen, ohne Öl. WÜRZEN: Getrockneten Oregano, Chiliflocken und fein gehackten Knoblauch darüber streuen. EINE SEITE GRILLEN: Den Käse 3-4 Minuten garen lassen, bis die Unterseite knusprig und golden wird. WENDEN: Vorsichtig mit einem Pfannenwender wenden, ohne ihn zu zerbrechen. ANDERE SEITE GRILLEN: Die andere Seite weitere 2-3 Minuten grillen, bis der Käse vollständig geschmolzen ist, aber seine Form behält. SOFORT SERVIEREN: Direkt aus der Pfanne heiß servieren, mit frischem Brot zum Eintunken in den geschmolzenen Käse.",
+    "pt": "PREPARAR A FRIGIDEIRA: Aqueça uma pequena frigideira de ferro fundido ou um recipiente resistente ao fogo diretamente na grelha. COLOCAR O QUEIJO: Coloque a fatia grossa de provolone diretamente na frigideira quente, sem óleo. TEMPERAR: Polvilhe orégão seco, flocos de pimenta e alho finamente picado por cima. GRELHAR UM LADO: Deixe o queijo cozinhar 3-4 minutos até a parte de baixo ficar estaladiça e dourada. VIRAR: Vire com cuidado usando uma espátula, tendo cuidado para não partir. GRELHAR O OUTRO LADO: Grelhe o outro lado mais 2-3 minutos, até o queijo estar totalmente derretido mas manter a forma. SERVIR IMEDIATAMENTE: Sirva diretamente da frigideira enquanto quente, com pão fresco para mergulhar no queijo derretido.",
+    "ru": "ПОДГОТОВКА СКОВОРОДЫ: Разогрейте небольшую чугунную сковороду или огнеупорную посуду прямо на гриле. РАЗМЕЩЕНИЕ СЫРА: Положите толстый ломтик проволоне прямо на горячую сковороду, без масла. ПРИПРАВА: Посыпьте сверху сушёным орегано, хлопьями острого перца и мелко нарезанным чесноком. ЖАРКА ОДНОЙ СТОРОНЫ: Дайте сыру готовиться 3-4 минуты, пока низ не станет хрустящим и золотистым. ПЕРЕВОРОТ: Осторожно переверните лопаткой, стараясь не сломать. ЖАРКА ДРУГОЙ СТОРОНЫ: Жарьте другую сторону ещё 2-3 минуты, пока сыр полностью не расплавится, сохраняя форму. НЕМЕДЛЕННАЯ ПОДАЧА: Подавайте прямо со сковороды, пока горячий, со свежим хлебом для макания в расплавленный сыр.",
+    "ar": "تحضير المقلاة: سخّن مقلاة صغيرة من الحديد الزهر أو طبقًا مقاومًا للنار مباشرة على الشواية. وضع الجبنة: ضع شريحة البروفولون السميكة مباشرة في المقلاة الساخنة، دون زيت. التتبيل: رشّ الأوريغانو المجفف ورقائق الفلفل الحار والثوم المفروم ناعمًا فوقها. شوي جانب واحد: اترك الجبنة تُطهى لمدة 3-4 دقائق حتى يصبح الجزء السفلي مقرمشًا وذهبيًا. القلب: اقلبها بحذر باستخدام ملعقة مسطحة، مع الحرص على عدم كسرها. شوي الجانب الآخر: اشوِ الجانب الآخر لمدة 2-3 دقائق أخرى، حتى تذوب الجبنة تمامًا مع الحفاظ على شكلها. التقديم فورًا: قدّمها مباشرة من المقلاة وهي ساخنة، مع خبز طازج للغمس في الجبنة الذائبة.",
+    "zh": "准备平底锅：将小铸铁锅或耐火容器直接放在烤架上加热。放入奶酪：将厚切普罗沃洛内奶酪片直接放入热锅中，不加油。调味：在上面撒上干牛至、辣椒碎和切碎的大蒜。煎烤一面：让奶酪煎3-4分钟，直至底部酥脆金黄。翻面：小心用铲子翻面，注意不要弄碎。煎烤另一面：再煎另一面2-3分钟，直至奶酪完全融化但仍保持形状。立即上桌：趁热直接从锅中取出食用，配新鲜面包蘸取融化的奶酪。",
+    "ja": "フライパンの準備：小さな鋳鉄フライパンまたは耐火皿をグリルの上で直接加熱する。チーズを置く：厚切りのプロヴォローネを油をひかずに熱いフライパンに直接置く。味付け：乾燥オレガノ、唐辛子フレーク、細かく刻んだにんにくを上に振りかける。片面を焼く：底がカリッと金色になるまで3〜4分焼く。返す：ヘラを使って慎重にひっくり返し、崩れないように注意する。もう片面を焼く：チーズが完全に溶けても形を保つまで、もう片面をさらに2〜3分焼く。すぐに提供：熱いうちにフライパンから直接、溶けたチーズにつける新鮮なパンと共に提供する。",
+    "hi": "पैन तैयार करें: छोटी कास्ट-आयरन कड़ाही या आग प्रतिरोधी बर्तन को सीधे ग्रिल पर गरम करें। चीज़ रखें: मोटा प्रोवोलोन टुकड़ा सीधे गरम पैन में रखें, बिना तेल के। मसाला डालें: ऊपर सूखी अजवायन, लाल मिर्च के टुकड़े और बारीक कटा लहसुन छिड़कें। एक तरफ ग्रिल करें: चीज़ को 3-4 मिनट पकने दें जब तक नीचे का हिस्सा कुरकुरा और सुनहरा न हो जाए। पलटें: स्पैचुला से सावधानी से पलटें, टूटने न दें। दूसरी तरफ ग्रिल करें: दूसरी तरफ 2-3 मिनट और ग्रिल करें, जब तक चीज़ पूरी तरह पिघल न जाए लेकिन आकार बनाए रखे। तुरंत परोसें: गरमागरम सीधे पैन से परोसें, पिघली चीज़ में डुबाने के लिए ताज़ी ब्रेड के साथ।",
+    "tr": "TAVAYI HAZIRLAYIN: Küçük bir dökme demir tava veya ateşe dayanıklı bir kabı doğrudan ızgarada ısıtın. PEYNİRİ YERLEŞTİRİN: Kalın provolone dilimini doğrudan sıcak tavaya, yağsız olarak koyun. BAHARATLAYIN: Üzerine kuru kekik, acı biber pulu ve ince doğranmış sarımsak serpin. BİR TARAFI PİŞİRİN: Peyniri altı çıtır ve altın rengi olana kadar 3-4 dakika pişirmesine izin verin. ÇEVİRİN: Bir spatula kullanarak dikkatlice çevirin, kırılmamasına dikkat edin. DİĞER TARAFI PİŞİRİN: Peynir tamamen erimiş ama şeklini korurken diğer tarafı 2-3 dakika daha pişirin. HEMEN SERVİS EDİN: Sıcakken doğrudan tavadan, erimiş peynire batırmak için taze ekmekle servis edin.",
+    "it": "PREPARARE LA PADELLA: Scaldate una piccola padella di ghisa o un recipiente resistente al fuoco direttamente sulla griglia. METTERE IL FORMAGGIO: Mettete la fetta spessa di provolone direttamente nella padella calda, senza olio. INSAPORIRE: Cospargete origano secco, fiocchi di peperoncino e aglio tritato finemente sopra. GRIGLIARE UN LATO: Lasciate cuocere il formaggio 3-4 minuti finché il fondo diventa croccante e dorato. GIRARE: Girate con attenzione usando una spatola, facendo attenzione a non romperlo. GRIGLIARE L'ALTRO LATO: Grigliate l'altro lato per altri 2-3 minuti, finché il formaggio è completamente fuso ma mantiene la forma. SERVIRE SUBITO: Servite direttamente dalla padella mentre è caldo, con pane fresco da intingere nel formaggio fuso.",
+    "ko": "팬 준비: 작은 무쇠 팬이나 내열 그릇을 그릴 위에서 직접 가열한다. 치즈 놓기: 두꺼운 프로볼로네 조각을 기름 없이 뜨거운 팬에 바로 놓는다. 간하기: 위에 말린 오레가노, 고춧가루 플레이크, 잘게 다진 마늘을 뿌린다. 한쪽 굽기: 바닥이 바삭하고 황금빛이 될 때까지 3~4분간 굽는다. 뒤집기: 뒤집개로 조심스럽게 뒤집으며 부서지지 않도록 주의한다. 반대쪽 굽기: 치즈가 완전히 녹으면서도 모양을 유지할 때까지 반대쪽을 2~3분 더 굽는다. 즉시 제공: 뜨거울 때 팬에서 바로, 녹은 치즈에 찍어 먹을 신선한 빵과 함께 낸다."
+  },
+  "originText": {
+    "ro": "Provoleta este exemplul perfect al filosofiei culinare argentiniene: transformă un ingredient simplu, brânza provolone adusă de imigranții italieni la sfârșitul secolului al XIX-lea, într-o experiență gastronomică memorabilă prin tehnica potrivită și puțină răbdare. Brânza, inițial gândită ca produs de export italian, a devenit rapid parte din bucătăria populară argentiniană datorită abundenței cirezilor de vite și, implicit, a industriei lactate.\n\nNumele provine din combinația dintre provolone și parrilla (grătar), reflectând modul specific de preparare — friptă direct pe foc, nu la cuptor. Astăzi, provoleta este aproape la fel de nelipsită de la un asado ca și carnea în sine, servind drept aperitiv care ține invitații ocupați cât timp cărnurile principale se gătesc lent pe grătar.",
+    "en": "Provoleta is the perfect example of Argentine culinary philosophy: it turns a simple ingredient — provolone cheese, brought by Italian immigrants in the late 19th century — into a memorable gastronomic experience through the right technique and a little patience. The cheese, originally an Italian export product, quickly became part of popular Argentine cuisine thanks to the abundance of cattle herds and, by extension, the dairy industry.\n\nThe name comes from combining provolone and parrilla (grill), reflecting its specific preparation method — grilled directly over fire, not baked in an oven. Today, provoleta is almost as much a fixture at an asado as the meat itself, serving as an appetizer that keeps guests occupied while the main cuts slowly cook on the grill.",
+    "es": "La provoleta es el ejemplo perfecto de la filosofía culinaria argentina: transforma un ingrediente simple, el queso provolone traído por los inmigrantes italianos a finales del siglo XIX, en una experiencia gastronómica memorable gracias a la técnica adecuada y un poco de paciencia. El queso, inicialmente pensado como producto de exportación italiano, se convirtió rápidamente en parte de la cocina popular argentina gracias a la abundancia de ganado y, por extensión, de la industria láctea.\n\nEl nombre proviene de la combinación de provolone y parrilla, reflejando su forma específica de preparación — asada directamente al fuego, no al horno. Hoy en día, la provoleta es casi tan infaltable en un asado como la carne misma, sirviendo como entrada que mantiene ocupados a los invitados mientras las carnes principales se cocinan lentamente en la parrilla.",
+    "fr": "La provoleta est l'exemple parfait de la philosophie culinaire argentine : elle transforme un ingrédient simple, le fromage provolone apporté par les immigrants italiens à la fin du XIXe siècle, en une expérience gastronomique mémorable grâce à la bonne technique et un peu de patience. Le fromage, initialement pensé comme produit d'exportation italien, est rapidement devenu partie intégrante de la cuisine populaire argentine grâce à l'abondance de bétail et, par extension, de l'industrie laitière.\n\nLe nom vient de la combinaison de provolone et de parrilla (gril), reflétant sa méthode de préparation spécifique — grillée directement au feu, pas au four. Aujourd'hui, la provoleta est presque aussi incontournable dans un asado que la viande elle-même, servant d'entrée qui occupe les invités pendant que les viandes principales cuisent lentement sur le gril.",
+    "de": "Provoleta ist das perfekte Beispiel argentinischer Kochphilosophie: Sie verwandelt eine einfache Zutat — Provolone-Käse, von italienischen Einwanderern Ende des 19. Jahrhunderts mitgebracht — durch die richtige Technik und etwas Geduld in ein denkwürdiges kulinarisches Erlebnis. Der Käse, ursprünglich als italienisches Exportprodukt gedacht, wurde dank der reichlichen Rinderherden und damit der Milchindustrie schnell Teil der argentinischen Volksküche.\n\nDer Name stammt von der Kombination aus Provolone und Parrilla (Grill) und spiegelt seine spezifische Zubereitungsart wider — direkt über dem Feuer gegrillt, nicht im Ofen gebacken. Heute ist Provoleta bei einem Asado fast genauso unverzichtbar wie das Fleisch selbst und dient als Vorspeise, die die Gäste beschäftigt, während die Hauptstücke langsam auf dem Grill garen.",
+    "pt": "A provoleta é o exemplo perfeito da filosofia culinária argentina: transforma um ingrediente simples, o queijo provolone trazido pelos imigrantes italianos no final do século XIX, numa experiência gastronómica memorável através da técnica certa e um pouco de paciência. O queijo, inicialmente pensado como produto de exportação italiano, tornou-se rapidamente parte da cozinha popular argentina graças à abundância de gado e, por extensão, da indústria láctea.\n\nO nome vem da combinação de provolone e parrilla (grelha), refletindo o seu método específico de preparação — grelhado diretamente no fogo, não assado no forno. Hoje, a provoleta é quase tão indispensável num assado quanto a própria carne, servindo como entrada que mantém os convidados ocupados enquanto as carnes principais cozinham lentamente na grelha.",
+    "ru": "Проволета — идеальный пример аргентинской кулинарной философии: она превращает простой ингредиент — сыр проволоне, привезённый итальянскими иммигрантами в конце XIX века, — в незабываемый гастрономический опыт благодаря правильной технике и немного терпения. Сыр, изначально задуманный как итальянский экспортный продукт, быстро стал частью популярной аргентинской кухни благодаря обилию скота и, соответственно, молочной промышленности.\n\nНазвание происходит от сочетания проволоне и parrilla (гриль), отражая специфический способ приготовления — обжаривание прямо на огне, а не в духовке. Сегодня проволета почти так же неотъемлема от асадо, как и само мясо, служа закуской, которая занимает гостей, пока основное мясо медленно готовится на гриле.",
+    "ar": "البروفوليتا هي المثال المثالي للفلسفة الطهوية الأرجنتينية: تحوّل مكونًا بسيطًا — جبنة البروفولون التي جلبها المهاجرون الإيطاليون في أواخر القرن التاسع عشر — إلى تجربة طهوية لا تُنسى من خلال التقنية الصحيحة وقليل من الصبر. أصبحت الجبنة، التي كانت في الأصل منتجًا تصديريًا إيطاليًا، سريعًا جزءًا من المطبخ الشعبي الأرجنتيني بفضل وفرة قطعان الماشية وبالتالي صناعة الألبان.\n\nيأتي الاسم من الجمع بين بروفولون وباريا (الشواية)، مما يعكس طريقة تحضيرها المحددة — تُشوى مباشرة على النار، لا تُخبز في الفرن. اليوم، تكاد تكون البروفوليتا لا غنى عنها في الأسادو مثل اللحم نفسه، حيث تُقدَّم كمقبلات تشغل الضيوف بينما تُطهى قطع اللحم الرئيسية ببطء على الشواية.",
+    "zh": "普罗沃莱塔烤奶酪是阿根廷烹饪哲学的完美体现：它将19世纪末意大利移民带来的普罗沃洛内奶酪这一简单食材，通过恰当的技艺和一点耐心，转变为令人难忘的美食体验。这种奶酪最初是作为意大利出口产品，凭借丰富的牛群资源以及由此带动的乳制品业，很快融入了阿根廷的大众饮食文化。\n\n这个名字来自provolone（普罗沃洛内）和parrilla（烤架）的组合，反映了其特定的制作方式——直接在火上烤制，而非烤箱烘烤。如今，普罗沃莱塔几乎和肉类本身一样，是烤肉聚会中不可或缺的存在，作为开胃菜让客人在主菜肉类慢慢炭烤的过程中有所享用。",
+    "ja": "プロヴォレータはアルゼンチンの料理哲学を完璧に体現している。19世紀末にイタリア移民によってもたらされたプロヴォローネチーズというシンプルな素材を、正しい技法とわずかな忍耐によって忘れがたい美食体験へと変えるのだ。このチーズはもともとイタリアの輸出品として考えられていたが、豊富な牛の群れ、そしてそれに伴う乳製品産業のおかげで、アルゼンチンの大衆料理の一部として急速に定着した。\n\nその名前はプロヴォローネとパリージャ（グリル）の組み合わせに由来し、直火で焼くという特有の調理法を反映している――オーブンで焼くのではない。今日、プロヴォレータはアサードにおいて肉そのものとほぼ同じくらい欠かせない存在であり、メインの肉がグリルでじっくり調理される間、客をもてなす前菜として提供される。",
+    "hi": "प्रोवोलेटा अर्जेंटीनी पाक दर्शन का सही उदाहरण है: यह एक साधारण सामग्री — 19वीं सदी के अंत में इतालवी अप्रवासियों द्वारा लाई गई प्रोवोलोन चीज़ — को सही तकनीक और थोड़े धैर्य के साथ एक यादगार पाक अनुभव में बदल देता है। यह चीज़, जो शुरू में एक इतालवी निर्यात उत्पाद के रूप में सोची गई थी, मवेशियों की प्रचुरता और, विस्तार से, डेयरी उद्योग के कारण जल्दी ही लोकप्रिय अर्जेंटीनी व्यंजनों का हिस्सा बन गई।\n\nनाम प्रोवोलोन और पारिया (ग्रिल) के संयोजन से आता है, जो इसकी विशिष्ट तैयारी विधि को दर्शाता है — सीधे आग पर ग्रिल किया गया, ओवन में नहीं। आज, प्रोवोलेटा एक आसादो में मांस जितना ही अपरिहार्य है, जो एक स्टार्टर के रूप में परोसा जाता है जो मेहमानों को व्यस्त रखता है जबकि मुख्य मांस ग्रिल पर धीरे-धीरे पकता है।",
+    "tr": "Provoleta, Arjantin mutfak felsefesinin mükemmel bir örneğidir: 19. yüzyılın sonlarında İtalyan göçmenler tarafından getirilen basit bir malzemeyi — provolone peynirini — doğru teknik ve biraz sabırla unutulmaz bir gastronomik deneyime dönüştürür. Başlangıçta bir İtalyan ihraç ürünü olarak düşünülen peynir, bol sığır sürüleri ve dolayısıyla süt endüstrisi sayesinde hızla popüler Arjantin mutfağının bir parçası haline geldi.\n\nAd, provolone ve parrilla'nın (ızgara) birleşiminden gelir ve belirli hazırlama yöntemini yansıtır — fırında değil, doğrudan ateşte ızgara edilir. Bugün provoleta, ana ızgara ağır ağır pişerken misafirleri meşgul eden bir başlangıç olarak, asadoda etin kendisi kadar vazgeçilmezdir.",
+    "it": "La provoleta è l'esempio perfetto della filosofia culinaria argentina: trasforma un ingrediente semplice — il formaggio provolone, portato dagli immigrati italiani alla fine del XIX secolo — in un'esperienza gastronomica memorabile grazie alla giusta tecnica e a un po' di pazienza. Il formaggio, inizialmente pensato come prodotto di esportazione italiano, divenne rapidamente parte della cucina popolare argentina grazie all'abbondanza di bestiame e, di conseguenza, dell'industria lattiero-casearia.\n\nIl nome deriva dalla combinazione di provolone e parrilla (griglia), riflettendo il suo metodo di preparazione specifico — grigliato direttamente sul fuoco, non cotto in forno. Oggi, la provoleta è quasi altrettanto immancabile in un asado quanto la carne stessa, servendo come antipasto che tiene occupati gli ospiti mentre i tagli principali cuociono lentamente sulla griglia.",
+    "ko": "프로볼레타는 아르헨티나 요리 철학의 완벽한 예다: 19세기 말 이탈리아 이민자들이 가져온 프로볼로네 치즈라는 단순한 재료를 올바른 기법과 약간의 인내로 잊지 못할 미식 경험으로 바꾸어놓는다. 처음에는 이탈리아 수출 제품으로 여겨졌던 이 치즈는 풍부한 소 떼와 그에 따른 낙농업 덕분에 빠르게 아르헨티나 대중 요리의 일부가 되었다.\n\n이름은 프로볼로네와 파리야(그릴)를 결합한 것으로, 오븐이 아닌 불 위에서 직접 굽는 특정 조리법을 반영한다. 오늘날 프로볼레타는 아사도에서 고기 자체만큼이나 빠질 수 없는 존재로, 메인 고기가 그릴에서 천천히 익는 동안 손님들을 즐겁게 하는 전채 요리로 제공된다."
+  },
+  "meta": {
+    "time": 15,
+    "costRon": 14,
+    "tags": ["vegetarian", "quick"],
+    "desc": {
+      "ro": "Provolone gros fript pe grătar, cu crustă crocantă și interior topit, cu oregano.",
+      "en": "Thick provolone grilled directly over fire, crisp crust, melted inside, with oregano.",
+      "es": "Provolone grueso asado a la parrilla, costra crujiente, interior fundido, con orégano.",
+      "fr": "Provolone épais grillé au feu, croûte croustillante, intérieur fondu, à l'origan.",
+      "de": "Dicker Provolone direkt gegrillt, knusprige Kruste, geschmolzenes Innere, mit Oregano.",
+      "pt": "Provolone grosso grelhado no fogo, crosta estaladiça, interior derretido, com orégão.",
+      "ru": "Толстый проволоне, обжаренный на огне, хрустящая корка, расплавленная середина, с орегано.",
+      "ar": "بروفولون سميك مشوي على النار، قشرة مقرمشة، داخل ذائب، مع الأوريغانو.",
+      "zh": "厚切普罗沃洛内直火烤制，外壳酥脆，内部融化，配牛至。",
+      "ja": "直火で焼いた厚切りプロヴォローネ、カリカリの表面と溶けた中身、オレガノ添え。",
+      "hi": "आग पर सीधे भुना मोटा प्रोवोलोन, कुरकुरी परत, अंदर पिघला, अजवायन के साथ।",
+      "tr": "Ateşte doğrudan ızgara edilmiş kalın provolone, çıtır kabuk, içi erimiş, kekikle.",
+      "it": "Provolone spesso grigliato sul fuoco, crosta croccante, interno fuso, con origano.",
+      "ko": "불에 직접 구운 두꺼운 프로볼로네, 바삭한 겉면과 녹은 속, 오레가노를 곁들임."
+    }
+  }
+}

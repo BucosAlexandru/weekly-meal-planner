@@ -1,0 +1,177 @@
+{
+  "id": 343,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Ungaria", "en": "Hungary", "es": "Hungría", "fr": "Hongrie", "de": "Ungarn",
+    "pt": "Hungria", "ru": "Венгрия", "ar": "المجر", "zh": "匈牙利", "ja": "ハンガリー",
+    "hi": "हंगरी", "tr": "Macaristan", "it": "Ungheria", "ko": "헝가리"
+  },
+  "name": {
+    "ro": "Găluște de Somló", "en": "Somlói Galuska (Somló Sponge Trifle)", "es": "Somlói Galuska (Trifle de Somló)",
+    "fr": "Somlói Galuska (Trifle de Somló)", "de": "Somlói Galuska (Somló-Schnittchen)", "pt": "Somlói Galuska (Trifle de Somló)",
+    "ru": "Шомлойские галушки (Десерт Шомло)", "ar": "سومليوي غالوشكا (تريفل سومليو)", "zh": "松罗蛋糕布丁",
+    "ja": "ショムローイ・ガルシュカ（ショムロー風トライフル）", "hi": "सोमलोई गालुष्का (सोमलो ट्राइफल)", "tr": "Somlói Galuska (Somló Pastası)",
+    "it": "Somlói Galuska (Trifle di Somló)", "ko": "숌로이 갈루슈카 (숌로 트라이플)"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🍰", "t": "Trei pandișpanuri", "d": "Straturi de blat simplu, cu cacao și cu nuci, sfărâmate."},
+      {"icon": "🥃", "t": "Însiropat cu rom", "d": "Fiecare strat e stropit generos cu sirop aromat cu rom."},
+      {"icon": "🍫", "t": "Sos de ciocolată cald", "d": "Se toarnă deasupra un sos gros de ciocolată."},
+      {"icon": "🍒", "t": "Frișcă și vișine", "d": "Se termină cu frișcă bătută și vișine confiate."}
+    ],
+    "en": [
+      {"icon": "🍰", "t": "Three sponge cakes", "d": "Layers of plain, cocoa and walnut sponge, crumbled."},
+      {"icon": "🥃", "t": "Rum-soaked", "d": "Each layer is generously drizzled with rum-scented syrup."},
+      {"icon": "🍫", "t": "Warm chocolate sauce", "d": "A thick chocolate sauce is poured on top."},
+      {"icon": "🍒", "t": "Whipped cream and cherries", "d": "Finished with whipped cream and candied sour cherries."}
+    ],
+    "es": [
+      {"icon": "🍰", "t": "Tres bizcochos", "d": "Capas de bizcocho simple, de cacao y de nuez, desmenuzadas."},
+      {"icon": "🥃", "t": "Empapado en ron", "d": "Cada capa se rocía generosamente con almíbar de ron."},
+      {"icon": "🍫", "t": "Salsa de chocolate caliente", "d": "Se vierte encima una espesa salsa de chocolate."},
+      {"icon": "🍒", "t": "Nata montada y guindas", "d": "Se termina con nata montada y guindas confitadas."}
+    ],
+    "fr": [
+      {"icon": "🍰", "t": "Trois génoises", "d": "Couches de génoise nature, au cacao et aux noix, émiettées."},
+      {"icon": "🥃", "t": "Imbibé de rhum", "d": "Chaque couche est généreusement arrosée de sirop parfumé au rhum."},
+      {"icon": "🍫", "t": "Sauce chocolat chaude", "d": "Une épaisse sauce au chocolat est versée dessus."},
+      {"icon": "🍒", "t": "Crème fouettée et griottes", "d": "Terminé avec de la crème fouettée et des griottes confites."}
+    ],
+    "de": [
+      {"icon": "🍰", "t": "Drei Biskuitböden", "d": "Schichten aus einfachem, Kakao- und Walnussbiskuit, zerkrümelt."},
+      {"icon": "🥃", "t": "Mit Rum getränkt", "d": "Jede Schicht wird großzügig mit rumaromatisiertem Sirup beträufelt."},
+      {"icon": "🍫", "t": "Warme Schokoladensauce", "d": "Eine dicke Schokoladensauce wird obendrauf gegossen."},
+      {"icon": "🍒", "t": "Schlagsahne und Kirschen", "d": "Abgeschlossen mit Schlagsahne und kandierten Sauerkirschen."}
+    ],
+    "pt": [
+      {"icon": "🍰", "t": "Três pães de ló", "d": "Camadas de pão de ló simples, de cacau e de noz, esfareladas."},
+      {"icon": "🥃", "t": "Embebido em rum", "d": "Cada camada é generosamente regada com calda aromatizada com rum."},
+      {"icon": "🍫", "t": "Molho de chocolate quente", "d": "Um molho espesso de chocolate é derramado por cima."},
+      {"icon": "🍒", "t": "Chantilly e cerejas", "d": "Terminado com chantilly e cerejas ácidas cristalizadas."}
+    ],
+    "ru": [
+      {"icon": "🍰", "t": "Три бисквита", "d": "Слои простого, какао и орехового бисквита, раскрошенные."},
+      {"icon": "🥃", "t": "Пропитан ромом", "d": "Каждый слой щедро сбрызгивается сиропом с ароматом рома."},
+      {"icon": "🍫", "t": "Тёплый шоколадный соус", "d": "Сверху выливается густой шоколадный соус."},
+      {"icon": "🍒", "t": "Взбитые сливки и вишня", "d": "Завершается взбитыми сливками и засахаренной вишней."}
+    ],
+    "ar": [
+      {"icon": "🍰", "t": "ثلاثة كعكات إسفنجية", "d": "طبقات من الإسفنج العادي والكاكاو والجوز، مفتتة."},
+      {"icon": "🥃", "t": "منقوعة بالروم", "d": "تُرش كل طبقة بسخاء بشراب برائحة الروم."},
+      {"icon": "🍫", "t": "صلصة شوكولاتة دافئة", "d": "تُسكب صلصة شوكولاتة سميكة فوقها."},
+      {"icon": "🍒", "t": "كريمة مخفوقة وكرز", "d": "تُنهى بالكريمة المخفوقة والكرز الحامض المسكّر."}
+    ],
+    "zh": [
+      {"icon": "🍰", "t": "三种海绵蛋糕", "d": "原味、可可味和核桃味蛋糕碎屑叠层。"},
+      {"icon": "🥃", "t": "朗姆酒浸润", "d": "每层都慷慨地淋上朗姆酒香糖浆。"},
+      {"icon": "🍫", "t": "温热巧克力酱", "d": "顶部浇上浓稠的巧克力酱。"},
+      {"icon": "🍒", "t": "鲜奶油与樱桃", "d": "最后装饰打发奶油和糖渍酸樱桃。"}
+    ],
+    "ja": [
+      {"icon": "🍰", "t": "3種のスポンジ", "d": "プレーン、ココア、くるみのスポンジを崩して重ねる。"},
+      {"icon": "🥃", "t": "ラム酒風味", "d": "各層にラム酒の香るシロップをたっぷりかける。"},
+      {"icon": "🍫", "t": "温かいチョコレートソース", "d": "上から濃厚なチョコレートソースをかける。"},
+      {"icon": "🍒", "t": "生クリームとチェリー", "d": "生クリームと砂糖漬けのサワーチェリーで仕上げる。"}
+    ],
+    "hi": [
+      {"icon": "🍰", "t": "तीन स्पंज केक", "d": "सादे, कोको और अखरोट स्पंज की परतें, चूरा किया हुआ।"},
+      {"icon": "🥃", "t": "रम में भिगोया हुआ", "d": "हर परत पर रम-सुगंधित चाशनी भरपूर डाली जाती है।"},
+      {"icon": "🍫", "t": "गरम चॉकलेट सॉस", "d": "ऊपर गाढ़ा चॉकलेट सॉस डाला जाता है।"},
+      {"icon": "🍒", "t": "फेंटी क्रीम और चेरी", "d": "फेंटी क्रीम और कैंडीड खट्टी चेरी से खत्म किया जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🍰", "t": "Üç pandispan", "d": "Sade, kakaolu ve cevizli pandispan katmanları, ufalanmış."},
+      {"icon": "🥃", "t": "Rom ile ıslatılmış", "d": "Her katman bolca rom kokulu şerbetle ıslatılır."},
+      {"icon": "🍫", "t": "Sıcak çikolata sosu", "d": "Üzerine koyu bir çikolata sosu dökülür."},
+      {"icon": "🍒", "t": "Krem şanti ve vişne", "d": "Krem şanti ve şekerlenmiş vişneyle tamamlanır."}
+    ],
+    "it": [
+      {"icon": "🍰", "t": "Tre pan di spagna", "d": "Strati di pan di spagna semplice, al cacao e alle noci, sbriciolati."},
+      {"icon": "🥃", "t": "Bagnato al rum", "d": "Ogni strato è generosamente irrorato di sciroppo al rum."},
+      {"icon": "🍫", "t": "Salsa al cioccolato calda", "d": "Una densa salsa al cioccolato viene versata sopra."},
+      {"icon": "🍒", "t": "Panna montata e amarene", "d": "Finito con panna montata e amarene candite."}
+    ],
+    "ko": [
+      {"icon": "🍰", "t": "세 가지 스펀지케이크", "d": "플레인, 코코아, 호두 스펀지를 부수어 층층이 쌓는다."},
+      {"icon": "🥃", "t": "럼주에 적심", "d": "각 층에 럼 향 시럽을 듬뿍 뿌린다."},
+      {"icon": "🍫", "t": "따뜻한 초콜릿 소스", "d": "위에 진한 초콜릿 소스를 붓는다."},
+      {"icon": "🍒", "t": "휘핑크림과 체리", "d": "휘핑크림과 설탕에 절인 체리로 마무리한다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["6 ouă", "180g zahăr", "180g făină", "2 linguri cacao", "50g nuci măcinate", "100ml rom", "150g zahăr pentru sirop", "300ml frișcă lichidă", "150g ciocolată neagră", "100ml lapte", "vișine confiate"],
+    "en": ["6 eggs", "180g sugar", "180g flour", "2 tbsp cocoa powder", "50g ground walnuts", "100ml rum", "150g sugar for syrup", "300ml heavy cream", "150g dark chocolate", "100ml milk", "candied sour cherries"],
+    "es": ["6 huevos", "180g de azúcar", "180g de harina", "2 cdas de cacao en polvo", "50g de nueces molidas", "100ml de ron", "150g de azúcar para el almíbar", "300ml de nata para montar", "150g de chocolate negro", "100ml de leche", "guindas confitadas"],
+    "fr": ["6 œufs", "180g de sucre", "180g de farine", "2 c. à s. de cacao en poudre", "50g de noix moulues", "100ml de rhum", "150g de sucre pour le sirop", "300ml de crème liquide entière", "150g de chocolat noir", "100ml de lait", "griottes confites"],
+    "de": ["6 Eier", "180g Zucker", "180g Mehl", "2 EL Kakaopulver", "50g gemahlene Walnüsse", "100ml Rum", "150g Zucker für den Sirup", "300ml Schlagsahne", "150g dunkle Schokolade", "100ml Milch", "kandierte Sauerkirschen"],
+    "pt": ["6 ovos", "180g de açúcar", "180g de farinha", "2 c. sopa de cacau em pó", "50g de nozes moídas", "100ml de rum", "150g de açúcar para a calda", "300ml de natas para bater", "150g de chocolate negro", "100ml de leite", "cerejas ácidas cristalizadas"],
+    "ru": ["6 яиц", "180г сахара", "180г муки", "2 ст.л. какао-порошка", "50г молотых грецких орехов", "100мл рома", "150г сахара для сиропа", "300мл жирных сливок", "150г тёмного шоколада", "100мл молока", "засахаренная вишня"],
+    "ar": ["6 بيضات", "180غ سكر", "180غ دقيق", "2 ملعقة كبيرة كاكاو بودرة", "50غ جوز مطحون", "100مل روم", "150غ سكر للشراب", "300مل كريمة خفق", "150غ شوكولاتة داكنة", "100مل حليب", "كرز حامض مسكّر"],
+    "zh": ["鸡蛋6个", "糖180克", "面粉180克", "可可粉2汤匙", "核桃碎50克", "朗姆酒100毫升", "糖浆用糖150克", "重奶油300毫升", "黑巧克力150克", "牛奶100毫升", "糖渍酸樱桃"],
+    "ja": ["卵 6個", "砂糖 180g", "小麦粉 180g", "ココアパウダー 大さじ2", "くるみの粉 50g", "ラム酒 100ml", "シロップ用砂糖 150g", "生クリーム 300ml", "ダークチョコレート 150g", "牛乳 100ml", "砂糖漬けサワーチェリー"],
+    "hi": ["6 अंडे", "180 ग्राम चीनी", "180 ग्राम आटा", "2 बड़े चम्मच कोको पाउडर", "50 ग्राम पिसे अखरोट", "100 मिली रम", "चाशनी के लिए 150 ग्राम चीनी", "300 मिली गाढ़ी क्रीम", "150 ग्राम डार्क चॉकलेट", "100 मिली दूध", "कैंडीड खट्टी चेरी"],
+    "tr": ["6 yumurta", "180g şeker", "180g un", "2 yemek kaşığı kakao tozu", "50g öğütülmüş ceviz", "100ml rom", "şerbet için 150g şeker", "300ml krema", "150g bitter çikolata", "100ml süt", "şekerlenmiş vişne"],
+    "it": ["6 uova", "180g di zucchero", "180g di farina", "2 cucchiai di cacao in polvere", "50g di noci macinate", "100ml di rum", "150g di zucchero per lo sciroppo", "300ml di panna fresca", "150g di cioccolato fondente", "100ml di latte", "amarene candite"],
+    "ko": ["달걀 6개", "설탕 180g", "밀가루 180g", "코코아 파우더 2큰술", "다진 호두 50g", "럼주 100ml", "시럽용 설탕 150g", "생크림 300ml", "다크 초콜릿 150g", "우유 100ml", "설탕에 절인 체리"]
+  },
+  "howIsMade": {
+    "ro": "COACERE PANDIȘPAN: Bate ouăle cu zahărul, împarte compoziția în trei, adaugă cacao într-una și nuci măcinate în alta, coace trei foi separate 15 minute la 180°C. PREPARARE SIROP: Fierbe zahărul cu apă până se dizolvă, ia de pe foc și adaugă rom. SFĂRÂMARE ȘI ÎNSIROPARE: Sfărâmă grosier fiecare blat și stropește-l generos cu siropul de rom. PREPARARE SOS CIOCOLATĂ: Topește ciocolata cu laptele la bain-marie până obții un sos neted. ASAMBLARE STRATURI: Așază în pahare sau o tavă straturi alternate de blat simplu, blat cu cacao și blat cu nuci, stropind fiecare strat cu sos de ciocolată cald. FINISARE FRIȘCĂ: Bate frișca până devine fermă și adaugă-o generos deasupra. DECORARE: Decorează cu vișine confiate și fire de ciocolată rasă înainte de servire rece.",
+    "en": "BAKE SPONGE: Beat the eggs with sugar, divide the mixture into three, add cocoa to one and ground walnuts to another, bake three separate sheets for 15 minutes at 180°C. MAKE SYRUP: Boil sugar with water until dissolved, remove from heat and add rum. CRUMBLE AND SOAK: Coarsely crumble each sponge and drizzle it generously with the rum syrup. MAKE CHOCOLATE SAUCE: Melt the chocolate with milk over a bain-marie until smooth. LAYER: Arrange alternating layers of plain, cocoa and walnut sponge in glasses or a tray, drizzling each layer with warm chocolate sauce. FINISH WITH CREAM: Whip the cream until firm and add it generously on top. DECORATE: Garnish with candied sour cherries and grated chocolate before serving cold.",
+    "es": "HORNEAR EL BIZCOCHO: Bate los huevos con el azúcar, divide la mezcla en tres, añade cacao a una y nueces molidas a otra, hornea tres capas separadas 15 minutos a 180°C. PREPARAR EL ALMÍBAR: Hierve el azúcar con agua hasta disolver, retira del fuego y añade ron. DESMENUZAR Y EMPAPAR: Desmenuza toscamente cada bizcocho y rocíalo generosamente con el almíbar de ron. PREPARAR LA SALSA DE CHOCOLATE: Funde el chocolate con la leche al baño maría hasta que quede suave. MONTAR: Coloca capas alternadas de bizcocho simple, de cacao y de nuez en vasos o una bandeja, rociando cada capa con salsa de chocolate caliente. TERMINAR CON NATA: Monta la nata hasta que esté firme y añádela generosamente encima. DECORAR: Decora con guindas confitadas y chocolate rallado antes de servir frío.",
+    "fr": "CUIRE LA GÉNOISE: Fouettez les œufs avec le sucre, divisez le mélange en trois, ajoutez du cacao dans l'un et des noix moulues dans l'autre, faites cuire trois couches séparées 15 minutes à 180°C. PRÉPARER LE SIROP: Faites bouillir le sucre avec de l'eau jusqu'à dissolution, retirez du feu et ajoutez le rhum. ÉMIETTER ET IMBIBER: Émiettez grossièrement chaque génoise et arrosez-la généreusement de sirop de rhum. PRÉPARER LA SAUCE AU CHOCOLAT: Faites fondre le chocolat avec le lait au bain-marie jusqu'à obtenir une texture lisse. MONTER: Disposez des couches alternées de génoise nature, au cacao et aux noix dans des verres ou un plat, en arrosant chaque couche de sauce au chocolat chaude. FINIR AVEC LA CRÈME: Fouettez la crème jusqu'à fermeté et ajoutez-la généreusement dessus. DÉCORER: Garnissez de griottes confites et de chocolat râpé avant de servir froid.",
+    "de": "BISKUIT BACKEN: Die Eier mit Zucker schlagen, die Masse dritteln, in eine Kakao und in eine andere gemahlene Walnüsse geben, drei separate Böden 15 Minuten bei 180°C backen. SIRUP ZUBEREITEN: Zucker mit Wasser aufkochen bis er sich löst, vom Herd nehmen und Rum hinzufügen. ZERBRÖSELN UND TRÄNKEN: Jeden Biskuitboden grob zerbröseln und großzügig mit Rumsirup beträufeln. SCHOKOLADENSAUCE ZUBEREITEN: Die Schokolade mit Milch im Wasserbad glatt schmelzen. SCHICHTEN: Abwechselnd Schichten aus einfachem, Kakao- und Walnussbiskuit in Gläsern oder einer Form anordnen, jede Schicht mit warmer Schokoladensauce beträufeln. MIT SAHNE ABSCHLIESSEN: Die Sahne steif schlagen und großzügig obendrauf geben. DEKORIEREN: Mit kandierten Sauerkirschen und geriebener Schokolade garnieren, kalt servieren.",
+    "pt": "ASSAR O PÃO DE LÓ: Bata os ovos com o açúcar, divida a mistura em três, junte cacau a uma e nozes moídas a outra, asse três camadas separadas por 15 minutos a 180°C. PREPARAR A CALDA: Ferva o açúcar com água até dissolver, retire do lume e junte o rum. ESFARELAR E EMBEBER: Esfarele grosseiramente cada pão de ló e regue-o generosamente com a calda de rum. PREPARAR O MOLHO DE CHOCOLATE: Derreta o chocolate com o leite em banho-maria até ficar liso. MONTAR: Disponha camadas alternadas de pão de ló simples, de cacau e de noz em copos ou num tabuleiro, regando cada camada com molho de chocolate quente. FINALIZAR COM NATAS: Bata as natas até firmes e adicione generosamente por cima. DECORAR: Decore com cerejas ácidas cristalizadas e chocolate ralado antes de servir frio.",
+    "ru": "ВЫПЕЧКА БИСКВИТА: Взбейте яйца с сахаром, разделите массу на три части, добавьте какао в одну и молотые орехи в другую, выпекайте три отдельных коржа по 15 минут при 180°C. ПРИГОТОВЛЕНИЕ СИРОПА: Вскипятите сахар с водой до растворения, снимите с огня и добавьте ром. КРОШЕНИЕ И ПРОПИТКА: Грубо раскрошите каждый корж и щедро сбрызните ромовым сиропом. ПРИГОТОВЛЕНИЕ ШОКОЛАДНОГО СОУСА: Растопите шоколад с молоком на водяной бане до однородности. СБОРКА СЛОЁВ: Разложите чередующиеся слои простого, какао и орехового бисквита в бокалах или форме, поливая каждый слой тёплым шоколадным соусом. ЗАВЕРШЕНИЕ СЛИВКАМИ: Взбейте сливки до плотности и щедро выложите сверху. УКРАШЕНИЕ: Украсьте засахаренной вишней и тёртым шоколадом перед подачей в холодном виде.",
+    "ar": "خبز الإسفنج: اخفق البيض مع السكر، قسّم الخليط إلى ثلاثة أجزاء، أضف الكاكاو إلى جزء والجوز المطحون إلى آخر، اخبز ثلاث طبقات منفصلة لمدة 15 دقيقة على حرارة 180 درجة. تحضير الشراب: اغلِ السكر مع الماء حتى يذوب، ارفعه عن النار وأضف الروم. التفتيت والنقع: فتّت كل طبقة إسفنجية بشكل خشن ورشّها بسخاء بشراب الروم. تحضير صلصة الشوكولاتة: أذب الشوكولاتة مع الحليب في حمام مائي حتى تصبح ناعمة. ترتيب الطبقات: رتّب طبقات متناوبة من الإسفنج العادي والكاكاو والجوز في أكواب أو صينية، مع رش كل طبقة بصلصة الشوكولاتة الدافئة. الإنهاء بالكريمة: اخفق الكريمة حتى تتماسك وأضفها بسخاء فوقها. التزيين: زيّن بالكرز الحامض المسكّر والشوكولاتة المبروشة قبل التقديم باردًا.",
+    "zh": "烘烤海绵蛋糕：将鸡蛋与糖打发，把面糊分成三份，一份加可可粉，另一份加核桃碎，分别烘烤三片蛋糕，180°C烤15分钟。制作糖浆：将糖与水煮至溶解，离火后加入朗姆酒。压碎并浸泡：将每片蛋糕粗略压碎，慷慨地淋上朗姆糖浆。制作巧克力酱：将巧克力与牛奶隔水加热至顺滑。分层摆放：在杯子或托盘中交替摆放原味、可可味和核桃味蛋糕层，每层淋上温热的巧克力酱。奶油收尾：将奶油打发至坚挺，慷慨地覆盖在顶部。装饰：用糖渍酸樱桃和巧克力屑装饰，冷藏后食用。",
+    "ja": "スポンジを焼く：卵と砂糖を泡立て、生地を三等分し、一つにはココア、もう一つには刻んだくるみを加え、それぞれ180°Cで15分焼く。シロップを作る：砂糖と水を溶けるまで煮て火から下ろし、ラム酒を加える。崩して浸す：それぞれのスポンジを粗く崩し、ラム酒シロップをたっぷりかける。チョコレートソースを作る：チョコレートを牛乳と共に湯煎で溶かし滑らかにする。層を重ねる：グラスやトレイにプレーン、ココア、くるみのスポンジを交互に重ね、各層に温かいチョコレートソースをかける。生クリームで仕上げる：生クリームをしっかり泡立て、たっぷりと上にのせる。飾り付け：砂糖漬けサワーチェリーと削ったチョコレートを飾り、冷やして提供する。",
+    "hi": "स्पंज बेक करें: अंडों को चीनी के साथ फेंटें, मिश्रण को तीन भागों में बांटें, एक में कोको और दूसरे में पिसे अखरोट डालें, तीन अलग परतें 180°C पर 15 मिनट बेक करें। चाशनी बनाएं: चीनी को पानी के साथ घुलने तक उबालें, आँच से हटाकर रम डालें। चूरा और भिगोना: हर स्पंज को मोटा-मोटा चूरा करें और रम चाशनी से भरपूर भिगोएं। चॉकलेट सॉस बनाएं: चॉकलेट को दूध के साथ भाप में चिकना होने तक पिघलाएं। परतें लगाएं: गिलास या ट्रे में सादे, कोको और अखरोट स्पंज की बारी-बारी परतें लगाएं, हर परत पर गरम चॉकलेट सॉस डालें। क्रीम से खत्म करें: क्रीम को कड़ा होने तक फेंटें और ऊपर भरपूर डालें। सजाएं: परोसने से पहले कैंडीड खट्टी चेरी और कद्दूकस चॉकलेट से सजाएं, ठंडा परोसें।",
+    "tr": "PANDİSPANI PİŞİRİN: Yumurtaları şekerle çırpın, karışımı üçe bölün, birine kakao diğerine öğütülmüş ceviz ekleyin, üç ayrı katmanı 180°C'de 15'er dakika pişirin. ŞERBETİ HAZIRLAYIN: Şekeri suyla eriyene kadar kaynatın, ateşten alıp rom ekleyin. UFALAYIN VE ISLATIN: Her pandispanı kabaca ufalayın ve bolca rom şerbetiyle ıslatın. ÇİKOLATA SOSUNU HAZIRLAYIN: Çikolatayı sütle benmari usulü pürüzsüz olana kadar eritin. KATMANLAYIN: Sade, kakaolu ve cevizli pandispanı bardaklarda veya bir tepside değiştirerek dizin, her katmana sıcak çikolata sosu dökün. KREMAYLA BİTİRİN: Kremayı sertleşene kadar çırpın ve üzerine bolca ekleyin. SÜSLEYİN: Servisten önce şekerlenmiş vişne ve rendelenmiş çikolatayla süsleyin, soğuk servis edin.",
+    "it": "CUOCERE IL PAN DI SPAGNA: Sbattete le uova con lo zucchero, dividete il composto in tre, aggiungete il cacao a uno e le noci macinate a un altro, cuocete tre strati separati per 15 minuti a 180°C. PREPARARE LO SCIROPPO: Fate bollire lo zucchero con acqua finché si scioglie, togliete dal fuoco e aggiungete il rum. SBRICIOLARE E INZUPPARE: Sbriciolate grossolanamente ogni pan di spagna e irroratelo generosamente con lo sciroppo al rum. PREPARARE LA SALSA AL CIOCCOLATO: Sciogliete il cioccolato con il latte a bagnomaria fino a renderlo liscio. COMPORRE GLI STRATI: Disponete strati alternati di pan di spagna semplice, al cacao e alle noci in bicchieri o in una teglia, irrorando ogni strato con salsa al cioccolato calda. FINIRE CON LA PANNA: Montate la panna fino a renderla soda e aggiungetela generosamente sopra. DECORARE: Guarnite con amarene candite e cioccolato grattugiato prima di servire freddo.",
+    "ko": "스펀지 굽기: 달걀을 설탕과 함께 휘핑하고, 반죽을 세 부분으로 나눠 하나에는 코코아, 다른 하나에는 다진 호두를 넣어 각각 180°C에서 15분씩 굽는다. 시럽 만들기: 설탕을 물과 함께 녹을 때까지 끓인 후 불에서 내려 럼주를 넣는다. 부수고 적시기: 각 스펀지를 대충 부수어 럼 시럽을 듬뿍 뿌린다. 초콜릿 소스 만들기: 초콜릿을 우유와 함께 중탕으로 매끄럽게 녹인다. 층 쌓기: 유리컵이나 트레이에 플레인, 코코아, 호두 스펀지를 번갈아 쌓으며 각 층에 따뜻한 초콜릿 소스를 뿌린다. 크림으로 마무리: 크림을 단단하게 휘핑해 위에 듬뿍 올린다. 장식: 제공 전 설탕에 절인 체리와 간 초콜릿으로 장식하고 차갑게 낸다."
+  },
+  "originText": {
+    "ro": "Găluștele de Somló poartă numele Muntelui Somló din vestul Ungariei, o regiune vulcanică renumită pentru viile sale, deși legătura exactă dintre desert și munte rămâne neclară — unele povești spun că a fost creat de un chelner care voia să omagieze regiunea vinicolă. Desertul a fost inventat în anii 1950 la restaurantul Gundel din Budapesta, una dintre cele mai prestigioase instituții culinare ale țării, de către șeful patiser Károly Gollerits.\n\nSpre deosebire de multe prăjituri cu straturi tăiate ordonat, găluștele de Somló se servesc tradițional în forma lor naturală, dezordonată — un amestec generos de blat sfărâmat, sirop de rom, sos de ciocolată și frișcă, aranjat în pahar sau farfurie adâncă. Textura contrastantă și combinația de arome au făcut din acest desert unul dintre cele mai iubite din bucătăria ungurească modernă.",
+    "en": "Somlói galuska takes its name from Mount Somló in western Hungary, a volcanic wine region, though the exact link between the dessert and the mountain remains unclear — some stories say it was created by a waiter wanting to honor the wine region. The dessert was invented in the 1950s at the Gundel restaurant in Budapest, one of the country's most prestigious culinary institutions, by pastry chef Károly Gollerits.\n\nUnlike many neatly sliced layer cakes, somlói galuska is traditionally served in its natural, messy form — a generous mix of crumbled sponge, rum syrup, chocolate sauce and whipped cream, arranged in a glass or deep plate. Its contrasting textures and flavor combination have made it one of the most beloved desserts in modern Hungarian cuisine.",
+    "es": "La galuska de Somló toma su nombre del monte Somló en el oeste de Hungría, una región vinícola volcánica, aunque el vínculo exacto entre el postre y la montaña sigue sin estar claro — algunas historias dicen que fue creado por un camarero que quería honrar la región vinícola. El postre fue inventado en los años 1950 en el restaurante Gundel de Budapest, una de las instituciones culinarias más prestigiosas del país, por el chef pastelero Károly Gollerits.\n\nA diferencia de muchos pasteles de capas cortados ordenadamente, la galuska de Somló se sirve tradicionalmente en su forma natural y desordenada — una generosa mezcla de bizcocho desmenuzado, almíbar de ron, salsa de chocolate y nata montada, dispuesta en un vaso o plato hondo. Sus texturas contrastantes y su combinación de sabores lo han convertido en uno de los postres más queridos de la cocina húngara moderna.",
+    "fr": "La galuska de Somló tire son nom du mont Somló, dans l'ouest de la Hongrie, une région viticole volcanique, bien que le lien exact entre le dessert et la montagne reste flou — certaines histoires racontent qu'il a été créé par un serveur voulant honorer la région viticole. Le dessert fut inventé dans les années 1950 au restaurant Gundel à Budapest, l'une des institutions culinaires les plus prestigieuses du pays, par le chef pâtissier Károly Gollerits.\n\nContrairement à beaucoup de gâteaux à étages coupés proprement, la galuska de Somló est traditionnellement servie sous sa forme naturelle et désordonnée — un généreux mélange de génoise émiettée, de sirop de rhum, de sauce au chocolat et de crème fouettée, disposé dans un verre ou une assiette creuse. Ses textures contrastées et sa combinaison de saveurs en ont fait l'un des desserts les plus appréciés de la cuisine hongroise moderne.",
+    "de": "Somlói Galuska ist nach dem Berg Somló im Westen Ungarns benannt, einer vulkanischen Weinregion, obwohl die genaue Verbindung zwischen dem Dessert und dem Berg unklar bleibt — manche Geschichten besagen, es sei von einem Kellner erfunden worden, der die Weinregion ehren wollte. Das Dessert wurde in den 1950er Jahren im Restaurant Gundel in Budapest erfunden, einer der renommiertesten kulinarischen Institutionen des Landes, von Konditor Károly Gollerits.\n\nAnders als viele ordentlich geschnittene Schichttorten wird Somlói Galuska traditionell in seiner natürlichen, unordentlichen Form serviert — eine großzügige Mischung aus zerbröseltem Biskuit, Rumsirup, Schokoladensauce und Schlagsahne, angerichtet in einem Glas oder tiefen Teller. Seine kontrastreichen Texturen und die Geschmackskombination haben es zu einem der beliebtesten Desserts der modernen ungarischen Küche gemacht.",
+    "pt": "O somlói galuska tira o nome do Monte Somló, no oeste da Hungria, uma região vinícola vulcânica, embora a ligação exata entre a sobremesa e a montanha permaneça pouco clara — algumas histórias dizem que foi criado por um empregado de mesa que queria homenagear a região vinícola. A sobremesa foi inventada na década de 1950 no restaurante Gundel, em Budapeste, uma das instituições culinárias mais prestigiadas do país, pelo chef pasteleiro Károly Gollerits.\n\nAo contrário de muitos bolos em camadas cortados ordenadamente, o somlói galuska é tradicionalmente servido na sua forma natural e desorganizada — uma generosa mistura de pão de ló esfarelado, calda de rum, molho de chocolate e chantilly, disposta num copo ou prato fundo. As suas texturas contrastantes e a combinação de sabores tornaram-na uma das sobremesas mais amadas da cozinha húngara moderna.",
+    "ru": "Шомлойские галушки получили название от горы Шомло на западе Венгрии, вулканического винодельческого региона, хотя точная связь между десертом и горой остаётся неясной — некоторые истории гласят, что его создал официант, желавший почтить винодельческий регион. Десерт был изобретён в 1950-х годах в ресторане Gundel в Будапеште, одном из самых престижных кулинарных заведений страны, шеф-кондитером Каройем Голлеритсом.\n\nВ отличие от многих аккуратно нарезанных слоёных тортов, шомлойские галушки традиционно подаются в своей естественной, «неопрятной» форме — щедрая смесь раскрошенного бисквита, ромового сиропа, шоколадного соуса и взбитых сливок, выложенная в бокал или глубокую тарелку. Контрастные текстуры и сочетание вкусов сделали этот десерт одним из самых любимых в современной венгерской кухне.",
+    "ar": "يستمد سومليوي غالوشكا اسمه من جبل سومليو في غرب المجر، وهي منطقة نبيذ بركانية، رغم أن الصلة الدقيقة بين الحلوى والجبل لا تزال غير واضحة — تقول بعض الروايات إنها ابتُكرت على يد نادل أراد تكريم منطقة النبيذ. ابتُكرت الحلوى في خمسينيات القرن العشرين في مطعم غوندل في بودابست، أحد أرقى المؤسسات الطهوية في البلاد، على يد كبير الحلوانيين كارولي غوليريتس.\n\nخلافًا للعديد من الكعكات المتعددة الطبقات المقطعة بعناية، تُقدَّم سومليوي غالوشكا تقليديًا في شكلها الطبيعي غير المرتب — مزيج سخي من الإسفنج المفتت وشراب الروم وصلصة الشوكولاتة والكريمة المخفوقة، مرتب في كوب أو طبق عميق. جعلت قوامها المتباين ومزيج نكهاتها منها واحدة من أحب الحلويات في المطبخ المجري الحديث.",
+    "zh": "松罗蛋糕布丁得名于匈牙利西部的松罗山，一个火山葡萄酒产区，尽管这道甜点与这座山之间的确切联系仍不清楚——有些说法称它是一位服务员为致敬这片葡萄酒产区而创制的。这道甜点由甜点主厨卡罗伊·戈莱里茨于20世纪50年代在布达佩斯著名的贡德尔餐厅发明，该餐厅是全国最负盛名的餐饮机构之一。\n\n与许多整齐切片的分层蛋糕不同，松罗蛋糕布丁传统上以其自然、随性的形态呈现——将压碎的蛋糕、朗姆糖浆、巧克力酱和打发奶油慷慨地混合，盛放在杯子或深盘中。其对比鲜明的口感与风味组合，使其成为现代匈牙利菜肴中最受喜爱的甜点之一。",
+    "ja": "ショムローイ・ガルシュカは、ハンガリー西部にある火山性のワイン産地、ショムロー山にちなんで名付けられたが、このデザートと山との正確な関係は明らかになっていない――ワイン産地に敬意を表そうとしたウェイターが考案したという説もある。このデザートは1950年代、国内で最も権威ある料理施設の一つであるブダペストのグンデル・レストランで、菓子長カーロイ・ゴレリツによって発明された。\n\nきれいに切り分けられる多くの層状ケーキと異なり、ショムローイ・ガルシュカは伝統的に自然でくずれた形のまま提供される――崩したスポンジ、ラム酒シロップ、チョコレートソース、生クリームを気前よく混ぜ合わせ、グラスや深皿に盛り付ける。その対照的な食感と風味の組み合わせが、現代ハンガリー料理で最も愛されるデザートの一つにした。",
+    "hi": "सोमलोई गालुष्का का नाम पश्चिमी हंगरी के सोमलो पर्वत से लिया गया है, जो एक ज्वालामुखीय शराब क्षेत्र है, हालांकि मिठाई और पर्वत के बीच सटीक संबंध अस्पष्ट है — कुछ कहानियां कहती हैं कि इसे एक वेटर ने बनाया था जो शराब क्षेत्र को सम्मानित करना चाहता था। यह मिठाई 1950 के दशक में बुडापेस्ट के गुंडेल रेस्तरां में बनाई गई थी, जो देश के सबसे प्रतिष्ठित पाक संस्थानों में से एक है, पेस्ट्री शेफ कारोय गोलेरित्स द्वारा।\n\nकई साफ-सुथरी कटी परत वाली केक के विपरीत, सोमलोई गालुष्का पारंपरिक रूप से अपने प्राकृतिक, अव्यवस्थित रूप में परोसी जाती है — चूरा किए स्पंज, रम चाशनी, चॉकलेट सॉस और फेंटी क्रीम का भरपूर मिश्रण, गिलास या गहरी प्लेट में सजाया जाता है। इसकी विपरीत बनावट और स्वाद संयोजन ने इसे आधुनिक हंगेरियन व्यंजनों की सबसे प्रिय मिठाइयों में से एक बना दिया है।",
+    "tr": "Somlói galuska adını batı Macaristan'daki bir volkanik şarap bölgesi olan Somló Dağı'ndan alır, ancak tatlı ile dağ arasındaki tam bağlantı belirsizliğini korur — bazı hikayeler, şarap bölgesini onurlandırmak isteyen bir garson tarafından yaratıldığını söyler. Tatlı, 1950'lerde Budapeşte'deki ülkenin en prestijli mutfak kurumlarından biri olan Gundel restoranında, baş pastacı Károly Gollerits tarafından icat edildi.\n\nDüzgünce dilimlenmiş birçok katmanlı pastanın aksine, somlói galuska geleneksel olarak doğal, düzensiz haliyle servis edilir — ufalanmış pandispan, rom şerbeti, çikolata sosu ve krem şantinin bir bardak veya derin tabakta bol miktarda karıştırılmasıyla oluşur. Zıt dokuları ve lezzet kombinasyonu, onu modern Macar mutfağının en sevilen tatlılarından biri haline getirmiştir.",
+    "it": "Il somlói galuska prende il nome dal monte Somló nell'Ungheria occidentale, una regione vinicola vulcanica, sebbene il legame esatto tra il dolce e la montagna rimanga poco chiaro — alcune storie raccontano che sia stato creato da un cameriere che voleva onorare la regione vinicola. Il dolce fu inventato negli anni '50 al ristorante Gundel di Budapest, una delle istituzioni culinarie più prestigiose del paese, dallo chef pasticcere Károly Gollerits.\n\nA differenza di molte torte a strati tagliate ordinatamente, il somlói galuska viene tradizionalmente servito nella sua forma naturale e disordinata — un generoso mix di pan di spagna sbriciolato, sciroppo al rum, salsa al cioccolato e panna montata, disposto in un bicchiere o in un piatto fondo. Le sue consistenze contrastanti e la combinazione di sapori lo hanno reso uno dei dolci più amati della cucina ungherese moderna.",
+    "ko": "숌로이 갈루슈카는 헝가리 서부의 화산성 와인 산지인 숌로 산에서 이름을 따왔지만, 이 디저트와 산 사이의 정확한 연관성은 여전히 불분명하다 — 와인 산지에 경의를 표하고자 한 웨이터가 만들었다는 이야기도 있다. 이 디저트는 1950년대 부다페스트의 군델 레스토랑에서 제과장 카로이 골레리츠에 의해 발명되었으며, 이곳은 헝가리에서 가장 권위 있는 요리 기관 중 하나다.\n\n깔끔하게 잘라내는 많은 층 케이크와 달리, 숌로이 갈루슈카는 전통적으로 자연스럽고 흐트러진 형태로 제공된다 — 부순 스펀지, 럼 시럽, 초콜릿 소스, 휘핑크림을 넉넉히 섞어 유리컵이나 깊은 접시에 담아낸다. 대조적인 식감과 풍미의 조합 덕분에 현대 헝가리 요리에서 가장 사랑받는 디저트 중 하나가 되었다."
+  },
+  "meta": {
+    "time": 75,
+    "costRon": 18,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Blat sfărâmat însiropat cu rom, sos de ciocolată, frișcă și vișine confiate.",
+      "en": "Crumbled sponge soaked in rum, layered with chocolate sauce, cream and cherries.",
+      "es": "Bizcocho desmenuzado con ron, capas de salsa de chocolate, nata y guindas.",
+      "fr": "Génoise émiettée au rhum, sauce chocolat, crème fouettée et griottes.",
+      "de": "Zerbröselter Biskuit mit Rum, Schokoladensauce, Sahne und Sauerkirschen.",
+      "pt": "Pão de ló esfarelado com rum, molho de chocolate, natas e cerejas.",
+      "ru": "Раскрошенный бисквит с ромом, шоколадным соусом, сливками и вишней.",
+      "ar": "إسفنج مفتت بالروم مع صلصة الشوكولاتة والكريمة والكرز.",
+      "zh": "朗姆酒浸润的碎蛋糕，配巧克力酱、奶油和樱桃。",
+      "ja": "ラム酒染みのスポンジとチョコレートソース、生クリーム、チェリー。",
+      "hi": "रम में भीगा चूरा स्पंज, चॉकलेट सॉस, क्रीम और चेरी के साथ।",
+      "tr": "Rom şerbetli ufalanmış pandispan, çikolata sosu, krema ve vişne.",
+      "it": "Pan di spagna sbriciolato al rum con salsa al cioccolato, panna e amarene.",
+      "ko": "럼주에 적신 부순 스펀지, 초콜릿 소스, 크림, 체리."
+    }
+  }
+}

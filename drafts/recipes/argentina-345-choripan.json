@@ -1,0 +1,175 @@
+{
+  "id": 345,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Argentina", "en": "Argentina", "es": "Argentina", "fr": "Argentine", "de": "Argentinien",
+    "pt": "Argentina", "ru": "Аргентина", "ar": "الأرجنتين", "zh": "阿根廷", "ja": "アルゼンチン",
+    "hi": "अर्जेंटीना", "tr": "Arjantin", "it": "Argentina", "ko": "아르헨티나"
+  },
+  "name": {
+    "ro": "Choripán", "en": "Choripán", "es": "Choripán", "fr": "Choripán", "de": "Choripán",
+    "pt": "Choripán", "ru": "Чорипан", "ar": "تشوريبان", "zh": "阿根廷香肠三明治", "ja": "チョリパン",
+    "hi": "चोरिपान", "tr": "Choripán", "it": "Choripán", "ko": "초리판"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "Collation", "de": "Snack", "pt": "Lanche",
+    "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "軽食", "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌭", "t": "Chorizo la grătar", "d": "Cârnat proaspăt de porc, fript pe grătar până e crocant."},
+      {"icon": "🥖", "t": "Pâine crocantă", "d": "Franzelă tăiată în lung, ușor prăjită pe grătar."},
+      {"icon": "🌶️", "t": "Chimichurri obligatoriu", "d": "Sos verde din pătrunjel, usturoi, oțet și ulei."},
+      {"icon": "⚽", "t": "Mâncare de stadion", "d": "Nelipsit de la meciuri de fotbal și târguri stradale."}
+    ],
+    "en": [
+      {"icon": "🌭", "t": "Grilled chorizo", "d": "Fresh pork sausage, grilled until crisp on the outside."},
+      {"icon": "🥖", "t": "Crusty bread", "d": "A baguette split lengthwise, lightly toasted on the grill."},
+      {"icon": "🌶️", "t": "Mandatory chimichurri", "d": "Green sauce made from parsley, garlic, vinegar and oil."},
+      {"icon": "⚽", "t": "Stadium food", "d": "A staple at soccer matches and street fairs."}
+    ],
+    "es": [
+      {"icon": "🌭", "t": "Chorizo a la parrilla", "d": "Chorizo fresco de cerdo, asado hasta quedar crujiente."},
+      {"icon": "🥖", "t": "Pan crujiente", "d": "Baguette cortada a lo largo, ligeramente tostada en la parrilla."},
+      {"icon": "🌶️", "t": "Chimichurri obligatorio", "d": "Salsa verde de perejil, ajo, vinagre y aceite."},
+      {"icon": "⚽", "t": "Comida de estadio", "d": "Infaltable en los partidos de fútbol y ferias callejeras."}
+    ],
+    "fr": [
+      {"icon": "🌭", "t": "Chorizo grillé", "d": "Saucisse fraîche de porc, grillée jusqu'à être croustillante."},
+      {"icon": "🥖", "t": "Pain croustillant", "d": "Une baguette fendue en longueur, légèrement grillée."},
+      {"icon": "🌶️", "t": "Chimichurri obligatoire", "d": "Sauce verte à base de persil, d'ail, de vinaigre et d'huile."},
+      {"icon": "⚽", "t": "Nourriture de stade", "d": "Incontournable aux matchs de football et aux fêtes de rue."}
+    ],
+    "de": [
+      {"icon": "🌭", "t": "Gegrillte Chorizo", "d": "Frische Schweinswurst, knusprig gegrillt."},
+      {"icon": "🥖", "t": "Knuspriges Brot", "d": "Ein Baguette, längs aufgeschnitten, leicht auf dem Grill geröstet."},
+      {"icon": "🌶️", "t": "Obligatorisches Chimichurri", "d": "Grüne Sauce aus Petersilie, Knoblauch, Essig und Öl."},
+      {"icon": "⚽", "t": "Stadion-Essen", "d": "Ein Muss bei Fußballspielen und Straßenmärkten."}
+    ],
+    "pt": [
+      {"icon": "🌭", "t": "Chouriço grelhado", "d": "Linguiça fresca de porco, grelhada até ficar crocante."},
+      {"icon": "🥖", "t": "Pão estaladiço", "d": "Uma baguete cortada ao comprido, levemente tostada na grelha."},
+      {"icon": "🌶️", "t": "Chimichurri obrigatório", "d": "Molho verde feito de salsa, alho, vinagre e óleo."},
+      {"icon": "⚽", "t": "Comida de estádio", "d": "Presença obrigatória em jogos de futebol e feiras de rua."}
+    ],
+    "ru": [
+      {"icon": "🌭", "t": "Жареное чоризо", "d": "Свежая свиная колбаса, обжаренная до хрустящей корочки."},
+      {"icon": "🥖", "t": "Хрустящий хлеб", "d": "Багет, разрезанный вдоль, слегка поджаренный на гриле."},
+      {"icon": "🌶️", "t": "Обязательный чимичурри", "d": "Зелёный соус из петрушки, чеснока, уксуса и масла."},
+      {"icon": "⚽", "t": "Стадионная еда", "d": "Неотъемлемая часть футбольных матчей и уличных ярмарок."}
+    ],
+    "ar": [
+      {"icon": "🌭", "t": "تشوريزو مشوي", "d": "نقانق خنزير طازجة، مشوية حتى تصبح مقرمشة."},
+      {"icon": "🥖", "t": "خبز مقرمش", "d": "خبز باغيت مقطوع طوليًا، محمّص قليلًا على الشواية."},
+      {"icon": "🌶️", "t": "شيمي تشوري إلزامي", "d": "صلصة خضراء من البقدونس والثوم والخل والزيت."},
+      {"icon": "⚽", "t": "طعام الملاعب", "d": "لا غنى عنه في مباريات كرة القدم والأسواق الشعبية."}
+    ],
+    "zh": [
+      {"icon": "🌭", "t": "烤西班牙香肠", "d": "新鲜猪肉香肠，烤至外皮酥脆。"},
+      {"icon": "🥖", "t": "酥脆面包", "d": "长棍面包纵向切开，在烤架上略微烤香。"},
+      {"icon": "🌶️", "t": "必配阿根廷青酱", "d": "由欧芹、大蒜、醋和油制成的绿酱。"},
+      {"icon": "⚽", "t": "球场小吃", "d": "足球比赛和街头集市不可或缺的美食。"}
+    ],
+    "ja": [
+      {"icon": "🌭", "t": "焼きチョリソ", "d": "新鮮な豚肉ソーセージを外側がカリッとするまで焼く。"},
+      {"icon": "🥖", "t": "パリパリのパン", "d": "縦に切ったバゲットをグリルで軽く焼く。"},
+      {"icon": "🌶️", "t": "必須のチミチュリ", "d": "パセリ、にんにく、酢、油で作る緑のソース。"},
+      {"icon": "⚽", "t": "スタジアムフード", "d": "サッカーの試合や露店市場に欠かせない一品。"}
+    ],
+    "hi": [
+      {"icon": "🌭", "t": "ग्रिल किया चोरिज़ो", "d": "ताज़ा सुअर का सॉसेज, कुरकुरा होने तक ग्रिल किया गया।"},
+      {"icon": "🥖", "t": "कुरकुरी ब्रेड", "d": "लंबाई में कटी बैगेट, ग्रिल पर हल्की टोस्ट की गई।"},
+      {"icon": "🌶️", "t": "अनिवार्य चिमिचुरी", "d": "अजमोद, लहसुन, सिरका और तेल से बनी हरी चटनी।"},
+      {"icon": "⚽", "t": "स्टेडियम फूड", "d": "फुटबॉल मैचों और सड़क मेलों में हमेशा मौजूद।"}
+    ],
+    "tr": [
+      {"icon": "🌭", "t": "Izgara chorizo", "d": "Taze domuz sosisi, dışı çıtır olana kadar ızgara edilir."},
+      {"icon": "🥖", "t": "Çıtır ekmek", "d": "Uzunlamasına kesilmiş, ızgarada hafifçe kızartılmış bir baget."},
+      {"icon": "🌶️", "t": "Zorunlu chimichurri", "d": "Maydanoz, sarımsak, sirke ve yağdan yapılan yeşil sos."},
+      {"icon": "⚽", "t": "Stadyum yemeği", "d": "Futbol maçlarında ve sokak pazarlarında vazgeçilmez."}
+    ],
+    "it": [
+      {"icon": "🌭", "t": "Chorizo alla griglia", "d": "Salsiccia fresca di maiale, grigliata fino a diventare croccante."},
+      {"icon": "🥖", "t": "Pane croccante", "d": "Una baguette tagliata per il lungo, leggermente tostata sulla griglia."},
+      {"icon": "🌶️", "t": "Chimichurri obbligatorio", "d": "Salsa verde a base di prezzemolo, aglio, aceto e olio."},
+      {"icon": "⚽", "t": "Cibo da stadio", "d": "Immancabile alle partite di calcio e alle fiere di strada."}
+    ],
+    "ko": [
+      {"icon": "🌭", "t": "구운 초리소", "d": "신선한 돼지고기 소시지를 겉이 바삭해질 때까지 굽는다."},
+      {"icon": "🥖", "t": "바삭한 빵", "d": "길게 자른 바게트를 그릴에 살짝 구운 것."},
+      {"icon": "🌶️", "t": "필수 치미추리", "d": "파슬리, 마늘, 식초, 기름으로 만든 녹색 소스."},
+      {"icon": "⚽", "t": "경기장 음식", "d": "축구 경기와 길거리 시장에서 빠질 수 없는 음식."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 cârnați chorizo proaspeți", "4 franzele lungi", "1 legătură pătrunjel", "3 căței de usturoi", "100ml ulei de măsline", "3 linguri oțet de vin", "1 ardei iute roșu (opțional)", "sare", "un praf de oregano"],
+    "en": ["4 fresh chorizo sausages", "4 long bread rolls", "1 bunch parsley", "3 garlic cloves", "100ml olive oil", "3 tbsp red wine vinegar", "1 red chili pepper (optional)", "salt", "a pinch of oregano"],
+    "es": ["4 chorizos frescos", "4 panes largos", "1 manojo de perejil", "3 dientes de ajo", "100ml de aceite de oliva", "3 cdas de vinagre de vino tinto", "1 ají picante rojo (opcional)", "sal", "una pizca de orégano"],
+    "fr": ["4 chorizos frais", "4 pains longs", "1 botte de persil", "3 gousses d'ail", "100ml d'huile d'olive", "3 c. à s. de vinaigre de vin rouge", "1 piment rouge (facultatif)", "sel", "une pincée d'origan"],
+    "de": ["4 frische Chorizo-Würste", "4 lange Brötchen", "1 Bund Petersilie", "3 Knoblauchzehen", "100ml Olivenöl", "3 EL Rotweinessig", "1 rote Chilischote (optional)", "Salz", "eine Prise Oregano"],
+    "pt": ["4 chouriços frescos", "4 pães longos", "1 molho de salsa", "3 dentes de alho", "100ml de azeite", "3 c. sopa de vinagre de vinho tinto", "1 pimenta vermelha (opcional)", "sal", "uma pitada de orégão"],
+    "ru": ["4 свежие колбаски чоризо", "4 длинные булочки", "1 пучок петрушки", "3 зубчика чеснока", "100мл оливкового масла", "3 ст.л. красного винного уксуса", "1 красный перец чили (по желанию)", "соль", "щепотка орегано"],
+    "ar": ["4 نقانق تشوريزو طازجة", "4 أرغفة خبز طويلة", "حزمة بقدونس", "3 فصوص ثوم", "100مل زيت زيتون", "3 ملاعق كبيرة خل النبيذ الأحمر", "فلفل أحمر حار واحد (اختياري)", "ملح", "رشة أوريغانو"],
+    "zh": ["新鲜西班牙香肠4根", "长面包4个", "欧芹1把", "大蒜3瓣", "橄榄油100毫升", "红酒醋3汤匙", "红辣椒1个（可选）", "盐", "牛至一小撮"],
+    "ja": ["新鮮なチョリソソーセージ 4本", "細長いパン 4個", "パセリ 1束", "にんにく 3片", "オリーブオイル 100ml", "赤ワインビネガー 大さじ3", "赤唐辛子 1本（お好みで）", "塩", "オレガノ ひとつまみ"],
+    "hi": ["4 ताज़े चोरिज़ो सॉसेज", "4 लंबी ब्रेड रोल", "1 गुच्छा अजमोद", "3 लहसुन की कलियाँ", "100 मिली जैतून का तेल", "3 बड़े चम्मच रेड वाइन सिरका", "1 लाल तीखी मिर्च (वैकल्पिक)", "नमक", "एक चुटकी अजवायन"],
+    "tr": ["4 taze chorizo sosis", "4 uzun ekmek", "1 demet maydanoz", "3 diş sarımsak", "100ml zeytinyağı", "3 yemek kaşığı kırmızı şarap sirkesi", "1 kırmızı acı biber (isteğe bağlı)", "tuz", "bir tutam kekik"],
+    "it": ["4 salsicce chorizo fresche", "4 pani lunghi", "1 mazzo di prezzemolo", "3 spicchi d'aglio", "100ml di olio d'oliva", "3 cucchiai di aceto di vino rosso", "1 peperoncino rosso (opzionale)", "sale", "un pizzico di origano"],
+    "ko": ["신선한 초리소 소시지 4개", "긴 빵 4개", "파슬리 1단", "마늘 3쪽", "올리브 오일 100ml", "레드와인 식초 3큰술", "빨간 고추 1개(선택사항)", "소금", "오레가노 한 꼬집"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE CHIMICHURRI: Toacă fin pătrunjelul, usturoiul și ardeiul iute, amestecă cu ulei, oțet, sare și oregano, lasă la macerat minimum 30 minute. FRIGERE CÂRNAȚI: Frige cârnații chorizo pe grătar la foc mediu, întorcând des, 15-20 minute până sunt bine pătrunși și crocanți la exterior. PRĂJIRE PÂINE: Taie franzelele pe lungime, fără a le separa complet, și prăjește-le ușor pe grătar. TĂIERE CÂRNAȚI: Taie fiecare cârnat pe lungime, aproape până la capăt, pentru a se deschide plat. ASAMBLARE: Așază cârnatul deschis în interiorul pâinii prăjite. ADĂUGARE CHIMICHURRI: Toarnă generos chimichurri deasupra cârnatului. SERVIRE: Servește imediat, cât pâinea și cârnatul sunt încă calde.",
+    "en": "MAKE CHIMICHURRI: Finely chop the parsley, garlic and chili pepper, mix with oil, vinegar, salt and oregano, let macerate for at least 30 minutes. GRILL SAUSAGES: Grill the chorizo sausages over medium heat, turning often, for 15-20 minutes until cooked through and crisp outside. TOAST BREAD: Slice the rolls lengthwise, without fully separating them, and toast lightly on the grill. SPLIT SAUSAGES: Cut each sausage lengthwise, almost to the end, so it opens flat. ASSEMBLE: Place the opened sausage inside the toasted roll. ADD CHIMICHURRI: Spoon chimichurri generously over the sausage. SERVE: Serve immediately, while the bread and sausage are still warm.",
+    "es": "PREPARAR EL CHIMICHURRI: Pica finamente el perejil, el ajo y el ají, mezcla con aceite, vinagre, sal y orégano, deja macerar al menos 30 minutos. ASAR LOS CHORIZOS: Asa los chorizos a la parrilla a fuego medio, dándoles vuelta a menudo, 15-20 minutos hasta que estén bien cocidos y crujientes por fuera. TOSTAR EL PAN: Corta los panes a lo largo, sin separarlos completamente, y tuéstalos ligeramente en la parrilla. ABRIR LOS CHORIZOS: Corta cada chorizo a lo largo, casi hasta el final, para que se abra plano. MONTAR: Coloca el chorizo abierto dentro del pan tostado. AÑADIR CHIMICHURRI: Vierte generosamente chimichurri sobre el chorizo. SERVIR: Sirve de inmediato, mientras el pan y el chorizo aún están calientes.",
+    "fr": "PRÉPARER LE CHIMICHURRI: Hachez finement le persil, l'ail et le piment, mélangez avec l'huile, le vinaigre, le sel et l'origan, laissez macérer au moins 30 minutes. GRILLER LES SAUCISSES: Faites griller les chorizos à feu moyen, en les retournant souvent, 15-20 minutes jusqu'à ce qu'ils soient bien cuits et croustillants à l'extérieur. GRILLER LE PAIN: Coupez les pains en longueur, sans les séparer complètement, et faites-les griller légèrement. OUVRIR LES SAUCISSES: Coupez chaque saucisse en longueur, presque jusqu'au bout, pour qu'elle s'ouvre à plat. MONTER: Placez la saucisse ouverte à l'intérieur du pain grillé. AJOUTER LE CHIMICHURRI: Versez généreusement le chimichurri sur la saucisse. SERVIR: Servez immédiatement, pendant que le pain et la saucisse sont encore chauds.",
+    "de": "CHIMICHURRI ZUBEREITEN: Petersilie, Knoblauch und Chili fein hacken, mit Öl, Essig, Salz und Oregano vermischen, mindestens 30 Minuten ziehen lassen. WÜRSTE GRILLEN: Die Chorizo-Würste bei mittlerer Hitze grillen, oft wenden, 15-20 Minuten bis sie durchgegart und außen knusprig sind. BROT RÖSTEN: Die Brötchen längs aufschneiden, ohne sie vollständig zu trennen, und leicht auf dem Grill rösten. WÜRSTE AUFSCHNEIDEN: Jede Wurst längs, fast bis zum Ende, aufschneiden, damit sie sich flach öffnet. ZUSAMMENSETZEN: Die geöffnete Wurst in das geröstete Brötchen legen. CHIMICHURRI HINZUFÜGEN: Großzügig Chimichurri über die Wurst löffeln. SERVIEREN: Sofort servieren, solange Brot und Wurst noch warm sind.",
+    "pt": "PREPARAR O CHIMICHURRI: Pique finamente a salsa, o alho e a pimenta, misture com azeite, vinagre, sal e orégão, deixe macerar pelo menos 30 minutos. GRELHAR OS CHOURIÇOS: Grelhe os chouriços em lume médio, virando frequentemente, 15-20 minutos até estarem bem cozidos e crocantes por fora. TOSTAR O PÃO: Corte os pães ao comprido, sem os separar completamente, e toste ligeiramente na grelha. ABRIR OS CHOURIÇOS: Corte cada chouriço ao comprido, quase até ao fim, para abrir plano. MONTAR: Coloque o chouriço aberto dentro do pão tostado. ADICIONAR CHIMICHURRI: Regue generosamente o chouriço com chimichurri. SERVIR: Sirva imediatamente, enquanto o pão e o chouriço ainda estão quentes.",
+    "ru": "ПРИГОТОВЛЕНИЕ ЧИМИЧУРРИ: Мелко нарежьте петрушку, чеснок и перец чили, смешайте с маслом, уксусом, солью и орегано, дайте настояться минимум 30 минут. ЖАРКА КОЛБАСОК: Жарьте колбаски чоризо на среднем огне, часто переворачивая, 15-20 минут, пока не прожарятся и не станут хрустящими снаружи. ПОДЖАРКА ХЛЕБА: Разрежьте булочки вдоль, не разделяя полностью, и слегка поджарьте на гриле. РАЗРЕЗАНИЕ КОЛБАСОК: Разрежьте каждую колбаску вдоль, почти до конца, чтобы она раскрылась плоско. СБОРКА: Поместите раскрытую колбаску внутрь поджаренной булочки. ДОБАВЛЕНИЕ ЧИМИЧУРРИ: Щедро полейте колбаску чимичурри. ПОДАЧА: Подавайте немедленно, пока хлеб и колбаска ещё тёплые.",
+    "ar": "تحضير الشيمي تشوري: افرم البقدونس والثوم والفلفل الحار ناعمًا، اخلطه مع الزيت والخل والملح والأوريغانو، اتركه ينقع لمدة 30 دقيقة على الأقل. شوي النقانق: اشوِ نقانق التشوريزو على نار متوسطة، مع التقليب كثيرًا، لمدة 15-20 دقيقة حتى تنضج تمامًا وتصبح مقرمشة من الخارج. تحميص الخبز: قطّع الأرغفة طوليًا دون فصلها تمامًا وحمّصها قليلًا على الشواية. فتح النقانق: قطّع كل نقانق طوليًا تقريبًا حتى النهاية ليفتح بشكل مسطح. التجميع: ضع النقانق المفتوحة داخل الخبز المحمّص. إضافة الشيمي تشوري: اسكب الشيمي تشوري بسخاء فوق النقانق. التقديم: قدّمها فورًا، بينما الخبز والنقانق لا يزالان دافئين.",
+    "zh": "制作阿根廷青酱：将欧芹、大蒜和辣椒切碎，与油、醋、盐和牛至混合，静置至少30分钟入味。烤香肠：将西班牙香肠中火烤15-20分钟，勤翻动，至熟透且外皮酥脆。烤面包：将面包纵向切开但不完全分离，在烤架上略微烤香。剖开香肠：将每根香肠纵向几乎切到底，使其展开成扁平状。组装：将展开的香肠放入烤好的面包中。加青酱：慷慨地将阿根廷青酱淋在香肠上。装盘：趁面包和香肠还温热时立即食用。",
+    "ja": "チミチュリを作る：パセリ、にんにく、唐辛子を細かく刻み、油、酢、塩、オレガノと混ぜ、最低30分置いてなじませる。ソーセージを焼く：チョリソを中火で15〜20分、頻繁に返しながら中まで火が通り外側がカリッとするまで焼く。パンを焼く：パンを縦に完全に切り離さずに切り込みを入れ、グリルで軽く焼く。ソーセージを開く：各ソーセージを端近くまで縦に切り、平らに開く。組み立てる：開いたソーセージを焼いたパンに挟む。チミチュリをかける：ソーセージにたっぷりチミチュリをかける。盛り付け：パンとソーセージが温かいうちにすぐに提供する。",
+    "hi": "चिमिचुरी बनाएं: अजमोद, लहसुन और मिर्च को बारीक काटें, तेल, सिरका, नमक और अजवायन के साथ मिलाएं, कम से कम 30 मिनट भीगने दें। सॉसेज ग्रिल करें: चोरिज़ो सॉसेज को मध्यम आँच पर, बार-बार पलटते हुए, 15-20 मिनट ग्रिल करें जब तक अच्छी तरह पक न जाए और बाहर से कुरकुरा न हो जाए। ब्रेड टोस्ट करें: ब्रेड को लंबाई में काटें, पूरी तरह अलग किए बिना, और ग्रिल पर हल्का टोस्ट करें। सॉसेज खोलें: हर सॉसेज को लंबाई में लगभग अंत तक काटें ताकि वह चपटा खुल जाए। असेंबल करें: खुले सॉसेज को टोस्ट की गई ब्रेड के अंदर रखें। चिमिचुरी डालें: सॉसेज पर भरपूर चिमिचुरी डालें। परोसें: तुरंत परोसें, जब ब्रेड और सॉसेज अभी भी गरम हों।",
+    "tr": "CHIMICHURRI HAZIRLAYIN: Maydanoz, sarımsak ve biberi ince doğrayın, yağ, sirke, tuz ve kekikle karıştırın, en az 30 dakika demlenmeye bırakın. SOSİSLERİ IZGARA YAPIN: Chorizo sosisleri orta ateşte, sık sık çevirerek, iyice pişip dışı çıtır olana kadar 15-20 dakika ızgara yapın. EKMEĞİ KIZARTIN: Ekmekleri tamamen ayırmadan boylamasına kesin ve ızgarada hafifçe kızartın. SOSİSLERİ AÇIN: Her sosisi düz açılacak şekilde neredeyse sonuna kadar boylamasına kesin. BİRLEŞTİRİN: Açılan sosisi kızarmış ekmeğin içine yerleştirin. CHIMICHURRI EKLEYİN: Sosisin üzerine bolca chimichurri dökün. SERVİS EDİN: Ekmek ve sosis hâlâ sıcakken hemen servis edin.",
+    "it": "PREPARARE IL CHIMICHURRI: Tritate finemente prezzemolo, aglio e peperoncino, mescolate con olio, aceto, sale e origano, lasciate macerare almeno 30 minuti. GRIGLIARE LE SALSICCE: Grigliate i chorizo a fuoco medio, girando spesso, per 15-20 minuti finché sono ben cotti e croccanti fuori. TOSTARE IL PANE: Tagliate i panini per il lungo, senza separarli completamente, e tostateli leggermente sulla griglia. APRIRE LE SALSICCE: Tagliate ogni salsiccia per il lungo, quasi fino alla fine, per aprirla in piano. COMPORRE: Mettete la salsiccia aperta dentro il panino tostato. AGGIUNGERE IL CHIMICHURRI: Versate generosamente il chimichurri sulla salsiccia. SERVIRE: Servite subito, mentre pane e salsiccia sono ancora caldi.",
+    "ko": "치미추리 만들기: 파슬리, 마늘, 고추를 잘게 다져 기름, 식초, 소금, 오레가노와 섞어 최소 30분간 재운다. 소시지 굽기: 초리소를 중불에서 자주 뒤집으며 15~20분간 속까지 익고 겉이 바삭해질 때까지 굽는다. 빵 굽기: 빵을 완전히 분리하지 않고 길게 갈라 그릴에서 살짝 굽는다. 소시지 가르기: 각 소시지를 끝부분까지 거의 길게 갈라 평평하게 펼친다. 조립하기: 펼친 소시지를 구운 빵 안에 넣는다. 치미추리 얹기: 소시지 위에 치미추리를 듬뿍 뿌린다. 담아내기: 빵과 소시지가 아직 따뜻할 때 바로 낸다."
+  },
+  "originText": {
+    "ro": "Choripán este sandvișul definitoriu al culturii culinare stradale argentiniene, un simbol al modului simplu, dar generos, de a mânca între prieteni. Numele combină chorizo și pan, cuvântul spaniol pentru pâine, reflectând simplitatea sa desăvârșită: un cârnat proaspăt de porc, fript la grătar, așezat într-o franzelă crocantă.\n\nDeși variantele sale se găsesc și în Uruguay și Chile, choripán-ul argentinian s-a legat indisolubil de cultura fotbalului și a asado-ului de duminică, fiind adesea prima gustare servită înainte ca restul cărnii să fie gata pe grătar. Vânzătorii ambulanți de choripán, cu grătarele lor fumegânde instalate lângă stadioane, fac parte din peisajul urban al oricărui oraș argentinian în zilele de meci.",
+    "en": "Choripán is the defining sandwich of Argentine street food culture, a symbol of the simple yet generous way of eating among friends. The name combines chorizo and pan, Spanish for bread, reflecting its perfect simplicity: a fresh pork sausage, grilled, placed inside a crusty roll.\n\nWhile variations are found in Uruguay and Chile too, the Argentine choripán has become inseparable from football culture and the Sunday asado, often serving as the first snack while the rest of the meat is still on the grill. Street vendors selling choripán, with their smoking grills set up near stadiums, are part of the urban landscape of any Argentine city on match days.",
+    "es": "El choripán es el sándwich definitorio de la cultura callejera argentina, un símbolo de la manera simple pero generosa de comer entre amigos. El nombre combina chorizo y pan, reflejando su perfecta simplicidad: un chorizo fresco de cerdo, asado a la parrilla, colocado dentro de un pan crujiente.\n\nAunque también se encuentran variantes en Uruguay y Chile, el choripán argentino se ha vuelto inseparable de la cultura del fútbol y el asado dominical, sirviendo a menudo como el primer bocado mientras el resto de la carne sigue en la parrilla. Los vendedores callejeros de choripán, con sus parrillas humeantes instaladas cerca de los estadios, forman parte del paisaje urbano de cualquier ciudad argentina en días de partido.",
+    "fr": "Le choripán est le sandwich emblématique de la culture de la street food argentine, un symbole de la manière simple mais généreuse de manger entre amis. Le nom combine chorizo et pan, pain en espagnol, reflétant sa parfaite simplicité : une saucisse fraîche de porc, grillée, placée dans un pain croustillant.\n\nBien que des variantes existent aussi en Uruguay et au Chili, le choripán argentin est devenu indissociable de la culture du football et de l'asado du dimanche, servant souvent de première collation avant que le reste de la viande ne soit prêt sur le gril. Les vendeurs ambulants de choripán, avec leurs grils fumants installés près des stades, font partie du paysage urbain de toute ville argentine les jours de match.",
+    "de": "Choripán ist das prägende Sandwich der argentinischen Street-Food-Kultur, ein Symbol für die einfache, aber großzügige Art, unter Freunden zu essen. Der Name kombiniert Chorizo und Pan, Spanisch für Brot, und spiegelt seine perfekte Einfachheit wider: eine frische Schweinswurst, gegrillt, in ein knuspriges Brötchen gelegt.\n\nWährend auch Varianten in Uruguay und Chile zu finden sind, ist das argentinische Choripán untrennbar mit der Fußballkultur und dem sonntäglichen Asado verbunden geworden, oft als erster Snack serviert, während der Rest des Fleisches noch auf dem Grill ist. Straßenverkäufer von Choripán mit ihren rauchenden Grills in der Nähe von Stadien gehören an Spieltagen zum Stadtbild jeder argentinischen Stadt.",
+    "pt": "O choripán é o sanduíche definidor da cultura de comida de rua argentina, um símbolo da forma simples mas generosa de comer entre amigos. O nome combina chouriço e pan, pão em espanhol, refletindo a sua perfeita simplicidade: uma linguiça fresca de porco, grelhada, colocada dentro de um pão estaladiço.\n\nEmbora também existam variantes no Uruguai e no Chile, o choripán argentino tornou-se inseparável da cultura do futebol e do assado de domingo, servindo frequentemente como o primeiro lanche enquanto o resto da carne ainda está na grelha. Os vendedores ambulantes de choripán, com as suas grelhas fumegantes instaladas perto dos estádios, fazem parte da paisagem urbana de qualquer cidade argentina em dias de jogo.",
+    "ru": "Чорипан — определяющий сэндвич аргентинской уличной кулинарной культуры, символ простого, но щедрого способа есть среди друзей. Название сочетает чоризо и пан, испанское слово для хлеба, отражая его совершенную простоту: свежая свиная колбаса, обжаренная на гриле, помещённая внутрь хрустящей булочки.\n\nХотя вариации встречаются также в Уругвае и Чили, аргентинский чорипан стал неразрывно связан с футбольной культурой и воскресным асадо, часто служа первой закуской, пока остальное мясо ещё готовится на гриле. Уличные торговцы чорипаном с дымящимися грилями, установленными у стадионов, — часть городского пейзажа любого аргентинского города в дни матчей.",
+    "ar": "التشوريبان هو الساندويتش المميز لثقافة الطعام الشعبي الأرجنتيني، رمز للطريقة البسيطة والسخية في الأكل بين الأصدقاء. يجمع الاسم بين تشوريزو وبان، وهي الكلمة الإسبانية للخبز، مما يعكس بساطته المثالية: نقانق خنزير طازجة مشوية، توضع داخل خبز مقرمش.\n\nرغم وجود اختلافات في الأوروغواي وتشيلي أيضًا، أصبح التشوريبان الأرجنتيني لا ينفصل عن ثقافة كرة القدم وأسادو الأحد، حيث يُقدَّم غالبًا كأول وجبة خفيفة بينما لا يزال باقي اللحم على الشواية. باعة التشوريبان المتجولون، بشواياتهم المدخنة القريبة من الملاعب، جزء من المشهد الحضري لأي مدينة أرجنتينية في أيام المباريات.",
+    "zh": "初里潘是阿根廷街头美食文化的标志性三明治，象征着朋友间简单却慷慨的饮食方式。这个名字结合了chorizo（香肠）和pan，西班牙语中的面包一词，体现了其完美的简约：新鲜猪肉香肠烤制后夹入酥脆的面包中。\n\n尽管乌拉圭和智利也有类似的变体，阿根廷的初里潘已与足球文化和周日烤肉密不可分，常作为其余肉类仍在烤架上时的第一道小吃。街头小贩推着冒烟的烤架在体育场附近售卖初里潘，成为比赛日阿根廷任何城市街景的一部分。",
+    "ja": "チョリパンはアルゼンチンのストリートフード文化を象徴するサンドイッチであり、友人同士で食事をするシンプルながらも気前の良い方法の象徴である。その名前はチョリソとパン（スペイン語でパン）を組み合わせたもので、新鮮な豚肉ソーセージを焼いてパリパリのパンに挟むという完璧なシンプルさを反映している。\n\nウルグアイやチリにもバリエーションがあるが、アルゼンチンのチョリパンはサッカー文化や日曜のアサードと切り離せない存在となり、他の肉がまだグリルにある間の最初の軽食として提供されることが多い。スタジアム近くに煙を上げるグリルを設置したチョリパンの露天商は、試合日のアルゼンチンのどの都市でも街の風景の一部である。",
+    "hi": "चोरिपान अर्जेंटीनी स्ट्रीट फूड संस्कृति का प्रमुख सैंडविच है, दोस्तों के बीच खाने के सरल लेकिन उदार तरीके का प्रतीक। नाम चोरिज़ो और पान को जोड़ता है, जो स्पेनिश में ब्रेड के लिए शब्द है, जो इसकी पूर्ण सादगी को दर्शाता है: एक ताज़ा सुअर का सॉसेज, ग्रिल किया गया, कुरकुरी ब्रेड के अंदर रखा गया।\n\nहालांकि उरुग्वे और चिली में भी इसके रूप पाए जाते हैं, अर्जेंटीनी चोरिपान फुटबॉल संस्कृति और रविवार के आसादो से अविभाज्य हो गया है, अक्सर पहले नाश्ते के रूप में परोसा जाता है जबकि बाकी मांस अभी भी ग्रिल पर होता है। स्टेडियमों के पास धुआं छोड़ते ग्रिल लगाए चोरिपान बेचने वाले सड़क विक्रेता, मैच के दिनों में किसी भी अर्जेंटीनी शहर के शहरी परिदृश्य का हिस्सा हैं।",
+    "tr": "Choripán, Arjantin sokak yemeği kültürünün tanımlayıcı sandviçidir, arkadaşlar arasında basit ama cömert yeme biçiminin simgesidir. Ad, chorizo ve İspanyolcada ekmek anlamına gelen pan kelimelerini birleştirir, mükemmel basitliğini yansıtır: taze bir domuz sosisi, ızgarada pişirilmiş, çıtır bir ekmeğin içine yerleştirilmiş.\n\nUruguay ve Şili'de de varyasyonları bulunsa da, Arjantin choripánı futbol kültürü ve pazar asadosundan ayrılmaz hale gelmiştir, genellikle etin geri kalanı hâlâ ızgaradayken ilk atıştırmalık olarak servis edilir. Stadyumların yakınında kurulan tüten ızgaralarıyla choripán satan sokak satıcıları, maç günlerinde her Arjantin şehrinin kentsel manzarasının bir parçasıdır.",
+    "it": "Il choripán è il panino simbolo della cultura dello street food argentino, un simbolo del modo semplice ma generoso di mangiare tra amici. Il nome combina chorizo e pan, pane in spagnolo, riflettendo la sua perfetta semplicità: una salsiccia fresca di maiale, grigliata, posta all'interno di un panino croccante.\n\nSebbene esistano varianti anche in Uruguay e Cile, il choripán argentino è diventato inseparabile dalla cultura del calcio e dall'asado domenicale, servendo spesso come primo spuntino mentre il resto della carne è ancora sulla griglia. I venditori ambulanti di choripán, con le loro griglie fumanti installate vicino agli stadi, fanno parte del paesaggio urbano di qualsiasi città argentina nei giorni di partita.",
+    "ko": "초리판은 아르헨티나 길거리 음식 문화를 대표하는 샌드위치로, 친구들과 함께하는 소박하지만 넉넉한 식사 방식을 상징한다. 이름은 초리소와 스페인어로 빵을 뜻하는 판을 합친 것으로, 신선한 돼지고기 소시지를 구워 바삭한 빵 안에 넣는다는 완벽한 단순함을 반영한다.\n\n우루과이와 칠레에도 변형이 있지만, 아르헨티나의 초리판은 축구 문화와 일요일의 아사도와 떼려야 뗄 수 없는 존재가 되었으며, 나머지 고기가 아직 그릴에 있는 동안 첫 번째 간식으로 제공되는 경우가 많다. 경기장 근처에 연기 나는 그릴을 설치하고 초리판을 파는 노점상들은 경기가 있는 날이면 아르헨티나 어느 도시에서나 볼 수 있는 도시 풍경의 일부다."
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 12,
+    "tags": ["quick"],
+    "desc": {
+      "ro": "Cârnat de porc la grătar în franzelă crocantă, cu sos verde chimichurri.",
+      "en": "Grilled pork sausage in a crusty roll, topped with green chimichurri sauce.",
+      "es": "Chorizo asado en pan crujiente, cubierto con salsa verde chimichurri.",
+      "fr": "Saucisse de porc grillée dans un pain croustillant, avec sauce verte chimichurri.",
+      "de": "Gegrillte Schweinswurst im knusprigen Brötchen, mit grüner Chimichurri-Sauce.",
+      "pt": "Chouriço grelhado em pão estaladiço, coberto com molho verde chimichurri.",
+      "ru": "Жареная свиная колбаса в хрустящей булочке с зелёным соусом чимичурри.",
+      "ar": "نقانق خنزير مشوية في خبز مقرمش، مع صلصة الشيمي تشوري الخضراء.",
+      "zh": "烤猪肉香肠夹入酥脆面包，配绿色阿根廷青酱。",
+      "ja": "焼き豚ソーセージをパリパリのパンに挟み、緑のチミチュリソースをかけたもの。",
+      "hi": "कुरकुरी ब्रेड में ग्रिल किया सुअर का सॉसेज, हरी चिमिचुरी चटनी के साथ।",
+      "tr": "Çıtır ekmekte ızgara domuz sosisi, yeşil chimichurri sosuyla.",
+      "it": "Salsiccia di maiale grigliata in pane croccante, con salsa verde chimichurri.",
+      "ko": "바삭한 빵에 넣은 구운 돼지고기 소시지, 녹색 치미추리 소스를 곁들임."
+    }
+  }
+}

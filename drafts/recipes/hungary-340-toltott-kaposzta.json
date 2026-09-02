@@ -1,0 +1,180 @@
+{
+  "id": 340,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Ungaria", "en": "Hungary", "es": "Hungría", "fr": "Hongrie", "de": "Ungarn",
+    "pt": "Hungria", "ru": "Венгрия", "ar": "المجر", "zh": "匈牙利", "ja": "ハンガリー",
+    "hi": "हंगरी", "tr": "Macaristan", "it": "Ungheria", "ko": "헝가리"
+  },
+  "name": {
+    "ro": "Sarmale ungurești (Töltött Káposzta)", "en": "Töltött Káposzta (Hungarian Stuffed Cabbage)",
+    "es": "Töltött Káposzta (Repollo relleno húngaro)", "fr": "Töltött Káposzta (Chou farci hongrois)",
+    "de": "Töltött Káposzta (Ungarische Krautwickel)", "pt": "Töltött Káposzta (Couve recheada húngara)",
+    "ru": "Тёльтётт капоста (Венгерская голубцы)", "ar": "تولتوت كابوستا (ملفوف محشو مجري)",
+    "zh": "匈牙利卷心菜卷", "ja": "トルテット・カポスタ（ハンガリー風ロールキャベツ）",
+    "hi": "टोल्तोत काप्रोस्ता (हंगेरियन भरवां पत्तागोभी)", "tr": "Töltött Káposzta (Macar Lahana Sarması)",
+    "it": "Töltött Káposzta (Cavolo ripieno ungherese)", "ko": "퇼퇴트 카포스타 (헝가리식 양배추 롤)"
+  },
+  "category": {
+    "ro": "Fel principal", "en": "Main course", "es": "Plato principal", "fr": "Plat principal", "de": "Hauptgericht",
+    "pt": "Prato principal", "ru": "Основное блюдо", "ar": "الطبق الرئيسي", "zh": "主菜", "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन", "tr": "Ana yemek", "it": "Piatto principale", "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥬", "t": "Varză murată", "d": "Foile de varză murată dau un gust acrișor caracteristic."},
+      {"icon": "🍖", "t": "Umplutură de carne", "d": "Amestec de carne tocată de porc, orez și boia."},
+      {"icon": "🥄", "t": "Smântână deasupra", "d": "Se servește tradițional cu smântână grasă și pâine."},
+      {"icon": "🍲", "t": "Gătită la oală", "d": "Fierbe încet ore în șir pentru arome adânci."}
+    ],
+    "en": [
+      {"icon": "🥬", "t": "Pickled cabbage", "d": "Fermented cabbage leaves give a characteristic tangy taste."},
+      {"icon": "🍖", "t": "Meat filling", "d": "A mix of minced pork, rice and paprika."},
+      {"icon": "🥄", "t": "Topped with sour cream", "d": "Traditionally served with rich sour cream and bread."},
+      {"icon": "🍲", "t": "Slow-cooked in a pot", "d": "Simmers for hours for deep, layered flavor."}
+    ],
+    "es": [
+      {"icon": "🥬", "t": "Col fermentada", "d": "Las hojas de col fermentada dan un sabor ácido característico."},
+      {"icon": "🍖", "t": "Relleno de carne", "d": "Una mezcla de cerdo picado, arroz y pimentón."},
+      {"icon": "🥄", "t": "Con crema agria encima", "d": "Se sirve tradicionalmente con crema agria y pan."},
+      {"icon": "🍲", "t": "Cocinada a fuego lento", "d": "Se cuece durante horas para un sabor profundo."}
+    ],
+    "fr": [
+      {"icon": "🥬", "t": "Chou fermenté", "d": "Les feuilles de chou fermenté donnent un goût acidulé caractéristique."},
+      {"icon": "🍖", "t": "Farce de viande", "d": "Un mélange de porc haché, de riz et de paprika."},
+      {"icon": "🥄", "t": "Nappé de crème aigre", "d": "Traditionnellement servi avec de la crème aigre et du pain."},
+      {"icon": "🍲", "t": "Mijoté longuement", "d": "Mijote pendant des heures pour une saveur profonde."}
+    ],
+    "de": [
+      {"icon": "🥬", "t": "Sauerkraut", "d": "Fermentierte Krautblätter geben einen charakteristischen säuerlichen Geschmack."},
+      {"icon": "🍖", "t": "Fleischfüllung", "d": "Eine Mischung aus Schweinehack, Reis und Paprika."},
+      {"icon": "🥄", "t": "Mit Sauerrahm", "d": "Traditionell mit reichhaltigem Sauerrahm und Brot serviert."},
+      {"icon": "🍲", "t": "Langsam im Topf gegart", "d": "Köchelt stundenlang für tiefes, vielschichtiges Aroma."}
+    ],
+    "pt": [
+      {"icon": "🥬", "t": "Couve fermentada", "d": "As folhas de couve fermentada dão um sabor ácido característico."},
+      {"icon": "🍖", "t": "Recheio de carne", "d": "Uma mistura de porco picado, arroz e colorau."},
+      {"icon": "🥄", "t": "Coberto com natas azedas", "d": "Servido tradicionalmente com natas azedas e pão."},
+      {"icon": "🍲", "t": "Cozinhado lentamente na panela", "d": "Cozinha por horas para um sabor profundo."}
+    ],
+    "ru": [
+      {"icon": "🥬", "t": "Квашеная капуста", "d": "Ферментированные листья капусты придают характерный кисловатый вкус."},
+      {"icon": "🍖", "t": "Мясная начинка", "d": "Смесь фарша из свинины, риса и паприки."},
+      {"icon": "🥄", "t": "Со сметаной сверху", "d": "Традиционно подаётся с жирной сметаной и хлебом."},
+      {"icon": "🍲", "t": "Долго тушится в кастрюле", "d": "Томится часами для глубокого, насыщенного вкуса."}
+    ],
+    "ar": [
+      {"icon": "🥬", "t": "ملفوف مخلل", "d": "أوراق الملفوف المخمرة تمنح نكهة حامضة مميزة."},
+      {"icon": "🍖", "t": "حشوة اللحم", "d": "خليط من لحم الخنزير المفروم والأرز والبابريكا."},
+      {"icon": "🥄", "t": "مع القشدة الحامضة فوقها", "d": "تُقدَّم تقليديًا مع قشدة حامضة غنية وخبز."},
+      {"icon": "🍲", "t": "تُطهى ببطء في القدر", "d": "تُطهى لساعات للحصول على نكهة عميقة."}
+    ],
+    "zh": [
+      {"icon": "🥬", "t": "腌卷心菜", "d": "发酵的卷心菜叶带来独特的酸味。"},
+      {"icon": "🍖", "t": "肉馅", "d": "猪肉末、米饭和红椒粉的混合馅料。"},
+      {"icon": "🥄", "t": "配酸奶油", "d": "传统上搭配浓郁酸奶油和面包食用。"},
+      {"icon": "🍲", "t": "锅中慢炖", "d": "炖煮数小时以获得层次丰富的浓郁风味。"}
+    ],
+    "ja": [
+      {"icon": "🥬", "t": "発酵キャベツ", "d": "発酵させたキャベツの葉が特徴的な酸味を生む。"},
+      {"icon": "🍖", "t": "肉の詰め物", "d": "豚ひき肉、米、パプリカを混ぜた具材。"},
+      {"icon": "🥄", "t": "サワークリームをのせて", "d": "伝統的に濃厚なサワークリームとパンを添えて食べる。"},
+      {"icon": "🍲", "t": "鍋でじっくり煮込む", "d": "何時間も煮込んで深い味わいを生み出す。"}
+    ],
+    "hi": [
+      {"icon": "🥬", "t": "अचारी पत्तागोभी", "d": "किण्वित पत्तागोभी के पत्ते खास खट्टा स्वाद देते हैं।"},
+      {"icon": "🍖", "t": "मांस की भराई", "d": "कीमा बनाया सुअर का मांस, चावल और पपरिका का मिश्रण।"},
+      {"icon": "🥄", "t": "ऊपर खट्टी क्रीम", "d": "पारंपरिक रूप से गाढ़ी खट्टी क्रीम और ब्रेड के साथ परोसा जाता है।"},
+      {"icon": "🍲", "t": "बर्तन में धीमी आँच पर पका", "d": "गहरे स्वाद के लिए घंटों तक पकाया जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🥬", "t": "Turşu lahana", "d": "Fermente lahana yaprakları kendine özgü ekşi bir tat verir."},
+      {"icon": "🍖", "t": "Et harcı", "d": "Kıyılmış domuz eti, pirinç ve paprika karışımı."},
+      {"icon": "🥄", "t": "Üzerinde ekşi krema", "d": "Geleneksel olarak zengin ekşi krema ve ekmekle servis edilir."},
+      {"icon": "🍲", "t": "Tencerede yavaş pişirilir", "d": "Derin bir lezzet için saatlerce pişer."}
+    ],
+    "it": [
+      {"icon": "🥬", "t": "Cavolo fermentato", "d": "Le foglie di cavolo fermentato danno un sapore aspro caratteristico."},
+      {"icon": "🍖", "t": "Ripieno di carne", "d": "Un mix di carne di maiale macinata, riso e paprika."},
+      {"icon": "🥄", "t": "Con panna acida sopra", "d": "Servito tradizionalmente con panna acida ricca e pane."},
+      {"icon": "🍲", "t": "Cotto lentamente in pentola", "d": "Cuoce per ore per un sapore profondo e stratificato."}
+    ],
+    "ko": [
+      {"icon": "🥬", "t": "발효 양배추", "d": "발효된 양배추 잎이 특유의 새콤한 맛을 낸다."},
+      {"icon": "🍖", "t": "고기 속", "d": "다진 돼지고기, 쌀, 파프리카를 섞은 속재료."},
+      {"icon": "🥄", "t": "사워크림을 곁들여", "d": "전통적으로 진한 사워크림과 빵을 곁들여 먹는다."},
+      {"icon": "🍲", "t": "냄비에서 천천히 조리", "d": "깊은 풍미를 위해 몇 시간 동안 끓인다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1 varză murată întreagă", "500g carne tocată de porc", "100g orez", "1 ceapă", "2 linguri boia dulce", "1 ou", "200g slănină afumată", "500g varză murată tocată", "sare, piper", "300ml smântână", "cimbru"],
+    "en": ["1 whole pickled cabbage", "500g minced pork", "100g rice", "1 onion", "2 tbsp sweet paprika", "1 egg", "200g smoked bacon", "500g chopped pickled cabbage", "salt, pepper", "300ml sour cream", "thyme"],
+    "es": ["1 col fermentada entera", "500g de cerdo picado", "100g de arroz", "1 cebolla", "2 cdas de pimentón dulce", "1 huevo", "200g de panceta ahumada", "500g de col fermentada picada", "sal, pimienta", "300ml de crema agria", "tomillo"],
+    "fr": ["1 chou fermenté entier", "500g de porc haché", "100g de riz", "1 oignon", "2 c. à s. de paprika doux", "1 œuf", "200g de lard fumé", "500g de chou fermenté haché", "sel, poivre", "300ml de crème aigre", "thym"],
+    "de": ["1 ganzer eingelegter Weißkohl", "500g Schweinehack", "100g Reis", "1 Zwiebel", "2 EL süßes Paprikapulver", "1 Ei", "200g geräucherter Speck", "500g gehackter eingelegter Kohl", "Salz, Pfeffer", "300ml Sauerrahm", "Thymian"],
+    "pt": ["1 couve fermentada inteira", "500g de porco picado", "100g de arroz", "1 cebola", "2 c. sopa de colorau doce", "1 ovo", "200g de toucinho fumado", "500g de couve fermentada picada", "sal, pimenta", "300ml de natas azedas", "tomilho"],
+    "ru": ["1 целый кочан квашеной капусты", "500г свиного фарша", "100г риса", "1 луковица", "2 ст.л. сладкой паприки", "1 яйцо", "200г копчёного бекона", "500г нарезанной квашеной капусты", "соль, перец", "300мл сметаны", "тимьян"],
+    "ar": ["ملفوف مخلل كامل واحد", "500غ لحم خنزير مفروم", "100غ أرز", "بصلة واحدة", "2 ملعقة كبيرة بابريكا حلوة", "بيضة واحدة", "200غ لحم مقدد مدخن", "500غ ملفوف مخلل مفروم", "ملح، فلفل", "300مل قشدة حامضة", "زعتر بري"],
+    "zh": ["整棵腌卷心菜1个", "猪肉末500克", "米饭100克", "洋葱1个", "甜红椒粉2汤匙", "鸡蛋1个", "熏培根200克", "切碎腌卷心菜500克", "盐、胡椒", "酸奶油300毫升", "百里香"],
+    "ja": ["丸ごとの酢漬けキャベツ 1個", "豚ひき肉 500g", "米 100g", "玉ねぎ 1個", "甘いパプリカパウダー 大さじ2", "卵 1個", "スモークベーコン 200g", "刻んだ酢漬けキャベツ 500g", "塩、こしょう", "サワークリーム 300ml", "タイム"],
+    "hi": ["1 पूरी अचारी पत्तागोभी", "500 ग्राम कीमा सुअर का मांस", "100 ग्राम चावल", "1 प्याज़", "2 बड़े चम्मच मीठी पपरिका", "1 अंडा", "200 ग्राम स्मोक्ड बेकन", "500 ग्राम कटी हुई अचारी पत्तागोभी", "नमक, काली मिर्च", "300 मिली खट्टी क्रीम", "थाइम"],
+    "tr": ["1 bütün turşu lahana", "500g kıyma domuz eti", "100g pirinç", "1 soğan", "2 yemek kaşığı tatlı paprika", "1 yumurta", "200g füme pastırma", "500g doğranmış turşu lahana", "tuz, karabiber", "300ml ekşi krema", "kekik"],
+    "it": ["1 cavolo fermentato intero", "500g di carne di maiale macinata", "100g di riso", "1 cipolla", "2 cucchiai di paprika dolce", "1 uovo", "200g di pancetta affumicata", "500g di cavolo fermentato tritato", "sale, pepe", "300ml di panna acida", "timo"],
+    "ko": ["발효 양배추 통째로 1개", "다진 돼지고기 500g", "쌀 100g", "양파 1개", "단맛 파프리카 가루 2큰술", "달걀 1개", "훈제 베이컨 200g", "다진 발효 양배추 500g", "소금, 후추", "사워크림 300ml", "타임"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE UMPLUTURĂ: Amestecă carnea tocată cu orezul crud, ceapa tocată fin, boia, oul, sare și piper. FORMARE SARMALE: Desprinde foile de varză murată întreagă, umple fiecare foaie cu compoziția de carne și rulează strâns. AȘEZARE ÎN OALĂ: Tapetează fundul oalei cu varza murată tocată și felii de slănină afumată. STRATIFICARE: Așază sarmalele în straturi, alternând cu varza tocată și cimbru. FIERBERE: Adaugă apă până acoperă sarmalele și fierbe la foc mic 2 ore, fără capac la început. VERIFICARE: Gustă zeama și ajustează sarea; sarmalele sunt gata când orezul e complet fiert. SERVIRE: Servește fierbinte cu smântână din belșug deasupra.",
+    "en": "PREPARE FILLING: Mix the minced pork with raw rice, finely chopped onion, paprika, egg, salt and pepper. FORM ROLLS: Peel apart the whole pickled cabbage leaves, fill each leaf with the meat mixture and roll tightly. LINE THE POT: Line the bottom of the pot with chopped pickled cabbage and slices of smoked bacon. LAYER: Arrange the rolls in layers, alternating with chopped cabbage and thyme. SIMMER: Add water until it covers the rolls and simmer on low heat for 2 hours, uncovered at first. CHECK: Taste the broth and adjust salt; the rolls are ready when the rice is fully cooked. SERVE: Serve hot with plenty of sour cream on top.",
+    "es": "PREPARAR RELLENO: Mezcla el cerdo picado con arroz crudo, cebolla finamente picada, pimentón, huevo, sal y pimienta. FORMAR ROLLOS: Separa las hojas de col fermentada enteras, rellena cada hoja con la mezcla de carne y enrolla apretado. FORRAR LA OLLA: Cubre el fondo de la olla con col fermentada picada y lonchas de panceta ahumada. APILAR: Coloca los rollos en capas, alternando con col picada y tomillo. HERVIR: Añade agua hasta cubrir los rollos y cocina a fuego lento 2 horas, sin tapa al principio. COMPROBAR: Prueba el caldo y ajusta la sal; los rollos están listos cuando el arroz está totalmente cocido. SERVIR: Sirve caliente con abundante crema agria por encima.",
+    "fr": "PRÉPARER LA FARCE: Mélangez le porc haché avec le riz cru, l'oignon finement haché, le paprika, l'œuf, le sel et le poivre. FORMER LES ROULEAUX: Détachez les feuilles de chou fermenté entières, garnissez chaque feuille du mélange de viande et roulez fermement. TAPISSER LA MARMITE: Tapissez le fond de la marmite de chou fermenté haché et de tranches de lard fumé. EMPILER: Disposez les rouleaux en couches, en alternant avec du chou haché et du thym. MIJOTER: Ajoutez de l'eau jusqu'à couvrir les rouleaux et laissez mijoter à feu doux pendant 2 heures, sans couvercle au début. VÉRIFIER: Goûtez le bouillon et ajustez le sel; les rouleaux sont prêts quand le riz est entièrement cuit. SERVIR: Servez chaud avec beaucoup de crème aigre par-dessus.",
+    "de": "FÜLLUNG ZUBEREITEN: Das Schweinehack mit rohem Reis, fein gehackter Zwiebel, Paprika, Ei, Salz und Pfeffer vermischen. ROULADEN FORMEN: Die ganzen eingelegten Krautblätter voneinander lösen, jedes Blatt mit der Fleischmischung füllen und fest rollen. TOPF AUSLEGEN: Den Topfboden mit gehacktem eingelegtem Kraut und Scheiben von geräuchertem Speck auslegen. SCHICHTEN: Die Rouladen in Schichten anordnen, abwechselnd mit gehacktem Kraut und Thymian. KÖCHELN: Wasser hinzufügen, bis die Rouladen bedeckt sind, und bei schwacher Hitze 2 Stunden köcheln lassen, anfangs ohne Deckel. PRÜFEN: Die Brühe probieren und Salz anpassen; die Rouladen sind fertig, wenn der Reis vollständig gar ist. SERVIEREN: Heiß mit reichlich Sauerrahm servieren.",
+    "pt": "PREPARAR O RECHEIO: Misture o porco picado com arroz cru, cebola finamente picada, colorau, ovo, sal e pimenta. FORMAR OS ROLOS: Separe as folhas de couve fermentada inteiras, recheie cada folha com a mistura de carne e enrole apertado. FORRAR A PANELA: Forre o fundo da panela com couve fermentada picada e fatias de toucinho fumado. EMPILHAR: Disponha os rolos em camadas, alternando com couve picada e tomilho. FERVER: Junte água até cobrir os rolos e cozinhe em lume brando 2 horas, sem tampa no início. VERIFICAR: Prove o caldo e ajuste o sal; os rolos estão prontos quando o arroz está totalmente cozido. SERVIR: Sirva quente com bastante natas azedas por cima.",
+    "ru": "ПРИГОТОВЛЕНИЕ НАЧИНКИ: Смешайте свиной фарш с сырым рисом, мелко нарезанным луком, паприкой, яйцом, солью и перцем. ФОРМИРОВАНИЕ ГОЛУБЦОВ: Отделите целые листья квашеной капусты, начините каждый лист мясной смесью и плотно сверните. ВЫЛОЖИТЬ КАСТРЮЛЮ: Выстелите дно кастрюли нарезанной квашеной капустой и ломтиками копчёного бекона. СЛОИ: Разложите голубцы слоями, чередуя с нарезанной капустой и тимьяном. ВАРКА: Добавьте воду, чтобы она покрыла голубцы, и варите на слабом огне 2 часа, сначала без крышки. ПРОВЕРКА: Попробуйте бульон и отрегулируйте соль; голубцы готовы, когда рис полностью сварился. ПОДАЧА: Подавайте горячими с обилием сметаны сверху.",
+    "ar": "تحضير الحشوة: اخلط لحم الخنزير المفروم مع الأرز النيء والبصل المفروم ناعمًا والبابريكا والبيضة والملح والفلفل. تشكيل اللفائف: افصل أوراق الملفوف المخلل الكاملة، احشُ كل ورقة بخليط اللحم ولفّها بإحكام. تبطين القدر: بطّن قاع القدر بالملفوف المخلل المفروم وشرائح اللحم المقدد المدخن. التطبيق طبقات: رتّب اللفائف طبقات، بالتناوب مع الملفوف المفروم والزعتر البري. السلق: أضف الماء حتى يغطي اللفائف واتركها على نار هادئة لمدة ساعتين، بدون غطاء في البداية. التحقق: تذوق المرق واضبط الملح؛ تكون اللفائف جاهزة عندما ينضج الأرز تمامًا. التقديم: قدّمها ساخنة مع الكثير من القشدة الحامضة فوقها.",
+    "zh": "准备馅料：将猪肉末与生米、切碎的洋葱、红椒粉、鸡蛋、盐和胡椒混合。包卷：将整棵腌卷心菜叶片分开，每片叶子包入肉馅并卷紧。铺锅底：在锅底铺上切碎的腌卷心菜和熏培根片。分层摆放：将菜卷分层摆放，与切碎的卷心菜和百里香交替叠放。炖煮：加水没过菜卷，小火炖2小时，开始时不加盖。检查：品尝汤汁并调整咸度；当米饭完全煮熟时菜卷即成。装盘：趁热食用，上面淋上大量酸奶油。",
+    "ja": "詰め物の準備：豚ひき肉に生米、細かく刻んだ玉ねぎ、パプリカ、卵、塩、こしょうを混ぜる。ロール作り：丸ごとの酢漬けキャベツの葉を一枚ずつはがし、それぞれに肉だねを詰めてしっかり巻く。鍋の下準備：鍋底に刻んだ酢漬けキャベツとスモークベーコンのスライスを敷く。重ねる：ロールを刻んだキャベツとタイムと交互に層状に並べる。煮込む：ロールが浸るまで水を加え、最初はふたをせずに弱火で2時間煮込む。確認：スープの味を見て塩加減を調整する。米が完全に炊けたらロールの完成。盛り付け：熱いうちにたっぷりのサワークリームを添えて提供する。",
+    "hi": "भराई तैयार करें: कीमा सुअर के मांस को कच्चे चावल, बारीक कटे प्याज़, पपरिका, अंडा, नमक और काली मिर्च के साथ मिलाएं। रोल बनाएं: पूरी अचारी पत्तागोभी की पत्तियों को अलग करें, हर पत्ती में मांस मिश्रण भरें और कसकर रोल करें। बर्तन तैयार करें: बर्तन के तले में कटी हुई अचारी पत्तागोभी और स्मोक्ड बेकन के टुकड़े बिछाएं। परतें लगाएं: रोल को कटी हुई पत्तागोभी और थाइम के साथ बारी-बारी परतों में रखें। उबालें: रोल ढकने तक पानी डालें और शुरुआत में बिना ढक्कन के धीमी आँच पर 2 घंटे पकाएं। जांचें: शोरबा चखें और नमक समायोजित करें; जब चावल पूरी तरह पक जाए तो रोल तैयार हैं। परोसें: गरमागरम, ऊपर भरपूर खट्टी क्रीम के साथ परोसें।",
+    "tr": "İÇİ HAZIRLAYIN: Kıyma domuz etini çiğ pirinç, ince doğranmış soğan, paprika, yumurta, tuz ve karabiberle karıştırın. SARMA YAPIN: Bütün turşu lahana yapraklarını birbirinden ayırın, her yaprağı et karışımıyla doldurun ve sıkıca sarın. TENCEREYİ HAZIRLAYIN: Tencerenin dibini doğranmış turşu lahana ve füme pastırma dilimleriyle döşeyin. KATMANLAYIN: Sarmaları doğranmış lahana ve kekikle değiştirerek katmanlar halinde dizin. PİŞİRİN: Sarmaları örtecek kadar su ekleyin ve başlangıçta kapaksız, kısık ateşte 2 saat pişirin. KONTROL EDİN: Suyu tadın ve tuzu ayarlayın; pirinç tamamen piştiğinde sarmalar hazırdır. SERVİS EDİN: Sıcak servis edin, üzerine bolca ekşi krema ile.",
+    "it": "PREPARARE IL RIPIENO: Mescolate la carne di maiale macinata con riso crudo, cipolla tritata finemente, paprika, uovo, sale e pepe. FORMARE GLI INVOLTINI: Separate le foglie di cavolo fermentato intero, riempite ogni foglia con il composto di carne e arrotolate strette. FODERARE LA PENTOLA: Foderate il fondo della pentola con cavolo fermentato tritato e fette di pancetta affumicata. STRATIFICARE: Disponete gli involtini a strati, alternando con cavolo tritato e timo. CUOCERE: Aggiungete acqua fino a coprire gli involtini e cuocete a fuoco basso per 2 ore, senza coperchio all'inizio. CONTROLLARE: Assaggiate il brodo e regolate il sale; gli involtini sono pronti quando il riso è completamente cotto. SERVIRE: Servite caldi con abbondante panna acida sopra.",
+    "ko": "속 준비: 다진 돼지고기에 생쌀, 잘게 썬 양파, 파프리카, 달걀, 소금, 후추를 섞는다. 롤 만들기: 통째로 절인 양배추 잎을 하나씩 떼어내 각 잎에 고기 소를 채워 단단히 만다. 냄비 준비: 냄비 바닥에 다진 절인 양배추와 훈제 베이컨 조각을 깐다. 층 쌓기: 롤을 다진 양배추와 타임과 번갈아 층층이 쌓는다. 끓이기: 롤이 잠기도록 물을 붓고 처음에는 뚜껑을 덮지 않은 채 약불에서 2시간 끓인다. 확인: 국물 맛을 보고 소금을 조절한다. 쌀이 완전히 익으면 완성이다. 담아내기: 뜨거울 때 위에 사워크림을 듬뿍 올려 낸다."
+  },
+  "originText": {
+    "ro": "Töltött káposzta, sau sarmalele ungurești, sunt o rudă apropiată a sarmalelor românești, dar cu o identitate proprie puternică, marcată de folosirea exclusivă a verzei murate în locul celei proaspete. Rețeta a călătorit prin întreg bazinul carpatic odată cu conservarea prin murare a legumelor pentru iarnă, o tehnică veche de sute de ani care permitea comunităților rurale să aibă acces la varză proaspătă indiferent de sezon.\n\nCeea ce diferențiază varianta ungurească este cantitatea generoasă de boia din umplutură și obiceiul de a le găti în straturi alternate cu varza tocată și slănină afumată, creând o supă groasă în jurul sarmalelor. Se servesc tradițional cu smântână grasă și, uneori, cu cârnați afumați adăugați în oală pentru un plus de savoare.",
+    "en": "Töltött káposzta, or Hungarian stuffed cabbage, is a close relative of Romanian sarmale, but with a strong identity of its own, marked by the exclusive use of pickled cabbage instead of fresh. The recipe traveled across the whole Carpathian basin alongside the practice of pickling vegetables for winter, a centuries-old technique that let rural communities have cabbage on hand year-round.\n\nWhat sets the Hungarian version apart is the generous amount of paprika in the filling and the custom of cooking the rolls in layers alternated with chopped cabbage and smoked bacon, creating a thick soup around the rolls. It's traditionally served with rich sour cream and sometimes smoked sausage added to the pot for extra depth.",
+    "es": "Töltött káposzta, o repollo relleno húngaro, es un pariente cercano de las sarmale rumanas, pero con una identidad propia marcada por el uso exclusivo de col fermentada en lugar de fresca. La receta viajó por toda la cuenca de los Cárpatos junto con la práctica de fermentar verduras para el invierno, una técnica centenaria que permitía a las comunidades rurales tener col disponible durante todo el año.\n\nLo que distingue a la versión húngara es la generosa cantidad de pimentón en el relleno y la costumbre de cocinar los rollos en capas alternadas con col picada y panceta ahumada, creando una sopa espesa alrededor de los rollos. Tradicionalmente se sirve con crema agria abundante y a veces con embutido ahumado añadido a la olla para más profundidad.",
+    "fr": "Le töltött káposzta, ou chou farci hongrois, est un proche parent des sarmale roumains, mais avec une identité forte, marquée par l'usage exclusif du chou fermenté plutôt que frais. La recette a voyagé dans tout le bassin des Carpates avec la pratique de fermenter les légumes pour l'hiver, une technique séculaire qui permettait aux communautés rurales d'avoir du chou toute l'année.\n\nCe qui distingue la version hongroise, c'est la quantité généreuse de paprika dans la farce et l'habitude de cuire les rouleaux en couches alternées avec du chou haché et du lard fumé, créant une soupe épaisse autour des rouleaux. Il est traditionnellement servi avec une crème aigre riche et parfois de la saucisse fumée ajoutée à la marmite pour plus de profondeur.",
+    "de": "Töltött káposzta, oder ungarische Krautwickel, sind eng mit den rumänischen Sarmale verwandt, haben aber eine eigenständige Identität, geprägt durch die ausschließliche Verwendung von eingelegtem statt frischem Kraut. Das Rezept verbreitete sich im gesamten Karpatenbecken zusammen mit der Praxis, Gemüse für den Winter einzulegen — eine jahrhundertealte Technik, die ländlichen Gemeinschaften ganzjährig Zugang zu Kraut ermöglichte.\n\nWas die ungarische Version auszeichnet, ist die großzügige Menge Paprika in der Füllung und die Gewohnheit, die Rouladen in Schichten abwechselnd mit gehacktem Kraut und geräuchertem Speck zu garen, wodurch eine dicke Suppe um die Rouladen entsteht. Sie werden traditionell mit reichhaltigem Sauerrahm serviert, manchmal mit geräucherter Wurst im Topf für mehr Tiefe.",
+    "pt": "Töltött káposzta, ou couve recheada húngara, é um parente próximo das sarmale romenas, mas com identidade própria forte, marcada pelo uso exclusivo de couve fermentada em vez de fresca. A receita viajou por toda a bacia dos Cárpatos juntamente com a prática de fermentar vegetais para o inverno, uma técnica secular que permitia às comunidades rurais ter couve disponível o ano todo.\n\nO que distingue a versão húngara é a quantidade generosa de colorau no recheio e o costume de cozinhar os rolos em camadas alternadas com couve picada e toucinho fumado, criando uma sopa espessa em torno dos rolos. É tradicionalmente servido com natas azedas ricas e, por vezes, enchido fumado adicionado à panela para mais profundidade.",
+    "ru": "Тёльтётт капоста, или венгерские голубцы, — близкий родственник румынских сармале, но с сильной собственной идентичностью, отмеченной исключительным использованием квашеной, а не свежей капусты. Рецепт распространился по всему Карпатскому бассейну вместе с практикой квашения овощей на зиму — многовековой техникой, позволявшей сельским общинам иметь капусту круглый год.\n\nОтличает венгерскую версию щедрое количество паприки в начинке и обычай готовить голубцы слоями, чередуя с нарезанной капустой и копчёным беконом, создавая густой суп вокруг голубцов. Традиционно подаётся с жирной сметаной, а иногда с копчёной колбасой, добавленной в кастрюлю для дополнительной глубины вкуса.",
+    "ar": "تولتوت كابوستا، أو الملفوف المحشو المجري، هو قريب لصيق من السارمالي الروماني، لكنه يتمتع بهوية قوية خاصة به، تتميز بالاستخدام الحصري للملفوف المخلل بدلاً من الطازج. سافرت الوصفة عبر حوض الكاربات بأكمله جنبًا إلى جنب مع ممارسة تخليل الخضروات للشتاء، وهي تقنية عمرها قرون سمحت للمجتمعات الريفية بالحصول على الملفوف على مدار العام.\n\nما يميز النسخة المجرية هو الكمية السخية من البابريكا في الحشوة والعادة المتمثلة في طهي اللفائف في طبقات بالتناوب مع الملفوف المفروم واللحم المقدد المدخن، مما يخلق حساءً كثيفًا حول اللفائف. تُقدَّم تقليديًا مع قشدة حامضة غنية وأحيانًا نقانق مدخنة تُضاف إلى القدر لمزيد من العمق.",
+    "zh": "托尔特特卡波斯塔，即匈牙利卷心菜卷，是罗马尼亚酸菜卷的近亲，但拥有自己鲜明的特色，标志是完全使用腌制而非新鲜卷心菜。这道食谱随着为过冬腌制蔬菜的习俗传遍整个喀尔巴阡盆地，这项延续数百年的技艺让乡村社区全年都能吃到卷心菜。\n\n匈牙利版本的独特之处在于馅料中大量使用红椒粉，以及将菜卷与切碎的卷心菜、熏培根分层交替炖煮的习惯，从而在卷周围形成浓稠的汤汁。传统上搭配浓郁酸奶油食用，有时还会在锅中加入熏香肠以增添风味层次。",
+    "ja": "トルテット・カポスタ、つまりハンガリー風ロールキャベツは、ルーマニアのサルマーレの近縁だが、新鮮なキャベツではなく酢漬けキャベツのみを使うという強い独自性を持つ。このレシピは、冬に備えて野菜を漬け込む習慣とともにカルパティア盆地全域に広まった。これは何世紀も前からの技術で、農村の共同体が年間を通じてキャベツを手に入れられるようにするものだった。\n\nハンガリー版を際立たせているのは、詰め物にたっぷり使われるパプリカと、刻んだキャベツとスモークベーコンを交互に重ねて調理する習慣で、ロールの周りに濃厚なスープが生まれる。伝統的には濃厚なサワークリームと共に提供され、時にはさらに深みを出すために鍋にスモークソーセージが加えられることもある。",
+    "hi": "टोल्तोत काप्रोस्ता, या हंगेरियन भरवां पत्तागोभी, रोमानियाई सारमाले की करीबी रिश्तेदार है, लेकिन इसकी अपनी मजबूत पहचान है, जो ताज़ी के बजाय केवल अचारी पत्तागोभी के उपयोग से चिह्नित है। यह नुस्खा सर्दियों के लिए सब्जियों को अचार बनाने की प्रथा के साथ पूरे कार्पेथियन बेसिन में फैला, यह सदियों पुरानी तकनीक ग्रामीण समुदायों को साल भर पत्तागोभी उपलब्ध कराती थी।\n\nहंगेरियन संस्करण को जो अलग बनाता है वह है भराई में पपरिका की भरपूर मात्रा और रोल को कटी हुई पत्तागोभी और स्मोक्ड बेकन के साथ बारी-बारी परतों में पकाने की प्रथा, जो रोल के चारों ओर एक गाढ़ा सूप बनाती है। इसे परंपरागत रूप से गाढ़ी खट्टी क्रीम के साथ और कभी-कभी अतिरिक्त गहराई के लिए बर्तन में स्मोक्ड सॉसेज मिलाकर परोसा जाता है।",
+    "tr": "Töltött káposzta, yani Macar lahana sarması, Romen sarmalesinin yakın bir akrabasıdır, ancak taze yerine sadece turşu lahana kullanılmasıyla belirlenen kendine özgü güçlü bir kimliğe sahiptir. Tarif, kış için sebze turşusu yapma pratiğiyle birlikte tüm Karpat havzasında yayıldı; bu, kırsal toplulukların yıl boyunca lahanaya erişebilmesini sağlayan yüzyıllık bir tekniktir.\n\nMacar versiyonunu ayıran şey, harçtaki bol paprika miktarı ve sarmaları doğranmış lahana ve füme pastırmayla değiştirerek katmanlar halinde pişirme geleneğidir; bu da sarmaların etrafında koyu bir çorba oluşturur. Geleneksel olarak zengin ekşi kremayla ve bazen daha fazla derinlik için tencereye eklenen füme sosisle servis edilir.",
+    "it": "Il töltött káposzta, o cavolo ripieno ungherese, è un parente stretto delle sarmale rumene, ma con una forte identità propria, segnata dall'uso esclusivo del cavolo fermentato invece di quello fresco. La ricetta ha viaggiato in tutto il bacino dei Carpazi insieme alla pratica di fermentare le verdure per l'inverno, una tecnica secolare che permetteva alle comunità rurali di avere cavolo disponibile tutto l'anno.\n\nCiò che distingue la versione ungherese è la generosa quantità di paprika nel ripieno e l'abitudine di cuocere gli involtini a strati alternati con cavolo tritato e pancetta affumicata, creando una zuppa densa attorno agli involtini. Tradizionalmente viene servito con abbondante panna acida e talvolta con salsiccia affumicata aggiunta alla pentola per maggiore profondità.",
+    "ko": "퇼퇴트 카포스타, 즉 헝가리식 양배추 롤은 루마니아 사르말레의 가까운 친척이지만, 신선한 양배추 대신 절인 양배추만 사용한다는 강한 정체성을 지닌다. 이 레시피는 겨울을 위해 채소를 절이는 관습과 함께 카르파티아 분지 전역으로 퍼졌으며, 이는 농촌 공동체가 연중 내내 양배추를 확보할 수 있게 해준 수백 년 된 기술이다.\n\n헝가리식 버전을 특별하게 만드는 것은 속재료에 듬뿍 들어가는 파프리카와, 롤을 다진 양배추와 훈제 베이컨과 번갈아 층층이 쌓아 조리하는 관습으로, 이는 롤 주위에 걸쭉한 수프를 만들어낸다. 전통적으로 진한 사워크림과 함께, 때로는 더 깊은 풍미를 위해 훈제 소시지를 냄비에 추가하여 제공된다."
+  },
+  "meta": {
+    "time": 150,
+    "costRon": 18,
+    "tags": [],
+    "desc": {
+      "ro": "Sarmale cu varză murată, umplutură din carne de porc, orez și boia, cu smântână.",
+      "en": "Pickled cabbage rolls stuffed with pork, rice and paprika, topped with sour cream.",
+      "es": "Rollos de col fermentada rellenos de cerdo, arroz y pimentón, con crema agria.",
+      "fr": "Rouleaux de chou fermenté farcis au porc, riz et paprika, avec crème aigre.",
+      "de": "Sauerkrautrouladen gefüllt mit Schwein, Reis und Paprika, mit Sauerrahm.",
+      "pt": "Rolos de couve fermentada recheados com porco, arroz e colorau, com natas azedas.",
+      "ru": "Голубцы из квашеной капусты с начинкой из свинины, риса и паприки, со сметаной.",
+      "ar": "لفائف ملفوف مخلل محشوة بلحم الخنزير والأرز والبابريكا مع القشدة الحامضة.",
+      "zh": "腌卷心菜卷，内馅为猪肉、米饭和红椒粉，配酸奶油。",
+      "ja": "豚肉、米、パプリカを詰めた酢漬けキャベツロール、サワークリーム添え。",
+      "hi": "अचारी पत्तागोभी रोल, सुअर के मांस, चावल और पपरिका से भरे, खट्टी क्रीम के साथ।",
+      "tr": "Domuz eti, pirinç ve paprikayla doldurulmuş turşu lahana sarması, ekşi kremayla.",
+      "it": "Involtini di cavolo fermentato ripieni di maiale, riso e paprika, con panna acida.",
+      "ko": "돼지고기, 쌀, 파프리카로 속을 채운 절인 양배추 롤, 사워크림을 곁들임."
+    }
+  }
+}

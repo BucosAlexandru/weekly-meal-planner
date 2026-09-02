@@ -1,0 +1,175 @@
+{
+  "id": 341,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Ungaria", "en": "Hungary", "es": "Hungría", "fr": "Hongrie", "de": "Ungarn",
+    "pt": "Hungria", "ru": "Венгрия", "ar": "المجر", "zh": "匈牙利", "ja": "ハンガリー",
+    "hi": "हंगरी", "tr": "Macaristan", "it": "Ungheria", "ko": "헝가리"
+  },
+  "name": {
+    "ro": "Tort Dobos", "en": "Dobos Torte", "es": "Tarta Dobos", "fr": "Gâteau Dobos", "de": "Dobostorte",
+    "pt": "Bolo Dobos", "ru": "Торт Добош", "ar": "تورتة دوبوش", "zh": "多博斯蛋糕", "ja": "ドボシュトルテ",
+    "hi": "डोबोश टोर्टे", "tr": "Dobos Torte", "it": "Torta Dobos", "ko": "도보스 토르테"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🎂", "t": "Cinci-șase straturi", "d": "Foi subțiri de pandișpan alternate cu cremă de ciocolată."},
+      {"icon": "🍫", "t": "Cremă de unt cu ciocolată", "d": "Cremă bogată bătută cu unt și ciocolată topită."},
+      {"icon": "✨", "t": "Capac de caramel", "d": "Ultimul strat e acoperit cu caramel crocant tăiat în felii."},
+      {"icon": "🏆", "t": "Creație de patiser", "d": "Inventat în 1885 de József Dobos, cofetar din Budapesta."}
+    ],
+    "en": [
+      {"icon": "🎂", "t": "Five to six layers", "d": "Thin sponge cake sheets alternated with chocolate cream."},
+      {"icon": "🍫", "t": "Chocolate buttercream", "d": "Rich cream whipped with butter and melted chocolate."},
+      {"icon": "✨", "t": "Caramel top", "d": "The final layer is coated with crisp caramel, cut into wedges."},
+      {"icon": "🏆", "t": "Pastry chef's creation", "d": "Invented in 1885 by József Dobos, a Budapest confectioner."}
+    ],
+    "es": [
+      {"icon": "🎂", "t": "Cinco a seis capas", "d": "Finas capas de bizcocho alternadas con crema de chocolate."},
+      {"icon": "🍫", "t": "Crema de mantequilla de chocolate", "d": "Crema rica batida con mantequilla y chocolate fundido."},
+      {"icon": "✨", "t": "Cobertura de caramelo", "d": "La última capa se cubre con caramelo crujiente, cortado en cuñas."},
+      {"icon": "🏆", "t": "Creación de pastelero", "d": "Inventado en 1885 por József Dobos, un pastelero de Budapest."}
+    ],
+    "fr": [
+      {"icon": "🎂", "t": "Cinq à six couches", "d": "De fines couches de génoise alternées avec de la crème au chocolat."},
+      {"icon": "🍫", "t": "Crème au beurre au chocolat", "d": "Crème riche fouettée avec du beurre et du chocolat fondu."},
+      {"icon": "✨", "t": "Dessus caramélisé", "d": "La dernière couche est recouverte de caramel croustillant, coupé en quartiers."},
+      {"icon": "🏆", "t": "Création de pâtissier", "d": "Inventé en 1885 par József Dobos, un pâtissier de Budapest."}
+    ],
+    "de": [
+      {"icon": "🎂", "t": "Fünf bis sechs Schichten", "d": "Dünne Biskuitböden abwechselnd mit Schokoladencreme."},
+      {"icon": "🍫", "t": "Schokoladen-Buttercreme", "d": "Reichhaltige Creme, geschlagen mit Butter und geschmolzener Schokolade."},
+      {"icon": "✨", "t": "Karamelldecke", "d": "Die oberste Schicht ist mit knusprigem Karamell überzogen, in Stücke geschnitten."},
+      {"icon": "🏆", "t": "Konditor-Kreation", "d": "1885 von József Dobos, einem Budapester Konditor, erfunden."}
+    ],
+    "pt": [
+      {"icon": "🎂", "t": "Cinco a seis camadas", "d": "Finas camadas de pão de ló alternadas com creme de chocolate."},
+      {"icon": "🍫", "t": "Creme de manteiga de chocolate", "d": "Creme rico batido com manteiga e chocolate derretido."},
+      {"icon": "✨", "t": "Cobertura de caramelo", "d": "A última camada é coberta com caramelo estaladiço, cortado em fatias."},
+      {"icon": "🏆", "t": "Criação de pasteleiro", "d": "Inventado em 1885 por József Dobos, um pasteleiro de Budapeste."}
+    ],
+    "ru": [
+      {"icon": "🎂", "t": "Пять-шесть коржей", "d": "Тонкие бисквитные коржи, чередующиеся с шоколадным кремом."},
+      {"icon": "🍫", "t": "Шоколадный масляный крем", "d": "Насыщенный крем, взбитый с маслом и растопленным шоколадом."},
+      {"icon": "✨", "t": "Карамельная верхушка", "d": "Верхний слой покрыт хрустящей карамелью, нарезанной дольками."},
+      {"icon": "🏆", "t": "Творение кондитера", "d": "Изобретён в 1885 году будапештским кондитером Йожефом Добошем."}
+    ],
+    "ar": [
+      {"icon": "🎂", "t": "خمس إلى ست طبقات", "d": "طبقات رقيقة من الكيك الإسفنجي بالتناوب مع كريمة الشوكولاتة."},
+      {"icon": "🍫", "t": "كريمة زبدة بالشوكولاتة", "d": "كريمة غنية مخفوقة بالزبدة والشوكولاتة الذائبة."},
+      {"icon": "✨", "t": "غطاء الكراميل", "d": "الطبقة الأخيرة مغطاة بكراميل مقرمش مقطّع إلى شرائح."},
+      {"icon": "🏆", "t": "إبداع حلواني", "d": "ابتُكرت عام 1885 على يد يوجف دوبوش، حلواني من بودابست."}
+    ],
+    "zh": [
+      {"icon": "🎂", "t": "五到六层", "d": "薄海绵蛋糕片与巧克力奶油交替叠层。"},
+      {"icon": "🍫", "t": "巧克力黄油霜", "d": "用黄油和融化巧克力打发出的浓郁奶油。"},
+      {"icon": "✨", "t": "焦糖顶层", "d": "最后一层覆盖酥脆焦糖，切成小块。"},
+      {"icon": "🏆", "t": "甜点师的创作", "d": "1885年由布达佩斯甜点师约瑟夫·多博什发明。"}
+    ],
+    "ja": [
+      {"icon": "🎂", "t": "5〜6層", "d": "薄いスポンジケーキとチョコレートクリームを交互に重ねる。"},
+      {"icon": "🍫", "t": "チョコレートバタークリーム", "d": "バターと溶かしたチョコレートを泡立てた濃厚なクリーム。"},
+      {"icon": "✨", "t": "キャラメルのトップ", "d": "最後の層はパリパリのキャラメルで覆われ、くさび形に切られる。"},
+      {"icon": "🏆", "t": "菓子職人の創作", "d": "1885年、ブダペストの菓子職人ヨージェフ・ドボシュが考案。"}
+    ],
+    "hi": [
+      {"icon": "🎂", "t": "पांच से छह परतें", "d": "पतली स्पंज केक की परतें चॉकलेट क्रीम के साथ बारी-बारी।"},
+      {"icon": "🍫", "t": "चॉकलेट बटरक्रीम", "d": "मक्खन और पिघली चॉकलेट के साथ फेंटी गई गाढ़ी क्रीम।"},
+      {"icon": "✨", "t": "कारमेल का ऊपरी हिस्सा", "d": "अंतिम परत कुरकुरे कारमेल से ढकी होती है, टुकड़ों में काटी जाती है।"},
+      {"icon": "🏆", "t": "पेस्ट्री शेफ की रचना", "d": "1885 में बुडापेस्ट के हलवाई योज़ेफ डोबोश द्वारा आविष्कार किया गया।"}
+    ],
+    "tr": [
+      {"icon": "🎂", "t": "Beş ila altı katman", "d": "İnce pandispan katmanları çikolata kremasıyla değişmeli."},
+      {"icon": "🍫", "t": "Çikolatalı tereyağı kreması", "d": "Tereyağı ve eritilmiş çikolatayla çırpılmış zengin krema."},
+      {"icon": "✨", "t": "Karamel üst tabaka", "d": "Son katman dilimlenmiş çıtır karamelle kaplıdır."},
+      {"icon": "🏆", "t": "Pastacı yaratımı", "d": "1885'te Budapeşteli pastacı József Dobos tarafından icat edildi."}
+    ],
+    "it": [
+      {"icon": "🎂", "t": "Da cinque a sei strati", "d": "Sottili strati di pan di spagna alternati a crema al cioccolato."},
+      {"icon": "🍫", "t": "Crema al burro al cioccolato", "d": "Crema ricca montata con burro e cioccolato fuso."},
+      {"icon": "✨", "t": "Copertura di caramello", "d": "L'ultimo strato è ricoperto da caramello croccante, tagliato a spicchi."},
+      {"icon": "🏆", "t": "Creazione di un pasticcere", "d": "Inventata nel 1885 da József Dobos, pasticcere di Budapest."}
+    ],
+    "ko": [
+      {"icon": "🎂", "t": "5~6겹의 층", "d": "얇은 스펀지케이크 시트와 초콜릿 크림을 번갈아 쌓는다."},
+      {"icon": "🍫", "t": "초콜릿 버터크림", "d": "버터와 녹인 초콜릿을 휘핑한 진한 크림."},
+      {"icon": "✨", "t": "캐러멜 토핑", "d": "마지막 층은 바삭한 캐러멜로 덮여 쐐기 모양으로 잘린다."},
+      {"icon": "🏆", "t": "제과사의 창작품", "d": "1885년 부다페스트의 제과사 요제프 도보시가 발명."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["6 ouă", "150g zahăr", "150g făină", "300g ciocolată neagră", "250g unt moale", "150g zahăr pudră", "100g zahăr pentru caramel", "1 linguriță esență de vanilie", "un praf de sare", "ulei pentru tavă"],
+    "en": ["6 eggs", "150g sugar", "150g flour", "300g dark chocolate", "250g soft butter", "150g powdered sugar", "100g sugar for caramel", "1 tsp vanilla extract", "a pinch of salt", "oil for the pan"],
+    "es": ["6 huevos", "150g de azúcar", "150g de harina", "300g de chocolate negro", "250g de mantequilla blanda", "150g de azúcar glas", "100g de azúcar para el caramelo", "1 cdta de esencia de vainilla", "una pizca de sal", "aceite para el molde"],
+    "fr": ["6 œufs", "150g de sucre", "150g de farine", "300g de chocolat noir", "250g de beurre mou", "150g de sucre glace", "100g de sucre pour le caramel", "1 c. à c. d'extrait de vanille", "une pincée de sel", "huile pour le moule"],
+    "de": ["6 Eier", "150g Zucker", "150g Mehl", "300g dunkle Schokolade", "250g weiche Butter", "150g Puderzucker", "100g Zucker für Karamell", "1 TL Vanilleextrakt", "eine Prise Salz", "Öl für die Form"],
+    "pt": ["6 ovos", "150g de açúcar", "150g de farinha", "300g de chocolate negro", "250g de manteiga amolecida", "150g de açúcar em pó", "100g de açúcar para o caramelo", "1 colher de chá de essência de baunilha", "uma pitada de sal", "óleo para a forma"],
+    "ru": ["6 яиц", "150г сахара", "150г муки", "300г тёмного шоколада", "250г мягкого сливочного масла", "150г сахарной пудры", "100г сахара для карамели", "1 ч.л. ванильного экстракта", "щепотка соли", "масло для формы"],
+    "ar": ["6 بيضات", "150غ سكر", "150غ دقيق", "300غ شوكولاتة داكنة", "250غ زبدة طرية", "150غ سكر بودرة", "100غ سكر للكراميل", "ملعقة صغيرة خلاصة الفانيليا", "رشة ملح", "زيت للقالب"],
+    "zh": ["鸡蛋6个", "糖150克", "面粉150克", "黑巧克力300克", "软化黄油250克", "糖粉150克", "焦糖用糖100克", "香草精1茶匙", "盐一小撮", "模具用油"],
+    "ja": ["卵 6個", "砂糖 150g", "小麦粉 150g", "ダークチョコレート 300g", "柔らかいバター 250g", "粉砂糖 150g", "カラメル用砂糖 100g", "バニラエッセンス 小さじ1", "塩 ひとつまみ", "型用の油"],
+    "hi": ["6 अंडे", "150 ग्राम चीनी", "150 ग्राम आटा", "300 ग्राम डार्क चॉकलेट", "250 ग्राम नरम मक्खन", "150 ग्राम पिसी चीनी", "कारमेल के लिए 100 ग्राम चीनी", "1 छोटा चम्मच वेनिला एसेंस", "एक चुटकी नमक", "टिन के लिए तेल"],
+    "tr": ["6 yumurta", "150g şeker", "150g un", "300g bitter çikolata", "250g yumuşak tereyağı", "150g pudra şekeri", "karamel için 100g şeker", "1 çay kaşığı vanilya özütü", "bir tutam tuz", "kalıp için yağ"],
+    "it": ["6 uova", "150g di zucchero", "150g di farina", "300g di cioccolato fondente", "250g di burro morbido", "150g di zucchero a velo", "100g di zucchero per il caramello", "1 cucchiaino di estratto di vaniglia", "un pizzico di sale", "olio per lo stampo"],
+    "ko": ["달걀 6개", "설탕 150g", "밀가루 150g", "다크 초콜릿 300g", "부드러운 버터 250g", "슈가파우더 150g", "캐러멜용 설탕 100g", "바닐라 추출물 1작은술", "소금 한 꼬집", "팬용 기름"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE PANDIȘPAN: Bate ouăle cu zahărul până devin spumoase, apoi încorporează ușor făina și un praf de sare. COACERE FOI: Întinde compoziția în straturi subțiri pe hârtie de copt și coace fiecare foaie 5-6 minute la 180°C. PREPARARE CREMĂ: Topește ciocolata și las-o să se răcească, apoi bate untul moale cu zahărul pudră până devine pufos și încorporează ciocolata topită. ASAMBLARE STRATURI: Alternează foile de pandișpan cu un strat generos de cremă de ciocolată, presând ușor fiecare nivel. PREPARARE CARAMEL: Topește zahărul într-o tigaie până capătă culoare aurie, apoi toarnă rapid peste ultima foaie de pandișpan. TĂIERE CARAMEL: Cât caramelul e încă moale, taie-l în felii cu un cuțit uns cu ulei, marcând porțiile finale. FINISARE: Acoperă marginile tortului cu cremă rămasă și lasă la frigider minimum 2 ore înainte de servire.",
+    "en": "PREPARE SPONGE: Beat the eggs with sugar until foamy, then gently fold in the flour and a pinch of salt. BAKE SHEETS: Spread the batter in thin layers on baking paper and bake each sheet for 5-6 minutes at 180°C. MAKE CREAM: Melt the chocolate and let it cool, then beat the soft butter with powdered sugar until fluffy and fold in the melted chocolate. LAYER: Alternate the sponge sheets with a generous layer of chocolate cream, pressing gently on each level. MAKE CARAMEL: Melt the sugar in a pan until golden, then quickly pour it over the final sponge sheet. CUT THE CARAMEL: While the caramel is still soft, cut it into wedges with an oiled knife to mark the final portions. FINISH: Cover the sides of the cake with remaining cream and refrigerate for at least 2 hours before serving.",
+    "es": "PREPARAR EL BIZCOCHO: Bate los huevos con el azúcar hasta que estén espumosos, luego incorpora suavemente la harina y una pizca de sal. HORNEAR LAS CAPAS: Extiende la mezcla en capas finas sobre papel de hornear y hornea cada capa 5-6 minutos a 180°C. PREPARAR LA CREMA: Funde el chocolate y déjalo enfriar, luego bate la mantequilla blanda con el azúcar glas hasta que quede esponjoso e incorpora el chocolate fundido. MONTAR: Alterna las capas de bizcocho con una generosa capa de crema de chocolate, presionando suavemente cada nivel. PREPARAR EL CARAMELO: Funde el azúcar en una sartén hasta que esté dorado, luego viértelo rápidamente sobre la última capa de bizcocho. CORTAR EL CARAMELO: Mientras el caramelo esté aún blando, córtalo en cuñas con un cuchillo aceitado para marcar las porciones finales. TERMINAR: Cubre los bordes del pastel con la crema restante y refrigera al menos 2 horas antes de servir.",
+    "fr": "PRÉPARER LA GÉNOISE: Fouettez les œufs avec le sucre jusqu'à ce qu'ils soient mousseux, puis incorporez délicatement la farine et une pincée de sel. CUIRE LES COUCHES: Étalez la pâte en couches fines sur du papier cuisson et faites cuire chaque couche 5-6 minutes à 180°C. PRÉPARER LA CRÈME: Faites fondre le chocolat et laissez-le refroidir, puis fouettez le beurre mou avec le sucre glace jusqu'à ce qu'il soit léger et incorporez le chocolat fondu. MONTER: Alternez les couches de génoise avec une généreuse couche de crème au chocolat, en appuyant doucement sur chaque niveau. PRÉPARER LE CARAMEL: Faites fondre le sucre dans une poêle jusqu'à ce qu'il soit doré, puis versez-le rapidement sur la dernière couche de génoise. COUPER LE CARAMEL: Pendant que le caramel est encore mou, coupez-le en quartiers avec un couteau huilé pour marquer les portions finales. FINALISER: Recouvrez les bords du gâteau avec la crème restante et réfrigérez au moins 2 heures avant de servir.",
+    "de": "BISKUIT ZUBEREITEN: Die Eier mit dem Zucker schaumig schlagen, dann sanft das Mehl und eine Prise Salz unterheben. BÖDEN BACKEN: Den Teig dünn auf Backpapier verteilen und jeden Boden 5-6 Minuten bei 180°C backen. CREME ZUBEREITEN: Die Schokolade schmelzen und abkühlen lassen, dann die weiche Butter mit Puderzucker fluffig schlagen und die geschmolzene Schokolade unterheben. SCHICHTEN: Die Biskuitböden mit einer großzügigen Schicht Schokoladencreme abwechseln, jede Ebene sanft andrücken. KARAMELL ZUBEREITEN: Den Zucker in einer Pfanne goldbraun schmelzen, dann schnell über den letzten Biskuitboden gießen. KARAMELL SCHNEIDEN: Solange das Karamell noch weich ist, mit einem geölten Messer in Stücke schneiden, um die endgültigen Portionen zu markieren. FERTIGSTELLEN: Die Seiten der Torte mit der restlichen Creme bestreichen und mindestens 2 Stunden vor dem Servieren kühlen.",
+    "pt": "PREPARAR O PÃO DE LÓ: Bata os ovos com o açúcar até ficarem espumosos, depois incorpore suavemente a farinha e uma pitada de sal. ASSAR AS CAMADAS: Espalhe a massa em camadas finas sobre papel vegetal e asse cada camada por 5-6 minutos a 180°C. PREPARAR O CREME: Derreta o chocolate e deixe arrefecer, depois bata a manteiga amolecida com o açúcar em pó até ficar fofo e incorpore o chocolate derretido. MONTAR: Alterne as camadas de pão de ló com uma generosa camada de creme de chocolate, pressionando suavemente cada nível. PREPARAR O CARAMELO: Derreta o açúcar numa frigideira até dourar, depois despeje rapidamente sobre a última camada de pão de ló. CORTAR O CARAMELO: Enquanto o caramelo ainda está mole, corte-o em fatias com uma faca untada para marcar as porções finais. FINALIZAR: Cubra as laterais do bolo com o creme restante e leve à geladeira pelo menos 2 horas antes de servir.",
+    "ru": "ПРИГОТОВЛЕНИЕ БИСКВИТА: Взбейте яйца с сахаром до пышной пены, затем аккуратно вмешайте муку и щепотку соли. ВЫПЕЧКА КОРЖЕЙ: Распределите тесто тонкими слоями на пергаменте и выпекайте каждый корж 5-6 минут при 180°C. ПРИГОТОВЛЕНИЕ КРЕМА: Растопите шоколад и дайте остыть, затем взбейте мягкое масло с сахарной пудрой до пышности и вмешайте растопленный шоколад. СБОРКА СЛОЁВ: Чередуйте бисквитные коржи с щедрым слоем шоколадного крема, слегка прижимая каждый уровень. ПРИГОТОВЛЕНИЕ КАРАМЕЛИ: Растопите сахар на сковороде до золотистого цвета, затем быстро вылейте на последний бисквитный корж. НАРЕЗКА КАРАМЕЛИ: Пока карамель ещё мягкая, нарежьте её дольками смазанным маслом ножом, отмечая финальные порции. ЗАВЕРШЕНИЕ: Покройте бока торта оставшимся кремом и охладите минимум 2 часа перед подачей.",
+    "ar": "تحضير الإسفنج: اخفق البيض مع السكر حتى يصبح رغويًا، ثم اطوِ الدقيق ورشة الملح برفق. خبز الطبقات: افرد الخليط في طبقات رقيقة على ورق الخبز واخبز كل طبقة 5-6 دقائق على حرارة 180 درجة. تحضير الكريمة: أذب الشوكولاتة ودعها تبرد، ثم اخفق الزبدة الطرية مع السكر البودرة حتى تصبح خفيفة واطوِ الشوكولاتة الذائبة. ترتيب الطبقات: بالتناوب بين طبقات الإسفنج وطبقة سخية من كريمة الشوكولاتة، مع الضغط برفق على كل مستوى. تحضير الكراميل: أذب السكر في مقلاة حتى يصبح ذهبيًا، ثم اسكبه بسرعة فوق طبقة الإسفنج الأخيرة. تقطيع الكراميل: بينما الكراميل لا يزال طريًا، قطّعه إلى شرائح بسكين مدهون بالزيت لتحديد الحصص النهائية. اللمسات الأخيرة: غطِّ جوانب الكيك بالكريمة المتبقية وضعه في الثلاجة لمدة ساعتين على الأقل قبل التقديم.",
+    "zh": "准备海绵蛋糕：将鸡蛋与糖打发至起泡，然后轻轻拌入面粉和少许盐。烘烤蛋糕片：将面糊薄薄铺在烘焙纸上，每片在180°C下烘烤5-6分钟。制作奶油：融化巧克力并放凉，然后将软化黄油与糖粉打发至蓬松，拌入融化的巧克力。叠层：将海绵蛋糕片与厚厚一层巧克力奶油交替叠放，每层轻轻按压。制作焦糖：在平底锅中将糖熬至金黄色，然后迅速倒在最后一层蛋糕片上。切割焦糖：趁焦糖仍柔软时，用抹油的刀切成小块以标出最终份数。最后装饰：用剩余奶油覆盖蛋糕侧面，冷藏至少2小时后食用。",
+    "ja": "スポンジの準備：卵を砂糖と共に泡立ててから、小麦粉と塩ひとつまみを優しく折り込む。生地を焼く：クッキングシートに薄く生地を広げ、180°Cで各シート5〜6分焼く。クリームの準備：チョコレートを溶かして冷まし、柔らかいバターを粉砂糖でふんわりするまで泡立てて溶かしたチョコレートを折り込む。層を重ねる：スポンジシートとたっぷりのチョコレートクリームを交互に重ね、各層を軽く押さえる。キャラメルの準備：フライパンで砂糖を金色になるまで溶かし、最後のスポンジシートに素早く流す。キャラメルを切る：キャラメルがまだ柔らかいうちに、油を塗ったナイフでくさび形に切り分ける。仕上げ：残ったクリームでケーキの側面を覆い、提供前に最低2時間冷蔵する。",
+    "hi": "स्पंज तैयार करें: अंडों को चीनी के साथ फोम होने तक फेंटें, फिर आटा और नमक की चुटकी धीरे से मिलाएं। परतें बेक करें: बैटर को बेकिंग पेपर पर पतली परतों में फैलाएं और हर परत को 180°C पर 5-6 मिनट बेक करें। क्रीम बनाएं: चॉकलेट पिघलाकर ठंडा होने दें, फिर नरम मक्खन को पिसी चीनी के साथ फूला होने तक फेंटें और पिघली चॉकलेट मिलाएं। परतें लगाएं: स्पंज परतों को चॉकलेट क्रीम की भरपूर परत के साथ बारी-बारी लगाएं, हर स्तर को हल्के से दबाएं। कारमेल बनाएं: पैन में चीनी को सुनहरा होने तक पिघलाएं, फिर तुरंत आखिरी स्पंज परत पर डालें। कारमेल काटें: जब कारमेल अभी भी नरम हो, तेल लगे चाकू से टुकड़ों में काटकर अंतिम हिस्से चिह्नित करें। अंतिम रूप दें: केक के किनारों को बची हुई क्रीम से ढकें और परोसने से पहले कम से कम 2 घंटे फ्रिज में रखें।",
+    "tr": "PANDİSPANI HAZIRLAYIN: Yumurtaları şekerle köpürene kadar çırpın, sonra unu ve bir tutam tuzu nazikçe katın. KATMANLARI PİŞİRİN: Hamuru fırın kağıdına ince katmanlar halinde yayın ve her katmanı 180°C'de 5-6 dakika pişirin. KREMAYI HAZIRLAYIN: Çikolatayı eritip soğumaya bırakın, sonra yumuşak tereyağını pudra şekeriyle kabarık olana kadar çırpın ve eritilmiş çikolatayı katın. KATMANLAYIN: Pandispan katmanlarını bol miktarda çikolata kremasıyla değiştirerek, her katmana hafifçe bastırarak dizin. KARAMELİ HAZIRLAYIN: Şekeri tavada altın rengi olana kadar eritin, sonra hızlıca son pandispan katmanının üzerine dökün. KARAMELİ KESİN: Karamel hâlâ yumuşakken, son parçaları belirlemek için yağlanmış bıçakla dilimler halinde kesin. SON DOKUNUŞ: Pastanın kenarlarını kalan kremayla kaplayın ve servisten önce en az 2 saat buzdolabında bekletin.",
+    "it": "PREPARARE IL PAN DI SPAGNA: Sbattete le uova con lo zucchero fino a renderle spumose, poi incorporate delicatamente la farina e un pizzico di sale. CUOCERE GLI STRATI: Stendete l'impasto in strati sottili su carta forno e cuocete ogni strato per 5-6 minuti a 180°C. PREPARARE LA CREMA: Sciogliete il cioccolato e lasciatelo raffreddare, poi montate il burro morbido con lo zucchero a velo fino a renderlo soffice e incorporate il cioccolato fuso. COMPORRE GLI STRATI: Alternate gli strati di pan di spagna con un generoso strato di crema al cioccolato, premendo delicatamente ogni livello. PREPARARE IL CARAMELLO: Sciogliete lo zucchero in una padella fino a doratura, poi versatelo rapidamente sull'ultimo strato di pan di spagna. TAGLIARE IL CARAMELLO: Finché il caramello è ancora morbido, tagliatelo a spicchi con un coltello unto per segnare le porzioni finali. FINIRE: Coprite i lati della torta con la crema rimasta e refrigerate almeno 2 ore prima di servire.",
+    "ko": "스펀지 준비: 달걀을 설탕과 함께 거품이 날 때까지 휘핑한 후, 밀가루와 소금 한 꼬집을 살살 접어 넣는다. 시트 굽기: 반죽을 유산지에 얇게 펴 바르고 각 시트를 180°C에서 5~6분 굽는다. 크림 만들기: 초콜릿을 녹여 식힌 후, 부드러운 버터를 슈가파우더와 함께 폭신해질 때까지 휘핑하고 녹인 초콜릿을 접어 넣는다. 층 쌓기: 스펀지 시트와 넉넉한 초콜릿 크림 층을 번갈아 쌓으며 각 층을 살짝 눌러준다. 캐러멜 만들기: 팬에 설탕을 황금빛이 될 때까지 녹인 후 마지막 스펀지 시트 위에 재빨리 붓는다. 캐러멜 자르기: 캐러멜이 아직 부드러울 때 기름칠한 칼로 쐐기 모양으로 잘라 최종 조각을 표시한다. 마무리: 케이크 옆면을 남은 크림으로 덮고 제공 전 최소 2시간 냉장 보관한다."
+  },
+  "originText": {
+    "ro": "Tortul Dobos a fost creat în 1885 de József C. Dobos, un cofetar din Budapesta, care a vrut să inventeze un tort care să reziste mai mult timp fără frigider — o problemă majoră în era dinaintea refrigerării moderne. Soluția lui a fost caramelul: în loc de fructe sau glazură perisabilă, a acoperit ultimul strat cu caramel dur, care izola tortul de aer și îl proteja de alterare.\n\nTortul a fost prezentat la Expoziția Națională Generală din Budapesta din 1885 și a devenit rapid o senzație în toată Europa, ajungând pe mesele curților regale din Viena și Berlin. Dobos și-a păstrat rețeta secretă timp de mulți ani, dezvăluind-o abia la pensionare breslei cofetarilor din Budapesta, pentru ca tehnica să nu se piardă.",
+    "en": "The Dobos torte was created in 1885 by József C. Dobos, a Budapest confectioner who wanted to invent a cake that would keep longer without refrigeration — a major problem in the era before modern cooling. His solution was caramel: instead of fruit or perishable icing, he coated the final layer with hard caramel, which sealed the cake off from air and protected it from spoiling.\n\nThe cake was presented at the 1885 Budapest General National Exhibition and quickly became a sensation across Europe, reaching the tables of royal courts in Vienna and Berlin. Dobos kept his recipe secret for many years, revealing it only upon retirement to the Budapest confectioners' guild so the technique wouldn't be lost.",
+    "es": "La tarta Dobos fue creada en 1885 por József C. Dobos, un pastelero de Budapest que quiso inventar un pastel que durara más sin refrigeración — un gran problema en la era anterior a la refrigeración moderna. Su solución fue el caramelo: en lugar de fruta o glaseado perecedero, cubrió la última capa con caramelo duro, que sellaba el pastel del aire y lo protegía de estropearse.\n\nEl pastel se presentó en la Exposición Nacional General de Budapest de 1885 y rápidamente se convirtió en una sensación en toda Europa, llegando a las mesas de las cortes reales de Viena y Berlín. Dobos mantuvo su receta en secreto durante muchos años, revelándola solo al jubilarse al gremio de pasteleros de Budapest para que la técnica no se perdiera.",
+    "fr": "Le gâteau Dobos a été créé en 1885 par József C. Dobos, un pâtissier de Budapest qui voulait inventer un gâteau qui se conserverait plus longtemps sans réfrigération — un problème majeur à l'époque précédant la réfrigération moderne. Sa solution fut le caramel : au lieu de fruits ou d'un glaçage périssable, il recouvrit la dernière couche de caramel dur, qui isolait le gâteau de l'air et le protégeait de l'altération.\n\nLe gâteau fut présenté à l'Exposition nationale générale de Budapest de 1885 et devint rapidement une sensation dans toute l'Europe, atteignant les tables des cours royales de Vienne et de Berlin. Dobos garda sa recette secrète pendant de nombreuses années, ne la révélant qu'à sa retraite à la guilde des pâtissiers de Budapest pour que la technique ne se perde pas.",
+    "de": "Die Dobostorte wurde 1885 von József C. Dobos erfunden, einem Budapester Konditor, der eine Torte kreieren wollte, die sich ohne Kühlung länger hielt — ein großes Problem in der Zeit vor der modernen Kühlung. Seine Lösung war Karamell: Statt Obst oder verderblicher Glasur überzog er die oberste Schicht mit hartem Karamell, das die Torte von der Luft abschirmte und vor Verderb schützte.\n\nDie Torte wurde auf der Budapester Allgemeinen Landesausstellung von 1885 präsentiert und wurde schnell zur Sensation in ganz Europa, bis hin zu den Tafeln der Königshöfe in Wien und Berlin. Dobos hielt sein Rezept viele Jahre geheim und enthüllte es erst bei seiner Pensionierung der Budapester Konditorzunft, damit die Technik nicht verloren ging.",
+    "pt": "O bolo Dobos foi criado em 1885 por József C. Dobos, um pasteleiro de Budapeste que quis inventar um bolo que durasse mais tempo sem refrigeração — um grande problema na era anterior à refrigeração moderna. A sua solução foi o caramelo: em vez de fruta ou cobertura perecível, cobriu a última camada com caramelo duro, que selava o bolo do ar e o protegia de estragar.\n\nO bolo foi apresentado na Exposição Nacional Geral de Budapeste de 1885 e rapidamente se tornou uma sensação em toda a Europa, chegando às mesas das cortes reais de Viena e Berlim. Dobos manteve a sua receita em segredo durante muitos anos, revelando-a apenas na reforma à guilda de pasteleiros de Budapeste para que a técnica não se perdesse.",
+    "ru": "Торт Добош был создан в 1885 году будапештским кондитером Йожефом Ц. Добошем, который хотел изобрести торт, который дольше хранился бы без охлаждения — серьёзная проблема в эпоху до современного холодильника. Его решением стала карамель: вместо фруктов или скоропортящейся глазури он покрыл верхний слой твёрдой карамелью, которая изолировала торт от воздуха и защищала от порчи.\n\nТорт был представлен на Будапештской всеобщей национальной выставке 1885 года и быстро стал сенсацией по всей Европе, добравшись до столов королевских дворов Вены и Берлина. Добош хранил рецепт в секрете много лет, раскрыв его только при выходе на пенсию будапештской гильдии кондитеров, чтобы техника не была утеряна.",
+    "ar": "ابتُكرت تورتة دوبوش عام 1885 على يد يوجف س. دوبوش، حلواني من بودابست أراد ابتكار كعكة تدوم لفترة أطول دون تبريد — وهي مشكلة كبيرة في عصر ما قبل التبريد الحديث. كان حله هو الكراميل: بدلاً من الفاكهة أو التزيين القابل للتلف، غطّى الطبقة الأخيرة بكراميل صلب عزل الكعكة عن الهواء وحماها من الفساد.\n\nقُدّمت الكعكة في المعرض الوطني العام في بودابست عام 1885 وسرعان ما أصبحت ظاهرة في جميع أنحاء أوروبا، ووصلت إلى موائد البلاطات الملكية في فيينا وبرلين. حافظ دوبوش على سرية وصفته لسنوات عديدة، ولم يكشفها إلا عند تقاعده لنقابة الحلوانيين في بودابست حتى لا تضيع التقنية.",
+    "zh": "多博斯蛋糕由布达佩斯甜点师约瑟夫·C·多博什于1885年创制，他希望发明一种在没有冷藏的情况下能保存更久的蛋糕——这在现代制冷技术出现之前是一大难题。他的解决方案是焦糖：他没有使用水果或易腐坏的糖霜，而是在最后一层覆盖坚硬的焦糖，将蛋糕与空气隔绝，防止变质。\n\n这款蛋糕在1885年布达佩斯全国博览会上亮相，迅速风靡整个欧洲，甚至登上了维也纳和柏林王室的餐桌。多博什将配方保密多年，直到退休时才透露给布达佩斯甜点师行会，以免这项技艺失传。",
+    "ja": "ドボシュトルテは1885年、ブダペストの菓子職人ヨージェフ・C・ドボシュによって考案された。彼は冷蔵なしでより長持ちするケーキを発明したいと考えていた――現代の冷却技術が登場する以前の時代における大きな課題だった。彼の解決策はキャラメルだった。フルーツや傷みやすいアイシングの代わりに、最後の層を硬いキャラメルで覆い、ケーキを空気から遮断して劣化を防いだ。\n\nこのケーキは1885年のブダペスト万国博覧会で発表され、たちまちヨーロッパ中でセンセーションを巻き起こし、ウィーンやベルリンの王室の食卓にまで届いた。ドボシュは長年レシピを秘密にしていたが、技術が失われないよう、引退時にブダペストの菓子職人組合にだけそれを公開した。",
+    "hi": "डोबोश टोर्टे का आविष्कार 1885 में बुडापेस्ट के हलवाई योज़ेफ सी. डोबोश ने किया था, जो एक ऐसा केक बनाना चाहते थे जो बिना फ्रिज के अधिक समय तक टिका रहे — आधुनिक रेफ्रिजरेशन से पहले के युग में यह एक बड़ी समस्या थी। उनका समाधान था कारमेल: फल या खराब होने वाली आइसिंग के बजाय, उन्होंने अंतिम परत को कठोर कारमेल से ढका, जिसने केक को हवा से अलग कर दिया और उसे खराब होने से बचाया।\n\nयह केक 1885 के बुडापेस्ट जनरल नेशनल प्रदर्शनी में प्रस्तुत किया गया और जल्द ही पूरे यूरोप में सनसनी बन गया, वियना और बर्लिन के शाही दरबारों की मेज़ों तक पहुंच गया। डोबोश ने अपना नुस्खा कई वर्षों तक गुप्त रखा, इसे केवल सेवानिवृत्ति पर बुडापेस्ट के हलवाइयों के संघ को उजागर किया ताकि यह तकनीक न खोए।",
+    "tr": "Dobos Torte, 1885'te Budapeşteli pastacı József C. Dobos tarafından yaratıldı; buzdolabı olmadan daha uzun süre dayanan bir pasta icat etmek istiyordu — modern soğutmadan önceki dönemde büyük bir sorundu bu. Çözümü karameldi: meyve veya çabuk bozulan glazür yerine, son katmanı havayla temasını kesen ve bozulmasını önleyen sert karamelle kapladı.\n\nPasta, 1885 Budapeşte Genel Ulusal Sergisi'nde tanıtıldı ve hızla tüm Avrupa'da bir sansasyon haline geldi, Viyana ve Berlin'deki kraliyet saraylarının sofralarına kadar ulaştı. Dobos, tarifini yıllarca gizli tuttu ve tekniğin kaybolmaması için ancak emekli olduğunda Budapeşte pastacılar loncasına açıkladı.",
+    "it": "La torta Dobos fu creata nel 1885 da József C. Dobos, un pasticcere di Budapest che voleva inventare una torta che durasse più a lungo senza refrigerazione — un problema importante nell'era precedente alla refrigerazione moderna. La sua soluzione fu il caramello: invece di frutta o glassa deperibile, ricoprì l'ultimo strato con caramello duro, che isolava la torta dall'aria e la proteggeva dal deterioramento.\n\nLa torta fu presentata all'Esposizione Nazionale Generale di Budapest del 1885 e divenne rapidamente una sensazione in tutta Europa, arrivando alle tavole delle corti reali di Vienna e Berlino. Dobos mantenne segreta la sua ricetta per molti anni, rivelandola solo al momento del pensionamento alla gilda dei pasticceri di Budapest affinché la tecnica non andasse perduta.",
+    "ko": "도보스 토르테는 1885년 부다페스트의 제과사 요제프 C. 도보시가 냉장 없이도 더 오래 보관되는 케이크를 발명하고자 만든 것이다 — 현대식 냉각이 등장하기 전 시대에는 큰 문제였다. 그의 해결책은 캐러멜이었다. 과일이나 상하기 쉬운 아이싱 대신, 마지막 층을 단단한 캐러멜로 덮어 케이크를 공기로부터 차단하고 변질을 막았다.\n\n이 케이크는 1885년 부다페스트 종합 국립 박람회에서 선보여 순식간에 유럽 전역에서 화제가 되었고, 빈과 베를린 왕실의 식탁까지 올랐다. 도보시는 오랫동안 레시피를 비밀로 지켰으며, 기술이 사라지지 않도록 은퇴할 때가 되어서야 부다페스트 제과사 길드에 공개했다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 24,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Tort din 5-6 straturi de pandișpan cu cremă de ciocolată și capac de caramel crocant.",
+      "en": "Cake with 5-6 sponge layers, chocolate cream and a crisp caramel top.",
+      "es": "Pastel de 5-6 capas de bizcocho con crema de chocolate y cobertura de caramelo.",
+      "fr": "Gâteau à 5-6 couches de génoise, crème au chocolat et dessus caramélisé croustillant.",
+      "de": "Torte mit 5-6 Biskuitschichten, Schokoladencreme und knuspriger Karamelldecke.",
+      "pt": "Bolo com 5-6 camadas de pão de ló, creme de chocolate e cobertura crocante de caramelo.",
+      "ru": "Торт из 5-6 бисквитных коржей с шоколадным кремом и хрустящей карамельной верхушкой.",
+      "ar": "كعكة من 5-6 طبقات إسفنجية بكريمة الشوكولاتة وغطاء كراميل مقرمش.",
+      "zh": "5-6层海绵蛋糕，配巧克力奶油和酥脆焦糖顶层。",
+      "ja": "5〜6層のスポンジとチョコレートクリーム、パリパリのキャラメルトップ。",
+      "hi": "5-6 परतों वाला स्पंज केक, चॉकलेट क्रीम और कुरकुरे कारमेल के साथ।",
+      "tr": "5-6 pandispan katmanlı, çikolata kremalı ve çıtır karamel üstlü kek.",
+      "it": "Torta con 5-6 strati di pan di spagna, crema al cioccolato e caramello croccante.",
+      "ko": "5~6겹 스펀지케이크에 초콜릿 크림과 바삭한 캐러멜 토핑."
+    }
+  }
+}

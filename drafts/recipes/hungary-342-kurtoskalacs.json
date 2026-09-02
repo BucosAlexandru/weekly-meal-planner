@@ -1,0 +1,177 @@
+{
+  "id": 342,
+  "servings": 4,
+  "tipType": "vegetarian",
+  "pairingsType": "sweet",
+  "origin": {
+    "ro": "Ungaria", "en": "Hungary", "es": "Hungría", "fr": "Hongrie", "de": "Ungarn",
+    "pt": "Hungria", "ru": "Венгрия", "ar": "المجر", "zh": "匈牙利", "ja": "ハンガリー",
+    "hi": "हंगरी", "tr": "Macaristan", "it": "Ungheria", "ko": "헝가리"
+  },
+  "name": {
+    "ro": "Kürtőskalács (Cornet unguresc)", "en": "Kürtőskalács (Chimney Cake)", "es": "Kürtőskalács (Pastel chimenea)",
+    "fr": "Kürtőskalács (Gâteau cheminée)", "de": "Kürtőskalács (Baumstriezel)", "pt": "Kürtőskalács (Bolo chaminé)",
+    "ru": "Кюртёшкалач (Трубчатый пирог)", "ar": "كورتوشكالاش (كعكة المدخنة)", "zh": "匈牙利烟囱蛋糕",
+    "ja": "キュルトゥシュカラーチ（煙突ケーキ）", "hi": "कुर्तोशकलाच (चिमनी केक)", "tr": "Kürtőskalács (Baca Kek)",
+    "it": "Kürtőskalács (Torta camino)", "ko": "퀴르퇴슈칼라치 (굴뚝 케이크)"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🔥", "t": "Copt pe rotisor", "d": "Aluatul se înfășoară pe un cilindru de lemn și se rotește la foc."},
+      {"icon": "🍬", "t": "Crustă caramelizată", "d": "Zahărul se caramelizează pe exterior formând o crustă crocantă."},
+      {"icon": "🌀", "t": "Formă de con gol", "d": "Rezultatul e un tub gol, spiralat, ca un cornet lung."},
+      {"icon": "🎪", "t": "Delicatesă de târg", "d": "Vândută tradițional la târguri și festivaluri de stradă."}
+    ],
+    "en": [
+      {"icon": "🔥", "t": "Baked on a spit", "d": "The dough is wrapped around a wooden cylinder and rotated over fire."},
+      {"icon": "🍬", "t": "Caramelized crust", "d": "Sugar caramelizes on the outside, forming a crisp shell."},
+      {"icon": "🌀", "t": "Hollow cone shape", "d": "The result is a hollow, spiraled tube, like a long cornet."},
+      {"icon": "🎪", "t": "Fairground treat", "d": "Traditionally sold at fairs and street festivals."}
+    ],
+    "es": [
+      {"icon": "🔥", "t": "Horneado en asador", "d": "La masa se enrolla en un cilindro de madera y se gira sobre el fuego."},
+      {"icon": "🍬", "t": "Costra caramelizada", "d": "El azúcar se caramela por fuera formando una costra crujiente."},
+      {"icon": "🌀", "t": "Forma de cono hueco", "d": "El resultado es un tubo hueco y espiralado, como un cono largo."},
+      {"icon": "🎪", "t": "Delicia de feria", "d": "Vendido tradicionalmente en ferias y festivales callejeros."}
+    ],
+    "fr": [
+      {"icon": "🔥", "t": "Cuit à la broche", "d": "La pâte est enroulée autour d'un cylindre en bois et tournée au feu."},
+      {"icon": "🍬", "t": "Croûte caramélisée", "d": "Le sucre se caramélise à l'extérieur, formant une coque croustillante."},
+      {"icon": "🌀", "t": "Forme de cône creux", "d": "Le résultat est un tube creux et spiralé, comme un long cornet."},
+      {"icon": "🎪", "t": "Gourmandise de foire", "d": "Vendue traditionnellement dans les foires et festivals de rue."}
+    ],
+    "de": [
+      {"icon": "🔥", "t": "Am Spieß gebacken", "d": "Der Teig wird um einen Holzzylinder gewickelt und über dem Feuer gedreht."},
+      {"icon": "🍬", "t": "Karamellisierte Kruste", "d": "Zucker karamellisiert außen und bildet eine knusprige Hülle."},
+      {"icon": "🌀", "t": "Hohle Kegelform", "d": "Das Ergebnis ist eine hohle, spiralförmige Röhre, wie eine lange Tüte."},
+      {"icon": "🎪", "t": "Jahrmarkt-Leckerei", "d": "Traditionell auf Jahrmärkten und Straßenfesten verkauft."}
+    ],
+    "pt": [
+      {"icon": "🔥", "t": "Assado em espeto", "d": "A massa é enrolada num cilindro de madeira e girada sobre o fogo."},
+      {"icon": "🍬", "t": "Crosta caramelizada", "d": "O açúcar carameliza por fora formando uma crosta estaladiça."},
+      {"icon": "🌀", "t": "Forma de cone oco", "d": "O resultado é um tubo oco e espiralado, como um cone longo."},
+      {"icon": "🎪", "t": "Doce de feira", "d": "Vendido tradicionalmente em feiras e festivais de rua."}
+    ],
+    "ru": [
+      {"icon": "🔥", "t": "Печётся на вертеле", "d": "Тесто наматывается на деревянный цилиндр и вращается над огнём."},
+      {"icon": "🍬", "t": "Карамелизированная корка", "d": "Сахар карамелизируется снаружи, образуя хрустящую оболочку."},
+      {"icon": "🌀", "t": "Форма полого конуса", "d": "Результат — полая спиралевидная трубка, как длинный рожок."},
+      {"icon": "🎪", "t": "Ярмарочное лакомство", "d": "Традиционно продаётся на ярмарках и уличных фестивалях."}
+    ],
+    "ar": [
+      {"icon": "🔥", "t": "يُخبز على سيخ", "d": "يُلف العجين حول أسطوانة خشبية ويُدار فوق النار."},
+      {"icon": "🍬", "t": "قشرة مكرمَلة", "d": "يتكرمل السكر من الخارج مكوّنًا قشرة مقرمشة."},
+      {"icon": "🌀", "t": "شكل مخروطي مجوف", "d": "النتيجة أنبوب مجوف حلزوني، مثل قرن طويل."},
+      {"icon": "🎪", "t": "حلوى المهرجانات", "d": "تُباع تقليديًا في المعارض والمهرجانات الشعبية."}
+    ],
+    "zh": [
+      {"icon": "🔥", "t": "旋转烤制", "d": "面团缠绕在木制圆柱上，在火上旋转烘烤。"},
+      {"icon": "🍬", "t": "焦糖外壳", "d": "外层糖分焦糖化，形成酥脆外壳。"},
+      {"icon": "🌀", "t": "中空螺旋筒状", "d": "成品是中空螺旋状长筒，形似长号角。"},
+      {"icon": "🎪", "t": "集市小吃", "d": "传统上在集市和街头节日中售卖。"}
+    ],
+    "ja": [
+      {"icon": "🔥", "t": "串で焼く", "d": "生地を木製の筒に巻きつけ、火の上で回しながら焼く。"},
+      {"icon": "🍬", "t": "カラメル化した表面", "d": "外側の砂糖がカラメル化しパリパリの殻になる。"},
+      {"icon": "🌀", "t": "中空の円錐形", "d": "出来上がりは中空で螺旋状の筒、長い円錐のような形。"},
+      {"icon": "🎪", "t": "縁日のお菓子", "d": "伝統的に市場や路上フェスティバルで売られる。"}
+    ],
+    "hi": [
+      {"icon": "🔥", "t": "सीख पर बेक किया गया", "d": "आटे को लकड़ी के बेलन पर लपेटा जाता है और आग पर घुमाया जाता है।"},
+      {"icon": "🍬", "t": "कारमेलाइज़्ड परत", "d": "चीनी बाहर से कारमेलाइज़ होकर कुरकुरी परत बनाती है।"},
+      {"icon": "🌀", "t": "खोखली शंकु आकृति", "d": "परिणाम एक खोखली, सर्पिल आकार की नली है, जैसे लंबा कोन।"},
+      {"icon": "🎪", "t": "मेले की मिठाई", "d": "पारंपरिक रूप से मेलों और सड़क उत्सवों में बेची जाती है।"}
+    ],
+    "tr": [
+      {"icon": "🔥", "t": "Şişte pişirilir", "d": "Hamur ahşap bir silindire sarılır ve ateş üzerinde döndürülür."},
+      {"icon": "🍬", "t": "Karamelize kabuk", "d": "Şeker dışarıda karamelize olarak çıtır bir kabuk oluşturur."},
+      {"icon": "🌀", "t": "İçi boş koni şekli", "d": "Sonuç uzun bir koni gibi içi boş, sarmal bir tüptür."},
+      {"icon": "🎪", "t": "Panayır lezzeti", "d": "Geleneksel olarak panayırlarda ve sokak festivallerinde satılır."}
+    ],
+    "it": [
+      {"icon": "🔥", "t": "Cotta allo spiedo", "d": "L'impasto viene avvolto attorno a un cilindro di legno e ruotato sul fuoco."},
+      {"icon": "🍬", "t": "Crosta caramellata", "d": "Lo zucchero si carammella all'esterno formando un guscio croccante."},
+      {"icon": "🌀", "t": "Forma di cono cavo", "d": "Il risultato è un tubo cavo e a spirale, come un lungo cono."},
+      {"icon": "🎪", "t": "Prelibatezza da fiera", "d": "Venduta tradizionalmente nelle fiere e nei festival di strada."}
+    ],
+    "ko": [
+      {"icon": "🔥", "t": "꼬치에 구움", "d": "반죽을 나무 원통에 감아 불 위에서 돌리며 굽는다."},
+      {"icon": "🍬", "t": "캐러멜화된 겉면", "d": "설탕이 겉에서 캐러멜화되어 바삭한 껍질을 만든다."},
+      {"icon": "🌀", "t": "속이 빈 원뿔 모양", "d": "완성품은 긴 콘처럼 속이 빈 나선형 관 모양이다."},
+      {"icon": "🎪", "t": "장터 간식", "d": "전통적으로 시장과 거리 축제에서 판매된다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g făină", "250ml lapte cald", "80g zahăr", "50g unt topit", "2 ouă", "7g drojdie uscată", "un praf de sare", "200g zahăr pentru caramelizat", "scorțișoară măcinată", "nuci măcinate pentru presărat"],
+    "en": ["500g flour", "250ml warm milk", "80g sugar", "50g melted butter", "2 eggs", "7g dry yeast", "a pinch of salt", "200g sugar for caramelizing", "ground cinnamon", "ground walnuts for sprinkling"],
+    "es": ["500g de harina", "250ml de leche tibia", "80g de azúcar", "50g de mantequilla derretida", "2 huevos", "7g de levadura seca", "una pizca de sal", "200g de azúcar para caramelizar", "canela molida", "nueces molidas para espolvorear"],
+    "fr": ["500g de farine", "250ml de lait tiède", "80g de sucre", "50g de beurre fondu", "2 œufs", "7g de levure sèche", "une pincée de sel", "200g de sucre à caraméliser", "cannelle moulue", "noix moulues pour saupoudrer"],
+    "de": ["500g Mehl", "250ml warme Milch", "80g Zucker", "50g geschmolzene Butter", "2 Eier", "7g Trockenhefe", "eine Prise Salz", "200g Zucker zum Karamellisieren", "gemahlener Zimt", "gemahlene Walnüsse zum Bestreuen"],
+    "pt": ["500g de farinha", "250ml de leite morno", "80g de açúcar", "50g de manteiga derretida", "2 ovos", "7g de fermento seco", "uma pitada de sal", "200g de açúcar para caramelizar", "canela moída", "nozes moídas para polvilhar"],
+    "ru": ["500г муки", "250мл тёплого молока", "80г сахара", "50г растопленного сливочного масла", "2 яйца", "7г сухих дрожжей", "щепотка соли", "200г сахара для карамелизации", "молотая корица", "молотые грецкие орехи для посыпки"],
+    "ar": ["500غ دقيق", "250مل حليب دافئ", "80غ سكر", "50غ زبدة مذابة", "بيضتان", "7غ خميرة جافة", "رشة ملح", "200غ سكر للكرمَلة", "قرفة مطحونة", "جوز مطحون للرش"],
+    "zh": ["面粉500克", "温牛奶250毫升", "糖80克", "融化黄油50克", "鸡蛋2个", "干酵母7克", "盐一小撮", "焦糖用糖200克", "肉桂粉", "撒面用核桃碎"],
+    "ja": ["小麦粉 500g", "温めた牛乳 250ml", "砂糖 80g", "溶かしバター 50g", "卵 2個", "ドライイースト 7g", "塩 ひとつまみ", "カラメル用砂糖 200g", "シナモンパウダー", "振りかけ用のくるみの粉"],
+    "hi": ["500 ग्राम आटा", "250 मिली गरम दूध", "80 ग्राम चीनी", "50 ग्राम पिघला मक्खन", "2 अंडे", "7 ग्राम सूखा खमीर", "एक चुटकी नमक", "कारमेलाइज़ करने के लिए 200 ग्राम चीनी", "पिसी दालचीनी", "छिड़कने के लिए पिसे अखरोट"],
+    "tr": ["500g un", "250ml ılık süt", "80g şeker", "50g eritilmiş tereyağı", "2 yumurta", "7g kuru maya", "bir tutam tuz", "karamelize etmek için 200g şeker", "toz tarçın", "serpmek için öğütülmüş ceviz"],
+    "it": ["500g di farina", "250ml di latte tiepido", "80g di zucchero", "50g di burro fuso", "2 uova", "7g di lievito secco", "un pizzico di sale", "200g di zucchero da caramellare", "cannella macinata", "noci macinate per guarnire"],
+    "ko": ["밀가루 500g", "따뜻한 우유 250ml", "설탕 80g", "녹인 버터 50g", "달걀 2개", "드라이 이스트 7g", "소금 한 꼬집", "캐러멜화용 설탕 200g", "계핏가루", "뿌릴 다진 호두"]
+  },
+  "howIsMade": {
+    "ro": "PREPARARE ALUAT: Amestecă drojdia cu laptele cald și puțin zahăr, lasă 10 minute să activeze. FRĂMÂNTARE: Amestecă făina cu ouăle, untul topit, zahărul rămas, sarea și maiaua activată, frământă până devine elastic. DOSPIRE: Lasă aluatul la loc cald 1 oră, până își dublează volumul. ÎNFĂȘURARE: Întinde aluatul în fâșii lungi și înfășoară-le spiralat pe un cilindru de lemn uns cu unt. RULARE ÎN ZAHĂR: Rostogolește fiecare rulou prin zahăr până se acoperă complet. COACERE ROTATIVĂ: Coace la foc mediu, rotind constant cilindrul, până crusta devine aurie și caramelizată, aproximativ 15-20 minute. FINISARE: Scoate de pe cilindru cât e cald, presară scorțișoară și nuci măcinate deasupra înainte de servire.",
+    "en": "PREPARE DOUGH: Mix the yeast with warm milk and a little sugar, let it activate for 10 minutes. KNEAD: Combine the flour with the eggs, melted butter, remaining sugar, salt and activated yeast, knead until elastic. PROOF: Let the dough rise in a warm place for 1 hour, until doubled in size. WRAP: Roll the dough into long strips and wrap them spirally around a buttered wooden cylinder. ROLL IN SUGAR: Roll each cylinder through sugar until fully coated. BAKE ROTATING: Bake over medium heat, constantly rotating the cylinder, until the crust turns golden and caramelized, about 15-20 minutes. FINISH: Remove from the cylinder while still warm, sprinkle with cinnamon and ground walnuts before serving.",
+    "es": "PREPARAR LA MASA: Mezcla la levadura con la leche tibia y un poco de azúcar, deja activar 10 minutos. AMASAR: Combina la harina con los huevos, la mantequilla derretida, el azúcar restante, la sal y la levadura activada, amasa hasta que quede elástica. LEUDAR: Deja levar la masa en un lugar cálido 1 hora, hasta que duplique su volumen. ENROLLAR: Extiende la masa en tiras largas y enróllalas en espiral alrededor de un cilindro de madera untado con mantequilla. PASAR POR AZÚCAR: Rueda cada cilindro por azúcar hasta cubrirlo por completo. HORNEAR GIRANDO: Hornea a fuego medio, girando constantemente el cilindro, hasta que la costra esté dorada y caramelizada, unos 15-20 minutos. TERMINAR: Retira del cilindro mientras esté caliente, espolvorea canela y nueces molidas antes de servir.",
+    "fr": "PRÉPARER LA PÂTE: Mélangez la levure avec le lait tiède et un peu de sucre, laissez activer 10 minutes. PÉTRIR: Combinez la farine avec les œufs, le beurre fondu, le sucre restant, le sel et la levure activée, pétrissez jusqu'à ce qu'elle soit élastique. LAISSER LEVER: Laissez la pâte lever dans un endroit chaud 1 heure, jusqu'à ce qu'elle double de volume. ENROULER: Étalez la pâte en longues bandes et enroulez-les en spirale autour d'un cylindre en bois beurré. ROULER DANS LE SUCRE: Roulez chaque cylindre dans le sucre jusqu'à ce qu'il soit entièrement enrobé. CUIRE EN TOURNANT: Faites cuire à feu moyen, en tournant constamment le cylindre, jusqu'à ce que la croûte soit dorée et caramélisée, environ 15-20 minutes. FINALISER: Retirez du cylindre pendant qu'il est encore chaud, saupoudrez de cannelle et de noix moulues avant de servir.",
+    "de": "TEIG ZUBEREITEN: Die Hefe mit warmer Milch und etwas Zucker vermischen, 10 Minuten aktivieren lassen. KNETEN: Mehl mit Eiern, geschmolzener Butter, restlichem Zucker, Salz und aktivierter Hefe verbinden, elastisch kneten. GEHEN LASSEN: Den Teig 1 Stunde an einem warmen Ort gehen lassen, bis er sich verdoppelt hat. WICKELN: Den Teig zu langen Streifen ausrollen und spiralförmig um einen gebutterten Holzzylinder wickeln. IN ZUCKER WÄLZEN: Jeden Zylinder im Zucker wälzen, bis er vollständig bedeckt ist. DREHEND BACKEN: Bei mittlerer Hitze backen, den Zylinder ständig drehen, bis die Kruste goldbraun und karamellisiert ist, etwa 15-20 Minuten. FERTIGSTELLEN: Vom Zylinder nehmen, solange noch warm, vor dem Servieren mit Zimt und gemahlenen Walnüssen bestreuen.",
+    "pt": "PREPARAR A MASSA: Misture o fermento com o leite morno e um pouco de açúcar, deixe ativar 10 minutos. AMASSAR: Combine a farinha com os ovos, a manteiga derretida, o açúcar restante, o sal e o fermento ativado, amasse até ficar elástica. LEVEDAR: Deixe a massa crescer em local quente por 1 hora, até dobrar de volume. ENROLAR: Estenda a massa em tiras longas e enrole-as em espiral em torno de um cilindro de madeira untado com manteiga. PASSAR NO AÇÚCAR: Role cada cilindro no açúcar até ficar totalmente coberto. ASSAR GIRANDO: Asse em lume médio, girando constantemente o cilindro, até a crosta ficar dourada e caramelizada, cerca de 15-20 minutos. FINALIZAR: Retire do cilindro enquanto ainda está quente, polvilhe com canela e nozes moídas antes de servir.",
+    "ru": "ПРИГОТОВЛЕНИЕ ТЕСТА: Смешайте дрожжи с тёплым молоком и небольшим количеством сахара, дайте активироваться 10 минут. ЗАМЕС: Соедините муку с яйцами, растопленным маслом, оставшимся сахаром, солью и активированными дрожжами, замесите до эластичности. РАССТОЙКА: Дайте тесту подняться в тёплом месте 1 час, пока не удвоится в объёме. НАМОТКА: Раскатайте тесто в длинные полосы и намотайте их спиралью на смазанный маслом деревянный цилиндр. ОБВАЛКА В САХАРЕ: Обваляйте каждый цилиндр в сахаре до полного покрытия. ВЫПЕЧКА С ВРАЩЕНИЕМ: Выпекайте на среднем огне, постоянно вращая цилиндр, пока корка не станет золотистой и карамелизированной, около 15-20 минут. ЗАВЕРШЕНИЕ: Снимите с цилиндра, пока ещё тёплый, посыпьте корицей и молотыми грецкими орехами перед подачей.",
+    "ar": "تحضير العجين: اخلط الخميرة مع الحليب الدافئ وقليل من السكر، اتركها تنشط لمدة 10 دقائق. العجن: اخلط الدقيق مع البيض والزبدة المذابة والسكر المتبقي والملح والخميرة المنشطة، اعجن حتى يصبح مرنًا. التخمير: اترك العجين يرتاح في مكان دافئ لمدة ساعة حتى يتضاعف حجمه. اللف: افرد العجين إلى شرائط طويلة والفها حلزونيًا حول أسطوانة خشبية مدهونة بالزبدة. التمرير في السكر: مرّر كل أسطوانة في السكر حتى تُغطى بالكامل. الخبز مع الدوران: اخبز على نار متوسطة مع تدوير الأسطوانة باستمرار حتى تصبح القشرة ذهبية ومكرمَلة، لمدة 15-20 دقيقة تقريبًا. اللمسات الأخيرة: أزلها من الأسطوانة وهي ساخنة، رشّ القرفة والجوز المطحون قبل التقديم.",
+    "zh": "准备面团：将酵母与温牛奶和少许糖混合，静置10分钟激活。揉面：将面粉与鸡蛋、融化黄油、剩余糖、盐和激活的酵母混合，揉至有弹性。发酵：将面团放在温暖处发酵1小时，直至体积翻倍。缠绕：将面团擀成长条，螺旋缠绕在涂了黄油的木制圆柱上。裹糖：将每根圆柱在糖中滚动，直至完全裹满。旋转烘烤：中火烘烤，不断旋转圆柱，直至外皮呈金黄焦糖色，约15-20分钟。最后装饰：趁热从圆柱上取下，撒上肉桂粉和核桃碎后食用。",
+    "ja": "生地を準備：イーストを温めた牛乳と少量の砂糖と混ぜ、10分間活性化させる。こねる：小麦粉に卵、溶かしバター、残りの砂糖、塩、活性化したイーストを合わせ、弾力が出るまでこねる。発酵：温かい場所で生地を1時間、2倍の大きさになるまで発酵させる。巻き付ける：生地を長い帯状に伸ばし、バターを塗った木製の筒に螺旋状に巻き付ける。砂糖をまぶす：それぞれの筒を砂糖の中で転がして全体をまぶす。回しながら焼く：筒を絶えず回しながら中火で焼き、表面が金色でカラメル状になるまで15〜20分焼く。仕上げ：温かいうちに筒から外し、提供前にシナモンとくるみの粉を振りかける。",
+    "hi": "आटा तैयार करें: खमीर को गरम दूध और थोड़ी चीनी के साथ मिलाएं, 10 मिनट सक्रिय होने दें। गूंधें: आटे को अंडे, पिघला मक्खन, बची हुई चीनी, नमक और सक्रिय खमीर के साथ मिलाएं, लचीला होने तक गूंधें। फूलने दें: आटे को गरम जगह पर 1 घंटे के लिए फूलने दें, जब तक आकार दोगुना न हो जाए। लपेटें: आटे को लंबी पट्टियों में बेलें और मक्खन लगे लकड़ी के बेलन पर सर्पिल आकार में लपेटें। चीनी में लपेटें: हर बेलन को चीनी में तब तक घुमाएं जब तक पूरी तरह ढक न जाए। घुमाते हुए बेक करें: मध्यम आँच पर बेलन को लगातार घुमाते हुए बेक करें, जब तक परत सुनहरी और कारमेलाइज़्ड न हो जाए, लगभग 15-20 मिनट। अंतिम रूप दें: गरम रहते हुए बेलन से निकालें, परोसने से पहले दालचीनी और पिसे अखरोट छिड़कें।",
+    "tr": "HAMURU HAZIRLAYIN: Mayayı ılık süt ve biraz şekerle karıştırın, 10 dakika aktive olmasını bekleyin. YOĞURUN: Unu yumurtalar, eritilmiş tereyağı, kalan şeker, tuz ve aktive edilmiş mayayla birleştirin, elastik olana kadar yoğurun. MAYALANDIRIN: Hamuru sıcak bir yerde hacmi iki katına çıkana kadar 1 saat bekletin. SARIN: Hamuru uzun şeritler halinde açın ve yağlanmış ahşap bir silindire sarmal şekilde sarın. ŞEKERE BULAYIN: Her silindiri tamamen kaplanana kadar şekerde yuvarlayın. DÖNDÜREREK PİŞİRİN: Silindiri sürekli döndürerek orta ateşte, kabuk altın rengi ve karamelize olana kadar yaklaşık 15-20 dakika pişirin. SON DOKUNUŞ: Hâlâ sıcakken silindirden çıkarın, servisten önce tarçın ve öğütülmüş cevizle serpin.",
+    "it": "PREPARARE L'IMPASTO: Mescolate il lievito con il latte tiepido e un po' di zucchero, lasciate attivare per 10 minuti. IMPASTARE: Unite la farina con le uova, il burro fuso, lo zucchero rimasto, il sale e il lievito attivato, impastate fino a renderlo elastico. LIEVITARE: Lasciate lievitare l'impasto in un luogo caldo per 1 ora, finché raddoppia di volume. AVVOLGERE: Stendete l'impasto in lunghe strisce e avvolgetele a spirale attorno a un cilindro di legno imburrato. PASSARE NELLO ZUCCHERO: Fate rotolare ogni cilindro nello zucchero finché è completamente ricoperto. CUOCERE RUOTANDO: Cuocete a fuoco medio, ruotando costantemente il cilindro, finché la crosta diventa dorata e caramellata, circa 15-20 minuti. FINIRE: Togliete dal cilindro mentre è ancora caldo, cospargete di cannella e noci macinate prima di servire.",
+    "ko": "반죽 준비: 이스트를 따뜻한 우유와 약간의 설탕과 섞어 10분간 활성화시킨다. 반죽하기: 밀가루에 달걀, 녹인 버터, 남은 설탕, 소금, 활성화된 이스트를 넣고 탄력이 생길 때까지 반죽한다. 발효: 반죽을 따뜻한 곳에서 부피가 두 배가 될 때까지 1시간 발효시킨다. 감기: 반죽을 긴 띠 모양으로 펴서 버터 바른 나무 원통에 나선형으로 감는다. 설탕 묻히기: 각 원통을 설탕에 굴려 완전히 덮는다. 회전시키며 굽기: 원통을 계속 돌리며 중불에서 겉면이 황금빛 캐러멜색이 될 때까지 약 15~20분 굽는다. 마무리: 따뜻할 때 원통에서 빼내고, 제공 전 계핏가루와 다진 호두를 뿌린다."
+  },
+  "originText": {
+    "ro": "Kürtőskalács, cunoscut și ca „prăjitura horn” sau cornetul unguresc, are o istorie ce datează din secolul al XVIII-lea în Transilvania, teritoriu istoric locuit atât de unguri, cât și de secui și români. Numele provine de la forma sa cilindrică, asemănătoare unui horn (kürtő în maghiară). Tehnica de a înfășura aluatul pe un cilindru și de a-l coace rotindu-l deasupra jarului este strâns legată de rețete similare din întreaga regiune carpatică.\n\nAstăzi este nelipsit de la târgurile de Crăciun și festivalurile de stradă din Budapesta, Cluj sau Brașov, unde e copt pe loc, în văzul cumpărătorilor, pe rotisoare artizanale. Aroma de caramel proaspăt și scorțișoară care se răspândește pe străzi în timpul iernii a făcut din acest desert un simbol al bucătăriei de stradă din Europa Centrală.",
+    "en": "Kürtőskalács, also known as chimney cake or Hungarian cornet, dates back to the 18th century in Transylvania, a historical region inhabited by Hungarians, Székelys and Romanians alike. Its name comes from its cylindrical shape, resembling a chimney (kürtő in Hungarian). The technique of wrapping dough around a cylinder and baking it while rotating over embers is closely tied to similar recipes found across the Carpathian region.\n\nToday it's a fixture at Christmas markets and street festivals in Budapest, Cluj or Brașov, baked on the spot in front of buyers on artisan rotisseries. The smell of fresh caramel and cinnamon spreading through the streets in winter has made this dessert a symbol of Central European street food.",
+    "es": "Kürtőskalács, también conocido como pastel chimenea o cono húngaro, se remonta al siglo XVIII en Transilvania, una región histórica habitada tanto por húngaros como por székelys y rumanos. Su nombre viene de su forma cilíndrica, parecida a una chimenea (kürtő en húngaro). La técnica de enrollar la masa alrededor de un cilindro y hornearla girándola sobre las brasas está estrechamente ligada a recetas similares en toda la región de los Cárpatos.\n\nHoy es habitual en los mercados navideños y festivales callejeros de Budapest, Cluj o Brasov, donde se hornea en el momento ante los compradores en asadores artesanales. El aroma a caramelo fresco y canela que se extiende por las calles en invierno ha convertido a este postre en un símbolo de la comida callejera de Europa Central.",
+    "fr": "Le kürtőskalács, aussi connu sous le nom de gâteau cheminée ou cornet hongrois, remonte au XVIIIe siècle en Transylvanie, une région historique habitée à la fois par des Hongrois, des Sicules et des Roumains. Son nom vient de sa forme cylindrique, ressemblant à une cheminée (kürtő en hongrois). La technique consistant à enrouler la pâte autour d'un cylindre et à la cuire en la faisant tourner au-dessus des braises est étroitement liée à des recettes similaires trouvées dans toute la région des Carpates.\n\nAujourd'hui, il est incontournable dans les marchés de Noël et les festivals de rue de Budapest, Cluj ou Brasov, où il est cuit sur place devant les acheteurs sur des rôtissoires artisanales. L'odeur de caramel frais et de cannelle qui se répand dans les rues en hiver a fait de ce dessert un symbole de la street food d'Europe centrale.",
+    "de": "Kürtőskalács, auch als Baumstriezel oder ungarische Tüte bekannt, geht auf das 18. Jahrhundert in Siebenbürgen zurück, eine historische Region, die von Ungarn, Sekler und Rumänen gleichermaßen bewohnt wird. Sein Name stammt von seiner zylindrischen Form, die einem Schornstein ähnelt (kürtő auf Ungarisch). Die Technik, den Teig um einen Zylinder zu wickeln und ihn drehend über Glut zu backen, ist eng mit ähnlichen Rezepten in der gesamten Karpatenregion verbunden.\n\nHeute ist er ein fester Bestandteil von Weihnachtsmärkten und Straßenfesten in Budapest, Cluj oder Brașov, wo er vor den Käufern auf handwerklichen Drehspießen frisch gebacken wird. Der Duft von frischem Karamell und Zimt, der sich im Winter durch die Straßen zieht, hat dieses Dessert zu einem Symbol der mitteleuropäischen Straßenküche gemacht.",
+    "pt": "Kürtőskalács, também conhecido como bolo chaminé ou cone húngaro, remonta ao século XVIII na Transilvânia, uma região histórica habitada tanto por húngaros como por székelys e romenos. O seu nome vem da sua forma cilíndrica, semelhante a uma chaminé (kürtő em húngaro). A técnica de enrolar a massa em torno de um cilindro e assá-la girando sobre brasas está intimamente ligada a receitas semelhantes encontradas em toda a região dos Cárpatos.\n\nHoje é presença obrigatória nos mercados de Natal e festivais de rua de Budapeste, Cluj ou Brasov, onde é assado na hora perante os compradores em espetos artesanais. O aroma de caramelo fresco e canela que se espalha pelas ruas no inverno tornou esta sobremesa num símbolo da comida de rua da Europa Central.",
+    "ru": "Кюртёшкалач, также известный как трубчатый пирог или венгерский рожок, восходит к XVIII веку в Трансильвании — исторической области, населённой венграми, секеями и румынами. Название происходит от его цилиндрической формы, напоминающей дымоход (kürtő по-венгерски). Техника наматывания теста на цилиндр и выпечки с вращением над углями тесно связана с похожими рецептами по всему Карпатскому региону.\n\nСегодня он неотъемлемая часть рождественских ярмарок и уличных фестивалей в Будапеште, Клуже или Брашове, где его выпекают на месте на глазах у покупателей на ремесленных вертелах. Аромат свежей карамели и корицы, разносящийся по улицам зимой, сделал этот десерт символом уличной кухни Центральной Европы.",
+    "ar": "يعود تاريخ كورتوشكالاش، المعروف أيضًا باسم كعكة المدخنة أو القرن المجري، إلى القرن الثامن عشر في ترانسيلفانيا، وهي منطقة تاريخية يسكنها المجريون والسيكلر والرومانيون على حد سواء. يأتي اسمه من شكله الأسطواني الذي يشبه المدخنة (كورتو بالمجرية). ترتبط تقنية لف العجين حول أسطوانة وخبزه أثناء تدويره فوق الجمر ارتباطًا وثيقًا بوصفات مماثلة موجودة في جميع أنحاء منطقة الكاربات.\n\nاليوم أصبح حاضرًا بثبات في أسواق عيد الميلاد والمهرجانات الشعبية في بودابست وكلوج وبراشوف، حيث يُخبز في الموقع أمام المشترين على أسياخ حرفية. رائحة الكراميل الطازج والقرفة التي تنتشر في الشوارع شتاءً جعلت من هذه الحلوى رمزًا لأطعمة الشوارع في وسط أوروبا.",
+    "zh": "匈牙利烟囱蛋糕（Kürtőskalács），又称筒状蛋糕或匈牙利卷筒，其历史可追溯至18世纪的特兰西瓦尼亚——一个由匈牙利人、塞凯伊人和罗马尼亚人共同居住的历史地区。它的名字来源于其形似烟囱（匈牙利语中的kürtő）的圆筒形状。将面团缠绕在圆柱上并在炭火上旋转烘烤的技艺，与整个喀尔巴阡地区的类似食谱密切相关。\n\n如今，它是布达佩斯、克鲁日或布拉索夫圣诞市场和街头节日中不可或缺的存在，摊贩当场在手工旋转烤架上现烤现卖。冬季街头弥漫的新鲜焦糖与肉桂香气，使这道甜点成为中欧街头美食的象征。",
+    "ja": "キュルトゥシュカラーチ、別名煙突ケーキまたはハンガリー風円錐菓子は、ハンガリー人、セーケイ人、ルーマニア人が共に暮らしてきた歴史的地域トランシルヴァニアで18世紀にまで遡る。その名は、煙突（ハンガリー語でkürtő）に似た円筒形に由来する。生地を筒に巻きつけて炭火の上で回しながら焼く技法は、カルパティア地方全域に見られる類似のレシピと密接に結びついている。\n\n今日では、ブダペスト、クルージュ、ブラショフのクリスマス市場や街頭フェスティバルに欠かせない存在であり、購入者の目の前で職人による回転式の炙り台で焼かれる。冬に街中に漂う新鮮なキャラメルとシナモンの香りは、このデザートを中央ヨーロッパのストリートフードの象徴にしてきた。",
+    "hi": "कुर्तोशकलाच, जिसे चिमनी केक या हंगेरियन कोन भी कहा जाता है, ट्रांसिल्वेनिया में 18वीं सदी से चला आ रहा है, जो हंगेरियन, सेकेली और रोमानियाई लोगों दोनों द्वारा बसाया गया एक ऐतिहासिक क्षेत्र है। इसका नाम इसके बेलनाकार आकार से आता है, जो चिमनी (हंगेरियन में kürtő) जैसा दिखता है। आटे को बेलन के चारों ओर लपेटने और अंगारों के ऊपर घुमाते हुए बेक करने की तकनीक पूरे कार्पेथियन क्षेत्र में पाए जाने वाले समान व्यंजनों से निकटता से जुड़ी है।\n\nआज यह बुडापेस्ट, क्लूज या ब्रासोव के क्रिसमस बाजारों और सड़क उत्सवों में एक स्थायी विशेषता है, जहां इसे खरीदारों के सामने कारीगर रोटिसरी पर तुरंत बेक किया जाता है। सर्दियों में सड़कों पर फैलती ताज़े कारमेल और दालचीनी की खुशबू ने इस मिठाई को मध्य यूरोपीय स्ट्रीट फूड का प्रतीक बना दिया है।",
+    "tr": "Kürtőskalács, baca keki veya Macar boruğu olarak da bilinir, hem Macarların hem Sekellerin hem de Romenlerin yaşadığı tarihi bir bölge olan Transilvanya'da 18. yüzyıla kadar uzanır. Adı, bacaya (Macarca kürtő) benzeyen silindirik şeklinden gelir. Hamuru bir silindire sarıp közün üzerinde döndürerek pişirme tekniği, Karpat bölgesinin genelinde bulunan benzer tariflerle yakından bağlantılıdır.\n\nBugün Budapeşte, Cluj veya Brașov'daki Noel pazarlarında ve sokak festivallerinde vazgeçilmezdir; alıcıların gözü önünde geleneksel şişlerde anında pişirilir. Kışın sokaklara yayılan taze karamel ve tarçın kokusu, bu tatlıyı Orta Avrupa sokak lezzetlerinin bir simgesi haline getirmiştir.",
+    "it": "Il kürtőskalács, noto anche come torta camino o cono ungherese, risale al XVIII secolo in Transilvania, una regione storica abitata sia da ungheresi che da székely e rumeni. Il suo nome deriva dalla sua forma cilindrica, che ricorda un camino (kürtő in ungherese). La tecnica di avvolgere l'impasto attorno a un cilindro e cuocerlo ruotandolo sulla brace è strettamente legata a ricette simili trovate in tutta la regione dei Carpazi.\n\nOggi è immancabile nei mercatini di Natale e nei festival di strada di Budapest, Cluj o Brașov, dove viene cotto sul posto davanti agli acquirenti su girarrosti artigianali. Il profumo di caramello fresco e cannella che si diffonde per le strade in inverno ha reso questo dolce un simbolo dello street food dell'Europa Centrale.",
+    "ko": "퀴르퇴슈칼라치는 굴뚝 케이크 또는 헝가리식 콘으로도 알려져 있으며, 헝가리인, 세케이인, 루마니아인이 함께 거주해온 역사적 지역인 트란실바니아에서 18세기까지 거슬러 올라간다. 이 이름은 굴뚝(헝가리어로 kürtő)을 닮은 원통형 모양에서 유래했다. 반죽을 원통에 감아 숯불 위에서 돌리며 굽는 기법은 카르파티아 지역 전역에서 발견되는 유사한 레시피와 밀접하게 연관되어 있다.\n\n오늘날 이것은 부다페스트, 클루지, 브라쇼브의 크리스마스 시장과 거리 축제에서 빠질 수 없는 존재이며, 구매자들 앞에서 장인이 회전식 꼬치로 즉석에서 굽는다. 겨울철 거리에 퍼지는 신선한 캐러멜과 계피 향은 이 디저트를 중부 유럽 길거리 음식의 상징으로 만들었다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 15,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Cornet gol de aluat, copt pe rotisor și acoperit cu zahăr caramelizat.",
+      "en": "Hollow dough cone, baked on a spit and coated in caramelized sugar.",
+      "es": "Cono hueco de masa, horneado en asador y cubierto de azúcar caramelizado.",
+      "fr": "Cône de pâte creux, cuit à la broche et enrobé de sucre caramélisé.",
+      "de": "Hohler Teigkegel, am Spieß gebacken und mit karamellisiertem Zucker überzogen.",
+      "pt": "Cone oco de massa, assado em espeto e coberto de açúcar caramelizado.",
+      "ru": "Полый конус из теста, испечённый на вертеле и покрытый карамелизированным сахаром.",
+      "ar": "مخروط عجين مجوف، يُخبز على سيخ ويُغطى بسكر مكرمَل.",
+      "zh": "中空面团筒，旋转烤制并裹上焦糖。",
+      "ja": "串で焼いたキャラメルコーティングの中空生地の円錐。",
+      "hi": "खोखला आटे का शंकु, सीख पर बेक और कारमेलाइज़्ड चीनी से लिपटा हुआ।",
+      "tr": "Şişte pişirilen, karamelize şekerle kaplanan içi boş hamur konisi.",
+      "it": "Cono cavo di pasta, cotto allo spiedo e ricoperto di zucchero caramellato.",
+      "ko": "꼬치에 구워 캐러멜 설탕을 입힌 속 빈 반죽 콘."
+    }
+  }
+}
