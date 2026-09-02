@@ -1,0 +1,209 @@
+{
+  "id": 338,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Portugalia",
+    "en": "Portugal",
+    "es": "Portugal",
+    "fr": "Portugal",
+    "de": "Portugal",
+    "pt": "Portugal",
+    "ru": "Португалия",
+    "ar": "البرتغال",
+    "zh": "葡萄牙",
+    "ja": "ポルトガル",
+    "hi": "पुर्तगाल",
+    "tr": "Portekiz",
+    "it": "Portogallo",
+    "ko": "포르투갈"
+  },
+  "name": {
+    "ro": "Alheira de Mirandela",
+    "en": "Alheira de Mirandela",
+    "es": "Alheira de Mirandela",
+    "fr": "Alheira de Mirandela",
+    "de": "Alheira de Mirandela",
+    "pt": "Alheira de Mirandela",
+    "ru": "Альейра де Мирандела",
+    "ar": "ألهيرا دي ميرانديلا",
+    "zh": "米兰德拉香肠",
+    "ja": "アリェイラ・デ・ミランデラ",
+    "hi": "अल्हेइरा दे मिरांदेला",
+    "tr": "Alheira de Mirandela",
+    "it": "Alheira de Mirandela",
+    "ko": "알레이라 데 미란델라"
+  },
+  "category": {
+    "ro": "Fel principal",
+    "en": "Main course",
+    "es": "Plato principal",
+    "fr": "Plat principal",
+    "de": "Hauptgericht",
+    "pt": "Prato principal",
+    "ru": "Основное блюдо",
+    "ar": "الطبق الرئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य व्यंजन",
+    "tr": "Ana yemek",
+    "it": "Piatto principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥖", "t": "Cârnat fără porc", "d": "Umplut cu pâine, pui și rață, nu cu carne de porc."},
+      {"icon": "🔥", "t": "Prăjit crocant", "d": "Se frige la tigaie până pielița devine crocantă."},
+      {"icon": "🍳", "t": "Servit cu ou", "d": "Clasic însoțit de ou ochi și cartofi prăjiți."},
+      {"icon": "🕰️", "t": "Origine istorică", "d": "Creat de evrei portughezi pentru a păcăli Inchiziția."}
+    ],
+    "en": [
+      {"icon": "🥖", "t": "Pork-free sausage", "d": "Stuffed with bread, chicken and duck, not pork."},
+      {"icon": "🔥", "t": "Crispy fried", "d": "Pan-fried until the casing turns golden and crisp."},
+      {"icon": "🍳", "t": "Served with egg", "d": "Classically paired with a fried egg and chips."},
+      {"icon": "🕰️", "t": "Historic origin", "d": "Created by Portuguese Jews to fool the Inquisition."}
+    ],
+    "es": [
+      {"icon": "🥖", "t": "Embutido sin cerdo", "d": "Relleno con pan, pollo y pato, no con cerdo."},
+      {"icon": "🔥", "t": "Frito crujiente", "d": "Se fríe hasta que la piel queda dorada y crujiente."},
+      {"icon": "🍳", "t": "Servido con huevo", "d": "Clásicamente acompañado de huevo frito y patatas."},
+      {"icon": "🕰️", "t": "Origen histórico", "d": "Creado por judíos portugueses para engañar a la Inquisición."}
+    ],
+    "fr": [
+      {"icon": "🥖", "t": "Saucisse sans porc", "d": "Farcie au pain, au poulet et au canard, pas au porc."},
+      {"icon": "🔥", "t": "Frite et croustillante", "d": "Poêlée jusqu'à ce que la peau devienne dorée et croustillante."},
+      {"icon": "🍳", "t": "Servie avec un œuf", "d": "Classiquement accompagnée d'un œuf au plat et de frites."},
+      {"icon": "🕰️", "t": "Origine historique", "d": "Créée par les Juifs portugais pour tromper l'Inquisition."}
+    ],
+    "de": [
+      {"icon": "🥖", "t": "Wurst ohne Schwein", "d": "Gefüllt mit Brot, Huhn und Ente, nicht mit Schweinefleisch."},
+      {"icon": "🔥", "t": "Knusprig gebraten", "d": "In der Pfanne gebraten, bis die Haut goldbraun und knusprig ist."},
+      {"icon": "🍳", "t": "Mit Ei serviert", "d": "Klassisch mit Spiegelei und Pommes serviert."},
+      {"icon": "🕰️", "t": "Historischer Ursprung", "d": "Von portugiesischen Juden erfunden, um die Inquisition zu täuschen."}
+    ],
+    "pt": [
+      {"icon": "🥖", "t": "Enchido sem porco", "d": "Recheado com pão, frango e pato, não com carne de porco."},
+      {"icon": "🔥", "t": "Frita e estaladiça", "d": "Frita na frigideira até a pele ficar dourada e estaladiça."},
+      {"icon": "🍳", "t": "Servida com ovo", "d": "Classicamente acompanhada de ovo estrelado e batatas fritas."},
+      {"icon": "🕰️", "t": "Origem histórica", "d": "Criada pelos judeus portugueses para enganar a Inquisição."}
+    ],
+    "ru": [
+      {"icon": "🥖", "t": "Колбаса без свинины", "d": "Начинка из хлеба, курицы и утки, а не свинины."},
+      {"icon": "🔥", "t": "Хрустящая жарка", "d": "Обжаривается на сковороде до золотистой хрустящей корочки."},
+      {"icon": "🍳", "t": "Подаётся с яйцом", "d": "Классически подаётся с яичницей и жареной картошкой."},
+      {"icon": "🕰️", "t": "Историческое происхождение", "d": "Создана португальскими евреями, чтобы обмануть инквизицию."}
+    ],
+    "ar": [
+      {"icon": "🥖", "t": "نقانق بدون لحم خنزير", "d": "محشوة بالخبز والدجاج والبط، وليس لحم الخنزير."},
+      {"icon": "🔥", "t": "مقلية ومقرمشة", "d": "تُقلى حتى يصبح الغلاف ذهبيًا ومقرمشًا."},
+      {"icon": "🍳", "t": "تُقدَّم مع بيضة", "d": "تُقدَّم تقليديًا مع بيضة مقلية وبطاطا مقلية."},
+      {"icon": "🕰️", "t": "أصل تاريخي", "d": "ابتكرها اليهود البرتغاليون لخداع محاكم التفتيش."}
+    ],
+    "zh": [
+      {"icon": "🥖", "t": "无猪肉香肠", "d": "以面包、鸡肉和鸭肉为馅，不含猪肉。"},
+      {"icon": "🔥", "t": "煎至酥脆", "d": "煎至外皮金黄酥脆。"},
+      {"icon": "🍳", "t": "配煎蛋食用", "d": "经典搭配煎蛋和炸薯条。"},
+      {"icon": "🕰️", "t": "历史渊源", "d": "由葡萄牙犹太人创制，以躲避宗教裁判所。"}
+    ],
+    "ja": [
+      {"icon": "🥖", "t": "豚肉不使用のソーセージ", "d": "パン、鶏肉、鴨肉を詰めた豚肉を使わないソーセージ。"},
+      {"icon": "🔥", "t": "カリッと揚げ焼き", "d": "皮がきつね色でカリカリになるまで焼く。"},
+      {"icon": "🍳", "t": "目玉焼きと共に", "d": "目玉焼きとフライドポテトが定番の付け合わせ。"},
+      {"icon": "🕰️", "t": "歴史的起源", "d": "宗教裁判所を欺くためポルトガルのユダヤ人が考案。"}
+    ],
+    "hi": [
+      {"icon": "🥖", "t": "पोर्क-मुक्त सॉसेज", "d": "ब्रेड, चिकन और बत्तख से भरा हुआ, पोर्क से नहीं।"},
+      {"icon": "🔥", "t": "कुरकुरा तला हुआ", "d": "तब तक तला जाता है जब तक छिलका सुनहरा और कुरकुरा न हो जाए।"},
+      {"icon": "🍳", "t": "अंडे के साथ परोसा गया", "d": "पारंपरिक रूप से तले हुए अंडे और चिप्स के साथ।"},
+      {"icon": "🕰️", "t": "ऐतिहासिक उत्पत्ति", "d": "इनक्विज़िशन को धोखा देने के लिए पुर्तगाली यहूदियों द्वारा बनाया गया।"}
+    ],
+    "tr": [
+      {"icon": "🥖", "t": "Domuzsuz sosis", "d": "Domuz eti yerine ekmek, tavuk ve ördekle doldurulur."},
+      {"icon": "🔥", "t": "Çıtır kızartma", "d": "Kabuğu altın rengi ve çıtır olana kadar tavada kızartılır."},
+      {"icon": "🍳", "t": "Yumurtayla servis edilir", "d": "Klasik olarak sahanda yumurta ve kızartmayla sunulur."},
+      {"icon": "🕰️", "t": "Tarihi köken", "d": "Portekizli Yahudiler tarafından Engizisyonu kandırmak için yaratıldı."}
+    ],
+    "it": [
+      {"icon": "🥖", "t": "Salsiccia senza maiale", "d": "Farcita con pane, pollo e anatra, non con carne di maiale."},
+      {"icon": "🔥", "t": "Fritta e croccante", "d": "Rosolata in padella finché la pelle diventa dorata e croccante."},
+      {"icon": "🍳", "t": "Servita con uovo", "d": "Classicamente accompagnata da uovo fritto e patatine."},
+      {"icon": "🕰️", "t": "Origine storica", "d": "Creata dagli ebrei portoghesi per ingannare l'Inquisizione."}
+    ],
+    "ko": [
+      {"icon": "🥖", "t": "돼지고기 없는 소시지", "d": "돼지고기 대신 빵, 닭고기, 오리고기로 속을 채운다."},
+      {"icon": "🔥", "t": "바삭하게 튀김", "d": "껍질이 황금빛으로 바삭해질 때까지 팬에 굽는다."},
+      {"icon": "🍳", "t": "달걀과 함께 제공", "d": "전통적으로 달걀프라이와 감자튀김을 곁들인다."},
+      {"icon": "🕰️", "t": "역사적 기원", "d": "종교재판을 속이기 위해 포르투갈 유대인들이 만들었다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 cârnați alheira", "4 ouă", "500g cartofi", "2 linguri ulei de măsline", "1 legătură varză creață", "2 căței de usturoi", "1 lămâie (zeamă)", "sare", "piper negru", "2 frunze de dafin", "boia dulce", "ulei pentru prăjit cartofii"],
+    "en": ["4 alheira sausages", "4 eggs", "500g potatoes", "2 tbsp olive oil", "1 bunch kale", "2 garlic cloves", "1 lemon (juiced)", "salt", "black pepper", "2 bay leaves", "sweet paprika", "oil for frying the potatoes"],
+    "es": ["4 salchichas alheira", "4 huevos", "500g de patatas", "2 cdas de aceite de oliva", "1 manojo de col rizada", "2 dientes de ajo", "1 limón (zumo)", "sal", "pimienta negra", "2 hojas de laurel", "pimentón dulce", "aceite para freír las patatas"],
+    "fr": ["4 saucisses alheira", "4 œufs", "500g de pommes de terre", "2 c. à s. d'huile d'olive", "1 botte de chou frisé", "2 gousses d'ail", "1 citron (jus)", "sel", "poivre noir", "2 feuilles de laurier", "paprika doux", "huile pour frire les pommes de terre"],
+    "de": ["4 Alheira-Würste", "4 Eier", "500g Kartoffeln", "2 EL Olivenöl", "1 Bund Grünkohl", "2 Knoblauchzehen", "1 Zitrone (Saft)", "Salz", "schwarzer Pfeffer", "2 Lorbeerblätter", "süßes Paprikapulver", "Öl zum Frittieren der Kartoffeln"],
+    "pt": ["4 alheiras", "4 ovos", "500g de batatas", "2 c. sopa de azeite", "1 molho de couve galega", "2 dentes de alho", "1 limão (sumo)", "sal", "pimenta preta", "2 folhas de louro", "colorau doce", "óleo para fritar as batatas"],
+    "ru": ["4 колбаски альейра", "4 яйца", "500г картофеля", "2 ст.л. оливкового масла", "1 пучок листовой капусты кейл", "2 зубчика чеснока", "1 лимон (сок)", "соль", "чёрный перец", "2 лавровых листа", "сладкая паприка", "масло для жарки картофеля"],
+    "ar": ["4 نقانق ألهيرا", "4 بيضات", "500غ بطاطا", "2 ملعقة كبيرة زيت زيتون", "حزمة كرنب أجعد", "فصان ثوم", "ليمونة واحدة (عصير)", "ملح", "فلفل أسود", "ورقتا غار", "بابريكا حلوة", "زيت لقلي البطاطا"],
+    "zh": ["阿尔海拉香肠4根", "鸡蛋4个", "土豆500克", "橄榄油2汤匙", "羽衣甘蓝1把", "大蒜2瓣", "柠檬1个（取汁）", "盐", "黑胡椒", "月桂叶2片", "甜味红椒粉", "炸土豆用油"],
+    "ja": ["アリェイラソーセージ 4本", "卵 4個", "じゃがいも 500g", "オリーブオイル 大さじ2", "ケール 1束", "にんにく 2片", "レモン 1個（果汁）", "塩", "黒こしょう", "ローリエ 2枚", "甘いパプリカパウダー", "じゃがいもを揚げる油"],
+    "hi": ["4 अल्हेइरा सॉसेज", "4 अंडे", "500 ग्राम आलू", "2 बड़े चम्मच जैतून का तेल", "1 गुच्छा केल", "2 लहसुन की कलियाँ", "1 नींबू (रस)", "नमक", "काली मिर्च", "2 तेज पत्ते", "मीठी पपरिका", "आलू तलने के लिए तेल"],
+    "tr": ["4 alheira sosisi", "4 yumurta", "500g patates", "2 yemek kaşığı zeytinyağı", "1 demet kara lahana", "2 diş sarımsak", "1 limon (suyu)", "tuz", "karabiber", "2 defne yaprağı", "tatlı paprika", "patatesleri kızartmak için yağ"],
+    "it": ["4 salsicce alheira", "4 uova", "500g di patate", "2 cucchiai di olio d'oliva", "1 mazzo di cavolo riccio", "2 spicchi d'aglio", "1 limone (succo)", "sale", "pepe nero", "2 foglie di alloro", "paprika dolce", "olio per friggere le patate"],
+    "ko": ["알레이라 소시지 4개", "달걀 4개", "감자 500g", "올리브 오일 2큰술", "케일 1단", "마늘 2쪽", "레몬 1개(즙)", "소금", "후추", "월계수 잎 2장", "단맛 파프리카 가루", "감자 튀김용 기름"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTIRE CARTOFI: Curăță și taie cartofii cubulețe, prăjește-i în ulei încins până sunt aurii și crocanți. FIERBERE VARZĂ: Fierbe varza creață în apă cu sare și dafin timp de 5 minute, apoi scurge-o. SOTARE USTUROI: Călește usturoiul zdrobit în ulei de măsline, adaugă varza fiartă și sotează 2 minute. PRĂJIRE CÂRNAȚI: Taie cârnații alheira pe lungime și prăjește-i în tigaie la foc mediu până pielița devine crocantă și aurie. PRĂJIRE OUĂ: Prăjește ouăle ochi în aceeași tigaie, cu marginile crocante. ASAMBLARE: Așază cartofii și varza pe farfurie, adaugă cârnații și oul deasupra. FINALIZARE: Stropește cu zeamă de lămâie și presară boia dulce înainte de servire.",
+    "en": "PREPARE POTATOES: Peel and cube the potatoes, fry them in hot oil until golden and crisp. BOIL KALE: Boil the kale in salted water with bay leaves for 5 minutes, then drain. SAUTÉ GARLIC: Sauté the crushed garlic in olive oil, add the boiled kale and sauté for 2 minutes. FRY SAUSAGES: Slice the alheira sausages lengthwise and pan-fry over medium heat until the casing turns crisp and golden. FRY EGGS: Fry the eggs sunny-side up in the same pan, with crispy edges. ASSEMBLE: Arrange the potatoes and kale on the plate, top with the sausages and the egg. FINISH: Drizzle with lemon juice and sprinkle with sweet paprika before serving.",
+    "es": "PREPARAR PATATAS: Pela y corta las patatas en cubos, fríelas en aceite caliente hasta que estén doradas y crujientes. HERVIR COL: Hierve la col rizada en agua con sal y laurel durante 5 minutos, luego escúrrela. SALTEAR AJO: Saltea el ajo machacado en aceite de oliva, añade la col hervida y saltea 2 minutos. FREÍR SALCHICHAS: Corta las salchichas alheira a lo largo y fríelas a fuego medio hasta que la piel quede crujiente y dorada. FREÍR HUEVOS: Fríe los huevos en la misma sartén, con los bordes crujientes. MONTAJE: Coloca las patatas y la col en el plato, añade las salchichas y el huevo encima. FINALIZAR: Rocía con zumo de limón y espolvorea pimentón dulce antes de servir.",
+    "fr": "PRÉPARER LES POMMES DE TERRE: Épluchez et coupez les pommes de terre en cubes, faites-les frire dans l'huile chaude jusqu'à ce qu'elles soient dorées et croustillantes. FAIRE BOUILLIR LE CHOU: Faites bouillir le chou frisé dans l'eau salée avec le laurier pendant 5 minutes, puis égouttez. FAIRE SAUTER L'AIL: Faites sauter l'ail écrasé dans l'huile d'olive, ajoutez le chou bouilli et faites sauter 2 minutes. FRIRE LES SAUCISSES: Coupez les saucisses alheira dans la longueur et faites-les frire à feu moyen jusqu'à ce que la peau devienne croustillante et dorée. FRIRE LES ŒUFS: Faites frire les œufs dans la même poêle, avec les bords croustillants. ASSEMBLER: Disposez les pommes de terre et le chou dans l'assiette, ajoutez les saucisses et l'œuf par-dessus. FINALISER: Arrosez de jus de citron et saupoudrez de paprika doux avant de servir.",
+    "de": "KARTOFFELN VORBEREITEN: Kartoffeln schälen und würfeln, in heißem Öl goldbraun und knusprig braten. GRÜNKOHL KOCHEN: Grünkohl 5 Minuten in Salzwasser mit Lorbeerblättern kochen, dann abgießen. KNOBLAUCH ANBRATEN: Zerdrückten Knoblauch in Olivenöl anbraten, den gekochten Grünkohl hinzufügen und 2 Minuten anbraten. WÜRSTE BRATEN: Alheira-Würste der Länge nach schneiden und bei mittlerer Hitze braten, bis die Haut knusprig und goldbraun wird. EIER BRATEN: Die Eier in derselben Pfanne mit knusprigen Rändern braten. ANRICHTEN: Kartoffeln und Grünkohl auf dem Teller anrichten, mit Würsten und Ei belegen. ABSCHLUSS: Vor dem Servieren mit Zitronensaft beträufeln und mit süßem Paprikapulver bestreuen.",
+    "pt": "PREPARAR BATATAS: Descasque e corte as batatas em cubos, frite-as em óleo quente até ficarem douradas e estaladiças. FERVER COUVE: Ferva a couve galega em água com sal e louro durante 5 minutos, depois escorra. REFOGAR ALHO: Refogue o alho esmagado em azeite, junte a couve fervida e refogue 2 minutos. FRITAR ALHEIRAS: Corte as alheiras ao comprido e frite em lume médio até a pele ficar estaladiça e dourada. FRITAR OVOS: Frite os ovos na mesma frigideira, com as bordas estaladiças. MONTAGEM: Disponha as batatas e a couve no prato, coloque as alheiras e o ovo por cima. FINALIZAÇÃO: Regue com sumo de limão e polvilhe com colorau doce antes de servir.",
+    "ru": "ПОДГОТОВКА КАРТОФЕЛЯ: Очистите и нарежьте картофель кубиками, обжарьте в горячем масле до золотистой хрустящей корочки. ВАРКА КАПУСТЫ: Отварите капусту кейл в подсоленной воде с лавровым листом 5 минут, затем слейте воду. ОБЖАРКА ЧЕСНОКА: Обжарьте раздавленный чеснок в оливковом масле, добавьте отварную капусту и обжаривайте 2 минуты. ЖАРКА КОЛБАСОК: Разрежьте колбаски альейра вдоль и обжарьте на среднем огне до хрустящей золотистой корочки. ЖАРКА ЯИЦ: Обжарьте яйца на той же сковороде до хрустящих краёв. СБОРКА: Выложите картофель и капусту на тарелку, сверху добавьте колбаски и яйцо. ЗАВЕРШЕНИЕ: Сбрызните лимонным соком и посыпьте сладкой паприкой перед подачей.",
+    "ar": "تحضير البطاطا: قشّر البطاطا وقطّعها مكعبات، اقليها في زيت ساخن حتى تصبح ذهبية ومقرمشة. سلق الكرنب: اسلق الكرنب الأجعد في ماء مملح مع ورق الغار لمدة 5 دقائق ثم صفّه. تحمير الثوم: حمّر الثوم المهروس في زيت الزيتون، أضف الكرنب المسلوق وقلّب لمدة دقيقتين. قلي النقانق: قطّع نقانق الألهيرا طوليًا واقليها على نار متوسطة حتى يصبح الغلاف مقرمشًا وذهبيًا. قلي البيض: اقلِ البيض في نفس المقلاة حتى تصبح الحواف مقرمشة. التجميع: رتّب البطاطا والكرنب في الطبق، ثم ضع النقانق والبيضة فوقها. اللمسة الأخيرة: رشّ عصير الليمون وانثر البابريكا الحلوة قبل التقديم.",
+    "zh": "准备土豆：削皮切块，热油炸至金黄酥脆。煮羽衣甘蓝：将羽衣甘蓝与月桂叶放入盐水中煮5分钟后沥干。炒蒜末：将压碎的大蒜用橄榄油炒香，加入煮好的甘蓝翻炒2分钟。煎香肠：将香肠纵向切开，中火煎至外皮金黄酥脆。煎蛋：在同一锅中煎蛋，边缘要煎至酥脆。装盘：将土豆和甘蓝摆盘，上面放香肠和煎蛋。最后：食用前淋上柠檬汁并撒上甜味红椒粉。",
+    "ja": "じゃがいもの準備：じゃがいもの皮をむいて角切りにし、熱した油できつね色でカリッとするまで揚げる。ケールを茹でる：ケールを塩水とローリエで5分茹でて水を切る。にんにくを炒める：つぶしたにんにくをオリーブオイルで炒め、茹でたケールを加えて2分炒める。ソーセージを焼く：アリェイラソーセージを縦に切り、中火で皮がカリッときつね色になるまで焼く。卵を焼く：同じフライパンで縁がカリッとするまで目玉焼きを焼く。盛り付け：皿にじゃがいもとケールを盛り、ソーセージと卵をのせる。仕上げ：レモン汁をかけ、甘いパプリカパウダーを振ってから提供する。",
+    "hi": "आलू तैयार करें: आलू छीलकर क्यूब्स में काटें, गरम तेल में सुनहरा और कुरकुरा होने तक तलें। केल उबालें: केल को नमकीन पानी और तेज पत्तों के साथ 5 मिनट उबालें, फिर छान लें। लहसुन भूनें: कुचले हुए लहसुन को जैतून के तेल में भूनें, उबला हुआ केल डालकर 2 मिनट भूनें। सॉसेज तलें: अल्हेइरा सॉसेज को लंबाई में काटें और मध्यम आँच पर तब तक तलें जब तक छिलका कुरकुरा और सुनहरा न हो जाए। अंडे तलें: उसी पैन में अंडे तलें, किनारे कुरकुरे होने चाहिए। असेंबल करें: प्लेट में आलू और केल रखें, ऊपर सॉसेज और अंडा डालें। अंतिम चरण: परोसने से पहले नींबू का रस छिड़कें और मीठी पपरिका बुरकें।",
+    "tr": "PATATESLERİ HAZIRLAYIN: Patatesleri soyup küp küp doğrayın, sıcak yağda altın rengi ve çıtır olana kadar kızartın. LAHANAYI HAŞLAYIN: Kara lahanayı tuzlu suda defne yapraklarıyla 5 dakika haşlayın, sonra süzün. SARIMSAĞI KAVURUN: Ezilmiş sarımsağı zeytinyağında kavurun, haşlanmış lahanayı ekleyip 2 dakika kavurun. SOSİSLERİ KIZARTIN: Alheira sosislerini boylamasına kesin ve orta ateşte kabuğu çıtır ve altın rengi olana kadar kızartın. YUMURTALARI KIZARTIN: Aynı tavada kenarları çıtır olana kadar yumurtaları kızartın. DÜZENLEYİN: Patates ve lahanayı tabağa yerleştirin, üzerine sosis ve yumurtayı koyun. SON DOKUNUŞ: Servis etmeden önce limon suyu gezdirin ve tatlı paprika serpin.",
+    "it": "PREPARARE LE PATATE: Sbucciate e tagliate le patate a cubetti, friggetele in olio caldo finché dorate e croccanti. LESSARE IL CAVOLO: Lessate il cavolo riccio in acqua salata con alloro per 5 minuti, poi scolate. SOFFRIGGERE L'AGLIO: Soffriggete l'aglio schiacciato nell'olio d'oliva, aggiungete il cavolo lessato e saltate per 2 minuti. FRIGGERE LE SALSICCE: Tagliate le salsicce alheira per il lungo e friggetele a fuoco medio finché la pelle diventa croccante e dorata. FRIGGERE LE UOVA: Friggete le uova nella stessa padella, con i bordi croccanti. COMPORRE: Disponete patate e cavolo nel piatto, aggiungete salsicce e uovo sopra. FINIRE: Irrorate con succo di limone e spolverate con paprika dolce prima di servire.",
+    "ko": "감자 준비: 감자 껍질을 벗겨 깍둑썰기하고, 뜨거운 기름에 황금빛으로 바삭하게 튀긴다. 케일 삶기: 케일을 월계수 잎을 넣은 소금물에 5분간 삶은 후 물기를 뺀다. 마늘 볶기: 으깬 마늘을 올리브 오일에 볶고, 삶은 케일을 넣어 2분간 볶는다. 소시지 굽기: 알레이라 소시지를 길게 갈라 중불에서 껍질이 바삭하고 황금빛이 될 때까지 굽는다. 달걀 굽기: 같은 팬에서 가장자리가 바삭해지도록 달걀을 굽는다. 담아내기: 접시에 감자와 케일을 놓고 그 위에 소시지와 달걀을 얹는다. 마무리: 레몬즙을 뿌리고 단맛 파프리카 가루를 뿌려 낸다."
+  },
+  "originText": {
+    "ro": "Alheira este un cârnat portughez născut din nevoie și rezistență. Se spune că evreii sefarzi convertiți forțat din nordul Portugaliei, în special din Mirandela și Trás-os-Montes, au creat acest cârnat în secolele XV-XVI pentru a evita suspiciunile Inchiziției, care căuta familii ce refuzau să consume carne de porc. Umplut cu pâine, carne de pui, rață și mirodenii, alheira avea aspectul unui cârnat obișnuit de porc, permițând familiilor să treacă neobservate în timp ce respectau discret tradițiile lor.\n\nAstăzi alheira este o mâncare de bază în toată Portugalia, servită de obicei prăjită și însoțită de ou ochi, cartofi prăjiți și varză. Textura sa e diferită de a cârnaților clasici — mai moale, mai aerată — dar gustul afumat și condimentat a cucerit generații întregi. Rețeta rămâne un omagiu tăcut la ingeniozitatea celor care au transformat frica într-o tradiție culinară durabilă.",
+    "en": "Alheira is a Portuguese sausage born of necessity and resilience. It's said that forcibly converted Sephardic Jews from northern Portugal, particularly Mirandela and Trás-os-Montes, created this sausage in the 15th-16th centuries to avoid the suspicions of the Inquisition, which targeted families who refused to eat pork. Stuffed with bread, chicken, duck and spices, alheira looked like an ordinary pork sausage, allowing families to go unnoticed while quietly maintaining their own traditions.\n\nToday alheira is a staple across Portugal, usually served fried and paired with a fried egg, chips and kale. Its texture differs from classic sausages — softer, airier — but its smoky, spiced flavor has won over generations. The recipe remains a quiet tribute to the ingenuity of those who turned fear into a lasting culinary tradition.",
+    "es": "Alheira es un embutido portugués nacido de la necesidad y la resiliencia. Se dice que los judíos sefardíes convertidos a la fuerza del norte de Portugal, especialmente de Mirandela y Trás-os-Montes, crearon este embutido en los siglos XV-XVI para evitar las sospechas de la Inquisición, que buscaba familias que se negaran a comer cerdo. Relleno de pan, pollo, pato y especias, la alheira parecía un embutido de cerdo normal, permitiendo a las familias pasar desapercibidas mientras mantenían discretamente sus tradiciones.\n\nHoy en día la alheira es un plato básico en todo Portugal, servida normalmente frita y acompañada de huevo frito, patatas fritas y col. Su textura difiere de los embutidos clásicos — más suave, más aireada — pero su sabor ahumado y especiado ha conquistado generaciones enteras. La receta sigue siendo un homenaje silencioso al ingenio de quienes convirtieron el miedo en una tradición culinaria duradera.",
+    "fr": "L'alheira est une saucisse portugaise née de la nécessité et de la résilience. On raconte que des juifs séfarades convertis de force dans le nord du Portugal, notamment à Mirandela et Trás-os-Montes, ont créé cette saucisse aux XVe-XVIe siècles pour échapper aux soupçons de l'Inquisition, qui traquait les familles refusant de manger du porc. Farcie de pain, de poulet, de canard et d'épices, l'alheira ressemblait à une saucisse de porc ordinaire, permettant aux familles de passer inaperçues tout en perpétuant discrètement leurs traditions.\n\nAujourd'hui, l'alheira est un plat incontournable dans tout le Portugal, généralement servie frite et accompagnée d'un œuf au plat, de frites et de chou. Sa texture diffère des saucisses classiques — plus tendre, plus aérée — mais sa saveur fumée et épicée a conquis des générations entières. La recette reste un hommage discret à l'ingéniosité de ceux qui ont transformé la peur en une tradition culinaire durable.",
+    "de": "Alheira ist eine portugiesische Wurst, geboren aus Notwendigkeit und Widerstandskraft. Es heißt, zwangskonvertierte sephardische Juden aus Nordportugal, insbesondere aus Mirandela und Trás-os-Montes, hätten diese Wurst im 15.-16. Jahrhundert erfunden, um den Verdacht der Inquisition zu vermeiden, die nach Familien suchte, die sich weigerten, Schweinefleisch zu essen. Gefüllt mit Brot, Hühnchen, Ente und Gewürzen, sah die Alheira wie eine gewöhnliche Schweinswurst aus und erlaubte es Familien, unbemerkt zu bleiben, während sie ihre eigenen Traditionen im Stillen bewahrten.\n\nHeute ist Alheira ein fester Bestandteil der portugiesischen Küche, meist gebraten serviert mit Spiegelei, Pommes und Grünkohl. Ihre Textur unterscheidet sich von klassischen Würsten — weicher, luftiger — doch ihr rauchig-würziger Geschmack hat ganze Generationen überzeugt. Das Rezept bleibt eine stille Hommage an den Erfindungsreichtum jener, die Angst in eine dauerhafte kulinarische Tradition verwandelten.",
+    "pt": "A alheira é um enchido português nascido da necessidade e da resiliência. Diz-se que judeus sefarditas convertidos à força do norte de Portugal, particularmente de Mirandela e Trás-os-Montes, criaram este enchido nos séculos XV-XVI para evitar as suspeitas da Inquisição, que perseguia famílias que se recusavam a comer carne de porco. Recheada com pão, frango, pato e especiarias, a alheira parecia um enchido de porco comum, permitindo às famílias passar despercebidas enquanto mantinham discretamente as suas tradições.\n\nHoje a alheira é um alimento básico em todo Portugal, normalmente servida frita e acompanhada de ovo estrelado, batatas fritas e couve. A sua textura difere dos enchidos clássicos — mais macia, mais leve — mas o seu sabor fumado e especiado conquistou gerações inteiras. A receita continua a ser uma homenagem silenciosa à engenhosidade de quem transformou o medo numa tradição culinária duradoura.",
+    "ru": "Альейра — португальская колбаса, рождённая из необходимости и стойкости. Говорят, что насильно обращённые сефардские евреи с севера Португалии, особенно из Мирандела и Траз-уж-Монтиш, создали эту колбасу в XV-XVI веках, чтобы избежать подозрений инквизиции, которая выискивала семьи, отказывающиеся есть свинину. Начинённая хлебом, курицей, уткой и специями, альейра выглядела как обычная свиная колбаса, позволяя семьям оставаться незамеченными, тихо сохраняя свои традиции.\n\nСегодня альейра — повседневное блюдо по всей Португалии, обычно подаётся жареной с яичницей, картофелем фри и капустой. Её текстура отличается от классических колбас — мягче, воздушнее — но копчёный, пряный вкус покорил целые поколения. Рецепт остаётся тихой данью изобретательности тех, кто превратил страх в устойчивую кулинарную традицию.",
+    "ar": "الألهيرا نقانق برتغالية وُلدت من الضرورة والصمود. يُقال إن اليهود السفارديم الذين أُجبروا على التحول من شمال البرتغال، وخاصة من ميرانديلا وتراش أوش مونتيش، ابتكروا هذه النقانق في القرنين الخامس عشر والسادس عشر لتجنب شكوك محاكم التفتيش التي كانت تلاحق العائلات التي ترفض أكل لحم الخنزير. محشوة بالخبز والدجاج والبط والتوابل، بدت الألهيرا وكأنها نقانق خنزير عادية، مما سمح للعائلات بالمرور دون أن يُلاحظها أحد بينما تحافظ بهدوء على تقاليدها.\n\nاليوم، تُعد الألهيرا طبقًا أساسيًا في جميع أنحاء البرتغال، وتُقدَّم عادةً مقلية مع بيضة مقلية وبطاطا مقلية وكرنب. يختلف قوامها عن النقانق التقليدية — أكثر نعومة وخفة — لكن نكهتها المدخنة والحارة أسرت أجيالًا كاملة. تظل الوصفة تكريمًا صامتًا لبراعة أولئك الذين حوّلوا الخوف إلى تقليد طهي دائم.",
+    "zh": "阿尔海拉是一种源于生存需要与坚韧精神的葡萄牙香肠。据说，来自葡萄牙北部（尤其是米兰德拉和特拉斯－奥斯－蒙特斯地区）被迫改信基督教的塞法迪犹太人，在15至16世纪创制了这种香肠，以躲避宗教裁判所对拒食猪肉家庭的怀疑。这种香肠以面包、鸡肉、鸭肉和香料为馅，外形与普通猪肉香肠无异，让这些家庭得以在悄然保持自身传统的同时不引人注意。\n\n如今，阿尔海拉已成为葡萄牙各地的家常美食，通常煎制后配煎蛋、炸薯条和甘蓝食用。它的口感与传统香肠不同——更柔软、更松软——但其烟熏辛香的风味征服了一代又一代人。这道食谱依然是对那些将恐惧转化为持久烹饪传统之人的智慧的无声致敬。",
+    "ja": "アリェイラは、必要性と不屈の精神から生まれたポルトガルのソーセージである。伝承によれば、ポルトガル北部、特にミランデラやトラス・オス・モンテス出身の強制改宗させられたセファルディ系ユダヤ人が、豚肉を食べることを拒む家族を狙う宗教裁判所の疑いを避けるため、15〜16世紀にこのソーセージを考案したという。パン、鶏肉、鴨肉、香辛料を詰めたアリェイラは普通の豚肉ソーセージのように見え、家族が静かに自分たちの伝統を守りながら目立たずに過ごせるようにした。\n\n今日、アリェイラはポルトガル全土で定番の食べ物であり、通常は焼いて目玉焼き、フライドポテト、ケールと共に提供される。その食感は伝統的なソーセージとは異なり、より柔らかく軽やかだが、燻製のような香辛料の効いた風味は何世代もの人々を魅了してきた。このレシピは、恐怖を持続的な料理の伝統へと変えた人々の創意工夫への静かな賛辞であり続けている。",
+    "hi": "अल्हेइरा एक पुर्तगाली सॉसेज है जो आवश्यकता और दृढ़ता से जन्मा। कहा जाता है कि उत्तरी पुर्तगाल, विशेष रूप से मिरांदेला और त्रास-ओस-मोंतेस के जबरन धर्मांतरित सेफार्डिक यहूदियों ने 15वीं-16वीं सदी में यह सॉसेज बनाया ताकि इनक्विज़िशन के संदेह से बचा जा सके, जो पोर्क खाने से इनकार करने वाले परिवारों की तलाश में रहता था। ब्रेड, चिकन, बत्तख और मसालों से भरा हुआ, अल्हेइरा एक सामान्य पोर्क सॉसेज जैसा दिखता था, जिससे परिवार चुपचाप अपनी परंपराओं को बनाए रखते हुए किसी का ध्यान आकर्षित किए बिना जी सकते थे।\n\nआज अल्हेइरा पूरे पुर्तगाल में एक मुख्य भोजन है, जिसे आमतौर पर तला हुआ परोसा जाता है और तले हुए अंडे, चिप्स और केल के साथ पेश किया जाता है। इसकी बनावट पारंपरिक सॉसेज से अलग है — नरम, अधिक हवादार — लेकिन इसके धुएँदार, मसालेदार स्वाद ने पीढ़ियों को जीत लिया है। यह नुस्खा उन लोगों की सरलता के लिए एक मूक श्रद्धांजलि बना हुआ है जिन्होंने डर को एक स्थायी पाक परंपरा में बदल दिया।",
+    "tr": "Alheira, ihtiyaç ve dayanıklılıktan doğan bir Portekiz sosisidir. Kuzey Portekiz'den, özellikle Mirandela ve Trás-os-Montes'ten zorla din değiştirmiş Sefarad Yahudilerinin, domuz eti yemeyi reddeden aileleri hedef alan Engizisyon'un şüphelerinden kaçınmak için 15.-16. yüzyıllarda bu sosisi yarattığı söylenir. Ekmek, tavuk, ördek ve baharatlarla doldurulan alheira, sıradan bir domuz sosisi gibi görünüyor, ailelerin kendi geleneklerini sessizce sürdürürken fark edilmeden yaşamalarını sağlıyordu.\n\nBugün alheira, Portekiz genelinde temel bir yemek olup genellikle kızartılarak sahanda yumurta, patates kızartması ve kara lahana ile servis edilir. Dokusu klasik sosislerden farklıdır — daha yumuşak, daha havadar — ancak dumanlı, baharatlı tadı nesiller boyu beğeni kazanmıştır. Tarif, korkuyu kalıcı bir mutfak geleneğine dönüştürenlerin yaratıcılığına sessiz bir övgü olmaya devam ediyor.",
+    "it": "L'alheira è una salsiccia portoghese nata dalla necessità e dalla resilienza. Si dice che gli ebrei sefarditi convertiti con la forza del Portogallo settentrionale, in particolare di Mirandela e Trás-os-Montes, abbiano creato questa salsiccia nei secoli XV-XVI per evitare i sospetti dell'Inquisizione, che perseguitava le famiglie che rifiutavano di mangiare carne di maiale. Farcita con pane, pollo, anatra e spezie, l'alheira sembrava una normale salsiccia di maiale, permettendo alle famiglie di passare inosservate mentre mantenevano silenziosamente le proprie tradizioni.\n\nOggi l'alheira è un alimento base in tutto il Portogallo, solitamente servita fritta e accompagnata da uovo fritto, patatine e cavolo. La sua consistenza differisce dalle salsicce classiche — più morbida, più ariosa — ma il suo sapore affumicato e speziato ha conquistato intere generazioni. La ricetta rimane un tributo silenzioso all'ingegno di coloro che hanno trasformato la paura in una tradizione culinaria duratura.",
+    "ko": "알레이라는 필요와 회복력에서 탄생한 포르투갈 소시지다. 포르투갈 북부, 특히 미란델라와 트라스-오스-몬트스 지역의 강제 개종당한 세파르디 유대인들이 돼지고기를 먹지 않는 가정을 표적으로 삼던 종교재판의 의심을 피하기 위해 15~16세기에 이 소시지를 만들었다고 전해진다. 빵, 닭고기, 오리고기, 향신료로 속을 채운 알레이라는 평범한 돼지고기 소시지처럼 보여, 가정들이 자신들의 전통을 조용히 지키면서도 눈에 띄지 않게 살아갈 수 있게 해주었다.\n\n오늘날 알레이라는 포르투갈 전역에서 흔히 먹는 음식으로, 보통 튀긴 후 달걀프라이, 감자튀김, 케일과 함께 제공된다. 그 식감은 전통적인 소시지와 달리 더 부드럽고 가볍지만, 훈제 향과 향신료 맛은 여러 세대를 사로잡았다. 이 레시피는 두려움을 지속적인 요리 전통으로 바꾼 이들의 창의성에 대한 조용한 헌사로 남아 있다."
+  },
+  "meta": {
+    "time": 35,
+    "costRon": 20,
+    "tags": [],
+    "desc": [
+      "Cârnat portughez fără porc, prăjit crocant, servit cu ou și cartofi.",
+      "Pork-free Portuguese sausage, pan-fried crisp, served with egg and potatoes.",
+      "Embutido portugués sin cerdo, frito y crujiente, con huevo y patatas.",
+      "Saucisse portugaise sans porc, frite et croustillante, avec œuf et frites.",
+      "Portugiesische Wurst ohne Schwein, knusprig gebraten, mit Ei und Kartoffeln.",
+      "Enchido português sem porco, frito e estaladiço, com ovo e batatas.",
+      "Португальская колбаса без свинины, хрустящая, с яйцом и картофелем.",
+      "نقانق برتغالية بدون لحم خنزير، مقلية ومقرمشة، مع بيضة وبطاطا.",
+      "无猪肉的葡萄牙香肠，煎至酥脆，配煎蛋和土豆。",
+      "豚肉不使用のポルトガルソーセージ。カリッと焼いて卵とじゃがいもを添える。",
+      "बिना पोर्क का पुर्तगाली सॉसेज, कुरकुरा तला हुआ, अंडे और आलू के साथ।",
+      "Domuzsuz Portekiz sosisi, çıtır kızartılmış, yumurta ve patatesle servis edilir.",
+      "Salsiccia portoghese senza maiale, fritta e croccante, con uovo e patate.",
+      "돼지고기 없는 포르투갈 소시지, 바삭하게 튀겨 달걀과 감자와 함께."
+    ]
+  }
+}
