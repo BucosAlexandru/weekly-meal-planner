@@ -26496,7 +26496,7 @@ export const recipes = [
     id: 215,
     servings: 4,
     tipType: 'salad',
-    pairingsType: 'salad',
+    pairingsType: 'veg',
     origin: {
         ro: "Grecia",
         en: "Greece",
@@ -26802,7 +26802,7 @@ export const recipes = [
     id: 218,
     servings: 4,
     tipType: 'salad',
-    pairingsType: 'salad',
+    pairingsType: 'fish',
     origin: {
         ro: "Franța",
         en: "France",
@@ -27210,7 +27210,7 @@ export const recipes = [
     id: 226,
     servings: 4,
     tipType: 'asian',
-    pairingsType: 'asian',
+    pairingsType: 'meat',
     origin: {
         ro: "Vietnam",
         en: "Vietnam",
@@ -27312,7 +27312,7 @@ export const recipes = [
     id: 227,
     servings: 4,
     tipType: 'fish',
-    pairingsType: 'seafood',
+    pairingsType: 'fish',
     origin: {
         ro: "Mediterana",
         en: "Mediterranean",
@@ -27414,7 +27414,7 @@ export const recipes = [
     id: 228,
     servings: 4,
     tipType: 'fish',
-    pairingsType: 'seafood',
+    pairingsType: 'fish',
     origin: {
         ro: "Franța",
         en: "France",
@@ -29155,7 +29155,7 @@ export const recipes = [
     },
     servings: 6,
     tipType: 'salad',
-    pairingsType: 'salad',
+    pairingsType: 'meat',
     nutrition: { cal: 360, prot: 16, carb: 26, fat: 22, fib: 4 },
     featureCards: {
       ro: [
@@ -29868,7 +29868,7 @@ export const recipes = [
     id: 239,
     servings: 4,
     tipType: "asian",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -29986,7 +29986,7 @@ export const recipes = [
     id: 240,
     servings: 4,
     tipType: "asian",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -30222,7 +30222,7 @@ export const recipes = [
     id: 242,
     servings: 4,
     tipType: "meat",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -30340,7 +30340,7 @@ export const recipes = [
     id: 243,
     servings: 4,
     tipType: "meat",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -30576,7 +30576,7 @@ export const recipes = [
     id: 245,
     servings: 4,
     tipType: "meat",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -34037,7 +34037,7 @@ export const recipes = [
     id: 273,
     servings: 6,
     tipType: "meat",
-    pairingsType: "romanian",
+    pairingsType: "meat",
     origin: {
       ro: "România",
       en: "Romania",
@@ -34155,7 +34155,7 @@ export const recipes = [
     id: 274,
     servings: 4,
     tipType: "meat",
-    pairingsType: "romanian",
+    pairingsType: "meat",
     origin: {
       ro: "România",
       en: "Romania",
@@ -34273,7 +34273,7 @@ export const recipes = [
     id: 275,
     servings: 4,
     tipType: "veg",
-    pairingsType: "romanian",
+    pairingsType: "veg",
     origin: {
       ro: "România",
       en: "Romania",
@@ -34391,7 +34391,7 @@ export const recipes = [
     id: 276,
     servings: 8,
     tipType: "meat",
-    pairingsType: "romanian",
+    pairingsType: "meat",
     origin: {
       ro: "România",
       en: "Romania",
@@ -34509,7 +34509,7 @@ export const recipes = [
     id: 277,
     servings: 6,
     tipType: "meat",
-    pairingsType: "romanian",
+    pairingsType: "meat",
     origin: {
       ro: "România",
       en: "Romania",
@@ -34627,7 +34627,7 @@ export const recipes = [
     id: 278,
     servings: 4,
     tipType: "asian",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -34745,7 +34745,7 @@ export const recipes = [
     id: 279,
     servings: 4,
     tipType: "asian",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -34863,7 +34863,7 @@ export const recipes = [
     id: 280,
     servings: 4,
     tipType: "asian",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "China",
       en: "China",
@@ -35571,7 +35571,7 @@ export const recipes = [
     id: 286,
     servings: 4,
     tipType: "seafood",
-    pairingsType: "seafood",
+    pairingsType: "fish",
     origin: {
       ro: "Japonia",
       en: "Japan",
@@ -36043,7 +36043,7 @@ export const recipes = [
     id: 290,
     servings: 4,
     tipType: "asian",
-    pairingsType: "asian",
+    pairingsType: "meat",
     origin: {
       ro: "Vietnam",
       en: "Vietnam",
