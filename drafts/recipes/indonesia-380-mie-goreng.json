@@ -1,0 +1,209 @@
+{
+  "id": 380,
+  "servings": 4,
+  "tipType": "pasta",
+  "pairingsType": "pasta",
+  "origin": {
+    "ro": "Indonezia",
+    "en": "Indonesia",
+    "es": "Indonesia",
+    "fr": "Indonésie",
+    "de": "Indonesien",
+    "pt": "Indonésia",
+    "ru": "Индонезия",
+    "ar": "إندونيسيا",
+    "zh": "印度尼西亚",
+    "ja": "インドネシア",
+    "hi": "इंडोनेशिया",
+    "tr": "Endonezya",
+    "it": "Indonesia",
+    "ko": "인도네시아"
+  },
+  "name": {
+    "ro": "Mie Goreng (Tăiței Prăjiți Indonezieni)",
+    "en": "Mie Goreng (Indonesian Fried Noodles)",
+    "es": "Mie Goreng (Fideos Fritos Indonesios)",
+    "fr": "Mie Goreng (Nouilles Sautées Indonésiennes)",
+    "de": "Mie Goreng (Indonesische Gebratene Nudeln)",
+    "pt": "Mie Goreng (Macarrão Frito Indonésio)",
+    "ru": "Ми Горенг (Индонезийская Жареная Лапша)",
+    "ar": "مي غورينغ (نودلز إندونيسي مقلي)",
+    "zh": "印尼炒面",
+    "ja": "ミーゴレン（インドネシア風焼きそば）",
+    "hi": "मी गोरेंग (इंडोनेशियाई तला हुआ नूडल्स)",
+    "tr": "Mie Goreng (Endonezya Usulü Kızarmış Erişte)",
+    "it": "Mie Goreng (Noodles Fritti Indonesiani)",
+    "ko": "미고렝 (인도네시아식 볶음면)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍜", "t": "Tăiței de ou", "d": "Tăițeii galbeni de ou, fierți puțin înainte, se prăjesc rapid la foc mare." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "Sosul dulce de soia gros dă culoarea închisă caramelizată și dulceața caracteristică." },
+      { "icon": "🍤", "t": "Proteine mixte", "d": "Pui, creveți sau cârnați chinezești se combină cu legume proaspete." },
+      { "icon": "🍳", "t": "Ou ochi deasupra", "d": "Un ou prăjit cu gălbenușul curgător, adesea servit pe deasupra tăițeilor." }
+    ],
+    "en": [
+      { "icon": "🍜", "t": "Egg noodles", "d": "Yellow egg noodles, briefly boiled beforehand, get quickly stir-fried over high heat." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "Thick sweet soy sauce gives the dish its dark caramelized color and signature sweetness." },
+      { "icon": "🍤", "t": "Mixed protein", "d": "Chicken, shrimp or Chinese sausage combine with fresh vegetables." },
+      { "icon": "🍳", "t": "Fried egg on top", "d": "A fried egg with a runny yolk is often served on top of the noodles." }
+    ],
+    "es": [
+      { "icon": "🍜", "t": "Fideos de huevo", "d": "Los fideos amarillos de huevo, hervidos brevemente antes, se saltean rápido a fuego alto." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "La salsa de soja dulce y espesa da al plato su color oscuro caramelizado y dulzura característica." },
+      { "icon": "🍤", "t": "Proteína mixta", "d": "Pollo, camarones o salchicha china se combinan con verduras frescas." },
+      { "icon": "🍳", "t": "Huevo frito encima", "d": "Un huevo frito con yema líquida se sirve a menudo encima de los fideos." }
+    ],
+    "fr": [
+      { "icon": "🍜", "t": "Nouilles aux œufs", "d": "Les nouilles jaunes aux œufs, brièvement bouillies au préalable, sont sautées rapidement à feu vif." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "La sauce soja sucrée épaisse donne au plat sa couleur foncée caramélisée et sa douceur caractéristique." },
+      { "icon": "🍤", "t": "Protéines mixtes", "d": "Poulet, crevettes ou saucisse chinoise se combinent avec des légumes frais." },
+      { "icon": "🍳", "t": "Œuf au plat dessus", "d": "Un œuf au plat au jaune coulant est souvent servi sur les nouilles." }
+    ],
+    "de": [
+      { "icon": "🍜", "t": "Eiernudeln", "d": "Gelbe Eiernudeln, vorher kurz gekocht, werden schnell bei hoher Hitze angebraten." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "Die dicke süße Sojasauce gibt dem Gericht seine dunkle, karamellisierte Farbe und typische Süße." },
+      { "icon": "🍤", "t": "Gemischtes Eiweiß", "d": "Hähnchen, Garnelen oder chinesische Wurst kombinieren sich mit frischem Gemüse." },
+      { "icon": "🍳", "t": "Spiegelei obenauf", "d": "Ein Spiegelei mit flüssigem Dotter wird oft auf den Nudeln serviert." }
+    ],
+    "pt": [
+      { "icon": "🍜", "t": "Macarrão de ovo", "d": "O macarrão amarelo de ovo, brevemente fervido antes, é salteado rapidamente em fogo alto." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "O molho de soja doce e espesso dá ao prato a sua cor escura caramelizada e doçura característica." },
+      { "icon": "🍤", "t": "Proteína mista", "d": "Frango, camarão ou linguiça chinesa combinam-se com legumes frescos." },
+      { "icon": "🍳", "t": "Ovo frito por cima", "d": "Um ovo frito com gema mole é frequentemente servido sobre o macarrão." }
+    ],
+    "ru": [
+      { "icon": "🍜", "t": "Яичная лапша", "d": "Жёлтая яичная лапша, предварительно недолго отваренная, быстро обжаривается на сильном огне." },
+      { "icon": "🟤", "t": "Кечап манис", "d": "Густой сладкий соевый соус придаёт блюду тёмный карамелизованный цвет и характерную сладость." },
+      { "icon": "🍤", "t": "Смешанный белок", "d": "Курица, креветки или китайская колбаса сочетаются со свежими овощами." },
+      { "icon": "🍳", "t": "Яичница сверху", "d": "Яичница с жидким желтком часто подаётся поверх лапши." }
+    ],
+    "ar": [
+      { "icon": "🍜", "t": "نودلز البيض", "d": "نودلز البيض الأصفر، المسلوقة قليلًا مسبقًا، تُقلى بسرعة على نار عالية." },
+      { "icon": "🟤", "t": "كيتشب مانيس", "d": "صلصة الصويا الحلوة السميكة تمنح الطبق لونه الغامق المكرمل وحلاوته المميزة." },
+      { "icon": "🍤", "t": "بروتين مختلط", "d": "يُمزج الدجاج أو الروبيان أو النقانق الصينية مع الخضار الطازجة." },
+      { "icon": "🍳", "t": "بيضة مقلية أعلى الطبق", "d": "غالبًا ما تُقدَّم بيضة مقلية بصفار سائل فوق النودلز." }
+    ],
+    "zh": [
+      { "icon": "🍜", "t": "鸡蛋面", "d": "预先稍微煮过的黄色鸡蛋面，用大火迅速翻炒。" },
+      { "icon": "🟤", "t": "甜酱油", "d": "浓稠的甜酱油赋予菜肴深色焦糖般的色泽和标志性甜味。" },
+      { "icon": "🍤", "t": "混合蛋白质", "d": "鸡肉、虾或中式香肠与新鲜蔬菜搭配。" },
+      { "icon": "🍳", "t": "上面加煎蛋", "d": "常在炒面上放一个溏心煎蛋。" }
+    ],
+    "ja": [
+      { "icon": "🍜", "t": "卵麺", "d": "事前に軽く茹でた黄色い卵麺を、強火で手早く炒める。" },
+      { "icon": "🟤", "t": "ケチャップマニス", "d": "とろりとした甘い醤油が、料理に濃いキャラメル色と特徴的な甘さを与える。" },
+      { "icon": "🍤", "t": "様々なタンパク質", "d": "鶏肉、エビ、中華ソーセージなどが新鮮な野菜と組み合わされる。" },
+      { "icon": "🍳", "t": "上に目玉焼き", "d": "黄身がとろりとした目玉焼きが麺の上によく添えられる。" }
+    ],
+    "hi": [
+      { "icon": "🍜", "t": "अंडे के नूडल्स", "d": "पहले हल्के उबाले गए पीले अंडे के नूडल्स तेज़ आंच पर जल्दी तले जाते हैं।" },
+      { "icon": "🟤", "t": "केचप मानिस", "d": "गाढ़ी मीठी सोया सॉस व्यंजन को गहरा कैरामलाइज़्ड रंग और खास मिठास देती है।" },
+      { "icon": "🍤", "t": "मिश्रित प्रोटीन", "d": "चिकन, झींगा या चीनी सॉसेज ताज़ी सब्ज़ियों के साथ मिलाए जाते हैं।" },
+      { "icon": "🍳", "t": "ऊपर तला अंडा", "d": "बहते पीले भाग वाला तला अंडा अक्सर नूडल्स के ऊपर परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🍜", "t": "Yumurtalı erişte", "d": "Önceden kısa süre haşlanan sarı yumurtalı erişte yüksek ateşte hızlıca soteleniyor." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "Koyu, tatlı soya sosu yemeğe koyu karamelize rengini ve karakteristik tatlılığını veriyor." },
+      { "icon": "🍤", "t": "Karışık protein", "d": "Tavuk, karides veya Çin sosisi taze sebzelerle birleştiriliyor." },
+      { "icon": "🍳", "t": "Üzerinde sahanda yumurta", "d": "Sıvı sarılı sahanda yumurta genellikle eriştenin üzerine servis ediliyor." }
+    ],
+    "it": [
+      { "icon": "🍜", "t": "Noodles all'uovo", "d": "I noodles gialli all'uovo, prima brevemente bolliti, vengono saltati rapidamente a fuoco alto." },
+      { "icon": "🟤", "t": "Kecap manis", "d": "La salsa di soia dolce e densa dona al piatto il suo colore scuro caramellato e la dolcezza caratteristica." },
+      { "icon": "🍤", "t": "Proteine miste", "d": "Pollo, gamberetti o salsiccia cinese si combinano con verdure fresche." },
+      { "icon": "🍳", "t": "Uovo fritto sopra", "d": "Un uovo fritto con tuorlo colante viene spesso servito sopra i noodles." }
+    ],
+    "ko": [
+      { "icon": "🍜", "t": "달걀면", "d": "미리 살짝 삶은 노란 달걀면을 센 불에서 빠르게 볶는다." },
+      { "icon": "🟤", "t": "케찹 마니스", "d": "걸쭉한 단 간장이 요리에 짙은 캐러멜색과 특유의 단맛을 준다." },
+      { "icon": "🍤", "t": "혼합 단백질", "d": "닭고기, 새우, 또는 중국식 소시지가 신선한 채소와 어우러진다." },
+      { "icon": "🍳", "t": "위에 계란프라이", "d": "노른자가 흐르는 계란프라이를 면 위에 자주 얹어 낸다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["300g tăiței de ou uscați", "200g piept de pui, tăiat fâșii subțiri", "8 creveți curățați", "3 căței de usturoi, tocați", "1 ceapă mică, feliată", "1 morcov, tăiat julien", "100g varză, tocată", "2 cepe verzi, tăiate", "3 linguri kecap manis (sos dulce de soia)", "1 lingură sos de soia", "1 lingură ulei", "2 ouă (pentru ochiuri, opțional)", "ceapă prăjită crocantă, pentru servire"],
+    "en": ["300g dried egg noodles", "200g chicken breast, thinly sliced", "8 peeled shrimp", "3 garlic cloves, minced", "1 small onion, sliced", "1 carrot, julienned", "100g cabbage, shredded", "2 green onions, chopped", "3 tbsp kecap manis (sweet soy sauce)", "1 tbsp soy sauce", "1 tbsp oil", "2 eggs (for frying, optional)", "crispy fried shallots, for serving"],
+    "es": ["300g de fideos de huevo secos", "200g de pechuga de pollo, en tiras finas", "8 camarones pelados", "3 dientes de ajo, picados", "1 cebolla pequeña, en rodajas", "1 zanahoria, en juliana", "100g de col, cortada", "2 cebolletas, picadas", "3 cucharadas de kecap manis (salsa de soja dulce)", "1 cucharada de salsa de soja", "1 cucharada de aceite", "2 huevos (para freír, opcional)", "chalotas fritas crujientes, para servir"],
+    "fr": ["300g de nouilles aux œufs séchées", "200g de blanc de poulet, en fines lanières", "8 crevettes décortiquées", "3 gousses d'ail, hachées", "1 petit oignon, émincé", "1 carotte, en julienne", "100g de chou, émincé", "2 oignons verts, hachés", "3 c. à soupe de kecap manis (sauce soja sucrée)", "1 c. à soupe de sauce soja", "1 c. à soupe d'huile", "2 œufs (à frire, facultatif)", "échalotes frites croustillantes, pour servir"],
+    "de": ["300g getrocknete Eiernudeln", "200g Hähnchenbrust, in dünne Streifen geschnitten", "8 geschälte Garnelen", "3 Knoblauchzehen, gehackt", "1 kleine Zwiebel, in Scheiben", "1 Karotte, julienne geschnitten", "100g Kohl, geschnitten", "2 Frühlingszwiebeln, gehackt", "3 EL Kecap manis (süße Sojasauce)", "1 EL Sojasauce", "1 EL Öl", "2 Eier (zum Braten, optional)", "knusprig gebratene Schalotten, zum Servieren"],
+    "pt": ["300g de macarrão de ovo seco", "200g de peito de frango, em tiras finas", "8 camarões descascados", "3 dentes de alho, picados", "1 cebola pequena, fatiada", "1 cenoura, em juliana", "100g de repolho, picado", "2 cebolinhas, picadas", "3 colheres (sopa) de kecap manis (molho de soja doce)", "1 colher (sopa) de molho de soja", "1 colher (sopa) de óleo", "2 ovos (para fritar, opcional)", "chalotas fritas crocantes, para servir"],
+    "ru": ["300г сушёной яичной лапши", "200г куриной грудки, тонко нарезанной", "8 очищенных креветок", "3 зубчика чеснока, измельчённых", "1 маленькая луковица, нарезанная", "1 морковь, соломкой", "100г капусты, нашинкованной", "2 зелёных лука, нарезанных", "3 ст.л. кечап манис (сладкий соевый соус)", "1 ст.л. соевого соуса", "1 ст.л. масла", "2 яйца (для жарки, по желанию)", "хрустящий жареный лук-шалот, для подачи"],
+    "ar": ["300 غرام نودلز بيض مجففة", "200 غرام صدر دجاج، مقطّع شرائح رقيقة", "8 حبات روبيان مقشرة", "3 فصوص ثوم، مفرومة", "بصلة صغيرة، مقطّعة شرائح", "جزرة واحدة، مقطّعة جوليان", "100 غرام ملفوف، مقطّع", "بصلتان أخضران، مقطّعتان", "3 ملاعق كبيرة كيتشب مانيس (صلصة صويا حلوة)", "ملعقة كبيرة صلصة صويا", "ملعقة كبيرة زيت", "بيضتان (للقلي، اختياري)", "بصل مقلي مقرمش، للتقديم"],
+    "zh": ["300克干鸡蛋面", "200克鸡胸肉，切细丝", "8只去壳虾", "3瓣大蒜，切碎", "1个小洋葱，切片", "1根胡萝卜，切丝", "100克卷心菜，切丝", "2根青葱，切碎", "3汤匙甜酱油（kecap manis）", "1汤匙酱油", "1汤匙油", "2个鸡蛋（煎蛋用，可选）", "酥脆炸红葱头，配食用"],
+    "ja": ["乾燥卵麺300g", "鶏胸肉200g（細切り）", "殻をむいたエビ8尾", "にんにく3片（みじん切り）", "小玉ねぎ1個（薄切り）", "にんじん1本（千切り）", "キャベツ100g（刻む）", "青ねぎ2本（刻む）", "ケチャップマニス（甘い醤油）大さじ3", "醤油 大さじ1", "油 大さじ1", "卵2個（目玉焼き用、お好みで）", "カリカリの揚げエシャロット（添える用）"],
+    "hi": ["300 ग्राम सूखे अंडे के नूडल्स", "200 ग्राम चिकन ब्रेस्ट, पतली पट्टियों में कटा", "8 छिले झींगे", "3 लहसुन की कलियाँ, कटी हुई", "1 छोटा प्याज़, कटा", "1 गाजर, जूलियन कटी", "100 ग्राम पत्तागोभी, कटी", "2 हरे प्याज़, कटे", "3 बड़े चम्मच केचप मानिस (मीठी सोया सॉस)", "1 बड़ा चम्मच सोया सॉस", "1 बड़ा चम्मच तेल", "2 अंडे (तलने के लिए, वैकल्पिक)", "कुरकुरे तले प्याज़, परोसने के लिए"],
+    "tr": ["300g kuru yumurtalı erişte", "200g tavuk göğsü, ince şeritler halinde", "8 adet soyulmuş karides", "3 diş sarımsak, doğranmış", "1 küçük soğan, dilimlenmiş", "1 havuç, julyen doğranmış", "100g lahana, doğranmış", "2 yeşil soğan, doğranmış", "3 yemek kaşığı kecap manis (tatlı soya sosu)", "1 yemek kaşığı soya sosu", "1 yemek kaşığı yağ", "2 yumurta (kızartmak için, isteğe bağlı)", "servis için çıtır kızarmış soğan"],
+    "it": ["300g di noodles all'uovo secchi", "200g di petto di pollo, a striscioline sottili", "8 gamberetti sgusciati", "3 spicchi d'aglio, tritati", "1 cipolla piccola, a fette", "1 carota, a julienne", "100g di cavolo, tagliato", "2 cipollotti, tritati", "3 cucchiai di kecap manis (salsa di soia dolce)", "1 cucchiaio di salsa di soia", "1 cucchiaio di olio", "2 uova (da friggere, facoltativo)", "scalogno fritto croccante, per servire"],
+    "ko": ["말린 달걀면 300g", "닭가슴살 200g, 얇게 채썬 것", "껍질 벗긴 새우 8마리", "마늘 3쪽, 다진 것", "작은 양파 1개, 슬라이스", "당근 1개, 채썬 것", "양배추 100g, 채썬 것", "쪽파 2대, 썬 것", "케찹 마니스(단 간장) 3큰술", "간장 1큰술", "식용유 1큰술", "달걀 2개(계란프라이용, 선택)", "바삭한 튀긴 샬롯, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": ["FIERBE TĂIȚEII: Fierbe tăițeii de ou în apă clocotită 3-4 minute, până sunt al dente, apoi scurge-i și clătește-i cu apă rece. CĂLEȘTE AROMELE: Încinge uleiul într-un wok la foc mare, călește usturoiul și ceapa 1 minut, până devin parfumate. ADAUGĂ CARNEA: Adaugă puiul și sotează 2-3 minute, până se rumenește. PUNE CREVEȚII: Adaugă creveții și gătește încă 1-2 minute, până se colorează în roz. ADAUGĂ LEGUMELE: Pune morcovul și varza, sotând 1-2 minute la foc mare, păstrându-le crocante. ADAUGĂ TĂIȚEII: Pune tăițeii fierți în wok, amestecând bine cu restul ingredientelor. CONDIMENTEAZĂ: Toarnă kecap manis și sosul de soia peste tăiței, amestecând rapid pentru a acoperi uniform. FINALIZEAZĂ: Adaugă cepele verzi tocate și amestecă ultima dată. PRĂJEȘTE OUĂLE: Într-o tigaie separată, prăjește ouăle ochiuri, cu gălbenușul moale. SERVEȘTE: Servește tăițeii calzi, cu câte un ou ochi deasupra fiecărei porții și ceapă prăjită crocantă."],
+    "en": ["BOIL THE NOODLES: Boil the egg noodles in boiling water 3-4 minutes, until al dente, then drain and rinse with cold water. SAUTÉ THE AROMATICS: Heat oil in a wok over high heat, sauté garlic and onion 1 minute, until fragrant. ADD THE MEAT: Add the chicken and sauté 2-3 minutes, until browned. ADD THE SHRIMP: Add the shrimp and cook 1-2 more minutes, until pink. ADD THE VEGETABLES: Add the carrot and cabbage, sautéing 1-2 minutes over high heat, keeping them crisp. ADD THE NOODLES: Add the boiled noodles to the wok, mixing well with the rest of the ingredients. SEASON: Pour kecap manis and soy sauce over the noodles, mixing quickly to coat evenly. FINISH: Add the chopped green onions and toss one last time. FRY THE EGGS: In a separate pan, fry the eggs sunny-side up, with a soft yolk. SERVE: Serve the noodles warm, with a fried egg on top of each portion and crispy fried shallots."],
+    "es": ["HIERVE LOS FIDEOS: Hierve los fideos de huevo en agua hirviendo 3-4 minutos, hasta que estén al dente, luego escúrrelos y enjuágalos con agua fría. SOFRÍE LOS AROMÁTICOS: Calienta aceite en un wok a fuego alto, sofríe el ajo y la cebolla 1 minuto, hasta que estén fragantes. AÑADE LA CARNE: Añade el pollo y saltea 2-3 minutos, hasta que se dore. AÑADE LOS CAMARONES: Añade los camarones y cocina 1-2 minutos más, hasta que estén rosados. AÑADE LAS VERDURAS: Añade la zanahoria y la col, salteando 1-2 minutos a fuego alto, manteniéndolas crujientes. AÑADE LOS FIDEOS: Añade los fideos hervidos al wok, mezclando bien con el resto de los ingredientes. SAZONA: Vierte el kecap manis y la salsa de soja sobre los fideos, mezclando rápido para cubrir uniformemente. FINALIZA: Añade las cebolletas picadas y remueve una última vez. FRÍE LOS HUEVOS: En una sartén aparte, fríe los huevos con la yema blanda. SIRVE: Sirve los fideos calientes, con un huevo frito encima de cada porción y chalotas fritas crujientes."],
+    "fr": ["FAITES BOUILLIR LES NOUILLES: Faites bouillir les nouilles aux œufs dans l'eau bouillante 3-4 minutes, jusqu'à ce qu'elles soient al dente, puis égouttez et rincez à l'eau froide. FAITES REVENIR LES AROMATES: Chauffez l'huile dans un wok à feu vif, faites revenir l'ail et l'oignon 1 minute, jusqu'à ce qu'ils soient parfumés. AJOUTEZ LA VIANDE: Ajoutez le poulet et faites sauter 2-3 minutes, jusqu'à ce qu'il soit doré. AJOUTEZ LES CREVETTES: Ajoutez les crevettes et cuisez 1-2 minutes de plus, jusqu'à ce qu'elles soient roses. AJOUTEZ LES LÉGUMES: Ajoutez la carotte et le chou, en sautant 1-2 minutes à feu vif, en les gardant croquants. AJOUTEZ LES NOUILLES: Ajoutez les nouilles bouillies au wok, en mélangeant bien avec le reste des ingrédients. ASSAISONNEZ: Versez le kecap manis et la sauce soja sur les nouilles, en mélangeant rapidement pour bien enrober. FINALISEZ: Ajoutez les oignons verts hachés et mélangez une dernière fois. FAITES FRIRE LES ŒUFS: Dans une poêle séparée, faites frire les œufs au plat, avec un jaune coulant. SERVEZ: Servez les nouilles chaudes, avec un œuf au plat sur chaque portion et des échalotes frites croustillantes."],
+    "de": ["NUDELN KOCHEN: Die Eiernudeln in kochendem Wasser 3-4 Minuten kochen, bis sie al dente sind, dann abtropfen lassen und mit kaltem Wasser abspülen. AROMEN ANBRATEN: Öl in einem Wok bei hoher Hitze erhitzen, Knoblauch und Zwiebel 1 Minute anbraten, bis sie duften. FLEISCH HINZUFÜGEN: Das Hähnchen hinzufügen und 2-3 Minuten anbraten, bis es gebräunt ist. GARNELEN HINZUFÜGEN: Die Garnelen hinzufügen und 1-2 Minuten weiter garen, bis sie rosa sind. GEMÜSE HINZUFÜGEN: Karotte und Kohl hinzufügen, 1-2 Minuten bei hoher Hitze anbraten, damit sie knackig bleiben. NUDELN HINZUFÜGEN: Die gekochten Nudeln in den Wok geben, gut mit den restlichen Zutaten vermischen. WÜRZEN: Kecap manis und Sojasauce über die Nudeln gießen, schnell mischen, um gleichmäßig zu überziehen. ABSCHLIESSEN: Die gehackten Frühlingszwiebeln hinzufügen und ein letztes Mal wenden. EIER BRATEN: In einer separaten Pfanne die Eier mit weichem Dotter braten. SERVIEREN: Die Nudeln warm servieren, mit einem Spiegelei auf jeder Portion und knusprig gebratenen Schalotten."],
+    "pt": ["FERVA O MACARRÃO: Ferva o macarrão de ovo em água fervente por 3-4 minutos, até ficar al dente, depois escorra e enxágue com água fria. REFOGUE OS AROMÁTICOS: Aqueça óleo num wok em fogo alto, refogue o alho e a cebola por 1 minuto, até ficarem perfumados. ADICIONE A CARNE: Junte o frango e refogue por 2-3 minutos, até dourar. ADICIONE OS CAMARÕES: Junte os camarões e cozinhe mais 1-2 minutos, até ficarem rosados. ADICIONE OS LEGUMES: Junte a cenoura e o repolho, refogando 1-2 minutos em fogo alto, mantendo-os crocantes. ADICIONE O MACARRÃO: Junte o macarrão fervido ao wok, misturando bem com o resto dos ingredientes. TEMPERE: Despeje o kecap manis e o molho de soja sobre o macarrão, misturando rapidamente para cobrir uniformemente. FINALIZE: Junte as cebolinhas picadas e misture uma última vez. FRITE OS OVOS: Numa frigideira separada, frite os ovos com gema mole. SIRVA: Sirva o macarrão quente, com um ovo frito sobre cada porção e chalotas fritas crocantes."],
+    "ru": ["ОТВАРИТЕ ЛАПШУ: Отварите яичную лапшу в кипящей воде 3-4 минуты, до состояния аль денте, затем слейте и промойте холодной водой. ОБЖАРЬТЕ АРОМАТИКУ: Разогрейте масло в воке на сильном огне, обжаривайте чеснок и лук 1 минуту, до аромата. ДОБАВЬТЕ МЯСО: Добавьте курицу и жарьте 2-3 минуты, до подрумянивания. ДОБАВЬТЕ КРЕВЕТКИ: Добавьте креветки и готовьте ещё 1-2 минуты, пока не порозовеют. ДОБАВЬТЕ ОВОЩИ: Добавьте морковь и капусту, обжаривайте 1-2 минуты на сильном огне, сохраняя хруст. ДОБАВЬТЕ ЛАПШУ: Добавьте отварную лапшу в вок, хорошо перемешав с остальными ингредиентами. ПРИПРАВЬТЕ: Полейте лапшу кечап манисом и соевым соусом, быстро перемешивая для равномерного покрытия. ЗАВЕРШИТЕ: Добавьте нарезанный зелёный лук и перемешайте в последний раз. ПОЖАРЬТЕ ЯЙЦА: На отдельной сковороде пожарьте яйца с мягким желтком. ПОДАВАЙТЕ: Подавайте лапшу тёплой, с яичницей поверх каждой порции и хрустящим жареным луком-шалотом."],
+    "ar": ["اسلقي النودلز: اسلقي نودلز البيض في ماء مغلي 3-4 دقائق حتى تصبح طرية بقوام متماسك، ثم صفّيها واشطفيها بماء بارد. قلّي النكهات: سخّني الزيت في مقلاة ووك على نار عالية، وقلّي الثوم والبصل دقيقة واحدة حتى تفوح الرائحة. أضيفي اللحم: أضيفي الدجاج وقلّيه 2-3 دقائق حتى يحمّر. أضيفي الروبيان: أضيفي الروبيان واطبخي 1-2 دقيقة إضافية حتى يتحول لونه إلى الوردي. أضيفي الخضار: أضيفي الجزر والملفوف وقلّي 1-2 دقيقة على نار عالية للحفاظ على قرمشتهما. أضيفي النودلز: أضيفي النودلز المسلوقة إلى الووك وامزجيها جيدًا مع باقي المكونات. تبّلي: اسكبي كيتشب مانيس وصلصة الصويا فوق النودلز وامزجي بسرعة لتغطيتها بالتساوي. أنهي الطبق: أضيفي البصل الأخضر المفروم وقلّبي مرة أخيرة. اقلي البيض: في مقلاة منفصلة، اقلي البيض بصفار طري. قدّمي: قدّمي النودلز دافئة مع بيضة مقلية فوق كل حصة وبصل مقلي مقرمش."],
+    "zh": ["煮面：将鸡蛋面放入沸水中煮3-4分钟至弹牙，然后沥干并用冷水冲洗。炒香料：大火加热炒锅中的油，炒香大蒜和洋葱约1分钟。加入肉类：加入鸡肉翻炒2-3分钟至变色。加入虾仁：加入虾仁再煮1-2分钟至变粉红色。加入蔬菜：加入胡萝卜和卷心菜，大火翻炒1-2分钟，保持爽脆。加入面条：将煮好的面条加入炒锅，与其余食材充分混合。调味：将甜酱油和酱油淋在面条上，快速拌匀使其均匀裹上酱汁。完成：加入切好的青葱，最后翻炒一次。煎蛋：在另一个平底锅中煎蛋，保持溏心。上桌：趁热盛出面条，每份上加一个煎蛋和酥脆炸红葱头。"],
+    "ja": ["麺を茹でる：卵麺を沸騰したお湯で3〜4分、アルデンテになるまで茹で、水気を切って冷水ですすぐ。香味野菜を炒める：中華鍋で油を強火で熱し、にんにくと玉ねぎを1分、香りが立つまで炒める。肉を加える：鶏肉を加え2〜3分、焼き色がつくまで炒める。エビを加える：エビを加えさらに1〜2分、ピンク色になるまで加熱する。野菜を加える：にんじんとキャベツを加え、強火で1〜2分炒め、シャキシャキ感を保つ。麺を加える：茹でた麺を中華鍋に加え、他の材料とよく混ぜる。味付けする：ケチャップマニスと醤油を麺にかけ、素早く混ぜて均一に絡める。仕上げる：刻んだ青ねぎを加え、最後にもう一度混ぜる。卵を焼く：別のフライパンで、黄身が半熟の目玉焼きを作る。提供する：麺を温かいうちに盛り、各皿に目玉焼きとカリカリの揚げエシャロットをのせて提供する。"],
+    "hi": ["नूडल्स उबालें: अंडे के नूडल्स को उबलते पानी में 3-4 मिनट, अल डेंटे होने तक उबालें, फिर छानकर ठंडे पानी से धो लें। सुगंधित सामग्री भूनें: वोक में तेज़ आंच पर तेल गरम करें, लहसुन और प्याज़ को 1 मिनट, सुगंधित होने तक भूनें। मांस डालें: चिकन डालें और 2-3 मिनट भूरा होने तक भूनें। झींगे डालें: झींगे डालें और 1-2 मिनट और पकाएं, जब तक गुलाबी न हो जाएं। सब्ज़ियाँ डालें: गाजर और पत्तागोभी डालें, तेज़ आंच पर 1-2 मिनट भूनें, कुरकुरा बनाए रखें। नूडल्स डालें: उबले नूडल्स को वोक में डालें, बाकी सामग्री के साथ अच्छी तरह मिलाएं। मसाला डालें: केचप मानिस और सोया सॉस नूडल्स पर डालें, समान रूप से ढकने के लिए जल्दी मिलाएं। पूरा करें: कटे हरे प्याज़ डालें और आखिरी बार मिलाएं। अंडे तलें: अलग पैन में, नरम पीले भाग वाले अंडे तलें। परोसें: गरमागरम नूडल्स परोसें, हर हिस्से पर एक तला अंडा और कुरकुरे तले प्याज़ के साथ।"],
+    "tr": ["ERİŞTEYİ HAŞLAYIN: Yumurtalı erişteyi kaynayan suda 3-4 dakika, al dente olana kadar haşlayın, sonra süzüp soğuk suyla durulayın. AROMATİKLERİ SOTELEYIN: Wok'ta yağı yüksek ateşte ısıtın, sarımsak ve soğanı kokusu çıkana kadar 1 dakika soteleyin. ETİ EKLEYİN: Tavuğu ekleyip 2-3 dakika kızarana kadar soteleyin. KARİDESİ EKLEYİN: Karidesi ekleyip pembeleşene kadar 1-2 dakika daha pişirin. SEBZELERİ EKLEYİN: Havuç ve lahanayı ekleyip yüksek ateşte 1-2 dakika, çıtırlıklarını koruyarak soteleyin. ERİŞTEYİ EKLEYİN: Haşlanmış erişteyi wok'a ekleyip diğer malzemelerle iyice karıştırın. BAHARATLAYIN: Kecap manis ve soya sosunu erişteye dökün, eşit şekilde kaplanması için hızlıca karıştırın. TAMAMLAYIN: Doğranmış yeşil soğanı ekleyip son bir kez karıştırın. YUMURTALARI KIZARTIN: Ayrı bir tavada, sarısı yumuşak kalacak şekilde yumurtaları kızartın. SERVİS YAPIN: Erişteyi sıcak servis edin, her porsiyonun üzerine bir sahanda yumurta ve çıtır kızarmış soğan ekleyin."],
+    "it": ["BOLLI I NOODLES: Bolli i noodles all'uovo in acqua bollente 3-4 minuti, finché al dente, poi scolali e sciacquali con acqua fredda. SOFFRIGGI GLI AROMI: Scalda l'olio in un wok a fuoco alto, soffriggi aglio e cipolla 1 minuto, finché profumati. AGGIUNGI LA CARNE: Aggiungi il pollo e salta 2-3 minuti, finché dorato. AGGIUNGI I GAMBERETTI: Aggiungi i gamberetti e cuoci altri 1-2 minuti, finché rosati. AGGIUNGI LE VERDURE: Aggiungi carota e cavolo, saltando 1-2 minuti a fuoco alto, mantenendoli croccanti. AGGIUNGI I NOODLES: Aggiungi i noodles bolliti nel wok, mescolando bene con il resto degli ingredienti. INSAPORISCI: Versa il kecap manis e la salsa di soia sui noodles, mescolando rapidamente per ricoprire uniformemente. COMPLETA: Aggiungi i cipollotti tritati e mescola un'ultima volta. FRIGGI LE UOVA: In una padella separata, friggi le uova con il tuorlo morbido. SERVI: Servi i noodles caldi, con un uovo fritto sopra ogni porzione e scalogno fritto croccante."],
+    "ko": ["면 삶기: 달걀면을 끓는 물에 3-4분간 알덴테로 삶은 뒤 물기를 빼고 찬물에 헹군다. 향신 재료 볶기: 웍에 기름을 두르고 센 불에서 마늘과 양파를 향이 날 때까지 1분간 볶는다. 고기 추가: 닭고기를 넣고 갈색이 될 때까지 2-3분 볶는다. 새우 추가: 새우를 넣고 분홍색이 될 때까지 1-2분 더 익힌다. 채소 추가: 당근과 양배추를 넣고 센 불에서 1-2분 볶아 아삭함을 유지한다. 면 추가: 삶은 면을 웍에 넣고 나머지 재료와 잘 섞는다. 간하기: 케찹 마니스와 간장을 면 위에 부어 골고루 묻도록 빠르게 섞는다. 마무리: 썬 쪽파를 넣고 마지막으로 한 번 더 섞는다. 계란 부치기: 별도의 팬에서 노른자가 부드러운 계란프라이를 만든다. 제공하기: 면을 따뜻하게 담고, 각 접시 위에 계란프라이와 바삭한 튀긴 샬롯을 올려 제공한다."]
+  },
+  "originText": {
+    "ro": "Mie goreng — literalmente \"tăiței prăjiți\" în indoneziană — este unul dintre cele mai populare feluri de stradă din arhipelag, un exemplu perfect al modului în care bucătăria chineză imigrantă s-a împletit cu ingredientele și tehnicile locale. Tăițeii de ou (mie) au ajuns în Indonezia odată cu comercianții și migranții chinezi, cu secole în urmă, dar felul actual s-a definitivat cu adăugarea kecap manis, sosul dulce de soia unic indonezian.\n\nSpre deosebire de nasi goreng, orezul prăjit, mie goreng păstrează o legătură mai vizibilă cu rădăcinile sale chinezești, deși gustul general este distinct indonezian, dulce-picant, definit de kecap manis. Se găsește la fiecare tarabă de stradă (warung) și în majoritatea restaurantelor, adesea personalizat cu orice combinație de proteine disponibile — pui, creveți, cârnați sau doar legume pentru variantele vegetariene.",
+    "en": "Mie goreng — literally \"fried noodles\" in Indonesian — is one of the archipelago's most popular street foods, a perfect example of how immigrant Chinese cuisine intertwined with local ingredients and techniques. Egg noodles (mie) arrived in Indonesia with Chinese traders and migrants centuries ago, but the dish as it exists today was solidified with the addition of kecap manis, the uniquely Indonesian sweet soy sauce.\n\nUnlike nasi goreng, the fried rice dish, mie goreng retains a more visible link to its Chinese roots, though the overall taste is distinctly Indonesian — sweet and spicy, defined by kecap manis. It's found at every street stall (warung) and in most restaurants, often customized with whatever protein combination is available — chicken, shrimp, sausage, or just vegetables for vegetarian versions.",
+    "es": "El mie goreng — literalmente \"fideos fritos\" en indonesio — es uno de los platos callejeros más populares del archipiélago, un ejemplo perfecto de cómo la cocina china inmigrante se entrelazó con los ingredientes y técnicas locales. Los fideos de huevo (mie) llegaron a Indonesia con comerciantes y migrantes chinos hace siglos, pero el plato tal como existe hoy se consolidó con la adición del kecap manis, la salsa de soja dulce exclusivamente indonesia.\n\nA diferencia del nasi goreng, el plato de arroz frito, el mie goreng mantiene un vínculo más visible con sus raíces chinas, aunque el sabor general es claramente indonesio — dulce y picante, definido por el kecap manis. Se encuentra en cada puesto callejero (warung) y en la mayoría de los restaurantes, a menudo personalizado con cualquier combinación de proteína disponible — pollo, camarones, salchicha, o solo verduras para las versiones vegetarianas.",
+    "fr": "Le mie goreng — littéralement \"nouilles sautées\" en indonésien — est l'un des plats de rue les plus populaires de l'archipel, un exemple parfait de la façon dont la cuisine chinoise immigrée s'est mêlée aux ingrédients et techniques locaux. Les nouilles aux œufs (mie) sont arrivées en Indonésie avec les commerçants et migrants chinois il y a des siècles, mais le plat tel qu'il existe aujourd'hui s'est consolidé avec l'ajout du kecap manis, la sauce soja sucrée typiquement indonésienne.\n\nContrairement au nasi goreng, le plat de riz frit, le mie goreng conserve un lien plus visible avec ses racines chinoises, bien que le goût général soit distinctement indonésien — sucré et épicé, défini par le kecap manis. On le trouve à chaque étal de rue (warung) et dans la plupart des restaurants, souvent personnalisé avec la combinaison de protéines disponible — poulet, crevettes, saucisse, ou juste des légumes pour les versions végétariennes.",
+    "de": "Mie Goreng — auf Indonesisch wörtlich \"gebratene Nudeln\" — ist eines der beliebtesten Streetfood-Gerichte des Archipels und ein perfektes Beispiel dafür, wie sich die chinesische Einwandererküche mit lokalen Zutaten und Techniken verwoben hat. Eiernudeln (Mie) kamen vor Jahrhunderten mit chinesischen Händlern und Migranten nach Indonesien, aber das Gericht, wie es heute existiert, festigte sich mit der Zugabe von Kecap Manis, der einzigartig indonesischen süßen Sojasauce.\n\nAnders als Nasi Goreng, das gebratene Reisgericht, behält Mie Goreng eine sichtbarere Verbindung zu seinen chinesischen Wurzeln, obwohl der Gesamtgeschmack deutlich indonesisch ist — süß und scharf, geprägt von Kecap Manis. Es findet sich an jedem Straßenstand (Warung) und in den meisten Restaurants, oft individuell mit der verfügbaren Eiweißkombination angepasst — Hähnchen, Garnelen, Wurst oder nur Gemüse für vegetarische Versionen.",
+    "pt": "O mie goreng — literalmente \"macarrão frito\" em indonésio — é uma das comidas de rua mais populares do arquipélago, um exemplo perfeito de como a culinária chinesa imigrante se entrelaçou com ingredientes e técnicas locais. O macarrão de ovo (mie) chegou à Indonésia com comerciantes e migrantes chineses séculos atrás, mas o prato tal como existe hoje consolidou-se com a adição do kecap manis, o molho de soja doce exclusivamente indonésio.\n\nAo contrário do nasi goreng, o prato de arroz frito, o mie goreng mantém um vínculo mais visível com as suas raízes chinesas, embora o sabor geral seja claramente indonésio — doce e picante, definido pelo kecap manis. Encontra-se em cada banca de rua (warung) e na maioria dos restaurantes, frequentemente personalizado com qualquer combinação de proteína disponível — frango, camarão, linguiça, ou apenas legumes para versões vegetarianas.",
+    "ru": "Ми горенг — буквально \"жареная лапша\" на индонезийском — одно из самых популярных уличных блюд архипелага, прекрасный пример того, как китайская иммигрантская кухня переплелась с местными ингредиентами и техниками. Яичная лапша (ми) прибыла в Индонезию вместе с китайскими торговцами и мигрантами столетия назад, но блюдо в его нынешнем виде сформировалось с добавлением кечап маниса, уникального индонезийского сладкого соевого соуса.\n\nВ отличие от наси горенга, блюда из жареного риса, ми горенг сохраняет более заметную связь со своими китайскими корнями, хотя общий вкус явно индонезийский — сладкий и острый, определяемый кечап манисом. Его можно найти на каждой уличной тележке (варунг) и в большинстве ресторанов, часто с индивидуальной комбинацией доступного белка — курица, креветки, колбаса или просто овощи для вегетарианских версий.",
+    "ar": "المي غورينغ — الذي يعني حرفيًا \"النودلز المقلي\" بالإندونيسية — هو أحد أشهر أطعمة الشوارع في الأرخبيل، مثال مثالي على كيفية تشابك المطبخ الصيني المهاجر مع المكونات والتقنيات المحلية. وصلت نودلز البيض (مي) إلى إندونيسيا مع التجار والمهاجرين الصينيين منذ قرون، لكن الطبق كما هو موجود اليوم تبلور بإضافة كيتشب مانيس، صلصة الصويا الحلوة الإندونيسية الفريدة.\n\nخلافًا للناسي غورينغ، طبق الأرز المقلي، يحتفظ المي غورينغ بارتباط أكثر وضوحًا بجذوره الصينية، رغم أن المذاق العام إندونيسي بشكل واضح — حلو وحار، يحدده كيتشب مانيس. يوجد في كل كشك شارع (وارونغ) وفي معظم المطاعم، وغالبًا ما يُخصَّص بأي مزيج من البروتين المتوفر — دجاج أو روبيان أو نقانق أو خضار فقط للنسخ النباتية.",
+    "zh": "印尼炒面——字面意思是印尼语中的「炒面条」——是群岛最受欢迎的街头美食之一，是移民华人烹饪与当地食材和技艺交融的完美例证。鸡蛋面（mie）几个世纪前随华人商人和移民传入印度尼西亚，但如今的这道菜是在加入了印尼独有的甜酱油（kecap manis）后才最终定型的。\n\n与炒饭（nasi goreng）不同，印尼炒面与其中国根源的联系更为明显，尽管整体口味鲜明地属于印尼风格——由甜酱油定义的甜辣味。它遍布每个街边摊（warung）和大多数餐馆，常根据可用的蛋白质自由搭配——鸡肉、虾、香肠，或素食版本只用蔬菜。",
+    "ja": "ミーゴレン——インドネシア語で文字通り「焼きそば」を意味する——は群島で最も人気のあるストリートフードの一つであり、移民中国料理が地元の食材や技術とどのように融合したかを示す完璧な例である。卵麺（ミー）は何世紀も前に中国の商人や移民とともにインドネシアに伝わったが、今日存在するこの料理は、インドネシア独自の甘い醤油であるケチャップマニスが加わることで確立された。\n\n炒飯にあたるナシゴレンとは異なり、ミーゴレンは中国のルーツとのつながりがより目に見える形で残っているが、全体の味は明らかにインドネシア風であり、ケチャップマニスによって定義される甘辛さが特徴である。すべての屋台（ワルン）やほとんどのレストランで見られ、しばしば入手可能なタンパク質——鶏肉、エビ、ソーセージ、あるいはベジタリアン版なら野菜だけ——を自由に組み合わせてカスタマイズされる。",
+    "hi": "मी गोरेंग — इंडोनेशियाई में शाब्दिक रूप से \"तला हुआ नूडल्स\" — द्वीपसमूह के सबसे लोकप्रिय स्ट्रीट फूड्स में से एक है, यह एक बेहतरीन उदाहरण है कि कैसे प्रवासी चीनी भोजन स्थानीय सामग्री और तकनीकों के साथ जुड़ गया। अंडे के नूडल्स (मी) सदियों पहले चीनी व्यापारियों और प्रवासियों के साथ इंडोनेशिया पहुंचे, लेकिन आज जैसा यह व्यंजन मौजूद है, वह केचप मानिस — विशिष्ट रूप से इंडोनेशियाई मीठी सोया सॉस — के जुड़ने से पक्का हुआ।\n\nनासी गोरेंग, तले हुए चावल के व्यंजन के विपरीत, मी गोरेंग अपनी चीनी जड़ों से अधिक स्पष्ट संबंध बनाए रखता है, हालांकि समग्र स्वाद स्पष्ट रूप से इंडोनेशियाई है — मीठा और तीखा, जो केचप मानिस से परिभाषित होता है। यह हर सड़क के स्टॉल (वारुंग) और अधिकांश रेस्तरां में पाया जाता है, अक्सर उपलब्ध किसी भी प्रोटीन संयोजन के साथ अनुकूलित — चिकन, झींगा, सॉसेज, या शाकाहारी संस्करणों के लिए केवल सब्ज़ियाँ।",
+    "tr": "Mie goreng — Endonezyaca'da tam anlamıyla \"kızarmış erişte\" — takımadanın en popüler sokak yiyeceklerinden biridir; göçmen Çin mutfağının yerel malzeme ve tekniklerle nasıl iç içe geçtiğinin mükemmel bir örneğidir. Yumurtalı erişte (mie), yüzyıllar önce Çinli tüccarlar ve göçmenlerle Endonezya'ya ulaştı, ancak bugünkü haliyle yemek, tamamen Endonezya'ya özgü tatlı soya sosu olan kecap manis'in eklenmesiyle şekillendi.\n\nKızarmış pirinç yemeği nasi goreng'in aksine, mie goreng Çin köklerine daha görünür bir bağ taşır, ancak genel tat belirgin şekilde Endonezyalıdır — kecap manis tarafından tanımlanan tatlı ve acı. Her sokak tezgahında (warung) ve çoğu restoranda bulunur, genellikle mevcut olan herhangi bir protein kombinasyonuyla — tavuk, karides, sosis veya vejetaryen versiyonlar için sadece sebzelerle — kişiselleştirilir.",
+    "it": "Il mie goreng — letteralmente \"noodles fritti\" in indonesiano — è uno dei cibi di strada più popolari dell'arcipelago, un esempio perfetto di come la cucina cinese immigrata si sia intrecciata con gli ingredienti e le tecniche locali. I noodles all'uovo (mie) arrivarono in Indonesia con commercianti e migranti cinesi secoli fa, ma il piatto come esiste oggi si è consolidato con l'aggiunta del kecap manis, la salsa di soia dolce esclusivamente indonesiana.\n\nA differenza del nasi goreng, il piatto di riso fritto, il mie goreng mantiene un legame più visibile con le sue radici cinesi, sebbene il gusto complessivo sia chiaramente indonesiano — dolce e piccante, definito dal kecap manis. Si trova in ogni bancarella di strada (warung) e nella maggior parte dei ristoranti, spesso personalizzato con qualsiasi combinazione di proteine disponibile — pollo, gamberetti, salsiccia, o solo verdure per le versioni vegetariane.",
+    "ko": "미고렝 — 인도네시아어로 문자 그대로 \"볶은 면\"이라는 뜻 — 은 군도에서 가장 인기 있는 길거리 음식 중 하나로, 이민 중국 요리가 현지 재료와 기법과 어떻게 어우러졌는지 보여주는 완벽한 예이다. 달걀면(미)은 수 세기 전 중국 상인과 이주민들과 함께 인도네시아에 전해졌지만, 오늘날 존재하는 이 요리는 인도네시아 고유의 단 간장인 케찹 마니스가 더해지면서 확립되었다.\n\n볶음밥 요리인 나시고렝과 달리, 미고렝은 중국 뿌리와의 연결이 더 뚜렷하게 남아 있지만, 전체적인 맛은 케찹 마니스로 정의되는 달콤하고 매콤한 인도네시아 특유의 맛이다. 모든 길거리 노점(와룽)과 대부분의 레스토랑에서 찾아볼 수 있으며, 종종 사용 가능한 단백질 조합에 따라 자유롭게 구성된다 — 닭고기, 새우, 소시지, 또는 채식 버전에서는 채소만."
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 24,
+    "tags": ["quick", "family"],
+    "desc": {
+      "ro": "Tăiței indonezieni prăjiți cu pui, creveți și kecap manis dulce-caramelizat.",
+      "en": "Indonesian fried noodles with chicken, shrimp and sweet caramelized kecap manis.",
+      "es": "Fideos indonesios fritos con pollo, camarones y kecap manis dulce caramelizado.",
+      "fr": "Nouilles indonésiennes sautées au poulet, crevettes et kecap manis sucré caramélisé.",
+      "de": "Indonesische gebratene Nudeln mit Hähnchen, Garnelen und süßem karamellisiertem Kecap manis.",
+      "pt": "Macarrão indonésio frito com frango, camarão e kecap manis doce caramelizado.",
+      "ru": "Индонезийская жареная лапша с курицей, креветками и сладким карамелизованным кечап манисом.",
+      "ar": "نودلز إندونيسي مقلي بالدجاج والروبيان وكيتشب مانيس الحلو المكرمل.",
+      "zh": "印尼炒面，配鸡肉、虾和焦糖甜酱油。",
+      "ja": "鶏肉とエビ、キャラメル状の甘いケチャップマニスを使ったインドネシア風焼きそば。",
+      "hi": "चिकन, झींगा और मीठे कैरामलाइज़्ड केचप मानिस के साथ इंडोनेशियाई तला हुआ नूडल्स।",
+      "tr": "Tavuk, karides ve tatlı karamelize kecap manis ile Endonezya usulü kızarmış erişte.",
+      "it": "Noodles indonesiani fritti con pollo, gamberetti e kecap manis dolce caramellato.",
+      "ko": "닭고기, 새우, 달콤한 캐러멜 케찹 마니스를 곁들인 인도네시아식 볶음면."
+    }
+  }
+}

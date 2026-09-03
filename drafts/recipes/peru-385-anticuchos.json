@@ -1,0 +1,209 @@
+{
+  "id": 385,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Peru",
+    "en": "Peru",
+    "es": "Perú",
+    "fr": "Pérou",
+    "de": "Peru",
+    "pt": "Peru",
+    "ru": "Перу",
+    "ar": "بيرو",
+    "zh": "秘鲁",
+    "ja": "ペルー",
+    "hi": "पेरू",
+    "tr": "Peru",
+    "it": "Perù",
+    "ko": "페루"
+  },
+  "name": {
+    "ro": "Anticuchos (Frigărui Peruane Marinate)",
+    "en": "Anticuchos (Peruvian Marinated Grilled Skewers)",
+    "es": "Anticuchos",
+    "fr": "Anticuchos (Brochettes Marinées Péruviennes)",
+    "de": "Anticuchos (Peruanische Marinierte Grillspieße)",
+    "pt": "Anticuchos (Espetinhos Marinados Peruanos)",
+    "ru": "Антикучос (Перуанские Маринованные Шашлычки)",
+    "ar": "أنتيكوتشوس (أسياخ بيروفية متبلة مشوية)",
+    "zh": "安提库乔（秘鲁腌制烤肉串）",
+    "ja": "アンティクーチョ（ペルー風マリネ串焼き）",
+    "hi": "अंतीकुचोस (पेरूवियन मैरिनेटेड ग्रिल्ड स्किवर)",
+    "tr": "Anticuchos (Peru Usulü Marine Edilmiş Izgara Şişler)",
+    "it": "Anticuchos (Spiedini Marinati alla Griglia Peruviani)",
+    "ko": "안티쿠초 (페루식 양념 꼬치구이)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Carne marinată", "d": "Bucăți de mușchi de vită se marinează câteva ore în pastă de ají panca, oțet și chimen." },
+      { "icon": "🔥", "t": "Grătar direct", "d": "Frigăruile se frig rapid pe cărbuni, la foc mare, pentru un exterior caramelizat." },
+      { "icon": "🖌️", "t": "Unse cu marinată", "d": "Se ung continuu cu marinata în timpul frigerii, pentru un glazuraj lucios și picant." },
+      { "icon": "🌽", "t": "Cu cartofi și porumb", "d": "Se servesc tradițional cu felii de cartof fiert și boabe mari de porumb andin (choclo)." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Marinated meat", "d": "Beef pieces marinate for hours in ají panca paste, vinegar and cumin." },
+      { "icon": "🔥", "t": "Direct fire grilling", "d": "Skewers grill quickly over charcoal at high heat, for a caramelized exterior." },
+      { "icon": "🖌️", "t": "Basted while grilling", "d": "They're continuously basted with the marinade while grilling, for a glossy, spicy glaze." },
+      { "icon": "🌽", "t": "With potato and corn", "d": "Traditionally served with slices of boiled potato and large Andean corn kernels (choclo)." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Carne marinada", "d": "Trozos de carne de res se marinan durante horas en pasta de ají panca, vinagre y comino." },
+      { "icon": "🔥", "t": "A la parrilla directa", "d": "Las brochetas se asan rápido sobre carbón a fuego alto, para un exterior caramelizado." },
+      { "icon": "🖌️", "t": "Untadas con marinada", "d": "Se untan continuamente con la marinada mientras se asan, para un glaseado brillante y picante." },
+      { "icon": "🌽", "t": "Con papa y choclo", "d": "Se sirven tradicionalmente con rodajas de papa hervida y granos grandes de choclo andino." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Viande marinée", "d": "Des morceaux de bœuf marinent pendant des heures dans une pâte d'ají panca, du vinaigre et du cumin." },
+      { "icon": "🔥", "t": "Grillé au feu direct", "d": "Les brochettes grillent rapidement sur des braises à feu vif, pour un extérieur caramélisé." },
+      { "icon": "🖌️", "t": "Badigeonnées pendant la cuisson", "d": "Elles sont continuellement badigeonnées de marinade pendant la cuisson, pour un glaçage brillant et épicé." },
+      { "icon": "🌽", "t": "Avec pomme de terre et maïs", "d": "Traditionnellement servies avec des tranches de pomme de terre bouillie et de gros grains de maïs andin (choclo)." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Mariniertes Fleisch", "d": "Rindfleischstücke marinieren stundenlang in Ají-Panca-Paste, Essig und Kreuzkümmel." },
+      { "icon": "🔥", "t": "Direktes Grillen", "d": "Die Spieße werden schnell über Holzkohle bei hoher Hitze gegrillt, für eine karamellisierte Außenseite." },
+      { "icon": "🖌️", "t": "Beim Grillen bestrichen", "d": "Sie werden während des Grillens ständig mit der Marinade bestrichen, für eine glänzende, würzige Glasur." },
+      { "icon": "🌽", "t": "Mit Kartoffel und Mais", "d": "Traditionell serviert mit Scheiben gekochter Kartoffel und großen andinen Maiskörnern (Choclo)." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Carne marinada", "d": "Pedaços de carne bovina marinam durante horas em pasta de ají panca, vinagre e cominho." },
+      { "icon": "🔥", "t": "Grelhado direto", "d": "Os espetinhos grelham rapidamente sobre carvão em fogo alto, para um exterior caramelizado." },
+      { "icon": "🖌️", "t": "Pincelados durante o grelhar", "d": "São continuamente pincelados com a marinada enquanto grelham, para um brilho picante e reluzente." },
+      { "icon": "🌽", "t": "Com batata e milho", "d": "Tradicionalmente servidos com fatias de batata cozida e grãos grandes de milho andino (choclo)." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Маринованное мясо", "d": "Куски говядины маринуются часами в пасте ахи панка, уксусе и тмине." },
+      { "icon": "🔥", "t": "Прямой жар гриля", "d": "Шашлычки быстро жарятся на углях на сильном огне, для карамелизованной корочки." },
+      { "icon": "🖌️", "t": "Смазываются во время жарки", "d": "Их постоянно смазывают маринадом во время жарки, для блестящей, острой глазури." },
+      { "icon": "🌽", "t": "С картофелем и кукурузой", "d": "Традиционно подаются с ломтиками варёного картофеля и крупными зёрнами андской кукурузы (чокло)." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "لحم متبل", "d": "تُنقع قطع لحم البقر لساعات في معجون أخي بانكا والخل والكمون." },
+      { "icon": "🔥", "t": "شواء مباشر", "d": "تُشوى الأسياخ بسرعة على الفحم بحرارة عالية للحصول على سطح خارجي مكرمل." },
+      { "icon": "🖌️", "t": "تُدهن أثناء الشواء", "d": "تُدهن باستمرار بالتتبيلة أثناء الشواء للحصول على طلاء لامع وحار." },
+      { "icon": "🌽", "t": "مع البطاطس والذرة", "d": "تُقدَّم تقليديًا مع شرائح البطاطس المسلوقة وحبوب الذرة الأندية الكبيرة (تشوكلو)." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "腌制肉块", "d": "牛肉块在阿希潘卡辣椒酱、醋和孜然中腌制数小时。" },
+      { "icon": "🔥", "t": "明火直烤", "d": "肉串在炭火大火上迅速烤制，形成焦糖化外表。" },
+      { "icon": "🖌️", "t": "边烤边刷酱", "d": "烤制过程中不断刷上腌料，形成光亮辛辣的酱面。" },
+      { "icon": "🌽", "t": "配土豆和玉米", "d": "传统上搭配水煮土豆片和大颗安第斯玉米粒（choclo）食用。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "マリネした肉", "d": "牛肉の塊をアヒパンカペースト、酢、クミンで数時間マリネする。" },
+      { "icon": "🔥", "t": "直火焼き", "d": "串は炭火の強火で手早く焼かれ、カラメル化した表面になる。" },
+      { "icon": "🖌️", "t": "焼きながら塗る", "d": "焼いている間、絶えずマリネ液を塗り、艶やかでスパイシーな照りを出す。" },
+      { "icon": "🌽", "t": "じゃがいもとトウモロコシ添え", "d": "伝統的に茹でたじゃがいものスライスと大粒のアンデストウモロコシ（チョクロ）を添えて提供する。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "मैरिनेटेड मांस", "d": "बीफ के टुकड़े अजी पांका पेस्ट, सिरका और जीरे में घंटों मैरिनेट होते हैं।" },
+      { "icon": "🔥", "t": "सीधी आग पर ग्रिल", "d": "स्किवर तेज़ आंच पर कोयले पर जल्दी ग्रिल होते हैं, कैरामलाइज़्ड बाहरी परत के लिए।" },
+      { "icon": "🖌️", "t": "ग्रिल करते समय लेपित", "d": "ग्रिल करते समय लगातार मैरिनेड से लेपित किया जाता है, चमकदार, तीखी परत के लिए।" },
+      { "icon": "🌽", "t": "आलू और मक्का के साथ", "d": "पारंपरिक रूप से उबले आलू के टुकड़ों और बड़े एंडियन मक्के के दानों (चोक्लो) के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "Marine edilmiş et", "d": "Dana eti parçaları saatlerce ají panca ezmesi, sirke ve kimyonda marine edilir." },
+      { "icon": "🔥", "t": "Doğrudan ateşte ızgara", "d": "Şişler karamelize bir dış yüzey için kömür üzerinde yüksek ateşte hızlıca ızgara yapılır." },
+      { "icon": "🖌️", "t": "Izgara yaparken fırçalanır", "d": "Parlak, baharatlı bir sırlama için ızgara sırasında sürekli marinatla fırçalanır." },
+      { "icon": "🌽", "t": "Patates ve mısırla", "d": "Geleneksel olarak haşlanmış patates dilimleri ve büyük And mısırı taneleriyle (choclo) servis edilir." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Carne marinata", "d": "Pezzi di manzo marinano per ore in pasta di ají panca, aceto e cumino." },
+      { "icon": "🔥", "t": "Grigliato a fuoco diretto", "d": "Gli spiedini vengono grigliati rapidamente sulla brace a fuoco alto, per un esterno caramellato." },
+      { "icon": "🖌️", "t": "Spennellati durante la cottura", "d": "Vengono continuamente spennellati con la marinata durante la cottura, per una glassa lucida e piccante." },
+      { "icon": "🌽", "t": "Con patata e mais", "d": "Tradizionalmente serviti con fette di patata bollita e grandi chicchi di mais andino (choclo)." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "양념한 고기", "d": "소고기 조각을 아히 판카 페이스트, 식초, 커민에 몇 시간 동안 재운다." },
+      { "icon": "🔥", "t": "직화 구이", "d": "꼬치는 강한 숯불에서 빠르게 구워져 캐러멜화된 겉면을 만든다." },
+      { "icon": "🖌️", "t": "구우면서 발라주기", "d": "굽는 동안 계속 양념을 발라 윤기 나고 매콤한 유약을 만든다." },
+      { "icon": "🌽", "t": "감자와 옥수수를 곁들여", "d": "전통적으로 삶은 감자 조각과 큰 알갱이의 안데스 옥수수(초클로)와 함께 제공된다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["800g mușchi de vită, tăiat cuburi mari", "4 linguri pastă de ají panca", "4 căței de usturoi, tocați", "1/4 cană oțet de vin roșu", "1 linguriță chimen măcinat", "1 linguriță oregano uscat", "sare și piper după gust", "2 linguri ulei", "cartofi mici, fierți, pentru servire", "boabe de porumb andin (choclo) fierte, pentru servire", "frigărui de lemn"],
+    "en": ["800g beef sirloin, cut into large cubes", "4 tbsp ají panca paste", "4 garlic cloves, minced", "1/4 cup red wine vinegar", "1 tsp ground cumin", "1 tsp dried oregano", "salt and pepper to taste", "2 tbsp oil", "small boiled potatoes, for serving", "boiled Andean corn kernels (choclo), for serving", "wooden skewers"],
+    "es": ["800g de solomillo de res, cortado en cubos grandes", "4 cucharadas de pasta de ají panca", "4 dientes de ajo, picados", "1/4 taza de vinagre de vino tinto", "1 cucharadita de comino molido", "1 cucharadita de orégano seco", "sal y pimienta al gusto", "2 cucharadas de aceite", "papas pequeñas hervidas, para servir", "granos de choclo andino hervidos, para servir", "palillos de madera"],
+    "fr": ["800g de faux-filet de bœuf, coupé en gros cubes", "4 c. à soupe de pâte d'ají panca", "4 gousses d'ail, hachées", "1/4 tasse de vinaigre de vin rouge", "1 c. à café de cumin moulu", "1 c. à café d'origan séché", "sel et poivre selon le goût", "2 c. à soupe d'huile", "petites pommes de terre bouillies, pour servir", "grains de maïs andin (choclo) bouillis, pour servir", "brochettes en bois"],
+    "de": ["800g Rinderlende, in große Würfel geschnitten", "4 EL Ají-Panca-Paste", "4 Knoblauchzehen, gehackt", "1/4 Tasse Rotweinessig", "1 TL gemahlener Kreuzkümmel", "1 TL getrockneter Oregano", "Salz und Pfeffer nach Geschmack", "2 EL Öl", "kleine gekochte Kartoffeln, zum Servieren", "gekochte andine Maiskörner (Choclo), zum Servieren", "Holzspieße"],
+    "pt": ["800g de contrafilé bovino, cortado em cubos grandes", "4 colheres (sopa) de pasta de ají panca", "4 dentes de alho, picados", "1/4 xícara de vinagre de vinho tinto", "1 colher (chá) de cominho moído", "1 colher (chá) de orégano seco", "sal e pimenta a gosto", "2 colheres (sopa) de óleo", "batatas pequenas cozidas, para servir", "grãos de milho andino (choclo) cozidos, para servir", "espetos de madeira"],
+    "ru": ["800г говяжьей вырезки, нарезанной крупными кубиками", "4 ст.л. пасты ахи панка", "4 зубчика чеснока, измельчённых", "1/4 стакана красного винного уксуса", "1 ч.л. молотого тмина", "1 ч.л. сушёного орегано", "соль и перец по вкусу", "2 ст.л. масла", "мелкий варёный картофель, для подачи", "варёные зёрна андской кукурузы (чокло), для подачи", "деревянные шпажки"],
+    "ar": ["800 غرام لحم بقري (سيرلوين)، مقطّع مكعبات كبيرة", "4 ملاعق كبيرة معجون أخي بانكا", "4 فصوص ثوم، مفرومة", "ربع كوب خل النبيذ الأحمر", "ملعقة صغيرة كمون مطحون", "ملعقة صغيرة أوريجانو مجفف", "ملح وفلفل حسب الرغبة", "ملعقتان كبيرتان زيت", "بطاطس صغيرة مسلوقة، للتقديم", "حبوب ذرة أندية مسلوقة (تشوكلو)، للتقديم", "أسياخ خشبية"],
+    "zh": ["800克牛里脊肉，切大块", "4汤匙阿希潘卡辣椒酱", "4瓣大蒜，切碎", "1/4杯红酒醋", "1茶匙孜然粉", "1茶匙干牛至", "盐和胡椒适量", "2汤匙油", "小个水煮土豆，配食用", "水煮安第斯玉米粒（choclo），配食用", "木签"],
+    "ja": ["牛サーロイン800g（大きめの角切り）", "アヒパンカペースト大さじ4", "にんにく4片（みじん切り）", "赤ワインビネガー1/4カップ", "クミンパウダー小さじ1", "乾燥オレガノ小さじ1", "塩こしょう 適量", "油 大さじ2", "茹でた小さめのじゃがいも（添える用）", "茹でたアンデストウモロコシ（チョクロ、添える用）", "木製の串"],
+    "hi": ["800 ग्राम बीफ सिरलॉइन, बड़े क्यूब में कटा", "4 बड़े चम्मच अजी पांका पेस्ट", "4 लहसुन की कलियाँ, कटी हुई", "1/4 कप रेड वाइन विनेगर", "1 छोटी चम्मच पिसा जीरा", "1 छोटी चम्मच सूखा अजवायन (ओरिगैनो)", "स्वादानुसार नमक और काली मिर्च", "2 बड़े चम्मच तेल", "छोटे उबले आलू, परोसने के लिए", "उबले एंडियन मक्के के दाने (चोक्लो), परोसने के लिए", "लकड़ी की सींक"],
+    "tr": ["800g dana bonfile, büyük küpler halinde kesilmiş", "4 yemek kaşığı ají panca ezmesi", "4 diş sarımsak, doğranmış", "1/4 su bardağı kırmızı şarap sirkesi", "1 çay kaşığı öğütülmüş kimyon", "1 çay kaşığı kuru kekik", "tuz ve karabiber, tadına göre", "2 yemek kaşığı yağ", "servis için küçük haşlanmış patatesler", "servis için haşlanmış And mısırı taneleri (choclo)", "ahşap şişler"],
+    "it": ["800g di controfiletto di manzo, tagliato a cubetti grandi", "4 cucchiai di pasta di ají panca", "4 spicchi d'aglio, tritati", "1/4 tazza di aceto di vino rosso", "1 cucchiaino di cumino macinato", "1 cucchiaino di origano secco", "sale e pepe q.b.", "2 cucchiai di olio", "patate piccole bollite, per servire", "chicchi di mais andino (choclo) bolliti, per servire", "spiedini di legno"],
+    "ko": ["소고기 등심 800g, 큼직하게 깍둑썰기", "아히 판카 페이스트 4큰술", "마늘 4쪽, 다진 것", "레드와인 식초 1/4컵", "간 커민 1작은술", "말린 오레가노 1작은술", "소금과 후추 약간", "식용유 2큰술", "삶은 작은 감자, 곁들임용", "삶은 안데스 옥수수 알갱이(초클로), 곁들임용", "나무 꼬치"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE MARINATA: Amestecă pasta de ají panca cu usturoiul, oțetul, chimenul, oregano, sare și piper într-un bol. MARINEAZĂ CARNEA: Adaugă cuburile de vită în marinată, amestecă bine să se acopere uniform, acoperă și lasă la frigider minimum 4 ore, ideal peste noapte. ÎNMOAIE FRIGĂRUILE: Cu 30 minute înainte de a găti, înmoaie frigăruile de lemn în apă, ca să nu ardă pe grătar. ÎNȘIRĂ CARNEA: Scoate carnea din marinată, păstrând marinata rămasă pentru uns, și înșiră bucățile pe frigărui. ÎNCINGE GRĂTARUL: Încinge grătarul sau cărbunii la foc mare. FRIGE CARNEA: Pune frigăruile pe grătar și frige 3-4 minute pe fiecare parte, pentru o carne medie, ungând continuu cu marinata rămasă. VERIFICĂ GRADUL DE COACERE: Ajustează timpul de frigere după preferința pentru carnea mai mult sau mai puțin făcută. LASĂ SĂ SE ODIHNEASCĂ: Scoate frigăruile de pe grătar și lasă-le 2-3 minute înainte de servire. SERVEȘTE: Servește fierbinte, alături de felii de cartof fiert și boabe de porumb andin.",
+    "en": "MAKE THE MARINADE: Mix the ají panca paste with garlic, vinegar, cumin, oregano, salt and pepper in a bowl. MARINATE THE MEAT: Add the beef cubes to the marinade, mix well to coat evenly, cover and refrigerate at least 4 hours, ideally overnight. SOAK THE SKEWERS: 30 minutes before cooking, soak the wooden skewers in water, so they don't burn on the grill. THREAD THE MEAT: Remove the meat from the marinade, keeping the leftover marinade for basting, and thread the pieces onto the skewers. HEAT THE GRILL: Heat the grill or charcoal to high heat. GRILL THE MEAT: Place the skewers on the grill and cook 3-4 minutes per side, for medium doneness, basting continuously with the reserved marinade. CHECK DONENESS: Adjust grilling time according to your preference for more or less doneness. LET IT REST: Remove the skewers from the grill and let them rest 2-3 minutes before serving. SERVE: Serve hot, alongside slices of boiled potato and Andean corn kernels.",
+    "es": "PREPARA LA MARINADA: Mezcla la pasta de ají panca con el ajo, el vinagre, el comino, el orégano, sal y pimienta en un bol. MARINA LA CARNE: Añade los cubos de res a la marinada, mezcla bien para cubrirlos uniformemente, tapa y refrigera al menos 4 horas, idealmente toda la noche. REMOJA LOS PALILLOS: 30 minutos antes de cocinar, remoja los palillos de madera en agua, para que no se quemen en la parrilla. ENSARTA LA CARNE: Retira la carne de la marinada, guardando el resto para untar, y ensarta los trozos en los palillos. CALIENTA LA PARRILLA: Calienta la parrilla o el carbón a fuego alto. ASA LA CARNE: Coloca las brochetas en la parrilla y cocina 3-4 minutos por lado, para un punto medio, untando continuamente con la marinada reservada. VERIFICA EL PUNTO: Ajusta el tiempo de cocción según tu preferencia de más o menos cocido. DEJA REPOSAR: Retira las brochetas de la parrilla y déjalas reposar 2-3 minutos antes de servir. SIRVE: Sirve caliente, junto con rodajas de papa hervida y granos de choclo andino.",
+    "fr": "PRÉPAREZ LA MARINADE: Mélangez la pâte d'ají panca avec l'ail, le vinaigre, le cumin, l'origan, le sel et le poivre dans un bol. FAITES MARINER LA VIANDE: Ajoutez les cubes de bœuf à la marinade, mélangez bien pour les enrober uniformément, couvrez et réfrigérez au moins 4 heures, idéalement toute la nuit. TREMPEZ LES BROCHETTES: 30 minutes avant la cuisson, trempez les brochettes en bois dans l'eau, pour qu'elles ne brûlent pas sur le gril. EMBROCHEZ LA VIANDE: Retirez la viande de la marinade, en conservant le reste pour badigeonner, et embrochez les morceaux. CHAUFFEZ LE GRIL: Chauffez le gril ou les braises à feu vif. FAITES GRILLER LA VIANDE: Placez les brochettes sur le gril et cuisez 3-4 minutes de chaque côté, pour une cuisson à point, en badigeonnant continuellement avec la marinade réservée. VÉRIFIEZ LA CUISSON: Ajustez le temps de cuisson selon votre préférence pour une viande plus ou moins cuite. LAISSEZ REPOSER: Retirez les brochettes du gril et laissez-les reposer 2-3 minutes avant de servir. SERVEZ: Servez chaud, avec des tranches de pomme de terre bouillie et des grains de maïs andin.",
+    "de": "MARINADE ZUBEREITEN: Die Ají-Panca-Paste mit Knoblauch, Essig, Kreuzkümmel, Oregano, Salz und Pfeffer in einer Schüssel vermischen. FLEISCH MARINIEREN: Die Rindfleischwürfel zur Marinade geben, gut vermischen, um sie gleichmäßig zu bedecken, abdecken und mindestens 4 Stunden, idealerweise über Nacht, kühl stellen. SPIESSE EINWEICHEN: 30 Minuten vor dem Garen die Holzspieße in Wasser einweichen, damit sie auf dem Grill nicht verbrennen. FLEISCH AUFSPIESSEN: Das Fleisch aus der Marinade nehmen, die übrige Marinade zum Bestreichen aufbewahren, und die Stücke auf die Spieße stecken. GRILL ERHITZEN: Den Grill oder die Kohlen auf hohe Hitze bringen. FLEISCH GRILLEN: Die Spieße auf den Grill legen und 3-4 Minuten pro Seite für medium garen, dabei kontinuierlich mit der aufbewahrten Marinade bestreichen. GARGRAD PRÜFEN: Die Grillzeit je nach gewünschtem Gargrad anpassen. RUHEN LASSEN: Die Spieße vom Grill nehmen und 2-3 Minuten vor dem Servieren ruhen lassen. SERVIEREN: Heiß servieren, mit Scheiben gekochter Kartoffel und andinen Maiskörnern.",
+    "pt": "PREPARE A MARINADA: Misture a pasta de ají panca com o alho, o vinagre, o cominho, o orégano, sal e pimenta numa tigela. MARINE A CARNE: Junte os cubos de carne à marinada, misture bem para cobrir uniformemente, tape e leve ao frigorífico pelo menos 4 horas, idealmente durante a noite. DEMOLHE OS ESPETOS: 30 minutos antes de cozinhar, demolhe os espetos de madeira em água, para não queimarem na grelha. ENFIE A CARNE: Retire a carne da marinada, guardando o resto para pincelar, e enfie os pedaços nos espetos. AQUEÇA A GRELHA: Aqueça a grelha ou o carvão em fogo alto. GRELHE A CARNE: Coloque os espetinhos na grelha e cozinhe 3-4 minutos de cada lado, para um ponto médio, pincelando continuamente com a marinada reservada. VERIFIQUE O PONTO: Ajuste o tempo de grelhar conforme a sua preferência de ponto de carne. DEIXE REPOUSAR: Retire os espetinhos da grelha e deixe repousar 2-3 minutos antes de servir. SIRVA: Sirva quente, junto com fatias de batata cozida e grãos de milho andino.",
+    "ru": "ПРИГОТОВЬТЕ МАРИНАД: Смешайте пасту ахи панка с чесноком, уксусом, тмином, орегано, солью и перцем в миске. МАРИНУЙТЕ МЯСО: Добавьте кубики говядины в маринад, хорошо перемешайте для равномерного покрытия, накройте и охладите минимум 4 часа, в идеале на ночь. ЗАМОЧИТЕ ШПАЖКИ: За 30 минут до готовки замочите деревянные шпажки в воде, чтобы они не подгорели на гриле. НАНИЖИТЕ МЯСО: Достаньте мясо из маринада, сохранив оставшийся маринад для смазывания, и нанижите куски на шпажки. РАЗОГРЕЙТЕ ГРИЛЬ: Разогрейте гриль или угли до сильного жара. ЖАРЬТЕ МЯСО: Положите шашлычки на гриль и жарьте 3-4 минуты с каждой стороны, для средней прожарки, постоянно смазывая оставшимся маринадом. ПРОВЕРЬТЕ ГОТОВНОСТЬ: Скорректируйте время жарки по своему предпочтению прожарки. ДАЙТЕ ОТДОХНУТЬ: Снимите шашлычки с гриля и дайте им отдохнуть 2-3 минуты перед подачей. ПОДАВАЙТЕ: Подавайте горячими, с ломтиками варёного картофеля и зёрнами андской кукурузы.",
+    "ar": "حضّري التتبيلة: امزجي معجون أخي بانكا مع الثوم والخل والكمون والأوريجانو والملح والفلفل في وعاء. تبّلي اللحم: أضيفي مكعبات اللحم إلى التتبيلة، امزجي جيدًا لتغطيتها بالتساوي، غطّي وضعيها في الثلاجة 4 ساعات على الأقل، ويُفضَّل طوال الليل. انقعي الأسياخ: قبل الطهي بـ30 دقيقة، انقعي الأسياخ الخشبية بالماء حتى لا تحترق على الشواية. أدخلي اللحم في الأسياخ: أخرجي اللحم من التتبيلة، مع الاحتفاظ بالباقي للدهن، وأدخلي القطع في الأسياخ. سخّني الشواية: سخّني الشواية أو الفحم على نار عالية. اشوي اللحم: ضعي الأسياخ على الشواية واطبخيها 3-4 دقائق لكل جانب لدرجة نضج متوسطة، مع الدهن المستمر بالتتبيلة المتبقية. تحققي من النضج: عدّلي وقت الشوي حسب تفضيلك لدرجة النضج. اتركيها ترتاح: أزيلي الأسياخ عن الشواية واتركيها 2-3 دقائق قبل التقديم. قدّمي: قدّميها ساخنة مع شرائح البطاطس المسلوقة وحبوب الذرة الأندية.",
+    "zh": "制作腌料：在碗中将阿希潘卡辣椒酱与大蒜、醋、孜然、牛至、盐和胡椒混合。腌制肉类：将牛肉块加入腌料中，充分拌匀使其均匀裹上，盖好放入冰箱冷藏至少4小时，最好过夜。浸泡竹签：烹饪前30分钟将木签泡水，以免在烤架上烧焦。穿肉块：从腌料中取出肉，保留剩余腌料用于刷酱，将肉块穿在签子上。烧热烤架：将烤架或炭火烧至旺火。烤肉：将肉串放在烤架上，每面烤3-4分钟至五分熟，烤制过程中不断刷上保留的腌料。检查熟度：根据个人喜好调整烤制时间。静置：取下肉串，静置2-3分钟后再食用。上桌：趁热搭配水煮土豆片和安第斯玉米粒食用。",
+    "ja": "マリネ液を作る：ボウルにアヒパンカペースト、にんにく、酢、クミン、オレガノ、塩こしょうを混ぜる。肉をマリネする：牛肉の角切りをマリネ液に加え、均一にコーティングするようよく混ぜ、覆って冷蔵庫で最低4時間、理想は一晩置く。串を水に浸す：調理の30分前に、グリルで焦げないよう木製の串を水に浸す。肉を串に刺す：肉をマリネ液から取り出し（残りは塗る用に取っておく）、串に刺していく。グリルを熱する：グリルまたは炭を強火で熱する。肉を焼く：串をグリルに置き、両面各3〜4分、ミディアムの焼き加減になるまで、残しておいたマリネ液を絶えず塗りながら焼く。焼き加減を確認する：好みの焼き加減に応じて時間を調整する。休ませる：串をグリルから外し、提供前に2〜3分休ませる。提供する：茹でたじゃがいものスライスとアンデストウモロコシの粒を添えて熱いうちに提供する。",
+    "hi": "मैरिनेड बनाएं: एक कटोरे में अजी पांका पेस्ट को लहसुन, सिरका, जीरा, अजवायन, नमक और काली मिर्च के साथ मिलाएं। मांस मैरिनेट करें: बीफ के क्यूब मैरिनेड में डालें, समान रूप से ढकने के लिए अच्छी तरह मिलाएं, ढककर कम से कम 4 घंटे, आदर्श रूप से रात भर फ्रिज में रखें। सींक भिगोएं: पकाने से 30 मिनट पहले, लकड़ी की सींक को पानी में भिगोएं, ताकि वे ग्रिल पर न जलें। मांस पिरोएं: मांस को मैरिनेड से निकालें, बचे हुए मैरिनेड को लेपने के लिए रखें, और टुकड़ों को सींक पर पिरोएं। ग्रिल गरम करें: ग्रिल या कोयले को तेज़ आंच पर गरम करें। मांस ग्रिल करें: स्किवर को ग्रिल पर रखें और मध्यम पकने के लिए हर तरफ 3-4 मिनट पकाएं, बचे हुए मैरिनेड से लगातार लेप लगाते हुए। पकने की जांच करें: अपनी पसंद के अनुसार पकने के समय को समायोजित करें। आराम दें: स्किवर को ग्रिल से हटाएं और परोसने से पहले 2-3 मिनट आराम दें। परोसें: गरमागरम, उबले आलू के टुकड़ों और एंडियन मक्के के दानों के साथ परोसें।",
+    "tr": "MARİNATI HAZIRLAYIN: Bir kasede ají panca ezmesini sarımsak, sirke, kimyon, kekik, tuz ve karabiberle karıştırın. ETİ MARİNE EDİN: Dana eti küplerini marinatın içine ekleyip eşit şekilde kaplanacak şekilde iyice karıştırın, üzerini örtüp en az 4 saat, tercihen bir gece buzdolabında bekletin. ŞİŞLERİ ISLATIN: Pişirmeden 30 dakika önce, ızgarada yanmamaları için ahşap şişleri suda ıslatın. ETİ ŞİŞE GEÇİRİN: Eti marinattan çıkarın, geri kalanı fırçalamak için saklayın ve parçaları şişlere geçirin. IZGARAYI ISITIN: Izgarayı veya kömürü yüksek ateşte ısıtın. ETİ IZGARA YAPIN: Şişleri ızgaraya koyun ve orta pişmişlik için her tarafını 3-4 dakika pişirin, saklanan marinatla sürekli fırçalayarak. PİŞMİŞLİĞİ KONTROL EDİN: Izgara süresini pişmişlik tercihinize göre ayarlayın. DİNLENDİRİN: Şişleri ızgaradan alın ve servis etmeden önce 2-3 dakika dinlendirin. SERVİS YAPIN: Haşlanmış patates dilimleri ve And mısırı taneleriyle sıcak servis edin.",
+    "it": "PREPARA LA MARINATA: Mescola la pasta di ají panca con aglio, aceto, cumino, origano, sale e pepe in una ciotola. MARINA LA CARNE: Aggiungi i cubetti di manzo alla marinata, mescola bene per ricoprirli uniformemente, copri e refrigera almeno 4 ore, idealmente tutta la notte. AMMOLLA GLI SPIEDINI: 30 minuti prima di cucinare, ammolla gli spiedini di legno in acqua, perché non brucino sulla griglia. INFILZA LA CARNE: Togli la carne dalla marinata, conservando quella rimasta per spennellare, e infilza i pezzi sugli spiedini. SCALDA LA GRIGLIA: Scalda la griglia o la brace a fuoco alto. GRIGLIA LA CARNE: Metti gli spiedini sulla griglia e cuoci 3-4 minuti per lato, per una cottura media, spennellando continuamente con la marinata conservata. CONTROLLA LA COTTURA: Regola il tempo di cottura secondo la tua preferenza. LASCIA RIPOSARE: Togli gli spiedini dalla griglia e lasciali riposare 2-3 minuti prima di servire. SERVI: Servi caldo, con fette di patata bollita e chicchi di mais andino.",
+    "ko": "양념 만들기: 볼에 아히 판카 페이스트, 마늘, 식초, 커민, 오레가노, 소금, 후추를 섞는다. 고기 재우기: 소고기 큐브를 양념에 넣고 골고루 묻도록 잘 섞은 뒤 덮어서 냉장고에 최소 4시간, 가급적 하룻밤 재운다. 꼬치 불리기: 조리 30분 전에 나무 꼬치를 물에 담가 그릴에서 타지 않게 한다. 고기 꿰기: 고기를 양념에서 건져 남은 양념은 바르는 용도로 남겨두고, 조각을 꼬치에 꿴다. 그릴 달구기: 그릴이나 숯을 센 불로 달군다. 고기 굽기: 꼬치를 그릴에 올리고 각 면을 3-4분씩 구워 미디엄으로 익히며, 남겨둔 양념을 계속 발라준다. 익힘 정도 확인: 원하는 익힘 정도에 따라 굽는 시간을 조절한다. 휴지시키기: 꼬치를 그릴에서 꺼내 서빙 전 2-3분간 휴지시킨다. 제공하기: 삶은 감자 조각과 안데스 옥수수 알갱이를 곁들여 뜨겁게 제공한다."
+  },
+  "originText": {
+    "ro": "Anticuchos are rădăcini adânci în perioada precolombiană, dar felul de mâncare așa cum îl cunoaștem azi s-a format în perioada colonială, când sclavii africani aduși în Peru, cărora li se refuza carnea de vită de calitate consumată de spanioli, au învățat să pregătească organele — inclusiv inima de vită — prin marinare intensă și frigere pe cărbuni, transformând o tăietură ieftină într-un fel savuros.\n\nVersiunea originală și încă cea mai autentică folosește anticuchos de corazón — inimă de vită marinată — vândută astăzi la aproape fiecare colț de stradă din Peru, de la vânzători ambulanți cu grătare mici de cărbuni. Deși varianta cu mușchi de vită prezentată aici este mai accesibilă gustului occidental, aroma definitorie rămâne aceeași: pasta de ají panca, un ardei iute roșu afumat și dulceag, este ceea ce face din anticuchos un fel unic peruan, distinct de orice altă frigărui din America Latină.",
+    "en": "Anticuchos have deep roots in the pre-Columbian period, but the dish as we know it today took shape during the colonial era, when African slaves brought to Peru, who were denied the quality beef consumed by the Spanish, learned to prepare offal — including beef heart — through intense marinating and grilling over charcoal, transforming a cheap cut into a flavorful dish.\n\nThe original and still most authentic version uses anticuchos de corazón — marinated beef heart — sold today on nearly every street corner in Peru, from vendors with small charcoal grills. While the sirloin version presented here is more accessible to Western tastes, the defining flavor remains the same: ají panca paste, a smoky, slightly sweet red chili, is what makes anticuchos a uniquely Peruvian dish, distinct from any other skewer in Latin America.",
+    "es": "Los anticuchos tienen raíces profundas en el período precolombino, pero el plato tal como lo conocemos hoy tomó forma durante la época colonial, cuando los esclavos africanos traídos a Perú, a quienes se les negaba la carne de res de calidad consumida por los españoles, aprendieron a preparar vísceras — incluido el corazón de res — mediante marinado intenso y asado a la parrilla sobre carbón, transformando un corte barato en un plato sabroso.\n\nLa versión original y aún la más auténtica usa anticuchos de corazón — corazón de res marinado — que se vende hoy en casi cada esquina de Perú, por vendedores con pequeñas parrillas de carbón. Aunque la versión con solomillo presentada aquí es más accesible al paladar occidental, el sabor definitorio sigue siendo el mismo: la pasta de ají panca, un chile rojo ahumado y ligeramente dulce, es lo que hace de los anticuchos un plato únicamente peruano, distinto de cualquier otra brocheta de Latinoamérica.",
+    "fr": "Les anticuchos ont des racines profondes dans la période précolombienne, mais le plat tel que nous le connaissons aujourd'hui a pris forme à l'époque coloniale, lorsque les esclaves africains amenés au Pérou, à qui l'on refusait la viande de bœuf de qualité consommée par les Espagnols, ont appris à préparer les abats — y compris le cœur de bœuf — par un marinage intense et une cuisson sur braises, transformant une découpe bon marché en un plat savoureux.\n\nLa version originale et toujours la plus authentique utilise les anticuchos de corazón — cœur de bœuf mariné — vendus aujourd'hui à presque chaque coin de rue au Pérou, par des vendeurs équipés de petits grils au charbon. Bien que la version au faux-filet présentée ici soit plus accessible au palais occidental, la saveur déterminante reste la même: la pâte d'ají panca, un piment rouge fumé et légèrement sucré, est ce qui fait des anticuchos un plat typiquement péruvien, distinct de toute autre brochette d'Amérique latine.",
+    "de": "Anticuchos haben tiefe Wurzeln in der präkolumbianischen Zeit, aber das Gericht, wie wir es heute kennen, nahm während der Kolonialzeit Gestalt an, als afrikanische Sklaven, die nach Peru gebracht wurden und denen das von den Spaniern konsumierte hochwertige Rindfleisch verwehrt blieb, lernten, Innereien — einschließlich Rinderherz — durch intensives Marinieren und Grillen über Holzkohle zuzubereiten und so ein billiges Stück in ein schmackhaftes Gericht verwandelten.\n\nDie ursprüngliche und immer noch authentischste Version verwendet Anticuchos de Corazón — mariniertes Rinderherz — das heute an fast jeder Straßenecke in Peru von Verkäufern mit kleinen Holzkohlegrills verkauft wird. Während die hier vorgestellte Lendenversion für den westlichen Gaumen zugänglicher ist, bleibt der bestimmende Geschmack derselbe: Ají-Panca-Paste, ein rauchiger, leicht süßer roter Chili, macht Anticuchos zu einem einzigartig peruanischen Gericht, das sich von jedem anderen Spieß Lateinamerikas unterscheidet.",
+    "pt": "Os anticuchos têm raízes profundas no período pré-colombiano, mas o prato tal como o conhecemos hoje tomou forma durante a era colonial, quando os escravos africanos trazidos para o Peru, aos quais era negada a carne bovina de qualidade consumida pelos espanhóis, aprenderam a preparar miúdos — incluindo coração de vaca — através de marinada intensa e grelhado sobre carvão, transformando um corte barato num prato saboroso.\n\nA versão original e ainda a mais autêntica usa anticuchos de corazón — coração de vaca marinado — vendido hoje em quase todas as esquinas do Peru, por vendedores com pequenas grelhas de carvão. Embora a versão com contrafilé aqui apresentada seja mais acessível ao paladar ocidental, o sabor definidor permanece o mesmo: a pasta de ají panca, uma pimenta vermelha defumada e ligeiramente doce, é o que torna os anticuchos um prato exclusivamente peruano, distinto de qualquer outro espetinho da América Latina.",
+    "ru": "Антикучос имеют глубокие корни в доколумбовую эпоху, но блюдо в том виде, в каком мы его знаем сегодня, сформировалось в колониальную эпоху, когда привезённые в Перу африканские рабы, которым отказывали в качественной говядине, потребляемой испанцами, научились готовить субпродукты — включая говяжье сердце — через интенсивное маринование и жарку на углях, превращая дешёвый отруб в блюдо с насыщенным вкусом.\n\nВ оригинальной и до сих пор самой аутентичной версии используются antikuchos de corazón — маринованное говяжье сердце — продаваемое сегодня почти на каждом углу в Перу продавцами с маленькими угольными грилями. Хотя представленная здесь версия с вырезкой более доступна западному вкусу, определяющий вкус остаётся тем же: паста ахи панка, дымчатый, слегка сладковатый красный перец чили, делает антикучос уникально перуанским блюдом, отличным от любого другого шашлыка Латинской Америки.",
+    "ar": "تعود جذور الأنتيكوتشوس إلى فترة ما قبل كولومبوس، لكن الطبق كما نعرفه اليوم تشكّل خلال العصر الاستعماري، عندما تعلّم العبيد الأفارقة الذين جُلبوا إلى بيرو، والذين حُرموا من لحم البقر الفاخر الذي يستهلكه الإسبان، طهي الأحشاء — بما في ذلك قلب البقر — عبر تتبيل مكثف وشوي على الفحم، محوّلين قطعة رخيصة إلى طبق شهي.\n\nتستخدم النسخة الأصلية والأكثر أصالة حتى الآن أنتيكوتشوس دي كورازون — قلب البقر المتبل — الذي يُباع اليوم في كل زاوية شارع تقريبًا في بيرو من قِبل باعة يحملون شوايات فحم صغيرة. ورغم أن نسخة لحم السيرلوين المعروضة هنا أكثر قبولًا لدى الذوق الغربي، تبقى النكهة المميزة كما هي: معجون أخي بانكا، الفلفل الأحمر المدخّن والحلو قليلًا، هو ما يجعل الأنتيكوتشوس طبقًا بيروفيًا فريدًا، مختلفًا عن أي سيخ آخر في أمريكا اللاتينية.",
+    "zh": "安提库乔的根源可追溯至前哥伦布时期，但如今我们所知的这道菜是在殖民时期形成的，当时被带到秘鲁的非洲奴隶因被剥夺西班牙人食用的优质牛肉，学会了通过浓郁腌制和炭火烧烤来烹制内脏——包括牛心——将廉价部位变成风味十足的佳肴。\n\n最原始且至今仍最正宗的版本使用「anticuchos de corazón」——腌制牛心——如今在秘鲁几乎每个街角都能见到手持小炭炉的小贩售卖。虽然这里介绍的里脊肉版本更符合西方口味，但决定性的风味始终未变：阿希潘卡辣椒酱，一种烟熏味略带甜味的红辣椒酱，正是它让安提库乔成为独一无二的秘鲁菜肴，有别于拉丁美洲的任何其他烤肉串。",
+    "ja": "アンティクーチョはコロンブス以前の時代に深いルーツを持つが、今日私たちが知る料理はスペイン植民地時代に形作られた。ペルーに連れてこられたアフリカ人奴隷たちは、スペイン人が消費していた上質な牛肉を与えられなかったため、内臓——牛の心臓を含む——を強力なマリネと炭火焼きによって調理することを学び、安価な部位を風味豊かな料理へと変えた。\n\n元祖であり今も最も本格的なバージョンは、マリネした牛の心臓を使うアンティクーチョ・デ・コラソンで、今日ではペルーのほぼすべての街角で、小さな炭火グリルを持つ屋台商人によって売られている。ここで紹介したサーロインバージョンは西洋の味覚により受け入れやすいが、決定的な風味は変わらない。煙のような香りとほのかな甘みを持つ赤唐辛子、アヒパンカペーストこそが、アンティクーチョをラテンアメリカの他のどの串焼きとも異なる、独自のペルー料理たらしめている。",
+    "hi": "अंतीकुचोस की जड़ें कोलंबस-पूर्व काल में गहरी हैं, लेकिन जिस व्यंजन को हम आज जानते हैं वह औपनिवेशिक काल के दौरान आकार लिया, जब पेरू लाए गए अफ्रीकी दास, जिन्हें स्पेनियों द्वारा खाए जाने वाले गुणवत्तापूर्ण बीफ से वंचित रखा गया था, ने गहन मैरिनेशन और कोयले पर भूनकर ऑफल — जिसमें बीफ का दिल भी शामिल था — तैयार करना सीखा, सस्ते टुकड़े को स्वादिष्ट व्यंजन में बदल दिया।\n\nमूल और आज भी सबसे प्रामाणिक संस्करण अंतीकुचोस डे कोराज़ोन — मैरिनेटेड बीफ का दिल — का उपयोग करता है, जो आज पेरू के लगभग हर सड़क के कोने पर छोटे कोयले के ग्रिल वाले विक्रेताओं द्वारा बेचा जाता है। जबकि यहां प्रस्तुत सिरलॉइन संस्करण पश्चिमी स्वाद के लिए अधिक सुलभ है, परिभाषित स्वाद वही रहता है: अजी पांका पेस्ट, एक धुएँदार, हल्की मीठी लाल मिर्च, वही है जो अंतीकुचोस को लैटिन अमेरिका के किसी भी अन्य स्किवर से अलग, विशिष्ट रूप से पेरूवियन व्यंजन बनाता है।",
+    "tr": "Anticuchos, Kolomb öncesi döneme uzanan derin köklere sahiptir, ancak bugün bildiğimiz haliyle yemek, İspanyolların tükettiği kaliteli sığır etinden mahrum bırakılan Peru'ya getirilen Afrikalı kölelerin, ucuz bir kesimi lezzetli bir yemeğe dönüştürerek yoğun marine etme ve kömürde ızgara yapma yoluyla sakatatları — dana kalbi dahil — hazırlamayı öğrendiği sömürge döneminde şekillendi.\n\nOrijinal ve hâlâ en otantik versiyon, bugün Peru'da neredeyse her sokak köşesinde küçük kömür ızgaralarıyla satıcılar tarafından satılan anticuchos de corazón — marine edilmiş dana kalbi — kullanır. Burada sunulan bonfile versiyonu Batı damak zevkine daha uygun olsa da, belirleyici lezzet aynı kalır: dumanlı, hafif tatlı kırmızı biber olan ají panca ezmesi, anticuchos'u Latin Amerika'nın diğer tüm şişlerinden farklı, benzersiz bir Peru yemeği haline getiren şeydir.",
+    "it": "Gli anticuchos hanno radici profonde nel periodo precolombiano, ma il piatto come lo conosciamo oggi ha preso forma durante l'epoca coloniale, quando gli schiavi africani portati in Perù, a cui era negata la carne di manzo di qualità consumata dagli spagnoli, impararono a preparare le frattaglie — incluso il cuore di manzo — attraverso una marinatura intensa e la cottura alla griglia sulla brace, trasformando un taglio economico in un piatto saporito.\n\nLa versione originale e ancora oggi la più autentica usa gli anticuchos de corazón — cuore di manzo marinato — venduti oggi in quasi ogni angolo di strada in Perù, da venditori con piccole griglie a carbone. Sebbene la versione al controfiletto qui presentata sia più accessibile al palato occidentale, il sapore distintivo rimane lo stesso: la pasta di ají panca, un peperoncino rosso affumicato e leggermente dolce, è ciò che rende gli anticuchos un piatto unicamente peruviano, distinto da qualsiasi altro spiedino dell'America Latina.",
+    "ko": "안티쿠초는 콜럼버스 이전 시대까지 깊은 뿌리를 가지고 있지만, 오늘날 우리가 아는 이 요리는 식민지 시대에 형성되었다. 페루로 끌려온 아프리카 노예들은 스페인인이 먹던 고급 소고기를 먹을 수 없었기에, 강한 양념과 숯불 구이를 통해 소 심장을 포함한 내장을 조리하는 법을 배워 값싼 부위를 풍미 가득한 요리로 바꾸었다.\n\n원조이자 지금도 가장 정통적인 버전은 양념한 소 심장을 사용하는 안티쿠초스 데 코라손으로, 오늘날 페루의 거의 모든 길모퉁이에서 작은 숯불 그릴을 가진 상인들이 판매한다. 여기 소개한 등심 버전이 서구인의 입맛에 더 친숙하긴 하지만, 결정적인 풍미는 동일하다: 훈제 향과 은은한 단맛을 지닌 붉은 고추인 아히 판카 페이스트가 안티쿠초를 라틴아메리카의 다른 어떤 꼬치와도 다른, 독특한 페루 요리로 만든다."
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 32,
+    "tags": ["high-protein", "quick"],
+    "desc": {
+      "ro": "Frigărui peruane de vită marinate în ají panca, frigate pe cărbuni, servite cu cartofi și porumb.",
+      "en": "Peruvian beef skewers marinated in ají panca, grilled over charcoal, served with potato and corn.",
+      "es": "Brochetas peruanas de res marinadas en ají panca, asadas al carbón, servidas con papa y choclo.",
+      "fr": "Brochettes péruviennes de bœuf marinées à l'ají panca, grillées au charbon, servies avec pomme de terre et maïs.",
+      "de": "Peruanische Rinderspieße mariniert in Ají Panca, über Holzkohle gegrillt, serviert mit Kartoffel und Mais.",
+      "pt": "Espetinhos peruanos de carne marinados em ají panca, grelhados no carvão, servidos com batata e milho.",
+      "ru": "Перуанские шашлычки из говядины в маринаде ахи панка, жаренные на углях, подаются с картофелем и кукурузой.",
+      "ar": "أسياخ لحم بقري بيروفية متبلة بأخي بانكا، مشوية على الفحم، تُقدَّم مع البطاطس والذرة.",
+      "zh": "以阿希潘卡辣椒酱腌制的秘鲁牛肉串，炭火烤制，配土豆和玉米食用。",
+      "ja": "アヒパンカでマリネしたペルー風牛肉串、炭火焼き、じゃがいもとトウモロコシを添えて。",
+      "hi": "अजी पांका में मैरिनेटेड पेरूवियन बीफ स्किवर, कोयले पर ग्रिल, आलू और मक्के के साथ परोसा गया।",
+      "tr": "Ají panca ile marine edilmiş Peru usulü dana eti şişleri, kömürde ızgara, patates ve mısırla servis edilir.",
+      "it": "Spiedini di manzo peruviani marinati nell'ají panca, grigliati sulla brace, serviti con patata e mais.",
+      "ko": "아히 판카에 재운 페루식 소고기 꼬치, 숯불구이, 감자와 옥수수를 곁들여 제공."
+    }
+  }
+}

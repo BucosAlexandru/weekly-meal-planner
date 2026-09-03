@@ -1,0 +1,209 @@
+{
+  "id": 388,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Peru",
+    "en": "Peru",
+    "es": "Perú",
+    "fr": "Pérou",
+    "de": "Peru",
+    "pt": "Peru",
+    "ru": "Перу",
+    "ar": "بيرو",
+    "zh": "秘鲁",
+    "ja": "ペルー",
+    "hi": "पेरू",
+    "tr": "Peru",
+    "it": "Perù",
+    "ko": "페루"
+  },
+  "name": {
+    "ro": "Suspiro a la Limeña (Cremă de Lapte cu Bezea de Porto)",
+    "en": "Suspiro a la Limeña (Peruvian Caramel Cream with Port Meringue)",
+    "es": "Suspiro a la Limeña",
+    "fr": "Suspiro a la Limeña (Crème Caramel Péruvienne à la Meringue au Porto)",
+    "de": "Suspiro a la Limeña (Peruanische Karamellcreme mit Portwein-Baiser)",
+    "pt": "Suspiro a la Limeña (Creme de Caramelo Peruano com Merengue de Vinho do Porto)",
+    "ru": "Суспиро а ла Лименья (Перуанский Карамельный Крем с Меренгой на Портвейне)",
+    "ar": "سوسبيرو آ لا ليمينيا (كريمة كراميل بيروفية بمرينغ البورتو)",
+    "zh": "利马叹息（秘鲁波特酒蛋白霜焦糖奶油）",
+    "ja": "ススピロ・ア・ラ・リメーニャ（ポートワインメレンゲのペルー風キャラメルクリーム）",
+    "hi": "सुस्पिरो अ ला लिमेन्या (पोर्ट वाइन मेरिंग्यू के साथ पेरूवियन कारमेल क्रीम)",
+    "tr": "Suspiro a la Limeña (Porto Şarabı Bezeli Peru Usulü Karamel Kreması)",
+    "it": "Suspiro a la Limeña (Crema al Caramello Peruviana con Meringa al Porto)",
+    "ko": "수스피로 아 라 리메냐 (포트 와인 머랭을 곁들인 페루식 카라멜 크림)"
+  },
+  "category": {
+    "ro": "Desert",
+    "en": "Dessert",
+    "es": "Postre",
+    "fr": "Dessert",
+    "de": "Dessert",
+    "pt": "Sobremesa",
+    "ru": "Десерт",
+    "ar": "حلوى",
+    "zh": "甜点",
+    "ja": "デザート",
+    "hi": "मिठाई",
+    "tr": "Tatlı",
+    "it": "Dolce",
+    "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥛", "t": "Manjar blanco", "d": "Baza este o cremă groasă de lapte condensat și gălbenușuri, gătită lent până capătă culoarea caramelului." },
+      { "icon": "🍷", "t": "Bezea cu porto", "d": "Bezeaua italiană se aromatizează cu sirop de porto, dând o notă subtilă de vin dulce." },
+      { "icon": "🌸", "t": "Scorțișoară deasupra", "d": "Fiecare porție se presară cu scorțișoară măcinată chiar înainte de servire." },
+      { "icon": "🍮", "t": "Servit în pahare", "d": "Se servește tradițional în pahare mici, cu straturi vizibile de cremă și bezea." }
+    ],
+    "en": [
+      { "icon": "🥛", "t": "Manjar blanco", "d": "The base is a thick cream of condensed milk and egg yolks, slowly cooked until it takes on a caramel color." },
+      { "icon": "🍷", "t": "Port meringue", "d": "Italian meringue is flavored with port wine syrup, giving a subtle sweet wine note." },
+      { "icon": "🌸", "t": "Cinnamon on top", "d": "Each portion is dusted with ground cinnamon right before serving." },
+      { "icon": "🍮", "t": "Served in glasses", "d": "Traditionally served in small glasses, with visible layers of cream and meringue." }
+    ],
+    "es": [
+      { "icon": "🥛", "t": "Manjar blanco", "d": "La base es una crema espesa de leche condensada y yemas de huevo, cocida lentamente hasta tomar color caramelo." },
+      { "icon": "🍷", "t": "Merengue al oporto", "d": "El merengue italiano se aromatiza con almíbar de oporto, dando una nota sutil de vino dulce." },
+      { "icon": "🌸", "t": "Canela por encima", "d": "Cada porción se espolvorea con canela molida justo antes de servir." },
+      { "icon": "🍮", "t": "Servido en copas", "d": "Se sirve tradicionalmente en copas pequeñas, con capas visibles de crema y merengue." }
+    ],
+    "fr": [
+      { "icon": "🥛", "t": "Manjar blanco", "d": "La base est une crème épaisse de lait concentré et de jaunes d'œufs, cuite lentement jusqu'à prendre une couleur caramel." },
+      { "icon": "🍷", "t": "Meringue au porto", "d": "La meringue italienne est parfumée au sirop de porto, apportant une note subtile de vin doux." },
+      { "icon": "🌸", "t": "Cannelle dessus", "d": "Chaque portion est saupoudrée de cannelle moulue juste avant de servir." },
+      { "icon": "🍮", "t": "Servi en verres", "d": "Traditionnellement servi dans de petits verres, avec des couches visibles de crème et de meringue." }
+    ],
+    "de": [
+      { "icon": "🥛", "t": "Manjar Blanco", "d": "Die Basis ist eine dicke Creme aus Kondensmilch und Eigelb, langsam gekocht, bis sie eine Karamellfarbe annimmt." },
+      { "icon": "🍷", "t": "Portwein-Baiser", "d": "Italienisches Baiser wird mit Portweinsirup aromatisiert, was eine subtile süße Weinnote ergibt." },
+      { "icon": "🌸", "t": "Zimt obenauf", "d": "Jede Portion wird kurz vor dem Servieren mit gemahlenem Zimt bestäubt." },
+      { "icon": "🍮", "t": "In Gläsern serviert", "d": "Traditionell in kleinen Gläsern serviert, mit sichtbaren Schichten aus Creme und Baiser." }
+    ],
+    "pt": [
+      { "icon": "🥛", "t": "Manjar branco", "d": "A base é um creme espesso de leite condensado e gemas de ovo, cozido lentamente até ganhar cor de caramelo." },
+      { "icon": "🍷", "t": "Merengue ao vinho do Porto", "d": "O merengue italiano é aromatizado com calda de vinho do Porto, dando uma nota subtil de vinho doce." },
+      { "icon": "🌸", "t": "Canela por cima", "d": "Cada porção é polvilhada com canela moída mesmo antes de servir." },
+      { "icon": "🍮", "t": "Servido em copos", "d": "Tradicionalmente servido em copos pequenos, com camadas visíveis de creme e merengue." }
+    ],
+    "ru": [
+      { "icon": "🥛", "t": "Манхар бланко", "d": "Основа — густой крем из сгущённого молока и яичных желтков, медленно готовящийся до карамельного цвета." },
+      { "icon": "🍷", "t": "Меренга на портвейне", "d": "Итальянская меренга ароматизируется портвейновым сиропом, придавая тонкую сладко-винную нотку." },
+      { "icon": "🌸", "t": "Корица сверху", "d": "Каждая порция посыпается молотой корицей прямо перед подачей." },
+      { "icon": "🍮", "t": "Подаётся в бокалах", "d": "Традиционно подаётся в маленьких бокалах, с видимыми слоями крема и меренги." }
+    ],
+    "ar": [
+      { "icon": "🥛", "t": "مانخار بلانكو", "d": "الأساس كريمة سميكة من الحليب المكثف وصفار البيض، تُطهى ببطء حتى تكتسب لون الكراميل." },
+      { "icon": "🍷", "t": "مرينغ بالبورتو", "d": "يُنكَّه المرينغ الإيطالي بشراب نبيذ البورتو، مانحًا لمسة نبيذية حلوة خفيفة." },
+      { "icon": "🌸", "t": "قرفة أعلى الطبق", "d": "تُرشّ كل حصة بالقرفة المطحونة قبل التقديم مباشرة." },
+      { "icon": "🍮", "t": "يُقدَّم في أكواب", "d": "يُقدَّم تقليديًا في أكواب صغيرة، بطبقات واضحة من الكريمة والمرينغ." }
+    ],
+    "zh": [
+      { "icon": "🥛", "t": "曼哈尔布兰科奶油", "d": "基底是由炼乳和蛋黄制成的浓稠奶油，慢煮至呈焦糖色。" },
+      { "icon": "🍷", "t": "波特酒蛋白霜", "d": "意式蛋白霜以波特酒糖浆调味，带来微妙的甜酒风味。" },
+      { "icon": "🌸", "t": "表面撒肉桂", "d": "上桌前每份都撒上肉桂粉。" },
+      { "icon": "🍮", "t": "杯装呈现", "d": "传统上盛在小玻璃杯中，能看到奶油和蛋白霜分明的层次。" }
+    ],
+    "ja": [
+      { "icon": "🥛", "t": "マンハル・ブランコ", "d": "ベースは練乳と卵黄で作る濃厚なクリームで、キャラメル色になるまでゆっくりと調理する。" },
+      { "icon": "🍷", "t": "ポートワインメレンゲ", "d": "イタリアンメレンゲにポートワインシロップで風味をつけ、繊細な甘いワインのニュアンスを加える。" },
+      { "icon": "🌸", "t": "上にシナモン", "d": "提供直前に各ポーションにシナモンパウダーを振りかける。" },
+      { "icon": "🍮", "t": "グラスで提供", "d": "伝統的に小さなグラスに、クリームとメレンゲの層が見えるように盛り付けて提供する。" }
+    ],
+    "hi": [
+      { "icon": "🥛", "t": "मंजार ब्लैंको", "d": "आधार कंडेंस्ड मिल्क और अंडे की जर्दी की गाढ़ी क्रीम है, जिसे धीरे-धीरे कारमेल रंग आने तक पकाया जाता है।" },
+      { "icon": "🍷", "t": "पोर्ट वाइन मेरिंग्यू", "d": "इतालवी मेरिंग्यू को पोर्ट वाइन सिरप से सुगंधित किया जाता है, जो हल्की मीठी वाइन का स्वाद देता है।" },
+      { "icon": "🌸", "t": "ऊपर दालचीनी", "d": "परोसने से ठीक पहले हर हिस्से पर पिसी दालचीनी छिड़की जाती है।" },
+      { "icon": "🍮", "t": "गिलासों में परोसा", "d": "पारंपरिक रूप से छोटे गिलासों में, क्रीम और मेरिंग्यू की दिखती परतों के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥛", "t": "Manjar blanco", "d": "Taban, karamel rengini alana kadar yavaşça pişirilen yoğunlaştırılmış süt ve yumurta sarısından oluşan koyu bir kremadır." },
+      { "icon": "🍷", "t": "Porto şarabı bezesi", "d": "İtalyan bezesi porto şarabı şurubuyla tatlandırılır, hafif tatlı şarap notası verir." },
+      { "icon": "🌸", "t": "Üzerinde tarçın", "d": "Servisten hemen önce her porsiyona öğütülmüş tarçın serpilir." },
+      { "icon": "🍮", "t": "Bardaklarda servis", "d": "Geleneksel olarak küçük bardaklarda, krema ve beze görünür katmanlarla servis edilir." }
+    ],
+    "it": [
+      { "icon": "🥛", "t": "Manjar blanco", "d": "La base è una crema densa di latte condensato e tuorli d'uovo, cotta lentamente finché non assume un colore caramello." },
+      { "icon": "🍷", "t": "Meringa al porto", "d": "La meringa italiana viene aromatizzata con sciroppo di porto, donando una sottile nota di vino dolce." },
+      { "icon": "🌸", "t": "Cannella sopra", "d": "Ogni porzione viene spolverata di cannella macinata appena prima di servire." },
+      { "icon": "🍮", "t": "Servito in bicchieri", "d": "Tradizionalmente servito in piccoli bicchieri, con strati visibili di crema e meringa." }
+    ],
+    "ko": [
+      { "icon": "🥛", "t": "만하르 블랑코", "d": "베이스는 연유와 달걀노른자로 만든 진한 크림으로, 캐러멜 색이 될 때까지 천천히 조리한다." },
+      { "icon": "🍷", "t": "포트 와인 머랭", "d": "이탈리안 머랭에 포트 와인 시럽으로 향을 더해 은은한 달콤한 와인 향을 낸다." },
+      { "icon": "🌸", "t": "위에 시나몬", "d": "제공 직전 각 그릇에 시나몬 가루를 뿌린다." },
+      { "icon": "🍮", "t": "유리컵에 담아 제공", "d": "전통적으로 작은 유리컵에 크림과 머랭 층이 보이도록 담아 제공한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["1 cutie lapte condensat (397g)", "1 cutie lapte evaporat (410g)", "4 gălbenușuri de ou", "1 linguriță esență de vanilie", "4 albușuri de ou", "1/2 cană zahăr", "1/4 cană porto (vin dulce fortificat)", "scorțișoară măcinată, pentru decor"],
+    "en": ["1 can condensed milk (397g)", "1 can evaporated milk (410g)", "4 egg yolks", "1 tsp vanilla extract", "4 egg whites", "1/2 cup sugar", "1/4 cup port wine", "ground cinnamon, for garnish"],
+    "es": ["1 lata de leche condensada (397g)", "1 lata de leche evaporada (410g)", "4 yemas de huevo", "1 cucharadita de esencia de vainilla", "4 claras de huevo", "1/2 taza de azúcar", "1/4 taza de oporto", "canela molida, para decorar"],
+    "fr": ["1 boîte de lait concentré sucré (397g)", "1 boîte de lait concentré non sucré (410g)", "4 jaunes d'œufs", "1 c. à café d'extrait de vanille", "4 blancs d'œufs", "1/2 tasse de sucre", "1/4 tasse de porto", "cannelle moulue, pour décorer"],
+    "de": ["1 Dose gezuckerte Kondensmilch (397g)", "1 Dose ungezuckerte Kondensmilch (410g)", "4 Eigelb", "1 TL Vanilleextrakt", "4 Eiweiß", "1/2 Tasse Zucker", "1/4 Tasse Portwein", "gemahlener Zimt, zum Garnieren"],
+    "pt": ["1 lata de leite condensado (397g)", "1 lata de leite evaporado (410g)", "4 gemas de ovo", "1 colher (chá) de essência de baunilha", "4 claras de ovo", "1/2 xícara de açúcar", "1/4 xícara de vinho do Porto", "canela moída, para decorar"],
+    "ru": ["1 банка сгущённого молока (397г)", "1 банка сгущённого молока без сахара (410г)", "4 яичных желтка", "1 ч.л. ванильного экстракта", "4 яичных белка", "1/2 стакана сахара", "1/4 стакана портвейна", "молотая корица, для украшения"],
+    "ar": ["علبة حليب مكثف محلى (397 غرام)", "علبة حليب مبخر (410 غرام)", "4 صفار بيض", "ملعقة صغيرة خلاصة الفانيليا", "4 بياض بيض", "نصف كوب سكر", "ربع كوب نبيذ بورتو", "قرفة مطحونة، للتزيين"],
+    "zh": ["1罐炼乳（397克）", "1罐淡奶（410克）", "4个蛋黄", "1茶匙香草精", "4个蛋白", "1/2杯糖", "1/4杯波特酒", "肉桂粉，装饰用"],
+    "ja": ["練乳1缶（397g）", "無糖練乳1缶（410g）", "卵黄4個", "バニラエッセンス小さじ1", "卵白4個", "砂糖1/2カップ", "ポートワイン1/4カップ", "シナモンパウダー（飾り用）"],
+    "hi": ["1 डिब्बा कंडेंस्ड मिल्क (397 ग्राम)", "1 डिब्बा इवैपोरेटेड दूध (410 ग्राम)", "4 अंडे की जर्दी", "1 छोटी चम्मच वेनिला एक्सट्रैक्ट", "4 अंडे का सफेद भाग", "1/2 कप चीनी", "1/4 कप पोर्ट वाइन", "पिसी दालचीनी, सजावट के लिए"],
+    "tr": ["1 kutu yoğunlaştırılmış süt (397g)", "1 kutu şekersiz koyulaştırılmış süt (410g)", "4 yumurta sarısı", "1 çay kaşığı vanilya özütü", "4 yumurta akı", "1/2 su bardağı şeker", "1/4 su bardağı porto şarabı", "süslemek için öğütülmüş tarçın"],
+    "it": ["1 lattina di latte condensato (397g)", "1 lattina di latte evaporato (410g)", "4 tuorli d'uovo", "1 cucchiaino di estratto di vaniglia", "4 albumi d'uovo", "1/2 tazza di zucchero", "1/4 tazza di porto", "cannella macinata, per guarnire"],
+    "ko": ["연유 1캔(397g)", "무가당 연유 1캔(410g)", "달걀노른자 4개", "바닐라 익스트랙 1작은술", "달걀흰자 4개", "설탕 1/2컵", "포트 와인 1/4컵", "시나몬 가루, 장식용"]
+  },
+  "howIsMade": {
+    "ro": "AMESTECĂ LAPTELE: Combină laptele condensat cu laptele evaporat într-o cratiță medie, amestecând bine. GĂTEȘTE LA FOC MIC: Pune cratița la foc mic și gătește, amestecând constant, 15-20 minute, până amestecul se îngroașă și capătă o nuanță aurie. ADAUGĂ GĂLBENUȘURILE: Ia cratița de pe foc, bate rapid gălbenușurile într-un bol separat, apoi adaugă-le treptat în amestecul cald, amestecând energic pentru a nu se coagula. GĂTEȘTE DIN NOU: Pune din nou cratița pe foc mic și gătește încă 5 minute, amestecând continuu, până crema se îngroașă și capătă textura de budincă. ADAUGĂ VANILIA: Ia de pe foc și amestecă esența de vanilie. TOARNĂ ÎN PAHARE: Împarte crema caldă în pahare individuale, umplându-le pe trei sferturi, apoi lasă la răcit. PREGĂTEȘTE SIROPUL: Fierbe zahărul cu 3 linguri de apă până se formează un sirop, apoi adaugă porto și fierbe încă 2 minute. BATE ALBUȘURILE: Bate albușurile spumă tare, apoi toarnă siropul fierbinte de porto în fir subțire, continuând să baţi până obții o bezea lucioasă și fermă. ADAUGĂ BEZEAUA: Pune bezeaua deasupra cremei răcite din fiecare pahar, formând vârfuri decorative. SERVEȘTE: Presară scorțișoară măcinată deasupra și servește rece sau la temperatura camerei.",
+    "en": "MIX THE MILKS: Combine the condensed milk with the evaporated milk in a medium saucepan, mixing well. COOK OVER LOW HEAT: Place the saucepan over low heat and cook, stirring constantly, 15-20 minutes, until the mixture thickens and takes on a golden hue. ADD THE YOLKS: Remove the saucepan from the heat, quickly beat the yolks in a separate bowl, then gradually add them to the warm mixture, stirring vigorously so it doesn't curdle. COOK AGAIN: Return the saucepan to low heat and cook another 5 minutes, stirring continuously, until the cream thickens and takes on a pudding-like texture. ADD THE VANILLA: Remove from heat and stir in the vanilla extract. POUR INTO GLASSES: Divide the warm cream among individual glasses, filling them three-quarters full, then let cool. MAKE THE SYRUP: Boil the sugar with 3 tablespoons of water until a syrup forms, then add the port and boil another 2 minutes. WHIP THE WHITES: Whip the egg whites to stiff peaks, then pour the hot port syrup in a thin stream, continuing to whip until you get a glossy, firm meringue. ADD THE MERINGUE: Place the meringue over the cooled cream in each glass, forming decorative peaks. SERVE: Sprinkle ground cinnamon on top and serve cold or at room temperature.",
+    "es": "MEZCLA LAS LECHES: Combina la leche condensada con la leche evaporada en una cacerola mediana, mezclando bien. COCINA A FUEGO LENTO: Pon la cacerola a fuego bajo y cocina, removiendo constantemente, 15-20 minutos, hasta que la mezcla espese y tome un tono dorado. AÑADE LAS YEMAS: Retira la cacerola del fuego, bate rápido las yemas en un bol aparte, luego añádelas poco a poco a la mezcla tibia, removiendo enérgicamente para que no se cuaje. COCINA DE NUEVO: Vuelve a poner la cacerola a fuego bajo y cocina otros 5 minutos, removiendo continuamente, hasta que la crema espese y tome una textura de budín. AÑADE LA VAINILLA: Retira del fuego y mezcla la esencia de vainilla. VIERTE EN COPAS: Reparte la crema tibia en copas individuales, llenándolas tres cuartas partes, luego deja enfriar. PREPARA EL ALMÍBAR: Hierve el azúcar con 3 cucharadas de agua hasta formar un almíbar, luego añade el oporto y hierve 2 minutos más. BATE LAS CLARAS: Bate las claras a punto de nieve firme, luego vierte el almíbar caliente de oporto en un hilo fino, sin dejar de batir hasta obtener un merengue brillante y firme. AÑADE EL MERENGUE: Coloca el merengue sobre la crema enfriada de cada copa, formando picos decorativos. SIRVE: Espolvorea canela molida por encima y sirve frío o a temperatura ambiente.",
+    "fr": "MÉLANGEZ LES LAITS: Combinez le lait concentré sucré avec le lait concentré non sucré dans une casserole moyenne, en mélangeant bien. CUISEZ À FEU DOUX: Mettez la casserole à feu doux et faites cuire, en remuant constamment, 15-20 minutes, jusqu'à ce que le mélange épaississe et prenne une teinte dorée. AJOUTEZ LES JAUNES: Retirez la casserole du feu, battez rapidement les jaunes dans un bol séparé, puis ajoutez-les progressivement au mélange tiède, en remuant vigoureusement pour éviter qu'il ne caille. CUISEZ À NOUVEAU: Remettez la casserole à feu doux et cuisez encore 5 minutes, en remuant continuellement, jusqu'à ce que la crème épaississe et prenne une texture de pudding. AJOUTEZ LA VANILLE: Retirez du feu et incorporez l'extrait de vanille. VERSEZ DANS DES VERRES: Répartissez la crème tiède dans des verres individuels, en les remplissant aux trois quarts, puis laissez refroidir. PRÉPAREZ LE SIROP: Faites bouillir le sucre avec 3 cuillères à soupe d'eau jusqu'à former un sirop, puis ajoutez le porto et faites bouillir 2 minutes de plus. FOUETTEZ LES BLANCS: Fouettez les blancs en neige ferme, puis versez le sirop de porto chaud en un mince filet, en continuant à fouetter jusqu'à obtenir une meringue brillante et ferme. AJOUTEZ LA MERINGUE: Placez la meringue sur la crème refroidie de chaque verre, en formant des pointes décoratives. SERVEZ: Saupoudrez de cannelle moulue dessus et servez froid ou à température ambiante.",
+    "de": "MILCH VERMISCHEN: Die gezuckerte Kondensmilch mit der ungezuckerten Kondensmilch in einem mittleren Topf gut vermischen. BEI NIEDRIGER HITZE KOCHEN: Den Topf auf niedrige Hitze stellen und unter ständigem Rühren 15-20 Minuten kochen, bis die Mischung eindickt und eine goldene Farbe annimmt. EIGELB HINZUFÜGEN: Den Topf vom Herd nehmen, das Eigelb schnell in einer separaten Schüssel verquirlen, dann nach und nach zur warmen Mischung geben, dabei kräftig rühren, damit sie nicht gerinnt. ERNEUT KOCHEN: Den Topf wieder auf niedrige Hitze stellen und weitere 5 Minuten unter ständigem Rühren kochen, bis die Creme eindickt und eine puddingartige Textur annimmt. VANILLE HINZUFÜGEN: Vom Herd nehmen und den Vanilleextrakt einrühren. IN GLÄSER FÜLLEN: Die warme Creme auf einzelne Gläser verteilen, sie zu drei Vierteln füllen, dann abkühlen lassen. SIRUP ZUBEREITEN: Den Zucker mit 3 Esslöffeln Wasser kochen, bis ein Sirup entsteht, dann den Portwein zugeben und weitere 2 Minuten kochen. EIWEISS SCHLAGEN: Das Eiweiß steif schlagen, dann den heißen Portweinsirup in einem dünnen Strahl einlaufen lassen, weiter schlagen, bis ein glänzendes, festes Baiser entsteht. BAISER HINZUFÜGEN: Das Baiser auf die abgekühlte Creme in jedem Glas geben, dekorative Spitzen formen. SERVIEREN: Mit gemahlenem Zimt bestreuen und kalt oder bei Zimmertemperatur servieren.",
+    "pt": "MISTURE OS LEITES: Combine o leite condensado com o leite evaporado numa panela média, misturando bem. COZINHE EM FOGO BAIXO: Coloque a panela em fogo baixo e cozinhe, mexendo constantemente, por 15-20 minutos, até a mistura engrossar e ganhar um tom dourado. ADICIONE AS GEMAS: Retire a panela do fogo, bata rapidamente as gemas numa tigela separada, depois junte-as gradualmente à mistura morna, mexendo vigorosamente para não talhar. COZINHE NOVAMENTE: Volte a colocar a panela em fogo baixo e cozinhe mais 5 minutos, mexendo continuamente, até o creme engrossar e ganhar uma textura de pudim. ADICIONE A BAUNILHA: Retire do fogo e misture a essência de baunilha. DESPEJE EM COPOS: Divida o creme morno em copos individuais, enchendo-os três quartos, depois deixe arrefecer. PREPARE A CALDA: Ferva o açúcar com 3 colheres de sopa de água até formar uma calda, depois junte o vinho do Porto e ferva mais 2 minutos. BATA AS CLARAS: Bata as claras em picos firmes, depois despeje a calda quente de vinho do Porto em fio fino, continuando a bater até obter um merengue brilhante e firme. ADICIONE O MERENGUE: Coloque o merengue sobre o creme arrefecido de cada copo, formando picos decorativos. SIRVA: Polvilhe canela moída por cima e sirva frio ou à temperatura ambiente.",
+    "ru": "СМЕШАЙТЕ МОЛОКО: Соедините сгущённое молоко с несладким сгущённым молоком в средней кастрюле, хорошо перемешав. ГОТОВЬТЕ НА СЛАБОМ ОГНЕ: Поставьте кастрюлю на слабый огонь и готовьте, постоянно помешивая, 15-20 минут, пока смесь не загустеет и не приобретёт золотистый оттенок. ДОБАВЬТЕ ЖЕЛТКИ: Снимите кастрюлю с огня, быстро взбейте желтки в отдельной миске, затем постепенно добавляйте их в тёплую смесь, энергично помешивая, чтобы не свернулись. ГОТОВЬТЕ СНОВА: Верните кастрюлю на слабый огонь и готовьте ещё 5 минут, постоянно помешивая, пока крем не загустеет и не приобретёт консистенцию пудинга. ДОБАВЬТЕ ВАНИЛЬ: Снимите с огня и вмешайте ванильный экстракт. РАЗЛЕЙТЕ ПО БОКАЛАМ: Разлейте тёплый крем по отдельным бокалам, заполняя их на три четверти, затем дайте остыть. ПРИГОТОВЬТЕ СИРОП: Варите сахар с 3 столовыми ложками воды до образования сиропа, затем добавьте портвейн и варите ещё 2 минуты. ВЗБЕЙТЕ БЕЛКИ: Взбейте белки до жёстких пиков, затем влейте горячий портвейновый сироп тонкой струйкой, продолжая взбивать до получения глянцевой, плотной меренги. ДОБАВЬТЕ МЕРЕНГУ: Выложите меренгу поверх остывшего крема в каждом бокале, формируя декоративные пики. ПОДАВАЙТЕ: Посыпьте молотой корицей сверху и подавайте холодным или при комнатной температуре.",
+    "ar": "امزجي الحليب: امزجي الحليب المكثف المحلى مع الحليب المبخر في قدر متوسط، مع المزج جيدًا. اطهي على نار هادئة: ضعي القدر على نار هادئة واطبخي مع التحريك المستمر 15-20 دقيقة حتى يتكاثف الخليط ويكتسب لونًا ذهبيًا. أضيفي الصفار: ارفعي القدر عن النار، اخفقي الصفار بسرعة في وعاء منفصل، ثم أضيفيه تدريجيًا إلى الخليط الدافئ مع التحريك بقوة حتى لا يتخثر. اطهي مرة أخرى: أعيدي القدر إلى نار هادئة واطبخي 5 دقائق إضافية مع التحريك المستمر حتى تتكاثف الكريمة وتكتسب قوام البودينغ. أضيفي الفانيليا: ارفعي عن النار وأضيفي خلاصة الفانيليا. اسكبي في الأكواب: وزّعي الكريمة الدافئة على أكواب فردية، مع ملئها بمقدار ثلاثة أرباعها، ثم اتركيها تبرد. حضّري الشراب: اغلي السكر مع 3 ملاعق كبيرة ماء حتى يتكون شراب، ثم أضيفي البورتو واغلي دقيقتين إضافيتين. اخفقي البياض: اخفقي بياض البيض حتى يتماسك، ثم اسكبي شراب البورتو الساخن بخيط رفيع، مع الاستمرار بالخفق حتى تحصلي على مرينغ لامع ومتماسك. أضيفي المرينغ: ضعي المرينغ فوق الكريمة الباردة في كل كوب، مكوّنة قممًا زخرفية. قدّمي: رشّي القرفة المطحونة فوقها وقدّميها باردة أو بحرارة الغرفة.",
+    "zh": "混合牛奶：在中号锅中将炼乳与淡奶充分混合。小火煮制：将锅置于小火上，不断搅拌煮15-20分钟，直至混合物变稠呈金黄色。加入蛋黄：将锅离火，在另一个碗中快速打散蛋黄，然后逐渐加入温热的混合物中，用力搅拌以防结块。再次煮制：将锅放回小火再煮5分钟，不断搅拌，直至奶油变稠呈布丁质地。加入香草：离火后拌入香草精。倒入杯中：将温热的奶油分装到各个玻璃杯中，装至四分之三满，然后放凉。制作糖浆：将糖与3汤匙水煮至形成糖浆，然后加入波特酒再煮2分钟。打发蛋白：将蛋白打发至硬性发泡，然后以细流状倒入热波特酒糖浆，继续打发至形成有光泽、坚挺的蛋白霜。加入蛋白霜：将蛋白霜放在每杯冷却的奶油上，做出装饰性的尖角。上桌：表面撒上肉桂粉，冷藏或常温食用。",
+    "ja": "牛乳を混ぜる：中くらいの鍋で練乳と無糖練乳をよく混ぜ合わせる。弱火で炊く：鍋を弱火にかけ、絶えずかき混ぜながら15〜20分、混合物にとろみがつき金色になるまで炊く。卵黄を加える：鍋を火から下ろし、別のボウルで卵黄を素早く溶き、温かい混合物に少しずつ加え、固まらないように激しくかき混ぜる。再び炊く：鍋を再び弱火にかけ、絶えずかき混ぜながらさらに5分、クリームにとろみがつきプリン状の食感になるまで炊く。バニラを加える：火から下ろしバニラエッセンスを混ぜ入れる。グラスに注ぐ：温かいクリームを個々のグラスに4分の3ほど分け入れ、冷ます。シロップを作る：砂糖と大さじ3の水を煮てシロップを作り、ポートワインを加えてさらに2分煮る。卵白を泡立てる：卵白を固く泡立て、熱いポートワインシロップを細く注ぎながら、光沢のある固いメレンゲになるまで泡立て続ける。メレンゲをのせる：各グラスの冷えたクリームの上にメレンゲをのせ、装飾的な角を作る。提供する：上にシナモンパウダーを振りかけ、冷たいまま、または室温で提供する。",
+    "hi": "दूध मिलाएं: मध्यम आकार के पैन में कंडेंस्ड मिल्क को इवैपोरेटेड दूध के साथ अच्छी तरह मिलाएं। धीमी आंच पर पकाएं: पैन को धीमी आंच पर रखें और लगातार हिलाते हुए 15-20 मिनट पकाएं, जब तक मिश्रण गाढ़ा न हो जाए और सुनहरा रंग न ले ले। जर्दी डालें: पैन को आंच से उतारें, अलग कटोरे में जर्दी को जल्दी फेंटें, फिर धीरे-धीरे गर्म मिश्रण में डालें, फटने से बचाने के लिए ज़ोर से हिलाते हुए। फिर से पकाएं: पैन को फिर धीमी आंच पर रखें और लगातार हिलाते हुए 5 मिनट और पकाएं, जब तक क्रीम गाढ़ी न हो जाए और पुडिंग जैसी बनावट न ले ले। वेनिला डालें: आंच से उतारें और वेनिला एक्सट्रैक्ट मिलाएं। गिलासों में डालें: गर्म क्रीम को अलग-अलग गिलासों में बांटें, तीन-चौथाई भरते हुए, फिर ठंडा होने दें। सिरप बनाएं: चीनी को 3 बड़े चम्मच पानी के साथ तब तक उबालें जब तक सिरप न बन जाए, फिर पोर्ट वाइन डालें और 2 मिनट और उबालें। सफेद भाग फेंटें: अंडे के सफेद भाग को कड़ा फेंटें, फिर गर्म पोर्ट सिरप को पतली धार में डालें, चमकदार, मज़बूत मेरिंग्यू बनने तक फेंटते रहें। मेरिंग्यू डालें: हर गिलास में ठंडी क्रीम के ऊपर मेरिंग्यू रखें, सजावटी चोटियां बनाते हुए। परोसें: ऊपर पिसी दालचीनी छिड़कें और ठंडा या कमरे के तापमान पर परोसें।",
+    "tr": "SÜTLERİ KARIŞTIRIN: Yoğunlaştırılmış sütü şekersiz koyulaştırılmış sütle orta boy bir tencerede iyice karıştırın. KISIK ATEŞTE PİŞİRİN: Tencereyi kısık ateşe koyun ve sürekli karıştırarak, karışım koyulaşıp altın rengi alana kadar 15-20 dakika pişirin. SARILARI EKLEYİN: Tencereyi ateşten alın, ayrı bir kasede sarıları hızlıca çırpın, sonra ılık karışıma yavaş yavaş ekleyin, kesilmemesi için kuvvetlice karıştırarak. TEKRAR PİŞİRİN: Tencereyi tekrar kısık ateşe koyun ve krema koyulaşıp puding kıvamı alana kadar sürekli karıştırarak 5 dakika daha pişirin. VANİLYAYI EKLEYİN: Ateşten alın ve vanilya özütünü karıştırın. BARDAKLARA DÖKÜN: Ilık kremayı ayrı bardaklara dörtte üçüne kadar bölüştürün, sonra soğumaya bırakın. ŞURUBU HAZIRLAYIN: Şekeri 3 yemek kaşığı suyla şurup oluşana kadar kaynatın, sonra portoyu ekleyip 2 dakika daha kaynatın. AKLARI ÇIRPIN: Yumurta aklarını sert kıvama gelene kadar çırpın, sonra sıcak porto şurubunu ince bir akışla dökün, parlak ve sıkı bir beze elde edene kadar çırpmaya devam edin. BEZEYİ EKLEYİN: Her bardaktaki soğumuş kremanın üzerine bezeyi koyun, dekoratif tepecikler oluşturarak. SERVİS YAPIN: Üzerine öğütülmüş tarçın serpin ve soğuk veya oda sıcaklığında servis edin.",
+    "it": "MESCOLA I LATTI: Combina il latte condensato con il latte evaporato in una casseruola media, mescolando bene. CUOCI A FUOCO BASSO: Metti la casseruola a fuoco basso e cuoci, mescolando costantemente, 15-20 minuti, finché il composto si addensa e assume una tonalità dorata. AGGIUNGI I TUORLI: Togli la casseruola dal fuoco, sbatti velocemente i tuorli in una ciotola separata, poi aggiungili gradualmente al composto caldo, mescolando energicamente affinché non si rapprenda. CUOCI DI NUOVO: Rimetti la casseruola a fuoco basso e cuoci altri 5 minuti, mescolando continuamente, finché la crema si addensa e assume una consistenza da budino. AGGIUNGI LA VANIGLIA: Togli dal fuoco e incorpora l'estratto di vaniglia. VERSA NEI BICCHIERI: Dividi la crema calda in bicchieri individuali, riempiendoli per tre quarti, poi lascia raffreddare. PREPARA LO SCIROPPO: Fai bollire lo zucchero con 3 cucchiai d'acqua finché si forma uno sciroppo, poi aggiungi il porto e fai bollire altri 2 minuti. MONTA GLI ALBUMI: Monta gli albumi a neve ferma, poi versa lo sciroppo caldo di porto a filo sottile, continuando a montare finché ottieni una meringa lucida e soda. AGGIUNGI LA MERINGA: Metti la meringa sulla crema raffreddata in ogni bicchiere, formando punte decorative. SERVI: Cospargi di cannella macinata sopra e servi freddo o a temperatura ambiente.",
+    "ko": "우유 섞기: 중간 크기 냄비에 연유와 무가당 연유를 잘 섞는다. 약불로 조리하기: 냄비를 약불에 올리고 계속 저어가며 15-20분간, 혼합물이 걸쭉해지고 황금빛이 될 때까지 익힌다. 노른자 넣기: 냄비를 불에서 내려 별도의 그릇에 노른자를 빠르게 풀고, 따뜻한 혼합물에 조금씩 넣으며 응고되지 않도록 힘차게 젓는다. 다시 익히기: 냄비를 다시 약불에 올려 계속 저어가며 5분 더 익혀 크림이 걸쭉해지고 푸딩 같은 질감이 될 때까지 익힌다. 바닐라 넣기: 불에서 내려 바닐라 익스트랙을 섞는다. 유리컵에 붓기: 따뜻한 크림을 개별 유리컵에 4분의 3 정도 채우고 식힌다. 시럽 만들기: 설탕을 물 3큰술과 함께 시럽이 될 때까지 끓인 뒤 포트 와인을 넣고 2분 더 끓인다. 흰자 거품 내기: 달걀흰자를 단단한 뿔이 설 때까지 거품 낸 뒤, 뜨거운 포트 와인 시럽을 가늘게 부으며 광택 있고 단단한 머랭이 될 때까지 계속 거품 낸다. 머랭 올리기: 각 컵의 식은 크림 위에 머랭을 장식적인 뾰족한 모양으로 올린다. 제공하기: 위에 시나몬 가루를 뿌리고 차갑거나 실온으로 제공한다."
+  },
+  "originText": {
+    "ro": "Suspiro a la limeña — literalmente \"suspinul limeñei\", femeia din Lima — este considerat unul dintre cele mai poetic denumite deserturi ale bucătăriei latino-americane, atribuit tradițional poetei peruane Rosa Elvira \"Rosa Merino\" în secolul al XX-lea, care ar fi comparat consistența bezelei ușoare de deasupra cu delicatețea unui suspin.\n\nDesertul combină două tehnici distincte: manjar blanco, o cremă groasă de origine spaniolă medievală, adaptată în Peru cu lapte condensat, și bezeaua italiană, aromatizată cu vin de porto — o influență de la comercianții și imigranții europeni stabiliți în Lima în secolele XIX și XX. Combinația de texturi — crema densă și catifelată dedesubt, bezeaua ușoară și aerată deasupra — este considerată esențială pentru identitatea felului, un contrast pe care mulți bucătari peruani insistă să îl păstreze exact, fără abateri de la rețeta clasică.",
+    "en": "Suspiro a la limeña — literally \"the sigh of the limeña,\" the woman from Lima — is considered one of the most poetically named desserts in Latin American cuisine, traditionally attributed to Peruvian poet Rosa Elvira \"Rosa Merino\" in the twentieth century, who is said to have compared the light meringue on top to the delicacy of a sigh.\n\nThe dessert combines two distinct techniques: manjar blanco, a thick cream of medieval Spanish origin, adapted in Peru with condensed milk, and Italian meringue, flavored with port wine — an influence from European traders and immigrants settled in Lima in the nineteenth and twentieth centuries. The combination of textures — the dense, velvety cream below, the light, airy meringue above — is considered essential to the dish's identity, a contrast that many Peruvian cooks insist on preserving exactly, without deviating from the classic recipe.",
+    "es": "El suspiro a la limeña — literalmente \"el suspiro de la limeña\", la mujer de Lima — se considera uno de los postres con nombre más poético de la cocina latinoamericana, tradicionalmente atribuido a la poeta peruana Rosa Elvira \"Rosa Merino\" en el siglo XX, quien se dice comparó el ligero merengue de encima con la delicadeza de un suspiro.\n\nEl postre combina dos técnicas distintas: el manjar blanco, una crema espesa de origen español medieval, adaptada en Perú con leche condensada, y el merengue italiano, aromatizado con vino de oporto — una influencia de los comerciantes e inmigrantes europeos establecidos en Lima en los siglos XIX y XX. La combinación de texturas — la crema densa y aterciopelada debajo, el merengue ligero y aireado encima — se considera esencial para la identidad del plato, un contraste que muchos cocineros peruanos insisten en preservar exactamente, sin desviarse de la receta clásica.",
+    "fr": "Le suspiro a la limeña — littéralement \"le soupir de la limeña\", la femme de Lima — est considéré comme l'un des desserts au nom le plus poétique de la cuisine latino-américaine, traditionnellement attribué à la poétesse péruvienne Rosa Elvira \"Rosa Merino\" au XXe siècle, qui aurait comparé la meringue légère du dessus à la délicatesse d'un soupir.\n\nLe dessert combine deux techniques distinctes: le manjar blanco, une crème épaisse d'origine espagnole médiévale, adaptée au Pérou avec du lait concentré, et la meringue italienne, parfumée au vin de porto — une influence des commerçants et immigrants européens installés à Lima aux XIXe et XXe siècles. La combinaison de textures — la crème dense et veloutée en dessous, la meringue légère et aérée dessus — est considérée comme essentielle à l'identité du plat, un contraste que de nombreux cuisiniers péruviens insistent à préserver exactement, sans s'écarter de la recette classique.",
+    "de": "Suspiro a la Limeña — wörtlich \"der Seufzer der Limeña\", der Frau aus Lima — gilt als eines der poetischsten benannten Desserts der lateinamerikanischen Küche, traditionell der peruanischen Dichterin Rosa Elvira \"Rosa Merino\" im zwanzigsten Jahrhundert zugeschrieben, die das leichte Baiser obenauf angeblich mit der Zartheit eines Seufzers verglichen haben soll.\n\nDas Dessert kombiniert zwei unterschiedliche Techniken: Manjar Blanco, eine dicke Creme mittelalterlichen spanischen Ursprungs, in Peru mit Kondensmilch angepasst, und italienisches Baiser, mit Portwein aromatisiert — ein Einfluss europäischer Händler und Einwanderer, die sich im 19. und 20. Jahrhundert in Lima niederließen. Die Kombination der Texturen — die dichte, samtige Creme unten, das leichte, luftige Baiser oben — gilt als wesentlich für die Identität des Gerichts, ein Kontrast, den viele peruanische Köche genau bewahren wollen, ohne vom klassischen Rezept abzuweichen.",
+    "pt": "O suspiro a la limeña — literalmente \"o suspiro da limeña\", a mulher de Lima — é considerado uma das sobremesas com o nome mais poético da culinária latino-americana, tradicionalmente atribuído à poetisa peruana Rosa Elvira \"Rosa Merino\" no século XX, que se diz ter comparado o merengue leve por cima à delicadeza de um suspiro.\n\nA sobremesa combina duas técnicas distintas: o manjar branco, um creme espesso de origem espanhola medieval, adaptado no Peru com leite condensado, e o merengue italiano, aromatizado com vinho do Porto — uma influência de comerciantes e imigrantes europeus instalados em Lima nos séculos XIX e XX. A combinação de texturas — o creme denso e aveludado por baixo, o merengue leve e arejado por cima — é considerada essencial para a identidade do prato, um contraste que muitos cozinheiros peruanos insistem em preservar exatamente, sem desviar da receita clássica.",
+    "ru": "Суспиро а ла лименья — буквально \"вздох лименьи\", женщины из Лимы — считается одним из самых поэтично названных десертов латиноамериканской кухни, традиционно приписываемым перуанской поэтессе Росе Эльвире \"Росе Мерино\" в двадцатом веке, которая, как говорят, сравнила лёгкую меренгу сверху с нежностью вздоха.\n\nДесерт сочетает две разные техники: манхар бланко, густой крем средневекового испанского происхождения, адаптированный в Перу со сгущённым молоком, и итальянскую меренгу, ароматизированную портвейном — влияние европейских торговцев и иммигрантов, обосновавшихся в Лиме в девятнадцатом и двадцатом веках. Сочетание текстур — плотный, бархатистый крем внизу, лёгкая, воздушная меренга сверху — считается неотъемлемой частью идентичности блюда, контраст, который многие перуанские повара настаивают сохранять в точности, не отклоняясь от классического рецепта.",
+    "ar": "يُعتبر السوسبيرو آ لا ليمينيا — الذي يعني حرفيًا \"تنهيدة الليمينية\"، امرأة ليما — أحد أكثر الحلويات شاعرية في التسمية ضمن المطبخ اللاتيني الأمريكي، وتُنسب تقليديًا إلى الشاعرة البيروفية روزا إلفيرا \"روزا مرينو\" في القرن العشرين، التي يُقال إنها شبّهت المرينغ الخفيف أعلى الطبق برقة التنهيدة.\n\nتجمع الحلوى بين تقنيتين مختلفتين: المانخار بلانكو، وهو كريمة سميكة ذات أصل إسباني من العصور الوسطى، تم تكييفها في بيرو بالحليب المكثف، والمرينغ الإيطالي، المُنكَّه بنبيذ البورتو — تأثير من التجار والمهاجرين الأوروبيين الذين استقروا في ليما في القرنين التاسع عشر والعشرين. يُعتبر مزيج القوامين — الكريمة الكثيفة المخملية أدناه، والمرينغ الخفيف الهوائي أعلاه — أساسيًا لهوية الطبق، وهو تباين يصرّ الكثير من الطهاة البيروفيين على الحفاظ عليه بدقة، دون الانحراف عن الوصفة الكلاسيكية.",
+    "zh": "利马叹息——字面意思是「利马女子的叹息」——被认为是拉丁美洲饮食中名字最富诗意的甜点之一，传统上归功于20世纪秘鲁诗人罗莎·埃尔维拉「罗莎·梅里诺」，据说她将上层轻盈的蛋白霜比作叹息般的细腻。\n\n这道甜点结合了两种截然不同的技艺：源自中世纪西班牙的浓稠奶油曼哈尔布兰科，在秘鲁经过炼乳的改良，以及以波特酒调味的意式蛋白霜——这是十九和二十世纪定居利马的欧洲商人和移民带来的影响。质地的组合——下层浓稠丝滑的奶油，上层轻盈蓬松的蛋白霜——被认为是这道菜身份认同的核心，许多秘鲁厨师坚持精确保留这种对比，不偏离经典配方。",
+    "ja": "ススピロ・ア・ラ・リメーニャ——文字通り「リメーニャ（リマの女性）のため息」——はラテンアメリカ料理の中で最も詩的な名前を持つデザートの一つとされ、20世紀のペルーの詩人ロサ・エルビラ「ロサ・メリノ」に伝統的に帰されており、彼女が上にのった軽やかなメレンゲをため息の繊細さに例えたと言われている。\n\nこのデザートは二つの異なる技法を組み合わせている。中世スペイン起源の濃厚なクリームであるマンハル・ブランコをペルーで練乳を使ってアレンジしたものと、ポートワインで風味付けしたイタリアンメレンゲ——19世紀と20世紀にリマに定住したヨーロッパの商人や移民の影響である。下の濃密でビロードのようなクリームと上の軽くふわりとしたメレンゲという食感の組み合わせは、この料理のアイデンティティに不可欠とされ、多くのペルーの料理人は古典的なレシピから逸脱せず、この対比を正確に守ることにこだわる。",
+    "hi": "सुस्पिरो अ ला लिमेन्या — शाब्दिक रूप से \"लिमेन्या की आह\", लीमा की महिला — लैटिन अमेरिकी व्यंजनों में सबसे काव्यात्मक नाम वाली मिठाइयों में से एक मानी जाती है, पारंपरिक रूप से बीसवीं सदी की पेरूवियन कवयित्री रोज़ा एल्विरा \"रोज़ा मेरिनो\" को श्रेय दिया जाता है, जिन्होंने कथित तौर पर ऊपर के हल्के मेरिंग्यू की तुलना एक आह की नज़ाकत से की थी।\n\nयह मिठाई दो अलग-अलग तकनीकों को जोड़ती है: मंजार ब्लैंको, मध्यकालीन स्पेनिश मूल की एक गाढ़ी क्रीम, जिसे पेरू में कंडेंस्ड मिल्क के साथ अनुकूलित किया गया, और इतालवी मेरिंग्यू, जो पोर्ट वाइन से सुगंधित है — यह उन्नीसवीं और बीसवीं सदी में लीमा में बसे यूरोपीय व्यापारियों और प्रवासियों का प्रभाव है। बनावटों का यह संयोजन — नीचे घनी, मखमली क्रीम, ऊपर हल्का, हवादार मेरिंग्यू — व्यंजन की पहचान के लिए आवश्यक माना जाता है, एक विरोधाभास जिसे कई पेरूवियन रसोइये क्लासिक नुस्खे से बिना विचलन के बिल्कुल सटीक रूप से संरक्षित करने पर ज़ोर देते हैं।",
+    "tr": "Suspiro a la limeña — tam anlamıyla \"limeña'nın iç çekişi\", Lima'lı kadının iç çekişi — Latin Amerika mutfağının en şiirsel isimli tatlılarından biri olarak kabul edilir; geleneksel olarak yirminci yüzyılda Peru şairi Rosa Elvira \"Rosa Merino\"ya atfedilir; kendisinin üstteki hafif bezeyi bir iç çekişin inceliğine benzettiği söylenir.\n\nTatlı, iki farklı tekniği birleştirir: Peru'da yoğunlaştırılmış sütle uyarlanmış, ortaçağ İspanyol kökenli koyu bir krema olan manjar blanco ve porto şarabıyla tatlandırılmış İtalyan bezesi — bu, on dokuzuncu ve yirminci yüzyıllarda Lima'ya yerleşen Avrupalı tüccar ve göçmenlerin bir etkisidir. Doku kombinasyonu — altta yoğun, kadifemsi krema, üstte hafif, havadar beze — yemeğin kimliği için gerekli kabul edilir; birçok Peru aşçısının klasik tariften sapmadan tam olarak korumakta ısrar ettiği bir zıtlıktır.",
+    "it": "Il suspiro a la limeña — letteralmente \"il sospiro della limeña\", la donna di Lima — è considerato uno dei dolci dal nome più poetico della cucina latinoamericana, tradizionalmente attribuito alla poetessa peruviana Rosa Elvira \"Rosa Merino\" nel ventesimo secolo, che si dice abbia paragonato la leggera meringa sopra alla delicatezza di un sospiro.\n\nIl dolce combina due tecniche distinte: il manjar blanco, una crema densa di origine spagnola medievale, adattata in Perù con il latte condensato, e la meringa italiana, aromatizzata con vino di porto — un'influenza dei commercianti e immigrati europei stabilitisi a Lima nel diciannovesimo e ventesimo secolo. La combinazione di consistenze — la crema densa e vellutata sotto, la meringa leggera e ariosa sopra — è considerata essenziale per l'identità del piatto, un contrasto che molti cuochi peruviani insistono a preservare esattamente, senza deviare dalla ricetta classica.",
+    "ko": "수스피로 아 라 리메냐 — 문자 그대로 \"리메냐의 한숨\", 리마의 여성 — 는 라틴아메리카 요리에서 가장 시적인 이름을 가진 디저트 중 하나로 여겨지며, 전통적으로 20세기 페루 시인 로사 엘비라 \"로사 메리노\"에게 그 유래가 돌려지는데, 그녀가 위에 올린 가벼운 머랭을 한숨의 섬세함에 비유했다고 전해진다.\n\n이 디저트는 두 가지 서로 다른 기법을 결합한다: 중세 스페인에서 유래해 페루에서 연유로 변형된 진한 크림인 만하르 블랑코와, 포트 와인으로 향을 낸 이탈리안 머랭 — 이는 19세기와 20세기에 리마에 정착한 유럽 상인과 이민자들의 영향이다. 아래는 진하고 벨벳 같은 크림, 위는 가볍고 공기 같은 머랭이라는 질감의 조합은 이 요리의 정체성에 필수적인 것으로 여겨지며, 많은 페루 요리사들이 고전 레시피에서 벗어나지 않고 정확히 이 대비를 지키기를 고집한다."
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 20,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Cremă peruană de caramel cu bezea aromată de porto și scorțișoară.",
+      "en": "Peruvian caramel cream with port-flavored meringue and cinnamon.",
+      "es": "Crema peruana de caramelo con merengue aromatizado al oporto y canela.",
+      "fr": "Crème caramel péruvienne à la meringue parfumée au porto et à la cannelle.",
+      "de": "Peruanische Karamellcreme mit portweinaromatisiertem Baiser und Zimt.",
+      "pt": "Creme de caramelo peruano com merengue aromatizado ao vinho do Porto e canela.",
+      "ru": "Перуанский карамельный крем с меренгой на портвейне и корицей.",
+      "ar": "كريمة كراميل بيروفية بمرينغ منكّه بالبورتو والقرفة.",
+      "zh": "秘鲁焦糖奶油，配波特酒风味蛋白霜和肉桂。",
+      "ja": "ポートワイン風味のメレンゲとシナモンを添えたペルー風キャラメルクリーム。",
+      "hi": "पोर्ट-स्वाद वाले मेरिंग्यू और दालचीनी के साथ पेरूवियन कारमेल क्रीम।",
+      "tr": "Porto aromalı beze ve tarçınlı Peru usulü karamel kreması.",
+      "it": "Crema al caramello peruviana con meringa aromatizzata al porto e cannella.",
+      "ko": "포트 와인 향의 머랭과 시나몬을 곁들인 페루식 카라멜 크림."
+    }
+  }
+}

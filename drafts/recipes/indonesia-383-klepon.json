@@ -1,0 +1,209 @@
+{
+  "id": 383,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Indonezia",
+    "en": "Indonesia",
+    "es": "Indonesia",
+    "fr": "Indonésie",
+    "de": "Indonesien",
+    "pt": "Indonésia",
+    "ru": "Индонезия",
+    "ar": "إندونيسيا",
+    "zh": "印度尼西亚",
+    "ja": "インドネシア",
+    "hi": "इंडोनेशिया",
+    "tr": "Endonezya",
+    "it": "Indonesia",
+    "ko": "인도네시아"
+  },
+  "name": {
+    "ro": "Klepon (Bilute de Orez Glutinos cu Zahăr de Palmier)",
+    "en": "Klepon (Glutinous Rice Balls with Palm Sugar)",
+    "es": "Klepon (Bolitas de Arroz Glutinoso con Azúcar de Palma)",
+    "fr": "Klepon (Boulettes de Riz Gluant au Sucre de Palme)",
+    "de": "Klepon (Klebreisbällchen mit Palmzucker)",
+    "pt": "Klepon (Bolinhas de Arroz Glutinoso com Açúcar de Palma)",
+    "ru": "Клепон (Шарики из Клейкого Риса с Пальмовым Сахаром)",
+    "ar": "كليبون (كرات الأرز اللزج بسكر النخيل)",
+    "zh": "珍多椰丝球（棕榈糖糯米团）",
+    "ja": "クレポン（パームシュガー入りもち米団子）",
+    "hi": "क्लेपोन (ताड़ की चीनी भरे चिपचिपे चावल के गोले)",
+    "tr": "Klepon (Palmiye Şekerli Yapışkan Pirinç Topları)",
+    "it": "Klepon (Palline di Riso Glutinoso allo Zucchero di Palma)",
+    "ko": "클레폰 (야자설탕을 채운 찹쌀 경단)"
+  },
+  "category": {
+    "ro": "Desert",
+    "en": "Dessert",
+    "es": "Postre",
+    "fr": "Dessert",
+    "de": "Dessert",
+    "pt": "Sobremesa",
+    "ru": "Десерт",
+    "ar": "حلوى",
+    "zh": "甜点",
+    "ja": "デザート",
+    "hi": "मिठाई",
+    "tr": "Tatlı",
+    "it": "Dolce",
+    "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🟢", "t": "Verde de pandan", "d": "Sucul de pandan colorează aluatul de orez glutinos într-un verde natural, aromat." },
+      { "icon": "🍯", "t": "Umplutură surpriză", "d": "Fiecare biluță ascunde un miez de zahăr de palmier topit (gula melaka), care explodează dulce la mușcătură." },
+      { "icon": "🥥", "t": "Rulat în cocos", "d": "Bilutele fierte se rulează imediat în nucă de cocos proaspăt rasă, pentru textura finală." },
+      { "icon": "🍡", "t": "Se mănâncă dintr-o mușcătură", "d": "Mărimea mică permite să fie mâncate întregi, dintr-o singură mușcătură, pentru surpriza completă a siropului." }
+    ],
+    "en": [
+      { "icon": "🟢", "t": "Pandan green", "d": "Pandan juice colors the glutinous rice dough a natural, fragrant green." },
+      { "icon": "🍯", "t": "Surprise filling", "d": "Each ball hides a core of melted palm sugar (gula melaka), which bursts sweetly on the bite." },
+      { "icon": "🥥", "t": "Rolled in coconut", "d": "The boiled balls get immediately rolled in fresh grated coconut for their final texture." },
+      { "icon": "🍡", "t": "Eaten in one bite", "d": "Their small size lets them be eaten whole, in a single bite, for the full syrup surprise." }
+    ],
+    "es": [
+      { "icon": "🟢", "t": "Verde de pandan", "d": "El jugo de pandan colorea la masa de arroz glutinoso de un verde natural y aromático." },
+      { "icon": "🍯", "t": "Relleno sorpresa", "d": "Cada bolita esconde un núcleo de azúcar de palma derretido (gula melaka), que estalla dulcemente al morder." },
+      { "icon": "🥥", "t": "Enrolladas en coco", "d": "Las bolitas hervidas se enrollan de inmediato en coco recién rallado, para su textura final." },
+      { "icon": "🍡", "t": "Se comen de un bocado", "d": "Su tamaño pequeño permite comerlas enteras, de un solo bocado, para la sorpresa completa del almíbar." }
+    ],
+    "fr": [
+      { "icon": "🟢", "t": "Vert de pandan", "d": "Le jus de pandan colore la pâte de riz gluant d'un vert naturel et parfumé." },
+      { "icon": "🍯", "t": "Garniture surprise", "d": "Chaque boulette cache un cœur de sucre de palme fondu (gula melaka), qui éclate avec douceur à la morsure." },
+      { "icon": "🥥", "t": "Roulées dans la noix de coco", "d": "Les boulettes bouillies sont immédiatement roulées dans de la noix de coco fraîchement râpée, pour leur texture finale." },
+      { "icon": "🍡", "t": "Se mangent en une bouchée", "d": "Leur petite taille permet de les manger entières, en une seule bouchée, pour la surprise complète du sirop." }
+    ],
+    "de": [
+      { "icon": "🟢", "t": "Pandan-Grün", "d": "Pandansaft färbt den Klebreisteig auf natürliche Weise duftend grün." },
+      { "icon": "🍯", "t": "Überraschungsfüllung", "d": "Jedes Bällchen verbirgt einen Kern aus geschmolzenem Palmzucker (Gula Melaka), der beim Biss süß zerplatzt." },
+      { "icon": "🥥", "t": "In Kokosnuss gewälzt", "d": "Die gekochten Bällchen werden sofort in frisch geraspelter Kokosnuss gewälzt, für die endgültige Textur." },
+      { "icon": "🍡", "t": "In einem Bissen gegessen", "d": "Ihre geringe Größe erlaubt es, sie ganz, in einem einzigen Bissen zu essen, für die volle Sirup-Überraschung." }
+    ],
+    "pt": [
+      { "icon": "🟢", "t": "Verde de pandan", "d": "O sumo de pandan colore a massa de arroz glutinoso de um verde natural e perfumado." },
+      { "icon": "🍯", "t": "Recheio surpresa", "d": "Cada bolinha esconde um núcleo de açúcar de palma derretido (gula melaka), que explode docemente à mordida." },
+      { "icon": "🥥", "t": "Enroladas em coco", "d": "As bolinhas fervidas são imediatamente enroladas em coco fresco ralado, para a textura final." },
+      { "icon": "🍡", "t": "Comem-se numa dentada", "d": "O seu pequeno tamanho permite comê-las inteiras, numa única dentada, para a surpresa completa da calda." }
+    ],
+    "ru": [
+      { "icon": "🟢", "t": "Зелёный панданус", "d": "Сок пандана окрашивает тесто из клейкого риса в естественный ароматный зелёный цвет." },
+      { "icon": "🍯", "t": "Начинка-сюрприз", "d": "В каждом шарике скрыто сердце из расплавленного пальмового сахара (гула мелака), сладко лопающееся при укусе." },
+      { "icon": "🥥", "t": "Обваляны в кокосе", "d": "Отваренные шарики сразу обваливают в свежетёртом кокосе для окончательной текстуры." },
+      { "icon": "🍡", "t": "Едят в один укус", "d": "Их маленький размер позволяет съесть их целиком, за один укус, для полного сюрприза сиропа." }
+    ],
+    "ar": [
+      { "icon": "🟢", "t": "أخضر الباندان", "d": "يمنح عصير الباندان عجينة الأرز اللزج لونًا أخضر طبيعيًا وعطريًا." },
+      { "icon": "🍯", "t": "حشوة مفاجئة", "d": "تُخفي كل كرة قلبًا من سكر النخيل الذائب (غولا ميلاكا)، ينفجر بحلاوة عند العض." },
+      { "icon": "🥥", "t": "مُدحرجة بجوز الهند", "d": "تُدحرج الكرات المسلوقة فورًا في جوز هند طازج مبشور، لتحصل على قوامها النهائي." },
+      { "icon": "🍡", "t": "تُؤكل بلقمة واحدة", "d": "يسمح حجمها الصغير بأكلها كاملة، بلقمة واحدة، للاستمتاع بمفاجأة الشربات كاملة." }
+    ],
+    "zh": [
+      { "icon": "🟢", "t": "香兰叶绿色", "d": "香兰叶汁将糯米面团染成天然芳香的绿色。" },
+      { "icon": "🍯", "t": "惊喜内馅", "d": "每颗球内藏一块融化的棕榈糖（gula melaka），咬开时甜蜜迸发。" },
+      { "icon": "🥥", "t": "裹上椰丝", "d": "煮好的糯米球立刻裹上新鲜椰丝，形成最终口感。" },
+      { "icon": "🍡", "t": "一口即食", "d": "小巧的大小可以一口整个吃下，完整体验糖浆爆浆的惊喜。" }
+    ],
+    "ja": [
+      { "icon": "🟢", "t": "パンダンの緑", "d": "パンダンの果汁がもち米生地を自然で香り高い緑色に染める。" },
+      { "icon": "🍯", "t": "サプライズの詰め物", "d": "各団子には溶けたパームシュガー（グラメラカ）の芯が隠れており、噛むと甘くはじける。" },
+      { "icon": "🥥", "t": "ココナッツをまぶす", "d": "茹でた団子はすぐに新鮮な削りココナッツにまぶされ、最終的な食感になる。" },
+      { "icon": "🍡", "t": "一口で食べる", "d": "小さなサイズなので丸ごと一口で食べられ、シロップの驚きを完全に楽しめる。" }
+    ],
+    "hi": [
+      { "icon": "🟢", "t": "पंडन हरा", "d": "पंडन का रस चिपचिपे चावल के आटे को प्राकृतिक, सुगंधित हरा रंग देता है।" },
+      { "icon": "🍯", "t": "आश्चर्यजनक भरावन", "d": "हर गोले में पिघली ताड़ की चीनी (गुला मेलाका) का कोर छिपा होता है, जो काटने पर मीठा फूटता है।" },
+      { "icon": "🥥", "t": "नारियल में लपेटा", "d": "उबले गोलों को तुरंत ताज़े कद्दूकस नारियल में लपेटा जाता है, अंतिम बनावट के लिए।" },
+      { "icon": "🍡", "t": "एक बाइट में खाया जाता है", "d": "छोटा आकार उन्हें पूरा, एक बाइट में खाने देता है, चाशनी के पूरे आश्चर्य के लिए।" }
+    ],
+    "tr": [
+      { "icon": "🟢", "t": "Pandan yeşili", "d": "Pandan suyu yapışkan pirinç hamurunu doğal, kokulu bir yeşile boyar." },
+      { "icon": "🍯", "t": "Sürpriz iç harcı", "d": "Her top, ısırıldığında tatlı bir şekilde patlayan erimiş palmiye şekeri (gula melaka) çekirdeği saklar." },
+      { "icon": "🥥", "t": "Hindistan cevizine bulanmış", "d": "Haşlanan toplar son dokuları için hemen taze rendelenmiş hindistan cevizine bulanır." },
+      { "icon": "🍡", "t": "Tek lokmada yenir", "d": "Küçük boyutları, şerbetin tam sürprizini yaşamak için tek bir lokmada bütün yenmelerini sağlar." }
+    ],
+    "it": [
+      { "icon": "🟢", "t": "Verde pandan", "d": "Il succo di pandan colora l'impasto di riso glutinoso di un verde naturale e profumato." },
+      { "icon": "🍯", "t": "Ripieno a sorpresa", "d": "Ogni pallina nasconde un cuore di zucchero di palma fuso (gula melaka), che esplode dolcemente al morso." },
+      { "icon": "🥥", "t": "Rotolate nel cocco", "d": "Le palline bollite vengono immediatamente rotolate nel cocco fresco grattugiato, per la consistenza finale." },
+      { "icon": "🍡", "t": "Si mangiano in un boccone", "d": "Le loro piccole dimensioni permettono di mangiarle intere, in un solo boccone, per la sorpresa completa dello sciroppo." }
+    ],
+    "ko": [
+      { "icon": "🟢", "t": "판단 그린", "d": "판단 잎 즙이 찹쌀 반죽을 자연스럽고 향긋한 녹색으로 물들인다." },
+      { "icon": "🍯", "t": "깜짝 소를 채운", "d": "각 경단마다 녹은 야자설탕(굴라 멜라카)이 숨어 있어 베어 물면 달콤하게 터진다." },
+      { "icon": "🥥", "t": "코코넛에 굴리기", "d": "삶은 경단은 즉시 신선한 간 코코넛에 굴려 최종 식감을 완성한다." },
+      { "icon": "🍡", "t": "한입에 먹기", "d": "작은 크기 덕분에 시럽의 완전한 놀라움을 위해 통째로 한입에 먹을 수 있다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["250g făină de orez glutinos", "180ml suc de frunze de pandan (sau apă cu câteva picături de esență de pandan)", "1/4 linguriță sare", "100g zahăr de palmier (gula melaka), tocat mărunt", "200g nucă de cocos proaspătă rasă", "1/4 linguriță sare (pentru cocos)", "apă pentru fiert"],
+    "en": ["250g glutinous rice flour", "180ml pandan leaf juice (or water with a few drops of pandan extract)", "1/4 tsp salt", "100g palm sugar (gula melaka), finely chopped", "200g fresh grated coconut", "1/4 tsp salt (for the coconut)", "water for boiling"],
+    "es": ["250g de harina de arroz glutinoso", "180ml de jugo de hojas de pandan (o agua con unas gotas de extracto de pandan)", "1/4 cucharadita de sal", "100g de azúcar de palma (gula melaka), finamente picada", "200g de coco fresco rallado", "1/4 cucharadita de sal (para el coco)", "agua para hervir"],
+    "fr": ["250g de farine de riz gluant", "180ml de jus de feuilles de pandan (ou eau avec quelques gouttes d'extrait de pandan)", "1/4 c. à café de sel", "100g de sucre de palme (gula melaka), finement haché", "200g de noix de coco fraîche râpée", "1/4 c. à café de sel (pour la noix de coco)", "eau pour l'ébullition"],
+    "de": ["250g Klebreismehl", "180ml Pandanblattsaft (oder Wasser mit ein paar Tropfen Pandanextrakt)", "1/4 TL Salz", "100g Palmzucker (Gula Melaka), fein gehackt", "200g frisch geraspelte Kokosnuss", "1/4 TL Salz (für die Kokosnuss)", "Wasser zum Kochen"],
+    "pt": ["250g de farinha de arroz glutinoso", "180ml de sumo de folhas de pandan (ou água com algumas gotas de extrato de pandan)", "1/4 colher (chá) de sal", "100g de açúcar de palma (gula melaka), picado finamente", "200g de coco fresco ralado", "1/4 colher (chá) de sal (para o coco)", "água para ferver"],
+    "ru": ["250г муки из клейкого риса", "180мл сока листьев пандана (или воды с несколькими каплями экстракта пандана)", "1/4 ч.л. соли", "100г пальмового сахара (гула мелака), мелко нарезанного", "200г свежего тёртого кокоса", "1/4 ч.л. соли (для кокоса)", "вода для варки"],
+    "ar": ["250 غرام دقيق أرز لزج", "180 مل عصير أوراق الباندان (أو ماء مع بضع قطرات من خلاصة الباندان)", "ربع ملعقة صغيرة ملح", "100 غرام سكر النخيل (غولا ميلاكا)، مفروم ناعمًا", "200 غرام جوز هند طازج مبشور", "ربع ملعقة صغيرة ملح (لجوز الهند)", "ماء للسلق"],
+    "zh": ["250克糯米粉", "180毫升香兰叶汁（或水加几滴香兰精华）", "1/4茶匙盐", "100克棕榈糖（gula melaka），切碎", "200克新鲜椰丝", "1/4茶匙盐（椰丝用）", "煮制用水"],
+    "ja": ["もち米粉250g", "パンダンリーフの汁180ml（またはパンダンエキスを数滴加えた水）", "塩 小さじ1/4", "パームシュガー（グラメラカ）100g、細かく刻む", "新鮮な削りココナッツ200g", "塩 小さじ1/4（ココナッツ用）", "茹でる用の水"],
+    "hi": ["250 ग्राम चिपचिपे चावल का आटा", "180 मिली पंडन पत्ते का रस (या पंडन एक्सट्रैक्ट की कुछ बूंदों वाला पानी)", "1/4 छोटी चम्मच नमक", "100 ग्राम ताड़ की चीनी (गुला मेलाका), बारीक कटी", "200 ग्राम ताज़ा कद्दूकस नारियल", "1/4 छोटी चम्मच नमक (नारियल के लिए)", "उबालने के लिए पानी"],
+    "tr": ["250g yapışkan pirinç unu", "180ml pandan yaprağı suyu (veya birkaç damla pandan özü katılmış su)", "1/4 çay kaşığı tuz", "100g palmiye şekeri (gula melaka), ince doğranmış", "200g taze rendelenmiş hindistan cevizi", "1/4 çay kaşığı tuz (hindistan cevizi için)", "haşlamak için su"],
+    "it": ["250g di farina di riso glutinoso", "180ml di succo di foglie di pandan (o acqua con qualche goccia di estratto di pandan)", "1/4 cucchiaino di sale", "100g di zucchero di palma (gula melaka), tritato finemente", "200g di cocco fresco grattugiato", "1/4 cucchiaino di sale (per il cocco)", "acqua per bollire"],
+    "ko": ["찹쌀가루 250g", "판단 잎 즙 180ml(또는 판단 추출액 몇 방울을 탄 물)", "소금 1/4작은술", "야자설탕(굴라 멜라카) 100g, 잘게 다진 것", "신선한 간 코코넛 200g", "소금 1/4작은술(코코넛용)", "삶을 물"]
+  },
+  "howIsMade": {
+    "ro": ["PREGĂTEȘTE COCOSUL: Amestecă nuca de cocos rasă cu sarea, apoi aburește-o 5 minute pentru a o păstra mai mult timp; lasă-o deoparte pe un platou. FRĂMÂNTĂ ALUATUL: Amestecă făina de orez glutinos cu sarea, adaugă treptat sucul de pandan, frământând până obții un aluat moale, elastic, care nu se lipește de mâini. FORMEAZĂ BILUTELE: Ia câte o linguriță de aluat, aplatizează-l în palmă, pune în centru puțin zahăr de palmier tocat. ÎNCHIDE BILUTELE: Închide bine aluatul în jurul zahărului, formând o biluță netedă, fără crăpături — orice crăpătură va lăsa siropul să se scurgă la fierbere. FIERBE APA: Adu o oală mare cu apă la fierbere. FIERBE BILUTELE: Pune bilutele în apa clocotită, în loturi, fără a le aglomera. AȘTEAPTĂ SĂ PLUTEASCĂ: Bilutele sunt gata când plutesc la suprafață, ceea ce durează 3-4 minute. SCOATE ȘI SCURGE: Scoate bilutele cu o strecurătoare și scurge-le bine. RULEAZĂ ÎN COCOS: Rulează imediat bilutele fierbinți în nuca de cocos aburită, cât timp sunt încă lipicioase. SERVEȘTE: Servește imediat, cât timp zahărul din interior este încă topit și cald."],
+    "en": ["PREPARE THE COCONUT: Mix the grated coconut with salt, then steam it 5 minutes to keep it fresh longer; set it aside on a plate. KNEAD THE DOUGH: Mix the glutinous rice flour with salt, gradually add the pandan juice, kneading until you get a soft, elastic dough that doesn't stick to your hands. SHAPE THE BALLS: Take a teaspoon of dough, flatten it in your palm, place a little chopped palm sugar in the center. SEAL THE BALLS: Seal the dough well around the sugar, forming a smooth ball with no cracks — any crack will let the syrup leak out while boiling. BOIL THE WATER: Bring a large pot of water to a boil. BOIL THE BALLS: Add the balls to the boiling water, in batches, without crowding them. WAIT FOR THEM TO FLOAT: The balls are ready when they float to the surface, which takes 3-4 minutes. REMOVE AND DRAIN: Remove the balls with a slotted spoon and drain well. ROLL IN COCONUT: Immediately roll the hot balls in the steamed coconut, while they're still sticky. SERVE: Serve immediately, while the sugar inside is still melted and warm."],
+    "es": ["PREPARA EL COCO: Mezcla el coco rallado con la sal, luego cuécelo al vapor 5 minutos para conservarlo más tiempo; resérvalo en un plato. AMASA LA MASA: Mezcla la harina de arroz glutinoso con la sal, añade gradualmente el jugo de pandan, amasando hasta obtener una masa suave y elástica que no se pegue a las manos. FORMA LAS BOLITAS: Toma una cucharadita de masa, aplánala en la palma, coloca un poco de azúcar de palma picada en el centro. SELLA LAS BOLITAS: Sella bien la masa alrededor del azúcar, formando una bolita lisa, sin grietas — cualquier grieta dejará que el almíbar se escape al hervir. HIERVE EL AGUA: Lleva una olla grande de agua a ebullición. HIERVE LAS BOLITAS: Añade las bolitas al agua hirviendo, en tandas, sin amontonarlas. ESPERA A QUE FLOTEN: Las bolitas están listas cuando flotan a la superficie, lo que tarda 3-4 minutos. RETIRA Y ESCURRE: Retira las bolitas con una espumadera y escúrrelas bien. ENRÓLLALAS EN COCO: Enrolla de inmediato las bolitas calientes en el coco al vapor, mientras aún estén pegajosas. SIRVE: Sirve de inmediato, mientras el azúcar del interior aún está derretido y caliente."],
+    "fr": ["PRÉPAREZ LA NOIX DE COCO: Mélangez la noix de coco râpée avec le sel, puis faites-la cuire à la vapeur 5 minutes pour la conserver plus longtemps; réservez-la sur une assiette. PÉTRISSEZ LA PÂTE: Mélangez la farine de riz gluant avec le sel, ajoutez progressivement le jus de pandan, en pétrissant jusqu'à obtenir une pâte souple et élastique qui ne colle pas aux mains. FORMEZ LES BOULETTES: Prenez une cuillère à café de pâte, aplatissez-la dans la paume, placez un peu de sucre de palme haché au centre. SCELLEZ LES BOULETTES: Scellez bien la pâte autour du sucre, en formant une boulette lisse, sans fissures — toute fissure laissera le sirop s'échapper à l'ébullition. FAITES BOUILLIR L'EAU: Portez une grande marmite d'eau à ébullition. FAITES BOUILLIR LES BOULETTES: Ajoutez les boulettes à l'eau bouillante, par lots, sans les entasser. ATTENDEZ QU'ELLES FLOTTENT: Les boulettes sont prêtes quand elles flottent à la surface, ce qui prend 3-4 minutes. RETIREZ ET ÉGOUTTEZ: Retirez les boulettes avec une écumoire et égouttez-les bien. ROULEZ DANS LA NOIX DE COCO: Roulez immédiatement les boulettes chaudes dans la noix de coco cuite à la vapeur, pendant qu'elles sont encore collantes. SERVEZ: Servez immédiatement, pendant que le sucre à l'intérieur est encore fondu et chaud."],
+    "de": ["KOKOSNUSS VORBEREITEN: Die geraspelte Kokosnuss mit Salz mischen, dann 5 Minuten dämpfen, damit sie länger frisch bleibt; auf einem Teller beiseitestellen. TEIG KNETEN: Klebreismehl mit Salz mischen, nach und nach den Pandansaft zugeben, kneten, bis ein weicher, elastischer Teig entsteht, der nicht an den Händen klebt. BÄLLCHEN FORMEN: Einen Teelöffel Teig nehmen, in der Handfläche flach drücken, etwas gehackten Palmzucker in die Mitte geben. BÄLLCHEN VERSCHLIESSEN: Den Teig gut um den Zucker herum verschließen und eine glatte Kugel ohne Risse formen — jeder Riss lässt den Sirup beim Kochen austreten. WASSER KOCHEN: Einen großen Topf Wasser zum Kochen bringen. BÄLLCHEN KOCHEN: Die Bällchen portionsweise ins kochende Wasser geben, ohne sie zu überfüllen. AUF DAS AUFSTEIGEN WARTEN: Die Bällchen sind fertig, wenn sie an die Oberfläche steigen, was 3-4 Minuten dauert. HERAUSNEHMEN UND ABTROPFEN: Die Bällchen mit einem Schaumlöffel herausnehmen und gut abtropfen lassen. IN KOKOSNUSS WÄLZEN: Die heißen Bällchen sofort in der gedämpften Kokosnuss wälzen, solange sie noch klebrig sind. SERVIEREN: Sofort servieren, solange der Zucker im Inneren noch geschmolzen und warm ist."],
+    "pt": ["PREPARE O COCO: Misture o coco ralado com o sal, depois cozinhe-o no vapor por 5 minutos para o conservar mais tempo; reserve num prato. AMASSE A MASSA: Misture a farinha de arroz glutinoso com o sal, adicione gradualmente o sumo de pandan, amassando até obter uma massa macia e elástica que não gruda nas mãos. MODELE AS BOLINHAS: Pegue uma colher de chá de massa, achate-a na palma da mão, coloque um pouco de açúcar de palma picado no centro. FECHE AS BOLINHAS: Feche bem a massa em volta do açúcar, formando uma bolinha lisa, sem rachaduras — qualquer rachadura deixará a calda vazar ao ferver. FERVA A ÁGUA: Leve uma panela grande de água a ferver. FERVA AS BOLINHAS: Junte as bolinhas à água a ferver, em lotes, sem as amontoar. AGUARDE QUE FLUTUEM: As bolinhas estão prontas quando flutuam à superfície, o que demora 3-4 minutos. RETIRE E ESCORRA: Retire as bolinhas com uma escumadeira e escorra bem. ENROLE NO COCO: Enrole imediatamente as bolinhas quentes no coco cozido a vapor, enquanto ainda estão pegajosas. SIRVA: Sirva imediatamente, enquanto o açúcar por dentro ainda está derretido e quente."],
+    "ru": ["ПОДГОТОВЬТЕ КОКОС: Смешайте тёртый кокос с солью, затем пропарьте его 5 минут, чтобы дольше оставался свежим; отложите на тарелке. ЗАМЕСИТЕ ТЕСТО: Смешайте муку из клейкого риса с солью, постепенно добавляйте сок пандана, замешивая до мягкого, эластичного теста, не липнущего к рукам. СФОРМИРУЙТЕ ШАРИКИ: Возьмите чайную ложку теста, расплющите на ладони, положите в центр немного нарезанного пальмового сахара. ЗАПЕЧАТАЙТЕ ШАРИКИ: Хорошо запечатайте тесто вокруг сахара, формируя гладкий шарик без трещин — любая трещина позволит сиропу вытечь при варке. ВСКИПЯТИТЕ ВОДУ: Доведите большую кастрюлю воды до кипения. СВАРИТЕ ШАРИКИ: Добавьте шарики в кипящую воду порциями, не переполняя кастрюлю. ДОЖДИТЕСЬ ВСПЛЫТИЯ: Шарики готовы, когда всплывают на поверхность, что занимает 3-4 минуты. ДОСТАНЬТЕ И СЛЕЙТЕ: Достаньте шарики шумовкой и хорошо слейте воду. ОБВАЛЯЙТЕ В КОКОСЕ: Сразу обваляйте горячие шарики в пропаренном кокосе, пока они ещё липкие. ПОДАВАЙТЕ: Подавайте сразу, пока сахар внутри ещё расплавлен и тёплый."],
+    "ar": ["حضّري جوز الهند: امزجي جوز الهند المبشور بالملح، ثم بخّريه 5 دقائق للحفاظ عليه طازجًا لفترة أطول؛ ضعيه جانبًا على طبق. اعجني العجينة: امزجي دقيق الأرز اللزج بالملح، أضيفي عصير الباندان تدريجيًا، واعجني حتى تحصلي على عجينة طرية ومرنة لا تلتصق باليدين. شكّلي الكرات: خذي ملعقة صغيرة من العجينة، افرديها في راحة يدك، ضعي القليل من سكر النخيل المفروم في الوسط. أغلقي الكرات: أغلقي العجينة جيدًا حول السكر، مكوّنة كرة ملساء بلا شقوق — أي شق سيسمح للشربات بالتسرب أثناء السلق. اسلقي الماء: اتركي قدرًا كبيرًا من الماء يغلي. اسلقي الكرات: أضيفي الكرات إلى الماء المغلي، على دفعات، دون ازدحامها. انتظري حتى تطفو: تكون الكرات جاهزة عندما تطفو على السطح، وهو ما يستغرق 3-4 دقائق. أخرجي وصفّي: أخرجي الكرات بمصفاة واتركيها تُصفَّى جيدًا. دحرجيها بجوز الهند: دحرجي الكرات الساخنة فورًا في جوز الهند المبخّر، بينما لا تزال لزجة. قدّمي: قدّميها فورًا بينما لا يزال السكر بالداخل ذائبًا ودافئًا."],
+    "zh": ["准备椰丝：将椰丝与盐混合，然后蒸5分钟以延长保鲜；放在盘子上备用。揉面团：将糯米粉与盐混合，逐渐加入香兰叶汁，揉至面团柔软有弹性且不粘手。制作糯米球：取一茶匙面团在手掌中压平，中心放入少许切碎的棕榈糖。封口：将面团紧紧包裹住糖，做成表面光滑、没有裂缝的球——任何裂缝都会导致煮制时糖浆漏出。煮水：将一大锅水烧开。煮糯米球：分批将糯米球放入沸水中，不要拥挤。等待浮起：糯米球浮到水面即表示煮好，约需3-4分钟。捞出沥干：用漏勺捞出糯米球并沥干。裹上椰丝：趁糯米球还热、还粘时立即裹上蒸好的椰丝。上桌：趁内部的糖仍然融化温热时立即食用。"],
+    "ja": ["ココナッツを準備する：削りココナッツを塩と混ぜ、5分間蒸して新鮮さを保つ。皿に取り分けておく。生地をこねる：もち米粉を塩と混ぜ、パンダンの汁を少しずつ加え、手にくっつかない柔らかく弾力のある生地になるまでこねる。団子を作る：小さじ1杯分の生地を手のひらで平らにし、中央に刻んだパームシュガーを少量置く。団子を閉じる：砂糖の周りを生地でしっかり包み、割れ目のない滑らかな団子にする——割れ目があると茹でる際にシロップが漏れてしまう。お湯を沸かす：大きな鍋にたっぷりの水を沸かす。団子を茹でる：団子を数回に分けて沸騰したお湯に入れ、詰め込みすぎないようにする。浮くのを待つ：団子が水面に浮いてきたら出来上がり、これに3〜4分かかる。取り出して水気を切る：穴あきお玉で団子を取り出し、よく水気を切る。ココナッツをまぶす：まだ粘りがあるうちに、熱い団子をすぐに蒸したココナッツにまぶす。提供する：中の砂糖がまだ溶けて温かいうちにすぐに提供する。"],
+    "hi": ["नारियल तैयार करें: कद्दूकस नारियल को नमक के साथ मिलाएं, फिर इसे ताज़ा रखने के लिए 5 मिनट भाप में पकाएं; एक थाली में अलग रख दें। आटा गूंधें: चिपचिपे चावल के आटे को नमक के साथ मिलाएं, धीरे-धीरे पंडन का रस डालें, तब तक गूंधें जब तक नरम, लचीला आटा न बन जाए जो हाथों से न चिपके। गोले बनाएं: एक छोटी चम्मच आटा लें, हथेली में चपटा करें, बीच में थोड़ी कटी ताड़ की चीनी रखें। गोले बंद करें: चीनी के चारों ओर आटे को अच्छी तरह बंद करें, बिना दरार वाला चिकना गोला बनाएं — कोई भी दरार उबालते समय चाशनी को निकलने देगी। पानी उबालें: एक बड़े बर्तन में पानी उबालें। गोले उबालें: गोलों को उबलते पानी में, बैचों में, भीड़भाड़ के बिना डालें। तैरने का इंतज़ार करें: गोले तब तैयार होते हैं जब वे सतह पर तैरने लगें, जिसमें 3-4 मिनट लगते हैं। निकालें और छानें: गोलों को छलनी से निकालें और अच्छी तरह छानें। नारियल में लपेटें: गर्म गोलों को तुरंत भापे नारियल में लपेटें, जब तक वे अभी भी चिपचिपे हों। परोसें: तुरंत परोसें, जब अंदर की चीनी अभी भी पिघली और गरम हो।"],
+    "tr": ["HİNDİSTAN CEVİZİNİ HAZIRLAYIN: Rendelenmiş hindistan cevizini tuzla karıştırın, sonra daha uzun süre taze kalması için 5 dakika buharda pişirin; bir tabakta kenara koyun. HAMURU YOĞURUN: Yapışkan pirinç ununu tuzla karıştırın, pandan suyunu yavaş yavaş ekleyip ellere yapışmayan yumuşak, esnek bir hamur elde edene kadar yoğurun. TOPLARI ŞEKİLLENDİRİN: Bir çay kaşığı hamur alın, avucunuzda düzleştirin, ortasına biraz doğranmış palmiye şekeri koyun. TOPLARI KAPATIN: Hamuru şekerin etrafına iyice kapatın, çatlaksız pürüzsüz bir top oluşturun — herhangi bir çatlak, haşlanırken şerbetin sızmasına neden olur. SUYU KAYNATIN: Büyük bir tencerede suyu kaynatın. TOPLARI HAŞLAYIN: Topları kalabalık etmeden, partiler halinde kaynayan suya ekleyin. YÜZMELERİNİ BEKLEYİN: Toplar yüzeye çıktığında hazırdır, bu 3-4 dakika sürer. ÇIKARIN VE SÜZÜN: Topları delikli bir kaşıkla çıkarın ve iyice süzün. HİNDİSTAN CEVİZİNE BULAYIN: Sıcak topları hala yapışkanken hemen buharda pişirilmiş hindistan cevizine bulayın. SERVİS YAPIN: İçindeki şeker hala erimiş ve sıcakken hemen servis edin."],
+    "it": ["PREPARA IL COCCO: Mescola il cocco grattugiato con il sale, poi cuocilo a vapore 5 minuti per conservarlo più a lungo; mettilo da parte su un piatto. IMPASTA: Mescola la farina di riso glutinoso con il sale, aggiungi gradualmente il succo di pandan, impastando fino a ottenere un impasto morbido ed elastico che non si attacca alle mani. FORMA LE PALLINE: Prendi un cucchiaino di impasto, appiattiscilo nel palmo, metti un po' di zucchero di palma tritato al centro. SIGILLA LE PALLINE: Sigilla bene l'impasto intorno allo zucchero, formando una pallina liscia senza crepe — qualsiasi crepa lascerà fuoriuscire lo sciroppo durante la bollitura. FAI BOLLIRE L'ACQUA: Porta a ebollizione una pentola grande d'acqua. BOLLI LE PALLINE: Aggiungi le palline all'acqua bollente, a lotti, senza affollarle. ASPETTA CHE GALLEGGINO: Le palline sono pronte quando galleggiano in superficie, il che richiede 3-4 minuti. TOGLI E SCOLA: Togli le palline con una schiumarola e scolale bene. ROTOLA NEL COCCO: Rotola immediatamente le palline calde nel cocco cotto a vapore, mentre sono ancora appiccicose. SERVI: Servi subito, mentre lo zucchero all'interno è ancora sciolto e caldo."],
+    "ko": ["코코넛 준비하기: 간 코코넛을 소금과 섞은 뒤 신선함을 오래 유지하도록 5분간 찐다. 접시에 덜어둔다. 반죽하기: 찹쌀가루를 소금과 섞고 판단 즙을 조금씩 넣어가며 손에 붙지 않는 부드럽고 탄력 있는 반죽이 될 때까지 치댄다. 경단 빚기: 반죽 한 티스푼을 손바닥에서 납작하게 펴고 중앙에 다진 야자설탕을 조금 넣는다. 경단 봉하기: 설탕 주위로 반죽을 잘 봉해 갈라짐 없는 매끈한 공 모양으로 만든다 — 갈라진 틈이 있으면 삶을 때 시럽이 샌다. 물 끓이기: 큰 냄비에 물을 끓인다. 경단 삶기: 경단을 너무 붐비지 않게 여러 번에 나누어 끓는 물에 넣는다. 떠오르길 기다리기: 경단이 수면 위로 떠오르면 다 익은 것으로, 3-4분 정도 걸린다. 건져서 물기 빼기: 채반으로 경단을 건져 물기를 잘 뺀다. 코코넛에 굴리기: 뜨겁고 아직 끈적한 경단을 즉시 찐 코코넛에 굴린다. 제공하기: 안의 설탕이 아직 녹아 따뜻할 때 바로 제공한다."]
+  },
+  "originText": {
+    "ro": "Klepon este un desert tradițional javanez, considerat una dintre cele mai vechi gustări din bucătăria indoneziană, cu rădăcini care se întind până în perioada precolonială, când zahărul de palmier și orezul glutinos erau produse de bază disponibile pe scară largă în insulele javaneze. Numele are probabil origini onomatopeice, imitând sunetul discret pe care îl fac bilutele când cad în apa clocotită.\n\nÎn Malaezia și Singapore, un desert aproape identic este cunoscut sub numele de \"ondeh-ondeh\", ceea ce reflectă rădăcinile comune ale bucătăriei malaeziene din regiunea Nusantara. Culoarea verde vibrantă, obținută tradițional din suc de frunze de pandan, nu este doar decorativă — pandanul aromatizează aluatul cu o notă florală subtilă, distinctă de orice alt ingredient din bucătăria din Asia de Sud-Est.",
+    "en": "Klepon is a traditional Javanese dessert, considered one of the oldest snacks in Indonesian cuisine, with roots stretching back to the pre-colonial period, when palm sugar and glutinous rice were staples widely available across the Javanese islands. The name likely has onomatopoeic origins, imitating the discreet sound the balls make when they drop into boiling water.\n\nIn Malaysia and Singapore, an almost identical dessert is known as \"ondeh-ondeh,\" reflecting the shared roots of Malay cuisine across the Nusantara region. The vivid green color, traditionally obtained from pandan leaf juice, isn't just decorative — pandan flavors the dough with a subtle floral note, distinct from any other ingredient in Southeast Asian cuisine.",
+    "es": "El klepon es un postre javanés tradicional, considerado uno de los aperitivos más antiguos de la cocina indonesia, con raíces que se remontan al período precolonial, cuando el azúcar de palma y el arroz glutinoso eran productos básicos ampliamente disponibles en las islas javanesas. El nombre probablemente tiene un origen onomatopéyico, imitando el sonido discreto que hacen las bolitas al caer en el agua hirviendo.\n\nEn Malasia y Singapur, un postre casi idéntico se conoce como \"ondeh-ondeh\", lo que refleja las raíces compartidas de la cocina malaya en toda la región de Nusantara. El vibrante color verde, obtenido tradicionalmente del jugo de hojas de pandan, no es solo decorativo — el pandan aromatiza la masa con una nota floral sutil, distinta de cualquier otro ingrediente en la cocina del sudeste asiático.",
+    "fr": "Le klepon est un dessert javanais traditionnel, considéré comme l'un des plus anciens en-cas de la cuisine indonésienne, avec des racines remontant à la période précoloniale, lorsque le sucre de palme et le riz gluant étaient des produits de base largement disponibles dans les îles javanaises. Le nom a probablement une origine onomatopéique, imitant le son discret que font les boulettes en tombant dans l'eau bouillante.\n\nEn Malaisie et à Singapour, un dessert presque identique est connu sous le nom d'\"ondeh-ondeh\", reflétant les racines communes de la cuisine malaise dans toute la région du Nusantara. La couleur vert vif, traditionnellement obtenue à partir de jus de feuilles de pandan, n'est pas seulement décorative — le pandan parfume la pâte d'une note florale subtile, distincte de tout autre ingrédient de la cuisine d'Asie du Sud-Est.",
+    "de": "Klepon ist ein traditionelles javanisches Dessert, das als einer der ältesten Snacks der indonesischen Küche gilt, mit Wurzeln, die bis in die vorkoloniale Zeit zurückreichen, als Palmzucker und Klebreis weit verbreitete Grundnahrungsmittel auf den javanischen Inseln waren. Der Name hat wahrscheinlich einen lautmalerischen Ursprung und imitiert das diskrete Geräusch, das die Bällchen machen, wenn sie ins kochende Wasser fallen.\n\nIn Malaysia und Singapur ist ein fast identisches Dessert als \"Ondeh-Ondeh\" bekannt, was die gemeinsamen Wurzeln der malaiischen Küche in der gesamten Nusantara-Region widerspiegelt. Die kräftige grüne Farbe, traditionell aus Pandanblattsaft gewonnen, ist nicht nur dekorativ — Pandan verleiht dem Teig eine subtile blumige Note, die sich von jeder anderen Zutat in der südostasiatischen Küche unterscheidet.",
+    "pt": "O klepon é uma sobremesa javanesa tradicional, considerada um dos petiscos mais antigos da culinária indonésia, com raízes que remontam ao período pré-colonial, quando o açúcar de palma e o arroz glutinoso eram produtos básicos amplamente disponíveis nas ilhas javanesas. O nome provavelmente tem origem onomatopaica, imitando o som discreto que as bolinhas fazem ao caírem na água fervente.\n\nNa Malásia e em Singapura, uma sobremesa quase idêntica é conhecida como \"ondeh-ondeh\", refletindo as raízes partilhadas da culinária malaia em toda a região de Nusantara. A cor verde vibrante, tradicionalmente obtida do sumo de folhas de pandan, não é apenas decorativa — o pandan aromatiza a massa com uma nota floral subtil, distinta de qualquer outro ingrediente na culinária do Sudeste Asiático.",
+    "ru": "Клепон — традиционный яванский десерт, считающийся одной из старейших закусок индонезийской кухни, корни которого уходят в доколониальный период, когда пальмовый сахар и клейкий рис были широко доступными основными продуктами на яванских островах. Название, вероятно, имеет звукоподражательное происхождение, имитируя тихий звук, который издают шарики, падая в кипящую воду.\n\nВ Малайзии и Сингапуре почти идентичный десерт известен как \"ондэ-ондэ\", что отражает общие корни малайской кухни во всём регионе Нусантара. Яркий зелёный цвет, традиционно получаемый из сока листьев пандана, не просто декоративен — панданус придаёт тесту тонкую цветочную нотку, отличную от любого другого ингредиента в кухне Юго-Восточной Азии.",
+    "ar": "الكليبون حلوى جاوية تقليدية، تُعتبر من أقدم الوجبات الخفيفة في المطبخ الإندونيسي، وتعود جذورها إلى الفترة ما قبل الاستعمار، عندما كان سكر النخيل والأرز اللزج من المواد الأساسية المتوفرة على نطاق واسع في جزر جاوة. يُرجَّح أن أصل الاسم صوتي المحاكاة، يقلّد الصوت الخفيف الذي تُصدره الكرات عند سقوطها في الماء المغلي.\n\nفي ماليزيا وسنغافورة، تُعرف حلوى مطابقة تقريبًا باسم \"أونديه-أونديه\"، ما يعكس الجذور المشتركة للمطبخ الملايوي في جميع أنحاء منطقة نوسانتارا. اللون الأخضر الزاهي، المستخلص تقليديًا من عصير أوراق الباندان، ليس مجرد زينة — فالباندان يُنكِّه العجينة بلمسة زهرية خفيفة، مميزة عن أي مكوّن آخر في مطبخ جنوب شرق آسيا.",
+    "zh": "珍多椰丝球是传统的爪哇甜点，被认为是印尼饮食中最古老的小吃之一，其根源可以追溯到殖民时代之前，当时棕榈糖和糯米是爪哇群岛上广泛可得的基础食材。这个名字很可能源自拟声词，模仿糯米球落入沸水时发出的轻微声响。\n\n在马来西亚和新加坡，一种几乎相同的甜点被称为「onde-onde」，反映了努山塔拉地区马来饮食的共同根源。传统上从香兰叶汁中提取的鲜绿色不仅仅是装饰——香兰叶为面团带来一种微妙的花香，是东南亚饮食中任何其他食材都无法替代的独特风味。",
+    "ja": "クレポンは伝統的なジャワのデザートで、インドネシア料理の中でも最も古い軽食の一つとされ、その起源は植民地時代以前、パームシュガーともち米がジャワの島々で広く入手可能な主食であった時代にまで遡る。この名前はおそらく擬音語に由来し、団子が沸騰したお湯に落ちるときの控えめな音を模している。\n\nマレーシアとシンガポールでは、ほぼ同一のデザートが「オンデオンデ」として知られており、ヌサンタラ地域全体に共通するマレー料理のルーツを反映している。伝統的にパンダンリーフの汁から得られる鮮やかな緑色は単なる装飾ではなく、パンダンは生地に東南アジア料理の他のどの材料とも異なる、繊細な花のような香りを与える。",
+    "hi": "क्लेपोन एक पारंपरिक जावानीज़ मिठाई है, जिसे इंडोनेशियाई व्यंजनों का सबसे पुराना नाश्ता माना जाता है, जिसकी जड़ें औपनिवेशिक-पूर्व काल तक जाती हैं, जब ताड़ की चीनी और चिपचिपे चावल जावानीज़ द्वीपों में व्यापक रूप से उपलब्ध मुख्य खाद्य पदार्थ थे। नाम की संभवतः ध्वन्यात्मक उत्पत्ति है, जो उबलते पानी में गिरने पर गोलों द्वारा बनाई गई विवेकपूर्ण ध्वनि की नकल करता है।\n\nमलेशिया और सिंगापुर में, लगभग समान मिठाई को \"ओनदे-ओनदे\" के नाम से जाना जाता है, जो पूरे नुसंतारा क्षेत्र में मलय व्यंजनों की साझा जड़ों को दर्शाता है। पारंपरिक रूप से पंडन पत्ते के रस से प्राप्त जीवंत हरा रंग केवल सजावटी नहीं है — पंडन आटे को एक सूक्ष्म पुष्प सुगंध देता है, जो दक्षिण-पूर्व एशियाई व्यंजनों की किसी भी अन्य सामग्री से अलग है।",
+    "tr": "Klepon, kökleri sömürge öncesi döneme kadar uzanan, palmiye şekeri ve yapışkan pirincin Java adalarında yaygın olarak bulunan temel gıdalar olduğu döneme dayanan, Endonezya mutfağının en eski atıştırmalıklarından biri olarak kabul edilen geleneksel bir Java tatlısıdır. Adın muhtemelen onomatopeik bir kökeni vardır ve topların kaynayan suya düştüğünde çıkardığı hafif sesi taklit eder.\n\nMalezya ve Singapur'da, neredeyse aynı bir tatlı \"ondeh-ondeh\" olarak bilinir; bu da Malay mutfağının Nusantara bölgesindeki ortak köklerini yansıtır. Geleneksel olarak pandan yaprağı suyundan elde edilen canlı yeşil renk sadece dekoratif değildir — pandan, hamura Güneydoğu Asya mutfağındaki başka hiçbir malzemeden farklı, ince bir çiçeksi nota kazandırır.",
+    "it": "Il klepon è un dolce giavanese tradizionale, considerato uno degli spuntini più antichi della cucina indonesiana, con radici che risalgono al periodo precoloniale, quando lo zucchero di palma e il riso glutinoso erano prodotti base ampiamente disponibili nelle isole giavanesi. Il nome ha probabilmente un'origine onomatopeica, imitando il suono discreto che le palline fanno cadendo nell'acqua bollente.\n\nIn Malesia e Singapore, un dolce quasi identico è conosciuto come \"ondeh-ondeh\", riflettendo le radici condivise della cucina malese in tutta la regione di Nusantara. Il colore verde vivido, tradizionalmente ottenuto dal succo di foglie di pandan, non è solo decorativo — il pandan aromatizza l'impasto con una nota floreale sottile, distinta da qualsiasi altro ingrediente nella cucina del Sud-est asiatico.",
+    "ko": "클레폰은 전통 자바 디저트로, 인도네시아 요리에서 가장 오래된 간식 중 하나로 여겨지며, 그 뿌리는 야자설탕과 찹쌀이 자바 섬 전역에서 널리 구할 수 있는 주식이었던 식민지 이전 시대까지 거슬러 올라간다. 이 이름은 아마도 의성어에서 유래했을 것으로, 경단이 끓는 물에 떨어질 때 나는 은은한 소리를 흉내 낸 것이다.\n\n말레이시아와 싱가포르에서는 거의 동일한 디저트가 \"온데온데\"라는 이름으로 알려져 있으며, 이는 누산타라 지역 전체에 걸친 말레이 요리의 공통 뿌리를 반영한다. 전통적으로 판단 잎 즙에서 얻는 선명한 초록색은 단순히 장식적인 것이 아니다 — 판단은 반죽에 동남아시아 요리의 다른 어떤 재료와도 다른 은은한 꽃향기를 더한다."
+  },
+  "meta": {
+    "time": 45,
+    "costRon": 14,
+    "tags": ["vegetarian", "vegan", "budget"],
+    "desc": {
+      "ro": "Bilute verzi de orez glutinos, umplute cu zahăr de palmier topit, rulate în cocos proaspăt.",
+      "en": "Green glutinous rice balls filled with melted palm sugar, rolled in fresh coconut.",
+      "es": "Bolitas verdes de arroz glutinoso rellenas de azúcar de palma derretido, enrolladas en coco fresco.",
+      "fr": "Boulettes vertes de riz gluant fourrées au sucre de palme fondu, roulées dans la noix de coco fraîche.",
+      "de": "Grüne Klebreisbällchen gefüllt mit geschmolzenem Palmzucker, gewälzt in frischer Kokosnuss.",
+      "pt": "Bolinhas verdes de arroz glutinoso recheadas com açúcar de palma derretido, enroladas em coco fresco.",
+      "ru": "Зелёные шарики из клейкого риса с начинкой из расплавленного пальмового сахара, обвалянные в свежем кокосе.",
+      "ar": "كرات أرز لزج خضراء محشوة بسكر النخيل الذائب، مدحرجة في جوز الهند الطازج.",
+      "zh": "绿色糯米团，内馅为融化的棕榈糖，外裹新鲜椰丝。",
+      "ja": "溶けたパームシュガーを詰めた緑色のもち米団子、新鮮なココナッツをまぶして。",
+      "hi": "पिघली ताड़ की चीनी से भरे हरे चिपचिपे चावल के गोले, ताज़े नारियल में लपेटे गए।",
+      "tr": "Erimiş palmiye şekeri dolgulu yeşil yapışkan pirinç topları, taze hindistan cevizine bulanmış.",
+      "it": "Palline verdi di riso glutinoso ripiene di zucchero di palma fuso, rotolate nel cocco fresco.",
+      "ko": "녹은 야자설탕을 채운 초록빛 찹쌀 경단, 신선한 코코넛에 굴린 것."
+    }
+  }
+}

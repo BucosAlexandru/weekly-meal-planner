@@ -1,0 +1,209 @@
+{
+  "id": 381,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Indonezia",
+    "en": "Indonesia",
+    "es": "Indonesia",
+    "fr": "Indonésie",
+    "de": "Indonesien",
+    "pt": "Indonésia",
+    "ru": "Индонезия",
+    "ar": "إندونيسيا",
+    "zh": "印度尼西亚",
+    "ja": "インドネシア",
+    "hi": "इंडोनेशिया",
+    "tr": "Endonezya",
+    "it": "Indonesia",
+    "ko": "인도네시아"
+  },
+  "name": {
+    "ro": "Ayam Penyet (Pui Prăjit Zdrobit cu Sambal)",
+    "en": "Ayam Penyet (Smashed Fried Chicken with Sambal)",
+    "es": "Ayam Penyet (Pollo Frito Aplastado con Sambal)",
+    "fr": "Ayam Penyet (Poulet Frit Écrasé au Sambal)",
+    "de": "Ayam Penyet (Zerdrücktes Brathähnchen mit Sambal)",
+    "pt": "Ayam Penyet (Frango Frito Amassado com Sambal)",
+    "ru": "Аям Пеньет (Раздавленная Жареная Курица с Самбалом)",
+    "ar": "أيام بينيت (دجاج مقلي مهروس مع الصامبال)",
+    "zh": "捶鸡（印尼捶打炸鸡配参巴酱）",
+    "ja": "アヤムプニェット（サンバル添え叩き揚げチキン）",
+    "hi": "अयम पेन्येट (सांबल के साथ कुचला हुआ तला चिकन)",
+    "tr": "Ayam Penyet (Sambal Soslu Ezilmiş Kızarmış Tavuk)",
+    "it": "Ayam Penyet (Pollo Fritto Schiacciato con Sambal)",
+    "ko": "아얌 프녯 (삼발을 곁들인 두들긴 프라이드 치킨)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍗", "t": "Pui fiert și prăjit", "d": "Bucățile de pui se fierb mai întâi în bulion condimentat, apoi se prăjesc crocant." },
+      { "icon": "🔨", "t": "Zdrobit cu pistilul", "d": "Numele \"penyet\" înseamnă \"zdrobit\" — puiul prăjit se lovește ușor cu un pistil de lemn pentru a-l frăgezi." },
+      { "icon": "🌶️", "t": "Sambal proaspăt", "d": "Un sambal picant, proaspăt pisat din ardei iute și roșii, se toarnă direct peste puiul zdrobit." },
+      { "icon": "🥒", "t": "Garnitură răcoritoare", "d": "Se servește cu castraveți felii, frunze de varză și orez alb, pentru echilibru." }
+    ],
+    "en": [
+      { "icon": "🍗", "t": "Boiled then fried chicken", "d": "Chicken pieces are first boiled in spiced broth, then fried until crisp." },
+      { "icon": "🔨", "t": "Smashed with a pestle", "d": "The name \"penyet\" means \"smashed\" — the fried chicken is lightly pounded with a wooden pestle to tenderize it." },
+      { "icon": "🌶️", "t": "Fresh sambal", "d": "A spicy, freshly pounded sambal of chilies and tomatoes is poured directly over the smashed chicken." },
+      { "icon": "🥒", "t": "Cooling side", "d": "Served with sliced cucumber, cabbage leaves and white rice, for balance." }
+    ],
+    "es": [
+      { "icon": "🍗", "t": "Pollo hervido y frito", "d": "Los trozos de pollo se hierven primero en caldo especiado, luego se fríen hasta quedar crujientes." },
+      { "icon": "🔨", "t": "Aplastado con mano de mortero", "d": "El nombre \"penyet\" significa \"aplastado\" — el pollo frito se golpea ligeramente con una mano de mortero para ablandarlo." },
+      { "icon": "🌶️", "t": "Sambal fresco", "d": "Un sambal picante, recién machacado de chiles y tomates, se vierte directamente sobre el pollo aplastado." },
+      { "icon": "🥒", "t": "Guarnición refrescante", "d": "Se sirve con pepino en rodajas, hojas de col y arroz blanco, para equilibrar." }
+    ],
+    "fr": [
+      { "icon": "🍗", "t": "Poulet bouilli puis frit", "d": "Les morceaux de poulet sont d'abord bouillis dans un bouillon épicé, puis frits jusqu'à devenir croustillants." },
+      { "icon": "🔨", "t": "Écrasé au pilon", "d": "Le nom \"penyet\" signifie \"écrasé\" — le poulet frit est légèrement martelé au pilon en bois pour l'attendrir." },
+      { "icon": "🌶️", "t": "Sambal frais", "d": "Un sambal épicé, fraîchement pilé à base de piments et de tomates, est versé directement sur le poulet écrasé." },
+      { "icon": "🥒", "t": "Accompagnement rafraîchissant", "d": "Servi avec du concombre en tranches, des feuilles de chou et du riz blanc, pour équilibrer." }
+    ],
+    "de": [
+      { "icon": "🍗", "t": "Gekochtes, dann gebratenes Hähnchen", "d": "Die Hähnchenstücke werden zuerst in gewürzter Brühe gekocht, dann knusprig gebraten." },
+      { "icon": "🔨", "t": "Mit dem Stößel zerdrückt", "d": "Der Name \"Penyet\" bedeutet \"zerdrückt\" — das gebratene Hähnchen wird leicht mit einem Holzstößel geklopft, um es zart zu machen." },
+      { "icon": "🌶️", "t": "Frisches Sambal", "d": "Ein scharfes, frisch zerstoßenes Sambal aus Chilis und Tomaten wird direkt über das zerdrückte Hähnchen gegossen." },
+      { "icon": "🥒", "t": "Kühlende Beilage", "d": "Serviert mit Gurkenscheiben, Kohlblättern und weißem Reis, zum Ausgleich." }
+    ],
+    "pt": [
+      { "icon": "🍗", "t": "Frango cozido e depois frito", "d": "Os pedaços de frango são primeiro cozidos em caldo temperado, depois fritos até ficarem crocantes." },
+      { "icon": "🔨", "t": "Amassado com pilão", "d": "O nome \"penyet\" significa \"amassado\" — o frango frito é levemente batido com um pilão de madeira para amaciá-lo." },
+      { "icon": "🌶️", "t": "Sambal fresco", "d": "Um sambal picante, recém-triturado de pimentas e tomates, é despejado diretamente sobre o frango amassado." },
+      { "icon": "🥒", "t": "Acompanhamento refrescante", "d": "Servido com pepino fatiado, folhas de repolho e arroz branco, para equilibrar." }
+    ],
+    "ru": [
+      { "icon": "🍗", "t": "Отварная, затем жареная курица", "d": "Куски курицы сначала варят в пряном бульоне, затем жарят до хрустящей корочки." },
+      { "icon": "🔨", "t": "Раздавлена пестиком", "d": "Название \"пеньет\" означает \"раздавленный\" — жареную курицу слегка отбивают деревянным пестиком, чтобы смягчить." },
+      { "icon": "🌶️", "t": "Свежий самбал", "d": "Острый, свежерастёртый самбал из перца чили и помидоров выливается прямо на раздавленную курицу." },
+      { "icon": "🥒", "t": "Освежающий гарнир", "d": "Подаётся с нарезанным огурцом, листьями капусты и белым рисом, для баланса." }
+    ],
+    "ar": [
+      { "icon": "🍗", "t": "دجاج مسلوق ثم مقلي", "d": "تُسلق قطع الدجاج أولاً في مرق متبل، ثم تُقلى حتى تصبح مقرمشة." },
+      { "icon": "🔨", "t": "مهروس بالهاون", "d": "اسم \"بينيت\" يعني \"مهروس\" — يُدق الدجاج المقلي برفق بهاون خشبي لتليينه." },
+      { "icon": "🌶️", "t": "صامبال طازج", "d": "يُسكب صامبال حار طازج مطحون من الفلفل الحار والطماطم مباشرة فوق الدجاج المهروس." },
+      { "icon": "🥒", "t": "طبق جانبي منعش", "d": "يُقدَّم مع شرائح الخيار وأوراق الملفوف والأرز الأبيض، للتوازن." }
+    ],
+    "zh": [
+      { "icon": "🍗", "t": "先煮后炸的鸡肉", "d": "鸡块先在香料高汤中煮熟，然后炸至酥脆。" },
+      { "icon": "🔨", "t": "用杵捶打", "d": "「penyet」意为「捶打」——炸好的鸡肉用木杵轻轻捶打使其松软。" },
+      { "icon": "🌶️", "t": "新鲜参巴酱", "d": "一份用辣椒和番茄现磨的辛辣参巴酱直接淋在捶打过的鸡肉上。" },
+      { "icon": "🥒", "t": "清爽配菜", "d": "配黄瓜片、卷心菜叶和白米饭一起食用，以平衡辣味。" }
+    ],
+    "ja": [
+      { "icon": "🍗", "t": "茹でてから揚げる鶏肉", "d": "鶏肉はまずスパイスの効いたスープで茹で、その後カリッと揚げる。" },
+      { "icon": "🔨", "t": "すりこぎで叩く", "d": "「プニェット」という名前は「叩く」を意味し、揚げた鶏肉を木製のすりこぎで軽く叩いて柔らかくする。" },
+      { "icon": "🌶️", "t": "フレッシュなサンバル", "d": "唐辛子とトマトをすりつぶした辛いサンバルを、叩いた鶏肉に直接かける。" },
+      { "icon": "🥒", "t": "さっぱりした付け合わせ", "d": "バランスを取るため、キュウリのスライス、キャベツの葉、白いご飯を添える。" }
+    ],
+    "hi": [
+      { "icon": "🍗", "t": "उबला फिर तला चिकन", "d": "चिकन के टुकड़ों को पहले मसालेदार शोरबे में उबाला जाता है, फिर कुरकुरा होने तक तला जाता है।" },
+      { "icon": "🔨", "t": "मूसल से कुचला हुआ", "d": "\"पेन्येट\" नाम का अर्थ है \"कुचला हुआ\" — तले चिकन को नरम बनाने के लिए लकड़ी के मूसल से हल्के से पीटा जाता है।" },
+      { "icon": "🌶️", "t": "ताज़ा सांबल", "d": "मिर्च और टमाटर से ताज़ा पिसा तीखा सांबल कुचले चिकन के ऊपर सीधे डाला जाता है।" },
+      { "icon": "🥒", "t": "ठंडक देने वाला साइड", "d": "संतुलन के लिए कटे खीरे, पत्तागोभी के पत्तों और सफेद चावल के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🍗", "t": "Önce haşlanmış sonra kızartılmış tavuk", "d": "Tavuk parçaları önce baharatlı suda haşlanır, sonra çıtır olana kadar kızartılır." },
+      { "icon": "🔨", "t": "Havanla ezilmiş", "d": "\"Penyet\" adı \"ezilmiş\" anlamına gelir — kızarmış tavuk yumuşatmak için tahta bir havan eliyle hafifçe dövülür." },
+      { "icon": "🌶️", "t": "Taze sambal", "d": "Biber ve domatesten taze dövülmüş acı bir sambal, ezilmiş tavuğun üzerine doğrudan dökülür." },
+      { "icon": "🥒", "t": "Ferahlatıcı yan yemek", "d": "Denge için dilimlenmiş salatalık, lahana yaprakları ve beyaz pirinçle servis edilir." }
+    ],
+    "it": [
+      { "icon": "🍗", "t": "Pollo bollito e poi fritto", "d": "I pezzi di pollo vengono prima bolliti in brodo speziato, poi fritti fino a diventare croccanti." },
+      { "icon": "🔨", "t": "Schiacciato con un pestello", "d": "Il nome \"penyet\" significa \"schiacciato\" — il pollo fritto viene leggermente battuto con un pestello di legno per intenerirlo." },
+      { "icon": "🌶️", "t": "Sambal fresco", "d": "Un sambal piccante, appena pestato con peperoncini e pomodori, viene versato direttamente sul pollo schiacciato." },
+      { "icon": "🥒", "t": "Contorno rinfrescante", "d": "Servito con cetriolo a fette, foglie di cavolo e riso bianco, per bilanciare." }
+    ],
+    "ko": [
+      { "icon": "🍗", "t": "삶은 후 튀긴 닭고기", "d": "닭고기 조각을 먼저 향신료 육수에 삶은 뒤 바삭하게 튀긴다." },
+      { "icon": "🔨", "t": "절구공이로 두드리기", "d": "\"프녯\"이라는 이름은 \"두들긴\"이라는 뜻으로, 튀긴 닭고기를 나무 절구공이로 살짝 두드려 부드럽게 만든다." },
+      { "icon": "🌶️", "t": "신선한 삼발", "d": "고추와 토마토로 갓 빻은 매운 삼발을 두드린 닭고기 위에 바로 붓는다." },
+      { "icon": "🥒", "t": "시원한 곁들임", "d": "균형을 위해 오이 슬라이스, 양배추 잎, 흰쌀밥과 함께 제공한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 bucăți de pui (pulpe sau piept)", "1 litru apă", "4 căței de usturoi", "2 cm turmeric", "2 cm galanga", "2 frunze de dafin indonezian", "1 tulpină de lemongrass, zdrobită", "sare după gust", "ulei pentru prăjit", "8 ardei iuți roșii mici (pentru sambal)", "4 roșii cherry", "2 căței de usturoi (pentru sambal)", "2 șaloți", "1 linguriță pastă de crevete (opțional)", "1 linguriță zahăr", "castraveți feliați, pentru servire", "frunze de varză, pentru servire", "orez alb fierbinte, pentru servire"],
+    "en": ["4 chicken pieces (thighs or breast)", "1 liter water", "4 garlic cloves", "2cm turmeric", "2cm galangal", "2 Indonesian bay leaves", "1 lemongrass stalk, bruised", "salt to taste", "oil for frying", "8 small red chilies (for sambal)", "4 cherry tomatoes", "2 garlic cloves (for sambal)", "2 shallots", "1 tsp shrimp paste (optional)", "1 tsp sugar", "sliced cucumber, for serving", "cabbage leaves, for serving", "hot white rice, for serving"],
+    "es": ["4 trozos de pollo (muslos o pechuga)", "1 litro de agua", "4 dientes de ajo", "2cm de cúrcuma", "2cm de galangal", "2 hojas de laurel indonesio", "1 tallo de citronela, machacado", "sal al gusto", "aceite para freír", "8 chiles rojos pequeños (para el sambal)", "4 tomates cherry", "2 dientes de ajo (para el sambal)", "2 chalotas", "1 cucharadita de pasta de camarón (opcional)", "1 cucharadita de azúcar", "pepino en rodajas, para servir", "hojas de col, para servir", "arroz blanco caliente, para servir"],
+    "fr": ["4 morceaux de poulet (cuisses ou blanc)", "1 litre d'eau", "4 gousses d'ail", "2cm de curcuma", "2cm de galanga", "2 feuilles de laurier indonésien", "1 tige de citronnelle, écrasée", "sel selon le goût", "huile pour la friture", "8 petits piments rouges (pour le sambal)", "4 tomates cerises", "2 gousses d'ail (pour le sambal)", "2 échalotes", "1 c. à café de pâte de crevette (facultatif)", "1 c. à café de sucre", "concombre en tranches, pour servir", "feuilles de chou, pour servir", "riz blanc chaud, pour servir"],
+    "de": ["4 Hähnchenstücke (Schenkel oder Brust)", "1 Liter Wasser", "4 Knoblauchzehen", "2cm Kurkuma", "2cm Galgant", "2 indonesische Lorbeerblätter", "1 Zitronengrasstange, angequetscht", "Salz nach Geschmack", "Öl zum Frittieren", "8 kleine rote Chilis (für das Sambal)", "4 Kirschtomaten", "2 Knoblauchzehen (für das Sambal)", "2 Schalotten", "1 TL Garnelenpaste (optional)", "1 TL Zucker", "Gurkenscheiben, zum Servieren", "Kohlblätter, zum Servieren", "heißer weißer Reis, zum Servieren"],
+    "pt": ["4 pedaços de frango (coxas ou peito)", "1 litro de água", "4 dentes de alho", "2cm de açafrão-da-terra", "2cm de galanga", "2 folhas de louro indonésio", "1 talo de capim-limão, amassado", "sal a gosto", "óleo para fritar", "8 pimentas vermelhas pequenas (para o sambal)", "4 tomates cereja", "2 dentes de alho (para o sambal)", "2 chalotas", "1 colher (chá) de pasta de camarão (opcional)", "1 colher (chá) de açúcar", "pepino fatiado, para servir", "folhas de repolho, para servir", "arroz branco quente, para servir"],
+    "ru": ["4 куска курицы (бёдра или грудка)", "1 литр воды", "4 зубчика чеснока", "2см куркумы", "2см галангала", "2 индонезийских лавровых листа", "1 стебель лемонграсса, раздавленный", "соль по вкусу", "масло для жарки", "8 маленьких красных перцев чили (для самбала)", "4 помидора черри", "2 зубчика чеснока (для самбала)", "2 лука-шалота", "1 ч.л. креветочной пасты (по желанию)", "1 ч.л. сахара", "нарезанный огурец, для подачи", "листья капусты, для подачи", "горячий белый рис, для подачи"],
+    "ar": ["4 قطع دجاج (أفخاذ أو صدر)", "1 لتر ماء", "4 فصوص ثوم", "2 سم كركم", "2 سم غالانغال", "ورقتا غار إندونيسيتان", "عود ليمون عشبي واحد، مهروس", "ملح حسب الرغبة", "زيت للقلي", "8 حبات فلفل أحمر حار صغيرة (للصامبال)", "4 حبات طماطم كرزية", "فصا ثوم (للصامبال)", "بصلتان صغيرتان (شالوت)", "ملعقة صغيرة معجون روبيان (اختياري)", "ملعقة صغيرة سكر", "خيار مقطع شرائح، للتقديم", "أوراق ملفوف، للتقديم", "أرز أبيض ساخن، للتقديم"],
+    "zh": ["4块鸡肉（鸡腿或鸡胸）", "1升水", "4瓣大蒜", "2厘米姜黄", "2厘米南姜", "2片印尼香叶", "1根香茅，拍碎", "盐适量", "炸油", "8个小红辣椒（参巴酱用）", "4个圣女果", "2瓣大蒜（参巴酱用）", "2个红葱头", "1茶匙虾酱（可选）", "1茶匙糖", "黄瓜片，配食用", "卷心菜叶，配食用", "热白米饭，配食用"],
+    "ja": ["鶏肉4切れ（もも肉または胸肉）", "水1リットル", "にんにく4片", "ターメリック2cm", "ガランガル2cm", "インドネシアのベイリーフ2枚", "レモングラス1本（つぶす）", "塩 適量", "揚げ油", "小さい赤唐辛子8本（サンバル用）", "ミニトマト4個", "にんにく2片（サンバル用）", "エシャロット2個", "エビペースト小さじ1（お好みで）", "砂糖小さじ1", "キュウリのスライス（添える用）", "キャベツの葉（添える用）", "熱い白いご飯（添える用）"],
+    "hi": ["4 चिकन के टुकड़े (जांघ या ब्रेस्ट)", "1 लीटर पानी", "4 लहसुन की कलियाँ", "2 सेमी हल्दी", "2 सेमी गलंगल", "2 इंडोनेशियाई तेज पत्ते", "1 लेमनग्रास डंठल, कुचला हुआ", "स्वादानुसार नमक", "तलने के लिए तेल", "8 छोटी लाल मिर्च (सांबल के लिए)", "4 चेरी टमाटर", "2 लहसुन की कलियाँ (सांबल के लिए)", "2 शालोट", "1 छोटी चम्मच झींगा पेस्ट (वैकल्पिक)", "1 छोटी चम्मच चीनी", "कटा खीरा, परोसने के लिए", "पत्तागोभी के पत्ते, परोसने के लिए", "गरम सफेद चावल, परोसने के लिए"],
+    "tr": ["4 parça tavuk (but veya göğüs)", "1 litre su", "4 diş sarımsak", "2cm zerdeçal", "2cm galanga", "2 Endonezya defne yaprağı", "1 sap limon otu, ezilmiş", "tuz, tadına göre", "kızartmak için yağ", "8 küçük kırmızı biber (sambal için)", "4 kiraz domates", "2 diş sarımsak (sambal için)", "2 arpacık soğan", "1 çay kaşığı karides ezmesi (isteğe bağlı)", "1 çay kaşığı şeker", "servis için dilimlenmiş salatalık", "servis için lahana yaprakları", "servis için sıcak beyaz pirinç"],
+    "it": ["4 pezzi di pollo (cosce o petto)", "1 litro d'acqua", "4 spicchi d'aglio", "2cm di curcuma", "2cm di galanga", "2 foglie di alloro indonesiano", "1 gambo di citronella, schiacciato", "sale q.b.", "olio per friggere", "8 piccoli peperoncini rossi (per il sambal)", "4 pomodorini", "2 spicchi d'aglio (per il sambal)", "2 scalogni", "1 cucchiaino di pasta di gamberetti (facoltativo)", "1 cucchiaino di zucchero", "cetriolo a fette, per servire", "foglie di cavolo, per servire", "riso bianco caldo, per servire"],
+    "ko": ["닭고기 4조각(허벅지살 또는 가슴살)", "물 1리터", "마늘 4쪽", "강황 2cm", "갈랑갈 2cm", "인도네시아 월계수 잎 2장", "레몬그라스 1대, 으깬 것", "소금 약간", "튀김용 식용유", "작은 홍고추 8개(삼발용)", "방울토마토 4개", "마늘 2쪽(삼발용)", "샬롯 2개", "새우 페이스트 1작은술(선택)", "설탕 1작은술", "오이 슬라이스, 곁들임용", "양배추 잎, 곁들임용", "뜨거운 흰쌀밥, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": ["FIERBE PUIUL: Pune bucățile de pui într-o oală cu apă, usturoi, turmeric, galanga, frunze de dafin și lemongrass. FIERBE ÎNCET: Lasă puiul să fiarbă la foc mic 25-30 minute, până se pătrunde bine și bulionul e aromat. SCOATE ȘI SCURGE: Scoate bucățile de pui și lasă-le să se scurgă și să se răcească puțin. ÎNCINGE ULEIUL: Încinge ulei din belșug într-o tigaie adâncă la foc mediu-mare. PRĂJEȘTE PUIUL: Prăjește bucățile de pui 5-7 minute pe fiecare parte, până devin aurii și crocante. PREGĂTEȘTE SAMBALUL: Prăjește rapid ardeii iuți, roșiile, usturoiul și șaloții în puțin ulei, apoi pisează-i împreună cu pasta de crevete și zahărul într-un mojar, până obții o pastă grosieră. ZDROBEȘTE PUIUL: Pune fiecare bucată de pui prăjit pe o farfurie și zdrobește-o ușor cu pistilul de lemn sau spatele unei linguri, pentru a o frăgezi. ADAUGĂ SAMBAL: Toarnă sambalul proaspăt direct peste puiul zdrobit. SERVEȘTE: Servește imediat, cu castraveți feliați, frunze de varză proaspătă și orez alb fierbinte."],
+    "en": ["POACH THE CHICKEN: Place the chicken pieces in a pot with water, garlic, turmeric, galangal, bay leaves and lemongrass. SIMMER: Let the chicken simmer over low heat 25-30 minutes, until well cooked and the broth is fragrant. REMOVE AND DRAIN: Remove the chicken pieces and let them drain and cool slightly. HEAT THE OIL: Heat plenty of oil in a deep pan over medium-high heat. FRY THE CHICKEN: Fry the chicken pieces 5-7 minutes per side, until golden and crispy. MAKE THE SAMBAL: Quickly fry the chilies, tomatoes, garlic and shallots in a little oil, then pound them together with the shrimp paste and sugar in a mortar, until you get a coarse paste. SMASH THE CHICKEN: Place each fried chicken piece on a plate and lightly smash it with a wooden pestle or the back of a spoon, to tenderize it. ADD SAMBAL: Pour the fresh sambal directly over the smashed chicken. SERVE: Serve immediately, with sliced cucumber, fresh cabbage leaves and hot white rice."],
+    "es": ["ESCALFA EL POLLO: Coloca los trozos de pollo en una olla con agua, ajo, cúrcuma, galangal, hojas de laurel y citronela. COCINA A FUEGO LENTO: Deja que el pollo se cocine a fuego lento 25-30 minutos, hasta que esté bien cocido y el caldo esté aromático. RETIRA Y ESCURRE: Retira los trozos de pollo y déjalos escurrir y enfriar un poco. CALIENTA EL ACEITE: Calienta abundante aceite en una sartén profunda a fuego medio-alto. FRÍE EL POLLO: Fríe los trozos de pollo 5-7 minutos por lado, hasta que estén dorados y crujientes. PREPARA EL SAMBAL: Fríe rápidamente los chiles, tomates, ajo y chalotas en un poco de aceite, luego macháalos junto con la pasta de camarón y el azúcar en un mortero, hasta obtener una pasta gruesa. APLASTA EL POLLO: Coloca cada trozo de pollo frito en un plato y aplástalo ligeramente con una mano de mortero de madera o el reverso de una cuchara, para ablandarlo. AÑADE EL SAMBAL: Vierte el sambal fresco directamente sobre el pollo aplastado. SIRVE: Sirve inmediatamente, con pepino en rodajas, hojas de col frescas y arroz blanco caliente."],
+    "fr": ["POCHEZ LE POULET: Placez les morceaux de poulet dans une marmite avec de l'eau, de l'ail, du curcuma, du galanga, des feuilles de laurier et de la citronnelle. MIJOTEZ: Laissez le poulet mijoter à feu doux 25-30 minutes, jusqu'à ce qu'il soit bien cuit et que le bouillon soit parfumé. RETIREZ ET ÉGOUTTEZ: Retirez les morceaux de poulet et laissez-les s'égoutter et refroidir légèrement. CHAUFFEZ L'HUILE: Chauffez beaucoup d'huile dans une poêle profonde à feu moyen-vif. FAITES FRIRE LE POULET: Faites frire les morceaux de poulet 5-7 minutes de chaque côté, jusqu'à ce qu'ils soient dorés et croustillants. PRÉPAREZ LE SAMBAL: Faites frire rapidement les piments, tomates, ail et échalotes dans un peu d'huile, puis pilez-les avec la pâte de crevette et le sucre dans un mortier, jusqu'à obtenir une pâte grossière. ÉCRASEZ LE POULET: Placez chaque morceau de poulet frit sur une assiette et écrasez-le légèrement avec un pilon en bois ou le dos d'une cuillère, pour l'attendrir. AJOUTEZ LE SAMBAL: Versez le sambal frais directement sur le poulet écrasé. SERVEZ: Servez immédiatement, avec du concombre en tranches, des feuilles de chou fraîches et du riz blanc chaud."],
+    "de": ["HÄHNCHEN POCHIEREN: Die Hähnchenstücke mit Wasser, Knoblauch, Kurkuma, Galgant, Lorbeerblättern und Zitronengras in einen Topf geben. KÖCHELN: Das Hähnchen bei niedriger Hitze 25-30 Minuten köcheln lassen, bis es gut durchgegart und die Brühe aromatisch ist. HERAUSNEHMEN UND ABTROPFEN: Die Hähnchenstücke herausnehmen und abtropfen sowie leicht abkühlen lassen. ÖL ERHITZEN: Reichlich Öl in einer tiefen Pfanne bei mittlerer bis hoher Hitze erhitzen. HÄHNCHEN FRITTIEREN: Die Hähnchenstücke 5-7 Minuten pro Seite frittieren, bis sie goldbraun und knusprig sind. SAMBAL ZUBEREITEN: Die Chilis, Tomaten, Knoblauch und Schalotten kurz in etwas Öl braten, dann mit der Garnelenpaste und dem Zucker im Mörser zu einer groben Paste zerstoßen. HÄHNCHEN ZERDRÜCKEN: Jedes gebratene Hähnchenstück auf einen Teller legen und leicht mit einem Holzstößel oder der Rückseite eines Löffels zerdrücken, um es zart zu machen. SAMBAL HINZUFÜGEN: Das frische Sambal direkt über das zerdrückte Hähnchen gießen. SERVIEREN: Sofort servieren, mit Gurkenscheiben, frischen Kohlblättern und heißem weißem Reis."],
+    "pt": ["ESCALFE O FRANGO: Coloque os pedaços de frango numa panela com água, alho, açafrão-da-terra, galanga, folhas de louro e capim-limão. COZINHE EM FOGO BRANDO: Deixe o frango cozinhar em fogo baixo por 25-30 minutos, até ficar bem cozido e o caldo perfumado. RETIRE E ESCORRA: Retire os pedaços de frango e deixe escorrer e arrefecer um pouco. AQUEÇA O ÓLEO: Aqueça bastante óleo numa frigideira funda em fogo médio-alto. FRITE O FRANGO: Frite os pedaços de frango por 5-7 minutos de cada lado, até dourarem e ficarem crocantes. PREPARE O SAMBAL: Frite rapidamente as pimentas, tomates, alho e chalotas num pouco de óleo, depois triture-os com a pasta de camarão e o açúcar num pilão, até obter uma pasta grossa. AMASSE O FRANGO: Coloque cada pedaço de frango frito num prato e amasse levemente com um pilão de madeira ou as costas de uma colher, para amaciá-lo. ADICIONE O SAMBAL: Despeje o sambal fresco diretamente sobre o frango amassado. SIRVA: Sirva imediatamente, com pepino fatiado, folhas de repolho frescas e arroz branco quente."],
+    "ru": ["ОТВАРИТЕ КУРИЦУ: Положите куски курицы в кастрюлю с водой, чесноком, куркумой, галангалом, лавровыми листьями и лемонграссом. ТУШИТЕ: Дайте курице томиться на слабом огне 25-30 минут, пока не приготовится полностью и бульон не станет ароматным. ДОСТАНЬТЕ И СЛЕЙТЕ: Достаньте куски курицы и дайте им стечь и немного остыть. РАЗОГРЕЙТЕ МАСЛО: Разогрейте много масла в глубокой сковороде на среднем-сильном огне. ОБЖАРЬТЕ КУРИЦУ: Обжарьте куски курицы 5-7 минут с каждой стороны, до золотистой хрустящей корочки. ПРИГОТОВЬТЕ САМБАЛ: Быстро обжарьте перец чили, помидоры, чеснок и лук-шалот в небольшом количестве масла, затем растолките их вместе с креветочной пастой и сахаром в ступке до грубой пасты. РАЗДАВИТЕ КУРИЦУ: Положите каждый жареный кусок курицы на тарелку и слегка раздавите деревянным пестиком или тыльной стороной ложки, чтобы смягчить. ДОБАВЬТЕ САМБАЛ: Полейте свежий самбал прямо на раздавленную курицу. ПОДАВАЙТЕ: Подавайте сразу, с нарезанным огурцом, свежими листьями капусты и горячим белым рисом."],
+    "ar": ["اسلقي الدجاج: ضعي قطع الدجاج في قدر مع الماء والثوم والكركم والغالانغال وأوراق الغار وعشب الليمون. اطهي على نار هادئة: اتركي الدجاج ينضج على نار هادئة 25-30 دقيقة حتى ينضج جيدًا ويصبح المرق عطريًا. أخرجي وصفّي: أخرجي قطع الدجاج واتركيها تُصفَّى وتبرد قليلًا. سخّني الزيت: سخّني كمية وفيرة من الزيت في مقلاة عميقة على نار متوسطة إلى عالية. اقلي الدجاج: اقلي قطع الدجاج 5-7 دقائق لكل جانب حتى تصبح ذهبية ومقرمشة. حضّري الصامبال: اقلي الفلفل الحار والطماطم والثوم والشالوت سريعًا بقليل من الزيت، ثم اهرسيها مع معجون الروبيان والسكر في هاون حتى تحصلي على عجينة خشنة. اهرسي الدجاج: ضعي كل قطعة دجاج مقلية على طبق واهرسيها برفق بهاون خشبي أو ظهر ملعقة لتليينها. أضيفي الصامبال: اسكبي الصامبال الطازج مباشرة فوق الدجاج المهروس. قدّمي: قدّمي فورًا مع شرائح الخيار وأوراق الملفوف الطازجة والأرز الأبيض الساخن."],
+    "zh": ["煮鸡：将鸡块放入盛有水、大蒜、姜黄、南姜、香叶和香茅的锅中。慢炖：小火慢炖鸡肉25-30分钟，至完全熟透且高汤香气四溢。取出沥干：取出鸡块，沥干并稍微放凉。加热油：在深锅中用中大火加热大量油。炸鸡：将鸡块每面炸5-7分钟，至金黄酥脆。制作参巴酱：用少许油快速煎炒辣椒、番茄、大蒜和红葱头，然后与虾酱和糖一起在研钵中捣成粗糊状。捶打鸡肉：将每块炸好的鸡肉放在盘子上，用木杵或勺背轻轻捶打，使其松软。加入参巴酱：将新鲜参巴酱直接淋在捶打过的鸡肉上。上桌：立即配黄瓜片、新鲜卷心菜叶和热白米饭食用。"],
+    "ja": ["鶏肉を煮る：鶏肉を水、にんにく、ターメリック、ガランガル、ベイリーフ、レモングラスと一緒に鍋に入れる。煮込む：鶏肉がよく火が通りスープが香り立つまで弱火で25〜30分煮込む。取り出して水気を切る：鶏肉を取り出し、水気を切って少し冷ます。油を熱する：中高火で深い鍋にたっぷりの油を熱する。鶏肉を揚げる：鶏肉を各面5〜7分、きつね色でカリッとするまで揚げる。サンバルを作る：唐辛子、トマト、にんにく、エシャロットを少量の油で手早く炒め、エビペーストと砂糖と共にすり鉢で粗いペースト状にすりつぶす。鶏肉を叩く：揚げた鶏肉を皿に置き、柔らかくするため木のすりこぎまたはスプーンの背で軽く叩く。サンバルを加える：新鮮なサンバルを叩いた鶏肉の上に直接かける。提供する：キュウリのスライス、新鮮なキャベツの葉、熱い白いご飯を添えてすぐに提供する。"],
+    "hi": ["चिकन उबालें: चिकन के टुकड़ों को पानी, लहसुन, हल्दी, गलंगल, तेज पत्तों और लेमनग्रास के साथ बर्तन में डालें। उबालें: चिकन को धीमी आंच पर 25-30 मिनट पकने दें, जब तक अच्छी तरह पक न जाए और शोरबा सुगंधित न हो जाए। निकालें और छानें: चिकन के टुकड़े निकालें और उन्हें थोड़ा छानकर ठंडा होने दें। तेल गरम करें: गहरे पैन में मध्यम-तेज़ आंच पर भरपूर तेल गरम करें। चिकन तलें: चिकन के टुकड़ों को हर तरफ से 5-7 मिनट, सुनहरा और कुरकुरा होने तक तलें। सांबल बनाएं: मिर्च, टमाटर, लहसुन और शालोट को थोड़े तेल में जल्दी से भूनें, फिर झींगा पेस्ट और चीनी के साथ सिलबट्टे में मोटा पीस लें। चिकन कुचलें: हर तले चिकन के टुकड़े को प्लेट पर रखें और नरम बनाने के लिए लकड़ी के मूसल या चम्मच की पीठ से हल्के से कुचलें। सांबल डालें: ताज़ा सांबल सीधे कुचले चिकन के ऊपर डालें। परोसें: तुरंत, कटे खीरे, ताज़ी पत्तागोभी के पत्तों और गरम सफेद चावल के साथ परोसें।"],
+    "tr": ["TAVUĞU HAŞLAYIN: Tavuk parçalarını su, sarımsak, zerdeçal, galanga, defne yaprakları ve limon otuyla birlikte tencereye koyun. PİŞİRİN: Tavuğun iyice piştiği ve suyun kokulu hale geldiği 25-30 dakika boyunca kısık ateşte pişmesine izin verin. ÇIKARIN VE SÜZÜN: Tavuk parçalarını çıkarın, süzülmesini ve biraz soğumasını bekleyin. YAĞI ISITIN: Derin bir tavada orta-yüksek ateşte bolca yağ ısıtın. TAVUĞU KIZARTIN: Tavuk parçalarını her tarafından 5-7 dakika, altın rengi ve çıtır olana kadar kızartın. SAMBALI HAZIRLAYIN: Biber, domates, sarımsak ve arpacık soğanı az miktarda yağda hızlıca kızartın, sonra karides ezmesi ve şekerle birlikte havanda kaba bir hamur haline getirin. TAVUĞU EZİN: Her kızarmış tavuk parçasını bir tabağa koyun ve yumuşatmak için tahta bir havan eli veya kaşığın arkasıyla hafifçe ezin. SAMBALI EKLEYİN: Taze sambalı doğrudan ezilmiş tavuğun üzerine dökün. SERVİS YAPIN: Dilimlenmiş salatalık, taze lahana yaprakları ve sıcak beyaz pirinçle hemen servis edin."],
+    "it": ["FAI BOLLIRE IL POLLO: Metti i pezzi di pollo in una pentola con acqua, aglio, curcuma, galanga, foglie di alloro e citronella. FAI SOBBOLLIRE: Lascia sobbollire il pollo a fuoco basso 25-30 minuti, finché ben cotto e il brodo è profumato. TOGLI E SCOLA: Togli i pezzi di pollo e lasciali scolare e raffreddare leggermente. SCALDA L'OLIO: Scalda abbondante olio in una padella profonda a fuoco medio-alto. FRIGGI IL POLLO: Friggi i pezzi di pollo 5-7 minuti per lato, finché dorati e croccanti. PREPARA IL SAMBAL: Friggi rapidamente i peperoncini, i pomodori, l'aglio e gli scalogni in poco olio, poi pestali insieme alla pasta di gamberetti e allo zucchero in un mortaio, fino a ottenere una pasta grossolana. SCHIACCIA IL POLLO: Metti ogni pezzo di pollo fritto su un piatto e schiaccialo leggermente con un pestello di legno o il dorso di un cucchiaio, per intenerirlo. AGGIUNGI IL SAMBAL: Versa il sambal fresco direttamente sul pollo schiacciato. SERVI: Servi subito, con cetriolo a fette, foglie di cavolo fresche e riso bianco caldo."],
+    "ko": ["닭 삶기: 닭고기 조각을 물, 마늘, 강황, 갈랑갈, 월계수 잎, 레몬그라스와 함께 냄비에 넣는다. 끓이기: 닭고기가 잘 익고 육수에 향이 배도록 25-30분간 약불로 끓인다. 꺼내서 물기 빼기: 닭고기를 꺼내 물기를 빼고 살짝 식힌다. 기름 달구기: 깊은 팬에 넉넉한 기름을 중강불에서 달군다. 닭고기 튀기기: 닭고기를 각 면 5-7분씩, 황금빛으로 바삭해질 때까지 튀긴다. 삼발 만들기: 고추, 토마토, 마늘, 샬롯을 약간의 기름에 빠르게 볶은 뒤 새우 페이스트, 설탕과 함께 절구에 넣고 거칠게 빻는다. 닭고기 두드리기: 튀긴 닭고기 조각을 접시에 놓고 나무 절구공이나 숟가락 뒷면으로 가볍게 두드려 부드럽게 만든다. 삼발 넣기: 신선한 삼발을 두드린 닭고기 위에 바로 붓는다. 제공하기: 오이 슬라이스, 신선한 양배추 잎, 뜨거운 흰쌀밥과 함께 바로 제공한다."]
+  },
+  "originText": {
+    "ro": "Ayam penyet a apărut în Surabaya, Java de Est, în anii 1990, ca inovație a bucătăriei stradale ce combina tehnicile tradiționale de prăjire a puiului cu obiceiul javanez de a zdrobi mâncarea prăjită pentru a o frăgezi și a o îmbiba mai bine cu sosurile. Practica de a zdrobi ușor felul principal cu un pistil de piatră sau lemn se aplică și altor feluri, precum lele penyet (somn prăjit zdrobit), dar ayam penyet a devenit cel mai popular și exportat exemplu.\n\nDin Surabaya, felul s-a răspândit rapid în toată Indonezia și în comunitățile indoneziene din Malaezia și Singapore, devenind unul dintre cele mai comune preparate din lanțurile de restaurante warung ayam penyet. Sambalul proaspăt pisat de fiecare dată la comandă, nu preparat în avans, este considerat esențial pentru autenticitate — textura grosieră și aciditatea vie a roșiilor proaspete fac diferența față de sosurile industriale.",
+    "en": "Ayam penyet emerged in Surabaya, East Java, in the 1990s, as a street-food innovation combining traditional chicken-frying techniques with the Javanese habit of smashing fried food to tenderize it and let it soak up sauces better. The practice of lightly smashing the main dish with a stone or wooden pestle also applies to other dishes, like lele penyet (smashed fried catfish), but ayam penyet became the most popular and exported example.\n\nFrom Surabaya, the dish spread quickly across Indonesia and into Indonesian communities in Malaysia and Singapore, becoming one of the most common offerings at warung ayam penyet restaurant chains. Sambal freshly pounded for each order, not prepared in advance, is considered essential to authenticity — the coarse texture and bright acidity of fresh tomatoes make the difference from industrial sauces.",
+    "es": "El ayam penyet surgió en Surabaya, Java Oriental, en la década de 1990, como una innovación de la comida callejera que combinaba las técnicas tradicionales de freír pollo con la costumbre javanesa de aplastar la comida frita para ablandarla y que absorbiera mejor las salsas. La práctica de aplastar ligeramente el plato principal con una mano de mortero de piedra o madera también se aplica a otros platos, como el lele penyet (bagre frito aplastado), pero el ayam penyet se convirtió en el ejemplo más popular y exportado.\n\nDesde Surabaya, el plato se extendió rápidamente por toda Indonesia y a las comunidades indonesias en Malasia y Singapur, convirtiéndose en una de las ofertas más comunes en las cadenas de restaurantes warung ayam penyet. El sambal recién machacado para cada pedido, no preparado con antelación, se considera esencial para la autenticidad — la textura gruesa y la acidez viva de los tomates frescos marcan la diferencia frente a las salsas industriales.",
+    "fr": "L'ayam penyet est apparu à Surabaya, dans l'est de Java, dans les années 1990, comme une innovation de la cuisine de rue combinant les techniques traditionnelles de friture du poulet avec l'habitude javanaise d'écraser les aliments frits pour les attendrir et leur permettre de mieux absorber les sauces. La pratique d'écraser légèrement le plat principal avec un pilon en pierre ou en bois s'applique aussi à d'autres plats, comme le lele penyet (poisson-chat frit écrasé), mais l'ayam penyet est devenu l'exemple le plus populaire et le plus exporté.\n\nDepuis Surabaya, le plat s'est rapidement répandu dans toute l'Indonésie et dans les communautés indonésiennes de Malaisie et de Singapour, devenant l'une des offres les plus courantes des chaînes de restaurants warung ayam penyet. Le sambal fraîchement pilé pour chaque commande, et non préparé à l'avance, est considéré comme essentiel à l'authenticité — la texture grossière et l'acidité vive des tomates fraîches font la différence avec les sauces industrielles.",
+    "de": "Ayam Penyet entstand in den 1990er Jahren in Surabaya, Ost-Java, als Streetfood-Innovation, die traditionelle Techniken des Hähnchenbratens mit der javanischen Gewohnheit verband, frittiertes Essen zu zerdrücken, um es zart zu machen und die Saucen besser aufnehmen zu lassen. Die Praxis, das Hauptgericht leicht mit einem Stein- oder Holzstößel zu zerdrücken, gilt auch für andere Gerichte wie Lele Penyet (zerdrückter frittierter Wels), aber Ayam Penyet wurde zum beliebtesten und meistexportierten Beispiel.\n\nVon Surabaya aus verbreitete sich das Gericht schnell in ganz Indonesien und in indonesischen Gemeinden in Malaysia und Singapur und wurde zu einem der häufigsten Angebote in Warung-Ayam-Penyet-Restaurantketten. Frisch für jede Bestellung zerstoßenes Sambal, nicht im Voraus zubereitet, gilt als essenziell für Authentizität — die grobe Textur und die lebendige Säure frischer Tomaten machen den Unterschied zu industriellen Saucen aus.",
+    "pt": "O ayam penyet surgiu em Surabaya, Java Oriental, na década de 1990, como uma inovação da comida de rua que combinava as técnicas tradicionais de fritar frango com o hábito javanês de amassar comida frita para amaciá-la e deixá-la absorver melhor os molhos. A prática de amassar levemente o prato principal com um pilão de pedra ou madeira também se aplica a outros pratos, como o lele penyet (peixe-gato frito amassado), mas o ayam penyet tornou-se o exemplo mais popular e exportado.\n\nDe Surabaya, o prato espalhou-se rapidamente por toda a Indonésia e para as comunidades indonésias na Malásia e em Singapura, tornando-se uma das ofertas mais comuns nas cadeias de restaurantes warung ayam penyet. O sambal recém-triturado para cada pedido, não preparado com antecedência, é considerado essencial para a autenticidade — a textura grossa e a acidez viva dos tomates frescos fazem a diferença em relação aos molhos industriais.",
+    "ru": "Аям пеньет появился в Сурабае, Восточная Ява, в 1990-х годах как уличная кулинарная инновация, сочетающая традиционные техники жарки курицы с яванской привычкой раздавливать жареную еду, чтобы смягчить её и дать лучше впитать соусы. Практика лёгкого раздавливания основного блюда каменным или деревянным пестиком применяется и к другим блюдам, например леле пеньет (раздавленный жареный сом), но аям пеньет стал самым популярным и экспортируемым примером.\n\nИз Сурабаи блюдо быстро распространилось по всей Индонезии и в индонезийские общины в Малайзии и Сингапуре, став одним из самых распространённых предложений в сети ресторанов варунг аям пеньет. Свежеразмолотый для каждого заказа самбал, а не приготовленный заранее, считается необходимым для аутентичности — грубая текстура и яркая кислотность свежих помидоров отличают его от промышленных соусов.",
+    "ar": "ظهر الأيام بينيت في سورابايا، جاوة الشرقية، في تسعينيات القرن العشرين، كابتكار من مطبخ الشارع يجمع بين تقنيات قلي الدجاج التقليدية وعادة جافية بهرس الطعام المقلي لتليينه وجعله يمتص الصلصات بشكل أفضل. تُطبَّق ممارسة هرس الطبق الرئيسي برفق بهاون حجري أو خشبي على أطباق أخرى أيضًا، مثل ليلي بينيت (سمك السلور المقلي المهروس)، لكن الأيام بينيت أصبح المثال الأكثر شعبية وانتشارًا.\n\nمن سورابايا، انتشر الطبق بسرعة في جميع أنحاء إندونيسيا وفي المجتمعات الإندونيسية في ماليزيا وسنغافورة، ليصبح أحد أكثر الأطباق شيوعًا في سلاسل مطاعم وارونغ أيام بينيت. يُعتبر الصامبال المطحون طازجًا لكل طلب، وليس المُحضَّر مسبقًا، أمرًا أساسيًا للأصالة — فالقوام الخشن والحموضة الحية للطماطم الطازجة يشكّلان الفرق عن الصلصات الصناعية.",
+    "zh": "捶鸡起源于1990年代的东爪哇泗水，是一种街头美食创新，将传统炸鸡技法与爪哇人捶打油炸食物以使其松软、更好吸收酱汁的习俗结合起来。用石制或木制杵轻轻捶打主菜的做法也用于其他菜肴，如捶鲶鱼（lele penyet），但捶鸡成为最受欢迎、传播最广的代表。\n\n从泗水开始，这道菜迅速传遍印度尼西亚，并进入马来西亚和新加坡的印尼人社区，成为「捶鸡饭摊」连锁餐厅最常见的菜品之一。每份订单现场现磨的新鲜参巴酱，而非提前制作，被认为是正宗风味的关键——新鲜番茄的粗糙口感和鲜明酸味，正是它与工业化酱料的区别所在。",
+    "ja": "アヤムプニェットは1990年代、東ジャワのスラバヤで生まれたストリートフードの革新であり、伝統的な鶏の揚げ方とジャワの習慣——揚げた食べ物を叩いて柔らかくし、ソースをよく吸わせる——を組み合わせたものである。石や木のすりこぎでメイン料理を軽く叩く習慣は、レレプニェット（叩いた揚げナマズ）など他の料理にも適用されるが、アヤムプニェットは最も人気があり、最も広く輸出された例となった。\n\nスラバヤから、この料理はインドネシア全土、さらにマレーシアやシンガポールのインドネシア人コミュニティにも急速に広まり、ワルンアヤムプニェットというレストランチェーンで最も一般的なメニューの一つとなった。事前に作り置きせず注文ごとに新鮮にすりつぶすサンバルは、本格的な味を保つために不可欠とされている——新鮮なトマトの粗い食感と鮮やかな酸味が、工業製のソースとの違いを生む。",
+    "hi": "अयम पेन्येट 1990 के दशक में पूर्वी जावा के सुराबाया में एक स्ट्रीट फूड नवाचार के रूप में उभरा, जिसमें पारंपरिक चिकन तलने की तकनीकों को जावानी आदत के साथ जोड़ा गया — तले हुए भोजन को नरम करने और सॉस को बेहतर सोखने देने के लिए कुचलना। मुख्य व्यंजन को पत्थर या लकड़ी के मूसल से हल्के से कुचलने की प्रथा अन्य व्यंजनों पर भी लागू होती है, जैसे लेले पेन्येट (कुचली हुई तली कैटफ़िश), लेकिन अयम पेन्येट सबसे लोकप्रिय और निर्यातित उदाहरण बन गया।\n\nसुराबाया से, यह व्यंजन तेज़ी से पूरे इंडोनेशिया और मलेशिया व सिंगापुर के इंडोनेशियाई समुदायों में फैल गया, और वारुंग अयम पेन्येट रेस्तरां श्रृंखलाओं में सबसे आम पेशकशों में से एक बन गया। हर ऑर्डर के लिए ताज़ा पिसा सांबल, पहले से तैयार नहीं, प्रामाणिकता के लिए आवश्यक माना जाता है — ताज़े टमाटरों की मोटी बनावट और तीखी अम्लता औद्योगिक सॉस से इसे अलग बनाती है।",
+    "tr": "Ayam penyet, 1990'larda Doğu Java'nın Surabaya kentinde, geleneksel tavuk kızartma tekniklerini, kızarmış yemeği yumuşatmak ve sosları daha iyi emmesini sağlamak için ezme Cava geleneğiyle birleştiren bir sokak yemeği yeniliği olarak ortaya çıktı. Ana yemeği taş veya tahta bir havan eliyle hafifçe ezme uygulaması, lele penyet (ezilmiş kızarmış yayın balığı) gibi diğer yemeklere de uygulanır, ancak ayam penyet en popüler ve en çok ihraç edilen örnek haline geldi.\n\nSurabaya'dan yemek hızla tüm Endonezya'ya ve Malezya ile Singapur'daki Endonezya topluluklarına yayıldı ve warung ayam penyet restoran zincirlerinde en yaygın sunulan yemeklerden biri haline geldi. Önceden hazırlanmayan, her sipariş için taze dövülen sambal, otantiklik için gerekli kabul edilir — taze domateslerin kaba dokusu ve canlı asitliği, endüstriyel soslardan farkını yaratır.",
+    "it": "L'ayam penyet è nato a Surabaya, Giava Est, negli anni '90, come innovazione dello street food che combinava le tecniche tradizionali di frittura del pollo con l'abitudine giavanese di schiacciare il cibo fritto per intenerirlo e farlo assorbire meglio dalle salse. La pratica di schiacciare leggermente il piatto principale con un pestello di pietra o legno si applica anche ad altri piatti, come il lele penyet (pesce gatto fritto schiacciato), ma l'ayam penyet è diventato l'esempio più popolare ed esportato.\n\nDa Surabaya, il piatto si è diffuso rapidamente in tutta l'Indonesia e nelle comunità indonesiane in Malesia e Singapore, diventando una delle offerte più comuni nelle catene di ristoranti warung ayam penyet. Il sambal appena pestato per ogni ordine, non preparato in anticipo, è considerato essenziale per l'autenticità — la consistenza grossolana e l'acidità vivace dei pomodori freschi fanno la differenza rispetto alle salse industriali.",
+    "ko": "아얌 프녯은 1990년대 동부 자바 수라바야에서 전통적인 닭튀김 기법과 튀긴 음식을 부드럽게 만들고 소스를 더 잘 흡수하도록 두드리는 자바 관습을 결합한 길거리 음식 혁신으로 등장했다. 돌이나 나무 절구공이로 메인 요리를 가볍게 두드리는 관행은 레레 프녯(두들긴 튀긴 메기)과 같은 다른 요리에도 적용되지만, 아얌 프녯이 가장 인기 있고 가장 널리 수출된 사례가 되었다.\n\n수라바야에서 시작된 이 요리는 빠르게 인도네시아 전역과 말레이시아, 싱가포르의 인도네시아 커뮤니티로 퍼져나가 와룽 아얌 프녯 레스토랑 체인에서 가장 흔한 메뉴 중 하나가 되었다. 미리 만들어두지 않고 주문마다 신선하게 빻는 삼발이 정통성의 핵심으로 여겨진다 — 신선한 토마토의 거친 질감과 생생한 산미가 공장제 소스와의 차이를 만든다."
+  },
+  "meta": {
+    "time": 50,
+    "costRon": 26,
+    "tags": ["high-protein", "spicy", "family"],
+    "desc": {
+      "ro": "Pui prăjit crocant, zdrobit ușor și acoperit cu sambal picant proaspăt pisat.",
+      "en": "Crispy fried chicken, lightly smashed and topped with freshly pounded spicy sambal.",
+      "es": "Pollo frito crujiente, ligeramente aplastado y cubierto con sambal picante recién machacado.",
+      "fr": "Poulet frit croustillant, légèrement écrasé et garni de sambal épicé fraîchement pilé.",
+      "de": "Knuspriges Brathähnchen, leicht zerdrückt und mit frisch zerstoßenem scharfem Sambal überzogen.",
+      "pt": "Frango frito crocante, levemente amassado e coberto com sambal picante recém-triturado.",
+      "ru": "Хрустящая жареная курица, слегка раздавленная и покрытая свежерастёртым острым самбалом.",
+      "ar": "دجاج مقلي مقرمش، مهروس برفق ومغطى بصامبال حار مطحون طازجًا.",
+      "zh": "酥脆炸鸡，轻轻捶打后覆以新鲜现磨的辛辣参巴酱。",
+      "ja": "カリカリの揚げ鶏肉を軽く叩き、新鮮にすりつぶした辛いサンバルをのせた一皿。",
+      "hi": "कुरकुरा तला चिकन, हल्के से कुचला हुआ और ताज़े पिसे तीखे सांबल से ढका हुआ।",
+      "tr": "Hafifçe ezilmiş ve taze dövülmüş acı sambal ile kaplanmış çıtır kızarmış tavuk.",
+      "it": "Pollo fritto croccante, leggermente schiacciato e ricoperto di sambal piccante appena pestato.",
+      "ko": "바삭한 프라이드 치킨을 살짝 두드려 갓 빻은 매운 삼발을 얹은 요리."
+    }
+  }
+}

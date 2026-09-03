@@ -1,0 +1,209 @@
+{
+  "id": 382,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Indonezia",
+    "en": "Indonesia",
+    "es": "Indonesia",
+    "fr": "Indonésie",
+    "de": "Indonesien",
+    "pt": "Indonésia",
+    "ru": "Индонезия",
+    "ar": "إندونيسيا",
+    "zh": "印度尼西亚",
+    "ja": "インドネシア",
+    "hi": "इंडोनेशिया",
+    "tr": "Endonezya",
+    "it": "Indonesia",
+    "ko": "인도네시아"
+  },
+  "name": {
+    "ro": "Nasi Uduk (Orez cu Cocos Aromat)",
+    "en": "Nasi Uduk (Fragrant Coconut Rice)",
+    "es": "Nasi Uduk (Arroz Aromático de Coco)",
+    "fr": "Nasi Uduk (Riz Parfumé à la Noix de Coco)",
+    "de": "Nasi Uduk (Aromatischer Kokosreis)",
+    "pt": "Nasi Uduk (Arroz de Coco Perfumado)",
+    "ru": "Наси Удук (Ароматный Кокосовый Рис)",
+    "ar": "ناسي أودوك (أرز جوز الهند العطري)",
+    "zh": "纳西乌杜克（香浓椰浆饭）",
+    "ja": "ナシウドゥック（香り豊かなココナッツライス）",
+    "hi": "नासी उदुक (सुगंधित नारियल चावल)",
+    "tr": "Nasi Uduk (Aromatik Hindistan Cevizli Pilav)",
+    "it": "Nasi Uduk (Riso al Cocco Profumato)",
+    "ko": "나시 우둑 (향긋한 코코넛 라이스)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥥", "t": "Fiert în lapte de cocos", "d": "Orezul se fierbe direct în lapte de cocos în loc de apă, absorbind grăsimea și dulceața acestuia." },
+      { "icon": "🌿", "t": "Frunze aromate", "d": "Frunze de pandan, dafin indonezian și lemongrass parfumează orezul în timpul fierberii." },
+      { "icon": "🍛", "t": "Platou variat", "d": "Se servește tradițional cu multiple garnituri: pui, ou, tempeh, sambal și crackers." },
+      { "icon": "🌅", "t": "Mic dejun popular", "d": "Este unul dintre cele mai comune mic-dejunuri de stradă din Jakarta." }
+    ],
+    "en": [
+      { "icon": "🥥", "t": "Cooked in coconut milk", "d": "The rice is cooked directly in coconut milk instead of water, absorbing its fat and sweetness." },
+      { "icon": "🌿", "t": "Aromatic leaves", "d": "Pandan, Indonesian bay leaves and lemongrass perfume the rice as it cooks." },
+      { "icon": "🍛", "t": "Varied platter", "d": "Traditionally served with multiple sides: chicken, egg, tempeh, sambal and crackers." },
+      { "icon": "🌅", "t": "Popular breakfast", "d": "One of the most common street breakfasts in Jakarta." }
+    ],
+    "es": [
+      { "icon": "🥥", "t": "Cocido en leche de coco", "d": "El arroz se cocina directamente en leche de coco en lugar de agua, absorbiendo su grasa y dulzura." },
+      { "icon": "🌿", "t": "Hojas aromáticas", "d": "El pandan, las hojas de laurel indonesio y la citronela perfuman el arroz mientras se cocina." },
+      { "icon": "🍛", "t": "Plato variado", "d": "Se sirve tradicionalmente con múltiples guarniciones: pollo, huevo, tempeh, sambal y galletas." },
+      { "icon": "🌅", "t": "Desayuno popular", "d": "Es uno de los desayunos callejeros más comunes en Yakarta." }
+    ],
+    "fr": [
+      { "icon": "🥥", "t": "Cuit dans du lait de coco", "d": "Le riz est cuit directement dans du lait de coco au lieu de l'eau, absorbant sa graisse et sa douceur." },
+      { "icon": "🌿", "t": "Feuilles aromatiques", "d": "Le pandan, les feuilles de laurier indonésien et la citronnelle parfument le riz pendant la cuisson." },
+      { "icon": "🍛", "t": "Plateau varié", "d": "Traditionnellement servi avec plusieurs accompagnements: poulet, œuf, tempeh, sambal et crackers." },
+      { "icon": "🌅", "t": "Petit-déjeuner populaire", "d": "L'un des petits-déjeuners de rue les plus courants à Jakarta." }
+    ],
+    "de": [
+      { "icon": "🥥", "t": "In Kokosmilch gekocht", "d": "Der Reis wird direkt in Kokosmilch statt in Wasser gekocht und nimmt deren Fett und Süße auf." },
+      { "icon": "🌿", "t": "Aromatische Blätter", "d": "Pandan, indonesische Lorbeerblätter und Zitronengras parfümieren den Reis beim Kochen." },
+      { "icon": "🍛", "t": "Vielfältige Platte", "d": "Traditionell mit mehreren Beilagen serviert: Hähnchen, Ei, Tempeh, Sambal und Cracker." },
+      { "icon": "🌅", "t": "Beliebtes Frühstück", "d": "Eines der häufigsten Straßenfrühstücke in Jakarta." }
+    ],
+    "pt": [
+      { "icon": "🥥", "t": "Cozido em leite de coco", "d": "O arroz é cozido diretamente em leite de coco em vez de água, absorvendo a sua gordura e doçura." },
+      { "icon": "🌿", "t": "Folhas aromáticas", "d": "Pandan, folhas de louro indonésio e capim-limão perfumam o arroz durante o cozimento." },
+      { "icon": "🍛", "t": "Prato variado", "d": "Tradicionalmente servido com múltiplos acompanhamentos: frango, ovo, tempeh, sambal e bolachas." },
+      { "icon": "🌅", "t": "Pequeno-almoço popular", "d": "Um dos pequenos-almoços de rua mais comuns em Jacarta." }
+    ],
+    "ru": [
+      { "icon": "🥥", "t": "Варится в кокосовом молоке", "d": "Рис варится прямо в кокосовом молоке вместо воды, впитывая его жир и сладость." },
+      { "icon": "🌿", "t": "Ароматные листья", "d": "Пандан, индонезийские лавровые листья и лемонграсс ароматизируют рис во время варки." },
+      { "icon": "🍛", "t": "Разнообразная тарелка", "d": "Традиционно подаётся с множеством добавок: курица, яйцо, темпе, самбал и крекеры." },
+      { "icon": "🌅", "t": "Популярный завтрак", "d": "Один из самых распространённых уличных завтраков в Джакарте." }
+    ],
+    "ar": [
+      { "icon": "🥥", "t": "مطهو بحليب جوز الهند", "d": "يُطهى الأرز مباشرة في حليب جوز الهند بدلاً من الماء، فيمتص دهنه وحلاوته." },
+      { "icon": "🌿", "t": "أوراق عطرية", "d": "يُعطّر ورق الباندان وأوراق الغار الإندونيسية وعشب الليمون الأرز أثناء الطهي." },
+      { "icon": "🍛", "t": "طبق متنوع", "d": "يُقدَّم تقليديًا مع أطباق جانبية متعددة: دجاج، بيض، تمبيه، صامبال ومقرمشات." },
+      { "icon": "🌅", "t": "فطور شائع", "d": "من أشهر وجبات الفطور الشعبية في جاكرتا." }
+    ],
+    "zh": [
+      { "icon": "🥥", "t": "椰浆焖煮", "d": "米饭直接用椰浆代替水煮制，吸收其油脂和甜味。" },
+      { "icon": "🌿", "t": "香叶调味", "d": "香兰叶、印尼香叶和香茅在烹煮过程中为米饭增香。" },
+      { "icon": "🍛", "t": "丰盛拼盘", "d": "传统上搭配多种配菜：鸡肉、鸡蛋、天贝、参巴酱和虾片。" },
+      { "icon": "🌅", "t": "热门早餐", "d": "雅加达最常见的街头早餐之一。" }
+    ],
+    "ja": [
+      { "icon": "🥥", "t": "ココナッツミルクで炊く", "d": "米は水の代わりにココナッツミルクで直接炊かれ、その脂肪分と甘みを吸収する。" },
+      { "icon": "🌿", "t": "香り高い葉", "d": "パンダンリーフ、インドネシアのベイリーフ、レモングラスが炊飯中にご飯に香りをつける。" },
+      { "icon": "🍛", "t": "バラエティ豊かな盛り合わせ", "d": "伝統的に鶏肉、卵、テンペ、サンバル、クラッカーなど複数の付け合わせと共に提供される。" },
+      { "icon": "🌅", "t": "人気の朝食", "d": "ジャカルタで最も一般的なストリート朝食の一つ。" }
+    ],
+    "hi": [
+      { "icon": "🥥", "t": "नारियल के दूध में पका", "d": "चावल को पानी की जगह सीधे नारियल के दूध में पकाया जाता है, जिससे यह उसकी चर्बी और मिठास सोख लेता है।" },
+      { "icon": "🌿", "t": "सुगंधित पत्तियां", "d": "पंडन, इंडोनेशियाई तेज पत्ते और लेमनग्रास पकते समय चावल को सुगंधित करते हैं।" },
+      { "icon": "🍛", "t": "विविध थाली", "d": "पारंपरिक रूप से कई साइड डिश के साथ परोसा जाता है: चिकन, अंडा, टेम्पेह, सांबल और क्रैकर्स।" },
+      { "icon": "🌅", "t": "लोकप्रिय नाश्ता", "d": "जकार्ता के सबसे आम स्ट्रीट नाश्तों में से एक।" }
+    ],
+    "tr": [
+      { "icon": "🥥", "t": "Hindistan cevizi sütünde pişirilir", "d": "Pirinç, su yerine doğrudan hindistan cevizi sütünde pişirilerek yağını ve tatlılığını emer." },
+      { "icon": "🌿", "t": "Aromatik yapraklar", "d": "Pandan, Endonezya defne yaprağı ve limon otu pirinci pişerken kokulandırır." },
+      { "icon": "🍛", "t": "Çeşitli tabak", "d": "Geleneksel olarak birden fazla yan yemekle servis edilir: tavuk, yumurta, tempeh, sambal ve krakerler." },
+      { "icon": "🌅", "t": "Popüler kahvaltı", "d": "Cakarta'nın en yaygın sokak kahvaltılarından biri." }
+    ],
+    "it": [
+      { "icon": "🥥", "t": "Cotto nel latte di cocco", "d": "Il riso viene cotto direttamente nel latte di cocco invece che nell'acqua, assorbendone il grasso e la dolcezza." },
+      { "icon": "🌿", "t": "Foglie aromatiche", "d": "Pandan, foglie di alloro indonesiano e citronella profumano il riso durante la cottura." },
+      { "icon": "🍛", "t": "Piatto variato", "d": "Tradizionalmente servito con più contorni: pollo, uovo, tempeh, sambal e cracker." },
+      { "icon": "🌅", "t": "Colazione popolare", "d": "Una delle colazioni di strada più comuni a Giacarta." }
+    ],
+    "ko": [
+      { "icon": "🥥", "t": "코코넛 밀크로 조리", "d": "쌀을 물 대신 코코넛 밀크로 직접 지어 그 지방과 단맛을 흡수한다." },
+      { "icon": "🌿", "t": "향긋한 잎", "d": "판단 잎, 인도네시아 월계수 잎, 레몬그라스가 밥이 지어지는 동안 향을 더한다." },
+      { "icon": "🍛", "t": "다양한 상차림", "d": "전통적으로 닭고기, 달걀, 템페, 삼발, 크래커 등 여러 곁들임과 함께 제공된다." },
+      { "icon": "🌅", "t": "인기 있는 아침 식사", "d": "자카르타에서 가장 흔한 길거리 아침 식사 중 하나." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g orez cu bob lung", "400ml lapte de cocos", "200ml apă", "2 frunze de pandan, înnodate", "2 frunze de dafin indonezian", "1 tulpină de lemongrass, zdrobită", "2 căței de usturoi, zdrobiți", "1 șalot, tăiat felii", "sare după gust", "ceapă prăjită crocantă, pentru servire", "castraveți feliați, pentru servire", "sambal, pentru servire"],
+    "en": ["500g long-grain rice", "400ml coconut milk", "200ml water", "2 pandan leaves, knotted", "2 Indonesian bay leaves", "1 lemongrass stalk, bruised", "2 garlic cloves, crushed", "1 shallot, sliced", "salt to taste", "crispy fried shallots, for serving", "sliced cucumber, for serving", "sambal, for serving"],
+    "es": ["500g de arroz de grano largo", "400ml de leche de coco", "200ml de agua", "2 hojas de pandan, anudadas", "2 hojas de laurel indonesio", "1 tallo de citronela, machacado", "2 dientes de ajo, aplastados", "1 chalota, en rodajas", "sal al gusto", "chalotas fritas crujientes, para servir", "pepino en rodajas, para servir", "sambal, para servir"],
+    "fr": ["500g de riz long grain", "400ml de lait de coco", "200ml d'eau", "2 feuilles de pandan, nouées", "2 feuilles de laurier indonésien", "1 tige de citronnelle, écrasée", "2 gousses d'ail, écrasées", "1 échalote, émincée", "sel selon le goût", "échalotes frites croustillantes, pour servir", "concombre en tranches, pour servir", "sambal, pour servir"],
+    "de": ["500g Langkornreis", "400ml Kokosmilch", "200ml Wasser", "2 Pandanblätter, verknotet", "2 indonesische Lorbeerblätter", "1 Zitronengrasstange, angequetscht", "2 Knoblauchzehen, zerdrückt", "1 Schalotte, in Scheiben", "Salz nach Geschmack", "knusprig gebratene Schalotten, zum Servieren", "Gurkenscheiben, zum Servieren", "Sambal, zum Servieren"],
+    "pt": ["500g de arroz de grão longo", "400ml de leite de coco", "200ml de água", "2 folhas de pandan, atadas", "2 folhas de louro indonésio", "1 talo de capim-limão, amassado", "2 dentes de alho, esmagados", "1 chalota, fatiada", "sal a gosto", "chalotas fritas crocantes, para servir", "pepino fatiado, para servir", "sambal, para servir"],
+    "ru": ["500г длиннозёрного риса", "400мл кокосового молока", "200мл воды", "2 листа пандана, завязанных узлом", "2 индонезийских лавровых листа", "1 стебель лемонграсса, раздавленный", "2 зубчика чеснока, раздавленных", "1 лук-шалот, нарезанный", "соль по вкусу", "хрустящий жареный лук-шалот, для подачи", "нарезанный огурец, для подачи", "самбал, для подачи"],
+    "ar": ["500 غرام أرز طويل الحبة", "400 مل حليب جوز الهند", "200 مل ماء", "ورقتا باندان، معقودتان", "ورقتا غار إندونيسيتان", "عود ليمون عشبي واحد، مهروس", "فصا ثوم، مهروسان", "بصلة صغيرة واحدة (شالوت)، مقطّعة شرائح", "ملح حسب الرغبة", "بصل مقلي مقرمش، للتقديم", "خيار مقطع شرائح، للتقديم", "صامبال، للتقديم"],
+    "zh": ["500克长粒米", "400毫升椰浆", "200毫升水", "2片香兰叶，打结", "2片印尼香叶", "1根香茅，拍碎", "2瓣大蒜，拍碎", "1个红葱头，切片", "盐适量", "酥脆炸红葱头，配食用", "黄瓜片，配食用", "参巴酱，配食用"],
+    "ja": ["長粒米500g", "ココナッツミルク400ml", "水200ml", "パンダンリーフ2枚（結ぶ）", "インドネシアのベイリーフ2枚", "レモングラス1本（つぶす）", "にんにく2片（つぶす）", "エシャロット1個（薄切り）", "塩 適量", "カリカリの揚げエシャロット（添える用）", "キュウリのスライス（添える用）", "サンバル（添える用）"],
+    "hi": ["500 ग्राम लंबे दाने वाला चावल", "400 मिली नारियल का दूध", "200 मिली पानी", "2 पंडन पत्ते, गांठ बांधे", "2 इंडोनेशियाई तेज पत्ते", "1 लेमनग्रास डंठल, कुचला हुआ", "2 लहसुन की कलियाँ, कुचली हुई", "1 शालोट, कटा", "स्वादानुसार नमक", "कुरकुरे तले प्याज़, परोसने के लिए", "कटा खीरा, परोसने के लिए", "सांबल, परोसने के लिए"],
+    "tr": ["500g uzun taneli pirinç", "400ml hindistan cevizi sütü", "200ml su", "2 pandan yaprağı, düğümlenmiş", "2 Endonezya defne yaprağı", "1 sap limon otu, ezilmiş", "2 diş sarımsak, ezilmiş", "1 arpacık soğan, dilimlenmiş", "tuz, tadına göre", "servis için çıtır kızarmış soğan", "servis için dilimlenmiş salatalık", "servis için sambal"],
+    "it": ["500g di riso a grana lunga", "400ml di latte di cocco", "200ml d'acqua", "2 foglie di pandan, annodate", "2 foglie di alloro indonesiano", "1 gambo di citronella, schiacciato", "2 spicchi d'aglio, schiacciati", "1 scalogno, a fette", "sale q.b.", "scalogno fritto croccante, per servire", "cetriolo a fette, per servire", "sambal, per servire"],
+    "ko": ["장립종 쌀 500g", "코코넛 밀크 400ml", "물 200ml", "판단 잎 2장, 매듭지은 것", "인도네시아 월계수 잎 2장", "레몬그라스 1대, 으깬 것", "마늘 2쪽, 으깬 것", "샬롯 1개, 슬라이스", "소금 약간", "바삭한 튀긴 샬롯, 곁들임용", "오이 슬라이스, 곁들임용", "삼발, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": ["SPALĂ OREZUL: Clătește orezul sub apă rece de câteva ori, până apa devine limpede, apoi scurge-l bine. AMESTECĂ LICHIDELE: Combină laptele de cocos cu apa într-o oală, adaugă sare după gust. ADAUGĂ AROMELE: Pune frunzele de pandan, frunzele de dafin, lemongrass, usturoiul zdrobit și șalotul feliat în lichid. FIERBE LICHIDUL: Adu amestecul la fierbere ușoară, amestecând să nu se prindă laptele de cocos de fund. ADAUGĂ OREZUL: Pune orezul spălat în lichidul clocotit, amestecă o dată și acoperă oala. GĂTEȘTE LA FOC MIC: Lasă orezul să fiarbă la foc mic 15-18 minute, fără a ridica capacul, până lichidul e absorbit complet. LASĂ LA ABURI: Stinge focul și lasă orezul acoperit încă 10 minute, să se aburească. AFÂNEAZĂ: Scoate frunzele și tulpina de lemongrass, apoi afânează orezul ușor cu o furculiță. SERVEȘTE: Servește cald, alături de garnituri precum pui, ou, tempeh, sambal și ceapă prăjită."],
+    "en": ["RINSE THE RICE: Rinse the rice under cold water several times, until the water runs clear, then drain well. MIX THE LIQUIDS: Combine the coconut milk with the water in a pot, add salt to taste. ADD AROMATICS: Add the pandan leaves, bay leaves, lemongrass, crushed garlic and sliced shallot to the liquid. BRING TO A SIMMER: Bring the mixture to a gentle simmer, stirring so the coconut milk doesn't catch at the bottom. ADD THE RICE: Add the rinsed rice to the simmering liquid, stir once and cover the pot. COOK OVER LOW HEAT: Let the rice cook over low heat 15-18 minutes, without lifting the lid, until the liquid is fully absorbed. LET IT STEAM: Turn off the heat and let the rice sit covered another 10 minutes, to steam. FLUFF: Remove the leaves and lemongrass stalk, then fluff the rice gently with a fork. SERVE: Serve warm, alongside sides such as chicken, egg, tempeh, sambal and fried shallots."],
+    "es": ["ENJUAGA EL ARROZ: Enjuaga el arroz bajo agua fría varias veces, hasta que el agua salga clara, luego escúrrelo bien. MEZCLA LOS LÍQUIDOS: Combina la leche de coco con el agua en una olla, añade sal al gusto. AÑADE LOS AROMÁTICOS: Añade las hojas de pandan, las hojas de laurel, la citronela, el ajo aplastado y la chalota en rodajas al líquido. LLEVA A EBULLICIÓN SUAVE: Lleva la mezcla a fuego lento, removiendo para que la leche de coco no se pegue al fondo. AÑADE EL ARROZ: Añade el arroz enjuagado al líquido hirviendo a fuego lento, remueve una vez y tapa la olla. COCINA A FUEGO LENTO: Deja que el arroz se cocine a fuego lento 15-18 minutos, sin levantar la tapa, hasta que el líquido se absorba completamente. DEJA REPOSAR AL VAPOR: Apaga el fuego y deja el arroz tapado otros 10 minutos, para que se termine de cocer al vapor. AHUECA: Retira las hojas y el tallo de citronela, luego ahueca el arroz suavemente con un tenedor. SIRVE: Sirve caliente, junto con guarniciones como pollo, huevo, tempeh, sambal y chalotas fritas."],
+    "fr": ["RINCEZ LE RIZ: Rincez le riz à l'eau froide plusieurs fois, jusqu'à ce que l'eau soit claire, puis égouttez-le bien. MÉLANGEZ LES LIQUIDES: Combinez le lait de coco avec l'eau dans une marmite, ajoutez du sel selon le goût. AJOUTEZ LES AROMATES: Ajoutez les feuilles de pandan, les feuilles de laurier, la citronnelle, l'ail écrasé et l'échalote émincée au liquide. PORTEZ À FRÉMISSEMENT: Portez le mélange à léger frémissement, en remuant pour que le lait de coco n'accroche pas au fond. AJOUTEZ LE RIZ: Ajoutez le riz rincé au liquide frémissant, remuez une fois et couvrez la marmite. CUISEZ À FEU DOUX: Laissez le riz cuire à feu doux 15-18 minutes, sans soulever le couvercle, jusqu'à ce que le liquide soit entièrement absorbé. LAISSEZ VAPORISER: Éteignez le feu et laissez le riz couvert encore 10 minutes, pour qu'il finisse de cuire à la vapeur. AÉREZ: Retirez les feuilles et la tige de citronnelle, puis aérez le riz doucement à la fourchette. SERVEZ: Servez chaud, avec des accompagnements comme du poulet, œuf, tempeh, sambal et échalotes frites."],
+    "de": ["REIS ABSPÜLEN: Den Reis mehrmals unter kaltem Wasser abspülen, bis das Wasser klar wird, dann gut abtropfen lassen. FLÜSSIGKEITEN MISCHEN: Die Kokosmilch mit dem Wasser in einem Topf vermischen, nach Geschmack salzen. AROMEN HINZUFÜGEN: Die Pandanblätter, Lorbeerblätter, Zitronengras, den zerdrückten Knoblauch und die geschnittene Schalotte zur Flüssigkeit geben. LEICHT AUFKOCHEN: Die Mischung leicht köcheln lassen, dabei rühren, damit die Kokosmilch nicht am Boden ansetzt. REIS HINZUFÜGEN: Den abgespülten Reis zur köchelnden Flüssigkeit geben, einmal umrühren und den Topf abdecken. BEI NIEDRIGER HITZE GAREN: Den Reis bei niedriger Hitze 15-18 Minuten garen, ohne den Deckel anzuheben, bis die Flüssigkeit vollständig aufgenommen ist. DAMPFEN LASSEN: Den Herd ausschalten und den Reis abgedeckt weitere 10 Minuten stehen lassen, zum Nachdämpfen. AUFLOCKERN: Die Blätter und den Zitronengrasstiel entfernen, dann den Reis vorsichtig mit einer Gabel auflockern. SERVIEREN: Warm servieren, mit Beilagen wie Hähnchen, Ei, Tempeh, Sambal und gebratenen Schalotten."],
+    "pt": ["ENXAGUE O ARROZ: Enxague o arroz em água fria várias vezes, até sair clara, depois escorra bem. MISTURE OS LÍQUIDOS: Combine o leite de coco com a água numa panela, adicione sal a gosto. ADICIONE OS AROMÁTICOS: Junte as folhas de pandan, as folhas de louro, o capim-limão, o alho esmagado e a chalota fatiada ao líquido. LEVE A FERVER SUAVEMENTE: Leve a mistura a ferver suavemente, mexendo para o leite de coco não pegar no fundo. ADICIONE O ARROZ: Junte o arroz enxaguado ao líquido a ferver, mexa uma vez e tape a panela. COZINHE EM FOGO BAIXO: Deixe o arroz cozinhar em fogo baixo por 15-18 minutos, sem levantar a tampa, até o líquido ser totalmente absorvido. DEIXE VAPORIZAR: Desligue o fogo e deixe o arroz tapado mais 10 minutos, para terminar de cozer no vapor. SOLTE: Retire as folhas e o talo de capim-limão, depois solte o arroz suavemente com um garfo. SIRVA: Sirva quente, junto com acompanhamentos como frango, ovo, tempeh, sambal e chalotas fritas."],
+    "ru": ["ПРОМОЙТЕ РИС: Промойте рис несколько раз под холодной водой, пока вода не станет прозрачной, затем хорошо слейте. СМЕШАЙТЕ ЖИДКОСТИ: Смешайте кокосовое молоко с водой в кастрюле, добавьте соль по вкусу. ДОБАВЬТЕ АРОМАТИКУ: Добавьте листья пандана, лавровые листья, лемонграсс, раздавленный чеснок и нарезанный лук-шалот в жидкость. ДОВЕДИТЕ ДО ЛЁГКОГО КИПЕНИЯ: Доведите смесь до лёгкого кипения, помешивая, чтобы кокосовое молоко не пригорело. ДОБАВЬТЕ РИС: Добавьте промытый рис в кипящую жидкость, перемешайте один раз и накройте кастрюлю. ГОТОВЬТЕ НА СЛАБОМ ОГНЕ: Дайте рису вариться на слабом огне 15-18 минут, не поднимая крышку, пока жидкость полностью не впитается. ДАЙТЕ ПРОПАРИТЬСЯ: Выключите огонь и дайте рису постоять под крышкой ещё 10 минут, для допаривания. РАЗРЫХЛИТЕ: Удалите листья и стебель лемонграсса, затем аккуратно разрыхлите рис вилкой. ПОДАВАЙТЕ: Подавайте тёплым, с гарнирами вроде курицы, яйца, темпе, самбала и жареного лука-шалота."],
+    "ar": ["اشطفي الأرز: اشطفي الأرز بالماء البارد عدة مرات حتى يصبح الماء صافيًا، ثم صفّيه جيدًا. امزجي السوائل: امزجي حليب جوز الهند مع الماء في قدر، أضيفي الملح حسب الرغبة. أضيفي النكهات: أضيفي ورق الباندان وأوراق الغار وعشب الليمون والثوم المهروس والشالوت المقطع إلى السائل. اتركيه يغلي برفق: اتركي الخليط يغلي برفق مع التحريك حتى لا يلتصق حليب جوز الهند بالقاع. أضيفي الأرز: أضيفي الأرز المشطوف إلى السائل المغلي، قلّبي مرة واحدة وغطّي القدر. اطهي على نار هادئة: اتركي الأرز يطهو على نار هادئة 15-18 دقيقة دون رفع الغطاء حتى يُمتص السائل تمامًا. اتركيه يتبخر: أطفئي النار واتركي الأرز مغطى 10 دقائق إضافية ليكتمل بالبخار. فكّكي الأرز: أزيلي الأوراق وعود الليمون العشبي، ثم فكّكي الأرز برفق بشوكة. قدّمي: قدّميه دافئًا مع أطباق جانبية مثل الدجاج والبيض والتمبيه والصامبال والبصل المقلي."],
+    "zh": ["淘米：将大米在冷水下淘洗数次，直至水变清澈，然后沥干。混合液体：在锅中将椰浆与水混合，加盐调味。加入香料：将香兰叶、香叶、香茅、拍碎的大蒜和切片的红葱头加入液体中。小火煮沸：将混合物小火煮至微沸，搅拌以防椰浆粘锅底。加入米：将淘好的米加入沸腾的液体中，搅拌一次并盖上锅盖。小火焖煮：小火焖煮米饭15-18分钟，不要揭盖，直至液体完全吸收。焖蒸：关火，盖着盖子再焖10分钟。松饭：取出香叶和香茅梗，然后用叉子轻轻拨松米饭。上桌：趁热食用，搭配鸡肉、鸡蛋、天贝、参巴酱和炸红葱头等配菜。"],
+    "ja": ["米をすすぐ：米を数回冷水ですすぎ、水が透明になったらよく水気を切る。液体を混ぜる：鍋にココナッツミルクと水を合わせ、塩で味を調える。香味を加える：パンダンリーフ、ベイリーフ、レモングラス、つぶしたにんにく、薄切りのエシャロットを液体に加える。軽く煮立てる：混合物を軽く煮立て、ココナッツミルクが底で焦げないようにかき混ぜる。米を加える：すすいだ米を煮立った液体に加え、一度混ぜて鍋に蓋をする。弱火で炊く：蓋を開けずに弱火で15〜18分、液体が完全に吸収されるまで炊く。蒸らす：火を止め、さらに10分間蓋をしたまま蒸らす。ほぐす：葉とレモングラスの茎を取り除き、フォークで優しくご飯をほぐす。提供する：鶏肉、卵、テンペ、サンバル、揚げエシャロットなどの付け合わせと共に温かいまま提供する。"],
+    "hi": ["चावल धोएं: चावल को ठंडे पानी में कई बार धोएं, जब तक पानी साफ न हो जाए, फिर अच्छी तरह छान लें। तरल मिलाएं: बर्तन में नारियल के दूध को पानी के साथ मिलाएं, स्वादानुसार नमक डालें। सुगंध डालें: पंडन पत्ते, तेज पत्ते, लेमनग्रास, कुचला लहसुन और कटा शालोट तरल में डालें। हल्का उबाल लाएं: मिश्रण को हल्का उबाल लाएं, हिलाते रहें ताकि नारियल का दूध तले में न चिपके। चावल डालें: धुले चावल को उबलते तरल में डालें, एक बार हिलाएं और बर्तन ढक दें। धीमी आंच पर पकाएं: चावल को ढक्कन उठाए बिना धीमी आंच पर 15-18 मिनट पकने दें, जब तक तरल पूरी तरह सोख न लिया जाए। भाप में रखें: आंच बंद करें और चावल को ढककर 10 मिनट और रहने दें, भाप में पकने के लिए। ढीला करें: पत्तियां और लेमनग्रास डंठल हटाएं, फिर कांटे से चावल को हल्के से ढीला करें। परोसें: गरमागरम परोसें, चिकन, अंडा, टेम्पेह, सांबल और तले प्याज़ जैसे साइड डिश के साथ।"],
+    "tr": ["PİRİNCİ YIKAYIN: Pirinci suyu duru çıkana kadar birkaç kez soğuk suyla yıkayın, sonra iyice süzün. SIVILARI KARIŞTIRIN: Hindistan cevizi sütünü suyla bir tencerede birleştirin, tadına göre tuz ekleyin. AROMATİKLERİ EKLEYİN: Pandan yapraklarını, defne yapraklarını, limon otunu, ezilmiş sarımsağı ve dilimlenmiş arpacık soğanı sıvıya ekleyin. HAFİFÇE KAYNATIN: Karışımı hafifçe kaynatın, hindistan cevizi sütünün dibe yapışmaması için karıştırın. PİRİNCİ EKLEYİN: Yıkanmış pirinci kaynayan sıvıya ekleyin, bir kez karıştırın ve tencereyi kapatın. KISIK ATEŞTE PİŞİRİN: Kapağı kaldırmadan pirinci kısık ateşte 15-18 dakika, sıvı tamamen emilene kadar pişirin. BUHARLANMAYA BIRAKIN: Ocağı kapatın ve pirinci kapalı halde 10 dakika daha buharlanmaya bırakın. KABARTIN: Yaprakları ve limon otu sapını çıkarın, sonra pirinci çatalla hafifçe kabartın. SERVİS YAPIN: Tavuk, yumurta, tempeh, sambal ve kızarmış soğan gibi yan yemeklerle sıcak servis edin."],
+    "it": ["SCIACQUA IL RISO: Sciacqua il riso sotto acqua fredda più volte, finché l'acqua non esce limpida, poi scolalo bene. MESCOLA I LIQUIDI: Unisci il latte di cocco con l'acqua in una pentola, aggiungi sale a piacere. AGGIUNGI GLI AROMI: Aggiungi le foglie di pandan, le foglie di alloro, la citronella, l'aglio schiacciato e lo scalogno a fette al liquido. PORTA A LEGGERO BOLLORE: Porta il composto a leggero bollore, mescolando affinché il latte di cocco non si attacchi sul fondo. AGGIUNGI IL RISO: Aggiungi il riso sciacquato al liquido bollente, mescola una volta e copri la pentola. CUOCI A FUOCO BASSO: Lascia cuocere il riso a fuoco basso 15-18 minuti, senza sollevare il coperchio, finché il liquido non è completamente assorbito. LASCIA VAPORIZZARE: Spegni il fuoco e lascia il riso coperto altri 10 minuti, per completare la cottura a vapore. SGRANA: Rimuovi le foglie e il gambo di citronella, poi sgrana delicatamente il riso con una forchetta. SERVI: Servi caldo, con contorni come pollo, uovo, tempeh, sambal e scalogno fritto."],
+    "ko": ["쌀 씻기: 쌀을 물이 맑아질 때까지 찬물에 여러 번 헹군 뒤 물기를 잘 뺀다. 액체 섞기: 냄비에 코코넛 밀크와 물을 섞고 소금으로 간한다. 향신료 넣기: 판단 잎, 월계수 잎, 레몬그라스, 으깬 마늘, 슬라이스한 샬롯을 액체에 넣는다. 살짝 끓이기: 코코넛 밀크가 바닥에 눌어붙지 않도록 저어가며 혼합물을 살짝 끓인다. 쌀 넣기: 씻은 쌀을 끓는 액체에 넣고 한 번 저은 뒤 냄비 뚜껑을 덮는다. 약불로 조리하기: 뚜껑을 열지 않고 약불에서 15-18분간, 액체가 완전히 흡수될 때까지 익힌다. 뜸 들이기: 불을 끄고 뚜껑을 덮은 채 10분간 더 두어 뜸을 들인다. 풀어주기: 잎과 레몬그라스 줄기를 제거한 뒤 포크로 밥을 살살 풀어준다. 제공하기: 닭고기, 달걀, 템페, 삼발, 튀긴 샬롯 등의 곁들임과 함께 따뜻하게 제공한다."]
+  },
+  "originText": {
+    "ro": "Nasi uduk este orezul aromat cu cocos ce definește micul dejun de stradă din Jakarta, o tradiție care se crede că a apărut din adaptarea betawi (populația indigenă a orașului) a orezului cu cocos folosit inițial la ocazii festive, transformat treptat într-un preparat de zi cu zi. Numele \"uduk\" se referă chiar la tehnica de gătit orezul în lapte de cocos în loc de apă simplă.\n\nCeea ce distinge nasi uduk de alte orezuri cu cocos din regiune, precum nasi lemak din Malaezia, este platoul divers de garnituri care îl însoțește — de la tempeh orek dulce-picant la pui fript, ouă și crackers de crevete. Vânzătorii de stradă din Jakarta îl servesc dis-de-dimineață, înfășurat în frunze de banană sau hârtie, ca gustare rapidă și consistentă înainte de o zi de muncă.",
+    "en": "Nasi uduk is the fragrant coconut rice that defines Jakarta's street breakfast, a tradition believed to have emerged from the Betawi (the city's indigenous population) adaptation of coconut rice originally used for festive occasions, gradually transformed into an everyday dish. The name \"uduk\" refers to the very technique of cooking rice in coconut milk instead of plain water.\n\nWhat distinguishes nasi uduk from other coconut rice dishes in the region, like Malaysia's nasi lemak, is the diverse platter of sides that accompanies it — from sweet-spicy tempeh orek to fried chicken, eggs and prawn crackers. Jakarta's street vendors serve it early in the morning, wrapped in banana leaves or paper, as a quick, filling snack before a day of work.",
+    "es": "El nasi uduk es el arroz aromático de coco que define el desayuno callejero de Yakarta, una tradición que se cree surgió de la adaptación betawi (la población indígena de la ciudad) del arroz de coco originalmente usado en ocasiones festivas, transformado gradualmente en un plato cotidiano. El nombre \"uduk\" se refiere precisamente a la técnica de cocinar el arroz en leche de coco en lugar de agua simple.\n\nLo que distingue al nasi uduk de otros arroces de coco de la región, como el nasi lemak de Malasia, es el diverso plato de guarniciones que lo acompaña — desde el tempeh orek dulce-picante hasta el pollo frito, huevos y galletas de camarón. Los vendedores callejeros de Yakarta lo sirven a primera hora de la mañana, envuelto en hojas de plátano o papel, como tentempié rápido y saciante antes de un día de trabajo.",
+    "fr": "Le nasi uduk est le riz parfumé à la noix de coco qui définit le petit-déjeuner de rue à Jakarta, une tradition qui serait née de l'adaptation betawi (la population indigène de la ville) du riz au coco initialement utilisé lors d'occasions festives, transformé progressivement en plat quotidien. Le nom \"uduk\" se réfère précisément à la technique de cuisson du riz dans du lait de coco plutôt que dans de l'eau simple.\n\nCe qui distingue le nasi uduk d'autres riz au coco de la région, comme le nasi lemak malaisien, c'est le plateau varié d'accompagnements qui l'escorte — du tempeh orek doux-épicé au poulet frit, œufs et crackers de crevette. Les vendeurs de rue de Jakarta le servent tôt le matin, enveloppé dans des feuilles de bananier ou du papier, comme collation rapide et rassasiante avant une journée de travail.",
+    "de": "Nasi Uduk ist der aromatische Kokosreis, der das Straßenfrühstück in Jakarta prägt, eine Tradition, von der man annimmt, dass sie aus der Betawi-Anpassung (der indigenen Bevölkerung der Stadt) von ursprünglich für festliche Anlässe verwendetem Kokosreis entstand, der sich allmählich zu einem Alltagsgericht wandelte. Der Name \"Uduk\" bezieht sich genau auf die Technik, Reis in Kokosmilch statt in einfachem Wasser zu kochen.\n\nWas Nasi Uduk von anderen Kokosreisgerichten der Region wie dem malaysischen Nasi Lemak unterscheidet, ist die vielfältige Beilagenplatte, die es begleitet — vom süß-scharfen Tempeh Orek bis zu Brathähnchen, Eiern und Krabbenchips. Jakartas Straßenhändler servieren es früh am Morgen, in Bananenblätter oder Papier gewickelt, als schneller, sättigender Snack vor einem Arbeitstag.",
+    "pt": "O nasi uduk é o arroz de coco perfumado que define o pequeno-almoço de rua em Jacarta, uma tradição que se acredita ter surgido da adaptação betawi (a população indígena da cidade) do arroz de coco originalmente usado em ocasiões festivas, gradualmente transformado num prato do dia a dia. O nome \"uduk\" refere-se precisamente à técnica de cozinhar o arroz em leite de coco em vez de água simples.\n\nO que distingue o nasi uduk de outros pratos de arroz de coco da região, como o nasi lemak da Malásia, é o diverso prato de acompanhamentos que o acompanha — do tempeh orek doce-picante ao frango frito, ovos e bolachas de camarão. Os vendedores de rua de Jacarta servem-no de manhã cedo, embrulhado em folhas de bananeira ou papel, como um lanche rápido e substancial antes de um dia de trabalho.",
+    "ru": "Наси удук — это ароматный кокосовый рис, который определяет уличный завтрак в Джакарте, традиция, которая, как полагают, возникла из бетави-адаптации (коренного населения города) кокосового риса, изначально использовавшегося для праздничных случаев, постепенно превратившегося в повседневное блюдо. Название \"удук\" относится именно к технике варки риса в кокосовом молоке вместо простой воды.\n\nЧто отличает наси удук от других кокосовых рисовых блюд региона, таких как малайзийский наси лемак, так это разнообразная тарелка гарниров, которая его сопровождает — от сладко-острого темпе орек до жареной курицы, яиц и креветочных чипсов. Уличные торговцы Джакарты подают его рано утром, завёрнутым в банановые листья или бумагу, как быстрый, сытный перекус перед рабочим днём.",
+    "ar": "الناسي أودوك هو أرز جوز الهند العطري الذي يميز فطور الشارع في جاكرتا، وهو تقليد يُعتقد أنه نشأ من تكييف شعب البيتاوي (السكان الأصليين للمدينة) لأرز جوز الهند المستخدم أصلاً في المناسبات الاحتفالية، ثم تحول تدريجيًا إلى طبق يومي. يشير اسم \"أودوك\" تحديدًا إلى تقنية طهي الأرز في حليب جوز الهند بدلاً من الماء العادي.\n\nما يميز الناسي أودوك عن أطباق أرز جوز الهند الأخرى في المنطقة، مثل الناسي ليماك الماليزي، هو طبق الإضافات المتنوع المرافق له — من التمبيه أوريك الحلو الحار إلى الدجاج المقلي والبيض ومقرمشات الروبيان. يقدّمه باعة الشوارع في جاكرتا في الصباح الباكر، ملفوفًا بأوراق الموز أو الورق، كوجبة خفيفة سريعة ومشبعة قبل يوم عمل.",
+    "zh": "纳西乌杜克是定义雅加达街头早餐的香浓椰浆饭，据信这一传统源自贝塔维人（该市原住民）对最初用于节庆场合的椰浆饭的改良，逐渐演变为日常菜肴。「乌杜克」这个名字正是指用椰浆而非清水煮饭的这项技艺。\n\n与该地区其他椰浆饭菜肴（如马来西亚的椰浆饭 nasi lemak）不同的是，纳西乌杜克配以丰富多样的配菜拼盘——从甜辣天贝到炸鸡、鸡蛋和虾片。雅加达的街头小贩清晨用香蕉叶或纸包裹售卖，作为工作一天前快捷又饱腹的小吃。",
+    "ja": "ナシウドゥックは、ジャカルタのストリート朝食を象徴する香り豊かなココナッツライスであり、この伝統は、もともと祝いの席で使われていたココナッツライスをこの街の先住民であるブタウィ族が独自に取り入れ、次第に日常の料理へと変化させたことから生まれたと考えられている。「ウドゥック」という名前は、まさに米を普通の水ではなくココナッツミルクで炊く技法を指している。\n\nナシウドゥックをマレーシアのナシレマなど地域の他のココナッツライス料理と区別するのは、それに添えられる多彩な副菜の盛り合わせである——甘辛いテンペオレックから、揚げ鶏肉、卵、エビせんべいまで。ジャカルタの屋台商人は早朝、バナナの葉や紙に包んで、一日の仕事の前の手早く満足感のある軽食として提供する。",
+    "hi": "नासी उदुक वह सुगंधित नारियल चावल है जो जकार्ता के स्ट्रीट नाश्ते को परिभाषित करता है, एक परंपरा जिसके बारे में माना जाता है कि यह बेटावी (शहर की मूल जनसंख्या) द्वारा मूल रूप से उत्सव के अवसरों के लिए इस्तेमाल किए जाने वाले नारियल चावल के अनुकूलन से उभरी, जो धीरे-धीरे रोज़मर्रा के व्यंजन में बदल गया। \"उदुक\" नाम सीधे तौर पर सादे पानी के बजाय नारियल के दूध में चावल पकाने की तकनीक को दर्शाता है।\n\nजो चीज़ नासी उदुक को क्षेत्र के अन्य नारियल चावल व्यंजनों, जैसे मलेशिया के नासी लेमक से अलग करती है, वह इसके साथ आने वाली विविध साइड डिश की थाली है — मीठे-तीखे टेम्पेह ओरेक से लेकर तला चिकन, अंडे और झींगा क्रैकर तक। जकार्ता के स्ट्रीट विक्रेता इसे सुबह-सुबह केले के पत्तों या कागज़ में लपेटकर परोसते हैं, काम के दिन से पहले एक त्वरित, पेट भरने वाले नाश्ते के रूप में।",
+    "tr": "Nasi uduk, Cakarta'nın sokak kahvaltısını tanımlayan aromatik hindistan cevizli pilavdır; bu geleneğin, aslen festival vesileleri için kullanılan hindistan cevizli pirincin Betawi (şehrin yerli halkı) tarafından uyarlanmasından doğduğuna ve zamanla günlük bir yemeğe dönüştüğüne inanılır. \"Uduk\" adı, tam olarak pirinci düz su yerine hindistan cevizi sütünde pişirme tekniğine atıfta bulunur.\n\nNasi uduk'u bölgedeki diğer hindistan cevizli pirinç yemeklerinden, örneğin Malezya'nın nasi lemak'ından ayıran şey, ona eşlik eden çeşitli yan yemek tabağıdır — tatlı-acı tempeh orek'ten kızarmış tavuğa, yumurtaya ve karides cipsine kadar. Cakarta'nın sokak satıcıları bunu sabahın erken saatlerinde, muz yaprağına veya kağıda sarılı şekilde, bir iş gününden önce hızlı ve doyurucu bir atıştırmalık olarak sunar.",
+    "it": "Il nasi uduk è il riso al cocco profumato che definisce la colazione di strada a Giacarta, una tradizione che si ritiene sia nata dall'adattamento betawi (la popolazione indigena della città) del riso al cocco originariamente usato per occasioni festive, trasformato gradualmente in un piatto quotidiano. Il nome \"uduk\" si riferisce proprio alla tecnica di cuocere il riso nel latte di cocco invece che nell'acqua semplice.\n\nCiò che distingue il nasi uduk da altri piatti di riso al cocco della regione, come il nasi lemak malese, è il variegato piatto di contorni che lo accompagna — dal tempeh orek dolce-piccante al pollo fritto, uova e cracker di gamberetti. I venditori ambulanti di Giacarta lo servono di prima mattina, avvolto in foglie di banano o carta, come spuntino rapido e sostanzioso prima di una giornata di lavoro.",
+    "ko": "나시 우둑은 자카르타의 길거리 아침 식사를 상징하는 향긋한 코코넛 라이스로, 원래 축제 때 사용되던 코코넛 라이스를 이 도시의 원주민인 브타위족이 변형하여 점차 일상적인 요리로 발전시킨 것으로 여겨진다. \"우둑\"이라는 이름은 바로 맹물이 아닌 코코넛 밀크로 밥을 짓는 기법을 가리킨다.\n\n나시 우둑을 말레이시아의 나시 르막 같은 이 지역의 다른 코코넛 라이스 요리와 구별 짓는 것은 함께 나오는 다양한 곁들임 요리들이다 — 달콤 매콤한 템페 오렉부터 프라이드 치킨, 달걀, 새우 크래커까지. 자카르타의 길거리 상인들은 이른 아침 바나나 잎이나 종이에 싸서 하루 일과를 시작하기 전 빠르고 든든한 간식으로 판매한다."
+  },
+  "meta": {
+    "time": 35,
+    "costRon": 16,
+    "tags": ["vegetarian", "budget", "family"],
+    "desc": {
+      "ro": "Orez indonezian aromat cu lapte de cocos, frunze de pandan și lemongrass.",
+      "en": "Fragrant Indonesian rice cooked in coconut milk with pandan and lemongrass.",
+      "es": "Arroz indonesio aromático cocinado en leche de coco con pandan y citronela.",
+      "fr": "Riz indonésien parfumé cuit dans du lait de coco avec pandan et citronnelle.",
+      "de": "Duftender indonesischer Reis, gekocht in Kokosmilch mit Pandan und Zitronengras.",
+      "pt": "Arroz indonésio perfumado cozido em leite de coco com pandan e capim-limão.",
+      "ru": "Ароматный индонезийский рис, сваренный в кокосовом молоке с панданом и лемонграссом.",
+      "ar": "أرز إندونيسي عطري مطهو بحليب جوز الهند مع الباندان وعشب الليمون.",
+      "zh": "以椰浆搭配香兰叶和香茅烹制的香浓印尼米饭。",
+      "ja": "パンダンとレモングラスを加えたココナッツミルクで炊く香り高いインドネシア風ライス。",
+      "hi": "पंडन और लेमनग्रास के साथ नारियल के दूध में पका सुगंधित इंडोनेशियाई चावल।",
+      "tr": "Pandan ve limon otu ile hindistan cevizi sütünde pişirilmiş aromatik Endonezya usulü pilav.",
+      "it": "Riso indonesiano profumato cotto nel latte di cocco con pandan e citronella.",
+      "ko": "판단과 레몬그라스를 넣어 코코넛 밀크로 지은 향긋한 인도네시아식 밥."
+    }
+  }
+}

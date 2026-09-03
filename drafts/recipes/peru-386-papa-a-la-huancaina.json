@@ -1,0 +1,209 @@
+{
+  "id": 386,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Peru",
+    "en": "Peru",
+    "es": "Perú",
+    "fr": "Pérou",
+    "de": "Peru",
+    "pt": "Peru",
+    "ru": "Перу",
+    "ar": "بيرو",
+    "zh": "秘鲁",
+    "ja": "ペルー",
+    "hi": "पेरू",
+    "tr": "Peru",
+    "it": "Perù",
+    "ko": "페루"
+  },
+  "name": {
+    "ro": "Papa a la Huancaína (Cartofi cu Sos Cremos de Ardei Galben)",
+    "en": "Papa a la Huancaína (Potatoes in Creamy Yellow Chili Sauce)",
+    "es": "Papa a la Huancaína",
+    "fr": "Papa a la Huancaína (Pommes de Terre au Sauce Crémeuse de Piment Jaune)",
+    "de": "Papa a la Huancaína (Kartoffeln in Cremiger Gelber Chilisauce)",
+    "pt": "Papa a la Huancaína (Batatas em Molho Cremoso de Pimenta Amarela)",
+    "ru": "Папа а ла Уанкаина (Картофель в Кремовом Соусе из Жёлтого Перца)",
+    "ar": "بابا آ لا هوانكاينا (بطاطس بصلصة الفلفل الأصفر الكريمية)",
+    "zh": "瓦扬卡土豆（黄辣椒奶油酱土豆）",
+    "ja": "パパ・ア・ラ・ワンカイーナ（黄唐辛子クリームソースのじゃがいも）",
+    "hi": "पापा अ ला हुआनकाइना (क्रीमी पीली मिर्च सॉस में आलू)",
+    "tr": "Papa a la Huancaína (Kremalı Sarı Biber Soslu Patates)",
+    "it": "Papa a la Huancaína (Patate in Salsa Cremosa di Peperoncino Giallo)",
+    "ko": "파파 아 라 우앙카이나 (크리미한 노란 고추 소스를 곁들인 감자)"
+  },
+  "category": {
+    "ro": "Aperitiv",
+    "en": "Appetizer",
+    "es": "Entrante",
+    "fr": "Entrée",
+    "de": "Vorspeise",
+    "pt": "Entrada",
+    "ru": "Закуска",
+    "ar": "مقبلات",
+    "zh": "开胃菜",
+    "ja": "前菜",
+    "hi": "स्टार्टर",
+    "tr": "Meze",
+    "it": "Antipasto",
+    "ko": "애피타이저"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥔", "t": "Cartofi galbeni fierți", "d": "Cartofi galbeni peruani, fierți întregi până devin fragezi, apoi tăiați felii groase." },
+      { "icon": "🧀", "t": "Sos de brânză și ají", "d": "Sosul cremos combină brânză proaspătă, ají amarillo și lapte, mixate fin." },
+      { "icon": "🥜", "t": "Biscuiți sărați", "d": "Biscuiți sărați (crackers) se adaugă în sos pentru a-i da consistență și corp." },
+      { "icon": "🥚", "t": "Decor clasic", "d": "Se decorează tradițional cu felii de ou fiert și măsline negre." }
+    ],
+    "en": [
+      { "icon": "🥔", "t": "Boiled yellow potatoes", "d": "Peruvian yellow potatoes, boiled whole until tender, then sliced thick." },
+      { "icon": "🧀", "t": "Cheese and chili sauce", "d": "The creamy sauce blends fresh cheese, ají amarillo and milk until smooth." },
+      { "icon": "🥜", "t": "Salted crackers", "d": "Salted crackers are added to the sauce to give it body and thickness." },
+      { "icon": "🥚", "t": "Classic garnish", "d": "Traditionally garnished with slices of boiled egg and black olives." }
+    ],
+    "es": [
+      { "icon": "🥔", "t": "Papas amarillas hervidas", "d": "Papas amarillas peruanas, hervidas enteras hasta estar tiernas, luego cortadas en rodajas gruesas." },
+      { "icon": "🧀", "t": "Salsa de queso y ají", "d": "La salsa cremosa combina queso fresco, ají amarillo y leche, licuados hasta quedar suaves." },
+      { "icon": "🥜", "t": "Galletas saladas", "d": "Se añaden galletas saladas a la salsa para darle cuerpo y consistencia." },
+      { "icon": "🥚", "t": "Decoración clásica", "d": "Se decora tradicionalmente con rodajas de huevo duro y aceitunas negras." }
+    ],
+    "fr": [
+      { "icon": "🥔", "t": "Pommes de terre jaunes bouillies", "d": "Pommes de terre jaunes péruviennes, bouillies entières jusqu'à tendreté, puis coupées en tranches épaisses." },
+      { "icon": "🧀", "t": "Sauce fromage et piment", "d": "La sauce crémeuse combine fromage frais, ají amarillo et lait, mixés jusqu'à devenir lisses." },
+      { "icon": "🥜", "t": "Crackers salés", "d": "Des crackers salés sont ajoutés à la sauce pour lui donner du corps et de l'épaisseur." },
+      { "icon": "🥚", "t": "Garniture classique", "d": "Traditionnellement garnie de tranches d'œuf dur et d'olives noires." }
+    ],
+    "de": [
+      { "icon": "🥔", "t": "Gekochte gelbe Kartoffeln", "d": "Peruanische gelbe Kartoffeln, ganz gekocht bis zart, dann in dicke Scheiben geschnitten." },
+      { "icon": "🧀", "t": "Käse-Chili-Sauce", "d": "Die cremige Sauce vermischt frischen Käse, Ají Amarillo und Milch bis glatt." },
+      { "icon": "🥜", "t": "Salzige Cracker", "d": "Salzige Cracker werden der Sauce zugefügt, um ihr Körper und Dicke zu verleihen." },
+      { "icon": "🥚", "t": "Klassische Garnitur", "d": "Traditionell garniert mit Scheiben von gekochtem Ei und schwarzen Oliven." }
+    ],
+    "pt": [
+      { "icon": "🥔", "t": "Batatas amarelas cozidas", "d": "Batatas amarelas peruanas, cozidas inteiras até ficarem macias, depois cortadas em fatias grossas." },
+      { "icon": "🧀", "t": "Molho de queijo e pimenta", "d": "O molho cremoso combina queijo fresco, ají amarillo e leite, batidos até ficarem lisos." },
+      { "icon": "🥜", "t": "Bolachas salgadas", "d": "Bolachas salgadas são adicionadas ao molho para lhe dar corpo e consistência." },
+      { "icon": "🥚", "t": "Decoração clássica", "d": "Tradicionalmente decorado com fatias de ovo cozido e azeitonas pretas." }
+    ],
+    "ru": [
+      { "icon": "🥔", "t": "Варёный жёлтый картофель", "d": "Перуанский жёлтый картофель, отваренный целиком до мягкости, затем нарезанный толстыми ломтиками." },
+      { "icon": "🧀", "t": "Сырно-перечный соус", "d": "Кремовый соус сочетает свежий сыр, ахи амарийо и молоко, взбитые до однородности." },
+      { "icon": "🥜", "t": "Солёные крекеры", "d": "Солёные крекеры добавляются в соус, чтобы придать ему густоту и плотность." },
+      { "icon": "🥚", "t": "Классическое украшение", "d": "Традиционно украшается ломтиками варёного яйца и чёрными оливками." }
+    ],
+    "ar": [
+      { "icon": "🥔", "t": "بطاطس صفراء مسلوقة", "d": "بطاطس صفراء بيروفية، مسلوقة كاملة حتى تصبح طرية، ثم مقطّعة شرائح سميكة." },
+      { "icon": "🧀", "t": "صلصة الجبن والفلفل", "d": "تمزج الصلصة الكريمية الجبن الطازج والأخي أماريو والحليب حتى تصبح ناعمة." },
+      { "icon": "🥜", "t": "بسكويت مالح", "d": "يُضاف البسكويت المالح إلى الصلصة لمنحها قواماً وكثافة." },
+      { "icon": "🥚", "t": "زينة كلاسيكية", "d": "تُزيَّن تقليديًا بشرائح البيض المسلوق والزيتون الأسود." }
+    ],
+    "zh": [
+      { "icon": "🥔", "t": "水煮黄土豆", "d": "秘鲁黄土豆整颗煮至软嫩，然后切成厚片。" },
+      { "icon": "🧀", "t": "芝士辣椒酱", "d": "奶油酱汁将新鲜奶酪、黄辣椒酱和牛奶混合打至顺滑。" },
+      { "icon": "🥜", "t": "咸味饼干", "d": "咸味饼干加入酱汁中，赋予其浓稠度和厚度。" },
+      { "icon": "🥚", "t": "经典装饰", "d": "传统上以水煮蛋片和黑橄榄装饰。" }
+    ],
+    "ja": [
+      { "icon": "🥔", "t": "茹でた黄色いじゃがいも", "d": "ペルーの黄色いじゃがいもを丸ごと柔らかくなるまで茹で、厚めにスライスする。" },
+      { "icon": "🧀", "t": "チーズと唐辛子のソース", "d": "クリーミーなソースはフレッシュチーズ、アヒ・アマリージョ、牛乳をなめらかになるまで混ぜ合わせる。" },
+      { "icon": "🥜", "t": "塩味クラッカー", "d": "塩味クラッカーをソースに加え、コクととろみを出す。" },
+      { "icon": "🥚", "t": "定番の飾り付け", "d": "伝統的にゆで卵のスライスと黒オリーブで飾る。" }
+    ],
+    "hi": [
+      { "icon": "🥔", "t": "उबले पीले आलू", "d": "पेरूवियन पीले आलू, साबुत उबालकर नरम किए गए, फिर मोटे टुकड़ों में काटे गए।" },
+      { "icon": "🧀", "t": "चीज़ और मिर्च सॉस", "d": "मलाईदार सॉस ताज़ा चीज़, अजी अमारियो और दूध को मिलाकर चिकना बनाती है।" },
+      { "icon": "🥜", "t": "नमकीन क्रैकर्स", "d": "सॉस में नमकीन क्रैकर्स डाले जाते हैं ताकि उसे गाढ़ापन और बनावट मिले।" },
+      { "icon": "🥚", "t": "क्लासिक सजावट", "d": "पारंपरिक रूप से उबले अंडे के टुकड़ों और काले जैतून से सजाया जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥔", "t": "Haşlanmış sarı patates", "d": "Peru sarı patatesleri yumuşayana kadar bütün olarak haşlanır, sonra kalın dilimlenir." },
+      { "icon": "🧀", "t": "Peynir ve biber sosu", "d": "Kremalı sos taze peynir, ají amarillo ve sütü pürüzsüz olana kadar karıştırır." },
+      { "icon": "🥜", "t": "Tuzlu krakerler", "d": "Sosa yoğunluk ve koyuluk vermek için tuzlu krakerler eklenir." },
+      { "icon": "🥚", "t": "Klasik süsleme", "d": "Geleneksel olarak haşlanmış yumurta dilimleri ve siyah zeytinle süslenir." }
+    ],
+    "it": [
+      { "icon": "🥔", "t": "Patate gialle bollite", "d": "Patate gialle peruviane, bollite intere fino a diventare tenere, poi tagliate a fette spesse." },
+      { "icon": "🧀", "t": "Salsa di formaggio e peperoncino", "d": "La salsa cremosa combina formaggio fresco, ají amarillo e latte, frullati fino a renderli lisci." },
+      { "icon": "🥜", "t": "Cracker salati", "d": "I cracker salati vengono aggiunti alla salsa per darle corpo e consistenza." },
+      { "icon": "🥚", "t": "Guarnizione classica", "d": "Tradizionalmente guarnita con fette di uovo sodo e olive nere." }
+    ],
+    "ko": [
+      { "icon": "🥔", "t": "삶은 노란 감자", "d": "페루 노란 감자를 통째로 부드러워질 때까지 삶은 뒤 두껍게 썬다." },
+      { "icon": "🧀", "t": "치즈 고추 소스", "d": "크리미한 소스는 신선한 치즈, 아히 아마리요, 우유를 부드럽게 갈아 만든다." },
+      { "icon": "🥜", "t": "짭짤한 크래커", "d": "소스에 짭짤한 크래커를 넣어 걸쭉함과 농도를 더한다." },
+      { "icon": "🥚", "t": "클래식 가니시", "d": "전통적으로 삶은 달걀 조각과 검은 올리브로 장식한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg cartofi galbeni (sau cartofi cu pulpă galbenă)", "200g brânză proaspătă (queso fresco)", "150ml lapte evaporat", "3 linguri pastă de ají amarillo", "6 biscuiți sărați", "2 linguri ulei", "sare după gust", "frunze de salată verde, pentru servire", "2 ouă fierte, tăiate felii, pentru decor", "măsline negre, pentru decor"],
+    "en": ["1kg yellow potatoes (or yellow-fleshed potatoes)", "200g fresh cheese (queso fresco)", "150ml evaporated milk", "3 tbsp ají amarillo paste", "6 salted crackers", "2 tbsp oil", "salt to taste", "lettuce leaves, for serving", "2 boiled eggs, sliced, for garnish", "black olives, for garnish"],
+    "es": ["1kg de papas amarillas", "200g de queso fresco", "150ml de leche evaporada", "3 cucharadas de pasta de ají amarillo", "6 galletas saladas", "2 cucharadas de aceite", "sal al gusto", "hojas de lechuga, para servir", "2 huevos duros, en rodajas, para decorar", "aceitunas negras, para decorar"],
+    "fr": ["1kg de pommes de terre jaunes", "200g de fromage frais (queso fresco)", "150ml de lait concentré non sucré", "3 c. à soupe de pâte d'ají amarillo", "6 crackers salés", "2 c. à soupe d'huile", "sel selon le goût", "feuilles de laitue, pour servir", "2 œufs durs, en tranches, pour décorer", "olives noires, pour décorer"],
+    "de": ["1kg gelbe Kartoffeln", "200g frischer Käse (Queso Fresco)", "150ml Kondensmilch (ungesüßt)", "3 EL Ají-Amarillo-Paste", "6 salzige Cracker", "2 EL Öl", "Salz nach Geschmack", "Salatblätter, zum Servieren", "2 gekochte Eier, in Scheiben, zum Garnieren", "schwarze Oliven, zum Garnieren"],
+    "pt": ["1kg de batatas amarelas", "200g de queijo fresco", "150ml de leite evaporado", "3 colheres (sopa) de pasta de ají amarillo", "6 bolachas salgadas", "2 colheres (sopa) de óleo", "sal a gosto", "folhas de alface, para servir", "2 ovos cozidos, fatiados, para decorar", "azeitonas pretas, para decorar"],
+    "ru": ["1кг жёлтого картофеля", "200г свежего сыра (кесо фреско)", "150мл сгущённого молока без сахара", "3 ст.л. пасты ахи амарийо", "6 солёных крекеров", "2 ст.л. масла", "соль по вкусу", "листья салата, для подачи", "2 варёных яйца, нарезанных, для украшения", "чёрные оливки, для украшения"],
+    "ar": ["1 كجم بطاطس صفراء", "200 غرام جبن طازج (كيسو فريسكو)", "150 مل حليب مبخر", "3 ملاعق كبيرة معجون أخي أماريو", "6 قطع بسكويت مالح", "ملعقتان كبيرتان زيت", "ملح حسب الرغبة", "أوراق خس، للتقديم", "بيضتان مسلوقتان، مقطّعتان شرائح، للتزيين", "زيتون أسود، للتزيين"],
+    "zh": ["1公斤黄土豆", "200克新鲜奶酪（queso fresco）", "150毫升淡奶", "3汤匙黄辣椒酱", "6块咸味饼干", "2汤匙油", "盐适量", "生菜叶，配食用", "2个水煮蛋，切片，装饰用", "黑橄榄，装饰用"],
+    "ja": ["黄色いじゃがいも1kg", "フレッシュチーズ（ケソフレスコ）200g", "無糖練乳150ml", "アヒ・アマリージョペースト大さじ3", "塩味クラッカー6枚", "油 大さじ2", "塩 適量", "レタスの葉（添える用）", "ゆで卵2個（スライス、飾り用）", "黒オリーブ（飾り用）"],
+    "hi": ["1 किलो पीले आलू", "200 ग्राम ताज़ा चीज़ (केसो फ्रेस्को)", "150 मिली इवैपोरेटेड दूध", "3 बड़े चम्मच अजी अमारियो पेस्ट", "6 नमकीन क्रैकर्स", "2 बड़े चम्मच तेल", "स्वादानुसार नमक", "सलाद पत्ते, परोसने के लिए", "2 उबले अंडे, कटे, सजावट के लिए", "काले जैतून, सजावट के लिए"],
+    "tr": ["1kg sarı patates", "200g taze peynir (queso fresco)", "150ml şekersiz koyulaştırılmış süt", "3 yemek kaşığı ají amarillo ezmesi", "6 tuzlu kraker", "2 yemek kaşığı yağ", "tuz, tadına göre", "servis için marul yaprakları", "süslemek için 2 haşlanmış yumurta, dilimlenmiş", "süslemek için siyah zeytin"],
+    "it": ["1kg di patate gialle", "200g di formaggio fresco (queso fresco)", "150ml di latte evaporato", "3 cucchiai di pasta di ají amarillo", "6 cracker salati", "2 cucchiai di olio", "sale q.b.", "foglie di lattuga, per servire", "2 uova sode, a fette, per guarnire", "olive nere, per guarnire"],
+    "ko": ["노란 감자 1kg", "신선한 치즈(케소 프레스코) 200g", "무가당 연유 150ml", "아히 아마리요 페이스트 3큰술", "짭짤한 크래커 6개", "식용유 2큰술", "소금 약간", "상추 잎, 곁들임용", "삶은 달걀 2개, 썬 것, 장식용", "검은 올리브, 장식용"]
+  },
+  "howIsMade": {
+    "ro": "FIERBE CARTOFII: Fierbe cartofii întregi, cu coajă, în apă cu sare, 25-30 minute, până devin fragezi la înțepare cu furculița. RĂCEȘTE ȘI CURĂȚĂ: Scurge cartofii, lasă-i să se răcească suficient pentru a putea fi manevrați, apoi curăță-i de coajă. CĂLEȘTE AJÍ: Încinge uleiul într-o tigaie mică, călește pasta de ají amarillo 2-3 minute la foc mic, pentru a-i reduce iuțeala. PREGĂTEȘTE SOSUL: Pune în blender brânza proaspătă, laptele evaporat, ají călit și biscuiții sărați. MIXEAZĂ FIN: Mixează la viteză mare până obții un sos neted, catifelat, fără cocoloașe. AJUSTEAZĂ CONSISTENȚA: Dacă sosul e prea gros, adaugă puțin lapte; dacă e prea subțire, adaugă încă un biscuite. SĂREAZĂ: Gustă și ajustează sarea. TAIE CARTOFII: Taie cartofii curățați în felii groase de aproximativ 1 cm. ARANJEAZĂ FARFURIA: Așază frunze de salată pe o farfurie, apoi cartofii feliați deasupra. SERVEȘTE: Toarnă sosul galben peste cartofi, decorează cu felii de ou fiert și măsline negre, servește la temperatura camerei.",
+    "en": "BOIL THE POTATOES: Boil the whole potatoes with skin on in salted water, 25-30 minutes, until tender when pierced with a fork. COOL AND PEEL: Drain the potatoes, let them cool enough to handle, then peel off the skin. SAUTÉ THE AJÍ: Heat the oil in a small pan, sauté the ají amarillo paste 2-3 minutes over low heat, to reduce its heat. MAKE THE SAUCE: Place the fresh cheese, evaporated milk, sautéed ají and salted crackers in a blender. BLEND SMOOTH: Blend at high speed until you get a smooth, velvety sauce with no lumps. ADJUST CONSISTENCY: If the sauce is too thick, add a little milk; if too thin, add another cracker. SEASON: Taste and adjust salt. SLICE THE POTATOES: Cut the peeled potatoes into thick slices, about 1cm. ARRANGE THE PLATE: Place lettuce leaves on a plate, then the sliced potatoes on top. SERVE: Pour the yellow sauce over the potatoes, garnish with slices of boiled egg and black olives, serve at room temperature.",
+    "es": "HIERVE LAS PAPAS: Hierve las papas enteras con piel en agua con sal, 25-30 minutos, hasta que estén tiernas al pincharlas con un tenedor. ENFRÍA Y PELA: Escurre las papas, déjalas enfriar lo suficiente para manejarlas, luego pélalas. SOFRÍE EL AJÍ: Calienta el aceite en una sartén pequeña, sofríe la pasta de ají amarillo 2-3 minutos a fuego bajo, para reducir su picor. PREPARA LA SALSA: Coloca el queso fresco, la leche evaporada, el ají sofrito y las galletas saladas en una licuadora. LICÚA HASTA QUE ESTÉ SUAVE: Licúa a alta velocidad hasta obtener una salsa suave y aterciopelada, sin grumos. AJUSTA LA CONSISTENCIA: Si la salsa está muy espesa, añade un poco de leche; si está muy líquida, añade otra galleta. SAZONA: Prueba y ajusta la sal. CORTA LAS PAPAS: Corta las papas peladas en rodajas gruesas, de aproximadamente 1cm. ARMA EL PLATO: Coloca hojas de lechuga en un plato, luego las papas cortadas encima. SIRVE: Vierte la salsa amarilla sobre las papas, decora con rodajas de huevo duro y aceitunas negras, sirve a temperatura ambiente.",
+    "fr": "FAITES BOUILLIR LES POMMES DE TERRE: Faites bouillir les pommes de terre entières avec la peau dans de l'eau salée, 25-30 minutes, jusqu'à ce qu'elles soient tendres à la fourchette. REFROIDISSEZ ET ÉPLUCHEZ: Égouttez les pommes de terre, laissez-les refroidir suffisamment pour les manipuler, puis épluchez-les. FAITES REVENIR L'AJÍ: Chauffez l'huile dans une petite poêle, faites revenir la pâte d'ají amarillo 2-3 minutes à feu doux, pour réduire son piquant. PRÉPAREZ LA SAUCE: Placez le fromage frais, le lait concentré, l'ají revenu et les crackers salés dans un mixeur. MIXEZ JUSQU'À LISSE: Mixez à haute vitesse jusqu'à obtenir une sauce lisse et veloutée, sans grumeaux. AJUSTEZ LA CONSISTANCE: Si la sauce est trop épaisse, ajoutez un peu de lait; si trop liquide, ajoutez un autre cracker. ASSAISONNEZ: Goûtez et ajustez le sel. COUPEZ LES POMMES DE TERRE: Coupez les pommes de terre épluchées en tranches épaisses, d'environ 1cm. DRESSEZ L'ASSIETTE: Placez des feuilles de laitue sur une assiette, puis les pommes de terre tranchées dessus. SERVEZ: Versez la sauce jaune sur les pommes de terre, garnissez de tranches d'œuf dur et d'olives noires, servez à température ambiante.",
+    "de": "KARTOFFELN KOCHEN: Die ganzen Kartoffeln mit Schale in Salzwasser 25-30 Minuten kochen, bis sie beim Einstechen mit einer Gabel weich sind. ABKÜHLEN UND SCHÄLEN: Die Kartoffeln abtropfen lassen, so weit abkühlen lassen, dass man sie anfassen kann, dann schälen. AJÍ ANBRATEN: Öl in einer kleinen Pfanne erhitzen, die Ají-Amarillo-Paste 2-3 Minuten bei niedriger Hitze anbraten, um ihre Schärfe zu reduzieren. SAUCE ZUBEREITEN: Frischen Käse, Kondensmilch, angebratenes Ají und salzige Cracker in einen Mixer geben. GLATT PÜRIEREN: Bei hoher Geschwindigkeit pürieren, bis eine glatte, samtige Sauce ohne Klumpen entsteht. KONSISTENZ ANPASSEN: Wenn die Sauce zu dick ist, etwas Milch zugeben; wenn zu dünn, einen weiteren Cracker zugeben. WÜRZEN: Abschmecken und Salz anpassen. KARTOFFELN SCHNEIDEN: Die geschälten Kartoffeln in dicke Scheiben von etwa 1cm schneiden. TELLER ANRICHTEN: Salatblätter auf einen Teller legen, dann die geschnittenen Kartoffeln darauf. SERVIEREN: Die gelbe Sauce über die Kartoffeln gießen, mit Scheiben von gekochtem Ei und schwarzen Oliven garnieren, bei Zimmertemperatur servieren.",
+    "pt": "FERVA AS BATATAS: Ferva as batatas inteiras com casca em água salgada, 25-30 minutos, até ficarem macias ao espetar com um garfo. ARREFEÇA E DESCASQUE: Escorra as batatas, deixe-as arrefecer o suficiente para manusear, depois descasque-as. REFOGUE O AJÍ: Aqueça o óleo numa frigideira pequena, refogue a pasta de ají amarillo por 2-3 minutos em fogo baixo, para reduzir a picância. PREPARE O MOLHO: Coloque o queijo fresco, o leite evaporado, o ají refogado e as bolachas salgadas numa liquidificadora. BATA ATÉ FICAR LISO: Bata em alta velocidade até obter um molho liso e aveludado, sem grumos. AJUSTE A CONSISTÊNCIA: Se o molho estiver muito espesso, adicione um pouco de leite; se estiver muito ralo, adicione outra bolacha. TEMPERE: Prove e ajuste o sal. CORTE AS BATATAS: Corte as batatas descascadas em fatias grossas, de cerca de 1cm. MONTE O PRATO: Coloque folhas de alface num prato, depois as batatas fatiadas por cima. SIRVA: Despeje o molho amarelo sobre as batatas, decore com fatias de ovo cozido e azeitonas pretas, sirva à temperatura ambiente.",
+    "ru": "СВАРИТЕ КАРТОФЕЛЬ: Отварите целый картофель в кожуре в подсоленной воде 25-30 минут, пока не станет мягким при прокалывании вилкой. ОСТУДИТЕ И ОЧИСТИТЕ: Слейте воду с картофеля, дайте остыть достаточно, чтобы можно было держать в руках, затем очистите от кожуры. ОБЖАРЬТЕ АХИ: Разогрейте масло в маленькой сковороде, обжаривайте пасту ахи амарийо 2-3 минуты на слабом огне, чтобы снизить остроту. ПРИГОТОВЬТЕ СОУС: Положите свежий сыр, сгущённое молоко, обжаренный ахи и солёные крекеры в блендер. ВЗБЕЙТЕ ДО ОДНОРОДНОСТИ: Взбивайте на высокой скорости до гладкого, бархатистого соуса без комков. СКОРРЕКТИРУЙТЕ КОНСИСТЕНЦИЮ: Если соус слишком густой, добавьте немного молока; если слишком жидкий, добавьте ещё один крекер. ПРИПРАВЬТЕ: Попробуйте и скорректируйте соль. НАРЕЖЬТЕ КАРТОФЕЛЬ: Нарежьте очищенный картофель толстыми ломтиками, около 1см. СОБЕРИТЕ БЛЮДО: Выложите листья салата на тарелку, затем нарезанный картофель сверху. ПОДАВАЙТЕ: Полейте жёлтым соусом картофель, украсьте ломтиками варёного яйца и чёрными оливками, подавайте при комнатной температуре.",
+    "ar": "اسلقي البطاطس: اسلقي البطاطس كاملة بقشرها في ماء مملح 25-30 دقيقة حتى تصبح طرية عند وخزها بالشوكة. بردي وقشري: صفّي البطاطس، اتركيها تبرد بما يكفي للتعامل معها، ثم قشريها. قلّي الأخي: سخّني الزيت في مقلاة صغيرة، وقلّي معجون الأخي أماريو 2-3 دقائق على نار هادئة لتقليل حرارته. حضّري الصلصة: ضعي الجبن الطازج والحليب المبخر والأخي المقلي والبسكويت المالح في الخلاط. اخلطي حتى تصبح ناعمة: اخلطي بسرعة عالية حتى تحصلي على صلصة ناعمة ومخملية بلا كتل. عدّلي القوام: إذا كانت الصلصة سميكة جدًا، أضيفي القليل من الحليب؛ وإذا كانت رقيقة جدًا، أضيفي قطعة بسكويت أخرى. تبّلي: تذوّقي وعدّلي الملح. قطّعي البطاطس: قطّعي البطاطس المقشرة إلى شرائح سميكة، حوالي 1 سم. رتّبي الطبق: ضعي أوراق الخس على طبق، ثم البطاطس المقطعة فوقها. قدّمي: اسكبي الصلصة الصفراء فوق البطاطس، زيّنيها بشرائح البيض المسلوق والزيتون الأسود، وقدّميها بحرارة الغرفة.",
+    "zh": "煮土豆：将带皮整个土豆放入盐水中煮25-30分钟，用叉子刺穿变软即可。放凉去皮：沥干土豆，放凉到可以处理的程度，然后去皮。炒黄辣椒酱：在小平底锅中加热油，小火炒黄辣椒酱2-3分钟，以降低辣度。制作酱汁：将新鲜奶酪、淡奶、炒好的黄辣椒酱和咸味饼干放入搅拌机。搅拌顺滑：高速搅拌至酱汁顺滑无结块。调整浓度：如果酱汁太稠，加一点牛奶；如果太稀，再加一块饼干。调味：尝味并调整咸度。切土豆：将去皮的土豆切成约1厘米厚的片。摆盘：将生菜叶铺在盘子上，再放上切好的土豆片。上桌：将黄色酱汁浇在土豆上，用水煮蛋片和黑橄榄装饰，常温食用。",
+    "ja": "じゃがいもを茹でる：皮付きのままじゃがいもを塩水で25〜30分、フォークで刺して柔らかくなるまで茹でる。冷まして皮をむく：じゃがいもの水気を切り、扱える程度に冷ましてから皮をむく。アヒを炒める：小さいフライパンで油を熱し、アヒ・アマリージョペーストを弱火で2〜3分炒めて辛さを和らげる。ソースを作る：フレッシュチーズ、無糖練乳、炒めたアヒ、塩味クラッカーをミキサーに入れる。なめらかになるまで混ぜる：高速でなめらかでビロードのような、だまのないソースになるまで混ぜる。濃度を調整する：ソースが濃すぎる場合は牛乳を少し加え、薄すぎる場合はクラッカーをもう1枚加える。味付けする：味見をして塩加減を調整する。じゃがいもを切る：皮をむいたじゃがいもを約1cmの厚さにスライスする。皿を盛り付ける：皿にレタスの葉を敷き、その上にスライスしたじゃがいもをのせる。提供する：黄色いソースをじゃがいもにかけ、ゆで卵のスライスと黒オリーブを飾り、室温で提供する。",
+    "hi": "आलू उबालें: छिलके सहित साबुत आलू को नमकीन पानी में 25-30 मिनट उबालें, जब तक कांटे से चुभाने पर नरम न हो जाएं। ठंडा करें और छीलें: आलू छानें, उन्हें संभालने लायक ठंडा होने दें, फिर छीलें। अजी भूनें: छोटे पैन में तेल गरम करें, अजी अमारियो पेस्ट को धीमी आंच पर 2-3 मिनट भूनें, तीखापन कम करने के लिए। सॉस बनाएं: ब्लेंडर में ताज़ा चीज़, इवैपोरेटेड दूध, भुना अजी और नमकीन क्रैकर्स डालें। चिकना होने तक ब्लेंड करें: तेज़ गति पर तब तक ब्लेंड करें जब तक चिकनी, मखमली सॉस न बन जाए, बिना गांठ के। गाढ़ापन समायोजित करें: यदि सॉस बहुत गाढ़ा है, थोड़ा दूध डालें; यदि बहुत पतला है, एक और क्रैकर डालें। मसाला डालें: चखें और नमक समायोजित करें। आलू काटें: छिले आलू को लगभग 1 सेमी मोटे टुकड़ों में काटें। थाली सजाएं: थाली में सलाद पत्ते रखें, फिर ऊपर कटे आलू रखें। परोसें: आलू के ऊपर पीली सॉस डालें, उबले अंडे के टुकड़ों और काले जैतून से सजाएं, कमरे के तापमान पर परोसें।",
+    "tr": "PATATESLERİ HAŞLAYIN: Kabuklu bütün patatesleri tuzlu suda çatalla batırıldığında yumuşayana kadar 25-30 dakika haşlayın. SOĞUTUN VE SOYUN: Patatesleri süzün, tutabilecek kadar soğumaya bırakın, sonra kabuklarını soyun. AJIYI SOTELEYIN: Küçük bir tavada yağı ısıtın, ají amarillo ezmesini acılığını azaltmak için kısık ateşte 2-3 dakika soteleyin. SOSU HAZIRLAYIN: Taze peyniri, koyulaştırılmış sütü, sotelenmiş ajıyı ve tuzlu krakerleri bir blendera koyun. PÜRÜZSÜZ OLANA KADAR KARIŞTIRIN: Topaksız, pürüzsüz ve kadifemsi bir sos elde edene kadar yüksek hızda karıştırın. KIVAMI AYARLAYIN: Sos çok koyuysa biraz süt ekleyin; çok sulu ise bir kraker daha ekleyin. TATLANDIRIN: Tadına bakıp tuzu ayarlayın. PATATESLERİ DİLİMLEYİN: Soyulmuş patatesleri yaklaşık 1cm kalınlığında dilimleyin. TABAĞI HAZIRLAYIN: Bir tabağa marul yaprakları koyun, ardından dilimlenmiş patatesleri üzerine yerleştirin. SERVİS YAPIN: Sarı sosu patateslerin üzerine dökün, haşlanmış yumurta dilimleri ve siyah zeytinle süsleyin, oda sıcaklığında servis edin.",
+    "it": "BOLLI LE PATATE: Bolli le patate intere con la buccia in acqua salata, 25-30 minuti, finché tenere alla forchetta. RAFFREDDA E SBUCCIA: Scola le patate, lasciale raffreddare abbastanza da poterle maneggiare, poi sbucciale. SOFFRIGGI L'AJÍ: Scalda l'olio in una padella piccola, soffriggi la pasta di ají amarillo 2-3 minuti a fuoco basso, per ridurne il piccante. PREPARA LA SALSA: Metti il formaggio fresco, il latte evaporato, l'ají soffritto e i cracker salati in un frullatore. FRULLA FINO A RENDERE LISCIA: Frulla ad alta velocità finché ottieni una salsa liscia e vellutata, senza grumi. REGOLA LA CONSISTENZA: Se la salsa è troppo densa, aggiungi un po' di latte; se troppo liquida, aggiungi un altro cracker. INSAPORISCI: Assaggia e regola il sale. TAGLIA LE PATATE: Taglia le patate sbucciate a fette spesse, circa 1cm. COMPONI IL PIATTO: Metti foglie di lattuga su un piatto, poi le patate a fette sopra. SERVI: Versa la salsa gialla sulle patate, guarnisci con fette di uovo sodo e olive nere, servi a temperatura ambiente.",
+    "ko": "감자 삶기: 껍질째 통감자를 소금물에 넣고 포크로 찔러 부드러워질 때까지 25-30분간 삶는다. 식히고 껍질 벗기기: 감자를 건져 다룰 수 있을 정도로 식힌 뒤 껍질을 벗긴다. 아히 볶기: 작은 팬에 기름을 달구고 아히 아마리요 페이스트를 약불에서 2-3분간 볶아 매운맛을 줄인다. 소스 만들기: 믹서에 신선한 치즈, 무가당 연유, 볶은 아히, 짭짤한 크래커를 넣는다. 부드럽게 갈기: 덩어리 없이 매끄럽고 벨벳 같은 소스가 될 때까지 고속으로 간다. 농도 조절하기: 소스가 너무 되직하면 우유를 조금 넣고, 너무 묽으면 크래커를 하나 더 넣는다. 간하기: 맛을 보고 소금 간을 조절한다. 감자 썰기: 껍질 벗긴 감자를 약 1cm 두께로 썬다. 접시 차리기: 접시에 상추 잎을 깔고 그 위에 썬 감자를 올린다. 제공하기: 노란 소스를 감자 위에 붓고 삶은 달걀 조각과 검은 올리브로 장식해 실온에서 제공한다."
+  },
+  "originText": {
+    "ro": "Papa a la huancaína își ia numele de la orașul Huancayo, din Anzii centrali peruani, unde se spune că a fost creat inițial pentru muncitorii care construiau calea ferată transandină în secolul al XIX-lea, ca un fel simplu, hrănitor, folosind cartofii abundenți ai regiunii și brânza locală. Rețeta a călătorit apoi spre coastă, devenind unul dintre cele mai populare aperitive din toată bucătăria peruană.\n\nDeși pare o rețetă simplă, echilibrul corect al sosului — nici prea picant, nici prea dulceag, cu textura potrivită între cremos și consistent — este considerat un test al priceperii bucătarului peruan. Cartoful galben peruan, cu textura sa densă și cremoasă, este esențial pentru succesul felului; alte soiuri de cartofi, mai apoase, nu oferă aceeași bază fermă pentru sosul bogat.",
+    "en": "Papa a la huancaína takes its name from the city of Huancayo, in the central Peruvian Andes, where it's said to have been originally created for workers building the trans-Andean railway in the nineteenth century, as a simple, filling dish using the region's abundant potatoes and local cheese. The recipe then traveled to the coast, becoming one of the most popular appetizers across Peruvian cuisine.\n\nThough it looks like a simple recipe, getting the sauce's balance right — not too spicy, not too sweet, with the right texture between creamy and thick — is considered a test of a Peruvian cook's skill. The Peruvian yellow potato, with its dense, creamy texture, is essential to the dish's success; other, waterier potato varieties don't offer the same firm base for the rich sauce.",
+    "es": "La papa a la huancaína toma su nombre de la ciudad de Huancayo, en los Andes centrales peruanos, donde se dice que fue creada originalmente para los trabajadores que construían el ferrocarril transandino en el siglo XIX, como un plato sencillo y contundente usando las abundantes papas de la región y el queso local. La receta viajó luego hacia la costa, convirtiéndose en uno de los aperitivos más populares de toda la cocina peruana.\n\nAunque parece una receta sencilla, lograr el equilibrio correcto de la salsa — ni demasiado picante, ni demasiado dulce, con la textura adecuada entre cremosa y espesa — se considera una prueba de la habilidad de un cocinero peruano. La papa amarilla peruana, con su textura densa y cremosa, es esencial para el éxito del plato; otras variedades de papa más acuosas no ofrecen la misma base firme para la salsa rica.",
+    "fr": "La papa a la huancaína tire son nom de la ville de Huancayo, dans les Andes centrales péruviennes, où elle aurait été créée à l'origine pour les ouvriers construisant le chemin de fer transandin au XIXe siècle, comme un plat simple et nourrissant utilisant les pommes de terre abondantes de la région et le fromage local. La recette a ensuite voyagé vers la côte, devenant l'une des entrées les plus populaires de toute la cuisine péruvienne.\n\nBien qu'elle ressemble à une recette simple, obtenir le bon équilibre de la sauce — ni trop épicée, ni trop sucrée, avec la texture adéquate entre crémeuse et épaisse — est considéré comme un test de l'habileté d'un cuisinier péruvien. La pomme de terre jaune péruvienne, avec sa texture dense et crémeuse, est essentielle au succès du plat; d'autres variétés de pommes de terre plus aqueuses n'offrent pas la même base ferme pour la sauce riche.",
+    "de": "Papa a la Huancaína verdankt seinen Namen der Stadt Huancayo in den zentralen peruanischen Anden, wo es angeblich ursprünglich für Arbeiter geschaffen wurde, die im 19. Jahrhundert die transandine Eisenbahn bauten — als einfaches, sättigendes Gericht mit den reichlich vorhandenen Kartoffeln der Region und lokalem Käse. Das Rezept wanderte dann an die Küste und wurde zu einer der beliebtesten Vorspeisen der gesamten peruanischen Küche.\n\nObwohl es wie ein einfaches Rezept aussieht, gilt das richtige Gleichgewicht der Sauce — nicht zu scharf, nicht zu süß, mit der richtigen Textur zwischen cremig und dickflüssig — als Prüfstein für das Können eines peruanischen Kochs. Die peruanische gelbe Kartoffel mit ihrer dichten, cremigen Textur ist entscheidend für den Erfolg des Gerichts; andere, wässrigere Kartoffelsorten bieten nicht dieselbe feste Basis für die reichhaltige Sauce.",
+    "pt": "A papa a la huancaína tira o seu nome da cidade de Huancayo, nos Andes centrais peruanos, onde se diz que foi originalmente criada para os trabalhadores que construíam o caminho de ferro transandino no século XIX, como um prato simples e substancial usando as abundantes batatas da região e queijo local. A receita viajou depois para a costa, tornando-se uma das entradas mais populares de toda a culinária peruana.\n\nEmbora pareça uma receita simples, acertar o equilíbrio do molho — nem demasiado picante, nem demasiado doce, com a textura certa entre cremoso e espesso — é considerado um teste da habilidade de um cozinheiro peruano. A batata amarela peruana, com a sua textura densa e cremosa, é essencial para o sucesso do prato; outras variedades de batata mais aquosas não oferecem a mesma base firme para o molho rico.",
+    "ru": "Папа а ла уанкаина получила своё название от города Уанкайо в центральных перуанских Андах, где, как говорят, изначально была создана для рабочих, строивших трансандскую железную дорогу в девятнадцатом веке, как простое, сытное блюдо с обильным местным картофелем и сыром. Рецепт затем перебрался на побережье, став одной из самых популярных закусок во всей перуанской кухне.\n\nХотя рецепт выглядит простым, правильный баланс соуса — не слишком острый, не слишком сладкий, с нужной текстурой между кремовым и густым — считается проверкой мастерства перуанского повара. Перуанский жёлтый картофель с его плотной, кремовой текстурой необходим для успеха блюда; другие, более водянистые сорта картофеля не дают такой же твёрдой основы для насыщенного соуса.",
+    "ar": "تأخذ البابا آ لا هوانكاينا اسمها من مدينة هوانكايو في جبال الأنديز البيروفية الوسطى، حيث يُقال إنها ابتُكرت أصلاً للعمال الذين شيّدوا السكة الحديدية العابرة للأنديز في القرن التاسع عشر، كطبق بسيط ومُشبع يستخدم بطاطس المنطقة الوفيرة والجبن المحلي. انتقلت الوصفة بعدها إلى الساحل، لتصبح واحدة من أشهر المقبلات في المطبخ البيروفي بأكمله.\n\nرغم أنها تبدو وصفة بسيطة، فإن تحقيق التوازن الصحيح للصلصة — ليست حارة جدًا ولا حلوة جدًا، بقوام مناسب بين الكريمية والكثافة — يُعتبر اختبارًا لمهارة الطاهي البيروفي. البطاطس الصفراء البيروفية، بقوامها الكثيف والكريمي، ضرورية لنجاح الطبق؛ فأصناف البطاطس الأخرى الأكثر مائية لا توفر نفس الأساس المتماسك للصلصة الغنية.",
+    "zh": "瓦扬卡土豆得名于秘鲁中部安第斯山脉的瓦扬卡约市，据说最初是为19世纪修建横贯安第斯山脉铁路的工人们创造的一道简单饱腹的菜肴，使用该地区丰富的土豆和当地奶酪制成。这道食谱后来传到沿海地区，成为秘鲁饮食中最受欢迎的开胃菜之一。\n\n虽然看起来是道简单的食谱，但要掌握酱汁恰到好处的平衡——不太辣，不太甜，介于奶油和浓稠之间的适当口感——被认为是对秘鲁厨师技艺的一种考验。秘鲁黄土豆以其紧实奶油般的口感成为这道菜成功的关键；其他水分较多的土豆品种无法为浓郁的酱汁提供同样牢固的基础。",
+    "ja": "パパ・ア・ラ・ワンカイーナは、ペルー中央アンデスのワンカヨという都市にちなんで名付けられた。19世紀にトランスアンデス鉄道を建設していた労働者のために、地域の豊富なじゃがいもと地元のチーズを使ったシンプルで満足感のある料理として最初に作られたと言われている。このレシピはその後海岸地方へと伝わり、ペルー料理全体の中で最も人気のある前菜の一つとなった。\n\nシンプルなレシピに見えるが、ソースの正しいバランス——辛すぎず、甘すぎず、クリーミーさととろみの間の適切な食感——を実現することは、ペルーの料理人の腕前を試すものとされている。密でクリーミーな食感を持つペルーの黄色いじゃがいもは、この料理の成功に不可欠であり、他の水っぽいじゃがいもの品種では、濃厚なソースに対する同じしっかりとした土台を提供できない。",
+    "hi": "पापा अ ला हुआनकाइना का नाम पेरू के मध्य एंडीज़ में स्थित हुआनकायो शहर से आया है, जहां कहा जाता है कि इसे मूल रूप से 19वीं सदी में ट्रांस-एंडियन रेलवे बनाने वाले श्रमिकों के लिए बनाया गया था, एक साधारण, पेट भरने वाला व्यंजन जो क्षेत्र के प्रचुर आलू और स्थानीय चीज़ का उपयोग करता था। यह नुस्खा फिर तट की ओर गया, पूरे पेरूवियन व्यंजनों में सबसे लोकप्रिय स्टार्टर्स में से एक बन गया।\n\nहालांकि यह एक साधारण नुस्खा लगता है, सॉस का सही संतुलन पाना — न बहुत तीखा, न बहुत मीठा, मलाईदार और गाढ़े के बीच सही बनावट के साथ — पेरूवियन रसोइये के कौशल की परीक्षा माना जाता है। पेरू का पीला आलू, अपनी घनी, मलाईदार बनावट के साथ, व्यंजन की सफलता के लिए आवश्यक है; अन्य, अधिक पानी वाली आलू की किस्में समृद्ध सॉस के लिए वही मज़बूत आधार नहीं देतीं।",
+    "tr": "Papa a la huancaína, adını on dokuzuncu yüzyılda And ötesi demiryolunu inşa eden işçiler için, bölgenin bol patatesi ve yerel peyniri kullanılarak basit, doyurucu bir yemek olarak orijinal olarak yaratıldığı söylenen, orta Peru And Dağları'ndaki Huancayo şehrinden alır. Tarif daha sonra kıyıya doğru yol aldı ve Peru mutfağının tamamındaki en popüler mezelerden biri haline geldi.\n\nBasit bir tarif gibi görünse de, sosun doğru dengesini yakalamak — ne çok baharatlı ne çok tatlı, kremamsı ve koyu arasında doğru dokuda — bir Peru aşçısının becerisinin sınavı olarak kabul edilir. Yoğun, kremamsı dokusuyla Peru sarı patatesi, yemeğin başarısı için gereklidir; diğer daha sulu patates çeşitleri zengin sos için aynı sağlam tabanı sunmaz.",
+    "it": "La papa a la huancaína prende il nome dalla città di Huancayo, nelle Ande centrali peruviane, dove si dice sia stata originariamente creata per gli operai che costruivano la ferrovia transandina nel diciannovesimo secolo, come piatto semplice e sostanzioso usando le abbondanti patate della regione e il formaggio locale. La ricetta viaggiò poi verso la costa, diventando uno degli antipasti più popolari di tutta la cucina peruviana.\n\nSebbene sembri una ricetta semplice, ottenere il giusto equilibrio della salsa — non troppo piccante, non troppo dolce, con la giusta consistenza tra cremosa e densa — è considerato un test dell'abilità di un cuoco peruviano. La patata gialla peruviana, con la sua consistenza densa e cremosa, è essenziale per il successo del piatto; altre varietà di patate più acquose non offrono la stessa base solida per la salsa ricca.",
+    "ko": "파파 아 라 우앙카이나는 페루 중부 안데스의 우앙카요 도시에서 이름을 따왔으며, 19세기 트랜스안데스 철도를 건설하던 노동자들을 위해 그 지역에 풍부한 감자와 현지 치즈를 사용해 처음 만들어진 소박하고 든든한 요리라고 전해진다. 이 레시피는 이후 해안 지역으로 전해져 페루 요리 전체에서 가장 인기 있는 애피타이저 중 하나가 되었다.\n\n간단한 레시피처럼 보이지만, 소스의 균형을 제대로 맞추는 것 — 너무 맵지도 너무 달지도 않으면서 크리미함과 걸쭉함 사이의 적절한 질감 — 은 페루 요리사의 실력을 가늠하는 시험으로 여겨진다. 촘촘하고 크리미한 질감을 가진 페루 노란 감자는 이 요리의 성공에 필수적이며, 수분이 더 많은 다른 감자 품종은 진한 소스를 위한 같은 견고한 기반을 제공하지 못한다."
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 18,
+    "tags": ["vegetarian", "budget", "family"],
+    "desc": {
+      "ro": "Cartofi peruani cu sos cremos de brânză și ají amarillo, decorați cu ou și măsline.",
+      "en": "Peruvian potatoes in creamy cheese and ají amarillo sauce, garnished with egg and olives.",
+      "es": "Papas peruanas en salsa cremosa de queso y ají amarillo, decoradas con huevo y aceitunas.",
+      "fr": "Pommes de terre péruviennes en sauce crémeuse au fromage et ají amarillo, garnies d'œuf et d'olives.",
+      "de": "Peruanische Kartoffeln in cremiger Käse-Ají-Amarillo-Sauce, garniert mit Ei und Oliven.",
+      "pt": "Batatas peruanas em molho cremoso de queijo e ají amarillo, decoradas com ovo e azeitonas.",
+      "ru": "Перуанский картофель в кремовом сырном соусе с ахи амарийо, украшенный яйцом и оливками.",
+      "ar": "بطاطس بيروفية بصلصة الجبن الكريمية والأخي أماريو، مزيّنة بالبيض والزيتون.",
+      "zh": "秘鲁土豆搭配奶油芝士黄辣椒酱，配水煮蛋和橄榄装饰。",
+      "ja": "クリーミーなチーズとアヒ・アマリージョのソースのペルー風じゃがいも、卵とオリーブを添えて。",
+      "hi": "क्रीमी चीज़ और अजी अमारियो सॉस में पेरूवियन आलू, अंडे और जैतून से सजे।",
+      "tr": "Kremalı peynir ve ají amarillo soslu Peru usulü patates, yumurta ve zeytinle süslenmiş.",
+      "it": "Patate peruviane in salsa cremosa di formaggio e ají amarillo, guarnite con uovo e olive.",
+      "ko": "크리미한 치즈와 아히 아마리요 소스를 곁들인 페루식 감자, 달걀과 올리브로 장식."
+    }
+  }
+}

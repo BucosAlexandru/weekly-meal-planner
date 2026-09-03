@@ -1,0 +1,209 @@
+{
+  "id": 387,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Peru",
+    "en": "Peru",
+    "es": "Perú",
+    "fr": "Pérou",
+    "de": "Peru",
+    "pt": "Peru",
+    "ru": "Перу",
+    "ar": "بيرو",
+    "zh": "秘鲁",
+    "ja": "ペルー",
+    "hi": "पेरू",
+    "tr": "Peru",
+    "it": "Perù",
+    "ko": "페루"
+  },
+  "name": {
+    "ro": "Rocoto Relleno (Ardei Iuți Umpluți Peruani)",
+    "en": "Rocoto Relleno (Peruvian Stuffed Hot Peppers)",
+    "es": "Rocoto Relleno",
+    "fr": "Rocoto Relleno (Piments Farcis Péruviens)",
+    "de": "Rocoto Relleno (Peruanische Gefüllte Scharfe Paprika)",
+    "pt": "Rocoto Relleno (Pimentas Picantes Recheadas Peruanas)",
+    "ru": "Рокото Рельено (Перуанский Фаршированный Жгучий Перец)",
+    "ar": "روكوتو ريينو (فلفل حار بيروفي محشو)",
+    "zh": "秘鲁酿辣椒（罗科托酿辣椒）",
+    "ja": "ロコト・レジェーノ（ペルー風詰め物唐辛子）",
+    "hi": "रोकोटो रेजेनो (पेरूवियन भरी हुई तीखी मिर्च)",
+    "tr": "Rocoto Relleno (Peru Usulü Doldurulmuş Acı Biber)",
+    "it": "Rocoto Relleno (Peperoncini Piccanti Ripieni Peruviani)",
+    "ko": "로코토 레예노 (페루식 속을 채운 매운 고추)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🌶️", "t": "Rocoto andin", "d": "Rocoto, un ardei iute rotund cu pereți groși și iuțeală intensă, e curățat de semințe pentru a modera picantul." },
+      { "icon": "🥩", "t": "Umplutură de vită", "d": "Vită tocată, călită cu ceapă, usturoi și stafide, formează umplutura densă și aromată." },
+      { "icon": "🧀", "t": "Capac de brânză", "d": "Fiecare ardei se coace acoperit cu felii de brânză, care se topesc într-o crustă aurie." },
+      { "icon": "🥔", "t": "Servit cu pastel", "d": "Se servește tradițional cu pastel de papa, un sufleu de cartof copt separat." }
+    ],
+    "en": [
+      { "icon": "🌶️", "t": "Andean rocoto", "d": "Rocoto, a round chili with thick walls and intense heat, is cleaned of seeds to moderate the spiciness." },
+      { "icon": "🥩", "t": "Beef filling", "d": "Ground beef, sautéed with onion, garlic and raisins, forms the dense, flavorful filling." },
+      { "icon": "🧀", "t": "Cheese cap", "d": "Each pepper bakes topped with cheese slices, which melt into a golden crust." },
+      { "icon": "🥔", "t": "Served with pastel", "d": "Traditionally served with pastel de papa, a separately baked potato soufflé." }
+    ],
+    "es": [
+      { "icon": "🌶️", "t": "Rocoto andino", "d": "El rocoto, un chile redondo de paredes gruesas e intenso picor, se limpia de semillas para moderar el picante." },
+      { "icon": "🥩", "t": "Relleno de res", "d": "Carne de res molida, sofrita con cebolla, ajo y pasas, forma el relleno denso y sabroso." },
+      { "icon": "🧀", "t": "Tapa de queso", "d": "Cada ají se hornea cubierto con rodajas de queso, que se funden en una costra dorada." },
+      { "icon": "🥔", "t": "Servido con pastel", "d": "Se sirve tradicionalmente con pastel de papa, un suflé de papa horneado por separado." }
+    ],
+    "fr": [
+      { "icon": "🌶️", "t": "Rocoto andin", "d": "Le rocoto, un piment rond aux parois épaisses et au piquant intense, est nettoyé de ses graines pour modérer l'épice." },
+      { "icon": "🥩", "t": "Farce au bœuf", "d": "Du bœuf haché, sauté avec oignon, ail et raisins secs, forme la farce dense et savoureuse." },
+      { "icon": "🧀", "t": "Chapeau de fromage", "d": "Chaque piment cuit au four recouvert de tranches de fromage, qui fondent en une croûte dorée." },
+      { "icon": "🥔", "t": "Servi avec pastel", "d": "Traditionnellement servi avec pastel de papa, un soufflé de pomme de terre cuit séparément." }
+    ],
+    "de": [
+      { "icon": "🌶️", "t": "Andiner Rocoto", "d": "Rocoto, eine runde Chili mit dicken Wänden und intensiver Schärfe, wird von Samen befreit, um die Schärfe zu mildern." },
+      { "icon": "🥩", "t": "Rinderfüllung", "d": "Rinderhackfleisch, mit Zwiebel, Knoblauch und Rosinen angebraten, bildet die dichte, aromatische Füllung." },
+      { "icon": "🧀", "t": "Käsehaube", "d": "Jede Paprika wird mit Käsescheiben belegt gebacken, die zu einer goldenen Kruste schmelzen." },
+      { "icon": "🥔", "t": "Serviert mit Pastel", "d": "Traditionell serviert mit Pastel de Papa, einem separat gebackenen Kartoffelsoufflé." }
+    ],
+    "pt": [
+      { "icon": "🌶️", "t": "Rocoto andino", "d": "O rocoto, uma pimenta redonda de paredes grossas e picância intensa, é limpo de sementes para moderar o picante." },
+      { "icon": "🥩", "t": "Recheio de carne", "d": "Carne bovina moída, refogada com cebola, alho e passas, forma o recheio denso e saboroso." },
+      { "icon": "🧀", "t": "Tampa de queijo", "d": "Cada pimenta é assada coberta com fatias de queijo, que derretem numa crosta dourada." },
+      { "icon": "🥔", "t": "Servido com pastel", "d": "Tradicionalmente servido com pastel de papa, um suflê de batata assado separadamente." }
+    ],
+    "ru": [
+      { "icon": "🌶️", "t": "Андский рокото", "d": "Рокото, круглый перец с толстыми стенками и интенсивной остротой, очищается от семян для смягчения жгучести." },
+      { "icon": "🥩", "t": "Начинка из говядины", "d": "Говяжий фарш, обжаренный с луком, чесноком и изюмом, образует плотную ароматную начинку." },
+      { "icon": "🧀", "t": "Сырная крышка", "d": "Каждый перец запекается под ломтиками сыра, которые плавятся в золотистую корочку." },
+      { "icon": "🥔", "t": "Подаётся с пастель", "d": "Традиционно подаётся с pastel de papa, отдельно запечённым картофельным суфле." }
+    ],
+    "ar": [
+      { "icon": "🌶️", "t": "روكوتو أندي", "d": "يُنظَّف الروكوتو، فلفل حار مستدير سميك الجدران وشديد الحرارة، من البذور لتخفيف حدته." },
+      { "icon": "🥩", "t": "حشوة اللحم", "d": "لحم بقري مفروم، مقلي مع البصل والثوم والزبيب، يشكّل الحشوة الكثيفة العطرية." },
+      { "icon": "🧀", "t": "غطاء الجبن", "d": "يُخبز كل فلفل مغطى بشرائح الجبن، التي تذوب لتصبح قشرة ذهبية." },
+      { "icon": "🥔", "t": "يُقدَّم مع باستيل", "d": "يُقدَّم تقليديًا مع باستيل دي بابا، سوفليه بطاطس يُخبز بشكل منفصل." }
+    ],
+    "zh": [
+      { "icon": "🌶️", "t": "安第斯罗科托辣椒", "d": "罗科托是一种壁厚、辣度极高的圆形辣椒，去籽以缓和辣味。" },
+      { "icon": "🥩", "t": "牛肉馅料", "d": "牛肉末与洋葱、大蒜和葡萄干一起炒制，形成浓郁扎实的馅料。" },
+      { "icon": "🧀", "t": "芝士盖顶", "d": "每个辣椒烤制时都盖上芝士片，融化后形成金黄的表层。" },
+      { "icon": "🥔", "t": "配帕斯特尔食用", "d": "传统上搭配单独烘烤的土豆蛋奶酥（pastel de papa）食用。" }
+    ],
+    "ja": [
+      { "icon": "🌶️", "t": "アンデスのロコト", "d": "壁の厚い丸い唐辛子で辛味が強いロコトは、辛さを和らげるために種を取り除く。" },
+      { "icon": "🥩", "t": "牛肉の詰め物", "d": "玉ねぎ、にんにく、レーズンと共に炒めた牛ひき肉が、濃厚で風味豊かな詰め物となる。" },
+      { "icon": "🧀", "t": "チーズのふた", "d": "各唐辛子はチーズのスライスをのせて焼かれ、溶けて黄金色のクラストになる。" },
+      { "icon": "🥔", "t": "パステルと共に", "d": "伝統的に、別に焼いたじゃがいものスフレであるパステル・デ・パパと共に提供される。" }
+    ],
+    "hi": [
+      { "icon": "🌶️", "t": "एंडियन रोकोटो", "d": "रोकोटो, मोटी दीवारों और तीव्र तीखेपन वाली गोल मिर्च, को तीखापन कम करने के लिए बीज निकालकर साफ किया जाता है।" },
+      { "icon": "🥩", "t": "बीफ भरावन", "d": "प्याज़, लहसुन और किशमिश के साथ भुना कीमा बीफ, घना और स्वादिष्ट भरावन बनाता है।" },
+      { "icon": "🧀", "t": "चीज़ का ढक्कन", "d": "हर मिर्च चीज़ के टुकड़ों से ढककर बेक होती है, जो सुनहरी परत में पिघल जाते हैं।" },
+      { "icon": "🥔", "t": "पास्टेल के साथ परोसा", "d": "पारंपरिक रूप से पास्टेल दे पापा, अलग से बेक किया आलू सूफले, के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🌶️", "t": "And rocoto biberi", "d": "Kalın duvarlı ve yoğun acılıklı yuvarlak bir biber olan rocoto, acılığını hafifletmek için çekirdeklerinden temizlenir." },
+      { "icon": "🥩", "t": "Dana eti iç harcı", "d": "Soğan, sarımsak ve kuru üzümle soteledilmiş kıyma dana eti, yoğun, lezzetli iç harcı oluşturur." },
+      { "icon": "🧀", "t": "Peynir kapağı", "d": "Her biber, altın rengi bir kabuk oluşturana kadar eriyen peynir dilimleriyle kaplanarak pişirilir." },
+      { "icon": "🥔", "t": "Pastel ile servis", "d": "Geleneksel olarak ayrı pişirilen bir patates sufle olan pastel de papa ile servis edilir." }
+    ],
+    "it": [
+      { "icon": "🌶️", "t": "Rocoto andino", "d": "Il rocoto, un peperoncino rotondo dalle pareti spesse e dal piccante intenso, viene pulito dai semi per moderare la piccantezza." },
+      { "icon": "🥩", "t": "Ripieno di manzo", "d": "Manzo macinato, saltato con cipolla, aglio e uvetta, forma il ripieno denso e saporito." },
+      { "icon": "🧀", "t": "Cappello di formaggio", "d": "Ogni peperoncino viene cotto al forno coperto di fette di formaggio, che si sciolgono in una crosta dorata." },
+      { "icon": "🥔", "t": "Servito con pastel", "d": "Tradizionalmente servito con pastel de papa, uno sformato di patate cotto separatamente." }
+    ],
+    "ko": [
+      { "icon": "🌶️", "t": "안데스 로코토", "d": "벽이 두껍고 매운맛이 강한 둥근 고추인 로코토는 매운맛을 완화하기 위해 씨를 제거한다." },
+      { "icon": "🥩", "t": "소고기 속", "d": "양파, 마늘, 건포도와 함께 볶은 다진 소고기가 진하고 풍미 가득한 속을 이룬다." },
+      { "icon": "🧀", "t": "치즈 뚜껑", "d": "각 고추는 치즈 조각을 올려 구워 황금빛 껍질로 녹아든다." },
+      { "icon": "🥔", "t": "파스텔과 함께 제공", "d": "전통적으로 따로 구운 감자 수플레인 파스텔 데 파파와 함께 제공된다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["8 rocoto (sau ardei iuți rotunzi mari, ca ardei gras iute)", "500g vită tocată", "1 ceapă, tocată fin", "3 căței de usturoi, tocați", "1/4 cană stafide", "1/4 cană măsline negre, tocate", "2 ouă fierte, tocate", "1 linguriță chimen măcinat", "sare și piper după gust", "8 felii de brânză", "1/2 cană lapte (pentru fiert ardeii)", "2 linguri ulei"],
+    "en": ["8 rocoto peppers (or large round hot peppers, like a spicy bell pepper)", "500g ground beef", "1 onion, finely chopped", "3 garlic cloves, minced", "1/4 cup raisins", "1/4 cup black olives, chopped", "2 boiled eggs, chopped", "1 tsp ground cumin", "salt and pepper to taste", "8 cheese slices", "1/2 cup milk (for boiling the peppers)", "2 tbsp oil"],
+    "es": ["8 rocotos (o pimientos redondos grandes y picantes)", "500g de carne de res molida", "1 cebolla, finamente picada", "3 dientes de ajo, picados", "1/4 taza de pasas", "1/4 taza de aceitunas negras, picadas", "2 huevos duros, picados", "1 cucharadita de comino molido", "sal y pimienta al gusto", "8 rebanadas de queso", "1/2 taza de leche (para hervir los rocotos)", "2 cucharadas de aceite"],
+    "fr": ["8 rocotos (ou gros piments ronds forts)", "500g de bœuf haché", "1 oignon, finement haché", "3 gousses d'ail, hachées", "1/4 tasse de raisins secs", "1/4 tasse d'olives noires, hachées", "2 œufs durs, hachés", "1 c. à café de cumin moulu", "sel et poivre selon le goût", "8 tranches de fromage", "1/2 tasse de lait (pour faire bouillir les piments)", "2 c. à soupe d'huile"],
+    "de": ["8 Rocoto-Paprika (oder große runde scharfe Paprika)", "500g Rinderhackfleisch", "1 Zwiebel, fein gehackt", "3 Knoblauchzehen, gehackt", "1/4 Tasse Rosinen", "1/4 Tasse schwarze Oliven, gehackt", "2 gekochte Eier, gehackt", "1 TL gemahlener Kreuzkümmel", "Salz und Pfeffer nach Geschmack", "8 Käsescheiben", "1/2 Tasse Milch (zum Kochen der Paprika)", "2 EL Öl"],
+    "pt": ["8 rocotos (ou pimentas redondas grandes e picantes)", "500g de carne bovina moída", "1 cebola, picada finamente", "3 dentes de alho, picados", "1/4 xícara de passas", "1/4 xícara de azeitonas pretas, picadas", "2 ovos cozidos, picados", "1 colher (chá) de cominho moído", "sal e pimenta a gosto", "8 fatias de queijo", "1/2 xícara de leite (para ferver as pimentas)", "2 colheres (sopa) de óleo"],
+    "ru": ["8 перцев рокото (или крупных круглых острых перцев)", "500г говяжьего фарша", "1 луковица, мелко нарезанная", "3 зубчика чеснока, измельчённых", "1/4 стакана изюма", "1/4 стакана чёрных оливок, нарезанных", "2 варёных яйца, нарезанных", "1 ч.л. молотого тмина", "соль и перец по вкусу", "8 ломтиков сыра", "1/2 стакана молока (для варки перца)", "2 ст.л. масла"],
+    "ar": ["8 حبات فلفل روكوتو (أو فلفل حار مستدير كبير)", "500 غرام لحم بقري مفروم", "بصلة واحدة، مفرومة ناعمًا", "3 فصوص ثوم، مفرومة", "ربع كوب زبيب", "ربع كوب زيتون أسود، مفروم", "بيضتان مسلوقتان، مفرومتان", "ملعقة صغيرة كمون مطحون", "ملح وفلفل حسب الرغبة", "8 شرائح جبن", "نصف كوب حليب (لسلق الفلفل)", "ملعقتان كبيرتان زيت"],
+    "zh": ["8个罗科托辣椒（或大个圆形辣味甜椒）", "500克牛肉末", "1个洋葱，切碎", "3瓣大蒜，切碎", "1/4杯葡萄干", "1/4杯黑橄榄，切碎", "2个水煮蛋，切碎", "1茶匙孜然粉", "盐和胡椒适量", "8片芝士", "1/2杯牛奶（用于煮辣椒）", "2汤匙油"],
+    "ja": ["ロコト唐辛子8個（または大きな丸い辛いパプリカ）", "牛ひき肉500g", "玉ねぎ1個（みじん切り）", "にんにく3片（みじん切り）", "レーズン1/4カップ", "黒オリーブ1/4カップ（刻む）", "ゆで卵2個（刻む）", "クミンパウダー小さじ1", "塩こしょう 適量", "チーズ8枚", "牛乳1/2カップ（唐辛子を茹でる用）", "油 大さじ2"],
+    "hi": ["8 रोकोटो मिर्च (या बड़ी गोल तीखी मिर्च)", "500 ग्राम कीमा बीफ", "1 प्याज़, बारीक कटा", "3 लहसुन की कलियाँ, कटी हुई", "1/4 कप किशमिश", "1/4 कप काले जैतून, कटे", "2 उबले अंडे, कटे", "1 छोटी चम्मच पिसा जीरा", "स्वादानुसार नमक और काली मिर्च", "8 चीज़ स्लाइस", "1/2 कप दूध (मिर्च उबालने के लिए)", "2 बड़े चम्मच तेल"],
+    "tr": ["8 adet rocoto biberi (veya büyük yuvarlak acı biber)", "500g dana kıyma", "1 soğan, ince doğranmış", "3 diş sarımsak, doğranmış", "1/4 su bardağı kuru üzüm", "1/4 su bardağı siyah zeytin, doğranmış", "2 haşlanmış yumurta, doğranmış", "1 çay kaşığı öğütülmüş kimyon", "tuz ve karabiber, tadına göre", "8 dilim peynir", "1/2 su bardağı süt (biberleri haşlamak için)", "2 yemek kaşığı yağ"],
+    "it": ["8 rocoto (o grandi peperoncini rotondi piccanti)", "500g di manzo macinato", "1 cipolla, tritata finemente", "3 spicchi d'aglio, tritati", "1/4 tazza di uvetta", "1/4 tazza di olive nere, tritate", "2 uova sode, tritate", "1 cucchiaino di cumino macinato", "sale e pepe q.b.", "8 fette di formaggio", "1/2 tazza di latte (per bollire i peperoncini)", "2 cucchiai di olio"],
+    "ko": ["로코토 고추 8개(또는 크고 둥근 매운 고추)", "다진 소고기 500g", "양파 1개, 잘게 썬 것", "마늘 3쪽, 다진 것", "건포도 1/4컵", "검은 올리브 1/4컵, 다진 것", "삶은 달걀 2개, 다진 것", "간 커민 1작은술", "소금과 후추 약간", "치즈 8장", "우유 1/2컵(고추 삶는 용)", "식용유 2큰술"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE ARDEII: Taie capacul fiecărui rocoto și păstrează-l, apoi scoate semințele și membranele albe dinăuntru cu grijă. FIERBE ARDEII: Fierbe ardeii curățați în apă cu lapte 5 minute, apoi scurge-i; repetă procesul încă o dată cu apă proaspătă și lapte, pentru a reduce iuțeala. CĂLEȘTE UMPLUTURA: Încinge uleiul, călește ceapa și usturoiul la foc mediu 5-6 minute, până se înmoaie. ADAUGĂ CARNEA: Adaugă vita tocată, gătind și amestecând până se rumenește, spargând cocoloașele. PUNE RESTUL INGREDIENTELOR: Adaugă stafidele, măslinele, ouăle fierte tocate, chimenul, sare și piper, amestecând bine. UMPLE ARDEII: Umple fiecare rocoto fiert cu amestecul de carne, presând ușor. ACOPERĂ CU BRÂNZĂ: Pune câte o felie de brânză peste fiecare ardei umplut, apoi acoperă cu capacul tăiat inițial. AȘEAZĂ ÎN TAVĂ: Așază ardeii umpluți într-o tavă unsă cu ulei. COACE: Coace la 180°C timp de 20-25 minute, până brânza se topește și se rumenește ușor. SERVEȘTE: Servește fierbinte, ideal alături de pastel de papa sau orez alb.",
+    "en": "PREPARE THE PEPPERS: Cut off the top of each rocoto and keep it, then carefully remove the seeds and white membranes inside. BOIL THE PEPPERS: Boil the cleaned peppers in water with milk 5 minutes, then drain; repeat the process once more with fresh water and milk, to reduce the heat. SAUTÉ THE FILLING: Heat the oil, sauté the onion and garlic over medium heat 5-6 minutes, until soft. ADD THE MEAT: Add the ground beef, cooking and stirring until browned, breaking up any lumps. ADD THE REST: Add the raisins, olives, chopped boiled eggs, cumin, salt and pepper, mixing well. STUFF THE PEPPERS: Fill each boiled rocoto with the meat mixture, pressing gently. TOP WITH CHEESE: Place a cheese slice over each stuffed pepper, then cover with the top cut off earlier. ARRANGE IN A PAN: Arrange the stuffed peppers in an oiled baking dish. BAKE: Bake at 180°C for 20-25 minutes, until the cheese melts and lightly browns. SERVE: Serve hot, ideally alongside pastel de papa or white rice.",
+    "es": "PREPARA LOS AJÍES: Corta la parte superior de cada rocoto y guárdala, luego retira con cuidado las semillas y las membranas blancas del interior. HIERVE LOS AJÍES: Hierve los rocotos limpios en agua con leche 5 minutos, luego escúrrelos; repite el proceso una vez más con agua y leche frescas, para reducir el picor. SOFRÍE EL RELLENO: Calienta el aceite, sofríe la cebolla y el ajo a fuego medio 5-6 minutos, hasta que se ablanden. AÑADE LA CARNE: Añade la carne molida, cocinando y removiendo hasta que se dore, deshaciendo los grumos. AÑADE EL RESTO: Añade las pasas, las aceitunas, los huevos duros picados, el comino, sal y pimienta, mezclando bien. RELLENA LOS AJÍES: Rellena cada rocoto hervido con la mezcla de carne, presionando suavemente. CUBRE CON QUESO: Coloca una rebanada de queso sobre cada ají relleno, luego cubre con la tapa cortada inicialmente. COLOCA EN UNA FUENTE: Coloca los ajíes rellenos en una fuente engrasada. HORNEA: Hornea a 180°C durante 20-25 minutos, hasta que el queso se derrita y dore ligeramente. SIRVE: Sirve caliente, idealmente junto con pastel de papa o arroz blanco.",
+    "fr": "PRÉPAREZ LES PIMENTS: Coupez le dessus de chaque rocoto et gardez-le, puis retirez soigneusement les graines et les membranes blanches à l'intérieur. FAITES BOUILLIR LES PIMENTS: Faites bouillir les piments nettoyés dans de l'eau avec du lait 5 minutes, puis égouttez-les; répétez le processus une fois de plus avec de l'eau et du lait frais, pour réduire le piquant. FAITES REVENIR LA FARCE: Chauffez l'huile, faites revenir l'oignon et l'ail à feu moyen 5-6 minutes, jusqu'à ce qu'ils ramollissent. AJOUTEZ LA VIANDE: Ajoutez le bœuf haché, en cuisant et en remuant jusqu'à ce qu'il soit doré, en défaisant les grumeaux. AJOUTEZ LE RESTE: Ajoutez les raisins secs, les olives, les œufs durs hachés, le cumin, le sel et le poivre, en mélangeant bien. FARCISSEZ LES PIMENTS: Remplissez chaque rocoto bouilli avec le mélange de viande, en pressant délicatement. RECOUVREZ DE FROMAGE: Placez une tranche de fromage sur chaque piment farci, puis recouvrez avec le chapeau coupé au début. DISPOSEZ DANS UN PLAT: Disposez les piments farcis dans un plat huilé. CUISEZ: Faites cuire à 180°C pendant 20-25 minutes, jusqu'à ce que le fromage fonde et dore légèrement. SERVEZ: Servez chaud, idéalement avec du pastel de papa ou du riz blanc.",
+    "de": "PAPRIKA VORBEREITEN: Den Deckel jedes Rocoto abschneiden und aufbewahren, dann vorsichtig die Samen und weißen Häute im Inneren entfernen. PAPRIKA KOCHEN: Die gereinigten Paprika in Wasser mit Milch 5 Minuten kochen, dann abtropfen lassen; den Vorgang mit frischem Wasser und Milch einmal wiederholen, um die Schärfe zu reduzieren. FÜLLUNG ANBRATEN: Öl erhitzen, Zwiebel und Knoblauch bei mittlerer Hitze 5-6 Minuten anbraten, bis sie weich sind. FLEISCH HINZUFÜGEN: Das Rinderhackfleisch zugeben, unter Rühren braten, bis es gebräunt ist, dabei Klumpen zerteilen. REST HINZUFÜGEN: Rosinen, Oliven, gehackte gekochte Eier, Kreuzkümmel, Salz und Pfeffer hinzufügen, gut vermischen. PAPRIKA FÜLLEN: Jeden gekochten Rocoto mit der Fleischmischung füllen, leicht andrücken. MIT KÄSE BELEGEN: Eine Käsescheibe auf jede gefüllte Paprika legen, dann mit dem zuvor abgeschnittenen Deckel bedecken. IN EINE FORM LEGEN: Die gefüllten Paprika in eine geölte Auflaufform legen. BACKEN: Bei 180°C 20-25 Minuten backen, bis der Käse schmilzt und leicht bräunt. SERVIEREN: Heiß servieren, idealerweise mit Pastel de Papa oder weißem Reis.",
+    "pt": "PREPARE AS PIMENTAS: Corte a parte de cima de cada rocoto e guarde-a, depois retire cuidadosamente as sementes e as membranas brancas de dentro. FERVA AS PIMENTAS: Ferva as pimentas limpas em água com leite por 5 minutos, depois escorra; repita o processo mais uma vez com água e leite frescos, para reduzir a picância. REFOGUE O RECHEIO: Aqueça o óleo, refogue a cebola e o alho em fogo médio por 5-6 minutos, até amolecerem. ADICIONE A CARNE: Junte a carne moída, cozinhando e mexendo até dourar, desfazendo os grumos. ADICIONE O RESTO: Junte as passas, as azeitonas, os ovos cozidos picados, o cominho, sal e pimenta, misturando bem. RECHEIE AS PIMENTAS: Recheie cada rocoto fervido com a mistura de carne, pressionando levemente. COBRIR COM QUEIJO: Coloque uma fatia de queijo sobre cada pimenta recheada, depois cubra com a tampa cortada inicialmente. COLOQUE NUMA ASSADEIRA: Coloque as pimentas recheadas numa assadeira untada. ASSE: Asse a 180°C por 20-25 minutos, até o queijo derreter e dourar levemente. SIRVA: Sirva quente, idealmente com pastel de papa ou arroz branco.",
+    "ru": "ПОДГОТОВЬТЕ ПЕРЦЫ: Срежьте верхушку каждого рокото и сохраните её, затем аккуратно удалите семена и белые перегородки внутри. ОТВАРИТЕ ПЕРЦЫ: Отварите очищенные перцы в воде с молоком 5 минут, затем слейте; повторите процесс ещё раз со свежей водой и молоком, чтобы уменьшить остроту. ОБЖАРЬТЕ НАЧИНКУ: Разогрейте масло, обжаривайте лук и чеснок на среднем огне 5-6 минут, до мягкости. ДОБАВЬТЕ МЯСО: Добавьте говяжий фарш, готовьте, помешивая, до подрумянивания, разбивая комочки. ДОБАВЬТЕ ОСТАЛЬНОЕ: Добавьте изюм, оливки, нарезанные варёные яйца, тмин, соль и перец, хорошо перемешайте. НАФАРШИРУЙТЕ ПЕРЦЫ: Наполните каждый отваренный рокото мясной смесью, слегка прижимая. НАКРОЙТЕ СЫРОМ: Положите ломтик сыра на каждый фаршированный перец, затем накройте срезанной ранее верхушкой. РАЗЛОЖИТЕ В ФОРМЕ: Разложите фаршированные перцы в смазанной маслом форме для запекания. ЗАПЕКАЙТЕ: Запекайте при 180°C 20-25 минут, пока сыр не расплавится и слегка не подрумянится. ПОДАВАЙТЕ: Подавайте горячими, в идеале с pastel de papa или белым рисом.",
+    "ar": "حضّري الفلفل: اقطعي الجزء العلوي من كل روكوتو واحتفظي به، ثم أزيلي بعناية البذور والأغشية البيضاء من الداخل. اسلقي الفلفل: اسلقي الفلفل المنظف في ماء مع حليب 5 دقائق، ثم صفّيه؛ كرري العملية مرة أخرى بماء وحليب طازجين لتقليل الحرارة. قلّي الحشوة: سخّني الزيت، وقلّي البصل والثوم على نار متوسطة 5-6 دقائق حتى يلينا. أضيفي اللحم: أضيفي اللحم المفروم، اطبخيه مع التقليب حتى يتحمّر، مع تفكيك أي تكتلات. أضيفي الباقي: أضيفي الزبيب والزيتون والبيض المسلوق المفروم والكمون والملح والفلفل، وامزجي جيدًا. احشي الفلفل: احشي كل روكوتو مسلوق بخليط اللحم، مع الضغط برفق. غطّي بالجبن: ضعي شريحة جبن فوق كل فلفل محشو، ثم غطّي بالغطاء المقطوع في البداية. رتّبي في الصينية: رتّبي الفلفل المحشو في صينية خبز مدهونة بالزيت. اخبزي: اخبزي على حرارة 180 درجة مئوية لمدة 20-25 دقيقة حتى يذوب الجبن ويتحمّر قليلًا. قدّمي: قدّميها ساخنة، ويُفضَّل مع باستيل دي بابا أو الأرز الأبيض.",
+    "zh": "准备辣椒：切下每个罗科托辣椒的顶部并保留，然后小心去除内部的籽和白色隔膜。煮辣椒：将处理好的辣椒放入加了牛奶的水中煮5分钟后沥干；用新鲜的水和牛奶再重复一次这个过程，以降低辣度。炒馅料：加热油，中火炒洋葱和大蒜5-6分钟至变软。加入肉类：加入牛肉末，边煮边搅拌至变色，打散结块。加入其余材料：加入葡萄干、橄榄、切碎的水煮蛋、孜然、盐和胡椒，充分拌匀。填馅：将肉馅填入每个煮好的辣椒中，轻轻按压。盖上芝士：在每个酿好的辣椒上放一片芝士，然后盖上之前切下的顶盖。摆入烤盘：将酿好的辣椒摆入抹油的烤盘中。烘烤：以180°C烘烤20-25分钟，直至芝士融化并略微上色。上桌：趁热食用，最好搭配帕斯特尔土豆蛋奶酥或白米饭。",
+    "ja": "唐辛子を準備する：各ロコトの上部を切り取って取っておき、中の種と白い膜を丁寧に取り除く。唐辛子を茹でる：掃除した唐辛子を牛乳を加えた水で5分茹で、水を切る。辛さを和らげるため、新しい水と牛乳でもう一度この工程を繰り返す。詰め物を炒める：油を熱し、玉ねぎとにんにくを中火で5〜6分、柔らかくなるまで炒める。肉を加える：牛ひき肉を加え、かたまりをほぐしながら焼き色がつくまで炒める。残りの材料を加える：レーズン、オリーブ、刻んだゆで卵、クミン、塩こしょうを加えてよく混ぜる。唐辛子に詰める：各茹でたロコトに肉の混合物を軽く押しながら詰める。チーズをのせる：詰めた唐辛子ごとにチーズのスライスをのせ、最初に切り取った蓋で覆う。天板に並べる：詰めた唐辛子を油を塗った天板に並べる。焼く：180°Cで20〜25分、チーズが溶けて軽く色づくまで焼く。提供する：熱いうちに、できればパステル・デ・パパか白いご飯を添えて提供する。",
+    "hi": "मिर्च तैयार करें: हर रोकोटो का ऊपरी हिस्सा काटकर रखें, फिर सावधानी से अंदर के बीज और सफेद झिल्ली निकालें। मिर्च उबालें: साफ की मिर्च को दूध वाले पानी में 5 मिनट उबालें, फिर छानें; तीखापन कम करने के लिए ताज़े पानी और दूध के साथ प्रक्रिया एक बार और दोहराएं। भरावन भूनें: तेल गरम करें, प्याज़ और लहसुन को मध्यम आंच पर 5-6 मिनट, नरम होने तक भूनें। मांस डालें: कीमा बीफ डालें, हिलाते हुए भूरा होने तक पकाएं, गुठलियां तोड़ें। बाकी सामग्री डालें: किशमिश, जैतून, कटे उबले अंडे, जीरा, नमक और काली मिर्च डालें, अच्छी तरह मिलाएं। मिर्च भरें: हर उबली रोकोटो को मांस मिश्रण से भरें, हल्के से दबाते हुए। चीज़ से ढकें: हर भरी मिर्च पर चीज़ की एक स्लाइस रखें, फिर शुरुआत में काटा ढक्कन से ढक दें। ट्रे में रखें: भरी मिर्च को तेल लगी ट्रे में रखें। बेक करें: 180°C पर 20-25 मिनट बेक करें, जब तक चीज़ पिघल न जाए और हल्का भूरा न हो जाए। परोसें: गरमागरम, आदर्श रूप से पास्टेल दे पापा या सफेद चावल के साथ परोसें।",
+    "tr": "BİBERLERİ HAZIRLAYIN: Her rocoto biberinin üst kısmını kesip saklayın, sonra içindeki çekirdekleri ve beyaz zarları dikkatlice çıkarın. BİBERLERİ HAŞLAYIN: Temizlenmiş biberleri sütlü suda 5 dakika haşlayın, sonra süzün; acılığı azaltmak için işlemi taze su ve sütle bir kez daha tekrarlayın. İÇ HARCI SOTELEYIN: Yağı ısıtın, soğan ve sarımsağı orta ateşte 5-6 dakika, yumuşayana kadar soteleyin. ETİ EKLEYİN: Kıyma dana etini ekleyip topaklarını dağıtarak kızarana kadar karıştırarak pişirin. GERİ KALANLARI EKLEYİN: Kuru üzüm, zeytin, doğranmış haşlanmış yumurta, kimyon, tuz ve karabiberi ekleyip iyice karıştırın. BİBERLERİ DOLDURUN: Her haşlanmış rocotoyu et karışımıyla hafifçe bastırarak doldurun. PEYNİRLE ÖRTÜN: Her doldurulmuş biberin üzerine bir dilim peynir koyun, sonra başta kesilen kapakla örtün. TEPSİYE YERLEŞTİRİN: Doldurulmuş biberleri yağlanmış bir fırın tepsisine yerleştirin. PİŞİRİN: 180°C'de peynir eriyip hafifçe kızarana kadar 20-25 dakika pişirin. SERVİS YAPIN: Sıcak servis edin, ideal olarak pastel de papa veya beyaz pirinçle birlikte.",
+    "it": "PREPARA I PEPERONCINI: Taglia la parte superiore di ogni rocoto e conservala, poi rimuovi con cura i semi e le membrane bianche interne. BOLLI I PEPERONCINI: Bolli i peperoncini puliti in acqua con latte per 5 minuti, poi scolali; ripeti il processo un'altra volta con acqua e latte freschi, per ridurre il piccante. SOFFRIGGI IL RIPIENO: Scalda l'olio, soffriggi cipolla e aglio a fuoco medio 5-6 minuti, finché morbidi. AGGIUNGI LA CARNE: Aggiungi il manzo macinato, cuocendo e mescolando finché dorato, sminuzzando i grumi. AGGIUNGI IL RESTO: Aggiungi uvetta, olive, uova sode tritate, cumino, sale e pepe, mescolando bene. FARCISCI I PEPERONCINI: Farcisci ogni rocoto bollito con il composto di carne, premendo delicatamente. COPRI CON FORMAGGIO: Metti una fetta di formaggio su ogni peperoncino farcito, poi copri con il cappello tagliato all'inizio. DISPONI IN TEGLIA: Disponi i peperoncini farciti in una teglia oliata. INFORNA: Cuoci a 180°C per 20-25 minuti, finché il formaggio si scioglie e dora leggermente. SERVI: Servi caldo, idealmente con pastel de papa o riso bianco.",
+    "ko": "고추 준비하기: 각 로코토 고추의 윗부분을 잘라 보관하고, 안쪽의 씨와 흰 막을 조심스럽게 제거한다. 고추 삶기: 손질한 고추를 우유를 넣은 물에 5분간 삶은 뒤 물기를 뺀다; 매운맛을 줄이기 위해 새 물과 우유로 이 과정을 한 번 더 반복한다. 속 재료 볶기: 기름을 달구고 양파와 마늘을 중불에서 5-6분간 부드러워질 때까지 볶는다. 고기 추가: 다진 소고기를 넣고 덩어리를 풀어가며 갈색이 될 때까지 볶는다. 나머지 재료 추가: 건포도, 올리브, 다진 삶은 달걀, 커민, 소금, 후추를 넣고 잘 섞는다. 고추 속 채우기: 삶은 로코토 각각에 고기 혼합물을 살짝 눌러 채운다. 치즈 덮기: 속을 채운 고추 위에 치즈 한 장을 올리고 처음에 잘라둔 뚜껑으로 덮는다. 팬에 담기: 속을 채운 고추를 기름칠한 오븐 팬에 담는다. 굽기: 180°C에서 치즈가 녹고 살짝 갈색이 될 때까지 20-25분간 굽는다. 제공하기: 이상적으로 파스텔 데 파파나 흰쌀밥과 함께 뜨겁게 제공한다."
+  },
+  "originText": {
+    "ro": "Rocoto relleno este considerat felul emblematic al orașului Arequipa, din sudul Peru, unde localnicii sunt cunoscuți drept \"picantones\" — iubitori de mâncare picantă — datorită preferinței pentru rocoto, unul dintre cei mai iuți ardei din America de Sud. Ardeiul rocoto este singurul din genul Capsicum pubescens, cu semințe negre distinctive și pereți neobișnuit de groși, ceea ce îl face ideal pentru umplut.\n\nTehnica de a fierbe ardeiul de mai multe ori în apă cu lapte pentru a-i reduce iuțeala, fără a-i pierde complet caracterul picant, este considerată esențială și necesită experiență — prea multă fierbere anulează scopul felului, prea puțină îl face imposibil de mâncat pentru majoritatea oaspeților. Combinația dulce-sărată a umpluturii, cu stafide și măsline alături de carne, reflectă influențele culinare spaniole din perioada colonială asupra bucătăriei arequipeñe.",
+    "en": "Rocoto relleno is considered the signature dish of Arequipa, in southern Peru, where locals are known as \"picantones\" — lovers of spicy food — for their preference for rocoto, one of South America's spiciest peppers. The rocoto pepper is the only one in the Capsicum pubescens species, with distinctive black seeds and unusually thick walls, which makes it ideal for stuffing.\n\nThe technique of boiling the pepper multiple times in water with milk to reduce its heat, without losing its spicy character entirely, is considered essential and requires experience — too much boiling defeats the dish's purpose, too little makes it impossible for most guests to eat. The sweet-savory combination of the filling, with raisins and olives alongside the meat, reflects Spanish colonial culinary influences on Arequipa's cuisine.",
+    "es": "El rocoto relleno se considera el plato emblemático de Arequipa, en el sur de Perú, donde los locales son conocidos como \"picantones\" — amantes de la comida picante — por su preferencia por el rocoto, uno de los chiles más picantes de Sudamérica. El rocoto es el único de la especie Capsicum pubescens, con semillas negras distintivas y paredes inusualmente gruesas, lo que lo hace ideal para rellenar.\n\nLa técnica de hervir el ají varias veces en agua con leche para reducir su picor, sin perder por completo su carácter picante, se considera esencial y requiere experiencia — demasiada cocción anula el propósito del plato, muy poca lo hace imposible de comer para la mayoría de los invitados. La combinación dulce-salada del relleno, con pasas y aceitunas junto a la carne, refleja las influencias culinarias españolas coloniales sobre la cocina arequipeña.",
+    "fr": "Le rocoto relleno est considéré comme le plat emblématique d'Arequipa, dans le sud du Pérou, où les habitants sont connus sous le nom de \"picantones\" — amoureux de nourriture épicée — pour leur préférence pour le rocoto, l'un des piments les plus forts d'Amérique du Sud. Le piment rocoto est le seul de l'espèce Capsicum pubescens, avec des graines noires distinctives et des parois inhabituellement épaisses, ce qui le rend idéal pour être farci.\n\nLa technique consistant à faire bouillir le piment plusieurs fois dans de l'eau avec du lait pour réduire son piquant, sans perdre entièrement son caractère épicé, est considérée comme essentielle et demande de l'expérience — trop de cuisson annule le but du plat, pas assez le rend impossible à manger pour la plupart des invités. La combinaison sucrée-salée de la farce, avec des raisins secs et des olives aux côtés de la viande, reflète les influences culinaires espagnoles coloniales sur la cuisine d'Arequipa.",
+    "de": "Rocoto Relleno gilt als das charakteristische Gericht von Arequipa im Süden Perus, wo die Einheimischen als \"Picantones\" — Liebhaber scharfer Speisen — bekannt sind, wegen ihrer Vorliebe für Rocoto, eine der schärfsten Paprikaarten Südamerikas. Die Rocoto-Paprika ist die einzige Art der Spezies Capsicum pubescens, mit charakteristischen schwarzen Samen und ungewöhnlich dicken Wänden, was sie ideal zum Füllen macht.\n\nDie Technik, die Paprika mehrmals in Wasser mit Milch zu kochen, um ihre Schärfe zu reduzieren, ohne ihren scharfen Charakter vollständig zu verlieren, gilt als essenziell und erfordert Erfahrung — zu viel Kochen verfehlt den Zweck des Gerichts, zu wenig macht es für die meisten Gäste ungenießbar. Die süß-herzhafte Kombination der Füllung, mit Rosinen und Oliven neben dem Fleisch, spiegelt spanische koloniale kulinarische Einflüsse auf die Küche von Arequipa wider.",
+    "pt": "O rocoto relleno é considerado o prato emblemático de Arequipa, no sul do Peru, onde os locais são conhecidos como \"picantones\" — amantes de comida picante — pela sua preferência pelo rocoto, uma das pimentas mais picantes da América do Sul. A pimenta rocoto é a única da espécie Capsicum pubescens, com sementes pretas distintivas e paredes invulgarmente grossas, o que a torna ideal para rechear.\n\nA técnica de ferver a pimenta várias vezes em água com leite para reduzir a sua picância, sem perder completamente o seu caráter picante, é considerada essencial e requer experiência — fervura a mais anula o propósito do prato, a menos torna-o impossível de comer para a maioria dos convidados. A combinação doce-salgada do recheio, com passas e azeitonas junto à carne, reflete as influências culinárias espanholas coloniais na cozinha de Arequipa.",
+    "ru": "Рокото рельено считается визитным блюдом Арекипы на юге Перу, где местных жителей называют \"пикантонес\" — любители острой еды — за их предпочтение рокото, одного из самых острых перцев Южной Америки. Перец рокото — единственный представитель вида Capsicum pubescens, с характерными чёрными семенами и необычно толстыми стенками, что делает его идеальным для фарширования.\n\nТехника многократного отваривания перца в воде с молоком для снижения остроты без полной потери его пряного характера считается необходимой и требует опыта — слишком много кипячения сводит на нет смысл блюда, слишком мало делает его несъедобным для большинства гостей. Сладко-солёное сочетание начинки с изюмом и оливками рядом с мясом отражает влияние испанской колониальной кухни на кулинарию Арекипы.",
+    "ar": "يُعتبر الروكوتو ريينو الطبق المميز لمدينة أريكيبا في جنوب بيرو، حيث يُعرف السكان المحليون بـ\"بيكانتونيس\" — عشاق الطعام الحار — لتفضيلهم الروكوتو، أحد أشد الفلفل حرارة في أمريكا الجنوبية. فلفل الروكوتو هو النوع الوحيد من فصيلة Capsicum pubescens، بحبوب سوداء مميزة وجدران سميكة بشكل غير معتاد، مما يجعله مثاليًا للحشو.\n\nتُعتبر تقنية سلق الفلفل عدة مرات في ماء مع حليب لتقليل حرارته، دون فقدان طابعه الحار تمامًا، أساسية وتتطلب خبرة — فالإفراط في السلق يُبطل الغرض من الطبق، والقليل منه يجعله مستحيل الأكل لمعظم الضيوف. يعكس المزيج الحلو المالح للحشوة، بالزبيب والزيتون إلى جانب اللحم، التأثيرات الطهوية الإسبانية الاستعمارية على مطبخ أريكيبا.",
+    "zh": "秘鲁酿辣椒被认为是秘鲁南部阿雷基帕市的代表菜肴，当地人被称为「picantones」——辣食爱好者——因其偏爱罗科托，这是南美洲最辣的辣椒之一。罗科托辣椒是茸毛辣椒（Capsicum pubescens）品种中唯一的一种，具有独特的黑色籽粒和异常厚实的果壁，使其非常适合酿馅。\n\n将辣椒在牛奶水中多次焯煮以降低辣度，同时不完全失去其辛辣特性的技巧被认为至关重要，需要经验积累——煮得太久会失去这道菜的意义，煮得太少则大多数客人无法承受其辣度。馅料中葡萄干和橄榄与肉一起构成的甜咸组合，体现了西班牙殖民时期对阿雷基帕饮食的烹饪影响。",
+    "ja": "ロコト・レジェーノはペルー南部のアレキパの代表料理とされ、地元の人々は「ピカントネス」——辛い食べ物を愛する人々——として知られ、南米で最も辛い唐辛子の一つであるロコトを好む。ロコト唐辛子はカプシクム・プベセンス種の中で唯一のもので、特徴的な黒い種子と異常に厚い壁を持ち、詰め物に最適である。\n\n辛さを完全に失わせることなく、牛乳を加えた水で何度も茹でて辛さを和らげる技法は不可欠とされ、経験を要する——茹ですぎると料理の意味がなくなり、茹で足りないとほとんどの客には食べられないほど辛くなる。肉と共にレーズンとオリーブが入る甘辛い詰め物の組み合わせは、アレキパの食文化に対するスペイン植民地時代の料理的影響を反映している。",
+    "hi": "रोकोटो रेजेनो को दक्षिणी पेरू के अरेकिपा शहर का प्रतिष्ठित व्यंजन माना जाता है, जहां स्थानीय लोगों को \"पिकांतोनेस\" — तीखे भोजन के प्रेमी — कहा जाता है, रोकोटो के प्रति उनकी पसंद के कारण, जो दक्षिण अमेरिका की सबसे तीखी मिर्चों में से एक है। रोकोटो मिर्च कैप्सिकम प्यूबेसेंस प्रजाति की एकमात्र मिर्च है, जिसमें विशिष्ट काले बीज और असामान्य रूप से मोटी दीवारें होती हैं, जो इसे भरने के लिए आदर्श बनाती हैं।\n\nमिर्च को उसका तीखा स्वभाव पूरी तरह खोए बिना तीखापन कम करने के लिए दूध वाले पानी में कई बार उबालने की तकनीक आवश्यक मानी जाती है और अनुभव की आवश्यकता होती है — बहुत ज़्यादा उबालना व्यंजन का उद्देश्य नष्ट कर देता है, बहुत कम उबालना अधिकांश मेहमानों के लिए इसे खाना असंभव बना देता है। भरावन का मीठा-नमकीन मिश्रण, मांस के साथ किशमिश और जैतून, अरेकिपा के व्यंजनों पर स्पेनिश औपनिवेशिक पाक प्रभावों को दर्शाता है।",
+    "tr": "Rocoto relleno, güney Peru'daki Arequipa'nın simge yemeği olarak kabul edilir; burada yerel halk, Güney Amerika'nın en acı biberlerinden biri olan rocoto'ya olan düşkünlükleri nedeniyle \"picantones\" — acı yiyecek sevenler — olarak bilinir. Rocoto biberi, Capsicum pubescens türünün tek üyesidir, kendine özgü siyah çekirdekleri ve alışılmadık derecede kalın duvarlarıyla, doldurmak için idealdir.\n\nAcılığını tamamen kaybetmeden azaltmak için biberi süt katılmış suda birkaç kez haşlama tekniği gerekli kabul edilir ve deneyim gerektirir — çok fazla haşlama yemeğin amacını boşa çıkarır, çok az haşlama ise çoğu misafirin yemesini imkânsız hale getirir. Etin yanında kuru üzüm ve zeytinle iç harcın tatlı-tuzlu birleşimi, Arequipa mutfağı üzerindeki İspanyol sömürge dönemi mutfak etkilerini yansıtır.",
+    "it": "Il rocoto relleno è considerato il piatto simbolo di Arequipa, nel sud del Perù, dove gli abitanti locali sono conosciuti come \"picantones\" — amanti del cibo piccante — per la loro preferenza per il rocoto, uno dei peperoncini più piccanti del Sud America. Il peperoncino rocoto è l'unico della specie Capsicum pubescens, con semi neri distintivi e pareti insolitamente spesse, il che lo rende ideale da farcire.\n\nLa tecnica di bollire il peperoncino più volte in acqua con latte per ridurne il piccante, senza perdere completamente il suo carattere piccante, è considerata essenziale e richiede esperienza — troppa bollitura vanifica lo scopo del piatto, troppo poca lo rende impossibile da mangiare per la maggior parte degli ospiti. La combinazione dolce-salata del ripieno, con uvetta e olive accanto alla carne, riflette le influenze culinarie coloniali spagnole sulla cucina di Arequipa.",
+    "ko": "로코토 레예노는 페루 남부 아레키파의 대표 요리로 여겨지며, 이곳 주민들은 남미에서 가장 매운 고추 중 하나인 로코토를 선호하는 데서 \"피칸토네스\"(매운 음식을 사랑하는 사람들)로 알려져 있다. 로코토 고추는 카프시쿰 푸베센스 종의 유일한 구성원으로, 독특한 검은 씨앗과 유난히 두꺼운 벽을 가지고 있어 속을 채우기에 이상적이다.\n\n매운맛을 완전히 잃지 않으면서도 줄이기 위해 우유를 넣은 물에 고추를 여러 번 삶는 기법은 필수적인 것으로 여겨지며 경험이 필요하다 — 너무 많이 삶으면 요리의 목적이 사라지고, 너무 적게 삶으면 대부분의 손님이 먹을 수 없을 정도로 매워진다. 고기와 함께 건포도와 올리브가 들어간 속의 달콤 짭짤한 조합은 아레키파 요리에 대한 스페인 식민지 시대의 요리적 영향을 반영한다."
+  },
+  "meta": {
+    "time": 65,
+    "costRon": 28,
+    "tags": ["spicy", "high-protein", "family"],
+    "desc": {
+      "ro": "Ardei rocoto peruani umpluți cu vită, stafide și măsline, acoperiți cu brânză și copți.",
+      "en": "Peruvian rocoto peppers stuffed with beef, raisins and olives, topped with cheese and baked.",
+      "es": "Rocotos peruanos rellenos de carne, pasas y aceitunas, cubiertos con queso y horneados.",
+      "fr": "Piments rocoto péruviens farcis de bœuf, raisins secs et olives, gratinés au fromage.",
+      "de": "Peruanische Rocoto-Paprika gefüllt mit Rindfleisch, Rosinen und Oliven, mit Käse überbacken.",
+      "pt": "Pimentas rocoto peruanas recheadas com carne, passas e azeitonas, cobertas com queijo e assadas.",
+      "ru": "Перуанский перец рокото, фаршированный говядиной, изюмом и оливками, запечённый под сыром.",
+      "ar": "فلفل روكوتو بيروفي محشو باللحم والزبيب والزيتون، مغطى بالجبن ومخبوز.",
+      "zh": "秘鲁罗科托辣椒酿牛肉、葡萄干和橄榄，覆盖芝士烘烤而成。",
+      "ja": "牛肉、レーズン、オリーブを詰めたペルー風ロコト唐辛子、チーズをのせて焼いたもの。",
+      "hi": "बीफ, किशमिश और जैतून से भरी पेरूवियन रोकोटो मिर्च, चीज़ से ढककर बेक की गई।",
+      "tr": "Dana eti, kuru üzüm ve zeytinle doldurulmuş, peynirle kaplanıp fırınlanmış Peru usulü rocoto biberleri.",
+      "it": "Peperoncini rocoto peruviani ripieni di manzo, uvetta e olive, ricoperti di formaggio e cotti al forno.",
+      "ko": "소고기, 건포도, 올리브로 속을 채우고 치즈를 얹어 구운 페루식 로코토 고추."
+    }
+  }
+}

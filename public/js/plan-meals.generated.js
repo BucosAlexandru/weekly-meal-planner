@@ -109,22 +109,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      387,
+      384,
+      385,
       18,
       306,
       36,
-      187,
-      109,
-      104,
-      117
+      187
     ],
     "dinnerIds": [
+      109,
+      104,
+      117,
       113,
       111,
       310,
-      313,
-      315,
-      317,
-      94
+      313
     ]
   },
   "vegetarian": {

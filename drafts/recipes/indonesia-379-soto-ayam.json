@@ -1,0 +1,209 @@
+{
+  "id": 379,
+  "servings": 4,
+  "tipType": "soup",
+  "pairingsType": "soup",
+  "origin": {
+    "ro": "Indonezia",
+    "en": "Indonesia",
+    "es": "Indonesia",
+    "fr": "Indonésie",
+    "de": "Indonesien",
+    "pt": "Indonésia",
+    "ru": "Индонезия",
+    "ar": "إندونيسيا",
+    "zh": "印度尼西亚",
+    "ja": "インドネシア",
+    "hi": "इंडोनेशिया",
+    "tr": "Endonezya",
+    "it": "Indonesia",
+    "ko": "인도네시아"
+  },
+  "name": {
+    "ro": "Soto Ayam (Supă de Pui cu Turmeric)",
+    "en": "Soto Ayam (Indonesian Turmeric Chicken Soup)",
+    "es": "Soto Ayam (Sopa de Pollo con Cúrcuma Indonesia)",
+    "fr": "Soto Ayam (Soupe de Poulet au Curcuma Indonésienne)",
+    "de": "Soto Ayam (Indonesische Kurkuma-Hühnersuppe)",
+    "pt": "Soto Ayam (Sopa de Frango com Açafrão-da-Terra Indonésia)",
+    "ru": "Сото Аям (Индонезийский Куриный Суп с Куркумой)",
+    "ar": "سوتو أيام (شوربة دجاج إندونيسية بالكركم)",
+    "zh": "梭多阿央（印尼姜黄鸡汤）",
+    "ja": "ソトアヤム（インドネシア風ターメリックチキンスープ）",
+    "hi": "सोटो अयम (इंडोनेशियाई हल्दी चिकन सूप)",
+    "tr": "Soto Ayam (Endonezya Usulü Zerdeçallı Tavuk Çorbası)",
+    "it": "Soto Ayam (Zuppa di Pollo alla Curcuma Indonesiana)",
+    "ko": "소토 아얌 (인도네시아식 강황 치킨 수프)"
+  },
+  "category": {
+    "ro": "Supă",
+    "en": "Soup",
+    "es": "Sopa",
+    "fr": "Soupe",
+    "de": "Suppe",
+    "pt": "Sopa",
+    "ru": "Суп",
+    "ar": "شوربة",
+    "zh": "汤",
+    "ja": "スープ",
+    "hi": "सूप",
+    "tr": "Çorba",
+    "it": "Zuppa",
+    "ko": "수프"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍗", "t": "Pui fiert fraged", "d": "Puiul întreg fierbe încet într-un bulion aromat, apoi se destramă cu mâna în fâșii." },
+      { "icon": "🟡", "t": "Bulion galben", "d": "Turmericul, ghimbirul și galanga dau supei culoarea aurie și aroma caracteristică." },
+      { "icon": "🍜", "t": "Tăiței de orez", "d": "Tăițeii subțiri de orez sau bihun absorb bulionul parfumat." },
+      { "icon": "🍋", "t": "Garnituri proaspete", "d": "Se servește cu varză mărunțită, ou fiert, ceapă prăjită crocantă și lime." }
+    ],
+    "en": [
+      { "icon": "🍗", "t": "Tender poached chicken", "d": "A whole chicken simmers slowly in an aromatic broth, then gets hand-shredded into strips." },
+      { "icon": "🟡", "t": "Golden broth", "d": "Turmeric, ginger and galangal give the soup its golden color and signature aroma." },
+      { "icon": "🍜", "t": "Rice noodles", "d": "Thin rice vermicelli soak up the fragrant broth." },
+      { "icon": "🍋", "t": "Fresh garnishes", "d": "Served with shredded cabbage, boiled egg, crispy fried shallots and lime." }
+    ],
+    "es": [
+      { "icon": "🍗", "t": "Pollo tierno escalfado", "d": "Un pollo entero se cuece lentamente en un caldo aromático y luego se deshilacha a mano." },
+      { "icon": "🟡", "t": "Caldo dorado", "d": "La cúrcuma, el jengibre y el galangal dan a la sopa su color dorado y su aroma característico." },
+      { "icon": "🍜", "t": "Fideos de arroz", "d": "Los finos fideos de arroz absorben el caldo aromático." },
+      { "icon": "🍋", "t": "Guarniciones frescas", "d": "Se sirve con col rallada, huevo cocido, chalotas fritas crujientes y lima." }
+    ],
+    "fr": [
+      { "icon": "🍗", "t": "Poulet poché tendre", "d": "Un poulet entier mijote lentement dans un bouillon aromatique, puis est effiloché à la main." },
+      { "icon": "🟡", "t": "Bouillon doré", "d": "Le curcuma, le gingembre et le galanga donnent à la soupe sa couleur dorée et son arôme caractéristique." },
+      { "icon": "🍜", "t": "Vermicelles de riz", "d": "Les fins vermicelles de riz absorbent le bouillon parfumé." },
+      { "icon": "🍋", "t": "Garnitures fraîches", "d": "Servi avec du chou émincé, œuf dur, échalotes frites croustillantes et citron vert." }
+    ],
+    "de": [
+      { "icon": "🍗", "t": "Zartes pochiertes Hähnchen", "d": "Ein ganzes Hähnchen köchelt langsam in aromatischer Brühe und wird dann von Hand zerzupft." },
+      { "icon": "🟡", "t": "Goldene Brühe", "d": "Kurkuma, Ingwer und Galgant geben der Suppe ihre goldene Farbe und ihr charakteristisches Aroma." },
+      { "icon": "🍜", "t": "Reisnudeln", "d": "Dünne Reisnudeln saugen die aromatische Brühe auf." },
+      { "icon": "🍋", "t": "Frische Beilagen", "d": "Serviert mit geraspeltem Kohl, gekochtem Ei, knusprig gebratenen Schalotten und Limette." }
+    ],
+    "pt": [
+      { "icon": "🍗", "t": "Frango escalfado macio", "d": "Um frango inteiro cozinha lentamente num caldo aromático e depois é desfiado à mão." },
+      { "icon": "🟡", "t": "Caldo dourado", "d": "O açafrão-da-terra, o gengibre e a galanga dão à sopa a sua cor dourada e aroma característico." },
+      { "icon": "🍜", "t": "Macarrão de arroz", "d": "O fino macarrão de arroz absorve o caldo perfumado." },
+      { "icon": "🍋", "t": "Acompanhamentos frescos", "d": "Servido com repolho ralado, ovo cozido, chalotas fritas crocantes e lima." }
+    ],
+    "ru": [
+      { "icon": "🍗", "t": "Нежная отварная курица", "d": "Целая курица медленно варится в ароматном бульоне, затем разбирается вручную на волокна." },
+      { "icon": "🟡", "t": "Золотистый бульон", "d": "Куркума, имбирь и галангал придают супу золотистый цвет и характерный аромат." },
+      { "icon": "🍜", "t": "Рисовая лапша", "d": "Тонкая рисовая вермишель впитывает ароматный бульон." },
+      { "icon": "🍋", "t": "Свежие добавки", "d": "Подаётся с шинкованной капустой, варёным яйцом, хрустящим жареным луком-шалотом и лаймом." }
+    ],
+    "ar": [
+      { "icon": "🍗", "t": "دجاج مسلوق طري", "d": "تُطهى دجاجة كاملة ببطء في مرق عطري، ثم تُمزَّق يدويًا إلى شرائح." },
+      { "icon": "🟡", "t": "مرق ذهبي", "d": "يمنح الكركم والزنجبيل والغالانغال الشوربة لونها الذهبي ونكهتها المميزة." },
+      { "icon": "🍜", "t": "شعيرية الأرز", "d": "تمتص شعيرية الأرز الرقيقة المرق العطري." },
+      { "icon": "🍋", "t": "إضافات طازجة", "d": "تُقدَّم مع الملفوف المبشور والبيض المسلوق والبصل الأخضر المقلي المقرمش والليمون الحامض." }
+    ],
+    "zh": [
+      { "icon": "🍗", "t": "鲜嫩水煮鸡肉", "d": "整只鸡在香浓高汤中慢煮，然后手工撕成鸡丝。" },
+      { "icon": "🟡", "t": "金黄高汤", "d": "姜黄、姜和南姜赋予汤品金黄色泽和标志性香气。" },
+      { "icon": "🍜", "t": "米粉", "d": "细米粉吸满香浓的高汤。" },
+      { "icon": "🍋", "t": "新鲜配料", "d": "配以切丝卷心菜、水煮蛋、酥脆炸红葱头和青柠。" }
+    ],
+    "ja": [
+      { "icon": "🍗", "t": "柔らかい茹で鶏", "d": "丸鶏を香り高いスープでじっくり煮込み、手でほぐして細く裂く。" },
+      { "icon": "🟡", "t": "黄金色のスープ", "d": "ターメリック、生姜、ガランガルがスープに黄金色と特徴的な香りを与える。" },
+      { "icon": "🍜", "t": "ビーフン", "d": "細いビーフンが香り高いスープを吸い込む。" },
+      { "icon": "🍋", "t": "新鮮な薬味", "d": "千切りキャベツ、ゆで卵、カリカリの揚げエシャロット、ライムを添えて提供する。" }
+    ],
+    "hi": [
+      { "icon": "🍗", "t": "नरम उबला चिकन", "d": "पूरा चिकन सुगंधित शोरबे में धीरे-धीरे पकता है, फिर हाथ से पतली पट्टियों में तोड़ा जाता है।" },
+      { "icon": "🟡", "t": "सुनहरा शोरबा", "d": "हल्दी, अदरक और गलंगल सूप को सुनहरा रंग और खास सुगंध देते हैं।" },
+      { "icon": "🍜", "t": "चावल के नूडल्स", "d": "पतले चावल के नूडल्स सुगंधित शोरबा सोख लेते हैं।" },
+      { "icon": "🍋", "t": "ताज़ी गार्निश", "d": "कटी पत्तागोभी, उबले अंडे, कुरकुरे तले प्याज़ और नींबू के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🍗", "t": "Yumuşak haşlanmış tavuk", "d": "Bütün bir tavuk aromatik bir suda yavaşça pişer, sonra elle ince şeritler halinde didiklenir." },
+      { "icon": "🟡", "t": "Altın rengi çorba", "d": "Zerdeçal, zencefil ve galanga çorbaya altın rengini ve karakteristik aromasını verir." },
+      { "icon": "🍜", "t": "Pirinç şehriyesi", "d": "İnce pirinç şehriyesi aromalı suyu emer." },
+      { "icon": "🍋", "t": "Taze garnitürler", "d": "Rendelenmiş lahana, haşlanmış yumurta, çıtır kızarmış soğan ve limonla servis edilir." }
+    ],
+    "it": [
+      { "icon": "🍗", "t": "Pollo bollito tenero", "d": "Un pollo intero cuoce lentamente in un brodo aromatico, poi viene sfilacciato a mano." },
+      { "icon": "🟡", "t": "Brodo dorato", "d": "Curcuma, zenzero e galanga danno alla zuppa il suo colore dorato e l'aroma caratteristico." },
+      { "icon": "🍜", "t": "Spaghetti di riso", "d": "I sottili spaghetti di riso assorbono il brodo profumato." },
+      { "icon": "🍋", "t": "Guarnizioni fresche", "d": "Servito con cavolo sminuzzato, uovo sodo, scalogno fritto croccante e lime." }
+    ],
+    "ko": [
+      { "icon": "🍗", "t": "부드러운 삶은 닭고기", "d": "닭 한 마리를 향긋한 육수에 천천히 삶은 뒤 손으로 가늘게 찢는다." },
+      { "icon": "🟡", "t": "황금빛 육수", "d": "강황, 생강, 갈랑갈이 수프에 황금빛 색과 특유의 향을 준다." },
+      { "icon": "🍜", "t": "쌀국수", "d": "가는 쌀국수가 향긋한 육수를 흡수한다." },
+      { "icon": "🍋", "t": "신선한 고명", "d": "채 썬 양배추, 삶은 달걀, 바삭한 튀긴 샬롯, 라임을 곁들여 제공한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["1 pui întreg (aprox. 1.2kg)", "2 litri apă", "4 căței de usturoi", "5 cm turmeric proaspăt", "3 cm ghimbir", "3 cm galanga", "3 frunze de dafin indonezian (daun salam)", "2 tulpini de lemongrass, zdrobite", "100g tăiței de orez subțiri (bihun)", "sare după gust", "varză albă mărunțită, pentru servire", "2 ouă fierte tari, tăiate în jumătate", "ceapă prăjită crocantă, pentru servire", "lime, pentru servire"],
+    "en": ["1 whole chicken (approx. 1.2kg)", "2 liters water", "4 garlic cloves", "5cm fresh turmeric", "3cm ginger", "3cm galangal", "3 Indonesian bay leaves (daun salam)", "2 lemongrass stalks, bruised", "100g thin rice noodles (bihun)", "salt to taste", "shredded white cabbage, for serving", "2 hard-boiled eggs, halved", "crispy fried shallots, for serving", "lime, for serving"],
+    "es": ["1 pollo entero (aprox. 1.2kg)", "2 litros de agua", "4 dientes de ajo", "5cm de cúrcuma fresca", "3cm de jengibre", "3cm de galangal", "3 hojas de laurel indonesio (daun salam)", "2 tallos de citronela, machacados", "100g de fideos de arroz finos (bihun)", "sal al gusto", "col blanca rallada, para servir", "2 huevos duros, cortados por la mitad", "chalotas fritas crujientes, para servir", "lima, para servir"],
+    "fr": ["1 poulet entier (env. 1,2kg)", "2 litres d'eau", "4 gousses d'ail", "5cm de curcuma frais", "3cm de gingembre", "3cm de galanga", "3 feuilles de laurier indonésien (daun salam)", "2 tiges de citronnelle, écrasées", "100g de vermicelles de riz fins (bihun)", "sel selon le goût", "chou blanc émincé, pour servir", "2 œufs durs, coupés en deux", "échalotes frites croustillantes, pour servir", "citron vert, pour servir"],
+    "de": ["1 ganzes Hähnchen (ca. 1,2kg)", "2 Liter Wasser", "4 Knoblauchzehen", "5cm frischer Kurkuma", "3cm Ingwer", "3cm Galgant", "3 indonesische Lorbeerblätter (daun salam)", "2 Zitronengrasstangen, angequetscht", "100g dünne Reisnudeln (bihun)", "Salz nach Geschmack", "geraspelter Weißkohl, zum Servieren", "2 hartgekochte Eier, halbiert", "knusprig gebratene Schalotten, zum Servieren", "Limette, zum Servieren"],
+    "pt": ["1 frango inteiro (aprox. 1,2kg)", "2 litros de água", "4 dentes de alho", "5cm de açafrão-da-terra fresco", "3cm de gengibre", "3cm de galanga", "3 folhas de louro indonésio (daun salam)", "2 talos de capim-limão, amassados", "100g de macarrão de arroz fino (bihun)", "sal a gosto", "repolho branco ralado, para servir", "2 ovos cozidos, cortados ao meio", "chalotas fritas crocantes, para servir", "lima, para servir"],
+    "ru": ["1 целая курица (около 1,2кг)", "2 литра воды", "4 зубчика чеснока", "5см свежей куркумы", "3см имбиря", "3см галангала", "3 индонезийских лавровых листа (даун салам)", "2 стебля лемонграсса, раздавленных", "100г тонкой рисовой лапши (бихун)", "соль по вкусу", "нашинкованная белая капуста, для подачи", "2 яйца, сваренных вкрутую, разрезанных пополам", "хрустящий жареный лук-шалот, для подачи", "лайм, для подачи"],
+    "ar": ["دجاجة كاملة (حوالي 1.2 كجم)", "2 لتر ماء", "4 فصوص ثوم", "5 سم كركم طازج", "3 سم زنجبيل", "3 سم غالانغال", "3 أوراق غار إندونيسية (داون سلام)", "عودا ليمون عشبي، مهروسان", "100 غرام شعيرية أرز رقيقة (بيهون)", "ملح حسب الرغبة", "ملفوف أبيض مبشور، للتقديم", "بيضتان مسلوقتان جيدًا، مقطعتان لنصفين", "بصل مقلي مقرمش، للتقديم", "ليمون حامض، للتقديم"],
+    "zh": ["1只整鸡（约1.2公斤）", "2升水", "4瓣大蒜", "5厘米新鲜姜黄", "3厘米姜", "3厘米南姜", "3片印尼香叶（daun salam）", "2根香茅，拍碎", "100克细米粉（bihun）", "盐适量", "切丝白菜，配食用", "2个水煮蛋，切半", "酥脆炸红葱头，配食用", "青柠，配食用"],
+    "ja": ["丸鶏1羽（約1.2kg）", "水2リットル", "にんにく4片", "生姜（ターメリック）5cm", "生姜3cm", "ガランガル3cm", "インドネシアのベイリーフ（ダウンサラム）3枚", "レモングラス2本（つぶす）", "細いビーフン100g", "塩 適量", "千切りキャベツ（添える用）", "固ゆで卵2個（半分に切る）", "カリカリの揚げエシャロット（添える用）", "ライム（添える用）"],
+    "hi": ["1 पूरा चिकन (लगभग 1.2 किग्रा)", "2 लीटर पानी", "4 लहसुन की कलियाँ", "5 सेमी ताज़ी हल्दी", "3 सेमी अदरक", "3 सेमी गलंगल", "3 इंडोनेशियाई तेज पत्ते (दाउन सलाम)", "2 लेमनग्रास डंठल, कुचले हुए", "100 ग्राम पतले चावल के नूडल्स (बिहून)", "स्वादानुसार नमक", "कटी सफेद पत्तागोभी, परोसने के लिए", "2 उबले अंडे, आधे कटे", "कुरकुरे तले प्याज़, परोसने के लिए", "नींबू, परोसने के लिए"],
+    "tr": ["1 bütün tavuk (yaklaşık 1,2kg)", "2 litre su", "4 diş sarımsak", "5cm taze zerdeçal", "3cm zencefil", "3cm galanga", "3 Endonezya defne yaprağı (daun salam)", "2 sap limon otu, ezilmiş", "100g ince pirinç şehriyesi (bihun)", "tuz, tadına göre", "servis için rendelenmiş beyaz lahana", "2 katı haşlanmış yumurta, ikiye bölünmüş", "servis için çıtır kızarmış soğan", "servis için limon"],
+    "it": ["1 pollo intero (circa 1,2kg)", "2 litri d'acqua", "4 spicchi d'aglio", "5cm di curcuma fresca", "3cm di zenzero", "3cm di galanga", "3 foglie di alloro indonesiano (daun salam)", "2 gambi di citronella, schiacciati", "100g di spaghetti di riso sottili (bihun)", "sale q.b.", "cavolo bianco sminuzzato, per servire", "2 uova sode, tagliate a metà", "scalogno fritto croccante, per servire", "lime, per servire"],
+    "ko": ["통닭 1마리(약 1.2kg)", "물 2리터", "마늘 4쪽", "생강황 5cm", "생강 3cm", "갈랑갈 3cm", "인도네시아 월계수 잎(다운 살람) 3장", "레몬그라스 2대, 으깬 것", "가는 쌀국수(비훈) 100g", "소금 약간", "채 썬 양배추, 곁들임용", "삶은 달걀 2개, 반으로 자른 것", "바삭한 튀긴 샬롯, 곁들임용", "라임, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": ["FIERBE PUIUL: Pune puiul întreg într-o oală mare cu apă rece, adu la fierbere și îndepărtează spuma. PREPARĂ PASTA: Pisează usturoiul, turmericul și ghimbirul într-o pastă fină. CĂLEȘTE PASTA: Călește pasta într-o tigaie cu puțin ulei 2-3 minute, până devine parfumată. ADAUGĂ AROME: Adaugă pasta călită, galanga, frunzele de dafin și lemongrass în oala cu pui. FIERBE ÎNCET: Lasă puiul să fiarbă la foc mic 45-50 minute, până carnea se desprinde ușor de pe os. SCOATE PUIUL: Scoate puiul, lasă-l să se răcească puțin, apoi destramă carnea în fâșii, aruncând oasele și pielea. STRECOARĂ BULIONUL: Strecoară bulionul, sărează după gust. PREGĂTEȘTE TĂIȚEII: Înmoaie tăițeii de orez în apă fierbinte 5 minute, apoi scurge-i. ASAMBLEAZĂ: Pune tăițeii și varza mărunțită în boluri, adaugă carnea de pui destrămată, toarnă bulionul fierbinte deasupra. SERVEȘTE: Decorează cu ou fiert, ceapă prăjită și felii de lime."],
+    "en": ["POACH THE CHICKEN: Place the whole chicken in a large pot with cold water, bring to a boil and skim off the foam. MAKE THE PASTE: Pound garlic, turmeric and ginger into a fine paste. SAUTÉ THE PASTE: Sauté the paste in a pan with a little oil 2-3 minutes, until fragrant. ADD AROMATICS: Add the sautéed paste, galangal, bay leaves and lemongrass to the pot with the chicken. SIMMER: Let the chicken simmer over low heat 45-50 minutes, until the meat easily comes off the bone. REMOVE THE CHICKEN: Remove the chicken, let it cool slightly, then shred the meat into strips, discarding the bones and skin. STRAIN THE BROTH: Strain the broth, season with salt to taste. PREPARE THE NOODLES: Soak the rice noodles in hot water 5 minutes, then drain. ASSEMBLE: Place the noodles and shredded cabbage in bowls, add the shredded chicken, pour the hot broth over. SERVE: Garnish with boiled egg, fried shallots and lime wedges."],
+    "es": ["ESCALFA EL POLLO: Coloca el pollo entero en una olla grande con agua fría, lleva a ebullición y retira la espuma. PREPARA LA PASTA: Machaca el ajo, la cúrcuma y el jengibre hasta formar una pasta fina. SOFRÍE LA PASTA: Sofríe la pasta en una sartén con un poco de aceite 2-3 minutos, hasta que esté fragante. AÑADE LOS AROMÁTICOS: Añade la pasta sofrita, el galangal, las hojas de laurel y la citronela a la olla con el pollo. COCINA A FUEGO LENTO: Deja que el pollo se cocine a fuego lento 45-50 minutos, hasta que la carne se desprenda fácilmente del hueso. RETIRA EL POLLO: Retira el pollo, déjalo enfriar un poco, luego deshilacha la carne en tiras, desechando los huesos y la piel. CUELA EL CALDO: Cuela el caldo, sazona con sal al gusto. PREPARA LOS FIDEOS: Remoja los fideos de arroz en agua caliente 5 minutos, luego escúrrelos. MONTA: Coloca los fideos y la col rallada en tazones, añade el pollo deshilachado, vierte el caldo caliente encima. SIRVE: Decora con huevo cocido, chalotas fritas y gajos de lima."],
+    "fr": ["POCHEZ LE POULET: Placez le poulet entier dans une grande marmite avec de l'eau froide, portez à ébullition et écumez. PRÉPAREZ LA PÂTE: Pilez l'ail, le curcuma et le gingembre en une pâte fine. FAITES REVENIR LA PÂTE: Faites revenir la pâte dans une poêle avec un peu d'huile 2-3 minutes, jusqu'à ce qu'elle soit parfumée. AJOUTEZ LES AROMATES: Ajoutez la pâte revenue, le galanga, les feuilles de laurier et la citronnelle dans la marmite avec le poulet. MIJOTEZ: Laissez le poulet mijoter à feu doux 45-50 minutes, jusqu'à ce que la viande se détache facilement de l'os. RETIREZ LE POULET: Retirez le poulet, laissez-le refroidir légèrement, puis effilochez la viande en lanières, en jetant les os et la peau. FILTREZ LE BOUILLON: Filtrez le bouillon, assaisonnez de sel selon le goût. PRÉPAREZ LES VERMICELLES: Faites tremper les vermicelles de riz dans l'eau chaude 5 minutes, puis égouttez-les. ASSEMBLEZ: Placez les vermicelles et le chou émincé dans des bols, ajoutez le poulet effiloché, versez le bouillon chaud dessus. SERVEZ: Garnissez d'œuf dur, d'échalotes frites et de quartiers de citron vert."],
+    "de": ["HÄHNCHEN POCHIEREN: Das ganze Hähnchen in einen großen Topf mit kaltem Wasser geben, aufkochen und den Schaum abschöpfen. PASTE ZUBEREITEN: Knoblauch, Kurkuma und Ingwer zu einer feinen Paste zerstoßen. PASTE ANBRATEN: Die Paste in einer Pfanne mit etwas Öl 2-3 Minuten anbraten, bis sie duftet. AROMEN HINZUFÜGEN: Die angebratene Paste, Galgant, Lorbeerblätter und Zitronengras in den Topf mit dem Hähnchen geben. KÖCHELN: Das Hähnchen bei niedriger Hitze 45-50 Minuten köcheln lassen, bis sich das Fleisch leicht vom Knochen löst. HÄHNCHEN HERAUSNEHMEN: Das Hähnchen herausnehmen, etwas abkühlen lassen, dann das Fleisch in Streifen zerzupfen, Knochen und Haut entfernen. BRÜHE SIEBEN: Die Brühe sieben, nach Geschmack salzen. NUDELN VORBEREITEN: Die Reisnudeln 5 Minuten in heißem Wasser einweichen, dann abtropfen lassen. ANRICHTEN: Die Nudeln und den geraspelten Kohl in Schüsseln geben, das zerzupfte Hähnchen hinzufügen, die heiße Brühe darübergießen. SERVIEREN: Mit gekochtem Ei, gebratenen Schalotten und Limettenspalten garnieren."],
+    "pt": ["ESCALFE O FRANGO: Coloque o frango inteiro numa panela grande com água fria, leve à fervura e retire a espuma. PREPARE A PASTA: Amasse o alho, o açafrão-da-terra e o gengibre até formar uma pasta fina. REFOGUE A PASTA: Refogue a pasta numa frigideira com um pouco de óleo por 2-3 minutos, até ficar perfumada. ADICIONE OS AROMÁTICOS: Junte a pasta refogada, a galanga, as folhas de louro e o capim-limão à panela com o frango. COZINHE EM FOGO BRANDO: Deixe o frango cozinhar em fogo baixo por 45-50 minutos, até a carne se soltar facilmente do osso. RETIRE O FRANGO: Retire o frango, deixe arrefecer um pouco, depois desfie a carne em tiras, descartando os ossos e a pele. COE O CALDO: Coe o caldo, tempere com sal a gosto. PREPARE O MACARRÃO: Demolhe o macarrão de arroz em água quente por 5 minutos, depois escorra. MONTE: Coloque o macarrão e o repolho ralado em tigelas, adicione o frango desfiado, despeje o caldo quente por cima. SIRVA: Decore com ovo cozido, chalotas fritas e gomos de lima."],
+    "ru": ["ОТВАРИТЕ КУРИЦУ: Положите целую курицу в большую кастрюлю с холодной водой, доведите до кипения и снимите пену. ПРИГОТОВЬТЕ ПАСТУ: Разотрите чеснок, куркуму и имбирь в мелкую пасту. ОБЖАРЬТЕ ПАСТУ: Обжарьте пасту на сковороде с небольшим количеством масла 2-3 минуты, до появления аромата. ДОБАВЬТЕ АРОМАТИКУ: Добавьте обжаренную пасту, галангал, лавровые листья и лемонграсс в кастрюлю с курицей. ТУШИТЕ: Дайте курице томиться на слабом огне 45-50 минут, пока мясо легко не отделится от костей. ДОСТАНЬТЕ КУРИЦУ: Достаньте курицу, дайте немного остыть, затем разберите мясо на полоски, удалив кости и кожу. ПРОЦЕДИТЕ БУЛЬОН: Процедите бульон, посолите по вкусу. ПОДГОТОВЬТЕ ЛАПШУ: Замочите рисовую лапшу в горячей воде на 5 минут, затем слейте воду. СОБЕРИТЕ БЛЮДО: Разложите лапшу и нашинкованную капусту по мискам, добавьте разобранную курицу, залейте горячим бульоном. ПОДАВАЙТЕ: Украсьте варёным яйцом, жареным луком-шалотом и дольками лайма."],
+    "ar": ["اسلقي الدجاج: ضعي الدجاجة كاملة في قدر كبير مع ماء بارد، اتركيها تغلي وأزيلي الرغوة. حضّري العجينة: اهرسي الثوم والكركم والزنجبيل إلى عجينة ناعمة. قلّي العجينة: قلّي العجينة في مقلاة بقليل من الزيت 2-3 دقائق حتى تفوح رائحتها. أضيفي النكهات: أضيفي العجينة المقلية والغالانغال وأوراق الغار وعشب الليمون إلى القدر مع الدجاج. اطهي على نار هادئة: اتركي الدجاج ينضج على نار هادئة 45-50 دقيقة حتى ينفصل اللحم بسهولة عن العظم. أخرجي الدجاج: أخرجي الدجاج، اتركيه يبرد قليلًا، ثم مزّقي اللحم إلى شرائح، وتخلصي من العظام والجلد. صفّي المرق: صفّي المرق وتبّليه بالملح حسب الرغبة. حضّري الشعيرية: انقعي شعيرية الأرز في ماء ساخن 5 دقائق ثم صفّيها. جهّزي الطبق: ضعي الشعيرية والملفوف المبشور في أطباق، أضيفي الدجاج الممزق، واسكبي المرق الساخن فوقها. قدّمي: زيّني بالبيض المسلوق والبصل المقلي وشرائح الليمون الحامض."],
+    "zh": ["煮鸡：将整鸡放入盛有冷水的大锅中，煮沸后撇去浮沫。制作香料糊：将大蒜、姜黄和姜捣成细腻的糊状。炒香料糊：在锅中用少许油炒香料糊2-3分钟至香气四溢。加入香料：将炒好的香料糊、南姜、香叶和香茅加入放鸡的锅中。慢炖：小火慢炖鸡肉45-50分钟，直至肉质轻易脱骨。取出鸡肉：取出鸡肉稍微放凉，然后撕成鸡丝，去除骨头和皮。过滤高汤：过滤高汤，加盐调味。准备米粉：将米粉用热水浸泡5分钟后沥干。装碗：将米粉和切丝卷心菜放入碗中，加入撕好的鸡丝，浇上热高汤。上桌：以水煮蛋、炸红葱头和青柠角装饰。"],
+    "ja": ["鶏肉を煮る：丸鶏を冷水を入れた大鍋に入れ、沸騰させてアクを取る。ペーストを作る：にんにく、ターメリック、生姜をすり潰して滑らかなペーストにする。ペーストを炒める：少量の油でペーストを鍋で2〜3分、香りが立つまで炒める。香味を加える：炒めたペースト、ガランガル、ベイリーフ、レモングラスを鶏肉の入った鍋に加える。煮込む：鶏肉が骨から簡単に外れるようになるまで弱火で45〜50分煮込む。鶏肉を取り出す：鶏肉を取り出し少し冷ましてから、骨と皮を取り除き肉を細く裂く。スープを濾す：スープを濾し、塩で味を調える。麺を準備する：ビーフンを熱湯で5分浸し、水を切る。盛り付ける：麺と千切りキャベツを器に入れ、裂いた鶏肉をのせ、熱いスープを注ぐ。仕上げる：ゆで卵、揚げエシャロット、ライムのくし切りを添える。"],
+    "hi": ["चिकन उबालें: पूरे चिकन को ठंडे पानी वाले बड़े बर्तन में डालें, उबाल आने दें और झाग हटाएं। पेस्ट बनाएं: लहसुन, हल्दी और अदरक को बारीक पेस्ट में पीसें। पेस्ट भूनें: पैन में थोड़े तेल में पेस्ट को 2-3 मिनट, सुगंधित होने तक भूनें। सुगंध डालें: भुना पेस्ट, गलंगल, तेज पत्ते और लेमनग्रास चिकन वाले बर्तन में डालें। उबालें: चिकन को धीमी आंच पर 45-50 मिनट पकने दें, जब तक मांस हड्डी से आसानी से अलग न हो जाए। चिकन निकालें: चिकन निकालें, थोड़ा ठंडा होने दें, फिर मांस को पट्टियों में तोड़ें, हड्डियां और त्वचा हटा दें। शोरबा छानें: शोरबा छानें, स्वादानुसार नमक डालें। नूडल्स तैयार करें: चावल के नूडल्स को गर्म पानी में 5 मिनट भिगोएं, फिर छान लें। तैयार करें: कटोरों में नूडल्स और कटी पत्तागोभी डालें, टूटा हुआ चिकन डालें, गर्म शोरबा ऊपर डालें। परोसें: उबले अंडे, तले प्याज़ और नींबू के टुकड़ों से सजाएं।"],
+    "tr": ["TAVUĞU HAŞLAYIN: Bütün tavuğu soğuk suyla dolu büyük bir tencereye koyun, kaynatın ve köpüğü alın. HAMURU HAZIRLAYIN: Sarımsak, zerdeçal ve zencefili ince bir hamur haline getirin. HAMURU SOTELEYIN: Hamuru tavada biraz yağla 2-3 dakika, kokusu çıkana kadar soteleyin. AROMATİKLERİ EKLEYİN: Sotelenmiş hamuru, galangayı, defne yapraklarını ve limon otunu tavuklu tencereye ekleyin. PİŞİRİN: Tavuğun eti kemikten kolayca ayrılana kadar 45-50 dakika kısık ateşte pişmesine izin verin. TAVUĞU ÇIKARIN: Tavuğu çıkarın, biraz soğumasını bekleyin, ardından kemik ve derisini atarak eti şeritler halinde didikleyin. SUYU SÜZÜN: Suyu süzün, tadına göre tuzlayın. ŞEHRİYEYİ HAZIRLAYIN: Pirinç şehriyesini sıcak suda 5 dakika bekletin, sonra süzün. HAZIRLAYIN: Kaselere şehriye ve rendelenmiş lahanayı koyun, didiklenmiş tavuğu ekleyin, üzerine sıcak suyu dökün. SERVİS YAPIN: Haşlanmış yumurta, kızarmış soğan ve limon dilimleriyle süsleyin."],
+    "it": ["FAI BOLLIRE IL POLLO: Metti il pollo intero in una pentola grande con acqua fredda, porta a ebollizione ed elimina la schiuma. PREPARA LA PASTA: Pesta aglio, curcuma e zenzero fino a ottenere una pasta fine. SOFFRIGGI LA PASTA: Soffriggi la pasta in padella con un po' d'olio 2-3 minuti, finché profumata. AGGIUNGI GLI AROMI: Aggiungi la pasta soffritta, la galanga, le foglie di alloro e la citronella nella pentola con il pollo. FAI SOBBOLLIRE: Lascia sobbollire il pollo a fuoco basso 45-50 minuti, finché la carne si stacca facilmente dall'osso. TOGLI IL POLLO: Togli il pollo, lascialo raffreddare leggermente, poi sfilaccia la carne a strisce, eliminando ossa e pelle. FILTRA IL BRODO: Filtra il brodo, sala a piacere. PREPARA I NOODLE: Metti a bagno gli spaghetti di riso in acqua calda 5 minuti, poi scolali. COMPONI: Metti spaghetti e cavolo sminuzzato nelle ciotole, aggiungi il pollo sfilacciato, versa il brodo caldo sopra. SERVI: Guarnisci con uovo sodo, scalogno fritto e spicchi di lime."],
+    "ko": ["닭 삶기: 통닭을 찬물이 담긴 큰 냄비에 넣고 끓여 거품을 걷어낸다. 페이스트 만들기: 마늘, 강황, 생강을 곱게 빻아 페이스트를 만든다. 페이스트 볶기: 팬에 기름을 약간 두르고 페이스트를 2-3분간 향이 날 때까지 볶는다. 향신료 추가: 볶은 페이스트, 갈랑갈, 월계수 잎, 레몬그라스를 닭이 든 냄비에 넣는다. 끓이기: 고기가 뼈에서 쉽게 떨어질 때까지 45-50분간 약불로 끓인다. 닭 꺼내기: 닭을 꺼내 살짝 식힌 뒤 뼈와 껍질을 제거하고 살을 가늘게 찢는다. 육수 거르기: 육수를 걸러 소금으로 간한다. 국수 준비하기: 쌀국수를 뜨거운 물에 5분간 불린 뒤 물기를 뺀다. 담기: 그릇에 국수와 채 썬 양배추를 담고 찢은 닭고기를 올린 뒤 뜨거운 육수를 붓는다. 제공하기: 삶은 달걀, 튀긴 샬롯, 라임 조각을 곁들여 장식한다."]
+  },
+  "originText": {
+    "ro": "Soto ayam este considerată una dintre supele naționale ale Indoneziei, o mâncare care variază enorm de la o insulă la alta, dar cu un fir comun: bulionul galben aromat cu turmeric și pui fraged destrămat. Există zeci de variante regionale — soto Lamongan din Java de Est, soto Betawi din Jakarta cu lapte de cocos, sau soto Padang din Sumatra cu carne de vită — fiecare cu identitatea sa distinctă.\n\nCa multe supe din arhipelag, soto ayam poartă amprenta comerțului de mirodenii care a definit istoria regiunii timp de secole: turmericul, ghimbirul și galanga erau printre cele mai valoroase mărfuri exportate din Insulele Mirodeniilor. Astăzi, soto ayam se găsește la orice colț de stradă, de la gustările de dimineață până la mesele complete de prânz, adesea însoțit de orez, sambal picant și crackers de crevete (krupuk).",
+    "en": "Soto ayam is considered one of Indonesia's national soups, a dish that varies enormously from island to island but shares a common thread: a golden broth fragrant with turmeric and tender shredded chicken. There are dozens of regional variants — soto Lamongan from East Java, soto Betawi from Jakarta made with coconut milk, or soto Padang from Sumatra made with beef — each with its own distinct identity.\n\nLike many soups from the archipelago, soto ayam carries the imprint of the spice trade that defined the region's history for centuries: turmeric, ginger, and galangal were among the most valuable commodities exported from the Spice Islands. Today, soto ayam is found on every street corner, from morning snacks to full lunch meals, often accompanied by rice, spicy sambal, and prawn crackers (krupuk).",
+    "es": "El soto ayam se considera una de las sopas nacionales de Indonesia, un plato que varía enormemente de una isla a otra pero comparte un hilo común: un caldo dorado aromatizado con cúrcuma y pollo tierno deshilachado. Existen decenas de variantes regionales — el soto Lamongan de Java Oriental, el soto Betawi de Yakarta hecho con leche de coco, o el soto Padang de Sumatra hecho con carne de res — cada uno con su identidad distintiva.\n\nComo muchas sopas del archipiélago, el soto ayam lleva la huella del comercio de especias que definió la historia de la región durante siglos: la cúrcuma, el jengibre y el galangal estaban entre las mercancías más valiosas exportadas desde las Islas de las Especias. Hoy, el soto ayam se encuentra en cada esquina, desde tentempiés matutinos hasta comidas completas de almuerzo, a menudo acompañado de arroz, sambal picante y galletas de camarón (krupuk).",
+    "fr": "Le soto ayam est considéré comme l'une des soupes nationales d'Indonésie, un plat qui varie énormément d'une île à l'autre mais partage un fil conducteur commun: un bouillon doré parfumé au curcuma et du poulet tendre effiloché. Il existe des dizaines de variantes régionales — le soto Lamongan de Java Est, le soto Betawi de Jakarta fait au lait de coco, ou le soto Padang de Sumatra fait avec du bœuf — chacun avec sa propre identité distincte.\n\nComme de nombreuses soupes de l'archipel, le soto ayam porte l'empreinte du commerce des épices qui a défini l'histoire de la région pendant des siècles: le curcuma, le gingembre et le galanga figuraient parmi les marchandises les plus précieuses exportées des Îles aux Épices. Aujourd'hui, le soto ayam se trouve à chaque coin de rue, des collations matinales aux repas complets de midi, souvent accompagné de riz, de sambal épicé et de crackers de crevette (krupuk).",
+    "de": "Soto Ayam gilt als eine der Nationalsuppen Indonesiens, ein Gericht, das von Insel zu Insel enorm variiert, aber einen gemeinsamen roten Faden hat: eine goldene, mit Kurkuma duftende Brühe und zartes, zerzupftes Hähnchen. Es gibt Dutzende regionale Varianten — Soto Lamongan aus Ost-Java, Soto Betawi aus Jakarta mit Kokosmilch, oder Soto Padang aus Sumatra mit Rindfleisch — jede mit ihrer eigenen unverwechselbaren Identität.\n\nWie viele Suppen des Archipels trägt Soto Ayam die Spuren des Gewürzhandels, der die Geschichte der Region jahrhundertelang prägte: Kurkuma, Ingwer und Galgant gehörten zu den wertvollsten Waren, die von den Gewürzinseln exportiert wurden. Heute findet man Soto Ayam an jeder Straßenecke, vom morgendlichen Snack bis zum vollständigen Mittagessen, oft begleitet von Reis, scharfem Sambal und Krabbenchips (Krupuk).",
+    "pt": "O soto ayam é considerado uma das sopas nacionais da Indonésia, um prato que varia enormemente de ilha para ilha, mas partilha um fio condutor comum: um caldo dourado perfumado com açafrão-da-terra e frango tenro desfiado. Existem dezenas de variantes regionais — o soto Lamongan de Java Oriental, o soto Betawi de Jacarta feito com leite de coco, ou o soto Padang de Sumatra feito com carne bovina — cada um com a sua identidade distinta.\n\nComo muitas sopas do arquipélago, o soto ayam carrega a marca do comércio de especiarias que definiu a história da região durante séculos: o açafrão-da-terra, o gengibre e a galanga estavam entre as mercadorias mais valiosas exportadas das Ilhas das Especiarias. Hoje, o soto ayam encontra-se em cada esquina, desde lanches matinais até refeições completas de almoço, frequentemente acompanhado de arroz, sambal picante e bolachas de camarão (krupuk).",
+    "ru": "Сото аям считается одним из национальных супов Индонезии, блюдом, которое сильно варьируется от острова к острову, но имеет общую нить: золотистый бульон с ароматом куркумы и нежная разобранная курица. Существуют десятки региональных вариантов — сото Ламонган с Восточной Явы, сото Бетави из Джакарты с кокосовым молоком или сото Паданг с Суматры с говядиной — каждый со своей особой идентичностью.\n\nКак и многие супы архипелага, сото аям несёт отпечаток торговли специями, определявшей историю региона на протяжении веков: куркума, имбирь и галангал были среди самых ценных товаров, экспортируемых с Островов Пряностей. Сегодня сото аям можно найти на каждом углу — от утренних закусок до полноценных обедов, часто в сопровождении риса, острого самбала и креветочных чипсов (крупук).",
+    "ar": "يُعتبر السوتو أيام إحدى الشوربات الوطنية في إندونيسيا، طبق يتفاوت بشكل كبير من جزيرة إلى أخرى لكنه يشترك في خيط مشترك: مرق ذهبي معطر بالكركم ودجاج طري ممزق. توجد عشرات النسخ الإقليمية — سوتو لامونجان من جاوة الشرقية، وسوتو بيتاوي من جاكرتا المصنوع بحليب جوز الهند، أو سوتو بادانج من سومطرة المصنوع بلحم البقر — لكل منها هويته المميزة.\n\nمثل العديد من شوربات الأرخبيل، يحمل السوتو أيام بصمة تجارة التوابل التي شكّلت تاريخ المنطقة لقرون: كان الكركم والزنجبيل والغالانغال من بين أثمن السلع المصدَّرة من جزر التوابل. اليوم، يوجد السوتو أيام في كل ناصية شارع، من وجبات الصباح الخفيفة إلى وجبات الغداء الكاملة، وغالبًا ما يُقدَّم مع الأرز والسامبال الحار وقمر الدين المقرمش من الروبيان (كروبوك).",
+    "zh": "梭多阿央被视为印度尼西亚的国民汤品之一，一道从一个岛屿到另一个岛屿变化极大、但共享一条主线的菜肴：金黄色的姜黄香汤配上鲜嫩的手撕鸡肉。区域变体多达数十种——东爪哇的梭多拉蒙甘、雅加达用椰浆制作的梭多贝塔维，或苏门答腊用牛肉制作的梭多巴东——每种都有其独特的风格。\n\n与群岛的许多汤品一样，梭多阿央承载着数百年来塑造该地区历史的香料贸易的印记：姜黄、姜和南姜曾是从香料群岛出口的最珍贵商品之一。如今，梭多阿央随处可见，从早餐小吃到丰盛的午餐，常常配以米饭、辣味参巴酱和虾片（krupuk）。",
+    "ja": "ソトアヤムはインドネシアの国民的スープの一つとされ、島によって大きく異なるが、ターメリックの香る黄金色のスープと柔らかく裂いた鶏肉という共通点を持つ料理である。東ジャワのソトラモガン、ジャカルタのココナッツミルクを使ったソトブタウィ、スマトラの牛肉を使ったソトパダンなど、地域による変種は数十種類にのぼり、それぞれが独自の個性を持つ。\n\n群島の多くのスープと同様に、ソトアヤムは何世紀にもわたりこの地域の歴史を形作った香辛料貿易の痕跡を残している。ターメリック、生姜、ガランガルは、香料諸島から輸出される最も価値のある商品の一つだった。今日、ソトアヤムは朝の軽食から本格的な昼食まで、あらゆる街角で見られ、しばしばご飯や辛いサンバル、エビせんべい（クルプック）を添えて提供される。",
+    "hi": "सोटो अयम को इंडोनेशिया के राष्ट्रीय सूपों में से एक माना जाता है, एक व्यंजन जो द्वीप-दर-द्वीप बहुत भिन्न होता है लेकिन एक साझा सूत्र रखता है: हल्दी से सुगंधित सुनहरा शोरबा और नरम टूटा हुआ चिकन। दर्जनों क्षेत्रीय संस्करण मौजूद हैं — पूर्वी जावा से सोटो लामोंगन, नारियल के दूध से बना जकार्ता का सोटो बेटावी, या सुमात्रा का बीफ से बना सोटो पादांग — हर एक की अपनी अलग पहचान है।\n\nद्वीपसमूह के कई सूपों की तरह, सोटो अयम मसाला व्यापार की छाप रखता है जिसने सदियों तक इस क्षेत्र के इतिहास को आकार दिया: हल्दी, अदरक और गलंगल मसाला द्वीपों से निर्यात किए जाने वाले सबसे मूल्यवान सामानों में से थे। आज, सोटो अयम हर सड़क के कोने पर पाया जाता है, सुबह के नाश्ते से लेकर पूरे दोपहर के भोजन तक, अक्सर चावल, तीखे सांबल और झींगा क्रैकर (क्रुपुक) के साथ।",
+    "tr": "Soto ayam, Endonezya'nın milli çorbalarından biri olarak kabul edilir; adadan adaya büyük ölçüde değişen ama ortak bir özelliği paylaşan bir yemektir: zerdeçalla kokulandırılmış altın rengi bir su ve yumuşak, didiklenmiş tavuk. Doğu Java'dan soto Lamongan, hindistan cevizi sütüyle yapılan Cakarta'nın soto Betawi'si veya Sumatra'nın sığır etiyle yapılan soto Padang'ı gibi düzinelerce bölgesel varyant vardır — her biri kendine özgü bir kimliğe sahiptir.\n\nTakımadanın birçok çorbası gibi, soto ayam da yüzyıllardır bölgenin tarihini şekillendiren baharat ticaretinin izini taşır: zerdeçal, zencefil ve galanga, Baharat Adaları'ndan ihraç edilen en değerli mallar arasındaydı. Bugün soto ayam, sabah atıştırmalıklarından tam öğle yemeklerine kadar her sokak köşesinde bulunur ve genellikle pirinç, acı sambal ve karides cipsi (krupuk) ile birlikte servis edilir.",
+    "it": "Il soto ayam è considerato una delle zuppe nazionali dell'Indonesia, un piatto che varia enormemente da un'isola all'altra ma condivide un filo comune: un brodo dorato profumato di curcuma e pollo tenero sfilacciato. Esistono decine di varianti regionali — il soto Lamongan di Giava Est, il soto Betawi di Giacarta fatto con latte di cocco, o il soto Padang di Sumatra fatto con carne di manzo — ciascuno con la propria identità distinta.\n\nCome molte zuppe dell'arcipelago, il soto ayam porta l'impronta del commercio di spezie che ha definito la storia della regione per secoli: curcuma, zenzero e galanga erano tra le merci più preziose esportate dalle Isole delle Spezie. Oggi, il soto ayam si trova ad ogni angolo di strada, dagli spuntini mattutini ai pasti completi del pranzo, spesso accompagnato da riso, sambal piccante e cracker di gamberetti (krupuk).",
+    "ko": "소토 아얌은 인도네시아의 국민 수프 중 하나로 여겨지며, 섬마다 크게 다르지만 공통된 특징을 공유하는 요리이다: 강황 향이 나는 황금빛 육수와 부드럽게 찢은 닭고기. 동부 자바의 소토 라몽안, 코코넛 밀크로 만드는 자카르타의 소토 브타위, 수마트라의 소고기로 만드는 소토 파당 등 수십 가지 지역 변형이 있으며, 각각 고유한 정체성을 지닌다.\n\n군도의 많은 수프들처럼 소토 아얌도 수 세기 동안 이 지역의 역사를 규정한 향신료 무역의 흔적을 지니고 있다: 강황, 생강, 갈랑갈은 향신료 제도에서 수출되던 가장 귀중한 상품 중 하나였다. 오늘날 소토 아얌은 아침 간식부터 본격적인 점심 식사까지 길모퉁이마다 찾아볼 수 있으며, 종종 밥, 매운 삼발, 새우 크래커(크루푹)와 함께 제공된다."
+  },
+  "meta": {
+    "time": 70,
+    "costRon": 22,
+    "tags": ["high-protein", "family"],
+    "desc": {
+      "ro": "Supă indoneziană aromată de pui cu turmeric, tăiței de orez și garnituri crocante.",
+      "en": "Fragrant Indonesian turmeric chicken soup with rice noodles and crispy garnishes.",
+      "es": "Sopa indonesia aromática de pollo con cúrcuma, fideos de arroz y guarniciones crujientes.",
+      "fr": "Soupe indonésienne parfumée au poulet et curcuma, avec vermicelles de riz et garnitures croustillantes.",
+      "de": "Duftende indonesische Kurkuma-Hühnersuppe mit Reisnudeln und knusprigen Beilagen.",
+      "pt": "Sopa indonésia aromática de frango com açafrão-da-terra, macarrão de arroz e acompanhamentos crocantes.",
+      "ru": "Ароматный индонезийский куриный суп с куркумой, рисовой лапшой и хрустящими добавками.",
+      "ar": "شوربة دجاج إندونيسية عطرية بالكركم مع شعيرية الأرز وإضافات مقرمشة.",
+      "zh": "香浓的印尼姜黄鸡汤，配米粉和酥脆配料。",
+      "ja": "香り高いインドネシア風ターメリックチキンスープ、ビーフンとカリカリの薬味添え。",
+      "hi": "सुगंधित इंडोनेशियाई हल्दी चिकन सूप, चावल के नूडल्स और कुरकुरी गार्निश के साथ।",
+      "tr": "Pirinç şehriyesi ve çıtır garnitürlerle hazırlanmış aromatik Endonezya usulü zerdeçallı tavuk çorbası.",
+      "it": "Zuppa di pollo indonesiana aromatica alla curcuma con spaghetti di riso e guarnizioni croccanti.",
+      "ko": "쌀국수와 바삭한 고명을 곁들인 향긋한 인도네시아식 강황 치킨 수프."
+    }
+  }
+}
