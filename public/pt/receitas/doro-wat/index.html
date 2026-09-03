@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Doro Wat</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/ethiopia/">Etiópia</a> › <span>Doro Wat</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="doro-wat" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ethiopian_wat.jpg/330px-Ethiopian_wat.jpg" alt="Doro Wat" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Ethiopian_wat.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇹 Jantar · Etiópia</div>
+      <div class="recipe-badge">🇪🇹 Jantar · <a class="recipe-badge-origin" href="/pt/receitas/ethiopia/">Etiópia</a></div>
       <h1>Doro Wat</h1>
       <p class="recipe-tagline">O doro wat é o prato mais celebrado da Etiópia, peça central da cozinha etíope servido em festas e ocasiões especiais. O nome significa simplesmente guisado de frango — doro é frango, wat é guisado — mas a preparação é complexa e sem pressa. A base começa com cebolas cozinhadas a seco, sem qualquer gordura, durante quase meia hora até atingirem um caramelo profundo.
 
@@ -171,7 +171,43 @@ O berbere — a mistura de especiarias essencial da Etiópia — traz notas de m
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇹 Mais receitas de Etiópia</h2>
+      <a href="/pt/receitas/ethiopia/">Ver todas as receitas →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/pt/receitas/kitfo-ethiopian-spiced-beef-tartare/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="kitfo-ethiopian-spiced-beef-tartare">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Kitfo (Tártaro de Carne Etíope Apimentado)</p>
+    <span class="recipe-card-meta">35m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/shiro-wat-spiced-chickpea-flour-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="shiro-wat-spiced-chickpea-flour-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Shiro Wat (Ensopado de Farinha de Grão-de-Bico Apimentado)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/tibs-ethiopian-saut-ed-beef-with-rosemary/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="tibs-ethiopian-saut-ed-beef-with-rosemary">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Tibs (Carne Refogada Etíope com Alecrim)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/misir-wat-spiced-red-lentil-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="misir-wat-spiced-red-lentil-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Misir Wat (Ensopado Picante de Lentilha Vermelha)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/gomen-ethiopian-saut-ed-collard-greens/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="gomen-ethiopian-saut-ed-collard-greens">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Gomen (Couve Etíope Refogada)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -222,13 +258,13 @@ O berbere — a mistura de especiarias essencial da Etiópia — traz notas de m
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/pt/receitas/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/ethiopia/" data-rmn-back
    data-cuisine-atmosphere="sub-saharan"
-   aria-label="Receitas"
+   aria-label="Etiópia"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Etiópia</span>
 </a>
 
 </main>

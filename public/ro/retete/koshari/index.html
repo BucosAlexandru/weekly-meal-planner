@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <span>Koshari</span>
+    <a href="/">Acasă</a> › <a href="/ro/retete/">Rețete</a> › <a href="/ro/retete/egypt/">Egipt</a> › <span>Koshari</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="koshari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="Koshari" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Egyptian_food_Koshary.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇬 Prânz · Egipt</div>
+      <div class="recipe-badge">🇪🇬 Prânz · <a class="recipe-badge-origin" href="/ro/retete/egypt/">Egipt</a></div>
       <h1>Koshari</h1>
       <p class="recipe-tagline">Koshari este mâncarea stradală națională a Egiptului, vândută din cărucioare și restaurante pe tot cuprinsul Cairului și Alexandriei. Este un preparat de răscruce — orez, linte maro, macaroane și năut suprapuse — iar amestecul de ingrediente reflectă istoria Egiptului ca nod comercial. Macaroanele au ajuns odată cu negustorii italieni în secolul al XIX-lea; preparatul complet a prins formă la începutul secolului XX ca hrană ieftină și sățioasă pentru muncitori.
 
@@ -171,7 +171,43 @@ Baza de amidon este acoperită cu două sosuri: un sos de roșii condimentat cu 
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇬 Alte rețete din Egipt</h2>
+      <a href="/ro/retete/egypt/">Vezi toate rețetele →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/ro/retete/molokhia-jute-leaf-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="molokhia-jute-leaf-stew">🍲</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Molokhia (Supă de iută)</p>
+    <span class="recipe-card-meta">35m · Ușoară</span>
+  </div>
+</a><a href="/ro/retete/ta-ameya-egyptian-fava-bean-falafel/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="ta-ameya-egyptian-fava-bean-falafel">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Ta'ameya (Falafel egiptean din bob)</p>
+    <span class="recipe-card-meta">40m · Ușoară</span>
+  </div>
+</a><a href="/ro/retete/om-ali-egyptian-bread-pudding/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="om-ali-egyptian-bread-pudding">🍰</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Om Ali (Budincă de foietaj cu lapte)</p>
+    <span class="recipe-card-meta">40m · Ușoară</span>
+  </div>
+</a><a href="/ro/retete/feteer-meshaltet-egyptian-layered-flatbread/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="feteer-meshaltet-egyptian-layered-flatbread">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Feteer Meshaltet (Foietaj egiptean)</p>
+    <span class="recipe-card-meta">40m · Ușoară</span>
+  </div>
+</a><a href="/ro/retete/basbousa-egyptian-semolina-cake/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="basbousa-egyptian-semolina-cake">🍰</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Basbousa (Prăjitură de Griș cu Sirop)</p>
+    <span class="recipe-card-meta">40m · Ușoară</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -222,13 +258,13 @@ Baza de amidon este acoperită cu două sosuri: un sos de roșii condimentat cu 
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/ro/retete/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ro/retete/egypt/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="Rețete"
+   aria-label="Egipt"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rețete</span>
+  <span class="rmb-label">Egipt</span>
 </a>
 
 </main>

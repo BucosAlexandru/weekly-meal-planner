@@ -1,0 +1,209 @@
+{
+  "id": 378,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Etiopia",
+    "en": "Ethiopia",
+    "es": "Etiopía",
+    "fr": "Éthiopie",
+    "de": "Äthiopien",
+    "pt": "Etiópia",
+    "ru": "Эфиопия",
+    "ar": "إثيوبيا",
+    "zh": "埃塞俄比亚",
+    "ja": "エチオピア",
+    "hi": "इथियोपिया",
+    "tr": "Etiyopya",
+    "it": "Etiopia",
+    "ko": "에티오피아"
+  },
+  "name": {
+    "ro": "Gomen (Varză Etiopiană Călită)",
+    "en": "Gomen (Ethiopian Sautéed Collard Greens)",
+    "es": "Gomen (Col Etíope Salteada)",
+    "fr": "Gomen (Chou Éthiopien Sauté)",
+    "de": "Gomen (Äthiopischer Grünkohl, sautiert)",
+    "pt": "Gomen (Couve Etíope Refogada)",
+    "ru": "Гомен (Эфиопская Тушёная Капуста)",
+    "ar": "جومن (كرنب إثيوبي مقلي)",
+    "zh": "戈门（埃塞俄比亚炒羽衣甘蓝）",
+    "ja": "ゴメン（エチオピア風ケール炒め）",
+    "hi": "गोमेन (इथियोपियाई भुनी पत्तागोभी)",
+    "tr": "Gomen (Etiyopya Usulü Sote Lahana)",
+    "it": "Gomen (Cavolo Etiope Saltato)",
+    "ko": "고멘 (에티오피아식 볶은 케일)"
+  },
+  "category": {
+    "ro": "Garnitură",
+    "en": "Side Dish",
+    "es": "Guarnición",
+    "fr": "Accompagnement",
+    "de": "Beilage",
+    "pt": "Acompanhamento",
+    "ru": "Гарнир",
+    "ar": "طبق جانبي",
+    "zh": "配菜",
+    "ja": "副菜",
+    "hi": "साइड डिश",
+    "tr": "Yan Yemek",
+    "it": "Contorno",
+    "ko": "곁들임 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥬", "t": "Verdeață tocată fin", "d": "Frunzele de varză kale sau collard sunt tocate mărunt înainte de călire." },
+      { "icon": "🧄", "t": "Usturoi și ghimbir", "d": "Aroma de bază vine din usturoi și ghimbir proaspăt sotate în ulei." },
+      { "icon": "🌶️", "t": "Ardei iute opțional", "d": "Un ardei iute verde tocat aduce un plus de picant, dacă se dorește." },
+      { "icon": "🌱", "t": "Vegan simplu", "d": "Fel de post foarte simplu, gătit rapid, folosit ca element de contrast pe platoul de injera." }
+    ],
+    "en": [
+      { "icon": "🥬", "t": "Finely shredded greens", "d": "Kale or collard leaves are finely shredded before sautéing." },
+      { "icon": "🧄", "t": "Garlic and ginger", "d": "The base flavor comes from garlic and fresh ginger sautéed in oil." },
+      { "icon": "🌶️", "t": "Optional chili", "d": "A chopped green chili adds extra heat, if desired." },
+      { "icon": "🌱", "t": "Simple vegan side", "d": "A very simple, quickly cooked fasting dish, used as a contrasting element on the injera platter." }
+    ],
+    "es": [
+      { "icon": "🥬", "t": "Verdura finamente picada", "d": "Las hojas de col rizada o berza se cortan finamente antes de saltearlas." },
+      { "icon": "🧄", "t": "Ajo y jengibre", "d": "El sabor base viene del ajo y el jengibre fresco salteados en aceite." },
+      { "icon": "🌶️", "t": "Chile opcional", "d": "Un chile verde picado añade un toque picante extra, si se desea." },
+      { "icon": "🌱", "t": "Guarnición vegana simple", "d": "Un plato de ayuno muy sencillo y rápido, usado como elemento de contraste en el plato de injera." }
+    ],
+    "fr": [
+      { "icon": "🥬", "t": "Feuilles finement émincées", "d": "Les feuilles de chou frisé ou de chou vert sont finement émincées avant d'être sautées." },
+      { "icon": "🧄", "t": "Ail et gingembre", "d": "La saveur de base vient de l'ail et du gingembre frais sautés dans l'huile." },
+      { "icon": "🌶️", "t": "Piment facultatif", "d": "Un piment vert haché ajoute un piquant supplémentaire, si désiré." },
+      { "icon": "🌱", "t": "Accompagnement végane simple", "d": "Un plat de jeûne très simple et rapide, utilisé comme élément de contraste sur le plateau d'injera." }
+    ],
+    "de": [
+      { "icon": "🥬", "t": "Fein geschnittenes Blattgemüse", "d": "Grünkohl- oder Kohlblätter werden vor dem Anbraten fein geschnitten." },
+      { "icon": "🧄", "t": "Knoblauch und Ingwer", "d": "Der Grundgeschmack kommt von Knoblauch und frischem Ingwer, in Öl angebraten." },
+      { "icon": "🌶️", "t": "Optionale Chili", "d": "Eine gehackte grüne Chili sorgt bei Bedarf für zusätzliche Schärfe." },
+      { "icon": "🌱", "t": "Einfache vegane Beilage", "d": "Ein sehr einfaches, schnell gegartes Fastengericht, das als Kontrastelement auf der Injera-Platte dient." }
+    ],
+    "pt": [
+      { "icon": "🥬", "t": "Verdura finamente picada", "d": "As folhas de couve ou couve galega são picadas finamente antes de refogar." },
+      { "icon": "🧄", "t": "Alho e gengibre", "d": "O sabor base vem do alho e do gengibre fresco refogados em óleo." },
+      { "icon": "🌶️", "t": "Pimenta opcional", "d": "Uma pimenta verde picada adiciona picância extra, se desejado." },
+      { "icon": "🌱", "t": "Acompanhamento vegano simples", "d": "Um prato de jejum muito simples e rápido, usado como elemento de contraste no prato de injera." }
+    ],
+    "ru": [
+      { "icon": "🥬", "t": "Мелко нарезанная зелень", "d": "Листья кале или листовой капусты мелко нарезают перед обжаркой." },
+      { "icon": "🧄", "t": "Чеснок и имбирь", "d": "Основной вкус даёт чеснок и свежий имбирь, обжаренные в масле." },
+      { "icon": "🌶️", "t": "Перец чили по желанию", "d": "Нарезанный зелёный перец чили добавляет остроты, если хочется." },
+      { "icon": "🌱", "t": "Простой веганский гарнир", "d": "Очень простое, быстро готовящееся постное блюдо, используемое как контрастный элемент на тарелке с инжерой." }
+    ],
+    "ar": [
+      { "icon": "🥬", "t": "خضار مفرومة ناعمًا", "d": "تُفرم أوراق الكرنب أو اللفت ناعمًا قبل القلي." },
+      { "icon": "🧄", "t": "ثوم وزنجبيل", "d": "تأتي النكهة الأساسية من الثوم والزنجبيل الطازج المقليّين بالزيت." },
+      { "icon": "🌶️", "t": "فلفل حار اختياري", "d": "يضيف الفلفل الأخضر الحار المفروم حرارة إضافية، إن رغبت." },
+      { "icon": "🌱", "t": "طبق جانبي نباتي بسيط", "d": "طبق صيام بسيط جدًا وسريع التحضير، يُستخدم كعنصر تباين على طبق الإنجيرا." }
+    ],
+    "zh": [
+      { "icon": "🥬", "t": "细切绿叶菜", "d": "羽衣甘蓝或甘蓝叶在翻炒前先切细丝。" },
+      { "icon": "🧄", "t": "大蒜与姜", "d": "基础风味来自油炒的大蒜和新鲜姜末。" },
+      { "icon": "🌶️", "t": "可选辣椒", "d": "如喜欢，可加入切碎的青辣椒增添辣味。" },
+      { "icon": "🌱", "t": "简单纯素配菜", "d": "非常简单、快速烹制的斋戒菜肴，作为英吉拉拼盘上的风味对比元素。" }
+    ],
+    "ja": [
+      { "icon": "🥬", "t": "細切りの葉物野菜", "d": "ケールやコラードの葉は炒める前に細切りにする。" },
+      { "icon": "🧄", "t": "にんにくと生姜", "d": "基本の風味は油で炒めたにんにくと生姜から生まれる。" },
+      { "icon": "🌶️", "t": "お好みで唐辛子", "d": "刻んだ青唐辛子でお好みにより辛さを追加できる。" },
+      { "icon": "🌱", "t": "シンプルなヴィーガン副菜", "d": "非常にシンプルで手早く作れる断食料理で、インジェラの皿上で味の対比を生む要素として使われる。" }
+    ],
+    "hi": [
+      { "icon": "🥬", "t": "बारीक कटी सब्ज़ी", "d": "केल या कोलार्ड की पत्तियों को भूनने से पहले बारीक काटा जाता है।" },
+      { "icon": "🧄", "t": "लहसुन और अदरक", "d": "मूल स्वाद तेल में भुने लहसुन और ताज़े अदरक से आता है।" },
+      { "icon": "🌶️", "t": "वैकल्पिक मिर्च", "d": "यदि चाहें, तो कटी हरी मिर्च अतिरिक्त तीखापन जोड़ती है।" },
+      { "icon": "🌱", "t": "सरल वीगन साइड डिश", "d": "एक बहुत सरल, जल्दी पका व्रत व्यंजन, जो इंजेरा की थाली पर विरोधाभासी तत्व के रूप में उपयोग होता है।" }
+    ],
+    "tr": [
+      { "icon": "🥬", "t": "İnce doğranmış yeşillikler", "d": "Kara lahana veya karalahana yaprakları sotelemeden önce ince doğranır." },
+      { "icon": "🧄", "t": "Sarımsak ve zencefil", "d": "Temel lezzet, yağda sotelenmiş sarımsak ve taze zencefilden gelir." },
+      { "icon": "🌶️", "t": "İsteğe bağlı biber", "d": "İstenirse doğranmış yeşil biber ekstra acılık katar." },
+      { "icon": "🌱", "t": "Basit vegan yan yemek", "d": "İncera tabağında zıt bir unsur olarak kullanılan, çok basit ve hızlı pişen bir oruç yemeği." }
+    ],
+    "it": [
+      { "icon": "🥬", "t": "Verdure a foglia tritate finemente", "d": "Le foglie di cavolo nero o cavolo verza vengono tritate finemente prima di saltarle." },
+      { "icon": "🧄", "t": "Aglio e zenzero", "d": "Il sapore di base viene da aglio e zenzero fresco saltati nell'olio." },
+      { "icon": "🌶️", "t": "Peperoncino opzionale", "d": "Un peperoncino verde tritato aggiunge piccantezza extra, se desiderato." },
+      { "icon": "🌱", "t": "Contorno vegano semplice", "d": "Un piatto di digiuno molto semplice e veloce, usato come elemento di contrasto sul piatto di injera." }
+    ],
+    "ko": [
+      { "icon": "🥬", "t": "가늘게 썬 채소", "d": "케일이나 콜라드 잎을 볶기 전에 가늘게 채 썬다." },
+      { "icon": "🧄", "t": "마늘과 생강", "d": "기본 풍미는 기름에 볶은 마늘과 신선한 생강에서 나온다." },
+      { "icon": "🌶️", "t": "선택적 고추", "d": "원한다면 다진 청고추로 매운맛을 더할 수 있다." },
+      { "icon": "🌱", "t": "간단한 비건 곁들임 요리", "d": "인제라 접시 위에서 대조되는 요소로 사용되는, 매우 간단하고 빠르게 조리되는 금식 요리." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g frunze de kale sau varză collard, tocate mărunt", "3 linguri ulei", "1 ceapă, tocată fin", "3 căței de usturoi, tocați", "1 lingură ghimbir ras", "1 ardei iute verde, tocat (opțional)", "sare după gust", "suc de lămâie, la servire (opțional)"],
+    "en": ["500g kale or collard greens, finely shredded", "3 tbsp oil", "1 onion, finely chopped", "3 garlic cloves, minced", "1 tbsp grated ginger", "1 green chili, chopped (optional)", "salt to taste", "lemon juice, for serving (optional)"],
+    "es": ["500g de col rizada o berza, cortada finamente", "3 cucharadas de aceite", "1 cebolla, finamente picada", "3 dientes de ajo, picados", "1 cucharada de jengibre rallado", "1 chile verde, picado (opcional)", "sal al gusto", "zumo de limón, para servir (opcional)"],
+    "fr": ["500g de chou frisé ou de chou vert, finement émincé", "3 c. à soupe d'huile", "1 oignon, finement haché", "3 gousses d'ail, hachées", "1 c. à soupe de gingembre râpé", "1 piment vert, haché (facultatif)", "sel selon le goût", "jus de citron, pour servir (facultatif)"],
+    "de": ["500g Grünkohl oder Kohlblätter, fein geschnitten", "3 EL Öl", "1 Zwiebel, fein gehackt", "3 Knoblauchzehen, gehackt", "1 EL geriebener Ingwer", "1 grüne Chili, gehackt (optional)", "Salz nach Geschmack", "Zitronensaft, zum Servieren (optional)"],
+    "pt": ["500g de couve ou couve galega, picada finamente", "3 colheres (sopa) de óleo", "1 cebola, picada finamente", "3 dentes de alho, picados", "1 colher (sopa) de gengibre ralado", "1 pimenta verde, picada (opcional)", "sal a gosto", "suco de limão, para servir (opcional)"],
+    "ru": ["500г листьев кале или листовой капусты, мелко нарезанных", "3 ст.л. масла", "1 луковица, мелко нарезанная", "3 зубчика чеснока, измельчённых", "1 ст.л. тёртого имбиря", "1 зелёный перец чили, нарезанный (по желанию)", "соль по вкусу", "лимонный сок, для подачи (по желанию)"],
+    "ar": ["500 غرام أوراق كرنب أو لفت، مفرومة ناعمًا", "3 ملاعق كبيرة زيت", "بصلة واحدة، مفرومة ناعمًا", "3 فصوص ثوم، مفرومة", "ملعقة كبيرة زنجبيل مبشور", "فلفل أخضر حار واحد، مفروم (اختياري)", "ملح حسب الرغبة", "عصير ليمون، للتقديم (اختياري)"],
+    "zh": ["500克羽衣甘蓝或甘蓝叶，细切", "3汤匙油", "1个洋葱，切碎", "3瓣大蒜，切碎", "1汤匙姜末", "1根青辣椒，切碎（可选）", "盐适量", "柠檬汁，配食用（可选）"],
+    "ja": ["ケールまたはコラードグリーン500g（細切り）", "油 大さじ3", "玉ねぎ1個（みじん切り）", "にんにく3片（みじん切り）", "生姜すりおろし 大さじ1", "青唐辛子1本（刻む、お好みで）", "塩 適量", "レモン汁（添える用、お好みで）"],
+    "hi": ["500 ग्राम केल या कोलार्ड ग्रीन्स, बारीक कटी", "3 बड़े चम्मच तेल", "1 प्याज़, बारीक कटा", "3 लहसुन की कलियाँ, कटी हुई", "1 बड़ा चम्मच कद्दूकस अदरक", "1 हरी मिर्च, कटी (वैकल्पिक)", "स्वादानुसार नमक", "नींबू का रस, परोसने के लिए (वैकल्पिक)"],
+    "tr": ["500g kara lahana veya karalahana, ince doğranmış", "3 yemek kaşığı yağ", "1 soğan, ince doğranmış", "3 diş sarımsak, doğranmış", "1 yemek kaşığı rendelenmiş zencefil", "1 yeşil biber, doğranmış (isteğe bağlı)", "tuz, tadına göre", "servis için limon suyu (isteğe bağlı)"],
+    "it": ["500g di cavolo nero o cavolo verza, tritato finemente", "3 cucchiai di olio", "1 cipolla, tritata finemente", "3 spicchi d'aglio, tritati", "1 cucchiaio di zenzero grattugiato", "1 peperoncino verde, tritato (facoltativo)", "sale q.b.", "succo di limone, per servire (facoltativo)"],
+    "ko": ["케일 또는 콜라드 그린 500g, 가늘게 썬 것", "식용유 3큰술", "양파 1개, 잘게 썬 것", "마늘 3쪽, 다진 것", "간 생강 1큰술", "청고추 1개, 다진 것(선택)", "소금 약간", "레몬즙, 곁들임용(선택)"]
+  },
+  "howIsMade": {
+    "ro": ["PREGĂTEȘTE VERDEAȚA: Spală bine frunzele de kale sau collard, îndepărtează tulpinile dure și toacă-le mărunt.", "CĂLEȘTE CEAPA: Încinge uleiul și călește ceapa la foc mediu 5-6 minute, până devine translucidă.", "AROMATIZEAZĂ: Adaugă usturoiul, ghimbirul și ardeiul iute (dacă folosești), călind 1-2 minute.", "ADAUGĂ VERDEAȚA: Pune verdeața tocată în tigaie, în tranșe dacă e nevoie, amestecând să se ofilească uniform.", "GĂTEȘTE: Călește la foc mediu-mic 8-10 minute, amestecând des, până verdeața se înmoaie dar își păstrează culoarea verde intensă.", "SĂREAZĂ: Adaugă sare după gust, amestecând bine.", "FINALIZEAZĂ: Stinge focul și, opțional, stropește cu puțin suc de lămâie.", "SERVEȘTE: Servește cald sau la temperatura camerei, alături de alte tocănele pe platoul de injera."],
+    "en": ["PREP THE GREENS: Wash the kale or collard leaves thoroughly, remove tough stems, and finely shred them.", "SAUTÉ THE ONION: Heat the oil and sauté the onion over medium heat 5-6 minutes, until translucent.", "ADD AROMATICS: Add garlic, ginger and chili (if using), cooking 1-2 minutes.", "ADD THE GREENS: Add the shredded greens to the pan, in batches if needed, stirring to wilt evenly.", "COOK: Sauté over medium-low heat 8-10 minutes, stirring often, until the greens soften but keep their deep green color.", "SEASON: Add salt to taste, mixing well.", "FINISH: Remove from heat and, optionally, drizzle with a little lemon juice.", "SERVE: Serve warm or at room temperature, alongside other stews on the injera platter."],
+    "es": ["PREPARA LA VERDURA: Lava bien las hojas de col rizada o berza, retira los tallos duros y córtalas finamente.", "SOFRÍE LA CEBOLLA: Calienta el aceite y sofríe la cebolla a fuego medio 5-6 minutos, hasta que esté translúcida.", "AÑADE LOS AROMÁTICOS: Añade el ajo, el jengibre y el chile (si lo usas), cocinando 1-2 minutos.", "AÑADE LA VERDURA: Añade la verdura cortada a la sartén, en tandas si es necesario, removiendo para que se marchite uniformemente.", "COCINA: Saltea a fuego medio-bajo 8-10 minutos, removiendo con frecuencia, hasta que la verdura se ablande pero mantenga su color verde intenso.", "SAZONA: Añade sal al gusto, mezclando bien.", "FINALIZA: Retira del fuego y, opcionalmente, rocía con un poco de zumo de limón.", "SIRVE: Sirve tibio o a temperatura ambiente, junto con otros guisos en el plato de injera."],
+    "fr": ["PRÉPAREZ LES LÉGUMES VERTS: Lavez bien les feuilles de chou frisé ou de chou vert, retirez les tiges dures et émincez-les finement.", "FAITES REVENIR L'OIGNON: Chauffez l'huile et faites revenir l'oignon à feu moyen 5-6 minutes, jusqu'à ce qu'il soit translucide.", "AJOUTEZ LES AROMATES: Ajoutez l'ail, le gingembre et le piment (si utilisé), en cuisant 1-2 minutes.", "AJOUTEZ LES LÉGUMES VERTS: Ajoutez les légumes émincés dans la poêle, par lots si nécessaire, en remuant pour qu'ils flétrissent uniformément.", "CUISEZ: Faites sauter à feu moyen-doux 8-10 minutes, en remuant souvent, jusqu'à ce que les légumes ramollissent tout en gardant leur couleur vert profond.", "ASSAISONNEZ: Ajoutez du sel selon le goût, en mélangeant bien.", "FINALISEZ: Retirez du feu et, en option, arrosez d'un peu de jus de citron.", "SERVEZ: Servez chaud ou à température ambiante, avec d'autres ragoûts sur le plateau d'injera."],
+    "de": ["BLATTGEMÜSE VORBEREITEN: Grünkohl- oder Kohlblätter gründlich waschen, harte Stiele entfernen und fein schneiden.", "ZWIEBEL ANBRATEN: Öl erhitzen und die Zwiebel bei mittlerer Hitze 5-6 Minuten braten, bis sie glasig ist.", "AROMEN HINZUFÜGEN: Knoblauch, Ingwer und Chili (falls verwendet) zugeben und 1-2 Minuten braten.", "BLATTGEMÜSE HINZUFÜGEN: Das geschnittene Blattgemüse portionsweise in die Pfanne geben und umrühren, damit es gleichmäßig zusammenfällt.", "GAREN: Bei mittlerer bis niedriger Hitze 8-10 Minuten braten, häufig rühren, bis das Gemüse weich wird, aber seine tiefgrüne Farbe behält.", "WÜRZEN: Nach Geschmack salzen und gut vermischen.", "ABSCHLIESSEN: Vom Herd nehmen und optional mit etwas Zitronensaft beträufeln.", "SERVIEREN: Warm oder bei Zimmertemperatur servieren, zusammen mit anderen Eintöpfen auf der Injera-Platte."],
+    "pt": ["PREPARE A VERDURA: Lave bem as folhas de couve ou couve galega, remova os talos duros e pique finamente.", "REFOGUE A CEBOLA: Aqueça o óleo e refogue a cebola em fogo médio por 5-6 minutos, até ficar translúcida.", "ADICIONE OS AROMÁTICOS: Junte o alho, o gengibre e a pimenta (se usar), cozinhando 1-2 minutos.", "ADICIONE A VERDURA: Junte a verdura picada à panela, em lotes se necessário, mexendo para murchar uniformemente.", "COZINHE: Refogue em fogo médio-baixo por 8-10 minutos, mexendo com frequência, até a verdura amolecer mas manter a cor verde intensa.", "TEMPERE: Adicione sal a gosto, misturando bem.", "FINALIZE: Retire do fogo e, opcionalmente, regue com um pouco de suco de limão.", "SIRVA: Sirva morno ou à temperatura ambiente, junto com outros ensopados no prato de injera."],
+    "ru": ["ПОДГОТОВЬТЕ ЗЕЛЕНЬ: Тщательно промойте листья кале или капусты, удалите жёсткие стебли и мелко нарежьте.", "ОБЖАРЬТЕ ЛУК: Разогрейте масло и жарьте лук на среднем огне 5-6 минут, до прозрачности.", "ДОБАВЬТЕ АРОМАТИКУ: Добавьте чеснок, имбирь и перец чили (если используете), готовьте 1-2 минуты.", "ДОБАВЬТЕ ЗЕЛЕНЬ: Добавьте нарезанную зелень в сковороду, порциями при необходимости, помешивая для равномерного увядания.", "ГОТОВЬТЕ: Жарьте на среднем-слабом огне 8-10 минут, часто помешивая, пока зелень не станет мягкой, сохранив насыщенный зелёный цвет.", "ПОСОЛИТЕ: Добавьте соль по вкусу, хорошо перемешайте.", "ЗАВЕРШИТЕ: Снимите с огня и, по желанию, сбрызните небольшим количеством лимонного сока.", "ПОДАВАЙТЕ: Подавайте тёплым или комнатной температуры, вместе с другими рагу на тарелке с инжерой."],
+    "ar": ["حضّري الخضار: اغسلي أوراق الكرنب أو اللفت جيدًا، أزيلي السيقان الصلبة، وافرميها ناعمًا.", "قلّي البصل: سخّني الزيت وقلّي البصل على نار متوسطة 5-6 دقائق حتى يصبح شفافًا.", "أضيفي النكهات: أضيفي الثوم والزنجبيل والفلفل الحار (إن استخدمتِه) واطبخي 1-2 دقيقة.", "أضيفي الخضار: أضيفي الخضار المفرومة إلى المقلاة، على دفعات إن لزم الأمر، مع التحريك لتذبل بالتساوي.", "اطهي: قلّي على نار متوسطة إلى هادئة 8-10 دقائق مع التقليب المتكرر حتى تلين الخضار مع بقاء لونها الأخضر الغامق.", "تبّلي: أضيفي الملح حسب الرغبة وامزجي جيدًا.", "أنهي الطبق: ارفعي عن النار، ورشّي القليل من عصير الليمون إن رغبتِ.", "قدّمي: قدّميها دافئة أو بحرارة الغرفة، مع يخنات أخرى على طبق الإنجيرا."],
+    "zh": ["处理绿叶菜：将羽衣甘蓝或甘蓝叶彻底洗净，去除粗梗，切细丝。", "炒洋葱：加热油，中火翻炒洋葱5-6分钟，至半透明。", "加入香料：加入大蒜、姜末和辣椒（如使用），炒1-2分钟。", "加入绿叶菜：将切好的绿叶菜分批加入锅中，翻炒使其均匀萎蔫。", "烹煮：中小火翻炒8-10分钟，频繁搅拌，直至蔬菜变软但仍保持深绿色。", "调味：加盐调味，拌匀。", "完成：离火，可根据个人喜好淋上少许柠檬汁。", "上桌：与英吉拉拼盘上的其他炖菜一起温热或常温食用。"],
+    "ja": ["葉物野菜を準備する：ケールまたはコラードの葉をよく洗い、硬い茎を取り除いて細く切る。", "玉ねぎを炒める：油を熱し、中火で玉ねぎを5〜6分、透明になるまで炒める。", "香味野菜を加える：にんにく、生姜、唐辛子（使用する場合）を加え、1〜2分炒める。", "葉物野菜を加える：必要なら数回に分けて刻んだ葉物野菜を鍋に加え、均一にしんなりするよう混ぜる。", "調理する：中弱火で8〜10分、頻繁にかき混ぜながら、野菜が柔らかくなるが濃い緑色を保つまで炒める。", "味付けする：塩で味を調え、よく混ぜる。", "仕上げる：火から下ろし、お好みで少量のレモン汁をかける。", "提供する：インジェラの皿の上で他のシチューと共に温かいまま、または室温で提供する。"],
+    "hi": ["सब्ज़ी तैयार करें: केल या कोलार्ड की पत्तियों को अच्छी तरह धोएं, सख्त डंठल हटाएं, और बारीक काटें।", "प्याज़ भूनें: तेल गरम करें और प्याज़ को मध्यम आंच पर 5-6 मिनट, पारदर्शी होने तक भूनें।", "सुगंधित सामग्री डालें: लहसुन, अदरक और मिर्च (यदि उपयोग कर रहे हों) डालें, 1-2 मिनट पकाएं।", "सब्ज़ी डालें: कटी सब्ज़ी को पैन में डालें, ज़रूरत हो तो हिस्सों में, समान रूप से मुरझाने के लिए हिलाते हुए।", "पकाएं: मध्यम-धीमी आंच पर 8-10 मिनट, बार-बार हिलाते हुए, तब तक भूनें जब तक सब्ज़ी नरम न हो जाए लेकिन गहरा हरा रंग बना रहे।", "नमक डालें: स्वादानुसार नमक डालें, अच्छी तरह मिलाएं।", "पूरा करें: आंच से उतारें और चाहें तो थोड़ा नींबू का रस छिड़कें।", "परोसें: गरम या कमरे के तापमान पर, इंजेरा की थाली पर अन्य स्ट्यू के साथ परोसें।"],
+    "tr": ["YEŞİLLİKLERİ HAZIRLAYIN: Kara lahana veya karalahana yapraklarını iyice yıkayın, sert sapları çıkarın ve ince doğrayın.", "SOĞANI SOTELEYIN: Yağı ısıtın ve soğanı orta ateşte şeffaflaşana kadar 5-6 dakika soteleyin.", "AROMATİKLERİ EKLEYİN: Sarımsak, zencefil ve biberi (kullanıyorsanız) ekleyip 1-2 dakika pişirin.", "YEŞİLLİKLERİ EKLEYİN: Doğranmış yeşillikleri gerekirse partiler halinde tavaya ekleyip eşit şekilde solması için karıştırın.", "PİŞİRİN: Orta-düşük ateşte, sebzeler yumuşayıp koyu yeşil rengini korurken sık sık karıştırarak 8-10 dakika pişirin.", "TATLANDIRIN: Tadına göre tuz ekleyip iyice karıştırın.", "TAMAMLAYIN: Ocaktan alın ve isteğe bağlı olarak biraz limon suyu gezdirin.", "SERVİS YAPIN: Sıcak veya oda sıcaklığında, incera tabağında diğer yahnilerle birlikte servis edin."],
+    "it": ["PREPARA LE VERDURE: Lava bene le foglie di cavolo nero o cavolo verza, rimuovi i gambi duri e tritale finemente.", "SOFFRIGGI LA CIPOLLA: Scalda l'olio e soffriggi la cipolla a fuoco medio 5-6 minuti, finché traslucida.", "AGGIUNGI GLI AROMI: Aggiungi aglio, zenzero e peperoncino (se usato), cuocendo 1-2 minuti.", "AGGIUNGI LE VERDURE: Aggiungi le verdure tritate in padella, a più riprese se necessario, mescolando per farle appassire uniformemente.", "CUOCI: Salta a fuoco medio-basso 8-10 minuti, mescolando spesso, finché le verdure si ammorbidiscono mantenendo il loro colore verde intenso.", "INSAPORISCI: Aggiungi sale a piacere, mescolando bene.", "COMPLETA: Togli dal fuoco e, facoltativamente, irrora con un po' di succo di limone.", "SERVI: Servi caldo o a temperatura ambiente, insieme ad altri stufati sul piatto di injera."],
+    "ko": ["채소 준비하기: 케일이나 콜라드 잎을 깨끗이 씻고 억센 줄기를 제거한 뒤 가늘게 썬다.", "양파 볶기: 기름을 달군 뒤 중불에서 양파를 5-6분간 반투명해질 때까지 볶는다.", "향신 재료 추가: 마늘, 생강, 고추(사용 시)를 넣고 1-2분 볶는다.", "채소 넣기: 필요하면 나누어서 썬 채소를 팬에 넣고 고르게 숨이 죽도록 섞는다.", "조리하기: 중약불에서 자주 저어가며 8-10분간, 채소가 부드러워지되 진한 녹색을 유지할 때까지 볶는다.", "간하기: 소금으로 간하고 잘 섞는다.", "마무리: 불에서 내려 원하면 레몬즙을 약간 뿌린다.", "제공하기: 따뜻하게 또는 실온으로, 인제라 접시 위의 다른 스튜들과 함께 제공한다."]
+  },
+  "originText": {
+    "ro": "Gomen este garnitura de verdeață verde ce completează aproape orice masă etiopiană tradițională, un fel ușor și proaspăt, gândit special să echilibreze tocănelele picante și grele precum misir wat sau doro wat de pe același platou de injera. Frunzele folosite variază regional — collard greens, kale sau chiar frunze de sfeclă — în funcție de ce se cultivă local.\n\nCa parte a mesei de post, gomen se bucură de un statut aparte: fiind complet vegetal și extrem de nutritiv, era adesea singura sursă de verdeață proaspătă disponibilă în gospodăriile rurale etiopiene în anumite anotimpuri. Contrastul dintre textura fină, aproape mătăsoasă a verdeții călite și savoarea intensă a tocănelelor din jur este considerat esențial pentru un platou de injera reușit.",
+    "en": "Gomen is the green side dish that rounds out almost every traditional Ethiopian meal, a light, fresh dish designed specifically to balance the heavy, spicy stews like misir wat or doro wat sharing the same injera platter. The leaves used vary regionally — collard greens, kale, or even beet greens — depending on what's grown locally.\n\nAs part of the fasting table, gomen holds a special status: being entirely plant-based and highly nutritious, it was often the only source of fresh greens available in rural Ethiopian households during certain seasons. The contrast between the fine, almost silky texture of the sautéed greens and the intense flavor of the surrounding stews is considered essential to a well-composed injera platter.",
+    "es": "El gomen es la guarnición verde que completa casi cualquier comida etíope tradicional, un plato ligero y fresco pensado específicamente para equilibrar los guisos pesados y picantes como el misir wat o el doro wat que comparten el mismo plato de injera. Las hojas usadas varían según la región — berza, col rizada, o incluso hojas de remolacha — dependiendo de lo que se cultive localmente.\n\nComo parte de la mesa de ayuno, el gomen tiene un estatus especial: al ser totalmente vegetal y muy nutritivo, a menudo era la única fuente de verdura fresca disponible en los hogares rurales etíopes en ciertas estaciones. El contraste entre la textura fina, casi sedosa, de la verdura salteada y el sabor intenso de los guisos circundantes se considera esencial para un buen plato de injera.",
+    "fr": "Le gomen est l'accompagnement de légumes verts qui complète presque tous les repas éthiopiens traditionnels, un plat léger et frais spécialement conçu pour équilibrer les ragoûts lourds et épicés comme le misir wat ou le doro wat partageant le même plateau d'injera. Les feuilles utilisées varient selon les régions — chou vert, chou frisé, ou même des fanes de betterave — en fonction de ce qui pousse localement.\n\nDans le cadre du repas de jeûne, le gomen occupe un statut particulier: étant entièrement végétal et très nutritif, il était souvent la seule source de légumes verts frais disponible dans les foyers ruraux éthiopiens à certaines saisons. Le contraste entre la texture fine, presque soyeuse, des légumes sautés et la saveur intense des ragoûts environnants est considéré comme essentiel à un plateau d'injera réussi.",
+    "de": "Gomen ist die grüne Beilage, die fast jede traditionelle äthiopische Mahlzeit abrundet — ein leichtes, frisches Gericht, das speziell dazu gedacht ist, schwere, scharfe Eintöpfe wie Misir Wat oder Doro Wat auf derselben Injera-Platte auszugleichen. Die verwendeten Blätter variieren je nach Region — Kohlblätter, Grünkohl oder sogar Rübenblätter —, abhängig davon, was lokal angebaut wird.\n\nAls Teil der Fastenmahlzeit hat Gomen einen besonderen Status: Da es rein pflanzlich und sehr nahrhaft ist, war es oft die einzige verfügbare Quelle für frisches Grün in ländlichen äthiopischen Haushalten zu bestimmten Jahreszeiten. Der Kontrast zwischen der feinen, fast seidigen Textur des sautierten Grüns und dem intensiven Geschmack der umliegenden Eintöpfe gilt als wesentlich für eine gelungene Injera-Platte.",
+    "pt": "O gomen é o acompanhamento verde que completa quase todas as refeições etíopes tradicionais, um prato leve e fresco concebido especificamente para equilibrar os ensopados pesados e picantes como o misir wat ou o doro wat que partilham o mesmo prato de injera. As folhas usadas variam consoante a região — couve galega, couve, ou até folhas de beterraba — dependendo do que se cultiva localmente.\n\nComo parte da mesa de jejum, o gomen tem um estatuto especial: sendo totalmente vegetal e altamente nutritivo, era frequentemente a única fonte de verdura fresca disponível nas casas rurais etíopes em certas estações. O contraste entre a textura fina, quase sedosa, da verdura refogada e o sabor intenso dos ensopados à volta é considerado essencial para um bom prato de injera.",
+    "ru": "Гомен — это зелёный гарнир, который дополняет почти каждую традиционную эфиопскую трапезу, лёгкое, свежее блюдо, специально созданное для баланса с тяжёлыми, острыми рагу, такими как мисир ват или доро ват, разделяющими одну тарелку с инжерой. Используемые листья варьируются в зависимости от региона — листовая капуста, кале или даже свекольная ботва — в зависимости от того, что выращивается на месте.\n\nКак часть постного стола, гомен занимает особое положение: будучи полностью растительным и очень питательным, он часто был единственным доступным источником свежей зелени в сельских эфиопских домохозяйствах в определённые сезоны. Контраст между тонкой, почти шелковистой текстурой тушёной зелени и насыщенным вкусом окружающих рагу считается необходимым для правильно составленной тарелки с инжерой.",
+    "ar": "الجومن هو الطبق الجانبي الأخضر الذي يكمل تقريبًا كل وجبة إثيوبية تقليدية، طبق خفيف وطازج صُمم خصيصًا لموازنة اليخنات الثقيلة والحارة مثل المسر وات أو الدورو وات التي تشاركه طبق الإنجيرا نفسه. تختلف الأوراق المستخدمة حسب المنطقة — كرنب أو لفت أو حتى أوراق البنجر — تبعًا لما يُزرع محليًا.\n\nكجزء من مائدة الصيام، يحظى الجومن بمكانة خاصة: فبكونه نباتيًا بالكامل وغنيًا بالعناصر الغذائية، كان غالبًا المصدر الوحيد المتاح للخضار الطازجة في المنازل الريفية الإثيوبية في مواسم معينة. يُعتبر التباين بين القوام الرقيق شبه الحريري للخضار المقلية والنكهة القوية لليخنات المحيطة به أمرًا أساسيًا لطبق إنجيرا متكامل.",
+    "zh": "戈门是几乎每一顿传统埃塞俄比亚餐食都少不了的绿叶配菜，一道清淡新鲜的菜肴，专门用来平衡同一张英吉拉大饼上米西尔瓦特或多罗瓦特等厚重辛辣的炖菜。所用的叶菜因地区而异——甘蓝叶、羽衣甘蓝，甚至甜菜叶——取决于当地种植的作物。\n\n作为斋戒餐桌的一部分，戈门具有特殊地位：因其完全植物性且营养丰富，在某些季节里，它常常是埃塞俄比亚农村家庭唯一能获得的新鲜绿叶蔬菜来源。炒制蔬菜细腻近乎丝滑的口感与周围炖菜浓郁风味之间的对比，被认为是一份成功的英吉拉拼盘不可或缺的元素。",
+    "ja": "ゴメンは、ほぼすべての伝統的なエチオピア料理の食事を完成させる緑の副菜であり、同じインジェラの皿に盛られるミシルワットやドロワットのような重くスパイシーなシチューとのバランスを取るために特別に考案された、軽くて新鮮な一皿である。使用される葉は地域によって異なり——コラードグリーン、ケール、あるいはビーツの葉さえも——その土地で何が栽培されているかによって決まる。\n\n断食の食卓の一部として、ゴメンは特別な位置を占めている。完全に植物性で栄養価が高いため、特定の季節にはエチオピアの農村家庭で入手できる唯一の新鮮な葉物野菜であることも多かった。炒めた野菜のきめ細かく、ほとんど絹のような食感と、周囲のシチューの濃厚な風味との対比は、うまく構成されたインジェラの皿に不可欠だと考えられている。",
+    "hi": "गोमेन वह हरी साइड डिश है जो लगभग हर पारंपरिक इथियोपियाई भोजन को पूरा करती है, एक हल्का, ताज़ा व्यंजन जिसे विशेष रूप से उसी इंजेरा थाली पर मौजूद मिसिर वॉट या डोरो वॉट जैसे भारी, मसालेदार स्ट्यू को संतुलित करने के लिए बनाया गया है। इस्तेमाल की जाने वाली पत्तियाँ क्षेत्र के अनुसार अलग-अलग होती हैं — कोलार्ड ग्रीन्स, केल, या यहां तक कि चुकंदर की पत्तियाँ — यह इस पर निर्भर करता है कि स्थानीय रूप से क्या उगाया जाता है।\n\nव्रत की मेज़ के हिस्से के रूप में, गोमेन का एक खास स्थान है: पूरी तरह से पौधे-आधारित और अत्यधिक पौष्टिक होने के कारण, यह अक्सर कुछ मौसमों में ग्रामीण इथियोपियाई घरों में उपलब्ध ताज़ी हरी सब्ज़ियों का एकमात्र स्रोत होता था। भुनी हुई सब्ज़ी की महीन, लगभग रेशमी बनावट और आसपास के स्ट्यू के तीव्र स्वाद के बीच का यह विरोधाभास एक अच्छी तरह से बनी इंजेरा थाली के लिए आवश्यक माना जाता है।",
+    "tr": "Gomen, hemen hemen her geleneksel Etiyopya yemeğini tamamlayan yeşil yan yemektir; aynı incera tabağını paylaşan misir vat veya doro vat gibi ağır, baharatlı yahnileri dengelemek için özel olarak tasarlanmış hafif, taze bir yemektir. Kullanılan yapraklar bölgeye göre değişir — karalahana, kara lahana veya hatta pancar yaprakları — yerel olarak neyin yetiştirildiğine bağlı olarak.\n\nOruç sofrasının bir parçası olarak gomen özel bir statüye sahiptir: tamamen bitkisel ve son derece besleyici olması nedeniyle, belirli mevsimlerde kırsal Etiyopya hanelerinde mevcut olan tek taze yeşillik kaynağı olurdu. Sotelenmiş yeşilliklerin ince, neredeyse ipeksi dokusu ile çevredeki yahnilerin yoğun lezzeti arasındaki kontrast, iyi hazırlanmış bir incera tabağı için gerekli kabul edilir.",
+    "it": "Il gomen è il contorno verde che completa quasi ogni pasto etiope tradizionale, un piatto leggero e fresco pensato appositamente per bilanciare gli stufati pesanti e piccanti come il misir wat o il doro wat che condividono lo stesso piatto di injera. Le foglie utilizzate variano a seconda della regione — cavolo verza, cavolo nero, o persino foglie di barbabietola — a seconda di ciò che viene coltivato localmente.\n\nCome parte della tavola del digiuno, il gomen gode di uno status speciale: essendo interamente vegetale e molto nutriente, era spesso l'unica fonte di verdure fresche disponibile nelle case rurali etiopi in certe stagioni. Il contrasto tra la consistenza fine, quasi setosa, delle verdure saltate e il sapore intenso degli stufati circostanti è considerato essenziale per un piatto di injera ben composto.",
+    "ko": "고멘은 거의 모든 전통 에티오피아 식사를 완성하는 녹색 곁들임 요리로, 같은 인제라 접시를 공유하는 미시르 왓이나 도로 왓 같은 무겁고 매운 스튜와 균형을 맞추기 위해 특별히 고안된 가볍고 신선한 요리이다. 사용되는 잎은 지역별로 다르며—콜라드 그린, 케일, 또는 비트 잎까지—현지에서 재배되는 작물에 따라 달라진다.\n\n금식 식탁의 일부로서 고멘은 특별한 위치를 차지한다. 완전히 식물성이고 영양이 매우 풍부하기 때문에, 특정 계절에는 에티오피아 농촌 가정에서 구할 수 있는 유일한 신선한 채소 공급원이었던 경우도 많았다. 볶은 채소의 섬세하고 거의 부드러운 질감과 주변 스튜의 강렬한 풍미 사이의 대비는 잘 구성된 인제라 접시에 필수적인 요소로 여겨진다."
+  },
+  "meta": {
+    "time": 20,
+    "costRon": 12,
+    "tags": ["vegetarian", "vegan", "budget", "healthy", "quick"],
+    "desc": {
+      "ro": "Varză verde etiopiană călită rapid cu usturoi și ghimbir, garnitura de bază a platoului de injera.",
+      "en": "Ethiopian collard greens quickly sautéed with garlic and ginger, the essential injera platter side.",
+      "es": "Col verde etíope salteada rápidamente con ajo y jengibre, guarnición esencial del plato de injera.",
+      "fr": "Chou vert éthiopien sauté rapidement à l'ail et au gingembre, l'accompagnement essentiel du plateau d'injera.",
+      "de": "Äthiopischer Grünkohl, schnell mit Knoblauch und Ingwer sautiert, die unverzichtbare Beilage der Injera-Platte.",
+      "pt": "Couve verde etíope refogada rapidamente com alho e gengibre, o acompanhamento essencial do prato de injera.",
+      "ru": "Эфиопская зелёная капуста, быстро обжаренная с чесноком и имбирём, — незаменимый гарнир к тарелке с инжерой.",
+      "ar": "كرنب أخضر إثيوبي مقلي سريعًا بالثوم والزنجبيل، الطبق الجانبي الأساسي لطبق الإنجيرا.",
+      "zh": "以大蒜和姜快速炒制的埃塞俄比亚青菜，是英吉拉拼盘中不可或缺的配菜。",
+      "ja": "にんにくと生姜で手早く炒めたエチオピアの青菜、インジェラの皿に欠かせない副菜。",
+      "hi": "लहसुन और अदरक के साथ जल्दी भुनी इथियोपियाई हरी पत्तागोभी, इंजेरा थाली का अनिवार्य साइड।",
+      "tr": "Sarımsak ve zencefille hızlıca sotelenmiş Etiyopya usulü yeşil lahana, incera tabağının vazgeçilmez yan yemeği.",
+      "it": "Cavolo verde etiope saltato rapidamente con aglio e zenzero, il contorno essenziale del piatto di injera.",
+      "ko": "마늘과 생강으로 빠르게 볶은 에티오피아식 녹색 채소, 인제라 접시에 필수적인 곁들임 요리."
+    }
+  }
+}

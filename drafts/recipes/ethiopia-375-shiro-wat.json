@@ -1,0 +1,209 @@
+{
+  "id": 375,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Etiopia",
+    "en": "Ethiopia",
+    "es": "Etiopía",
+    "fr": "Éthiopie",
+    "de": "Äthiopien",
+    "pt": "Etiópia",
+    "ru": "Эфиопия",
+    "ar": "إثيوبيا",
+    "zh": "埃塞俄比亚",
+    "ja": "エチオピア",
+    "hi": "इथियोपिया",
+    "tr": "Etiyopya",
+    "it": "Etiopia",
+    "ko": "에티오피아"
+  },
+  "name": {
+    "ro": "Shiro Wat (Tocană de Făină de Năut)",
+    "en": "Shiro Wat (Spiced Chickpea Flour Stew)",
+    "es": "Shiro Wat (Guiso de Harina de Garbanzo Especiado)",
+    "fr": "Shiro Wat (Ragoût Épicé à la Farine de Pois Chiche)",
+    "de": "Shiro Wat (Gewürzter Kichererbsenmehl-Eintopf)",
+    "pt": "Shiro Wat (Ensopado de Farinha de Grão-de-Bico Apimentado)",
+    "ru": "Широ Ват (Пряное Рагу из Нутовой Муки)",
+    "ar": "شيرو وات (يخنة دقيق الحمص المتبلة)",
+    "zh": "希罗瓦特（香料鹰嘴豆粉炖菜）",
+    "ja": "シロワット（スパイシーひよこ豆粉シチュー）",
+    "hi": "शिरो वॉट (मसालेदार चने के आटे का स्ट्यू)",
+    "tr": "Şiro Vat (Baharatlı Nohut Unu Yahnisi)",
+    "it": "Shiro Wat (Stufato Speziato di Farina di Ceci)",
+    "ko": "시로 왓 (향신료 병아리콩 가루 스튜)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🫘", "t": "Făină de năut", "d": "Baza tocanei este shiro, năut prăjit și măcinat fin, gata condimentat." },
+      { "icon": "🌶️", "t": "Berbere picant", "d": "Amestecul de berbere aduce culoarea roșie intensă și adâncimea picantă specifică." },
+      { "icon": "🧅", "t": "Bază de ceapă", "d": "Ceapă călită îndelung, aproape caramelizată, formează fundamentul aromat." },
+      { "icon": "🌱", "t": "100% vegan", "d": "Fel tradițional de post, complet vegetal, foarte popular în perioadele de Postul Mare ortodox." }
+    ],
+    "en": [
+      { "icon": "🫘", "t": "Chickpea flour", "d": "The stew's base is shiro, roasted chickpeas ground fine and pre-spiced." },
+      { "icon": "🌶️", "t": "Spicy berbere", "d": "Berbere spice blend gives the stew its deep red color and signature heat." },
+      { "icon": "🧅", "t": "Onion base", "d": "Long-cooked, nearly caramelized onions form the flavorful foundation." },
+      { "icon": "🌱", "t": "100% vegan", "d": "A traditional fasting dish, entirely plant-based, very popular during Orthodox Lent." }
+    ],
+    "es": [
+      { "icon": "🫘", "t": "Harina de garbanzo", "d": "La base del guiso es shiro, garbanzos tostados molidos finos y pre-especiados." },
+      { "icon": "🌶️", "t": "Berbere picante", "d": "La mezcla de berbere aporta el color rojo intenso y el picante característico." },
+      { "icon": "🧅", "t": "Base de cebolla", "d": "Cebolla cocida a fuego lento, casi caramelizada, forma la base aromática." },
+      { "icon": "🌱", "t": "100% vegano", "d": "Plato tradicional de ayuno, totalmente vegetal, muy popular durante la Cuaresma ortodoxa." }
+    ],
+    "fr": [
+      { "icon": "🫘", "t": "Farine de pois chiche", "d": "La base du ragoût est le shiro, pois chiches torréfiés moulus fin et pré-épicés." },
+      { "icon": "🌶️", "t": "Berbéré épicé", "d": "Le mélange de berbéré donne au ragoût sa couleur rouge intense et son piquant caractéristique." },
+      { "icon": "🧅", "t": "Base d'oignon", "d": "Des oignons longuement cuits, presque caramélisés, forment la base aromatique." },
+      { "icon": "🌱", "t": "100% végane", "d": "Plat traditionnel de jeûne, entièrement végétal, très apprécié pendant le Carême orthodoxe." }
+    ],
+    "de": [
+      { "icon": "🫘", "t": "Kichererbsenmehl", "d": "Die Basis des Eintopfs ist Shiro, geröstete Kichererbsen fein gemahlen und vorgewürzt." },
+      { "icon": "🌶️", "t": "Scharfes Berbere", "d": "Die Berbere-Gewürzmischung verleiht dem Eintopf seine tiefrote Farbe und typische Schärfe." },
+      { "icon": "🧅", "t": "Zwiebelbasis", "d": "Lange geschmorte, fast karamellisierte Zwiebeln bilden die aromatische Grundlage." },
+      { "icon": "🌱", "t": "100% vegan", "d": "Ein traditionelles Fastengericht, rein pflanzlich, sehr beliebt während der orthodoxen Fastenzeit." }
+    ],
+    "pt": [
+      { "icon": "🫘", "t": "Farinha de grão-de-bico", "d": "A base do ensopado é o shiro, grão-de-bico torrado moído fino e pré-temperado." },
+      { "icon": "🌶️", "t": "Berbere picante", "d": "A mistura de berbere dá ao ensopado a sua cor vermelha intensa e o picante característico." },
+      { "icon": "🧅", "t": "Base de cebola", "d": "Cebola cozida lentamente, quase caramelizada, forma a base aromática." },
+      { "icon": "🌱", "t": "100% vegano", "d": "Prato tradicional de jejum, totalmente vegetal, muito popular durante a Quaresma ortodoxa." }
+    ],
+    "ru": [
+      { "icon": "🫘", "t": "Нутовая мука", "d": "Основа рагу — широ, обжаренный нут, мелко смолотый и заранее приправленный." },
+      { "icon": "🌶️", "t": "Острый бербере", "d": "Смесь бербере придаёт рагу насыщенный красный цвет и характерную остроту." },
+      { "icon": "🧅", "t": "Луковая основа", "d": "Долго тушённый, почти карамелизованный лук образует ароматную основу." },
+      { "icon": "🌱", "t": "100% веганское", "d": "Традиционное постное блюдо, полностью растительное, очень популярное во время православного поста." }
+    ],
+    "ar": [
+      { "icon": "🫘", "t": "دقيق الحمص", "d": "أساس اليخنة هو الشيرو، حمص محمّص مطحون ناعم ومتبل مسبقًا." },
+      { "icon": "🌶️", "t": "بربري حار", "d": "خليط البربري يمنح اليخنة لونها الأحمر الغامق وحرارتها المميزة." },
+      { "icon": "🧅", "t": "أساس من البصل", "d": "بصل مطهو ببطء حتى يقارب الكرملة يشكّل الأساس العطري." },
+      { "icon": "🌱", "t": "نباتي 100٪", "d": "طبق صيام تقليدي، نباتي بالكامل، شائع جدًا خلال صوم الكنيسة الأرثوذكسية الكبير." }
+    ],
+    "zh": [
+      { "icon": "🫘", "t": "鹰嘴豆粉", "d": "炖菜的基底是希罗，即烘烤后细磨并预先调味的鹰嘴豆粉。" },
+      { "icon": "🌶️", "t": "辛辣柏柏尔", "d": "柏柏尔香料混合物赋予炖菜深红色泽和标志性辣味。" },
+      { "icon": "🧅", "t": "洋葱基底", "d": "长时间炒制、近乎焦糖化的洋葱构成浓郁的风味基础。" },
+      { "icon": "🌱", "t": "100%纯素", "d": "传统斋戒菜肴，完全植物性，在东正教大斋期间非常受欢迎。" }
+    ],
+    "ja": [
+      { "icon": "🫘", "t": "ひよこ豆粉", "d": "シチューのベースはシロ、焙煎してきめ細かく挽き、あらかじめスパイスを効かせたひよこ豆粉。" },
+      { "icon": "🌶️", "t": "辛いベルベレ", "d": "ベルベレのスパイスミックスがシチューに深い赤色と特徴的な辛さを与える。" },
+      { "icon": "🧅", "t": "玉ねぎベース", "d": "長時間炒めてほぼキャラメル化した玉ねぎが香り豊かな土台となる。" },
+      { "icon": "🌱", "t": "100%ヴィーガン", "d": "完全に植物性の伝統的な断食料理で、正教会の大斎期に非常に人気がある。" }
+    ],
+    "hi": [
+      { "icon": "🫘", "t": "चने का आटा", "d": "स्ट्यू का आधार शिरो है, भुने चने बारीक पिसे और पहले से मसालेदार।" },
+      { "icon": "🌶️", "t": "तीखा बर्बेरे", "d": "बर्बेरे मसाला मिश्रण स्ट्यू को गहरा लाल रंग और खास तीखापन देता है।" },
+      { "icon": "🧅", "t": "प्याज़ का आधार", "d": "देर तक पकाया, लगभग कैरामलाइज़्ड प्याज़ स्वादिष्ट आधार बनाता है।" },
+      { "icon": "🌱", "t": "100% वीगन", "d": "एक पारंपरिक व्रत का व्यंजन, पूरी तरह पौधे-आधारित, रूढ़िवादी लेंट के दौरान बेहद लोकप्रिय।" }
+    ],
+    "tr": [
+      { "icon": "🫘", "t": "Nohut unu", "d": "Yahninin tabanı, kavrulmuş ve ince öğütülmüş, önceden baharatlanmış nohut olan şirodur." },
+      { "icon": "🌶️", "t": "Acı berbere", "d": "Berbere baharat karışımı yahniye derin kırmızı rengini ve karakteristik acılığını verir." },
+      { "icon": "🧅", "t": "Soğan tabanı", "d": "Uzun süre pişmiş, neredeyse karamelize olmuş soğanlar aromalı temeli oluşturur." },
+      { "icon": "🌱", "t": "%100 vegan", "d": "Ortodoks Büyük Perhizi boyunca çok popüler olan, tamamen bitkisel geleneksel bir oruç yemeği." }
+    ],
+    "it": [
+      { "icon": "🫘", "t": "Farina di ceci", "d": "La base dello stufato è lo shiro, ceci tostati macinati finemente e già speziati." },
+      { "icon": "🌶️", "t": "Berbere piccante", "d": "Il mix di berbere dona allo stufato il suo intenso colore rosso e il piccante caratteristico." },
+      { "icon": "🧅", "t": "Base di cipolla", "d": "Cipolla cotta a lungo, quasi caramellata, forma la base aromatica." },
+      { "icon": "🌱", "t": "100% vegano", "d": "Piatto tradizionale di digiuno, interamente vegetale, molto popolare durante la Quaresima ortodossa." }
+    ],
+    "ko": [
+      { "icon": "🫘", "t": "병아리콩 가루", "d": "스튜의 기본 재료는 시로, 볶은 병아리콩을 곱게 갈아 미리 양념한 것이다." },
+      { "icon": "🌶️", "t": "매운 베르베레", "d": "베르베레 향신료 믹스가 스튜에 짙은 붉은색과 특유의 매운맛을 준다." },
+      { "icon": "🧅", "t": "양파 베이스", "d": "오래 볶아 거의 캐러멜화된 양파가 풍미 가득한 기반을 이룬다." },
+      { "icon": "🌱", "t": "100% 비건", "d": "완전히 식물성 재료로 만든 전통 금식 요리로, 정교회 사순절 기간에 매우 인기가 많다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["2 cepe mari, tocate fin", "4 linguri ulei", "3 căței de usturoi, tocați", "1 lingură ghimbir ras", "3 linguri berbere", "1 cană shiro (făină de năut condimentată)", "3 căni apă", "1 roșie, tocată", "sare după gust", "1-2 ardei iuți verzi, pentru servire (opțional)"],
+    "en": ["2 large onions, finely chopped", "4 tbsp oil", "3 garlic cloves, minced", "1 tbsp grated ginger", "3 tbsp berbere spice", "1 cup shiro (spiced chickpea flour)", "3 cups water", "1 tomato, chopped", "salt to taste", "1-2 green chilies, for serving (optional)"],
+    "es": ["2 cebollas grandes, finamente picadas", "4 cucharadas de aceite", "3 dientes de ajo, picados", "1 cucharada de jengibre rallado", "3 cucharadas de berbere", "1 taza de shiro (harina de garbanzo especiada)", "3 tazas de agua", "1 tomate, picado", "sal al gusto", "1-2 chiles verdes, para servir (opcional)"],
+    "fr": ["2 gros oignons, finement hachés", "4 c. à soupe d'huile", "3 gousses d'ail, hachées", "1 c. à soupe de gingembre râpé", "3 c. à soupe de berbéré", "1 tasse de shiro (farine de pois chiche épicée)", "3 tasses d'eau", "1 tomate, hachée", "sel selon le goût", "1-2 piments verts, pour servir (facultatif)"],
+    "de": ["2 große Zwiebeln, fein gehackt", "4 EL Öl", "3 Knoblauchzehen, gehackt", "1 EL geriebener Ingwer", "3 EL Berbere-Gewürz", "1 Tasse Shiro (gewürztes Kichererbsenmehl)", "3 Tassen Wasser", "1 Tomate, gehackt", "Salz nach Geschmack", "1-2 grüne Chilis, zum Servieren (optional)"],
+    "pt": ["2 cebolas grandes, picadas finamente", "4 colheres (sopa) de óleo", "3 dentes de alho, picados", "1 colher (sopa) de gengibre ralado", "3 colheres (sopa) de berbere", "1 xícara de shiro (farinha de grão-de-bico temperada)", "3 xícaras de água", "1 tomate, picado", "sal a gosto", "1-2 pimentas verdes, para servir (opcional)"],
+    "ru": ["2 крупные луковицы, мелко нарезанные", "4 ст.л. масла", "3 зубчика чеснока, измельчённых", "1 ст.л. тёртого имбиря", "3 ст.л. специи бербере", "1 стакан широ (приправленная нутовая мука)", "3 стакана воды", "1 помидор, нарезанный", "соль по вкусу", "1-2 зелёных перца чили, для подачи (по желанию)"],
+    "ar": ["بصلتان كبيرتان، مفرومتان ناعمًا", "4 ملاعق كبيرة زيت", "3 فصوص ثوم، مفرومة", "ملعقة كبيرة زنجبيل مبشور", "3 ملاعق كبيرة بربري", "كوب شيرو (دقيق حمص متبل)", "3 أكواب ماء", "طماطم واحدة، مقطعة", "ملح حسب الرغبة", "1-2 فلفل أخضر حار، للتقديم (اختياري)"],
+    "zh": ["2个大洋葱，切碎", "4汤匙油", "3瓣大蒜，切碎", "1汤匙姜末", "3汤匙柏柏尔香料", "1杯希罗（调味鹰嘴豆粉）", "3杯水", "1个番茄，切碎", "盐适量", "1-2根青辣椒，配食用（可选）"],
+    "ja": ["玉ねぎ大2個（みじん切り）", "油 大さじ4", "にんにく3片（みじん切り）", "生姜すりおろし 大さじ1", "ベルベレスパイス 大さじ3", "シロ（味付きひよこ豆粉）1カップ", "水 3カップ", "トマト1個（刻む）", "塩 適量", "青唐辛子1〜2本（添える用、お好みで）"],
+    "hi": ["2 बड़े प्याज़, बारीक कटे", "4 बड़े चम्मच तेल", "3 लहसुन की कलियाँ, कटी हुई", "1 बड़ा चम्मच कद्दूकस अदरक", "3 बड़े चम्मच बर्बेरे मसाला", "1 कप शिरो (मसालेदार चने का आटा)", "3 कप पानी", "1 टमाटर, कटा हुआ", "स्वादानुसार नमक", "1-2 हरी मिर्च, परोसने के लिए (वैकल्पिक)"],
+    "tr": ["2 büyük soğan, ince doğranmış", "4 yemek kaşığı yağ", "3 diş sarımsak, doğranmış", "1 yemek kaşığı rendelenmiş zencefil", "3 yemek kaşığı berbere baharatı", "1 su bardağı şiro (baharatlı nohut unu)", "3 su bardağı su", "1 domates, doğranmış", "tuz, tadına göre", "1-2 yeşil biber, servis için (isteğe bağlı)"],
+    "it": ["2 cipolle grandi, tritate finemente", "4 cucchiai di olio", "3 spicchi d'aglio, tritati", "1 cucchiaio di zenzero grattugiato", "3 cucchiai di berbere", "1 tazza di shiro (farina di ceci speziata)", "3 tazze d'acqua", "1 pomodoro, tritato", "sale q.b.", "1-2 peperoncini verdi, per servire (facoltativo)"],
+    "ko": ["큰 양파 2개, 잘게 썬 것", "식용유 4큰술", "마늘 3쪽, 다진 것", "간 생강 1큰술", "베르베레 향신료 3큰술", "시로(양념된 병아리콩 가루) 1컵", "물 3컵", "토마토 1개, 썬 것", "소금 약간", "청고추 1-2개, 곁들임용(선택)"]
+  },
+  "howIsMade": {
+    "ro": ["CĂLEȘTE CEAPA: Încinge uleiul și călește ceapa la foc mic 15-20 minute, amestecând des, până devine aurie.", "AROMATIZEAZĂ: Adaugă usturoiul și ghimbirul, călind încă 2 minute până devin parfumate.", "ADAUGĂ BERBERE: Presară berbere peste ceapă și amestecă bine, lăsând să se prăjească ușor 1 minut.", "PUNE ROȘIA: Adaugă roșia tocată și lasă să se înmoaie 3-4 minute.", "DIZOLVĂ SHIRO: Într-un castron separat, dizolvă shiro în puțină apă rece, formând o pastă fără cocoloașe.", "ÎNGROAȘĂ TREPTAT: Toarnă pasta de shiro în tigaie, amestecând constant, apoi adaugă restul apei treptat.", "FIERBE: Lasă la fiert în clocot mic 15-20 minute, amestecând des, până tocana se îngroașă și capătă textura cremoasă.", "SERVEȘTE: Servește fierbinte, cu injera și ardei iuți verzi pe lângă."],
+    "en": ["SAUTÉ THE ONION: Heat the oil and sauté the onion over low heat 15-20 minutes, stirring often, until golden.", "ADD AROMATICS: Add garlic and ginger, cooking 2 more minutes until fragrant.", "ADD BERBERE: Sprinkle berbere over the onion and mix well, letting it toast lightly for 1 minute.", "ADD TOMATO: Add the chopped tomato and let it soften 3-4 minutes.", "DISSOLVE THE SHIRO: In a separate bowl, dissolve the shiro in a little cold water to form a lump-free paste.", "THICKEN GRADUALLY: Pour the shiro paste into the pan, stirring constantly, then add the rest of the water gradually.", "SIMMER: Let simmer gently 15-20 minutes, stirring often, until the stew thickens and becomes creamy.", "SERVE: Serve hot, with injera and green chilies on the side."],
+    "es": ["SOFRÍE LA CEBOLLA: Calienta el aceite y sofríe la cebolla a fuego bajo 15-20 minutos, removiendo con frecuencia, hasta que esté dorada.", "AÑADE LOS AROMÁTICOS: Añade el ajo y el jengibre, cocinando 2 minutos más hasta que estén fragantes.", "AÑADE EL BERBERE: Espolvorea el berbere sobre la cebolla y mezcla bien, dejando que se tueste ligeramente 1 minuto.", "AÑADE EL TOMATE: Agrega el tomate picado y deja que se ablande 3-4 minutos.", "DISUELVE EL SHIRO: En un bol aparte, disuelve el shiro en un poco de agua fría hasta formar una pasta sin grumos.", "ESPESA GRADUALMENTE: Vierte la pasta de shiro en la sartén, removiendo constantemente, luego añade el resto del agua poco a poco.", "COCINA A FUEGO LENTO: Deja cocinar a fuego lento 15-20 minutos, removiendo con frecuencia, hasta que el guiso espese y quede cremoso.", "SIRVE: Sirve caliente, con injera y chiles verdes al lado."],
+    "fr": ["FAITES REVENIR L'OIGNON: Chauffez l'huile et faites revenir l'oignon à feu doux 15-20 minutes, en remuant souvent, jusqu'à ce qu'il soit doré.", "AJOUTEZ LES AROMATES: Ajoutez l'ail et le gingembre, en cuisant 2 minutes de plus jusqu'à ce qu'ils soient parfumés.", "AJOUTEZ LE BERBÉRÉ: Saupoudrez le berbéré sur l'oignon et mélangez bien, en laissant torréfier légèrement 1 minute.", "AJOUTEZ LA TOMATE: Ajoutez la tomate hachée et laissez-la ramollir 3-4 minutes.", "DISSOLVEZ LE SHIRO: Dans un bol séparé, dissolvez le shiro dans un peu d'eau froide pour former une pâte sans grumeaux.", "ÉPAISSISSEZ PROGRESSIVEMENT: Versez la pâte de shiro dans la poêle en remuant constamment, puis ajoutez le reste de l'eau progressivement.", "MIJOTEZ: Laissez mijoter doucement 15-20 minutes, en remuant souvent, jusqu'à ce que le ragoût épaississe et devienne crémeux.", "SERVEZ: Servez chaud, avec de l'injera et des piments verts à côté."],
+    "de": ["ZWIEBEL ANBRATEN: Öl erhitzen und die Zwiebel bei niedriger Hitze 15-20 Minuten unter häufigem Rühren goldbraun braten.", "AROMEN HINZUFÜGEN: Knoblauch und Ingwer zugeben und weitere 2 Minuten braten, bis sie duften.", "BERBERE HINZUFÜGEN: Berbere über die Zwiebel streuen und gut vermischen, 1 Minute leicht anrösten lassen.", "TOMATE HINZUFÜGEN: Die gehackte Tomate zugeben und 3-4 Minuten weich werden lassen.", "SHIRO AUFLÖSEN: In einer separaten Schüssel Shiro in etwas kaltem Wasser klumpenfrei auflösen.", "SCHRITTWEISE EINDICKEN: Die Shiro-Paste in die Pfanne geben, ständig rühren, dann den Rest des Wassers nach und nach zugeben.", "KÖCHELN: 15-20 Minuten sanft köcheln lassen, häufig rühren, bis der Eintopf eindickt und cremig wird.", "SERVIEREN: Heiß servieren, mit Injera und grünen Chilis als Beilage."],
+    "pt": ["REFOGUE A CEBOLA: Aqueça o óleo e refogue a cebola em fogo baixo por 15-20 minutos, mexendo com frequência, até dourar.", "ADICIONE OS AROMÁTICOS: Junte o alho e o gengibre, cozinhando mais 2 minutos até ficarem perfumados.", "ADICIONE O BERBERE: Polvilhe o berbere sobre a cebola e misture bem, deixando tostar levemente por 1 minuto.", "ADICIONE O TOMATE: Junte o tomate picado e deixe amolecer por 3-4 minutos.", "DISSOLVA O SHIRO: Numa tigela separada, dissolva o shiro em um pouco de água fria até formar uma pasta sem grumos.", "ENGROSSE GRADUALMENTE: Despeje a pasta de shiro na panela, mexendo constantemente, depois adicione o resto da água aos poucos.", "COZINHE EM FOGO BRANDO: Deixe cozinhar suavemente por 15-20 minutos, mexendo com frequência, até o ensopado engrossar e ficar cremoso.", "SIRVA: Sirva quente, com injera e pimentas verdes ao lado."],
+    "ru": ["ОБЖАРЬТЕ ЛУК: Разогрейте масло и жарьте лук на слабом огне 15-20 минут, часто помешивая, до золотистого цвета.", "ДОБАВЬТЕ АРОМАТИКУ: Добавьте чеснок и имбирь, готовьте ещё 2 минуты до появления аромата.", "ДОБАВЬТЕ БЕРБЕРЕ: Посыпьте лук бербере и хорошо перемешайте, дайте слегка поджариться 1 минуту.", "ДОБАВЬТЕ ПОМИДОР: Добавьте нарезанный помидор и дайте ему размягчиться 3-4 минуты.", "РАСТВОРИТЕ ШИРО: В отдельной миске растворите широ в небольшом количестве холодной воды до однородной пасты без комочков.", "ЗАГУЩАЙТЕ ПОСТЕПЕННО: Влейте пасту широ в сковороду, постоянно помешивая, затем постепенно добавьте оставшуюся воду.", "ТУШИТЕ: Тушите на слабом огне 15-20 минут, часто помешивая, пока рагу не загустеет и не станет кремовым.", "ПОДАВАЙТЕ: Подавайте горячим, с инжерой и зелёным перцем чили на гарнир."],
+    "ar": ["قلّي البصل: سخّني الزيت وقلّي البصل على نار هادئة 15-20 دقيقة مع التقليب المتكرر حتى يذبل ويصبح ذهبيًا.", "أضيفي النكهات: أضيفي الثوم والزنجبيل واطبخي دقيقتين إضافيتين حتى تفوح الرائحة.", "أضيفي البربري: رشّي البربري فوق البصل وامزجي جيدًا، اتركيه يُحمَّص قليلًا لمدة دقيقة.", "أضيفي الطماطم: أضيفي الطماطم المقطعة واتركيها تلين 3-4 دقائق.", "أذيبي الشيرو: في وعاء منفصل، أذيبي الشيرو في القليل من الماء البارد لتكوين عجينة خالية من الكتل.", "كثّفي تدريجيًا: اسكبي عجينة الشيرو في المقلاة مع التحريك المستمر، ثم أضيفي باقي الماء تدريجيًا.", "اطهي على نار هادئة: اتركيها تنضج على نار هادئة 15-20 دقيقة مع التقليب المتكرر حتى تتكاثف اليخنة وتصبح كريمية.", "قدّمي: قدّميها ساخنة مع الإنجيرا والفلفل الأخضر الحار جانبًا."],
+    "zh": ["炒洋葱：加热油，小火翻炒洋葱15-20分钟，频繁搅拌至金黄色。", "加入香料：加入大蒜和姜末，再炒2分钟直至香气四溢。", "加入柏柏尔：将柏柏尔香料撒在洋葱上拌匀，轻轻烘炒1分钟。", "加入番茄：加入切好的番茄，煮软3-4分钟。", "溶解希罗：在另一个碗中，用少量冷水将希罗调成无结块的糊状。", "逐渐勾芡：将希罗糊倒入锅中，不断搅拌，然后逐渐加入剩余的水。", "炖煮：小火慢炖15-20分钟，频繁搅拌，直至炖菜变稠呈奶油状。", "上桌：趁热配英吉拉和青辣椒食用。"],
+    "ja": ["玉ねぎを炒める：油を熱し、弱火で玉ねぎをよくかき混ぜながら15〜20分間、きつね色になるまで炒める。", "香味野菜を加える：にんにくと生姜を加え、香りが立つまでさらに2分炒める。", "ベルベレを加える：玉ねぎにベルベレを振りかけてよく混ぜ、1分ほど軽く炒める。", "トマトを加える：刻んだトマトを加え、3〜4分柔らかくなるまで煮る。", "シロを溶く：別のボウルで、シロを少量の冷水で溶き、だまのないペースト状にする。", "徐々にとろみをつける：シロのペーストを鍋に加えて絶えずかき混ぜ、残りの水を少しずつ加える。", "煮込む：弱火で15〜20分、頻繁にかき混ぜながら、とろみがついてクリーミーになるまで煮込む。", "提供する：インジェラと青唐辛子を添えて熱いうちに提供する。"],
+    "hi": ["प्याज़ भूनें: तेल गरम करें और प्याज़ को धीमी आंच पर 15-20 मिनट, बार-बार हिलाते हुए, सुनहरा होने तक भूनें।", "सुगंधित सामग्री डालें: लहसुन और अदरक डालें, सुगंध आने तक 2 मिनट और पकाएं।", "बर्बेरे डालें: प्याज़ पर बर्बेरे छिड़कें और अच्छी तरह मिलाएं, 1 मिनट हल्का भुनने दें।", "टमाटर डालें: कटा टमाटर डालें और 3-4 मिनट नरम होने दें।", "शिरो घोलें: अलग कटोरे में, शिरो को थोड़े ठंडे पानी में बिना गांठ के घोलें।", "धीरे-धीरे गाढ़ा करें: शिरो का घोल पैन में डालें, लगातार हिलाते रहें, फिर बाकी पानी धीरे-धीरे डालें।", "उबालें: धीमी आंच पर 15-20 मिनट, बार-बार हिलाते हुए, तब तक पकाएं जब तक स्ट्यू गाढ़ा और मलाईदार न हो जाए।", "परोसें: गरमागरम, इंजेरा और हरी मिर्च के साथ परोसें।"],
+    "tr": ["SOĞANI SOTELEYIN: Yağı ısıtın ve soğanı kısık ateşte sık sık karıştırarak 15-20 dakika altın rengi olana kadar soteleyin.", "AROMATİKLERİ EKLEYİN: Sarımsak ve zencefili ekleyip kokuları çıkana kadar 2 dakika daha pişirin.", "BERBEREYİ EKLEYİN: Berbereyi soğanın üzerine serpip iyice karıştırın, 1 dakika hafifçe kavurmasına izin verin.", "DOMATESİ EKLEYİN: Doğranmış domatesi ekleyip 3-4 dakika yumuşamasını bekleyin.", "ŞİROYU ERİTİN: Ayrı bir kasede, şiroyu az miktarda soğuk suyla topaksız bir hamur kıvamına gelene kadar eritin.", "YAVAŞÇA KOYULAŞTIRIN: Şiro hamurunu tavaya dökün, sürekli karıştırın, ardından kalan suyu yavaşça ekleyin.", "PİŞİRİN: Yahni koyulaşıp kremamsı olana kadar sık sık karıştırarak 15-20 dakika kısık ateşte pişirin.", "SERVİS YAPIN: Sıcak servis edin, yanında incera ve yeşil biberlerle."],
+    "it": ["SOFFRIGGI LA CIPOLLA: Scalda l'olio e soffriggi la cipolla a fuoco basso 15-20 minuti, mescolando spesso, finché dorata.", "AGGIUNGI GLI AROMI: Aggiungi aglio e zenzero, cuocendo altri 2 minuti finché profumati.", "AGGIUNGI IL BERBERE: Cospargi il berbere sulla cipolla e mescola bene, lasciando tostare leggermente 1 minuto.", "AGGIUNGI IL POMODORO: Aggiungi il pomodoro tritato e lascia ammorbidire 3-4 minuti.", "SCIOGLI LO SHIRO: In una ciotola separata, sciogli lo shiro in poca acqua fredda formando una pasta senza grumi.", "ADDENSA GRADUALMENTE: Versa la pasta di shiro nella padella mescolando continuamente, poi aggiungi il resto dell'acqua a poco a poco.", "FAI SOBBOLLIRE: Lascia sobbollire dolcemente 15-20 minuti, mescolando spesso, finché lo stufato si addensa e diventa cremoso.", "SERVI: Servi caldo, con injera e peperoncini verdi a lato."],
+    "ko": ["양파 볶기: 기름을 달군 뒤 약불에서 양파를 자주 저어가며 15-20분간 황금빛이 될 때까지 볶는다.", "향신 재료 추가: 마늘과 생강을 넣고 향이 날 때까지 2분 더 볶는다.", "베르베레 넣기: 양파 위에 베르베레를 뿌려 잘 섞고 1분간 살짝 볶는다.", "토마토 넣기: 썬 토마토를 넣고 3-4분간 부드러워질 때까지 익힌다.", "시로 풀기: 별도의 그릇에 시로를 약간의 찬물과 함께 덩어리 없이 페이스트로 풀어준다.", "서서히 걸쭉하게 만들기: 시로 페이스트를 팬에 부어 계속 저으며, 나머지 물을 조금씩 넣는다.", "끓이기: 자주 저어가며 15-20분간 약불로 끓여 스튜가 걸쭉하고 크리미해질 때까지 익힌다.", "제공하기: 인제라와 청고추를 곁들여 뜨겁게 제공한다."]
+  },
+  "originText": {
+    "ro": "Shiro wat este, alături de injera, unul dintre pilonii de bază ai bucătăriei etiopiene, o tocană groasă și cremoasă din făină de năut prăjit, prezentă zilnic pe mesele din toată țara, indiferent de statutul social. Cuvântul \"shiro\" desemnează atât ingredientul principal — pudra de năut condimentată, vândută gata amestecată în piețele etiopiene — cât și felul de mâncare finit.\n\nPopularitatea sa uriașă vine din statutul de fel de post: Biserica Ortodoxă Etiopiană impune peste 200 de zile de post pe an, timp în care carnea și lactatele sunt interzise, iar shiro wat, complet vegan și accesibil ca preț, a devenit soluția zilnică pentru milioane de familii. Variantele regionale diferă prin cantitatea de berbere folosită, unele fiind picante, altele blânde (shiro fitfit, cu bucăți de injera înmuiate direct în tocană).",
+    "en": "Shiro wat is, alongside injera, one of the fundamental pillars of Ethiopian cuisine, a thick and creamy stew made from roasted chickpea flour, present daily on tables across the country regardless of social status. The word \"shiro\" refers both to the main ingredient — the spiced chickpea powder sold pre-mixed in Ethiopian markets — and to the finished dish.\n\nIts enormous popularity comes from its status as a fasting dish: the Ethiopian Orthodox Church mandates over 200 fasting days a year, during which meat and dairy are forbidden, and shiro wat, entirely vegan and affordably priced, became the daily solution for millions of families. Regional variants differ in the amount of berbere used, some spicy, others mild (shiro fitfit, made with pieces of injera soaked directly into the stew).",
+    "es": "El shiro wat es, junto con el injera, uno de los pilares fundamentales de la cocina etíope, un guiso espeso y cremoso hecho con harina de garbanzo tostado, presente a diario en las mesas de todo el país, sin importar el estatus social. La palabra \"shiro\" designa tanto el ingrediente principal — el polvo de garbanzo especiado que se vende premezclado en los mercados etíopes — como el plato terminado.\n\nSu enorme popularidad viene de su estatus como plato de ayuno: la Iglesia Ortodoxa Etíope impone más de 200 días de ayuno al año, durante los cuales están prohibidos la carne y los lácteos, y el shiro wat, totalmente vegano y de precio accesible, se convirtió en la solución diaria para millones de familias. Las variantes regionales difieren en la cantidad de berbere utilizada, algunas picantes, otras suaves (shiro fitfit, con trozos de injera remojados directamente en el guiso).",
+    "fr": "Le shiro wat est, avec l'injera, l'un des piliers fondamentaux de la cuisine éthiopienne, un ragoût épais et crémeux à base de farine de pois chiche torréfié, présent quotidiennement sur les tables de tout le pays, quel que soit le statut social. Le mot \"shiro\" désigne à la fois l'ingrédient principal — la poudre de pois chiche épicée vendue prémélangée sur les marchés éthiopiens — et le plat terminé.\n\nSon énorme popularité vient de son statut de plat de jeûne: l'Église orthodoxe éthiopienne impose plus de 200 jours de jeûne par an, durant lesquels viande et produits laitiers sont interdits, et le shiro wat, entièrement végane et d'un prix abordable, est devenu la solution quotidienne pour des millions de familles. Les variantes régionales diffèrent par la quantité de berbéré utilisée, certaines épicées, d'autres douces (shiro fitfit, avec des morceaux d'injera trempés directement dans le ragoût).",
+    "de": "Shiro Wat ist neben Injera einer der grundlegenden Pfeiler der äthiopischen Küche, ein dicker, cremiger Eintopf aus geröstetem Kichererbsenmehl, der täglich auf den Tischen im ganzen Land steht, unabhängig vom sozialen Status. Das Wort \"Shiro\" bezeichnet sowohl die Hauptzutat — das gewürzte Kichererbsenpulver, das auf äthiopischen Märkten vorgemischt verkauft wird — als auch das fertige Gericht.\n\nSeine enorme Beliebtheit rührt von seinem Status als Fastengericht: Die äthiopisch-orthodoxe Kirche schreibt über 200 Fastentage im Jahr vor, während derer Fleisch und Milchprodukte verboten sind, und Shiro Wat, komplett vegan und erschwinglich, wurde zur täglichen Lösung für Millionen von Familien. Regionale Varianten unterscheiden sich in der verwendeten Menge an Berbere, manche scharf, andere mild (Shiro Fitfit, mit Injera-Stücken, die direkt im Eintopf eingeweicht werden).",
+    "pt": "O shiro wat é, ao lado do injera, um dos pilares fundamentais da culinária etíope, um ensopado espesso e cremoso feito de farinha de grão-de-bico torrado, presente diariamente nas mesas de todo o país, independentemente do estatuto social. A palavra \"shiro\" designa tanto o ingrediente principal — o pó de grão-de-bico temperado vendido pré-misturado nos mercados etíopes — como o prato pronto.\n\nA sua enorme popularidade vem do estatuto de prato de jejum: a Igreja Ortodoxa Etíope impõe mais de 200 dias de jejum por ano, durante os quais carne e laticínios são proibidos, e o shiro wat, totalmente vegano e de preço acessível, tornou-se a solução diária para milhões de famílias. As variantes regionais diferem na quantidade de berbere usada, algumas picantes, outras suaves (shiro fitfit, com pedaços de injera embebidos diretamente no ensopado).",
+    "ru": "Широ ват, наряду с инжерой, — один из фундаментальных столпов эфиопской кухни, густое кремовое рагу из жареной нутовой муки, ежедневно присутствующее на столах по всей стране независимо от социального статуса. Слово \"широ\" обозначает как основной ингредиент — приправленный нутовый порошок, продающийся уже смешанным на эфиопских рынках — так и готовое блюдо.\n\nЕго огромная популярность объясняется статусом постного блюда: Эфиопская православная церковь предписывает более 200 постных дней в году, в течение которых мясо и молочные продукты запрещены, и широ ват, полностью веганский и доступный по цене, стал ежедневным решением для миллионов семей. Региональные варианты отличаются количеством используемого бербере — одни острые, другие мягкие (широ фитфит, с кусочками инжеры, вымоченными прямо в рагу).",
+    "ar": "الشيرو وات، إلى جانب الإنجيرا، من الركائز الأساسية للمطبخ الإثيوبي، وهو يخنة سميكة وكريمية مصنوعة من دقيق الحمص المحمّص، تحضر يوميًا على موائد جميع أنحاء البلاد بغض النظر عن الوضع الاجتماعي. تشير كلمة \"شيرو\" إلى كل من المكوّن الرئيسي — مسحوق الحمص المتبل الذي يُباع مخلوطًا مسبقًا في الأسواق الإثيوبية — وإلى الطبق النهائي.\n\nتأتي شعبيته الهائلة من كونه طبق صيام: تفرض الكنيسة الأرثوذكسية الإثيوبية أكثر من 200 يوم صيام في السنة، يُحظر خلالها اللحم ومنتجات الألبان، وأصبح الشيرو وات، النباتي بالكامل والمنخفض التكلفة، الحل اليومي لملايين العائلات. تختلف النسخ الإقليمية في كمية البربري المستخدمة، بعضها حار وبعضها معتدل (شيرو فتفت، بقطع من الإنجيرا منقوعة مباشرة في اليخنة).",
+    "zh": "希罗瓦特与英吉拉一样，是埃塞俄比亚饮食的基石之一，一种由烘烤鹰嘴豆粉制成的浓稠奶油状炖菜，无论社会地位如何，每天都会出现在全国各地的餐桌上。「希罗」一词既指主要食材——在埃塞俄比亚市场上预先混合出售的调味鹰嘴豆粉——也指成品菜肴。\n\n它的巨大受欢迎程度源于其作为斋戒菜肴的地位：埃塞俄比亚正教会规定每年有超过200天的斋戒日，期间禁止食用肉类和乳制品，完全纯素且价格亲民的希罗瓦特因此成为数百万家庭的日常选择。地区变体在所用柏柏尔的用量上有所不同，有些辣，有些温和（希罗菲特菲特，将英吉拉块直接浸泡在炖菜中）。",
+    "ja": "シロワットはインジェラと並んでエチオピア料理の基本的な柱の一つであり、焙煎したひよこ豆粉から作る濃厚でクリーミーなシチューで、社会的地位に関わらず全国の食卓に毎日登場する。「シロ」という言葉は、エチオピアの市場であらかじめ混ぜて売られているスパイス入りひよこ豆粉という主材料と、完成した料理の両方を指す。\n\nその絶大な人気は断食料理としての地位に由来する：エチオピア正教会は年間200日以上の断食日を定めており、その期間中は肉と乳製品が禁じられているため、完全にヴィーガンで手頃な価格のシロワットは、何百万もの家庭にとって日々の解決策となった。地域による違いは使うベルベレの量にあり、辛いものもあれば、マイルドなもの（シロにインジェラの切れ端を直接浸すシロ・フィトフィト）もある。",
+    "hi": "शिरो वॉट, इंजेरा के साथ, इथियोपियाई भोजन के मूलभूत स्तंभों में से एक है, भुने चने के आटे से बना गाढ़ा और मलाईदार स्ट्यू, जो सामाजिक स्थिति की परवाह किए बिना देश भर की मेज़ों पर रोज़ाना मौजूद रहता है। \"शिरो\" शब्द मुख्य सामग्री — इथियोपियाई बाजारों में पहले से मिश्रित बेचे जाने वाले मसालेदार चने के पाउडर — और तैयार व्यंजन दोनों को दर्शाता है।\n\nइसकी विशाल लोकप्रियता व्रत के व्यंजन के रूप में इसकी स्थिति से आती है: इथियोपियाई रूढ़िवादी चर्च साल में 200 से अधिक व्रत के दिन अनिवार्य करता है, जिसके दौरान मांस और डेयरी वर्जित है, और पूरी तरह वीगन और सस्ता शिरो वॉट लाखों परिवारों के लिए दैनिक समाधान बन गया। क्षेत्रीय भिन्नताएं उपयोग किए गए बर्बेरे की मात्रा में भिन्न होती हैं, कुछ तीखी, कुछ हल्की (शिरो फिटफिट, जिसमें इंजेरा के टुकड़े सीधे स्ट्यू में भिगोए जाते हैं)।",
+    "tr": "Şiro vat, incera ile birlikte, Etiyopya mutfağının temel taşlarından biridir; kavrulmuş nohut unundan yapılan koyu ve kremamsı bir yahni olup, sosyal statüden bağımsız olarak ülke genelinde her gün masalarda bulunur. \"Şiro\" kelimesi hem ana malzemeyi — Etiyopya pazarlarında önceden karıştırılmış olarak satılan baharatlı nohut tozunu — hem de bitmiş yemeği ifade eder.\n\nMuazzam popülaritesi bir oruç yemeği olma statüsünden gelir: Etiyopya Ortodoks Kilisesi yılda 200'den fazla oruç günü öngörür, bu süre boyunca et ve süt ürünleri yasaktır ve tamamen vegan, uygun fiyatlı şiro vat milyonlarca aile için günlük çözüm haline gelmiştir. Bölgesel varyasyonlar kullanılan berbere miktarına göre değişir, bazıları acı, bazıları hafiftir (şiro fitfit, incera parçalarının doğrudan yahniye batırıldığı versiyon).",
+    "it": "Lo shiro wat è, insieme all'injera, uno dei pilastri fondamentali della cucina etiope, uno stufato denso e cremoso a base di farina di ceci tostati, presente quotidianamente sulle tavole di tutto il paese, indipendentemente dallo status sociale. La parola \"shiro\" indica sia l'ingrediente principale — la polvere di ceci speziata venduta già miscelata nei mercati etiopi — sia il piatto finito.\n\nLa sua enorme popolarità deriva dal suo status di piatto di digiuno: la Chiesa Ortodossa Etiope impone oltre 200 giorni di digiuno all'anno, durante i quali carne e latticini sono vietati, e lo shiro wat, completamente vegano ed economico, è diventato la soluzione quotidiana per milioni di famiglie. Le varianti regionali differiscono per la quantità di berbere utilizzata, alcune piccanti, altre delicate (shiro fitfit, con pezzi di injera immersi direttamente nello stufato).",
+    "ko": "시로 왓은 인제라와 더불어 에티오피아 요리의 근본적인 기둥 중 하나로, 볶은 병아리콩 가루로 만든 진하고 크리미한 스튜이며, 사회적 지위와 상관없이 전국의 식탁에 매일 오른다. \"시로\"라는 단어는 에티오피아 시장에서 미리 섞어 파는 향신료 병아리콩 가루라는 주재료와, 완성된 요리 모두를 가리킨다.\n\n이 음식의 엄청난 인기는 금식 요리로서의 지위에서 비롯된다. 에티오피아 정교회는 연간 200일 이상의 금식일을 정하고 있으며, 이 기간에는 고기와 유제품이 금지되는데, 완전히 비건이고 가격이 저렴한 시로 왓은 수백만 가정의 일상적인 해결책이 되었다. 지역별 변형은 사용하는 베르베레의 양에 따라 다르며, 어떤 것은 맵고 어떤 것은 순하다(인제라 조각을 스튜에 직접 적셔 먹는 시로 핏핏)."
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 18,
+    "tags": ["vegetarian", "vegan", "budget"],
+    "desc": {
+      "ro": "Tocană cremoasă de făină de năut condimentată cu berbere, felul de bază al postului etiopian.",
+      "en": "Creamy chickpea flour stew spiced with berbere, the staple of Ethiopian fasting food.",
+      "es": "Guiso cremoso de harina de garbanzo especiado con berbere, plato básico del ayuno etíope.",
+      "fr": "Ragoût crémeux de farine de pois chiche épicé au berbéré, plat de base du jeûne éthiopien.",
+      "de": "Cremiger Kichererbsenmehl-Eintopf mit Berbere gewürzt, das Grundnahrungsmittel der äthiopischen Fastenküche.",
+      "pt": "Ensopado cremoso de farinha de grão-de-bico temperado com berbere, base da comida de jejum etíope.",
+      "ru": "Кремовое рагу из нутовой муки со специей бербере, основа эфиопской постной кухни.",
+      "ar": "يخنة كريمية من دقيق الحمص متبلة بالبربري، الطبق الأساسي في طعام الصيام الإثيوبي.",
+      "zh": "以柏柏尔调味的奶油鹰嘴豆粉炖菜，是埃塞俄比亚斋戒食物的主食。",
+      "ja": "ベルベレで味付けしたクリーミーなひよこ豆粉シチュー、エチオピアの断食料理の定番。",
+      "hi": "बर्बेरे से मसालेदार मलाईदार चने के आटे का स्ट्यू, इथियोपियाई व्रत भोजन का मुख्य आधार।",
+      "tr": "Berbere ile baharatlanmış kremamsı nohut unu yahnisi, Etiyopya oruç yemeğinin temel taşı.",
+      "it": "Stufato cremoso di farina di ceci speziato con berbere, il piatto base del digiuno etiope.",
+      "ko": "베르베레로 향을 낸 크리미한 병아리콩 가루 스튜, 에티오피아 금식 음식의 주식."
+    }
+  }
+}

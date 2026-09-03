@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <span>埃及杂粮饭</span>
+    <a href="/">首页</a> › <a href="/zh/shipu/">食谱</a> › <a href="/zh/shipu/egypt/">埃及</a> › <span>埃及杂粮饭</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="koshari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="埃及杂粮饭" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Egyptian_food_Koshary.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇬 午餐 · 埃及</div>
+      <div class="recipe-badge">🇪🇬 午餐 · <a class="recipe-badge-origin" href="/zh/shipu/egypt/">埃及</a></div>
       <h1>埃及杂粮饭</h1>
       <p class="recipe-tagline">科沙里（Koshari）是埃及的国民街头食品，开罗和亚历山大港的推车和小店随处可见。这道菜是文化交汇的产物——米饭、棕色扁豆、通心粉和鹰嘴豆层层叠放——其多元食材折射出埃及作为贸易枢纽的历史。通心粉由意大利商人于19世纪带入，完整的料理在20世纪初以廉价且顶饱的工人餐形式成型。
 
@@ -170,7 +170,43 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇬 更多来自埃及的食谱</h2>
+      <a href="/zh/shipu/egypt/">查看全部食谱 →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/zh/shipu/molokhia-jute-leaf-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="molokhia-jute-leaf-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">埃及麻婆汤</p>
+    <span class="recipe-card-meta">35m · 简单</span>
+  </div>
+</a><a href="/zh/shipu/ta-ameya-egyptian-fava-bean-falafel/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="ta-ameya-egyptian-fava-bean-falafel">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">埃及蚕豆沙拉三明治</p>
+    <span class="recipe-card-meta">40m · 简单</span>
+  </div>
+</a><a href="/zh/shipu/om-ali-egyptian-bread-pudding/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="om-ali-egyptian-bread-pudding">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">埃及酥皮奶布丁</p>
+    <span class="recipe-card-meta">40m · 简单</span>
+  </div>
+</a><a href="/zh/shipu/feteer-meshaltet-egyptian-layered-flatbread/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="feteer-meshaltet-egyptian-layered-flatbread">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">埃及千层酥饼</p>
+    <span class="recipe-card-meta">40m · 简单</span>
+  </div>
+</a><a href="/zh/shipu/basbousa-egyptian-semolina-cake/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="basbousa-egyptian-semolina-cake">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">巴斯布萨（埃及粗麦粉蛋糕）</p>
+    <span class="recipe-card-meta">40m · 简单</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -221,13 +257,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/zh/shipu/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/zh/shipu/egypt/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="食谱"
+   aria-label="埃及"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">食谱</span>
+  <span class="rmb-label">埃及</span>
 </a>
 
 </main>

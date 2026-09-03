@@ -1,0 +1,209 @@
+{
+  "id": 377,
+  "servings": 4,
+  "tipType": "soup",
+  "pairingsType": "soup",
+  "origin": {
+    "ro": "Etiopia",
+    "en": "Ethiopia",
+    "es": "Etiopía",
+    "fr": "Éthiopie",
+    "de": "Äthiopien",
+    "pt": "Etiópia",
+    "ru": "Эфиопия",
+    "ar": "إثيوبيا",
+    "zh": "埃塞俄比亚",
+    "ja": "エチオピア",
+    "hi": "इथियोपिया",
+    "tr": "Etiyopya",
+    "it": "Etiopia",
+    "ko": "에티오피아"
+  },
+  "name": {
+    "ro": "Misir Wat (Tocană Picantă de Linte Roșie)",
+    "en": "Misir Wat (Spiced Red Lentil Stew)",
+    "es": "Misir Wat (Guiso Picante de Lentejas Rojas)",
+    "fr": "Misir Wat (Ragoût Épicé de Lentilles Rouges)",
+    "de": "Misir Wat (Würziger Rote-Linsen-Eintopf)",
+    "pt": "Misir Wat (Ensopado Picante de Lentilha Vermelha)",
+    "ru": "Мисир Ват (Пряное Рагу из Красной Чечевицы)",
+    "ar": "مسر وات (يخنة العدس الأحمر الحارة)",
+    "zh": "米西尔瓦特（辛辣红扁豆炖菜）",
+    "ja": "ミシルワット（スパイシーレッドレンズ豆シチュー）",
+    "hi": "मिसिर वॉट (मसालेदार लाल मसूर स्ट्यू)",
+    "tr": "Misir Vat (Baharatlı Kırmızı Mercimek Yahnisi)",
+    "it": "Misir Wat (Stufato Piccante di Lenticchie Rosse)",
+    "ko": "미시르 왓 (매콤한 붉은 렌틸콩 스튜)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🫘", "t": "Linte roșie", "d": "Lintea roșie se gătește repede și se dezintegrează într-o textură cremoasă, groasă." },
+      { "icon": "🌶️", "t": "Berbere generos", "d": "Amestecul de berbere dă tocanei culoarea roșie profundă și picantul intens caracteristic." },
+      { "icon": "🧅", "t": "Ceapă caramelizată", "d": "Ceapa călită lent, aproape topită, formează baza dulce-aromată a tocanei." },
+      { "icon": "🌱", "t": "Vegan și fără gluten", "d": "Fel tradițional de post, complet vegetal și fără gluten, bogat în proteine vegetale." }
+    ],
+    "en": [
+      { "icon": "🫘", "t": "Red lentils", "d": "Red lentils cook quickly and break down into a thick, creamy texture." },
+      { "icon": "🌶️", "t": "Generous berbere", "d": "Berbere spice blend gives the stew its deep red color and signature intense heat." },
+      { "icon": "🧅", "t": "Caramelized onion", "d": "Slowly cooked, nearly melted onion forms the sweet-savory base of the stew." },
+      { "icon": "🌱", "t": "Vegan and gluten-free", "d": "A traditional fasting dish, entirely plant-based and gluten-free, rich in plant protein." }
+    ],
+    "es": [
+      { "icon": "🫘", "t": "Lentejas rojas", "d": "Las lentejas rojas se cocinan rápido y se deshacen en una textura espesa y cremosa." },
+      { "icon": "🌶️", "t": "Berbere generoso", "d": "La mezcla de berbere aporta al guiso su color rojo intenso y su picante característico." },
+      { "icon": "🧅", "t": "Cebolla caramelizada", "d": "Cebolla cocida a fuego lento, casi deshecha, forma la base dulce y sabrosa del guiso." },
+      { "icon": "🌱", "t": "Vegano y sin gluten", "d": "Plato tradicional de ayuno, totalmente vegetal y sin gluten, rico en proteína vegetal." }
+    ],
+    "fr": [
+      { "icon": "🫘", "t": "Lentilles rouges", "d": "Les lentilles rouges cuisent rapidement et se défont en une texture épaisse et crémeuse." },
+      { "icon": "🌶️", "t": "Berbéré généreux", "d": "Le mélange de berbéré donne au ragoût sa couleur rouge intense et son piquant caractéristique." },
+      { "icon": "🧅", "t": "Oignon caramélisé", "d": "Un oignon cuit lentement, presque fondu, forme la base sucrée-salée du ragoût." },
+      { "icon": "🌱", "t": "Végane et sans gluten", "d": "Plat traditionnel de jeûne, entièrement végétal et sans gluten, riche en protéines végétales." }
+    ],
+    "de": [
+      { "icon": "🫘", "t": "Rote Linsen", "d": "Rote Linsen garen schnell und zerfallen zu einer dicken, cremigen Textur." },
+      { "icon": "🌶️", "t": "Reichlich Berbere", "d": "Die Berbere-Gewürzmischung verleiht dem Eintopf seine tiefrote Farbe und typische, intensive Schärfe." },
+      { "icon": "🧅", "t": "Karamellisierte Zwiebel", "d": "Langsam gegarte, fast zerfallene Zwiebel bildet die süßlich-herzhafte Basis des Eintopfs." },
+      { "icon": "🌱", "t": "Vegan und glutenfrei", "d": "Ein traditionelles Fastengericht, rein pflanzlich und glutenfrei, reich an pflanzlichem Eiweiß." }
+    ],
+    "pt": [
+      { "icon": "🫘", "t": "Lentilha vermelha", "d": "A lentilha vermelha cozinha rapidamente e desfaz-se numa textura espessa e cremosa." },
+      { "icon": "🌶️", "t": "Berbere generoso", "d": "A mistura de berbere dá ao ensopado a sua cor vermelha intensa e o picante característico." },
+      { "icon": "🧅", "t": "Cebola caramelizada", "d": "Cebola cozida lentamente, quase derretida, forma a base doce e saborosa do ensopado." },
+      { "icon": "🌱", "t": "Vegano e sem glúten", "d": "Prato tradicional de jejum, totalmente vegetal e sem glúten, rico em proteína vegetal." }
+    ],
+    "ru": [
+      { "icon": "🫘", "t": "Красная чечевица", "d": "Красная чечевица быстро готовится и разваривается до густой кремовой текстуры." },
+      { "icon": "🌶️", "t": "Щедрый бербере", "d": "Смесь бербере придаёт рагу насыщенный красный цвет и характерную интенсивную остроту." },
+      { "icon": "🧅", "t": "Карамелизованный лук", "d": "Медленно приготовленный, почти растворившийся лук образует сладковато-пикантную основу рагу." },
+      { "icon": "🌱", "t": "Веганское и без глютена", "d": "Традиционное постное блюдо, полностью растительное и без глютена, богатое растительным белком." }
+    ],
+    "ar": [
+      { "icon": "🫘", "t": "عدس أحمر", "d": "ينضج العدس الأحمر بسرعة ويتفكك ليمنح قوامًا سميكًا وكريميًا." },
+      { "icon": "🌶️", "t": "بربري وفير", "d": "يمنح خليط البربري اليخنة لونها الأحمر الغامق وحرارتها المميزة الشديدة." },
+      { "icon": "🧅", "t": "بصل مكرمل", "d": "بصل مطهو ببطء حتى يكاد يذوب، يشكّل الأساس الحلو المالح لليخنة." },
+      { "icon": "🌱", "t": "نباتي وخالٍ من الغلوتين", "d": "طبق صيام تقليدي، نباتي بالكامل وخالٍ من الغلوتين، غني بالبروتين النباتي." }
+    ],
+    "zh": [
+      { "icon": "🫘", "t": "红扁豆", "d": "红扁豆煮得快，煮化后呈浓稠奶油状口感。" },
+      { "icon": "🌶️", "t": "浓郁柏柏尔", "d": "柏柏尔香料混合物赋予炖菜深红色泽和标志性的强烈辣味。" },
+      { "icon": "🧅", "t": "焦糖化洋葱", "d": "慢炒近乎融化的洋葱构成甜咸交融的炖菜基底。" },
+      { "icon": "🌱", "t": "纯素且无麸质", "d": "传统斋戒菜肴，完全植物性且无麸质，富含植物蛋白。" }
+    ],
+    "ja": [
+      { "icon": "🫘", "t": "赤レンズ豆", "d": "赤レンズ豆は早く火が通り、崩れて濃厚でクリーミーな食感になる。" },
+      { "icon": "🌶️", "t": "たっぷりのベルベレ", "d": "ベルベレのスパイスミックスがシチューに深い赤色と特徴的な強い辛さを与える。" },
+      { "icon": "🧅", "t": "キャラメル化した玉ねぎ", "d": "ゆっくり炒めてほぼ溶けた玉ねぎが、甘辛い風味の土台となる。" },
+      { "icon": "🌱", "t": "ヴィーガンでグルテンフリー", "d": "完全に植物性でグルテンフリーの伝統的な断食料理で、植物性タンパク質が豊富。" }
+    ],
+    "hi": [
+      { "icon": "🫘", "t": "लाल मसूर", "d": "लाल मसूर जल्दी पकती है और गाढ़ी, मलाईदार बनावट में टूट जाती है।" },
+      { "icon": "🌶️", "t": "भरपूर बर्बेरे", "d": "बर्बेरे मसाला मिश्रण स्ट्यू को गहरा लाल रंग और खास तीव्र तीखापन देता है।" },
+      { "icon": "🧅", "t": "कैरामलाइज़्ड प्याज़", "d": "धीरे पकाया, लगभग पिघला हुआ प्याज़ स्ट्यू का मीठा-नमकीन आधार बनाता है।" },
+      { "icon": "🌱", "t": "वीगन और ग्लूटेन-मुक्त", "d": "एक पारंपरिक व्रत का व्यंजन, पूरी तरह पौधे-आधारित और ग्लूटेन-मुक्त, पौधे-आधारित प्रोटीन से भरपूर।" }
+    ],
+    "tr": [
+      { "icon": "🫘", "t": "Kırmızı mercimek", "d": "Kırmızı mercimek hızlı pişer ve koyu, kremamsı bir dokuya dağılır." },
+      { "icon": "🌶️", "t": "Bol berbere", "d": "Berbere baharat karışımı yahniye derin kırmızı rengini ve karakteristik yoğun acılığını verir." },
+      { "icon": "🧅", "t": "Karamelize soğan", "d": "Yavaşça pişmiş, neredeyse erimiş soğan yahninin tatlı-lezzetli tabanını oluşturur." },
+      { "icon": "🌱", "t": "Vegan ve glütensiz", "d": "Bitkisel protein açısından zengin, tamamen bitkisel ve glütensiz geleneksel bir oruç yemeği." }
+    ],
+    "it": [
+      { "icon": "🫘", "t": "Lenticchie rosse", "d": "Le lenticchie rosse cuociono velocemente e si sfaldano in una consistenza densa e cremosa." },
+      { "icon": "🌶️", "t": "Berbere generoso", "d": "Il mix di berbere dona allo stufato il suo intenso colore rosso e il piccante caratteristico." },
+      { "icon": "🧅", "t": "Cipolla caramellata", "d": "Cipolla cotta lentamente, quasi disfatta, forma la base dolce-saporita dello stufato." },
+      { "icon": "🌱", "t": "Vegano e senza glutine", "d": "Piatto tradizionale di digiuno, interamente vegetale e senza glutine, ricco di proteine vegetali." }
+    ],
+    "ko": [
+      { "icon": "🫘", "t": "붉은 렌틸콩", "d": "붉은 렌틸콩은 빨리 익고 걸쭉하고 크리미한 질감으로 풀어진다." },
+      { "icon": "🌶️", "t": "넉넉한 베르베레", "d": "베르베레 향신료 믹스가 스튜에 짙은 붉은색과 특유의 강렬한 매운맛을 준다." },
+      { "icon": "🧅", "t": "캐러멜화된 양파", "d": "천천히 볶아 거의 녹아버린 양파가 달콤 짭짤한 스튜의 기반을 이룬다." },
+      { "icon": "🌱", "t": "비건 & 글루텐 프리", "d": "완전히 식물성이고 글루텐이 없는 전통 금식 요리로, 식물성 단백질이 풍부하다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["2 căni linte roșie", "2 cepe mari, tocate fin", "4 linguri ulei", "4 căței de usturoi, tocați", "1 lingură ghimbir ras", "3-4 linguri berbere", "1 lingură pastă de roșii", "4 căni apă sau supă de legume", "sare după gust", "injera, pentru servire"],
+    "en": ["2 cups red lentils", "2 large onions, finely chopped", "4 tbsp oil", "4 garlic cloves, minced", "1 tbsp grated ginger", "3-4 tbsp berbere", "1 tbsp tomato paste", "4 cups water or vegetable broth", "salt to taste", "injera, for serving"],
+    "es": ["2 tazas de lentejas rojas", "2 cebollas grandes, finamente picadas", "4 cucharadas de aceite", "4 dientes de ajo, picados", "1 cucharada de jengibre rallado", "3-4 cucharadas de berbere", "1 cucharada de pasta de tomate", "4 tazas de agua o caldo de verduras", "sal al gusto", "injera, para servir"],
+    "fr": ["2 tasses de lentilles rouges", "2 gros oignons, finement hachés", "4 c. à soupe d'huile", "4 gousses d'ail, hachées", "1 c. à soupe de gingembre râpé", "3-4 c. à soupe de berbéré", "1 c. à soupe de concentré de tomate", "4 tasses d'eau ou de bouillon de légumes", "sel selon le goût", "injera, pour servir"],
+    "de": ["2 Tassen rote Linsen", "2 große Zwiebeln, fein gehackt", "4 EL Öl", "4 Knoblauchzehen, gehackt", "1 EL geriebener Ingwer", "3-4 EL Berbere", "1 EL Tomatenmark", "4 Tassen Wasser oder Gemüsebrühe", "Salz nach Geschmack", "Injera, zum Servieren"],
+    "pt": ["2 xícaras de lentilha vermelha", "2 cebolas grandes, picadas finamente", "4 colheres (sopa) de óleo", "4 dentes de alho, picados", "1 colher (sopa) de gengibre ralado", "3-4 colheres (sopa) de berbere", "1 colher (sopa) de extrato de tomate", "4 xícaras de água ou caldo de legumes", "sal a gosto", "injera, para servir"],
+    "ru": ["2 стакана красной чечевицы", "2 крупные луковицы, мелко нарезанные", "4 ст.л. масла", "4 зубчика чеснока, измельчённых", "1 ст.л. тёртого имбиря", "3-4 ст.л. бербере", "1 ст.л. томатной пасты", "4 стакана воды или овощного бульона", "соль по вкусу", "инжера, для подачи"],
+    "ar": ["كوبان عدس أحمر", "بصلتان كبيرتان، مفرومتان ناعمًا", "4 ملاعق كبيرة زيت", "4 فصوص ثوم، مفرومة", "ملعقة كبيرة زنجبيل مبشور", "3-4 ملاعق كبيرة بربري", "ملعقة كبيرة معجون طماطم", "4 أكواب ماء أو مرق خضار", "ملح حسب الرغبة", "إنجيرا، للتقديم"],
+    "zh": ["2杯红扁豆", "2个大洋葱，切碎", "4汤匙油", "4瓣大蒜，切碎", "1汤匙姜末", "3-4汤匙柏柏尔香料", "1汤匙番茄酱", "4杯水或蔬菜高汤", "盐适量", "英吉拉，配食用"],
+    "ja": ["赤レンズ豆2カップ", "玉ねぎ大2個（みじん切り）", "油 大さじ4", "にんにく4片（みじん切り）", "生姜すりおろし 大さじ1", "ベルベレスパイス 大さじ3〜4", "トマトペースト 大さじ1", "水または野菜だし 4カップ", "塩 適量", "インジェラ（添える用）"],
+    "hi": ["2 कप लाल मसूर", "2 बड़े प्याज़, बारीक कटे", "4 बड़े चम्मच तेल", "4 लहसुन की कलियाँ, कटी हुई", "1 बड़ा चम्मच कद्दूकस अदरक", "3-4 बड़े चम्मच बर्बेरे", "1 बड़ा चम्मच टमाटर का पेस्ट", "4 कप पानी या सब्ज़ी शोरबा", "स्वादानुसार नमक", "इंजेरा, परोसने के लिए"],
+    "tr": ["2 su bardağı kırmızı mercimek", "2 büyük soğan, ince doğranmış", "4 yemek kaşığı yağ", "4 diş sarımsak, doğranmış", "1 yemek kaşığı rendelenmiş zencefil", "3-4 yemek kaşığı berbere", "1 yemek kaşığı domates salçası", "4 su bardağı su veya sebze suyu", "tuz, tadına göre", "servis için incera"],
+    "it": ["2 tazze di lenticchie rosse", "2 cipolle grandi, tritate finemente", "4 cucchiai di olio", "4 spicchi d'aglio, tritati", "1 cucchiaio di zenzero grattugiato", "3-4 cucchiai di berbere", "1 cucchiaio di concentrato di pomodoro", "4 tazze d'acqua o brodo vegetale", "sale q.b.", "injera, per servire"],
+    "ko": ["붉은 렌틸콩 2컵", "큰 양파 2개, 잘게 썬 것", "식용유 4큰술", "마늘 4쪽, 다진 것", "간 생강 1큰술", "베르베레 3-4큰술", "토마토 페이스트 1큰술", "물 또는 채소 육수 4컵", "소금 약간", "인제라(곁들임용)"]
+  },
+  "howIsMade": {
+    "ro": ["SPALĂ LINTEA: Clătește lintea roșie sub apă rece până apa devine limpede, apoi scurge-o.", "CĂLEȘTE CEAPA: Încinge uleiul și călește ceapa la foc mic 15-20 minute, amestecând des, până devine moale și aurie.", "AROMATIZEAZĂ: Adaugă usturoiul și ghimbirul, călind încă 2 minute.", "ADAUGĂ BERBERE: Presară berbere și pasta de roșii, amestecând bine și lăsând să se prăjească 1-2 minute.", "PUNE LINTEA: Adaugă lintea scursă în tigaie, amestecând să se acopere cu amestecul de ceapă și condimente.", "TOARNĂ LICHIDUL: Adaugă apa sau supa treptat, amestecând constant.", "FIERBE: Lasă la fiert în clocot mic 20-25 minute, amestecând ocazional, până lintea se înmoaie complet și tocana se îngroașă.", "SERVEȘTE: Sărează după gust și servește fierbinte, cu injera."],
+    "en": ["RINSE THE LENTILS: Rinse the red lentils under cold water until it runs clear, then drain.", "SAUTÉ THE ONION: Heat the oil and sauté the onion over low heat 15-20 minutes, stirring often, until soft and golden.", "ADD AROMATICS: Add garlic and ginger, cooking 2 more minutes.", "ADD BERBERE: Sprinkle in berbere and tomato paste, mixing well and letting it toast 1-2 minutes.", "ADD THE LENTILS: Add the drained lentils to the pan, stirring to coat with the onion and spice mixture.", "POUR THE LIQUID: Add the water or broth gradually, stirring constantly.", "SIMMER: Let simmer gently 20-25 minutes, stirring occasionally, until the lentils fully soften and the stew thickens.", "SERVE: Salt to taste and serve hot, with injera."],
+    "es": ["ENJUAGA LAS LENTEJAS: Enjuaga las lentejas rojas bajo agua fría hasta que salga clara, luego escúrrelas.", "SOFRÍE LA CEBOLLA: Calienta el aceite y sofríe la cebolla a fuego bajo 15-20 minutos, removiendo con frecuencia, hasta que esté blanda y dorada.", "AÑADE LOS AROMÁTICOS: Añade el ajo y el jengibre, cocinando 2 minutos más.", "AÑADE EL BERBERE: Espolvorea el berbere y la pasta de tomate, mezclando bien y dejando tostar 1-2 minutos.", "AÑADE LAS LENTEJAS: Añade las lentejas escurridas a la sartén, removiendo para cubrirlas con la mezcla de cebolla y especias.", "VIERTE EL LÍQUIDO: Añade el agua o el caldo poco a poco, removiendo constantemente.", "COCINA A FUEGO LENTO: Deja cocinar a fuego lento 20-25 minutos, removiendo ocasionalmente, hasta que las lentejas se ablanden por completo y el guiso espese.", "SIRVE: Sazona con sal al gusto y sirve caliente, con injera."],
+    "fr": ["RINCEZ LES LENTILLES: Rincez les lentilles rouges à l'eau froide jusqu'à ce qu'elle soit claire, puis égouttez-les.", "FAITES REVENIR L'OIGNON: Chauffez l'huile et faites revenir l'oignon à feu doux 15-20 minutes, en remuant souvent, jusqu'à ce qu'il soit tendre et doré.", "AJOUTEZ LES AROMATES: Ajoutez l'ail et le gingembre, en cuisant 2 minutes de plus.", "AJOUTEZ LE BERBÉRÉ: Saupoudrez de berbéré et de concentré de tomate, en mélangeant bien et en laissant torréfier 1-2 minutes.", "AJOUTEZ LES LENTILLES: Ajoutez les lentilles égouttées dans la poêle, en remuant pour les enrober du mélange d'oignon et d'épices.", "VERSEZ LE LIQUIDE: Ajoutez l'eau ou le bouillon progressivement, en remuant constamment.", "MIJOTEZ: Laissez mijoter doucement 20-25 minutes, en remuant de temps en temps, jusqu'à ce que les lentilles ramollissent complètement et que le ragoût épaississe.", "SERVEZ: Salez selon le goût et servez chaud, avec de l'injera."],
+    "de": ["LINSEN ABSPÜLEN: Rote Linsen unter kaltem Wasser abspülen, bis es klar wird, dann abtropfen lassen.", "ZWIEBEL ANBRATEN: Öl erhitzen und die Zwiebel bei niedriger Hitze 15-20 Minuten unter häufigem Rühren weich und goldbraun braten.", "AROMEN HINZUFÜGEN: Knoblauch und Ingwer zugeben und weitere 2 Minuten braten.", "BERBERE HINZUFÜGEN: Berbere und Tomatenmark einstreuen, gut vermischen und 1-2 Minuten anrösten lassen.", "LINSEN HINZUFÜGEN: Die abgetropften Linsen in die Pfanne geben und mit der Zwiebel-Gewürz-Mischung ummanteln.", "FLÜSSIGKEIT ZUGEBEN: Wasser oder Brühe nach und nach zugeben, ständig rühren.", "KÖCHELN: 20-25 Minuten sanft köcheln lassen, gelegentlich rühren, bis die Linsen vollständig weich sind und der Eintopf eindickt.", "SERVIEREN: Nach Geschmack salzen und heiß servieren, mit Injera."],
+    "pt": ["ENXAGUE AS LENTILHAS: Enxague a lentilha vermelha em água fria até sair clara, depois escorra.", "REFOGUE A CEBOLA: Aqueça o óleo e refogue a cebola em fogo baixo por 15-20 minutos, mexendo com frequência, até ficar macia e dourada.", "ADICIONE OS AROMÁTICOS: Junte o alho e o gengibre, cozinhando mais 2 minutos.", "ADICIONE O BERBERE: Polvilhe o berbere e o extrato de tomate, misturando bem e deixando tostar 1-2 minutos.", "ADICIONE AS LENTILHAS: Junte as lentilhas escorridas na panela, mexendo para envolvê-las na mistura de cebola e temperos.", "ADICIONE O LÍQUIDO: Adicione a água ou o caldo aos poucos, mexendo constantemente.", "COZINHE EM FOGO BRANDO: Deixe cozinhar suavemente por 20-25 minutos, mexendo ocasionalmente, até as lentilhas amolecerem completamente e o ensopado engrossar.", "SIRVA: Tempere com sal a gosto e sirva quente, com injera."],
+    "ru": ["ПРОМОЙТЕ ЧЕЧЕВИЦУ: Промойте красную чечевицу под холодной водой, пока вода не станет прозрачной, затем слейте.", "ОБЖАРЬТЕ ЛУК: Разогрейте масло и жарьте лук на слабом огне 15-20 минут, часто помешивая, до мягкости и золотистого цвета.", "ДОБАВЬТЕ АРОМАТИКУ: Добавьте чеснок и имбирь, готовьте ещё 2 минуты.", "ДОБАВЬТЕ БЕРБЕРЕ: Всыпьте бербере и томатную пасту, хорошо перемешайте и дайте поджариться 1-2 минуты.", "ДОБАВЬТЕ ЧЕЧЕВИЦУ: Добавьте промытую чечевицу в сковороду, перемешивая, чтобы покрыть её луково-пряной смесью.", "ВЛЕЙТЕ ЖИДКОСТЬ: Постепенно добавляйте воду или бульон, постоянно помешивая.", "ТУШИТЕ: Тушите на слабом огне 20-25 минут, изредка помешивая, пока чечевица полностью не размягчится, а рагу не загустеет.", "ПОДАВАЙТЕ: Посолите по вкусу и подавайте горячим, с инжерой."],
+    "ar": ["اشطفي العدس: اشطفي العدس الأحمر بالماء البارد حتى يصبح صافيًا، ثم صفّيه.", "قلّي البصل: سخّني الزيت وقلّي البصل على نار هادئة 15-20 دقيقة مع التقليب المتكرر حتى يلين ويصبح ذهبيًا.", "أضيفي النكهات: أضيفي الثوم والزنجبيل واطبخي دقيقتين إضافيتين.", "أضيفي البربري: رشّي البربري ومعجون الطماطم وامزجي جيدًا واتركيه يُحمَّص 1-2 دقيقة.", "أضيفي العدس: أضيفي العدس المصفّى إلى المقلاة مع التقليب ليتغطى بخليط البصل والتوابل.", "أضيفي السائل: أضيفي الماء أو المرق تدريجيًا مع التحريك المستمر.", "اطهي على نار هادئة: اتركيه ينضج على نار هادئة 20-25 دقيقة مع التقليب أحيانًا حتى يلين العدس تمامًا وتتكاثف اليخنة.", "قدّمي: تبّلي بالملح حسب الرغبة وقدّميها ساخنة مع الإنجيرا."],
+    "zh": ["冲洗扁豆：用冷水冲洗红扁豆直至水变清澈，然后沥干。", "炒洋葱：加热油，小火翻炒洋葱15-20分钟，频繁搅拌至变软呈金黄色。", "加入香料：加入大蒜和姜末，再炒2分钟。", "加入柏柏尔：撒入柏柏尔香料和番茄酱，拌匀并烘炒1-2分钟。", "加入扁豆：将沥干的扁豆加入锅中，搅拌使其裹上洋葱香料混合物。", "倒入液体：逐渐加入水或高汤，不断搅拌。", "炖煮：小火慢炖20-25分钟，偶尔搅拌，直至扁豆完全软烂、炖菜变稠。", "上桌：依口味加盐，趁热配英吉拉食用。"],
+    "ja": ["レンズ豆をすすぐ：赤レンズ豆を水が透明になるまで冷水ですすぎ、水気を切る。", "玉ねぎを炒める：油を熱し、弱火で玉ねぎをよくかき混ぜながら15〜20分間、柔らかく金色になるまで炒める。", "香味野菜を加える：にんにくと生姜を加え、さらに2分炒める。", "ベルベレを加える：ベルベレとトマトペーストを振り入れてよく混ぜ、1〜2分炒める。", "レンズ豆を加える：水気を切ったレンズ豆を鍋に加え、玉ねぎとスパイスの混合物をまとわせるように混ぜる。", "水分を加える：水またはだしを少しずつ加え、絶えずかき混ぜる。", "煮込む：時々かき混ぜながら弱火で20〜25分、レンズ豆が完全に柔らかくなりシチューがとろみを帯びるまで煮込む。", "提供する：塩で味を調え、インジェラを添えて熱いうちに提供する。"],
+    "hi": ["मसूर धोएं: लाल मसूर को ठंडे पानी से तब तक धोएं जब तक पानी साफ न हो जाए, फिर छान लें।", "प्याज़ भूनें: तेल गरम करें और प्याज़ को धीमी आंच पर 15-20 मिनट, बार-बार हिलाते हुए, नरम और सुनहरा होने तक भूनें।", "सुगंधित सामग्री डालें: लहसुन और अदरक डालें, 2 मिनट और पकाएं।", "बर्बेरे डालें: बर्बेरे और टमाटर का पेस्ट छिड़कें, अच्छी तरह मिलाएं और 1-2 मिनट भुनने दें।", "मसूर डालें: छनी हुई मसूर पैन में डालें, प्याज़-मसाला मिश्रण से ढकने के लिए हिलाएं।", "तरल डालें: पानी या शोरबा धीरे-धीरे डालें, लगातार हिलाते रहें।", "उबालें: धीमी आंच पर 20-25 मिनट, कभी-कभी हिलाते हुए, तब तक पकाएं जब तक मसूर पूरी तरह नरम न हो जाए और स्ट्यू गाढ़ा न हो जाए।", "परोसें: स्वादानुसार नमक डालें और गरमागरम, इंजेरा के साथ परोसें।"],
+    "tr": ["MERCİMEĞİ YIKAYIN: Kırmızı mercimeği suyu duru çıkana kadar soğuk suyla yıkayın, sonra süzün.", "SOĞANI SOTELEYIN: Yağı ısıtın ve soğanı kısık ateşte sık sık karıştırarak 15-20 dakika yumuşak ve altın rengi olana kadar soteleyin.", "AROMATİKLERİ EKLEYİN: Sarımsak ve zencefili ekleyip 2 dakika daha pişirin.", "BERBEREYİ EKLEYİN: Berbere ve domates salçasını serpip iyice karıştırın ve 1-2 dakika kavurmasını bekleyin.", "MERCİMEĞİ EKLEYİN: Süzülmüş mercimeği tavaya ekleyip soğan-baharat karışımıyla kaplanacak şekilde karıştırın.", "SIVIYI EKLEYİN: Suyu veya et suyunu yavaşça, sürekli karıştırarak ekleyin.", "PİŞİRİN: Mercimekler tamamen yumuşayıp yahni koyulaşana kadar ara sıra karıştırarak 20-25 dakika kısık ateşte pişirin.", "SERVİS YAPIN: Tadına göre tuzlayın ve incera ile sıcak servis edin."],
+    "it": ["SCIACQUA LE LENTICCHIE: Sciacqua le lenticchie rosse sotto acqua fredda finché non esce limpida, poi scolale.", "SOFFRIGGI LA CIPOLLA: Scalda l'olio e soffriggi la cipolla a fuoco basso 15-20 minuti, mescolando spesso, finché morbida e dorata.", "AGGIUNGI GLI AROMI: Aggiungi aglio e zenzero, cuocendo altri 2 minuti.", "AGGIUNGI IL BERBERE: Cospargi con berbere e concentrato di pomodoro, mescolando bene e lasciando tostare 1-2 minuti.", "AGGIUNGI LE LENTICCHIE: Aggiungi le lenticchie scolate in padella, mescolando per ricoprirle con il composto di cipolla e spezie.", "VERSA IL LIQUIDO: Aggiungi acqua o brodo gradualmente, mescolando costantemente.", "FAI SOBBOLLIRE: Lascia sobbollire dolcemente 20-25 minuti, mescolando occasionalmente, finché le lenticchie si ammorbidiscono completamente e lo stufato si addensa.", "SERVI: Sala a piacere e servi caldo, con injera."],
+    "ko": ["렌틸콩 헹구기: 물이 맑아질 때까지 붉은 렌틸콩을 찬물에 헹군 뒤 물기를 뺀다.", "양파 볶기: 기름을 달군 뒤 약불에서 양파를 자주 저어가며 15-20분간 부드럽고 황금빛이 될 때까지 볶는다.", "향신 재료 추가: 마늘과 생강을 넣고 2분 더 볶는다.", "베르베레 넣기: 베르베레와 토마토 페이스트를 뿌려 잘 섞고 1-2분간 볶는다.", "렌틸콩 넣기: 물기를 뺀 렌틸콩을 팬에 넣고 양파-향신료 혼합물이 고루 묻도록 섞는다.", "물 붓기: 물이나 육수를 조금씩 넣으며 계속 젓는다.", "끓이기: 가끔 저어가며 20-25분간 약불로 끓여 렌틸콩이 완전히 부드러워지고 스튜가 걸쭉해질 때까지 익힌다.", "제공하기: 소금으로 간하고 인제라와 함께 뜨겁게 제공한다."]
+  },
+  "originText": {
+    "ro": "Misir wat este una dintre cele mai răspândite tocănele din bucătăria etiopiană, o mâncare simplă de linte roșie transformată prin condimentele berbere într-un fel bogat, complex și profund satisfăcător. Lintea, cultivată pe scară largă în podișurile etiopiene de secole, a fost dintotdeauna o sursă esențială de proteine accesibilă tuturor categoriilor sociale.\n\nCa și shiro wat, misir wat este un fel de post nelipsit din perioadele de abstinență impuse de Biserica Ortodoxă Etiopiană, dar rămâne popular și în afara acestor perioade datorită prețului accesibil și timpului scurt de preparare. Se servește aproape întotdeauna alături de alte tocănele mai puțin picante pe același platou de injera, contrastul de arome fiind parte esențială a mesei etiopiene tradiționale.",
+    "en": "Misir wat is one of the most widespread stews in Ethiopian cuisine, a simple red lentil dish transformed by berbere spice into a rich, complex and deeply satisfying meal. Lentils, cultivated widely across the Ethiopian highlands for centuries, have long been an essential protein source accessible to all social classes.\n\nLike shiro wat, misir wat is a staple fasting dish during the abstinence periods mandated by the Ethiopian Orthodox Church, but it remains popular outside those periods too, thanks to its affordable price and short cooking time. It's almost always served alongside other, milder stews on the same platter of injera, the contrast of flavors being an essential part of the traditional Ethiopian meal.",
+    "es": "El misir wat es uno de los guisos más extendidos de la cocina etíope, un sencillo plato de lentejas rojas transformado por el berbere en una comida rica, compleja y muy satisfactoria. Las lentejas, cultivadas ampliamente en las mesetas etíopes durante siglos, han sido siempre una fuente esencial de proteína accesible para todas las clases sociales.\n\nComo el shiro wat, el misir wat es un plato básico de ayuno durante los períodos de abstinencia impuestos por la Iglesia Ortodoxa Etíope, pero sigue siendo popular fuera de esos períodos gracias a su precio accesible y su corto tiempo de cocción. Casi siempre se sirve junto a otros guisos más suaves en el mismo plato de injera, siendo el contraste de sabores una parte esencial de la comida etíope tradicional.",
+    "fr": "Le misir wat est l'un des ragoûts les plus répandus de la cuisine éthiopienne, un simple plat de lentilles rouges transformé par le berbéré en un repas riche, complexe et profondément satisfaisant. Les lentilles, cultivées largement dans les hauts plateaux éthiopiens depuis des siècles, ont toujours été une source essentielle de protéines accessible à toutes les classes sociales.\n\nComme le shiro wat, le misir wat est un plat de jeûne incontournable pendant les périodes d'abstinence imposées par l'Église orthodoxe éthiopienne, mais il reste populaire en dehors de ces périodes grâce à son prix abordable et son temps de cuisson court. Il est presque toujours servi aux côtés d'autres ragoûts plus doux sur le même plateau d'injera, le contraste des saveurs faisant partie intégrante du repas éthiopien traditionnel.",
+    "de": "Misir Wat ist einer der am weitesten verbreiteten Eintöpfe der äthiopischen Küche, ein einfaches Rote-Linsen-Gericht, das durch Berbere-Gewürz in eine reichhaltige, komplexe und zutiefst zufriedenstellende Mahlzeit verwandelt wird. Linsen, seit Jahrhunderten in den äthiopischen Hochländern weit verbreitet angebaut, waren schon immer eine wesentliche, für alle sozialen Schichten zugängliche Proteinquelle.\n\nWie Shiro Wat ist Misir Wat ein fester Bestandteil der Fastenperioden, die von der äthiopisch-orthodoxen Kirche vorgeschrieben werden, bleibt aber auch außerhalb dieser Zeiten beliebt, dank seines erschwinglichen Preises und der kurzen Kochzeit. Es wird fast immer zusammen mit anderen, milderen Eintöpfen auf demselben Injera-Teller serviert, wobei der Geschmackskontrast ein wesentlicher Bestandteil der traditionellen äthiopischen Mahlzeit ist.",
+    "pt": "O misir wat é um dos ensopados mais difundidos da culinária etíope, um simples prato de lentilha vermelha transformado pelo berbere numa refeição rica, complexa e profundamente satisfatória. As lentilhas, cultivadas amplamente nos planaltos etíopes durante séculos, sempre foram uma fonte essencial de proteína acessível a todas as classes sociais.\n\nTal como o shiro wat, o misir wat é um prato básico de jejum durante os períodos de abstinência impostos pela Igreja Ortodoxa Etíope, mas continua popular fora desses períodos graças ao seu preço acessível e ao curto tempo de cozedura. É quase sempre servido ao lado de outros ensopados mais suaves no mesmo prato de injera, sendo o contraste de sabores uma parte essencial da refeição etíope tradicional.",
+    "ru": "Мисир ват — одно из самых распространённых рагу эфиопской кухни, простое блюдо из красной чечевицы, превращённое специей бербере в насыщенное, сложное и глубоко удовлетворяющее блюдо. Чечевица, веками широко культивируемая на эфиопских нагорьях, всегда была важным источником белка, доступным всем слоям общества.\n\nКак и широ ват, мисир ват — обязательное постное блюдо в периоды воздержания, предписанные Эфиопской православной церковью, но остаётся популярным и вне этих периодов благодаря доступной цене и короткому времени приготовления. Его почти всегда подают вместе с другими, более мягкими рагу на одном блюде с инжерой, а контраст вкусов — неотъемлемая часть традиционной эфиопской трапезы.",
+    "ar": "المسر وات من أكثر اليخنات انتشارًا في المطبخ الإثيوبي، وهو طبق بسيط من العدس الأحمر يتحول بفضل تتبيلة البربري إلى وجبة غنية ومعقدة ومُشبعة بعمق. لطالما كان العدس، الذي يُزرع على نطاق واسع في المرتفعات الإثيوبية منذ قرون، مصدرًا أساسيًا للبروتين متاحًا لجميع الطبقات الاجتماعية.\n\nمثل الشيرو وات، المسر وات طبق صيام أساسي خلال فترات الامتناع التي تفرضها الكنيسة الأرثوذكسية الإثيوبية، لكنه يبقى شائعًا خارج تلك الفترات أيضًا بفضل سعره المعقول ووقت طهيه القصير. يُقدَّم دائمًا تقريبًا إلى جانب يخنات أخرى أكثر اعتدالًا على نفس طبق الإنجيرا، ويشكّل تباين النكهات جزءًا أساسيًا من الوجبة الإثيوبية التقليدية.",
+    "zh": "米西尔瓦特是埃塞俄比亚饮食中最普遍的炖菜之一，一道简单的红扁豆菜肴，经柏柏尔香料调味后变成丰富、复杂且令人满足的一餐。数百年来，扁豆在埃塞俄比亚高原被广泛种植，一直是所有社会阶层都能获得的重要蛋白质来源。\n\n和希罗瓦特一样，米西尔瓦特是埃塞俄比亚正教会规定的斋戒期间必不可少的斋戒菜肴，但由于价格实惠、烹饪时间短，即便在斋戒期之外也依然广受欢迎。它几乎总是与其他较温和的炖菜一起盛放在同一张英吉拉大饼上供应，风味的对比是传统埃塞俄比亚餐食不可或缺的一部分。",
+    "ja": "ミシルワットはエチオピア料理の中で最も広く親しまれているシチューの一つで、シンプルな赤レンズ豆料理がベルベレのスパイスによって豊かで複雑、深い満足感を与える一皿へと変わる。何世紀にもわたりエチオピア高地で広く栽培されてきたレンズ豆は、あらゆる社会階層にとって欠かせないタンパク源であり続けてきた。\n\nシロワットと同様に、ミシルワットはエチオピア正教会が定める節制期間中の断食料理の定番だが、手頃な価格と短い調理時間から、それ以外の時期でも人気がある。ほぼ常に、より辛くない他のシチューとともに同じインジェラの皿に盛り付けられ、味の対比が伝統的なエチオピアの食事の重要な要素となっている。",
+    "hi": "मिसिर वॉट इथियोपियाई भोजन के सबसे व्यापक स्ट्यू में से एक है, एक साधारण लाल मसूर व्यंजन जिसे बर्बेरे मसाले ने एक समृद्ध, जटिल और गहराई से संतोषजनक भोजन में बदल दिया है। मसूर, जो सदियों से इथियोपियाई पठारों में व्यापक रूप से उगाई जाती है, हमेशा से सभी सामाजिक वर्गों के लिए सुलभ प्रोटीन का एक आवश्यक स्रोत रही है।\n\nशिरो वॉट की तरह, मिसिर वॉट इथियोपियाई रूढ़िवादी चर्च द्वारा अनिवार्य संयम अवधि के दौरान एक मुख्य व्रत व्यंजन है, लेकिन अपनी किफायती कीमत और कम पकाने के समय के कारण इन अवधियों के बाहर भी लोकप्रिय बना रहता है। इसे लगभग हमेशा इंजेरा की उसी थाली पर अन्य हल्के स्ट्यू के साथ परोसा जाता है, स्वादों का यह विरोधाभास पारंपरिक इथियोपियाई भोजन का एक अनिवार्य हिस्सा है।",
+    "tr": "Misir vat, Etiyopya mutfağının en yaygın yahnilerinden biridir; berbere baharatının basit bir kırmızı mercimek yemeğini zengin, karmaşık ve derinden doyurucu bir yemeğe dönüştürdüğü bir tarif. Yüzyıllardır Etiyopya yaylalarında yaygın olarak yetiştirilen mercimek, her zaman tüm sosyal sınıflar için erişilebilir temel bir protein kaynağı olmuştur.\n\nŞiro vat gibi, misir vat da Etiyopya Ortodoks Kilisesi'nin öngördüğü perhiz dönemlerinde vazgeçilmez bir oruç yemeğidir, ancak uygun fiyatı ve kısa pişirme süresi sayesinde bu dönemlerin dışında da popülerliğini korur. Neredeyse her zaman aynı incera tabağında diğer daha hafif yahnilerle birlikte servis edilir; lezzet kontrastı geleneksel Etiyopya yemeğinin temel bir parçasıdır.",
+    "it": "Il misir wat è uno degli stufati più diffusi della cucina etiope, un semplice piatto di lenticchie rosse trasformato dal berbere in un pasto ricco, complesso e profondamente appagante. Le lenticchie, coltivate ampiamente sugli altopiani etiopi da secoli, sono sempre state una fonte essenziale di proteine accessibile a tutte le classi sociali.\n\nCome lo shiro wat, il misir wat è un piatto di digiuno immancabile durante i periodi di astinenza imposti dalla Chiesa Ortodossa Etiope, ma resta popolare anche al di fuori di questi periodi grazie al suo prezzo accessibile e al breve tempo di cottura. Viene quasi sempre servito accanto ad altri stufati più delicati sullo stesso piatto di injera, e il contrasto di sapori è una parte essenziale del pasto etiope tradizionale.",
+    "ko": "미시르 왓은 에티오피아 요리에서 가장 널리 퍼진 스튜 중 하나로, 소박한 붉은 렌틸콩 요리가 베르베레 향신료를 통해 풍부하고 복합적이며 깊은 만족감을 주는 음식으로 변신한 것이다. 수 세기 동안 에티오피아 고원 지대에서 널리 재배된 렌틸콩은 모든 사회 계층이 접근할 수 있는 필수 단백질원이었다.\n\n시로 왓과 마찬가지로 미시르 왓은 에티오피아 정교회가 규정한 금욕 기간 동안 빠질 수 없는 금식 요리이지만, 저렴한 가격과 짧은 조리 시간 덕분에 그 기간 밖에서도 여전히 인기가 있다. 거의 항상 같은 인제라 판 위에 다른 순한 스튜들과 함께 제공되며, 맛의 대비는 전통적인 에티오피아 식사의 필수적인 부분이다."
+  },
+  "meta": {
+    "time": 45,
+    "costRon": 14,
+    "tags": ["vegetarian", "vegan", "budget", "high-protein"],
+    "desc": {
+      "ro": "Tocană cremoasă și picantă de linte roșie cu berbere, un fel de post etiopian de bază.",
+      "en": "Creamy, spicy red lentil stew with berbere, a staple Ethiopian fasting dish.",
+      "es": "Guiso cremoso y picante de lentejas rojas con berbere, plato básico de ayuno etíope.",
+      "fr": "Ragoût crémeux et épicé de lentilles rouges au berbéré, plat de jeûne éthiopien de base.",
+      "de": "Cremiger, würziger Rote-Linsen-Eintopf mit Berbere, ein grundlegendes äthiopisches Fastengericht.",
+      "pt": "Ensopado cremoso e picante de lentilha vermelha com berbere, prato base do jejum etíope.",
+      "ru": "Кремовое острое рагу из красной чечевицы с бербере, основное постное блюдо Эфиопии.",
+      "ar": "يخنة كريمية وحارة من العدس الأحمر بالبربري، طبق صيام إثيوبي أساسي.",
+      "zh": "以柏柏尔调味的奶油辛辣红扁豆炖菜，是埃塞俄比亚斋戒的主食。",
+      "ja": "ベルベレを効かせたクリーミーでスパイシーな赤レンズ豆シチュー、エチオピアの定番断食料理。",
+      "hi": "बर्बेरे के साथ मलाईदार, मसालेदार लाल मसूर स्ट्यू, इथियोपियाई व्रत का मुख्य व्यंजन।",
+      "tr": "Berbereli kremamsı, baharatlı kırmızı mercimek yahnisi, temel bir Etiyopya oruç yemeği.",
+      "it": "Stufato cremoso e piccante di lenticchie rosse con berbere, piatto base del digiuno etiope.",
+      "ko": "베르베레를 넣은 크리미하고 매콤한 붉은 렌틸콩 스튜, 에티오피아의 대표적인 금식 요리."
+    }
+  }
+}

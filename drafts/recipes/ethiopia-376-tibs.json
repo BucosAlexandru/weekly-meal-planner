@@ -1,0 +1,209 @@
+{
+  "id": 376,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Etiopia",
+    "en": "Ethiopia",
+    "es": "Etiopía",
+    "fr": "Éthiopie",
+    "de": "Äthiopien",
+    "pt": "Etiópia",
+    "ru": "Эфиопия",
+    "ar": "إثيوبيا",
+    "zh": "埃塞俄比亚",
+    "ja": "エチオピア",
+    "hi": "इथियोपिया",
+    "tr": "Etiyopya",
+    "it": "Etiopia",
+    "ko": "에티오피아"
+  },
+  "name": {
+    "ro": "Tibs (Vită Sotată cu Rozmarin Etiopian)",
+    "en": "Tibs (Ethiopian Sautéed Beef with Rosemary)",
+    "es": "Tibs (Res Salteada Etíope con Romero)",
+    "fr": "Tibs (Bœuf Sauté Éthiopien au Romarin)",
+    "de": "Tibs (Äthiopisches Rindfleisch mit Rosmarin, sautiert)",
+    "pt": "Tibs (Carne Refogada Etíope com Alecrim)",
+    "ru": "Тыбс (Эфиопская Обжаренная Говядина с Розмарином)",
+    "ar": "تبس (لحم بقري إثيوبي مقلي بإكليل الجبل)",
+    "zh": "提布斯（埃塞俄比亚迷迭香炒牛肉）",
+    "ja": "ティブス（エチオピア風ローズマリー牛肉炒め）",
+    "hi": "टिब्स (इथियोपियाई रोज़मेरी बीफ भुना हुआ)",
+    "tr": "Tibs (Biberiyeli Etiyopya Usulü Sote Dana Eti)",
+    "it": "Tibs (Manzo Saltato Etiope al Rosmarino)",
+    "ko": "티브스 (에티오피아식 로즈메리 소고기 볶음)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Vită în cuburi", "d": "Bucăți de vită tăiate cubulețe, sotate rapid la foc iute pentru a rămâne fragede." },
+      { "icon": "🌿", "t": "Rozmarin proaspăt", "d": "Rozmarinul aromatizează untul clarificat, dând felului o notă ierbacee distinctă." },
+      { "icon": "🌶️", "t": "Ardei iuți verzi", "d": "Ardeii iuți jalapeño sau ardei verzi etiopieni aduc un plus de picant proaspăt." },
+      { "icon": "🧅", "t": "Ceapă și roșii", "d": "Ceapă și roșii sotate rapid, păstrându-și textura crocantă." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Cubed beef", "d": "Beef cut into cubes, quickly sautéed over high heat to stay tender." },
+      { "icon": "🌿", "t": "Fresh rosemary", "d": "Rosemary flavors the clarified butter, giving the dish a distinct herbal note." },
+      { "icon": "🌶️", "t": "Green chilies", "d": "Jalapeño or Ethiopian green chilies bring a fresh spicy kick." },
+      { "icon": "🧅", "t": "Onion and tomato", "d": "Onion and tomato sautéed briefly, keeping their crisp texture." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Res en cubos", "d": "Res cortada en cubos, salteada rápidamente a fuego alto para mantenerse tierna." },
+      { "icon": "🌿", "t": "Romero fresco", "d": "El romero aromatiza la mantequilla clarificada, dando al plato una nota herbácea distintiva." },
+      { "icon": "🌶️", "t": "Chiles verdes", "d": "El jalapeño o los chiles verdes etíopes aportan un toque picante fresco." },
+      { "icon": "🧅", "t": "Cebolla y tomate", "d": "Cebolla y tomate salteados brevemente, manteniendo su textura crujiente." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Bœuf en cubes", "d": "Bœuf coupé en cubes, sauté rapidement à feu vif pour rester tendre." },
+      { "icon": "🌿", "t": "Romarin frais", "d": "Le romarin parfume le beurre clarifié, donnant au plat une note herbacée distincte." },
+      { "icon": "🌶️", "t": "Piments verts", "d": "Le jalapeño ou les piments verts éthiopiens apportent une touche piquante fraîche." },
+      { "icon": "🧅", "t": "Oignon et tomate", "d": "Oignon et tomate sautés brièvement, conservant leur texture croquante." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Rindfleischwürfel", "d": "In Würfel geschnittenes Rindfleisch, schnell bei hoher Hitze sautiert, um zart zu bleiben." },
+      { "icon": "🌿", "t": "Frischer Rosmarin", "d": "Rosmarin aromatisiert die geklärte Butter und verleiht dem Gericht eine markante Kräuternote." },
+      { "icon": "🌶️", "t": "Grüne Chilis", "d": "Jalapeño oder äthiopische grüne Chilis sorgen für frische Schärfe." },
+      { "icon": "🧅", "t": "Zwiebel und Tomate", "d": "Zwiebel und Tomate kurz angebraten, behalten ihre knackige Textur." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Carne em cubos", "d": "Carne bovina cortada em cubos, refogada rapidamente em fogo alto para ficar macia." },
+      { "icon": "🌿", "t": "Alecrim fresco", "d": "O alecrim aromatiza a manteiga clarificada, dando ao prato uma nota herbácea distinta." },
+      { "icon": "🌶️", "t": "Pimentas verdes", "d": "Jalapeño ou pimentas verdes etíopes trazem um toque picante fresco." },
+      { "icon": "🧅", "t": "Cebola e tomate", "d": "Cebola e tomate refogados rapidamente, mantendo a textura crocante." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Говядина кубиками", "d": "Говядина, нарезанная кубиками, быстро обжаренная на сильном огне, чтобы оставаться нежной." },
+      { "icon": "🌿", "t": "Свежий розмарин", "d": "Розмарин ароматизирует топлёное масло, придавая блюду характерную травяную нотку." },
+      { "icon": "🌶️", "t": "Зелёный перец чили", "d": "Халапеньо или эфиопский зелёный перец добавляют свежую остроту." },
+      { "icon": "🧅", "t": "Лук и помидор", "d": "Лук и помидор, кратко обжаренные, сохраняющие хрустящую текстуру." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "لحم بقري مكعبات", "d": "لحم بقري مقطّع مكعبات، يُقلى سريعًا على نار عالية ليبقى طريًا." },
+      { "icon": "🌿", "t": "إكليل الجبل الطازج", "d": "يُنكِّه إكليل الجبل الزبدة المصفّاة، مانحًا الطبق نكهة عشبية مميزة." },
+      { "icon": "🌶️", "t": "فلفل أخضر حار", "d": "يضيف الهالبينو أو الفلفل الأخضر الإثيوبي لمسة حارة منعشة." },
+      { "icon": "🧅", "t": "بصل وطماطم", "d": "بصل وطماطم يُقليان بسرعة، محافظين على قوامهما المقرمش." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "牛肉丁", "d": "切成丁的牛肉，大火快速翻炒，保持鲜嫩口感。" },
+      { "icon": "🌿", "t": "新鲜迷迭香", "d": "迷迭香为澄清黄油增添香气，赋予这道菜独特的草本风味。" },
+      { "icon": "🌶️", "t": "青辣椒", "d": "墨西哥青辣椒或埃塞俄比亚青辣椒带来清新的辣味。" },
+      { "icon": "🧅", "t": "洋葱与番茄", "d": "洋葱和番茄短暂翻炒，保留爽脆口感。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "角切り牛肉", "d": "サイコロ状に切った牛肉を強火で手早く炒め、柔らかさを保つ。" },
+      { "icon": "🌿", "t": "新鮮なローズマリー", "d": "ローズマリーが澄ましバターに香りをつけ、料理に独特のハーブの風味を与える。" },
+      { "icon": "🌶️", "t": "青唐辛子", "d": "ハラペーニョまたはエチオピアの青唐辛子が爽やかな辛みを加える。" },
+      { "icon": "🧅", "t": "玉ねぎとトマト", "d": "玉ねぎとトマトを手早く炒め、シャキシャキとした食感を保つ。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "क्यूब में कटा बीफ", "d": "क्यूब में कटा बीफ, तेज़ आंच पर जल्दी भूना जाता है ताकि नरम बना रहे।" },
+      { "icon": "🌿", "t": "ताज़ा रोज़मेरी", "d": "रोज़मेरी घी को सुगंधित करती है, व्यंजन को खास जड़ी-बूटी वाला स्वाद देती है।" },
+      { "icon": "🌶️", "t": "हरी मिर्च", "d": "जलापेनो या इथियोपियाई हरी मिर्च ताज़ा तीखापन लाती है।" },
+      { "icon": "🧅", "t": "प्याज़ और टमाटर", "d": "प्याज़ और टमाटर संक्षिप्त रूप से भूने जाते हैं, अपनी कुरकुरी बनावट बनाए रखते हुए।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "Küp dana eti", "d": "Küp küp kesilmiş dana eti, yumuşak kalması için yüksek ateşte hızlıca soteleniyor." },
+      { "icon": "🌿", "t": "Taze biberiye", "d": "Biberiye sadeyağı tatlandırıyor ve yemeğe belirgin bir otsu nota katıyor." },
+      { "icon": "🌶️", "t": "Yeşil biberler", "d": "Jalapeño veya Etiyopya yeşil biberleri taze bir acılık katıyor." },
+      { "icon": "🧅", "t": "Soğan ve domates", "d": "Kısa süre soteledikleri soğan ve domates, çıtır dokularını koruyor." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Manzo a cubetti", "d": "Manzo tagliato a cubetti, saltato rapidamente a fuoco alto per restare tenero." },
+      { "icon": "🌿", "t": "Rosmarino fresco", "d": "Il rosmarino aromatizza il burro chiarificato, dando al piatto una nota erbacea distintiva." },
+      { "icon": "🌶️", "t": "Peperoncini verdi", "d": "Jalapeño o peperoncini verdi etiopi apportano un tocco piccante fresco." },
+      { "icon": "🧅", "t": "Cipolla e pomodoro", "d": "Cipolla e pomodoro saltati brevemente, mantenendo la loro consistenza croccante." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "깍둑썰기 소고기", "d": "깍둑썰기한 소고기를 센 불에서 빠르게 볶아 부드러움을 유지한다." },
+      { "icon": "🌿", "t": "신선한 로즈메리", "d": "로즈메리가 정제 버터에 향을 더해 요리에 독특한 허브 향을 준다." },
+      { "icon": "🌶️", "t": "청고추", "d": "할라피뇨나 에티오피아 청고추가 상큼한 매운맛을 더한다." },
+      { "icon": "🧅", "t": "양파와 토마토", "d": "양파와 토마토를 짧게 볶아 아삭한 식감을 유지한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g mușchi de vită, tăiat cuburi", "3 linguri unt clarificat (niter kibbeh)", "1 ceapă, tăiată felii", "2 roșii, tăiate felii", "2 ardei iuți verzi, tăiați felii", "3 căței de usturoi, tocați", "1 crenguță rozmarin proaspăt", "1 linguriță berbere (opțional, pentru picant)", "sare și piper după gust", "injera, pentru servire"],
+    "en": ["600g beef tenderloin, cut into cubes", "3 tbsp clarified butter (niter kibbeh)", "1 onion, sliced", "2 tomatoes, sliced", "2 green chilies, sliced", "3 garlic cloves, minced", "1 sprig fresh rosemary", "1 tsp berbere (optional, for heat)", "salt and pepper to taste", "injera, for serving"],
+    "es": ["600g de solomillo de res, cortado en cubos", "3 cucharadas de mantequilla clarificada (niter kibbeh)", "1 cebolla, en rodajas", "2 tomates, en rodajas", "2 chiles verdes, en rodajas", "3 dientes de ajo, picados", "1 ramita de romero fresco", "1 cucharadita de berbere (opcional, para picante)", "sal y pimienta al gusto", "injera, para servir"],
+    "fr": ["600g de filet de bœuf, coupé en cubes", "3 c. à soupe de beurre clarifié (niter kibbeh)", "1 oignon, émincé", "2 tomates, émincées", "2 piments verts, émincés", "3 gousses d'ail, hachées", "1 brin de romarin frais", "1 c. à café de berbéré (facultatif, pour le piquant)", "sel et poivre selon le goût", "injera, pour servir"],
+    "de": ["600g Rinderfilet, gewürfelt", "3 EL geklärte Butter (Niter Kibbeh)", "1 Zwiebel, in Scheiben", "2 Tomaten, in Scheiben", "2 grüne Chilis, in Scheiben", "3 Knoblauchzehen, gehackt", "1 Zweig frischer Rosmarin", "1 TL Berbere (optional, für Schärfe)", "Salz und Pfeffer nach Geschmack", "Injera, zum Servieren"],
+    "pt": ["600g de lombo de vitela, cortado em cubos", "3 colheres (sopa) de manteiga clarificada (niter kibbeh)", "1 cebola, fatiada", "2 tomates, fatiados", "2 pimentas verdes, fatiadas", "3 dentes de alho, picados", "1 ramo de alecrim fresco", "1 colher (chá) de berbere (opcional, para picância)", "sal e pimenta a gosto", "injera, para servir"],
+    "ru": ["600г говяжьей вырезки, нарезанной кубиками", "3 ст.л. топлёного масла (нитер кибе)", "1 луковица, нарезанная", "2 помидора, нарезанных", "2 зелёных перца чили, нарезанных", "3 зубчика чеснока, измельчённых", "1 веточка свежего розмарина", "1 ч.л. бербере (по желанию, для остроты)", "соль и перец по вкусу", "инжера, для подачи"],
+    "ar": ["600 غرام لحم بقري فيليه، مقطّع مكعبات", "3 ملاعق كبيرة زبدة مصفّاة (نيتر كيبيه)", "بصلة واحدة، مقطّعة شرائح", "طماطمتان، مقطّعتان شرائح", "فلفلان أخضران حاران، مقطّعان شرائح", "3 فصوص ثوم، مفرومة", "غصن إكليل جبل طازج", "ملعقة صغيرة بربري (اختياري للحرارة)", "ملح وفلفل حسب الرغبة", "إنجيرا، للتقديم"],
+    "zh": ["600克牛里脊肉，切丁", "3汤匙澄清黄油（尼特尔基贝）", "1个洋葱，切片", "2个番茄，切片", "2根青辣椒，切片", "3瓣大蒜，切碎", "1枝新鲜迷迭香", "1茶匙柏柏尔香料（可选，增加辣味）", "盐和胡椒适量", "英吉拉，配食用"],
+    "ja": ["牛ヒレ肉600g（角切り）", "澄ましバター（ニテルキベ）大さじ3", "玉ねぎ1個（薄切り）", "トマト2個（薄切り）", "青唐辛子2本（薄切り）", "にんにく3片（みじん切り）", "新鮮なローズマリー1枝", "ベルベレ 小さじ1（お好みで、辛さ用）", "塩こしょう 適量", "インジェラ（添える用）"],
+    "hi": ["600 ग्राम बीफ टेंडरलॉइन, क्यूब में कटा", "3 बड़े चम्मच घी (नाइटर किब्बेह)", "1 प्याज़, कटा", "2 टमाटर, कटे", "2 हरी मिर्च, कटी", "3 लहसुन की कलियाँ, कटी हुई", "1 टहनी ताज़ा रोज़मेरी", "1 छोटी चम्मच बर्बेरे (वैकल्पिक, तीखेपन के लिए)", "स्वादानुसार नमक और काली मिर्च", "इंजेरा, परोसने के लिए"],
+    "tr": ["600g dana bonfile, küp küp kesilmiş", "3 yemek kaşığı sadeyağ (niter kibbeh)", "1 soğan, dilimlenmiş", "2 domates, dilimlenmiş", "2 yeşil biber, dilimlenmiş", "3 diş sarımsak, doğranmış", "1 dal taze biberiye", "1 çay kaşığı berbere (isteğe bağlı, acılık için)", "tuz ve karabiber, tadına göre", "servis için incera"],
+    "it": ["600g di filetto di manzo, tagliato a cubetti", "3 cucchiai di burro chiarificato (niter kibbeh)", "1 cipolla, a fette", "2 pomodori, a fette", "2 peperoncini verdi, a fette", "3 spicchi d'aglio, tritati", "1 rametto di rosmarino fresco", "1 cucchiaino di berbere (facoltativo, per piccantezza)", "sale e pepe q.b.", "injera, per servire"],
+    "ko": ["소고기 안심 600g, 깍둑썰기", "정제 버터(니터 키베) 3큰술", "양파 1개, 슬라이스", "토마토 2개, 슬라이스", "청고추 2개, 슬라이스", "마늘 3쪽, 다진 것", "신선한 로즈메리 1줄기", "베르베레 1작은술(선택, 매운맛용)", "소금과 후추 약간", "인제라(곁들임용)"]
+  },
+  "howIsMade": {
+    "ro": ["ÎNCINGE TIGAIA: Încinge o tigaie mare sau un wok la foc iute, apoi topește untul clarificat.", "SOTEAZĂ CARNEA: Adaugă cuburile de vită și sotează 3-4 minute, amestecând des, până se rumenesc pe toate părțile.", "ADAUGĂ AROME: Adaugă usturoiul și rozmarinul, călind 1 minut până devin parfumate.", "PUNE CEAPA: Adaugă ceapa feliată și sotează 2-3 minute, până se înmoaie ușor, dar rămâne crocantă.", "ADAUGĂ LEGUMELE: Adaugă roșiile și ardeii iuți, sotând încă 2-3 minute la foc iute.", "CONDIMENTEAZĂ: Presară berbere (dacă folosești), sare și piper, amestecând bine.", "FINALIZEAZĂ: Gustă și ajustează condimentele; carnea trebuie să rămână fragedă, iar legumele crocante.", "SERVEȘTE: Servește fierbinte, direct din tigaie, alături de injera."],
+    "en": ["HEAT THE PAN: Heat a large skillet or wok over high heat, then melt the clarified butter.", "SAUTÉ THE MEAT: Add the beef cubes and sauté 3-4 minutes, stirring often, until browned on all sides.", "ADD AROMATICS: Add garlic and rosemary, cooking 1 minute until fragrant.", "ADD ONION: Add the sliced onion and sauté 2-3 minutes, until slightly softened but still crisp.", "ADD VEGETABLES: Add the tomatoes and chilies, sautéing 2-3 more minutes over high heat.", "SEASON: Sprinkle in berbere (if using), salt and pepper, mixing well.", "FINISH: Taste and adjust seasoning; the meat should stay tender and the vegetables crisp.", "SERVE: Serve hot, straight from the pan, alongside injera."],
+    "es": ["CALIENTA LA SARTÉN: Calienta una sartén grande o wok a fuego alto, luego derrite la mantequilla clarificada.", "SALTEA LA CARNE: Añade los cubos de res y saltea 3-4 minutos, removiendo con frecuencia, hasta que se doren por todos lados.", "AÑADE LOS AROMÁTICOS: Añade el ajo y el romero, cocinando 1 minuto hasta que estén fragantes.", "AÑADE LA CEBOLLA: Añade la cebolla en rodajas y saltea 2-3 minutos, hasta que se ablande ligeramente pero siga crujiente.", "AÑADE LAS VERDURAS: Añade los tomates y los chiles, salteando 2-3 minutos más a fuego alto.", "SAZONA: Espolvorea el berbere (si lo usas), sal y pimienta, mezclando bien.", "FINALIZA: Prueba y ajusta el sazón; la carne debe quedar tierna y las verduras crujientes.", "SIRVE: Sirve caliente, directamente de la sartén, junto con injera."],
+    "fr": ["CHAUFFEZ LA POÊLE: Chauffez une grande poêle ou un wok à feu vif, puis faites fondre le beurre clarifié.", "FAITES SAUTER LA VIANDE: Ajoutez les cubes de bœuf et faites sauter 3-4 minutes, en remuant souvent, jusqu'à ce qu'ils soient dorés de tous côtés.", "AJOUTEZ LES AROMATES: Ajoutez l'ail et le romarin, en cuisant 1 minute jusqu'à ce qu'ils soient parfumés.", "AJOUTEZ L'OIGNON: Ajoutez l'oignon émincé et faites sauter 2-3 minutes, jusqu'à ce qu'il ramollisse légèrement tout en restant croquant.", "AJOUTEZ LES LÉGUMES: Ajoutez les tomates et les piments, en sautant 2-3 minutes de plus à feu vif.", "ASSAISONNEZ: Saupoudrez de berbéré (si utilisé), de sel et de poivre, en mélangeant bien.", "FINALISEZ: Goûtez et ajustez l'assaisonnement; la viande doit rester tendre et les légumes croquants.", "SERVEZ: Servez chaud, directement de la poêle, avec de l'injera."],
+    "de": ["PFANNE ERHITZEN: Eine große Pfanne oder einen Wok bei hoher Hitze erhitzen, dann die geklärte Butter schmelzen.", "FLEISCH ANBRATEN: Die Rindfleischwürfel hinzufügen und 3-4 Minuten unter häufigem Rühren anbraten, bis sie von allen Seiten gebräunt sind.", "AROMEN HINZUFÜGEN: Knoblauch und Rosmarin zugeben und 1 Minute braten, bis sie duften.", "ZWIEBEL HINZUFÜGEN: Die in Scheiben geschnittene Zwiebel zugeben und 2-3 Minuten anbraten, bis sie leicht weich, aber noch knackig ist.", "GEMÜSE HINZUFÜGEN: Tomaten und Chilis zugeben und weitere 2-3 Minuten bei hoher Hitze anbraten.", "WÜRZEN: Berbere (falls verwendet), Salz und Pfeffer einstreuen und gut vermischen.", "ABSCHLIESSEN: Abschmecken und würzen; das Fleisch soll zart bleiben, das Gemüse knackig.", "SERVIEREN: Heiß servieren, direkt aus der Pfanne, mit Injera."],
+    "pt": ["AQUEÇA A PANELA: Aqueça uma frigideira grande ou wok em fogo alto, depois derreta a manteiga clarificada.", "REFOGUE A CARNE: Adicione os cubos de carne e refogue por 3-4 minutos, mexendo com frequência, até dourar por todos os lados.", "ADICIONE OS AROMÁTICOS: Junte o alho e o alecrim, cozinhando 1 minuto até ficarem perfumados.", "ADICIONE A CEBOLA: Junte a cebola fatiada e refogue por 2-3 minutos, até amolecer levemente mas mantendo-se crocante.", "ADICIONE OS LEGUMES: Junte os tomates e as pimentas, refogando mais 2-3 minutos em fogo alto.", "TEMPERE: Polvilhe berbere (se usar), sal e pimenta, misturando bem.", "FINALIZE: Prove e ajuste o tempero; a carne deve ficar macia e os legumes crocantes.", "SIRVA: Sirva quente, diretamente da panela, junto com injera."],
+    "ru": ["РАЗОГРЕЙТЕ СКОВОРОДУ: Разогрейте большую сковороду или вок на сильном огне, затем растопите топлёное масло.", "ОБЖАРЬТЕ МЯСО: Добавьте кубики говядины и обжаривайте 3-4 минуты, часто помешивая, до подрумянивания со всех сторон.", "ДОБАВЬТЕ АРОМАТИКУ: Добавьте чеснок и розмарин, готовьте 1 минуту до появления аромата.", "ДОБАВЬТЕ ЛУК: Добавьте нарезанный лук и обжаривайте 2-3 минуты, пока слегка не размягчится, оставаясь хрустящим.", "ДОБАВЬТЕ ОВОЩИ: Добавьте помидоры и перец чили, обжаривая ещё 2-3 минуты на сильном огне.", "ПРИПРАВЬТЕ: Посыпьте бербере (если используете), солью и перцем, хорошо перемешайте.", "ЗАВЕРШИТЕ: Попробуйте и скорректируйте приправы; мясо должно остаться нежным, овощи — хрустящими.", "ПОДАВАЙТЕ: Подавайте горячим, прямо со сковороды, с инжерой."],
+    "ar": ["سخّني المقلاة: سخّني مقلاة كبيرة أو ووك على نار عالية، ثم أذيبي الزبدة المصفّاة.", "قلّي اللحم: أضيفي مكعبات اللحم وقلّيها 3-4 دقائق مع التقليب المتكرر حتى تحمّر من كل الجهات.", "أضيفي النكهات: أضيفي الثوم وإكليل الجبل واطبخي دقيقة واحدة حتى تفوح الرائحة.", "أضيفي البصل: أضيفي البصل المقطّع شرائح وقلّيه 2-3 دقائق حتى يلين قليلًا مع بقائه مقرمشًا.", "أضيفي الخضار: أضيفي الطماطم والفلفل الحار وقلّي 2-3 دقائق إضافية على نار عالية.", "تبّلي: رشّي البربري (إن استخدمتِه) والملح والفلفل، وامزجي جيدًا.", "أنهي الطبق: تذوّقي وعدّلي التتبيل؛ يجب أن يبقى اللحم طريًا والخضار مقرمشة.", "قدّمي: قدّمي ساخنًا مباشرة من المقلاة مع الإنجيرا."],
+    "zh": ["加热锅具：大火加热大煎锅或炒锅，然后融化澄清黄油。", "翻炒肉丁：加入牛肉丁翻炒3-4分钟，频繁搅拌，直至各面都呈金黄色。", "加入香料：加入大蒜和迷迭香，炒1分钟直至香气四溢。", "加入洋葱：加入切片洋葱翻炒2-3分钟，至微软但仍保持爽脆。", "加入蔬菜：加入番茄和辣椒，大火再炒2-3分钟。", "调味：撒入柏柏尔香料（如使用）、盐和胡椒，拌匀。", "完成：尝味并调整调味；肉应保持鲜嫩，蔬菜应保持爽脆。", "上桌：趁热直接从锅中盛出，配英吉拉食用。"],
+    "ja": ["フライパンを熱する：大きなフライパンまたは中華鍋を強火で熱し、澄ましバターを溶かす。", "肉を炒める：牛肉の角切りを加え、頻繁にかき混ぜながら3〜4分、全面に焼き色がつくまで炒める。", "香味野菜を加える：にんにくとローズマリーを加え、香りが立つまで1分炒める。", "玉ねぎを加える：薄切りの玉ねぎを加え、少し柔らかくなるがシャキシャキ感が残る程度に2〜3分炒める。", "野菜を加える：トマトと唐辛子を加え、強火でさらに2〜3分炒める。", "味付けする：ベルベレ（使用する場合）、塩、こしょうを振り入れてよく混ぜる。", "仕上げる：味見をして調整する。肉は柔らかく、野菜はシャキシャキした状態を保つこと。", "提供する：フライパンから直接、インジェラを添えて熱いうちに提供する。"],
+    "hi": ["पैन गरम करें: एक बड़ी कड़ाही या वोक को तेज़ आंच पर गरम करें, फिर घी पिघलाएं।", "मांस भूनें: बीफ के क्यूब डालें और 3-4 मिनट, बार-बार हिलाते हुए, सभी तरफ से भूरा होने तक भूनें।", "सुगंधित सामग्री डालें: लहसुन और रोज़मेरी डालें, सुगंध आने तक 1 मिनट पकाएं।", "प्याज़ डालें: कटा प्याज़ डालें और 2-3 मिनट भूनें, जब तक हल्का नरम न हो लेकिन कुरकुरा बना रहे।", "सब्ज़ियाँ डालें: टमाटर और मिर्च डालें, तेज़ आंच पर 2-3 मिनट और भूनें।", "मसाला डालें: बर्बेरे (यदि उपयोग कर रहे हों), नमक और काली मिर्च छिड़कें, अच्छी तरह मिलाएं।", "पूरा करें: चखें और मसाला समायोजित करें; मांस नरम रहना चाहिए और सब्ज़ियाँ कुरकुरी।", "परोसें: गरमागरम, सीधे पैन से, इंजेरा के साथ परोसें।"],
+    "tr": ["TAVAYI ISITIN: Büyük bir tava veya wok'u yüksek ateşte ısıtın, ardından sadeyağı eritin.", "ETİ SOTELEYIN: Dana eti küplerini ekleyip her tarafı kızarana kadar sık sık karıştırarak 3-4 dakika soteleyin.", "AROMATİKLERİ EKLEYİN: Sarımsak ve biberiyeyi ekleyip kokuları çıkana kadar 1 dakika pişirin.", "SOĞANI EKLEYİN: Dilimlenmiş soğanı ekleyip hafifçe yumuşayana ama çıtırlığını koruyana kadar 2-3 dakika soteleyin.", "SEBZELERİ EKLEYİN: Domates ve biberleri ekleyip yüksek ateşte 2-3 dakika daha soteleyin.", "BAHARATLAYIN: Berbere (kullanıyorsanız), tuz ve karabiberi serpip iyice karıştırın.", "TAMAMLAYIN: Tadına bakıp baharatı ayarlayın; et yumuşak, sebzeler çıtır kalmalı.", "SERVİS YAPIN: Doğrudan tavadan, incera ile birlikte sıcak servis edin."],
+    "it": ["SCALDA LA PADELLA: Scalda una padella grande o un wok a fuoco alto, poi sciogli il burro chiarificato.", "SALTA LA CARNE: Aggiungi i cubetti di manzo e salta 3-4 minuti, mescolando spesso, finché dorati su tutti i lati.", "AGGIUNGI GLI AROMI: Aggiungi aglio e rosmarino, cuocendo 1 minuto finché profumati.", "AGGIUNGI LA CIPOLLA: Aggiungi la cipolla a fette e salta 2-3 minuti, finché leggermente ammorbidita ma ancora croccante.", "AGGIUNGI LE VERDURE: Aggiungi i pomodori e i peperoncini, saltando altri 2-3 minuti a fuoco alto.", "INSAPORISCI: Cospargi con berbere (se usato), sale e pepe, mescolando bene.", "COMPLETA: Assaggia e correggi il condimento; la carne deve restare tenera e le verdure croccanti.", "SERVI: Servi caldo, direttamente dalla padella, con injera."],
+    "ko": ["팬 달구기: 큰 팬이나 웍을 센 불에서 달군 뒤 정제 버터를 녹인다.", "고기 볶기: 소고기 큐브를 넣고 자주 저어가며 3-4분간 모든 면이 갈색이 될 때까지 볶는다.", "향신 재료 추가: 마늘과 로즈메리를 넣고 향이 날 때까지 1분간 볶는다.", "양파 추가: 슬라이스한 양파를 넣고 살짝 부드러워지되 아삭함이 남도록 2-3분 볶는다.", "채소 추가: 토마토와 고추를 넣고 센 불에서 2-3분 더 볶는다.", "간하기: 베르베레(사용 시), 소금, 후추를 뿌려 잘 섞는다.", "마무리: 맛을 보고 간을 조절한다. 고기는 부드럽게, 채소는 아삭하게 유지되어야 한다.", "제공하기: 팬에서 바로 뜨겁게, 인제라와 함께 제공한다."]
+  },
+  "originText": {
+    "ro": "Tibs este un fel de mâncare versatil și îndrăgit din bucătăria etiopiană, preparat prin sotarea rapidă a cărnii — de obicei vită, dar și miel sau capră — la foc iute, într-un stil ce amintește de saltimbocca sau stir-fry, dar cu amprenta aromatică unică a untului clarificat etiopian (niter kibbeh) și a rozmarinului. Numele \"tibs\" provine din verbul care înseamnă \"a prăji\" sau \"a frige\" în amharică.\n\nSpre deosebire de tocănelele lente precum wat, tibs se gătește repede, la foc mare, motiv pentru care este considerat felul de sărbătoare sau de ocazie specială, adesea servit la restaurante sau la evenimente unde oaspeții preferă carnea încă fragedă și legumele crocante. Există variante regionale, precum \"tibs în tigaie de lut\" (sega tibs), servit direct în vasul de gătit fierbinte, pentru un efect vizual spectaculos la masă.",
+    "en": "Tibs is a versatile and beloved dish in Ethiopian cuisine, prepared by quickly sautéing meat — usually beef, but also lamb or goat — over high heat, in a style reminiscent of saltimbocca or stir-fry, but with the unique aromatic signature of Ethiopian clarified butter (niter kibbeh) and rosemary. The name \"tibs\" comes from the verb meaning \"to fry\" or \"to roast\" in Amharic.\n\nUnlike slow-cooked stews like wat, tibs cooks quickly over high heat, which is why it's considered a celebratory or special-occasion dish, often served at restaurants or events where guests prefer the meat still tender and the vegetables crisp. Regional variants exist, such as \"clay pot tibs\" (sega tibs), served straight from the hot cooking vessel for a dramatic effect at the table.",
+    "es": "El tibs es un plato versátil y muy querido de la cocina etíope, preparado salteando rápidamente la carne — normalmente res, pero también cordero o cabra — a fuego alto, en un estilo que recuerda al saltimbocca o al stir-fry, pero con la marca aromática única de la mantequilla clarificada etíope (niter kibbeh) y el romero. El nombre \"tibs\" proviene del verbo que significa \"freír\" o \"asar\" en amárico.\n\nA diferencia de los guisos de cocción lenta como el wat, el tibs se cocina rápidamente a fuego alto, por lo que se considera un plato festivo o de ocasión especial, servido a menudo en restaurantes o eventos donde los invitados prefieren la carne aún tierna y las verduras crujientes. Existen variantes regionales, como el \"tibs en cazuela de barro\" (sega tibs), servido directamente del recipiente caliente para un efecto visual espectacular en la mesa.",
+    "fr": "Le tibs est un plat polyvalent et très apprécié de la cuisine éthiopienne, préparé en faisant sauter rapidement de la viande — généralement du bœuf, mais aussi de l'agneau ou de la chèvre — à feu vif, dans un style rappelant le saltimbocca ou le stir-fry, mais avec la signature aromatique unique du beurre clarifié éthiopien (niter kibbeh) et du romarin. Le nom \"tibs\" vient du verbe signifiant \"frire\" ou \"rôtir\" en amharique.\n\nContrairement aux ragoûts à cuisson lente comme le wat, le tibs cuit rapidement à feu vif, ce qui explique pourquoi il est considéré comme un plat de fête ou d'occasion spéciale, souvent servi dans les restaurants ou lors d'événements où les invités préfèrent une viande encore tendre et des légumes croquants. Il existe des variantes régionales, comme le \"tibs en pot d'argile\" (sega tibs), servi directement du récipient de cuisson chaud pour un effet visuel spectaculaire à table.",
+    "de": "Tibs ist ein vielseitiges und beliebtes Gericht der äthiopischen Küche, das durch schnelles Anbraten von Fleisch — meist Rind, aber auch Lamm oder Ziege — bei hoher Hitze zubereitet wird, in einem Stil, der an Saltimbocca oder Stir-Fry erinnert, jedoch mit der einzigartigen aromatischen Signatur äthiopischer geklärter Butter (Niter Kibbeh) und Rosmarin. Der Name \"Tibs\" stammt vom amharischen Verb für \"braten\" oder \"rösten\".\n\nAnders als langsam gegarte Eintöpfe wie Wat wird Tibs schnell bei hoher Hitze gegart, weshalb es als Fest- oder Anlassgericht gilt, das oft in Restaurants oder bei Veranstaltungen serviert wird, bei denen die Gäste noch zartes Fleisch und knackiges Gemüse bevorzugen. Es gibt regionale Varianten wie \"Tonpfannen-Tibs\" (Sega Tibs), direkt aus dem heißen Kochgefäß serviert, für einen dramatischen Effekt bei Tisch.",
+    "pt": "O tibs é um prato versátil e muito apreciado da culinária etíope, preparado refogando rapidamente a carne — geralmente vitela, mas também borrego ou cabra — em fogo alto, num estilo que lembra o saltimbocca ou o stir-fry, mas com a assinatura aromática única da manteiga clarificada etíope (niter kibbeh) e do alecrim. O nome \"tibs\" vem do verbo que significa \"fritar\" ou \"assar\" em amárico.\n\nAo contrário dos ensopados de cozedura lenta como o wat, o tibs cozinha rapidamente em fogo alto, sendo por isso considerado um prato festivo ou de ocasião especial, frequentemente servido em restaurantes ou eventos onde os convidados preferem a carne ainda macia e os legumes crocantes. Existem variantes regionais, como o \"tibs em panela de barro\" (sega tibs), servido diretamente do recipiente quente para um efeito visual dramático à mesa.",
+    "ru": "Тыбс — универсальное и любимое блюдо эфиопской кухни, приготовленное быстрым обжариванием мяса — обычно говядины, но также баранины или козлятины — на сильном огне, в стиле, напоминающем сальтимбокку или стир-фрай, но с уникальным ароматическим акцентом эфиопского топлёного масла (нитер кибе) и розмарина. Название \"тыбс\" происходит от глагола, означающего \"жарить\" или \"запекать\" на амхарском языке.\n\nВ отличие от медленно тушёных блюд, таких как ват, тыбс готовится быстро на сильном огне, поэтому считается праздничным или особым блюдом, часто подаваемым в ресторанах или на мероприятиях, где гости предпочитают мясо ещё нежным, а овощи хрустящими. Существуют региональные варианты, например \"тыбс в глиняном горшочке\" (сега тыбс), подаваемый прямо из горячей посуды для эффектного зрелища за столом.",
+    "ar": "التبس طبق متعدد الاستخدامات ومحبوب في المطبخ الإثيوبي، يُحضَّر عبر قلي اللحم بسرعة — عادةً لحم البقر، لكن أيضًا لحم الضأن أو الماعز — على نار عالية، بأسلوب يذكّر بالسالتيمبوكا أو القلي السريع، لكن بلمسة عطرية فريدة من الزبدة الإثيوبية المصفّاة (نيتر كيبيه) وإكليل الجبل. يأتي اسم \"تبس\" من الفعل الذي يعني \"القلي\" أو \"الشيّ\" باللغة الأمهرية.\n\nخلافًا لليخنات المطهوة ببطء مثل الوات، يُطهى التبس بسرعة على نار عالية، لذا يُعتبر طبق احتفالات أو مناسبات خاصة، يُقدَّم غالبًا في المطاعم أو في المناسبات حيث يفضّل الضيوف اللحم الطري والخضار المقرمشة. توجد نسخ إقليمية مثل \"تبس القدر الفخاري\" (سيغا تبس)، يُقدَّم مباشرة من إناء الطهي الساخن لمشهد بصري لافت على المائدة.",
+    "zh": "提布斯是埃塞俄比亚饮食中一道用途广泛、深受喜爱的菜肴，做法是将肉类——通常是牛肉，也可用羊肉或山羊肉——大火快速翻炒，风格类似意式火腿卷（saltimbocca）或炒菜（stir-fry），但带有埃塞俄比亚澄清黄油（尼特尔基贝）和迷迭香独特的香气印记。「提布斯」这个名字源自阿姆哈拉语中意为「油炸」或「烘烤」的动词。\n\n与瓦特这类慢炖菜肴不同，提布斯以大火快速烹制而成，因此被视为庆典或特殊场合的菜肴，常见于餐厅或活动中，供宾客享用仍然鲜嫩的肉和爽脆的蔬菜。也有地区变体，如直接从滚烫的陶锅中上桌的「陶锅提布斯」（sega tibs），在餐桌上呈现出戏剧性的视觉效果。",
+    "ja": "ティブスはエチオピア料理の中でも用途が広く愛される一品で、肉——通常は牛肉だが、羊肉や山羊肉も使われる——を強火で手早く炒めて作られ、サルティンボッカや炒め物を思わせるスタイルだが、エチオピア独特の澄ましバター（ニテルキベ）とローズマリーの香りが特徴的である。「ティブス」という名前は、アムハラ語で「揚げる」または「焼く」を意味する動詞に由来する。\n\nワットのようにじっくり煮込む料理とは異なり、ティブスは強火で短時間に調理されるため、祝いの席や特別な機会の料理とされ、肉がまだ柔らかく野菜がシャキシャキした状態を好む客が集まるレストランやイベントでよく提供される。「粘土鍋ティブス」（セガ・ティブス）のように、熱い調理器具からそのまま食卓に出す劇的な演出を伴う地域的なバリエーションも存在する。",
+    "hi": "टिब्स इथियोपियाई भोजन का एक बहुमुखी और प्रिय व्यंजन है, जिसे मांस — आमतौर पर बीफ, लेकिन भेड़ या बकरी भी — को तेज़ आंच पर जल्दी भूनकर बनाया जाता है, एक ऐसी शैली में जो सॉल्टिम्बोका या स्टिर-फ्राई की याद दिलाती है, लेकिन इथियोपियाई घी (नाइटर किब्बेह) और रोज़मेरी की अनूठी सुगंधित छाप के साथ। \"टिब्स\" नाम अम्हारिक भाषा में \"तलना\" या \"भूनना\" अर्थ वाली क्रिया से आया है।\n\nवॉट जैसे धीमी आंच वाले स्ट्यू के विपरीत, टिब्स तेज़ आंच पर जल्दी पकाया जाता है, यही कारण है कि इसे उत्सव या विशेष अवसर का व्यंजन माना जाता है, जो अक्सर रेस्तरां या आयोजनों में परोसा जाता है जहाँ मेहमान अभी भी नरम मांस और कुरकुरी सब्ज़ियाँ पसंद करते हैं। क्षेत्रीय भिन्नताएं भी हैं, जैसे \"मिट्टी के बर्तन में टिब्स\" (सेगा टिब्स), जो सीधे गर्म पात्र से परोसा जाता है, मेज़ पर एक नाटकीय दृश्य प्रभाव के लिए।",
+    "tr": "Tibs, eti — genellikle dana, ama kuzu veya keçi de olabilir — yüksek ateşte hızlıca soteleyerek hazırlanan, saltimbocca veya sote yemeklerini andıran ama Etiyopya sadeyağı (niter kibbeh) ve biberiyenin kendine özgü aromatik imzasını taşıyan, çok yönlü ve sevilen bir Etiyopya yemeğidir. \"Tibs\" adı, Amharca'da \"kızartmak\" veya \"közlemek\" anlamına gelen fiilden gelir.\n\nWat gibi yavaş pişen yahnilerin aksine, tibs yüksek ateşte hızlıca pişer; bu yüzden konukların eti hâlâ yumuşak, sebzeleri çıtır tercih ettiği restoranlarda veya etkinliklerde sıkça sunulan bir kutlama veya özel gün yemeği olarak kabul edilir. \"Toprak kapta tibs\" (sega tibs) gibi bölgesel varyasyonlar da vardır; bu, masada çarpıcı bir görsel etki için doğrudan sıcak pişirme kabından servis edilir.",
+    "it": "Il tibs è un piatto versatile e amato della cucina etiope, preparato saltando rapidamente la carne — solitamente manzo, ma anche agnello o capra — a fuoco alto, in uno stile che ricorda il saltimbocca o lo stir-fry, ma con la firma aromatica unica del burro chiarificato etiope (niter kibbeh) e del rosmarino. Il nome \"tibs\" deriva dal verbo che significa \"friggere\" o \"arrostire\" in amarico.\n\nA differenza degli stufati a cottura lenta come il wat, il tibs cuoce rapidamente a fuoco alto, motivo per cui è considerato un piatto festivo o per occasioni speciali, spesso servito nei ristoranti o durante eventi dove gli ospiti preferiscono la carne ancora tenera e le verdure croccanti. Esistono varianti regionali, come il \"tibs in tegame di argilla\" (sega tibs), servito direttamente dal recipiente di cottura caldo per un effetto visivo spettacolare a tavola.",
+    "ko": "티브스는 고기를——보통 소고기지만 양고기나 염소고기도——센 불에서 빠르게 볶아 만드는, 살팀보카나 볶음 요리를 연상시키지만 에티오피아 정제 버터(니터 키베)와 로즈메리 특유의 향이 인상적인, 다재다능하고 사랑받는 에티오피아 요리이다. \"티브스\"라는 이름은 암하라어로 \"튀기다\" 또는 \"굽다\"를 뜻하는 동사에서 유래했다.\n\n왓과 같이 오래 끓이는 스튜와 달리 티브스는 센 불에서 빠르게 조리되기 때문에, 고기가 여전히 부드럽고 채소가 아삭한 상태를 선호하는 손님들이 모이는 레스토랑이나 행사에서 자주 제공되는 축하용 또는 특별한 날의 요리로 여겨진다. 뜨거운 조리 용기에서 바로 식탁에 올려 극적인 시각 효과를 내는 \"토기 티브스\"(세가 티브스)와 같은 지역별 변형도 존재한다."
+  },
+  "meta": {
+    "time": 25,
+    "costRon": 42,
+    "tags": ["quick", "high-protein"],
+    "desc": {
+      "ro": "Vită sotată rapid cu unt de rozmarin și ardei iuți, un fel de sărbătoare etiopian.",
+      "en": "Quickly sautéed beef with rosemary butter and chilies, an Ethiopian celebration dish.",
+      "es": "Res salteada rápidamente con mantequilla de romero y chiles, un plato festivo etíope.",
+      "fr": "Bœuf sauté rapidement au beurre de romarin et piments, un plat de fête éthiopien.",
+      "de": "Schnell sautiertes Rindfleisch mit Rosmarinbutter und Chilis, ein äthiopisches Festgericht.",
+      "pt": "Carne refogada rapidamente com manteiga de alecrim e pimentas, um prato festivo etíope.",
+      "ru": "Быстро обжаренная говядина с розмариновым маслом и перцем чили, эфиопское праздничное блюдо.",
+      "ar": "لحم بقري مقلي سريعًا بزبدة إكليل الجبل والفلفل الحار، طبق احتفالي إثيوبي.",
+      "zh": "以迷迭香黄油和辣椒快炒的牛肉，是一道埃塞俄比亚庆典菜肴。",
+      "ja": "ローズマリーバターと唐辛子で炒めた牛肉、エチオピアの祝い料理。",
+      "hi": "रोज़मेरी मक्खन और मिर्च के साथ जल्दी भुना बीफ, एक इथियोपियाई उत्सव व्यंजन।",
+      "tr": "Biberiyeli tereyağı ve biberlerle hızlıca sotelenmiş dana eti, bir Etiyopya kutlama yemeği.",
+      "it": "Manzo saltato rapidamente con burro al rosmarino e peperoncini, un piatto festivo etiope.",
+      "ko": "로즈메리 버터와 고추로 빠르게 볶은 소고기, 에티오피아의 축하용 요리."
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": 370,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Egipt", "en": "Egypt", "es": "Egipto", "fr": "Égypte", "de": "Ägypten",
+    "pt": "Egito", "ru": "Египет", "ar": "مصر", "zh": "埃及", "ja": "エジプト",
+    "hi": "मिस्र", "tr": "Mısır", "it": "Egitto", "ko": "이집트"
+  },
+  "name": {
+    "ro": "Ta'ameya (Falafel egiptean din bob)", "en": "Ta'ameya (Egyptian Fava Bean Falafel)", "es": "Ta'ameya (Falafel egipcio de habas)",
+    "fr": "Ta'ameya (Falafel égyptien aux fèves)", "de": "Ta'ameya (Ägyptisches Saubohnen-Falafel)", "pt": "Ta'ameya (Falafel egípcio de fava)",
+    "ru": "Тамея (Египетский фалафель из бобов)", "ar": "طعمية", "zh": "埃及蚕豆沙拉三明治",
+    "ja": "ターメイヤ（エジプト風そら豆ファラフェル）", "hi": "ता'अमेया (मिस्री फवा बीन फलाफेल)", "tr": "Taamiye (Mısır Bakla Falafeli)",
+    "it": "Ta'ameya (Falafel egiziano di fave)", "ko": "타아메야 (이집트식 잠두 팔라펠)"
+  },
+  "category": {
+    "ro": "Gustare", "en": "Snack", "es": "Aperitivo", "fr": "Collation", "de": "Snack", "pt": "Lanche",
+    "ru": "Закуска", "ar": "وجبة خفيفة", "zh": "小吃", "ja": "軽食", "hi": "नाश्ता", "tr": "Atıştırmalık", "it": "Spuntino", "ko": "간식"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🫘", "t": "Bob decorticat", "d": "Bob uscat, decojit și înmuiat peste noapte, nu năut."},
+      {"icon": "🌿", "t": "Verdeață din belșug", "d": "Pătrunjel, mărar și coriandru proaspăt tocate fin în pastă."},
+      {"icon": "💚", "t": "Verde intens", "d": "Culoarea verde vie vine din cantitatea mare de ierburi, nu din colorant."},
+      {"icon": "🌰", "t": "Crustă de susan", "d": "Chiftelele se rulează prin susan crud înainte de prăjire."}
+    ],
+    "en": [
+      {"icon": "🫘", "t": "Split fava beans", "d": "Dried, peeled fava beans soaked overnight, not chickpeas."},
+      {"icon": "🌿", "t": "Abundant herbs", "d": "Fresh parsley, dill and cilantro finely blended into the paste."},
+      {"icon": "💚", "t": "Vivid green", "d": "The bright green color comes from the herb quantity, not dye."},
+      {"icon": "🌰", "t": "Sesame crust", "d": "The patties are rolled in raw sesame seeds before frying."}
+    ],
+    "es": [
+      {"icon": "🫘", "t": "Habas partidas", "d": "Habas secas y peladas, remojadas toda la noche, no garbanzos."},
+      {"icon": "🌿", "t": "Hierbas en abundancia", "d": "Perejil, eneldo y cilantro frescos mezclados finamente en la pasta."},
+      {"icon": "💚", "t": "Verde intenso", "d": "El color verde vivo viene de la cantidad de hierbas, no de colorante."},
+      {"icon": "🌰", "t": "Costra de sésamo", "d": "Las croquetas se pasan por sésamo crudo antes de freír."}
+    ],
+    "fr": [
+      {"icon": "🫘", "t": "Fèves cassées", "d": "Fèves sèches et pelées, trempées toute la nuit, pas des pois chiches."},
+      {"icon": "🌿", "t": "Herbes en abondance", "d": "Persil, aneth et coriandre frais finement mixés dans la pâte."},
+      {"icon": "💚", "t": "Vert intense", "d": "La couleur vert vif vient de la quantité d'herbes, pas d'un colorant."},
+      {"icon": "🌰", "t": "Croûte de sésame", "d": "Les galettes sont roulées dans du sésame cru avant friture."}
+    ],
+    "de": [
+      {"icon": "🫘", "t": "Geschälte Saubohnen", "d": "Getrocknete, geschälte Saubohnen, über Nacht eingeweicht, keine Kichererbsen."},
+      {"icon": "🌿", "t": "Reichlich Kräuter", "d": "Frische Petersilie, Dill und Koriander fein in die Paste gemischt."},
+      {"icon": "💚", "t": "Kräftiges Grün", "d": "Die leuchtend grüne Farbe kommt von der Kräutermenge, nicht von Farbstoff."},
+      {"icon": "🌰", "t": "Sesamkruste", "d": "Die Küchlein werden vor dem Braten in rohem Sesam gewälzt."}
+    ],
+    "pt": [
+      {"icon": "🫘", "t": "Favas partidas", "d": "Favas secas e descascadas, demolhadas durante a noite, não grão-de-bico."},
+      {"icon": "🌿", "t": "Ervas em abundância", "d": "Salsa, endro e coentro frescos finamente misturados na pasta."},
+      {"icon": "💚", "t": "Verde intenso", "d": "A cor verde viva vem da quantidade de ervas, não de corante."},
+      {"icon": "🌰", "t": "Crosta de gergelim", "d": "Os bolinhos são passados em gergelim cru antes de fritar."}
+    ],
+    "ru": [
+      {"icon": "🫘", "t": "Колотые бобы", "d": "Сушёные очищенные бобы, замоченные на ночь, не нут."},
+      {"icon": "🌿", "t": "Обилие зелени", "d": "Свежая петрушка, укроп и кинза мелко смешаны в пасту."},
+      {"icon": "💚", "t": "Насыщенный зелёный", "d": "Яркий зелёный цвет — от количества зелени, а не от красителя."},
+      {"icon": "🌰", "t": "Кунжутная корочка", "d": "Котлетки обваливают в сыром кунжуте перед жаркой."}
+    ],
+    "ar": [
+      {"icon": "🫘", "t": "فول مقشور", "d": "فول مجفف مقشور منقوع طوال الليل، وليس حمصًا."},
+      {"icon": "🌿", "t": "أعشاب وفيرة", "d": "بقدونس وشبت وكزبرة طازجة مطحونة ناعمًا في العجينة."},
+      {"icon": "💚", "t": "أخضر داكن", "d": "اللون الأخضر النابض يأتي من كمية الأعشاب، وليس من صبغة."},
+      {"icon": "🌰", "t": "قشرة سمسم", "d": "تُدحرج الأقراص في السمسم النيء قبل القلي."}
+    ],
+    "zh": [
+      {"icon": "🫘", "t": "去皮蚕豆", "d": "干燥去皮蚕豆浸泡一夜，不是鹰嘴豆。"},
+      {"icon": "🌿", "t": "丰富香草", "d": "新鲜欧芹、莳萝和香菜细细拌入豆糊中。"},
+      {"icon": "💚", "t": "浓郁绿色", "d": "鲜绿色来自大量香草，而非色素。"},
+      {"icon": "🌰", "t": "芝麻外壳", "d": "炸前将饼坯裹上生芝麻。"}
+    ],
+    "ja": [
+      {"icon": "🫘", "t": "皮むきそら豆", "d": "乾燥させて皮をむいたそら豆を一晩浸す、ひよこ豆ではない。"},
+      {"icon": "🌿", "t": "豊富なハーブ", "d": "新鮮なパセリ、ディル、コリアンダーを細かくペーストに混ぜる。"},
+      {"icon": "💚", "t": "鮮やかな緑", "d": "鮮やかな緑色はハーブの量によるもので、着色料ではない。"},
+      {"icon": "🌰", "t": "ごまの衣", "d": "揚げる前に生ごまをまぶす。"}
+    ],
+    "hi": [
+      {"icon": "🫘", "t": "छिलका उतारी फवा बीन्स", "d": "सूखी, छिली फवा बीन्स रात भर भिगोई गईं, छोले नहीं।"},
+      {"icon": "🌿", "t": "भरपूर जड़ी-बूटियां", "d": "ताज़ा अजमोद, सोआ और धनिया बारीक पेस्ट में मिलाए गए।"},
+      {"icon": "💚", "t": "गहरा हरा", "d": "चमकीला हरा रंग जड़ी-बूटियों की मात्रा से आता है, रंग से नहीं।"},
+      {"icon": "🌰", "t": "तिल की परत", "d": "तलने से पहले टिक्कियों को कच्चे तिल में लपेटा जाता है।"}
+    ],
+    "tr": [
+      {"icon": "🫘", "t": "Kabuklu bakla", "d": "Kuru, kabuğu soyulmuş bakla bir gece ıslatılır, nohut değil."},
+      {"icon": "🌿", "t": "Bol ot", "d": "Taze maydanoz, dereotu ve kişniş ezmede ince karıştırılır."},
+      {"icon": "💚", "t": "Yoğun yeşil", "d": "Canlı yeşil renk boyadan değil ot miktarından gelir."},
+      {"icon": "🌰", "t": "Susam kabuğu", "d": "Köfteler kızartmadan önce çiğ susama bulanır."}
+    ],
+    "it": [
+      {"icon": "🫘", "t": "Fave spezzate", "d": "Fave secche e sbucciate, messe in ammollo per una notte, non ceci."},
+      {"icon": "🌿", "t": "Erbe in abbondanza", "d": "Prezzemolo, aneto e coriandolo freschi finemente frullati nell'impasto."},
+      {"icon": "💚", "t": "Verde intenso", "d": "Il colore verde vivo deriva dalla quantità di erbe, non da coloranti."},
+      {"icon": "🌰", "t": "Crosta di sesamo", "d": "Le polpette vengono passate nel sesamo crudo prima di friggere."}
+    ],
+    "ko": [
+      {"icon": "🫘", "t": "껍질 벗긴 잠두", "d": "말려서 껍질 벗긴 잠두를 밤새 불린 것, 병아리콩이 아니다."},
+      {"icon": "🌿", "t": "풍부한 허브", "d": "신선한 파슬리, 딜, 고수를 곱게 갈아 반죽에 섞는다."},
+      {"icon": "💚", "t": "짙은 녹색", "d": "선명한 녹색은 색소가 아니라 허브의 양에서 나온다."},
+      {"icon": "🌰", "t": "참깨 껍질", "d": "튀기기 전에 패티를 생참깨에 굴린다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g bob decorticat uscat (înmuiat peste noapte)", "1 ceapă", "4 căței de usturoi", "1 legătură pătrunjel", "1 legătură mărar", "1/2 legătură coriandru", "1 linguriță chimen măcinat", "1 linguriță coriandru măcinat", "1/2 linguriță bicarbonat de sodiu", "sare, piper", "susan crud pentru rulat", "ulei pentru prăjit"],
+    "en": ["400g dried split fava beans (soaked overnight)", "1 onion", "4 garlic cloves", "1 bunch parsley", "1 bunch dill", "1/2 bunch cilantro", "1 tsp ground cumin", "1 tsp ground coriander", "1/2 tsp baking soda", "salt, pepper", "raw sesame seeds for rolling", "oil for frying"],
+    "es": ["400g de habas partidas secas (remojadas toda la noche)", "1 cebolla", "4 dientes de ajo", "1 manojo de perejil", "1 manojo de eneldo", "1/2 manojo de cilantro", "1 cdta de comino molido", "1 cdta de cilantro molido", "1/2 cdta de bicarbonato de sodio", "sal, pimienta", "sésamo crudo para rebozar", "aceite para freír"],
+    "fr": ["400g de fèves cassées séchées (trempées toute la nuit)", "1 oignon", "4 gousses d'ail", "1 botte de persil", "1 botte d'aneth", "1/2 botte de coriandre", "1 c. à c. de cumin moulu", "1 c. à c. de coriandre moulue", "1/2 c. à c. de bicarbonate de soude", "sel, poivre", "sésame cru pour rouler", "huile pour frire"],
+    "de": ["400g getrocknete geschälte Saubohnen (über Nacht eingeweicht)", "1 Zwiebel", "4 Knoblauchzehen", "1 Bund Petersilie", "1 Bund Dill", "1/2 Bund Koriander", "1 TL gemahlener Kreuzkümmel", "1 TL gemahlener Koriander", "1/2 TL Natron", "Salz, Pfeffer", "roher Sesam zum Wälzen", "Öl zum Braten"],
+    "pt": ["400g de favas partidas secas (demolhadas durante a noite)", "1 cebola", "4 dentes de alho", "1 molho de salsa", "1 molho de endro", "1/2 molho de coentro", "1 colher de chá de cominho moído", "1 colher de chá de coentro moído", "1/2 colher de chá de bicarbonato de sódio", "sal, pimenta", "gergelim cru para passar", "óleo para fritar"],
+    "ru": ["400г сушёных колотых бобов (замоченных на ночь)", "1 луковица", "4 зубчика чеснока", "1 пучок петрушки", "1 пучок укропа", "1/2 пучка кинзы", "1 ч.л. молотого тмина", "1 ч.л. молотого кориандра", "1/2 ч.л. пищевой соды", "соль, перец", "сырой кунжут для обваливания", "масло для жарки"],
+    "ar": ["400غ فول مقشور مجفف (منقوع طوال الليل)", "بصلة واحدة", "4 فصوص ثوم", "حزمة بقدونس", "حزمة شبت", "نصف حزمة كزبرة", "ملعقة صغيرة كمون مطحون", "ملعقة صغيرة كزبرة مطحونة", "نصف ملعقة صغيرة بيكربونات الصوديوم", "ملح، فلفل", "سمسم نيء للف", "زيت للقلي"],
+    "zh": ["干去皮蚕豆400克（浸泡一夜）", "洋葱1个", "大蒜4瓣", "欧芹1把", "莳萝1把", "香菜半把", "孜然粉1茶匙", "香菜粉1茶匙", "小苏打半茶匙", "盐、胡椒", "裹面用生芝麻", "炸制用油"],
+    "ja": ["乾燥皮むきそら豆 400g（一晩浸す）", "玉ねぎ 1個", "にんにく 4片", "パセリ 1束", "ディル 1束", "コリアンダー 半束", "クミンパウダー 小さじ1", "コリアンダーパウダー 小さじ1", "重曹 小さじ1/2", "塩、こしょう", "まぶす用の生ごま", "揚げ油"],
+    "hi": ["400 ग्राम सूखी छिली फवा बीन्स (रात भर भिगोई)", "1 प्याज़", "4 लहसुन की कलियाँ", "1 गुच्छा अजमोद", "1 गुच्छा सोआ", "आधा गुच्छा धनिया", "1 छोटा चम्मच पिसा जीरा", "1 छोटा चम्मच पिसा धनिया", "आधा छोटा चम्मच बेकिंग सोडा", "नमक, काली मिर्च", "लपेटने के लिए कच्चे तिल", "तलने के लिए तेल"],
+    "tr": ["400g kuru kabuklu bakla (bir gece ıslatılmış)", "1 soğan", "4 diş sarımsak", "1 demet maydanoz", "1 demet dereotu", "yarım demet kişniş", "1 çay kaşığı öğütülmüş kimyon", "1 çay kaşığı öğütülmüş kişniş", "yarım çay kaşığı karbonat", "tuz, karabiber", "bulamak için çiğ susam", "kızartmak için yağ"],
+    "it": ["400g di fave spezzate secche (ammollate per una notte)", "1 cipolla", "4 spicchi d'aglio", "1 mazzo di prezzemolo", "1 mazzo di aneto", "1/2 mazzo di coriandolo", "1 cucchiaino di cumino macinato", "1 cucchiaino di coriandolo macinato", "1/2 cucchiaino di bicarbonato di sodio", "sale, pepe", "sesamo crudo per rotolare", "olio per friggere"],
+    "ko": ["말린 껍질 벗긴 잠두 400g(밤새 불림)", "양파 1개", "마늘 4쪽", "파슬리 1단", "딜 1단", "고수 반 단", "커민 가루 1작은술", "고수 가루 1작은술", "베이킹소다 1/2작은술", "소금, 후추", "굴릴 생참깨", "튀김용 기름"]
+  },
+  "howIsMade": {
+    "ro": "SCURGERE BOB: Scurge bine bobul înmuiat peste noapte, clătește-l cu apă rece. TOCARE FIN: Toacă bobul cu ceapa, usturoiul și toate ierburile într-un robot, până devine o pastă fină, aproape omogenă. CONDIMENTARE: Adaugă chimenul, coriandrul măcinat, sare și piper, amestecă bine în pastă. ODIHNĂ ȘI BICARBONAT: Chiar înainte de prăjit, încorporează bicarbonatul de sodiu — acesta ajută la afânarea texturii. MODELARE: Formează chiftele mici, turtite, cu palmele umezite. RULARE ÎN SUSAN: Rulează fiecare chiftea prin susan crud, apăsând ușor să adere. PRĂJIRE: Prăjește în ulei încins la 175°C timp de 3-4 minute pe fiecare parte, până devin aurii și crocante la exterior, moi la interior. SERVIRE: Servește fierbinte, cu pâine lipie, tahini și salată de roșii și castraveți.",
+    "en": "DRAIN BEANS: Drain the overnight-soaked fava beans well, rinse with cold water. FINELY CHOP: Blend the beans with the onion, garlic and all the herbs in a food processor, until a fine, almost smooth paste forms. SEASON: Add the cumin, ground coriander, salt and pepper, mix well into the paste. REST AND BAKING SODA: Right before frying, fold in the baking soda — this helps aerate the texture. SHAPE: Form small, flattened patties with wet palms. ROLL IN SESAME: Roll each patty through raw sesame seeds, pressing gently to adhere. FRY: Fry in hot oil at 175°C for 3-4 minutes per side, until golden and crisp outside, soft inside. SERVE: Serve hot, with flatbread, tahini, and a tomato and cucumber salad.",
+    "es": "ESCURRIR LAS HABAS: Escurre bien las habas remojadas toda la noche, enjuaga con agua fría. PICAR FINAMENTE: Mezcla las habas con la cebolla, el ajo y todas las hierbas en un robot de cocina, hasta formar una pasta fina, casi lisa. SAZONAR: Añade el comino, el cilantro molido, sal y pimienta, mezcla bien en la pasta. REPOSO Y BICARBONATO: Justo antes de freír, incorpora el bicarbonato de sodio — esto ayuda a airear la textura. MOLDEAR: Forma croquetas pequeñas y aplanadas con las palmas húmedas. REBOZAR EN SÉSAMO: Pasa cada croqueta por sésamo crudo, presionando suavemente para que se adhiera. FREÍR: Fríe en aceite caliente a 175°C durante 3-4 minutos por cada lado, hasta que estén doradas y crujientes por fuera, suaves por dentro. SERVIR: Sirve caliente, con pan de pita, tahini, y ensalada de tomate y pepino.",
+    "fr": "ÉGOUTTER LES FÈVES: Égouttez bien les fèves trempées toute la nuit, rincez à l'eau froide. HACHER FINEMENT: Mixez les fèves avec l'oignon, l'ail et toutes les herbes dans un robot, jusqu'à obtenir une pâte fine, presque lisse. ASSAISONNER: Ajoutez le cumin, la coriandre moulue, le sel et le poivre, mélangez bien dans la pâte. REPOS ET BICARBONATE: Juste avant de frire, incorporez le bicarbonate de soude — cela aide à aérer la texture. FORMER: Formez de petites galettes aplaties avec les paumes humides. ROULER DANS LE SÉSAME: Roulez chaque galette dans du sésame cru, en appuyant doucement pour qu'il adhère. FRIRE: Faites frire dans l'huile chaude à 175°C pendant 3-4 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes à l'extérieur, moelleuses à l'intérieur. SERVIR: Servez chaud, avec du pain plat, du tahini, et une salade de tomates et concombre.",
+    "de": "BOHNEN ABGIESSEN: Die über Nacht eingeweichten Saubohnen gut abgießen, mit kaltem Wasser abspülen. FEIN HACKEN: Die Bohnen mit Zwiebel, Knoblauch und allen Kräutern in einer Küchenmaschine zu einer feinen, fast glatten Paste verarbeiten. WÜRZEN: Kreuzkümmel, gemahlenen Koriander, Salz und Pfeffer hinzufügen, gut in die Paste einarbeiten. RUHEN UND NATRON: Kurz vor dem Braten das Natron unterheben — das hilft, die Textur aufzulockern. FORMEN: Kleine, flache Küchlein mit angefeuchteten Handflächen formen. IN SESAM WÄLZEN: Jedes Küchlein durch rohen Sesam rollen, leicht andrücken, damit er haftet. BRATEN: In heißem Öl bei 175°C 3-4 Minuten pro Seite braten, bis außen goldbraun und knusprig, innen weich. SERVIEREN: Heiß servieren, mit Fladenbrot, Tahini und Tomaten-Gurken-Salat.",
+    "pt": "ESCORRER AS FAVAS: Escorra bem as favas demolhadas durante a noite, enxague com água fria. PICAR FINAMENTE: Bata as favas com a cebola, o alho e todas as ervas num processador, até formar uma pasta fina, quase lisa. TEMPERAR: Junte o cominho, o coentro moído, sal e pimenta, misture bem na pasta. DESCANSO E BICARBONATO: Mesmo antes de fritar, incorpore o bicarbonato de sódio — isto ajuda a arejar a textura. MOLDAR: Forme bolinhos pequenos e achatados com as palmas molhadas. PASSAR NO GERGELIM: Passe cada bolinho por gergelim cru, pressionando levemente para aderir. FRITAR: Frite em óleo quente a 175°C durante 3-4 minutos de cada lado, até dourarem e ficarem estaladiços por fora, macios por dentro. SERVIR: Sirva quente, com pão pita, tahine, e salada de tomate e pepino.",
+    "ru": "СЛИВ БОБОВ: Хорошо слейте воду с замоченных на ночь бобов, промойте холодной водой. МЕЛКОЕ ИЗМЕЛЬЧЕНИЕ: Измельчите бобы с луком, чесноком и всей зеленью в кухонном комбайне до мелкой, почти однородной пасты. ПРИПРАВА: Добавьте тмин, молотый кориандр, соль и перец, хорошо вмешайте в пасту. ОТДЫХ И СОДА: Непосредственно перед жаркой вмешайте пищевую соду — это помогает разрыхлить текстуру. ФОРМИРОВАНИЕ: Сформируйте маленькие плоские котлетки влажными ладонями. ОБВАЛКА В КУНЖУТЕ: Обваляйте каждую котлетку в сыром кунжуте, слегка прижимая, чтобы прилип. ЖАРКА: Жарьте в горячем масле при 175°C 3-4 минуты с каждой стороны, пока не станут золотистыми и хрустящими снаружи, мягкими внутри. ПОДАЧА: Подавайте горячими, с лавашом, тахини и салатом из помидоров и огурцов.",
+    "ar": "تصفية الفول: صفِّ الفول المنقوع طوال الليل جيدًا، اشطفه بماء بارد. الفرم الناعم: اطحن الفول مع البصل والثوم وجميع الأعشاب في محضر طعام حتى يصبح عجينة ناعمة شبه متجانسة. التتبيل: أضف الكمون والكزبرة المطحونة والملح والفلفل، اخلطها جيدًا في العجينة. الراحة والبيكربونات: قبل القلي مباشرة، اطوِ بيكربونات الصوديوم — يساعد هذا على تهوية القوام. التشكيل: شكّل أقراصًا صغيرة مسطحة بأكف مبللة. اللف في السمسم: مرّر كل قرص في السمسم النيء، مع الضغط برفق ليلتصق. القلي: اقلِ في زيت ساخن على 175 درجة لمدة 3-4 دقائق لكل جانب، حتى يصبح ذهبيًا ومقرمشًا من الخارج وطريًا من الداخل. التقديم: قدّمه ساخنًا مع الخبز والطحينة وسلطة الطماطم والخيار.",
+    "zh": "沥干豆子：将浸泡一夜的蚕豆充分沥干，用冷水冲洗。细磨：将豆子与洋葱、大蒜和所有香草一起放入食物加工机中，磨成细腻近乎顺滑的糊状。调味：加入孜然、香菜粉、盐和胡椒，充分拌入豆糊中。静置与加碱：油炸前拌入小苏打——有助于让质地更蓬松。塑形：用湿润的手掌捏成小而扁的饼状。裹芝麻：将每个饼胚裹上生芝麻，轻压使其附着。油炸：在175°C热油中每面炸3-4分钟，直至外皮金黄酥脆，内部松软。装盘：趁热配薄饼、芝麻酱和番茄黄瓜沙拉食用。",
+    "ja": "豆の水を切る：一晩浸したそら豆をよく水切りし、冷水ですすぐ。細かく刻む：豆を玉ねぎ、にんにく、すべてのハーブと共にフードプロセッサーで、ほぼ滑らかな細かいペーストになるまで混ぜる。味付けする：クミン、コリアンダーパウダー、塩、こしょうを加え、ペーストによく混ぜ込む。休ませて重曹を加える：揚げる直前に重曹を折り込む——これが食感を軽くするのに役立つ。成形する：湿らせた手のひらで小さく平たいパティを作る。ごまをまぶす：それぞれのパティを生ごまの中で転がし、軽く押して付着させる。揚げる：175°Cの熱した油で片面3〜4分揚げ、外側がきつね色でカリッと、内側は柔らかくなるまで揚げる。盛り付け：熱いうちにフラットブレッド、タヒニ、トマトときゅうりのサラダと共に提供する。",
+    "hi": "बीन्स छानें: रात भर भिगोई फवा बीन्स को अच्छी तरह छानें, ठंडे पानी से धोएं। बारीक पीसें: बीन्स को प्याज़, लहसुन और सभी जड़ी-बूटियों के साथ फूड प्रोसेसर में लगभग चिकना महीन पेस्ट बनने तक पीसें। मसाला डालें: जीरा, पिसा धनिया, नमक और काली मिर्च डालें, पेस्ट में अच्छी तरह मिलाएं। आराम और बेकिंग सोडा: तलने से ठीक पहले बेकिंग सोडा मिलाएं — यह बनावट को हल्का करने में मदद करता है। आकार दें: गीली हथेलियों से छोटी चपटी टिक्कियां बनाएं। तिल में लपेटें: हर टिक्की को कच्चे तिल में लपेटें, हल्के से दबाकर चिपकाएं। तलें: 175°C गरम तेल में हर तरफ 3-4 मिनट तलें, जब तक बाहर से सुनहरी और कुरकुरी और अंदर से नरम न हो जाए। परोसें: गरमागरम, फ्लैटब्रेड, ताहिनी और टमाटर-खीरे के सलाद के साथ परोसें।",
+    "tr": "BAKLAYI SÜZÜN: Bir gece ıslatılmış baklayı iyice süzün, soğuk suyla durulayın. İNCE DOĞRAYIN: Baklayı soğan, sarımsak ve tüm otlarla bir mutfak robotunda neredeyse pürüzsüz ince bir ezme oluşana kadar karıştırın. TATLANDIRIN: Kimyon, öğütülmüş kişniş, tuz ve karabiberi ekleyin, ezmeye iyice karıştırın. DİNLENDİRİN VE KARBONAT EKLEYİN: Kızartmadan hemen önce karbonatı katın — bu dokuyu havalandırmaya yardımcı olur. ŞEKİL VERİN: Islak avuçlarla küçük yassı köfteler oluşturun. SUSAMA BULAYIN: Her köfteyi çiğ susamda yuvarlayın, yapışması için hafifçe bastırın. KIZARTIN: 175°C sıcak yağda her tarafını 3-4 dakika, dışı altın rengi ve çıtır, içi yumuşak olana kadar kızartın. SERVİS EDİN: Sıcak, yassı ekmek, tahin ve domates-salatalık salatasıyla servis edin.",
+    "it": "SCOLARE LE FAVE: Scolate bene le fave ammollate per una notte, sciacquate con acqua fredda. TRITARE FINEMENTE: Frullate le fave con la cipolla, l'aglio e tutte le erbe in un robot da cucina, fino a ottenere un impasto fine, quasi liscio. INSAPORIRE: Aggiungete il cumino, il coriandolo macinato, sale e pepe, mescolate bene nell'impasto. RIPOSO E BICARBONATO: Appena prima di friggere, incorporate il bicarbonato di sodio — questo aiuta ad arieggiare la consistenza. MODELLARE: Formate piccole polpette appiattite con i palmi bagnati. ROTOLARE NEL SESAMO: Rotolate ogni polpetta nel sesamo crudo, premendo delicatamente per farlo aderire. FRIGGERE: Friggete in olio caldo a 175°C per 3-4 minuti per lato, finché dorate e croccanti fuori, morbide dentro. SERVIRE: Servite calde, con pane piatto, tahini e insalata di pomodoro e cetriolo.",
+    "ko": "콩 물기 빼기: 밤새 불린 잠두를 잘 물기 빼고 찬물에 헹군다. 곱게 갈기: 콩을 양파, 마늘, 모든 허브와 함께 푸드프로세서에 넣어 거의 매끄러운 고운 반죽으로 간다. 간하기: 커민, 간 고수, 소금, 후추를 넣고 반죽에 잘 섞는다. 휴지 및 베이킹소다: 튀기기 직전에 베이킹소다를 접어 넣는다 — 식감을 가볍게 만드는 데 도움이 된다. 모양 만들기: 젖은 손바닥으로 작고 납작한 패티를 만든다. 참깨 묻히기: 각 패티를 생참깨에 굴려 살짝 눌러 붙인다. 튀기기: 175°C 뜨거운 기름에서 양면 각 3~4분씩, 겉이 황금빛으로 바삭하고 속이 부드러워질 때까지 튀긴다. 담아내기: 뜨거울 때 플랫브레드, 타히니, 토마토오이 샐러드와 함께 낸다."
+  },
+  "originText": {
+    "ro": "Ta'ameya este considerată de mulți istorici drept adevărata origine a falafelului, precedând variantele din năut consumate astăzi în restul Orientului Mijlociu. Se crede că a fost inventată de comunitatea coptă din Egipt ca sursă de proteine în perioadele de post, când carnea era interzisă timp de săptămâni întregi înaintea sărbătorilor religioase majore.\n\nSpre deosebire de falafelul din năut, care are o textură mai densă și un gust mai neutru, ta'ameya din bob are o culoare verde intensă și o textură mai pufoasă, datorată cantității mari de ierburi proaspete măcinate direct în pastă. Vânzătorii stradali din Cairo o servesc tradițional în pâine baladi caldă, cu tahini, salată murată și un strat gros de salată de roșii — micul dejun definitoriu al orașului.",
+    "en": "Ta'ameya is considered by many historians to be the true origin of falafel, predating the chickpea versions eaten today throughout the rest of the Middle East. It's believed to have been invented by Egypt's Coptic community as a protein source during fasting periods, when meat was forbidden for weeks before major religious holidays.\n\nUnlike chickpea falafel, which has a denser texture and a more neutral taste, fava bean ta'ameya has an intense green color and a fluffier texture, thanks to the large amount of fresh herbs ground directly into the paste. Cairo's street vendors traditionally serve it in warm baladi bread, with tahini, pickled salad and a thick layer of tomato salad — the city's defining breakfast.",
+    "es": "La ta'ameya es considerada por muchos historiadores como el verdadero origen del falafel, anterior a las versiones de garbanzo que se comen hoy en el resto de Oriente Medio. Se cree que fue inventada por la comunidad copta de Egipto como fuente de proteína durante los períodos de ayuno, cuando la carne estaba prohibida durante semanas antes de las principales festividades religiosas.\n\nA diferencia del falafel de garbanzo, que tiene una textura más densa y un sabor más neutro, la ta'ameya de habas tiene un color verde intenso y una textura más esponjosa, gracias a la gran cantidad de hierbas frescas molidas directamente en la pasta. Los vendedores callejeros de El Cairo la sirven tradicionalmente en pan baladi caliente, con tahini, ensalada encurtida y una gruesa capa de ensalada de tomate — el desayuno definitorio de la ciudad.",
+    "fr": "La ta'ameya est considérée par de nombreux historiens comme la véritable origine du falafel, antérieure aux versions au pois chiche consommées aujourd'hui dans le reste du Moyen-Orient. On pense qu'elle a été inventée par la communauté copte d'Égypte comme source de protéines pendant les périodes de jeûne, lorsque la viande était interdite pendant des semaines avant les grandes fêtes religieuses.\n\nContrairement au falafel de pois chiches, à la texture plus dense et au goût plus neutre, la ta'ameya de fèves a une couleur vert intense et une texture plus moelleuse, grâce à la grande quantité d'herbes fraîches broyées directement dans la pâte. Les vendeurs de rue du Caire la servent traditionnellement dans du pain baladi chaud, avec du tahini, une salade marinée et une épaisse couche de salade de tomates — le petit-déjeuner emblématique de la ville.",
+    "de": "Ta'ameya gilt bei vielen Historikern als der wahre Ursprung des Falafel, älter als die Kichererbsen-Versionen, die heute im übrigen Nahen Osten gegessen werden. Man nimmt an, dass sie von der koptischen Gemeinschaft Ägyptens als Proteinquelle während der Fastenzeiten erfunden wurde, als Fleisch wochenlang vor großen religiösen Feiertagen verboten war.\n\nAnders als Kichererbsen-Falafel, der eine dichtere Textur und einen neutraleren Geschmack hat, hat Saubohnen-Ta'ameya eine intensiv grüne Farbe und eine luftigere Textur, dank der großen Menge frischer Kräuter, die direkt in die Paste gemahlen werden. Straßenverkäufer in Kairo servieren sie traditionell in warmem Baladi-Brot, mit Tahini, eingelegtem Salat und einer dicken Schicht Tomatensalat — das prägende Frühstück der Stadt.",
+    "pt": "A ta'ameya é considerada por muitos historiadores a verdadeira origem do falafel, anterior às versões de grão-de-bico consumidas hoje no resto do Médio Oriente. Acredita-se que foi inventada pela comunidade copta do Egito como fonte de proteína durante períodos de jejum, quando a carne era proibida durante semanas antes de grandes festividades religiosas.\n\nAo contrário do falafel de grão-de-bico, que tem uma textura mais densa e um sabor mais neutro, a ta'ameya de fava tem uma cor verde intensa e uma textura mais fofa, graças à grande quantidade de ervas frescas moídas diretamente na pasta. Os vendedores de rua do Cairo servem-na tradicionalmente em pão baladi quente, com tahine, salada em conserva e uma camada espessa de salada de tomate — o pequeno-almoço definidor da cidade.",
+    "ru": "Тамея считается многими историками истинным источником фалафеля, предшествующим версиям из нута, которые едят сегодня в остальной части Ближнего Востока. Считается, что её изобрела коптская община Египта как источник белка во время постов, когда мясо было запрещено на недели перед крупными религиозными праздниками.\n\nВ отличие от фалафеля из нута, имеющего более плотную текстуру и более нейтральный вкус, тамея из бобов имеет насыщенный зелёный цвет и более пышную текстуру благодаря большому количеству свежей зелени, перемолотой прямо в пасту. Уличные торговцы Каира традиционно подают её в тёплом хлебе баляди с тахини, маринованным салатом и толстым слоем томатного салата — определяющий завтрак города.",
+    "ar": "تُعتبر الطعمية عند العديد من المؤرخين الأصل الحقيقي للفلافل، سابقة لنسخ الحمص المستهلكة اليوم في بقية الشرق الأوسط. يُعتقد أنها ابتُكرت من قبل الطائفة القبطية في مصر كمصدر للبروتين خلال فترات الصيام، عندما كان اللحم محرمًا لأسابيع قبل الأعياد الدينية الكبرى.\n\nخلافًا لفلافل الحمص، ذات القوام الأكثف والنكهة الأكثر حيادية، تتميز طعمية الفول بلون أخضر داكن وقوام أكثر رقة، بفضل الكمية الكبيرة من الأعشاب الطازجة المطحونة مباشرة في العجينة. يقدّمها باعة القاهرة المتجولون تقليديًا في خبز بلدي دافئ، مع الطحينة وسلطة مخللة وطبقة سميكة من سلطة الطماطم — فطور المدينة المميز.",
+    "zh": "许多历史学家认为塔阿米亚是法拉费的真正起源，早于如今中东其他地区食用的鹰嘴豆版本。据信它由埃及科普特基督徒社群发明，作为斋戒期间的蛋白质来源——在重大宗教节日前的数周内，肉类被禁止食用。\n\n与质地更紧实、味道更平淡的鹰嘴豆法拉费不同，蚕豆塔阿米亚呈现浓郁的绿色，质地更为蓬松，这得益于大量直接磨入豆糊中的新鲜香草。开罗的街头小贩传统上将其夹入温热的巴拉迪面包中，配以芝麻酱、腌制沙拉和厚厚一层番茄沙拉——这是这座城市标志性的早餐。",
+    "ja": "多くの歴史家によって、ターメイヤは今日、中東の他の地域で食べられているひよこ豆版に先立つ、ファラフェルの真の起源であると考えられている。主要な宗教的祝祭日の前の数週間、肉が禁じられていた断食期間中のタンパク質源として、エジプトのコプト教徒コミュニティによって発明されたと信じられている。\n\nより密な食感でより中立的な味わいのひよこ豆ファラフェルとは異なり、そら豆のターメイヤは、生地に直接すりつぶされた大量の新鮮なハーブのおかげで、鮮やかな緑色とより軽やかな食感を持つ。カイロの露天商は伝統的に、温かいバラディパンに、タヒニ、漬物サラダ、たっぷりのトマトサラダを添えてこれを提供する――この街を象徴する朝食である。",
+    "hi": "कई इतिहासकार ता'अमेया को फलाफेल की असली उत्पत्ति मानते हैं, जो आज बाकी मध्य पूर्व में खाए जाने वाले छोले संस्करणों से पहले की है। माना जाता है कि इसे मिस्र के कॉप्टिक समुदाय द्वारा उपवास की अवधि के दौरान प्रोटीन स्रोत के रूप में बनाया गया था, जब प्रमुख धार्मिक त्योहारों से पहले हफ्तों तक मांस निषिद्ध होता था।\n\nछोले फलाफेल के विपरीत, जिसकी बनावट सघन और स्वाद अधिक तटस्थ होता है, फवा बीन ता'अमेया का रंग गहरा हरा होता है और बनावट अधिक फूली हुई होती है, जो सीधे पेस्ट में पिसी गई भारी मात्रा में ताज़ी जड़ी-बूटियों के कारण है। काहिरा के सड़क विक्रेता इसे परंपरागत रूप से गरम बलादी ब्रेड में, ताहिनी, अचारी सलाद और टमाटर सलाद की मोटी परत के साथ परोसते हैं — शहर का प्रमुख नाश्ता।",
+    "tr": "Birçok tarihçi tarafından taamiye, bugün Orta Doğu'nun geri kalanında yenen nohut versiyonlarından önce gelen falafelin gerçek kökeni olarak kabul edilir. Büyük dini bayramlardan haftalar önce etin yasak olduğu oruç dönemlerinde, Mısır'ın Kıpti topluluğu tarafından bir protein kaynağı olarak icat edildiğine inanılır.\n\nDaha yoğun dokulu ve daha nötr tatlı nohut falafelinin aksine, bakla taamiyesi, hamura doğrudan öğütülen büyük miktarda taze ottan dolayı yoğun yeşil bir renge ve daha kabarık bir dokuya sahiptir. Kahire'nin sokak satıcıları geleneksel olarak bunu sıcak baladi ekmeğinde, tahin, turşu salata ve kalın bir domates salatası tabakasıyla sunar — şehrin karakteristik kahvaltısı.",
+    "it": "La ta'ameya è considerata da molti storici la vera origine del falafel, precedente alle versioni di ceci consumate oggi nel resto del Medio Oriente. Si ritiene sia stata inventata dalla comunità copta d'Egitto come fonte proteica durante i periodi di digiuno, quando la carne era vietata per settimane prima delle principali festività religiose.\n\nA differenza del falafel di ceci, che ha una consistenza più densa e un sapore più neutro, la ta'ameya di fave ha un colore verde intenso e una consistenza più soffice, grazie alla grande quantità di erbe fresche macinate direttamente nell'impasto. I venditori ambulanti del Cairo la servono tradizionalmente in pane baladi caldo, con tahini, insalata sott'aceto e uno spesso strato di insalata di pomodoro — la colazione distintiva della città.",
+    "ko": "많은 역사가들은 타아메야를 오늘날 중동 나머지 지역에서 먹는 병아리콩 버전보다 앞선, 팔라펠의 진정한 기원으로 여긴다. 주요 종교 명절 전 몇 주 동안 고기가 금지되던 금식 기간 동안 단백질 공급원으로 이집트 콥트교 공동체가 발명한 것으로 여겨진다.\n\n더 조밀한 질감과 더 중립적인 맛을 지닌 병아리콩 팔라펠과 달리, 잠두 타아메야는 반죽에 직접 갈아 넣은 다량의 신선한 허브 덕분에 짙은 녹색과 더 폭신한 질감을 지닌다. 카이로의 노점상들은 전통적으로 따뜻한 발라디 빵에 타히니, 절임 샐러드, 두꺼운 토마토 샐러드 층을 곁들여 제공한다 — 이 도시를 대표하는 아침 식사다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 8,
+    "tags": ["vegetarian", "vegan", "budget"],
+    "desc": {
+      "ro": "Chiftele verzi din bob decorticat cu ierburi, rulate în susan și prăjite.",
+      "en": "Green fava bean patties with herbs, rolled in sesame and fried.",
+      "es": "Croquetas verdes de habas con hierbas, rebozadas en sésamo y fritas.",
+      "fr": "Galettes vertes de fèves aux herbes, roulées dans le sésame et frites.",
+      "de": "Grüne Saubohnenküchlein mit Kräutern, in Sesam gewälzt und gebraten.",
+      "pt": "Bolinhos verdes de fava com ervas, passados em gergelim e fritos.",
+      "ru": "Зелёные котлетки из бобов с зеленью, обвалянные в кунжуте и обжаренные.",
+      "ar": "أقراص خضراء من الفول بالأعشاب، مغطاة بالسمسم ومقلية.",
+      "zh": "绿色蚕豆香草饼，裹芝麻油炸而成。",
+      "ja": "ハーブ入り緑色のそら豆パティ、ごまをまぶして揚げたもの。",
+      "hi": "जड़ी-बूटियों वाली हरी फवा बीन टिक्की, तिल में लपेटी और तली गई।",
+      "tr": "Otlu yeşil bakla köftesi, susama bulanıp kızartılmış.",
+      "it": "Polpette verdi di fave con erbe, rotolate nel sesamo e fritte.",
+      "ko": "허브를 넣은 녹색 잠두 패티, 참깨를 묻혀 튀긴 것."
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "id": 374,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Etiopia",
+    "en": "Ethiopia",
+    "es": "Etiopía",
+    "fr": "Éthiopie",
+    "de": "Äthiopien",
+    "pt": "Etiópia",
+    "ru": "Эфиопия",
+    "ar": "إثيوبيا",
+    "zh": "埃塞俄比亚",
+    "ja": "エチオピア",
+    "hi": "इथियोपिया",
+    "tr": "Etiyopya",
+    "it": "Etiopia",
+    "ko": "에티오피아"
+  },
+  "name": {
+    "ro": "Kitfo (Tartar Etiopian Condimentat)",
+    "en": "Kitfo (Ethiopian Spiced Beef Tartare)",
+    "es": "Kitfo (Tartar de Res Especiado Etíope)",
+    "fr": "Kitfo (Tartare de Bœuf Épicé Éthiopien)",
+    "de": "Kitfo (Äthiopisches Gewürztatar vom Rind)",
+    "pt": "Kitfo (Tártaro de Carne Etíope Apimentado)",
+    "ru": "Китфо (Эфиопский Тартар из Говядины)",
+    "ar": "كيتفو (تارتار اللحم الإثيوبي المتبل)",
+    "zh": "基特福（埃塞俄比亚香料牛肉塔塔）",
+    "ja": "キトフォ（エチオピア風スパイス牛肉タルタル）",
+    "hi": "किटफो (इथियोपियाई मसालेदार बीफ टार्टर)",
+    "tr": "Kitfo (Etiyopya Usulü Baharatlı Çiğ Köfte)",
+    "it": "Kitfo (Tartare di Manzo Speziato Etiope)",
+    "ko": "키트포 (에티오피아식 향신료 소고기 타르타르)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Carne crudă tocată", "d": "Vită de cea mai bună calitate, tocată fin manual, servită crudă sau ușor căldicică." },
+      { "icon": "🌶️", "t": "Unt mitmita", "d": "Unt clarificat infuzat cu mitmita, un amestec picant de ardei iute etiopieni." },
+      { "icon": "🧀", "t": "Brânză ayib", "d": "Se servește alături de ayib, o brânză proaspătă și acrișoară asemănătoare cottage cheese." },
+      { "icon": "🫓", "t": "Cu injera", "d": "Se mănâncă tradițional cu injera, pâinea plată fermentată etiopiană." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Minced raw beef", "d": "Top-quality beef, hand-minced fine, served raw or lightly warmed." },
+      { "icon": "🌶️", "t": "Mitmita butter", "d": "Clarified butter infused with mitmita, a fiery Ethiopian chili spice blend." },
+      { "icon": "🧀", "t": "Ayib cheese", "d": "Served alongside ayib, a fresh, tangy cheese similar to cottage cheese." },
+      { "icon": "🫓", "t": "With injera", "d": "Traditionally eaten with injera, Ethiopia's fermented flatbread." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Res cruda picada", "d": "Res de la mejor calidad, picada finamente a mano, servida cruda o ligeramente tibia." },
+      { "icon": "🌶️", "t": "Mantequilla mitmita", "d": "Mantequilla clarificada infusionada con mitmita, una mezcla picante de chile etíope." },
+      { "icon": "🧀", "t": "Queso ayib", "d": "Se sirve junto con ayib, un queso fresco y ácido similar al requesón." },
+      { "icon": "🫓", "t": "Con injera", "d": "Se come tradicionalmente con injera, el pan plano fermentado etíope." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Bœuf cru haché", "d": "Bœuf de première qualité, haché finement à la main, servi cru ou légèrement tiède." },
+      { "icon": "🌶️", "t": "Beurre mitmita", "d": "Beurre clarifié infusé au mitmita, un mélange épicé de piment éthiopien." },
+      { "icon": "🧀", "t": "Fromage ayib", "d": "Servi avec de l'ayib, un fromage frais et acidulé proche du cottage cheese." },
+      { "icon": "🫓", "t": "Avec injera", "d": "Traditionnellement mangé avec l'injera, le pain plat fermenté éthiopien." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Gehacktes rohes Rindfleisch", "d": "Erstklassiges Rindfleisch, von Hand fein gehackt, roh oder leicht erwärmt serviert." },
+      { "icon": "🌶️", "t": "Mitmita-Butter", "d": "Geklärte Butter mit Mitmita, einer feurigen äthiopischen Chili-Gewürzmischung." },
+      { "icon": "🧀", "t": "Ayib-Käse", "d": "Wird zusammen mit Ayib serviert, einem frischen, säuerlichen Käse ähnlich Hüttenkäse." },
+      { "icon": "🫓", "t": "Mit Injera", "d": "Traditionell mit Injera gegessen, dem äthiopischen fermentierten Fladenbrot." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Carne crua picada", "d": "Carne bovina de primeira qualidade, picada fina à mão, servida crua ou levemente morna." },
+      { "icon": "🌶️", "t": "Manteiga mitmita", "d": "Manteiga clarificada com mitmita, uma mistura picante de pimenta etíope." },
+      { "icon": "🧀", "t": "Queijo ayib", "d": "Servido junto com ayib, um queijo fresco e ácido semelhante ao queijo cottage." },
+      { "icon": "🫓", "t": "Com injera", "d": "Tradicionalmente comido com injera, o pão chato fermentado etíope." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Сырая рубленая говядина", "d": "Говядина высшего качества, мелко нарублена вручную, подаётся сырой или слегка тёплой." },
+      { "icon": "🌶️", "t": "Масло с митмитой", "d": "Топлёное масло, настоянное на митмите — жгучей эфиопской смеси перца." },
+      { "icon": "🧀", "t": "Сыр айиб", "d": "Подаётся вместе с айибом — свежим кисловатым сыром, похожим на творог." },
+      { "icon": "🫓", "t": "С инжерой", "d": "Традиционно едят с инжерой, эфиопской ферментированной лепёшкой." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "لحم بقري نيء مفروم", "d": "لحم بقري فاخر، مفروم ناعمًا يدويًا، يُقدَّم نيئًا أو دافئًا قليلًا." },
+      { "icon": "🌶️", "t": "زبدة الميتميتا", "d": "زبدة مصفّاة منقوعة بالميتميتا، مزيج فلفل إثيوبي حار." },
+      { "icon": "🧀", "t": "جبنة أييب", "d": "تُقدَّم مع الأييب، جبنة طازجة حامضة تشبه الجبن القريش." },
+      { "icon": "🫓", "t": "مع الإنجيرا", "d": "تُؤكل تقليديًا مع الإنجيرا، خبز إثيوبي مسطح ومخمّر." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "生牛肉末", "d": "顶级牛肉，手工细切，可生食或稍加温后食用。" },
+      { "icon": "🌶️", "t": "米特米塔黄油", "d": "浸入米特米塔（一种辛辣的埃塞俄比亚辣椒香料）调味的澄清黄油。" },
+      { "icon": "🧀", "t": "阿伊布奶酪", "d": "配以阿伊布，一种类似茅屋奶酪的新鲜酸味奶酪。" },
+      { "icon": "🫓", "t": "配英吉拉", "d": "传统上与英吉拉（埃塞俄比亚发酵薄饼）一同食用。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "生の牛肉のミンチ", "d": "最高級の牛肉を手作業で細かく刻み、生またはほんのり温めて提供する。" },
+      { "icon": "🌶️", "t": "ミトミタバター", "d": "エチオピアの辛いミトミタ唐辛子ミックスを効かせた澄ましバター。" },
+      { "icon": "🧀", "t": "アイブチーズ", "d": "カッテージチーズに似たフレッシュで酸味のあるアイブチーズを添えて提供。" },
+      { "icon": "🫓", "t": "インジェラと共に", "d": "エチオピアの発酵薄焼きパン、インジェラと一緒に食べるのが伝統的。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "कच्चा कीमा बीफ", "d": "उच्च गुणवत्ता वाला बीफ, हाथ से बारीक कीमा किया गया, कच्चा या हल्का गर्म परोसा जाता है।" },
+      { "icon": "🌶️", "t": "मिटमिटा मक्खन", "d": "मिटमिटा से युक्त घी, एक तीखा इथियोपियाई मिर्च मसाला मिश्रण।" },
+      { "icon": "🧀", "t": "अयिब चीज़", "d": "अयिब के साथ परोसा जाता है, कॉटेज चीज़ जैसा ताज़ा और खट्टा पनीर।" },
+      { "icon": "🫓", "t": "इंजेरा के साथ", "d": "परंपरागत रूप से इथियोपिया की किण्वित रोटी इंजेरा के साथ खाया जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "Çiğ kıyma dana eti", "d": "Elle ince kıyılmış üst düzey dana eti, çiğ ya da hafif ılık servis edilir." },
+      { "icon": "🌶️", "t": "Mitmita tereyağı", "d": "Ateşli bir Etiyopya biber karışımı olan mitmita ile tatlandırılmış sadeyağ." },
+      { "icon": "🧀", "t": "Ayib peyniri", "d": "Lor peynirine benzeyen taze, ekşimsi ayib peyniriyle birlikte servis edilir." },
+      { "icon": "🫓", "t": "İncera ile", "d": "Geleneksel olarak Etiyopya'nın mayalı yassı ekmeği incera ile yenir." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Manzo crudo tritato", "d": "Manzo di prima qualità, tritato finemente a mano, servito crudo o leggermente tiepido." },
+      { "icon": "🌶️", "t": "Burro al mitmita", "d": "Burro chiarificato infuso con mitmita, un piccante mix di peperoncino etiope." },
+      { "icon": "🧀", "t": "Formaggio ayib", "d": "Servito insieme all'ayib, un formaggio fresco e acidulo simile al cottage." },
+      { "icon": "🫓", "t": "Con injera", "d": "Tradizionalmente mangiato con l'injera, il pane piatto fermentato etiope." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "다진 생소고기", "d": "최상급 소고기를 손으로 곱게 다져 생으로 또는 살짝 데워 제공한다." },
+      { "icon": "🌶️", "t": "미트미타 버터", "d": "매콤한 에티오피아 고추 향신료 믹스인 미트미타를 넣어 향을 낸 정제 버터." },
+      { "icon": "🧀", "t": "아이브 치즈", "d": "코티지 치즈와 비슷한 신선하고 새콤한 아이브 치즈를 곁들여 제공." },
+      { "icon": "🫓", "t": "인제라와 함께", "d": "전통적으로 에티오피아의 발효 플랫브레드 인제라와 함께 먹는다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g mușchi de vită de foarte bună calitate", "150g unt", "2 linguri mitmita (amestec de ardei iute)", "1 linguriță koseret (uscat, măcinat)", "1/2 linguriță cardamon negru măcinat", "sare după gust", "brânză ayib sau cottage cheese, pentru servire", "verdeață gomen (varză etiopiană) călită, pentru servire", "injera, pentru servire"],
+    "en": ["600g very high-quality beef tenderloin", "150g butter", "2 tbsp mitmita (chili spice blend)", "1 tsp koseret (dried, ground)", "1/2 tsp ground black cardamom", "salt to taste", "ayib cheese or cottage cheese, for serving", "sautéed gomen (Ethiopian collard greens), for serving", "injera, for serving"],
+    "es": ["600g de solomillo de res de muy buena calidad", "150g de mantequilla", "2 cucharadas de mitmita (mezcla de chile)", "1 cucharadita de koseret (seco, molido)", "1/2 cucharadita de cardamomo negro molido", "sal al gusto", "queso ayib o requesón, para servir", "gomen (col etíope) salteada, para servir", "injera, para servir"],
+    "fr": ["600g de filet de bœuf de très bonne qualité", "150g de beurre", "2 c. à soupe de mitmita (mélange de piment)", "1 c. à café de koseret (séché, moulu)", "1/2 c. à café de cardamome noire moulue", "sel selon le goût", "fromage ayib ou cottage cheese, pour servir", "gomen (chou éthiopien) sauté, pour servir", "injera, pour servir"],
+    "de": ["600g sehr hochwertiges Rinderfilet", "150g Butter", "2 EL Mitmita (Chili-Gewürzmischung)", "1 TL Koseret (getrocknet, gemahlen)", "1/2 TL gemahlener schwarzer Kardamom", "Salz nach Geschmack", "Ayib-Käse oder Hüttenkäse, zum Servieren", "sautierter Gomen (äthiopischer Grünkohl), zum Servieren", "Injera, zum Servieren"],
+    "pt": ["600g de lombo de vitela de muito boa qualidade", "150g de manteiga", "2 colheres (sopa) de mitmita (mistura de pimenta)", "1 colher (chá) de koseret (seco, moído)", "1/2 colher (chá) de cardamomo preto moído", "sal a gosto", "queijo ayib ou queijo cottage, para servir", "gomen (couve etíope) refogado, para servir", "injera, para servir"],
+    "ru": ["600г говяжьей вырезки очень хорошего качества", "150г сливочного масла", "2 ст.л. митмита (перечная смесь)", "1 ч.л. косерета (сушёного, молотого)", "1/2 ч.л. молотого чёрного кардамона", "соль по вкусу", "сыр айиб или творог, для подачи", "тушёный гомен (эфиопская капуста), для подачи", "инжера, для подачи"],
+    "ar": ["600 غرام لحم بقري مفلطح فاخر جدًا", "150 غرام زبدة", "ملعقتان كبيرتان ميتميتا (خليط فلفل)", "ملعقة صغيرة كوسيريت (مجفف ومطحون)", "نصف ملعقة صغيرة هيل أسود مطحون", "ملح حسب الرغبة", "جبنة أييب أو جبن قريش، للتقديم", "جومن (كرنب إثيوبي) مقلي، للتقديم", "إنجيرا، للتقديم"],
+    "zh": ["600克优质牛里脊肉", "150克黄油", "2汤匙米特米塔（辣椒香料混合）", "1茶匙科塞雷特（干燥研磨）", "1/2茶匙黑豆蔻粉", "盐适量", "阿伊布奶酪或茅屋奶酪，配食用", "炒戈门（埃塞俄比亚甘蓝），配食用", "英吉拉，配食用"],
+    "ja": ["最高級牛ヒレ肉600g", "バター150g", "ミトミタ（唐辛子ミックス）大さじ2", "コセレット（乾燥、粉末）小さじ1", "黒カルダモンパウダー 小さじ1/2", "塩 適量", "アイブチーズまたはカッテージチーズ（添える用）", "炒めたゴメン（エチオピアケール、添える用）", "インジェラ（添える用）"],
+    "hi": ["600 ग्राम बहुत उच्च गुणवत्ता वाला बीफ टेंडरलॉइन", "150 ग्राम मक्खन", "2 बड़े चम्मच मिटमिटा (मिर्च मसाला मिश्रण)", "1 छोटी चम्मच कोसेरेट (सूखा, पिसा)", "1/2 छोटी चम्मच पिसी काली इलायची", "स्वादानुसार नमक", "अयिब चीज़ या कॉटेज चीज़, परोसने के लिए", "भुनी गोमेन (इथियोपियाई पत्तागोभी), परोसने के लिए", "इंजेरा, परोसने के लिए"],
+    "tr": ["600g çok kaliteli dana bonfile", "150g tereyağı", "2 yemek kaşığı mitmita (biber karışımı)", "1 çay kaşığı koseret (kurutulmuş, öğütülmüş)", "1/2 çay kaşığı öğütülmüş siyah kakule", "tuz, tadına göre", "servis için ayib peyniri veya lor peyniri", "servis için soteli gomen (Etiyopya lahanası)", "servis için incera"],
+    "it": ["600g di filetto di manzo di ottima qualità", "150g di burro", "2 cucchiai di mitmita (mix di peperoncino)", "1 cucchiaino di koseret (essiccato, macinato)", "1/2 cucchiaino di cardamomo nero macinato", "sale q.b.", "formaggio ayib o cottage, per servire", "gomen (cavolo etiope) saltato, per servire", "injera, per servire"],
+    "ko": ["아주 고급 소고기 안심 600g", "버터 150g", "미트미타(고추 향신료 믹스) 2큰술", "코세레트(건조 분말) 1작은술", "간 블랙 카다멈 1/2작은술", "소금 약간", "아이브 치즈 또는 코티지 치즈(곁들임용)", "볶은 고멘(에티오피아 케일, 곁들임용)", "인제라(곁들임용)"]
+  },
+  "howIsMade": {
+    "ro": ["PREGĂTEȘTE CARNEA: Curăță mușchiul de vită de tendoane și grăsime, apoi toacă-l foarte fin cu cuțitul, nu la robot.", "CLARIFICĂ UNTUL: Topește untul la foc mic, îndepărtează spuma, apoi adaugă koseret și cardamon și lasă să se infuzeze 5 minute.", "ADAUGĂ MITMITA: Amestecă mitmita în untul infuzat cald, apoi lasă să se răcească puțin, cât să rămână lichid.", "COMBINĂ: Toarnă untul condimentat peste carnea tocată și amestecă bine cu mâna sau o lingură de lemn.", "SĂREAZĂ: Adaugă sare după gust, amestecând ușor pentru a nu compacta carnea.", "MODELEAZĂ: Formează o movilă sau porții individuale pe farfurie.", "SERVEȘTE: Servește imediat, alături de ayib, gomen călit și injera proaspătă."],
+    "en": ["PREP THE MEAT: Trim the beef of sinew and fat, then mince it very finely by hand with a knife, not a food processor.", "CLARIFY THE BUTTER: Melt the butter over low heat, skim off the foam, then add koseret and cardamom and let infuse for 5 minutes.", "ADD MITMITA: Stir mitmita into the warm infused butter, then let it cool slightly so it stays liquid.", "COMBINE: Pour the spiced butter over the minced meat and mix well with your hand or a wooden spoon.", "SEASON: Add salt to taste, mixing gently so as not to compact the meat.", "SHAPE: Form a mound or individual portions on a plate.", "SERVE: Serve immediately, alongside ayib, sautéed gomen and fresh injera."],
+    "es": ["PREPARA LA CARNE: Limpia el solomillo de nervios y grasa, luego pícalo muy fino a mano con cuchillo, no en procesadora.", "CLARIFICA LA MANTEQUILLA: Derrite la mantequilla a fuego bajo, retira la espuma, luego añade koseret y cardamomo y deja infusionar 5 minutos.", "AÑADE LA MITMITA: Incorpora la mitmita en la mantequilla infusionada caliente, luego deja enfriar un poco para que siga líquida.", "COMBINA: Vierte la mantequilla especiada sobre la carne picada y mezcla bien con la mano o una cuchara de madera.", "SAZONA: Añade sal al gusto, mezclando con suavidad para no compactar la carne.", "DALE FORMA: Forma un montículo o porciones individuales en un plato.", "SIRVE: Sirve de inmediato, junto con ayib, gomen salteado e injera fresca."],
+    "fr": ["PRÉPAREZ LA VIANDE: Parez le filet de bœuf des nerfs et du gras, puis hachez-le très finement au couteau, pas au robot.", "CLARIFIEZ LE BEURRE: Faites fondre le beurre à feu doux, écumez, puis ajoutez le koseret et la cardamome et laissez infuser 5 minutes.", "AJOUTEZ LA MITMITA: Incorporez la mitmita au beurre infusé chaud, puis laissez refroidir légèrement pour qu'il reste liquide.", "COMBINEZ: Versez le beurre épicé sur la viande hachée et mélangez bien à la main ou à la cuillère en bois.", "ASSAISONNEZ: Ajoutez du sel selon le goût, en mélangeant doucement pour ne pas compacter la viande.", "FORMEZ: Formez un monticule ou des portions individuelles dans une assiette.", "SERVEZ: Servez immédiatement, avec de l'ayib, du gomen sauté et de l'injera fraîche."],
+    "de": ["FLEISCH VORBEREITEN: Das Rinderfilet von Sehnen und Fett befreien, dann sehr fein von Hand mit dem Messer hacken, nicht im Mixer.", "BUTTER KLÄREN: Die Butter bei niedriger Hitze schmelzen, den Schaum abschöpfen, dann Koseret und Kardamom zugeben und 5 Minuten ziehen lassen.", "MITMITA ZUGEBEN: Mitmita in die warme, aromatisierte Butter einrühren, dann leicht abkühlen lassen, damit sie flüssig bleibt.", "VERMISCHEN: Die gewürzte Butter über das gehackte Fleisch gießen und mit der Hand oder einem Holzlöffel gut vermengen.", "WÜRZEN: Nach Geschmack salzen, dabei vorsichtig mischen, um das Fleisch nicht zu verdichten.", "FORMEN: Zu einem Hügel oder Einzelportionen auf einem Teller formen.", "SERVIEREN: Sofort servieren, zusammen mit Ayib, sautiertem Gomen und frischer Injera."],
+    "pt": ["PREPARE A CARNE: Limpe o lombo de nervos e gordura, depois pique bem fino à mão com faca, não no processador.", "CLARIFIQUE A MANTEIGA: Derreta a manteiga em fogo baixo, retire a espuma, depois adicione o koseret e o cardamomo e deixe infusionar 5 minutos.", "ADICIONE A MITMITA: Misture a mitmita na manteiga aromatizada quente, depois deixe esfriar um pouco para que continue líquida.", "COMBINE: Despeje a manteiga temperada sobre a carne picada e misture bem com a mão ou uma colher de pau.", "TEMPERE: Adicione sal a gosto, misturando delicadamente para não compactar a carne.", "MODELE: Forme um monte ou porções individuais num prato.", "SIRVA: Sirva imediatamente, junto com ayib, gomen refogado e injera fresca."],
+    "ru": ["ПОДГОТОВЬТЕ МЯСО: Очистите вырезку от сухожилий и жира, затем очень мелко нарубите её вручную ножом, не в комбайне.", "ОСВЕТЛИТЕ МАСЛО: Растопите масло на слабом огне, снимите пену, затем добавьте косерет и кардамон и настаивайте 5 минут.", "ДОБАВЬТЕ МИТМИТУ: Вмешайте митмиту в тёплое ароматизированное масло, затем дайте немного остыть, чтобы оно оставалось жидким.", "СОЕДИНИТЕ: Полейте рубленое мясо пряным маслом и хорошо перемешайте рукой или деревянной ложкой.", "ПОСОЛИТЕ: Добавьте соль по вкусу, аккуратно перемешивая, чтобы не уплотнить мясо.", "СФОРМИРУЙТЕ: Сформируйте горку или порции на тарелке.", "ПОДАВАЙТЕ: Подавайте сразу, с айибом, тушёным гоменом и свежей инжерой."],
+    "ar": ["حضّري اللحم: نظّفي لحم الفيليه من الأوتار والدهون، ثم افرميه ناعمًا جدًا يدويًا بالسكين وليس بالمفرمة.", "صفّي الزبدة: أذيبي الزبدة على نار هادئة، أزيلي الرغوة، ثم أضيفي الكوسيريت والهيل واتركيها تنقع 5 دقائق.", "أضيفي الميتميتا: امزجي الميتميتا في الزبدة الدافئة المنقوعة، ثم اتركيها تبرد قليلًا لتبقى سائلة.", "امزجي: اسكبي الزبدة المتبلة على اللحم المفروم وامزجي جيدًا باليد أو بملعقة خشبية.", "تبّلي: أضيفي الملح حسب الرغبة، مع التقليب برفق لتجنب ضغط اللحم.", "شكّلي: شكّلي كومة أو حصصًا فردية على طبق.", "قدّمي: قدّمي فورًا مع الأييب والجومن المقلي والإنجيرا الطازجة."],
+    "zh": ["处理肉：将牛里脊去除筋膜和脂肪，然后用刀手工细细剁碎，不要用料理机。", "澄清黄油：小火融化黄油，撇去浮沫，加入科塞雷特和豆蔻，浸泡5分钟。", "加入米特米塔：将米特米塔拌入温热的调味黄油中，稍稍放凉使其保持液态。", "混合：将调味黄油浇在肉末上，用手或木勺充分搅拌。", "调味：加盐调味，轻轻搅拌以免压实肉末。", "整形：在盘中堆成小丘或分成单人份。", "上桌：立即配阿伊布奶酪、炒戈门和新鲜英吉拉食用。"],
+    "ja": ["肉の下ごしらえ：牛ヒレ肉から筋と脂を取り除き、フードプロセッサーではなく包丁で手作業で非常に細かく刻む。", "バターを澄ます：バターを弱火で溶かし、アクを取り除いてからコセレットとカルダモンを加え5分間香りを移す。", "ミトミタを加える：温かい香り付きバターにミトミタを混ぜ入れ、液状のまま保てるよう少し冷ます。", "合わせる：スパイスバターを刻んだ肉にかけ、手または木のスプーンでよく混ぜる。", "味付け：肉が締まらないよう優しく混ぜながら塩で味を調える。", "形を整える：皿の上に山盛りにするか、個々の分量に分ける。", "提供する：アイブ、炒めたゴメン、新鮮なインジェラを添えてすぐに提供する。"],
+    "hi": ["मांस तैयार करें: बीफ टेंडरलॉइन से नसें और चर्बी हटाएं, फिर चाकू से हाथ से बहुत बारीक कीमा करें, फूड प्रोसेसर से नहीं।", "मक्खन साफ़ करें: मक्खन को धीमी आंच पर पिघलाएं, झाग हटाएं, फिर कोसेरेट और इलायची डालकर 5 मिनट भिगोएं।", "मिटमिटा डालें: गर्म सुगंधित मक्खन में मिटमिटा मिलाएं, फिर थोड़ा ठंडा होने दें ताकि यह तरल बना रहे।", "मिलाएं: मसालेदार मक्खन को कीमा किए मांस पर डालें और हाथ या लकड़ी के चम्मच से अच्छी तरह मिलाएं।", "नमक डालें: स्वादानुसार नमक डालें, मांस को दबाए बिना धीरे से मिलाएं।", "आकार दें: प्लेट पर ढेर या अलग-अलग हिस्सों में आकार दें।", "परोसें: अयिब, भुनी गोमेन और ताज़ा इंजेरा के साथ तुरंत परोसें।"],
+    "tr": ["ETİ HAZIRLAYIN: Dana bonfileyi sinir ve yağdan temizleyin, sonra mutfak robotu değil bıçakla elle çok ince kıyın.", "TEREYAĞINI DURULTUN: Tereyağını kısık ateşte eritin, köpüğü alın, sonra koseret ve kakule ekleyip 5 dakika demlendirin.", "MİTMİTA EKLEYİN: Mitmitayı ılık, aromalı tereyağına karıştırın, sonra sıvı kalması için hafifçe soğumaya bırakın.", "BİRLEŞTİRİN: Baharatlı tereyağını kıyılmış etin üzerine dökün ve elinizle veya tahta kaşıkla iyice karıştırın.", "TATLANDIRIN: Tadına göre tuz ekleyin, eti sıkıştırmadan hafifçe karıştırın.", "ŞEKİL VERİN: Tabakta bir tepecik veya ayrı porsiyonlar halinde şekillendirin.", "SERVİS YAPIN: Ayib, soteli gomen ve taze incera ile hemen servis edin."],
+    "it": ["PREPARA LA CARNE: Pulisci il filetto da nervi e grasso, poi tritalo molto finemente a mano con un coltello, non con un robot.", "CHIARIFICA IL BURRO: Sciogli il burro a fuoco basso, elimina la schiuma, poi aggiungi koseret e cardamomo e lascia in infusione 5 minuti.", "AGGIUNGI LA MITMITA: Incorpora la mitmita nel burro caldo infuso, poi lascia raffreddare leggermente perché resti liquido.", "COMBINA: Versa il burro speziato sulla carne tritata e mescola bene con la mano o un cucchiaio di legno.", "INSAPORISCI: Aggiungi sale a piacere, mescolando delicatamente per non compattare la carne.", "MODELLA: Forma un cumulo o porzioni individuali su un piatto.", "SERVI: Servi subito, insieme ad ayib, gomen saltato e injera fresca."],
+    "ko": ["고기 준비하기: 소고기 안심에서 힘줄과 지방을 제거한 뒤, 푸드프로세서가 아닌 칼로 손질해 아주 곱게 다진다.", "버터 정제하기: 약불에서 버터를 녹이고 거품을 걷어낸 뒤 코세레트와 카다멈을 넣어 5분간 우려낸다.", "미트미타 넣기: 따뜻하게 우려낸 버터에 미트미타를 섞은 뒤, 액체 상태를 유지하도록 살짝 식힌다.", "섞기: 향신료 버터를 다진 고기에 부어 손이나 나무 숟가락으로 잘 섞는다.", "간하기: 고기가 뭉치지 않도록 살살 섞으며 소금으로 간한다.", "모양 내기: 접시에 봉긋하게 쌓거나 1인분씩 나누어 담는다.", "제공하기: 아이브, 볶은 고멘, 신선한 인제라와 함께 바로 제공한다."]
+  },
+  "originText": {
+    "ro": "Kitfo este unul dintre cele mai celebrate feluri de mâncare din bucătăria etiopiană, un tartar de vită condimentat, servit tradițional în ocazii festive și la sărbători precum nunțile. Se crede că originea sa se leagă de comunitatea Gurage din sudul Etiopiei, unde carnea crudă de vită de cea mai bună calitate a fost dintotdeauna considerată un semn de respect și ospitalitate față de oaspeți.\n\nDeși varianta clasică se servește crudă (tere), există și versiuni ușor căldicele (leb leb) sau bine făcute (yebesele), pentru cei care preferă carnea gătită. Kitfo se consumă aproape întotdeauna în cerc, dintr-o farfurie comună numită mesob, alături de familie sau prieteni, fiind un fel de mâncare profund social, nu doar culinar.",
+    "en": "Kitfo is one of the most celebrated dishes in Ethiopian cuisine, a spiced beef tartare traditionally served on festive occasions and celebrations such as weddings. Its origin is believed to be tied to the Gurage community of southern Ethiopia, where the finest quality raw beef has long been considered a sign of respect and hospitality toward guests.\n\nWhile the classic version is served raw (tere), there are also lightly warmed (leb leb) or well-done (yebesele) versions for those who prefer cooked meat. Kitfo is almost always eaten in a circle, from a shared plate called a mesob, alongside family or friends, making it a deeply social dish, not just a culinary one.",
+    "es": "El kitfo es uno de los platos más celebrados de la cocina etíope, un tartar de res especiado servido tradicionalmente en ocasiones festivas y celebraciones como bodas. Se cree que su origen está ligado a la comunidad gurage del sur de Etiopía, donde la carne cruda de res de mejor calidad siempre se consideró una muestra de respeto y hospitalidad hacia los invitados.\n\nAunque la versión clásica se sirve cruda (tere), también existen versiones ligeramente tibias (leb leb) o bien cocidas (yebesele) para quienes prefieren la carne cocinada. El kitfo casi siempre se come en círculo, de un plato compartido llamado mesob, junto a familia o amigos, siendo un plato profundamente social, no solo culinario.",
+    "fr": "Le kitfo est l'un des plats les plus célébrés de la cuisine éthiopienne, un tartare de bœuf épicé traditionnellement servi lors d'occasions festives et de célébrations comme les mariages. Son origine serait liée à la communauté guragué du sud de l'Éthiopie, où le bœuf cru de la meilleure qualité a toujours été considéré comme un signe de respect et d'hospitalité envers les invités.\n\nBien que la version classique soit servie crue (tere), il existe aussi des versions légèrement tièdes (leb leb) ou bien cuites (yebesele) pour ceux qui préfèrent la viande cuite. Le kitfo se mange presque toujours en cercle, dans une assiette commune appelée mesob, en famille ou entre amis, ce qui en fait un plat profondément social, pas seulement culinaire.",
+    "de": "Kitfo ist eines der berühmtesten Gerichte der äthiopischen Küche, ein gewürztes Rindertatar, das traditionell zu festlichen Anlässen und Feiern wie Hochzeiten serviert wird. Sein Ursprung wird der Gurage-Gemeinschaft im Süden Äthiopiens zugeschrieben, wo rohes Rindfleisch bester Qualität seit jeher als Zeichen von Respekt und Gastfreundschaft gegenüber Gästen galt.\n\nWährend die klassische Version roh (tere) serviert wird, gibt es auch leicht erwärmte (leb leb) oder gut durchgegarte (yebesele) Varianten für diejenigen, die gekochtes Fleisch bevorzugen. Kitfo wird fast immer im Kreis von einem gemeinsamen Teller namens Mesob gegessen, zusammen mit Familie oder Freunden, was es zu einem zutiefst sozialen und nicht nur kulinarischen Gericht macht.",
+    "pt": "O kitfo é um dos pratos mais celebrados da culinária etíope, um tártaro de carne apimentado servido tradicionalmente em ocasiões festivas e celebrações como casamentos. Acredita-se que a sua origem esteja ligada à comunidade gurage do sul da Etiópia, onde a carne crua de melhor qualidade sempre foi considerada um sinal de respeito e hospitalidade para com os convidados.\n\nEmbora a versão clássica seja servida crua (tere), também existem versões levemente mornas (leb leb) ou bem passadas (yebesele) para quem prefere a carne cozida. O kitfo é quase sempre comido em círculo, num prato partilhado chamado mesob, junto de família ou amigos, sendo um prato profundamente social, não apenas culinário.",
+    "ru": "Китфо — одно из самых прославленных блюд эфиопской кухни, пряный говяжий тартар, традиционно подаваемый по праздничным поводам и торжествам, таким как свадьбы. Считается, что его происхождение связано с общиной гураге на юге Эфиопии, где сырая говядина высшего качества издавна считалась знаком уважения и гостеприимства по отношению к гостям.\n\nХотя классический вариант подаётся сырым (тере), существуют также слегка подогретые (леб леб) или хорошо прожаренные (йебеселе) варианты для тех, кто предпочитает приготовленное мясо. Китфо почти всегда едят по кругу, с общей тарелки, называемой месоб, вместе с семьёй или друзьями, что делает его глубоко социальным, а не только кулинарным блюдом.",
+    "ar": "الكيتفو من أشهر أطباق المطبخ الإثيوبي، وهو تارتار لحم بقري متبل يُقدَّم تقليديًا في المناسبات الاحتفالية مثل حفلات الزفاف. يُعتقد أن أصله مرتبط بمجتمع الغوراغي في جنوب إثيوبيا، حيث اعتُبر اللحم البقري النيء الفاخر منذ القدم علامة على الاحترام وكرم الضيافة تجاه الضيوف.\n\nرغم أن النسخة الكلاسيكية تُقدَّم نيئة (تيري)، توجد أيضًا نسخ دافئة قليلًا (ليب ليب) أو مطهوة جيدًا (يبيسيلي) لمن يفضلون اللحم المطبوخ. يُؤكل الكيتفو دائمًا تقريبًا في حلقة، من طبق مشترك يُسمى ميسوب، مع العائلة أو الأصدقاء، ما يجعله طبقًا اجتماعيًا عميقًا وليس مجرد طبق طهي.",
+    "zh": "基特福是埃塞俄比亚饮食中最负盛名的菜肴之一，一种香料牛肉塔塔，传统上在婚礼等喜庆场合和庆典中供应。据信它的起源与埃塞俄比亚南部的古拉盖族群有关，在那里，最优质的生牛肉一直被视为对客人表示尊重和好客的象征。\n\n虽然经典做法是生食（tere），但也有稍加温热（leb leb）或全熟（yebesele）的版本，供偏爱熟肉的人选择。基特福几乎总是围坐一圈，从一个叫做mesob的共用盘子里取食，与家人或朋友一起分享，使其成为一道极具社交意义而不仅仅是烹饪意义的菜肴。",
+    "ja": "キトフォはエチオピア料理の中でも最も名高い料理の一つで、結婚式などの祝いの席で伝統的に供されるスパイス牛肉のタルタルである。その起源はエチオピア南部のグラゲ族に結びついていると考えられており、最高級の生牛肉は昔から客人への敬意とおもてなしの印とされてきた。\n\n古典的な生の状態（テレ）で提供されるのが一般的だが、加熱した肉を好む人のために軽く温めたもの（レブレブ）やよく火を通したもの（イェベセレ）もある。キトフォはほとんどの場合、メソブと呼ばれる共有の皿から、家族や友人と輪になって食べられ、単なる料理としてだけでなく、深く社会的な意味を持つ料理となっている。",
+    "hi": "किटफो इथियोपियाई भोजन के सबसे प्रसिद्ध व्यंजनों में से एक है, एक मसालेदार बीफ टार्टर जो पारंपरिक रूप से शादियों जैसे उत्सव के अवसरों पर परोसा जाता है। माना जाता है कि इसकी उत्पत्ति दक्षिणी इथियोपिया के गुरागे समुदाय से जुड़ी है, जहाँ सबसे अच्छी गुणवत्ता वाला कच्चा बीफ हमेशा से मेहमानों के प्रति सम्मान और आतिथ्य का प्रतीक माना जाता रहा है।\n\nजबकि क्लासिक संस्करण कच्चा (तेरे) परोसा जाता है, पके हुए मांस को पसंद करने वालों के लिए हल्का गर्म (लेब लेब) या अच्छी तरह पका (येबेसेले) संस्करण भी उपलब्ध है। किटफो लगभग हमेशा एक साझा थाली, जिसे मेसोब कहते हैं, से परिवार या दोस्तों के साथ मंडली में खाया जाता है, जो इसे केवल पाक-कला नहीं बल्कि गहराई से सामाजिक व्यंजन बनाता है।",
+    "tr": "Kitfo, geleneksel olarak düğün gibi kutlama ve şenlik vesileleriyle servis edilen baharatlı bir dana çiğ köftesi olup, Etiyopya mutfağının en ünlü yemeklerinden biridir. Kökeninin, en kaliteli çiğ dana etinin misafirlere saygı ve konukseverlik göstergesi sayıldığı güney Etiyopya'daki Gurage topluluğuna bağlı olduğuna inanılır.\n\nKlasik versiyon çiğ (tere) servis edilse de, pişmiş eti tercih edenler için hafif ılık (leb leb) veya iyi pişmiş (yebesele) versiyonları da bulunur. Kitfo neredeyse her zaman mesob adı verilen ortak bir tabaktan, aile veya arkadaşlarla birlikte çember halinde yenir; bu da onu sadece mutfak değil, derinden sosyal bir yemek haline getirir.",
+    "it": "Il kitfo è uno dei piatti più celebrati della cucina etiope, una tartare di manzo speziata servita tradizionalmente in occasioni festive e celebrazioni come i matrimoni. Si ritiene che le sue origini siano legate alla comunità gurage del sud dell'Etiopia, dove la carne cruda di manzo di massima qualità è sempre stata considerata un segno di rispetto e ospitalità verso gli ospiti.\n\nSebbene la versione classica sia servita cruda (tere), esistono anche versioni leggermente tiepide (leb leb) o ben cotte (yebesele) per chi preferisce la carne cotta. Il kitfo viene quasi sempre mangiato in cerchio, da un piatto condiviso chiamato mesob, insieme a famiglia o amici, rendendolo un piatto profondamente sociale, non solo culinario.",
+    "ko": "키트포는 에티오피아 요리 중 가장 유명한 음식 중 하나로, 결혼식과 같은 축하 자리와 기념일에 전통적으로 제공되는 향신료 소고기 타르타르이다. 그 기원은 에티오피아 남부의 구라게 공동체와 관련이 있다고 여겨지며, 그곳에서는 최상급 생소고기가 오래전부터 손님에 대한 존중과 환대의 표시로 여겨져 왔다.\n\n클래식 버전은 생으로(테레) 제공되지만, 익힌 고기를 선호하는 사람들을 위해 살짝 데운 버전(레브 레브)이나 완전히 익힌 버전(예베셀레)도 있다. 키트포는 거의 항상 메소브라 불리는 공용 접시에서 가족이나 친구들과 둘러앉아 함께 먹으며, 이는 단순한 요리가 아니라 깊은 사회적 의미를 지닌 음식으로 만든다."
+  },
+  "meta": {
+    "time": 30,
+    "costRon": 45,
+    "tags": ["high-protein", "quick"],
+    "desc": {
+      "ro": "Tartar de vită etiopian condimentat cu unt mitmita, servit cu ayib și injera.",
+      "en": "Ethiopian beef tartare spiced with mitmita butter, served with ayib and injera.",
+      "es": "Tartar de res etíope especiado con mantequilla mitmita, servido con ayib e injera.",
+      "fr": "Tartare de bœuf éthiopien épicé au beurre mitmita, servi avec ayib et injera.",
+      "de": "Äthiopisches Rindertatar mit Mitmita-Butter gewürzt, serviert mit Ayib und Injera.",
+      "pt": "Tártaro de carne etíope apimentado com manteiga mitmita, servido com ayib e injera.",
+      "ru": "Эфиопский тартар из говядины с маслом митмита, подаётся с айибом и инжерой.",
+      "ar": "تارتار لحم بقري إثيوبي متبل بزبدة الميتميتا، يُقدَّم مع الأييب والإنجيرا.",
+      "zh": "以米特米塔黄油调味的埃塞俄比亚牛肉塔塔，配阿伊布奶酪和英吉拉食用。",
+      "ja": "ミトミタバターで味付けしたエチオピア風牛肉タルタル、アイブとインジェラを添えて。",
+      "hi": "मिटमिटा मक्खन से मसालेदार इथियोपियाई बीफ टार्टर, अयिब और इंजेरा के साथ परोसा गया।",
+      "tr": "Mitmita tereyağıyla baharatlanmış Etiyopya usulü çiğ köfte, ayib ve incera ile servis edilir.",
+      "it": "Tartare di manzo etiope speziata con burro al mitmita, servita con ayib e injera.",
+      "ko": "미트미타 버터로 향을 낸 에티오피아식 소고기 타르타르, 아이브와 인제라를 곁들여 제공."
+    }
+  }
+}

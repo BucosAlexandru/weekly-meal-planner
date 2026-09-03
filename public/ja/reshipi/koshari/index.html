@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <span>コシャリ</span>
+    <a href="/">ホーム</a> › <a href="/ja/reshipi/">レシピ</a> › <a href="/ja/reshipi/egypt/">エジプト</a> › <span>コシャリ</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="koshari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="コシャリ" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Egyptian_food_Koshary.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇬 ランチ · エジプト</div>
+      <div class="recipe-badge">🇪🇬 ランチ · <a class="recipe-badge-origin" href="/ja/reshipi/egypt/">エジプト</a></div>
       <h1>コシャリ</h1>
       <p class="recipe-tagline">コシャリはエジプトの国民的ストリートフードで、カイロやアレクサンドリア全土の屋台や店舗で売られています。これは交差点の料理です — ライス、茶色いレンズ豆、マカロニ、ひよこ豆が重ねて盛られ、食材の組み合わせはエジプトが貿易の拠点として歩んだ歴史を反映しています。マカロニは19世紀にイタリア商人とともに伝わり、20世紀初頭に労働者のための安価で腹持ちの良い食事として完成しました。
 
@@ -171,7 +171,43 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇬 エジプトのその他のレシピ</h2>
+      <a href="/ja/reshipi/egypt/">全レシピを見る →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/ja/reshipi/molokhia-jute-leaf-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="molokhia-jute-leaf-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">モロヘイヤ（麻の葉のシチュー）</p>
+    <span class="recipe-card-meta">35m · 簡単</span>
+  </div>
+</a><a href="/ja/reshipi/ta-ameya-egyptian-fava-bean-falafel/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="ta-ameya-egyptian-fava-bean-falafel">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">ターメイヤ（エジプト風そら豆ファラフェル）</p>
+    <span class="recipe-card-meta">40m · 簡単</span>
+  </div>
+</a><a href="/ja/reshipi/om-ali-egyptian-bread-pudding/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="om-ali-egyptian-bread-pudding">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">オム・アリ（エジプト風パイ生地のミルクプディング）</p>
+    <span class="recipe-card-meta">40m · 簡単</span>
+  </div>
+</a><a href="/ja/reshipi/feteer-meshaltet-egyptian-layered-flatbread/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="feteer-meshaltet-egyptian-layered-flatbread">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">フィティール・メシャルテト（エジプト風層状パン）</p>
+    <span class="recipe-card-meta">40m · 簡単</span>
+  </div>
+</a><a href="/ja/reshipi/basbousa-egyptian-semolina-cake/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="basbousa-egyptian-semolina-cake">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">バスブーサ（エジプトのセモリナケーキ）</p>
+    <span class="recipe-card-meta">40m · 普通</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -222,13 +258,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/ja/reshipi/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ja/reshipi/egypt/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="レシピ"
+   aria-label="エジプト"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">レシピ</span>
+  <span class="rmb-label">エジプト</span>
 </a>
 
 </main>

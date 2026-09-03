@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <span>Koshari</span>
+    <a href="/">Início</a> › <a href="/pt/receitas/">Receitas</a> › <a href="/pt/receitas/egypt/">Egito</a> › <span>Koshari</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="koshari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="Koshari" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Egyptian_food_Koshary.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇬 Almoço · Egito</div>
+      <div class="recipe-badge">🇪🇬 Almoço · <a class="recipe-badge-origin" href="/pt/receitas/egypt/">Egito</a></div>
       <h1>Koshari</h1>
       <p class="recipe-tagline">O koshari é a comida de rua nacional do Egito, vendido em carrinhos e lojas por todo o Cairo e Alexandria. É uma refeição de cruzamento — arroz, lentilhas castanhas, macarrão e grão-de-bico em camadas — e a sua mistura de ingredientes reflete a história do Egito como entreposto comercial. O macarrão chegou com os comerciantes italianos no século XIX; o prato completo tomou forma no início do século XX como combustível barato e saciante para trabalhadores.
 
@@ -170,7 +170,43 @@ A base de amido é coberta com dois molhos: um molho de tomate temperado com com
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇬 Mais receitas de Egito</h2>
+      <a href="/pt/receitas/egypt/">Ver todas as receitas →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/pt/receitas/molokhia-jute-leaf-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="molokhia-jute-leaf-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Molokhia (Guisado de folhas de juta)</p>
+    <span class="recipe-card-meta">35m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/ta-ameya-egyptian-fava-bean-falafel/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="ta-ameya-egyptian-fava-bean-falafel">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Ta'ameya (Falafel egípcio de fava)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/om-ali-egyptian-bread-pudding/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="om-ali-egyptian-bread-pudding">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Om Ali (Pudim de folhado com leite)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/feteer-meshaltet-egyptian-layered-flatbread/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="feteer-meshaltet-egyptian-layered-flatbread">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Feteer Meshaltet (Folhado egípcio)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a><a href="/pt/receitas/basbousa-egyptian-semolina-cake/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="basbousa-egyptian-semolina-cake">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Basbousa (Bolo de Sêmola Egípcio)</p>
+    <span class="recipe-card-meta">40m · Fácil</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -221,13 +257,13 @@ A base de amido é coberta com dois molhos: um molho de tomate temperado com com
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/pt/receitas/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/pt/receitas/egypt/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="Receitas"
+   aria-label="Egito"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Receitas</span>
+  <span class="rmb-label">Egito</span>
 </a>
 
 </main>

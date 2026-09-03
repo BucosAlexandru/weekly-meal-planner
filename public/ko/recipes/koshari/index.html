@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <span>코샤리</span>
+    <a href="/">홈</a> › <a href="/ko/recipes/">레시피</a> › <a href="/ko/recipes/egypt/">이집트</a> › <span>코샤리</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="koshari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="코샤리" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Egyptian_food_Koshary.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇬 점심 · 이집트</div>
+      <div class="recipe-badge">🇪🇬 점심 · <a class="recipe-badge-origin" href="/ko/recipes/egypt/">이집트</a></div>
       <h1>코샤리</h1>
       <p class="recipe-tagline">코샤리는 이집트의 국민 길거리 음식으로, 카이로와 알렉산드리아 전역의 노점과 가게에서 판매됩니다. 이 음식은 교차로의 요리입니다 — 쌀, 갈색 렌즈콩, 마카로니, 병아리콩을 층층이 쌓은 구성이며, 이 다양한 식재료는 이집트의 무역 거점 역사를 반영합니다. 마카로니는 19세기 이탈리아 상인들을 통해 전해졌고, 완성된 형태의 요리는 20세기 초 노동자들의 저렴하고 든든한 식사로 자리 잡았습니다.
 
@@ -170,7 +170,43 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇬 이집트의 더 많은 레시피</h2>
+      <a href="/ko/recipes/egypt/">모든 레시피 보기 →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/ko/recipes/molokhia-jute-leaf-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="molokhia-jute-leaf-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">몰로키야 (마 잎 스튜)</p>
+    <span class="recipe-card-meta">35m · 쉬움</span>
+  </div>
+</a><a href="/ko/recipes/ta-ameya-egyptian-fava-bean-falafel/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="ta-ameya-egyptian-fava-bean-falafel">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">타아메야 (이집트식 잠두 팔라펠)</p>
+    <span class="recipe-card-meta">40m · 쉬움</span>
+  </div>
+</a><a href="/ko/recipes/om-ali-egyptian-bread-pudding/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="om-ali-egyptian-bread-pudding">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">움 알리 (이집트 페이스트리 우유 푸딩)</p>
+    <span class="recipe-card-meta">40m · 쉬움</span>
+  </div>
+</a><a href="/ko/recipes/feteer-meshaltet-egyptian-layered-flatbread/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="feteer-meshaltet-egyptian-layered-flatbread">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">페티르 메샬테트 (이집트식 겹겹 플랫브레드)</p>
+    <span class="recipe-card-meta">40m · 쉬움</span>
+  </div>
+</a><a href="/ko/recipes/basbousa-egyptian-semolina-cake/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="basbousa-egyptian-semolina-cake">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">바스부사 (이집트 세몰리나 케이크)</p>
+    <span class="recipe-card-meta">40m · 쉬움</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -221,13 +257,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/ko/recipes/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ko/recipes/egypt/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="레시피"
+   aria-label="이집트"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">레시피</span>
+  <span class="rmb-label">이집트</span>
 </a>
 
 </main>

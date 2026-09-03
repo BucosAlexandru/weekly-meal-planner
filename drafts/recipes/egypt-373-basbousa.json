@@ -1,0 +1,209 @@
+{
+  "id": 373,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Egipt",
+    "en": "Egypt",
+    "es": "Egipto",
+    "fr": "Égypte",
+    "de": "Ägypten",
+    "pt": "Egito",
+    "ru": "Египет",
+    "ar": "مصر",
+    "zh": "埃及",
+    "ja": "エジプト",
+    "hi": "मिस्र",
+    "tr": "Mısır",
+    "it": "Egitto",
+    "ko": "이집트"
+  },
+  "name": {
+    "ro": "Basbousa (Prăjitură de Griș cu Sirop)",
+    "en": "Basbousa (Egyptian Semolina Cake)",
+    "es": "Basbousa (Pastel de Sémola Egipcio)",
+    "fr": "Basbousa (Gâteau de Semoule Égyptien)",
+    "de": "Basbousa (Ägyptischer Grießkuchen)",
+    "pt": "Basbousa (Bolo de Sêmola Egípcio)",
+    "ru": "Басбуса (Египетский Манный Пирог)",
+    "ar": "بسبوسة",
+    "zh": "巴斯布萨（埃及粗麦粉蛋糕）",
+    "ja": "バスブーサ（エジプトのセモリナケーキ）",
+    "hi": "बसबूसा (मिस्री सूजी केक)",
+    "tr": "Basbousa (Mısır İrmik Tatlısı)",
+    "it": "Basbousa (Torta di Semolino Egiziana)",
+    "ko": "바스부사 (이집트 세몰리나 케이크)"
+  },
+  "category": {
+    "ro": "Desert",
+    "en": "Dessert",
+    "es": "Postre",
+    "fr": "Dessert",
+    "de": "Dessert",
+    "pt": "Sobremesa",
+    "ru": "Десерт",
+    "ar": "حلوى",
+    "zh": "甜点",
+    "ja": "デザート",
+    "hi": "मिठाई",
+    "tr": "Tatlı",
+    "it": "Dolce",
+    "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🌾", "t": "Bază de griș", "d": "Textura densă și granulată vine din griș fin, nu din făină." },
+      { "icon": "🍯", "t": "Sirop parfumat", "d": "Sirop de zahăr cu apă de flori de portocal, turnat cald peste prăjitura fierbinte." },
+      { "icon": "🥥", "t": "Nucă de cocos", "d": "Cocosul ras aduce o aromă dulce-tropicală specifică rețetei clasice." },
+      { "icon": "🥜", "t": "Migdală deasupra", "d": "Fiecare bucată pătrată sau romb e decorată tradițional cu o migdală întreagă." }
+    ],
+    "en": [
+      { "icon": "🌾", "t": "Semolina base", "d": "The dense, grainy texture comes from fine semolina, not flour." },
+      { "icon": "🍯", "t": "Fragrant syrup", "d": "Orange-blossom sugar syrup poured warm over the hot cake." },
+      { "icon": "🥥", "t": "Coconut", "d": "Shredded coconut gives the classic recipe its sweet, tropical note." },
+      { "icon": "🥜", "t": "Almond topping", "d": "Each diamond-cut piece is traditionally topped with a whole almond." }
+    ],
+    "es": [
+      { "icon": "🌾", "t": "Base de sémola", "d": "La textura densa y granulada viene de la sémola fina, no de harina." },
+      { "icon": "🍯", "t": "Almíbar aromático", "d": "Almíbar de agua de azahar vertido caliente sobre el pastel recién horneado." },
+      { "icon": "🥥", "t": "Coco", "d": "El coco rallado aporta la nota dulce y tropical de la receta clásica." },
+      { "icon": "🥜", "t": "Almendra encima", "d": "Cada pieza en forma de rombo se decora tradicionalmente con una almendra entera." }
+    ],
+    "fr": [
+      { "icon": "🌾", "t": "Base de semoule", "d": "La texture dense et granuleuse vient de la semoule fine, pas de la farine." },
+      { "icon": "🍯", "t": "Sirop parfumé", "d": "Sirop de sucre à la fleur d'oranger versé chaud sur le gâteau sortant du four." },
+      { "icon": "🥥", "t": "Noix de coco", "d": "La noix de coco râpée apporte la note sucrée et tropicale de la recette classique." },
+      { "icon": "🥜", "t": "Amande dessus", "d": "Chaque losange est traditionnellement décoré d'une amande entière." }
+    ],
+    "de": [
+      { "icon": "🌾", "t": "Grießbasis", "d": "Die dichte, körnige Textur kommt von feinem Grieß, nicht von Mehl." },
+      { "icon": "🍯", "t": "Duftender Sirup", "d": "Zuckersirup mit Orangenblütenwasser, warm über den heißen Kuchen gegossen." },
+      { "icon": "🥥", "t": "Kokosnuss", "d": "Geraspelte Kokosnuss gibt dem klassischen Rezept seine süß-tropische Note." },
+      { "icon": "🥜", "t": "Mandel obenauf", "d": "Jedes rautenförmige Stück wird traditionell mit einer ganzen Mandel verziert." }
+    ],
+    "pt": [
+      { "icon": "🌾", "t": "Base de sêmola", "d": "A textura densa e granulada vem da sêmola fina, não da farinha." },
+      { "icon": "🍯", "t": "Calda perfumada", "d": "Calda de açúcar com água de flor de laranjeira, despejada quente sobre o bolo." },
+      { "icon": "🥥", "t": "Coco", "d": "O coco ralado dá a nota doce e tropical da receita clássica." },
+      { "icon": "🥜", "t": "Amêndoa por cima", "d": "Cada pedaço em losango é tradicionalmente decorado com uma amêndoa inteira." }
+    ],
+    "ru": [
+      { "icon": "🌾", "t": "Основа из манки", "d": "Плотная, зернистая текстура — от мелкой манной крупы, а не муки." },
+      { "icon": "🍯", "t": "Ароматный сироп", "d": "Сахарный сироп с водой из цветков апельсина, вылитый тёплым на горячий пирог." },
+      { "icon": "🥥", "t": "Кокос", "d": "Тёртый кокос придаёт классическому рецепту сладкую тропическую нотку." },
+      { "icon": "🥜", "t": "Миндаль сверху", "d": "Каждый ромбовидный кусочек традиционно украшен целым миндальным орехом." }
+    ],
+    "ar": [
+      { "icon": "🌾", "t": "أساس من السميد", "d": "القوام الكثيف والحبيبي يأتي من السميد الناعم وليس الدقيق." },
+      { "icon": "🍯", "t": "شربات معطر", "d": "شربات سكر بماء الزهر يُسكب دافئًا فوق الكعكة الساخنة." },
+      { "icon": "🥥", "t": "جوز الهند", "d": "جوز الهند المبشور يمنح الوصفة الكلاسيكية نكهتها الحلوة والاستوائية." },
+      { "icon": "🥜", "t": "لوزة أعلى القطعة", "d": "تُزيَّن كل قطعة معينية الشكل تقليديًا بلوزة كاملة." }
+    ],
+    "zh": [
+      { "icon": "🌾", "t": "粗麦粉基底", "d": "细腻的粗麦粉而非面粉，造就了紧实颗粒状的口感。" },
+      { "icon": "🍯", "t": "芳香糖浆", "d": "含橙花水的糖浆，趁热浇在刚出炉的热蛋糕上。" },
+      { "icon": "🥥", "t": "椰丝", "d": "椰丝为经典配方带来香甜的热带风味。" },
+      { "icon": "🥜", "t": "杏仁装饰", "d": "每块菱形切块传统上都会点缀一整颗杏仁。" }
+    ],
+    "ja": [
+      { "icon": "🌾", "t": "セモリナ粉のベース", "d": "小麦粉ではなく、きめ細かいセモリナ粉が密で粒感のある食感を生む。" },
+      { "icon": "🍯", "t": "香り高いシロップ", "d": "オレンジフラワーウォーター入りの砂糖シロップを、焼き立ての熱いケーキに温かいまま注ぐ。" },
+      { "icon": "🥥", "t": "ココナッツ", "d": "削りココナッツが、伝統的なレシピに甘く南国風の風味を加える。" },
+      { "icon": "🥜", "t": "アーモンドのトッピング", "d": "ひし形にカットした各ピースには、伝統的にアーモンドが一粒飾られる。" }
+    ],
+    "hi": [
+      { "icon": "🌾", "t": "सूजी का आधार", "d": "घना, दानेदार बनावट आटे से नहीं बल्कि बारीक सूजी से आती है।" },
+      { "icon": "🍯", "t": "सुगंधित चाशनी", "d": "संतरे के फूल के पानी वाली चीनी की चाशनी, गर्म केक पर गर्म ही डाली जाती है।" },
+      { "icon": "🥥", "t": "नारियल", "d": "कद्दूकस किया नारियल क्लासिक रेसिपी को मीठा, उष्णकटिबंधीय स्वाद देता है।" },
+      { "icon": "🥜", "t": "ऊपर बादाम", "d": "हीरे के आकार के हर टुकड़े को परंपरागत रूप से एक साबुत बादाम से सजाया जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🌾", "t": "İrmik tabanı", "d": "Yoğun, taneli doku undan değil, ince irmikten gelir." },
+      { "icon": "🍯", "t": "Kokulu şerbet", "d": "Portakal çiçeği suyu katılmış şeker şerbeti, sıcak keke ılık dökülür." },
+      { "icon": "🥥", "t": "Hindistan cevizi", "d": "Rendelenmiş hindistan cevizi klasik tarife tatlı, tropikal bir nota katar." },
+      { "icon": "🥜", "t": "Üzerinde badem", "d": "Baklava dilimi şeklinde kesilen her parça geleneksel olarak bütün bir bademle süslenir." }
+    ],
+    "it": [
+      { "icon": "🌾", "t": "Base di semolino", "d": "La consistenza densa e granulosa deriva dal semolino fine, non dalla farina." },
+      { "icon": "🍯", "t": "Sciroppo profumato", "d": "Sciroppo di zucchero all'acqua di fiori d'arancio, versato caldo sulla torta appena sfornata." },
+      { "icon": "🥥", "t": "Cocco", "d": "Il cocco grattugiato dona alla ricetta classica la sua nota dolce e tropicale." },
+      { "icon": "🥜", "t": "Mandorla in cima", "d": "Ogni pezzo tagliato a rombo è tradizionalmente decorato con una mandorla intera." }
+    ],
+    "ko": [
+      { "icon": "🌾", "t": "세몰리나 베이스", "d": "밀가루가 아닌 고운 세몰리나가 촘촘하고 알갱이가 씹히는 식감을 만든다." },
+      { "icon": "🍯", "t": "향긋한 시럽", "d": "오렌지 블라섬 워터를 넣은 설탕 시럽을 갓 구운 뜨거운 케이크 위에 따뜻하게 붓는다." },
+      { "icon": "🥥", "t": "코코넛", "d": "채 썬 코코넛이 클래식 레시피에 달콤한 열대 풍미를 더한다." },
+      { "icon": "🥜", "t": "아몬드 토핑", "d": "마름모꼴로 자른 각 조각 위에는 전통적으로 통아몬드 한 알을 올린다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["2 căni griș fin", "1/2 cană nucă de cocos rasă", "1/2 cană zahăr", "1 linguriță praf de copt", "1 cană iaurt gras", "1/2 cană unt topit", "1 cană zahăr (pentru sirop)", "1/2 cană apă", "1 lingură apă de flori de portocal", "1 linguriță suc de lămâie", "16 migdale întregi decojite"],
+    "en": ["2 cups fine semolina", "1/2 cup shredded coconut", "1/2 cup sugar", "1 tsp baking powder", "1 cup full-fat yogurt", "1/2 cup melted butter", "1 cup sugar (for syrup)", "1/2 cup water", "1 tbsp orange blossom water", "1 tsp lemon juice", "16 whole blanched almonds"],
+    "es": ["2 tazas de sémola fina", "1/2 taza de coco rallado", "1/2 taza de azúcar", "1 cucharadita de levadura en polvo", "1 taza de yogur entero", "1/2 taza de mantequilla derretida", "1 taza de azúcar (para el almíbar)", "1/2 taza de agua", "1 cucharada de agua de azahar", "1 cucharadita de zumo de limón", "16 almendras enteras peladas"],
+    "fr": ["2 tasses de semoule fine", "1/2 tasse de noix de coco râpée", "1/2 tasse de sucre", "1 c. à café de levure chimique", "1 tasse de yaourt entier", "1/2 tasse de beurre fondu", "1 tasse de sucre (pour le sirop)", "1/2 tasse d'eau", "1 c. à soupe d'eau de fleur d'oranger", "1 c. à café de jus de citron", "16 amandes entières mondées"],
+    "de": ["2 Tassen feiner Grieß", "1/2 Tasse geraspelte Kokosnuss", "1/2 Tasse Zucker", "1 TL Backpulver", "1 Tasse Vollmilchjoghurt", "1/2 Tasse geschmolzene Butter", "1 Tasse Zucker (für den Sirup)", "1/2 Tasse Wasser", "1 EL Orangenblütenwasser", "1 TL Zitronensaft", "16 ganze blanchierte Mandeln"],
+    "pt": ["2 xícaras de sêmola fina", "1/2 xícara de coco ralado", "1/2 xícara de açúcar", "1 colher (chá) de fermento em pó", "1 xícara de iogurte integral", "1/2 xícara de manteiga derretida", "1 xícara de açúcar (para a calda)", "1/2 xícara de água", "1 colher (sopa) de água de flor de laranjeira", "1 colher (chá) de suco de limão", "16 amêndoas inteiras sem pele"],
+    "ru": ["2 стакана мелкой манной крупы", "1/2 стакана тёртого кокоса", "1/2 стакана сахара", "1 ч.л. разрыхлителя", "1 стакан жирного йогурта", "1/2 стакана растопленного масла", "1 стакан сахара (для сиропа)", "1/2 стакана воды", "1 ст.л. воды из цветков апельсина", "1 ч.л. лимонного сока", "16 целых очищенных миндальных орехов"],
+    "ar": ["كوبان سميد ناعم", "1/2 كوب جوز هند مبشور", "1/2 كوب سكر", "ملعقة صغيرة بيكنج بودر", "كوب زبادي كامل الدسم", "1/2 كوب زبدة مذابة", "كوب سكر (للشربات)", "1/2 كوب ماء", "ملعقة كبيرة ماء زهر", "ملعقة صغيرة عصير ليمون", "16 حبة لوز مقشر كامل"],
+    "zh": ["2杯细粗麦粉", "1/2杯椰丝", "1/2杯糖", "1茶匙泡打粉", "1杯全脂酸奶", "1/2杯融化黄油", "1杯糖（用于糖浆）", "1/2杯水", "1汤匙橙花水", "1茶匙柠檬汁", "16颗去皮整杏仁"],
+    "ja": ["セモリナ粉（細挽き）2カップ", "削りココナッツ 1/2カップ", "砂糖 1/2カップ", "ベーキングパウダー 小さじ1", "全脂ヨーグルト 1カップ", "溶かしバター 1/2カップ", "砂糖（シロップ用）1カップ", "水 1/2カップ", "オレンジフラワーウォーター 大さじ1", "レモン汁 小さじ1", "皮なしアーモンド（丸のまま）16粒"],
+    "hi": ["2 कप बारीक सूजी", "1/2 कप कद्दूकस नारियल", "1/2 कप चीनी", "1 छोटी चम्मच बेकिंग पाउडर", "1 कप फुल-फैट दही", "1/2 कप पिघला मक्खन", "1 कप चीनी (चाशनी के लिए)", "1/2 कप पानी", "1 बड़ा चम्मच संतरे के फूल का पानी", "1 छोटी चम्मच नींबू का रस", "16 साबुत छिले बादाम"],
+    "tr": ["2 su bardağı ince irmik", "1/2 su bardağı rendelenmiş hindistan cevizi", "1/2 su bardağı şeker", "1 çay kaşığı kabartma tozu", "1 su bardağı tam yağlı yoğurt", "1/2 su bardağı eritilmiş tereyağı", "1 su bardağı şeker (şerbet için)", "1/2 su bardağı su", "1 yemek kaşığı portakal çiçeği suyu", "1 çay kaşığı limon suyu", "16 adet kabuksuz bütün badem"],
+    "it": ["2 tazze di semolino fine", "1/2 tazza di cocco grattugiato", "1/2 tazza di zucchero", "1 cucchiaino di lievito per dolci", "1 tazza di yogurt intero", "1/2 tazza di burro fuso", "1 tazza di zucchero (per lo sciroppo)", "1/2 tazza d'acqua", "1 cucchiaio di acqua di fiori d'arancio", "1 cucchiaino di succo di limone", "16 mandorle intere spellate"],
+    "ko": ["고운 세몰리나 2컵", "채 썬 코코넛 1/2컵", "설탕 1/2컵", "베이킹파우더 1작은술", "전지 요거트 1컵", "녹인 버터 1/2컵", "설탕 1컵(시럽용)", "물 1/2컵", "오렌지 블라섬 워터 1큰술", "레몬즙 1작은술", "껍질 벗긴 통아몬드 16개"]
+  },
+  "howIsMade": {
+    "ro": ["AMESTECĂ: Combină grișul, cocosul, zahărul și praful de copt într-un bol mare.", "ADAUGĂ UMEZEALĂ: Încorporează iaurtul și untul topit, amestecând până obții un aluat moale și omogen.", "LASĂ LA ODIHNĂ: Acoperă și lasă aluatul 20 de minute, ca grișul să absoarbă lichidul.", "ÎNTINDE: Presează aluatul uniform într-o tavă unsă, de aproximativ 2 cm grosime.", "CRESTEAZĂ: Taie aluatul în romburi cu un cuțit, fără a tăia complet până la bază; pune câte o migdală în centrul fiecărei bucăți.", "COACE: Coace la 180°C timp de 30-35 de minute, până se rumenește frumos la suprafață.", "PREPARĂ SIROPUL: În timp ce se coace, fierbe zahărul cu apa 5 minute, apoi adaugă apa de flori de portocal și sucul de lămâie.", "TURNARE: Toarnă siropul cald peste prăjitura fierbinte, imediat ce iese din cuptor, și lasă să se absoarbă complet înainte de servire."],
+    "en": ["MIX: Combine semolina, coconut, sugar and baking powder in a large bowl.", "ADD MOISTURE: Fold in the yogurt and melted butter, stirring until a soft, even dough forms.", "REST: Cover and let the dough rest 20 minutes so the semolina absorbs the liquid.", "SPREAD: Press the dough evenly into a greased baking tray, about 2 cm thick.", "SCORE: Cut the dough into diamonds with a knife, without cutting all the way through; place one almond in the center of each piece.", "BAKE: Bake at 180°C for 30-35 minutes, until nicely golden on top.", "MAKE THE SYRUP: While it bakes, simmer sugar and water for 5 minutes, then stir in orange blossom water and lemon juice.", "POUR: Pour the warm syrup over the hot cake as soon as it comes out of the oven, and let it soak in fully before serving."],
+    "es": ["MEZCLA: Combina la sémola, el coco, el azúcar y la levadura en un bol grande.", "AÑADE HUMEDAD: Incorpora el yogur y la mantequilla derretida, removiendo hasta formar una masa suave y uniforme.", "REPOSA: Cubre y deja reposar la masa 20 minutos para que la sémola absorba el líquido.", "EXTIENDE: Presiona la masa de manera uniforme en una bandeja engrasada, de unos 2 cm de grosor.", "MARCA: Corta la masa en forma de rombos con un cuchillo, sin llegar hasta el fondo; coloca una almendra en el centro de cada trozo.", "HORNEA: Hornea a 180°C durante 30-35 minutos, hasta que esté bien dorado por encima.", "PREPARA EL ALMÍBAR: Mientras se hornea, hierve el azúcar con el agua 5 minutos, luego añade el agua de azahar y el zumo de limón.", "VIERTE: Vierte el almíbar caliente sobre el pastel recién salido del horno y deja que se absorba por completo antes de servir."],
+    "fr": ["MÉLANGE: Combinez la semoule, la noix de coco, le sucre et la levure dans un grand bol.", "AJOUTEZ L'HUMIDITÉ: Incorporez le yaourt et le beurre fondu, en remuant jusqu'à obtenir une pâte souple et homogène.", "REPOS: Couvrez et laissez reposer la pâte 20 minutes pour que la semoule absorbe le liquide.", "ÉTALEZ: Pressez la pâte uniformément dans un plat graissé, sur environ 2 cm d'épaisseur.", "QUADRILLEZ: Découpez la pâte en losanges au couteau, sans aller jusqu'au fond; placez une amande au centre de chaque morceau.", "CUISSON: Faites cuire à 180°C pendant 30-35 minutes, jusqu'à ce que le dessus soit bien doré.", "PRÉPAREZ LE SIROP: Pendant la cuisson, faites bouillir le sucre et l'eau 5 minutes, puis ajoutez l'eau de fleur d'oranger et le jus de citron.", "VERSEZ: Versez le sirop chaud sur le gâteau sortant du four et laissez-le s'imbiber entièrement avant de servir."],
+    "de": ["MISCHEN: Grieß, Kokosnuss, Zucker und Backpulver in einer großen Schüssel vermengen.", "FEUCHTIGKEIT HINZUFÜGEN: Joghurt und geschmolzene Butter unterheben, bis ein weicher, gleichmäßiger Teig entsteht.", "RUHEN LASSEN: Abdecken und den Teig 20 Minuten ruhen lassen, damit der Grieß die Flüssigkeit aufnimmt.", "AUSSTREICHEN: Den Teig gleichmäßig in eine gefettete Backform drücken, etwa 2 cm dick.", "EINSCHNEIDEN: Den Teig mit einem Messer rautenförmig einschneiden, ohne ganz durchzuschneiden; je eine Mandel in die Mitte jedes Stücks setzen.", "BACKEN: Bei 180°C 30-35 Minuten backen, bis die Oberfläche schön goldbraun ist.", "SIRUP ZUBEREITEN: Während des Backens Zucker mit Wasser 5 Minuten köcheln lassen, dann Orangenblütenwasser und Zitronensaft einrühren.", "ÜBERGIESSEN: Den warmen Sirup direkt nach dem Backen über den heißen Kuchen gießen und vollständig einziehen lassen, bevor serviert wird."],
+    "pt": ["MISTURE: Combine a sêmola, o coco, o açúcar e o fermento em uma tigela grande.", "ADICIONE UMIDADE: Incorpore o iogurte e a manteiga derretida, mexendo até formar uma massa macia e uniforme.", "DESCANSE: Cubra e deixe a massa descansar 20 minutos para a sêmola absorver o líquido.", "ESPALHE: Pressione a massa uniformemente em uma assadeira untada, com cerca de 2 cm de espessura.", "MARQUE: Corte a massa em losangos com uma faca, sem cortar até o fundo; coloque uma amêndoa no centro de cada pedaço.", "ASSE: Asse a 180°C por 30-35 minutos, até dourar bem por cima.", "PREPARE A CALDA: Enquanto assa, ferva o açúcar com a água por 5 minutos, depois junte a água de flor de laranjeira e o suco de limão.", "REGUE: Despeje a calda quente sobre o bolo assim que sair do forno e deixe absorver totalmente antes de servir."],
+    "ru": ["СМЕШАЙТЕ: Соедините манную крупу, кокос, сахар и разрыхлитель в большой миске.", "ДОБАВЬТЕ ВЛАГУ: Вмешайте йогурт и растопленное масло до получения мягкого однородного теста.", "ДАЙТЕ ОТДОХНУТЬ: Накройте и оставьте тесто на 20 минут, чтобы манка впитала жидкость.", "РАЗРОВНЯЙТЕ: Равномерно распределите тесто в смазанной форме слоем около 2 см.", "НАДРЕЖЬТЕ: Ножом надрежьте тесто ромбами, не прорезая до конца; в центр каждого кусочка положите миндалину.", "ВЫПЕКАЙТЕ: Выпекайте при 180°C 30-35 минут, до красивой румяной корочки.", "ПРИГОТОВЬТЕ СИРОП: Пока выпекается, варите сахар с водой 5 минут, затем добавьте воду из цветков апельсина и лимонный сок.", "ПОЛЕЙТЕ: Полейте тёплым сиропом горячий пирог сразу после духовки и дайте полностью впитаться перед подачей."],
+    "ar": ["اخلط: اخلطي السميد وجوز الهند والسكر والبيكنج بودر في وعاء كبير.", "أضيفي الرطوبة: امزجي الزبادي والزبدة المذابة حتى تحصلي على عجينة طرية ومتجانسة.", "اتركيها ترتاح: غطي العجينة واتركيها 20 دقيقة ليمتص السميد السائل.", "افرديها: اضغطي العجينة بالتساوي في صينية مدهونة بسمك حوالي 2 سم.", "قطّعيها: اقطعي العجينة على شكل معينات بسكين دون الوصول للقاع؛ ضعي حبة لوز في وسط كل قطعة.", "اخبزي: اخبزي على حرارة 180 درجة مئوية لمدة 30-35 دقيقة حتى يصبح السطح ذهبيًا.", "حضّري الشربات: أثناء الخبز، اغلي السكر مع الماء 5 دقائق ثم أضيفي ماء الزهر وعصير الليمون.", "اسكبي: اسكبي الشربات الدافئ فوق الكعكة الساخنة فور خروجها من الفرن، واتركيها تمتصه تمامًا قبل التقديم."],
+    "zh": ["混合：在大碗中将粗麦粉、椰丝、糖和泡打粉混合均匀。", "加入湿性材料：拌入酸奶和融化黄油，搅拌至形成柔软均匀的面团。", "静置：盖上盖子静置20分钟，让粗麦粉吸收水分。", "铺平：将面团均匀压入抹油的烤盘中，厚度约2厘米。", "划刀：用刀将面团切成菱形块，但不要完全切透；在每块中心放一颗杏仁。", "烘烤：以180°C烘烤30-35分钟，直至表面呈漂亮的金黄色。", "制作糖浆：烘烤期间，将糖和水煮5分钟，然后加入橙花水和柠檬汁。", "浇淋：蛋糕出炉后立即浇上温热的糖浆，静置至完全吸收后再食用。"],
+    "ja": ["混ぜる：大きなボウルにセモリナ粉、ココナッツ、砂糖、ベーキングパウダーを入れて混ぜる。", "水分を加える：ヨーグルトと溶かしバターを加え、柔らかく均一な生地になるまで混ぜる。", "休ませる：覆いをして20分休ませ、セモリナに水分を吸わせる。", "広げる：油を塗った天板に生地を厚さ約2cmに均一に押し広げる。", "切り込みを入れる：ナイフで生地にひし形の切り込みを入れる（底まで切らない）。各ピースの中央にアーモンドを1粒のせる。", "焼く：180°Cで30〜35分、表面がきれいなきつね色になるまで焼く。", "シロップを作る：焼いている間に、砂糖と水を5分煮て、オレンジフラワーウォーターとレモン汁を加える。", "かける：オーブンから出したらすぐに温かいシロップを熱いケーキにかけ、完全に染み込ませてから提供する。"],
+    "hi": ["मिलाएं: एक बड़े कटोरे में सूजी, नारियल, चीनी और बेकिंग पाउडर मिलाएं।", "नमी जोड़ें: दही और पिघला मक्खन मिलाएं, नरम और एकसार आटा बनने तक हिलाएं।", "आराम दें: ढककर 20 मिनट रखें ताकि सूजी तरल सोख ले।", "फैलाएं: आटे को चिकनाई लगी ट्रे में लगभग 2 सेमी मोटा समान रूप से दबाएं।", "काटें: चाकू से आटे को हीरे के आकार में काटें, पूरी तरह नीचे तक न काटें; हर टुकड़े के बीच में एक बादाम रखें।", "बेक करें: 180°C पर 30-35 मिनट बेक करें, जब तक ऊपर सुनहरा न हो जाए।", "चाशनी बनाएं: बेक होते समय चीनी और पानी को 5 मिनट उबालें, फिर संतरे के फूल का पानी और नींबू का रस मिलाएं।", "डालें: ओवन से निकलते ही गर्म चाशनी गर्म केक पर डालें और परोसने से पहले पूरी तरह सोखने दें।"],
+    "tr": ["KARIŞTIR: Büyük bir kapta irmik, hindistan cevizi, şeker ve kabartma tozunu birleştirin.", "NEM EKLE: Yoğurt ve eritilmiş tereyağını ekleyip yumuşak, homojen bir hamur oluşana kadar karıştırın.", "DİNLENDİR: Üzerini örtüp hamuru 20 dakika dinlendirin ki irmik sıvıyı emsin.", "YAY: Hamuru yağlanmış bir tepsiye yaklaşık 2 cm kalınlığında eşit şekilde bastırın.", "ÇİZ: Bıçakla hamuru dibe kadar kesmeden baklava dilimi şeklinde çizin; her parçanın ortasına bir badem yerleştirin.", "PİŞİR: 180°C'de üzeri güzelce altın rengi olana kadar 30-35 dakika pişirin.", "ŞERBETİ HAZIRLA: Pişerken şekeri suyla 5 dakika kaynatın, sonra portakal çiçeği suyu ve limon suyunu ekleyin.", "DÖK: Fırından çıkar çıkmaz ılık şerbeti sıcak keke dökün ve servis etmeden önce tamamen emmesini bekleyin."],
+    "it": ["MESCOLA: Unisci semolino, cocco, zucchero e lievito in una ciotola grande.", "AGGIUNGI L'UMIDITÀ: Incorpora lo yogurt e il burro fuso, mescolando fino a ottenere un impasto morbido e omogeneo.", "RIPOSO: Copri e lascia riposare l'impasto 20 minuti in modo che il semolino assorba il liquido.", "STENDI: Premi l'impasto in modo uniforme in una teglia imburrata, per circa 2 cm di spessore.", "INCIDI: Taglia l'impasto a rombi con un coltello, senza arrivare fino in fondo; metti una mandorla al centro di ogni pezzo.", "INFORNA: Cuoci a 180°C per 30-35 minuti, finché la superficie non è ben dorata.", "PREPARA LO SCIROPPO: Mentre cuoce, fai bollire zucchero e acqua per 5 minuti, poi aggiungi acqua di fiori d'arancio e succo di limone.", "VERSA: Versa lo sciroppo caldo sulla torta appena sfornata e lascialo assorbire completamente prima di servire."],
+    "ko": ["섞기: 큰 볼에 세몰리나, 코코넛, 설탕, 베이킹파우더를 넣고 섞는다.", "수분 더하기: 요거트와 녹인 버터를 넣고 부드럽고 고른 반죽이 될 때까지 섞는다.", "휴지시키기: 덮어서 20분간 두어 세몰리나가 수분을 흡수하게 한다.", "펴기: 반죽을 기름칠한 팬에 두께 약 2cm로 고르게 눌러 편다.", "칼집 내기: 칼로 반죽을 마름모꼴로 칼집을 내되 바닥까지 자르지 않는다; 각 조각 가운데에 아몬드를 하나씩 올린다.", "굽기: 180°C에서 30-35분, 윗면이 먹음직스러운 황금빛이 될 때까지 굽는다.", "시럽 만들기: 굽는 동안 설탕과 물을 5분간 끓인 뒤 오렌지 블라섬 워터와 레몬즙을 넣는다.", "붓기: 오븐에서 꺼내자마자 따뜻한 시럽을 뜨거운 케이크에 붓고, 서빙 전 완전히 스며들게 둔다."]
+  },
+  "meta": {
+    "time": 55,
+    "costRon": 12,
+    "tags": ["vegetarian", "budget"],
+    "desc": {
+      "ro": "Prăjitură egipteană de griș cu cocos, îmbibată în sirop de flori de portocal.",
+      "en": "Egyptian semolina-coconut cake soaked in orange blossom syrup.",
+      "es": "Pastel egipcio de sémola y coco empapado en almíbar de azahar.",
+      "fr": "Gâteau égyptien de semoule et noix de coco imbibé de sirop de fleur d'oranger.",
+      "de": "Ägyptischer Grieß-Kokos-Kuchen, getränkt in Orangenblütensirup.",
+      "pt": "Bolo egípcio de sêmola e coco embebido em calda de flor de laranjeira.",
+      "ru": "Египетский манно-кокосовый пирог, пропитанный сиропом из цветков апельсина.",
+      "ar": "كعكة سميد وجوز هند مصرية منقوعة بشربات ماء الزهر.",
+      "zh": "浸满橙花糖浆的埃及椰丝粗麦粉蛋糕。",
+      "ja": "オレンジフラワーシロップに浸したエジプト風セモリナ・ココナッツケーキ。",
+      "hi": "संतरे के फूल की चाशनी में डूबा मिस्री सूजी-नारियल केक।",
+      "tr": "Portakal çiçeği şerbetine batırılmış Mısır irmik-hindistan cevizi keki.",
+      "it": "Torta egiziana di semolino e cocco imbevuta di sciroppo di fiori d'arancio.",
+      "ko": "오렌지 블라섬 시럽에 적신 이집트식 세몰리나 코코넛 케이크."
+    }
+  },
+  "originText": {
+    "ro": "Basbousa este un desert de griș cu sirop, răspândit în toată Egiptul și Levantul, unde e cunoscut sub nume diferite precum \"harissa\" (nu a se confunda cu pasta de ardei) sau \"nammoura\". Numele \"basbousa\" derivă probabil dintr-un cuvânt colocvial care sugerează dulceața plăcută, iar rețetele scrise datează din perioada otomană, deși prăjiturile din griș îndulcite cu miere sau sirop erau cunoscute în bucătăria arabă medievală cu mult înainte.\n\nÎn Egipt, basbousa apare la aproape orice sărbătoare, de la Ramadan la nunți, tăiată în romburi ordonate cu câte o migdală în centrul fiecărei bucăți. Varianta cu nucă de cocos, cea mai populară azi, s-a răspândit relativ recent, pe măsură ce cocosul ras a devenit ingredient comun în cofetăriile urbane; multe familii păstrează însă varianta simplă, doar cu griș și sirop, ca rețetă de bază transmisă din generație în generație.",
+    "en": "Basbousa is a syrup-soaked semolina dessert found across Egypt and the Levant, known under different names like \"harissa\" (not to be confused with the chili paste) or \"nammoura\" depending on the region. The name \"basbousa\" likely comes from a colloquial word suggesting pleasant sweetness, and written recipes date to the Ottoman period, though semolina cakes sweetened with honey or syrup were known in medieval Arab cuisine long before.\n\nIn Egypt, basbousa appears at almost every celebration, from Ramadan to weddings, cut into neat diamonds with an almond set in the center of each piece. The coconut version, the most popular today, spread relatively recently as shredded coconut became a common ingredient in urban bakeries; many families, however, still keep the plain version, made with just semolina and syrup, as a base recipe passed down through generations.",
+    "es": "Basbousa es un postre de sémola empapado en almíbar, presente en todo Egipto y el Levante, conocido con nombres distintos como \"harissa\" (que no debe confundirse con la pasta de chile) o \"nammoura\" según la región. El nombre \"basbousa\" probablemente proviene de una palabra coloquial que sugiere dulzura agradable, y las recetas escritas datan del período otomano, aunque los pasteles de sémola endulzados con miel o almíbar ya se conocían en la cocina árabe medieval mucho antes.\n\nEn Egipto, la basbousa aparece en casi cualquier celebración, desde el Ramadán hasta las bodas, cortada en rombos ordenados con una almendra en el centro de cada trozo. La versión con coco, la más popular hoy en día, se extendió relativamente hace poco, a medida que el coco rallado se convirtió en un ingrediente común en las pastelerías urbanas; sin embargo, muchas familias conservan la versión simple, solo con sémola y almíbar, como receta base transmitida de generación en generación.",
+    "fr": "La basbousa est un dessert de semoule imbibé de sirop que l'on trouve dans toute l'Égypte et le Levant, connu sous différents noms comme \"harissa\" (à ne pas confondre avec la pâte de piment) ou \"nammoura\" selon la région. Le nom \"basbousa\" viendrait d'un mot familier évoquant une douceur agréable, et les recettes écrites remontent à la période ottomane, bien que des gâteaux de semoule sucrés au miel ou au sirop fussent déjà connus dans la cuisine arabe médiévale bien avant.\n\nEn Égypte, la basbousa apparaît à presque toutes les célébrations, du Ramadan aux mariages, découpée en losanges ordonnés avec une amande au centre de chaque morceau. La version à la noix de coco, la plus populaire aujourd'hui, s'est répandue relativement récemment, à mesure que la noix de coco râpée devenait un ingrédient courant dans les pâtisseries urbaines; de nombreuses familles conservent néanmoins la version simple, faite uniquement de semoule et de sirop, comme recette de base transmise de génération en génération.",
+    "de": "Basbousa ist ein in Sirup getränktes Grießdessert, das in ganz Ägypten und der Levante verbreitet ist und je nach Region unter verschiedenen Namen wie \"Harissa\" (nicht zu verwechseln mit der Chilipaste) oder \"Nammoura\" bekannt ist. Der Name \"Basbousa\" stammt wahrscheinlich von einem umgangssprachlichen Wort, das angenehme Süße andeutet, und schriftliche Rezepte reichen bis in die osmanische Zeit zurück, obwohl mit Honig oder Sirup gesüßte Grießkuchen in der mittelalterlichen arabischen Küche schon lange vorher bekannt waren.\n\nIn Ägypten erscheint Basbousa bei fast jeder Feier, vom Ramadan bis zu Hochzeiten, in ordentliche Rauten geschnitten, mit einer Mandel in der Mitte jedes Stücks. Die Kokosnussvariante, heute die beliebteste, verbreitete sich relativ spät, als geraspelte Kokosnuss zu einer gängigen Zutat in städtischen Konditoreien wurde; viele Familien bewahren jedoch die einfache Version, nur mit Grieß und Sirup, als über Generationen weitergegebenes Grundrezept.",
+    "pt": "A basbousa é uma sobremesa de sêmola embebida em calda, encontrada em todo o Egito e no Levante, conhecida sob nomes diferentes como \"harissa\" (que não deve ser confundida com a pasta de pimenta) ou \"nammoura\", dependendo da região. O nome \"basbousa\" provavelmente vem de uma palavra coloquial que sugere doçura agradável, e as receitas escritas remontam ao período otomano, embora bolos de sêmola adoçados com mel ou calda já fossem conhecidos na culinária árabe medieval muito antes.\n\nNo Egito, a basbousa aparece em quase toda celebração, do Ramadã aos casamentos, cortada em losangos ordenados com uma amêndoa no centro de cada pedaço. A versão com coco, a mais popular hoje, se espalhou relativamente há pouco tempo, à medida que o coco ralado se tornou um ingrediente comum nas confeitarias urbanas; muitas famílias, porém, mantêm a versão simples, apenas com sêmola e calda, como receita base transmitida ao longo de gerações.",
+    "ru": "Басбуса — пропитанный сиропом манный десерт, распространённый по всему Египту и Леванту, известный под разными названиями в зависимости от региона, например \"хариса\" (не путать с перечной пастой) или \"наммура\". Название \"басбуса\", вероятно, происходит от разговорного слова, означающего приятную сладость, а письменные рецепты датируются османским периодом, хотя манные пироги с мёдом или сиропом были известны в средневековой арабской кухне задолго до этого.\n\nВ Египте басбуса появляется почти на каждом празднике, от Рамадана до свадеб, нарезанная аккуратными ромбами с миндалиной в центре каждого кусочка. Кокосовый вариант, самый популярный сегодня, распространился относительно недавно, когда тёртый кокос стал обычным ингредиентом в городских кондитерских; многие семьи, однако, сохраняют простой вариант, только из манки и сиропа, как базовый рецепт, передаваемый из поколения в поколение.",
+    "ar": "البسبوسة حلوى من السميد المنقوع بالشربات، منتشرة في جميع أنحاء مصر وبلاد الشام، وتُعرف بأسماء مختلفة مثل \"الهريسة\" (لا يجب الخلط بينها وبين معجون الفلفل) أو \"النمورة\" حسب المنطقة. يُرجَّح أن اسم \"بسبوسة\" جاء من كلمة عامية توحي بالحلاوة اللطيفة، وتعود الوصفات المكتوبة إلى العصر العثماني، رغم أن كعك السميد المُحلى بالعسل أو الشربات كان معروفًا في المطبخ العربي في العصور الوسطى قبل ذلك بكثير.\n\nفي مصر، تظهر البسبوسة في كل احتفال تقريبًا، من رمضان إلى الأعراس، مقطّعة إلى معينات مرتبة مع حبة لوز في وسط كل قطعة. انتشرت نسخة جوز الهند، الأكثر شعبية اليوم، حديثًا نسبيًا مع تحول جوز الهند المبشور إلى مكوّن شائع في المخابز الحضرية؛ لكن كثيرًا من العائلات ما زالت تحتفظ بالنسخة البسيطة، من السميد والشربات فقط، كوصفة أساسية تنتقل عبر الأجيال.",
+    "zh": "巴斯布萨是一种浸满糖浆的粗麦粉甜点，在埃及和黎凡特地区都很常见，根据地区不同，也被称为「哈里萨」（不要与辣椒酱混淆）或「纳姆拉」。「巴斯布萨」这个名字很可能源自一个表示宜人甜味的口语词汇，书面食谱可追溯至奥斯曼时期，不过用蜂蜜或糖浆加甜的粗麦粉蛋糕在中世纪阿拉伯烹饪中早已为人所知。\n\n在埃及，巴斯布萨几乎出现在每一个庆祝场合，从斋月到婚礼都能见到它的身影，切成整齐的菱形块，每块中心点缀一颗杏仁。如今最受欢迎的椰丝版本流行时间相对较晚，是随着椰丝成为城市糕点店常见食材而普及的；不过许多家庭仍保留只用粗麦粉和糖浆制作的简单版本，作为代代相传的基础配方。",
+    "ja": "バスブーサはシロップに浸したセモリナ粉のデザートで、エジプトからレバント地方一帯で見られ、地域によって「ハリッサ」（チリペーストとは別物）や「ナムーラ」など異なる名前で呼ばれる。「バスブーサ」という名前はおそらく心地よい甘さを示す口語表現に由来し、書き記されたレシピはオスマン帝国時代にまで遡るが、蜂蜜やシロップで甘くしたセモリナ粉のケーキ自体は中世アラブ料理でそれよりずっと以前から知られていた。\n\nエジプトでは、ラマダンから結婚式まで、ほぼあらゆる祝い事にバスブーサが登場し、整然としたひし形に切り分けられ、各ピースの中央にアーモンドが一粒添えられる。今日最も人気のあるココナッツ入りのバージョンは、削りココナッツが都市部の菓子店で一般的な材料になるにつれて、比較的最近になって広まった。それでも多くの家庭は、セモリナ粉とシロップだけで作るシンプルな版を、世代を超えて受け継がれる基本レシピとして守り続けている。",
+    "hi": "बसबूसा चाशनी में डूबी सूजी की मिठाई है जो पूरे मिस्र और लेवांत क्षेत्र में मिलती है, जिसे क्षेत्र के अनुसार \"हरीसा\" (मिर्च के पेस्ट से भ्रमित न करें) या \"नामूरा\" जैसे अलग-अलग नामों से जाना जाता है। \"बसबूसा\" नाम संभवतः एक बोलचाल के शब्द से आया है जो सुखद मिठास का सुझाव देता है, और लिखित रेसिपी ऑटोमन काल की मानी जाती हैं, हालांकि शहद या चाशनी से मीठी की गई सूजी की केक मध्यकालीन अरब भोजन में इससे बहुत पहले से जानी जाती थी।\n\nमिस्र में, बसबूसा लगभग हर उत्सव में दिखाई देता है, रमज़ान से लेकर शादियों तक, और इसे करीने से हीरे के आकार में काटकर हर टुकड़े के बीच में एक बादाम रखा जाता है। नारियल वाला संस्करण, जो आज सबसे लोकप्रिय है, अपेक्षाकृत हाल ही में फैला जब कद्दूकस किया नारियल शहरी बेकरियों में एक आम सामग्री बन गया; फिर भी कई परिवार केवल सूजी और चाशनी वाला सादा संस्करण एक मूल रेसिपी के रूप में पीढ़ियों से संजोए हुए हैं।",
+    "tr": "Basbousa, tüm Mısır ve Levant bölgesinde bulunan, bölgeye göre \"harisa\" (biber ezmesiyle karıştırılmamalı) veya \"nammoura\" gibi farklı isimlerle bilinen, şerbete batırılmış bir irmik tatlısıdır. \"Basbousa\" adı muhtemelen hoş bir tatlılığı çağrıştıran halk dilinden bir kelimeden gelir; yazılı tarifler Osmanlı dönemine kadar uzanır, ancak bal veya şerbetle tatlandırılmış irmik kekleri ortaçağ Arap mutfağında çok daha önce de biliniyordu.\n\nMısır'da basbousa, Ramazan'dan düğünlere kadar hemen her kutlamada karşımıza çıkar; düzgün baklava dilimleri şeklinde kesilir ve her parçanın ortasına bir badem yerleştirilir. Bugün en popüler olan hindistan cevizli versiyon, rendelenmiş hindistan cevizinin şehir pastanelerinde yaygın bir malzeme haline gelmesiyle nispeten yakın zamanda yayılmıştır; yine de birçok aile, yalnızca irmik ve şerbetten yapılan sade versiyonu, nesilden nesile aktarılan temel bir tarif olarak korumaya devam eder.",
+    "it": "La basbousa è un dolce di semolino imbevuto di sciroppo diffuso in tutto l'Egitto e nel Levante, conosciuto con nomi diversi come \"harissa\" (da non confondere con la pasta di peperoncino) o \"nammoura\" a seconda della regione. Il nome \"basbousa\" deriva probabilmente da una parola colloquiale che suggerisce una dolcezza piacevole, e le ricette scritte risalgono al periodo ottomano, sebbene torte di semolino dolcificate con miele o sciroppo fossero già note nella cucina araba medievale molto tempo prima.\n\nIn Egitto, la basbousa compare in quasi ogni celebrazione, dal Ramadan ai matrimoni, tagliata in ordinati rombi con una mandorla al centro di ogni pezzo. La versione al cocco, oggi la più popolare, si è diffusa relativamente di recente, man mano che il cocco grattugiato è diventato un ingrediente comune nelle pasticcerie urbane; molte famiglie, tuttavia, conservano la versione semplice, fatta solo di semolino e sciroppo, come ricetta base tramandata di generazione in generazione.",
+    "ko": "바스부사는 시럽에 흠뻑 적신 세몰리나 디저트로 이집트와 레반트 전역에서 볼 수 있으며, 지역에 따라 \"하리사\"(고추 페이스트와 혼동하지 말 것)나 \"나무라\" 등 다른 이름으로도 불린다. \"바스부사\"라는 이름은 기분 좋은 단맛을 암시하는 구어체 단어에서 유래했을 가능성이 크며, 문서로 남은 레시피는 오스만 시대까지 거슬러 올라가지만, 꿀이나 시럽으로 단맛을 낸 세몰리나 케이크 자체는 그보다 훨씬 이전인 중세 아랍 요리에서도 알려져 있었다.\n\n이집트에서 바스부사는 라마단부터 결혼식까지 거의 모든 축하 자리에 등장하며, 가지런한 마름모꼴로 잘라 각 조각 가운데에 아몬드를 하나씩 얹는다. 오늘날 가장 인기 있는 코코넛 버전은 채 썬 코코넛이 도시의 제과점에서 흔한 재료가 되면서 비교적 최근에 널리 퍼졌다. 그럼에도 많은 가정에서는 세몰리나와 시럽만으로 만드는 소박한 버전을 대대로 전해 내려오는 기본 레시피로 지키고 있다."
+  }
+}

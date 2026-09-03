@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <span>Koshari</span>
+    <a href="/">Accueil</a> › <a href="/fr/recettes/">Recettes</a> › <a href="/fr/recettes/egypt/">Égypte</a> › <span>Koshari</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="koshari" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/330px-Egyptian_food_Koshary.jpg" alt="Koshari" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Egyptian_food_Koshary.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇬 Déjeuner · Égypte</div>
+      <div class="recipe-badge">🇪🇬 Déjeuner · <a class="recipe-badge-origin" href="/fr/recettes/egypt/">Égypte</a></div>
       <h1>Koshari</h1>
       <p class="recipe-tagline">Le koshari est le plat de rue national de l'Égypte, vendu depuis des chariots et des boutiques dans tout Le Caire et Alexandrie. C'est un plat de carrefour — riz, lentilles brunes, macaronis et pois chiches empilés ensemble — et son mélange d'ingrédients reflète l'histoire de l'Égypte comme carrefour commercial. Les macaronis sont arrivés avec les marchands italiens au XIXe siècle ; le plat complet a pris forme au début du XXe siècle comme aliment bon marché et rassasiant pour les travailleurs.
 
@@ -170,7 +170,43 @@ La base féculente est recouverte de deux sauces : une sauce tomate épicée au 
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇬 Plus de recettes de Égypte</h2>
+      <a href="/fr/recettes/egypt/">Voir toutes les recettes →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/fr/recettes/molokhia-jute-leaf-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="molokhia-jute-leaf-stew">🍲</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Molokhia (Ragoût de feuilles de jute)</p>
+    <span class="recipe-card-meta">35m · Facile</span>
+  </div>
+</a><a href="/fr/recettes/ta-ameya-egyptian-fava-bean-falafel/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="ta-ameya-egyptian-fava-bean-falafel">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Ta'ameya (Falafel égyptien aux fèves)</p>
+    <span class="recipe-card-meta">40m · Facile</span>
+  </div>
+</a><a href="/fr/recettes/om-ali-egyptian-bread-pudding/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="om-ali-egyptian-bread-pudding">🍰</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Om Ali (Pouding feuilleté au lait)</p>
+    <span class="recipe-card-meta">40m · Facile</span>
+  </div>
+</a><a href="/fr/recettes/feteer-meshaltet-egyptian-layered-flatbread/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="feteer-meshaltet-egyptian-layered-flatbread">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Feteer Meshaltet (Pain feuilleté égyptien)</p>
+    <span class="recipe-card-meta">40m · Facile</span>
+  </div>
+</a><a href="/fr/recettes/basbousa-egyptian-semolina-cake/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="basbousa-egyptian-semolina-cake">🍰</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Basbousa (Gâteau de Semoule Égyptien)</p>
+    <span class="recipe-card-meta">40m · Facile</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -221,13 +257,13 @@ La base féculente est recouverte de deux sauces : une sauce tomate épicée au 
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/fr/recettes/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/fr/recettes/egypt/" data-rmn-back
    data-cuisine-atmosphere="middle-eastern"
-   aria-label="Recettes"
+   aria-label="Égypte"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Recettes</span>
+  <span class="rmb-label">Égypte</span>
 </a>
 
 </main>

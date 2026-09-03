@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <span>Doro Wat</span>
+    <a href="/">Startseite</a> › <a href="/de/rezepte/">Rezepte</a> › <a href="/de/rezepte/ethiopia/">Äthiopien</a> › <span>Doro Wat</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="doro-wat" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ethiopian_wat.jpg/330px-Ethiopian_wat.jpg" alt="Doro Wat" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Ethiopian_wat.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇹 Abendessen · Äthiopien</div>
+      <div class="recipe-badge">🇪🇹 Abendessen · <a class="recipe-badge-origin" href="/de/rezepte/ethiopia/">Äthiopien</a></div>
       <h1>Doro Wat</h1>
       <p class="recipe-tagline">Doro wat ist Äthiopiens gefeiertestes Gericht, ein Mittelpunkt der äthiopischen Küche an Feiertagen und besonderen Anlässen. Der Name bedeutet schlicht Hähnchenschmorgericht — doro ist Hähnchen, wat ist Eintopf — aber die Zubereitung ist komplex und nimmt Zeit. Die Basis beginnt mit Zwiebeln, die trocken, ohne jede Fettigkeit, fast eine halbe Stunde gegart werden, bis sie ein tiefes Karamell erreichen.
 
@@ -171,7 +171,43 @@ Berbere — Äthiopiens wesentliche Gewürzmischung — trägt Noten von Chili, 
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇹 Weitere Rezepte aus Äthiopien</h2>
+      <a href="/de/rezepte/ethiopia/">Alle Rezepte ansehen →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/de/rezepte/kitfo-ethiopian-spiced-beef-tartare/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="kitfo-ethiopian-spiced-beef-tartare">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Kitfo (Äthiopisches Gewürztatar vom Rind)</p>
+    <span class="recipe-card-meta">35m · Einfach</span>
+  </div>
+</a><a href="/de/rezepte/shiro-wat-spiced-chickpea-flour-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="shiro-wat-spiced-chickpea-flour-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Shiro Wat (Gewürzter Kichererbsenmehl-Eintopf)</p>
+    <span class="recipe-card-meta">40m · Einfach</span>
+  </div>
+</a><a href="/de/rezepte/tibs-ethiopian-saut-ed-beef-with-rosemary/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="tibs-ethiopian-saut-ed-beef-with-rosemary">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Tibs (Äthiopisches Rindfleisch mit Rosmarin, sautiert)</p>
+    <span class="recipe-card-meta">40m · Einfach</span>
+  </div>
+</a><a href="/de/rezepte/misir-wat-spiced-red-lentil-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="misir-wat-spiced-red-lentil-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Misir Wat (Würziger Rote-Linsen-Eintopf)</p>
+    <span class="recipe-card-meta">40m · Einfach</span>
+  </div>
+</a><a href="/de/rezepte/gomen-ethiopian-saut-ed-collard-greens/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="gomen-ethiopian-saut-ed-collard-greens">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Gomen (Äthiopischer Grünkohl, sautiert)</p>
+    <span class="recipe-card-meta">40m · Einfach</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -222,13 +258,13 @@ Berbere — Äthiopiens wesentliche Gewürzmischung — trägt Noten von Chili, 
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/de/rezepte/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/de/rezepte/ethiopia/" data-rmn-back
    data-cuisine-atmosphere="sub-saharan"
-   aria-label="Rezepte"
+   aria-label="Äthiopien"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Rezepte</span>
+  <span class="rmb-label">Äthiopien</span>
 </a>
 
 </main>

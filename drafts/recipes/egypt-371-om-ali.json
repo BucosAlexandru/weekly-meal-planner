@@ -1,0 +1,177 @@
+{
+  "id": 371,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Egipt", "en": "Egypt", "es": "Egipto", "fr": "Égypte", "de": "Ägypten",
+    "pt": "Egito", "ru": "Египет", "ar": "مصر", "zh": "埃及", "ja": "エジプト",
+    "hi": "मिस्र", "tr": "Mısır", "it": "Egitto", "ko": "이집트"
+  },
+  "name": {
+    "ro": "Om Ali (Budincă de foietaj cu lapte)", "en": "Om Ali (Egyptian Bread Pudding)", "es": "Om Ali (Pudín de hojaldre con leche)",
+    "fr": "Om Ali (Pouding feuilleté au lait)", "de": "Om Ali (Ägyptischer Blätterteig-Milchpudding)", "pt": "Om Ali (Pudim de folhado com leite)",
+    "ru": "Ом Али (Египетский пудинг из слоёного теста)", "ar": "أم علي", "zh": "埃及酥皮奶布丁",
+    "ja": "オム・アリ（エジプト風パイ生地のミルクプディング）", "hi": "उम अली (मिस्री ब्रेड पुडिंग)", "tr": "Ümmü Ali (Mısır Ekmek Pudingi)",
+    "it": "Om Ali (Budino di sfoglia al latte)", "ko": "움 알리 (이집트 페이스트리 우유 푸딩)"
+  },
+  "category": {
+    "ro": "Desert", "en": "Dessert", "es": "Postre", "fr": "Dessert", "de": "Dessert", "pt": "Sobremesa",
+    "ru": "Десерт", "ar": "حلوى", "zh": "甜点", "ja": "デザート", "hi": "मिठाई", "tr": "Tatlı", "it": "Dolce", "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🥐", "t": "Foietaj sfărâmat", "d": "Foi de foietaj coapte și rupte grosier, în loc de pâine veche."},
+      {"icon": "🥛", "t": "Lapte cu smântână", "d": "Lapte fierbinte cu frișcă, care înmoaie foietajul fără să-l topească."},
+      {"icon": "🌰", "t": "Nuci amestecate", "d": "Migdale, alune de pădure, stafide și nucă de cocos presărate din belșug."},
+      {"icon": "🔥", "t": "Gratinat la cuptor", "d": "Se termină sub grătar (broil) pentru un vârf auriu crocant."}
+    ],
+    "en": [
+      {"icon": "🥐", "t": "Torn puff pastry", "d": "Baked puff pastry sheets torn into pieces, instead of stale bread."},
+      {"icon": "🥛", "t": "Milk with cream", "d": "Hot milk with heavy cream, which soaks the pastry without dissolving it."},
+      {"icon": "🌰", "t": "Mixed nuts", "d": "Almonds, hazelnuts, raisins and coconut sprinkled generously."},
+      {"icon": "🔥", "t": "Broiled finish", "d": "Finished under the broiler for a crisp golden top."}
+    ],
+    "es": [
+      {"icon": "🥐", "t": "Hojaldre desmenuzado", "d": "Láminas de hojaldre horneadas y desmenuzadas, en vez de pan duro."},
+      {"icon": "🥛", "t": "Leche con nata", "d": "Leche caliente con nata, que empapa el hojaldre sin disolverlo."},
+      {"icon": "🌰", "t": "Frutos secos mezclados", "d": "Almendras, avellanas, pasas y coco espolvoreados generosamente."},
+      {"icon": "🔥", "t": "Gratinado final", "d": "Se termina bajo el grill para una superficie dorada y crujiente."}
+    ],
+    "fr": [
+      {"icon": "🥐", "t": "Pâte feuilletée émiettée", "d": "Feuilles de pâte feuilletée cuites et déchirées, au lieu de pain rassis."},
+      {"icon": "🥛", "t": "Lait à la crème", "d": "Lait chaud avec de la crème, qui imbibe la pâte sans la dissoudre."},
+      {"icon": "🌰", "t": "Fruits secs mélangés", "d": "Amandes, noisettes, raisins secs et noix de coco généreusement saupoudrés."},
+      {"icon": "🔥", "t": "Gratiné au four", "d": "Terminé sous le gril pour un dessus doré et croustillant."}
+    ],
+    "de": [
+      {"icon": "🥐", "t": "Zerrissener Blätterteig", "d": "Gebackene Blätterteigblätter in Stücke gerissen, statt altbackenem Brot."},
+      {"icon": "🥛", "t": "Milch mit Sahne", "d": "Heiße Milch mit Sahne, die den Teig tränkt, ohne ihn aufzulösen."},
+      {"icon": "🌰", "t": "Gemischte Nüsse", "d": "Mandeln, Haselnüsse, Rosinen und Kokos großzügig bestreut."},
+      {"icon": "🔥", "t": "Überbacken", "d": "Zum Abschluss unter dem Grill für eine knusprige goldene Oberfläche."}
+    ],
+    "pt": [
+      {"icon": "🥐", "t": "Folhado esfarelado", "d": "Folhas de massa folhada assadas e esfareladas, em vez de pão velho."},
+      {"icon": "🥛", "t": "Leite com natas", "d": "Leite quente com natas, que embebe a massa sem a dissolver."},
+      {"icon": "🌰", "t": "Frutos secos misturados", "d": "Amêndoas, avelãs, passas e coco polvilhados generosamente."},
+      {"icon": "🔥", "t": "Gratinado final", "d": "Terminado sob o grelhador para um topo dourado e crocante."}
+    ],
+    "ru": [
+      {"icon": "🥐", "t": "Разорванное слоёное тесто", "d": "Запечённые листы слоёного теста, разорванные на куски, вместо чёрствого хлеба."},
+      {"icon": "🥛", "t": "Молоко со сливками", "d": "Горячее молоко с жирными сливками, пропитывающее тесто, не растворяя его."},
+      {"icon": "🌰", "t": "Смесь орехов", "d": "Миндаль, фундук, изюм и кокос щедро посыпаны сверху."},
+      {"icon": "🔥", "t": "Запечено под грилем", "d": "Завершается под грилем для хрустящей золотистой корочки."}
+    ],
+    "ar": [
+      {"icon": "🥐", "t": "عجين مقرمش ممزّق", "d": "طبقات عجين مقرمش مخبوزة وممزّقة، بدلًا من الخبز القديم."},
+      {"icon": "🥛", "t": "حليب بالقشدة", "d": "حليب ساخن بالقشدة، ينقع العجين دون إذابته."},
+      {"icon": "🌰", "t": "مكسرات مشكّلة", "d": "لوز وبندق وزبيب وجوز هند مرشوش بسخاء."},
+      {"icon": "🔥", "t": "تحمير نهائي", "d": "يُنهى تحت الشواية للحصول على سطح ذهبي مقرمش."}
+    ],
+    "zh": [
+      {"icon": "🥐", "t": "撕碎酥皮", "d": "烤好的酥皮撕成碎块，代替陈面包。"},
+      {"icon": "🥛", "t": "淡奶油牛奶", "d": "加入淡奶油的热牛奶，浸润酥皮而不使其溶化。"},
+      {"icon": "🌰", "t": "混合坚果", "d": "杏仁、榛子、葡萄干和椰丝大量撒入。"},
+      {"icon": "🔥", "t": "烤炙收尾", "d": "最后用上火烤至表面金黄酥脆。"}
+    ],
+    "ja": [
+      {"icon": "🥐", "t": "ちぎったパイ生地", "d": "焼いたパイ生地をちぎったもの、古いパンの代わり。"},
+      {"icon": "🥛", "t": "生クリーム入り牛乳", "d": "生地を溶かさず染み込ませる、生クリーム入りの熱い牛乳。"},
+      {"icon": "🌰", "t": "ミックスナッツ", "d": "アーモンド、ヘーゼルナッツ、レーズン、ココナッツをたっぷり振りかける。"},
+      {"icon": "🔥", "t": "仕上げに炙る", "d": "ブロイラーで仕上げ、表面をカリッと黄金色にする。"}
+    ],
+    "hi": [
+      {"icon": "🥐", "t": "फटी पफ पेस्ट्री", "d": "बेक की गई पफ पेस्ट्री की परतें टुकड़ों में फटी, बासी ब्रेड के बजाय।"},
+      {"icon": "🥛", "t": "क्रीम वाला दूध", "d": "क्रीम वाला गरम दूध, जो पेस्ट्री को घोले बिना भिगो देता है।"},
+      {"icon": "🌰", "t": "मिश्रित मेवे", "d": "बादाम, हेज़लनट, किशमिश और नारियल भरपूर छिड़के गए।"},
+      {"icon": "🔥", "t": "ब्रॉइल्ड फिनिश", "d": "कुरकुरी सुनहरी परत के लिए ब्रॉइलर के नीचे अंतिम रूप दिया गया।"}
+    ],
+    "tr": [
+      {"icon": "🥐", "t": "Parçalanmış milföy", "d": "Bayat ekmek yerine pişirilip parçalara ayrılmış milföy tabakaları."},
+      {"icon": "🥛", "t": "Kremalı süt", "d": "Hamuru eritmeden ıslatan, kremalı sıcak süt."},
+      {"icon": "🌰", "t": "Karışık kuruyemiş", "d": "Bol miktarda serpilmiş badem, fındık, kuru üzüm ve hindistan cevizi."},
+      {"icon": "🔥", "t": "Izgara bitirişi", "d": "Çıtır altın rengi bir üst için ızgara altında tamamlanır."}
+    ],
+    "it": [
+      {"icon": "🥐", "t": "Sfoglia spezzettata", "d": "Fogli di pasta sfoglia cotti e spezzettati, al posto del pane raffermo."},
+      {"icon": "🥛", "t": "Latte con panna", "d": "Latte caldo con panna, che inzuppa la sfoglia senza scioglierla."},
+      {"icon": "🌰", "t": "Frutta secca mista", "d": "Mandorle, nocciole, uvetta e cocco cosparsi generosamente."},
+      {"icon": "🔥", "t": "Gratinata finale", "d": "Terminata sotto il grill per una superficie dorata e croccante."}
+    ],
+    "ko": [
+      {"icon": "🥐", "t": "찢은 퍼프 페이스트리", "d": "딱딱한 빵 대신 구운 퍼프 페이스트리를 조각으로 찢은 것."},
+      {"icon": "🥛", "t": "크림을 넣은 우유", "d": "페이스트리를 녹이지 않고 적셔주는 크림 넣은 뜨거운 우유."},
+      {"icon": "🌰", "t": "견과류 믹스", "d": "아몬드, 헤이즐넛, 건포도, 코코넛을 듬뿍 뿌린다."},
+      {"icon": "🔥", "t": "그릴로 마무리", "d": "황금빛 바삭한 윗면을 위해 브로일러로 마무리한다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["1 foaie foietaj congelat (500g)", "1.5 litri lapte integral", "300ml frișcă lichidă", "150g zahăr", "100g migdale feliate", "100g alune de pădure tocate", "80g stafide", "50g nucă de cocos rasă", "1 linguriță esență de vanilie", "un praf de scorțișoară"],
+    "en": ["1 sheet frozen puff pastry (500g)", "1.5 liters whole milk", "300ml heavy cream", "150g sugar", "100g sliced almonds", "100g chopped hazelnuts", "80g raisins", "50g shredded coconut", "1 tsp vanilla extract", "a pinch of cinnamon"],
+    "es": ["1 lámina de hojaldre congelado (500g)", "1.5 litros de leche entera", "300ml de nata para montar", "150g de azúcar", "100g de almendras fileteadas", "100g de avellanas picadas", "80g de pasas", "50g de coco rallado", "1 cdta de esencia de vainilla", "una pizca de canela"],
+    "fr": ["1 pâte feuilletée surgelée (500g)", "1,5 litre de lait entier", "300ml de crème liquide entière", "150g de sucre", "100g d'amandes effilées", "100g de noisettes hachées", "80g de raisins secs", "50g de noix de coco râpée", "1 c. à c. d'extrait de vanille", "une pincée de cannelle"],
+    "de": ["1 Blatt gefrorener Blätterteig (500g)", "1,5 Liter Vollmilch", "300ml Schlagsahne", "150g Zucker", "100g gehobelte Mandeln", "100g gehackte Haselnüsse", "80g Rosinen", "50g geraspelte Kokosnuss", "1 TL Vanilleextrakt", "eine Prise Zimt"],
+    "pt": ["1 folha de massa folhada congelada (500g)", "1,5 litros de leite integral", "300ml de natas para bater", "150g de açúcar", "100g de amêndoas laminadas", "100g de avelãs picadas", "80g de passas", "50g de coco ralado", "1 colher de chá de essência de baunilha", "uma pitada de canela"],
+    "ru": ["1 лист замороженного слоёного теста (500г)", "1,5 литра цельного молока", "300мл жирных сливок", "150г сахара", "100г миндальных лепестков", "100г измельчённого фундука", "80г изюма", "50г тёртого кокоса", "1 ч.л. ванильного экстракта", "щепотка корицы"],
+    "ar": ["ورقة عجين مقرمش مجمدة واحدة (500غ)", "1.5 لتر حليب كامل الدسم", "300مل كريمة خفق", "150غ سكر", "100غ لوز مشرّح", "100غ بندق مفروم", "80غ زبيب", "50غ جوز هند مبشور", "ملعقة صغيرة خلاصة الفانيليا", "رشة قرفة"],
+    "zh": ["冷冻酥皮1张（500克）", "全脂牛奶1.5升", "淡奶油300毫升", "糖150克", "杏仁片100克", "碎榛子100克", "葡萄干80克", "椰丝50克", "香草精1茶匙", "肉桂粉一小撮"],
+    "ja": ["冷凍パイ生地 1枚（500g）", "全乳 1.5リットル", "生クリーム 300ml", "砂糖 150g", "スライスアーモンド 100g", "刻んだヘーゼルナッツ 100g", "レーズン 80g", "すりおろしココナッツ 50g", "バニラエッセンス 小さじ1", "シナモン ひとつまみ"],
+    "hi": ["1 शीट फ्रोज़न पफ पेस्ट्री (500 ग्राम)", "1.5 लीटर फुल क्रीम दूध", "300 मिली गाढ़ी क्रीम", "150 ग्राम चीनी", "100 ग्राम कटे बादाम", "100 ग्राम कटा हेज़लनट", "80 ग्राम किशमिश", "50 ग्राम कद्दूकस किया नारियल", "1 छोटा चम्मच वेनिला एसेंस", "एक चुटकी दालचीनी"],
+    "tr": ["1 yaprak dondurulmuş milföy (500g)", "1.5 litre tam yağlı süt", "300ml krema", "150g şeker", "100g dilimlenmiş badem", "100g doğranmış fındık", "80g kuru üzüm", "50g rendelenmiş hindistan cevizi", "1 çay kaşığı vanilya özütü", "bir tutam tarçın"],
+    "it": ["1 sfoglia di pasta sfoglia surgelata (500g)", "1,5 litri di latte intero", "300ml di panna fresca", "150g di zucchero", "100g di mandorle a lamelle", "100g di nocciole tritate", "80g di uvetta", "50g di cocco grattugiato", "1 cucchiaino di estratto di vaniglia", "un pizzico di cannella"],
+    "ko": ["냉동 퍼프 페이스트리 1장(500g)", "전유 1.5리터", "생크림 300ml", "설탕 150g", "슬라이스 아몬드 100g", "다진 헤이즐넛 100g", "건포도 80g", "채 썬 코코넛 50g", "바닐라 추출물 1작은술", "계피 한 꼬집"]
+  },
+  "howIsMade": {
+    "ro": "COACERE FOIETAJ: Coace foaia de foietaj la 200°C timp de 20-25 minute, până devine aurie și crocantă, apoi lasă să se răcească. RUPERE FOIETAJ: Rupe foietajul copt în bucăți neregulate, de mărimea unei nuci, și așază-le într-o tavă rezistentă la cuptor. PREGĂTIRE LAPTE: Fierbe laptele cu frișca și zahărul la foc mediu, amestecând, până zahărul se dizolvă complet, fără să dea în clocot puternic. AROMATIZARE: Adaugă vanilia și scorțișoara în lapte, amestecă. TURNARE: Toarnă laptele fierbinte peste foietajul rupt, asigurându-te că toate bucățile se îmbibă. ADĂUGARE NUCI: Presară migdalele, alunele, stafidele și nuca de cocos deasupra, uniform. GRATINARE: Pune tava sub grătarul cuptorului (broil) 5-8 minute, până suprafața devine aurie și ușor crocantă. SERVIRE: Servește cald, direct din tavă.",
+    "en": "BAKE PASTRY: Bake the puff pastry sheet at 200°C for 20-25 minutes, until golden and crisp, then let cool. TEAR PASTRY: Tear the baked pastry into irregular, walnut-sized pieces and place them in an oven-safe dish. PREPARE MILK: Boil the milk with the cream and sugar over medium heat, stirring, until the sugar fully dissolves, without a strong boil. FLAVOR: Add the vanilla and cinnamon to the milk, stir. POUR: Pour the hot milk over the torn pastry, making sure all the pieces soak in. ADD NUTS: Sprinkle the almonds, hazelnuts, raisins and coconut evenly on top. BROIL: Place the dish under the oven's broiler for 5-8 minutes, until the surface turns golden and slightly crisp. SERVE: Serve warm, straight from the dish.",
+    "es": "HORNEAR EL HOJALDRE: Hornea la lámina de hojaldre a 200°C durante 20-25 minutos, hasta que esté dorada y crujiente, luego deja enfriar. ROMPER EL HOJALDRE: Rompe el hojaldre horneado en trozos irregulares del tamaño de una nuez y colócalos en una fuente apta para horno. PREPARAR LA LECHE: Hierve la leche con la nata y el azúcar a fuego medio, removiendo, hasta que el azúcar se disuelva por completo, sin que hierva fuerte. AROMATIZAR: Añade la vainilla y la canela a la leche, remueve. VERTER: Vierte la leche caliente sobre el hojaldre roto, asegurándote de que todos los trozos se empapen. AÑADIR FRUTOS SECOS: Espolvorea las almendras, avellanas, pasas y coco uniformemente encima. GRATINAR: Pon la fuente bajo el grill del horno 5-8 minutos, hasta que la superficie quede dorada y ligeramente crujiente. SERVIR: Sirve caliente, directamente de la fuente.",
+    "fr": "CUIRE LA PÂTE: Faites cuire la pâte feuilletée à 200°C pendant 20-25 minutes, jusqu'à ce qu'elle soit dorée et croustillante, puis laissez refroidir. DÉCHIRER LA PÂTE: Déchirez la pâte cuite en morceaux irréguliers, de la taille d'une noix, et placez-les dans un plat allant au four. PRÉPARER LE LAIT: Faites bouillir le lait avec la crème et le sucre à feu moyen, en remuant, jusqu'à ce que le sucre soit complètement dissous, sans forte ébullition. AROMATISER: Ajoutez la vanille et la cannelle au lait, remuez. VERSER: Versez le lait chaud sur la pâte déchirée, en vous assurant que tous les morceaux s'imbibent. AJOUTER LES FRUITS SECS: Saupoudrez les amandes, noisettes, raisins secs et noix de coco uniformément dessus. GRATINER: Placez le plat sous le gril du four pendant 5-8 minutes, jusqu'à ce que la surface soit dorée et légèrement croustillante. SERVIR: Servez chaud, directement du plat.",
+    "de": "BLÄTTERTEIG BACKEN: Den Blätterteig bei 200°C 20-25 Minuten backen, bis er goldbraun und knusprig ist, dann abkühlen lassen. TEIG ZERREISSEN: Den gebackenen Teig in unregelmäßige, walnussgroße Stücke reißen und in eine ofenfeste Form geben. MILCH VORBEREITEN: Die Milch mit Sahne und Zucker bei mittlerer Hitze unter Rühren aufkochen, bis sich der Zucker vollständig auflöst, ohne stark zu kochen. AROMATISIEREN: Vanille und Zimt zur Milch geben, umrühren. GIESSEN: Die heiße Milch über den zerrissenen Teig gießen, sicherstellen, dass alle Stücke durchtränkt werden. NÜSSE HINZUFÜGEN: Mandeln, Haselnüsse, Rosinen und Kokos gleichmäßig darüberstreuen. ÜBERBACKEN: Die Form 5-8 Minuten unter den Ofengrill stellen, bis die Oberfläche goldbraun und leicht knusprig wird. SERVIEREN: Warm servieren, direkt aus der Form.",
+    "pt": "ASSAR A MASSA: Asse a massa folhada a 200°C durante 20-25 minutos, até dourar e ficar estaladiça, depois deixe arrefecer. ESFARELAR A MASSA: Esfarele a massa assada em pedaços irregulares, do tamanho de uma noz, e coloque-os num prato próprio para forno. PREPARAR O LEITE: Ferva o leite com as natas e o açúcar em lume médio, mexendo, até o açúcar dissolver completamente, sem ferver muito. AROMATIZAR: Junte a baunilha e a canela ao leite, mexa. DEITAR: Deite o leite quente sobre a massa esfarelada, garantindo que todos os pedaços absorvem. ADICIONAR OS FRUTOS SECOS: Polvilhe as amêndoas, avelãs, passas e coco uniformemente por cima. GRATINAR: Coloque o prato sob o grelhador do forno por 5-8 minutos, até a superfície ficar dourada e levemente estaladiça. SERVIR: Sirva quente, diretamente do prato.",
+    "ru": "ВЫПЕЧКА ТЕСТА: Выпекайте слоёное тесто при 200°C 20-25 минут, пока не станет золотистым и хрустящим, затем дайте остыть. РАЗЛОМ ТЕСТА: Разломайте испечённое тесто на неровные куски размером с грецкий орех и выложите в форму для запекания. ПРИГОТОВЛЕНИЕ МОЛОКА: Вскипятите молоко со сливками и сахаром на среднем огне, помешивая, пока сахар полностью не растворится, без сильного кипения. АРОМАТИЗАЦИЯ: Добавьте в молоко ваниль и корицу, перемешайте. ЗАЛИВКА: Залейте горячим молоком разломанное тесто, следя за тем, чтобы все кусочки пропитались. ДОБАВЛЕНИЕ ОРЕХОВ: Равномерно посыпьте сверху миндалём, фундуком, изюмом и кокосом. ЗАПЕКАНИЕ: Поставьте форму под гриль духовки на 5-8 минут, пока поверхность не станет золотистой и слегка хрустящей. ПОДАЧА: Подавайте тёплым, прямо из формы.",
+    "ar": "خبز العجين: اخبز ورقة العجين المقرمش على حرارة 200 درجة لمدة 20-25 دقيقة حتى تصبح ذهبية ومقرمشة، ثم دعها تبرد. تفتيت العجين: فتّت العجين المخبوز إلى قطع غير منتظمة بحجم الجوز وضعها في طبق مقاوم للفرن. تحضير الحليب: اغلِ الحليب مع القشدة والسكر على نار متوسطة مع التحريك حتى يذوب السكر تمامًا دون غليان قوي. التعطير: أضف الفانيليا والقرفة إلى الحليب وحرّك. السكب: اسكب الحليب الساخن فوق العجين المفتت، مع التأكد من نقع جميع القطع. إضافة المكسرات: رشّ اللوز والبندق والزبيب وجوز الهند بالتساوي فوقها. التحمير: ضع الطبق تحت شواية الفرن لمدة 5-8 دقائق حتى يصبح السطح ذهبيًا ومقرمشًا قليلًا. التقديم: قدّمه دافئًا مباشرة من الطبق.",
+    "zh": "烘烤酥皮：将酥皮在200°C下烘烤20-25分钟，直至金黄酥脆，然后放凉。撕碎酥皮：将烤好的酥皮撕成不规则的核桃大小碎块，放入耐热烤盘中。准备牛奶：将牛奶与淡奶油和糖用中火煮沸，搅拌至糖完全溶解，不要剧烈沸腾。调味：将香草精和肉桂粉加入牛奶中搅拌均匀。倒入：将热牛奶倒在撕碎的酥皮上，确保所有碎片都浸透。加坚果：均匀撒上杏仁、榛子、葡萄干和椰丝。烤炙：将烤盘放入烤箱上火烤5-8分钟，直至表面金黄微脆。装盘：趁热直接从烤盘中食用。",
+    "ja": "パイ生地を焼く：パイ生地を200°Cで20〜25分、きつね色でカリッとするまで焼き、冷ます。パイ生地をちぎる：焼いた生地をくるみ大の不揃いな大きさにちぎり、耐熱皿に入れる。牛乳を準備する：牛乳を生クリームと砂糖と共に中火で、砂糖が完全に溶けるまで、強く沸騰させずにかき混ぜながら煮る。香り付け：バニラとシナモンを牛乳に加えて混ぜる。注ぐ：熱い牛乳をちぎったパイ生地の上に注ぎ、すべての破片が染み込むようにする。ナッツを加える：アーモンド、ヘーゼルナッツ、レーズン、ココナッツを均等に上に振りかける。炙る：オーブンのブロイラーの下で5〜8分、表面が黄金色で少しカリッとするまで焼く。盛り付け：皿から直接、温かいうちに提供する。",
+    "hi": "पेस्ट्री बेक करें: पफ पेस्ट्री शीट को 200°C पर 20-25 मिनट, सुनहरी और कुरकुरी होने तक बेक करें, फिर ठंडा होने दें। पेस्ट्री फाड़ें: बेक की पेस्ट्री को अखरोट के आकार के अनियमित टुकड़ों में फाड़ें और ओवनप्रूफ बर्तन में रखें। दूध तैयार करें: दूध को क्रीम और चीनी के साथ मध्यम आँच पर, चीनी पूरी तरह घुलने तक, बिना तेज़ उबाल के हिलाते हुए उबालें। सुगंधित करें: दूध में वेनिला और दालचीनी डालें, हिलाएं। डालें: गरम दूध फटी पेस्ट्री पर डालें, सुनिश्चित करें कि सभी टुकड़े भीग जाएं। मेवे डालें: ऊपर बादाम, हेज़लनट, किशमिश और नारियल समान रूप से छिड़कें। ग्रिल करें: बर्तन को ओवन के ब्रॉइलर के नीचे 5-8 मिनट रखें, जब तक सतह सुनहरी और थोड़ी कुरकुरी न हो जाए। परोसें: गरम, सीधे बर्तन से परोसें।",
+    "tr": "MİLFÖYÜ PİŞİRİN: Milföy tabakasını 200°C'de altın rengi ve çıtır olana kadar 20-25 dakika pişirin, sonra soğumaya bırakın. MİLFÖYÜ PARÇALAYIN: Pişmiş milföyü ceviz büyüklüğünde düzensiz parçalara ayırın ve fırına dayanıklı bir kaba koyun. SÜTÜ HAZIRLAYIN: Sütü krema ve şekerle orta ateşte, şeker tamamen eriyene kadar, güçlü kaynatmadan karıştırarak pişirin. TATLANDIRIN: Süte vanilya ve tarçın ekleyin, karıştırın. DÖKÜN: Sıcak sütü parçalanmış milföyün üzerine dökün, tüm parçaların iyice ıslanmasını sağlayın. KURUYEMİŞLERİ EKLEYİN: Üzerine badem, fındık, kuru üzüm ve hindistan cevizini eşit şekilde serpin. IZGARA YAPIN: Kabı fırının ızgara ayarının altında 5-8 dakika, yüzey altın rengi ve hafif çıtır olana kadar bırakın. SERVİS EDİN: Sıcak, doğrudan kaptan servis edin.",
+    "it": "CUOCERE LA SFOGLIA: Cuocete la sfoglia a 200°C per 20-25 minuti, finché dorata e croccante, poi lasciate raffreddare. SPEZZETTARE LA SFOGLIA: Spezzettate la sfoglia cotta in pezzi irregolari, grandi come una noce, e mettetela in una teglia da forno. PREPARARE IL LATTE: Fate bollire il latte con la panna e lo zucchero a fuoco medio, mescolando, finché lo zucchero si scioglie completamente, senza bollire troppo forte. AROMATIZZARE: Aggiungete la vaniglia e la cannella al latte, mescolate. VERSARE: Versate il latte caldo sulla sfoglia spezzettata, assicurandovi che tutti i pezzi si inzuppino. AGGIUNGERE LA FRUTTA SECCA: Cospargete mandorle, nocciole, uvetta e cocco uniformemente sopra. GRATINARE: Mettete la teglia sotto il grill del forno per 5-8 minuti, finché la superficie diventa dorata e leggermente croccante. SERVIRE: Servite calda, direttamente dalla teglia.",
+    "ko": "페이스트리 굽기: 퍼프 페이스트리를 200°C에서 20~25분, 황금빛으로 바삭해질 때까지 구운 후 식힌다. 페이스트리 찢기: 구운 페이스트리를 호두 크기의 불규칙한 조각으로 찢어 오븐용 그릇에 담는다. 우유 준비: 우유를 크림, 설탕과 함께 중불에서 저으며, 강하게 끓이지 않고 설탕이 완전히 녹을 때까지 끓인다. 향 더하기: 우유에 바닐라와 계피를 넣고 젓는다. 붓기: 뜨거운 우유를 찢은 페이스트리 위에 부어 모든 조각이 잘 스며들게 한다. 견과류 넣기: 아몬드, 헤이즐넛, 건포도, 코코넛을 골고루 뿌린다. 그릴로 굽기: 그릇을 오븐 브로일러 아래 5~8분 놓아 표면이 황금빛으로 살짝 바삭해지게 한다. 담아내기: 그릇째로 따뜻하게 낸다."
+  },
+  "originText": {
+    "ro": "Om Ali, care înseamnă literal mama lui Ali, este învăluit într-o legendă istorică întunecată din secolul al XIII-lea, legată de rivalitatea dintre soțiile sultanului mameluc Aybak. Se spune că Om Ali, prima soție a sultanului, a comandat acest desert pentru a sărbători uciderea rivalei sale, Shajar al-Durr, o fostă sclavă devenită sultană — povestea rămâne parte din folclorul culinar egiptean, chiar dacă istoricii dezbat veridicitatea ei exactă.\n\nIndiferent de originea legendară, desertul reflectă geniul practic al bucătăriei egiptene de a transforma resturi de pâine sau foietaj în ceva festiv, folosind ingrediente disponibile pe scară largă — lapte, nuci și fructe uscate. Astăzi, Om Ali este nelipsit de la mesele de Ramadan și la sărbătorile de familie, gătit adesea în cantități mari pentru a fi împărțit cu musafirii.",
+    "en": "Om Ali, which literally means Ali's mother, is wrapped in a dark 13th-century legend tied to the rivalry between the wives of Mamluk sultan Aybak. It's said that Om Ali, the sultan's first wife, commissioned this dessert to celebrate the killing of her rival, Shajar al-Durr, a former slave who became sultana — the story remains part of Egyptian culinary folklore, even if historians debate its exact accuracy.\n\nRegardless of its legendary origin, the dessert reflects the practical genius of Egyptian cuisine for turning leftover bread or pastry into something festive, using widely available ingredients — milk, nuts and dried fruit. Today, Om Ali is a staple at Ramadan meals and family celebrations, often cooked in large quantities to be shared with guests.",
+    "es": "Om Ali, que literalmente significa la madre de Ali, está envuelta en una oscura leyenda del siglo XIII vinculada a la rivalidad entre las esposas del sultán mameluco Aybak. Se dice que Om Ali, la primera esposa del sultán, encargó este postre para celebrar la muerte de su rival, Shajar al-Durr, una antigua esclava convertida en sultana — la historia sigue siendo parte del folclore culinario egipcio, aunque los historiadores debaten su exactitud.\n\nMás allá de su origen legendario, el postre refleja el genio práctico de la cocina egipcia para convertir el pan o hojaldre sobrante en algo festivo, usando ingredientes ampliamente disponibles — leche, frutos secos y fruta deshidratada. Hoy en día, la Om Ali es infaltable en las comidas de Ramadán y celebraciones familiares, cocinada a menudo en grandes cantidades para compartir con los invitados.",
+    "fr": "Om Ali, qui signifie littéralement la mère d'Ali, est enveloppée d'une sombre légende du XIIIe siècle liée à la rivalité entre les épouses du sultan mamelouk Aybak. On dit qu'Om Ali, la première épouse du sultan, a commandé ce dessert pour célébrer la mort de sa rivale, Shajar al-Durr, une ancienne esclave devenue sultane — l'histoire reste ancrée dans le folklore culinaire égyptien, même si les historiens débattent de son exactitude.\n\nAu-delà de son origine légendaire, le dessert reflète le génie pratique de la cuisine égyptienne pour transformer du pain ou de la pâte feuilletée restants en quelque chose de festif, en utilisant des ingrédients largement disponibles — lait, noix et fruits secs. Aujourd'hui, l'Om Ali est incontournable lors des repas du Ramadan et des célébrations familiales, souvent cuisinée en grandes quantités pour être partagée avec les invités.",
+    "de": "Om Ali, was wörtlich Alis Mutter bedeutet, ist in eine düstere Legende aus dem 13. Jahrhundert gehüllt, die mit der Rivalität zwischen den Frauen des mamlukischen Sultans Aybak verbunden ist. Man sagt, Om Ali, die erste Frau des Sultans, habe dieses Dessert in Auftrag gegeben, um die Tötung ihrer Rivalin Shajar al-Durr zu feiern, einer ehemaligen Sklavin, die Sultanin wurde — die Geschichte bleibt Teil der ägyptischen kulinarischen Folklore, auch wenn Historiker ihre genaue Richtigkeit diskutieren.\n\nUnabhängig von ihrem legendären Ursprung spiegelt das Dessert den praktischen Genius der ägyptischen Küche wider, übrig gebliebenes Brot oder Blätterteig in etwas Festliches zu verwandeln, mit weit verbreiteten Zutaten — Milch, Nüssen und Trockenfrüchten. Heute ist Om Ali fester Bestandteil der Ramadan-Mahlzeiten und Familienfeiern, oft in großen Mengen gekocht, um mit Gästen geteilt zu werden.",
+    "pt": "Om Ali, que significa literalmente a mãe de Ali, está envolta numa sombria lenda do século XIII ligada à rivalidade entre as esposas do sultão mameluco Aybak. Diz-se que Om Ali, a primeira esposa do sultão, encomendou esta sobremesa para celebrar a morte da sua rival, Shajar al-Durr, uma ex-escrava que se tornou sultana — a história continua a fazer parte do folclore culinário egípcio, mesmo que os historiadores debatam a sua exatidão.\n\nIndependentemente da sua origem lendária, a sobremesa reflete o génio prático da cozinha egípcia para transformar pão ou massa folhada sobrantes em algo festivo, usando ingredientes amplamente disponíveis — leite, nozes e fruta seca. Hoje, a Om Ali é presença obrigatória nas refeições do Ramadão e celebrações familiares, muitas vezes cozinhada em grandes quantidades para partilhar com os convidados.",
+    "ru": "Ом Али, что буквально означает мать Али, окутана мрачной легендой XIII века, связанной с соперничеством между жёнами мамлюкского султана Айбака. Говорят, что Ом Али, первая жена султана, заказала этот десерт, чтобы отпраздновать убийство своей соперницы Шаджар аль-Дурр, бывшей рабыни, ставшей султаншей — эта история остаётся частью египетского кулинарного фольклора, хотя историки спорят о её точности.\n\nНезависимо от легендарного происхождения, десерт отражает практический гений египетской кухни в превращении остатков хлеба или теста в нечто праздничное, используя широко доступные ингредиенты — молоко, орехи и сухофрукты. Сегодня Ом Али — неотъемлемая часть трапез Рамадана и семейных праздников, часто готовится в больших количествах, чтобы поделиться с гостями.",
+    "ar": "أم علي، التي تعني حرفيًا أم علي، ملفوفة بأسطورة قاتمة من القرن الثالث عشر مرتبطة بالتنافس بين زوجات السلطان المملوكي أيبك. يُقال إن أم علي، الزوجة الأولى للسلطان، أمرت بإعداد هذه الحلوى للاحتفال بمقتل منافستها شجرة الدر، وهي جارية سابقة أصبحت سلطانة — تبقى القصة جزءًا من الفلكلور الطهوي المصري، حتى لو اختلف المؤرخون حول دقتها التامة.\n\nبغض النظر عن أصلها الأسطوري، تعكس الحلوى العبقرية العملية للمطبخ المصري في تحويل بقايا الخبز أو العجين المقرمش إلى شيء احتفالي، باستخدام مكونات متوفرة على نطاق واسع — الحليب والمكسرات والفواكه المجففة. اليوم، أم علي لا غنى عنها في وجبات رمضان والاحتفالات العائلية، وتُطهى غالبًا بكميات كبيرة لمشاركتها مع الضيوف.",
+    "zh": "奥姆·阿里，字面意思是「阿里的母亲」，笼罩在一个可追溯至13世纪的阴暗传说中，与马穆鲁克苏丹艾伯克妻妾之间的争斗有关。据说奥姆·阿里，苏丹的第一任妻子，命人制作这道甜点以庆祝她的对手——沙贾尔·杜尔（一位从奴隶成为苏丹的女性）——被杀。这个故事仍是埃及饮食民俗的一部分，尽管历史学家对其确切真实性存有争议。\n\n无论其传说起源如何，这道甜点体现了埃及菜肴将剩余面包或酥皮转化为节庆佳肴的实用智慧，所用食材皆是随处可得——牛奶、坚果和干果。如今，奥姆·阿里是斋月餐桌和家庭庆典上不可或缺的甜点，常常大量制作以与宾客分享。",
+    "ja": "文字通り「アリの母」を意味するオム・アリは、マムルーク朝スルタン、アイバクの妻たちの対立に関わる13世紀の暗い伝説に包まれている。スルタンの最初の妻であったオム・アリが、かつて奴隷であった女性からスルタナ（女帝）となったライバル、シャジャル・アル＝ドゥッルの殺害を祝うためにこのデザートを命じたと言われている――歴史家がその正確さを議論しているとしても、この物語はエジプトの料理民話の一部であり続けている。\n\n伝説的な起源はさておき、このデザートは、牛乳、ナッツ、ドライフルーツといった広く入手可能な材料を使い、残った古いパンやパイ生地を祝祭的なものに変えるエジプト料理の実用的な知恵を反映している。今日、オム・アリはラマダンの食事や家族の祝い事に欠かせない存在であり、しばしば客と分かち合うために大量に作られる。",
+    "hi": "उम अली, जिसका शाब्दिक अर्थ है अली की मां, 13वीं सदी की एक अंधकारमय किंवदंती में लिपटी है, जो मामलुक सुल्तान ऐबक की पत्नियों के बीच की प्रतिद्वंद्विता से जुड़ी है। कहा जाता है कि उम अली, सुल्तान की पहली पत्नी, ने इस मिठाई को अपनी प्रतिद्वंद्वी शजर अल-दुर की हत्या का जश्न मनाने के लिए बनवाया था, जो एक पूर्व दासी थी और सुल्ताना बनी — यह कहानी मिस्री पाक लोककथा का हिस्सा बनी हुई है, भले ही इतिहासकार इसकी सटीक सच्चाई पर बहस करते हों।\n\nइसकी पौराणिक उत्पत्ति के बावजूद, यह मिठाई मिस्री व्यंजनों की व्यावहारिक प्रतिभा को दर्शाती है, जो बची हुई ब्रेड या पफ पेस्ट्री को व्यापक रूप से उपलब्ध सामग्री — दूध, मेवे और सूखे मेवे — का उपयोग करके कुछ उत्सवी बनाती है। आज, उम अली रमज़ान के भोजन और पारिवारिक समारोहों में हमेशा मौजूद रहती है, अक्सर मेहमानों के साथ बांटने के लिए बड़ी मात्रा में पकाई जाती है।",
+    "tr": "Tam anlamıyla Ali'nin annesi anlamına gelen Ümmü Ali, Memluk sultanı Aybek'in eşleri arasındaki rekabete bağlı karanlık bir 13. yüzyıl efsanesine sarılıdır. Sultanın ilk eşi olan Ümmü Ali'nin, eski bir cariyeden sultan olan rakibi Şecerüddür'ün öldürülmesini kutlamak için bu tatlıyı sipariş ettiği söylenir — tarihçiler tam doğruluğunu tartışsa da, hikaye Mısır mutfak folklorunun bir parçası olmaya devam ediyor.\n\nEfsanevi kökeni ne olursa olsun, tatlı, süt, kuruyemiş ve kuru meyve gibi yaygın olarak bulunan malzemeleri kullanarak artan ekmek veya milföyü şölenlik bir şeye dönüştürmedeki Mısır mutfağının pratik dehasını yansıtır. Bugün Ümmü Ali, Ramazan yemeklerinde ve aile kutlamalarında vazgeçilmezdir, genellikle misafirlerle paylaşmak için büyük miktarlarda pişirilir.",
+    "it": "Om Ali, che letteralmente significa la madre di Ali, è avvolta in una cupa leggenda del XIII secolo legata alla rivalità tra le mogli del sultano mamelucco Aybak. Si dice che Om Ali, la prima moglie del sultano, abbia commissionato questo dolce per celebrare l'uccisione della sua rivale, Shajar al-Durr, un'ex schiava diventata sultana — la storia rimane parte del folklore culinario egiziano, anche se gli storici discutono la sua esattezza.\n\nA prescindere dalla sua origine leggendaria, il dolce riflette il genio pratico della cucina egiziana nel trasformare pane o sfoglia avanzati in qualcosa di festivo, usando ingredienti ampiamente disponibili — latte, noci e frutta secca. Oggi, l'Om Ali è immancabile nei pasti del Ramadan e nelle celebrazioni familiari, spesso cucinata in grandi quantità da condividere con gli ospiti.",
+    "ko": "문자 그대로 알리의 어머니를 뜻하는 옴 알리는 맘루크 술탄 아이바크의 아내들 간의 경쟁과 관련된 13세기의 어두운 전설에 싸여 있다. 술탄의 첫 번째 아내였던 옴 알리가 노예 출신에서 술탄이 된 라이벌 샤자르 알두르의 죽음을 기념하기 위해 이 디저트를 만들게 했다고 전해진다 — 역사가들이 그 정확성에 대해 논쟁하더라도, 이 이야기는 이집트 요리 민속의 일부로 남아 있다.\n\n전설적인 기원과는 별개로, 이 디저트는 우유, 견과류, 말린 과일처럼 널리 구할 수 있는 재료를 사용해 남은 빵이나 페이스트리를 축제 음식으로 바꾸는 이집트 요리의 실용적인 재능을 보여준다. 오늘날 옴 알리는 라마단 식사와 가족 축하 행사에서 빠질 수 없으며, 손님들과 나누기 위해 대량으로 조리되는 경우가 많다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 14,
+    "tags": ["vegetarian"],
+    "desc": {
+      "ro": "Budincă de foietaj sfărâmat cu lapte, nuci și stafide, gratinată auriu.",
+      "en": "Torn puff pastry pudding with milk, nuts and raisins, broiled golden.",
+      "es": "Pudín de hojaldre desmenuzado con leche, frutos secos y pasas, gratinado dorado.",
+      "fr": "Pouding de pâte feuilletée émiettée au lait, fruits secs et raisins, gratiné doré.",
+      "de": "Zerrissener Blätterteig-Pudding mit Milch, Nüssen und Rosinen, golden überbacken.",
+      "pt": "Pudim de folhado esfarelado com leite, frutos secos e passas, gratinado dourado.",
+      "ru": "Пудинг из разорванного слоёного теста с молоком, орехами и изюмом, запечённый до золотистости.",
+      "ar": "بودينغ عجين مقرمش ممزّق بالحليب والمكسرات والزبيب، محمّر ذهبيًا.",
+      "zh": "撕碎酥皮牛奶坚果葡萄干布丁，烤至金黄。",
+      "ja": "牛乳、ナッツ、レーズン入りのちぎったパイ生地プディング、黄金色に炙る。",
+      "hi": "दूध, मेवे और किशमिश के साथ फटी पफ पेस्ट्री पुडिंग, सुनहरी ग्रिल्ड।",
+      "tr": "Sütlü, kuruyemişli ve kuru üzümlü parçalanmış milföy pudingi, altın rengi ızgaralanmış.",
+      "it": "Budino di sfoglia spezzettata con latte, frutta secca e uvetta, gratinato dorato.",
+      "ko": "우유, 견과류, 건포도를 넣은 찢은 퍼프 페이스트리 푸딩, 황금빛으로 구움."
+    }
+  }
+}

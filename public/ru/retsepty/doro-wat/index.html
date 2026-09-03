@@ -76,7 +76,7 @@
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <span>Доро Ват</span>
+    <a href="/">Главная</a> › <a href="/ru/retsepty/">Рецепты</a> › <a href="/ru/retsepty/ethiopia/">Эфиопия</a> › <span>Доро Ват</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -93,7 +93,7 @@
       <div class="recipe-photo-container" data-recipe="doro-wat" id="recipe-photo-main">🍽️<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ethiopian_wat.jpg/330px-Ethiopian_wat.jpg" alt="Доро Ват" loading="eager" fetchpriority="high" decoding="async" data-wm-fb="https://en.wikipedia.org/wiki/Special:FilePath/Ethiopian_wat.jpg?width=330" onerror="if(this.dataset.wmFb){this.src=this.dataset.wmFb;this.dataset.wmFb='';}else{this.remove();}"></div>
     </div>
     <div class="recipe-hero-info-col">
-      <div class="recipe-badge">🇪🇹 Ужин · Эфиопия</div>
+      <div class="recipe-badge">🇪🇹 Ужин · <a class="recipe-badge-origin" href="/ru/retsepty/ethiopia/">Эфиопия</a></div>
       <h1>Доро Ват</h1>
       <p class="recipe-tagline">Доро ват — самое известное блюдо Эфиопии, центральная часть эфиопской кухни, подаваемая на праздниках и особых мероприятиях. Название просто означает тушёный цыплёнок — доро это курица, ват — тушёное блюдо — но приготовление сложное и неторопливое. Основа начинается с лука, готовящегося всухую, без какого-либо жира, почти полчаса, пока он не достигнет глубокой карамели.
 
@@ -171,7 +171,43 @@
   <!-- Related recipes — "see all" jumps to the cuisine hub when available,
        so users land on a focused list of THIS cuisine rather than the full
        175-recipe index. Direct recipe-index entry remains the fallback. -->
-  
+  <div class="recipe-related-section">
+    <div class="recipe-related-header">
+      <h2>🇪🇹 Ещё рецепты из Эфиопия</h2>
+      <a href="/ru/retsepty/ethiopia/">Все рецепты →</a>
+    </div>
+    <div class="recipe-cards-scroll"><a href="/ru/retsepty/kitfo-ethiopian-spiced-beef-tartare/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="kitfo-ethiopian-spiced-beef-tartare">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Китфо (Эфиопский Тартар из Говядины)</p>
+    <span class="recipe-card-meta">35m · Лёгкий</span>
+  </div>
+</a><a href="/ru/retsepty/shiro-wat-spiced-chickpea-flour-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="shiro-wat-spiced-chickpea-flour-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Широ Ват (Пряное Рагу из Нутовой Муки)</p>
+    <span class="recipe-card-meta">40m · Лёгкий</span>
+  </div>
+</a><a href="/ru/retsepty/tibs-ethiopian-saut-ed-beef-with-rosemary/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="tibs-ethiopian-saut-ed-beef-with-rosemary">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Тыбс (Эфиопская Обжаренная Говядина с Розмарином)</p>
+    <span class="recipe-card-meta">40m · Лёгкий</span>
+  </div>
+</a><a href="/ru/retsepty/misir-wat-spiced-red-lentil-stew/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="misir-wat-spiced-red-lentil-stew">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Мисир Ват (Пряное Рагу из Красной Чечевицы)</p>
+    <span class="recipe-card-meta">40m · Лёгкий</span>
+  </div>
+</a><a href="/ru/retsepty/gomen-ethiopian-saut-ed-collard-greens/" class="recipe-card-item">
+  <div class="recipe-card-img" data-card-recipe="gomen-ethiopian-saut-ed-collard-greens">🍽️</div>
+  <div class="recipe-card-body">
+    <p class="recipe-card-name">Гомен (Эфиопская Тушёная Капуста)</p>
+    <span class="recipe-card-meta">40m · Лёгкий</span>
+  </div>
+</a></div>
+  </div>
 
   <div class="recipe-bridge-section">
     <div class="recipe-related-header">
@@ -222,13 +258,13 @@
          label = "← Recipes". Same component, no accent.
      content.js may further override the label/href at runtime if the
      user navigated FROM a different cuisine hub (rare cross-cuisine flow). -->
-<a class="recipe-mobile-back mp-back-pill"
-   href="/ru/retsepty/" data-rmn-back
+<a class="recipe-mobile-back mp-back-pill mp-back-pill--cuisine"
+   href="/ru/retsepty/ethiopia/" data-rmn-back
    data-cuisine-atmosphere="sub-saharan"
-   aria-label="Рецепты"
+   aria-label="Эфиопия"
    role="button">
   <span class="rmb-arrow" aria-hidden="true">←</span>
-  <span class="rmb-label">Рецепты</span>
+  <span class="rmb-label">Эфиопия</span>
 </a>
 
 </main>
