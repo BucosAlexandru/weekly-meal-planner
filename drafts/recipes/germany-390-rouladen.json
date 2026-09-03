@@ -1,0 +1,209 @@
+{
+  "id": 390,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Germania",
+    "en": "Germany",
+    "es": "Alemania",
+    "fr": "Allemagne",
+    "de": "Deutschland",
+    "pt": "Alemanha",
+    "ru": "Германия",
+    "ar": "ألمانيا",
+    "zh": "德国",
+    "ja": "ドイツ",
+    "hi": "जर्मनी",
+    "tr": "Almanya",
+    "it": "Germania",
+    "ko": "독일"
+  },
+  "name": {
+    "ro": "Rouladen (Ruladă de Vită Umplută)",
+    "en": "Rouladen (German Stuffed Beef Rolls)",
+    "es": "Rouladen (Rollitos de Res Rellenos Alemanes)",
+    "fr": "Rouladen (Roulés de Bœuf Farcis Allemands)",
+    "de": "Rouladen",
+    "pt": "Rouladen (Rolinhos de Carne Recheados Alemães)",
+    "ru": "Рулады (Немецкие Фаршированные Говяжьи Рулеты)",
+    "ar": "رولادن (لفائف لحم بقري ألمانية محشوة)",
+    "zh": "德式牛肉卷",
+    "ja": "ルーラーデン（ドイツ風牛肉ロール）",
+    "hi": "रूलादेन (जर्मन भरे हुए बीफ रोल)",
+    "tr": "Rouladen (Alman Usulü Doldurulmuş Dana Rulosu)",
+    "it": "Rouladen (Involtini di Manzo Ripieni Tedeschi)",
+    "ko": "룰라덴 (독일식 소고기 롤)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Felii subțiri de vită", "d": "Felii mari, subțiri de mușchi de vită, bătute și mai fine cu ciocanul." },
+      { "icon": "🥓", "t": "Umplutură clasică", "d": "Muștar, bacon, ceapă și castraveți murați se rulează în interiorul cărnii." },
+      { "icon": "📌", "t": "Fixate cu scobitori", "d": "Ruladele se fixează cu scobitori de lemn sau ață de bucătărie, pentru a-și păstra forma." },
+      { "icon": "🍲", "t": "Fierte lent în sos", "d": "Se rumenesc rapid, apoi fierb înăbușit ore întregi, într-un sos brun bogat." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Thin beef slices", "d": "Large, thin slices of beef round, pounded even thinner with a mallet." },
+      { "icon": "🥓", "t": "Classic filling", "d": "Mustard, bacon, onion and pickles are rolled up inside the meat." },
+      { "icon": "📌", "t": "Secured with toothpicks", "d": "The rolls are secured with toothpicks or kitchen string, to hold their shape." },
+      { "icon": "🍲", "t": "Slow-braised in sauce", "d": "They're quickly browned, then braise for hours in a rich brown sauce." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Rebanadas finas de res", "d": "Rebanadas grandes y finas de tapa de res, aplanadas aún más con un mazo." },
+      { "icon": "🥓", "t": "Relleno clásico", "d": "Mostaza, tocino, cebolla y pepinillos se enrollan dentro de la carne." },
+      { "icon": "📌", "t": "Fijados con palillos", "d": "Los rollitos se fijan con palillos de madera o hilo de cocina, para mantener su forma." },
+      { "icon": "🍲", "t": "Cocidos lentamente en salsa", "d": "Se doran rápido, luego se cuecen a fuego lento durante horas en una salsa marrón espesa." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Fines tranches de bœuf", "d": "De grandes tranches fines de rond de bœuf, aplaties encore plus avec un maillet." },
+      { "icon": "🥓", "t": "Farce classique", "d": "Moutarde, lard, oignon et cornichons sont roulés à l'intérieur de la viande." },
+      { "icon": "📌", "t": "Fixés avec des cure-dents", "d": "Les roulés sont fixés avec des cure-dents en bois ou de la ficelle de cuisine, pour garder leur forme." },
+      { "icon": "🍲", "t": "Braisés lentement en sauce", "d": "Ils sont rapidement dorés, puis mijotent des heures dans une sauce brune riche." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Dünne Rindfleischscheiben", "d": "Große, dünne Scheiben Rinderoberschale, mit einem Klopfer noch dünner geklopft." },
+      { "icon": "🥓", "t": "Klassische Füllung", "d": "Senf, Speck, Zwiebel und saure Gurken werden in das Fleisch eingerollt." },
+      { "icon": "📌", "t": "Mit Zahnstochern fixiert", "d": "Die Rouladen werden mit Zahnstochern oder Küchengarn fixiert, um ihre Form zu halten." },
+      { "icon": "🍲", "t": "Langsam in Sauce geschmort", "d": "Sie werden schnell angebraten, dann stundenlang in einer reichhaltigen braunen Sauce geschmort." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Fatias finas de vaca", "d": "Fatias grandes e finas de alcatra bovina, achatadas ainda mais com um martelo." },
+      { "icon": "🥓", "t": "Recheio clássico", "d": "Mostarda, bacon, cebola e picles são enrolados dentro da carne." },
+      { "icon": "📌", "t": "Presos com palitos", "d": "Os rolinhos são presos com palitos de madeira ou barbante de cozinha, para manter a forma." },
+      { "icon": "🍲", "t": "Cozidos lentamente em molho", "d": "São dourados rapidamente, depois cozem por horas num molho castanho rico." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Тонкие ломтики говядины", "d": "Крупные тонкие ломтики говяжьего окорока, отбитые ещё тоньше молотком." },
+      { "icon": "🥓", "t": "Классическая начинка", "d": "Горчица, бекон, лук и маринованные огурцы заворачиваются внутрь мяса." },
+      { "icon": "📌", "t": "Скрепляются зубочистками", "d": "Рулеты скрепляются деревянными зубочистками или кулинарной нитью, чтобы сохранить форму." },
+      { "icon": "🍲", "t": "Медленно тушатся в соусе", "d": "Их быстро обжаривают, затем тушат часами в насыщенном коричневом соусе." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "شرائح رقيقة من لحم البقر", "d": "شرائح كبيرة ورقيقة من فخذ البقر، تُطرَق لتصبح أرق بالمطرقة." },
+      { "icon": "🥓", "t": "حشوة كلاسيكية", "d": "تُلف الخردل ولحم الخنزير المقدد والبصل والمخلل داخل اللحم." },
+      { "icon": "📌", "t": "تُثبَّت بأعواد أسنان", "d": "تُثبَّت اللفائف بأعواد أسنان خشبية أو خيط مطبخ للحفاظ على شكلها." },
+      { "icon": "🍲", "t": "تُطهى ببطء في الصلصة", "d": "تُحمَّر بسرعة، ثم تُطهى ساعات في صلصة بنية غنية." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "薄牛肉片", "d": "大而薄的牛臀肉片，用肉锤敲打得更薄。" },
+      { "icon": "🥓", "t": "经典馅料", "d": "芥末、培根、洋葱和腌黄瓜卷入肉片内。" },
+      { "icon": "📌", "t": "用牙签固定", "d": "肉卷用木制牙签或厨用棉线固定，以保持形状。" },
+      { "icon": "🍲", "t": "慢炖于浓酱中", "d": "先快速煎至上色，然后在浓郁的棕色酱汁中慢炖数小时。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "薄切り牛肉", "d": "牛もも肉の大きな薄切りを、さらに肉たたきで薄く伸ばす。" },
+      { "icon": "🥓", "t": "定番の詰め物", "d": "マスタード、ベーコン、玉ねぎ、ピクルスが肉の中に巻き込まれる。" },
+      { "icon": "📌", "t": "つまようじで留める", "d": "ロールは木製のつまようじやキッチン用の糸で留めて形を保つ。" },
+      { "icon": "🍲", "t": "ソースでじっくり煮込む", "d": "手早く焼き色をつけた後、濃厚な茶色いソースで何時間も煮込む。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "पतले बीफ स्लाइस", "d": "बीफ राउंड के बड़े, पतले स्लाइस, हथौड़े से और भी पतले पीटे गए।" },
+      { "icon": "🥓", "t": "क्लासिक भरावन", "d": "सरसों, बेकन, प्याज़ और अचार मांस के अंदर लपेटे जाते हैं।" },
+      { "icon": "📌", "t": "टूथपिक से सुरक्षित", "d": "रोल को आकार बनाए रखने के लिए लकड़ी की टूथपिक या रसोई की डोरी से सुरक्षित किया जाता है।" },
+      { "icon": "🍲", "t": "सॉस में धीमी आंच पर पका", "d": "जल्दी भूरा किया जाता है, फिर घंटों तक गाढ़े भूरे सॉस में धीमी आंच पर पकाया जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "İnce dana eti dilimleri", "d": "Büyük, ince dana but dilimleri, tokmakla daha da inceltilir." },
+      { "icon": "🥓", "t": "Klasik iç harç", "d": "Hardal, jambon, soğan ve turşu etin içine sarılır." },
+      { "icon": "📌", "t": "Kürdanla sabitlenir", "d": "Ruloların şeklini korumak için ahşap kürdan veya mutfak ipi ile sabitlenir." },
+      { "icon": "🍲", "t": "Sosta yavaşça pişer", "d": "Hızlıca kızartılır, sonra saatlerce zengin bir kahverengi sosta pişirilir." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Fette sottili di manzo", "d": "Grandi fette sottili di girello di manzo, appiattite ancora di più con un batticarne." },
+      { "icon": "🥓", "t": "Ripieno classico", "d": "Senape, pancetta, cipolla e sottaceti vengono arrotolati dentro la carne." },
+      { "icon": "📌", "t": "Fissati con stuzzicadenti", "d": "Gli involtini vengono fissati con stuzzicadenti di legno o spago da cucina, per mantenere la forma." },
+      { "icon": "🍲", "t": "Brasati lentamente nella salsa", "d": "Vengono rosolati rapidamente, poi brasati per ore in una ricca salsa bruna." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "얇은 소고기 슬라이스", "d": "큼직하고 얇은 소고기 우둔살을 망치로 더 얇게 두드린다." },
+      { "icon": "🥓", "t": "클래식 속 재료", "d": "겨자, 베이컨, 양파, 피클을 고기 안에 말아 넣는다." },
+      { "icon": "📌", "t": "이쑤시개로 고정", "d": "롤은 모양을 유지하기 위해 나무 이쑤시개나 조리용 실로 고정한다." },
+      { "icon": "🍲", "t": "소스에 천천히 조리기", "d": "빠르게 갈색이 되도록 구운 뒤, 진한 갈색 소스에서 몇 시간 동안 뭉근히 익힌다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["8 felii subțiri de mușchi de vită (rotund)", "4 linguri muștar german", "8 felii bacon", "1 ceapă mare, tocată fin", "4 castraveți murați, tăiați în fâșii", "sare și piper după gust", "3 linguri ulei", "500ml supă de vită", "2 linguri pastă de roșii", "2 linguri făină", "scobitori sau ață de bucătărie"],
+    "en": ["8 thin slices beef round", "4 tbsp German mustard", "8 slices bacon", "1 large onion, finely chopped", "4 dill pickles, cut into strips", "salt and pepper to taste", "3 tbsp oil", "500ml beef broth", "2 tbsp tomato paste", "2 tbsp flour", "toothpicks or kitchen string"],
+    "es": ["8 rebanadas finas de tapa de res", "4 cucharadas de mostaza alemana", "8 lonchas de tocino", "1 cebolla grande, finamente picada", "4 pepinillos en vinagre, cortados en tiras", "sal y pimienta al gusto", "3 cucharadas de aceite", "500ml de caldo de res", "2 cucharadas de pasta de tomate", "2 cucharadas de harina", "palillos o hilo de cocina"],
+    "fr": ["8 fines tranches de rond de bœuf", "4 c. à soupe de moutarde allemande", "8 tranches de lard", "1 gros oignon, finement haché", "4 cornichons, coupés en lanières", "sel et poivre selon le goût", "3 c. à soupe d'huile", "500ml de bouillon de bœuf", "2 c. à soupe de concentré de tomate", "2 c. à soupe de farine", "cure-dents ou ficelle de cuisine"],
+    "de": ["8 dünne Scheiben Rinderoberschale", "4 EL deutscher Senf", "8 Scheiben Speck", "1 große Zwiebel, fein gehackt", "4 Gewürzgurken, in Streifen geschnitten", "Salz und Pfeffer nach Geschmack", "3 EL Öl", "500ml Rinderbrühe", "2 EL Tomatenmark", "2 EL Mehl", "Zahnstocher oder Küchengarn"],
+    "pt": ["8 fatias finas de alcatra bovina", "4 colheres (sopa) de mostarda alemã", "8 fatias de bacon", "1 cebola grande, picada finamente", "4 pepinos em conserva, cortados em tiras", "sal e pimenta a gosto", "3 colheres (sopa) de óleo", "500ml de caldo de carne", "2 colheres (sopa) de extrato de tomate", "2 colheres (sopa) de farinha", "palitos ou barbante de cozinha"],
+    "ru": ["8 тонких ломтиков говяжьего окорока", "4 ст.л. немецкой горчицы", "8 ломтиков бекона", "1 крупная луковица, мелко нарезанная", "4 маринованных огурца, нарезанных полосками", "соль и перец по вкусу", "3 ст.л. масла", "500мл говяжьего бульона", "2 ст.л. томатной пасты", "2 ст.л. муки", "зубочистки или кулинарная нить"],
+    "ar": ["8 شرائح رقيقة من فخذ لحم البقر", "4 ملاعق كبيرة خردل ألماني", "8 شرائح لحم مقدد", "بصلة كبيرة، مفرومة ناعمًا", "4 حبات مخلل، مقطّعة شرائح طولية", "ملح وفلفل حسب الرغبة", "3 ملاعق كبيرة زيت", "500 مل مرق لحم بقري", "ملعقتان كبيرتان معجون طماطم", "ملعقتان كبيرتان دقيق", "أعواد أسنان أو خيط مطبخ"],
+    "zh": ["8片薄牛臀肉片", "4汤匙德式芥末酱", "8片培根", "1个大洋葱，切碎", "4根腌黄瓜，切条", "盐和胡椒适量", "3汤匙油", "500毫升牛肉高汤", "2汤匙番茄酱", "2汤匙面粉", "牙签或厨用棉线"],
+    "ja": ["牛もも肉薄切り8枚", "ドイツマスタード大さじ4", "ベーコン8枚", "玉ねぎ1個（みじん切り）", "ピクルス4本（細切り）", "塩こしょう 適量", "油 大さじ3", "牛だし500ml", "トマトペースト大さじ2", "小麦粉大さじ2", "つまようじまたはキッチン用の糸"],
+    "hi": ["8 पतले बीफ राउंड स्लाइस", "4 बड़े चम्मच जर्मन सरसों", "8 स्लाइस बेकन", "1 बड़ा प्याज़, बारीक कटा", "4 डिल अचार, पट्टियों में कटे", "स्वादानुसार नमक और काली मिर्च", "3 बड़े चम्मच तेल", "500 मिली बीफ शोरबा", "2 बड़े चम्मच टमाटर का पेस्ट", "2 बड़े चम्मच आटा", "टूथपिक या रसोई की डोरी"],
+    "tr": ["8 ince dana but dilimi", "4 yemek kaşığı Alman hardalı", "8 dilim jambon", "1 büyük soğan, ince doğranmış", "4 adet turşu, şerit şeklinde kesilmiş", "tuz ve karabiber, tadına göre", "3 yemek kaşığı yağ", "500ml dana eti suyu", "2 yemek kaşığı domates salçası", "2 yemek kaşığı un", "kürdan veya mutfak ipi"],
+    "it": ["8 fette sottili di girello di manzo", "4 cucchiai di senape tedesca", "8 fette di pancetta", "1 cipolla grande, tritata finemente", "4 cetriolini sottaceto, tagliati a strisce", "sale e pepe q.b.", "3 cucchiai di olio", "500ml di brodo di manzo", "2 cucchiai di concentrato di pomodoro", "2 cucchiai di farina", "stuzzicadenti o spago da cucina"],
+    "ko": ["얇은 소고기 우둔살 8장", "독일식 겨자 4큰술", "베이컨 8장", "큰 양파 1개, 잘게 썬 것", "오이 피클 4개, 채 썬 것", "소금과 후추 약간", "식용유 3큰술", "소고기 육수 500ml", "토마토 페이스트 2큰술", "밀가루 2큰술", "이쑤시개 또는 조리용 실"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE CARNEA: Bate ușor feliile de vită cu ciocanul de carne, între două folii de plastic, până devin uniform subțiri. CONDIMENTEAZĂ: Sărează și piperează fiecare felie, apoi întinde câte o lingură de muștar pe fiecare. ADAUGĂ UMPLUTURA: Pune o felie de bacon, puțină ceapă tocată și 2-3 fâșii de castravete murat pe fiecare bucată de carne. RULEAZĂ: Rulează strâns fiecare felie de la un capăt, împăturind marginile spre interior. FIXEAZĂ: Fixează fiecare ruladă cu scobitori sau leagă cu ață de bucătărie, ca să nu se desfacă la fiert. RUMENEȘTE RULADELE: Încinge uleiul într-o oală mare, rumenește ruladele pe toate părțile, 5-6 minute în total. ADAUGĂ SUPA: Toarnă supa de vită și pasta de roșii peste rulade, adu la fierbere. FIERBE ÎNĂBUȘIT: Acoperă oala, lasă la fiert mocnit la foc mic 1.5-2 ore, până carnea devine foarte fragedă. SCOATE RULADELE: Scoate ruladele, îndepărtează scobitorile sau ața, păstrează-le calde. ÎNGROAȘĂ SOSUL: Amestecă făina cu puțină apă rece, adaugă-o în sosul rămas, fierbe 3-4 minute, amestecând, până se îngroașă. SERVEȘTE: Toarnă sosul peste rulade, servește cu găluște sau tăiței, alături de varză roșie.",
+    "en": "PREPARE THE MEAT: Gently pound the beef slices with a meat mallet, between two sheets of plastic wrap, until evenly thin. SEASON: Salt and pepper each slice, then spread a tablespoon of mustard on each. ADD THE FILLING: Place a slice of bacon, a little chopped onion and 2-3 strips of pickle on each piece of meat. ROLL: Tightly roll each slice from one end, folding the edges inward. SECURE: Secure each roll with toothpicks or tie with kitchen string, so it doesn't come apart while cooking. BROWN THE ROLLS: Heat the oil in a large pot, brown the rolls on all sides, 5-6 minutes total. ADD THE BROTH: Pour the beef broth and tomato paste over the rolls, bring to a boil. BRAISE: Cover the pot, let simmer over low heat 1.5-2 hours, until the meat is very tender. REMOVE THE ROLLS: Remove the rolls, take out the toothpicks or string, keep them warm. THICKEN THE SAUCE: Mix the flour with a little cold water, add it to the remaining sauce, simmer 3-4 minutes, stirring, until thickened. SERVE: Pour the sauce over the rolls, serve with dumplings or noodles, alongside red cabbage.",
+    "es": "PREPARA LA CARNE: Golpea suavemente las rebanadas de res con un mazo de carne, entre dos hojas de plástico, hasta que queden uniformemente finas. SAZONA: Sazona con sal y pimienta cada rebanada, luego unta una cucharada de mostaza en cada una. AÑADE EL RELLENO: Coloca una loncha de tocino, un poco de cebolla picada y 2-3 tiras de pepinillo en cada trozo de carne. ENROLLA: Enrolla firmemente cada rebanada desde un extremo, doblando los bordes hacia adentro. ASEGURA: Asegura cada rollito con palillos o átalo con hilo de cocina, para que no se abra al cocinar. DORA LOS ROLLITOS: Calienta el aceite en una olla grande, dora los rollitos por todos lados, 5-6 minutos en total. AÑADE EL CALDO: Vierte el caldo de res y la pasta de tomate sobre los rollitos, lleva a ebullición. COCINA A FUEGO LENTO: Tapa la olla, deja cocinar a fuego bajo 1.5-2 horas, hasta que la carne esté muy tierna. RETIRA LOS ROLLITOS: Retira los rollitos, quita los palillos o el hilo, mantenlos calientes. ESPESA LA SALSA: Mezcla la harina con un poco de agua fría, añádela a la salsa restante, cocina 3-4 minutos, removiendo, hasta que espese. SIRVE: Vierte la salsa sobre los rollitos, sirve con albóndigas o fideos, junto con col morada.",
+    "fr": "PRÉPAREZ LA VIANDE: Aplatissez délicatement les tranches de bœuf avec un attendrisseur, entre deux feuilles de film plastique, jusqu'à ce qu'elles soient uniformément fines. ASSAISONNEZ: Salez et poivrez chaque tranche, puis étalez une cuillère à soupe de moutarde sur chacune. AJOUTEZ LA FARCE: Placez une tranche de lard, un peu d'oignon haché et 2-3 lanières de cornichon sur chaque morceau de viande. ROULEZ: Roulez fermement chaque tranche depuis une extrémité, en repliant les bords vers l'intérieur. FIXEZ: Fixez chaque roulé avec des cure-dents ou attachez avec de la ficelle de cuisine, pour qu'il ne se défasse pas à la cuisson. FAITES DORER LES ROULÉS: Chauffez l'huile dans une grande marmite, faites dorer les roulés de tous côtés, 5-6 minutes au total. AJOUTEZ LE BOUILLON: Versez le bouillon de bœuf et le concentré de tomate sur les roulés, portez à ébullition. FAITES BRAISER: Couvrez la marmite, laissez mijoter à feu doux 1,5-2 heures, jusqu'à ce que la viande soit très tendre. RETIREZ LES ROULÉS: Retirez les roulés, enlevez les cure-dents ou la ficelle, gardez-les au chaud. ÉPAISSISSEZ LA SAUCE: Mélangez la farine avec un peu d'eau froide, ajoutez-la à la sauce restante, laissez mijoter 3-4 minutes, en remuant, jusqu'à épaississement. SERVEZ: Versez la sauce sur les roulés, servez avec des quenelles ou des nouilles, accompagné de chou rouge.",
+    "de": "FLEISCH VORBEREITEN: Die Rindfleischscheiben zwischen zwei Frischhaltefolien vorsichtig mit einem Fleischklopfer gleichmäßig dünn klopfen. WÜRZEN: Jede Scheibe salzen und pfeffern, dann einen Esslöffel Senf auf jede streichen. FÜLLUNG HINZUFÜGEN: Eine Speckscheibe, etwas gehackte Zwiebel und 2-3 Gurkenstreifen auf jedes Fleischstück legen. ROLLEN: Jede Scheibe von einem Ende her fest aufrollen, die Ränder nach innen einschlagen. FIXIEREN: Jede Roulade mit Zahnstochern feststecken oder mit Küchengarn zubinden, damit sie beim Garen nicht auseinanderfällt. ROULADEN ANBRATEN: Öl in einem großen Topf erhitzen, die Rouladen von allen Seiten anbraten, insgesamt 5-6 Minuten. BRÜHE HINZUFÜGEN: Die Rinderbrühe und das Tomatenmark über die Rouladen gießen, aufkochen lassen. SCHMOREN: Den Topf abdecken, bei niedriger Hitze 1,5-2 Stunden köcheln lassen, bis das Fleisch sehr zart ist. ROULADEN HERAUSNEHMEN: Die Rouladen herausnehmen, die Zahnstocher oder das Garn entfernen, warm halten. SAUCE EINDICKEN: Das Mehl mit etwas kaltem Wasser verrühren, in die restliche Sauce geben, 3-4 Minuten unter Rühren köcheln lassen, bis sie eindickt. SERVIEREN: Die Sauce über die Rouladen gießen, mit Klößen oder Nudeln servieren, dazu Rotkohl.",
+    "pt": "PREPARE A CARNE: Bata levemente as fatias de carne com um amaciador, entre duas folhas de filme plástico, até ficarem uniformemente finas. TEMPERE: Tempere cada fatia com sal e pimenta, depois espalhe uma colher de sopa de mostarda em cada uma. ADICIONE O RECHEIO: Coloque uma fatia de bacon, um pouco de cebola picada e 2-3 tiras de pepino em conserva em cada pedaço de carne. ENROLE: Enrole firmemente cada fatia a partir de uma extremidade, dobrando as bordas para dentro. PRENDA: Prenda cada rolinho com palitos ou amarre com barbante de cozinha, para não se desfazer ao cozinhar. DOURE OS ROLINHOS: Aqueça o óleo numa panela grande, doure os rolinhos de todos os lados, 5-6 minutos no total. ADICIONE O CALDO: Despeje o caldo de carne e o extrato de tomate sobre os rolinhos, leve à fervura. COZINHE EM FOGO BRANDO: Tape a panela, deixe cozinhar em fogo baixo 1,5-2 horas, até a carne ficar muito macia. RETIRE OS ROLINHOS: Retire os rolinhos, tire os palitos ou o barbante, mantenha-os quentes. ENGROSSE O MOLHO: Misture a farinha com um pouco de água fria, junte ao molho restante, cozinhe 3-4 minutos, mexendo, até engrossar. SIRVA: Despeje o molho sobre os rolinhos, sirva com bolinhos ou macarrão, junto com couve roxa.",
+    "ru": "ПОДГОТОВЬТЕ МЯСО: Аккуратно отбейте ломтики говядины молотком для мяса между двумя слоями пищевой плёнки до равномерной тонкости. ПРИПРАВЬТЕ: Посолите и поперчите каждый ломтик, затем намажьте столовую ложку горчицы на каждый. ДОБАВЬТЕ НАЧИНКУ: Положите ломтик бекона, немного нарезанного лука и 2-3 полоски огурца на каждый кусок мяса. СВЕРНИТЕ: Плотно сверните каждый ломтик с одного края, загибая края внутрь. ЗАКРЕПИТЕ: Закрепите каждый рулет зубочистками или свяжите кулинарной нитью, чтобы он не развалился при готовке. ОБЖАРЬТЕ РУЛЕТЫ: Разогрейте масло в большой кастрюле, обжарьте рулеты со всех сторон, всего 5-6 минут. ДОБАВЬТЕ БУЛЬОН: Влейте говяжий бульон и томатную пасту на рулеты, доведите до кипения. ТУШИТЕ: Накройте кастрюлю, тушите на слабом огне 1,5-2 часа, пока мясо не станет очень нежным. ДОСТАНЬТЕ РУЛЕТЫ: Достаньте рулеты, уберите зубочистки или нить, держите тёплыми. ЗАГУСТИТЕ СОУС: Смешайте муку с небольшим количеством холодной воды, добавьте в оставшийся соус, варите 3-4 минуты, помешивая, до загустения. ПОДАВАЙТЕ: Полейте рулеты соусом, подавайте с клёцками или лапшой, вместе с красной капустой.",
+    "ar": "حضّري اللحم: اطرقي شرائح لحم البقر برفق بمطرقة اللحم بين طبقتين من غلاف بلاستيكي حتى تصبح رقيقة بالتساوي. تبّلي: تبّلي كل شريحة بالملح والفلفل، ثم ادهني ملعقة كبيرة من الخردل على كل واحدة. أضيفي الحشوة: ضعي شريحة لحم مقدد وقليلًا من البصل المفروم و2-3 شرائح مخلل على كل قطعة لحم. لفّي: لفّي كل شريحة بإحكام من أحد الطرفين، مع طي الحواف إلى الداخل. ثبّتي: ثبّتي كل لفافة بأعواد أسنان أو اربطيها بخيط مطبخ حتى لا تنفك أثناء الطهي. حمّري اللفائف: سخّني الزيت في قدر كبيرة، حمّري اللفائف من كل الجهات لمدة 5-6 دقائق إجمالًا. أضيفي المرق: اسكبي مرق لحم البقر ومعجون الطماطم فوق اللفائف واتركيها تغلي. اطهي ببطء: غطّي القدر واتركيها تنضج على نار هادئة 1.5-2 ساعة حتى يصبح اللحم طريًا جدًا. أخرجي اللفائف: أخرجي اللفائف، أزيلي أعواد الأسنان أو الخيط، واحتفظي بها دافئة. كثّفي الصلصة: امزجي الدقيق بقليل من الماء البارد، أضيفيه إلى الصلصة المتبقية، واتركيها تنضج 3-4 دقائق مع التحريك حتى تتكاثف. قدّمي: اسكبي الصلصة فوق اللفائف، وقدّميها مع كرات العجين أو النودلز، مع الملفوف الأحمر.",
+    "zh": "处理肉类：用肉锤将牛肉片夹在两层保鲜膜之间轻轻敲打至均匀薄片。调味：为每片肉撒盐和胡椒调味，然后在每片上涂一汤匙芥末。加入馅料：在每片肉上放一片培根、少许洋葱碎和2-3条腌黄瓜条。卷起：从一端将每片肉紧紧卷起，把边缘向内折。固定：用牙签固定每个肉卷，或用厨用棉线绑好，防止烹煮时散开。煎肉卷：在大锅中加热油，将肉卷各面煎至上色，共约5-6分钟。加入高汤：将牛肉高汤和番茄酱倒在肉卷上，煮沸。慢炖：盖上锅盖，小火炖1.5-2小时，直至肉质非常软嫩。取出肉卷：取出肉卷，去除牙签或棉线，保温备用。收浓酱汁：将面粉与少量冷水混合，加入剩余酱汁中，边搅拌边煮3-4分钟至浓稠。上桌：将酱汁淋在肉卷上，配团子或面条，搭配紫甘蓝食用。",
+    "ja": "肉を準備する：牛肉スライスを2枚のラップの間に挟み、肉たたきで均一に薄くなるまで軽く叩く。味付けする：各スライスに塩こしょうをし、それぞれにマスタードを大さじ1塗る。詰め物を加える：各肉に、ベーコン1枚、刻んだ玉ねぎ少々、ピクルス2〜3切れをのせる。巻く：端からしっかりと巻き、端を内側に折り込む。留める：各ロールを楊枝で留めるか、キッチン用の糸で縛り、調理中にほどけないようにする。ロールを焼く：大鍋で油を熱し、ロールの全面を合計5〜6分焼き色がつくまで焼く。だしを加える：牛だしとトマトペーストをロールにかけ、沸騰させる。煮込む：鍋に蓋をして弱火で1.5〜2時間、肉がとても柔らかくなるまで煮込む。ロールを取り出す：ロールを取り出し、楊枝や糸を外し、温かく保つ。ソースにとろみをつける：小麦粉を少量の冷水と混ぜ、残ったソースに加え、かき混ぜながら3〜4分煮てとろみをつける。提供する：ソースをロールにかけ、団子または麺と共に、赤キャベツを添えて提供する。",
+    "hi": "मांस तैयार करें: बीफ स्लाइस को दो प्लास्टिक शीट के बीच रखकर मांस के हथौड़े से हल्के से पीटें, जब तक समान रूप से पतला न हो जाए। मसाला डालें: हर स्लाइस पर नमक और काली मिर्च डालें, फिर हर एक पर एक बड़ा चम्मच सरसों फैलाएं। भरावन डालें: हर मांस के टुकड़े पर एक स्लाइस बेकन, थोड़ा कटा प्याज़ और 2-3 अचार की पट्टियां रखें। रोल करें: हर स्लाइस को एक सिरे से कसकर रोल करें, किनारों को अंदर की ओर मोड़ते हुए। सुरक्षित करें: हर रोल को टूथपिक से सुरक्षित करें या रसोई की डोरी से बांधें, ताकि पकाते समय न खुले। रोल भूरे करें: बड़े बर्तन में तेल गरम करें, रोल को सभी तरफ से कुल 5-6 मिनट भूरा करें। शोरबा डालें: रोल के ऊपर बीफ शोरबा और टमाटर का पेस्ट डालें, उबाल लाएं। धीमी आंच पर पकाएं: बर्तन ढककर धीमी आंच पर 1.5-2 घंटे पकने दें, जब तक मांस बहुत नरम न हो जाए। रोल निकालें: रोल निकालें, टूथपिक या डोरी हटाएं, गरम रखें। सॉस गाढ़ा करें: आटे को थोड़े ठंडे पानी के साथ मिलाएं, बचे सॉस में डालें, हिलाते हुए 3-4 मिनट पकाएं जब तक गाढ़ा न हो जाए। परोसें: रोल के ऊपर सॉस डालें, डम्पलिंग या नूडल्स के साथ, लाल पत्तागोभी के साथ परोसें।",
+    "tr": "ETİ HAZIRLAYIN: Dana eti dilimlerini iki plastik folyo arasına koyup et tokmağıyla hafifçe eşit inceliğe gelene kadar dövün. TATLANDIRIN: Her dilimi tuz ve karabiberle tatlandırın, sonra her birine bir yemek kaşığı hardal sürün. İÇ HARCI EKLEYİN: Her et parçasına bir dilim jambon, biraz doğranmış soğan ve 2-3 şerit turşu koyun. SARIN: Her dilimi bir uçtan sıkıca sarın, kenarları içe doğru katlayarak. SABİTLEYİN: Her ruloyu kürdanla sabitleyin veya mutfak ipiyle bağlayın, pişerken açılmaması için. RULOLARI KIZARTIN: Büyük bir tencerede yağı ısıtın, ruloları her tarafından toplam 5-6 dakika kızartın. ET SUYUNU EKLEYİN: Dana eti suyu ve domates salçasını rulolar üzerine dökün, kaynatın. YAVAŞÇA PİŞİRİN: Tencereyi kapatıp kısık ateşte 1,5-2 saat, et çok yumuşayana kadar pişirin. RULOLARI ÇIKARIN: Ruloları çıkarın, kürdan veya ipi çıkarın, sıcak tutun. SOSU KOYULAŞTIRIN: Unu biraz soğuk suyla karıştırıp kalan sosa ekleyin, karıştırarak 3-4 dakika koyulaşana kadar pişirin. SERVİS YAPIN: Sosu rulolar üzerine dökün, köfte veya erişte ile, yanında kırmızı lahanayla servis edin.",
+    "it": "PREPARA LA CARNE: Batti delicatamente le fette di manzo con un batticarne, tra due fogli di pellicola trasparente, finché uniformemente sottili. INSAPORISCI: Sala e pepa ogni fetta, poi spalma un cucchiaio di senape su ciascuna. AGGIUNGI IL RIPIENO: Metti una fetta di pancetta, un po' di cipolla tritata e 2-3 strisce di sottaceto su ogni pezzo di carne. ARROTOLA: Arrotola strettamente ogni fetta da un'estremità, ripiegando i bordi verso l'interno. FISSA: Fissa ogni involtino con stuzzicadenti o legalo con spago da cucina, perché non si apra durante la cottura. ROSOLA GLI INVOLTINI: Scalda l'olio in una pentola grande, rosola gli involtini su tutti i lati, 5-6 minuti in totale. AGGIUNGI IL BRODO: Versa il brodo di manzo e il concentrato di pomodoro sugli involtini, porta a ebollizione. BRASA: Copri la pentola, lascia sobbollire a fuoco basso 1,5-2 ore, finché la carne è molto tenera. TOGLI GLI INVOLTINI: Togli gli involtini, rimuovi gli stuzzicadenti o lo spago, tienili al caldo. ADDENSA LA SALSA: Mescola la farina con un po' d'acqua fredda, aggiungila alla salsa rimasta, fai sobbollire 3-4 minuti, mescolando, finché si addensa. SERVI: Versa la salsa sugli involtini, servi con canederli o tagliatelle, insieme a cavolo rosso.",
+    "ko": "고기 준비하기: 소고기 슬라이스를 비닐랩 두 장 사이에 놓고 고기망치로 살살 두드려 고르게 얇게 만든다. 간하기: 각 슬라이스에 소금과 후추로 간하고 겨자를 한 큰술씩 바른다. 속 재료 넣기: 각 고기 조각에 베이컨 한 장, 다진 양파 조금, 피클 2-3조각을 올린다. 말기: 각 슬라이스를 한쪽 끝에서부터 단단히 말아 가장자리를 안쪽으로 접는다. 고정하기: 각 롤을 이쑤시개로 고정하거나 조리용 실로 묶어 조리 중 풀리지 않게 한다. 롤 굽기: 큰 냄비에 기름을 달구고 롤을 모든 면이 갈색이 되도록 총 5-6분간 굽는다. 육수 넣기: 소고기 육수와 토마토 페이스트를 롤 위에 붓고 끓인다. 뭉근히 조리기: 냄비 뚜껑을 덮고 약불에서 1.5-2시간, 고기가 매우 부드러워질 때까지 조리한다. 롤 꺼내기: 롤을 꺼내 이쑤시개나 실을 제거하고 따뜻하게 보관한다. 소스 걸쭉하게 만들기: 밀가루를 약간의 찬물과 섞어 남은 소스에 넣고 저어가며 3-4분간 걸쭉해질 때까지 끓인다. 제공하기: 소스를 롤 위에 붓고 경단이나 국수와 함께, 적양배추를 곁들여 제공한다."
+  },
+  "originText": {
+    "ro": "Rouladen face parte din bucătăria germană de duminică, alături de sauerbraten și schnitzel, un fel considerat esențial pentru masa festivă germană tradițională. Originea exactă e neclară, dar tehnica de a rula carne subțiată în jurul unei umpluri sărate este comună mai multor bucătării europene, de la involtini italiene la paupiettes franțuzești — o adaptare pragmatică pentru a face bucăți de carne mai ieftine, precum rotundul de vită, mai fragede și interesante.\n\nCombinația de muștar, bacon, ceapă și castraveți murați este considerată rețeta \"clasică\" din nordul Germaniei, deși variantele regionale abundă: unele folosesc morcov în locul castraveților, altele adaugă un ou fiert întreg în centrul rulăii. Timpul lung de fierbere înăbușit este esențial — nu doar pentru a frăgezi carnea, ci pentru a permite aromelor din umplutură să pătrundă complet în sos, transformându-l într-un element la fel de important ca și carnea în sine.",
+    "en": "Rouladen belongs to Germany's Sunday cuisine, alongside sauerbraten and schnitzel, a dish considered essential to a traditional German festive meal. Its exact origin is unclear, but the technique of rolling thinned meat around a savory filling is common across several European cuisines, from Italian involtini to French paupiettes — a pragmatic adaptation to make cheaper cuts of meat, like beef round, more tender and interesting.\n\nThe combination of mustard, bacon, onion and pickles is considered the \"classic\" recipe from northern Germany, though regional variants abound: some use carrot instead of pickles, others add a whole boiled egg at the center of the roll. The long braising time is essential — not just to tenderize the meat, but to let the flavors from the filling fully permeate the sauce, turning it into an element as important as the meat itself.",
+    "es": "El rouladen forma parte de la cocina dominical de Alemania, junto al sauerbraten y el schnitzel, un plato considerado esencial en una comida festiva alemana tradicional. Su origen exacto no está claro, pero la técnica de enrollar carne aplanada alrededor de un relleno sabroso es común a varias cocinas europeas, desde los involtini italianos hasta las paupiettes francesas — una adaptación pragmática para hacer más tiernos e interesantes cortes de carne más baratos, como la tapa de res.\n\nLa combinación de mostaza, tocino, cebolla y pepinillos se considera la receta \"clásica\" del norte de Alemania, aunque abundan las variantes regionales: algunas usan zanahoria en lugar de pepinillos, otras añaden un huevo duro entero en el centro del rollito. El largo tiempo de cocción a fuego lento es esencial — no solo para ablandar la carne, sino para permitir que los sabores del relleno impregnen completamente la salsa, convirtiéndola en un elemento tan importante como la propia carne.",
+    "fr": "Le rouladen fait partie de la cuisine dominicale allemande, aux côtés du sauerbraten et du schnitzel, un plat considéré comme essentiel à un repas de fête allemand traditionnel. Son origine exacte n'est pas claire, mais la technique d'enrouler de la viande aplatie autour d'une farce savoureuse est commune à plusieurs cuisines européennes, des involtini italiens aux paupiettes françaises — une adaptation pragmatique pour rendre des morceaux de viande moins chers, comme le rond de bœuf, plus tendres et intéressants.\n\nLa combinaison de moutarde, lard, oignon et cornichons est considérée comme la recette \"classique\" du nord de l'Allemagne, bien que les variantes régionales abondent: certaines utilisent de la carotte à la place des cornichons, d'autres ajoutent un œuf dur entier au centre du roulé. Le long temps de mijotage est essentiel — non seulement pour attendrir la viande, mais pour permettre aux saveurs de la farce d'imprégner entièrement la sauce, en faisant un élément aussi important que la viande elle-même.",
+    "de": "Rouladen gehören zur deutschen Sonntagsküche, neben Sauerbraten und Schnitzel, ein Gericht, das als essenziell für ein traditionelles deutsches Festmahl gilt. Der genaue Ursprung ist unklar, aber die Technik, dünn geklopftes Fleisch um eine herzhafte Füllung zu rollen, ist in mehreren europäischen Küchen verbreitet, von italienischen Involtini bis zu französischen Paupiettes — eine pragmatische Anpassung, um günstigere Fleischstücke wie Rinderoberschale zarter und interessanter zu machen.\n\nDie Kombination aus Senf, Speck, Zwiebel und sauren Gurken gilt als das \"klassische\" Rezept Norddeutschlands, obwohl regionale Varianten reichlich vorhanden sind: manche verwenden Karotte statt Gurken, andere fügen ein ganzes gekochtes Ei in die Mitte der Roulade. Die lange Schmorzeit ist essenziell — nicht nur, um das Fleisch zart zu machen, sondern damit die Aromen der Füllung vollständig in die Sauce übergehen und sie zu einem ebenso wichtigen Element wie das Fleisch selbst machen.",
+    "pt": "O rouladen faz parte da culinária dominical alemã, ao lado do sauerbraten e do schnitzel, um prato considerado essencial numa refeição festiva alemã tradicional. A sua origem exata não é clara, mas a técnica de enrolar carne achatada em torno de um recheio saboroso é comum a várias culinárias europeias, dos involtini italianos aos paupiettes franceses — uma adaptação pragmática para tornar cortes de carne mais baratos, como a alcatra bovina, mais macios e interessantes.\n\nA combinação de mostarda, bacon, cebola e picles é considerada a receita \"clássica\" do norte da Alemanha, embora abundem as variantes regionais: algumas usam cenoura em vez de picles, outras acrescentam um ovo cozido inteiro no centro do rolinho. O longo tempo de cozedura em fogo brando é essencial — não apenas para amaciar a carne, mas para permitir que os sabores do recheio impregnem completamente o molho, transformando-o num elemento tão importante quanto a própria carne.",
+    "ru": "Рулады относятся к воскресной немецкой кухне, наряду с зауэрбратеном и шницелем, — блюду, считающемуся необходимым для традиционного немецкого праздничного застолья. Точное происхождение неясно, но техника заворачивания тонко отбитого мяса вокруг пикантной начинки распространена во многих европейских кухнях, от итальянских инволтини до французских попьеттов — прагматичная адаптация, позволяющая сделать более дешёвые куски мяса, такие как говяжий окорок, более нежными и интересными.\n\nСочетание горчицы, бекона, лука и маринованных огурцов считается \"классическим\" рецептом северной Германии, хотя региональные варианты изобилуют: одни используют морковь вместо огурцов, другие добавляют целое варёное яйцо в центр рулета. Длительное время тушения необходимо — не только для смягчения мяса, но и для того, чтобы ароматы начинки полностью пропитали соус, превращая его в элемент не менее важный, чем само мясо.",
+    "ar": "يُعتبر الرولادن جزءًا من مطبخ يوم الأحد الألماني، إلى جانب الزاوربراتن والشنيتزل، وهو طبق يُعتبر أساسيًا في وجبة احتفالية ألمانية تقليدية. أصله الدقيق غير واضح، لكن تقنية لف اللحم المطروق حول حشوة مالحة شائعة في عدة مطابخ أوروبية، من الإنفولتيني الإيطالي إلى البوبييت الفرنسي — تكيّف عملي لجعل قطع اللحم الأرخص، مثل فخذ البقر، أكثر طراوة وإثارة للاهتمام.\n\nيُعتبر مزيج الخردل ولحم الخنزير المقدد والبصل والمخلل الوصفة \"الكلاسيكية\" من شمال ألمانيا، رغم كثرة النسخ الإقليمية: بعضها يستخدم الجزر بدلًا من المخلل، وبعضها الآخر يضيف بيضة مسلوقة كاملة في وسط اللفافة. وقت الطهي البطيء الطويل أساسي — ليس فقط لتليين اللحم، بل للسماح لنكهات الحشوة بالتغلغل بالكامل في الصلصة، مما يجعلها عنصرًا لا يقل أهمية عن اللحم نفسه.",
+    "zh": "德式牛肉卷是德国周日烹饪的一部分，与醋焖牛肉和炸肉排并列，被认为是传统德式节庆餐桌上不可或缺的一道菜。它的确切起源尚不清楚，但将敲薄的肉卷起包裹咸香馅料的技法在多个欧洲饮食中都很常见，从意大利的肉卷到法国的肉卷派皮特——这是一种务实的改良方式，让牛臀肉等较便宜的肉块变得更加软嫩有趣。\n\n芥末、培根、洋葱和腌黄瓜的组合被认为是德国北部的「经典」配方，尽管地区变体众多：有些用胡萝卜代替腌黄瓜，有些则在肉卷中心加入一整个水煮蛋。长时间的慢炖至关重要——不仅是为了使肉质变软，也是为了让馅料的风味充分渗透进酱汁中，使酱汁成为与肉本身同样重要的元素。",
+    "ja": "ルーラーデンはザワーブラーテンやシュニッツェルと並んでドイツの日曜料理に属し、伝統的なドイツの祝いの食事に欠かせない料理とされている。正確な起源は不明だが、薄く伸ばした肉で香ばしい詰め物を巻く技法は、イタリアのインヴォルティーニからフランスのポピエットまで、いくつものヨーロッパ料理に共通しており、牛もも肉のような安価な部位をより柔らかく興味深いものにするための実用的な工夫である。\n\nマスタード、ベーコン、玉ねぎ、ピクルスの組み合わせは北ドイツの「定番」レシピとされているが、地域によるバリエーションも豊富で、ピクルスの代わりに人参を使ったり、ロールの中心に丸ごとゆで卵を入れたりする例もある。長時間の煮込みは不可欠であり、肉を柔らかくするだけでなく、詰め物の風味をソースに完全に染み込ませ、肉そのものと同じくらい重要な要素にする役割を果たす。",
+    "hi": "रूलादेन जर्मनी के रविवार के भोजन का हिस्सा है, साउरब्रातेन और श्नित्ज़ेल के साथ, एक व्यंजन जिसे पारंपरिक जर्मन उत्सव भोजन के लिए आवश्यक माना जाता है। इसकी सटीक उत्पत्ति अस्पष्ट है, लेकिन पतले मांस को नमकीन भरावन के चारों ओर लपेटने की तकनीक कई यूरोपीय व्यंजनों में आम है, इतालवी इनवोल्टिनी से लेकर फ्रेंच पोपियेट तक — सस्ते मांस के टुकड़ों, जैसे बीफ राउंड, को अधिक नरम और दिलचस्प बनाने का एक व्यावहारिक अनुकूलन।\n\nसरसों, बेकन, प्याज़ और अचार का संयोजन उत्तरी जर्मनी की \"क्लासिक\" रेसिपी माना जाता है, हालांकि क्षेत्रीय भिन्नताएं प्रचुर हैं: कुछ अचार के बजाय गाजर का उपयोग करते हैं, अन्य रोल के केंद्र में एक पूरा उबला अंडा जोड़ते हैं। लंबा धीमी आंच पर पकाने का समय आवश्यक है — न केवल मांस को नरम बनाने के लिए, बल्कि भरावन के स्वादों को सॉस में पूरी तरह घुलने देने के लिए, जो इसे मांस जितना ही महत्वपूर्ण तत्व बनाता है।",
+    "tr": "Rouladen, sauerbraten ve schnitzel'in yanı sıra, geleneksel bir Alman bayram yemeği için gerekli kabul edilen Almanya'nın pazar mutfağına aittir. Kesin kökeni belirsizdir, ancak inceltilmiş etin lezzetli bir iç harcın etrafına sarılması tekniği, İtalyan involtinilerinden Fransız paupiette'lerine kadar birçok Avrupa mutfağında yaygındır — dana but eti gibi daha ucuz et parçalarını daha yumuşak ve ilginç hale getirmek için pragmatik bir uyarlama.\n\nHardal, jambon, soğan ve turşu kombinasyonu kuzey Almanya'nın \"klasik\" tarifi olarak kabul edilir, ancak bölgesel varyasyonlar boldur: bazıları turşu yerine havuç kullanır, diğerleri rulonun merkezine bütün bir haşlanmış yumurta ekler. Uzun ateşte pişirme süresi gereklidir — sadece eti yumuşatmak için değil, iç harcın lezzetlerinin sosa tamamen sızmasını sağlamak için, bu da onu etin kendisi kadar önemli bir unsura dönüştürür.",
+    "it": "Il rouladen fa parte della cucina domenicale tedesca, insieme al sauerbraten e allo schnitzel, un piatto considerato essenziale per un pasto festivo tedesco tradizionale. La sua origine esatta non è chiara, ma la tecnica di arrotolare carne assottigliata attorno a un ripieno saporito è comune a diverse cucine europee, dagli involtini italiani alle paupiettes francesi — un adattamento pragmatico per rendere più teneri e interessanti tagli di carne più economici, come il girello di manzo.\n\nLa combinazione di senape, pancetta, cipolla e sottaceti è considerata la ricetta \"classica\" della Germania settentrionale, sebbene abbondino le varianti regionali: alcune usano carote al posto dei sottaceti, altre aggiungono un uovo sodo intero al centro dell'involtino. Il lungo tempo di brasatura è essenziale — non solo per intenerire la carne, ma per permettere ai sapori del ripieno di permeare completamente la salsa, trasformandola in un elemento importante quanto la carne stessa.",
+    "ko": "룰라덴은 자우어브라텐, 슈니첼과 더불어 독일의 일요일 요리에 속하며, 전통적인 독일 축제 식사에 필수적인 요리로 여겨진다. 정확한 기원은 불분명하지만, 얇게 편 고기로 짭짤한 속을 말아 싸는 기법은 이탈리아의 인볼티니부터 프랑스의 포피에트까지 여러 유럽 요리에서 흔히 볼 수 있으며, 소고기 우둔살처럼 저렴한 부위를 더 부드럽고 흥미롭게 만들기 위한 실용적인 방식이다.\n\n겨자, 베이컨, 양파, 피클의 조합은 독일 북부의 \"클래식\" 레시피로 여겨지지만, 지역별 변형도 풍부하다: 어떤 곳은 피클 대신 당근을 사용하고, 다른 곳은 롤 중앙에 통삶은 달걀을 통째로 넣기도 한다. 오랜 뭉근한 조리 시간은 필수적이다 — 고기를 부드럽게 만들 뿐만 아니라 속 재료의 풍미가 소스에 완전히 스며들게 하여, 소스를 고기 자체만큼이나 중요한 요소로 만들기 때문이다."
+  },
+  "meta": {
+    "time": 130,
+    "costRon": 34,
+    "tags": ["high-protein", "family"],
+    "desc": {
+      "ro": "Ruladă de vită umplută cu muștar, bacon și castraveți murați, fiartă lent în sos brun.",
+      "en": "Beef rolls stuffed with mustard, bacon and pickles, slow-braised in brown sauce.",
+      "es": "Rollitos de res rellenos de mostaza, tocino y pepinillos, cocidos lentamente en salsa marrón.",
+      "fr": "Roulés de bœuf farcis à la moutarde, au lard et aux cornichons, braisés lentement en sauce brune.",
+      "de": "Rindsrouladen gefüllt mit Senf, Speck und sauren Gurken, langsam in brauner Sauce geschmort.",
+      "pt": "Rolinhos de carne recheados com mostarda, bacon e picles, cozidos lentamente em molho castanho.",
+      "ru": "Говяжьи рулеты с горчицей, беконом и маринованными огурцами, медленно тушённые в коричневом соусе.",
+      "ar": "لفائف لحم بقري محشوة بالخردل ولحم الخنزير المقدد والمخلل، مطهوة ببطء في صلصة بنية.",
+      "zh": "牛肉卷内包芥末、培根和腌黄瓜，慢炖于棕色酱汁中。",
+      "ja": "マスタード、ベーコン、ピクルスを詰めた牛肉ロール、茶色いソースでじっくり煮込んだ一皿。",
+      "hi": "सरसों, बेकन और अचार से भरे बीफ रोल, भूरे सॉस में धीमी आंच पर पके।",
+      "tr": "Hardal, jambon ve turşuyla doldurulmuş dana eti ruloları, kahverengi sosta yavaşça pişirilmiş.",
+      "it": "Involtini di manzo ripieni di senape, pancetta e sottaceti, brasati lentamente in salsa bruna.",
+      "ko": "겨자, 베이컨, 피클로 속을 채운 소고기 롤, 갈색 소스에서 천천히 조린 것."
+    }
+  }
+}

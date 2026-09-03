@@ -1,0 +1,209 @@
+{
+  "id": 391,
+  "servings": 4,
+  "tipType": "pasta",
+  "pairingsType": "pasta",
+  "origin": {
+    "ro": "Germania",
+    "en": "Germany",
+    "es": "Alemania",
+    "fr": "Allemagne",
+    "de": "Deutschland",
+    "pt": "Alemanha",
+    "ru": "Германия",
+    "ar": "ألمانيا",
+    "zh": "德国",
+    "ja": "ドイツ",
+    "hi": "जर्मनी",
+    "tr": "Almanya",
+    "it": "Germania",
+    "ko": "독일"
+  },
+  "name": {
+    "ro": "Spätzle cu Brânză (Käsespätzle)",
+    "en": "Käsespätzle (German Cheese Noodles)",
+    "es": "Käsespätzle (Fideos de Queso Alemanes)",
+    "fr": "Käsespätzle (Nouilles au Fromage Allemandes)",
+    "de": "Käsespätzle",
+    "pt": "Käsespätzle (Macarrão de Queijo Alemão)",
+    "ru": "Кезешпецле (Немецкая Лапша с Сыром)",
+    "ar": "كيزه شبيتسله (نودلز الجبن الألمانية)",
+    "zh": "德式芝士面疙瘩",
+    "ja": "ケーゼシュペッツレ（ドイツ風チーズ麺）",
+    "hi": "काज़ेश्पेत्सले (जर्मन चीज़ नूडल्स)",
+    "tr": "Käsespätzle (Alman Usulü Peynirli Erişte)",
+    "it": "Käsespätzle (Noodles al Formaggio Tedeschi)",
+    "ko": "케제슈페츨레 (독일식 치즈 스페츨레)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍳", "t": "Aluat de ouă", "d": "Un aluat moale, elastic din făină, ouă și puțin lapte, fără drojdie, formează baza tăițeilor." },
+      { "icon": "🔪", "t": "Modelați prin răzuire", "d": "Aluatul se răzuiește direct în apă clocotită de pe o scândură specială, formând bucățele neregulate." },
+      { "icon": "🧀", "t": "Straturi de brânză", "d": "Tăițeii fierți se amestecă în straturi cu brânză Emmentaler rasă, care se topește uniform." },
+      { "icon": "🧅", "t": "Ceapă caramelizată", "d": "Ceapă prăjită crocantă, caramelizată la foc mic, se presară generos deasupra." }
+    ],
+    "en": [
+      { "icon": "🍳", "t": "Egg dough", "d": "A soft, elastic dough of flour, eggs and a little milk, without yeast, forms the base of the noodles." },
+      { "icon": "🔪", "t": "Shaped by scraping", "d": "The dough is scraped directly into boiling water from a special board, forming irregular little pieces." },
+      { "icon": "🧀", "t": "Layers of cheese", "d": "The boiled noodles are layered with grated Emmental cheese, which melts evenly throughout." },
+      { "icon": "🧅", "t": "Caramelized onions", "d": "Crispy fried onions, slowly caramelized, are generously scattered on top." }
+    ],
+    "es": [
+      { "icon": "🍳", "t": "Masa de huevo", "d": "Una masa suave y elástica de harina, huevos y un poco de leche, sin levadura, forma la base de los fideos." },
+      { "icon": "🔪", "t": "Formados raspando", "d": "La masa se raspa directamente en agua hirviendo desde una tabla especial, formando trocitos irregulares." },
+      { "icon": "🧀", "t": "Capas de queso", "d": "Los fideos hervidos se intercalan con capas de queso Emmental rallado, que se derrite uniformemente." },
+      { "icon": "🧅", "t": "Cebolla caramelizada", "d": "Cebolla frita crujiente, caramelizada a fuego lento, se espolvorea generosamente encima." }
+    ],
+    "fr": [
+      { "icon": "🍳", "t": "Pâte aux œufs", "d": "Une pâte souple et élastique de farine, d'œufs et d'un peu de lait, sans levure, forme la base des nouilles." },
+      { "icon": "🔪", "t": "Façonnées par raclage", "d": "La pâte est raclée directement dans l'eau bouillante depuis une planche spéciale, formant de petits morceaux irréguliers." },
+      { "icon": "🧀", "t": "Couches de fromage", "d": "Les nouilles bouillies sont superposées avec du fromage emmental râpé, qui fond uniformément." },
+      { "icon": "🧅", "t": "Oignons caramélisés", "d": "Des oignons frits croustillants, lentement caramélisés, sont généreusement dispersés dessus." }
+    ],
+    "de": [
+      { "icon": "🍳", "t": "Eierteig", "d": "Ein weicher, elastischer Teig aus Mehl, Eiern und etwas Milch, ohne Hefe, bildet die Basis der Nudeln." },
+      { "icon": "🔪", "t": "Durch Schaben geformt", "d": "Der Teig wird direkt von einem speziellen Brett in kochendes Wasser geschabt, wodurch unregelmäßige kleine Stücke entstehen." },
+      { "icon": "🧀", "t": "Käseschichten", "d": "Die gekochten Nudeln werden schichtweise mit geriebenem Emmentaler vermischt, der gleichmäßig schmilzt." },
+      { "icon": "🧅", "t": "Karamellisierte Zwiebeln", "d": "Knusprig gebratene, langsam karamellisierte Zwiebeln werden großzügig darübergestreut." }
+    ],
+    "pt": [
+      { "icon": "🍳", "t": "Massa de ovo", "d": "Uma massa macia e elástica de farinha, ovos e um pouco de leite, sem fermento, forma a base do macarrão." },
+      { "icon": "🔪", "t": "Moldados por raspagem", "d": "A massa é raspada diretamente em água fervente a partir de uma tábua especial, formando pedacinhos irregulares." },
+      { "icon": "🧀", "t": "Camadas de queijo", "d": "O macarrão cozido é intercalado com queijo emmental ralado, que derrete uniformemente." },
+      { "icon": "🧅", "t": "Cebola caramelizada", "d": "Cebola frita crocante, caramelizada em fogo baixo, é generosamente polvilhada por cima." }
+    ],
+    "ru": [
+      { "icon": "🍳", "t": "Яичное тесто", "d": "Мягкое, эластичное тесто из муки, яиц и небольшого количества молока, без дрожжей, составляет основу лапши." },
+      { "icon": "🔪", "t": "Формуется соскабливанием", "d": "Тесто соскабливается прямо в кипящую воду со специальной доски, образуя неровные кусочки." },
+      { "icon": "🧀", "t": "Слои сыра", "d": "Отварная лапша выкладывается слоями с тёртым сыром эмменталь, который равномерно плавится." },
+      { "icon": "🧅", "t": "Карамелизованный лук", "d": "Хрустящий жареный лук, медленно карамелизованный, щедро посыпается сверху." }
+    ],
+    "ar": [
+      { "icon": "🍳", "t": "عجينة بيض", "d": "عجينة طرية ومرنة من الدقيق والبيض وقليل من الحليب، بلا خميرة، تشكّل أساس النودلز." },
+      { "icon": "🔪", "t": "تُشكَّل بالكشط", "d": "تُكشط العجينة مباشرة في الماء المغلي من لوح خاص، مكوّنة قطعًا صغيرة غير منتظمة." },
+      { "icon": "🧀", "t": "طبقات من الجبن", "d": "يُخلط النودلز المسلوق بطبقات من جبن الإيمنتال المبشور، الذي يذوب بالتساوي." },
+      { "icon": "🧅", "t": "بصل مكرمل", "d": "يُرشّ بصل مقلي مقرمش، مكرمل ببطء، بسخاء فوق الطبق." }
+    ],
+    "zh": [
+      { "icon": "🍳", "t": "鸡蛋面团", "d": "由面粉、鸡蛋和少量牛奶制成的柔软有弹性的面团，不含酵母，是面疙瘩的基础。" },
+      { "icon": "🔪", "t": "刮制成型", "d": "面团从专用木板直接刮入沸水中，形成不规则的小块。" },
+      { "icon": "🧀", "t": "分层芝士", "d": "煮好的面疙瘩与磨碎的埃门塔尔芝士分层混合，均匀融化。" },
+      { "icon": "🧅", "t": "焦糖洋葱", "d": "小火慢炒至焦糖化的酥脆洋葱慷慨地撒在上面。" }
+    ],
+    "ja": [
+      { "icon": "🍳", "t": "卵の生地", "d": "小麦粉、卵、少量の牛乳を使った柔らかく弾力のある生地が、イーストを使わずに麺のベースとなる。" },
+      { "icon": "🔪", "t": "削って成形", "d": "生地は専用の板から沸騰したお湯に直接削り落とされ、不揃いな小さな塊になる。" },
+      { "icon": "🧀", "t": "チーズの層", "d": "茹でた麺はすりおろしたエメンタールチーズと層になるように混ぜられ、均一に溶ける。" },
+      { "icon": "🧅", "t": "キャラメル化した玉ねぎ", "d": "弱火でゆっくりキャラメル化したカリカリの玉ねぎがたっぷりと上に散らされる。" }
+    ],
+    "hi": [
+      { "icon": "🍳", "t": "अंडे का आटा", "d": "आटे, अंडे और थोड़े दूध का नरम, लचीला आटा, बिना खमीर के, नूडल्स का आधार बनाता है।" },
+      { "icon": "🔪", "t": "खुरचकर आकार दिया", "d": "आटे को एक विशेष तख्ते से सीधे उबलते पानी में खुरचा जाता है, अनियमित छोटे टुकड़े बनते हुए।" },
+      { "icon": "🧀", "t": "चीज़ की परतें", "d": "उबले नूडल्स को कद्दूकस किए एमेंटल चीज़ के साथ परतों में मिलाया जाता है, जो समान रूप से पिघल जाता है।" },
+      { "icon": "🧅", "t": "कैरामलाइज़्ड प्याज़", "d": "धीमी आंच पर कैरामलाइज़्ड कुरकुरे तले प्याज़ ऊपर भरपूर मात्रा में छिड़के जाते हैं।" }
+    ],
+    "tr": [
+      { "icon": "🍳", "t": "Yumurtalı hamur", "d": "Un, yumurta ve az miktarda sütten oluşan, mayasız, yumuşak ve esnek bir hamur eriştenin tabanını oluşturur." },
+      { "icon": "🔪", "t": "Kazınarak şekillendirilir", "d": "Hamur özel bir tahtadan doğrudan kaynayan suya kazınır, düzensiz küçük parçalar oluşturur." },
+      { "icon": "🧀", "t": "Peynir katmanları", "d": "Haşlanmış erişte, eşit şekilde eriyen rendelenmiş Emmental peyniriyle katman katman karıştırılır." },
+      { "icon": "🧅", "t": "Karamelize soğan", "d": "Yavaşça karamelize edilmiş çıtır kızarmış soğan üzerine bolca serpiştirilir." }
+    ],
+    "it": [
+      { "icon": "🍳", "t": "Impasto all'uovo", "d": "Un impasto morbido ed elastico di farina, uova e un po' di latte, senza lievito, forma la base dei noodles." },
+      { "icon": "🔪", "t": "Formati per raschiatura", "d": "L'impasto viene raschiato direttamente nell'acqua bollente da un'asse speciale, formando pezzetti irregolari." },
+      { "icon": "🧀", "t": "Strati di formaggio", "d": "I noodles bolliti vengono mescolati a strati con formaggio Emmental grattugiato, che si scioglie uniformemente." },
+      { "icon": "🧅", "t": "Cipolle caramellate", "d": "Cipolle fritte croccanti, caramellate lentamente, vengono sparse generosamente sopra." }
+    ],
+    "ko": [
+      { "icon": "🍳", "t": "달걀 반죽", "d": "밀가루, 달걀, 약간의 우유로 만든 부드럽고 탄력 있는 반죽이 이스트 없이 면의 기본이 된다." },
+      { "icon": "🔪", "t": "긁어내어 모양 만들기", "d": "반죽을 전용 판에서 끓는 물로 직접 긁어내려 불규칙한 작은 조각을 만든다." },
+      { "icon": "🧀", "t": "치즈 층", "d": "삶은 면을 간 에멘탈 치즈와 층층이 섞어 고르게 녹인다." },
+      { "icon": "🧅", "t": "캐러멜화된 양파", "d": "약불에서 천천히 캐러멜화한 바삭한 튀긴 양파를 위에 듬뿍 뿌린다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["400g făină", "4 ouă mari", "150ml lapte", "1 linguriță sare", "un praf de nucșoară", "300g brânză Emmentaler, rasă", "3 cepe mari, feliate subțire", "3 linguri unt", "pătrunjel tocat, pentru servire"],
+    "en": ["400g flour", "4 large eggs", "150ml milk", "1 tsp salt", "a pinch of nutmeg", "300g Emmental cheese, grated", "3 large onions, thinly sliced", "3 tbsp butter", "chopped parsley, for serving"],
+    "es": ["400g de harina", "4 huevos grandes", "150ml de leche", "1 cucharadita de sal", "una pizca de nuez moscada", "300g de queso Emmental, rallado", "3 cebollas grandes, en rodajas finas", "3 cucharadas de mantequilla", "perejil picado, para servir"],
+    "fr": ["400g de farine", "4 gros œufs", "150ml de lait", "1 c. à café de sel", "une pincée de noix de muscade", "300g de fromage emmental, râpé", "3 gros oignons, émincés finement", "3 c. à soupe de beurre", "persil haché, pour servir"],
+    "de": ["400g Mehl", "4 große Eier", "150ml Milch", "1 TL Salz", "eine Prise Muskatnuss", "300g Emmentaler, gerieben", "3 große Zwiebeln, in feine Scheiben geschnitten", "3 EL Butter", "gehackte Petersilie, zum Servieren"],
+    "pt": ["400g de farinha", "4 ovos grandes", "150ml de leite", "1 colher (chá) de sal", "uma pitada de noz-moscada", "300g de queijo emmental, ralado", "3 cebolas grandes, fatiadas finamente", "3 colheres (sopa) de manteiga", "salsa picada, para servir"],
+    "ru": ["400г муки", "4 крупных яйца", "150мл молока", "1 ч.л. соли", "щепотка мускатного ореха", "300г сыра эмменталь, тёртого", "3 крупные луковицы, тонко нарезанные", "3 ст.л. сливочного масла", "рубленая петрушка, для подачи"],
+    "ar": ["400 غرام دقيق", "4 بيضات كبيرة", "150 مل حليب", "ملعقة صغيرة ملح", "رشة جوزة الطيب", "300 غرام جبن إيمنتال، مبشور", "3 بصلات كبيرة، مقطّعة شرائح رقيقة", "3 ملاعق كبيرة زبدة", "بقدونس مفروم، للتقديم"],
+    "zh": ["400克面粉", "4个大鸡蛋", "150毫升牛奶", "1茶匙盐", "一撮肉豆蔻粉", "300克埃门塔尔芝士，磨碎", "3个大洋葱，切薄片", "3汤匙黄油", "欧芹碎，配食用"],
+    "ja": ["小麦粉400g", "卵（大）4個", "牛乳150ml", "塩小さじ1", "ナツメグひとつまみ", "エメンタールチーズ300g（すりおろす）", "玉ねぎ大3個（薄切り）", "バター大さじ3", "パセリのみじん切り（添える用）"],
+    "hi": ["400 ग्राम आटा", "4 बड़े अंडे", "150 मिली दूध", "1 छोटी चम्मच नमक", "एक चुटकी जायफल", "300 ग्राम एमेंटल चीज़, कद्दूकस की", "3 बड़े प्याज़, बारीक कटे", "3 बड़े चम्मच मक्खन", "कटा अजमोद, परोसने के लिए"],
+    "tr": ["400g un", "4 büyük yumurta", "150ml süt", "1 çay kaşığı tuz", "bir tutam muskat", "300g Emmental peyniri, rendelenmiş", "3 büyük soğan, ince dilimlenmiş", "3 yemek kaşığı tereyağı", "servis için doğranmış maydanoz"],
+    "it": ["400g di farina", "4 uova grandi", "150ml di latte", "1 cucchiaino di sale", "un pizzico di noce moscata", "300g di formaggio Emmental, grattugiato", "3 cipolle grandi, a fette sottili", "3 cucchiai di burro", "prezzemolo tritato, per servire"],
+    "ko": ["밀가루 400g", "큰 달걀 4개", "우유 150ml", "소금 1작은술", "육두구 가루 한 꼬집", "에멘탈 치즈 300g, 간 것", "큰 양파 3개, 얇게 썬 것", "버터 3큰술", "다진 파슬리, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE ALUATUL: Amestecă făina cu sare și nucșoară într-un bol mare. ADAUGĂ LICHIDELE: Sparge ouăle în mijlocul făinii, adaugă laptele treptat, amestecând energic cu o lingură de lemn, până obții un aluat neted, elastic, care face bule când e bătut. LASĂ LA ODIHNĂ: Acoperă aluatul și lasă-l 20-30 minute la temperatura camerei, ca glutenul să se relaxeze. FIERBE APA: Adu o oală mare cu apă sărată la fierbere. FORMEAZĂ SPÄTZLE: Pune o porție de aluat pe o scândură de tocat udă sau într-o presă specială pentru spätzle, apoi răzuiește fâșii subțiri direct în apa clocotită. FIERBE: Fierbe spätzle 2-3 minute, până plutesc la suprafață, apoi scoate-i cu o strecurătoare într-un bol cu apă rece. REPETĂ: Repetă procesul cu restul aluatului, în loturi. CĂLEȘTE CEAPA: Într-o tigaie mare, topește untul, călește ceapa feliată la foc mic 15-20 minute, amestecând des, până se caramelizează. ASAMBLEAZĂ: Într-o tigaie mare sau oală, alternează straturi de spätzle scurs cu brânză rasă, la foc mic, amestecând ușor, până brânza se topește complet. SERVEȘTE: Împarte în boluri calde, presară ceapa caramelizată deasupra și decorează cu pătrunjel tocat.",
+    "en": "PREPARE THE DOUGH: Mix the flour with salt and nutmeg in a large bowl. ADD THE LIQUIDS: Crack the eggs into the middle of the flour, gradually add the milk, stirring vigorously with a wooden spoon, until you get a smooth, elastic dough that bubbles when beaten. LET IT REST: Cover the dough and let it rest 20-30 minutes at room temperature, so the gluten relaxes. BOIL THE WATER: Bring a large pot of salted water to a boil. SHAPE THE SPÄTZLE: Place a portion of dough on a wet cutting board or in a special spätzle press, then scrape thin strips directly into the boiling water. BOIL: Boil the spätzle 2-3 minutes, until they float to the surface, then scoop them out with a slotted spoon into a bowl of cold water. REPEAT: Repeat the process with the rest of the dough, in batches. SAUTÉ THE ONION: In a large pan, melt the butter, sauté the sliced onion over low heat 15-20 minutes, stirring often, until caramelized. ASSEMBLE: In a large pan or pot, alternate layers of drained spätzle with grated cheese, over low heat, stirring gently, until the cheese fully melts. SERVE: Divide into warm bowls, sprinkle the caramelized onion on top and garnish with chopped parsley.",
+    "es": "PREPARA LA MASA: Mezcla la harina con sal y nuez moscada en un bol grande. AÑADE LOS LÍQUIDOS: Rompe los huevos en el centro de la harina, añade la leche gradualmente, removiendo enérgicamente con una cuchara de madera, hasta obtener una masa suave y elástica que forme burbujas al batirla. DEJA REPOSAR: Cubre la masa y déjala reposar 20-30 minutos a temperatura ambiente, para que el gluten se relaje. HIERVE EL AGUA: Lleva una olla grande de agua salada a ebullición. FORMA LOS SPÄTZLE: Coloca una porción de masa en una tabla de cortar húmeda o en una prensa especial para spätzle, luego raspa tiras finas directamente al agua hirviendo. HIERVE: Hierve los spätzle 2-3 minutos, hasta que floten en la superficie, luego sácalos con una espumadera a un bol de agua fría. REPITE: Repite el proceso con el resto de la masa, en tandas. SOFRÍE LA CEBOLLA: En una sartén grande, derrite la mantequilla, sofríe la cebolla en rodajas a fuego bajo 15-20 minutos, removiendo con frecuencia, hasta que se caramelice. MONTA: En una sartén u olla grande, alterna capas de spätzle escurrido con queso rallado, a fuego bajo, removiendo suavemente, hasta que el queso se derrita por completo. SIRVE: Reparte en tazones calientes, espolvorea la cebolla caramelizada encima y decora con perejil picado.",
+    "fr": "PRÉPAREZ LA PÂTE: Mélangez la farine avec le sel et la noix de muscade dans un grand bol. AJOUTEZ LES LIQUIDES: Cassez les œufs au centre de la farine, ajoutez le lait progressivement, en remuant énergiquement avec une cuillère en bois, jusqu'à obtenir une pâte lisse et élastique qui fait des bulles quand on la bat. LAISSEZ REPOSER: Couvrez la pâte et laissez-la reposer 20-30 minutes à température ambiante, pour que le gluten se détende. FAITES BOUILLIR L'EAU: Portez une grande marmite d'eau salée à ébullition. FORMEZ LES SPÄTZLE: Placez une portion de pâte sur une planche à découper humide ou dans une presse spéciale à spätzle, puis raclez de fines lanières directement dans l'eau bouillante. FAITES BOUILLIR: Faites bouillir les spätzle 2-3 minutes, jusqu'à ce qu'ils flottent à la surface, puis retirez-les avec une écumoire dans un bol d'eau froide. RÉPÉTEZ: Répétez le processus avec le reste de la pâte, par lots. FAITES REVENIR L'OIGNON: Dans une grande poêle, faites fondre le beurre, faites revenir l'oignon émincé à feu doux 15-20 minutes, en remuant souvent, jusqu'à caramélisation. ASSEMBLEZ: Dans une grande poêle ou marmite, alternez des couches de spätzle égouttés avec du fromage râpé, à feu doux, en remuant doucement, jusqu'à ce que le fromage fonde complètement. SERVEZ: Répartissez dans des bols chauds, saupoudrez l'oignon caramélisé dessus et garnissez de persil haché.",
+    "de": "TEIG VORBEREITEN: Mehl mit Salz und Muskatnuss in einer großen Schüssel vermischen. FLÜSSIGKEITEN HINZUFÜGEN: Die Eier in die Mitte des Mehls aufschlagen, nach und nach die Milch zugeben, kräftig mit einem Holzlöffel rühren, bis ein glatter, elastischer Teig entsteht, der beim Schlagen Blasen wirft. RUHEN LASSEN: Den Teig abdecken und 20-30 Minuten bei Zimmertemperatur ruhen lassen, damit sich das Gluten entspannt. WASSER KOCHEN: Einen großen Topf gesalzenes Wasser zum Kochen bringen. SPÄTZLE FORMEN: Eine Portion Teig auf ein feuchtes Schneidebrett oder in eine spezielle Spätzlepresse geben, dann dünne Streifen direkt in das kochende Wasser schaben. KOCHEN: Die Spätzle 2-3 Minuten kochen, bis sie an die Oberfläche steigen, dann mit einem Schaumlöffel in eine Schüssel mit kaltem Wasser geben. WIEDERHOLEN: Den Vorgang mit dem restlichen Teig portionsweise wiederholen. ZWIEBEL ANBRATEN: In einer großen Pfanne die Butter schmelzen, die geschnittene Zwiebel bei niedriger Hitze 15-20 Minuten unter häufigem Rühren anbraten, bis sie karamellisiert. ANRICHTEN: In einer großen Pfanne oder einem Topf abwechselnd Schichten von abgetropften Spätzle mit geriebenem Käse anordnen, bei niedriger Hitze vorsichtig rühren, bis der Käse vollständig geschmolzen ist. SERVIEREN: In warme Schüsseln verteilen, die karamellisierte Zwiebel darüberstreuen und mit gehackter Petersilie garnieren.",
+    "pt": "PREPARE A MASSA: Misture a farinha com o sal e a noz-moscada numa tigela grande. ADICIONE OS LÍQUIDOS: Parta os ovos no centro da farinha, adicione o leite gradualmente, mexendo energicamente com uma colher de pau, até obter uma massa lisa e elástica que forme bolhas ao bater. DEIXE DESCANSAR: Cubra a massa e deixe descansar 20-30 minutos à temperatura ambiente, para o glúten relaxar. FERVA A ÁGUA: Leve uma panela grande de água salgada a ferver. FORME OS SPÄTZLE: Coloque uma porção de massa numa tábua de corte húmida ou numa prensa especial para spätzle, depois raspe tiras finas diretamente na água a ferver. FERVA: Ferva os spätzle por 2-3 minutos, até flutuarem na superfície, depois retire-os com uma escumadeira para uma tigela de água fria. REPITA: Repita o processo com o resto da massa, em lotes. REFOGUE A CEBOLA: Numa frigideira grande, derreta a manteiga, refogue a cebola fatiada em fogo baixo por 15-20 minutos, mexendo com frequência, até caramelizar. MONTE: Numa frigideira ou panela grande, alterne camadas de spätzle escorrido com queijo ralado, em fogo baixo, mexendo suavemente, até o queijo derreter completamente. SIRVA: Divida em tigelas quentes, polvilhe a cebola caramelizada por cima e decore com salsa picada.",
+    "ru": "ПРИГОТОВЬТЕ ТЕСТО: Смешайте муку с солью и мускатным орехом в большой миске. ДОБАВЬТЕ ЖИДКОСТИ: Разбейте яйца в центр муки, постепенно добавляйте молоко, энергично помешивая деревянной ложкой, пока не получите гладкое эластичное тесто, которое пузырится при взбивании. ДАЙТЕ ОТДОХНУТЬ: Накройте тесто и дайте ему отдохнуть 20-30 минут при комнатной температуре, чтобы клейковина расслабилась. ВСКИПЯТИТЕ ВОДУ: Доведите большую кастрюлю подсоленной воды до кипения. СФОРМИРУЙТЕ ШПЕЦЛЕ: Положите порцию теста на влажную разделочную доску или в специальный пресс для шпецле, затем соскребайте тонкие полоски прямо в кипящую воду. ВАРИТЕ: Варите шпецле 2-3 минуты, пока не всплывут на поверхность, затем выньте шумовкой в миску с холодной водой. ПОВТОРИТЕ: Повторите процесс с оставшимся тестом, порциями. ОБЖАРЬТЕ ЛУК: В большой сковороде растопите масло, обжаривайте нарезанный лук на слабом огне 15-20 минут, часто помешивая, до карамелизации. СОБЕРИТЕ БЛЮДО: В большой сковороде или кастрюле чередуйте слои отваренной шпецле с тёртым сыром на слабом огне, аккуратно помешивая, пока сыр полностью не расплавится. ПОДАВАЙТЕ: Разложите по тёплым мискам, посыпьте карамелизованным луком сверху и украсьте рубленой петрушкой.",
+    "ar": "حضّري العجينة: امزجي الدقيق بالملح وجوزة الطيب في وعاء كبير. أضيفي السوائل: اكسري البيض في وسط الدقيق، أضيفي الحليب تدريجيًا مع التحريك بقوة بملعقة خشبية حتى تحصلي على عجينة ناعمة ومرنة تُكوِّن فقاعات عند الخفق. اتركيها ترتاح: غطّي العجينة واتركيها ترتاح 20-30 دقيقة بحرارة الغرفة ليرتخي الغلوتين. اسلقي الماء: اتركي قدرًا كبيرًا من الماء المملح يغلي. شكّلي الشبيتسله: ضعي جزءًا من العجينة على لوح تقطيع مبلل أو في مكبس شبيتسله خاص، ثم اكشطي شرائح رقيقة مباشرة في الماء المغلي. اسلقي: اسلقي الشبيتسله 2-3 دقائق حتى تطفو على السطح، ثم أخرجيها بمصفاة إلى وعاء ماء بارد. كرري: كرري العملية مع باقي العجينة على دفعات. قلّي البصل: في مقلاة كبيرة، أذيبي الزبدة، وقلّي البصل المقطع على نار هادئة 15-20 دقيقة مع التقليب المتكرر حتى يتكرمل. جهّزي الطبق: في مقلاة أو قدر كبيرة، بدّلي طبقات الشبيتسله المصفاة مع الجبن المبشور على نار هادئة، مع التحريك برفق حتى يذوب الجبن تمامًا. قدّمي: وزّعي في أطباق دافئة، رشّي البصل المكرمل فوقها وزيّنيها بالبقدونس المفروم.",
+    "zh": "准备面团：在大碗中将面粉与盐和肉豆蔻粉混合。加入液体：在面粉中间打入鸡蛋，逐渐加入牛奶，用木勺用力搅拌，直到面团光滑有弹性，搅拌时能起泡。静置：盖好面团在室温下静置20-30分钟，让面筋松弛。煮水：将一大锅盐水烧开。制作面疙瘩：将一部分面团放在湿砧板或专用刮面器上，然后将细条直接刮入沸水中。煮制：将面疙瘩煮2-3分钟，浮起后用漏勺捞入冷水碗中。重复：分批重复此过程处理剩余面团。炒洋葱：在大平底锅中融化黄油，小火翻炒洋葱片15-20分钟，频繁搅拌，直至焦糖化。组合：在大平底锅或锅中，将沥干的面疙瘩与磨碎的芝士小火交替分层，轻轻搅拌至芝士完全融化。上桌：分装到温热的碗中，撒上焦糖洋葱，用欧芹碎装饰。",
+    "ja": "生地を準備する：大きなボウルに小麦粉、塩、ナツメグを混ぜる。水分を加える：小麦粉の中央に卵を割り入れ、牛乳を少しずつ加えながら木のスプーンで力強く混ぜ、混ぜると泡が立つ滑らかで弾力のある生地になるまで混ぜる。休ませる：生地を覆い、常温で20〜30分休ませ、グルテンをリラックスさせる。お湯を沸かす：大鍋に塩水をたっぷり沸かす。シュペッツレを成形する：生地の一部を濡らしたまな板または専用のシュペッツレ器に乗せ、沸騰したお湯に直接細く削り落とす。茹でる：シュペッツレを2〜3分、水面に浮いてくるまで茹で、穴あきお玉で冷水の入ったボウルにすくい上げる。繰り返す：残りの生地で数回に分けて同じ工程を繰り返す。玉ねぎを炒める：大きなフライパンでバターを溶かし、薄切りの玉ねぎを弱火で15〜20分、頻繁にかき混ぜながらキャラメル状になるまで炒める。仕上げる：大きなフライパンまたは鍋で、水気を切ったシュペッツレとすりおろしたチーズを弱火で層状に重ね、優しく混ぜながらチーズが完全に溶けるまで加熱する。提供する：温かい器に盛り分け、キャラメル化した玉ねぎをのせ、刻んだパセリを飾って提供する。",
+    "hi": "आटा तैयार करें: एक बड़े कटोरे में आटे को नमक और जायफल के साथ मिलाएं। तरल डालें: आटे के बीच में अंडे तोड़ें, धीरे-धीरे दूध डालें, लकड़ी के चम्मच से ज़ोर से हिलाते हुए, जब तक चिकना, लचीला आटा न बन जाए जो फेंटने पर बुलबुले बनाए। आराम दें: आटे को ढककर कमरे के तापमान पर 20-30 मिनट आराम दें, ग्लूटेन को ढीला होने दें। पानी उबालें: एक बड़े बर्तन में नमकीन पानी उबालें। श्पेत्सले आकार दें: आटे का एक हिस्सा गीले कटिंग बोर्ड पर या विशेष श्पेत्सले प्रेस में रखें, फिर पतली पट्टियां सीधे उबलते पानी में खुरचें। उबालें: श्पेत्सले को 2-3 मिनट उबालें, जब तक सतह पर तैरने न लगें, फिर छलनी से ठंडे पानी के कटोरे में निकालें। दोहराएं: बाकी आटे के साथ प्रक्रिया दोहराएं, हिस्सों में। प्याज़ भूनें: बड़े पैन में मक्खन पिघलाएं, कटे प्याज़ को धीमी आंच पर 15-20 मिनट, बार-बार हिलाते हुए, कैरामलाइज़ होने तक भूनें। तैयार करें: बड़े पैन या बर्तन में, छने श्पेत्सले को कद्दूकस चीज़ के साथ परतों में मिलाएं, धीमी आंच पर, हल्के से हिलाते हुए, जब तक चीज़ पूरी तरह पिघल न जाए। परोसें: गरम कटोरों में बांटें, ऊपर कैरामलाइज़्ड प्याज़ छिड़कें और कटे अजमोद से सजाएं।",
+    "tr": "HAMURU HAZIRLAYIN: Büyük bir kasede unu tuz ve muskatla karıştırın. SIVILARI EKLEYİN: Yumurtaları unun ortasına kırın, sütü yavaş yavaş ekleyip tahta kaşıkla kuvvetlice karıştırarak, çırpıldığında kabarcıklanan pürüzsüz, esnek bir hamur elde edin. DİNLENDİRİN: Hamuru örtüp oda sıcaklığında 20-30 dakika dinlendirin, glüten gevşesin. SUYU KAYNATIN: Büyük bir tencerede tuzlu suyu kaynatın. SPÄTZLE'Yİ ŞEKİLLENDİRİN: Hamurun bir kısmını ıslak bir kesme tahtasına veya özel bir spätzle presine koyun, sonra ince şeritleri doğrudan kaynayan suya kazıyın. HAŞLAYIN: Spätzle'yi yüzeye çıkana kadar 2-3 dakika haşlayın, sonra delikli kaşıkla soğuk su dolu bir kaseye alın. TEKRARLAYIN: Kalan hamurla işlemi partiler halinde tekrarlayın. SOĞANI SOTELEYIN: Büyük bir tavada tereyağını eritin, dilimlenmiş soğanı kısık ateşte sık sık karıştırarak 15-20 dakika karamelize olana kadar soteleyin. HAZIRLAYIN: Büyük bir tava veya tencerede, süzülmüş spätzle'yi rendelenmiş peynirle kısık ateşte katman katman karıştırın, peynir tamamen eriyene kadar hafifçe karıştırın. SERVİS YAPIN: Sıcak kaselere paylaştırın, üzerine karamelize soğanı serpin ve doğranmış maydanozla süsleyin.",
+    "it": "PREPARA L'IMPASTO: Mescola la farina con sale e noce moscata in una ciotola grande. AGGIUNGI I LIQUIDI: Rompi le uova al centro della farina, aggiungi il latte gradualmente, mescolando energicamente con un cucchiaio di legno, finché ottieni un impasto liscio ed elastico che fa bolle quando viene sbattuto. LASCIA RIPOSARE: Copri l'impasto e lascialo riposare 20-30 minuti a temperatura ambiente, perché il glutine si rilassi. BOLLI L'ACQUA: Porta a ebollizione una pentola grande d'acqua salata. FORMA GLI SPÄTZLE: Metti una porzione di impasto su un tagliere bagnato o in un apposito pressaspätzle, poi raschia sottili strisce direttamente nell'acqua bollente. BOLLI: Bolli gli spätzle 2-3 minuti, finché galleggiano in superficie, poi scolali con una schiumarola in una ciotola d'acqua fredda. RIPETI: Ripeti il processo con il resto dell'impasto, a lotti. SOFFRIGGI LA CIPOLLA: In una padella grande, sciogli il burro, soffriggi la cipolla a fette a fuoco basso 15-20 minuti, mescolando spesso, finché si caramella. COMPONI: In una padella o pentola grande, alterna strati di spätzle scolati con formaggio grattugiato, a fuoco basso, mescolando delicatamente, finché il formaggio si scioglie completamente. SERVI: Dividi in ciotole calde, cospargi la cipolla caramellata sopra e guarnisci con prezzemolo tritato.",
+    "ko": "반죽 준비하기: 큰 볼에 밀가루, 소금, 육두구를 섞는다. 액체 넣기: 밀가루 가운데에 달걀을 깨 넣고 우유를 조금씩 넣으며 나무 숟가락으로 세게 저어, 저을 때 거품이 생기는 부드럽고 탄력 있는 반죽을 만든다. 휴지시키기: 반죽을 덮어 실온에서 20-30분간 휴지시켜 글루텐이 풀어지게 한다. 물 끓이기: 큰 냄비에 소금물을 끓인다. 슈페츨레 만들기: 반죽 일부를 젖은 도마나 전용 슈페츨레 프레스에 올려놓고 얇은 조각을 끓는 물에 바로 긁어 넣는다. 삶기: 슈페츨레가 수면 위로 떠오를 때까지 2-3분간 삶은 뒤 채반으로 건져 찬물이 담긴 볼에 옮긴다. 반복하기: 나머지 반죽으로 이 과정을 나누어 반복한다. 양파 볶기: 큰 팬에 버터를 녹이고 슬라이스한 양파를 약불에서 자주 저어가며 15-20분간 캐러멜화될 때까지 볶는다. 조합하기: 큰 팬이나 냄비에 물기를 뺀 슈페츨레와 간 치즈를 약불에서 층층이 번갈아 넣고 살살 저어 치즈가 완전히 녹을 때까지 익힌다. 제공하기: 따뜻한 그릇에 나누어 담고 캐러멜화된 양파를 위에 뿌린 뒤 다진 파슬리로 장식한다."
+  },
+  "originText": {
+    "ro": "Spätzle este considerat felul emblematic al regiunii Swabia, din sud-vestul Germaniei, unde localnicii sunt adesea numiți \"Spätzlesschwaben\" — swabii spätzle-ului — dovadă a mândriei regionale pentru acest tăiței de casă. Numele derivă din cuvântul dialectal pentru \"vrăbiuță\", o referire jucăușă la forma neregulată, mică a bucăților de aluat.\n\nSpre deosebire de majoritatea tăițeilor, spätzle nu se rulează și se taie cu cuțitul, ci se răzuiește sau se presează direct în apa clocotită, o tehnică ce garantează o textură densă, ușor cauciucoasă, foarte diferită de pastele italiene. Käsespätzle, varianta cu brânză, este considerată versiunea de duminică sau de sărbătoare, în timp ce spätzle simplu, ca garnitură, apare la mesele de zi cu zi alături de fripturi sau tocănițe cu sos bogat.",
+    "en": "Spätzle is considered the signature dish of Swabia, in southwestern Germany, where locals are often called \"Spätzlesschwaben\" — the Swabians of spätzle — proof of regional pride in this homemade noodle. The name derives from the dialect word for \"little sparrow,\" a playful reference to the small, irregular shape of the dough pieces.\n\nUnlike most noodles, spätzle isn't rolled and cut with a knife, but scraped or pressed directly into boiling water, a technique that guarantees a dense, slightly chewy texture, very different from Italian pasta. Käsespätzle, the cheese variant, is considered the Sunday or festive version, while plain spätzle, as a side dish, appears at everyday meals alongside roasts or stews with rich gravy.",
+    "es": "El spätzle se considera el plato emblemático de Suabia, en el suroeste de Alemania, donde a los locales a menudo se les llama \"Spätzlesschwaben\" — los suabos del spätzle — prueba del orgullo regional por este fideo casero. El nombre deriva de la palabra dialectal para \"gorrioncito\", una referencia juguetona a la forma pequeña e irregular de los trocitos de masa.\n\nA diferencia de la mayoría de los fideos, el spätzle no se enrolla ni se corta con cuchillo, sino que se raspa o se prensa directamente en agua hirviendo, una técnica que garantiza una textura densa, ligeramente elástica, muy diferente de la pasta italiana. El käsespätzle, la variante con queso, se considera la versión dominical o festiva, mientras que el spätzle simple, como guarnición, aparece en las comidas cotidianas junto a asados o guisos con salsa espesa.",
+    "fr": "Le spätzle est considéré comme le plat emblématique de la Souabe, dans le sud-ouest de l'Allemagne, où les habitants sont souvent appelés \"Spätzlesschwaben\" — les Souabes du spätzle — preuve de la fierté régionale pour ces nouilles maison. Le nom dérive du mot dialectal pour \"petit moineau\", une référence ludique à la forme petite et irrégulière des morceaux de pâte.\n\nContrairement à la plupart des nouilles, le spätzle n'est pas roulé et coupé au couteau, mais raclé ou pressé directement dans l'eau bouillante, une technique qui garantit une texture dense, légèrement élastique, très différente des pâtes italiennes. Le käsespätzle, la variante au fromage, est considéré comme la version dominicale ou festive, tandis que le spätzle nature, en accompagnement, apparaît dans les repas quotidiens aux côtés de rôtis ou de ragoûts en sauce riche.",
+    "de": "Spätzle gilt als das Wahrzeichen der Schwaben im Südwesten Deutschlands, wo Einheimische oft als \"Spätzlesschwaben\" bezeichnet werden — Beweis für den regionalen Stolz auf diese hausgemachte Nudel. Der Name stammt vom Dialektwort für \"kleiner Spatz\", ein spielerischer Verweis auf die kleine, unregelmäßige Form der Teigstücke.\n\nAnders als die meisten Nudeln wird Spätzle nicht ausgerollt und mit dem Messer geschnitten, sondern direkt in kochendes Wasser geschabt oder gepresst, eine Technik, die eine dichte, leicht bissfeste Textur garantiert, ganz anders als italienische Pasta. Käsespätzle, die Käsevariante, gilt als die Sonntags- oder Festtagsversion, während einfache Spätzle als Beilage bei alltäglichen Mahlzeiten neben Braten oder Eintöpfen mit reichhaltiger Soße erscheinen.",
+    "pt": "O spätzle é considerado o prato emblemático da Suábia, no sudoeste da Alemanha, onde os locais são frequentemente chamados de \"Spätzlesschwaben\" — os suábios do spätzle — prova do orgulho regional por este macarrão caseiro. O nome deriva da palavra dialetal para \"pardalzinho\", uma referência lúdica à forma pequena e irregular dos pedacinhos de massa.\n\nAo contrário da maioria dos macarrões, o spätzle não é enrolado e cortado com faca, mas raspado ou prensado diretamente em água fervente, uma técnica que garante uma textura densa, ligeiramente elástica, muito diferente da massa italiana. O käsespätzle, a variante com queijo, é considerado a versão dominical ou festiva, enquanto o spätzle simples, como acompanhamento, aparece nas refeições do dia a dia ao lado de assados ou ensopados com molho rico.",
+    "ru": "Шпецле считается визитным блюдом Швабии на юго-западе Германии, где местных жителей часто называют \"Spätzlesschwaben\" — швабами шпецле — доказательство региональной гордости за эту домашнюю лапшу. Название происходит от диалектного слова, означающего \"воробушек\", игривой отсылки к маленькой, неровной форме кусочков теста.\n\nВ отличие от большинства видов лапши, шпецле не раскатывают и не режут ножом, а соскабливают или продавливают прямо в кипящую воду — техника, гарантирующая плотную, слегка упругую текстуру, очень отличную от итальянской пасты. Кезешпецле, сырный вариант, считается воскресной или праздничной версией, в то время как простое шпецле как гарнир появляется на повседневных столах рядом с жарким или тушёными блюдами в густом соусе.",
+    "ar": "يُعتبر الشبيتسله الطبق المميز لمنطقة سوابيا في جنوب غرب ألمانيا، حيث يُطلق على السكان المحليين غالبًا لقب \"شبيتسلسشوابن\" — سوابيو الشبيتسله — دليلًا على الفخر الإقليمي بهذا النودلز المنزلي. يُشتق الاسم من كلمة عامية تعني \"العصفور الصغير\"، في إشارة مرحة إلى الشكل الصغير غير المنتظم لقطع العجين.\n\nخلافًا لمعظم أنواع النودلز، لا يُلف الشبيتسله ويُقطع بالسكين، بل يُكشط أو يُضغط مباشرة في الماء المغلي، وهي تقنية تضمن قوامًا كثيفًا ومطاطيًا قليلًا، مختلفًا تمامًا عن المعكرونة الإيطالية. يُعتبر الكيزه شبيتسله، النسخة بالجبن، النسخة الاحتفالية أو نسخة يوم الأحد، بينما يظهر الشبيتسله البسيط كطبق جانبي في الوجبات اليومية إلى جانب المشويات أو اليخنات ذات الصلصة الغنية.",
+    "zh": "施佩茨勒被认为是德国西南部施瓦本地区的代表菜肴，当地人常被称为「Spätzlesschwaben」——施佩茨勒的施瓦本人——证明了当地对这种自制面食的自豪感。这个名字源自方言中意为「小麻雀」的词，俏皮地指代面团块小巧不规则的形状。\n\n与大多数面条不同，施佩茨勒不经擀制和刀切，而是直接刮或压入沸水中，这种技法确保了浓密、略带嚼劲的口感，与意大利面截然不同。芝士施佩茨勒（Käsespätzle）这一芝士变体被视为周日或节庆版本，而作为配菜的原味施佩茨勒则出现在日常餐桌上，搭配烤肉或浓汁炖菜一起食用。",
+    "ja": "シュペッツレはドイツ南西部シュヴァーベン地方の代表料理とされ、地元の人々はしばしば「シュペッツレシュヴァーベン人」と呼ばれる——この自家製麺への地域の誇りの証である。この名前は方言で「小さなスズメ」を意味する言葉に由来し、生地の破片の小さく不揃いな形を軽やかに例えている。\n\nほとんどの麺と異なり、シュペッツレは伸ばしてナイフで切るのではなく、沸騰したお湯に直接削り落とすか押し出す形で作られ、この技法によりイタリアのパスタとは大きく異なる、密度が高くわずかに歯ごたえのある食感が生まれる。チーズ版であるケーゼシュペッツレは日曜や祝いの日のバージョンとされ、一方プレーンなシュペッツレは付け合わせとして、濃厚なグレービーソースのローストやシチューと共に日常の食事に登場する。",
+    "hi": "श्पेत्सले को दक्षिण-पश्चिमी जर्मनी के श्वाबिया क्षेत्र का प्रतिष्ठित व्यंजन माना जाता है, जहां स्थानीय लोगों को अक्सर \"श्पेत्सलेश्वाबेन\" — श्पेत्सले के श्वाबियन — कहा जाता है, जो इस घर के बने नूडल के लिए क्षेत्रीय गर्व का प्रमाण है। नाम बोली के उस शब्द से आया है जिसका अर्थ \"छोटी गौरैया\" है, आटे के टुकड़ों के छोटे, अनियमित आकार का चंचल संदर्भ।\n\nअधिकांश नूडल्स के विपरीत, श्पेत्सले को बेलकर चाकू से नहीं काटा जाता, बल्कि सीधे उबलते पानी में खुरचा या दबाया जाता है, एक तकनीक जो एक घनी, थोड़ी चबाने योग्य बनावट की गारंटी देती है, इतालवी पास्ता से बहुत अलग। काज़ेश्पेत्सले, चीज़ संस्करण, रविवार या उत्सव संस्करण माना जाता है, जबकि सादा श्पेत्सले, एक साइड डिश के रूप में, रोज़मर्रा के भोजन में रोस्ट या गाढ़े सॉस वाले स्ट्यू के साथ दिखाई देता है।",
+    "tr": "Spätzle, güneybatı Almanya'daki Swabia'nın simge yemeği olarak kabul edilir; burada yerel halk sıklıkla \"Spätzlesschwaben\" — spätzle'nin İsvabyalıları — olarak adlandırılır, bu ev yapımı eriştenin bölgesel gururunun kanıtıdır. İsim, hamur parçalarının küçük, düzensiz şekline eğlenceli bir gönderme olan, \"küçük serçe\" anlamına gelen lehçe kelimesinden gelir.\n\nÇoğu erişteden farklı olarak, spätzle açılıp bıçakla kesilmez, doğrudan kaynayan suya kazınır veya sıkılır; bu teknik, İtalyan makarnasından çok farklı, yoğun, hafif çiğnenebilir bir doku garanti eder. Peynirli versiyon olan Käsespätzle, pazar veya bayram versiyonu olarak kabul edilirken, sade spätzle bir yan yemek olarak, zengin soslu kızartmalar veya yahnilerle birlikte günlük öğünlerde görülür.",
+    "it": "Lo spätzle è considerato il piatto emblematico della Svevia, nel sud-ovest della Germania, dove gli abitanti locali sono spesso chiamati \"Spätzlesschwaben\" — gli svevi dello spätzle — prova dell'orgoglio regionale per questo noodle fatto in casa. Il nome deriva dalla parola dialettale per \"passerotto\", un riferimento giocoso alla forma piccola e irregolare dei pezzetti di impasto.\n\nA differenza della maggior parte dei noodles, lo spätzle non viene steso e tagliato con il coltello, ma raschiato o pressato direttamente nell'acqua bollente, una tecnica che garantisce una consistenza densa, leggermente masticabile, molto diversa dalla pasta italiana. Il käsespätzle, la variante al formaggio, è considerato la versione domenicale o festiva, mentre lo spätzle semplice, come contorno, compare nei pasti quotidiani accanto ad arrosti o stufati con salsa ricca.",
+    "ko": "슈페츨레는 독일 남서부 슈바벤의 대표 요리로 여겨지며, 이곳 주민들은 종종 \"슈페츨레슈바벤\"(슈페츨레의 슈바벤 사람들)이라 불리는데, 이는 이 수제 면에 대한 지역적 자부심을 보여준다. 이 이름은 반죽 조각의 작고 불규칙한 모양을 재치 있게 표현한 \"작은 참새\"를 뜻하는 방언 단어에서 유래했다.\n\n대부분의 면과 달리 슈페츨레는 밀어서 칼로 자르지 않고 끓는 물에 직접 긁어내거나 눌러 넣는데, 이 기법은 이탈리아 파스타와는 매우 다른 밀도 있고 살짝 쫄깃한 식감을 보장한다. 치즈 버전인 케제슈페츨레는 일요일이나 축제용 버전으로 여겨지며, 곁들임 요리로서의 순수 슈페츨레는 진한 그레이비를 곁들인 로스트나 스튜와 함께 일상 식사에 등장한다."
+  },
+  "meta": {
+    "time": 50,
+    "costRon": 20,
+    "tags": ["vegetarian", "family", "budget"],
+    "desc": {
+      "ro": "Tăiței germani de ou cu brânză Emmentaler topită și ceapă caramelizată crocantă.",
+      "en": "German egg noodles with melted Emmental cheese and crispy caramelized onion.",
+      "es": "Fideos de huevo alemanes con queso Emmental derretido y cebolla caramelizada crujiente.",
+      "fr": "Nouilles aux œufs allemandes au fromage emmental fondu et oignon caramélisé croustillant.",
+      "de": "Deutsche Eiernudeln mit geschmolzenem Emmentaler und knuspriger karamellisierter Zwiebel.",
+      "pt": "Macarrão de ovo alemão com queijo emmental derretido e cebola caramelizada crocante.",
+      "ru": "Немецкая яичная лапша с расплавленным сыром эмменталь и хрустящим карамелизованным луком.",
+      "ar": "نودلز بيض ألمانية بجبن إيمنتال ذائب وبصل مكرمل مقرمش.",
+      "zh": "德式鸡蛋面配融化的埃门塔尔芝士和酥脆焦糖洋葱。",
+      "ja": "溶けたエメンタールチーズとカリカリのキャラメル玉ねぎを添えたドイツ風卵麺。",
+      "hi": "पिघले एमेंटल चीज़ और कुरकुरे कैरामलाइज़्ड प्याज़ के साथ जर्मन अंडे के नूडल्स।",
+      "tr": "Eritilmiş Emmental peyniri ve çıtır karamelize soğanlı Alman usulü yumurtalı erişte.",
+      "it": "Noodles all'uovo tedeschi con formaggio Emmental fuso e cipolla caramellata croccante.",
+      "ko": "녹인 에멘탈 치즈와 바삭한 캐러멜 양파를 곁들인 독일식 달걀면."
+    }
+  }
+}

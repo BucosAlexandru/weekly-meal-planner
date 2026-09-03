@@ -1,0 +1,209 @@
+{
+  "id": 397,
+  "servings": 4,
+  "tipType": "fish",
+  "pairingsType": "fish",
+  "origin": {
+    "ro": "Olanda",
+    "en": "Netherlands",
+    "es": "Países Bajos",
+    "fr": "Pays-Bas",
+    "de": "Niederlande",
+    "pt": "Países Baixos",
+    "ru": "Нидерланды",
+    "ar": "هولندا",
+    "zh": "荷兰",
+    "ja": "オランダ",
+    "hi": "नीदरलैंड",
+    "tr": "Hollanda",
+    "it": "Paesi Bassi",
+    "ko": "네덜란드"
+  },
+  "name": {
+    "ro": "Kibbeling (Pește Prăjit Olandez cu Sos de Usturoi)",
+    "en": "Kibbeling (Dutch Fried Fish Bites with Garlic Sauce)",
+    "es": "Kibbeling (Trozos de Pescado Frito Holandés con Salsa de Ajo)",
+    "fr": "Kibbeling (Bouchées de Poisson Frit Néerlandaises à la Sauce à l'Ail)",
+    "de": "Kibbeling",
+    "pt": "Kibbeling (Petiscos de Peixe Frito Holandês com Molho de Alho)",
+    "ru": "Киббелинг (Голландские Кусочки Жареной Рыбы с Чесночным Соусом)",
+    "ar": "كيبلينغ (قطع سمك مقلي هولندي بصلصة الثوم)",
+    "zh": "荷兰炸鱼块配蒜蓉酱",
+    "ja": "キベリング（ガーリックソース添えオランダ風フィッシュビッツ）",
+    "hi": "किबेलिंग (लहसुन सॉस के साथ डच तला हुआ मछली के टुकड़े)",
+    "tr": "Kibbeling (Sarımsak Soslu Hollanda Usulü Kızarmış Balık Lokmaları)",
+    "it": "Kibbeling (Bocconcini di Pesce Fritto Olandesi con Salsa all'Aglio)",
+    "ko": "키벨링 (마늘 소스를 곁들인 네덜란드식 생선튀김)"
+  },
+  "category": {
+    "ro": "Aperitiv",
+    "en": "Appetizer",
+    "es": "Entrante",
+    "fr": "Entrée",
+    "de": "Vorspeise",
+    "pt": "Entrada",
+    "ru": "Закуска",
+    "ar": "مقبلات",
+    "zh": "开胃菜",
+    "ja": "前菜",
+    "hi": "स्टार्टर",
+    "tr": "Meze",
+    "it": "Antipasto",
+    "ko": "애피타이저"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🐟", "t": "Cod în bucățele", "d": "Fileuri de cod proaspăt, tăiate în bucăți mici, ușor de mâncat cu o scobitoare." },
+      { "icon": "🍺", "t": "Aluat cu bere", "d": "Bucățile de pește se învelesc într-un aluat pufos, aerat de bere, care rămâne crocant." },
+      { "icon": "🧄", "t": "Sos de usturoi", "d": "Se servesc cu un sos remoulade de usturoi, cremos și aromat, specific gustărilor de pește olandeze." },
+      { "icon": "🍋", "t": "Cu felii de lămâie", "d": "Se stropesc cu suc proaspăt de lămâie chiar înainte de servire, pentru prospețime." }
+    ],
+    "en": [
+      { "icon": "🐟", "t": "Cod in bite-size pieces", "d": "Fresh cod fillets, cut into small pieces, easy to eat with a toothpick." },
+      { "icon": "🍺", "t": "Beer batter", "d": "The fish pieces are coated in a fluffy, beer-aerated batter that stays crisp." },
+      { "icon": "🧄", "t": "Garlic sauce", "d": "Served with a creamy, flavorful garlic remoulade sauce, specific to Dutch fish snacks." },
+      { "icon": "🍋", "t": "With lemon wedges", "d": "Sprinkled with fresh lemon juice right before serving, for freshness." }
+    ],
+    "es": [
+      { "icon": "🐟", "t": "Bacalao en trocitos", "d": "Filetes de bacalao fresco, cortados en trocitos, fáciles de comer con un palillo." },
+      { "icon": "🍺", "t": "Rebozado de cerveza", "d": "Los trozos de pescado se cubren con un rebozado esponjoso, aireado con cerveza, que se mantiene crujiente." },
+      { "icon": "🧄", "t": "Salsa de ajo", "d": "Se sirven con una salsa remoulade de ajo, cremosa y sabrosa, típica de los aperitivos de pescado holandeses." },
+      { "icon": "🍋", "t": "Con gajos de limón", "d": "Se rocían con zumo de limón fresco justo antes de servir, para dar frescura." }
+    ],
+    "fr": [
+      { "icon": "🐟", "t": "Cabillaud en petites bouchées", "d": "Des filets de cabillaud frais, coupés en petits morceaux, faciles à manger avec un cure-dent." },
+      { "icon": "🍺", "t": "Pâte à la bière", "d": "Les morceaux de poisson sont enrobés d'une pâte moelleuse, aérée à la bière, qui reste croustillante." },
+      { "icon": "🧄", "t": "Sauce à l'ail", "d": "Servis avec une sauce rémoulade à l'ail, crémeuse et savoureuse, typique des collations de poisson néerlandaises." },
+      { "icon": "🍋", "t": "Avec des quartiers de citron", "d": "Arrosés de jus de citron frais juste avant de servir, pour la fraîcheur." }
+    ],
+    "de": [
+      { "icon": "🐟", "t": "Kabeljau in Häppchen", "d": "Frisches Kabeljaufilet, in kleine Stücke geschnitten, leicht mit einem Zahnstocher zu essen." },
+      { "icon": "🍺", "t": "Bierteig", "d": "Die Fischstücke werden in einen luftigen, mit Bier aufgeschlagenen Teig getaucht, der knusprig bleibt." },
+      { "icon": "🧄", "t": "Knoblauchsauce", "d": "Serviert mit einer cremigen, würzigen Knoblauch-Remoulade, typisch für niederländische Fischsnacks." },
+      { "icon": "🍋", "t": "Mit Zitronenspalten", "d": "Kurz vor dem Servieren mit frischem Zitronensaft beträufelt, für Frische." }
+    ],
+    "pt": [
+      { "icon": "🐟", "t": "Bacalhau em pedacinhos", "d": "Filetes de bacalhau fresco, cortados em pedacinhos, fáceis de comer com um palito." },
+      { "icon": "🍺", "t": "Massa de cerveja", "d": "Os pedaços de peixe são cobertos com uma massa fofa, arejada com cerveja, que se mantém crocante." },
+      { "icon": "🧄", "t": "Molho de alho", "d": "Servido com um molho remoulade de alho, cremoso e saboroso, típico dos petiscos de peixe holandeses." },
+      { "icon": "🍋", "t": "Com gomos de limão", "d": "Regados com sumo de limão fresco mesmo antes de servir, para frescor." }
+    ],
+    "ru": [
+      { "icon": "🐟", "t": "Треска кусочками", "d": "Свежее филе трески, нарезанное на маленькие кусочки, удобно есть при помощи зубочистки." },
+      { "icon": "🍺", "t": "Пивное тесто", "d": "Кусочки рыбы обмакивают в пышное, взбитое на пиве тесто, которое остаётся хрустящим." },
+      { "icon": "🧄", "t": "Чесночный соус", "d": "Подаются со сливочным, ароматным чесночным соусом ремулад, характерным для голландских рыбных закусок." },
+      { "icon": "🍋", "t": "С дольками лимона", "d": "Сбрызгиваются свежим лимонным соком непосредственно перед подачей, для свежести." }
+    ],
+    "ar": [
+      { "icon": "🐟", "t": "سمك القد بقطع صغيرة", "d": "شرائح سمك القد الطازج، مقطّعة إلى قطع صغيرة، يسهل تناولها بعود أسنان." },
+      { "icon": "🍺", "t": "عجينة بالبيرة", "d": "تُغطّى قطع السمك بعجينة رقيقة هوائية بالبيرة تبقى مقرمشة." },
+      { "icon": "🧄", "t": "صلصة الثوم", "d": "تُقدَّم مع صلصة ريمولاد الثوم الكريمية العطرية، المميزة لوجبات السمك الخفيفة الهولندية." },
+      { "icon": "🍋", "t": "مع شرائح الليمون", "d": "تُرشّ بعصير ليمون طازج قبل التقديم مباشرة، لإضفاء نكهة منعشة." }
+    ],
+    "zh": [
+      { "icon": "🐟", "t": "一口大小的鳕鱼块", "d": "新鲜鳕鱼片切成小块，用牙签方便食用。" },
+      { "icon": "🍺", "t": "啤酒面糊", "d": "鱼块裹上蓬松的啤酒发面糊，炸后依然保持酥脆。" },
+      { "icon": "🧄", "t": "蒜蓉酱", "d": "配以奶油状、风味浓郁的蒜蓉调味酱，是荷兰鱼类小食的特色。" },
+      { "icon": "🍋", "t": "配柠檬角", "d": "食用前挤上新鲜柠檬汁，增添清新口感。" }
+    ],
+    "ja": [
+      { "icon": "🐟", "t": "一口サイズのタラ", "d": "新鮮なタラの切り身を小さく切り分け、つまようじで食べやすくする。" },
+      { "icon": "🍺", "t": "ビール入り衣", "d": "魚の切り身にビールで泡立てたふんわりとした衣をまとわせ、カリカリのまま保つ。" },
+      { "icon": "🧄", "t": "ガーリックソース", "d": "オランダの魚介スナックに特有の、クリーミーで風味豊かなガーリックレムラードソースを添えて提供する。" },
+      { "icon": "🍋", "t": "レモンのくし切り添え", "d": "提供直前に新鮮なレモン汁をかけ、爽やかさを加える。" }
+    ],
+    "hi": [
+      { "icon": "🐟", "t": "टुकड़ों में कॉड", "d": "ताज़े कॉड फिलेट, छोटे टुकड़ों में कटे, टूथपिक से आसानी से खाए जा सकते हैं।" },
+      { "icon": "🍺", "t": "बीयर बैटर", "d": "मछली के टुकड़े फूले, बीयर से हवादार बैटर में लपेटे जाते हैं, जो कुरकुरा बना रहता है।" },
+      { "icon": "🧄", "t": "लहसुन सॉस", "d": "डच मछली स्नैक्स के लिए खास, मलाईदार, स्वादिष्ट लहसुन रेमूलाद सॉस के साथ परोसा जाता है।" },
+      { "icon": "🍋", "t": "नींबू के टुकड़ों के साथ", "d": "परोसने से ठीक पहले ताज़े नींबू के रस से छिड़का जाता है, ताज़गी के लिए।" }
+    ],
+    "tr": [
+      { "icon": "🐟", "t": "Lokma büyüklüğünde morina", "d": "Taze morina balığı fileto, küçük parçalar halinde kesilmiş, kürdanla kolayca yenir." },
+      { "icon": "🍺", "t": "Biralı hamur", "d": "Balık parçaları çıtır kalan, birayla havalandırılmış kabarık bir hamura bulanır." },
+      { "icon": "🧄", "t": "Sarımsak sosu", "d": "Hollanda balık atıştırmalıklarına özgü, kremamsı, lezzetli bir sarımsaklı remuladla servis edilir." },
+      { "icon": "🍋", "t": "Limon dilimleriyle", "d": "Servis etmeden hemen önce tazelik için taze limon suyu serpilir." }
+    ],
+    "it": [
+      { "icon": "🐟", "t": "Merluzzo a bocconcini", "d": "Filetti di merluzzo fresco, tagliati a pezzetti, facili da mangiare con uno stuzzicadenti." },
+      { "icon": "🍺", "t": "Pastella alla birra", "d": "I pezzi di pesce vengono ricoperti da una pastella soffice, arieggiata con birra, che resta croccante." },
+      { "icon": "🧄", "t": "Salsa all'aglio", "d": "Serviti con una salsa remoulade all'aglio, cremosa e saporita, tipica degli snack di pesce olandesi." },
+      { "icon": "🍋", "t": "Con spicchi di limone", "d": "Cosparsi di succo di limone fresco appena prima di servire, per freschezza." }
+    ],
+    "ko": [
+      { "icon": "🐟", "t": "한입 크기 대구", "d": "신선한 대구살을 작은 조각으로 잘라 이쑤시개로 먹기 쉽게 만든다." },
+      { "icon": "🍺", "t": "맥주 반죽", "d": "생선 조각을 맥주로 부풀린 폭신한 반죽에 입혀 바삭함을 유지한다." },
+      { "icon": "🧄", "t": "마늘 소스", "d": "네덜란드 생선 스낵에 특징적인, 크리미하고 풍미 좋은 마늘 레물라드 소스와 함께 제공된다." },
+      { "icon": "🍋", "t": "레몬 조각과 함께", "d": "상큼함을 위해 제공 직전 신선한 레몬즙을 뿌린다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["600g file de cod, tăiat cuburi de 3cm", "150g făină", "1 linguriță praf de copt", "1/2 linguriță sare", "200ml bere blondă rece", "ulei pentru prăjit", "1 lămâie, tăiată felii", "150ml maioneză", "2 căței de usturoi, zdrobiți", "1 lingură pătrunjel tocat", "1 linguriță suc de lămâie", "sare și piper după gust"],
+    "en": ["600g cod fillet, cut into 3cm cubes", "150g flour", "1 tsp baking powder", "1/2 tsp salt", "200ml cold lager beer", "oil for frying", "1 lemon, sliced", "150ml mayonnaise", "2 garlic cloves, crushed", "1 tbsp chopped parsley", "1 tsp lemon juice", "salt and pepper to taste"],
+    "es": ["600g de filete de bacalao, cortado en cubos de 3cm", "150g de harina", "1 cucharadita de levadura en polvo", "1/2 cucharadita de sal", "200ml de cerveza rubia fría", "aceite para freír", "1 limón, en rodajas", "150ml de mayonesa", "2 dientes de ajo, aplastados", "1 cucharada de perejil picado", "1 cucharadita de zumo de limón", "sal y pimienta al gusto"],
+    "fr": ["600g de filet de cabillaud, coupé en cubes de 3cm", "150g de farine", "1 c. à café de levure chimique", "1/2 c. à café de sel", "200ml de bière blonde froide", "huile pour la friture", "1 citron, en tranches", "150ml de mayonnaise", "2 gousses d'ail, écrasées", "1 c. à soupe de persil haché", "1 c. à café de jus de citron", "sel et poivre selon le goût"],
+    "de": ["600g Kabeljaufilet, in 3cm-Würfel geschnitten", "150g Mehl", "1 TL Backpulver", "1/2 TL Salz", "200ml kaltes helles Bier", "Öl zum Frittieren", "1 Zitrone, in Scheiben", "150ml Mayonnaise", "2 Knoblauchzehen, zerdrückt", "1 EL gehackte Petersilie", "1 TL Zitronensaft", "Salz und Pfeffer nach Geschmack"],
+    "pt": ["600g de filete de bacalhau, cortado em cubos de 3cm", "150g de farinha", "1 colher (chá) de fermento em pó", "1/2 colher (chá) de sal", "200ml de cerveja loira gelada", "óleo para fritar", "1 limão, fatiado", "150ml de maionese", "2 dentes de alho, esmagados", "1 colher (sopa) de salsa picada", "1 colher (chá) de suco de limão", "sal e pimenta a gosto"],
+    "ru": ["600г филе трески, нарезанного кубиками 3см", "150г муки", "1 ч.л. разрыхлителя", "1/2 ч.л. соли", "200мл холодного светлого пива", "масло для жарки", "1 лимон, нарезанный", "150мл майонеза", "2 зубчика чеснока, раздавленных", "1 ст.л. рубленой петрушки", "1 ч.л. лимонного сока", "соль и перец по вкусу"],
+    "ar": ["600 غرام فيليه سمك القد، مقطّع مكعبات 3 سم", "150 غرام دقيق", "ملعقة صغيرة بيكنج بودر", "نصف ملعقة صغيرة ملح", "200 مل بيرة فاتحة باردة", "زيت للقلي", "ليمونة واحدة، مقطّعة شرائح", "150 مل مايونيز", "فصا ثوم، مهروسان", "ملعقة كبيرة بقدونس مفروم", "ملعقة صغيرة عصير ليمون", "ملح وفلفل حسب الرغبة"],
+    "zh": ["600克鳕鱼片，切成3厘米方块", "150克面粉", "1茶匙泡打粉", "1/2茶匙盐", "200毫升冷淡啤酒", "炸油", "1个柠檬，切片", "150毫升蛋黄酱", "2瓣大蒜，捣碎", "1汤匙欧芹碎", "1茶匙柠檬汁", "盐和胡椒适量"],
+    "ja": ["タラの切り身600g（3cm角に切る）", "小麦粉150g", "ベーキングパウダー小さじ1", "塩小さじ1/2", "冷たいラガービール200ml", "揚げ油", "レモン1個（スライス）", "マヨネーズ150ml", "にんにく2片（つぶす）", "パセリのみじん切り大さじ1", "レモン汁小さじ1", "塩こしょう 適量"],
+    "hi": ["600 ग्राम कॉड फिलेट, 3cm क्यूब में कटा", "150 ग्राम आटा", "1 छोटी चम्मच बेकिंग पाउडर", "1/2 छोटी चम्मच नमक", "200 मिली ठंडी लेगर बीयर", "तलने के लिए तेल", "1 नींबू, कटा", "150 मिली मेयोनेज़", "2 लहसुन की कलियाँ, कुचली हुई", "1 बड़ा चम्मच कटा अजमोद", "1 छोटी चम्मच नींबू का रस", "स्वादानुसार नमक और काली मिर्च"],
+    "tr": ["600g morina fileto, 3cm küpler halinde kesilmiş", "150g un", "1 çay kaşığı kabartma tozu", "1/2 çay kaşığı tuz", "200ml soğuk lager bira", "kızartmak için yağ", "1 limon, dilimlenmiş", "150ml mayonez", "2 diş sarımsak, ezilmiş", "1 yemek kaşığı doğranmış maydanoz", "1 çay kaşığı limon suyu", "tuz ve karabiber, tadına göre"],
+    "it": ["600g di filetto di merluzzo, tagliato a cubetti di 3cm", "150g di farina", "1 cucchiaino di lievito per dolci", "1/2 cucchiaino di sale", "200ml di birra chiara fredda", "olio per friggere", "1 limone, a fette", "150ml di maionese", "2 spicchi d'aglio, schiacciati", "1 cucchiaio di prezzemolo tritato", "1 cucchiaino di succo di limone", "sale e pepe q.b."],
+    "ko": ["대구살 600g, 3cm 큐브로 자른 것", "밀가루 150g", "베이킹파우더 1작은술", "소금 1/2작은술", "차가운 라거 맥주 200ml", "튀김용 식용유", "레몬 1개, 슬라이스", "마요네즈 150ml", "마늘 2쪽, 으깬 것", "다진 파슬리 1큰술", "레몬즙 1작은술", "소금과 후추 약간"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE PEȘTELE: Taie fileul de cod în cuburi de aproximativ 3cm, tamponează-le cu prosop de hârtie să fie uscate. PREPARĂ ALUATUL: Amestecă făina, praful de copt și sarea într-un bol, adaugă treptat berea rece, amestecând, până obții un aluat neted, cu consistența smântânii groase. PREGĂTEȘTE SOSUL: Amestecă maioneza cu usturoiul zdrobit, pătrunjelul tocat, sucul de lămâie, sare și piper într-un bol mic; lasă la frigider până la servire. ÎNCINGE ULEIUL: Încinge uleiul pentru prăjit la 180°C într-o oală adâncă. ÎNMOAIE PEȘTELE: Trece fiecare bucată de cod prin aluat, scurgând excesul. PRĂJEȘTE: Prăjește bucățile în loturi mici, 3-4 minute, până devin aurii și crocante, întorcându-le o dată. SCURGE: Scoate bucățile prăjite pe hârtie absorbantă, sărează imediat cât sunt fierbinți. SERVEȘTE: Servește imediat, cu felii de lămâie și sosul de usturoi alături, pentru înmuiat.",
+    "en": "PREPARE THE FISH: Cut the cod fillet into roughly 3cm cubes, pat them dry with a paper towel. MAKE THE BATTER: Mix the flour, baking powder and salt in a bowl, gradually add the cold beer, stirring, until you get a smooth batter with the consistency of thick cream. PREPARE THE SAUCE: Mix the mayonnaise with the crushed garlic, chopped parsley, lemon juice, salt and pepper in a small bowl; refrigerate until serving. HEAT THE OIL: Heat the frying oil to 180°C in a deep pot. DIP THE FISH: Dip each cod piece into the batter, draining off the excess. FRY: Fry the pieces in small batches, 3-4 minutes, until golden and crisp, turning once. DRAIN: Remove the fried pieces onto paper towels, salt immediately while hot. SERVE: Serve immediately, with lemon wedges and the garlic sauce on the side, for dipping.",
+    "es": "PREPARA EL PESCADO: Corta el filete de bacalao en cubos de aproximadamente 3cm, sécalos con papel de cocina. PREPARA EL REBOZADO: Mezcla la harina, la levadura en polvo y la sal en un bol, añade gradualmente la cerveza fría, removiendo, hasta obtener un rebozado suave con la consistencia de nata espesa. PREPARA LA SALSA: Mezcla la mayonesa con el ajo aplastado, el perejil picado, el zumo de limón, sal y pimienta en un bol pequeño; refrigera hasta el momento de servir. CALIENTA EL ACEITE: Calienta el aceite de freír a 180°C en una olla profunda. REBOZA EL PESCADO: Pasa cada trozo de bacalao por el rebozado, escurriendo el exceso. FRÍE: Fríe los trozos en tandas pequeñas, 3-4 minutos, hasta que estén dorados y crujientes, volteándolos una vez. ESCURRE: Retira los trozos fritos sobre papel absorbente, sazona inmediatamente mientras están calientes. SIRVE: Sirve de inmediato, con gajos de limón y la salsa de ajo al lado, para mojar.",
+    "fr": "PRÉPAREZ LE POISSON: Coupez le filet de cabillaud en cubes d'environ 3cm, tamponnez-les avec du papier absorbant pour les sécher. PRÉPAREZ LA PÂTE: Mélangez la farine, la levure chimique et le sel dans un bol, ajoutez progressivement la bière froide, en remuant, jusqu'à obtenir une pâte lisse avec la consistance d'une crème épaisse. PRÉPAREZ LA SAUCE: Mélangez la mayonnaise avec l'ail écrasé, le persil haché, le jus de citron, le sel et le poivre dans un petit bol; réfrigérez jusqu'au service. CHAUFFEZ L'HUILE: Chauffez l'huile de friture à 180°C dans une marmite profonde. TREMPEZ LE POISSON: Trempez chaque morceau de cabillaud dans la pâte, en égouttant l'excédent. FAITES FRIRE: Faites frire les morceaux par petits lots, 3-4 minutes, jusqu'à ce qu'ils soient dorés et croustillants, en les retournant une fois. ÉGOUTTEZ: Retirez les morceaux frits sur du papier absorbant, salez immédiatement pendant qu'ils sont chauds. SERVEZ: Servez immédiatement, avec des quartiers de citron et la sauce à l'ail à côté, pour tremper.",
+    "de": "FISCH VORBEREITEN: Das Kabeljaufilet in etwa 3cm große Würfel schneiden, mit Küchenpapier trockentupfen. TEIG ZUBEREITEN: Mehl, Backpulver und Salz in einer Schüssel vermischen, nach und nach das kalte Bier zugeben, rühren, bis ein glatter Teig mit der Konsistenz von dicker Sahne entsteht. SAUCE ZUBEREITEN: Mayonnaise mit zerdrücktem Knoblauch, gehackter Petersilie, Zitronensaft, Salz und Pfeffer in einer kleinen Schüssel vermischen; bis zum Servieren kühl stellen. ÖL ERHITZEN: Das Frittieröl in einem tiefen Topf auf 180°C erhitzen. FISCH TAUCHEN: Jedes Kabeljaustück in den Teig tauchen, überschüssigen Teig abtropfen lassen. FRITTIEREN: Die Stücke in kleinen Portionen 3-4 Minuten frittieren, bis sie goldbraun und knusprig sind, dabei einmal wenden. ABTROPFEN LASSEN: Die frittierten Stücke auf Küchenpapier legen, sofort salzen, solange sie heiß sind. SERVIEREN: Sofort servieren, mit Zitronenspalten und der Knoblauchsauce dazu, zum Dippen.",
+    "pt": "PREPARE O PEIXE: Corte o filete de bacalhau em cubos de aproximadamente 3cm, seque-os com papel de cozinha. PREPARE A MASSA: Misture a farinha, o fermento em pó e o sal numa tigela, junte gradualmente a cerveja fria, mexendo, até obter uma massa lisa com a consistência de natas espessas. PREPARE O MOLHO: Misture a maionese com o alho esmagado, a salsa picada, o sumo de limão, sal e pimenta numa tigela pequena; leve à geladeira até servir. AQUEÇA O ÓLEO: Aqueça o óleo de fritura a 180°C numa panela funda. MERGULHE O PEIXE: Mergulhe cada pedaço de bacalhau na massa, escorrendo o excesso. FRITE: Frite os pedaços em pequenos lotes, por 3-4 minutos, até dourarem e ficarem crocantes, virando uma vez. ESCORRA: Retire os pedaços fritos sobre papel absorvente, tempere com sal imediatamente enquanto estão quentes. SIRVA: Sirva imediatamente, com gomos de limão e o molho de alho ao lado, para molhar.",
+    "ru": "ПОДГОТОВЬТЕ РЫБУ: Нарежьте филе трески кубиками около 3см, промокните бумажным полотенцем. ПРИГОТОВЬТЕ ТЕСТО: Смешайте муку, разрыхлитель и соль в миске, постепенно добавляйте холодное пиво, помешивая, до получения гладкого теста консистенции густых сливок. ПРИГОТОВЬТЕ СОУС: Смешайте майонез с раздавленным чесноком, рубленой петрушкой, лимонным соком, солью и перцем в маленькой миске; охладите до подачи. РАЗОГРЕЙТЕ МАСЛО: Разогрейте масло для жарки до 180°C в глубокой кастрюле. ОБМАКНИТЕ РЫБУ: Обмакните каждый кусочек трески в тесто, стряхивая излишки. ОБЖАРЬТЕ: Обжаривайте кусочки небольшими партиями 3-4 минуты, до золотистой хрустящей корочки, перевернув один раз. СЛЕЙТЕ МАСЛО: Выложите обжаренные кусочки на бумажные полотенца, сразу же посолите, пока горячие. ПОДАВАЙТЕ: Подавайте сразу, с дольками лимона и чесночным соусом на гарнир, для макания.",
+    "ar": "حضّري السمك: قطّعي فيليه سمك القد إلى مكعبات بحجم 3 سم تقريبًا، جففيها بمنشفة ورقية. حضّري العجينة: امزجي الدقيق والبيكنج بودر والملح في وعاء، أضيفي البيرة الباردة تدريجيًا مع التحريك حتى تحصلي على عجينة ناعمة بقوام الكريمة السميكة. حضّري الصلصة: امزجي المايونيز مع الثوم المهروس والبقدونس المفروم وعصير الليمون والملح والفلفل في وعاء صغير؛ ضعيها في الثلاجة حتى التقديم. سخّني الزيت: سخّني زيت القلي إلى 180 درجة مئوية في قدر عميقة. اغمسي السمك: اغمسي كل قطعة سمك في العجينة، مع تصفية الزائد. اقلي: اقلي القطع على دفعات صغيرة 3-4 دقائق حتى تصبح ذهبية ومقرمشة، مع قلبها مرة واحدة. صفّي: أخرجي القطع المقلية على منشفة ورقية، وملّحيها فورًا وهي ساخنة. قدّمي: قدّميها فورًا مع شرائح الليمون وصلصة الثوم جانبًا للغمس.",
+    "zh": "处理鱼肉：将鳕鱼片切成约3厘米的方块，用厨房纸巾拍干。制作面糊：在碗中混合面粉、泡打粉和盐，逐渐加入冷啤酒搅拌，直至形成浓稠奶油状的顺滑面糊。制作酱汁：在小碗中将蛋黄酱与捣碎的大蒜、欧芹碎、柠檬汁、盐和胡椒混合；冷藏至上桌前。加热油：在深锅中将炸油加热至180°C。蘸裹面糊：将每块鳕鱼裹上面糊，沥去多余部分。油炸：分小批次油炸鱼块3-4分钟，翻一次面，至金黄酥脆。沥油：将炸好的鱼块取出放在厨房纸巾上，趁热立即撒盐。上桌：立即配柠檬角和蒜蓉酱食用，用于蘸取。",
+    "ja": "魚を準備する：タラの切り身を約3cm角に切り、キッチンペーパーで水気を拭き取る。衣を作る：ボウルに小麦粉、ベーキングパウダー、塩を混ぜ、冷たいビールを少しずつ加えながら混ぜ、濃いクリームのような滑らかな衣を作る。ソースを作る：小さなボウルにマヨネーズ、つぶしたにんにく、刻んだパセリ、レモン汁、塩こしょうを混ぜる。提供まで冷蔵庫で冷やす。油を熱する：深めの鍋で揚げ油を180°Cに熱する。魚に衣をつける：各タラの切り身を衣にくぐらせ、余分な衣を落とす。揚げる：少量ずつ3〜4分揚げ、一度返しながら、きつね色でカリッとするまで揚げる。油を切る：揚げた切り身をキッチンペーパーに取り出し、熱いうちにすぐ塩をふる。提供する：レモンのくし切りとガーリックソースを添えてディップ用にすぐに提供する。",
+    "hi": "मछली तैयार करें: कॉड फिलेट को लगभग 3cm क्यूब में काटें, कागज़ के तौलिये से सुखाएं। बैटर तैयार करें: कटोरे में आटा, बेकिंग पाउडर और नमक मिलाएं, धीरे-धीरे ठंडी बीयर डालें, हिलाते हुए, जब तक गाढ़ी क्रीम जैसा चिकना बैटर न बन जाए। सॉस तैयार करें: छोटे कटोरे में मेयोनेज़ को कुचले लहसुन, कटे अजमोद, नींबू के रस, नमक और काली मिर्च के साथ मिलाएं; परोसने तक फ्रिज में रखें। तेल गरम करें: गहरे बर्तन में तलने का तेल 180°C पर गरम करें। मछली डुबोएं: हर कॉड टुकड़े को बैटर में डुबोएं, अतिरिक्त निकालते हुए। तलें: टुकड़ों को छोटे हिस्सों में 3-4 मिनट तलें, एक बार पलटते हुए, जब तक सुनहरा और कुरकुरा न हो जाए। छानें: तले टुकड़ों को कागज़ के तौलिये पर निकालें, गरम रहते ही तुरंत नमक डालें। परोसें: तुरंत, नींबू के टुकड़ों और लहसुन सॉस के साथ, डुबाने के लिए परोसें।",
+    "tr": "BALIĞI HAZIRLAYIN: Morina fileyi yaklaşık 3cm küpler halinde kesin, kağıt havluyla kurulayın. HAMURU HAZIRLAYIN: Bir kasede unu, kabartma tozunu ve tuzu karıştırın, soğuk birayı yavaş yavaş, karıştırarak ekleyin, koyu krema kıvamında pürüzsüz bir hamur elde edene kadar. SOSU HAZIRLAYIN: Küçük bir kasede mayonezi ezilmiş sarımsak, doğranmış maydanoz, limon suyu, tuz ve karabiberle karıştırın; servise kadar buzdolabında bekletin. YAĞI ISITIN: Derin bir tencerede kızartma yağını 180°C'ye ısıtın. BALIĞI HAMURA BATIRIN: Her morina parçasını hamura batırın, fazlasını süzdürün. KIZARTIN: Parçaları küçük partiler halinde bir kez çevirerek altın rengi ve çıtır olana kadar 3-4 dakika kızartın. SÜZÜN: Kızarmış parçaları kağıt havluya alın, sıcakken hemen tuzlayın. SERVİS YAPIN: Batırmak için limon dilimleri ve sarımsak sosuyla hemen servis edin.",
+    "it": "PREPARA IL PESCE: Taglia il filetto di merluzzo in cubetti di circa 3cm, tamponalo con carta assorbente. PREPARA LA PASTELLA: Mescola farina, lievito e sale in una ciotola, aggiungi gradualmente la birra fredda, mescolando, finché ottieni una pastella liscia con la consistenza di panna densa. PREPARA LA SALSA: Mescola la maionese con l'aglio schiacciato, il prezzemolo tritato, il succo di limone, sale e pepe in una ciotola piccola; refrigera fino al momento di servire. SCALDA L'OLIO: Scalda l'olio di frittura a 180°C in una pentola profonda. IMMERGI IL PESCE: Immergi ogni pezzo di merluzzo nella pastella, scolando l'eccesso. FRIGGI: Friggi i pezzi in piccoli lotti, 3-4 minuti, finché dorati e croccanti, girandoli una volta. SCOLA: Togli i pezzi fritti su carta assorbente, sala subito mentre sono caldi. SERVI: Servi subito, con spicchi di limone e la salsa all'aglio a lato, per intingere.",
+    "ko": "생선 준비하기: 대구살을 약 3cm 큐브로 썰어 키친타월로 물기를 닦는다. 반죽 만들기: 볼에 밀가루, 베이킹파우더, 소금을 섞고 차가운 맥주를 조금씩 저어가며 넣어 진한 크림 농도의 부드러운 반죽을 만든다. 소스 만들기: 작은 볼에 마요네즈, 으깬 마늘, 다진 파슬리, 레몬즙, 소금, 후추를 섞는다; 제공 전까지 냉장 보관한다. 기름 가열하기: 깊은 냄비에 튀김용 기름을 180°C로 가열한다. 생선 반죽 입히기: 각 대구 조각을 반죽에 담갔다가 여분을 털어낸다. 튀기기: 조각을 소량씩 나누어 한 번 뒤집으며 3-4분간 황금빛으로 바삭해질 때까지 튀긴다. 기름 빼기: 튀긴 조각을 키친타월에 올려 뜨거울 때 바로 소금을 뿌린다. 제공하기: 레몬 조각과 마늘 소스를 곁들여 찍어 먹을 수 있도록 즉시 제공한다."
+  },
+  "originText": {
+    "ro": "Kibbeling a apărut inițial ca fel de mâncare al pescarilor din nordul Olandei, o metodă practică de a folosi bucățile de cod prea mici sau neregulate pentru a fi vândute ca fileuri întregi, tăiate în cuburi mici și prăjite rapid. Numele derivă din \"kibbelen\", un cuvânt dialectal ce înseamnă a certa sau a tăia mărunt, referindu-se la tehnica de tăiere a peștelui în bucăți inegale.\n\nÎn ultimele decenii, kibbeling a trecut de la a fi o gustare de pescărie locală la un fenomen național, vândut acum la standuri de pește din întreaga țară, adesea alături de heringul crud și pomfrit. Sosul de usturoi care îl însoțește, deși pare tradițional, este de fapt o adăugare relativ recentă, din anii 1990, care a contribuit decisiv la transformarea kibbeling-ului dintr-o simplă gustare de coastă într-un fel emblematic olandez.",
+    "en": "Kibbeling originally emerged as a fisherman's dish in northern Netherlands, a practical way to use cod pieces too small or irregular to be sold as whole fillets, cut into small cubes and quickly fried. The name derives from \"kibbelen,\" a dialect word meaning to quarrel or to chop finely, referring to the technique of cutting the fish into uneven pieces.\n\nOver the last few decades, kibbeling has gone from being a local fishmonger's snack to a national phenomenon, now sold at fish stalls throughout the country, often alongside raw herring and fries. The garlic sauce that accompanies it, though it seems traditional, is actually a relatively recent addition from the 1990s, which contributed decisively to transforming kibbeling from a simple coastal snack into an emblematic Dutch dish.",
+    "es": "El kibbeling surgió originalmente como plato de pescadores en el norte de los Países Bajos, una forma práctica de usar trozos de bacalao demasiado pequeños o irregulares para venderse como filetes enteros, cortados en pequeños cubos y fritos rápidamente. El nombre deriva de \"kibbelen\", una palabra dialectal que significa reñir o picar finamente, refiriéndose a la técnica de cortar el pescado en trozos desiguales.\n\nEn las últimas décadas, el kibbeling ha pasado de ser un aperitivo local de pescadería a un fenómeno nacional, vendido ahora en puestos de pescado en todo el país, a menudo junto al arenque crudo y las patatas fritas. La salsa de ajo que lo acompaña, aunque parece tradicional, es en realidad una incorporación relativamente reciente de la década de 1990, que contribuyó decisivamente a transformar el kibbeling de un simple aperitivo costero en un plato emblemático holandés.",
+    "fr": "Le kibbeling est apparu à l'origine comme plat de pêcheurs dans le nord des Pays-Bas, une façon pratique d'utiliser des morceaux de cabillaud trop petits ou irréguliers pour être vendus comme filets entiers, coupés en petits cubes et rapidement frits. Le nom dérive de \"kibbelen\", un mot dialectal signifiant se quereller ou hacher finement, faisant référence à la technique de découpe du poisson en morceaux inégaux.\n\nAu cours des dernières décennies, le kibbeling est passé d'un en-cas local de poissonnerie à un phénomène national, désormais vendu dans des étals de poisson à travers tout le pays, souvent aux côtés du hareng cru et des frites. La sauce à l'ail qui l'accompagne, bien qu'elle semble traditionnelle, est en fait un ajout relativement récent des années 1990, qui a contribué de manière décisive à transformer le kibbeling d'un simple en-cas côtier en un plat emblématique néerlandais.",
+    "de": "Kibbeling entstand ursprünglich als Fischergericht im Norden der Niederlande, eine praktische Möglichkeit, Kabeljaustücke zu verwenden, die zu klein oder unregelmäßig waren, um als ganze Filets verkauft zu werden, in kleine Würfel geschnitten und schnell frittiert. Der Name stammt von \"kibbelen\", einem Dialektwort für streiten oder fein hacken, das sich auf die Technik bezieht, den Fisch in ungleichmäßige Stücke zu schneiden.\n\nIn den letzten Jahrzehnten hat sich Kibbeling von einem lokalen Fischgeschäft-Snack zu einem nationalen Phänomen entwickelt, das heute an Fischständen im ganzen Land verkauft wird, oft neben rohem Hering und Pommes frites. Die Knoblauchsauce, die es begleitet, obwohl sie traditionell erscheint, ist tatsächlich eine relativ neue Ergänzung aus den 1990er Jahren, die entscheidend dazu beitrug, Kibbeling von einem einfachen Küstensnack in ein emblematisches niederländisches Gericht zu verwandeln.",
+    "pt": "O kibbeling surgiu originalmente como prato de pescadores no norte dos Países Baixos, uma forma prática de usar pedaços de bacalhau demasiado pequenos ou irregulares para serem vendidos como filetes inteiros, cortados em pequenos cubos e fritos rapidamente. O nome deriva de \"kibbelen\", uma palavra dialetal que significa discutir ou picar finamente, referindo-se à técnica de cortar o peixe em pedaços desiguais.\n\nNas últimas décadas, o kibbeling passou de um petisco local de peixaria a um fenómeno nacional, vendido agora em bancas de peixe por todo o país, frequentemente ao lado do arenque cru e batatas fritas. O molho de alho que o acompanha, embora pareça tradicional, é na verdade uma adição relativamente recente dos anos 1990, que contribuiu decisivamente para transformar o kibbeling de um simples petisco costeiro num prato emblemático holandês.",
+    "ru": "Киббелинг изначально возник как рыбацкое блюдо на севере Нидерландов, практичный способ использовать кусочки трески, слишком мелкие или неровные, чтобы продавать их как целое филе, нарезанные на маленькие кубики и быстро обжаренные. Название происходит от \"kibbelen\" — диалектного слова, означающего ссориться или мелко рубить, отсылающего к технике нарезки рыбы на неровные кусочки.\n\nЗа последние десятилетия киббелинг превратился из местной закуски рыбной лавки в национальный феномен, продаваемый теперь в рыбных лавках по всей стране, часто рядом с сырой сельдью и картофелем фри. Чесночный соус, сопровождающий его, хотя и кажется традиционным, на самом деле является относительно недавним добавлением 1990-х годов, которое решительно способствовало превращению киббелинга из простой прибрежной закуски в знаковое голландское блюдо.",
+    "ar": "ظهر الكيبلينغ في الأصل كطبق صيادين في شمال هولندا، وسيلة عملية لاستخدام قطع سمك القد الصغيرة جدًا أو غير المنتظمة التي لا يمكن بيعها كفيليه كامل، تُقطَّع مكعبات صغيرة وتُقلى بسرعة. يُشتق الاسم من \"كيبلن\"، كلمة عامية تعني الشجار أو التقطيع الدقيق، في إشارة إلى تقنية تقطيع السمك إلى قطع غير متساوية.\n\nفي العقود الأخيرة، تحوّل الكيبلينغ من وجبة خفيفة محلية في محلات بيع السمك إلى ظاهرة وطنية، يُباع الآن في أكشاك السمك في جميع أنحاء البلاد، غالبًا إلى جانب الرنجة النيئة والبطاطس المقلية. صلصة الثوم المرافقة له، رغم أنها تبدو تقليدية، هي في الواقع إضافة حديثة نسبيًا من التسعينيات، ساهمت بشكل حاسم في تحويل الكيبلينغ من وجبة ساحلية بسيطة إلى طبق هولندي رمزي.",
+    "zh": "炸鱼块最初起源于荷兰北部渔民的菜肴，是一种利用太小或不规则、无法作为整片出售的鳕鱼块的实用方法，将其切成小块快速油炸。这个名字源自「kibbelen」，一个方言词，意为争吵或细切，指的是将鱼切成不规则块状的技艺。\n\n在过去几十年里，炸鱼块从当地鱼铺的小食演变成全国性的现象，如今在全国各地的鱼摊都能买到，常常与生鲱鱼和薯条一同出售。搭配的蒜蓉酱虽然看起来传统，实际上是1990年代相对较新添加的元素，正是它决定性地将炸鱼块从简单的沿海小吃转变为荷兰的代表性菜肴。",
+    "ja": "キベリングはもともとオランダ北部の漁師料理として生まれ、丸ごとの切り身として売るには小さすぎたり不揃いだったりするタラの切れ端を活用する実用的な方法として、小さな角切りにして手早く揚げていた。この名前は「キベレン」という方言に由来し、口論するまたは細かく刻むという意味で、魚を不揃いな塊に切る技法を指している。\n\nここ数十年で、キベリングは地元の魚屋のおつまみから全国的な現象へと変化し、今では国中の魚屋台で、しばしば生ニシンやフライドポテトと共に売られている。それに添えられるガーリックソースは、伝統的なもののように見えるが、実際には1990年代の比較的最近の追加であり、キベリングを単なる沿岸のおつまみからオランダを象徴する料理へと決定的に変えるのに貢献した。",
+    "hi": "किबेलिंग मूल रूप से उत्तरी नीदरलैंड में मछुआरों के व्यंजन के रूप में उभरा, कॉड के उन टुकड़ों का उपयोग करने का एक व्यावहारिक तरीका जो पूरे फिलेट के रूप में बेचने के लिए बहुत छोटे या असमान थे, छोटे क्यूब में काटे और जल्दी तले गए। नाम \"किब्बेलेन\" से आया है, एक बोली शब्द जिसका अर्थ है झगड़ा करना या बारीक काटना, जो मछली को असमान टुकड़ों में काटने की तकनीक को संदर्भित करता है।\n\nपिछले कुछ दशकों में, किबेलिंग एक स्थानीय मछली की दुकान के स्नैक से राष्ट्रीय घटना बन गई है, जो अब पूरे देश में मछली के स्टॉल पर बेची जाती है, अक्सर कच्ची हेरिंग और फ्राइज़ के साथ। इसके साथ आने वाली लहसुन सॉस, हालांकि पारंपरिक लगती है, वास्तव में 1990 के दशक का एक अपेक्षाकृत हालिया जोड़ है, जिसने किबेलिंग को एक साधारण तटीय स्नैक से एक प्रतिष्ठित डच व्यंजन में बदलने में निर्णायक योगदान दिया।",
+    "tr": "Kibbeling, başlangıçta kuzey Hollanda'da bir balıkçı yemeği olarak ortaya çıktı; bütün fileto olarak satılamayacak kadar küçük veya düzensiz morina parçalarını kullanmanın pratik bir yolu olarak, küçük küpler halinde kesilip hızlıca kızartılıyordu. İsim, kavga etmek veya ince ince doğramak anlamına gelen lehçe kelimesi \"kibbelen\"den gelir; bu da balığı düzensiz parçalara kesme tekniğine atıfta bulunur.\n\nSon birkaç on yılda kibbeling, yerel bir balıkçı atıştırmalığından ulusal bir olguya dönüştü; artık ülke genelindeki balık tezgahlarında, sıklıkla çiğ ringa balığı ve patates kızartmasının yanında satılıyor. Ona eşlik eden sarımsak sosu, geleneksel görünse de aslında 1990'lardan kalma nispeten yeni bir eklemedir ve kibbeling'i basit bir kıyı atıştırmalığından simgesel bir Hollanda yemeğine dönüştürmede belirleyici bir rol oynamıştır.",
+    "it": "Il kibbeling è nato originariamente come piatto di pescatori nel nord dei Paesi Bassi, un modo pratico per utilizzare pezzi di merluzzo troppo piccoli o irregolari per essere venduti come filetti interi, tagliati in piccoli cubetti e fritti rapidamente. Il nome deriva da \"kibbelen\", una parola dialettale che significa litigare o tritare finemente, riferendosi alla tecnica di tagliare il pesce in pezzi irregolari.\n\nNegli ultimi decenni, il kibbeling è passato dall'essere uno snack locale da pescheria a un fenomeno nazionale, ora venduto nelle bancarelle di pesce in tutto il paese, spesso accanto all'aringa cruda e alle patatine fritte. La salsa all'aglio che lo accompagna, sebbene sembri tradizionale, è in realtà un'aggiunta relativamente recente degli anni '90, che ha contribuito in modo decisivo a trasformare il kibbeling da semplice snack costiero a piatto emblematico olandese.",
+    "ko": "키벨링은 원래 네덜란드 북부의 어부 요리로 등장했으며, 온전한 필레로 팔기엔 너무 작거나 불규칙한 대구 조각을 작은 큐브로 잘라 빠르게 튀겨 활용하는 실용적인 방법이었다. 이 이름은 다투다 또는 잘게 썰다라는 뜻의 방언 단어 「kibbelen」에서 유래했으며, 이는 생선을 불규칙한 조각으로 자르는 기법을 가리킨다.\n\n지난 수십 년 동안 키벨링은 지역 생선 가게의 간식에서 전국적인 현상으로 발전했으며, 이제는 전국의 생선 가판대에서 종종 생청어와 감자튀김과 함께 판매된다. 함께 곁들여지는 마늘 소스는 전통적으로 보이지만 실제로는 1990년대에 비교적 최근에 추가된 것으로, 키벨링을 단순한 해안 간식에서 상징적인 네덜란드 요리로 변모시키는 데 결정적인 역할을 했다."
+  },
+  "meta": {
+    "time": 35,
+    "costRon": 26,
+    "tags": ["quick", "high-protein"],
+    "desc": {
+      "ro": "Bucăți de cod prăjite în aluat de bere, servite cu sos cremos de usturoi.",
+      "en": "Cod pieces fried in beer batter, served with creamy garlic sauce.",
+      "es": "Trozos de bacalao fritos en rebozado de cerveza, servidos con salsa cremosa de ajo.",
+      "fr": "Morceaux de cabillaud frits dans une pâte à la bière, servis avec une sauce crémeuse à l'ail.",
+      "de": "In Bierteig gebratene Kabeljaustücke, serviert mit cremiger Knoblauchsauce.",
+      "pt": "Pedaços de bacalhau fritos em massa de cerveja, servidos com molho cremoso de alho.",
+      "ru": "Кусочки трески во фритюре в пивном кляре, подаются со сливочным чесночным соусом.",
+      "ar": "قطع سمك القد المقلية بعجينة البيرة، تُقدَّم مع صلصة الثوم الكريمية.",
+      "zh": "啤酒面糊炸鳕鱼块，配奶油蒜蓉酱食用。",
+      "ja": "ビール衣で揚げたタラの切り身、クリーミーなガーリックソースを添えて。",
+      "hi": "बीयर बैटर में तली कॉड टुकड़े, मलाईदार लहसुन सॉस के साथ परोसे गए।",
+      "tr": "Biralı hamurda kızartılmış morina parçaları, kremalı sarımsak sosuyla servis edilir.",
+      "it": "Pezzi di merluzzo fritti in pastella alla birra, serviti con salsa cremosa all'aglio.",
+      "ko": "맥주 반죽에 튀긴 대구 조각, 크리미한 마늘 소스와 함께 제공."
+    }
+  }
+}

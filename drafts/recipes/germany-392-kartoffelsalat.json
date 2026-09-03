@@ -1,0 +1,209 @@
+{
+  "id": 392,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Germania",
+    "en": "Germany",
+    "es": "Alemania",
+    "fr": "Allemagne",
+    "de": "Deutschland",
+    "pt": "Alemanha",
+    "ru": "Германия",
+    "ar": "ألمانيا",
+    "zh": "德国",
+    "ja": "ドイツ",
+    "hi": "जर्मनी",
+    "tr": "Almanya",
+    "it": "Germania",
+    "ko": "독일"
+  },
+  "name": {
+    "ro": "Kartoffelsalat (Salată de Cartofi Suabă)",
+    "en": "Kartoffelsalat (Swabian Warm Potato Salad)",
+    "es": "Kartoffelsalat (Ensalada de Papas Suaba)",
+    "fr": "Kartoffelsalat (Salade de Pommes de Terre Souabe)",
+    "de": "Schwäbischer Kartoffelsalat",
+    "pt": "Kartoffelsalat (Salada de Batata Suaba)",
+    "ru": "Картофельзалат (Швабский Тёплый Картофельный Салат)",
+    "ar": "كارتوفلسالات (سلطة بطاطس سوابية دافئة)",
+    "zh": "施瓦本温土豆沙拉",
+    "ja": "カルトッフェルザラート（シュヴァーベン風温かいポテトサラダ）",
+    "hi": "कार्टोफेलसालात (श्वाबियन गर्म आलू सलाद)",
+    "tr": "Kartoffelsalat (Swabia Usulü Ilık Patates Salatası)",
+    "it": "Kartoffelsalat (Insalata di Patate Sveva Tiepida)",
+    "ko": "카르토펠잘라트 (슈바벤식 따뜻한 감자 샐러드)"
+  },
+  "category": {
+    "ro": "Garnitură",
+    "en": "Side Dish",
+    "es": "Guarnición",
+    "fr": "Accompagnement",
+    "de": "Beilage",
+    "pt": "Acompanhamento",
+    "ru": "Гарнир",
+    "ar": "طبق جانبي",
+    "zh": "配菜",
+    "ja": "副菜",
+    "hi": "साइड डिश",
+    "tr": "Yan Yemek",
+    "it": "Contorno",
+    "ko": "곁들임 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥔", "t": "Cartofi cu pulpă fermă", "d": "Se folosesc cartofi cu pulpă fermă, care își păstrează forma la feliere fără să se sfărâme." },
+      { "icon": "🍲", "t": "Supă caldă de vită", "d": "Cartofii calzi absorb un amestec de supă de vită și oțet, în loc de maioneză." },
+      { "icon": "🧅", "t": "Ceapă crudă tocată", "d": "Ceapă roșie crudă, tocată fin, se adaugă cât timp cartofii sunt încă fierbinți, pentru a-și blânzi aroma." },
+      { "icon": "🌡️", "t": "Se servește caldă", "d": "Spre deosebire de variantele cu maioneză, această salată se servește caldă sau la temperatura camerei." }
+    ],
+    "en": [
+      { "icon": "🥔", "t": "Waxy potatoes", "d": "Waxy potatoes are used, which hold their shape when sliced without falling apart." },
+      { "icon": "🍲", "t": "Warm beef broth", "d": "The warm potatoes absorb a mixture of beef broth and vinegar, instead of mayonnaise." },
+      { "icon": "🧅", "t": "Raw chopped onion", "d": "Raw red onion, finely chopped, is added while the potatoes are still hot, to mellow its bite." },
+      { "icon": "🌡️", "t": "Served warm", "d": "Unlike mayonnaise-based versions, this salad is served warm or at room temperature." }
+    ],
+    "es": [
+      { "icon": "🥔", "t": "Papas de pulpa firme", "d": "Se usan papas de pulpa firme, que mantienen su forma al cortarlas sin desmoronarse." },
+      { "icon": "🍲", "t": "Caldo de res caliente", "d": "Las papas calientes absorben una mezcla de caldo de res y vinagre, en lugar de mayonesa." },
+      { "icon": "🧅", "t": "Cebolla cruda picada", "d": "Cebolla roja cruda, finamente picada, se añade mientras las papas aún están calientes, para suavizar su sabor." },
+      { "icon": "🌡️", "t": "Se sirve caliente", "d": "A diferencia de las versiones con mayonesa, esta ensalada se sirve caliente o a temperatura ambiente." }
+    ],
+    "fr": [
+      { "icon": "🥔", "t": "Pommes de terre à chair ferme", "d": "On utilise des pommes de terre à chair ferme, qui gardent leur forme une fois tranchées sans s'effriter." },
+      { "icon": "🍲", "t": "Bouillon de bœuf chaud", "d": "Les pommes de terre chaudes absorbent un mélange de bouillon de bœuf et de vinaigre, au lieu de mayonnaise." },
+      { "icon": "🧅", "t": "Oignon cru haché", "d": "De l'oignon rouge cru, finement haché, est ajouté pendant que les pommes de terre sont encore chaudes, pour adoucir son piquant." },
+      { "icon": "🌡️", "t": "Servie chaude", "d": "Contrairement aux versions à la mayonnaise, cette salade se sert chaude ou à température ambiante." }
+    ],
+    "de": [
+      { "icon": "🥔", "t": "Festkochende Kartoffeln", "d": "Es werden festkochende Kartoffeln verwendet, die beim Schneiden ihre Form behalten, ohne zu zerfallen." },
+      { "icon": "🍲", "t": "Warme Rinderbrühe", "d": "Die warmen Kartoffeln nehmen eine Mischung aus Rinderbrühe und Essig auf, statt Mayonnaise." },
+      { "icon": "🧅", "t": "Rohe gehackte Zwiebel", "d": "Rohe rote Zwiebel, fein gehackt, wird zugegeben, während die Kartoffeln noch heiß sind, um ihre Schärfe zu mildern." },
+      { "icon": "🌡️", "t": "Warm serviert", "d": "Im Gegensatz zu Mayonnaise-Versionen wird dieser Salat warm oder bei Zimmertemperatur serviert." }
+    ],
+    "pt": [
+      { "icon": "🥔", "t": "Batatas de polpa firme", "d": "Usam-se batatas de polpa firme, que mantêm a forma ao serem cortadas sem se desfazerem." },
+      { "icon": "🍲", "t": "Caldo de carne quente", "d": "As batatas quentes absorvem uma mistura de caldo de carne e vinagre, em vez de maionese." },
+      { "icon": "🧅", "t": "Cebola crua picada", "d": "Cebola roxa crua, picada finamente, é adicionada enquanto as batatas ainda estão quentes, para suavizar o sabor." },
+      { "icon": "🌡️", "t": "Servida quente", "d": "Ao contrário das versões com maionese, esta salada é servida quente ou à temperatura ambiente." }
+    ],
+    "ru": [
+      { "icon": "🥔", "t": "Плотный картофель", "d": "Используется плотный картофель, который сохраняет форму при нарезке, не разваливаясь." },
+      { "icon": "🍲", "t": "Тёплый говяжий бульон", "d": "Тёплый картофель впитывает смесь говяжьего бульона и уксуса, вместо майонеза." },
+      { "icon": "🧅", "t": "Сырой рубленый лук", "d": "Сырой красный лук, мелко нарезанный, добавляют пока картофель ещё горячий, чтобы смягчить его остроту." },
+      { "icon": "🌡️", "t": "Подаётся тёплым", "d": "В отличие от майонезных версий, этот салат подаётся тёплым или комнатной температуры." }
+    ],
+    "ar": [
+      { "icon": "🥔", "t": "بطاطس متماسكة", "d": "تُستخدم بطاطس متماسكة القوام تحافظ على شكلها عند التقطيع دون أن تتفكك." },
+      { "icon": "🍲", "t": "مرق لحم بقري دافئ", "d": "تمتص البطاطس الدافئة مزيجًا من مرق لحم البقر والخل، بدلًا من المايونيز." },
+      { "icon": "🧅", "t": "بصل نيء مفروم", "d": "يُضاف بصل أحمر نيء مفروم ناعمًا بينما البطاطس لا تزال ساخنة، لتخفيف حدته." },
+      { "icon": "🌡️", "t": "تُقدَّم دافئة", "d": "خلافًا للنسخ التي تحتوي على مايونيز، تُقدَّم هذه السلطة دافئة أو بحرارة الغرفة." }
+    ],
+    "zh": [
+      { "icon": "🥔", "t": "紧实土豆", "d": "使用质地紧实的土豆，切片时保持形状不易散碎。" },
+      { "icon": "🍲", "t": "温热牛肉高汤", "d": "温热的土豆吸收牛肉高汤与醋的混合汁液，而非蛋黄酱。" },
+      { "icon": "🧅", "t": "生洋葱碎", "d": "趁土豆还热时加入切碎的生红洋葱，使其辛辣味变得柔和。" },
+      { "icon": "🌡️", "t": "温热食用", "d": "与蛋黄酱版本不同，这道沙拉温热或常温食用。" }
+    ],
+    "ja": [
+      { "icon": "🥔", "t": "崩れにくいじゃがいも", "d": "スライスしても崩れず形を保つ、崩れにくい品種のじゃがいもを使用する。" },
+      { "icon": "🍲", "t": "温かい牛だし", "d": "温かいじゃがいもがマヨネーズの代わりに牛だしと酢の混合液を吸収する。" },
+      { "icon": "🧅", "t": "生の刻み玉ねぎ", "d": "じゃがいもがまだ熱いうちに、細かく刻んだ生の赤玉ねぎを加え、辛みを和らげる。" },
+      { "icon": "🌡️", "t": "温かく提供", "d": "マヨネーズベースのバージョンとは異なり、このサラダは温かいまたは室温で提供される。" }
+    ],
+    "hi": [
+      { "icon": "🥔", "t": "घने आलू", "d": "घने गूदे वाले आलू उपयोग किए जाते हैं, जो काटने पर बिना टूटे अपना आकार बनाए रखते हैं।" },
+      { "icon": "🍲", "t": "गरम बीफ शोरबा", "d": "गरम आलू मेयोनेज़ की जगह बीफ शोरबा और सिरके का मिश्रण सोख लेते हैं।" },
+      { "icon": "🧅", "t": "कच्चा कटा प्याज़", "d": "कच्चा लाल प्याज़, बारीक कटा, आलू के गरम रहते ही डाला जाता है, उसका तीखापन नरम करने के लिए।" },
+      { "icon": "🌡️", "t": "गरम परोसा जाता है", "d": "मेयोनेज़ आधारित संस्करणों के विपरीत, यह सलाद गरम या कमरे के तापमान पर परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥔", "t": "Sert patatesler", "d": "Dilimlendiğinde dağılmadan şeklini koruyan sert patatesler kullanılır." },
+      { "icon": "🍲", "t": "Sıcak dana suyu", "d": "Sıcak patatesler mayonez yerine dana suyu ve sirke karışımını emer." },
+      { "icon": "🧅", "t": "Çiğ doğranmış soğan", "d": "Keskinliğini yumuşatmak için patatesler hâlâ sıcakken ince doğranmış çiğ kırmızı soğan eklenir." },
+      { "icon": "🌡️", "t": "Ilık servis edilir", "d": "Mayonezli versiyonların aksine, bu salata ılık veya oda sıcaklığında servis edilir." }
+    ],
+    "it": [
+      { "icon": "🥔", "t": "Patate a pasta soda", "d": "Si usano patate a pasta soda, che mantengono la forma una volta tagliate senza sfaldarsi." },
+      { "icon": "🍲", "t": "Brodo di manzo caldo", "d": "Le patate calde assorbono un mix di brodo di manzo e aceto, invece della maionese." },
+      { "icon": "🧅", "t": "Cipolla cruda tritata", "d": "Cipolla rossa cruda, tritata finemente, viene aggiunta mentre le patate sono ancora calde, per ammorbidirne il sapore." },
+      { "icon": "🌡️", "t": "Servita tiepida", "d": "A differenza delle versioni con maionese, questa insalata viene servita tiepida o a temperatura ambiente." }
+    ],
+    "ko": [
+      { "icon": "🥔", "t": "단단한 감자", "d": "썰었을 때 부서지지 않고 모양을 유지하는 단단한 감자를 사용한다." },
+      { "icon": "🍲", "t": "따뜻한 소고기 육수", "d": "따뜻한 감자가 마요네즈 대신 소고기 육수와 식초 혼합물을 흡수한다." },
+      { "icon": "🧅", "t": "생양파 다진 것", "d": "감자가 아직 뜨거울 때 곱게 다진 생 적양파를 넣어 매운맛을 부드럽게 한다." },
+      { "icon": "🌡️", "t": "따뜻하게 제공", "d": "마요네즈 기반 버전과 달리 이 샐러드는 따뜻하거나 실온으로 제공된다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg cartofi cu pulpă fermă", "250ml supă de vită caldă", "4 linguri oțet de vin alb", "2 linguri ulei neutru", "1 ceapă roșie, tocată fin", "1 linguriță muștar", "1 linguriță zahăr", "sare și piper după gust", "arpagic tocat, pentru servire"],
+    "en": ["1kg waxy potatoes", "250ml warm beef broth", "4 tbsp white wine vinegar", "2 tbsp neutral oil", "1 red onion, finely chopped", "1 tsp mustard", "1 tsp sugar", "salt and pepper to taste", "chopped chives, for serving"],
+    "es": ["1kg de papas de pulpa firme", "250ml de caldo de res caliente", "4 cucharadas de vinagre de vino blanco", "2 cucharadas de aceite neutro", "1 cebolla roja, finamente picada", "1 cucharadita de mostaza", "1 cucharadita de azúcar", "sal y pimienta al gusto", "cebollino picado, para servir"],
+    "fr": ["1kg de pommes de terre à chair ferme", "250ml de bouillon de bœuf chaud", "4 c. à soupe de vinaigre de vin blanc", "2 c. à soupe d'huile neutre", "1 oignon rouge, finement haché", "1 c. à café de moutarde", "1 c. à café de sucre", "sel et poivre selon le goût", "ciboulette hachée, pour servir"],
+    "de": ["1kg festkochende Kartoffeln", "250ml warme Rinderbrühe", "4 EL Weißweinessig", "2 EL neutrales Öl", "1 rote Zwiebel, fein gehackt", "1 TL Senf", "1 TL Zucker", "Salz und Pfeffer nach Geschmack", "gehackter Schnittlauch, zum Servieren"],
+    "pt": ["1kg de batatas de polpa firme", "250ml de caldo de carne quente", "4 colheres (sopa) de vinagre de vinho branco", "2 colheres (sopa) de óleo neutro", "1 cebola roxa, picada finamente", "1 colher (chá) de mostarda", "1 colher (chá) de açúcar", "sal e pimenta a gosto", "cebolinho picado, para servir"],
+    "ru": ["1кг плотного картофеля", "250мл тёплого говяжьего бульона", "4 ст.л. белого винного уксуса", "2 ст.л. нейтрального масла", "1 красная луковица, мелко нарезанная", "1 ч.л. горчицы", "1 ч.л. сахара", "соль и перец по вкусу", "рубленый шнитт-лук, для подачи"],
+    "ar": ["1 كجم بطاطس متماسكة", "250 مل مرق لحم بقري دافئ", "4 ملاعق كبيرة خل نبيذ أبيض", "ملعقتان كبيرتان زيت محايد", "بصلة حمراء واحدة، مفرومة ناعمًا", "ملعقة صغيرة خردل", "ملعقة صغيرة سكر", "ملح وفلفل حسب الرغبة", "ثوم معمر مفروم، للتقديم"],
+    "zh": ["1公斤紧实土豆", "250毫升温热牛肉高汤", "4汤匙白葡萄酒醋", "2汤匙中性油", "1个红洋葱，切碎", "1茶匙芥末", "1茶匙糖", "盐和胡椒适量", "细香葱碎，配食用"],
+    "ja": ["崩れにくいじゃがいも1kg", "温かい牛だし250ml", "白ワインビネガー大さじ4", "無味の油大さじ2", "赤玉ねぎ1個（みじん切り）", "マスタード小さじ1", "砂糖小さじ1", "塩こしょう 適量", "刻んだチャイブ（添える用）"],
+    "hi": ["1 किलो घने आलू", "250 मिली गरम बीफ शोरबा", "4 बड़े चम्मच सफेद वाइन विनेगर", "2 बड़े चम्मच सादा तेल", "1 लाल प्याज़, बारीक कटा", "1 छोटी चम्मच सरसों", "1 छोटी चम्मच चीनी", "स्वादानुसार नमक और काली मिर्च", "कटी चाइव्स, परोसने के लिए"],
+    "tr": ["1kg sert patates", "250ml sıcak dana eti suyu", "4 yemek kaşığı beyaz şarap sirkesi", "2 yemek kaşığı nötr yağ", "1 kırmızı soğan, ince doğranmış", "1 çay kaşığı hardal", "1 çay kaşığı şeker", "tuz ve karabiber, tadına göre", "servis için doğranmış frenk soğanı"],
+    "it": ["1kg di patate a pasta soda", "250ml di brodo di manzo caldo", "4 cucchiai di aceto di vino bianco", "2 cucchiai di olio neutro", "1 cipolla rossa, tritata finemente", "1 cucchiaino di senape", "1 cucchiaino di zucchero", "sale e pepe q.b.", "erba cipollina tritata, per servire"],
+    "ko": ["단단한 감자 1kg", "따뜻한 소고기 육수 250ml", "화이트 와인 식초 4큰술", "무향 식용유 2큰술", "적양파 1개, 잘게 썬 것", "겨자 1작은술", "설탕 1작은술", "소금과 후추 약간", "다진 차이브, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": "FIERBE CARTOFII: Fierbe cartofii nespălați de coajă în apă sărată 20-25 minute, până devin fragezi la înțepare cu furculița. CURĂȚĂ CÂT SUNT CALZI: Scurge cartofii și curăță-i de coajă cât sunt încă fierbinți, folosind un prosop pentru a nu te arde. FELIAZĂ: Taie cartofii calzi în felii de aproximativ 5mm grosime, într-un bol mare. PREGĂTEȘTE DRESINGUL: Amestecă supa de vită caldă cu oțetul, muștarul și zahărul într-un bol separat. TOARNĂ PESTE CARTOFI: Toarnă dresingul cald peste feliile de cartofi, cât timp sunt încă calzi, pentru absorbție maximă. ADAUGĂ CEAPA: Adaugă ceapa roșie tocată peste cartofii calzi. AMESTECĂ UȘOR: Amestecă ușor cu o lingură de lemn, având grijă să nu zdrobești feliile de cartofi. ADAUGĂ ULEIUL: Toarnă uleiul peste salată, amestecând din nou ușor. LASĂ SĂ SE ÎMBIBE: Lasă salata la temperatura camerei 15-20 minute, ca aromele să se combine. CONDIMENTEAZĂ ȘI SERVEȘTE: Gustă, ajustează sarea și piperul, decorează cu arpagic tocat și servește caldă sau la temperatura camerei.",
+    "en": "BOIL THE POTATOES: Boil the unpeeled potatoes in salted water 20-25 minutes, until tender when pierced with a fork. PEEL WHILE HOT: Drain the potatoes and peel them while still hot, using a towel to avoid burning your hands. SLICE: Cut the warm potatoes into slices about 5mm thick, in a large bowl. PREPARE THE DRESSING: Mix the warm beef broth with the vinegar, mustard and sugar in a separate bowl. POUR OVER THE POTATOES: Pour the warm dressing over the potato slices, while they're still warm, for maximum absorption. ADD THE ONION: Add the chopped red onion over the warm potatoes. MIX GENTLY: Mix gently with a wooden spoon, being careful not to crush the potato slices. ADD THE OIL: Pour the oil over the salad, mixing gently again. LET IT SOAK: Let the salad sit at room temperature 15-20 minutes, so the flavors combine. SEASON AND SERVE: Taste, adjust the salt and pepper, garnish with chopped chives and serve warm or at room temperature.",
+    "es": "HIERVE LAS PAPAS: Hierve las papas sin pelar en agua con sal 20-25 minutos, hasta que estén tiernas al pincharlas con un tenedor. PELA MIENTRAS ESTÁN CALIENTES: Escurre las papas y pélalas mientras aún estén calientes, usando un paño para no quemarte las manos. CORTA: Corta las papas calientes en rodajas de aproximadamente 5mm de grosor, en un bol grande. PREPARA EL ADEREZO: Mezcla el caldo de res caliente con el vinagre, la mostaza y el azúcar en un bol aparte. VIERTE SOBRE LAS PAPAS: Vierte el aderezo caliente sobre las rodajas de papa, mientras aún estén calientes, para máxima absorción. AÑADE LA CEBOLLA: Añade la cebolla roja picada sobre las papas calientes. MEZCLA CON CUIDADO: Mezcla suavemente con una cuchara de madera, procurando no aplastar las rodajas de papa. AÑADE EL ACEITE: Vierte el aceite sobre la ensalada, mezclando suavemente de nuevo. DEJA REPOSAR: Deja la ensalada a temperatura ambiente 15-20 minutos, para que los sabores se combinen. SAZONA Y SIRVE: Prueba, ajusta la sal y la pimienta, decora con cebollino picado y sirve caliente o a temperatura ambiente.",
+    "fr": "FAITES BOUILLIR LES POMMES DE TERRE: Faites bouillir les pommes de terre non pelées dans l'eau salée 20-25 minutes, jusqu'à ce qu'elles soient tendres à la fourchette. ÉPLUCHEZ À CHAUD: Égouttez les pommes de terre et épluchez-les pendant qu'elles sont encore chaudes, en utilisant un torchon pour ne pas vous brûler. TRANCHEZ: Coupez les pommes de terre chaudes en tranches d'environ 5mm d'épaisseur, dans un grand bol. PRÉPAREZ LA VINAIGRETTE: Mélangez le bouillon de bœuf chaud avec le vinaigre, la moutarde et le sucre dans un bol séparé. VERSEZ SUR LES POMMES DE TERRE: Versez la vinaigrette chaude sur les tranches de pommes de terre, pendant qu'elles sont encore chaudes, pour une absorption maximale. AJOUTEZ L'OIGNON: Ajoutez l'oignon rouge haché sur les pommes de terre chaudes. MÉLANGEZ DÉLICATEMENT: Mélangez doucement avec une cuillère en bois, en veillant à ne pas écraser les tranches de pommes de terre. AJOUTEZ L'HUILE: Versez l'huile sur la salade, en mélangeant à nouveau doucement. LAISSEZ REPOSER: Laissez la salade à température ambiante 15-20 minutes, pour que les saveurs se combinent. ASSAISONNEZ ET SERVEZ: Goûtez, ajustez le sel et le poivre, garnissez de ciboulette hachée et servez chaude ou à température ambiante.",
+    "de": "KARTOFFELN KOCHEN: Die ungeschälten Kartoffeln in Salzwasser 20-25 Minuten kochen, bis sie beim Einstechen mit einer Gabel weich sind. WARM SCHÄLEN: Die Kartoffeln abtropfen lassen und noch heiß schälen, dabei ein Tuch verwenden, um sich nicht die Hände zu verbrennen. SCHNEIDEN: Die warmen Kartoffeln in etwa 5mm dicke Scheiben schneiden, in eine große Schüssel geben. DRESSING ZUBEREITEN: Die warme Rinderbrühe mit Essig, Senf und Zucker in einer separaten Schüssel vermischen. ÜBER DIE KARTOFFELN GIESSEN: Das warme Dressing über die Kartoffelscheiben gießen, während sie noch warm sind, für maximale Aufnahme. ZWIEBEL HINZUFÜGEN: Die gehackte rote Zwiebel über die warmen Kartoffeln geben. VORSICHTIG MISCHEN: Vorsichtig mit einem Holzlöffel mischen, darauf achten, die Kartoffelscheiben nicht zu zerdrücken. ÖL HINZUFÜGEN: Das Öl über den Salat gießen, erneut vorsichtig mischen. ZIEHEN LASSEN: Den Salat 15-20 Minuten bei Zimmertemperatur ziehen lassen, damit sich die Aromen verbinden. WÜRZEN UND SERVIEREN: Abschmecken, Salz und Pfeffer anpassen, mit gehacktem Schnittlauch garnieren und warm oder bei Zimmertemperatur servieren.",
+    "pt": "FERVA AS BATATAS: Ferva as batatas com casca em água salgada por 20-25 minutos, até ficarem macias ao espetar com um garfo. DESCASQUE AINDA QUENTES: Escorra as batatas e descasque-as ainda quentes, usando um pano para não queimar as mãos. CORTE: Corte as batatas quentes em fatias de cerca de 5mm de espessura, numa tigela grande. PREPARE O TEMPERO: Misture o caldo de carne quente com o vinagre, a mostarda e o açúcar numa tigela separada. DESPEJE SOBRE AS BATATAS: Despeje o tempero quente sobre as fatias de batata, enquanto ainda estão quentes, para máxima absorção. ADICIONE A CEBOLA: Junte a cebola roxa picada sobre as batatas quentes. MISTURE COM CUIDADO: Misture suavemente com uma colher de pau, tendo cuidado para não esmagar as fatias de batata. ADICIONE O ÓLEO: Despeje o óleo sobre a salada, misturando novamente com cuidado. DEIXE REPOUSAR: Deixe a salada à temperatura ambiente por 15-20 minutos, para os sabores se combinarem. TEMPERE E SIRVA: Prove, ajuste o sal e a pimenta, decore com cebolinho picado e sirva quente ou à temperatura ambiente.",
+    "ru": "СВАРИТЕ КАРТОФЕЛЬ: Отварите неочищенный картофель в подсоленной воде 20-25 минут, пока не станет мягким при прокалывании вилкой. ОЧИСТИТЕ ГОРЯЧИМ: Слейте воду и очистите картофель, пока он ещё горячий, используя полотенце, чтобы не обжечь руки. НАРЕЖЬТЕ: Нарежьте тёплый картофель ломтиками толщиной около 5мм в большую миску. ПРИГОТОВЬТЕ ЗАПРАВКУ: Смешайте тёплый говяжий бульон с уксусом, горчицей и сахаром в отдельной миске. ПОЛЕЙТЕ КАРТОФЕЛЬ: Полейте тёплой заправкой ломтики картофеля, пока они ещё тёплые, для максимального впитывания. ДОБАВЬТЕ ЛУК: Добавьте нарезанный красный лук на тёплый картофель. АККУРАТНО ПЕРЕМЕШАЙТЕ: Аккуратно перемешайте деревянной ложкой, стараясь не раздавить ломтики картофеля. ДОБАВЬТЕ МАСЛО: Полейте салат маслом, снова аккуратно перемешав. ДАЙТЕ НАСТОЯТЬСЯ: Дайте салату постоять при комнатной температуре 15-20 минут, чтобы вкусы соединились. ПРИПРАВЬТЕ И ПОДАВАЙТЕ: Попробуйте, скорректируйте соль и перец, украсьте рубленым шнитт-луком и подавайте тёплым или комнатной температуры.",
+    "ar": "اسلقي البطاطس: اسلقي البطاطس غير المقشرة في ماء مملح 20-25 دقيقة حتى تصبح طرية عند وخزها بالشوكة. قشّري وهي ساخنة: صفّي البطاطس وقشّريها وهي لا تزال ساخنة، مستخدمة منشفة لتجنب حرق يديك. قطّعي: قطّعي البطاطس الدافئة إلى شرائح بسمك حوالي 5 مم في وعاء كبير. حضّري التتبيلة: امزجي مرق لحم البقر الدافئ مع الخل والخردل والسكر في وعاء منفصل. اسكبي فوق البطاطس: اسكبي التتبيلة الدافئة فوق شرائح البطاطس وهي لا تزال دافئة، لأقصى امتصاص. أضيفي البصل: أضيفي البصل الأحمر المفروم فوق البطاطس الدافئة. اخلطي برفق: اخلطي برفق بملعقة خشبية، مع الحرص على عدم سحق شرائح البطاطس. أضيفي الزيت: اسكبي الزيت فوق السلطة، مع الخلط برفق مرة أخرى. اتركيها تتشرب: اتركي السلطة بحرارة الغرفة 15-20 دقيقة لتتمازج النكهات. تبّلي وقدّمي: تذوّقي وعدّلي الملح والفلفل، زيّنيها بالثوم المعمر المفروم وقدّميها دافئة أو بحرارة الغرفة.",
+    "zh": "煮土豆：将带皮土豆放入盐水中煮20-25分钟，用叉子刺穿变软即可。趁热去皮：沥干土豆，趁热去皮，用毛巾保护手不被烫伤。切片：将温热的土豆切成约5毫米厚的片，放入大碗中。制作调味汁：在另一个碗中将温热的牛肉高汤与醋、芥末和糖混合。淋在土豆上：趁土豆还温热时将温热的调味汁淋在土豆片上，以达到最佳吸收效果。加入洋葱：将切碎的红洋葱撒在温热的土豆上。轻轻拌匀：用木勺轻轻搅拌，注意不要压碎土豆片。加入油：将油淋在沙拉上，再次轻轻拌匀。静置入味：让沙拉在室温下静置15-20分钟，使风味融合。调味上桌：品尝并调整盐和胡椒的用量，用细香葱碎装饰，温热或常温食用。",
+    "ja": "じゃがいもを茹でる：皮付きのままじゃがいもを塩水で20〜25分、フォークで刺して柔らかくなるまで茹でる。熱いうちに皮をむく：じゃがいもの水気を切り、タオルを使って手を火傷しないようにしながら熱いうちに皮をむく。スライスする：温かいじゃがいもを厚さ約5mmにスライスし、大きなボウルに入れる。ドレッシングを準備する：別のボウルで温かい牛だしと酢、マスタード、砂糖を混ぜる。じゃがいもにかける：じゃがいもがまだ温かいうちに温かいドレッシングをかけ、最大限に吸収させる。玉ねぎを加える：刻んだ赤玉ねぎを温かいじゃがいもの上に加える。優しく混ぜる：じゃがいものスライスを潰さないよう注意しながら、木のスプーンで優しく混ぜる。油を加える：サラダに油をかけ、再び優しく混ぜる。なじませる：常温で15〜20分置き、風味をなじませる。味を調えて提供する：味見をして塩こしょうを調整し、刻んだチャイブを飾り、温かいまたは室温で提供する。",
+    "hi": "आलू उबालें: बिना छिले आलू को नमकीन पानी में 20-25 मिनट उबालें, जब तक कांटे से चुभाने पर नरम न हो जाएं। गरम रहते छीलें: आलू छानें और गरम रहते ही छीलें, हाथ न जलाने के लिए तौलिये का उपयोग करते हुए। काटें: गरम आलू को लगभग 5mm मोटे टुकड़ों में एक बड़े कटोरे में काटें। ड्रेसिंग तैयार करें: अलग कटोरे में गरम बीफ शोरबे को सिरका, सरसों और चीनी के साथ मिलाएं। आलू पर डालें: गरम ड्रेसिंग को आलू के टुकड़ों पर डालें, जब वे अभी भी गरम हों, अधिकतम अवशोषण के लिए। प्याज़ डालें: कटा लाल प्याज़ गरम आलू के ऊपर डालें। हल्के से मिलाएं: लकड़ी के चम्मच से हल्के से मिलाएं, आलू के टुकड़ों को कुचलने से बचाते हुए। तेल डालें: सलाद पर तेल डालें, फिर से हल्के से मिलाएं। भिगोने दें: सलाद को कमरे के तापमान पर 15-20 मिनट रहने दें, स्वाद मिलने के लिए। मसाला डालें और परोसें: चखें, नमक और काली मिर्च समायोजित करें, कटी चाइव्स से सजाएं और गरम या कमरे के तापमान पर परोसें।",
+    "tr": "PATATESLERİ HAŞLAYIN: Soyulmamış patatesleri tuzlu suda çatalla batırıldığında yumuşayana kadar 20-25 dakika haşlayın. SICAKKEN SOYUN: Patatesleri süzün ve ellerinizi yakmamak için bir havlu kullanarak hâlâ sıcakken soyun. DİLİMLEYİN: Sıcak patatesleri yaklaşık 5mm kalınlığında dilimleyip büyük bir kaseye koyun. SOSU HAZIRLAYIN: Ayrı bir kasede sıcak dana eti suyunu sirke, hardal ve şekerle karıştırın. PATATESLERİN ÜZERİNE DÖKÜN: Sıcak sosu, en iyi emilim için patatesler hâlâ sıcakken dilimlerin üzerine dökün. SOĞANI EKLEYİN: Doğranmış kırmızı soğanı sıcak patateslerin üzerine ekleyin. HAFİFÇE KARIŞTIRIN: Patates dilimlerini ezmemeye dikkat ederek tahta kaşıkla hafifçe karıştırın. YAĞI EKLEYİN: Yağı salatanın üzerine dökün, tekrar hafifçe karıştırın. DİNLENDİRİN: Salatayı lezzetlerin birleşmesi için oda sıcaklığında 15-20 dakika dinlendirin. TATLANDIRIN VE SERVİS YAPIN: Tadına bakın, tuz ve karabiberi ayarlayın, doğranmış frenk soğanıyla süsleyin ve ılık veya oda sıcaklığında servis edin.",
+    "it": "BOLLI LE PATATE: Bolli le patate non sbucciate in acqua salata 20-25 minuti, finché tenere alla forchetta. SBUCCIA MENTRE SONO CALDE: Scola le patate e sbucciale mentre sono ancora calde, usando un panno per non scottarti le mani. TAGLIA A FETTE: Taglia le patate calde a fette di circa 5mm di spessore, in una ciotola grande. PREPARA IL CONDIMENTO: Mescola il brodo di manzo caldo con l'aceto, la senape e lo zucchero in una ciotola separata. VERSA SULLE PATATE: Versa il condimento caldo sulle fette di patate, mentre sono ancora calde, per il massimo assorbimento. AGGIUNGI LA CIPOLLA: Aggiungi la cipolla rossa tritata sulle patate calde. MESCOLA DELICATAMENTE: Mescola delicatamente con un cucchiaio di legno, facendo attenzione a non schiacciare le fette di patate. AGGIUNGI L'OLIO: Versa l'olio sull'insalata, mescolando di nuovo delicatamente. LASCIA RIPOSARE: Lascia l'insalata a temperatura ambiente 15-20 minuti, perché i sapori si amalgamino. INSAPORISCI E SERVI: Assaggia, regola sale e pepe, guarnisci con erba cipollina tritata e servi tiepida o a temperatura ambiente.",
+    "ko": "감자 삶기: 껍질째 감자를 소금물에 넣고 포크로 찔러 부드러워질 때까지 20-25분간 삶는다. 뜨거울 때 껍질 벗기기: 감자의 물기를 빼고 손을 데지 않도록 수건을 사용해 뜨거울 때 껍질을 벗긴다. 썰기: 따뜻한 감자를 약 5mm 두께로 썰어 큰 볼에 담는다. 드레싱 준비하기: 별도의 볼에 따뜻한 소고기 육수와 식초, 겨자, 설탕을 섞는다. 감자에 붓기: 감자가 아직 따뜻할 때 따뜻한 드레싱을 부어 최대한 흡수시킨다. 양파 넣기: 다진 적양파를 따뜻한 감자 위에 넣는다. 살살 섞기: 감자 조각이 으깨지지 않도록 나무 숟가락으로 살살 섞는다. 기름 넣기: 샐러드에 기름을 붓고 다시 살살 섞는다. 숙성시키기: 샐러드를 실온에서 15-20분간 두어 풍미가 어우러지게 한다. 간하고 제공하기: 맛을 보고 소금과 후추를 조절한 뒤 다진 차이브로 장식해 따뜻하거나 실온으로 제공한다."
+  },
+  "originText": {
+    "ro": "Salata de cartofi germană se împarte istoric în două tabere regionale distincte: varianta nordică, cu maioneză, și varianta sudică, suabă și bavareză, pe bază de oțet și supă, prezentată aici. Absența maionezei nu este o alegere modernă de sănătate, ci o tradiție veche — regiunile din sud au preferat dintotdeauna dresingurile calde, absorbite direct de cartofi, o tehnică ce evită și problema stricării maionezei la temperatura ambiantă în timpul picnicurilor de vară.\n\nÎn Swabia, se spune că o salată de cartofi bună se recunoaște după cât de bine sunt \"unse\" feliile cu dresing — cartofii trebuie să fie complet îmbibați, nu doar acoperiți la suprafață. Este felul nelipsit de la orice grătar sau petrecere de grădină germană, servit adesea alături de cârnați (Bratwurst) sau șnițele, ca alternativă mai ușoară la garniturile grele de amidon.",
+    "en": "German potato salad has historically split into two distinct regional camps: the northern, mayonnaise-based version, and the southern, Swabian and Bavarian version, based on vinegar and broth, presented here. The absence of mayonnaise isn't a modern health choice, but an old tradition — southern regions have always preferred warm dressings, directly absorbed by the potatoes, a technique that also avoids the problem of mayonnaise spoiling at ambient temperature during summer picnics.\n\nIn Swabia, it's said that a good potato salad is recognized by how well the slices are \"coated\" with dressing — the potatoes must be fully soaked through, not just covered on the surface. It's the indispensable dish at any German barbecue or garden party, often served alongside sausages (Bratwurst) or schnitzels, as a lighter alternative to heavy starchy sides.",
+    "es": "La ensalada de papas alemana se ha dividido históricamente en dos campos regionales distintos: la versión del norte, con mayonesa, y la versión del sur, suaba y bávara, a base de vinagre y caldo, presentada aquí. La ausencia de mayonesa no es una elección moderna de salud, sino una vieja tradición — las regiones del sur siempre han preferido los aderezos calientes, absorbidos directamente por las papas, una técnica que también evita el problema de que la mayonesa se eche a perder a temperatura ambiente durante los picnics de verano.\n\nEn Suabia, se dice que una buena ensalada de papas se reconoce por lo bien que están \"cubiertas\" las rodajas con el aderezo — las papas deben estar completamente empapadas, no solo cubiertas en la superficie. Es el plato indispensable en cualquier barbacoa o fiesta de jardín alemana, a menudo servido junto a salchichas (Bratwurst) o schnitzels, como alternativa más ligera a las guarniciones pesadas con almidón.",
+    "fr": "La salade de pommes de terre allemande s'est historiquement divisée en deux camps régionaux distincts: la version du nord, à base de mayonnaise, et la version du sud, souabe et bavaroise, à base de vinaigre et de bouillon, présentée ici. L'absence de mayonnaise n'est pas un choix santé moderne, mais une vieille tradition — les régions du sud ont toujours préféré les vinaigrettes chaudes, directement absorbées par les pommes de terre, une technique qui évite aussi le problème de la mayonnaise qui tourne à température ambiante lors des pique-niques d'été.\n\nEn Souabe, on dit qu'une bonne salade de pommes de terre se reconnaît à la façon dont les tranches sont \"enrobées\" de vinaigrette — les pommes de terre doivent être complètement imprégnées, pas seulement couvertes en surface. C'est le plat indispensable de tout barbecue ou fête de jardin allemande, souvent servi avec des saucisses (Bratwurst) ou des schnitzels, comme alternative plus légère aux accompagnements lourds à base d'amidon.",
+    "de": "Der deutsche Kartoffelsalat spaltete sich historisch in zwei unterschiedliche regionale Lager: die norddeutsche, mayonnaisebasierte Version, und die süddeutsche, schwäbisch-bayerische Version, auf Essig- und Brühebasis, die hier vorgestellt wird. Der Verzicht auf Mayonnaise ist keine moderne Gesundheitsentscheidung, sondern eine alte Tradition — die südlichen Regionen bevorzugten schon immer warme Dressings, die direkt von den Kartoffeln aufgenommen werden, eine Technik, die auch das Problem des Verderbens von Mayonnaise bei Raumtemperatur während Sommerpicknicks vermeidet.\n\nIn Schwaben sagt man, ein guter Kartoffelsalat erkenne sich daran, wie gut die Scheiben mit dem Dressing \"eingezogen\" sind — die Kartoffeln müssen vollständig durchtränkt sein, nicht nur oberflächlich bedeckt. Er ist das unverzichtbare Gericht bei jedem deutschen Grillfest oder Gartenparty, oft serviert zu Würstchen (Bratwurst) oder Schnitzeln, als leichtere Alternative zu schweren stärkehaltigen Beilagen.",
+    "pt": "A salada de batata alemã dividiu-se historicamente em dois campos regionais distintos: a versão do norte, com maionese, e a versão do sul, suaba e bávara, à base de vinagre e caldo, apresentada aqui. A ausência de maionese não é uma escolha de saúde moderna, mas uma tradição antiga — as regiões do sul sempre preferiram temperos quentes, absorvidos diretamente pelas batatas, uma técnica que também evita o problema da maionese estragar à temperatura ambiente durante piqueniques de verão.\n\nNa Suábia, diz-se que uma boa salada de batata se reconhece pela forma como as fatias estão \"cobertas\" pelo tempero — as batatas devem estar completamente embebidas, não apenas cobertas na superfície. É o prato indispensável em qualquer churrasco ou festa no jardim alemã, frequentemente servido ao lado de salsichas (Bratwurst) ou schnitzels, como alternativa mais leve a acompanhamentos pesados de amido.",
+    "ru": "Немецкий картофельный салат исторически разделился на два разных региональных лагеря: северную версию на основе майонеза и южную, швабско-баварскую версию на основе уксуса и бульона, представленную здесь. Отсутствие майонеза — не современный выбор в пользу здоровья, а старая традиция — южные регионы всегда предпочитали тёплые заправки, напрямую впитываемые картофелем, техника, которая также избегает проблемы порчи майонеза при комнатной температуре во время летних пикников.\n\nВ Швабии говорят, что хороший картофельный салат узнаётся по тому, насколько хорошо ломтики \"пропитаны\" заправкой — картофель должен быть полностью пропитан, а не просто покрыт сверху. Это незаменимое блюдо на любом немецком барбекю или садовой вечеринке, часто подаваемое вместе с колбасками (братвурст) или шницелями, как более лёгкая альтернатива тяжёлым крахмалистым гарнирам.",
+    "ar": "انقسمت سلطة البطاطس الألمانية تاريخيًا إلى معسكرين إقليميين متمايزين: النسخة الشمالية القائمة على المايونيز، والنسخة الجنوبية السوابية والبافارية القائمة على الخل والمرق، المعروضة هنا. غياب المايونيز ليس خيارًا صحيًا حديثًا، بل تقليد قديم — فضّلت المناطق الجنوبية دائمًا التتبيلات الدافئة التي تمتصها البطاطس مباشرة، وهي تقنية تتجنب أيضًا مشكلة فساد المايونيز في درجة حرارة الغرفة أثناء نزهات الصيف.\n\nفي سوابيا، يُقال إن سلطة البطاطس الجيدة تُعرف من مدى \"تغطية\" الشرائح بالتتبيلة — يجب أن تكون البطاطس مشبعة تمامًا، لا مغطاة على السطح فقط. إنها الطبق الذي لا غنى عنه في أي حفلة شواء أو حديقة ألمانية، وغالبًا ما تُقدَّم مع النقانق (براتفورست) أو الشنيتزل، كبديل أخف من الأطباق الجانبية الثقيلة النشوية.",
+    "zh": "德国土豆沙拉历史上分为两个截然不同的地区流派：北方以蛋黄酱为基础的版本，以及本文介绍的南方施瓦本和巴伐利亚版本，以醋和高汤为基础。不使用蛋黄酱并非现代健康考量，而是一种古老传统——南部地区一直偏爱温热的调味汁，能被土豆直接吸收，这种做法也避免了夏日野餐时蛋黄酱在常温下变质的问题。\n\n在施瓦本，人们说一份好的土豆沙拉要看土豆片被调味汁「裹」得有多好——土豆必须完全浸透，而不仅仅是表面覆盖。这是德国任何烧烤或花园聚会上不可或缺的一道菜，常常与香肠（Bratwurst）或炸肉排一起食用，作为厚重淀粉类配菜的更清爽替代品。",
+    "ja": "ドイツのポテトサラダは歴史的に二つの異なる地域派に分かれてきた。北部のマヨネーズベースのバージョンと、ここで紹介する酢とだしをベースにした南部のシュヴァーベン・バイエルン風バージョンである。マヨネーズを使わないのは現代的な健康志向の選択ではなく、古くからの伝統である——南部の地域は昔から、じゃがいもに直接吸収される温かいドレッシングを好んできた。この技法は夏のピクニックの際に常温でマヨネーズが傷む問題も避けられる。\n\nシュヴァーベンでは、良いポテトサラダはスライスがどれだけドレッシングに「絡んでいる」かでわかると言われる——じゃがいもは表面だけでなく、完全に染み込んでいなければならない。これはドイツのバーベキューや庭でのパーティーに欠かせない一皿で、ソーセージ（ブラートヴルスト）やシュニッツェルと一緒に、重いでんぷん質の付け合わせのより軽い代替として提供されることが多い。",
+    "hi": "जर्मन आलू सलाद ऐतिहासिक रूप से दो अलग क्षेत्रीय खेमों में बंट गई है: उत्तरी, मेयोनेज़-आधारित संस्करण, और यहां प्रस्तुत दक्षिणी, श्वाबियन और बवेरियन संस्करण, जो सिरके और शोरबे पर आधारित है। मेयोनेज़ की अनुपस्थिति एक आधुनिक स्वास्थ्य विकल्प नहीं है, बल्कि एक पुरानी परंपरा है — दक्षिणी क्षेत्रों ने हमेशा गरम ड्रेसिंग को प्राथमिकता दी है, जो सीधे आलू द्वारा सोखी जाती है, एक तकनीक जो गर्मियों के पिकनिक के दौरान कमरे के तापमान पर मेयोनेज़ के खराब होने की समस्या से भी बचाती है।\n\nश्वाबिया में, कहा जाता है कि एक अच्छी आलू सलाद की पहचान इससे होती है कि टुकड़े ड्रेसिंग से कितनी अच्छी तरह \"लिपटे\" हैं — आलू पूरी तरह भीगे होने चाहिए, केवल सतह पर ढके नहीं। यह किसी भी जर्मन बारबेक्यू या गार्डन पार्टी में अनिवार्य व्यंजन है, अक्सर सॉसेज (ब्रात्वुर्स्ट) या श्नित्ज़ेल के साथ परोसा जाता है, भारी स्टार्च वाले साइड डिश के हल्के विकल्प के रूप में।",
+    "tr": "Alman patates salatası tarihsel olarak iki farklı bölgesel kampa ayrılmıştır: kuzeydeki mayonez bazlı versiyon ve burada sunulan, sirke ve et suyuna dayanan güneydeki Swabia ve Bavyera versiyonu. Mayonez eksikliği modern bir sağlık tercihi değil, eski bir gelenektir — güney bölgeleri her zaman patatesler tarafından doğrudan emilen ılık sosları tercih etmiştir; bu teknik ayrıca yaz pikniklerinde mayonezin oda sıcaklığında bozulma sorununu da önler.\n\nSwabia'da, iyi bir patates salatasının, dilimlerin sosla ne kadar iyi \"kaplandığından\" tanındığı söylenir — patatesler yüzeyde örtülü olmakla kalmayıp tamamen emmiş olmalıdır. Her Alman barbeküsünde veya bahçe partisinde vazgeçilmez bir yemektir, genellikle sosis (Bratwurst) veya şnitzelin yanında, ağır nişastalı yan yemeklere daha hafif bir alternatif olarak servis edilir.",
+    "it": "L'insalata di patate tedesca si è storicamente divisa in due campi regionali distinti: la versione del nord, a base di maionese, e la versione del sud, sveva e bavarese, a base di aceto e brodo, presentata qui. L'assenza di maionese non è una scelta salutistica moderna, ma un'antica tradizione — le regioni meridionali hanno sempre preferito condimenti caldi, direttamente assorbiti dalle patate, una tecnica che evita anche il problema della maionese che va a male a temperatura ambiente durante i picnic estivi.\n\nIn Svevia, si dice che una buona insalata di patate si riconosce da quanto bene le fette siano \"rivestite\" dal condimento — le patate devono essere completamente inzuppate, non solo coperte in superficie. È il piatto indispensabile per ogni grigliata o festa in giardino tedesca, spesso servita accanto a salsicce (Bratwurst) o schnitzel, come alternativa più leggera ai pesanti contorni amidacei.",
+    "ko": "독일 감자 샐러드는 역사적으로 두 개의 뚜렷한 지역 진영으로 나뉘었다: 북부의 마요네즈 기반 버전과, 여기서 소개하는 식초와 육수 기반의 남부 슈바벤·바이에른 버전이다. 마요네즈를 사용하지 않는 것은 현대적인 건강상의 선택이 아니라 오래된 전통이다 — 남부 지역은 항상 감자가 직접 흡수하는 따뜻한 드레싱을 선호해왔으며, 이 기법은 여름 소풍 중 상온에서 마요네즈가 상하는 문제도 피할 수 있게 해준다.\n\n슈바벤에서는 좋은 감자 샐러드란 조각들이 드레싱으로 얼마나 잘 \"입혀졌는지\"로 알아볼 수 있다고 한다 — 감자는 표면만 덮인 것이 아니라 완전히 스며들어야 한다. 이것은 독일의 어떤 바비큐나 정원 파티에도 빠질 수 없는 요리로, 종종 소시지(브라트부어스트)나 슈니첼과 함께 무거운 전분질 곁들임 요리의 더 가벼운 대안으로 제공된다."
+  },
+  "meta": {
+    "time": 45,
+    "costRon": 12,
+    "tags": ["vegetarian", "budget", "family"],
+    "desc": {
+      "ro": "Salată suabă de cartofi, servită caldă, cu dresing de supă de vită și oțet, fără maioneză.",
+      "en": "Swabian potato salad, served warm, with a beef broth and vinegar dressing, no mayonnaise.",
+      "es": "Ensalada suaba de papas, servida caliente, con aderezo de caldo de res y vinagre, sin mayonesa.",
+      "fr": "Salade de pommes de terre souabe, servie chaude, avec une vinaigrette au bouillon de bœuf et vinaigre, sans mayonnaise.",
+      "de": "Schwäbischer Kartoffelsalat, warm serviert, mit Rinderbrühe-Essig-Dressing, ohne Mayonnaise.",
+      "pt": "Salada suaba de batata, servida quente, com tempero de caldo de carne e vinagre, sem maionese.",
+      "ru": "Швабский картофельный салат, подаётся тёплым, с заправкой из говяжьего бульона и уксуса, без майонеза.",
+      "ar": "سلطة بطاطس سوابية، تُقدَّم دافئة، بتتبيلة من مرق لحم البقر والخل، بدون مايونيز.",
+      "zh": "施瓦本土豆沙拉，温热食用，配牛肉高汤和醋调味汁，不含蛋黄酱。",
+      "ja": "シュヴァーベン風ポテトサラダ、温かく提供、牛だしと酢のドレッシング、マヨネーズなし。",
+      "hi": "श्वाबियन आलू सलाद, गरम परोसी गई, बीफ शोरबा और सिरके की ड्रेसिंग के साथ, बिना मेयोनेज़।",
+      "tr": "Swabia usulü patates salatası, ılık servis edilir, dana eti suyu ve sirke soslu, mayonezsiz.",
+      "it": "Insalata di patate sveva, servita tiepida, con condimento di brodo di manzo e aceto, senza maionese.",
+      "ko": "슈바벤식 감자 샐러드, 따뜻하게 제공, 소고기 육수와 식초 드레싱, 마요네즈 없이."
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "id": 398,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Olanda",
+    "en": "Netherlands",
+    "es": "Países Bajos",
+    "fr": "Pays-Bas",
+    "de": "Niederlande",
+    "pt": "Países Baixos",
+    "ru": "Нидерланды",
+    "ar": "هولندا",
+    "zh": "荷兰",
+    "ja": "オランダ",
+    "hi": "नीदरलैंड",
+    "tr": "Hollanda",
+    "it": "Paesi Bassi",
+    "ko": "네덜란드"
+  },
+  "name": {
+    "ro": "Oliebollen (Gogoși Olandeze de Anul Nou)",
+    "en": "Oliebollen (Dutch New Year's Doughnuts)",
+    "es": "Oliebollen (Buñuelos Holandeses de Año Nuevo)",
+    "fr": "Oliebollen (Beignets Néerlandais du Nouvel An)",
+    "de": "Oliebollen",
+    "pt": "Oliebollen (Bolinhos de Ano Novo Holandeses)",
+    "ru": "Оливболлен (Голландские Новогодние Пончики)",
+    "ar": "أوليبولن (كرات عجين هولندية لرأس السنة)",
+    "zh": "荷兰新年油炸球（油球）",
+    "ja": "オリボレン（オランダ風大晦日ドーナツ）",
+    "hi": "ओलीबोलेन (डच नए साल के डोनट)",
+    "tr": "Oliebollen (Hollanda Usulü Yılbaşı Lokması)",
+    "it": "Oliebollen (Frittelle Olandesi di Capodanno)",
+    "ko": "올리볼렌 (네덜란드식 새해 도넛)"
+  },
+  "category": {
+    "ro": "Desert",
+    "en": "Dessert",
+    "es": "Postre",
+    "fr": "Dessert",
+    "de": "Dessert",
+    "pt": "Sobremesa",
+    "ru": "Десерт",
+    "ar": "حلوى",
+    "zh": "甜点",
+    "ja": "デザート",
+    "hi": "मिठाई",
+    "tr": "Tatlı",
+    "it": "Dolce",
+    "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍞", "t": "Aluat pufos cu drojdie", "d": "Un aluat moale, dospit cu drojdie, formează bilele pufoase, aerate în interior." },
+      { "icon": "🍎", "t": "Bucăți de măr", "d": "Cuburi mici de măr acrișor se amestecă în aluat, dând o notă fructată, umedă." },
+      { "icon": "🍇", "t": "Stafide și coajă de lămâie", "d": "Stafidele înmuiate în rom și coaja rasă de lămâie aromatizează fiecare bilă." },
+      { "icon": "❄️", "t": "Zahăr pudră deasupra", "d": "Se presară generos cu zahăr pudră imediat după prăjire, cât timp sunt fierbinți." }
+    ],
+    "en": [
+      { "icon": "🍞", "t": "Fluffy yeasted dough", "d": "A soft, yeast-risen dough forms the fluffy, airy balls inside." },
+      { "icon": "🍎", "t": "Apple pieces", "d": "Small cubes of tart apple are mixed into the dough, adding a fruity, moist note." },
+      { "icon": "🍇", "t": "Raisins and lemon zest", "d": "Raisins soaked in rum and grated lemon zest flavor each ball." },
+      { "icon": "❄️", "t": "Powdered sugar on top", "d": "Generously dusted with powdered sugar right after frying, while still hot." }
+    ],
+    "es": [
+      { "icon": "🍞", "t": "Masa esponjosa con levadura", "d": "Una masa suave, leudada con levadura, forma las bolas esponjosas y aireadas por dentro." },
+      { "icon": "🍎", "t": "Trocitos de manzana", "d": "Pequeños cubos de manzana ácida se mezclan en la masa, aportando una nota frutal y jugosa." },
+      { "icon": "🍇", "t": "Pasas y ralladura de limón", "d": "Las pasas remojadas en ron y la ralladura de limón aromatizan cada bola." },
+      { "icon": "❄️", "t": "Azúcar glas por encima", "d": "Se espolvorean generosamente con azúcar glas justo después de freír, mientras aún están calientes." }
+    ],
+    "fr": [
+      { "icon": "🍞", "t": "Pâte moelleuse levée", "d": "Une pâte souple, levée à la levure, forme des boules moelleuses et aérées à l'intérieur." },
+      { "icon": "🍎", "t": "Morceaux de pomme", "d": "De petits cubes de pomme acidulée sont mélangés à la pâte, apportant une note fruitée et moelleuse." },
+      { "icon": "🍇", "t": "Raisins secs et zeste de citron", "d": "Des raisins secs trempés dans du rhum et du zeste de citron râpé parfument chaque boule." },
+      { "icon": "❄️", "t": "Sucre glace dessus", "d": "Généreusement saupoudrées de sucre glace juste après la friture, pendant qu'elles sont encore chaudes." }
+    ],
+    "de": [
+      { "icon": "🍞", "t": "Lockerer Hefeteig", "d": "Ein weicher, mit Hefe aufgegangener Teig bildet die lockeren, luftigen Kugeln im Inneren." },
+      { "icon": "🍎", "t": "Apfelstücke", "d": "Kleine Würfel säuerlicher Äpfel werden in den Teig gemischt, für eine fruchtige, feuchte Note." },
+      { "icon": "🍇", "t": "Rosinen und Zitronenschale", "d": "In Rum eingeweichte Rosinen und geriebene Zitronenschale würzen jede Kugel." },
+      { "icon": "❄️", "t": "Puderzucker obenauf", "d": "Direkt nach dem Frittieren, während sie noch heiß sind, großzügig mit Puderzucker bestäubt." }
+    ],
+    "pt": [
+      { "icon": "🍞", "t": "Massa fofa levedada", "d": "Uma massa macia, crescida com fermento, forma as bolas fofas e arejadas por dentro." },
+      { "icon": "🍎", "t": "Pedacinhos de maçã", "d": "Pequenos cubos de maçã ácida são misturados na massa, trazendo uma nota frutada e húmida." },
+      { "icon": "🍇", "t": "Passas e raspa de limão", "d": "Passas embebidas em rum e raspa de limão ralada perfumam cada bola." },
+      { "icon": "❄️", "t": "Açúcar em pó por cima", "d": "Polvilhadas generosamente com açúcar em pó logo após a fritura, ainda quentes." }
+    ],
+    "ru": [
+      { "icon": "🍞", "t": "Пышное дрожжевое тесто", "d": "Мягкое дрожжевое тесто образует пышные, воздушные внутри шарики." },
+      { "icon": "🍎", "t": "Кусочки яблока", "d": "Мелкие кубики кислого яблока подмешиваются в тесто, придавая фруктовую, влажную нотку." },
+      { "icon": "🍇", "t": "Изюм и цедра лимона", "d": "Изюм, вымоченный в роме, и тёртая цедра лимона придают аромат каждому шарику." },
+      { "icon": "❄️", "t": "Сахарная пудра сверху", "d": "Щедро посыпаются сахарной пудрой сразу после жарки, пока ещё горячие." }
+    ],
+    "ar": [
+      { "icon": "🍞", "t": "عجينة طرية بالخميرة", "d": "عجينة طرية مخمّرة بالخميرة تُكوّن كرات هشة وهوائية من الداخل." },
+      { "icon": "🍎", "t": "قطع تفاح", "d": "تُمزج مكعبات صغيرة من التفاح الحامض في العجينة، مانحة لمسة فاكهية رطبة." },
+      { "icon": "🍇", "t": "زبيب وقشر ليمون", "d": "يُنكِّه الزبيب المنقوع بالروم وقشر الليمون المبشور كل كرة." },
+      { "icon": "❄️", "t": "سكر بودرة أعلاها", "d": "تُرشّ بسخاء بالسكر البودرة فور القلي، وهي لا تزال ساخنة." }
+    ],
+    "zh": [
+      { "icon": "🍞", "t": "蓬松酵母面团", "d": "柔软的酵母发面团形成内部松软通气的球状。" },
+      { "icon": "🍎", "t": "苹果块", "d": "小块酸苹果拌入面团，带来水果般的湿润口感。" },
+      { "icon": "🍇", "t": "葡萄干和柠檬皮碎", "d": "浸泡在朗姆酒中的葡萄干和磨碎的柠檬皮为每个球增添香气。" },
+      { "icon": "❄️", "t": "撒上糖粉", "d": "炸好后趁热慷慨地撒上糖粉。" }
+    ],
+    "ja": [
+      { "icon": "🍞", "t": "ふわふわのイースト生地", "d": "イーストで発酵させた柔らかい生地が、内側がふわふわで空気を含んだボールを作る。" },
+      { "icon": "🍎", "t": "りんごの角切り", "d": "酸味のあるりんごの小さな角切りが生地に混ぜ込まれ、フルーティーでしっとりとした風味を加える。" },
+      { "icon": "🍇", "t": "レーズンとレモンの皮", "d": "ラム酒に浸したレーズンとすりおろしたレモンの皮が、それぞれのボールに香りをつける。" },
+      { "icon": "❄️", "t": "上に粉砂糖", "d": "揚げたてでまだ熱いうちに、たっぷりと粉砂糖をまぶす。" }
+    ],
+    "hi": [
+      { "icon": "🍞", "t": "फूला हुआ यीस्ट आटा", "d": "यीस्ट से फूला नरम आटा अंदर से फूले, हवादार गोले बनाता है।" },
+      { "icon": "🍎", "t": "सेब के टुकड़े", "d": "खट्टे सेब के छोटे क्यूब आटे में मिलाए जाते हैं, जो फलदार, नम स्वाद जोड़ते हैं।" },
+      { "icon": "🍇", "t": "किशमिश और नींबू का छिलका", "d": "रम में भिगोई किशमिश और कद्दूकस नींबू का छिलका हर गोले को सुगंधित करते हैं।" },
+      { "icon": "❄️", "t": "ऊपर पिसी चीनी", "d": "तलने के तुरंत बाद, गरम रहते ही भरपूर मात्रा में पिसी चीनी छिड़की जाती है।" }
+    ],
+    "tr": [
+      { "icon": "🍞", "t": "Kabarık mayalı hamur", "d": "Yumuşak, mayayla kabarmış hamur, içi kabarık ve havadar topları oluşturur." },
+      { "icon": "🍎", "t": "Elma parçaları", "d": "Ekşi elmanın küçük küpleri hamura karıştırılır, meyvemsi, nemli bir nota katar." },
+      { "icon": "🍇", "t": "Kuru üzüm ve limon kabuğu", "d": "Romda bekletilmiş kuru üzüm ve rendelenmiş limon kabuğu her topa lezzet katar." },
+      { "icon": "❄️", "t": "Üzerinde pudra şekeri", "d": "Kızartıldıktan hemen sonra, hâlâ sıcakken bolca pudra şekeri serpilir." }
+    ],
+    "it": [
+      { "icon": "🍞", "t": "Impasto soffice lievitato", "d": "Un impasto morbido, lievitato con lievito, forma le palline soffici e ariose all'interno." },
+      { "icon": "🍎", "t": "Pezzetti di mela", "d": "Piccoli cubetti di mela acidula vengono mescolati nell'impasto, aggiungendo una nota fruttata e umida." },
+      { "icon": "🍇", "t": "Uvetta e scorza di limone", "d": "L'uvetta ammollata nel rum e la scorza di limone grattugiata insaporiscono ogni pallina." },
+      { "icon": "❄️", "t": "Zucchero a velo sopra", "d": "Cosparse generosamente di zucchero a velo subito dopo la frittura, mentre sono ancora calde." }
+    ],
+    "ko": [
+      { "icon": "🍞", "t": "폭신한 이스트 반죽", "d": "이스트로 부풀린 부드러운 반죽이 내부가 폭신하고 공기가 든 공 모양을 만든다." },
+      { "icon": "🍎", "t": "사과 조각", "d": "새콤한 사과의 작은 조각을 반죽에 섞어 과일 향의 촉촉한 풍미를 더한다." },
+      { "icon": "🍇", "t": "건포도와 레몬 제스트", "d": "럼주에 불린 건포도와 간 레몬 제스트가 각 볼에 향을 더한다." },
+      { "icon": "❄️", "t": "위에 슈거파우더", "d": "튀긴 직후 아직 뜨거울 때 슈거파우더를 듬뿍 뿌린다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g făină", "7g drojdie instant", "300ml lapte călduț", "1 linguriță sare", "2 linguri zahăr", "2 mere, curățate și tăiate cuburi mici", "100g stafide, înmuiate în rom 30 minute", "coaja rasă de la 1 lămâie", "ulei pentru prăjit", "zahăr pudră, pentru servire"],
+    "en": ["500g flour", "7g instant yeast", "300ml warm milk", "1 tsp salt", "2 tbsp sugar", "2 apples, peeled and cut into small cubes", "100g raisins, soaked in rum 30 minutes", "zest of 1 lemon", "oil for frying", "powdered sugar, for serving"],
+    "es": ["500g de harina", "7g de levadura instantánea", "300ml de leche tibia", "1 cucharadita de sal", "2 cucharadas de azúcar", "2 manzanas, peladas y cortadas en cubitos", "100g de pasas, remojadas en ron 30 minutos", "ralladura de 1 limón", "aceite para freír", "azúcar glas, para servir"],
+    "fr": ["500g de farine", "7g de levure instantanée", "300ml de lait tiède", "1 c. à café de sel", "2 c. à soupe de sucre", "2 pommes, épluchées et coupées en petits cubes", "100g de raisins secs, trempés dans du rhum 30 minutes", "le zeste d'1 citron", "huile pour la friture", "sucre glace, pour servir"],
+    "de": ["500g Mehl", "7g Instanthefe", "300ml lauwarme Milch", "1 TL Salz", "2 EL Zucker", "2 Äpfel, geschält und in kleine Würfel geschnitten", "100g Rosinen, 30 Minuten in Rum eingeweicht", "abgeriebene Schale von 1 Zitrone", "Öl zum Frittieren", "Puderzucker, zum Servieren"],
+    "pt": ["500g de farinha", "7g de fermento instantâneo", "300ml de leite morno", "1 colher (chá) de sal", "2 colheres (sopa) de açúcar", "2 maçãs, descascadas e cortadas em cubinhos", "100g de passas, embebidas em rum por 30 minutos", "raspa de 1 limão", "óleo para fritar", "açúcar em pó, para servir"],
+    "ru": ["500г муки", "7г быстрорастворимых дрожжей", "300мл тёплого молока", "1 ч.л. соли", "2 ст.л. сахара", "2 яблока, очищенных и нарезанных мелкими кубиками", "100г изюма, вымоченного в роме 30 минут", "цедра 1 лимона", "масло для жарки", "сахарная пудра, для подачи"],
+    "ar": ["500 غرام دقيق", "7 غرام خميرة فورية", "300 مل حليب دافئ", "ملعقة صغيرة ملح", "ملعقتان كبيرتان سكر", "تفاحتان، مقشرتان ومقطّعتان مكعبات صغيرة", "100 غرام زبيب، منقوع بالروم 30 دقيقة", "قشر ليمونة واحدة مبشور", "زيت للقلي", "سكر بودرة، للتقديم"],
+    "zh": ["500克面粉", "7克即发酵母", "300毫升温牛奶", "1茶匙盐", "2汤匙糖", "2个苹果，去皮切小丁", "100克葡萄干，用朗姆酒浸泡30分钟", "1个柠檬的皮碎", "炸油", "糖粉，配食用"],
+    "ja": ["小麦粉500g", "インスタントイースト7g", "ぬるま湯牛乳300ml", "塩小さじ1", "砂糖大さじ2", "りんご2個（皮をむいて小さく角切り）", "レーズン100g（ラム酒に30分浸す）", "レモン1個分の皮のすりおろし", "揚げ油", "粉砂糖（添える用）"],
+    "hi": ["500 ग्राम आटा", "7 ग्राम इंस्टेंट यीस्ट", "300 मिली गुनगुना दूध", "1 छोटी चम्मच नमक", "2 बड़े चम्मच चीनी", "2 सेब, छीले और छोटे क्यूब में कटे", "100 ग्राम किशमिश, रम में 30 मिनट भिगोई", "1 नींबू का कद्दूकस किया छिलका", "तलने के लिए तेल", "पिसी चीनी, परोसने के लिए"],
+    "tr": ["500g un", "7g anlık maya", "300ml ılık süt", "1 çay kaşığı tuz", "2 yemek kaşığı şeker", "2 elma, soyulmuş ve küçük küpler halinde kesilmiş", "100g kuru üzüm, 30 dakika romda bekletilmiş", "1 limonun kabuğu rendelenmiş", "kızartmak için yağ", "servis için pudra şekeri"],
+    "it": ["500g di farina", "7g di lievito istantaneo", "300ml di latte tiepido", "1 cucchiaino di sale", "2 cucchiai di zucchero", "2 mele, sbucciate e tagliate a cubetti piccoli", "100g di uvetta, ammollata nel rum 30 minuti", "scorza di 1 limone", "olio per friggere", "zucchero a velo, per servire"],
+    "ko": ["밀가루 500g", "속성 이스트 7g", "따뜻한 우유 300ml", "소금 1작은술", "설탕 2큰술", "사과 2개, 껍질 벗기고 잘게 깍둑썰기", "건포도 100g, 럼주에 30분 불린 것", "레몬 1개 제스트", "튀김용 식용유", "슈거파우더, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": "ACTIVEAZĂ DROJDIA: Amestecă drojdia cu laptele călduț și zahărul, lasă 10 minute până face spumă. FRĂMÂNTĂ ALUATUL: Amestecă făina și sarea într-un bol mare, adaugă amestecul de drojdie, frământă până obții un aluat moale, elastic, ușor lipicios. LASĂ LA DOSPIT: Acoperă aluatul și lasă-l la dospit într-un loc călduț 1 oră, până își dublează volumul. ADAUGĂ FRUCTELE: Scurge stafidele de rom, adaugă-le peste aluatul dospit împreună cu merele tăiate cuburi și coaja de lămâie, amestecă ușor cu o lingură. LASĂ SĂ SE ODIHNEASCĂ: Acoperă din nou și lasă aluatul 20 minute. ÎNCINGE ULEIUL: Încinge uleiul pentru prăjit la 175°C într-o oală adâncă. FORMEAZĂ BILELE: Ia porții de aluat cu două linguri umede, formând bile aproximative, fără a le modela perfect. PRĂJEȘTE: Coboară bilele cu grijă în uleiul încins, prăjește în loturi mici 5-6 minute, întorcându-le des, până devin aurii pe toate părțile și complet coapte în interior. VERIFICĂ COACEREA: Verifică una tăind-o — interiorul trebuie să fie complet copt, fără aluat crud. SCURGE ȘI PUDREAZĂ: Scoate pe hârtie absorbantă, lasă câteva minute, apoi presară generos cu zahăr pudră cât timp sunt încă calde. SERVEȘTE: Servește proaspete, în aceeași zi.",
+    "en": "ACTIVATE THE YEAST: Mix the yeast with the warm milk and sugar, let sit 10 minutes until foamy. KNEAD THE DOUGH: Mix the flour and salt in a large bowl, add the yeast mixture, knead until you get a soft, elastic, slightly sticky dough. LET IT RISE: Cover the dough and let it rise in a warm spot 1 hour, until doubled in size. ADD THE FRUIT: Drain the raisins from the rum, add them to the risen dough along with the cubed apples and lemon zest, gently mix with a spoon. LET IT REST: Cover again and let the dough rest 20 minutes. HEAT THE OIL: Heat the frying oil to 175°C in a deep pot. SHAPE THE BALLS: Scoop portions of dough with two wet spoons, forming rough balls without shaping them perfectly. FRY: Carefully lower the balls into the hot oil, fry in small batches 5-6 minutes, turning often, until golden on all sides and fully cooked inside. CHECK DONENESS: Check one by cutting it open — the inside must be fully cooked, with no raw dough. DRAIN AND DUST: Remove onto paper towels, let sit a few minutes, then generously dust with powdered sugar while still warm. SERVE: Serve fresh, the same day.",
+    "es": "ACTIVA LA LEVADURA: Mezcla la levadura con la leche tibia y el azúcar, deja reposar 10 minutos hasta que haga espuma. AMASA LA MASA: Mezcla la harina y la sal en un bol grande, añade la mezcla de levadura, amasa hasta obtener una masa suave, elástica, ligeramente pegajosa. DEJA LEVAR: Cubre la masa y déjala levar en un lugar cálido 1 hora, hasta que duplique su tamaño. AÑADE LA FRUTA: Escurre las pasas del ron, añádelas a la masa levada junto con las manzanas en cubos y la ralladura de limón, mezcla suavemente con una cuchara. DEJA REPOSAR: Cubre de nuevo y deja reposar la masa 20 minutos. CALIENTA EL ACEITE: Calienta el aceite de freír a 175°C en una olla profunda. FORMA LAS BOLAS: Toma porciones de masa con dos cucharas húmedas, formando bolas aproximadas, sin moldearlas perfectamente. FRÍE: Baja cuidadosamente las bolas en el aceite caliente, fríe en tandas pequeñas 5-6 minutos, volteándolas con frecuencia, hasta que estén doradas por todos lados y completamente cocidas por dentro. VERIFICA LA COCCIÓN: Verifica una cortándola — el interior debe estar completamente cocido, sin masa cruda. ESCURRE Y ESPOLVOREA: Retira sobre papel absorbente, deja reposar unos minutos, luego espolvorea generosamente con azúcar glas mientras aún estén tibias. SIRVE: Sirve frescas, el mismo día.",
+    "fr": "ACTIVEZ LA LEVURE: Mélangez la levure avec le lait tiède et le sucre, laissez reposer 10 minutes jusqu'à ce qu'elle mousse. PÉTRISSEZ LA PÂTE: Mélangez la farine et le sel dans un grand bol, ajoutez le mélange de levure, pétrissez jusqu'à obtenir une pâte souple, élastique, légèrement collante. LAISSEZ LEVER: Couvrez la pâte et laissez-la lever dans un endroit chaud 1 heure, jusqu'à ce qu'elle double de volume. AJOUTEZ LES FRUITS: Égouttez les raisins secs du rhum, ajoutez-les à la pâte levée avec les pommes en cubes et le zeste de citron, mélangez doucement avec une cuillère. LAISSEZ REPOSER: Couvrez à nouveau et laissez reposer la pâte 20 minutes. CHAUFFEZ L'HUILE: Chauffez l'huile de friture à 175°C dans une marmite profonde. FORMEZ LES BOULES: Prélevez des portions de pâte avec deux cuillères humides, en formant des boules approximatives, sans les façonner parfaitement. FAITES FRIRE: Descendez délicatement les boules dans l'huile chaude, faites frire par petits lots 5-6 minutes, en les retournant souvent, jusqu'à ce qu'elles soient dorées de tous côtés et bien cuites à l'intérieur. VÉRIFIEZ LA CUISSON: Vérifiez-en une en la coupant — l'intérieur doit être entièrement cuit, sans pâte crue. ÉGOUTTEZ ET SAUPOUDREZ: Retirez sur du papier absorbant, laissez reposer quelques minutes, puis saupoudrez généreusement de sucre glace pendant qu'elles sont encore tièdes. SERVEZ: Servez fraîches, le jour même.",
+    "de": "HEFE AKTIVIEREN: Die Hefe mit der lauwarmen Milch und dem Zucker vermischen, 10 Minuten stehen lassen, bis sie schäumt. TEIG KNETEN: Mehl und Salz in einer großen Schüssel vermischen, die Hefemischung zugeben, kneten, bis ein weicher, elastischer, leicht klebriger Teig entsteht. GEHEN LASSEN: Den Teig abdecken und an einem warmen Ort 1 Stunde gehen lassen, bis er sich verdoppelt hat. OBST HINZUFÜGEN: Die Rosinen vom Rum abgießen, zusammen mit den gewürfelten Äpfeln und der Zitronenschale zum gegangenen Teig geben, vorsichtig mit einem Löffel vermischen. RUHEN LASSEN: Erneut abdecken und den Teig 20 Minuten ruhen lassen. ÖL ERHITZEN: Das Frittieröl in einem tiefen Topf auf 175°C erhitzen. KUGELN FORMEN: Mit zwei nassen Löffeln Teigportionen abstechen, grobe Kugeln formen, ohne sie perfekt zu formen. FRITTIEREN: Die Kugeln vorsichtig in das heiße Öl gleiten lassen, in kleinen Portionen 5-6 Minuten frittieren, häufig wenden, bis sie auf allen Seiten goldbraun und innen vollständig durchgegart sind. GARZUSTAND PRÜFEN: Eine aufschneiden, um zu prüfen — das Innere muss vollständig durchgegart sein, ohne rohen Teig. ABTROPFEN LASSEN UND BESTÄUBEN: Auf Küchenpapier legen, einige Minuten ruhen lassen, dann großzügig mit Puderzucker bestäuben, solange sie noch warm sind. SERVIEREN: Frisch am selben Tag servieren.",
+    "pt": "ATIVE O FERMENTO: Misture o fermento com o leite morno e o açúcar, deixe repousar 10 minutos até fazer espuma. AMASSE A MASSA: Misture a farinha e o sal numa tigela grande, junte a mistura de fermento, amasse até obter uma massa macia, elástica, levemente pegajosa. DEIXE CRESCER: Cubra a massa e deixe crescer num local morno por 1 hora, até dobrar de tamanho. ADICIONE A FRUTA: Escorra as passas do rum, junte-as à massa crescida junto com as maçãs em cubos e a raspa de limão, misture delicadamente com uma colher. DEIXE REPOUSAR: Cubra novamente e deixe a massa repousar 20 minutos. AQUEÇA O ÓLEO: Aqueça o óleo de fritura a 175°C numa panela funda. MOLDE AS BOLAS: Retire porções de massa com duas colheres molhadas, formando bolas aproximadas, sem as moldar perfeitamente. FRITE: Desça as bolas cuidadosamente no óleo quente, frite em pequenos lotes por 5-6 minutos, virando com frequência, até dourarem de todos os lados e ficarem completamente cozidas por dentro. VERIFIQUE O COZIMENTO: Verifique uma cortando-a — o interior deve estar completamente cozido, sem massa crua. ESCORRA E POLVILHE: Retire sobre papel absorvente, deixe repousar alguns minutos, depois polvilhe generosamente com açúcar em pó enquanto ainda estão mornas. SIRVA: Sirva frescas, no mesmo dia.",
+    "ru": "АКТИВИРУЙТЕ ДРОЖЖИ: Смешайте дрожжи с тёплым молоком и сахаром, дайте постоять 10 минут до появления пены. ЗАМЕСИТЕ ТЕСТО: Смешайте муку и соль в большой миске, добавьте дрожжевую смесь, замесите до мягкого, эластичного, слегка липкого теста. ДАЙТЕ ПОДНЯТЬСЯ: Накройте тесто и дайте подняться в тёплом месте 1 час, пока не увеличится вдвое. ДОБАВЬТЕ ФРУКТЫ: Слейте ром с изюма, добавьте его в поднявшееся тесто вместе с нарезанными кубиками яблоками и цедрой лимона, аккуратно перемешайте ложкой. ДАЙТЕ ОТДОХНУТЬ: Снова накройте и дайте тесту отдохнуть 20 минут. РАЗОГРЕЙТЕ МАСЛО: Разогрейте масло для жарки до 175°C в глубокой кастрюле. СФОРМИРУЙТЕ ШАРИКИ: Зачерпните порции теста двумя влажными ложками, формируя приблизительные шарики, не придавая им идеальную форму. ОБЖАРЬТЕ: Аккуратно опустите шарики в горячее масло, жарьте небольшими партиями 5-6 минут, часто переворачивая, пока не подрумянятся со всех сторон и полностью не приготовятся внутри. ПРОВЕРЬТЕ ГОТОВНОСТЬ: Разрежьте один, чтобы проверить — внутри должно быть полностью пропечено, без сырого теста. СЛЕЙТЕ МАСЛО И ПОСЫПЬТЕ: Выложите на бумажные полотенца, дайте постоять несколько минут, затем щедро посыпьте сахарной пудрой, пока ещё тёплые. ПОДАВАЙТЕ: Подавайте свежими, в тот же день.",
+    "ar": "فعّلي الخميرة: امزجي الخميرة مع الحليب الدافئ والسكر، اتركيها 10 دقائق حتى تصبح رغوية. اعجني العجينة: امزجي الدقيق والملح في وعاء كبير، أضيفي خليط الخميرة، اعجني حتى تحصلي على عجينة طرية ومرنة ولزجة قليلًا. اتركيها تختمر: غطّي العجينة واتركيها تختمر في مكان دافئ لمدة ساعة حتى يتضاعف حجمها. أضيفي الفاكهة: صفّي الزبيب من الروم، أضيفيه إلى العجينة المختمرة مع مكعبات التفاح وقشر الليمون، امزجي برفق بملعقة. اتركيها ترتاح: غطّي مرة أخرى واتركي العجينة ترتاح 20 دقيقة. سخّني الزيت: سخّني زيت القلي إلى 175 درجة مئوية في قدر عميقة. شكّلي الكرات: خذي أجزاء من العجينة بملعقتين مبللتين، مكوّنة كرات تقريبية دون تشكيلها بشكل مثالي. اقلي: أنزلي الكرات بحذر في الزيت الساخن، اقلي على دفعات صغيرة 5-6 دقائق مع القلب المتكرر حتى تصبح ذهبية من كل الجهات ومطهوة تمامًا من الداخل. تحققي من النضج: افحصي واحدة بقطعها — يجب أن يكون الداخل مطهوًا تمامًا دون عجينة نيئة. صفّي ورشّي: أخرجيها على منشفة ورقية، اتركيها بضع دقائق، ثم رشّي بسخاء بالسكر البودرة وهي لا تزال دافئة. قدّمي: قدّميها طازجة في نفس اليوم.",
+    "zh": "激活酵母：将酵母与温牛奶和糖混合，静置10分钟至起泡。揉面：在大碗中混合面粉和盐，加入酵母混合液，揉至面团柔软有弹性且略带黏性。发酵：盖好面团在温暖处发酵1小时，至体积翻倍。加入水果：将葡萄干沥干朗姆酒，与切好的苹果丁和柠檬皮碎一起加入发酵好的面团中，用勺子轻轻搅拌。静置：再次盖好面团静置20分钟。加热油：在深锅中将炸油加热至175°C。塑形成球：用两把湿勺舀取面团，形成大致的球状，无需完美塑形。油炸：小心将球放入热油中，分小批次炸5-6分钟，频繁翻动，直至各面金黄且内部完全熟透。检查熟度：切开一个检查——内部必须完全熟透，没有生面团。沥油撒糖：取出放在厨房纸巾上，静置几分钟，然后趁还温热时慷慨地撒上糖粉。上桌：当天新鲜食用。",
+    "ja": "イーストを活性化させる：イーストをぬるま湯の牛乳と砂糖と混ぜ、泡立つまで10分置く。生地をこねる：大きなボウルに小麦粉と塩を混ぜ、イースト液を加え、柔らかく弾力があり少し粘りのある生地になるまでこねる。発酵させる：生地を覆い、温かい場所で1時間、2倍の大きさになるまで発酵させる。フルーツを加える：レーズンのラム酒を切り、発酵した生地に角切りにしたりんご、レモンの皮と共に加え、スプーンで優しく混ぜる。休ませる：再び覆い、生地を20分休ませる。油を熱する：深めの鍋で揚げ油を175°Cに熱する。ボールを成形する：濡らした2本のスプーンで生地を取り分け、完璧に整えず大まかなボール状にする。揚げる：ボールを注意深く熱い油に入れ、少量ずつ5〜6分、頻繁に返しながら、全面がきつね色になり中まで完全に火が通るまで揚げる。焼き加減を確認する：一つ切って確認する——中は生地が生の部分なく完全に火が通っていること。油を切って粉をまぶす：キッチンペーパーに取り出し、数分置いてから、まだ温かいうちに粉砂糖をたっぷりまぶす。提供する：当日中に新鮮なうちに提供する。",
+    "hi": "यीस्ट सक्रिय करें: यीस्ट को गुनगुने दूध और चीनी के साथ मिलाएं, 10 मिनट झागदार होने तक रखें। आटा गूंधें: बड़े कटोरे में आटा और नमक मिलाएं, यीस्ट मिश्रण डालें, नरम, लचीला, थोड़ा चिपचिपा आटा बनने तक गूंधें। फूलने दें: आटे को ढककर गरम जगह पर 1 घंटा फूलने दें, जब तक आकार दोगुना न हो जाए। फल डालें: किशमिश से रम निकालें, इसे कटे सेब और नींबू के छिलके के साथ फूले आटे में डालें, चम्मच से हल्के से मिलाएं। आराम दें: फिर से ढककर आटे को 20 मिनट आराम दें। तेल गरम करें: गहरे बर्तन में तलने का तेल 175°C पर गरम करें। गोले बनाएं: दो गीले चम्मचों से आटे के हिस्से लें, बिना पूरी तरह आकार दिए मोटे गोले बनाएं। तलें: गोलों को सावधानी से गरम तेल में डालें, छोटे हिस्सों में 5-6 मिनट तलें, बार-बार पलटते हुए, जब तक सभी तरफ से सुनहरा और अंदर से पूरी तरह पका न हो जाए। पकने की जांच करें: एक को काटकर जांचें — अंदर पूरी तरह पका होना चाहिए, बिना कच्चे आटे के। छानें और छिड़कें: कागज़ के तौलिये पर निकालें, कुछ मिनट रखें, फिर गरम रहते ही भरपूर पिसी चीनी छिड़कें। परोसें: उसी दिन ताज़ा परोसें।",
+    "tr": "MAYAYI AKTİVE EDİN: Mayayı ılık süt ve şekerle karıştırın, köpürene kadar 10 dakika bekletin. HAMURU YOĞURUN: Büyük bir kasede un ve tuzu karıştırın, maya karışımını ekleyin, yumuşak, esnek, hafif yapışkan bir hamur elde edene kadar yoğurun. MAYALANMASINI BEKLEYİN: Hamuru örtüp sıcak bir yerde hacmi iki katına çıkana kadar 1 saat mayalanmaya bırakın. MEYVEYİ EKLEYİN: Kuru üzümü romdan süzün, küp doğranmış elmalar ve limon kabuğuyla birlikte mayalanmış hamura ekleyin, kaşıkla hafifçe karıştırın. DİNLENDİRİN: Tekrar örtün ve hamuru 20 dakika dinlendirin. YAĞI ISITIN: Derin bir tencerede kızartma yağını 175°C'ye ısıtın. TOPLARI ŞEKİLLENDİRİN: İki ıslak kaşıkla hamur porsiyonları alın, mükemmel şekillendirmeden kabaca toplar oluşturun. KIZARTIN: Topları dikkatlice sıcak yağa indirin, sık sık çevirerek her tarafı altın rengi olana ve içi tamamen pişene kadar küçük partiler halinde 5-6 dakika kızartın. PİŞMİŞLİĞİ KONTROL EDİN: Birini kesip kontrol edin — içi çiğ hamur kalmadan tamamen pişmiş olmalı. SÜZÜN VE ŞEKER SERPİN: Kağıt havluya alın, birkaç dakika bekletin, sonra hâlâ ılıkken bolca pudra şekeri serpin. SERVİS YAPIN: Aynı gün taze servis edin.",
+    "it": "ATTIVA IL LIEVITO: Mescola il lievito con il latte tiepido e lo zucchero, lascia riposare 10 minuti finché diventa schiumoso. IMPASTA: Mescola farina e sale in una ciotola grande, aggiungi il composto di lievito, impasta finché ottieni un impasto morbido, elastico, leggermente appiccicoso. LASCIA LIEVITARE: Copri l'impasto e lascialo lievitare in un luogo caldo per 1 ora, finché raddoppia di volume. AGGIUNGI LA FRUTTA: Scola l'uvetta dal rum, aggiungila all'impasto lievitato insieme alle mele a cubetti e alla scorza di limone, mescola delicatamente con un cucchiaio. LASCIA RIPOSARE: Copri di nuovo e lascia riposare l'impasto 20 minuti. SCALDA L'OLIO: Scalda l'olio di frittura a 175°C in una pentola profonda. FORMA LE PALLINE: Preleva porzioni di impasto con due cucchiai bagnati, formando palline approssimative, senza modellarle perfettamente. FRIGGI: Abbassa con cura le palline nell'olio caldo, friggi in piccoli lotti 5-6 minuti, girandole spesso, finché dorate su tutti i lati e completamente cotte all'interno. CONTROLLA LA COTTURA: Controllane una tagliandola — l'interno deve essere completamente cotto, senza impasto crudo. SCOLA E COSPARGI: Togli su carta assorbente, lascia riposare qualche minuto, poi cospargi generosamente di zucchero a velo mentre sono ancora calde. SERVI: Servi fresche, lo stesso giorno.",
+    "ko": "이스트 활성화하기: 이스트를 따뜻한 우유와 설탕과 섞어 거품이 날 때까지 10분간 둔다. 반죽하기: 큰 볼에 밀가루와 소금을 섞고 이스트 혼합물을 넣어 부드럽고 탄력 있으며 약간 끈적한 반죽이 될 때까지 치댄다. 발효시키기: 반죽을 덮어 따뜻한 곳에서 부피가 두 배가 될 때까지 1시간 발효시킨다. 과일 추가하기: 건포도의 럼주를 따라내고 깍둑썰기한 사과, 레몬 제스트와 함께 발효된 반죽에 넣어 숟가락으로 살살 섞는다. 휴지시키기: 다시 덮어 반죽을 20분간 휴지시킨다. 기름 가열하기: 깊은 냄비에 튀김용 기름을 175°C로 가열한다. 공 모양 만들기: 젖은 숟가락 두 개로 반죽을 떠서 완벽하게 다듬지 않고 대략적인 공 모양으로 만든다. 튀기기: 공을 조심스럽게 뜨거운 기름에 넣고 자주 뒤집으며 5-6분씩 소량으로 나누어 모든 면이 황금빛이 되고 속까지 완전히 익을 때까지 튀긴다. 익힘 확인하기: 하나를 잘라 확인한다 — 속이 생반죽 없이 완전히 익어 있어야 한다. 기름 빼고 설탕 뿌리기: 키친타월에 건져 몇 분간 두었다가 아직 따뜻할 때 슈거파우더를 듬뿍 뿌린다. 제공하기: 당일 신선하게 제공한다."
+  },
+  "originText": {
+    "ro": "Oliebollen are rădăcini care se întind până în secolul al XVI-lea, considerat unul dintre cele mai vechi deserturi prăjite documentate din bucătăria olandeză, menționat inițial în picturi ale maeștrilor flamand. Numele înseamnă literal \"bile de ulei\", o descriere directă a metodei de preparare — bucăți de aluat coborâte în ulei încins.\n\nAstăzi, oliebollen este indisolubil legat de Revelion — sărbătoarea Anului Nou olandeză — când standuri temporare apar peste noapte pe străzile din întreaga țară, vânzând mii de bile proaspăt prăjite, servite calde cu zahăr pudră. Explicația populară pentru asocierea cu Anul Nou este parțial păgână: se credea cândva că grăsimea din aluatul prăjit ar fi \"alunecos\" pentru zeița germanică Perchta, care tăia burțile celor pe care îi întâlnea în timpul iernii — mâncarea grasă îi permitea sabiei să alunece fără a face rău.",
+    "en": "Oliebollen has roots stretching back to the sixteenth century, considered one of the oldest documented fried desserts in Dutch cuisine, originally mentioned in paintings by Flemish masters. The name literally means \"oil balls,\" a direct description of the preparation method — pieces of dough lowered into hot oil.\n\nToday, oliebollen is inextricably linked to New Year's Eve — the Dutch New Year celebration — when temporary stalls spring up overnight on streets across the country, selling thousands of freshly fried balls, served warm with powdered sugar. The popular explanation for the New Year association is partly pagan: it was once believed that the fat from the fried dough would make one \"slippery\" for the Germanic goddess Perchta, who cut open the bellies of those she encountered during winter — the greasy food let her sword slide off without causing harm.",
+    "es": "El oliebollen tiene raíces que se remontan al siglo XVI, considerado uno de los postres fritos más antiguos documentados de la cocina holandesa, mencionado originalmente en pinturas de maestros flamencos. El nombre significa literalmente \"bolas de aceite\", una descripción directa del método de preparación — trozos de masa sumergidos en aceite caliente.\n\nHoy en día, el oliebollen está inextricablemente ligado a la Nochevieja — la celebración del Año Nuevo holandés — cuando puestos temporales surgen de la noche a la mañana en las calles de todo el país, vendiendo miles de bolas recién fritas, servidas calientes con azúcar glas. La explicación popular para la asociación con el Año Nuevo es en parte pagana: se creía en su día que la grasa de la masa frita haría a uno \"resbaladizo\" para la diosa germánica Perchta, que abría el vientre de aquellos con quienes se encontraba durante el invierno — la comida grasienta permitía que su espada se deslizara sin causar daño.",
+    "fr": "L'oliebollen a des racines remontant au XVIe siècle, considéré comme l'un des plus anciens desserts frits documentés de la cuisine néerlandaise, mentionné à l'origine dans des peintures de maîtres flamands. Le nom signifie littéralement \"boules d'huile\", une description directe de la méthode de préparation — des morceaux de pâte plongés dans de l'huile chaude.\n\nAujourd'hui, l'oliebollen est indissociable du Nouvel An — la célébration néerlandaise du Nouvel An — lorsque des stands temporaires apparaissent du jour au lendemain dans les rues de tout le pays, vendant des milliers de boules fraîchement frites, servies chaudes avec du sucre glace. L'explication populaire de l'association avec le Nouvel An est en partie païenne: on croyait autrefois que la graisse de la pâte frite rendrait quelqu'un \"glissant\" pour la déesse germanique Perchta, qui ouvrait le ventre de ceux qu'elle rencontrait pendant l'hiver — la nourriture grasse permettait à son épée de glisser sans faire de mal.",
+    "de": "Oliebollen hat Wurzeln, die bis ins 16. Jahrhundert zurückreichen, und gilt als eines der ältesten dokumentierten frittierten Desserts der niederländischen Küche, ursprünglich in Gemälden flämischer Meister erwähnt. Der Name bedeutet wörtlich \"Ölkugeln\", eine direkte Beschreibung der Zubereitungsmethode — Teigstücke, die in heißes Öl gegeben werden.\n\nHeute ist Oliebollen untrennbar mit Silvester verbunden — der niederländischen Neujahrsfeier — wenn über Nacht temporäre Stände in Straßen im ganzen Land auftauchen und Tausende frisch frittierter Kugeln verkaufen, warm mit Puderzucker serviert. Die populäre Erklärung für die Verbindung mit dem Neujahr ist teilweise heidnisch: man glaubte einst, dass das Fett des frittierten Teigs einen für die germanische Göttin Perchta \"glitschig\" machen würde, die den Bauch derer aufschnitt, denen sie im Winter begegnete — das fettige Essen ließ ihr Schwert abgleiten, ohne Schaden anzurichten.",
+    "pt": "O oliebollen tem raízes que remontam ao século XVI, considerado uma das sobremesas fritas mais antigas documentadas da culinária holandesa, mencionado originalmente em pinturas de mestres flamengos. O nome significa literalmente \"bolas de óleo\", uma descrição direta do método de preparação — pedaços de massa mergulhados em óleo quente.\n\nHoje, o oliebollen está indissociavelmente ligado à véspera de Ano Novo — a celebração do Ano Novo holandês — quando bancas temporárias surgem da noite para o dia nas ruas de todo o país, vendendo milhares de bolas recém-fritas, servidas quentes com açúcar em pó. A explicação popular para a associação com o Ano Novo é em parte pagã: acreditava-se outrora que a gordura da massa frita tornaria alguém \"escorregadio\" para a deusa germânica Perchta, que abria a barriga daqueles que encontrava durante o inverno — a comida gordurosa permitia que a sua espada deslizasse sem causar dano.",
+    "ru": "Оливболлен имеет корни, уходящие в XVI век, и считается одним из старейших задокументированных жареных десертов голландской кухни, впервые упомянутым на картинах фламандских мастеров. Название буквально означает \"масляные шарики\" — прямое описание способа приготовления: кусочки теста, опускаемые в горячее масло.\n\nСегодня оливболлен неразрывно связан с новогодней ночью — голландским празднованием Нового года — когда временные лотки появляются за одну ночь на улицах по всей стране, продавая тысячи свежеобжаренных шариков, подаваемых тёплыми с сахарной пудрой. Популярное объяснение связи с Новым годом отчасти языческое: когда-то считалось, что жир от жареного теста делает человека \"скользким\" для германской богини Перхты, которая вскрывала животы тех, кого встречала зимой — жирная пища позволяла её мечу соскользнуть, не причинив вреда.",
+    "ar": "تعود جذور الأوليبولن إلى القرن السادس عشر، وتُعتبر من أقدم الحلويات المقلية الموثقة في المطبخ الهولندي، وقد ذُكرت في الأصل في لوحات الأساتذة الفلمنكيين. يعني الاسم حرفيًا \"كرات الزيت\"، وهو وصف مباشر لطريقة التحضير — قطع عجين تُنزَل في زيت ساخن.\n\nاليوم، ترتبط الأوليبولن ارتباطًا وثيقًا بليلة رأس السنة — احتفال رأس السنة الهولندي — حين تظهر أكشاك مؤقتة بين عشية وضحاها في شوارع أنحاء البلاد، تبيع آلاف الكرات المقلية طازجة، تُقدَّم دافئة مع السكر البودرة. التفسير الشعبي لارتباطها برأس السنة وثني جزئيًا: كان يُعتقد قديمًا أن دهن العجين المقلي يجعل المرء \"زلقًا\" أمام الإلهة الجرمانية بيرشتا، التي كانت تشق بطون من تقابلهم خلال الشتاء — وكان الطعام الدهني يسمح لسيفها بالانزلاق دون إحداث ضرر.",
+    "zh": "油球的根源可追溯到16世纪，被认为是荷兰饮食中有记载的最古老的油炸甜点之一，最初出现在佛兰芒大师的画作中。这个名字的字面意思是「油球」，直接描述了制作方法——把面团块放入热油中炸制。\n\n如今，油球与除夕夜——荷兰的新年庆典——密不可分，届时临时摊位会在一夜之间出现在全国各地的街头，出售成千上万个刚炸好的油球，配以糖粉温热食用。有关新年关联的流行解释部分带有异教色彩：人们曾经相信，油炸面团中的油脂会让人在日耳曼女神佩尔希塔面前变得「滑溜」，据说这位女神会在冬天剖开她遇到的人的肚子——油腻的食物能让她的剑滑开而不会造成伤害。",
+    "ja": "オリボレンは16世紀にまで遡るルーツを持ち、オランダ料理の中で記録に残る最古の揚げデザートの一つとされ、もともとフランドル派の巨匠たちの絵画に描かれていた。この名前は文字通り「油の玉」を意味し、生地の塊を熱い油に入れるという調理法をそのまま表している。\n\n今日、オリボレンは大晦日——オランダの新年を祝う行事——と切っても切り離せない関係にあり、その夜には国中の通りに一夜限りの屋台が現れ、揚げたての玉を何千個も、粉砂糖をまぶして温かいまま売る。新年との結びつきについての一般的な説明は、一部異教的なものである。かつて、揚げた生地の脂が、冬に出会った人々の腹を切り裂くゲルマンの女神ペルヒタに対して人を「滑りやすく」すると信じられていた——脂っぽい食べ物のおかげで彼女の剣が害を与えずに滑り落ちるとされていた。",
+    "hi": "ओलीबोलेन की जड़ें 16वीं सदी तक फैली हैं, इसे डच व्यंजनों में सबसे पुराने दर्ज तले हुए मिठाइयों में से एक माना जाता है, जिसका उल्लेख मूल रूप से फ्लेमिश उस्तादों के चित्रों में किया गया था। नाम का शाब्दिक अर्थ है \"तेल के गोले\", तैयारी विधि का सीधा वर्णन — आटे के टुकड़े गरम तेल में डाले जाते हैं।\n\nआज, ओलीबोलेन नए साल की पूर्व संध्या — डच नववर्ष उत्सव — से अटूट रूप से जुड़ा है, जब देश भर की सड़कों पर रातों-रात अस्थायी स्टॉल दिखाई देते हैं, हज़ारों ताज़े तले गोले बेचते हुए, गरम पिसी चीनी के साथ परोसे जाते हैं। नए साल के साथ जुड़ाव की लोकप्रिय व्याख्या आंशिक रूप से मूर्तिपूजक है: कभी माना जाता था कि तले आटे की चर्बी जर्मनिक देवी पर्चटा के लिए किसी को \"फिसलनदार\" बना देगी, जो सर्दियों के दौरान मिलने वालों का पेट काट देती थी — चिकना भोजन उसकी तलवार को बिना नुकसान पहुंचाए फिसलने देता था।",
+    "tr": "Oliebollen'in kökleri on altıncı yüzyıla kadar uzanır ve Hollanda mutfağının belgelenmiş en eski kızarmış tatlılarından biri olarak kabul edilir; başlangıçta Flaman ustaların tablolarında bahsedilmiştir. İsim tam anlamıyla \"yağ topları\" anlamına gelir; hazırlama yönteminin doğrudan bir tanımı — sıcak yağa indirilen hamur parçaları.\n\nBugün oliebollen, Hollanda'nın yeni yıl kutlaması olan yılbaşı gecesiyle ayrılmaz bir şekilde bağlantılıdır; o gece ülke genelindeki sokaklarda geçici tezgahlar bir gecede ortaya çıkar ve binlerce taze kızartılmış topu, sıcak, pudra şekerli olarak satar. Yeni yılla bağlantısının popüler açıklaması kısmen paganistiktir: bir zamanlar, kızarmış hamurun yağının kişiyi, kışın karşılaştığı kişilerin karnını yaran Germen tanrıçası Perchta için 'kaygan' yapacağına inanılırdı — yağlı yiyecek, kılıcının zarar vermeden kaymasına izin veriyordu.",
+    "it": "L'oliebollen ha radici che risalgono al sedicesimo secolo, considerato uno dei dolci fritti più antichi documentati della cucina olandese, menzionato originariamente in dipinti di maestri fiamminghi. Il nome significa letteralmente \"palle d'olio\", una descrizione diretta del metodo di preparazione — pezzi di impasto calati nell'olio caldo.\n\nOggi, l'oliebollen è indissolubilmente legato alla notte di Capodanno — la celebrazione del Nuovo Anno olandese — quando bancarelle temporanee spuntano da un giorno all'altro nelle strade di tutto il paese, vendendo migliaia di palline appena fritte, servite calde con zucchero a velo. La spiegazione popolare per l'associazione con il Capodanno è in parte pagana: si credeva un tempo che il grasso dell'impasto fritto rendesse qualcuno \"scivoloso\" per la dea germanica Perchta, che squarciava il ventre di coloro che incontrava durante l'inverno — il cibo grasso permetteva alla sua spada di scivolare via senza fare danni.",
+    "ko": "올리볼렌은 16세기까지 거슬러 올라가는 뿌리를 가지고 있으며, 네덜란드 요리에서 기록된 가장 오래된 튀김 디저트 중 하나로, 원래 플랑드르 거장들의 그림에서 언급되었다. 이 이름은 문자 그대로 「기름 공」을 뜻하며, 뜨거운 기름에 반죽 조각을 넣는 조리법을 그대로 설명한다.\n\n오늘날 올리볼렌은 네덜란드의 새해맞이 축제인 그믐밤과 떼려야 뗄 수 없는 관계에 있으며, 이날 밤 전국의 거리에 임시 노점이 하룻밤 사이에 생겨나 수천 개의 갓 튀긴 공을 슈거파우더와 함께 따뜻하게 판매한다. 새해와의 연관성에 대한 대중적인 설명은 부분적으로 이교적이다: 한때 튀긴 반죽의 기름기가 겨울에 만난 사람들의 배를 가르던 게르만 여신 페르히타에게 사람을 「미끄럽게」 만들어준다고 믿어졌다 — 기름진 음식이 그녀의 칼을 해를 끼치지 않고 미끄러지게 해준다는 것이다."
+  },
+  "meta": {
+    "time": 110,
+    "costRon": 18,
+    "tags": ["vegetarian", "family"],
+    "desc": {
+      "ro": "Gogoși olandeze pufoase de Anul Nou, cu mere și stafide, presărate cu zahăr pudră.",
+      "en": "Fluffy Dutch New Year's doughnuts with apple and raisins, dusted with powdered sugar.",
+      "es": "Buñuelos holandeses esponjosos de Año Nuevo con manzana y pasas, espolvoreados con azúcar glas.",
+      "fr": "Beignets néerlandais moelleux du Nouvel An à la pomme et aux raisins secs, saupoudrés de sucre glace.",
+      "de": "Flauschige niederländische Silvester-Krapfen mit Apfel und Rosinen, mit Puderzucker bestäubt.",
+      "pt": "Bolinhos holandeses fofos de Ano Novo com maçã e passas, polvilhados com açúcar em pó.",
+      "ru": "Пышные голландские новогодние пончики с яблоком и изюмом, посыпанные сахарной пудрой.",
+      "ar": "كرات عجين هولندية هشة لرأس السنة بالتفاح والزبيب، مرشوشة بالسكر البودرة.",
+      "zh": "蓬松的荷兰新年油球，含苹果和葡萄干，撒上糖粉。",
+      "ja": "りんごとレーズン入りのふわふわなオランダ風大晦日ドーナツ、粉砂糖をまぶして。",
+      "hi": "सेब और किशमिश के साथ फूले डच नए साल के डोनट, पिसी चीनी छिड़के हुए।",
+      "tr": "Elmalı ve kuru üzümlü kabarık Hollanda usulü yılbaşı lokması, pudra şekeri serpilmiş.",
+      "it": "Soffici frittelle olandesi di Capodanno con mela e uvetta, cosparse di zucchero a velo.",
+      "ko": "사과와 건포도를 넣은 폭신한 네덜란드식 새해 도넛, 슈거파우더를 뿌린 것."
+    }
+  }
+}

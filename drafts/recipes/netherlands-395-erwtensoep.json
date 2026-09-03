@@ -1,0 +1,209 @@
+{
+  "id": 395,
+  "servings": 4,
+  "tipType": "soup",
+  "pairingsType": "soup",
+  "origin": {
+    "ro": "Olanda",
+    "en": "Netherlands",
+    "es": "Países Bajos",
+    "fr": "Pays-Bas",
+    "de": "Niederlande",
+    "pt": "Países Baixos",
+    "ru": "Нидерланды",
+    "ar": "هولندا",
+    "zh": "荷兰",
+    "ja": "オランダ",
+    "hi": "नीदरलैंड",
+    "tr": "Hollanda",
+    "it": "Paesi Bassi",
+    "ko": "네덜란드"
+  },
+  "name": {
+    "ro": "Erwtensoep (Supă Olandeză de Mazăre)",
+    "en": "Erwtensoep (Dutch Split Pea Soup)",
+    "es": "Erwtensoep (Sopa Holandesa de Guisantes)",
+    "fr": "Erwtensoep (Soupe Néerlandaise aux Pois Cassés)",
+    "de": "Erwtensoep",
+    "pt": "Erwtensoep (Sopa Holandesa de Ervilha)",
+    "ru": "Эртвенсуп (Голландский Гороховый Суп)",
+    "ar": "إرفتنسوب (شوربة البازلاء الهولندية)",
+    "zh": "荷兰豌豆浓汤",
+    "ja": "エルテンスープ（オランダ風スプリットピースープ）",
+    "hi": "एर्वटेनसुप (डच स्प्लिट मटर सूप)",
+    "tr": "Erwtensoep (Hollanda Usulü Bezelye Çorbası)",
+    "it": "Erwtensoep (Zuppa di Piselli Olandese)",
+    "ko": "에르텐수프 (네덜란드식 완두콩 수프)"
+  },
+  "category": {
+    "ro": "Supă",
+    "en": "Soup",
+    "es": "Sopa",
+    "fr": "Soupe",
+    "de": "Suppe",
+    "pt": "Sopa",
+    "ru": "Суп",
+    "ar": "شوربة",
+    "zh": "汤",
+    "ja": "スープ",
+    "hi": "सूप",
+    "tr": "Çorba",
+    "it": "Zuppa",
+    "ko": "수프"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🫛", "t": "Mazăre galbenă uscată", "d": "Mazărea galbenă despicată se fierbe îndelung, până se dezintegrează într-o supă groasă, cremoasă." },
+      { "icon": "🥓", "t": "Cârnat afumat", "d": "Un cârnat olandez afumat (rookworst) se fierbe direct în supă, aromatizând-o intens." },
+      { "icon": "🥕", "t": "Legume rădăcinoase", "d": "Praz, țelină și morcovi se adaugă spre final, pentru textură și prospețime." },
+      { "icon": "🍞", "t": "Servită cu pâine de secară", "d": "Se servește tradițional cu felii de pâine de secară afumată și slănină crocantă." }
+    ],
+    "en": [
+      { "icon": "🫛", "t": "Dried yellow split peas", "d": "Yellow split peas simmer for a long time, until they break down into a thick, creamy soup." },
+      { "icon": "🥓", "t": "Smoked sausage", "d": "A smoked Dutch sausage (rookworst) simmers directly in the soup, flavoring it intensely." },
+      { "icon": "🥕", "t": "Root vegetables", "d": "Leek, celery and carrots are added near the end, for texture and freshness." },
+      { "icon": "🍞", "t": "Served with rye bread", "d": "Traditionally served with slices of smoked rye bread and crispy bacon." }
+    ],
+    "es": [
+      { "icon": "🫛", "t": "Guisantes amarillos secos", "d": "Los guisantes amarillos partidos se hierven durante mucho tiempo, hasta desintegrarse en una sopa espesa y cremosa." },
+      { "icon": "🥓", "t": "Salchicha ahumada", "d": "Una salchicha holandesa ahumada (rookworst) se hierve directamente en la sopa, aromatizándola intensamente." },
+      { "icon": "🥕", "t": "Verduras de raíz", "d": "Puerro, apio y zanahorias se añaden hacia el final, para textura y frescura." },
+      { "icon": "🍞", "t": "Servida con pan de centeno", "d": "Se sirve tradicionalmente con rebanadas de pan de centeno ahumado y tocino crujiente." }
+    ],
+    "fr": [
+      { "icon": "🫛", "t": "Pois cassés jaunes secs", "d": "Les pois cassés jaunes mijotent longtemps, jusqu'à se désintégrer en une soupe épaisse et crémeuse." },
+      { "icon": "🥓", "t": "Saucisse fumée", "d": "Une saucisse néerlandaise fumée (rookworst) mijote directement dans la soupe, l'aromatisant intensément." },
+      { "icon": "🥕", "t": "Légumes racines", "d": "Poireau, céleri et carottes sont ajoutés vers la fin, pour la texture et la fraîcheur." },
+      { "icon": "🍞", "t": "Servie avec pain de seigle", "d": "Traditionnellement servie avec des tranches de pain de seigle fumé et du lard croustillant." }
+    ],
+    "de": [
+      { "icon": "🫛", "t": "Getrocknete gelbe Spalterbsen", "d": "Gelbe Spalterbsen köcheln lange, bis sie zu einer dicken, cremigen Suppe zerfallen." },
+      { "icon": "🥓", "t": "Räucherwurst", "d": "Eine geräucherte niederländische Wurst (Rookworst) köchelt direkt in der Suppe und würzt sie intensiv." },
+      { "icon": "🥕", "t": "Wurzelgemüse", "d": "Lauch, Sellerie und Karotten werden gegen Ende zugegeben, für Textur und Frische." },
+      { "icon": "🍞", "t": "Mit Roggenbrot serviert", "d": "Traditionell mit Scheiben geräuchertem Roggenbrot und knusprigem Speck serviert." }
+    ],
+    "pt": [
+      { "icon": "🫛", "t": "Ervilha amarela seca", "d": "A ervilha amarela partida cozinha por longo tempo, até se desfazer numa sopa espessa e cremosa." },
+      { "icon": "🥓", "t": "Linguiça defumada", "d": "Uma linguiça holandesa defumada (rookworst) cozinha diretamente na sopa, aromatizando-a intensamente." },
+      { "icon": "🥕", "t": "Legumes de raiz", "d": "Alho-poró, aipo e cenouras são adicionados perto do final, para textura e frescor." },
+      { "icon": "🍞", "t": "Servida com pão de centeio", "d": "Tradicionalmente servida com fatias de pão de centeio defumado e bacon crocante." }
+    ],
+    "ru": [
+      { "icon": "🫛", "t": "Сушёный жёлтый колотый горох", "d": "Жёлтый колотый горох варится долго, пока не разварится в густой кремовый суп." },
+      { "icon": "🥓", "t": "Копчёная колбаса", "d": "Копчёная голландская колбаса (rookworst) варится прямо в супе, придавая ему насыщенный аромат." },
+      { "icon": "🥕", "t": "Корнеплоды", "d": "Лук-порей, сельдерей и морковь добавляются ближе к концу, для текстуры и свежести." },
+      { "icon": "🍞", "t": "Подаётся с ржаным хлебом", "d": "Традиционно подаётся с ломтиками копчёного ржаного хлеба и хрустящим беконом." }
+    ],
+    "ar": [
+      { "icon": "🫛", "t": "بازلاء صفراء مجففة", "d": "تُطهى البازلاء الصفراء المشقوقة لفترة طويلة حتى تتفكك إلى شوربة سميكة وكريمية." },
+      { "icon": "🥓", "t": "نقانق مدخنة", "d": "تُطهى نقانق هولندية مدخنة (روكفورست) مباشرة في الشوربة، فتمنحها نكهة قوية." },
+      { "icon": "🥕", "t": "خضار جذرية", "d": "يُضاف الكراث والكرفس والجزر قرب النهاية للقوام والنضارة." },
+      { "icon": "🍞", "t": "تُقدَّم مع خبز الجاودار", "d": "تُقدَّم تقليديًا مع شرائح خبز الجاودار المدخن ولحم مقدد مقرمش." }
+    ],
+    "zh": [
+      { "icon": "🫛", "t": "干黄豌豆瓣", "d": "黄豌豆瓣长时间炖煮，直至煮化成浓稠奶油状的汤。" },
+      { "icon": "🥓", "t": "烟熏香肠", "d": "荷兰烟熏香肠（rookworst）直接在汤中煮制，赋予浓郁风味。" },
+      { "icon": "🥕", "t": "根茎蔬菜", "d": "韭葱、芹菜和胡萝卜在最后加入，增添口感与清新。" },
+      { "icon": "🍞", "t": "配黑麦面包食用", "d": "传统上搭配烟熏黑麦面包片和酥脆培根食用。" }
+    ],
+    "ja": [
+      { "icon": "🫛", "t": "乾燥した黄色い割りえんどう豆", "d": "黄色い割りえんどう豆を長時間煮込み、崩れて濃厚でクリーミーなスープになる。" },
+      { "icon": "🥓", "t": "燻製ソーセージ", "d": "オランダの燻製ソーセージ（ロークヴォルスト）をスープの中で直接煮込み、深い風味をつける。" },
+      { "icon": "🥕", "t": "根菜類", "d": "リーキ、セロリ、にんじんを仕上げ近くに加え、食感と新鮮さを出す。" },
+      { "icon": "🍞", "t": "ライ麦パンを添えて", "d": "伝統的に燻製ライ麦パンのスライスとカリカリのベーコンを添えて提供する。" }
+    ],
+    "hi": [
+      { "icon": "🫛", "t": "सूखी पीली विभाजित मटर", "d": "पीली विभाजित मटर लंबे समय तक उबाली जाती है, जब तक गाढ़े, मलाईदार सूप में टूट न जाए।" },
+      { "icon": "🥓", "t": "स्मोक्ड सॉसेज", "d": "एक डच स्मोक्ड सॉसेज (रुकवोर्स्ट) सीधे सूप में पकाया जाता है, जो इसे गहरा स्वाद देता है।" },
+      { "icon": "🥕", "t": "जड़ वाली सब्ज़ियाँ", "d": "लीक, अजमोदा और गाजर अंत के पास डाले जाते हैं, बनावट और ताज़गी के लिए।" },
+      { "icon": "🍞", "t": "राई की ब्रेड के साथ परोसा", "d": "पारंपरिक रूप से स्मोक्ड राई ब्रेड के टुकड़ों और कुरकुरे बेकन के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🫛", "t": "Kuru sarı yarım bezelye", "d": "Sarı yarım bezelyeler koyu, kremamsı bir çorbaya dönüşene kadar uzun süre pişirilir." },
+      { "icon": "🥓", "t": "Füme sosis", "d": "Bir Hollanda füme sosisi (rookworst) doğrudan çorbada pişirilerek yoğun lezzet katar." },
+      { "icon": "🥕", "t": "Kök sebzeler", "d": "Pırasa, kereviz ve havuç dokusu ve tazeliği için sona doğru eklenir." },
+      { "icon": "🍞", "t": "Çavdar ekmeğiyle servis edilir", "d": "Geleneksel olarak füme çavdar ekmeği dilimleri ve çıtır pastırmayla servis edilir." }
+    ],
+    "it": [
+      { "icon": "🫛", "t": "Piselli spezzati gialli secchi", "d": "I piselli spezzati gialli cuociono a lungo, finché si disfano in una zuppa densa e cremosa." },
+      { "icon": "🥓", "t": "Salsiccia affumicata", "d": "Una salsiccia olandese affumicata (rookworst) cuoce direttamente nella zuppa, insaporendola intensamente." },
+      { "icon": "🥕", "t": "Verdure a radice", "d": "Porro, sedano e carote vengono aggiunti verso la fine, per consistenza e freschezza." },
+      { "icon": "🍞", "t": "Servita con pane di segale", "d": "Tradizionalmente servita con fette di pane di segale affumicato e pancetta croccante." }
+    ],
+    "ko": [
+      { "icon": "🫛", "t": "말린 노란 쪼갠 완두콩", "d": "노란 쪼갠 완두콩을 오래 끓여 걸쭉하고 크리미한 수프로 풀어낸다." },
+      { "icon": "🥓", "t": "훈제 소시지", "d": "네덜란드 훈제 소시지(로우크보르스트)를 수프에 직접 넣어 끓여 진한 풍미를 낸다." },
+      { "icon": "🥕", "t": "뿌리채소", "d": "리크, 셀러리, 당근을 마지막에 넣어 식감과 신선함을 더한다." },
+      { "icon": "🍞", "t": "호밀빵과 함께 제공", "d": "전통적으로 훈제 호밀빵 슬라이스와 바삭한 베이컨을 곁들여 제공한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g mazăre galbenă despicată, uscată", "1.5 litri apă", "1 rookworst (cârnat afumat olandez, sau alt cârnat afumat)", "2 praz, feliați", "2 tulpini de țelină, tăiate cuburi", "2 morcovi, tăiați cuburi", "1 ceapă, tocată", "sare și piper după gust", "pâine de secară, pentru servire", "bacon crocant, pentru servire"],
+    "en": ["500g dried yellow split peas", "1.5 liters water", "1 rookworst (Dutch smoked sausage, or other smoked sausage)", "2 leeks, sliced", "2 celery stalks, cubed", "2 carrots, cubed", "1 onion, chopped", "salt and pepper to taste", "rye bread, for serving", "crispy bacon, for serving"],
+    "es": ["500g de guisantes amarillos partidos secos", "1.5 litros de agua", "1 rookworst (salchicha holandesa ahumada, u otra salchicha ahumada)", "2 puerros, en rodajas", "2 tallos de apio, en cubos", "2 zanahorias, en cubos", "1 cebolla, picada", "sal y pimienta al gusto", "pan de centeno, para servir", "tocino crujiente, para servir"],
+    "fr": ["500g de pois cassés jaunes secs", "1,5 litre d'eau", "1 rookworst (saucisse néerlandaise fumée, ou autre saucisse fumée)", "2 poireaux, émincés", "2 branches de céleri, en cubes", "2 carottes, en cubes", "1 oignon, haché", "sel et poivre selon le goût", "pain de seigle, pour servir", "lard croustillant, pour servir"],
+    "de": ["500g getrocknete gelbe Spalterbsen", "1,5 Liter Wasser", "1 Rookworst (niederländische Räucherwurst, oder andere Räucherwurst)", "2 Lauch, in Scheiben", "2 Selleriestangen, gewürfelt", "2 Karotten, gewürfelt", "1 Zwiebel, gehackt", "Salz und Pfeffer nach Geschmack", "Roggenbrot, zum Servieren", "knuspriger Speck, zum Servieren"],
+    "pt": ["500g de ervilha amarela partida seca", "1,5 litros de água", "1 rookworst (linguiça holandesa defumada, ou outra linguiça defumada)", "2 alhos-porós, fatiados", "2 talos de aipo, em cubos", "2 cenouras, em cubos", "1 cebola, picada", "sal e pimenta a gosto", "pão de centeio, para servir", "bacon crocante, para servir"],
+    "ru": ["500г сушёного жёлтого колотого гороха", "1,5 литра воды", "1 руквурст (голландская копчёная колбаса или другая копчёная колбаса)", "2 лука-порея, нарезанных", "2 стебля сельдерея, кубиками", "2 моркови, кубиками", "1 луковица, нарезанная", "соль и перец по вкусу", "ржаной хлеб, для подачи", "хрустящий бекон, для подачи"],
+    "ar": ["500 غرام بازلاء صفراء مشقوقة مجففة", "1.5 لتر ماء", "نقانق روكفورست واحدة (نقانق هولندية مدخنة، أو أي نقانق مدخنة أخرى)", "كراثان، مقطّعان شرائح", "ساقا كرفس، مقطّعان مكعبات", "جزرتان، مقطّعتان مكعبات", "بصلة واحدة، مفرومة", "ملح وفلفل حسب الرغبة", "خبز الجاودار، للتقديم", "لحم مقدد مقرمش، للتقديم"],
+    "zh": ["500克干黄豌豆瓣", "1.5升水", "1根rookworst（荷兰烟熏香肠，或其他烟熏香肠）", "2根韭葱，切片", "2根芹菜茎，切丁", "2根胡萝卜，切丁", "1个洋葱，切碎", "盐和胡椒适量", "黑麦面包，配食用", "酥脆培根，配食用"],
+    "ja": ["乾燥黄色割りえんどう豆500g", "水1.5リットル", "ロークヴォルスト1本（オランダの燻製ソーセージ、または他の燻製ソーセージ）", "リーキ2本（薄切り）", "セロリ2本（角切り）", "にんじん2本（角切り）", "玉ねぎ1個（刻む）", "塩こしょう 適量", "ライ麦パン（添える用）", "カリカリのベーコン（添える用）"],
+    "hi": ["500 ग्राम सूखी पीली विभाजित मटर", "1.5 लीटर पानी", "1 रुकवोर्स्ट (डच स्मोक्ड सॉसेज, या अन्य स्मोक्ड सॉसेज)", "2 लीक, कटे", "2 अजमोदा डंठल, क्यूब में कटे", "2 गाजर, क्यूब में कटी", "1 प्याज़, कटा", "स्वादानुसार नमक और काली मिर्च", "राई की ब्रेड, परोसने के लिए", "कुरकुरा बेकन, परोसने के लिए"],
+    "tr": ["500g kuru sarı yarım bezelye", "1,5 litre su", "1 rookworst (Hollanda füme sosisi veya başka bir füme sosis)", "2 pırasa, dilimlenmiş", "2 kereviz sapı, küp doğranmış", "2 havuç, küp doğranmış", "1 soğan, doğranmış", "tuz ve karabiber, tadına göre", "servis için çavdar ekmeği", "servis için çıtır pastırma"],
+    "it": ["500g di piselli spezzati gialli secchi", "1,5 litri d'acqua", "1 rookworst (salsiccia olandese affumicata, o altra salsiccia affumicata)", "2 porri, a fette", "2 gambi di sedano, a cubetti", "2 carote, a cubetti", "1 cipolla, tritata", "sale e pepe q.b.", "pane di segale, per servire", "pancetta croccante, per servire"],
+    "ko": ["말린 노란 쪼갠 완두콩 500g", "물 1.5리터", "루크보르스트 1개(네덜란드 훈제 소시지, 또는 다른 훈제 소시지)", "리크 2대, 슬라이스", "셀러리 줄기 2대, 깍둑썰기", "당근 2개, 깍둑썰기", "양파 1개, 다진 것", "소금과 후추 약간", "호밀빵, 곁들임용", "바삭한 베이컨, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": "ÎNMOAIE MAZĂREA: Clătește mazărea despicată sub apă rece, apoi las-o la înmuiat în apă cel puțin 4 ore sau peste noapte. FIERBE MAZĂREA: Scurge mazărea, pune-o într-o oală mare cu apă proaspătă, adu la fierbere, apoi lasă la fiert mocnit la foc mic. ADAUGĂ CÂRNATUL: Adaugă rookworst-ul întreg în oală, lasă să fiarbă împreună cu mazărea 45 minute, până carnatul e pătruns. SCOATE CÂRNATUL: Scoate cârnatul, lasă-l deoparte, continuă să fierbi mazărea încă 45 minute, amestecând ocazional, până se dezintegrează complet. ADAUGĂ LEGUMELE: Adaugă praz, țelină, morcovi și ceapă tocată, lasă la fiert încă 20-25 minute, până legumele devin fragede. FELIAZĂ CÂRNATUL: Taie cârnatul răcit puțin în felii groase. PUNE ÎNAPOI CÂRNATUL: Adaugă feliile de cârnat înapoi în supă, lasă să se încălzească 5 minute. CONDIMENTEAZĂ: Gustă și ajustează sarea și piperul — supa trebuie să fie destul de groasă încât o lingură să stea în picioare. SERVEȘTE: Servește fierbinte, cu felii de pâine de secară și bacon crocant deasupra.",
+    "en": "SOAK THE PEAS: Rinse the split peas under cold water, then let them soak in water at least 4 hours or overnight. BOIL THE PEAS: Drain the peas, put them in a large pot with fresh water, bring to a boil, then let simmer over low heat. ADD THE SAUSAGE: Add the whole rookworst to the pot, let it simmer together with the peas 45 minutes, until the sausage is cooked through. REMOVE THE SAUSAGE: Remove the sausage, set it aside, continue simmering the peas another 45 minutes, stirring occasionally, until fully broken down. ADD THE VEGETABLES: Add the leek, celery, carrots and chopped onion, let simmer another 20-25 minutes, until the vegetables are tender. SLICE THE SAUSAGE: Cut the slightly cooled sausage into thick slices. RETURN THE SAUSAGE: Add the sausage slices back to the soup, let it warm through 5 minutes. SEASON: Taste and adjust salt and pepper — the soup should be thick enough for a spoon to stand upright. SERVE: Serve hot, with slices of rye bread and crispy bacon on top.",
+    "es": "REMOJA LOS GUISANTES: Enjuaga los guisantes partidos bajo agua fría, luego déjalos en remojo al menos 4 horas o toda la noche. HIERVE LOS GUISANTES: Escurre los guisantes, colócalos en una olla grande con agua fresca, lleva a ebullición, luego deja cocinar a fuego lento. AÑADE LA SALCHICHA: Añade el rookworst entero a la olla, deja que se cocine junto con los guisantes 45 minutos, hasta que la salchicha esté bien cocida. RETIRA LA SALCHICHA: Retira la salchicha, resérvala, continúa cocinando los guisantes 45 minutos más, removiendo ocasionalmente, hasta que se desintegren por completo. AÑADE LAS VERDURAS: Añade el puerro, el apio, las zanahorias y la cebolla picada, deja cocinar 20-25 minutos más, hasta que las verduras estén tiernas. CORTA LA SALCHICHA: Corta la salchicha ligeramente enfriada en rodajas gruesas. VUELVE A AÑADIR LA SALCHICHA: Añade las rodajas de salchicha de nuevo a la sopa, deja calentar 5 minutos. SAZONA: Prueba y ajusta la sal y la pimienta — la sopa debe estar lo suficientemente espesa como para que una cuchara se mantenga en pie. SIRVE: Sirve caliente, con rebanadas de pan de centeno y tocino crujiente encima.",
+    "fr": "FAITES TREMPER LES POIS: Rincez les pois cassés à l'eau froide, puis laissez-les tremper dans l'eau au moins 4 heures ou toute la nuit. FAITES BOUILLIR LES POIS: Égouttez les pois, mettez-les dans une grande marmite avec de l'eau fraîche, portez à ébullition, puis laissez mijoter à feu doux. AJOUTEZ LA SAUCISSE: Ajoutez le rookworst entier dans la marmite, laissez mijoter avec les pois 45 minutes, jusqu'à ce que la saucisse soit bien cuite. RETIREZ LA SAUCISSE: Retirez la saucisse, mettez-la de côté, continuez à mijoter les pois 45 minutes de plus, en remuant de temps en temps, jusqu'à ce qu'ils se désintègrent complètement. AJOUTEZ LES LÉGUMES: Ajoutez le poireau, le céleri, les carottes et l'oignon haché, laissez mijoter 20-25 minutes de plus, jusqu'à ce que les légumes soient tendres. TRANCHEZ LA SAUCISSE: Coupez la saucisse légèrement refroidie en tranches épaisses. REMETTEZ LA SAUCISSE: Remettez les tranches de saucisse dans la soupe, laissez réchauffer 5 minutes. ASSAISONNEZ: Goûtez et ajustez le sel et le poivre — la soupe doit être assez épaisse pour qu'une cuillère tienne debout. SERVEZ: Servez chaude, avec des tranches de pain de seigle et du lard croustillant dessus.",
+    "de": "ERBSEN EINWEICHEN: Die Spalterbsen unter kaltem Wasser abspülen, dann mindestens 4 Stunden oder über Nacht in Wasser einweichen lassen. ERBSEN KOCHEN: Die Erbsen abgießen, in einen großen Topf mit frischem Wasser geben, zum Kochen bringen, dann bei niedriger Hitze köcheln lassen. WURST HINZUFÜGEN: Die ganze Rookworst in den Topf geben, zusammen mit den Erbsen 45 Minuten köcheln lassen, bis die Wurst durchgegart ist. WURST HERAUSNEHMEN: Die Wurst herausnehmen, beiseitestellen, die Erbsen weitere 45 Minuten köcheln lassen, gelegentlich umrühren, bis sie vollständig zerfallen sind. GEMÜSE HINZUFÜGEN: Lauch, Sellerie, Karotten und gehackte Zwiebel zugeben, weitere 20-25 Minuten köcheln lassen, bis das Gemüse zart ist. WURST SCHNEIDEN: Die etwas abgekühlte Wurst in dicke Scheiben schneiden. WURST ZURÜCKGEBEN: Die Wurstscheiben zurück in die Suppe geben, 5 Minuten durchwärmen lassen. WÜRZEN: Abschmecken, Salz und Pfeffer anpassen — die Suppe sollte dick genug sein, dass ein Löffel darin aufrecht stehen bleibt. SERVIEREN: Heiß servieren, mit Scheiben Roggenbrot und knusprigem Speck obenauf.",
+    "pt": "DEMOLHE AS ERVILHAS: Enxague as ervilhas partidas em água fria, depois deixe-as de molho por pelo menos 4 horas ou durante a noite. FERVA AS ERVILHAS: Escorra as ervilhas, coloque-as numa panela grande com água fresca, leve à fervura, depois deixe cozinhar em fogo baixo. ADICIONE A LINGUIÇA: Junte a rookworst inteira à panela, deixe cozinhar junto com as ervilhas por 45 minutos, até a linguiça estar bem cozida. RETIRE A LINGUIÇA: Retire a linguiça, reserve, continue a cozinhar as ervilhas mais 45 minutos, mexendo ocasionalmente, até se desfazerem completamente. ADICIONE OS LEGUMES: Junte o alho-poró, o aipo, as cenouras e a cebola picada, deixe cozinhar mais 20-25 minutos, até os legumes ficarem macios. FATIE A LINGUIÇA: Corte a linguiça ligeiramente arrefecida em fatias grossas. DEVOLVA A LINGUIÇA: Junte as fatias de linguiça de volta à sopa, deixe aquecer por 5 minutos. TEMPERE: Prove e ajuste o sal e a pimenta — a sopa deve estar espessa o suficiente para uma colher ficar em pé. SIRVA: Sirva quente, com fatias de pão de centeio e bacon crocante por cima.",
+    "ru": "ЗАМОЧИТЕ ГОРОХ: Промойте колотый горох под холодной водой, затем замочите его в воде минимум на 4 часа или на ночь. СВАРИТЕ ГОРОХ: Слейте воду с гороха, положите его в большую кастрюлю со свежей водой, доведите до кипения, затем тушите на слабом огне. ДОБАВЬТЕ КОЛБАСУ: Добавьте целую руквурст в кастрюлю, тушите вместе с горохом 45 минут, пока колбаса не проварится. ДОСТАНЬТЕ КОЛБАСУ: Достаньте колбасу, отложите в сторону, продолжайте варить горох ещё 45 минут, время от времени помешивая, пока не разварится полностью. ДОБАВЬТЕ ОВОЩИ: Добавьте лук-порей, сельдерей, морковь и нарезанный лук, варите ещё 20-25 минут, пока овощи не станут мягкими. НАРЕЖЬТЕ КОЛБАСУ: Нарежьте немного остывшую колбасу толстыми ломтиками. ВЕРНИТЕ КОЛБАСУ: Добавьте ломтики колбасы обратно в суп, дайте прогреться 5 минут. ПРИПРАВЬТЕ: Попробуйте и скорректируйте соль и перец — суп должен быть достаточно густым, чтобы ложка стояла в нём вертикально. ПОДАВАЙТЕ: Подавайте горячим, с ломтиками ржаного хлеба и хрустящим беконом сверху.",
+    "ar": "انقعي البازلاء: اشطفي البازلاء المشقوقة بماء بارد، ثم انقعيها في الماء 4 ساعات على الأقل أو طوال الليل. اسلقي البازلاء: صفّي البازلاء، ضعيها في قدر كبيرة بماء طازج، اتركيها تغلي، ثم اتركيها تنضج على نار هادئة. أضيفي النقانق: أضيفي الروكفورست كاملة إلى القدر، واتركيها تنضج مع البازلاء 45 دقيقة حتى تنضج النقانق تمامًا. أخرجي النقانق: أخرجي النقانق وضعيها جانبًا، واصلي طهي البازلاء 45 دقيقة إضافية مع التحريك أحيانًا حتى تتفكك تمامًا. أضيفي الخضار: أضيفي الكراث والكرفس والجزر والبصل المفروم، اتركيها تنضج 20-25 دقيقة إضافية حتى تصبح الخضار طرية. قطّعي النقانق: قطّعي النقانق بعد أن تبرد قليلًا إلى شرائح سميكة. أعيدي النقانق: أضيفي شرائح النقانق إلى الشوربة مرة أخرى، اتركيها تسخن 5 دقائق. تبّلي: تذوّقي وعدّلي الملح والفلفل — يجب أن تكون الشوربة سميكة بما يكفي لتقف الملعقة فيها منتصبة. قدّمي: قدّميها ساخنة مع شرائح خبز الجاودار ولحم مقدد مقرمش فوقها.",
+    "zh": "浸泡豌豆：将豌豆瓣用冷水冲洗，然后浸泡至少4小时或过夜。煮豌豆：沥干豌豆，放入盛有清水的大锅中煮沸，然后小火慢炖。加入香肠：将整根rookworst加入锅中，与豌豆一起炖45分钟，直至香肠熟透。取出香肠：取出香肠放在一旁，继续炖豌豆45分钟，偶尔搅拌，直至完全煮化。加入蔬菜：加入韭葱、芹菜、胡萝卜和洋葱碎，再炖20-25分钟，直至蔬菜变软。切香肠：将稍微放凉的香肠切成厚片。放回香肠：将香肠片放回汤中，加热5分钟。调味：品尝并调整盐和胡椒——汤应浓稠到能让勺子直立不倒的程度。上桌：趁热食用，上面放黑麦面包片和酥脆培根。",
+    "ja": "豆を浸水させる：割りえんどう豆を冷水ですすぎ、最低4時間または一晩水に浸す。豆を茹でる：豆の水を切り、大鍋に新しい水と共に入れて沸騰させ、弱火で煮込む。ソーセージを加える：丸ごとのロークヴォルストを鍋に加え、豆と一緒に45分煮込み、ソーセージに火が通るまで加熱する。ソーセージを取り出す：ソーセージを取り出して脇に置き、豆をさらに45分、時々かき混ぜながら完全に崩れるまで煮込む。野菜を加える：リーキ、セロリ、にんじん、刻んだ玉ねぎを加え、さらに20〜25分、野菜が柔らかくなるまで煮込む。ソーセージを切る：少し冷ましたソーセージを厚めにスライスする。ソーセージを戻す：スライスしたソーセージをスープに戻し入れ、5分温める。味付けする：味見をして塩こしょうを調整する——スープはスプーンが立つほど濃厚であるべき。提供する：ライ麦パンのスライスとカリカリのベーコンをのせて熱いうちに提供する。",
+    "hi": "मटर भिगोएं: विभाजित मटर को ठंडे पानी से धोएं, फिर कम से कम 4 घंटे या रात भर पानी में भिगोएं। मटर उबालें: मटर छानें, ताज़े पानी वाले बड़े बर्तन में डालें, उबाल लाएं, फिर धीमी आंच पर पकने दें। सॉसेज डालें: पूरा रुकवोर्स्ट बर्तन में डालें, मटर के साथ 45 मिनट पकने दें, जब तक सॉसेज पूरी तरह पक न जाए। सॉसेज निकालें: सॉसेज निकालें, अलग रखें, मटर को 45 मिनट और पकने दें, कभी-कभी हिलाते हुए, जब तक पूरी तरह टूट न जाए। सब्ज़ियाँ डालें: लीक, अजमोदा, गाजर और कटा प्याज़ डालें, 20-25 मिनट और पकने दें, जब तक सब्ज़ियाँ नरम न हो जाएं। सॉसेज काटें: थोड़ा ठंडा सॉसेज मोटे टुकड़ों में काटें। सॉसेज वापस डालें: सॉसेज के टुकड़े सूप में वापस डालें, 5 मिनट गरम होने दें। मसाला डालें: चखें और नमक-काली मिर्च समायोजित करें — सूप इतना गाढ़ा होना चाहिए कि उसमें चम्मच सीधा खड़ा रह सके। परोसें: गरमागरम, राई की ब्रेड के टुकड़ों और कुरकुरे बेकन के साथ परोसें।",
+    "tr": "BEZELYELERİ ISLATIN: Yarım bezelyeleri soğuk suyla durulayın, sonra en az 4 saat veya bir gece suda bekletin. BEZELYELERİ HAŞLAYIN: Bezelyeleri süzün, taze suyla büyük bir tencereye koyun, kaynatın, sonra kısık ateşte pişirin. SOSİSİ EKLEYİN: Bütün rookworst'u tencereye ekleyin, bezelyelerle birlikte 45 dakika, sosis tamamen pişene kadar pişirin. SOSİSİ ÇIKARIN: Sosisi çıkarın, kenara koyun, bezelyeleri arada karıştırarak tamamen dağılana kadar 45 dakika daha pişirin. SEBZELERİ EKLEYİN: Pırasa, kereviz, havuç ve doğranmış soğanı ekleyin, sebzeler yumuşayana kadar 20-25 dakika daha pişirin. SOSİSİ DİLİMLEYİN: Biraz soğumuş sosisi kalın dilimler halinde kesin. SOSİSİ GERİ EKLEYİN: Sosis dilimlerini çorbaya geri ekleyin, 5 dakika ısınmasını bekleyin. TATLANDIRIN: Tadına bakın ve tuz ile karabiberi ayarlayın — çorba bir kaşığın dik durabileceği kadar koyu olmalıdır. SERVİS YAPIN: Üzerine çavdar ekmeği dilimleri ve çıtır pastırma ile sıcak servis edin.",
+    "it": "AMMOLLA I PISELLI: Sciacqua i piselli spezzati sotto acqua fredda, poi lasciali in ammollo almeno 4 ore o tutta la notte. BOLLI I PISELLI: Scola i piselli, mettili in una pentola grande con acqua fresca, porta a ebollizione, poi lascia sobbollire a fuoco basso. AGGIUNGI LA SALSICCIA: Aggiungi la rookworst intera nella pentola, lascia sobbollire insieme ai piselli 45 minuti, finché la salsiccia è ben cotta. TOGLI LA SALSICCIA: Togli la salsiccia, mettila da parte, continua a far sobbollire i piselli altri 45 minuti, mescolando occasionalmente, finché si disfano completamente. AGGIUNGI LE VERDURE: Aggiungi porro, sedano, carote e cipolla tritata, lascia sobbollire altri 20-25 minuti, finché le verdure sono tenere. AFFETTA LA SALSICCIA: Taglia la salsiccia leggermente raffreddata a fette spesse. RIMETTI LA SALSICCIA: Rimetti le fette di salsiccia nella zuppa, lascia scaldare 5 minuti. INSAPORISCI: Assaggia e regola sale e pepe — la zuppa deve essere abbastanza densa da far stare in piedi un cucchiaio. SERVI: Servi calda, con fette di pane di segale e pancetta croccante sopra.",
+    "ko": "완두콩 불리기: 쪼갠 완두콩을 찬물에 헹군 뒤 최소 4시간 또는 하룻밤 물에 불린다. 완두콩 끓이기: 완두콩의 물기를 빼고 새 물을 담은 큰 냄비에 넣어 끓인 뒤 약불로 줄인다. 소시지 넣기: 통째로 루크보르스트를 냄비에 넣고 완두콩과 함께 45분간 소시지가 완전히 익을 때까지 끓인다. 소시지 꺼내기: 소시지를 꺼내 따로 두고, 완두콩을 완전히 풀어질 때까지 가끔 저어가며 45분 더 끓인다. 채소 넣기: 리크, 셀러리, 당근, 다진 양파를 넣고 채소가 부드러워질 때까지 20-25분 더 끓인다. 소시지 썰기: 살짝 식힌 소시지를 두껍게 썬다. 소시지 다시 넣기: 소시지 조각을 수프에 다시 넣고 5분간 데운다. 간하기: 맛을 보고 소금과 후추를 조절한다 — 수프는 숟가락이 똑바로 설 정도로 걸쭉해야 한다. 제공하기: 호밀빵 조각과 바삭한 베이컨을 위에 올려 뜨겁게 제공한다."
+  },
+  "originText": {
+    "ro": "Erwtensoep, cunoscută afectuos și sub numele de \"snert\", este considerată supa națională a Olandei, atât de bogată și consistentă încât se spune tradițional că trebuie să fie destul de groasă pentru ca o lingură să stea dreaptă în ea, fără sprijin. Originea sa se leagă de necesitatea de a folosi mazărea uscată, un produs abundent și accesibil în podișurile agricole olandeze, capabil să hrănească o familie întreagă pe timpul iernilor lungi.\n\nÎn Olanda, erwtensoep este strâns asociată cu iarna și activitățile de patinaj pe gheață — mulți olandezi asociază felul cu amintirea unei căni fierbinți de supă băută afară, după patinaj pe canalele înghețate. O tradiție culinară spune că supa e cea mai bună a doua zi, reîncălzită, când aromele s-au combinat și mai mult, motiv pentru care multe gospodării o gătesc special în avans, în cantități mari.",
+    "en": "Erwtensoep, affectionately also known as \"snert,\" is considered the national soup of the Netherlands, so rich and thick that tradition says it must be thick enough for a spoon to stand upright in it, unsupported. Its origin ties to the need to use dried peas, a plentiful and affordable crop in the Dutch agricultural lowlands, capable of feeding an entire family through long winters.\n\nIn the Netherlands, erwtensoep is closely associated with winter and ice-skating — many Dutch people associate the dish with the memory of a hot cup of soup drunk outdoors, after skating on frozen canals. A culinary tradition holds that the soup is best the next day, reheated, when the flavors have combined even further, which is why many households cook it deliberately in advance, in large quantities.",
+    "es": "El erwtensoep, cariñosamente también conocido como \"snert\", se considera la sopa nacional de los Países Bajos, tan rica y espesa que la tradición dice que debe ser lo suficientemente espesa como para que una cuchara se mantenga en pie sin apoyo. Su origen se vincula a la necesidad de usar guisantes secos, un cultivo abundante y asequible en las tierras bajas agrícolas holandesas, capaz de alimentar a toda una familia durante los largos inviernos.\n\nEn los Países Bajos, el erwtensoep está estrechamente asociado con el invierno y el patinaje sobre hielo — muchos holandeses asocian el plato con el recuerdo de una taza caliente de sopa bebida al aire libre, después de patinar en los canales congelados. Una tradición culinaria sostiene que la sopa está mejor al día siguiente, recalentada, cuando los sabores se han combinado aún más, razón por la cual muchos hogares la cocinan deliberadamente con antelación, en grandes cantidades.",
+    "fr": "L'erwtensoep, aussi affectueusement appelée \"snert\", est considérée comme la soupe nationale des Pays-Bas, si riche et épaisse que la tradition veut qu'elle soit assez épaisse pour qu'une cuillère y tienne debout sans soutien. Son origine est liée à la nécessité d'utiliser des pois secs, une culture abondante et abordable dans les basses terres agricoles néerlandaises, capable de nourrir une famille entière pendant les longs hivers.\n\nAux Pays-Bas, l'erwtensoep est étroitement associée à l'hiver et au patinage sur glace — de nombreux Néerlandais associent le plat au souvenir d'une tasse de soupe chaude bue en plein air, après avoir patiné sur les canaux gelés. Une tradition culinaire veut que la soupe soit meilleure le lendemain, réchauffée, lorsque les saveurs se sont encore plus combinées, c'est pourquoi de nombreux foyers la préparent délibérément à l'avance, en grandes quantités.",
+    "de": "Erwtensoep, liebevoll auch \"Snert\" genannt, gilt als die Nationalsuppe der Niederlande, so reichhaltig und dick, dass die Tradition besagt, sie müsse dick genug sein, damit ein Löffel darin ohne Halt aufrecht stehen bleibt. Ihr Ursprung ist mit der Notwendigkeit verbunden, getrocknete Erbsen zu verwenden, eine reichlich vorhandene und erschwingliche Feldfrucht in den niederländischen landwirtschaftlichen Tiefebenen, die eine ganze Familie durch lange Winter ernähren konnte.\n\nIn den Niederlanden ist Erwtensoep eng mit dem Winter und dem Schlittschuhlaufen verbunden — viele Niederländer verbinden das Gericht mit der Erinnerung an eine heiße Tasse Suppe, die im Freien nach dem Schlittschuhlaufen auf zugefrorenen Kanälen getrunken wurde. Eine kulinarische Tradition besagt, dass die Suppe am nächsten Tag, aufgewärmt, am besten schmeckt, wenn sich die Aromen noch weiter verbunden haben, weshalb viele Haushalte sie absichtlich im Voraus in großen Mengen kochen.",
+    "pt": "O erwtensoep, também carinhosamente conhecido como \"snert\", é considerado a sopa nacional dos Países Baixos, tão rica e espessa que a tradição diz que deve ser suficientemente espessa para uma colher ficar em pé sem apoio. A sua origem está ligada à necessidade de usar ervilhas secas, uma cultura abundante e acessível nas terras baixas agrícolas holandesas, capaz de alimentar uma família inteira durante longos invernos.\n\nNos Países Baixos, o erwtensoep está intimamente associado ao inverno e à patinagem no gelo — muitos holandeses associam o prato à memória de uma chávena quente de sopa bebida ao ar livre, depois de patinar nos canais congelados. Uma tradição culinária afirma que a sopa fica melhor no dia seguinte, reaquecida, quando os sabores se combinaram ainda mais, razão pela qual muitas famílias a cozinham deliberadamente com antecedência, em grandes quantidades.",
+    "ru": "Эртвенсуп, ласково также называемый \"снерт\", считается национальным супом Нидерландов, настолько густым и наваристым, что по традиции говорят, что он должен быть достаточно густым, чтобы ложка стояла в нём вертикально без опоры. Его происхождение связано с необходимостью использовать сушёный горох — обильную и доступную культуру на голландских сельскохозяйственных низменностях, способную прокормить целую семью в течение долгих зим.\n\nВ Нидерландах эртвенсуп тесно связан с зимой и катанием на коньках — многие голландцы ассоциируют это блюдо с воспоминанием о горячей чашке супа, выпитой на улице после катания на замёрзших каналах. Кулинарная традиция гласит, что суп лучше всего на следующий день, разогретый, когда вкусы ещё больше соединились, поэтому многие семьи специально готовят его заранее, в больших количествах.",
+    "ar": "يُعتبر الإرفتنسوب، المعروف بمحبة أيضًا باسم \"سنيرت\"، الشوربة الوطنية لهولندا، وهي غنية وسميكة لدرجة أن التقليد يقول إنها يجب أن تكون سميكة بما يكفي لتقف الملعقة فيها منتصبة دون سند. يرتبط أصلها بالحاجة إلى استخدام البازلاء المجففة، وهي محصول وفير وميسور التكلفة في الأراضي الزراعية المنخفضة الهولندية، قادر على إطعام عائلة كاملة خلال فصول الشتاء الطويلة.\n\nفي هولندا، ترتبط الإرفتنسوب ارتباطًا وثيقًا بالشتاء والتزلج على الجليد — يربط الكثير من الهولنديين هذا الطبق بذكرى كوب ساخن من الشوربة يُشرب في الهواء الطلق، بعد التزلج على القنوات المتجمدة. يقول تقليد طهوي إن الشوربة تكون أفضل في اليوم التالي، بعد تسخينها، عندما تتمازج النكهات أكثر، لهذا السبب تطبخها العديد من الأسر عمدًا مسبقًا بكميات كبيرة.",
+    "zh": "荷兰豌豆浓汤，亲切地也被称为「snert」，被视为荷兰的国民汤品，浓稠到传统上说勺子在汤中能直立不倒。它的起源与利用干豌豆的需要密切相关，干豌豆是荷兰农业低地地区丰富且经济实惠的作物，能够在漫长的冬季养活整个家庭。\n\n在荷兰，豌豆浓汤与冬季和滑冰活动紧密相连——许多荷兰人将这道菜与在结冰的运河上滑冰后在户外喝一杯热汤的记忆联系在一起。有一种烹饪传统认为，这道汤第二天重新加热后味道最好，因为风味会进一步融合，这也是许多家庭特意提前大量烹制的原因。",
+    "ja": "「スネルト」という愛称でも親しまれるエルテンスープは、オランダの国民的スープとされ、その濃厚さは伝統的にスプーンが支えなしで立つほどでなければならないと言われるほどである。その起源は、オランダの農業低地で豊富かつ安価な作物であった乾燥えんどう豆を活用する必要性にあり、長い冬の間、家族全員を養うことができた。\n\nオランダでは、エルテンスープは冬とスケートと深く結びついている——多くのオランダ人は、凍った運河でスケートをした後に屋外で飲んだ熱いスープの記憶とこの料理を結びつけている。料理の伝統では、スープは翌日に温め直すと風味がさらに一体化し、より美味しくなるとされており、そのため多くの家庭では意図的に大量に前もって作っておく。",
+    "hi": "एर्वटेनसुप, जिसे स्नेहपूर्वक \"स्नर्ट\" भी कहा जाता है, नीदरलैंड का राष्ट्रीय सूप माना जाता है, इतना समृद्ध और गाढ़ा कि परंपरा कहती है कि इसमें एक चम्मच बिना सहारे के सीधा खड़ा रह सके, इतना गाढ़ा होना चाहिए। इसकी उत्पत्ति सूखी मटर के उपयोग की आवश्यकता से जुड़ी है, जो डच कृषि तराई में एक प्रचुर और सस्ती फसल है, जो लंबी सर्दियों के दौरान पूरे परिवार को खिला सकती थी।\n\nनीदरलैंड में, एर्वटेनसुप सर्दी और आइस-स्केटिंग से गहराई से जुड़ा है — कई डच लोग इस व्यंजन को जमी हुई नहरों पर स्केटिंग के बाद बाहर पी गई गरम सूप की एक कटोरी की याद से जोड़ते हैं। एक पाक परंपरा कहती है कि अगले दिन दोबारा गरम किया गया सूप सबसे अच्छा होता है, जब स्वाद और भी अधिक मिल जाते हैं, यही कारण है कि कई घर इसे जानबूझकर पहले से, बड़ी मात्रा में बनाते हैं।",
+    "tr": "Sevgiyle \"snert\" olarak da bilinen erwtensoep, Hollanda'nın milli çorbası olarak kabul edilir; o kadar zengin ve koyudur ki gelenek, bir kaşığın desteksiz dik durabileceği kadar koyu olması gerektiğini söyler. Kökeni, uzun kışlar boyunca koca bir aileyi besleyebilen, Hollanda tarım ovalarında bol ve uygun fiyatlı bir ürün olan kuru bezelyeyi kullanma ihtiyacına bağlıdır.\n\nHollanda'da erwtensoep, kış mevsimi ve buz pateni ile yakından ilişkilidir — birçok Hollandalı, bu yemeği donmuş kanallarda paten yaptıktan sonra dışarıda içilen sıcak bir kase çorba anısıyla ilişkilendirir. Bir mutfak geleneğine göre çorba, lezzetlerin daha da birleştiği ertesi gün, ısıtılarak yenildiğinde daha iyidir; bu yüzden birçok hane bunu bilerek önceden, büyük miktarlarda pişirir.",
+    "it": "L'erwtensoep, affettuosamente conosciuta anche come \"snert\", è considerata la zuppa nazionale dei Paesi Bassi, così ricca e densa che la tradizione dice debba essere abbastanza densa da far stare in piedi un cucchiaio senza supporto. La sua origine è legata alla necessità di usare piselli secchi, una coltura abbondante ed economica nelle pianure agricole olandesi, capace di sfamare un'intera famiglia durante i lunghi inverni.\n\nNei Paesi Bassi, l'erwtensoep è strettamente associata all'inverno e al pattinaggio su ghiaccio — molti olandesi associano il piatto al ricordo di una tazza calda di zuppa bevuta all'aperto, dopo aver pattinato sui canali ghiacciati. Una tradizione culinaria sostiene che la zuppa sia migliore il giorno dopo, riscaldata, quando i sapori si sono ulteriormente amalgamati, motivo per cui molte famiglie la cucinano deliberatamente in anticipo, in grandi quantità.",
+    "ko": "정겹게 \"스네르트\"라고도 불리는 에르텐수프는 네덜란드의 국민 수프로 여겨지며, 얼마나 진하고 걸쭉한지 전통적으로 숟가락이 받침 없이 똑바로 설 수 있을 정도로 걸쭉해야 한다고 전해진다. 그 기원은 긴 겨울 동안 온 가족을 먹여 살릴 수 있는, 네덜란드 저지대 농업 지역에서 풍부하고 저렴한 작물이었던 말린 완두콩을 활용해야 할 필요성과 관련이 있다.\n\n네덜란드에서 에르텐수프는 겨울과 스케이트 타기와 밀접하게 연관되어 있다 — 많은 네덜란드인들은 이 요리를 얼어붙은 운하에서 스케이트를 탄 뒤 야외에서 마시던 뜨거운 수프 한 잔의 추억과 연결시킨다. 요리 전통에 따르면 이 수프는 다음 날 다시 데웠을 때 풍미가 더욱 어우러져 가장 맛있다고 하며, 이 때문에 많은 가정에서 일부러 미리 대량으로 끓여둔다."
+  },
+  "meta": {
+    "time": 130,
+    "costRon": 18,
+    "tags": ["high-protein", "family", "budget"],
+    "desc": {
+      "ro": "Supă groasă olandeză de mazăre despicată cu cârnat afumat, servită cu pâine de secară.",
+      "en": "Thick Dutch split pea soup with smoked sausage, served with rye bread.",
+      "es": "Sopa espesa holandesa de guisantes partidos con salchicha ahumada, servida con pan de centeno.",
+      "fr": "Soupe épaisse néerlandaise aux pois cassés et saucisse fumée, servie avec pain de seigle.",
+      "de": "Dicke niederländische Spalterbsensuppe mit Räucherwurst, serviert mit Roggenbrot.",
+      "pt": "Sopa espessa holandesa de ervilha partida com linguiça defumada, servida com pão de centeio.",
+      "ru": "Густой голландский гороховый суп с копчёной колбасой, подаётся с ржаным хлебом.",
+      "ar": "شوربة بازلاء هولندية سميكة بالنقانق المدخنة، تُقدَّم مع خبز الجاودار.",
+      "zh": "浓稠的荷兰豌豆瓣汤配烟熏香肠，配黑麦面包食用。",
+      "ja": "燻製ソーセージ入りの濃厚なオランダ風スプリットピースープ、ライ麦パンを添えて。",
+      "hi": "स्मोक्ड सॉसेज के साथ गाढ़ा डच स्प्लिट मटर सूप, राई की ब्रेड के साथ परोसा गया।",
+      "tr": "Füme sosisli koyu Hollanda usulü bezelye çorbası, çavdar ekmeğiyle servis edilir.",
+      "it": "Zuppa densa olandese di piselli spezzati con salsiccia affumicata, servita con pane di segale.",
+      "ko": "훈제 소시지를 곁들인 진한 네덜란드식 쪼갠 완두콩 수프, 호밀빵과 함께 제공."
+    }
+  }
+}
