@@ -1,0 +1,177 @@
+{
+  "id": 369,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Egipt", "en": "Egypt", "es": "Egipto", "fr": "Égypte", "de": "Ägypten",
+    "pt": "Egito", "ru": "Египет", "ar": "مصر", "zh": "埃及", "ja": "エジプト",
+    "hi": "मिस्र", "tr": "Mısır", "it": "Egitto", "ko": "이집트"
+  },
+  "name": {
+    "ro": "Molokhia (Supă de iută)", "en": "Molokhia (Jute Leaf Stew)", "es": "Molokhia (Guiso de hojas de yute)",
+    "fr": "Molokhia (Ragoût de feuilles de jute)", "de": "Molokhia (Jute-Blätter-Eintopf)", "pt": "Molokhia (Guisado de folhas de juta)",
+    "ru": "Молохия (Рагу из джутовых листьев)", "ar": "ملوخية", "zh": "埃及麻婆汤",
+    "ja": "モロヘイヤ（麻の葉のシチュー）", "hi": "मुलुखिया (जूट पत्ती स्ट्यू)", "tr": "Melohiya (Kırmızı Toplu Yaprak Yahnisi)",
+    "it": "Molokhia (Stufato di foglie di iuta)", "ko": "몰로키야 (마 잎 스튜)"
+  },
+  "category": {
+    "ro": "Supă", "en": "Soup", "es": "Sopa", "fr": "Soupe", "de": "Suppe", "pt": "Sopa",
+    "ru": "Суп", "ar": "حساء", "zh": "汤", "ja": "スープ", "hi": "सूप", "tr": "Çorba", "it": "Zuppa", "ko": "수프"
+  },
+  "featureCards": {
+    "ro": [
+      {"icon": "🌿", "t": "Frunze de iută tocate", "d": "Frunze verzi mărunțite fin, aproape ca praful, baza supei."},
+      {"icon": "🧄", "t": "Usturoi și coriandru", "d": "Amestec aromatic prăjit în unt clarificat, adăugat la final."},
+      {"icon": "🍲", "t": "Bulion de pui", "d": "Gătită tradițional în bulion de pui sau iepure."},
+      {"icon": "🍚", "t": "Servit cu orez", "d": "Nelipsit alături de orez alb și pâine egipteană."}
+    ],
+    "en": [
+      {"icon": "🌿", "t": "Minced jute leaves", "d": "Green leaves finely chopped, almost powder-like, the soup's base."},
+      {"icon": "🧄", "t": "Garlic and coriander", "d": "Aromatic mix fried in clarified butter, added at the end."},
+      {"icon": "🍲", "t": "Chicken broth", "d": "Traditionally cooked in chicken or rabbit broth."},
+      {"icon": "🍚", "t": "Served with rice", "d": "A staple alongside white rice and Egyptian bread."}
+    ],
+    "es": [
+      {"icon": "🌿", "t": "Hojas de yute picadas", "d": "Hojas verdes finamente picadas, casi como polvo, la base de la sopa."},
+      {"icon": "🧄", "t": "Ajo y cilantro", "d": "Mezcla aromática frita en mantequilla clarificada, añadida al final."},
+      {"icon": "🍲", "t": "Caldo de pollo", "d": "Cocinada tradicionalmente en caldo de pollo o conejo."},
+      {"icon": "🍚", "t": "Servida con arroz", "d": "Infaltable junto al arroz blanco y el pan egipcio."}
+    ],
+    "fr": [
+      {"icon": "🌿", "t": "Feuilles de jute hachées", "d": "Feuilles vertes finement hachées, presque en poudre, base de la soupe."},
+      {"icon": "🧄", "t": "Ail et coriandre", "d": "Mélange aromatique frit dans du beurre clarifié, ajouté à la fin."},
+      {"icon": "🍲", "t": "Bouillon de poulet", "d": "Cuisinée traditionnellement dans un bouillon de poulet ou de lapin."},
+      {"icon": "🍚", "t": "Servie avec du riz", "d": "Incontournable avec du riz blanc et du pain égyptien."}
+    ],
+    "de": [
+      {"icon": "🌿", "t": "Gehackte Jute-Blätter", "d": "Grüne Blätter, fein gehackt, fast pulverartig, die Basis der Suppe."},
+      {"icon": "🧄", "t": "Knoblauch und Koriander", "d": "Aromatische Mischung, in geklärter Butter gebraten, am Ende hinzugefügt."},
+      {"icon": "🍲", "t": "Hühnerbrühe", "d": "Traditionell in Hühner- oder Kaninchenbrühe gekocht."},
+      {"icon": "🍚", "t": "Mit Reis serviert", "d": "Unverzichtbar mit weißem Reis und ägyptischem Brot."}
+    ],
+    "pt": [
+      {"icon": "🌿", "t": "Folhas de juta picadas", "d": "Folhas verdes finamente picadas, quase como pó, a base da sopa."},
+      {"icon": "🧄", "t": "Alho e coentro", "d": "Mistura aromática frita em manteiga clarificada, adicionada no final."},
+      {"icon": "🍲", "t": "Caldo de galinha", "d": "Cozinhada tradicionalmente em caldo de galinha ou coelho."},
+      {"icon": "🍚", "t": "Servida com arroz", "d": "Presença obrigatória com arroz branco e pão egípcio."}
+    ],
+    "ru": [
+      {"icon": "🌿", "t": "Измельчённые листья джута", "d": "Зелёные листья, мелко нарезанные, почти как порошок, основа супа."},
+      {"icon": "🧄", "t": "Чеснок и кориандр", "d": "Ароматная смесь, обжаренная на топлёном масле, добавляется в конце."},
+      {"icon": "🍲", "t": "Куриный бульон", "d": "Традиционно готовится на курином или кроличьем бульоне."},
+      {"icon": "🍚", "t": "Подаётся с рисом", "d": "Неотъемлема вместе с белым рисом и египетским хлебом."}
+    ],
+    "ar": [
+      {"icon": "🌿", "t": "ملوخية مفرومة", "d": "أوراق خضراء مفرومة ناعمًا، تقريبًا كالبودرة، أساس الحساء."},
+      {"icon": "🧄", "t": "ثوم وكزبرة", "d": "خليط عطري مقلي بالسمن، يُضاف في النهاية."},
+      {"icon": "🍲", "t": "مرق دجاج", "d": "تُطهى تقليديًا في مرق الدجاج أو الأرنب."},
+      {"icon": "🍚", "t": "تُقدَّم مع الأرز", "d": "لا غنى عنها مع الأرز الأبيض والخبز المصري."}
+    ],
+    "zh": [
+      {"icon": "🌿", "t": "剁碎麻叶", "d": "绿叶切得极细，几乎成粉状，是汤的基底。"},
+      {"icon": "🧄", "t": "大蒜与香菜", "d": "用澄清黄油炒香的香料混合物，最后加入。"},
+      {"icon": "🍲", "t": "鸡汤", "d": "传统上用鸡汤或兔肉汤烹制。"},
+      {"icon": "🍚", "t": "配米饭食用", "d": "总是搭配白米饭和埃及面包一起食用。"}
+    ],
+    "ja": [
+      {"icon": "🌿", "t": "刻んだモロヘイヤの葉", "d": "粉状に近いほど細かく刻んだ緑の葉がスープの土台。"},
+      {"icon": "🧄", "t": "にんにくとコリアンダー", "d": "澄ましバターで炒めた香りのミックスを最後に加える。"},
+      {"icon": "🍲", "t": "鶏だし", "d": "伝統的に鶏やウサギの出汁で調理される。"},
+      {"icon": "🍚", "t": "米飯と共に", "d": "白米とエジプトのパンと共に欠かせない一品。"}
+    ],
+    "hi": [
+      {"icon": "🌿", "t": "कटी जूट की पत्तियां", "d": "बारीक कटी हरी पत्तियां, लगभग पाउडर जैसी, सूप का आधार।"},
+      {"icon": "🧄", "t": "लहसुन और धनिया", "d": "घी में भुना सुगंधित मिश्रण, अंत में डाला जाता है।"},
+      {"icon": "🍲", "t": "चिकन शोरबा", "d": "परंपरागत रूप से चिकन या खरगोश के शोरबे में पकाया जाता है।"},
+      {"icon": "🍚", "t": "चावल के साथ परोसा गया", "d": "सफेद चावल और मिस्री ब्रेड के साथ हमेशा मौजूद।"}
+    ],
+    "tr": [
+      {"icon": "🌿", "t": "Kıyılmış kırmızı topluca yaprağı", "d": "İnce kıyılmış, neredeyse toz gibi yeşil yapraklar, çorbanın tabanı."},
+      {"icon": "🧄", "t": "Sarımsak ve kişniş", "d": "Sadeyağda kavrulmuş aromatik karışım, sona eklenir."},
+      {"icon": "🍲", "t": "Tavuk suyu", "d": "Geleneksel olarak tavuk veya tavşan suyunda pişirilir."},
+      {"icon": "🍚", "t": "Pirinçle servis edilir", "d": "Beyaz pirinç ve Mısır ekmeğiyle vazgeçilmez."}
+    ],
+    "it": [
+      {"icon": "🌿", "t": "Foglie di iuta tritate", "d": "Foglie verdi tritate finemente, quasi come polvere, la base della zuppa."},
+      {"icon": "🧄", "t": "Aglio e coriandolo", "d": "Miscela aromatica fritta nel burro chiarificato, aggiunta alla fine."},
+      {"icon": "🍲", "t": "Brodo di pollo", "d": "Cucinata tradizionalmente in brodo di pollo o coniglio."},
+      {"icon": "🍚", "t": "Servita con riso", "d": "Immancabile insieme al riso bianco e al pane egiziano."}
+    ],
+    "ko": [
+      {"icon": "🌿", "t": "다진 몰로키아 잎", "d": "거의 가루처럼 곱게 다진 녹색 잎, 수프의 기본 재료."},
+      {"icon": "🧄", "t": "마늘과 고수", "d": "정제 버터에 볶은 향신 혼합물을 마지막에 넣는다."},
+      {"icon": "🍲", "t": "닭 육수", "d": "전통적으로 닭이나 토끼 육수로 조리한다."},
+      {"icon": "🍚", "t": "밥과 함께 제공", "d": "흰쌀밥과 이집트 빵과 함께 빠질 수 없다."}
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g frunze de iută tocate mărunt (proaspete sau congelate)", "1 litru bulion de pui", "6 căței de usturoi tocați", "2 linguri unt clarificat", "1 linguriță coriandru măcinat", "sare, piper", "zeamă de la 1 lămâie", "pâine egipteană sau orez pentru servire"],
+    "en": ["500g finely chopped jute leaves (fresh or frozen)", "1 liter chicken broth", "6 garlic cloves, minced", "2 tbsp clarified butter", "1 tsp ground coriander", "salt, pepper", "juice of 1 lemon", "Egyptian bread or rice for serving"],
+    "es": ["500g de hojas de yute finamente picadas (frescas o congeladas)", "1 litro de caldo de pollo", "6 dientes de ajo picados", "2 cdas de mantequilla clarificada", "1 cdta de cilantro molido", "sal, pimienta", "zumo de 1 limón", "pan egipcio o arroz para servir"],
+    "fr": ["500g de feuilles de jute finement hachées (fraîches ou surgelées)", "1 litre de bouillon de poulet", "6 gousses d'ail hachées", "2 c. à s. de beurre clarifié", "1 c. à c. de coriandre moulue", "sel, poivre", "jus de 1 citron", "pain égyptien ou riz pour servir"],
+    "de": ["500g fein gehackte Jute-Blätter (frisch oder gefroren)", "1 Liter Hühnerbrühe", "6 Knoblauchzehen, gehackt", "2 EL geklärte Butter", "1 TL gemahlener Koriander", "Salz, Pfeffer", "Saft von 1 Zitrone", "ägyptisches Brot oder Reis zum Servieren"],
+    "pt": ["500g de folhas de juta finamente picadas (frescas ou congeladas)", "1 litro de caldo de galinha", "6 dentes de alho picados", "2 c. sopa de manteiga clarificada", "1 colher de chá de coentro moído", "sal, pimenta", "sumo de 1 limão", "pão egípcio ou arroz para servir"],
+    "ru": ["500г мелко нарезанных листьев джута (свежих или замороженных)", "1 литр куриного бульона", "6 зубчиков чеснока, измельчённых", "2 ст.л. топлёного масла", "1 ч.л. молотого кориандра", "соль, перец", "сок 1 лимона", "египетский хлеб или рис для подачи"],
+    "ar": ["500غ ملوخية مفرومة ناعمًا (طازجة أو مجمدة)", "1 لتر مرق دجاج", "6 فصوص ثوم مفروم", "2 ملعقة كبيرة سمن", "ملعقة صغيرة كزبرة مطحونة", "ملح، فلفل", "عصير ليمونة واحدة", "خبز مصري أو أرز للتقديم"],
+    "zh": ["细切麻叶500克（新鲜或冷冻）", "鸡汤1升", "大蒜6瓣，切碎", "澄清黄油2汤匙", "香菜粉1茶匙", "盐、胡椒", "柠檬汁1个柠檬量", "配食用埃及面包或米饭"],
+    "ja": ["細かく刻んだモロヘイヤの葉 500g（生または冷凍）", "鶏だし 1リットル", "にんにく 6片（みじん切り）", "澄ましバター 大さじ2", "コリアンダーパウダー 小さじ1", "塩、こしょう", "レモン1個分の果汁", "提供用のエジプトパンまたは米"],
+    "hi": ["500 ग्राम बारीक कटी जूट की पत्तियां (ताज़ी या फ्रोज़न)", "1 लीटर चिकन शोरबा", "6 लहसुन की कलियाँ, कटी", "2 बड़े चम्मच घी", "1 छोटा चम्मच पिसा धनिया", "नमक, काली मिर्च", "1 नींबू का रस", "परोसने के लिए मिस्री ब्रेड या चावल"],
+    "tr": ["500g ince kıyılmış kırmızı topluca yaprağı (taze veya dondurulmuş)", "1 litre tavuk suyu", "6 diş sarımsak, kıyılmış", "2 yemek kaşığı sadeyağ", "1 çay kaşığı öğütülmüş kişniş", "tuz, karabiber", "1 limonun suyu", "servis için Mısır ekmeği veya pirinç"],
+    "it": ["500g di foglie di iuta tritate finemente (fresche o surgelate)", "1 litro di brodo di pollo", "6 spicchi d'aglio tritati", "2 cucchiai di burro chiarificato", "1 cucchiaino di coriandolo macinato", "sale, pepe", "succo di 1 limone", "pane egiziano o riso per servire"],
+    "ko": ["곱게 다진 몰로키아 잎 500g(생 또는 냉동)", "닭 육수 1리터", "마늘 6쪽, 다진 것", "정제 버터 2큰술", "간 고수 1작은술", "소금, 후추", "레몬 1개분 즙", "곁들일 이집트 빵 또는 밥"]
+  },
+  "howIsMade": {
+    "ro": "FIERBERE BULION: Adu bulionul de pui la fierbere într-o oală mare. ADĂUGARE FRUNZE: Adaugă frunzele de iută tocate în bulionul clocotit, amestecă bine pentru a nu se aglomera. FIERBERE SUPĂ: Fierbe la foc mediu 10-15 minute, amestecând ocazional, până supa se îngroașă ușor. CONDIMENTARE: Adaugă sare și piper, gustă și ajustează. PREPARARE TAKLIA: Într-o tigaie separată, călește usturoiul tocat în unt clarificat până devine auriu, adaugă coriandrul măcinat chiar înainte de a lua de pe foc. ÎNCORPORARE TAKLIA: Toarnă amestecul de usturoi și coriandru direct în supă, amestecând rapid — acest pas dă aroma caracteristică molokhiei. SERVIRE: Servește fierbinte, cu zeamă de lămâie stropită deasupra, alături de orez alb sau pâine egipteană.",
+    "en": "BOIL BROTH: Bring the chicken broth to a boil in a large pot. ADD LEAVES: Add the chopped jute leaves to the boiling broth, stirring well so they don't clump. SIMMER SOUP: Simmer over medium heat for 10-15 minutes, stirring occasionally, until the soup thickens slightly. SEASON: Add salt and pepper, taste and adjust. PREPARE TAKLIA: In a separate pan, fry the minced garlic in clarified butter until golden, add the ground coriander right before removing from heat. STIR IN TAKLIA: Pour the garlic and coriander mixture directly into the soup, stirring quickly — this step gives molokhia its signature aroma. SERVE: Serve hot, with lemon juice drizzled on top, alongside white rice or Egyptian bread.",
+    "es": "HERVIR EL CALDO: Lleva el caldo de pollo a ebullición en una olla grande. AÑADIR LAS HOJAS: Añade las hojas de yute picadas al caldo hirviendo, removiendo bien para que no se apelmacen. HERVIR LA SOPA: Cocina a fuego medio 10-15 minutos, removiendo ocasionalmente, hasta que la sopa espese ligeramente. SAZONAR: Añade sal y pimienta, prueba y ajusta. PREPARAR EL TAKLIA: En una sartén aparte, fríe el ajo picado en mantequilla clarificada hasta que esté dorado, añade el cilantro molido justo antes de retirar del fuego. INCORPORAR EL TAKLIA: Vierte la mezcla de ajo y cilantro directamente en la sopa, removiendo rápido — este paso da a la molokhia su aroma característico. SERVIR: Sirve caliente, con zumo de limón rociado por encima, junto a arroz blanco o pan egipcio.",
+    "fr": "FAIRE BOUILLIR LE BOUILLON: Portez le bouillon de poulet à ébullition dans une grande marmite. AJOUTER LES FEUILLES: Ajoutez les feuilles de jute hachées au bouillon bouillant, en remuant bien pour qu'elles ne s'agglutinent pas. MIJOTER LA SOUPE: Laissez mijoter à feu moyen 10-15 minutes, en remuant occasionnellement, jusqu'à ce que la soupe épaississe légèrement. ASSAISONNER: Ajoutez sel et poivre, goûtez et ajustez. PRÉPARER LE TAKLIA: Dans une poêle séparée, faites frire l'ail haché dans du beurre clarifié jusqu'à ce qu'il soit doré, ajoutez la coriandre moulue juste avant de retirer du feu. INCORPORER LE TAKLIA: Versez le mélange d'ail et de coriandre directement dans la soupe, en remuant rapidement — cette étape donne à la molokhia son arôme caractéristique. SERVIR: Servez chaud, avec du jus de citron arrosé dessus, avec du riz blanc ou du pain égyptien.",
+    "de": "BRÜHE KOCHEN: Die Hühnerbrühe in einem großen Topf zum Kochen bringen. BLÄTTER HINZUFÜGEN: Die gehackten Jute-Blätter zur kochenden Brühe geben, gut umrühren, damit sie nicht verklumpen. SUPPE KÖCHELN: 10-15 Minuten bei mittlerer Hitze köcheln, gelegentlich umrühren, bis die Suppe leicht eindickt. WÜRZEN: Salz und Pfeffer hinzufügen, abschmecken und anpassen. TAKLIA ZUBEREITEN: In einer separaten Pfanne den gehackten Knoblauch in geklärter Butter goldbraun braten, den gemahlenen Koriander kurz vor dem Herausnehmen hinzufügen. TAKLIA EINRÜHREN: Die Knoblauch-Koriander-Mischung direkt in die Suppe gießen, schnell umrühren — dieser Schritt gibt der Molokhia ihr charakteristisches Aroma. SERVIEREN: Heiß servieren, mit Zitronensaft beträufelt, zusammen mit weißem Reis oder ägyptischem Brot.",
+    "pt": "FERVER O CALDO: Leve o caldo de galinha a ferver numa panela grande. ADICIONAR AS FOLHAS: Junte as folhas de juta picadas ao caldo a ferver, mexendo bem para não formarem grumos. FERVER A SOPA: Cozinhe em lume médio 10-15 minutos, mexendo ocasionalmente, até a sopa engrossar ligeiramente. TEMPERAR: Junte sal e pimenta, prove e ajuste. PREPARAR O TAKLIA: Numa frigideira separada, frite o alho picado em manteiga clarificada até dourar, junte o coentro moído mesmo antes de retirar do lume. INCORPORAR O TAKLIA: Deite a mistura de alho e coentro diretamente na sopa, mexendo rapidamente — este passo dá à molokhia o seu aroma característico. SERVIR: Sirva quente, com sumo de limão regado por cima, junto com arroz branco ou pão egípcio.",
+    "ru": "ЗАКИПАНИЕ БУЛЬОНА: Доведите куриный бульон до кипения в большой кастрюле. ДОБАВЛЕНИЕ ЛИСТЬЕВ: Добавьте нарезанные листья джута в кипящий бульон, хорошо помешивая, чтобы не образовывались комки. ВАРКА СУПА: Варите на среднем огне 10-15 минут, периодически помешивая, пока суп слегка не загустеет. ПРИПРАВА: Добавьте соль и перец, попробуйте и отрегулируйте. ПРИГОТОВЛЕНИЕ ТАКЛИИ: На отдельной сковороде обжарьте измельчённый чеснок на топлёном масле до золотистости, добавьте молотый кориандр непосредственно перед снятием с огня. ВМЕШИВАНИЕ ТАКЛИИ: Влейте смесь чеснока и кориандра прямо в суп, быстро помешивая — этот шаг придаёт молохии характерный аромат. ПОДАЧА: Подавайте горячим, сбрызнув лимонным соком, с белым рисом или египетским хлебом.",
+    "ar": "غلي المرق: اغلِ مرق الدجاج في قدر كبير. إضافة الأوراق: أضف الملوخية المفرومة إلى المرق المغلي، مع التحريك جيدًا حتى لا تتكتل. طهي الحساء: اطهِ على نار متوسطة لمدة 10-15 دقيقة، مع التحريك أحيانًا، حتى يتماسك الحساء قليلًا. التتبيل: أضف الملح والفلفل، تذوق واضبط. تحضير التقلية: في مقلاة منفصلة، حمّر الثوم المفروم في السمن حتى يصبح ذهبيًا، أضف الكزبرة المطحونة قبل رفعها عن النار مباشرة. إضافة التقلية: اسكب خليط الثوم والكزبرة مباشرة في الحساء مع التحريك بسرعة — هذه الخطوة تمنح الملوخية نكهتها المميزة. التقديم: قدّمها ساخنة مع عصير الليمون المرشوش فوقها، مع الأرز الأبيض أو الخبز المصري.",
+    "zh": "煮沸高汤：将鸡汤在大锅中煮沸。加入叶子：将切碎的麻叶加入沸腾的高汤中，充分搅拌以防结块。炖煮汤品：中火炖10-15分钟，偶尔搅拌，直至汤略微变稠。调味：加入盐和胡椒，品尝并调整。准备蒜香料：在另一个平底锅中，将切碎的大蒜用澄清黄油炒至金黄，离火前加入香菜粉。加入蒜香料：将蒜香混合物直接倒入汤中并快速搅拌——这一步赋予麻婆汤特有的香气。装盘：趁热食用，淋上柠檬汁，配白米饭或埃及面包。",
+    "ja": "出汁を沸かす：鶏だしを大きな鍋で沸騰させる。葉を加える：刻んだモロヘイヤの葉を沸騰した出汁に加え、固まらないようによく混ぜる。スープを煮る：中火で10〜15分、時々かき混ぜながら、スープが少しとろみがつくまで煮る。味付け：塩とこしょうを加え、味見して調整する。タクリアを準備する：別のフライパンで、刻んだにんにくを澄ましバターで黄金色になるまで炒め、火から下ろす直前にコリアンダーパウダーを加える。タクリアを混ぜる：にんにくとコリアンダーの混合物を直接スープに注ぎ、素早くかき混ぜる――このステップがモロヘイヤ特有の香りを生む。盛り付け：熱いうちにレモン汁をかけ、白米またはエジプトのパンと共に提供する。",
+    "hi": "शोरबा उबालें: चिकन शोरबे को बड़े बर्तन में उबाल आने तक गरम करें। पत्तियां डालें: कटी जूट की पत्तियों को उबलते शोरबे में डालें, गुठली न बनने के लिए अच्छी तरह हिलाएं। सूप उबालें: मध्यम आँच पर 10-15 मिनट, कभी-कभी हिलाते हुए, जब तक सूप हल्का गाढ़ा न हो जाए, पकाएं। मसाला डालें: नमक और काली मिर्च डालें, चखें और समायोजित करें। तक़लिया तैयार करें: एक अलग पैन में, कटे लहसुन को घी में सुनहरा होने तक भूनें, आँच से हटाने से ठीक पहले पिसा धनिया डालें। तक़लिया मिलाएं: लहसुन और धनिये का मिश्रण सीधे सूप में डालें, तेज़ी से हिलाते हुए — यह कदम मुलुखिया को उसकी खास सुगंध देता है। परोसें: गरमागरम, ऊपर नींबू का रस छिड़ककर, सफेद चावल या मिस्री ब्रेड के साथ परोसें।",
+    "tr": "SUYU KAYNATIN: Tavuk suyunu büyük bir tencerede kaynatın. YAPRAKLARI EKLEYİN: Kıyılmış kırmızı topluca yapraklarını kaynayan suya ekleyin, topaklanmaması için iyice karıştırın. ÇORBAYI PİŞİRİN: Orta ateşte, ara sıra karıştırarak, çorba hafifçe koyulaşana kadar 10-15 dakika pişirin. TATLANDIRIN: Tuz ve karabiber ekleyin, tadına bakın ve ayarlayın. TAKLİYAYI HAZIRLAYIN: Ayrı bir tavada, kıyılmış sarımsağı sadeyağda altın rengi olana kadar kavurun, ateşten almadan hemen önce öğütülmüş kişnişi ekleyin. TAKLİYAYI KARIŞTIRIN: Sarımsak ve kişniş karışımını doğrudan çorbaya dökün, hızlıca karıştırın — bu adım melohiyaya karakteristik aromasını verir. SERVİS EDİN: Sıcak, üzerine limon suyu gezdirerek, beyaz pirinç veya Mısır ekmeğiyle servis edin.",
+    "it": "FAR BOLLIRE IL BRODO: Portate a ebollizione il brodo di pollo in una pentola grande. AGGIUNGERE LE FOGLIE: Aggiungete le foglie di iuta tritate al brodo bollente, mescolando bene affinché non si ammassino. CUOCERE LA ZUPPA: Cuocete a fuoco medio 10-15 minuti, mescolando occasionalmente, finché la zuppa si addensa leggermente. INSAPORIRE: Aggiungete sale e pepe, assaggiate e regolate. PREPARARE IL TAKLIA: In una padella separata, friggete l'aglio tritato nel burro chiarificato finché dorato, aggiungete il coriandolo macinato appena prima di togliere dal fuoco. INCORPORARE IL TAKLIA: Versate il composto di aglio e coriandolo direttamente nella zuppa, mescolando rapidamente — questo passaggio conferisce alla molokhia il suo aroma caratteristico. SERVIRE: Servite calda, con succo di limone versato sopra, insieme a riso bianco o pane egiziano.",
+    "ko": "육수 끓이기: 큰 냄비에 닭 육수를 끓인다. 잎 넣기: 다진 몰로키아 잎을 끓는 육수에 넣고 뭉치지 않게 잘 젓는다. 수프 끓이기: 중불에서 10~15분, 가끔 저으며 수프가 살짝 걸쭉해질 때까지 끓인다. 간하기: 소금과 후추를 넣고 맛을 보아 조절한다. 타클리야 준비: 별도의 팬에서 다진 마늘을 정제 버터에 황금빛이 될 때까지 볶고, 불에서 내리기 직전에 간 고수를 넣는다. 타클리야 섞기: 마늘과 고수 혼합물을 수프에 바로 부어 빠르게 저어준다 — 이 단계가 몰로키아 특유의 향을 낸다. 담아내기: 뜨거울 때 레몬즙을 뿌려 흰쌀밥이나 이집트 빵과 함께 낸다."
+  },
+  "originText": {
+    "ro": "Molokhia are o istorie de mii de ani în Egipt, cu referiri care datează din perioada faraonică, deși numele actual provine din arabă și înseamnă literal a regilor, reflectând probabil statutul său de mâncare regală în perioada islamică timpurie. Planta de iută, din care se folosesc frunzele, crește ușor de-a lungul Nilului, ceea ce a făcut-o accesibilă tuturor claselor sociale de-a lungul istoriei.\n\nTextura mucilaginoasă a supei, similară gumboului american, împarte adesea egiptenii în două tabere — cei care o adoră și cei care evită această caracteristică. Tehnica de a căli usturoiul și coriandrul separat, numită taklia, și de a-l adăuga fierbinte direct în supă chiar înainte de servire este esențială — mulți bucătari consideră că acest pas final definește diferența dintre o molokhia mediocră și una excelentă.",
+    "en": "Molokhia has a history of thousands of years in Egypt, with references dating back to the pharaonic period, though its current name comes from Arabic and literally means of kings, likely reflecting its status as a royal dish in the early Islamic period. The jute plant, whose leaves are used, grows easily along the Nile, which made it accessible to all social classes throughout history.\n\nThe soup's mucilaginous texture, similar to American gumbo, often splits Egyptians into two camps — those who love it and those who avoid this characteristic. The technique of frying the garlic and coriander separately, called taklia, and adding it hot directly to the soup right before serving is essential — many cooks consider this final step to define the difference between a mediocre and an excellent molokhia.",
+    "es": "La molokhia tiene una historia de miles de años en Egipto, con referencias que se remontan al período faraónico, aunque su nombre actual proviene del árabe y significa literalmente de reyes, reflejando probablemente su estatus de plato real en el primer período islámico. La planta de yute, cuyas hojas se usan, crece fácilmente a lo largo del Nilo, lo que la hizo accesible a todas las clases sociales a lo largo de la historia.\n\nLa textura mucilaginosa de la sopa, similar al gumbo estadounidense, a menudo divide a los egipcios en dos bandos — los que la aman y los que evitan esta característica. La técnica de freír el ajo y el cilantro por separado, llamada taklia, y añadirlo caliente directamente a la sopa justo antes de servir es esencial — muchos cocineros consideran que este paso final define la diferencia entre una molokhia mediocre y una excelente.",
+    "fr": "La molokhia a une histoire de plusieurs milliers d'années en Égypte, avec des références remontant à la période pharaonique, bien que son nom actuel vienne de l'arabe et signifie littéralement des rois, reflétant probablement son statut de plat royal au début de la période islamique. La plante de jute, dont on utilise les feuilles, pousse facilement le long du Nil, ce qui l'a rendue accessible à toutes les classes sociales tout au long de l'histoire.\n\nLa texture mucilagineuse de la soupe, semblable au gombo américain, divise souvent les Égyptiens en deux camps — ceux qui l'adorent et ceux qui évitent cette caractéristique. La technique consistant à faire frire l'ail et la coriandre séparément, appelée taklia, et à l'ajouter chaud directement dans la soupe juste avant de servir est essentielle — de nombreux cuisiniers considèrent que cette étape finale définit la différence entre une molokhia médiocre et une excellente.",
+    "de": "Molokhia hat eine tausendjährige Geschichte in Ägypten, mit Hinweisen, die bis in die pharaonische Zeit zurückreichen, obwohl der heutige Name aus dem Arabischen stammt und wörtlich der Könige bedeutet, was wahrscheinlich seinen Status als königliches Gericht in der frühislamischen Zeit widerspiegelt. Die Jutepflanze, deren Blätter verwendet werden, wächst leicht entlang des Nils, was sie im Laufe der Geschichte für alle sozialen Schichten zugänglich machte.\n\nDie schleimige Textur der Suppe, ähnlich dem amerikanischen Gumbo, spaltet die Ägypter oft in zwei Lager — diejenigen, die sie lieben, und diejenigen, die dieses Merkmal meiden. Die Technik, Knoblauch und Koriander getrennt zu braten, genannt Taklia, und ihn heiß direkt vor dem Servieren in die Suppe zu geben, ist entscheidend — viele Köche betrachten diesen letzten Schritt als den Unterschied zwischen einer mittelmäßigen und einer ausgezeichneten Molokhia.",
+    "pt": "A molokhia tem uma história de milhares de anos no Egito, com referências que remontam ao período faraónico, embora o seu nome atual venha do árabe e signifique literalmente dos reis, refletindo provavelmente o seu estatuto de prato real no início do período islâmico. A planta de juta, cujas folhas são usadas, cresce facilmente ao longo do Nilo, o que a tornou acessível a todas as classes sociais ao longo da história.\n\nA textura mucilaginosa da sopa, semelhante ao gumbo americano, muitas vezes divide os egípcios em dois campos — os que a adoram e os que evitam esta característica. A técnica de fritar o alho e o coentro separadamente, chamada taklia, e adicioná-lo quente diretamente à sopa mesmo antes de servir é essencial — muitos cozinheiros consideram que este passo final define a diferença entre uma molokhia medíocre e uma excelente.",
+    "ru": "Молохия имеет тысячелетнюю историю в Египте, с упоминаниями, восходящими к фараоновскому периоду, хотя современное название происходит от арабского и буквально означает царская, вероятно, отражая её статус царского блюда в ранний исламский период. Джутовое растение, листья которого используются, легко растёт вдоль Нила, что делало его доступным для всех социальных классов на протяжении истории.\n\nСлизистая текстура супа, похожая на американский гамбо, часто делит египтян на два лагеря — тех, кто её обожает, и тех, кто избегает этой особенности. Техника отдельной обжарки чеснока и кориандра, называемая таклия, и добавление её горячей прямо в суп непосредственно перед подачей — необходима: многие повара считают этот последний шаг определяющим разницу между посредственной и превосходной молохией.",
+    "ar": "للملوخية تاريخ يمتد لآلاف السنين في مصر، مع إشارات تعود إلى العصر الفرعوني، رغم أن اسمها الحالي يأتي من العربية ويعني حرفيًا الملكية، مما يعكس على الأرجح مكانتها كطبق ملكي في بداية العصر الإسلامي. تنمو نبتة الملوخية، التي تُستخدم أوراقها، بسهولة على ضفاف النيل، مما جعلها متاحة لجميع الطبقات الاجتماعية عبر التاريخ.\n\nيقسم القوام اللزج للحساء، الشبيه بالغمبو الأمريكي، المصريين غالبًا إلى معسكرين — من يعشقونه ومن يتجنبون هذه الخاصية. تقنية تحمير الثوم والكزبرة بشكل منفصل، تُسمى التقلية، وإضافتها ساخنة مباشرة إلى الحساء قبل التقديم مباشرة أمر أساسي — يعتبر العديد من الطهاة أن هذه الخطوة الأخيرة تحدد الفرق بين ملوخية عادية وأخرى ممتازة.",
+    "zh": "麻婆汤在埃及有着数千年的历史，其记载可追溯至法老时期，尽管现今的名称源自阿拉伯语，字面意思是「属于国王的」，这很可能反映了它在早期伊斯兰时期作为皇家菜肴的地位。这种被用来取叶的麻类植物沿尼罗河两岸容易生长，使其在整个历史中都能被各个社会阶层所获得。\n\n这道汤黏稠的质地，类似美国的秋葵浓汤，常常将埃及人分成两派——喜爱它的人和回避这一特质的人。将大蒜和香菜分开炒香的技艺——称为塔克利亚——并在上桌前将其趁热直接加入汤中，是至关重要的一步；许多厨师认为这最后一步决定了一碗平庸的麻婆汤与一碗出色的麻婆汤之间的区别。",
+    "ja": "モロヘイヤはエジプトで数千年の歴史を持ち、ファラオ時代にまで遡る記録があるが、現在の名前はアラビア語に由来し、文字通り「王たちの」を意味し、おそらく初期イスラム時代における王家の料理としての地位を反映している。葉が使われるジュートの植物はナイル川沿いで容易に育ち、歴史を通じてあらゆる社会階級がこれを入手できるようにした。\n\nこのスープの粘り気のある食感は、アメリカのガンボに似ており、しばしばエジプト人をこの特徴を愛する派と避ける派の二つに分ける。にんにくとコリアンダーを別々に炒める技法――タクリアと呼ばれる――を熱いまま提供直前にスープに直接加えることが不可欠であり、多くの料理人はこの最後の工程が平凡なモロヘイヤと優れたモロヘイヤの違いを決定づけると考えている。",
+    "hi": "मुलुखिया का मिस्र में हज़ारों साल का इतिहास है, जिसके संदर्भ फ़िरौन काल तक जाते हैं, हालांकि इसका वर्तमान नाम अरबी से आता है और इसका शाब्दिक अर्थ है राजाओं का, जो शायद प्रारंभिक इस्लामी काल में इसकी शाही व्यंजन की स्थिति को दर्शाता है। जूट का पौधा, जिसकी पत्तियों का उपयोग किया जाता है, नील नदी के किनारे आसानी से उगता है, जिसने इसे इतिहास भर सभी सामाजिक वर्गों के लिए सुलभ बनाया।\n\nसूप की श्लेष्मीय बनावट, अमेरिकी गम्बो के समान, अक्सर मिस्रवासियों को दो खेमों में बांटती है — जो इसे पसंद करते हैं और जो इस विशेषता से बचते हैं। लहसुन और धनिये को अलग-अलग भूनने की तकनीक, जिसे तक़लिया कहा जाता है, और परोसने से ठीक पहले इसे गरम सीधे सूप में डालना आवश्यक है — कई रसोइए मानते हैं कि यह अंतिम चरण एक साधारण और एक उत्कृष्ट मुलुखिया के बीच का अंतर तय करता है।",
+    "tr": "Melohiyanın Mısır'da binlerce yıllık bir geçmişi vardır, referansları firavun dönemine kadar uzanır, ancak mevcut adı Arapçadan gelir ve tam anlamıyla krallara ait anlamına gelir; bu muhtemelen erken İslami dönemde kraliyet yemeği statüsünü yansıtır. Yaprakları kullanılan kırmızı topluca bitkisi Nil boyunca kolayca yetişir, bu da tarih boyunca tüm sosyal sınıflar için erişilebilir kılmıştır.\n\nÇorbanın Amerikan gumbosuna benzeyen yapışkan dokusu, Mısırlıları genellikle iki kampa böler — onu sevenler ve bu özelliğinden kaçınanlar. Sarımsak ve kişnişi ayrı ayrı kavurma tekniği, taklia olarak adlandırılır ve servisten hemen önce sıcak olarak doğrudan çorbaya eklenmesi esastır — birçok aşçı bu son adımın vasat bir melohiya ile mükemmel bir melohiya arasındaki farkı belirlediğini düşünür.",
+    "it": "La molokhia ha una storia millenaria in Egitto, con riferimenti che risalgono al periodo faraonico, sebbene il suo nome attuale derivi dall'arabo e significhi letteralmente dei re, riflettendo probabilmente il suo status di piatto reale nel primo periodo islamico. La pianta di iuta, di cui si usano le foglie, cresce facilmente lungo il Nilo, il che l'ha resa accessibile a tutte le classi sociali nel corso della storia.\n\nLa consistenza mucillaginosa della zuppa, simile al gumbo americano, spesso divide gli egiziani in due campi — coloro che la amano e coloro che evitano questa caratteristica. La tecnica di friggere aglio e coriandolo separatamente, chiamata taklia, e aggiungerla calda direttamente nella zuppa appena prima di servire è essenziale — molti cuochi ritengono che questo passaggio finale definisca la differenza tra una molokhia mediocre e una eccellente.",
+    "ko": "몰로키야는 이집트에서 수천 년의 역사를 가지고 있으며, 그 기록은 파라오 시대까지 거슬러 올라가지만, 현재의 이름은 아랍어에서 유래했으며 문자 그대로 왕들의라는 뜻으로, 초기 이슬람 시대 왕실 요리로서의 지위를 반영하는 것으로 보인다. 잎을 사용하는 마 식물은 나일강을 따라 쉽게 자라, 역사 내내 모든 사회 계층이 접할 수 있게 했다.\n\n미국의 검보와 비슷한 이 수프의 점성 있는 질감은 종종 이집트인들을 두 진영으로 나눈다 — 이를 사랑하는 사람들과 이 특성을 피하는 사람들. 마늘과 고수를 따로 볶는 타클리야라는 기법을 사용해, 제공 직전에 뜨거운 상태로 수프에 직접 넣는 것이 필수적이다 — 많은 요리사들은 이 마지막 단계가 평범한 몰로키야와 훌륭한 몰로키야를 가르는 차이를 결정짓는다고 여긴다."
+  },
+  "meta": {
+    "time": 40,
+    "costRon": 12,
+    "tags": [],
+    "desc": {
+      "ro": "Supă verde din frunze de iută, cu usturoi și coriandru călite, servită cu orez.",
+      "en": "Green soup of jute leaves, with fried garlic and coriander, served with rice.",
+      "es": "Sopa verde de hojas de yute, con ajo y cilantro fritos, servida con arroz.",
+      "fr": "Soupe verte de feuilles de jute, à l'ail et à la coriandre frits, servie avec du riz.",
+      "de": "Grüne Suppe aus Jute-Blättern, mit gebratenem Knoblauch und Koriander, mit Reis serviert.",
+      "pt": "Sopa verde de folhas de juta, com alho e coentro fritos, servida com arroz.",
+      "ru": "Зелёный суп из листьев джута с жареным чесноком и кориандром, подаётся с рисом.",
+      "ar": "حساء أخضر من الملوخية، مع ثوم وكزبرة مقلية، يُقدَّم مع الأرز.",
+      "zh": "麻叶绿汤，配炒蒜和香菜，配米饭食用。",
+      "ja": "モロヘイヤの葉の緑のスープ、炒めたにんにくとコリアンダー添え、米飯と共に。",
+      "hi": "जूट की पत्तियों का हरा सूप, तले लहसुन और धनिये के साथ, चावल के साथ परोसा गया।",
+      "tr": "Kızarmış sarımsak ve kişnişli yeşil kırmızı topluca yaprağı çorbası, pirinçle servis edilir.",
+      "it": "Zuppa verde di foglie di iuta, con aglio e coriandolo fritti, servita con riso.",
+      "ko": "마늘과 고수를 볶아 넣은 녹색 몰로키아 잎 수프, 밥과 함께 제공."
+    }
+  }
+}
