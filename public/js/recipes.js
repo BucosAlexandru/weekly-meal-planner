@@ -42060,8 +42060,8 @@ export const recipes = [
   {
     id: 341,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Ungaria",
       en: "Hungary",
@@ -42178,8 +42178,8 @@ export const recipes = [
   {
     id: 342,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Ungaria",
       en: "Hungary",
@@ -42296,8 +42296,8 @@ export const recipes = [
   {
     id: 343,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Ungaria",
       en: "Hungary",
@@ -42768,8 +42768,8 @@ export const recipes = [
   {
     id: 347,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Argentina",
       en: "Argentina",
@@ -42886,8 +42886,8 @@ export const recipes = [
   {
     id: 348,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Argentina",
       en: "Argentina",
@@ -43122,8 +43122,8 @@ export const recipes = [
   {
     id: 350,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Siria",
       en: "Syria",
@@ -43476,8 +43476,8 @@ export const recipes = [
   {
     id: 353,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Siria",
       en: "Syria",
@@ -43830,8 +43830,8 @@ export const recipes = [
   {
     id: 356,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Iran",
       en: "Iran",
@@ -43948,8 +43948,8 @@ export const recipes = [
   {
     id: 357,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Iran",
       en: "Iran",
@@ -44066,8 +44066,8 @@ export const recipes = [
   {
     id: 358,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Iran",
       en: "Iran",
@@ -44184,8 +44184,8 @@ export const recipes = [
   {
     id: 359,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Liban",
       en: "Lebanon",
@@ -44302,8 +44302,8 @@ export const recipes = [
   {
     id: 360,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Liban",
       en: "Lebanon",
@@ -44656,8 +44656,8 @@ export const recipes = [
   {
     id: 363,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Liban",
       en: "Lebanon",
@@ -44892,8 +44892,8 @@ export const recipes = [
   {
     id: 365,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "vegetarian",
+    tipType: "veg",
+    pairingsType: "veg",
     origin: {
       ro: "Malaysia",
       en: "Malaysia",
@@ -45246,8 +45246,8 @@ export const recipes = [
   {
     id: 368,
     servings: 4,
-    tipType: "vegetarian",
-    pairingsType: "sweet",
+    tipType: "dessert",
+    pairingsType: "dessert",
     origin: {
       ro: "Malaysia",
       en: "Malaysia",
