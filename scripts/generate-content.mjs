@@ -4304,7 +4304,7 @@ ${bridgeHtml}
    card its own visual identity instead of a repeating 🌍. */
 const COUNTRY_FLAG = {
   Algeria: '🇩🇿', Argentina: '🇦🇷', Armenia: '🇦🇲', Australia: '🇦🇺',
-  Belgium: '🇧🇪', 'Bosnia and Herzegovina': '🇧🇦', Brazil: '🇧🇷',
+  Austria: '🇦🇹', Belgium: '🇧🇪', 'Bosnia and Herzegovina': '🇧🇦', Brazil: '🇧🇷',
   Cambodia: '🇰🇭', Canada: '🇨🇦', 'Cape Verde': '🇨🇻', Chile: '🇨🇱',
   China: '🇨🇳', Colombia: '🇨🇴', Croatia: '🇭🇷', Cuba: '🇨🇺',
   Cyprus: '🇨🇾', 'Czech Republic': '🇨🇿', Denmark: '🇩🇰',
