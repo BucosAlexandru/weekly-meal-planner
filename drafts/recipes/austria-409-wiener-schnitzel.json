@@ -1,0 +1,209 @@
+{
+  "id": 409,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Austria",
+    "en": "Austria",
+    "es": "Austria",
+    "fr": "Autriche",
+    "de": "Österreich",
+    "pt": "Áustria",
+    "ru": "Австрия",
+    "ar": "النمسا",
+    "zh": "奥地利",
+    "ja": "オーストリア",
+    "hi": "ऑस्ट्रिया",
+    "tr": "Avusturya",
+    "it": "Austria",
+    "ko": "오스트리아"
+  },
+  "name": {
+    "ro": "Wiener Schnitzel",
+    "en": "Wiener Schnitzel",
+    "es": "Wiener Schnitzel",
+    "fr": "Wiener Schnitzel",
+    "de": "Wiener Schnitzel",
+    "pt": "Wiener Schnitzel",
+    "ru": "Венский шницель",
+    "ar": "شنيتزل فيينا",
+    "zh": "维也纳炸肉排",
+    "ja": "ウィンナーシュニッツェル",
+    "hi": "वीनर श्नित्ज़ेल",
+    "tr": "Viyana Şnitzeli",
+    "it": "Wiener Schnitzel",
+    "ko": "비너 슈니첼"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Cotlet de vițel bătut subțire", "d": "Cotletul de vițel se bate până devine foarte subțire, pentru o friptură rapidă și uniformă." },
+      { "icon": "🍞", "t": "Triplu strat de pesmet", "d": "Carnea trece prin făină, ou bătut și pesmet, în această ordine strictă, pentru o crustă care se umflă la prăjire." },
+      { "icon": "🧈", "t": "Prăjit în unt clarifiat", "d": "Se prăjește în unt clarifiat sau untură, tigaia mișcându-se ușor pentru ca crusta să se ondule natural." },
+      { "icon": "🍋", "t": "Felie de lămâie proaspătă", "d": "Se servește simplu, doar cu o felie de lămâie stoarsă deasupra chiar înainte de mușcătură." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Thin-pounded veal cutlet", "d": "The veal cutlet is pounded very thin, for a quick and even fry." },
+      { "icon": "🍞", "t": "Triple breading layer", "d": "The meat passes through flour, beaten egg and breadcrumbs, in that strict order, for a crust that puffs up while frying." },
+      { "icon": "🧈", "t": "Fried in clarified butter", "d": "Fried in clarified butter or lard, the pan gently shaken so the crust ripples naturally." },
+      { "icon": "🍋", "t": "Fresh lemon wedge", "d": "Served simply, with just a lemon wedge squeezed over it right before the first bite." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Chuleta de ternera bien fina", "d": "La chuleta de ternera se golpea hasta quedar muy fina, para una fritura rápida y uniforme." },
+      { "icon": "🍞", "t": "Triple capa de empanado", "d": "La carne pasa por harina, huevo batido y pan rallado, en ese orden estricto, para una costra que se hincha al freír." },
+      { "icon": "🧈", "t": "Frito en mantequilla clarificada", "d": "Se fríe en mantequilla clarificada o manteca, moviendo suavemente la sartén para que la costra se ondule de forma natural." },
+      { "icon": "🍋", "t": "Gajo de limón fresco", "d": "Se sirve simple, solo con un gajo de limón exprimido justo antes del primer bocado." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Escalope de veau bien aplatie", "d": "L'escalope de veau est aplatie très fin, pour une cuisson rapide et régulière." },
+      { "icon": "🍞", "t": "Triple couche de panure", "d": "La viande passe par la farine, l'œuf battu et la chapelure, dans cet ordre strict, pour une croûte qui gonfle à la cuisson." },
+      { "icon": "🧈", "t": "Frite au beurre clarifié", "d": "Frite au beurre clarifié ou au saindoux, la poêle secouée doucement pour que la croûte ondule naturellement." },
+      { "icon": "🍋", "t": "Quartier de citron frais", "d": "Servie simplement, avec juste un quartier de citron pressé dessus juste avant la première bouchée." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Dünn geklopftes Kalbsschnitzel", "d": "Das Kalbsschnitzel wird sehr dünn geklopft, für ein schnelles und gleichmäßiges Braten." },
+      { "icon": "🍞", "t": "Dreifache Panierschicht", "d": "Das Fleisch durchläuft Mehl, verquirltes Ei und Semmelbrösel in dieser strengen Reihenfolge, für eine Kruste, die beim Braten aufgeht." },
+      { "icon": "🧈", "t": "In geklärter Butter gebraten", "d": "In geklärter Butter oder Schmalz gebraten, wobei die Pfanne leicht geschwenkt wird, damit sich die Kruste natürlich wellt." },
+      { "icon": "🍋", "t": "Frische Zitronenspalte", "d": "Einfach serviert, nur mit einer Zitronenspalte, die kurz vor dem ersten Bissen darüber ausgedrückt wird." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Costeleta de vitela bem fina", "d": "A costeleta de vitela é batida até ficar muito fina, para uma fritura rápida e uniforme." },
+      { "icon": "🍞", "t": "Tripla camada de empanado", "d": "A carne passa por farinha, ovo batido e farinha de rosca, nessa ordem estrita, para uma crosta que incha ao fritar." },
+      { "icon": "🧈", "t": "Frita em manteiga clarificada", "d": "Frita em manteiga clarificada ou banha, com a frigideira balançada suavemente para a crosta ondular naturalmente." },
+      { "icon": "🍋", "t": "Fatia de limão fresco", "d": "Servida simples, apenas com uma fatia de limão espremida por cima logo antes da primeira garfada." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Тонко отбитая телячья котлета", "d": "Телячью котлету отбивают очень тонко, для быстрой и равномерной обжарки." },
+      { "icon": "🍞", "t": "Тройной слой панировки", "d": "Мясо проходит через муку, взбитое яйцо и панировочные сухари в строгом порядке, для корочки, вздувающейся при жарке." },
+      { "icon": "🧈", "t": "Жарится на топлёном масле", "d": "Жарится на топлёном масле или смальце, сковороду слегка встряхивают, чтобы корочка естественно волновалась." },
+      { "icon": "🍋", "t": "Свежая долька лимона", "d": "Подаётся просто, только с долькой лимона, выжатой сверху прямо перед первым кусочком." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "شريحة عجل مطروقة رقيقة", "d": "تُطرق شريحة العجل حتى تصبح رقيقة جدًا، لقلي سريع ومتساوٍ." },
+      { "icon": "🍞", "t": "ثلاث طبقات من التتبيل", "d": "يمر اللحم بالدقيق والبيض المخفوق وفتات الخبز، بهذا الترتيب الصارم، لتكوين قشرة تنتفخ أثناء القلي." },
+      { "icon": "🧈", "t": "يُقلى في الزبدة المصفاة", "d": "يُقلى في الزبدة المصفاة أو السمن، مع هز المقلاة بلطف لتتموج القشرة بشكل طبيعي." },
+      { "icon": "🍋", "t": "شريحة ليمون طازجة", "d": "يُقدَّم ببساطة، فقط مع شريحة ليمون تُعصر فوقه قبل اللقمة الأولى مباشرة." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "捶薄的小牛肉排", "d": "小牛肉排被捶打得非常薄，以便快速均匀地煎炸。" },
+      { "icon": "🍞", "t": "三层裹粉", "d": "肉排依次裹上面粉、蛋液和面包糠，严格按此顺序，煎炸时外壳会蓬松鼓起。" },
+      { "icon": "🧈", "t": "以澄清黄油煎炸", "d": "用澄清黄油或猪油煎炸，轻轻晃动锅子，让外壳自然形成波纹。" },
+      { "icon": "🍋", "t": "新鲜柠檬角", "d": "简单上桌，只在吃第一口前挤上一片柠檬。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "薄く叩いた仔牛肉", "d": "仔牛肉を薄く叩き伸ばし、素早く均一に揚げ焼きできるようにする。" },
+      { "icon": "🍞", "t": "三層の衣付け", "d": "肉は小麦粉、溶き卵、パン粉の順に厳密に衣をつけ、揚げると衣がふくらむ。" },
+      { "icon": "🧈", "t": "澄ましバターで揚げ焼き", "d": "澄ましバターやラードで揚げ焼きし、フライパンを軽く揺すって衣が自然に波打つようにする。" },
+      { "icon": "🍋", "t": "新鮮なレモンのくし切り", "d": "シンプルに、最初のひと口の直前にレモンを絞りかけて提供する。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "पतला कूटा वील कटलेट", "d": "वील कटलेट को बहुत पतला कूटा जाता है, जल्दी और समान रूप से तलने के लिए।" },
+      { "icon": "🍞", "t": "तिहरी ब्रेडिंग परत", "d": "मांस आटे, फेंटे अंडे और ब्रेडक्रम्ब्स से इसी सख्त क्रम में गुज़रता है, तलने पर फूलने वाली परत के लिए।" },
+      { "icon": "🧈", "t": "स्पष्ट मक्खन में तला", "d": "स्पष्ट मक्खन या चर्बी में तला जाता है, पैन को हल्के से हिलाते हुए ताकि परत स्वाभाविक रूप से लहरदार बने।" },
+      { "icon": "🍋", "t": "ताज़ा नींबू का टुकड़ा", "d": "सादा परोसा जाता है, बस पहले निवाले से ठीक पहले ऊपर नींबू निचोड़कर।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "İnce dövülmüş dana pirzola", "d": "Dana pirzola çok ince dövülür, hızlı ve eşit bir kızartma için." },
+      { "icon": "🍞", "t": "Üç katlı galeta unu kaplaması", "d": "Et sırasıyla una, çırpılmış yumurtaya ve galeta ununa bulanır, kızarınca kabaran bir kabuk için." },
+      { "icon": "🧈", "t": "Sadeyağda kızartılır", "d": "Sadeyağda veya iç yağında kızartılır, kabuğun doğal olarak dalgalanması için tava hafifçe sallanır." },
+      { "icon": "🍋", "t": "Taze limon dilimi", "d": "Sade servis edilir, sadece ilk lokmadan hemen önce üzerine sıkılan bir limon dilimiyle." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Cotoletta di vitello battuta sottile", "d": "La cotoletta di vitello viene battuta molto sottile, per una frittura rapida e uniforme." },
+      { "icon": "🍞", "t": "Triplo strato di panatura", "d": "La carne passa per farina, uovo sbattuto e pangrattato, in questo rigido ordine, per una crosta che si gonfia in cottura." },
+      { "icon": "🧈", "t": "Fritta nel burro chiarificato", "d": "Fritta nel burro chiarificato o nello strutto, muovendo delicatamente la padella perché la crosta si increspi naturalmente." },
+      { "icon": "🍋", "t": "Spicchio di limone fresco", "d": "Servita semplicemente, solo con uno spicchio di limone spremuto sopra appena prima del primo boccone." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "얇게 두드린 송아지 커틀릿", "d": "송아지 커틀릿을 아주 얇게 두드려 빠르고 고르게 튀길 수 있게 한다." },
+      { "icon": "🍞", "t": "삼중 튀김옷", "d": "고기는 밀가루, 푼 달걀, 빵가루 순서로 엄격히 입혀지며, 튀길 때 튀김옷이 부풀어 오른다." },
+      { "icon": "🧈", "t": "정제 버터에 튀기기", "d": "정제 버터나 라드에 튀기며, 팬을 살짝 흔들어 튀김옷이 자연스럽게 물결치게 한다." },
+      { "icon": "🍋", "t": "신선한 레몬 조각", "d": "간단하게, 첫 한입 직전에 레몬 조각을 짜서 곁들여 낸다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["4 cotlete de vițel (câte 150g), bătute subțire", "sare după gust", "1/2 cană făină", "2 ouă mari, bătute", "1 și 1/2 căni pesmet fin", "150g unt clarifiat sau untură, pentru prăjit", "1 lămâie, tăiată felii", "pătrunjel proaspăt, pentru garnitură"],
+    "en": ["4 veal cutlets (150g each), pounded thin", "salt to taste", "1/2 cup flour", "2 large eggs, beaten", "1 1/2 cups fine breadcrumbs", "150g clarified butter or lard, for frying", "1 lemon, sliced", "fresh parsley, for garnish"],
+    "es": ["4 chuletas de ternera (150g cada una), aplanadas finas", "sal al gusto", "1/2 taza de harina", "2 huevos grandes, batidos", "1 1/2 tazas de pan rallado fino", "150g de mantequilla clarificada o manteca, para freír", "1 limón, en rodajas", "perejil fresco, para decorar"],
+    "fr": ["4 escalopes de veau (150g chacune), aplaties finement", "sel selon le goût", "1/2 tasse de farine", "2 gros œufs, battus", "1 tasse et demie de chapelure fine", "150g de beurre clarifié ou de saindoux, pour la friture", "1 citron, en tranches", "persil frais, pour la garniture"],
+    "de": ["4 Kalbsschnitzel (je 150g), dünn geklopft", "Salz nach Geschmack", "1/2 Tasse Mehl", "2 große Eier, verquirlt", "1 1/2 Tassen feine Semmelbrösel", "150g geklärte Butter oder Schmalz, zum Braten", "1 Zitrone, in Scheiben", "frische Petersilie, zum Garnieren"],
+    "pt": ["4 costeletas de vitela (150g cada), batidas finas", "sal a gosto", "1/2 xícara de farinha", "2 ovos grandes, batidos", "1 xícara e meia de farinha de rosca fina", "150g de manteiga clarificada ou banha, para fritar", "1 limão, em fatias", "salsa fresca, para decorar"],
+    "ru": ["4 телячьи котлеты (по 150г), тонко отбитые", "соль по вкусу", "1/2 стакана муки", "2 крупных яйца, взбитых", "1 1/2 стакана мелких панировочных сухарей", "150г топлёного масла или смальца, для жарки", "1 лимон, нарезанный ломтиками", "свежая петрушка, для украшения"],
+    "ar": ["4 شرائح لحم عجل (150 غرام لكل منها)، مطروقة رقيقة", "ملح حسب الرغبة", "1/2 كوب دقيق", "بيضتان كبيرتان، مخفوقتان", "كوب ونصف فتات خبز ناعم", "150 غرام سمن أو زبدة مصفاة، للقلي", "ليمونة واحدة، مقطعة شرائح", "بقدونس طازج، للتزيين"],
+    "zh": ["4片小牛肉排（每片150克），捶薄", "盐适量", "1/2杯面粉", "2个大鸡蛋，打散", "1杯半细面包糠", "150克澄清黄油或猪油，用于煎炸", "1个柠檬，切片", "新鲜欧芹，装饰用"],
+    "ja": ["仔牛肉カツレツ4枚（各150g）、薄く叩いたもの", "塩 適量", "小麦粉1/2カップ", "卵2個（溶いておく）", "細かいパン粉1.5カップ", "澄ましバターまたはラード150g（揚げ焼き用）", "レモン1個（スライス）", "新鮮なパセリ（飾り用）"],
+    "hi": ["4 वील कटलेट (150 ग्राम प्रत्येक), पतले कूटे हुए", "स्वादानुसार नमक", "1/2 कप आटा", "2 बड़े अंडे, फेंटे हुए", "1.5 कप बारीक ब्रेडक्रम्ब्स", "150 ग्राम स्पष्ट मक्खन या चर्बी, तलने के लिए", "1 नींबू, कटा हुआ", "ताज़ा अजमोद, सजावट के लिए"],
+    "tr": ["4 dana pirzola (150g her biri), ince dövülmüş", "tuz, tadına göre", "1/2 su bardağı un", "2 büyük yumurta, çırpılmış", "1.5 su bardağı ince galeta unu", "150g sadeyağ veya iç yağı, kızartmak için", "1 limon, dilimlenmiş", "taze maydanoz, süslemek için"],
+    "it": ["4 cotolette di vitello (150g ciascuna), battute sottili", "sale q.b.", "1/2 tazza di farina", "2 uova grandi, sbattute", "1 tazza e mezza di pangrattato fine", "150g di burro chiarificato o strutto, per friggere", "1 limone, a fette", "prezzemolo fresco, per guarnire"],
+    "ko": ["송아지 커틀릿 4장(각 150g), 얇게 두드린 것", "소금 약간", "밀가루 1/2컵", "큰 달걀 2개, 푼 것", "고운 빵가루 1.5컵", "정제 버터 또는 라드 150g, 튀김용", "레몬 1개, 슬라이스", "장식용 신선한 파슬리"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE CARNEA: Bate cotletele de vițel între două folii de plastic, cu ciocanul de bătut carne, până ajung la o grosime de aproximativ 5mm. SĂREAZĂ: Sărează cotletele pe ambele părți. PREGĂTEȘTE STAȚIILE DE PANARE: Pune făina într-un vas plat, ouăle bătute în altul, iar pesmetul într-un al treilea. TREACE CARNEA PRIN FĂINĂ: Trece fiecare cotlet prin făină, scuturând excesul. TREACE PRIN OU: Cufundă cotletul în ou bătut, acoperind complet suprafața. TREACE PRIN PESMET: Presară imediat pesmet peste carne, apăsând ușor, fără să bați pesmetul în carne — trebuie să rămână o crustă liberă, ca să se poată umfla la prăjire. ÎNCINGE GRĂSIMEA: Încinge untul clarifiat sau untura într-o tigaie mare, la foc mediu-mare, până sfârâie ușor la contactul cu pesmetul. PRĂJEȘTE: Prăjește cotletele 2-3 minute pe fiecare parte, mișcând ușor tigaia dintr-o parte în alta în timpul prăjirii, ca grăsimea să curgă peste crustă și să o facă să se ondule. SCURGE: Scoate cotletele pe un platou cu hârtie absorbantă, pentru a elimina excesul de grăsime. SERVEȘTE: Servește imediat, cu felii de lămâie și pătrunjel proaspăt.",
+    "en": "PREPARE THE MEAT: Pound the veal cutlets between two sheets of plastic wrap, with a meat mallet, until about 5mm thick. SALT: Salt the cutlets on both sides. SET UP THE BREADING STATIONS: Put the flour in a flat dish, the beaten eggs in another, and the breadcrumbs in a third. COAT IN FLOUR: Pass each cutlet through the flour, shaking off the excess. COAT IN EGG: Dip the cutlet in the beaten egg, covering the whole surface. COAT IN BREADCRUMBS: Immediately sprinkle breadcrumbs over the meat, pressing gently, without pressing the crumbs into the meat — the crust needs to stay loose so it can puff up while frying. HEAT THE FAT: Heat the clarified butter or lard in a large pan over medium-high heat, until it sizzles lightly on contact with the breadcrumbs. FRY: Fry the cutlets 2-3 minutes per side, gently shaking the pan side to side while frying, so the fat washes over the crust and makes it ripple. DRAIN: Remove the cutlets onto a plate lined with paper towels, to remove the excess fat. SERVE: Serve immediately, with lemon slices and fresh parsley.",
+    "es": "PREPARA LA CARNE: Aplana las chuletas de ternera entre dos hojas de film plástico, con un mazo de carne, hasta unos 5mm de grosor. SALA: Sala las chuletas por ambos lados. PREPARA LAS ESTACIONES DE EMPANADO: Pon la harina en un plato llano, los huevos batidos en otro y el pan rallado en un tercero. PASA POR HARINA: Pasa cada chuleta por la harina, sacudiendo el exceso. PASA POR HUEVO: Sumerge la chuleta en el huevo batido, cubriendo toda la superficie. PASA POR PAN RALLADO: Espolvorea inmediatamente pan rallado sobre la carne, presionando suavemente, sin apretar las migas contra la carne — la costra debe quedar suelta para poder hincharse al freír. CALIENTA LA GRASA: Calienta la mantequilla clarificada o la manteca en una sartén grande a fuego medio-alto, hasta que chisporrotee ligeramente al contacto con el pan rallado. FRÍE: Fríe las chuletas 2-3 minutos por lado, moviendo suavemente la sartén de un lado a otro mientras fríes, para que la grasa bañe la costra y la haga ondularse. ESCURRE: Retira las chuletas a un plato con papel absorbente, para eliminar el exceso de grasa. SIRVE: Sirve de inmediato, con rodajas de limón y perejil fresco.",
+    "fr": "PRÉPAREZ LA VIANDE: Aplatissez les escalopes de veau entre deux feuilles de film plastique, avec un maillet à viande, jusqu'à environ 5mm d'épaisseur. SALEZ: Salez les escalopes des deux côtés. PRÉPAREZ LES STATIONS DE PANURE: Mettez la farine dans une assiette plate, les œufs battus dans une autre, et la chapelure dans une troisième. PASSEZ DANS LA FARINE: Passez chaque escalope dans la farine, en secouant l'excédent. PASSEZ DANS L'ŒUF: Trempez l'escalope dans l'œuf battu, en couvrant toute la surface. PASSEZ DANS LA CHAPELURE: Saupoudrez immédiatement de chapelure sur la viande, en pressant doucement, sans tasser la chapelure dans la viande — la croûte doit rester légère pour pouvoir gonfler à la cuisson. CHAUFFEZ LA MATIÈRE GRASSE: Chauffez le beurre clarifié ou le saindoux dans une grande poêle à feu moyen-vif, jusqu'à ce qu'il grésille légèrement au contact de la chapelure. FAITES FRIRE: Faites frire les escalopes 2-3 minutes de chaque côté, en secouant doucement la poêle d'un côté à l'autre pendant la cuisson, pour que la graisse baigne la croûte et la fasse onduler. ÉGOUTTEZ: Déposez les escalopes sur une assiette tapissée de papier absorbant, pour éliminer l'excédent de graisse. SERVEZ: Servez immédiatement, avec des tranches de citron et du persil frais.",
+    "de": "FLEISCH VORBEREITEN: Die Kalbsschnitzel zwischen zwei Lagen Frischhaltefolie mit einem Fleischklopfer auf etwa 5mm Dicke klopfen. SALZEN: Die Schnitzel auf beiden Seiten salzen. PANIERSTATIONEN VORBEREITEN: Das Mehl in einen flachen Teller geben, die verquirlten Eier in einen anderen und die Semmelbrösel in einen dritten. IN MEHL WENDEN: Jedes Schnitzel durch das Mehl ziehen, überschüssiges abschütteln. IN EI WENDEN: Das Schnitzel in das verquirlte Ei tauchen, die gesamte Oberfläche bedecken. IN SEMMELBRÖSEL WENDEN: Sofort Semmelbrösel über das Fleisch streuen, leicht andrücken, ohne die Brösel ins Fleisch zu drücken — die Kruste muss locker bleiben, damit sie beim Braten aufgehen kann. FETT ERHITZEN: Die geklärte Butter oder das Schmalz in einer großen Pfanne bei mittlerer bis hoher Hitze erhitzen, bis es beim Kontakt mit den Semmelbröseln leicht zischt. BRATEN: Die Schnitzel 2-3 Minuten pro Seite braten, dabei die Pfanne während des Bratens sanft hin und her schwenken, damit das Fett über die Kruste spült und sie wellig macht. ABTROPFEN LASSEN: Die Schnitzel auf einen mit Küchenpapier ausgelegten Teller legen, um überschüssiges Fett zu entfernen. SERVIEREN: Sofort servieren, mit Zitronenscheiben und frischer Petersilie.",
+    "pt": "PREPARE A CARNE: Bata as costeletas de vitela entre duas folhas de filme plástico, com um batedor de carne, até cerca de 5mm de espessura. TEMPERE: Tempere as costeletas dos dois lados com sal. PREPARE AS ESTAÇÕES DE EMPANAMENTO: Coloque a farinha num prato raso, os ovos batidos noutro e a farinha de rosca num terceiro. PASSE PELA FARINHA: Passe cada costeleta pela farinha, sacudindo o excesso. PASSE PELO OVO: Mergulhe a costeleta no ovo batido, cobrindo toda a superfície. PASSE PELA FARINHA DE ROSCA: Polvilhe imediatamente farinha de rosca sobre a carne, pressionando levemente, sem apertar as migalhas na carne — a crosta precisa ficar solta para poder inchar ao fritar. AQUEÇA A GORDURA: Aqueça a manteiga clarificada ou a banha numa frigideira grande em fogo médio-alto, até chiar levemente ao contato com a farinha de rosca. FRITE: Frite as costeletas 2-3 minutos de cada lado, balançando suavemente a frigideira de um lado para o outro durante a fritura, para que a gordura banhe a crosta e a faça ondular. ESCORRA: Retire as costeletas para um prato forrado com papel absorvente, para remover o excesso de gordura. SIRVA: Sirva imediatamente, com fatias de limão e salsa fresca.",
+    "ru": "ПОДГОТОВЬТЕ МЯСО: Отбейте телячьи котлеты между двумя слоями пищевой плёнки молотком для мяса до толщины примерно 5мм. ПОСОЛИТЕ: Посолите котлеты с обеих сторон. ПОДГОТОВЬТЕ СТАНЦИИ ДЛЯ ПАНИРОВКИ: Насыпьте муку в плоскую тарелку, взбитые яйца — в другую, а панировочные сухари — в третью. ОБВАЛЯЙТЕ В МУКЕ: Проведите каждую котлету через муку, стряхивая излишек. ОБМАКНИТЕ В ЯЙЦО: Окуните котлету во взбитое яйцо, покрывая всю поверхность. ОБВАЛЯЙТЕ В СУХАРЯХ: Сразу посыпьте мясо панировочными сухарями, слегка прижимая, не вдавливая их в мясо — корочка должна остаться рыхлой, чтобы вздуться при жарке. РАЗОГРЕЙТЕ ЖИР: Разогрейте топлёное масло или смалец в большой сковороде на среднем-сильном огне, пока не начнёт слегка шипеть при контакте с сухарями. ОБЖАРЬТЕ: Обжаривайте котлеты 2-3 минуты с каждой стороны, слегка покачивая сковороду из стороны в сторону во время жарки, чтобы жир омывал корочку и заставлял её волноваться. ДАЙТЕ СТЕЧЬ: Переложите котлеты на тарелку с бумажными полотенцами, чтобы убрать лишний жир. ПОДАВАЙТЕ: Подавайте сразу, с ломтиками лимона и свежей петрушкой.",
+    "ar": "حضّري اللحم: اطرقي شرائح العجل بين طبقتين من غلاف بلاستيكي بمطرقة اللحم حتى يصبح سمكها حوالي 5 مم. ملّحي: ملّحي الشرائح من الجانبين. حضّري محطات التتبيل: ضعي الدقيق في طبق مسطح، والبيض المخفوق في آخر، وفتات الخبز في ثالث. مرّري في الدقيق: مرّري كل شريحة في الدقيق، وانفضي الزائد. مرّري في البيض: اغمسي الشريحة في البيض المخفوق مغطية السطح بالكامل. مرّري في فتات الخبز: رشّي فتات الخبز فورًا فوق اللحم مع الضغط برفق، دون الضغط الشديد على الفتات داخل اللحم — يجب أن تبقى القشرة رخوة لتنتفخ أثناء القلي. سخّني الدهن: سخّني الزبدة المصفاة أو السمن في مقلاة كبيرة على نار متوسطة إلى عالية، حتى يصدر صوت طقطقة خفيف عند ملامسة فتات الخبز. اقلي: اقلي الشرائح 2-3 دقائق لكل جانب، مع هز المقلاة برفق من جانب لآخر أثناء القلي، ليغسل الدهن القشرة ويجعلها متموجة. صفّي: انقلي الشرائح إلى طبق مبطن بمنشفة ورقية لإزالة الدهن الزائد. قدّمي: قدّمي فورًا مع شرائح ليمون وبقدونس طازج.",
+    "zh": "处理肉排：将小牛肉排放在两层保鲜膜之间，用肉锤捶打至约5毫米厚。撒盐：在肉排两面撒盐。准备裹粉台：将面粉放入一个平盘，打散的鸡蛋放入另一个，面包糠放入第三个。裹面粉：将每片肉排裹上面粉，抖掉多余的。裹蛋液：将肉排浸入蛋液，覆盖整个表面。裹面包糠：立即在肉上撒上面包糠，轻轻按压，但不要把面包糠压实到肉里——外壳需要保持松散，这样煎炸时才能鼓起。加热油脂：在大煎锅中用中大火加热澄清黄油或猪油，直至接触面包糠时轻微发出滋滋声。煎炸：每面煎炸2-3分钟，煎炸过程中轻轻左右晃动锅子，让油脂冲刷外壳使其自然起皱。沥油：将肉排取出放在铺有厨房纸巾的盘子上，去除多余油脂。上桌：立即上桌，配柠檬片和新鲜欧芹。",
+    "ja": "肉を準備する：仔牛肉カツレツをラップ2枚の間に挟み、肉たたきで約5mmの厚さになるまで叩く。塩をする：カツレツの両面に塩を振る。衣付けの準備：小麦粉を平皿に、溶き卵を別の皿に、パン粉を三つ目の皿に用意する。小麦粉をまぶす：各カツレツに小麦粉をまぶし、余分をはたき落とす。卵にくぐらせる：カツレツを溶き卵にくぐらせ、表面全体を覆う。パン粉をまぶす：すぐに肉の上にパン粉を振りかけ、軽く押さえる——パン粉を肉に押し込みすぎないこと。衣は緩いまま残し、揚げる際にふくらむようにする。油を熱する：大きなフライパンで澄ましバターまたはラードを中強火で熱し、パン粉が触れると軽くジュッと音がするまで熱する。揚げ焼きする：片面2〜3分ずつ揚げ焼きし、揚げている間フライパンを左右に軽く揺すって、油が衣の上を流れて自然な波状になるようにする。油を切る：カツレツをキッチンペーパーを敷いた皿に取り出し、余分な油を落とす。提供する：レモンのスライスと新鮮なパセリを添えてすぐに提供する。",
+    "hi": "मांस तैयार करें: वील कटलेट को दो प्लास्टिक शीट के बीच मीट मैलेट से लगभग 5 मिमी मोटा होने तक कूटें। नमक लगाएं: कटलेट के दोनों तरफ नमक लगाएं। ब्रेडिंग स्टेशन तैयार करें: एक चपटी थाली में आटा, दूसरी में फेंटा अंडा, और तीसरी में ब्रेडक्रम्ब्स रखें। आटे में लपेटें: हर कटलेट को आटे में लपेटें, अतिरिक्त झाड़ दें। अंडे में डुबोएं: कटलेट को फेंटे अंडे में डुबोएं, पूरी सतह को ढकते हुए। ब्रेडक्रम्ब्स में लपेटें: तुरंत मांस पर ब्रेडक्रम्ब्स छिड़कें, हल्के से दबाते हुए, बिना क्रम्ब्स को मांस में दबाए — परत ढीली रहनी चाहिए ताकि तलते समय फूल सके। चर्बी गरम करें: बड़े पैन में स्पष्ट मक्खन या चर्बी को मध्यम-तेज़ आंच पर गरम करें, जब तक ब्रेडक्रम्ब्स के संपर्क में हल्की तड़क न हो। तलें: कटलेट को हर तरफ 2-3 मिनट तलें, तलते समय पैन को हल्के से इधर-उधर हिलाएं, ताकि चर्बी परत पर बहे और वह लहरदार बने। छान लें: कटलेट को कागज़ के तौलिये वाली थाली पर निकालें, अतिरिक्त चर्बी हटाने के लिए। परोसें: तुरंत परोसें, नींबू के टुकड़ों और ताज़ा अजमोद के साथ।",
+    "tr": "ETİ HAZIRLAYIN: Dana pirzolaları iki plastik streç film arasında et tokmağıyla yaklaşık 5mm kalınlığa gelene kadar dövün. TUZLAYIN: Pirzolaları her iki taraftan tuzlayın. GALETA UNU İSTASYONLARINI HAZIRLAYIN: Unu düz bir tabağa, çırpılmış yumurtaları başka bir tabağa, galeta ununu ise üçüncü bir tabağa koyun. UNA BULAYIN: Her pirzolayı una bulayın, fazlasını silkeleyin. YUMURTAYA BATIRIN: Pirzolayı çırpılmış yumurtaya batırın, tüm yüzeyi kaplayarak. GALETA UNUNA BULAYIN: Hemen etin üzerine galeta unu serpin, hafifçe bastırarak, galeta ununu ete bastırmadan — kabuğun kızarırken kabarabilmesi için gevşek kalması gerekir. YAĞI ISITIN: Sadeyağı veya iç yağını büyük bir tavada orta-yüksek ateşte, galeta ununa değince hafifçe cızırdayana kadar ısıtın. KIZARTIN: Pirzolaları her tarafta 2-3 dakika kızartın, kızartırken tavayı hafifçe bir yandan diğerine sallayın, böylece yağ kabuğun üzerinden geçip dalgalanmasını sağlar. SÜZÜN: Pirzolaları kağıt havlu serilmiş bir tabağa alın, fazla yağı almak için. SERVİS YAPIN: Hemen limon dilimleri ve taze maydanozla servis edin.",
+    "it": "PREPARA LA CARNE: Batti le cotolette di vitello tra due fogli di pellicola trasparente con un batticarne, fino a uno spessore di circa 5mm. SALA: Sala le cotolette su entrambi i lati. PREPARA LE STAZIONI DI PANATURA: Metti la farina in un piatto piano, le uova sbattute in un altro e il pangrattato in un terzo. PASSA NELLA FARINA: Passa ogni cotoletta nella farina, scuotendo l'eccesso. PASSA NELL'UOVO: Immergi la cotoletta nell'uovo sbattuto, coprendo tutta la superficie. PASSA NEL PANGRATTATO: Cospargi subito pangrattato sulla carne, premendo delicatamente, senza pressare le briciole nella carne — la crosta deve restare morbida per potersi gonfiare in cottura. SCALDA IL GRASSO: Scalda il burro chiarificato o lo strutto in una padella grande a fuoco medio-alto, finché sfrigola leggermente al contatto con il pangrattato. FRIGGI: Friggi le cotolette 2-3 minuti per lato, muovendo delicatamente la padella da un lato all'altro durante la frittura, così il grasso lava la crosta e la fa incresparsi. SCOLA: Trasferisci le cotolette su un piatto foderato con carta assorbente, per rimuovere il grasso in eccesso. SERVI: Servi subito, con fette di limone e prezzemolo fresco.",
+    "ko": "고기 준비하기: 송아지 커틀릿을 비닐랩 두 장 사이에 놓고 고기망치로 약 5mm 두께가 될 때까지 두드린다. 소금 뿌리기: 커틀릿 양면에 소금을 뿌린다. 튀김옷 준비대 마련하기: 평평한 접시에 밀가루를, 다른 접시에 푼 달걀을, 세 번째 접시에 빵가루를 준비한다. 밀가루 묻히기: 각 커틀릿을 밀가루에 묻히고 여분을 털어낸다. 달걀물 묻히기: 커틀릿을 푼 달걀에 담가 표면 전체를 덮는다. 빵가루 묻히기: 즉시 고기 위에 빵가루를 뿌리고 살짝 눌러준다 — 빵가루를 고기에 너무 눌러 붙이지 않는다. 튀길 때 부풀어 오르도록 튀김옷을 느슨하게 유지해야 한다. 기름 가열하기: 큰 팬에 정제 버터나 라드를 중강불로 가열하여 빵가루가 닿으면 살짝 지글거릴 때까지 데운다. 튀기기: 커틀릿을 각 면 2-3분씩 튀기며, 튀기는 동안 팬을 좌우로 살짝 흔들어 기름이 튀김옷 위로 흘러 자연스럽게 물결치게 한다. 기름 빼기: 커틀릿을 키친타월을 깐 접시로 옮겨 여분의 기름을 제거한다. 제공하기: 레몬 조각과 신선한 파슬리와 함께 바로 제공한다."
+  },
+  "originText": {
+    "ro": "Wiener Schnitzel — literalmente \"șnițel vienez\" — este considerat felul de mâncare național neoficial al Austriei, deși originile sale rămân disputate: unii istorici culinari îl leagă de cotoletta alla milanese italiană, adusă la Viena de mareșalul Radetzky în secolul XIX, alții susțin că panarea cărnii era deja o tehnică vieneză independentă. Legea protejează numele: în Austria, doar varianta din vițel poate fi numită oficial \"Wiener Schnitzel\" — versiunile din porc trebuie etichetate \"Schnitzel Wiener Art\" (în stil vienez).\n\nCrusta trebuie să rămână ușor separată de carne, formând un mic buzunar de aer — un semn distinctiv al preparării corecte, obținut prin faptul că pesmetul nu este apăsat ferm în carne. Bucătarii vienezi tradiționali insistă că grăsimea trebuie să acopere complet cotletul în timpul prăjirii, aproape ca o friptură în ulei abundent, nu doar unsă pe fund — altfel crusta se prăjește neuniform.",
+    "en": "Wiener Schnitzel — literally \"Viennese cutlet\" — is considered Austria's unofficial national dish, though its origins remain disputed: some culinary historians link it to the Italian cotoletta alla milanese, brought to Vienna by Field Marshal Radetzky in the 19th century, while others argue that breaded meat was already an independent Viennese technique. The name is legally protected: in Austria, only the veal version may officially be called \"Wiener Schnitzel\" — pork versions must be labeled \"Schnitzel Wiener Art\" (Viennese-style schnitzel).\n\nThe crust should stay slightly separated from the meat, forming a small air pocket — a hallmark of correct preparation, achieved by not pressing the breadcrumbs firmly into the meat. Traditional Viennese cooks insist the fat must fully cover the cutlet while frying, almost like deep-frying rather than merely greasing the pan bottom — otherwise the crust browns unevenly.",
+    "es": "El Wiener Schnitzel — literalmente \"chuleta vienesa\" — se considera el plato nacional no oficial de Austria, aunque sus orígenes siguen siendo disputados: algunos historiadores culinarios lo relacionan con la cotoletta alla milanese italiana, traída a Viena por el mariscal Radetzky en el siglo XIX, mientras otros argumentan que la carne empanada ya era una técnica vienesa independiente. El nombre está protegido legalmente: en Austria, solo la versión de ternera puede llamarse oficialmente \"Wiener Schnitzel\" — las versiones de cerdo deben etiquetarse \"Schnitzel Wiener Art\" (al estilo vienés).\n\nLa costra debe quedar ligeramente separada de la carne, formando una pequeña bolsa de aire — un sello de preparación correcta, logrado al no presionar firmemente el pan rallado contra la carne. Los cocineros vieneses tradicionales insisten en que la grasa debe cubrir por completo la chuleta al freír, casi como una fritura profunda en lugar de solo engrasar el fondo de la sartén — de lo contrario, la costra se dora de forma desigual.",
+    "fr": "Le Wiener Schnitzel — littéralement \"escalope viennoise\" — est considéré comme le plat national officieux de l'Autriche, bien que ses origines restent disputées: certains historiens culinaires le relient à la cotoletta alla milanese italienne, apportée à Vienne par le maréchal Radetzky au XIXe siècle, tandis que d'autres soutiennent que la viande panée était déjà une technique viennoise indépendante. Le nom est légalement protégé: en Autriche, seule la version au veau peut officiellement s'appeler \"Wiener Schnitzel\" — les versions au porc doivent être étiquetées \"Schnitzel Wiener Art\" (à la viennoise).\n\nLa croûte doit rester légèrement séparée de la viande, formant une petite poche d'air — une marque de préparation correcte, obtenue en ne pressant pas fermement la chapelure dans la viande. Les cuisiniers viennois traditionnels insistent sur le fait que la graisse doit couvrir entièrement l'escalope pendant la cuisson, presque comme une friture plutôt que de simplement graisser le fond de la poêle — sinon la croûte dore de façon inégale.",
+    "de": "Das Wiener Schnitzel — wörtlich \"Wiener Schnittchen\" — gilt als Österreichs inoffizielles Nationalgericht, obwohl seine Ursprünge umstritten bleiben: Manche Kulinarhistoriker verbinden es mit der italienischen Cotoletta alla milanese, die Feldmarschall Radetzky im 19. Jahrhundert nach Wien brachte, während andere argumentieren, dass paniertes Fleisch bereits eine eigenständige Wiener Technik war. Der Name ist gesetzlich geschützt: In Österreich darf nur die Kalbfleischversion offiziell \"Wiener Schnitzel\" heißen — Schweinefleischversionen müssen als \"Schnitzel Wiener Art\" gekennzeichnet werden.\n\nDie Kruste sollte leicht vom Fleisch getrennt bleiben und eine kleine Lufttasche bilden — ein Kennzeichen korrekter Zubereitung, erreicht dadurch, dass die Semmelbrösel nicht fest ins Fleisch gedrückt werden. Traditionelle Wiener Köche bestehen darauf, dass das Fett das Schnitzel beim Braten vollständig bedecken muss, fast wie beim Frittieren statt nur den Pfannenboden einzufetten — sonst bräunt die Kruste ungleichmäßig.",
+    "pt": "O Wiener Schnitzel — literalmente \"escalope vienense\" — é considerado o prato nacional não oficial da Áustria, embora as suas origens permaneçam disputadas: alguns historiadores culinários ligam-no à cotoletta alla milanese italiana, trazida a Viena pelo marechal Radetzky no século XIX, enquanto outros argumentam que a carne empanada já era uma técnica vienense independente. O nome é legalmente protegido: na Áustria, apenas a versão de vitela pode ser oficialmente chamada \"Wiener Schnitzel\" — as versões de porco devem ser rotuladas \"Schnitzel Wiener Art\" (ao estilo vienense).\n\nA crosta deve ficar ligeiramente separada da carne, formando uma pequena bolsa de ar — uma marca de preparo correto, conseguida ao não pressionar firmemente a farinha de rosca na carne. Os cozinheiros vienenses tradicionais insistem que a gordura deve cobrir completamente a costeleta ao fritar, quase como uma fritura profunda em vez de apenas untar o fundo da frigideira — caso contrário, a crosta doura de forma desigual.",
+    "ru": "Венский шницель — буквально \"венский отбивной кусочек\" — считается неофициальным национальным блюдом Австрии, хотя его происхождение остаётся спорным: некоторые кулинарные историки связывают его с итальянской cotoletta alla milanese, привезённой в Вену фельдмаршалом Радецким в XIX веке, тогда как другие утверждают, что панированное мясо уже было самостоятельной венской техникой. Название юридически защищено: в Австрии только телячья версия может официально называться \"Венский шницель\" — свиные версии должны маркироваться как \"Schnitzel Wiener Art\" (шницель по-венски).\n\nКорочка должна оставаться слегка отделённой от мяса, образуя небольшой воздушный карман — признак правильного приготовления, достигаемый тем, что панировочные сухари не вдавливаются плотно в мясо. Традиционные венские повара настаивают, что жир должен полностью покрывать котлету при жарке, почти как во фритюре, а не просто смазывать дно сковороды — иначе корочка подрумянится неравномерно.",
+    "ar": "يُعتبر شنيتزل فيينا — الذي يعني حرفيًا \"شريحة فيينية\" — الطبق الوطني غير الرسمي للنمسا، رغم أن أصوله لا تزال محل خلاف: يربطه بعض مؤرخي الطهي بالكوتوليتا الميلانية الإيطالية، التي أحضرها المارشال راديتسكي إلى فيينا في القرن التاسع عشر، بينما يرى آخرون أن اللحم المتبل بالخبز كان بالفعل تقنية فيينية مستقلة. الاسم محمي قانونيًا: في النمسا، لا يمكن تسمية سوى نسخة العجل رسميًا بـ \"شنيتزل فيينا\" — يجب تصنيف نسخ لحم الخنزير بـ \"شنيتزل على الطريقة الفيينية\".\n\nيجب أن تبقى القشرة منفصلة قليلاً عن اللحم، مشكّلة جيبًا هوائيًا صغيرًا — علامة على التحضير الصحيح، تتحقق بعدم الضغط بقوة على فتات الخبز داخل اللحم. يصرّ الطهاة الفيينيون التقليديون على أن الدهن يجب أن يغطي الشريحة بالكامل أثناء القلي، تقريبًا كالقلي العميق بدلاً من مجرد تشحيم قاع المقلاة — وإلا فإن القشرة ستحمّر بشكل غير متساوٍ.",
+    "zh": "维也纳炸肉排——字面意思是「维也纳肉排」——被认为是奥地利非官方的国菜，尽管其起源仍有争议：一些美食历史学家将其与意大利的米兰式炸肉排联系起来，后者由拉德茨基元帅于19世纪带到维也纳，而另一些人则认为裹粉炸肉早已是维也纳独立发展出的技艺。这个名称受到法律保护：在奥地利，只有小牛肉版本才能正式称为「维也纳炸肉排」——猪肉版本必须标注为「维也纳风味炸肉排」。\n\n外壳应与肉体保持轻微分离，形成一个小气囊——这是正确制作的标志，通过不将面包糠用力压入肉中来实现。传统的维也纳厨师坚持认为，煎炸时油脂必须完全覆盖肉排，几乎像深炸一样，而不仅仅是给锅底刷油——否则外壳会上色不均。",
+    "ja": "ウィンナーシュニッツェル——文字通り「ウィーン風カツレツ」——はオーストリアの非公式な国民食とされているが、その起源には諸説ある。19世紀にラデツキー元帥がウィーンに持ち込んだイタリアのコトレッタ・アッラ・ミラネーゼと結びつける料理史家もいれば、衣をつけた肉料理はすでにウィーン独自の技法だったと主張する者もいる。名称は法律で保護されており、オーストリアでは仔牛肉のものだけが正式に「ウィンナーシュニッツェル」と呼べる——豚肉版は「シュニッツェル・ウィーナー・アート」（ウィーン風シュニッツェル）と表記しなければならない。\n\n衣は肉からわずかに離れた状態を保ち、小さな空気の層を作るべきである——これは正しい調理の証であり、パン粉を肉に強く押し付けないことで実現する。伝統的なウィーンの料理人は、揚げ焼きの際に油脂がカツレツを完全に覆う必要があると主張する。単にフライパンの底に油を塗るのではなく、揚げ物に近い状態にすること——そうしないと衣の焼き色が不均一になる。",
+    "hi": "वीनर श्नित्ज़ेल — शाब्दिक अर्थ \"वियना कटलेट\" — ऑस्ट्रिया का अनौपचारिक राष्ट्रीय व्यंजन माना जाता है, हालाँकि इसकी उत्पत्ति विवादित बनी हुई है: कुछ पाककला इतिहासकार इसे इतालवी कोटोलेटा अल्ला मिलानीज़ से जोड़ते हैं, जिसे फील्ड मार्शल रेडेट्ज़्की 19वीं सदी में वियना लाए थे, जबकि अन्य तर्क देते हैं कि ब्रेडेड मांस पहले से ही एक स्वतंत्र वियना तकनीक थी। नाम कानूनी रूप से संरक्षित है: ऑस्ट्रिया में, केवल वील संस्करण को आधिकारिक रूप से \"वीनर श्नित्ज़ेल\" कहा जा सकता है — सूअर के मांस के संस्करणों को \"श्नित्ज़ेल वीनर आर्ट\" (वियना शैली) लेबल करना होता है।\n\nपरत मांस से थोड़ी अलग रहनी चाहिए, एक छोटी हवा की जेब बनाते हुए — सही तैयारी का प्रतीक, जो ब्रेडक्रम्ब्स को मांस में मज़बूती से न दबाकर हासिल किया जाता है। पारंपरिक वियना रसोइये ज़ोर देते हैं कि तलते समय चर्बी को कटलेट को पूरी तरह ढकना चाहिए, लगभग डीप-फ्राई जैसा, न कि केवल पैन के तले को चिकना करना — अन्यथा परत असमान रूप से भूरी हो जाती है।",
+    "tr": "Viyana Şnitzeli — kelimenin tam anlamıyla \"Viyana pirzolası\" — Avusturya'nın gayri resmi ulusal yemeği olarak kabul edilir, ancak kökenleri tartışmalı kalmıştır: bazı mutfak tarihçileri onu, 19. yüzyılda Mareşal Radetzky tarafından Viyana'ya getirilen İtalyan cotoletta alla milanese ile ilişkilendirirken, diğerleri galeta unlu etin zaten bağımsız bir Viyana tekniği olduğunu savunur. İsim yasal olarak korunmaktadır: Avusturya'da yalnızca dana eti versiyonu resmi olarak \"Wiener Schnitzel\" olarak adlandırılabilir — domuz eti versiyonları \"Schnitzel Wiener Art\" (Viyana usulü) olarak etiketlenmelidir.\n\nKabuk etten hafifçe ayrık kalmalı, küçük bir hava cebi oluşturmalıdır — bu, galeta ununun ete sıkıca bastırılmamasıyla elde edilen doğru hazırlığın bir göstergesidir. Geleneksel Viyanalı aşçılar, kızartma sırasında yağın pirzolayı tamamen kaplaması gerektiğinde ısrar eder, neredeyse tavanın dibini yağlamak yerine derin yağda kızartmaya yakın bir şekilde — aksi takdirde kabuk eşit olmayan şekilde kızarır.",
+    "it": "Il Wiener Schnitzel — letteralmente \"cotoletta viennese\" — è considerato il piatto nazionale non ufficiale dell'Austria, sebbene le sue origini restino contese: alcuni storici della cucina lo collegano alla cotoletta alla milanese italiana, portata a Vienna dal maresciallo Radetzky nel XIX secolo, mentre altri sostengono che la carne panata fosse già una tecnica viennese indipendente. Il nome è protetto legalmente: in Austria, solo la versione di vitello può essere ufficialmente chiamata \"Wiener Schnitzel\" — le versioni di maiale devono essere etichettate \"Schnitzel Wiener Art\" (in stile viennese).\n\nLa crosta dovrebbe restare leggermente separata dalla carne, formando una piccola tasca d'aria — un segno di preparazione corretta, ottenuto non premendo saldamente il pangrattato nella carne. I cuochi viennesi tradizionali insistono sul fatto che il grasso debba coprire completamente la cotoletta durante la frittura, quasi come una frittura profonda piuttosto che semplicemente ungere il fondo della padella — altrimenti la crosta si dora in modo irregolare.",
+    "ko": "비너 슈니첼은 문자 그대로 「비엔나 커틀릿」이라는 뜻으로, 오스트리아의 비공식 국민 요리로 여겨지지만 그 기원은 여전히 논쟁의 대상이다. 일부 요리 역사가들은 19세기에 라데츠키 원수가 빈으로 가져온 이탈리아의 코톨레타 알라 밀라네제와 연결짓는 반면, 다른 이들은 빵가루를 입힌 고기가 이미 독자적인 빈의 기법이었다고 주장한다. 이름은 법적으로 보호받는다 — 오스트리아에서는 송아지 고기 버전만 공식적으로 「비너 슈니첼」이라 부를 수 있으며, 돼지고기 버전은 「슈니첼 비너 아트」(빈 스타일)로 표기해야 한다.\n\n튀김옷은 고기에서 살짝 분리되어 작은 공기층을 형성해야 한다 — 이는 빵가루를 고기에 세게 눌러 붙이지 않음으로써 얻어지는 올바른 조리법의 특징이다. 전통적인 빈의 요리사들은 튀길 때 기름이 커틀릿을 완전히 덮어야 한다고 주장하며, 이는 팬 바닥에 기름을 바르는 정도가 아니라 거의 튀김에 가까운 방식이어야 한다 — 그렇지 않으면 튀김옷이 고르지 않게 익는다."
+  },
+  "meta": {
+    "time": 35,
+    "costRon": 30,
+    "tags": ["high-protein", "quick", "family"],
+    "desc": {
+      "ro": "Cotlet de vițel bătut subțire, panat crocant și prăjit în unt clarifiat, servit cu lămâie.",
+      "en": "Thin-pounded veal cutlet, breaded crisp and fried in clarified butter, served with lemon.",
+      "es": "Chuleta de ternera aplanada, empanada crujiente y frita en mantequilla clarificada, servida con limón.",
+      "fr": "Escalope de veau aplatie, panée croustillante et frite au beurre clarifié, servie avec du citron.",
+      "de": "Dünn geklopftes Kalbsschnitzel, knusprig paniert und in geklärter Butter gebraten, mit Zitrone serviert.",
+      "pt": "Costeleta de vitela fina, empanada crocante e frita em manteiga clarificada, servida com limão.",
+      "ru": "Тонко отбитая телячья котлета в хрустящей панировке, обжаренная на топлёном масле, подаётся с лимоном.",
+      "ar": "شريحة عجل رقيقة، مغطاة بتتبيل مقرمش ومقلية بالزبدة المصفاة، تُقدَّم مع الليمون.",
+      "zh": "捶薄的小牛肉排，裹粉酥脆，以澄清黄油煎炸，配柠檬享用。",
+      "ja": "薄く叩いた仔牛肉に衣をつけてサクサクに揚げ焼きし、レモンを添えた一皿。",
+      "hi": "पतला कूटा वील कटलेट, कुरकुरा ब्रेडेड और स्पष्ट मक्खन में तला, नींबू के साथ परोसा गया।",
+      "tr": "İnce dövülmüş dana pirzola, çıtır galeta unlu, sadeyağda kızartılmış, limonla servis edilir.",
+      "it": "Cotoletta di vitello sottile, panata croccante e fritta nel burro chiarificato, servita con limone.",
+      "ko": "얇게 두드린 송아지 커틀릿에 바삭한 튀김옷을 입혀 정제 버터에 튀긴 후 레몬과 함께 제공."
+    }
+  }
+}

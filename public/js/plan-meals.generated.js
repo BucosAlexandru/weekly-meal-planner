@@ -172,7 +172,7 @@ export const PLAN_MEALS = {
       7,
       1,
       8,
-      240
+      409
     ]
   },
   "iarna-confort": {
