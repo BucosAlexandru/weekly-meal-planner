@@ -1,0 +1,209 @@
+{
+  "id": 407,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Pakistan",
+    "en": "Pakistan",
+    "es": "Pakistán",
+    "fr": "Pakistan",
+    "de": "Pakistan",
+    "pt": "Paquistão",
+    "ru": "Пакистан",
+    "ar": "باكستان",
+    "zh": "巴基斯坦",
+    "ja": "パキスタン",
+    "hi": "पाकिस्तान",
+    "tr": "Pakistan",
+    "it": "Pakistan",
+    "ko": "파키스탄"
+  },
+  "name": {
+    "ro": "Sarson da Saag (Tocană de Muștar Verde)",
+    "en": "Sarson da Saag (Punjabi Mustard Greens Curry)",
+    "es": "Sarson da Saag (Curry de Hojas de Mostaza Punjabi)",
+    "fr": "Sarson da Saag (Curry de Feuilles de Moutarde Pendjabi)",
+    "de": "Sarson da Saag (Punjabi-Senfblätter-Curry)",
+    "pt": "Sarson da Saag (Caril de Folhas de Mostarda Punjabi)",
+    "ru": "Сарсон да Саг (Пенджабское Карри из Горчичной Зелени)",
+    "ar": "سارسون دا ساغ (كاري أوراق الخردل البنجابي)",
+    "zh": "旁遮普芥菜叶咖喱（萨尔森达萨格）",
+    "ja": "サルソン・ダ・サーグ（パンジャブ風マスタードグリーンカレー）",
+    "hi": "सरसों दा साग (पंजाबी सरसों साग)",
+    "tr": "Sarson da Saag (Pencap Usulü Hardal Yeşillikleri Köri)",
+    "it": "Sarson da Saag (Curry di Foglie di Senape Punjabi)",
+    "ko": "사르손 다 사그 (펀자브식 겨자잎 커리)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥬", "t": "Frunze de muștar", "d": "Frunze proaspete de muștar verde formează baza, cu o aromă ușor amăruie, specifică." },
+      { "icon": "🌿", "t": "Spanac și busuioc de câmp", "d": "Spanac și frunze de busuioc de câmp (bathua) se adaugă pentru a echilibra amăreala muștarului." },
+      { "icon": "🌽", "t": "Îngroșat cu mălai", "d": "Făina de porumb se adaugă spre final, pentru a îngroșa natural tocana, fără a folosi făină de grâu." },
+      { "icon": "🧈", "t": "Cu unt topit", "d": "Se servește tradițional cu o bucată generoasă de unt topit (makhan) deasupra, cât timp e fierbinte." }
+    ],
+    "en": [
+      { "icon": "🥬", "t": "Mustard leaves", "d": "Fresh green mustard leaves form the base, with their distinctive, slightly bitter flavor." },
+      { "icon": "🌿", "t": "Spinach and bathua", "d": "Spinach and wild spinach leaves (bathua) are added to balance the mustard's bitterness." },
+      { "icon": "🌽", "t": "Thickened with cornmeal", "d": "Cornmeal is added near the end, to naturally thicken the curry, without using wheat flour." },
+      { "icon": "🧈", "t": "With melted butter", "d": "Traditionally served with a generous dollop of melted butter (makhan) on top, while still hot." }
+    ],
+    "es": [
+      { "icon": "🥬", "t": "Hojas de mostaza", "d": "Hojas frescas de mostaza verde forman la base, con su sabor distintivo, ligeramente amargo." },
+      { "icon": "🌿", "t": "Espinaca y bathua", "d": "Se añaden espinacas y hojas de espinaca silvestre (bathua) para equilibrar el amargor de la mostaza." },
+      { "icon": "🌽", "t": "Espesado con harina de maíz", "d": "Se añade harina de maíz hacia el final, para espesar naturalmente el curry, sin usar harina de trigo." },
+      { "icon": "🧈", "t": "Con mantequilla derretida", "d": "Se sirve tradicionalmente con una generosa porción de mantequilla derretida (makhan) encima, mientras aún está caliente." }
+    ],
+    "fr": [
+      { "icon": "🥬", "t": "Feuilles de moutarde", "d": "Des feuilles fraîches de moutarde verte forment la base, avec leur saveur distinctive et légèrement amère." },
+      { "icon": "🌿", "t": "Épinards et bathua", "d": "Des épinards et des feuilles d'épinard sauvage (bathua) sont ajoutés pour équilibrer l'amertume de la moutarde." },
+      { "icon": "🌽", "t": "Épaissi à la farine de maïs", "d": "De la farine de maïs est ajoutée vers la fin, pour épaissir naturellement le curry, sans utiliser de farine de blé." },
+      { "icon": "🧈", "t": "Avec du beurre fondu", "d": "Traditionnellement servi avec une généreuse noix de beurre fondu (makhan) dessus, pendant qu'il est encore chaud." }
+    ],
+    "de": [
+      { "icon": "🥬", "t": "Senfblätter", "d": "Frische grüne Senfblätter bilden die Basis, mit ihrem charakteristischen, leicht bitteren Geschmack." },
+      { "icon": "🌿", "t": "Spinat und Bathua", "d": "Spinat und wilde Spinatblätter (Bathua) werden zugegeben, um die Bitterkeit des Senfs auszugleichen." },
+      { "icon": "🌽", "t": "Mit Maismehl eingedickt", "d": "Gegen Ende wird Maismehl zugegeben, um das Curry natürlich einzudicken, ohne Weizenmehl zu verwenden." },
+      { "icon": "🧈", "t": "Mit geschmolzener Butter", "d": "Traditionell mit einem großzügigen Klecks geschmolzener Butter (Makhan) obenauf serviert, solange es noch heiß ist." }
+    ],
+    "pt": [
+      { "icon": "🥬", "t": "Folhas de mostarda", "d": "Folhas frescas de mostarda verde formam a base, com o seu sabor distinto e ligeiramente amargo." },
+      { "icon": "🌿", "t": "Espinafre e bathua", "d": "Espinafre e folhas de espinafre selvagem (bathua) são adicionados para equilibrar o amargor da mostarda." },
+      { "icon": "🌽", "t": "Engrossado com farinha de milho", "d": "A farinha de milho é adicionada perto do final, para engrossar naturalmente o caril, sem usar farinha de trigo." },
+      { "icon": "🧈", "t": "Com manteiga derretida", "d": "Tradicionalmente servido com uma generosa porção de manteiga derretida (makhan) por cima, ainda quente." }
+    ],
+    "ru": [
+      { "icon": "🥬", "t": "Листья горчицы", "d": "Свежие зелёные листья горчицы составляют основу, с характерным слегка горьковатым вкусом." },
+      { "icon": "🌿", "t": "Шпинат и батхуа", "d": "Шпинат и листья дикого шпината (батхуа) добавляются, чтобы сбалансировать горечь горчицы." },
+      { "icon": "🌽", "t": "Загущено кукурузной мукой", "d": "Кукурузная мука добавляется в конце, чтобы естественным образом загустить карри, без использования пшеничной муки." },
+      { "icon": "🧈", "t": "С топлёным маслом", "d": "Традиционно подаётся с щедрым куском топлёного масла (макхан) сверху, пока ещё горячее." }
+    ],
+    "ar": [
+      { "icon": "🥬", "t": "أوراق الخردل", "d": "أوراق خردل خضراء طازجة تشكّل الأساس، بنكهتها المميزة والمُرة قليلًا." },
+      { "icon": "🌿", "t": "سبانخ وباتوا", "d": "تُضاف السبانخ وأوراق السبانخ البرية (باتوا) لموازنة مرارة الخردل." },
+      { "icon": "🌽", "t": "تُكثَّف بدقيق الذرة", "d": "يُضاف دقيق الذرة قرب النهاية لتكثيف الكاري طبيعيًا دون استخدام دقيق القمح." },
+      { "icon": "🧈", "t": "بزبدة ذائبة", "d": "يُقدَّم تقليديًا بقطعة سخية من الزبدة الذائبة (ماخان) فوقه وهو لا يزال ساخنًا." }
+    ],
+    "zh": [
+      { "icon": "🥬", "t": "芥菜叶", "d": "新鲜绿芥菜叶构成基底，带有其独特的微苦风味。" },
+      { "icon": "🌿", "t": "菠菜与野生藜菜", "d": "加入菠菜和野生藜菜叶（bathua）以平衡芥菜的苦味。" },
+      { "icon": "🌽", "t": "玉米粉增稠", "d": "最后加入玉米粉，天然使咖喱变浓稠，无需使用小麦粉。" },
+      { "icon": "🧈", "t": "配融化黄油", "d": "传统上趁热在上面加一大块融化黄油（makhan）食用。" }
+    ],
+    "ja": [
+      { "icon": "🥬", "t": "マスタードの葉", "d": "新鮮な緑のマスタードの葉がベースとなり、独特のほろ苦い風味を持つ。" },
+      { "icon": "🌿", "t": "ほうれん草とバトゥア", "d": "マスタードの苦味を和らげるため、ほうれん草と野生のほうれん草の葉（バトゥア）を加える。" },
+      { "icon": "🌽", "t": "コーンミールでとろみをつける", "d": "小麦粉を使わず自然にとろみをつけるため、仕上げ近くにコーンミールを加える。" },
+      { "icon": "🧈", "t": "溶かしバターを添えて", "d": "伝統的に、熱いうちにたっぷりの溶かしバター（マッカン）をのせて提供する。" }
+    ],
+    "hi": [
+      { "icon": "🥬", "t": "सरसों के पत्ते", "d": "ताज़े हरे सरसों के पत्ते आधार बनाते हैं, अपने खास, हल्के कड़वे स्वाद के साथ।" },
+      { "icon": "🌿", "t": "पालक और बथुआ", "d": "सरसों की कड़वाहट संतुलित करने के लिए पालक और जंगली पालक के पत्ते (बथुआ) डाले जाते हैं।" },
+      { "icon": "🌽", "t": "मक्के के आटे से गाढ़ा", "d": "बिना गेहूं के आटे के प्राकृतिक रूप से साग गाढ़ा करने के लिए अंत में मक्के का आटा डाला जाता है।" },
+      { "icon": "🧈", "t": "पिघले मक्खन के साथ", "d": "पारंपरिक रूप से गरम रहते ही ऊपर पिघले मक्खन (मक्खन) की भरपूर मात्रा के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥬", "t": "Hardal yaprakları", "d": "Taze yeşil hardal yaprakları, kendine özgü hafif acımsı lezzetiyle tabanı oluşturur." },
+      { "icon": "🌿", "t": "Ispanak ve bathua", "d": "Hardalın acılığını dengelemek için ıspanak ve yabani ıspanak yaprakları (bathua) eklenir." },
+      { "icon": "🌽", "t": "Mısır unuyla koyulaştırılır", "d": "Buğday unu kullanmadan köriyi doğal olarak koyulaştırmak için sona doğru mısır unu eklenir." },
+      { "icon": "🧈", "t": "Eritilmiş tereyağıyla", "d": "Geleneksel olarak hâlâ sıcakken üzerine bol miktarda eritilmiş tereyağı (makhan) ile servis edilir." }
+    ],
+    "it": [
+      { "icon": "🥬", "t": "Foglie di senape", "d": "Foglie fresche di senape verde formano la base, con il loro sapore distintivo, leggermente amaro." },
+      { "icon": "🌿", "t": "Spinaci e bathua", "d": "Spinaci e foglie di spinacio selvatico (bathua) vengono aggiunti per bilanciare l'amarezza della senape." },
+      { "icon": "🌽", "t": "Addensato con farina di mais", "d": "La farina di mais viene aggiunta verso la fine, per addensare naturalmente il curry, senza usare farina di grano." },
+      { "icon": "🧈", "t": "Con burro fuso", "d": "Servito tradizionalmente con una generosa noce di burro fuso (makhan) sopra, mentre è ancora caldo." }
+    ],
+    "ko": [
+      { "icon": "🥬", "t": "겨자잎", "d": "신선한 녹색 겨자잎이 특유의 살짝 쌉쌀한 맛으로 베이스를 이룬다." },
+      { "icon": "🌿", "t": "시금치와 바투아", "d": "겨자의 쌉쌀함을 균형 잡기 위해 시금치와 야생 시금치잎(바투아)을 넣는다." },
+      { "icon": "🌽", "t": "옥수수 가루로 걸쭉하게", "d": "밀가루를 쓰지 않고 자연스럽게 커리를 걸쭉하게 만들기 위해 마지막에 옥수수 가루를 넣는다." },
+      { "icon": "🧈", "t": "녹인 버터와 함께", "d": "전통적으로 아직 뜨거울 때 위에 넉넉한 녹인 버터(마칸)를 얹어 제공한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["700g frunze de muștar verde, tocate", "200g spanac, tocat", "100g busuioc de câmp (bathua) sau mai mult spanac", "1 ceapă, tocată", "4 căței de usturoi, tocați", "1 lingură ghimbir ras", "2 ardei iuți verzi, tocați", "3 linguri mălai (făină de porumb)", "3 linguri ghee sau unt", "1 linguriță ardei iute măcinat", "sare după gust", "unt topit, pentru servire"],
+    "en": ["700g green mustard leaves, chopped", "200g spinach, chopped", "100g wild spinach leaves (bathua) or more spinach", "1 onion, chopped", "4 garlic cloves, minced", "1 tbsp grated ginger", "2 green chilies, chopped", "3 tbsp cornmeal", "3 tbsp ghee or butter", "1 tsp ground red chili", "salt to taste", "melted butter, for serving"],
+    "es": ["700g de hojas de mostaza verde, picadas", "200g de espinaca, picada", "100g de hojas de espinaca silvestre (bathua) o más espinaca", "1 cebolla, picada", "4 dientes de ajo, picados", "1 cucharada de jengibre rallado", "2 chiles verdes, picados", "3 cucharadas de harina de maíz", "3 cucharadas de ghee o mantequilla", "1 cucharadita de chile rojo molido", "sal al gusto", "mantequilla derretida, para servir"],
+    "fr": ["700g de feuilles de moutarde verte, hachées", "200g d'épinards, hachés", "100g de feuilles d'épinard sauvage (bathua) ou plus d'épinards", "1 oignon, haché", "4 gousses d'ail, hachées", "1 c. à soupe de gingembre râpé", "2 piments verts, hachés", "3 c. à soupe de farine de maïs", "3 c. à soupe de ghee ou de beurre", "1 c. à café de piment rouge moulu", "sel selon le goût", "beurre fondu, pour servir"],
+    "de": ["700g grüne Senfblätter, gehackt", "200g Spinat, gehackt", "100g wilde Spinatblätter (Bathua) oder mehr Spinat", "1 Zwiebel, gehackt", "4 Knoblauchzehen, gehackt", "1 EL geriebener Ingwer", "2 grüne Chilis, gehackt", "3 EL Maismehl", "3 EL Ghee oder Butter", "1 TL gemahlener roter Chili", "Salz nach Geschmack", "geschmolzene Butter, zum Servieren"],
+    "pt": ["700g de folhas de mostarda verde, picadas", "200g de espinafre, picado", "100g de folhas de espinafre selvagem (bathua) ou mais espinafre", "1 cebola, picada", "4 dentes de alho, picados", "1 colher (sopa) de gengibre ralado", "2 pimentas verdes, picadas", "3 colheres (sopa) de farinha de milho", "3 colheres (sopa) de ghee ou manteiga", "1 colher (chá) de pimenta vermelha moída", "sal a gosto", "manteiga derretida, para servir"],
+    "ru": ["700г зелёных листьев горчицы, нарезанных", "200г шпината, нарезанного", "100г листьев дикого шпината (батхуа) или больше шпината", "1 луковица, нарезанная", "4 зубчика чеснока, измельчённых", "1 ст.л. тёртого имбиря", "2 зелёных перца чили, нарезанных", "3 ст.л. кукурузной муки", "3 ст.л. гхи или масла", "1 ч.л. молотого красного перца", "соль по вкусу", "топлёное масло, для подачи"],
+    "ar": ["700 غرام أوراق خردل أخضر، مفرومة", "200 غرام سبانخ، مفرومة", "100 غرام أوراق سبانخ برية (باتوا) أو المزيد من السبانخ", "بصلة واحدة، مفرومة", "4 فصوص ثوم، مفرومة", "ملعقة كبيرة زنجبيل مبشور", "فلفلان أخضران حاران، مفرومان", "3 ملاعق كبيرة دقيق ذرة", "3 ملاعق كبيرة سمن أو زبدة", "ملعقة صغيرة فلفل أحمر مطحون", "ملح حسب الرغبة", "زبدة ذائبة، للتقديم"],
+    "zh": ["700克绿芥菜叶，切碎", "200克菠菜，切碎", "100克野生藜菜叶（bathua）或更多菠菜", "1个洋葱，切碎", "4瓣大蒜，切碎", "1汤匙姜末", "2根青辣椒，切碎", "3汤匙玉米粉", "3汤匙印度酥油或黄油", "1茶匙红辣椒粉", "盐适量", "融化黄油，配食用"],
+    "ja": ["緑のマスタードの葉700g（刻む）", "ほうれん草200g（刻む）", "野生のほうれん草の葉（バトゥア）100g、またはほうれん草を追加", "玉ねぎ1個（刻む）", "にんにく4片（みじん切り）", "生姜すりおろし大さじ1", "青唐辛子2本（刻む）", "コーンミール大さじ3", "ギーまたはバター大さじ3", "赤唐辛子粉小さじ1", "塩 適量", "溶かしバター（添える用）"],
+    "hi": ["700 ग्राम हरे सरसों के पत्ते, कटे", "200 ग्राम पालक, कटा", "100 ग्राम जंगली पालक के पत्ते (बथुआ) या अधिक पालक", "1 प्याज़, कटा", "4 लहसुन की कलियाँ, कटी हुई", "1 बड़ा चम्मच कद्दूकस अदरक", "2 हरी मिर्च, कटी", "3 बड़े चम्मच मक्के का आटा", "3 बड़े चम्मच घी या मक्खन", "1 छोटी चम्मच पिसी लाल मिर्च", "स्वादानुसार नमक", "पिघला मक्खन, परोसने के लिए"],
+    "tr": ["700g yeşil hardal yaprağı, doğranmış", "200g ıspanak, doğranmış", "100g yabani ıspanak yaprağı (bathua) veya daha fazla ıspanak", "1 soğan, doğranmış", "4 diş sarımsak, doğranmış", "1 yemek kaşığı rendelenmiş zencefil", "2 yeşil biber, doğranmış", "3 yemek kaşığı mısır unu", "3 yemek kaşığı sadeyağ veya tereyağı", "1 çay kaşığı öğütülmüş kırmızı biber", "tuz, tadına göre", "servis için eritilmiş tereyağı"],
+    "it": ["700g di foglie di senape verde, tritate", "200g di spinaci, tritati", "100g di foglie di spinacio selvatico (bathua) o più spinaci", "1 cipolla, tritata", "4 spicchi d'aglio, tritati", "1 cucchiaio di zenzero grattugiato", "2 peperoncini verdi, tritati", "3 cucchiai di farina di mais", "3 cucchiai di ghee o burro", "1 cucchiaino di peperoncino rosso macinato", "sale q.b.", "burro fuso, per servire"],
+    "ko": ["녹색 겨자잎 700g, 썬 것", "시금치 200g, 썬 것", "야생 시금치잎(바투아) 100g 또는 시금치 추가", "양파 1개, 썬 것", "마늘 4쪽, 다진 것", "간 생강 1큰술", "청고추 2개, 썬 것", "옥수수 가루 3큰술", "기 또는 버터 3큰술", "간 홍고추 가루 1작은술", "소금 약간", "녹인 버터, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": "CURĂȚĂ ȘI TOACĂ: Spală bine frunzele de muștar, spanac și busuioc de câmp, îndepărtează tulpinile dure și toacă-le mărunt. FIERBE VERDEAȚA: Pune verdeața tocată într-o oală mare cu puțină apă, fierbe la foc mediu 25-30 minute, până se înmoaie complet. PISEAZĂ SAU MIXEAZĂ: Zdrobește verdeața fiartă cu un blender de mână sau o lingură de lemn, direct în oală, până obții o textură groasă, nu perfect netedă. CĂLEȘTE BAZA: Într-o tigaie separată, topește ghee-ul, călește ceapa tocată la foc mediu 8-10 minute, până devine aurie. ADAUGĂ AROMELE: Adaugă usturoiul, ghimbirul și ardeii iuți, călind 2 minute, până devin parfumate. ADAUGĂ MIRODENIILE: Presară ardeiul iute măcinat, amestecând bine cu baza de ceapă. COMBINĂ: Toarnă verdeața pisată peste baza călită, amestecă bine, adaugă sare după gust. ÎNGROAȘĂ: Adaugă mălaiul treptat, amestecând constant, pentru a evita cocoloașele; lasă să fiarbă la foc mic 10-15 minute, până se îngroașă. SERVEȘTE: Servește fierbinte, cu o bucată generoasă de unt topit deasupra, alături de pâine de porumb (makki di roti).",
+    "en": "CLEAN AND CHOP: Wash the mustard, spinach and wild spinach leaves well, remove the tough stems and chop finely. BOIL THE GREENS: Place the chopped greens in a large pot with a little water, simmer over medium heat 25-30 minutes, until fully softened. MASH OR BLEND: Mash the boiled greens with a hand blender or wooden spoon, directly in the pot, until you get a thick, not perfectly smooth texture. SAUTÉ THE BASE: In a separate pan, melt the ghee, sauté the chopped onion over medium heat 8-10 minutes, until golden. ADD THE AROMATICS: Add the garlic, ginger and chilies, cooking 2 minutes, until fragrant. ADD THE SPICES: Sprinkle in the ground red chili, mixing well with the onion base. COMBINE: Pour the mashed greens over the sautéed base, mix well, add salt to taste. THICKEN: Add the cornmeal gradually, stirring constantly, to avoid lumps; let simmer over low heat 10-15 minutes, until thickened. SERVE: Serve hot, with a generous dollop of melted butter on top, alongside cornbread (makki di roti).",
+    "es": "LIMPIA Y PICA: Lava bien las hojas de mostaza, espinaca y espinaca silvestre, retira los tallos duros y pícalas finamente. HIERVE LAS VERDURAS: Coloca las verduras picadas en una olla grande con un poco de agua, cocina a fuego medio 25-30 minutos, hasta que se ablanden por completo. MACHACA O LICÚA: Machaca las verduras hervidas con una batidora de mano o cuchara de madera, directamente en la olla, hasta obtener una textura espesa, no perfectamente lisa. SOFRÍE LA BASE: En una sartén aparte, derrite el ghee, sofríe la cebolla picada a fuego medio 8-10 minutos, hasta que esté dorada. AÑADE LOS AROMÁTICOS: Añade el ajo, el jengibre y los chiles, cocinando 2 minutos, hasta que estén fragantes. AÑADE LAS ESPECIAS: Espolvorea el chile rojo molido, mezclando bien con la base de cebolla. COMBINA: Vierte las verduras machacadas sobre la base sofrita, mezcla bien, añade sal al gusto. ESPESA: Añade la harina de maíz gradualmente, removiendo constantemente, para evitar grumos; deja cocinar a fuego lento 10-15 minutos, hasta que espese. SIRVE: Sirve caliente, con una generosa porción de mantequilla derretida encima, junto con pan de maíz (makki di roti).",
+    "fr": "NETTOYEZ ET HACHEZ: Lavez bien les feuilles de moutarde, d'épinard et d'épinard sauvage, retirez les tiges dures et hachez finement. FAITES BOUILLIR LES LÉGUMES VERTS: Placez les légumes verts hachés dans une grande marmite avec un peu d'eau, laissez mijoter à feu moyen 25-30 minutes, jusqu'à ce qu'ils ramollissent complètement. ÉCRASEZ OU MIXEZ: Écrasez les légumes verts bouillis avec un mixeur plongeant ou une cuillère en bois, directement dans la marmite, jusqu'à obtenir une texture épaisse, pas parfaitement lisse. FAITES REVENIR LA BASE: Dans une poêle séparée, faites fondre le ghee, faites revenir l'oignon haché à feu moyen 8-10 minutes, jusqu'à ce qu'il soit doré. AJOUTEZ LES AROMATES: Ajoutez l'ail, le gingembre et les piments, en cuisant 2 minutes, jusqu'à ce qu'ils soient parfumés. AJOUTEZ LES ÉPICES: Saupoudrez de piment rouge moulu, en mélangeant bien avec la base d'oignon. COMBINEZ: Versez les légumes verts écrasés sur la base revenue, mélangez bien, ajoutez du sel selon le goût. ÉPAISSISSEZ: Ajoutez la farine de maïs progressivement, en remuant constamment, pour éviter les grumeaux; laissez mijoter à feu doux 10-15 minutes, jusqu'à épaississement. SERVEZ: Servez chaud, avec une généreuse noix de beurre fondu dessus, avec du pain de maïs (makki di roti).",
+    "de": "REINIGEN UND HACKEN: Senf-, Spinat- und wilde Spinatblätter gut waschen, die harten Stiele entfernen und fein hacken. GEMÜSE KOCHEN: Das gehackte Blattgemüse mit etwas Wasser in einen großen Topf geben, bei mittlerer Hitze 25-30 Minuten köcheln lassen, bis es vollständig weich ist. ZERSTAMPFEN ODER PÜRIEREN: Das gekochte Blattgemüse direkt im Topf mit einem Stabmixer oder Holzlöffel zerstampfen, bis eine dicke, nicht perfekt glatte Textur entsteht. BASIS ANBRATEN: In einer separaten Pfanne das Ghee schmelzen, die gehackte Zwiebel bei mittlerer Hitze 8-10 Minuten anbraten, bis sie goldbraun ist. AROMEN HINZUFÜGEN: Knoblauch, Ingwer und Chilis zugeben, 2 Minuten braten, bis sie duften. GEWÜRZE HINZUFÜGEN: Gemahlenen roten Chili einstreuen, gut mit der Zwiebelbasis vermischen. KOMBINIEREN: Das zerstampfte Blattgemüse über die angebratene Basis gießen, gut vermischen, nach Geschmack salzen. EINDICKEN: Das Maismehl nach und nach zugeben, ständig rühren, um Klumpen zu vermeiden; bei niedriger Hitze 10-15 Minuten köcheln lassen, bis es eindickt. SERVIEREN: Heiß servieren, mit einem großzügigen Klecks geschmolzener Butter obenauf, zusammen mit Maisbrot (Makki di Roti).",
+    "pt": "LIMPE E PIQUE: Lave bem as folhas de mostarda, espinafre e espinafre selvagem, remova os talos duros e pique finamente. FERVA OS LEGUMES: Coloque os legumes picados numa panela grande com um pouco de água, cozinhe em fogo médio por 25-30 minutos, até amolecerem completamente. AMASSE OU BATA: Amasse os legumes cozidos com uma varinha mágica ou colher de pau, diretamente na panela, até obter uma textura espessa, não perfeitamente lisa. REFOGUE A BASE: Numa frigideira separada, derreta o ghee, refogue a cebola picada em fogo médio por 8-10 minutos, até dourar. ADICIONE OS AROMÁTICOS: Junte o alho, o gengibre e as pimentas, cozinhando 2 minutos, até ficarem perfumados. ADICIONE AS ESPECIARIAS: Polvilhe a pimenta vermelha moída, misturando bem com a base de cebola. COMBINE: Despeje os legumes amassados sobre a base refogada, misture bem, adicione sal a gosto. ENGROSSE: Junte a farinha de milho gradualmente, mexendo constantemente, para evitar grumos; deixe cozinhar em fogo baixo por 10-15 minutos, até engrossar. SIRVA: Sirva quente, com uma generosa porção de manteiga derretida por cima, junto com pão de milho (makki di roti).",
+    "ru": "ОЧИСТИТЕ И НАРЕЖЬТЕ: Хорошо промойте листья горчицы, шпината и дикого шпината, удалите жёсткие стебли и мелко нарежьте. ОТВАРИТЕ ЗЕЛЕНЬ: Положите нарезанную зелень в большую кастрюлю с небольшим количеством воды, тушите на среднем огне 25-30 минут, пока полностью не размягчится. РАЗОМНИТЕ ИЛИ ИЗМЕЛЬЧИТЕ: Разомните отваренную зелень погружным блендером или деревянной ложкой прямо в кастрюле, до густой, не идеально гладкой текстуры. ОБЖАРЬТЕ ОСНОВУ: В отдельной сковороде растопите гхи, обжаривайте нарезанный лук на среднем огне 8-10 минут, до золотистого цвета. ДОБАВЬТЕ АРОМАТИКУ: Добавьте чеснок, имбирь и перец чили, готовьте 2 минуты, до аромата. ДОБАВЬТЕ СПЕЦИИ: Всыпьте молотый красный перец, хорошо перемешав с луковой основой. СОЕДИНИТЕ: Влейте размятую зелень в обжаренную основу, хорошо перемешайте, посолите по вкусу. ЗАГУСТИТЕ: Постепенно добавляйте кукурузную муку, постоянно помешивая, чтобы избежать комочков; дайте потомиться на слабом огне 10-15 минут, до загустения. ПОДАВАЙТЕ: Подавайте горячим, со щедрым куском топлёного масла сверху, вместе с кукурузным хлебом (макки ди роти).",
+    "ar": "نظّفي وقطّعي: اغسلي أوراق الخردل والسبانخ والسبانخ البرية جيدًا، أزيلي السيقان الصلبة وقطّعيها ناعمًا. اسلقي الخضار: ضعي الخضار المقطعة في قدر كبيرة بقليل من الماء، اطهيها على نار متوسطة 25-30 دقيقة حتى تلين تمامًا. اهرسي أو اخلطي: اهرسي الخضار المسلوقة بخلاط يدوي أو ملعقة خشبية، مباشرة في القدر، حتى تحصلي على قوام سميك وليس ناعمًا تمامًا. قلّي الأساس: في مقلاة منفصلة، أذيبي السمن، وقلّي البصل المفروم على نار متوسطة 8-10 دقائق حتى يصبح ذهبيًا. أضيفي النكهات: أضيفي الثوم والزنجبيل والفلفل الحار، واطبخي دقيقتين حتى تفوح الرائحة. أضيفي التوابل: رشّي الفلفل الأحمر المطحون، وامزجيه جيدًا مع أساس البصل. اجمعي: اسكبي الخضار المهروسة فوق الأساس المقلي، امزجي جيدًا، أضيفي الملح حسب الرغبة. كثّفي: أضيفي دقيق الذرة تدريجيًا مع التحريك المستمر لتجنب التكتل؛ اتركيه ينضج على نار هادئة 10-15 دقيقة حتى يتكاثف. قدّمي: قدّميه ساخنًا مع قطعة سخية من الزبدة الذائبة فوقه، مع خبز الذرة (ماكي دي روتي).",
+    "zh": "清洗切碎：将芥菜叶、菠菜和野生藜菜叶充分洗净，去除粗梗并切碎。煮蔬菜：将切好的蔬菜放入盛有少量水的大锅中，中火煮25-30分钟，直至完全软烂。捣碎或搅打：用手持搅拌器或木勺直接在锅中将煮好的蔬菜捣碎，至浓稠但不完全顺滑的质地。炒制基底：在另一个锅中融化印度酥油，中火炒洋葱碎8-10分钟至金黄。加入香料：加入大蒜、姜和辣椒，炒2分钟至香气四溢。加入调味料：撒入红辣椒粉，与洋葱基底充分混合。混合：将捣碎的蔬菜倒入炒好的基底中，充分搅拌，加盐调味。增稠：逐渐加入玉米粉，持续搅拌以避免结块；小火炖10-15分钟至浓稠。上桌：趁热食用，上面加一大块融化黄油，搭配玉米面饼（makki di roti）。",
+    "ja": "洗って刻む：マスタード、ほうれん草、野生のほうれん草の葉をよく洗い、硬い茎を取り除いて細かく刻む。葉物を茹でる：刻んだ葉物野菜を少量の水を入れた大鍋に入れ、中火で25〜30分、完全に柔らかくなるまで煮る。つぶすかミキサーにかける：ハンドブレンダーまたは木のスプーンで、鍋の中で直接茹でた葉物野菜をつぶし、完全に滑らかではない濃厚な食感にする。ベースを炒める：別のフライパンでギーを溶かし、刻んだ玉ねぎを中火で8〜10分、きつね色になるまで炒める。香味を加える：にんにく、生姜、唐辛子を加え、香りが立つまで2分炒める。スパイスを加える：赤唐辛子粉を振り入れ、玉ねぎベースとよく混ぜる。合わせる：つぶした葉物野菜を炒めたベースに注ぎ、よく混ぜ、塩で味を調える。とろみをつける：ダマにならないよう絶えずかき混ぜながらコーンミールを少しずつ加え、弱火で10〜15分、とろみがつくまで煮る。提供する：熱いうちに、上にたっぷりの溶かしバターをのせ、コーンブレッド（マッキ・ディ・ロティ）を添えて提供する。",
+    "hi": "साफ करें और काटें: सरसों, पालक और जंगली पालक के पत्तों को अच्छी तरह धोएं, सख्त डंठल हटाएं और बारीक काटें। साग उबालें: कटे साग को थोड़े पानी वाले बड़े बर्तन में डालें, मध्यम आंच पर 25-30 मिनट पकने दें, जब तक पूरी तरह नरम न हो जाए। मैश करें या मिलाएं: उबले साग को हैंड ब्लेंडर या लकड़ी के चम्मच से सीधे बर्तन में मैश करें, जब तक गाढ़ी, पूरी तरह चिकनी नहीं बनावट न बन जाए। आधार भूनें: अलग पैन में घी पिघलाएं, कटे प्याज़ को मध्यम आंच पर 8-10 मिनट, सुनहरा होने तक भूनें। सुगंध डालें: लहसुन, अदरक और मिर्च डालें, सुगंधित होने तक 2 मिनट पकाएं। मसाले डालें: पिसी लाल मिर्च छिड़कें, प्याज़ के आधार के साथ अच्छी तरह मिलाएं। मिलाएं: मैश किया साग भुने आधार के ऊपर डालें, अच्छी तरह मिलाएं, स्वादानुसार नमक डालें। गाढ़ा करें: मक्के का आटा धीरे-धीरे डालें, लगातार हिलाते हुए, गांठ से बचने के लिए; धीमी आंच पर 10-15 मिनट पकने दें, जब तक गाढ़ा न हो जाए। परोसें: गरमागरम, ऊपर पिघले मक्खन की भरपूर मात्रा के साथ, मक्के की रोटी (मक्की दी रोटी) के साथ परोसें।",
+    "tr": "TEMİZLEYİN VE DOĞRAYIN: Hardal, ıspanak ve yabani ıspanak yapraklarını iyice yıkayın, sert sapları çıkarın ve ince doğrayın. YEŞİLLİKLERİ HAŞLAYIN: Doğranmış yeşillikleri az miktarda suyla büyük bir tencereye koyun, orta ateşte tamamen yumuşayana kadar 25-30 dakika pişirin. EZİN VEYA KARIŞTIRIN: Haşlanmış yeşillikleri, tencerenin içinde doğrudan el blenderi veya tahta kaşıkla, koyu ama tam pürüzsüz olmayan bir doku elde edene kadar ezin. TABANI SOTELEYIN: Ayrı bir tavada sadeyağı eritin, doğranmış soğanı orta ateşte altın rengi olana kadar 8-10 dakika soteleyin. AROMATİKLERİ EKLEYİN: Sarımsak, zencefil ve biberleri ekleyip kokusu çıkana kadar 2 dakika pişirin. BAHARATLARI EKLEYİN: Öğütülmüş kırmızı biberi serpip soğan tabanıyla iyice karıştırın. BİRLEŞTİRİN: Ezilmiş yeşillikleri sotelenmiş tabanın üzerine dökün, iyice karıştırın, tadına göre tuz ekleyin. KOYULAŞTIRIN: Topaklanmayı önlemek için sürekli karıştırarak mısır ununu yavaş yavaş ekleyin; koyulaşana kadar kısık ateşte 10-15 dakika pişmesine izin verin. SERVİS YAPIN: Üzerine bol miktarda eritilmiş tereyağıyla sıcak servis edin, mısır ekmeğiyle (makki di roti) birlikte.",
+    "it": "PULISCI E TRITA: Lava bene le foglie di senape, spinaci e spinacio selvatico, rimuovi i gambi duri e trita finemente. BOLLI LE VERDURE: Metti le verdure tritate in una pentola grande con poca acqua, fai sobbollire a fuoco medio 25-30 minuti, finché non si ammorbidiscono completamente. SCHIACCIA O FRULLA: Schiaccia le verdure bollite con un frullatore a immersione o un cucchiaio di legno, direttamente nella pentola, finché ottieni una consistenza densa, non perfettamente liscia. SOFFRIGGI LA BASE: In una padella separata, sciogli il ghee, soffriggi la cipolla tritata a fuoco medio 8-10 minuti, finché dorata. AGGIUNGI GLI AROMI: Aggiungi aglio, zenzero e peperoncini, cuocendo 2 minuti, finché profumati. AGGIUNGI LE SPEZIE: Cospargi il peperoncino rosso macinato, mescolando bene con la base di cipolla. COMBINA: Versa le verdure schiacciate sulla base soffritta, mescola bene, aggiungi sale a piacere. ADDENSA: Aggiungi la farina di mais gradualmente, mescolando costantemente, per evitare grumi; lascia sobbollire a fuoco basso 10-15 minuti, finché si addensa. SERVI: Servi caldo, con una generosa noce di burro fuso sopra, insieme a pane di mais (makki di roti).",
+    "ko": "씻고 썰기: 겨자잎, 시금치, 야생 시금치잎을 잘 씻고 억센 줄기를 제거한 뒤 잘게 썬다. 채소 끓이기: 썬 채소를 물을 약간 넣은 큰 냄비에 넣고 중불에서 25-30분간, 완전히 부드러워질 때까지 끓인다. 으깨거나 갈기: 냄비 안에서 바로 핸드블렌더나 나무 숟가락으로 삶은 채소를 완전히 매끄럽지는 않은 걸쭉한 질감으로 으깬다. 베이스 볶기: 별도의 팬에 기를 녹이고 다진 양파를 중불에서 8-10분간 황금빛이 될 때까지 볶는다. 향신 재료 추가: 마늘, 생강, 고추를 넣고 향이 날 때까지 2분 볶는다. 향신료 추가: 간 홍고추 가루를 뿌려 양파 베이스와 잘 섞는다. 합치기: 으깬 채소를 볶은 베이스에 부어 잘 섞고 소금으로 간한다. 걸쭉하게 만들기: 덩어리지지 않도록 계속 저어가며 옥수수 가루를 조금씩 넣는다; 걸쭉해질 때까지 약불에서 10-15분간 끓인다. 제공하기: 뜨거울 때 위에 넉넉한 녹인 버터를 얹어 옥수수빵(마키 디 로티)과 함께 제공한다."
+  },
+  "originText": {
+    "ro": "Sarson da saag este considerat felul emblematic al regiunii Punjab, atât din partea pakistaneză, cât și din cea indiană, o rețetă legată intrinsec de ciclul agricol al iernii, când muștarul verde crește abundent pe câmpurile din regiune. Cuvântul \"sarson\" înseamnă muștar în punjabi, iar \"saag\" se referă generic la orice tocană de verdețuri cu frunze.\n\nFelul este servit tradițional alături de makki di roti, o pâine plată de mălai fără gluten, combinația celor două fiind considerată aproape inseparabilă în bucătăria punjabi — atât de mult încât expresia \"sarson da saag te makki di roti\" a devenit un idiom cultural care evocă ospitalitatea rurală și mesele de familie din perioada de iarnă. Rețeta autentică necesită ore de fierbere lentă și bătut manual al verdețurilor, o tehnică pe care mulți bucătari moderni o scurtează cu ajutorul blenderelor, spre dezamăgirea puriștilor.",
+    "en": "Sarson da saag is considered the signature dish of the Punjab region, both on the Pakistani and Indian sides, a recipe intrinsically tied to the winter agricultural cycle, when green mustard grows abundantly in the region's fields. The word \"sarson\" means mustard in Punjabi, while \"saag\" refers generically to any leafy green stew.\n\nThe dish is traditionally served alongside makki di roti, a gluten-free cornmeal flatbread, the combination of the two considered nearly inseparable in Punjabi cuisine — so much so that the phrase \"sarson da saag te makki di roti\" has become a cultural idiom evoking rural hospitality and winter family meals. The authentic recipe requires hours of slow simmering and manual mashing of the greens, a technique many modern cooks shorten with blenders, to the dismay of purists.",
+    "es": "El sarson da saag se considera el plato emblemático de la región de Punjab, tanto del lado paquistaní como del indio, una receta intrínsecamente ligada al ciclo agrícola de invierno, cuando la mostaza verde crece abundantemente en los campos de la región. La palabra \"sarson\" significa mostaza en punjabi, mientras que \"saag\" se refiere genéricamente a cualquier guiso de verduras de hoja.\n\nEl plato se sirve tradicionalmente junto con makki di roti, un pan plano de harina de maíz sin gluten, considerándose la combinación de ambos casi inseparable en la cocina punjabi — tanto que la frase \"sarson da saag te makki di roti\" se ha convertido en un modismo cultural que evoca la hospitalidad rural y las comidas familiares de invierno. La receta auténtica requiere horas de cocción lenta y machacado manual de las verduras, una técnica que muchos cocineros modernos acortan con batidoras, para consternación de los puristas.",
+    "fr": "Le sarson da saag est considéré comme le plat emblématique de la région du Pendjab, tant côté pakistanais qu'indien, une recette intrinsèquement liée au cycle agricole hivernal, lorsque la moutarde verte pousse abondamment dans les champs de la région. Le mot \"sarson\" signifie moutarde en pendjabi, tandis que \"saag\" désigne génériquement tout ragoût de légumes verts feuillus.\n\nLe plat est traditionnellement servi avec du makki di roti, un pain plat de farine de maïs sans gluten, la combinaison des deux étant considérée comme presque inséparable dans la cuisine pendjabi — au point que l'expression \"sarson da saag te makki di roti\" est devenue un idiome culturel évoquant l'hospitalité rurale et les repas de famille d'hiver. La recette authentique nécessite des heures de mijotage lent et un écrasement manuel des légumes verts, une technique que de nombreux cuisiniers modernes raccourcissent à l'aide de mixeurs, au grand dam des puristes.",
+    "de": "Sarson da Saag gilt als das charakteristische Gericht der Punjab-Region, sowohl auf pakistanischer als auch auf indischer Seite, ein Rezept, das untrennbar mit dem winterlichen landwirtschaftlichen Zyklus verbunden ist, wenn grüner Senf reichlich auf den Feldern der Region wächst. Das Wort \"Sarson\" bedeutet auf Punjabi Senf, während \"Saag\" allgemein jeden Eintopf aus Blattgemüse bezeichnet.\n\nDas Gericht wird traditionell zusammen mit Makki di Roti serviert, einem glutenfreien Maismehl-Fladenbrot, wobei die Kombination der beiden in der Punjabi-Küche als fast untrennbar gilt — so sehr, dass der Ausdruck \"Sarson da Saag te Makki di Roti\" zu einem kulturellen Idiom wurde, das ländliche Gastfreundschaft und winterliche Familienmahlzeiten heraufbeschwört. Das authentische Rezept erfordert stundenlanges langsames Köcheln und manuelles Zerstampfen des Blattgemüses, eine Technik, die viele moderne Köche zum Missfallen der Puristen mit Mixern abkürzen.",
+    "pt": "O sarson da saag é considerado o prato emblemático da região de Punjab, tanto do lado paquistanês como indiano, uma receita intrinsecamente ligada ao ciclo agrícola de inverno, quando a mostarda verde cresce abundantemente nos campos da região. A palavra \"sarson\" significa mostarda em punjabi, enquanto \"saag\" se refere genericamente a qualquer ensopado de vegetais de folha.\n\nO prato é tradicionalmente servido junto com makki di roti, um pão achatado de farinha de milho sem glúten, sendo a combinação dos dois considerada quase inseparável na culinária punjabi — tanto que a frase \"sarson da saag te makki di roti\" se tornou um idioma cultural que evoca a hospitalidade rural e as refeições familiares de inverno. A receita autêntica requer horas de cozedura lenta e esmagamento manual dos vegetais, uma técnica que muitos cozinheiros modernos encurtam com liquidificadoras, para desgosto dos puristas.",
+    "ru": "Сарсон да саг считается визитным блюдом региона Пенджаб, как с пакистанской, так и с индийской стороны, рецептом, неразрывно связанным с зимним сельскохозяйственным циклом, когда зелёная горчица обильно растёт на полях региона. Слово \"сарсон\" означает горчицу на пенджаби, а \"саг\" обозначает в целом любое рагу из листовой зелени.\n\nБлюдо традиционно подаётся вместе с макки ди роти — безглютеновой кукурузной лепёшкой, причём сочетание этих двух блюд считается почти неразделимым в пенджабской кухне — настолько, что фраза \"сарсон да саг те макки ди роти\" стала культурной идиомой, вызывающей ассоциации с сельским гостеприимством и зимними семейными трапезами. Аутентичный рецепт требует часов медленного тушения и ручного разминания зелени — техника, которую многие современные повара сокращают с помощью блендеров, к огорчению пуристов.",
+    "ar": "يُعتبر سارسون دا ساغ الطبق المميز لمنطقة البنجاب، سواء في الجانب الباكستاني أو الهندي، وهي وصفة مرتبطة جوهريًا بالدورة الزراعية الشتوية، عندما ينمو الخردل الأخضر بكثرة في حقول المنطقة. تعني كلمة \"سارسون\" الخردل باللغة البنجابية، بينما تشير \"ساغ\" بشكل عام إلى أي يخنة من الخضار الورقية.\n\nيُقدَّم الطبق تقليديًا مع ماكي دي روتي، خبز مسطح من دقيق الذرة خالٍ من الغلوتين، ويُعتبر الجمع بين الاثنين شبه لا ينفصل في المطبخ البنجابي — لدرجة أن عبارة \"سارسون دا ساغ تي ماكي دي روتي\" أصبحت مصطلحًا ثقافيًا يستحضر الضيافة الريفية ووجبات العائلة الشتوية. تتطلب الوصفة الأصيلة ساعات من الطهي البطيء والهرس اليدوي للخضار، وهي تقنية يختصرها العديد من الطهاة المعاصرين باستخدام الخلاطات، على استياء المتشددين.",
+    "zh": "萨尔森达萨格被认为是旁遮普地区的代表菜肴，无论是巴基斯坦一侧还是印度一侧，这道食谱与冬季农业周期息息相关，那时绿芥菜在该地区的田野中生长茂盛。「sarson」在旁遮普语中意为芥菜，而「saag」则泛指任何绿叶炖菜。\n\n这道菜传统上搭配无麸质的玉米面饼（makki di roti）一起食用，两者的结合在旁遮普饮食中几乎密不可分——以至于「sarson da saag te makki di roti」这句话已成为一种文化习语，唤起人们对乡村待客之道和冬季家庭聚餐的联想。正宗的配方需要数小时的慢炖和手工捣碎蔬菜，许多现代厨师用搅拌机缩短了这一过程，令传统主义者感到遗憾。",
+    "ja": "サルソン・ダ・サーグは、パキスタン側とインド側の両方で、パンジャブ地方の代表料理とされ、この地域の畑で緑のマスタードが豊かに育つ冬の農業サイクルに本質的に結びついたレシピである。「サルソン」はパンジャブ語でマスタードを意味し、「サーグ」は葉物野菜のシチュー全般を指す一般的な言葉である。\n\nこの料理は伝統的に、グルテンフリーのコーンミールのフラットブレッドであるマッキ・ディ・ロティと共に提供され、この二つの組み合わせはパンジャブ料理においてほぼ切り離せないものとされている——「サルソン・ダ・サーグ・テ・マッキ・ディ・ロティ」というフレーズが、田舎のもてなしと冬の家族の食事を思い起こさせる文化的な慣用句になるほどである。本場のレシピは何時間もの弱火での煮込みと手作業での葉物のマッシュを必要とし、多くの現代の料理人はミキサーでこの工程を短縮するが、それは伝統主義者を落胆させている。",
+    "hi": "सरसों दा साग को पंजाब क्षेत्र का प्रतिष्ठित व्यंजन माना जाता है, पाकिस्तानी और भारतीय दोनों तरफ, एक नुस्खा जो सर्दियों के कृषि चक्र से गहराई से जुड़ा है, जब हरी सरसों क्षेत्र के खेतों में प्रचुर मात्रा में उगती है। पंजाबी में \"सरसों\" शब्द का अर्थ है सरसों, जबकि \"साग\" सामान्य रूप से किसी भी हरी पत्तेदार सब्ज़ी के स्ट्यू को दर्शाता है।\n\nयह व्यंजन पारंपरिक रूप से मक्की दी रोटी के साथ परोसा जाता है, एक ग्लूटेन-मुक्त मक्के की रोटी, और दोनों के संयोजन को पंजाबी व्यंजनों में लगभग अविभाज्य माना जाता है — इतना कि \"सरसों दा साग ते मक्की दी रोटी\" वाक्यांश एक सांस्कृतिक मुहावरा बन गया है जो ग्रामीण आतिथ्य और सर्दियों के पारिवारिक भोजन को दर्शाता है। प्रामाणिक नुस्खे में घंटों धीमी आंच पर पकाना और हरी सब्ज़ियों को हाथ से मैश करना आवश्यक है, एक तकनीक जिसे कई आधुनिक रसोइये मिक्सर से छोटा कर देते हैं, जो शुद्धतावादियों को निराश करता है।",
+    "tr": "Sarson da saag, hem Pakistan hem de Hindistan tarafında Pencap bölgesinin simge yemeği olarak kabul edilir; bölgenin tarlalarında yeşil hardalın bolca yetiştiği kış tarım döngüsüne özünde bağlı bir tariftir. \"Sarson\" kelimesi Pencapça'da hardal anlamına gelirken, \"saag\" genel olarak herhangi bir yapraklı yeşillik yahnisini ifade eder.\n\nYemek geleneksel olarak glütensiz bir mısır ekmeği olan makki di roti ile servis edilir; ikisinin kombinasyonu Pencap mutfağında neredeyse ayrılmaz kabul edilir — o kadar ki \"sarson da saag te makki di roti\" ifadesi, kırsal misafirperverliği ve kış aile yemeklerini çağrıştıran kültürel bir deyim haline gelmiştir. Otantik tarif, yeşilliklerin saatlerce yavaşça pişirilmesini ve elle ezilmesini gerektirir; bu teknik, saflık yanlılarının hayal kırıklığına uğramasına rağmen birçok modern aşçı tarafından blenderlarla kısaltılır.",
+    "it": "Il sarson da saag è considerato il piatto emblematico della regione del Punjab, sia dal lato pakistano che indiano, una ricetta intrinsecamente legata al ciclo agricolo invernale, quando la senape verde cresce abbondantemente nei campi della regione. La parola \"sarson\" significa senape in punjabi, mentre \"saag\" si riferisce genericamente a qualsiasi stufato di verdure a foglia.\n\nIl piatto viene tradizionalmente servito insieme al makki di roti, un pane piatto di farina di mais senza glutine, e la combinazione dei due è considerata quasi inseparabile nella cucina punjabi — al punto che la frase \"sarson da saag te makki di roti\" è diventata un idioma culturale che evoca l'ospitalità rurale e i pasti in famiglia invernali. La ricetta autentica richiede ore di cottura lenta e schiacciamento manuale delle verdure, una tecnica che molti cuochi moderni accorciano con i frullatori, con sgomento dei puristi.",
+    "ko": "사르손 다 사그는 파키스탄과 인도 양쪽 모두에서 펀자브 지역의 대표 요리로 여겨지며, 이 지역의 밭에서 녹색 겨자가 풍성하게 자라는 겨울 농업 주기와 본질적으로 연결된 레시피이다. \"사르손\"이라는 단어는 펀자브어로 겨자를 뜻하며, \"사그\"는 일반적으로 잎이 있는 녹색 채소 스튜를 가리킨다.\n\n이 요리는 전통적으로 글루텐 프리 옥수수빵인 마키 디 로티와 함께 제공되며, 이 둘의 조합은 펀자브 요리에서 거의 떼어놓을 수 없는 것으로 여겨진다 — \"사르손 다 사그 테 마키 디 로티\"라는 표현이 시골의 환대와 겨울 가족 식사를 떠올리게 하는 문화적 관용구가 될 정도이다. 정통 레시피는 몇 시간의 느린 조리와 채소를 손으로 으깨는 작업을 필요로 하는데, 많은 현대 요리사들이 믹서기로 이 과정을 단축시켜 전통주의자들을 실망시키고 있다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 14,
+    "tags": ["vegetarian", "healthy", "family"],
+    "desc": {
+      "ro": "Tocană punjabi de frunze de muștar și spanac, îngroșată cu mălai, servită cu unt topit.",
+      "en": "Punjabi mustard leaf and spinach curry, thickened with cornmeal, served with melted butter.",
+      "es": "Curry punjabi de hojas de mostaza y espinaca, espesado con harina de maíz, servido con mantequilla derretida.",
+      "fr": "Curry pendjabi de feuilles de moutarde et épinards, épaissi à la farine de maïs, servi avec du beurre fondu.",
+      "de": "Punjabi-Curry aus Senfblättern und Spinat, mit Maismehl eingedickt, serviert mit geschmolzener Butter.",
+      "pt": "Caril punjabi de folhas de mostarda e espinafre, engrossado com farinha de milho, servido com manteiga derretida.",
+      "ru": "Пенджабское карри из листьев горчицы и шпината, загущённое кукурузной мукой, подаётся с топлёным маслом.",
+      "ar": "كاري بنجابي من أوراق الخردل والسبانخ، مكثّف بدقيق الذرة، يُقدَّم مع زبدة ذائبة.",
+      "zh": "旁遮普芥菜叶菠菜咖喱，以玉米粉增稠，配融化黄油食用。",
+      "ja": "コーンミールでとろみをつけたパンジャブ風マスタードとほうれん草のカレー、溶かしバターを添えて。",
+      "hi": "पंजाबी सरसों के पत्ते और पालक साग, मक्के के आटे से गाढ़ा किया, पिघले मक्खन के साथ परोसा गया।",
+      "tr": "Mısır unuyla koyulaştırılmış Pencap usulü hardal yaprağı ve ıspanak körisi, eritilmiş tereyağıyla servis edilir.",
+      "it": "Curry punjabi di foglie di senape e spinaci, addensato con farina di mais, servito con burro fuso.",
+      "ko": "옥수수 가루로 걸쭉하게 만든 펀자브식 겨자잎과 시금치 커리, 녹인 버터를 곁들여 제공."
+    }
+  }
+}

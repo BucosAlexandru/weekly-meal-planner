@@ -1,0 +1,209 @@
+{
+  "id": 399,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Nigeria",
+    "en": "Nigeria",
+    "es": "Nigeria",
+    "fr": "Nigeria",
+    "de": "Nigeria",
+    "pt": "Nigéria",
+    "ru": "Нигерия",
+    "ar": "نيجيريا",
+    "zh": "尼日利亚",
+    "ja": "ナイジェリア",
+    "hi": "नाइजीरिया",
+    "tr": "Nijerya",
+    "it": "Nigeria",
+    "ko": "나이지리아"
+  },
+  "name": {
+    "ro": "Suya (Frigărui Nigeriene cu Condimente de Arahide)",
+    "en": "Suya (Nigerian Peanut-Spiced Beef Skewers)",
+    "es": "Suya (Brochetas de Res Nigerianas con Especias de Maní)",
+    "fr": "Suya (Brochettes de Bœuf Nigérianes aux Épices d'Arachide)",
+    "de": "Suya (Nigerianische Erdnussgewürz-Rindfleischspieße)",
+    "pt": "Suya (Espetinhos de Carne Nigerianos com Especiarias de Amendoim)",
+    "ru": "Сюйя (Нигерийские Говяжьи Шашлычки с Арахисовыми Специями)",
+    "ar": "سويا (أسياخ لحم بقري نيجيرية بتوابل الفول السوداني)",
+    "zh": "苏亚（尼日利亚花生香料烤肉串）",
+    "ja": "スヤ（ナイジェリア風ピーナッツスパイス牛肉串）",
+    "hi": "सुया (नाइजीरियाई मूंगफली मसाला बीफ स्किवर)",
+    "tr": "Suya (Nijerya Usulü Fıstık Baharatlı Dana Şişleri)",
+    "it": "Suya (Spiedini di Manzo Nigeriani alle Spezie di Arachidi)",
+    "ko": "수야 (나이지리아식 땅콩 향신료 소고기 꼬치)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Vită feliată subțire", "d": "Mușchi de vită tăiat în felii foarte subțiri, pentru a se găti rapid și uniform pe grătar." },
+      { "icon": "🥜", "t": "Yaji, pudra de arahide", "d": "Un amestec unic de arahide prăjite măcinate și condimente, numit yaji, acoperă generos carnea." },
+      { "icon": "🔥", "t": "Frigărui pe cărbuni", "d": "Se frig pe cărbuni la foc mediu, întorcând des, pentru o crustă uniformă fără a arde." },
+      { "icon": "🧅", "t": "Cu ceapă și roșii", "d": "Se servesc tradițional cu felii crude de ceapă, roșii și un praf suplimentar de yaji." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Thinly sliced beef", "d": "Beef tenderloin sliced very thin, to cook quickly and evenly on the grill." },
+      { "icon": "🥜", "t": "Yaji peanut powder", "d": "A distinctive blend of ground roasted peanuts and spices, called yaji, generously coats the meat." },
+      { "icon": "🔥", "t": "Charcoal-grilled skewers", "d": "Grilled over charcoal at medium heat, turning often, for an even crust without burning." },
+      { "icon": "🧅", "t": "With onion and tomato", "d": "Traditionally served with raw slices of onion, tomato and an extra dusting of yaji." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Res en rodajas finas", "d": "Solomillo de res cortado muy fino, para cocinarse rápida y uniformemente a la parrilla." },
+      { "icon": "🥜", "t": "Yaji, polvo de maní", "d": "Una mezcla distintiva de maní tostado molido y especias, llamada yaji, cubre generosamente la carne." },
+      { "icon": "🔥", "t": "Brochetas al carbón", "d": "Se asan al carbón a fuego medio, volteando con frecuencia, para una costra uniforme sin quemarse." },
+      { "icon": "🧅", "t": "Con cebolla y tomate", "d": "Se sirven tradicionalmente con rodajas crudas de cebolla, tomate y una capa extra de yaji." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Bœuf finement tranché", "d": "Filet de bœuf coupé très finement, pour cuire rapidement et uniformément sur le gril." },
+      { "icon": "🥜", "t": "Yaji, poudre d'arachide", "d": "Un mélange distinctif de cacahuètes grillées moulues et d'épices, appelé yaji, recouvre généreusement la viande." },
+      { "icon": "🔥", "t": "Brochettes au charbon", "d": "Grillées au charbon à feu moyen, en retournant souvent, pour une croûte uniforme sans brûler." },
+      { "icon": "🧅", "t": "Avec oignon et tomate", "d": "Traditionnellement servies avec des tranches crues d'oignon, de tomate et un peu de yaji supplémentaire." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Dünn geschnittenes Rindfleisch", "d": "Rinderfilet, sehr dünn geschnitten, für ein schnelles, gleichmäßiges Garen auf dem Grill." },
+      { "icon": "🥜", "t": "Yaji-Erdnusspulver", "d": "Eine charakteristische Mischung aus gemahlenen gerösteten Erdnüssen und Gewürzen, genannt Yaji, bedeckt großzügig das Fleisch." },
+      { "icon": "🔥", "t": "Spieße auf Holzkohle", "d": "Über Holzkohle bei mittlerer Hitze gegrillt, häufig gewendet, für eine gleichmäßige Kruste ohne zu verbrennen." },
+      { "icon": "🧅", "t": "Mit Zwiebel und Tomate", "d": "Traditionell serviert mit rohen Scheiben von Zwiebel, Tomate und einer zusätzlichen Prise Yaji." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Carne fatiada fina", "d": "Lombo bovino cortado bem fino, para cozinhar rápida e uniformemente na grelha." },
+      { "icon": "🥜", "t": "Yaji, pó de amendoim", "d": "Uma mistura distinta de amendoim torrado moído e especiarias, chamada yaji, cobre generosamente a carne." },
+      { "icon": "🔥", "t": "Espetinhos no carvão", "d": "Grelhados no carvão em fogo médio, virando com frequência, para uma crosta uniforme sem queimar." },
+      { "icon": "🧅", "t": "Com cebola e tomate", "d": "Tradicionalmente servidos com fatias cruas de cebola, tomate e uma camada extra de yaji." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Тонко нарезанная говядина", "d": "Говяжья вырезка, нарезанная очень тонко, для быстрого и равномерного приготовления на гриле." },
+      { "icon": "🥜", "t": "Ядзи, арахисовый порошок", "d": "Уникальная смесь молотого жареного арахиса и специй, называемая ядзи, щедро покрывает мясо." },
+      { "icon": "🔥", "t": "Шашлычки на углях", "d": "Жарятся на углях на среднем огне, часто переворачиваясь, для равномерной корочки без подгорания." },
+      { "icon": "🧅", "t": "С луком и помидорами", "d": "Традиционно подаются с сырыми ломтиками лука, помидора и дополнительной посыпкой ядзи." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "لحم بقري مقطّع رقيقًا", "d": "شرائح لحم بقري رقيقة جدًا لتُطهى بسرعة وبالتساوي على الشواية." },
+      { "icon": "🥜", "t": "ياجي، مسحوق الفول السوداني", "d": "مزيج مميز من الفول السوداني المحمّص المطحون والتوابل، يُسمى ياجي، يغطي اللحم بسخاء." },
+      { "icon": "🔥", "t": "أسياخ على الفحم", "d": "تُشوى على الفحم بحرارة متوسطة مع التقليب المتكرر للحصول على قشرة متساوية دون احتراق." },
+      { "icon": "🧅", "t": "مع البصل والطماطم", "d": "تُقدَّم تقليديًا مع شرائح بصل وطماطم نيئة ورشة إضافية من الياجي." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "薄切牛肉", "d": "牛里脊切成极薄的片，以便在烤架上快速均匀地烤熟。" },
+      { "icon": "🥜", "t": "亚吉花生粉", "d": "由烘烤花生磨碎与香料调制而成的独特混合粉「亚吉」，慷慨地裹在肉上。" },
+      { "icon": "🔥", "t": "炭火烤串", "d": "在中火炭火上烤制，频繁翻动，形成均匀外皮而不烧焦。" },
+      { "icon": "🧅", "t": "配洋葱和番茄", "d": "传统上配生洋葱片、番茄片和额外撒的亚吉粉一起食用。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "薄切り牛肉", "d": "牛ヒレ肉を非常に薄く切り、グリルで素早く均一に火を通す。" },
+      { "icon": "🥜", "t": "ヤジ（ピーナッツ粉末）", "d": "焙煎ピーナッツを挽いたものとスパイスをブレンドした独特な粉ヤジが、肉にたっぷりとまぶされる。" },
+      { "icon": "🔥", "t": "炭火の串焼き", "d": "中火の炭火で頻繁に返しながら焼き、焦がさずに均一な焼き色をつける。" },
+      { "icon": "🧅", "t": "玉ねぎとトマトを添えて", "d": "伝統的に生の玉ねぎとトマトのスライス、追加のヤジを添えて提供される。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "पतले कटे बीफ", "d": "बीफ टेंडरलॉइन बहुत पतला कटा, ग्रिल पर जल्दी और समान रूप से पकने के लिए।" },
+      { "icon": "🥜", "t": "यागी, मूंगफली पाउडर", "d": "भुनी पिसी मूंगफली और मसालों का एक विशिष्ट मिश्रण, यागी कहलाता है, मांस को भरपूर मात्रा में ढकता है।" },
+      { "icon": "🔥", "t": "कोयले पर स्किवर", "d": "मध्यम आंच पर कोयले पर ग्रिल किया, बार-बार पलटते हुए, बिना जले समान परत के लिए।" },
+      { "icon": "🧅", "t": "प्याज़ और टमाटर के साथ", "d": "पारंपरिक रूप से कच्चे प्याज़, टमाटर के टुकड़ों और अतिरिक्त यागी के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "İnce dilimlenmiş dana eti", "d": "Izgarada hızlı ve eşit pişmesi için çok ince dilimlenmiş dana bonfile." },
+      { "icon": "🥜", "t": "Yaji fıstık tozu", "d": "Öğütülmüş kavrulmuş fıstık ve baharatlardan oluşan kendine özgü bir karışım olan yaji, eti bolca kaplar." },
+      { "icon": "🔥", "t": "Kömürde şişler", "d": "Orta ateşte kömürde, sık sık çevrilerek, yanmadan eşit bir kabuk için ızgara yapılır." },
+      { "icon": "🧅", "t": "Soğan ve domatesle", "d": "Geleneksel olarak çiğ soğan, domates dilimleri ve ekstra bir yaji serpintisiyle servis edilir." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Manzo affettato sottile", "d": "Filetto di manzo tagliato molto sottile, per cuocere rapidamente e uniformemente sulla griglia." },
+      { "icon": "🥜", "t": "Yaji, polvere di arachidi", "d": "Un mix distintivo di arachidi tostate macinate e spezie, chiamato yaji, ricopre generosamente la carne." },
+      { "icon": "🔥", "t": "Spiedini alla brace", "d": "Grigliati sulla brace a fuoco medio, girando spesso, per una crosta uniforme senza bruciare." },
+      { "icon": "🧅", "t": "Con cipolla e pomodoro", "d": "Tradizionalmente serviti con fette crude di cipolla, pomodoro e una spolverata extra di yaji." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "얇게 썬 소고기", "d": "그릴에서 빠르고 고르게 익도록 아주 얇게 썬 소고기 안심." },
+      { "icon": "🥜", "t": "야지 땅콩 가루", "d": "볶은 땅콩을 갈아 향신료와 섞은 독특한 혼합물인 야지가 고기를 듬뿍 덮는다." },
+      { "icon": "🔥", "t": "숯불 꼬치", "d": "중불 숯불에서 자주 뒤집어가며 구워 타지 않고 고른 겉면을 만든다." },
+      { "icon": "🧅", "t": "양파와 토마토를 곁들여", "d": "전통적으로 생양파, 토마토 슬라이스, 추가 야지 가루와 함께 제공된다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["800g mușchi de vită, tăiat felii foarte subțiri", "1/2 cană arahide prăjite, măcinate fin", "2 linguri pudră de ardei iute", "1 lingură pudră de usturoi", "1 lingură pudră de ghimbir", "1 linguriță cuburi de supă măcinate (opțional)", "1 linguriță sare", "3 linguri ulei", "1 ceapă, tăiată felii, pentru servire", "2 roșii, tăiate felii, pentru servire", "frigărui de lemn"],
+    "en": ["800g beef tenderloin, sliced very thin", "1/2 cup roasted peanuts, finely ground", "2 tbsp chili powder", "1 tbsp garlic powder", "1 tbsp ginger powder", "1 tsp ground bouillon cube (optional)", "1 tsp salt", "3 tbsp oil", "1 onion, sliced, for serving", "2 tomatoes, sliced, for serving", "wooden skewers"],
+    "es": ["800g de solomillo de res, cortado muy fino", "1/2 taza de maní tostado, molido fino", "2 cucharadas de chile en polvo", "1 cucharada de ajo en polvo", "1 cucharada de jengibre en polvo", "1 cucharadita de cubito de caldo molido (opcional)", "1 cucharadita de sal", "3 cucharadas de aceite", "1 cebolla, en rodajas, para servir", "2 tomates, en rodajas, para servir", "palillos de madera"],
+    "fr": ["800g de filet de bœuf, tranché très finement", "1/2 tasse de cacahuètes grillées, moulues finement", "2 c. à soupe de piment en poudre", "1 c. à soupe d'ail en poudre", "1 c. à soupe de gingembre en poudre", "1 c. à café de cube de bouillon moulu (facultatif)", "1 c. à café de sel", "3 c. à soupe d'huile", "1 oignon, émincé, pour servir", "2 tomates, émincées, pour servir", "brochettes en bois"],
+    "de": ["800g Rinderfilet, sehr dünn geschnitten", "1/2 Tasse geröstete Erdnüsse, fein gemahlen", "2 EL Chilipulver", "1 EL Knoblauchpulver", "1 EL Ingwerpulver", "1 TL gemahlener Brühwürfel (optional)", "1 TL Salz", "3 EL Öl", "1 Zwiebel, in Scheiben, zum Servieren", "2 Tomaten, in Scheiben, zum Servieren", "Holzspieße"],
+    "pt": ["800g de lombo bovino, cortado bem fino", "1/2 xícara de amendoim torrado, moído fino", "2 colheres (sopa) de pimenta em pó", "1 colher (sopa) de alho em pó", "1 colher (sopa) de gengibre em pó", "1 colher (chá) de cubo de caldo moído (opcional)", "1 colher (chá) de sal", "3 colheres (sopa) de óleo", "1 cebola, fatiada, para servir", "2 tomates, fatiados, para servir", "espetos de madeira"],
+    "ru": ["800г говяжьей вырезки, очень тонко нарезанной", "1/2 стакана жареного арахиса, мелко молотого", "2 ст.л. порошка чили", "1 ст.л. чесночного порошка", "1 ст.л. порошка имбиря", "1 ч.л. молотого бульонного кубика (по желанию)", "1 ч.л. соли", "3 ст.л. масла", "1 луковица, нарезанная, для подачи", "2 помидора, нарезанных, для подачи", "деревянные шпажки"],
+    "ar": ["800 غرام لحم بقري فيليه، مقطّع شرائح رقيقة جدًا", "نصف كوب فول سوداني محمّص، مطحون ناعمًا", "ملعقتان كبيرتان مسحوق فلفل حار", "ملعقة كبيرة مسحوق ثوم", "ملعقة كبيرة مسحوق زنجبيل", "ملعقة صغيرة مكعب مرق مطحون (اختياري)", "ملعقة صغيرة ملح", "3 ملاعق كبيرة زيت", "بصلة واحدة، مقطّعة شرائح، للتقديم", "طماطمتان، مقطّعتان شرائح، للتقديم", "أسياخ خشبية"],
+    "zh": ["800克牛里脊肉，切极薄片", "1/2杯烤花生，磨细", "2汤匙辣椒粉", "1汤匙蒜粉", "1汤匙姜粉", "1茶匙磨碎高汤块（可选）", "1茶匙盐", "3汤匙油", "1个洋葱，切片，配食用", "2个番茄，切片，配食用", "木签"],
+    "ja": ["牛ヒレ肉800g（極薄切り）", "焙煎ピーナッツ1/2カップ（細かく挽く）", "チリパウダー大さじ2", "ガーリックパウダー大さじ1", "ジンジャーパウダー大さじ1", "すりつぶしたブイヨンキューブ小さじ1（お好みで）", "塩小さじ1", "油 大さじ3", "玉ねぎ1個（薄切り、添える用）", "トマト2個（薄切り、添える用）", "木製の串"],
+    "hi": ["800 ग्राम बीफ टेंडरलॉइन, बहुत पतला कटा", "1/2 कप भुनी मूंगफली, बारीक पिसी", "2 बड़े चम्मच मिर्च पाउडर", "1 बड़ा चम्मच लहसुन पाउडर", "1 बड़ा चम्मच अदरक पाउडर", "1 छोटी चम्मच पिसा बुयों क्यूब (वैकल्पिक)", "1 छोटी चम्मच नमक", "3 बड़े चम्मच तेल", "1 प्याज़, कटा, परोसने के लिए", "2 टमाटर, कटे, परोसने के लिए", "लकड़ी की सींक"],
+    "tr": ["800g dana bonfile, çok ince dilimlenmiş", "1/2 su bardağı kavrulmuş fıstık, ince öğütülmüş", "2 yemek kaşığı acı biber tozu", "1 yemek kaşığı sarımsak tozu", "1 yemek kaşığı zencefil tozu", "1 çay kaşığı öğütülmüş bulyon küpü (isteğe bağlı)", "1 çay kaşığı tuz", "3 yemek kaşığı yağ", "1 soğan, dilimlenmiş, servis için", "2 domates, dilimlenmiş, servis için", "ahşap şişler"],
+    "it": ["800g di filetto di manzo, tagliato molto sottile", "1/2 tazza di arachidi tostate, macinate finemente", "2 cucchiai di peperoncino in polvere", "1 cucchiaio di aglio in polvere", "1 cucchiaio di zenzero in polvere", "1 cucchiaino di dado macinato (facoltativo)", "1 cucchiaino di sale", "3 cucchiai di olio", "1 cipolla, a fette, per servire", "2 pomodori, a fette, per servire", "spiedini di legno"],
+    "ko": ["소고기 안심 800g, 아주 얇게 썬 것", "볶은 땅콩 1/2컵, 곱게 간 것", "고춧가루 2큰술", "마늘 가루 1큰술", "생강 가루 1큰술", "간 부용 큐브 1작은술(선택)", "소금 1작은술", "식용유 3큰술", "양파 1개, 슬라이스, 곁들임용", "토마토 2개, 슬라이스, 곁들임용", "나무 꼬치"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE YAJI: Amestecă arahidele măcinate fin cu pudra de ardei iute, usturoi, ghimbir, cubul de supă măcinat și sare într-un bol, obținând amestecul de yaji. ÎNMOAIE FRIGĂRUILE: Cu 30 minute înainte, înmoaie frigăruile de lemn în apă. ÎNȘIRĂ CARNEA: Înșiră feliile subțiri de vită pe frigărui, în valuri, ca la un accordion. UNGE CU ULEI: Unge fiecare frigărui cu ulei pe ambele părți, folosind o pensulă de bucătărie. ACOPERĂ CU YAJI: Presară generos amestecul de yaji pe toate părțile cărnii, apăsând ușor ca să adere bine. ÎNCINGE GRĂTARUL: Încinge cărbunii sau grătarul la foc mediu. FRIGE: Pune frigăruile pe grătar, frige 2-3 minute pe fiecare parte, întorcând des, până carnea e pătrunsă dar rămâne fragedă. PRESARĂ YAJI SUPLIMENTAR: La final, presară un praf suplimentar de yaji peste frigăruile fierbinți. SERVEȘTE: Servește imediat, alături de felii de ceapă crudă, roșii și yaji suplimentar pentru înmuiat.",
+    "en": "PREPARE THE YAJI: Mix the finely ground peanuts with the chili powder, garlic, ginger, ground bouillon cube and salt in a bowl, forming the yaji blend. SOAK THE SKEWERS: 30 minutes ahead, soak the wooden skewers in water. THREAD THE MEAT: Thread the thin beef slices onto the skewers, in waves, like an accordion. BRUSH WITH OIL: Brush each skewer with oil on both sides, using a kitchen brush. COAT WITH YAJI: Generously sprinkle the yaji blend on all sides of the meat, pressing gently so it adheres well. HEAT THE GRILL: Heat the charcoal or grill to medium heat. GRILL: Place the skewers on the grill, cook 2-3 minutes per side, turning often, until the meat is cooked through but stays tender. SPRINKLE EXTRA YAJI: At the end, sprinkle an extra dusting of yaji over the hot skewers. SERVE: Serve immediately, alongside raw onion slices, tomatoes and extra yaji for dipping.",
+    "es": "PREPARA EL YAJI: Mezcla el maní molido fino con el chile en polvo, ajo, jengibre, el cubito de caldo molido y sal en un bol, formando la mezcla de yaji. REMOJA LOS PALILLOS: 30 minutos antes, remoja los palillos de madera en agua. ENSARTA LA CARNE: Ensarta las rodajas finas de res en los palillos, en ondas, como un acordeón. UNTA CON ACEITE: Unta cada brocheta con aceite por ambos lados, usando una brocha de cocina. CUBRE CON YAJI: Espolvorea generosamente la mezcla de yaji por todos lados de la carne, presionando suavemente para que se adhiera bien. CALIENTA LA PARRILLA: Calienta el carbón o la parrilla a fuego medio. ASA: Coloca las brochetas en la parrilla, cocina 2-3 minutos por lado, volteando con frecuencia, hasta que la carne esté cocida pero siga tierna. ESPOLVOREA MÁS YAJI: Al final, espolvorea un poco más de yaji sobre las brochetas calientes. SIRVE: Sirve de inmediato, junto con rodajas de cebolla cruda, tomates y yaji extra para mojar.",
+    "fr": "PRÉPAREZ LE YAJI: Mélangez les cacahuètes finement moulues avec le piment en poudre, l'ail, le gingembre, le cube de bouillon moulu et le sel dans un bol, formant le mélange de yaji. TREMPEZ LES BROCHETTES: 30 minutes avant, trempez les brochettes en bois dans l'eau. EMBROCHEZ LA VIANDE: Embrochez les fines tranches de bœuf sur les brochettes, en vagues, comme un accordéon. BADIGEONNEZ D'HUILE: Badigeonnez chaque brochette d'huile des deux côtés, à l'aide d'un pinceau de cuisine. ENROBEZ DE YAJI: Saupoudrez généreusement le mélange de yaji sur tous les côtés de la viande, en pressant doucement pour bien le faire adhérer. CHAUFFEZ LE GRIL: Chauffez le charbon ou le gril à feu moyen. FAITES GRILLER: Placez les brochettes sur le gril, cuisez 2-3 minutes de chaque côté, en retournant souvent, jusqu'à ce que la viande soit cuite mais reste tendre. SAUPOUDREZ DE YAJI SUPPLÉMENTAIRE: À la fin, saupoudrez un peu plus de yaji sur les brochettes chaudes. SERVEZ: Servez immédiatement, avec des tranches d'oignon cru, des tomates et du yaji supplémentaire pour tremper.",
+    "de": "YAJI ZUBEREITEN: Die fein gemahlenen Erdnüsse mit Chilipulver, Knoblauch, Ingwer, gemahlenem Brühwürfel und Salz in einer Schüssel vermischen, um die Yaji-Mischung zu bilden. SPIESSE EINWEICHEN: 30 Minuten vorher die Holzspieße in Wasser einweichen. FLEISCH AUFSPIESSEN: Die dünnen Rindfleischscheiben wellenförmig, wie ein Akkordeon, auf die Spieße stecken. MIT ÖL BESTREICHEN: Jeden Spieß auf beiden Seiten mit Öl bestreichen, mit einem Küchenpinsel. MIT YAJI BESTREUEN: Die Yaji-Mischung großzügig auf allen Seiten des Fleisches verteilen, leicht andrücken, damit sie gut haftet. GRILL ERHITZEN: Die Kohle oder den Grill auf mittlere Hitze erhitzen. GRILLEN: Die Spieße auf den Grill legen, 2-3 Minuten pro Seite garen, häufig wenden, bis das Fleisch durchgegart, aber noch zart ist. EXTRA YAJI STREUEN: Am Ende eine zusätzliche Prise Yaji über die heißen Spieße streuen. SERVIEREN: Sofort servieren, mit rohen Zwiebelscheiben, Tomaten und extra Yaji zum Dippen.",
+    "pt": "PREPARE O YAJI: Misture o amendoim moído fino com a pimenta em pó, alho, gengibre, o cubo de caldo moído e sal numa tigela, formando a mistura de yaji. DEMOLHE OS ESPETOS: 30 minutos antes, demolhe os espetos de madeira em água. ENFIE A CARNE: Enfie as fatias finas de carne nos espetos, em ondas, como um sanfona. PINCELE COM ÓLEO: Pincele cada espeto com óleo dos dois lados, usando um pincel de cozinha. COBRIR COM YAJI: Polvilhe generosamente a mistura de yaji em todos os lados da carne, pressionando levemente para aderir bem. AQUEÇA A GRELHA: Aqueça o carvão ou a grelha em fogo médio. GRELHE: Coloque os espetinhos na grelha, cozinhe 2-3 minutos de cada lado, virando com frequência, até a carne ficar cozida mas macia. POLVILHE MAIS YAJI: No final, polvilhe uma camada extra de yaji sobre os espetinhos quentes. SIRVA: Sirva imediatamente, junto com fatias de cebola crua, tomates e yaji extra para molhar.",
+    "ru": "ПРИГОТОВЬТЕ ЯДЗИ: Смешайте мелко молотый арахис с порошком чили, чесноком, имбирём, молотым бульонным кубиком и солью в миске, формируя смесь ядзи. ЗАМОЧИТЕ ШПАЖКИ: За 30 минут до готовки замочите деревянные шпажки в воде. НАНИЖИТЕ МЯСО: Нанижите тонкие ломтики говядины на шпажки волнами, как гармошку. СМАЖЬТЕ МАСЛОМ: Смажьте каждую шпажку маслом с обеих сторон кулинарной кистью. ОБВАЛЯЙТЕ В ЯДЗИ: Щедро посыпьте смесью ядзи со всех сторон мяса, слегка прижимая, чтобы она хорошо прилипла. РАЗОГРЕЙТЕ ГРИЛЬ: Разогрейте угли или гриль до средней температуры. ЖАРЬТЕ: Положите шашлычки на гриль, жарьте 2-3 минуты с каждой стороны, часто переворачивая, пока мясо не прожарится, оставаясь нежным. ПОСЫПЬТЕ ДОПОЛНИТЕЛЬНЫМ ЯДЗИ: В конце посыпьте горячие шашлычки дополнительной порцией ядзи. ПОДАВАЙТЕ: Подавайте сразу, с ломтиками сырого лука, помидорами и дополнительным ядзи для макания.",
+    "ar": "حضّري الياجي: امزجي الفول السوداني المطحون ناعمًا مع مسحوق الفلفل الحار والثوم والزنجبيل ومكعب المرق المطحون والملح في وعاء، لتشكيل خليط الياجي. انقعي الأسياخ: قبل الطهي بـ30 دقيقة، انقعي الأسياخ الخشبية بالماء. أدخلي اللحم في الأسياخ: أدخلي شرائح اللحم الرقيقة في الأسياخ بشكل متموج، مثل الأكورديون. ادهني بالزيت: ادهني كل سيخ بالزيت من الجهتين باستخدام فرشاة مطبخ. غطّي بالياجي: رشّي خليط الياجي بسخاء على كل جوانب اللحم، مع الضغط برفق ليلتصق جيدًا. سخّني الشواية: سخّني الفحم أو الشواية على نار متوسطة. اشوي: ضعي الأسياخ على الشواية، اطبخيها 2-3 دقائق لكل جانب مع التقليب المتكرر حتى ينضج اللحم مع بقائه طريًا. رشّي ياجي إضافيًا: في النهاية، رشّي القليل من الياجي الإضافي فوق الأسياخ الساخنة. قدّمي: قدّميها فورًا مع شرائح البصل النيء والطماطم والياجي الإضافي للغمس.",
+    "zh": "制作亚吉：在碗中将磨细的花生与辣椒粉、蒜粉、姜粉、磨碎的高汤块和盐混合，制成亚吉调料。浸泡竹签：提前30分钟将木签泡水。穿肉块：将薄牛肉片以波浪形穿在签子上，像手风琴一样。刷油：用厨房刷子在每根肉串两面刷油。裹上亚吉：将亚吉调料慷慨地撒在肉的各面，轻轻按压使其附着牢固。加热烤架：将炭火或烤架加热至中火。烤制：将肉串放在烤架上，每面烤2-3分钟，频繁翻动，直至肉熟透但仍保持鲜嫩。撒上额外亚吉：最后在热肉串上再撒一层亚吉调料。上桌：立即配生洋葱片、番茄和额外的亚吉调料食用，用于蘸取。",
+    "ja": "ヤジを準備する：細かく挽いたピーナッツをチリパウダー、にんにく、生姜、すりつぶしたブイヨンキューブ、塩とボウルで混ぜ合わせ、ヤジのブレンドを作る。串を水に浸す：調理の30分前に、木製の串を水に浸す。肉を串に刺す：薄切りの牛肉をアコーディオンのように波状に串に刺す。油を塗る：キッチンブラシを使って各串の両面に油を塗る。ヤジをまぶす：ヤジのブレンドを肉の全面にたっぷりと振りかけ、軽く押さえてよく付着させる。グリルを熱する：炭またはグリルを中火に熱する。焼く：串をグリルに置き、両面各2〜3分、頻繁に返しながら、肉に火が通りつつ柔らかさを保つまで焼く。追加のヤジを振りかける：最後に、熱い串の上に追加のヤジを振りかける。提供する：生の玉ねぎスライス、トマト、追加のヤジを添えてすぐに提供する。",
+    "hi": "यागी तैयार करें: बारीक पिसी मूंगफली को मिर्च पाउडर, लहसुन, अदरक, पिसे बुयों क्यूब और नमक के साथ कटोरे में मिलाएं, यागी मिश्रण बनाते हुए। सींक भिगोएं: 30 मिनट पहले, लकड़ी की सींक को पानी में भिगोएं। मांस पिरोएं: पतली बीफ स्लाइस को सींक पर, लहरों में, अकॉर्डियन की तरह पिरोएं। तेल लगाएं: रसोई ब्रश से हर सींक पर दोनों तरफ तेल लगाएं। यागी से ढकें: मांस के सभी तरफ भरपूर मात्रा में यागी मिश्रण छिड़कें, हल्के से दबाते हुए ताकि अच्छी तरह चिपके। ग्रिल गरम करें: कोयले या ग्रिल को मध्यम आंच पर गरम करें। ग्रिल करें: सींक को ग्रिल पर रखें, हर तरफ 2-3 मिनट पकाएं, बार-बार पलटते हुए, जब तक मांस पक न जाए लेकिन नरम बना रहे। अतिरिक्त यागी छिड़कें: अंत में, गरम सींक पर अतिरिक्त यागी छिड़कें। परोसें: तुरंत, कच्चे प्याज़ के टुकड़ों, टमाटर और डुबाने के लिए अतिरिक्त यागी के साथ परोसें।",
+    "tr": "YAJIYI HAZIRLAYIN: İnce öğütülmüş fıstıkları acı biber tozu, sarımsak, zencefil, öğütülmüş bulyon küpü ve tuzla bir kasede karıştırarak yaji karışımını oluşturun. ŞİŞLERİ ISLATIN: 30 dakika önceden, ahşap şişleri suda ıslatın. ETİ ŞİŞE GEÇİRİN: İnce dana eti dilimlerini akordeon gibi dalgalar halinde şişlere geçirin. YAĞ SÜRÜN: Mutfak fırçası kullanarak her şişi her iki taraftan yağla fırçalayın. YAJIYLA KAPLAYIN: Yaji karışımını etin her tarafına bolca serpip, iyice yapışması için hafifçe bastırın. IZGARAYI ISITIN: Kömürü veya ızgarayı orta ateşe ısıtın. IZGARA YAPIN: Şişleri ızgaraya koyun, her tarafını sık sık çevirerek 2-3 dakika pişirin, et pişerken yumuşak kalmalı. EKSTRA YAJI SERPİN: Sonunda, sıcak şişlerin üzerine ekstra bir yaji serpin. SERVİS YAPIN: Çiğ soğan dilimleri, domates ve batırmak için ekstra yajiyle hemen servis edin.",
+    "it": "PREPARA LO YAJI: Mescola le arachidi macinate finemente con il peperoncino in polvere, l'aglio, lo zenzero, il dado macinato e il sale in una ciotola, formando il mix di yaji. AMMOLLA GLI SPIEDINI: 30 minuti prima, ammolla gli spiedini di legno in acqua. INFILZA LA CARNE: Infilza le fette sottili di manzo sugli spiedini, a onde, come una fisarmonica. SPENNELLA CON OLIO: Spennella ogni spiedino con olio su entrambi i lati, usando un pennello da cucina. RICOPRI DI YAJI: Cospargi generosamente il mix di yaji su tutti i lati della carne, premendo delicatamente perché aderisca bene. SCALDA LA GRIGLIA: Scalda la brace o la griglia a fuoco medio. GRIGLIA: Metti gli spiedini sulla griglia, cuoci 2-3 minuti per lato, girando spesso, finché la carne è cotta ma resta tenera. COSPARGI ALTRO YAJI: Alla fine, cospargi un altro po' di yaji sugli spiedini caldi. SERVI: Servi subito, con fette di cipolla cruda, pomodori e altro yaji per intingere.",
+    "ko": "야지 만들기: 곱게 간 땅콩을 고춧가루, 마늘, 생강, 간 부용 큐브, 소금과 함께 볼에 섞어 야지 혼합물을 만든다. 꼬치 불리기: 30분 전에 나무 꼬치를 물에 담근다. 고기 꿰기: 얇은 소고기 슬라이스를 아코디언처럼 물결 모양으로 꼬치에 꿴다. 기름 바르기: 조리용 붓으로 각 꼬치 양면에 기름을 바른다. 야지 입히기: 고기의 모든 면에 야지 혼합물을 듬뿍 뿌리고 살짝 눌러 잘 붙게 한다. 그릴 달구기: 숯이나 그릴을 중불로 달군다. 굽기: 꼬치를 그릴에 올려 각 면을 자주 뒤집으며 2-3분씩 구워, 고기가 익으면서도 부드러움을 유지하게 한다. 추가 야지 뿌리기: 마지막으로 뜨거운 꼬치 위에 야지를 추가로 뿌린다. 제공하기: 생양파 슬라이스, 토마토, 찍어 먹을 추가 야지와 함께 즉시 제공한다."
+  },
+  "originText": {
+    "ro": "Suya are origini legate de poporul Hausa din nordul Nigeriei, unde vânzătorii ambulanți de suya, numiți \"mai suya\", au dezvoltat de generații tehnica de a frige carne subțire acoperită cu yaji la standuri stradale, adesea vizibile datorită fumului parfumat ce se ridică din grătarele lor de noapte. Deși originară din nord, suya s-a răspândit în toate marile orașe nigeriene și în întreaga Africa de Vest, devenind un fenomen cultural asociat cu viața de noapte urbană.\n\nSecretul unei suya bune stă în calitatea și proporția amestecului de yaji, o rețetă păstrată adesea în familie, transmisă din generație în generație de vânzătorii de pe stradă. Ritualul de a cumpăra suya seara târziu, direct de la grătar, ambalată în hârtie de ziar sau folie, este considerat o experiență culturală esențială pentru orice vizitator al orașelor nigeriene, la fel de importantă ca gustul în sine.",
+    "en": "Suya has origins tied to the Hausa people of northern Nigeria, where street vendors of suya, called \"mai suya,\" have developed for generations the technique of grilling thin meat coated in yaji at street stalls, often visible from the fragrant smoke rising from their nighttime grills. Though originating in the north, suya spread to all major Nigerian cities and across West Africa, becoming a cultural phenomenon associated with urban nightlife.\n\nThe secret to a good suya lies in the quality and proportion of the yaji blend, a recipe often kept within families, passed down through generations of street vendors. The ritual of buying suya late at night, straight off the grill, wrapped in newspaper or foil, is considered an essential cultural experience for any visitor to Nigerian cities, just as important as the taste itself.",
+    "es": "El suya tiene orígenes ligados al pueblo hausa del norte de Nigeria, donde los vendedores callejeros de suya, llamados \"mai suya\", han desarrollado durante generaciones la técnica de asar carne fina cubierta con yaji en puestos callejeros, a menudo visibles por el humo aromático que se eleva de sus parrillas nocturnas. Aunque se originó en el norte, el suya se extendió a todas las grandes ciudades nigerianas y por toda África Occidental, convirtiéndose en un fenómeno cultural asociado a la vida nocturna urbana.\n\nEl secreto de un buen suya está en la calidad y proporción de la mezcla de yaji, una receta a menudo guardada en familia, transmitida a través de generaciones de vendedores callejeros. El ritual de comprar suya tarde en la noche, recién sacado de la parrilla, envuelto en papel periódico o papel de aluminio, se considera una experiencia cultural esencial para cualquier visitante de las ciudades nigerianas, tan importante como el sabor en sí.",
+    "fr": "Le suya trouve ses origines chez le peuple haoussa du nord du Nigeria, où les vendeurs de rue de suya, appelés \"mai suya\", ont développé depuis des générations la technique de griller de la viande fine enrobée de yaji sur des étals de rue, souvent visibles grâce à la fumée parfumée s'élevant de leurs grils nocturnes. Bien qu'originaire du nord, le suya s'est répandu dans toutes les grandes villes nigérianes et dans toute l'Afrique de l'Ouest, devenant un phénomène culturel associé à la vie nocturne urbaine.\n\nLe secret d'un bon suya réside dans la qualité et la proportion du mélange de yaji, une recette souvent gardée en famille, transmise à travers des générations de vendeurs de rue. Le rituel d'acheter du suya tard le soir, tout droit sorti du gril, enveloppé dans du papier journal ou du papier aluminium, est considéré comme une expérience culturelle essentielle pour tout visiteur des villes nigérianes, tout aussi importante que le goût lui-même.",
+    "de": "Suya hat Ursprünge, die mit dem Volk der Hausa im Norden Nigerias verbunden sind, wo Straßenhändler von Suya, genannt \"Mai Suya\", seit Generationen die Technik entwickelt haben, dünnes, mit Yaji bedecktes Fleisch an Straßenständen zu grillen, oft erkennbar am duftenden Rauch, der von ihren nächtlichen Grills aufsteigt. Obwohl es aus dem Norden stammt, verbreitete sich Suya in allen großen nigerianischen Städten und in ganz Westafrika und wurde zu einem kulturellen Phänomen, das mit dem urbanen Nachtleben verbunden ist.\n\nDas Geheimnis eines guten Suya liegt in der Qualität und dem Verhältnis der Yaji-Mischung, ein Rezept, das oft innerhalb von Familien gehütet und über Generationen von Straßenhändlern weitergegeben wird. Das Ritual, spätnachts Suya direkt vom Grill zu kaufen, eingewickelt in Zeitungspapier oder Folie, gilt als wesentliches kulturelles Erlebnis für jeden Besucher nigerianischer Städte, ebenso wichtig wie der Geschmack selbst.",
+    "pt": "O suya tem origens ligadas ao povo hauçá do norte da Nigéria, onde os vendedores de rua de suya, chamados \"mai suya\", desenvolveram por gerações a técnica de grelhar carne fina coberta com yaji em bancas de rua, frequentemente visíveis pelo fumo perfumado que sobe das suas grelhas noturnas. Embora originário do norte, o suya espalhou-se por todas as grandes cidades nigerianas e por toda a África Ocidental, tornando-se um fenómeno cultural associado à vida noturna urbana.\n\nO segredo de um bom suya está na qualidade e proporção da mistura de yaji, uma receita muitas vezes guardada na família, transmitida ao longo de gerações de vendedores de rua. O ritual de comprar suya tarde da noite, direto da grelha, embrulhado em papel de jornal ou papel-alumínio, é considerado uma experiência cultural essencial para qualquer visitante das cidades nigerianas, tão importante quanto o próprio sabor.",
+    "ru": "Сюйя имеет происхождение, связанное с народом хауса на севере Нигерии, где уличные торговцы сюйя, называемые \"май сюйя\", на протяжении поколений разрабатывали технику жарки тонкого мяса, покрытого ядзи, на уличных лотках, часто заметных по ароматному дыму, поднимающемуся от их ночных грилей. Хотя блюдо возникло на севере, сюйя распространилось по всем крупным городам Нигерии и по всей Западной Африке, став культурным феноменом, связанным с городской ночной жизнью.\n\nСекрет хорошей сюйя кроется в качестве и пропорции смеси ядзи — рецепта, часто хранимого в семье и передаваемого через поколения уличных торговцев. Ритуал покупки сюйя поздно ночью, прямо с гриля, завёрнутого в газету или фольгу, считается неотъемлемым культурным опытом для любого посетителя нигерийских городов, столь же важным, как и сам вкус.",
+    "ar": "تعود أصول السويا إلى شعب الهاوسا في شمال نيجيريا، حيث طوّر باعة السويا المتجولون، المعروفون بـ\"ماي سويا\"، على مدى أجيال تقنية شوي اللحم الرقيق المغطى بالياجي في أكشاك الشوارع، وغالبًا ما تكون مرئية بفضل الدخان العطري المتصاعد من شوايتهم الليلية. رغم نشأتها في الشمال، انتشرت السويا في جميع المدن النيجيرية الكبرى وعبر غرب أفريقيا، لتصبح ظاهرة ثقافية مرتبطة بالحياة الليلية الحضرية.\n\nيكمن سر السويا الجيدة في جودة ونسبة خليط الياجي، وهي وصفة كثيرًا ما تُحفظ داخل العائلة، وتنتقل عبر أجيال من الباعة المتجولين. يُعتبر طقس شراء السويا في وقت متأخر من الليل، مباشرة من الشواية، ملفوفة بورق الجرائد أو رقائق الألمنيوم، تجربة ثقافية أساسية لأي زائر للمدن النيجيرية، لا تقل أهمية عن المذاق نفسه.",
+    "zh": "苏亚的起源与尼日利亚北部的豪萨族有关，那里被称为「mai suya」的街头苏亚小贩，世代传承着在街边摊烤制裹满亚吉调料的薄肉片的技艺，往往能从他们夜间烤架升起的芳香烟雾中一眼认出。虽然起源于北方，苏亚已传播到尼日利亚各大城市以及整个西非，成为与城市夜生活相关的文化现象。\n\n一份好苏亚的秘诀在于亚吉混合料的品质和比例，这个配方往往在家族内部保密，代代相传于街头小贩之间。深夜从烤架上直接购买苏亚，用报纸或箔纸包裹的仪式，被视为任何尼日利亚城市游客不可或缺的文化体验，与味道本身同样重要。",
+    "ja": "スヤの起源はナイジェリア北部のハウサ族に結びついており、「マイスヤ」と呼ばれるスヤの屋台商人たちは何世代にもわたり、ヤジをまぶした薄い肉を路上の屋台で焼く技術を発展させてきた。夜間のグリルから立ち上る香ばしい煙で、その存在がしばしば分かる。北部発祥ではあるが、スヤはナイジェリアの主要都市すべてと西アフリカ全域に広まり、都市部の夜の生活と結びついた文化的現象となった。\n\n良いスヤの秘訣は、ヤジのブレンドの品質と配合比にあり、そのレシピはしばしば家族内で守られ、何世代にもわたる屋台商人たちに受け継がれてきた。夜遅くにグリルから直接、新聞紙やホイルに包んで買うというスヤの儀式は、ナイジェリアの都市を訪れる誰にとっても、味そのものと同じくらい重要な文化体験と見なされている。",
+    "hi": "सुया की उत्पत्ति उत्तरी नाइजीरिया के हौसा लोगों से जुड़ी है, जहां \"माई सुया\" कहे जाने वाले सुया के स्ट्रीट विक्रेताओं ने पीढ़ियों से यागी से लिपटे पतले मांस को स्ट्रीट स्टॉल पर भूनने की तकनीक विकसित की है, जो अक्सर उनकी रात की ग्रिल से उठने वाले सुगंधित धुएं से पहचानी जाती है। उत्तर में उत्पन्न होने के बावजूद, सुया सभी प्रमुख नाइजीरियाई शहरों और पूरे पश्चिम अफ्रीका में फैल गया, शहरी नाइटलाइफ़ से जुड़ी एक सांस्कृतिक घटना बन गया।\n\nएक अच्छे सुया का रहस्य यागी मिश्रण की गुणवत्ता और अनुपात में है, एक नुस्खा जो अक्सर परिवार में रखा जाता है, स्ट्रीट विक्रेताओं की पीढ़ियों से चला आता है। देर रात सुया खरीदने की रस्म, सीधे ग्रिल से, अखबार या फॉयल में लपेटी हुई, नाइजीरियाई शहरों के किसी भी आगंतुक के लिए एक आवश्यक सांस्कृतिक अनुभव माना जाता है, जो स्वाद जितना ही महत्वपूर्ण है।",
+    "tr": "Suya, kuzey Nijerya'daki Hausa halkına bağlı köklere sahiptir; burada 'mai suya' olarak adlandırılan sokak suya satıcıları, nesiller boyunca yajiyle kaplı ince eti sokak tezgahlarında ızgara yapma tekniğini geliştirmişlerdir; genellikle gece ızgaralarından yükselen kokulu dumandan fark edilirler. Kuzeyde ortaya çıkmasına rağmen, suya tüm büyük Nijerya şehirlerine ve Batı Afrika'nın geneline yayılmış, kentsel gece hayatıyla ilişkilendirilen kültürel bir fenomen haline gelmiştir.\n\nİyi bir suyanın sırrı, genellikle ailede saklanan ve nesiller boyu sokak satıcılarından aktarılan yaji karışımının kalitesinde ve oranındadır. Gece geç saatte, doğrudan ızgaradan, gazete kağıdına veya folyoya sarılmış suya satın alma ritüeli, Nijerya şehirlerini ziyaret eden herkes için, tadın kendisi kadar önemli, temel bir kültürel deneyim olarak kabul edilir.",
+    "it": "Il suya ha origini legate al popolo hausa del nord della Nigeria, dove i venditori ambulanti di suya, chiamati \"mai suya\", hanno sviluppato per generazioni la tecnica di grigliare carne sottile ricoperta di yaji nelle bancarelle di strada, spesso visibili dal fumo profumato che si alza dalle loro griglie notturne. Sebbene originario del nord, il suya si è diffuso in tutte le principali città nigeriane e in tutta l'Africa occidentale, diventando un fenomeno culturale associato alla vita notturna urbana.\n\nIl segreto di un buon suya sta nella qualità e nella proporzione del mix di yaji, una ricetta spesso custodita in famiglia, tramandata attraverso generazioni di venditori ambulanti. Il rituale di comprare suya a tarda notte, appena tolto dalla griglia, avvolto in carta di giornale o alluminio, è considerato un'esperienza culturale essenziale per qualsiasi visitatore delle città nigeriane, tanto importante quanto il sapore stesso.",
+    "ko": "수야는 나이지리아 북부의 하우사족과 관련된 기원을 가지고 있으며, 「마이 수야」라 불리는 수야 노점상들은 세대에 걸쳐 야지를 입힌 얇은 고기를 길거리 노점에서 굽는 기법을 발전시켜 왔다 — 밤에 그릴에서 피어오르는 향긋한 연기로 종종 눈에 띈다. 북부에서 기원했지만 수야는 나이지리아의 모든 주요 도시와 서아프리카 전역으로 퍼져나가 도시 야간 문화와 연관된 문화적 현상이 되었다.\n\n좋은 수야의 비결은 야지 혼합물의 품질과 비율에 있으며, 이 레시피는 종종 가족 내에서 지켜지며 여러 세대에 걸친 노점상들을 통해 전해져 내려온다. 밤늦게 그릴에서 바로 신문지나 포일에 싸서 수야를 사는 의식은 나이지리아 도시를 방문하는 모든 이에게 맛 자체만큼이나 중요한 필수적인 문화 체험으로 여겨진다."
+  },
+  "meta": {
+    "time": 35,
+    "costRon": 30,
+    "tags": ["high-protein", "spicy", "quick"],
+    "desc": {
+      "ro": "Frigărui nigeriene de vită acoperite cu yaji, un amestec picant de arahide și condimente.",
+      "en": "Nigerian beef skewers coated in yaji, a spicy peanut and spice blend.",
+      "es": "Brochetas nigerianas de res cubiertas con yaji, una mezcla picante de maní y especias.",
+      "fr": "Brochettes de bœuf nigérianes enrobées de yaji, un mélange épicé d'arachide et d'épices.",
+      "de": "Nigerianische Rinderspieße mit Yaji bedeckt, einer scharfen Erdnuss-Gewürz-Mischung.",
+      "pt": "Espetinhos de carne nigerianos cobertos com yaji, uma mistura picante de amendoim e especiarias.",
+      "ru": "Нигерийские говяжьи шашлычки в ядзи, острой смеси арахиса и специй.",
+      "ar": "أسياخ لحم بقري نيجيرية مغطاة بالياجي، مزيج حار من الفول السوداني والتوابل.",
+      "zh": "尼日利亚牛肉串裹满亚吉，一种辛辣的花生香料混合调料。",
+      "ja": "スパイシーなピーナッツとスパイスのブレンド、ヤジをまぶしたナイジェリア風牛肉串。",
+      "hi": "यागी में लिपटे नाइजीरियाई बीफ स्किवर, मूंगफली और मसालों का तीखा मिश्रण।",
+      "tr": "Baharatlı fıstık ve baharat karışımı yaji ile kaplanmış Nijerya usulü dana eti şişleri.",
+      "it": "Spiedini di manzo nigeriani ricoperti di yaji, un mix piccante di arachidi e spezie.",
+      "ko": "매콤한 땅콩 향신료 혼합물인 야지를 입힌 나이지리아식 소고기 꼬치."
+    }
+  }
+}

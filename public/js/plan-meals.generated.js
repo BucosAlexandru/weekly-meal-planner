@@ -206,21 +206,21 @@ export const PLAN_MEALS = {
     "weekend": false,
     "lunchIds": [
       194,
+      407,
       10,
       227,
       11,
       226,
-      12,
-      228
+      12
     ],
     "dinnerIds": [
+      228,
       14,
       232,
       2,
       5,
       218,
-      246,
-      4
+      246
     ]
   },
   "duminica-familie": {

@@ -1,0 +1,209 @@
+{
+  "id": 404,
+  "servings": 4,
+  "tipType": "meat",
+  "pairingsType": "meat",
+  "origin": {
+    "ro": "Pakistan",
+    "en": "Pakistan",
+    "es": "Pakistán",
+    "fr": "Pakistan",
+    "de": "Pakistan",
+    "pt": "Paquistão",
+    "ru": "Пакистан",
+    "ar": "باكستان",
+    "zh": "巴基斯坦",
+    "ja": "パキスタン",
+    "hi": "पाकिस्तान",
+    "tr": "Pakistan",
+    "it": "Pakistan",
+    "ko": "파키스탄"
+  },
+  "name": {
+    "ro": "Chicken Karahi (Pui Picant în Vas de Fontă)",
+    "en": "Chicken Karahi (Pakistani Spiced Skillet Chicken)",
+    "es": "Chicken Karahi (Pollo Picante Paquistaní en Sartén)",
+    "fr": "Chicken Karahi (Poulet Épicé Pakistanais en Poêle)",
+    "de": "Chicken Karahi (Pakistanisches Gewürztes Pfannenhähnchen)",
+    "pt": "Chicken Karahi (Frango Picante Paquistanês na Frigideira)",
+    "ru": "Чикен Карахи (Пакистанская Острая Курица в Сковороде)",
+    "ar": "دجاج كراهي (دجاج باكستاني حار في مقلاة)",
+    "zh": "巴基斯坦卡拉希鸡（铁锅辣鸡）",
+    "ja": "チキンカラヒ（パキスタン風スパイシー鉄鍋チキン）",
+    "hi": "चिकन कढ़ाई (पाकिस्तानी मसालेदार कढ़ाई चिकन)",
+    "tr": "Chicken Karahi (Pakistan Usulü Baharatlı Tavada Tavuk)",
+    "it": "Chicken Karahi (Pollo Speziato Pakistano in Padella)",
+    "ko": "치킨 카라히 (파키스탄식 향신료 팬 치킨)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍗", "t": "Pui cu os", "d": "Bucăți de pui cu os, tăiate mărunt, absorb aromele condimentelor mai bine decât carnea dezosată." },
+      { "icon": "🍅", "t": "Sos de roșii gros", "d": "Roșii proaspete călite îndelung formează baza groasă, ulei-separată, caracteristică karahi-ului." },
+      { "icon": "🌶️", "t": "Ghimbir și ardei iute", "d": "Fâșii proaspete de ghimbir și ardei iute verde se adaugă generos, pentru un picant proaspăt, nu doar din pudră." },
+      { "icon": "🥘", "t": "Gătit în karahi", "d": "Se gătește tradițional într-un vas rotund de fontă cu pereți înalți, numit karahi, la foc mare." }
+    ],
+    "en": [
+      { "icon": "🍗", "t": "Bone-in chicken", "d": "Bone-in chicken pieces, cut small, absorb the spice flavors better than boneless meat." },
+      { "icon": "🍅", "t": "Thick tomato base", "d": "Fresh tomatoes, cooked down for a long time, form the thick, oil-separated base characteristic of karahi." },
+      { "icon": "🌶️", "t": "Ginger and green chili", "d": "Fresh ginger strips and green chilies are added generously, for a fresh heat, not just from powder." },
+      { "icon": "🥘", "t": "Cooked in a karahi", "d": "Traditionally cooked in a round, high-walled cast-iron pan called a karahi, over high heat." }
+    ],
+    "es": [
+      { "icon": "🍗", "t": "Pollo con hueso", "d": "Trozos de pollo con hueso, cortados pequeños, absorben mejor los sabores de las especias que la carne deshuesada." },
+      { "icon": "🍅", "t": "Base espesa de tomate", "d": "Tomates frescos, cocidos durante mucho tiempo, forman la base espesa y con aceite separado característica del karahi." },
+      { "icon": "🌶️", "t": "Jengibre y chile verde", "d": "Se añaden generosamente tiras de jengibre fresco y chiles verdes, para un picante fresco, no solo de polvo." },
+      { "icon": "🥘", "t": "Cocinado en karahi", "d": "Se cocina tradicionalmente en una sartén redonda de hierro fundido con paredes altas, llamada karahi, a fuego alto." }
+    ],
+    "fr": [
+      { "icon": "🍗", "t": "Poulet avec os", "d": "Des morceaux de poulet avec os, coupés petits, absorbent mieux les saveurs des épices que la viande désossée." },
+      { "icon": "🍅", "t": "Base épaisse de tomate", "d": "Des tomates fraîches, cuites longtemps, forment la base épaisse à l'huile séparée caractéristique du karahi." },
+      { "icon": "🌶️", "t": "Gingembre et piment vert", "d": "Des lanières de gingembre frais et des piments verts sont ajoutés généreusement, pour un piquant frais, pas seulement en poudre." },
+      { "icon": "🥘", "t": "Cuisiné dans un karahi", "d": "Traditionnellement cuisiné dans une poêle ronde en fonte à parois hautes, appelée karahi, à feu vif." }
+    ],
+    "de": [
+      { "icon": "🍗", "t": "Hähnchen mit Knochen", "d": "Klein geschnittene Hähnchenstücke mit Knochen nehmen die Gewürzaromen besser auf als knochenloses Fleisch." },
+      { "icon": "🍅", "t": "Dicke Tomatenbasis", "d": "Frische Tomaten, lange gekocht, bilden die dicke, ölabgesetzte Basis, die für Karahi typisch ist." },
+      { "icon": "🌶️", "t": "Ingwer und grüner Chili", "d": "Frische Ingwerstreifen und grüne Chilis werden großzügig zugegeben, für frische Schärfe, nicht nur aus Pulver." },
+      { "icon": "🥘", "t": "Im Karahi gegart", "d": "Traditionell in einer runden Gusseisenpfanne mit hohen Wänden, genannt Karahi, bei hoher Hitze gegart." }
+    ],
+    "pt": [
+      { "icon": "🍗", "t": "Frango com osso", "d": "Pedaços de frango com osso, cortados pequenos, absorvem melhor os sabores das especiarias do que a carne desossada." },
+      { "icon": "🍅", "t": "Base espessa de tomate", "d": "Tomates frescos, cozidos por muito tempo, formam a base espessa e com óleo separado característica do karahi." },
+      { "icon": "🌶️", "t": "Gengibre e pimenta verde", "d": "Tiras de gengibre fresco e pimentas verdes são adicionadas generosamente, para um picante fresco, não apenas de pó." },
+      { "icon": "🥘", "t": "Cozinhado num karahi", "d": "Tradicionalmente cozinhado numa frigideira redonda de ferro fundido com paredes altas, chamada karahi, em fogo alto." }
+    ],
+    "ru": [
+      { "icon": "🍗", "t": "Курица на кости", "d": "Мелко нарезанные куски курицы на кости лучше впитывают вкус специй, чем мясо без костей." },
+      { "icon": "🍅", "t": "Густая томатная основа", "d": "Свежие помидоры, долго уваренные, образуют густую основу с отделившимся маслом, характерную для карахи." },
+      { "icon": "🌶️", "t": "Имбирь и зелёный перец чили", "d": "Свежие полоски имбиря и зелёный перец чили добавляются щедро, для свежей остроты, а не только из порошка." },
+      { "icon": "🥘", "t": "Готовится в карахи", "d": "Традиционно готовится в круглой чугунной сковороде с высокими стенками, называемой карахи, на сильном огне." }
+    ],
+    "ar": [
+      { "icon": "🍗", "t": "دجاج بالعظم", "d": "قطع دجاج بالعظم، مقطّعة صغيرة، تمتص نكهات التوابل بشكل أفضل من اللحم منزوع العظم." },
+      { "icon": "🍅", "t": "قاعدة طماطم سميكة", "d": "طماطم طازجة، مطهوة لفترة طويلة، تشكّل القاعدة السميكة المنفصلة الزيت المميزة للكراهي." },
+      { "icon": "🌶️", "t": "زنجبيل وفلفل أخضر حار", "d": "تُضاف شرائح زنجبيل طازج وفلفل أخضر حار بسخاء، لحرارة طازجة وليست من المسحوق فقط." },
+      { "icon": "🥘", "t": "يُطهى في كراهي", "d": "يُطهى تقليديًا في مقلاة حديدية دائرية بجدران عالية تُسمى كراهي، على نار عالية." }
+    ],
+    "zh": [
+      { "icon": "🍗", "t": "带骨鸡肉", "d": "切小块的带骨鸡肉比去骨肉更能吸收香料的风味。" },
+      { "icon": "🍅", "t": "浓稠番茄底", "d": "新鲜番茄长时间炒煮，形成卡拉希标志性的浓稠、油脂分离的基底。" },
+      { "icon": "🌶️", "t": "姜丝和青辣椒", "d": "慷慨加入新鲜姜丝和青辣椒，带来新鲜的辣味，而不仅仅是辣椒粉的辣。" },
+      { "icon": "🥘", "t": "卡拉希锅烹制", "d": "传统上在称为卡拉希的圆形高壁铸铁锅中大火烹制。" }
+    ],
+    "ja": [
+      { "icon": "🍗", "t": "骨付き鶏肉", "d": "小さく切った骨付き鶏肉は骨なし肉よりもスパイスの風味をよく吸収する。" },
+      { "icon": "🍅", "t": "濃厚なトマトベース", "d": "新鮮なトマトを長時間煮詰めて、カラヒ特有の油が分離した濃厚なベースを作る。" },
+      { "icon": "🌶️", "t": "生姜と青唐辛子", "d": "粉末だけでなく新鮮な辛みを出すため、生姜の細切りと青唐辛子をたっぷり加える。" },
+      { "icon": "🥘", "t": "カラヒで調理", "d": "伝統的にカラヒと呼ばれる壁の高い丸い鋳鉄鍋で強火で調理する。" }
+    ],
+    "hi": [
+      { "icon": "🍗", "t": "हड्डी वाला चिकन", "d": "छोटे कटे हड्डी वाले चिकन के टुकड़े बिना हड्डी वाले मांस से बेहतर मसाला स्वाद सोखते हैं।" },
+      { "icon": "🍅", "t": "गाढ़ा टमाटर आधार", "d": "लंबे समय तक पकाए ताज़े टमाटर कढ़ाई की विशिष्ट गाढ़ी, तेल-अलग आधार बनाते हैं।" },
+      { "icon": "🌶️", "t": "अदरक और हरी मिर्च", "d": "ताज़ी अदरक की पट्टियां और हरी मिर्च भरपूर मात्रा में डाली जाती हैं, केवल पाउडर से नहीं बल्कि ताज़े तीखेपन के लिए।" },
+      { "icon": "🥘", "t": "कढ़ाई में पकाया", "d": "पारंपरिक रूप से ऊंची दीवारों वाले गोल कास्ट-आयरन बर्तन, कढ़ाई में, तेज़ आंच पर पकाया जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🍗", "t": "Kemikli tavuk", "d": "Küçük kesilmiş kemikli tavuk parçaları baharat lezzetlerini kemiksiz etten daha iyi emer." },
+      { "icon": "🍅", "t": "Koyu domates tabanı", "d": "Uzun süre pişirilen taze domatesler, karahinin karakteristik koyu, yağı ayrılmış tabanını oluşturur." },
+      { "icon": "🌶️", "t": "Zencefil ve yeşil biber", "d": "Sadece tozdan değil taze bir acılık için taze zencefil şeritleri ve yeşil biberler bolca eklenir." },
+      { "icon": "🥘", "t": "Karahide pişirilir", "d": "Geleneksel olarak karahi adı verilen yüksek duvarlı yuvarlak dökme demir tavada yüksek ateşte pişirilir." }
+    ],
+    "it": [
+      { "icon": "🍗", "t": "Pollo con osso", "d": "Pezzi di pollo con osso, tagliati piccoli, assorbono i sapori delle spezie meglio della carne disossata." },
+      { "icon": "🍅", "t": "Base densa di pomodoro", "d": "Pomodori freschi, cotti a lungo, formano la base densa con olio separato caratteristica del karahi." },
+      { "icon": "🌶️", "t": "Zenzero e peperoncino verde", "d": "Strisce di zenzero fresco e peperoncini verdi vengono aggiunti generosamente, per un piccante fresco, non solo dalla polvere." },
+      { "icon": "🥘", "t": "Cotto in un karahi", "d": "Tradizionalmente cotto in una padella rotonda di ghisa dalle pareti alte, chiamata karahi, a fuoco alto." }
+    ],
+    "ko": [
+      { "icon": "🍗", "t": "뼈 있는 닭고기", "d": "작게 자른 뼈 있는 닭고기가 뼈 없는 고기보다 향신료 풍미를 더 잘 흡수한다." },
+      { "icon": "🍅", "t": "진한 토마토 베이스", "d": "오래 졸인 신선한 토마토가 카라히 특유의 기름이 분리된 진한 베이스를 만든다." },
+      { "icon": "🌶️", "t": "생강과 청고추", "d": "가루뿐 아니라 신선한 매운맛을 위해 생강채와 청고추를 넉넉히 넣는다." },
+      { "icon": "🥘", "t": "카라히에서 조리", "d": "전통적으로 카라히라 불리는 벽이 높은 둥근 무쇠 팬에서 센 불로 조리한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["1kg pui cu os, tăiat bucăți mici", "5 roșii mari, tocate mărunt", "4 căței de usturoi, tocați", "3 cm ghimbir, jumătate ras, jumătate feliat fâșii", "4 linguri ulei", "1 linguriță turmeric", "1 linguriță ardei iute măcinat", "1 linguriță chimen măcinat", "1 linguriță coriandru măcinat", "3-4 ardei iuți verzi, tăiați lung", "sare după gust", "coriandru proaspăt tocat, pentru servire", "ghimbir feliat fâșii, pentru servire"],
+    "en": ["1kg bone-in chicken, cut into small pieces", "5 large tomatoes, finely chopped", "4 garlic cloves, minced", "3cm ginger, half grated, half sliced into strips", "4 tbsp oil", "1 tsp turmeric", "1 tsp ground red chili", "1 tsp ground cumin", "1 tsp ground coriander", "3-4 green chilies, sliced lengthwise", "salt to taste", "fresh chopped coriander, for serving", "julienned ginger, for serving"],
+    "es": ["1kg de pollo con hueso, cortado en trozos pequeños", "5 tomates grandes, finamente picados", "4 dientes de ajo, picados", "3cm de jengibre, mitad rallado, mitad en tiras", "4 cucharadas de aceite", "1 cucharadita de cúrcuma", "1 cucharadita de chile rojo molido", "1 cucharadita de comino molido", "1 cucharadita de cilantro molido", "3-4 chiles verdes, cortados a lo largo", "sal al gusto", "cilantro fresco picado, para servir", "jengibre en tiras, para servir"],
+    "fr": ["1kg de poulet avec os, coupé en petits morceaux", "5 grosses tomates, finement hachées", "4 gousses d'ail, hachées", "3cm de gingembre, moitié râpé, moitié en lanières", "4 c. à soupe d'huile", "1 c. à café de curcuma", "1 c. à café de piment rouge moulu", "1 c. à café de cumin moulu", "1 c. à café de coriandre moulue", "3-4 piments verts, coupés en longueur", "sel selon le goût", "coriandre fraîche hachée, pour servir", "gingembre en julienne, pour servir"],
+    "de": ["1kg Hähnchen mit Knochen, in kleine Stücke geschnitten", "5 große Tomaten, fein gehackt", "4 Knoblauchzehen, gehackt", "3cm Ingwer, halb gerieben, halb in Streifen geschnitten", "4 EL Öl", "1 TL Kurkuma", "1 TL gemahlener roter Chili", "1 TL gemahlener Kreuzkümmel", "1 TL gemahlener Koriander", "3-4 grüne Chilis, der Länge nach geschnitten", "Salz nach Geschmack", "frischer gehackter Koriander, zum Servieren", "Ingwer in Streifen, zum Servieren"],
+    "pt": ["1kg de frango com osso, cortado em pedaços pequenos", "5 tomates grandes, picados finamente", "4 dentes de alho, picados", "3cm de gengibre, metade ralado, metade em tiras", "4 colheres (sopa) de óleo", "1 colher (chá) de açafrão-da-terra", "1 colher (chá) de pimenta vermelha moída", "1 colher (chá) de cominho moído", "1 colher (chá) de coentro moído", "3-4 pimentas verdes, cortadas ao comprido", "sal a gosto", "coentro fresco picado, para servir", "gengibre em tiras, para servir"],
+    "ru": ["1кг курицы на кости, нарезанной небольшими кусками", "5 крупных помидоров, мелко нарезанных", "4 зубчика чеснока, измельчённых", "3см имбиря, половина тёртая, половина нарезана полосками", "4 ст.л. масла", "1 ч.л. куркумы", "1 ч.л. молотого красного перца", "1 ч.л. молотого тмина", "1 ч.л. молотого кориандра", "3-4 зелёных перца чили, нарезанных вдоль", "соль по вкусу", "свежая рубленая кинза, для подачи", "имбирь соломкой, для подачи"],
+    "ar": ["1 كجم دجاج بالعظم، مقطّع قطعًا صغيرة", "5 حبات طماطم كبيرة، مفرومة ناعمًا", "4 فصوص ثوم، مفرومة", "3 سم زنجبيل، نصفه مبشور ونصفه مقطّع شرائح", "4 ملاعق كبيرة زيت", "ملعقة صغيرة كركم", "ملعقة صغيرة فلفل أحمر مطحون", "ملعقة صغيرة كمون مطحون", "ملعقة صغيرة كزبرة مطحونة", "3-4 فلفل أخضر حار، مقطّع طوليًا", "ملح حسب الرغبة", "كزبرة طازجة مفرومة، للتقديم", "زنجبيل مقطّع شرائح، للتقديم"],
+    "zh": ["1公斤带骨鸡肉，切小块", "5个大番茄，切碎", "4瓣大蒜，切碎", "3厘米姜，一半磨碎一半切丝", "4汤匙油", "1茶匙姜黄粉", "1茶匙红辣椒粉", "1茶匙孜然粉", "1茶匙香菜籽粉", "3-4根青辣椒，纵向切开", "盐适量", "新鲜香菜碎，配食用", "姜丝，配食用"],
+    "ja": ["骨付き鶏肉1kg（小さく切る）", "大きめのトマト5個（みじん切り）", "にんにく4片（みじん切り）", "生姜3cm（半分をすりおろし、半分を千切り）", "油 大さじ4", "ターメリック小さじ1", "赤唐辛子粉小さじ1", "クミンパウダー小さじ1", "コリアンダーパウダー小さじ1", "青唐辛子3〜4本（縦切り）", "塩 適量", "刻んだ新鮮なコリアンダー（添える用）", "千切り生姜（添える用）"],
+    "hi": ["1 किलो हड्डी वाला चिकन, छोटे टुकड़ों में कटा", "5 बड़े टमाटर, बारीक कटे", "4 लहसुन की कलियाँ, कटी हुई", "3 सेमी अदरक, आधा कद्दूकस, आधा पट्टियों में कटा", "4 बड़े चम्मच तेल", "1 छोटी चम्मच हल्दी", "1 छोटी चम्मच पिसी लाल मिर्च", "1 छोटी चम्मच पिसा जीरा", "1 छोटी चम्मच पिसा धनिया", "3-4 हरी मिर्च, लंबाई में कटी", "स्वादानुसार नमक", "ताज़ा कटा धनिया, परोसने के लिए", "पट्टियों में कटी अदरक, परोसने के लिए"],
+    "tr": ["1kg kemikli tavuk, küçük parçalar halinde kesilmiş", "5 büyük domates, ince doğranmış", "4 diş sarımsak, doğranmış", "3cm zencefil, yarısı rendelenmiş, yarısı şerit doğranmış", "4 yemek kaşığı yağ", "1 çay kaşığı zerdeçal", "1 çay kaşığı öğütülmüş kırmızı biber", "1 çay kaşığı öğütülmüş kimyon", "1 çay kaşığı öğütülmüş kişniş", "3-4 yeşil biber, uzunlamasına kesilmiş", "tuz, tadına göre", "servis için taze doğranmış kişniş", "servis için julyen zencefil"],
+    "it": ["1kg di pollo con osso, tagliato a pezzetti", "5 pomodori grandi, tritati finemente", "4 spicchi d'aglio, tritati", "3cm di zenzero, metà grattugiato, metà a strisce", "4 cucchiai di olio", "1 cucchiaino di curcuma", "1 cucchiaino di peperoncino rosso macinato", "1 cucchiaino di cumino macinato", "1 cucchiaino di coriandolo macinato", "3-4 peperoncini verdi, tagliati per lungo", "sale q.b.", "coriandolo fresco tritato, per servire", "zenzero a julienne, per servire"],
+    "ko": ["뼈 있는 닭고기 1kg, 작은 조각으로 자른 것", "큰 토마토 5개, 잘게 썬 것", "마늘 4쪽, 다진 것", "생강 3cm, 절반은 갈고 절반은 채 썬 것", "식용유 4큰술", "강황 1작은술", "간 홍고추 가루 1작은술", "간 커민 1작은술", "간 고수씨 1작은술", "청고추 3-4개, 길게 썬 것", "소금 약간", "다진 신선한 고수, 곁들임용", "채 썬 생강, 곁들임용"]
+  },
+  "howIsMade": {
+    "ro": "ÎNCINGE ULEIUL: Încinge uleiul într-un karahi sau tigaie adâncă la foc mare. RUMENEȘTE PUIUL: Adaugă bucățile de pui și rumenește-le 5-6 minute, amestecând des. ADAUGĂ USTUROIUL ȘI GHIMBIRUL: Adaugă usturoiul tocat și ghimbirul ras, călind 1-2 minute, până devin parfumate. PUNE ROȘIILE: Adaugă roșiile tocate, amestecând bine cu puiul. ADAUGĂ MIRODENIILE: Presară turmericul, ardeiul iute măcinat, chimenul și coriandrul măcinat, amestecând să acopere uniform. FIERBE LA FOC MEDIU: Lasă amestecul să fiarbă la foc mediu-mare, fără capac, 20-25 minute, amestecând ocazional, până roșiile se dezintegrează complet și uleiul începe să se separe la suprafață. ADAUGĂ ARDEII IUȚI: Adaugă ardeii iuți verzi tăiați lung și fâșiile de ghimbir, gătind încă 5 minute. SĂREAZĂ: Adaugă sare după gust, gustă și ajustează condimentele. VERIFICĂ CONSISTENȚA: Sosul trebuie să fie gros, aproape uscat, cu uleiul vizibil separat pe margini — dacă e prea lichid, mai fierbe descoperit câteva minute. SERVEȘTE: Decorează cu coriandru proaspăt tocat și fâșii de ghimbir, servește fierbinte cu naan sau chapati.",
+    "en": "HEAT THE OIL: Heat the oil in a karahi or deep pan over high heat. BROWN THE CHICKEN: Add the chicken pieces and brown 5-6 minutes, stirring often. ADD THE GARLIC AND GINGER: Add the minced garlic and grated ginger, sautéing 1-2 minutes, until fragrant. ADD THE TOMATOES: Add the chopped tomatoes, mixing well with the chicken. ADD THE SPICES: Sprinkle in the turmeric, ground chili, cumin and coriander, mixing to coat evenly. SIMMER OVER MEDIUM HEAT: Let the mixture simmer over medium-high heat, uncovered, 20-25 minutes, stirring occasionally, until the tomatoes fully break down and the oil starts separating on the surface. ADD THE CHILIES: Add the lengthwise-sliced green chilies and ginger strips, cooking 5 more minutes. SEASON: Add salt to taste, taste and adjust the seasoning. CHECK CONSISTENCY: The sauce should be thick, almost dry, with visible oil separating at the edges — if too watery, simmer uncovered a few more minutes. SERVE: Garnish with fresh chopped coriander and ginger strips, serve hot with naan or chapati.",
+    "es": "CALIENTA EL ACEITE: Calienta el aceite en un karahi o sartén profunda a fuego alto. DORA EL POLLO: Añade los trozos de pollo y dóralos 5-6 minutos, removiendo con frecuencia. AÑADE EL AJO Y EL JENGIBRE: Añade el ajo picado y el jengibre rallado, sofriendo 1-2 minutos, hasta que estén fragantes. AÑADE LOS TOMATES: Añade los tomates picados, mezclando bien con el pollo. AÑADE LAS ESPECIAS: Espolvorea la cúrcuma, el chile molido, el comino y el cilantro, mezclando para cubrir uniformemente. COCINA A FUEGO MEDIO: Deja que la mezcla se cocine a fuego medio-alto, sin tapar, 20-25 minutos, removiendo ocasionalmente, hasta que los tomates se deshagan por completo y el aceite comience a separarse en la superficie. AÑADE LOS CHILES: Añade los chiles verdes cortados a lo largo y las tiras de jengibre, cocinando 5 minutos más. SAZONA: Añade sal al gusto, prueba y ajusta el condimento. VERIFICA LA CONSISTENCIA: La salsa debe estar espesa, casi seca, con aceite visible separándose en los bordes — si está muy líquida, cocina sin tapar unos minutos más. SIRVE: Decora con cilantro fresco picado y tiras de jengibre, sirve caliente con naan o chapati.",
+    "fr": "CHAUFFEZ L'HUILE: Chauffez l'huile dans un karahi ou une poêle profonde à feu vif. FAITES DORER LE POULET: Ajoutez les morceaux de poulet et faites-les dorer 5-6 minutes, en remuant souvent. AJOUTEZ L'AIL ET LE GINGEMBRE: Ajoutez l'ail haché et le gingembre râpé, en faisant revenir 1-2 minutes, jusqu'à ce qu'ils soient parfumés. AJOUTEZ LES TOMATES: Ajoutez les tomates hachées, en mélangeant bien avec le poulet. AJOUTEZ LES ÉPICES: Saupoudrez de curcuma, de piment moulu, de cumin et de coriandre, en mélangeant pour bien enrober. MIJOTEZ À FEU MOYEN: Laissez le mélange mijoter à feu moyen-vif, sans couvercle, 20-25 minutes, en remuant de temps en temps, jusqu'à ce que les tomates se défassent complètement et que l'huile commence à se séparer en surface. AJOUTEZ LES PIMENTS: Ajoutez les piments verts coupés en longueur et les lanières de gingembre, en cuisant 5 minutes de plus. ASSAISONNEZ: Ajoutez du sel selon le goût, goûtez et ajustez l'assaisonnement. VÉRIFIEZ LA CONSISTANCE: La sauce doit être épaisse, presque sèche, avec de l'huile visible se séparant sur les bords — si trop liquide, laissez mijoter à découvert quelques minutes de plus. SERVEZ: Garnissez de coriandre fraîche hachée et de lanières de gingembre, servez chaud avec du naan ou du chapati.",
+    "de": "ÖL ERHITZEN: Das Öl in einem Karahi oder einer tiefen Pfanne bei hoher Hitze erhitzen. HÄHNCHEN ANBRATEN: Die Hähnchenstücke zugeben und 5-6 Minuten unter häufigem Rühren anbraten. KNOBLAUCH UND INGWER HINZUFÜGEN: Den gehackten Knoblauch und geriebenen Ingwer zugeben, 1-2 Minuten anbraten, bis sie duften. TOMATEN HINZUFÜGEN: Die gehackten Tomaten zugeben, gut mit dem Hähnchen vermischen. GEWÜRZE HINZUFÜGEN: Kurkuma, gemahlenen Chili, Kreuzkümmel und Koriander einstreuen, gut vermischen. BEI MITTLERER HITZE KÖCHELN: Die Mischung bei mittlerer bis hoher Hitze unbedeckt 20-25 Minuten köcheln lassen, gelegentlich rühren, bis die Tomaten vollständig zerfallen und sich das Öl an der Oberfläche absetzt. CHILIS HINZUFÜGEN: Die der Länge nach geschnittenen grünen Chilis und Ingwerstreifen zugeben, weitere 5 Minuten garen. WÜRZEN: Nach Geschmack salzen, abschmecken und würzen. KONSISTENZ PRÜFEN: Die Sauce sollte dick, fast trocken sein, mit sichtbar abgesetztem Öl an den Rändern — wenn zu wässrig, unbedeckt einige Minuten weiterköcheln. SERVIEREN: Mit frischem gehacktem Koriander und Ingwerstreifen garnieren, heiß mit Naan oder Chapati servieren.",
+    "pt": "AQUEÇA O ÓLEO: Aqueça o óleo num karahi ou frigideira funda em fogo alto. DOURE O FRANGO: Junte os pedaços de frango e doure-os por 5-6 minutos, mexendo com frequência. ADICIONE O ALHO E O GENGIBRE: Junte o alho picado e o gengibre ralado, refogando por 1-2 minutos, até ficarem perfumados. ADICIONE OS TOMATES: Junte os tomates picados, misturando bem com o frango. ADICIONE AS ESPECIARIAS: Polvilhe o açafrão-da-terra, a pimenta moída, o cominho e o coentro, misturando para cobrir uniformemente. COZINHE EM FOGO MÉDIO: Deixe a mistura cozinhar em fogo médio-alto, sem tampa, por 20-25 minutos, mexendo ocasionalmente, até os tomates se desfazerem completamente e o óleo começar a separar na superfície. ADICIONE AS PIMENTAS: Junte as pimentas verdes cortadas ao comprido e as tiras de gengibre, cozinhando mais 5 minutos. TEMPERE: Adicione sal a gosto, prove e ajuste o tempero. VERIFIQUE A CONSISTÊNCIA: O molho deve estar espesso, quase seco, com óleo visível separando-se nas bordas — se estiver muito líquido, cozinhe destapado mais alguns minutos. SIRVA: Decore com coentro fresco picado e tiras de gengibre, sirva quente com naan ou chapati.",
+    "ru": "РАЗОГРЕЙТЕ МАСЛО: Разогрейте масло в карахи или глубокой сковороде на сильном огне. ОБЖАРЬТЕ КУРИЦУ: Добавьте куски курицы и обжаривайте 5-6 минут, часто помешивая. ДОБАВЬТЕ ЧЕСНОК И ИМБИРЬ: Добавьте измельчённый чеснок и тёртый имбирь, обжаривайте 1-2 минуты, до аромата. ДОБАВЬТЕ ПОМИДОРЫ: Добавьте нарезанные помидоры, хорошо перемешав с курицей. ДОБАВЬТЕ СПЕЦИИ: Всыпьте куркуму, молотый перец чили, тмин и кориандр, перемешивая для равномерного покрытия. ТУШИТЕ НА СРЕДНЕМ ОГНЕ: Дайте смеси тушиться на среднем-сильном огне без крышки 20-25 минут, периодически помешивая, пока помидоры полностью не разварятся, а масло не начнёт отделяться на поверхности. ДОБАВЬТЕ ПЕРЕЦ ЧИЛИ: Добавьте нарезанный вдоль зелёный перец чили и полоски имбиря, готовьте ещё 5 минут. ПРИПРАВЬТЕ: Добавьте соль по вкусу, попробуйте и скорректируйте приправы. ПРОВЕРЬТЕ КОНСИСТЕНЦИЮ: Соус должен быть густым, почти сухим, с видимо отделившимся маслом по краям — если слишком жидкий, потушите без крышки ещё несколько минут. ПОДАВАЙТЕ: Украсьте свежей рубленой кинзой и полосками имбиря, подавайте горячим с нааном или чапати.",
+    "ar": "سخّني الزيت: سخّني الزيت في كراهي أو مقلاة عميقة على نار عالية. حمّري الدجاج: أضيفي قطع الدجاج وحمّريها 5-6 دقائق مع التحريك المتكرر. أضيفي الثوم والزنجبيل: أضيفي الثوم المفروم والزنجبيل المبشور، وقلّيهما 1-2 دقيقة حتى تفوح الرائحة. أضيفي الطماطم: أضيفي الطماطم المفرومة، وامزجيها جيدًا مع الدجاج. أضيفي التوابل: رشّي الكركم والفلفل المطحون والكمون والكزبرة، مع التقليب لتغطيتها بالتساوي. اطهي على نار متوسطة: اتركي الخليط ينضج على نار متوسطة إلى عالية دون غطاء 20-25 دقيقة مع التحريك أحيانًا حتى تتفكك الطماطم تمامًا ويبدأ الزيت بالانفصال على السطح. أضيفي الفلفل الحار: أضيفي الفلفل الأخضر الحار المقطّع طوليًا وشرائح الزنجبيل، واطبخي 5 دقائق إضافية. تبّلي: أضيفي الملح حسب الرغبة، تذوّقي وعدّلي التتبيل. تحققي من القوام: يجب أن تكون الصلصة سميكة، جافة تقريبًا، مع زيت واضح ينفصل عند الحواف — إذا كانت رطبة جدًا، اطبخيها دون غطاء بضع دقائق إضافية. قدّمي: زيّني بالكزبرة الطازجة المفرومة وشرائح الزنجبيل، وقدّميها ساخنة مع النان أو الشاباتي.",
+    "zh": "加热油：在卡拉希或深锅中大火加热油。煎鸡肉：加入鸡肉块煎5-6分钟，频繁搅拌。加入蒜姜：加入蒜末和姜末，炒1-2分钟至香气四溢。加入番茄：加入切碎的番茄，与鸡肉充分混合。加入香料：撒入姜黄粉、辣椒粉、孜然粉和香菜籽粉，拌匀使其均匀裹上。中火炖煮：不加盖，中大火炖煮混合物20-25分钟，偶尔搅拌，直至番茄完全煮化、表面开始析出油脂。加入辣椒：加入纵向切开的青辣椒和姜丝，再煮5分钟。调味：加盐调味，品尝并调整味道。检查稠度：酱汁应浓稠近乎干燥，边缘可见分离的油脂——如果太稀，不加盖再煮几分钟。上桌：用新鲜香菜碎和姜丝装饰，趁热配馕饼或恰帕提食用。",
+    "ja": "油を熱する：カラヒまたは深めのフライパンで油を強火で熱する。鶏肉を焼き色付ける：鶏肉を加え、頻繁にかき混ぜながら5〜6分焼き色をつける。にんにくと生姜を加える：みじん切りのにんにくとすりおろした生姜を加え、香りが立つまで1〜2分炒める。トマトを加える：刻んだトマトを加え、鶏肉とよく混ぜる。スパイスを加える：ターメリック、唐辛子粉、クミン、コリアンダーを振り入れ、均一にまぶすように混ぜる。中火で煮込む：中〜強火で蓋をせず20〜25分、時々かき混ぜながら、トマトが完全に崩れて表面に油が分離し始めるまで煮込む。唐辛子を加える：縦切りの青唐辛子と生姜の千切りを加え、さらに5分煮る。味付けする：塩で味を調え、味見をして調整する。濃度を確認する：ソースは濃厚でほぼ乾いた状態になり、端に油が分離して見えるべき——水っぽければ、蓋をせずさらに数分煮込む。提供する：新鮮なコリアンダーと生姜の千切りを飾り、ナンまたはチャパティを添えて熱いうちに提供する。",
+    "hi": "तेल गरम करें: कढ़ाई या गहरे पैन में तेल तेज़ आंच पर गरम करें। चिकन भूरा करें: चिकन के टुकड़े डालें और 5-6 मिनट, बार-बार हिलाते हुए भूरा करें। लहसुन और अदरक डालें: कटा लहसुन और कद्दूकस अदरक डालें, सुगंधित होने तक 1-2 मिनट भूनें। टमाटर डालें: कटे टमाटर डालें, चिकन के साथ अच्छी तरह मिलाएं। मसाले डालें: हल्दी, पिसी मिर्च, जीरा और धनिया छिड़कें, समान रूप से ढकने के लिए मिलाएं। मध्यम आंच पर पकाएं: मिश्रण को मध्यम-तेज़ आंच पर बिना ढके 20-25 मिनट पकने दें, कभी-कभी हिलाते हुए, जब तक टमाटर पूरी तरह टूट न जाएं और तेल सतह पर अलग होना शुरू न हो जाए। मिर्च डालें: लंबाई में कटी हरी मिर्च और अदरक की पट्टियां डालें, 5 मिनट और पकाएं। मसाला डालें: स्वादानुसार नमक डालें, चखें और मसाला समायोजित करें। गाढ़ापन जांचें: सॉस गाढ़ा, लगभग सूखा होना चाहिए, किनारों पर तेल अलग दिखना चाहिए — अगर बहुत पतला है, तो बिना ढके कुछ और मिनट पकाएं। परोसें: ताज़े कटे धनिया और अदरक की पट्टियों से सजाएं, नान या चपाती के साथ गरमागरम परोसें।",
+    "tr": "YAĞI ISITIN: Yağı karahide veya derin bir tavada yüksek ateşte ısıtın. TAVUĞU KIZARTIN: Tavuk parçalarını ekleyip sık sık karıştırarak 5-6 dakika kızartın. SARIMSAK VE ZENCEFİLİ EKLEYİN: Doğranmış sarımsağı ve rendelenmiş zencefili ekleyip kokusu çıkana kadar 1-2 dakika soteleyin. DOMATESLERİ EKLEYİN: Doğranmış domatesleri ekleyip tavukla iyice karıştırın. BAHARATLARI EKLEYİN: Zerdeçal, öğütülmüş biber, kimyon ve kişnişi serpip eşit şekilde kaplanması için karıştırın. ORTA ATEŞTE PİŞİRİN: Karışımın domatesler tamamen dağılıp yağ yüzeyde ayrışmaya başlayana kadar, arada karıştırarak, kapaksız orta-yüksek ateşte 20-25 dakika pişmesini bekleyin. BİBERLERİ EKLEYİN: Uzunlamasına kesilmiş yeşil biberleri ve zencefil şeritlerini ekleyip 5 dakika daha pişirin. TATLANDIRIN: Tadına göre tuz ekleyin, tadına bakıp baharatı ayarlayın. KIVAMI KONTROL EDİN: Sos koyu, neredeyse kuru olmalı, kenarlarda görünür şekilde yağ ayrışmalı — çok sulu ise, kapaksız birkaç dakika daha pişirin. SERVİS YAPIN: Taze doğranmış kişniş ve zencefil şeritleriyle süsleyin, naan veya chapati ile sıcak servis edin.",
+    "it": "SCALDA L'OLIO: Scalda l'olio in un karahi o padella profonda a fuoco alto. ROSOLA IL POLLO: Aggiungi i pezzi di pollo e rosolali 5-6 minuti, mescolando spesso. AGGIUNGI AGLIO E ZENZERO: Aggiungi l'aglio tritato e lo zenzero grattugiato, soffriggendo 1-2 minuti, finché profumati. AGGIUNGI I POMODORI: Aggiungi i pomodori tritati, mescolando bene con il pollo. AGGIUNGI LE SPEZIE: Cospargi con curcuma, peperoncino macinato, cumino e coriandolo, mescolando per ricoprire uniformemente. FAI SOBBOLLIRE A FUOCO MEDIO: Lascia sobbollire il composto a fuoco medio-alto, senza coperchio, 20-25 minuti, mescolando occasionalmente, finché i pomodori si disfano completamente e l'olio inizia a separarsi in superficie. AGGIUNGI I PEPERONCINI: Aggiungi i peperoncini verdi tagliati per lungo e le strisce di zenzero, cuocendo altri 5 minuti. INSAPORISCI: Aggiungi sale a piacere, assaggia e regola il condimento. CONTROLLA LA CONSISTENZA: La salsa deve essere densa, quasi asciutta, con olio visibile che si separa ai bordi — se troppo liquida, fai sobbollire scoperta ancora qualche minuto. SERVI: Guarnisci con coriandolo fresco tritato e strisce di zenzero, servi caldo con naan o chapati.",
+    "ko": "기름 가열하기: 카라히나 깊은 팬에 기름을 센 불로 가열한다. 닭고기 갈색 내기: 닭고기를 넣고 자주 저어가며 5-6분간 갈색이 되도록 굽는다. 마늘과 생강 넣기: 다진 마늘과 간 생강을 넣고 향이 날 때까지 1-2분 볶는다. 토마토 넣기: 썬 토마토를 넣고 닭고기와 잘 섞는다. 향신료 넣기: 강황, 간 고춧가루, 커민, 고수씨 가루를 뿌려 골고루 묻도록 섞는다. 중불로 끓이기: 뚜껑을 열고 중강불에서 가끔 저어가며 20-25분간, 토마토가 완전히 풀어지고 표면에 기름이 분리되기 시작할 때까지 끓인다. 고추 넣기: 길게 썬 청고추와 생강채를 넣고 5분 더 익힌다. 간하기: 소금으로 간하고 맛을 보아 조절한다. 농도 확인하기: 소스는 걸쭉하고 거의 마른 상태여야 하며 가장자리에 기름이 분리되어 보여야 한다 — 너무 묽으면 뚜껑을 열고 몇 분 더 끓인다. 제공하기: 신선한 고수와 생강채로 장식해 난이나 차파티와 함께 뜨겁게 제공한다."
+  },
+  "originText": {
+    "ro": "Chicken karahi și-a luat numele de la vasul rotund de fontă cu pereți evazați, karahi, folosit tradițional în bucătăriile din nordul subcontinentului indian, similar unui wok, dar mai adânc și mai gros. Deși originea exactă e disputată între diverse regiuni ale Pakistanului și nordului Indiei, orașul Peshawar și provincia Punjab sunt cel mai frecvent citate ca locuri de naștere ale rețetei moderne.\n\nCe distinge karahi de alte tocănele de pui din regiune este absența aproape totală a produselor lactate — nu conține iaurt sau smântână — bazându-se în schimb pe acreala naturală a roșiilor proaspete și pe ulei pentru a lega sosul. Restaurantele de karahi autentice servesc adesea felul direct în vasul de fontă în care s-a gătit, fierbând încă la masă, o prezentare considerată la fel de importantă ca gustul pentru experiența completă.",
+    "en": "Chicken karahi takes its name from the round, flared-wall cast-iron vessel, the karahi, traditionally used in kitchens across the northern Indian subcontinent, similar to a wok but deeper and thicker. Though its exact origin is disputed among various regions of Pakistan and northern India, the city of Peshawar and the province of Punjab are most commonly cited as the birthplace of the modern recipe.\n\nWhat distinguishes karahi from other regional chicken stews is the near-total absence of dairy — it contains no yogurt or cream — relying instead on the natural tartness of fresh tomatoes and oil to bind the sauce. Authentic karahi restaurants often serve the dish straight in the cast-iron vessel it was cooked in, still sizzling at the table, a presentation considered as important as the taste for the full experience.",
+    "es": "El chicken karahi toma su nombre del recipiente redondo de hierro fundido con paredes evasadas, el karahi, usado tradicionalmente en las cocinas del norte del subcontinente indio, similar a un wok pero más profundo y grueso. Aunque su origen exacto está en disputa entre varias regiones de Pakistán y el norte de India, la ciudad de Peshawar y la provincia de Punjab son las más citadas como lugar de nacimiento de la receta moderna.\n\nLo que distingue al karahi de otros guisos de pollo regionales es la ausencia casi total de lácteos — no contiene yogur ni nata — dependiendo en cambio de la acidez natural de los tomates frescos y el aceite para ligar la salsa. Los restaurantes de karahi auténticos suelen servir el plato directamente en el recipiente de hierro fundido en el que se cocinó, aún burbujeando en la mesa, una presentación considerada tan importante como el sabor para la experiencia completa.",
+    "fr": "Le chicken karahi tire son nom du récipient rond en fonte à parois évasées, le karahi, traditionnellement utilisé dans les cuisines du nord du sous-continent indien, semblable à un wok mais plus profond et plus épais. Bien que son origine exacte soit disputée entre diverses régions du Pakistan et du nord de l'Inde, la ville de Peshawar et la province du Pendjab sont le plus souvent citées comme lieu de naissance de la recette moderne.\n\nCe qui distingue le karahi des autres ragoûts de poulet régionaux est l'absence quasi totale de produits laitiers — il ne contient ni yaourt ni crème — s'appuyant plutôt sur l'acidité naturelle des tomates fraîches et l'huile pour lier la sauce. Les restaurants de karahi authentiques servent souvent le plat directement dans le récipient en fonte où il a été cuit, encore grésillant à table, une présentation considérée aussi importante que le goût pour l'expérience complète.",
+    "de": "Chicken Karahi verdankt seinen Namen dem runden Gusseisengefäß mit ausladenden Wänden, dem Karahi, traditionell in Küchen des nördlichen indischen Subkontinents verwendet, ähnlich einem Wok, aber tiefer und dicker. Obwohl sein genauer Ursprung zwischen verschiedenen Regionen Pakistans und Nordindiens umstritten ist, werden die Stadt Peschawar und die Provinz Punjab am häufigsten als Geburtsort des modernen Rezepts genannt.\n\nWas Karahi von anderen regionalen Hähnchengerichten unterscheidet, ist die nahezu vollständige Abwesenheit von Milchprodukten — es enthält weder Joghurt noch Sahne — und verlässt sich stattdessen auf die natürliche Säure frischer Tomaten und Öl, um die Sauce zu binden. Authentische Karahi-Restaurants servieren das Gericht oft direkt im gusseisernen Gefäß, in dem es zubereitet wurde, noch brutzelnd am Tisch — eine Präsentation, die für das vollständige Erlebnis als ebenso wichtig gilt wie der Geschmack.",
+    "pt": "O chicken karahi tira o seu nome do recipiente redondo de ferro fundido com paredes evasadas, o karahi, tradicionalmente usado nas cozinhas do norte do subcontinente indiano, semelhante a um wok mas mais fundo e grosso. Embora a sua origem exata seja disputada entre várias regiões do Paquistão e do norte da Índia, a cidade de Peshawar e a província de Punjab são as mais citadas como local de nascimento da receita moderna.\n\nO que distingue o karahi de outros ensopados de frango regionais é a ausência quase total de laticínios — não contém iogurte nem natas — dependendo em vez disso da acidez natural dos tomates frescos e do óleo para ligar o molho. Os restaurantes de karahi autênticos servem frequentemente o prato diretamente no recipiente de ferro fundido em que foi cozinhado, ainda a chiar à mesa, uma apresentação considerada tão importante quanto o sabor para a experiência completa.",
+    "ru": "Чикен карахи получил своё название от круглого чугунного сосуда с расширяющимися стенками, карахи, традиционно используемого на кухнях северного индийского субконтинента, похожего на вок, но глубже и толще. Хотя его точное происхождение оспаривается разными регионами Пакистана и северной Индии, город Пешавар и провинция Пенджаб чаще всего называются местом рождения современного рецепта.\n\nЧто отличает карахи от других региональных куриных рагу, так это почти полное отсутствие молочных продуктов — в нём нет ни йогурта, ни сливок — вместо этого блюдо полагается на естественную кислинку свежих помидоров и масло для связывания соуса. Аутентичные рестораны карахи часто подают блюдо прямо в чугунном сосуде, в котором оно готовилось, всё ещё шипящим на столе — подача, считающаяся столь же важной, как и вкус, для полного впечатления.",
+    "ar": "يأخذ الدجاج الكراهي اسمه من الإناء الحديدي الدائري ذي الجدران المتسعة، الكراهي، المستخدم تقليديًا في مطابخ شمال شبه القارة الهندية، شبيه بالووك لكنه أعمق وأثخن. رغم أن أصله الدقيق متنازع عليه بين مناطق مختلفة في باكستان وشمال الهند، تُذكر مدينة بيشاور ومقاطعة البنجاب غالبًا كمهد الوصفة الحديثة.\n\nما يميّز الكراهي عن يخنات الدجاج الإقليمية الأخرى هو الغياب شبه التام لمنتجات الألبان — فهو لا يحتوي على زبادي أو كريمة — معتمدًا بدلًا من ذلك على الحموضة الطبيعية للطماطم الطازجة والزيت لربط الصلصة. غالبًا ما تُقدِّم مطاعم الكراهي الأصيلة الطبق مباشرة في الإناء الحديدي الذي طُهي فيه، لا يزال يفور على الطاولة، وهو عرض يُعتبر بأهمية المذاق نفسه للتجربة الكاملة.",
+    "zh": "鸡肉卡拉希的名字来自壁面外扩的圆形铸铁容器「卡拉希」，传统上在印度次大陆北部的厨房中使用，类似炒锅但更深更厚。虽然其确切起源在巴基斯坦和印度北部的不同地区间存在争议，但白沙瓦市和旁遮普省最常被引用为这道现代食谱的发源地。\n\n卡拉希与该地区其他鸡肉炖菜的区别在于几乎完全不使用乳制品——不含酸奶或奶油——而是依靠新鲜番茄的天然酸味和油脂来使酱汁浓稠。正宗的卡拉希餐厅常常直接用烹制它的铸铁容器上桌，端上桌时仍在滋滋作响，这种呈现方式被认为与味道同样重要，是完整体验不可或缺的一部分。",
+    "ja": "チキンカラヒは、伝統的にインド亜大陸北部の台所で使われてきた、壁が広がった丸い鋳鉄製の容器「カラヒ」からその名前を取っている。中華鍋に似ているが、より深く厚みがある。正確な起源はパキスタンとインド北部のさまざまな地域で議論が分かれるが、ペシャワル市とパンジャブ州が現代のレシピの発祥地として最もよく挙げられる。\n\nカラヒが他の地域の鶏肉シチューと異なる点は、乳製品がほぼまったく使われていないことである——ヨーグルトもクリームも入らない——代わりに新鮮なトマトの自然な酸味と油でソースをまとめる。本格的なカラヒレストランでは、調理に使った鋳鉄容器のままテーブルにまだジュージューと音を立てて出されることが多く、この提供方法は味と同じくらい完全な体験に重要だとされている。",
+    "hi": "चिकन कढ़ाई का नाम गोल, फैली दीवारों वाले कास्ट-आयरन बर्तन, कढ़ाई से आया है, जो पारंपरिक रूप से उत्तरी भारतीय उपमहाद्वीप की रसोई में उपयोग किया जाता है, वोक के समान लेकिन गहरा और मोटा। हालांकि इसकी सटीक उत्पत्ति पाकिस्तान और उत्तरी भारत के विभिन्न क्षेत्रों के बीच विवादित है, पेशावर शहर और पंजाब प्रांत को अक्सर आधुनिक नुस्खे का जन्मस्थान बताया जाता है।\n\nजो चीज़ कढ़ाई को अन्य क्षेत्रीय चिकन स्ट्यू से अलग करती है, वह डेयरी की लगभग पूर्ण अनुपस्थिति है — इसमें दही या क्रीम नहीं होता — इसके बजाय ताज़े टमाटरों की प्राकृतिक खटास और तेल पर निर्भर करता है सॉस को बांधने के लिए। प्रामाणिक कढ़ाई रेस्तरां अक्सर व्यंजन को सीधे उस कास्ट-आयरन बर्तन में परोसते हैं जिसमें यह पकाया गया था, मेज़ पर अभी भी उबलता हुआ, एक प्रस्तुति जिसे पूर्ण अनुभव के लिए स्वाद जितना ही महत्वपूर्ण माना जाता है।",
+    "tr": "Chicken karahi, adını Pakistan ve kuzey Hindistan alt kıtası mutfaklarında geleneksel olarak kullanılan, wok'a benzeyen ama daha derin ve kalın, geniş duvarlı yuvarlak dökme demir kaptan, karahiden alır. Kesin kökeni Pakistan ve kuzey Hindistan'ın çeşitli bölgeleri arasında tartışmalı olsa da, Peşaver şehri ve Pencap eyaleti modern tarifin doğum yeri olarak en sık gösterilenlerdir.\n\nKarahiyi diğer bölgesel tavuk yahnilerinden ayıran şey, süt ürünlerinin neredeyse tamamen yokluğudur — yoğurt veya krema içermez — bunun yerine sosu bağlamak için taze domateslerin doğal ekşiliğine ve yağa dayanır. Otantik karahi restoranları genellikle yemeği pişirildiği dökme demir kapta, masada hâlâ cızırdarken servis eder; bu sunum, tam deneyim için tat kadar önemli kabul edilir.",
+    "it": "Il chicken karahi prende il nome dal recipiente rotondo di ghisa dalle pareti svasate, il karahi, tradizionalmente usato nelle cucine del subcontinente indiano settentrionale, simile a un wok ma più profondo e spesso. Sebbene la sua origine esatta sia contesa tra varie regioni del Pakistan e dell'India settentrionale, la città di Peshawar e la provincia del Punjab sono le più comunemente citate come luogo di nascita della ricetta moderna.\n\nCiò che distingue il karahi da altri stufati di pollo regionali è l'assenza quasi totale di latticini — non contiene yogurt né panna — affidandosi invece all'acidità naturale dei pomodori freschi e all'olio per legare la salsa. I ristoranti di karahi autentici spesso servono il piatto direttamente nel recipiente di ghisa in cui è stato cotto, ancora sfrigolante a tavola, una presentazione considerata importante quanto il gusto per l'esperienza completa.",
+    "ko": "치킨 카라히는 인도 아대륙 북부 주방에서 전통적으로 사용되는, 웍과 비슷하지만 더 깊고 두꺼운 벽이 벌어진 둥근 무쇠 용기인 카라히에서 이름을 따왔다. 정확한 기원은 파키스탄과 북인도의 여러 지역 사이에서 논란이 있지만, 페샤와르시와 펀자브 주가 현대 레시피의 발상지로 가장 흔히 언급된다.\n\n카라히를 다른 지역 닭고기 스튜와 구별 짓는 것은 유제품이 거의 전혀 들어가지 않는다는 점이다 — 요거트나 크림이 들어가지 않으며 — 대신 신선한 토마토의 자연스러운 신맛과 기름으로 소스를 걸쭉하게 만든다. 정통 카라히 식당들은 종종 요리를 조리했던 무쇠 용기에 그대로 담아 식탁에서 여전히 지글거리는 채로 내는데, 이러한 제공 방식은 완전한 경험을 위해 맛만큼이나 중요하게 여겨진다."
+  },
+  "meta": {
+    "time": 55,
+    "costRon": 26,
+    "tags": ["high-protein", "spicy", "family"],
+    "desc": {
+      "ro": "Pui picant pakistanez gătit în vas de fontă, cu sos gros de roșii, ghimbir și ardei iute proaspăt.",
+      "en": "Spicy Pakistani chicken cooked in a cast-iron pan, with a thick tomato, ginger and fresh chili sauce.",
+      "es": "Pollo picante paquistaní cocinado en sartén de hierro fundido, con salsa espesa de tomate, jengibre y chile fresco.",
+      "fr": "Poulet épicé pakistanais cuisiné dans une poêle en fonte, avec une sauce épaisse à la tomate, gingembre et piment frais.",
+      "de": "Scharfes pakistanisches Hähnchen, in einer Gusseisenpfanne gegart, mit dicker Tomaten-, Ingwer- und frischer Chilisauce.",
+      "pt": "Frango picante paquistanês cozinhado em frigideira de ferro fundido, com molho espesso de tomate, gengibre e pimenta fresca.",
+      "ru": "Острая пакистанская курица, приготовленная в чугунной сковороде, с густым соусом из томатов, имбиря и свежего перца чили.",
+      "ar": "دجاج باكستاني حار مطهو في مقلاة حديدية، بصلصة سميكة من الطماطم والزنجبيل والفلفل الأخضر الطازج.",
+      "zh": "巴基斯坦辛辣鸡肉，铁锅烹制，配浓稠番茄、姜和新鲜辣椒酱汁。",
+      "ja": "鋳鉄鍋で調理したスパイシーなパキスタン風チキン、濃厚なトマト、生姜、生の唐辛子ソース。",
+      "hi": "कास्ट-आयरन पैन में पका तीखा पाकिस्तानी चिकन, गाढ़े टमाटर, अदरक और ताज़ी मिर्च सॉस के साथ।",
+      "tr": "Dökme demir tavada pişirilmiş acı Pakistan usulü tavuk, koyu domates, zencefil ve taze biber soslu.",
+      "it": "Pollo piccante pakistano cotto in padella di ghisa, con salsa densa di pomodoro, zenzero e peperoncino fresco.",
+      "ko": "무쇠 팬에 조리한 매콤한 파키스탄식 치킨, 진한 토마토, 생강, 생고추 소스."
+    }
+  }
+}

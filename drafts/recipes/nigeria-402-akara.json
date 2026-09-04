@@ -1,0 +1,209 @@
+{
+  "id": 402,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Nigeria",
+    "en": "Nigeria",
+    "es": "Nigeria",
+    "fr": "Nigeria",
+    "de": "Nigeria",
+    "pt": "Nigéria",
+    "ru": "Нигерия",
+    "ar": "نيجيريا",
+    "zh": "尼日利亚",
+    "ja": "ナイジェリア",
+    "hi": "नाइजीरिया",
+    "tr": "Nijerya",
+    "it": "Nigeria",
+    "ko": "나이지리아"
+  },
+  "name": {
+    "ro": "Akara (Chiftele Nigeriene de Fasole)",
+    "en": "Akara (Nigerian Black-Eyed Pea Fritters)",
+    "es": "Akara (Buñuelos Nigerianos de Frijoles de Ojo Negro)",
+    "fr": "Akara (Beignets de Haricots Nigérians)",
+    "de": "Akara (Nigerianische Augenbohnen-Frikadellen)",
+    "pt": "Akara (Bolinhos Nigerianos de Feijão-Fradinho)",
+    "ru": "Акара (Нигерийские Оладьи из Бобов)",
+    "ar": "أكارا (كرات فول نيجيرية مقلية)",
+    "zh": "尼日利亚豆丸子（阿卡拉）",
+    "ja": "アカラ（ナイジェリア風豆のフリッター）",
+    "hi": "अकारा (नाइजीरियाई बीन फ्रिटर)",
+    "tr": "Akara (Nijerya Usulü Fasulye Köftesi)",
+    "it": "Akara (Polpette di Fagioli Nigeriane)",
+    "ko": "아카라 (나이지리아식 콩 튀김)"
+  },
+  "category": {
+    "ro": "Aperitiv",
+    "en": "Appetizer",
+    "es": "Entrante",
+    "fr": "Entrée",
+    "de": "Vorspeise",
+    "pt": "Entrada",
+    "ru": "Закуска",
+    "ar": "مقبلات",
+    "zh": "开胃菜",
+    "ja": "前菜",
+    "hi": "स्टार्टर",
+    "tr": "Meze",
+    "it": "Antipasto",
+    "ko": "애피타이저"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🫘", "t": "Fasole ochi-negru bătută", "d": "Fasolea decorticată se bate energic cu mâna sau mixerul, pentru a încorpora aer și a obține textura pufoasă." },
+      { "icon": "🌶️", "t": "Ceapă și ardei iute", "d": "Ceapă tocată fin și ardei iute se amestecă în pasta de fasole, pentru aromă și un ușor picant." },
+      { "icon": "🔥", "t": "Prăjite în ulei fierbinte", "d": "Se prăjesc rapid, cu lingura, în ulei foarte fierbinte, până devin aurii și crocante la exterior." },
+      { "icon": "🍽️", "t": "Gustare de mic dejun", "d": "Se servesc tradițional dimineața, alături de terci de porumb (pap) sau pâine." }
+    ],
+    "en": [
+      { "icon": "🫘", "t": "Whipped black-eyed peas", "d": "The peeled beans are vigorously whipped by hand or with a mixer, to incorporate air and get a fluffy texture." },
+      { "icon": "🌶️", "t": "Onion and chili", "d": "Finely chopped onion and chili are mixed into the bean paste, for flavor and a mild kick." },
+      { "icon": "🔥", "t": "Fried in hot oil", "d": "Spooned quickly into very hot oil and fried until golden and crisp on the outside." },
+      { "icon": "🍽️", "t": "Breakfast snack", "d": "Traditionally served in the morning, alongside cornmeal porridge (pap) or bread." }
+    ],
+    "es": [
+      { "icon": "🫘", "t": "Frijoles de ojo negro batidos", "d": "Los frijoles pelados se baten enérgicamente a mano o con batidora, para incorporar aire y lograr una textura esponjosa." },
+      { "icon": "🌶️", "t": "Cebolla y chile", "d": "Cebolla finamente picada y chile se mezclan en la pasta de frijoles, para sabor y un toque picante suave." },
+      { "icon": "🔥", "t": "Fritos en aceite caliente", "d": "Se echan rápido con cuchara en aceite muy caliente y se fríen hasta quedar dorados y crujientes por fuera." },
+      { "icon": "🍽️", "t": "Aperitivo de desayuno", "d": "Se sirven tradicionalmente por la mañana, junto con papilla de maíz (pap) o pan." }
+    ],
+    "fr": [
+      { "icon": "🫘", "t": "Haricots à œil noir battus", "d": "Les haricots épluchés sont battus énergiquement à la main ou au mixeur, pour incorporer de l'air et obtenir une texture moelleuse." },
+      { "icon": "🌶️", "t": "Oignon et piment", "d": "De l'oignon finement haché et du piment sont mélangés dans la pâte de haricots, pour la saveur et un léger piquant." },
+      { "icon": "🔥", "t": "Frits dans l'huile chaude", "d": "Déposés rapidement à la cuillère dans l'huile très chaude et frits jusqu'à devenir dorés et croustillants à l'extérieur." },
+      { "icon": "🍽️", "t": "Collation du petit-déjeuner", "d": "Traditionnellement servis le matin, avec de la bouillie de maïs (pap) ou du pain." }
+    ],
+    "de": [
+      { "icon": "🫘", "t": "Aufgeschlagene Augenbohnen", "d": "Die geschälten Bohnen werden energisch von Hand oder mit dem Mixer geschlagen, um Luft einzubringen und eine lockere Textur zu erzielen." },
+      { "icon": "🌶️", "t": "Zwiebel und Chili", "d": "Fein gehackte Zwiebel und Chili werden in die Bohnenpaste gemischt, für Geschmack und eine milde Schärfe." },
+      { "icon": "🔥", "t": "In heißem Öl frittiert", "d": "Schnell löffelweise in sehr heißes Öl gegeben und frittiert, bis sie außen goldbraun und knusprig sind." },
+      { "icon": "🍽️", "t": "Frühstückssnack", "d": "Traditionell morgens serviert, zusammen mit Maisbrei (Pap) oder Brot." }
+    ],
+    "pt": [
+      { "icon": "🫘", "t": "Feijão-fradinho batido", "d": "O feijão descascado é batido energicamente à mão ou com batedeira, para incorporar ar e obter uma textura fofa." },
+      { "icon": "🌶️", "t": "Cebola e malagueta", "d": "Cebola picada finamente e malagueta são misturadas na pasta de feijão, para sabor e um leve picante." },
+      { "icon": "🔥", "t": "Fritos em óleo quente", "d": "Colocados rapidamente com colher em óleo bem quente e fritos até dourarem e ficarem crocantes por fora." },
+      { "icon": "🍽️", "t": "Petisco de pequeno-almoço", "d": "Tradicionalmente servidos de manhã, junto com mingau de milho (pap) ou pão." }
+    ],
+    "ru": [
+      { "icon": "🫘", "t": "Взбитый коровий горох", "d": "Очищенные бобы энергично взбивают вручную или миксером, чтобы наполнить воздухом и получить пышную текстуру." },
+      { "icon": "🌶️", "t": "Лук и перец чили", "d": "Мелко нарезанный лук и перец чили вмешиваются в бобовую пасту, для вкуса и лёгкой остроты." },
+      { "icon": "🔥", "t": "Жарятся в горячем масле", "d": "Быстро выкладываются ложкой в очень горячее масло и жарятся до золотистой хрустящей корочки снаружи." },
+      { "icon": "🍽️", "t": "Завтрак", "d": "Традиционно подаются утром вместе с кукурузной кашей (пап) или хлебом." }
+    ],
+    "ar": [
+      { "icon": "🫘", "t": "لوبيا مخفوقة", "d": "يُخفق الفول المقشر بقوة باليد أو بالخلاط لإدخال الهواء والحصول على قوام هش." },
+      { "icon": "🌶️", "t": "بصل وفلفل حار", "d": "يُمزج البصل المفروم ناعمًا والفلفل الحار في عجينة الفول لإضافة النكهة وحرارة خفيفة." },
+      { "icon": "🔥", "t": "تُقلى في زيت ساخن", "d": "تُغرف بسرعة بملعقة في زيت ساخن جدًا وتُقلى حتى تصبح ذهبية ومقرمشة من الخارج." },
+      { "icon": "🍽️", "t": "وجبة إفطار خفيفة", "d": "تُقدَّم تقليديًا في الصباح مع عصيدة الذرة (باب) أو الخبز." }
+    ],
+    "zh": [
+      { "icon": "🫘", "t": "打发的眉豆", "d": "去皮的豆子用手或搅拌机用力打发，融入空气以获得蓬松的口感。" },
+      { "icon": "🌶️", "t": "洋葱和辣椒", "d": "切碎的洋葱和辣椒拌入豆糊中，增添风味与温和的辣度。" },
+      { "icon": "🔥", "t": "热油炸制", "d": "迅速用勺子舀入非常热的油中炸至外层金黄酥脆。" },
+      { "icon": "🍽️", "t": "早餐小食", "d": "传统上于早晨搭配玉米粥（pap）或面包食用。" }
+    ],
+    "ja": [
+      { "icon": "🫘", "t": "泡立てたブラックアイドピー", "d": "皮をむいた豆を手またはミキサーで力強く泡立て、空気を含ませてふわふわの食感にする。" },
+      { "icon": "🌶️", "t": "玉ねぎと唐辛子", "d": "細かく刻んだ玉ねぎと唐辛子を豆のペーストに混ぜ込み、風味とほのかな辛みを加える。" },
+      { "icon": "🔥", "t": "熱い油で揚げる", "d": "非常に熱い油にスプーンで手早く落とし、外側がきつね色でカリッとするまで揚げる。" },
+      { "icon": "🍽️", "t": "朝食のスナック", "d": "伝統的に朝、トウモロコシ粥（パップ）やパンと共に提供される。" }
+    ],
+    "hi": [
+      { "icon": "🫘", "t": "फेंटी काली आंख वाली फलियां", "d": "छिली फलियों को हाथ या मिक्सर से ज़ोर से फेंटा जाता है, हवा भरने और फूली बनावट पाने के लिए।" },
+      { "icon": "🌶️", "t": "प्याज़ और मिर्च", "d": "बारीक कटा प्याज़ और मिर्च बीन पेस्ट में मिलाए जाते हैं, स्वाद और हल्के तीखेपन के लिए।" },
+      { "icon": "🔥", "t": "गरम तेल में तला", "d": "बहुत गरम तेल में चम्मच से जल्दी डाला और बाहर से सुनहरा और कुरकुरा होने तक तला जाता है।" },
+      { "icon": "🍽️", "t": "नाश्ते का स्नैक", "d": "पारंपरिक रूप से सुबह, मक्के के दलिया (पैप) या ब्रेड के साथ परोसा जाता है।" }
+    ],
+    "tr": [
+      { "icon": "🫘", "t": "Çırpılmış börülce", "d": "Kabuğu soyulmuş fasulyeler elle veya mikserle enerjik şekilde çırpılarak hava katılır ve kabarık bir doku elde edilir." },
+      { "icon": "🌶️", "t": "Soğan ve biber", "d": "İnce doğranmış soğan ve biber, lezzet ve hafif bir acılık için fasulye ezmesine karıştırılır." },
+      { "icon": "🔥", "t": "Sıcak yağda kızartılır", "d": "Çok sıcak yağa kaşıkla hızlıca bırakılır ve dışı altın rengi ve çıtır olana kadar kızartılır." },
+      { "icon": "🍽️", "t": "Kahvaltı atıştırmalığı", "d": "Geleneksel olarak sabahları mısır lapası (pap) veya ekmekle servis edilir." }
+    ],
+    "it": [
+      { "icon": "🫘", "t": "Fagioli dall'occhio montati", "d": "I fagioli pelati vengono montati energicamente a mano o con un mixer, per incorporare aria e ottenere una consistenza soffice." },
+      { "icon": "🌶️", "t": "Cipolla e peperoncino", "d": "Cipolla tritata finemente e peperoncino vengono mescolati nella pasta di fagioli, per sapore e un leggero piccante." },
+      { "icon": "🔥", "t": "Fritte in olio bollente", "d": "Versate rapidamente con un cucchiaio in olio molto caldo e fritte finché dorate e croccanti all'esterno." },
+      { "icon": "🍽️", "t": "Snack da colazione", "d": "Tradizionalmente servite al mattino, insieme a porridge di mais (pap) o pane." }
+    ],
+    "ko": [
+      { "icon": "🫘", "t": "휘핑한 블랙아이드피", "d": "껍질 벗긴 콩을 손이나 믹서로 힘차게 휘핑해 공기를 넣어 폭신한 질감을 만든다." },
+      { "icon": "🌶️", "t": "양파와 고추", "d": "잘게 썬 양파와 고추를 콩 페이스트에 섞어 풍미와 은은한 매운맛을 더한다." },
+      { "icon": "🔥", "t": "뜨거운 기름에 튀기기", "d": "매우 뜨거운 기름에 숟가락으로 재빨리 떨어뜨려 겉이 황금빛으로 바삭해질 때까지 튀긴다." },
+      { "icon": "🍽️", "t": "아침 간식", "d": "전통적으로 아침에 옥수수죽(팹)이나 빵과 함께 제공된다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g fasole ochi-negru, uscată", "1 ceapă mică, tocată fin, plus 1/2 ceapă pentru pastă", "2 ardei iuți scotch bonnet (după gust)", "1 linguriță sare", "ulei pentru prăjit"],
+    "en": ["500g black-eyed peas, dried", "1 small onion, finely chopped, plus 1/2 onion for the paste", "2 scotch bonnet chilies (to taste)", "1 tsp salt", "oil for frying"],
+    "es": ["500g de frijoles de ojo negro, secos", "1 cebolla pequeña, finamente picada, más 1/2 cebolla para la pasta", "2 chiles scotch bonnet (al gusto)", "1 cucharadita de sal", "aceite para freír"],
+    "fr": ["500g de haricots à œil noir, secs", "1 petit oignon, finement haché, plus 1/2 oignon pour la pâte", "2 piments scotch bonnet (selon le goût)", "1 c. à café de sel", "huile pour la friture"],
+    "de": ["500g Augenbohnen, getrocknet", "1 kleine Zwiebel, fein gehackt, plus 1/2 Zwiebel für die Paste", "2 Scotch-Bonnet-Chilis (nach Geschmack)", "1 TL Salz", "Öl zum Frittieren"],
+    "pt": ["500g de feijão-fradinho, seco", "1 cebola pequena, picada finamente, mais 1/2 cebola para a pasta", "2 pimentas scotch bonnet (a gosto)", "1 colher (chá) de sal", "óleo para fritar"],
+    "ru": ["500г коровьего гороха, сушёного", "1 маленькая луковица, мелко нарезанная, плюс 1/2 луковицы для пасты", "2 перца скотч-боннет (по вкусу)", "1 ч.л. соли", "масло для жарки"],
+    "ar": ["500 غرام لوبيا ذات عين سوداء، مجففة", "بصلة صغيرة، مفرومة ناعمًا، بالإضافة إلى نصف بصلة للعجينة", "فلفلا سكوتش بونيت حاران (حسب الرغبة)", "ملعقة صغيرة ملح", "زيت للقلي"],
+    "zh": ["500克眉豆，干燥", "1个小洋葱，切碎，另加半个洋葱用于打糊", "2个苏格兰帽辣椒（依口味）", "1茶匙盐", "炸油"],
+    "ja": ["ブラックアイドピー（乾燥）500g", "小玉ねぎ1個（みじん切り）、さらにペースト用に玉ねぎ1/2個", "スコッチボネット唐辛子2本（お好みで）", "塩小さじ1", "揚げ油"],
+    "hi": ["500 ग्राम काली आंख वाली फलियां, सूखी", "1 छोटा प्याज़, बारीक कटा, साथ ही पेस्ट के लिए 1/2 प्याज़", "2 स्कॉच बोनेट मिर्च (स्वादानुसार)", "1 छोटी चम्मच नमक", "तलने के लिए तेल"],
+    "tr": ["500g börülce, kuru", "1 küçük soğan, ince doğranmış, artı ezme için 1/2 soğan", "2 scotch bonnet biberi (tadına göre)", "1 çay kaşığı tuz", "kızartmak için yağ"],
+    "it": ["500g di fagioli dall'occhio, secchi", "1 cipolla piccola, tritata finemente, più 1/2 cipolla per la pasta", "2 peperoncini scotch bonnet (a piacere)", "1 cucchiaino di sale", "olio per friggere"],
+    "ko": ["블랙아이드피 500g, 말린 것", "작은 양파 1개, 잘게 썬 것, 그리고 페이스트용 양파 1/2개", "스카치 보넷 고추 2개(입맛에 따라)", "소금 1작은술", "튀김용 식용유"]
+  },
+  "howIsMade": {
+    "ro": "ÎNMOAIE FASOLEA: Înmoaie fasolea ochi-negru în apă 2-3 ore, apoi freac-o între palme sub apă curentă pentru a-i îndepărta coaja. CLĂTEȘTE: Clătește fasolea decorticată de mai multe ori, până apa devine limpede. MIXEAZĂ: Mixează fasolea curățată cu jumătate de ceapă și ardeii iuți, adăugând puțină apă treptat, până obții o pastă groasă, fără cocoloașe. BATE PASTA: Bate energic pasta cu o lingură de lemn sau la mixer, timp de câteva minute, până devine pufoasă și își dublează aproape volumul — acest pas e esențial pentru textura finală. ADAUGĂ CEAPA ȘI SAREA: Amestecă ceapa tocată fin rămasă și sarea în pastă, cu mișcări ușoare, ca să nu pierzi aerul încorporat. ÎNCINGE ULEIUL: Încinge uleiul pentru prăjit la 180°C într-o tigaie adâncă. FORMEAZĂ ȘI PRĂJEȘTE: Ia porții de pastă cu o lingură, coboară-le cu grijă în uleiul fierbinte, prăjește în loturi mici 3-4 minute, întorcând o dată, până devin aurii uniform pe ambele părți. SCURGE: Scoate akara pe hârtie absorbantă. SERVEȘTE: Servește fierbinte, ca gustare de mic dejun sau aperitiv, alături de terci de porumb sau pâine.",
+    "en": "SOAK THE BEANS: Soak the black-eyed peas in water 2-3 hours, then rub them between your palms under running water to remove the skins. RINSE: Rinse the peeled beans several times, until the water runs clear. BLEND: Blend the peeled beans with half an onion and the chilies, gradually adding a little water, until you get a thick, lump-free paste. WHIP THE PASTE: Whip the paste vigorously with a wooden spoon or mixer, for several minutes, until it becomes fluffy and nearly doubles in volume — this step is essential for the final texture. ADD THE ONION AND SALT: Fold the remaining finely chopped onion and salt into the paste, with gentle motions, so as not to lose the incorporated air. HEAT THE OIL: Heat the frying oil to 180°C in a deep pan. SHAPE AND FRY: Scoop portions of paste with a spoon, carefully lower them into the hot oil, fry in small batches 3-4 minutes, turning once, until evenly golden on both sides. DRAIN: Remove the akara onto paper towels. SERVE: Serve hot, as a breakfast snack or appetizer, alongside cornmeal porridge or bread.",
+    "es": "REMOJA LOS FRIJOLES: Remoja los frijoles de ojo negro en agua 2-3 horas, luego frótalos entre las palmas bajo agua corriente para quitarles la piel. ENJUAGA: Enjuaga los frijoles pelados varias veces, hasta que el agua salga clara. LICÚA: Licúa los frijoles pelados con media cebolla y los chiles, añadiendo gradualmente un poco de agua, hasta obtener una pasta espesa, sin grumos. BATE LA PASTA: Bate la pasta enérgicamente con una cuchara de madera o batidora, durante varios minutos, hasta que quede esponjosa y casi duplique su volumen — este paso es esencial para la textura final. AÑADE LA CEBOLLA Y LA SAL: Incorpora la cebolla finamente picada restante y la sal a la pasta, con movimientos suaves, para no perder el aire incorporado. CALIENTA EL ACEITE: Calienta el aceite de freír a 180°C en una sartén profunda. FORMA Y FRÍE: Toma porciones de pasta con una cuchara, bájalas con cuidado en el aceite caliente, fríe en tandas pequeñas 3-4 minutos, volteando una vez, hasta que estén doradas uniformemente por ambos lados. ESCURRE: Retira las akara sobre papel absorbente. SIRVE: Sirve caliente, como aperitivo de desayuno o entrante, junto con papilla de maíz o pan.",
+    "fr": "FAITES TREMPER LES HARICOTS: Faites tremper les haricots à œil noir dans l'eau 2-3 heures, puis frottez-les entre vos paumes sous l'eau courante pour retirer les peaux. RINCEZ: Rincez les haricots épluchés plusieurs fois, jusqu'à ce que l'eau soit claire. MIXEZ: Mixez les haricots épluchés avec une demi-oignon et les piments, en ajoutant progressivement un peu d'eau, jusqu'à obtenir une pâte épaisse, sans grumeaux. BATTEZ LA PÂTE: Battez énergiquement la pâte avec une cuillère en bois ou un mixeur, pendant plusieurs minutes, jusqu'à ce qu'elle devienne moelleuse et double presque de volume — cette étape est essentielle pour la texture finale. AJOUTEZ L'OIGNON ET LE SEL: Incorporez l'oignon finement haché restant et le sel dans la pâte, avec des mouvements doux, pour ne pas perdre l'air incorporé. CHAUFFEZ L'HUILE: Chauffez l'huile de friture à 180°C dans une poêle profonde. FORMEZ ET FAITES FRIRE: Prélevez des portions de pâte avec une cuillère, descendez-les délicatement dans l'huile chaude, faites frire par petits lots 3-4 minutes, en retournant une fois, jusqu'à ce qu'elles soient dorées uniformément des deux côtés. ÉGOUTTEZ: Retirez les akara sur du papier absorbant. SERVEZ: Servez chaud, comme collation du petit-déjeuner ou entrée, avec de la bouillie de maïs ou du pain.",
+    "de": "BOHNEN EINWEICHEN: Die Augenbohnen 2-3 Stunden in Wasser einweichen, dann zwischen den Handflächen unter fließendem Wasser reiben, um die Schalen zu entfernen. ABSPÜLEN: Die geschälten Bohnen mehrmals abspülen, bis das Wasser klar wird. PÜRIEREN: Die geschälten Bohnen mit einer halben Zwiebel und den Chilis pürieren, dabei nach und nach etwas Wasser zugeben, bis eine dicke, klumpenfreie Paste entsteht. PASTE SCHLAGEN: Die Paste mehrere Minuten kräftig mit einem Holzlöffel oder Mixer schlagen, bis sie locker wird und sich fast im Volumen verdoppelt — dieser Schritt ist entscheidend für die endgültige Textur. ZWIEBEL UND SALZ HINZUFÜGEN: Die restliche fein gehackte Zwiebel und das Salz vorsichtig unter die Paste heben, damit die eingeschlagene Luft nicht verloren geht. ÖL ERHITZEN: Das Frittieröl in einer tiefen Pfanne auf 180°C erhitzen. FORMEN UND FRITTIEREN: Portionen der Paste mit einem Löffel abnehmen, vorsichtig ins heiße Öl geben, in kleinen Portionen 3-4 Minuten frittieren, einmal wenden, bis sie auf beiden Seiten gleichmäßig goldbraun sind. ABTROPFEN LASSEN: Die Akara auf Küchenpapier legen. SERVIEREN: Heiß servieren, als Frühstückssnack oder Vorspeise, zusammen mit Maisbrei oder Brot.",
+    "pt": "DEMOLHE O FEIJÃO: Demolhe o feijão-fradinho em água por 2-3 horas, depois esfregue-o entre as palmas das mãos sob água corrente para remover as peles. ENXAGUE: Enxague o feijão descascado várias vezes, até a água sair clara. BATA: Bata o feijão descascado com meia cebola e as pimentas, adicionando gradualmente um pouco de água, até obter uma pasta espessa, sem grumos. BATA A PASTA: Bata a pasta energicamente com uma colher de pau ou batedeira, por vários minutos, até ficar fofa e quase dobrar de volume — este passo é essencial para a textura final. ADICIONE A CEBOLA E O SAL: Incorpore a cebola picada finamente restante e o sal na pasta, com movimentos suaves, para não perder o ar incorporado. AQUEÇA O ÓLEO: Aqueça o óleo de fritura a 180°C numa frigideira funda. MOLDE E FRITE: Pegue porções de pasta com uma colher, desça-as cuidadosamente no óleo quente, frite em pequenos lotes por 3-4 minutos, virando uma vez, até dourarem uniformemente dos dois lados. ESCORRA: Retire o akara sobre papel absorvente. SIRVA: Sirva quente, como petisco de pequeno-almoço ou entrada, junto com mingau de milho ou pão.",
+    "ru": "ЗАМОЧИТЕ БОБЫ: Замочите коровий горох в воде на 2-3 часа, затем потрите его между ладонями под проточной водой, чтобы удалить кожуру. ПРОМОЙТЕ: Промойте очищенные бобы несколько раз, пока вода не станет прозрачной. ИЗМЕЛЬЧИТЕ: Измельчите очищенные бобы с половиной луковицы и перцем чили, постепенно добавляя немного воды, до получения густой пасты без комочков. ВЗБЕЙТЕ ПАСТУ: Энергично взбивайте пасту деревянной ложкой или миксером несколько минут, пока она не станет пышной и почти не удвоится в объёме — этот шаг необходим для конечной текстуры. ДОБАВЬТЕ ЛУК И СОЛЬ: Аккуратно вмешайте оставшийся мелко нарезанный лук и соль в пасту, чтобы не потерять включённый воздух. РАЗОГРЕЙТЕ МАСЛО: Разогрейте масло для жарки до 180°C в глубокой сковороде. СФОРМИРУЙТЕ И ОБЖАРЬТЕ: Зачерпните порции пасты ложкой, аккуратно опустите в горячее масло, обжаривайте небольшими партиями 3-4 минуты, перевернув один раз, до равномерной золотистой корочки с обеих сторон. СЛЕЙТЕ МАСЛО: Выложите акару на бумажные полотенца. ПОДАВАЙТЕ: Подавайте горячими, как завтрак или закуску, вместе с кукурузной кашей или хлебом.",
+    "ar": "انقعي الفول: انقعي اللوبيا ذات العين السوداء في الماء 2-3 ساعات، ثم افركيها بين راحتي يديك تحت الماء الجاري لإزالة القشور. اشطفي: اشطفي اللوبيا المقشرة عدة مرات حتى يصبح الماء صافيًا. اخلطي: اخلطي اللوبيا المقشرة مع نصف بصلة والفلفل الحار، مع إضافة القليل من الماء تدريجيًا، حتى تحصلي على عجينة سميكة بلا كتل. اخفقي العجينة: اخفقي العجينة بقوة بملعقة خشبية أو خلاط لعدة دقائق حتى تصبح هشة ويتضاعف حجمها تقريبًا — هذه الخطوة أساسية للقوام النهائي. أضيفي البصل والملح: اطوي باقي البصل المفروم ناعمًا والملح في العجينة بحركات لطيفة حتى لا يفقد الهواء المدمج. سخّني الزيت: سخّني زيت القلي إلى 180 درجة مئوية في مقلاة عميقة. شكّلي واقلي: خذي أجزاء من العجينة بملعقة، أنزليها بحذر في الزيت الساخن، اقلي على دفعات صغيرة 3-4 دقائق مع القلب مرة واحدة حتى تصبح ذهبية بالتساوي من الجهتين. صفّي: أخرجي الأكارا على منشفة ورقية. قدّمي: قدّميها ساخنة كوجبة إفطار خفيفة أو مقبلات مع عصيدة الذرة أو الخبز.",
+    "zh": "浸泡豆子：将眉豆浸泡2-3小时，然后在流水下用手掌搓揉去皮。冲洗：将去皮的豆子多次冲洗，直至水变清澈。打糊：将去皮的豆子与半个洋葱和辣椒放入搅拌机，逐渐加入少量水，打成浓稠无结块的糊状。打发豆糊：用木勺或搅拌器用力打发豆糊数分钟，直至蓬松且体积几乎翻倍——这一步对最终口感至关重要。加入洋葱和盐：轻柔地将剩余切碎的洋葱和盐拌入豆糊，以免损失打入的空气。加热油：在深锅中将炸油加热至180°C。塑形并油炸：用勺子舀取豆糊，小心放入热油中，分小批次油炸3-4分钟，翻一次面，直至两面均匀金黄。沥油：将阿卡拉取出放在厨房纸巾上。上桌：趁热食用，作为早餐小食或开胃菜，配玉米粥或面包。",
+    "ja": "豆を浸水させる：ブラックアイドピーを2〜3時間水に浸し、その後流水の下で手のひらの間でこすり合わせて皮を取り除く。すすぐ：皮をむいた豆を水が透明になるまで何度もすすぐ。ミキサーにかける：皮をむいた豆を玉ねぎ半分と唐辛子と共にミキサーにかけ、少量の水を少しずつ加えながら、だまのない濃いペーストにする。ペーストを泡立てる：木のスプーンまたはミキサーでペーストを数分間力強く泡立て、ふんわりとして体積がほぼ2倍になるまで泡立てる——この工程は最終的な食感に不可欠。玉ねぎと塩を加える：残りの細かく刻んだ玉ねぎと塩を、含ませた空気を失わないよう優しくペーストに混ぜ込む。油を熱する：深めのフライパンで揚げ油を180°Cに熱する。成形して揚げる：スプーンでペーストをすくい、熱い油に注意深く落とし、少量ずつ3〜4分、一度返しながら両面が均一にきつね色になるまで揚げる。油を切る：アカラをキッチンペーパーに取り出す。提供する：朝食のスナックまたは前菜として、トウモロコシ粥やパンと共に熱いうちに提供する。",
+    "hi": "फलियां भिगोएं: काली आंख वाली फलियों को पानी में 2-3 घंटे भिगोएं, फिर बहते पानी के नीचे हथेलियों के बीच रगड़ें ताकि छिलके उतर जाएं। धोएं: छिली फलियों को कई बार धोएं, जब तक पानी साफ न हो जाए। मिलाएं: छिली फलियों को आधे प्याज़ और मिर्च के साथ मिलाएं, धीरे-धीरे थोड़ा पानी डालते हुए, जब तक गाढ़ा, बिना गांठ का पेस्ट न बन जाए। पेस्ट फेंटें: पेस्ट को लकड़ी के चम्मच या मिक्सर से कई मिनट तक ज़ोर से फेंटें, जब तक फूली न हो जाए और लगभग दोगुनी न हो जाए — यह कदम अंतिम बनावट के लिए ज़रूरी है। प्याज़ और नमक डालें: बचा बारीक कटा प्याज़ और नमक हल्के से पेस्ट में मिलाएं, ताकि भरी हवा न निकले। तेल गरम करें: गहरे पैन में तलने का तेल 180°C पर गरम करें। आकार दें और तलें: चम्मच से पेस्ट के हिस्से लें, सावधानी से गरम तेल में डालें, छोटे हिस्सों में 3-4 मिनट तलें, एक बार पलटते हुए, जब तक दोनों तरफ से समान रूप से सुनहरा न हो जाए। छानें: अकारा को कागज़ के तौलिये पर निकालें। परोसें: गरमागरम, नाश्ते के स्नैक या स्टार्टर के रूप में, मक्के के दलिया या ब्रेड के साथ परोसें।",
+    "tr": "FASULYELERİ ISLATIN: Börülceyi 2-3 saat suda ıslatın, sonra akan suyun altında avuçlarınız arasında ovarak kabuklarını çıkarın. DURULAYIN: Kabuğu soyulmuş fasulyeleri, su duru çıkana kadar birkaç kez durulayın. KARIŞTIRIN: Soyulmuş fasulyeleri yarım soğan ve biberlerle karıştırın, yavaş yavaş biraz su ekleyerek, topaksız koyu bir ezme elde edene kadar. EZMEYİ ÇIRPIN: Ezmeyi tahta kaşık veya mikserle birkaç dakika enerjik şekilde çırpın, kabarık hale gelip hacmi neredeyse iki katına çıkana kadar — bu adım son doku için gereklidir. SOĞAN VE TUZ EKLEYİN: Kalan ince doğranmış soğanı ve tuzu, katılan havayı kaybetmemek için nazik hareketlerle ezmeye katın. YAĞI ISITIN: Derin bir tavada kızartma yağını 180°C'ye ısıtın. ŞEKİLLENDİRİN VE KIZARTIN: Kaşıkla ezme porsiyonları alın, dikkatlice sıcak yağa indirin, her iki tarafı da eşit şekilde altın rengi olana kadar bir kez çevirerek küçük partiler halinde 3-4 dakika kızartın. SÜZÜN: Akaraları kağıt havluya alın. SERVİS YAPIN: Sıcak, kahvaltı atıştırmalığı veya meze olarak, mısır lapası veya ekmekle servis edin.",
+    "it": "AMMOLLA I FAGIOLI: Ammolla i fagioli dall'occhio in acqua per 2-3 ore, poi strofinali tra i palmi delle mani sotto acqua corrente per rimuovere le bucce. SCIACQUA: Sciacqua i fagioli pelati più volte, finché l'acqua non esce limpida. FRULLA: Frulla i fagioli pelati con mezza cipolla e i peperoncini, aggiungendo gradualmente un po' d'acqua, finché ottieni una pasta densa, senza grumi. MONTA LA PASTA: Monta energicamente la pasta con un cucchiaio di legno o un mixer, per diversi minuti, finché diventa soffice e raddoppia quasi di volume — questo passaggio è essenziale per la consistenza finale. AGGIUNGI LA CIPOLLA E IL SALE: Incorpora la cipolla tritata finemente rimasta e il sale nella pasta, con movimenti delicati, per non perdere l'aria incorporata. SCALDA L'OLIO: Scalda l'olio di frittura a 180°C in una padella profonda. FORMA E FRIGGI: Preleva porzioni di pasta con un cucchiaio, abbassale con cura nell'olio caldo, friggi in piccoli lotti 3-4 minuti, girando una volta, finché dorate uniformemente su entrambi i lati. SCOLA: Togli l'akara su carta assorbente. SERVI: Servi caldo, come snack da colazione o antipasto, insieme a porridge di mais o pane.",
+    "ko": "콩 불리기: 블랙아이드피를 물에 2-3시간 불린 뒤 흐르는 물 아래에서 손바닥으로 비벼 껍질을 제거한다. 헹구기: 껍질 벗긴 콩을 물이 맑아질 때까지 여러 번 헹군다. 갈기: 껍질 벗긴 콩을 양파 반 개, 고추와 함께 물을 조금씩 넣어가며 갈아 덩어리 없는 걸쭉한 페이스트를 만든다. 페이스트 휘핑하기: 나무 숟가락이나 믹서로 페이스트를 몇 분간 힘차게 휘핑해 폭신해지고 부피가 거의 두 배가 될 때까지 만든다 — 이 단계가 최종 식감에 필수적이다. 양파와 소금 넣기: 남은 잘게 썬 양파와 소금을 넣은 공기를 잃지 않도록 부드럽게 페이스트에 섞는다. 기름 가열하기: 깊은 팬에 튀김용 기름을 180°C로 가열한다. 모양 만들고 튀기기: 숟가락으로 페이스트를 떠서 조심스럽게 뜨거운 기름에 넣고, 한 번 뒤집으며 소량씩 3-4분간 양면이 고르게 황금빛이 될 때까지 튀긴다. 기름 빼기: 아카라를 키친타월에 건진다. 제공하기: 아침 간식이나 애피타이저로 옥수수죽이나 빵과 함께 뜨겁게 제공한다."
+  },
+  "originText": {
+    "ro": "Akara este considerată una dintre cele mai influente exporturi culinare ale Africii de Vest, cu rădăcini care se întind pe secole în comunitatea Yoruba din Nigeria, transportată apoi peste Atlantic prin comerțul cu sclavi și adaptată în Brazilia sub numele de acarajé și în Caraibe sub diverse forme. Această legătură istorică face din akara una dintre puținele mâncăruri africane ale căror descendenți directe pot fi urmărite pe ambele maluri ale Atlanticului.\n\nÎn Nigeria, akara se vinde aproape exclusiv dimineața devreme, la tarabe de stradă, alături de pap (terci de porumb fermentat) sau pâine, ca mic dejun rapid pentru muncitorii care merg spre serviciu. Vânzătoarele de akara, adesea femei mai în vârstă care au vândut aceeași rețetă decenii la rând, sunt figuri respectate în comunitățile lor, iar consistența și savoarea chiftelelor lor sunt subiect de mândrie și competiție locală.",
+    "en": "Akara is considered one of West Africa's most influential culinary exports, with roots stretching back centuries in the Yoruba community of Nigeria, later carried across the Atlantic through the slave trade and adapted in Brazil under the name acarajé and in the Caribbean under various forms. This historical link makes akara one of the few African dishes whose direct descendants can be traced on both shores of the Atlantic.\n\nIn Nigeria, akara is sold almost exclusively early in the morning, at street stalls, alongside pap (fermented corn porridge) or bread, as a quick breakfast for workers heading to their jobs. Akara sellers, often older women who have sold the same recipe for decades, are respected figures in their communities, and the consistency and flavor of their fritters are a matter of pride and local competition.",
+    "es": "El akara se considera una de las exportaciones culinarias más influyentes de África Occidental, con raíces que se remontan siglos atrás en la comunidad yoruba de Nigeria, llevada después a través del Atlántico por el comercio de esclavos y adaptada en Brasil bajo el nombre de acarajé y en el Caribe bajo diversas formas. Este vínculo histórico convierte al akara en uno de los pocos platos africanos cuyos descendientes directos se pueden rastrear en ambas orillas del Atlántico.\n\nEn Nigeria, el akara se vende casi exclusivamente temprano en la mañana, en puestos callejeros, junto con pap (papilla de maíz fermentado) o pan, como desayuno rápido para los trabajadores que van a sus empleos. Las vendedoras de akara, a menudo mujeres mayores que han vendido la misma receta durante décadas, son figuras respetadas en sus comunidades, y la consistencia y el sabor de sus buñuelos son motivo de orgullo y competencia local.",
+    "fr": "L'akara est considéré comme l'une des exportations culinaires les plus influentes d'Afrique de l'Ouest, avec des racines remontant des siècles dans la communauté yoruba du Nigeria, transportée ensuite à travers l'Atlantique par la traite des esclaves et adaptée au Brésil sous le nom d'acarajé et dans les Caraïbes sous diverses formes. Ce lien historique fait de l'akara l'un des rares plats africains dont les descendants directs peuvent être retracés sur les deux rives de l'Atlantique.\n\nAu Nigeria, l'akara est vendu presque exclusivement tôt le matin, sur des étals de rue, avec du pap (bouillie de maïs fermenté) ou du pain, comme petit-déjeuner rapide pour les travailleurs se rendant à leur emploi. Les vendeuses d'akara, souvent des femmes âgées qui vendent la même recette depuis des décennies, sont des figures respectées dans leurs communautés, et la consistance et la saveur de leurs beignets sont un sujet de fierté et de compétition locale.",
+    "de": "Akara gilt als einer der einflussreichsten kulinarischen Exportartikel Westafrikas, mit Wurzeln, die Jahrhunderte in der Yoruba-Gemeinschaft Nigerias zurückreichen, später über den Atlantik durch den Sklavenhandel getragen und in Brasilien unter dem Namen Acarajé sowie in der Karibik in verschiedenen Formen angepasst. Diese historische Verbindung macht Akara zu einem der wenigen afrikanischen Gerichte, deren direkte Nachkommen an beiden Ufern des Atlantiks nachverfolgt werden können.\n\nIn Nigeria wird Akara fast ausschließlich früh am Morgen an Straßenständen verkauft, zusammen mit Pap (fermentierter Maisbrei) oder Brot, als schnelles Frühstück für Arbeiter auf dem Weg zur Arbeit. Akara-Verkäuferinnen, oft ältere Frauen, die dasselbe Rezept seit Jahrzehnten verkaufen, sind respektierte Figuren in ihren Gemeinschaften, und die Konsistenz und der Geschmack ihrer Frikadellen sind Gegenstand von Stolz und lokalem Wettbewerb.",
+    "pt": "O akara é considerado uma das exportações culinárias mais influentes da África Ocidental, com raízes que remontam séculos na comunidade iorubá da Nigéria, levada depois através do Atlântico pelo tráfico de escravos e adaptada no Brasil sob o nome de acarajé e nas Caraíbas sob várias formas. Esta ligação histórica torna o akara um dos poucos pratos africanos cujos descendentes diretos podem ser rastreados nas duas margens do Atlântico.\n\nNa Nigéria, o akara é vendido quase exclusivamente de manhã cedo, em bancas de rua, junto com pap (mingau de milho fermentado) ou pão, como pequeno-almoço rápido para trabalhadores a caminho do emprego. As vendedoras de akara, frequentemente mulheres mais velhas que vendem a mesma receita há décadas, são figuras respeitadas nas suas comunidades, e a consistência e o sabor dos seus bolinhos são motivo de orgulho e competição local.",
+    "ru": "Акара считается одним из самых влиятельных кулинарных экспортов Западной Африки, с корнями, уходящими на века в общину йоруба в Нигерии, позже перевезённой через Атлантику работорговлей и адаптированной в Бразилии под названием акараже и на Карибах в различных формах. Эта историческая связь делает акару одним из немногих африканских блюд, чьих прямых потомков можно проследить на обоих берегах Атлантики.\n\nВ Нигерии акару продают почти исключительно рано утром, на уличных лотках, вместе с пап (ферментированной кукурузной кашей) или хлебом, как быстрый завтрак для работников, идущих на работу. Продавщицы акары, часто пожилые женщины, продающие один и тот же рецепт десятилетиями, являются уважаемыми фигурами в своих общинах, а консистенция и вкус их оладий — предмет гордости и местного соперничества.",
+    "ar": "تُعتبر الأكارا أحد أكثر الصادرات الطهوية تأثيرًا في غرب أفريقيا، وتعود جذورها إلى قرون في مجتمع اليوروبا في نيجيريا، ثم نُقلت عبر الأطلسي من خلال تجارة الرقيق وتكيّفت في البرازيل تحت اسم أكاراجي وفي منطقة البحر الكاريبي بأشكال مختلفة. هذا الرابط التاريخي يجعل من الأكارا واحدة من الأطباق الأفريقية القليلة التي يمكن تتبع سليلاتها المباشرة على ضفتي الأطلسي.\n\nفي نيجيريا، تُباع الأكارا حصريًا تقريبًا في الصباح الباكر، في أكشاك الشوارع، مع الباب (عصيدة الذرة المخمرة) أو الخبز، كفطور سريع للعمال المتجهين إلى وظائفهم. بائعات الأكارا، غالبًا نساء كبيرات في السن يبعن نفس الوصفة منذ عقود، شخصيات محترمة في مجتمعاتهن، وقوام ونكهة كراتهن موضوع فخر ومنافسة محلية.",
+    "zh": "阿卡拉被认为是西非最具影响力的美食出口之一，其根源可追溯至几个世纪前尼日利亚的约鲁巴族社群，后来通过奴隶贸易跨越大西洋，在巴西演变为「acarajé」，在加勒比地区也以各种形式存在。这种历史联系使阿卡拉成为少数几种能在大西洋两岸追溯其直系后代的非洲菜肴之一。\n\n在尼日利亚，阿卡拉几乎只在清晨的街边摊出售，搭配帕普（发酵玉米粥）或面包，作为上班族快捷的早餐。阿卡拉小贩——常常是几十年来一直卖着同一配方的年长妇女——在她们的社区中备受尊敬，她们炸丸子的口感和风味是当地引以为傲、相互较量的话题。",
+    "ja": "アカラは西アフリカで最も影響力のある食文化の輸出品の一つとされ、ナイジェリアのヨルバ族社会に何世紀も遡るルーツを持ち、その後奴隷貿易を通じて大西洋を渡り、ブラジルではアカラジェという名前で、カリブ海地域では様々な形で適応された。この歴史的なつながりにより、アカラは大西洋の両岸で直接の子孫をたどることができる数少ないアフリカ料理の一つとなっている。\n\nナイジェリアでは、アカラはほぼ早朝限定で、街の屋台でパップ（発酵トウモロコシ粥）やパンと共に、仕事に向かう労働者のための手早い朝食として売られている。アカラの売り手は、しばしば同じレシピを何十年も売り続けてきた年配の女性たちであり、地域社会で尊敬される存在であり、彼女たちのフリッターの一貫性と風味は誇りと地元での競争の対象となっている。",
+    "hi": "अकारा को पश्चिम अफ्रीका के सबसे प्रभावशाली पाक निर्यातों में से एक माना जाता है, जिसकी जड़ें नाइजीरिया के योरूबा समुदाय में सदियों पीछे तक फैली हैं, बाद में गुलाम व्यापार के माध्यम से अटलांटिक पार ले जाया गया और ब्राज़ील में अकाराजे नाम से और कैरिबियन में विभिन्न रूपों में अनुकूलित किया गया। यह ऐतिहासिक संबंध अकारा को उन कुछ अफ्रीकी व्यंजनों में से एक बनाता है जिनके प्रत्यक्ष वंशजों को अटलांटिक के दोनों किनारों पर खोजा जा सकता है।\n\nनाइजीरिया में, अकारा लगभग विशेष रूप से सुबह जल्दी, स्ट्रीट स्टॉल पर, पैप (किण्वित मक्के का दलिया) या ब्रेड के साथ, काम पर जाने वाले श्रमिकों के लिए त्वरित नाश्ते के रूप में बेचा जाता है। अकारा विक्रेता, अक्सर बड़ी उम्र की महिलाएं जो दशकों से एक ही नुस्खा बेच रही हैं, अपने समुदायों में सम्मानित हस्तियां हैं, और उनके फ्रिटर्स की स्थिरता और स्वाद गर्व और स्थानीय प्रतिस्पर्धा का विषय है।",
+    "tr": "Akara, Batı Afrika'nın en etkili mutfak ihracatlarından biri olarak kabul edilir; kökleri Nijerya'daki Yoruba topluluğunda yüzyıllar öncesine dayanır, daha sonra köle ticareti yoluyla Atlantik'i geçmiş ve Brezilya'da akaraje adıyla, Karayipler'de ise çeşitli biçimlerde uyarlanmıştır. Bu tarihsel bağlantı, akarayı Atlantik'in her iki kıyısında da doğrudan soyu izlenebilen az sayıdaki Afrika yemeğinden biri yapar.\n\nNijerya'da akara neredeyse yalnızca sabahın erken saatlerinde, sokak tezgahlarında, işe giden işçiler için hızlı bir kahvaltı olarak pap (fermente mısır lapası) veya ekmekle birlikte satılır. Genellikle aynı tarifi onlarca yıldır satan yaşlı kadınlar olan akara satıcıları, topluluklarında saygı duyulan figürlerdir ve köftelerinin kıvamı ve lezzeti gurur ve yerel rekabet konusudur.",
+    "it": "L'akara è considerato una delle esportazioni culinarie più influenti dell'Africa occidentale, con radici che risalgono a secoli fa nella comunità yoruba della Nigeria, portata poi attraverso l'Atlantico dalla tratta degli schiavi e adattata in Brasile con il nome di acarajé e nei Caraibi in varie forme. Questo legame storico rende l'akara uno dei pochi piatti africani i cui discendenti diretti possono essere rintracciati su entrambe le sponde dell'Atlantico.\n\nIn Nigeria, l'akara viene venduto quasi esclusivamente al mattino presto, nelle bancarelle di strada, insieme al pap (porridge di mais fermentato) o al pane, come colazione veloce per i lavoratori che si dirigono al lavoro. Le venditrici di akara, spesso donne anziane che vendono la stessa ricetta da decenni, sono figure rispettate nelle loro comunità, e la consistenza e il sapore delle loro polpette sono motivo di orgoglio e competizione locale.",
+    "ko": "아카라는 서아프리카에서 가장 영향력 있는 음식 수출품 중 하나로 여겨지며, 나이지리아의 요루바 공동체에서 수 세기를 거슬러 올라가는 뿌리를 가지고 있고, 이후 노예 무역을 통해 대서양을 건너 브라질에서는 아카라제라는 이름으로, 카리브해에서는 다양한 형태로 변형되었다. 이러한 역사적 연결고리는 아카라를 대서양 양쪽 해안에서 직계 후손을 추적할 수 있는 몇 안 되는 아프리카 요리 중 하나로 만든다.\n\n나이지리아에서 아카라는 거의 이른 아침에만 길거리 노점에서 판매되며, 출근하는 노동자들을 위한 빠른 아침 식사로 팹(발효 옥수수죽)이나 빵과 함께 곁들여진다. 종종 수십 년 동안 같은 레시피를 팔아온 나이 든 여성들인 아카라 판매상들은 지역 사회에서 존경받는 인물이며, 그들이 만드는 튀김의 일관성과 풍미는 자부심과 지역 경쟁의 대상이다."
+  },
+  "meta": {
+    "time": 60,
+    "costRon": 10,
+    "tags": ["vegetarian", "vegan", "budget", "quick"],
+    "desc": {
+      "ro": "Chiftele nigeriene crocante din fasole ochi-negru, cu ceapă și ardei iute, gustare de mic dejun.",
+      "en": "Crispy Nigerian black-eyed pea fritters with onion and chili, a breakfast staple.",
+      "es": "Buñuelos nigerianos crujientes de frijoles de ojo negro con cebolla y chile, básico del desayuno.",
+      "fr": "Beignets nigérians croustillants de haricots à œil noir à l'oignon et au piment, un classique du petit-déjeuner.",
+      "de": "Knusprige nigerianische Augenbohnen-Frikadellen mit Zwiebel und Chili, ein Frühstücksklassiker.",
+      "pt": "Bolinhos nigerianos crocantes de feijão-fradinho com cebola e malagueta, básico do pequeno-almoço.",
+      "ru": "Хрустящие нигерийские оладьи из коровьего гороха с луком и перцем чили, основа завтрака.",
+      "ar": "كرات فول نيجيرية مقرمشة بالبصل والفلفل الحار، أساسية في وجبة الإفطار.",
+      "zh": "尼日利亚酥脆眉豆丸子，配洋葱和辣椒，早餐必备。",
+      "ja": "玉ねぎと唐辛子入りのカリカリなナイジェリア風豆のフリッター、朝食の定番。",
+      "hi": "प्याज़ और मिर्च के साथ कुरकुरे नाइजीरियाई बीन फ्रिटर, नाश्ते का मुख्य व्यंजन।",
+      "tr": "Soğanlı ve biberli çıtır Nijerya usulü fasulye köftesi, kahvaltı klasiği.",
+      "it": "Polpette nigeriane croccanti di fagioli dall'occhio con cipolla e peperoncino, un classico da colazione.",
+      "ko": "양파와 고추를 넣은 바삭한 나이지리아식 콩 튀김, 아침 식사의 기본."
+    }
+  }
+}

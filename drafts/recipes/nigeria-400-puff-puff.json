@@ -1,0 +1,209 @@
+{
+  "id": 400,
+  "servings": 4,
+  "tipType": "dessert",
+  "pairingsType": "dessert",
+  "origin": {
+    "ro": "Nigeria",
+    "en": "Nigeria",
+    "es": "Nigeria",
+    "fr": "Nigeria",
+    "de": "Nigeria",
+    "pt": "Nigéria",
+    "ru": "Нигерия",
+    "ar": "نيجيريا",
+    "zh": "尼日利亚",
+    "ja": "ナイジェリア",
+    "hi": "नाइजीरिया",
+    "tr": "Nijerya",
+    "it": "Nigeria",
+    "ko": "나이지리아"
+  },
+  "name": {
+    "ro": "Puff Puff (Gogoși Nigeriene Pufoase)",
+    "en": "Puff Puff (Nigerian Fried Dough Balls)",
+    "es": "Puff Puff (Bolas de Masa Frita Nigerianas)",
+    "fr": "Puff Puff (Boules de Pâte Frites Nigérianes)",
+    "de": "Puff Puff (Nigerianische Frittierte Teigbällchen)",
+    "pt": "Puff Puff (Bolinhas de Massa Frita Nigerianas)",
+    "ru": "Пафф-Пафф (Нигерийские Жареные Шарики из Теста)",
+    "ar": "باف باف (كرات عجين نيجيرية مقلية)",
+    "zh": "尼日利亚炸面球（泡芙泡芙）",
+    "ja": "パフパフ（ナイジェリア風揚げドーナツボール）",
+    "hi": "पफ पफ (नाइजीरियाई तले हुए आटे के गोले)",
+    "tr": "Puff Puff (Nijerya Usulü Kızarmış Hamur Topları)",
+    "it": "Puff Puff (Palline di Pasta Fritta Nigeriane)",
+    "ko": "퍼프 퍼프 (나이지리아식 튀긴 반죽 볼)"
+  },
+  "category": {
+    "ro": "Desert",
+    "en": "Dessert",
+    "es": "Postre",
+    "fr": "Dessert",
+    "de": "Dessert",
+    "pt": "Sobremesa",
+    "ru": "Десерт",
+    "ar": "حلوى",
+    "zh": "甜点",
+    "ja": "デザート",
+    "hi": "मिठाई",
+    "tr": "Tatlı",
+    "it": "Dolce",
+    "ko": "디저트"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🍞", "t": "Aluat lichid cu drojdie", "d": "Un aluat lichid, dospit cu drojdie, capătă bule mari, semn că a fermentat corect." },
+      { "icon": "🌰", "t": "Nucșoară parfumată", "d": "Un praf de nucșoară măcinată dă gogoșilor o aromă caldă, ușor picantă." },
+      { "icon": "🖐️", "t": "Modelate cu mâna", "d": "Bilele de aluat se toarnă direct în ulei cu mâna, formând bile rotunde, neregulate." },
+      { "icon": "🍬", "t": "Servite cu zahăr", "d": "Se rulează sau se presară cu zahăr cât timp sunt încă fierbinți, pentru un exterior dulce, crocant." }
+    ],
+    "en": [
+      { "icon": "🍞", "t": "Liquid yeasted batter", "d": "A runny, yeast-risen batter develops large bubbles, a sign it's fermented properly." },
+      { "icon": "🌰", "t": "Fragrant nutmeg", "d": "A pinch of ground nutmeg gives the doughnuts a warm, slightly spiced aroma." },
+      { "icon": "🖐️", "t": "Hand-shaped", "d": "The batter is dropped directly into the oil by hand, forming round, irregular balls." },
+      { "icon": "🍬", "t": "Rolled in sugar", "d": "Rolled or dusted with sugar while still hot, for a sweet, crisp exterior." }
+    ],
+    "es": [
+      { "icon": "🍞", "t": "Masa líquida con levadura", "d": "Una masa líquida, leudada con levadura, desarrolla grandes burbujas, señal de que ha fermentado correctamente." },
+      { "icon": "🌰", "t": "Nuez moscada aromática", "d": "Una pizca de nuez moscada molida da a los buñuelos un aroma cálido y ligeramente picante." },
+      { "icon": "🖐️", "t": "Moldeados a mano", "d": "La masa se echa directamente en el aceite con la mano, formando bolas redondas e irregulares." },
+      { "icon": "🍬", "t": "Rebozados en azúcar", "d": "Se rebozan o espolvorean con azúcar mientras aún están calientes, para un exterior dulce y crujiente." }
+    ],
+    "fr": [
+      { "icon": "🍞", "t": "Pâte liquide levée", "d": "Une pâte liquide, levée à la levure, développe de grosses bulles, signe qu'elle a bien fermenté." },
+      { "icon": "🌰", "t": "Muscade parfumée", "d": "Une pincée de noix de muscade moulue donne aux beignets un arôme chaud, légèrement épicé." },
+      { "icon": "🖐️", "t": "Façonnés à la main", "d": "La pâte est versée directement dans l'huile à la main, formant des boules rondes et irrégulières." },
+      { "icon": "🍬", "t": "Roulés dans le sucre", "d": "Roulés ou saupoudrés de sucre pendant qu'ils sont encore chauds, pour un extérieur sucré et croustillant." }
+    ],
+    "de": [
+      { "icon": "🍞", "t": "Flüssiger Hefeteig", "d": "Ein flüssiger, mit Hefe aufgegangener Teig entwickelt große Blasen, ein Zeichen für richtige Gärung." },
+      { "icon": "🌰", "t": "Duftende Muskatnuss", "d": "Eine Prise gemahlene Muskatnuss verleiht den Krapfen ein warmes, leicht würziges Aroma." },
+      { "icon": "🖐️", "t": "Von Hand geformt", "d": "Der Teig wird direkt von Hand ins Öl gegeben und bildet runde, unregelmäßige Kugeln." },
+      { "icon": "🍬", "t": "In Zucker gewälzt", "d": "Während sie noch heiß sind, in Zucker gewälzt oder damit bestäubt, für eine süße, knusprige Außenseite." }
+    ],
+    "pt": [
+      { "icon": "🍞", "t": "Massa líquida levedada", "d": "Uma massa líquida, crescida com fermento, desenvolve grandes bolhas, sinal de que fermentou corretamente." },
+      { "icon": "🌰", "t": "Noz-moscada perfumada", "d": "Uma pitada de noz-moscada moída dá às bolinhas um aroma quente e levemente picante." },
+      { "icon": "🖐️", "t": "Moldadas à mão", "d": "A massa é despejada diretamente no óleo à mão, formando bolas redondas e irregulares." },
+      { "icon": "🍬", "t": "Passadas no açúcar", "d": "Passadas ou polvilhadas com açúcar enquanto ainda estão quentes, para um exterior doce e crocante." }
+    ],
+    "ru": [
+      { "icon": "🍞", "t": "Жидкое дрожжевое тесто", "d": "Жидкое, поднявшееся на дрожжах тесто образует крупные пузырьки — признак правильного брожения." },
+      { "icon": "🌰", "t": "Ароматный мускатный орех", "d": "Щепотка молотого мускатного ореха придаёт пончикам тёплый, слегка пряный аромат." },
+      { "icon": "🖐️", "t": "Формуются руками", "d": "Тесто выливается прямо в масло рукой, образуя круглые неровные шарики." },
+      { "icon": "🍬", "t": "Обваляны в сахаре", "d": "Обваливаются или посыпаются сахаром, пока ещё горячие, для сладкой хрустящей корочки." }
+    ],
+    "ar": [
+      { "icon": "🍞", "t": "عجينة سائلة بالخميرة", "d": "تُكوّن العجينة السائلة المخمّرة بالخميرة فقاعات كبيرة، علامة على التخمر الصحيح." },
+      { "icon": "🌰", "t": "جوزة طيب عطرية", "d": "تمنح رشة من جوزة الطيب المطحونة الكرات نكهة دافئة وحارة قليلًا." },
+      { "icon": "🖐️", "t": "تُشكَّل باليد", "d": "تُسكب العجينة مباشرة في الزيت باليد، مكوّنة كرات مستديرة غير منتظمة." },
+      { "icon": "🍬", "t": "مغموسة بالسكر", "d": "تُغمس أو تُرشّ بالسكر وهي لا تزال ساخنة، للحصول على قشرة خارجية حلوة ومقرمشة." }
+    ],
+    "zh": [
+      { "icon": "🍞", "t": "液态酵母面糊", "d": "液态的酵母发面糊会产生大气泡，这是正确发酵的标志。" },
+      { "icon": "🌰", "t": "芳香肉豆蔻", "d": "一撮肉豆蔻粉赋予炸球温暖、略带辛香的风味。" },
+      { "icon": "🖐️", "t": "手工塑形", "d": "面糊直接用手舀入油中，形成不规则的圆球。" },
+      { "icon": "🍬", "t": "裹上糖", "d": "趁热裹上或撒上糖，形成香甜酥脆的外层。" }
+    ],
+    "ja": [
+      { "icon": "🍞", "t": "液状のイースト生地", "d": "水っぽいイースト発酵生地は大きな気泡を作り、正しく発酵した証となる。" },
+      { "icon": "🌰", "t": "香り高いナツメグ", "d": "ひとつまみのナツメグパウダーが、ドーナツに温かくほのかにスパイシーな香りを与える。" },
+      { "icon": "🖐️", "t": "手で成形", "d": "生地は手で直接油に落とされ、丸くて不揃いなボールを作る。" },
+      { "icon": "🍬", "t": "砂糖をまぶす", "d": "まだ熱いうちに砂糖をまぶしたり振りかけたりし、甘くてカリッとした表面に仕上げる。" }
+    ],
+    "hi": [
+      { "icon": "🍞", "t": "तरल यीस्ट बैटर", "d": "यीस्ट से फूला तरल बैटर बड़े बुलबुले बनाता है, सही किण्वन का संकेत।" },
+      { "icon": "🌰", "t": "सुगंधित जायफल", "d": "पिसे जायफल की एक चुटकी डोनट को गरम, हल्का मसालेदार सुगंध देती है।" },
+      { "icon": "🖐️", "t": "हाथ से आकार दिया", "d": "बैटर को सीधे हाथ से तेल में डाला जाता है, गोल, अनियमित गोले बनाते हुए।" },
+      { "icon": "🍬", "t": "चीनी में लपेटा", "d": "गरम रहते ही चीनी में लपेटा या छिड़का जाता है, मीठे, कुरकुरे बाहरी हिस्से के लिए।" }
+    ],
+    "tr": [
+      { "icon": "🍞", "t": "Sıvı mayalı hamur", "d": "Mayayla kabaran sulu bir hamur büyük kabarcıklar oluşturur, bu da doğru fermente olduğunun işaretidir." },
+      { "icon": "🌰", "t": "Kokulu muskat", "d": "Bir tutam öğütülmüş muskat, tatlılara sıcak, hafif baharatlı bir aroma verir." },
+      { "icon": "🖐️", "t": "Elle şekillendirilir", "d": "Hamur doğrudan elle yağa dökülerek yuvarlak, düzensiz toplar oluşturur." },
+      { "icon": "🍬", "t": "Şekere bulanır", "d": "Tatlı, çıtır bir dış katman için hâlâ sıcakken şekere bulanır veya şeker serpilir." }
+    ],
+    "it": [
+      { "icon": "🍞", "t": "Pastella liquida lievitata", "d": "Una pastella liquida, lievitata con lievito, sviluppa grandi bolle, segno di corretta fermentazione." },
+      { "icon": "🌰", "t": "Noce moscata profumata", "d": "Un pizzico di noce moscata macinata dona alle frittelle un aroma caldo, leggermente speziato." },
+      { "icon": "🖐️", "t": "Modellate a mano", "d": "La pastella viene versata direttamente nell'olio a mano, formando palline rotonde e irregolari." },
+      { "icon": "🍬", "t": "Rotolate nello zucchero", "d": "Rotolate o cosparse di zucchero mentre sono ancora calde, per un esterno dolce e croccante." }
+    ],
+    "ko": [
+      { "icon": "🍞", "t": "묽은 이스트 반죽", "d": "이스트로 부풀린 묽은 반죽에 큰 기포가 생기는 것이 제대로 발효된 신호이다." },
+      { "icon": "🌰", "t": "향긋한 육두구", "d": "간 육두구 한 꼬집이 도넛에 따뜻하고 은은하게 매콤한 향을 더한다." },
+      { "icon": "🖐️", "t": "손으로 모양 만들기", "d": "반죽을 손으로 직접 기름에 떨어뜨려 둥글고 불규칙한 공 모양을 만든다." },
+      { "icon": "🍬", "t": "설탕에 굴리기", "d": "아직 뜨거울 때 설탕에 굴리거나 뿌려 달콤하고 바삭한 겉면을 만든다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g făină", "7g drojdie instant", "150g zahăr", "1/2 linguriță nucșoară măcinată", "1/4 linguriță sare", "350ml apă călduță", "ulei pentru prăjit", "zahăr suplimentar, pentru rulat"],
+    "en": ["500g flour", "7g instant yeast", "150g sugar", "1/2 tsp ground nutmeg", "1/4 tsp salt", "350ml warm water", "oil for frying", "extra sugar, for rolling"],
+    "es": ["500g de harina", "7g de levadura instantánea", "150g de azúcar", "1/2 cucharadita de nuez moscada molida", "1/4 cucharadita de sal", "350ml de agua tibia", "aceite para freír", "azúcar extra, para rebozar"],
+    "fr": ["500g de farine", "7g de levure instantanée", "150g de sucre", "1/2 c. à café de noix de muscade moulue", "1/4 c. à café de sel", "350ml d'eau tiède", "huile pour la friture", "sucre supplémentaire, pour rouler"],
+    "de": ["500g Mehl", "7g Instanthefe", "150g Zucker", "1/2 TL gemahlene Muskatnuss", "1/4 TL Salz", "350ml lauwarmes Wasser", "Öl zum Frittieren", "zusätzlicher Zucker, zum Wälzen"],
+    "pt": ["500g de farinha", "7g de fermento instantâneo", "150g de açúcar", "1/2 colher (chá) de noz-moscada moída", "1/4 colher (chá) de sal", "350ml de água morna", "óleo para fritar", "açúcar extra, para passar"],
+    "ru": ["500г муки", "7г быстрорастворимых дрожжей", "150г сахара", "1/2 ч.л. молотого мускатного ореха", "1/4 ч.л. соли", "350мл тёплой воды", "масло для жарки", "дополнительный сахар, для обваливания"],
+    "ar": ["500 غرام دقيق", "7 غرام خميرة فورية", "150 غرام سكر", "نصف ملعقة صغيرة جوزة طيب مطحونة", "ربع ملعقة صغيرة ملح", "350 مل ماء دافئ", "زيت للقلي", "سكر إضافي، للتغميس"],
+    "zh": ["500克面粉", "7克即发酵母", "150克糖", "1/2茶匙肉豆蔻粉", "1/4茶匙盐", "350毫升温水", "炸油", "额外的糖，用于裹粉"],
+    "ja": ["小麦粉500g", "インスタントイースト7g", "砂糖150g", "ナツメグパウダー小さじ1/2", "塩小さじ1/4", "ぬるま湯350ml", "揚げ油", "追加の砂糖（まぶす用）"],
+    "hi": ["500 ग्राम आटा", "7 ग्राम इंस्टेंट यीस्ट", "150 ग्राम चीनी", "1/2 छोटी चम्मच पिसा जायफल", "1/4 छोटी चम्मच नमक", "350 मिली गुनगुना पानी", "तलने के लिए तेल", "अतिरिक्त चीनी, लपेटने के लिए"],
+    "tr": ["500g un", "7g anlık maya", "150g şeker", "1/2 çay kaşığı öğütülmüş muskat", "1/4 çay kaşığı tuz", "350ml ılık su", "kızartmak için yağ", "bulamak için ekstra şeker"],
+    "it": ["500g di farina", "7g di lievito istantaneo", "150g di zucchero", "1/2 cucchiaino di noce moscata macinata", "1/4 cucchiaino di sale", "350ml di acqua tiepida", "olio per friggere", "zucchero extra, per rotolare"],
+    "ko": ["밀가루 500g", "속성 이스트 7g", "설탕 150g", "간 육두구 1/2작은술", "소금 1/4작은술", "따뜻한 물 350ml", "튀김용 식용유", "굴림용 여분의 설탕"]
+  },
+  "howIsMade": {
+    "ro": "AMESTECĂ USCATELE: Amestecă făina, drojdia, zahărul, nucșoara și sarea într-un bol mare. ADAUGĂ APA: Toarnă treptat apa călduță, amestecând energic cu o lingură de lemn sau telul, până obții un aluat lichid, neted, fără cocoloașe. LASĂ LA DOSPIT: Acoperă bolul și lasă aluatul la dospit într-un loc călduț 1-1.5 ore, până se dublează în volum și apar bule mari la suprafață. ÎNCINGE ULEIUL: Încinge uleiul pentru prăjit la 170°C într-o oală adâncă. FORMEAZĂ BILELE: Ia porții de aluat cu mâna umedă sau cu o lingură, lasă-le să cadă cu grijă în uleiul încins, formând bile rotunde de mărimea unei mingi de golf. PRĂJEȘTE: Prăjește bilele în loturi mici, 4-5 minute, întorcându-le des cu o lingură cu găuri, până devin aurii uniform pe toate părțile și complet coapte în interior. SCURGE: Scoate bilele pe hârtie absorbantă. RULEAZĂ ÎN ZAHĂR: Cât timp sunt încă calde, rulează-le prin zahăr sau presară-le generos deasupra. SERVEȘTE: Servește proaspete și calde, în aceeași zi.",
+    "en": "MIX THE DRY INGREDIENTS: Mix the flour, yeast, sugar, nutmeg and salt in a large bowl. ADD THE WATER: Gradually pour in the warm water, whisking vigorously with a wooden spoon or whisk, until you get a smooth, lump-free liquid batter. LET IT RISE: Cover the bowl and let the batter rise in a warm spot 1-1.5 hours, until doubled in volume and large bubbles appear on the surface. HEAT THE OIL: Heat the frying oil to 170°C in a deep pot. SHAPE THE BALLS: Scoop portions of batter with a wet hand or a spoon, carefully drop them into the hot oil, forming round balls the size of a golf ball. FRY: Fry the balls in small batches, 4-5 minutes, turning often with a slotted spoon, until evenly golden on all sides and fully cooked inside. DRAIN: Remove the balls onto paper towels. ROLL IN SUGAR: While still warm, roll them in sugar or generously dust with it. SERVE: Serve fresh and warm, the same day.",
+    "es": "MEZCLA LOS SECOS: Mezcla la harina, la levadura, el azúcar, la nuez moscada y la sal en un bol grande. AÑADE EL AGUA: Vierte gradualmente el agua tibia, batiendo enérgicamente con una cuchara de madera o un batidor, hasta obtener una masa líquida suave, sin grumos. DEJA LEVAR: Cubre el bol y deja levar la masa en un lugar cálido 1-1.5 horas, hasta que duplique su volumen y aparezcan grandes burbujas en la superficie. CALIENTA EL ACEITE: Calienta el aceite de freír a 170°C en una olla profunda. FORMA LAS BOLAS: Toma porciones de masa con la mano mojada o una cuchara, déjalas caer con cuidado en el aceite caliente, formando bolas redondas del tamaño de una pelota de golf. FRÍE: Fríe las bolas en tandas pequeñas, 4-5 minutos, volteándolas con frecuencia con una espumadera, hasta que estén doradas uniformemente por todos lados y completamente cocidas por dentro. ESCURRE: Retira las bolas sobre papel absorbente. REBOZA EN AZÚCAR: Mientras aún estén calientes, rebózalas en azúcar o espolvoréalas generosamente. SIRVE: Sirve frescas y calientes, el mismo día.",
+    "fr": "MÉLANGEZ LES INGRÉDIENTS SECS: Mélangez la farine, la levure, le sucre, la muscade et le sel dans un grand bol. AJOUTEZ L'EAU: Versez progressivement l'eau tiède, en fouettant énergiquement avec une cuillère en bois ou un fouet, jusqu'à obtenir une pâte liquide lisse, sans grumeaux. LAISSEZ LEVER: Couvrez le bol et laissez lever la pâte dans un endroit chaud 1-1,5 heure, jusqu'à ce qu'elle double de volume et que de grosses bulles apparaissent à la surface. CHAUFFEZ L'HUILE: Chauffez l'huile de friture à 170°C dans une marmite profonde. FORMEZ LES BOULES: Prélevez des portions de pâte avec une main mouillée ou une cuillère, laissez-les tomber délicatement dans l'huile chaude, formant des boules rondes de la taille d'une balle de golf. FAITES FRIRE: Faites frire les boules par petits lots, 4-5 minutes, en les retournant souvent avec une écumoire, jusqu'à ce qu'elles soient dorées uniformément de tous côtés et bien cuites à l'intérieur. ÉGOUTTEZ: Retirez les boules sur du papier absorbant. ROULEZ DANS LE SUCRE: Pendant qu'elles sont encore chaudes, roulez-les dans le sucre ou saupoudrez-les généreusement. SERVEZ: Servez fraîches et chaudes, le jour même.",
+    "de": "TROCKENE ZUTATEN MISCHEN: Mehl, Hefe, Zucker, Muskatnuss und Salz in einer großen Schüssel vermischen. WASSER HINZUFÜGEN: Nach und nach das lauwarme Wasser eingießen, kräftig mit einem Holzlöffel oder Schneebesen rühren, bis ein glatter, klumpenfreier flüssiger Teig entsteht. GEHEN LASSEN: Die Schüssel abdecken und den Teig an einem warmen Ort 1-1,5 Stunden gehen lassen, bis er sich im Volumen verdoppelt hat und große Blasen an der Oberfläche erscheinen. ÖL ERHITZEN: Das Frittieröl in einem tiefen Topf auf 170°C erhitzen. KUGELN FORMEN: Mit nasser Hand oder einem Löffel Teigportionen abnehmen, vorsichtig in das heiße Öl geben, runde, golfballgroße Kugeln formen. FRITTIEREN: Die Kugeln in kleinen Portionen 4-5 Minuten frittieren, häufig mit einem Schaumlöffel wenden, bis sie gleichmäßig goldbraun und innen vollständig durchgegart sind. ABTROPFEN LASSEN: Die Kugeln auf Küchenpapier legen. IN ZUCKER WÄLZEN: Solange sie noch warm sind, in Zucker wälzen oder großzügig damit bestäuben. SERVIEREN: Frisch und warm am selben Tag servieren.",
+    "pt": "MISTURE OS SECOS: Misture a farinha, o fermento, o açúcar, a noz-moscada e o sal numa tigela grande. ADICIONE A ÁGUA: Despeje gradualmente a água morna, batendo energicamente com uma colher de pau ou batedor, até obter uma massa líquida lisa, sem grumos. DEIXE CRESCER: Cubra a tigela e deixe a massa crescer num local morno por 1-1,5 horas, até dobrar de volume e aparecerem bolhas grandes na superfície. AQUEÇA O ÓLEO: Aqueça o óleo de fritura a 170°C numa panela funda. MOLDE AS BOLAS: Pegue porções de massa com a mão molhada ou uma colher, deixe-as cair com cuidado no óleo quente, formando bolas redondas do tamanho de uma bola de golfe. FRITE: Frite as bolas em pequenos lotes, por 4-5 minutos, virando com frequência com uma escumadeira, até dourarem uniformemente de todos os lados e ficarem completamente cozidas por dentro. ESCORRA: Retire as bolas sobre papel absorvente. PASSE NO AÇÚCAR: Enquanto ainda estão quentes, passe-as no açúcar ou polvilhe-as generosamente. SIRVA: Sirva frescas e quentes, no mesmo dia.",
+    "ru": "СМЕШАЙТЕ СУХИЕ ИНГРЕДИЕНТЫ: Смешайте муку, дрожжи, сахар, мускатный орех и соль в большой миске. ДОБАВЬТЕ ВОДУ: Постепенно влейте тёплую воду, энергично взбивая деревянной ложкой или венчиком, до получения гладкого жидкого теста без комочков. ДАЙТЕ ПОДНЯТЬСЯ: Накройте миску и дайте тесту подняться в тёплом месте 1-1,5 часа, пока не увеличится вдвое и на поверхности не появятся крупные пузыри. РАЗОГРЕЙТЕ МАСЛО: Разогрейте масло для жарки до 170°C в глубокой кастрюле. СФОРМИРУЙТЕ ШАРИКИ: Зачерпните порции теста влажной рукой или ложкой, аккуратно опустите в горячее масло, формируя круглые шарики размером с мяч для гольфа. ОБЖАРЬТЕ: Обжаривайте шарики небольшими партиями 4-5 минут, часто переворачивая шумовкой, пока не подрумянятся равномерно со всех сторон и полностью не пропекутся внутри. СЛЕЙТЕ МАСЛО: Выложите шарики на бумажные полотенца. ОБВАЛЯЙТЕ В САХАРЕ: Пока ещё тёплые, обваляйте их в сахаре или щедро посыпьте им. ПОДАВАЙТЕ: Подавайте свежими и тёплыми, в тот же день.",
+    "ar": "امزجي المكونات الجافة: امزجي الدقيق والخميرة والسكر وجوزة الطيب والملح في وعاء كبير. أضيفي الماء: أضيفي الماء الدافئ تدريجيًا مع الخفق بقوة بملعقة خشبية أو مضرب حتى تحصلي على عجينة سائلة ناعمة بلا كتل. اتركيها تختمر: غطّي الوعاء واتركي العجينة تختمر في مكان دافئ 1-1.5 ساعة حتى يتضاعف حجمها وتظهر فقاعات كبيرة على السطح. سخّني الزيت: سخّني زيت القلي إلى 170 درجة مئوية في قدر عميقة. شكّلي الكرات: خذي أجزاء من العجينة بيد مبللة أو ملعقة، أسقطيها بحذر في الزيت الساخن، مكوّنة كرات مستديرة بحجم كرة الغولف. اقلي: اقلي الكرات على دفعات صغيرة 4-5 دقائق مع القلب المتكرر بملعقة مصفاة حتى تصبح ذهبية بالتساوي من كل الجهات ومطهوة تمامًا من الداخل. صفّي: أخرجي الكرات على منشفة ورقية. غمّسيها بالسكر: وهي لا تزال دافئة، غمّسيها بالسكر أو رشّيها بسخاء. قدّمي: قدّميها طازجة ودافئة في نفس اليوم.",
+    "zh": "混合干料：在大碗中混合面粉、酵母、糖、肉豆蔻粉和盐。加入水：逐渐倒入温水，用木勺或打蛋器用力搅拌，直至形成顺滑无结块的液态面糊。发酵：盖好碗，将面糊在温暖处发酵1-1.5小时，直至体积翻倍且表面出现大气泡。加热油：在深锅中将炸油加热至170°C。塑形成球：用湿手或勺子舀取面糊，小心滴入热油中，形成高尔夫球大小的圆球。油炸：分小批次油炸4-5分钟，用漏勺频繁翻动，直至各面均匀金黄、内部完全熟透。沥油：将球取出放在厨房纸巾上。裹上糖：趁还温热时裹上糖或慷慨地撒上糖。上桌：当天新鲜温热食用。",
+    "ja": "乾燥材料を混ぜる：大きなボウルに小麦粉、イースト、砂糖、ナツメグ、塩を混ぜる。水を加える：ぬるま湯を少しずつ注ぎながら、木のスプーンや泡立て器で力強く混ぜ、だまのない滑らかな液状の生地にする。発酵させる：ボウルを覆い、温かい場所で1〜1.5時間、体積が2倍になり表面に大きな気泡が現れるまで発酵させる。油を熱する：深めの鍋で揚げ油を170°Cに熱する。ボールを成形する：濡らした手またはスプーンで生地をすくい、注意深く熱い油に落とし、ゴルフボール大の丸いボールを作る。揚げる：少量ずつ4〜5分、穴あきお玉で頻繁に返しながら、全面が均一にきつね色になり中まで完全に火が通るまで揚げる。油を切る：ボールをキッチンペーパーに取り出す。砂糖をまぶす：まだ温かいうちに砂糖にまぶすか、たっぷりと振りかける。提供する：当日中に新鮮で温かいうちに提供する。",
+    "hi": "सूखी सामग्री मिलाएं: बड़े कटोरे में आटा, यीस्ट, चीनी, जायफल और नमक मिलाएं। पानी डालें: धीरे-धीरे गुनगुना पानी डालें, लकड़ी के चम्मच या व्हिस्क से ज़ोर से फेंटते हुए, जब तक चिकना, बिना गांठ का तरल बैटर न बन जाए। फूलने दें: कटोरे को ढककर बैटर को गरम जगह पर 1-1.5 घंटे फूलने दें, जब तक आकार दोगुना न हो जाए और सतह पर बड़े बुलबुले न दिखें। तेल गरम करें: गहरे बर्तन में तलने का तेल 170°C पर गरम करें। गोले बनाएं: गीले हाथ या चम्मच से बैटर के हिस्से लें, सावधानी से गरम तेल में डालें, गोल्फ बॉल के आकार के गोल गोले बनाते हुए। तलें: गोलों को छोटे हिस्सों में 4-5 मिनट तलें, छेद वाले चम्मच से बार-बार पलटते हुए, जब तक सभी तरफ से समान रूप से सुनहरे न हो जाएं और अंदर से पूरी तरह पक न जाएं। छानें: गोलों को कागज़ के तौलिये पर निकालें। चीनी में लपेटें: गरम रहते ही, इन्हें चीनी में लपेटें या भरपूर मात्रा में छिड़कें। परोसें: उसी दिन ताज़ा और गरम परोसें।",
+    "tr": "KURU MALZEMELERİ KARIŞTIRIN: Büyük bir kasede un, maya, şeker, muskat ve tuzu karıştırın. SUYU EKLEYİN: Ilık suyu yavaş yavaş dökün, tahta kaşık veya çırpıcıyla kuvvetlice çırparak, topaksız pürüzsüz sıvı bir hamur elde edene kadar. MAYALANMASINI BEKLEYİN: Kaseyi örtün ve hamurun sıcak bir yerde hacmi iki katına çıkana ve yüzeyde büyük kabarcıklar belirene kadar 1-1,5 saat mayalanmasını bekleyin. YAĞI ISITIN: Derin bir tencerede kızartma yağını 170°C'ye ısıtın. TOPLARI ŞEKİLLENDİRİN: Islak elle veya kaşıkla hamur porsiyonları alın, dikkatlice sıcak yağa bırakın, golf topu büyüklüğünde yuvarlak toplar oluşturarak. KIZARTIN: Topları küçük partiler halinde, delikli bir kaşıkla sık sık çevirerek her tarafı eşit şekilde altın rengi olana ve içi tamamen pişene kadar 4-5 dakika kızartın. SÜZÜN: Topları kağıt havluya alın. ŞEKERE BULAYIN: Hâlâ sıcakken şekere bulayın veya bolca şeker serpin. SERVİS YAPIN: Aynı gün taze ve sıcak servis edin.",
+    "it": "MESCOLA GLI INGREDIENTI SECCHI: Mescola farina, lievito, zucchero, noce moscata e sale in una ciotola grande. AGGIUNGI L'ACQUA: Versa gradualmente l'acqua tiepida, sbattendo energicamente con un cucchiaio di legno o una frusta, finché ottieni una pastella liquida liscia, senza grumi. LASCIA LIEVITARE: Copri la ciotola e lascia lievitare la pastella in un luogo caldo per 1-1,5 ore, finché raddoppia di volume e appaiono grandi bolle in superficie. SCALDA L'OLIO: Scalda l'olio di frittura a 170°C in una pentola profonda. FORMA LE PALLINE: Preleva porzioni di pastella con una mano bagnata o un cucchiaio, lasciale cadere con cura nell'olio caldo, formando palline rotonde grandi quanto una pallina da golf. FRIGGI: Friggi le palline in piccoli lotti, 4-5 minuti, girandole spesso con una schiumarola, finché dorate uniformemente su tutti i lati e completamente cotte all'interno. SCOLA: Togli le palline su carta assorbente. ROTOLA NELLO ZUCCHERO: Mentre sono ancora calde, rotolale nello zucchero o cospargile generosamente. SERVI: Servi fresche e calde, lo stesso giorno.",
+    "ko": "마른 재료 섞기: 큰 볼에 밀가루, 이스트, 설탕, 육두구, 소금을 섞는다. 물 넣기: 따뜻한 물을 조금씩 부으며 나무 숟가락이나 거품기로 세게 저어 덩어리 없는 매끄러운 액체 반죽을 만든다. 발효시키기: 볼을 덮어 반죽을 따뜻한 곳에서 부피가 두 배가 되고 표면에 큰 기포가 생길 때까지 1-1.5시간 발효시킨다. 기름 가열하기: 깊은 냄비에 튀김용 기름을 170°C로 가열한다. 공 모양 만들기: 젖은 손이나 숟가락으로 반죽을 떠서 조심스럽게 뜨거운 기름에 떨어뜨려 골프공 크기의 둥근 공을 만든다. 튀기기: 공을 소량씩 나누어 채반 숟가락으로 자주 뒤집으며 4-5분간, 모든 면이 고르게 황금빛이 되고 속까지 완전히 익을 때까지 튀긴다. 기름 빼기: 공을 키친타월에 건진다. 설탕에 굴리기: 아직 따뜻할 때 설탕에 굴리거나 듬뿍 뿌린다. 제공하기: 당일 신선하고 따뜻하게 제공한다."
+  },
+  "originText": {
+    "ro": "Puff puff se numără printre cele mai populare gustări de stradă din Nigeria și din vestul Africii în general, o gogoașă simplă din aluat de drojdie, prezentă la aproape orice petrecere, nuntă sau sărbătoare nigeriană. Preparate similare există sub nume diferite în toată regiunea — bofrot în Ghana, mikate în Africa Centrală — reflectând o rețetă comună care a călătorit odată cu comerțul de-a lungul coastei vest-africane.\n\nTextura ideală a unui puff puff bun este considerată esențială: exteriorul trebuie să fie ferm și crocant, iar interiorul pufos, ușor elastic, dar nu greu sau uleios. Mulți bucătari nigerieni insistă că succesul depinde de răbdare — aluatul trebuie lăsat să fermenteze suficient de mult, iar uleiul trebuie să fie la temperatura corectă, nici prea fierbinte, nici prea rece, pentru a evita gogoșile crude în interior sau prea arse la exterior.",
+    "en": "Puff puff ranks among the most popular street snacks in Nigeria and West Africa generally, a simple yeast-batter doughnut present at nearly every Nigerian party, wedding or celebration. Similar preparations exist under different names throughout the region — bofrot in Ghana, mikate in Central Africa — reflecting a shared recipe that traveled with trade along the West African coast.\n\nThe ideal texture of a good puff puff is considered essential: the outside must be firm and crisp, while the inside stays fluffy, slightly elastic, but not heavy or oily. Many Nigerian cooks insist that success depends on patience — the batter must be allowed to ferment long enough, and the oil must be at the right temperature, neither too hot nor too cold, to avoid doughnuts that are raw inside or burnt outside.",
+    "es": "El puff puff se cuenta entre los aperitivos callejeros más populares de Nigeria y África Occidental en general, un buñuelo sencillo de masa con levadura presente en casi toda fiesta, boda o celebración nigeriana. Existen preparaciones similares con nombres diferentes en toda la región — bofrot en Ghana, mikate en África Central — reflejando una receta compartida que viajó con el comercio a lo largo de la costa de África Occidental.\n\nLa textura ideal de un buen puff puff se considera esencial: el exterior debe ser firme y crujiente, mientras que el interior permanece esponjoso, ligeramente elástico, pero no pesado ni grasoso. Muchos cocineros nigerianos insisten en que el éxito depende de la paciencia — la masa debe fermentar el tiempo suficiente, y el aceite debe estar a la temperatura correcta, ni demasiado caliente ni demasiado frío, para evitar buñuelos crudos por dentro o quemados por fuera.",
+    "fr": "Le puff puff figure parmi les en-cas de rue les plus populaires du Nigeria et de l'Afrique de l'Ouest en général, un simple beignet à pâte levée présent dans presque toutes les fêtes, mariages ou célébrations nigérianes. Des préparations similaires existent sous des noms différents dans toute la région — bofrot au Ghana, mikate en Afrique centrale — reflétant une recette commune qui a voyagé avec le commerce le long de la côte ouest-africaine.\n\nLa texture idéale d'un bon puff puff est considérée essentielle: l'extérieur doit être ferme et croustillant, tandis que l'intérieur reste moelleux, légèrement élastique, mais pas lourd ni gras. De nombreux cuisiniers nigérians insistent sur le fait que le succès dépend de la patience — la pâte doit fermenter suffisamment longtemps, et l'huile doit être à la bonne température, ni trop chaude ni trop froide, pour éviter des beignets crus à l'intérieur ou brûlés à l'extérieur.",
+    "de": "Puff Puff zählt zu den beliebtesten Straßensnacks in Nigeria und generell in Westafrika, ein einfacher Krapfen aus Hefeteig, der bei fast jeder nigerianischen Party, Hochzeit oder Feier präsent ist. Ähnliche Zubereitungen existieren unter verschiedenen Namen in der gesamten Region — Bofrot in Ghana, Mikate in Zentralafrika — was ein gemeinsames Rezept widerspiegelt, das mit dem Handel entlang der westafrikanischen Küste reiste.\n\nDie ideale Textur eines guten Puff Puff gilt als essenziell: die Außenseite muss fest und knusprig sein, während das Innere locker und leicht elastisch bleibt, aber nicht schwer oder ölig. Viele nigerianische Köche bestehen darauf, dass der Erfolg von Geduld abhängt — der Teig muss lange genug gären, und das Öl muss die richtige Temperatur haben, weder zu heiß noch zu kalt, um innen rohe oder außen verbrannte Krapfen zu vermeiden.",
+    "pt": "O puff puff está entre os petiscos de rua mais populares na Nigéria e na África Ocidental em geral, um simples bolinho de massa levedada presente em quase toda festa, casamento ou celebração nigeriana. Preparações semelhantes existem sob nomes diferentes em toda a região — bofrot no Gana, mikate na África Central — refletindo uma receita partilhada que viajou com o comércio ao longo da costa da África Ocidental.\n\nA textura ideal de um bom puff puff é considerada essencial: o exterior deve ser firme e crocante, enquanto o interior permanece fofo, ligeiramente elástico, mas não pesado nem gorduroso. Muitos cozinheiros nigerianos insistem que o sucesso depende da paciência — a massa deve fermentar tempo suficiente, e o óleo deve estar na temperatura certa, nem demasiado quente nem demasiado frio, para evitar bolinhos crus por dentro ou queimados por fora.",
+    "ru": "Пафф-пафф входит в число самых популярных уличных закусок в Нигерии и в Западной Африке в целом — простой дрожжевой пончик, присутствующий почти на каждой нигерийской вечеринке, свадьбе или празднике. Похожие блюда существуют под разными названиями по всему региону — бофрот в Гане, микате в Центральной Африке — отражая общий рецепт, распространившийся вместе с торговлей вдоль западноафриканского побережья.\n\nИдеальная текстура хорошего пафф-паффа считается необходимой: снаружи он должен быть плотным и хрустящим, а внутри оставаться пышным, слегка эластичным, но не тяжёлым и не маслянистым. Многие нигерийские повара настаивают, что успех зависит от терпения — тесто должно достаточно долго перебродить, а масло должно быть нужной температуры, не слишком горячим и не слишком холодным, чтобы избежать сырых внутри или подгоревших снаружи пончиков.",
+    "ar": "يُعد الباف باف من أكثر الوجبات الخفيفة الشعبية في شوارع نيجيريا وغرب أفريقيا عمومًا، وهو كعك بسيط من عجينة الخميرة يُقدَّم في كل حفلة أو زفاف أو احتفال نيجيري تقريبًا. توجد تحضيرات مماثلة بأسماء مختلفة في جميع أنحاء المنطقة — البوفروت في غانا، والميكاتي في وسط أفريقيا — ما يعكس وصفة مشتركة انتقلت مع التجارة على طول ساحل غرب أفريقيا.\n\nيُعتبر القوام المثالي للباف باف الجيد أساسيًا: يجب أن يكون الخارج متماسكًا ومقرمشًا، بينما يبقى الداخل هشًا ومرنًا قليلًا، لكن ليس ثقيلًا أو دهنيًا. يصرّ العديد من الطهاة النيجيريين على أن النجاح يعتمد على الصبر — يجب ترك العجينة تتخمر لوقت كافٍ، ويجب أن يكون الزيت بالحرارة المناسبة، لا ساخنًا جدًا ولا باردًا جدًا، لتجنب الكعك النيء من الداخل أو المحترق من الخارج.",
+    "zh": "泡芙泡芙是尼日利亚乃至整个西非最受欢迎的街头小吃之一，一种简单的酵母面糊炸球，几乎出现在每场尼日利亚聚会、婚礼或庆典上。类似的做法在该地区以不同的名字存在——加纳的博弗罗特、中非的米卡特——反映了一种沿西非海岸随贸易传播的共同配方。\n\n好的泡芙泡芙理想的口感被认为至关重要：外层必须紧实酥脆，内部保持蓬松、略带弹性，但不能沉重或油腻。许多尼日利亚厨师坚持认为，成功取决于耐心——面糊必须发酵足够长的时间，油温必须恰到好处，既不能太热也不能太凉，以避免炸球内部生、外部焦的问题。",
+    "ja": "パフパフはナイジェリアおよび西アフリカ全般で最も人気のあるストリートスナックの一つであり、ほとんどすべてのナイジェリアのパーティー、結婚式、祝祭に登場するシンプルなイースト生地のドーナツである。似た調理法が地域全体で異なる名前で存在し——ガーナのボフロット、中央アフリカのミカテ——西アフリカ沿岸の交易とともに広まった共通のレシピを反映している。\n\n良いパフパフの理想的な食感は不可欠とされている。外側はしっかりとカリッとしていなければならず、内側はふんわりと少し弾力があり、重すぎたり油っぽすぎたりしてはいけない。多くのナイジェリアの料理人は、成功は忍耐にかかっていると主張する——生地は十分に発酵させなければならず、油は熱すぎず冷たすぎず、ちょうど良い温度でなければならない。そうしないと中が生のままだったり、外側が焦げたりしてしまう。",
+    "hi": "पफ पफ नाइजीरिया और सामान्य रूप से पश्चिम अफ्रीका के सबसे लोकप्रिय स्ट्रीट स्नैक्स में से एक है, एक साधारण यीस्ट बैटर डोनट जो लगभग हर नाइजीरियाई पार्टी, शादी या उत्सव में मौजूद होता है। इसी तरह की तैयारियां पूरे क्षेत्र में अलग-अलग नामों से मौजूद हैं — घाना में बोफ्रोट, मध्य अफ्रीका में मिकाटे — जो पश्चिम अफ्रीकी तट के साथ व्यापार के साथ यात्रा करने वाले एक साझा नुस्खे को दर्शाता है।\n\nएक अच्छे पफ पफ की आदर्श बनावट आवश्यक मानी जाती है: बाहरी हिस्सा दृढ़ और कुरकुरा होना चाहिए, जबकि अंदर फूला, थोड़ा लचीला, लेकिन भारी या तैलीय नहीं रहना चाहिए। कई नाइजीरियाई रसोइये इस बात पर ज़ोर देते हैं कि सफलता धैर्य पर निर्भर करती है — बैटर को पर्याप्त समय तक किण्वित होने देना चाहिए, और तेल सही तापमान पर होना चाहिए, न बहुत गरम न बहुत ठंडा, ताकि डोनट अंदर से कच्चे या बाहर से जले हुए न हों।",
+    "tr": "Puff puff, Nijerya'da ve genel olarak Batı Afrika'da en popüler sokak atıştırmalıkları arasında yer alır; neredeyse her Nijerya partisinde, düğününde veya kutlamasında bulunan basit bir mayalı hamur çöreğidir. Bölge genelinde farklı isimler altında benzer hazırlıklar mevcuttur — Gana'da bofrot, Orta Afrika'da mikate — bu da Batı Afrika kıyısı boyunca ticaretle birlikte yayılan ortak bir tarifi yansıtır.\n\nİyi bir puff puff'ın ideal dokusu gerekli kabul edilir: dışı sert ve çıtır olmalı, içi ise kabarık, hafif esnek kalmalı ama ağır veya yağlı olmamalıdır. Birçok Nijeryalı aşçı, başarının sabra bağlı olduğunda ısrar eder — hamurun yeterince uzun süre fermente olmasına izin verilmeli ve yağ, içi çiğ veya dışı yanmış çörekleri önlemek için ne çok sıcak ne de çok soğuk, doğru sıcaklıkta olmalıdır.",
+    "it": "Il puff puff è tra gli snack di strada più popolari in Nigeria e in Africa occidentale in generale, una semplice frittella di pastella lievitata presente in quasi ogni festa, matrimonio o celebrazione nigeriana. Preparazioni simili esistono con nomi diversi in tutta la regione — bofrot in Ghana, mikate nell'Africa centrale — riflettendo una ricetta condivisa che ha viaggiato con il commercio lungo la costa dell'Africa occidentale.\n\nLa consistenza ideale di un buon puff puff è considerata essenziale: l'esterno deve essere sodo e croccante, mentre l'interno resta soffice, leggermente elastico, ma non pesante o oleoso. Molti cuochi nigeriani insistono sul fatto che il successo dipenda dalla pazienza — la pastella deve fermentare abbastanza a lungo, e l'olio deve essere alla giusta temperatura, né troppo caldo né troppo freddo, per evitare frittelle crude all'interno o bruciate all'esterno.",
+    "ko": "퍼프 퍼프는 나이지리아와 서아프리카 전반에서 가장 인기 있는 길거리 간식 중 하나로, 거의 모든 나이지리아 파티, 결혼식, 축하 행사에서 볼 수 있는 소박한 이스트 반죽 도넛이다. 지역 전역에 걸쳐 다른 이름으로 비슷한 요리가 존재하는데 — 가나의 보프롯, 중앙아프리카의 미카테 — 이는 서아프리카 해안을 따라 무역과 함께 퍼진 공통된 레시피를 반영한다.\n\n좋은 퍼프 퍼프의 이상적인 질감은 필수적인 것으로 여겨진다: 겉은 단단하고 바삭해야 하며, 속은 폭신하고 살짝 탄력이 있으면서도 무겁거나 기름지지 않아야 한다. 많은 나이지리아 요리사들은 성공이 인내에 달려 있다고 강조한다 — 반죽은 충분히 오래 발효되어야 하고, 기름은 속이 설익거나 겉이 타지 않도록 너무 뜨겁지도 차갑지도 않은 적절한 온도여야 한다."
+  },
+  "meta": {
+    "time": 120,
+    "costRon": 10,
+    "tags": ["vegetarian", "vegan", "budget"],
+    "desc": {
+      "ro": "Gogoși nigeriene pufoase din aluat de drojdie, rulate în zahăr cât timp sunt calde.",
+      "en": "Fluffy Nigerian yeast-dough doughnuts, rolled in sugar while warm.",
+      "es": "Buñuelos nigerianos esponjosos de masa con levadura, rebozados en azúcar mientras están calientes.",
+      "fr": "Beignets nigérians moelleux à pâte levée, roulés dans le sucre encore chauds.",
+      "de": "Flauschige nigerianische Hefeteig-Krapfen, warm in Zucker gewälzt.",
+      "pt": "Bolinhos nigerianos fofos de massa levedada, passados no açúcar ainda quentes.",
+      "ru": "Пышные нигерийские дрожжевые пончики, обвалянные в сахаре тёплыми.",
+      "ar": "كرات عجين نيجيرية هشة بالخميرة، مغموسة بالسكر وهي دافئة.",
+      "zh": "蓬松的尼日利亚酵母面团炸球，趁温热裹上糖。",
+      "ja": "ふわふわなナイジェリア風イースト生地ドーナツ、温かいうちに砂糖をまぶして。",
+      "hi": "फूले नाइजीरियाई यीस्ट आटे के डोनट, गरम रहते ही चीनी में लपेटे गए।",
+      "tr": "Sıcakken şekere bulanmış kabarık Nijerya usulü mayalı hamur çörekleri.",
+      "it": "Soffici frittelle nigeriane di pasta lievitata, rotolate nello zucchero ancora calde.",
+      "ko": "따뜻할 때 설탕에 굴린 폭신한 나이지리아식 이스트 반죽 도넛."
+    }
+  }
+}

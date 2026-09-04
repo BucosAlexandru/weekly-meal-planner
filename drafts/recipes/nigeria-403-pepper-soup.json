@@ -1,0 +1,209 @@
+{
+  "id": 403,
+  "servings": 4,
+  "tipType": "soup",
+  "pairingsType": "soup",
+  "origin": {
+    "ro": "Nigeria",
+    "en": "Nigeria",
+    "es": "Nigeria",
+    "fr": "Nigeria",
+    "de": "Nigeria",
+    "pt": "Nigéria",
+    "ru": "Нигерия",
+    "ar": "نيجيريا",
+    "zh": "尼日利亚",
+    "ja": "ナイジェリア",
+    "hi": "नाइजीरिया",
+    "tr": "Nijerya",
+    "it": "Nigeria",
+    "ko": "나이지리아"
+  },
+  "name": {
+    "ro": "Supă Nigeriană Picantă (Pepper Soup)",
+    "en": "Nigerian Pepper Soup",
+    "es": "Sopa Picante Nigeriana (Pepper Soup)",
+    "fr": "Soupe Poivrée Nigériane (Pepper Soup)",
+    "de": "Nigerianische Pfeffersuppe",
+    "pt": "Sopa Picante Nigeriana (Pepper Soup)",
+    "ru": "Нигерийский Перечный Суп",
+    "ar": "شوربة الفلفل النيجيرية",
+    "zh": "尼日利亚辣汤",
+    "ja": "ナイジェリア風ペッパースープ",
+    "hi": "नाइजीरियाई पेपर सूप",
+    "tr": "Nijerya Usulü Acı Çorba",
+    "it": "Zuppa Piccante Nigeriana (Pepper Soup)",
+    "ko": "나이지리아식 페퍼 수프"
+  },
+  "category": {
+    "ro": "Supă",
+    "en": "Soup",
+    "es": "Sopa",
+    "fr": "Soupe",
+    "de": "Suppe",
+    "pt": "Sopa",
+    "ru": "Суп",
+    "ar": "شوربة",
+    "zh": "汤",
+    "ja": "スープ",
+    "hi": "सूप",
+    "tr": "Çorba",
+    "it": "Zuppa",
+    "ko": "수프"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🥩", "t": "Carne de vită sau capră", "d": "Bucăți de carne cu os, de vită sau capră, se fierb lent, pentru un bulion bogat." },
+      { "icon": "🌶️", "t": "Amestec de pepper soup spice", "d": "Un amestec unic de mirodenii vest-africane, inclusiv semințe de calabash, dă supei aroma și iuțeala caracteristică." },
+      { "icon": "🍲", "t": "Bulion clar și picant", "d": "Spre deosebire de tocănelele groase, această supă rămâne un bulion clar, dar intens aromat și foarte picant." },
+      { "icon": "🌿", "t": "Frunze de scarlet", "d": "Frunze aromatice locale, precum uziza sau scent leaf, se adaugă la final pentru prospețime." }
+    ],
+    "en": [
+      { "icon": "🥩", "t": "Beef or goat meat", "d": "Bone-in pieces of beef or goat meat simmer slowly, for a rich broth." },
+      { "icon": "🌶️", "t": "Pepper soup spice blend", "d": "A distinctive blend of West African spices, including calabash nutmeg seeds, gives the soup its signature aroma and heat." },
+      { "icon": "🍲", "t": "Clear, spicy broth", "d": "Unlike thick stews, this soup stays a clear broth, but intensely flavorful and very spicy." },
+      { "icon": "🌿", "t": "Aromatic leaves", "d": "Local aromatic leaves, such as uziza or scent leaf, are added at the end for freshness." }
+    ],
+    "es": [
+      { "icon": "🥩", "t": "Carne de res o cabra", "d": "Trozos de carne con hueso, de res o cabra, se cuecen lentamente, para un caldo rico." },
+      { "icon": "🌶️", "t": "Mezcla de especias pepper soup", "d": "Una mezcla distintiva de especias de África Occidental, incluyendo semillas de nuez moscada calabash, da a la sopa su aroma y picor característicos." },
+      { "icon": "🍲", "t": "Caldo claro y picante", "d": "A diferencia de los guisos espesos, esta sopa se mantiene como un caldo claro, pero intensamente sabroso y muy picante." },
+      { "icon": "🌿", "t": "Hojas aromáticas", "d": "Hojas aromáticas locales, como uziza o scent leaf, se añaden al final para dar frescura." }
+    ],
+    "fr": [
+      { "icon": "🥩", "t": "Bœuf ou chèvre", "d": "Des morceaux de viande de bœuf ou de chèvre avec os mijotent lentement, pour un bouillon riche." },
+      { "icon": "🌶️", "t": "Mélange d'épices pepper soup", "d": "Un mélange distinctif d'épices d'Afrique de l'Ouest, incluant des graines de muscade calabash, donne à la soupe son arôme et son piquant caractéristiques." },
+      { "icon": "🍲", "t": "Bouillon clair et épicé", "d": "Contrairement aux ragoûts épais, cette soupe reste un bouillon clair, mais intensément savoureux et très épicé." },
+      { "icon": "🌿", "t": "Feuilles aromatiques", "d": "Des feuilles aromatiques locales, comme l'uziza ou la scent leaf, sont ajoutées à la fin pour la fraîcheur." }
+    ],
+    "de": [
+      { "icon": "🥩", "t": "Rind- oder Ziegenfleisch", "d": "Fleischstücke mit Knochen, von Rind oder Ziege, köcheln langsam, für eine reichhaltige Brühe." },
+      { "icon": "🌶️", "t": "Pfeffersuppen-Gewürzmischung", "d": "Eine charakteristische Mischung westafrikanischer Gewürze, einschließlich Kalebassenmuskatsamen, gibt der Suppe ihr typisches Aroma und ihre Schärfe." },
+      { "icon": "🍲", "t": "Klare, scharfe Brühe", "d": "Anders als dicke Eintöpfe bleibt diese Suppe eine klare Brühe, aber intensiv aromatisch und sehr scharf." },
+      { "icon": "🌿", "t": "Aromatische Blätter", "d": "Lokale aromatische Blätter, wie Uziza oder Scent Leaf, werden am Ende für Frische zugegeben." }
+    ],
+    "pt": [
+      { "icon": "🥩", "t": "Carne bovina ou de cabra", "d": "Pedaços de carne com osso, bovina ou de cabra, cozinham lentamente, para um caldo rico." },
+      { "icon": "🌶️", "t": "Mistura de especiarias pepper soup", "d": "Uma mistura distinta de especiarias da África Ocidental, incluindo sementes de noz-moscada calabash, dá à sopa o seu aroma e picância característicos." },
+      { "icon": "🍲", "t": "Caldo claro e picante", "d": "Ao contrário dos ensopados espessos, esta sopa mantém-se como um caldo claro, mas intensamente saboroso e muito picante." },
+      { "icon": "🌿", "t": "Folhas aromáticas", "d": "Folhas aromáticas locais, como uziza ou scent leaf, são adicionadas no final para frescor." }
+    ],
+    "ru": [
+      { "icon": "🥩", "t": "Говядина или козлятина", "d": "Куски мяса на кости, говядины или козлятины, медленно варятся для насыщенного бульона." },
+      { "icon": "🌶️", "t": "Смесь специй для перечного супа", "d": "Уникальная смесь западноафриканских специй, включая семена калебасового мускатного ореха, придаёт супу характерный аромат и остроту." },
+      { "icon": "🍲", "t": "Прозрачный острый бульон", "d": "В отличие от густых рагу, этот суп остаётся прозрачным бульоном, но очень насыщенным и острым." },
+      { "icon": "🌿", "t": "Ароматные листья", "d": "Местные ароматные листья, такие как узиза или scent leaf, добавляются в конце для свежести." }
+    ],
+    "ar": [
+      { "icon": "🥩", "t": "لحم بقري أو ماعز", "d": "قطع لحم بالعظم، بقري أو ماعز، تُطهى ببطء لمرق غني." },
+      { "icon": "🌶️", "t": "خليط توابل شوربة الفلفل", "d": "مزيج مميز من توابل غرب أفريقيا، بما في ذلك بذور جوزة الطيب كالاباش، يمنح الشوربة نكهتها وحرارتها المميزة." },
+      { "icon": "🍲", "t": "مرق صافٍ وحار", "d": "خلافًا لليخنات السميكة، تبقى هذه الشوربة مرقًا صافيًا، لكن غنية النكهة وحارة جدًا." },
+      { "icon": "🌿", "t": "أوراق عطرية", "d": "تُضاف أوراق عطرية محلية، مثل أوزيزا أو ورقة العطر، في النهاية لإضفاء النضارة." }
+    ],
+    "zh": [
+      { "icon": "🥩", "t": "牛肉或山羊肉", "d": "带骨牛肉或山羊肉块慢炖，制成浓郁高汤。" },
+      { "icon": "🌶️", "t": "辣汤香料混合", "d": "独特的西非香料混合物，包括葫芦肉豆蔻籽，赋予汤品标志性的香气和辣度。" },
+      { "icon": "🍲", "t": "清澈辛辣高汤", "d": "与浓稠炖菜不同，这道汤保持清澈，但风味浓郁、非常辛辣。" },
+      { "icon": "🌿", "t": "香叶", "d": "当地香叶，如乌兹扎叶或香叶菜，最后加入以增添清新感。" }
+    ],
+    "ja": [
+      { "icon": "🥩", "t": "牛肉またはヤギ肉", "d": "骨付きの牛肉またはヤギ肉をじっくり煮込み、濃厚なスープを作る。" },
+      { "icon": "🌶️", "t": "ペッパースープスパイスミックス", "d": "カラバッシュナツメグの種子を含む西アフリカ独特のスパイスミックスが、スープに特徴的な香りと辛さを与える。" },
+      { "icon": "🍲", "t": "澄んだ辛いスープ", "d": "濃厚なシチューとは異なり、このスープは澄んだままだが、非常に風味豊かで辛い。" },
+      { "icon": "🌿", "t": "香りの葉", "d": "ウジザやセントリーフなどの現地の香草の葉を最後に加え、爽やかさを出す。" }
+    ],
+    "hi": [
+      { "icon": "🥩", "t": "बीफ या बकरी का मांस", "d": "हड्डी वाले बीफ या बकरी के टुकड़े धीरे-धीरे पकाए जाते हैं, गाढ़े शोरबे के लिए।" },
+      { "icon": "🌶️", "t": "पेपर सूप मसाला मिश्रण", "d": "पश्चिम अफ्रीकी मसालों का एक विशिष्ट मिश्रण, जिसमें कैलाबाश जायफल के बीज शामिल हैं, सूप को खास सुगंध और तीखापन देता है।" },
+      { "icon": "🍲", "t": "साफ, तीखा शोरबा", "d": "गाढ़े स्ट्यू के विपरीत, यह सूप एक साफ शोरबा बना रहता है, लेकिन तीव्र स्वाद और बहुत तीखा।" },
+      { "icon": "🌿", "t": "सुगंधित पत्तियां", "d": "स्थानीय सुगंधित पत्तियां, जैसे उज़िज़ा या सेंट लीफ, अंत में ताज़गी के लिए डाली जाती हैं।" }
+    ],
+    "tr": [
+      { "icon": "🥩", "t": "Dana veya keçi eti", "d": "Kemikli dana veya keçi eti parçaları zengin bir et suyu için yavaşça pişer." },
+      { "icon": "🌶️", "t": "Biber çorbası baharat karışımı", "d": "Kalabaş muskat tohumları dahil kendine özgü Batı Afrika baharat karışımı, çorbaya karakteristik aromasını ve acılığını verir." },
+      { "icon": "🍲", "t": "Berrak, acı et suyu", "d": "Koyu yahnilerin aksine, bu çorba berrak bir et suyu olarak kalır, ancak yoğun lezzetli ve çok acıdır." },
+      { "icon": "🌿", "t": "Aromatik yapraklar", "d": "Uziza veya scent leaf gibi yerel aromatik yapraklar tazelik için sona doğru eklenir." }
+    ],
+    "it": [
+      { "icon": "🥩", "t": "Manzo o capra", "d": "Pezzi di carne con osso, di manzo o capra, cuociono lentamente, per un brodo ricco." },
+      { "icon": "🌶️", "t": "Mix di spezie pepper soup", "d": "Un mix distintivo di spezie dell'Africa occidentale, inclusi semi di noce moscata calabash, dona alla zuppa il suo aroma e piccantezza caratteristici." },
+      { "icon": "🍲", "t": "Brodo chiaro e piccante", "d": "A differenza degli stufati densi, questa zuppa rimane un brodo chiaro, ma intensamente saporito e molto piccante." },
+      { "icon": "🌿", "t": "Foglie aromatiche", "d": "Foglie aromatiche locali, come uziza o scent leaf, vengono aggiunte alla fine per freschezza." }
+    ],
+    "ko": [
+      { "icon": "🥩", "t": "소고기 또는 염소고기", "d": "뼈가 있는 소고기나 염소고기를 천천히 끓여 진한 육수를 만든다." },
+      { "icon": "🌶️", "t": "페퍼 수프 향신료 믹스", "d": "칼라바시 육두구 씨앗을 포함한 독특한 서아프리카 향신료 믹스가 수프에 특유의 향과 매운맛을 준다." },
+      { "icon": "🍲", "t": "맑고 매운 육수", "d": "진한 스튜와 달리 이 수프는 맑은 육수를 유지하지만 풍미가 강렬하고 매우 매콤하다." },
+      { "icon": "🌿", "t": "향긋한 잎", "d": "우지자나 향신 잎 같은 현지 향신 잎을 마지막에 넣어 신선함을 더한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["800g carne de vită sau capră, tăiată bucăți cu os", "1.5 litri apă", "1 ceapă, tocată", "3 căței de usturoi, tocați", "1 lingură ghimbir ras", "2 linguri amestec de mirodenii pepper soup", "2-3 ardei iuți scotch bonnet, zdrobiți", "1 cub de supă", "sare după gust", "un mănunchi de frunze uziza sau busuioc, tocate"],
+    "en": ["800g beef or goat meat, cut into bone-in pieces", "1.5 liters water", "1 onion, chopped", "3 garlic cloves, minced", "1 tbsp grated ginger", "2 tbsp pepper soup spice blend", "2-3 scotch bonnet chilies, crushed", "1 bouillon cube", "salt to taste", "a bunch of uziza or basil leaves, chopped"],
+    "es": ["800g de carne de res o cabra, cortada en trozos con hueso", "1.5 litros de agua", "1 cebolla, picada", "3 dientes de ajo, picados", "1 cucharada de jengibre rallado", "2 cucharadas de mezcla de especias pepper soup", "2-3 chiles scotch bonnet, triturados", "1 cubito de caldo", "sal al gusto", "un manojo de hojas de uziza o albahaca, picadas"],
+    "fr": ["800g de bœuf ou de chèvre, coupé en morceaux avec os", "1,5 litre d'eau", "1 oignon, haché", "3 gousses d'ail, hachées", "1 c. à soupe de gingembre râpé", "2 c. à soupe de mélange d'épices pepper soup", "2-3 piments scotch bonnet, écrasés", "1 cube de bouillon", "sel selon le goût", "un bouquet de feuilles d'uziza ou de basilic, hachées"],
+    "de": ["800g Rind- oder Ziegenfleisch, in Stücke mit Knochen geschnitten", "1,5 Liter Wasser", "1 Zwiebel, gehackt", "3 Knoblauchzehen, gehackt", "1 EL geriebener Ingwer", "2 EL Pfeffersuppen-Gewürzmischung", "2-3 Scotch-Bonnet-Chilis, zerdrückt", "1 Brühwürfel", "Salz nach Geschmack", "ein Bund Uziza- oder Basilikumblätter, gehackt"],
+    "pt": ["800g de carne bovina ou de cabra, cortada em pedaços com osso", "1,5 litros de água", "1 cebola, picada", "3 dentes de alho, picados", "1 colher (sopa) de gengibre ralado", "2 colheres (sopa) de mistura de especiarias pepper soup", "2-3 pimentas scotch bonnet, esmagadas", "1 cubo de caldo", "sal a gosto", "um punhado de folhas de uziza ou manjericão, picadas"],
+    "ru": ["800г говядины или козлятины, нарезанной кусками с костью", "1,5 литра воды", "1 луковица, нарезанная", "3 зубчика чеснока, измельчённых", "1 ст.л. тёртого имбиря", "2 ст.л. смеси специй для перечного супа", "2-3 перца скотч-боннет, раздавленных", "1 бульонный кубик", "соль по вкусу", "пучок листьев узиза или базилика, нарезанных"],
+    "ar": ["800 غرام لحم بقري أو ماعز، مقطّع قطعًا بالعظم", "1.5 لتر ماء", "بصلة واحدة، مفرومة", "3 فصوص ثوم، مفرومة", "ملعقة كبيرة زنجبيل مبشور", "ملعقتان كبيرتان خليط توابل شوربة الفلفل", "2-3 حبات فلفل سكوتش بونيت، مهروسة", "مكعب مرق واحد", "ملح حسب الرغبة", "حزمة أوراق أوزيزا أو ريحان، مفرومة"],
+    "zh": ["800克牛肉或山羊肉，切成带骨块", "1.5升水", "1个洋葱，切碎", "3瓣大蒜，切碎", "1汤匙姜末", "2汤匙辣汤香料混合物", "2-3个苏格兰帽辣椒，捣碎", "1块高汤块", "盐适量", "一把乌兹扎叶或罗勒叶，切碎"],
+    "ja": ["牛肉またはヤギ肉800g（骨付きに切る）", "水1.5リットル", "玉ねぎ1個（刻む）", "にんにく3片（みじん切り）", "生姜すりおろし大さじ1", "ペッパースープスパイスミックス大さじ2", "スコッチボネット唐辛子2〜3本（つぶす）", "ブイヨンキューブ1個", "塩 適量", "ウジザまたはバジルの葉一束（刻む）"],
+    "hi": ["800 ग्राम बीफ या बकरी का मांस, हड्डी सहित टुकड़ों में कटा", "1.5 लीटर पानी", "1 प्याज़, कटा", "3 लहसुन की कलियाँ, कटी हुई", "1 बड़ा चम्मच कद्दूकस अदरक", "2 बड़े चम्मच पेपर सूप मसाला मिश्रण", "2-3 स्कॉच बोनेट मिर्च, कुचली हुई", "1 बुयों क्यूब", "स्वादानुसार नमक", "उज़िज़ा या तुलसी के पत्तों का एक गुच्छा, कटा"],
+    "tr": ["800g dana veya keçi eti, kemikli parçalar halinde kesilmiş", "1,5 litre su", "1 soğan, doğranmış", "3 diş sarımsak, doğranmış", "1 yemek kaşığı rendelenmiş zencefil", "2 yemek kaşığı biber çorbası baharat karışımı", "2-3 scotch bonnet biberi, ezilmiş", "1 bulyon küpü", "tuz, tadına göre", "bir demet uziza veya fesleğen yaprağı, doğranmış"],
+    "it": ["800g di manzo o capra, tagliati a pezzi con osso", "1,5 litri d'acqua", "1 cipolla, tritata", "3 spicchi d'aglio, tritati", "1 cucchiaio di zenzero grattugiato", "2 cucchiai di mix di spezie pepper soup", "2-3 peperoncini scotch bonnet, schiacciati", "1 dado", "sale q.b.", "un mazzetto di foglie di uziza o basilico, tritate"],
+    "ko": ["소고기 또는 염소고기 800g, 뼈가 있는 조각으로 자른 것", "물 1.5리터", "양파 1개, 다진 것", "마늘 3쪽, 다진 것", "간 생강 1큰술", "페퍼 수프 향신료 믹스 2큰술", "스카치 보넷 고추 2-3개, 으깬 것", "부용 큐브 1개", "소금 약간", "우지자 또는 바질 잎 한 다발, 썬 것"]
+  },
+  "howIsMade": {
+    "ro": "PREGĂTEȘTE CARNEA: Pune bucățile de carne cu os într-o oală mare, adaugă apă rece, adu la fierbere și îndepărtează spuma formată. ADAUGĂ AROMELE: Adaugă ceapa, usturoiul, ghimbirul, ardeii iuți zdrobiți și cubul de supă în oală. FIERBE ÎNCET: Lasă carnea să fiarbă la foc mic 1-1.5 ore, până devine fragedă, adăugând apă dacă e nevoie. ADAUGĂ MIRODENIILE: Adaugă amestecul de mirodenii pepper soup, amestecând bine să se dizolve în bulion. FIERBE ÎN CONTINUARE: Lasă supa să fiarbă încă 15-20 minute, la foc mic, pentru ca mirodeniile să-și elibereze aroma completă. CONDIMENTEAZĂ: Gustă și ajustează sarea și iuțeala, adăugând mai mult ardei iute dacă preferi mai picant. ADAUGĂ FRUNZELE: Adaugă frunzele tocate în ultimele 2-3 minute de fierbere, ca să-și păstreze prospețimea. SERVEȘTE: Servește fierbinte, în boluri adânci, ca supă de sine stătătoare sau alături de orez fiert sau igname.",
+    "en": "PREPARE THE MEAT: Place the bone-in pieces of meat in a large pot, add cold water, bring to a boil and skim off the foam. ADD THE AROMATICS: Add the onion, garlic, ginger, crushed chilies and bouillon cube to the pot. SIMMER: Let the meat simmer over low heat 1-1.5 hours, until tender, adding water if needed. ADD THE SPICES: Add the pepper soup spice blend, stirring well so it dissolves into the broth. CONTINUE SIMMERING: Let the soup simmer another 15-20 minutes, over low heat, so the spices release their full flavor. SEASON: Taste and adjust the salt and heat, adding more chili if you prefer it spicier. ADD THE LEAVES: Add the chopped leaves in the last 2-3 minutes of cooking, so they keep their freshness. SERVE: Serve hot, in deep bowls, as a standalone soup or alongside boiled rice or yam.",
+    "es": "PREPARA LA CARNE: Coloca los trozos de carne con hueso en una olla grande, añade agua fría, lleva a ebullición y retira la espuma. AÑADE LOS AROMÁTICOS: Añade la cebolla, el ajo, el jengibre, los chiles triturados y el cubito de caldo a la olla. COCINA A FUEGO LENTO: Deja que la carne se cocine a fuego lento 1-1.5 horas, hasta que esté tierna, añadiendo agua si es necesario. AÑADE LAS ESPECIAS: Añade la mezcla de especias pepper soup, removiendo bien para que se disuelva en el caldo. CONTINÚA COCINANDO: Deja que la sopa se cocine 15-20 minutos más, a fuego lento, para que las especias liberen todo su sabor. SAZONA: Prueba y ajusta la sal y el picante, añadiendo más chile si lo prefieres más picante. AÑADE LAS HOJAS: Añade las hojas picadas en los últimos 2-3 minutos de cocción, para que mantengan su frescura. SIRVE: Sirve caliente, en tazones profundos, como sopa independiente o junto con arroz hervido o ñame.",
+    "fr": "PRÉPAREZ LA VIANDE: Placez les morceaux de viande avec os dans une grande marmite, ajoutez de l'eau froide, portez à ébullition et écumez. AJOUTEZ LES AROMATES: Ajoutez l'oignon, l'ail, le gingembre, les piments écrasés et le cube de bouillon dans la marmite. MIJOTEZ: Laissez la viande mijoter à feu doux 1-1,5 heure, jusqu'à ce qu'elle soit tendre, en ajoutant de l'eau si nécessaire. AJOUTEZ LES ÉPICES: Ajoutez le mélange d'épices pepper soup, en remuant bien pour qu'il se dissolve dans le bouillon. CONTINUEZ À MIJOTER: Laissez la soupe mijoter encore 15-20 minutes, à feu doux, pour que les épices libèrent toute leur saveur. ASSAISONNEZ: Goûtez et ajustez le sel et le piquant, en ajoutant plus de piment si vous le préférez plus épicé. AJOUTEZ LES FEUILLES: Ajoutez les feuilles hachées dans les 2-3 dernières minutes de cuisson, pour qu'elles gardent leur fraîcheur. SERVEZ: Servez chaud, dans des bols profonds, comme soupe à part entière ou avec du riz bouilli ou de l'igname.",
+    "de": "FLEISCH VORBEREITEN: Die Fleischstücke mit Knochen in einen großen Topf geben, kaltes Wasser zugeben, aufkochen und den Schaum abschöpfen. AROMEN HINZUFÜGEN: Zwiebel, Knoblauch, Ingwer, zerdrückte Chilis und Brühwürfel in den Topf geben. KÖCHELN: Das Fleisch bei niedriger Hitze 1-1,5 Stunden köcheln lassen, bis es zart ist, bei Bedarf Wasser zugeben. GEWÜRZE HINZUFÜGEN: Die Pfeffersuppen-Gewürzmischung zugeben, gut umrühren, damit sie sich in der Brühe auflöst. WEITER KÖCHELN: Die Suppe weitere 15-20 Minuten bei niedriger Hitze köcheln lassen, damit die Gewürze ihr volles Aroma entfalten. WÜRZEN: Abschmecken und Salz und Schärfe anpassen, mehr Chili zugeben, wenn schärfer gewünscht. BLÄTTER HINZUFÜGEN: Die gehackten Blätter in den letzten 2-3 Minuten des Kochens zugeben, damit sie frisch bleiben. SERVIEREN: Heiß servieren, in tiefen Schüsseln, als eigenständige Suppe oder mit gekochtem Reis oder Yamswurzel.",
+    "pt": "PREPARE A CARNE: Coloque os pedaços de carne com osso numa panela grande, junte água fria, leve à fervura e retire a espuma. ADICIONE OS AROMÁTICOS: Junte a cebola, o alho, o gengibre, as pimentas esmagadas e o cubo de caldo à panela. COZINHE EM FOGO BRANDO: Deixe a carne cozinhar em fogo baixo por 1-1,5 horas, até ficar macia, adicionando água se necessário. ADICIONE AS ESPECIARIAS: Junte a mistura de especiarias pepper soup, mexendo bem para dissolver no caldo. CONTINUE A COZINHAR: Deixe a sopa cozinhar mais 15-20 minutos, em fogo baixo, para as especiarias libertarem todo o seu sabor. TEMPERE: Prove e ajuste o sal e a picância, adicionando mais pimenta se preferir mais picante. ADICIONE AS FOLHAS: Junte as folhas picadas nos últimos 2-3 minutos de cozedura, para manterem o frescor. SIRVA: Sirva quente, em tigelas fundas, como sopa independente ou junto com arroz cozido ou inhame.",
+    "ru": "ПОДГОТОВЬТЕ МЯСО: Положите куски мяса на кости в большую кастрюлю, добавьте холодную воду, доведите до кипения и снимите пену. ДОБАВЬТЕ АРОМАТИКУ: Добавьте лук, чеснок, имбирь, раздавленный перец чили и бульонный кубик в кастрюлю. ТУШИТЕ: Дайте мясу томиться на слабом огне 1-1,5 часа, пока не станет мягким, добавляя воду при необходимости. ДОБАВЬТЕ СПЕЦИИ: Добавьте смесь специй для перечного супа, хорошо перемешав, чтобы она растворилась в бульоне. ПРОДОЛЖАЙТЕ ВАРИТЬ: Дайте супу вариться ещё 15-20 минут на слабом огне, чтобы специи полностью раскрыли аромат. ПРИПРАВЬТЕ: Попробуйте и скорректируйте соль и остроту, добавив больше перца чили, если хотите острее. ДОБАВЬТЕ ЛИСТЬЯ: Добавьте нарезанные листья в последние 2-3 минуты варки, чтобы сохранить их свежесть. ПОДАВАЙТЕ: Подавайте горячим, в глубоких мисках, как самостоятельный суп или с варёным рисом или ямсом.",
+    "ar": "حضّري اللحم: ضعي قطع اللحم بالعظم في قدر كبيرة، أضيفي ماء باردًا، اتركيها تغلي وأزيلي الرغوة المتكونة. أضيفي النكهات: أضيفي البصل والثوم والزنجبيل والفلفل الحار المهروس ومكعب المرق إلى القدر. اطهي على نار هادئة: اتركي اللحم ينضج على نار هادئة 1-1.5 ساعة حتى يصبح طريًا، مع إضافة الماء عند الحاجة. أضيفي التوابل: أضيفي خليط توابل شوربة الفلفل مع التحريك جيدًا ليذوب في المرق. واصلي الطهي: اتركي الشوربة تنضج 15-20 دقيقة إضافية على نار هادئة لتطلق التوابل نكهتها الكاملة. تبّلي: تذوّقي وعدّلي الملح والحرارة، مع إضافة المزيد من الفلفل الحار إذا فضّلتِها أكثر حرارة. أضيفي الأوراق: أضيفي الأوراق المفرومة في آخر 2-3 دقائق من الطهي لتحافظ على نضارتها. قدّمي: قدّميها ساخنة في أطباق عميقة، كشوربة قائمة بذاتها أو مع الأرز المسلوق أو اليام.",
+    "zh": "处理肉类：将带骨肉块放入大锅，加冷水煮沸并撇去浮沫。加入香料：将洋葱、大蒜、姜末、捣碎的辣椒和高汤块加入锅中。慢炖：小火慢炖肉块1-1.5小时至软嫩，如有需要可加水。加入辣汤香料：加入辣汤香料混合物，充分搅拌使其溶入高汤中。继续炖煮：小火继续炖煮15-20分钟，让香料充分释放风味。调味：品尝并调整盐和辣度，如喜欢更辣可加更多辣椒。加入香叶：在最后2-3分钟加入切碎的香叶，以保持其新鲜度。上桌：趁热盛入深碗中，作为独立汤品或搭配米饭或山药食用。",
+    "ja": "肉を準備する：骨付き肉を大鍋に入れ、冷水を加えて沸騰させ、アクを取り除く。香味料を加える：玉ねぎ、にんにく、生姜、つぶした唐辛子、ブイヨンキューブを鍋に加える。煮込む：肉が柔らかくなるまで弱火で1〜1.5時間煮込み、必要に応じて水を足す。スパイスを加える：ペッパースープスパイスミックスを加え、よくかき混ぜてスープに溶かし込む。さらに煮込む：スパイスが完全に風味を出すよう、弱火でさらに15〜20分煮込む。味付けする：味見をして塩と辛さを調整し、より辛くしたい場合は唐辛子を追加する。葉を加える：新鮮さを保つため、調理の最後の2〜3分に刻んだ葉を加える。提供する：深い器に盛り、単独のスープとして、または茹でたご飯やヤムイモと共に熱いうちに提供する。",
+    "hi": "मांस तैयार करें: हड्डी वाले मांस के टुकड़ों को बड़े बर्तन में रखें, ठंडा पानी डालें, उबाल लाएं और बना झाग हटाएं। सुगंध डालें: बर्तन में प्याज़, लहसुन, अदरक, कुचली मिर्च और बुयों क्यूब डालें। धीमी आंच पर पकाएं: मांस को धीमी आंच पर 1-1.5 घंटे पकने दें, जब तक नरम न हो जाए, ज़रूरत पड़ने पर पानी डालते हुए। मसाले डालें: पेपर सूप मसाला मिश्रण डालें, अच्छी तरह हिलाते हुए ताकि शोरबे में घुल जाए। पकाना जारी रखें: सूप को धीमी आंच पर 15-20 मिनट और पकने दें, ताकि मसाले पूरा स्वाद छोड़ें। मसाला डालें: चखें और नमक-तीखापन समायोजित करें, अधिक तीखे के लिए अधिक मिर्च डालते हुए। पत्तियां डालें: पकाने के आखिरी 2-3 मिनट में कटी पत्तियां डालें, ताकि उनकी ताज़गी बनी रहे। परोसें: गरमागरम, गहरे कटोरों में, स्वतंत्र सूप के रूप में या उबले चावल या याम के साथ परोसें।",
+    "tr": "ETİ HAZIRLAYIN: Kemikli et parçalarını büyük bir tencereye koyun, soğuk su ekleyin, kaynatın ve köpüğü alın. AROMATİKLERİ EKLEYİN: Soğan, sarımsak, zencefil, ezilmiş biberler ve bulyon küpünü tencereye ekleyin. PİŞİRİN: Et yumuşayana kadar kısık ateşte 1-1,5 saat, gerekirse su ekleyerek pişirin. BAHARATLARI EKLEYİN: Biber çorbası baharat karışımını ekleyip iyice karıştırarak suya erimesini sağlayın. PİŞİRMEYE DEVAM EDİN: Baharatların tüm lezzetini açığa çıkarması için çorbayı kısık ateşte 15-20 dakika daha pişirin. TATLANDIRIN: Tadına bakıp tuz ve acılığı ayarlayın, daha acı isterseniz daha fazla biber ekleyin. YAPRAKLARI EKLEYİN: Tazeliklerini korumaları için doğranmış yaprakları pişirmenin son 2-3 dakikasında ekleyin. SERVİS YAPIN: Sıcak, derin kaselerde, tek başına çorba olarak veya haşlanmış pirinç ya da yer elmasıyla servis edin.",
+    "it": "PREPARA LA CARNE: Metti i pezzi di carne con osso in una pentola grande, aggiungi acqua fredda, porta a ebollizione ed elimina la schiuma. AGGIUNGI GLI AROMI: Aggiungi la cipolla, l'aglio, lo zenzero, i peperoncini schiacciati e il dado nella pentola. FAI SOBBOLLIRE: Lascia sobbollire la carne a fuoco basso 1-1,5 ore, finché tenera, aggiungendo acqua se necessario. AGGIUNGI LE SPEZIE: Aggiungi il mix di spezie pepper soup, mescolando bene perché si sciolga nel brodo. CONTINUA A SOBBOLLIRE: Lascia sobbollire la zuppa altri 15-20 minuti, a fuoco basso, perché le spezie rilascino tutto il loro sapore. INSAPORISCI: Assaggia e regola sale e piccantezza, aggiungendo altro peperoncino se lo preferisci più piccante. AGGIUNGI LE FOGLIE: Aggiungi le foglie tritate negli ultimi 2-3 minuti di cottura, perché mantengano la loro freschezza. SERVI: Servi calda, in ciotole profonde, come zuppa a sé stante o insieme a riso bollito o igname.",
+    "ko": "고기 준비하기: 뼈가 있는 고기 조각을 큰 냄비에 넣고 찬물을 부어 끓인 뒤 거품을 걷어낸다. 향신료 넣기: 양파, 마늘, 생강, 으깬 고추, 부용 큐브를 냄비에 넣는다. 뭉근히 끓이기: 고기가 부드러워질 때까지 약불로 1-1.5시간 끓이며 필요하면 물을 보충한다. 향신료 추가: 페퍼 수프 향신료 믹스를 넣고 육수에 잘 녹도록 저어준다. 계속 끓이기: 향신료가 완전히 풍미를 낼 수 있도록 약불에서 15-20분 더 끓인다. 간하기: 맛을 보고 소금과 매운맛을 조절하며, 더 맵게 원하면 고추를 추가한다. 잎 넣기: 신선함을 유지하도록 조리 마지막 2-3분에 썬 잎을 넣는다. 제공하기: 깊은 그릇에 뜨겁게 담아 단독 수프로 또는 삶은 쌀밥이나 얌과 함께 제공한다."
+  },
+  "originText": {
+    "ro": "Supa picantă nigeriană, cunoscută simplu drept \"pepper soup\", este considerată un fel esențial al bucătăriei nigeriene, apreciată deopotrivă ca hrană reconfortantă și ca remediu tradițional pentru răceli, febră sau perioada postnatală, datorită efectului de încălzire intens produs de amestecul de mirodenii. Amestecul de \"pepper soup spice\", care include semințe uscate de calabash nutmeg (numite local ehuru sau uda), este considerat cheia autenticității felului.\n\nSupa picantă variază semnificativ în funcție de tipul de carne folosit — vită, capră, pește sau chiar organe precum burta de vită (shaki) — fiecare versiune având susținători devotați. În multe familii nigeriene, servirea unei supe picante fierbinți este primul gest de ospitalitate oferit unui oaspete care sosește obosit sau rece, iar căldura ei intensă e considerată aproape terapeutică.",
+    "en": "Nigerian pepper soup, known simply as \"pepper soup,\" is considered an essential dish in Nigerian cuisine, valued both as comfort food and as a traditional remedy for colds, fever, or the postnatal period, thanks to the intense warming effect produced by the spice blend. The \"pepper soup spice\" mix, which includes dried calabash nutmeg seeds (locally called ehuru or uda), is considered the key to the dish's authenticity.\n\nPepper soup varies significantly depending on the type of meat used — beef, goat, fish, or even offal such as beef tripe (shaki) — each version having devoted supporters. In many Nigerian families, serving a hot pepper soup is the first gesture of hospitality offered to a guest arriving tired or cold, and its intense heat is considered nearly therapeutic.",
+    "es": "La sopa picante nigeriana, conocida simplemente como \"pepper soup\", se considera un plato esencial de la cocina nigeriana, valorada tanto como comida reconfortante como remedio tradicional para resfriados, fiebre o el período posparto, gracias al intenso efecto calentador producido por la mezcla de especias. La mezcla de \"pepper soup spice\", que incluye semillas secas de nuez moscada calabash (llamadas localmente ehuru o uda), se considera la clave de la autenticidad del plato.\n\nLa sopa picante varía significativamente según el tipo de carne usada — res, cabra, pescado, o incluso vísceras como el callo de res (shaki) — cada versión con seguidores devotos. En muchas familias nigerianas, servir una sopa picante caliente es el primer gesto de hospitalidad ofrecido a un invitado que llega cansado o con frío, y su calor intenso se considera casi terapéutico.",
+    "fr": "La soupe poivrée nigériane, simplement appelée \"pepper soup\", est considérée comme un plat essentiel de la cuisine nigériane, appréciée à la fois comme plat réconfortant et comme remède traditionnel contre les rhumes, la fièvre ou la période post-natale, grâce à l'effet réchauffant intense produit par le mélange d'épices. Le mélange de \"pepper soup spice\", qui comprend des graines séchées de muscade calabash (appelées localement ehuru ou uda), est considéré comme la clé de l'authenticité du plat.\n\nLa soupe poivrée varie considérablement selon le type de viande utilisée — bœuf, chèvre, poisson, ou même des abats comme la panse de bœuf (shaki) — chaque version ayant des partisans dévoués. Dans de nombreuses familles nigérianes, servir une soupe poivrée chaude est le premier geste d'hospitalité offert à un invité arrivant fatigué ou frigorifié, et sa chaleur intense est considérée comme presque thérapeutique.",
+    "de": "Die nigerianische Pfeffersuppe, einfach \"Pepper Soup\" genannt, gilt als essenzielles Gericht der nigerianischen Küche, geschätzt sowohl als Wohlfühlessen als auch als traditionelles Heilmittel gegen Erkältungen, Fieber oder in der Zeit nach der Geburt, dank der intensiven wärmenden Wirkung der Gewürzmischung. Die \"Pepper Soup Spice\"-Mischung, die getrocknete Kalebassenmuskatsamen enthält (lokal Ehuru oder Uda genannt), gilt als Schlüssel zur Authentizität des Gerichts.\n\nPfeffersuppe variiert erheblich je nach verwendeter Fleischsorte — Rind, Ziege, Fisch oder sogar Innereien wie Rinderpansen (Shaki) — wobei jede Version treue Anhänger hat. In vielen nigerianischen Familien ist das Servieren einer heißen Pfeffersuppe die erste Geste der Gastfreundschaft gegenüber einem müden oder frierenden Gast, und ihre intensive Hitze gilt als nahezu therapeutisch.",
+    "pt": "A sopa picante nigeriana, conhecida simplesmente como \"pepper soup\", é considerada um prato essencial da culinária nigeriana, valorizada tanto como comida reconfortante quanto como remédio tradicional para constipações, febre ou o período pós-natal, graças ao intenso efeito de aquecimento produzido pela mistura de especiarias. A mistura de \"pepper soup spice\", que inclui sementes secas de noz-moscada calabash (chamadas localmente ehuru ou uda), é considerada a chave para a autenticidade do prato.\n\nA sopa picante varia significativamente consoante o tipo de carne usada — bovina, de cabra, peixe, ou até miudezas como o dobrado de vaca (shaki) — cada versão com seguidores dedicados. Em muitas famílias nigerianas, servir uma sopa picante quente é o primeiro gesto de hospitalidade oferecido a um convidado que chega cansado ou com frio, e o seu calor intenso é considerado quase terapêutico.",
+    "ru": "Нигерийский перечный суп, известный просто как \"pepper soup\", считается неотъемлемым блюдом нигерийской кухни, ценимым как за успокаивающий эффект, так и как традиционное средство от простуды, лихорадки или в послеродовой период, благодаря интенсивному согревающему эффекту от смеси специй. Смесь \"pepper soup spice\", включающая сушёные семена калебасового мускатного ореха (местно называемые эхуру или уда), считается ключом к аутентичности блюда.\n\nПеречный суп значительно варьируется в зависимости от используемого мяса — говядины, козлятины, рыбы или даже субпродуктов, таких как говяжий рубец (шаки) — у каждой версии есть преданные сторонники. Во многих нигерийских семьях подача горячего перечного супа — первый жест гостеприимства по отношению к уставшему или замёрзшему гостю, а его интенсивное тепло считается почти терапевтическим.",
+    "ar": "تُعتبر شوربة الفلفل النيجيرية، المعروفة ببساطة باسم \"بيبر سوب\"، طبقًا أساسيًا في المطبخ النيجيري، تُقدَّر كطعام مريح وكعلاج تقليدي لنزلات البرد والحمى أو فترة ما بعد الولادة، بفضل التأثير الدافئ القوي الناتج عن خليط التوابل. يُعتبر خليط \"توابل شوربة الفلفل\"، الذي يتضمن بذور جوزة الطيب كالاباش المجففة (تُعرف محليًا بإهورو أو أودا)، مفتاح أصالة الطبق.\n\nتتفاوت شوربة الفلفل بشكل كبير حسب نوع اللحم المستخدم — بقري أو ماعز أو سمك أو حتى أحشاء مثل كرش البقر (شاكي) — ولكل نسخة مؤيدون مخلصون. في كثير من العائلات النيجيرية، يُعد تقديم شوربة فلفل ساخنة أول لفتة ضيافة تُقدَّم لضيف يصل متعبًا أو باردًا، وتُعتبر حرارتها الشديدة علاجية تقريبًا.",
+    "zh": "尼日利亚辣汤，简称「pepper soup」，被认为是尼日利亚饮食中不可或缺的一道菜，既被视为舒心美食，也是治疗感冒、发烧或产后调理的传统偏方，这得益于香料混合物带来的强烈暖身效果。「辣汤香料」混合物包含干燥的葫芦肉豆蔻籽（当地称为ehuru或uda），被认为是这道菜正宗风味的关键。\n\n辣汤会因所用肉类的不同而有显著差异——牛肉、山羊肉、鱼肉，甚至内脏如牛肚（shaki）——每个版本都有其忠实拥护者。在许多尼日利亚家庭中，为疲惫或受寒的客人奉上一碗热辣汤是待客的第一份心意，其强烈的热度几乎被视为具有疗愈作用。",
+    "ja": "単に「ペッパースープ」として知られるナイジェリアのペッパースープは、ナイジェリア料理の中で不可欠な料理とされ、スパイスミックスによる強い温め効果のおかげで、癒しの食べ物としても、風邪、発熱、産後の時期の伝統的な民間療法としても評価されている。現地でエフルまたはウダと呼ばれる乾燥カラバッシュナツメグの種子を含む「ペッパースープスパイス」ミックスは、この料理の本場らしさの鍵とされている。\n\nペッパースープは使う肉の種類——牛肉、ヤギ肉、魚、あるいは牛の胃袋（シャキ）などの内臓——によって大きく異なり、それぞれのバージョンに熱心な支持者がいる。多くのナイジェリアの家庭では、疲れて、あるいは冷えて到着した客に熱いペッパースープを出すことがもてなしの最初の仕草であり、その強い熱さはほとんど療法的とみなされている。",
+    "hi": "नाइजीरियाई पेपर सूप, जिसे केवल \"पेपर सूप\" कहा जाता है, नाइजीरियाई व्यंजनों में एक आवश्यक व्यंजन माना जाता है, जिसे आरामदायक भोजन और सर्दी, बुखार या प्रसवोत्तर अवधि के लिए पारंपरिक उपचार दोनों के रूप में सराहा जाता है, मसाला मिश्रण से उत्पन्न तीव्र गरमाहट प्रभाव के कारण। \"पेपर सूप स्पाइस\" मिश्रण, जिसमें सूखे कैलाबाश जायफल के बीज (स्थानीय रूप से एहुरु या उदा कहा जाता है) शामिल हैं, व्यंजन की प्रामाणिकता की कुंजी माना जाता है।\n\nपेपर सूप उपयोग किए गए मांस के प्रकार के आधार पर काफी भिन्न होता है — बीफ, बकरी, मछली, या यहां तक कि बीफ ट्राइप (शाकी) जैसे अंग — प्रत्येक संस्करण के समर्पित समर्थक हैं। कई नाइजीरियाई परिवारों में, गरम पेपर सूप परोसना थके या ठंडे पहुंचे मेहमान के लिए आतिथ्य का पहला संकेत है, और इसकी तीव्र गरमाहट लगभग चिकित्सीय मानी जाती है।",
+    "tr": "Sadece 'biber çorbası' olarak bilinen Nijerya biber çorbası, baharat karışımının yarattığı yoğun ısıtıcı etki sayesinde hem rahatlatıcı bir yemek hem de soğuk algınlığı, ateş veya doğum sonrası dönem için geleneksel bir çare olarak değerlenen, Nijerya mutfağının vazgeçilmez bir yemeği olarak kabul edilir. Yerel olarak ehuru veya uda olarak adlandırılan kurutulmuş kalabaş muskat tohumlarını içeren 'biber çorbası baharatı' karışımı, yemeğin özgünlüğünün anahtarı olarak kabul edilir.\n\nBiber çorbası, kullanılan et türüne göre önemli ölçüde değişir — dana, keçi, balık veya hatta işkembe (shaki) gibi sakatatlar — her versiyonun kendine has takipçileri vardır. Birçok Nijerya ailesinde, sıcak bir biber çorbası servis etmek, yorgun veya üşümüş gelen bir misafire sunulan ilk misafirperverlik jestidir ve yoğun sıcaklığı neredeyse terapötik kabul edilir.",
+    "it": "La zuppa piccante nigeriana, conosciuta semplicemente come \"pepper soup\", è considerata un piatto essenziale della cucina nigeriana, apprezzata sia come cibo confortante che come rimedio tradizionale per raffreddori, febbre o il periodo post-natale, grazie all'intenso effetto riscaldante prodotto dal mix di spezie. Il mix di \"pepper soup spice\", che include semi essiccati di noce moscata calabash (localmente chiamati ehuru o uda), è considerato la chiave dell'autenticità del piatto.\n\nLa zuppa piccante varia significativamente a seconda del tipo di carne usata — manzo, capra, pesce, o persino frattaglie come la trippa di manzo (shaki) — ogni versione con sostenitori devoti. In molte famiglie nigeriane, servire una zuppa piccante calda è il primo gesto di ospitalità offerto a un ospite che arriva stanco o infreddolito, e il suo calore intenso è considerato quasi terapeutico.",
+    "ko": "단순히 「페퍼 수프」로 알려진 나이지리아 페퍼 수프는 향신료 믹스가 만들어내는 강렬한 발열 효과 덕분에 위안이 되는 음식이자 감기, 발열, 산후조리를 위한 전통적인 치료법으로도 평가받는, 나이지리아 요리의 필수적인 음식으로 여겨진다. 현지에서 에후루 또는 우다라고 불리는 말린 칼라바시 육두구 씨앗이 포함된 「페퍼 수프 향신료」 믹스는 이 요리의 정통성의 핵심으로 여겨진다.\n\n페퍼 수프는 사용하는 고기 종류 — 소고기, 염소고기, 생선, 심지어 소 양(샤키) 같은 내장 — 에 따라 크게 달라지며, 각 버전마다 열렬한 지지자들이 있다. 많은 나이지리아 가정에서 뜨거운 페퍼 수프를 대접하는 것은 지치거나 추위에 떨며 도착한 손님에게 보이는 첫 환대의 몸짓이며, 그 강렬한 열기는 거의 치료적인 것으로 여겨진다."
+  },
+  "meta": {
+    "time": 100,
+    "costRon": 28,
+    "tags": ["high-protein", "spicy"],
+    "desc": {
+      "ro": "Supă nigeriană intens condimentată cu vită sau capră, într-un bulion clar și foarte picant.",
+      "en": "Intensely spiced Nigerian soup with beef or goat, in a clear, very spicy broth.",
+      "es": "Sopa nigeriana intensamente especiada con res o cabra, en un caldo claro y muy picante.",
+      "fr": "Soupe nigériane intensément épicée au bœuf ou à la chèvre, dans un bouillon clair et très épicé.",
+      "de": "Intensiv gewürzte nigerianische Suppe mit Rind oder Ziege, in einer klaren, sehr scharfen Brühe.",
+      "pt": "Sopa nigeriana intensamente temperada com carne bovina ou de cabra, num caldo claro e muito picante.",
+      "ru": "Насыщенно приправленный нигерийский суп с говядиной или козлятиной в прозрачном очень остром бульоне.",
+      "ar": "شوربة نيجيرية متبلة بقوة باللحم البقري أو الماعز، في مرق صافٍ وحار جدًا.",
+      "zh": "浓香辛辣的尼日利亚牛肉或山羊肉汤，清澈汤底极其辛辣。",
+      "ja": "牛肉またはヤギ肉を使った濃厚にスパイスの効いたナイジェリア風スープ、澄んでとても辛いスープで。",
+      "hi": "बीफ या बकरी के साथ तीव्र मसालेदार नाइजीरियाई सूप, साफ और बहुत तीखे शोरबे में।",
+      "tr": "Dana veya keçi etli, berrak ve çok acı bir et suyunda yoğun baharatlı Nijerya usulü çorba.",
+      "it": "Zuppa nigeriana intensamente speziata con manzo o capra, in un brodo chiaro e molto piccante.",
+      "ko": "소고기나 염소고기를 넣은 강렬하게 매운 나이지리아식 수프, 맑고 매우 매콤한 육수."
+    }
+  }
+}

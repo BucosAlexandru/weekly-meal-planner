@@ -1,0 +1,209 @@
+{
+  "id": 401,
+  "servings": 4,
+  "tipType": "veg",
+  "pairingsType": "veg",
+  "origin": {
+    "ro": "Nigeria",
+    "en": "Nigeria",
+    "es": "Nigeria",
+    "fr": "Nigeria",
+    "de": "Nigeria",
+    "pt": "Nigéria",
+    "ru": "Нигерия",
+    "ar": "نيجيريا",
+    "zh": "尼日利亚",
+    "ja": "ナイジェリア",
+    "hi": "नाइजीरिया",
+    "tr": "Nijerya",
+    "it": "Nigeria",
+    "ko": "나이지리아"
+  },
+  "name": {
+    "ro": "Moin Moin (Budincă Nigeriană de Fasole)",
+    "en": "Moin Moin (Nigerian Steamed Bean Pudding)",
+    "es": "Moin Moin (Pudín de Frijoles Nigeriano al Vapor)",
+    "fr": "Moin Moin (Pudding de Haricots Nigérian à la Vapeur)",
+    "de": "Moin Moin (Nigerianischer Gedämpfter Bohnenpudding)",
+    "pt": "Moin Moin (Pudim de Feijão Nigeriano no Vapor)",
+    "ru": "Мойн Мойн (Нигерийский Паровой Пудинг из Бобов)",
+    "ar": "موين موين (بودينغ فول نيجيري مطهو بالبخار)",
+    "zh": "尼日利亚豆蓉布丁（莫因莫因）",
+    "ja": "モインモイン（ナイジェリア風蒸し豆プリン）",
+    "hi": "मोइन मोइन (नाइजीरियाई भाप में पकी बीन पुडिंग)",
+    "tr": "Moin Moin (Nijerya Usulü Buğulanmış Fasulye Pudingi)",
+    "it": "Moin Moin (Budino di Fagioli Nigeriano al Vapore)",
+    "ko": "모인 모인 (나이지리아식 찐 콩 푸딩)"
+  },
+  "category": {
+    "ro": "Fel Principal",
+    "en": "Main Course",
+    "es": "Plato Principal",
+    "fr": "Plat Principal",
+    "de": "Hauptgericht",
+    "pt": "Prato Principal",
+    "ru": "Основное Блюдо",
+    "ar": "طبق رئيسي",
+    "zh": "主菜",
+    "ja": "メイン料理",
+    "hi": "मुख्य पकवान",
+    "tr": "Ana Yemek",
+    "it": "Piatto Principale",
+    "ko": "메인 요리"
+  },
+  "featureCards": {
+    "ro": [
+      { "icon": "🫘", "t": "Fasole ochi-negru", "d": "Fasolea ochi-negru se curăță de coajă și se înmoaie, apoi se pisează într-o pastă fină." },
+      { "icon": "🌶️", "t": "Pastă de ardei și ceapă", "d": "Ardei roșii, ceapă și ardei iute se mixează într-o pastă condimentată, amestecată în crema de fasole." },
+      { "icon": "🥚", "t": "Ou fiert în centru", "d": "O bucată de ou fiert tare se ascunde adesea în mijlocul fiecărei porții, ca surpriză." },
+      { "icon": "🍃", "t": "Aburit în frunze", "d": "Amestecul se aburește tradițional în frunze de bananier, care dau un parfum subtil aburindei." }
+    ],
+    "en": [
+      { "icon": "🫘", "t": "Black-eyed peas", "d": "Black-eyed peas are peeled and soaked, then blended into a fine paste." },
+      { "icon": "🌶️", "t": "Pepper and onion paste", "d": "Red bell peppers, onion and chili are blended into a spiced paste, mixed into the bean batter." },
+      { "icon": "🥚", "t": "Boiled egg inside", "d": "A piece of hard-boiled egg is often hidden in the center of each portion, as a surprise." },
+      { "icon": "🍃", "t": "Steamed in leaves", "d": "Traditionally steamed in banana leaves, which give the steaming batter a subtle fragrance." }
+    ],
+    "es": [
+      { "icon": "🫘", "t": "Frijoles de ojo negro", "d": "Los frijoles de ojo negro se pelan y se remojan, luego se licúan en una pasta fina." },
+      { "icon": "🌶️", "t": "Pasta de pimiento y cebolla", "d": "Pimientos rojos, cebolla y chile se licúan en una pasta especiada, mezclada en la masa de frijoles." },
+      { "icon": "🥚", "t": "Huevo duro en el centro", "d": "A menudo se esconde un trozo de huevo duro en el centro de cada porción, como sorpresa." },
+      { "icon": "🍃", "t": "Cocido al vapor en hojas", "d": "Se cuece tradicionalmente al vapor en hojas de plátano, que dan un aroma sutil a la masa al vaporizarse." }
+    ],
+    "fr": [
+      { "icon": "🫘", "t": "Haricots à œil noir", "d": "Les haricots à œil noir sont épluchés et trempés, puis mixés en une pâte fine." },
+      { "icon": "🌶️", "t": "Pâte de poivron et d'oignon", "d": "Poivrons rouges, oignon et piment sont mixés en une pâte épicée, incorporée à la pâte de haricots." },
+      { "icon": "🥚", "t": "Œuf dur au centre", "d": "Un morceau d'œuf dur est souvent caché au centre de chaque portion, comme surprise." },
+      { "icon": "🍃", "t": "Cuit à la vapeur dans des feuilles", "d": "Traditionnellement cuit à la vapeur dans des feuilles de bananier, qui donnent un parfum subtil à la pâte." }
+    ],
+    "de": [
+      { "icon": "🫘", "t": "Augenbohnen", "d": "Augenbohnen werden geschält und eingeweicht, dann zu einer feinen Paste püriert." },
+      { "icon": "🌶️", "t": "Paprika-Zwiebel-Paste", "d": "Rote Paprika, Zwiebel und Chili werden zu einer würzigen Paste püriert und in den Bohnenteig gemischt." },
+      { "icon": "🥚", "t": "Gekochtes Ei im Inneren", "d": "Oft wird ein Stück hartgekochtes Ei als Überraschung in die Mitte jeder Portion versteckt." },
+      { "icon": "🍃", "t": "In Blättern gedämpft", "d": "Traditionell in Bananenblättern gedämpft, die dem Teig beim Dämpfen ein feines Aroma verleihen." }
+    ],
+    "pt": [
+      { "icon": "🫘", "t": "Feijão-fradinho", "d": "O feijão-fradinho é descascado e demolhado, depois batido até formar uma pasta fina." },
+      { "icon": "🌶️", "t": "Pasta de pimentão e cebola", "d": "Pimentões vermelhos, cebola e malagueta são batidos numa pasta temperada, misturada na massa de feijão." },
+      { "icon": "🥚", "t": "Ovo cozido dentro", "d": "Um pedaço de ovo cozido é frequentemente escondido no centro de cada porção, como surpresa." },
+      { "icon": "🍃", "t": "Cozido a vapor em folhas", "d": "Tradicionalmente cozido a vapor em folhas de bananeira, que dão um aroma subtil à massa ao cozinhar." }
+    ],
+    "ru": [
+      { "icon": "🫘", "t": "Коровий горох", "d": "Коровий горох очищают от кожуры и замачивают, затем измельчают в тонкую пасту." },
+      { "icon": "🌶️", "t": "Паста из перца и лука", "d": "Красный болгарский перец, лук и чили измельчаются в пряную пасту, вмешиваемую в бобовое тесто." },
+      { "icon": "🥚", "t": "Варёное яйцо внутри", "d": "Кусочек варёного вкрутую яйца часто прячут в центре каждой порции, как сюрприз." },
+      { "icon": "🍃", "t": "Пропаривается в листьях", "d": "Традиционно готовится на пару в банановых листьях, придающих тесту тонкий аромат при пропаривании." }
+    ],
+    "ar": [
+      { "icon": "🫘", "t": "لوبيا ذات العين السوداء", "d": "تُقشَّر اللوبيا ذات العين السوداء وتُنقع، ثم تُخلط لتصبح عجينة ناعمة." },
+      { "icon": "🌶️", "t": "معجون الفلفل والبصل", "d": "يُخلط الفلفل الأحمر والبصل والفلفل الحار ليصبح معجونًا متبلًا، يُمزج في عجينة اللوبيا." },
+      { "icon": "🥚", "t": "بيضة مسلوقة بالداخل", "d": "غالبًا ما تُخبَّأ قطعة من البيض المسلوق في وسط كل حصة كمفاجأة." },
+      { "icon": "🍃", "t": "مطهو بالبخار في أوراق", "d": "يُطهى تقليديًا بالبخار في أوراق الموز التي تمنح العجينة نكهة خفيفة أثناء التبخير." }
+    ],
+    "zh": [
+      { "icon": "🫘", "t": "眉豆", "d": "眉豆去皮浸泡后，打成细腻的糊状。" },
+      { "icon": "🌶️", "t": "彩椒洋葱糊", "d": "红甜椒、洋葱和辣椒打成辛香糊状，拌入豆糊中。" },
+      { "icon": "🥚", "t": "内藏水煮蛋", "d": "常在每份中心藏一块水煮蛋，作为惊喜。" },
+      { "icon": "🍃", "t": "叶中蒸制", "d": "传统上用香蕉叶包裹蒸制，蒸汽中带来淡淡的清香。" }
+    ],
+    "ja": [
+      { "icon": "🫘", "t": "ブラックアイドピー", "d": "ブラックアイドピーの皮をむいて水に浸し、細かいペースト状にする。" },
+      { "icon": "🌶️", "t": "ピーマンと玉ねぎのペースト", "d": "赤ピーマン、玉ねぎ、唐辛子をスパイシーなペースト状にし、豆の生地に混ぜ込む。" },
+      { "icon": "🥚", "t": "中にゆで卵", "d": "各ポーションの中心にゆで卵の一切れをサプライズとして隠すことが多い。" },
+      { "icon": "🍃", "t": "葉で蒸す", "d": "伝統的にバナナの葉で蒸され、蒸す間に生地にほのかな香りをつける。" }
+    ],
+    "hi": [
+      { "icon": "🫘", "t": "काली आंख वाली फलियां", "d": "काली आंख वाली फलियों को छीलकर भिगोया जाता है, फिर एक महीन पेस्ट में मिलाया जाता है।" },
+      { "icon": "🌶️", "t": "मिर्च और प्याज़ का पेस्ट", "d": "लाल शिमला मिर्च, प्याज़ और मिर्च को मसालेदार पेस्ट में मिलाकर बीन बैटर में मिलाया जाता है।" },
+      { "icon": "🥚", "t": "अंदर उबला अंडा", "d": "हर हिस्से के केंद्र में अक्सर एक उबले अंडे का टुकड़ा आश्चर्य के रूप में छिपाया जाता है।" },
+      { "icon": "🍃", "t": "पत्तों में भाप में पकाया", "d": "पारंपरिक रूप से केले के पत्तों में भाप में पकाया जाता है, जो पकते समय बैटर को हल्की सुगंध देते हैं।" }
+    ],
+    "tr": [
+      { "icon": "🫘", "t": "Börülce", "d": "Börülce soyulup ıslatılır, sonra ince bir hamur haline getirilir." },
+      { "icon": "🌶️", "t": "Biber ve soğan ezmesi", "d": "Kırmızı biber, soğan ve acı biber baharatlı bir ezme haline getirilip fasulye hamuruna karıştırılır." },
+      { "icon": "🥚", "t": "İçinde haşlanmış yumurta", "d": "Her porsiyonun ortasına sürpriz olarak sık sık bir parça haşlanmış yumurta gizlenir." },
+      { "icon": "🍃", "t": "Yapraklarda buğulanır", "d": "Geleneksel olarak muz yapraklarında buğulanır, bu da hamura hafif bir koku verir." }
+    ],
+    "it": [
+      { "icon": "🫘", "t": "Fagioli dall'occhio", "d": "I fagioli dall'occhio vengono pelati e ammollati, poi frullati in una pasta fine." },
+      { "icon": "🌶️", "t": "Pasta di peperone e cipolla", "d": "Peperoni rossi, cipolla e peperoncino vengono frullati in una pasta speziata, mescolata nell'impasto di fagioli." },
+      { "icon": "🥚", "t": "Uovo sodo all'interno", "d": "Un pezzo di uovo sodo viene spesso nascosto al centro di ogni porzione, come sorpresa." },
+      { "icon": "🍃", "t": "Cotto a vapore nelle foglie", "d": "Tradizionalmente cotto a vapore in foglie di banano, che danno un aroma sottile all'impasto durante la cottura." }
+    ],
+    "ko": [
+      { "icon": "🫘", "t": "블랙아이드피", "d": "블랙아이드피 껍질을 벗기고 불린 뒤 곱게 갈아 페이스트로 만든다." },
+      { "icon": "🌶️", "t": "고추와 양파 페이스트", "d": "빨간 피망, 양파, 고추를 갈아 매콤한 페이스트로 만들어 콩 반죽에 섞는다." },
+      { "icon": "🥚", "t": "속에 삶은 달걀", "d": "각 몫의 중앙에 삶은 달걀 한 조각을 깜짝 놀라움으로 숨겨 넣는 경우가 많다." },
+      { "icon": "🍃", "t": "잎에 싸서 찌기", "d": "전통적으로 바나나 잎에 싸서 쪄내며, 찌는 동안 반죽에 은은한 향을 더한다." }
+    ]
+  },
+  "ingredients": {
+    "ro": ["500g fasole ochi-negru, uscată", "2 ardei roșii grași", "1 ceapă", "2 ardei iuți scotch bonnet (după gust)", "150ml ulei de palmier (sau ulei neutru)", "1 cub de supă", "sare după gust", "4 ouă fierte tari, tăiate în jumătate", "frunze de bananier sau folie de aluminiu"],
+    "en": ["500g black-eyed peas, dried", "2 red bell peppers", "1 onion", "2 scotch bonnet chilies (to taste)", "150ml palm oil (or neutral oil)", "1 bouillon cube", "salt to taste", "4 hard-boiled eggs, halved", "banana leaves or aluminum foil"],
+    "es": ["500g de frijoles de ojo negro, secos", "2 pimientos rojos", "1 cebolla", "2 chiles scotch bonnet (al gusto)", "150ml de aceite de palma (o aceite neutro)", "1 cubito de caldo", "sal al gusto", "4 huevos duros, cortados por la mitad", "hojas de plátano o papel de aluminio"],
+    "fr": ["500g de haricots à œil noir, secs", "2 poivrons rouges", "1 oignon", "2 piments scotch bonnet (selon le goût)", "150ml d'huile de palme (ou huile neutre)", "1 cube de bouillon", "sel selon le goût", "4 œufs durs, coupés en deux", "feuilles de bananier ou papier aluminium"],
+    "de": ["500g Augenbohnen, getrocknet", "2 rote Paprika", "1 Zwiebel", "2 Scotch-Bonnet-Chilis (nach Geschmack)", "150ml Palmöl (oder neutrales Öl)", "1 Brühwürfel", "Salz nach Geschmack", "4 hartgekochte Eier, halbiert", "Bananenblätter oder Alufolie"],
+    "pt": ["500g de feijão-fradinho, seco", "2 pimentões vermelhos", "1 cebola", "2 pimentas scotch bonnet (a gosto)", "150ml de azeite de dendê (ou óleo neutro)", "1 cubo de caldo", "sal a gosto", "4 ovos cozidos, cortados ao meio", "folhas de bananeira ou papel-alumínio"],
+    "ru": ["500г коровьего гороха, сушёного", "2 красных болгарских перца", "1 луковица", "2 перца скотч-боннет (по вкусу)", "150мл пальмового масла (или нейтрального масла)", "1 бульонный кубик", "соль по вкусу", "4 варёных яйца, разрезанных пополам", "банановые листья или алюминиевая фольга"],
+    "ar": ["500 غرام لوبيا ذات عين سوداء، مجففة", "فلفلتان حمراوان", "بصلة واحدة", "فلفلا سكوتش بونيت حاران (حسب الرغبة)", "150 مل زيت نخيل (أو زيت محايد)", "مكعب مرق واحد", "ملح حسب الرغبة", "4 بيضات مسلوقة، مقطّعة لنصفين", "أوراق موز أو ورق ألمنيوم"],
+    "zh": ["500克眉豆，干燥", "2个红甜椒", "1个洋葱", "2个苏格兰帽辣椒（依口味）", "150毫升棕榈油（或中性油）", "1块高汤块", "盐适量", "4个水煮蛋，切半", "香蕉叶或铝箔"],
+    "ja": ["ブラックアイドピー（乾燥）500g", "赤ピーマン2個", "玉ねぎ1個", "スコッチボネット唐辛子2本（お好みで）", "パーム油（または無味の油）150ml", "ブイヨンキューブ1個", "塩 適量", "固ゆで卵4個（半分に切る）", "バナナの葉またはアルミホイル"],
+    "hi": ["500 ग्राम काली आंख वाली फलियां, सूखी", "2 लाल शिमला मिर्च", "1 प्याज़", "2 स्कॉच बोनेट मिर्च (स्वादानुसार)", "150 मिली पाम तेल (या सादा तेल)", "1 बुयों क्यूब", "स्वादानुसार नमक", "4 उबले अंडे, आधे कटे", "केले के पत्ते या एल्युमिनियम फॉयल"],
+    "tr": ["500g börülce, kuru", "2 kırmızı biber", "1 soğan", "2 scotch bonnet biberi (tadına göre)", "150ml palmiye yağı (veya nötr yağ)", "1 bulyon küpü", "tuz, tadına göre", "4 haşlanmış yumurta, ikiye bölünmüş", "muz yaprağı veya alüminyum folyo"],
+    "it": ["500g di fagioli dall'occhio, secchi", "2 peperoni rossi", "1 cipolla", "2 peperoncini scotch bonnet (a piacere)", "150ml di olio di palma (o olio neutro)", "1 dado", "sale q.b.", "4 uova sode, tagliate a metà", "foglie di banano o carta stagnola"],
+    "ko": ["블랙아이드피 500g, 말린 것", "빨간 피망 2개", "양파 1개", "스카치 보넷 고추 2개(입맛에 따라)", "팜유 150ml(또는 무향 식용유)", "부용 큐브 1개", "소금 약간", "삶은 달걀 4개, 반으로 자른 것", "바나나 잎 또는 알루미늄 포일"]
+  },
+  "howIsMade": {
+    "ro": "ÎNMOAIE FASOLEA: Înmoaie fasolea ochi-negru în apă 2-3 ore, apoi freac-o între palme sub apă curentă pentru a-i îndepărta coaja. CLĂTEȘTE: Clătește fasolea decorticată de mai multe ori, până apa devine limpede. MIXEAZĂ PASTA: Mixează fasolea curățată cu ardeii roșii, ceapa și ardeii iuți într-un blender, adăugând puțină apă, până obții o pastă fină și netedă. ADAUGĂ CONDIMENTELE: Amestecă în pastă uleiul de palmier, cubul de supă sfărâmat și sare. PREGĂTEȘTE AMBALAJUL: Taie frunze de bananier în pătrate mari sau folosește folie de aluminiu, formând mici recipiente în formă de cupă. TURNARE: Toarnă amestecul de fasole în fiecare ambalaj, până la jumătate, apoi adaugă o jumătate de ou fiert în centru, acoperă cu mai mult amestec. ÎNCHIDE PACHETELE: Închide bine fiecare pachet, îndoind marginile. ABURĂ: Așază pachetele într-o oală mare cu apă la fund, deasupra unei site sau grătar, acoperă și abureste 45-60 minute, la foc mediu. VERIFICĂ COACEREA: Verifică unul, tăindu-l — trebuie să fie ferm, dar umed, fără lichid crud în centru. SERVEȘTE: Servește cald, direct în ambalajul de frunze sau folie, ca fel principal sau garnitură.",
+    "en": "SOAK THE BEANS: Soak the black-eyed peas in water 2-3 hours, then rub them between your palms under running water to remove the skins. RINSE: Rinse the peeled beans several times, until the water runs clear. BLEND THE PASTE: Blend the peeled beans with the red bell peppers, onion and chilies in a blender, adding a little water, until you get a fine, smooth paste. ADD THE SEASONINGS: Mix the palm oil, crumbled bouillon cube and salt into the paste. PREPARE THE WRAPPING: Cut banana leaves into large squares or use aluminum foil, shaping small cup-like containers. POUR: Pour the bean mixture into each wrapping, halfway, then add half a boiled egg in the center, cover with more mixture. SEAL THE PACKETS: Seal each packet well, folding the edges. STEAM: Place the packets in a large pot with water at the bottom, above a sieve or rack, cover and steam 45-60 minutes, over medium heat. CHECK DONENESS: Check one by cutting it open — it should be firm but moist, with no raw liquid in the center. SERVE: Serve warm, directly in the leaf or foil wrapping, as a main course or side dish.",
+    "es": "REMOJA LOS FRIJOLES: Remoja los frijoles de ojo negro en agua 2-3 horas, luego frótalos entre las palmas bajo agua corriente para quitarles la piel. ENJUAGA: Enjuaga los frijoles pelados varias veces, hasta que el agua salga clara. LICÚA LA PASTA: Licúa los frijoles pelados con los pimientos rojos, la cebolla y los chiles en una licuadora, añadiendo un poco de agua, hasta obtener una pasta fina y suave. AÑADE LOS CONDIMENTOS: Mezcla el aceite de palma, el cubito de caldo desmenuzado y sal en la pasta. PREPARA EL ENVOLTORIO: Corta hojas de plátano en cuadrados grandes o usa papel de aluminio, formando pequeños recipientes en forma de copa. VIERTE: Vierte la mezcla de frijoles en cada envoltorio, hasta la mitad, luego añade medio huevo cocido en el centro, cubre con más mezcla. CIERRA LOS PAQUETES: Cierra bien cada paquete, doblando los bordes. COCINA AL VAPOR: Coloca los paquetes en una olla grande con agua en el fondo, sobre un colador o rejilla, tapa y cocina al vapor 45-60 minutos, a fuego medio. VERIFICA LA COCCIÓN: Verifica uno cortándolo — debe estar firme pero húmedo, sin líquido crudo en el centro. SIRVE: Sirve caliente, directamente en el envoltorio de hoja o papel de aluminio, como plato principal o guarnición.",
+    "fr": "FAITES TREMPER LES HARICOTS: Faites tremper les haricots à œil noir dans l'eau 2-3 heures, puis frottez-les entre vos paumes sous l'eau courante pour retirer les peaux. RINCEZ: Rincez les haricots épluchés plusieurs fois, jusqu'à ce que l'eau soit claire. MIXEZ LA PÂTE: Mixez les haricots épluchés avec les poivrons rouges, l'oignon et les piments dans un mixeur, en ajoutant un peu d'eau, jusqu'à obtenir une pâte fine et lisse. AJOUTEZ LES ASSAISONNEMENTS: Mélangez l'huile de palme, le cube de bouillon émietté et le sel dans la pâte. PRÉPAREZ L'EMBALLAGE: Coupez des feuilles de bananier en grands carrés ou utilisez du papier aluminium, formant de petits récipients en forme de coupe. VERSEZ: Versez le mélange de haricots dans chaque emballage, à moitié, puis ajoutez une moitié d'œuf dur au centre, couvrez avec plus de mélange. FERMEZ LES PAQUETS: Fermez bien chaque paquet, en repliant les bords. FAITES CUIRE À LA VAPEUR: Placez les paquets dans une grande marmite avec de l'eau au fond, au-dessus d'une passoire ou d'une grille, couvrez et faites cuire à la vapeur 45-60 minutes, à feu moyen. VÉRIFIEZ LA CUISSON: Vérifiez-en un en le coupant — il doit être ferme mais humide, sans liquide cru au centre. SERVEZ: Servez chaud, directement dans l'emballage de feuille ou d'aluminium, comme plat principal ou accompagnement.",
+    "de": "BOHNEN EINWEICHEN: Die Augenbohnen 2-3 Stunden in Wasser einweichen, dann zwischen den Handflächen unter fließendem Wasser reiben, um die Schalen zu entfernen. ABSPÜLEN: Die geschälten Bohnen mehrmals abspülen, bis das Wasser klar wird. PASTE PÜRIEREN: Die geschälten Bohnen mit den roten Paprika, der Zwiebel und den Chilis in einem Mixer pürieren, dabei etwas Wasser zugeben, bis eine feine, glatte Paste entsteht. GEWÜRZE HINZUFÜGEN: Palmöl, zerbröselten Brühwürfel und Salz in die Paste einrühren. VERPACKUNG VORBEREITEN: Bananenblätter in große Quadrate schneiden oder Alufolie verwenden, kleine becherförmige Behälter formen. EINFÜLLEN: Die Bohnenmischung zur Hälfte in jede Verpackung gießen, dann ein halbes gekochtes Ei in die Mitte geben, mit mehr Mischung bedecken. PAKETE VERSCHLIESSEN: Jedes Päckchen gut verschließen, die Ränder einschlagen. DÄMPFEN: Die Päckchen in einen großen Topf mit Wasser am Boden legen, über einem Sieb oder Gitter, abdecken und bei mittlerer Hitze 45-60 Minuten dämpfen. GARZUSTAND PRÜFEN: Eines aufschneiden, um zu prüfen — es sollte fest, aber feucht sein, ohne rohe Flüssigkeit in der Mitte. SERVIEREN: Warm servieren, direkt in der Blatt- oder Folienverpackung, als Hauptgericht oder Beilage.",
+    "pt": "DEMOLHE O FEIJÃO: Demolhe o feijão-fradinho em água por 2-3 horas, depois esfregue-o entre as palmas das mãos sob água corrente para remover as peles. ENXAGUE: Enxague o feijão descascado várias vezes, até a água sair clara. BATA A PASTA: Bata o feijão descascado com os pimentões vermelhos, a cebola e as pimentas numa liquidificadora, adicionando um pouco de água, até obter uma pasta fina e lisa. ADICIONE OS TEMPEROS: Misture o azeite de dendê, o cubo de caldo esfarelado e sal na pasta. PREPARE A EMBALAGEM: Corte folhas de bananeira em quadrados grandes ou use papel-alumínio, formando pequenos recipientes em forma de copo. DESPEJE: Despeje a mistura de feijão em cada embalagem, até metade, depois junte meio ovo cozido no centro, cubra com mais mistura. FECHE OS PACOTES: Feche bem cada pacote, dobrando as bordas. COZINHE A VAPOR: Coloque os pacotes numa panela grande com água no fundo, sobre uma peneira ou grelha, tape e cozinhe a vapor por 45-60 minutos, em fogo médio. VERIFIQUE O COZIMENTO: Verifique um cortando-o — deve estar firme mas húmido, sem líquido cru no centro. SIRVA: Sirva quente, diretamente na embalagem de folha ou papel-alumínio, como prato principal ou acompanhamento.",
+    "ru": "ЗАМОЧИТЕ БОБЫ: Замочите коровий горох в воде на 2-3 часа, затем потрите его между ладонями под проточной водой, чтобы удалить кожуру. ПРОМОЙТЕ: Промойте очищенные бобы несколько раз, пока вода не станет прозрачной. ИЗМЕЛЬЧИТЕ ПАСТУ: Измельчите очищенные бобы с красным болгарским перцем, луком и чили в блендере, добавляя немного воды, до получения тонкой гладкой пасты. ДОБАВЬТЕ ПРИПРАВЫ: Вмешайте в пасту пальмовое масло, раскрошенный бульонный кубик и соль. ПОДГОТОВЬТЕ УПАКОВКУ: Нарежьте банановые листья большими квадратами или используйте алюминиевую фольгу, формируя маленькие контейнеры в виде чашки. НАЛЕЙТЕ: Налейте бобовую смесь в каждую упаковку наполовину, затем добавьте половину варёного яйца в центр, накройте ещё смесью. ЗАКРОЙТЕ ПАКЕТЫ: Хорошо закройте каждый пакет, загнув края. ПРОПАРЬТЕ: Разместите пакеты в большой кастрюле с водой на дне, над ситом или решёткой, накройте и пропаривайте 45-60 минут на среднем огне. ПРОВЕРЬТЕ ГОТОВНОСТЬ: Разрежьте один, чтобы проверить — он должен быть плотным, но влажным, без сырой жидкости в центре. ПОДАВАЙТЕ: Подавайте тёплым, прямо в упаковке из листа или фольги, как основное блюдо или гарнир.",
+    "ar": "انقعي الفول: انقعي اللوبيا ذات العين السوداء في الماء 2-3 ساعات، ثم افركيها بين راحتي يديك تحت الماء الجاري لإزالة القشور. اشطفي: اشطفي اللوبيا المقشرة عدة مرات حتى يصبح الماء صافيًا. اخلطي العجينة: اخلطي اللوبيا المقشرة مع الفلفل الأحمر والبصل والفلفل الحار في الخلاط، مع إضافة القليل من الماء، حتى تحصلي على عجينة ناعمة ورقيقة. أضيفي التوابل: امزجي زيت النخيل ومكعب المرق المفتت والملح في العجينة. حضّري الغلاف: قطّعي أوراق الموز إلى مربعات كبيرة أو استخدمي ورق الألمنيوم، مكوّنة أوعية صغيرة على شكل كوب. اسكبي: اسكبي خليط اللوبيا في كل غلاف حتى المنتصف، ثم أضيفي نصف بيضة مسلوقة في الوسط، غطّي بمزيد من الخليط. أغلقي الحزم: أغلقي كل حزمة جيدًا بطي الحواف. اطهي بالبخار: ضعي الحزم في قدر كبيرة بها ماء في القاع، فوق مصفاة أو شبكة، غطّي واطهي بالبخار 45-60 دقيقة على نار متوسطة. تحققي من النضج: افحصي واحدة بقطعها — يجب أن تكون متماسكة لكن رطبة دون سائل نيء في الوسط. قدّمي: قدّميها دافئة مباشرة في غلاف الورق أو الألمنيوم، كطبق رئيسي أو جانبي.",
+    "zh": "浸泡豆子：将眉豆浸泡2-3小时，然后在流水下用手掌搓揉去皮。冲洗：将去皮的豆子多次冲洗，直至水变清澈。打成糊状：将去皮的豆子与红甜椒、洋葱和辣椒放入搅拌机，加少量水打成细腻顺滑的糊状。加入调味料：将棕榈油、捏碎的高汤块和盐拌入糊中。准备包裹材料：将香蕉叶切成大方块，或使用铝箔，做成小杯状容器。倒入：将豆糊倒入每个包裹容器至一半，然后在中心加入半个水煮蛋，再盖上更多豆糊。封口：将每个包裹好好封住，折叠边缘。蒸制：将包裹放入底部有水的大锅中，置于筛网或架子上方，盖上锅盖，中火蒸45-60分钟。检查熟度：切开一个检查——应该紧实但湿润，中心没有生的液体。上桌：直接在叶子或铝箔包裹中趁热食用，作为主菜或配菜。",
+    "ja": "豆を浸水させる：ブラックアイドピーを2〜3時間水に浸し、その後流水の下で手のひらの間でこすり合わせて皮を取り除く。すすぐ：皮をむいた豆を水が透明になるまで何度もすすぐ。ペーストにする：皮をむいた豆を赤ピーマン、玉ねぎ、唐辛子と共にミキサーにかけ、少量の水を加えながら、きめ細かく滑らかなペースト状にする。調味料を加える：ペーストにパーム油、砕いたブイヨンキューブ、塩を混ぜ込む。包み材を準備する：バナナの葉を大きな正方形に切るか、アルミホイルを使って小さなカップ状の容器を作る。注ぐ：各包みに豆の混合物を半分まで注ぎ、中央にゆで卵の半分を加え、さらに混合物で覆う。包みを閉じる：端を折りたたんでそれぞれの包みをしっかり閉じる。蒸す：包みを底に水を張った大鍋に、ザルまたは網の上に置き、蓋をして中火で45〜60分蒸す。焼き加減を確認する：一つ切って確認する——中心に生の液体がなく、しっかりしていて湿り気があるべき。提供する：葉やホイルの包みのまま、主菜または副菜として温かいうちに提供する。",
+    "hi": "फलियां भिगोएं: काली आंख वाली फलियों को पानी में 2-3 घंटे भिगोएं, फिर बहते पानी के नीचे हथेलियों के बीच रगड़ें ताकि छिलके उतर जाएं। धोएं: छिली फलियों को कई बार धोएं, जब तक पानी साफ न हो जाए। पेस्ट मिलाएं: छिली फलियों को लाल शिमला मिर्च, प्याज़ और मिर्च के साथ ब्लेंडर में डालें, थोड़ा पानी मिलाते हुए, जब तक महीन, चिकना पेस्ट न बन जाए। मसाले डालें: पेस्ट में पाम तेल, कुचला बुयों क्यूब और नमक मिलाएं। पैकिंग तैयार करें: केले के पत्तों को बड़े वर्गों में काटें या एल्युमिनियम फॉयल का उपयोग करें, छोटे कप जैसे कंटेनर बनाते हुए। डालें: बीन मिश्रण को हर पैकिंग में आधा भरें, फिर केंद्र में आधा उबला अंडा डालें, अधिक मिश्रण से ढकें। पैकेट बंद करें: किनारों को मोड़कर हर पैकेट को अच्छी तरह बंद करें। भाप में पकाएं: पैकेट को नीचे पानी वाले बड़े बर्तन में, छलनी या ग्रेट के ऊपर रखें, ढककर मध्यम आंच पर 45-60 मिनट भाप में पकाएं। पकने की जांच करें: एक को काटकर जांचें — यह ठोस लेकिन नम होना चाहिए, केंद्र में कच्चा तरल न हो। परोसें: गरमागरम, सीधे पत्ते या फॉयल पैकिंग में, मुख्य व्यंजन या साइड डिश के रूप में परोसें।",
+    "tr": "FASULYELERİ ISLATIN: Börülceyi 2-3 saat suda ıslatın, sonra akan suyun altında avuçlarınız arasında ovarak kabuklarını çıkarın. DURULAYIN: Kabuğu soyulmuş fasulyeleri, su duru çıkana kadar birkaç kez durulayın. EZMEYİ HAZIRLAYIN: Soyulmuş fasulyeleri kırmızı biber, soğan ve biberlerle birlikte bir blenderde, biraz su ekleyerek, ince ve pürüzsüz bir ezme elde edene kadar karıştırın. BAHARATLARI EKLEYİN: Palmiye yağını, ufalanmış bulyon küpünü ve tuzu ezmeye karıştırın. AMBALAJI HAZIRLAYIN: Muz yapraklarını büyük kareler halinde kesin veya alüminyum folyo kullanarak küçük fincan şeklinde kaplar oluşturun. DÖKÜN: Fasulye karışımını her ambalaja yarısına kadar dökün, sonra ortasına yarım haşlanmış yumurta ekleyin, daha fazla karışımla örtün. PAKETLERİ KAPATIN: Kenarlarını katlayarak her paketi iyice kapatın. BUĞULAYIN: Paketleri altında su bulunan büyük bir tencerede, bir süzgeç veya ızgaranın üzerine koyun, kapatın ve orta ateşte 45-60 dakika buğulayın. PİŞMİŞLİĞİ KONTROL EDİN: Birini kesip kontrol edin — sert ama nemli olmalı, ortasında çiğ sıvı olmamalı. SERVİS YAPIN: Sıcak, doğrudan yaprak veya folyo ambalajında, ana yemek veya yan yemek olarak servis edin.",
+    "it": "AMMOLLA I FAGIOLI: Ammolla i fagioli dall'occhio in acqua per 2-3 ore, poi strofinali tra i palmi delle mani sotto acqua corrente per rimuovere le bucce. SCIACQUA: Sciacqua i fagioli pelati più volte, finché l'acqua non esce limpida. FRULLA LA PASTA: Frulla i fagioli pelati con i peperoni rossi, la cipolla e i peperoncini in un frullatore, aggiungendo un po' d'acqua, finché ottieni una pasta fine e liscia. AGGIUNGI I CONDIMENTI: Mescola l'olio di palma, il dado sbriciolato e il sale nella pasta. PREPARA L'INVOLUCRO: Taglia foglie di banano in grandi quadrati o usa carta stagnola, formando piccoli contenitori a forma di coppa. VERSA: Versa il composto di fagioli in ogni involucro, a metà, poi aggiungi mezzo uovo sodo al centro, copri con altro composto. CHIUDI I PACCHETTI: Chiudi bene ogni pacchetto, piegando i bordi. CUOCI A VAPORE: Metti i pacchetti in una pentola grande con acqua sul fondo, sopra un colino o una griglia, copri e cuoci a vapore 45-60 minuti, a fuoco medio. CONTROLLA LA COTTURA: Controllane uno tagliandolo — deve essere sodo ma umido, senza liquido crudo al centro. SERVI: Servi caldo, direttamente nell'involucro di foglia o alluminio, come piatto principale o contorno.",
+    "ko": "콩 불리기: 블랙아이드피를 물에 2-3시간 불린 뒤 흐르는 물 아래에서 손바닥으로 비벼 껍질을 제거한다. 헹구기: 껍질 벗긴 콩을 물이 맑아질 때까지 여러 번 헹군다. 페이스트 갈기: 껍질 벗긴 콩을 빨간 피망, 양파, 고추와 함께 믹서에 넣고 물을 조금씩 넣어가며 곱고 부드러운 페이스트로 간다. 조미료 넣기: 팜유, 부순 부용 큐브, 소금을 페이스트에 섞는다. 포장재 준비하기: 바나나 잎을 큰 정사각형으로 자르거나 알루미늄 포일을 사용해 작은 컵 모양 용기를 만든다. 붓기: 콩 혼합물을 각 포장재에 절반까지 부은 뒤 중앙에 삶은 달걀 반 개를 넣고 혼합물로 더 덮는다. 포장 밀봉하기: 가장자리를 접어 각 포장을 잘 밀봉한다. 찌기: 바닥에 물을 담은 큰 냄비에 체나 선반 위에 포장을 올리고 뚜껑을 덮어 중불에서 45-60분간 찐다. 익힘 확인하기: 하나를 잘라 확인한다 — 중심에 생 액체 없이 단단하지만 촉촉해야 한다. 제공하기: 잎이나 포일 포장 그대로 메인 요리나 곁들임 요리로 따뜻하게 제공한다."
+  },
+  "originText": {
+    "ro": "Moin moin, uneori scris moimoi, este considerat unul dintre cele mai vechi feluri tradiționale nigeriene, o metodă de a transforma fasolea ochi-negru, o sursă esențială și accesibilă de proteine vegetale, într-un fel elegant potrivit atât pentru mesele de zi cu zi, cât și pentru evenimente festive. Numele provine dintr-un cuvânt yoruba care descrie procesul de măcinare fină a fasolei.\n\nSpre deosebire de akara, care e prăjită, moin moin se gătește exclusiv prin aburire, o tehnică ce păstrează felul ușor și digerabil. Frunzele de bananier, folosite tradițional pentru ambalare, sunt considerate esențiale pentru autenticitatea felului — dau o aromă subtilă, ușor fumurie, pe care folia de aluminiu, deși practică, nu o poate reproduce. Adăugarea de ou fiert, pește afumat sau carne tocată în interior variază regional, fiecare familie având propria rețetă transmisă pe linie maternă.",
+    "en": "Moin moin, sometimes spelled moimoi, is considered one of the oldest traditional Nigerian dishes, a method of transforming black-eyed peas — an essential and affordable source of plant protein — into an elegant dish suited for both everyday meals and festive occasions. The name comes from a Yoruba word describing the process of finely grinding the beans.\n\nUnlike akara, which is fried, moin moin is cooked exclusively by steaming, a technique that keeps the dish light and easily digestible. The banana leaves traditionally used for wrapping are considered essential to the dish's authenticity — they give a subtle, slightly smoky aroma that aluminum foil, while practical, cannot reproduce. Adding boiled egg, smoked fish or minced meat inside varies regionally, with each family holding its own recipe passed down through the maternal line.",
+    "es": "El moin moin, a veces escrito moimoi, se considera uno de los platos tradicionales nigerianos más antiguos, un método para transformar los frijoles de ojo negro — una fuente esencial y asequible de proteína vegetal — en un plato elegante adecuado tanto para comidas cotidianas como para ocasiones festivas. El nombre proviene de una palabra yoruba que describe el proceso de moler finamente los frijoles.\n\nA diferencia del akara, que se fríe, el moin moin se cocina exclusivamente al vapor, una técnica que mantiene el plato ligero y fácilmente digerible. Las hojas de plátano usadas tradicionalmente para envolver se consideran esenciales para la autenticidad del plato — dan un aroma sutil y ligeramente ahumado que el papel de aluminio, aunque práctico, no puede reproducir. Añadir huevo cocido, pescado ahumado o carne picada en el interior varía regionalmente, cada familia teniendo su propia receta transmitida por línea materna.",
+    "fr": "Le moin moin, parfois orthographié moimoi, est considéré comme l'un des plus anciens plats traditionnels nigérians, une méthode pour transformer les haricots à œil noir — une source essentielle et abordable de protéines végétales — en un plat élégant adapté aussi bien aux repas quotidiens qu'aux occasions festives. Le nom vient d'un mot yoruba décrivant le processus de mouture fine des haricots.\n\nContrairement à l'akara, qui est frit, le moin moin est cuit exclusivement à la vapeur, une technique qui garde le plat léger et facilement digestible. Les feuilles de bananier traditionnellement utilisées pour l'emballage sont considérées comme essentielles à l'authenticité du plat — elles donnent un arôme subtil et légèrement fumé que le papier aluminium, bien que pratique, ne peut reproduire. L'ajout d'œuf dur, de poisson fumé ou de viande hachée à l'intérieur varie selon les régions, chaque famille ayant sa propre recette transmise par lignée maternelle.",
+    "de": "Moin Moin, manchmal auch Moimoi geschrieben, gilt als eines der ältesten traditionellen nigerianischen Gerichte, eine Methode, Augenbohnen — eine wesentliche und erschwingliche Quelle pflanzlichen Proteins — in ein elegantes Gericht zu verwandeln, das sich sowohl für Alltagsmahlzeiten als auch für Festtage eignet. Der Name stammt von einem Yoruba-Wort, das den Prozess des feinen Mahlens der Bohnen beschreibt.\n\nAnders als Akara, das frittiert wird, wird Moin Moin ausschließlich gedämpft, eine Technik, die das Gericht leicht und gut verdaulich hält. Die traditionell zum Einwickeln verwendeten Bananenblätter gelten als essenziell für die Authentizität des Gerichts — sie verleihen ein feines, leicht rauchiges Aroma, das Alufolie, obwohl praktisch, nicht reproduzieren kann. Das Hinzufügen von gekochtem Ei, geräuchertem Fisch oder Hackfleisch im Inneren variiert regional, wobei jede Familie ihr eigenes, über die mütterliche Linie weitergegebenes Rezept hat.",
+    "pt": "O moin moin, por vezes escrito moimoi, é considerado um dos mais antigos pratos tradicionais nigerianos, um método de transformar o feijão-fradinho — uma fonte essencial e acessível de proteína vegetal — num prato elegante adequado tanto para refeições do dia a dia como para ocasiões festivas. O nome vem de uma palavra iorubá que descreve o processo de moer finamente o feijão.\n\nAo contrário do akara, que é frito, o moin moin é cozinhado exclusivamente a vapor, uma técnica que mantém o prato leve e facilmente digerível. As folhas de bananeira tradicionalmente usadas para embrulhar são consideradas essenciais para a autenticidade do prato — dão um aroma subtil e ligeiramente defumado que o papel-alumínio, embora prático, não consegue reproduzir. A adição de ovo cozido, peixe defumado ou carne picada no interior varia regionalmente, cada família tendo a sua própria receita transmitida pela linha materna.",
+    "ru": "Мойн мойн, иногда пишется моймой, считается одним из старейших традиционных нигерийских блюд, способом превращения коровьего гороха — важного и доступного источника растительного белка — в изысканное блюдо, подходящее как для повседневных приёмов пищи, так и для праздничных случаев. Название происходит от слова языка йоруба, описывающего процесс тонкого помола бобов.\n\nВ отличие от акары, которая жарится, мойн мойн готовится исключительно на пару — техника, сохраняющая блюдо лёгким и легкоусвояемым. Банановые листья, традиционно используемые для обёртывания, считаются необходимыми для аутентичности блюда — они придают тонкий, слегка дымный аромат, который алюминиевая фольга, при всей своей практичности, воспроизвести не может. Добавление варёного яйца, копчёной рыбы или рубленого мяса внутрь варьируется по регионам, причём каждая семья хранит собственный рецепт, передаваемый по материнской линии.",
+    "ar": "يُعتبر الموين موين، الذي يُكتب أحيانًا موي موي، أحد أقدم الأطباق النيجيرية التقليدية، وهو طريقة لتحويل اللوبيا ذات العين السوداء — مصدر أساسي وميسور التكلفة للبروتين النباتي — إلى طبق أنيق يناسب الوجبات اليومية والمناسبات الاحتفالية على حد سواء. يأتي الاسم من كلمة يوروبا تصف عملية طحن الفول ناعمًا.\n\nخلافًا للأكارا، التي تُقلى، يُطهى الموين موين حصريًا بالبخار، وهي تقنية تحافظ على خفة الطبق وسهولة هضمه. تُعتبر أوراق الموز المستخدمة تقليديًا في التغليف أساسية لأصالة الطبق — فهي تمنح نكهة خفيفة ودخانية قليلًا لا يمكن لورق الألمنيوم، رغم عمليته، أن يحققها. تختلف إضافة البيض المسلوق أو السمك المدخن أو اللحم المفروم بالداخل حسب المنطقة، ولكل عائلة وصفتها الخاصة المتوارثة عبر خط الأم.",
+    "zh": "莫因莫因（有时拼作moimoi）被认为是尼日利亚最古老的传统菜肴之一，是将眉豆——一种重要且实惠的植物蛋白来源——转化为既适合日常用餐又适合节庆场合的精致菜肴的方法。这个名字来自约鲁巴语中描述将豆子磨细过程的词汇。\n\n与油炸的阿卡拉不同，莫因莫因完全采用蒸制方式烹饪，这种技法使菜肴保持清淡易消化。传统上用于包裹的香蕉叶被认为对这道菜的正宗风味至关重要——它们带来一种微妙、略带烟熏的香气，是铝箔虽然实用却无法复制的。在内部加入水煮蛋、熏鱼或肉末的做法因地区而异，每个家庭都有自己代代相传的独特配方，通常通过母系传承。",
+    "ja": "モインモインは、時にモイモイとも綴られ、ナイジェリアの最も古い伝統料理の一つとされ、植物性タンパク質の重要で手頃な供給源であるブラックアイドピーを、日常の食事にも祝いの席にも適したエレガントな料理に変える方法である。この名前は、豆を細かくすりつぶす工程を表すヨルバ語の単語に由来する。\n\n揚げるアカラとは異なり、モインモインは専ら蒸して調理され、この技法が料理を軽く消化しやすい状態に保つ。伝統的に包むのに使われるバナナの葉は、料理の本場らしさに不可欠とされている——アルミホイルは実用的だが再現できない、ほのかにスモーキーな香りを与える。中にゆで卵、燻製魚、ひき肉を加えるかどうかは地域によって異なり、各家庭が母系を通じて受け継がれた独自のレシピを持っている。",
+    "hi": "मोइन मोइन, जिसे कभी-कभी मोइमोई भी लिखा जाता है, नाइजीरिया के सबसे पुराने पारंपरिक व्यंजनों में से एक माना जाता है, काली आंख वाली फलियों — पौधे-आधारित प्रोटीन का एक आवश्यक और किफायती स्रोत — को एक सुंदर व्यंजन में बदलने की एक विधि, जो रोज़मर्रा के भोजन और उत्सव के अवसरों दोनों के लिए उपयुक्त है। नाम एक योरूबा शब्द से आया है जो फलियों को बारीक पीसने की प्रक्रिया का वर्णन करता है।\n\nअकारा के विपरीत, जो तला जाता है, मोइन मोइन विशेष रूप से भाप में पकाया जाता है, एक तकनीक जो व्यंजन को हल्का और आसानी से पचने योग्य बनाए रखती है। पारंपरिक रूप से लपेटने के लिए उपयोग किए जाने वाले केले के पत्ते व्यंजन की प्रामाणिकता के लिए आवश्यक माने जाते हैं — वे एक हल्की, थोड़ी धुएँदार सुगंध देते हैं जिसे एल्युमिनियम फॉयल, व्यावहारिक होने के बावजूद, दोहरा नहीं सकता। अंदर उबला अंडा, स्मोक्ड मछली या कीमा मांस जोड़ना क्षेत्रीय रूप से भिन्न होता है, हर परिवार का अपना नुस्खा मातृ रेखा से चला आता है।",
+    "tr": "Bazen moimoi olarak da yazılan moin moin, Nijerya'nın en eski geleneksel yemeklerinden biri olarak kabul edilir; bitkisel proteinin temel ve uygun fiyatlı bir kaynağı olan börülceyi, hem günlük öğünlere hem de bayram vesilelerine uygun zarif bir yemeğe dönüştürme yöntemidir. İsim, fasulyeleri ince öğütme sürecini tanımlayan bir Yoruba kelimesinden gelir.\n\nKızartılan akaranın aksine, moin moin yalnızca buğulanarak pişirilir; bu teknik yemeği hafif ve kolay sindirilebilir tutar. Geleneksel olarak sarmak için kullanılan muz yaprakları, yemeğin özgünlüğü için gerekli kabul edilir — alüminyum folyonun, pratik olmasına rağmen yeniden üretemediği, hafif, biraz dumanlı bir aroma verirler. İçine haşlanmış yumurta, füme balık veya kıyma eklenmesi bölgeye göre değişir; her ailenin anne tarafından aktarılan kendi tarifi vardır.",
+    "it": "Il moin moin, a volte scritto moimoi, è considerato uno dei più antichi piatti tradizionali nigeriani, un metodo per trasformare i fagioli dall'occhio — una fonte essenziale ed economica di proteine vegetali — in un piatto elegante adatto sia ai pasti quotidiani che alle occasioni festive. Il nome deriva da una parola yoruba che descrive il processo di macinazione fine dei fagioli.\n\nA differenza dell'akara, che viene fritto, il moin moin viene cotto esclusivamente al vapore, una tecnica che mantiene il piatto leggero e facilmente digeribile. Le foglie di banano tradizionalmente usate per avvolgerlo sono considerate essenziali per l'autenticità del piatto — donano un aroma sottile e leggermente affumicato che la carta stagnola, per quanto pratica, non può riprodurre. L'aggiunta di uovo sodo, pesce affumicato o carne macinata all'interno varia a seconda della regione, con ogni famiglia che custodisce la propria ricetta tramandata per via materna.",
+    "ko": "때때로 모이모이라고도 표기되는 모인 모인은 나이지리아에서 가장 오래된 전통 요리 중 하나로 여겨지며, 식물성 단백질의 필수적이고 저렴한 공급원인 블랙아이드피를 일상 식사와 축하 행사 모두에 어울리는 우아한 요리로 변화시키는 방법이다. 이 이름은 콩을 곱게 가는 과정을 묘사하는 요루바어 단어에서 유래했다.\n\n튀기는 아카라와 달리 모인 모인은 오로지 찌는 방식으로만 조리되는데, 이 기법은 요리를 가볍고 소화하기 쉽게 유지시켜준다. 전통적으로 포장에 사용되는 바나나 잎은 이 요리의 정통성에 필수적인 것으로 여겨진다 — 알루미늄 포일이 실용적이긴 하지만 재현할 수 없는, 은은하고 살짝 스모키한 향을 낸다. 속에 삶은 달걀, 훈제 생선, 다진 고기를 넣는 것은 지역에 따라 다르며, 각 가정마다 모계를 통해 전해 내려오는 고유한 레시피를 가지고 있다."
+  },
+  "meta": {
+    "time": 90,
+    "costRon": 14,
+    "tags": ["vegetarian", "high-protein", "budget"],
+    "desc": {
+      "ro": "Budincă nigeriană aburită din fasole ochi-negru, cu ardei, ceapă și ou fiert în centru.",
+      "en": "Steamed Nigerian black-eyed pea pudding with pepper, onion and a boiled egg inside.",
+      "es": "Pudín nigeriano de frijoles de ojo negro al vapor con pimiento, cebolla y huevo cocido en el centro.",
+      "fr": "Pudding nigérian de haricots à œil noir à la vapeur, avec poivron, oignon et œuf dur au centre.",
+      "de": "Gedämpfter nigerianischer Augenbohnenpudding mit Paprika, Zwiebel und gekochtem Ei im Inneren.",
+      "pt": "Pudim nigeriano de feijão-fradinho no vapor, com pimentão, cebola e ovo cozido no centro.",
+      "ru": "Нигерийский паровой пудинг из коровьего гороха с перцем, луком и варёным яйцом внутри.",
+      "ar": "بودينغ لوبيا ذات عين سوداء نيجيري مطهو بالبخار مع الفلفل والبصل وبيضة مسلوقة بالداخل.",
+      "zh": "尼日利亚蒸眉豆布丁，配彩椒、洋葱，内藏水煮蛋。",
+      "ja": "ピーマン、玉ねぎ、中にゆで卵を入れたナイジェリア風蒸しブラックアイドピープリン。",
+      "hi": "मिर्च, प्याज़ और अंदर उबले अंडे के साथ भाप में पकी नाइजीरियाई काली आंख वाली फलियों की पुडिंग।",
+      "tr": "Biber, soğan ve içinde haşlanmış yumurtayla buğulanmış Nijerya usulü börülce pudingi.",
+      "it": "Budino nigeriano di fagioli dall'occhio al vapore, con peperone, cipolla e uovo sodo all'interno.",
+      "ko": "고추, 양파와 속에 삶은 달걀을 넣은 나이지리아식 찐 블랙아이드피 푸딩."
+    }
+  }
+}
