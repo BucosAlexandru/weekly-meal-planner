@@ -8,22 +8,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      372,
-      362,
-      361,
-      301,
-      369,
-      359,
-      266
+      329,
+      328,
+      330,
+      331,
+      334,
+      321,
+      319
     ],
     "dinnerIds": [
-      264,
-      263,
-      271,
-      272,
-      269,
-      200,
-      201
+      337,
+      326,
+      324,
+      218,
+      228,
+      229,
+      217
     ]
   },
   "asia": {
@@ -32,22 +32,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      160,
-      165,
-      114,
-      176,
-      169,
-      174,
-      110
+      239,
+      226,
+      380,
+      381,
+      382,
+      9,
+      407
     ],
     "dinnerIds": [
-      112,
-      182,
-      183,
-      180,
-      23,
-      181,
-      186
+      406,
+      5,
+      405,
+      404,
+      85,
+      87,
+      86
     ]
   },
   "buget": {
@@ -61,22 +61,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      148,
+      133,
+      134,
       100,
-      171,
-      146,
-      76,
-      144,
+      139,
+      138,
+      293,
       116
     ],
     "dinnerIds": [
       297,
       294,
-      238,
-      293,
-      230,
-      231,
-      232
+      223,
+      219,
+      56,
+      274,
+      275
     ]
   },
   "tur-mondial": {
@@ -85,22 +85,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      36,
-      37,
-      32,
-      33,
-      210,
-      31,
-      203
+      256,
+      227,
+      226,
+      246,
+      229,
+      245,
+      228
     ],
     "dinnerIds": [
-      214,
-      215,
-      207,
-      298,
-      219,
-      235,
-      261
+      5,
+      361,
+      4,
+      7,
+      364,
+      9,
+      11
     ]
   },
   "latin": {
@@ -109,22 +109,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      387,
-      384,
-      385,
-      18,
       306,
+      187,
+      18,
+      109,
       36,
-      187
+      104,
+      117
     ],
     "dinnerIds": [
-      109,
-      104,
-      117,
       113,
       111,
+      8,
       310,
-      313
+      313,
+      315,
+      317
     ]
   },
   "vegetarian": {
@@ -133,22 +133,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      378,
-      377,
-      375,
-      372,
-      179,
-      199,
-      161
-    ],
-    "dinnerIds": [
       42,
-      231,
-      25,
       40,
       76,
+      413,
+      14,
       275,
-      285
+      269
+    ],
+    "dinnerIds": [
+      272,
+      10,
+      12,
+      266,
+      319,
+      315,
+      382
     ]
   },
   "rapid": {
@@ -157,22 +157,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      359,
-      174,
+      19,
       107,
-      176,
       114,
       109,
-      124
+      146,
+      124,
+      130
     ],
     "dinnerIds": [
-      41,
-      25,
-      59,
-      7,
-      1,
-      8,
-      409
+      409,
+      406,
+      263,
+      215,
+      216,
+      211,
+      203
     ]
   },
   "iarna-confort": {
@@ -181,22 +181,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      200,
-      201,
-      238,
-      217,
-      190,
-      134,
-      216
+      17,
+      14,
+      10,
+      40,
+      42,
+      52,
+      20
     ],
     "dinnerIds": [
-      20,
-      191,
-      135,
+      45,
       26,
+      57,
       27,
-      178,
-      80
+      56,
+      31,
+      54
     ]
   },
   "vara-usoara": {
@@ -205,21 +205,21 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      215,
+      218,
+      266,
       194,
       407,
-      10,
-      227,
-      11,
-      226,
-      12
+      2,
+      5
     ],
     "dinnerIds": [
-      228,
-      14,
+      4,
       232,
-      2,
-      5,
-      218,
+      228,
+      85,
+      227,
+      226,
       246
     ]
   },
@@ -229,12 +229,12 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": true,
     "lunchIds": [
-      229,
-      228
+      203,
+      143
     ],
     "dinnerIds": [
-      301,
-      319
+      140,
+      271
     ]
   }
 };
