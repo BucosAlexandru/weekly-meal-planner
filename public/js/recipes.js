@@ -52603,5 +52603,317 @@ export const recipes = [
       it: "I lamington prendono il nome da Lord Lamington, governatore del Queensland agli inizi del XX secolo, anche se la storia esatta della loro invenzione resta contesa — una versione racconta che il suo cuoco improvvisò il dolce per ospiti inaspettati. La semplicità della ricetta, che usa solo pan di Spagna del giorno prima, cioccolato e cocco, l'ha resa facile da riprodurre in qualsiasi cucina.\n\nOggi, il 21 luglio è celebrato ufficialmente come National Lamington Day in Australia, e la torta resta una delle vendite di beneficenza più popolari nelle scuole e nelle organizzazioni caritatevoli.",
       ko: "라밍턴은 20세기 초 퀸즐랜드 총독이었던 라밍턴 경의 이름을 딴 것이지만, 정확한 탄생 이야기는 여전히 논쟁거리다 — 한 설에 따르면 그의 요리사가 예고 없이 온 손님을 위해 즉흥적으로 만든 디저트라고 한다. 하루 지난 스펀지, 초콜릿, 코코넛만 사용하는 레시피의 단순함 덕분에 어느 부엌에서든 쉽게 재현할 수 있었다.\n\n오늘날 7월 21일은 호주에서 공식적으로 전국 라밍턴의 날로 기념되며, 이 케이크는 학교와 자선 단체의 모금 판매에서 여전히 가장 인기 있는 품목 중 하나다."
     }
+  },
+  {
+    id: 429,
+    servings: 4,
+    tipType: "def",
+    pairingsType: "def",
+    nutrition: { cal: 620, prot: 28, carb: 35, fat: 40, fib: 3 },
+    origin: {
+      ro: "Elveția", en: "Switzerland", es: "Suiza", fr: "Suisse", de: "Schweiz",
+      pt: "Suíça", ru: "Швейцария", ar: "سويسرا", zh: "瑞士", ja: "スイス",
+      hi: "स्विट्ज़रलैंड", tr: "İsviçre", it: "Svizzera", ko: "스위스"
+    },
+    name: {
+      ro: "Raclette", en: "Raclette", es: "Raclette", fr: "Raclette", de: "Raclette",
+      pt: "Raclette", ru: "Раклет", ar: "راكليت", zh: "拉可雷特融化奶酪", ja: "ラクレット",
+      hi: "रैक्लेट", tr: "Raclette", it: "Raclette", ko: "라클렛"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🧀", t: "Un fel de mâncare social", d: "Raclette e mai puțin o rețetă, mai mult un ritual de masă lungă, petrecută în jurul unui grătar comun." },
+        { icon: "🥔", t: "Cartofii mici sunt esențiali", d: "Cartofi mici, fierți cu coajă, oferă baza perfectă pentru brânza topită turnată deasupra." },
+        { icon: "🔥", t: "Brânza se topește direct la masă", d: "Fiecare felie de brânză se topește individual sub un grătar mic, apoi se răzuiește direct pe farfurie." },
+        { icon: "🥒", t: "Murăturile echilibrează grăsimea", d: "Castraveciori murați și cepe mici murate taie din bogăția brânzei topite." }
+      ],
+      en: [
+        { icon: "🧀", t: "A social meal", d: "Raclette is less a recipe and more a ritual of a long meal shared around a communal grill." },
+        { icon: "🥔", t: "Small potatoes are essential", d: "Small potatoes, boiled in their skins, give the perfect base for the melted cheese poured over them." },
+        { icon: "🔥", t: "The cheese melts right at the table", d: "Each slice of cheese melts individually under a small grill, then is scraped directly onto the plate." },
+        { icon: "🥒", t: "Pickles cut through the richness", d: "Cornichons and small pickled onions cut through the richness of the melted cheese." }
+      ],
+      es: [
+        { icon: "🧀", t: "Una comida social", d: "El raclette es menos una receta y más un ritual de comida larga compartida alrededor de una parrilla común." },
+        { icon: "🥔", t: "Las papas pequeñas son esenciales", d: "Papas pequeñas, cocidas con piel, dan la base perfecta para el queso fundido vertido encima." },
+        { icon: "🔥", t: "El queso se funde en la mesa", d: "Cada rebanada de queso se funde individualmente bajo una pequeña parrilla y luego se raspa directamente al plato." },
+        { icon: "🥒", t: "Los encurtidos equilibran la grasa", d: "Pepinillos y cebollitas encurtidas cortan la riqueza del queso fundido." }
+      ],
+      fr: [
+        { icon: "🧀", t: "Un repas convivial", d: "La raclette est moins une recette qu'un rituel de long repas partagé autour d'un appareil commun." },
+        { icon: "🥔", t: "Les petites pommes de terre sont essentielles", d: "De petites pommes de terre cuites en robe des champs offrent la base parfaite pour le fromage fondu versé dessus." },
+        { icon: "🔥", t: "Le fromage fond directement à table", d: "Chaque tranche de fromage fond individuellement sous un petit appareil, puis est raclée directement sur l'assiette." },
+        { icon: "🥒", t: "Les cornichons équilibrent le gras", d: "Cornichons et petits oignons au vinaigre viennent couper la richesse du fromage fondu." }
+      ],
+      de: [
+        { icon: "🧀", t: "Ein geselliges Essen", d: "Raclette ist weniger ein Rezept als ein Ritual eines langen Essens rund um einen gemeinsamen Grill." },
+        { icon: "🥔", t: "Kleine Kartoffeln sind entscheidend", d: "Kleine, in der Schale gekochte Kartoffeln bilden die perfekte Basis für den darüber geschmolzenen Käse." },
+        { icon: "🔥", t: "Der Käse schmilzt direkt am Tisch", d: "Jede Käsescheibe schmilzt einzeln unter einem kleinen Ofen und wird dann direkt auf den Teller geschabt." },
+        { icon: "🥒", t: "Eingelegtes gleicht die Fülle aus", d: "Cornichons und kleine Silberzwiebeln gleichen die Reichhaltigkeit des geschmolzenen Käses aus." }
+      ],
+      pt: [
+        { icon: "🧀", t: "Uma refeição social", d: "O raclette é menos uma receita e mais um ritual de refeição longa partilhada em torno de uma grelha comum." },
+        { icon: "🥔", t: "As batatas pequenas são essenciais", d: "Batatas pequenas, cozidas com pele, dão a base perfeita para o queijo derretido despejado por cima." },
+        { icon: "🔥", t: "O queijo derrete diretamente à mesa", d: "Cada fatia de queijo derrete individualmente sob uma pequena grelha e depois é raspada diretamente no prato." },
+        { icon: "🥒", t: "Os picles equilibram a gordura", d: "Cornichons e cebolinhas em conserva cortam a riqueza do queijo derretido." }
+      ],
+      ru: [
+        { icon: "🧀", t: "Общее застолье", d: "Раклет — это скорее ритуал долгой трапезы вокруг общего гриля, чем просто рецепт." },
+        { icon: "🥔", t: "Мелкий картофель необходим", d: "Мелкий картофель, отваренный в кожуре, служит идеальной основой для расплавленного сверху сыра." },
+        { icon: "🔥", t: "Сыр плавится прямо за столом", d: "Каждый ломтик сыра плавится отдельно под небольшим грилем, а затем соскабливается прямо на тарелку." },
+        { icon: "🥒", t: "Маринады уравновешивают жирность", d: "Корнишоны и маленький маринованный лук смягчают насыщенность расплавленного сыра." }
+      ],
+      ar: [
+        { icon: "🧀", t: "وجبة اجتماعية", d: "الراكليت ليس وصفة بقدر ما هو طقس وجبة طويلة تُشارَك حول شواية مشتركة." },
+        { icon: "🥔", t: "البطاطا الصغيرة أساسية", d: "البطاطا الصغيرة المسلوقة بقشرها توفر الأساس المثالي للجبن المذاب المسكوب فوقها." },
+        { icon: "🔥", t: "الجبن يذوب مباشرة على الطاولة", d: "تذوب كل شريحة جبن بشكل فردي تحت شواية صغيرة ثم تُكشط مباشرة على الطبق." },
+        { icon: "🥒", t: "المخللات توازن الدسم", d: "الخيار المخلل والبصل الصغير المخلل يوازنان غنى الجبن المذاب." }
+      ],
+      zh: [
+        { icon: "🧀", t: "一场社交聚餐", d: "拉可雷特与其说是一道菜，不如说是围坐在共用烤炉旁的悠长聚餐仪式。" },
+        { icon: "🥔", t: "小土豆是关键", d: "带皮煮的小土豆是浇上融化奶酪的完美基底。" },
+        { icon: "🔥", t: "奶酪就在餐桌上融化", d: "每片奶酪在小型烤炉下单独融化，然后直接刮到盘子里。" },
+        { icon: "🥒", t: "腌菜平衡油腻", d: "小黄瓜和小洋葱腌菜能中和融化奶酪的浓郁感。" }
+      ],
+      ja: [
+        { icon: "🧀", t: "みんなで囲む食事", d: "ラクレットはレシピというより、共同のグリルを囲む長い食事の儀式に近い。" },
+        { icon: "🥔", t: "小さなじゃがいもが欠かせない", d: "皮付きでゆでた小さなじゃがいもが、上にかける溶けたチーズの完璧な土台になる。" },
+        { icon: "🔥", t: "チーズはテーブルでそのまま溶かす", d: "各スライスのチーズは小さなグリルの下で個別に溶かし、皿に直接かき出す。" },
+        { icon: "🥒", t: "ピクルスが濃厚さを引き締める", d: "コルニッションと小さなピクルスオニオンが溶けたチーズの濃厚さを引き締める。" }
+      ],
+      hi: [
+        { icon: "🧀", t: "एक सामाजिक भोजन", d: "रैक्लेट एक रेसिपी से कम और साझा ग्रिल के चारों ओर लंबे भोजन की एक रस्म ज़्यादा है।" },
+        { icon: "🥔", t: "छोटे आलू जरूरी हैं", d: "छिलके सहित उबले छोटे आलू ऊपर डाले गए पिघले चीज़ के लिए एक बिल्कुल सही आधार बनते हैं।" },
+        { icon: "🔥", t: "चीज़ मेज पर ही पिघलता है", d: "चीज़ की हर स्लाइस छोटी ग्रिल के नीचे अलग-अलग पिघलती है, फिर सीधे प्लेट पर खुरची जाती है।" },
+        { icon: "🥒", t: "अचार चिकनाई को संतुलित करते हैं", d: "छोटे खीरे और अचार वाले प्याज़ पिघले चीज़ की चिकनाई को संतुलित करते हैं।" }
+      ],
+      tr: [
+        { icon: "🧀", t: "Sosyal bir yemek", d: "Raclette bir tarifden çok, ortak bir ızgara etrafında paylaşılan uzun bir yemek ritüelidir." },
+        { icon: "🥔", t: "Küçük patatesler şarttır", d: "Kabuğuyla haşlanmış küçük patatesler, üzerine dökülen eritilmiş peynir için mükemmel bir taban oluşturur." },
+        { icon: "🔥", t: "Peynir doğrudan masada erir", d: "Her peynir dilimi küçük bir ızgaranın altında ayrı ayrı erir, ardından doğrudan tabağa kazınır." },
+        { icon: "🥒", t: "Turşular ağırlığı dengeler", d: "Kornişon turşusu ve küçük turşu soğanları eritilmiş peynirin ağırlığını dengeler." }
+      ],
+      it: [
+        { icon: "🧀", t: "Un pasto conviviale", d: "La raclette è più un rituale di un lungo pasto condiviso attorno a una griglia comune che una ricetta." },
+        { icon: "🥔", t: "Le patate piccole sono essenziali", d: "Patate piccole, bollite con la buccia, offrono la base perfetta per il formaggio fuso versato sopra." },
+        { icon: "🔥", t: "Il formaggio si scioglie direttamente a tavola", d: "Ogni fetta di formaggio si scioglie individualmente sotto una piccola griglia, poi viene raschiata direttamente sul piatto." },
+        { icon: "🥒", t: "I sottaceti bilanciano la grassezza", d: "Cetriolini e cipolline sottaceto tagliano la ricchezza del formaggio fuso." }
+      ],
+      ko: [
+        { icon: "🧀", t: "함께 나누는 식사", d: "라클렛은 레시피라기보다 공용 그릴을 둘러싼 긴 식사의 의식에 가깝다." },
+        { icon: "🥔", t: "작은 감자가 필수", d: "껍질째 삶은 작은 감자가 위에 붓는 녹은 치즈에 완벽한 바탕이 된다." },
+        { icon: "🔥", t: "치즈는 식탁에서 바로 녹인다", d: "치즈 조각은 작은 그릴 아래에서 개별적으로 녹인 뒤 바로 접시에 긁어낸다." },
+        { icon: "🥒", t: "피클이 느끼함을 잡아준다", d: "코르니숑과 작은 피클 양파가 녹은 치즈의 느끼함을 잡아준다." }
+      ]
+    },
+    ingredients: {
+      ro: ["800g brânză raclette, feliată", "800g cartofi mici", "sare grunjoasă", "200g cornișoni", "150g cepe mici murate", "150g carne uscată de vită (viande séchée)", "piper negru proaspăt măcinat", "unt pentru tigaie", "pâine crocantă"],
+      en: ["800g raclette cheese, sliced", "800g small potatoes", "coarse salt", "200g cornichons", "150g pickled pearl onions", "150g dried beef (viande séchée)", "freshly ground black pepper", "butter for the pan", "crusty bread"],
+      es: ["800g de queso raclette, en rodajas", "800g de papas pequeñas", "sal gruesa", "200g de pepinillos", "150g de cebollitas encurtidas", "150g de cecina seca", "pimienta negra recién molida", "mantequilla para la sartén", "pan crujiente"],
+      fr: ["800g de fromage à raclette, tranché", "800g de petites pommes de terre", "gros sel", "200g de cornichons", "150g de petits oignons au vinaigre", "150g de viande séchée", "poivre noir fraîchement moulu", "beurre pour la poêle", "pain croustillant"],
+      de: ["800g Raclettekäse, in Scheiben", "800g kleine Kartoffeln", "grobes Salz", "200g Cornichons", "150g eingelegte Perlzwiebeln", "150g Bündnerfleisch", "frisch gemahlener schwarzer Pfeffer", "Butter für die Pfanne", "knuspriges Brot"],
+      pt: ["800g de queijo raclette, fatiado", "800g de batatas pequenas", "sal grosso", "200g de cornichons", "150g de cebolinhas em conserva", "150g de carne seca (viande séchée)", "pimenta-do-reino moída na hora", "manteiga para a frigideira", "pão crocante"],
+      ru: ["800г сыра раклет, нарезанного", "800г мелкого картофеля", "крупная соль", "200г корнишонов", "150г маринованного мелкого лука", "150г вяленой говядины", "свежемолотый чёрный перец", "масло для сковороды", "хрустящий хлеб"],
+      ar: ["800غ جبن راكليت، مقطّع شرائح", "800غ بطاطا صغيرة", "ملح خشن", "200غ خيار مخلل صغير", "150غ بصل صغير مخلل", "150غ لحم بقري مجفف", "فلفل أسود مطحون طازج", "زبدة للمقلاة", "خبز مقرمش"],
+      zh: ["800克拉可雷特奶酪，切片", "800克小土豆", "粗盐", "200克小黄瓜", "150克腌珍珠洋葱", "150克风干牛肉", "现磨黑胡椒", "煎锅用黄油", "脆皮面包"],
+      ja: ["ラクレットチーズ800g（スライス）", "小さいじゃがいも800g", "粗塩", "コルニッション200g", "ピクルスパールオニオン150g", "乾燥ビーフ150g", "挽きたて黒こしょう", "フライパン用バター", "パリッとしたパン"],
+      hi: ["800 ग्राम रैक्लेट चीज़, कटा हुआ", "800 ग्राम छोटे आलू", "मोटा नमक", "200 ग्राम कॉर्निशोन", "150 ग्राम अचार वाले छोटे प्याज़", "150 ग्राम सूखा गोमांस", "ताज़ी पिसी काली मिर्च", "पैन के लिए मक्खन", "कुरकुरी ब्रेड"],
+      tr: ["800g raclette peyniri, dilimlenmiş", "800g küçük patates", "kaba tuz", "200g kornişon turşusu", "150g turşu inci soğanı", "150g kurutulmuş sığır eti", "taze çekilmiş karabiber", "tava için tereyağı", "çıtır ekmek"],
+      it: ["800g di formaggio raclette, a fette", "800g di patate piccole", "sale grosso", "200g di cetriolini", "150g di cipolline sottaceto", "150g di carne essiccata (viande séchée)", "pepe nero macinato fresco", "burro per la padella", "pane croccante"],
+      ko: ["라클렛 치즈 800g, 슬라이스", "작은 감자 800g", "굵은 소금", "코르니숑 200g", "피클 방울양파 150g", "말린 소고기(비앙드 세셰) 150g", "갓 갈은 흑후추", "팬용 버터", "바삭한 빵"]
+    },
+    howIsMade: {
+      ro: "Se fierb cartofii mici în apă cu sare grunjoasă până devin fragezi, apoi se țin calzi. Se taie brânza raclette în porții potrivite pentru tigăile mici de grătar individuale. Se topește fiecare porție de brânză sub grătarul de raclette sau într-o tigaie mică până devine spumoasă și ușor rumenită deasupra. Se răzuiește brânza topită direct peste cartofii calzi din fiecare farfurie. Se aranjează cornișonii, cepele murate și carnea uscată alături de brânză și cartofi. Se condimentează cu piper negru și se servește imediat cât brânza e încă topită. Se repetă cu noi porții de brânză pe măsură ce invitații continuă să mănânce, păstrând masa în mișcare.",
+      en: "Boil the small potatoes in salted water until tender, then keep them warm. Cut the raclette cheese into portions sized for the individual grill pans. Melt each portion of cheese under the raclette grill or in a small pan until bubbling and lightly browned on top. Scrape the melted cheese directly over the warm potatoes on each plate. Arrange the cornichons, pickled onions, and dried beef alongside the cheese and potatoes. Season with black pepper and serve immediately while the cheese is still molten. Repeat with more cheese portions as guests continue eating, keeping the meal going at the table.",
+      es: "Cuece las papas pequeñas en agua con sal gruesa hasta que estén tiernas y mantenlas calientes. Corta el queso raclette en porciones del tamaño de las sartenes individuales de la parrilla. Funde cada porción de queso bajo la parrilla de raclette o en una sartén pequeña hasta que burbujee y se dore ligeramente por encima. Raspa el queso fundido directamente sobre las papas calientes en cada plato. Coloca los pepinillos, las cebollitas encurtidas y la cecina junto al queso y las papas. Sazona con pimienta negra y sirve de inmediato mientras el queso aún está derretido. Repite con más porciones de queso mientras los invitados siguen comiendo, manteniendo la comida en marcha.",
+      fr: "Faites cuire les petites pommes de terre dans de l'eau avec du gros sel jusqu'à ce qu'elles soient tendres, puis gardez-les au chaud. Coupez le fromage à raclette en portions adaptées aux petites poêles individuelles. Faites fondre chaque portion de fromage sous l'appareil à raclette ou dans une petite poêle jusqu'à ce qu'il bouillonne et dore légèrement dessus. Raclez le fromage fondu directement sur les pommes de terre chaudes de chaque assiette. Disposez les cornichons, les oignons au vinaigre et la viande séchée à côté du fromage et des pommes de terre. Assaisonnez de poivre noir et servez aussitôt pendant que le fromage est encore fondu. Répétez avec d'autres portions de fromage pendant que les convives continuent de manger, en gardant le repas animé.",
+      de: "Die kleinen Kartoffeln in gesalzenem Wasser garkochen, bis sie weich sind, und warmhalten. Den Raclettekäse in Portionen schneiden, die in die kleinen Grillpfännchen passen. Jede Käseportion unter dem Raclettegrill oder in einer kleinen Pfanne schmelzen, bis sie blubbert und obenauf leicht gebräunt ist. Den geschmolzenen Käse direkt über die warmen Kartoffeln auf jedem Teller schaben. Cornichons, eingelegte Zwiebeln und Bündnerfleisch neben Käse und Kartoffeln anrichten. Mit schwarzem Pfeffer würzen und sofort servieren, solange der Käse noch flüssig ist. Mit weiteren Käseportionen wiederholen, während die Gäste weiteressen, damit die Mahlzeit am Tisch weitergeht.",
+      pt: "Cozinhe as batatas pequenas em água com sal grosso até ficarem macias e mantenha-as quentes. Corte o queijo raclette em porções do tamanho das frigideiras individuais. Derreta cada porção de queijo sob a grelha de raclette ou numa frigideira pequena até borbulhar e dourar levemente por cima. Raspe o queijo derretido diretamente sobre as batatas quentes em cada prato. Disponha os cornichons, as cebolinhas em conserva e a carne seca junto ao queijo e às batatas. Tempere com pimenta preta e sirva imediatamente enquanto o queijo ainda está derretido. Repita com mais porções de queijo enquanto os convidados continuam a comer, mantendo a refeição em andamento.",
+      ru: "Отварите мелкий картофель в подсоленной воде до готовности, затем держите его тёплым. Нарежьте сыр раклет на порции, подходящие по размеру для маленьких сковородок гриля. Расплавьте каждую порцию сыра под грилем раклет или на маленькой сковороде до пузырьков и лёгкой румяности сверху. Соскребите расплавленный сыр прямо на тёплый картофель на каждой тарелке. Разложите корнишоны, маринованный лук и вяленую говядину рядом с сыром и картофелем. Приправьте чёрным перцем и подавайте немедленно, пока сыр ещё расплавлен. Повторяйте с новыми порциями сыра, пока гости продолжают есть, поддерживая трапезу за столом.",
+      ar: "اسلقي البطاطا الصغيرة في ماء مملح حتى تصبح طرية، ثم أبقيها دافئة. قطّعي جبن الراكليت إلى حصص بحجم مقالي الشواية الفردية. أذيبي كل حصة من الجبن تحت شواية الراكليت أو في مقلاة صغيرة حتى تفور وتصبح ذهبية خفيفة من الأعلى. اكشطي الجبن المذاب مباشرة فوق البطاطا الدافئة في كل طبق. رتّبي الخيار المخلل والبصل المخلل واللحم المجفف بجانب الجبن والبطاطا. تبّلي بالفلفل الأسود وقدّمي فوراً بينما الجبن لا يزال ذائباً. كرري مع حصص أخرى من الجبن بينما يستمر الضيوف بالأكل، للحفاظ على استمرار الوجبة على الطاولة.",
+      zh: "将小土豆放入加了粗盐的水中煮至软熟，保温备用。将拉可雷特奶酪切成适合个人烤盘大小的分量。在拉可雷特烤炉下或小平底锅中融化每份奶酪，至冒泡且表面微微焦黄。将融化的奶酪直接刮到每个盘子里的热土豆上。将小黄瓜、腌洋葱和风干牛肉摆放在奶酪和土豆旁边。用黑胡椒调味，趁奶酪还在融化状态时立即享用。随着客人继续用餐，不断重复融化新的奶酪分量，让这顿饭持续进行。",
+      ja: "小さいじゃがいもを粗塩を加えた湯で柔らかくなるまでゆで、温かく保つ。ラクレットチーズを個々のグリル鍋のサイズに合わせて切り分ける。ラクレットグリルの下、または小さなフライパンで各チーズを泡立ち表面が軽く色づくまで溶かす。溶けたチーズを各皿の温かいじゃがいもの上に直接かき出す。コルニッション、ピクルスオニオン、乾燥ビーフをチーズとじゃがいものそばに盛り付ける。黒こしょうで味を整え、チーズがまだ溶けているうちにすぐ提供する。ゲストが食べ続ける間、さらにチーズを溶かして繰り返し、食事を続ける。",
+      hi: "छोटे आलू को मोटे नमक वाले पानी में नरम होने तक उबालें, फिर गरम रखें। रैक्लेट चीज़ को अलग-अलग ग्रिल पैन के आकार के टुकड़ों में काटें। हर टुकड़ा चीज़ को रैक्लेट ग्रिल के नीचे या छोटे पैन में तब तक पिघलाएं जब तक उबाल न आए और ऊपर हल्का भूरा न हो जाए। पिघला चीज़ हर प्लेट के गरम आलू पर सीधे खुरचें। कॉर्निशोन, अचार प्याज़ और सूखा गोमांस चीज़ और आलू के साथ सजाएं। काली मिर्च से स्वाद दें और चीज़ के पिघले रहते तुरंत परोसें। मेहमानों के खाना जारी रखने पर और चीज़ के टुकड़ों के साथ दोहराएं, मेज पर भोजन जारी रखते हुए।",
+      tr: "Küçük patatesleri kaba tuzlu suda yumuşayana kadar haşlayın, ardından sıcak tutun. Raclette peynirini ayrı ayrı ızgara tavalarına uygun porsiyonlara kesin. Her peynir porsiyonunu raclette ızgarasının altında veya küçük bir tavada köpürüp üstü hafifçe kızarana kadar eritin. Eritilmiş peyniri her tabaktaki sıcak patateslerin üzerine doğrudan kazıyın. Kornişon turşusunu, turşu soğanlarını ve kurutulmuş sığır etini peynir ve patateslerin yanına dizin. Karabiberle tatlandırın ve peynir hâlâ eriyikken hemen servis edin. Misafirler yemeye devam ederken daha fazla peynir porsiyonuyla tekrarlayarak yemeği masada sürdürün.",
+      it: "Lessa le patate piccole in acqua con sale grosso finché non sono tenere, poi tienile calde. Taglia il formaggio raclette in porzioni della dimensione delle padelline individuali. Sciogli ogni porzione di formaggio sotto la griglia raclette o in una piccola padella finché non gorgoglia e si dora leggermente in superficie. Raschia il formaggio fuso direttamente sulle patate calde in ogni piatto. Disponi cetriolini, cipolline sottaceto e carne essiccata accanto al formaggio e alle patate. Condisci con pepe nero e servi subito mentre il formaggio è ancora fuso. Ripeti con altre porzioni di formaggio man mano che gli ospiti continuano a mangiare, tenendo viva la tavolata.",
+      ko: "작은 감자를 굵은 소금을 넣은 물에 부드러워질 때까지 삶은 뒤 따뜻하게 보관한다. 라클렛 치즈를 개인용 그릴팬 크기에 맞게 자른다. 각 치즈 조각을 라클렛 그릴 아래나 작은 팬에서 보글거리고 위가 살짝 갈색이 될 때까지 녹인다. 녹은 치즈를 각 접시의 따뜻한 감자 위에 바로 긁어 올린다. 코르니숑, 피클 양파, 말린 소고기를 치즈와 감자 옆에 놓는다. 흑후추로 간하고 치즈가 아직 녹아 있을 때 바로 낸다. 손님들이 계속 먹는 동안 더 많은 치즈 조각으로 반복하며 식탁의 식사를 이어간다."
+    },
+    originText: {
+      ro: "Raclette își are originea în cantoanele muntoase din Valais, unde păstorii elvețieni obișnuiau să topească bucăți de brânză lângă foc și să răzuiască partea topită pe pâine sau cartofi — numele vine chiar de la verbul francez 'racler', a răzui. Practica veche de secole a devenit oficial recunoscută sub numele actual abia în 1874.\n\nAstăzi, aparatele electrice de raclette au înlocuit focul deschis în majoritatea caselor, dar spiritul rămâne neschimbat: o masă lungă, socială, în jurul căreia toată lumea își topește propriile porții.",
+      en: "Raclette originates from the mountain cantons of Valais, where Swiss herders used to melt chunks of cheese by the fire and scrape the melted part onto bread or potatoes — the name comes from the French verb 'racler', to scrape. The centuries-old practice was only officially recognised under its current name in 1874.\n\nToday, electric raclette grills have replaced the open fire in most homes, but the spirit remains unchanged: a long, social meal where everyone melts their own portions.",
+      es: "El raclette tiene su origen en los cantones montañosos de Valais, donde los pastores suizos solían derretir trozos de queso junto al fuego y raspar la parte fundida sobre pan o papas — el nombre viene del verbo francés 'racler', raspar. Esta práctica centenaria solo fue reconocida oficialmente con su nombre actual en 1874.\n\nHoy, las parrillas eléctricas de raclette han reemplazado el fuego abierto en la mayoría de los hogares, pero el espíritu sigue igual: una comida larga y social donde cada uno funde sus propias porciones.",
+      fr: "La raclette trouve son origine dans les cantons montagneux du Valais, où les bergers suisses faisaient fondre des morceaux de fromage près du feu et raclaient la partie fondue sur du pain ou des pommes de terre — le nom vient du verbe français 'racler'. Cette pratique séculaire n'a été officiellement reconnue sous son nom actuel qu'en 1874.\n\nAujourd'hui, les appareils électriques à raclette ont remplacé le feu ouvert dans la plupart des foyers, mais l'esprit reste le même : un long repas convivial où chacun fait fondre ses propres portions.",
+      de: "Raclette stammt aus den Bergkantonen des Wallis, wo Schweizer Hirten Käsestücke am Feuer schmolzen und den geschmolzenen Teil auf Brot oder Kartoffeln schabten — der Name kommt vom französischen Verb 'racler', schaben. Die jahrhundertealte Praxis wurde erst 1874 offiziell unter ihrem heutigen Namen anerkannt.\n\nHeute haben elektrische Raclette-Öfen das offene Feuer in den meisten Haushalten ersetzt, aber der Geist bleibt unverändert: ein langes, geselliges Essen, bei dem jeder seine eigenen Portionen schmilzt.",
+      pt: "O raclette tem origem nos cantões montanhosos de Valais, onde os pastores suíços costumavam derreter pedaços de queijo junto ao fogo e raspar a parte derretida sobre pão ou batatas — o nome vem do verbo francês 'racler', raspar. A prática secular só foi oficialmente reconhecida sob o nome atual em 1874.\n\nHoje, as grelhas elétricas de raclette substituíram o fogo aberto na maioria dos lares, mas o espírito permanece inalterado: uma refeição longa e social em que cada um derrete as suas próprias porções.",
+      ru: "Раклет берёт начало в горных кантонах Вале, где швейцарские пастухи плавили куски сыра у огня и соскабливали расплавленную часть на хлеб или картофель — название происходит от французского глагола «racler», соскабливать. Вековая практика была официально признана под нынешним названием лишь в 1874 году.\n\nСегодня электрические грили для раклета заменили открытый огонь в большинстве домов, но суть осталась прежней: долгая, дружеская трапеза, где каждый плавит свои порции.",
+      ar: "يعود أصل الراكليت إلى كانتونات فاليه الجبلية، حيث كان الرعاة السويسريون يذيبون قطع الجبن بجانب النار ويكشطون الجزء المذاب على الخبز أو البطاطا — الاسم مشتق من الفعل الفرنسي 'racler' أي يكشط. لم يُعترف رسمياً بهذه الممارسة العريقة تحت اسمها الحالي إلا في عام 1874.\n\nاليوم، حلّت شوايات الراكليت الكهربائية محل النار المفتوحة في معظم المنازل، لكن الروح لم تتغير: وجبة طويلة واجتماعية يُذيب فيها كل شخص حصته الخاصة.",
+      zh: "拉可雷特起源于瓦莱州的山区，那里的瑞士牧民曾在火边融化大块奶酪，然后把融化的部分刮到面包或土豆上——它的名字来自法语动词'racler'，意为刮。这一延续了数百年的做法直到1874年才正式以现在的名称被认可。\n\n如今，电动拉可雷特烤炉在大多数家庭中取代了明火，但其精神未变：一场悠长的社交聚餐，每个人都融化属于自己的那份奶酪。",
+      ja: "ラクレットはヴァレー州の山岳地帯に起源を持ち、スイスの牧羊者たちが火のそばでチーズの塊を溶かし、溶けた部分をパンやじゃがいもにかき出していたことに由来する——名前はフランス語の動詞「racler（かき出す）」から来ている。この何世紀も続く習慣が現在の名前で正式に認められたのは1874年になってからだった。\n\n今日では電気式のラクレット器具がほとんどの家庭で直火に取って代わったが、その精神は変わらない：みんなが自分の分を溶かしながら楽しむ、長く社交的な食事だ。",
+      hi: "रैक्लेट की उत्पत्ति वैले के पहाड़ी कैंटन में हुई, जहां स्विस चरवाहे आग के पास चीज़ के टुकड़े पिघलाते थे और पिघले हिस्से को रोटी या आलू पर खुरचते थे — नाम फ्रेंच क्रिया 'racler' यानी खुरचना से आया है। यह सदियों पुरानी प्रथा 1874 में ही आधिकारिक रूप से अपने वर्तमान नाम के तहत मान्यता प्राप्त हुई।\n\nआज, अधिकांश घरों में बिजली के रैक्लेट ग्रिल ने खुली आग की जगह ले ली है, लेकिन भावना अपरिवर्तित रहती है: एक लंबा, सामाजिक भोजन जहां हर कोई अपने हिस्से पिघलाता है।",
+      tr: "Raclette, İsviçreli çobanların ateşin yanında peynir parçalarını erittiği ve eriyen kısmı ekmek veya patates üzerine kazıdığı Valais'in dağlık kantonlarından köken alır — isim, 'kazımak' anlamına gelen Fransızca 'racler' fiilinden gelir. Yüzyıllardır süren bu uygulama ancak 1874'te resmi olarak bugünkü adıyla tanındı.\n\nBugün elektrikli raclette ızgaraları çoğu evde açık ateşin yerini almış olsa da, ruh değişmedi: herkesin kendi porsiyonunu erittiği uzun, sosyal bir yemek.",
+      it: "La raclette ha origine nei cantoni montani del Vallese, dove i pastori svizzeri scioglievano pezzi di formaggio vicino al fuoco e raschiavano la parte fusa su pane o patate — il nome deriva dal verbo francese 'racler', raschiare. Questa pratica secolare fu riconosciuta ufficialmente con il nome attuale solo nel 1874.\n\nOggi, le griglie elettriche per raclette hanno sostituito il fuoco aperto nella maggior parte delle case, ma lo spirito resta invariato: un pasto lungo e conviviale in cui ognuno scioglie le proprie porzioni.",
+      ko: "라클렛은 스위스 목동들이 불 옆에서 치즈 덩어리를 녹여 그 녹은 부분을 빵이나 감자에 긁어 올렸던 발레주의 산악 지역에서 유래했다 — 이름은 '긁다'라는 뜻의 프랑스어 동사 'racler'에서 왔다. 수 세기에 걸친 이 관습은 1874년에야 공식적으로 현재의 이름으로 인정받았다.\n\n오늘날 대부분의 가정에서는 전기 라클렛 그릴이 직화를 대신하지만, 그 정신은 변함없다: 모두가 자기 몫을 녹이며 즐기는 길고 사교적인 식사다."
+    }
+  },
+  {
+    id: 430,
+    servings: 4,
+    tipType: "meat",
+    pairingsType: "meat",
+    nutrition: { cal: 520, prot: 38, carb: 12, fat: 34, fib: 2 },
+    origin: {
+      ro: "Elveția", en: "Switzerland", es: "Suiza", fr: "Suisse", de: "Schweiz",
+      pt: "Suíça", ru: "Швейцария", ar: "سويسرا", zh: "瑞士", ja: "スイス",
+      hi: "स्विट्ज़रलैंड", tr: "İsviçre", it: "Svizzera", ko: "스위스"
+    },
+    name: {
+      ro: "Zürcher Geschnetzeltes", en: "Zürcher Geschnetzeltes", es: "Zürcher Geschnetzeltes", fr: "Zürcher Geschnetzeltes", de: "Zürcher Geschnetzeltes",
+      pt: "Zürcher Geschnetzeltes", ru: "Цюрихское рагу из телятины", ar: "زيورخر جيشنيتسلتس", zh: "苏黎世炖肉丝", ja: "チューリッヒ風仔牛肉のクリーム煮",
+      hi: "ज़्यूरिखर गेश्नेत्सेल्टेस", tr: "Zürih Usulü Dana Sote", it: "Zürcher Geschnetzeltes", ko: "취리히식 크림 송아지고기"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🥩", t: "Vițel tăiat fâșii subțiri", d: "Bucățile subțiri de vițel se gătesc în câteva secunde, păstrând carnea fragedă și suculentă." },
+        { icon: "🍄", t: "Ciupercile sunt obligatorii", d: "Ciupercile champignon tăiate felii adaugă textură și absorb aromele din tigaie." },
+        { icon: "🥃", t: "Un strop de vin alb elvețian", d: "Vinul alb deglazează tigaia și adaugă aciditate care echilibrează smântâna groasă." },
+        { icon: "🍚", t: "Rösti-ul e partenerul clasic", d: "Preparatul se servește aproape întotdeauna alături de rösti crocant, niciodată cu orez sau paste." }
+      ],
+      en: [
+        { icon: "🥩", t: "Veal cut into thin strips", d: "Thin strips of veal cook in just seconds, keeping the meat tender and juicy." },
+        { icon: "🍄", t: "Mushrooms are mandatory", d: "Sliced button mushrooms add texture and soak up the flavours from the pan." },
+        { icon: "🥃", t: "A splash of Swiss white wine", d: "White wine deglazes the pan and adds acidity that balances the thick cream." },
+        { icon: "🍚", t: "Rösti is the classic partner", d: "The dish is almost always served alongside crispy rösti, never rice or pasta." }
+      ],
+      es: [
+        { icon: "🥩", t: "Ternera cortada en tiras finas", d: "Las tiras finas de ternera se cocinan en solo segundos, manteniendo la carne tierna y jugosa." },
+        { icon: "🍄", t: "Los champiñones son obligatorios", d: "Los champiñones en láminas añaden textura y absorben los sabores de la sartén." },
+        { icon: "🥃", t: "Un chorrito de vino blanco suizo", d: "El vino blanco desglasa la sartén y añade acidez que equilibra la nata espesa." },
+        { icon: "🍚", t: "El rösti es el acompañante clásico", d: "El plato casi siempre se sirve junto a un rösti crujiente, nunca con arroz o pasta." }
+      ],
+      fr: [
+        { icon: "🥩", t: "Du veau coupé en fines lanières", d: "De fines lanières de veau cuisent en quelques secondes seulement, gardant la viande tendre et juteuse." },
+        { icon: "🍄", t: "Les champignons sont indispensables", d: "Les champignons de Paris émincés apportent de la texture et absorbent les saveurs de la poêle." },
+        { icon: "🥃", t: "Une touche de vin blanc suisse", d: "Le vin blanc déglace la poêle et ajoute une acidité qui équilibre la crème épaisse." },
+        { icon: "🍚", t: "Le rösti, l'accompagnement classique", d: "Le plat est presque toujours servi avec un rösti croustillant, jamais du riz ou des pâtes." }
+      ],
+      de: [
+        { icon: "🥩", t: "Kalbfleisch in feinen Streifen", d: "Feine Kalbfleischstreifen garen in wenigen Sekunden und bleiben zart und saftig." },
+        { icon: "🍄", t: "Champignons sind Pflicht", d: "In Scheiben geschnittene Champignons geben Textur und nehmen die Aromen der Pfanne auf." },
+        { icon: "🥃", t: "Ein Schuss Schweizer Weißwein", d: "Weißwein löst den Bratensatz und bringt Säure, die die dicke Sahne ausbalanciert." },
+        { icon: "🍚", t: "Rösti ist der klassische Partner", d: "Das Gericht wird fast immer mit knusprigem Rösti serviert, nie mit Reis oder Pasta." }
+      ],
+      pt: [
+        { icon: "🥩", t: "Vitela cortada em tiras finas", d: "Tiras finas de vitela cozinham em apenas segundos, mantendo a carne macia e suculenta." },
+        { icon: "🍄", t: "Os cogumelos são obrigatórios", d: "Cogumelos em fatias adicionam textura e absorvem os sabores da frigideira." },
+        { icon: "🥃", t: "Um toque de vinho branco suíço", d: "O vinho branco desglaceia a frigideira e adiciona acidez que equilibra as natas espessas." },
+        { icon: "🍚", t: "O rösti é o acompanhamento clássico", d: "O prato é quase sempre servido com rösti crocante, nunca com arroz ou massa." }
+      ],
+      ru: [
+        { icon: "🥩", t: "Телятина, нарезанная тонкими полосками", d: "Тонкие полоски телятины готовятся всего за секунды, оставаясь мягкими и сочными." },
+        { icon: "🍄", t: "Грибы обязательны", d: "Нарезанные шампиньоны добавляют текстуру и впитывают ароматы сковороды." },
+        { icon: "🥃", t: "Немного швейцарского белого вина", d: "Белое вино деглазирует сковороду и придаёт кислотность, уравновешивающую густые сливки." },
+        { icon: "🍚", t: "Рёшти — классический гарнир", d: "Блюдо почти всегда подают с хрустящим рёшти, никогда с рисом или пастой." }
+      ],
+      ar: [
+        { icon: "🥩", t: "لحم عجل مقطع شرائح رفيعة", d: "شرائح لحم العجل الرفيعة تُطهى في ثوانٍ معدودة، مما يبقي اللحم طرياً وعصيرياً." },
+        { icon: "🍄", t: "الفطر إلزامي", d: "شرائح فطر الكمثرى تضيف قواماً وتمتص نكهات المقلاة." },
+        { icon: "🥃", t: "رشة من النبيذ الأبيض السويسري", d: "النبيذ الأبيض يفكك عصارة المقلاة ويضيف حموضة توازن القشدة الكثيفة." },
+        { icon: "🍚", t: "الروستي هو الرفيق الكلاسيكي", d: "يُقدَّم الطبق دائماً تقريباً مع الروستي المقرمش، وليس مع الأرز أو المعكرونة." }
+      ],
+      zh: [
+        { icon: "🥩", t: "切成细条的小牛肉", d: "细细的小牛肉条只需几秒钟就能煮熟，保持肉质嫩滑多汁。" },
+        { icon: "🍄", t: "蘑菇不可或缺", d: "切片的蘑菇增添口感，并吸收锅中的香气。" },
+        { icon: "🥃", t: "一点瑞士白葡萄酒", d: "白葡萄酒融化锅底焦香，增添酸度以平衡浓郁的奶油。" },
+        { icon: "🍚", t: "瑞士煎饼是经典搭档", d: "这道菜几乎总是配酥脆的瑞士煎饼，从不搭配米饭或意面。" }
+      ],
+      ja: [
+        { icon: "🥩", t: "細切りにした仔牛肉", d: "細く切った仔牛肉は数秒で火が通り、柔らかくジューシーなまま仕上がる。" },
+        { icon: "🍄", t: "マッシュルームは欠かせない", d: "スライスしたマッシュルームが食感を加え、フライパンの風味を吸収する。" },
+        { icon: "🥃", t: "スイス産白ワインを少々", d: "白ワインがフライパンの焦げを溶かし、濃厚なクリームを引き締める酸味を加える。" },
+        { icon: "🍚", t: "ロスティが定番の付け合わせ", d: "この料理はほぼ必ずパリッとしたロスティと共に提供され、米やパスタとは合わせない。" }
+      ],
+      hi: [
+        { icon: "🥩", t: "पतली पट्टियों में कटा वील", d: "पतली वील की पट्टियां बस कुछ ही सेकंड में पक जाती हैं, मांस को नरम और रसदार रखते हुए।" },
+        { icon: "🍄", t: "मशरूम अनिवार्य हैं", d: "कटे हुए मशरूम बनावट जोड़ते हैं और पैन के स्वाद सोख लेते हैं।" },
+        { icon: "🥃", t: "स्विस सफेद वाइन का एक छींटा", d: "सफेद वाइन पैन को डिग्लेज़ करती है और अम्लता जोड़ती है जो गाढ़ी क्रीम को संतुलित करती है।" },
+        { icon: "🍚", t: "रोस्टी क्लासिक साथी है", d: "यह व्यंजन लगभग हमेशा कुरकुरे रोस्टी के साथ परोसा जाता है, कभी चावल या पास्ता के साथ नहीं।" }
+      ],
+      tr: [
+        { icon: "🥩", t: "İnce şeritler halinde dana eti", d: "İnce dana eti şeritleri sadece saniyeler içinde pişer, eti yumuşak ve sulu tutar." },
+        { icon: "🍄", t: "Mantarlar şarttır", d: "Dilimlenmiş mantarlar doku katar ve tavanın lezzetlerini emer." },
+        { icon: "🥃", t: "Bir tutam İsviçre beyaz şarabı", d: "Beyaz şarap tavayı deglaze eder ve yoğun kremayı dengeleyen asidite katar." },
+        { icon: "🍚", t: "Rösti klasik eşlikçidir", d: "Yemek neredeyse her zaman çıtır rösti ile servis edilir, asla pilav veya makarna ile değil." }
+      ],
+      it: [
+        { icon: "🥩", t: "Vitello tagliato a striscioline sottili", d: "Le sottili striscioline di vitello cuociono in pochi secondi, mantenendo la carne tenera e succosa." },
+        { icon: "🍄", t: "I funghi sono d'obbligo", d: "I funghi champignon a fette aggiungono consistenza e assorbono i sapori della padella." },
+        { icon: "🥃", t: "Un goccio di vino bianco svizzero", d: "Il vino bianco sfuma la padella e aggiunge acidità che bilancia la panna densa." },
+        { icon: "🍚", t: "Il rösti è l'accompagnamento classico", d: "Il piatto viene servito quasi sempre con rösti croccante, mai con riso o pasta." }
+      ],
+      ko: [
+        { icon: "🥩", t: "가늘게 썬 송아지고기", d: "얇게 썬 송아지고기는 단 몇 초 만에 익으며 부드럽고 육즙이 살아있다." },
+        { icon: "🍄", t: "버섯은 필수", d: "슬라이스한 양송이버섯이 식감을 더하고 팬의 풍미를 흡수한다." },
+        { icon: "🥃", t: "스위스 화이트와인 한 스푼", d: "화이트와인이 팬 바닥을 디글레이즈하며 진한 크림을 중화하는 산미를 더한다." },
+        { icon: "🍚", t: "뢰스티가 클래식 짝꿍", d: "이 요리는 거의 항상 바삭한 뢰스티와 함께 나오며, 쌀밥이나 파스타와는 곁들이지 않는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["600g piept de vițel, tăiat fâșii subțiri", "sare și piper", "2 linguri făină", "3 linguri unt", "250g ciuperci champignon, feliate", "1 ceapă mică, tocată mărunt", "150ml vin alb", "300ml smântână pentru gătit", "pătrunjel proaspăt tocat"],
+      en: ["600g veal, cut into thin strips", "salt and pepper", "2 tbsp flour", "3 tbsp butter", "250g button mushrooms, sliced", "1 small onion, finely chopped", "150ml white wine", "300ml cooking cream", "fresh parsley, chopped"],
+      es: ["600g de ternera, en tiras finas", "sal y pimienta", "2 cdas de harina", "3 cdas de mantequilla", "250g de champiñones, en láminas", "1 cebolla pequeña, picada fina", "150ml de vino blanco", "300ml de nata para cocinar", "perejil fresco picado"],
+      fr: ["600g de veau, coupé en fines lanières", "sel et poivre", "2 c. à soupe de farine", "3 c. à soupe de beurre", "250g de champignons de Paris, émincés", "1 petit oignon, finement haché", "150ml de vin blanc", "300ml de crème culinaire", "persil frais haché"],
+      de: ["600g Kalbfleisch, in feinen Streifen", "Salz und Pfeffer", "2 EL Mehl", "3 EL Butter", "250g Champignons, in Scheiben", "1 kleine Zwiebel, fein gehackt", "150ml Weißwein", "300ml Kochrahm", "frische gehackte Petersilie"],
+      pt: ["600g de vitela, em tiras finas", "sal e pimenta", "2 col. sopa de farinha", "3 col. sopa de manteiga", "250g de cogumelos, em fatias", "1 cebola pequena, picada fina", "150ml de vinho branco", "300ml de natas culinárias", "salsa fresca picada"],
+      ru: ["600г телятины, нарезанной тонкими полосками", "соль и перец", "2 ст.л. муки", "3 ст.л. сливочного масла", "250г шампиньонов, нарезанных", "1 маленькая луковица, мелко нарезанная", "150мл белого вина", "300мл кулинарных сливок", "свежая петрушка, рубленая"],
+      ar: ["600غ لحم عجل، مقطع شرائح رفيعة", "ملح وفلفل", "2 ملعقة كبيرة دقيق", "3 ملاعق كبيرة زبدة", "250غ فطر كمثرى، مقطع شرائح", "1 بصلة صغيرة، مفرومة ناعماً", "150مل نبيذ أبيض", "300مل قشدة طهي", "بقدونس طازج مفروم"],
+      zh: ["600克小牛肉，切细条", "盐和胡椒", "2汤匙面粉", "3汤匙黄油", "250克蘑菇，切片", "1个小洋葱，切碎", "150毫升白葡萄酒", "300毫升烹饪奶油", "新鲜欧芹，切碎"],
+      ja: ["仔牛肉600g（細切り）", "塩こしょう", "小麦粉大さじ2", "バター大さじ3", "マッシュルーム250g（スライス）", "小玉ねぎ1個（みじん切り）", "白ワイン150ml", "料理用生クリーム300ml", "生パセリ（刻む）"],
+      hi: ["600 ग्राम वील, पतली पट्टियों में कटा", "नमक और काली मिर्च", "2 बड़े चम्मच आटा", "3 बड़े चम्मच मक्खन", "250 ग्राम मशरूम, कटे हुए", "1 छोटा प्याज़, बारीक कटा", "150 मिली सफेद वाइन", "300 मिली कुकिंग क्रीम", "ताज़ा अजमोद, कटा हुआ"],
+      tr: ["600g dana eti, ince şeritler halinde", "tuz ve karabiber", "2 yemek kaşığı un", "3 yemek kaşığı tereyağı", "250g mantar, dilimlenmiş", "1 küçük soğan, ince doğranmış", "150ml beyaz şarap", "300ml pişirme kreması", "taze maydanoz, doğranmış"],
+      it: ["600g di vitello, tagliato a striscioline sottili", "sale e pepe", "2 cucchiai di farina", "3 cucchiai di burro", "250g di funghi champignon, a fette", "1 cipolla piccola, tritata finemente", "150ml di vino bianco", "300ml di panna da cucina", "prezzemolo fresco tritato"],
+      ko: ["송아지고기 600g, 가늘게 썬 것", "소금과 후추", "밀가루 2큰술", "버터 3큰술", "양송이버섯 250g, 슬라이스", "작은 양파 1개, 잘게 다진 것", "화이트와인 150ml", "요리용 생크림 300ml", "다진 생파슬리"]
+    },
+    howIsMade: {
+      ro: "Se condimentează fâșiile de vițel cu sare, piper și un praf ușor de făină. Se încinge untul într-o tigaie mare și se prăjesc rapid fâșiile de carne, în tranșe, doar câteva secunde pe fiecare parte, apoi se scot. Se călesc ceapa și ciupercile în aceeași tigaie până se înmoaie și eliberează aroma. Se toarnă vinul alb și se lasă să scadă la jumătate, deglazând bine fundul tigăii. Se adaugă smântâna și se lasă să dea un clocot ușor până se îngroașă puțin. Se pune carnea înapoi în tigaie doar cât să se încălzească, fără să fiarbă prea mult. Se presară pătrunjel proaspăt și se servește imediat, alături de rösti crocant.",
+      en: "Season the veal strips with salt, pepper, and a light dusting of flour. Heat the butter in a large pan and quickly sear the meat strips, in batches, for just a few seconds on each side, then set aside. Sauté the onion and mushrooms in the same pan until softened and fragrant. Pour in the white wine and let it reduce by half, deglazing the bottom of the pan well. Add the cream and let it simmer gently until it thickens slightly. Return the meat to the pan just long enough to warm through, without overcooking it. Scatter with fresh parsley and serve immediately alongside crispy rösti.",
+      es: "Sazona las tiras de ternera con sal, pimienta y un ligero espolvoreo de harina. Calienta la mantequilla en una sartén grande y sella las tiras de carne rápidamente, por tandas, solo unos segundos por cada lado, luego resérvalas. Sofríe la cebolla y los champiñones en la misma sartén hasta que se ablanden y suelten aroma. Vierte el vino blanco y deja que reduzca a la mitad, desglasando bien el fondo de la sartén. Añade la nata y deja que hierva suavemente hasta que espese un poco. Vuelve a poner la carne en la sartén solo el tiempo necesario para calentarla, sin cocinarla de más. Espolvorea perejil fresco y sirve de inmediato junto a un rösti crujiente.",
+      fr: "Assaisonnez les lanières de veau de sel, de poivre et d'un léger voile de farine. Faites chauffer le beurre dans une grande poêle et saisissez rapidement les lanières de viande, par lots, juste quelques secondes de chaque côté, puis réservez. Faites revenir l'oignon et les champignons dans la même poêle jusqu'à ce qu'ils ramollissent et embaument. Versez le vin blanc et laissez réduire de moitié, en déglaçant bien le fond de la poêle. Ajoutez la crème et laissez mijoter doucement jusqu'à ce qu'elle épaississe légèrement. Remettez la viande dans la poêle juste le temps de la réchauffer, sans trop la cuire. Parsemez de persil frais et servez aussitôt avec un rösti croustillant.",
+      de: "Die Kalbfleischstreifen mit Salz, Pfeffer und einer leichten Mehlschicht würzen. Die Butter in einer großen Pfanne erhitzen und die Fleischstreifen portionsweise nur wenige Sekunden pro Seite scharf anbraten, dann beiseitestellen. Zwiebel und Champignons in derselben Pfanne anbraten, bis sie weich sind und duften. Den Weißwein angießen und um die Hälfte einkochen lassen, dabei den Bratensatz gut lösen. Die Sahne hinzufügen und sanft köcheln lassen, bis sie leicht eindickt. Das Fleisch nur so lange zurück in die Pfanne geben, bis es erwärmt ist, ohne es zu übergaren. Mit frischer Petersilie bestreuen und sofort mit knusprigem Rösti servieren.",
+      pt: "Tempere as tiras de vitela com sal, pimenta e uma leve camada de farinha. Aqueça a manteiga numa frigideira grande e sele rapidamente as tiras de carne, aos poucos, apenas alguns segundos de cada lado, depois reserve. Refogue a cebola e os cogumelos na mesma frigideira até amolecerem e libertarem aroma. Junte o vinho branco e deixe reduzir para metade, desglaceando bem o fundo da frigideira. Adicione as natas e deixe ferver suavemente até engrossar um pouco. Volte a colocar a carne na frigideira apenas o tempo suficiente para aquecer, sem cozinhar demais. Finalize com salsa fresca e sirva imediatamente com rösti crocante.",
+      ru: "Приправьте полоски телятины солью, перцем и слегка присыпьте мукой. Разогрейте масло на большой сковороде и быстро обжарьте полоски мяса порциями всего несколько секунд с каждой стороны, затем отложите. Обжарьте лук и грибы на той же сковороде до мягкости и аромата. Влейте белое вино и уварите наполовину, хорошо деглазируя дно сковороды. Добавьте сливки и дайте слегка покипеть до небольшого загустения. Верните мясо на сковороду лишь на время, чтобы прогреться, не переваривая. Посыпьте свежей петрушкой и подавайте сразу с хрустящим рёшти.",
+      ar: "تبّلي شرائح لحم العجل بالملح والفلفل ورشة خفيفة من الدقيق. سخّني الزبدة في مقلاة كبيرة واقلي شرائح اللحم بسرعة، على دفعات، لبضع ثوانٍ فقط على كل جانب، ثم ضعيها جانباً. اقلي البصل والفطر في نفس المقلاة حتى يلينا وتفوح رائحتهما. اسكبي النبيذ الأبيض واتركيه يتقلص إلى النصف، مع تفكيك عصارة قاع المقلاة جيداً. أضيفي القشدة واتركيها تغلي برفق حتى تتكاثف قليلاً. أعيدي اللحم إلى المقلاة فقط لتسخينه دون طهيه أكثر من اللازم. رشّي البقدونس الطازج وقدّمي فوراً مع الروستي المقرمش.",
+      zh: "将小牛肉条用盐、胡椒调味，并薄薄地裹上一层面粉。在大煎锅中加热黄油，分批将肉条快速煎一下，每面仅几秒钟，然后盛出备用。在同一煎锅中炒香洋葱和蘑菇，直至变软出香。倒入白葡萄酒，让其收汁至一半，同时刮起锅底的焦香。加入奶油，小火慢煮至略微变稠。将肉重新放回锅中，仅需加热至温热即可，避免过度烹煮。撒上新鲜欧芹，立即搭配酥脆的瑞士煎饼享用。",
+      ja: "仔牛肉の細切りに塩こしょうをし、薄く小麦粉をまぶす。大きめのフライパンでバターを熱し、肉を数回に分けて各面数秒ずつ手早く焼き、取り出しておく。同じフライパンで玉ねぎとマッシュルームを柔らかく香りが立つまで炒める。白ワインを加え、半分になるまで煮詰めて鍋底の旨味をしっかり溶かし込む。生クリームを加え、少しとろみがつくまで弱火で煮る。肉を戻し入れ、火を通しすぎないよう温める程度にとどめる。生パセリを散らし、パリッとしたロスティを添えてすぐに提供する。",
+      hi: "वील की पट्टियों को नमक, काली मिर्च और हल्के आटे से स्वाद दें। बड़े पैन में मक्खन गरम करें और मांस की पट्टियों को थोड़ा-थोड़ा करके हर तरफ बस कुछ सेकंड के लिए तेज़ी से सेकें, फिर अलग रखें। उसी पैन में प्याज़ और मशरूम को नरम और खुशबूदार होने तक भूनें। सफेद वाइन डालें और आधी होने तक पकने दें, पैन के तले को अच्छी तरह डिग्लेज़ करते हुए। क्रीम डालें और हल्का गाढ़ा होने तक धीमी आंच पर पकने दें। मांस को पैन में वापस डालें बस गरम होने भर के लिए, ज़्यादा न पकाएं। ताज़ा अजमोद छिड़कें और कुरकुरे रोस्टी के साथ तुरंत परोसें।",
+      tr: "Dana eti şeritlerini tuz, karabiber ve hafif bir unla tatlandırın. Büyük bir tavada tereyağını ısıtın ve et şeritlerini partiler halinde her yanını sadece birkaç saniye hızlıca közleyip kenara ayırın. Aynı tavada soğan ve mantarı yumuşayıp kokusu çıkana kadar soteleyin. Beyaz şarabı ekleyip yarıya inene kadar azaltın, tava tabanını iyice deglaze edin. Kremayı ekleyip hafifçe koyulaşana kadar kısık ateşte pişirin. Eti sadece ısınacak kadar tekrar tavaya alın, fazla pişirmeyin. Taze maydanoz serpin ve çıtır rösti ile hemen servis edin.",
+      it: "Condisci le striscioline di vitello con sale, pepe e una leggera infarinatura. Scalda il burro in una padella grande e rosola rapidamente le striscioline di carne, a lotti, solo pochi secondi per lato, poi mettile da parte. Fai soffriggere cipolla e funghi nella stessa padella finché non si ammorbidiscono e profumano. Versa il vino bianco e lascialo ridurre della metà, deglassando bene il fondo della padella. Aggiungi la panna e lascia sobbollire dolcemente finché non si addensa leggermente. Rimetti la carne in padella solo il tempo necessario per scaldarla, senza cuocerla troppo. Guarnisci con prezzemolo fresco e servi subito con rösti croccante.",
+      ko: "송아지고기 채를 소금, 후추로 간하고 밀가루를 얇게 입힌다. 큰 팬에 버터를 달군 뒤 고기를 나누어 각 면을 몇 초씩만 빠르게 구운 후 따로 둔다. 같은 팬에 양파와 버섯을 부드럽고 향이 날 때까지 볶는다. 화이트와인을 부어 절반으로 졸이며 팬 바닥의 맛을 잘 긁어낸다. 크림을 넣고 약간 걸쭉해질 때까지 약한 불에서 끓인다. 고기를 다시 팬에 넣어 너무 익히지 않고 데워지기만 하도록 한다. 신선한 파슬리를 뿌려 바삭한 뢰스티와 함께 바로 낸다."
+    },
+    originText: {
+      ro: "Zürcher Geschnetzeltes s-a răspândit din cantonul Zürich abia în prima jumătate a secolului XX, iar rețetele publicate în cărțile de bucate elvețiene din anii 1940 confirmă versiunea actuală, cu smântână și ciuperci. Tăierea cărnii în fâșii subțiri, o tehnică rară în bucătăria tradițională alpină, permite o gătire extrem de rapidă.\n\nAstăzi e considerat unul dintre preparatele naționale ale Elveției, apărând pe meniurile restaurantelor din toată țara, aproape întotdeauna alături de rösti, niciodată alături de orez sau tăiței.",
+      en: "Zürcher Geschnetzeltes spread from the canton of Zurich only in the first half of the 20th century, and recipes published in Swiss cookbooks from the 1940s confirm today's version, with cream and mushrooms. Cutting the meat into thin strips, a technique rare in traditional Alpine cooking, allows for extremely fast cooking.\n\nToday it's considered one of Switzerland's national dishes, appearing on restaurant menus across the country, almost always alongside rösti, never rice or noodles.",
+      es: "El Zürcher Geschnetzeltes se extendió desde el cantón de Zúrich solo en la primera mitad del siglo XX, y las recetas publicadas en libros de cocina suizos de los años cuarenta confirman la versión actual, con nata y champiñones. Cortar la carne en tiras finas, una técnica poco habitual en la cocina alpina tradicional, permite una cocción extremadamente rápida.\n\nHoy se considera uno de los platos nacionales de Suiza, presente en los menús de restaurantes de todo el país, casi siempre junto al rösti, nunca con arroz o fideos.",
+      fr: "Le Zürcher Geschnetzeltes s'est répandu depuis le canton de Zurich seulement dans la première moitié du XXe siècle, et les recettes publiées dans des livres de cuisine suisses des années 1940 confirment la version actuelle, à la crème et aux champignons. Couper la viande en fines lanières, une technique rare dans la cuisine alpine traditionnelle, permet une cuisson extrêmement rapide.\n\nAujourd'hui, il est considéré comme l'un des plats nationaux de la Suisse, présent sur les menus de restaurants dans tout le pays, presque toujours accompagné de rösti, jamais de riz ou de pâtes.",
+      de: "Zürcher Geschnetzeltes verbreitete sich vom Kanton Zürich aus erst in der ersten Hälfte des 20. Jahrhunderts, und Rezepte aus Schweizer Kochbüchern der 1940er-Jahre bestätigen die heutige Version mit Sahne und Champignons. Das Schneiden des Fleisches in feine Streifen, eine in der traditionellen alpinen Küche seltene Technik, ermöglicht eine extrem schnelle Zubereitung.\n\nHeute gilt es als eines der Nationalgerichte der Schweiz und erscheint auf Restaurantkarten im ganzen Land, fast immer mit Rösti, nie mit Reis oder Nudeln.",
+      pt: "O Zürcher Geschnetzeltes espalhou-se a partir do cantão de Zurique apenas na primeira metade do século XX, e receitas publicadas em livros de culinária suíços dos anos 1940 confirmam a versão atual, com natas e cogumelos. Cortar a carne em tiras finas, uma técnica rara na culinária alpina tradicional, permite uma cozedura extremamente rápida.\n\nHoje é considerado um dos pratos nacionais da Suíça, presente nos menus de restaurantes por todo o país, quase sempre ao lado de rösti, nunca com arroz ou massa.",
+      ru: "Цюрихское рагу из телятины распространилось из кантона Цюрих лишь в первой половине XX века, а рецепты, опубликованные в швейцарских поваренных книгах 1940-х годов, подтверждают сегодняшнюю версию со сливками и грибами. Нарезка мяса тонкими полосками, редкая техника в традиционной альпийской кухне, позволяет готовить блюдо чрезвычайно быстро.\n\nСегодня оно считается одним из национальных блюд Швейцарии, встречающимся в меню ресторанов по всей стране, почти всегда с рёшти, никогда с рисом или лапшой.",
+      ar: "انتشر طبق زيورخر جيشنيتسلتس من كانتون زيورخ فقط في النصف الأول من القرن العشرين، وتؤكد وصفات نُشرت في كتب الطبخ السويسرية من الأربعينيات النسخة الحالية بالقشدة والفطر. تقطيع اللحم إلى شرائح رفيعة، وهي تقنية نادرة في الطبخ الألبي التقليدي، يتيح طهياً سريعاً للغاية.\n\nاليوم يُعتبر من الأطباق الوطنية لسويسرا، ويظهر في قوائم المطاعم في جميع أنحاء البلاد، ويُقدَّم دائماً تقريباً مع الروستي، وليس مع الأرز أو المعكرونة.",
+      zh: "苏黎世炖肉丝直到20世纪上半叶才从苏黎世州传播开来，20世纪40年代瑞士食谱书中发表的配方证实了如今这种加入奶油和蘑菇的版本。将肉切成细条——在传统阿尔卑斯烹饪中较为少见的技法——可以实现极快的烹饪速度。\n\n如今它被视为瑞士的国菜之一，出现在全国各地的餐厅菜单上，几乎总是搭配瑞士煎饼，从不搭配米饭或面条。",
+      ja: "チューリッヒ風仔牛肉のクリーム煮は20世紀前半にチューリッヒ州から広まったもので、1940年代のスイスの料理書に掲載されたレシピが、クリームとマッシュルームを使う現在のバージョンを裏付けている。肉を細切りにするという伝統的なアルプス料理では珍しい技法により、非常に素早い調理が可能になる。\n\n今日ではスイスの代表的な国民食の一つとされ、国内各地のレストランのメニューに登場し、ほぼ必ずロスティと共に供され、米や麺と合わせることはない。",
+      hi: "ज़्यूरिखर गेश्नेत्सेल्टेस ज़्यूरिख कैंटन से केवल 20वीं सदी के पूर्वार्द्ध में फैला, और 1940 के दशक की स्विस कुकबुक्स में प्रकाशित रेसिपी आज के क्रीम और मशरूम वाले संस्करण की पुष्टि करती हैं। मांस को पतली पट्टियों में काटना, जो पारंपरिक आल्पाइन खाना पकाने में दुर्लभ तकनीक है, बेहद तेज़ पकाने की अनुमति देता है।\n\nआज इसे स्विट्ज़रलैंड के राष्ट्रीय व्यंजनों में से एक माना जाता है, जो देशभर के रेस्तरां मेनू में दिखाई देता है, लगभग हमेशा रोस्टी के साथ, कभी चावल या नूडल्स के साथ नहीं।",
+      tr: "Zürcher Geschnetzeltes, Zürih kantonundan ancak 20. yüzyılın ilk yarısında yayıldı ve 1940'ların İsviçre yemek kitaplarında yayınlanan tarifler, krema ve mantarlı günümüz versiyonunu doğrular. Eti ince şeritler halinde kesmek, geleneksel Alp mutfağında nadir görülen bir teknik olup son derece hızlı pişirme sağlar.\n\nBugün İsviçre'nin milli yemeklerinden biri sayılır, ülke genelindeki restoran menülerinde yer alır, neredeyse her zaman rösti ile, asla pilav veya makarna ile değil.",
+      it: "Lo Zürcher Geschnetzeltes si diffuse dal cantone di Zurigo solo nella prima metà del XX secolo, e le ricette pubblicate nei libri di cucina svizzeri degli anni Quaranta confermano la versione odierna, con panna e funghi. Tagliare la carne a striscioline sottili, una tecnica rara nella cucina alpina tradizionale, consente una cottura estremamente rapida.\n\nOggi è considerato uno dei piatti nazionali della Svizzera, presente nei menu dei ristoranti in tutto il paese, quasi sempre accompagnato da rösti, mai da riso o pasta.",
+      ko: "취리히식 크림 송아지고기는 20세기 전반에야 취리히주에서 퍼져나갔으며, 1940년대 스위스 요리책에 실린 레시피들이 크림과 버섯을 사용하는 오늘날의 버전을 뒷받침한다. 고기를 가늘게 써는 것은 전통적인 알프스 요리에서는 드문 기법으로, 매우 빠른 조리를 가능하게 한다.\n\n오늘날 이 요리는 스위스의 대표 국민 요리 중 하나로 여겨지며, 전국 레스토랑 메뉴에 등장하고 거의 항상 뢰스티와 함께 제공되며 쌀밥이나 국수와는 곁들이지 않는다."
+    }
   }
 ];
